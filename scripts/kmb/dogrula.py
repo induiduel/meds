@@ -123,6 +123,21 @@ def denetle(p: Path, S):
         if len(x.get('nasil', [])) < 2: H.append(f'{y}: nasıl en az 2 cümle')
         if x.get('lottie') and (VERI / f'lottie/{x["lottie"]}.json').exists() is False: H.append(f'{y}: Lottie yok')
         if x.get('dogrulanacak'): U.append(f'{y}: doğrulanacak — {x["dogrulanacak"]}')
+        # Hedefler filmi (HedefFilmi.tsx): cümle başına vuruş — 6 cümle (ne, nasıl×2, neden, "sık hata var", hata)
+        film = x.get('film')
+        if not film: H.append(f'{y}: film koreografisi yok (film[])'); continue
+        n_cumle = 1 + len(x.get('nasil', [])) + 3
+        if len(film) != n_cumle: H.append(f'{y}: film vuruşu {len(film)} ≠ cümle {n_cumle}')
+        sahne = x['sahne']
+        for i, v in enumerate(film):
+            if v.get('sahne'):
+                sahne = v['sahne']
+                if sahne not in S: H.append(f'{y} film {i}: sahne yok {sahne}'); continue
+            eylem_denetle(v.get('eylem'), sahne, f'{y} film {i}')
+            if v.get('odak') and v['odak'] not in S.get(sahne, set()): H.append(f'{y} film {i}: odak ögesi yok {v["odak"]}')
+            z = v.get('zoom', 1)
+            if not 1 <= z <= 2: H.append(f'{y} film {i}: zoom {z} (1–2)')
+        if not any(v.get('odak') or v.get('eylem') for v in film): H.append(f'{y}: film boş')
     H += TU.denetle_yapi(d, p.stem)
     ai = VERI / 'lottie/adimlar.json'
     av = {v['adim']: v for v in json.loads(ai.read_text(encoding='utf-8'))} if ai.exists() else {}

@@ -1301,12 +1301,14 @@ export const SAHNE_OGELERI: Record<string, string[]> = {
   'foley-kesit': ['c-drenaj-lumen', 'c-balon-lumen', 'c-olcek-eriskin', 'c-olcek-cocuk'],
 };
 
-export function SahneCiz({ sahne, durum, onSec, secilebilir, isaret }: {
+export function SahneCiz({ sahne, durum, onSec, secilebilir, isaret, olcek = 1 }: {
   sahne: string;
   durum: SahneDurum;
   onSec?: (id: string) => void;
   secilebilir?: boolean;
   isaret?: { id: string; dogru: boolean } | null;
+  /** kamera yakınlaşması (Hedefler filmi): etiketler bu kadar küçültülür ki ekranda aynı boyda kalsın */
+  olcek?: number;
 }) {
   const S = SAHNELER[sahne];
   if (!S) return null;
@@ -1343,13 +1345,14 @@ export function SahneCiz({ sahne, durum, onSec, secilebilir, isaret }: {
       {Object.entries(S.etiket).map(([id, [x0, y0, metin]]) => {
         if (!durum[id]?.etiket) return null;
         // etiket sahne kenarından taşmasın (kenardaki yapıların etiketi yarım görünüyordu): kutu çerçeve içine itilir
-        const yari = metin.length * 4.6 + 10;
+        const k = 1 / olcek;
+        const yari = (metin.length * 4.6 + 10) * k;
         const x = Math.min(800 - 6 - yari, Math.max(6 + yari, x0));
         const y = Math.min(500 - 14, Math.max(20, y0));
         return (
           <g key={`e-${id}`} className="kmb-etiket">
-            <rect x={x - yari} y={y - 17} width={yari * 2} height={28} rx={14} />
-            <text x={x} y={y + 3} textAnchor="middle">{metin}</text>
+            <rect x={x - yari} y={y - 17 * k} width={yari * 2} height={28 * k} rx={14 * k} />
+            <text x={x} y={y + 3 * k} textAnchor="middle" style={olcek !== 1 ? { fontSize: `${16 * k}px` } : undefined}>{metin}</text>
           </g>
         );
       })}

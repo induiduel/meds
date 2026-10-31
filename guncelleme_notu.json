@@ -1,43 +1,37 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 612,
-  "baslik": "KMB video oynatıcı: dokunarak denetle, çift dokunarak sar, video sonu sorusu",
+  "onem": 613,
+  "baslik": "KMB Hedefler filmi: 15 öğrenim hedefi tam ekran, sahne sahne ve sesli",
   "maddeler": [
-    "Tek dokunuş artık videoyu durdurmaz ya da sarmaz; yalnız denetimleri açıp kapatır (tam ekranda da).",
-    "Kenara çift dokun ±10 sn (dokunmaya devam ettikçe +10), ortaya çift dokun oynat/duraklat, basılı tut 2× hız, yana kaydırarak sar.",
-    "Videoda cümle listesi, hız menüsü ve cümlelere bölünmüş zaman çubuğu; bilgisayarda tık oynat/duraklat, çift tık tam ekran.",
-    "Her adım videosunun sonunda o adımdan kısa bir soru; yanlışın Eksikler sekmesine eklenir."
+    "Hedefler sekmesinde \"Hedefler filmi · tam ekran\": KMB belgesindeki 15 hedef sırayla, her biri Ne yaparsın → Nasıl → Neden → Sık hata → Hoca sorar akışıyla.",
+    "Kamera anlatılan parçaya yaklaşır, odak dışı alan loşlaşır; etiket ve çizimler cümleyle eş zamanlı belirir; sık hata evresi kırmızı uyarıyla.",
+    "Her hedefin sonunda hocanın sorusu okunur, 5 saniyelik düşünme payı verilir (kapatılabilir); sonunda tüm hedeflerin özeti.",
+    "Telefonda dikey, bilgisayarda yatay düzen; klavye: boşluk, ←/→ cümle, PgUp/PgDn hedef, f tam ekran."
   ],
   "eklenen": [
-    "Video jestleri: çift dokunuş, basılı tutma, kaydırma",
-    "Cümle listesi ve hız menüsü",
-    "Adım sonu kısa soru"
+    "KMB Hedefler filmi (tam ekran, sesli, kamera odaklı animasyon)"
   ],
   "degisen": [
-    "KMB video denetimleri görüntünün üstünde, kendiliğinden gizlenir"
+    "KMB hedef kartlarının üstünde film düğmesi"
   ],
-  "duzeltilen": [
-    "Tek dokunuşun videoyu durdurması ya da 10 sn sarması",
-    "Tam ekran ders videosunun altında site menüsünün görünmesi",
-    "Sarınca otomatik geçişin kalıcı olarak kapanması"
-  ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Etkileşimli KMB video oynatıcı",
+      "ad": "KMB Hedefler filmi",
       "nerede": {
-        "ad": "Ders çalış › KMB dersleri › Üretral kateter",
-        "yol": "/dersler/kmb/uretral-kateter"
+        "ad": "Ders çalış › KMB dersleri › Üretral kateter › Hedefler",
+        "yol": "/dersler/kmb/uretral-kateter/hedef"
       },
-      "amac": "Videoyu telefonda parmakla rahatça yönetirsin; her adımın sonunda öğrendiğini hemen sınarsın.",
+      "amac": "KMB belgesindeki 15 öğrenim hedefini sınav gözüyle, tek seferde ve tam ekranda izlersin; her hedefte ne yapacağını, nasıl ve neden yapacağını, hocanın sorduğu soruyu duyarsın.",
       "islevler": [
-        "Tek dokunuş: denetimleri aç/kapat",
-        "Kenara çift dokunuş: ±10 sn, devam ettikçe +10",
-        "Basılı tut: 2× hız; yana kaydır: sar",
-        "Cümle listesi ve hız menüsü",
-        "Adım sonunda kısa soru, yanlışlar Eksikler sekmesine"
+        "15 hedef art arda, kaldığın hedeften başlar",
+        "Kamera anlatılan yapıya yaklaşır, geri kalanı loşlaşır",
+        "Sık hata evresi kırmızı uyarıyla",
+        "Hedef sonunda hocanın sorusu + düşünme payı (kapatılabilir)",
+        "Hız seçimi, cümle ve hedef atlama"
       ],
-      "ipucu": "Bilgisayarda boşluk oynat/duraklat, ←/→ 10 sn, ↑/↓ cümle, 0–9 videonun o yüzdesine gider."
+      "ipucu": "Bilgisayarda boşluk oynat/duraklat, ←/→ cümle, PgUp/PgDn hedef, f tam ekran, Esc kapat."
     }
   ]
 }

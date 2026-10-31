@@ -13,6 +13,7 @@ import { SAHNELER, SahneCiz, type SahneDurum } from './sahneler';
 import { uygula } from './eylem';
 import LottieVideo, { KMB_DURDUR, LOTTILER, bolumAn, sn, type VideoTutamac } from './LottieVideo';
 import DersVideo from './DersVideo';
+import HedefFilmi from './HedefFilmi';
 import INDEX from '../../data/kmb/index.json';
 import '../../styles/kmb.css';
 
@@ -622,6 +623,7 @@ function Hedefler({ ders, ses, onBitir }: { ders: Ders; ses: SesKayit | null; on
   const [kendin, setKendin] = useState(false);
   const [acik, setAcik] = useState(true);
   const [video, setVideo] = useState(false);
+  const [film, setFilm] = useState(false); // tam ekran Hedefler filmi (HedefFilmi.tsx)
   const [bitti, setBitti] = useState<number[]>(() => { try { return JSON.parse(localStorage.getItem(anahtar) || '[]'); } catch { return []; } });
   const k = K[hi];
   const belge = ders.hedefler.find((h) => h.no === k?.no);
@@ -649,6 +651,10 @@ function Hedefler({ ders, ses, onBitir }: { ders: Ders; ses: SesKayit | null; on
   return (
     <div className="kmb-hedef">
       <aside className="kmb-adimlar" aria-label="Öğrenim hedefleri">
+        <button className="kmb-hf-ac" onClick={() => { durdur(); setFilm(true); }}>
+          <span className="ik" aria-hidden>▶</span>
+          <span><b>Hedefler filmi · tam ekran</b><small>{K.length} hedef, sahne sahne ve sesli; hedef {k.no}'den başlar</small></span>
+        </button>
         <p className="kmb-hedef-ilerleme">{bitti.length} / {K.length} hedef tamam</p>
         {K.map((x, i) => (
           <button key={x.no} className={`kmb-adim-dugme${i === hi ? ' etkin' : ''}${bitti.includes(x.no) ? ' gecti' : ''}`} onClick={() => setHi(i)}>
@@ -699,6 +705,7 @@ function Hedefler({ ders, ses, onBitir }: { ders: Ders; ses: SesKayit | null; on
         </div>
         {bitti.length === K.length && <button className="kmb-devam" onClick={onBitir}>Tüm hedefler tamam · Sınava geç ›</button>}
       </section>
+      {film && <HedefFilmi ders={ders} ses={ses} bas={hi} onKapat={() => setFilm(false)} onSinav={onBitir} />}
     </div>
   );
 }

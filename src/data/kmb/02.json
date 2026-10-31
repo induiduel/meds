@@ -2798,7 +2798,73 @@
       ],
       "neden": "Hasta kendisine kimin işlem yaptığını bilirse güvenir ve uyum gösterir.",
       "hata": "Doğrudan malzemeye uzanıp hastayla hiç konuşmadan işleme başlamak.",
-      "hoca": "Hastaya ilk ne söylersin?"
+      "hoca": "Hastaya ilk ne söylersin?",
+      "film": [
+        {
+          "sahne": "pozisyon",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "p-hekim"
+            },
+            {
+              "t": "vurgula",
+              "id": "p-hekim"
+            }
+          ],
+          "odak": "p-hekim",
+          "zoom": 1.6
+        },
+        {
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "p-hekim"
+            }
+          ],
+          "odak": "p-hekim",
+          "zoom": 1.5
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "p-erkek"
+            }
+          ],
+          "odak": "p-erkek",
+          "zoom": 1.4
+        },
+        {
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "p-erkek"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "odak": "p-hekim",
+          "zoom": 1.3
+        },
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-lateks"
+            },
+            {
+              "t": "renk",
+              "id": "m-lateks",
+              "renk": "kirmizi"
+            }
+          ],
+          "odak": "m-lateks",
+          "zoom": 1.5
+        }
+      ]
     },
     {
       "no": 2,
@@ -2829,7 +2895,91 @@
       ],
       "neden": "Onam hukuki bir zorunluluktur; refakatçi hem hastayı rahatlatır hem seni medikolegal sorunlardan korur.",
       "hata": "İşlemi anlatmadan başlamak ya da ortalık yerde, perde çekmeden kateter takmak.",
-      "hoca": "Bu hastaya kateter takarken yanında kim olmalı?"
+      "hoca": "Bu hastaya kateter takarken yanında kim olmalı?",
+      "film": [
+        {
+          "sahne": "pozisyon",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "p-hekim"
+            },
+            {
+              "t": "vurgula",
+              "id": "p-hekim"
+            }
+          ],
+          "odak": "p-hekim",
+          "zoom": 1.5
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "p-kadin"
+            },
+            {
+              "t": "etiket",
+              "id": "p-kadin"
+            }
+          ],
+          "odak": "p-kadin",
+          "zoom": 1.3
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "p-paravan"
+            },
+            {
+              "t": "etiket",
+              "id": "p-paravan"
+            },
+            {
+              "t": "goster",
+              "id": "p-yardimci"
+            },
+            {
+              "t": "etiket",
+              "id": "p-yardimci"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "p-yardimci"
+            }
+          ],
+          "odak": "p-yardimci",
+          "zoom": 1.5
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "p-paravan"
+            },
+            {
+              "t": "renk",
+              "id": "p-kadin",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "p-kadin"
+            }
+          ],
+          "odak": "p-kadin",
+          "zoom": 1.3
+        }
+      ]
     },
     {
       "no": 3,
@@ -2860,7 +3010,111 @@
       ],
       "neden": "Eksik malzeme işlemi steril alanın ortasında durdurur.",
       "hata": "Geniş uçlu kateter enjektörünü unutmak; idrar gelmezse kateterin yerini onunla anlarsın.",
-      "hoca": "Malzemeleri say; hangisi idrar gelmediğinde işe yarar?"
+      "hoca": "Malzemeleri say; hangisi idrar gelmediğinde işe yarar?",
+      "film": [
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-lateks"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-silikon"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "m-jel"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-nonsteril"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-steril"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-izotonik"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-enjektor"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-antiseptik"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-ortu"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-torba"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "foley-kesit",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "c-olcek-eriskin"
+            },
+            {
+              "t": "vurgula",
+              "id": "c-olcek-eriskin"
+            },
+            {
+              "t": "etiket",
+              "id": "c-olcek-cocuk"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "m-steril-alan"
+            },
+            {
+              "t": "ciz",
+              "id": "m-steril-alan"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "odak": "m-genis",
+          "zoom": 1.6
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-genis"
+            },
+            {
+              "t": "renk",
+              "id": "m-genis",
+              "renk": "kirmizi"
+            }
+          ],
+          "odak": "m-genis",
+          "zoom": 1.8
+        }
+      ]
     },
     {
       "no": 4,
@@ -2878,7 +3132,82 @@
       ],
       "neden": "Steril eldiveni temizlikte kullanırsan kirlenir ve yerleştirme aşamasında steril kalmaz.",
       "hata": "Temizliği steril eldivenle yapıp aynı eldivenle kateteri tutmak.",
-      "hoca": "Hangi aşamada hangi eldiveni giyersin?"
+      "hoca": "Hangi aşamada hangi eldiveni giyersin?",
+      "film": [
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-nonsteril"
+            }
+          ],
+          "odak": "m-nonsteril",
+          "zoom": 1.7
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "m-nonsteril",
+              "renk": "mavi"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-nonsteril"
+            }
+          ],
+          "odak": "m-nonsteril",
+          "zoom": 1.7
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-steril"
+            }
+          ],
+          "odak": "m-steril",
+          "zoom": 1.7
+        },
+        {
+          "sahne": "yakin-el",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "h-el"
+            },
+            {
+              "t": "vurgula",
+              "id": "h-el"
+            }
+          ],
+          "odak": "h-el",
+          "zoom": 1.3
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "h-yanlis"
+            },
+            {
+              "t": "etiket",
+              "id": "h-yanlis"
+            },
+            {
+              "t": "renk",
+              "id": "h-yanlis",
+              "renk": "kirmizi"
+            }
+          ],
+          "odak": "h-yanlis",
+          "zoom": 1.5
+        }
+      ]
     },
     {
       "no": 5,
@@ -2905,7 +3234,103 @@
       ],
       "neden": "Merkezden dışa silmek mikroorganizmaları meatustan uzaklaştırır.",
       "hata": "Dıştan içe silmek ya da aynı bezle tekrar tekrar silmek.",
-      "hoca": "Temizliği hangi yönde, kaç kez yaparsın?"
+      "hoca": "Temizliği hangi yönde, kaç kez yaparsın?",
+      "film": [
+        {
+          "sahne": "kadin",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "k-meatus"
+            },
+            {
+              "t": "vurgula",
+              "id": "k-meatus"
+            }
+          ],
+          "odak": "k-meatus",
+          "zoom": 1.4
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-temizlik"
+            },
+            {
+              "t": "ciz",
+              "id": "k-temizlik"
+            },
+            {
+              "t": "etiket",
+              "id": "k-minus"
+            },
+            {
+              "t": "etiket",
+              "id": "k-majus"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "yakin-erkek-jel",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "j-prepisyum"
+            },
+            {
+              "t": "vurgula",
+              "id": "j-prepisyum"
+            },
+            {
+              "t": "goster",
+              "id": "j-temizlik"
+            },
+            {
+              "t": "ciz",
+              "id": "j-temizlik"
+            },
+            {
+              "t": "etiket",
+              "id": "j-temizlik"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "j-meatus"
+            },
+            {
+              "t": "vurgula",
+              "id": "j-meatus"
+            }
+          ],
+          "odak": "j-meatus",
+          "zoom": 1.5
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "j-temizlik",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "ciz",
+              "id": "j-temizlik"
+            }
+          ],
+          "odak": "j-temizlik",
+          "zoom": 1.4
+        }
+      ]
     },
     {
       "no": 6,
@@ -2927,7 +3352,103 @@
       ],
       "neden": "Kateter mesaneye steril bir yoldan girmezse enfeksiyon riski artar.",
       "hata": "Steril paketi kendi steril olmayan eldiveninle açıp içindekine dokunmak.",
-      "hoca": "Steril malzemeyi sana kim, nasıl verir?"
+      "hoca": "Steril malzemeyi sana kim, nasıl verir?",
+      "film": [
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "m-steril-alan"
+            },
+            {
+              "t": "ciz",
+              "id": "m-steril-alan"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-ortu"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-steril"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-silikon"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "m-steril-alan",
+              "renk": "yesil"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-torba"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "yakin-mesane",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "etiket",
+              "id": "y-delik"
+            }
+          ],
+          "odak": "y-delik",
+          "zoom": 1.4
+        },
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "m-steril-alan"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "m-steril-alan",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-nonsteril"
+            },
+            {
+              "t": "renk",
+              "id": "m-nonsteril",
+              "renk": "kirmizi"
+            }
+          ],
+          "odak": "m-nonsteril",
+          "zoom": 1.5
+        }
+      ]
     },
     {
       "no": 7,
@@ -2949,7 +3470,88 @@
       ],
       "neden": "Steril eldiven kateterin mesaneye kirlenmeden ulaşmasını sağlar.",
       "hata": "Steril eldivenle hastanın uyluğuna, örtünün dışına ya da kendi önlüğüne dokunmak.",
-      "hoca": "Kateteri neden avucunda toplayarak tutarsın?"
+      "hoca": "Kateteri neden avucunda toplayarak tutarsın?",
+      "film": [
+        {
+          "sahne": "yakin-el",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "h-el"
+            },
+            {
+              "t": "vurgula",
+              "id": "h-el"
+            }
+          ],
+          "odak": "h-el",
+          "zoom": 1.3
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "h-halka"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "h-halka"
+            },
+            {
+              "t": "etiket",
+              "id": "h-uc"
+            },
+            {
+              "t": "vurgula",
+              "id": "h-uc"
+            }
+          ],
+          "odak": "h-halka",
+          "zoom": 1.3
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "h-uc",
+              "renk": "yesil"
+            }
+          ],
+          "odak": "h-uc",
+          "zoom": 1.6
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "h-yanlis"
+            },
+            {
+              "t": "etiket",
+              "id": "h-yanlis"
+            },
+            {
+              "t": "renk",
+              "id": "h-yanlis",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "h-yanlis"
+            }
+          ],
+          "odak": "h-yanlis",
+          "zoom": 1.4
+        }
+      ]
     },
     {
       "no": 8,
@@ -2971,7 +3573,78 @@
       ],
       "neden": "Örtü, kateterin çevredeki temizlenmemiş deriye değmesini önler.",
       "hata": "Örtüyü meatus görünmeyecek biçimde yerleştirip sonra elle kaydırmak.",
-      "hoca": "Delikli örtü neyi korur?"
+      "hoca": "Delikli örtü neyi korur?",
+      "film": [
+        {
+          "sahne": "kadin",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "k-meatus"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-ortu"
+            },
+            {
+              "t": "etiket",
+              "id": "k-ortu"
+            },
+            {
+              "t": "vurgula",
+              "id": "k-meatus"
+            }
+          ],
+          "odak": "k-meatus",
+          "zoom": 1.3
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-halka"
+            },
+            {
+              "t": "renk",
+              "id": "k-ortu",
+              "renk": "yesil"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "k-ortu"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "k-ortu",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "k-ortu"
+            }
+          ],
+          "odak": "k-ortu",
+          "zoom": 1.2
+        }
+      ]
     },
     {
       "no": 9,
@@ -3002,7 +3675,124 @@
       ],
       "neden": "Balonun mesanede şişirilebilmesi için kateterin ucu ve balonu mesaneye tam girmelidir.",
       "hata": "Erkekte idrar erken geldi diye kateteri sonuna kadar itmemek.",
-      "hoca": "Erkekte kateteri nereye kadar itersin, neden?"
+      "hoca": "Erkekte kateteri nereye kadar itersin, neden?",
+      "film": [
+        {
+          "sahne": "erkek",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "e-meatus"
+            },
+            {
+              "t": "etiket",
+              "id": "e-mesane"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "kadin",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "k-halka"
+            },
+            {
+              "t": "goster",
+              "id": "k-kateter"
+            },
+            {
+              "t": "ciz",
+              "id": "k-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "k-idrar"
+            },
+            {
+              "t": "etiket",
+              "id": "k-meatus"
+            }
+          ],
+          "odak": "k-meatus",
+          "zoom": 1.3
+        },
+        {
+          "sahne": "erkek",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "e-jel"
+            },
+            {
+              "t": "etiket",
+              "id": "e-jel"
+            },
+            {
+              "t": "goster",
+              "id": "e-kateter"
+            },
+            {
+              "t": "ciz",
+              "id": "e-kateter"
+            },
+            {
+              "t": "etiket",
+              "id": "e-prostat"
+            },
+            {
+              "t": "etiket",
+              "id": "e-sfinkter"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "etiket",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "vurgula",
+              "id": "e-balon-dogru"
+            }
+          ],
+          "odak": "e-balon-dogru",
+          "zoom": 1.5
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "e-balon-dogru"
+            },
+            {
+              "t": "goster",
+              "id": "e-balon-yanlis"
+            },
+            {
+              "t": "etiket",
+              "id": "e-balon-yanlis"
+            },
+            {
+              "t": "renk",
+              "id": "e-balon-yanlis",
+              "renk": "kirmizi"
+            }
+          ],
+          "odak": "e-balon-yanlis",
+          "zoom": 1.5
+        }
+      ]
     },
     {
       "no": 10,
@@ -3037,7 +3827,122 @@
       ],
       "neden": "İdrarın gelmesi kateterin mesanede olduğunun en güvenilir işaretidir.",
       "hata": "İdrar gelmediği halde balonu şişirmek.",
-      "hoca": "İdrar gelmedi; ilk ne yaparsın?"
+      "hoca": "İdrar gelmedi; ilk ne yaparsın?",
+      "film": [
+        {
+          "sahne": "yakin-mesane",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "etiket",
+              "id": "y-delik"
+            }
+          ],
+          "odak": "y-delik",
+          "zoom": 1.4
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "y-idrar"
+            },
+            {
+              "t": "ciz",
+              "id": "y-idrar"
+            },
+            {
+              "t": "etiket",
+              "id": "y-idrar"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "yakin-uretra",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "z-dogru"
+            },
+            {
+              "t": "ciz",
+              "id": "z-dogru"
+            },
+            {
+              "t": "goster",
+              "id": "z-sivi"
+            },
+            {
+              "t": "etiket",
+              "id": "z-sivi"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "yakin-mesane",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-delik"
+            },
+            {
+              "t": "goster",
+              "id": "y-idrar"
+            },
+            {
+              "t": "ciz",
+              "id": "y-idrar"
+            },
+            {
+              "t": "renk",
+              "id": "y-idrar",
+              "renk": "yesil"
+            }
+          ],
+          "odak": "y-delik",
+          "zoom": 1.3
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "sahne": "yakin-uretra",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "z-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "z-balon"
+            },
+            {
+              "t": "renk",
+              "id": "z-balon",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "z-balon"
+            }
+          ],
+          "odak": "z-balon",
+          "zoom": 1.4
+        }
+      ]
     },
     {
       "no": 11,
@@ -3072,7 +3977,119 @@
       ],
       "neden": "Üretrada şişen balon perforasyon, kanama ve darlık yapar; sfinkter düzeyindeyse kalıcı inkontinans gelişir.",
       "hata": "Balonu idrar gelmeden ya da kadında idrar gelir gelmez, birkaç santimetre daha itmeden şişirmek.",
-      "hoca": "Balonu ne zaman ve neyle şişirirsin?"
+      "hoca": "Balonu ne zaman ve neyle şişirirsin?",
+      "film": [
+        {
+          "sahne": "yakin-mesane",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "y-kateter"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon-sonuk"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon-sonuk"
+            }
+          ],
+          "odak": "y-balon-sonuk",
+          "zoom": 1.5
+        },
+        {
+          "eylem": [
+            {
+              "t": "gizle",
+              "id": "y-balon-sonuk"
+            },
+            {
+              "t": "goster",
+              "id": "y-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "y-balon"
+            },
+            {
+              "t": "vurgula",
+              "id": "y-balon"
+            }
+          ],
+          "odak": "y-balon",
+          "zoom": 1.5
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "y-cekme"
+            },
+            {
+              "t": "ciz",
+              "id": "y-cekme"
+            },
+            {
+              "t": "etiket",
+              "id": "y-cekme"
+            },
+            {
+              "t": "etiket",
+              "id": "y-boyun"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "yakin-uretra",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "z-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "z-balon"
+            },
+            {
+              "t": "goster",
+              "id": "z-yirtik"
+            },
+            {
+              "t": "etiket",
+              "id": "z-yirtik"
+            },
+            {
+              "t": "goster",
+              "id": "z-kan"
+            },
+            {
+              "t": "etiket",
+              "id": "z-sfinkter"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "z-balon",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "z-balon"
+            }
+          ],
+          "odak": "z-balon",
+          "zoom": 1.4
+        }
+      ]
     },
     {
       "no": 12,
@@ -3104,7 +4121,96 @@
       ],
       "neden": "Doğru kanala bağlanmayan torbaya idrar gelmez.",
       "hata": "Torbayı balon kanalına takmaya çalışmak; sınavda en sık yapılan hata budur.",
-      "hoca": "Torbayı hangi kanala takarsın?"
+      "hoca": "Torbayı hangi kanala takarsın?",
+      "film": [
+        {
+          "sahne": "foley",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-torba"
+            },
+            {
+              "t": "etiket",
+              "id": "f-torba"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-torba-bag"
+            },
+            {
+              "t": "ciz",
+              "id": "f-torba-bag"
+            },
+            {
+              "t": "etiket",
+              "id": "f-drenaj"
+            },
+            {
+              "t": "renk",
+              "id": "f-drenaj",
+              "renk": "yesil"
+            },
+            {
+              "t": "etiket",
+              "id": "f-balon-kanal"
+            }
+          ],
+          "odak": "f-drenaj",
+          "zoom": 1.4
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-torba"
+            },
+            {
+              "t": "etiket",
+              "id": "f-musluk"
+            }
+          ],
+          "odak": "f-torba",
+          "zoom": 1.3
+        },
+        {
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "f-drenaj"
+            }
+          ],
+          "odak": "f-drenaj",
+          "zoom": 1.4
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "f-balon-kanal",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "f-balon-kanal"
+            },
+            {
+              "t": "etiket",
+              "id": "f-balon-kanal"
+            }
+          ],
+          "odak": "f-balon-kanal",
+          "zoom": 1.6
+        }
+      ]
     },
     {
       "no": 13,
@@ -3130,7 +4236,87 @@
       ],
       "neden": "Steril yoldan alınan örnek kültür sonucunu güvenilir kılar.",
       "hata": "Genç, bilinci açık ve orta akım idrar verebilen hastaya yalnız kültür için kateter takmak.",
-      "hoca": "Kimde kültür için kateter takılabilir?"
+      "hoca": "Kimde kültür için kateter takılabilir?",
+      "film": [
+        {
+          "sahne": "mesane",
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-kultur"
+            },
+            {
+              "t": "etiket",
+              "id": "g-kultur"
+            },
+            {
+              "t": "vurgula",
+              "id": "g-kultur"
+            }
+          ],
+          "odak": "g-kultur",
+          "zoom": 1.5
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "g-torba"
+            },
+            {
+              "t": "goster",
+              "id": "g-akis"
+            },
+            {
+              "t": "ciz",
+              "id": "g-akis"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "g-mesane-normal"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-kultur",
+              "renk": "yesil"
+            },
+            {
+              "t": "vurgula",
+              "id": "g-kultur"
+            }
+          ],
+          "odak": "g-kultur",
+          "zoom": 1.5
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "g-kultur",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "g-mesane-normal"
+            }
+          ],
+          "odak": "g-mesane-normal",
+          "zoom": 1.3
+        }
+      ]
     },
     {
       "no": 14,
@@ -3152,7 +4338,97 @@
       ],
       "neden": "Kayıt, sonraki ekibin kateteri ve olası sorunları bilmesini sağlar.",
       "hata": "Komplikasyon gelişmediyse kayda gerek olmadığını düşünmek.",
-      "hoca": "Kayda neleri yazarsın?"
+      "hoca": "Kayda neleri yazarsın?",
+      "film": [
+        {
+          "sahne": "foley",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "f-govde"
+            },
+            {
+              "t": "vurgula",
+              "id": "f-govde"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-balon"
+            },
+            {
+              "t": "etiket",
+              "id": "f-balon"
+            },
+            {
+              "t": "goster",
+              "id": "f-enjektor"
+            },
+            {
+              "t": "vurgula",
+              "id": "f-balon-kanal"
+            }
+          ],
+          "odak": "f-balon",
+          "zoom": 1.4
+        },
+        {
+          "eylem": [
+            {
+              "t": "goster",
+              "id": "f-torba"
+            },
+            {
+              "t": "goster",
+              "id": "f-torba-bag"
+            },
+            {
+              "t": "ciz",
+              "id": "f-torba-bag"
+            },
+            {
+              "t": "etiket",
+              "id": "f-torba"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "f-drenaj"
+            },
+            {
+              "t": "etiket",
+              "id": "f-balon-kanal"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "f-govde",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "f-govde"
+            }
+          ],
+          "odak": "f-govde",
+          "zoom": 1.2
+        }
+      ]
     },
     {
       "no": 15,
@@ -3171,7 +4447,105 @@
       "neden": "Kalış süresi kateterin malzemesine göre seçilir; uzun süre kalacaksa silikon tercih edilir.",
       "hata": "Bütün kateterlerin aynı süre kalabileceğini söylemek.",
       "hoca": "Lateks ve silikon kateteri kalış süresine göre karşılaştır.",
-      "dogrulanacak": "Lateks ve silikon kateterin gün/hafta olarak kalış süresi KMB Rehberi ile doğrulanacak."
+      "dogrulanacak": "Lateks ve silikon kateterin gün/hafta olarak kalış süresi KMB Rehberi ile doğrulanacak.",
+      "film": [
+        {
+          "sahne": "foley-kesit",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "c-olcek-eriskin"
+            }
+          ],
+          "zoom": 1
+        },
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-lateks"
+            },
+            {
+              "t": "renk",
+              "id": "m-lateks",
+              "renk": "sari"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-silikon"
+            },
+            {
+              "t": "renk",
+              "id": "m-silikon",
+              "renk": "mavi"
+            }
+          ],
+          "odak": "m-lateks",
+          "zoom": 1.4
+        },
+        {
+          "sahne": "erkek",
+          "eylem": [
+            {
+              "t": "etiket",
+              "id": "e-uretra"
+            },
+            {
+              "t": "etiket",
+              "id": "e-meatus"
+            },
+            {
+              "t": "vurgula",
+              "id": "e-uretra"
+            }
+          ],
+          "odak": "e-uretra",
+          "zoom": 1.3
+        },
+        {
+          "sahne": "malzeme",
+          "eylem": [
+            {
+              "t": "vurgula",
+              "id": "m-silikon"
+            },
+            {
+              "t": "renk",
+              "id": "m-silikon",
+              "renk": "yesil"
+            }
+          ],
+          "odak": "m-silikon",
+          "zoom": 1.5
+        },
+        {
+          "zoom": 1
+        },
+        {
+          "eylem": [
+            {
+              "t": "renk",
+              "id": "m-lateks",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "renk",
+              "id": "m-silikon",
+              "renk": "kirmizi"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-lateks"
+            },
+            {
+              "t": "vurgula",
+              "id": "m-silikon"
+            }
+          ],
+          "zoom": 1.2
+        }
+      ]
     }
   ]
 }
