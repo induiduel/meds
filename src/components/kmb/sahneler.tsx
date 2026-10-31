@@ -365,99 +365,124 @@ const Mesane: Sahne = {
 };
 
 /** Erkek: üretra yolu (mesane boynu → prostatik → membranöz → bulbar → penil → meatus) */
-const URETRA = 'M300 236 L300 305 C300 345 330 362 372 352 L470 320 L700 302';
-
+const URETRA = 'M335 322 L335 372 C335 398 355 406 378 394 C392 386 402 352 422 348 L590 340';
+const KATETER_E = 'M700 338 L602 338 L590 340 L422 348 C402 352 392 386 378 394 C355 406 335 398 335 372 L335 322 L333 250';
+/** Düz vektör çizgi film stili (2026-11-01 referans: Foley illüstrasyonu): pürüzsüz dolgular, 2 px sıcak kontur, filtre/parıltı yok.
+ *  Hasta sırtüstü, yandan; alt karında kesit penceresi (mesane, prostat, sfinkter, üretra), penis yatay sağa, kateter meatustan mesaneye,
+ *  balon mesanede; dışarıda örtü (yeşil) ve böbrek küvet. Ölçek: penis çapı ≈ 4 cm = 48 px → 1 cm ≈ 12 px; üretra 12 px, 16 Fr kateter 7 px, balon 10 mL ≈ r 20. */
 const Erkek: Sahne = {
   ad: 'Erkek alt üriner sistem (yan kesit)',
   gizli: ['e-jel', 'e-kateter', 'e-balon-dogru', 'e-kivrim', 'e-enjektor', 'e-balon-yanlis'],
   etiket: {
-    'e-mesane': [300, 120, 'Mesane'],
-    'e-prostat': [215, 262, 'Prostat'],
-    'e-sfinkter': [215, 312, 'Eksternal sfinkter'],
-    'e-uretra': [430, 375, 'Üretra (~1 cm çap)'],
-    'e-penil': [560, 250, 'Penis (korpuslar)'],
-    'e-glans': [660, 250, 'Glans / prepisyum'],
-    'e-meatus': [700, 350, 'Eksternal meatus'],
-    'e-testis': [520, 470, 'Testis / epididim'],
-    'e-jel': [560, 352, 'Lidokainli jel üretrada'],
-    'e-balon-dogru': [400, 150, 'Balon mesanede ✓'],
-    'e-balon-yanlis': [300, 410, 'Balon üretrada ✗'],
+    'e-mesane': [300, 160, 'Mesane'],
+    'e-prostat': [250, 352, 'Prostat'],
+    'e-sfinkter': [250, 386, 'Eksternal sfinkter'],
+    'e-uretra': [500, 372, 'Üretra (~1 cm çap)'],
+    'e-penil': [470, 282, 'Penis (korpuslar)'],
+    'e-glans': [600, 282, 'Glans / prepisyum'],
+    'e-meatus': [660, 372, 'Eksternal meatus'],
+    'e-testis': [440, 470, 'Testis / epididim'],
+    'e-jel': [520, 322, 'Lidokainli jel üretrada'],
+    'e-balon-dogru': [390, 232, 'Balon mesanede ✓'],
+    'e-balon-yanlis': [430, 426, 'Balon üretrada ✗'],
   },
   Ciz: ({ o }) => (
     <>
-      <rect x={0} y={0} width={800} height={500} fill={u('zemin-klinik')} />
-      <PelvisKesit erkek />
-      {/* seminal vezikül */}
-      <path d="M240 235 C222 222 222 205 238 200 C252 196 262 212 266 228 Z" fill="#e9c5a8" stroke="#b58b6a" strokeWidth={1.5} />
-      <Simfiz x={412} y={236} r={-20} />
-      <text x={432} y={300} fontSize={12} fill="#7d6a45">simfiz</text>
-      {/* ürogenital diyafram */}
-      <path d="M250 300 L360 300" stroke="#b65a50" strokeWidth={10} strokeLinecap="round" opacity={0.75} />
-      <g {...o('e-mesane')} filter={u('golge')}>
-        <path className="boya" d="M228 160 C222 100 270 70 320 72 C372 74 400 110 392 160 C386 200 352 228 306 236 C266 228 232 200 228 160 Z" fill={u('mesane')} stroke="#a8554e" strokeWidth={7} />
-        <path d="M242 160 C238 110 278 88 320 90 C362 92 382 120 376 160 C371 192 345 212 306 220 C272 213 246 192 242 160 Z" fill={u('idrar')} opacity={0.88} />
-        <path d="M270 100 C292 90 320 88 345 94" stroke="#fff" strokeWidth={4} opacity={0.45} fill="none" strokeLinecap="round" />
-        {/* trigon */}
-        <path d="M282 214 L306 236 L330 214" stroke="#b85f58" strokeWidth={2} fill="none" opacity={0.7} />
+      <defs>
+        <linearGradient id="kmb-e-deri" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#f3c8a3" /><stop offset="1" stopColor="#e2a37c" /></linearGradient>
+        <linearGradient id="kmb-e-ortu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#5aa893" /><stop offset="1" stopColor="#3f8a76" /></linearGradient>
+        <linearGradient id="kmb-e-yatak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#9fd3d6" /><stop offset="1" stopColor="#6fb4b9" /></linearGradient>
+        <radialGradient id="kmb-e-mesane" cx="45%" cy="40%" r="70%"><stop offset="0" stopColor="#c9655a" /><stop offset="1" stopColor="#a8433a" /></radialGradient>
+        <radialGradient id="kmb-e-idrar" cx="45%" cy="35%" r="75%"><stop offset="0" stopColor="#fbe58a" /><stop offset="1" stopColor="#efc53f" /></radialGradient>
+        <linearGradient id="kmb-e-kateter" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#f7c75a" /><stop offset="1" stopColor="#d9962a" /></linearGradient>
+        <radialGradient id="kmb-e-balon" cx="40%" cy="35%" r="70%"><stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#d7dee6" /></radialGradient>
+      </defs>
+      <rect x={0} y={0} width={800} height={500} fill="#ffffff" />
+      {/* yatak */}
+      <path d="M0 418 L800 418 L800 500 L0 500 Z" fill="url(#kmb-e-yatak)" />
+      <path d="M0 418 L800 418" stroke="#4f9aa0" strokeWidth={3} />
+      {/* gövde: sırtüstü hasta, baş solda (kadraj dışı), karın üstte, uyluk sağa */}
+      <path d="M0 150 C120 118 250 118 380 132 C440 138 500 168 540 214 C566 244 586 276 600 300 L800 300 L800 418 L0 418 Z" fill="url(#kmb-e-deri)" stroke="#b9805a" strokeWidth={2.5} strokeLinejoin="round" />
+      {/* göbek deliği */}
+      <path d="M232 128 C238 134 246 134 252 128" stroke="#b9805a" strokeWidth={2} fill="none" strokeLinecap="round" />
+      {/* steril örtü (yeşil): uyluktan sağa, dalgalı üst kenar ve kıvrım çizgileri */}
+      <path d="M612 288 C634 272 652 292 676 278 C700 264 716 290 740 278 C764 266 780 286 800 276 L800 418 L612 418 Z" fill="url(#kmb-e-ortu)" stroke="#2f6f5f" strokeWidth={2.5} strokeLinejoin="round" />
+      {[650, 700, 752].map((x) => <path key={x} d={`M${x} 300 C${x - 8} 340 ${x + 6} 380 ${x - 4} 414`} stroke="#2f6f5f" strokeWidth={1.6} fill="none" opacity={0.55} />)}
+      {/* kesit penceresi: alt karın — koyu kesit kenarı, içinde pelvis dokusu */}
+      <path d="M232 192 C232 160 268 140 322 142 C388 144 420 180 418 236 C417 290 392 330 346 364 C318 384 282 388 252 372 C226 358 214 330 214 290 C214 250 232 222 232 192 Z" fill="#e9b893" stroke="#9a5f3f" strokeWidth={3} />
+      <path d="M242 196 C244 168 276 150 322 152 C380 154 408 186 406 236 C405 288 380 324 340 354 C314 372 282 376 256 362 C236 350 226 326 226 292 C226 254 242 226 242 196 Z" fill="#f6d7bd" />
+      {/* simfiz pubis */}
+      <g>
+        <ellipse cx={372} cy={292} rx={14} ry={30} fill="#f1e6cf" stroke="#b9a479" strokeWidth={2} transform="rotate(-12 372 292)" />
       </g>
-      <g {...o('e-prostat')} filter={u('golge')}>
-        <path className="boya" d="M262 262 C258 240 280 232 300 232 C322 232 342 242 338 264 C334 284 318 292 300 292 C280 292 266 282 262 262 Z" fill={u('prostat')} stroke="#94594a" strokeWidth={2} />
-        {['M272 254 q10 -8 22 -4', 'M310 252 q12 2 18 10', 'M276 276 q14 6 26 0'].map((d) => <path key={d} d={d} stroke="#9a604f" strokeWidth={1.2} fill="none" opacity={0.6} />)}
+      <g {...o('e-mesane')}>
+        <path className="boya" d="M262 236 C258 190 290 164 332 166 C376 168 400 200 396 244 C392 282 364 310 336 318 C304 312 266 282 262 236 Z" fill="url(#kmb-e-mesane)" stroke="#7a2e26" strokeWidth={3} strokeLinejoin="round" />
+        <path d="M278 238 C276 204 300 184 332 186 C366 188 382 212 380 244 C376 272 356 294 336 300 C312 294 282 272 278 238 Z" fill="url(#kmb-e-idrar)" />
+        <path d="M296 200 C310 192 326 190 342 194" stroke="#fff6cf" strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.85} />
+        {/* trigon */}
+        <path d="M310 290 L336 310 L362 290" stroke="#9a4a40" strokeWidth={2.2} fill="none" strokeLinecap="round" />
+      </g>
+      <g {...o('e-prostat')}>
+        <path className="boya" d="M312 334 C310 322 322 316 336 316 C350 316 362 322 360 336 C358 350 348 358 336 358 C324 358 314 350 312 334 Z" fill="#d8977e" stroke="#9a5a44" strokeWidth={2.5} />
       </g>
       <g {...o('e-sfinkter')}>
-        <rect className="boya" x={282} y={294} width={36} height={18} rx={7} fill="#c5534a" stroke="#8d2f28" strokeWidth={1.5} />
-        {[288, 296, 304, 312].map((x) => <path key={x} d={`M${x} 296 l0 14`} stroke="#8d2f28" strokeWidth={1} opacity={0.6} />)}
+        <rect className="boya" x={320} y={366} width={32} height={14} rx={7} fill="#cf5a4c" stroke="#8d2f28" strokeWidth={2} />
       </g>
-      {/* penis: korpus kavernozumlar + spongiozum */}
-      <g {...o('e-penil')} filter={u('golge')}>
-        <path d="M392 300 C420 278 460 270 500 270 L640 270 C650 270 650 334 640 334 L500 334 C450 336 412 336 380 352 Z" fill={u('deri')} stroke="#b9805a" strokeWidth={2} />
-        <path className="boya" d="M420 288 C450 280 480 280 500 280 L636 280 L636 302 L500 302 C470 302 440 304 420 308 Z" fill={u('korpus')} opacity={0.95} />
-        <path d="M440 294 L630 291" stroke="#a85558" strokeWidth={1} opacity={0.6} />
-        <path d="M460 312 L636 304 L636 324 L460 330 Z" fill={u('spongiosum')} />
+      {/* penis: gövde (korpuslar) + alt yüzde spongiozum, kök skrotuma iner */}
+      <g {...o('e-penil')}>
+        <path className="boya" d="M386 306 L580 306 C592 306 592 356 580 356 L410 356 C396 356 386 350 384 340 Z" fill="#edb08c" stroke="#b9805a" strokeWidth={2.5} strokeLinejoin="round" />
+        <path d="M400 318 L578 318" stroke="#f7d2b6" strokeWidth={5} strokeLinecap="round" opacity={0.9} />
+        <path d="M406 348 L580 348" stroke="#d98c7a" strokeWidth={6} strokeLinecap="round" opacity={0.6} />
       </g>
-      {/* bulbus spongiozum */}
-      <ellipse cx={392} cy={352} rx={34} ry={18} fill={u('spongiosum')} transform="rotate(-18 392 352)" />
-      {/* skrotum + testis */}
-      <g {...o('e-testis')} filter={u('golge')}>
-        <path d="M440 336 C420 360 420 430 470 450 C520 468 572 440 570 392 C568 356 540 336 510 334 Z" fill={u('deri')} stroke="#b9805a" strokeWidth={2} />
-        <path d="M470 352 C460 370 462 420 495 430" stroke="#c28a66" strokeWidth={1.2} fill="none" opacity={0.6} />
-        <ellipse className="boya" cx={505} cy={395} rx={36} ry={28} fill={u('testis')} stroke="#a77d76" strokeWidth={2} />
-        <path d="M535 372 C552 380 552 412 532 420" stroke="#b9746d" strokeWidth={8} fill="none" strokeLinecap="round" opacity={0.85} />
+      <g {...o('e-glans')}>
+        <path className="boya" d="M576 304 C600 302 616 314 616 331 C616 348 600 360 576 358 C580 342 580 320 576 304 Z" fill="#d98580" stroke="#a85f5a" strokeWidth={2.5} />
+        <path d="M574 302 C582 300 588 304 590 310 M574 360 C582 362 588 358 590 352" stroke="#b9805a" strokeWidth={4} fill="none" strokeLinecap="round" />
+      </g>
+      <g {...o('e-meatus')}><path className="boya" d="M612 330 C616 334 616 342 612 346" stroke="#7d2f2a" strokeWidth={3} fill="none" strokeLinecap="round" /></g>
+      <g {...o('e-testis')}>
+        <path d="M398 358 C384 376 382 414 412 428 C440 440 474 426 474 398 C474 376 456 358 432 356 Z" fill="#edb08c" stroke="#b9805a" strokeWidth={2.5} strokeLinejoin="round" />
+        <ellipse className="boya" cx={430} cy={398} rx={22} ry={18} fill="#eed0c7" stroke="#b07f78" strokeWidth={2} />
+        <path d="M448 384 C458 390 458 408 446 414" stroke="#c48a84" strokeWidth={5} fill="none" strokeLinecap="round" />
       </g>
       <g {...o('e-uretra')}>
-        <path d={URETRA} stroke="#a8554e" strokeWidth={13} fill="none" strokeLinecap="round" opacity={0.5} />
-        <path className="cz boya-cizgi" pathLength={1} d={URETRA} stroke="#f0b8b2" strokeWidth={8} fill="none" strokeLinecap="round" />
+        <path d={URETRA} stroke="#8a3b33" strokeOpacity={0.55} strokeWidth={14} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path className="cz boya-cizgi" pathLength={1} d={URETRA} stroke="#f2b7b0" strokeWidth={9} fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </g>
-      <g {...o('e-glans')} filter={u('golge')}>
-        <path className="boya" d="M630 268 C680 262 712 282 712 302 C712 322 680 342 630 336 C622 320 622 284 630 268 Z" fill={u('glans')} stroke="#a85f5a" strokeWidth={2} />
-        <path d="M626 266 C640 262 648 268 652 276 M626 338 C640 342 648 336 652 328" stroke="#c28a66" strokeWidth={5} fill="none" strokeLinecap="round" />
-        <path d="M650 278 C672 276 690 284 698 294" stroke="#fff" strokeWidth={2.5} opacity={0.5} fill="none" />
-      </g>
-      <g {...o('e-meatus')}><ellipse className="boya" cx={710} cy={302} rx={4} ry={8} fill="#7d2f2a" /></g>
       <g {...o('e-jel')}>
-        <path className="cz boya-cizgi" pathLength={1} d="M710 302 L470 320 L372 352" stroke="#8fc7ff" strokeWidth={14} strokeOpacity={0.65} fill="none" strokeLinecap="round" />
+        <path className="cz boya-cizgi" pathLength={1} d="M612 338 L590 340 L422 348 C402 352 392 386 378 394" stroke="#8fc7ff" strokeWidth={11} strokeOpacity={0.6} fill="none" strokeLinecap="round" />
       </g>
       <g {...o('e-kateter')}>
-        <path className="cz boya-cizgi" pathLength={1} d="M728 302 L700 302 L470 320 L372 352 C330 362 300 345 300 305 L300 140" stroke="#eef2f6" strokeWidth={7} fill="none" strokeLinecap="round" />
-        <circle cx={300} cy={140} r={5} fill="#eef2f6" stroke="#5b6676" strokeWidth={1.2} /><circle cx={300} cy={146} r={1.8} fill="#2e3540" />
-        <rect x={728} y={292} width={26} height={20} rx={5} fill="#e3e8ee" stroke="#6b7a90" strokeWidth={1.5} /><rect x={732} y={280} width={8} height={12} rx={2} fill="#ef7d22" />
-        <path d="M728 299 L700 299 L470 317 L372 349 C330 359 297 342 297 305 L297 140" stroke="#fff" strokeWidth={2} fill="none" opacity={0.7} />
+        <path d={KATETER_E} stroke="#b47a1a" strokeWidth={9} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path className="cz boya-cizgi" pathLength={1} d={KATETER_E} stroke="url(#kmb-e-kateter)" strokeWidth={6.5} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx={333} cy={250} r={5} fill="#f7c75a" stroke="#b47a1a" strokeWidth={1.6} /><circle cx={333} cy={256} r={1.6} fill="#5a3a10" />
+        {/* dışarıda Y bağlantı: drenaj ucu aşağı küvete damlar, valfli balon kanalı yukarı enjektöre */}
+        <path d="M700 338 C720 338 728 350 726 368 C724 384 714 394 702 400" stroke="#b47a1a" strokeWidth={9} fill="none" strokeLinecap="round" /><path d="M700 338 C720 338 728 350 726 368 C724 384 714 394 702 400" stroke="#f7c75a" strokeWidth={6.5} fill="none" strokeLinecap="round" />
+        <path d="M708 336 C716 326 722 318 730 310" stroke="#b47a1a" strokeWidth={6} fill="none" strokeLinecap="round" /><path d="M708 336 C716 326 722 318 730 310" stroke="#f7c75a" strokeWidth={3.5} fill="none" strokeLinecap="round" />
+        <rect x={728} y={300} width={12} height={9} rx={2} fill="#2f6fd6" transform="rotate(-42 728 300)" />
+        <ellipse cx={702} cy={408} rx={2.6} ry={4} fill="#efc53f" />
       </g>
       <g {...o('e-kivrim')}>
-        <path className="cz boya-cizgi" pathLength={1} d="M728 302 L700 302 L470 320 L405 340 C350 362 332 318 375 316 C418 314 408 362 352 358" stroke="#eef2f6" strokeWidth={7} fill="none" strokeLinecap="round" />
+        <path className="cz boya-cizgi" pathLength={1} d="M760 338 L602 338 L422 348 C402 352 392 386 378 394 C356 406 332 392 352 376 C372 360 382 400 352 404" stroke="#f7c75a" strokeWidth={6.5} fill="none" strokeLinecap="round" />
       </g>
       <g {...o('e-balon-dogru')}>
-        <ellipse className="boya" cx={300} cy={170} rx={22} ry={17} fill="#ffffff" fillOpacity={0.7} stroke="#2e9e5b" strokeWidth={3} />
-        <ellipse cx={293} cy={164} rx={7} ry={4} fill="#fff" />
+        <circle className="boya" cx={335} cy={278} r={20} fill="url(#kmb-e-balon)" stroke="#2e9e5b" strokeWidth={3} />
+        <ellipse cx={329} cy={271} rx={6} ry={3.5} fill="#fff" />
       </g>
       <g {...o('e-balon-yanlis')}>
-        <ellipse className="boya" cx={350} cy={354} rx={26} ry={18} fill="#d23b3b" fillOpacity={0.75} stroke="#8d1f1f" strokeWidth={3} />
-        {[0, 60, 120, 180, 240, 300].map((a) => <path key={a} d={`M${350 + Math.cos(a * Math.PI / 180) * 30} ${354 + Math.sin(a * Math.PI / 180) * 22} l${Math.cos(a * Math.PI / 180) * 10} ${Math.sin(a * Math.PI / 180) * 10}`} stroke="#d23b3b" strokeWidth={2.5} />)}
+        <ellipse className="boya" cx={364} cy={398} rx={20} ry={15} fill="#e05a5a" fillOpacity={0.85} stroke="#8d1f1f" strokeWidth={3} />
+        {[0, 60, 120, 180, 240, 300].map((a) => <path key={a} d={`M${364 + Math.cos(a * Math.PI / 180) * 24} ${398 + Math.sin(a * Math.PI / 180) * 19} l${Math.cos(a * Math.PI / 180) * 8} ${Math.sin(a * Math.PI / 180) * 8}`} stroke="#d23b3b" strokeWidth={2.5} strokeLinecap="round" />)}
       </g>
-      <g {...o('e-enjektor')} filter={u('golge')}>
-        <rect x={772} y={292} width={28} height={20} rx={3} fill={u('plastik')} stroke="#6b7a90" strokeWidth={1.5} />
-        <path d="M758 298 L772 296 L772 308 L758 306 Z" fill="#9aa6b4" />
-        <text x={786} y={330} fontSize={10} textAnchor="middle" fill="#3e4a58">50 mL</text>
+      <g {...o('e-enjektor')}>
+        <g transform="translate(736 302) rotate(-42)">
+          <rect x={0} y={-8} width={62} height={16} rx={3} fill="#eef3f8" stroke="#6b7a90" strokeWidth={1.8} />
+          <rect x={4} y={-5} width={34} height={10} fill="#cfe6ff" />
+          <rect x={62} y={-3} width={18} height={6} fill="#c9d3de" stroke="#6b7a90" strokeWidth={1} /><rect x={78} y={-9} width={5} height={18} rx={1.5} fill="#6b7a90" />
+        </g>
+      </g>
+      {/* böbrek küvet (mavi) örtü üstünde; damlayan idrar */}
+      <g>
+        <path d="M646 404 C660 392 700 388 724 396 C740 402 742 416 730 420 L652 420 C640 418 636 410 646 404 Z" fill="#3f86c9" stroke="#1f4e79" strokeWidth={2.5} strokeLinejoin="round" />
+        <path d="M656 406 C674 398 702 396 722 402" stroke="#9fcaf0" strokeWidth={3} strokeLinecap="round" fill="none" />
       </g>
     </>
   ),

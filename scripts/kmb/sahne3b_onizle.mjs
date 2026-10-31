@@ -33,7 +33,7 @@ await send('Page.enable'); await send('Runtime.enable'); await send('Network.ena
 await send('Emulation.setDeviceMetricsOverride', { width: W, height: H + 40, deviceScaleFactor: 1, mobile: false });
 // giriş: ai-test çerezi
 await send('Page.navigate', { url: 'http://localhost:3000/' }); await sleep(1500);
-await send('Runtime.evaluate', { expression: `localStorage.setItem('medsoru_giris_uyarisi_v1', JSON.stringify({surum:1,at:new Date().toISOString()})); localStorage.setItem('medsoru_kmb_3b','1'); fetch('/api/ai-test/oturum',{method:'POST',headers:{'x-panel-secret':${JSON.stringify(secret || '')}}}).then(r=>r.status)`, awaitPromise: true, returnByValue: true });
+await send('Runtime.evaluate', { expression: `localStorage.setItem('medsoru_giris_uyarisi_v1', JSON.stringify({surum:1,at:new Date().toISOString()})); localStorage.setItem('medsoru_kmb_3b', ${opt.uc ? "'1'" : "'0'"}); fetch('/api/ai-test/oturum',{method:'POST',headers:{'x-panel-secret':${JSON.stringify(secret || '')}}}).then(r=>r.status)`, awaitPromise: true, returnByValue: true });
 /** Tek kare: sahne + durum (eylem listesi) + odak → png */
 async function kare(ad, sahne, eylem, odak, goster) {
   const q = new URLSearchParams({ sahne, w: String(W) });
