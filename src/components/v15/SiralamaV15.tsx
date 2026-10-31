@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Award, ChevronDown, CircleCheck, Clock, Crown, Dna, Flag, Gamepad2, Info, Lock, Trophy, Users } from 'lucide-react';
+import { Award, ChevronDown, CircleCheck, Clock, Crown, Dna, Flag, Flame, Gamepad2, Info, Lock, Search, Trophy, Users } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { sayi, useBasarim, type SiraSatir } from '../../services/basarimIstemci';
 import { useProfil } from '../../services/profilKurulum';
@@ -143,6 +143,20 @@ export default function SiralamaV15() {
   const ben = satir.find((s) => s.ben);
   const onumdeki = ben && ben.sira > 1 ? satir.find((s) => s.sira === ben.sira - 1) : undefined;
   const fark = ben && onumdeki ? Math.max(0, ham(onumdeki) - ham(ben)) : 0;
+  const [ara, setAra] = useState('');
+  // 2026-10-31: liste istatistikleri (katılımcı, lider, ortalama, medyan) ve lidere göre oran çubuğu
+  const degerler = satir.map(ham);
+  const lider = degerler.length ? Math.max(...degerler) : 0;
+  const ort = degerler.length ? degerler.reduce((a, b) => a + b, 0) / degerler.length : 0;
+  const med = (() => { const d = [...degerler].sort((a, b) => a - b); const n = d.length; return n ? (n % 2 ? d[(n - 1) / 2] : (d[n / 2 - 1] + d[n / 2]) / 2) : 0; })();
+  const toplamKisi = gorunen?.kisi || satir.length;
+  const dilim = ben && toplamKisi ? Math.max(1, Math.ceil((ben.sira / toplamKisi) * 100)) : null;
+  const ilerleme = ben && onumdeki && ham(onumdeki) > 0 ? Math.min(100, Math.round((ham(ben) / ham(onumdeki)) * 100)) : 100;
+  const arkamdaki = ben ? satir.find((s) => s.sira === ben.sira + 1) : undefined;
+  const ondeyim = ben && arkamdaki ? Math.max(0, ham(ben) - ham(arkamdaki)) : 0;
+  const q = ara.trim().toLocaleLowerCase('tr-TR');
+  const suzulen = q ? kalan.filter((s) => (s.ben ? 'sen' : s.ad).toLocaleLowerCase('tr-TR').includes(q)) : kalan;
+  const oranOf = (s: Satir) => (lider > 0 ? Math.max(3, Math.round((ham(s) / lider) * 100)) : 0);
   const benGoster = () => document.querySelector('.sr15 [aria-current="true"], .sr15-pd.is-ben')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
   let govde: React.ReactNode;
@@ -177,9 +191,23 @@ export default function SiralamaV15() {
             </button>
           ))}
         </div>
-        {kalan.length > 0 && (
+        <div className="sr15-ist" aria-label="Liste özeti">
+          <span><small>Katılımcı</small><b>{sayi(toplamKisi)}</b></span>
+          <span><small>Lider</small><b>{yaz(lider)}</b></span>
+          <span><small>Ortalama</small><b>{yaz(Math.round(ort))}</b></span>
+          <span><small>Medyan</small><b>{yaz(Math.round(med))}</b></span>
+        </div>
+        {kalan.length > 8 && (
+          <label className="v15-card sr15-ara">
+            <Search size={16} aria-hidden />
+            <span className="sr-only">Listede ara</span>
+            <input value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Listede ad ara" />
+          </label>
+        )}
+        {q && !suzulen.length && <p className="sr15-not">“{ara}” ile eşleşen kimse yok.</p>}
+        {suzulen.length > 0 && (
           <ol className="v15-card sr15-liste">
-            {kalan.map((s) => (
+            {suzulen.map((s) => (
               <li key={s.sira} aria-current={s.ben ? 'true' : undefined}>
                 <button type="button" className={`sr15-sat ${s.ben ? 'is-ben' : ''}`} onClick={() => ac(s)} disabled={!s.kimlik}>
                   <span className="sr15-no">{s.sira}</span>
@@ -187,6 +215,7 @@ export default function SiralamaV15() {
                   <span className="sr15-ad">
                     <b>{s.ben ? 'Sen' : s.ad}</b>
                     {olcu === 'calisma' && s.dersler?.length ? <small>{s.dersler.map((d) => d.ad).join(', ')}</small> : (s.unvan || s.kidem) && <small>{s.unvan || s.kidem}</small>}
+                    <i className="sr15-bar" aria-hidden><i style={{ width: `${oranOf(s)}%` }} /></i>
                   </span>
                   <span className="sr15-puan">{deger(s)}</span>
                 </button>
@@ -199,8 +228,25 @@ export default function SiralamaV15() {
   }
 
   const oyunlar = gorunen?.oyunlar || [];
+  const ozet = durum?.siralama;
   return (
     <div className="sr15">
+      {ozet && (
+        <div className="v15-card sr15-hero" aria-label="Puan sıralamandaki yerin">
+          {([['hafta', 'Bu hafta'], ['kurul', 'Bu kurul'], ['tum', 'Tüm zamanlar']] as const).map(([k, t]) => {
+            const o = ozet[k];
+            const yuzde = o?.sira && o.kisi ? Math.max(1, Math.ceil((o.sira / o.kisi) * 100)) : null;
+            return (
+              <button key={k} type="button" className="sr15-hero-h" onClick={() => setSecim({ olcu: 'puan', kapsam: k })} aria-label={`${t}: ${o?.sira ? `${o.sira}. sıra` : 'sıra yok'}, puana göre aç`}>
+                <small>{t}</small>
+                <b>{o?.sira ? `#${o.sira}` : '—'}</b>
+                <small>{o?.sira ? `${sayi(o.puan)} puan${yuzde ? ` · ilk %${yuzde}` : ''}` : 'henüz sıra yok'}</small>
+              </button>
+            );
+          })}
+          <span className="sr15-hero-h is-seri"><small>Seri</small><b><Flame size={18} aria-hidden /> {durum?.seri || 0}</b><small>gün üst üste</small></span>
+        </div>
+      )}
       <div className="sr15-olcu" role="tablist" aria-label="Neye göre sıralansın">
         {OLCULER.map((o) => (
           <button key={o.id} type="button" role="tab" aria-selected={olcu === o.id} className={olcu === o.id ? 'is-on' : ''} onClick={() => setSecim({ olcu: o.id })}>
@@ -245,7 +291,10 @@ export default function SiralamaV15() {
           <span className="sr15-ben-orta">
             <b>{deger(ben)}</b>
             <small>{ben.sira === 1 ? 'Zirvedesin, farkı koru.' : onumdeki ? `${ben.sira - 1}. sıraya ${olcu === 'calisma' ? sure(fark || 60) : yaz(Math.max(1, fark))} kaldı` : ''}</small>
+            {ben.sira > 1 && onumdeki && <i className="sr15-bar is-ben" aria-hidden><i style={{ width: `${ilerleme}%` }} /></i>}
+            {arkamdaki && <small>Arkandakinden {olcu === 'calisma' ? sure(ondeyim) : yaz(ondeyim)} öndesin</small>}
           </span>
+          {dilim != null && <span className="sr15-dilim"><small>İlk</small><b>%{dilim}</b></span>}
           <ChevronDown size={18} aria-hidden className="sr15-ben-ok" />
         </button>
       )}

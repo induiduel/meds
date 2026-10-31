@@ -1,37 +1,49 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 607,
-  "baslik": "Sorun denetçisi: bağlantı ve eşitleme sorunlarını bulur, anlatır, onarır",
+  "onem": 608,
+  "baslik": "Sıralama ve profil sayfaları yenilendi: özet, grafikler, ilerleme",
   "maddeler": [
-    "Sorun denetçisi: internet, gönderim kuyruğu, ilerleme eşitlemesi, cihaz belleği ve cihaz saati arka planda denetlenir; sorun anlaşılır dille anlatılır.",
-    "Gönderilemeyen işlemler: sunucunun kabul etmediği yorum, beğeni ve bildirimler artık kaybolmaz; nedeni gösterilir, \"Yeniden dene\" ile tekrar gönderilebilir."
+    "Sıralama: haftalık, kurul ve tüm zamanlar sıran tek kartta; yüzdelik dilimin, bir üst sıraya ilerlemen ve listede ad arama.",
+    "Profil: doğru oranı halkası, kıdem ilerlemesi, çalışma dağılımı ve en çok çalışılan dersler grafiği."
   ],
   "eklenen": [
-    "Sorun denetçisi paneli",
-    "\"Bir sorun bulundu\" şeridi"
+    "Sıralama özet kartı ve liste istatistikleri (katılımcı, lider, ortalama, medyan)",
+    "Profilde doğru oranı halkası, çalışma dağılımı ve ders grafikleri"
   ],
   "degisen": [
-    "Gönderilemeyen işlem bildiriminde \"Nedenini gör\" düğmesi"
+    "Sıralama satırlarında lidere göre oran çubuğu",
+    "Profil üst bandı: puan, başarım ve seri etiketleri"
   ],
-  "duzeltilen": [
-    "Sunucunun reddettiği işlemlerin sessizce silinmesi"
-  ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Sorun denetçisi",
+      "ad": "Ayrıntılı sıralama",
       "nerede": {
-        "ad": "Araçlar › Sorunlar",
-        "yol": "/"
+        "ad": "Sıralama",
+        "yol": "/siralama"
       },
-      "amac": "Çevrimdışı ve eşitleme sorunlarını fark edip sana sade dille anlatır, onarabildiğini kendisi onarır.",
+      "amac": "Nerede olduğunu ve bir üst sıraya ne kadar kaldığını tek bakışta görürsün.",
       "islevler": [
-        "Takılan işlemleri ve gönderilemeyen ilerlemeyi kendiliğinden yeniden gönderir",
-        "Reddedilen işlemin nedenini söyler, \"Yeniden dene\" sunar",
-        "Cihaz belleği dolarken ve cihaz saati yanlışken uyarır",
-        "Destek için teknik ayrıntıyı kopyalayabilirsin"
-      ],
-      "ipucu": "Ekranın üstünde \"Bir sorun bulundu\" çıkarsa dokunman yeterli."
+        "Hafta, kurul ve tüm zamanlar sıran ve ilk yüzde kaçta olduğun",
+        "Bir üst sıraya ilerleme çubuğu, arkandakinden farkın",
+        "Katılımcı, lider, ortalama ve medyan",
+        "Listede ada göre arama"
+      ]
+    },
+    {
+      "ad": "Ayrıntılı profil",
+      "nerede": {
+        "ad": "Profilim",
+        "yol": "/arkadaslar"
+      },
+      "amac": "Çalışmanı grafiklerle görürsün.",
+      "islevler": [
+        "Doğru oranı halkası ve günlük ortalama çalışma",
+        "Kıdem ilerlemesi ve sıra şeridi",
+        "Bölümlere göre çalışma dağılımı",
+        "En çok çalıştığın dersler"
+      ]
     }
   ]
 }

@@ -79,3 +79,36 @@
   @media (prefers-reduced-motion: reduce) { & .sr15-iskelet > span { animation: none; } }
 }
 @keyframes sr15-ak { from { background-position: 200% 0; } to { background-position: 0 0; } }
+/* 2026-10-31: özet kartı, liste istatistikleri, oran çubukları, arama, yüzdelik dilim */
+:root[data-v15='on'] {
+  & .sr15-hero { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; padding: 0; overflow: hidden; background: linear-gradient(135deg, var(--color-accent-soft), var(--color-white) 75%); }
+  & .sr15-hero-h { display: grid; gap: 2px; align-content: center; padding: 12px 10px; min-width: 0; border: 0; border-left: 1px solid var(--color-line); background: transparent; font: inherit; color: inherit; text-align: center; }
+  & .sr15-hero-h:first-child { border-left: 0; }
+  & button.sr15-hero-h { cursor: pointer; transition: background .15s; }
+  & button.sr15-hero-h:hover { background: color-mix(in srgb, var(--color-accent) 8%, transparent); }
+  & .sr15-hero-h b { display: inline-flex; align-items: center; justify-content: center; gap: 4px; font: 800 22px/1.1 var(--font-sans); color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  & .sr15-hero-h.is-seri b { color: var(--color-warn); }
+  & .sr15-hero-h small { color: var(--color-ink-3); font-size: 11.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .sr15-hero-h small:first-child { color: var(--color-ink-2); font-weight: 600; }
+  & .sr15-ben { grid-template-columns: auto minmax(0, 1fr) auto auto; }
+  & .sr15-dilim { display: grid; justify-items: center; padding: 6px 10px; border-radius: 12px; background: var(--color-white); color: var(--color-accent); }
+  & .sr15-dilim small { font-size: 11px; color: var(--color-ink-3); }
+  & .sr15-dilim b { font: 800 16px/1.1 var(--font-sans); }
+  & .sr15-bar { display: block; height: 4px; margin-top: 4px; border-radius: 99px; background: var(--color-line); overflow: hidden; }
+  & .sr15-bar > i { display: block; height: 100%; border-radius: inherit; background: color-mix(in srgb, var(--color-accent) 55%, var(--color-white)); transition: width .4s ease; }
+  & .sr15-bar.is-ben { background: var(--color-white); }
+  & .sr15-bar.is-ben > i { background: var(--color-accent); }
+  & .sr15-ist { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  & .sr15-ist > span { display: grid; gap: 2px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); min-width: 0; }
+  & .sr15-ist small { color: var(--color-ink-3); font-size: 11.5px; }
+  & .sr15-ist b { color: var(--color-ink); font-size: 13.5px; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .sr15-ara { display: flex; align-items: center; gap: 8px; padding: 4px 12px; color: var(--color-ink-3); }
+  & .sr15-ara input { flex: 1; min-width: 0; min-height: 36px; border: 0; background: transparent; color: var(--color-ink); font: inherit; outline: none; }
+  & .sr15-pd.is-1 .sr15-pd-kaide { background: linear-gradient(180deg, color-mix(in srgb, var(--color-warn) 32%, var(--color-white)), color-mix(in srgb, var(--color-warn) 12%, var(--color-white))); }
+  @media (max-width: 520px) {
+    & .sr15-hero { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    & .sr15-hero-h:nth-child(3) { border-left: 0; }
+    & .sr15-hero-h:nth-child(n+3) { border-top: 1px solid var(--color-line); }
+    & .sr15-ist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+}

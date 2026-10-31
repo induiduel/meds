@@ -59,3 +59,45 @@
   & .apr15-alan input { min-height: 40px; border: 1px solid var(--color-line); border-radius: 10px; padding: 0 12px; font: 600 16px/1 var(--font-sans); letter-spacing: .12em; background: var(--color-white); color: var(--color-ink); }
   @media (max-width: 480px) { & .apr15-olcu { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 }
+/* 2026-10-31: profil detayları — kahraman bant, çipler, kıdem, doğru halkası, sıra şeridi, dağılım grafikleri */
+:root[data-v15='on'] {
+  & .apr15-hero { position: relative; overflow: hidden; padding-top: 22px; background: linear-gradient(160deg, var(--color-accent-soft) 0%, var(--color-white) 70%); }
+  & .apr15-hero .apr15-av.is-b { width: 76px; height: 76px; font-size: 24px; box-shadow: 0 0 0 4px var(--color-white), 0 0 0 6px var(--color-accent); }
+  & .apr15-cipler { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  & .apr15-cip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 99px; background: var(--color-white); color: var(--color-ink-2); font: 600 12px/1.3 var(--font-sans); border: 1px solid var(--color-line); }
+  & .apr15-cip svg { width: 13px; height: 13px; color: var(--color-accent); }
+  & .apr15-cip.is-seri svg { color: var(--color-warn); }
+  & .apr15-kidem { display: flex; align-items: center; gap: 14px; padding: 12px 16px; min-width: 0; }
+  & .apr15-kidem > div:first-child { display: grid; flex: none; }
+  & .apr15-kidem small { color: var(--color-ink-3); font-size: 12px; }
+  & .apr15-kidem b { color: var(--color-ink); }
+  & .apr15-kidem-ilerle { display: grid; gap: 4px; flex: 1; min-width: 0; }
+  & .apr15-bar { display: block; height: 6px; border-radius: 99px; background: var(--color-line); overflow: hidden; }
+  & .apr15-bar > i { display: block; height: 100%; border-radius: inherit; background: var(--color-accent); transition: width .5s ease; }
+  & .apr15-ozet { display: flex; align-items: center; gap: 16px; padding: 14px 16px; min-width: 0; }
+  & .apr15-ozet-sag { display: grid; gap: 3px; min-width: 0; }
+  & .apr15-ozet-sag b { color: var(--color-ink); font-size: 16px; }
+  & .apr15-ozet-sag small { color: var(--color-ink-3); font-size: 12.5px; }
+  & .apr15-halka { width: 72px; height: 72px; flex: none; }
+  & .apr15-halka circle { fill: none; stroke-width: 8; }
+  & .apr15-halka-iz { stroke: var(--color-line); }
+  & .apr15-halka-dol { stroke: var(--color-accent); stroke-linecap: round; transition: stroke-dasharray .6s ease; }
+  & .apr15-halka text { fill: var(--color-ink); font: 800 15px var(--font-sans); }
+  & button.apr15-sira { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; align-items: center; width: 100%; padding: 10px 8px; border: 0; font: inherit; color: inherit; text-align: center; cursor: pointer; }
+  & .apr15-sira > span { display: grid; gap: 1px; min-width: 0; border-left: 1px solid var(--color-line); }
+  & .apr15-sira > span:first-child { border-left: 0; }
+  & .apr15-sira b { color: var(--color-accent); font: 800 19px/1.15 var(--font-sans); font-variant-numeric: tabular-nums; }
+  & .apr15-sira small { color: var(--color-ink-3); font-size: 11.5px; }
+  & .apr15-sira-ok { width: 18px; height: 18px; color: var(--color-ink-3); }
+  & .apr15-yigin { display: flex; height: 12px; margin: 4px 16px 8px; border-radius: 99px; overflow: hidden; background: var(--color-line); }
+  & .apr15-yigin > i { display: block; height: 100%; }
+  & .apr15 .is-r0 { background: var(--color-accent); }
+  & .apr15 .is-r1 { background: color-mix(in srgb, var(--color-accent) 60%, var(--color-warn)); }
+  & .apr15 .is-r2 { background: var(--color-warn); }
+  & .apr15 .is-r3 { background: color-mix(in srgb, var(--color-accent) 45%, var(--color-white)); }
+  & .apr15 .is-r4 { background: var(--color-ink-3); }
+  & .apr15-lejant li > span { display: flex !important; align-items: center; gap: 8px; color: var(--color-ink); font-size: 13.5px; }
+  & .apr15-lejant li > span > i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  & .apr15-cubuk li > span { flex: 1; gap: 5px; }
+  @media (max-width: 480px) { & .apr15-kidem { flex-wrap: wrap; } & .apr15-kidem-ilerle { flex-basis: 100%; } }
+}
