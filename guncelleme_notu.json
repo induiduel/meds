@@ -1,48 +1,35 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 608,
-  "baslik": "Sıralama ve profil sayfaları yenilendi: özet, grafikler, ilerleme",
+  "onem": 609,
+  "baslik": "Profilde çevrimiçi durumu ve günlük istatistikler; telefon, tablet ve bilgisayar düzeni",
   "maddeler": [
-    "Sıralama: haftalık, kurul ve tüm zamanlar sıran tek kartta; yüzdelik dilimin, bir üst sıraya ilerlemen ve listede ad arama.",
-    "Profil: doğru oranı halkası, kıdem ilerlemesi, çalışma dağılımı ve en çok çalışılan dersler grafiği."
+    "Profil: şu an çevrimiçi mi, ne çalışıyor; değilse son görülme tarihi ve saati.",
+    "Profil: günlük ortalamalar, son 14 gün grafiği, bitirdiği dersler ve sıralama başarıları.",
+    "Sıralama ve profil telefon, tablet ve bilgisayarda ayrı düzende; bilgisayarda iki sütun."
   ],
   "eklenen": [
-    "Sıralama özet kartı ve liste istatistikleri (katılımcı, lider, ortalama, medyan)",
-    "Profilde doğru oranı halkası, çalışma dağılımı ve ders grafikleri"
+    "Çevrimiçi / son görülme kartı",
+    "Günlük istatistikler ve 14 gün grafiği",
+    "Bitirdiği dersler ve sıralama başarıları listesi"
   ],
   "degisen": [
-    "Sıralama satırlarında lidere göre oran çubuğu",
-    "Profil üst bandı: puan, başarım ve seri etiketleri"
+    "Sıralama ve profil sayfalarının duyarlı düzeni"
   ],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Ayrıntılı sıralama",
+      "ad": "Canlı profil",
       "nerede": {
-        "ad": "Sıralama",
-        "yol": "/siralama"
-      },
-      "amac": "Nerede olduğunu ve bir üst sıraya ne kadar kaldığını tek bakışta görürsün.",
-      "islevler": [
-        "Hafta, kurul ve tüm zamanlar sıran ve ilk yüzde kaçta olduğun",
-        "Bir üst sıraya ilerleme çubuğu, arkandakinden farkın",
-        "Katılımcı, lider, ortalama ve medyan",
-        "Listede ada göre arama"
-      ]
-    },
-    {
-      "ad": "Ayrıntılı profil",
-      "nerede": {
-        "ad": "Profilim",
+        "ad": "Arkadaşlar › profil",
         "yol": "/arkadaslar"
       },
-      "amac": "Çalışmanı grafiklerle görürsün.",
+      "amac": "Arkadaşının şu an ne çalıştığını ve ne kadar düzenli çalıştığını görürsün.",
       "islevler": [
-        "Doğru oranı halkası ve günlük ortalama çalışma",
-        "Kıdem ilerlemesi ve sıra şeridi",
-        "Bölümlere göre çalışma dağılımı",
-        "En çok çalıştığın dersler"
+        "Şu an çevrimiçi ve ne yaptığı ya da son görülme zamanı",
+        "Günlük çalışma, soru ve ders ortalamaları",
+        "Son 14 günün grafiği",
+        "Bitirdiği dersler ve sıralama madalyaları"
       ]
     }
   ]

@@ -231,6 +231,7 @@ export default function SiralamaV15() {
   const ozet = durum?.siralama;
   return (
     <div className="sr15">
+      <div className="sr15-sol">
       {ozet && (
         <div className="v15-card sr15-hero" aria-label="Puan sıralamandaki yerin">
           {([['hafta', 'Bu hafta'], ['kurul', 'Bu kurul'], ['tum', 'Tüm zamanlar']] as const).map(([k, t]) => {
@@ -299,8 +300,11 @@ export default function SiralamaV15() {
         </button>
       )}
 
+      </div>
+      <div className="sr15-sag">
       {govde}
       <p className="sr15-not">Bir kişiye dokununca profilini açarsın. Profilini gizleyenler “Gizli kullanıcı” olarak görünür.</p>
+      </div>
     </div>
   );
 }

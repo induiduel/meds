@@ -57,6 +57,21 @@ function hizli(anahtar: string, araMs = 1500, saatlik = 120): string {
 const kvJson = (b: any, key: string) => { try { const r = b?.kv?.[key]; return r?.v ? JSON.parse(r.v) : null; } catch { return null; } };
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 
+/** Son ziyaret edilen adresten kaba etkinlik adı (adresin kendisi profilde gösterilmez) */
+function etkinlikAdi(yol: string): string | undefined {
+  const y = yol.split('?')[0];
+  if (/sesli|canli-ders|\/ders\//.test(y)) return 'Sesli ders dinliyor';
+  if (/ogren|deste/.test(y)) return 'Öğren destesine çalışıyor';
+  if (/oyun/.test(y)) return 'Oyun oynuyor';
+  if (/cozucu|cikmis|sorular|soru|havuz|ornek/.test(y)) return 'Soru çözüyor';
+  if (/kamplar|checkup|son-prova/.test(y)) return 'Sınava hazırlanıyor';
+  if (/spot|onem/.test(y)) return 'Sınav spotlarına bakıyor';
+  if (/hucrem/.test(y)) return 'Hücresiyle ilgileniyor';
+  if (/topluluk|arkadas|kisi/.test(y)) return 'Toplulukta';
+  if (/dersler/.test(y)) return 'Ders çalışıyor';
+  return undefined;
+}
+
 export function registerArkadaslik(app: express.Express, d: Deps) {
   const { motor } = d;
   let sema = false;
@@ -355,7 +370,18 @@ export function registerArkadaslik(app: express.Express, d: Deps) {
     if (k.gizli && !kendim) return res.json({ kimlik: req.params.kimlik, gizli: true, ad: 'Gizli kullanıcı', iliski: ili });
     const olcu = motor.profilOlcu(o);
     const y = yedekOzeti(o);
+    // 2026-10-31: son görülme + şu anki etkinlik (cihaz varlığı user_devices; ham adres dönmez, yalnız kaba etkinlik adı)
+    let gorulme: { at: number; etkinlik?: string } | null = null;
+    try {
+      const r = (await pgDb.query(`select last_seen, last_path from user_devices where uid = $1 order by last_seen desc limit 1`, [o])).rows[0];
+      if (r?.last_seen) gorulme = { at: new Date(r.last_seen).getTime(), etkinlik: etkinlikAdi(String(r.last_path || '')) };
+    } catch { /* tablo yoksa son görülme gösterilmez */ }
+    const sonDers = y.dersler[0];
+    if (sonDers?.sonAt && (!gorulme || sonDers.sonAt > gorulme.at)) gorulme = { at: sonDers.sonAt, etkinlik: gorulme?.etkinlik };
     res.json({
+      gorulme, simdi: sonDers && Date.now() - (sonDers.sonAt || 0) < 15 * 60_000 ? { ad: sonDers.ad, modul: sonDers.modul } : null,
+      gunler: olcu.gunler, aktifGun: olcu.aktifGun, siralamaBasari: olcu.siralamaBasari,
+      bitenler: y.dersler.filter((x) => x.bitti).slice(0, 40).map((x) => ({ ad: x.ad, modul: x.modul, at: x.sonAt })),
       kimlik: motor.kisiKimlik(o), ben: kendim, iliski: ili, arkadasN, acik: !k.gizli,
       ad: olcu.ad, foto: olcu.foto, universite: olcu.universite, donem: olcu.donem, kidem: olcu.kidem, unvan: olcu.unvan,
       calisma: olcu.calisma, soru: olcu.soru, bitirilen: olcu.bitirilen, basarim: olcu.basarim, puan: olcu.puan,

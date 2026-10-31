@@ -112,3 +112,32 @@
     & .sr15-ist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 }
+/* 2026-10-31: duyarlı düzen — telefon tek sütun, tablet geniş tek sütun, masaüstü iki sütun (sol: özet + süzgeç, sağ: liste) */
+:root[data-v15='on'] {
+  & .sr15-sol, & .sr15-sag { display: grid; gap: 12px; min-width: 0; align-content: start; }
+  @media (max-width: 380px) {
+    & .sr15-hero-h b { font-size: 19px; }
+    & .sr15-ben { grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; }
+    & .sr15-ben-ok { display: none; }
+    & button.sr15-sat { grid-template-columns: 24px 36px minmax(0, 1fr) auto; gap: 8px; padding: 8px 10px; }
+    & .sr15-sat .sr15-av { width: 36px; height: 36px; }
+  }
+  @media (min-width: 700px) {
+    & .sr15 { max-width: 860px; }
+    & .sr15-olcu { grid-auto-columns: minmax(0, 1fr); overflow: visible; }
+    & button.sr15-pd { width: 140px; }
+    & .sr15-podyum { gap: 18px; }
+    & .sr15-pd.is-1 .sr15-pd-kaide { height: 78px; }
+    & .sr15-pd.is-2 .sr15-pd-kaide { height: 58px; }
+    & .sr15-pd .sr15-pd-kaide { height: 42px; }
+  }
+  @media (min-width: 1200px) {
+    & .sr15 { max-width: 1180px; grid-template-columns: minmax(340px, 400px) minmax(0, 1fr); gap: 16px; align-items: start; padding-inline: 8px; }
+    & .sr15-sol { position: sticky; top: calc(var(--sh-top-h, 56px) + 12px); }
+    & .sr15-olcu { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    & .sr15-hero { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    & .sr15-hero-h:nth-child(3) { border-left: 0; }
+    & .sr15-hero-h:nth-child(n+3) { border-top: 1px solid var(--color-line); }
+    & button.sr15-sat:hover:not(:disabled) { background: color-mix(in srgb, var(--color-accent) 6%, transparent); }
+  }
+}

@@ -810,6 +810,10 @@ export function createBasarimMotor(deps: MotorDeps) {
         haftaDersler: enCokDersler(k, hb, hs, 5),
         basarim: k.defter.filter((d) => d.t === 'basarim' && !d.geriAlindi).length,
         puan: { hafta: puanAralik(k, hb, hs), toplam: puanAralik(k, '0000', '9999') },
+        // 2026-10-31: son 14 gün dizisi, etkin gün sayısı ve sıralama ödülleri (profil ayrıntısı)
+        gunler: Array.from({ length: 14 }, (_, i) => { const g = gunEkle(bugun, i - 13); const m = k.metrik[g]; return { g, sn: m ? Math.min(m.sn, 86400) : 0, soru: m?.soru || 0, bitir: m?.bitir || 0 }; }),
+        aktifGun: Object.values(k.metrik).filter((m) => (m.sn || 0) >= 60 || (m.soru || 0) > 0).length,
+        siralamaBasari: k.defter.filter((d) => d.t === 'siralama' && !d.geriAlindi).slice(-30).reverse().map((d) => ({ ad: d.ad, g: d.g, a: d.a })),
       };
     },
     /**

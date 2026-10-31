@@ -17,6 +17,9 @@ export interface AcikProfil {
   calisma?: { toplam: number; hafta: number; bugun: number }; soru?: { toplam: number; hafta: number; bugun: number };
   bitirilen?: number; basarim?: number; puan?: { hafta: number; toplam: number }; dogru?: number; yanlis?: number;
   son?: { ad: string; modul: string; at: number } | null; dersler?: DersSatir[]; haftaDersler?: DersSatir[];
+  gorulme?: { at: number; etkinlik?: string } | null; simdi?: { ad: string; modul: string } | null;
+  gunler?: { g: string; sn: number; soru: number; bitir: number }[]; aktifGun?: number;
+  siralamaBasari?: { ad: string; g: string; a: number }[]; bitenler?: { ad: string; modul: string; at?: number }[];
 }
 
 const post = <T,>(url: string, body?: any) => safeJsonFetch<T>(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body || {}) });

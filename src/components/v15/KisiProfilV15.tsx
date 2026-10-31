@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Award, BookOpen, ChevronRight, Clock, Flame, Gamepad2, Lock, MessageCircle, Target, Trophy, UserCheck, UserMinus, UserPlus, X } from 'lucide-react';
+import { Activity, Award, BookOpen, CalendarDays, CheckCircle2, ChevronRight, Clock, Flame, Medal, Gamepad2, Lock, MessageCircle, Target, Trophy, UserCheck, UserMinus, UserPlus, X } from 'lucide-react';
 import { sayi, useBasarim } from '../../services/basarimIstemci';
 import { safeJsonFetch } from '../../services/api';
 import { parseLocation } from '../../router';
@@ -48,7 +48,7 @@ export default function KisiProfilV15() {
   if (!p) return <div className="apr15"><p className="apr15-not">Yükleniyor…</p></div>;
 
   const dugmeler = !p.ben && (
-    <div className="apr15-dugmeler">
+    <div className="apr15-dugmeler is-tam">
       {p.iliski === 'yok' && <button type="button" className="v15-btn" disabled={mesgul} onClick={() => void islem('istek')}><UserPlus aria-hidden /> Arkadaş ekle</button>}
       {p.iliski === 'giden' && <button type="button" className="v15-btn is-soft" disabled={mesgul} onClick={() => void islem('cikar')}><X aria-hidden /> İsteği geri çek</button>}
       {p.iliski === 'gelen' && <>
@@ -91,7 +91,7 @@ export default function KisiProfilV15() {
   const sira = p.ben ? durum?.siralama : undefined;
   return (
     <div className="apr15">
-      <div className="v15-card apr15-bas apr15-hero">
+      <div className="v15-card apr15-bas apr15-hero is-tam">
         <span className="apr15-av is-b" aria-hidden>{p.foto ? <img src={p.foto} alt="" /> : basHarf(p.ad)}</span>
         <div className="apr15-kim">
           <b>{p.ad}</b>
@@ -104,6 +104,7 @@ export default function KisiProfilV15() {
           </span>
         </div>
       </div>
+      <Durum p={p} />
       {kidem && (
         <div className="v15-card apr15-kidem">
           <div><small>Kıdem</small><b>{kidem.ad}</b></div>
@@ -116,7 +117,7 @@ export default function KisiProfilV15() {
         </div>
       )}
       {dugmeler}
-      {mesaj && <p className="apr15-not" role="status">{mesaj}</p>}
+      {mesaj && <p className="apr15-not is-tam" role="status">{mesaj}</p>}
 
       <div className="v15-card apr15-son">
         <span className="v15-tile"><BookOpen aria-hidden /></span>
@@ -145,7 +146,7 @@ export default function KisiProfilV15() {
         </button>
       )}
 
-      <div className="apr15-olcu">
+      <div className="apr15-olcu is-tam">
         <Olcu ikon={<Clock aria-hidden />} ad="Bugün" deger={sure(p.calisma?.bugun)} />
         <Olcu ikon={<Clock aria-hidden />} ad="Bu hafta" deger={sure(p.calisma?.hafta)} />
         <Olcu ikon={<Clock aria-hidden />} ad="Toplam çalışma" deger={sure(p.calisma?.toplam)} />
@@ -153,6 +154,33 @@ export default function KisiProfilV15() {
         <Olcu ikon={<Target aria-hidden />} ad="Doğru oranı" deger={oran == null ? '—' : `%${oran}`} alt={cozulen ? `son ${cozulen} cevaptan` : 'cevap kaydı yok'} />
         <Olcu ikon={<BookOpen aria-hidden />} ad="Bitirilen konu" deger={String(p.bitirilen || 0)} alt={dersler.length ? `${dersler.length} derste çalıştı · ${bitenDers} bitti` : undefined} />
       </div>
+
+      <Gunluk p={p} />
+
+      {!!p.bitenler?.length && (
+        <section className="v15-card apr15-kutu">
+          <h3><CheckCircle2 aria-hidden /> Bitirdiği dersler <span className="apr15-say">{p.bitenler.length}</span></h3>
+          <ul className="apr15-biten">{p.bitenler.map((d, i) => (
+            <li key={i}><CheckCircle2 aria-hidden /><span><b>{d.ad}</b><small>{d.modul}{d.at ? ` · ${once(d.at)}` : ''}</small></span></li>
+          ))}</ul>
+        </section>
+      )}
+
+      {!!p.siralamaBasari?.length && (
+        <section className="v15-card apr15-kutu">
+          <h3><Medal aria-hidden /> Sıralama başarıları <span className="apr15-say">{p.siralamaBasari.length}</span></h3>
+          <ul className="apr15-basari">{p.siralamaBasari.map((b, i) => {
+            const m = /·\s*(\d+)\.\s*$/.exec(b.ad); const no = m ? Number(m[1]) : /birinci|en çok çalışanı/i.test(b.ad) ? 1 : 0;
+            return (
+              <li key={i}>
+                <span className={`apr15-madalya is-${no && no <= 3 ? no : 0}`} aria-hidden>{no || <Trophy />}</span>
+                <span><b>{b.ad.replace(/\s*·\s*\d+\.\s*$/, '')}</b><small>{tarih(b.g)}{no ? ` · ${no}. oldu` : ''}</small></span>
+                {b.a > 0 && <em>+{sayi(b.a)} ATP</em>}
+              </li>
+            );
+          })}</ul>
+        </section>
+      )}
 
       {moduller.length > 0 && modulToplam > 0 && (
         <section className="v15-card apr15-kutu">
@@ -189,9 +217,70 @@ export default function KisiProfilV15() {
         ) : <p className="apr15-not">Henüz ders çalışma kaydı yok. Sesli ders, Öğren ya da soru çözücüde çalışınca burada görünür.</p>}
       </section>
 
-      {p.ben && <GizlilikAnahtari />}
+      {p.ben && <div className="is-tam"><GizlilikAnahtari /></div>}
       {davet && <DavetPencere kimlik={p.kimlik} ad={p.ad} kapat={() => setDavet(false)} />}
     </div>
+  );
+}
+
+const tarih = (g: string) => { const d = new Date(`${g}T12:00:00`); return Number.isNaN(d.getTime()) ? g : d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }); };
+const GUN_AD = ['Pz', 'Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct'];
+
+/** Çevrimiçi / şu an ne yapıyor / son görülme. Çevrimiçi: son 3 dakikada etkin. */
+function Durum({ p }: { p: AcikProfil }) {
+  const g = p.gorulme;
+  if (!g?.at && !p.simdi) return null;
+  const fark = g?.at ? Date.now() - g.at : Infinity;
+  const cevrim = fark < 3 * 60_000;
+  const zaman = g?.at ? new Date(g.at) : null;
+  const tamZaman = zaman ? zaman.toLocaleString('tr-TR', { day: 'numeric', month: 'long', year: zaman.getFullYear() === new Date().getFullYear() ? undefined : 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
+  return (
+    <div className={`v15-card apr15-durum ${cevrim ? 'is-cevrim' : ''}`}>
+      <span className="apr15-nokta" aria-hidden />
+      <div>
+        <b>{cevrim ? 'Şu an çevrimiçi' : `Son görülme: ${once(g?.at)}`}</b>
+        {cevrim && (g?.etkinlik || p.simdi) && <small><Activity aria-hidden /> {p.simdi ? `Şu an ${p.simdi.ad} çalışıyor (${p.simdi.modul})` : g?.etkinlik}</small>}
+        {!cevrim && p.simdi && <small><Activity aria-hidden /> Az önce {p.simdi.ad} çalışıyordu</small>}
+        {!cevrim && tamZaman && <small><CalendarDays aria-hidden /> {tamZaman}</small>}
+      </div>
+    </div>
+  );
+}
+
+/** Günlük ortalamalar (etkin gün başına) + son 14 gün çubuk grafiği */
+function Gunluk({ p }: { p: AcikProfil }) {
+  const gunler = p.gunler || [];
+  if (!gunler.length) return null;
+  const aktif14 = gunler.filter((x) => x.sn >= 60 || x.soru > 0);
+  const n = Math.max(1, aktif14.length);
+  const ortSn = aktif14.reduce((a, x) => a + x.sn, 0) / n;
+  const ortSoru = Math.round(aktif14.reduce((a, x) => a + x.soru, 0) / n);
+  const ortDers = (p.dersler?.length || 0) && p.aktifGun ? Math.max(1, Math.round(((p.dersler?.length || 0) / p.aktifGun) * 10) / 10) : 0;
+  const max = Math.max(1, ...gunler.map((x) => x.sn));
+  const enIyi = gunler.reduce((a, x) => (x.sn > a.sn ? x : a), gunler[0]);
+  return (
+    <section className="v15-card apr15-kutu apr15-gunluk is-tam">
+      <h3><CalendarDays aria-hidden /> Günlük istatistikler <span className="apr15-say">son 14 gün · {aktif14.length} gün etkin</span></h3>
+      <div className="apr15-gun-ort">
+        <span><small>Günlük çalışma</small><b>{sure(ortSn)}</b></span>
+        <span><small>Günlük soru</small><b>{sayi(ortSoru)}</b></span>
+        <span><small>Günlük ders</small><b>{ortDers ? String(ortDers).replace('.', ',') : '—'}</b></span>
+        <span><small>Toplam etkin gün</small><b>{sayi(p.aktifGun || 0)}</b></span>
+      </div>
+      <div className="apr15-grafik" role="img" aria-label={`Son 14 gün çalışma; en yoğun gün ${sure(enIyi.sn)}`}>
+        {gunler.map((x) => {
+          const d = new Date(`${x.g}T12:00:00`);
+          return (
+            <span key={x.g} className="apr15-gun" title={`${d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}: ${sure(x.sn)}, ${x.soru} soru`}>
+              <i style={{ height: `${x.sn ? Math.max(6, (x.sn / max) * 100) : 0}%` }} className={x.g === enIyi.g && x.sn ? 'is-tepe' : ''} />
+              {x.soru > 0 && <em>{x.soru}</em>}
+              <small>{GUN_AD[d.getDay()]}</small>
+            </span>
+          );
+        })}
+      </div>
+      <p className="apr15-not apr15-gun-not">Ortalamalar çalışılan günlere göredir. Sütun yüksekliği çalışma süresi, üstündeki sayı çözülen sorudur.</p>
+    </section>
   );
 }
 
