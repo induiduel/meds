@@ -1885,3 +1885,21 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   ögeyi kesmez; ⑤ her öge adıyla ayırt edilir (neyin ne olduğu belirsizse çizim yeniden yapılır); ⑥ önizleme
   gerçek vuruş durumuyla alınır (`sahne3b_onizle.mjs --film`, SVG için de çalışır), "tüm ögeler açık" karesi yalnız
   kimlik denetimi içindir; ⑦ her sahne yayından önce kare temas sayfasıyla göz denetiminden geçer.
+
+## H465 — KMB 2B Erkek sahnesi: sırtüstü gövdede iç organlar "ayakta" dizilimindeydi (mantık hatası) (2026-11-01)
+
+- **Belirti:** Kullanıcı onaylı 2B stil örneğinde (Erkek kesit) "mantıksal hatalar" gördü: mesane göbek deliğinin tam altında,
+  prostat mesanenin altında, penis yatay ve ~19 cm, üretra skrotumun altından dolanıyor, simfiz işlevsiz, gövde bacaksız
+  bitiyor, mesane dopdolu dururken küvet boş, meatus etiketi örtünün üstünde.
+- **Kök neden:** Gövde sırtüstü (ön yüz yukarı, ayaklar sağda) çizilirken iç anatomi ayakta duran insanın sagital
+  şemasından (mesane üstte → prostat altta → penis öne/sağa) kopyalandı; yani iç organlar gövdeye göre 90° dönüktü.
+  Tek tek parçalar doğru görünse de yön sistemi (superior/inferior, anterior/posterior) gövdeyle çakışmıyordu.
+- **Çözüm:** Sahne tek yön sistemiyle yeniden kuruldu: inferior = sağ, anterior = yukarı; simfiz derinin hemen altında,
+  mesane simfizin arka-üstünde, prostat arkasında, bulbar üretra perinede öne kıvrılır, penis eldivenli elle DİK tutulur
+  (işlem standardı; avuç şaftın arkasında, başparmak/parmak uçları kenarlarda → üretra kanalı görünür), skrotum penis
+  kökünün arka-altında, uyluklar sağda örtü altında, küvet örtü üstünde; idrar yalnız `e-balon-dogru` durumunda lümen →
+  damla → küvet filmi. Ölçek 1 cm ≈ 12 px.
+- **Önleme:** Her kesit sahnesinde önce yön sistemi yazılır (kod yorumunda: "inferior = …, anterior = …"), her organ
+  bu sisteme göre yerleştirilir; "ayakta şema" başka duruşa KOPYALANMAZ. Tutulması gereken şey tutulur (el çizilir),
+  gövde kadrajda kesilmez (uyluk/örtü ile tamamlanır), sıvı davranışı duruma bağlıdır (kateter yerleşmeden idrar akmaz).
+  Kural `docs/KMB_2B_STIL.md` §2-3/§2-6; önizleme `sahne3b_onizle.mjs --film` ile gerçek vuruş durumunda bakılır.

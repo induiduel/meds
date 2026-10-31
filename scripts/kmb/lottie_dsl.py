@@ -621,8 +621,8 @@ def ic_ekle(ust: 'Anim', uretici, harita, gorunur, nm='ic'):
 
 # ———————————————————————— ortak eller (eldivenli). Yerel eksen: nesne yumruğun içinden soldan sağa (y=0) geçer.
 
-ELDIVEN_STERIL = [(0, '#fdf6ea'), (1, '#e3cda9')]
-ELDIVEN_MAVI = [(0, '#e4eefb'), (1, '#a9c3e6')]
+ELDIVEN_STERIL = [(0, '#fbf3e6'), (1, '#e7d3b3')]  # 2B palet (docs/KMB_2B_STIL.md)
+ELDIVEN_MAVI = [(0, '#dcedf9'), (1, '#b3d4ec')]
 
 
 def yumruk(cx, cy, s=1.0, r=0, steril=True):
@@ -649,7 +649,7 @@ def parmak_ucu(cx, cy, r=0, s=1.0, steril=True):
              G(yol('M-8 -10 C0 -14 16 -14 28 -12'), st('#ffffff', 2.5, o=60)), p=(cx, cy), s=(100 * s, 100 * s), r=r)
 
 
-DERI = [(0, '#f6d6bd'), (.7, '#e9b896'), (1, '#d49a76')]
+DERI = [(0, '#f3c8a3'), (1, '#e2a37c')]  # 2B palet
 
 
 def kisi(x, y, renk='#8fc1c9', olcek=1.0, beyaz=False, sac='#3b2a1e'):

@@ -16,8 +16,8 @@ from lottie_dsl import FR, Anim, G, K, KD, S, el, fl, fl_cift, gf, ic_ekle, kisi
 MEDS = Path(__file__).resolve().parents[2]
 VERI = MEDS / 'src/data/kmb'
 DERI, KEMIK, MESANE, IDRAR = LU.DERI, LU.KEMIK, LU.MESANE, LU.IDRAR
-ELDIVEN = '#cfe0f5'
-STERIL = '#f3e5cf'
+ELDIVEN = '#c8e1f4'  # 2B palet
+STERIL = '#f1e3c9'
 
 
 def zemin_kat(A, b1, b2, nm='zemin'):

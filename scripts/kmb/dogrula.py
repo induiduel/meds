@@ -53,8 +53,9 @@ def sahne_ogeleri():
     s = {}
     for ad, ic in re.findall(r"\n\s+'?([\w-]+)'?: \[(.*?)\],?(?=\n)", blok):
         s[ad] = set(re.findall(r"'([a-z]{1,2}-[a-z0-9-]+)'", ic))
-    # malzeme listesi MALZEMELER'den gelir
-    s['malzeme'] = s.get('malzeme', set()) | set(re.findall(r"\['(m-[a-z-]+)', '", t))
+    # malzeme listesi MALZEMELER'den gelir (2026-11-01: sahneler_2b_a.tsx içinde)
+    t2 = ''.join(p.read_text(encoding='utf-8') for p in sorted(SAHNE_TSX.parent.glob('sahneler_2b_*.tsx')))
+    s['malzeme'] = s.get('malzeme', set()) | set(re.findall(r"\['(m-[a-z-]+)', '", t + t2))
     return s
 
 

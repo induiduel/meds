@@ -16,10 +16,10 @@ CIKTI = MEDS / 'src/data/kmb/lottie'
 SES = MEDS / 'src/data/kmb/ses_02.json'
 
 # ortak renkler
-DERI = [(0, '#f6d6bd'), (.7, '#e9b896'), (1, '#d49a76')]
-MESANE = [(0, '#f6c2bb'), (.7, '#e39a92'), (1, '#c8746c')]
-IDRAR = [(0, '#fff3b8'), (1, '#f2cf55')]
-KEMIK = [(0, '#fbf6e9'), (.75, '#eadfc4'), (1, '#cdbd98')]
+DERI = [(0, '#f3c8a3'), (1, '#e2a37c')]  # 2B düz çizgi film paleti (docs/KMB_2B_STIL.md, 2026-11-01)
+MESANE = [(0, '#c9655a'), (1, '#a8433a')]
+IDRAR = [(0, '#fbe58a'), (1, '#efc53f')]
+KEMIK = [(0, '#f7efdd'), (1, '#e6d7b4')]
 ZEMIN = [(0, '#ffffff'), (1, '#ffffff')]  # düz beyaz zemin (kullanıcı kararı: tam ekranda yalnız beyaz arka plan)
 URETRA_E = 'M300 236 L300 305 C300 345 330 362 372 352 L470 320 L700 302'
 KATETER_Y = 'M730 302 L700 302 L470 320 L372 352 C330 362 300 345 300 305 L300 138'
