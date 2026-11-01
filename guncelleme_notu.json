@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 615,
-  "baslik": "KMB görsel asistan: tüm sahneler 2B çizgi film stilinde",
+  "onem": 616,
+  "baslik": "KMB: 2B çizgi film videoları ve Hikâye filmi",
   "maddeler": [
-    "Üretral kateter dersindeki 14 SVG sahne düz vektör çizgi film diliyle yeniden çizildi (anatomik yön ve ölçek düzeltmeleri).",
-    "Lottie adım videolarının paleti aynı tonlara alındı.",
-    "Hedefler filmi yakınlaştırma düzeltmesi."
+    "Üretral kateter dersinin 30 videosu (12 konu + 18 adım) 2B çizgi film dilinde yeniden üretildi.",
+    "Yeni \"Hikâye filmi\": tüm bölümler kazanım ve öğretici bulgu kartlarıyla tek akışta, tam ekran.",
+    "Eski videolar korunur."
   ],
   "eklenen": [],
   "degisen": [

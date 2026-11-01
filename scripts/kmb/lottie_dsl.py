@@ -595,10 +595,13 @@ class Ic:
         kamera_ekle(self.ust.kamera_k, t0, sure, cx, cy, z)
 
 
-def ic_ekle(ust: 'Anim', uretici, harita, gorunur, nm='ic'):
+def ic_ekle(ust: 'Anim', uretici, harita, gorunur, nm='ic', modul=None):
     """Üreticiyi alt kompozisyon olarak ekler. gorunur: [(ilk cümle, son cümle), …] görünür olduğu aralıklar.
-    Sahnenin sayaçları görünürlük bitince kalkar (bilgi() onları etikete çevirir: oynatıcı sayacı hiç kaldırmaz)."""
-    import lottie_uret as LU
+    Sahnenin sayaçları görünürlük bitince kalkar (bilgi() onları etikete çevirir: oynatıcı sayacı hiç kaldırmaz).
+    `modul`: üreticinin `_IC` bayrağını taşıyan modül (varsayılan lottie_uret; 2B hattı lottie2b/ortak2b)."""
+    if modul is None:
+        import lottie_uret as modul
+    LU = modul
     I = Ic(ust, harita, bas=min(b1 for b1, _ in gorunur))
     n_say = len(ust.sayaclar)
     LU._IC = I

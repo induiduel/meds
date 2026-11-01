@@ -11,7 +11,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const MEDS = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const LOT = path.join(MEDS, 'src/data/kmb/lottie');
+const LOT = process.env.LOT ? path.resolve(process.env.LOT) : path.join(MEDS, 'src/data/kmb/lottie');  // LOT=src/data/kmb/lottie2b → 2B hattı
 const OUT = process.env.OUT || `${process.env.TMPDIR || '/tmp'}/kmb-kare`;
 const KARE = (process.env.KARE || '.12,.5,.92').split(',').map(Number);
 const GEN = +(process.env.GEN || 400);  // 400 px ≈ telefon: etiket yazısı 10 px tabana oturur (en sıkışık durum)

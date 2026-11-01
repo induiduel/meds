@@ -16,6 +16,8 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { getCustomApiUrl } from '../../services/api';
 import LINDEX from '../../data/kmb/lottie/index.json';
 import AINDEX from '../../data/kmb/lottie/adimlar.json';
+import LINDEX2 from '../../data/kmb/lottie2b/index.json';
+import AINDEX2 from '../../data/kmb/lottie2b/adimlar.json';
 
 export type LottieBilgi = {
   ad: string; baslik: string; sure: number; sesli?: boolean;
@@ -27,10 +29,18 @@ export type LottieBilgi = {
 };
 type SesKayit = Record<string, { h: string; sure: number; zaman: [number, number][] }>;
 
-/** Konu videoları (lottie_uret.py) + adım videoları (adim_lottie.py: her cümle bir bölüm, ses `o-<adım>`) */
-export const LOTTILER = [...(LINDEX as unknown as LottieBilgi[]), ...(AINDEX as unknown as LottieBilgi[])];
+/** Lottie sürümü (2026-11-01): 2B düz çizgi film hattı `lottie2b/` (scripts/kmb/lottie2b) varsayılan; eski gerçekçi hat
+ *  `lottie/` korunur ve `localStorage.medsoru_kmb_lottie_eski='1'` ile (karşılaştırma) seçilir. Aynı ad için 2B dosyası yoksa eskisi. */
+export const ESKI_TERCIH = 'medsoru_kmb_lottie_eski';
+export const eskiLottie = () => { try { return localStorage.getItem(ESKI_TERCIH) === '1'; } catch { return false; } };
+const VERI1 = import.meta.glob(['../../data/kmb/lottie/*.json', '!../../data/kmb/lottie/index.json', '!../../data/kmb/lottie/adimlar.json']);
+const VERI2 = import.meta.glob(['../../data/kmb/lottie2b/*.json', '!../../data/kmb/lottie2b/index.json', '!../../data/kmb/lottie2b/adimlar.json']);
+const ikiB = (ad: string) => !eskiLottie() && !!VERI2[`../../data/kmb/lottie2b/${ad}.json`];
+/** Konu videoları (lottie_uret.py) + adım videoları (adim_lottie.py: her cümle bir bölüm, ses `o-<adım>`); 2B kaydı eskinin yerine geçer */
+const ESKI = [...(LINDEX as unknown as LottieBilgi[]), ...(AINDEX as unknown as LottieBilgi[])];
+const YENI = [...(LINDEX2 as unknown as LottieBilgi[]), ...(AINDEX2 as unknown as LottieBilgi[])];
+export const LOTTILER: LottieBilgi[] = ESKI.map((v) => (ikiB(v.ad) && YENI.find((y) => y.ad === v.ad)) || v);
 export const klipAdi = (v: LottieBilgi) => (v.adim ? `o-${v.adim}` : `l-${v.ad}`);
-const VERI = import.meta.glob(['../../data/kmb/lottie/*.json', '!../../data/kmb/lottie/index.json', '!../../data/kmb/lottie/adimlar.json']);
 export const sn = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 export const KMB_DURDUR = 'kmb-durdur';
 const ATLA = 10;
@@ -40,7 +50,7 @@ const ONBELLEK = new Map<string, Promise<any>>();
 export function lottieOnYukle(ad: string): Promise<any> {
   let p = ONBELLEK.get(ad);
   if (!p) {
-    const y = VERI[`../../data/kmb/lottie/${ad}.json`];
+    const y = ikiB(ad) ? VERI2[`../../data/kmb/lottie2b/${ad}.json`] : VERI1[`../../data/kmb/lottie/${ad}.json`];
     p = y ? y().then((m: any) => m.default || m) : Promise.reject(new Error(`video yok: ${ad}`));
     ONBELLEK.set(ad, p);
   }

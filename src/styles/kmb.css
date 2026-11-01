@@ -774,3 +774,52 @@ body.kmb-film-acik .v15-tabs { display: none !important; }
 [data-onizle] .kmb-3b { border-radius: 0; }
 .kmb-hf .kmb-3b-etiket { font-size: clamp(12px, 1.3vw, 17px); }
 .kmb-sahne-kap.kucuk .kmb-3b-etiket { font-size: 11px; }
+
+/* ———————— hikâye filmi (HikayeFilmi.tsx): tüm bölümler tek akışta; kartlar koyu zemin, video beyaz zemin */
+.kmb-hk, .kmb-hk.kmb-kok { position: fixed; inset: 0; z-index: 2147483000; max-width: none; margin: 0; padding: 0; width: auto; height: auto; container: none; background: #0e131b; color: #fff; display: flex; flex-direction: column; }
+.kmb-hk.kmb-hk[role="dialog"] { max-height: none; }
+.kmb-hk-govde { position: absolute; inset: 0; }
+.kmb-hk-govde > .kmb-lv { position: absolute; inset: 0; }
+.kmb-hk .kmb-lv.doldur .kmb-lv-sahne { margin-top: 64px; }
+.kmb-hk-ust-cubuk { position: absolute; left: 0; right: 0; top: 0; z-index: 8; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "serit serit" "baslik dugmeler"; gap: 6px 10px; align-items: center;
+  padding: 10px 16px 8px; background: linear-gradient(180deg, rgb(14 19 27 / .92), rgb(14 19 27 / 0)); transition: opacity .35s; }
+.kmb-hk.uyku .kmb-hk-ust-cubuk { opacity: 0; pointer-events: none; }
+.kmb-hk-serit { grid-area: serit; display: flex; gap: 3px; }
+.kmb-hk-serit button { flex: 1; height: 5px; border: 0; border-radius: 3px; background: rgba(255, 255, 255, .18); cursor: pointer; padding: 0; }
+.kmb-hk-serit button.gecti { background: rgba(255, 255, 255, .55); }
+.kmb-hk-serit button.etkin { background: #fff; }
+.kmb-hk-baslik { grid-area: baslik; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: clamp(14px, 1.6vw, 18px); }
+.kmb-hk-bolum { display: inline-block; margin-right: 8px; padding: 2px 9px; border-radius: 999px; background: rgba(255, 255, 255, .12); font: 600 12px var(--font-mono, monospace); vertical-align: 1px; }
+.kmb-hk-dugmeler { grid-area: dugmeler; display: flex; gap: 6px; }
+.kmb-hk-dugmeler button { width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .12); color: #fff; cursor: pointer; }
+.kmb-hk-dugmeler button svg { width: 20px; height: 20px; fill: currentColor; }
+.kmb-hk-dugmeler button:disabled { opacity: .3; cursor: default; }
+.kmb-hk-kart-kap { position: absolute; inset: 0; display: grid; place-items: center; padding: 72px clamp(16px, 5vw, 64px) 24px; overflow: auto; cursor: pointer;
+  background: radial-gradient(ellipse at 50% 30%, #1c2534, #0e131b 70%); }
+.kmb-hk-kart { width: min(100%, 880px); animation: kmb-hf-kart .6s cubic-bezier(.2, .8, .2, 1) both; }
+.kmb-hk-ust { display: block; font-size: clamp(11px, 1.4vw, 13px); text-transform: uppercase; letter-spacing: .08em; opacity: .7; margin-bottom: 10px; }
+.kmb-hk-kart h1 { margin: 0 0 12px; font-size: clamp(26px, 4.5vw, 46px); line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; }
+.kmb-hk-kart h2 { margin: 0 0 16px; font-size: clamp(20px, 3.4vw, 34px); line-height: 1.2; text-wrap: balance; }
+.kmb-hk-kart p { font-size: clamp(15px, 1.8vw, 19px); line-height: 1.5; opacity: .9; max-width: 60ch; }
+.kmb-hk-icindekiler { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 6px 14px; }
+.kmb-hk-icindekiler button { border: 0; background: none; color: #fff; text-align: left; cursor: pointer; padding: 4px 0; font-size: 14px; opacity: .85; }
+.kmb-hk-icindekiler button:hover { opacity: 1; text-decoration: underline; }
+.kmb-hk-icindekiler b { display: inline-block; min-width: 26px; color: #9fc0f2; }
+.kmb-hk-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.kmb-hk-liste.iki { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 8px 20px; }
+.kmb-hk-liste li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; font-size: clamp(15px, 1.9vw, 21px); line-height: 1.4; padding: 10px 14px; border-radius: 14px; background: rgba(255, 255, 255, .06); animation: kmb-hf-kart .5s both; }
+.kmb-hk-liste li:nth-child(2) { animation-delay: .12s; } .kmb-hk-liste li:nth-child(3) { animation-delay: .24s; } .kmb-hk-liste li:nth-child(4) { animation-delay: .36s; }
+.kmb-hk-liste li.dikkat, .kmb-hk-liste li.hata { background: rgb(210 59 59 / .14); }
+.kmb-hk-liste li.puf { background: rgb(47 111 214 / .16); }
+.kmb-hk-no { display: inline-flex; align-items: center; gap: 4px; min-width: 34px; height: 34px; padding: 0 8px; border-radius: 999px; background: rgba(255, 255, 255, .14); font: 700 14px var(--font-mono, monospace); justify-content: center; }
+.kmb-hk-no svg { width: 16px; height: 16px; fill: currentColor; }
+.kmb-hk-no.ok { background: #2e9e5b; }
+.kmb-hk-liste li.puf .kmb-hk-no { background: #2f6fd6; } .kmb-hk-liste li.dikkat .kmb-hk-no, .kmb-hk-liste li.hata .kmb-hk-no { background: #d23b3b; }
+.kmb-hk-devam { position: absolute; right: clamp(16px, 4vw, 48px); bottom: clamp(16px, 4vh, 36px); border: 0; border-radius: 999px; padding: 12px 22px; background: #fff; color: #0e131b; font-weight: 700; font-size: 15px; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; overflow: hidden; }
+.kmb-hk-devam small { font-weight: 500; opacity: .6; font-variant-numeric: tabular-nums; }
+.kmb-hk-devam i { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(0, 0, 0, .08); }
+.kmb-hk-devam i b { position: absolute; inset: 0; background: #2f6fd6; transform-origin: left; transition: transform .1s linear; }
+.kmb-hk-son-dugmeler { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.kmb-hk-son-dugmeler button { border: 0; border-radius: 12px; padding: 10px 16px; font-weight: 600; cursor: pointer; background: rgba(255, 255, 255, .12); color: #fff; }
+.kmb-hk-son-dugmeler button.ana { background: #fff; color: #0e131b; }
+@media (max-width: 700px) { .kmb-hk-kart-kap { padding-top: 64px; } .kmb-hk-liste li { padding: 8px 10px; gap: 8px; } .kmb-hk-devam { right: 12px; bottom: 12px; padding: 10px 16px; } }

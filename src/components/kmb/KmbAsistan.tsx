@@ -15,6 +15,7 @@ import { uygula } from './eylem';
 import LottieVideo, { KMB_DURDUR, LOTTILER, bolumAn, sn, type VideoTutamac } from './LottieVideo';
 import DersVideo from './DersVideo';
 import HedefFilmi from './HedefFilmi';
+import HikayeFilmi from './HikayeFilmi';
 import INDEX from '../../data/kmb/index.json';
 import '../../styles/kmb.css';
 
@@ -137,6 +138,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
   const [t, setT] = useState(0);
   const [gorsel, setGorsel] = useState(false);
   const [video, setVideo] = useState(false);
+  const [hikaye, setHikaye] = useState(false);
   const [liste, setListe] = useState(false);
   // adım videosu bitince altında tek soru (o adıma bağlı vaka/OSCE basamağı); yanıtlanana dek otomatik geçiş bekler
   const [kontrol, setKontrol] = useState<'yok' | 'acik' | 'bitti'>('yok');
@@ -213,6 +215,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
           <div className="kmb-ogret-arac">
             <label className="kmb-oto"><input type="checkbox" checked={otomatik} onChange={(e) => setOtomatik(e.target.checked)} /> Bitince sonraki adıma geç</label>
             <button className="kmb-bag" onClick={() => setVideo(true)}>Tüm ders · tam ekran ›</button>
+            <button className="kmb-bag" onClick={() => setHikaye(true)}>Hikâye filmi ›</button>
           </div>
         </section>
         <section className="kmb-anlatim" aria-label="Adımın anlatımı">
@@ -249,6 +252,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
         </section>
       </div>
       {video && <DersVideo ders={ders} ses={ses} bas={ai} onKapat={() => setVideo(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
+      {hikaye && <HikayeFilmi ders={ders} ses={ses} onKapat={() => setHikaye(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
     </div>
   );
 }
@@ -722,6 +726,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
   const [vi, setVi] = useState(ilk);
   const [oto, setOto] = useState(false);
   const [tum, setTum] = useState(false);
+  const [hikaye, setHikaye] = useState(false);
   const v = liste[vi];
   const sonraki = liste[vi + 1];
   const sec = (i: number) => { setOto(true); setVi(i); window.scrollTo({ top: 0, behavior: 'smooth' }); };
@@ -734,6 +739,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
         <div className="kmb-video-ust">
           <h2>{v.baslik}</h2>
           <button className="kmb-dv-ac" onClick={() => setTum(true)}>Tüm ders · tam ekran</button>
+          <button className="kmb-dv-ac" onClick={() => setHikaye(true)}>Hikâye filmi</button>
         </div>
       </div>
       <nav className="kmb-video-liste" aria-label="Videolar">
@@ -752,6 +758,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
         ))}
       </nav>
       {tum && <DersVideo ders={ders} ses={ses} onKapat={() => setTum(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
+      {hikaye && <HikayeFilmi ders={ders} ses={ses} onKapat={() => setHikaye(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
     </div>
   );
 }
@@ -828,6 +835,7 @@ export default function KmbAsistan() {
   const [ses, setSes] = useState<SesKayit | null>(null);
   const [kapsam, setKapsam] = useState(false);
   const [izle, setIzle] = useState(false);
+  const [hikaye, setHikaye] = useState(() => new URLSearchParams(icKonum().search).get('hikaye') === '1'); // ?hikaye=1: doğrudan hikâye filmi (sınama)
   const [ogretAnahtar, setOgretAnahtar] = useState(0);
   useEffect(() => {
     setDers(null); setSes(null);
@@ -897,6 +905,7 @@ export default function KmbAsistan() {
             : b === 'hedef' ? <Hedefler ders={ders} ses={ses} onBitir={() => sekme('sinav')} />
               : <Ogret key={ogretAnahtar} ders={ders} ses={ses} onBitir={() => sekme('hedef')} onEksik={() => sekme('eksik')} />}
       {izle && ders && <DersVideo ders={ders} ses={ses} bas={0} onKapat={() => setIzle(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
+      {hikaye && ders && <HikayeFilmi ders={ders} ses={ses} onKapat={() => setHikaye(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
     </div>
   );
 }

@@ -54,3 +54,22 @@ illüstrasyon (sırtüstü hasta, kesit penceresi, yeşil örtü, mavi böbrek k
   `node scripts/kmb/sahne3b_onizle.mjs <sahne> [--goster --etiket] [--eylem='[{"t":"goster","id":"…"}]'] --w=1280 --out=<klasör>`.
   Film vuruşları: `--film --hedef=N` (02.json `hedefCalisma[].film`). Tip denetimi `npx tsc --noEmit -p .`.
 - Kapı: `python3 scripts/kmb/dogrula.py` 0 HATA.
+
+## 4. Lottie 2B hattı (videolar; eski hat korunur)
+
+- Tek kaynak yine 2B SVG sahneleri: `scripts/kmb/lottie2b/svg_disa.mjs` sahneleri başsız Chrome'dan SVG + öge kutusu
+  (`svg/<sahne>.svg`, `svg/bbox.json`) olarak alır; `svg_lottie.py` bunları Lottie şekil katmanlarına çevirir
+  (`svg/<sahne>.lottie.json`: data-id başına katman, degrade dolgu/çizgi, evenodd, ok ucu, `cz` yolları; `<text>` taşınmaz → etiket).
+  Sahne değişince ikisi yeniden koşulur (sıra: `npx vite build` → `svg_disa.mjs` → `svg_lottie.py` → üreticiler).
+- `sahne2b.py` (`Sahne2B`: `ekle/katman/bbox/merkez/cz`) + `ortak2b.py` (anim/B/gorun/belir/kateter_cizgi/ilerleyen_kateter/
+  balon/halka/akis/damla/carpi/tik/ok/et/ic_ekle2b/adim) üreticilerin yapı taşlarıdır; üretici yalnız koreografi yazar.
+- Konu videoları: `uret2b.py` (sürücü + referans `erkek_ilerleyis`) + `uret2b_a.py` / `uret2b_b.py` → `src/data/kmb/lottie2b/<ad>.json`
+  + `index.json`. Adım videoları: `adim2b.py` (sürücü) + `adim2b_a/b/c.py` (`ADIMLAR`) → `lottie2b/adim-<id>.json` + `adimlar.json`.
+  Bölüm adları/metinleri eski hatla birebir (ses klipleri `l-<ad>` / `o-<adım>` değişmedi).
+- Oynatıcı (`LottieVideo.tsx`): aynı ad için `lottie2b/` dosyası varsa onu, yoksa eski `lottie/` dosyasını yükler;
+  `localStorage.medsoru_kmb_lottie_eski='1'` eski hattı zorlar (karşılaştırma). Eski üreticiler ve çıktılar silinmez.
+- Kare denetimi: `LOT=src/data/kmb/lottie2b OUT=<klasör> GEN=360 node scripts/kmb/kare_onizle.mjs <ad>` (0 otomatik bulgu + göz);
+  tek kare: `node scripts/kmb/lottie2b/kare.mjs <json> --t=…`.
+- Hikâye filmi (`HikayeFilmi.tsx`, `?hikaye=1`): 18 adım videosu tek akışta; bölüm başında o bölümde kazanılan hedefler
+  (`hedefler[].adimlar`, her hedef ilk geçtiği bölümde), sonunda öğretici bulgular (`puf`, `dikkat`, hedef kartı `hata`), bitişte
+  15 kazanım onay listesi. Kartlar metin uzunluğuna göre 6–14 sn geri sayımla ilerler; video bitince kendiliğinden sonraki kart.
