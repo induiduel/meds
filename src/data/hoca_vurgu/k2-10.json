@@ -1,0 +1,138 @@
+{
+ "ders": "k2-10",
+ "key": "k2-10-bas-agrisina-yaklasim",
+ "vurgular": [
+  {
+   "id": "hv-k2-10-13",
+   "kategori": "onemli",
+   "ifade": "Bu da önemli",
+   "alinti": "Emosyonel faktörlerle ilişkisi var mı? Bu da önemli; yaşanan olaylar baş ağrısını artırıyor ('diğer yıl gibi' ifadesi anlaşılamıyor).",
+   "konu": "Emosyonel faktörler",
+   "s": 7,
+   "dk": "13:13",
+   "p": 9,
+   "adim": 7
+  },
+  {
+   "id": "hv-k2-10-15",
+   "kategori": "onemli",
+   "ifade": "Aile öyküsü önemli",
+   "alinti": "Aile öyküsü önemli; özellikle annede ve teyzede (kadın akrabalarda) olması ve genetik bir geçiş var; 'ikan alan kadınlarda … ihtimali daha fazla ya da erkek' kısmı anlaşılamıyor.",
+   "konu": "Aile öyküsü",
+   "s": 7,
+   "dk": "14:19",
+   "p": 9,
+   "adim": 7
+  },
+  {
+   "id": "hv-k2-10-16",
+   "kategori": "onemli",
+   "ifade": "özellikle not almamız lazım",
+   "alinti": "Sekonder baş ağrısını düşündüren özellikleri özellikle not etmemiz gerekir; bunlarda hızlı davranmak gerekir.",
+   "konu": "Sekonder başağrısı düşündüren öykü özellikleri",
+   "s": 8,
+   "dk": "14:58",
+   "p": 10,
+   "adim": 11
+  },
+  {
+   "id": "hv-k2-10-19",
+   "kategori": "onemli",
+   "ifade": "mutlaka düşünmeniz lazım",
+   "alinti": "Hastanız onkoloji hastasıysa ve başı ağrıyorsa metastazı mutlaka düşünmeniz gerekir.",
+   "konu": "Hastada mevcut malignite tanısı",
+   "s": 8,
+   "dk": "16:22",
+   "p": 11,
+   "adim": 11
+  },
+  {
+   "id": "hv-k2-10-21",
+   "kategori": "dikkat",
+   "ifade": "korkmak lazım",
+   "alinti": "Hasta 'hayatımda çektiğim en şiddetli baş ağrısı' diyorsa bu cümleyi duyduğunuzda korkmak gerekir; çünkü altından kanama, yani subaraknoid kanama (SAK) çıkma ihtimali vardır.",
+   "konu": "Hastanın yaşamındaki “en şiddetli başağrısı” tanımı",
+   "s": 8,
+   "dk": "16:47",
+   "p": 12,
+   "adim": 11
+  },
+  {
+   "id": "hv-k2-10-23",
+   "kategori": "onemli",
+   "ifade": "Erkek için cinsiyeti önemli",
+   "alinti": "Erkek için cinsiyet önemli. Baş ağrısı olan hasta erkekse onu bile sekonder baş ağrısı grubuna almak gerekir; altta bir neden olma ihtimali daha yüksektir.",
+   "konu": "Erkek cinsiyet",
+   "s": 8,
+   "dk": "18:17",
+   "p": 13,
+   "adim": 11
+  },
+  {
+   "id": "hv-k2-10-70",
+   "kategori": "dikkat",
+   "ifade": "tedbirli davranmak lazım",
+   "alinti": "Anamnezi ya da muayeneyi bilinen bir kalıba sokamıyorsak hastayı sekonder kabul edip tedbirli davranmak gerekir.",
+   "konu": "Belirli bir şekle uymayan başağrısı",
+   "s": 8,
+   "dk": "18:46",
+   "p": 13,
+   "adim": 11
+  },
+  {
+   "id": "hv-k2-10-27",
+   "kategori": "onemli",
+   "ifade": "sedimantasyon önemli",
+   "alinti": "Kan testlerinde sedimantasyon önemli; sedimantasyonu en çok yükselten hastalık temporal arterittir (devamındaki 'yüzlere çıkıyor' ifadesi anlaşılamıyor).",
+   "konu": "Kan testleri, sedim",
+   "s": 10,
+   "dk": "21:40",
+   "p": 16,
+   "adim": 14
+  },
+  {
+   "id": "hv-k2-10-75",
+   "kategori": "bilin",
+   "ifade": "olduğunu bilin",
+   "alinti": "Migrenin genetik özelliği vardır; familyal hemiplejik migrende gen(ler) olduğunu bilin: bu genler hücre zarındaki iyon kanalı ve pompa proteinlerini kodlar (kalsiyum kanalı, sodyum-potasyum pompası, sodyum kanalı). Ön cümle iki dökümde de bozuk; 'bilin' ifadesi net, dayanak slaytın FHM satırıdır.",
+   "konu": "Poligenik. FHM (familyal hemiplejik migren) OD. Ca kanalı (CACNA1a) Na-K ATPaz pompası (ATP1A2) Na kanalı (SCN1A)",
+   "s": 13,
+   "dk": "26:44",
+   "p": 21,
+   "adim": 21
+  },
+  {
+   "id": "hv-k2-10-41",
+   "kategori": "dikkat",
+   "ifade": "uzak durması lazım",
+   "alinti": "Migren, sigara ve oral kontraseptif bir araya gelirse bu kişinin inme geçirme riski kat kat artıyor; o yüzden sigaradan uzak durması lazım.",
+   "konu": "Sigara, OK, obesite, kadın , inme riskini +",
+   "s": 16,
+   "dk": "32:50",
+   "p": 25,
+   "adim": 25
+  },
+  {
+   "id": "hv-k2-10-43",
+   "kategori": "dikkat",
+   "ifade": "kullanmamaları gerekiyor",
+   "alinti": "Migrenli kadınların oral kontraseptif kullanmaması gerekir; çünkü inme riskini artırıyor.",
+   "konu": "Sigara, OK, obesite, kadın , inme riskini +",
+   "s": 16,
+   "dk": "33:22",
+   "p": 25,
+   "adim": 25
+  },
+  {
+   "id": "hv-k2-10-47",
+   "kategori": "onemli",
+   "ifade": "Beslenme çok önemli",
+   "alinti": "Beslenme çok önemli; aç kalmamak gerekiyor. Bu yüzden Ramazan'da oruç tutmamalarını öneriyorum.",
+   "konu": "Diyet, beslenme, uyku, spor",
+   "s": 17,
+   "dk": "36:14",
+   "p": 28,
+   "adim": 27
+  }
+ ]
+}

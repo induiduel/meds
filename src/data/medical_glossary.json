@@ -14628,7 +14628,8 @@
         "kurul": 6,
         "sayfa": 58
       }
-    ]
+    ],
+    "clinicalPearl": "Migren atak tedavisinde spesifik ilaçtır; uzun süre kullanımda damar daraltıcı risk taşır."
   },
   "teofilin": {
     "term": "Teofilin",
@@ -30055,7 +30056,8 @@
         "sayfa": 51,
         "alinti": "Karbonik anhidraz inhibitörleri (asetazolamid ve topiramat), idrar pH'sini artıran"
       }
-    ]
+    ],
+    "clinicalPearl": "Migren profilaksisinde ve SUNCT tedavisinde kullanılır; böbrek taşı yapabilir, duygudurumu olumsuz etkileyebilir."
   },
   "asetazolamid": {
     "term": "Asetazolamid",
@@ -104077,7 +104079,7 @@
     "description": "Kafa içi basınç artışı sendromudur; papil ödeminin en sık rastlanan nedenidir.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Çıkmış sorularda ana bulguları baş ağrısı, bulantı-kusma ve papil ödemidir.",
+    "clinicalPearl": "Çıkmış sorularda ana bulguları baş ağrısı, bulantı-kusma ve papil ödemidir. · Başağrısında KİBAS düşünülüyorsa LP öncesi BBT istenir.",
     "aliases": [
       "Kafa içi basınç artışı sendromu"
     ],
@@ -109308,7 +109310,7 @@
     "description": "Tanısı öyküye dayanan nörolojik hastalıktır.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Muayenede nörolojik bulgu ve laboratuvar bulgusu yoktur.",
+    "clinicalPearl": "Muayenede nörolojik bulgu ve laboratuvar bulgusu yoktur. · Tüm başağrıları içinde doktora en fazla başvuru nedenidir; kadında %20, erkekte %8; atak 4–72 saat; tek taraflı, zonklayıcı; tanı için en az 5 atak; dönemler prodrom, aura, ağrı, postdrom.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -115186,6 +115188,2152 @@
         "kurul": 2,
         "sayfa": 35,
         "alinti": null
+      }
+    ]
+  },
+  "başağrısı": {
+    "term": "Başağrısı",
+    "category": "hastalik",
+    "definition": "Başta duyulan ağrıdır; hekimlik hayatında en sık karşılaşılan yakınmadır. Primer ve sekonder olarak ayrılır.",
+    "description": "Başta duyulan ağrıdır; hekimlik hayatında en sık karşılaşılan yakınmadır. Primer ve sekonder olarak ayrılır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Baş ağrısı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "Hekimlik hayatında en sık karşılaşılan yakınma"
+      }
+    ]
+  },
+  "ıhs sınıflaması": {
+    "term": "IHS sınıflaması",
+    "category": "terim",
+    "definition": "Uluslararası Başağrısı Derneği'nin (International Headache Society) genel kabul gören başağrısı sınıflamasıdır; 1988, 2004 ve 2013 sürümleri vardır.",
+    "description": "Uluslararası Başağrısı Derneği'nin (International Headache Society) genel kabul gören başağrısı sınıflamasıdır; 1988, 2004 ve 2013 sürümleri vardır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "IHS",
+      "Uluslararası Başağrısı Derneği"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "Genel kabul gören sınıflama IHS (Internatiınal Headache Society) sınıflaması. 1988-2004- 2013."
+      }
+    ]
+  },
+  "ıchd-3": {
+    "term": "ICHD-3",
+    "category": "terim",
+    "definition": "Başağrılarını primer, sekonder ve ağrılı kraniyal nöropatiler olarak 14 ana başlıkta toplayan sınıflamadır (Uluslararası Başağrısı Bozuklukları Sınıflaması, 3. sürüm).",
+    "description": "Başağrılarını primer, sekonder ve ağrılı kraniyal nöropatiler olarak 14 ana başlıkta toplayan sınıflamadır (Uluslararası Başağrısı Bozuklukları Sınıflaması, 3. sürüm).",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Primer 1–4, sekonder 5–12, ağrılı kraniyal nöropatiler ve diğerleri 13–14.",
+    "aliases": [
+      "ICHD",
+      "ICHD 3"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "ICHD 3 ana başlıkları ile A – Primer başağrıları:"
+      }
+    ]
+  },
+  "primer başağrısı": {
+    "term": "Primer başağrısı",
+    "category": "hastalik",
+    "definition": "Başka bir hastalığa bağlı olmayan, kendisi hastalık olan başağrısıdır; yaşamı tehdit etmez ve genellikle ileri tetkik gerektirmez.",
+    "description": "Başka bir hastalığa bağlı olmayan, kendisi hastalık olan başağrısıdır; yaşamı tehdit etmez ve genellikle ileri tetkik gerektirmez.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Dört başlık: migren, gerilim tipi, trigeminal otonomik başağrısı, diğer primer başağrısı sendromları.",
+    "aliases": [
+      "Primer baş ağrısı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Primer başağrıları bizzat kendisi bir hastalık, yaşamı tehdit etmez Genellikle"
+      }
+    ]
+  },
+  "sekonder başağrısı": {
+    "term": "Sekonder başağrısı",
+    "category": "hastalik",
+    "definition": "Altta yatan başka bir hastalığın belirtisi olan başağrısıdır; yaşamı tehdit edebilir ve ivedi inceleme gerektirir.",
+    "description": "Altta yatan başka bir hastalığın belirtisi olan başağrısıdır; yaşamı tehdit edebilir ve ivedi inceleme gerektirir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Sekonder baş ağrısı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Sekonder başağrıları bir semptom, altta yatan bir başka hastalık. Yaşamı tehdit edebilir."
+      }
+    ]
+  },
+  "ağrılı kraniyal nöropatiler": {
+    "term": "Ağrılı kraniyal nöropatiler",
+    "category": "hastalik",
+    "definition": "ICHD-3'ün 13. başlığıdır; kraniyal sinirlerin ağrılı bozukluklarını ve diğer yüz ağrılarını kapsar.",
+    "description": "ICHD-3'ün 13. başlığıdır; kraniyal sinirlerin ağrılı bozukluklarını ve diğer yüz ağrılarını kapsar.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "13. Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları 14."
+      }
+    ]
+  },
+  "presipite eden faktör": {
+    "term": "Presipite eden faktör",
+    "category": "terim",
+    "definition": "Ağrıyı başlatan ya da artıran tetikleyicidir; anamnezde mutlaka sorulur.",
+    "description": "Ağrıyı başlatan ya da artıran tetikleyicidir; anamnezde mutlaka sorulur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Tetikleyici faktör"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 7,
+        "alinti": "Presipite eden faktörler olup olmaması • Uyku"
+      }
+    ]
+  },
+  "fotofobi": {
+    "term": "Fotofobi",
+    "category": "tani",
+    "definition": "Işığa karşı hassasiyettir; migrende bulantı-kusma ve fonofobi ile birlikte eşlik eden belirtilerdendir.",
+    "description": "Işığa karşı hassasiyettir; migrende bulantı-kusma ve fonofobi ile birlikte eşlik eden belirtilerdendir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "buluntı, kusma 2- fotofobi 3- fonofobi"
+      }
+    ]
+  },
+  "fonofobi": {
+    "term": "Fonofobi",
+    "category": "tani",
+    "definition": "Sese karşı hassasiyettir; migrende eşlik eden belirtilerdendir.",
+    "description": "Sese karşı hassasiyettir; migrende eşlik eden belirtilerdendir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "buluntı, kusma 2- fotofobi 3- fonofobi"
+      }
+    ]
+  },
+  "aura": {
+    "term": "Aura",
+    "category": "fizyoloji",
+    "definition": "Migrende ağrıdan önce ortaya çıkan geçici nörolojik belirtilerdir (hemianopsi, ışık görme, uyuşma, konuşma bozukluğu); migrenlilerin %10–15'inde görülür ve 5–60 dakika sürer.",
+    "description": "Migrende ağrıdan önce ortaya çıkan geçici nörolojik belirtilerdir (hemianopsi, ışık görme, uyuşma, konuşma bozukluğu); migrenlilerin %10–15'inde görülür ve 5–60 dakika sürer.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Aura öyküsü olan hastada ilk akla gelen tanı migrendir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Varsa aura dönemi: Migrenlileri %10-15’inde. 5-60 dk sürüyor"
+      }
+    ]
+  },
+  "prodrom": {
+    "term": "Prodrom",
+    "category": "fizyoloji",
+    "definition": "Migren ağrısından önceki dönemdir; aşırı duyarlılık, öfori, hiperaktivite, durgunluk, dikkat azalması ve kelime bulma güçlüğü görülür.",
+    "description": "Migren ağrısından önceki dönemdir; aşırı duyarlılık, öfori, hiperaktivite, durgunluk, dikkat azalması ve kelime bulma güçlüğü görülür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Prodrom dönemi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Ağrı öncesi prodrom dönemi: aşırı duyarlılık, tepkisellik, öfori,"
+      }
+    ]
+  },
+  "postdrom": {
+    "term": "Postdrom",
+    "category": "fizyoloji",
+    "definition": "Migren ağrısından sonraki toparlanma dönemidir; yaklaşık bir gün sürer.",
+    "description": "Migren ağrısından sonraki toparlanma dönemidir; yaklaşık bir gün sürer.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Postdrom dönemi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "3- Ağrı dönemi 4- Postdrom dönemi"
+      }
+    ]
+  },
+  "hemianopsi": {
+    "term": "Hemianopsi",
+    "category": "tani",
+    "definition": "Her iki gözün görme alanının yarısının kaybıdır; migren aurasında geçici olarak görülebilir.",
+    "description": "Her iki gözün görme alanının yarısının kaybıdır; migren aurasında geçici olarak görülebilir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Geçici nörolojik belirtiler: Hemianopsi, Beyaz ışıklar"
+      }
+    ]
+  },
+  "familyal hemiplejik migren": {
+    "term": "Familyal hemiplejik migren",
+    "category": "hastalik",
+    "definition": "Otozomal dominant geçişli migren türüdür; kalsiyum kanalı (CACNA1A), Na-K ATPaz (ATP1A2) ve sodyum kanalı (SCN1A) genleriyle ilişkilidir.",
+    "description": "Otozomal dominant geçişli migren türüdür; kalsiyum kanalı (CACNA1A), Na-K ATPaz (ATP1A2) ve sodyum kanalı (SCN1A) genleriyle ilişkilidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "FHM"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Poligenik . FHM (familyal hemiplejik migren) OD. Ca kanalı (CACNA1a) Na-K ATPaz pompası (ATP1A2) Na kanalı"
+      }
+    ]
+  },
+  "kanalopati": {
+    "term": "Kanalopati",
+    "category": "terim",
+    "definition": "Hücre zarındaki iyon kanallarının bozukluğuna bağlı hastalıktır; migren bir iyon kanalı hastalığı olarak değerlendirilir.",
+    "description": "Hücre zarındaki iyon kanallarının bozukluğuna bağlı hastalıktır; migren bir iyon kanalı hastalığı olarak değerlendirilir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "İyon kanalı hastalığı, kanalopati • Vaskuler kuram"
+      }
+    ]
+  },
+  "kortikal yayılan depresyon": {
+    "term": "Kortikal yayılan depresyon",
+    "category": "fizyoloji",
+    "definition": "Uzun süreli nöronal inhibisyona yol açan ve 2–6 mm/dk hızla yayılan spike aktivite dalgasıdır; migrende auranın temelidir (1944, Leao).",
+    "description": "Uzun süreli nöronal inhibisyona yol açan ve 2–6 mm/dk hızla yayılan spike aktivite dalgasıdır; migrende auranın temelidir (1944, Leao).",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "CSD dalgasını bölgesel kan akımı azalması izler; klinik yansıması aura'dır.",
+    "aliases": [
+      "CSD"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "CSD uzun süreli nöronal inhibisyona yolaçan, 2-6 mm/dk hızla yayılan"
+      }
+    ]
+  },
+  "migren jeneratörü": {
+    "term": "Migren jeneratörü",
+    "category": "fizyoloji",
+    "definition": "Kortikal yayılan depresyonu başlattığı düşünülen beyin bölgeleridir: oksipital korteks, periakuaduktal gri cevher, mezensefalik retiküler formasyon, pons rafe nükleusu ve lokus seruleus.",
+    "description": "Kortikal yayılan depresyonu başlattığı düşünülen beyin bölgeleridir: oksipital korteks, periakuaduktal gri cevher, mezensefalik retiküler formasyon, pons rafe nükleusu ve lokus seruleus.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Bazı çalışma sonuçlarına göre oksipital korteks, periakuaduktal gri cevher, mesensefakik retiküler formasyon, pons rafe nücleus, lokus seruleus migren"
+      }
+    ]
+  },
+  "oligemi": {
+    "term": "Oligemi",
+    "category": "fizyoloji",
+    "definition": "Bölgesel kan akımında azalmadır; kortikal yayılan depresyonu izler ve auraya yansır.",
+    "description": "Bölgesel kan akımında azalmadır; kortikal yayılan depresyonu izler ve auraya yansır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "CSD dalgasını bölgesel kan akımında azalma izler. • CSD"
+      }
+    ]
+  },
+  "trigeminovasküler sistem": {
+    "term": "Trigeminovasküler sistem",
+    "category": "anatomi",
+    "definition": "Trigeminal sinir ile dural damarları birleştiren ağrı sistemidir; kortikal yayılan depresyonla etkinleşince dural damarlarda enflamasyon ve ağrı olur.",
+    "description": "Trigeminal sinir ile dural damarları birleştiren ağrı sistemidir; kortikal yayılan depresyonla etkinleşince dural damarlarda enflamasyon ve ağrı olur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "CSD trigeminovaskuler sistemi aktive attiğinde dural kan damarlarında enflamasyon, vasoaktif peptitler ( CGRP, substance -P"
+      }
+    ]
+  },
+  "cgrp": {
+    "term": "CGRP",
+    "category": "fizyoloji",
+    "definition": "Kalsitonin geni ilişkili peptittir (calcitonin gene-related peptide); substance P ve VIP ile birlikte nosiseptif nöronlarda ağrıyı uyaran vazoaktif peptitlerdendir.",
+    "description": "Kalsitonin geni ilişkili peptittir (calcitonin gene-related peptide); substance P ve VIP ile birlikte nosiseptif nöronlarda ağrıyı uyaran vazoaktif peptitlerdendir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Calcitonin gene-related peptide"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "vasoaktif peptitler ( CGRP, substance -P , VIP), nosiseptif nöronlarda"
+      }
+    ]
+  },
+  "vıp": {
+    "term": "VIP",
+    "category": "fizyoloji",
+    "definition": "Vazoaktif intestinal peptittir; migrende ağrıyı uyaran vazoaktif peptitlerden biridir.",
+    "description": "Vazoaktif intestinal peptittir; migrende ağrıyı uyaran vazoaktif peptitlerden biridir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Vazoaktif intestinal peptit"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "vasoaktif peptitler ( CGRP, substance -P , VIP), nosiseptif nöronlarda"
+      }
+    ]
+  },
+  "vazodilatasyon fazı": {
+    "term": "Vazodilatasyon fazı",
+    "category": "fizyoloji",
+    "definition": "Vazoaktif peptitler ve metalloproteinazlar damar genişlemesi yaptığında ortaya çıkan, migren ağrısıyla ilişkili evredir.",
+    "description": "Vazoaktif peptitler ve metalloproteinazlar damar genişlemesi yaptığında ortaya çıkan, migren ağrısıyla ilişkili evredir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "Vasoaktif peptitler ve metalloproteinazlar vasodilatasyon yapar. Vasodilatasyon fazı."
+      }
+    ]
+  },
+  "nonspesifik ilaçlar": {
+    "term": "Nonspesifik ilaçlar",
+    "category": "ilac",
+    "definition": "Migren atak tedavisinde kullanılan genel ağrı kesicilerdir (ASA, parasetamol + kafein, naproksen, diklofenak, flurbiprofen, ibuprofen).",
+    "description": "Migren atak tedavisinde kullanılan genel ağrı kesicilerdir (ASA, parasetamol + kafein, naproksen, diklofenak, flurbiprofen, ibuprofen).",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "Atak tedavisinde A) Nonspesifik İlaçlar - ASA 1000 mg"
+      }
+    ]
+  },
+  "spesifik ilaçlar": {
+    "term": "Spesifik ilaçlar",
+    "category": "ilac",
+    "definition": "Migren atak tedavisinde kullanılan ergo türevleri ve triptanlardır.",
+    "description": "Migren atak tedavisinde kullanılan ergo türevleri ve triptanlardır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "B) Spesifik İlaçlar : 1- Ergo deriveleri, uzun süre kullanımında damar daraltıcı risk"
+      }
+    ]
+  },
+  "komplike migren atağı": {
+    "term": "Komplike migren atağı",
+    "category": "hastalik",
+    "definition": "Konuşma bozukluğu ya da görme kaybı gibi ağır nörolojik belirtilerle seyreden migren atağıdır; profilaktik tedavi endikasyonudur.",
+    "description": "Konuşma bozukluğu ya da görme kaybı gibi ağır nörolojik belirtilerle seyreden migren atağıdır; profilaktik tedavi endikasyonudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 17,
+        "alinti": "Komplike atak • Uzamış atak ya da"
+      }
+    ]
+  },
+  "profilaktik tedavi": {
+    "term": "Profilaktik tedavi",
+    "category": "tedavi",
+    "definition": "Ataklardan önce başlanıp atak sıklığını azaltmaya yönelik tedavidir; migrende ayda 3'ten fazla atak, komplike atak ya da uzamış atakta uygulanır.",
+    "description": "Ataklardan önce başlanıp atak sıklığını azaltmaya yönelik tedavidir; migrende ayda 3'ten fazla atak, komplike atak ya da uzamış atakta uygulanır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Proflaktik tedavi",
+      "Profilaksi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 17,
+        "alinti": "Ayda 3’den fazla atak • Komplike atak • Uzamış"
+      }
+    ]
+  },
+  "gerilim tipi başağrısı": {
+    "term": "Gerilim tipi başağrısı",
+    "category": "hastalik",
+    "definition": "En sık görülen primer başağrısıdır; iki taraflı, künt ya da sıkıştırıcı, hafif-orta şiddettedir ve günlük aktiviteyi engellemez.",
+    "description": "En sık görülen primer başağrısıdır; iki taraflı, künt ya da sıkıştırıcı, hafif-orta şiddettedir ve günlük aktiviteyi engellemez.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "GTBA"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "En sık görülen primer başağrısı, epizodik ya da kr"
+      }
+    ]
+  },
+  "myofasiyal tetik noktalar": {
+    "term": "Myofasiyal tetik noktalar",
+    "category": "terim",
+    "definition": "Kas ve fasyada ağrıyı başlatan duyarlı noktalardır; gerilim tipi başağrısı mekanizmasında rol oynadığı düşünülür.",
+    "description": "Kas ve fasyada ağrıyı başlatan duyarlı noktalardır; gerilim tipi başağrısı mekanizmasında rol oynadığı düşünülür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "Myofasiyal tetik noktalar, bozulmuş periferik ve santral sensitizasyon,"
+      }
+    ]
+  },
+  "santral sensitizasyon": {
+    "term": "Santral sensitizasyon",
+    "category": "fizyoloji",
+    "definition": "Merkezi sinir sisteminin ağrıya aşırı duyarlı hâle gelmesidir; gerilim tipi başağrısında ağrı modülasyonu bozulur.",
+    "description": "Merkezi sinir sisteminin ağrıya aşırı duyarlı hâle gelmesidir; gerilim tipi başağrısında ağrı modülasyonu bozulur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "Myofasiyal tetik noktalar, bozulmuş periferik ve santral sensitizasyon, SSS ağrı"
+      }
+    ]
+  },
+  "trigeminootonomik başağrıları": {
+    "term": "Trigeminootonomik başağrıları",
+    "category": "hastalik",
+    "definition": "Tek taraflı kısa süreli şiddetli ağrı ve aynı taraf otonomik bulgularla seyreden primer başağrıları grubudur: küme başağrısı, paroksismal hemikranya, SUNCT, hemikrania kontünia.",
+    "description": "Tek taraflı kısa süreli şiddetli ağrı ve aynı taraf otonomik bulgularla seyreden primer başağrıları grubudur: küme başağrısı, paroksismal hemikranya, SUNCT, hemikrania kontünia.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Trigeminal otonomik başağrıları",
+      "Trigeminal otonomik sefaljiler"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 21,
+        "alinti": "3. Trigeminootonomik Başağrıları • Küme başağrısı • Paroksizmal hemikraniya • SUNCT ( konjonktival kanlanma"
+      }
+    ]
+  },
+  "küme başağrısı": {
+    "term": "Küme başağrısı",
+    "category": "hastalik",
+    "definition": "Günde 1–8 kez tekrarlayan, geceleri uykudan uyandıran, en şiddetli, oyucu-batıcı başağrısıdır; 15–180 dk sürer ve ipsilateral gözde yaşarma, ptoz, burun tıkanıklığı eşlik eder.",
+    "description": "Günde 1–8 kez tekrarlayan, geceleri uykudan uyandıran, en şiddetli, oyucu-batıcı başağrısıdır; 15–180 dk sürer ve ipsilateral gözde yaşarma, ptoz, burun tıkanıklığı eşlik eder.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Atakta 5–8 lt/dk oksijen kullanılır.",
+    "aliases": [
+      "Cluster headache"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Günde 1-8 kez tekrarlayan • Sıklıkla gece uykudan uyandıran • En şiddetli başağrısı • Oyucu, batıcı"
+      }
+    ]
+  },
+  "paroksismal hemikranya": {
+    "term": "Paroksismal hemikranya",
+    "category": "hastalik",
+    "definition": "2–30 dakika süren, günde 5–20 atak yapan, tek taraflı ve orbital, supraorbital, temporal yerleşimli başağrısıdır; indometazine yanıt verir.",
+    "description": "2–30 dakika süren, günde 5–20 atak yapan, tek taraflı ve orbital, supraorbital, temporal yerleşimli başağrısıdır; indometazine yanıt verir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Paroksizmal hemikraniya"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Paroksismal Hemikrania • 2-30 dk süreli • Tek taraflı • Günde 5-20"
+      }
+    ]
+  },
+  "sunct": {
+    "term": "SUNCT",
+    "category": "hastalik",
+    "definition": "Konjonktival kanlanma ve yaşarmalı kısa süreli tek taraflı nöraljiform başağrısıdır; 5–240 saniye sürer, antiepileptiklerle tedavi edilir.",
+    "description": "Konjonktival kanlanma ve yaşarmalı kısa süreli tek taraflı nöraljiform başağrısıdır; 5–240 saniye sürer, antiepileptiklerle tedavi edilir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "5-240 sn • Günde en az bir kez • Tek taraflı"
+      }
+    ]
+  },
+  "hemikrania kontünia": {
+    "term": "Hemikrania kontünia",
+    "category": "hastalik",
+    "definition": "En az üç aydır var olan, tek taraflı ve ipsilateral otonomik bulgularla seyreden, indometazine yanıtlı başağrısıdır.",
+    "description": "En az üç aydır var olan, tek taraflı ve ipsilateral otonomik bulgularla seyreden, indometazine yanıtlı başağrısıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Hemikrania kontinua"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Başağrısı en az üç aydır var olmalı"
+      }
+    ]
+  },
+  "indometazin": {
+    "term": "İndometazin",
+    "category": "ilac",
+    "definition": "Paroksismal hemikranya ve hemikrania kontüniada tanı ve tedavi için kullanılan ilaçtır; paroksismal hemikranyada 3 günde tam kontrol sağlar (3 × 25 mg, en çok 225 mg).",
+    "description": "Paroksismal hemikranya ve hemikrania kontüniada tanı ve tedavi için kullanılan ilaçtır; paroksismal hemikranyada 3 günde tam kontrol sağlar (3 × 25 mg, en çok 225 mg).",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "İndometazinle 3 günde tam kontrol • 3*25"
+      }
+    ]
+  },
+  "ilaç aşırı kullanım başağrısı": {
+    "term": "İlaç aşırı kullanım başağrısı",
+    "category": "hastalik",
+    "definition": "Tedavide kullanılan analjeziklerin 10 günden fazla kullanılmasıyla ortaya çıkan kronik başağrısıdır; dünyada en sık üçüncü başağrısıdır.",
+    "description": "Tedavide kullanılan analjeziklerin 10 günden fazla kullanılmasıyla ortaya çıkan kronik başağrısıdır; dünyada en sık üçüncü başağrısıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Tedavide kullanılan analjeziklerin 10 günden fazla kullanılması kendi başına kr. başağrısı nedeni • Yaklaşım hasta"
+      }
+    ]
+  },
+  "yıkama tedavisi": {
+    "term": "Yıkama tedavisi",
+    "category": "tedavi",
+    "definition": "İlaç aşırı kullanım başağrısında ilaçların kesilmesinden sonra uygulanan tedavi basamağıdır.",
+    "description": "İlaç aşırı kullanım başağrısında ilaçların kesilmesinden sonra uygulanan tedavi basamağıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Yıkama tedavisi • Geri çekilme semptomlarının tedavisi"
+      }
+    ]
+  },
+  "köprü tedavi": {
+    "term": "Köprü tedavi",
+    "category": "tedavi",
+    "definition": "İlaç aşırı kullanım başağrısında geri çekilme döneminde verilen amitriptilin, antiemetik ve steroid tedavisidir.",
+    "description": "İlaç aşırı kullanım başağrısında geri çekilme döneminde verilen amitriptilin, antiemetik ve steroid tedavisidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Köprü tedavi amitriptilin, antiemetik, steroid • Başağrısı"
+      }
+    ]
+  },
+  "geri çekilme semptomları": {
+    "term": "Geri çekilme semptomları",
+    "category": "tani",
+    "definition": "Aşırı kullanılan ağrı kesiciler kesilince ortaya çıkan yoksunluk belirtileridir; ayrıca tedavi edilir.",
+    "description": "Aşırı kullanılan ağrı kesiciler kesilince ortaya çıkan yoksunluk belirtileridir; ayrıca tedavi edilir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Geri çekilme semptomlarının tedavisi • Köprü tedavi"
+      }
+    ]
+  },
+  "handle": {
+    "term": "HANDLE",
+    "category": "hastalik",
+    "definition": "Headache and neurological deficits with cerebrospinal fluid lymphocytosis: beyin-omurilik sıvısında lenfositozla giden başağrısı ve nörolojik defisit tablosudur; LP ile tanınır.",
+    "description": "Headache and neurological deficits with cerebrospinal fluid lymphocytosis: beyin-omurilik sıvısında lenfositozla giden başağrısı ve nörolojik defisit tablosudur; LP ile tanınır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "HANDLE (headache and neurological deficits with cerebrospinal fluid lymphocytosis) • Kan testleri, sedim"
+      }
+    ]
+  },
+  "waters grafisi": {
+    "term": "Waters grafisi",
+    "category": "tani",
+    "definition": "Yardımcı tanı yöntemleri arasında ilk sayılan direkt grafi türüdür.",
+    "description": "Yardımcı tanı yöntemleri arasında ilk sayılan direkt grafi türüdür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Waters"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "YARDIMCI TANI YÖNTEMLERİ • Waters, direk grafiler • BBT (hemoraji,"
+      }
+    ]
+  },
+  "subhyaloid hemoraji": {
+    "term": "Subhyaloid hemoraji",
+    "category": "tani",
+    "definition": "Retina ile hyaloid arasındaki kanamadır; göz dibinde saptanır ve sekonder başağrısı düşündüren muayene bulgusudur.",
+    "description": "Retina ile hyaloid arasındaki kanamadır; göz dibinde saptanır ve sekonder başağrısı düşündüren muayene bulgusudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "Papilödem, subhyaloid hemoraji - Ateş, ense sertliği"
+      }
+    ]
+  },
+  "anizokori": {
+    "term": "Anizokori",
+    "category": "tani",
+    "definition": "İki gözbebeği çapının eşit olmamasıdır; 3. kranial sinir tutulumu ile birlikte sekonder başağrısı düşündüren bulgudur.",
+    "description": "İki gözbebeği çapının eşit olmamasıdır; 3. kranial sinir tutulumu ile birlikte sekonder başağrısı düşündüren bulgudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "3. kranial sinir tutulumu, anizokori - Horner"
+      }
+    ]
+  },
+  "horner sendromu": {
+    "term": "Horner sendromu",
+    "category": "tani",
+    "definition": "Miyozis ve ptozla giden otonomik sinir bozukluğudur; sekonder başağrısı düşündüren muayene bulgularından biridir.",
+    "description": "Miyozis ve ptozla giden otonomik sinir bozukluğudur; sekonder başağrısı düşündüren muayene bulgularından biridir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "Horner sendromu - 5., 7. KS tutulumu"
+      }
+    ]
+  },
+  "miyozis": {
+    "term": "Miyozis",
+    "category": "tani",
+    "definition": "Gözbebeğinin küçülmesidir; hemikrania kontüniada ipsilateral otonomik bulgudur.",
+    "description": "Gözbebeğinin küçülmesidir; hemikrania kontüniada ipsilateral otonomik bulgudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "yüzde terleme, myozis, ptoz • İndometazine yanıtlıdır"
+      }
+    ]
+  },
+  "ptoz": {
+    "term": "Ptoz",
+    "category": "tani",
+    "definition": "Üst göz kapağının düşüklüğüdür; küme başağrısı, hemikrania kontünia ve Horner sendromunda görülür.",
+    "description": "Üst göz kapağının düşüklüğüdür; küme başağrısı, hemikrania kontünia ve Horner sendromunda görülür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "İpsilateral gözde kızarma yaşarma, ptoz, burunda konjesyon ya"
+      }
+    ]
+  },
+  "rinore": {
+    "term": "Rinore",
+    "category": "tani",
+    "definition": "Burun akıntısıdır; hemikrania kontüniada ipsilateral otonomik bulgudur.",
+    "description": "Burun akıntısıdır; hemikrania kontüniada ipsilateral otonomik bulgudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "nasal konjesyon, rinore, yüzde terleme, myozis,"
+      }
+    ]
+  },
+  "başağrısı günlüğü": {
+    "term": "Başağrısı günlüğü",
+    "category": "tani",
+    "definition": "Hastanın ağrı atakları, süresi ve tetikleyicilerini yazdığı kayıttır; tanı koymakta zorlanıldığında kullanılır.",
+    "description": "Hastanın ağrı atakları, süresi ve tetikleyicilerini yazdığı kayıttır; tanı koymakta zorlanıldığında kullanılır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "lymphocytosis) • Kan testleri, sedim • Başağrısı günlüğü"
+      }
+    ]
+  },
+  "sedimantasyon": {
+    "term": "Sedimantasyon",
+    "category": "tani",
+    "definition": "Eritrosit sedimentasyon hızı; başağrısında yardımcı tanı kan testlerinden biridir.",
+    "description": "Eritrosit sedimentasyon hızı; başağrısında yardımcı tanı kan testlerinden biridir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Sedim"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "lymphocytosis) • Kan testleri, sedim • Başağrısı günlüğü"
+      }
+    ]
+  },
+  "hemiplejik migren": {
+    "term": "Hemiplejik migren",
+    "category": "hastalik",
+    "definition": "Vücudun bir yarısında güçsüzlükle seyreden migren türüdür; vazokonstriktör ilaçlar kullanılmamalıdır.",
+    "description": "Vücudun bir yarısında güçsüzlükle seyreden migren türüdür; vazokonstriktör ilaçlar kullanılmamalıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Hemiplejik migren,uzamış auralı migren, basiler migrende vasokonstrüktör ilaçlar kullanılmamalı. • Sigara, OK,"
+      }
+    ]
+  },
+  "bazilar migren": {
+    "term": "Bazilar migren",
+    "category": "hastalik",
+    "definition": "Migren türlerinden biridir; hemiplejik ve uzamış auralı migren gibi vazokonstriktör ilaçların kullanılmaması gereken tiplerdendir.",
+    "description": "Migren türlerinden biridir; hemiplejik ve uzamış auralı migren gibi vazokonstriktör ilaçların kullanılmaması gereken tiplerdendir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Hemiplejik migren,uzamış auralı migren, basiler migrende vasokonstrüktör ilaçlar kullanılmamalı. • Sigara, OK,"
+      }
+    ]
+  },
+  "vazokonstriktör ilaçlar": {
+    "term": "Vazokonstriktör ilaçlar",
+    "category": "ilac",
+    "definition": "Damar daraltıcı ilaçlardır (ergo türevleri, triptanlar); hemiplejik, uzamış auralı ve bazilar migrende kullanılmaz.",
+    "description": "Damar daraltıcı ilaçlardır (ergo türevleri, triptanlar); hemiplejik, uzamış auralı ve bazilar migrende kullanılmaz.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "basiler migrende vasokonstrüktör ilaçlar kullanılmamalı. • Sigara, OK, obesite,"
+      }
+    ]
+  },
+  "antiemetik": {
+    "term": "Antiemetik",
+    "category": "ilac",
+    "definition": "Bulantı ve kusmayı önleyen ilaçlardır; migren atak tedavisinden 20 dakika önce verilir.",
+    "description": "Bulantı ve kusmayı önleyen ilaçlardır; migren atak tedavisinden 20 dakika önce verilir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "20 dk önce antiemetik verilmeli, • Hemiplejik"
+      }
+    ]
+  },
+  "beta bloker": {
+    "term": "Beta bloker",
+    "category": "ilac",
+    "definition": "Beta adrenerjik reseptörleri bloke eden ilaç grubudur; migren profilaksisinde propranolol kullanılır.",
+    "description": "Beta adrenerjik reseptörleri bloke eden ilaç grubudur; migren profilaksisinde propranolol kullanılır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 17,
+        "alinti": "Beta blok. Propranolol • Topiramat • Valproat • Amitriptilin"
+      }
+    ]
+  },
+  "propranolol": {
+    "term": "Propranolol",
+    "category": "ilac",
+    "definition": "Migren profilaksisinde kullanılan beta blokerdir.",
+    "description": "Migren profilaksisinde kullanılan beta blokerdir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 17,
+        "alinti": "Beta blok. Propranolol • Topiramat • Valproat • Amitriptilin"
+      }
+    ]
+  },
+  "valproat": {
+    "term": "Valproat",
+    "category": "ilac",
+    "definition": "Migren profilaksisinde ve SUNCT tedavisinde kullanılan antiepileptik ilaçtır.",
+    "description": "Migren profilaksisinde ve SUNCT tedavisinde kullanılan antiepileptik ilaçtır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 17,
+        "alinti": "Valproat • Amitriptilin • Venlafaksin • Diyet, beslenme, uyku,"
+      }
+    ]
+  },
+  "amitriptilin": {
+    "term": "Amitriptilin",
+    "category": "ilac",
+    "definition": "Migren profilaksisinde, gerilim tipi başağrısı profilaksisinde birinci seçenek olarak ve köprü tedavide kullanılan antidepresandır.",
+    "description": "Migren profilaksisinde, gerilim tipi başağrısı profilaksisinde birinci seçenek olarak ve köprü tedavide kullanılan antidepresandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 20,
+        "alinti": "1. seçenek amitriptilin • 2. seçenek mirtazapin, venlafaksin • 3."
+      }
+    ]
+  },
+  "venlafaksin": {
+    "term": "Venlafaksin",
+    "category": "ilac",
+    "definition": "Migren ve gerilim tipi başağrısı profilaksisinde kullanılan antidepresandır.",
+    "description": "Migren ve gerilim tipi başağrısı profilaksisinde kullanılan antidepresandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 20,
+        "alinti": "2. seçenek mirtazapin, venlafaksin • 3. klomipramin,"
+      }
+    ]
+  },
+  "mirtazapin": {
+    "term": "Mirtazapin",
+    "category": "ilac",
+    "definition": "Gerilim tipi başağrısı profilaksisinde ikinci seçenek antidepresandır.",
+    "description": "Gerilim tipi başağrısı profilaksisinde ikinci seçenek antidepresandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 20,
+        "alinti": "2. seçenek mirtazapin, venlafaksin • 3. klomipramin,"
+      }
+    ]
+  },
+  "klomipramin": {
+    "term": "Klomipramin",
+    "category": "ilac",
+    "definition": "Gerilim tipi başağrısı profilaksisinde üçüncü seçenek trisiklik antidepresandır.",
+    "description": "Gerilim tipi başağrısı profilaksisinde üçüncü seçenek trisiklik antidepresandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 20,
+        "alinti": "3. klomipramin, maprotilin • İlaç dışı yöntemler:"
+      }
+    ]
+  },
+  "maprotilin": {
+    "term": "Maprotilin",
+    "category": "ilac",
+    "definition": "Gerilim tipi başağrısı profilaksisinde üçüncü seçenek antidepresandır.",
+    "description": "Gerilim tipi başağrısı profilaksisinde üçüncü seçenek antidepresandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 20,
+        "alinti": "3. klomipramin, maprotilin • İlaç dışı yöntemler:"
+      }
+    ]
+  },
+  "lamotrijin": {
+    "term": "Lamotrijin",
+    "category": "ilac",
+    "definition": "SUNCT tedavisinde kullanılan antiepileptik ilaçtır.",
+    "description": "SUNCT tedavisinde kullanılan antiepileptik ilaçtır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "En çok antiepileptik ilaçlardan yararlanır. Lamotrigine, topiramat, valproat"
+      }
+    ]
+  },
+  "sumatriptan": {
+    "term": "Sumatriptan",
+    "category": "ilac",
+    "definition": "5-HT1B/1D agonisti triptandır; atak tedavisinde deri altı (s.c.) kullanılır.",
+    "description": "5-HT1B/1D agonisti triptandır; atak tedavisinde deri altı (s.c.) kullanılır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Sumatriptan s.c • Naratriptan 2,5"
+      }
+    ]
+  },
+  "eletriptan": {
+    "term": "Eletriptan",
+    "category": "ilac",
+    "definition": "Atak tedavisinde 40 mg kullanılan triptandır.",
+    "description": "Atak tedavisinde 40 mg kullanılan triptandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Eletriptan 40 mg. • Zolmitriptan 2,5 mg"
+      }
+    ]
+  },
+  "zolmitriptan": {
+    "term": "Zolmitriptan",
+    "category": "ilac",
+    "definition": "Atak tedavisinde 2,5 mg kullanılan triptandır.",
+    "description": "Atak tedavisinde 2,5 mg kullanılan triptandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Eletriptan 40 mg. • Zolmitriptan 2,5 mg"
+      }
+    ]
+  },
+  "naratriptan": {
+    "term": "Naratriptan",
+    "category": "ilac",
+    "definition": "Atak tedavisinde 2,5 mg kullanılan triptandır.",
+    "description": "Atak tedavisinde 2,5 mg kullanılan triptandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Naratriptan 2,5 mg • 20 dk"
+      }
+    ]
+  },
+  "naproksen": {
+    "term": "Naproksen",
+    "category": "ilac",
+    "definition": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan NSAİİ'dir (550–1000 mg).",
+    "description": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan NSAİİ'dir (550–1000 mg).",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "Naproksen 550-1000 mg - Diklofenak 50-100 mg - Flurbiprofen 100-300 mg"
+      }
+    ]
+  },
+  "diklofenak": {
+    "term": "Diklofenak",
+    "category": "ilac",
+    "definition": "Migren atak tedavisinde 50–100 mg kullanılan NSAİİ'dir.",
+    "description": "Migren atak tedavisinde 50–100 mg kullanılan NSAİİ'dir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "Naproksen 550-1000 mg - Diklofenak 50-100 mg - Flurbiprofen 100-300 mg"
+      }
+    ]
+  },
+  "flurbiprofen": {
+    "term": "Flurbiprofen",
+    "category": "ilac",
+    "definition": "Migren atak tedavisinde 100–300 mg kullanılan NSAİİ'dir.",
+    "description": "Migren atak tedavisinde 100–300 mg kullanılan NSAİİ'dir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "Naproksen 550-1000 mg - Diklofenak 50-100 mg - Flurbiprofen 100-300 mg"
+      }
+    ]
+  },
+  "ıbuprofen": {
+    "term": "Ibuprofen",
+    "category": "ilac",
+    "definition": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan NSAİİ'dir.",
+    "description": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan NSAİİ'dir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "İbuprofen"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "Naproksen 550-1000 mg - Diklofenak 50-100 mg - Flurbiprofen 100-300 mg - İbuprofen 200-8000"
+      }
+    ]
+  },
+  "parasetamol": {
+    "term": "Parasetamol",
+    "category": "ilac",
+    "definition": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan basit analjeziktir; kafein ile kombine edilir.",
+    "description": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan basit analjeziktir; kafein ile kombine edilir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "Paracetamol+ kafein 500-1000 mg - Naproksen"
+      }
+    ]
+  },
+  "gks": {
+    "term": "GKS",
+    "category": "tani",
+    "definition": "Glasgow koma skalası; kafa travmasında BBT endikasyonunda kullanılır (slaytta GKS 9).",
+    "description": "Glasgow koma skalası; kafa travmasında BBT endikasyonunda kullanılır (slaytta GKS 9).",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Glasgow koma skalası"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "kafa travması GKS 9 • MR arka"
+      }
+    ]
+  },
+  "lp": {
+    "term": "LP",
+    "category": "tani",
+    "definition": "Lomber ponksiyon: menenjit, SAK ve HANDLE tanısında kullanılır.",
+    "description": "Lomber ponksiyon: menenjit, SAK ve HANDLE tanısında kullanılır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Lomber ponksiyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "LP memenjit, SAK , HANDLE (headache and"
+      }
+    ]
+  },
+  "sak": {
+    "term": "SAK",
+    "category": "hastalik",
+    "definition": "Subaraknoid kanama: yaşamdaki en şiddetli başağrısı tanımıyla düşünülen sekonder neden.",
+    "description": "Subaraknoid kanama: yaşamdaki en şiddetli başağrısı tanımıyla düşünülen sekonder neden.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Subaraknoid kanama"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "LP memenjit, SAK , HANDLE (headache and"
+      }
+    ]
+  },
+  "ok": {
+    "term": "OK",
+    "category": "ilac",
+    "definition": "Oral kontraseptif: migrenli hastada sigara ile birlikte inme riskini artırır.",
+    "description": "Oral kontraseptif: migrenli hastada sigara ile birlikte inme riskini artırır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Oral kontraseptif"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Sigara, OK, obesite, kadın , inme riskini"
+      }
+    ]
+  },
+  "asa": {
+    "term": "ASA",
+    "category": "ilac",
+    "definition": "Asetilsalisilik asit (aspirin); migren atak tedavisinde 1000 mg kullanılır.",
+    "description": "Asetilsalisilik asit (aspirin); migren atak tedavisinde 1000 mg kullanılır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Aspirin",
+      "Asetilsalisilik asit"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "ASA 1000 mg - Paracetamol+ kafein 500-1000"
+      }
+    ]
+  },
+  "nsaii": {
+    "term": "NSAİİ",
+    "category": "ilac",
+    "definition": "Nonsteroid antiinflamatuvar ilaçlar; gerilim tipi başağrısı atak tedavisinde ibuprofen ve naproksen kullanılır.",
+    "description": "Nonsteroid antiinflamatuvar ilaçlar; gerilim tipi başağrısı atak tedavisinde ibuprofen ve naproksen kullanılır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "NSAI"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "NSAI ( Ibuprofen, naproksen….) c- kombinasyonlar (ASA+"
+      }
+    ]
+  },
+  "gtba": {
+    "term": "GTBA",
+    "category": "hastalik",
+    "definition": "Gerilim tipi başağrısı kısaltmasıdır.",
+    "description": "Gerilim tipi başağrısı kısaltmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Gerilim tipi başağrısı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "SSS ağrı modulasyonunun bozulması GTBA ile sonuçlanır. • Tedavi:"
+      }
+    ]
+  },
+  "fm": {
+    "term": "FM",
+    "category": "tani",
+    "definition": "Fizik muayene; primer başağrılarında normaldir.",
+    "description": "Fizik muayene; primer başağrılarında normaldir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Fizik muayene"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "Fizik muayene; primer başağrılarında normal. Sekonder başağrısı"
+      }
+    ]
+  },
+  "ks": {
+    "term": "KS",
+    "category": "terim",
+    "definition": "Kranial sinir; 3., 5. ve 7. kranial sinir tutulumu sekonder başağrısı düşündürür.",
+    "description": "Kranial sinir; 3., 5. ve 7. kranial sinir tutulumu sekonder başağrısı düşündürür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Kranial sinir"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "3. kranial sinir tutulumu, anizokori - Horner"
+      }
+    ]
+  },
+  "sss": {
+    "term": "SSS",
+    "category": "terim",
+    "definition": "Santral sinir sistemi; gerilim tipi başağrısında ağrı modülasyonu bozulur.",
+    "description": "Santral sinir sistemi; gerilim tipi başağrısında ağrı modülasyonu bozulur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Santral sinir sistemi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "SSS ağrı modulasyonunun bozulması GTBA ile sonuçlanır. • Tedavi:"
+      }
+    ]
+  },
+  "od": {
+    "term": "OD",
+    "category": "genetik",
+    "definition": "Otozomal dominant kalıtım; familyal hemiplejik migren OD geçer.",
+    "description": "Otozomal dominant kalıtım; familyal hemiplejik migren OD geçer.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Otozomal dominant"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "FHM (familyal hemiplejik migren) OD. Ca"
+      }
+    ]
+  },
+  "cacna1a": {
+    "term": "CACNA1A",
+    "category": "genetik",
+    "definition": "Kalsiyum kanalı genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "description": "Kalsiyum kanalı genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Ca kanalı (CACNA1a) Na-K ATPaz pompası (ATP1A2)"
+      }
+    ]
+  },
+  "atp1a2": {
+    "term": "ATP1A2",
+    "category": "genetik",
+    "definition": "Na-K ATPaz pompası genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "description": "Na-K ATPaz pompası genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Ca kanalı (CACNA1a) Na-K ATPaz pompası (ATP1A2)"
+      }
+    ]
+  },
+  "scn1a": {
+    "term": "SCN1A",
+    "category": "genetik",
+    "definition": "Sodyum kanalı genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "description": "Sodyum kanalı genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-10"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/4)BAŞAĞRISI.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Na kanalı (SCN1A) • İyon kanalı hastalığı,"
       }
     ]
   }

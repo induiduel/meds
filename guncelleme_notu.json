@@ -1,18 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 620,
-  "baslik": "Yeni ders: MSS İlaçları Farmakolojisine Giriş (sınama)",
+  "onem": 621,
+  "baslik": "Yeni ders: Baş Ağrısına Yaklaşım",
   "maddeler": [
-    "Tıbbi Farmakoloji · MSS İlaçları Farmakolojisine Giriş eklendi: Öğren destesi (77 slayt), ders notu, 80 örnek soru, terimler, hocanın 21 vurgusu.",
-    "Farmakoloji Kurul 2 dersleri \"Sınama\" bölümünde gösterilir.",
-    "Sesli derste GABA, AMPA, NMDA gibi adlar hocanın okuduğu gibi seslendirilir."
+    "Nöroloji · Baş Ağrısına Yaklaşım eklendi: Öğren destesi (44 slayt), ders notu, 69 örnek soru, terimler, 13 doğrulanmış çıkmış.",
+    "Hocanın derste önemli ve dikkat dediği 12 yer \"Hocanın vurguladıkları\" listesinde."
   ],
   "eklenen": [
-    "MSS İlaçları Farmakolojisine Giriş dersi"
+    "Baş Ağrısına Yaklaşım dersi"
   ],
-  "degisen": [
-    "Sesli derslerde kısaltma okunuşu (GABA, AMPA, L-DOPA)"
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": []

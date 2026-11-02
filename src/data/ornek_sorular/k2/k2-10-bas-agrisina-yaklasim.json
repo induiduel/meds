@@ -1,0 +1,2877 @@
+{
+ "id": "k2-10-bas-agrisina-yaklasim",
+ "sira": 10,
+ "kurul": 1,
+ "ders": "Nöroloji",
+ "konu": "Baş Ağrısına Yaklaşım",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "tarih": "2026-11-02",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Başağrısını ICHD-3'e göre primer, sekonder ve ağrılı kraniyal nöropati gruplarına ayırır ve primer ile sekonder başağrısını tanım, tetkik ihtiyacı ve yaşamı tehdit etme yönünden karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi sekonder başağrıları arasında yer alır?",
+     "secenekler": {
+      "A": "Enfeksiyona bağlı başağrısı",
+      "B": "Migren",
+      "C": "Gerilim tipi başağrısı",
+      "D": "Trigeminal otonomik başağrısı",
+      "E": "Diğer primer başağrısı sendromları"
+     },
+     "dogru": "A",
+     "aciklama": "ICHD-3 sınıflamasında 9. başlık enfeksiyona bağlı başağrısıdır ve sekonder gruptadır; migren, gerilim tipi, trigeminal otonomik ve diğer primer sendromlar ise 1–4. başlıklarla primer grubu oluşturur (sayfa 3 ve 4).",
+     "sik_aciklamalari": {
+      "A": "Enfeksiyona bağlı başağrısı ICHD-3'te 9. başlıktır ve bir enfeksiyonun belirtisi olarak ortaya çıkar. Altta yatan bir hastalık bulunduğu için sekonder başağrısı sayılır ve ivedi araştırma gerektirir (sayfa 4).",
+      "B": "Migren, 4–72 saat süren tekrarlayıcı zonklayıcı ataklarla giden ve ICHD-3'ün 1. başlığında yer alan bir başağrısıdır. Bizzat kendisi hastalık olduğundan primer gruptadır; sekonder başlıklar 5–12 numaralı gruplardır (sayfa 3 ve 4).",
+      "C": "Gerilim tipi başağrısı iki taraflı, künt ya da sıkıştırıcı ve hafif-orta şiddette bir ağrıdır; ICHD-3'te 2. başlıktır. Başka bir hastalığın belirtisi olmayıp kendi başına bir hastalık olduğundan primer gruba girer (sayfa 3).",
+      "D": "Trigeminal otonomik başağrısı, küme başağrısı gibi tek taraflı ağrının aynı taraftaki otonom belirtilerle birlikte görüldüğü gruptur. ICHD-3'ün 3. başlığıdır ve sekonder değil primer başağrıları arasında sayılır (sayfa 3).",
+      "E": "Diğer primer başağrısı sendromları ICHD-3'te primer grubun dördüncü başlığıdır. Adından anlaşıldığı gibi primerdir; sekonder başlıklar 5–12 numaralı gruplardır (sayfa 3 ve 4)."
+     },
+     "bilgi": [
+      5,
+      6,
+      7,
+      9
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-1-cs2",
+      "d3-k2-nor-011"
+     ],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "9. Enfeksiyona bağlı başağrısı"
+     },
+     "s": 4,
+     "dayanak": [
+      "cikmis:q-2__kurul_-1-cs2",
+      "cikmis:d3-k2-nor-011",
+      "ogrenci:A:noro-s01-b01"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q05",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "ICHD-3 sınıflamasında sekonder başağrıları kaç numaralı başlıklar arasında yer alır?",
+     "secenekler": {
+      "A": "1–4",
+      "B": "5–12",
+      "C": "5–14",
+      "D": "13–14",
+      "E": "1–12"
+     },
+     "dogru": "B",
+     "aciklama": "ICHD-3'te 1–4 primer başağrılarını, 5–12 sekonder başağrılarını, 13–14 ise ağrılı kraniyal nöropatiler ve diğer başağrıları içeren C grubunu oluşturur (sayfa 3–5).",
+     "sik_aciklamalari": {
+      "A": "1–4 numaralı başlıklar A grubunu, yani migren, gerilim tipi, trigeminal otonomik ve diğer primer başağrılarını kapsar. Bu aralık sekonder değil primer başağrılarına aittir (sayfa 3).",
+      "B": "Sekonder başağrıları B grubudur ve 5 ile 12 numaralı başlıkları kapsar; travma, damarsal, madde, enfeksiyon, homeostaz, yüz-kafa yapıları ve psikiyatrik nedenleri içerir. Sınıflamayı hatırlamada temel ölçüt budur (sayfa 4).",
+      "C": "5–14 aralığı sekonder başlıklarla birlikte C grubunu da içine alır. 13 ve 14. başlıklar ağrılı kraniyal nöropatiler ile sınıflandırılamayan başağrılarıdır, sekonder grup 12'de biter (sayfa 4 ve 5).",
+      "D": "13–14 numaralı başlıklar C grubudur: ağrılı kraniyal nöropatiler ve diğer yüz ağrıları ile diğer başağrısı bozuklukları. Sekonder grup bunlardan önceki 5–12 aralığıdır (sayfa 5).",
+      "E": "1–12 aralığı primer ve sekonder başlıkları birlikte kapsar. Sekonder gruba yalnız 5–12 girer; ilk dört başlık primerdir (sayfa 3 ve 4)."
+     },
+     "bilgi": [
+      8,
+      9,
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "5. Baş ve boyun travmasına bağlı başağrısı"
+     },
+     "s": 4,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b07"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q07",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Ömür boyunca en az bir kez başağrısı yaşama sıklığı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Erkeklerde %93, kadınlarda %99",
+      "B": "Erkeklerde %99, kadınlarda %93",
+      "C": "Erkeklerde %20, kadınlarda %8",
+      "D": "Erkeklerde %8, kadınlarda %20",
+      "E": "Her iki cinsiyette de %50"
+     },
+     "dogru": "A",
+     "aciklama": "Başağrısı hekimlik hayatında en sık karşılaşılan yakınmadır; ömür boyu en az bir kez başağrısı yaşayan kişi oranı erkeklerde %93, kadınlarda %99'dur (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Başağrısı neredeyse herkesin yaşadığı bir yakınmadır; oran erkeklerde %93, kadınlarda %99'dur. Kadınlarda oranın biraz daha yüksek olması bu seçeneği ayırt eder (sayfa 2).",
+      "B": "Bu seçenek erkek ve kadın oranlarını yer değiştirmiştir. Ömür boyu başağrısı oranı kadınlarda erkeklerden yüksektir, bu nedenle sayılar ters verilmiş olur (sayfa 2).",
+      "C": "%20 ve %8 migrenin kadınlarda ve erkeklerde görülme sıklığıdır, ömür boyu başağrısı oranı değildir. İki istatistik birbirine karıştırılmıştır (sayfa 11).",
+      "D": "Erkeklerde %8, kadınlarda %20 değerleri de migrenin görülme sıklığına aittir ve ömür boyu başağrısı oranından çok daha düşüktür. Sayılar yakın göründüğü için sık karışır (sayfa 11).",
+      "E": "Her iki cinsiyette %50 verilmesi gerçek orandan çok uzaktır. Başağrısı, hekimlik hayatında en sık karşılaşılan yakınmadır ve oranlar %90'ın üzerindedir (sayfa 2)."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "oranı E %93 K %99"
+     },
+     "s": 2,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Küme başağrısının da içinde yer aldığı trigeminal otonomik başağrıları ICHD-3 sınıflamasında hangi grupta sayılır?",
+     "secenekler": {
+      "A": "Sekonder başağrıları",
+      "B": "Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları",
+      "C": "Psikiyatrik bozukluklara bağlı başağrıları",
+      "D": "Sınıflandırılamayan diğer başağrısı bozuklukları",
+      "E": "Primer başağrıları"
+     },
+     "dogru": "E",
+     "aciklama": "Trigeminal otonomik başağrısı ICHD-3'ün 3. başlığıdır ve migren, gerilim tipi ve diğer primer sendromlarla birlikte A grubu primer başağrıları içinde yer alır (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Sekonder başağrıları ICHD-3'te 5–12 numaralı başlıklardır: travma, damarsal bozukluk, enfeksiyon, homeostaz bozukluğu gibi nedenlere bağlıdır. Trigeminal otonomik başağrısı bu nedenlerden birine bağlı olmadığından bu grupta yer almaz (sayfa 4).",
+      "B": "Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları C grubunun 13 numaralı başlığıdır ve sinir kaynaklı yüz ağrılarını toplar. Trigeminal otonomik başağrısı ise 3 numaralı başlıkla A grubu primer başağrıları içindedir (sayfa 3 ve 5).",
+      "C": "Psikiyatrik bozukluklara bağlı başağrısı sekonder grubun 12. başlığıdır ve ruhsal bir hastalığın belirtisi olarak ortaya çıkar. Trigeminal otonomik başağrısının böyle bir nedeni bulunmadığından bu başlığa girmez (sayfa 4).",
+      "D": "Diğer başağrısı bozuklukları (sınıflandırılamayan) C grubunun 14. başlığıdır ve diğer başlıklara uymayan ağrıları içerir. Trigeminal otonomik başağrısı ise tanımlı bir primer başlıktır (sayfa 5).",
+      "E": "Trigeminal otonomik başağrıları küme başağrısı, paroksismal hemikranya, SUNCT ve hemikrania kontüniayı kapsar. Altta başka bir hastalık gerektirmeden ortaya çıktıkları için primer gruptadır; bu nedenle tedavi ve izlem düzenlenirken sekonder neden aranması ilk sırada değildir (sayfa 3)."
+     },
+     "bilgi": [
+      5,
+      6,
+      11
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-1-cs2",
+      "d3-k2-nor-011"
+     ],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "3. Trigeminal otonomik başağrısı"
+     },
+     "s": 3,
+     "dayanak": [
+      "cikmis:q-2__kurul_-1-cs2",
+      "cikmis:d3-k2-nor-011",
+      "ogrenci:A:noro-s01-b01"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Primer başağrıları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bizzat kendisi bir hastalıktır.",
+      "B": "Yaşamı tehdit etmez.",
+      "C": "Çoğunlukla tedavi ve önerilerle kontrol altına alınabilir.",
+      "D": "Tanı genellikle ileri tetkiklerle konur.",
+      "E": "Tıbbi ve nörolojik muayene çoğunlukla normaldir."
+     },
+     "dogru": "D",
+     "aciklama": "Primer başağrılarında genellikle tanı için ileri tetkik gerekmez; tanı anamneze dayanır ve muayene çoğunlukla normaldir (sayfa 5 ve 6). Bu nedenle tanının ileri incelemelerle konduğunu söyleyen ifade yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Primer başağrısı altta başka bir hastalığın belirtisi olmayıp ağrının kendisi hastalıktır; migren ve gerilim tipi buna örnektir. İfade doğru olduğundan yanlış ifade aranırken seçilmez (sayfa 5).",
+      "B": "Primer başağrıları çoğunlukla iyi seyirlidir ve yaşamı tehdit etmez. Yaşamı tehdit etme olasılığı sekonder başağrılarına özgüdür; ifade doğrudur (sayfa 5).",
+      "C": "Primer başağrılarında ilaç tedavisi ve yaşam tarzı önerileriyle ağrı çoğunlukla kontrol altına alınır. Bu cümle slayttaki tanımla uyumlu olduğundan doğru ifadedir (sayfa 5).",
+      "D": "Primer başağrılarında tanı büyük ölçüde ayrıntılı öyküye dayanır ve genellikle ileri tetkik gerekmez. İleri görüntüleme ve laboratuvar incelemesi asıl olarak sekonder neden düşünüldüğünde istenir; bu yüzden ifade yanlıştır (sayfa 5).",
+      "E": "Primer başağrısı olan hastada yapılan tıbbi ve nörolojik muayene çoğunlukla normaldir; patolojik bulgu bulunması sekonder nedeni düşündürür. İfade doğrudur (sayfa 6)."
+     },
+     "bilgi": [
+      12,
+      13,
+      19
+     ],
+     "benzer_cikmis": [
+      "d3-k2-nor-001"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Genellikle tanı için ileri tetkik gerekmez"
+     },
+     "s": 5,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi sekonder başağrılarından biri değildir?",
+     "secenekler": {
+      "A": "Madde kullanımı veya kesilmesine bağlı başağrısı",
+      "B": "Homeostaz bozukluğuna bağlı başağrısı",
+      "C": "Psikiyatrik bozukluklara bağlı başağrısı",
+      "D": "Damarsal olmayan intrakraniyal bozukluklara bağlı başağrısı",
+      "E": "Gerilim tipi başağrısı"
+     },
+     "dogru": "E",
+     "aciklama": "Gerilim tipi başağrısı ICHD-3'ün 2. başlığıdır ve primer gruptadır; öteki dört başlık sırasıyla 8, 10, 12 ve 7. numaralı sekonder başlıklardır (sayfa 3 ve 4).",
+     "sik_aciklamalari": {
+      "A": "Madde kullanımı veya kesilmesine bağlı başağrısı ICHD-3'ün 8. başlığıdır ve ilaç ya da madde ile ilişkisi olduğundan sekonder gruptadır. Bu yüzden sekonder olmayanı arayan soruda seçilmez (sayfa 4).",
+      "B": "Homeostaz bozukluğuna bağlı başağrısı 10. başlıktır ve vücudun iç dengesinin bozulmasına bağlı oluşan bir semptomdur. Sekonder grupta yer aldığından yanlış seçenek değildir (sayfa 4).",
+      "C": "Psikiyatrik bozukluklara bağlı başağrısı 12. başlıktır ve ruhsal bir hastalığın belirtisi olarak ortaya çıkar. Sekonder grubun son başlığı olduğundan bu soruda doğru yanıt olamaz (sayfa 4).",
+      "D": "Damarsal olmayan intrakraniyal bozukluklara bağlı başağrısı 7. başlıktır; kafa içi bir yapısal sorunun belirtisidir. Sekonder gruba ait olduğu için aranan yanıt değildir (sayfa 4).",
+      "E": "Gerilim tipi başağrısı en sık görülen primer başağrısıdır; bizzat kendisi hastalık olduğundan sekonder değil primer gruba girer. Soru sekonder olmayanı sorduğu için doğru yanıt budur (sayfa 3 ve 18)."
+     },
+     "bilgi": [
+      5,
+      8,
+      9,
+      10,
+      103
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-1-cs2"
+     ],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "2. Gerilim tipi başağrısı"
+     },
+     "s": 3,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b07"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q09",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "58 yaşında akciğer kanseri tanısı bulunan bir hastada son haftalarda başlayan ve giderek artan bir başağrısı gelişmiştir. Bu hastada başağrısına yaklaşım için en doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Primer başağrısı kabul edilip yalnız basit analjezik başlanmalıdır.",
+      "B": "Hasta gerilim tipi başağrısı olarak değerlendirilip izlenmelidir.",
+      "C": "Başağrısı günlüğü tutturulup tanı konulana kadar beklenmelidir.",
+      "D": "Mevcut malignite nedeniyle sekonder neden düşünülmeli ve ileri inceleme yapılmalıdır.",
+      "E": "Aile öyküsü sorgulanıp migren profilaksisi başlanmalıdır."
+     },
+     "dogru": "D",
+     "aciklama": "Hastada mevcut malignite tanısı bulunması başağrısında sekonder nedeni düşündürür; hoca onkoloji hastasının başağrısında metastazın mutlaka düşünülmesi gerektiğini belirtmiştir. Sekonder başağrısında ivedi davranmak ve ileri inceleme yapmak gerekir (sayfa 5 ve 8).",
+     "sik_aciklamalari": {
+      "A": "Basit analjezikle yetinmek sorunu primer başağrısı kabul etmek demektir. Oysa malignite öyküsü sekonder neden düşündürür ve altta yatan neden araştırılmadan tedavi başlamak tehlikelidir (sayfa 8).",
+      "B": "Gerilim tipi başağrısı iki taraflı, hafif-orta şiddette ve günlük aktiviteyi engellemeyen bir primer ağrıdır. Malignite öyküsü olan hastada yeni gelişen ilerleyici ağrının önce sekonder nedene bağlı olduğu düşünülmelidir (sayfa 8 ve 18).",
+      "C": "Başağrısı günlüğü tanı koymakta zorlanıldığında kullanılan yardımcı bir yöntemdir ve genellikle primer başağrılarında işe yarar. Sekonder neden düşünülen hastada beklemek ivedi davranma ilkesine aykırıdır (sayfa 5 ve 10).",
+      "D": "Malignite tanısı sekonder başağrısını düşündüren öykü özelliklerinden biridir ve bu hastada başağrısı yeni, ilerleyici bir yakınmadır. Sekonder başağrısı yaşamı tehdit edebildiğinden ivedi davranılır ve görüntüleme gibi ileri inceleme planlanır (sayfa 5 ve 8).",
+      "E": "Aile öyküsü sorgulanır, ancak migren profilaksisi başlamak tanı konulmadan yapılan bir uygulamadır. Malignite öyküsü olan hastada önce sekonder neden dışlanmalıdır (sayfa 7 ve 8)."
+     },
+     "bilgi": [
+      37,
+      14,
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Hastada mevcut malignite tanısı"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-10-19",
+      "hoca:hv-k2-10-16",
+      "ogrenci:A:noro-s01-b09"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Başağrılarıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Primer başağrısı bizzat kendisi bir hastalıktır.\nII. Sekonder başağrısı bir semptomdur ve altında başka bir hastalık yatar.\nIII. Sekonder başağrısında ivedi davranılması gerekir.\nIV. Primer başağrısında ivedi ve kapsamlı ileri inceleme şarttır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Primer başağrısı kendi başına bir hastalıktır; sekonder başağrısı ise altta başka bir hastalığı gösteren bir semptomdur ve ivedi davranmayı gerektirir. Primer başağrısında ileri inceleme genellikle gerekmez (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğru ifadelerdir, ancak sekonder başağrısında ivedi davranılması gerektiğini söyleyen III. ifade de doğrudur. Bu nedenle seçenek eksik kalır (sayfa 5).",
+      "B": "II doğrudur, fakat IV. ifade yanlıştır: primer başağrılarında genellikle ileri tetkik gerekmez ve tedavi önerilerle yürütülür. Bu eşleşme IV'ü doğru saydığı için hatalıdır (sayfa 5).",
+      "C": "I, II ve III slayttaki tanımlarla örtüşür: primer başağrısı hastalığın kendisidir, sekonder başağrısı bir semptomdur ve yaşamı tehdit edebildiği için hızlı davranılır. IV. ifade yanlış olduğundan bu üçlü doğrudur (sayfa 5).",
+      "D": "I ve III doğru ifadelerdir ve II de doğru olduğundan üçlü birlikte doğrudur. Bu seçenekte II eksiktir; IV ise yanlıştır, çünkü primer başağrısında ivedi ileri inceleme şart değildir ve ağrı bizzat hastalığın kendisidir (sayfa 5).",
+      "E": "Dört ifadenin hepsini doğru kabul eder. IV. ifade primer başağrısında ileri incelemeyi şart koşar; oysa slayt primer grupta ileri tetkikin genellikle gerekmediğini belirtir (sayfa 5)."
+     },
+     "bilgi": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Sekonder başağrıları bir semptom, altta yatan bir başka hastalık."
+     },
+     "s": 5,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q08",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Primer ve sekonder başağrıları karşılaştırıldığında aşağıdakilerden hangisi yalnız sekonder başağrısı için geçerlidir?",
+     "secenekler": {
+      "A": "Bizzat kendisinin hastalık olması",
+      "B": "Genellikle ileri tetkik gerektirmemesi",
+      "C": "Tedavi ve önerilerle çoğunlukla kontrol altına alınabilmesi",
+      "D": "Muayenenin çoğunlukla normal olması",
+      "E": "Yaşamı tehdit edebilmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Sekonder başağrısı altta yatan başka bir hastalığın belirtisidir; bu hastalık yaşamı tehdit edebildiği için ivedi davranmak ve ileri inceleme yapmak gerekir. Diğer dört özellik primer başağrısını tanımlar (sayfa 5 ve 6).",
+     "sik_aciklamalari": {
+      "A": "Başağrısının bizzat kendisinin hastalık olması primer başağrısının tanımıdır. Sekonder başağrısında ağrı başka bir hastalığın belirtisidir, kendisi hastalık sayılmaz (sayfa 5).",
+      "B": "İleri tetkikin genellikle gerekmemesi primer başağrılarının özelliğidir ve bu hastalarda tanı öyküyle konur. Sekonder başağrısında ise altta yatan hastalık için ileri inceleme yapılması gerekir (sayfa 5).",
+      "C": "Tedavi ve önerilerle kontrol altına alınabilme özelliği primer başağrılarına aittir. Sekonder başağrısında asıl amaç altta yatan nedeni bulup tedavi etmektir (sayfa 5).",
+      "D": "Muayenenin çoğunlukla normal olması primer başağrılarının özelliğidir. Sekonder başağrısı ise bilinç bozukluğu, papilödem, ense sertliği gibi patolojik bulgularla birlikte olabilir (sayfa 6 ve 9).",
+      "E": "Sekonder başağrısı bir semptomdur ve altındaki hastalık (kanama, enfeksiyon, tümör gibi) yaşamı tehdit edebilir. Bu nedenle hızlı davranılır ve ileri inceleme yapılır; primer başağrısı ise bu açıdan güvenlidir (sayfa 5)."
+     },
+     "bilgi": [
+      12,
+      13,
+      14,
+      15,
+      19,
+      46
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Sekonder başağrıları bir semptom, altta yatan bir başka hastalık. Yaşamı tehdit edebilir."
+     },
+     "s": 5,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q10",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "42 yaşında erkek hasta, daha önce hiç başağrısı yakınması olmadan ani başlayan ve hayatındaki en şiddetli başağrısı olarak tarif ettiği ağrı ile hastaneye getiriliyor. Ense sertliği saptanan hastada ilk olarak düşünülmesi gereken tanı hangisidir?",
+     "secenekler": {
+      "A": "Migren",
+      "B": "Subaraknoid kanama",
+      "C": "Gerilim tipi başağrısı",
+      "D": "Küme başağrısı",
+      "E": "İlaç aşırı kullanım başağrısı"
+     },
+     "dogru": "B",
+     "aciklama": "Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder nedeni, özellikle subaraknoid kanamayı düşündürür; hoca bu cümleyi duyunca korkmak gerektiğini söylemiştir. Ense sertliği de sekonder başağrısı düşündüren muayene bulgusudur (sayfa 8, 9 ve 10).",
+     "sik_aciklamalari": {
+      "A": "Migren tekrarlayan, 4–72 saat süren zonklayıcı ataklarla giden bir primer ağrıdır. Daha önce hiç başağrısı olmayan erkek hastada ani başlayan en şiddetli ağrı ve ense sertliği migreni değil sekonder nedeni düşündürür (sayfa 8 ve 11).",
+      "B": "Subaraknoid kanama (SAK), ani başlayan ve yaşamın en şiddetli ağrısı olarak tanımlanan başağrısının akla gelen ilk nedenidir. Ense sertliği ve erkek cinsiyet de sekonder nedeni destekler; tanı BBT ve lomber ponksiyonla doğrulanır (sayfa 8, 9 ve 10).",
+      "C": "Gerilim tipi başağrısı hafif-orta şiddette, sıkıştırıcı ve günlük aktiviteyi engellemeyen bir ağrıdır. En şiddetli ağrı tarifi ve ense sertliği bu tabloyla uyuşmaz (sayfa 18).",
+      "D": "Küme başağrısı çok şiddetli olabilir, fakat günde 1–8 kez tekrarlayan, 15–180 dakika süren ve aynı taraf gözde yaşarma ile giden ataklarla ortaya çıkar. Tek bir ani atak ve ense sertliği SAK'ı düşündürür (sayfa 22).",
+      "E": "İlaç aşırı kullanım başağrısı analjeziklerin 10 günden fazla kullanımına bağlı kronik bir başağrısıdır. Ani başlangıç ve ense sertliği ile bu tablo açıklanamaz (sayfa 26)."
+     },
+     "bilgi": [
+      39,
+      49,
+      55
+     ],
+     "benzer_cikmis": [
+      "d3-k2-nor-007",
+      "q-2__kurul_-7-cs2",
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Hastanın yaşamındaki “en şiddetli başağrısı” tanımı"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-10-21",
+      "cikmis:d3-k2-nor-007",
+      "ogrenci:A:noro-s01-b09"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-2__kurul_-1-cs2",
+     "soru": "Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
+     "secenekler": {
+      "A": "Subaraknoid kanamaya bağlı baş ağrısı",
+      "B": "Trigeminal otonomik baş ağrısı",
+      "C": "Menenjite bağlı baş ağrısı",
+      "D": "Beyin tümörüne bağlı kafa içi basınç artışı baş ağrısı",
+      "E": "Dev hücreli arterite bağlı baş ağrısı"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3-k2-nor-011",
+     "soru": "Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
+     "secenekler": {
+      "A": "Subaraknoid kanamaya bağlı baş ağrısı",
+      "B": "Trigeminal otonomik baş ağrısı",
+      "C": "Menenjite bağlı baş ağrısı",
+      "D": "Beyin tümörüne bağlı kafa içi basınç artışı baş ağrısı",
+      "E": "Dev hücreli arterite bağlı baş ağrısı"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3-k2-nor-001",
+     "soru": "Aşağıdaki baş ağrısı tiplerinden hangisinin tanısı tamamen ayrıntılı klinik öyküye dayanır; laboratuvar veya nörogörüntüleme yöntemlerinde karakteristik patolojik bir bulgu saptanmaz?",
+     "secenekler": {
+      "A": "Subaraknoid kanamaya bağlı baş ağrısı",
+      "B": "Migren",
+      "C": "Beyin tümörüne bağlı kafa içi basınç artışı baş ağrısı",
+      "D": "Menenjite bağlı baş ağrısı",
+      "E": "Temporal arterit (dev hücreli arterit)"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3-k2-nor-007",
+     "soru": "Baş ağrısını 'yaşadığım en şiddetli baş ağrısı' olarak tanımlayan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Akut migren atağı",
+      "B": "Subaraknoid kanama (SAK)",
+      "C": "Gerilim tipi baş ağrısı",
+      "D": "Temporomandibular eklem disfonksiyonu",
+      "E": "Trigeminal nevralji"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "q-2__kurul_-7-cs2",
+     "soru": "Ani başlayan ve hastanın hayatının en şiddetli baş ağrısı olarak tanımladığı baş ağrısında ilk düşünülmesi gereken tanı hangisidir?",
+     "secenekler": {
+      "A": "Gerilim tipi baş ağrısı",
+      "B": "Subaraknoid kanama",
+      "C": "Migren",
+      "D": "Sinüzite bağlı baş ağrısı",
+      "E": "İdiyopatik intrakraniyal hipertansiyon"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
+     "soru": "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gerilim tipi baş ağrısı",
+      "B": "Migren",
+      "C": "Sinüzit",
+      "D": "Trigeminal otonomik sefalji",
+      "E": "Subaraknoid kanama (SAK)"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Başağrısı anamnezinde mutlaka sorulacak on iki başlığı sayar ve ağrının tipi, şiddeti, aura, eşlik eden belirtiler ve aile öyküsünü yorumlar.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q13",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Başağrısının şiddeti sorgulanırken aşağıdakilerden hangisi ağrının şiddetli olduğunu gösterir?",
+     "secenekler": {
+      "A": "Hastayı uykudan uyandırması",
+      "B": "Zonklayıcı karakterde olması",
+      "C": "Ağrı sırasında uykunun alınabilmesi",
+      "D": "Işığa duyarlılık eşlik etmesi",
+      "E": "Tek taraflı yerleşimli olması"
+     },
+     "dogru": "A",
+     "aciklama": "Başağrısı anamnezinde mutlaka sorulacaklar arasında başağrısının tipi ve karakteri, başlangıcı, sıklığı, yeri, şiddeti, aura ve prodrom belirtileri, eşlik eden belirtiler, presipite eden faktörler, uyku düzeni, emosyonel faktörler, aile öyküsü ve önceki medikasyonlar bulunur. Şiddet için ölçüt, başağrısının hastayı uykudan uyandırmasıdır; ağrıyla uyuyup uykusunu alan ve günlük işlerini aksatmayan hastada ağrı şiddetli sayılmaz (sayfa 7).",
+     "sik_aciklamalari": {
+      "A": "Uykudan uyandıran ağrı, hastanın günlük yaşamını bozan şiddetli ağrı olarak kabul edilir. Anamnezde şiddeti bu pratik ölçütle sorgulamak, ağrı skalasına dayanmaktan daha güvenilirdir (sayfa 7).",
+      "B": "Zonklayıcı karakter ağrının tipini anlatır; migrende tipiktir. Şiddet için ölçüt değildir, çünkü hafif ağrı da zonklayıcı olabilir (sayfa 7 ve 11).",
+      "C": "Ağrı varken uykunun alınabilmesi ağrının şiddetli olmadığını gösterir. Hastası ağrıyla uyuyup uykusunu alan ve günlük işlerini aksatmayan kişide ağrı şiddetli sayılmaz (sayfa 7).",
+      "D": "Işığa duyarlılık (fotofobi) migrende eşlik eden belirtilerden biridir. Eşlik eden belirtiler ağrının şiddetini değil türünü ayırt etmeye yardımcı olur (sayfa 7 ve 11).",
+      "E": "Tek taraflılık ağrının yerleşimini belirtir ve migrenin dört tipik özelliğinden biridir. Ağrının yerini gösterir, ancak şiddeti hakkında bilgi vermez; uykudan uyandırma ise şiddet ölçütüdür (sayfa 7 ve 11)."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Yeri Şiddeti Aura ve prodorom belirtilerinin olup olmaması"
+     },
+     "s": 7,
+     "dayanak": [
+      "ozen:s7",
+      "not:s7"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Başağrısı anamnezinde mutlaka sorulması gereken başlıklardan biri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Emosyonel faktörlerin ağrıyla ilişkisi",
+      "B": "Papilödem bulunup bulunmadığı",
+      "C": "Sedimantasyon yüksekliği",
+      "D": "Baş bilgisayarlı tomografi bulguları",
+      "E": "Ense sertliği olup olmadığı"
+     },
+     "dogru": "A",
+     "aciklama": "Anamnezde mutlaka sorulacak on iki başlıktan biri emosyonel faktörlerin ağrıyla ilişkisidir; hoca bunun önemli olduğunu özellikle belirtmiştir. Papilödem, ense sertliği, sedimantasyon ve BBT ise muayene ve yardımcı tanı yöntemleridir (sayfa 7, 9 ve 10).",
+     "sik_aciklamalari": {
+      "A": "Emosyonel faktörler anamnezin mutlaka sorulacak başlıklarındandır; yaşanan olaylar başağrısını artırabilir. Bu bilgi özellikle gerilim tipi ve migren ağrılarında tetikleyici ilişkiyi göstermek için sorgulanır (sayfa 7).",
+      "B": "Papilödem göz dibi muayenesiyle saptanan bir bulgudur ve sekonder başağrısı düşündürür. Öykü sırasında hastaya sorulan bir başlık değil, fizik muayene bulgusu olduğundan anamnez listesinde yer almaz (sayfa 9).",
+      "C": "Sedimantasyon kan testleriyle ölçülen bir yardımcı tanı yöntemidir; temporal arterit gibi durumlarda yükselir. Anamnezde sorulan bir bilgi olmadığı için bu listenin parçası değildir (sayfa 10).",
+      "D": "BBT hemoraji, hidrosefali ve tümörü gösteren bir görüntüleme yöntemidir. Hekimin hastaya sorduğu bir öykü başlığı olmadığından anamnez listesinde yer almaz; sekonder neden düşünüldüğünde istenir (sayfa 10).",
+      "E": "Ense sertliği ateşle birlikte sekonder başağrısı düşündüren bir muayene bulgusudur. Hekimin muayenede aradığı bir bulgu olduğundan anamnezde sorulacaklar listesine girmez (sayfa 9)."
+     },
+     "bilgi": [
+      20,
+      30
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Uyku düzeni Emosyonel faktörler Aile öyküsü"
+     },
+     "s": 7,
+     "dayanak": [
+      "hoca:hv-k2-10-13",
+      "ozen:s7",
+      "not:s7"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi, başağrısı anamnezinde mutlaka sorulacaklar dışındadır?",
+     "secenekler": {
+      "A": "Aile öyküsü",
+      "B": "Presipite eden faktörler",
+      "C": "Önceki medikasyonlar ve tedaviler",
+      "D": "Uyku düzeni",
+      "E": "Waters grafisinde sinüs opasitesi bulunması"
+     },
+     "dogru": "E",
+     "aciklama": "Anamnezde tip ve karakter, başlangıç, sıklık, yer, şiddet, aura-prodrom, eşlik eden belirtiler, presipite eden faktörler, uyku düzeni, emosyonel faktörler, aile öyküsü ve önceki tedaviler sorulur. Waters grafisi ise yardımcı tanı yöntemidir (sayfa 7 ve 10).",
+     "sik_aciklamalari": {
+      "A": "Aile öyküsü anamnezin mutlaka sorulacak başlıklarındandır; özellikle migrende anne ve teyze gibi kadın akrabalarda başağrısı sık görülür. Bu nedenle listenin içindedir (sayfa 7).",
+      "B": "Presipite eden faktörler, ağrıyı başlatan ya da artıran etkenlerdir; ses, ışık, bazı gıdalar ve alkol örnek verilebilir. Anamnezde mutlaka sorulması gereken bir başlık olduğundan dışında kalmaz (sayfa 7).",
+      "C": "Önceki medikasyonlar ve tedaviler, hastanın daha önce hangi ilaçları kullandığını ve yanıtını gösterir. Tedavi planı ve ilaç aşırı kullanımın saptanması için sorulan bir başlıktır (sayfa 7).",
+      "D": "Uyku düzeni, ağrının uykuyla ilişkisini ve uykusuzluk gibi tetikleyicileri anlamak için sorulur. Anamnez başlıklarından biri olduğundan listenin dışında değildir (sayfa 7).",
+      "E": "Waters grafisi direkt grafilerden biridir ve yardımcı tanı yöntemleri listesinde ilk sırada yer alır. Öykü sırasında sorulan bir başlık olmadığı için anamnez listesinin dışındadır (sayfa 10)."
+     },
+     "bilgi": [
+      20,
+      51,
+      52
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Presipite eden faktörler olup olmaması Uyku düzeni"
+     },
+     "s": 7,
+     "dayanak": [
+      "hoca:hv-k2-10-08",
+      "ozen:s7"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q14",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ağrının yerini tarif etmekte güçlük çeken bir hastada başağrısının yerini belirlemeye en çok yardımcı olan yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Hastadan ağrıyı sayısal bir ölçekle puanlamasını istemek",
+      "B": "Ağrı başlangıç saatini ayrıntılı sormak",
+      "C": "Hastaya başağrısı günlüğü tutturmak",
+      "D": "Hastadan elini ağrılı bölgeye koymasını istemek",
+      "E": "Hemen baş bilgisayarlı tomografi istemek"
+     },
+     "dogru": "D",
+     "aciklama": "Anamnezde mutlaka sorulacaklar arasında başağrısının yeri de bulunur ve hastalar yeri genellikle tarif edemez; elini ağrılı yere koymasını istemek yerelleştirmeye yardımcı olur. Başağrısının tipi ve karakteri, başlangıcı, sıklığı, şiddeti, aura ve prodrom belirtileri, eşlik eden belirtiler, presipite eden faktörler, uyku düzeni, emosyonel faktörler, aile öyküsü ve önceki medikasyonlar da sorulur (sayfa 7).",
+     "sik_aciklamalari": {
+      "A": "Sayısal ölçek ağrının şiddetini bir sayıya döker ve hastanın ağrısını karşılaştırmaya yarar. Yerini göstermediği için ağrının yerini belirlemekte işe yaramaz (sayfa 7).",
+      "B": "Başlangıç saati ağrının ne zaman başladığını ve ne kadar süredir sürdüğünü gösterir. Ağrının zamansal özelliğini belirler, yerleşimini belirlemez; yer için hastanın elini koyması istenir (sayfa 7).",
+      "C": "Başağrısı günlüğü ağrının sıklığını ve tetikleyicilerini kaydetmek için, tanı koymakta zorlanıldığında hastaya tutturulur. Ağrının yerini o anda göstermez, bu yüzden yerelleştirme yöntemi değildir (sayfa 10).",
+      "D": "Elin ağrılı bölgeye konması, hastanın sözle anlatamadığı ağrı yerini doğrudan gösterir ve tek taraflı, oksipital ya da frontal gibi yerleşimleri ayırt etmeyi sağlar. Hoca bu yöntemi anamnez sırasında önermiştir (sayfa 7).",
+      "E": "BBT hemoraji, hidrosefali ve tümör gibi yapısal nedenleri gösteren bir görüntüleme yöntemidir. Ağrının yerini anlamak için rutin olarak istenmez; ivedi bir sekonder neden şüphesinde gündeme gelir (sayfa 10)."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Başlangıcı Sıklığı Yeri Şiddeti"
+     },
+     "s": 7,
+     "dayanak": [
+      "ozen:s7",
+      "not:s7"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Migrende aile öyküsü sorgulanırken genetik geçişi göstermesi bakımından hangi akrabalarda başağrısı sıklığı özellikle önemlidir?",
+     "secenekler": {
+      "A": "Baba ve amca gibi erkek akrabalar",
+      "B": "Anne ve teyze gibi kadın akrabalar",
+      "C": "Yalnız komşu ve arkadaşlar",
+      "D": "Yalnız hastanın çocukları",
+      "E": "Hiçbir akraba sorgulanmaz, çünkü kalıtsal değildir"
+     },
+     "dogru": "B",
+     "aciklama": "Aile öyküsü anamnezde mutlaka sorulur; migrende özellikle anne ve teyze gibi kadın akrabalarda başağrısı sıktır ve genetik bir geçiş vardır (sayfa 7 ve 13).",
+     "sik_aciklamalari": {
+      "A": "Baba ve amca gibi erkek akrabalar da sorgulanır, ancak hocanın vurguladığı özellik kadın akrabalardaki sıklıktır. Migren kadınlarda %20, erkeklerde %8 görüldüğü için aile öyküsünde kadın akrabalar öne çıkar (sayfa 7 ve 11).",
+      "B": "Migren poligeniktir ve ailevi geçiş gösterir; annenin ve teyzenin başağrısı öyküsü tanıyı destekler. Hoca aile öyküsünün önemini özellikle vurgulamıştır (sayfa 7 ve 13).",
+      "C": "Komşu ve arkadaşlar kan bağı taşımadığı için genetik geçişi göstermez. Aile öyküsü kan bağı olan akrabaların başağrısı öyküsünü kapsar (sayfa 7).",
+      "D": "Hastanın çocuklarına bakmak genetik geçişin bir yönünü gösterebilir, fakat aile öyküsü ağırlıklı olarak anne ve teyze gibi kadın akrabaları sorgular. Seçenek bu nedenle eksik kalır (sayfa 7).",
+      "E": "Aile öyküsünün anamnezde sorulması gereken bir başlık olduğunu ve migrenin genetik bir geçişi bulunduğunu slayt açıkça belirtir. Kalıtsal etkenin yok sayılması bilgiye aykırıdır (sayfa 7 ve 13)."
+     },
+     "bilgi": [
+      31,
+      71
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Emosyonel faktörler Aile öyküsü Önceki medikasyonlar ve tedaviler"
+     },
+     "s": 7,
+     "dayanak": [
+      "hoca:hv-k2-10-15",
+      "ozen:s7"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tanısı büyük ölçüde ayrıntılı öyküye dayanan ve muayene ile tetkiklerde karakteristik bir bulgu saptanmayan başağrısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Migren",
+      "B": "Subaraknoid kanamaya bağlı başağrısı",
+      "C": "Beyin tümörüne bağlı başağrısı",
+      "D": "Menenjite bağlı başağrısı",
+      "E": "Temporal arterite bağlı başağrısı"
+     },
+     "dogru": "A",
+     "aciklama": "Anamnez başağrısı tanısının temelidir ve primer başağrılarında muayene çoğunlukla normaldir. Migren tanısı atak sayısı ve özelliklerine dayalı kriterlerle öyküden konur; diğer seçenekler BBT, MR, LP ya da sedimantasyon gibi incelemelerle desteklenen sekonder nedenlerdir (sayfa 6, 10 ve 12).",
+     "sik_aciklamalari": {
+      "A": "Migren primer bir başağrısıdır ve tanısı tipik özellikler, en az 5 atak ve diğer hastalıklarla ilişki bulunmaması gibi öykü ölçütlerine dayanır. Muayene ve laboratuvar çoğunlukla normaldir (sayfa 6 ve 12).",
+      "B": "Subaraknoid kanama BBT ve lomber ponksiyonla gösterilen sekonder bir başağrısı nedenidir. Tanısı öyküden çok bu incelemelerdeki bulgulara dayandığı için yalnız öyküye dayanan hastalık değildir (sayfa 10).",
+      "C": "Beyin tümörü BBT ve MR ile saptanan yapısal bir nedendir ve sekonder başağrısı yapar. Görüntülemede bulgu veren bu hastalığın tanısı yalnız öyküye dayanmaz (sayfa 10).",
+      "D": "Menenjit ateş, ense sertliği gibi bulgularla seyreder ve tanısında lomber ponksiyon kullanılır. Muayene ve tetkik bulgusu belirgin olduğundan yalnız öyküye dayanmaz (sayfa 9 ve 10).",
+      "E": "Temporal arterit sedimantasyonun en çok yükseldiği hastalıktır ve tanıda kan testleri önem taşır. Karakteristik laboratuvar bulgusu olduğundan yalnız anamneze dayanmaz (sayfa 10)."
+     },
+     "bilgi": [
+      16,
+      17,
+      19,
+      64
+     ],
+     "benzer_cikmis": [
+      "d3-k2-nor-001",
+      "past-1790877039274-141162"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Anamnez tanının temelini oluşturur."
+     },
+     "s": 6,
+     "dayanak": [
+      "ogrenci:B:oykuye-dayali-tani",
+      "cikmis:d3-k2-nor-001"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Başağrısı anamnezinde aşağıdakilerden hangileri sorulur?\nI. Emosyonel faktörlerin ağrıyla ilişkisi\nII. Aile öyküsü\nIII. Presipite eden faktörler\nIV. Papilödem varlığı",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Emosyonel faktörlerin ağrıyla ilişkisi, aile öyküsü ve presipite eden faktörler anamnezin on iki başlığı arasındadır; hoca emosyonel faktörlerin ve aile öyküsünün önemini özellikle vurgulamıştır. Papilödem ise göz dibi muayenesinde saptanan bir bulgudur (sayfa 7 ve 9).",
+     "sik_aciklamalari": {
+      "A": "I ve II anamnezde sorulan doğru başlıklardır ve yaşanan olaylarla ailedeki başağrısı öyküsünü araştırır. Ancak presipite eden faktörler de on iki başlıktan biridir ve bu seçenekte eksik bırakılmıştır (sayfa 7).",
+      "B": "II doğru bir başlıktır, fakat IV papilödem muayene bulgusudur ve anamnez başlığı değildir. Bu ikili I ve III'ü de dışarıda bırakır (sayfa 7 ve 9).",
+      "C": "I, II ve III anamnezde sorulan başlıklardır: yaşanan olayların ağrıyı artırıp artırmadığı, ailede özellikle anne ve teyze gibi kadın akrabalarda başağrısı bulunup bulunmadığı ve ağrıyı başlatan etkenler. IV muayene bulgusu olduğundan listeye girmez (sayfa 7).",
+      "D": "I ve III doğrudur, ancak IV muayene bulgusu olduğu için listeye girmez ve II eksik kalmıştır. Seçenek papilödemi öykü başlığı sayma hatasını içerir (sayfa 7 ve 9).",
+      "E": "Dört maddenin hepsini anamnez sayar. IV papilödemdir; göz dibinde disk ödemini gösteren bu bulgu hekimin muayenede arayacağı sekonder başağrısı belirtisidir, hastaya sorulan bir başlık değildir (sayfa 9)."
+     },
+     "bilgi": [
+      20,
+      28,
+      30,
+      31,
+      48
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Emosyonel faktörler Aile öyküsü"
+     },
+     "s": 7,
+     "dayanak": [
+      "hoca:hv-k2-10-13",
+      "hoca:hv-k2-10-15",
+      "not:s7"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-nor-001",
+     "soru": "Aşağıdaki baş ağrısı tiplerinden hangisinin tanısı tamamen ayrıntılı klinik öyküye dayanır; laboratuvar veya nörogörüntüleme yöntemlerinde karakteristik patolojik bir bulgu saptanmaz?",
+     "secenekler": {
+      "A": "Subaraknoid kanamaya bağlı baş ağrısı",
+      "B": "Migren",
+      "C": "Beyin tümörüne bağlı kafa içi basınç artışı baş ağrısı",
+      "D": "Menenjite bağlı baş ağrısı",
+      "E": "Temporal arterit (dev hücreli arterit)"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "past-1790877039274-141162",
+     "soru": "Aşağıdakilerin hangisinde nörolojik tanı esas olarak anamnez bilgisi ile konabilir?",
+     "secenekler": {
+      "A": "Polinöropati",
+      "B": "Multipl skleroz",
+      "C": "İntraserebral hemoraji",
+      "D": "Beyin tümörü",
+      "E": "Migren"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Sekonder başağrısı düşündüren öykü özelliklerini (erkek cinsiyet, 10 yaş öncesi ve 50 yaş sonrası, en şiddetli başağrısı vb.) ve fizik muayene bulgularını tanır, yardımcı tanı yöntemlerini (Waters, BBT, MR, LP, sedimantasyon, günlük) uygun duruma bağlar.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q19",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Başağrısı yakınması olan bir hastada cinsiyetin yorumu ile ilgili aşağıdakilerden hangisi geçerlidir?",
+     "secenekler": {
+      "A": "Erkek hastada başağrısı kadınlardan sık olduğu için primer kabul edilir.",
+      "B": "Erkek hastada sekonder neden olasılığı daha yüksektir.",
+      "C": "Cinsiyet başağrısı ayrımında hiçbir değer taşımaz.",
+      "D": "Erkek hastada başağrısı yalnızca gerilim tipinden kaynaklanır.",
+      "E": "Erkek hastada başağrısı yalnız küme tipinde görülür."
+     },
+     "dogru": "B",
+     "aciklama": "Erkek cinsiyet sekonder başağrısı düşündüren öykü özelliklerinden biridir; hoca erkek hastada başağrısının sekonder grupta düşünülmesi gerektiğini ve altta bir neden olma ihtimalinin yüksek olduğunu belirtmiştir (sayfa 8).",
+     "sik_aciklamalari": {
+      "A": "Başağrısının erkeklerde daha seyrek olması erkek hastada altta neden aranmasını gerektirir; bu nedenle primer kabul etmek yanlıştır. Sorulan bilgi cinsiyetin sekonder nedeni düşündüren bir özellik olmasıdır (sayfa 8).",
+      "B": "Başağrısı kadınlarda daha sık olduğundan erkekte yeni gelişen ağrı daha az beklenir ve altta bir neden aranır. Erkek cinsiyet sınavda en çok sorulan sekonder özelliktir (sayfa 8).",
+      "C": "Cinsiyet, sekonder başağrısı düşündüren öykü özellikleri listesinde yer alır ve ayırt edici değeri vardır. Erkek hastada altta başka bir neden olma ihtimali daha yüksek olduğundan cinsiyetin değeri yok sayılamaz (sayfa 8).",
+      "D": "Gerilim tipi başağrısı en sık görülen primer başağrısıdır ve hem kadınlarda hem erkeklerde görülür. Erkek hastada ağrının yalnız bu tipten kaynaklandığını varsaymak sekonder nedenleri atlamaya yol açar (sayfa 18).",
+      "E": "Küme başağrısı erkeklerde daha fazla görülür, fakat erkek hastada her başağrısı küme tipi değildir. Erkek hastada sekonder nedenler de düşünülür (sayfa 8 ve 22)."
+     },
+     "bilgi": [
+      43
+     ],
+     "benzer_cikmis": [
+      "048fe1e04f10"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Dirençli kusmaların eşlikçiliği Erkek cinsiyet"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-10-23",
+      "cikmis:048fe1e04f10",
+      "ogrenci:A:noro-s01-b09"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q20",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Başağrısının hangi yaşlarda başlaması sekonder bir nedeni düşündürür?",
+     "secenekler": {
+      "A": "20 yaşından önce veya 40 yaşından sonra",
+      "B": "10 yaşından sonra ve 50 yaşından önce",
+      "C": "5 yaşından önce veya 60 yaşından sonra",
+      "D": "10 yaşından önce veya 50 yaşından sonra",
+      "E": "18 yaşından önce veya 65 yaşından sonra"
+     },
+     "dogru": "D",
+     "aciklama": "Sekonder başağrısı düşündüren öykü özelliklerinden biri başağrısının 10 yaşından önce ya da 50 yaşından sonra başlamasıdır (sayfa 8). Özellikle çocuklarda oksipital yerleşim de sekonder nedeni düşündürür.",
+     "sik_aciklamalari": {
+      "A": "20 yaş ve 40 yaş sınırları slayttaki değerlerle örtüşmez. Primer başağrıları genç erişkinlerde de başlayabildiğinden bu kesim noktaları sekonder neden için ölçüt değildir (sayfa 8).",
+      "B": "Bu aralık sekonder neden için tehlike işareti taşımayan, primer başağrılarının tipik başlangıç yaşlarını gösterir. Sekonder neden aranması gereken yaşlar bunun dışındaki 10 yaş öncesi ve 50 yaş sonrasıdır (sayfa 8).",
+      "C": "5 ve 60 yaş sınırları sayısal olarak yakın görünür fakat slayttaki 10 ve 50 yaş değerlerine uymaz. Sınav sorularında bu tür yakın değerler çeldirici olarak kullanılır (sayfa 8).",
+      "D": "Çocukluk ve ileri yaşta ilk kez başlayan başağrısı primer başağrısından çok yapısal bir hastalığı düşündürür. Slayt sınırları 10 ve 50 yaş olarak verir (sayfa 8).",
+      "E": "18 ve 65 yaş sınırları slayta ait değildir. Sekonder başağrısı için dikkat edilecek yaşlar 10 yaşından önce ve 50 yaşından sonradır (sayfa 8)."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "10 yaşından önce, 50 yaşından sonra başlaması"
+     },
+     "s": 8,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b09"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q23",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Başağrısında yardımcı tanı yöntemleri arasında ilk sayılan yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Baş bilgisayarlı tomografi",
+      "B": "Manyetik rezonans görüntüleme",
+      "C": "Lomber ponksiyon",
+      "D": "Waters ve direkt grafiler",
+      "E": "Başağrısı günlüğü"
+     },
+     "dogru": "D",
+     "aciklama": "Yardımcı tanı yöntemleri Waters ve direkt grafiler, BBT, MR, LP, kan testleri (sedimantasyon) ve başağrısı günlüğü olarak sıralanır; Waters ve direkt grafiler listenin başında yer alır (sayfa 10).",
+     "sik_aciklamalari": {
+      "A": "BBT hemoraji, hidrosefali ve tümörü gösterir ve inme şüphesinde, KİBAS düşünülüyorsa LP öncesinde ve kafa travmasında istenir. Listede Waters ve direkt grafilerden sonra gelir (sayfa 10).",
+      "B": "MR arka çukur tümörü, inme ve demyelinizan plakları gösterir. Yardımcı tanı listesinde BBT'den sonra sayılır, ilk sırada değildir (sayfa 10).",
+      "C": "Lomber ponksiyon menenjit, SAK ve HANDLE tanısında kullanılan bir yöntemdir ve listede dördüncü sıradadır. Beyin omurilik sıvısını incelemek için gerektiğinde yapıldığından ilk sayılan yöntem değildir (sayfa 10).",
+      "D": "Waters ve direkt grafiler en basit görüntüleme yöntemleridir ve yardımcı tanı listesinin ilk sırasındadır. Öğrenci notunda da bu satıra iki yıldız konmuş ve buradan başlanacağı yazılmıştır (sayfa 10).",
+      "E": "Başağrısı günlüğü listenin son maddesidir ve tanı koymakta zorlanıldığında hastaya tutturulur. Ağrı sıklığını ve tetikleyicileri kaydetmeye yarar; ilk sırada yer alan yöntem değildir (sayfa 10)."
+     },
+     "bilgi": [
+      51,
+      52
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Waters, direk grafiler BBT (hemoraji, hidrosefali, tümör)"
+     },
+     "s": 10,
+     "dayanak": [
+      "not:s10",
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q24",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi fizik muayenede sekonder başağrısı düşündüren bulgulardan biridir?",
+     "secenekler": {
+      "A": "Fotofobi",
+      "B": "Fonofobi",
+      "C": "Aura sırasında kırık çizgiler görme",
+      "D": "Myofasiyal tetik noktaların bulunması",
+      "E": "Papilödem"
+     },
+     "dogru": "E",
+     "aciklama": "Papilödem ve subhyaloid hemoraji göz dibi bulgularıdır ve sekonder başağrısı düşündürür. Fotofobi, fonofobi ve aura migrenin eşlik eden belirtileridir; primer başağrılarında muayene çoğunlukla normaldir (sayfa 9, 11 ve 12).",
+     "sik_aciklamalari": {
+      "A": "Fotofobi ışık hassasiyetidir ve migrende bulantı-kusma ile birlikte eşlik eden belirtilerdendir. Muayene bulgusu değil, hastanın bildirdiği bir yakınmadır (sayfa 7 ve 11).",
+      "B": "Fonofobi sese karşı hassasiyettir ve migrenin eşlik eden belirtilerinden biridir. Hastanın öyküde anlattığı bir yakınma olup sekonder neden göstermez (sayfa 11).",
+      "C": "Aura sırasında kırık çizgiler görme migrenin geçici nörolojik belirtisidir ve 5–60 dakika sürer. Primer başağrısına özgü olduğundan sekonder neden göstermez (sayfa 12).",
+      "D": "Myofasiyal tetik noktalar gerilim tipi başağrısı mekanizmasında rol oynayan, kasta hassas noktalardır. Primer bir ağrının mekanizması olduğundan sekonder başağrısı düşündüren muayene bulgusu sayılmaz (sayfa 19).",
+      "E": "Papilödem, kafa içi basınç artışını gösteren bir göz dibi bulgusudur ve sekonder başağrısı düşündüren muayene bulgularından biridir. Ayırıcı özelliği muayenede saptanabilir patolojik bir bulgu olmasıdır (sayfa 9)."
+     },
+     "bilgi": [
+      46,
+      47,
+      48,
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Papilödem, subhyaloid hemoraji Ateş, ense sertliği"
+     },
+     "s": 9,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b08",
+      "not:s9"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q18",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi sekonder başağrısı düşündüren öykü özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Erkek cinsiyet",
+      "B": "Belirli bir şekle uymayan başağrısı olması",
+      "C": "Hastanın yaşamındaki en şiddetli başağrısı olması",
+      "D": "Hastada mevcut malignite tanısı bulunması",
+      "E": "Ağrı öncesinde aura bulunması"
+     },
+     "dogru": "E",
+     "aciklama": "Aura migrenin ağrıdan önceki geçici nörolojik belirtileridir ve anamnezde sorulan bir özelliktir; sekonder nedeni düşündüren on iki öykü özelliği arasında yer almaz. Erkek cinsiyet, 10 yaşından önce başlangıç, en şiddetli ağrı ve malignite bu listededir (sayfa 8 ve 12).",
+     "sik_aciklamalari": {
+      "A": "Erkek cinsiyet sekonder başağrısı düşündüren öykü özelliklerinden biridir; erkek hastada altta bir neden olma ihtimali daha yüksektir. Hoca cinsiyetin önemini özellikle belirtmiştir (sayfa 8).",
+      "B": "Belirli bir şekle uymayan başağrısı sekonder nedeni düşündürür; hoca anamnezi ve muayeneyi bilinen bir kalıba sokamıyorsak hastayı sekonder kabul edip tedbirli davranmak gerektiğini söylemiştir. Listede yer aldığından olumsuz kökte aranan yanıt değildir (sayfa 8).",
+      "C": "Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder nedeni, özellikle subaraknoid kanamayı düşündürür. Listede yer alan bu özellik soru kökündeki olumsuzlamaya uymaz (sayfa 8).",
+      "D": "Mevcut malignite tanısı bulunan hastada başağrısı metastaz gibi sekonder nedenleri düşündürür. Liste içinde yer aldığından aranan yanıt değildir (sayfa 8).",
+      "E": "Aura, migrenli hastaların %10–15'inde ağrıdan önce görülen geçici nörolojik belirtidir (beyaz ışıklar, kırık çizgiler, hemianopsi). Primer bir başağrısına özgü olduğundan sekonder neden düşündürmez (sayfa 12)."
+     },
+     "bilgi": [
+      33,
+      37,
+      39,
+      43,
+      44,
+      67
+     ],
+     "benzer_cikmis": [
+      "048fe1e04f10",
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-21"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Dirençli kusmaların eşlikçiliği Erkek cinsiyet"
+     },
+     "s": 8,
+     "dayanak": [
+      "cikmis:048fe1e04f10",
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-21",
+      "ogrenci:A:noro-s01-b09",
+      "hoca:hv-k2-10-16",
+      "hoca:hv-k2-10-19",
+      "hoca:hv-k2-10-21",
+      "hoca:hv-k2-10-23",
+      "hoca:hv-k2-10-70"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q21",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hastanın başağrısını “hayatımda çektiğim en şiddetli başağrısı” olarak tanımlaması hekimde öncelikle aşağıdakilerden hangisini düşündürmelidir?",
+     "secenekler": {
+      "A": "Subaraknoid kanama",
+      "B": "Migren",
+      "C": "Gerilim tipi başağrısı",
+      "D": "Sinüzite bağlı başağrısı",
+      "E": "Paroksismal hemikranya"
+     },
+     "dogru": "A",
+     "aciklama": "Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder başağrısı düşündürür ve özellikle subaraknoid kanamayı akla getirir; hoca bu cümle duyulduğunda korkmak gerektiğini söylemiştir. Tanıda BBT ve lomber ponksiyon kullanılır (sayfa 8 ve 10).",
+     "sik_aciklamalari": {
+      "A": "Subaraknoid kanama (SAK) ani başlayan, hastanın daha önce yaşamadığı şiddette bir ağrıyla ortaya çıkar. Yaşamı tehdit eden bu tanı kaçırılmamalıdır; BBT ve lomber ponksiyon tanıda kullanılır (sayfa 8 ve 10).",
+      "B": "Migren tekrarlayan, tanıdık özellikteki ataklarla seyreden primer bir başağrısıdır. Hastanın ağrısını yaşamının en şiddetlisi olarak tanımlaması tanıdık bir migren atağına uymaz (sayfa 11).",
+      "C": "Gerilim tipi başağrısı hafif-orta şiddette, iki taraflı ve sıkıştırıcı bir primer ağrıdır; günlük aktiviteyi engellemez. Bu özellikler hayatın en şiddetli başağrısı tanımıyla çeliştiği için ilk düşünülecek tanı değildir (sayfa 18).",
+      "D": "Sinüzite bağlı başağrısı yüz ve burun bölgesi bozukluklarına bağlı sekonder bir başağrısıdır (11. başlık). En şiddetli ağrı tanımı ilk sırada kanamayı düşündürür, sinüziti değil (sayfa 4 ve 8).",
+      "E": "Paroksismal hemikranya 2–30 dakika süren, günde 5–20 atak yapan trigeminal otonomik bir başağrısıdır. Tek ve ani başlayan en şiddetli ağrı bu tabloya uymaz (sayfa 23)."
+     },
+     "bilgi": [
+      39,
+      55
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-7-cs2",
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20",
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
+      "d3-k2-nor-007"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Hastanın yaşamındaki “en şiddetli başağrısı” tanımı"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-10-21",
+      "cikmis:q-2__kurul_-7-cs2",
+      "cikmis:d3-k2-nor-007",
+      "ogrenci:A:noro-s01-b09",
+      "not:s8"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Anamnezi ve muayenesi bilinen hiçbir başağrısı kalıbına oturmayan bir hastada aşağıdakilerden hangisi doğru yaklaşımdır?",
+     "secenekler": {
+      "A": "Primer başağrısı kabul edilip izlenmesi",
+      "B": "Sekonder başağrısı kabul edilip tedbirli davranılması",
+      "C": "Migren tanısı konarak profilaksi başlanması",
+      "D": "Gerilim tipi başağrısı olarak değerlendirilmesi",
+      "E": "Psikiyatrik nedene bağlı sayılması"
+     },
+     "dogru": "B",
+     "aciklama": "Belirli bir şekle uymayan başağrısı sekonder nedeni düşündürür; hoca bu durumda hastayı sekonder kabul edip tedbirli davranmak gerektiğini belirtmiştir. Sekonder başağrısı yaşamı tehdit edebildiğinden ivedi davranılır (sayfa 8).",
+     "sik_aciklamalari": {
+      "A": "Primer başağrısı kabul etmek, tipik primer özellikleri taşımayan bir tabloyu rahatlatıcı bir tanıya yerleştirmektir. Oysa bu tablo sekonder nedeni düşündürür ve izlemekle yetinilmez (sayfa 8).",
+      "B": "Tipik bir primer başağrısı tablosuna uymayan ağrı, altta bir hastalık olabileceğini düşündürür. Bu yüzden tedbirli davranılır ve gerekirse ileri inceleme yapılır (sayfa 8).",
+      "C": "Migren tanısı belirli özelliklere (tek taraflı zonklayıcı ağrı, eşlik eden belirtiler, en az 5 atak) dayanır. Kalıba uymayan ağrıda bu tanıyı koymak ve profilaksi başlamak yanlış olur (sayfa 11 ve 12).",
+      "D": "Gerilim tipi başağrısı iki taraflı, künt-sıkıştırıcı ve günlük aktiviteyi engellemeyen karakteristik bir tablodur. Kalıba uymayan ağrıyı bu tanıya yerleştirmek sekonder nedeni atlamaya yol açar (sayfa 18).",
+      "E": "Psikiyatrik bozukluklara bağlı başağrısı 12. başlıktaki sekonder bir gruptur ve tanısı için psikiyatrik hastalık öncesinde gösterilmelidir. Kalıba uymayan ağrıda önce yapısal nedenler dışlanmalıdır (sayfa 4 ve 8)."
+     },
+     "bilgi": [
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Belirli bir şekle uymayan başağrısı"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-10-70",
+      "hoca:hv-k2-10-16",
+      "ogrenci:A:noro-s01-b09"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q25",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi fizik muayenede sekonder başağrısı düşündüren bulgulardan biri değildir?",
+     "secenekler": {
+      "A": "Bilinç bozukluğu ve senkop",
+      "B": "Epileptik nöbet",
+      "C": "Papilödem ve subhyaloid hemoraji",
+      "D": "Horner sendromu",
+      "E": "Başağrısı sırasında fotofobi ve fonofobi"
+     },
+     "dogru": "E",
+     "aciklama": "Bilinç bozukluğu, senkop, epileptik nöbet, fokal nörolojik bulgu, papilödem, subhyaloid hemoraji, ateş, ense sertliği, kilo kaybı, kranial sinir tutulumları ve Horner sendromu sekonder başağrısı düşündürür (sayfa 9). Fotofobi ve fonofobi ise migrenin eşlik eden belirtileridir.",
+     "sik_aciklamalari": {
+      "A": "Bilinç bozukluğu ve senkop slayttaki sekonder başağrısı düşündüren muayene bulgularının ilk maddesidir. Bu nedenle olumsuz kökte aranan yanıt değildir (sayfa 9).",
+      "B": "Epileptik nöbet sekonder başağrısı düşündüren muayene bulgularındandır ve altta yatan bir beyin hastalığına işaret edebilir. Listede yer aldığından aranan yanıt olamaz (sayfa 9).",
+      "C": "Papilödem ve subhyaloid hemoraji göz dibi bulgularıdır ve kafa içi basınç artışı ya da kanamayı düşündürür. Slayttaki sekonder başağrısı bulguları arasında yer aldıkları için olumsuz kökte aranan yanıt değildir (sayfa 9).",
+      "D": "Horner sendromu sekonder başağrısı düşündüren muayene bulgularındandır ve sempatik sinir tutulumuna işaret eder. Listede yer aldığı için aranan yanıt değildir (sayfa 9).",
+      "E": "Fotofobi ışık, fonofobi ses hassasiyetidir; migrende bulantı-kusma ile birlikte eşlik eder ve gerilim tipinde de görülebilir. Muayene bulgusu olmayan bu yakınmalar sekonder neden listesinde yer almaz (sayfa 11 ve 18)."
+     },
+     "bilgi": [
+      46,
+      47,
+      48,
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "3. kranial sinir tutulumu, anizokori Horner sendromu 5., 7. KS tutulumu"
+     },
+     "s": 9,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b08",
+      "not:s9"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q26",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Başağrısı olan hastalarda kan testleri içinde sedimantasyonun en çok yükselmesiyle karakterize hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Migren",
+      "B": "Temporal arterit",
+      "C": "Gerilim tipi başağrısı",
+      "D": "Küme başağrısı",
+      "E": "Subaraknoid kanama"
+     },
+     "dogru": "B",
+     "aciklama": "Kan testleri içinde sedimantasyon yardımcı tanı yöntemleri arasında sayılır; hoca sedimantasyonu en çok yükselten hastalığın temporal arterit olduğunu belirtmiştir. Primer başağrılarında sedimantasyon beklenen bir tanı aracı değildir (sayfa 10).",
+     "sik_aciklamalari": {
+      "A": "Migren primer bir başağrısıdır ve tanısı öyküye dayanır. Sedimantasyon yüksekliği migrenin bir özelliği olmadığından kan testi tanıda rol oynamaz (sayfa 10 ve 11).",
+      "B": "Temporal arterit, ileri yaşta başağrısı ile gelen sekonder bir nedendir ve sedimantasyonun belirgin yükselmesiyle ayırt edilir. Hoca sedimantasyonun önemini özellikle vurgulamıştır (sayfa 10).",
+      "C": "Gerilim tipi başağrısı primer bir ağrıdır ve myofasiyal tetik noktalar ile ağrı modülasyonu bozukluğuyla açıklanır. Laboratuvar bulgusu vermez (sayfa 19).",
+      "D": "Küme başağrısı gece uykudan uyandıran tek taraflı şiddetli ağrı ve aynı taraf otonom belirtilerle tanınır. Sedimantasyonu yükselten bir hastalık değildir (sayfa 22).",
+      "E": "Subaraknoid kanama BBT ve lomber ponksiyonla tanınan sekonder bir nedendir. Sedimantasyonun en çok yükseldiği hastalık olarak bilinen temporal arterit değildir (sayfa 10)."
+     },
+     "bilgi": [
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Kan testleri, sedim Başağrısı günlüğü"
+     },
+     "s": 10,
+     "dayanak": [
+      "hoca:hv-k2-10-27",
+      "not:s10"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q27",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "70 yaşında kadın hastada daha önce olmayan bir başağrısı yakınması son iki haftada başlamıştır. Nörolojik muayene normaldir ve temporal arterit düşünülmektedir. Bu tanıyı desteklemek üzere istenmesi en uygun inceleme aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Waters grafisi",
+      "B": "Başağrısı günlüğü tutturulması",
+      "C": "Lomber ponksiyon",
+      "D": "Sedimantasyon",
+      "E": "Arka çukur MR görüntülemesi"
+     },
+     "dogru": "D",
+     "aciklama": "Başağrısının 50 yaşından sonra başlaması sekonder nedeni düşündürür; kan testleri içinde sedimantasyon yardımcı tanı yöntemidir ve hocaya göre en çok temporal arteritte yükselir (sayfa 8 ve 10). Diğer seçenekler başka durumlara yönelik yöntemlerdir.",
+     "sik_aciklamalari": {
+      "A": "Waters ve direkt grafiler yardımcı tanı yöntemleri arasında ilk sayılan görüntüleme yöntemleridir. Sinüs gibi yapıları gösterir, temporal arteritte görülen inflamasyonu ölçmez (sayfa 10).",
+      "B": "Başağrısı günlüğü, tanı koymakta zorlanıldığında hastaya tutturulur ve ağrı sıklığını kaydetmeye yarar. Yeni başlayan ağrıda tanıyı hızlandırmaz ve temporal arteriti desteklemez (sayfa 10).",
+      "C": "Lomber ponksiyon menenjit, SAK ve HANDLE tanısında kullanılır. Temporal arterit şüphesinde yükselen sedimantasyonu değil, beyin omurilik sıvısını inceler (sayfa 10).",
+      "D": "İleri yaşta yeni başlayan başağrısında temporal arterit akla gelir ve sedimantasyon bu tanıyı destekleyen kan testidir. Muayenenin normal olması sekonder nedeni dışlamaz (sayfa 8 ve 10).",
+      "E": "MR arka çukur tümörü, inme ve demyelinizan plakları gösterir. Temporal arterit şüphesinde tanıyı destekleyen laboratuvar yüksekliğini değil yapısal bir lezyonu arar (sayfa 10)."
+     },
+     "bilgi": [
+      34,
+      54,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Kan testleri, sedim Başağrısı günlüğü"
+     },
+     "s": 10,
+     "dayanak": [
+      "hoca:hv-k2-10-27",
+      "ogrenci:A:noro-s01-b09"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "048fe1e04f10",
+     "soru": "gisi sekonder başağrısı dürüstlükten öykü özelliklerinden biridir? fotofobi fonofobi aura uzun yıllardır sürmesi erkek cinsiyet erkek cin Nöroloji",
+     "secenekler": {
+      "A": "fotofobi",
+      "B": "fonofobi",
+      "C": "aura",
+      "D": "uzun yıllardır sürmesi",
+      "E": "erkek cinsiyet"
+     },
+     "cevap": null
+    },
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-21",
+     "soru": "Aşağıdakilerden hangisi sekonder baş ağrısını düşündüren öykü özelliğidir?",
+     "secenekler": {
+      "A": "Aura bulunması",
+      "B": "Fotofobi",
+      "C": "Fonofobi",
+      "D": "Erkek cinsiyet",
+      "E": "Baş ağrısının uzun yıllardır benzer biçimde sürmesi"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "q-2__kurul_-7-cs2",
+     "soru": "Ani başlayan ve hastanın hayatının en şiddetli baş ağrısı olarak tanımladığı baş ağrısında ilk düşünülmesi gereken tanı hangisidir?",
+     "secenekler": {
+      "A": "Gerilim tipi baş ağrısı",
+      "B": "Subaraknoid kanama",
+      "C": "Migren",
+      "D": "Sinüzite bağlı baş ağrısı",
+      "E": "İdiyopatik intrakraniyal hipertansiyon"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20",
+     "soru": "Hastanın 'hayatımda gördüğüm en şiddetli baş ağrısı' olarak tanımladığı ani başlangıçlı baş ağrısında öncelikle düşünülmesi gereken tanı hangisidir?",
+     "secenekler": {
+      "A": "Migren",
+      "B": "Gerilim tipi baş ağrısı",
+      "C": "Küme baş ağrısı",
+      "D": "Subaraknoid kanama",
+      "E": "Trigeminal nevralji"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
+     "soru": "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gerilim tipi baş ağrısı",
+      "B": "Migren",
+      "C": "Sinüzit",
+      "D": "Trigeminal otonomik sefalji",
+      "E": "Subaraknoid kanama (SAK)"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3-k2-nor-007",
+     "soru": "Baş ağrısını 'yaşadığım en şiddetli baş ağrısı' olarak tanımlayan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Akut migren atağı",
+      "B": "Subaraknoid kanama (SAK)",
+      "C": "Gerilim tipi baş ağrısı",
+      "D": "Temporomandibular eklem disfonksiyonu",
+      "E": "Trigeminal nevralji"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Migrenin sıklığını, tanım ve tipik özelliklerini, tanı için gereken atak sayısını ve prodrom, aura, ağrı, postdrom dönemlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q28",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Migrenin görülme sıklığı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Kadınlarda %8, erkeklerde %20, 50 yaş üstünde %2",
+      "B": "Kadınlarda %20, erkeklerde %8, 50 yaş üstünde %20",
+      "C": "Kadınlarda %20, erkeklerde %8, 50 yaş üstünde %2",
+      "D": "Kadınlarda %99, erkeklerde %93, 50 yaş üstünde %2",
+      "E": "Kadınlarda %2, erkeklerde %8, 50 yaş üstünde %20"
+     },
+     "dogru": "C",
+     "aciklama": "Migren tüm başağrıları içinde doktora en fazla gidiş nedenidir; kadınlarda %20, erkeklerde %8 sıklıkta görülür ve 50 yaş üstünde sıklık %2'dir (sayfa 11).",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek kadın ve erkek oranlarını ters vermiştir. Migren kadınlarda daha sık görüldüğü için %20 kadınlara, %8 erkeklere aittir (sayfa 11).",
+      "B": "Cinsiyet oranları doğru verilmiştir, fakat 50 yaş üstü sıklık %20 olarak yazılmıştır. Migren ileri yaşta seyrekleşir ve bu oran %2'dir (sayfa 11).",
+      "C": "Migren kadınlarda erkeklerden yaklaşık iki buçuk kat sık görülür ve 50 yaşından sonra belirgin biçimde seyrekleşir. Üç değerin birlikte doğru olduğu tek seçenek budur (sayfa 11).",
+      "D": "%99 ve %93 değerleri ömür boyunca en az bir kez başağrısı yaşama oranlarıdır, migren sıklığı değildir. İki ayrı istatistik birbirine karıştırılmıştır (sayfa 2).",
+      "E": "Bu dizilimde kadın oranı fazla düşük, 50 yaş üstü oran ise fazla yüksek verilmiştir. Migrenin kadınlarda sık olması ve 50 yaştan sonra seyrekleşmesi bilgisi bu seçenekle çelişir (sayfa 11)."
+     },
+     "bilgi": [
+      59,
+      60
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "K %20 E%8"
+     },
+     "s": 11,
+     "dayanak": [
+      "ozen:s11"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q34",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Migren atağının dönemleri sırasıyla aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Aura, prodrom, ağrı, postdrom",
+      "B": "Prodrom, ağrı, aura, postdrom",
+      "C": "Ağrı, prodrom, aura, postdrom",
+      "D": "Prodrom, aura, ağrı, postdrom",
+      "E": "Prodrom, aura, postdrom, ağrı"
+     },
+     "dogru": "D",
+     "aciklama": "Migren dönemleri sırasıyla ağrı öncesi prodrom, varsa aura, ağrı ve postdrom dönemleridir (sayfa 12). Aura ağrıdan önce ortaya çıkar; postdrom ağrıdan sonraki toparlanma evresidir.",
+     "sik_aciklamalari": {
+      "A": "Aurayı prodromdan önce koyar. Oysa prodrom ağrıdan saatler önce başlayan belirtilerdir ve aura bundan sonra, ağrıdan hemen önce görülür (sayfa 12).",
+      "B": "Aurayı ağrıdan sonraya yerleştirir. Aura geçici nörolojik belirtilerle ağrıdan önce ortaya çıkar ve CSD'nin klinik yansımasıdır (sayfa 12 ve 14).",
+      "C": "Bu dizilim ağrı dönemini ilk sıraya koyar. Oysa ağrı dönemi üçüncü evredir ve 4–72 saat sürer; ilk evre ağrıdan önce başlayan, aşırı duyarlılık ve öfori gibi belirtilerle giden prodromdur (sayfa 12).",
+      "D": "Prodrom ağrıdan önce başlar, aura isteğe bağlı olarak ağrıdan hemen önce gelir, ağrı dönemi 4–72 saat sürer ve postdrom ağrıdan sonraki toparlanma evresidir. Sıralama bu şekildedir (sayfa 12).",
+      "E": "Postdromu ağrıdan önceye yerleştirir. Postdrom ağrıdan sonraki toparlanma evresidir ve hocanın anlatımına göre kişi bir günde kendini ancak toplar (sayfa 12)."
+     },
+     "bilgi": [
+      65,
+      70
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Dönemleri: 1- Ağrı öncesi prodrom dönemi"
+     },
+     "s": 12,
+     "dayanak": [
+      "ozen:s12",
+      "not:s12"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q35",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Migren tanısı konulabilmesi için kriterlere uyan en az kaç atak gereklidir?",
+     "secenekler": {
+      "A": "2",
+      "B": "3",
+      "C": "5",
+      "D": "8",
+      "E": "10"
+     },
+     "dogru": "C",
+     "aciklama": "Migren tanısı için kriterlere uyan 5 atak gerekir ve ataklar başka bir hastalıkla ilişkili olmamalıdır (sayfa 12). Yalnız bir ya da iki atak geçiren kişiye migren tanısı konmaz.",
+     "sik_aciklamalari": {
+      "A": "İki atak yeterli sayılmaz; tanı için kriterlere uyan en az beş atak gerekir. Az sayıda atak başka başağrısı türlerini düşündürür (sayfa 12).",
+      "B": "Üç atak migren tanısı için yetersizdir. Slayt, kriterlere uyan en az beş atak ölçütünü belirtir ve yalnız bir ya da iki kez ağrı yaşayan kişiye migren denmez (sayfa 12).",
+      "C": "Beş atak ölçütü, tek tük ağrı ataklarının migren sayılmasını önler ve tanıyı kriterlere bağlar. Ataklar başka bir hastalıkla ilişkili de olmamalıdır (sayfa 12).",
+      "D": "Sekiz atak beşten fazladır ve tanı için gerekli sayıyı aşar. Ancak gereken en az sayı sorulduğundan doğru yanıt beştir (sayfa 12).",
+      "E": "On atak migren tanısında gerekli en az atak sayısı değildir. Tanı için beş atak yeterlidir; on, sayısal olarak uzak bir değerdir (sayfa 12)."
+     },
+     "bilgi": [
+      64
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Kriterlere uyan 5 atak, başka bir hastalık ile ilişki olmamalı"
+     },
+     "s": 12,
+     "dayanak": [
+      "ozen:s12",
+      "not:s11"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q29",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "4–72 saat boyunca devam eden, ataklarla seyreden, tekrarlayıcı ve zonklayıcı başağrısı atakları ile tanımlanan başağrısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Migren",
+      "B": "Gerilim tipi başağrısı",
+      "C": "Küme başağrısı",
+      "D": "Paroksismal hemikranya",
+      "E": "İlaç aşırı kullanım başağrısı"
+     },
+     "dogru": "A",
+     "aciklama": "Migren, 4–72 saat süren, ataklarla seyreden, tekrarlayıcı, zonklayıcı başağrısı atakları olarak tanımlanır (sayfa 11). Diğer seçenekler süre, ağrı niteliği ve eşlik eden belirtiler bakımından bu tanıma uymaz.",
+     "sik_aciklamalari": {
+      "A": "Migren atakları saatler ile birkaç gün arasında değişen sürelerle seyreder ve zonklayıcı karakterdedir. Ayırt edici özellikleri tek taraflılık, bulantı-kusma, fotofobi ve fonofobidir (sayfa 11).",
+      "B": "Gerilim tipi başağrısı iki taraflı, künt ya da sıkıştırıcı ve hafif-orta şiddettedir; zonklayıcı niteliği taşımaz. Günlük aktiviteyi engellemez ve bulantı-kusma eşlik etmez, bu nedenle migrenin tipik tablosuna uymaz (sayfa 11 ve 18).",
+      "C": "Küme başağrısı 15–180 dakika süren, günde 1–8 kez tekrarlayan ve aynı taraf otonom belirtilerle giden ataklar yapar. Süresi migrenden çok kısadır (sayfa 22).",
+      "D": "Paroksismal hemikranya 2–30 dakika süren, günde 5–20 atak yapan trigeminal otonomik bir başağrısıdır. Atak süresi 4–72 saatlik tanıma uymaz (sayfa 23).",
+      "E": "İlaç aşırı kullanım başağrısı analjeziklerin 10 günden fazla kullanımına bağlı kronik bir başağrısıdır. Atak süresi ve zonklayıcı niteliğiyle tanımlanan bir tablo değildir (sayfa 26)."
+     },
+     "bilgi": [
+      61,
+      62
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Tanım: 4-72 sa süren, ataklarla seyreden, tekrarlayıcı, zonklayıcı başağrısı atakları"
+     },
+     "s": 11,
+     "dayanak": [
+      "ozen:s11",
+      "not:s11"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q30",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "24 yaşında kadın hastada son bir yılda altı kez tekrarlayan, bir gün süren, tek taraflı ve zonklayıcı başağrısı ataklarına bulantı, kusma, ışıktan ve sesten rahatsızlık eşlik etmektedir. Ağrıdan önce görme belirtisi olmamaktadır. Muayenesi normaldir. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Gerilim tipi başağrısı",
+      "B": "Küme başağrısı",
+      "C": "Paroksismal hemikranya",
+      "D": "SUNCT",
+      "E": "Aurasız migren"
+     },
+     "dogru": "E",
+     "aciklama": "Tek taraflı zonklayıcı ağrı, bulantı-kusma, fotofobi ve fonofobi eşlik etmesi ve kriterlere uyan en az 5 atak migreni gösterir; ağrıdan önce aura bulunmadığından tablo aurasız migrendir. Muayene primer başağrılarında normaldir (sayfa 6, 11 ve 12).",
+     "sik_aciklamalari": {
+      "A": "Gerilim tipi başağrısı iki taraflı, künt-sıkıştırıcı, hafif-orta şiddettedir ve bulantı-kusma eşlik etmez. Tek taraflı zonklayıcı ağrı ve kusma bu tanıya uymaz (sayfa 18).",
+      "B": "Küme başağrısı geceleri uykudan uyandıran, 15–180 dakika süren ve aynı taraf gözde kızarma-yaşarma ile giden ataklar yapar. Bir gün süren zonklayıcı ağrı bu tabloya uymaz (sayfa 22).",
+      "C": "Paroksismal hemikranya 2–30 dakika süren ve günde 5–20 kez tekrarlayan çok kısa ataklarla seyreder. Bir gün süren atak ve bulantı-kusma bu tabloya uymaz (sayfa 23).",
+      "D": "SUNCT 5–240 saniye süren elektrik çarpması gibi ağrılarla ve aynı taraf göz bulgularıyla seyreder. Atak süresi saatler süren migrenden çok farklıdır (sayfa 24).",
+      "E": "Tek taraflı, zonklayıcı, bulantı-kusma ile giden ve ışık-ses hassasiyeti olan ağrı ataklarının tekrarlaması migrenin tipik tablosudur. Aura bulunmadığı için aurasız migren olarak adlandırılır (sayfa 11 ve 12)."
+     },
+     "bilgi": [
+      61,
+      62,
+      63,
+      64
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q65"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Tipik özellikleri: 1- unilateral"
+     },
+     "s": 11,
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q65",
+      "ogrenci:A:noro-s01-b01",
+      "not:s11"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q31",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Migrenin tipik özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genellikle tek taraflıdır.",
+      "B": "Zonklayıcı karakterdedir.",
+      "C": "Ağrı fiziksel aktiviteyle hafifler.",
+      "D": "Şiddeti orta ya da şiddetlidir.",
+      "E": "Bulantı ve kusma eşlik eder."
+     },
+     "dogru": "C",
+     "aciklama": "Migrenin tipik özellikleri tek taraflı olması, zonklayıcı olması, orta-şiddetli olması ve fiziksel aktiviteden etkilenmesidir; bulantı-kusma, fotofobi ve fonofobi eşlik eder (sayfa 11). Ağrının fiziksel aktiviteyle hafiflediği ifadesi bu özellikle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Tek taraflı yerleşim migrenin dört tipik özelliğinden biridir; diğerleri zonklayıcı olma, orta-şiddetli olma ve fiziksel aktiviteden etkilenmedir. İfade doğru olduğundan yanlış ifade arayan soruda seçilmez (sayfa 11).",
+      "B": "Zonklayıcı karakter migren ağrısının tipik niteliğidir ve gerilim tipi başağrısındaki sıkıştırıcı ağrıdan ayırt edici bir özelliktir. İfade doğrudur (sayfa 11).",
+      "C": "Migren ağrısı yürüme, merdiven çıkma gibi fiziksel aktiviteden etkilenir ve genellikle artar. Bu yüzden hastalar karanlık sessiz ortamda dinlenmeyi tercih eder; ağrının hafiflediğini söyleyen ifade yanlıştır (sayfa 11).",
+      "D": "Migren ağrısı orta ya da şiddetli yoğunluktadır; bu da hafif-orta şiddette seyreden gerilim tipi başağrısından ayrılmasına yardım eder. İfade doğrudur (sayfa 11 ve 18).",
+      "E": "Bulantı ve kusma migrene sık eşlik eden belirtilerdir ve fotofobi-fonofobi ile birlikte görülür. Gerilim tipi başağrısında ise bulantı ve kusma olmaz; ifade migren için doğrudur (sayfa 11 ve 18)."
+     },
+     "bilgi": [
+      62,
+      63
+     ],
+     "benzer_cikmis": [
+      "048fe1e04f10"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "4- Fiziksek aktiviteden etkilenme"
+     },
+     "s": 11,
+     "dayanak": [
+      "ozen:s11",
+      "not:s11"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q32",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Migrenli hastalarda aura döneminin görülme sıklığı ve uzunluğu aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Hastaların %10–15'inde, 4–72 saat",
+      "B": "Hastaların %10–15'inde, 5–60 dakika",
+      "C": "Hastaların %50–60'ında, 5–60 dakika",
+      "D": "Hastaların %2'sinde, 5–60 dakika",
+      "E": "Hastaların %10–15'inde, 5–60 saniye"
+     },
+     "dogru": "B",
+     "aciklama": "Aura dönemi migrenlilerin %10–15'inde görülür ve 5–60 dakika sürer; geçici nörolojik belirtilerle seyreder (sayfa 12). Ağrı dönemi ise 4–72 saat sürer.",
+     "sik_aciklamalari": {
+      "A": "Oran doğrudur fakat süre ağrı dönemine aittir: 4–72 saat migren atağının ağrı dönemini ve tanımını belirtir. Aura ise dakikalarla ölçülür (sayfa 11 ve 12).",
+      "B": "Aura herkeste bulunmayan, yaklaşık her sekiz migrenliden birinde görülen kısa süreli nörolojik bir dönemdir. Süresi dakikalarla ölçülür ve ağrıdan önce başlar (sayfa 12).",
+      "C": "Süre doğrudur, ancak oran çok yüksek verilmiştir. Aura herkeste yoktur; hoca da aura için \"herkeste yok\" demiştir ve oran %10–15'tir (sayfa 12).",
+      "D": "%2 migrenin 50 yaş üstündeki görülme sıklığıdır, aura oranı değildir. Süre doğru olsa da oran başka bir istatistikten alınmıştır (sayfa 11).",
+      "E": "Oran doğrudur, fakat süre saniye olarak verilmiştir. Aura 5–60 dakika sürer; saniyeler SUNCT ağrısının süresini hatırlatır (sayfa 12 ve 24)."
+     },
+     "bilgi": [
+      67,
+      69
+     ],
+     "benzer_cikmis": [
+      "q-2021final_230619_142600-3-r24"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "2- Varsa aura dönemi: Migrenlileri %10-15’inde. 5-60 dk sürüyor"
+     },
+     "s": 12,
+     "dayanak": [
+      "cikmis:q-2021final_230619_142600-3-r24",
+      "ozen:s12",
+      "not:s12"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q33",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangileri migrenin prodrom döneminde görülür?\nI. Aşırı duyarlılık ve tepkisellik\nII. Hemianopsi\nIII. Kelime bulma güçlüğü\nIV. Işığa ve sese karşı hassasiyet",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Prodrom dönemi ağrıdan önce başlar; aşırı duyarlılık, tepkisellik, öfori, hiperaktivite, durgunluk, dikkat azalması, kelime bulma güçlüğü, koku, ışık ve sese hassasiyet görülür. Hemianopsi ise aura döneminin geçici nörolojik belirtisidir (sayfa 12).",
+     "sik_aciklamalari": {
+      "A": "I prodroma aittir, fakat II hemianopsi aura belirtisidir ve prodromda görülmez. Ayrıca III ve IV de prodromda yer alır; seçenek bu yüzden hem fazla hem eksiktir (sayfa 12).",
+      "B": "III doğrudur, ancak II aura belirtisidir ve I ile IV de prodroma aittir. Bu seçenek hemianopsiyi yanlışlıkla prodroma dahil eder (sayfa 12).",
+      "C": "I ve III prodromdur, ancak II aura belirtisi olduğu için seçeneğe girmemelidir ve IV eksik bırakılmıştır. Hemianopsi geçici görme alanı kaybıdır (sayfa 12).",
+      "D": "I, III ve IV prodrom belirtileridir ve hoca bu dönemde küçük şeylerden büyük olaylar çıkaran bir aşırı duyarlılık olduğunu anlatmıştır. II aura dönemine aittir (sayfa 12).",
+      "E": "Dört maddenin hepsini prodrom sayar. Hemianopsi aura döneminde ortaya çıkan, beyaz ışıklar ve kırık çizgiler görmeyle birlikte seyreden geçici bir nörolojik belirtidir (sayfa 12)."
+     },
+     "bilgi": [
+      66,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "1- Ağrı öncesi prodrom dönemi: aşırı duyarlılık, tepkisellik, öfori, hiperaktivite, durgunluk, dikkat azalması, kelime bulma güçlüğü, koku, ışık, sese karşı hassasiyet"
+     },
+     "s": 12,
+     "dayanak": [
+      "ozen:s12",
+      "not:s12"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2020-2021-q65",
+     "soru": "Tek taraflı, zonklayıcı baş ağrısı olan genç kız hastada baş ağrısına bulantı ve kusma eşlik ediyor. Fotofobi (+), fonofobi (+). Tanınız aşağıdakilerden hangisi olur?",
+     "secenekler": {
+      "A": "SAK",
+      "B": "Akut sinüzit",
+      "C": "Trigeminal otonomik baş ağrısı",
+      "D": "Aurasız migren",
+      "E": "Gerilim tipi baş ağrısı"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "048fe1e04f10",
+     "soru": "gisi sekonder başağrısı dürüstlükten öykü özelliklerinden biridir? fotofobi fonofobi aura uzun yıllardır sürmesi erkek cinsiyet erkek cin Nöroloji",
+     "secenekler": {
+      "A": "fotofobi",
+      "B": "fonofobi",
+      "C": "aura",
+      "D": "uzun yıllardır sürmesi",
+      "E": "erkek cinsiyet"
+     },
+     "cevap": null
+    },
+    {
+     "id": "q-2021final_230619_142600-3-r24",
+     "soru": "Anamnezinde aura öyküsü olan hastada ilk aklınıza gelen hastalık hangisidir?",
+     "secenekler": {
+      "A": "Epilepsi",
+      "B": "Trigeminal nevralji",
+      "C": "Migren",
+      "D": "MS",
+      "E": "Gerilim tipi baş ağrısı"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Migren patofizyolojisini (kanalopati, FHM genleri, kortikal yayılan depresyon, trigeminovasküler aktivasyon, CGRP) açıklar.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q36",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Familyal hemiplejik migrende (FHM) kalıtım biçimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Otozomal dominant",
+      "B": "Otozomal resesif",
+      "C": "X'e bağlı resesif",
+      "D": "X'e bağlı dominant",
+      "E": "Mitokondriyal kalıtım"
+     },
+     "dogru": "A",
+     "aciklama": "Migren poligeniktir; familyal hemiplejik migren (FHM) otozomal dominant kalıtılır ve hocanın \"bilin\" dediği genetik özellikler arasındadır (sayfa 13).",
+     "sik_aciklamalari": {
+      "A": "FHM'de tek bir ebeveynden gelen değişmiş gen hastalığı ortaya çıkarır; bu otozomal dominant kalıtımdır. İlgili genler iyon kanalı ve pompa proteinlerini kodlar (sayfa 13).",
+      "B": "Otozomal resesif kalıtımda hastalık için iki bozuk gen kopyası gerekir. FHM ise tek kopya ile ortaya çıkan otozomal dominant bir hastalıktır (sayfa 13).",
+      "C": "X'e bağlı resesif kalıtım erkeklerde daha belirgindir ve cinsiyetle ilişkilidir. FHM cinsiyet kromozomuna bağlı olmayan otozomal bir kalıtım gösterir (sayfa 13).",
+      "D": "X'e bağlı dominant kalıtım cinsiyet kromozomu üzerindeki bir gene bağlıdır. FHM'nin ilişkili genleri ise otozomal olarak kalıtılır (sayfa 13).",
+      "E": "Mitokondriyal kalıtım anneden geçen mitokondri DNA'sına dayanır. FHM'de sorumlu genler kalsiyum kanalı, Na-K ATPaz pompası ve sodyum kanalını kodlar ve otozomal dominant kalıtılır (sayfa 13)."
+     },
+     "bilgi": [
+      71
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Poligenik . FHM (familyal hemiplejik migren) OD."
+     },
+     "s": 13,
+     "dayanak": [
+      "hoca:hv-k2-10-75",
+      "ozen:s13"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q37",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Familyal hemiplejik migrende (FHM) aşağıdaki gen–ürün ikililerinden hangisi doğru verilmiştir?",
+     "secenekler": {
+      "A": "ATP1A2 geni: sodyum kanalı",
+      "B": "CACNA1A geni: kalsiyum kanalı",
+      "C": "SCN1A geni: Na-K ATPaz pompası",
+      "D": "CACNA1A geni: Na-K ATPaz pompası",
+      "E": "SCN1A geni: kalsiyum kanalı"
+     },
+     "dogru": "B",
+     "aciklama": "FHM ile ilişkili genler kalsiyum kanalı (CACNA1A), Na-K ATPaz pompası (ATP1A2) ve sodyum kanalı (SCN1A) genleridir; hoca bu genlerin bilinmesi gerektiğini vurgulamıştır (sayfa 13).",
+     "sik_aciklamalari": {
+      "A": "ATP1A2 geni sodyum kanalını değil, Na-K ATPaz pompasını kodlayan FHM genidir. Sodyum kanalı SCN1A geniyle ilişkilidir; bu seçenek iki geni birbirine karıştırmıştır (sayfa 13).",
+      "B": "CACNA1A geni voltaj bağımlı kalsiyum kanalını kodlar ve FHM ile ilişkili üç genden biridir. Migrenin kanalopati yani iyon kanalı hastalığı olarak tanımlanması bu gen değişikliklerine dayanır (sayfa 13).",
+      "C": "SCN1A geni Na-K ATPaz pompasını değil, sodyum kanalını kodlayan FHM genidir. Pompa ATP1A2 geniyle eşleşir; bu seçenekte ürünler karıştırılmıştır (sayfa 13).",
+      "D": "CACNA1A geni Na-K ATPaz pompasını değil, kalsiyum kanalını kodlayan FHM genidir. Pompanın geni ATP1A2'dir ve bu seçenekte gen ile ürünü yer değiştirmiştir (sayfa 13).",
+      "E": "SCN1A geni kalsiyum kanalını değil, sodyum kanalını kodlayan FHM genidir. Kalsiyum kanalı CACNA1A geniyle ilişkilidir; bu seçenek iki ürünü birbirine karıştırmıştır (sayfa 13)."
+     },
+     "bilgi": [
+      71,
+      72
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Ca kanalı \n(CACNA1a) Na-K ATPaz pompası (ATP1A2) Na kanalı (SCN1A)"
+     },
+     "s": 13,
+     "dayanak": [
+      "hoca:hv-k2-10-75",
+      "ozen:s13"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q38",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kortikal yayılan depresyon (CSD) aşağıdakilerden hangisinde doğru tanımlanmıştır?",
+     "secenekler": {
+      "A": "Kısa süreli nöronal uyarıma yol açan, 2–6 mm/dk hızla yayılan bir dalgadır.",
+      "B": "Uzun süreli nöronal inhibisyona yol açan, 2–6 cm/sn hızla yayılan bir dalgadır.",
+      "C": "Uzun süreli nöronal inhibisyona yol açan, 2–6 mm/dk hızla yayılan spike aktivite dalgasıdır.",
+      "D": "Talamustan kortekse ağrıyı taşıyan bir yoldur.",
+      "E": "Dural damarlardaki vazodilatasyonun kendisidir."
+     },
+     "dogru": "C",
+     "aciklama": "CSD, uzun süreli nöronal inhibisyona yol açan ve 2–6 mm/dk hızla yayılan spike aktivite dalgasıdır; 1944'te Leao tarafından tanımlanmıştır ve migren jeneratörü adı verilen bölgelerde oluşur (sayfa 13).",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek CSD'yi uyarıma yol açan bir dalga olarak tanımlar. Oysa CSD uzun süreli nöronal inhibisyon yapar; hız doğru, etki yanlış verilmiştir (sayfa 13).",
+      "B": "Etki doğru verilmiş, ancak hız cm/sn olarak yazılmıştır. CSD yavaş bir dalgadır ve hızı 2–6 mm/dk'dır; birim hatası vardır (sayfa 13).",
+      "C": "CSD önce kısa bir uyarılma, ardından uzun süreli nöronal baskılanma ile giden ve yavaş ilerleyen bir dalgadır. Migrendeki aura belirtilerinin temelini oluşturur (sayfa 13 ve 14).",
+      "D": "Ağrının talamusa taşınması ve oradan kortekse ulaşması ağrı döneminin yolunu anlatır. CSD ise kortekste yayılan bir aktivite dalgasıdır (sayfa 14).",
+      "E": "Vazodilatasyon, vazoaktif peptitler ve metalloproteinazların damarlarda yaptığı genişlemedir. CSD ise bu fazı başlatan, korteksteki dalgadır; ikisi aynı olay değildir (sayfa 14)."
+     },
+     "bilgi": [
+      74,
+      78,
+      82
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "CSD uzun süreli nöronal inhibisyona yolaçan, 2-6 mm/dk hızla yayılan spike aktivite dalgası"
+     },
+     "s": 13,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s13"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q39",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kortikal yayılan depresyonun (CSD) migrendeki klinik yansıması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prodrom",
+      "B": "Ağrı",
+      "C": "Postdrom",
+      "D": "Vazodilatasyon fazı",
+      "E": "Aura"
+     },
+     "dogru": "E",
+     "aciklama": "CSD'nin klinik yansıması auradır; CSD dalgasını bölgesel kan akımında azalma izler (sayfa 14). Ağrı ise trigeminovasküler sistemin aktivasyonuyla ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Prodrom ağrıdan önceki aşırı duyarlılık, öfori, durgunluk gibi belirtilerle ilgilidir. CSD'nin klinik yansıması değil, ağrı öncesi uyarı dönemidir (sayfa 12).",
+      "B": "Ağrı dönemi, CSD'nin trigeminovasküler sistemi aktive etmesinden sonra ortaya çıkar ve ağrının talamusa, sonra kortekse ulaşmasıyla yaşanır. Doğrudan CSD'nin yansıması aura olduğundan seçilmez (sayfa 14).",
+      "C": "Postdrom ağrıdan sonraki toparlanma evresidir ve kişi bir günde ancak kendini toparlar. CSD'nin klinik yansıması olan aura ağrıdan önce görüldüğünden postdrom CSD'nin karşılığı değildir (sayfa 12 ve 14).",
+      "D": "Vazodilatasyon fazı, vazoaktif peptitler ve metalloproteinazların damar genişlemesine yol açmasıdır. Klinikte hissedilen bir dönem değil, patofizyolojik bir evredir (sayfa 14).",
+      "E": "CSD'nin geçici nörolojik belirtilere yol açması aura olarak yaşanır: beyaz ışıklar, kırık çizgiler, hemianopsi, uyuşma ve konuşma bozukluğu. Bu ilişki patofizyolojiyi klinikle bağlar (sayfa 12 ve 14)."
+     },
+     "bilgi": [
+      79,
+      80,
+      82
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "CSD klinik yansıması aura."
+     },
+     "s": 14,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s14"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q40",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Trigeminovasküler sistem aktive olduğunda dural kan damarlarında enflamasyona ve nosiseptif nöronlarda ağrının uyarılmasına yol açan vazoaktif peptitler aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "CGRP, substance P ve metalloproteinaz",
+      "B": "CGRP, VIP ve 5-HT1B",
+      "C": "Substance P, VIP ve CACNA1A",
+      "D": "CGRP, substance P ve VIP",
+      "E": "CGRP, ATP1A2 ve SCN1A"
+     },
+     "dogru": "D",
+     "aciklama": "CSD trigeminovasküler sistemi aktive ettiğinde dural kan damarlarında enflamasyon olur; CGRP, substance P ve VIP gibi vazoaktif peptitler nosiseptif nöronlarda ağrıyı uyarır (sayfa 14).",
+     "sik_aciklamalari": {
+      "A": "CGRP ve substance P doğru peptitlerdir, ancak metalloproteinaz bir peptit değil, vazodilatasyona katkıda bulunan enzimdir. Üçüncü peptit VIP'tir (sayfa 14).",
+      "B": "CGRP ve VIP doğrudur, fakat 5-HT1B triptanların etki ettiği serotonin reseptörüdür ve ağrıyı uyaran bir peptit değildir. Üçüncü peptit substance P'dir (sayfa 14 ve 15).",
+      "C": "Substance P ve VIP doğrudur, ancak CACNA1A kalsiyum kanalını kodlayan bir gendir ve FHM ile ilişkilidir. Üçüncü peptit CGRP'dir (sayfa 13 ve 14).",
+      "D": "CGRP, substance P ve VIP trigeminal sinir uçlarından salınan vazoaktif nöropeptitlerdir. Damar genişlemesi ve ağrı iletimi böylece başlar; CGRP bu nedenle migren patofizyolojisinin temel öğesidir (sayfa 14).",
+      "E": "CGRP doğru bir peptittir; ATP1A2 ve SCN1A ise FHM'de değişen Na-K ATPaz pompası ve sodyum kanalı genleridir, peptit değildir. Eksik peptitler substance P ve VIP'tir (sayfa 13 ve 14)."
+     },
+     "bilgi": [
+      71,
+      81,
+      82
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "CGRP, substance -P , VIP"
+     },
+     "s": 14,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s14"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Migrenin atak ve profilaktik tedavisini (nonspesifik ilaçlar, ergo türevleri, triptanlar, antiemetik, beta bloker, topiramat, valproat, antidepresanlar) endikasyon ve sakıncalarıyla birlikte sıralar.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q41",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Migren atak tedavisinde kullanılan, 5-HT1B ve 5-HT1D reseptör agonisti ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Triptanlar",
+      "B": "Ergo türevleri",
+      "C": "Beta blokerler",
+      "D": "Nonsteroid antiinflamatuvar ilaçlar",
+      "E": "Antiemetikler"
+     },
+     "dogru": "A",
+     "aciklama": "Migrenin spesifik atak tedavisinde ergo türevleri ve triptanlar kullanılır; triptanlar 5-HT1B ve 5-HT1D reseptör agonistleridir (sayfa 15). Eletriptan, zolmitriptan, sumatriptan ve naratriptan bu gruptandır.",
+     "sik_aciklamalari": {
+      "A": "Triptanlar, serotonin reseptörlerinden 5-HT1B ve 5-HT1D'yi uyararak migren atağını sonlandırır. Eletriptan 40 mg, zolmitriptan 2,5 mg, naratriptan 2,5 mg ve subkutan sumatriptan bu grubun örnekleridir (sayfa 15 ve 16).",
+      "B": "Ergo türevleri migrenin diğer spesifik atak ilaçlarıdır, fakat uzun süre kullanımda damar daraltıcı risk taşır. Etki mekanizması 5-HT1B ve 5-HT1D agonizmi olarak tanımlanan grup triptanlardır (sayfa 15).",
+      "C": "Beta blokerler, örneğin propranolol, migren profilaksisinde kullanılan ilaçlardır ve atakları seyrekleştirir. Atağı sonlandırmak için verilmedikleri ve 5-HT1B-1D agonisti olmadıkları için bu tanıma uymazlar (sayfa 17).",
+      "D": "Nonsteroid antiinflamatuvar ilaçlar (naproksen, diklofenak, flurbiprofen) migren atağında nonspesifik ilaçlar olarak kullanılır. Reseptör agonisti olmadıkları için spesifik grup sayılmazlar (sayfa 15).",
+      "E": "Antiemetikler bulantı ve kusmayı azaltmak için triptan veya atak tedavisinden 20 dakika önce verilir. Başağrısını doğrudan gidermez ve reseptör agonisti değildirler (sayfa 16)."
+     },
+     "bilgi": [
+      84,
+      88,
+      89
+     ],
+     "benzer_cikmis": [
+      "past-1790877038133-633883"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "2- Triptanlar 5HT1B ve 1D reseptör agonisti"
+     },
+     "s": 15,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s16"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q45",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Migren atak tedavisinde triptan verilmeden ya da atak tedavisinden kaç dakika önce antiemetik verilmesi önerilir?",
+     "secenekler": {
+      "A": "5",
+      "B": "20",
+      "C": "60",
+      "D": "120",
+      "E": "240"
+     },
+     "dogru": "B",
+     "aciklama": "Atak tedavisinde triptan ya da atak tedavisinden 20 dakika önce antiemetik verilmelidir (sayfa 16). Böylece bulantı ve kusma azalır ve ilacın emilimi güvence altına alınır.",
+     "sik_aciklamalari": {
+      "A": "Beş dakika, antiemetiğin etkisinin başlaması için fazla kısa bir süredir ve slayttaki değerle uyuşmaz. Önerilen süre 20 dakikadır (sayfa 16).",
+      "B": "Antiemetik, atak tedavisi ilacından 20 dakika önce verilir; bulantı ve kusma baskılandığı için oral ilaç emilebilir ve hasta ilacı kusmaz. Slayt bu süreyi 20 dakika olarak verir (sayfa 16).",
+      "C": "Altmış dakika, antiemetiğin etkisinin başlaması için gereğinden uzun bir süredir ve atak tedavisini gereksiz yere geciktirir. Slayttaki öneri atak tedavisinden 20 dakika önce vermektir (sayfa 16).",
+      "D": "Yüz yirmi dakika atak tedavisi için çok uzun bir bekleme süresidir; ağrı bu sürede şiddetlenebilir. Sınavda sayısal çeldirici olarak kullanılır (sayfa 16).",
+      "E": "İki yüz kırk dakika (4 saat) antiemetik için anlamlı bir ön süre değildir. 4 saat migren ağrı döneminin alt sınırını anımsatan başka bir sayıdır (sayfa 11 ve 16)."
+     },
+     "bilgi": [
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "20 dk önce antiemetik verilmeli,"
+     },
+     "s": 16,
+     "dayanak": [
+      "ozen:s16"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q42",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Migrenin spesifik atak tedavisinde kullanılan ve uzun dönem kullanımda damar daraltıcı risk taşıyan ilaç grubu hangisidir?",
+     "secenekler": {
+      "A": "Parasetamol ve kafein kombinasyonu",
+      "B": "Ergo türevleri",
+      "C": "Naproksen",
+      "D": "Propranolol",
+      "E": "Topiramat"
+     },
+     "dogru": "B",
+     "aciklama": "Spesifik ilaçlardan ergo türevlerinin uzun süre kullanımında damar daraltıcı risk vardır (sayfa 15). Parasetamol+kafein ve naproksen nonspesifik atak ilaçlarıdır; propranolol ve topiramat profilaksi ilaçlarıdır.",
+     "sik_aciklamalari": {
+      "A": "Parasetamol ile kafein kombinasyonu nonspesifik atak tedavisinde 500–1000 mg dozunda kullanılan basit bir analjezik birleşimidir. Damar daraltıcı risk bu kombinasyonla ilişkilendirilmez (sayfa 15).",
+      "B": "Ergo türevleri vazokonstriktör etkili spesifik migren ilaçlarıdır. Uzun süre kullanımda damar daraltıcı risk bulunması, vasküler risk taşıyan hastalarda dikkat gerektirir (sayfa 15 ve 16).",
+      "C": "Naproksen 550–1000 mg dozunda kullanılan nonspesifik bir NSAİİ'dir ve atak tedavisinde yer alır. Damar daraltıcı risk bu ilacın bir özelliği olarak anılmaz (sayfa 15).",
+      "D": "Propranolol migren profilaksisinde kullanılan bir beta blokerdir. Atak tedavisi ilacı olmadığı gibi uzun kullanımda damar daraltıcı risk taşıyan grup olarak da geçmez (sayfa 17).",
+      "E": "Topiramat migren profilaksisinde kullanılan bir antiepileptiktir. Spesifik atak ilacı olmadığı için damar daraltıcı risk ile birlikte anılan grupta yer almaz (sayfa 17)."
+     },
+     "bilgi": [
+      87
+     ],
+     "benzer_cikmis": [
+      "past-1790877038133-633883"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "B) Spesifik İlaçlar : 1- Ergo deriveleri, uzun süre kullanımında damar daraltıcı risk"
+     },
+     "s": 15,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s16"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q43",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Hemiplejik migren, uzamış auralı migren ve bazilar migrende kullanılmaması gereken ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Antiemetikler",
+      "B": "Beta blokerler",
+      "C": "Antiepileptikler",
+      "D": "Vazokonstriktör ilaçlar",
+      "E": "Antidepresanlar"
+     },
+     "dogru": "D",
+     "aciklama": "Hemiplejik migren, uzamış auralı migren ve bazilar migrende vazokonstriktör ilaçlar kullanılmamalıdır (sayfa 16). Çünkü aura döneminde bölgesel kan akımı azalmıştır ve damar daraltıcılar bu durumu ağırlaştırabilir.",
+     "sik_aciklamalari": {
+      "A": "Antiemetikler bulantı-kusmayı azaltır ve triptan ya da atak tedavisinden 20 dakika önce verilmeleri önerilir. Bu migren tiplerinde yasak olan bir grup değildir (sayfa 16).",
+      "B": "Beta blokerler, örneğin propranolol, migren profilaksisinde kullanılır ve damar daraltıcı grupta yer almaz. Bu migren tiplerinde kullanımı slayt tarafından yasaklanmamıştır (sayfa 17).",
+      "C": "Antiepileptikler, topiramat ve valproat gibi, migren profilaksisinde kullanılan ilaçlardır. Vazokonstriktör etkileri bulunmadığından bu migren tiplerinde kullanımları slayt tarafından yasaklanmamıştır (sayfa 17).",
+      "D": "Vazokonstriktör ilaçlar (ergo türevleri ve triptanlar) damarları daraltır. Bu migren tiplerinde iskemik komplikasyon riski artacağı için kullanılmamaları gerekir (sayfa 15 ve 16).",
+      "E": "Antidepresanlar, amitriptilin ve venlafaksin gibi, migren profilaksisinde kullanılan ilaçlardır. Damar daraltıcı etkileri bulunmadığından bu migren tiplerinde kullanımları sınırlanmaz (sayfa 17)."
+     },
+     "bilgi": [
+      91
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Hemiplejik migren,uzamış auralı migren, \nbasiler migrende vasokonstrüktör ilaçlar \nkullanılmamalı."
+     },
+     "s": 16,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s16",
+      "not:s16"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q44",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "26 yaşında kadın hasta aurasız migren tanısıyla izlenmektedir. Günde bir paket sigara içmekte ve oral kontraseptif kullanmaktadır. Bu hastada artmış olan risk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Epileptik nöbet",
+      "B": "Küme başağrısı",
+      "C": "İnme",
+      "D": "Gerilim tipi başağrısı",
+      "E": "İlaç aşırı kullanım başağrısı"
+     },
+     "dogru": "C",
+     "aciklama": "Sigara, OK, obezite ve kadın cinsiyet migrenli hastada inme riskini artırır; hoca migren, sigara ve oral kontraseptifin birlikte olduğunda inme riskinin kat kat arttığını söylemiş ve sigaradan uzak durulmasını önermiştir. Aynı sayfada hemiplejik migren, uzamış auralı migren ve bazilar migrende vazokonstriktör ilaçların kullanılmaması da belirtilir (sayfa 16).",
+     "sik_aciklamalari": {
+      "A": "Epileptik nöbet sekonder başağrısı düşündüren muayene bulgularından biridir. Sigara ve oral kontraseptifin migrendeki asıl artırdığı risk ise inmedir (sayfa 9 ve 16).",
+      "B": "Küme başağrısı erkeklerde fazla görülen, gece uykudan uyandıran trigeminal otonomik bir başağrısıdır. Sigara ve oral kontraseptif ile ilişkisi slaytta migrendeki inme riski olarak verilir (sayfa 16 ve 22).",
+      "C": "Migrenli kadında sigara ve oral kontraseptif birleştiğinde inme riski belirgin biçimde artar. Bu nedenle bu hastalara sigara bırakılması ve oral kontraseptiflerden kaçınılması önerilir (sayfa 16).",
+      "D": "Gerilim tipi başağrısı en sık görülen primer başağrısıdır ve sigara-oral kontraseptif ile birlikte anılan bir risk olarak verilmez. Burada vurgulanan ciddi komplikasyon inmedir (sayfa 16 ve 18).",
+      "E": "İlaç aşırı kullanım başağrısı analjeziklerin 10 günden fazla kullanımına bağlıdır. Sigara ve oral kontraseptif kullanımıyla ilişkilendirilen risk ise inmedir (sayfa 16 ve 26)."
+     },
+     "bilgi": [
+      92
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Sigara, OK, obesite, kadın , inme riskini +"
+     },
+     "s": 16,
+     "dayanak": [
+      "hoca:hv-k2-10-41",
+      "hoca:hv-k2-10-43",
+      "ozen:s16"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q46",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi migrende profilaktik tedavi endikasyonu değildir?",
+     "secenekler": {
+      "A": "Ayda 3'ten fazla atak",
+      "B": "Komplike atak",
+      "C": "Uzamış atak",
+      "D": "Hasta tarafından dayanılmaz bulunan atak",
+      "E": "Yılda iki kez gelen hafif ataklar"
+     },
+     "dogru": "E",
+     "aciklama": "Migren profilaksisi ayda 3'ten fazla atak, komplike atak, uzamış atak ya da hasta tarafından dayanılmaz bulunan atak varlığında düşünülür (sayfa 17). Yılda iki kez gelen hafif atak bu ölçütlerden hiçbirini karşılamaz.",
+     "sik_aciklamalari": {
+      "A": "Ayda 3'ten fazla atak geçirilmesi profilaktik tedavi endikasyonudur ve slaytta ilk madde olarak verilir. Bu yüzden endikasyon değil seçeneği değildir (sayfa 17).",
+      "B": "Komplike atak, örneğin konuşma ya da görme kaybıyla giden atak, profilaktik tedavi endikasyonudur. Slayttaki ikinci maddedir ve bu seçenek ölçütü karşıladığından olumsuz kökte aranan yanıt değildir (sayfa 17).",
+      "C": "Uzamış atak profilaksi için endikasyondur; süresi nedeniyle hastanın yaşamını ciddi biçimde etkiler. Slayttaki üçüncü madde kapsamında olduğundan olumsuz kökte aranan yanıt olamaz (sayfa 17).",
+      "D": "Hasta tarafından dayanılmaz bulunan atakların varlığı profilaktik tedavi endikasyonudur. Hastanın yaşam kalitesini bozduğu için slaytta ölçüt olarak sayılmıştır (sayfa 17).",
+      "E": "Profilaksi, atakların sık, komplike ya da dayanılmaz olduğu durumlarda başlanan sürekli bir tedavidir. Yılda iki hafif atak için günlük ilaç gerekmez; atak tedavisi yeterlidir (sayfa 17)."
+     },
+     "bilgi": [
+      93,
+      94,
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Ayda 3’den fazla atak"
+     },
+     "s": 17,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s17",
+      "not:s17"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q47",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi migren profilaksisinde kullanılan antidepresanlardan biridir?",
+     "secenekler": {
+      "A": "Amitriptilin",
+      "B": "Propranolol",
+      "C": "Topiramat",
+      "D": "Valproat",
+      "E": "Eletriptan"
+     },
+     "dogru": "A",
+     "aciklama": "Migren profilaksisinde beta bloker olarak propranolol, antiepileptik olarak topiramat ve valproat, antidepresan olarak amitriptilin ve venlafaksin kullanılır (sayfa 17). Eletriptan ise atak tedavisinde kullanılan bir triptandır.",
+     "sik_aciklamalari": {
+      "A": "Amitriptilin migren profilaksisinde kullanılan bir antidepresandır; gerilim tipi başağrısı profilaksisinde de birinci seçenektir. Venlafaksin ise migrenin diğer antidepresanıdır (sayfa 17 ve 20).",
+      "B": "Propranolol bir beta blokerdir ve migren profilaksisinde kullanılır. Antidepresan sınıfında olmadığı için bu soruda aranan yanıt değildir; antidepresanlar amitriptilin ve venlafaksindir (sayfa 17).",
+      "C": "Topiramat migren profilaksisinde kullanılan, SUNCT tedavisinde de yer alan bir antiepileptiktir. Antidepresan grubuna girmediğinden bu soruda aranan yanıt değildir (sayfa 17 ve 24).",
+      "D": "Valproat migren profilaksisinde kullanılan, SUNCT'ta da işe yarayan bir antiepileptiktir. Antidepresan sınıfında olmadığından bu soruda aranan yanıt değildir (sayfa 17 ve 24).",
+      "E": "Eletriptan 40 mg dozunda kullanılan bir triptandır ve atak tedavisinde yer alır. Profilaksi ilacı olmadığı gibi antidepresan da değildir (sayfa 16)."
+     },
+     "bilgi": [
+      96,
+      97,
+      98,
+      99
+     ],
+     "benzer_cikmis": [
+      "past-1790877038133-633883"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Topiramat Valproat Amitriptilin Venlafaksin"
+     },
+     "s": 17,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s17",
+      "not:s17"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q48",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Ramazan ayında oruç tutmayı planlayan migrenli bir hastaya beslenme açısından aşağıdakilerden hangisi önerilir?",
+     "secenekler": {
+      "A": "Oruç tutup atak olursa triptan almadan beklemesi",
+      "B": "Oruç tutarken günde tek öğün yemesi",
+      "C": "Aç kalmaması gerektiğinden oruç tutmaması",
+      "D": "Orucu yalnız hafta sonu tutması",
+      "E": "Oruç sırasında antiemetik kullanarak ağrıyı önlemesi"
+     },
+     "dogru": "C",
+     "aciklama": "Migrenli hastada yaşam tarzı önlemleri diyet, beslenme, uyku ve sporu kapsar; beslenme düzeni önemlidir ve aç kalmamak gerekir. Hoca bu yüzden migrenli hastalara Ramazan'da oruç tutmamalarını önerdiğini belirtmiştir; profilaktik tedavide ise propranolol, topiramat, valproat, amitriptilin ve venlafaksin kullanılır (sayfa 17).",
+     "sik_aciklamalari": {
+      "A": "Oruç sırasında atağı triptan almadan beklemek açlığın ataklarını tetikleme riskini ortadan kaldırmaz ve beslenme önerisine aykırıdır. Slayt aç kalmamayı hedefler (sayfa 16 ve 17).",
+      "B": "Günde tek öğün yemek aç kalma süresini uzatır ve beslenme düzenini bozar. Migrenli hastada düzenli beslenme önerildiği için bu yaklaşım uygun değildir (sayfa 17).",
+      "C": "Açlık migren ataklarını tetikleyebilir. Bu nedenle diyet, beslenme, uyku ve spor önerileri içinde düzenli beslenme önemlidir ve oruç tutmamak önerilir (sayfa 17).",
+      "D": "Orucu yalnız hafta sonu tutmak aç kalma sorununu ortadan kaldırmaz; açlık yine migren tetikleyicisi olabilir. Önerilen yaklaşım aç kalınmamasıdır (sayfa 17).",
+      "E": "Antiemetik bulantıyı azaltır ve atak tedavisinden 20 dakika önce verilir; açlığın tetiklediği migreni önlemez. Beslenme düzeni ilaçla yerine konamaz (sayfa 16 ve 17)."
+     },
+     "bilgi": [
+      100,
+      101
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Diyet, beslenme, uyku, spor"
+     },
+     "s": 17,
+     "dayanak": [
+      "hoca:hv-k2-10-47",
+      "ozen:s17",
+      "not:s17"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q49",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangileri migrenli hastada inme riskini artırır?\nI. Sigara kullanımı\nII. Oral kontraseptif kullanımı\nIII. Obezite\nIV. Erkek cinsiyet",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Migrenli hastada sigara, oral kontraseptif, obezite ve kadın cinsiyet inme riskini artırır (sayfa 16). Slayt cinsiyet olarak kadını belirtir, erkek cinsiyeti değil.",
+     "sik_aciklamalari": {
+      "A": "I ve II sigara ile oral kontraseptiftir ve doğru risk faktörleridir. Ancak obezite de inme riskini artırır ve bu seçenekte eksik bırakılmıştır; bu nedenle üçlü bütün risk faktörlerini kapsamaz (sayfa 16).",
+      "B": "II doğru bir risk faktörüdür, fakat IV erkek cinsiyeti verir; slayt kadın cinsiyeti risk faktörü sayar. Bu ikili I ve III'ü içermez (sayfa 16).",
+      "C": "Sigara, oral kontraseptif ve obezite slayttaki inme riskini artıran üç faktördür; dördüncü faktör kadın cinsiyettir. IV erkek cinsiyeti verdiği için doğru üçlü I, II ve III'tür (sayfa 16).",
+      "D": "I ve III doğrudur, fakat II oral kontraseptif de risk faktörüdür ve burada atlanmıştır. IV erkek cinsiyettir ve yanlıştır; slayttaki risk faktörü kadın cinsiyettir (sayfa 16).",
+      "E": "Dört maddenin hepsini risk faktörü sayar. IV erkek cinsiyettir; slayttaki dördüncü risk faktörü kadın cinsiyettir, bu nedenle bütün maddeleri doğru kabul etmek yanlıştır (sayfa 16)."
+     },
+     "bilgi": [
+      92
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Sigara, OK, obesite, kadın , inme riskini +"
+     },
+     "s": 16,
+     "dayanak": [
+      "hoca:hv-k2-10-41",
+      "hoca:hv-k2-10-43"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q50",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Migrenli hastaya yönelik yaşam tarzı önerileri olarak aşağıdakilerden hangileri doğrudur?\nI. Aç kalınmaması\nII. Düzenli uyku\nIII. Spor yapılması\nIV. Sigara içilmesi",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Migrende yaşam tarzı önlemleri diyet, beslenme, uyku ve sporu kapsar ve aç kalmamak gerekir (sayfa 17). Sigara ise migrenli hastada inme riskini artırdığından uzak durulması gereken bir etkendir (sayfa 16).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur: aç kalmamak ve düzenli uyku önerilir. Ancak spor da yaşam tarzı önlemleri arasında sayılır ve bu seçenekte eksik bırakılmıştır (sayfa 17).",
+      "B": "II doğrudur, çünkü düzenli uyku önerilir. IV sigarayı öneri sayar; oysa migrenli hastada sigara inme riskini artırır ve hoca sigaradan uzak durulmasını söylemiştir (sayfa 16 ve 17).",
+      "C": "Aç kalmamak, düzenli uyumak ve spor yapmak slayttaki yaşam tarzı önlemleridir. Hoca sigaradan uzak durulması gerektiğini söylediği için IV yanlıştır (sayfa 16 ve 17).",
+      "D": "I ve III doğrudur, fakat II düzenli uyku da öneridir ve atlanmıştır. IV sigaradır; sigara önerilmez, tersine kaçınılması gereken bir risk faktörüdür (sayfa 16 ve 17).",
+      "E": "Dört maddenin hepsini öneri sayar. IV sigara kullanımıdır ve migrenli hastada inme riskini artırdığından önerilmez; bu nedenle bütün maddeleri doğru kabul etmek yanlıştır (sayfa 16 ve 17)."
+     },
+     "bilgi": [
+      92,
+      100,
+      101,
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Diyet, beslenme, uyku, spor"
+     },
+     "s": 17,
+     "dayanak": [
+      "hoca:hv-k2-10-47",
+      "hoca:hv-k2-10-41",
+      "ozen:s17"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877038133-633883",
+     "soru": "Migren, birkaç saatten 1-2 güne kadar uzayabilen tek taraflı, zonklayıcı tipte bir baş ağrısı ile karakterizedir; bulantı, kusma, görsel skotomlar, hemianopsi ve konuşma bozukluğu gibi belirtiler de eşlik edebilir. Migrende kullanılan ilaçların etki mekanizmaları, migren patofizyolojisinin karmaşık olması nedeniyle tam olarak bilinmemektedir. Sumatriptan gibi triptanlar neredeyse yalnızca migren baş ağrısı için kullanılır ve akut şiddetli migren ataklarında günümüzde ilk seçenekler arasındadır.\nI. NSAİİ ve ergot alkaloidleri\nII. Beta adrenoseptör blokörleri\nIII. Kalsiyum kanal blokörleri ve SSRİ'ler\nIV. Trisiklik antidepresanlar (TCA) ve antikonvülzanlar\nAşağıda verilen ilaçlardan hangisi ya da hangileri migren tedavisinde kullanılabilir?",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "I, II ve III",
+      "C": "I, II, III ve IV",
+      "D": "II ve IV",
+      "E": "Yalnız IV"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Gerilim tipi başağrısını klinik özellikleri, mekanizması ve tedavisiyle migrenden ayırır.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q51",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "En sık görülen primer başağrısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Migren",
+      "B": "Küme başağrısı",
+      "C": "Paroksismal hemikranya",
+      "D": "Gerilim tipi başağrısı",
+      "E": "SUNCT"
+     },
+     "dogru": "D",
+     "aciklama": "Gerilim tipi başağrısı en sık görülen primer başağrısıdır ve epizodik ya da kronik seyredebilir (sayfa 18). Migren hekime en çok başvurulan başağrısıdır, ancak sıklıkta gerilim tipi ilk sıradadır.",
+     "sik_aciklamalari": {
+      "A": "Migren doktora en fazla başvuru nedeni olan başağrısıdır ve kadınlarda %20 sıklıktadır. En sık görülen primer başağrısı unvanı ise gerilim tipine aittir (sayfa 11 ve 18).",
+      "B": "Küme başağrısı erkeklerde fazla görülen, günde 1–8 kez tekrarlayan şiddetli bir trigeminal otonomik başağrısıdır. Sıklığı gerilim tipi ve migrene göre çok daha düşüktür (sayfa 22).",
+      "C": "Paroksismal hemikranya 2–30 dakika süren, kadınlarda sık görülen ve indometazine yanıtlı nadir bir trigeminal otonomik başağrısıdır. En sık primer başağrısı olarak anılmaz (sayfa 23).",
+      "D": "Gerilim tipi başağrısı en sık görülen primer başağrısıdır; iki taraflı, künt ya da sıkıştırıcı ve hafif-orta şiddettedir. Günlük aktiviteyi engellemediği için hastalar çoğu zaman hekime başvurmaz (sayfa 18).",
+      "E": "SUNCT 5–240 saniye süren, elektrik çarpması gibi ağrılarla giden ve antiepileptiklerden yarar gören nadir bir başağrısıdır. Sıklığı gerilim tipinden çok düşüktür (sayfa 24)."
+     },
+     "bilgi": [
+      103
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "En sık görülen primer başağrısı, epizodik ya da kr"
+     },
+     "s": 18,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q52",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi gerilim tipi başağrısının özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Bulantı ve kusmanın eşlik etmesi",
+      "B": "İki taraflı yerleşim",
+      "C": "Künt ya da sıkıştırıcı karakter",
+      "D": "Hafif ya da orta şiddette olması",
+      "E": "Günlük aktiviteyi engellememesi"
+     },
+     "dogru": "A",
+     "aciklama": "Gerilim tipi başağrısı iki taraflı, künt ya da sıkıştırıcı, hafif-orta şiddette bir ağrıdır; günlük aktiviteyi engellemez ve bulantı-kusma olmaz. Fotofobi ya da fonofobi eşlik edebilir (sayfa 18).",
+     "sik_aciklamalari": {
+      "A": "Bulantı ve kusma migrene özgü eşlik eden belirtilerdir; gerilim tipi başağrısında bulantı ve kusma olmaz. Bu fark iki başağrısını klinikte ayırmaya yardım eder (sayfa 11 ve 18).",
+      "B": "İki taraflı yerleşim gerilim tipi başağrısının özelliğidir; ağrı oksipital ya da frontal bölgede iki yanlı hissedilir. Migrende ise tek taraflılık tipiktir (sayfa 18).",
+      "C": "Künt ya da sıkıştırıcı karakter gerilim tipi başağrısının tipik niteliğidir ve hoca \"taş var, yük var\" gibi tarif edildiğini anlatmıştır. Zonklayıcı migren ağrısından ayrılır (sayfa 18).",
+      "D": "Ağrı hafif ya da orta şiddettedir; bu özellik gerilim tipi başağrısının gerçek bir özelliğidir. Migrenin orta-şiddetli seyrinden farklı olarak hastayı günlük işlerinden alıkoymaz (sayfa 11 ve 18).",
+      "E": "Gerilim tipi başağrısı günlük aktiviteyi engellemez; migrende ise ağrı fiziksel aktiviteden etkilenir. İfade gerilim tipinin gerçek bir özelliği olduğundan olumsuz kökte aranan yanıt değildir (sayfa 11 ve 18)."
+     },
+     "bilgi": [
+      104,
+      105,
+      106,
+      107,
+      108
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Günlük aktiviteyi engellemez Bulantı, kusma olmaz"
+     },
+     "s": 18,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s18",
+      "not:s18"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q53",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gerilim tipi başağrısını migrenden ayırmada aşağıdaki özelliklerden hangisi yardımcıdır?",
+     "secenekler": {
+      "A": "Tek taraflı yerleşim",
+      "B": "Günlük aktiviteyi engellememesi",
+      "C": "Zonklayıcı karakter",
+      "D": "Fiziksel aktiviteyle artış",
+      "E": "Fotofobinin eşlik edebilmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Gerilim tipi başağrısı günlük aktiviteyi engellemez, migren ağrısı ise fiziksel aktiviteden etkilenir (sayfa 11 ve 18). Tek taraflılık, zonklayıcı niteliği ve fiziksel aktiviteyle artış migren özelliğidir; fotofobi ise ikisinde de eşlik edebilir.",
+     "sik_aciklamalari": {
+      "A": "Tek taraflı yerleşim migrenin tipik özelliğidir. Gerilim tipi başağrısı ise iki taraflı olduğundan bu özellik migreni gösterir, gerilim tipini değil (sayfa 11 ve 18).",
+      "B": "Gerilim tipi başağrısı hafif-orta şiddettedir ve hastayı günlük işlerinden alıkoymaz. Migrende ise ağrı fiziksel aktiviteyle artar; bu ölçüt iki başağrısını ayırmaya yarar (sayfa 11 ve 18).",
+      "C": "Zonklayıcı karakter migrenin dört tipik özelliğinden biridir ve ağrıyı gerilim tipi başağrısından ayırır. Gerilim tipinde ağrı künt ya da sıkıştırıcı olduğundan bu özellik migreni gösterir (sayfa 11 ve 18).",
+      "D": "Fiziksel aktiviteyle artış migrenin tipik özelliğidir. Gerilim tipi başağrısı günlük aktiviteyi engellemediği için bu özelliği taşımaz (sayfa 11 ve 18).",
+      "E": "Fotofobi ve fonofobi hem migrende hem gerilim tipinde eşlik edebildiğinden iki ağrıyı ayırmada güvenilir bir ölçüt değildir. Ayırt edici özellik bulantı-kusma ve aktivite etkilenmesidir (sayfa 11 ve 18)."
+     },
+     "bilgi": [
+      62,
+      63,
+      106,
+      107,
+      108
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Günlük aktiviteyi engellemez Bulantı, kusma olmaz"
+     },
+     "s": 18,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s18"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q54",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi gerilim tipi başağrısının patofizyolojisinde rol oynayan mekanizmalardan biridir?",
+     "secenekler": {
+      "A": "Kortikal yayılan depresyon",
+      "B": "Kalsiyum kanalı gen değişikliği",
+      "C": "Trigeminovasküler aktivasyonla vazodilatasyon",
+      "D": "Analjeziklerin 10 günden fazla kullanımı",
+      "E": "Myofasiyal tetik noktalar"
+     },
+     "dogru": "E",
+     "aciklama": "Gerilim tipi başağrısında patofizyolojik mekanizmalar tam açık değildir; myofasiyal tetik noktalar, bozulmuş periferik ve santral sensitizasyon ve SSS ağrı modülasyonunun bozulması rol oynar (sayfa 19).",
+     "sik_aciklamalari": {
+      "A": "Kortikal yayılan depresyon migrendeki aurayı açıklayan, 2–6 mm/dk hızla yayılan bir dalgadır. Gerilim tipi başağrısının mekanizması olarak sayılmaz (sayfa 13 ve 19).",
+      "B": "Kalsiyum kanalı gen değişikliği (CACNA1A) familyal hemiplejik migrende saptanan genetik bir değişikliktir. Gerilim tipi başağrısının mekanizması olarak sayılmaz; o tabloda tetik noktalar ve sensitizasyon öne çıkar (sayfa 13 ve 19).",
+      "C": "Trigeminovasküler aktivasyon ve vazodilatasyon fazı migrenin ağrı döneminin mekanizmasıdır ve CGRP gibi peptitlere dayanır. Gerilim tipi başağrısı için böyle bir mekanizma tanımlanmamıştır (sayfa 14 ve 19).",
+      "D": "Analjeziklerin 10 günden fazla kullanımı ilaç aşırı kullanım başağrısının nedenidir. Gerilim tipi başağrısı mekanizması olarak sayılmaz, fakat ilaç aşırı kullanımı profilaksi endikasyonudur (sayfa 19 ve 26).",
+      "E": "Myofasiyal tetik noktalar kas dokusunda ağrıya duyarlı bölgelerdir ve gerilim tipi başağrısına katkıda bulunur. Santral ve periferik sensitizasyon ile ağrı modülasyonunun bozulması bu tabloyu tamamlar (sayfa 19)."
+     },
+     "bilgi": [
+      109,
+      110
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Myofasiyal tetik noktalar, bozulmuş periferik ve santral \nsensitizasyon"
+     },
+     "s": 19,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s19"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q55",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gerilim tipi başağrısında profilaktik tedavi endikasyonlarından biri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ayda bir kez atak geçirilmesi",
+      "B": "Ağrının 30 dakikadan kısa sürmesi",
+      "C": "Günlük yaşam aktivitelerinin etkilenmemesi",
+      "D": "Yalnız hafif şiddette ağrı olması",
+      "E": "Haftada iki günden sık ağrı olması"
+     },
+     "dogru": "E",
+     "aciklama": "Gerilim tipi başağrısında profilaktik tedavi ağrının haftada iki günden sık olması, 4 saatten uzun sürmesi, günlük yaşam aktivitelerini kısıtlaması ya da ilaç aşırı kullanımı varlığında düşünülür (sayfa 19).",
+     "sik_aciklamalari": {
+      "A": "Ayda bir atak seyrek bir tablodur ve profilaksi gerektirmez. Slayttaki ölçüt haftada iki günden sık ağrıdır; bu sıklık kronikleşme eğilimini gösterir (sayfa 19).",
+      "B": "Ağrının 30 dakikadan kısa sürmesi profilaksi ölçütü değildir; slayttaki ölçüt 4 saatten uzun süren ağrıdır. Kısa süre profilaksi gereksinimini azaltır (sayfa 19).",
+      "C": "Günlük yaşam aktivitelerinin etkilenmemesi profilaksiyi gerektirmeyen durumdur. Endikasyon, günlük yaşam aktivitelerini kısıtlayan ağrıdır; etkilenme yoksa atak tedavisi yeterli olur (sayfa 19).",
+      "D": "Yalnız hafif şiddette ağrı olması tek başına profilaksi nedeni değildir. Ölçütler sıklık, süre, yaşam etkisi ve ilaç aşırı kullanımıdır (sayfa 19).",
+      "E": "Haftada iki günden sık tekrarlayan ağrı kronikleşme eğilimini ve sık analjezik kullanımı gösterir. Bu yüzden atak tedavisi yerine sürekli profilaksi önerilir (sayfa 19)."
+     },
+     "bilgi": [
+      112
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Haftada iki günden sık"
+     },
+     "s": 19,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s19"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q56",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Gerilim tipi başağrısı profilaksisinde birinci seçenek olarak kullanılan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mirtazapin",
+      "B": "Venlafaksin",
+      "C": "Klomipramin",
+      "D": "Amitriptilin",
+      "E": "Maprotilin"
+     },
+     "dogru": "D",
+     "aciklama": "Gerilim tipi başağrısı profilaksisinde birinci seçenek amitriptilin, ikinci seçenek mirtazapin ve venlafaksin, üçüncü seçenek klomipramin ve maprotilindir (sayfa 20).",
+     "sik_aciklamalari": {
+      "A": "Mirtazapin ikinci seçenek antidepresanlardan biridir ve venlafaksinle birlikte sayılır. İlk basamak olarak amitriptilin verilir, yanıt yetersizse mirtazapin düşünülür; bu yüzden birinci seçenek değildir (sayfa 20).",
+      "B": "Venlafaksin ikinci seçenek ilaçtır ve migren profilaksisinde de kullanılır. İlk basamakta değil, amitriptiline yanıt alınamadığında tercih edilir (sayfa 17 ve 20).",
+      "C": "Klomipramin üçüncü seçenek antidepresandır ve maprotilinle birlikte listelenir. İlk iki seçenekle yanıt alınamadığında sıra ona gelir; bu yüzden birinci seçenek değildir (sayfa 20).",
+      "D": "Amitriptilin, trisiklik bir antidepresandır ve gerilim tipi başağrısı profilaksisinde ilk basamak ilaçtır. Aynı ilaç migren profilaksisinde de kullanılır (sayfa 17 ve 20).",
+      "E": "Maprotilin de üçüncü seçenek antidepresandır ve klomipraminle birlikte listelenir. İlk iki seçenek yetersiz kaldığında tercih edildiğinden birinci seçenek olarak verilmez (sayfa 20)."
+     },
+     "bilgi": [
+      113
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "1. seçenek amitriptilin 2. seçenek mirtazapin, venlafaksin"
+     },
+     "s": 20,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s20"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Trigeminootonomik başağrılarını (küme, paroksismal hemikranya, SUNCT, hemikrania kontünia) süre, sıklık, yerleşim ve tedavi yönünden birbirinden ayırır.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q58",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Küme başağrısı atağında uygulanan tedavi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İndometazin, 3 × 25 mg",
+      "B": "5–8 lt/dk oksijen, 15–20 dakika",
+      "C": "Lamotrijin",
+      "D": "Topiramat",
+      "E": "Amitriptilin"
+     },
+     "dogru": "B",
+     "aciklama": "Küme başağrısı atağında 5–8 lt/dk oksijen 15–20 dakika uygulanır; ergo türevleri ve triptanlar diğer seçeneklerdir (sayfa 22). İndometazin paroksismal hemikranya ve hemikrania kontünia, lamotrijin ve topiramat SUNCT için kullanılır.",
+     "sik_aciklamalari": {
+      "A": "İndometazin paroksismal hemikranyada 3 günde tam kontrol sağlayan ilaçtır ve doz 3 × 25 mg'dır. Küme başağrısı atağında birinci tercih değildir (sayfa 23).",
+      "B": "Oksijen küme başağrısı atağında kısa sürede ağrıyı gidermeye yarayan temel atak tedavisidir. 5–8 lt/dk akımla 15–20 dakika verilir (sayfa 22).",
+      "C": "Lamotrijin SUNCT tedavisinde yarar gören antiepileptiklerden biridir ve kısa süreli ataklarda tercih edilir. Küme başağrısı atağı için slaytta önerilen tedavi oksijendir (sayfa 22 ve 24).",
+      "D": "Topiramat SUNCT tedavisinde ve migren profilaksisinde kullanılan bir antiepileptiktir. Küme başağrısı atağında oksijen kadar hızlı etkili olarak sayılmaz (sayfa 17 ve 24).",
+      "E": "Amitriptilin migren ve gerilim tipi profilaksisinde, ayrıca ilaç aşırı kullanım başağrısında köprü tedavide kullanılır. Küme başağrısı atağı için bu amaçla önerilmez (sayfa 20 ve 26)."
+     },
+     "bilgi": [
+      122,
+      123
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "5-8 lt/dk Oksijen tedavisi 15-20 dk atak için"
+     },
+     "s": 22,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s22",
+      "not:s22"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q57",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "32 yaşında erkek hasta son iki haftadır her gece aynı saatlerde uykudan uyandıran, sağ gözün çevresinde oyucu ve batıcı tarzda çok şiddetli bir başağrısı tarif etmektedir. Ağrı yaklaşık bir saat sürmekte; ağrı sırasında sağ gözde kızarma ve yaşarma, sağ burunda akıntı ve sağ göz kapağında düşüklük saptanmaktadır. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Paroksismal hemikranya",
+      "B": "SUNCT",
+      "C": "Küme başağrısı",
+      "D": "Hemikrania kontünia",
+      "E": "Migren"
+     },
+     "dogru": "C",
+     "aciklama": "Günde 1–8 kez tekrarlayan, sıklıkla geceleri uykudan uyandıran, oyucu-batıcı, 15–180 dakika süren ve aynı taraf (ipsilateral) gözde kızarma-yaşarma, ptoz, burunda akıntı ile giden en şiddetli başağrısı küme başağrısıdır; erkeklerde fazladır (sayfa 22).",
+     "sik_aciklamalari": {
+      "A": "Paroksismal hemikranya benzer otonom bulgularla seyreder ancak ataklar 2–30 dakika sürer ve günde 5–20 kez tekrarlar. Bir saat süren atak bu tanıya uymaz (sayfa 23).",
+      "B": "SUNCT 5–240 saniye süren elektrik çarpması gibi çok kısa ağrı atakları yapar. Bir saatlik ağrı süresi SUNCT için fazla uzundur (sayfa 24).",
+      "C": "Küme başağrısı gece uyandıran, tek taraflı periorbital çok şiddetli ağrıyı otonom bulgularla birleştirir. Erkek hastada 15–180 dakika süren atak, ipsilateral kızarma, yaşarma, ptoz ve burun akıntısı tanıyı koydurur (sayfa 22).",
+      "D": "Hemikrania kontünia ağrının en az üç aydır sürekli var olmasıyla tanımlanır ve indometazine yanıtlıdır. Bu hastada ağrı atak biçiminde ve geceleri ortaya çıkmaktadır (sayfa 25).",
+      "E": "Migren kadınlarda daha sık görülür, 4–72 saat süren zonklayıcı ağrıyla ve bulantı-kusma, fotofobi, fonofobi ile seyreder. Oyucu-batıcı ağrı ve ipsilateral otonom bulgular küme başağrısına özgüdür (sayfa 11 ve 22)."
+     },
+     "bilgi": [
+      117,
+      118,
+      119,
+      121
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Sıklıkla gece uykudan uyandıran"
+     },
+     "s": 22,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b01",
+      "ozen:s22",
+      "not:s22"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q59",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki başağrısı–atak uzunluğu ikililerinden hangisi doğru verilmiştir?",
+     "secenekler": {
+      "A": "Küme başağrısı: 15–180 dakika",
+      "B": "Paroksismal hemikranya: 15–180 dakika",
+      "C": "SUNCT: 2–30 dakika",
+      "D": "Küme başağrısı: 5–240 saniye",
+      "E": "Paroksismal hemikranya: 5–240 saniye"
+     },
+     "dogru": "A",
+     "aciklama": "Küme başağrısı 15–180 dakika, paroksismal hemikranya 2–30 dakika, SUNCT ise 5–240 saniye sürer (sayfa 22, 23 ve 24). Süre, trigeminootonomik başağrılarını ayırt etmede temel ölçüttür.",
+     "sik_aciklamalari": {
+      "A": "Küme başağrısı atakları 15–180 dakika sürer ve günde 1–8 kez tekrarlar. Süre ve atak sayısı bu başağrısını diğer trigeminootonomik başağrılarından ayırır (sayfa 22).",
+      "B": "Paroksismal hemikranya 15–180 dakika değil 2–30 dakika sürer ve günde 5–20 atak yapar. Süre küme başağrısına aittir (sayfa 22 ve 23).",
+      "C": "SUNCT atakları 2–30 dakika değil, 5–240 saniye sürer. 2–30 dakika paroksismal hemikranyanın süresidir (sayfa 23 ve 24).",
+      "D": "Küme başağrısı saniyelerle ölçülen çok kısa ataklar yapmaz; ataklar 15–180 dakika sürer. Saniye mertebesindeki ağrı SUNCT'a özgüdür (sayfa 22 ve 24).",
+      "E": "Paroksismal hemikranya saniyelik ataklarla seyretmez; ataklar 2–30 dakika sürer. 5–240 saniye SUNCT'ın süresidir (sayfa 23 ve 24)."
+     },
+     "bilgi": [
+      117,
+      118,
+      124,
+      128
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "15 dk-180 dk"
+     },
+     "s": 22,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b01",
+      "ozen:s22"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q60",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Küme başağrısı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Erkeklerde daha fazla görülür.",
+      "B": "Ağrı tarafındaki gözde kızarma ve yaşarma eşlik eder.",
+      "C": "Sıklıkla geceleri uykudan uyandırır.",
+      "D": "Ergo türevleri ve triptanlar diğer tedavi seçenekleridir.",
+      "E": "Olguların büyük çoğunluğu (%85) kroniktir."
+     },
+     "dogru": "E",
+     "aciklama": "Küme başağrısı %85 epizodik, %15 kronik seyreder; erkeklerde fazladır, sıklıkla geceleri uykudan uyandırır ve ipsilateral gözde kızarma-yaşarma ile birlikte görülür (sayfa 22). Büyük çoğunluğun kronik olduğunu söyleyen ifade yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Küme başağrısı erkeklerde fazla görülür; paroksismal hemikranya ise kadınlarda sıktır. İfade doğru olduğundan yanlış ifade aranan soruda seçilmez (sayfa 22 ve 23).",
+      "B": "Küme başağrısına ağrıyla aynı taraftaki (ipsilateral) gözde kızarma, yaşarma, ptoz ve burunda konjesyon ya da akıntı eşlik eder. İfade doğrudur (sayfa 22).",
+      "C": "Küme başağrısı sıklıkla geceleri uykudan uyandırır ve atakları genellikle uykuda gelir. İfade slayta uygun olduğundan yanlış ifadeyi arayan soruda seçilmez (sayfa 22).",
+      "D": "Oksijenin yanı sıra ergo türevleri ve triptanlar küme başağrısı atağında diğer tedavi seçenekleridir. İfade slayta uygun olduğundan yanlış ifadeyi arayan soruda seçilmez (sayfa 22).",
+      "E": "Epizodik ve kronik oranları ters verilmiştir: olguların %85'i epizodik, yalnız %15'i kroniktir. Bu nedenle ifade yanlıştır ve aranan yanıttır (sayfa 22)."
+     },
+     "bilgi": [
+      117,
+      120,
+      121,
+      123
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "%85 epizodik %15 kronik"
+     },
+     "s": 22,
+     "dayanak": [
+      "ogrenci:A:noro-s01-b01",
+      "ozen:s22"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q61",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "2–30 dakika devam eden, günde 5–20 kez tekrarlayan, orbital, supraorbital ve temporal yerleşimli, kadınlarda sık görülen tek taraflı başağrısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Paroksismal hemikranya",
+      "B": "Küme başağrısı",
+      "C": "SUNCT",
+      "D": "Hemikrania kontünia",
+      "E": "Gerilim tipi başağrısı"
+     },
+     "dogru": "A",
+     "aciklama": "Paroksismal hemikranya 2–30 dakika süren, tek taraflı, günde 5–20 atak yapan, orbital, supraorbital ve temporal yerleşimli, küme başağrısına benzer ve kadınlarda sık görülen bir başağrısıdır (sayfa 23).",
+     "sik_aciklamalari": {
+      "A": "Paroksismal hemikranya küme başağrısına benzer özelliktedir, ancak ataklar daha kısa ve daha sıktır. Kadınlarda sık görülmesi ve indometazine yanıtı ayırt edici özellikleridir (sayfa 23).",
+      "B": "Küme başağrısı 15–180 dakika süren ve günde 1–8 kez tekrarlayan ataklar yapar; erkeklerde fazladır. Bu tanımdaki kısa süre ve yüksek atak sayısına uymaz (sayfa 22).",
+      "C": "SUNCT 5–240 saniye süren elektrik çarpması gibi ağrılarla seyreder ve günde en az bir kez olur. Atak süresi dakikalarla ölçülen bu tabloya uymaz (sayfa 24).",
+      "D": "Hemikrania kontünia atakla seyretmez; ağrı en az üç aydır var olan sürekli bir ağrıdır ve indometazine yanıtlıdır. Günde 5–20 atak tanımına uymaz (sayfa 25).",
+      "E": "Gerilim tipi başağrısı iki taraflı, künt ya da sıkıştırıcı ve hafif-orta şiddettedir. Tek taraflı kısa süreli sık ataklar bu tanıya uymaz (sayfa 18)."
+     },
+     "bilgi": [
+      124,
+      125,
+      126
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "2-30 dk süreli"
+     },
+     "s": 23,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s23"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q62",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "SUNCT tedavisinde en çok yarar sağlanan ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İndometazin",
+      "B": "Yüksek akımlı oksijen",
+      "C": "Antiepileptik ilaçlar",
+      "D": "Beta blokerler",
+      "E": "Triptanlar"
+     },
+     "dogru": "C",
+     "aciklama": "SUNCT en çok antiepileptik ilaçlardan, yani lamotrijin, topiramat ve valproattan yarar görür (sayfa 24). İndometazin paroksismal hemikranya ve hemikrania kontüniada, oksijen küme başağrısında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "İndometazin paroksismal hemikranyayı 3 günde tam kontrol altına alır ve hemikrania kontüniada da etkilidir. SUNCT'ta birinci grup olarak anılmaz (sayfa 23 ve 25).",
+      "B": "Oksijen 5–8 lt/dk akımla küme başağrısı atağında uygulanır. SUNCT'ın saniyelik atakları için slaytta bir oksijen önerisi yoktur (sayfa 22 ve 24).",
+      "C": "SUNCT 5–240 saniye süren, elektrik çarpması gibi oyucu ve yakıcı ağrılardan oluşur. Bu tablo en çok lamotrijin, topiramat ve valproat gibi antiepileptiklere yanıt verir (sayfa 24).",
+      "D": "Beta blokerler, örneğin propranolol, migren profilaksisinde kullanılan ilaçlardır ve atakları seyrekleştirir. SUNCT tedavisi için slaytta anılmazlar; bu tabloda antiepileptikler öne çıkar (sayfa 17 ve 24).",
+      "E": "Triptanlar migren ve küme başağrısı atağında kullanılan 5-HT1B ve 5-HT1D agonistleridir. SUNCT'ın birinci tedavi grubu olarak verilmezler (sayfa 15 ve 24)."
+     },
+     "bilgi": [
+      131
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "En çok antiepileptik ilaçlardan yararlanır."
+     },
+     "s": 24,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q65",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi trigeminootonomik başağrılarından biri değildir?",
+     "secenekler": {
+      "A": "Küme başağrısı",
+      "B": "Paroksismal hemikranya",
+      "C": "SUNCT",
+      "D": "Hemikrania kontünia",
+      "E": "Gerilim tipi başağrısı"
+     },
+     "dogru": "E",
+     "aciklama": "Trigeminootonomik başağrıları küme başağrısı, paroksismal hemikranya, SUNCT, hemikrania kontünia ve olası trigeminal otonomik sefaljilerdir (sayfa 21). Gerilim tipi başağrısı ICHD-3'ün ayrı bir primer başlığıdır.",
+     "sik_aciklamalari": {
+      "A": "Küme başağrısı trigeminootonomik grubun en tanınmış üyesidir ve ağrı tarafında gözde kızarma-yaşarma ile seyreder. Gruba girdiği için aranan yanıt değildir (sayfa 21 ve 22).",
+      "B": "Paroksismal hemikranya grubun bir üyesidir ve 2–30 dakika süren, günde 5–20 atakla seyreder. Gruba dahil olduğundan aranan yanıt olamaz (sayfa 21 ve 23).",
+      "C": "SUNCT, konjonktival kanlanma ve yaşarmalı kısa süreli tek taraflı nöraljiform başağrısı demektir ve grubun bir üyesidir. Bu yüzden yanlış seçenek değildir (sayfa 21).",
+      "D": "Hemikrania kontünia grubun sürekli ağrı ile seyreden üyesidir ve indometazine yanıtlıdır. Gruba girdiği için aranan yanıt olamaz (sayfa 21 ve 25).",
+      "E": "Gerilim tipi başağrısı, ICHD-3'te 2. başlıktır ve otonom bulgu vermeyen, iki taraflı ve sıkıştırıcı bir ağrıdır. Trigeminootonomik gruba girmez (sayfa 3 ve 18)."
+     },
+     "bilgi": [
+      115,
+      116
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "3. Trigeminootonomik Başağrıları Küme başağrısı Paroksizmal hemikraniya"
+     },
+     "s": 21,
+     "dayanak": [
+      "ayrinti",
+      "ogrenci:A:noro-s01-b01"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q63",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Başağrısı en az üç aydır var olan, tek taraflı, ağrı tarafında konjonktival yaşarma, kızarma, nazal konjesyon, rinore, yüz terlemesi, miyozis ve ptoz ile giden, indometazine yanıtlı trigeminootonomik başağrısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Küme başağrısı",
+      "B": "Hemikrania kontünia",
+      "C": "Paroksismal hemikranya",
+      "D": "SUNCT",
+      "E": "Olası trigeminal otonomik sefalji"
+     },
+     "dogru": "B",
+     "aciklama": "Hemikrania kontüniada ağrı en az üç aydır vardır, tek taraflıdır, ipsilateral otonom belirtilerle (konjonktival yaşarma, kızarma, nazal konjesyon, rinore, yüzde terleme, miyozis, ptoz) seyreder ve indometazine yanıtlıdır (sayfa 25).",
+     "sik_aciklamalari": {
+      "A": "Küme başağrısı atak şeklindedir, 15–180 dakika sürer ve oksijen tedavisine yanıt verir. Üç aydır süren sürekli ağrı ve indometazine yanıt bu tanıyı düşündürmez (sayfa 22).",
+      "B": "Hemikrania kontünia kesintisiz sürmesi ve indometazine yanıtıyla paroksismal hemikranyadan ayrılır. Aynı taraftaki otonom bulgular listesi ayrıca miyozis ve yüzde terlemeyi içerir (sayfa 25).",
+      "C": "Paroksismal hemikranya indometazine tam yanıt verir fakat 2–30 dakika süren ve günde 5–20 kez tekrarlayan ataklarla ilerler. Sürekli üç aylık ağrı hemikrania kontünia için özgüdür (sayfa 23 ve 25).",
+      "D": "SUNCT 5–240 saniye süren, elektrik çarpması gibi ataklarla giden ve antiepileptik ilaçlara yanıt veren bir başağrısıdır. Sürekli ve indometazine yanıtlı ağrı bu tabloya uymaz (sayfa 24 ve 25).",
+      "E": "Olası trigeminal otonomik sefaljiler, diğer dört tanımlı başlığa tam uymayan ağrılar için kullanılan genel gruptur. Tanım ölçütleri belirgin olduğundan hemikrania kontünia doğru yanıttır (sayfa 21)."
+     },
+     "bilgi": [
+      132,
+      133,
+      134
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Başağrısı en az üç aydır var olmalı"
+     },
+     "s": 25,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q64",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Paroksismal hemikranya ve hemikrania kontünia ortak olarak aşağıdaki ilaçlardan hangisine yanıt verir?",
+     "secenekler": {
+      "A": "5–8 lt/dk oksijen",
+      "B": "Lamotrijin",
+      "C": "Valproat",
+      "D": "İndometazin",
+      "E": "Amitriptilin"
+     },
+     "dogru": "D",
+     "aciklama": "Paroksismal hemikranya indometazinle 3 günde tam kontrol altına alınır (3 × 25 mg, en çok 225 mg); hemikrania kontünia da indometazine yanıtlıdır (sayfa 23 ve 25).",
+     "sik_aciklamalari": {
+      "A": "Oksijen küme başağrısı atağında 5–8 lt/dk akımla 15–20 dakika uygulanır. Paroksismal hemikranya ve hemikrania kontüniada bu amaçla önerilmez (sayfa 22).",
+      "B": "Lamotrijin SUNCT'ta yarar gören antiepileptiklerden biridir ve kısa süreli ataklarda kullanılır. Paroksismal hemikranya ile hemikrania kontünia için slaytta belirtilen ortak yanıt indometazinledir (sayfa 24).",
+      "C": "Valproat SUNCT tedavisinde ve migren profilaksisinde kullanılır. Bu iki başağrısının ortak yanıt verdiği ilaç valproat değildir (sayfa 17 ve 24).",
+      "D": "İndometazine yanıt, bu iki başağrısının tanıyı destekleyen ortak özelliğidir. Paroksismal hemikranyada doz 3 × 25 mg'dır ve en fazla 225 mg'a çıkılır (sayfa 23 ve 25).",
+      "E": "Amitriptilin migren, gerilim tipi profilaksisi ve köprü tedavide kullanılır. İndometazine yanıtlı bu iki başağrısı için tanımlayıcı ilaç değildir (sayfa 20 ve 26)."
+     },
+     "bilgi": [
+      127,
+      134
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "İndometazinle 3 günde tam kontrol"
+     },
+     "s": 23,
+     "dayanak": [
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "İlaç aşırı kullanım başağrısını tanımlar ve ilaçların kesilmesi, yıkama ve köprü tedavi basamaklarını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q66",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Dünyada en sık görülen üçüncü başağrısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Küme başağrısı",
+      "B": "İlaç aşırı kullanım başağrısı",
+      "C": "Paroksismal hemikranya",
+      "D": "SUNCT",
+      "E": "Hemikrania kontünia"
+     },
+     "dogru": "B",
+     "aciklama": "İlaç aşırı kullanım başağrısı dünyada en sık üçüncü başağrısıdır (sayfa 26). Analjeziklerin gereğinden uzun kullanımı başağrısını kronikleştirir.",
+     "sik_aciklamalari": {
+      "A": "Küme başağrısı erkeklerde fazla görülen nadir bir trigeminootonomik başağrısıdır. Görülme sıklığı bakımından ilk üç arasında anılmaz (sayfa 22 ve 26).",
+      "B": "İlaç aşırı kullanım başağrısı, ağrı kesicileri sık kullanan hastalarda gelişen kronik bir başağrısıdır ve dünyada en sık üçüncü başağrısı olarak bildirilir. Tedavi edilebilir bir tablo olduğu için tanınması önemlidir (sayfa 26).",
+      "C": "Paroksismal hemikranya kadınlarda sık görülen, indometazine yanıtlı kısa ataklı bir başağrısıdır. Sıklığı nedeniyle ilk üçte sayılmaz (sayfa 23 ve 26).",
+      "D": "SUNCT 5–240 saniye süren çok kısa ağrı atakları yapan nadir bir başağrısıdır. Sıklık sıralamasında ilk üçte yer almaz (sayfa 24 ve 26).",
+      "E": "Hemikrania kontünia en az üç aydır süren sürekli, tek taraflı ve indometazine yanıtlı nadir bir başağrısıdır. Sıklık sıralamasında ilk üçte yer almaz (sayfa 25 ve 26)."
+     },
+     "bilgi": [
+      135
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Dünyada en sık 3. başağrısı"
+     },
+     "s": 26,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s26"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q67",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Tedavide kullanılan analjeziklerin kaç günden fazla kullanılması kendi başına kronik başağrısı nedenidir?",
+     "secenekler": {
+      "A": "2",
+      "B": "5",
+      "C": "10",
+      "D": "20",
+      "E": "30"
+     },
+     "dogru": "C",
+     "aciklama": "İlaç aşırı kullanım başağrısında tedavide kullanılan analjeziklerin 10 günden fazla kullanılması kendi başına kronik başağrısı nedenidir (sayfa 26).",
+     "sik_aciklamalari": {
+      "A": "İki gün analjezik kullanımı ağrıyı gidermek için güvenle verilebilecek kısa bir kullanımdır. Slayttaki eşik 10 günden fazladır; bu değerin altındaki kullanım ilaç aşırı kullanım başağrısı yapmaz (sayfa 26).",
+      "B": "Beş günlük kullanım da eşik değerin altında kalır. Sınav sorusunda 5 yakın bir çeldirici sayıdır, doğru eşik 10'dur (sayfa 26).",
+      "C": "Analjeziklerin ayda 10 günden fazla alınması ağrıyı kronikleştirir; kesildiğinde ağrının gerilemesi bu tanıyı destekler. Slayt sınırı 10 gün olarak verir (sayfa 26).",
+      "D": "Yirmi gün, eşik değerin çok üzerindedir ve sorulan değer en küçük süredir. Aşırı kullanım 10 günden fazla analjezik alınmasıyla başlar (sayfa 26).",
+      "E": "Otuz gün sürekli kullanım demektir ve eşik değerin çok ötesindedir. Slayttaki sınır 10 günü aşan kullanımdır; soru bu en küçük süreyi sorduğundan 30 doğru değildir (sayfa 26)."
+     },
+     "bilgi": [
+      136
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "10 günden fazla kullanılması"
+     },
+     "s": 26,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s26"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q68",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "İlaç aşırı kullanım başağrısında köprü tedavide kullanılan ilaçlar aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Triptan, ergo türevi ve antiemetik",
+      "B": "Propranolol, topiramat ve valproat",
+      "C": "Amitriptilin, antiemetik ve steroid",
+      "D": "İndometazin, oksijen ve lamotrijin",
+      "E": "Parasetamol, kafein ve naproksen"
+     },
+     "dogru": "C",
+     "aciklama": "İlaç aşırı kullanım başağrısında köprü tedavide amitriptilin, antiemetik ve steroid kullanılır (sayfa 26). Köprü tedavi, ilaçlar kesildikten sonra ortaya çıkan geri çekilme semptomlarını hafifletmek için uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Triptan ve ergo türevleri migren atak ilaçlarıdır ve aşırı kullanıldıklarında başağrısını sürdürebilir. Köprü tedavide kullanılan ilaçlar değildir (sayfa 15 ve 26).",
+      "B": "Propranolol, topiramat ve valproat migren profilaksisinde kullanılan ilaçlardır; atakları seyrekleştirmek için sürekli verilir. Köprü tedavi ilacı olarak slaytta sayılmaz, köprü tedavide amitriptilin, antiemetik ve steroid kullanılır (sayfa 17 ve 26).",
+      "C": "İlaçlar kesilince ortaya çıkan başağrısı ve bulantı gibi geri çekilme semptomları amitriptilin, antiemetik ve steroidle tedavi edilir. Böylece hasta analjeziklere dönmeden süreci atlatır (sayfa 26).",
+      "D": "İndometazin, oksijen ve lamotrijin sırasıyla paroksismal hemikranya, küme başağrısı ve SUNCT tedavisinde kullanılır. Köprü tedaviyle ilgileri yoktur (sayfa 22, 23, 24 ve 26).",
+      "E": "Parasetamol, kafein ve naproksen atak tedavisinde kullanılan analjeziklerdir ve aşırı kullanımı başağrısını kronikleştiren ilaç grubudur. Köprü tedavide verilmezler (sayfa 15 ve 26)."
+     },
+     "bilgi": [
+      140
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Köprü tedavi amitriptilin, antiemetik, steroid"
+     },
+     "s": 26,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s26"
+     ]
+    },
+    {
+     "id": "k2-10-bas-agrisina-yaklasim-q69",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "İlaç aşırı kullanım başağrısında ilaçların kesilmesi, yıkama tedavisi ve köprü tedaviden sonra planlanan basamak aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Başağrısı için profilaktik tedavi",
+      "B": "Analjezik dozunun artırılması",
+      "C": "İlaçların yeniden başlanması",
+      "D": "Yıkama tedavisinin tekrarlanması",
+      "E": "Geri çekilme semptomlarının tedavisi"
+     },
+     "dogru": "A",
+     "aciklama": "İlaç aşırı kullanım başağrısında yaklaşım ilaçların tamamen kesilmesi, yıkama tedavisi, geri çekilme semptomlarının tedavisi ve köprü tedavidir; ardından başağrısı için profilaktik tedavi planlanır (sayfa 26).",
+     "sik_aciklamalari": {
+      "A": "İlaçlar kesilip geri çekilme dönemi atlatıldıktan sonra ağrının yeniden başlamaması için altta yatan başağrısına (örneğin migrene) yönelik profilaktik tedavi planlanır. Basamakların son halkası budur (sayfa 26).",
+      "B": "Analjezik dozunu artırmak aşırı kullanımı ağırlaştırır ve kronik başağrısını sürdürür. Tedavinin amacı tam tersine ilaçların kesilmesidir; bu nedenle doz artırımı bir tedavi basamağı değildir (sayfa 26).",
+      "C": "İlaçların yeniden başlanması aşırı kullanım döngüsünü yeniler ve ağrıyı sürdürür. Yaklaşım, hasta ile konuşarak ilaçların tamamen kesilmesiyle başlar; bu nedenle ilaçlara dönülmez (sayfa 26).",
+      "D": "Yıkama tedavisi ilaçların kesilmesinden hemen sonra uygulanan erken basamaktır. Köprü tedaviden sonraki basamak ise başağrısı için planlanan profilaktik tedavidir (sayfa 26).",
+      "E": "Geri çekilme semptomlarının tedavisi ilaçlar kesildikten sonra ortaya çıkan belirtilere yöneliktir ve köprü tedaviyle birlikte erken dönemde yapılır. Sondaki basamak profilaksidir (sayfa 26)."
+     },
+     "bilgi": [
+      137,
+      138,
+      139,
+      140,
+      141
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Başağrısı için proflaktik tedavi"
+     },
+     "s": 26,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s26"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 69
+}

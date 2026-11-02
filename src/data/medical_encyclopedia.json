@@ -100970,5 +100970,1689 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-basagrisi",
+    "term": "Başağrısı",
+    "aliases": [
+      "Baş ağrısı"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.2",
+    "definition": "Başta duyulan ağrıdır; hekimlik hayatında en sık karşılaşılan yakınmadır. Primer ve sekonder olarak ayrılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ihs_siniflamasi",
+    "term": "IHS sınıflaması",
+    "aliases": [
+      "IHS",
+      "Uluslararası Başağrısı Derneği"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.3",
+    "definition": "Uluslararası Başağrısı Derneği'nin (International Headache Society) genel kabul gören başağrısı sınıflamasıdır; 1988, 2004 ve 2013 sürümleri vardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ichd_3",
+    "term": "ICHD-3",
+    "aliases": [
+      "ICHD",
+      "ICHD 3"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.3",
+    "definition": "Başağrılarını primer, sekonder ve ağrılı kraniyal nöropatiler olarak 14 ana başlıkta toplayan sınıflamadır (Uluslararası Başağrısı Bozuklukları Sınıflaması, 3. sürüm).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Primer 1–4, sekonder 5–12, ağrılı kraniyal nöropatiler ve diğerleri 13–14.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-primer_basagrisi",
+    "term": "Primer başağrısı",
+    "aliases": [
+      "Primer baş ağrısı"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.5",
+    "definition": "Başka bir hastalığa bağlı olmayan, kendisi hastalık olan başağrısıdır; yaşamı tehdit etmez ve genellikle ileri tetkik gerektirmez.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dört başlık: migren, gerilim tipi, trigeminal otonomik başağrısı, diğer primer başağrısı sendromları.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sekonder_basagrisi",
+    "term": "Sekonder başağrısı",
+    "aliases": [
+      "Sekonder baş ağrısı"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.5",
+    "definition": "Altta yatan başka bir hastalığın belirtisi olan başağrısıdır; yaşamı tehdit edebilir ve ivedi inceleme gerektirir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-agrili_kraniyal_noropatiler",
+    "term": "Ağrılı kraniyal nöropatiler",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.5",
+    "definition": "ICHD-3'ün 13. başlığıdır; kraniyal sinirlerin ağrılı bozukluklarını ve diğer yüz ağrılarını kapsar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-presipite_eden_faktor",
+    "term": "Presipite eden faktör",
+    "aliases": [
+      "Tetikleyici faktör"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.7",
+    "definition": "Ağrıyı başlatan ya da artıran tetikleyicidir; anamnezde mutlaka sorulur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fotofobi",
+    "term": "Fotofobi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.11",
+    "definition": "Işığa karşı hassasiyettir; migrende bulantı-kusma ve fonofobi ile birlikte eşlik eden belirtilerdendir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fonofobi",
+    "term": "Fonofobi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.11",
+    "definition": "Sese karşı hassasiyettir; migrende eşlik eden belirtilerdendir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aura",
+    "term": "Aura",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.12",
+    "definition": "Migrende ağrıdan önce ortaya çıkan geçici nörolojik belirtilerdir (hemianopsi, ışık görme, uyuşma, konuşma bozukluğu); migrenlilerin %10–15'inde görülür ve 5–60 dakika sürer.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Aura öyküsü olan hastada ilk akla gelen tanı migrendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-prodrom",
+    "term": "Prodrom",
+    "aliases": [
+      "Prodrom dönemi"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.12",
+    "definition": "Migren ağrısından önceki dönemdir; aşırı duyarlılık, öfori, hiperaktivite, durgunluk, dikkat azalması ve kelime bulma güçlüğü görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-postdrom",
+    "term": "Postdrom",
+    "aliases": [
+      "Postdrom dönemi"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.12",
+    "definition": "Migren ağrısından sonraki toparlanma dönemidir; yaklaşık bir gün sürer.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemianopsi",
+    "term": "Hemianopsi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.12",
+    "definition": "Her iki gözün görme alanının yarısının kaybıdır; migren aurasında geçici olarak görülebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-familyal_hemiplejik_migren",
+    "term": "Familyal hemiplejik migren",
+    "aliases": [
+      "FHM"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Otozomal dominant geçişli migren türüdür; kalsiyum kanalı (CACNA1A), Na-K ATPaz (ATP1A2) ve sodyum kanalı (SCN1A) genleriyle ilişkilidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kanalopati",
+    "term": "Kanalopati",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Hücre zarındaki iyon kanallarının bozukluğuna bağlı hastalıktır; migren bir iyon kanalı hastalığı olarak değerlendirilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kortikal_yayilan_depresyon",
+    "term": "Kortikal yayılan depresyon",
+    "aliases": [
+      "CSD"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Uzun süreli nöronal inhibisyona yol açan ve 2–6 mm/dk hızla yayılan spike aktivite dalgasıdır; migrende auranın temelidir (1944, Leao).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "CSD dalgasını bölgesel kan akımı azalması izler; klinik yansıması aura'dır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-migren_jeneratoru",
+    "term": "Migren jeneratörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Kortikal yayılan depresyonu başlattığı düşünülen beyin bölgeleridir: oksipital korteks, periakuaduktal gri cevher, mezensefalik retiküler formasyon, pons rafe nükleusu ve lokus seruleus.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-oligemi",
+    "term": "Oligemi",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.14",
+    "definition": "Bölgesel kan akımında azalmadır; kortikal yayılan depresyonu izler ve auraya yansır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trigeminovaskuler_sistem",
+    "term": "Trigeminovasküler sistem",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.14",
+    "definition": "Trigeminal sinir ile dural damarları birleştiren ağrı sistemidir; kortikal yayılan depresyonla etkinleşince dural damarlarda enflamasyon ve ağrı olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cgrp",
+    "term": "CGRP",
+    "aliases": [
+      "Calcitonin gene-related peptide"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.14",
+    "definition": "Kalsitonin geni ilişkili peptittir (calcitonin gene-related peptide); substance P ve VIP ile birlikte nosiseptif nöronlarda ağrıyı uyaran vazoaktif peptitlerdendir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vip",
+    "term": "VIP",
+    "aliases": [
+      "Vazoaktif intestinal peptit"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.14",
+    "definition": "Vazoaktif intestinal peptittir; migrende ağrıyı uyaran vazoaktif peptitlerden biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vazodilatasyon_fazi",
+    "term": "Vazodilatasyon fazı",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.14",
+    "definition": "Vazoaktif peptitler ve metalloproteinazlar damar genişlemesi yaptığında ortaya çıkan, migren ağrısıyla ilişkili evredir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nonspesifik_ilaclar",
+    "term": "Nonspesifik ilaçlar",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Migren atak tedavisinde kullanılan genel ağrı kesicilerdir (ASA, parasetamol + kafein, naproksen, diklofenak, flurbiprofen, ibuprofen).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-spesifik_ilaclar",
+    "term": "Spesifik ilaçlar",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Migren atak tedavisinde kullanılan ergo türevleri ve triptanlardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-komplike_migren_atagi",
+    "term": "Komplike migren atağı",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.17",
+    "definition": "Konuşma bozukluğu ya da görme kaybı gibi ağır nörolojik belirtilerle seyreden migren atağıdır; profilaktik tedavi endikasyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-profilaktik_tedavi",
+    "term": "Profilaktik tedavi",
+    "aliases": [
+      "Proflaktik tedavi",
+      "Profilaksi"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.17",
+    "definition": "Ataklardan önce başlanıp atak sıklığını azaltmaya yönelik tedavidir; migrende ayda 3'ten fazla atak, komplike atak ya da uzamış atakta uygulanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gerilim_tipi_basagrisi",
+    "term": "Gerilim tipi başağrısı",
+    "aliases": [
+      "GTBA"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.18",
+    "definition": "En sık görülen primer başağrısıdır; iki taraflı, künt ya da sıkıştırıcı, hafif-orta şiddettedir ve günlük aktiviteyi engellemez.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-myofasiyal_tetik_noktalar",
+    "term": "Myofasiyal tetik noktalar",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.19",
+    "definition": "Kas ve fasyada ağrıyı başlatan duyarlı noktalardır; gerilim tipi başağrısı mekanizmasında rol oynadığı düşünülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-santral_sensitizasyon",
+    "term": "Santral sensitizasyon",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.19",
+    "definition": "Merkezi sinir sisteminin ağrıya aşırı duyarlı hâle gelmesidir; gerilim tipi başağrısında ağrı modülasyonu bozulur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trigeminootonomik_basagrilari",
+    "term": "Trigeminootonomik başağrıları",
+    "aliases": [
+      "Trigeminal otonomik başağrıları",
+      "Trigeminal otonomik sefaljiler"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.21",
+    "definition": "Tek taraflı kısa süreli şiddetli ağrı ve aynı taraf otonomik bulgularla seyreden primer başağrıları grubudur: küme başağrısı, paroksismal hemikranya, SUNCT, hemikrania kontünia.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kume_basagrisi",
+    "term": "Küme başağrısı",
+    "aliases": [
+      "Cluster headache"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.22",
+    "definition": "Günde 1–8 kez tekrarlayan, geceleri uykudan uyandıran, en şiddetli, oyucu-batıcı başağrısıdır; 15–180 dk sürer ve ipsilateral gözde yaşarma, ptoz, burun tıkanıklığı eşlik eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Atakta 5–8 lt/dk oksijen kullanılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-paroksismal_hemikranya",
+    "term": "Paroksismal hemikranya",
+    "aliases": [
+      "Paroksizmal hemikraniya"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.23",
+    "definition": "2–30 dakika süren, günde 5–20 atak yapan, tek taraflı ve orbital, supraorbital, temporal yerleşimli başağrısıdır; indometazine yanıt verir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sunct",
+    "term": "SUNCT",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.24",
+    "definition": "Konjonktival kanlanma ve yaşarmalı kısa süreli tek taraflı nöraljiform başağrısıdır; 5–240 saniye sürer, antiepileptiklerle tedavi edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemikrania_kontunia",
+    "term": "Hemikrania kontünia",
+    "aliases": [
+      "Hemikrania kontinua"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.25",
+    "definition": "En az üç aydır var olan, tek taraflı ve ipsilateral otonomik bulgularla seyreden, indometazine yanıtlı başağrısıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-indometazin",
+    "term": "İndometazin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.23",
+    "definition": "Paroksismal hemikranya ve hemikrania kontüniada tanı ve tedavi için kullanılan ilaçtır; paroksismal hemikranyada 3 günde tam kontrol sağlar (3 × 25 mg, en çok 225 mg).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ilac_asiri_kullanim_basagrisi",
+    "term": "İlaç aşırı kullanım başağrısı",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.26",
+    "definition": "Tedavide kullanılan analjeziklerin 10 günden fazla kullanılmasıyla ortaya çıkan kronik başağrısıdır; dünyada en sık üçüncü başağrısıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yikama_tedavisi",
+    "term": "Yıkama tedavisi",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.26",
+    "definition": "İlaç aşırı kullanım başağrısında ilaçların kesilmesinden sonra uygulanan tedavi basamağıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kopru_tedavi",
+    "term": "Köprü tedavi",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.26",
+    "definition": "İlaç aşırı kullanım başağrısında geri çekilme döneminde verilen amitriptilin, antiemetik ve steroid tedavisidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-geri_cekilme_semptomlari",
+    "term": "Geri çekilme semptomları",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.26",
+    "definition": "Aşırı kullanılan ağrı kesiciler kesilince ortaya çıkan yoksunluk belirtileridir; ayrıca tedavi edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-handle",
+    "term": "HANDLE",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.10",
+    "definition": "Headache and neurological deficits with cerebrospinal fluid lymphocytosis: beyin-omurilik sıvısında lenfositozla giden başağrısı ve nörolojik defisit tablosudur; LP ile tanınır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-waters_grafisi",
+    "term": "Waters grafisi",
+    "aliases": [
+      "Waters"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.10",
+    "definition": "Yardımcı tanı yöntemleri arasında ilk sayılan direkt grafi türüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-subhyaloid_hemoraji",
+    "term": "Subhyaloid hemoraji",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.9",
+    "definition": "Retina ile hyaloid arasındaki kanamadır; göz dibinde saptanır ve sekonder başağrısı düşündüren muayene bulgusudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anizokori",
+    "term": "Anizokori",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.9",
+    "definition": "İki gözbebeği çapının eşit olmamasıdır; 3. kranial sinir tutulumu ile birlikte sekonder başağrısı düşündüren bulgudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-horner_sendromu",
+    "term": "Horner sendromu",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.9",
+    "definition": "Miyozis ve ptozla giden otonomik sinir bozukluğudur; sekonder başağrısı düşündüren muayene bulgularından biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miyozis",
+    "term": "Miyozis",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.25",
+    "definition": "Gözbebeğinin küçülmesidir; hemikrania kontüniada ipsilateral otonomik bulgudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ptoz",
+    "term": "Ptoz",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.22",
+    "definition": "Üst göz kapağının düşüklüğüdür; küme başağrısı, hemikrania kontünia ve Horner sendromunda görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-rinore",
+    "term": "Rinore",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.25",
+    "definition": "Burun akıntısıdır; hemikrania kontüniada ipsilateral otonomik bulgudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-basagrisi_gunlugu",
+    "term": "Başağrısı günlüğü",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.10",
+    "definition": "Hastanın ağrı atakları, süresi ve tetikleyicilerini yazdığı kayıttır; tanı koymakta zorlanıldığında kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sedimantasyon",
+    "term": "Sedimantasyon",
+    "aliases": [
+      "Sedim"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.10",
+    "definition": "Eritrosit sedimentasyon hızı; başağrısında yardımcı tanı kan testlerinden biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemiplejik_migren",
+    "term": "Hemiplejik migren",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Vücudun bir yarısında güçsüzlükle seyreden migren türüdür; vazokonstriktör ilaçlar kullanılmamalıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bazilar_migren",
+    "term": "Bazilar migren",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Migren türlerinden biridir; hemiplejik ve uzamış auralı migren gibi vazokonstriktör ilaçların kullanılmaması gereken tiplerdendir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vazokonstriktor_ilaclar",
+    "term": "Vazokonstriktör ilaçlar",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Damar daraltıcı ilaçlardır (ergo türevleri, triptanlar); hemiplejik, uzamış auralı ve bazilar migrende kullanılmaz.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-antiemetik",
+    "term": "Antiemetik",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Bulantı ve kusmayı önleyen ilaçlardır; migren atak tedavisinden 20 dakika önce verilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-beta_bloker",
+    "term": "Beta bloker",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.17",
+    "definition": "Beta adrenerjik reseptörleri bloke eden ilaç grubudur; migren profilaksisinde propranolol kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-propranolol",
+    "term": "Propranolol",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.17",
+    "definition": "Migren profilaksisinde kullanılan beta blokerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-valproat",
+    "term": "Valproat",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.17",
+    "definition": "Migren profilaksisinde ve SUNCT tedavisinde kullanılan antiepileptik ilaçtır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-amitriptilin",
+    "term": "Amitriptilin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.20",
+    "definition": "Migren profilaksisinde, gerilim tipi başağrısı profilaksisinde birinci seçenek olarak ve köprü tedavide kullanılan antidepresandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-venlafaksin",
+    "term": "Venlafaksin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.20",
+    "definition": "Migren ve gerilim tipi başağrısı profilaksisinde kullanılan antidepresandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mirtazapin",
+    "term": "Mirtazapin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.20",
+    "definition": "Gerilim tipi başağrısı profilaksisinde ikinci seçenek antidepresandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-klomipramin",
+    "term": "Klomipramin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.20",
+    "definition": "Gerilim tipi başağrısı profilaksisinde üçüncü seçenek trisiklik antidepresandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-maprotilin",
+    "term": "Maprotilin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.20",
+    "definition": "Gerilim tipi başağrısı profilaksisinde üçüncü seçenek antidepresandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lamotrijin",
+    "term": "Lamotrijin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.24",
+    "definition": "SUNCT tedavisinde kullanılan antiepileptik ilaçtır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sumatriptan",
+    "term": "Sumatriptan",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "5-HT1B/1D agonisti triptandır; atak tedavisinde deri altı (s.c.) kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-eletriptan",
+    "term": "Eletriptan",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Atak tedavisinde 40 mg kullanılan triptandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-zolmitriptan",
+    "term": "Zolmitriptan",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Atak tedavisinde 2,5 mg kullanılan triptandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-naratriptan",
+    "term": "Naratriptan",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Atak tedavisinde 2,5 mg kullanılan triptandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-naproksen",
+    "term": "Naproksen",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan NSAİİ'dir (550–1000 mg).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-diklofenak",
+    "term": "Diklofenak",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Migren atak tedavisinde 50–100 mg kullanılan NSAİİ'dir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-flurbiprofen",
+    "term": "Flurbiprofen",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Migren atak tedavisinde 100–300 mg kullanılan NSAİİ'dir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ibuprofen",
+    "term": "Ibuprofen",
+    "aliases": [
+      "İbuprofen"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan NSAİİ'dir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-parasetamol",
+    "term": "Parasetamol",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Migren ve gerilim tipi başağrısı atak tedavisinde kullanılan basit analjeziktir; kafein ile kombine edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gks",
+    "term": "GKS",
+    "aliases": [
+      "Glasgow koma skalası"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.10",
+    "definition": "Glasgow koma skalası; kafa travmasında BBT endikasyonunda kullanılır (slaytta GKS 9).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lp",
+    "term": "LP",
+    "aliases": [
+      "Lomber ponksiyon"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.10",
+    "definition": "Lomber ponksiyon: menenjit, SAK ve HANDLE tanısında kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sak",
+    "term": "SAK",
+    "aliases": [
+      "Subaraknoid kanama"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.10",
+    "definition": "Subaraknoid kanama: yaşamdaki en şiddetli başağrısı tanımıyla düşünülen sekonder neden.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ok",
+    "term": "OK",
+    "aliases": [
+      "Oral kontraseptif"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.16",
+    "definition": "Oral kontraseptif: migrenli hastada sigara ile birlikte inme riskini artırır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-asa",
+    "term": "ASA",
+    "aliases": [
+      "Aspirin",
+      "Asetilsalisilik asit"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.15",
+    "definition": "Asetilsalisilik asit (aspirin); migren atak tedavisinde 1000 mg kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nsaii",
+    "term": "NSAİİ",
+    "aliases": [
+      "NSAI"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.19",
+    "definition": "Nonsteroid antiinflamatuvar ilaçlar; gerilim tipi başağrısı atak tedavisinde ibuprofen ve naproksen kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gtba",
+    "term": "GTBA",
+    "aliases": [
+      "Gerilim tipi başağrısı"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.19",
+    "definition": "Gerilim tipi başağrısı kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fm",
+    "term": "FM",
+    "aliases": [
+      "Fizik muayene"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.9",
+    "definition": "Fizik muayene; primer başağrılarında normaldir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ks",
+    "term": "KS",
+    "aliases": [
+      "Kranial sinir"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.9",
+    "definition": "Kranial sinir; 3., 5. ve 7. kranial sinir tutulumu sekonder başağrısı düşündürür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sss",
+    "term": "SSS",
+    "aliases": [
+      "Santral sinir sistemi"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.19",
+    "definition": "Santral sinir sistemi; gerilim tipi başağrısında ağrı modülasyonu bozulur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-od",
+    "term": "OD",
+    "aliases": [
+      "Otozomal dominant"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Otozomal dominant kalıtım; familyal hemiplejik migren OD geçer.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cacna1a",
+    "term": "CACNA1A",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Kalsiyum kanalı genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-atp1a2",
+    "term": "ATP1A2",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Na-K ATPaz pompası genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-scn1a",
+    "term": "SCN1A",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 4)BAŞAĞRISI s.13",
+    "definition": "Sodyum kanalı genidir; familyal hemiplejik migrende mutasyon gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
