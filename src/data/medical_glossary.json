@@ -52309,7 +52309,8 @@
         "sayfa": 8,
         "alinti": "İmmunoglobulin E (IgE) antikorları ile kaplanır (duyarlanma)"
       }
-    ]
+    ],
+    "clinicalPearl": "Ağrıda periferik sensitizasyon (nosiseptör eşiğinin düşmesi, primer hiperaljezi) ve santral sensitizasyon (MSS nöronlarında artmış yanıt, sekonder hiperaljezi, allodini) ayrılır."
   },
   "degranülasyon": {
     "term": "Degranülasyon",
@@ -104622,7 +104623,7 @@
     "description": "Uyuşma, keçeleşme, karıncalanma, sızlama gibi, görünür dış uyarım olmadan hissedilen duyumdur.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Dış uyarım yoktur; dizestezide ağrısız bir uyarı vardır.",
+    "clinicalPearl": "Dış uyarım yoktur; dizestezide ağrısız bir uyarı vardır. · Her disestezi bir paresteziyidir; ancak her parestezi disestezi değildir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -104747,7 +104748,7 @@
     "description": "Ağrı oluşturmayacak bir uyaranla ağrı hissedilmesidir.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Ders parestezi, dizestezi ve allodiniyi ayrı terimler olarak verir.",
+    "clinicalPearl": "Ders parestezi, dizestezi ve allodiniyi ayrı terimler olarak verir. · Allodinide ağrısız uyaran ağrı yapar; hiperaljezide ağrılı uyaranın yanıtı artar, hipoaljezide azalır. Güneş yanığı olan deriye giysinin değmesinin ağrılı olması örnektir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -106862,7 +106863,8 @@
         "sayfa": 26,
         "alinti": "kıvrımların azalması (pakigri) ya da yokluğu (agri) ile karakterizedir,"
       }
-    ]
+    ],
+    "clinicalPearl": "Ağrı bir duyu değil deneyimdir; nosisepsiyondan ayrıdır."
   },
   "kortikal laminasyon": {
     "term": "Kortikal laminasyon",
@@ -117334,6 +117336,1988 @@
         "kurul": 2,
         "sayfa": 13,
         "alinti": "Na kanalı (SCN1A) • İyon kanalı hastalığı,"
+      }
+    ]
+  },
+  "nosisepsiyon": {
+    "term": "Nosisepsiyon",
+    "category": "fizyoloji",
+    "definition": "Zararlı uyaranın nosiseptörler ve afferent yolaklar aracılığıyla sinir sistemi tarafından işlenmesidir; bilinçli ağrı deneyimi olmadan da oluşabilir.",
+    "description": "Zararlı uyaranın nosiseptörler ve afferent yolaklar aracılığıyla sinir sistemi tarafından işlenmesidir; bilinçli ağrı deneyimi olmadan da oluşabilir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Ağrı ≠ nosisepsiyon.",
+    "aliases": [
+      "nociception"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Zararlı uyaranın sinir sistemi tarafından işlenmesi"
+      }
+    ]
+  },
+  "nosiseptör": {
+    "term": "Nosiseptör",
+    "category": "fizyoloji",
+    "definition": "Zararlı uyaranları dönüştürüp kodlayabilen, periferik somatosensoriyel sistemin yüksek eşikli duyusal reseptörüdür; duyu nöronunun kapsülsüz serbest sinir ucudur.",
+    "description": "Zararlı uyaranları dönüştürüp kodlayabilen, periferik somatosensoriyel sistemin yüksek eşikli duyusal reseptörüdür; duyu nöronunun kapsülsüz serbest sinir ucudur.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Beyin parankiminde nosiseptör yoktur.",
+    "aliases": [
+      "nociceptor"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Nosiseptör Zararlı uyaranları dönüştürüp kodlayabilen, periferik somatosensoriyel sistemin yüksek eşikli duyusal reseptörü"
+      }
+    ]
+  },
+  "zararlı uyaran": {
+    "term": "Zararlı uyaran",
+    "category": "fizyoloji",
+    "definition": "Normal dokulara zarar veren ya da zarar verme tehdidi taşıyan uyarandır.",
+    "description": "Normal dokulara zarar veren ya da zarar verme tehdidi taşıyan uyarandır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "noxious stimulus"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Zararlı (noxious) uyaran Normal dokulara zarar veren ya da zarar verme tehdidi taşıyan uyaran"
+      }
+    ]
+  },
+  "hiperaljezi": {
+    "term": "Hiperaljezi",
+    "category": "terim",
+    "definition": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır.",
+    "description": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Allodini ağrısız uyaranın ağrı yapmasıdır; hiperaljezide uyaran zaten ağrılıdır.",
+    "aliases": [
+      "hyperalgesia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "Hiperaljezi Normalde ağrılı olan bir uyarana verilen ağrı yanıtının artması"
+      }
+    ]
+  },
+  "hipoaljezi": {
+    "term": "Hipoaljezi",
+    "category": "terim",
+    "definition": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının azalmasıdır; örneğin periferik nöropatide iğne batmasının az hissedilmesi.",
+    "description": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının azalmasıdır; örneğin periferik nöropatide iğne batmasının az hissedilmesi.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "hypoalgesia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "Hipoaljezi Normalde ağrılı olan bir uyarana verilen ağrı yanıtının azalması"
+      }
+    ]
+  },
+  "disestezi": {
+    "term": "Disestezi",
+    "category": "terim",
+    "definition": "Kendiliğinden ya da uyarıyla ortaya çıkan, hoş olmayan anormal duyudur (rahatsız edici yanma, elektriklenme).",
+    "description": "Kendiliğinden ya da uyarıyla ortaya çıkan, hoş olmayan anormal duyudur (rahatsız edici yanma, elektriklenme).",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Her disestezi bir paresteziyidir; her parestezi disestezi değildir.",
+    "aliases": [
+      "dysesthesia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 10,
+        "alinti": "Disestezi Kendiliğinden ya da uyarıyla ortaya çıkan, hoş olmayan anormal duyu"
+      }
+    ]
+  },
+  "nöralji": {
+    "term": "Nöralji",
+    "category": "terim",
+    "definition": "Bir veya birden fazla sinirin dağılım alanında hissedilen ağrıdır (trigeminal nevralji, postherpetik nevralji).",
+    "description": "Bir veya birden fazla sinirin dağılım alanında hissedilen ağrıdır (trigeminal nevralji, postherpetik nevralji).",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "neuralgia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "Nöralji Bir veya birden fazla sinirin dağılım alanında hissedilen ağrı"
+      }
+    ]
+  },
+  "nöropati": {
+    "term": "Nöropati",
+    "category": "terim",
+    "definition": "Bir sinirde işlev bozukluğu veya patolojik değişikliktir; tek sinirde mononöropati, çok sinirde polinöropati denir.",
+    "description": "Bir sinirde işlev bozukluğu veya patolojik değişikliktir; tek sinirde mononöropati, çok sinirde polinöropati denir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "neuropathy"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "Nöropati Bir sinirde işlev bozukluğu veya patolojik değişiklik (mononöropati, polinöropati)"
+      }
+    ]
+  },
+  "hiperpati": {
+    "term": "Hiperpati",
+    "category": "terim",
+    "definition": "Özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepkidir; eşik genellikle artmıştır.",
+    "description": "Özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepkidir; eşik genellikle artmıştır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "hyperpathia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "Hiperpati Özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepki; eşik genellikle artmıştır"
+      }
+    ]
+  },
+  "anestezi doloroza": {
+    "term": "Anestezi doloroza",
+    "category": "terim",
+    "definition": "Duyu kaybı (anestezi) olan bir bölgede hissedilen ağrıdır; trigeminal ganglion lezyonu sonrası görülebilir.",
+    "description": "Duyu kaybı (anestezi) olan bir bölgede hissedilen ağrıdır; trigeminal ganglion lezyonu sonrası görülebilir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "anesthesia dolorosa"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "Anestezi doloroza Duyu kaybı (anestezi) olan bir bölgede hissedilen ağrı Trigeminal ganglion lezyonu sonrası"
+      }
+    ]
+  },
+  "kozalji": {
+    "term": "Kozalji",
+    "category": "hastalik",
+    "definition": "Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir; günümüzde kompleks bölgesel ağrı sendromu (KBAS) tip II adını taşır.",
+    "description": "Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir; günümüzde kompleks bölgesel ağrı sendromu (KBAS) tip II adını taşır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Kozalji = KBAS tip II.",
+    "aliases": [
+      "causalgia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Kozalji Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terim Günümüzde: Kompleks bölgesel ağrı sendromu (KBAS) tip II"
+      }
+    ]
+  },
+  "ağrı eşiği": {
+    "term": "Ağrı eşiği",
+    "category": "fizyoloji",
+    "definition": "Bir uyaranın ağrılı olarak algılandığı en düşük şiddettir.",
+    "description": "Bir uyaranın ağrılı olarak algılandığı en düşük şiddettir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Tolerans eşikten yüksektir.",
+    "aliases": [
+      "pain threshold"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Ağrı eşiği Bir uyaranın ağrılı olarak algılandığı en düşük şiddet"
+      }
+    ]
+  },
+  "ağrı toleransı": {
+    "term": "Ağrı toleransı",
+    "category": "fizyoloji",
+    "definition": "Kişinin belirli bir durumda kabul etmeye razı olduğu, ağrı oluşturan uyaranın en yüksek şiddetidir.",
+    "description": "Kişinin belirli bir durumda kabul etmeye razı olduğu, ağrı oluşturan uyaranın en yüksek şiddetidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "pain tolerance"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Ağrı tolerans düzeyi Kişinin belirli bir durumda kabul etmeye razı olduğu, ağrı oluşturan uyaranın en yüksek şiddeti"
+      }
+    ]
+  },
+  "santral nöropatik ağrı": {
+    "term": "Santral nöropatik ağrı",
+    "category": "hastalik",
+    "definition": "Santral somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır; inme sonrası ağrı, multipl skleroz ve omurilik yaralanması örnektir.",
+    "description": "Santral somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır; inme sonrası ağrı, multipl skleroz ve omurilik yaralanması örnektir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "central neuropathic pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Santral nöropatik ağrı Santral somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrı İnme sonrası ağrı, multipl skleroz, omurilik yaralanması"
+      }
+    ]
+  },
+  "nosiseptif ağrı": {
+    "term": "Nosiseptif ağrı",
+    "category": "fizyoloji",
+    "definition": "Nöral olmayan dokuda gerçek veya olası hasardan kaynaklanan, nosiseptörlerin aktivasyonuna bağlı ağrıdır (kırık, burkulma, artrit, postoperatif ağrı).",
+    "description": "Nöral olmayan dokuda gerçek veya olası hasardan kaynaklanan, nosiseptörlerin aktivasyonuna bağlı ağrıdır (kırık, burkulma, artrit, postoperatif ağrı).",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "nociceptive pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "Nosiseptif ağrı Non-nöral dokuda gerçek veya olası hasardan kaynaklanan, nosiseptörlerin aktivasyonuna bağlı ağrı"
+      }
+    ]
+  },
+  "nöropatik ağrı": {
+    "term": "Nöropatik ağrı",
+    "category": "fizyoloji",
+    "definition": "Somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır (diyabetik polinöropati, postherpetik nevralji).",
+    "description": "Somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır (diyabetik polinöropati, postherpetik nevralji).",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Yanıcı, elektrik çarpması benzeri nitelik ve allodini nöropatik ağrıyı düşündürür.",
+    "aliases": [
+      "neuropathic pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "Nöropatik ağrı Somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrı"
+      }
+    ]
+  },
+  "nosiplastik ağrı": {
+    "term": "Nosiplastik ağrı",
+    "category": "fizyoloji",
+    "definition": "Nosiseptör aktivasyonuna yol açan doku hasarı ya da somatosensoriyel lezyon kanıtı olmadan, değişmiş nosisepsiyondan kaynaklanan ağrıdır; prototipi fibromiyaljidir.",
+    "description": "Nosiseptör aktivasyonuna yol açan doku hasarı ya da somatosensoriyel lezyon kanıtı olmadan, değişmiş nosisepsiyondan kaynaklanan ağrıdır; prototipi fibromiyaljidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Psikojenik ağrı ile eş anlamlı değildir.",
+    "aliases": [
+      "nociplastic pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "Nosiplastik ağrı Nosiseptör aktivasyonuna yol açan doku hasarı ya da somatosensoriyel lezyon kanıtı olmadan, değişmiş nosisepsiyondan kaynaklanan ağrı"
+      }
+    ]
+  },
+  "karma ağrı": {
+    "term": "Karma ağrı",
+    "category": "fizyoloji",
+    "definition": "Nosiseptif, nöropatik ve nosiplastik mekanizmaların aynı hastada birlikte bulunduğu ağrıdır; kronik bel ağrısı örnektir.",
+    "description": "Nosiseptif, nöropatik ve nosiplastik mekanizmaların aynı hastada birlikte bulunduğu ağrıdır; kronik bel ağrısı örnektir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "mixed pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "Bu mekanizmalar aynı hastada birlikte bulunabilir (karma ağrı)"
+      }
+    ]
+  },
+  "deafferentasyon ağrısı": {
+    "term": "Deafferentasyon ağrısı",
+    "category": "hastalik",
+    "definition": "Somatosensoriyel girdinin kesilmesi sonrası gelişen ağrıdır; nöropatik ağrının bir alt tipi olarak ele alınır.",
+    "description": "Somatosensoriyel girdinin kesilmesi sonrası gelişen ağrıdır; nöropatik ağrının bir alt tipi olarak ele alınır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "deafferentation pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 21,
+        "alinti": "Somatosensoriyel girdinin kesilmesi sonrası gelişen ağrı; nöropatik ağrının bir alt tipi olarak ele alınır"
+      }
+    ]
+  },
+  "fantom ağrısı": {
+    "term": "Fantom ağrısı",
+    "category": "hastalik",
+    "definition": "Amputasyon sonrası eksik uzuvda hissedilen ağrıdır; uyarılacak doku yoktur ama ağrı gerçektir.",
+    "description": "Amputasyon sonrası eksik uzuvda hissedilen ağrıdır; uyarılacak doku yoktur ama ağrı gerçektir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Fantom duyu ağrısızdır.",
+    "aliases": [
+      "phantom limb pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 21,
+        "alinti": "Fantom ağrı: eksik uzuvda ağrı"
+      }
+    ]
+  },
+  "fantom duyu": {
+    "term": "Fantom duyu",
+    "category": "terim",
+    "definition": "Amputasyon sonrası ağrısız olarak eksik uzvun varlığının hissedilmesidir.",
+    "description": "Amputasyon sonrası ağrısız olarak eksik uzvun varlığının hissedilmesidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "phantom sensation"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 21,
+        "alinti": "Fantom duyu: ağrısız, eksik uzvun varlık hissi"
+      }
+    ]
+  },
+  "güdük ağrısı": {
+    "term": "Güdük ağrısı",
+    "category": "terim",
+    "definition": "Amputasyon güdüğünde hissedilen ağrıdır.",
+    "description": "Amputasyon güdüğünde hissedilen ağrıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "stump pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 21,
+        "alinti": "Güdük ağrısı: amputasyon güdüğünde ağrı"
+      }
+    ]
+  },
+  "kompleks bölgesel ağrı sendromu": {
+    "term": "Kompleks bölgesel ağrı sendromu",
+    "category": "hastalik",
+    "definition": "Eski adıyla refleks sempatik distrofi ve kozalji olan, çoğu kez travmayı izleyen, orantısız bölgesel ağrıdır; tip I'de belirgin sinir lezyonu yoktur, tip II'de vardır.",
+    "description": "Eski adıyla refleks sempatik distrofi ve kozalji olan, çoğu kez travmayı izleyen, orantısız bölgesel ağrıdır; tip I'de belirgin sinir lezyonu yoktur, tip II'de vardır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Tip II = kozalji; tanı Budapeşte kriterleriyle konur.",
+    "aliases": [
+      "KBAS"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Eski adıyla refleks sempatik distrofi ve kozalji; çoğu kez travmayı izleyen, orantısız, bölgesel ağrı"
+      }
+    ]
+  },
+  "refleks sempatik distrofi": {
+    "term": "Refleks sempatik distrofi",
+    "category": "hastalik",
+    "definition": "KBAS tip I'in eski adıdır; belirgin sinir lezyonu olmadan gelişir.",
+    "description": "KBAS tip I'in eski adıdır; belirgin sinir lezyonu olmadan gelişir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "reflex sympathetic dystrophy"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Tip I Belirgin sinir lezyonu yoktur (eski adı refleks sempatik distrofi)"
+      }
+    ]
+  },
+  "budapeşte kriterleri": {
+    "term": "Budapeşte kriterleri",
+    "category": "tani",
+    "definition": "KBAS tanısında kullanılan ölçütlerdir: orantısız süregen ağrı, dört kategoriden (duyusal, vazomotor, sudomotor/ödem, motor/trofik) en az üçünde semptom, en az ikisinde muayene bulgusu ve başka bir tanıyla daha iyi açıklanamama.",
+    "description": "KBAS tanısında kullanılan ölçütlerdir: orantısız süregen ağrı, dört kategoriden (duyusal, vazomotor, sudomotor/ödem, motor/trofik) en az üçünde semptom, en az ikisinde muayene bulgusu ve başka bir tanıyla daha iyi açıklanamama.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "Budapest criteria"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Tanı: orantısız süregen ağrı + en az 3 kategoride semptom + en az 2 kategoride muayene bulgusu + başka bir tanıyla daha iyi açıklanamaması"
+      }
+    ]
+  },
+  "sempatik olarak sürdürülen ağrı": {
+    "term": "Sempatik olarak sürdürülen ağrı",
+    "category": "terim",
+    "definition": "KBAS'ta sempatik sistem aktivitesine bağlı olan bölümün adıdır.",
+    "description": "KBAS'ta sempatik sistem aktivitesine bağlı olan bölümün adıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "sympathetically maintained pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "ICD-11’de kronik primer ağrı altında sınıflandırılır. Sempatik sistem aktivitesine bağlı olan bölümü sempatik olarak sürdürülen ağrı olarak adlandırılır"
+      }
+    ]
+  },
+  "psikojenik ağrı": {
+    "term": "Psikojenik ağrı",
+    "category": "terim",
+    "definition": "Damgalayıcı olduğu için dışlama tanısı olarak kullanılmaması gereken ve ICD-11'de karşılığı olmayan terimdir.",
+    "description": "Damgalayıcı olduğu için dışlama tanısı olarak kullanılmaması gereken ve ICD-11'de karşılığı olmayan terimdir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "psychogenic pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Psikojenik ağrı terimi Damgalayıcıdır ve dışlama tanısı olarak kullanılmamalıdır. ICD-11’de bu adla bir kategori yoktur"
+      }
+    ]
+  },
+  "somatik belirti bozukluğu": {
+    "term": "Somatik belirti bozukluğu",
+    "category": "hastalik",
+    "definition": "Belirtilere ilişkin aşırı ve orantısız düşünce, duygu ve davranışların ön planda olduğu (DSM-5), yaşanan ağrının gerçek olduğu bozukluktur.",
+    "description": "Belirtilere ilişkin aşırı ve orantısız düşünce, duygu ve davranışların ön planda olduğu (DSM-5), yaşanan ağrının gerçek olduğu bozukluktur.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "somatic symptom disorder"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Somatik belirti bozukluğu (DSM-5) Belirtilere ilişkin aşırı ve orantısız düşünce, duygu ve davranışlar ön plandadır; yaşanan ağrı gerçektir"
+      }
+    ]
+  },
+  "temaruz": {
+    "term": "Temaruz",
+    "category": "terim",
+    "definition": "İkincil (sekonder) kazanç için bilinçli belirti üretmektir; somatik belirti bozukluğuyla karıştırılmamalıdır.",
+    "description": "İkincil (sekonder) kazanç için bilinçli belirti üretmektir; somatik belirti bozukluğuyla karıştırılmamalıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "malingering"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Yapay bozukluk (factitious) ve temaruz bilinçli belirti üretimi içerir; somatizasyon ile karıştırılmamalıdır"
+      }
+    ]
+  },
+  "yapay bozukluk": {
+    "term": "Yapay bozukluk",
+    "category": "hastalik",
+    "definition": "Bilinçli belirti üretimini içeren, somatizasyonla karıştırılmaması gereken bozukluktur.",
+    "description": "Bilinçli belirti üretimini içeren, somatizasyonla karıştırılmaması gereken bozukluktur.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "factitious disorder"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Yapay bozukluk (factitious) ve temaruz bilinçli belirti üretimi içerir; somatizasyon ile karıştırılmamalıdır"
+      }
+    ]
+  },
+  "yüzeyel somatik ağrı": {
+    "term": "Yüzeyel somatik ağrı",
+    "category": "fizyoloji",
+    "definition": "Deri, deri altı ve mukozadan kaynaklanan; keskin, batıcı veya yanıcı ve iyi lokalize ağrıdır.",
+    "description": "Deri, deri altı ve mukozadan kaynaklanan; keskin, batıcı veya yanıcı ve iyi lokalize ağrıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "superficial somatic pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Yüzeyel somatik Deri, deri altı ve mukozadan kaynaklanır Keskin, batıcı veya yanıcı İyi lokalize edilir"
+      }
+    ]
+  },
+  "derin somatik ağrı": {
+    "term": "Derin somatik ağrı",
+    "category": "fizyoloji",
+    "definition": "Kas, tendon, eklem, kemik ve bağ dokusundan kaynaklanan; künt, sızlayıcı ve daha yaygın ağrıdır.",
+    "description": "Kas, tendon, eklem, kemik ve bağ dokusundan kaynaklanan; künt, sızlayıcı ve daha yaygın ağrıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "deep somatic pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Derin somatik Kas, tendon, eklem, kemik, bağ dokusu Künt, sızlayıcı, daha yaygın Lokalizasyonu yüzeyel ağrıdan daha zor; yansıyabilir"
+      }
+    ]
+  },
+  "visseral ağrı": {
+    "term": "Visseral ağrı",
+    "category": "fizyoloji",
+    "definition": "İç organlardan kaynaklanan; künt, yaygın ve kötü lokalize ağrıdır; yansıyan ağrı ve otonom yanıtlar sıktır.",
+    "description": "İç organlardan kaynaklanan; künt, yaygın ve kötü lokalize ağrıdır; yansıyan ağrı ve otonom yanıtlar sıktır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır.",
+    "aliases": [
+      "visceral pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Visseral İç organlardan kaynaklanır Künt, yaygın, kötü lokalize; kramp tarzında olabilir Yansıyan ağrı ve otonom yanıtlar sıktır"
+      }
+    ]
+  },
+  "yansıyan ağrı": {
+    "term": "Yansıyan ağrı",
+    "category": "fizyoloji",
+    "definition": "Visseral ağrının, visseral ve somatik afferentlerin aynı dorsal boynuz nöronlarına yakınsaması (yakınsama-projeksiyon hipotezi) nedeniyle somatik bir bölgede hissedilmesidir.",
+    "description": "Visseral ağrının, visseral ve somatik afferentlerin aynı dorsal boynuz nöronlarına yakınsaması (yakınsama-projeksiyon hipotezi) nedeniyle somatik bir bölgede hissedilmesidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Miyokard T1–T4, diyafram C3–C5, safra kesesi T6–T9, pankreas T6–T10, apandiks T10, böbrek T10–L1.",
+    "aliases": [
+      "referred pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Visseral ve somatik afferentlerin aynı dorsal boynuz nöronlarına yakınsaması (yakınsama-projeksiyon hipotezi)"
+      }
+    ]
+  },
+  "head zonları": {
+    "term": "Head zonları",
+    "category": "anatomi",
+    "definition": "Yansıyan ağrı bölgesinde deri hiperaljezisinin görüldüğü alanlardır.",
+    "description": "Yansıyan ağrı bölgesinde deri hiperaljezisinin görüldüğü alanlardır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "Head zones"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Yansıyan bölgede deri hiperaljezisi görülebilir (Head zonları)"
+      }
+    ]
+  },
+  "inflamatuvar ağrı": {
+    "term": "İnflamatuvar ağrı",
+    "category": "fizyoloji",
+    "definition": "Prostaglandin, bradikinin ve histamin gibi mediatörlerle nosiseptörlerin duyarlılaşmasına bağlı ağrıdır.",
+    "description": "Prostaglandin, bradikinin ve histamin gibi mediatörlerle nosiseptörlerin duyarlılaşmasına bağlı ağrıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "inflammatory pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "İnflamatuvar ağrı Prostaglandin, bradikinin, histamin gibi mediatörlerle nosiseptörlerin duyarlılaşması Artrit, enfeksiyona bağlı ağrı"
+      }
+    ]
+  },
+  "iskemik ağrı": {
+    "term": "İskemik ağrı",
+    "category": "fizyoloji",
+    "definition": "Dokuda oksijen yetersizliği sonucu H⁺, K⁺, bradikinin ve laktat birikiminin nosiseptörleri uyarmasıyla oluşan ağrıdır (angina pektoris, klodikasyon).",
+    "description": "Dokuda oksijen yetersizliği sonucu H⁺, K⁺, bradikinin ve laktat birikiminin nosiseptörleri uyarmasıyla oluşan ağrıdır (angina pektoris, klodikasyon).",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "ischemic pain"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "İskemik ağrı Dokuda oksijen yetersizliği; H⁺ (asidoz), K⁺, bradikinin ve laktat birikimi nosiseptörleri uyarır Angina pektoris, periferik arter hastalığında klodikasyon"
+      }
+    ]
+  },
+  "polimodal nosiseptör": {
+    "term": "Polimodal nosiseptör",
+    "category": "fizyoloji",
+    "definition": "Birden fazla uyaran tipine yanıt veren nosiseptördür; çoğu C lifidir.",
+    "description": "Birden fazla uyaran tipine yanıt veren nosiseptördür; çoğu C lifidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "polymodal nociceptor"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 32,
+        "alinti": "Nosiseptör tipleri Mekanik: yüksek şiddetli basınç, kesilme Termal: zararlı sıcak ve soğuk Kimyasal: H⁺, ATP, bradikinin vb. Polimodal: birden fazla uyaran tipi (çoğu C lifi) Sessiz (uyuyan): normalde yanıtsız, inflamasyonda aktive olur"
+      }
+    ]
+  },
+  "sessiz nosiseptör": {
+    "term": "Sessiz nosiseptör",
+    "category": "fizyoloji",
+    "definition": "Normalde yanıtsız olan ve inflamasyonda aktive olan nosiseptördür.",
+    "description": "Normalde yanıtsız olan ve inflamasyonda aktive olan nosiseptördür.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "silent nociceptor"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 32,
+        "alinti": "Nosiseptör tipleri Mekanik: yüksek şiddetli basınç, kesilme Termal: zararlı sıcak ve soğuk Kimyasal: H⁺, ATP, bradikinin vb. Polimodal: birden fazla uyaran tipi (çoğu C lifi) Sessiz (uyuyan): normalde yanıtsız, inflamasyonda aktive olur"
+      }
+    ]
+  },
+  "aδ lifleri": {
+    "term": "Aδ lifleri",
+    "category": "anatomi",
+    "definition": "İnce miyelinli (1–5 µm), 5–30 m/s hızla ileten ve hızlı, keskin, iyi lokalize birinci ağrıyı taşıyan liflerdir.",
+    "description": "İnce miyelinli (1–5 µm), 5–30 m/s hızla ileten ve hızlı, keskin, iyi lokalize birinci ağrıyı taşıyan liflerdir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "A-delta fibers"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 33,
+        "alinti": "Miyelin İnce miyelinli Miyelinsiz Kalın miyelinli Çap 1–5 µm 0,2–1,5 µm 6–12 µm İletim hızı 5–30 m/s 0,5–2 m/s 35–75 m/s"
+      }
+    ]
+  },
+  "c lifleri": {
+    "term": "C lifleri",
+    "category": "anatomi",
+    "definition": "Miyelinsiz (0,2–1,5 µm), 0,5–2 m/s hızla ileten ve yavaş, künt, yanıcı, yaygın ikinci ağrıyı taşıyan liflerdir.",
+    "description": "Miyelinsiz (0,2–1,5 µm), 0,5–2 m/s hızla ileten ve yavaş, künt, yanıcı, yaygın ikinci ağrıyı taşıyan liflerdir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "C fibers"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 33,
+        "alinti": "Miyelin İnce miyelinli Miyelinsiz Kalın miyelinli Çap 1–5 µm 0,2–1,5 µm 6–12 µm İletim hızı 5–30 m/s 0,5–2 m/s 35–75 m/s"
+      }
+    ]
+  },
+  "aβ lifleri": {
+    "term": "Aβ lifleri",
+    "category": "anatomi",
+    "definition": "Kalın miyelinli (6–12 µm), 35–75 m/s hızla ileten ve dokunma, titreşim, basıncı taşıyan liflerdir; kapı kontrolünde rol alır.",
+    "description": "Kalın miyelinli (6–12 µm), 35–75 m/s hızla ileten ve dokunma, titreşim, basıncı taşıyan liflerdir; kapı kontrolünde rol alır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "A-beta fibers"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 33,
+        "alinti": "Miyelin İnce miyelinli Miyelinsiz Kalın miyelinli Çap 1–5 µm 0,2–1,5 µm 6–12 µm İletim hızı 5–30 m/s 0,5–2 m/s 35–75 m/s"
+      }
+    ]
+  },
+  "trpv1": {
+    "term": "TRPV1",
+    "category": "fizyoloji",
+    "definition": "Transdüksiyonda rol alan, zararlı ısı ve kapsaisinle açılan katyon kanalıdır.",
+    "description": "Transdüksiyonda rol alan, zararlı ısı ve kapsaisinle açılan katyon kanalıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "transient receptor potential vanilloid 1"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 34,
+        "alinti": "Zararlı uyaranı elektriksel sinyale dönüştüren moleküler algılayıcılar"
+      }
+    ]
+  },
+  "transdüksiyon": {
+    "term": "Transdüksiyon",
+    "category": "fizyoloji",
+    "definition": "Zararlı uyaranın nosiseptör ucunda elektriksel sinyale dönüşmesidir.",
+    "description": "Zararlı uyaranın nosiseptör ucunda elektriksel sinyale dönüşmesidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "Dört aşamanın ilkidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 37,
+        "alinti": "Zararlı uyaran Mekanik, termal veya kimyasal enerji nosiseptör ucuna etki eder"
+      }
+    ]
+  },
+  "transmisyon": {
+    "term": "Transmisyon",
+    "category": "fizyoloji",
+    "definition": "Sinyalin primer afferentten dorsal boynuz, çıkan yollar ve talamus üzerinden iletilmesidir.",
+    "description": "Sinyalin primer afferentten dorsal boynuz, çıkan yollar ve talamus üzerinden iletilmesidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "transmission"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 36,
+        "alinti": "Nosiseptif işlemenin dört aşaması Öğretici bir çerçevedir; aşamalar tek yönlü ve birbirinden bağımsız değildir"
+      }
+    ]
+  },
+  "modülasyon": {
+    "term": "Modülasyon",
+    "category": "fizyoloji",
+    "definition": "Nosiseptif sinyalin spinal ve supraspinal düzeyde güçlendirilmesi veya baskılanmasıdır.",
+    "description": "Nosiseptif sinyalin spinal ve supraspinal düzeyde güçlendirilmesi veya baskılanmasıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "modulation"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 41,
+        "alinti": "Modülasyon iki yönlüdür: inhibisyon (fren) ve fasilitasyon (gaz)"
+      }
+    ]
+  },
+  "persepsiyon": {
+    "term": "Persepsiyon",
+    "category": "fizyoloji",
+    "definition": "Nosiseptif sinyalin kortekste bilinçli ağrı deneyimine dönüşmesidir.",
+    "description": "Nosiseptif sinyalin kortekste bilinçli ağrı deneyimine dönüşmesidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "perception"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 45,
+        "alinti": "Ağrı tek bir merkezde değil, dağıtık ve etkileşen beyin ağlarında oluşur"
+      }
+    ]
+  },
+  "reseptör potansiyeli": {
+    "term": "Reseptör potansiyeli",
+    "category": "fizyoloji",
+    "definition": "Nosiseptör ucunda uyaran şiddetiyle orantılı oluşan derecelendirilmiş depolarizasyondur.",
+    "description": "Nosiseptör ucunda uyaran şiddetiyle orantılı oluşan derecelendirilmiş depolarizasyondur.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "receptor potential"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 37,
+        "alinti": "Reseptör potansiyeli Uçta derecelendirilmiş depolarizasyon oluşur; şiddet ile orantılıdır"
+      }
+    ]
+  },
+  "substantia gelatinosa": {
+    "term": "Substantia gelatinosa",
+    "category": "anatomi",
+    "definition": "Dorsal boynuzun lamina II'sidir; C liflerinin sonlandığı ve spinal modülasyonun merkezi olan bölgedir.",
+    "description": "Dorsal boynuzun lamina II'sidir; C liflerinin sonlandığı ve spinal modülasyonun merkezi olan bölgedir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "lamina II"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 38,
+        "alinti": "Lamina II (substantia gelatinosa) C lifleri; eksitatör ve inhibitör internöronlar. Spinal modülasyonun (kapı) merkezi"
+      }
+    ]
+  },
+  "geniş dinamik aralıklı nöron": {
+    "term": "Geniş dinamik aralıklı nöron",
+    "category": "fizyoloji",
+    "definition": "Dorsal boynuz lamina V'te Aδ, C ve Aβ girdilerini alan, somatik-visseral yakınsamanın yeri olan nörondur.",
+    "description": "Dorsal boynuz lamina V'te Aδ, C ve Aβ girdilerini alan, somatik-visseral yakınsamanın yeri olan nörondur.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "WDR neuron"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 38,
+        "alinti": "Lamina V Aδ, C ve Aβ girdilerini alan geniş dinamik aralıklı (WDR) nöronlar; somatik-visseral yakınsama"
+      }
+    ]
+  },
+  "spinotalamik traktus": {
+    "term": "Spinotalamik traktus",
+    "category": "anatomi",
+    "definition": "Dorsal boynuzdan çaprazlaşıp karşı anterolateral kordonla talamusa uzanan çıkan ağrı yoludur.",
+    "description": "Dorsal boynuzdan çaprazlaşıp karşı anterolateral kordonla talamusa uzanan çıkan ağrı yoludur.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "spinothalamic tract"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 39,
+        "alinti": "2. nöron Dorsal boynuz → çaprazlaşma → karşı anterolateral kordon → talamus"
+      }
+    ]
+  },
+  "p maddesi": {
+    "term": "P maddesi",
+    "category": "fizyoloji",
+    "definition": "NK1 reseptörü üzerinden yavaş ve uzun süreli eksitasyon yapan peptit ileticidir; nörojenik inflamasyonda da salınır.",
+    "description": "NK1 reseptörü üzerinden yavaş ve uzun süreli eksitasyon yapan peptit ileticidir; nörojenik inflamasyonda da salınır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "substance P"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 40,
+        "alinti": "P maddesi, nörokinin A NK1 Yavaş ve uzun süreli eksitasyon"
+      }
+    ]
+  },
+  "kapı kontrol teorisi": {
+    "term": "Kapı kontrol teorisi",
+    "category": "fizyoloji",
+    "definition": "Melzack ve Wall'un 1965'te öne sürdüğü, Aβ girdisinin inhibitör internöronu uyararak nosiseptif aktarımı azalttığı (kapı kapanır), Aδ/C girdisinin ise kapıyı açtığı kuramdır.",
+    "description": "Melzack ve Wall'un 1965'te öne sürdüğü, Aβ girdisinin inhibitör internöronu uyararak nosiseptif aktarımı azalttığı (kapı kapanır), Aδ/C girdisinin ise kapıyı açtığı kuramdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "clinicalPearl": "TENS bu kurama dayanır.",
+    "aliases": [
+      "gate control theory"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 42,
+        "alinti": "Kapı kapanır Aβ girdisi inhibitör internöronu uyarır; projeksiyon nöronuna nosiseptif aktarım azalır"
+      }
+    ]
+  },
+  "tens": {
+    "term": "TENS",
+    "category": "tedavi",
+    "definition": "Dokunma liflerini (Aβ) uyararak nosiseptif aktarımı azaltan ve kapı kontrol teorisine dayanan cihazdır.",
+    "description": "Dokunma liflerini (Aβ) uyararak nosiseptif aktarımı azaltan ve kapı kontrol teorisine dayanan cihazdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "transcutaneous electrical nerve stimulation"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 42,
+        "alinti": "Aβ girdisi inhibitör internöronu uyarır; projeksiyon nöronuna nosiseptif aktarım azalır"
+      }
+    ]
+  },
+  "pag": {
+    "term": "PAG",
+    "category": "anatomi",
+    "definition": "Orta beyindeki periakuaduktal griyi ifade eder; opioid reseptörlerinden zengindir ve inen ağrı kontrolünün ana düğümüdür.",
+    "description": "Orta beyindeki periakuaduktal griyi ifade eder; opioid reseptörlerinden zengindir ve inen ağrı kontrolünün ana düğümüdür.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "periaqueductal gray"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 43,
+        "alinti": "PAG (orta beyin) Opioid reseptörlerinden zengin; inen kontrolün ana düğümü"
+      }
+    ]
+  },
+  "rvm": {
+    "term": "RVM",
+    "category": "anatomi",
+    "definition": "İnen ağrı kontrolünde serotonerjik, \"ON\" ve \"OFF\" hücreleri içeren rostral ventromedial medulladır.",
+    "description": "İnen ağrı kontrolünde serotonerjik, \"ON\" ve \"OFF\" hücreleri içeren rostral ventromedial medulladır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "rostral ventromedial medulla"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 43,
+        "alinti": "RVM ve locus coeruleus RVM: serotonerjik, ON/OFF hücreleri. LC: noradrenerjik inen yol"
+      }
+    ]
+  },
+  "locus coeruleus": {
+    "term": "Locus coeruleus",
+    "category": "anatomi",
+    "definition": "İnen ağrı kontrolünde noradrenerjik inen yolun çıktığı çekirdektir.",
+    "description": "İnen ağrı kontrolünde noradrenerjik inen yolun çıktığı çekirdektir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "locus coeruleus"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 43,
+        "alinti": "RVM ve locus coeruleus RVM: serotonerjik, ON/OFF hücreleri. LC: noradrenerjik inen yol"
+      }
+    ]
+  },
+  "dnıc": {
+    "term": "DNIC",
+    "category": "fizyoloji",
+    "definition": "\"Ağrı ağrıyı baskılar\" olarak bilinen inen kontrol örneğidir.",
+    "description": "\"Ağrı ağrıyı baskılar\" olarak bilinen inen kontrol örneğidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "diffuse noxious inhibitory control"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 43,
+        "alinti": "Örnekler Stres analjezisi; plasebo analjezisi; ağrı ağrıyı baskılar (DNIC)"
+      }
+    ]
+  },
+  "endojen opioidler": {
+    "term": "Endojen opioidler",
+    "category": "fizyoloji",
+    "definition": "Enkefalinler (δ ve μ), β-endorfin (μ) ve dinorfinlerdir (κ); presinaptik Ca²⁺ kanalını inhibe edip postsinaptik K⁺ kanalını açarak ağrıyı baskılar.",
+    "description": "Enkefalinler (δ ve μ), β-endorfin (μ) ve dinorfinlerdir (κ); presinaptik Ca²⁺ kanalını inhibe edip postsinaptik K⁺ kanalını açarak ağrıyı baskılar.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "endogenous opioids"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 44,
+        "alinti": "Presinaptik etki Primer afferent ucunda voltaj kapılı Ca²⁺ kanallarını inhibe eder → glutamat ve P maddesi salınımı azalır"
+      }
+    ]
+  },
+  "periferik sensitizasyon": {
+    "term": "Periferik sensitizasyon",
+    "category": "fizyoloji",
+    "definition": "Hasarlı dokuda nosiseptör eşiğinin düşmesi ve yanıtın artmasıdır; primer hiperaljeziyle ilişkilidir.",
+    "description": "Hasarlı dokuda nosiseptör eşiğinin düşmesi ve yanıtın artmasıdır; primer hiperaljeziyle ilişkilidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "peripheral sensitization"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 48,
+        "alinti": "Periferik sensitizasyon Nosiseptör eşiğinde düşme ve yanıtında artış Hasarlı dokunun kendisinde Primer hiperaljeziyle ilişkili"
+      }
+    ]
+  },
+  "inflamatuvar çorba": {
+    "term": "İnflamatuvar çorba",
+    "category": "fizyoloji",
+    "definition": "Doku hasarında nosiseptör çevresinde oluşan mediatör karışımıdır (bradikinin, prostaglandinler, histamin, serotonin, NGF, sitokinler).",
+    "description": "Doku hasarında nosiseptör çevresinde oluşan mediatör karışımıdır (bradikinin, prostaglandinler, histamin, serotonin, NGF, sitokinler).",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "inflammatory soup"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 49,
+        "alinti": "Doku hasarı ve inflamasyon nosiseptör çevresinde bir inflamatuvar çorba oluşturur Hücreler Hasarlı doku hücreleri Mast hücreleri, makrofajlar, nötrofiller Trombositler"
+      }
+    ]
+  },
+  "wind-up": {
+    "term": "Wind-up",
+    "category": "fizyoloji",
+    "definition": "Aynı şiddetteki tekrarlayan uyarana yanıtın giderek artmasıdır (temporal sumasyon).",
+    "description": "Aynı şiddetteki tekrarlayan uyarana yanıtın giderek artmasıdır (temporal sumasyon).",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "wind-up"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 51,
+        "alinti": "Wind-up Aynı şiddetteki tekrarlayan uyarana yanıtın giderek artması (temporal sumasyon)"
+      }
+    ]
+  },
+  "nörojenik inflamasyon": {
+    "term": "Nörojenik inflamasyon",
+    "category": "fizyoloji",
+    "definition": "Nosiseptörün periferik ucundan P maddesi, nörokinin A ve CGRP salınmasıyla vazodilatasyon, ödem ve mast hücresi degranülasyonunun gelişmesidir.",
+    "description": "Nosiseptörün periferik ucundan P maddesi, nörokinin A ve CGRP salınmasıyla vazodilatasyon, ödem ve mast hücresi degranülasyonunun gelişmesidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "neurogenic inflammation"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Peptit salınımı Periferik uçlardan P maddesi, nörokinin A ve CGRP salınır"
+      }
+    ]
+  },
+  "akson refleksi": {
+    "term": "Akson refleksi",
+    "category": "fizyoloji",
+    "definition": "Nosiseptörde aksiyon potansiyelinin dallara antidromik olarak yayılmasıdır.",
+    "description": "Nosiseptörde aksiyon potansiyelinin dallara antidromik olarak yayılmasıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "axon reflex"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Nosiseptör uyarımı Aksiyon potansiyeli dallara antidromik olarak da yayılır (akson refleksi)"
+      }
+    ]
+  },
+  "kcc2": {
+    "term": "KCC2",
+    "category": "fizyoloji",
+    "definition": "Ekspresyonunun azalması klorür gradiyentini bozarak GABA ve glisinin inhibitör etkisini zayıflatan taşıyıcıdır.",
+    "description": "Ekspresyonunun azalması klorür gradiyentini bozarak GABA ve glisinin inhibitör etkisini zayıflatan taşıyıcıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "KCC2"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 52,
+        "alinti": "Klorür gradiyentinin bozulması KCC2 ekspresyonunun azalmasıyla GABA ve glisinin inhibitör (hiperpolarizan) etkisi zayıflar"
+      }
+    ]
+  },
+  "nöroplastisite": {
+    "term": "Nöroplastisite",
+    "category": "fizyoloji",
+    "definition": "Sinir sisteminin aktivite ve deneyime bağlı işlevsel ve yapısal değişebilme kapasitesidir.",
+    "description": "Sinir sisteminin aktivite ve deneyime bağlı işlevsel ve yapısal değişebilme kapasitesidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "neuroplasticity"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 53,
+        "alinti": "Nöroplastisite: sinir sisteminin aktivite ve deneyime bağlı işlevsel ve yapısal değişebilme kapasitesi"
+      }
+    ]
+  },
+  "katastrofizasyon": {
+    "term": "Katastrofizasyon",
+    "category": "terim",
+    "definition": "Ağrıyı felaket gibi algılama eğilimidir; kronikleşmenin psikososyal risk etkenidir.",
+    "description": "Ağrıyı felaket gibi algılama eğilimidir; kronikleşmenin psikososyal risk etkenidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "pain catastrophizing"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 54,
+        "alinti": "Psikososyal risk etkenleri Ağrı felaketleştirme (katastrofizasyon) Kaygı, depresif duygudurum Korku-kaçınma davranışı, sosyal destek eksikliği"
+      }
+    ]
+  },
+  "biyopsikososyal model": {
+    "term": "Biyopsikososyal model",
+    "category": "terim",
+    "definition": "Kronik ağrının biyolojik, psikolojik ve sosyal boyutların birlikte etkisiyle açıklandığı modeldir.",
+    "description": "Kronik ağrının biyolojik, psikolojik ve sosyal boyutların birlikte etkisiyle açıklandığı modeldir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "biopsychosocial model"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 55,
+        "alinti": "Biyolojik Nosisepsiyon, sensitizasyon, disinhibisyon, sinaptik ve kortikal plastisite"
+      }
+    ]
+  },
+  "melzack ve casey modeli": {
+    "term": "Melzack ve Casey modeli",
+    "category": "terim",
+    "definition": "Ağrının duyusal-diskriminatif, motivasyonel-afektif ve bilişsel-değerlendirici üç boyutlu olduğunu ve boyutların birlikte işlendiğini öne süren modeldir.",
+    "description": "Ağrının duyusal-diskriminatif, motivasyonel-afektif ve bilişsel-değerlendirici üç boyutlu olduğunu ve boyutların birlikte işlendiğini öne süren modeldir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "Melzack-Casey model"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 7,
+        "alinti": "Duyusal-diskriminatif Ağrının yeri, şiddeti, süresi, niteliği Talamus (lateral çekirdekler), S1, S2, posterior insula"
+      }
+    ]
+  },
+  "primer hiperaljezi": {
+    "term": "Primer hiperaljezi",
+    "category": "terim",
+    "definition": "Hasarlı dokunun kendisinde gelişen hiperaljezidir; periferik sensitizasyonla ilişkilidir.",
+    "description": "Hasarlı dokunun kendisinde gelişen hiperaljezidir; periferik sensitizasyonla ilişkilidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "primary hyperalgesia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 48,
+        "alinti": "Örnek: Güneş yanığı bölgesindeki hiperaljezi (primer) ile yanığın çevresindeki sağlam deride artmış duyarlılık (sekonder)"
+      }
+    ]
+  },
+  "sekonder hiperaljezi": {
+    "term": "Sekonder hiperaljezi",
+    "category": "terim",
+    "definition": "Hasarın çevresindeki sağlam dokuya yayılan hiperaljezidir; santral sensitizasyonla ilişkilidir.",
+    "description": "Hasarın çevresindeki sağlam dokuya yayılan hiperaljezidir; santral sensitizasyonla ilişkilidir.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "secondary hyperalgesia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 48,
+        "alinti": "Örnek: Güneş yanığı bölgesindeki hiperaljezi (primer) ile yanığın çevresindeki sağlam deride artmış duyarlılık (sekonder)"
+      }
+    ]
+  },
+  "dinamik mekanik allodini": {
+    "term": "Dinamik mekanik allodini",
+    "category": "terim",
+    "definition": "Santral sensitizasyonda Aβ lifleri aracılığıyla dokunmanın ağrı oluşturmasıdır.",
+    "description": "Santral sensitizasyonda Aβ lifleri aracılığıyla dokunmanın ağrı oluşturmasıdır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "dynamic mechanical allodynia"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 51,
+        "alinti": "Klinik karşılıkları Sekonder hiperaljezi Dinamik mekanik allodini (Aβ aracılı) Ağrının lezyon alanının dışına yayılması Spontan ağrı"
+      }
+    ]
+  },
+  "ektopik deşarj": {
+    "term": "Ektopik deşarj",
+    "category": "fizyoloji",
+    "definition": "Nöroma ve dorsal kök ganglionunda uyaran olmadan oluşan anormal impuls üretimidir; nöropatik ağrının ortak mekanizmalarındandır.",
+    "description": "Nöroma ve dorsal kök ganglionunda uyaran olmadan oluşan anormal impuls üretimidir; nöropatik ağrının ortak mekanizmalarındandır.",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "committee": "",
+    "aliases": [
+      "ectopic discharge"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-06"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Anesteziyoloji ve Reanimasyon/1)Ağrı Fizyopatlojisi.pdf",
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "kurul": 2,
+        "sayfa": 20,
+        "alinti": "Ortak mekanizmalar: ektopik deşarj, iyon kanalı ekspresyonunda değişiklik, santral sensitizasyon ve disinhibisyon"
       }
     ]
   }

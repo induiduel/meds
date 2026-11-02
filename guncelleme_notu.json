@@ -1,15 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 621,
-  "baslik": "Yeni ders: Baş Ağrısına Yaklaşım",
+  "onem": 622,
+  "baslik": "Yeni ders: Ağrı Fizyopatolojisi + ders PDF bağları",
   "maddeler": [
-    "Nöroloji · Baş Ağrısına Yaklaşım eklendi: Öğren destesi (44 slayt), ders notu, 69 örnek soru, terimler, 13 doğrulanmış çıkmış.",
-    "Hocanın derste önemli ve dikkat dediği 12 yer \"Hocanın vurguladıkları\" listesinde."
+    "Anesteziyoloji · Ağrı Fizyopatolojisi eklendi: Öğren destesi (72 slayt), ders notu, 78 örnek soru, ağrı terimleri, hocanın 32 vurgusu.",
+    "Yeni Kurul 2 derslerinin PDF'leri ders sayfasında ve sesli derste açılıyor."
   ],
   "eklenen": [
-    "Baş Ağrısına Yaklaşım dersi"
+    "Ağrı Fizyopatolojisi dersi"
   ],
-  "degisen": [],
+  "degisen": [
+    "Ders PDF eşlemesi (Psikiyatrik Semiyoloji, MSS İlaçlarına Giriş, Baş Ağrısı, Ağrı Fizyopatolojisi)"
+  ],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": []

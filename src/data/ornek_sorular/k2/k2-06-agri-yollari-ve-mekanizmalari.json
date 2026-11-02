@@ -1,0 +1,3083 @@
+{
+ "id": "k2-06-agri-yollari-ve-mekanizmalari",
+ "sira": 6,
+ "kurul": 1,
+ "ders": "Anesteziyoloji ve Reanimasyon",
+ "konu": "Ağrı Fizyopatolojisi (kayıtta: Ağrı Yolları ve Mekanizmaları)",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-10-27",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Öğrenci, IASP 2020 ağrı tanımını ve altı maddesini açıklar; ağrı ile nosisepsiyonu ayırt eder; ağrıyı etkileyen bireysel etkenleri ve Melzack–Casey üç boyutlu modelini sayar.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "IASP 2020 tanımına göre ağrı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gösterilebilir lezyonu olmayan kişilerde görülen psikolojik belirti",
+      "B": "Doku hasarının varlığında ortaya çıkan zorunlu bir duyu",
+      "C": "Duyusal nöronların elektriksel aktivitesinin kendisi",
+      "D": "Yalnızca nosiseptörlerin uyarılmasıyla oluşan bir duyu",
+      "E": "Hoş olmayan duyusal ve emosyonel bir deneyim"
+     },
+     "dogru": "E",
+     "aciklama": "IASP 2020 tanımında ağrı bir duyu değil, duyusal ve emosyonel bileşenleri olan öznel bir deneyimdir (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Psikolojik köken, ağrının tek açıklaması olarak kullanılabilecek bir kavram değildir. Lezyon gösterilemeyen ağrı yakınması psikolojik olduğu anlamına gelmez; ağrı yine de gerçek bir deneyimdir (sayfa 3).",
+      "B": "Doku hasarı ağrıyla ilişkili olabilir ancak ağrının ortaya çıkması için zorunlu bir koşul değildir. Gösterilebilir bir lezyon olmadan da ağrı yaşanabileceği için bu ifade tanıma uymaz (sayfa 3).",
+      "C": "Duyusal nöronların aktivitesi nosisepsiyonun bir parçasıdır ve zararlı uyaranın işlenmesini yansıtır. Ağrı yalnızca bu aktiviteyi içermez; duyusal ve emosyonel bileşenleri olan öznel bir deneyimdir (sayfa 4).",
+      "D": "Nosiseptörlerin uyarılması zararlı uyaranın sinir sistemi tarafından işlenmesi olan nosisepsiyonu başlatır. Ağrı ise bu uyarıdan bağımsız da yaşanabilen bir deneyim olduğundan yalnızca nosiseptör uyarımına indirgenemez (sayfa 3).",
+      "E": "IASP 2020 tanımı ağrıyı, gerçek veya olası doku hasarıyla ilişkili ya da benzeyen, hoş olmayan duyusal ve emosyonel bir deneyim olarak tarif eder. Bu tanım ağrıyı öznel ve çok bileşenli bir yaşantı sayar. Soru bu tanımı sorduğu için doğru seçenektir (sayfa 3)."
+     },
+     "bilgi": [
+      1,
+      2,
+      12
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "duyusal ve emosyonel bileşenleri olan öznel bir deneyimdir"
+     },
+     "s": 3,
+     "dayanak": [
+      "hoca:hv-k2-06-01",
+      "hoca:hv-k2-06-07",
+      "ozen:s3",
+      "not:s3"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q05",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Zararlı uyaranın sinir sistemi tarafından işlenmesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Allodini",
+      "B": "Nosisepsiyon",
+      "C": "Hiperaljezi",
+      "D": "Ağrı",
+      "E": "Persepsiyon"
+     },
+     "dogru": "B",
+     "aciklama": "Nosisepsiyon zararlı uyaranın sinir sistemi tarafından işlenmesidir (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "Allodini, normalde ağrı oluşturmayan bir uyaranın ağrıya neden olmasıdır. Bir ağrı terimidir ve uyaranın sinir sistemince işlenmesini tanımlamaz (sayfa 9).",
+      "B": "Nosisepsiyon, zararlı uyaranın nosiseptörler ve afferent yolaklar aracılığıyla sinir sistemi tarafından işlenmesidir. Bilinçli ağrı deneyimi olmadan da oluşabilir; soru bu tanımı sorduğu için seçenek doğrudur (sayfa 5).",
+      "C": "Hiperaljezi, normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır. Yanıtın şiddetini anlatır; zararlı uyaranın işlenmesini tanımlayan kavram nosisepsiyondur (sayfa 9).",
+      "D": "Ağrı, hoş olmayan öznel duyusal ve emosyonel bir deneyimdir ve beyindeki dağınık ağların etkileşimiyle oluşur. Zararlı uyaranın yalnızca işlenmesini anlatan nosisepsiyondan farklı bir kavramdır (sayfa 5).",
+      "E": "Persepsiyon, ağrı yolunun dördüncü aşaması olan bilinçli ağrı deneyimidir. Uyaranın işlenmesini değil beyinde algılanmasını anlatır; tanımda sorulan olay bu değildir (sayfa 45)."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Zararlı uyaranın sinir sistemi tarafından işlenmesi"
+     },
+     "s": 5,
+     "dayanak": [
+      "hoca:hv-k2-06-06",
+      "ozen:s5",
+      "not:s5"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q10",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "IASP 2020'ye göre ağrının işleviyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bebek ve demanslı kişilerde ağrı yaşanmasını engeller",
+      "B": "Genellikle koruyucudur ancak işlevselliği bozabilir",
+      "C": "Yalnızca sözel olarak bildirildiğinde gerçek kabul edilir",
+      "D": "İşlevselliği yalnızca kronik olduğunda bozar",
+      "E": "Her zaman koruyucu bir uyarıdır ve işlevselliği bozmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Ağrı genellikle uyarıcı ve koruyucudur; ancak işlevselliği ve iyilik hâlini bozabilir (sayfa 4).",
+     "sik_aciklamalari": {
+      "A": "Bebek ve demans gibi durumlarda kişi sözel iletişim kuramasa da ağrı yaşayabilir. IASP 2020'nin altıncı maddesi bunu açıkça belirttiği için ifade yanlıştır (sayfa 4).",
+      "B": "Ağrı genellikle uyarıcı ve koruyucu bir işlev görür; ancak işlevselliği ve iyilik hâlini bozabilir. IASP 2020'nin beşinci maddesi olan bu ifade soruda sorulan bilgidir (sayfa 4).",
+      "C": "Ağrının gerçekliği sözel bildirime bağlı değildir; bebek ve demans gibi durumlarda kişi ağrı yaşayabilir. Sözel ifade edememek ağrı yaşama olasılığını dışlamaz ve bildirim varsa saygıyla karşılanır (sayfa 4).",
+      "D": "Kronik ağrı işlevselliği, uykuyu ve duygudurumu bozar; ancak ağrının işlevselliği bozması yalnızca kronik olmasına bağlı değildir. Sınırlayıcı yalnızca ifadesi maddeyi eksik aktarır (sayfa 16).",
+      "E": "Ağrı çoğu zaman koruyucudur ama işlevselliği bozabilir. Her zaman ve bozmaz gibi mutlak ifadeler IASP 2020 maddesiyle çelişir (sayfa 4)."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Ağrı genellikle uyarıcı/koruyucudur; ancak işlevselliği ve iyilik hâlini bozabilir"
+     },
+     "s": 4,
+     "dayanak": [
+      "hoca:hv-k2-06-05",
+      "ozen:s4"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ağrının tanımı ve doğası ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gösterilebilir bir lezyon bulunmaması, yakınmanın psikolojik olduğunu gösterir",
+      "B": "Bireyler ağrı kavramını yaşam deneyimleri aracılığıyla öğrenir",
+      "C": "Ağrı yalnızca duyusal nöronların aktivitesinden ibaret değildir",
+      "D": "Ağrı bir duyu olmayıp duyusal ve emosyonel bileşenleri olan öznel bir deneyimdir",
+      "E": "Ağrı, olası doku hasarıyla ilişkili ya da buna benzeyen bir deneyim olabilir"
+     },
+     "dogru": "A",
+     "aciklama": "Lezyon gösterilememesi ağrının psikolojik olduğunu kanıtlamaz; yanlış olan bu ifadedir (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Gösterilebilir bir lezyon olmadan da ağrı yaşanabilir; bu durum yakınmanın psikolojik olduğu anlamına gelmez. İfade lezyonsuzluğu psikolojik köken kanıtı saydığı için yanlıştır (sayfa 3).",
+      "B": "IASP 2020'nin üçüncü maddesine göre ağrı kavramı kişinin yaşam deneyimleriyle şekillenir. İfade bu maddeyi doğru yansıttığından doğru önermedir (sayfa 4).",
+      "C": "Ağrı, duyusal nöron aktivitesine ek olarak emosyonel ve bilişsel bileşenleri içerir. IASP 2020'nin ikinci maddesi ağrı ile nosisepsiyonun aynı şey olmadığını vurguladığı için ifade doğrudur (sayfa 4).",
+      "D": "Ağrı bir duyu değil, duyusal ve emosyonel bileşenleri birlikte taşıyan öznel bir deneyimdir. Bu ifade IASP 2020 tanımıyla uyumlu olduğundan doğru bir önermedir (sayfa 3).",
+      "E": "Tanımdaki olası ve benzeyen sözcükleri, ağrının doku hasarı gösterilmeden de tanımlanabildiğini anlatır. Bu nedenle ifade IASP 2020 tanımıyla uyumludur ve doğru bir önermedir (sayfa 3)."
+     },
+     "bilgi": [
+      2,
+      3,
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "gösterilebilir lezyon olmadan da ağrı yaşanabilir"
+     },
+     "s": 3,
+     "dayanak": [
+      "hoca:hv-k2-06-01",
+      "hoca:hv-k2-06-02",
+      "hoca:hv-k2-06-03",
+      "ozen:s3",
+      "not:s3"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Muayene ve tetkiklerinde gösterilebilir bir lezyon saptanamayan bir hastanın ağrı yakınmasıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Doku hasarı bulunmadığı için ağrının gerçek olmadığı kabul edilir",
+      "B": "Ağrı yaşanabilmesi için nosiseptif uyaranın bulunması zorunludur",
+      "C": "Lezyon gösterilemiyorsa yakınma dışlama tanısıyla psikojenik ağrı olarak adlandırılır",
+      "D": "Ağrı yaşıyor olabilir; bu durum yakınmanın psikolojik olduğu anlamına gelmez",
+      "E": "Ağrının varlığı yalnızca lezyonun görüntülemeyle gösterilmesiyle kabul edilir"
+     },
+     "dogru": "D",
+     "aciklama": "Ağrı, gösterilebilir lezyon olmadan da yaşanabilir ve bu durum yakınmayı psikolojik yapmaz (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Ağrının gerçekliği, doku hasarının gösterilebilmesine bağlı değildir. Bildirimin saygıyla karşılanması ilkesi, lezyonsuz hastanın ağrısının da gerçek kabul edilmesini gerektirir (sayfa 4).",
+      "B": "Nosiseptif uyarı ağrı için ne gereklidir ne de yeterlidir. Fantom ağrısında uyarılacak doku bulunmadığı hâlde ağrı gerçektir; bu nedenle ifade yanlıştır (sayfa 5).",
+      "C": "Psikojenik ağrı terimi damgalayıcıdır ve dışlama tanısı olarak kullanılmaması gerekir. ICD-11'de bu adla bir kategori yer almadığı için lezyonsuz ağrıya bu adın verilmesi doğru değildir (sayfa 24).",
+      "D": "IASP 2020'ye göre ağrı, doku hasarı gösterilmeden de yaşanabilen öznel bir deneyimdir. Lezyonun bulunmaması ağrıyı geçersiz kılmaz ve yakınmayı psikolojik yapmaz; bu nedenle ifade doğrudur (sayfa 3).",
+      "E": "Görüntüleme lezyonu gösteren yardımcı bir araçtır ve ağrının varlığına karar veren ölçüt olarak kullanılmaz. IASP 2020 ağrıyı kişinin kendi bildirimiyle tanır; bildirime saygı ilkesi bunu destekler (sayfa 4)."
+     },
+     "bilgi": [
+      3,
+      7,
+      85
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Gösterilebilir lezyon olmadan da ağrı yaşanabilir"
+     },
+     "s": 3,
+     "dayanak": [
+      "hoca:hv-k2-06-02",
+      "hoca:hv-k2-06-03",
+      "ozen:s3",
+      "not:s3"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ağrı ile nosisepsiyon arasındaki ilişkiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Genel anestezide nosiseptif uyarana yanıt oluşması ağrı algılandığını gösterir",
+      "B": "Nosisepsiyon her zaman bilinçli ağrı deneyimiyle sonlanır",
+      "C": "Ağrı, belirgin bir nosiseptif uyaran olmadan da yaşanabilir",
+      "D": "Nosiseptif uyarı ağrı için hem gerekli hem yeterlidir",
+      "E": "Ağrı ve nosisepsiyon aynı olayın iki farklı adıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Fantom ağrısında olduğu gibi ağrı, belirgin nosiseptif uyaran olmadan da yaşanabilir (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "Genel anestezide nosiseptif uyarana otonom yanıt, yani taşikardi ve hipertansiyon görülebilir. Bu yanıt nosisepsiyonun işlendiğini gösterir; bilinçli bir ağrı algısını göstermez (sayfa 5).",
+      "B": "Nosisepsiyon bilinçli ağrı deneyimi olmadan da oluşabilir. Genel anestezi altında zararlı uyarana taşikardi ve hipertansiyon gibi otonom yanıtlar görülür ama ağrı yaşanmaz (sayfa 5).",
+      "C": "Fantom ağrısında uyarılacak doku bulunmadığı hâlde kişi gerçek bir ağrı yaşar. Bu durum ağrının, beyindeki dağınık ağların etkileşimiyle belirgin nosiseptif uyaran olmadan da oluşabildiğini gösterir (sayfa 5).",
+      "D": "Nosiseptif uyarı ağrı için ne gereklidir ne de yeterlidir. Uyarı olmadan da ağrı yaşanabilir, uyarı varken de bilinçli ağrı bulunmayabilir (sayfa 5).",
+      "E": "Ağrı ve nosisepsiyon kavramları birbirinden ayrılır. Nosisepsiyon sinir sisteminin zararlı uyaranı işlemesidir, ağrı ise öznel duyusal ve emosyonel bir deneyimdir (sayfa 4)."
+     },
+     "bilgi": [
+      13,
+      14,
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Belirgin nosiseptif uyaran olmadan da yaşanabilir"
+     },
+     "s": 5,
+     "dayanak": [
+      "hoca:hv-k2-06-04",
+      "hoca:hv-k2-06-08",
+      "ozen:s5",
+      "not:s5"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bir hasta ağrısını \"Bu ağrı beni korkutuyor, elimi hemen çekmek istiyorum\" diye anlatmaktadır. Melzack ve Casey modeline göre bu ifade ağrının hangi boyutunu yansıtır?",
+     "secenekler": {
+      "A": "Duyusal-diskriminatif boyut",
+      "B": "Sosyokültürel boyut",
+      "C": "Motivasyonel-afektif boyut",
+      "D": "Bilişsel-değerlendirici boyut",
+      "E": "Biyolojik boyut"
+     },
+     "dogru": "C",
+     "aciklama": "Korku ve kaçınma isteği, ağrının motivasyonel-afektif boyutudur (sayfa 7).",
+     "sik_aciklamalari": {
+      "A": "Duyusal-diskriminatif boyut ağrının yerini, şiddetini, süresini ve niteliğini belirler. Hastanın cümlesinde yer ya da şiddet bildirimi değil korku ve kaçınma öne çıktığı için bu boyut doğru seçenek değildir (sayfa 7).",
+      "B": "Sosyokültürel etkenler kültür, dil, inanç ve çevrenin ağrıya yaklaşımını içerir ve ağrı deneyimini etkiler. Melzack ve Casey'in üç boyutundan biri olmadığı için hastanın korku ifadesini karşılamaz (sayfa 6).",
+      "C": "Motivasyonel-afektif boyut ağrının hoş olmama, korku, kaygı ve kaçınma yönünü taşır; anterior singulat korteks, anterior insula ve amigdalayı kapsar. Hastanın korkusu ve elini çekme isteği bu boyuta karşılık gelir (sayfa 7).",
+      "D": "Bilişsel-değerlendirici boyut dikkat, beklenti, anlamlandırma ve ağrı belleğini kapsar; örnek ifadesi daha önce de olmuştu, acaba ciddi bir şey mi biçimindedir. Hastanın cümlesi korkuyu ve kaçınmayı anlattığı için bu boyut doğru değildir (sayfa 7).",
+      "E": "Biyolojik etkenler yaş, cinsiyet, genetik yatkınlık ve uyku gibi bireysel özellikleri içerir. Bunlar ağrıyı etkiler ancak Melzack ve Casey modelinin bir boyutu değildir (sayfa 6)."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Bu ağrı beni korkutuyor, elimi hemen çekmek istiyorum"
+     },
+     "s": 7,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "IASP 2020 ağrı tanımına eşlik eden maddelerle ilgili aşağıdaki ifadeler veriliyor:\nI. Ağrı genellikle uyarıcı ve koruyucudur; ancak işlevselliği ve iyilik hâlini bozabilir.\nII. Sözel olarak iletişim kuramamak ağrı yaşama olasılığını dışlar.\nIII. Ağrı yalnızca duyusal nöronların aktivitesini içerir.\nIV. Kişinin ağrı deneyimine ilişkin bildirimi saygıyla karşılanmalıdır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "I ve IV doğrudur; sözel ifade edememek ağrıyı dışlamaz ve ağrı yalnızca duyusal nöron aktivitesi değildir (sayfa 4).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I seçeneği ilk ifadeyi doğru bulur ancak IV. ifadeyi dışarıda bırakır. Kişinin bildiriminin saygıyla karşılanması da IASP 2020'nin dördüncü maddesidir; bu nedenle birleşim eksiktir (sayfa 4).",
+      "B": "Birinci ifade doğrudur: ağrı genellikle uyarıcı ve koruyucudur ancak işlevselliği ve iyilik hâlini bozabilir; dördüncü ifade de doğrudur, çünkü bildirim saygıyla karşılanmalıdır. İkinci ifade yanlıştır, sözel ifade edememek ağrıyı dışlamaz; üçüncü ifade de yanlıştır, ağrı duyusal nöron aktivitesinden fazlasını kapsar (sayfa 4).",
+      "C": "II ve III yanlış önermelerdir: sözel ifade edememek ağrıyı dışlamaz ve ağrı yalnızca duyusal nöron aktivitesinden ibaret değildir. Bu birleşim iki yanlış ifadeyi doğru sayar (sayfa 4).",
+      "D": "I, III ve IV birleşimi III. ifadeyi içerdiği için hatalıdır. Ağrı yalnızca duyusal nöronların aktivitesini içermez; bu, nosisepsiyonla ağrıyı ayıran IASP maddesidir (sayfa 4).",
+      "E": "Dört ifadenin hepsini doğru sayan bu birleşim II ve III'ü de içerir. Sözel iletişim kuramayan bebek veya demanslı kişi de ağrı yaşayabilir ve ağrı salt nöron aktivitesi değildir (sayfa 4)."
+     },
+     "bilgi": [
+      4,
+      5,
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Sözel ifade edememek (bebek, demans gibi) ağrı yaşama olasılığını dışlamaz"
+     },
+     "s": 4,
+     "dayanak": [
+      "hoca:hv-k2-06-04",
+      "hoca:hv-k2-06-05",
+      "ozen:s4",
+      "not:s4"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q07",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Ağrı ve nosisepsiyonla ilgili aşağıdaki ifadeler veriliyor:\nI. Nosisepsiyon, zararlı uyaranın sinir sistemi tarafından işlenmesidir.\nII. Ağrı, beyindeki dağınık ağların etkileşimiyle oluşur.\nIII. Fantom ağrısı, belirgin nosiseptif uyaran olmadan da ağrı yaşanabileceğini gösterir.\nIV. Genel anestezide nosiseptif uyarana otonom yanıt görülmesi bilinçli ağrı deneyiminin kanıtıdır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "İlk üç ifade doğrudur; anestezi altındaki otonom yanıt nosisepsiyonu gösterir, bilinçli ağrıyı göstermez (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğru ifadelerdir ancak bu seçenek III. ifadeyi dışarıda bırakır. Fantom ağrısı uyarılacak doku olmadığı hâlde yaşanan gerçek ağrıdır ve nosiseptif uyaransız ağrının tipik örneğidir (sayfa 5).",
+      "B": "I ve III doğrudur ancak II. ifade de doğrudur. Ağrının beyindeki dağınık ağların etkileşimiyle oluşması onu yalnızca sinirsel iletimden ayırır; bu seçenek bu bilgiyi dışarıda bırakır (sayfa 5).",
+      "C": "Nosisepsiyon uyaranın işlenmesidir, ağrı beyindeki dağınık ağlarla oluşan öznel bir deneyimdir ve fantom ağrısı uyaransız ağrıyı gösterir; ilk üç ifade doğrudur. IV. ifade yanlıştır, çünkü anestezi altındaki otonom yanıt nosisepsiyonu gösterir, bilinçli ağrıyı göstermez (sayfa 5).",
+      "D": "II ve III doğru olmakla birlikte bu birleşim I'i dışarıda bırakır ve yanlış olan IV'ü içerir. Anestezide görülen taşikardi ve hipertansiyon bilinçli ağrıyı değil, nosiseptif işlenmenin otonom yansımasını gösterir (sayfa 5).",
+      "E": "Dört ifadenin hepsini doğru sayan bu seçenek IV. ifadede hata yapar. Nosisepsiyon bilinçli ağrı olmadan da oluşabildiğinden otonom yanıt ağrı kanıtı sayılamaz (sayfa 5)."
+     },
+     "bilgi": [
+      10,
+      11,
+      12,
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Genel anestezide nosiseptif uyarana otonom yanıt"
+     },
+     "s": 5,
+     "dayanak": [
+      "hoca:hv-k2-06-06",
+      "hoca:hv-k2-06-07",
+      "hoca:hv-k2-06-08",
+      "ozen:s5",
+      "not:s5"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q09",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Melzack ve Casey modelinde ağrının yerini, şiddetini, süresini ve niteliğini belirleyen boyutta rol alan yapılar aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Medial ve intralaminar talamus ile amigdala",
+      "B": "Amigdala, hipokampus ve anterior singulat korteks",
+      "C": "Prefrontal korteks, orbitofrontal korteks ve hipokampus",
+      "D": "Lateral talamus, S1, S2 ve posterior insula",
+      "E": "Anterior singulat korteks, anterior insula ve amigdala"
+     },
+     "dogru": "D",
+     "aciklama": "Duyusal-diskriminatif boyut lateral talamus, S1, S2 ve posterior insulada işlenir (sayfa 7).",
+     "sik_aciklamalari": {
+      "A": "Medial ve intralaminar talamus ağrının rahatsız ediciliğini ve emosyonel anlamını taşıyan medial sisteme aittir. Yer ve nitelik bilgisi ise lateral talamus kaynaklıdır (sayfa 45).",
+      "B": "Amigdala duygusal, hipokampus bellek ve anlamlandırma yönüyle ağrıya katılır. Singulat korteksle birlikte ağrının duygusal ve bilişsel boyutlarını oluştururlar, duyusal-diskriminatif boyutu oluşturmazlar (sayfa 7).",
+      "C": "Prefrontal ve orbitofrontal korteks ile hipokampus bilişsel-değerlendirici boyutu oluşturur ve dikkat, beklenti, ağrı belleğini yönetir. Ağrının yerini ve şiddetini ayırt eden yapılar bunlar değildir (sayfa 7).",
+      "D": "Duyusal-diskriminatif boyut lateral talamus çekirdekleri, birincil ve ikincil somatosensoriyel korteks (S1, S2) ile posterior insulada işlenir. Ağrının yeri, şiddeti, süresi ve niteliği bu yapılarla belirlenir (sayfa 7).",
+      "E": "Anterior singulat korteks, anterior insula ve amigdala motivasyonel-afektif boyutun yapılarıdır ve ağrının hoş olmayan, korkutucu yönünü işler. Yer ve şiddet bilgisini bu yapılar belirlemez (sayfa 7)."
+     },
+     "bilgi": [
+      19,
+      20,
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Talamus (lateral çekirdekler), S1, S2"
+     },
+     "s": 7,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s7"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Öğrenci, ağrı terminolojisini (allodini, hiperaljezi, hipoaljezi, parestezi, disestezi, hiperestezi, hipoestezi, nöralji, nöropati, hiperpati, anestezi doloroza, kozalji) ve ağrı eşiği ile ağrı toleransını tanım ve örnekleriyle ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q11",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Güneş yanığı olan deriye giysinin değmesinin ağrılı olması aşağıdaki terimlerden hangisiyle tanımlanır?",
+     "secenekler": {
+      "A": "Hiperaljezi",
+      "B": "Disestezi",
+      "C": "Hipoaljezi",
+      "D": "Hiperpati",
+      "E": "Allodini"
+     },
+     "dogru": "E",
+     "aciklama": "Normalde ağrısız bir uyaranın ağrıya yol açması allodinidir; güneş yanığında giysi teması örnektir (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Hiperaljezi, normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır; örneği iğne batmasının beklenenden çok ağrılı hissedilmesidir. Giysi teması ağrılı bir uyaran olmadığı için bu terim uymaz (sayfa 9).",
+      "B": "Disestezi, kendiliğinden ya da uyarıyla ortaya çıkan, hoş olmayan anormal duyudur; rahatsız edici yanma ve elektriklenme örnektir. Olguda ağrısız bir uyaranın ağrı yapması söz konusu olduğundan allodini daha doğrudur (sayfa 10).",
+      "C": "Hipoaljezi, normalde ağrılı olan bir uyarana verilen yanıtın azalmasıdır; periferik nöropatide iğne batmasının az hissedilmesi örnektir. Olguda yanıt azalmamış, ağrısız uyaran ağrı oluşturmuştur (sayfa 9).",
+      "D": "Hiperpati, özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli bir tepkidir. Tek bir giysi temasının hemen ağrı oluşturması bu tanıma uymaz (sayfa 11).",
+      "E": "Allodini, normalde ağrı oluşturmayan bir uyaranın ağrıya neden olmasıdır. Giysi teması normalde ağrısız bir uyarandır; güneş yanığı olan deride ağrı yapması allodinidir (sayfa 9)."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Güneş yanığı olan deriye giysinin değmesinin ağrılı olması"
+     },
+     "s": 9,
+     "dayanak": [
+      "hoca:hv-k2-06-36",
+      "not:s9",
+      "ozen:s8"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q15",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Bir veya birden fazla sinirin dağılım alanında hissedilen ağrı aşağıdaki terimlerden hangisiyle tanımlanır?",
+     "secenekler": {
+      "A": "Hiperpati",
+      "B": "Kozalji",
+      "C": "Nöralji",
+      "D": "Anestezi doloroza",
+      "E": "Nöropati"
+     },
+     "dogru": "C",
+     "aciklama": "Sinirin dağılım alanında hissedilen ağrı nöraljidir (sayfa 11).",
+     "sik_aciklamalari": {
+      "A": "Hiperpati, tekrarlayan uyaranlara patlayıcı ve gecikmeli ağrılı tepkidir. Bir uyaran yanıtı kavramıdır, ağrının sinir dağılımına göre tanımını vermez (sayfa 11).",
+      "B": "Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel bir terimdir. Sinir dağılımına göre değil travmatik nedene göre tanımlandığı için soruya uymaz (sayfa 12).",
+      "C": "Nöralji, bir veya birden fazla sinirin dağılım alanında hissedilen ağrıdır; trigeminal nevralji ve postherpetik nevralji örnektir. Soruda ağrının sinir dağılım alanında olması vurgulandığı için doğru yanıt budur (sayfa 11).",
+      "D": "Anestezi doloroza, duyu kaybı olan bir bölgede hissedilen ağrıdır. Ağrının duyu kaybıyla birlikteliğini anlatır, sinir dağılım alanını anlatmaz (sayfa 11).",
+      "E": "Nöropati, bir sinirde işlev bozukluğu ya da patolojik değişikliktir; mononöropati ve polinöropati olarak görülür. Bir bozukluğu tanımlar, ağrının dağılımını tanımlamaz (sayfa 11)."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Bir veya birden fazla sinirin dağılım alanında hissedilen ağrı"
+     },
+     "s": 11,
+     "dayanak": [
+      "hoca:hv-k2-06-10",
+      "not:s11",
+      "ozen:s12"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ağrı terminolojisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hiperaljezi, normalde ağrı oluşturmayan bir uyaranın ağrıya neden olmasıdır",
+      "B": "Hiperestezi, allodini ve hiperaljeziyi kapsar",
+      "C": "Hipoestezi, uyarıya karşı duyarlılığın azalmasıdır",
+      "D": "Hipoaljezi, normalde ağrılı olan bir uyarana verilen yanıtın azalmasıdır",
+      "E": "Allodini, ağrısız bir uyaranın ağrı oluşturmasıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Hiperaljezi ağrılı uyarana yanıtın artmasıdır; ağrısız uyaranın ağrı yapması allodinidir (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Normalde ağrı oluşturmayan bir uyaranın ağrıya neden olması allodinidir. Hiperaljezi ise normalde ağrılı olan uyarana verilen yanıtın artmasıdır; ifade iki terimi karıştırdığı için yanlıştır (sayfa 9).",
+      "B": "Hiperestezi uyarıya karşı duyarlılığın artmasıdır ve allodini ile hiperaljeziyi kapsar. Kapsayıcılık ilişkisi doğru verildiğinden ifade doğru bir önermedir ve yanlış seçenek olamaz (sayfa 10).",
+      "C": "Hipoestezi, özel duyular hariç uyarıya karşı duyarlılığın azalmasıdır ve hiperestezinin karşıt kavramıdır. Tanım doğru verildiği için ifade doğru bir önermedir ve yanlış seçenek olarak aranmaz (sayfa 10).",
+      "D": "Hipoaljezide ağrılı uyaran daha az ağrı yapar; periferik nöropatide iğne batmasının az hissedilmesi örnektir. Tanım doğru olduğundan seçenek doğru bir önermedir (sayfa 9).",
+      "E": "Allodini, ağrısız uyaran sonrası ağrı ortaya çıkmasıdır ve güneş yanığına giysi değmesi örnektir. İfade tanımı doğru verdiği için doğrudur (sayfa 9)."
+     },
+     "bilgi": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      29,
+      30
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Normalde ağrı oluşturmayan bir uyaranın ağrıya neden olması"
+     },
+     "s": 9,
+     "dayanak": [
+      "hoca:hv-k2-06-36",
+      "not:s9",
+      "not:s10",
+      "ozen:s8"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kendiliğinden ya da uyarıyla ortaya çıkan, hoş olmayan nitelikteki anormal duyu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Parestezi",
+      "B": "Hipoestezi",
+      "C": "Hiperestezi",
+      "D": "Disestezi",
+      "E": "Hiperpati"
+     },
+     "dogru": "D",
+     "aciklama": "Hoş olmayan anormal duyu disestezidir; parestezi hoş olmayan nitelikte olmak zorunda değildir (sayfa 10).",
+     "sik_aciklamalari": {
+      "A": "Parestezi de kendiliğinden ya da uyarıyla ortaya çıkan anormal duyudur, ancak hoş olmayan nitelikte olması gerekmez; karıncalanma ve iğnelenme örnektir. Hoş olmayan nitelik şartı bulunduğundan disestezi daha doğrudur (sayfa 10).",
+      "B": "Hipoestezi, özel duyular hariç uyarıya karşı duyarlılığın azalmasıdır. Duyarlılığın azalmasını anlattığı, hoş olmayan nitelikte anormal duyuyu tanımlamadığı için soruda sorulan terim değildir (sayfa 10).",
+      "C": "Hiperestezi, özel duyular hariç uyarıya karşı duyarlılığın artmasıdır ve allodini ile hiperaljeziyi kapsar. Anormal bir duyu niteliğini değil duyarlılık artışını tanımlar (sayfa 10).",
+      "D": "Disestezi, kendiliğinden ya da uyarıyla ortaya çıkan ve hoş olmayan nitelikte olan anormal duyudur; rahatsız edici yanma ve elektriklenme örnektir. Soruda hoş olmayan nitelik vurgulandığı için doğru yanıt budur (sayfa 10).",
+      "E": "Hiperpati, tekrarlayan uyaranlara karşı ağrılı, patlayıcı ve gecikmeli bir tepkidir; eşik genellikle artmıştır. Hoş olmayan anormal duyuyu değil, uyarana verilen aşırı tepkiyi anlatır (sayfa 11)."
+     },
+     "bilgi": [
+      27,
+      28,
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Kendiliğinden ya da uyarıyla ortaya çıkan, hoş olmayan"
+     },
+     "s": 10,
+     "dayanak": [
+      "hoca:hv-k2-06-36",
+      "not:s10",
+      "ozen:s8"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q16",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Trigeminal ganglion lezyonundan sonra duyu kaybı gelişen yüz bölgesinde hissedilen ağrı aşağıdaki terimlerden hangisiyle tanımlanır?",
+     "secenekler": {
+      "A": "Anestezi doloroza",
+      "B": "Kozalji",
+      "C": "Nöralji",
+      "D": "Hiperpati",
+      "E": "Parestezi"
+     },
+     "dogru": "A",
+     "aciklama": "Duyu kaybı olan bölgedeki ağrı anestezi dolorozadır; trigeminal ganglion lezyonu örnektir (sayfa 11).",
+     "sik_aciklamalari": {
+      "A": "Anestezi doloroza, duyu kaybı olan bir bölgede hissedilen ağrıdır ve trigeminal ganglion lezyonu sonrası görülebilir. Olguda hem duyu kaybı hem ağrı bulunduğundan doğru yanıt budur (sayfa 11).",
+      "B": "Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir. Duyu kaybı olan bölgedeki ağrıyı özel olarak tanımlayan terim anestezi dolorozadır (sayfa 12).",
+      "C": "Nöralji, sinirin dağılım alanında hissedilen ağrıdır ve trigeminal nevralji örnektir. Olguda duyu kaybının ağrıyla birlikte bulunması esas olduğu için anestezi doloroza daha doğrudur (sayfa 11).",
+      "D": "Hiperpati, tekrarlayan uyaranlara patlayıcı ve gecikmeli ağrılı tepkidir. Olguda uyaran yanıtı değil duyu kaybı bölgesindeki ağrı anlatıldığından uymaz (sayfa 11).",
+      "E": "Parestezi, kendiliğinden ya da uyarıyla ortaya çıkan anormal duyudur ve karıncalanma örnektir. Ağrı değil anormal duyu tanımladığı için soruya uymaz (sayfa 10)."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Duyu kaybı (anestezi) olan bir bölgede hissedilen ağrı"
+     },
+     "s": 11,
+     "dayanak": [
+      "hoca:hv-k2-06-11",
+      "not:s11",
+      "ozen:s12"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Sinirle ilişkili klinik terimlerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nöropati, mononöropati veya polinöropati olarak ortaya çıkabilir",
+      "B": "Nöralji, bir sinirde işlev bozukluğu ya da patolojik değişikliktir",
+      "C": "Anestezi doloroza, duyu kaybı olan bir bölgede hissedilen ağrıdır",
+      "D": "Kozalji günümüzde kompleks bölgesel ağrı sendromu tip II olarak adlandırılır",
+      "E": "Hiperpatide eşik genellikle artmıştır"
+     },
+     "dogru": "B",
+     "aciklama": "Sinirde işlev bozukluğu nöropatidir; nöralji sinir dağılım alanındaki ağrıdır (sayfa 11).",
+     "sik_aciklamalari": {
+      "A": "Nöropati tek sinirde mononöropati, birden çok sinirde polinöropati biçiminde görülür. İfade tanıma uygun olduğundan bu seçenek yanlış değil doğru bir önermedir ve aranan yanıt olamaz (sayfa 11).",
+      "B": "Bir sinirde işlev bozukluğu ya da patolojik değişiklik nöropatidir. Nöralji ise sinir dağılım alanında hissedilen ağrıdır; ifade iki terimi karıştırdığı için yanlıştır (sayfa 11).",
+      "C": "Anestezi doloroza duyu kaybı olan bölgede hissedilen ağrıdır ve trigeminal ganglion lezyonu sonrası görülebilir. Tanım doğru verildiği için seçenek doğru bir önermedir (sayfa 11).",
+      "D": "Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir ve günümüzde KBAS tip II karşılığıdır. İfade bu eşleşmeyi doğru verdiğinden doğrudur (sayfa 12).",
+      "E": "Hiperpatide tekrarlayan uyaranlara karşı patlayıcı ve gecikmeli, anormal derecede ağrılı bir tepki vardır ve eşik genellikle artmıştır. İfade bu bilgiyi doğru aktardığından doğrudur (sayfa 11)."
+     },
+     "bilgi": [
+      32,
+      33,
+      34,
+      35,
+      39
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h87"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Bir sinirde işlev bozukluğu veya patolojik değişiklik"
+     },
+     "s": 11,
+     "dayanak": [
+      "hoca:hv-k2-06-10",
+      "hoca:hv-k2-06-11",
+      "hoca:hv-k2-06-12",
+      "cikmis:d3k2-2025-2026-h87",
+      "not:s11",
+      "ozen:s12"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q19",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anestezi doloroza",
+      "B": "Kozalji",
+      "C": "Nöralji",
+      "D": "Hiperpati",
+      "E": "Refleks sempatik distrofi"
+     },
+     "dogru": "B",
+     "aciklama": "Sinir yaralanması sonrası yanıcı ağrı için tarihsel terim kozaljidir (sayfa 12).",
+     "sik_aciklamalari": {
+      "A": "Anestezi doloroza, duyu kaybı olan bölgede hissedilen ağrıdır. Sinir yaralanması sonrası yanıcı ağrıyı değil, duyu kaybıyla birlikte ağrıyı anlattığı için soruya uymaz (sayfa 11).",
+      "B": "Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir ve günümüzde kompleks bölgesel ağrı sendromu tip II karşılığıdır. Soru bu tanımı verdiği için doğru yanıt budur (sayfa 12).",
+      "C": "Nöralji, bir veya birden fazla sinirin dağılım alanında hissedilen ağrıdır. Yaralanma sonrası yanıcı ağrıyı özel olarak adlandırmadığı için doğru değildir (sayfa 11).",
+      "D": "Hiperpati, tekrarlayan uyaranlara karşı patlayıcı ve gecikmeli ağrılı tepkidir ve eşik genellikle artmıştır. Yanıcı ağrıyı adlandıran bir terim olmadığından sinir yaralanması sonrası yanıcı ağrı sorusuna uygun değildir (sayfa 11).",
+      "E": "Refleks sempatik distrofi, kompleks bölgesel ağrı sendromu tip I'in eski adıdır ve belirgin sinir lezyonu olmayan tipi tanımlar. Sinir yaralanması bulunan tip kozaljidir (sayfa 22)."
+     },
+     "bilgi": [
+      39,
+      74
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-12"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan"
+     },
+     "s": 12,
+     "dayanak": [
+      "hoca:hv-k2-06-12",
+      "cikmis:q-2__kurul_-12",
+      "not:s12",
+      "ozen:s12"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q14",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Anormal duyularla ilgili aşağıdaki ifadeler veriliyor:\nI. Her disestezi bir paresteziyidir.\nII. Her parestezi bir disesteziyidir.\nIII. Hiperestezi, allodini ve hiperaljeziyi kapsar.\nIV. Hipoestezide uyarıya karşı duyarlılık artmıştır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Her disestezi bir paresteziyidir, ancak tersi geçerli değildir; hiperestezi allodini ve hiperaljeziyi kapsar (sayfa 10).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I seçeneği ilk ifadeyi doğru bulur ancak III. ifadeyi dışarıda bırakır. Hiperestezi, allodini ve hiperaljeziyi kapsayan geniş bir duyarlılık artışıdır; bu bilgi de doğrudur (sayfa 10).",
+      "B": "Her disestezi bir parestezidir ve hiperestezi allodini ile hiperaljeziyi kapsar; birinci ve üçüncü ifadeler doğrudur. İkinci ifade yanlıştır, çünkü parestezi hoş olmayan nitelikte olmak zorunda değildir; dördüncü ifade de yanlıştır, hipoestezide duyarlılık azalır (sayfa 10).",
+      "C": "II ve IV yanlış önermelerdir: her parestezi disestezi değildir ve hipoestezi duyarlılığın azalmasıdır. Bu birleşim yalnız yanlış ifadeleri doğru sayar (sayfa 10).",
+      "D": "I, II ve III birleşimi II. ifadeyi içerdiği için hatalıdır. Karıncalanma gibi hoş olmayan nitelik taşımayan parestezi disestezi sayılmaz (sayfa 10).",
+      "E": "II, III ve IV birleşimi iki yanlış ifade barındırır. Her disestezi paresteziyken tersi geçerli değildir ve hipoestezide duyarlılık artmaz, azalır (sayfa 10)."
+     },
+     "bilgi": [
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Her disestezi bir paresteziyidir; ancak her parestezi disestezi değildir"
+     },
+     "s": 10,
+     "dayanak": [
+      "hoca:hv-k2-06-36",
+      "not:s10",
+      "ozen:s8"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q18",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli bir tepki görülmesi ve eşiğin genellikle artmış olması aşağıdakilerden hangisinin özelliğidir?",
+     "secenekler": {
+      "A": "Nöralji",
+      "B": "Allodini",
+      "C": "Disestezi",
+      "D": "Hiperaljezi",
+      "E": "Hiperpati"
+     },
+     "dogru": "E",
+     "aciklama": "Tekrarlayan uyarana gecikmeli, patlayıcı ve ağrılı tepki ile artmış eşik hiperpatidir (sayfa 11).",
+     "sik_aciklamalari": {
+      "A": "Nöralji, sinirin dağılım alanında hissedilen ağrıdır ve trigeminal nevralji örnektir. Bir uyaran yanıtı kavramı değil ağrının dağılımına ait bir terim olduğundan, tekrarlayan uyarana verilen patlayıcı tepkiyi tanımlamaz (sayfa 11).",
+      "B": "Allodini, normalde ağrı oluşturmayan uyaranın ağrıya neden olmasıdır. Gecikmeli ve patlayıcı tepki ile artmış eşiği anlatmadığı için bu özellikler allodiniye ait değildir (sayfa 9).",
+      "C": "Disestezi, kendiliğinden ya da uyarıyla ortaya çıkan hoş olmayan anormal duyudur; yanma ve elektriklenme örnektir. Tekrarlayan uyarana gecikmeli patlayıcı ağrılı tepkiyi tanımlamadığı için soruya uymaz (sayfa 10).",
+      "D": "Hiperaljezi, normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır; iğne batmasının beklenenden çok ağrılı hissedilmesi örnektir. Eşik artışı ve gecikmeli, patlayıcı tepki içermediğinden hiperpatiyle karıştırılmamalıdır (sayfa 9).",
+      "E": "Hiperpati, tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli bir tepkidir ve eşik genellikle artmıştır. Soruda anlatılan özelliklerin tümü bu tanımla örtüştüğü için doğru yanıt budur (sayfa 11)."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Özellikle tekrarlayan uyaranlara karşı anormal derecede"
+     },
+     "s": 11,
+     "dayanak": [
+      "hoca:hv-k2-06-36",
+      "not:s11",
+      "ozen:s12"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q20",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Bir kişinin belirli bir durumda kabul etmeye razı olduğu, ağrı oluşturan uyaranın en yüksek şiddeti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hipoaljezi",
+      "B": "Hiperaljezi",
+      "C": "Ağrı tolerans düzeyi",
+      "D": "Hiperpati",
+      "E": "Ağrı eşiği"
+     },
+     "dogru": "C",
+     "aciklama": "Kişinin kabul etmeye razı olduğu en yüksek uyaran şiddeti ağrı tolerans düzeyidir; eşik ise en düşük şiddettir (sayfa 13).",
+     "sik_aciklamalari": {
+      "A": "Hipoaljezi, normalde ağrılı uyarana verilen yanıtın azalmasıdır. Yanıt azlığını anlatır, kişinin kabul etmeye razı olduğu en yüksek şiddeti tanımlamaz (sayfa 9).",
+      "B": "Hiperaljezi, normalde ağrılı uyarana verilen ağrı yanıtının artmasıdır. Kabul edilen en yüksek uyaran şiddetini değil yanıtın büyüklüğünü anlatır (sayfa 9).",
+      "C": "Ağrı tolerans düzeyi, kişinin belirli bir durumda kabul etmeye razı olduğu en yüksek uyaran şiddetidir ve ne kadar ağrıya dayanabildiği sorusuna karşılık gelir. Soru bu tanımı verdiği için doğru yanıt budur (sayfa 13).",
+      "D": "Hiperpati, tekrarlayan uyaranlara karşı patlayıcı ve gecikmeli ağrılı bir tepkidir ve eşik genellikle artmıştır. Bir tepki biçimini anlattığı için kişinin dayanabildiği en yüksek şiddeti ölçen tolerans kavramıyla karıştırılmamalıdır (sayfa 11).",
+      "E": "Ağrı eşiği, bir uyaranın ağrılı olarak algılandığı en düşük şiddettir ve ağrı ne zaman başladı sorusuna karşılık gelir. Soru en yüksek kabul edilen şiddeti sorduğundan eşik değil tolerans doğrudur (sayfa 13)."
+     },
+     "bilgi": [
+      40,
+      41
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Kişinin belirli bir durumda kabul etmeye razı olduğu"
+     },
+     "s": 13,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s12"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2025-2026-h87",
+     "soru": "Bir sinirdeki patolojik değişiklik ya da sinir fonksiyonundaki bozukluk olarak tanımlanan ağrı terimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Allodini",
+      "B": "Kozalji",
+      "C": "Nöralji",
+      "D": "Nöropati",
+      "E": "Santral ağrı"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "q-2__kurul_-12",
+     "soru": "Kozalji teriminin tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Normalde ağrı oluşturmayan bir uyaranla ağrı hissedilmesi",
+      "B": "Travmatik bir sinir lezyonundan sonra devam eden yanıcı ağrı",
+      "C": "Ağrılı bir uyarana normalden daha şiddetli ağrı yanıtı verilmesi",
+      "D": "Amputasyon sonrası artık var olmayan uzuvda ağrı hissedilmesi",
+      "E": "Hiperaljezi ve aşırı reaksiyonla karakterize ağrılı sendrom"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Öğrenci, ağrıyı süreye, mekanizmaya (nosiseptif, nöropatik, nosiplastik), kaynağa ve patogeneze göre sınıflar; ICD-11 kronik ağrı sınıflamasını ve olgu örneklerini bu eksenlerde değerlendirir.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q21",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Düşme sonrası dizde başlayan, iki gündür süren ve hareketle artan ağrı patogeneze göre aşağıdakilerden hangisi olarak sınıflandırılır?",
+     "secenekler": {
+      "A": "İnflamatuvar ağrı",
+      "B": "İskemik ağrı",
+      "C": "Nöropatik ağrı",
+      "D": "Deafferentasyon ağrısı",
+      "E": "Nedeni belirlenemeyen ağrı"
+     },
+     "dogru": "A",
+     "aciklama": "Düşme sonrası diz ağrısı akut, nosiseptif, derin somatik ve patogenezi inflamatuvar olan örnek olgudur (sayfa 29).",
+     "sik_aciklamalari": {
+      "A": "İnflamatuvar ağrı, prostaglandin, bradikinin ve histamin gibi mediatörlerle nosiseptörlerin duyarlılaşmasına bağlıdır; artrit ve enfeksiyon örnektir. Travma sonrası diz ağrısı akut, nosiseptif ve derin somatik olup patogenezi inflamatuvardır (sayfa 29).",
+      "B": "İskemik ağrıda dokuda oksijen yetersizliği ve H⁺, K⁺, bradikinin ile laktat birikimi nosiseptörleri uyarır; angina pektoris ve klodikasyon örnektir. Travmatik diz ağrısında iskemi öne çıkmadığı için bu patogenez uymaz (sayfa 28).",
+      "C": "Nöropatik ağrı mekanizmaya göre bir sınıftır ve somatosensoriyel sistemin lezyonuna bağlıdır. Patogeneze göre değil mekanizmaya göre sınıflandırma yapar; olguda ise nosiseptif inflamatuvar bir süreç vardır (sayfa 29).",
+      "D": "Deafferentasyon ağrısı sinir kesisi veya spinal lezyon sonrası spontan gelişen ağrıdır; fantom ağrısı örnektir. Olguda sinir lezyonu yok, doku travması vardır; bu yüzden uygun değildir (sayfa 28).",
+      "E": "Nedeni belirlenemeyen ağrı, tanımlanabilir yapısal nedeni olmayan ağrıdır ve çoğu ICD-11'de kronik primer ağrı olarak ele alınır. Olguda düşme gibi belirgin bir neden bulunduğundan bu patogenez sınıfı uygun olmaz (sayfa 28)."
+     },
+     "bilgi": [
+      109,
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Düşme sonrası dizde başlayan, iki gündür süren, hareketle artan ağrı"
+     },
+     "s": 29,
+     "dayanak": [
+      "hoca:hv-k2-06-26",
+      "hoca:hv-k2-06-35",
+      "ozen:s29",
+      "not:s29"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q29",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Altı haftadır süren bel ağrısı süreye göre aşağıdakilerden hangisi olarak adlandırılır?",
+     "secenekler": {
+      "A": "Subakut ağrı",
+      "B": "Kronik ağrı",
+      "C": "Kronik sekonder ağrı",
+      "D": "Kronik primer ağrı",
+      "E": "Akut ağrı"
+     },
+     "dogru": "A",
+     "aciklama": "Bel ağrısında 6 hafta ile 3 ay arası dönem subakut ağrıdır (sayfa 16).",
+     "sik_aciklamalari": {
+      "A": "Subakut ağrı akut ile kronik arasındaki ara dönemdir; bel ağrısında sıklıkla 6 hafta ile 3 ay arasındaki süreyi kapsar ve kronikleşme riskinin belirlendiği dönemdir. Altı haftadır süren bel ağrısı bu tanıma uyar (sayfa 16).",
+      "B": "Kronik ağrı 3 aydan uzun süren veya yineleyen ağrıdır (ICD-11). Altı hafta bu süreye ulaşmadığı için ağrı henüz kronik sayılmaz (sayfa 16).",
+      "C": "Kronik sekonder ağrı kanser, cerrahi sonrası, nöropatik ya da kas-iskelet gibi başka bir durumdan kaynaklanan kronik ağrıdır. Altı haftalık ağrı süre koşulunu karşılamadığı için bu gruba girmez (sayfa 17).",
+      "D": "Kronik primer ağrıda ağrının kendisi hastalık sayılır ve ICD-11 kronik ağrı kategorisine girer. Önce 3 ay süre koşulu gerekir; altı haftalık ağrı bu gruba alınmaz (sayfa 17).",
+      "E": "Akut ağrı yeni başlayan ve genellikle doku hasarı ya da hastalıkla yakın ilişkili ağrıdır. Altı haftalık süre akut dönemi aştığı için bu ad uygun değildir (sayfa 16)."
+     },
+     "bilgi": [
+      46
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "bel ağrısında sıklıkla 6 hafta–3 ay"
+     },
+     "s": 16,
+     "dayanak": [
+      "hoca:hv-k2-06-38",
+      "ozen:s16",
+      "not:s16"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q30",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Dokuda oksijen yetersizliği sonucu H⁺, K⁺, bradikinin ve laktat birikiminin nosiseptörleri uyardığı ağrı tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İnflamatuvar ağrı",
+      "B": "Nosiplastik ağrı",
+      "C": "Deafferentasyon ağrısı",
+      "D": "İskemik ağrı",
+      "E": "Nedeni belirlenemeyen ağrı"
+     },
+     "dogru": "D",
+     "aciklama": "Doku oksijen yetersizliği ile H⁺, K⁺, bradikinin ve laktat birikimi iskemik ağrıyı oluşturur; angina pektoris ve klodikasyon örnektir (sayfa 28).",
+     "sik_aciklamalari": {
+      "A": "İnflamatuvar ağrı prostaglandin, bradikinin ve histamin gibi mediatörlerle nosiseptörlerin duyarlılaşmasına dayanır; artrit örnektir. Oksijen yetersizliği ve laktat birikimi bu tipin tanımına girmez (sayfa 28).",
+      "B": "Nosiplastik ağrı, doku hasarı ya da lezyon kanıtı olmadan değişmiş nosisepsiyondan doğar. Oksijen yetersizliği gibi bilinen bir doku nedeni anlatıldığından nosiplastik değildir (sayfa 18).",
+      "C": "Deafferentasyon ağrısı sinir kesisi veya spinal lezyon sonrası spontan gelişir; fantom ağrısı örnektir. Doku hipoksisiyle ilişkili bir mekanizma içermez (sayfa 28).",
+      "D": "İskemik ağrıda doku oksijen yetersizliği vardır; asidoz (H⁺), K⁺, bradikinin ve laktat birikimi nosiseptörleri uyarır. Angina pektoris ve periferik arter hastalığında klodikasyon örnektir (sayfa 28).",
+      "E": "Nedeni belirlenemeyen ağrıda tanımlanabilir yapısal neden yoktur; çoğu ICD-11'de kronik primer ağrı olarak ele alınır. Sorudaki iskemik süreç bilinen bir nedeni gösterdiği için uymaz (sayfa 28)."
+     },
+     "bilgi": [
+      105
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Dokuda oksijen yetersizliği; H⁺ (asidoz), K⁺, bradikinin ve laktat birikimi nosiseptörleri uyarır"
+     },
+     "s": 28,
+     "dayanak": [
+      "hoca:hv-k2-06-25",
+      "not:s28"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Merdivenden düşmesinin ardından sağ dizinde hareketle artan, iki gündür süren ağrı yakınmasıyla başvuran 24 yaşındaki erkek hastada ağrı, süreye, mekanizmaya ve kaynağa göre sırasıyla nasıl sınıflandırılır?",
+     "secenekler": {
+      "A": "Kronik, nosiplastik, derin somatik",
+      "B": "Akut, nosiseptif, visseral",
+      "C": "Subakut, nosiseptif, yüzeyel somatik",
+      "D": "Akut, nöropatik, derin somatik",
+      "E": "Akut, nosiseptif, derin somatik"
+     },
+     "dogru": "E",
+     "aciklama": "İki günlük travmatik diz ağrısı akut, nosiseptif ve derin somatiktir (sayfa 15).",
+     "sik_aciklamalari": {
+      "A": "Kronik ağrı 3 aydan uzun sürer ve nosiplastik ağrı doku hasarı olmadan gelişir. Olguda iki günlük süre ve belirgin travma bulunduğundan bu birleşim uymaz (sayfa 18).",
+      "B": "Visseral ağrı iç organlardan kaynaklanır ve künt, yaygın, kötü lokalizedir. Diz travmasındaki ağrı eklem ve kemik gibi somatik yapılardan geldiği için visseral değildir (sayfa 25).",
+      "C": "Subakut ağrı akut ile kronik arasındaki ara dönemdir ve haftalar sürer. İki günlük ağrı subakut sayılmaz; ayrıca diz eklemi yüzeyel değil derin yapıdır (sayfa 16).",
+      "D": "Akut ve derin somatik özellikler doğrudur, ancak nöropatik ağrı sinir sisteminin lezyonundan kaynaklanır. Dizdeki travmada sinir lezyonu belirtisi bulunmadığı için mekanizma nosiseptiftir (sayfa 18).",
+      "E": "Ağrı iki gündür sürdüğü için akuttur, doku hasarından kaynaklandığı için nosiseptiftir ve kas, tendon, eklem ya da kemik gibi derin dokulardan geldiği için derin somatiktir. Diz travması örneği bu üç özelliği birlikte taşır (sayfa 15)."
+     },
+     "bilgi": [
+      43,
+      109
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Diz travması sonrası iki günlük ağrı"
+     },
+     "s": 15,
+     "dayanak": [
+      "hoca:hv-k2-06-26",
+      "hoca:hv-k2-06-35",
+      "hoca:hv-k2-06-38",
+      "ozen:s29",
+      "not:s29"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q23",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Diyabet öyküsü olan 58 yaşındaki hasta, aylardır süren ve ayaklarında çorap tarzında yanma ve karıncalanma yakınmasıyla başvuruyor. Bu hastadaki ağrı aşağıdakilerden hangisi olarak sınıflandırılır?",
+     "secenekler": {
+      "A": "Kronik, nosiplastik ağrı",
+      "B": "Kronik, santral nöropatik ağrı",
+      "C": "Subakut, deafferentasyon ağrısı",
+      "D": "Kronik, periferik nöropatik ağrı",
+      "E": "Akut, nosiseptif ağrı"
+     },
+     "dogru": "D",
+     "aciklama": "Diyabette çorap tarzı yanma ve karıncalanma, kronik periferik nöropatik ağrıdır (sayfa 29).",
+     "sik_aciklamalari": {
+      "A": "Nosiplastik ağrı, doku hasarı ya da somatosensoriyel lezyon kanıtı olmadan değişmiş nosisepsiyondan kaynaklanır. Diyabetik hastada sinir hasarı mekanizması bulunduğundan nosiplastik değil nöropatik ağrı söz konusudur (sayfa 18).",
+      "B": "Santral nöropatik ağrı inme, multipl skleroz ve omurilik yaralanması gibi santral lezyonlardan doğar. Diyabette ayaklardaki çorap tarzı yakınma periferik sinir hasarına aittir (sayfa 20).",
+      "C": "Subakut ağrı haftalar süren ara dönemdir; deafferentasyon ağrısı afferent girdinin kesilmesiyle gelişir. Aylardır süren diyabetik ağrı bu iki özelliği taşımaz (sayfa 28).",
+      "D": "Aylardır süren ağrı kroniktir. Diyabette ayaklarda çorap tarzında yanma ve karıncalanma periferik sinirlerin hasarını gösterir; bu nedenle ağrı periferik nöropatik ve kronik sekonderdir (sayfa 29).",
+      "E": "Akut ağrı yeni başlayan ve lezyonla yakından ilişkili ağrıdır; nosiseptif ağrı sağlam nosiseptörlerin aktivasyonuyla oluşur. Aylardır süren yanıcı ve karıncalanmalı ağrı bu tabloya uymaz (sayfa 19)."
+     },
+     "bilgi": [
+      110,
+      53,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Diyabet öyküsü olan hastada aylardır süren, ayaklarda çorap tarzında yanma ve karıncalanma"
+     },
+     "s": 29,
+     "dayanak": [
+      "hoca:hv-k2-06-35",
+      "hoca:hv-k2-06-14",
+      "ozen:s29",
+      "not:s29"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q26",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Nosiseptif ve nöropatik ağrı karşılaştırmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nöropatik ağrıda allodini, hiperaljezi ve hiperpati görülebilir",
+      "B": "Nosiseptif ağrı, sağlam nosiseptörlerin aktivasyonuyla oluşur",
+      "C": "Nosiseptif ağrıda lezyon bölgesinde hassasiyet bulunur",
+      "D": "Nöropatik ağrı yanıcı niteliktedir ve elektrik çarpması tarzında ataklar içerebilir",
+      "E": "Nöropatik ağrıda başlangıç her zaman lezyonla eş zamanlıdır ve lezyon iyileşince sona erer"
+     },
+     "dogru": "E",
+     "aciklama": "Nöropatik ağrı lezyondan sonra gecikmeli başlayabilir ve lezyon iyileşse de sürebilir; mutlak ifade yanlıştır (sayfa 19).",
+     "sik_aciklamalari": {
+      "A": "Nöropatik ağrıda uyarılmış bulgular olarak allodini, hiperaljezi ve hiperpati görülür ve çoğu kez duyu kaybı eşlik eder. İfade bu bilgiyi doğru verdiği için doğrudur (sayfa 19).",
+      "B": "Nosiseptif ağrıda temel süreç sağlam nosiseptörlerin aktivasyonudur ve başlatıcı olay sinir dışı dokudaki hasar ya da tehdittir. İfade tanıma uyduğundan doğrudur (sayfa 19).",
+      "C": "Nosiseptif ağrıda lezyon bölgesinde hassasiyet bulunur ve ağrının lezyonla yakın zaman ilişkisi vardır. İfade bu bilgiyi doğru aktardığından doğru bir önermedir ve yanlış seçenek olarak aranmaz (sayfa 19).",
+      "D": "Nöropatik ağrı yanıcıdır; elektrik çarpması ve saplanma tarzında ataklar, karıncalanma ve uyuşmayla seyredebilir. İfade bu niteliği doğru aktardığından doğrudur (sayfa 19).",
+      "E": "Nöropatik ağrı lezyondan sonra gecikmeli başlayabilir ve lezyon iyileşse de sürebilir. İfade başlangıcı her zaman eş zamanlı ve sonlanmayı kesin sayan mutlak bir kural kurduğu için yanlıştır (sayfa 19)."
+     },
+     "bilgi": [
+      56,
+      57,
+      59,
+      60,
+      61
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Lezyondan sonra gecikmeli başlayabilir; lezyon iyileşse de sürebilir"
+     },
+     "s": 19,
+     "dayanak": [
+      "hoca:hv-k2-06-14",
+      "ozen:s19"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q27",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi periferik nöropatik ağrıya örnek değildir?",
+     "secenekler": {
+      "A": "Disk hernisinde kök basısı",
+      "B": "Ağrılı diyabetik polinöropati",
+      "C": "Travmatik sinir yaralanması",
+      "D": "İnme sonrası ağrı",
+      "E": "Postherpetik nevralji"
+     },
+     "dogru": "D",
+     "aciklama": "İnme sonrası ağrı santral nöropatik ağrıdır; diğer seçenekler periferik nöropatik ağrı örnekleridir (sayfa 20).",
+     "sik_aciklamalari": {
+      "A": "Radikülopati, örneğin disk hernisinde kök basısı, periferik nöropatik ağrıya örnektir. Sinir kökünün basısı periferik sinir sistemi lezyonudur; seçenek örnek olduğundan aranan yanıt değildir (sayfa 20).",
+      "B": "Ağrılı diyabetik polinöropati periferik sinirlerin diyabetle hasarına bağlıdır ve periferik nöropatik ağrının tipik örneğidir. Bu nedenle olumsuz kökte aranan seçenek değildir (sayfa 20).",
+      "C": "Travmatik sinir yaralanması periferik sinirin hasarına bağlı nöropatik ağrı nedenidir. Periferik nöropatik ağrıya örnek olduğundan olumsuz kökün yanıtı değildir (sayfa 20).",
+      "D": "İnme sonrası ağrı, santral somatosensoriyel sinir sisteminin lezyonundan doğan santral nöropatik ağrıdır. Periferik sinir, kök ya da pleksusu ilgilendirmediği için periferik nöropatik ağrıya örnek değildir (sayfa 20).",
+      "E": "Postherpetik nevralji zona sonrası süren, periferik sinirle ilişkili nöropatik ağrıdır. Periferik örnekler arasında yer aldığından aranan yanıt değildir (sayfa 20)."
+     },
+     "bilgi": [
+      63,
+      64
+     ],
+     "benzer_cikmis": [
+      "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-7"
+     ],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Radikülopati (örn. disk hernisinde kök basısı)"
+     },
+     "s": 20,
+     "dayanak": [
+      "cikmis:past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-7",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q24",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Ani başlayan, sol kola ve çeneye yayılan, terlemenin eşlik ettiği göğüs ağrısı aşağıdakilerden hangisi olarak sınıflandırılır?",
+     "secenekler": {
+      "A": "Subakut, nosiseptif (iskemik), yüzeyel somatik ağrı",
+      "B": "Akut, nosiseptif (iskemik), visseral ve yansıyan ağrı",
+      "C": "Akut, nöropatik, derin somatik ağrı",
+      "D": "Kronik, nosiplastik, visseral ağrı",
+      "E": "Akut, nosiseptif (inflamatuvar), derin somatik ağrı"
+     },
+     "dogru": "B",
+     "aciklama": "Ani başlayan, kola ve çeneye yayılan göğüs ağrısı akut, iskemik nosiseptif, visseral ve yansıyan ağrıdır (sayfa 29).",
+     "sik_aciklamalari": {
+      "A": "Subakut ağrı haftalar süren ara dönemdir ve yüzeyel somatik ağrı deri ve mukozadan gelir. Ani başlayan miyokard kaynaklı ağrı bu iki özelliği taşımaz (sayfa 25).",
+      "B": "Ani başlangıç akut ağrıyı, miyokard iskemisi nosiseptif iskemik mekanizmayı gösterir. Sol kola ve çeneye yayılma ile terleme, iç organdan kaynaklanan ve yansıyan visseral ağrının özellikleridir (sayfa 29).",
+      "C": "Nöropatik ağrı somatosensoriyel sinir sisteminin lezyonundan doğar. Bu olguda sinir lezyonu bulunmaz; miyokard iskemisi nosiseptiftir ve kaynak derin somatik değil visseraldir (sayfa 18).",
+      "D": "Kronik ağrı 3 aydan uzun sürer ve nosiplastik ağrı doku bulgusuyla orantısızdır. Ani başlayan olguda süre akuttur ve iskemik doku hasarı vardır (sayfa 23).",
+      "E": "İnflamatuvar ağrı mediatörlerle nosiseptörlerin duyarlılaşmasına bağlıdır ve derin somatik ağrı kas, eklem, kemikten gelir. Ani, yayılan ve terlemeli göğüs ağrısı iskemik visseral ağrı olduğundan bu birleşim uymaz (sayfa 28)."
+     },
+     "bilgi": [
+      111,
+      105,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Ani başlayan, sol kola ve çeneye yayılan, terlemenin eşlik ettiği göğüs ağrısı"
+     },
+     "s": 29,
+     "dayanak": [
+      "hoca:hv-k2-06-35",
+      "hoca:hv-k2-06-25",
+      "ozen:s29",
+      "not:s28"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q25",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Göğüs duvarındaki zona döküntüsü dört ay önce iyileşmiş olan 62 yaşındaki hasta, aynı dermatomda yanma yakınmasıyla başvuruyor ve giysinin değmesi bile ağrıya neden oluyor. Bu hastadaki ağrı ve ilgili muayene bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Akut herpes zoster ağrısı; hiperpati",
+      "B": "Postherpetik nevralji; hipoaljezi",
+      "C": "Postherpetik nevralji; allodini",
+      "D": "Trigeminal nevralji; hiperaljezi",
+      "E": "Deafferentasyon ağrısı; disestezi"
+     },
+     "dogru": "C",
+     "aciklama": "Zona sonrası dermatomal yanıcı ağrı ve giysi teması ağrısı, postherpetik nevralji ile allodinidir (sayfa 30).",
+     "sik_aciklamalari": {
+      "A": "Akut herpes zoster ağrısı döküntü döneminde görülen nöropatik ağrıdır. Döküntü dört ay önce iyileştiği için ağrı kronikleşmiştir; ayrıca bulgu hiperpati değil allodinidir (sayfa 16).",
+      "B": "Postherpetik nevralji tanısı doğrudur, fakat hipoaljezi ağrılı uyarana yanıtın azalmasıdır. Olguda giysi teması gibi ağrısız uyaran ağrı yaptığı için bulgu hipoaljezi değil allodinidir (sayfa 9).",
+      "C": "Zona iyileştikten aylar sonra aynı dermatomda süren yanıcı ağrı postherpetik nevraljidir ve kronik nöropatik ağrıdır. Giysi gibi ağrısız bir uyaranın ağrıya yol açması allodinidir (sayfa 30).",
+      "D": "Trigeminal nevralji, yüzde trigeminal sinir dağılımında ortaya çıkan nöraljidir. Olgu göğüs duvarında ve dermatomal dağılımdadır; hiperaljezi de giysi temasıyla oluşan ağrıyı açıklamaz (sayfa 11).",
+      "E": "Deafferentasyon ağrısı afferent girdinin kesilmesinden sonra gelişir. Zona sonrası dermatomal yanıcı ağrı postherpetik nevraljidir; disestezi de ağrısız uyaranın ağrı yapmasını tanımlamaz (sayfa 21)."
+     },
+     "bilgi": [
+      112,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Göğüs duvarında zona döküntüsü iyileşeli 4 ay olmuş"
+     },
+     "s": 30,
+     "dayanak": [
+      "hoca:hv-k2-06-35",
+      "hoca:hv-k2-06-14",
+      "ozen:s29",
+      "not:s29"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q28",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "ICD-11 kronik ağrı sınıflamasıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Kronik primer ağrıda ağrının kendisi bir hastalık olarak ele alınır.\nII. Fibromiyalji ve kronik primer bel ağrısı kronik primer ağrıya örnektir.\nIII. Kansere bağlı kronik ağrı kronik primer ağrı grubundadır.\nIV. Kronik ağrı ilk kez ICD-11'de sistematik olarak sınıflandırılmıştır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Kansere bağlı kronik ağrı kronik sekonder ağrıdır; I, II ve IV doğrudur (sayfa 17).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur fakat bu seçenek IV. ifadeyi dışarıda bırakır. Kronik ağrı ICD-11'de ilk kez sistematik olarak sınıflandırılmıştır ve bu bilgi de doğrudur (sayfa 17).",
+      "B": "Kronik primer ağrıda ağrı başlı başına hastalık sayılır, fibromiyalji ve kronik primer bel ağrısı bu gruptandır ve kronik ağrı ilk kez ICD-11'de sınıflandırılmıştır. Kansere bağlı kronik ağrı ise kronik sekonder ağrı grubundadır; bu nedenle III. ifade yanlıştır (sayfa 17).",
+      "C": "II doğrudur ancak III. ifade yanlıştır, çünkü kansere bağlı kronik ağrı kronik sekonder ağrıdır. Bu birleşim I ve IV'ü de dışarıda bırakır (sayfa 17).",
+      "D": "I ve IV doğrudur; fakat bu birleşim III. yanlış ifadeyi içerir ve doğru olan II'yi dışarıda bırakır. Kansere bağlı kronik ağrı sekonder gruptadır (sayfa 17).",
+      "E": "Dört ifadenin hepsini doğru sayan bu seçenek III. ifadede hata yapar. Kansere bağlı kronik ağrı, kronik sekonder ağrının alt gruplarından biridir (sayfa 17)."
+     },
+     "bilgi": [
+      49,
+      50,
+      51
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Kronik ağrı ilk kez ICD-11’de sistematik olarak sınıflandırılmıştır"
+     },
+     "s": 17,
+     "dayanak": [
+      "ayrinti",
+      "not:s17"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-7",
+     "soru": "Disk hernisinde görülen ağrı aşağıdaki ağrı tiplerinden hangisine örnek verilebilir?",
+     "secenekler": {
+      "A": "Nöropatik ağrı",
+      "B": "Nosiseptif ağrı",
+      "C": "Psikosomatik ağrı",
+      "D": "Deafferantasyon ağrısı",
+      "E": "Reaktif ağrı"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Öğrenci, nöropatik ağrının alt tiplerini (periferik, santral, deafferentasyon, fantom ağrısı, KBAS) ve nosiplastik ağrıyı klinik özellikleriyle ayırt eder; ağrıda psikolojik etkenlerin yerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q33",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi nosiplastik ağrının prototip örneğidir?",
+     "secenekler": {
+      "A": "Fibromiyalji",
+      "B": "Trigeminal nevralji",
+      "C": "Angina pektoris",
+      "D": "Fantom ağrısı",
+      "E": "Postherpetik nevralji"
+     },
+     "dogru": "A",
+     "aciklama": "Fibromiyalji nosiplastik ağrının prototip örneğidir (sayfa 23).",
+     "sik_aciklamalari": {
+      "A": "Fibromiyalji nosiplastik ağrının prototipidir; santral ağrı işlemesindeki değişiklik, yaygın ağrı, yorgunluk ve uyku bozukluğuyla seyreder. Soru prototip örneği sorduğu için doğru yanıt budur (sayfa 23).",
+      "B": "Trigeminal nevralji periferik nöropatik ağrıya örnektir ve trigeminal sinir dağılımında görülür. Sinir lezyonuna bağlı olduğundan nosiplastik ağrının prototipi değildir (sayfa 20).",
+      "C": "Angina pektoris iskemik nosiseptif ağrının örneğidir ve doku oksijen yetersizliğine bağlı gelişir. Doku hipoksisine dayanan bu mekanizma nosiplastik ağrıyı tanımlamadığı için fibromiyaljiden farklı bir gruptadır (sayfa 28).",
+      "D": "Fantom ağrısı amputasyon sonrası afferent girdinin kesilmesiyle gelişen deafferentasyon ağrısıdır ve nöropatik ağrının alt tipidir. Nosiplastik ağrının prototipi değildir (sayfa 21).",
+      "E": "Postherpetik nevralji zona sonrası süren nöropatik ağrıdır ve periferik nöropatik ağrının örneğidir. Sinir lezyonuna bağlı olduğu için nosiplastik ağrının prototipi sayılmaz (sayfa 18)."
+     },
+     "bilgi": [
+      81,
+      54
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Fibromiyalji (prototip) İrritabl barsak sendromu Temporomandibüler bozukluk"
+     },
+     "s": 23,
+     "dayanak": [
+      "hoca:hv-k2-06-17",
+      "hoca:hv-k2-06-18",
+      "ozen:s23",
+      "not:s23"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q40",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Amputasyon sonrası eksik uzvun ağrısız olarak varlığının hissedilmesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fantom duyu",
+      "B": "Fantom ağrı",
+      "C": "Hiperestezi",
+      "D": "Parestezi",
+      "E": "Güdük ağrısı"
+     },
+     "dogru": "A",
+     "aciklama": "Eksik uzvun ağrısız varlık hissi fantom duyudur (sayfa 21).",
+     "sik_aciklamalari": {
+      "A": "Fantom duyu, ağrısız olan ve eksik uzvun varlık hissini ifade eder. Amputasyon sonrası uzvun hâlâ yerinde olduğu hissi bu tanıma uyar (sayfa 21).",
+      "B": "Fantom ağrı eksik uzuvda hissedilen ağrıdır ve amputasyon sonrası görülür. Soruda duyu ağrısız olarak tanımlandığı için fantom duyu daha doğrudur (sayfa 21).",
+      "C": "Hiperestezi uyarıya karşı duyarlılığın artmasıdır ve allodini ile hiperaljeziyi kapsar. Eksik uzvun varlık hissini tanımlamadığı için soruya uymaz (sayfa 10).",
+      "D": "Parestezi kendiliğinden ya da uyarıyla ortaya çıkan anormal duyudur; karıncalanma ve iğnelenme örnektir. Eksik uzvun varlık hissini özel olarak adlandıran terim fantom duyudur (sayfa 10).",
+      "E": "Güdük ağrısı amputasyon güdüğünde hissedilen ağrıdır. Sorudaki duyu ağrısız ve eksik uzva ait olduğundan, ağrılı ve güdükte yerleşen bu tanım uygun değildir (sayfa 21)."
+     },
+     "bilgi": [
+      69
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Fantom duyu: ağrısız, eksik uzvun varlık hissi"
+     },
+     "s": 21,
+     "dayanak": [
+      "hoca:hv-k2-06-16",
+      "ozen:s21"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q31",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Sağ diz üstü amputasyondan sonra olmayan ayağında kramp ve yanma tarzında ağrı hisseden 63 yaşındaki hasta, bu yakınma için kliniğe başvuruyor. Bu hastadaki ağrı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anestezi doloroza",
+      "B": "Kozalji",
+      "C": "Güdük ağrısı",
+      "D": "Fantom duyu",
+      "E": "Fantom ağrısı"
+     },
+     "dogru": "E",
+     "aciklama": "Amputasyon sonrası eksik uzuvda hissedilen ağrı fantom ağrısıdır; deafferentasyon ağrısının örneğidir (sayfa 30).",
+     "sik_aciklamalari": {
+      "A": "Anestezi doloroza duyu kaybı olan bölgede hissedilen ağrıdır ve trigeminal ganglion lezyonu sonrası örneklenir. Eksik uzuvdaki ağrıyı özel olarak adlandıran terim değildir (sayfa 11).",
+      "B": "Kozalji sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir ve KBAS tip II karşılığıdır. Amputasyon sonrası eksik uzuv ağrısı için kullanılmaz (sayfa 12).",
+      "C": "Güdük ağrısı amputasyon güdüğünde hissedilen ağrıdır. Hasta ağrıyı kalan güdükte değil olmayan ayakta hissettiği için bu tanım uymaz (sayfa 21).",
+      "D": "Fantom duyu eksik uzvun varlığının ağrısız hissedilmesidir. Hastada kramp ve yanma tarzında ağrı bulunduğu için ağrısız bir duyu olan fantom duyu uymaz (sayfa 21).",
+      "E": "Fantom ağrısı amputasyon sonrası eksik uzuvda hissedilen ağrıdır ve deafferentasyon ağrısının tipik örneğidir. Olmayan ayakta kramp ve yanma tarzı ağrı bu tanımı karşılar (sayfa 30)."
+     },
+     "bilgi": [
+      114,
+      70,
+      67
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Sağ diz üstü amputasyondan sonra, olmayan ayakta kramp ve yanma tarzında ağrı"
+     },
+     "s": 30,
+     "dayanak": [
+      "hoca:hv-k2-06-15",
+      "hoca:hv-k2-06-35",
+      "ozen:s21"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q34",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi nosiplastik ağrıya örnek değildir?",
+     "secenekler": {
+      "A": "Kronik primer bel ağrısı",
+      "B": "Radikülopati",
+      "C": "İrritabl barsak sendromu",
+      "D": "Temporomandibüler bozukluk",
+      "E": "Fibromiyalji"
+     },
+     "dogru": "B",
+     "aciklama": "Radikülopati periferik nöropatik ağrıdır; diğer seçenekler nosiplastik ağrı örnekleridir (sayfa 23).",
+     "sik_aciklamalari": {
+      "A": "Kronik primer bel ağrısı, nosiplastik ağrı örnekleri arasında yer alır ve ICD-11'de kronik primer ağrıdandır. Örnek olduğu için aranan yanıt değildir (sayfa 23).",
+      "B": "Radikülopati, örneğin disk hernisinde kök basısı, sinir kökünü ilgilendiren periferik nöropatik ağrıdır. Somatosensoriyel lezyon içerdiği için nosiplastik ağrı örneği değildir (sayfa 20).",
+      "C": "İrritabl barsak sendromu doku bulgusuyla orantısız, yaygın ve değişken ağrıyla seyreden nosiplastik ağrı örneklerindendir. Bu nedenle aranan yanıt değildir (sayfa 23).",
+      "D": "Temporomandibüler bozukluk nosiplastik ağrının örnekleri arasında sayılır ve yaygın, doku bulgusuyla orantısız ağrıyla seyredebilir. Örnek olduğundan olumsuz kökün yanıtı değildir (sayfa 23).",
+      "E": "Fibromiyalji nosiplastik ağrının prototipidir ve santral ağrı işlemesindeki değişikliğe dayanır; yaygın ağrı, yorgunluk ve uyku bozukluğuyla seyreder. Örnek olduğundan olumsuz kökün yanıtı değildir (sayfa 23)."
+     },
+     "bilgi": [
+      81,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Fibromiyalji (prototip) İrritabl barsak sendromu Temporomandibüler bozukluk"
+     },
+     "s": 23,
+     "dayanak": [
+      "hoca:hv-k2-06-17",
+      "hoca:hv-k2-06-18",
+      "ozen:s23",
+      "not:s23"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q35",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Distal radius kırığından 5 hafta sonra tüm elinde orantısız yanıcı ağrı, ödem, renk ve ısı farkı ile terleme artışı gelişen 45 yaşındaki hasta kliniğe başvuruyor. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kompleks bölgesel ağrı sendromu tip II",
+      "B": "Postherpetik nevralji",
+      "C": "Fantom ağrısı",
+      "D": "Kompleks bölgesel ağrı sendromu tip I",
+      "E": "Fibromiyalji"
+     },
+     "dogru": "D",
+     "aciklama": "Kırık sonrası orantısız yanıcı ağrı, ödem, renk ve ısı farkı olası KBAS tip I'i düşündürür (sayfa 30).",
+     "sik_aciklamalari": {
+      "A": "KBAS tip II'de belirgin sinir lezyonu vardır ve eski adı kozaljidir. Olguda sinir lezyonu belirtilmediği için en olası tanı tip I'dir (sayfa 22).",
+      "B": "Postherpetik nevralji zona sonrası süren dermatomal yanıcı ağrıdır. Olguda zona öyküsü bulunmaz; kırık sonrası vazomotor ve sudomotor bulgular vardır (sayfa 30).",
+      "C": "Fantom ağrısı amputasyon sonrası eksik uzuvda hissedilen ağrıdır ve deafferentasyon ağrısının örneğidir. Bu hastada uzuv eksik değildir ve ağrı elin kendisindedir; bu nedenle tanı uymaz (sayfa 21).",
+      "D": "KBAS tip I'de belirgin sinir lezyonu yoktur ve çoğu kez travmayı izleyen orantısız, bölgesel ağrı görülür. Kırık sonrası yanıcı ağrı, ödem, renk ve ısı farkı ile terleme artışı bu tabloyu gösterir (sayfa 30).",
+      "E": "Fibromiyalji yaygın, değişken ağrı, yorgunluk ve uyku bozukluğuyla seyreden nosiplastik ağrıdır. Kırık sonrası tek bölgede ödem ve renk-ısı farkı olan tabloyu açıklamaz (sayfa 23)."
+     },
+     "bilgi": [
+      113,
+      73,
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Distal radius kırığından 5 hafta sonra tüm elde orantısız yanıcı ağrı"
+     },
+     "s": 30,
+     "dayanak": [
+      "hoca:hv-k2-06-35",
+      "ozen:s22"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q37",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ağrıda \"psikojenik ağrı\" terimiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "ICD-11'de ayrı bir kategori olarak yer alır",
+      "B": "Yapay bozukluğun diğer adıdır",
+      "C": "Damgalayıcıdır ve dışlama tanısı olarak kullanılmamalıdır",
+      "D": "Somatik belirti bozukluğunun DSM-5'teki karşılığıdır",
+      "E": "Nosiplastik ağrıyla eş anlamlıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Psikojenik ağrı terimi damgalayıcıdır ve dışlama tanısı olarak kullanılmamalıdır (sayfa 24).",
+     "sik_aciklamalari": {
+      "A": "ICD-11 kronik ağrıyı kronik primer ve kronik sekonder ağrı olarak sınıflandırır. Psikojenik ağrı adıyla bir kategori yer almadığı için bu ifade yanlıştır (sayfa 24).",
+      "B": "Yapay bozukluk ve temaruz bilinçli belirti üretimini içeren kavramlardır. Psikojenik ağrı terimi ise bunların eş anlamlısı değil, damgalayıcı bir terimdir (sayfa 24).",
+      "C": "Psikojenik ağrı terimi damgalayıcıdır ve dışlama tanısı olarak kullanılmamalıdır. ICD-11'de bu adla bir kategori de yoktur; bu bilgi sorunun doğru yanıtıdır (sayfa 24).",
+      "D": "Somatik belirti bozukluğu DSM-5'te belirtilere ilişkin aşırı ve orantısız düşünce, duygu ve davranışların ön planda olduğu tanıdır; yaşanan ağrı gerçektir. Psikojenik ağrı bu bozukluğun karşılığı olarak kullanılmaz (sayfa 24).",
+      "E": "Nosiplastik ağrı, santral ağrı işlemesindeki değişikliğe dayanan nörobiyolojik bir mekanizmayı tanımlar. Psikojenik ağrıyla eş anlamlı değildir; bu nedenle iki terimin eş anlamlı olduğu ifadesi yanlıştır (sayfa 23)."
+     },
+     "bilgi": [
+      85,
+      78
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Damgalayıcıdır ve dışlama tanısı olarak kullanılmamalıdır"
+     },
+     "s": 24,
+     "dayanak": [
+      "hoca:hv-k2-06-19",
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q38",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ağrıda psikolojik etkenlerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kaygı, depresif belirtiler ve uyku bozukluğu kronik ağrının sık sonuçlarıdır",
+      "B": "Psikojenik ağrı terimi ICD-11'de bir kategori olarak yer almaz",
+      "C": "Somatik belirti bozukluğunda yaşanan ağrı gerçektir",
+      "D": "Psikososyal etkenler tüm ağrı tiplerini etkiler",
+      "E": "Temaruz ve yapay bozukluk, somatik belirti bozukluğunun alt tipleridir"
+     },
+     "dogru": "E",
+     "aciklama": "Temaruz ve yapay bozukluk bilinçli belirti üretimini içerir; somatik belirti bozukluğunun alt tipi değildir (sayfa 24).",
+     "sik_aciklamalari": {
+      "A": "Kaygı, depresif belirtiler, uyku bozukluğu ve sosyal geri çekilme kronik ağrıya eşlik eden sık ve anlaşılır sonuçlardır. İfade bu bilgiyi doğru aktardığından doğrudur (sayfa 24).",
+      "B": "ICD-11 kronik ağrıyı kronik primer ve kronik sekonder olarak sınıflar; psikojenik ağrı adıyla bir kategori yer almaz. Terim damgalayıcı olduğundan ifade doğrudur (sayfa 24).",
+      "C": "Somatik belirti bozukluğunda belirtilere ilişkin aşırı ve orantısız düşünce, duygu ve davranışlar ön plandadır, ancak yaşanan ağrı gerçektir. İfade doğru olduğundan yanlış seçenek değildir (sayfa 24).",
+      "D": "Psikososyal etkenler tüm ağrı tiplerini etkiler ancak ağrının gerçekliğini azaltmaz. İfade bu bilgiyi doğru verdiği için doğrudur ve yanlış seçenek olarak aranmaz (sayfa 24).",
+      "E": "Yapay bozukluk ve temaruz bilinçli belirti üretimini içerir ve somatizasyonla karıştırılmamalıdır. Somatik belirti bozukluğunun alt tipi sayılmadıkları için ifade yanlıştır (sayfa 24)."
+     },
+     "bilgi": [
+      83,
+      84,
+      85,
+      86,
+      87
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Yapay bozukluk (factitious) ve temaruz bilinçli belirti üretimi içerir"
+     },
+     "s": 24,
+     "dayanak": [
+      "hoca:hv-k2-06-19",
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q32",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Fantom duyu, fantom ağrı ve güdük ağrısıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Güdük ağrısı amputasyon güdüğünde hissedilen ağrıdır",
+      "B": "Fantom ağrısı deafferentasyon ağrısının örneklerindendir",
+      "C": "Fantom duyu ağrılıdır ve eksik uzvun varlık hissidir",
+      "D": "Fantom ağrı eksik uzuvda hissedilen ağrıdır",
+      "E": "Fantom ağrının şiddeti kortikal yeniden yapılanmayla ilişkili bulunmuştur"
+     },
+     "dogru": "C",
+     "aciklama": "Fantom duyu ağrısızdır ve eksik uzvun varlık hissidir; ağrılı olan fantom ağrıdır (sayfa 21).",
+     "sik_aciklamalari": {
+      "A": "Güdük ağrısı amputasyon güdüğünde hissedilen ağrıdır ve eksik uzuvdaki ağrıdan ayrılır. İfade bu tanımı doğru aktardığı için doğru bir önermedir ve yanlış seçenek olarak aranmaz (sayfa 21).",
+      "B": "Deafferentasyon ağrısının örnekleri arasında fantom ağrısı, brakiyal pleksus avülsiyonu ve travmatik parapleji yer alır. İfade doğru olduğundan yanlış seçenek değildir (sayfa 21).",
+      "C": "Fantom duyu ağrısızdır ve eksik uzvun varlık hissidir; eksik uzuvdaki ağrı fantom ağrıdır. İfade fantom duyuyu ağrılı saydığı için yanlıştır (sayfa 21).",
+      "D": "Fantom ağrı amputasyon sonrası eksik uzuvda hissedilen ağrıdır ve deafferentasyon ağrısının örneğidir. Tanım doğru olduğundan ifade doğrudur ve yanlış seçenek olarak aranmaz (sayfa 21).",
+      "E": "Kortekste somatosensoriyel haritada yeniden yapılanma olur ve bu değişiklik fantom ağrısının şiddetiyle ilişkili bulunmuştur. İfade nöroplastisite bilgisini doğru aktardığından doğrudur ve yanlış seçenek değildir (sayfa 53)."
+     },
+     "bilgi": [
+      69,
+      70,
+      71,
+      205
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Fantom duyu: ağrısız, eksik uzvun varlık hissi"
+     },
+     "s": 21,
+     "dayanak": [
+      "hoca:hv-k2-06-15",
+      "hoca:hv-k2-06-16",
+      "ozen:s21"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q36",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Kompleks bölgesel ağrı sendromu (KBAS) ile ilgili aşağıdaki ifadeler veriliyor:\nI. Tip I'de belirgin sinir lezyonu vardır.\nII. Tip II'nin eski adı kozaljidir.\nIII. ICD-11'de kronik primer ağrı altında sınıflandırılır.\nIV. Tanıda Budapeşte kriterleri kullanılır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "II, III ve IV",
+      "D": "II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Tip I'de belirgin sinir lezyonu yoktur; II, III ve IV doğrudur (sayfa 22).",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade yanlıştır, çünkü tip I'de belirgin sinir lezyonu yoktur ve eski adı refleks sempatik distrofidir. İkinci ifade doğru olsa da bu birleşim üçüncü ve dördüncü ifadeleri dışarıda bırakır (sayfa 22).",
+      "B": "Üçüncü ve dördüncü ifadeler doğrudur ancak birinci ifade yanlıştır; belirgin sinir lezyonu tip II'nin özelliğidir. İkinci ifade de doğru olduğu için dışarıda bırakılamaz (sayfa 22).",
+      "C": "Tip II'de belirgin sinir lezyonu vardır ve eski adı kozaljidir, KBAS ICD-11'de kronik primer ağrı altında sınıflandırılır ve tanıda Budapeşte kriterleri kullanılır. Tip I'de ise belirgin sinir lezyonu yoktur; bu nedenle I. ifade yanlıştır (sayfa 22).",
+      "D": "II ve IV doğrudur ancak bu birleşim doğru olan III. ifadeyi dışarıda bırakır. KBAS ICD-11'de kronik primer ağrı altında sınıflandırılır (sayfa 22).",
+      "E": "Dört ifadenin hepsini doğru sayan bu seçenek I. ifadede hata yapar. Belirgin sinir lezyonu tip I'de değil tip II'de bulunur (sayfa 22)."
+     },
+     "bilgi": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Tip II Belirgin sinir lezyonu vardır (eski adı kozalji)"
+     },
+     "s": 22,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s22"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q39",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İkincil (sekonder) kazanç amacıyla bilinçli olarak belirti üretmeyi içeren ve somatik belirti bozukluğuyla karıştırılmaması gereken durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yapay bozukluk",
+      "B": "Temaruz",
+      "C": "Somatik belirti bozukluğu",
+      "D": "Psikojenik ağrı",
+      "E": "Nosiplastik ağrı"
+     },
+     "dogru": "B",
+     "aciklama": "Temaruz, ikincil kazanç amacıyla bilinçli belirti üretmektir (sayfa 24).",
+     "sik_aciklamalari": {
+      "A": "Yapay bozukluk (factitious) de bilinçli belirti üretimini içerir ve somatizasyonla karıştırılmamalıdır. Ancak ikincil kazanç amacı temaruzun ayırt edici özelliğidir (sayfa 24).",
+      "B": "Temaruz, ikincil (sekonder) kazanç amacıyla bilinçli belirti üretmektir ve somatik belirti bozukluğuyla karıştırılmamalıdır. Soruda ikincil kazanç vurgulandığı için doğru yanıt budur (sayfa 24).",
+      "C": "Somatik belirti bozukluğunda belirtilere ilişkin aşırı ve orantısız düşünce, duygu ve davranışlar vardır; yaşanan ağrı gerçektir. Belirti bilinçli üretilmediği için soruya uymaz (sayfa 24).",
+      "D": "Psikojenik ağrı damgalayıcı bir terimdir ve dışlama tanısı olarak kullanılmamalıdır. Bilinçli belirti üretimini anlatan bir kavram olmadığı için ikincil kazancı tarif eden soruya uymaz (sayfa 24).",
+      "E": "Nosiplastik ağrı değişmiş nosisepsiyona dayanan nörobiyolojik bir mekanizmayı tanımlar ve fibromiyalji gibi tablolarda görülür. Bilinçli belirti üretimini içermediği için soruya uymaz (sayfa 23)."
+     },
+     "bilgi": [
+      86,
+      216
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Yapay bozukluk (factitious) ve temaruz bilinçli belirti üretimi içerir"
+     },
+     "s": 24,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s24"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Öğrenci, yüzeyel somatik, derin somatik ve visseral ağrıyı özelliklerine, duyarlılık farklarına ve yansıyan ağrı bölgelerine göre ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q41",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Deri, deri altı ve mukozadan kaynaklanan; keskin, batıcı ya da yanıcı niteliğte olan ve iyi lokalize edilen ağrı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Derin somatik ağrı",
+      "B": "Yüzeyel somatik ağrı",
+      "C": "Visseral ağrı",
+      "D": "Nosiplastik ağrı",
+      "E": "Nöropatik ağrı"
+     },
+     "dogru": "B",
+     "aciklama": "Deri, deri altı ve mukoza kaynaklı keskin, iyi lokalize ağrı yüzeyel somatik ağrıdır (sayfa 25).",
+     "sik_aciklamalari": {
+      "A": "Derin somatik ağrı kas, tendon, eklem, kemik ve bağ dokusundan kaynaklanır ve künt, sızlayıcı, daha yaygındır. Keskin ve iyi lokalize özellikleri taşımadığı için uymaz (sayfa 25).",
+      "B": "Yüzeyel somatik ağrı deri, deri altı ve mukozadan kaynaklanır; keskin, batıcı ya da yanıcı niteliktedir ve iyi lokalize edilir. Deri kesisi ve yüzeyel yanık örnektir (sayfa 25).",
+      "C": "Visseral ağrı iç organlardan kaynaklanır; künt, yaygın ve kötü lokalizedir. İyi lokalize keskin ağrıyı tanımlamadığı için soruya uymaz (sayfa 25).",
+      "D": "Nosiplastik ağrı doku hasarı kanıtı olmadan değişmiş nosisepsiyondan kaynaklanır; yaygın ve orantısızdır. Deri kaynaklı iyi lokalize keskin ağrıyı anlatmaz (sayfa 23).",
+      "E": "Nöropatik ağrı somatosensoriyel sinir sisteminin lezyonundan doğar ve kaynağa göre değil mekanizmaya göre sınıflanır. Deri ve mukozadan kaynaklanan doku ağrısını tanımlamaz (sayfa 18)."
+     },
+     "bilgi": [
+      88
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Deri, deri altı ve mukozadan kaynaklanır"
+     },
+     "s": 25,
+     "dayanak": [
+      "hoca:hv-k2-06-37",
+      "ozen:s25"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q46",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Miyokard kaynaklı ağrı aşağıdaki bölgelerden hangisine yansır?",
+     "secenekler": {
+      "A": "Böğür, kasık ve genital bölge",
+      "B": "Retrosternal bölge, sol kolun iç yüzü, boyun ve çene",
+      "C": "Sağ üst kadran ve sağ skapula alt ucu",
+      "D": "Epigastrium ve sırta kuşak tarzında",
+      "E": "Aynı taraf omuz"
+     },
+     "dogru": "B",
+     "aciklama": "Miyokard ağrısı retrosternal bölgeye, sol kolun iç yüzüne, boyuna ve çeneye yansır (sayfa 27).",
+     "sik_aciklamalari": {
+      "A": "Böğür, kasık ve genital bölgeye yansıyan ağrı böbrek ve üreter kaynaklıdır; ilgili segment T10–L1'dir. Miyokard ağrısı bu bölgelere yansımaz (sayfa 27).",
+      "B": "Miyokard ağrısı retrosternal bölgeye, sol kolun iç yüzüne, boyuna ve çeneye yansır; ilgili segment T1–T4'tür. Bu dağılım yakınsama-projeksiyon hipoteziyle açıklanır (sayfa 27).",
+      "C": "Sağ üst kadran ve sağ skapula alt ucuna yansıyan ağrı safra kesesi kaynaklıdır ve T6–T9 segmentleriyle ilgilidir. Miyokardın yansıma bölgesi değildir (sayfa 27).",
+      "D": "Epigastriuma ve sırta kuşak tarzında yansıyan ağrı pankreasa aittir ve T6–T10 segmentleriyle ilgilidir. Miyokard ağrısı ise retrosternal bölgeye ve sol kola yansıdığı için bu dağılımı tanımlamaz (sayfa 27).",
+      "E": "Aynı taraf omuza yansıyan ağrı diyaframın subdiyafragmatik tahrişinde görülür ve frenik sinirin C3–C5 segmentleriyle ilgilidir. Miyokard ağrısının yansıma yeri değildir (sayfa 27)."
+     },
+     "bilgi": [
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Retrosternal, sol kol iç yüzü, boyun, çene"
+     },
+     "s": 27,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s27"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q42",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Artrit ve kırık ağrısı kaynağına göre aşağıdakilerden hangisi olarak sınıflandırılır?",
+     "secenekler": {
+      "A": "Yüzeyel somatik ağrı",
+      "B": "Nosiplastik ağrı",
+      "C": "Visseral ağrı",
+      "D": "Deafferentasyon ağrısı",
+      "E": "Derin somatik ağrı"
+     },
+     "dogru": "E",
+     "aciklama": "Kas, tendon, eklem ve kemik kaynaklı ağrı, kaynağına göre derin somatik ağrıdır (sayfa 25).",
+     "sik_aciklamalari": {
+      "A": "Yüzeyel somatik ağrı deri, deri altı ve mukozadan kaynaklanır ve iyi lokalize edilir. Artrit ve kırık eklem ve kemik kaynaklı olduğundan bu gruba girmez (sayfa 25).",
+      "B": "Nosiplastik ağrı doku hasarı ya da lezyon kanıtı olmadan değişmiş nosisepsiyondan doğar. Artrit ve kırıkta belirgin doku hasarı olduğundan bu tanım uymaz (sayfa 18).",
+      "C": "Visseral ağrı iç organlardan kaynaklanır; barsak distansiyonu ve renal kolik örnektir. Artrit ve kırığın kaynağı iç organ değil eklem ve kemiktir (sayfa 25).",
+      "D": "Deafferentasyon ağrısı sinir kesisi veya spinal lezyon sonrası gelişen ağrıdır; fantom ağrısı örnektir. Artrit ve kırık sinir lezyonuna bağlı olmadığından uymaz (sayfa 28).",
+      "E": "Derin somatik ağrı kas, tendon, eklem, kemik ve bağ dokusundan kaynaklanır; künt, sızlayıcı ve daha yaygındır. Kas yaralanması, artrit ve kırık bu gruba örnektir (sayfa 25)."
+     },
+     "bilgi": [
+      89
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Kas yaralanması, artrit, kırık"
+     },
+     "s": 25,
+     "dayanak": [
+      "hoca:hv-k2-06-21",
+      "ozen:s25",
+      "not:s25"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q43",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İç organlardan kaynaklanan ağrının özellikleriyle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Barsağın kesilmesi ya da yakılması şiddetli ağrı oluşturur",
+      "B": "Kötü lokalize edilir ve orta hatta hissedilir",
+      "C": "Bulantı, terleme ve nabız değişiklikleri eşlik edebilir",
+      "D": "Karaciğer ve akciğer parankimi ağrıya duyarsızdır",
+      "E": "Gerilme, iskemi, inflamasyon ve spazm etkili uyaranlardır"
+     },
+     "dogru": "A",
+     "aciklama": "Barsağın kesilmesi ya da yakılması genellikle ağrı oluşturmaz; ifade bu bilgiyle çelişir (sayfa 26).",
+     "sik_aciklamalari": {
+      "A": "Barsağın kesilmesi veya yakılması genellikle ağrı oluşturmaz; visseral ağrıyı gerilme, iskemi, inflamasyon ve spazm gibi uyaranlar başlatır. İfade bu bilgiyle çeliştiği için söylenemez (sayfa 26).",
+      "B": "Visseral ağrı kötü lokalizedir ve orta hatta hissedilir; iç organların afferent yoğunluğu somatik dokulardan düşüktür. İfade bu özelliği doğru aktardığı için söylenebilir (sayfa 26).",
+      "C": "Visseral ağrıya bulantı, terleme, solukluk ile kan basıncı ve nabız değişiklikleri eşlik edebilir; otonom yanıtlar sıktır. İfade doğru olduğundan söylenebilir (sayfa 26).",
+      "D": "Karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır; organ kapsülleri, parietal periton ve plevra ise duyarlıdır. İfade doğru olduğundan söylenebilir (sayfa 26).",
+      "E": "Gerilme (distansiyon), iskemi, inflamasyon, traksiyon ve kasılma visseral ağrıda etkili uyaranlardır. İfade bu bilgiyi doğru verdiği için söylenebilir (sayfa 26)."
+     },
+     "bilgi": [
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+     ],
+     "benzer_cikmis": [
+      "303055c213d3",
+      "d3k2-2025-2026-h86",
+      "d3-b-007"
+     ],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Barsağın kesilmesi veya yakılması genellikle ağrı oluşturmaz"
+     },
+     "s": 26,
+     "dayanak": [
+      "hoca:hv-k2-06-22",
+      "hoca:hv-k2-06-23",
+      "hoca:hv-k2-06-37",
+      "cikmis:303055c213d3",
+      "cikmis:d3k2-2025-2026-h86",
+      "cikmis:d3-b-007",
+      "ozen:s26",
+      "not:s26"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q44",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi ağrıya duyarsız bir dokudur?",
+     "secenekler": {
+      "A": "Plevra",
+      "B": "Meninksler",
+      "C": "Parietal periton",
+      "D": "Akciğer parankimi",
+      "E": "Organ kapsülleri"
+     },
+     "dogru": "D",
+     "aciklama": "Karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır; kapsül, parietal periton ve plevra duyarlıdır (sayfa 26).",
+     "sik_aciklamalari": {
+      "A": "Plevra ağrıya duyarlı yapılardandır; akciğer parankimi duyarsızken onu saran plevra duyarlıdır. Bu nedenle duyarsız doku sorulduğunda plevra yanıt olamaz (sayfa 26).",
+      "B": "Nosiseptörler meninkslerde ve damarlarda bulunur. Beyin parankimi duyarsız olduğu hâlde meninksler duyarlı olduğundan, duyarsız doku sorusunda bu seçenek yanlıştır (sayfa 32).",
+      "C": "Parietal periton ağrıya duyarlıdır; apandisit ağrısı parietal periton tutulunca sağ alt kadrana yerleşir. Bu nedenle duyarsız doku sayılmaz (sayfa 27).",
+      "D": "Karaciğer, akciğer ve beyin parankimi ağrıya duyarsız dokular olarak sayılır. Akciğer parankimi bu gruba girdiği için soruda aranan yanıttır; ağrıya duyarlı yapılar ise organ kapsülleri, parietal periton ve plevradır (sayfa 26).",
+      "E": "Organ kapsülleri ağrıya duyarlı yapılar arasında sayılır; parietal periton ve plevra da bu gruptadır. Duyarsız olan organın kendi parankimidir, kapsülü değildir (sayfa 26)."
+     },
+     "bilgi": [
+      93,
+      117
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır"
+     },
+     "s": 26,
+     "dayanak": [
+      "hoca:hv-k2-06-23",
+      "ozen:s26",
+      "not:s26"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q48",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Epigastriumda başlayıp sırta kuşak tarzında yayılan ağrı nedeniyle acile başvuran 50 yaşındaki hastada ağrının kaynağı olarak hangi organ düşünülmelidir?",
+     "secenekler": {
+      "A": "Miyokard",
+      "B": "Safra kesesi",
+      "C": "Böbrek",
+      "D": "Pankreas",
+      "E": "Apandiks"
+     },
+     "dogru": "D",
+     "aciklama": "Epigastriumdan sırta kuşak tarzı yayılan ağrı pankreas kaynaklıdır (sayfa 27).",
+     "sik_aciklamalari": {
+      "A": "Miyokard ağrısı retrosternal bölgeye, sol kolun iç yüzüne, boyuna ve çeneye yansır. Epigastriumdan sırta kuşak tarzı yayılım miyokardın dağılımı değildir (sayfa 27).",
+      "B": "Safra kesesi ağrısı sağ üst kadrana ve sağ skapula alt ucuna yansır; segment T6–T9'dur. Epigastrium ve sırta kuşak tarzı yayılım safra kesesinin tipik dağılımı değildir (sayfa 27).",
+      "C": "Böbrek ve üreter ağrısı böğüre, kasığa ve genital bölgeye yansır; segment T10–L1'dir. Epigastrium ve sırt kuşağı böbrek ağrısına ait değildir (sayfa 27).",
+      "D": "Pankreas ağrısı epigastriuma ve sırta kuşak tarzında yansır; ilgili segment T6–T10'dur. Hastanın ağrı dağılımı bu tarife uyduğundan doğru yanıttır (sayfa 27).",
+      "E": "Apandiks ağrısı başlangıçta periumbilikaldir ve parietal periton tutulunca sağ alt kadrana yerleşir. Sırta kuşak tarzı yayılım apandiksin özelliği değildir (sayfa 27)."
+     },
+     "bilgi": [
+      100
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Epigastrium, sırta kuşak tarzında"
+     },
+     "s": 27,
+     "dayanak": [
+      "hoca:hv-k2-06-24",
+      "hoca:hv-k2-06-22",
+      "ozen:s27",
+      "not:s27"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q50",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Ağrının kaynağına göre sınıflandırılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Visseral ağrı künt, yaygın ve kötü lokalizedir",
+      "B": "Derin somatik ağrı kas, tendon, eklem, kemik ve bağ dokusundan kaynaklanır",
+      "C": "Derin somatik ağrı yüzeyel somatik ağrıdan daha kolay lokalize edilir",
+      "D": "Yüzeyel somatik ağrı keskin, batıcı ya da yanıcıdır ve iyi lokalize edilir",
+      "E": "Visseral ağrıda yansıyan ağrı ve otonom yanıtlar sıktır"
+     },
+     "dogru": "C",
+     "aciklama": "Derin somatik ağrının lokalizasyonu yüzeyel ağrıdan daha zordur; ifade bunun tersini söyler (sayfa 25).",
+     "sik_aciklamalari": {
+      "A": "Visseral ağrı iç organlardan kaynaklanır; künt, yaygın ve kötü lokalizedir, kramp tarzında olabilir. İfade bu özellikleri doğru verdiği için doğru bir önermedir ve yanlış seçenek olarak aranmaz (sayfa 25).",
+      "B": "Derin somatik ağrı kas, tendon, eklem, kemik ve bağ dokusundan kaynaklanır; künt ve sızlayıcıdır. İfade bu bilgiyi doğru aktardığından doğrudur (sayfa 25).",
+      "C": "Derin somatik ağrının lokalizasyonu yüzeyel somatik ağrıdan daha zordur ve ağrı yansıyabilir. İfade bunun tersini söylediği için yanlıştır (sayfa 25).",
+      "D": "Yüzeyel somatik ağrı deri, deri altı ve mukozadan kaynaklanır; keskin, batıcı ya da yanıcıdır ve iyi lokalize edilir. İfade doğru olduğundan yanlış seçenek değildir (sayfa 25).",
+      "E": "Visseral ağrıda yansıyan ağrı ve otonom yanıtlar sıktır; bulantı, terleme ve nabız değişiklikleri eşlik edebilir. İfade doğru olduğundan yanlış seçenek değildir (sayfa 25)."
+     },
+     "bilgi": [
+      88,
+      89,
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Lokalizasyonu yüzeyel ağrıdan daha zor; yansıyabilir"
+     },
+     "s": 25,
+     "dayanak": [
+      "hoca:hv-k2-06-21",
+      "hoca:hv-k2-06-22",
+      "hoca:hv-k2-06-37",
+      "ozen:s25",
+      "not:s25"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q45",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Karın ağrısı yakınmasıyla acile başvuran 19 yaşındaki hastada ağrı önce göbek çevresinde hissedilmiş, birkaç saat sonra sağ alt kadrana yerleşmiştir. Ağrının sağ alt kadrana yerleşmesini en iyi açıklayan durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Periferik sinirde deafferentasyon gelişmesi",
+      "B": "Visseral afferent yoğunluğunun artması",
+      "C": "Parietal peritonun tutulması",
+      "D": "Aβ liflerinin kapıyı kapatması",
+      "E": "Dorsal boynuzda disinhibisyon gelişmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Apandiks ağrısı başta periumbilikaldir; parietal periton tutulunca sağ alt kadrana yerleşir (sayfa 27).",
+     "sik_aciklamalari": {
+      "A": "Deafferentasyon, afferent girdinin kesilmesinden sonra gelişir ve fantom ağrısı örnektir. Apandisitte afferent girdi kesilmediği için bu mekanizma uymaz (sayfa 21).",
+      "B": "Visseral afferent yoğunluğu somatik dokulardan düşüktür ve bu durum visseral ağrının kötü lokalize olmasına neden olur. Yoğunluğun artması söz konusu olmadığı için yerleşim değişikliğini açıklamaz (sayfa 26).",
+      "C": "Apandiks ağrısı başlangıçta periumbilikaldir; parietal periton tutulunca sağ alt kadrana yerleşir ve ilgili segment T10'dur. Parietal periton ağrıya duyarlı bir yapı olduğundan yerleşim değişikliğini bu durum açıklar (sayfa 27).",
+      "D": "Aβ lifleri kapı kontrolünde nosiseptif aktarımı azaltır; ovuşturma gibi uyaranlar ağrıyı hafifletir. Apandisit ağrısının göbekten sağ alt kadrana yer değiştirmesini açıklamazlar (sayfa 42).",
+      "E": "Disinhibisyon, ağrıyı baskılayan sistemlerin etkinliğinin azalmasıdır ve eşiği düşürür. Ağrının göbekten sağ alt kadrana kayması yer değişikliğidir, duyarlılık artışı değildir (sayfa 52)."
+     },
+     "bilgi": [
+      101,
+      93
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Başlangıçta periumbilikal; parietal periton tutulunca sağ alt kadran"
+     },
+     "s": 27,
+     "dayanak": [
+      "hoca:hv-k2-06-22",
+      "hoca:hv-k2-06-37",
+      "ozen:s27"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q47",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Diyaframın subdiyafragmatik tahrişine bağlı ağrının yansıdığı bölge ve ilgili segment aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Aynı taraf omuz; C3–C5",
+      "B": "Böğür ve kasık; T10–L1",
+      "C": "Epigastrium ve sırt; T6–T10",
+      "D": "Sağ skapula alt ucu; T6–T9",
+      "E": "Sol kolun iç yüzü; T1–T4"
+     },
+     "dogru": "A",
+     "aciklama": "Diyafram tahrişi aynı taraf omuza yansır; ilgili segment frenik sinirin C3–C5 düzeyidir (sayfa 27).",
+     "sik_aciklamalari": {
+      "A": "Diyaframın subdiyafragmatik tahrişinde ağrı aynı taraf omuza yansır; ilgili segment frenik sinirin C3–C5 düzeyidir. Soru bu eşleşmeyi sorduğu için seçenek doğrudur (sayfa 27).",
+      "B": "Böğür ve kasığa yansıma ile T10–L1 segmentleri böbrek ve üreter ağrısının özelliğidir. Diyafram tahrişi için geçerli değildir (sayfa 27).",
+      "C": "Epigastrium ve sırta yansıma ile T6–T10 segmentleri pankreas ağrısını tanımlar. Diyafram tahrişinin yansıma yeri ve segmenti bu değildir (sayfa 27).",
+      "D": "Sağ skapula alt ucuna yansıma ve T6–T9 segmentleri safra kesesi ağrısına aittir. Diyafram ağrısının yansıma bölgesi ve segmenti bu değildir (sayfa 27).",
+      "E": "Sol kolun iç yüzüne yansıma ve T1–T4 segmentleri miyokard ağrısına aittir. Diyafram ağrısı omuza yansıdığı için bu eşleşme doğru değildir (sayfa 27)."
+     },
+     "bilgi": [
+      98
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Diyafram (subdiyafragmatik tahriş) Aynı taraf omuz C3–C5 (frenik sinir)"
+     },
+     "s": 27,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s27"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q49",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Yansıyan ağrı ile ilgili aşağıdaki ifadeler veriliyor:\nI. Visseral ve somatik afferentlerin aynı dorsal boynuz nöronlarına yakınsamasıyla açıklanır.\nII. Pankreas ağrısı epigastriuma ve sırta kuşak tarzında yansır.\nIII. Yansıyan bölgede deri hiperaljezisi görülebilir.\nIV. Safra kesesi ağrısı sağ skapula alt ucuna yansır ve ilgili segment T10–L1'dir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Safra kesesi segmenti T6–T9'dur; I, II ve III doğrudur (sayfa 27).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur fakat bu seçenek III. ifadeyi dışarıda bırakır. Yansıyan bölgede deri hiperaljezisi görülebilir ve bu bulgu Head zonları olarak bilinir (sayfa 27).",
+      "B": "Yakınsama-projeksiyon hipotezi, pankreas ağrısının epigastriuma ve sırta yansıması ve yansıyan bölgedeki deri hiperaljezisi (Head zonları) doğrudur. Safra kesesi ağrısı sağ skapula alt ucuna yansır ama ilgili segment T6–T9'dur; bu yüzden IV. ifade yanlıştır (sayfa 27).",
+      "C": "Bu birleşim dördüncü ifadeyi doğru sayar ve birinci ifadeyi dışarıda bırakır. Safra kesesinin segmenti T6–T9'dur; T10–L1 böbrek ve üreter ağrısına aittir, bu yüzden dördüncü ifade yanlıştır (sayfa 27).",
+      "D": "Bu birleşim dördüncü ifadeyi doğru sayar ve ikinci ifadeyi dışarıda bırakır. Pankreas ağrısı epigastriuma ve sırta yansır; safra kesesinin segmenti T6–T9 olduğundan dördüncü ifade yanlıştır (sayfa 27).",
+      "E": "Dört ifadenin hepsini doğru sayan bu seçenek IV. ifadede hata yapar. T10–L1 böbrek ve üreter ağrısının segmentidir, safra kesesininki T6–T9'dur (sayfa 27)."
+     },
+     "bilgi": [
+      96,
+      99,
+      100,
+      103
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Yansıyan bölgede deri hiperaljezisi görülebilir (Head zonları)"
+     },
+     "s": 27,
+     "dayanak": [
+      "hoca:hv-k2-06-24",
+      "ozen:s27",
+      "not:s27"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "303055c213d3",
+     "soru": "Anestezi\nAnestezi\nAĞRI YOLLARI VE\nMEKANİZMALARI-2\nVisseral ağrı ile ilgili\nşağıdakilerden hangisi\nyanlıştır?\nNo\nİç organlardan\nkaynaklanan ağrılardır\nKolay lokalize edilemez\nBatma, sızlama, zonklama\ntarzındadır\nBatma, sız\nzonklama t",
+     "secenekler": {
+      "A": "İç organlardan kaynaklanan ağrılardır",
+      "B": "Kolay lokalize edilemez",
+      "C": "Batma, sızlama, zonklama tarzındadır",
+      "D": "Yavaş yavaş artan karakterdedir"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2025-2026-h86",
+     "soru": "Visseral ağrı özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İç organlardan kaynaklanan ağrılardır.",
+      "B": "Kolay lokalize edilemez.",
+      "C": "Batma, sızlama, zonklama tarzındadır.",
+      "D": "Yavaş yavaş artan karakterdedir.",
+      "E": "Başka bölgelere yayılabilir; apandisit ağrısının göbeğe yayılması buna örnektir."
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3-b-007",
+     "soru": "İç organlardan kaynaklanan, kolay lokalize edilemeyen, yavaş yavaş artan karakterde olan ve batma-sızlama tarzında hissedilen ağrı tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Periferik ağrı",
+      "B": "Somatik ağrı",
+      "C": "Sempatik ağrı",
+      "D": "Visseral ağrı",
+      "E": "Derin ağrı"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Öğrenci, nosiseptörleri, Aδ, C ve Aβ liflerini ve transdüksiyonda rol alan iyon kanallarını tanımlar.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q51",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Hızlı, keskin ve iyi lokalize edilen birinci ağrıyı taşıyan afferent lif aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "C lifleri",
+      "B": "Polimodal nosiseptörler",
+      "C": "Aβ (beta) lifleri",
+      "D": "Sessiz nosiseptörler",
+      "E": "Aδ (delta) lifleri"
+     },
+     "dogru": "E",
+     "aciklama": "Hızlı, keskin ve iyi lokalize birinci ağrıyı Aδ lifleri taşır (sayfa 33).",
+     "sik_aciklamalari": {
+      "A": "C lifleri miyelinsizdir ve 0,5–2 m/s hızla ileterek yavaş, künt, yanıcı ve yaygın ikinci ağrıyı taşır. Hızlı ve keskin birinci ağrıyı taşımadıkları için uymaz (sayfa 33).",
+      "B": "Polimodal nosiseptörler birden fazla uyaran tipine yanıt verir ve çoğu C lifidir. Hızlı birinci ağrıyı taşıyan Aδ lifleriyle karıştırılmamalıdır (sayfa 32).",
+      "C": "Aβ lifleri kalın miyelinlidir ve dokunma, titreşim ve basıncı taşır; kapı kontrolünde rol alır. Birinci ağrıyı taşıyan lif grubu olmadıkları için uymaz (sayfa 33).",
+      "D": "Sessiz nosiseptörler normalde yanıtsızdır ve inflamasyonda aktive olur. Lif tipi değil nosiseptör tipidir; birinci ağrıyı taşıyan yapı olarak tanımlanmaz (sayfa 32).",
+      "E": "Aδ lifleri ince miyelinlidir, 5–30 m/s hızla iletir ve hızlı, keskin, iyi lokalize birinci ağrıyı taşır. Mekanik ve termal nosisepsiyondan sorumludur (sayfa 33)."
+     },
+     "bilgi": [
+      119,
+      120
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Hızlı, keskin, iyi lokalize birinci ağrı"
+     },
+     "s": 33,
+     "dayanak": [
+      "hoca:hv-k2-06-29",
+      "ozen:s33",
+      "not:s33"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q57",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Nosiseptörlerin hücre gövdesi aşağıdakilerden hangisinde bulunur?",
+     "secenekler": {
+      "A": "Talamus",
+      "B": "Dorsal kök ganglionu",
+      "C": "Dorsal boynuz lamina II",
+      "D": "Locus coeruleus",
+      "E": "Periakuaduktal gri"
+     },
+     "dogru": "B",
+     "aciklama": "Nosiseptörün hücre gövdesi dorsal kök (veya trigeminal) gangliondadır (sayfa 32).",
+     "sik_aciklamalari": {
+      "A": "Talamus, çıkan yolun üçüncü nörona sinaps verdiği merkezdir ve ağrının lateral ile medial sistemlerini taşır. Nosiseptörün hücre gövdesinin yeri değildir (sayfa 45).",
+      "B": "Nosiseptörler periferik duyu nöronunun kapsülsüz serbest sinir uçlarıdır ve hücre gövdesi dorsal kök ya da trigeminal gangliondadır. Soru bu bilgiyi sorduğu için doğru yanıt budur (sayfa 32).",
+      "C": "Dorsal boynuz lamina II, C liflerinin sonlandığı ve spinal modülasyonun merkezi olan substantia gelatinosadır. Primer afferentin hücre gövdesi burada değil gangliondadır (sayfa 38).",
+      "D": "Locus coeruleus noradrenerjik inen yolun kaynağıdır ve inen inhibisyona katkı sağlar. Hücre gövdesi sorusunda yanıt değildir; nosiseptörün hücre gövdesi dorsal kök ya da trigeminal gangliondadır (sayfa 43).",
+      "E": "Periakuaduktal gri (PAG), opioid reseptörlerinden zengin orta beyin yapısıdır ve inen kontrolün ana düğümüdür. Nosiseptörün hücre gövdesi burada bulunmaz (sayfa 43)."
+     },
+     "bilgi": [
+      115
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "hücre gövdesi dorsal kök (veya trigeminal) ganglionundadır"
+     },
+     "s": 32,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q52",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Ayağına çivi batan bir kişi önce keskin ve iyi lokalize, ardından künt ve yaygın bir ağrı hissetmektedir. İkinci ağrıdan sorumlu lif ve özelliği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aβ lifi; kalın miyelinli, hızlı iletimli",
+      "B": "Aδ lifi; miyelinsiz, yavaş iletimli",
+      "C": "C lifi; miyelinsiz, yavaş iletimli",
+      "D": "Aδ lifi; ince miyelinli, hızlı iletimli",
+      "E": "Aβ lifi; ince miyelinli, yavaş iletimli"
+     },
+     "dogru": "C",
+     "aciklama": "İkinci ağrıyı miyelinsiz, yavaş iletimli C lifleri taşır; birinci ağrıyı Aδ lifleri taşır (sayfa 33).",
+     "sik_aciklamalari": {
+      "A": "Aβ lifleri kalın miyelinli ve hızlı iletimlidir; dokunma, titreşim ve basıncı taşır. Ağrının ikinci evresinden sorumlu lif değildir (sayfa 33).",
+      "B": "Aδ lifleri ince miyelinlidir, bu nedenle seçenekteki miyelinsiz ve yavaş özellikler Aδ'ye ait değildir. Miyelinsiz ve yavaş iletimli lif C lifidir (sayfa 33).",
+      "C": "İkinci ağrı yavaş, künt, yanıcı ve yaygındır; miyelinsiz C lifleri 0,5–2 m/s hızla taşır. Çiviye basınca önce Aδ, sonra C lifi ağrısı hissedilmesi bu klinik örnektir (sayfa 33).",
+      "D": "Aδ lifleri ince miyelinli ve hızlı iletimlidir; birinci ağrıyı taşır. Önce hissedilen keskin ağrı Aδ kaynaklıdır, ikinci ağrı değildir (sayfa 33).",
+      "E": "Aβ lifleri kalın miyelinli ve hızlı iletimlidir; seçenekteki ince miyelinli ve yavaş özellikler bu lif grubuna uymaz. İkinci ağrıyı taşıyan lif C lifidir (sayfa 33)."
+     },
+     "bilgi": [
+      125,
+      121,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Ayağa çivi battığında önce keskin ve iyi lokalize (Aδ), ardından künt ve yaygın (C) ağrı hissedilir"
+     },
+     "s": 33,
+     "dayanak": [
+      "hoca:hv-k2-06-29",
+      "ozen:s33",
+      "not:s33"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q54",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Afferent liflerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Aβ lifleri dokunma, titreşim ve basıncı taşır",
+      "B": "Aβ lifleri kapı kontrolünde rol alır",
+      "C": "C lifleri miyelinsizdir ve polimodal nosisepsiyondan sorumludur",
+      "D": "Aβ lifleri ince miyelinlidir ve yavaş, künt ağrıyı taşır",
+      "E": "Aδ lifleri ince miyelinlidir ve hızlı, keskin ağrıyı taşır"
+     },
+     "dogru": "D",
+     "aciklama": "Aβ lifleri kalın miyelinlidir ve dokunma, titreşim, basıncı taşır; yavaş künt ağrıyı C lifleri taşır (sayfa 33).",
+     "sik_aciklamalari": {
+      "A": "Aβ lifleri kalın miyelinlidir ve dokunma, titreşim ve basıncı taşır. İfade bu bilgiyi doğru aktardığından doğrudur ve yanlış seçenek olarak aranmaz (sayfa 33).",
+      "B": "Aβ lifleri kapı kontrolünde rol alır ve santral sensitizasyonda dinamik mekanik allodiniyi taşır. İfade doğru olduğundan yanlış seçenek değildir (sayfa 33).",
+      "C": "C lifleri miyelinsizdir ve polimodal nosisepsiyondan sorumludur; sensitizasyonda da önemli rol oynar. İfade doğru bir önermedir ve yanlış seçenek olarak aranmaz (sayfa 33).",
+      "D": "Aβ lifleri kalın miyelinlidir ve dokunma, titreşim ve basıncı taşır. Yavaş, künt ağrıyı taşıyan miyelinsiz C lifleridir; ifade bu nedenle yanlıştır (sayfa 33).",
+      "E": "Aδ lifleri ince miyelinlidir, 5–30 m/s hızla iletir ve hızlı, keskin, iyi lokalize birinci ağrıyı taşır. İfade doğru olduğundan yanlış seçenek değildir (sayfa 33)."
+     },
+     "bilgi": [
+      119,
+      120,
+      121,
+      122,
+      123,
+      124
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Kapı kontrolü; santral sensitizasyonda dinamik mekanik allodiniyi taşır"
+     },
+     "s": 33,
+     "dayanak": [
+      "hoca:hv-k2-06-29",
+      "not:s33",
+      "ozen:s33"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q55",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki yapılardan hangisinde nosiseptör bulunmaz?",
+     "secenekler": {
+      "A": "Kas ve tendon",
+      "B": "Beyin parankimi",
+      "C": "Meninksler",
+      "D": "Diş pulpası",
+      "E": "Damar duvarı"
+     },
+     "dogru": "B",
+     "aciklama": "Beyin parankiminde nosiseptör yoktur; meninkslerde ve damarlarda vardır (sayfa 32).",
+     "sik_aciklamalari": {
+      "A": "Kas, tendon, eklem ve periost nosiseptör taşıyan dokulardır ve derin somatik ağrı buralardan kaynaklanır. Nosiseptör içerdikleri için aranan yanıt değildir (sayfa 32).",
+      "B": "Nosiseptörler beyin parankiminde yoktur; meninkslerde ve damarlarda bulunur. Bu nedenle beyin parankimi soruda aranan yapıdır ve ağrıya duyarsız dokular arasında sayılır (sayfa 32).",
+      "C": "Meninkslerde nosiseptör bulunur ve beyinde ağrıya duyarlı yapılar damarlar ile meninkslerdir. Nosiseptör içerdikleri için nosiseptör bulunmayan yapı sorusunda aranan yanıt değildir (sayfa 32).",
+      "D": "Diş pulpası, deri, kas, eklem ve damar duvarıyla birlikte nosiseptörlerin bulunduğu yerlerden biridir. Nosiseptör içerdiği için olumsuz kökün yanıtı değildir (sayfa 32).",
+      "E": "Damar duvarında nosiseptör bulunur; meninkslerle birlikte beyinde ağrıya duyarlı yapılar damarlar ve zarlardır. Nosiseptör içerdiği için aranan yanıt değildir (sayfa 32)."
+     },
+     "bilgi": [
+      116,
+      117
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Beyin parankiminde yoktur (meninks ve damarlarda vardır)"
+     },
+     "s": 32,
+     "dayanak": [
+      "ayrinti",
+      "not:s32"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q56",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Normalde yanıtsız olup inflamasyonda aktive olan nosiseptör tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sessiz (uyuyan) nosiseptör",
+      "B": "Termal nosiseptör",
+      "C": "Kimyasal nosiseptör",
+      "D": "Polimodal nosiseptör",
+      "E": "Mekanik nosiseptör"
+     },
+     "dogru": "A",
+     "aciklama": "Sessiz (uyuyan) nosiseptörler normalde yanıtsızdır ve inflamasyonda aktive olur (sayfa 32).",
+     "sik_aciklamalari": {
+      "A": "Sessiz (uyuyan) nosiseptörler normalde yanıtsızdır ve inflamasyonda aktive olur. Periferik sensitizasyonda bu nosiseptörlerin devreye girmesi primer hiperaljeziye katkı sağlar (sayfa 32).",
+      "B": "Termal nosiseptörler zararlı sıcak ve soğuğa yanıt verir. Uyaran varlığında normal koşullarda da etkin olduklarından inflamasyona özgü sessiz tip değildir (sayfa 32).",
+      "C": "Kimyasal nosiseptörler H⁺, ATP ve bradikinin gibi maddelere yanıt verir. Kimyasal uyarana normalde de yanıt verdiklerinden sessiz nosiseptörden ayrılırlar (sayfa 32).",
+      "D": "Polimodal nosiseptörler birden fazla uyaran tipine yanıt verir ve çoğu C lifidir. Normalde de yanıt verdikleri için sessiz tip sayılmazlar (sayfa 32).",
+      "E": "Mekanik nosiseptörler yüksek şiddetli basınç ve kesilmeye yanıt verir. Normal koşullarda da yanıtlandıkları için yalnızca inflamasyonda aktive olan tip değildir (sayfa 32)."
+     },
+     "bilgi": [
+      118
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Sessiz (uyuyan): normalde yanıtsız, inflamasyonda aktive olur"
+     },
+     "s": 32,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q53",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aδ, C ve Aβ liflerinin iletim hızları sırasıyla aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "5–30, 35–75 ve 0,5–2 m/s",
+      "B": "35–75, 0,5–2 ve 5–30 m/s",
+      "C": "0,5–2, 5–30 ve 35–75 m/s",
+      "D": "35–75, 5–30 ve 0,5–2 m/s",
+      "E": "5–30, 0,5–2 ve 35–75 m/s"
+     },
+     "dogru": "E",
+     "aciklama": "Aδ 5–30 m/s, C 0,5–2 m/s ve Aβ 35–75 m/s hızla iletir (sayfa 33).",
+     "sik_aciklamalari": {
+      "A": "Bu seçenekte Aδ için 5–30 doğru yazılmıştır fakat C için 35–75 ve Aβ için 0,5–2 m/s verilmiştir. Miyelinsiz C lifleri en yavaş, kalın miyelinli Aβ lifleri en hızlı liftir (sayfa 33).",
+      "B": "Bu seçenekte Aδ için 35–75 m/s, C için 0,5–2 ve Aβ için 5–30 m/s verilmiştir. Aβ lifleri kalın miyelinli olduğundan en hızlıdır; sıra bu yüzden yanlıştır (sayfa 33).",
+      "C": "Bu sıralama Aδ ile C liflerinin hızlarını yer değiştirmiştir. Miyelinsiz C lifleri en yavaş, ince miyelinli Aδ lifleri bunlardan daha hızlıdır (sayfa 33).",
+      "D": "Bu seçenek hızları Aβ, Aδ, C sırasıyla verir. Soru Aδ, C ve Aβ sırasını sorduğundan Aδ için 35–75 m/s yazılması yanlıştır (sayfa 33).",
+      "E": "Aδ lifleri 5–30 m/s, C lifleri 0,5–2 m/s ve Aβ lifleri 35–75 m/s hızla iletir. Soru bu sıralamayı sorduğu için seçenek doğrudur (sayfa 33)."
+     },
+     "bilgi": [
+      119,
+      121,
+      123
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "İletim hızı 5–30 m/s 0,5–2 m/s 35–75 m/s"
+     },
+     "s": 33,
+     "dayanak": [
+      "hoca:hv-k2-06-29",
+      "ozen:s33",
+      "not:s33"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q58",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aδ, C ve Aβ liflerinin çapları büyükten küçüğe doğru sıralandığında aşağıdakilerden hangisi elde edilir?",
+     "secenekler": {
+      "A": "C, Aδ (delta), Aβ (beta)",
+      "B": "Aδ (delta), Aβ (beta), C",
+      "C": "Aδ (delta), C, Aβ (beta)",
+      "D": "Aβ (beta), Aδ (delta), C",
+      "E": "Aβ (beta), C, Aδ (delta)"
+     },
+     "dogru": "D",
+     "aciklama": "Aβ lifleri 6–12 µm çaplı kalın miyelinli olup dokunma, titreşim ve basıncı taşır; Aδ lifleri 1–5 µm çaplı ince miyelinli olup hızlı, keskin ağrıyı taşır; C lifleri 0,2–1,5 µm çaplı miyelinsiz olup yavaş, künt ağrıyı taşır. Bu nedenle çaplar büyükten küçüğe Aβ, Aδ, C sırasını izler (sayfa 33).",
+     "sik_aciklamalari": {
+      "A": "C lifleri 0,2–1,5 µm ile en ince lif grubudur. Bu sıralama C'yi en kalın gösterdiği için yanlıştır (sayfa 33).",
+      "B": "Aδ lifleri 1–5 µm iken Aβ lifleri 6–12 µm çaptadır. Bu sıralama Aδ'yi Aβ'den kalın gösterdiği için yanlıştır (sayfa 33).",
+      "C": "Aδ 1–5 µm, C 0,2–1,5 µm ve Aβ 6–12 µm çaptadır. Bu seçenek Aβ'yi en ince gösterdiği için yanlıştır (sayfa 33).",
+      "D": "Aβ lifleri 6–12 µm, Aδ lifleri 1–5 µm ve C lifleri 0,2–1,5 µm kalınlığındadır. Kalınlık büyükten küçüğe Aβ, Aδ, C sırasını izlediği için bu seçenek doğrudur (sayfa 33).",
+      "E": "Aβ en kalın liftir, ancak C lifleri 0,2–1,5 µm ile Aδ'den (1–5 µm) daha incedir. Aδ'nin C'den sonra yazılması bu sıralamayı yanlış yapar (sayfa 33)."
+     },
+     "bilgi": [
+      119,
+      121,
+      123
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Çap 1–5 µm 0,2–1,5 µm 6–12 µm"
+     },
+     "s": 33,
+     "dayanak": [
+      "hoca:hv-k2-06-29",
+      "not:s33"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Öğrenci, ağrı yolunun dört aşamasını (transdüksiyon, transmisyon, modülasyon, persepsiyon) dorsal boynuz laminaları, çıkan yollar, nörotransmiterler, kapı kontrol teorisi, inen sistemler ve endojen opioidlerle açıklar.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q60",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Zararlı uyaranın nosiseptör ucunda elektriksel sinyale dönüştürüldüğü aşama aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Transdüksiyon",
+      "B": "Transmisyon",
+      "C": "Modülasyon",
+      "D": "Persepsiyon",
+      "E": "Sensitizasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Uyaranın nosiseptör ucunda elektriksel sinyale dönüşümü transdüksiyondur (sayfa 37).",
+     "sik_aciklamalari": {
+      "A": "Transdüksiyonda mekanik, termal veya kimyasal enerji nosiseptör ucuna etki eder, iyon kanalları açılır ve eşik aşılırsa aksiyon potansiyeli başlar. Soru uyaranın elektriksel sinyale dönüşümünü sorduğu için doğru yanıt budur (sayfa 37).",
+      "B": "Transmisyon, oluşan sinyalin Aδ ve C lifleriyle dorsal boynuza ve spinotalamik yolla talamusa taşınmasıdır. Dönüşümü değil taşınmayı anlattığı için soruya uymaz (sayfa 36).",
+      "C": "Modülasyon, spinal internöronlar ve inen yolların sinyalin gücünü artırması veya azaltmasıdır. Uyaranın elektriksel sinyale dönüşümüyle ilgili olmadığı için transdüksiyonun yerine geçemez (sayfa 36).",
+      "D": "Persepsiyon, ağrının beyinde bilinçli olarak deneyimlenmesidir ve dağıtık beyin ağlarında oluşur. Uyaranın ilk dönüşümünü anlatmadığı için soruya uymaz (sayfa 45).",
+      "E": "Sensitizasyon, ağrı sisteminin duyarlılığının artmasıdır ve periferik ya da santral düzeyde gelişir. Dört aşamadan biri olmadığı için soruya uymaz (sayfa 48)."
+     },
+     "bilgi": [
+      134,
+      135,
+      136,
+      137
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "Mekanik, termal veya kimyasal enerji nosiseptör ucuna etki eder"
+     },
+     "s": 37,
+     "dayanak": [
+      "hoca:hv-k2-06-33",
+      "ozen:s46"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q63",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Dorsal boynuzdaki başlıca hızlı eksitatör iletici aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Noradrenalin",
+      "B": "GABA",
+      "C": "Glutamat",
+      "D": "Serotonin",
+      "E": "Glisin"
+     },
+     "dogru": "C",
+     "aciklama": "Dorsal boynuzda başlıca hızlı eksitatör iletici glutamattır (sayfa 38).",
+     "sik_aciklamalari": {
+      "A": "Noradrenalin α2-adrenerjik reseptörler üzerinden inen inhibisyona aracılık eder. Hızlı eksitatör iletiyi sağlayan başlıca aracı olmadığı için soruya uymaz (sayfa 40).",
+      "B": "GABA spinal inhibisyonda görev yapan inhibitör iletici olup GABA-A ve GABA-B reseptörleri üzerinden etki eder. Eksitatör değil inhibitör olduğu için soruya uymaz (sayfa 40).",
+      "C": "Glutamat dorsal boynuzda başlıca hızlı eksitatör ileticidir; AMPA ve kainat reseptörleri üzerinden hızlı iletim sağlar ve P maddesi ile CGRP ona eşlik eder. Bu nedenle doğru yanıttır (sayfa 38).",
+      "D": "Serotonin 5-HT alt tipleri aracılığıyla inen inhibisyonda, alt tipe göre fasilitasyonda rol alır. Dorsal boynuzun başlıca hızlı eksitatör ileticisi değildir (sayfa 40).",
+      "E": "Glisin GABA ile birlikte spinal inhibisyondan sorumludur. İnhibitör bir aracı olduğu için hızlı eksitatör iletici sayılmaz ve soruya uymaz (sayfa 40)."
+     },
+     "bilgi": [
+      142,
+      148
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Glutamat başlıca hızlı eksitatör ileticidir"
+     },
+     "s": 38,
+     "dayanak": [
+      "hoca:hv-k2-06-30",
+      "ozen:s38"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q59",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Nosiseptif işlemenin dört aşaması aşağıdakilerden hangisinde sırasıyla doğru verilmiştir?",
+     "secenekler": {
+      "A": "Transdüksiyon, transmisyon, persepsiyon, modülasyon",
+      "B": "Modülasyon, transdüksiyon, transmisyon, persepsiyon",
+      "C": "Transdüksiyon, transmisyon, modülasyon, persepsiyon",
+      "D": "Transdüksiyon, modülasyon, transmisyon, persepsiyon",
+      "E": "Transmisyon, transdüksiyon, modülasyon, persepsiyon"
+     },
+     "dogru": "C",
+     "aciklama": "Dört aşama sırasıyla transdüksiyon, transmisyon, modülasyon ve persepsiyondur (sayfa 36).",
+     "sik_aciklamalari": {
+      "A": "Persepsiyon, bilinçli ağrı deneyimidir ve yolun son aşamasıdır. Bu seçenek persepsiyonu modülasyonun önüne aldığı için dizilim yanlıştır; modülasyon üçüncü, persepsiyon dördüncü aşamadır (sayfa 36).",
+      "B": "Modülasyon, spinal internöronlar ve inen yolların sinyali artırması veya azaltması olup üçüncü aşamadır. Bu seçenek modülasyonu ilk sıraya koyduğu için yanlıştır (sayfa 36).",
+      "C": "Önce zararlı uyaran nosiseptör ucunda elektriksel sinyale dönüşür (transdüksiyon), sinyal dorsal boynuz ve çıkan yollarla taşınır (transmisyon), spinal internöronlar ve inen yollar sinyali değiştirir (modülasyon) ve beyinde bilinçli ağrı oluşur (persepsiyon). Bu sıra sorulan doğru dizilimdir (sayfa 36).",
+      "D": "Şemada transdüksiyon 1, transmisyon 2, modülasyon 3 ve persepsiyon 4 olarak numaralanır. Bu seçenek transmisyon ile modülasyonun yerini değiştirdiği için dizilim yanlıştır (sayfa 36).",
+      "E": "Transdüksiyon, uyaranın nosiseptör ucunda elektriksel sinyale dönüşmesidir ve yolun ilk basamağıdır. Bu seçenek transmisyonu ilk sıraya koyduğu için yanlıştır (sayfa 36)."
+     },
+     "bilgi": [
+      131,
+      132,
+      133
+     ],
+     "benzer_cikmis": [
+      "5afc023320d4"
+     ],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Nosiseptif işlemenin dört aşaması"
+     },
+     "s": 36,
+     "dayanak": [
+      "hoca:hv-k2-06-33",
+      "hoca:hv-k2-06-34",
+      "cikmis:5afc023320d4",
+      "ozen:s46"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q61",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Elini sıcak bir yüzeye değdiren kişide koruyucu çekilme refleksi, bilinçli ağrı algısından önce hangi düzeyde başlar?",
+     "secenekler": {
+      "A": "Limbik düzeyde",
+      "B": "Talamik düzeyde",
+      "C": "Kortikal düzeyde",
+      "D": "Periakuaduktal gri düzeyinde",
+      "E": "Spinal düzeyde"
+     },
+     "dogru": "E",
+     "aciklama": "Koruyucu çekilme refleksi spinal düzeyde ve bilinçli ağrı algısından önce başlar (sayfa 46).",
+     "sik_aciklamalari": {
+      "A": "Limbik sistem ağrının emosyonel ve motivasyonel yönünü işler. Refleks bu işlemeden önce spinal düzeyde başladığı için limbik düzey doğru değildir (sayfa 45).",
+      "B": "Talamus, çıkan yolların ağrı bilgisini kortekse ilettiği merkezdir. Refleks talamusa ulaşmadan spinal düzeyde başladığı için bu seçenek uymaz (sayfa 39).",
+      "C": "Korteks ağrının bilinçli algılandığı düzeydir (persepsiyon) ve S1, S2, insula ile ACC bu algıda rol alır. Çekilme refleksi bilinçli algıdan önce başladığı için korteks düzeyinde başlamaz (sayfa 46).",
+      "D": "Periakuaduktal gri, inen ağrı kontrolünün ana düğümüdür ve opioid reseptörlerinden zengindir. Çekilme refleksini başlatan merkez olmadığından refleks spinal düzeyde başlar (sayfa 43).",
+      "E": "Koruyucu çekilme refleksi spinal düzeyde, bilinçli ağrı algısından önce başlar. Bu nedenle çekilme, ağrının bilinçli olarak algılanmasını beklemeden gerçekleşir (sayfa 46)."
+     },
+     "bilgi": [
+      181
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Koruyucu çekilme refleksi spinal düzeyde, bilinçli ağrı algısından önce başlar"
+     },
+     "s": 46,
+     "dayanak": [
+      "hoca:hv-k2-06-33",
+      "ozen:s46"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q62",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "TENS cihazlarının dayandığı kuram aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kapı kontrol teorisi",
+      "B": "Periferik sensitizasyon",
+      "C": "Nörojenik inflamasyon",
+      "D": "Wind-up",
+      "E": "Yakınsama-projeksiyon hipotezi"
+     },
+     "dogru": "A",
+     "aciklama": "TENS cihazları, dokunma liflerini uyaran kapı kontrol teorisine dayanır (sayfa 42).",
+     "sik_aciklamalari": {
+      "A": "Kapı kontrol teorisinde Aβ girdisi inhibitör internöronu uyarır ve nosiseptif aktarım azalır. TENS cihazları dokunma liflerini uyararak bu mekanizmadan yararlanır; bu nedenle doğru yanıt budur (sayfa 42).",
+      "B": "Periferik sensitizasyonda nosiseptör eşiği düşer ve yanıt artar. Ağrıyı artıran bir süreçtir; TENS ise kapıyı kapatarak ağrıyı azaltmayı hedefler (sayfa 48).",
+      "C": "Nörojenik inflamasyonda uyarılan nosiseptörden P maddesi ve CGRP salınır; vazodilatasyon ve ödem gelişir. Ağrıyı azaltmaya yönelik TENS ile ilgili değildir (sayfa 50).",
+      "D": "Wind-up, aynı şiddetteki tekrarlayan uyarana yanıtın giderek artmasıdır. Ağrıyı artıran bir süreçtir; TENS ise ağrıyı azaltan kapı mekanizmasına dayanır (sayfa 51).",
+      "E": "Yakınsama-projeksiyon hipotezi, visseral ve somatik afferentlerin aynı dorsal boynuz nöronlarına yakınsamasıyla yansıyan ağrıyı açıklar. TENS'in dayanağı değildir (sayfa 27)."
+     },
+     "bilgi": [
+      215,
+      158,
+      160
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Gündelik örnek Çarpılan bölgeyi ovuşturmak ağrıyı azaltır"
+     },
+     "s": 42,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s42"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q64",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Spinal inhibisyondan sorumlu aracılar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Glutamat ve aspartat",
+      "B": "Aspartat ve P maddesi",
+      "C": "P maddesi ve nörokinin A",
+      "D": "GABA ve glisin",
+      "E": "Glutamat ve CGRP"
+     },
+     "dogru": "D",
+     "aciklama": "Spinal inhibisyondan GABA ve glisin sorumludur (sayfa 40).",
+     "sik_aciklamalari": {
+      "A": "Glutamat ve aspartat AMPA ve kainat reseptörleri üzerinden hızlı eksitatör iletim sağlar. Eksitatör oldukları için spinal inhibisyondan sorumlu değildirler (sayfa 40).",
+      "B": "Aspartat glutamatla birlikte hızlı eksitatör iletimde, P maddesi ise yavaş ve uzun süreli eksitasyonda rol alır. İkisi de eksitatör olduğundan spinal inhibisyon aracısı değildir (sayfa 40).",
+      "C": "P maddesi ve nörokinin A, NK1 reseptörü üzerinden yavaş ve uzun süreli eksitasyon yapar. Eksitatör olduklarından inhibisyon aracısı sayılmazlar (sayfa 40).",
+      "D": "GABA ve glisin, GABA-A, GABA-B ve glisin reseptörleri üzerinden spinal inhibisyonu sağlar. Dorsal boynuzdaki inhibitör internöronların başlıca aracılarıdır (sayfa 40).",
+      "E": "CGRP eksitasyonun güçlenmesini sağlar ve periferde nörojenik inflamasyona katılır; glutamat da hızlı eksitatör ileticidir. İkisi de eksitatör olduğundan bu birleşim inhibisyonu açıklamaz (sayfa 40)."
+     },
+     "bilgi": [
+      152
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "GABA, glisin GABA-A, GABA-B, glisin reseptörü Spinal inhibisyon"
+     },
+     "s": 40,
+     "dayanak": [
+      "hoca:hv-k2-06-31",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q66",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Çarpılan bölgeyi ovuşturmak, kapı kontrol teorisine göre ağrıyı hangi mekanizmayla azaltır?",
+     "secenekler": {
+      "A": "Noradrenerjik inen yolun glutamat salınımını artırması",
+      "B": "Endojen opioidlerin presinaptik Ca²⁺ kanallarını açması",
+      "C": "Aδ girdisinin projeksiyon nöronunu uyarması",
+      "D": "C girdisinin inhibitör internöronu baskılaması",
+      "E": "Aβ girdisinin inhibitör internöronu uyarması"
+     },
+     "dogru": "E",
+     "aciklama": "Aβ girdisi inhibitör internöronu uyararak nosiseptif aktarımı azaltır ve kapıyı kapatır (sayfa 42).",
+     "sik_aciklamalari": {
+      "A": "Noradrenerjik inen yol α2 reseptörleri üzerinden nosiseptif aktarımı baskılar; glutamat salınımını artırmaz. Ovuşturma etkisi kapı mekanizmasındaki Aβ girdisiyle açıklanır (sayfa 43).",
+      "B": "Endojen opioidler primer afferent ucunda voltaj kapılı Ca²⁺ kanallarını inhibe eder; kanalları açmazlar. Ayrıca ovuşturma etkisi kapı kontrol teorisinde Aβ girdisine dayanır (sayfa 44).",
+      "C": "Aδ ve C girdisi projeksiyon nöronunu uyararak kapıyı açar ve ağrıyı artırır. Ovuşturmayla azalan ağrıyı bu mekanizma açıklamaz (sayfa 42).",
+      "D": "C girdisi inhibitör internöronu baskılayarak kapının açılmasına katkı yapar. Kapıyı kapatan değil açan bir mekanizmadır; ağrı azalmasını açıklamaz (sayfa 42).",
+      "E": "Ovuşturma dokunma liflerini (Aβ) uyarır; Aβ girdisi inhibitör internöronu uyarır, projeksiyon nöronuna nosiseptif aktarım azalır ve kapı kapanır. Teori Melzack ve Wall tarafından 1965'te ortaya atılmıştır (sayfa 42)."
+     },
+     "bilgi": [
+      158,
+      160,
+      161
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Aβ girdisi inhibitör internöronu uyarır; projeksiyon nöronuna nosiseptif aktarım azalır"
+     },
+     "s": 42,
+     "dayanak": [
+      "ayrinti",
+      "ozen:s42"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q67",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İnen ağrı kontrolünün ana düğümü olan, opioid reseptörlerinden zengin orta beyin yapısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Periakuaduktal gri (PAG)",
+      "B": "Amigdala",
+      "C": "Lateral talamus",
+      "D": "Locus coeruleus",
+      "E": "Rostral ventromedial medulla (RVM)"
+     },
+     "dogru": "A",
+     "aciklama": "PAG orta beyinde, opioid reseptörlerinden zengin, inen kontrolün ana düğümüdür (sayfa 43).",
+     "sik_aciklamalari": {
+      "A": "PAG orta beyinde yer alır, opioid reseptörlerinden zengindir ve inen kontrolün ana düğümüdür. Kortikal ve limbik bölgelerden girdi alır, RVM üzerinden dorsal boynuzu etkiler (sayfa 43).",
+      "B": "Amigdala, prefrontal korteks, ACC ve hipotalamusla birlikte PAG'ye dikkat, beklenti, stres ve duygu girdisi gönderir. İnen kontrolün ana düğümü PAG'dir, amigdala değil (sayfa 43).",
+      "C": "Lateral talamus (VPL/VPM) ağrının yerini, şiddetini ve niteliğini taşıyan lateral sistemin parçasıdır. İnen kontrolün düğümü değil, çıkan yolun bir durağıdır (sayfa 45).",
+      "D": "Locus coeruleus noradrenerjik inen yolun kaynağıdır ve inen inhibisyona katkı sağlar. Opioid reseptörlerinden zengin ana düğüm olarak tanımlanan yapı ise PAG'dir (sayfa 43).",
+      "E": "RVM serotonerjiktir ve ON ile OFF hücrelerini içerir. PAG'den gelen inen yolun bir basamağıdır, orta beyin yapısı ve ana düğüm değildir (sayfa 43)."
+     },
+     "bilgi": [
+      162,
+      163,
+      164
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "PAG (orta beyin) Opioid reseptörlerinden zengin; inen kontrolün ana düğümü"
+     },
+     "s": 43,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q65",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Dorsal boynuzdaki aracılar, reseptörleri ve etkileri için aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "GABA – NMDA – hızlı eksitatör iletim",
+      "B": "Glutamat – AMPA ve kainat – hızlı eksitatör iletim",
+      "C": "CGRP – glisin reseptörü – inhibisyon",
+      "D": "P maddesi – NK1 – spinal inhibisyon",
+      "E": "Endojen opioidler – NK1 – yavaş ve uzun süreli eksitasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Glutamat AMPA ve kainat reseptörleri üzerinden hızlı eksitatör iletim sağlar (sayfa 40).",
+     "sik_aciklamalari": {
+      "A": "GABA, GABA-A ve GABA-B reseptörleri üzerinden spinal inhibisyon yapar; NMDA reseptörü glutamatın tekrarlayan uyarıda açılan reseptörüdür. Bu eşleştirme üç öğesinde de hatalıdır (sayfa 40).",
+      "B": "Glutamat AMPA ve kainat reseptörleri üzerinden hızlı eksitatör iletim sağlar. Aracı, reseptör ve etki birbiriyle uyumlu olduğundan eşleştirme doğrudur (sayfa 40).",
+      "C": "CGRP kendi reseptörü üzerinden eksitasyonu güçlendirir ve nörojenik inflamasyona katılır. Glisin reseptörü inhibisyon aracısıdır; eşleştirme bu yüzden yanlıştır (sayfa 40).",
+      "D": "P maddesi NK1 reseptörü üzerinden yavaş ve uzun süreli eksitasyon yapar. Spinal inhibisyonu GABA ve glisin sağladığı için bu eşleştirme yanlıştır (sayfa 40).",
+      "E": "Endojen opioidler μ, δ ve κ reseptörleri üzerinden pre- ve postsinaptik inhibisyon yapar. NK1 ve yavaş eksitasyon P maddesine aittir; eşleştirme bu yüzden yanlıştır (sayfa 40)."
+     },
+     "bilgi": [
+      148,
+      149,
+      150,
+      151,
+      152,
+      153
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Glutamat (aspartat) AMPA, kainat Hızlı eksitatör iletim"
+     },
+     "s": 40,
+     "dayanak": [
+      "hoca:hv-k2-06-30",
+      "hoca:hv-k2-06-31",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q68",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Enkefalinler, β-endorfin ve dinorfinlerin başlıca reseptörleri sırasıyla aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "mu, delta ve kappa",
+      "B": "delta (ve mu), mu ve kappa",
+      "C": "delta, kappa ve mu",
+      "D": "mu, kappa ve delta",
+      "E": "kappa, mu ve delta"
+     },
+     "dogru": "B",
+     "aciklama": "Enkefalinler δ (ve μ), β-endorfin μ ve dinorfinler κ reseptörüne etkir (sayfa 44).",
+     "sik_aciklamalari": {
+      "A": "Bu seçenekte enkefalin μ, β-endorfin δ olarak verilmiştir. β-endorfinin başlıca reseptörü μ, enkefalinlerinki δ (ve μ) olduğundan iki reseptör yer değiştirmiştir (sayfa 44).",
+      "B": "Enkefalinler başlıca δ (ve μ), β-endorfin μ ve dinorfinler κ reseptörüne etkir. Soru bu eşleşmeyi sorduğu için seçenek doğrudur (sayfa 44).",
+      "C": "Bu seçenek enkefalinlerde δ'yı doğru verir ancak β-endorfini κ, dinorfinleri μ saymıştır. β-endorfin μ, dinorfinler κ reseptörüne etkir (sayfa 44).",
+      "D": "Bu seçenekte enkefalin μ, β-endorfin κ ve dinorfin δ olarak verilmiştir. Üç eşleşme de yer değiştirmiştir; doğrusu δ (ve μ), μ ve κ'dır (sayfa 44).",
+      "E": "Bu seçenekte enkefalinler κ, β-endorfin μ ve dinorfinler δ olarak verilmiştir. Dinorfinlerin başlıca reseptörü κ, enkefalinlerinki δ (ve μ) olduğundan eşleşme yanlıştır (sayfa 44)."
+     },
+     "bilgi": [
+      169,
+      170,
+      171
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Enkefalinler δ (ve μ) Dorsal boynuz internöronları, PAG, RVM"
+     },
+     "s": 44,
+     "dayanak": [
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "5afc023320d4",
+     "soru": "Anestezi\nAnestezi\nAĞRI YOLLARI VE\nMEKANİZMALARI-1\nHangi şık ağrı\nalgılaması aşamalarıyla\nilgili değildir?\nTransdüksiyon\nTransmisyon\nModülasyon\nPersepsiyon\nRemisyon\nRemisyon",
+     "secenekler": {
+      "A": "Transdüksiyon",
+      "B": "Transmisyon",
+      "C": "Modülasyon",
+      "D": "Persepsiyon"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Öğrenci, periferik ve santral sensitizasyonu, nörojenik inflamasyonu, disinhibisyonu ve nöroplastisiteyi açıklar; akut ağrının kronikleşmesini biyopsikososyal modelle ilişkilendirir.",
+   "sorular": [
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q69",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Hasarlı dokunun kendisinde nosiseptör eşiğinin düşmesi ve yanıtın artması ile primer hiperaljeziye yol açan süreç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nörojenik inflamasyon",
+      "B": "Wind-up",
+      "C": "Santral sensitizasyon",
+      "D": "Disinhibisyon",
+      "E": "Periferik sensitizasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Hasarlı dokuda nosiseptör eşiğinin düşmesi periferik sensitizasyondur ve primer hiperaljeziyle ilişkilidir (sayfa 48).",
+     "sik_aciklamalari": {
+      "A": "Nörojenik inflamasyonda nosiseptörlerden salınan P maddesi, nörokinin A ve CGRP vazodilatasyon ve ödem yapar. Süreç sensitizasyonu artırır ama eşik düşmesinin kendisini tanımlamaz (sayfa 50).",
+      "B": "Wind-up, aynı şiddetteki tekrarlayan uyarana dorsal boynuz yanıtının giderek artmasıdır. Santral bir olaydır; hasarlı dokunun kendisindeki eşik düşmesini anlatmaz (sayfa 51).",
+      "C": "Santral sensitizasyonda MSS nosiseptif nöronlarının eşik altı girdilere yanıtı artar ve hasarın çevresindeki sağlam dokuya yayılır; sekonder hiperaljezi ve allodiniyle ilişkilidir. Soru hasarlı dokunun kendisini sorduğu için uymaz (sayfa 48).",
+      "D": "Disinhibisyon, ağrı iletimini baskılayan sistemlerin etkinliğinin azalmasıdır ve ağrı eşiğini düşürür. Hasarlı dokuda nosiseptör eşiğinin düşmesi ise periferik sensitizasyondur (sayfa 52).",
+      "E": "Periferik sensitizasyonda nosiseptör eşiği düşer ve yanıtı artar; olay hasarlı dokunun kendisinde gelişir ve primer hiperaljeziyle ilişkilidir. Soru bu özellikleri sorduğu için doğru yanıt budur (sayfa 48)."
+     },
+     "bilgi": [
+      182
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Nosiseptör eşiğinde düşme ve yanıtında artış"
+     },
+     "s": 48,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q76",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi akut ağrının kronikleşmesinde psikososyal risk etkenlerinden biridir?",
+     "secenekler": {
+      "A": "Önceden var olan kronik ağrı",
+      "B": "Yüksek akut ağrı şiddeti",
+      "C": "Ağrı felaketleştirme (katastrofizasyon)",
+      "D": "Nosiseptör aktivasyonu",
+      "E": "Cerrahide sinir hasarı"
+     },
+     "dogru": "C",
+     "aciklama": "Ağrı felaketleştirme, kaygı ve depresif duygudurum psikososyal risk etkenleridir (sayfa 54).",
+     "sik_aciklamalari": {
+      "A": "Önceden var olan kronik ağrı biyolojik risk etkenleri arasında yer alır. Psikososyal grubun üyesi olmadığı için soruya uymaz (sayfa 54).",
+      "B": "Yüksek akut ağrı şiddeti, sinir hasarı ve önceden var olan kronik ağrıyla birlikte kronikleşmenin biyolojik risk etkenlerindendir. Psikososyal grupta sayılmadığı için bu soruya uymaz (sayfa 54).",
+      "C": "Ağrı felaketleştirme (katastrofizasyon), kaygı, depresif duygudurum, korku-kaçınma davranışı ve sosyal destek eksikliği psikososyal risk etkenleridir. Soru bu grubu sorduğu için doğru yanıt budur (sayfa 54).",
+      "D": "Nosiseptör aktivasyonu akut doku hasarı sonrası kronikleşme basamaklarının ilkidir. Risk etkeni değil sürecin başlangıcıdır ve psikososyal grup içinde sayılmaz (sayfa 54).",
+      "E": "Cerrahide sinir hasarı, yüksek akut ağrı şiddeti ve önceden var olan kronik ağrıyla birlikte kronikleşmenin biyolojik risk etkenleri arasındadır. Psikososyal etken olmadığı için soruya uymaz (sayfa 54)."
+     },
+     "bilgi": [
+      210,
+      209
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Ağrı felaketleştirme (katastrofizasyon) Kaygı, depresif duygudurum"
+     },
+     "s": 54,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q70",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Güneş yanığı bölgesindeki hiperaljezi ile yanığın çevresindeki sağlam deride artmış duyarlılık sırasıyla hangi mekanizmalarla ilişkilidir?",
+     "secenekler": {
+      "A": "Santral sensitizasyon; disinhibisyon",
+      "B": "Santral sensitizasyon; periferik sensitizasyon",
+      "C": "Disinhibisyon; periferik sensitizasyon",
+      "D": "Periferik sensitizasyon; santral sensitizasyon",
+      "E": "Periferik sensitizasyon; nörojenik inflamasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Primer hiperaljezi periferik, sekonder hiperaljezi santral sensitizasyonla ilişkilidir (sayfa 48).",
+     "sik_aciklamalari": {
+      "A": "Santral sensitizasyon sekonder hiperaljezi için doğrudur. Hasarlı dokudaki primer hiperaljezi ise disinhibisyonla değil periferik sensitizasyonla açıklandığından bu eşleştirme yanlıştır (sayfa 48).",
+      "B": "Bu seçenek iki mekanizmanın yerini değiştirmiştir. Hasarlı dokunun kendisindeki duyarlılık periferik, çevredeki sağlam dokudaki duyarlılık santral sensitizasyonla ilişkilidir (sayfa 48).",
+      "C": "Disinhibisyon, ağrıyı baskılayan sistemlerin etkinliğinin azalmasıdır ve hiperaljezi ile allodiniye katkı sağlar. Güneş yanığındaki primer hiperaljezinin temel mekanizması bu değildir (sayfa 52).",
+      "D": "Güneş yanığı bölgesindeki hiperaljezi primerdir ve periferik sensitizasyonla ilişkilidir. Yanığın çevresindeki sağlam deride görülen artmış duyarlılık sekonder hiperaljezidir ve santral sensitizasyona bağlıdır (sayfa 48).",
+      "E": "Periferik sensitizasyon primer hiperaljezi için doğrudur, nörojenik inflamasyon ise kızarıklık ve ödemle ilişkilidir. Sağlam çevre dokudaki sekonder hiperaljezi santral sensitizasyonla açıklanır (sayfa 50)."
+     },
+     "bilgi": [
+      184,
+      182,
+      183
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Güneş yanığı bölgesindeki hiperaljezi (primer) ile yanığın çevresindeki sağlam deride artmış duyarlılık (sekonder)"
+     },
+     "s": 48,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q71",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi nosiseptörleri doğrudan aktive eden mediatörlerden biri değildir?",
+     "secenekler": {
+      "A": "K⁺",
+      "B": "Bradikinin",
+      "C": "Prostaglandin E2",
+      "D": "H⁺",
+      "E": "ATP"
+     },
+     "dogru": "C",
+     "aciklama": "Prostaglandinler nosiseptörleri doğrudan uyarmaktan çok duyarlılaştırır; doğrudan aktive eden bradikinin, H⁺, K⁺ ve ATP'dir (sayfa 49).",
+     "sik_aciklamalari": {
+      "A": "K⁺, bradikinin, H⁺ ve ATP ile birlikte nosiseptörleri doğrudan aktive eden mediatörlerdendir. Doğrudan aktive ettiği için olumsuz kökte aranan yanıt değildir (sayfa 49).",
+      "B": "Bradikinin hem nosiseptörleri doğrudan aktive eder hem duyarlılaştırır. Doğrudan aktive edenler arasında yer aldığı için aranan yanıt değildir (sayfa 49).",
+      "C": "Prostaglandinler, özellikle PGE2, nosiseptörleri doğrudan uyarmaktan çok duyarlılaştırır. Doğrudan aktive eden mediatörler arasında sayılmadığı için soruda aranan yanıttır; eşiği düşürerek aynı uyaranın daha kolay aksiyon potansiyeli oluşturmasını sağlar (sayfa 49).",
+      "D": "H⁺ (asidoz) nosiseptörleri doğrudan aktive eden mediatörlerdendir ve iskemik ağrıda da rol oynar. Doğrudan aktive ettiği için olumsuz kökün yanıtı değildir (sayfa 49).",
+      "E": "ATP inflamatuvar çorbadaki mediatörlerdendir ve nosiseptörleri doğrudan aktive eder. Doğrudan aktive eden mediatörler arasında yer aldığı için olumsuz kökte aranan yanıt değildir (sayfa 49)."
+     },
+     "bilgi": [
+      186,
+      188
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Prostaglandinler nosiseptörleri doğrudan uyarmaktan çok duyarlılaştırır"
+     },
+     "s": 49,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q72",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Hasarlı bölgenin çevresinde kızarıklık (flare) ve ödem gelişmesi aşağıdaki olaylardan hangisinin klinik yansımasıdır?",
+     "secenekler": {
+      "A": "Nöroplastisite",
+      "B": "Nörojenik inflamasyon",
+      "C": "Disinhibisyon",
+      "D": "Wind-up",
+      "E": "Deafferentasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Hasarlı bölge çevresindeki kızarıklık ve ödem, nörojenik inflamasyonun klinik yansımasıdır (sayfa 50).",
+     "sik_aciklamalari": {
+      "A": "Nöroplastisite, sinir sisteminin aktiviteye bağlı işlevsel ve yapısal değişebilme kapasitesidir. Hasarlı bölgedeki kızarıklık ve ödemin doğrudan nedeni değildir (sayfa 53).",
+      "B": "Nörojenik inflamasyonda uyarılan nosiseptörün periferik ucundan P maddesi, nörokinin A ve CGRP salınır; vazodilatasyon, plazma ekstravazasyonu ve mast hücresi degranülasyonu olur. Klinik yansıması hasarlı bölge çevresinde kızarıklık (flare) ve ödemdir (sayfa 50).",
+      "C": "Disinhibisyon, ağrıyı baskılayan sistemlerin zayıflamasıdır ve eşiğin düşmesine yol açar. Kızarıklık ve ödem gibi doku yanıtlarını açıklamadığı için soruya uymaz (sayfa 52).",
+      "D": "Wind-up, dorsal boynuz nöronlarında tekrarlayan uyarana yanıtın giderek artmasıdır. Santral bir olaydır ve periferde kızarıklık ile ödem oluşturmaz (sayfa 51).",
+      "E": "Deafferentasyon, afferent girdinin kesilmesi sonrası gelişen ağrıdır ve fantom ağrısı örnektir. Periferik uçtan peptit salınımına bağlı kızarıklık ve ödemi açıklamadığı için soruya uymaz (sayfa 21)."
+     },
+     "bilgi": [
+      189,
+      190,
+      191,
+      192
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Klinik yansıma: Hasarlı bölgenin çevresindeki kızarıklık (flare) ve ödem"
+     },
+     "s": 50,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q73",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aynı şiddetteki tekrarlayan C lifi uyarısına dorsal boynuz nöronlarının yanıtının giderek artması aşağıdaki kavramlardan hangisiyle ifade edilir?",
+     "secenekler": {
+      "A": "Periferik sensitizasyon",
+      "B": "Disinhibisyon",
+      "C": "Nörojenik inflamasyon",
+      "D": "Wind-up",
+      "E": "Kapı kapanması"
+     },
+     "dogru": "D",
+     "aciklama": "Tekrarlayan aynı şiddetteki uyarana yanıtın giderek artması wind-up (temporal sumasyon) olarak adlandırılır (sayfa 51).",
+     "sik_aciklamalari": {
+      "A": "Periferik sensitizasyon hasarlı dokunun kendisinde nosiseptör eşiğinin düşmesidir. Dorsal boynuz nöronlarının tekrarlayan uyarana verdiği artan yanıtı anlatmadığı için bu seçenek uymaz (sayfa 48).",
+      "B": "Disinhibisyon, ağrı iletimini baskılayan sistemlerin etkinliğinin azalmasıdır. Tekrarlayan uyarıyla yanıtın giderek artmasını değil baskılayıcı sistemlerin zayıflamasını anlattığı için uymaz (sayfa 52).",
+      "C": "Nörojenik inflamasyon, nosiseptör uyarılınca periferik uçtan peptit salınmasıyla vazodilatasyon ve ödem gelişmesidir. Dorsal boynuz yanıtının artışını anlatmadığı için bu seçenek uymaz (sayfa 50).",
+      "D": "Wind-up, aynı şiddetteki tekrarlayan uyarana yanıtın giderek artmasıdır (temporal sumasyon). Depolarizasyonla NMDA reseptöründeki Mg²⁺ bloğu kalkar ve santral sensitizasyon gelişir (sayfa 51).",
+      "E": "Kapı kapanması, Aβ girdisinin inhibitör internöronu uyarıp nosiseptif aktarımı azaltmasıdır. Yanıtı artırmayıp azalttığı için tekrarlayan uyaranla artan yanıtı anlatmaz (sayfa 42)."
+     },
+     "bilgi": [
+      194,
+      195
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "Aynı şiddetteki tekrarlayan uyarana yanıtın giderek artması (temporal sumasyon)"
+     },
+     "s": 51,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q75",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Disinhibisyonda GABA ve glisinin inhibitör etkisinin zayıflamasına yol açan klorür gradiyenti bozukluğu aşağıdakilerden hangisiyle ilişkilidir?",
+     "secenekler": {
+      "A": "TRPV1 kanalının fosforilasyonu",
+      "B": "Glutamat salınımının azalması",
+      "C": "Endojen opioid düzeyinin artması",
+      "D": "NMDA reseptöründeki Mg²⁺ bloğunun artması",
+      "E": "KCC2 ekspresyonunun azalması"
+     },
+     "dogru": "E",
+     "aciklama": "Disinhibisyonda KCC2 azalması klorür gradiyentini bozarak GABA ve glisinin inhibitör etkisini zayıflatır (sayfa 52).",
+     "sik_aciklamalari": {
+      "A": "TRPV1 ve Nav1.8 gibi kanalların fosforilasyonu periferik sensitizasyonun sonucudur ve nosiseptör eşiğini düşürür. Spinal GABAerjik inhibisyonun zayıflamasıyla ilgili olmadığı için soruya uymaz (sayfa 49).",
+      "B": "Glutamat salınımı santral sensitizasyonda artar ve dorsal boynuzda eksitasyonu güçlendirir. Salınımın azalması klorür gradiyentindeki bozukluğu ve disinhibisyonu açıklamaz (sayfa 51).",
+      "C": "Endojen opioidler pre- ve postsinaptik inhibisyon sağlayan peptitlerdir. Düzeylerinin artması inhibisyonu güçlendirir ve bu nedenle klorür gradiyentindeki bozukluğa değil, tersine inhibisyona yol açar (sayfa 44).",
+      "D": "NMDA reseptöründe Mg²⁺ bloğunun kalkması santral sensitizasyonda Ca²⁺ girişine yol açar. Bloğun artması klorür gradiyentini ve GABAerjik inhibisyonu ilgilendirmez (sayfa 51).",
+      "E": "Disinhibisyonda KCC2 ekspresyonunun azalması klorür gradiyentini bozar ve GABA ile glisinin inhibitör (hiperpolarizan) etkisi zayıflar. Soru bu mekanizmayı sorduğu için doğru yanıt budur (sayfa 52)."
+     },
+     "bilgi": [
+      198,
+      199
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "KCC2 ekspresyonunun azalmasıyla GABA ve glisinin inhibitör (hiperpolarizan) etkisi zayıflar"
+     },
+     "s": 52,
+     "dayanak": [
+      "hoca:hv-k2-06-31",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q77",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Deafferentasyon sonrası talamik nöronlarda anormal patlayıcı aktivite ve kortekste somatosensoriyel haritada yeniden yapılanma aşağıdaki kavramlardan hangisiyle ilişkilidir?",
+     "secenekler": {
+      "A": "Wind-up",
+      "B": "Nörojenik inflamasyon",
+      "C": "Periferik sensitizasyon",
+      "D": "Nöroplastisite",
+      "E": "Disinhibisyon"
+     },
+     "dogru": "D",
+     "aciklama": "Talamus ve kortekste deafferentasyon sonrası yeniden yapılanma nöroplastisitenin örneğidir (sayfa 53).",
+     "sik_aciklamalari": {
+      "A": "Wind-up, dorsal boynuz nöronlarında tekrarlayan uyarana yanıtın giderek artmasıdır ve spinal düzeyde gelişir. Talamus ve korteks düzeyindeki yeniden yapılanmayı anlatmadığı için uymaz (sayfa 51).",
+      "B": "Nörojenik inflamasyon periferik uçtan peptit salınmasıyla kızarıklık ve ödem yapar. Talamik ve kortikal yeniden yapılanmayla ilişkili olmadığı için bu seçenek uymaz (sayfa 50).",
+      "C": "Periferik sensitizasyon, hasarlı dokuda nosiseptör eşiğinin düşmesi ve yanıtın artmasıdır. Talamus ve korteks düzeyindeki değişiklikleri anlatmadığı için bu seçenek uymaz (sayfa 48).",
+      "D": "Nöroplastisite, sinir sisteminin aktivite ve deneyime bağlı işlevsel ve yapısal değişebilme kapasitesidir; talamusta anormal patlayıcı aktivite ve kortekste somatosensoriyel haritanın yeniden yapılanması bu kapsamdadır. Yeniden yapılanma fantom ağrısının şiddetiyle ilişkili bulunmuştur (sayfa 53).",
+      "E": "Disinhibisyon, ağrıyı baskılayan sistemlerin zayıflamasıdır ve GABA, glisin işlev kaybıyla ilişkilidir. Talamus ve kortekste yapısal yeniden yapılanmayı tanımlamaz (sayfa 52)."
+     },
+     "bilgi": [
+      202,
+      204,
+      205
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "Deafferentasyon sonrası talamik nöronlarda anormal patlayıcı aktivite"
+     },
+     "s": 53,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q74",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Santral sensitizasyonun sonuçları ve klinik karşılıklarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Uyarılma eşiği yükselir ve reseptif alan daralır",
+      "B": "Aβ girdisi ağrı oluşturabilir",
+      "C": "Ağrı lezyon alanının dışına yayılabilir",
+      "D": "Sekonder hiperaljezi gelişebilir",
+      "E": "Dinamik mekanik allodini Aβ aracılıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Santral sensitizasyonda eşik düşer ve reseptif alan genişler; ifade bunun tersini söyler (sayfa 51).",
+     "sik_aciklamalari": {
+      "A": "Santral sensitizasyonda eşik düşer ve reseptif alan genişler. İfade bunun tersini, eşik yükselmesini ve alan daralmasını söylediği için yanlıştır (sayfa 51).",
+      "B": "Santral sensitizasyonda Aβ girdisi ağrı oluşturur; normalde dokunmayı taşıyan lifin uyarısı ağrı olarak algılanır. İfade doğru olduğundan yanlış seçenek değildir (sayfa 51).",
+      "C": "Santral sensitizasyonda ağrı lezyon alanının dışına yayılabilir ve spontan ağrı da görülebilir. İfade doğru olduğundan yanlış seçenek değildir (sayfa 51).",
+      "D": "Sekonder hiperaljezi santral sensitizasyonun klinik karşılıklarındandır ve hasarın çevresindeki sağlam dokuda görülür. İfade doğru bir önermedir ve yanlış seçenek olarak aranmaz (sayfa 51).",
+      "E": "Dinamik mekanik allodini Aβ aracılıdır ve santral sensitizasyonun klinik karşılığıdır. İfade bu bilgiyi doğru aktardığı için doğrudur ve yanlış seçenek olarak aranmaz (sayfa 51)."
+     },
+     "bilgi": [
+      196,
+      197
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "Eşik düşer, reseptif alan genişler, Aβ girdisi ağrı oluşturur"
+     },
+     "s": 51,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-06-agri-yollari-ve-mekanizmalari-q78",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Akut ağrının kronikleşmesi ve biyopsikososyal modelle ilgili aşağıdaki ifadeler veriliyor:\nI. Kronikleşme çok faktörlüdür; her akut ağrı kronikleşmez.\nII. Santral sensitizasyon tüm kronik ağrıların tek açıklamasıdır.\nIII. Psikososyal etkiler ağrının gerçekliğini azaltmaz.\nIV. Nöroplastik değişikliklerin tümü patolojiktir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, III ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Kronikleşme çok faktörlüdür ve psikososyal etkiler ağrının gerçekliğini azaltmaz; I ve III doğrudur (sayfa 55).",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade doğrudur fakat ikinci ifade yanlıştır, çünkü santral sensitizasyon tüm kronik ağrıların tek açıklaması değildir. Bu birleşim doğru olan üçüncü ifadeyi de dışarıda bırakır (sayfa 55).",
+      "B": "Kronikleşme çok faktörlüdür ve her akut ağrı kronikleşmez; psikososyal etkiler ağrının gerçekliğini azaltmaz. Santral sensitizasyon tek açıklama değildir ve nöroplastisite normal fizyolojinin de parçası olduğundan her değişiklik patolojik sayılmaz; bu nedenle II ve IV yanlıştır (sayfa 55).",
+      "C": "II ve IV yanlış önermelerdir: santral sensitizasyon tek açıklama değildir ve nöroplastik değişikliklerin hepsi patolojik sayılmaz. Bu birleşim doğru olan I ve III'ü dışarıda bırakır (sayfa 53).",
+      "D": "Birinci ve üçüncü ifadeler doğrudur, ancak dördüncü ifade yanlıştır. Nöroplastisite normal fizyolojinin de parçasıdır ve kısmen geri dönüşlüdür, bu yüzden her değişiklik patolojik değildir (sayfa 53).",
+      "E": "III doğrudur fakat II ve IV yanlıştır ve doğru olan I. ifade dışarıda kalmıştır. Santral sensitizasyon tüm kronik ağrıların tek açıklaması değildir (sayfa 55)."
+     },
+     "bilgi": [
+      206,
+      208,
+      214
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 55,
+      "alinti": "Santral sensitizasyon tüm kronik ağrıların tek açıklaması değildir"
+     },
+     "s": 55,
+     "dayanak": [
+      "hoca:hv-k2-06-34",
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 78
+}

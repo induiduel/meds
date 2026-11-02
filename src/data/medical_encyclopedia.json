@@ -102654,5 +102654,1536 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-nosisepsiyon",
+    "term": "Nosisepsiyon",
+    "aliases": [
+      "nociception"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.5",
+    "definition": "Zararlı uyaranın nosiseptörler ve afferent yolaklar aracılığıyla sinir sistemi tarafından işlenmesidir; bilinçli ağrı deneyimi olmadan da oluşabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ağrı ≠ nosisepsiyon.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nosiseptor",
+    "term": "Nosiseptör",
+    "aliases": [
+      "nociceptor"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.12",
+    "definition": "Zararlı uyaranları dönüştürüp kodlayabilen, periferik somatosensoriyel sistemin yüksek eşikli duyusal reseptörüdür; duyu nöronunun kapsülsüz serbest sinir ucudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Beyin parankiminde nosiseptör yoktur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-zararli_uyaran",
+    "term": "Zararlı uyaran",
+    "aliases": [
+      "noxious stimulus"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.12",
+    "definition": "Normal dokulara zarar veren ya da zarar verme tehdidi taşıyan uyarandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hiperaljezi",
+    "term": "Hiperaljezi",
+    "aliases": [
+      "hyperalgesia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.9",
+    "definition": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Allodini ağrısız uyaranın ağrı yapmasıdır; hiperaljezide uyaran zaten ağrılıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipoaljezi",
+    "term": "Hipoaljezi",
+    "aliases": [
+      "hypoalgesia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.9",
+    "definition": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının azalmasıdır; örneğin periferik nöropatide iğne batmasının az hissedilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-disestezi",
+    "term": "Disestezi",
+    "aliases": [
+      "dysesthesia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.10",
+    "definition": "Kendiliğinden ya da uyarıyla ortaya çıkan, hoş olmayan anormal duyudur (rahatsız edici yanma, elektriklenme).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Her disestezi bir paresteziyidir; her parestezi disestezi değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noralji",
+    "term": "Nöralji",
+    "aliases": [
+      "neuralgia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.11",
+    "definition": "Bir veya birden fazla sinirin dağılım alanında hissedilen ağrıdır (trigeminal nevralji, postherpetik nevralji).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noropati",
+    "term": "Nöropati",
+    "aliases": [
+      "neuropathy"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.11",
+    "definition": "Bir sinirde işlev bozukluğu veya patolojik değişikliktir; tek sinirde mononöropati, çok sinirde polinöropati denir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hiperpati",
+    "term": "Hiperpati",
+    "aliases": [
+      "hyperpathia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.11",
+    "definition": "Özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepkidir; eşik genellikle artmıştır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anestezi_doloroza",
+    "term": "Anestezi doloroza",
+    "aliases": [
+      "anesthesia dolorosa"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.11",
+    "definition": "Duyu kaybı (anestezi) olan bir bölgede hissedilen ağrıdır; trigeminal ganglion lezyonu sonrası görülebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kozalji",
+    "term": "Kozalji",
+    "aliases": [
+      "causalgia"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.12",
+    "definition": "Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir; günümüzde kompleks bölgesel ağrı sendromu (KBAS) tip II adını taşır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kozalji = KBAS tip II.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-agri_esigi",
+    "term": "Ağrı eşiği",
+    "aliases": [
+      "pain threshold"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.13",
+    "definition": "Bir uyaranın ağrılı olarak algılandığı en düşük şiddettir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tolerans eşikten yüksektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-agri_toleransi",
+    "term": "Ağrı toleransı",
+    "aliases": [
+      "pain tolerance"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.13",
+    "definition": "Kişinin belirli bir durumda kabul etmeye razı olduğu, ağrı oluşturan uyaranın en yüksek şiddetidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-santral_noropatik_agri",
+    "term": "Santral nöropatik ağrı",
+    "aliases": [
+      "central neuropathic pain"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.12",
+    "definition": "Santral somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır; inme sonrası ağrı, multipl skleroz ve omurilik yaralanması örnektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nosiseptif_agri",
+    "term": "Nosiseptif ağrı",
+    "aliases": [
+      "nociceptive pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.18",
+    "definition": "Nöral olmayan dokuda gerçek veya olası hasardan kaynaklanan, nosiseptörlerin aktivasyonuna bağlı ağrıdır (kırık, burkulma, artrit, postoperatif ağrı).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noropatik_agri",
+    "term": "Nöropatik ağrı",
+    "aliases": [
+      "neuropathic pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.18",
+    "definition": "Somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır (diyabetik polinöropati, postherpetik nevralji).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yanıcı, elektrik çarpması benzeri nitelik ve allodini nöropatik ağrıyı düşündürür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nosiplastik_agri",
+    "term": "Nosiplastik ağrı",
+    "aliases": [
+      "nociplastic pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.18",
+    "definition": "Nosiseptör aktivasyonuna yol açan doku hasarı ya da somatosensoriyel lezyon kanıtı olmadan, değişmiş nosisepsiyondan kaynaklanan ağrıdır; prototipi fibromiyaljidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Psikojenik ağrı ile eş anlamlı değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-karma_agri",
+    "term": "Karma ağrı",
+    "aliases": [
+      "mixed pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.18",
+    "definition": "Nosiseptif, nöropatik ve nosiplastik mekanizmaların aynı hastada birlikte bulunduğu ağrıdır; kronik bel ağrısı örnektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-deafferentasyon_agrisi",
+    "term": "Deafferentasyon ağrısı",
+    "aliases": [
+      "deafferentation pain"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.21",
+    "definition": "Somatosensoriyel girdinin kesilmesi sonrası gelişen ağrıdır; nöropatik ağrının bir alt tipi olarak ele alınır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fantom_agrisi",
+    "term": "Fantom ağrısı",
+    "aliases": [
+      "phantom limb pain"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.21",
+    "definition": "Amputasyon sonrası eksik uzuvda hissedilen ağrıdır; uyarılacak doku yoktur ama ağrı gerçektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Fantom duyu ağrısızdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fantom_duyu",
+    "term": "Fantom duyu",
+    "aliases": [
+      "phantom sensation"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.21",
+    "definition": "Amputasyon sonrası ağrısız olarak eksik uzvun varlığının hissedilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-guduk_agrisi",
+    "term": "Güdük ağrısı",
+    "aliases": [
+      "stump pain"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.21",
+    "definition": "Amputasyon güdüğünde hissedilen ağrıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kompleks_bolgesel_agri_sendromu",
+    "term": "Kompleks bölgesel ağrı sendromu",
+    "aliases": [
+      "KBAS"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.22",
+    "definition": "Eski adıyla refleks sempatik distrofi ve kozalji olan, çoğu kez travmayı izleyen, orantısız bölgesel ağrıdır; tip I'de belirgin sinir lezyonu yoktur, tip II'de vardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tip II = kozalji; tanı Budapeşte kriterleriyle konur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-refleks_sempatik_distrofi",
+    "term": "Refleks sempatik distrofi",
+    "aliases": [
+      "reflex sympathetic dystrophy"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.22",
+    "definition": "KBAS tip I'in eski adıdır; belirgin sinir lezyonu olmadan gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-budapeste_kriterleri",
+    "term": "Budapeşte kriterleri",
+    "aliases": [
+      "Budapest criteria"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.22",
+    "definition": "KBAS tanısında kullanılan ölçütlerdir: orantısız süregen ağrı, dört kategoriden (duyusal, vazomotor, sudomotor/ödem, motor/trofik) en az üçünde semptom, en az ikisinde muayene bulgusu ve başka bir tanıyla daha iyi açıklanamama.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sempatik_olarak_surdurulen_agri",
+    "term": "Sempatik olarak sürdürülen ağrı",
+    "aliases": [
+      "sympathetically maintained pain"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.22",
+    "definition": "KBAS'ta sempatik sistem aktivitesine bağlı olan bölümün adıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-psikojenik_agri",
+    "term": "Psikojenik ağrı",
+    "aliases": [
+      "psychogenic pain"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.24",
+    "definition": "Damgalayıcı olduğu için dışlama tanısı olarak kullanılmaması gereken ve ICD-11'de karşılığı olmayan terimdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-somatik_belirti_bozuklugu",
+    "term": "Somatik belirti bozukluğu",
+    "aliases": [
+      "somatic symptom disorder"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.24",
+    "definition": "Belirtilere ilişkin aşırı ve orantısız düşünce, duygu ve davranışların ön planda olduğu (DSM-5), yaşanan ağrının gerçek olduğu bozukluktur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-temaruz",
+    "term": "Temaruz",
+    "aliases": [
+      "malingering"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.24",
+    "definition": "İkincil (sekonder) kazanç için bilinçli belirti üretmektir; somatik belirti bozukluğuyla karıştırılmamalıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yapay_bozukluk",
+    "term": "Yapay bozukluk",
+    "aliases": [
+      "factitious disorder"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.24",
+    "definition": "Bilinçli belirti üretimini içeren, somatizasyonla karıştırılmaması gereken bozukluktur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yuzeyel_somatik_agri",
+    "term": "Yüzeyel somatik ağrı",
+    "aliases": [
+      "superficial somatic pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.25",
+    "definition": "Deri, deri altı ve mukozadan kaynaklanan; keskin, batıcı veya yanıcı ve iyi lokalize ağrıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-derin_somatik_agri",
+    "term": "Derin somatik ağrı",
+    "aliases": [
+      "deep somatic pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.25",
+    "definition": "Kas, tendon, eklem, kemik ve bağ dokusundan kaynaklanan; künt, sızlayıcı ve daha yaygın ağrıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-visseral_agri",
+    "term": "Visseral ağrı",
+    "aliases": [
+      "visceral pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.25",
+    "definition": "İç organlardan kaynaklanan; künt, yaygın ve kötü lokalize ağrıdır; yansıyan ağrı ve otonom yanıtlar sıktır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yansiyan_agri",
+    "term": "Yansıyan ağrı",
+    "aliases": [
+      "referred pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.27",
+    "definition": "Visseral ağrının, visseral ve somatik afferentlerin aynı dorsal boynuz nöronlarına yakınsaması (yakınsama-projeksiyon hipotezi) nedeniyle somatik bir bölgede hissedilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Miyokard T1–T4, diyafram C3–C5, safra kesesi T6–T9, pankreas T6–T10, apandiks T10, böbrek T10–L1.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-head_zonlari",
+    "term": "Head zonları",
+    "aliases": [
+      "Head zones"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.27",
+    "definition": "Yansıyan ağrı bölgesinde deri hiperaljezisinin görüldüğü alanlardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-inflamatuvar_agri",
+    "term": "İnflamatuvar ağrı",
+    "aliases": [
+      "inflammatory pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.28",
+    "definition": "Prostaglandin, bradikinin ve histamin gibi mediatörlerle nosiseptörlerin duyarlılaşmasına bağlı ağrıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-iskemik_agri",
+    "term": "İskemik ağrı",
+    "aliases": [
+      "ischemic pain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.28",
+    "definition": "Dokuda oksijen yetersizliği sonucu H⁺, K⁺, bradikinin ve laktat birikiminin nosiseptörleri uyarmasıyla oluşan ağrıdır (angina pektoris, klodikasyon).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-polimodal_nosiseptor",
+    "term": "Polimodal nosiseptör",
+    "aliases": [
+      "polymodal nociceptor"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.32",
+    "definition": "Birden fazla uyaran tipine yanıt veren nosiseptördür; çoğu C lifidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sessiz_nosiseptor",
+    "term": "Sessiz nosiseptör",
+    "aliases": [
+      "silent nociceptor"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.32",
+    "definition": "Normalde yanıtsız olan ve inflamasyonda aktive olan nosiseptördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-a_lifleri",
+    "term": "Aδ lifleri",
+    "aliases": [
+      "A-delta fibers"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.33",
+    "definition": "İnce miyelinli (1–5 µm), 5–30 m/s hızla ileten ve hızlı, keskin, iyi lokalize birinci ağrıyı taşıyan liflerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-c_lifleri",
+    "term": "C lifleri",
+    "aliases": [
+      "C fibers"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.33",
+    "definition": "Miyelinsiz (0,2–1,5 µm), 0,5–2 m/s hızla ileten ve yavaş, künt, yanıcı, yaygın ikinci ağrıyı taşıyan liflerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-a_lifleri",
+    "term": "Aβ lifleri",
+    "aliases": [
+      "A-beta fibers"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.33",
+    "definition": "Kalın miyelinli (6–12 µm), 35–75 m/s hızla ileten ve dokunma, titreşim, basıncı taşıyan liflerdir; kapı kontrolünde rol alır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trpv1",
+    "term": "TRPV1",
+    "aliases": [
+      "transient receptor potential vanilloid 1"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.34",
+    "definition": "Transdüksiyonda rol alan, zararlı ısı ve kapsaisinle açılan katyon kanalıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-transduksiyon",
+    "term": "Transdüksiyon",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.37",
+    "definition": "Zararlı uyaranın nosiseptör ucunda elektriksel sinyale dönüşmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dört aşamanın ilkidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-transmisyon",
+    "term": "Transmisyon",
+    "aliases": [
+      "transmission"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.36",
+    "definition": "Sinyalin primer afferentten dorsal boynuz, çıkan yollar ve talamus üzerinden iletilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-modulasyon",
+    "term": "Modülasyon",
+    "aliases": [
+      "modulation"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.41",
+    "definition": "Nosiseptif sinyalin spinal ve supraspinal düzeyde güçlendirilmesi veya baskılanmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-persepsiyon",
+    "term": "Persepsiyon",
+    "aliases": [
+      "perception"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.45",
+    "definition": "Nosiseptif sinyalin kortekste bilinçli ağrı deneyimine dönüşmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-reseptor_potansiyeli",
+    "term": "Reseptör potansiyeli",
+    "aliases": [
+      "receptor potential"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.37",
+    "definition": "Nosiseptör ucunda uyaran şiddetiyle orantılı oluşan derecelendirilmiş depolarizasyondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-substantia_gelatinosa",
+    "term": "Substantia gelatinosa",
+    "aliases": [
+      "lamina II"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.38",
+    "definition": "Dorsal boynuzun lamina II'sidir; C liflerinin sonlandığı ve spinal modülasyonun merkezi olan bölgedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-genis_dinamik_aralikli_noron",
+    "term": "Geniş dinamik aralıklı nöron",
+    "aliases": [
+      "WDR neuron"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.38",
+    "definition": "Dorsal boynuz lamina V'te Aδ, C ve Aβ girdilerini alan, somatik-visseral yakınsamanın yeri olan nörondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-spinotalamik_traktus",
+    "term": "Spinotalamik traktus",
+    "aliases": [
+      "spinothalamic tract"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.39",
+    "definition": "Dorsal boynuzdan çaprazlaşıp karşı anterolateral kordonla talamusa uzanan çıkan ağrı yoludur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-p_maddesi",
+    "term": "P maddesi",
+    "aliases": [
+      "substance P"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.40",
+    "definition": "NK1 reseptörü üzerinden yavaş ve uzun süreli eksitasyon yapan peptit ileticidir; nörojenik inflamasyonda da salınır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kapi_kontrol_teorisi",
+    "term": "Kapı kontrol teorisi",
+    "aliases": [
+      "gate control theory"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.42",
+    "definition": "Melzack ve Wall'un 1965'te öne sürdüğü, Aβ girdisinin inhibitör internöronu uyararak nosiseptif aktarımı azalttığı (kapı kapanır), Aδ/C girdisinin ise kapıyı açtığı kuramdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "TENS bu kurama dayanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tens",
+    "term": "TENS",
+    "aliases": [
+      "transcutaneous electrical nerve stimulation"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.42",
+    "definition": "Dokunma liflerini (Aβ) uyararak nosiseptif aktarımı azaltan ve kapı kontrol teorisine dayanan cihazdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pag",
+    "term": "PAG",
+    "aliases": [
+      "periaqueductal gray"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.43",
+    "definition": "Orta beyindeki periakuaduktal griyi ifade eder; opioid reseptörlerinden zengindir ve inen ağrı kontrolünün ana düğümüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-rvm",
+    "term": "RVM",
+    "aliases": [
+      "rostral ventromedial medulla"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.43",
+    "definition": "İnen ağrı kontrolünde serotonerjik, \"ON\" ve \"OFF\" hücreleri içeren rostral ventromedial medulladır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-locus_coeruleus",
+    "term": "Locus coeruleus",
+    "aliases": [
+      "locus coeruleus"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.43",
+    "definition": "İnen ağrı kontrolünde noradrenerjik inen yolun çıktığı çekirdektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dnic",
+    "term": "DNIC",
+    "aliases": [
+      "diffuse noxious inhibitory control"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.43",
+    "definition": "\"Ağrı ağrıyı baskılar\" olarak bilinen inen kontrol örneğidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-endojen_opioidler",
+    "term": "Endojen opioidler",
+    "aliases": [
+      "endogenous opioids"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.44",
+    "definition": "Enkefalinler (δ ve μ), β-endorfin (μ) ve dinorfinlerdir (κ); presinaptik Ca²⁺ kanalını inhibe edip postsinaptik K⁺ kanalını açarak ağrıyı baskılar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-periferik_sensitizasyon",
+    "term": "Periferik sensitizasyon",
+    "aliases": [
+      "peripheral sensitization"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.48",
+    "definition": "Hasarlı dokuda nosiseptör eşiğinin düşmesi ve yanıtın artmasıdır; primer hiperaljeziyle ilişkilidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-inflamatuvar_corba",
+    "term": "İnflamatuvar çorba",
+    "aliases": [
+      "inflammatory soup"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.49",
+    "definition": "Doku hasarında nosiseptör çevresinde oluşan mediatör karışımıdır (bradikinin, prostaglandinler, histamin, serotonin, NGF, sitokinler).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-wind_up",
+    "term": "Wind-up",
+    "aliases": [
+      "wind-up"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.51",
+    "definition": "Aynı şiddetteki tekrarlayan uyarana yanıtın giderek artmasıdır (temporal sumasyon).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-norojenik_inflamasyon",
+    "term": "Nörojenik inflamasyon",
+    "aliases": [
+      "neurogenic inflammation"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.50",
+    "definition": "Nosiseptörün periferik ucundan P maddesi, nörokinin A ve CGRP salınmasıyla vazodilatasyon, ödem ve mast hücresi degranülasyonunun gelişmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akson_refleksi",
+    "term": "Akson refleksi",
+    "aliases": [
+      "axon reflex"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.50",
+    "definition": "Nosiseptörde aksiyon potansiyelinin dallara antidromik olarak yayılmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kcc2",
+    "term": "KCC2",
+    "aliases": [
+      "KCC2"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.52",
+    "definition": "Ekspresyonunun azalması klorür gradiyentini bozarak GABA ve glisinin inhibitör etkisini zayıflatan taşıyıcıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noroplastisite",
+    "term": "Nöroplastisite",
+    "aliases": [
+      "neuroplasticity"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.53",
+    "definition": "Sinir sisteminin aktivite ve deneyime bağlı işlevsel ve yapısal değişebilme kapasitesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-katastrofizasyon",
+    "term": "Katastrofizasyon",
+    "aliases": [
+      "pain catastrophizing"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.54",
+    "definition": "Ağrıyı felaket gibi algılama eğilimidir; kronikleşmenin psikososyal risk etkenidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-biyopsikososyal_model",
+    "term": "Biyopsikososyal model",
+    "aliases": [
+      "biopsychosocial model"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.55",
+    "definition": "Kronik ağrının biyolojik, psikolojik ve sosyal boyutların birlikte etkisiyle açıklandığı modeldir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-melzack_ve_casey_modeli",
+    "term": "Melzack ve Casey modeli",
+    "aliases": [
+      "Melzack-Casey model"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.7",
+    "definition": "Ağrının duyusal-diskriminatif, motivasyonel-afektif ve bilişsel-değerlendirici üç boyutlu olduğunu ve boyutların birlikte işlendiğini öne süren modeldir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-primer_hiperaljezi",
+    "term": "Primer hiperaljezi",
+    "aliases": [
+      "primary hyperalgesia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.48",
+    "definition": "Hasarlı dokunun kendisinde gelişen hiperaljezidir; periferik sensitizasyonla ilişkilidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sekonder_hiperaljezi",
+    "term": "Sekonder hiperaljezi",
+    "aliases": [
+      "secondary hyperalgesia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.48",
+    "definition": "Hasarın çevresindeki sağlam dokuya yayılan hiperaljezidir; santral sensitizasyonla ilişkilidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dinamik_mekanik_allodini",
+    "term": "Dinamik mekanik allodini",
+    "aliases": [
+      "dynamic mechanical allodynia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.51",
+    "definition": "Santral sensitizasyonda Aβ lifleri aracılığıyla dokunmanın ağrı oluşturmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ektopik_desarj",
+    "term": "Ektopik deşarj",
+    "aliases": [
+      "ectopic discharge"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Anesteziyoloji ve Reanimasyon",
+    "instructorAndSource": "Ders notu: 1)Ağrı Fizyopatlojisi s.20",
+    "definition": "Nöroma ve dorsal kök ganglionunda uyaran olmadan oluşan anormal impuls üretimidir; nöropatik ağrının ortak mekanizmalarındandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]

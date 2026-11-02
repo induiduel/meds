@@ -53,7 +53,7 @@ STOP = {
     "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII",
     "DR", "PROF", "DOC", "ARS", "GOR", "UZM", "OPR", "AM", "VE", "BU", "NE", "BIR", "ILE", "ICIN", "VEYA",
     "TIP", "FAK", "UNV", "SAY", "SIRA", "TABLO", "SEKIL", "KAYNAK", "SLYAT", "SLAY", "TR", "EN", "VK",
-    "HI", "BJ",  # kaynakça yazar baş harfleri (HI Kaplan, BJ Sadock — k2-11 s.43), kısaltma değil
+    "HI", "BJ", "ON", "OFF",  # kaynakça yazar baş harfleri; ON/OFF hücreleri (k2-06 s.43) İngilizce sözcük (HI Kaplan, BJ Sadock — k2-11 s.43), kısaltma değil
 }
 
 
