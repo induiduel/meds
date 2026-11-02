@@ -2027,3 +2027,11 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme:** Sınama yalnız anahtar listesiyle verilir (branş kuralı yok). Yeni ders yayınında §6 doğrulaması güncel listede
   (`/api/canli-ders`, `donem` yok) dersin anahtarını arar; yoksa yayın bitmiş sayılmaz. `data/*.json` değişikliği Oracle'a
   `scp + sudo cp + chown ubuntu` ile ayrıca konur ve canlı uçtan okunarak doğrulanır.
+
+## H475 — Yeni sürüm penceresi kartsız (düz madde) göründü (2026-11-02)
+- **Belirti:** kullanıcı: "yeni sürümlerin tasarımı farklı gösterilmeliydi, gösterilmiyor" (Site güncellendi / Yenilikler penceresi).
+- **Kök neden:** `UpdatePrompt.tsx` yenilikleri yalnız `guncelleme_notu.json › yenilikler` doluysa özellik kartlarıyla (yer, amaç,
+  işlevler) gösterir; onem 619/624/625 notları `yenilikler: []` ve yalnız `maddeler` ile yazıldı → pencere düz listeye düştü.
+- **Çözüm:** onem 626 notuna 4 yeni ders + "Hocanın vurguladıkları" kartları (`nerede.yol` ders sayfası) ve `eklenen/duzeltilen` yazıldı.
+- **Önleme:** öğrencinin gördüğü yeni özellik/ders içeren her dağıtımda `yenilikler` en az bir kart taşır ({ad, nerede:{ad,yol},
+  amac, islevler}); yalnız küçük düzeltmede `maddeler` yeterlidir.

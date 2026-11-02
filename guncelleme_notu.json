@@ -1,16 +1,88 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 625,
-  "baslik": "MSS İlaçları Farmakolojisine Giriş dersi herkese açıldı",
+  "onem": 626,
+  "baslik": "Kurul 2'ye 4 yeni ders ve \"Hocanın vurguladıkları\"",
   "maddeler": [
-    "Farmakoloji 'MSS İlaçları Farmakolojisine Giriş' sesli dersi artık Sınama bölümünde değil, güncel ders listesinde.",
-    "Baş ağrısına yaklaşım dersinde açılmayan bir çıkmış soru işareti kaldırıldı (aynı soru diğer kopyasıyla duruyor)."
+    "MSS İlaçları dersi: artık Sınama bölümünde değil, güncel ders listesinde.",
+    "Yenilikler penceresi: yeni sürümler yine kartlı görünümle gösteriliyor."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Psikiyatrik Semiyoloji ve Baş Ağrısı sesli dersleri (yalnız eklenen cümleler yeniden seslendirildi)"
+  "eklenen": [
+    "Kurul 2: Psikiyatrik Semiyoloji, MSS İlaçları, Baş Ağrısına Yaklaşım, Ağrı Fizyopatolojisi dersleri",
+    "Hocanın vurguladıkları sayfası"
   ],
-  "duzeltilen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "MSS İlaçları dersinin öğrenciye görünmemesi (H474)",
+    "Yenilikler penceresinin kartsız görünmesi (H475)"
+  ],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "Hocanın vurguladıkları",
+      "nerede": {
+        "ad": "Ders sayfası › Hocanın vurguladıkları",
+        "yol": "/dersler/ders/kurul2/k2-10-bas-agrisina-yaklasim?b=vurgu"
+      },
+      "amac": "Hocanın derste \"sorulur\", \"çıkmışta var\", \"önemli\", \"bilin\" dediği yerleri tek listede toplamak.",
+      "islevler": [
+        "Türüne göre süzme (sorulur, çıkmış, önemli, bilin, dikkat)",
+        "Yıldızla işaretleme; işaretlerin hesabınla eşitlenir",
+        "\"Sesli derste aç\" ile hocanın söylediği yere git",
+        "Sesli derste ve En önemliler listesinde \"Hoca\" rozeti"
+      ],
+      "ipucu": "Sınavdan önce yalnız yıldızladıklarını süzerek hızlı tekrar yapabilirsin."
+    },
+    {
+      "ad": "Yeni ders: Psikiyatrik Semiyoloji",
+      "nerede": {
+        "ad": "Ders çalış › Kurul 2 › Psikiyatri",
+        "yol": "/dersler/ders/kurul2/k2-11-psikiyatrik-semiyoloji"
+      },
+      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
+      "islevler": [
+        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
+        "Öğren destesi, örnek sorular ve sesli soru çözücü",
+        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
+      ]
+    },
+    {
+      "ad": "Yeni ders: MSS İlaçları Farmakolojisine Giriş",
+      "nerede": {
+        "ad": "Ders çalış › Kurul 2 › Farmakoloji",
+        "yol": "/dersler/ders/kurul2/k2-09-sss-ilaclari"
+      },
+      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
+      "islevler": [
+        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
+        "Öğren destesi, örnek sorular ve sesli soru çözücü",
+        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
+      ]
+    },
+    {
+      "ad": "Yeni ders: Baş Ağrısına Yaklaşım",
+      "nerede": {
+        "ad": "Ders çalış › Kurul 2 › Nöroloji",
+        "yol": "/dersler/ders/kurul2/k2-10-bas-agrisina-yaklasim"
+      },
+      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
+      "islevler": [
+        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
+        "Öğren destesi, örnek sorular ve sesli soru çözücü",
+        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
+      ]
+    },
+    {
+      "ad": "Yeni ders: Ağrı Fizyopatolojisi",
+      "nerede": {
+        "ad": "Ders çalış › Kurul 2 › Anestezi",
+        "yol": "/dersler/ders/kurul2/k2-06-agri-yollari-ve-mekanizmalari"
+      },
+      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
+      "islevler": [
+        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
+        "Öğren destesi, örnek sorular ve sesli soru çözücü",
+        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
+      ]
+    }
+  ]
 }
