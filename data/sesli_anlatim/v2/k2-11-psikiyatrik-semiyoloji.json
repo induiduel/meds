@@ -1886,7 +1886,13 @@
         "tablo": null
        },
        "id": "k2-11-c0068"
-      },
+      }
+     ]
+    },
+    {
+     "id": "k2-11-p008",
+     "sayfa": 8,
+     "cumleler": [
       {
        "ses": "Kısa süreli bellek, beş dakika ile birkaç saate kadar olan bellektir.",
        "ekran": "**Kısa süreli bellek**: beş dakika – birkaç saat",
@@ -2017,11 +2023,67 @@
         "tablo": null
        },
        "id": "k2-11-c0073"
+      },
+      {
+       "ses": "Kısaca tespit belleği, öğrenilenin anında tekrarlanmasıdır; hastaya üç ile beş nesne saydırılır.",
+       "ekran": "**Tespit (kayıt) belleği** = öğrenilenin anında tekrarı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tespit (kayıt) belleği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s08-b03"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Öğretilen bir şeyin anında tekrarlanabilmesidir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0074"
+      },
+      {
+       "ses": "Kısa süreli bellek ise beş dakika ile birkaç saate kadar olan bellektir.",
+       "ekran": "**Kısa süreli bellek** = beş dakika – birkaç saat",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kısa süreli bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s08-b03"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "5 dakika ile birkaç saate kadar olan bellektir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0075"
       }
      ]
     },
     {
-     "id": "k2-11-p008",
+     "id": "k2-11-p009",
      "sayfa": 9,
      "cumleler": [
       {
@@ -2050,7 +2112,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0074"
+       "id": "k2-11-c0076"
       },
       {
        "ses": "Birkaç günden birkaç aya kadar olan bölümüne yakın bellek, birkaç aydan yıllara uzanan bölümüne uzak bellek denir.",
@@ -2082,7 +2144,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0075"
+       "id": "k2-11-c0077"
       },
       {
        "ses": "Örneğin evlilik gibi uzun süreli olaylar uzun süreli belleğe aktarılır ve orada yıllarca kalır.",
@@ -2107,7 +2169,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0076"
+       "id": "k2-11-c0078"
       },
       {
        "ses": "Muayenesinde hastanın yaşamına ait eski olayların tarihleri sorulabilir.",
@@ -2135,7 +2197,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0077"
+       "id": "k2-11-c0079"
       },
       {
        "ses": "Ancak sorulan soruların yanıtının bilinmesi ya da başkalarına doğrulatılabilmesi gerekir.",
@@ -2163,7 +2225,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0078"
+       "id": "k2-11-c0080"
       },
       {
        "ses": "Örneğin kişiye ne zaman evlendiğini soracaksak, ya yanıtı biliyor ya da bir yakınına doğrulatabiliyor olmalıyız.",
@@ -2183,7 +2245,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0079"
+       "id": "k2-11-c0081"
       },
       {
        "ses": "Böylece üç basamağın muayenesi ayrılır: tespit belleği anında tekrarla, kısa süreli bellek beş dakika sonra hatırlatarak, uzun süreli bellek doğrulanabilir eski olayları sorarak sınanır.",
@@ -2219,7 +2281,35 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0080"
+       "id": "k2-11-c0082"
+      },
+      {
+       "ses": "Kısaca uzun süreli bellek, birkaç günden aylara kadar yakın, aylardan yıllara kadar uzak bellektir; eski olaylar sorulur ve doğrulatılır.",
+       "ekran": "**Uzun süreli bellek**: yakın ve uzak; eski olayları sor, doğrulat",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Uzun süreli bellek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s08-b03"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Birkaç günden birkaç aya kadar olan bölümüne yakın bellek, birkaç aydan, yıllara uzanan bölümüne de uzak bellek denir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0083"
       }
      ]
     }
@@ -2230,7 +2320,7 @@
    "baslik": "Amnezi: anterograd ve retrograd",
    "paragraflar": [
     {
-     "id": "k2-11-p009",
+     "id": "k2-11-p010",
      "sayfa": 10,
      "cumleler": [
       {
@@ -2256,7 +2346,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0081"
+       "id": "k2-11-c0084"
       },
       {
        "ses": "Amnezinin iki türü vardır: anterograd amnezi ve retrograd amnezi.",
@@ -2286,7 +2376,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0082"
+       "id": "k2-11-c0085"
       },
       {
        "ses": "İkisini ayıran, bellek bozukluğuna neden olan olaya göre zamandır: anterograd amnezi olaydan sonrasını, retrograd amnezi olaydan öncesini ilgilendirir.",
@@ -2316,12 +2406,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0083"
+       "id": "k2-11-c0086"
       }
      ]
     },
     {
-     "id": "k2-11-p010",
+     "id": "k2-11-p011",
      "sayfa": 11,
      "cumleler": [
       {
@@ -2350,7 +2440,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0084"
+       "id": "k2-11-c0087"
       },
       {
        "ses": "Yani anterograd amnezi, ileriye doğru bellek kusurudur.",
@@ -2378,7 +2468,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0085"
+       "id": "k2-11-c0088"
       },
       {
        "ses": "Mekanizması, kısa süreli bellekteki bilginin uzun süreli belleğe aktarılamamasıdır.",
@@ -2409,7 +2499,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0086"
+       "id": "k2-11-c0089"
       },
       {
        "ses": "Bu nedenle kişinin belleği yalnızca birkaç saat ile sınırlı kalır.",
@@ -2437,7 +2527,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0087"
+       "id": "k2-11-c0090"
       },
       {
        "ses": "Bu tanım, çıkmış sınavlarda doğrudan sorulmuştur.",
@@ -2462,7 +2552,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0088"
+       "id": "k2-11-c0091"
       },
       {
        "ses": "Aktarım yönü ters verilmiş önerme, yani uzun süreli bellekten kısa süreliye aktarılamama, yanlıştır.",
@@ -2490,7 +2580,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0089"
+       "id": "k2-11-c0092"
       },
       {
        "ses": "Örneğin kaza ya da beyin hasarı gibi travmatik bir olaydan sonra kişi yeni bilgiyi kısa süreli olarak kaydeder ama uzun süreliye aktaramaz.",
@@ -2515,7 +2605,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0090"
+       "id": "k2-11-c0093"
       },
       {
        "ses": "Anterograd amnezi, Wernicke-Korsakoff sendromunun kronik döneminin tipik bulgusudur.",
@@ -2543,7 +2633,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0091"
+       "id": "k2-11-c0094"
       },
       {
        "ses": "Wernicke-Korsakoff sendromu, uzun süreli alkol kullanımına bağlı gelişen sendromik bir tablodur ve tabloya retrograd amnezi de eşlik eder.",
@@ -2575,7 +2665,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0092"
+       "id": "k2-11-c0095"
       },
       {
        "ses": "Hoca bu sendromun ayrıntısının sonra görüleceğini, şimdilik isim olarak bilinmesinin yeterli olduğunu söyledi.",
@@ -2604,7 +2694,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0093"
+       "id": "k2-11-c0096"
       },
       {
        "ses": "Geçen yılın öğrencileri bu bilgiyi en önemli yerler arasına aldı.",
@@ -2632,12 +2722,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0094"
+       "id": "k2-11-c0097"
       }
      ]
     },
     {
-     "id": "k2-11-p011",
+     "id": "k2-11-p012",
      "sayfa": 12,
      "cumleler": [
       {
@@ -2666,7 +2756,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0095"
+       "id": "k2-11-c0098"
       },
       {
        "ses": "Örneğin kafa travmasından sonra kişi travmadan önceki bilgileri hatırlayamaz.",
@@ -2694,7 +2784,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0096"
+       "id": "k2-11-c0099"
       },
       {
        "ses": "Retrograd amnezi en sık demansta görülür.",
@@ -2722,7 +2812,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0097"
+       "id": "k2-11-c0100"
       },
       {
        "ses": "Demans, bellek başta olmak üzere zihinsel işlevlerin ilerleyici biçimde bozulduğu tablodur; özellikle Alzheimer hastalığında görülür.",
@@ -2750,7 +2840,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0098"
+       "id": "k2-11-c0101"
       },
       {
        "ses": "Demansta bellek tipik olarak geriye doğru yıkılır: önce en yakın olaylar anımsanamaz, giderek kişi geçmişinin eski olaylarını da anımsamakta güçlük çeker.",
@@ -2778,7 +2868,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0099"
+       "id": "k2-11-c0102"
       },
       {
        "ses": "Hasta otuz yıl öncesini ayrıntısıyla anlatır ama sabah ne yediğini hatırlamaz.",
@@ -2810,7 +2900,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0100"
+       "id": "k2-11-c0103"
       },
       {
        "ses": "Kahvaltısını yapar ve ne zaman kahvaltı yapacağız diye tekrar tekrar sorar; siz de yaptık, kahvaltımızı yedik dersiniz.",
@@ -2835,7 +2925,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0101"
+       "id": "k2-11-c0104"
       },
       {
        "ses": "Bu örnekte hasta en yakın olayı, yani kahvaltıyı kaybetmiştir; demansta en yakın olaylar önce silinir ve bellek zamanda geriye doğru yıkılır.",
@@ -2863,7 +2953,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0102"
+       "id": "k2-11-c0105"
       },
       {
        "ses": "Ayrımı şöyle toparlayabiliriz: anterograd amnezide nedenden sonraki bilgi kaydedilemez, retrograd amnezide nedenden önceki bilgi anımsanamaz.",
@@ -2893,7 +2983,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0103"
+       "id": "k2-11-c0106"
       },
       {
        "ses": "Anterograd amnezi kısa süreliden uzun süreliye aktarım bozukluğudur ve Wernicke-Korsakoff sendromunda tipiktir; retrograd amnezi en sık demansta görülür.",
@@ -2923,7 +3013,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0104"
+       "id": "k2-11-c0107"
       }
      ]
     }
@@ -2934,7 +3024,7 @@
    "baslik": "Diğer bellek bozuklukları",
    "paragraflar": [
     {
-     "id": "k2-11-p012",
+     "id": "k2-11-p013",
      "sayfa": 13,
      "cumleler": [
       {
@@ -2978,7 +3068,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0105"
+       "id": "k2-11-c0108"
       },
       {
        "ses": "Füg, kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur.",
@@ -3005,7 +3095,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0106"
+       "id": "k2-11-c0109"
       },
       {
        "ses": "Örneğin kişi bir yere çıkıp gider, bunu hatırlamaz ya da oraya vardığında ben buraya nasıl geldim diye sorar.",
@@ -3030,7 +3120,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0107"
+       "id": "k2-11-c0110"
       },
       {
        "ses": "Füg dissosiyatif bozukluklarda görülür; temporal parsiyel epilepsiye bağlı olarak da gelişebilir.",
@@ -3061,7 +3151,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0108"
+       "id": "k2-11-c0111"
       },
       {
        "ses": "Füg ile dissosiyatif bozukluk ilişkisi çıkmış sınavda sorulmuştur.",
@@ -3086,12 +3176,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0109"
+       "id": "k2-11-c0112"
       }
      ]
     },
     {
-     "id": "k2-11-p013",
+     "id": "k2-11-p014",
      "sayfa": 13,
      "cumleler": [
       {
@@ -3117,7 +3207,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0110"
+       "id": "k2-11-c0113"
       },
       {
        "ses": "Örneğin trafik kazası geçiren biri, kendisine doğru gelen ışıkları bir fotoğraf gibi ayrıntılarıyla sürekli hatırlar.",
@@ -3142,12 +3232,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0111"
+       "id": "k2-11-c0114"
       }
      ]
     },
     {
-     "id": "k2-11-p014",
+     "id": "k2-11-p015",
      "sayfa": 13,
      "cumleler": [
       {
@@ -3173,7 +3263,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0112"
+       "id": "k2-11-c0115"
       },
       {
        "ses": "Déjà entendu, bir şeyi daha önce işittiğini sanmaktır.",
@@ -3198,7 +3288,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0113"
+       "id": "k2-11-c0116"
       },
       {
        "ses": "Déjà fait, bir şeyi daha önce de yaptığını sanmaktır.",
@@ -3223,7 +3313,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0114"
+       "id": "k2-11-c0117"
       },
       {
        "ses": "Déjà pensé, bir şeyi daha önce de düşünmüş olduğunu sanmaktır.",
@@ -3248,7 +3338,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0115"
+       "id": "k2-11-c0118"
       },
       {
        "ses": "Déjà vu, bir şeyi ya da kimseyi daha önce görmüş olduğunu sanmaktır.",
@@ -3273,7 +3363,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0116"
+       "id": "k2-11-c0119"
       },
       {
        "ses": "Adın sonundaki sözcük ayrımı kolaylaştırır: entendu işitmek, fait yapmak, pensé düşünmek, vu görmek demektir.",
@@ -3299,7 +3389,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0117"
+       "id": "k2-11-c0120"
       },
       {
        "ses": "Jamais vu bunun tersidir: kişi bildiği ve gördüğü bir şeyi ya da kimseyi hiç görmemiş olduğunu sanır.",
@@ -3324,12 +3414,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0118"
+       "id": "k2-11-c0121"
       }
      ]
     },
     {
-     "id": "k2-11-p015",
+     "id": "k2-11-p016",
      "sayfa": 13,
      "cumleler": [
       {
@@ -3355,7 +3445,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0119"
+       "id": "k2-11-c0122"
       },
       {
        "ses": "Daha çok demanslılarda görülür.",
@@ -3380,7 +3470,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0120"
+       "id": "k2-11-c0123"
       },
       {
        "ses": "Alkolle ilişkili beyin bozukluklarında da kişi hatırlayamadığı şeyleri sanki öyleymiş gibi anlatabilir.",
@@ -3405,7 +3495,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0121"
+       "id": "k2-11-c0124"
       },
       {
        "ses": "Hiperemnezi fazla anımsamadır, konfabülasyon ise anımsayamamanın yerine uydurulan hikâyedir; ikisini karıştırmamak gerekir.",
@@ -3435,7 +3525,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0122"
+       "id": "k2-11-c0125"
       }
      ]
     }
@@ -3446,7 +3536,7 @@
    "baslik": "Dikkat ve konsantrasyon",
    "paragraflar": [
     {
-     "id": "k2-11-p016",
+     "id": "k2-11-p017",
      "sayfa": 14,
      "cumleler": [
       {
@@ -3472,7 +3562,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0123"
+       "id": "k2-11-c0126"
       },
       {
        "ses": "Dikkat, zihnin belli bir alana çekilmesidir; konsantrasyon ise bunun sürdürülebilmesidir.",
@@ -3504,7 +3594,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0124"
+       "id": "k2-11-c0127"
       },
       {
        "ses": "Bu işlev, kişinin birçok değişik ilgi ve düşüncesini belli bir noktaya yönlendirebilmesi ve sınırlandırabilmesiyle ilgilidir.",
@@ -3529,7 +3619,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0125"
+       "id": "k2-11-c0128"
       },
       {
        "ses": "Dikkati ve konsantrasyonu bozulan kişi kitap okurken, ders çalışırken ya da film izlerken dakikalar geçmesine karşın bir şey anlamadığını fark eder.",
@@ -3554,7 +3644,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0126"
+       "id": "k2-11-c0129"
       },
       {
        "ses": "Bazen de zaten konsantre olamadığını fark edip bu tür etkinliklerden uzaklaşır.",
@@ -3579,12 +3669,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0127"
+       "id": "k2-11-c0130"
       }
      ]
     },
     {
-     "id": "k2-11-p017",
+     "id": "k2-11-p018",
      "sayfa": 15,
      "cumleler": [
       {
@@ -3613,7 +3703,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0128"
+       "id": "k2-11-c0131"
       },
       {
        "ses": "Örneğin hasta öyküsünü anlatırken birden hekimin gömleğinin renginden ya da dışarıdan gelen bir araba sesinden hareketle arabalardan bahsetmeye başlar.",
@@ -3641,7 +3731,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0129"
+       "id": "k2-11-c0132"
       },
       {
        "ses": "Distraktibilite en sık manide görülür.",
@@ -3669,7 +3759,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0130"
+       "id": "k2-11-c0133"
       },
       {
        "ses": "Mani, duygudurumun anormal biçimde yükseldiği ruhsal bir bozukluk dönemidir.",
@@ -3694,7 +3784,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0131"
+       "id": "k2-11-c0134"
       },
       {
        "ses": "Muayenede hastayla sohbet etmeyiz, muayene ederiz; hastanın öykü anlatırken dikkatini sürdürüp sürdüremediğine bakarız.",
@@ -3719,12 +3809,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0132"
+       "id": "k2-11-c0135"
       }
      ]
     },
     {
-     "id": "k2-11-p018",
+     "id": "k2-11-p019",
      "sayfa": 16,
      "cumleler": [
       {
@@ -3753,7 +3843,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0133"
+       "id": "k2-11-c0136"
       },
       {
        "ses": "Kişi özellikle dışarıdan gelen bir tehlike beklentisine karşı her şeye dikkat etmeye çalışır.",
@@ -3781,7 +3871,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0134"
+       "id": "k2-11-c0137"
       },
       {
        "ses": "Daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
@@ -3815,7 +3905,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0135"
+       "id": "k2-11-c0138"
       },
       {
        "ses": "Travma sonrası stres bozukluğu, ağır bir travmatik yaşantının ardından gelişen ve kişinin sürekli tetikte kaldığı bir bozukluktur.",
@@ -3840,7 +3930,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0136"
+       "id": "k2-11-c0139"
       },
       {
        "ses": "Sanrısal bozuklukta kişide belli bir konuda sanrı, yani hezeyan vardır; hezeyanı biraz sonra göreceğiz.",
@@ -3868,7 +3958,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0137"
+       "id": "k2-11-c0140"
       },
       {
        "ses": "Hipervijilansın en çok travma sonrası stres bozukluğunda görüldüğü çıkmış sınavda sorulmuştur.",
@@ -3893,7 +3983,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0138"
+       "id": "k2-11-c0141"
       },
       {
        "ses": "Depremden sonra gelişen travma sonrası stres bozukluğunda kişi her tıkırtıya ve sallantıya karşı tetikte olur, en ufak bir seste kolayca irkilir.",
@@ -3918,7 +4008,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0139"
+       "id": "k2-11-c0142"
       },
       {
        "ses": "Örneğin hafif bir sallanmada bile deprem mi oluyor diye düşünür, çünkü dikkati tehlikeye yöneliktir.",
@@ -3943,7 +4033,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0140"
+       "id": "k2-11-c0143"
       },
       {
        "ses": "İşkenceye bağlı gelişen bir olguda ise kişi sürekli etrafta polis, sivil polis ya da polis arabası var mı diye dikkat eder.",
@@ -3968,7 +4058,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0141"
+       "id": "k2-11-c0144"
       },
       {
        "ses": "Ayrımı şöyle yapın: distraktibilitede dikkat dış uyaranlara kayar ve dağılır, hipervijilansta ise dikkat tehlike beklentisine kilitlenir.",
@@ -3999,7 +4089,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0142"
+       "id": "k2-11-c0145"
       },
       {
        "ses": "Distraktibilite en sık manide, hipervijilans ise travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
@@ -4035,7 +4125,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0143"
+       "id": "k2-11-c0146"
       },
       {
        "ses": "Hipervijilansa distraktibilitenin tanımının verildiği yanlış önerme çıkmış sınavda sorulmuştur.",
@@ -4060,7 +4150,91 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0144"
+       "id": "k2-11-c0147"
+      },
+      {
+       "ses": "Kısaca distraktibilite dikkatin dış uyaranlara kayması, hipervijilans ise tehlike beklentisine karşı dikkat kesilmektir.",
+       "ekran": "Distraktibilite: dış uyarana kayma · hipervijilans: **tehlike beklentisine karşı dikkat kesilme**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tehlike beklentisine karşı dikkat kesilme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 23,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s08-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak tanımlanabilir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0148"
+      },
+      {
+       "ses": "Dikkat bozukluklarından biri distraktibilitedir.",
+       "ekran": "**Distraktibilite**: dikkat bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Distraktibilite",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 23,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s08-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak tanımlanabilir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0149"
+      },
+      {
+       "ses": "Hipervijilans, tehlike beklentisine karşı dikkat kesilmektir; travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+       "ekran": "**Hipervijilans** = tehlike beklentisine karşı dikkat kesilme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hipervijilans",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 23,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s08-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak tanımlanabilir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0150"
       }
      ]
     }
@@ -4071,7 +4245,7 @@
    "baslik": "Algı: halüsinasyon",
    "paragraflar": [
     {
-     "id": "k2-11-p019",
+     "id": "k2-11-p020",
      "sayfa": 17,
      "cumleler": [
       {
@@ -4097,7 +4271,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0145"
+       "id": "k2-11-c0151"
       },
       {
        "ses": "Algı, içsel ya da dışsal uyaranların, önceki deneyimler ışığında bir bilgiye dönüştürülmesi sürecidir.",
@@ -4122,7 +4296,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0146"
+       "id": "k2-11-c0152"
       },
       {
        "ses": "Halüsinasyon, dış bir uyaran olmaksızın ortaya çıkan algılamadır.",
@@ -4150,7 +4324,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0147"
+       "id": "k2-11-c0153"
       },
       {
        "ses": "Beş duyunun her biriyle ilgili olabilir: görme, işitme, tat, koku ve dokunma.",
@@ -4178,7 +4352,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0148"
+       "id": "k2-11-c0154"
       },
       {
        "ses": "Halüsinasyon psikiyatrinin önde gelen belirtilerinden biridir ve organik bir etkene bağlı değilse çoğunlukla psikoza işaret eder.",
@@ -4206,7 +4380,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0149"
+       "id": "k2-11-c0155"
       },
       {
        "ses": "Psikoz, gerçeği değerlendirmenin bozulduğu ağır bir ruhsal tablodur.",
@@ -4231,7 +4405,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0150"
+       "id": "k2-11-c0156"
       },
       {
        "ses": "Halüsinasyon organik nedenlere de bağlı olabilir; örneğin kişide bir tümör ya da enfeksiyon varsa halüsinasyon ona bağlı gelişebilir.",
@@ -4260,12 +4434,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0151"
+       "id": "k2-11-c0157"
       }
      ]
     },
     {
-     "id": "k2-11-p020",
+     "id": "k2-11-p021",
      "sayfa": 18,
      "cumleler": [
       {
@@ -4294,7 +4468,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0152"
+       "id": "k2-11-c0158"
       },
       {
        "ses": "Elementer ya da basit halüsinasyon, tek bir duyuya ait kısa süreli halüsinasyondur.",
@@ -4322,7 +4496,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0153"
+       "id": "k2-11-c0159"
       },
       {
        "ses": "Örneğin kişi isminin seslenildiğini duyar, kapı ya da telefon çaldığını zanneder ya da bir fare geçtiğini sanır.",
@@ -4350,7 +4524,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0154"
+       "id": "k2-11-c0160"
       },
       {
        "ses": "Elementer halüsinasyonlar normal popülasyonda rastlanabilir.",
@@ -4378,7 +4552,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0155"
+       "id": "k2-11-c0161"
       },
       {
        "ses": "Uykuya dalarken ortaya çıkan halüsinasyona hipnagojik, uyanırken ortaya çıkana hipnopompik halüsinasyon denir.",
@@ -4410,7 +4584,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0156"
+       "id": "k2-11-c0162"
       },
       {
        "ses": "Bunlar uzun ve birden fazla duyuyla ilgili, yani karmaşık olsalar bile psikotik kabul edilmez.",
@@ -4438,7 +4612,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0157"
+       "id": "k2-11-c0163"
       },
       {
        "ses": "Hipnagojik ya da hipnopompik halüsinasyonun psikotik belirti sayıldığını söyleyen önerme yanlıştır.",
@@ -4466,7 +4640,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0158"
+       "id": "k2-11-c0164"
       },
       {
        "ses": "Geçen yılın öğrencileri bu bilgiyi en önemli yerler arasına aldı.",
@@ -4494,12 +4668,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0159"
+       "id": "k2-11-c0165"
       }
      ]
     },
     {
-     "id": "k2-11-p021",
+     "id": "k2-11-p022",
      "sayfa": 19,
      "cumleler": [
       {
@@ -4528,7 +4702,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0160"
+       "id": "k2-11-c0166"
       },
       {
        "ses": "Psikozlarda en fazla işitsel halüsinasyonlara rastlanır, bunu görsel halüsinasyonlar takip eder.",
@@ -4553,7 +4727,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0161"
+       "id": "k2-11-c0167"
       },
       {
        "ses": "Koku ve tat halüsinasyonları ise organik bir rahatsızlığa bağlı olabileceğinden organik neden açısından araştırılmalıdır.",
@@ -4578,7 +4752,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0162"
+       "id": "k2-11-c0168"
       },
       {
        "ses": "Özellikle temporal epilepsi ya da temporal yer kaplayıcı lezyonlar, yani beyinde şakak bölgesinde yer kaplayan tümör gibi oluşumlar akla gelir.",
@@ -4603,7 +4777,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0163"
+       "id": "k2-11-c0169"
       },
       {
        "ses": "Genellikle lastik kokusu duymak gibi tablolar görülür ve bu, temporal lob epilepsisini düşündürür.",
@@ -4628,7 +4802,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0164"
+       "id": "k2-11-c0170"
       }
      ]
     }
@@ -4639,7 +4813,7 @@
    "baslik": "İllüzyon ve diğer algı bozuklukları",
    "paragraflar": [
     {
-     "id": "k2-11-p022",
+     "id": "k2-11-p023",
      "sayfa": 20,
      "cumleler": [
       {
@@ -4668,7 +4842,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0165"
+       "id": "k2-11-c0171"
       },
       {
        "ses": "Halüsinasyonda dışarıda hiçbir uyaran yokken algı oluşur, illüzyonda ise gerçek bir uyaran vardır ama yanlış yorumlanır.",
@@ -4700,7 +4874,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0166"
+       "id": "k2-11-c0172"
       },
       {
        "ses": "Mezarlıktan geçerken bir ağacı insana benzetmek ya da birini beklerken buzdolabı sesini zile benzetmek bunun örnekleridir.",
@@ -4725,7 +4899,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0167"
+       "id": "k2-11-c0173"
       },
       {
        "ses": "Korkulu bir ortamda yerdeki bir atkı da yılan gibi görünebilir.",
@@ -4750,7 +4924,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0168"
+       "id": "k2-11-c0174"
       },
       {
        "ses": "İllüzyonlar olumlu ya da olumsuz beklentilerle ilgili olarak normal popülasyonda da ortaya çıkabilir; hastalıklarda ve hastalıkların başlangıcında da görülebilir.",
@@ -4775,7 +4949,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0169"
+       "id": "k2-11-c0175"
       },
       {
        "ses": "İllüzyonlar psikozların prodromal döneminde artış gösterir ve genellikle kaygı eşlik eder.",
@@ -4803,7 +4977,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0170"
+       "id": "k2-11-c0176"
       },
       {
        "ses": "Prodromal dönem, hastalığın tam tabloya dönüşmeden önceki öncü dönemidir.",
@@ -4828,12 +5002,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0171"
+       "id": "k2-11-c0177"
       }
      ]
     },
     {
-     "id": "k2-11-p023",
+     "id": "k2-11-p024",
      "sayfa": 21,
      "cumleler": [
       {
@@ -4860,7 +5034,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0172"
+       "id": "k2-11-c0178"
       },
       {
        "ses": "Kişi bu ben değilim diyen bir duygu yaşar.",
@@ -4885,7 +5059,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0173"
+       "id": "k2-11-c0179"
       },
       {
        "ses": "Derealizasyon ise dış dünyaya ilişkin yabancılık duygusudur; kişi her zamanki çevresini ve çevresindeki kişileri değişmiş ya da yabancıymış gibi hisseder.",
@@ -4911,7 +5085,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0174"
+       "id": "k2-11-c0180"
       },
       {
        "ses": "Depersonalizasyon ve derealizasyon bazen tek tek, bazen de ikisi birlikte görülebilir.",
@@ -4936,7 +5110,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0175"
+       "id": "k2-11-c0181"
       },
       {
        "ses": "En sık travmatik stres durumlarında ortaya çıkar.",
@@ -4961,7 +5135,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0176"
+       "id": "k2-11-c0182"
       },
       {
        "ses": "Ayrıca dissosiyatif hastalıklarda, ağır kişilik bozukluklarında, psikozların prodromal dönemlerinde, temporal epilepsilerde ve psikozlarda görülebilir.",
@@ -4986,12 +5160,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0177"
+       "id": "k2-11-c0183"
       }
      ]
     },
     {
-     "id": "k2-11-p024",
+     "id": "k2-11-p025",
      "sayfa": 22,
      "cumleler": [
       {
@@ -5018,7 +5192,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0178"
+       "id": "k2-11-c0184"
       },
       {
        "ses": "Sinestezi daha çok liserjik asit dietilamid gibi halüsinojen, yani halüsinasyon yapan maddelerin zehirlenmelerinde görülür.",
@@ -5043,7 +5217,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0179"
+       "id": "k2-11-c0185"
       },
       {
        "ses": "Sinestezi sık görülen bir tablo değildir.",
@@ -5068,7 +5242,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0180"
+       "id": "k2-11-c0186"
       },
       {
        "ses": "Makropsi nesneleri olduğundan büyük görmektir, mikropsi ise olduğundan küçük görmektir.",
@@ -5098,7 +5272,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0181"
+       "id": "k2-11-c0187"
       },
       {
        "ses": "Negatif halüsinasyon bir halüsinasyon değildir; var olan şeyleri görmemeye denir.",
@@ -5123,7 +5297,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0182"
+       "id": "k2-11-c0188"
       },
       {
        "ses": "Negatif otoskopi ise kişinin kendisini görememesidir.",
@@ -5152,7 +5326,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0183"
+       "id": "k2-11-c0189"
       },
       {
        "ses": "Bu iki tablo özellikle şizofrenide görülebilir, ancak pratikte sık görülen tablolar değildir.",
@@ -5178,7 +5352,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0184"
+       "id": "k2-11-c0190"
       },
       {
        "ses": "Şizofreni, düşünce, algı ve davranışta bozulmayla giden bir psikotik bozukluktur.",
@@ -5203,7 +5377,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0185"
+       "id": "k2-11-c0191"
       },
       {
        "ses": "Hoca negatif halüsinasyon ve negatif otoskopi kavramlarının bilinmesini istedi.",
@@ -5232,7 +5406,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0186"
+       "id": "k2-11-c0192"
       },
       {
        "ses": "Algı bozukluklarının listesi böylece tamamlanır: halüsinasyon, illüzyon, depersonalizasyon, derealizasyon, sinestezi, makropsi, mikropsi, negatif halüsinasyon ve negatif otoskopi.",
@@ -5261,7 +5435,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0187"
+       "id": "k2-11-c0193"
       },
       {
        "ses": "Hoca algı bozukluklarının bilinmesini ve derslerle ilgili en önemli sorumluluğun muayene bulgularını bilmek olduğunu söyledi.",
@@ -5290,7 +5464,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0188"
+       "id": "k2-11-c0194"
       }
      ]
     }
@@ -5301,7 +5475,7 @@
    "baslik": "Düşünce akışı: çağrışım artması ve azalması",
    "paragraflar": [
     {
-     "id": "k2-11-p025",
+     "id": "k2-11-p026",
      "sayfa": 23,
      "cumleler": [
       {
@@ -5335,7 +5509,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0189"
+       "id": "k2-11-c0195"
       },
       {
        "ses": "Düşünceler ardı ardına gelir; buna akış denir, neyi anlattığı ise içeriktir.",
@@ -5364,7 +5538,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0190"
+       "id": "k2-11-c0196"
       },
       {
        "ses": "Düşünceyi doğrudan göremediğimiz için kişinin düşüncesini konuşmasından anlarız; bu yüzden konuşma bozuklukları da düşünce başlığında anlatılır.",
@@ -5389,12 +5563,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0191"
+       "id": "k2-11-c0197"
       }
      ]
     },
     {
-     "id": "k2-11-p026",
+     "id": "k2-11-p027",
      "sayfa": 23,
      "cumleler": [
       {
@@ -5423,7 +5597,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0192"
+       "id": "k2-11-c0198"
       },
       {
        "ses": "Bu bağlantılar davranışlar, düşünceler ve kavramlar arasında yer ve zaman birliğinin etkisiyle kurulur.",
@@ -5448,7 +5622,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0193"
+       "id": "k2-11-c0199"
       },
       {
        "ses": "Örneğin telefonu gördüm, telefondan annem aklıma geldi, aradım; bu mantıklı bir çağrışım akışıdır.",
@@ -5473,7 +5647,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0194"
+       "id": "k2-11-c0200"
       },
       {
        "ses": "Çağrışım üç başlıkta incelenir: artması, azalması ve sapmaları.",
@@ -5506,12 +5680,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0195"
+       "id": "k2-11-c0201"
       }
      ]
     },
     {
-     "id": "k2-11-p027",
+     "id": "k2-11-p028",
      "sayfa": 23,
      "cumleler": [
       {
@@ -5540,7 +5714,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0196"
+       "id": "k2-11-c0202"
       },
       {
        "ses": "Çağrışım artması üç konuşma bozukluğuna yol açar: basınçlı konuşma, ayrıntıcı konuşma ve lögore.",
@@ -5578,7 +5752,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0197"
+       "id": "k2-11-c0203"
       },
       {
        "ses": "Basınçlı konuşmada kişi, araya girerek soru sormaya ya da görüş bildirmeye olanak vermeyecek ölçüde hızla ve çok konuşur.",
@@ -5606,7 +5780,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0198"
+       "id": "k2-11-c0204"
       },
       {
        "ses": "Ayrıntıcı konuşma daha çok obsesif karakterlerde görülür; kişi konunun gereksiz ayrıntılarına girer ama konuyu sürdürebilir.",
@@ -5639,7 +5813,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0199"
+       "id": "k2-11-c0205"
       },
       {
        "ses": "Obsesif karakter, düzene ve ayrıntıya aşırı bağlı kişilik yapısıdır.",
@@ -5664,7 +5838,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0200"
+       "id": "k2-11-c0206"
       },
       {
        "ses": "Hasta ayrıntıyı anlatmazsa doktor beni anlamaz diye düşünebilir.",
@@ -5689,7 +5863,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0201"
+       "id": "k2-11-c0207"
       },
       {
        "ses": "Hoca ayrıntıcı konuşmayla basınçlı konuşmanın karıştırılmamasını istedi.",
@@ -5719,7 +5893,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0202"
+       "id": "k2-11-c0208"
       },
       {
        "ses": "Ayrımı şöyle yapabilirsiniz: basınçlı konuşmada hız ve baskı vardır, ayrıntıcı konuşmada ise konu kaybolmaz, kişi ayrıntılarda oyalanır.",
@@ -5748,7 +5922,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0203"
+       "id": "k2-11-c0209"
       },
       {
        "ses": "Lögore, konuşmanın miktarının artmasıdır; konuşma tutarlı ve mantıklıdır ama miktarı ve hızı artmıştır.",
@@ -5776,7 +5950,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0204"
+       "id": "k2-11-c0210"
       },
       {
        "ses": "Lögorede çağrışımlarda bir bozukluk yoktur ve konuşma dağınık değildir; yalnızca daha hızlı ve çoktur.",
@@ -5801,12 +5975,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0205"
+       "id": "k2-11-c0211"
       }
      ]
     },
     {
-     "id": "k2-11-p028",
+     "id": "k2-11-p029",
      "sayfa": 24,
      "cumleler": [
       {
@@ -5835,7 +6009,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0206"
+       "id": "k2-11-c0212"
       },
       {
        "ses": "Çağrışım yavaşlamasında konuşma yavaşlar ve hastanın getirdiği düşünce miktarı azalır; daha çok depresyonda görülür.",
@@ -5867,7 +6041,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0207"
+       "id": "k2-11-c0213"
       },
       {
        "ses": "Blokajda yavaşlama o kadar artar ki hasta bir şey anlatırken birden durur ve konuşmayı keser.",
@@ -5897,7 +6071,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0208"
+       "id": "k2-11-c0214"
       },
       {
        "ses": "Hasta adeta donup kalır.",
@@ -5925,7 +6099,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0209"
+       "id": "k2-11-c0215"
       },
       {
        "ses": "Blokaj çağrışım azalması başlığındadır, çağrışım sapması değildir.",
@@ -5960,7 +6134,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0210"
+       "id": "k2-11-c0216"
       },
       {
        "ses": "Blokajın çağrışım sapması sayılamayacağı çıkmış sınavda sorulmuştur.",
@@ -5985,7 +6159,39 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0211"
+       "id": "k2-11-c0217"
+      },
+      {
+       "ses": "Çağrışım azalması iki bozukluktur: çağrışım yavaşlaması ve blokaj.",
+       "ekran": "Azalma: **çağrışım yavaşlaması**, **blokaj**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çağrışım yavaşlaması",
+         "tur": "terim"
+        },
+        {
+         "metin": "blokaj",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 37,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b06"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "b) Çağrışım Azalması"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0218"
       }
      ]
     }
@@ -5996,7 +6202,7 @@
    "baslik": "Çağrışım sapmaları ve konuşma bozuklukları",
    "paragraflar": [
     {
-     "id": "k2-11-p029",
+     "id": "k2-11-p030",
      "sayfa": 24,
      "cumleler": [
       {
@@ -6022,7 +6228,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0212"
+       "id": "k2-11-c0219"
       },
       {
        "ses": "Çağrışım sapmalarında ise adı üstünde düşünceler birbirinden kopuktur.",
@@ -6047,7 +6253,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0213"
+       "id": "k2-11-c0220"
       },
       {
        "ses": "Hasta bir şey söylerken çok alakasız bir konuya geçer ve dinleyen bu ne anlatıyor diye sorar.",
@@ -6072,7 +6278,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0214"
+       "id": "k2-11-c0221"
       },
       {
        "ses": "Slayt bu başlık altında yalnız kopuk konuşmaları değil, konuşmanın biçimini, miktarını ve içeriğini bozan diğer terimleri de sıralar.",
@@ -6097,7 +6303,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0215"
+       "id": "k2-11-c0222"
       },
       {
        "ses": "Slaytta çağrışım sapmaları altında on iki terim sıralanır.",
@@ -6122,7 +6328,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0216"
+       "id": "k2-11-c0223"
       },
       {
        "ses": "Bunlar neolojizm, perseverasyon, klang çağrışım, kelime salatası, yandan konuşma, disprosodi, çelinebilir konuşma, ekolali, iki fakirleşme türü, enkoherans ve koprolalidir.",
@@ -6142,7 +6348,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0217"
+       "id": "k2-11-c0224"
       },
       {
        "ses": "Neolojizm, yeni kelimeler uydurmaktır.",
@@ -6170,7 +6376,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0218"
+       "id": "k2-11-c0225"
       },
       {
        "ses": "Perseverasyon, aynı düşüncenin ısrarlı ve uygunsuz bir biçimde yinelenmesidir.",
@@ -6198,7 +6404,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0219"
+       "id": "k2-11-c0226"
       },
       {
        "ses": "Klang çağrışımda cümleler arasındaki bağlantı ses çağrışımlarıyla kurulur ve cümleler anlamlı bir bütünlük oluşturmaz.",
@@ -6226,7 +6432,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0220"
+       "id": "k2-11-c0227"
       },
       {
        "ses": "Genellikle bir cümlenin sonundaki kelimeyle ses benzerliği taşıyan yeni bir kelimeyle başlanır.",
@@ -6251,7 +6457,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0221"
+       "id": "k2-11-c0228"
       },
       {
        "ses": "Kelime salatasında anlamlı bir cümle yoktur; konuşma yan yana sıralanmış kelimelerden ibarettir ve dinleyen hiçbir şey anlamaz.",
@@ -6279,12 +6485,59 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0222"
+       "id": "k2-11-c0229"
+      },
+      {
+       "ses": "Kısaca neolojizm yeni kelime uydurmak, perseverasyon aynı düşüncenin ısrarla söylenmesidir.",
+       "ekran": "Neolojizm = yeni kelime uydurmak · perseverasyon = ısrarlı yineleme",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": 38,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b06"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Neolojizm: Yeni kelimeler uydurmaktır.",
+         "Perseverasyon: Aynı düşüncenin ısrarlı ve uygunsuz bir biçimde yinelenmesidir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0230"
+      },
+      {
+       "ses": "Klang çağrışım ses çağrışımlarıyla bağlantı kurmak, kelime salatası ise yan yana sıralanmış anlamsız kelimelerdir.",
+       "ekran": "Klang çağrışım = ses çağrışımı · kelime salatası = anlamsız kelime dizisi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": 38,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b06"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Klang Çağrışım: Cümleler arasındaki bağlantı ses çağrışımları ile kurulur."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0231"
       }
      ]
     },
     {
-     "id": "k2-11-p030",
+     "id": "k2-11-p031",
      "sayfa": 25,
      "cumleler": [
       {
@@ -6313,7 +6566,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0223"
+       "id": "k2-11-c0232"
       },
       {
        "ses": "Örneğin hangi liseye gittiği sorulduğunda eğitimin öneminden söz eder.",
@@ -6338,7 +6591,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0224"
+       "id": "k2-11-c0233"
       },
       {
        "ses": "Disprosodi, sesteki melodinin ve ahengin kaybolmasıdır; şizofrenide görülebilir.",
@@ -6366,7 +6619,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0225"
+       "id": "k2-11-c0234"
       },
       {
        "ses": "Çelinebilir konuşmada konuşmanın içeriği dış uyaranlara göre sürekli değişir.",
@@ -6394,7 +6647,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0226"
+       "id": "k2-11-c0235"
       },
       {
        "ses": "Örneğin hasta şikâyetlerinden bahsederken birden odada gördüğü bir resme, oradan dışarıdan gelen bir sese geçer.",
@@ -6419,7 +6672,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0227"
+       "id": "k2-11-c0236"
       },
       {
        "ses": "Derste anlatılan örnekte hasta şurada bir çiçek varmış, kurumuş, kimse su dökmemiş diyerek başka bir konuya geçer.",
@@ -6444,7 +6697,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0228"
+       "id": "k2-11-c0237"
       },
       {
        "ses": "Mekanizma dikkatteki distraktibiliteye benzer: dış uyaran konuşmanın yönünü değiştirir.",
@@ -6469,7 +6722,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0229"
+       "id": "k2-11-c0238"
       },
       {
        "ses": "Ekolali, başkalarının söylediği şeyin tekrar edilmesidir ve şizofrenide görülebilir.",
@@ -6497,12 +6750,52 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0230"
+       "id": "k2-11-c0239"
+      },
+      {
+       "ses": "Yandan konuşma, disprosodi, çelinebilir konuşma ve ekolali de çağrışım sapmalarıdır; ekolali şizofrenide görülebilir.",
+       "ekran": "Sapma: **yandan konuşma**, **disprosodi**, **çelinebilir konuşma**, **ekolali**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yandan konuşma",
+         "tur": "terim"
+        },
+        {
+         "metin": "disprosodi",
+         "tur": "terim"
+        },
+        {
+         "metin": "çelinebilir konuşma",
+         "tur": "terim"
+        },
+        {
+         "metin": "ekolali",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 40,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b06"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Ekolali: Başkalarının söylediği şeyin tekrar edilmesidir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0240"
       }
      ]
     },
     {
-     "id": "k2-11-p031",
+     "id": "k2-11-p032",
      "sayfa": 26,
      "cumleler": [
       {
@@ -6531,7 +6824,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0231"
+       "id": "k2-11-c0241"
       },
       {
        "ses": "Konuşmanın fakirleşmesi depresyonda daha sık görülür ama psikozlarda da görülebilir.",
@@ -6559,7 +6852,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0232"
+       "id": "k2-11-c0242"
       },
       {
        "ses": "Konuşma içeriğinde fakirleşmede ise konuşma miktarca yeterlidir, ama içeriğindeki belirsizlik, boşluk ya da anlamsız yinelemeler yüzünden bilgi aktarma özelliği kaybolmuştur.",
@@ -6587,7 +6880,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0233"
+       "id": "k2-11-c0243"
       },
       {
        "ses": "İçerikte fakirleşme sıklıkla şizofreninin ileri dönemlerinde görülür.",
@@ -6615,7 +6908,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0234"
+       "id": "k2-11-c0244"
       },
       {
        "ses": "İki fakirleşmeyi şöyle ayırın: biri konuşmanın miktarındaki azalmadır, diğeri bilgi taşıyan içeriğin boşalmasıdır.",
@@ -6648,7 +6941,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0235"
+       "id": "k2-11-c0245"
       },
       {
        "ses": "Muayenede genellikle evet ya da hayır yanıtı gerektiren değil, bana anlat diyebileceğimiz açık uçlu sorular sorarız.",
@@ -6673,7 +6966,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0236"
+       "id": "k2-11-c0246"
       },
       {
        "ses": "Geniş kelime hazinesi olan biri sabah şu saatte kahvaltı ettim, sonra derse gittim diye anlatabilirken, düşünce üretimi azalmış hasta sabah kalktım, evdeyim diyip bırakır.",
@@ -6698,7 +6991,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0237"
+       "id": "k2-11-c0247"
       },
       {
        "ses": "Konuşma azaldıkça içerik de azalır ve kelime hazinesi daralır.",
@@ -6723,7 +7016,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0238"
+       "id": "k2-11-c0248"
       },
       {
        "ses": "Enkoherans, konuşmanın cümleler düzeyinde anlamlı olmasına karşın bütününden bir anlam çıkarılamamasıdır; konuşma birbiriyle bağlantısız cümleler biçimindedir.",
@@ -6751,7 +7044,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0239"
+       "id": "k2-11-c0249"
       },
       {
        "ses": "Kelime salatasında ise cümle bile kurulamaz; ayrım, bozukluğun cümle düzeyinde mi yoksa bütün düzeyinde mi olduğudur.",
@@ -6776,7 +7069,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0240"
+       "id": "k2-11-c0250"
       },
       {
        "ses": "Koprolali, küfürlü ya da uygunsuz kelimelerin kullanılmasıdır.",
@@ -6804,7 +7097,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0241"
+       "id": "k2-11-c0251"
       },
       {
        "ses": "Bazı hastalıklarda hiç küfür etmemiş kişiler hastalandıktan sonra küfürlü konuşabilir.",
@@ -6829,7 +7122,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0242"
+       "id": "k2-11-c0252"
       },
       {
        "ses": "Özetle, çağrışım artması üç, azalması iki, sapmaları ise on iki bozukluktan oluşur.",
@@ -6865,7 +7158,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0243"
+       "id": "k2-11-c0253"
       }
      ]
     }
@@ -6876,7 +7169,7 @@
    "baslik": "Düşünce içeriği: hezeyanlar",
    "paragraflar": [
     {
-     "id": "k2-11-p032",
+     "id": "k2-11-p033",
      "sayfa": 27,
      "cumleler": [
       {
@@ -6910,7 +7203,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0244"
+       "id": "k2-11-c0254"
       },
       {
        "ses": "İçerik, hastanın ne düşündüğüdür; hasta anlattıkça bu düşüncelere ulaşırız.",
@@ -6935,7 +7228,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0245"
+       "id": "k2-11-c0255"
       },
       {
        "ses": "Hezeyan, yani sanrı, gerçek olmayan şeylere ve gerçek dışı düşüncelere gerçekmiş gibi inanmaktır.",
@@ -6960,7 +7253,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0246"
+       "id": "k2-11-c0256"
       },
       {
        "ses": "Bizar hezeyan, gerçekleşmesi mümkün olmayan hezeyandır; örneğin uzaylılarla konuştuğunu söylemek.",
@@ -6985,7 +7278,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0247"
+       "id": "k2-11-c0257"
       },
       {
        "ses": "Çip takıyorlar gibi inançlar eskiden bizar sayılırdı; bugün çip gerçekten takılabildiği için artık çok bizar sayılmaz.",
@@ -7010,7 +7303,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0248"
+       "id": "k2-11-c0258"
       },
       {
        "ses": "Duyguduruma uygun hezeyan, hezeyanın kişinin duygudurumuyla uyumlu olmasıdır.",
@@ -7035,7 +7328,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0249"
+       "id": "k2-11-c0259"
       },
       {
        "ses": "Duygudurum, kişinin süregelen duygusal hâlidir; depresyondaki kişide mutsuzluk, yok olma ve suçluluk hezeyanları duyguduruma uygundur.",
@@ -7060,7 +7353,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0250"
+       "id": "k2-11-c0260"
       },
       {
        "ses": "Duyguduruma uygun olmayan hezeyan ise duygudurumla uyumsuzdur; depresyondaki bir kişinin kendisinin çok önemli biri olduğunu iddia etmesi gibi.",
@@ -7085,7 +7378,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0251"
+       "id": "k2-11-c0261"
       },
       {
        "ses": "Depresyonda genellikle duyguduruma uygun hezeyanlar görülür.",
@@ -7110,7 +7403,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0252"
+       "id": "k2-11-c0262"
       },
       {
        "ses": "Erotomanik hezeyanda kişi, genellikle sosyoekonomik açıdan üst düzeydeki birinin kendisine aşık olduğuna inanır.",
@@ -7135,7 +7428,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0253"
+       "id": "k2-11-c0263"
       },
       {
        "ses": "Grandiyöz hezeyan büyüklük hezeyanıdır; kişi önemli biri olduğuna ya da dünyayı kurtaracağına inanır ve psikozlarda sık görülür.",
@@ -7160,12 +7453,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0254"
+       "id": "k2-11-c0264"
       }
      ]
     },
     {
-     "id": "k2-11-p033",
+     "id": "k2-11-p034",
      "sayfa": 28,
      "cumleler": [
       {
@@ -7191,7 +7484,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0255"
+       "id": "k2-11-c0265"
       },
       {
        "ses": "Nihilistik hezeyanda kişi ölmüş ya da yok olmuş olduğuna inanır.",
@@ -7216,7 +7509,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0256"
+       "id": "k2-11-c0266"
       },
       {
        "ses": "Perseküsyon hezeyanında kişi başkalarından kötülük göreceğine, arkasından iş çevrildiğine inanır.",
@@ -7241,7 +7534,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0257"
+       "id": "k2-11-c0267"
       },
       {
        "ses": "Paylaşılmış hezeyan, bir kişinin hezeyanlarının başka biri ya da birileri tarafından da paylaşılmasıdır.",
@@ -7266,7 +7559,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0258"
+       "id": "k2-11-c0268"
       },
       {
        "ses": "Referans hezeyanlarında kişi kendisiyle ilgisiz olaylardan kendisiyle ilgili anlam çıkarır ve buna inanır.",
@@ -7291,7 +7584,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0259"
+       "id": "k2-11-c0269"
       },
       {
        "ses": "Örneğin iki kişinin konuşmasını bak benim hakkımda konuşuyor diye anlar, televizyonda kendisinden bahsedildiğini ya da kendisine mesaj verildiğini düşünür.",
@@ -7316,7 +7609,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0260"
+       "id": "k2-11-c0270"
       },
       {
        "ses": "Kıskançlık hezeyanı, gerçeği değerlendirmenin bozulduğu aşırı kıskançlıktır; kişi eşinin ya da cinsel partnerinin kendisini aldattığına kesin olarak inanır.",
@@ -7341,7 +7634,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0261"
+       "id": "k2-11-c0271"
       },
       {
        "ses": "Kişi çok saçma kanıtlardan aldatma sonucu çıkarır; örneğin kapının önünden araba geçti, bu yüzden eşim beni aldatıyor der.",
@@ -7366,7 +7659,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0262"
+       "id": "k2-11-c0272"
       },
       {
        "ses": "Somatik hezeyanda kişi bedensel bir hastalığı ya da bir anormalliği olduğuna kesin olarak inanır.",
@@ -7391,7 +7684,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0263"
+       "id": "k2-11-c0273"
       },
       {
        "ses": "Hezeyanlarda çoğunlukla mantık hataları vardır.",
@@ -7416,7 +7709,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0264"
+       "id": "k2-11-c0274"
       },
       {
        "ses": "Ruhsal hastalık tanısı konan kişide hukuki süreçler de değişebilir; örneğin silah alamaz, evlenirken rapor gerekir, çalışabileceği işler değişebilir.",
@@ -7441,12 +7734,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0265"
+       "id": "k2-11-c0275"
       }
      ]
     },
     {
-     "id": "k2-11-p034",
+     "id": "k2-11-p035",
      "sayfa": 29,
      "cumleler": [
       {
@@ -7472,7 +7765,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0266"
+       "id": "k2-11-c0276"
       },
       {
        "ses": "Bu terim eskiden kullanılırmış, şimdi çok kullanılmıyor.",
@@ -7497,7 +7790,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0267"
+       "id": "k2-11-c0277"
       },
       {
        "ses": "Schneider hezeyanları daha çok şizofrenide görülür ve dört tanedir.",
@@ -7522,7 +7815,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0268"
+       "id": "k2-11-c0278"
       },
       {
        "ses": "Düşüncelerin çekilmesinde kişi, düşüncelerinin başkaları ya da bir takım güçler tarafından zihninden çekilip alındığına inanır.",
@@ -7547,7 +7840,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0269"
+       "id": "k2-11-c0279"
       },
       {
        "ses": "Hasta düşüncelerim başkası tarafından alınıyor, çekiliyor, gidiyor der.",
@@ -7572,7 +7865,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0270"
+       "id": "k2-11-c0280"
       },
       {
        "ses": "Düşüncelerin okunmasında kişi, insanların düşüncelerini ve zihninden geçenleri anladığına inanır.",
@@ -7597,7 +7890,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0271"
+       "id": "k2-11-c0281"
       },
       {
        "ses": "Düşünce sokulmasında kişi bazı düşüncelerin başkaları tarafından zihnine sokulduğuna inanır.",
@@ -7622,7 +7915,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0272"
+       "id": "k2-11-c0282"
       },
       {
        "ses": "Düşüncelerin yayılmasında kişi, düşüncelerinin başkaları tarafından duyulacak şekilde yayınlandığına inanır.",
@@ -7647,7 +7940,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0273"
+       "id": "k2-11-c0283"
       },
       {
        "ses": "Dört Schneider hezeyanını yöne göre ayırabilirsiniz: çekilmede düşünce zihinden dışarı alınır, sokulmada içeri girer, okunmada başkası anlar, yayılmada herkes duyar.",
@@ -7667,7 +7960,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0274"
+       "id": "k2-11-c0284"
       }
      ]
     }
@@ -7678,7 +7971,7 @@
    "baslik": "Obsesyon ve fobiler",
    "paragraflar": [
     {
-     "id": "k2-11-p035",
+     "id": "k2-11-p036",
      "sayfa": 30,
      "cumleler": [
       {
@@ -7704,7 +7997,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0275"
+       "id": "k2-11-c0285"
       },
       {
        "ses": "Obsesyonlar, kişiye saçma ya da anlamsız gelmesine karşın durduramadığı, zihninden atamadığı, tekrarlayıcı düşünce veya dürtülerdir.",
@@ -7729,7 +8022,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0276"
+       "id": "k2-11-c0286"
       },
       {
        "ses": "Kişi düşüncenin kendi düşüncesi olduğunu bilir ama aklından çıkaramaz; düşünceler, dürtüler ya da imgeler tekrar tekrar gelir.",
@@ -7754,7 +8047,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0277"
+       "id": "k2-11-c0287"
       },
       {
        "ses": "Bu düşünceleri gidermek için yapılan eylemlere kompulsiyon denir.",
@@ -7779,7 +8072,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0278"
+       "id": "k2-11-c0288"
       },
       {
        "ses": "Kişinin sık sık ellerinin kirlenmiş olabileceğini düşünmesi bir obsesyon, rahatlamak için gidip ellerini yıkaması ise bir kompulsiyondur.",
@@ -7808,7 +8101,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0279"
+       "id": "k2-11-c0289"
       },
       {
        "ses": "Slayt dört obsesyon grubunu sayar: kirlilik, zarar verme, sayı sayma ve cinsel obsesyonlar.",
@@ -7836,7 +8129,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0280"
+       "id": "k2-11-c0290"
       },
       {
        "ses": "On kişiden dokuzunun aklından saçma bir obsesyon geçebilir; örneğin acaba birini öldürür müyüm gibi bir düşünce.",
@@ -7861,7 +8154,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0281"
+       "id": "k2-11-c0291"
       },
       {
        "ses": "Asıl ölçüt, bunun ardından sürekli kontrol etmek ya da bir iki saat boyunca bir şeyler yıkamaya başlamak gibi, işlevselliği bozan davranışların başlamasıdır.",
@@ -7886,7 +8179,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0282"
+       "id": "k2-11-c0292"
       },
       {
        "ses": "Ölçüt yine işlevselliktir; bu, dersin başında gördüğümüz normal ile anormal ayrımıdır.",
@@ -7911,12 +8204,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0283"
+       "id": "k2-11-c0293"
       }
      ]
     },
     {
-     "id": "k2-11-p036",
+     "id": "k2-11-p037",
      "sayfa": 31,
      "cumleler": [
       {
@@ -7942,7 +8235,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0284"
+       "id": "k2-11-c0294"
       },
       {
        "ses": "Korku duyulan durum ya da nesneyle karşılaşıldığında kişi, kendisine de aşırı gelse bile aşırı korku, anksiyete ve panik yaşar.",
@@ -7967,7 +8260,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0285"
+       "id": "k2-11-c0295"
       },
       {
        "ses": "Yüzden fazla korku tablosu tanımlanmıştır.",
@@ -7987,7 +8280,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0286"
+       "id": "k2-11-c0296"
       },
       {
        "ses": "Sık görülenler üç grupta toplanır: özgül fobiler, agorafobi ile klostrofobi ve sosyal fobi.",
@@ -8022,7 +8315,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0287"
+       "id": "k2-11-c0297"
       },
       {
        "ses": "Özgül fobiler, belirli bir nesne ya da durumla sınırlı fobilerdir.",
@@ -8047,7 +8340,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0288"
+       "id": "k2-11-c0298"
       },
       {
        "ses": "Alt tipleri hayvan tipi, doğal olaylar, kan, enjeksiyon ve yara tipi ile durum fobileridir.",
@@ -8072,7 +8365,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0289"
+       "id": "k2-11-c0299"
       },
       {
        "ses": "Durum fobilerine taşıta binmek, uçak, asansör, köprü ve yükseklik korkusu örnektir.",
@@ -8097,7 +8390,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0290"
+       "id": "k2-11-c0300"
       },
       {
        "ses": "Klostrofobi kapalı yerlerde, agorafobi ise açık alanlarda ya da kaçmanın zor olabileceği kalabalık yerlerde yaşanan korkudur.",
@@ -8126,7 +8419,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0291"
+       "id": "k2-11-c0301"
       },
       {
        "ses": "Sosyal fobide kişi, başkalarının yanında yapacağı etkinliklerin küçümsenmesine ya da beğenilmemesine yol açabileceğini düşünür.",
@@ -8151,7 +8444,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0292"
+       "id": "k2-11-c0302"
       },
       {
        "ses": "Bu yüzden toplum içinde yemek yemek, konuşmak, dans etmek gibi etkinliklerden bir veya birkaçından ya da hepsinden sıkıntı duyar ve kaçınır.",
@@ -8176,7 +8469,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0293"
+       "id": "k2-11-c0303"
       },
       {
        "ses": "Obsesyonda kişi kendi düşüncesinden kurtulamaz, fobide ise korkulan nesneden ya da durumdan kaçınır.",
@@ -8205,7 +8498,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0294"
+       "id": "k2-11-c0304"
       }
      ]
     }
@@ -8216,7 +8509,7 @@
    "baslik": "Yargılama, soyut düşünce, gerçeği değerlendirme ve içgörü",
    "paragraflar": [
     {
-     "id": "k2-11-p037",
+     "id": "k2-11-p038",
      "sayfa": 32,
      "cumleler": [
       {
@@ -8255,7 +8548,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0295"
+       "id": "k2-11-c0305"
       },
       {
        "ses": "Yargılama, kişinin verileri mantıklı bir neden sonuç ya da ilgi ilişkisi içinde bir araya getirebilme yeteneğidir.",
@@ -8280,7 +8573,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0296"
+       "id": "k2-11-c0306"
       },
       {
        "ses": "Muayenede yolda bir cüzdan bulsanız ne yaparsınız gibi bir soru sorulur.",
@@ -8305,7 +8598,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0297"
+       "id": "k2-11-c0307"
       },
       {
        "ses": "Soyut düşünce, sınıflandırma ve benzerlikleri ile farklılıkları ayırt edebilme gibi soyutlama yetenekleridir.",
@@ -8333,7 +8626,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0298"
+       "id": "k2-11-c0308"
       },
       {
        "ses": "Muayenesinde bir atasözünün anlamı sorulur ya da beş nesneden farklı olanı ayırt etmesi istenir.",
@@ -8361,7 +8654,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0299"
+       "id": "k2-11-c0309"
       },
       {
        "ses": "Soyutlama yeteneği psikozlarda, özellikle kronikleşmiş ve yıkımı olan psikotik hastalarda bozulur.",
@@ -8389,12 +8682,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0300"
+       "id": "k2-11-c0310"
       }
      ]
     },
     {
-     "id": "k2-11-p038",
+     "id": "k2-11-p039",
      "sayfa": 33,
      "cumleler": [
       {
@@ -8423,7 +8716,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0301"
+       "id": "k2-11-c0311"
       },
       {
        "ses": "Psikozlarda bu yeti bozulur; dolayısıyla kişi kendi düşüncelerini dış gerçekler olarak algılar.",
@@ -8452,7 +8745,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0302"
+       "id": "k2-11-c0312"
       },
       {
        "ses": "Hezeyanı olan hastada gerçeği değerlendirme bozuktur; obsesyonu olan kişide ise korunmuştur, çünkü kişi düşüncenin kendi düşüncesi olduğunu bilir.",
@@ -8481,12 +8774,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0303"
+       "id": "k2-11-c0313"
       }
      ]
     },
     {
-     "id": "k2-11-p039",
+     "id": "k2-11-p040",
      "sayfa": 34,
      "cumleler": [
       {
@@ -8512,7 +8805,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0304"
+       "id": "k2-11-c0314"
       },
       {
        "ses": "Birincisi, kişinin hareketlerinin ardındaki bilinçdışı motivasyonlarından haberdarlık derecesidir.",
@@ -8537,7 +8830,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0305"
+       "id": "k2-11-c0315"
       },
       {
        "ses": "Bu anlamıyla hiç kimsede tam bir içgörüden söz edilemez, çünkü kimse tüm bilinçdışı güdülenmelerinin farkında olamaz.",
@@ -8562,7 +8855,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0306"
+       "id": "k2-11-c0316"
       },
       {
        "ses": "Ancak içgörüsü daha az ya da daha çok insanlardan söz edebiliriz.",
@@ -8587,7 +8880,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0307"
+       "id": "k2-11-c0317"
       },
       {
        "ses": "Örneğin bazı obsesif kompulsif hastalar belirtilerini bir rahatsızlık olarak görebilirken, bazıları bu belirtileri doğal ve doğru bulur.",
@@ -8612,7 +8905,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0308"
+       "id": "k2-11-c0318"
       },
       {
        "ses": "Aynı şekilde bazı psikotik hastalar halüsinasyonlarının hastalıktan kaynaklandığını bilebilir.",
@@ -8637,7 +8930,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0309"
+       "id": "k2-11-c0319"
       },
       {
        "ses": "Verilen örnekler içgörünün diğer anlamını, yani kişinin belirtilerini ve hastalığını fark edebilme düzeyini de gösterir.",
@@ -8662,7 +8955,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0310"
+       "id": "k2-11-c0320"
       },
       {
        "ses": "Halüsinasyonlarının hastalıktan kaynaklandığını bilen psikotik hastada içgörü korunmuştur; bu yüzden içgörünün korunmuş olması psikotik bir bozukluğu kesin olarak dışlamaz.",
@@ -8690,7 +8983,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0311"
+       "id": "k2-11-c0321"
       }
      ]
     }
@@ -8701,7 +8994,7 @@
    "baslik": "Duygulanım",
    "paragraflar": [
     {
-     "id": "k2-11-p040",
+     "id": "k2-11-p041",
      "sayfa": 35,
      "cumleler": [
       {
@@ -8727,7 +9020,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0312"
+       "id": "k2-11-c0322"
       },
       {
        "ses": "Duygudurum, kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini hissedişidir.",
@@ -8755,7 +9048,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0313"
+       "id": "k2-11-c0323"
       },
       {
        "ses": "Dört duygudurum tanımı vardır: ötimi, yükselmiş, çökkün ve irritabl duygudurum.",
@@ -8798,7 +9091,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0314"
+       "id": "k2-11-c0324"
       },
       {
        "ses": "Ötimi, duygudurumda çökme ya da yükselmenin olmadığını ifade eder.",
@@ -8826,7 +9119,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0315"
+       "id": "k2-11-c0325"
       },
       {
        "ses": "Yükselmiş duygudurumda alışılmışın dışında bir neşe hâli vardır ve kişinin kendine güveni de artmıştır.",
@@ -8854,7 +9147,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0316"
+       "id": "k2-11-c0326"
       },
       {
        "ses": "Çökkün duygudurumda ümitsizlik, keder ve elemlilik duygusu ön plandadır; kişinin kendisine verdiği değer ve güven azalmıştır.",
@@ -8882,7 +9175,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0317"
+       "id": "k2-11-c0327"
       },
       {
        "ses": "İrritabl duygudurumda çabuk sinirlenme vardır; kişi engellenmeye karşı öfkelenmeye hazırdır.",
@@ -8910,7 +9203,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0318"
+       "id": "k2-11-c0328"
       },
       {
        "ses": "Ötimi, çökmenin de yükselmenin de olmadığı normal duygudurumdur; yükselmiş duygudurumda neşe, irritabl duygudurumda öfke öne çıkar.",
@@ -8939,12 +9232,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0319"
+       "id": "k2-11-c0329"
       }
      ]
     },
     {
-     "id": "k2-11-p041",
+     "id": "k2-11-p042",
      "sayfa": 36,
      "cumleler": [
       {
@@ -8970,7 +9263,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0320"
+       "id": "k2-11-c0330"
       },
       {
        "ses": "Neşe, elem, endişelilik ve gerginlik buna örnektir.",
@@ -8995,7 +9288,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0321"
+       "id": "k2-11-c0331"
       },
       {
        "ses": "Duygudurum süregelen iç hâldir, afekt ise o anda gözlenen dışa vuruşudur.",
@@ -9024,7 +9317,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0322"
+       "id": "k2-11-c0332"
       },
       {
        "ses": "Uygun afekt, kişinin düşünce ya da konuşma içeriğiyle dışa vuran duygulanımı arasında uyum olmasıdır.",
@@ -9050,7 +9343,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0323"
+       "id": "k2-11-c0333"
       },
       {
        "ses": "Örneğin komik bir şeyi anlatırken gülmek ya da hüzünlü bir şeyi anlatırken hüzünlenmek uygun afekttir.",
@@ -9075,7 +9368,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0324"
+       "id": "k2-11-c0334"
       },
       {
        "ses": "Uygunsuz afekt, konuşma içeriği ya da yaşanan durumla duygulanım arasında uygunsuzluk olmasıdır.",
@@ -9101,7 +9394,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0325"
+       "id": "k2-11-c0335"
       },
       {
        "ses": "Örneğin sevdiği birini kaybettiğini anlatırken gülmek uygunsuz afekttir.",
@@ -9126,7 +9419,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0326"
+       "id": "k2-11-c0336"
       },
       {
        "ses": "Değişken afekt, dış uyaranlardan bağımsız olarak afektte ani ve belirgin değişiklikler olmasıdır.",
@@ -9152,12 +9445,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0327"
+       "id": "k2-11-c0337"
       }
      ]
     },
     {
-     "id": "k2-11-p042",
+     "id": "k2-11-p043",
      "sayfa": 37,
      "cumleler": [
       {
@@ -9184,7 +9477,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0328"
+       "id": "k2-11-c0338"
       },
       {
        "ses": "Anksiyete, genellikle içsel nitelikli bir tehlike beklentisinden kaynaklanan sıkıntılı olma hâlidir.",
@@ -9209,7 +9502,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0329"
+       "id": "k2-11-c0339"
       },
       {
        "ses": "Belirli bir düşünce ya da endişeyle bağlantısız yaşandığında buna serbest dalgalanan anksiyete denir.",
@@ -9234,7 +9527,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0330"
+       "id": "k2-11-c0340"
       },
       {
        "ses": "Ajitasyon, motor huzursuzluğun eşlik ettiği anksiyete hâlidir.",
@@ -9259,7 +9552,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0331"
+       "id": "k2-11-c0341"
       },
       {
        "ses": "Örneğin bacaklarını sallamak, saçlarıyla oynamak ya da parmaklarını masaya vurmak ajitasyonu gösterir.",
@@ -9284,7 +9577,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0332"
+       "id": "k2-11-c0342"
       },
       {
        "ses": "Anksiyete ile ajitasyonu ayıran, motor huzursuzluğun eşlik edip etmemesidir.",
@@ -9310,7 +9603,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0333"
+       "id": "k2-11-c0343"
       },
       {
        "ses": "Ambivalans, kişinin aynı anda aynı konuyla ilgili zıt yönelimli iki duygulanımı birlikte hissetmesidir; bir şeyi hem isteyip hem istememek gibi.",
@@ -9336,7 +9629,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0334"
+       "id": "k2-11-c0344"
       }
      ]
     }
@@ -9347,7 +9640,7 @@
    "baslik": "Motor aktivite ve hareket",
    "paragraflar": [
     {
-     "id": "k2-11-p043",
+     "id": "k2-11-p044",
      "sayfa": 38,
      "cumleler": [
       {
@@ -9373,7 +9666,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0335"
+       "id": "k2-11-c0345"
       },
       {
        "ses": "Retardasyon, motor aktivitelerin azalmasıdır; temel olarak depresyonda görülür.",
@@ -9402,7 +9695,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0336"
+       "id": "k2-11-c0346"
       },
       {
        "ses": "Eksitasyon, motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır.",
@@ -9431,7 +9724,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0337"
+       "id": "k2-11-c0347"
       },
       {
        "ses": "İkisi motor aktivitenin zıt uçlarıdır: biri azalma, diğeri aşırı artmadır.",
@@ -9464,7 +9757,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0338"
+       "id": "k2-11-c0348"
       },
       {
        "ses": "Başlığın yanındaki eski siyah beyaz fotoğrafta, yatağın yanında ayakta duran bir hasta karşısındaki kişiye doğru kolunu kaldırmış görülür.",
@@ -9489,7 +9782,7 @@
         "sekil": "eski siyah beyaz fotoğraf: yatak yanında ayakta duran bir hasta kolunu kaldırmış",
         "tablo": null
        },
-       "id": "k2-11-c0339"
+       "id": "k2-11-c0349"
       },
       {
        "ses": "Motor bulgular hastanın duruşunda ve hareketlerinde doğrudan gözlenir; bu yüzden muayenede hastaya bakmak da bilgi verir.",
@@ -9514,12 +9807,12 @@
         "sekil": "eski siyah beyaz fotoğraf: yatak yanında ayakta duran bir hasta kolunu kaldırmış",
         "tablo": null
        },
-       "id": "k2-11-c0340"
+       "id": "k2-11-c0350"
       }
      ]
     },
     {
-     "id": "k2-11-p044",
+     "id": "k2-11-p045",
      "sayfa": 39,
      "cumleler": [
       {
@@ -9548,7 +9841,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0341"
+       "id": "k2-11-c0351"
       },
       {
        "ses": "Katatonik stuporda hareketlerde neredeyse durma noktasına varan bir yavaşlama vardır ve kişi çevresinin farkında olmadığı izlenimini verir.",
@@ -9576,7 +9869,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0342"
+       "id": "k2-11-c0352"
       },
       {
        "ses": "Mutizm, hastanın istemli olarak konuşmamasıdır; katatonik şizofrenide, ağır depresyonlarda ve stupor tablolarında görülebilir.",
@@ -9604,7 +9897,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0343"
+       "id": "k2-11-c0353"
       },
       {
        "ses": "Katapleksi, heyecan ya da ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur.",
@@ -9634,7 +9927,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0344"
+       "id": "k2-11-c0354"
       },
       {
        "ses": "Katapleksi tanımı çıkmış sınavda sorulmuştur.",
@@ -9659,7 +9952,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0345"
+       "id": "k2-11-c0355"
       },
       {
        "ses": "Hasta cansız bir şekilde yere yığılabilir ya da yalnızca belli bir kas grubunda ortaya çıkar; örneğin kişinin başı düşer, çenesi aşağı sarkar.",
@@ -9687,7 +9980,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0346"
+       "id": "k2-11-c0356"
       },
       {
        "ses": "Katapleksideki tonus kaybı geçicidir; kalıcı bir felç söz konusu değildir.",
@@ -9719,7 +10012,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0347"
+       "id": "k2-11-c0357"
       },
       {
        "ses": "Üçünü karıştırmamak gerekir: katalepside kaslar sertleşmiş ve kişi uzun süre hareketsizdir, katatonik stuporda hareketler neredeyse durmuştur, katapleksi ise kas tonusunun ani ve kısa süreli kaybıdır.",
@@ -9749,12 +10042,177 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0348"
+       "id": "k2-11-c0358"
+      },
+      {
+       "ses": "Kısaca katalepsi uzun süre hareketsiz kalmak, katatonik stupor ise hareketlerin durma noktasına kadar yavaşlamasıdır.",
+       "ekran": "**Katalepsi** = uzun süre hareketsizlik · **katatonik stupor** = hareketlerde durma noktasına yavaşlama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Katalepsi",
+         "tur": "terim"
+        },
+        {
+         "metin": "katatonik stupor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 63,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s07-b15"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Katalepsi",
+         "Katatonik Stupor"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0359"
+      },
+      {
+       "ses": "Mutizm istemli olarak konuşmamak, katapleksi ise heyecanla tetiklenen geçici kas tonusu kaybıdır.",
+       "ekran": "**Mutizm** = istemli konuşmama · **katapleksi** = geçici tonus kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Mutizm",
+         "tur": "terim"
+        },
+        {
+         "metin": "katapleksi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 63,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s07-b15"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Mutizm",
+         "Katapleksi"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0360"
+      },
+      {
+       "ses": "Katalepsi uzun süre hareketsiz kalmaktır; katatonik stupor hareketlerde durma noktasına varan yavaşlamadır; mutizm istemli olarak konuşmamaktır; katapleksi heyecan ya da ani korkuyla tetiklenen geçici kas tonusu kaybıdır.",
+       "ekran": "Dört terim: **katalepsi**, **katatonik stupor**, **mutizm**, **katapleksi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "katalepsi",
+         "tur": "terim"
+        },
+        {
+         "metin": "katatonik stupor",
+         "tur": "terim"
+        },
+        {
+         "metin": "mutizm",
+         "tur": "terim"
+        },
+        {
+         "metin": "katapleksi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 63,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "B",
+        "birim": "psk-s07-b15"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Katalepsi",
+         "Katatonik Stupor",
+         "Mutizm",
+         "Katapleksi"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0361"
+      },
+      {
+       "ses": "Mutizmin katatonik şizofrenide ve ağır depresyonda da görülmesi, katatonik bulguların psikiyatrik nedenlerle ortaya çıkabildiğini gösterir.",
+       "ekran": "Katatonik bulgular **psikiyatrik nedenle** de çıkar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikiyatrik nedenle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 63,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b16"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Mutizm: Hastanın istemli olarak konuşmamasıdır. Katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0362"
+      },
+      {
+       "ses": "Bu yüzden katatoninin asla psikojenik olmadığını, her zaman organik kökenli olduğunu söyleyen önerme yanlıştır.",
+       "ekran": "\"Asla psikojenik\" önermesi **yanlış**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yanlış",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": 63,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b16"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0363"
       }
      ]
     },
     {
-     "id": "k2-11-p045",
+     "id": "k2-11-p046",
      "sayfa": 40,
      "cumleler": [
       {
@@ -9783,7 +10241,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0349"
+       "id": "k2-11-c0364"
       },
       {
        "ses": "Distoni, belli bir kas grubunun istemsiz olarak kasılmasıdır.",
@@ -9811,7 +10269,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0350"
+       "id": "k2-11-c0365"
       },
       {
        "ses": "Manyerizm, kişide alışkanlık hâlini almış, istemsiz hareketlerdir.",
@@ -9839,7 +10297,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0351"
+       "id": "k2-11-c0366"
       },
       {
        "ses": "Ekopraksi, kişinin başkalarının hareketini taklit etmesidir; konuşmadaki ekolalinin hareket karşılığıdır.",
@@ -9867,7 +10325,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0352"
+       "id": "k2-11-c0367"
       },
       {
        "ses": "Akatizi, genellikle antipsikotiklerin kullanımına bağlı olarak ortaya çıkan bir tablodur.",
@@ -9899,7 +10357,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0353"
+       "id": "k2-11-c0368"
       },
       {
        "ses": "Antipsikotikler, psikoz belirtilerini tedavi eden ilaçlardır.",
@@ -9924,7 +10382,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0354"
+       "id": "k2-11-c0369"
       },
       {
        "ses": "Akatizide hasta huzursuzluk ve gerginlik hisseder, yerinde duramaz ve hareket etme zorunluluğu hisseder.",
@@ -9952,7 +10410,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0355"
+       "id": "k2-11-c0370"
       },
       {
        "ses": "Beş terimi şöyle ayırın: diskinezi genel istemsiz harekettir, distoni tek kas grubunun kasılmasıdır, manyerizm alışkanlık hâlindeki harekettir, ekopraksi taklittir, akatizi yerinde duramamadır.",
@@ -9988,7 +10446,73 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0356"
+       "id": "k2-11-c0371"
+      },
+      {
+       "ses": "Kısaca diskinezi istemsiz hareketler, distoni belli bir kas grubunun istemsiz kasılmasıdır.",
+       "ekran": "**Diskinezi** = istemsiz hareket · **distoni** = belli kas grubunun kasılması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Diskinezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "distoni",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 65,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b16"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Diskinezi: İstemsiz hareketlerdir.",
+         "Distoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0372"
+      },
+      {
+       "ses": "Manyerizm alışkanlık hâlindeki istemsiz hareket, ekopraksi başkasının hareketini taklit etmektir.",
+       "ekran": "**Manyerizm** = alışkanlık hâlindeki hareket · **ekopraksi** = taklit",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Manyerizm",
+         "tur": "terim"
+        },
+        {
+         "metin": "ekopraksi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 65,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s07-b16"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Manyerizm: Kişide alışkanlık halini almış, istemsiz hareketlerdir.",
+         "Ekopraksi: Kişinin başkalarının hareketini taklit etmesidir."
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-11-c0373"
       }
      ]
     }
@@ -9999,7 +10523,7 @@
    "baslik": "Bedensel işlevler ve ders sonu",
    "paragraflar": [
     {
-     "id": "k2-11-p046",
+     "id": "k2-11-p047",
      "sayfa": 41,
      "cumleler": [
       {
@@ -10025,7 +10549,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0357"
+       "id": "k2-11-c0374"
       },
       {
        "ses": "Uyku, depresyonda artar ya da azalır.",
@@ -10050,7 +10574,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0358"
+       "id": "k2-11-c0375"
       },
       {
        "ses": "Uykuya dalmada ve uykuyu sürdürmede güçlük yanında sabahları vaktinden önce uyanıp tekrar uyuyamama görülür.",
@@ -10075,7 +10599,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0359"
+       "id": "k2-11-c0376"
       },
       {
        "ses": "Bazen de aksine vaktinin büyük bölümünü uyuyarak geçirme ortaya çıkar; aşırı uykuyla giden depresyonların atipik olma özelliği vardır.",
@@ -10100,7 +10624,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0360"
+       "id": "k2-11-c0377"
       },
       {
        "ses": "Manide de uyku azalmıştır, ancak hasta az uyumasına karşılık yorgunluk hissetmez.",
@@ -10129,7 +10653,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0361"
+       "id": "k2-11-c0378"
       },
       {
        "ses": "İştah da depresyonda artar ya da azalır; daha yaygın olanı iştahın azalmasıdır.",
@@ -10154,7 +10678,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0362"
+       "id": "k2-11-c0379"
       },
       {
        "ses": "İştah artması daha çok atipik depresyonlarda görülür.",
@@ -10179,12 +10703,12 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0363"
+       "id": "k2-11-c0380"
       }
      ]
     },
     {
-     "id": "k2-11-p047",
+     "id": "k2-11-p048",
      "sayfa": 42,
      "cumleler": [
       {
@@ -10210,7 +10734,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0364"
+       "id": "k2-11-c0381"
       },
       {
        "ses": "Dışkılamada anksiyete ve depresyonda ishal ya da kabızlık görülebilir.",
@@ -10235,7 +10759,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0365"
+       "id": "k2-11-c0382"
       },
       {
        "ses": "İdrar yapmada psikojenik polidipsiye bağlı olarak idrar miktarında artış olabilir.",
@@ -10260,7 +10784,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0366"
+       "id": "k2-11-c0383"
       },
       {
        "ses": "Psikojenik polidipsi, psikolojik nedenlerle aşırı su içilmesidir.",
@@ -10285,7 +10809,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0367"
+       "id": "k2-11-c0384"
       }
      ]
     }
@@ -10296,7 +10820,7 @@
    "baslik": "Ders sonu: işlevler ve bozuklukları",
    "paragraflar": [
     {
-     "id": "k2-11-p048",
+     "id": "k2-11-p049",
      "sayfa": 3,
      "cumleler": [
       {
@@ -10322,7 +10846,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0368"
+       "id": "k2-11-c0385"
       },
       {
        "ses": "Hemen her işlevde karıştırılan yakın kavram çiftleri vardı: anterograd ve retrograd amnezi, distraktibilite ve hipervijilans, halüsinasyon ve illüzyon.",
@@ -10355,7 +10879,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0369"
+       "id": "k2-11-c0386"
       },
       {
        "ses": "Bunlara basınçlı ve ayrıntıcı konuşma ile katalepsi ve katapleksi de eklenir.",
@@ -10375,7 +10899,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0370"
+       "id": "k2-11-c0387"
       },
       {
        "ses": "Her birinde tanımı bilmek ve komşu kavramın tanımıyla değiştirmemek gerekir.",
@@ -10400,7 +10924,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0371"
+       "id": "k2-11-c0388"
       },
       {
        "ses": "Bir belirtinin hastalık sayılması ise sonunda kişinin işlevselliğini bozup bozmamasına bağlıdır.",
@@ -10425,7 +10949,7 @@
         "sekil": null,
         "tablo": null
        },
-       "id": "k2-11-c0372"
+       "id": "k2-11-c0389"
       }
      ]
     }

@@ -1,18 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 623,
-  "baslik": "Yeni derslerin sesli çözücüsü, En önemliler listesi, hoca soruları",
+  "onem": 624,
+  "baslik": "Baş Ağrısı ve Psikiyatrik Semiyoloji sesli derslerine ekler",
   "maddeler": [
-    "Psikiyatrik Semiyoloji, MSS İlaçlarına Giriş, Baş Ağrısına Yaklaşım ve Ağrı Fizyopatolojisi için En önemliler listesi, sesli soru çözücü ve sesli sınav asistanı eklendi.",
-    "Sesli derste \"Hocanın sorabileceği soru\" ara sayfaları: dört derste 46 soru, sesli çözümüyle.",
-    "Yeni derslerde PDF üstü çizimler, terim kartları, kısaltmalar ve ders analizi.",
-    "Psikiyatri ve Anestezi branşları Soru çöz ve En önemliler sayfalarında."
+    "Psikiyatrik Semiyoloji sesli dersine bellek, dikkat, çağrışım ve motor bulgu tanımları eklendi (geçen yılın öğrencilerinin en çok çalıştığı yerler).",
+    "Baş Ağrısına Yaklaşım sesli dersine primer/sekonder baş ağrısı başlıkları eklendi.",
+    "Ağrı Fizyopatolojisi sesli sınav asistanı eklendi."
   ],
-  "eklenen": [
-    "Psikiyatri ve Anestezi branşları (Kurul 2)",
-    "4 derste hoca ara soruları"
+  "eklenen": [],
+  "degisen": [
+    "Psikiyatrik Semiyoloji ve Baş Ağrısı sesli dersleri (yalnız eklenen cümleler yeniden seslendirildi)"
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": []
