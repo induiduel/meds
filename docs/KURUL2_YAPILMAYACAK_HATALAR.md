@@ -1944,3 +1944,73 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme:** Hesap kurtarmanın en az bir yolu hiçbir dış hesaba bağlı olmamalı (yönetici onayı). Bir dış servisin yedeği
   çalışmıyorsa sessiz geçilmez, günlüğe bir kez yazılır. İçerik alımı herkese açık Drive yoluyla çalışır; kimlikli yedek
   için kullanıcı askıda olmayan bir hesapta yeni servis hesabı ya da `rclone config reconnect meds:` kurmalıdır.
+
+## H468 — Hoca dökümü sessizce CPU'ya düştü; turbo dökümü konuşmanın üçte birini kaçırdı (2026-11-02, Kurul 2 2. parti)
+
+- **Belirti:** k2-10 dökümü "GPU saati 2500 MHz'i aştı; bu oturum CPU" ile çok yavaş ilerledi; tamamlanınca turbo modeli 48,6 dk
+  kaydın yalnız ~2000 sn'sinde konuşma buldu, "İzlediğiniz için teşekkür ederim" sanrıları ve bozuk terimler vardı; hocanın vurgu
+  ifadelerinin bir kısmı hiç dökülmedi.
+- **Kök neden:** (1) Kalıcı saat kilidi (`nvidia-smi -lgc 300,2500`) yeniden başlatmada kalkıyor; `hoca_dokum.py` kilit yoksa doğru
+  davranıp CPU'ya düşüyor ama hat bunu uyarı olarak göstermiyor. (2) Tek model (large-v3-turbo) amfi kaydında tıbbi terimleri ve
+  kısık konuşmayı kaçırıyor; vurgu kaydı tek dökümden çıkarılıyordu.
+- **Çözüm:** saat kilidi kuruldu, döküm GPU'da yeniden alındı (≈2–3 dk/ders); her derse ikinci döküm (Systran medium,
+  `hoca_dokum_medium.json`, `meds_temp/ogrenci_ders/dokum_medium.sh`) alındı ve vurgu/anlatım kayıtları iki dökümle çapraz okundu
+  (k2-10'da 23 yeni kayıt, 2 yeni sınav vurgusu; anlaşılmayan "her hafta olan ağrı daha önemli" kaydı düşük güvene alındı,
+  ona dayanan anlatım cümlesi silindi).
+- **Önleme:** E0'dan önce `nvidia-smi --query-gpu=clocks.max.sm` ≤2500 denetlenir; döküm günlüğünde "bu oturum CPU" görülürse
+  durdurulur. Hoca vurgusu en az iki dökümle çapraz okunur; yalnız bir dökümde geçen ve slayta bağlanamayan söz vurgu dayanağı olmaz.
+
+## H469 — Kurul 2 EMA yolu büyük harfli kısaltmayı okumuyordu (NMDA, GABA, IP3) (2026-11-02)
+
+- **Belirti:** k2-09 farmakoloji metni kısaltmaları yazımla tutuyordu (NMDA, AMPA, MSS, IP3); `ema_isci.tts_metni` Kurul 2 yolunda
+  bunları olduğu gibi EMA'ya veriyordu (sınamada "NMDA reseptörü" → çevrilmemiş); GABA/AMPA hoca gibi kelime olarak okunmuyordu.
+- **Kök neden:** Kurul 2 uzun-kısaltma yolu (`kisaltma_ses.uzat`) yalnız okunuşla yazılmış hece dizilerini ("de ne a") tanır; H23
+  "metin yazımla, okunuşu EMA katmanı yapar" kuralı yalnız modül/ajan anahtarlarında (`modul_okunus.modul_mu`) uygulanıyordu.
+  Önceki Kurul 2 dersleri metni okunuşla yazdığı için fark edilmedi.
+- **Çözüm:** bu partinin yazımla yazılmış anahtarları `modul_okunus.MODUL_ANAHTARLAR`'a eklendi; `KELIME`'ye GABA/GABAA/GABAB/AMPA/
+  DOPA/VMAT/VGLUT/mGluR/HANDLE/SUNCT/KİBAS; `okunus.FONETIK_TTS`'e GABA/AMPA/L-DOPA; `terim_okunus.json`'a Schneider, Renshaw,
+  Wall, Head, Graham, Leao, locus coeruleus, substantia gelatinosa, déjà vu ailesi. EMA işçisi yeniden başlatıldı (modüller
+  açılışta yüklenir).
+- **Önleme:** Yeni Kurul 2 dersinin metni yazımla tutuluyorsa anahtarı seslendirmeden ÖNCE `MODUL_ANAHTARLAR`'a eklenir ve
+  `ema_isci.tts_metni` ile örnek paragraf okunuşu denetlenir; okunuş sözlüğü değişince `meds-ema` yeniden başlatılır.
+
+## H470 — Çizim kapısı R0 resim etiketini reddediyordu (2026-11-02)
+
+- **Belirti:** k2-11 s.38 fotoğraf konturu "resim kimliği geçersiz (R0)" ile atıldı.
+- **Kök neden:** `capa_dok`/`cizim_uret` görüntüye `pdf_isaret.Sayfa.resimler`'in kalıcı (0 tabanlı, atlamalı) dizinini R etiketi
+  olarak basıyor; `cizim_dogrula.denetle` ise `kutular` listesindeki 1 tabanlı SIRAYI bekliyor (dış ajan sınamasında 2026-10-29
+  görülmüş, düzeltilmemişti).
+- **Çözüm:** `cizim_uret.py` doğrulamadan önce etiketi sıraya çevirir (`resim_etiketleri`).
+- **Önleme:** Görüntüde gösterilen kimlik ile kapının beklediği kimlik aynı dönüşümden geçer; kapı yazarın gördüğü etiketi kabul eder.
+
+## H471 — Yeni Kurul 2 derslerinde PDF açılmadı, PDF işareti atlandı (2026-11-02)
+
+- **Belirti:** `/api/lecture-pdf/deck/<deste>/0` 404; Oracle'da `pdf_isaret.py` "atlandı (hizalama/PDF/metin uyuşmuyor)"; yerel
+  `yayinla.py --yerel` "PDF'in kaynak kimliği (manifest) bulunamadı".
+- **Kök neden:** Elle (işçisiz) üretimde PDF'ler `meds_temp/ogrenci_ders/<ders>/` altına indiriliyor; ders işçisinin yaptığı üç
+  adım atlanıyor: `meds_downloads/_manifest.json` kaydı, `drive_root/<yol>` kopyası (yerel + Oracle) ve `deckPdfSources.json`
+  yeniden üretimi (yeni deste yayından SONRA). Ayrıca Oracle `data/sesli_anlatim/isaret/` root sahipliğindeydi; `pdf_isaret`
+  ubuntu kullanıcısıyla yazamadı.
+- **Çözüm:** dört PDF manifeste (source_id = sha1(drive_id)[:12]) ve iki drive_root'a eklendi; `build_deck_pdf_sources.py` deste
+  yayınından sonra çalıştırıldı (k2-06 ilk koşuda destesinden önce koştuğu için ikinci kez); isaret dizini ubuntu'ya verildi.
+- **Önleme:** Elle hatta yayın sırası: PDF → manifest + iki drive_root → `yayinla.py --yerel` → `build_deck_pdf_sources.py`
+  (bütün desteler yayınlandıktan sonra) → commit/dağıtım → `ders-ekle`. Dağıtımdan sonra `/api/lecture-pdf/deck/<deste>/0` 200
+  denetlenir.
+
+## H472 — Hoca vurgusu `konu` alanı özetti, değerlendirme kapısı slayttan birebir istiyor (2026-11-02)
+
+- **Belirti:** `degerlendirme_dogrula.py` k2-11'de 40+ "hoca vurgusu: konu slaytta yok" HATA.
+- **Kök neden:** A1 görev şeması `konu`yu "slayttaki karşılığı" diye tanımladı ama yazar ajan okunur özet yazdı; kapı birebir arıyor.
+- **Çözüm:** `meds_temp/ogrenci_ders/hv_konu_duzelt.py`: özet `konu_ozet`'e taşınır (öğrenci ekranı bunu gösterir), `konu` sayfadaki en
+  yakın birebir satıra bağlanır. Aynı aileden öğrenci notu `hedef` ve tablo hücresi alıntıları `kanit_kirp.py` ile kırpıldı.
+- **Önleme:** A1 şemasında iki alan ayrıdır: `konu` = slayttan birebir, `konu_ozet` = okunur özet. Tablo sayfasında alıntı tek hücre içinden.
+
+## H473 — Ders notu sadakati eşiğin altında: "Ek bilgi" etiketleri ve meta cümleler (2026-11-02)
+
+- **Belirti:** k2-10 yayını "ders notu sadakati 0.757 < 0.8" ile reddedildi.
+- **Kök neden:** Ders notu yazarı slayt dışı hoca açıklamalarını "Ek bilgi:" etiketleriyle ve "Çıkmış sorularda … cevabıdır;
+  çeldiriciler …" gibi süreç cümleleriyle ekledi; sadakat ölçütü (s14.fidelity: not köklerinin slaytta geçme oranı) bunları kaynak
+  dışı sayar. Kısa (26 sayfa) slaytta oran hızla düşer.
+- **Çözüm:** etiketler ve meta cümleler kaldırıldı, anekdotlar kısaltıldı, slayt sözcükleri kullanıldı → 0.855 (eşik gevşetilmedi).
+- **Önleme:** Ders notu yalnız slayt bilgisinin redaksiyonudur; hoca açıklamaları sesli anlatımda ve hoca vurguları listesinde yer
+  alır. Ders notunda süreç/meta cümlesi ("çıkmışta şu sorulmuştur", "slaytta yazılı değildir") yazılmaz.

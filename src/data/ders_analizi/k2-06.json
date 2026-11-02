@@ -1,0 +1,939 @@
+{
+ "surum": 1,
+ "key": "k2-06",
+ "kod": "2r01",
+ "kurul": 2,
+ "brans": "Anestezi",
+ "konu": "Ağrı Yolları ve Mekanizmaları",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "profil": "Anesteziyoloji ve Reanimasyon",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2r01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders ağrının IASP 2020 tanımını, ağrı ile nosisepsiyon ayrımını ve ağrı terimlerini (allodini, hiperaljezi, parestezi, nöralji, kozalji) anlatır. Ağrıyı süreye, mekanizmaya (nosiseptif, nöropatik, nosiplastik), kaynağa (yüzeyel somatik, derin somatik, visseral) ve patogeneze göre sınıflar, yansıyan ağrıyı ve olgu örneklerini işler. Sonra nosiseptörleri, Aδ, C ve Aβ liflerini, dört aşamayı (transdüksiyon, transmisyon, modülasyon, persepsiyon), kapı kontrolünü, inen yolları, sensitizasyonu, disinhibisyonu ve ağrının kronikleşmesini ele alır.",
+   "maddeler": [
+    {
+     "metin": "Ağrının tanımı: IASP iki bin yirmi"
+    },
+    {
+     "metin": "Ağrı ve nosisepsiyon aynı şey değildir"
+    },
+    {
+     "metin": "Ağrı terminolojisi: uyaran–yanıt terimleri ve anormal duyular"
+    },
+    {
+     "metin": "Ağrı terminolojisi: sinirle ilişkili terimler, nosiseptör ve eşik"
+    },
+    {
+     "metin": "Ağrının sınıflandırılması: süre ve ICD-11"
+    },
+    {
+     "metin": "Mekanizmaya göre ağrı: nosiseptif, nöropatik ve nosiplastik"
+    },
+    {
+     "metin": "Deafferentasyon ağrısı, fantom ağrısı ve KBAS"
+    },
+    {
+     "metin": "Nosiplastik ağrı ve ağrıda psikolojik etkenler"
+    },
+    {
+     "metin": "Kaynağa göre ağrı: somatik ve visseral; yansıyan ağrı"
+    },
+    {
+     "metin": "Patogeneze göre ağrı ve olgu örnekleri"
+    },
+    {
+     "metin": "Nosiseptörler ve afferent lifler"
+    },
+    {
+     "metin": "Nosisepsiyonun dört aşaması ve transdüksiyon"
+    },
+    {
+     "metin": "Transmisyon: dorsal boynuz ve çıkan yollar"
+    },
+    {
+     "metin": "Modülasyon: kapı kontrolü, inen sistem ve endojen opioidler"
+    },
+    {
+     "metin": "Persepsiyon ve dört aşamanın birlikte işleyişi"
+    },
+    {
+     "metin": "Sensitizasyon: periferik duyarlılaşma ve nörojenik inflamasyon"
+    },
+    {
+     "metin": "Santral sensitizasyon, disinhibisyon ve nöroplastisite"
+    },
+    {
+     "metin": "Kronikleşme, biyopsikososyal model ve ders sonu"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders ağrının IASP 2020 tanımını, ağrı ile nosisepsiyon ayrımını ve ağrı terimlerini (allodini, hiperaljezi, parestezi, nöralji, kozalji) anlatır. Ağrıyı süreye, mekanizmaya (nosiseptif, nöropatik, nosiplastik), kaynağa (yüzeyel somatik, derin somatik, visseral) ve patogeneze göre sınıflar, yansıyan ağrıyı ve olgu örneklerini işler. Sonra nosiseptörleri, Aδ, C ve Aβ liflerini, dört aşamayı (transdüksiyon, transmisyon, modülasyon, persepsiyon), kapı kontrolünü, inen yolları, sensitizasyonu, disinhibisyonu ve ağrının kronikleşmesini ele alır.",
+    "Ağrının tanımı: IASP iki bin yirmi.",
+    "Ağrı ve nosisepsiyon aynı şey değildir.",
+    "Ağrı terminolojisi: uyaran–yanıt terimleri ve anormal duyular.",
+    "Ağrı terminolojisi: sinirle ilişkili terimler, nosiseptör ve eşik.",
+    "Ağrının sınıflandırılması: süre ve ICD-11.",
+    "Mekanizmaya göre ağrı: nosiseptif, nöropatik ve nosiplastik.",
+    "Deafferentasyon ağrısı, fantom ağrısı ve KBAS.",
+    "Nosiplastik ağrı ve ağrıda psikolojik etkenler.",
+    "Kaynağa göre ağrı: somatik ve visseral; yansıyan ağrı.",
+    "Patogeneze göre ağrı ve olgu örnekleri.",
+    "Nosiseptörler ve afferent lifler.",
+    "Nosisepsiyonun dört aşaması ve transdüksiyon.",
+    "Transmisyon: dorsal boynuz ve çıkan yollar.",
+    "Modülasyon: kapı kontrolü, inen sistem ve endojen opioidler.",
+    "Persepsiyon ve dört aşamanın birlikte işleyişi.",
+    "Sensitizasyon: periferik duyarlılaşma ve nörojenik inflamasyon.",
+    "Santral sensitizasyon, disinhibisyon ve nöroplastisite.",
+    "Kronikleşme, biyopsikososyal model ve ders sonu."
+   ],
+   "v": "ec4a2b3a27"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Ağrı Fizyopatolojisi",
+     "metin": "Ağrı Fizyopatolojisi — öğrenci notu: Kapak: 'Altını çizin dediği yerler ve önemli dediği yerler' diye başlayan pembe el yazısı notu (satır sonu okunaksız; tamamlanmadı)",
+     "s": [
+      1
+     ]
+    },
+    {
+     "baslik": "Ağrı nedir? IASP 2020 tanımı",
+     "metin": "Ağrı, gerçek veya olası doku hasarıyla ilişkili — öğrenci notu: IASP 2020 tanım cümlesinin tamamı sarı fosforluyla işaretli",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "IASP 2020:",
+     "metin": "Ağrı ≠ nosisepsiyon — öğrenci notu: Başlık ve altındaki 'Ağrı yalnızca duyusal nöronların aktivitesini içermez' cümlesi sarı fosforlu",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Ağrı ve nosisepsiyon aynı şey değildir",
+     "metin": "Bilinçli ağrı deneyimi olmadan da oluşabilir — öğrenci notu: Nosisepsiyon listesinde bu madde daire içine alınmış",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Ağrı terminolojisi",
+     "metin": "Ağrı terminolojisi — öğrenci notu: Ağrı terminolojisi başlığı yanında pembe el yazısı 'Terimler sordu' (okunuşu: 'Terimler sordu'); yanında ünlem benzeri çizgi, daire ve yıldız/karalama",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Allodini ve hiperaljezi",
+     "metin": "Allodini — öğrenci notu: 'Allodini' başlığı daire içinde, yanında yıldız",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Anormal duyular ve duyarlılık değişiklikleri",
+     "metin": "Parestezi — öğrenci notu: Başlığın altı çizili",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Sinirle ilişkili ve diğer klinik terimler",
+     "metin": "Nöralji — öğrenci notu: 'Nöralji' başlığı daire içinde, yanında yıldız; tanım cümlesi altı çizili ve sonunda yıldız",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Temel kavramlar: Nosiseptör, zararlı uyaran, santral ağrı",
+     "metin": "Zararlı uyaranları dönüştürüp kodlayabilen, periferik somatosensoriyel sistemin yüksek eşikli duyusal reseptörü — öğrenci notu: Nosiseptör tanımı altı çizili",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Süreye göre sınıflandırma",
+     "metin": "Sınırları bağlama göre değişir; bel ağrısında sıklıkla 6 hafta–3 ay — öğrenci notu: Subakut ağrı maddesi büyük daire içinde, yıldız; altı çizili",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "ICD-11: Kronik ağrının sınıflandırılması",
+     "metin": "Kronik ağrı ilk kez ICD-11’de sistematik olarak sınıflandırılmıştır. — öğrenci notu: Alt başlık cümlesinin altında pembe çizgi",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Mekanizmaya göre üç temel ağrı tipi",
+     "metin": "Nosiplastik ağrı — öğrenci notu: Başlık daire içinde, yanında yıldız",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Nöropatik ağrı: Periferik ve santral",
+     "metin": "Çıkmış (dogrudan): Radikülopati (örn. disk hernisinde kök basısı)",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Nosiplastik ağrı",
+     "metin": "Nosiplastik ağrı — öğrenci notu: Başlığın sağında pembe büyük el yazısı: 'Bilin' (yanında ünlem/kıvrım)",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Kaynağa göre: Somatik ve visseral ağrı",
+     "metin": "Derin somatik — öğrenci notu: Başlık daire içinde, yanında yıldız",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Visseral ağrının özellikleri",
+     "metin": "Karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır — öğrenci notu: Daire içinde, yanında yıldız",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Yansıyan ağrı",
+     "metin": "Yansıyan ağrı — öğrenci notu: Yansıyan ağrı tablosunda pankreas satırının altında uzun pembe çizgi · Pankreas satırı",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Patogeneze göre ağrı",
+     "metin": "İskemik ağrı — öğrenci notu: Kutu (tanım + angina pektoris / klodikasyon örneği) büyük çizgiyle çevrelenmiş",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Örnekler:",
+     "metin": "Örnekler: — öğrenci notu: Başlık yanında pembe el yazısı: 'Sınavda benzer sorabilirmiş' (olgu örnekleri hakkında)",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Nosiseptörler",
+     "metin": "Beyin parankiminde yoktur (meninks ve damarlarda vardır) — öğrenci notu: Madde altı çizili",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Afferent lifler: Aδ, C ve Aβ",
+     "metin": "Afferent lifler: Aδ, C ve Aβ — öğrenci notu: Üç iletim hızı değeri daire içinde; satır başında yıldız ve satır boyunca çizgi · İletim hızı: Aδ 5–30 m/s, C 0,5–2 m/s, Aβ 35–75 m/s",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Nosiseptif işlemenin dört aşaması",
+     "metin": "Çıkmış (dogrudan): Nosiseptif işlemenin dört aşaması",
+     "s": [
+      36
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Ağrı Fizyopatolojisi: Ağrı Fizyopatolojisi — öğrenci notu: Kapak: 'Altını çizin dediği yerler ve önemli dediği yerler' diye başlayan pembe el yazısı notu (satır sonu okunaksız; tamamlanmadı).",
+    "Ağrı nedir? IASP 2020 tanımı: Ağrı, gerçek veya olası doku hasarıyla ilişkili — öğrenci notu: IASP 2020 tanım cümlesinin tamamı sarı fosforluyla işaretli.",
+    "IASP 2020:: Ağrı ≠ nosisepsiyon — öğrenci notu: Başlık ve altındaki 'Ağrı yalnızca duyusal nöronların aktivitesini içermez' cümlesi sarı fosforlu.",
+    "Ağrı ve nosisepsiyon aynı şey değildir: Bilinçli ağrı deneyimi olmadan da oluşabilir — öğrenci notu: Nosisepsiyon listesinde bu madde daire içine alınmış.",
+    "Ağrı terminolojisi: Ağrı terminolojisi — öğrenci notu: Ağrı terminolojisi başlığı yanında pembe el yazısı 'Terimler sordu' (okunuşu: 'Terimler sordu'); yanında ünlem benzeri çizgi, daire ve yıldız/karalama.",
+    "Allodini ve hiperaljezi: Allodini — öğrenci notu: 'Allodini' başlığı daire içinde, yanında yıldız.",
+    "Anormal duyular ve duyarlılık değişiklikleri: Parestezi — öğrenci notu: Başlığın altı çizili.",
+    "Sinirle ilişkili ve diğer klinik terimler: Nöralji — öğrenci notu: 'Nöralji' başlığı daire içinde, yanında yıldız; tanım cümlesi altı çizili ve sonunda yıldız.",
+    "Temel kavramlar: Nosiseptör, zararlı uyaran, santral ağrı: Zararlı uyaranları dönüştürüp kodlayabilen, periferik somatosensoriyel sistemin yüksek eşikli duyusal reseptörü — öğrenci notu: Nosiseptör tanımı altı çizili.",
+    "Süreye göre sınıflandırma: Sınırları bağlama göre değişir; bel ağrısında sıklıkla 6 hafta–3 ay — öğrenci notu: Subakut ağrı maddesi büyük daire içinde, yıldız; altı çizili.",
+    "ICD-11: Kronik ağrının sınıflandırılması: Kronik ağrı ilk kez ICD-11’de sistematik olarak sınıflandırılmıştır. — öğrenci notu: Alt başlık cümlesinin altında pembe çizgi.",
+    "Mekanizmaya göre üç temel ağrı tipi: Nosiplastik ağrı — öğrenci notu: Başlık daire içinde, yanında yıldız.",
+    "Nöropatik ağrı: Periferik ve santral: Çıkmış (dogrudan): Radikülopati (örn. disk hernisinde kök basısı).",
+    "Nosiplastik ağrı: Nosiplastik ağrı — öğrenci notu: Başlığın sağında pembe büyük el yazısı: 'Bilin' (yanında ünlem/kıvrım).",
+    "Kaynağa göre: Somatik ve visseral ağrı: Derin somatik — öğrenci notu: Başlık daire içinde, yanında yıldız.",
+    "Visseral ağrının özellikleri: Karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır — öğrenci notu: Daire içinde, yanında yıldız.",
+    "Yansıyan ağrı: Yansıyan ağrı — öğrenci notu: Yansıyan ağrı tablosunda pankreas satırının altında uzun pembe çizgi · Pankreas satırı.",
+    "Patogeneze göre ağrı: İskemik ağrı — öğrenci notu: Kutu (tanım + angina pektoris / klodikasyon örneği) büyük çizgiyle çevrelenmiş.",
+    "Örnekler:: Örnekler: — öğrenci notu: Başlık yanında pembe el yazısı: 'Sınavda benzer sorabilirmiş' (olgu örnekleri hakkında).",
+    "Nosiseptörler: Beyin parankiminde yoktur (meninks ve damarlarda vardır) — öğrenci notu: Madde altı çizili.",
+    "Afferent lifler: Aδ, C ve Aβ: Afferent lifler: Aδ, C ve Aβ — öğrenci notu: Üç iletim hızı değeri daire içinde; satır başında yıldız ve satır boyunca çizgi · İletim hızı: Aδ 5–30 m/s, C 0,5–2 m/s, Aβ 35–75 m/s.",
+    "Nosiseptif işlemenin dört aşaması: Çıkmış (dogrudan): Nosiseptif işlemenin dört aşaması."
+   ],
+   "v": "8b7aedb355"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse ait çıkmış sorulardan beşi slayttaki bilgiyle çözülebilir: dört aşama (remisyon), visseral ağrının özellikleri, disk hernisi ve nöropatik ağrı, kozalji ve nöropati tanımları. Ağrı terimleri, kaynağa göre sınıflama, nosiseptif–nöropatik–nosiplastik ayrımı, lif tipleri ve olgu sınıflaması dersin öncelikli bilgileridir.",
+   "maddeler": [
+    {
+     "baslik": "Nosiseptif işlemenin dört aşaması: transdüksiyon, transmisyon, modülasyon, persepsiyon",
+     "metin": "Nosiseptif işleme sırasıyla transdüksiyon, transmisyon, modülasyon ve persepsiyon olmak üzere dört aşamadır; transdüksiyon uyaranın elektriksel sinyale dönüşümüdür.",
+     "neden": "2020-21 sınavında aşamalarla ilgili olmayan seçenek (remisyon) soruldu; hoca \"ben de bunlara sorarım\" dedi.",
+     "s": [
+      36,
+      37,
+      46
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Visseral ağrının özellikleri",
+     "metin": "Visseral ağrı iç organlardan kaynaklanır; künt, yaygın, kötü lokalizedir, orta hatta hissedilir ve bulantı, terleme gibi otonom yanıtlarla birlikte yansıyabilir.",
+     "neden": "2020-21 ve 2025-26 sınavlarında visseral ağrının özellikleri soruldu; öğrenci notunda başlık daire içinde yıldızlıdır.",
+     "s": [
+      25,
+      26
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kozalji ve kompleks bölgesel ağrı sendromu tip II",
+     "metin": "Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir ve günümüzde kompleks bölgesel ağrı sendromu (KBAS) tip II'ye karşılık gelir.",
+     "neden": "2024-25 sınavında kozalji tanımı soruldu; başlığı öğrenci notunda daire içinde yıldızlandı ve hoca altını çizdi.",
+     "s": [
+      12
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Periferik ve santral nöropatik ağrı örnekleri",
+     "metin": "Periferik nöropatik ağrı diyabetik polinöropati, postherpetik nevralji, trigeminal nevralji, radikülopati (disk hernisi) ve travmatik sinir yaralanmasını kapsar.",
+     "neden": "2022-23 (olası yıl) sınavında disk hernisinde görülen ağrının tipi soruldu (nöropatik ağrı); periferik örnek listesi \"değildir\" köklerinde kullanılır.",
+     "s": [
+      20
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Allodini, hiperaljezi ve hipoaljezi",
+     "metin": "Allodini normalde ağrı oluşturmayan uyaranın ağrıya neden olmasıdır; hiperaljezi ağrılı uyarana yanıtın artması, hipoaljezi azalmasıdır.",
+     "neden": "Terminoloji bölümünün ilk ve en çok karıştırılan ayrımı; allodini başlığı öğrenci notunda daire içine alınmıştı ve hoca terimlerden soru geleceğini söyledi.",
+     "s": [
+      9
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Süreye göre ağrı: akut, subakut ve kronik",
+     "metin": "Süreye göre ağrı akut, subakut ve kronik olarak ayrılır; kronik ağrı 3 aydan uzun süren veya yineleyen ağrıdır (ICD-11).",
+     "neden": "Hoca sınavda süreyi soran bir ağrı örneği vereceğini söyledi; subakut tanımı öğrenci notunda daire içine alınmıştı.",
+     "s": [
+      16
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Olgu sınıflaması: süre, mekanizma ve kaynak (olgu A–F)",
+     "metin": "Her olgu süre, mekanizma ve kaynak açısından birlikte sınıflanır; diz travması sonrası iki günlük ağrı akut, nosiseptif ve derin somatiktir.",
+     "neden": "Hoca derste verdiği örneklerden büyük ihtimalle soru geleceğini söyledi; öğrenci slayta \"sınavda benzer sorabilirmiş\" yazmıştı.",
+     "s": [
+      29
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Aδ, C ve Aβ lifleri",
+     "metin": "Aδ lifleri hızlı keskin birinci ağrıyı (5–30 m/s), C lifleri yavaş künt ikinci ağrıyı (0,5–2 m/s), Aβ lifleri dokunmayı (35–75 m/s) taşır.",
+     "neden": "Hoca \"bilgilerini bilin\" dedi; iletim hızları öğrenci notunda daire içine, taşıdığı bilgi satırı altı çizilerek işaretlendi.",
+     "s": [
+      33
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse ait çıkmış sorulardan beşi slayttaki bilgiyle çözülebilir: dört aşama (remisyon), visseral ağrının özellikleri, disk hernisi ve nöropatik ağrı, kozalji ve nöropati tanımları. Ağrı terimleri, kaynağa göre sınıflama, nosiseptif–nöropatik–nosiplastik ayrımı, lif tipleri ve olgu sınıflaması dersin öncelikli bilgileridir.",
+    "Nosiseptif işlemenin dört aşaması: transdüksiyon, transmisyon, modülasyon, persepsiyon: Nosiseptif işleme sırasıyla transdüksiyon, transmisyon, modülasyon ve persepsiyon olmak üzere dört aşamadır; transdüksiyon uyaranın elektriksel sinyale dönüşümüdür.",
+    "Visseral ağrının özellikleri: Visseral ağrı iç organlardan kaynaklanır; künt, yaygın, kötü lokalizedir, orta hatta hissedilir ve bulantı, terleme gibi otonom yanıtlarla birlikte yansıyabilir.",
+    "Kozalji ve kompleks bölgesel ağrı sendromu tip II: Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir ve günümüzde kompleks bölgesel ağrı sendromu (KBAS) tip II'ye karşılık gelir.",
+    "Periferik ve santral nöropatik ağrı örnekleri: Periferik nöropatik ağrı diyabetik polinöropati, postherpetik nevralji, trigeminal nevralji, radikülopati (disk hernisi) ve travmatik sinir yaralanmasını kapsar.",
+    "Allodini, hiperaljezi ve hipoaljezi: Allodini normalde ağrı oluşturmayan uyaranın ağrıya neden olmasıdır; hiperaljezi ağrılı uyarana yanıtın artması, hipoaljezi azalmasıdır.",
+    "Süreye göre ağrı: akut, subakut ve kronik: Süreye göre ağrı akut, subakut ve kronik olarak ayrılır; kronik ağrı 3 aydan uzun süren veya yineleyen ağrıdır (ICD-11).",
+    "Olgu sınıflaması: süre, mekanizma ve kaynak (olgu A–F): Her olgu süre, mekanizma ve kaynak açısından birlikte sınıflanır; diz travması sonrası iki günlük ağrı akut, nosiseptif ve derin somatiktir.",
+    "Aδ, C ve Aβ lifleri: Aδ lifleri hızlı keskin birinci ağrıyı (5–30 m/s), C lifleri yavaş künt ikinci ağrıyı (0,5–2 m/s), Aβ lifleri dokunmayı (35–75 m/s) taşır."
+   ],
+   "v": "e905cb855e"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 7 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi ağrı algılaması aşamalarıyla ilgili değildir?",
+     "cevap": "Remisyon",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Visseral ağrı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Batma, sızlama, zonklama tarzındadır",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Disk hernisinde görülen ağrı aşağıdaki ağrı tiplerinden hangisine örnek verilebilir?",
+     "cevap": "Nöropatik ağrı",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "2022-2023 Bütünleme",
+     "metin": "İç organlardan kaynaklanan, kolay lokalize edilemeyen, yavaş yavaş artan karakterde olan ve batma-sızlama tarzında hissedilen ağrı tipi aşağıdakilerden hangisidir?",
+     "cevap": "Visseral ağrı",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Kozalji teriminin tanımı aşağıdakilerden hangisidir?",
+     "cevap": "Travmatik bir sinir lezyonundan sonra devam eden yanıcı ağrı",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Visseral ağrı özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Batma, sızlama, zonklama tarzındadır.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Bir sinirdeki patolojik değişiklik ya da sinir fonksiyonundaki bozukluk olarak tanımlanan ağrı terimi aşağıdakilerden hangisidir?",
+     "cevap": "Nöropati",
+     "s": [
+      11
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 7 çıkmış soru var.",
+    "2020-2021: Aşağıdakilerden hangisi ağrı algılaması aşamalarıyla ilgili değildir?",
+    "Cevap: Remisyon.",
+    "2020-2021: Visseral ağrı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Batma, sızlama, zonklama tarzındadır.",
+    "2022-2023: Disk hernisinde görülen ağrı aşağıdaki ağrı tiplerinden hangisine örnek verilebilir?",
+    "Cevap: Nöropatik ağrı.",
+    "2022-2023 Bütünleme: İç organlardan kaynaklanan, kolay lokalize edilemeyen, yavaş yavaş artan karakterde olan ve batma-sızlama tarzında hissedilen ağrı tipi aşağıdakilerden hangisidir?",
+    "Cevap: Visseral ağrı.",
+    "2024-2025: Kozalji teriminin tanımı aşağıdakilerden hangisidir?",
+    "Cevap: Travmatik bir sinir lezyonundan sonra devam eden yanıcı ağrı.",
+    "2025-2026: Visseral ağrı özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Batma, sızlama, zonklama tarzındadır.",
+    "2025-2026: Bir sinirdeki patolojik değişiklik ya da sinir fonksiyonundaki bozukluk olarak tanımlanan ağrı terimi aşağıdakilerden hangisidir?",
+    "Cevap: Nöropati."
+   ],
+   "v": "3b9887ed5c"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%40) ve olumsuz kök (hangisi değildir) (%15) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%32) ve mekanizma (%14) sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%51) ve anlama ve ilişki kurma (%44) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%40) ve olumsuz kök (hangisi değildir) (%15) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%32) ve mekanizma (%14) sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%51) ve anlama ve ilişki kurma (%44) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+   ],
+   "v": "8b301cabc6"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Nosiseptif işlemenin dört aşaması: transdüksiyon, transmisyon, modülasyon, persepsiyon",
+     "metin": "2020-21 sınavında aşamalarla ilgili olmayan seçenek (remisyon) soruldu; hoca \"ben de bunlara sorarım\" dedi."
+    },
+    {
+     "baslik": "Visseral ağrının özellikleri",
+     "metin": "2020-21 ve 2025-26 sınavlarında visseral ağrının özellikleri soruldu; öğrenci notunda başlık daire içinde yıldızlıdır."
+    },
+    {
+     "baslik": "Kozalji ve kompleks bölgesel ağrı sendromu tip II",
+     "metin": "2024-25 sınavında kozalji tanımı soruldu; başlığı öğrenci notunda daire içinde yıldızlandı ve hoca altını çizdi."
+    },
+    {
+     "baslik": "Periferik ve santral nöropatik ağrı örnekleri",
+     "metin": "2022-23 (olası yıl) sınavında disk hernisinde görülen ağrının tipi soruldu (nöropatik ağrı); periferik örnek listesi \"değildir\" köklerinde kullanılır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Nosiseptif işlemenin dört aşaması: transdüksiyon, transmisyon, modülasyon, persepsiyon: 2020-21 sınavında aşamalarla ilgili olmayan seçenek (remisyon) soruldu; hoca \"ben de bunlara sorarım\" dedi.",
+    "Visseral ağrının özellikleri: 2020-21 ve 2025-26 sınavlarında visseral ağrının özellikleri soruldu; öğrenci notunda başlık daire içinde yıldızlıdır.",
+    "Kozalji ve kompleks bölgesel ağrı sendromu tip II: 2024-25 sınavında kozalji tanımı soruldu; başlığı öğrenci notunda daire içinde yıldızlandı ve hoca altını çizdi.",
+    "Periferik ve santral nöropatik ağrı örnekleri: 2022-23 (olası yıl) sınavında disk hernisinde görülen ağrının tipi soruldu (nöropatik ağrı); periferik örnek listesi \"değildir\" köklerinde kullanılır.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "f57127a37b"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders ağrının IASP 2020 tanımını, ağrı ile nosisepsiyon ayrımını ve ağrı terimlerini (allodini, hiperaljezi, parestezi, nöralji, kozalji) anlatır. Ağrıyı süreye, mekanizmaya (nosiseptif, nöropatik, nosiplastik), kaynağa (yüzeyel somatik, derin somatik, visseral) ve patogeneze göre sınıflar, yansıyan ağrıyı ve olgu örneklerini işler. Sonra nosiseptörleri, Aδ, C ve Aβ liflerini, dört aşamayı (transdüksiyon, transmisyon, modülasyon, persepsiyon), kapı kontrolünü, inen yolları, sensitizasyonu, disinhibisyonu ve ağrının kronikleşmesini ele alır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders ağrının IASP 2020 tanımını, ağrı ile nosisepsiyon ayrımını ve ağrı terimlerini (allodini, hiperaljezi, parestezi, nöralji, kozalji) anlatır. Ağrıyı süreye, mekanizmaya (nosiseptif, nöropatik, nosiplastik), kaynağa (yüzeyel somatik, derin somatik, visseral) ve patogeneze göre sınıflar, yansıyan ağrıyı ve olgu örneklerini işler. Sonra nosiseptörleri, Aδ, C ve Aβ liflerini, dört aşamayı (transdüksiyon, transmisyon, modülasyon, persepsiyon), kapı kontrolünü, inen yolları, sensitizasyonu, disinhibisyonu ve ağrının kronikleşmesini ele alır."
+   ],
+   "v": "2463a884e0"
+  },
+  {
+   "id": "2r01-01",
+   "baslik": "Ağrının tanımı (IASP 2020)",
+   "giris": "Ağrı, gerçek veya olası doku hasarıyla ilişkili ya da buna benzeyen, hoş olmayan duyusal ve emosyonel bir deneyimdir (IASP 2020).",
+   "s": [
+    3
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Ağrı, gerçek veya olası doku hasarıyla ilişkili olan ya da böyle bir hasarla ilişkili olana benzeyen, hoş olmayan duyusal ve emosyonel bir deneyimdir."
+    },
+    {
+     "metin": "Ağrı bir duyu değil, duyusal ve emosyonel bileşenleri olan öznel bir deneyimdir; bu yüzden \"psikolojik belirti\" ya da \"zorunlu bir duyu\" olarak tanımlanamaz."
+    },
+    {
+     "metin": "Gösterilebilir lezyon olmadan da ağrı yaşanabilir."
+    },
+    {
+     "metin": "Ağrı yalnızca duyusal nöronların ya da nosiseptörlerin aktivitesini içermez; nosisepsiyon ağrıdan ayrı bir kavramdır."
+    },
+    {
+     "metin": "Bireyler ağrı kavramını yaşam deneyimleriyle öğrenir."
+    }
+   ],
+   "klip": "o-2r01-01",
+   "ses": [
+    "Ağrının tanımı (IASP 2020).",
+    "Ağrı, gerçek veya olası doku hasarıyla ilişkili ya da buna benzeyen, hoş olmayan duyusal ve emosyonel bir deneyimdir (IASP 2020).",
+    "Ağrı, gerçek veya olası doku hasarıyla ilişkili olan ya da böyle bir hasarla ilişkili olana benzeyen, hoş olmayan duyusal ve emosyonel bir deneyimdir.",
+    "Ağrı bir duyu değil, duyusal ve emosyonel bileşenleri olan öznel bir deneyimdir; bu yüzden \"psikolojik belirti\" ya da \"zorunlu bir duyu\" olarak tanımlanamaz.",
+    "Gösterilebilir lezyon olmadan da ağrı yaşanabilir.",
+    "Ağrı yalnızca duyusal nöronların ya da nosiseptörlerin aktivitesini içermez; nosisepsiyon ağrıdan ayrı bir kavramdır.",
+    "Bireyler ağrı kavramını yaşam deneyimleriyle öğrenir."
+   ],
+   "v": "195c7b4ab6"
+  },
+  {
+   "id": "2r01-08",
+   "baslik": "Allodini, hiperaljezi ve hipoaljezi",
+   "giris": "Allodini normalde ağrı oluşturmayan uyaranın ağrıya neden olmasıdır; hiperaljezi ağrılı uyarana yanıtın artması, hipoaljezi azalmasıdır.",
+   "s": [
+    9
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Uyaranın niteliği ile ortaya çıkan yanıt ayrı düşünülür."
+    },
+    {
+     "metin": "Normalde ağrı oluşturmayan bir uyaranın ağrıya neden olmasıdır (ağrısız uyaran, ağrı). Örnek: güneş yanığı olan deriye giysinin değmesinin ağrılı olması."
+    },
+    {
+     "metin": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır. Örnek: iğne batmasının beklenenden çok daha ağrılı hissedilmesi."
+    },
+    {
+     "metin": "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının azalmasıdır. Örnek: periferik nöropatide iğne batmasının az hissedilmesi."
+    },
+    {
+     "metin": "Hiperestezi uyarıya karşı duyarlılığın artmasıdır ve allodini ile hiperaljeziyi kapsar; hipoestezi uyarıya karşı duyarlılığın azalmasıdır. Hiperpati ise tekrarlayan uyaranlara patlayıcı, gecikmeli ağrılı tepkidir."
+    }
+   ],
+   "klip": "o-2r01-08",
+   "ses": [
+    "Allodini, hiperaljezi ve hipoaljezi.",
+    "Allodini normalde ağrı oluşturmayan uyaranın ağrıya neden olmasıdır; hiperaljezi ağrılı uyarana yanıtın artması, hipoaljezi azalmasıdır.",
+    "Uyaranın niteliği ile ortaya çıkan yanıt ayrı düşünülür.",
+    "Normalde ağrı oluşturmayan bir uyaranın ağrıya neden olmasıdır (ağrısız uyaran, ağrı). Örnek: güneş yanığı olan deriye giysinin değmesinin ağrılı olması.",
+    "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının artmasıdır. Örnek: iğne batmasının beklenenden çok daha ağrılı hissedilmesi.",
+    "Normalde ağrılı olan bir uyarana verilen ağrı yanıtının azalmasıdır. Örnek: periferik nöropatide iğne batmasının az hissedilmesi.",
+    "Hiperestezi uyarıya karşı duyarlılığın artmasıdır ve allodini ile hiperaljeziyi kapsar; hipoestezi uyarıya karşı duyarlılığın azalmasıdır. Hiperpati ise tekrarlayan uyaranlara patlayıcı, gecikmeli ağrılı tepkidir."
+   ],
+   "v": "62615931db"
+  },
+  {
+   "id": "2r01-11",
+   "baslik": "Nöropati ve hiperpati",
+   "giris": "Nöropati, bir sinirde işlev bozukluğu veya patolojik değişikliktir; hiperpati tekrarlayan uyaranlara anormal derecede ağrılı, patlayıcı ve gecikmeli tepkidir.",
+   "s": [
+    11
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Bir sinirde işlev bozukluğu veya patolojik değişikliktir; mononöropati ve polinöropati biçimleri vardır."
+    },
+    {
+     "metin": "Bir veya birden fazla sinirin dağılım alanında hissedilen ağrıdır; nöropatinin kendisi değil, ağrı terimidir."
+    },
+    {
+     "metin": "Normalde ağrı oluşturmayan uyaranın ağrıya neden olmasıdır."
+    },
+    {
+     "metin": "Santral nöropatik ağrı, santral somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır (inme sonrası ağrı, multipl skleroz, omurilik yaralanması)."
+    },
+    {
+     "metin": "Özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepkidir; eşik genellikle artmıştır."
+    }
+   ],
+   "klip": "o-2r01-11",
+   "ses": [
+    "Nöropati ve hiperpati.",
+    "Nöropati, bir sinirde işlev bozukluğu veya patolojik değişikliktir; hiperpati tekrarlayan uyaranlara anormal derecede ağrılı, patlayıcı ve gecikmeli tepkidir.",
+    "Bir sinirde işlev bozukluğu veya patolojik değişikliktir; mononöropati ve polinöropati biçimleri vardır.",
+    "Bir veya birden fazla sinirin dağılım alanında hissedilen ağrıdır; nöropatinin kendisi değil, ağrı terimidir.",
+    "Normalde ağrı oluşturmayan uyaranın ağrıya neden olmasıdır.",
+    "Santral nöropatik ağrı, santral somatosensoriyel sinir sisteminin lezyonu veya hastalığından kaynaklanan ağrıdır (inme sonrası ağrı, multipl skleroz, omurilik yaralanması).",
+    "Özellikle tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepkidir; eşik genellikle artmıştır."
+   ],
+   "v": "3275b33c9c"
+  },
+  {
+   "id": "2r01-13",
+   "baslik": "Kozalji ve kompleks bölgesel ağrı sendromu tip II",
+   "giris": "Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir ve günümüzde kompleks bölgesel ağrı sendromu (KBAS) tip II'ye karşılık gelir.",
+   "s": [
+    12
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir."
+    },
+    {
+     "metin": "Kompleks bölgesel ağrı sendromu (KBAS) tip II."
+    },
+    {
+     "metin": "Tip I'de belirgin sinir lezyonu yoktur (eski adı refleks sempatik distrofi); tip II'de belirgin sinir lezyonu vardır (eski adı kozalji)."
+    },
+    {
+     "metin": "Normalde ağrı oluşturmayan uyaranla ağrı hissedilmesi allodinidir; ağrılı uyarana normalden şiddetli yanıt hiperaljezidir; amputasyon sonrası artık var olmayan uzuvda ağrı fantom ağrısıdır; tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepki hiperpatidir."
+    },
+    {
+     "metin": "Çoğu kez travmayı izleyen, orantısız, bölgesel ağrıdır."
+    }
+   ],
+   "klip": "o-2r01-13",
+   "ses": [
+    "Kozalji ve kompleks bölgesel ağrı sendromu tip II.",
+    "Kozalji, sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir ve günümüzde kompleks bölgesel ağrı sendromu (KBAS) tip II'ye karşılık gelir.",
+    "Sinir yaralanması sonrası gelişen yanıcı ağrı için kullanılan tarihsel terimdir.",
+    "Kompleks bölgesel ağrı sendromu (KBAS) tip II.",
+    "Tip I'de belirgin sinir lezyonu yoktur (eski adı refleks sempatik distrofi); tip II'de belirgin sinir lezyonu vardır (eski adı kozalji).",
+    "Normalde ağrı oluşturmayan uyaranla ağrı hissedilmesi allodinidir; ağrılı uyarana normalden şiddetli yanıt hiperaljezidir; amputasyon sonrası artık var olmayan uzuvda ağrı fantom ağrısıdır; tekrarlayan uyaranlara karşı anormal derecede ağrılı, patlayıcı ve gecikmeli tepki hiperpatidir.",
+    "Çoğu kez travmayı izleyen, orantısız, bölgesel ağrıdır."
+   ],
+   "v": "77a948566e"
+  },
+  {
+   "id": "2r01-15",
+   "baslik": "Süreye göre ağrı: akut, subakut ve kronik",
+   "giris": "Süreye göre ağrı akut, subakut ve kronik olarak ayrılır; kronik ağrı 3 aydan uzun süren veya yineleyen ağrıdır (ICD-11).",
+   "s": [
+    16
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Bir ağrı aynı anda süre (akut, subakut, kronik), mekanizma (nosiseptif, nöropatik, nosiplastik), kaynak (somatik yüzeyel/derin, visseral) ve patogenez (inflamatuvar, iskemik, deafferentasyon, nedeni belirlenemeyen) eksenlerinde tanımlanabilir."
+    },
+    {
+     "metin": "Yeni başlayan, genellikle doku hasarı veya hastalıkla ilişkili ağrıdır; lezyonla yer, şiddet ve zaman bakımından yakın ilişkisi vardır; çoğunlukla nosiseptiftir ancak nöropatik de olabilir (postoperatif ağrı, akut herpes zoster ağrısı)."
+    },
+    {
+     "metin": "Akut ile kronik arasındaki ara dönemdir; sınırları bağlama göre değişir, bel ağrısında sıklıkla 6 hafta–3 ay; kronikleşme riskinin belirlendiği dönemdir."
+    },
+    {
+     "metin": "3 aydan uzun süren veya yineleyen ağrıdır; doku iyileşmesinden sonra da sürebilir, uyarıcı işlevini yitirmiştir ve yaşam kalitesini, uykuyu, duygudurumu etkiler."
+    },
+    {
+     "metin": "Kronik ağrı kronik primer (ağrının kendisi hastalık) ve kronik sekonder (başka bir duruma bağlı) olarak sınıflanır; 6 haftalık bel ağrısı bunlardan değil subakut ağrıdır."
+    },
+    {
+     "metin": "Diz travması sonrası iki günlük ağrı akut, nosiseptif, derin somatik ve inflamatuvar bir ağrıdır."
+    }
+   ],
+   "klip": "o-2r01-15",
+   "ses": [
+    "Süreye göre ağrı: akut, subakut ve kronik.",
+    "Süreye göre ağrı akut, subakut ve kronik olarak ayrılır; kronik ağrı 3 aydan uzun süren veya yineleyen ağrıdır (ICD-11).",
+    "Bir ağrı aynı anda süre (akut, subakut, kronik), mekanizma (nosiseptif, nöropatik, nosiplastik), kaynak (somatik yüzeyel/derin, visseral) ve patogenez (inflamatuvar, iskemik, deafferentasyon, nedeni belirlenemeyen) eksenlerinde tanımlanabilir.",
+    "Yeni başlayan, genellikle doku hasarı veya hastalıkla ilişkili ağrıdır; lezyonla yer, şiddet ve zaman bakımından yakın ilişkisi vardır; çoğunlukla nosiseptiftir ancak nöropatik de olabilir (postoperatif ağrı, akut herpes zoster ağrısı).",
+    "Akut ile kronik arasındaki ara dönemdir; sınırları bağlama göre değişir, bel ağrısında sıklıkla 6 hafta–3 ay; kronikleşme riskinin belirlendiği dönemdir.",
+    "3 aydan uzun süren veya yineleyen ağrıdır; doku iyileşmesinden sonra da sürebilir, uyarıcı işlevini yitirmiştir ve yaşam kalitesini, uykuyu, duygudurumu etkiler.",
+    "Kronik ağrı kronik primer (ağrının kendisi hastalık) ve kronik sekonder (başka bir duruma bağlı) olarak sınıflanır; 6 haftalık bel ağrısı bunlardan değil subakut ağrıdır.",
+    "Diz travması sonrası iki günlük ağrı akut, nosiseptif, derin somatik ve inflamatuvar bir ağrıdır."
+   ],
+   "v": "4eed8d0a43"
+  },
+  {
+   "id": "2r01-18",
+   "baslik": "Periferik ve santral nöropatik ağrı örnekleri",
+   "giris": "Periferik nöropatik ağrı diyabetik polinöropati, postherpetik nevralji, trigeminal nevralji, radikülopati (disk hernisi) ve travmatik sinir yaralanmasını kapsar.",
+   "s": [
+    20
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Ağrılı diyabetik polinöropati, postherpetik nevralji, trigeminal nevralji, radikülopati (örneğin disk hernisinde kök basısı) ve travmatik sinir yaralanması."
+    },
+    {
+     "metin": "Kök basısı olduğu için nöropatik ağrıdır; nosiseptif, psikosomatik, deafferentasyon ve reaktif ağrı seçeneklerinden ayrılır."
+    },
+    {
+     "metin": "İnme sonrası (santral post-stroke) ağrı, multipl skleroza bağlı ağrı, omurilik yaralanması sonrası ağrı ve siringomiyeli."
+    },
+    {
+     "metin": "Ektopik deşarj, iyon kanalı ekspresyonunda değişiklik, santral sensitizasyon ve disinhibisyon."
+    },
+    {
+     "metin": "Somatosensoriyel girdinin kesilmesi sonrası gelişen ağrıdır ve nöropatik ağrının bir alt tipi olarak ele alınır; fantom ağrısı bunun örneğidir."
+    }
+   ],
+   "klip": "o-2r01-18",
+   "ses": [
+    "Periferik ve santral nöropatik ağrı örnekleri.",
+    "Periferik nöropatik ağrı diyabetik polinöropati, postherpetik nevralji, trigeminal nevralji, radikülopati (disk hernisi) ve travmatik sinir yaralanmasını kapsar.",
+    "Ağrılı diyabetik polinöropati, postherpetik nevralji, trigeminal nevralji, radikülopati (örneğin disk hernisinde kök basısı) ve travmatik sinir yaralanması.",
+    "Kök basısı olduğu için nöropatik ağrıdır; nosiseptif, psikosomatik, deafferentasyon ve reaktif ağrı seçeneklerinden ayrılır.",
+    "İnme sonrası (santral post-stroke) ağrı, multipl skleroza bağlı ağrı, omurilik yaralanması sonrası ağrı ve siringomiyeli.",
+    "Ektopik deşarj, iyon kanalı ekspresyonunda değişiklik, santral sensitizasyon ve disinhibisyon.",
+    "Somatosensoriyel girdinin kesilmesi sonrası gelişen ağrıdır ve nöropatik ağrının bir alt tipi olarak ele alınır; fantom ağrısı bunun örneğidir."
+   ],
+   "v": "e4291f0fac"
+  },
+  {
+   "id": "2r01-26",
+   "baslik": "Visseral ağrının özellikleri",
+   "giris": "Visseral ağrı iç organlardan kaynaklanır; künt, yaygın, kötü lokalizedir, orta hatta hissedilir ve bulantı, terleme gibi otonom yanıtlarla birlikte yansıyabilir.",
+   "s": [
+    25,
+    26
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "İç organlar; ağrı barsak distansiyonu ve renal kolik gibi durumlarda görülür. Barsak distansiyonu ve renal kolik visseral ağrıya örnektir."
+    },
+    {
+     "metin": "Künt, yaygın, kötü lokalizedir ve kramp tarzında olabilir; orta hatta hissedilir. Batma ve keskin nitelik yüzeyel somatik ağrıya aittir."
+    },
+    {
+     "metin": "Gerilme/distansiyon, iskemi, inflamasyon, traksiyon ve kasılma (spazm). Barsağın kesilmesi veya yakılması genellikle ağrı oluşturmaz."
+    },
+    {
+     "metin": "Bulantı, terleme, solukluk, kan basıncı ve nabız değişiklikleri; somatik bölgelere yansıyabilir. Yansıyan ağrı ve otonom yanıtlar sıktır."
+    },
+    {
+     "metin": "Visseral afferent yoğunluğu somatik dokulardan düşüktür; karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır."
+    }
+   ],
+   "klip": "o-2r01-26",
+   "ses": [
+    "Visseral ağrının özellikleri.",
+    "Visseral ağrı iç organlardan kaynaklanır; künt, yaygın, kötü lokalizedir, orta hatta hissedilir ve bulantı, terleme gibi otonom yanıtlarla birlikte yansıyabilir.",
+    "İç organlar; ağrı barsak distansiyonu ve renal kolik gibi durumlarda görülür. Barsak distansiyonu ve renal kolik visseral ağrıya örnektir.",
+    "Künt, yaygın, kötü lokalizedir ve kramp tarzında olabilir; orta hatta hissedilir. Batma ve keskin nitelik yüzeyel somatik ağrıya aittir.",
+    "Gerilme/distansiyon, iskemi, inflamasyon, traksiyon ve kasılma (spazm). Barsağın kesilmesi veya yakılması genellikle ağrı oluşturmaz.",
+    "Bulantı, terleme, solukluk, kan basıncı ve nabız değişiklikleri; somatik bölgelere yansıyabilir. Yansıyan ağrı ve otonom yanıtlar sıktır.",
+    "Visseral afferent yoğunluğu somatik dokulardan düşüktür; karaciğer, akciğer ve beyin parankimi ağrıya duyarsızdır."
+   ],
+   "v": "ea250dbecd"
+  },
+  {
+   "id": "2r01-30",
+   "baslik": "Olgu sınıflaması: süre, mekanizma ve kaynak (olgu A–F)",
+   "giris": "Her olgu süre, mekanizma ve kaynak açısından birlikte sınıflanır; diz travması sonrası iki günlük ağrı akut, nosiseptif ve derin somatiktir.",
+   "s": [
+    29
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Düşme sonrası dizde başlayan, iki gündür süren, hareketle artan ağrı: akut, nosiseptif (inflamatuvar), derin somatik."
+    },
+    {
+     "metin": "Diyabet öyküsü olan hastada aylardır süren, ayaklarda çorap tarzında yanma ve karıncalanma: kronik, periferik nöropatik, kronik sekonder (nöropatik) ağrı."
+    },
+    {
+     "metin": "Ani başlayan, sol kola ve çeneye yayılan, terlemenin eşlik ettiği göğüs ağrısı: akut, nosiseptif (iskemik), visseral, yansıyan ağrı."
+    },
+    {
+     "metin": "Göğüs duvarında zona döküntüsü iyileşeli 4 ay olmuş; aynı dermatomda yanma ve giysinin değmesi bile ağrıya neden oluyor: kronik, nöropatik (postherpetik nevralji), bulgu allodini."
+    },
+    {
+     "metin": "Distal radius kırığından 5 hafta sonra tüm elde orantısız yanıcı ağrı, ödem, renk ve ısı farkı, terleme artışı: olası KBAS tip I."
+    },
+    {
+     "metin": "Sağ diz üstü amputasyondan sonra olmayan ayakta kramp ve yanma tarzında ağrı: deafferentasyon ağrısı, fantom ağrısı."
+    }
+   ],
+   "klip": "o-2r01-30",
+   "ses": [
+    "Olgu sınıflaması: süre, mekanizma ve kaynak (olgu A–F).",
+    "Her olgu süre, mekanizma ve kaynak açısından birlikte sınıflanır; diz travması sonrası iki günlük ağrı akut, nosiseptif ve derin somatiktir.",
+    "Düşme sonrası dizde başlayan, iki gündür süren, hareketle artan ağrı: akut, nosiseptif (inflamatuvar), derin somatik.",
+    "Diyabet öyküsü olan hastada aylardır süren, ayaklarda çorap tarzında yanma ve karıncalanma: kronik, periferik nöropatik, kronik sekonder (nöropatik) ağrı.",
+    "Ani başlayan, sol kola ve çeneye yayılan, terlemenin eşlik ettiği göğüs ağrısı: akut, nosiseptif (iskemik), visseral, yansıyan ağrı.",
+    "Göğüs duvarında zona döküntüsü iyileşeli 4 ay olmuş; aynı dermatomda yanma ve giysinin değmesi bile ağrıya neden oluyor: kronik, nöropatik (postherpetik nevralji), bulgu allodini.",
+    "Distal radius kırığından 5 hafta sonra tüm elde orantısız yanıcı ağrı, ödem, renk ve ısı farkı, terleme artışı: olası KBAS tip I.",
+    "Sağ diz üstü amputasyondan sonra olmayan ayakta kramp ve yanma tarzında ağrı: deafferentasyon ağrısı, fantom ağrısı."
+   ],
+   "v": "a7ec940c09"
+  },
+  {
+   "id": "2r01-32",
+   "baslik": "Aδ, C ve Aβ lifleri",
+   "giris": "Aδ lifleri hızlı keskin birinci ağrıyı (5–30 m/s), C lifleri yavaş künt ikinci ağrıyı (0,5–2 m/s), Aβ lifleri dokunmayı (35–75 m/s) taşır.",
+   "s": [
+    33
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İnce miyelinli; çap 1–5 µm; iletim hızı 5–30 m/s; hızlı, keskin, iyi lokalize birinci ağrıyı taşır; mekanik ve termal nosisepsiyonda rol alır."
+    },
+    {
+     "metin": "Miyelinsiz; çap 0,2–1,5 µm; iletim hızı 0,5–2 m/s; yavaş, künt, yanıcı, yaygın ikinci ağrıyı taşır; polimodal nosisepsiyonda ve sensitizasyonda önemlidir."
+    },
+    {
+     "metin": "Kalın miyelinli; çap 6–12 µm; iletim hızı 35–75 m/s; dokunma, titreşim ve basıncı taşır; kapı kontrolünde ve santral sensitizasyonda dinamik mekanik allodiniyi taşır."
+    },
+    {
+     "metin": "İletim hızı Aβ > Aδ > C; çap Aβ > Aδ > C."
+    },
+    {
+     "metin": "Ayağa çivi battığında önce keskin ve iyi lokalize (Aδ), ardından künt ve yaygın (C) ağrı hissedilir."
+    }
+   ],
+   "klip": "o-2r01-32",
+   "ses": [
+    "Aδ, C ve Aβ lifleri.",
+    "Aδ lifleri hızlı keskin birinci ağrıyı (5–30 m/s), C lifleri yavaş künt ikinci ağrıyı (0,5–2 m/s), Aβ lifleri dokunmayı (35–75 m/s) taşır.",
+    "İnce miyelinli; çap 1–5 µm; iletim hızı 5–30 m/s; hızlı, keskin, iyi lokalize birinci ağrıyı taşır; mekanik ve termal nosisepsiyonda rol alır.",
+    "Miyelinsiz; çap 0,2–1,5 µm; iletim hızı 0,5–2 m/s; yavaş, künt, yanıcı, yaygın ikinci ağrıyı taşır; polimodal nosisepsiyonda ve sensitizasyonda önemlidir.",
+    "Kalın miyelinli; çap 6–12 µm; iletim hızı 35–75 m/s; dokunma, titreşim ve basıncı taşır; kapı kontrolünde ve santral sensitizasyonda dinamik mekanik allodiniyi taşır.",
+    "İletim hızı Aβ > Aδ > C; çap Aβ > Aδ > C.",
+    "Ayağa çivi battığında önce keskin ve iyi lokalize (Aδ), ardından künt ve yaygın (C) ağrı hissedilir."
+   ],
+   "v": "8f0a2344be"
+  },
+  {
+   "id": "2r01-33",
+   "baslik": "Nosiseptif işlemenin dört aşaması: transdüksiyon, transmisyon, modülasyon, persepsiyon",
+   "giris": "Nosiseptif işleme sırasıyla transdüksiyon, transmisyon, modülasyon ve persepsiyon olmak üzere dört aşamadır; transdüksiyon uyaranın elektriksel sinyale dönüşümüdür.",
+   "s": [
+    36,
+    37,
+    46
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Zararlı uyaran, nosiseptör ucu, primer afferent, dorsal boynuz, çıkan yollar, talamus, korteks; aşamalar sırasıyla 1 transdüksiyon, 2 transmisyon, 3 modülasyon, 4 persepsiyon. Remisyon bir aşama değildir."
+    },
+    {
+     "metin": "Mekanik, termal veya kimyasal enerji nosiseptör ucuna etki eder; TRPV1, ASIC, P2X ve diğer kanallar açılır, katyon girişi olur; uçta derecelendirilmiş depolarizasyon (reseptör potansiyeli) oluşur; eşik aşılırsa voltaj kapılı Na⁺ kanalları ile aksiyon potansiyeli başlar. Periferik nosiseptörlerde zararlı enerjinin elektriksel potansiyele dönüşmesi bu aşamadır."
+    },
+    {
+     "metin": "Aδ ve C lifleri impulsları dorsal boynuza, oradan spinotalamik yolla talamusa taşır."
+    },
+    {
+     "metin": "Spinal internöronlar ve inen yollar sinyalin gücünü artırır veya azaltır."
+    },
+    {
+     "metin": "Kişi sıcaklığı ağrılı olarak deneyimler; dikkat ve bağlam deneyimi etkiler."
+    },
+    {
+     "metin": "Elin sıcak yüzeye değmesinde ısıya duyarlı uçlarda TRPV1 açılır; koruyucu çekilme refleksi spinal düzeyde, bilinçli ağrı algısından önce başlar."
+    }
+   ],
+   "klip": "o-2r01-33",
+   "ses": [
+    "Nosiseptif işlemenin dört aşaması: transdüksiyon, transmisyon, modülasyon, persepsiyon.",
+    "Nosiseptif işleme sırasıyla transdüksiyon, transmisyon, modülasyon ve persepsiyon olmak üzere dört aşamadır; transdüksiyon uyaranın elektriksel sinyale dönüşümüdür.",
+    "Zararlı uyaran, nosiseptör ucu, primer afferent, dorsal boynuz, çıkan yollar, talamus, korteks; aşamalar sırasıyla 1 transdüksiyon, 2 transmisyon, 3 modülasyon, 4 persepsiyon. Remisyon bir aşama değildir.",
+    "Mekanik, termal veya kimyasal enerji nosiseptör ucuna etki eder; TRPV1, ASIC, P2X ve diğer kanallar açılır, katyon girişi olur; uçta derecelendirilmiş depolarizasyon (reseptör potansiyeli) oluşur; eşik aşılırsa voltaj kapılı Na⁺ kanalları ile aksiyon potansiyeli başlar. Periferik nosiseptörlerde zararlı enerjinin elektriksel potansiyele dönüşmesi bu aşamadır.",
+    "Aδ ve C lifleri impulsları dorsal boynuza, oradan spinotalamik yolla talamusa taşır.",
+    "Spinal internöronlar ve inen yollar sinyalin gücünü artırır veya azaltır.",
+    "Kişi sıcaklığı ağrılı olarak deneyimler; dikkat ve bağlam deneyimi etkiler.",
+    "Elin sıcak yüzeye değmesinde ısıya duyarlı uçlarda TRPV1 açılır; koruyucu çekilme refleksi spinal düzeyde, bilinçli ağrı algısından önce başlar."
+   ],
+   "v": "3296741a10"
+  }
+ ]
+}

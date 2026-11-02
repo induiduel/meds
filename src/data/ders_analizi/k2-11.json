@@ -1,0 +1,893 @@
+{
+ "surum": 1,
+ "key": "k2-11",
+ "kod": "2s01",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Psikiyatrik Semiyoloji",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Nefise Demir",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders psikiyatrik muayene şemasındaki işlevleri sırayla işler: bilinç, yönelim, bellek, dikkat, algı, düşünce (akış, içerik), yargılama, soyut düşünce, gerçeği değerlendirme ve içgörü; ardından duygulanım, motor aktivite ve hareket ile bedensel işlevleri anlatır. Her belirti ve bulgu tanımı, görüldüğü tablo ve örnekleriyle verilir.",
+   "maddeler": [
+    {
+     "metin": "Psikiyatrik semiyolojinin amacı ve muayene şeması"
+    },
+    {
+     "metin": "Bilinç"
+    },
+    {
+     "metin": "Yönelim"
+    },
+    {
+     "metin": "Bellek türleri ve muayenesi"
+    },
+    {
+     "metin": "Amnezi: anterograd ve retrograd"
+    },
+    {
+     "metin": "Diğer bellek bozuklukları"
+    },
+    {
+     "metin": "Dikkat ve konsantrasyon"
+    },
+    {
+     "metin": "Algı: halüsinasyon"
+    },
+    {
+     "metin": "İllüzyon ve diğer algı bozuklukları"
+    },
+    {
+     "metin": "Düşünce akışı: çağrışım artması ve azalması"
+    },
+    {
+     "metin": "Çağrışım sapmaları ve konuşma bozuklukları"
+    },
+    {
+     "metin": "Düşünce içeriği: hezeyanlar"
+    },
+    {
+     "metin": "Obsesyon ve fobiler"
+    },
+    {
+     "metin": "Yargılama, soyut düşünce, gerçeği değerlendirme ve içgörü"
+    },
+    {
+     "metin": "Duygulanım"
+    },
+    {
+     "metin": "Motor aktivite ve hareket"
+    },
+    {
+     "metin": "Bedensel işlevler ve ders sonu"
+    },
+    {
+     "metin": "Ders sonu: işlevler ve bozuklukları"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders psikiyatrik muayene şemasındaki işlevleri sırayla işler: bilinç, yönelim, bellek, dikkat, algı, düşünce (akış, içerik), yargılama, soyut düşünce, gerçeği değerlendirme ve içgörü; ardından duygulanım, motor aktivite ve hareket ile bedensel işlevleri anlatır. Her belirti ve bulgu tanımı, görüldüğü tablo ve örnekleriyle verilir.",
+    "Psikiyatrik semiyolojinin amacı ve muayene şeması.",
+    "Bilinç.",
+    "Yönelim.",
+    "Bellek türleri ve muayenesi.",
+    "Amnezi: anterograd ve retrograd.",
+    "Diğer bellek bozuklukları.",
+    "Dikkat ve konsantrasyon.",
+    "Algı: halüsinasyon.",
+    "İllüzyon ve diğer algı bozuklukları.",
+    "Düşünce akışı: çağrışım artması ve azalması.",
+    "Çağrışım sapmaları ve konuşma bozuklukları.",
+    "Düşünce içeriği: hezeyanlar.",
+    "Obsesyon ve fobiler.",
+    "Yargılama, soyut düşünce, gerçeği değerlendirme ve içgörü.",
+    "Duygulanım.",
+    "Motor aktivite ve hareket.",
+    "Bedensel işlevler ve ders sonu.",
+    "Ders sonu: işlevler ve bozuklukları."
+   ],
+   "v": "124d370d96"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "PSİKİYATRİK MUAYENE ŞEMASI",
+     "metin": "I- BİLİŞSEL İŞLEVLER — öğrenci notu: bilişsel işlevler listesinin sağında: 'ilgili bozukluklar neler? bilinecek' (üç satır, pembe)",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Bilişsel İşlevler",
+     "metin": "Bilinç beynin genel bir fonksiyonudur ve bilinçlilik beynin kanlanmasında, oksijenlenmesinde ve metabolizmasında önemli bir değişiklik olduğunda bozulur. — öğrenci notu: paragrafın iki yanında pembe yay ayraç",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Bilişsel İşlevler",
+     "metin": "Somnolans — öğrenci notu: '→ uykuya meyilli' (başlığın yanında pembe)",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Yönelim",
+     "metin": "haberdarlık durumu yönelim (oryantasyon) — öğrenci notu: 'oryantasyon' yazısı, okla 'haberdarlık durumu' ifadesine bağlanmış (pembe); slaytın kendi parantezini yineler",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Yönelim",
+     "metin": "Kişi önce zaman oryantasyonunu, sonra yer oryantasyonunu ve en son kişi oryantasyonunu kaybeder!!! — öğrenci notu: ilk madde imi pembe daire içine alınmış",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Anterograd Amnezi",
+     "metin": "Çıkmış (dogrudan): Anterograd amnezi kısa süreli bellekten, uzun süreli belleğe bilgi aktarılamamasına bağlıdır.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Füg",
+     "metin": "Çıkmış (dogrudan): Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif bozukluklarda görülür.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Dikkat ve Konsantrasyon",
+     "metin": "Çıkmış (dogrudan): Daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Algı",
+     "metin": "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. 5 duyunun her biriyle ilgili olabilir: Görme, işitme, tat, koku, dokunma. — öğrenci notu: halüsinasyon tanımı paragrafı iki yanda pembe yay ayraçla çevrili (altı çizili son paragraf slaydın kendi biçimi)",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Düşünce",
+     "metin": "Çıkmış (dogrudan): Blokaj: Hasta bir şeyi anlatırken birden durur ve konuşmayı keser.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "İçgörü",
+     "metin": "Çıkmış (ilgili): Sözgelimi bazı obsesif kompulsif hastalar semptomlarını bir rahatsızlık olarak görebilirlerken bazıları bu semptomları doğal ve doğru bulur, aynı şekilde bazı psikotik hastalar halüsinasyonlarının hastalıktan kaynaklandıklarını bilebilirler",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Duygulanım",
+     "metin": "Yükselmiş Duygudurum — öğrenci notu: madde imi ve başlık pembe daire içine alınmış",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Motor Aktivite ve",
+     "metin": "Motor Aktivite ve — öğrenci notu: hasta fotoğrafının sağ üstünde pembe yıldız ve yanında 2-3 harflik okunaksız yazı (okunaksız)",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Motor Aktivite ve Hareket",
+     "metin": "Çıkmış (dogrudan): Katapleksi: Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur.",
+     "s": [
+      39
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "PSİKİYATRİK MUAYENE ŞEMASI: I- BİLİŞSEL İŞLEVLER — öğrenci notu: bilişsel işlevler listesinin sağında: 'ilgili bozukluklar neler? bilinecek' (üç satır, pembe).",
+    "Bilişsel İşlevler: Bilinç beynin genel bir fonksiyonudur ve bilinçlilik beynin kanlanmasında, oksijenlenmesinde ve metabolizmasında önemli bir değişiklik olduğunda bozulur. — öğrenci notu: paragrafın iki yanında pembe yay ayraç.",
+    "Bilişsel İşlevler: Somnolans — öğrenci notu: '→ uykuya meyilli' (başlığın yanında pembe).",
+    "Yönelim: haberdarlık durumu yönelim (oryantasyon) — öğrenci notu: 'oryantasyon' yazısı, okla 'haberdarlık durumu' ifadesine bağlanmış (pembe); slaytın kendi parantezini yineler.",
+    "Yönelim: Kişi önce zaman oryantasyonunu, sonra yer oryantasyonunu ve en son kişi oryantasyonunu kaybeder!!! — öğrenci notu: ilk madde imi pembe daire içine alınmış.",
+    "Anterograd Amnezi: Çıkmış (dogrudan): Anterograd amnezi kısa süreli bellekten, uzun süreli belleğe bilgi aktarılamamasına bağlıdır.",
+    "Füg: Çıkmış (dogrudan): Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif bozukluklarda görülür.",
+    "Dikkat ve Konsantrasyon: Çıkmış (dogrudan): Daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+    "Algı: Dış bir uyaran olmaksızın ortaya çıkan algılamadır. 5 duyunun her biriyle ilgili olabilir: Görme, işitme, tat, koku, dokunma. — öğrenci notu: halüsinasyon tanımı paragrafı iki yanda pembe yay ayraçla çevrili (altı çizili son paragraf slaydın kendi biçimi).",
+    "Düşünce: Çıkmış (dogrudan): Blokaj: Hasta bir şeyi anlatırken birden durur ve konuşmayı keser.",
+    "İçgörü: Çıkmış (ilgili): Sözgelimi bazı obsesif kompulsif hastalar semptomlarını bir rahatsızlık olarak görebilirlerken bazıları bu semptomları doğal ve doğru bulur, aynı şekilde bazı psikotik hastalar halüsinasyonlarının hastalıktan kaynaklandıklarını bilebilirler.",
+    "Duygulanım: Yükselmiş Duygudurum — öğrenci notu: madde imi ve başlık pembe daire içine alınmış.",
+    "Motor Aktivite ve: Motor Aktivite ve — öğrenci notu: hasta fotoğrafının sağ üstünde pembe yıldız ve yanında 2-3 harflik okunaksız yazı (okunaksız).",
+    "Motor Aktivite ve Hareket: Çıkmış (dogrudan): Katapleksi: Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur."
+   ],
+   "v": "55d865a3ea"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse ilişkin on çıkmış sorunun sekizi slayt metniyle doğrudan çözülebilir, biri (içgörü) dolaylı çözülebilir, biri (psikiyatrik görüşme) slaytta yoktur; anterograd amnezi, hipervijilans ile distraktibilite, çağrışım sapmaları ve blokaj, katapleksi, ötimi, füg ve yönelim en sık sorulan başlıklardır. Sorular çoğunlukla bir terimin tanımını komşu terimle değiştirerek 'hangisi yanlıştır' biçiminde gelir.",
+   "maddeler": [
+    {
+     "baslik": "Anterograd amnezi",
+     "metin": "Anterograd amnezi, kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlı olarak yeni bilgilerin öğrenilememesidir.",
+     "neden": "2025-2026 ve 2020-2021 çıkmışlarında soruldu; aktarım yönünün ters verilmesi klasik yanlış önermedir.",
+     "s": [
+      11
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Hipervijilans",
+     "metin": "Hipervijilans, dışarıdan gelen tehlike beklentisine karşı aşırı dikkatli olmaya çalışmadır; daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+     "neden": "2025-2026 çıkmışında hangi tabloda görüldüğü, 2021-2022 finalinde de tanımı sorulmuştu; tanım distraktibiliteyle karıştırılarak yanlış önerme yapılır.",
+     "s": [
+      16
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Çağrışımın sınıflaması: artma, azalma, sapma",
+     "metin": "Düşünce akışında çağrışım artması, azalması ve sapmaları ayrılır; blokaj çağrışım azalmasındadır, sapma değildir.",
+     "neden": "2024-2025 çıkmışında çağrışımda sapma olmayan seçenek olarak blokaj soruldu; hangi bulgunun hangi başlıkta olduğu ölçülür.",
+     "s": [
+      24
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Katalepsi, katatonik stupor, mutizm, katapleksi",
+     "metin": "Katapleksi, heyecan ya da ani korkuyla tetiklenen, kas tonusunun geçici olarak kaybolmasıdır; katalepsi uzun süre hareketsiz kalmaktır.",
+     "neden": "2022-2023 çıkmışında katapleksi tanımı soruldu; 2020-2021 çıkmışında da doğru önerme olarak geçti. Katalepsi ile katapleksi karıştırılır.",
+     "s": [
+      39
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Duygudurum: ötimi, yükselmiş, çökkün, irritabl",
+     "metin": "Ötimi duygudurumda çökme ya da yükselmenin olmadığını ifade eder; yükselmiş, çökkün ve irritabl duygudurum diğer üç türdür.",
+     "neden": "2020-2021 çıkmışında ötimi tanımı doğru önerme olarak geçti; dört tanımın tamamı geçen yılın notunda işaretli.",
+     "s": [
+      35
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "İllüzyon",
+     "metin": "İllüzyon, var olan bir uyaranın yanlış yorumlanması ya da yanlış algılanmasıdır.",
+     "neden": "İllüzyon tanımı iki çıkmışta (2020-2021 ve 2021-2022) doğru önerme olarak geçti; halüsinasyonla karıştırılması klasik tuzaktır.",
+     "s": [
+      20
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Distraktibilite",
+     "metin": "Distraktibilite, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır; en sık manide görülür.",
+     "neden": "Dikkat tanımları 2021-2022 finalinde yanlış önerme olarak soruldu: distraktibilitenin tanımı hipervijilansa verilmişti.",
+     "s": [
+      15
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Yönelim kaybının sırası ve organik etken",
+     "metin": "Kişi önce zaman, sonra yer, en son kişi yönelimini kaybeder; yönelim bozukluğu çoğunlukla organik etkeni gösterir.",
+     "neden": "Çıkmışlarda yönelim bozukluğunun organik etkeni gösterdiği önermesi doğru şık olarak iki kez geçti (2020-2021 ve 2021-2022); sıranın ters verilmesi tipik çeldiricidir.",
+     "s": [
+      7
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse ilişkin on çıkmış sorunun sekizi slayt metniyle doğrudan çözülebilir, biri (içgörü) dolaylı çözülebilir, biri (psikiyatrik görüşme) slaytta yoktur; anterograd amnezi, hipervijilans ile distraktibilite, çağrışım sapmaları ve blokaj, katapleksi, ötimi, füg ve yönelim en sık sorulan başlıklardır. Sorular çoğunlukla bir terimin tanımını komşu terimle değiştirerek 'hangisi yanlıştır' biçiminde gelir.",
+    "Anterograd amnezi: Anterograd amnezi, kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlı olarak yeni bilgilerin öğrenilememesidir.",
+    "Hipervijilans: Hipervijilans, dışarıdan gelen tehlike beklentisine karşı aşırı dikkatli olmaya çalışmadır; daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+    "Çağrışımın sınıflaması: artma, azalma, sapma: Düşünce akışında çağrışım artması, azalması ve sapmaları ayrılır; blokaj çağrışım azalmasındadır, sapma değildir.",
+    "Katalepsi, katatonik stupor, mutizm, katapleksi: Katapleksi, heyecan ya da ani korkuyla tetiklenen, kas tonusunun geçici olarak kaybolmasıdır; katalepsi uzun süre hareketsiz kalmaktır.",
+    "Duygudurum: ötimi, yükselmiş, çökkün, irritabl: Ötimi duygudurumda çökme ya da yükselmenin olmadığını ifade eder; yükselmiş, çökkün ve irritabl duygudurum diğer üç türdür.",
+    "İllüzyon: İllüzyon, var olan bir uyaranın yanlış yorumlanması ya da yanlış algılanmasıdır.",
+    "Distraktibilite: Distraktibilite, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır; en sık manide görülür.",
+    "Yönelim kaybının sırası ve organik etken: Kişi önce zaman, sonra yer, en son kişi yönelimini kaybeder; yönelim bozukluğu çoğunlukla organik etkeni gösterir."
+   ],
+   "v": "6f60d50a02"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 9 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Kısa süreli bellekteki bilgilerin uzun süreli belleğe aktarılamaması sonucu, olaydan sonra yeni bilgilerin öğrenilememesi ve hatırlanamaması aşağıdakilerden hangisi ile tanımlanır?",
+     "cevap": "Anterograd amnezi",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Hipervijilans en çok aşağıdakilerden hangisinde görülür?",
+     "cevap": "Travma sonrası stres bozukluğu",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Hangisi çağrışımda sapma olarak değerlendirilemez?",
+     "cevap": "Blokaj",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Semiyolojik kavramlar konusunda aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Anterograd amnezi uzun süreli bellekten kısa süreli belleğe bilgi aktarılamamasına bağlıdır.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Sözel uyaranla uyandırılabilen ancak uyaran kesilince tekrar uykuya meyilli olan hastadaki bilinç durumu hangisidir?",
+     "cevap": "Somnolans",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdakilerden hangisi çoğu kez yoğun bir duyguya eşlik eden, birden ortaya çıkan ve kısa süren bilateral kas tonusu kaybı epizodlarını tanımlamaktadır?",
+     "cevap": "Katapleksi",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Psikiyatrik semiyoloji konusunda aşağıda verilen bilgilerden hangisi doğrudur?",
+     "cevap": "Füg, sıklıkla dissosiyatif bozukluklarda görülür.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Psikiyatride içgörü için aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "İçgörü, nevrotik hastalarda genellikle yoktur",
+     "s": [
+      34
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 9 çıkmış soru var.",
+    "2025-2026: Kısa süreli bellekteki bilgilerin uzun süreli belleğe aktarılamaması sonucu, olaydan sonra yeni bilgilerin öğrenilememesi ve hatırlanamaması aşağıdakilerden hangisi ile tanımlanır?",
+    "Cevap: Anterograd amnezi.",
+    "2025-2026: Hipervijilans en çok aşağıdakilerden hangisinde görülür?",
+    "Cevap: Travma sonrası stres bozukluğu.",
+    "2024-2025: Hangisi çağrışımda sapma olarak değerlendirilemez?",
+    "Cevap: Blokaj.",
+    "2020-2021: Semiyolojik kavramlar konusunda aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Anterograd amnezi uzun süreli bellekten kısa süreli belleğe bilgi aktarılamamasına bağlıdır.",
+    "2023-2024: Sözel uyaranla uyandırılabilen ancak uyaran kesilince tekrar uykuya meyilli olan hastadaki bilinç durumu hangisidir?",
+    "Cevap: Somnolans.",
+    "2021-2022: Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.",
+    "2022-2023: Aşağıdakilerden hangisi çoğu kez yoğun bir duyguya eşlik eden, birden ortaya çıkan ve kısa süren bilateral kas tonusu kaybı epizodlarını tanımlamaktadır?",
+    "Cevap: Katapleksi.",
+    "2022-2023: Psikiyatrik semiyoloji konusunda aşağıda verilen bilgilerden hangisi doğrudur?",
+    "Cevap: Füg, sıklıkla dissosiyatif bozukluklarda görülür.",
+    "2019-2020: Psikiyatride içgörü için aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: İçgörü, nevrotik hastalarda genellikle yoktur."
+   ],
+   "v": "69275ed35e"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%56) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%78) ve hatırlama (%22) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%56) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%78) ve hatırlama (%22) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "a3afeb4533"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?"
+    },
+    {
+     "baslik": "Anterograd amnezi",
+     "metin": "2025-2026 ve 2020-2021 çıkmışlarında soruldu; aktarım yönünün ters verilmesi klasik yanlış önermedir."
+    },
+    {
+     "baslik": "Hipervijilans",
+     "metin": "2025-2026 çıkmışında hangi tabloda görüldüğü, 2021-2022 finalinde de tanımı sorulmuştu; tanım distraktibiliteyle karıştırılarak yanlış önerme yapılır."
+    },
+    {
+     "baslik": "Çağrışımın sınıflaması: artma, azalma, sapma",
+     "metin": "2024-2025 çıkmışında çağrışımda sapma olmayan seçenek olarak blokaj soruldu; hangi bulgunun hangi başlıkta olduğu ölçülür."
+    },
+    {
+     "baslik": "Katalepsi, katatonik stupor, mutizm, katapleksi",
+     "metin": "2022-2023 çıkmışında katapleksi tanımı soruldu; 2020-2021 çıkmışında da doğru önerme olarak geçti. Katalepsi ile katapleksi karıştırılır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.: Çıkmışlarda 3 kez soruldu. Örnek kök: Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?",
+    "Anterograd amnezi: 2025-2026 ve 2020-2021 çıkmışlarında soruldu; aktarım yönünün ters verilmesi klasik yanlış önermedir.",
+    "Hipervijilans: 2025-2026 çıkmışında hangi tabloda görüldüğü, 2021-2022 finalinde de tanımı sorulmuştu; tanım distraktibiliteyle karıştırılarak yanlış önerme yapılır.",
+    "Çağrışımın sınıflaması: artma, azalma, sapma: 2024-2025 çıkmışında çağrışımda sapma olmayan seçenek olarak blokaj soruldu; hangi bulgunun hangi başlıkta olduğu ölçülür.",
+    "Katalepsi, katatonik stupor, mutizm, katapleksi: 2022-2023 çıkmışında katapleksi tanımı soruldu; 2020-2021 çıkmışında da doğru önerme olarak geçti. Katalepsi ile katapleksi karıştırılır.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "2dce05daf3"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders psikiyatrik muayene şemasındaki işlevleri sırayla işler: bilinç, yönelim, bellek, dikkat, algı, düşünce (akış, içerik), yargılama, soyut düşünce, gerçeği değerlendirme ve içgörü; ardından duygulanım, motor aktivite ve hareket ile bedensel işlevleri anlatır. Her belirti ve bulgu tanımı, görüldüğü tablo ve örnekleriyle verilir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders psikiyatrik muayene şemasındaki işlevleri sırayla işler: bilinç, yönelim, bellek, dikkat, algı, düşünce (akış, içerik), yargılama, soyut düşünce, gerçeği değerlendirme ve içgörü; ardından duygulanım, motor aktivite ve hareket ile bedensel işlevleri anlatır. Her belirti ve bulgu tanımı, görüldüğü tablo ve örnekleriyle verilir."
+   ],
+   "v": "10d54ee49f"
+  },
+  {
+   "id": "2s01-05",
+   "baslik": "Yönelim: tanım, üç bileşen ve ölçütler",
+   "giris": "Kişinin çevreyle ilgili haberdarlık durumuna yönelim (oryantasyon) denir; üç bileşeni zaman, yer ve kişidir.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Kişinin çevreyle ilgili haberdarlık durumu yönelim (oryantasyon) olarak adlandırılır."
+    },
+    {
+     "metin": "zaman, yer ve kişi."
+    },
+    {
+     "metin": "Tarihi artı eksi iki günlük yanılmayla bilmesi, hangi yıl, hangi mevsim ve hangi ayda olunduğunu bilmesi ölçütleri kullanılır."
+    },
+    {
+     "metin": "Bulunduğu yeri tanıma ve bir adresi doğru tarif edebilme gibi ölçütlere bakılır."
+    },
+    {
+     "metin": "Çevresindekilerin kim olduğunu bilme ve yakınlarını tanıma durumuna göre belirlenir."
+    },
+    {
+     "metin": "Yönelim ve oryantasyon aynı kavramın iki adıdır."
+    }
+   ],
+   "klip": "o-2s01-05",
+   "ses": [
+    "Yönelim: tanım, üç bileşen ve ölçütler.",
+    "Kişinin çevreyle ilgili haberdarlık durumuna yönelim (oryantasyon) denir; üç bileşeni zaman, yer ve kişidir.",
+    "Kişinin çevreyle ilgili haberdarlık durumu yönelim (oryantasyon) olarak adlandırılır.",
+    "zaman, yer ve kişi.",
+    "Tarihi artı eksi iki günlük yanılmayla bilmesi, hangi yıl, hangi mevsim ve hangi ayda olunduğunu bilmesi ölçütleri kullanılır.",
+    "Bulunduğu yeri tanıma ve bir adresi doğru tarif edebilme gibi ölçütlere bakılır.",
+    "Çevresindekilerin kim olduğunu bilme ve yakınlarını tanıma durumuna göre belirlenir.",
+    "Yönelim ve oryantasyon aynı kavramın iki adıdır."
+   ],
+   "v": "ad3ea8ff72"
+  },
+  {
+   "id": "2s01-06",
+   "baslik": "Yönelim kaybının sırası ve organik etken",
+   "giris": "Kişi önce zaman, sonra yer, en son kişi yönelimini kaybeder; yönelim bozukluğu çoğunlukla organik etkeni gösterir.",
+   "s": [
+    7
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Önce zaman, sonra yer, en son kişi yönelimi kaybolur. Sıra tersine çevrilirse önerme yanlış olur."
+    },
+    {
+     "metin": "Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir."
+    },
+    {
+     "metin": "Deliryum. Deliryum, yönelim bozukluğu yanında bilinçte dalgalanmayla seyreder; acil ve ölümcül olabilen bir tablodur, nedeni bir an önce bulunup tedavi edilmelidir."
+    },
+    {
+     "metin": "Dissosiyatif füg ve diğer dissosiyatif bozukluklarda da yönelim bozukluğu görülebilir."
+    }
+   ],
+   "klip": "o-2s01-06",
+   "ses": [
+    "Yönelim kaybının sırası ve organik etken.",
+    "Kişi önce zaman, sonra yer, en son kişi yönelimini kaybeder; yönelim bozukluğu çoğunlukla organik etkeni gösterir.",
+    "Önce zaman, sonra yer, en son kişi yönelimi kaybolur. Sıra tersine çevrilirse önerme yanlış olur.",
+    "Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir.",
+    "Deliryum. Deliryum, yönelim bozukluğu yanında bilinçte dalgalanmayla seyreder; acil ve ölümcül olabilen bir tablodur, nedeni bir an önce bulunup tedavi edilmelidir.",
+    "Dissosiyatif füg ve diğer dissosiyatif bozukluklarda da yönelim bozukluğu görülebilir."
+   ],
+   "v": "73caf735e5"
+  },
+  {
+   "id": "2s01-08",
+   "baslik": "Anterograd amnezi",
+   "giris": "Anterograd amnezi, kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlı olarak yeni bilgilerin öğrenilememesidir.",
+   "s": [
+    11
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Bellek bozukluğuna neden olan hastalık ya da durumdan sonra kişinin yeni bilgileri öğrenmekte ve hatırlamakta sorun yaşamasıdır."
+    },
+    {
+     "metin": "Kısa süreli bellekten uzun süreli belleğe bilgi aktarılamaz; yön kısa süreliden uzun süreliyedir. Yani kişinin belleği birkaç saat ile sınırlıdır."
+    },
+    {
+     "metin": "Aktarımın uzun süreli bellekten kısa süreli belleğe olduğunu söyleyen önerme yanlıştır."
+    },
+    {
+     "metin": "Wernicke-Korsakoff sendromunun kronik döneminin tipik bulgusudur; yine de tabloya retrograd amnezi de eşlik eder."
+    },
+    {
+     "metin": "Hastalıktan önceki bilgiler anımsanmıyorsa retrograd amnezi söz konusudur."
+    }
+   ],
+   "klip": "o-2s01-08",
+   "ses": [
+    "Anterograd amnezi.",
+    "Anterograd amnezi, kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlı olarak yeni bilgilerin öğrenilememesidir.",
+    "Bellek bozukluğuna neden olan hastalık ya da durumdan sonra kişinin yeni bilgileri öğrenmekte ve hatırlamakta sorun yaşamasıdır.",
+    "Kısa süreli bellekten uzun süreli belleğe bilgi aktarılamaz; yön kısa süreliden uzun süreliyedir. Yani kişinin belleği birkaç saat ile sınırlıdır.",
+    "Aktarımın uzun süreli bellekten kısa süreli belleğe olduğunu söyleyen önerme yanlıştır.",
+    "Wernicke-Korsakoff sendromunun kronik döneminin tipik bulgusudur; yine de tabloya retrograd amnezi de eşlik eder.",
+    "Hastalıktan önceki bilgiler anımsanmıyorsa retrograd amnezi söz konusudur."
+   ],
+   "v": "c6b57b4656"
+  },
+  {
+   "id": "2s01-12",
+   "baslik": "Distraktibilite",
+   "giris": "Distraktibilite, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır; en sık manide görülür.",
+   "s": [
+    15
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır."
+    },
+    {
+     "metin": "Kişi bir konuda konuşurken birden çevreden gelen bir uyaranla o konudan bahsetmeye başlar; hastalık öyküsünü anlatırken hekimin gömleğinin renginden ya da dışarıdan gelen bir araba sesinden hareketle arabalardan söz eder."
+    },
+    {
+     "metin": "Mani."
+    },
+    {
+     "metin": "Hipervijilans bu tanımın karşıtı gibi düşünülmelidir: dikkat dış uyaranlara dağılmaz, tehlike beklentisiyle aşırı yoğunlaşır."
+    },
+    {
+     "metin": "Dikkat zihnin belli bir alana çekilmesi, konsantrasyon ise bunun sürdürülmesi olarak tanımlanır."
+    }
+   ],
+   "klip": "o-2s01-12",
+   "ses": [
+    "Distraktibilite.",
+    "Distraktibilite, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır; en sık manide görülür.",
+    "Dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.",
+    "Kişi bir konuda konuşurken birden çevreden gelen bir uyaranla o konudan bahsetmeye başlar; hastalık öyküsünü anlatırken hekimin gömleğinin renginden ya da dışarıdan gelen bir araba sesinden hareketle arabalardan söz eder.",
+    "Mani.",
+    "Hipervijilans bu tanımın karşıtı gibi düşünülmelidir: dikkat dış uyaranlara dağılmaz, tehlike beklentisiyle aşırı yoğunlaşır.",
+    "Dikkat zihnin belli bir alana çekilmesi, konsantrasyon ise bunun sürdürülmesi olarak tanımlanır."
+   ],
+   "v": "cef99b7429"
+  },
+  {
+   "id": "2s01-13",
+   "baslik": "Hipervijilans",
+   "giris": "Hipervijilans, dışarıdan gelen tehlike beklentisine karşı aşırı dikkatli olmaya çalışmadır; daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+   "s": [
+    16
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Dikkat kesilme, aşırı dikkatli olmaya çalışma olarak tanımlanabilir. Kişi özellikle dışarıdan gelen bir tehlike beklentisine karşı her şeye dikkat etmeye çalışır."
+    },
+    {
+     "metin": "Daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür."
+    },
+    {
+     "metin": "Depremden sonra gelişen travma sonrası stres bozukluğunda kişi her türlü tıkırtı ve sallanmaya karşı tetikte olur, en ufak bir seste kolayca irkilir. İşkenceye bağlı gelişende sürekli etrafta polis ya da polis arabası var mı diye dikkat eder."
+    },
+    {
+     "metin": "Hipervijilans dikkatin dış uyaranlara kolayca kayması ve dağılması değildir; bu tanım distraktibiliteye aittir ve en sık manide görülür."
+    }
+   ],
+   "klip": "o-2s01-13",
+   "ses": [
+    "Hipervijilans.",
+    "Hipervijilans, dışarıdan gelen tehlike beklentisine karşı aşırı dikkatli olmaya çalışmadır; daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+    "Dikkat kesilme, aşırı dikkatli olmaya çalışma olarak tanımlanabilir. Kişi özellikle dışarıdan gelen bir tehlike beklentisine karşı her şeye dikkat etmeye çalışır.",
+    "Daha çok travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+    "Depremden sonra gelişen travma sonrası stres bozukluğunda kişi her türlü tıkırtı ve sallanmaya karşı tetikte olur, en ufak bir seste kolayca irkilir. İşkenceye bağlı gelişende sürekli etrafta polis ya da polis arabası var mı diye dikkat eder.",
+    "Hipervijilans dikkatin dış uyaranlara kolayca kayması ve dağılması değildir; bu tanım distraktibiliteye aittir ve en sık manide görülür."
+   ],
+   "v": "aa47223071"
+  },
+  {
+   "id": "2s01-14",
+   "baslik": "Halüsinasyon: tanım, elementer ve uykuyla ilişkili türler",
+   "giris": "Halüsinasyon dış uyaran olmaksızın ortaya çıkan algılamadır; tek duyuya ait kısa süreli elementer halüsinasyonlar normal popülasyonda rastlanabilir.",
+   "s": [
+    17,
+    18
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. Görme, işitme, tat, koku ve dokunma duyularının her biriyle ilgili olabilir."
+    },
+    {
+     "metin": "Organik bir etkene bağlı değilse çoğunlukla psikoza işaret eder; psikiyatrinin önde gelen belirtilerinden biridir."
+    },
+    {
+     "metin": "Kişinin isminin seslenildiğini duyması, kapı ya da telefon çaldığını zannetmesi, bir fare geçtiğini sanması gibi tek bir duyuya ait kısa süreli halüsinasyonlardır; normal popülasyonda rastlanabilir."
+    },
+    {
+     "metin": "Uykuya dalarken (hipnagojik) veya uyanırken (hipnopompik) ortaya çıkan halüsinasyonlar uzun ve birden fazla duyuyla ilgili (karmaşık) olsalar da psikotik kabul edilmezler."
+    },
+    {
+     "metin": "Bunlar dışındakiler çoğunlukla psikotik bozukluğa işaret eder."
+    }
+   ],
+   "klip": "o-2s01-14",
+   "ses": [
+    "Halüsinasyon: tanım, elementer ve uykuyla ilişkili türler.",
+    "Halüsinasyon dış uyaran olmaksızın ortaya çıkan algılamadır; tek duyuya ait kısa süreli elementer halüsinasyonlar normal popülasyonda rastlanabilir.",
+    "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. Görme, işitme, tat, koku ve dokunma duyularının her biriyle ilgili olabilir.",
+    "Organik bir etkene bağlı değilse çoğunlukla psikoza işaret eder; psikiyatrinin önde gelen belirtilerinden biridir.",
+    "Kişinin isminin seslenildiğini duyması, kapı ya da telefon çaldığını zannetmesi, bir fare geçtiğini sanması gibi tek bir duyuya ait kısa süreli halüsinasyonlardır; normal popülasyonda rastlanabilir.",
+    "Uykuya dalarken (hipnagojik) veya uyanırken (hipnopompik) ortaya çıkan halüsinasyonlar uzun ve birden fazla duyuyla ilgili (karmaşık) olsalar da psikotik kabul edilmezler.",
+    "Bunlar dışındakiler çoğunlukla psikotik bozukluğa işaret eder."
+   ],
+   "v": "7d57209ae7"
+  },
+  {
+   "id": "2s01-16",
+   "baslik": "İllüzyon",
+   "giris": "İllüzyon, var olan bir uyaranın yanlış yorumlanması ya da yanlış algılanmasıdır.",
+   "s": [
+    20
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Uyaranların yanlış yorumlanmasıdır; var olan bir uyaran yanlış algılanır."
+    },
+    {
+     "metin": "Halüsinasyonda dış uyaran yoktur; illüzyonda uyaran vardır ama yanlış yorumlanır."
+    },
+    {
+     "metin": "Mezarlıktan geçerken bir ağacı insana benzetmek ya da birini beklerken buzdolabı sesini zile benzetmek."
+    },
+    {
+     "metin": "Olumlu ya da olumsuz beklentilerle ilgili olarak normal popülasyonda da ortaya çıkabilir."
+    },
+    {
+     "metin": "İllüzyonlar psikozların prodromal döneminde artış gösterir ve genellikle kaygı eşlik eder."
+    }
+   ],
+   "klip": "o-2s01-16",
+   "ses": [
+    "İllüzyon.",
+    "İllüzyon, var olan bir uyaranın yanlış yorumlanması ya da yanlış algılanmasıdır.",
+    "Uyaranların yanlış yorumlanmasıdır; var olan bir uyaran yanlış algılanır.",
+    "Halüsinasyonda dış uyaran yoktur; illüzyonda uyaran vardır ama yanlış yorumlanır.",
+    "Mezarlıktan geçerken bir ağacı insana benzetmek ya da birini beklerken buzdolabı sesini zile benzetmek.",
+    "Olumlu ya da olumsuz beklentilerle ilgili olarak normal popülasyonda da ortaya çıkabilir.",
+    "İllüzyonlar psikozların prodromal döneminde artış gösterir ve genellikle kaygı eşlik eder."
+   ],
+   "v": "b503affe6d"
+  },
+  {
+   "id": "2s01-20",
+   "baslik": "Çağrışımın sınıflaması: artma, azalma, sapma",
+   "giris": "Düşünce akışında çağrışım artması, azalması ve sapmaları ayrılır; blokaj çağrışım azalmasındadır, sapma değildir.",
+   "s": [
+    24
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Basınçlı konuşma, ayrıntıcı konuşma ve lögore."
+    },
+    {
+     "metin": "Çağrışım yavaşlaması (konuşma hızının yavaşlaması, daha çok depresyonda) ve blokaj (hasta bir şeyi anlatırken birden durur ve konuşmayı keser)."
+    },
+    {
+     "metin": "Neolojizm, perseverasyon, klang çağrışım, kelime salatası, yandan konuşma, disprosodi, çelinebilir konuşma, ekolali, konuşmanın fakirleşmesi, konuşma içeriğinde fakirleşme, enkoherans ve koprolali."
+    },
+    {
+     "metin": "Blokaj bir sapma değil, azalma bulgusudur. Basınçlı konuşma da sapma değil, artma bulgusudur."
+    },
+    {
+     "metin": "Çağrışım, davranışlar, düşünceler ve kavramlar arasında yer ve zaman birliğinin etkisiyle kurulan bağlantılar sonucu biri bilince girdiğinde ötekini de bilince çekmesidir."
+    }
+   ],
+   "klip": "o-2s01-20",
+   "ses": [
+    "Çağrışımın sınıflaması: artma, azalma, sapma.",
+    "Düşünce akışında çağrışım artması, azalması ve sapmaları ayrılır; blokaj çağrışım azalmasındadır, sapma değildir.",
+    "Basınçlı konuşma, ayrıntıcı konuşma ve lögore.",
+    "Çağrışım yavaşlaması (konuşma hızının yavaşlaması, daha çok depresyonda) ve blokaj (hasta bir şeyi anlatırken birden durur ve konuşmayı keser).",
+    "Neolojizm, perseverasyon, klang çağrışım, kelime salatası, yandan konuşma, disprosodi, çelinebilir konuşma, ekolali, konuşmanın fakirleşmesi, konuşma içeriğinde fakirleşme, enkoherans ve koprolali.",
+    "Blokaj bir sapma değil, azalma bulgusudur. Basınçlı konuşma da sapma değil, artma bulgusudur.",
+    "Çağrışım, davranışlar, düşünceler ve kavramlar arasında yer ve zaman birliğinin etkisiyle kurulan bağlantılar sonucu biri bilince girdiğinde ötekini de bilince çekmesidir."
+   ],
+   "v": "edfdfbef50"
+  },
+  {
+   "id": "2s01-31",
+   "baslik": "Duygudurum: ötimi, yükselmiş, çökkün, irritabl",
+   "giris": "Ötimi duygudurumda çökme ya da yükselmenin olmadığını ifade eder; yükselmiş, çökkün ve irritabl duygudurum diğer üç türdür.",
+   "s": [
+    35
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini hissedişidir."
+    },
+    {
+     "metin": "Duygudurumda çökme ya da yükselmenin olmadığını ifade eder."
+    },
+    {
+     "metin": "Alışılmışın dışında bir neşe haliyle birlikte kişinin kendine güveni de artmıştır."
+    },
+    {
+     "metin": "Ümitsizlik, keder, elemlilik duygusu ön plandadır; kişinin kendisine verdiği değer ve güven azalmıştır."
+    },
+    {
+     "metin": "Çabuk sinirlenme, engellenmeye karşı öfkelenmeye hazır bir duygudurum söz konusudur."
+    },
+    {
+     "metin": "Duygudurum yaygın ve süreklidir; anlık ve dışarıdan gözlenen duygulanım afekttir."
+    }
+   ],
+   "klip": "o-2s01-31",
+   "ses": [
+    "Duygudurum: ötimi, yükselmiş, çökkün, irritabl.",
+    "Ötimi duygudurumda çökme ya da yükselmenin olmadığını ifade eder; yükselmiş, çökkün ve irritabl duygudurum diğer üç türdür.",
+    "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini hissedişidir.",
+    "Duygudurumda çökme ya da yükselmenin olmadığını ifade eder.",
+    "Alışılmışın dışında bir neşe haliyle birlikte kişinin kendine güveni de artmıştır.",
+    "Ümitsizlik, keder, elemlilik duygusu ön plandadır; kişinin kendisine verdiği değer ve güven azalmıştır.",
+    "Çabuk sinirlenme, engellenmeye karşı öfkelenmeye hazır bir duygudurum söz konusudur.",
+    "Duygudurum yaygın ve süreklidir; anlık ve dışarıdan gözlenen duygulanım afekttir."
+   ],
+   "v": "1af9a3e5ba"
+  },
+  {
+   "id": "2s01-35",
+   "baslik": "Katalepsi, katatonik stupor, mutizm, katapleksi",
+   "giris": "Katapleksi, heyecan ya da ani korkuyla tetiklenen, kas tonusunun geçici olarak kaybolmasıdır; katalepsi uzun süre hareketsiz kalmaktır.",
+   "s": [
+    39
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur. Hasta cansız bir şekilde yere yığılabilir ya da yalnız belli bir kas grubunda ortaya çıkar; örneğin kişinin başı düşer, çenesi aşağı sarkar."
+    },
+    {
+     "metin": "Kişinin uzun süre hareketsiz olarak kalmasıdır (sertleşmiş bir gövde ve uzuvlar)."
+    },
+    {
+     "metin": "Hareketlerde neredeyse durma noktasına varan bir yavaşlama vardır; çevresinin farkında olmadığı izlenimini verir."
+    },
+    {
+     "metin": "Hastanın istemli olarak konuşmamasıdır; katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir."
+    },
+    {
+     "metin": "Katapleksi duygusal tetikli kısa süreli tonus kaybıdır; katalepside gövde ve uzuvlar sertleşmiş, kişi uzun süre hareketsiz kalır."
+    }
+   ],
+   "klip": "o-2s01-35",
+   "ses": [
+    "Katalepsi, katatonik stupor, mutizm, katapleksi.",
+    "Katapleksi, heyecan ya da ani korkuyla tetiklenen, kas tonusunun geçici olarak kaybolmasıdır; katalepsi uzun süre hareketsiz kalmaktır.",
+    "Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur. Hasta cansız bir şekilde yere yığılabilir ya da yalnız belli bir kas grubunda ortaya çıkar; örneğin kişinin başı düşer, çenesi aşağı sarkar.",
+    "Kişinin uzun süre hareketsiz olarak kalmasıdır (sertleşmiş bir gövde ve uzuvlar).",
+    "Hareketlerde neredeyse durma noktasına varan bir yavaşlama vardır; çevresinin farkında olmadığı izlenimini verir.",
+    "Hastanın istemli olarak konuşmamasıdır; katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir.",
+    "Katapleksi duygusal tetikli kısa süreli tonus kaybıdır; katalepside gövde ve uzuvlar sertleşmiş, kişi uzun süre hareketsiz kalır."
+   ],
+   "v": "bab27d1732"
+  }
+ ]
+}

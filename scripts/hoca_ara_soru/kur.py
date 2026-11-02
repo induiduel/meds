@@ -86,7 +86,10 @@ def ara_denetle(key, S, kaynak, ses_kayit=None):
         if kaynak:
             for p in day:
                 if not (kaynak.get(str(p)) or '').strip(): e.append(f'{y}: dayanak sayfa {p} metni kaynak dökümünde yok')
-        if q.get('kanit') not in ('profil', 'cikmis'): e.append(f'{y}: kanit "profil" ya da "cikmis" olmalı (kanıtsız önem damgası yasak)')
+        # hoca: hocanın ders kaydında o bilgi için "sorarım/önemli/bilin" dediği yer (hoca_vurgulari.json, 2026-11-02); gerekçe kimliği verir
+        if q.get('kanit') not in ('profil', 'cikmis', 'hoca'): e.append(f'{y}: kanit "profil", "cikmis" ya da "hoca" olmalı (kanıtsız önem damgası yasak)')
+        if q.get('kanit') == 'hoca' and not re.search(r'hv-k\d+-\d+-\d+', q.get('gerekce') or ''):
+            e.append(f'{y}: kanit "hoca" gerekçesinde hoca vurgusu kimliği (hv-…) yok')
         if kelime(q.get('gerekce')) < 8: e.append(f'{y}: gerekce (neden hoca sorar) en az 8 kelime')
         an = (q.get('anlatim') or {}).get('metin', '')
         if not 3 <= len(cumleler(an)) <= 6 or not 35 <= kelime(an) <= 130:

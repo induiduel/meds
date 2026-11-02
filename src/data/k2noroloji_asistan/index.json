@@ -22,8 +22,8 @@
    "adim": 27,
    "soru": 27,
    "cikmis": 6,
-   "ses": false,
-   "sure": 0
+   "ses": true,
+   "sure": 964
   },
   {
    "kod": "2n03",
@@ -35,6 +35,17 @@
    "cikmis": 1,
    "ses": true,
    "sure": 1057
+  },
+  {
+   "kod": "2n04",
+   "no": 10,
+   "baslik": "Baş Ağrısına Yaklaşım",
+   "bolum": 8,
+   "adim": 26,
+   "soru": 25,
+   "cikmis": 6,
+   "ses": true,
+   "sure": 982
   }
  ]
 }

@@ -1,17 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 622,
-  "baslik": "Yeni ders: Ağrı Fizyopatolojisi + ders PDF bağları",
+  "onem": 623,
+  "baslik": "Yeni derslerin sesli çözücüsü, En önemliler listesi, hoca soruları",
   "maddeler": [
-    "Anesteziyoloji · Ağrı Fizyopatolojisi eklendi: Öğren destesi (72 slayt), ders notu, 78 örnek soru, ağrı terimleri, hocanın 32 vurgusu.",
-    "Yeni Kurul 2 derslerinin PDF'leri ders sayfasında ve sesli derste açılıyor."
+    "Psikiyatrik Semiyoloji, MSS İlaçlarına Giriş, Baş Ağrısına Yaklaşım ve Ağrı Fizyopatolojisi için En önemliler listesi, sesli soru çözücü ve sesli sınav asistanı eklendi.",
+    "Sesli derste \"Hocanın sorabileceği soru\" ara sayfaları: dört derste 46 soru, sesli çözümüyle.",
+    "Yeni derslerde PDF üstü çizimler, terim kartları, kısaltmalar ve ders analizi.",
+    "Psikiyatri ve Anestezi branşları Soru çöz ve En önemliler sayfalarında."
   ],
   "eklenen": [
-    "Ağrı Fizyopatolojisi dersi"
+    "Psikiyatri ve Anestezi branşları (Kurul 2)",
+    "4 derste hoca ara soruları"
   ],
-  "degisen": [
-    "Ders PDF eşlemesi (Psikiyatrik Semiyoloji, MSS İlaçlarına Giriş, Baş Ağrısı, Ağrı Fizyopatolojisi)"
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": []

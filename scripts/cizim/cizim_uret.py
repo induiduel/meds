@@ -63,6 +63,12 @@ def kutular(txt: Path) -> list[list[float]]:
     return out
 
 
+def resim_etiketleri(txt: Path) -> list[str]:
+    """kutular() ile aynı sırada R etiketleri (R0, R2…)."""
+    return [m.group(1) for s in (txt.read_text(encoding="utf-8").splitlines() if txt.exists() else [])
+            if (m := re.match(r"^(R\d+):.*?\[[\d.]+,\s*[\d.]+,\s*[\d.]+,\s*[\d.]+\]", s))]
+
+
 ZOOM_EN_AZ = 70  # karakter (~4 sn EMA): bundan kısa kalan anlatımda yakınlaşma yapılmaz
 RENKLER = ("kirmizi", "mavi", "yesil", "turuncu", "mor", "camgobegi", "pembe", "sari")
 
@@ -1119,6 +1125,11 @@ def main() -> int:
                 if neden_s:
                     say["ret"][neden_s[:60]] = say["ret"].get(neden_s[:60], 0) + 1
                     continue
+            # Görüntüdeki R etiketi pdf_isaret.Sayfa.resimler'in KALICI dizinidir (R0, R2…: yinelenen kutu atlanır); doğrulayıcı
+            # resmi `kutular` listesindeki 1 tabanlı SIRAYLA arar → etiket sıraya çevrilir (2026-11-02: R0 kontur reddediliyordu)
+            etiketler = resim_etiketleri(dok / f"s{s:02d}.txt")
+            if re.fullmatch(r"R\d+", str(k.get("resim") or "")) and k["resim"] in etiketler:
+                k = {**k, "resim": f"R{etiketler.index(k['resim']) + 1}"}
             neden = CD.denetle(k, len(C[cid].split()), kutular(dok / f"s{s:02d}.txt"), raster.get(s), onceki)
             p, c = cid[1:].split(".C")
             mevcut = out.setdefault(p, {}).setdefault(c, [])

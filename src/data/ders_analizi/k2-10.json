@@ -1,0 +1,952 @@
+{
+ "surum": 1,
+ "key": "k2-10",
+ "kod": "2n04",
+ "kurul": 2,
+ "brans": "Nöroloji",
+ "konu": "Baş ağrısına Yaklaşım",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "profil": "Nöroloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2n04"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders başağrısını ICHD-3 sınıflamasıyla primer ve sekonder gruplara ayırır, tanısal yaklaşımı (anamnez, sekonder başağrısını düşündüren öykü ve muayene bulguları, yardımcı tanı yöntemleri) anlatır. Primer başağrılarından migreni (özellikler, dönemler, patofizyoloji, atak ve profilaktik tedavi), gerilim tipi başağrısını, trigeminal otonomik başağrılarını ve ilaç aşırı kullanım başağrısını işler.",
+   "maddeler": [
+    {
+     "metin": "Başağrısına giriş: sıklık ve hasta korkusu"
+    },
+    {
+     "metin": "ICHD sınıflaması: primer, sekonder ve diğer başağrıları"
+    },
+    {
+     "metin": "Tanısal yaklaşım: anamnez"
+    },
+    {
+     "metin": "Anamnezde mutlaka sorulacak on iki başlık"
+    },
+    {
+     "metin": "Sekonder başağrısını düşündüren öykü özellikleri"
+    },
+    {
+     "metin": "Sekonder uyarıları: muayene bulguları ve yardımcı tanı"
+    },
+    {
+     "metin": "Migren: sıklık, tanım ve tipik özellikler"
+    },
+    {
+     "metin": "Migren atağının dönemleri"
+    },
+    {
+     "metin": "Migren patofizyolojisi: genetik ve kuramlar"
+    },
+    {
+     "metin": "Migren atak tedavisi"
+    },
+    {
+     "metin": "Migren profilaksisi"
+    },
+    {
+     "metin": "Gerilim tipi başağrısı"
+    },
+    {
+     "metin": "Trigeminal otonomik başağrıları ve küme başağrısı"
+    },
+    {
+     "metin": "Paroksismal hemikranya, SUNCT ve hemikrania kontünia"
+    },
+    {
+     "metin": "İlaç aşırı kullanım başağrısı"
+    },
+    {
+     "metin": "Ders sonu: dersin ana çizgisi"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders başağrısını ICHD-3 sınıflamasıyla primer ve sekonder gruplara ayırır, tanısal yaklaşımı (anamnez, sekonder başağrısını düşündüren öykü ve muayene bulguları, yardımcı tanı yöntemleri) anlatır. Primer başağrılarından migreni (özellikler, dönemler, patofizyoloji, atak ve profilaktik tedavi), gerilim tipi başağrısını, trigeminal otonomik başağrılarını ve ilaç aşırı kullanım başağrısını işler.",
+    "Başağrısına giriş: sıklık ve hasta korkusu.",
+    "ICHD sınıflaması: primer, sekonder ve diğer başağrıları.",
+    "Tanısal yaklaşım: anamnez.",
+    "Anamnezde mutlaka sorulacak on iki başlık.",
+    "Sekonder başağrısını düşündüren öykü özellikleri.",
+    "Sekonder uyarıları: muayene bulguları ve yardımcı tanı.",
+    "Migren: sıklık, tanım ve tipik özellikler.",
+    "Migren atağının dönemleri.",
+    "Migren patofizyolojisi: genetik ve kuramlar.",
+    "Migren atak tedavisi.",
+    "Migren profilaksisi.",
+    "Gerilim tipi başağrısı.",
+    "Trigeminal otonomik başağrıları ve küme başağrısı.",
+    "Paroksismal hemikranya, SUNCT ve hemikrania kontünia.",
+    "İlaç aşırı kullanım başağrısı.",
+    "Ders sonu: dersin ana çizgisi."
+   ],
+   "v": "3a4d0bf05f"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "• Genel kabul gören sınıflama IHS (Internatiınal",
+     "metin": "Migren — öğrenci notu: 'Migren' maddesinin numarası daire içine alınmış (dört primer başlığın tamamı ayrı ayrı çevrelenmiş)",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "• C- Ağrılı kraniyal nöropatiler, diğer yüz ağrıları",
+     "metin": "Primer başağrıları bizzat kendisi bir hastalık, yaşamı tehdit etmez — öğrenci notu: 'Primer başağrıları … Genellikle tanı için ileri tetkik gerekmez, çoğunlukla tedavi ve önerilerle kontrol altına alınabilir.' paragrafı büyük süslü parantezle (kavisli çerçeve) bir bütün olarak işaretlenmiş",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "TANISAL YAKLAŞIM",
+     "metin": "Hastaya yeterli zaman ayrıp iyi bir anamnez almak primer , sekonder ayrımında ve gereksiz tetkiklerden kaçınmada faydalı — öğrenci notu: Üç satırın tamamı sarı fosforlu",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Mutlaka sorulmalı",
+     "metin": "Başağrısının tipi ve karakteri — öğrenci notu: Sarı fosforlu",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Sekonder başağrısı düşündüren öykü özellikleri:",
+     "metin": "Yeni başlayan akut ve çok şiddetli başağrısı — öğrenci notu: Madde işareti daire içine alınmış",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "• Fizik muayene; primer başağrılarında normal. Sekonder",
+     "metin": "Horner sendromu — öğrenci notu: Madde imi üst üste çizilmiş birkaç daire ile işaretlenmiş",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "YARDIMCI TANI YÖNTEMLERİ",
+     "metin": "Waters, direk grafiler — öğrenci notu: Soluna iki yıldız/çarpı işareti ve çizilmiş bir daire",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "1. MİGREN",
+     "metin": "Tanım: 4-72 sa süren, ataklarla seyreden, tekrarlayıcı, — öğrenci notu: Sağına 'min 4 max 72, tek taraflı, zonklayıcı' yazılmış",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "• Kriterlere uyan 5 atak, başka bir hastalık ile ilişki olmamalı",
+     "metin": "aşırı duyarlılık — öğrenci notu: Prodrom listesinde sarı fosforlu",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "• CSD dalgasını bölgesel kan akımında azalma izler.",
+     "metin": "CSD dalgasını bölgesel kan akımında azalma izler. — öğrenci notu: Madde imi daire içine alınmış, üstünde küçük bir işaret (tik/ok) var",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Migren Tedavisi",
+     "metin": "Çıkmış (ilgili): B) Spesifik İlaçlar : 1- Ergo deriveleri",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "• Eletriptan 40 mg.",
+     "metin": "Sigara, OK, obesite, kadın , inme riskini + — öğrenci notu: Madde imi daire içine alınmış",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "2. Gerilim Tipi Başağrısı",
+     "metin": "İki taraflı, oksipital ya da frontal. — öğrenci notu: Sarı fosforlu",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Paroksismal Hemikrania",
+     "metin": "İndometazinle 3 günde tam kontrol — öğrenci notu: Madde imi daire içine alınmış",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "SUNCT",
+     "metin": "Oyucu, elektrik çarpması, yakıcı — öğrenci notu: Madde imi daire içine alınmış",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Hemikrania kontünia",
+     "metin": "Başağrısı en az üç aydır var olmalı — öğrenci notu: Madde imi daire içine alınmış",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "İlaç Aşırı Kullanım Başağrısı",
+     "metin": "Tedavide kullanılan analjeziklerin 10 günden fazla kullanılması kendi başına kr. başağrısı nedeni — öğrenci notu: Madde imi daire içine alınmış",
+     "s": [
+      26
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "• Genel kabul gören sınıflama IHS (Internatiınal: Migren — öğrenci notu: 'Migren' maddesinin numarası daire içine alınmış (dört primer başlığın tamamı ayrı ayrı çevrelenmiş).",
+    "• C- Ağrılı kraniyal nöropatiler, diğer yüz ağrıları: Primer başağrıları bizzat kendisi bir hastalık, yaşamı tehdit etmez — öğrenci notu: 'Primer başağrıları … Genellikle tanı için ileri tetkik gerekmez, çoğunlukla tedavi ve önerilerle kontrol altına alınabilir.' paragrafı büyük süslü parantezle (kavisli çerçeve) bir bütün olarak işaretlenmiş.",
+    "TANISAL YAKLAŞIM: Hastaya yeterli zaman ayrıp iyi bir anamnez almak primer , sekonder ayrımında ve gereksiz tetkiklerden kaçınmada faydalı — öğrenci notu: Üç satırın tamamı sarı fosforlu.",
+    "Mutlaka sorulmalı: Başağrısının tipi ve karakteri — öğrenci notu: Sarı fosforlu.",
+    "Sekonder başağrısı düşündüren öykü özellikleri:: Yeni başlayan akut ve çok şiddetli başağrısı — öğrenci notu: Madde işareti daire içine alınmış.",
+    "• Fizik muayene; primer başağrılarında normal. Sekonder: Horner sendromu — öğrenci notu: Madde imi üst üste çizilmiş birkaç daire ile işaretlenmiş.",
+    "YARDIMCI TANI YÖNTEMLERİ: Waters, direk grafiler — öğrenci notu: Soluna iki yıldız/çarpı işareti ve çizilmiş bir daire.",
+    "1. MİGREN: Tanım: 4-72 sa süren, ataklarla seyreden, tekrarlayıcı, — öğrenci notu: Sağına 'min 4 max 72, tek taraflı, zonklayıcı' yazılmış.",
+    "• Kriterlere uyan 5 atak, başka bir hastalık ile ilişki olmamalı: aşırı duyarlılık — öğrenci notu: Prodrom listesinde sarı fosforlu.",
+    "• CSD dalgasını bölgesel kan akımında azalma izler.: CSD dalgasını bölgesel kan akımında azalma izler. — öğrenci notu: Madde imi daire içine alınmış, üstünde küçük bir işaret (tik/ok) var.",
+    "Migren Tedavisi: Çıkmış (ilgili): B) Spesifik İlaçlar : 1- Ergo deriveleri.",
+    "• Eletriptan 40 mg.: Sigara, OK, obesite, kadın , inme riskini + — öğrenci notu: Madde imi daire içine alınmış.",
+    "2. Gerilim Tipi Başağrısı: İki taraflı, oksipital ya da frontal. — öğrenci notu: Sarı fosforlu.",
+    "Paroksismal Hemikrania: İndometazinle 3 günde tam kontrol — öğrenci notu: Madde imi daire içine alınmış.",
+    "SUNCT: Oyucu, elektrik çarpması, yakıcı — öğrenci notu: Madde imi daire içine alınmış.",
+    "Hemikrania kontünia: Başağrısı en az üç aydır var olmalı — öğrenci notu: Madde imi daire içine alınmış.",
+    "İlaç Aşırı Kullanım Başağrısı: Tedavide kullanılan analjeziklerin 10 günden fazla kullanılması kendi başına kr. başağrısı nedeni — öğrenci notu: Madde imi daire içine alınmış."
+   ],
+   "v": "2ef1fb30d0"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse ait sekiz çıkmış sorunun altısı derste verilen bilgiyle çözülebilir: sekonder başağrısını düşündüren öykü özelliği olarak erkek cinsiyet, yaşamın en şiddetli başağrısında ilk akla gelen subaraknoid kanama, primer başağrısı olarak trigeminal otonomik başağrısı, migrenin öykü ile tanınması ve aura. Kırmızı bayrak listesi en yüksek öncelikli bilgidir; migren kliniği ikinci, küme başağrısı ve gerilim tipi ayrımı üçüncü sıradadır.",
+   "maddeler": [
+    {
+     "baslik": "Erkek cinsiyet",
+     "metin": "Erkek cinsiyet, başağrısında sekonder nedeni düşündüren öykü özelliklerinden biridir.",
+     "neden": "2020-21 (iki kitapçıkta) ve 2023-24 sınavlarında soruldu; çeldiriciler fotofobi, fonofobi, aura ve uzun yıllardır süren ağrıdır.",
+     "s": [
+      8
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Yaşamın en şiddetli başağrısı ve subaraknoid kanama",
+     "metin": "Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder başağrısı düşündürür ve ilk olarak subaraknoid kanama (SAK) akla gelmelidir.",
+     "neden": "2022-23, 2023-24, 2024-25 ve 2025-26 sınavlarında soruldu: 'yaşamımdaki en şiddetli başağrısı' ifadesinde ilk akla gelen subaraknoid kanamadır.",
+     "s": [
+      8,
+      10
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Sekonder başağrısını düşündüren öykü özellikleri",
+     "metin": "Yeni başlayan akut ve çok şiddetli ağrı, 10 yaşından önce ya da 50 yaşından sonra başlama ve çocuklarda oksipital yerleşim sekonder başağrısını düşündürür.",
+     "neden": "Dersin sınav çekirdeğidir; 12 maddelik kırmızı bayrak listesi çıkmışta ve öğrenci notunda iki kez işaretlenmiştir.",
+     "s": [
+      8
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "ICHD-3 sınıflaması ve primer başağrıları",
+     "metin": "ICHD-3 sınıflamasında primer başağrıları dört başlıktır: migren, gerilim tipi, trigeminal otonomik ve diğer primer sendromlar.",
+     "neden": "2024-25 ve 2025-26 Kurul 2 sınavlarında 'primer başağrıları arasında yer alan' soruldu; çeldiriciler sekonder nedenlerdir.",
+     "s": [
+      3
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Migren: tanım ve tipik özellikler",
+     "metin": "Migren 4–72 saat süren, tekrarlayan, tek taraflı, zonklayıcı, orta ya da şiddetli ve fiziksel aktiviteden etkilenen ağrı atakları ile seyreder.",
+     "neden": "2020-21 Kurul 2'de aurasız migren vakası soruldu; tipik özellikler her yıl ayırıcı tanı sorularının temelidir.",
+     "s": [
+      11
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Küme başağrısı",
+     "metin": "Küme başağrısı günde 1–8 kez tekrarlayan, geceleri uykudan uyandıran, 15–180 dakika süren, tek taraflı ve en şiddetli başağrısıdır; tedavide oksijen kullanılır.",
+     "neden": "Öğrenci notunda A önceliğiyle işaretli; klinik vaka sorularında erkek hasta, gece uyandıran periorbital ağrı ve otonom bulgu ile verilir.",
+     "s": [
+      22
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Migren dönemleri ve aura",
+     "metin": "Aura migrenlilerin %10–15'inde görülür, 5–60 dakika sürer ve hemianopsi, ışık görme, uyuşma, konuşma bozukluğu gibi geçici nörolojik belirtilerle kendini gösterir.",
+     "neden": "2020-21 final sınavında 'aura öyküsü olan hastada ilk akla gelen hastalık' soruldu (migren).",
+     "s": [
+      12
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Anamnez ve öyküye dayanan tanı",
+     "metin": "Anamnez tanının temelini oluşturur; primer başağrılarında tıbbi ve nörolojik muayene çoğunlukla normaldir ve ileri tetkik gerekmez.",
+     "neden": "2025-26'da 'tanısı yalnız öyküye dayanan başağrısı' (cevap migren) soruldu; öğrenci notunda B önceliğiyle yer alır.",
+     "s": [
+      6
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse ait sekiz çıkmış sorunun altısı derste verilen bilgiyle çözülebilir: sekonder başağrısını düşündüren öykü özelliği olarak erkek cinsiyet, yaşamın en şiddetli başağrısında ilk akla gelen subaraknoid kanama, primer başağrısı olarak trigeminal otonomik başağrısı, migrenin öykü ile tanınması ve aura. Kırmızı bayrak listesi en yüksek öncelikli bilgidir; migren kliniği ikinci, küme başağrısı ve gerilim tipi ayrımı üçüncü sıradadır.",
+    "Erkek cinsiyet: Erkek cinsiyet, başağrısında sekonder nedeni düşündüren öykü özelliklerinden biridir.",
+    "Yaşamın en şiddetli başağrısı ve subaraknoid kanama: Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder başağrısı düşündürür ve ilk olarak subaraknoid kanama (SAK) akla gelmelidir.",
+    "Sekonder başağrısını düşündüren öykü özellikleri: Yeni başlayan akut ve çok şiddetli ağrı, 10 yaşından önce ya da 50 yaşından sonra başlama ve çocuklarda oksipital yerleşim sekonder başağrısını düşündürür.",
+    "ICHD-3 sınıflaması ve primer başağrıları: ICHD-3 sınıflamasında primer başağrıları dört başlıktır: migren, gerilim tipi, trigeminal otonomik ve diğer primer sendromlar.",
+    "Migren: tanım ve tipik özellikler: Migren 4–72 saat süren, tekrarlayan, tek taraflı, zonklayıcı, orta ya da şiddetli ve fiziksel aktiviteden etkilenen ağrı atakları ile seyreder.",
+    "Küme başağrısı: Küme başağrısı günde 1–8 kez tekrarlayan, geceleri uykudan uyandıran, 15–180 dakika süren, tek taraflı ve en şiddetli başağrısıdır; tedavide oksijen kullanılır.",
+    "Migren dönemleri ve aura: Aura migrenlilerin %10–15'inde görülür, 5–60 dakika sürer ve hemianopsi, ışık görme, uyuşma, konuşma bozukluğu gibi geçici nörolojik belirtilerle kendini gösterir.",
+    "Anamnez ve öyküye dayanan tanı: Anamnez tanının temelini oluşturur; primer başağrılarında tıbbi ve nörolojik muayene çoğunlukla normaldir ve ileri tetkik gerekmez."
+   ],
+   "v": "4cc7a5e934"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 13 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdaki baş ağrısı tiplerinden hangisinin tanısı tamamen ayrıntılı klinik öyküye dayanır; laboratuvar veya nörogörüntüleme yöntemlerinde karakteristik patolojik bir bulgu saptanmaz?",
+     "cevap": "Migren",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
+     "cevap": "Trigeminal otonomik baş ağrısı",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
+     "cevap": "Trigeminal otonomik baş ağrısı",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+     "cevap": "Erkek cinsiyet",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+     "cevap": "Erkek cinsiyet",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Aşağıdakilerden hangisi sekonder baş ağrısını düşündüren öykü özelliğidir?",
+     "cevap": "Erkek cinsiyet",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Hastanın 'hayatımda gördüğüm en şiddetli baş ağrısı' olarak tanımladığı ani başlangıçlı baş ağrısında öncelikle düşünülmesi gereken tanı hangisidir?",
+     "cevap": "Subaraknoid kanama",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+     "cevap": "Subaraknoid kanama (SAK)",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Ani başlayan ve hastanın hayatının en şiddetli baş ağrısı olarak tanımladığı baş ağrısında ilk düşünülmesi gereken tanı hangisidir?",
+     "cevap": "Subaraknoid kanama",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Baş ağrısını 'yaşadığım en şiddetli baş ağrısı' olarak tanımlayan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+     "cevap": "Subaraknoid kanama (SAK)",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Tek taraflı, zonklayıcı baş ağrısı olan genç kız hastada baş ağrısına bulantı ve kusma eşlik ediyor. Fotofobi (+), fonofobi (+). Tanınız aşağıdakilerden hangisi olur?",
+     "cevap": "Aurasız migren",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "2020-2021 Final",
+     "metin": "Anamnezinde aura öyküsü olan hastada ilk aklınıza gelen hastalık hangisidir?",
+     "cevap": "Migren",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "belirsiz (bankada 2020-2021)",
+     "metin": "Migren, birkaç saatten 1-2 güne kadar uzayabilen tek taraflı, zonklayıcı tipte bir baş ağrısı ile karakterizedir; bulantı, kusma, görsel skotomlar, hemianopsi ve konuşma bozukluğu gibi belirtiler de eşlik edebilir. Migrende kullanılan ilaçların etki mekanizmaları, migren patofizyolojisinin karmaşık olması nedeniyle tam olarak bilinmemektedir. Sumatriptan gibi triptanlar neredeyse yalnızca migren baş ağrısı için kullanılır ve akut şiddetli migren ataklarında günümüzde ilk seçenekler arasındadır. I. NSAİİ ve ergot alkaloidleri II. Beta adrenoseptör blokörleri III. Kalsiyum kanal blokörleri ve SSRİ'ler IV. Trisiklik antidepresanlar (TCA) ve antikonvülzanlar Aşağıda verilen ilaçlardan hangisi ya da hangileri migren tedavisinde kullanılabilir?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      15
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 13 çıkmış soru var.",
+    "2025-2026: Aşağıdaki baş ağrısı tiplerinden hangisinin tanısı tamamen ayrıntılı klinik öyküye dayanır; laboratuvar veya nörogörüntüleme yöntemlerinde karakteristik patolojik bir bulgu saptanmaz?",
+    "Cevap: Migren.",
+    "2024-2025: Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
+    "Cevap: Trigeminal otonomik baş ağrısı.",
+    "2025-2026: Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
+    "Cevap: Trigeminal otonomik baş ağrısı.",
+    "2020-2021: Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+    "Cevap: Erkek cinsiyet.",
+    "2020-2021: Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+    "Cevap: Erkek cinsiyet.",
+    "2023-2024: Aşağıdakilerden hangisi sekonder baş ağrısını düşündüren öykü özelliğidir?",
+    "Cevap: Erkek cinsiyet.",
+    "2023-2024: Hastanın 'hayatımda gördüğüm en şiddetli baş ağrısı' olarak tanımladığı ani başlangıçlı baş ağrısında öncelikle düşünülmesi gereken tanı hangisidir?",
+    "Cevap: Subaraknoid kanama.",
+    "2022-2023: Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+    "Cevap: Subaraknoid kanama (SAK).",
+    "2024-2025: Ani başlayan ve hastanın hayatının en şiddetli baş ağrısı olarak tanımladığı baş ağrısında ilk düşünülmesi gereken tanı hangisidir?",
+    "Cevap: Subaraknoid kanama.",
+    "2025-2026: Baş ağrısını 'yaşadığım en şiddetli baş ağrısı' olarak tanımlayan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+    "Cevap: Subaraknoid kanama (SAK).",
+    "2020-2021: Tek taraflı, zonklayıcı baş ağrısı olan genç kız hastada baş ağrısına bulantı ve kusma eşlik ediyor. Fotofobi (+), fonofobi (+). Tanınız aşağıdakilerden hangisi olur?",
+    "Cevap: Aurasız migren.",
+    "2020-2021 Final: Anamnezinde aura öyküsü olan hastada ilk aklınıza gelen hastalık hangisidir?",
+    "Cevap: Migren.",
+    "belirsiz (bankada 2020-2021): Migren, birkaç saatten 1-2 güne kadar uzayabilen tek taraflı, zonklayıcı tipte bir baş ağrısı ile karakterizedir; bulantı, kusma, görsel skotomlar, hemianopsi ve konuşma bozukluğu gibi belirtiler de eşlik edebilir. Migrende kullanılan ilaçların etki mekanizmaları, migren patofizyolojisinin karmaşık olması nedeniyle tam olarak bilinmemektedir. Sumatriptan gibi triptanlar neredeyse yalnızca migren baş ağrısı için kullanılır ve akut şiddetli migren ataklarında günümüzde ilk seçenekler arasındadır. I. NSAİİ ve ergot alkaloidleri II. Beta adrenoseptör blokörleri III. Kalsiyum kanal blokörleri ve SSRİ'ler IV. Trisiklik antidepresanlar (TCA) ve antikonvülzanlar Aşağıda verilen ilaçlardan hangisi ya da hangileri migren tedavisinde kullanılabilir?",
+    "Cevap: I, II, III ve IV."
+   ],
+   "v": "84c5eef2ad"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanı ve ayırıcı tanı (%50) ve tanım ve kavram (%30) sorulur."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%60) ve hatırlama (%30) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir.",
+    "Sorulan bilgi: En çok tanı ve ayırıcı tanı (%50) ve tanım ve kavram (%30) sorulur.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%60) ve hatırlama (%30) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "666661d50f"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Erkek cinsiyet",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?"
+    },
+    {
+     "baslik": "Subaraknoid kanama (SAK)",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?"
+    },
+    {
+     "baslik": "Yaşamın en şiddetli başağrısı ve subaraknoid kanama",
+     "metin": "2022-23, 2023-24, 2024-25 ve 2025-26 sınavlarında soruldu: 'yaşamımdaki en şiddetli başağrısı' ifadesinde ilk akla gelen subaraknoid kanamadır."
+    },
+    {
+     "baslik": "ICHD-3 sınıflaması ve primer başağrıları",
+     "metin": "2024-25 ve 2025-26 Kurul 2 sınavlarında 'primer başağrıları arasında yer alan' soruldu; çeldiriciler sekonder nedenlerdir."
+    },
+    {
+     "baslik": "Migren: tanım ve tipik özellikler",
+     "metin": "2020-21 Kurul 2'de aurasız migren vakası soruldu; tipik özellikler her yıl ayırıcı tanı sorularının temelidir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Erkek cinsiyet: Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+    "Subaraknoid kanama (SAK): Çıkmışlarda 2 kez soruldu. Örnek kök: Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+    "Yaşamın en şiddetli başağrısı ve subaraknoid kanama: 2022-23, 2023-24, 2024-25 ve 2025-26 sınavlarında soruldu: 'yaşamımdaki en şiddetli başağrısı' ifadesinde ilk akla gelen subaraknoid kanamadır.",
+    "ICHD-3 sınıflaması ve primer başağrıları: 2024-25 ve 2025-26 Kurul 2 sınavlarında 'primer başağrıları arasında yer alan' soruldu; çeldiriciler sekonder nedenlerdir.",
+    "Migren: tanım ve tipik özellikler: 2020-21 Kurul 2'de aurasız migren vakası soruldu; tipik özellikler her yıl ayırıcı tanı sorularının temelidir.",
+    "Çalışma yolu: Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "471e77d1cb"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders başağrısını ICHD-3 sınıflamasıyla primer ve sekonder gruplara ayırır, tanısal yaklaşımı (anamnez, sekonder başağrısını düşündüren öykü ve muayene bulguları, yardımcı tanı yöntemleri) anlatır. Primer başağrılarından migreni (özellikler, dönemler, patofizyoloji, atak ve profilaktik tedavi), gerilim tipi başağrısını, trigeminal otonomik başağrılarını ve ilaç aşırı kullanım başağrısını işler.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders başağrısını ICHD-3 sınıflamasıyla primer ve sekonder gruplara ayırır, tanısal yaklaşımı (anamnez, sekonder başağrısını düşündüren öykü ve muayene bulguları, yardımcı tanı yöntemleri) anlatır. Primer başağrılarından migreni (özellikler, dönemler, patofizyoloji, atak ve profilaktik tedavi), gerilim tipi başağrısını, trigeminal otonomik başağrılarını ve ilaç aşırı kullanım başağrısını işler."
+   ],
+   "v": "8d02a84ea2"
+  },
+  {
+   "id": "2n04-02",
+   "baslik": "ICHD-3 sınıflaması ve primer başağrıları",
+   "giris": "ICHD-3 sınıflamasında primer başağrıları dört başlıktır: migren, gerilim tipi, trigeminal otonomik ve diğer primer sendromlar.",
+   "s": [
+    3
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Genel kabul gören sınıflama Uluslararası Başağrısı Derneği (IHS) sınıflamasıdır; 1988, 2004 ve 2013 sürümleri vardır ve ICHD-3 üç ana başlık altında toplanır."
+    },
+    {
+     "metin": "Migren, gerilim tipi başağrısı, trigeminal otonomik başağrısı ve diğer primer başağrısı sendromlarıdır."
+    },
+    {
+     "metin": "Trigeminal otonomik başağrısı (küme başağrısı gibi) primer gruptadır; subaraknoid kanama, menenjit ve kafa içi tümör gibi nedenlere bağlı başağrıları sekonder gruptadır."
+    },
+    {
+     "metin": "Primer başağrıları bizzat kendisi bir hastalıktır, yaşamı tehdit etmez."
+    }
+   ],
+   "klip": "o-2n04-02",
+   "ses": [
+    "ICHD-3 sınıflaması ve primer başağrıları.",
+    "ICHD-3 sınıflamasında primer başağrıları dört başlıktır: migren, gerilim tipi, trigeminal otonomik ve diğer primer sendromlar.",
+    "Genel kabul gören sınıflama Uluslararası Başağrısı Derneği (IHS) sınıflamasıdır; 1988, 2004 ve 2013 sürümleri vardır ve ICHD-3 üç ana başlık altında toplanır.",
+    "Migren, gerilim tipi başağrısı, trigeminal otonomik başağrısı ve diğer primer başağrısı sendromlarıdır.",
+    "Trigeminal otonomik başağrısı (küme başağrısı gibi) primer gruptadır; subaraknoid kanama, menenjit ve kafa içi tümör gibi nedenlere bağlı başağrıları sekonder gruptadır.",
+    "Primer başağrıları bizzat kendisi bir hastalıktır, yaşamı tehdit etmez."
+   ],
+   "v": "9d54e49b93"
+  },
+  {
+   "id": "2n04-03",
+   "baslik": "Sekonder başağrısı başlıkları",
+   "giris": "Sekonder başağrıları ICHD-3'te 5–12 numaralı başlıklardır; 13 ve 14 ağrılı kraniyal nöropatiler ile diğer başağrılarıdır.",
+   "s": [
+    4,
+    5
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Baş ve boyun travmasına bağlı başağrısı."
+    },
+    {
+     "metin": "Kraniyal veya servikal damarsal bozukluklara bağlı başağrısı."
+    },
+    {
+     "metin": "Damarsal olmayan intrakraniyal bozukluklara bağlı başağrısı."
+    },
+    {
+     "metin": "Madde kullanımı veya kesilmesine, enfeksiyona ve homeostaz bozukluğuna bağlı başağrıları."
+    },
+    {
+     "metin": "Kraniyum, boyun, göz, kulak, burun, sinüs, ağız ya da diğer yüz yapılarının bozukluklarına ve psikiyatrik bozukluklara bağlı başağrıları."
+    },
+    {
+     "metin": "Ağrılı kraniyal nöropatiler ile diğer yüz ağrıları ve sınıflandırılamayan başağrısı bozuklukları ayrı bir gruptur (C)."
+    }
+   ],
+   "klip": "o-2n04-03",
+   "ses": [
+    "Sekonder başağrısı başlıkları.",
+    "Sekonder başağrıları ICHD-3'te 5–12 numaralı başlıklardır; 13 ve 14 ağrılı kraniyal nöropatiler ile diğer başağrılarıdır.",
+    "Baş ve boyun travmasına bağlı başağrısı.",
+    "Kraniyal veya servikal damarsal bozukluklara bağlı başağrısı.",
+    "Damarsal olmayan intrakraniyal bozukluklara bağlı başağrısı.",
+    "Madde kullanımı veya kesilmesine, enfeksiyona ve homeostaz bozukluğuna bağlı başağrıları.",
+    "Kraniyum, boyun, göz, kulak, burun, sinüs, ağız ya da diğer yüz yapılarının bozukluklarına ve psikiyatrik bozukluklara bağlı başağrıları.",
+    "Ağrılı kraniyal nöropatiler ile diğer yüz ağrıları ve sınıflandırılamayan başağrısı bozuklukları ayrı bir gruptur (C)."
+   ],
+   "v": "cfa11cadf8"
+  },
+  {
+   "id": "2n04-05",
+   "baslik": "Anamnez ve öyküye dayanan tanı",
+   "giris": "Anamnez tanının temelini oluşturur; primer başağrılarında tıbbi ve nörolojik muayene çoğunlukla normaldir ve ileri tetkik gerekmez.",
+   "s": [
+    6
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Tanının temelidir; hastaya yeterli zaman ayırıp iyi bir anamnez almak primer–sekonder ayrımında ve gereksiz tetkiklerden kaçınmada yararlıdır."
+    },
+    {
+     "metin": "Tıbbi ve nörolojik muayene çoğunlukla normaldir; tanı için ileri tetkik gerekmez. Migren tanısı, kriterlere uyan 5 ataktan oluşan öyküye dayanır ve başka bir hastalıkla ilişkili olmamalıdır."
+    },
+    {
+     "metin": "Görüntüleme, lomber ponksiyon ve kan testleri gerekir; ayrıntı yardımcı tanı yöntemleri maddesindedir."
+    },
+    {
+     "metin": "Tanısı tamamen ayrıntılı öyküye dayanan, görüntüleme ve laboratuvarda karakteristik bulgu vermeyen başağrısı migrendir."
+    }
+   ],
+   "klip": "o-2n04-05",
+   "ses": [
+    "Anamnez ve öyküye dayanan tanı.",
+    "Anamnez tanının temelini oluşturur; primer başağrılarında tıbbi ve nörolojik muayene çoğunlukla normaldir ve ileri tetkik gerekmez.",
+    "Tanının temelidir; hastaya yeterli zaman ayırıp iyi bir anamnez almak primer–sekonder ayrımında ve gereksiz tetkiklerden kaçınmada yararlıdır.",
+    "Tıbbi ve nörolojik muayene çoğunlukla normaldir; tanı için ileri tetkik gerekmez. Migren tanısı, kriterlere uyan 5 ataktan oluşan öyküye dayanır ve başka bir hastalıkla ilişkili olmamalıdır.",
+    "Görüntüleme, lomber ponksiyon ve kan testleri gerekir; ayrıntı yardımcı tanı yöntemleri maddesindedir.",
+    "Tanısı tamamen ayrıntılı öyküye dayanan, görüntüleme ve laboratuvarda karakteristik bulgu vermeyen başağrısı migrendir."
+   ],
+   "v": "5970971f9b"
+  },
+  {
+   "id": "2n04-09",
+   "baslik": "Sekonder başağrısını düşündüren öykü özellikleri",
+   "giris": "Yeni başlayan akut ve çok şiddetli ağrı, 10 yaşından önce ya da 50 yaşından sonra başlama ve çocuklarda oksipital yerleşim sekonder başağrısını düşündürür.",
+   "s": [
+    8
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yeni başlayan akut ve çok şiddetli başağrısı; 10 yaşından önce ya da 50 yaşından sonra başlaması; son 6 ay içinde başlayıp süren ve tedaviye direnç öyküsü."
+    },
+    {
+     "metin": "Özellikle çocuklarda oksipital yerleşim."
+    },
+    {
+     "metin": "Fiziksel aktivite, ıkınma, öksürme gibi işlevler sırasında ortaya çıkma; dirençli kusmalar; gebelik ve doğum sonrası ortaya çıkma."
+    },
+    {
+     "metin": "Mevcut sistemik hastalık tanısı. Malignite tanısı, yaşamın en şiddetli başağrısı, erkek cinsiyet ve belirli bir şekle uymayan başağrısı ayrı maddelerde ele alınır."
+    },
+    {
+     "metin": "Aura, fotofobi ve fonofobi bu listede yoktur; bunlar migrenin özellikleridir."
+    }
+   ],
+   "klip": "o-2n04-09",
+   "ses": [
+    "Sekonder başağrısını düşündüren öykü özellikleri.",
+    "Yeni başlayan akut ve çok şiddetli ağrı, 10 yaşından önce ya da 50 yaşından sonra başlama ve çocuklarda oksipital yerleşim sekonder başağrısını düşündürür.",
+    "Yeni başlayan akut ve çok şiddetli başağrısı; 10 yaşından önce ya da 50 yaşından sonra başlaması; son 6 ay içinde başlayıp süren ve tedaviye direnç öyküsü.",
+    "Özellikle çocuklarda oksipital yerleşim.",
+    "Fiziksel aktivite, ıkınma, öksürme gibi işlevler sırasında ortaya çıkma; dirençli kusmalar; gebelik ve doğum sonrası ortaya çıkma.",
+    "Mevcut sistemik hastalık tanısı. Malignite tanısı, yaşamın en şiddetli başağrısı, erkek cinsiyet ve belirli bir şekle uymayan başağrısı ayrı maddelerde ele alınır.",
+    "Aura, fotofobi ve fonofobi bu listede yoktur; bunlar migrenin özellikleridir."
+   ],
+   "v": "c4f22ed708"
+  },
+  {
+   "id": "2n04-11",
+   "baslik": "Yaşamın en şiddetli başağrısı ve subaraknoid kanama",
+   "giris": "Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder başağrısı düşündürür ve ilk olarak subaraknoid kanama (SAK) akla gelmelidir.",
+   "s": [
+    8,
+    10
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Hasta başağrısını yaşamında çektiği en şiddetli başağrısı olarak tanımlıyorsa bu ifade tek başına sekonder neden uyarısıdır."
+    },
+    {
+     "metin": "Subaraknoid kanama (SAK). Migren, gerilim tipi başağrısı, çene eklemi kökenli ağrı ve trigeminal nevralji bu ifadeyle akla gelen ilk tanı değildir."
+    },
+    {
+     "metin": "Yeni başlayan, akut ve çok şiddetli ağrı sekonder başağrısı listesinde ayrıca yer alır."
+    },
+    {
+     "metin": "Bilgisayarlı beyin tomografisi kanamayı gösterir; lomber ponksiyon menenjit ve subaraknoid kanamanın tanısında kullanılır."
+    },
+    {
+     "metin": "Sekonder başağrısında ivedi davranılır."
+    }
+   ],
+   "klip": "o-2n04-11",
+   "ses": [
+    "Yaşamın en şiddetli başağrısı ve subaraknoid kanama.",
+    "Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder başağrısı düşündürür ve ilk olarak subaraknoid kanama (SAK) akla gelmelidir.",
+    "Hasta başağrısını yaşamında çektiği en şiddetli başağrısı olarak tanımlıyorsa bu ifade tek başına sekonder neden uyarısıdır.",
+    "Subaraknoid kanama (SAK). Migren, gerilim tipi başağrısı, çene eklemi kökenli ağrı ve trigeminal nevralji bu ifadeyle akla gelen ilk tanı değildir.",
+    "Yeni başlayan, akut ve çok şiddetli ağrı sekonder başağrısı listesinde ayrıca yer alır.",
+    "Bilgisayarlı beyin tomografisi kanamayı gösterir; lomber ponksiyon menenjit ve subaraknoid kanamanın tanısında kullanılır.",
+    "Sekonder başağrısında ivedi davranılır."
+   ],
+   "v": "c69d7d6b10"
+  },
+  {
+   "id": "2n04-12",
+   "baslik": "Erkek cinsiyet",
+   "giris": "Erkek cinsiyet, başağrısında sekonder nedeni düşündüren öykü özelliklerinden biridir.",
+   "s": [
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Erkek cinsiyet, sekonder başağrısı düşündüren öykü özellikleri listesinin bir maddesidir."
+    },
+    {
+     "metin": "Başağrısı olan hasta erkekse onu bile sekonder başağrısı grubuna almak gerekir; altta bir neden olma olasılığı daha yüksektir."
+    },
+    {
+     "metin": "Aura, fotofobi ve fonofobi migrenin özellikleridir ve sekonder nedeni düşündürmez. Listede olmayan, uzun yıllardır benzer biçimde süren ağrı da sekonder yönünde bir ipucu değildir."
+    },
+    {
+     "metin": "Migrende kadın cinsiyet daha sıktır; kadınlarda %20, erkeklerde %8'dir."
+    }
+   ],
+   "klip": "o-2n04-12",
+   "ses": [
+    "Erkek cinsiyet.",
+    "Erkek cinsiyet, başağrısında sekonder nedeni düşündüren öykü özelliklerinden biridir.",
+    "Erkek cinsiyet, sekonder başağrısı düşündüren öykü özellikleri listesinin bir maddesidir.",
+    "Başağrısı olan hasta erkekse onu bile sekonder başağrısı grubuna almak gerekir; altta bir neden olma olasılığı daha yüksektir.",
+    "Aura, fotofobi ve fonofobi migrenin özellikleridir ve sekonder nedeni düşündürmez. Listede olmayan, uzun yıllardır benzer biçimde süren ağrı da sekonder yönünde bir ipucu değildir.",
+    "Migrende kadın cinsiyet daha sıktır; kadınlarda %20, erkeklerde %8'dir."
+   ],
+   "v": "b98e133007"
+  },
+  {
+   "id": "2n04-14",
+   "baslik": "Sekonder başağrısını düşündüren muayene bulguları",
+   "giris": "Primer başağrılarında fizik muayene normaldir; bilinç bozukluğu, nöbet, fokal bulgu, papilödem, ateş ve ense sertliği sekonder başağrısını düşündürür.",
+   "s": [
+    9
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Fizik muayene normaldir."
+    },
+    {
+     "metin": "Bilinç bozukluğu, senkop ve epileptik nöbet."
+    },
+    {
+     "metin": "Fokal nörolojik bulgu; 3. kranial sinir tutulumu ve anizokori; Horner sendromu; 5. ve 7. kranial sinir tutulumu."
+    },
+    {
+     "metin": "Papilödem ve subhyaloid hemoraji."
+    },
+    {
+     "metin": "Ateş ve ense sertliği; kilo kaybı ve halsizlik."
+    },
+    {
+     "metin": "Fotofobi ve fonofobi muayene bulgusu değil, migrene eşlik eden belirtilerdir."
+    }
+   ],
+   "klip": "o-2n04-14",
+   "ses": [
+    "Sekonder başağrısını düşündüren muayene bulguları.",
+    "Primer başağrılarında fizik muayene normaldir; bilinç bozukluğu, nöbet, fokal bulgu, papilödem, ateş ve ense sertliği sekonder başağrısını düşündürür.",
+    "Fizik muayene normaldir.",
+    "Bilinç bozukluğu, senkop ve epileptik nöbet.",
+    "Fokal nörolojik bulgu; 3. kranial sinir tutulumu ve anizokori; Horner sendromu; 5. ve 7. kranial sinir tutulumu.",
+    "Papilödem ve subhyaloid hemoraji.",
+    "Ateş ve ense sertliği; kilo kaybı ve halsizlik.",
+    "Fotofobi ve fonofobi muayene bulgusu değil, migrene eşlik eden belirtilerdir."
+   ],
+   "v": "571e049539"
+  },
+  {
+   "id": "2n04-17",
+   "baslik": "Migren: tanım ve tipik özellikler",
+   "giris": "Migren 4–72 saat süren, tekrarlayan, tek taraflı, zonklayıcı, orta ya da şiddetli ve fiziksel aktiviteden etkilenen ağrı atakları ile seyreder.",
+   "s": [
+    11
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "4–72 saat süren, ataklarla seyreden, tekrarlayıcı, zonklayıcı başağrısı atakları."
+    },
+    {
+     "metin": "Tek taraflı, zonklayıcı, orta ya da şiddetli ve fiziksel aktiviteden etkilenen ağrı."
+    },
+    {
+     "metin": "Bulantı, kusma, fotofobi ve fonofobi."
+    },
+    {
+     "metin": "Tüm başağrıları içinde doktora en fazla başvuru nedenidir; kadınlarda %20, erkeklerde %8, 50 yaş üstünde %2'dir."
+    },
+    {
+     "metin": "Kriterlere uyan 5 atak olmalı ve başka bir hastalıkla ilişki bulunmamalıdır."
+    },
+    {
+     "metin": "Gerilim tipi başağrısı iki taraflı ve künttür, bulantı kusma olmaz; sekonder başağrıları ise kırmızı bayraklarla ayrılır."
+    }
+   ],
+   "klip": "o-2n04-17",
+   "ses": [
+    "Migren: tanım ve tipik özellikler.",
+    "Migren 4–72 saat süren, tekrarlayan, tek taraflı, zonklayıcı, orta ya da şiddetli ve fiziksel aktiviteden etkilenen ağrı atakları ile seyreder.",
+    "4–72 saat süren, ataklarla seyreden, tekrarlayıcı, zonklayıcı başağrısı atakları.",
+    "Tek taraflı, zonklayıcı, orta ya da şiddetli ve fiziksel aktiviteden etkilenen ağrı.",
+    "Bulantı, kusma, fotofobi ve fonofobi.",
+    "Tüm başağrıları içinde doktora en fazla başvuru nedenidir; kadınlarda %20, erkeklerde %8, 50 yaş üstünde %2'dir.",
+    "Kriterlere uyan 5 atak olmalı ve başka bir hastalıkla ilişki bulunmamalıdır.",
+    "Gerilim tipi başağrısı iki taraflı ve künttür, bulantı kusma olmaz; sekonder başağrıları ise kırmızı bayraklarla ayrılır."
+   ],
+   "v": "a899784544"
+  },
+  {
+   "id": "2n04-18",
+   "baslik": "Migren dönemleri ve aura",
+   "giris": "Aura migrenlilerin %10–15'inde görülür, 5–60 dakika sürer ve hemianopsi, ışık görme, uyuşma, konuşma bozukluğu gibi geçici nörolojik belirtilerle kendini gösterir.",
+   "s": [
+    12
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Prodrom, aura (varsa), ağrı ve postdrom sırasıyla izler."
+    },
+    {
+     "metin": "Aşırı duyarlılık, tepkisellik, öfori, hiperaktivite, durgunluk, dikkat azalması, kelime bulma güçlüğü; koku, ışık ve sese hassasiyet."
+    },
+    {
+     "metin": "Migrenlilerin %10–15'inde görülür ve 5–60 dakika sürer. Belirtiler geçicidir: hemianopsi, beyaz ışıklar ve kırık çizgiler görme, dilde, yüzde ve kolda uyuşma, konuşmada bozulma."
+    },
+    {
+     "metin": "Aura öyküsü ilk olarak migreni düşündürür; aura bulunması sekonder başağrısı yönünde bir kırmızı bayrak değildir."
+    }
+   ],
+   "klip": "o-2n04-18",
+   "ses": [
+    "Migren dönemleri ve aura.",
+    "Aura migrenlilerin %10–15'inde görülür, 5–60 dakika sürer ve hemianopsi, ışık görme, uyuşma, konuşma bozukluğu gibi geçici nörolojik belirtilerle kendini gösterir.",
+    "Prodrom, aura (varsa), ağrı ve postdrom sırasıyla izler.",
+    "Aşırı duyarlılık, tepkisellik, öfori, hiperaktivite, durgunluk, dikkat azalması, kelime bulma güçlüğü; koku, ışık ve sese hassasiyet.",
+    "Migrenlilerin %10–15'inde görülür ve 5–60 dakika sürer. Belirtiler geçicidir: hemianopsi, beyaz ışıklar ve kırık çizgiler görme, dilde, yüzde ve kolda uyuşma, konuşmada bozulma.",
+    "Aura öyküsü ilk olarak migreni düşündürür; aura bulunması sekonder başağrısı yönünde bir kırmızı bayrak değildir."
+   ],
+   "v": "fea8feda30"
+  },
+  {
+   "id": "2n04-30",
+   "baslik": "Küme başağrısı",
+   "giris": "Küme başağrısı günde 1–8 kez tekrarlayan, geceleri uykudan uyandıran, 15–180 dakika süren, tek taraflı ve en şiddetli başağrısıdır; tedavide oksijen kullanılır.",
+   "s": [
+    22
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Günde 1–8 kez tekrarlar, sıklıkla geceleri uykudan uyandırır; en şiddetli başağrısıdır; oyucu ve batıcı niteliktedir; 15–180 dakika sürer."
+    },
+    {
+     "metin": "Ağrı tarafında (ipsilateral) gözde kızarma ve yaşarma, ptoz, burunda konjesyon ya da akıntı."
+    },
+    {
+     "metin": "%85 epizodik, %15 kronik; erkeklerde daha sıktır."
+    },
+    {
+     "metin": "15–20 dakika boyunca dakikada 5–8 litre oksijen; ergo ve triptan diğer seçeneklerdir."
+    },
+    {
+     "metin": "Migrende ağrı 4–72 saat sürer ve zonklayıcıdır; küme başağrısı çok daha kısa ve batıcıdır."
+    }
+   ],
+   "klip": "o-2n04-30",
+   "ses": [
+    "Küme başağrısı.",
+    "Küme başağrısı günde 1–8 kez tekrarlayan, geceleri uykudan uyandıran, 15–180 dakika süren, tek taraflı ve en şiddetli başağrısıdır; tedavide oksijen kullanılır.",
+    "Günde 1–8 kez tekrarlar, sıklıkla geceleri uykudan uyandırır; en şiddetli başağrısıdır; oyucu ve batıcı niteliktedir; 15–180 dakika sürer.",
+    "Ağrı tarafında (ipsilateral) gözde kızarma ve yaşarma, ptoz, burunda konjesyon ya da akıntı.",
+    "%85 epizodik, %15 kronik; erkeklerde daha sıktır.",
+    "15–20 dakika boyunca dakikada 5–8 litre oksijen; ergo ve triptan diğer seçeneklerdir.",
+    "Migrende ağrı 4–72 saat sürer ve zonklayıcıdır; küme başağrısı çok daha kısa ve batıcıdır."
+   ],
+   "v": "24751ab593"
+  }
+ ]
+}

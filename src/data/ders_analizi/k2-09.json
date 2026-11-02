@@ -1,0 +1,1170 @@
+{
+ "surum": 1,
+ "key": "k2-09",
+ "kod": "2f02",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "SSS İlaçları",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Merkezi sinir sistemi ilaçları etkilerini büyük ölçüde sinaptik iletiyi değiştirerek gösterir. Ders glia hücrelerini, kan-beyin bariyerini, iyon kanallarını, iyonotropik ve metabotropik reseptörleri, sinaptik iletimi ve nörotransmitter sınıflarını (glutamat, GABA, glisin, monoaminler, nöropeptidler, endokannabinoidler, nitrik oksit, purinler) anlatır.",
+   "maddeler": [
+    {
+     "metin": "Dersin amacı ve MSS ilaçlarının genel çerçevesi"
+    },
+    {
+     "metin": "Nöron ve nöroglia"
+    },
+    {
+     "metin": "Kan-beyin bariyeri"
+    },
+    {
+     "metin": "Voltaj bağımlı ve ligand bağımlı iyon kanalları"
+    },
+    {
+     "metin": "İyonotropik reseptörler ve GABAA reseptörü şekli"
+    },
+    {
+     "metin": "Metabotropik reseptörler"
+    },
+    {
+     "metin": "Şekil 21-2: dört kanal ve reseptör tipi"
+    },
+    {
+     "metin": "Kimyasal sinaps ve sinaptik potansiyeller"
+    },
+    {
+     "metin": "İlaçların MSS'deki etki yerleri"
+    },
+    {
+     "metin": "Nörotransmitter olma ölçütleri"
+    },
+    {
+     "metin": "Hiyerarşik sistemler ve lokal devre nöronları"
+    },
+    {
+     "metin": "Yaygın (non-spesifik) nöronal sistemler"
+    },
+    {
+     "metin": "Santral nörotransmitterler: amino asitler ve Tablo 21-2"
+    },
+    {
+     "metin": "Glutamat"
+    },
+    {
+     "metin": "GABA ve glisin"
+    },
+    {
+     "metin": "Asetilkolin"
+    },
+    {
+     "metin": "Monoaminler: dopamin, noradrenalin, serotonin"
+    },
+    {
+     "metin": "Histamin"
+    },
+    {
+     "metin": "Nöropeptitler ve oreksin"
+    },
+    {
+     "metin": "Endokannabinoidler, nitrik oksit ve purinler"
+    },
+    {
+     "metin": "Ders sonu"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Merkezi sinir sistemi ilaçları etkilerini büyük ölçüde sinaptik iletiyi değiştirerek gösterir. Ders glia hücrelerini, kan-beyin bariyerini, iyon kanallarını, iyonotropik ve metabotropik reseptörleri, sinaptik iletimi ve nörotransmitter sınıflarını (glutamat, GABA, glisin, monoaminler, nöropeptidler, endokannabinoidler, nitrik oksit, purinler) anlatır.",
+    "Dersin amacı ve MSS ilaçlarının genel çerçevesi.",
+    "Nöron ve nöroglia.",
+    "Kan-beyin bariyeri.",
+    "Voltaj bağımlı ve ligand bağımlı iyon kanalları.",
+    "İyonotropik reseptörler ve GABAA reseptörü şekli.",
+    "Metabotropik reseptörler.",
+    "Şekil 21-2: dört kanal ve reseptör tipi.",
+    "Kimyasal sinaps ve sinaptik potansiyeller.",
+    "İlaçların MSS'deki etki yerleri.",
+    "Nörotransmitter olma ölçütleri.",
+    "Hiyerarşik sistemler ve lokal devre nöronları.",
+    "Yaygın (non-spesifik) nöronal sistemler.",
+    "Santral nörotransmitterler: amino asitler ve Tablo 21-2.",
+    "Glutamat.",
+    "GABA ve glisin.",
+    "Asetilkolin.",
+    "Monoaminler: dopamin, noradrenalin, serotonin.",
+    "Histamin.",
+    "Nöropeptitler ve oreksin.",
+    "Endokannabinoidler, nitrik oksit ve purinler.",
+    "Ders sonu."
+   ],
+   "v": "3d0dd18187"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "✓Merkezi sinir sisteminde (MSS) etkili ilaçlar, eski çağlarda insanlar",
+     "metin": "Doğal transmitterleri taklit eden agonistler ve antagonistler bu tip — öğrenci notu: son madde sarı fosforlu kalemle işaretlenmiş (agonist ve antagonist sözcükleri kırmızı yazılı)",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "✓Klinik etkinliği bilinen ilaçların etkilerinin aydınlatılması hastalık",
+     "metin": "Çeşitli agonist ve antagonistlerin ϒ-aminobütirik asit (GABA) — öğrenci notu: GABA'yı anlatan madde sarı fosforlu işaretli",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "✓İnsan beyni, çeşitli destekleyici glial hücrelerle çevrili yaklaşık 100",
+     "metin": "Nöronlar, elektrokimyasal bir süreçle bilgiyi işleyen ve ileten elektriksel olarak uyarılabilir hücrelerdir. — öğrenci notu: nöron tanımı sarı fosforlu işaretli",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "✓Nöroglia",
+     "metin": "Astrositler beyindeki en bol bulunan hücrelerdir — öğrenci notu: astrosit tanımı sarı fosforlu işaretli",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "✓Oligodendrositler, MSS'deki projeksiyon nöronlarının aksonlarını saran",
+     "metin": "Oligodendrositler, MSS'deki projeksiyon nöronlarının aksonlarını saran ve miyelin kılıfı oluşturan hücrelerdir. — öğrenci notu: oligodendrosit tanımı sarı fosforlu işaretli",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "✓Kan-Beyin Bariyeri",
+     "metin": "İlaçların MSS'ye ulaşabilmesi için genellikle yeterli lipofilikliğe sahip olması veya özgül taşıma mekanizmalarından yararlanması gerekir. — öğrenci notu: lipofiliklik ve özgül taşıma maddesinin tamamı sarı fosforlu işaretli, 'lipofilikliğe' sözcüğünde koyu işaret ve yanında pembe çarpı",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "✓Glikoz ve esansiyel amino asitler gibi birçok madde, özgül taşıyıcı",
+     "metin": "özgül taşıyıcı — öğrenci notu: 'özgül taşıyıcı' sarı fosforlu işaretli",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "İyon Kanalları ve",
+     "metin": "İyon Kanalları ve — öğrenci notu: pembe el yazısı, başlığın üstünde, ilk maddeye ok: 'herhangi bir madde ile açılır kapanır' (ligand bağımlı kanalı anlatıyor)",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "✓Bazı potasyum (K⁺) kanalları, membran depolarizasyonuyla açılır ve",
+     "metin": "Bazı potasyum (K⁺) kanalları, membran depolarizasyonuyla açılır ve potasyum iyonlarının hücre dışına çıkmasını sağlar. — öğrenci notu: K+ kanalı maddesinin tamamı sarı fosforlu işaretli",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "✓İyonotropik reseptörler, birden fazla alt birimden oluşur.",
+     "metin": "doğrudan açar veya kapatır — öğrenci notu: 'doğrudan açar veya kapatır' sarı fosforlu işaretli",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "✓Nörotransmitter reseptörlerinin ikinci sınıfı metabotropik",
+     "metin": "ikinci sınıfı metabotropik reseptörler — öğrenci notu: 'ikinci sınıfı metabotropik reseptörler' sarı fosforlu işaretli",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "✓Bu etkileşimde başlıca hedefler voltaj bağımlı kalsiyum (Ca²⁺) ve",
+     "metin": "voltaj bağımlı kalsiyum (Ca²⁺) ve potasyum (K⁺) kanallarıdır — öğrenci notu: hedef kanalların (Ca2+ ve K+) adı sarı fosforlu işaretli",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "✓Metabotropik reseptörler postsinaptik bölgede bulunduğunda,",
+     "metin": "Metabotropik reseptörler postsinaptik bölgede bulunduğunda, potasyum (K⁺) kanallarını aktive ederek açılmalarını sağlar. — öğrenci notu: postsinaptik metabotropik reseptör–K+ kanalı maddesi sarı fosforlu işaretli",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "✓Membranla sınırlı etkiler, reseptörün bulunduğu membran bölgesinde",
+     "metin": "İyonotropik reseptörler milisaniyeler içinde ortaya çıkan hızlı ve kısa süreli etkiler oluştururken — öğrenci notu: madde imi pembe daire içinde; yanında pembe çarpı/ok ve el yazısı: 'Sınavda çıkabilir'",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "18",
+     "metin": "18 — öğrenci notu: şekilde A, B, C ve D harfleri pembe daire içine alınmış: A voltaj bağımlı kanal, B ligand bağımlı iyonotropik kanal, C membrana sınırlı metabotropik kanal (G proteini–iyon kanalı), D difüze olabilen ikinci ulaklı metabotropik kanal (G protein–enzim–cAMP vb.)",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Sinaps ve Sinaptik Potansiyeller",
+     "metin": "kanal bloke edici ajanlara (verapamil vb.) genellikle dirençlidir — öğrenci notu: transmitter salıverilmesinden sorumlu Ca kanallarının verapamile dirençli olması sarı fosforlu işaretli",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "✓Transmitterin reseptörüne bağlanması postsinaptik hücre",
+     "metin": "Eksitatör bir yolak aktive edildiğinde küçük bir depolarizasyon ya da eksitatör postsinaptik potansiyel (EPSP) kaydedilir. — öğrenci notu: EPSP maddesinin imi pembe daire içinde, ilk yarısı siyah çizgiyle altı çizili, 'eksitatör postsinaptik potansiyel' sarı fosforlu",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "✓Sonuç olarak, istirahat durumunda aksiyon potansiyeli",
+     "metin": "✓Sonuç olarak, istirahat durumunda aksiyon potansiyeli — öğrenci notu: pembe el yazısı, şeklin solunda: 'Çok önemli değil ?' (EPSP/IPSP toplamı şekli için; soru işaretli)",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "İlaç Etki Yerleri",
+     "metin": "Presinaptik etkiler nörotransmitterlerin sentezini, depolanmasını, salınmasını veya geri alımını — öğrenci notu: madde imi pembe daire içinde, yanında pembe tik/çarpı ve el yazısı 'Dört aşama?'",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "✓Presinaptik etkili ilaçlar, nörotransmitterlerin sentezini,",
+     "metin": "✓Presinaptik etkili ilaçlar, nörotransmitterlerin sentezini, — öğrenci notu: pembe el yazısı, ikinci maddenin üstünde, pembe ok/çizgi ile rezerpine bağlı: 'Çıkabilir bazen'",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "✓Bir nörotransmitter sinaptik aralığa salındıktan sonra etkisi, geri",
+     "metin": "geri alım (reuptake) veya enzimatik yıkım yoluyla sonlandırılır — öğrenci notu: geri alım ve enzimatik yıkım sarı fosforlu işaretli",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "✓Reseptör antagonizması MSS’yi etkileyen ilaçların yaygın etki",
+     "metin": "striknin, inhibitör nörotransmitter olan glisinin reseptörlerini bloke ederek sinir sistemindeki inhibisyonu azaltır ve aşırı nöronal uyarılmaya neden olabilir — öğrenci notu: striknin–glisin reseptörü maddesi sarı fosforlu işaretli ('striknin' sözcüğü kırmızı yazılı)",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Santral Nörotransmitterlerin Belirlenmesi",
+     "metin": "Çıkmış (dogrudan): lokalizasyon, salıverilme ve sinaptik benzerlik",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Salıverilme",
+     "metin": "Kalsiyum bağımlılığı: Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için, sürecin hücre içine Ca²⁺ girişine bağımlı olup olmadığı değerlendirilir. — öğrenci notu: kalsiyum bağımlılığı maddesi sarı fosforlu işaretli",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Sinaptik benzerlik",
+     "metin": "Hiyerarşik sistemler duyusal algılama ve motor kontrolde doğrudan yer alan tüm yolakları kapsamaktadır. — öğrenci notu: hiyerarşik sistem tanımı sarı fosforlu işaretli",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "✓Duyusal sistemlerde bilgi, kortekse giden yol üzerindeki her bir",
+     "metin": "Hücrelerden salıverilen eksitatör transmitter çoğunlukla glutamattır. — öğrenci notu: madde imi pembe daire içinde; üstünde pembe çarpı ve el yazısı 'önemli'; 'eksitatör transmitter' pembe çizgiyle altı çizili, maddenin tamamı sarı fosforlu; sonunda pembe çarpı işareti",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "✓Lokal devre nöronları tipik olarak, projeksiyon nöronlarından daha",
+     "metin": "Bu nöronların çoğu inhibitördür ve GABA veya glisin salıverirler. — öğrenci notu: lokal devre nöronlarının inhibitör olması ve GABA/glisin salması sarı fosforlu işaretli",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "31",
+     "metin": "31 — öğrenci notu: pembe el yazısı, şeklin sağında, pembe elips ve çarpı ile çevrili: 'önemli' (Şekil 21-6: A lokal devre nöronları, tekrarlayan ve ileriye yönelik yolaklar; B aksoaksonik etkileşim)",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "✓Hiyerarşik sinir sistemlerinde sinaptik bağlantılar büyük çeşitlilik",
+     "metin": "Örn., pikrotoksin gibi bir ilaç ile GABAA reseptörlerinin selektif olarak bloke edilmesi jeneralize konvülsiyonlara yol açar. — öğrenci notu: madde imi pembe daire içinde; cümle sarı fosforlu işaretli",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "✓Bu aksonlar ince ve miyelinsiz olduklarından, iletimleri çok yavaştır",
+     "metin": "Bu aksonlar ince ve miyelinsiz olduklarından, iletimleri çok yavaştır (yaklaşık 0,5 m/sn). — öğrenci notu: madde imi pembe daire içinde; 'ince', 'miyelinsiz' koyu ve 'çok yavaştır (yaklaşık 0,5 m/sn)' sarı fosforlu",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "✓Yaygın nöronal sistemler tarafından kullanılan noradrenalin dahil çoğu",
+     "metin": "Yaygın nöronal sistemler tarafından kullanılan noradrenalin dahil çoğu nörotransmitter, metabotropik reseptörler üzerine etkir ve böylece uzun süren sinaptik etkileri başlatırlar. — öğrenci notu: madde imi pembe daire içinde; 'metabotropik reseptörler' ve 'uzun süren sinaptik etkileri' sarı fosforlu",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "A. Glutamat",
+     "metin": "A. Glutamat — öğrenci notu: pembe el yazısı, 'A. Glutamat' başlığının üstünde: 'önemli'",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "✓Test edilen hemen hemen tüm nöronlar glutamat tarafından güçlü bir",
+     "metin": "Test edilen hemen hemen tüm nöronlar glutamat tarafından güçlü bir şekilde eksite edilirler. — öğrenci notu: madde imi pembe daire içinde, pembe çarpı; 'hemen hemen tüm nöronlar' pembe çizgiyle altı çizili",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "✓Kainat reseptörleri AMPA reseptörleri kadar uniform dağılmazlar;",
+     "metin": "AMPA reseptörlerine benzer şekilde, kainat reseptörleri Na⁺ ve K⁺'a geçirgendirler ve bazı alt-birim kombinasyonları Ca²⁺'a geçirgendir. — öğrenci notu: madde imi pembe daire içinde, çarpı işareti; 'bazı alt-birim kombinasyonları' pembe daire/çarpı ile çevrili; 'Ca2+'a geçirgendir' sarı fosforlu",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "✓AMPA ve kainat reseptörleri ile NMDA reseptörleri arasındaki",
+     "metin": "AMPA ve kainat reseptörleri ile NMDA reseptörleri arasındaki önemli farklardan biri, istirahat membran potansiyelinde gösterdikleri işlevsel yanıttır. — öğrenci notu: madde imi pembe daire içinde; 'AMPA ve kainat reseptörlerinin glutamat tarafından aktive edilmesi, iyon kanallarının açılmasını sağlar' kısmı sarı fosforlu ve pembe çizgiyle altı çizili; sağda pembe ok ve içinde 'vs' yazılı daire (AMPA/kainat ile NMDA karşılaştırması)",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "✓Bu değişiklik saatlerce ve hatta günlerce sürebilir ve genellikle",
+     "metin": "postsinaptik — öğrenci notu: grup I reseptörler için 'postsinaptik' turuncu/koyu fosforlu işaretli; maddenin devamı sarı fosforlu (nonselektif katyon kanalı, nöronal eksitasyon, fosfolipaz C, inositol trifosfat, hücre içi Ca2+)",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "✓Bu reseptörlerin aktivasyonu Ca2+ kanallarının inhibisyonuna ve",
+     "metin": "✓Bu reseptörlerin aktivasyonu Ca2+ kanallarının inhibisyonuna ve — öğrenci notu: pembe el yazısı, 'B. GABA ve Glisin' başlığının üstünde pembe elips içinde: 'önemli'; başlık pembe çizgiyle üstü çizilmiş ve yanında pembe çarpı",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "✓Omuriliğe etkili güçlü bir konvülsan olan ve bazı sıçan zehirlerinde",
+     "metin": "Omuriliğe etkili güçlü bir konvülsan olan ve bazı sıçan zehirlerinde kullanılan striknin, glisin reseptörlerini selektif olarak bloke eder. — öğrenci notu: madde imi pembe daire içinde; 'striknin, glisin reseptörlerini selektif olarak bloke eder' koyu sarı fosforlu",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "✓GABAB reseptörleri antispastik ilaç baklofen tarafından selektif",
+     "metin": "GABAB reseptörleri antispastik ilaç baklofen tarafından selektif olarak aktive edilen metabotropik reseptörlerdir. — öğrenci notu: madde imi pembe daire içinde; 'baklofen' altı çizili, 'metabotropik reseptörlerdir' altı çizili, 'Ca2+' kırmızı çizgiyle altı çizili; metin sarı fosforlu",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Monoamin Nörotransmitterler",
+     "metin": "Kokain dopamin ve noradrenalin geri- alımını bloke ederken, amfetaminler presinaptik terminallerden transmitterlerin salıvermesine neden olur. — öğrenci notu: kokain ve amfetamin cümlesi sarı fosforlu işaretli",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "B. Noradrenalin (Norepinefrin)",
+     "metin": "B. Noradrenalin (Norepinefrin) — öğrenci notu: pembe el yazısı, 'B. Noradrenalin' başlığının yanında ok ile: 'Yavaş etki'",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "C. 5-Hidroksitriptamin",
+     "metin": "5-HT₃ reseptörler hariç, tümü metabotropiktir. — öğrenci notu: madde imi pembe daire içinde, yanında pembe işaretler; cümle koyu sarı fosforlu, 'İyonotropik 5-HT₃' pembe çizgiyle altı çizili",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "D. Histamin",
+     "metin": "yalnızca posterior hipotalamustaki tuberomammiller nükleustaki (TMN) nöronlar tarafından üretilir — öğrenci notu: histaminin yalnızca TMN nöronlarında üretilmesi sarı fosforlu işaretli ('yalnızca' turuncu/koyu)",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Nöropeptidler",
+     "metin": "Opioid peptidler (örn, enkefalinler, endorfinler), nörotensin, madde P, somatostatin, kolesistokinin, vazoaktif intestinal polipeptid, nöropeptid Y ve tirotropin salgılatıcı hormon — öğrenci notu: madde imi pembe daire içine alınmış (sayfada başka işaret yok)",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "✓Küçük sinaptik veziküllerde paketlenmiş klasik nörotransmitterlerin",
+     "metin": "Çoğu nöropeptid reseptörü metabotropiktir — öğrenci notu: nöropeptid reseptörlerinin metabotropik olması sarı fosforlu işaretli",
+     "s": [
+      50
+     ]
+    },
+    {
+     "baslik": "✓Bu nedenle, nöropeptidler ve reseptörleri ilaç keşif çabalarının aktif",
+     "metin": "P maddesidir — öğrenci notu: 'P maddesidir' sarı fosforlu işaretli",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "✓Madde P, MSS'nin ağrı yollarıyla ilgisi olmayan birçok bölgesinde",
+     "metin": "peptid nörotransmitterlerdir — öğrenci notu: 'peptid nörotransmitterlerdir' sarı fosforlu işaretli",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "✓Oreksin nöronları ayrıca glutamat salgılar ve bu nedenle uyarıcıdır.",
+     "metin": "Oreksin nöronları ayrıca glutamat salgılar ve bu nedenle uyarıcıdır. — öğrenci notu: oreksin–glutamat–uyarıcı maddesi sarı fosforlu işaretli ('glutamat' koyu)",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Diğer Sinyal Maddeleri",
+     "metin": "kannabinoid reseptörünü (CB₁) — öğrenci notu: spesifik kannabinoid reseptörü CB1 sarı fosforlu işaretli",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "✓Postsinaptik nörondan salıverilirler, sinaps boyunca geriye doğru yol",
+     "metin": "bellek, kognisyon — öğrenci notu: 'bellek, kognisyon (bilişsel; algı; hatırlama...)' ve 've ağrı algılamasını bu mekanizmayla' sarı fosforlu işaretli; şekil (CB1, 2-AG, DAG lipaz, PLC, mGluR1/5) üzerinde işaret yok",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "B. Nitrik Oksit",
+     "metin": "nitrik oksit sentaz (NOS) — öğrenci notu: NOS sarı fosforlu işaretli",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "C. Purinler",
+     "metin": "adenozin ve ATP gibi moleküllere duyarlıdır — öğrenci notu: purin reseptörleri–adenozin ve ATP ile 'yüksek konsantrasyonlarda ATP katekolaminerjik sinaptik veziküllerde bulunur' sarı fosforlu işaretli",
+     "s": [
+      57
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "✓Merkezi sinir sisteminde (MSS) etkili ilaçlar, eski çağlarda insanlar: Doğal transmitterleri taklit eden agonistler ve antagonistler bu tip — öğrenci notu: son madde sarı fosforlu kalemle işaretlenmiş (agonist ve antagonist sözcükleri kırmızı yazılı).",
+    "✓Klinik etkinliği bilinen ilaçların etkilerinin aydınlatılması hastalık: Çeşitli agonist ve antagonistlerin ϒ-aminobütirik asit (GABA) — öğrenci notu: GABA'yı anlatan madde sarı fosforlu işaretli.",
+    "✓İnsan beyni, çeşitli destekleyici glial hücrelerle çevrili yaklaşık 100: Nöronlar, elektrokimyasal bir süreçle bilgiyi işleyen ve ileten elektriksel olarak uyarılabilir hücrelerdir. — öğrenci notu: nöron tanımı sarı fosforlu işaretli.",
+    "✓Nöroglia: Astrositler beyindeki en bol bulunan hücrelerdir — öğrenci notu: astrosit tanımı sarı fosforlu işaretli.",
+    "✓Oligodendrositler, MSS'deki projeksiyon nöronlarının aksonlarını saran: Oligodendrositler, MSS'deki projeksiyon nöronlarının aksonlarını saran ve miyelin kılıfı oluşturan hücrelerdir. — öğrenci notu: oligodendrosit tanımı sarı fosforlu işaretli.",
+    "✓Kan-Beyin Bariyeri: İlaçların MSS'ye ulaşabilmesi için genellikle yeterli lipofilikliğe sahip olması veya özgül taşıma mekanizmalarından yararlanması gerekir. — öğrenci notu: lipofiliklik ve özgül taşıma maddesinin tamamı sarı fosforlu işaretli, 'lipofilikliğe' sözcüğünde koyu işaret ve yanında pembe çarpı.",
+    "✓Glikoz ve esansiyel amino asitler gibi birçok madde, özgül taşıyıcı: özgül taşıyıcı — öğrenci notu: 'özgül taşıyıcı' sarı fosforlu işaretli.",
+    "İyon Kanalları ve: İyon Kanalları ve — öğrenci notu: pembe el yazısı, başlığın üstünde, ilk maddeye ok: 'herhangi bir madde ile açılır kapanır' (ligand bağımlı kanalı anlatıyor).",
+    "✓Bazı potasyum (K⁺) kanalları, membran depolarizasyonuyla açılır ve: Bazı potasyum (K⁺) kanalları, membran depolarizasyonuyla açılır ve potasyum iyonlarının hücre dışına çıkmasını sağlar. — öğrenci notu: K+ kanalı maddesinin tamamı sarı fosforlu işaretli.",
+    "✓İyonotropik reseptörler, birden fazla alt birimden oluşur.: doğrudan açar veya kapatır — öğrenci notu: 'doğrudan açar veya kapatır' sarı fosforlu işaretli.",
+    "✓Nörotransmitter reseptörlerinin ikinci sınıfı metabotropik: ikinci sınıfı metabotropik reseptörler — öğrenci notu: 'ikinci sınıfı metabotropik reseptörler' sarı fosforlu işaretli.",
+    "✓Bu etkileşimde başlıca hedefler voltaj bağımlı kalsiyum (Ca²⁺) ve: voltaj bağımlı kalsiyum (Ca²⁺) ve potasyum (K⁺) kanallarıdır — öğrenci notu: hedef kanalların (Ca2+ ve K+) adı sarı fosforlu işaretli.",
+    "✓Metabotropik reseptörler postsinaptik bölgede bulunduğunda,: Metabotropik reseptörler postsinaptik bölgede bulunduğunda, potasyum (K⁺) kanallarını aktive ederek açılmalarını sağlar. — öğrenci notu: postsinaptik metabotropik reseptör–K+ kanalı maddesi sarı fosforlu işaretli.",
+    "✓Membranla sınırlı etkiler, reseptörün bulunduğu membran bölgesinde: İyonotropik reseptörler milisaniyeler içinde ortaya çıkan hızlı ve kısa süreli etkiler oluştururken — öğrenci notu: madde imi pembe daire içinde; yanında pembe çarpı/ok ve el yazısı: 'Sınavda çıkabilir'.",
+    "18: 18 — öğrenci notu: şekilde A, B, C ve D harfleri pembe daire içine alınmış: A voltaj bağımlı kanal, B ligand bağımlı iyonotropik kanal, C membrana sınırlı metabotropik kanal (G proteini–iyon kanalı), D difüze olabilen ikinci ulaklı metabotropik kanal (G protein–enzim–cAMP vb.).",
+    "Sinaps ve Sinaptik Potansiyeller: kanal bloke edici ajanlara (verapamil vb.) genellikle dirençlidir — öğrenci notu: transmitter salıverilmesinden sorumlu Ca kanallarının verapamile dirençli olması sarı fosforlu işaretli.",
+    "✓Transmitterin reseptörüne bağlanması postsinaptik hücre: Eksitatör bir yolak aktive edildiğinde küçük bir depolarizasyon ya da eksitatör postsinaptik potansiyel (EPSP) kaydedilir. — öğrenci notu: EPSP maddesinin imi pembe daire içinde, ilk yarısı siyah çizgiyle altı çizili, 'eksitatör postsinaptik potansiyel' sarı fosforlu.",
+    "✓Sonuç olarak, istirahat durumunda aksiyon potansiyeli: ✓Sonuç olarak, istirahat durumunda aksiyon potansiyeli — öğrenci notu: pembe el yazısı, şeklin solunda: 'Çok önemli değil ?' (EPSP/IPSP toplamı şekli için; soru işaretli).",
+    "İlaç Etki Yerleri: Presinaptik etkiler nörotransmitterlerin sentezini, depolanmasını, salınmasını veya geri alımını — öğrenci notu: madde imi pembe daire içinde, yanında pembe tik/çarpı ve el yazısı 'Dört aşama?'.",
+    "✓Presinaptik etkili ilaçlar, nörotransmitterlerin sentezini,: ✓Presinaptik etkili ilaçlar, nörotransmitterlerin sentezini, — öğrenci notu: pembe el yazısı, ikinci maddenin üstünde, pembe ok/çizgi ile rezerpine bağlı: 'Çıkabilir bazen'.",
+    "✓Bir nörotransmitter sinaptik aralığa salındıktan sonra etkisi, geri: geri alım (reuptake) veya enzimatik yıkım yoluyla sonlandırılır — öğrenci notu: geri alım ve enzimatik yıkım sarı fosforlu işaretli.",
+    "✓Reseptör antagonizması MSS’yi etkileyen ilaçların yaygın etki: striknin, inhibitör nörotransmitter olan glisinin reseptörlerini bloke ederek sinir sistemindeki inhibisyonu azaltır ve aşırı nöronal uyarılmaya neden olabilir — öğrenci notu: striknin–glisin reseptörü maddesi sarı fosforlu işaretli ('striknin' sözcüğü kırmızı yazılı).",
+    "Santral Nörotransmitterlerin Belirlenmesi: Çıkmış (dogrudan): lokalizasyon, salıverilme ve sinaptik benzerlik.",
+    "Salıverilme: Kalsiyum bağımlılığı: Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için, sürecin hücre içine Ca²⁺ girişine bağımlı olup olmadığı değerlendirilir. — öğrenci notu: kalsiyum bağımlılığı maddesi sarı fosforlu işaretli.",
+    "Sinaptik benzerlik: Hiyerarşik sistemler duyusal algılama ve motor kontrolde doğrudan yer alan tüm yolakları kapsamaktadır. — öğrenci notu: hiyerarşik sistem tanımı sarı fosforlu işaretli.",
+    "✓Duyusal sistemlerde bilgi, kortekse giden yol üzerindeki her bir: Hücrelerden salıverilen eksitatör transmitter çoğunlukla glutamattır. — öğrenci notu: madde imi pembe daire içinde; üstünde pembe çarpı ve el yazısı 'önemli'; 'eksitatör transmitter' pembe çizgiyle altı çizili, maddenin tamamı sarı fosforlu; sonunda pembe çarpı işareti.",
+    "✓Lokal devre nöronları tipik olarak, projeksiyon nöronlarından daha: Bu nöronların çoğu inhibitördür ve GABA veya glisin salıverirler. — öğrenci notu: lokal devre nöronlarının inhibitör olması ve GABA/glisin salması sarı fosforlu işaretli.",
+    "31: 31 — öğrenci notu: pembe el yazısı, şeklin sağında, pembe elips ve çarpı ile çevrili: 'önemli' (Şekil 21-6: A lokal devre nöronları, tekrarlayan ve ileriye yönelik yolaklar; B aksoaksonik etkileşim).",
+    "✓Hiyerarşik sinir sistemlerinde sinaptik bağlantılar büyük çeşitlilik: Örn., pikrotoksin gibi bir ilaç ile GABAA reseptörlerinin selektif olarak bloke edilmesi jeneralize konvülsiyonlara yol açar. — öğrenci notu: madde imi pembe daire içinde; cümle sarı fosforlu işaretli.",
+    "✓Bu aksonlar ince ve miyelinsiz olduklarından, iletimleri çok yavaştır: Bu aksonlar ince ve miyelinsiz olduklarından, iletimleri çok yavaştır (yaklaşık 0,5 m/sn). — öğrenci notu: madde imi pembe daire içinde; 'ince', 'miyelinsiz' koyu ve 'çok yavaştır (yaklaşık 0,5 m/sn)' sarı fosforlu.",
+    "✓Yaygın nöronal sistemler tarafından kullanılan noradrenalin dahil çoğu: Yaygın nöronal sistemler tarafından kullanılan noradrenalin dahil çoğu nörotransmitter, metabotropik reseptörler üzerine etkir ve böylece uzun süren sinaptik etkileri başlatırlar. — öğrenci notu: madde imi pembe daire içinde; 'metabotropik reseptörler' ve 'uzun süren sinaptik etkileri' sarı fosforlu.",
+    "A. Glutamat: A. Glutamat — öğrenci notu: pembe el yazısı, 'A. Glutamat' başlığının üstünde: 'önemli'.",
+    "✓Test edilen hemen hemen tüm nöronlar glutamat tarafından güçlü bir: Test edilen hemen hemen tüm nöronlar glutamat tarafından güçlü bir şekilde eksite edilirler. — öğrenci notu: madde imi pembe daire içinde, pembe çarpı; 'hemen hemen tüm nöronlar' pembe çizgiyle altı çizili.",
+    "✓Kainat reseptörleri AMPA reseptörleri kadar uniform dağılmazlar;: AMPA reseptörlerine benzer şekilde, kainat reseptörleri Na⁺ ve K⁺'a geçirgendirler ve bazı alt-birim kombinasyonları Ca²⁺'a geçirgendir. — öğrenci notu: madde imi pembe daire içinde, çarpı işareti; 'bazı alt-birim kombinasyonları' pembe daire/çarpı ile çevrili; 'Ca2+'a geçirgendir' sarı fosforlu.",
+    "✓AMPA ve kainat reseptörleri ile NMDA reseptörleri arasındaki: AMPA ve kainat reseptörleri ile NMDA reseptörleri arasındaki önemli farklardan biri, istirahat membran potansiyelinde gösterdikleri işlevsel yanıttır. — öğrenci notu: madde imi pembe daire içinde; 'AMPA ve kainat reseptörlerinin glutamat tarafından aktive edilmesi, iyon kanallarının açılmasını sağlar' kısmı sarı fosforlu ve pembe çizgiyle altı çizili; sağda pembe ok ve içinde 'vs' yazılı daire (AMPA/kainat ile NMDA karşılaştırması).",
+    "✓Bu değişiklik saatlerce ve hatta günlerce sürebilir ve genellikle: postsinaptik — öğrenci notu: grup I reseptörler için 'postsinaptik' turuncu/koyu fosforlu işaretli; maddenin devamı sarı fosforlu (nonselektif katyon kanalı, nöronal eksitasyon, fosfolipaz C, inositol trifosfat, hücre içi Ca2+).",
+    "✓Bu reseptörlerin aktivasyonu Ca2+ kanallarının inhibisyonuna ve: ✓Bu reseptörlerin aktivasyonu Ca2+ kanallarının inhibisyonuna ve — öğrenci notu: pembe el yazısı, 'B. GABA ve Glisin' başlığının üstünde pembe elips içinde: 'önemli'; başlık pembe çizgiyle üstü çizilmiş ve yanında pembe çarpı.",
+    "✓Omuriliğe etkili güçlü bir konvülsan olan ve bazı sıçan zehirlerinde: Omuriliğe etkili güçlü bir konvülsan olan ve bazı sıçan zehirlerinde kullanılan striknin, glisin reseptörlerini selektif olarak bloke eder. — öğrenci notu: madde imi pembe daire içinde; 'striknin, glisin reseptörlerini selektif olarak bloke eder' koyu sarı fosforlu.",
+    "✓GABAB reseptörleri antispastik ilaç baklofen tarafından selektif: GABAB reseptörleri antispastik ilaç baklofen tarafından selektif olarak aktive edilen metabotropik reseptörlerdir. — öğrenci notu: madde imi pembe daire içinde; 'baklofen' altı çizili, 'metabotropik reseptörlerdir' altı çizili, 'Ca2+' kırmızı çizgiyle altı çizili; metin sarı fosforlu.",
+    "Monoamin Nörotransmitterler: Kokain dopamin ve noradrenalin geri- alımını bloke ederken, amfetaminler presinaptik terminallerden transmitterlerin salıvermesine neden olur. — öğrenci notu: kokain ve amfetamin cümlesi sarı fosforlu işaretli.",
+    "B. Noradrenalin (Norepinefrin): B. Noradrenalin (Norepinefrin) — öğrenci notu: pembe el yazısı, 'B. Noradrenalin' başlığının yanında ok ile: 'Yavaş etki'.",
+    "C. 5-Hidroksitriptamin: 5-HT₃ reseptörler hariç, tümü metabotropiktir. — öğrenci notu: madde imi pembe daire içinde, yanında pembe işaretler; cümle koyu sarı fosforlu, 'İyonotropik 5-HT₃' pembe çizgiyle altı çizili.",
+    "D. Histamin: yalnızca posterior hipotalamustaki tuberomammiller nükleustaki (TMN) nöronlar tarafından üretilir — öğrenci notu: histaminin yalnızca TMN nöronlarında üretilmesi sarı fosforlu işaretli ('yalnızca' turuncu/koyu).",
+    "Nöropeptidler: Opioid peptidler (örn, enkefalinler, endorfinler), nörotensin, madde P, somatostatin, kolesistokinin, vazoaktif intestinal polipeptid, nöropeptid Y ve tirotropin salgılatıcı hormon — öğrenci notu: madde imi pembe daire içine alınmış (sayfada başka işaret yok).",
+    "✓Küçük sinaptik veziküllerde paketlenmiş klasik nörotransmitterlerin: Çoğu nöropeptid reseptörü metabotropiktir — öğrenci notu: nöropeptid reseptörlerinin metabotropik olması sarı fosforlu işaretli.",
+    "✓Bu nedenle, nöropeptidler ve reseptörleri ilaç keşif çabalarının aktif: P maddesidir — öğrenci notu: 'P maddesidir' sarı fosforlu işaretli.",
+    "✓Madde P, MSS'nin ağrı yollarıyla ilgisi olmayan birçok bölgesinde: peptid nörotransmitterlerdir — öğrenci notu: 'peptid nörotransmitterlerdir' sarı fosforlu işaretli.",
+    "✓Oreksin nöronları ayrıca glutamat salgılar ve bu nedenle uyarıcıdır.: Oreksin nöronları ayrıca glutamat salgılar ve bu nedenle uyarıcıdır. — öğrenci notu: oreksin–glutamat–uyarıcı maddesi sarı fosforlu işaretli ('glutamat' koyu).",
+    "Diğer Sinyal Maddeleri: kannabinoid reseptörünü (CB₁) — öğrenci notu: spesifik kannabinoid reseptörü CB1 sarı fosforlu işaretli.",
+    "✓Postsinaptik nörondan salıverilirler, sinaps boyunca geriye doğru yol: bellek, kognisyon — öğrenci notu: 'bellek, kognisyon (bilişsel; algı; hatırlama...)' ve 've ağrı algılamasını bu mekanizmayla' sarı fosforlu işaretli; şekil (CB1, 2-AG, DAG lipaz, PLC, mGluR1/5) üzerinde işaret yok.",
+    "B. Nitrik Oksit: nitrik oksit sentaz (NOS) — öğrenci notu: NOS sarı fosforlu işaretli.",
+    "C. Purinler: adenozin ve ATP gibi moleküllere duyarlıdır — öğrenci notu: purin reseptörleri–adenozin ve ATP ile 'yüksek konsantrasyonlarda ATP katekolaminerjik sinaptik veziküllerde bulunur' sarı fosforlu işaretli."
+   ],
+   "v": "060514bbc7"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmışlarda striknin, kalsiyumun vezikül kaynaşması, asetilkolinin esterazla yıkımı, nörotransmitter ölçütleri ve MSS ilaçlarının genel çerçevesi sorulmuştur. Hoca iyonotropik–metabotropik ayrımını, glutamat reseptörlerini, rezerpini ve endokannabinoidleri sınav konusu olarak vurgulamıştır.",
+   "maddeler": [
+    {
+     "baslik": "Striknin: glisin reseptörü blokajı",
+     "metin": "Striknin glisin reseptörlerini selektif olarak bloke eden, omuriliğe etkili güçlü bir konvülsandır ve bazı sıçan zehirlerinde kullanılır.",
+     "neden": "2018-2019 ve 2019-2020 sınavlarında 'glisin reseptörünü bloke eden toksin' ve 'striknin hangi nöromediyatörü bloke eder' diye soruldu; hoca 'bazı sınavlarda çıkıyor' dedi, öğrenci notunda aynı ifade yazılı.",
+     "s": [
+      43
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Sinir ucunda kalsiyum ve transmitter salıverilmesi",
+     "metin": "Aksiyon potansiyeli terminaldeki voltaja duyarlı kalsiyum kanallarını aktive eder; sinir ucundaki artmış kalsiyum sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar.",
+     "neden": "2020-2021 sınavında soruldu; hocanın tüm çıkmışlar derlemesinde aynı soru dört ayrı sınav sayfasında yer alıyor. Öğrenci notunda kalsiyum girişi–vezikül kaynaşması maddesi sarı ve koyu işaretli.",
+     "s": [
+      19
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Asetilkolinin etkisinin sonlanması",
+     "metin": "Asetilkolinin etkisi geri alımla değil, esas olarak asetilkolinesteraz enzimiyle parçalanmasıyla sonlanır; antikolinesterazlar bu enzimi inhibe eder.",
+     "neden": "2019-2020 sınavında 'sinaptik aralıkta esteraz enzimiyle yıkılan nörotransmitter hangisidir' diye soruldu; diğer seçenekler serotonin, dopamin, adrenalin ve histamindir. Öğrenci notunda asetilkolinesteraz koyu işaretli.",
+     "s": [
+      24
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Nörotransmitter sayılmanın üç ölçütü",
+     "metin": "Bir maddenin nörotransmitter sayılması için lokalizasyon, salıverilme ve sinaptik benzerlik ölçütleri değerlendirilir.",
+     "neden": "2018-2019 sınavında 'nörotransmitterlerin belirlenmesinde hangileri etkindir' diye soruldu; aksiyon potansiyeli klasik çeldiricidir ve bir ölçüt değildir.",
+     "s": [
+      26
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "MSS ilaçlarının ortak etki yeri: sinaptik iletim",
+     "metin": "MSS ilaçlarının neredeyse tümü sinaptik iletiyi değiştiren spesifik reseptörlere etki eder; reseptör aracılı olmayan alkol ve genel anestezikler de sinaptik iletiyi değiştirir.",
+     "neden": "2018-2019 sınavında öncüllü soru olarak soruldu; 'alkol ve genel anestezikler membranlarda nonspesifik etki gösterir' ve 'sinapsların önemi' ifadeleri öncüllerde birlikte doğru kabul edilir.",
+     "s": [
+      2
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "İyonotropik ve metabotropik etkinin hızı ve süresi",
+     "metin": "İyonotropik reseptörler milisaniyelerde ortaya çıkan hızlı ve kısa süreli etkiler oluşturur; metabotropik reseptörlerin etkileri onlarca saniye ya da dakikalar sürebilir.",
+     "neden": "Hoca 'bütün bunları öğrenin, sınavlarda çıkabilir' dedi; öğrenci iki maddeyi daire içine alıp 'Sınavda çıkabilir' ve 'yavaş etki' yazmış.",
+     "s": [
+      17
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Rezerpin ve veziküler depolama",
+     "metin": "Rezerpin veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla bu nörotransmitterleri tüketir.",
+     "neden": "Hoca 'rezerpin, bazen sınavda çıkabilir' dedi; öğrenci cümlenin yanına 'Çıkabilir bazen' yazmış.",
+     "s": [
+      23
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "NMDA reseptörü: Mg2+ bloğu ve LTP",
+     "metin": "AMPA ve kainat kanalları glutamatla açılırken NMDA kanalı istirahatte Mg2+ ile bloke olduğu için açılması için glutamat bağlanması ve membran depolarizasyonu birlikte gerekir.",
+     "neden": "Hoca 'AMPA ve kainat glutamatla iyon kanalını açar; bu bazen sorulabilir, çoğunlukla çıkan bir konudur' dedi; öğrenci notunda NMDA Mg2+ bloğu çerçeveli ve LTP maddesi koyu işaretli.",
+     "s": [
+      40
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmışlarda striknin, kalsiyumun vezikül kaynaşması, asetilkolinin esterazla yıkımı, nörotransmitter ölçütleri ve MSS ilaçlarının genel çerçevesi sorulmuştur. Hoca iyonotropik–metabotropik ayrımını, glutamat reseptörlerini, rezerpini ve endokannabinoidleri sınav konusu olarak vurgulamıştır.",
+    "Striknin: glisin reseptörü blokajı: Striknin glisin reseptörlerini selektif olarak bloke eden, omuriliğe etkili güçlü bir konvülsandır ve bazı sıçan zehirlerinde kullanılır.",
+    "Sinir ucunda kalsiyum ve transmitter salıverilmesi: Aksiyon potansiyeli terminaldeki voltaja duyarlı kalsiyum kanallarını aktive eder; sinir ucundaki artmış kalsiyum sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar.",
+    "Asetilkolinin etkisinin sonlanması: Asetilkolinin etkisi geri alımla değil, esas olarak asetilkolinesteraz enzimiyle parçalanmasıyla sonlanır; antikolinesterazlar bu enzimi inhibe eder.",
+    "Nörotransmitter sayılmanın üç ölçütü: Bir maddenin nörotransmitter sayılması için lokalizasyon, salıverilme ve sinaptik benzerlik ölçütleri değerlendirilir.",
+    "MSS ilaçlarının ortak etki yeri: sinaptik iletim: MSS ilaçlarının neredeyse tümü sinaptik iletiyi değiştiren spesifik reseptörlere etki eder; reseptör aracılı olmayan alkol ve genel anestezikler de sinaptik iletiyi değiştirir.",
+    "İyonotropik ve metabotropik etkinin hızı ve süresi: İyonotropik reseptörler milisaniyelerde ortaya çıkan hızlı ve kısa süreli etkiler oluşturur; metabotropik reseptörlerin etkileri onlarca saniye ya da dakikalar sürebilir.",
+    "Rezerpin ve veziküler depolama: Rezerpin veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla bu nörotransmitterleri tüketir.",
+    "NMDA reseptörü: Mg2+ bloğu ve LTP: AMPA ve kainat kanalları glutamatla açılırken NMDA kanalı istirahatte Mg2+ ile bloke olduğu için açılması için glutamat bağlanması ve membran depolarizasyonu birlikte gerekir."
+   ],
+   "v": "c9753a87b0"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 6 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2018-2019",
+     "metin": "SSS ilaçları hakkında genel olarak aşağıdaki ifadeler veriliyor: I. Bu ilaçların çoğu sinaptik iletiyi modüle eder. II. Bu ilaçlar SSS'nin bütün fizyolojik mekanizmalarını değiştirme, yönlendirme ya da bloke etme gücüne sahiptirler. III. Alkol ve genel anestezik ajanlar membranlar üzerinde nonspesifik etkilere sahiptirler. IV. Bu ilaçların bilinmesinde sinapsların önemli rolü olmuştur. Bu ifadelerden hangisi/hangileri doğrudur?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Lokalizasyon II. Sekresyon III. Sinaptik benzerlik IV. Aksiyon potansiyeli SSS'de nörotransmitterlerin belirlenmesinde yukarıdakilerden hangisi/hangileri etkindir?",
+     "cevap": "I, II ve III",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Striknin aşağıdaki nöromediyatörlerden hangisinin etkisini bloke etmek suretiyle konvülsiyona neden olur?",
+     "cevap": "Glisin",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdaki toksinlerden hangisi santral sinir sisteminde glisin reseptörlerini bloke eder?",
+     "cevap": "Striknin",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi santral ve periferik sinir sisteminde sinaptik aralıkta esteraz enzimi tarafından yıkımlanır?",
+     "cevap": "Asetilkolin",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Sinir ucundaki artmış kalsiyum konsantrasyonu aşağıdaki olaylardan hangisinin gerçekleşmesini sağlar?",
+     "cevap": "Sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar",
+     "s": [
+      19
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 6 çıkmış soru var.",
+    "2018-2019: SSS ilaçları hakkında genel olarak aşağıdaki ifadeler veriliyor: I. Bu ilaçların çoğu sinaptik iletiyi modüle eder. II. Bu ilaçlar SSS'nin bütün fizyolojik mekanizmalarını değiştirme, yönlendirme ya da bloke etme gücüne sahiptirler. III. Alkol ve genel anestezik ajanlar membranlar üzerinde nonspesifik etkilere sahiptirler. IV. Bu ilaçların bilinmesinde sinapsların önemli rolü olmuştur. Bu ifadelerden hangisi/hangileri doğrudur?",
+    "Cevap: I, II, III ve IV.",
+    "2018-2019: I. Lokalizasyon II. Sekresyon III. Sinaptik benzerlik IV. Aksiyon potansiyeli SSS'de nörotransmitterlerin belirlenmesinde yukarıdakilerden hangisi/hangileri etkindir?",
+    "Cevap: I, II ve III.",
+    "2018-2019: Striknin aşağıdaki nöromediyatörlerden hangisinin etkisini bloke etmek suretiyle konvülsiyona neden olur?",
+    "Cevap: Glisin.",
+    "2019-2020: Aşağıdaki toksinlerden hangisi santral sinir sisteminde glisin reseptörlerini bloke eder?",
+    "Cevap: Striknin.",
+    "2019-2020: Aşağıdakilerden hangisi santral ve periferik sinir sisteminde sinaptik aralıkta esteraz enzimi tarafından yıkımlanır?",
+    "Cevap: Asetilkolin.",
+    "2020-2021: Sinir ucundaki artmış kalsiyum konsantrasyonu aşağıdaki olaylardan hangisinin gerçekleşmesini sağlar?",
+    "Cevap: Sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar."
+   ],
+   "v": "cb7af2145b"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok mekanizma (%62) ve tanım ve kavram (%15) sorulur."
+    },
+    {
+     "baslik": "Mekanizma",
+     "metin": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%77) ve hatırlama (%23) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir.",
+    "Sorulan bilgi: En çok mekanizma (%62) ve tanım ve kavram (%15) sorulur.",
+    "Mekanizma: Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%77) ve hatırlama (%23) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor."
+   ],
+   "v": "3a8df24ba1"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Striknin: glisin reseptörü blokajı",
+     "metin": "2018-2019 ve 2019-2020 sınavlarında 'glisin reseptörünü bloke eden toksin' ve 'striknin hangi nöromediyatörü bloke eder' diye soruldu; hoca 'bazı sınavlarda çıkıyor' dedi, öğrenci notunda aynı ifade yazılı."
+    },
+    {
+     "baslik": "Sinir ucunda kalsiyum ve transmitter salıverilmesi",
+     "metin": "2020-2021 sınavında soruldu; hocanın tüm çıkmışlar derlemesinde aynı soru dört ayrı sınav sayfasında yer alıyor. Öğrenci notunda kalsiyum girişi–vezikül kaynaşması maddesi sarı ve koyu işaretli."
+    },
+    {
+     "baslik": "Asetilkolinin etkisinin sonlanması",
+     "metin": "2019-2020 sınavında 'sinaptik aralıkta esteraz enzimiyle yıkılan nörotransmitter hangisidir' diye soruldu; diğer seçenekler serotonin, dopamin, adrenalin ve histamindir. Öğrenci notunda asetilkolinesteraz koyu işaretli."
+    },
+    {
+     "baslik": "Nörotransmitter sayılmanın üç ölçütü",
+     "metin": "2018-2019 sınavında 'nörotransmitterlerin belirlenmesinde hangileri etkindir' diye soruldu; aksiyon potansiyeli klasik çeldiricidir ve bir ölçüt değildir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta mekanizma bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Striknin: glisin reseptörü blokajı: 2018-2019 ve 2019-2020 sınavlarında 'glisin reseptörünü bloke eden toksin' ve 'striknin hangi nöromediyatörü bloke eder' diye soruldu; hoca 'bazı sınavlarda çıkıyor' dedi, öğrenci notunda aynı ifade yazılı.",
+    "Sinir ucunda kalsiyum ve transmitter salıverilmesi: 2020-2021 sınavında soruldu; hocanın tüm çıkmışlar derlemesinde aynı soru dört ayrı sınav sayfasında yer alıyor. Öğrenci notunda kalsiyum girişi–vezikül kaynaşması maddesi sarı ve koyu işaretli.",
+    "Asetilkolinin etkisinin sonlanması: 2019-2020 sınavında 'sinaptik aralıkta esteraz enzimiyle yıkılan nörotransmitter hangisidir' diye soruldu; diğer seçenekler serotonin, dopamin, adrenalin ve histamindir. Öğrenci notunda asetilkolinesteraz koyu işaretli.",
+    "Nörotransmitter sayılmanın üç ölçütü: 2018-2019 sınavında 'nörotransmitterlerin belirlenmesinde hangileri etkindir' diye soruldu; aksiyon potansiyeli klasik çeldiricidir ve bir ölçüt değildir.",
+    "Çalışma yolu: Okurken her başlıkta mekanizma bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "61acb4c6a3"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Merkezi sinir sistemi ilaçları etkilerini büyük ölçüde sinaptik iletiyi değiştirerek gösterir. Ders glia hücrelerini, kan-beyin bariyerini, iyon kanallarını, iyonotropik ve metabotropik reseptörleri, sinaptik iletimi ve nörotransmitter sınıflarını (glutamat, GABA, glisin, monoaminler, nöropeptidler, endokannabinoidler, nitrik oksit, purinler) anlatır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Merkezi sinir sistemi ilaçları etkilerini büyük ölçüde sinaptik iletiyi değiştirerek gösterir. Ders glia hücrelerini, kan-beyin bariyerini, iyon kanallarını, iyonotropik ve metabotropik reseptörleri, sinaptik iletimi ve nörotransmitter sınıflarını (glutamat, GABA, glisin, monoaminler, nöropeptidler, endokannabinoidler, nitrik oksit, purinler) anlatır."
+   ],
+   "v": "efc3225e3c"
+  },
+  {
+   "id": "2f02-01",
+   "baslik": "MSS ilaçlarının ortak etki yeri: sinaptik iletim",
+   "giris": "MSS ilaçlarının neredeyse tümü sinaptik iletiyi değiştiren spesifik reseptörlere etki eder; reseptör aracılı olmayan alkol ve genel anestezikler de sinaptik iletiyi değiştirir.",
+   "s": [
+    2
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "MSS'ye etkili neredeyse tüm ilaçlar sinaptik iletiyi modüle eden spesifik reseptörlere etki eder."
+    },
+    {
+     "metin": "Genel anestezikler ve alkol reseptör aracılı olmayan etkiler gösterir; buna rağmen bu etkiler bile sinaptik iletide gösterilebilir değişikliklere yol açar."
+    },
+    {
+     "metin": "MSS ilaçları etkilerini büyük ölçüde kimyasal sinaptik iletimin çeşitli basamaklarını değiştirerek gösterir."
+    },
+    {
+     "metin": "Klinik etkinliği bilinen ilaçların etkilerinin aydınlatılması, hastalık mekanizmalarıyla ilgili en verimli hipotezlerin bazılarının geliştirilmesine yol açmıştır."
+    },
+    {
+     "metin": "Doğal transmitterleri taklit eden agonistler ve antagonistler bu tür çalışmalarda oldukça yararlıdır."
+    },
+    {
+     "metin": "Grup, nörolojik ve psikiyatrik hastalıkların ilaçlarının yanında ağrıyı hafifleten, mide bulantısını bastıran ve ateşi düşüren ilaçları da içerir."
+    }
+   ],
+   "klip": "o-2f02-01",
+   "ses": [
+    "MSS ilaçlarının ortak etki yeri: sinaptik iletim.",
+    "MSS ilaçlarının neredeyse tümü sinaptik iletiyi değiştiren spesifik reseptörlere etki eder; reseptör aracılı olmayan alkol ve genel anestezikler de sinaptik iletiyi değiştirir.",
+    "MSS'ye etkili neredeyse tüm ilaçlar sinaptik iletiyi modüle eden spesifik reseptörlere etki eder.",
+    "Genel anestezikler ve alkol reseptör aracılı olmayan etkiler gösterir; buna rağmen bu etkiler bile sinaptik iletide gösterilebilir değişikliklere yol açar.",
+    "MSS ilaçları etkilerini büyük ölçüde kimyasal sinaptik iletimin çeşitli basamaklarını değiştirerek gösterir.",
+    "Klinik etkinliği bilinen ilaçların etkilerinin aydınlatılması, hastalık mekanizmalarıyla ilgili en verimli hipotezlerin bazılarının geliştirilmesine yol açmıştır.",
+    "Doğal transmitterleri taklit eden agonistler ve antagonistler bu tür çalışmalarda oldukça yararlıdır.",
+    "Grup, nörolojik ve psikiyatrik hastalıkların ilaçlarının yanında ağrıyı hafifleten, mide bulantısını bastıran ve ateşi düşüren ilaçları da içerir."
+   ],
+   "v": "a554e8e9ee"
+  },
+  {
+   "id": "2f02-08",
+   "baslik": "Nörotransmitter reseptörlerinin iki sınıfı",
+   "giris": "Nörotransmitterler etkilerini iki temel reseptör sınıfıyla oluşturur: iyonotropik (ligand bağımlı iyon kanalı) ve metabotropik reseptörler.",
+   "s": [
+    11
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Ligand bağımlı iyon kanalları, yani iyonotropik reseptörlerdir; nörotransmitterin bağlanması kanalı doğrudan açar veya kapatır."
+    },
+    {
+     "metin": "Metabotropik reseptörlerde bağlanma iyon kanalını doğrudan açmaz; genellikle G proteini aracılığıyla hücre içi sinyal iletim mekanizmalarını aktive eder."
+    },
+    {
+     "metin": "Bu mekanizmalar ikinci habercilerin üretimini sağlayabilir ya da iyon kanallarının işlevini doğrudan düzenleyebilir ve nöronun elektriksel aktivitesini değiştirir."
+    },
+    {
+     "metin": "Metabotropik reseptörler MSS'de yaygın olarak bulunur."
+    }
+   ],
+   "klip": "o-2f02-08",
+   "ses": [
+    "Nörotransmitter reseptörlerinin iki sınıfı.",
+    "Nörotransmitterler etkilerini iki temel reseptör sınıfıyla oluşturur: iyonotropik (ligand bağımlı iyon kanalı) ve metabotropik reseptörler.",
+    "Ligand bağımlı iyon kanalları, yani iyonotropik reseptörlerdir; nörotransmitterin bağlanması kanalı doğrudan açar veya kapatır.",
+    "Metabotropik reseptörlerde bağlanma iyon kanalını doğrudan açmaz; genellikle G proteini aracılığıyla hücre içi sinyal iletim mekanizmalarını aktive eder.",
+    "Bu mekanizmalar ikinci habercilerin üretimini sağlayabilir ya da iyon kanallarının işlevini doğrudan düzenleyebilir ve nöronun elektriksel aktivitesini değiştirir.",
+    "Metabotropik reseptörler MSS'de yaygın olarak bulunur."
+   ],
+   "v": "e9ab8124c7"
+  },
+  {
+   "id": "2f02-11",
+   "baslik": "İyonotropik ve metabotropik etkinin hızı ve süresi",
+   "giris": "İyonotropik reseptörler milisaniyelerde ortaya çıkan hızlı ve kısa süreli etkiler oluşturur; metabotropik reseptörlerin etkileri onlarca saniye ya da dakikalar sürebilir.",
+   "s": [
+    17
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Milisaniyeler içinde ortaya çıkan hızlı ve kısa süreli etkiler oluşturur."
+    },
+    {
+     "metin": "Etkileri onlarca saniye veya dakikalar boyunca devam edebilir; yavaş etkidir."
+    },
+    {
+     "metin": "Metabotropik reseptörler G proteinleri ve ikinci haberciler aracılığıyla çalışır; membranla sınırlı etkiler reseptörün bulunduğu bölgede kalırken ikinci haberciler hücre içinde daha uzak hedeflere ulaşır."
+    },
+    {
+     "metin": "MSS'de metabotropik reseptörler yaygın olarak bulunur."
+    },
+    {
+     "metin": "Metabotropik bağlanma iyon kanalını doğrudan açmaz; kanalın doğrudan açılması iyonotropik reseptörün özelliğidir."
+    }
+   ],
+   "klip": "o-2f02-11",
+   "ses": [
+    "İyonotropik ve metabotropik etkinin hızı ve süresi.",
+    "İyonotropik reseptörler milisaniyelerde ortaya çıkan hızlı ve kısa süreli etkiler oluşturur; metabotropik reseptörlerin etkileri onlarca saniye ya da dakikalar sürebilir.",
+    "Milisaniyeler içinde ortaya çıkan hızlı ve kısa süreli etkiler oluşturur.",
+    "Etkileri onlarca saniye veya dakikalar boyunca devam edebilir; yavaş etkidir.",
+    "Metabotropik reseptörler G proteinleri ve ikinci haberciler aracılığıyla çalışır; membranla sınırlı etkiler reseptörün bulunduğu bölgede kalırken ikinci haberciler hücre içinde daha uzak hedeflere ulaşır.",
+    "MSS'de metabotropik reseptörler yaygın olarak bulunur.",
+    "Metabotropik bağlanma iyon kanalını doğrudan açmaz; kanalın doğrudan açılması iyonotropik reseptörün özelliğidir."
+   ],
+   "v": "7ea3407ae4"
+  },
+  {
+   "id": "2f02-12",
+   "baslik": "Sinir ucunda kalsiyum ve transmitter salıverilmesi",
+   "giris": "Aksiyon potansiyeli terminaldeki voltaja duyarlı kalsiyum kanallarını aktive eder; sinir ucundaki artmış kalsiyum sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar.",
+   "s": [
+    19
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Presinaptik liftteki aksiyon potansiyeli terminale ilerler ve terminal membranındaki voltaja duyarlı kalsiyum kanallarını aktive eder."
+    },
+    {
+     "metin": "Kalsiyum sinir ucuna girer; sinir ucundaki artmış kalsiyum konsantrasyonu sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar."
+    },
+    {
+     "metin": "Veziküllerdeki transmitter sinaptik aralığa bırakılır ve postsinaptik membrandaki reseptörlere doğru dağılır."
+    },
+    {
+     "metin": "Transmitter salıverilmesinden sorumlu kalsiyum kanalları kalsiyum kanal bloke edici ajanlara, örneğin verapamile, genellikle dirençlidir."
+    },
+    {
+     "metin": "MSS'de nöronlar arasındaki iletişim çoğu durumda kimyasal sinapslar aracılığıyla oluşur."
+    }
+   ],
+   "klip": "o-2f02-12",
+   "ses": [
+    "Sinir ucunda kalsiyum ve transmitter salıverilmesi.",
+    "Aksiyon potansiyeli terminaldeki voltaja duyarlı kalsiyum kanallarını aktive eder; sinir ucundaki artmış kalsiyum sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar.",
+    "Presinaptik liftteki aksiyon potansiyeli terminale ilerler ve terminal membranındaki voltaja duyarlı kalsiyum kanallarını aktive eder.",
+    "Kalsiyum sinir ucuna girer; sinir ucundaki artmış kalsiyum konsantrasyonu sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar.",
+    "Veziküllerdeki transmitter sinaptik aralığa bırakılır ve postsinaptik membrandaki reseptörlere doğru dağılır.",
+    "Transmitter salıverilmesinden sorumlu kalsiyum kanalları kalsiyum kanal bloke edici ajanlara, örneğin verapamile, genellikle dirençlidir.",
+    "MSS'de nöronlar arasındaki iletişim çoğu durumda kimyasal sinapslar aracılığıyla oluşur."
+   ],
+   "v": "69d27d7cb6"
+  },
+  {
+   "id": "2f02-14",
+   "baslik": "Rezerpin ve veziküler depolama",
+   "giris": "Rezerpin veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla bu nörotransmitterleri tüketir.",
+   "s": [
+    23
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Presinaptik etkili ilaçlar nörotransmitterlerin sentezini, depolanmasını, metabolizmasını ve salıverilmesini etkiler."
+    },
+    {
+     "metin": "Veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller."
+    },
+    {
+     "metin": "Depolanamayan monoaminler zamanla tükenir ve sinaptik iletim baskılanır."
+    },
+    {
+     "metin": "Amfetamin başta noradrenalin ve dopamin olmak üzere katekolaminlerin salıverilmesini artırır; kokain ise geri alımı engeller."
+    },
+    {
+     "metin": "Nörotransmitter yıkımının engellenmesi sinir ucundaki ya da aralıktaki düzeyi artırabilir, ancak sonuç ilacın mekanizmasına ve transmitterin türüne bağlıdır."
+    }
+   ],
+   "klip": "o-2f02-14",
+   "ses": [
+    "Rezerpin ve veziküler depolama.",
+    "Rezerpin veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla bu nörotransmitterleri tüketir.",
+    "Presinaptik etkili ilaçlar nörotransmitterlerin sentezini, depolanmasını, metabolizmasını ve salıverilmesini etkiler.",
+    "Veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller.",
+    "Depolanamayan monoaminler zamanla tükenir ve sinaptik iletim baskılanır.",
+    "Amfetamin başta noradrenalin ve dopamin olmak üzere katekolaminlerin salıverilmesini artırır; kokain ise geri alımı engeller.",
+    "Nörotransmitter yıkımının engellenmesi sinir ucundaki ya da aralıktaki düzeyi artırabilir, ancak sonuç ilacın mekanizmasına ve transmitterin türüne bağlıdır."
+   ],
+   "v": "f255800a5a"
+  },
+  {
+   "id": "2f02-15",
+   "baslik": "Asetilkolinin etkisinin sonlanması",
+   "giris": "Asetilkolinin etkisi geri alımla değil, esas olarak asetilkolinesteraz enzimiyle parçalanmasıyla sonlanır; antikolinesterazlar bu enzimi inhibe eder.",
+   "s": [
+    24
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Nörotransmitter etkisi geri alım veya enzimatik yıkım yoluyla sonlandırılır."
+    },
+    {
+     "metin": "Nörotransmitterlerin çoğu presinaptik sinir ucuna ya da çevredeki nöroglial hücrelere taşınarak aralıktan uzaklaştırılır."
+    },
+    {
+     "metin": "Etkisi geri alımla değil, esas olarak asetilkolinesteraz enzimi tarafından parçalanmasıyla sonlandırılır."
+    },
+    {
+     "metin": "Bu enzimi inhibe ederek asetilkolinin sinaptik aralıktaki etkisini uzatır."
+    },
+    {
+     "metin": "Kokain katekolaminlerin geri alımını bloke ederek etkilerini uzatır; asetilkolin için aynı mantık geçerli değildir."
+    }
+   ],
+   "klip": "o-2f02-15",
+   "ses": [
+    "Asetilkolinin etkisinin sonlanması.",
+    "Asetilkolinin etkisi geri alımla değil, esas olarak asetilkolinesteraz enzimiyle parçalanmasıyla sonlanır; antikolinesterazlar bu enzimi inhibe eder.",
+    "Nörotransmitter etkisi geri alım veya enzimatik yıkım yoluyla sonlandırılır.",
+    "Nörotransmitterlerin çoğu presinaptik sinir ucuna ya da çevredeki nöroglial hücrelere taşınarak aralıktan uzaklaştırılır.",
+    "Etkisi geri alımla değil, esas olarak asetilkolinesteraz enzimi tarafından parçalanmasıyla sonlandırılır.",
+    "Bu enzimi inhibe ederek asetilkolinin sinaptik aralıktaki etkisini uzatır.",
+    "Kokain katekolaminlerin geri alımını bloke ederek etkilerini uzatır; asetilkolin için aynı mantık geçerli değildir."
+   ],
+   "v": "5a8c10d414"
+  },
+  {
+   "id": "2f02-17",
+   "baslik": "Nörotransmitter sayılmanın üç ölçütü",
+   "giris": "Bir maddenin nörotransmitter sayılması için lokalizasyon, salıverilme ve sinaptik benzerlik ölçütleri değerlendirilir.",
+   "s": [
+    26
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Şüphelenilen maddenin ilgili yoldaki presinaptik sinir uçlarında bulunduğu gösterilmelidir; biyokimyasal analizlerle beyin bölgelerindeki konsantrasyon ölçülür, immünohistokimyasal yöntemlerle sentezleyen enzimlerin dağılımı belirlenir."
+    },
+    {
+     "metin": "Maddenin sinir ucundan salıverildiği gösterilmelidir; ekstraselüler sıvı örneklemesi yapılır ve süreç hücre içine kalsiyum girişine bağımlı olmalıdır."
+    },
+    {
+     "metin": "Dışarıdan uygulanan madde doğal nörotransmitterin yanıtına benzer bir yanıt vermeli; ilgili reseptörlerin bloke edilmesiyle bu etki engellenebilmelidir."
+    },
+    {
+     "metin": "Bir maddenin nörotransmitter kabul edilmesi için üç temel ölçüt değerlendirilir."
+    }
+   ],
+   "klip": "o-2f02-17",
+   "ses": [
+    "Nörotransmitter sayılmanın üç ölçütü.",
+    "Bir maddenin nörotransmitter sayılması için lokalizasyon, salıverilme ve sinaptik benzerlik ölçütleri değerlendirilir.",
+    "Şüphelenilen maddenin ilgili yoldaki presinaptik sinir uçlarında bulunduğu gösterilmelidir; biyokimyasal analizlerle beyin bölgelerindeki konsantrasyon ölçülür, immünohistokimyasal yöntemlerle sentezleyen enzimlerin dağılımı belirlenir.",
+    "Maddenin sinir ucundan salıverildiği gösterilmelidir; ekstraselüler sıvı örneklemesi yapılır ve süreç hücre içine kalsiyum girişine bağımlı olmalıdır.",
+    "Dışarıdan uygulanan madde doğal nörotransmitterin yanıtına benzer bir yanıt vermeli; ilgili reseptörlerin bloke edilmesiyle bu etki engellenebilmelidir.",
+    "Bir maddenin nörotransmitter kabul edilmesi için üç temel ölçüt değerlendirilir."
+   ],
+   "v": "693026f20b"
+  },
+  {
+   "id": "2f02-18",
+   "baslik": "Salıverilme ölçütü ve kalsiyum bağımlılığı",
+   "giris": "Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için sürecin hücre içine kalsiyum girişine bağımlı olup olmadığı değerlendirilir.",
+   "s": [
+    27
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Nörotransmitter olduğu düşünülen maddenin sinir ucundan salıverildiği gösterilmelidir."
+    },
+    {
+     "metin": "İn vivo koşullarda belirli bir bölgedeki hücre dışı sıvı toplanarak salıverilme incelenebilir."
+    },
+    {
+     "metin": "Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için sürecin hücre içine kalsiyum girişine bağımlı olup olmadığı değerlendirilir."
+    },
+    {
+     "metin": "Klasik kimyasal sinapslarda kalsiyum girişi sinaptik veziküllerin kaynaşmasını ve nörotransmitter salıverilmesini tetikler."
+    },
+    {
+     "metin": "Salıverilme ölçütü incelenirken hem hücre dışı sıvıda madde aranır hem de kalsiyum bağımlılığı sınanır."
+    }
+   ],
+   "klip": "o-2f02-18",
+   "ses": [
+    "Salıverilme ölçütü ve kalsiyum bağımlılığı.",
+    "Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için sürecin hücre içine kalsiyum girişine bağımlı olup olmadığı değerlendirilir.",
+    "Nörotransmitter olduğu düşünülen maddenin sinir ucundan salıverildiği gösterilmelidir.",
+    "İn vivo koşullarda belirli bir bölgedeki hücre dışı sıvı toplanarak salıverilme incelenebilir.",
+    "Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için sürecin hücre içine kalsiyum girişine bağımlı olup olmadığı değerlendirilir.",
+    "Klasik kimyasal sinapslarda kalsiyum girişi sinaptik veziküllerin kaynaşmasını ve nörotransmitter salıverilmesini tetikler.",
+    "Salıverilme ölçütü incelenirken hem hücre dışı sıvıda madde aranır hem de kalsiyum bağımlılığı sınanır."
+   ],
+   "v": "2c2a06f1de"
+  },
+  {
+   "id": "2f02-25",
+   "baslik": "NMDA reseptörü: Mg2+ bloğu ve LTP",
+   "giris": "AMPA ve kainat kanalları glutamatla açılırken NMDA kanalı istirahatte Mg2+ ile bloke olduğu için açılması için glutamat bağlanması ve membran depolarizasyonu birlikte gerekir.",
+   "s": [
+    40
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Glutamat tarafından aktive edilmeleri iyon kanallarının açılmasını sağlar."
+    },
+    {
+     "metin": "İstirahat membran potansiyelinde kanal Mg2+ iyonlarıyla bloke olduğundan glutamat bağlansa bile iyon geçişi büyük ölçüde olmaz."
+    },
+    {
+     "metin": "Kanalın açılması için glutamat reseptöre bağlanmalı ve membran depolarize edilmelidir."
+    },
+    {
+     "metin": "Glutamatın bağlanması şartı AMPA ve kainat reseptörleriyle ortaktır; fark depolarizasyon gereksinimidir."
+    },
+    {
+     "metin": "Kanal açılınca hücre içi Ca2+ artışı sinaptik güçte uzun süreli bir artışa, yani uzun süreli potansiyalizasyona yol açar."
+    }
+   ],
+   "klip": "o-2f02-25",
+   "ses": [
+    "NMDA reseptörü: Mg2+ bloğu ve LTP.",
+    "AMPA ve kainat kanalları glutamatla açılırken NMDA kanalı istirahatte Mg2+ ile bloke olduğu için açılması için glutamat bağlanması ve membran depolarizasyonu birlikte gerekir.",
+    "Glutamat tarafından aktive edilmeleri iyon kanallarının açılmasını sağlar.",
+    "İstirahat membran potansiyelinde kanal Mg2+ iyonlarıyla bloke olduğundan glutamat bağlansa bile iyon geçişi büyük ölçüde olmaz.",
+    "Kanalın açılması için glutamat reseptöre bağlanmalı ve membran depolarize edilmelidir.",
+    "Glutamatın bağlanması şartı AMPA ve kainat reseptörleriyle ortaktır; fark depolarizasyon gereksinimidir.",
+    "Kanal açılınca hücre içi Ca2+ artışı sinaptik güçte uzun süreli bir artışa, yani uzun süreli potansiyalizasyona yol açar."
+   ],
+   "v": "6f9bbbea22"
+  },
+  {
+   "id": "2f02-28",
+   "baslik": "Striknin: glisin reseptörü blokajı",
+   "giris": "Striknin glisin reseptörlerini selektif olarak bloke eden, omuriliğe etkili güçlü bir konvülsandır ve bazı sıçan zehirlerinde kullanılır.",
+   "s": [
+    43
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Omuriliğe etkili güçlü bir konvülsandır; bazı sıçan zehirlerinde kullanılır ve glisin reseptörlerini selektif olarak bloke eder."
+    },
+    {
+     "metin": "Glisin inhibitör bir nörotransmitterdir; reseptörü bloke edilince sinir sistemindeki inhibisyon azalır ve aşırı nöronal uyarılma gelişir."
+    },
+    {
+     "metin": "Bikukulin ve pikrotoksin GABAA reseptörlerini inhibe eder; baklofen GABAB reseptörünü aktive eder."
+    },
+    {
+     "metin": "Cl iyonuna selektif geçirgen pentamerik yapıdadır; GABAA reseptörleri de glisin reseptörleri gibi klorüre selektif geçirgendir."
+    }
+   ],
+   "klip": "o-2f02-28",
+   "ses": [
+    "Striknin: glisin reseptörü blokajı.",
+    "Striknin glisin reseptörlerini selektif olarak bloke eden, omuriliğe etkili güçlü bir konvülsandır ve bazı sıçan zehirlerinde kullanılır.",
+    "Omuriliğe etkili güçlü bir konvülsandır; bazı sıçan zehirlerinde kullanılır ve glisin reseptörlerini selektif olarak bloke eder.",
+    "Glisin inhibitör bir nörotransmitterdir; reseptörü bloke edilince sinir sistemindeki inhibisyon azalır ve aşırı nöronal uyarılma gelişir.",
+    "Bikukulin ve pikrotoksin GABAA reseptörlerini inhibe eder; baklofen GABAB reseptörünü aktive eder.",
+    "Cl iyonuna selektif geçirgen pentamerik yapıdadır; GABAA reseptörleri de glisin reseptörleri gibi klorüre selektif geçirgendir."
+   ],
+   "v": "dc65c81d48"
+  }
+ ]
+}
