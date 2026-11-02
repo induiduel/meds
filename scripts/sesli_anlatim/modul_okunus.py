@@ -13,6 +13,9 @@ import re
 import sys
 
 MODUL_ANAHTARLAR = {"k1-70-tbg-sinav-kampi", "k1-59-immunofarmakoloji-v2"}  # V2: yazımla yazılmış metin (CD2, IL-2), okunuş burada
+# Kurul 2, 2. parti (2026-11-02): metin yazımla (NMDA, 5-HT1A, FHM, A-delta); Kurul 2 uzun-kısaltma yolu (kisaltma_ses.uzat) yalnız
+# okunuşla yazılmış hece dizilerini tanıdığı için büyük harfli kısaltma bu yoldan okunur (H23)
+MODUL_ANAHTARLAR |= {"k2-09-sss-ilaclari", "k2-10-bas-agrisina-yaklasim", "k2-06-agri-yollari-ve-mekanizmalari"}
 SON_PROVA = re.compile(r"^k\d+-\d+-(son-prova|blok-ozet)-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
 
 
@@ -47,6 +50,11 @@ KELIME = {
 # İmmünofarmakoloji V2 (2026-10-22): I harfi "ıı" değil; IL = interlökin
 KELIME.update({"IL": "interlökin", "IVIG": "ii vee ii gee", "KIR": "kaa ii ree", "HAMA": "hama", "IgE": "immünoglobulin ee",
                "IgG": "immünoglobulin gee", "IgM": "immünoglobulin mee", "Rh": "ree haa", "pH": "pee haa"})
+# MSS farmakolojisi (k2-09, 2026-11-02): hocanın kelime gibi okuduğu nörotransmitter/reseptör adları
+KELIME.update({"GABA": "gaba", "GABAA": "gaba aa", "GABAB": "gaba bee", "AMPA": "ampa", "DOPA": "dopa", "VMAT": "vi mat",
+               "VGLUT": "vi glut", "mGluR": "em glu ar",
+               # baş ağrısı (k2-10): tanı ölçütü kısaltmaları kelime gibi okunur
+               "HANDLE": "hendıl", "SUNCT": "sankt", "SUNA": "suna", "KİBAS": "kibas", "KIBAS": "kibas"})
 # Roma rakamı (tip II, faktör XIII, sınıf IV): sayıyla. XX, XXX, XY gibi kromozom formülleri DEĞİL (X tek başına da değil)
 ROMEN = {"II": 2, "III": 3, "IV": 4, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "XI": 11, "XII": 12, "XIII": 13}
 ROMEN_RE = re.compile(r"^(II|III|IV|VI|VII|VIII|IX|XI|XII|XIII)([abAB]?)$")

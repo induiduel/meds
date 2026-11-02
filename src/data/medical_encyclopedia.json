@@ -98935,5 +98935,2040 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-noron",
+    "term": "Nöron",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.4",
+    "definition": "Elektrokimyasal bir süreçle bilgiyi işleyen ve ileten, elektriksel olarak uyarılabilen sinir hücresidir. Hücre gövdesi (soma), dendrit ve akson olmak üzere üç temel parçası vardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dendrit",
+    "term": "Dendrit",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.5",
+    "definition": "Nöronun çok dallanmış uzantılarıdır; diğer nöronlardan gelen sinyalleri alır, bütünleştirir ve hücre gövdesine iletir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akson",
+    "term": "Akson",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.5",
+    "definition": "Nöronun hücre gövdesinden gelen çıkış sinyalini bazen uzun mesafelere taşıyan uzantısıdır. Uç kısmındaki terminallerden nörotransmitter salar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sinaps",
+    "term": "Sinaps",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.5",
+    "definition": "Bir nöronun akson terminalinin diğer nöronla nörotransmitter salarak iletişim kurduğu özel bağlantı noktasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-norotransmitter",
+    "term": "Nörotransmitter",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.5",
+    "definition": "Akson terminalinden salınan ve karşı hücredeki özgül reseptörlere bağlanarak sinyal iletimini sağlayan kimyasal iletici maddedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noroglia_glia",
+    "term": "Nöroglia (glia)",
+    "aliases": [
+      "Glia"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.6",
+    "definition": "MSS'de nöronların yanında temel işlevleri yerine getiren nöronal olmayan destek hücrelerinin genel adıdır. Astrosit, oligodendrosit ve mikroglia bu gruptandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-astrosit",
+    "term": "Astrosit",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.6",
+    "definition": "Beyinde en bol bulunan glia hücresidir; nöronlara besin sağlar, hücre dışı iyon dengesini korur ve sinaptik aralıktaki nörotransmitterlerin uzaklaştırılmasında rol oynar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-oligodendrosit",
+    "term": "Oligodendrosit",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.7",
+    "definition": "MSS'de aksonların çevresinde miyelin kılıfı oluşturan glia hücresidir; periferdeki Schwann hücresine benzer. Hasarı multipl sklerozda miyelin bozulmasına yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miyelin_kilifi",
+    "term": "Miyelin kılıfı",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.7",
+    "definition": "Aksonu saran ve elektriksel olarak yalıtarak sinirsel iletim hızını artıran yapıdır; MSS'de oligodendrositler yapar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kan_beyin_bariyeri_kbb",
+    "term": "Kan-beyin bariyeri (KBB)",
+    "aliases": [
+      "KBB",
+      "Kan-beyin engeli"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.8",
+    "definition": "Dolaşımdaki kan ile MSS hücre dışı sıvısı arasındaki koruyucu sınırdır. Beyin kılcal damarlarının endotel hücreleri arasındaki sıkı bağlantılar ve astrosit uç ayakları bu bariyeri oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sirkumventrikuler_organlar",
+    "term": "Sirkumventriküler organlar",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.9",
+    "definition": "Kan-beyin bariyerinin klasik yapısının bulunmadığı ya da farklılaştığı beyin bölgeleridir; kandaki bazı maddeleri doğrudan algılar. Area postrema bu gruptandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-area_postrema",
+    "term": "Area postrema",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.9",
+    "definition": "Kusma refleksinde rol oynayan sirkumventriküler organdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-l_dopa",
+    "term": "L-DOPA",
+    "aliases": [
+      "Levodopa"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.9",
+    "definition": "Dopaminin öncüsüdür; amino asit taşıyıcılarını kullanarak kan-beyin bariyerini geçer ve beyinde dopamine dönüşür. Parkinson hastalığında oral yoldan verilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-voltaj_bagimli_iyon_kanali",
+    "term": "Voltaj bağımlı iyon kanalı",
+    "aliases": [
+      "Voltaj bağımlı kanal"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.10",
+    "definition": "Hücre zarının membran potansiyelindeki değişikliklere yanıt olarak açılıp kapanan iyon kanalıdır. Aksiyon potansiyelinin oluşmasını ve iletilmesini sağlar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ligand_bagimli_iyon_kanali",
+    "term": "Ligand bağımlı iyon kanalı",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.12",
+    "definition": "Açılması membran potansiyelinden çok ligandın (nörotransmitter ya da ilaç) reseptöre bağlanmasına bağlı olan iyon kanalıdır. İyonotropik reseptörle aynı kavramdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-iyonotropik_reseptor",
+    "term": "İyonotropik reseptör",
+    "aliases": [
+      "Ligand bağımlı iyon kanalı reseptörü"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.12",
+    "definition": "Nörotransmitterin bağlanmasıyla kendi yapısındaki iyon kanalını doğrudan açan ya da kapatan çok alt birimli reseptördür. Hızlı (milisaniyeler süren) sinaptik iletiyi sağlar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-metabotropik_reseptor",
+    "term": "Metabotropik reseptör",
+    "aliases": [
+      "G proteinine bağlı reseptör"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.14",
+    "definition": "Nörotransmitter bağlandığında iyon kanalını doğrudan açmayan, genellikle G proteini aracılığıyla hücre içi sinyal yolağını etkinleştiren reseptördür. Etkisi yavaş (onlarca saniye – dakikalar) ve uzun sürelidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-g_proteini",
+    "term": "G proteini",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.14",
+    "definition": "Metabotropik reseptörün hücre içine ilettiği sinyali aktarıcı proteindir. βγ alt birimi voltaj bağımlı Ca2+ ve K+ kanallarıyla doğrudan etkileşir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ikinci_haberci",
+    "term": "İkinci haberci",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.14",
+    "definition": "Metabotropik reseptör aktivasyonundan sonra hücre içinde üretilen, yayılabilen ve kanal ya da enzimleri dolaylı olarak düzenleyen maddedir (örneğin cAMP).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-membranla_sinirli_sinyal_iletimi",
+    "term": "Membranla sınırlı sinyal iletimi",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.14",
+    "definition": "G proteininin βγ alt biriminin ikinci haberci kullanmadan doğrudan voltaj bağımlı kanalla etkileşmesi ve etkinin reseptörün bulunduğu membran bölgesinde kalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-adrenoseptor",
+    "term": "β-adrenoseptör",
+    "aliases": [
+      "Beta adrenoseptör"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.16",
+    "definition": "Gs proteini aracılığıyla adenilat siklazı aktive ederek cAMP oluşumunu artıran metabotropik reseptördür; derste metabotropik reseptörün klasik örneği olarak verilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-presinaptik_inhibisyon",
+    "term": "Presinaptik inhibisyon",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.21",
+    "definition": "Aksoaksonik sinapslarda ya da presinaptik metabotropik reseptörlerle presinaptik terminale Ca2+ girişinin azalması sonucu nörotransmitter salınımının baskılanmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aksoaksonik_sinaps",
+    "term": "Aksoaksonik sinaps",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.30",
+    "definition": "Bir nöronun aksonunun başka bir aksonun terminali üzerinde yaptığı sinapstır; presinaptik inhibisyonun anatomik temelidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aksiyon_potansiyeli",
+    "term": "Aksiyon potansiyeli",
+    "aliases": [
+      "AP"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.19",
+    "definition": "Voltaj bağımlı kanalların açılmasıyla oluşan ve aksonda hızla ilerleyen elektriksel sinyaldir; sinaptik terminalde voltaja duyarlı Ca2+ kanallarını aktive eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sinaptik_vezikul",
+    "term": "Sinaptik vezikül",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.19",
+    "definition": "Sinir ucunda nörotransmitter içeren ve Ca2+ artışıyla presinaptik membrana kaynaşarak içeriğini sinaptik aralığa bırakan kesecik yapıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-eksitator_postsinaptik_potansiyel_epsp",
+    "term": "Eksitatör postsinaptik potansiyel (EPSP)",
+    "aliases": [
+      "EPSP"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.20",
+    "definition": "Eksitatör yolak aktive edildiğinde postsinaptik membranda katyon geçirgenliğinin artmasıyla oluşan küçük depolarizasyondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-inhibitor_postsinaptik_potansiyel_ipsp",
+    "term": "İnhibitör postsinaptik potansiyel (IPSP)",
+    "aliases": [
+      "IPSP"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.20",
+    "definition": "İnhibitör yolak uyarıldığında postsinaptik membran klorür kanallarının açılmasıyla oluşan hiperpolarizasyondur; EPSP'nin eşik değere ulaşmasını önleyebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-geri_alim_reuptake",
+    "term": "Geri alım (reuptake)",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.24",
+    "definition": "Sinaptik aralığa salınmış nörotransmitterin presinaptik uca ya da çevre glia hücrelerine taşınarak uzaklaştırılmasıdır; etkinin sonlanma yollarından biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vmat_vezikuler_monoamin_tasiyicisi",
+    "term": "VMAT (veziküler monoamin taşıyıcısı)",
+    "aliases": [
+      "VMAT"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.23",
+    "definition": "Monoaminlerin sinaptik veziküllerde depolanmasını sağlayan taşıyıcıdır; rezerpin tarafından inhibe edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-rezerpin",
+    "term": "Rezerpin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.23",
+    "definition": "Veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engelleyen ve zamanla nörotransmitterlerin tükenmesine yol açan ilaçtır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-amfetamin",
+    "term": "Amfetamin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.23",
+    "definition": "Adrenerjik sinapslarda başta noradrenalin ve dopamin olmak üzere katekolaminlerin salıverilmesini artıran MSS stimülanıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kokain",
+    "term": "Kokain",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.24",
+    "definition": "Noradrenalin ve dopamin gibi katekolaminlerin geri alımını bloke ederek sinaptik etkilerini uzatan MSS stimülanıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-agonist",
+    "term": "Agonist",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.24",
+    "definition": "Nörotransmitterin etkisini taklit ederek reseptörü aktive eden ilaçtır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-antagonist",
+    "term": "Antagonist",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.24",
+    "definition": "Reseptöre bağlanarak nörotransmitterin etkisini bloke eden ilaçtır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-antikolinesteraz_ilaclar",
+    "term": "Antikolinesteraz ilaçlar",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.24",
+    "definition": "Asetilkolinesteraz enzimini inhibe ederek asetilkolinin sinaptik aralıktaki etkisini uzatan ilaçlardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-asetilkolinesteraz",
+    "term": "Asetilkolinesteraz",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.24",
+    "definition": "Asetilkolini parçalayarak etkisini sonlandıran enzimdir; asetilkolin geri alımla değil bu enzimle yıkılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-striknin",
+    "term": "Striknin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.43",
+    "definition": "Omuriliğe etkili güçlü bir konvülsandır; bazı sıçan zehirlerinde kullanılır. Glisin reseptörlerini selektif olarak bloke ederek inhibisyonu ortadan kaldırır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pikrotoksin",
+    "term": "Pikrotoksin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.32",
+    "definition": "GABAA reseptörlerini selektif olarak bloke ederek inhibisyonu kaldıran ve jeneralize konvülsiyona yol açan maddedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bikukulin",
+    "term": "Bikukulin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.43",
+    "definition": "GABAA reseptörlerini selektif olarak inhibe eden ve jeneralize konvülsiyona yol açan antagonisttir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-baklofen",
+    "term": "Baklofen",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.44",
+    "definition": "Antispastik ilaçtır; GABAB reseptörlerini selektif olarak aktive eder ve Ca2+ kanallarını inhibe eder ya da K+ kanallarını aktive eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-barbituratlar",
+    "term": "Barbitüratlar",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.25",
+    "definition": "GABAA reseptörleri üzerinden inhibitör iletiyi güçlendiren ilaçlardır; benzodiazepinlerden farklı bir bağlanma yerine sahiptir ve bazı barbitüratlar eksitatör iyonotropik reseptörleri de baskılayabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-zolpidem",
+    "term": "Zolpidem",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.13",
+    "definition": "Benzodiazepin bağlanma bölgesine bağlanarak GABAA reseptöründe klorür kanalının açılmasını kolaylaştıran yeni bir hipnotiktir; etkisi flumazenille tersine çevrilebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-verapamil",
+    "term": "Verapamil",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.19",
+    "definition": "Kalsiyum kanal blokeridir; transmitter salıverilmesinden sorumlu sinir ucu kalsiyum kanalları ona genellikle dirençlidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-norotransmitter_olma_olcutleri",
+    "term": "Nörotransmitter olma ölçütleri",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.26",
+    "definition": "Bir maddenin nörotransmitter sayılması için lokalizasyon, salıverilme ve sinaptik benzerlik ölçütlerinin gösterilmesi gerekir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lokalizasyon_olcutu",
+    "term": "Lokalizasyon ölçütü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.26",
+    "definition": "Şüphelenilen maddenin incelenen sinir yolundaki presinaptik sinir uçlarında bulunduğunun biyokimyasal ve immünohistokimyasal yöntemlerle gösterilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-saliverilme_olcutu",
+    "term": "Salıverilme ölçütü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.27",
+    "definition": "Maddenin sinir ucundan salıverildiğinin ve bu salıverilmenin Ca2+ girişine bağımlı olduğunun gösterilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sinaptik_benzerlik_olcutu",
+    "term": "Sinaptik benzerlik ölçütü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.28",
+    "definition": "Dışarıdan uygulanan maddenin doğal nörotransmitterin etkisine benzer yanıt oluşturması ve bu etkinin reseptör blokajıyla engellenebilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hiyerarsik_sistem",
+    "term": "Hiyerarşik sistem",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.28",
+    "definition": "Duyusal algılama ve motor kontrolde yer alan, net belirlenmiş, geniş miyelinli ve 50 m/sn'den hızlı ileten yolaklar bütünüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yaygin_non_spesifik_noronal_sistem",
+    "term": "Yaygın (non-spesifik) nöronal sistem",
+    "aliases": [
+      "Non-spesifik nöronal sistem"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.33",
+    "definition": "Monoamin içeren, ince ve miyelinsiz aksonlarla yaklaşık 0,5 m/sn gibi yavaş ileten, çok dallanan ve geniş alanlara yayılan nöronal sistemlerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-projeksiyon_role_noronu",
+    "term": "Projeksiyon (röle) nöronu",
+    "aliases": [
+      "Röle nöronu"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.29",
+    "definition": "Sinyali uzak mesafelere ileten, hücre gövdesi büyük nörondur; eksitatör transmitteri çoğunlukla glutamattır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lokal_devre_noronu",
+    "term": "Lokal devre nöronu",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.30",
+    "definition": "Projeksiyon nöronlarından küçük, aksonu hücre gövdesinin çevresine dallanan ve çoğunlukla GABA veya glisin salan inhibitör nörondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tekrarlayan_geri_besleme_yolak",
+    "term": "Tekrarlayan (geri besleme) yolak",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.30",
+    "definition": "Lokal devre nöronlarının iki ana inhibitör yolak tipinden biridir; ileri besleme yolağıyla birlikte tanımlanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-varikozite",
+    "term": "Varikozite",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.33",
+    "definition": "Yaygın sistem aksonlarındaki, çok sayıda vezikül içeren periyodik genişlemedir; bazen belirgin sinaps oluşturmadan transmitter salar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-monoaminler",
+    "term": "Monoaminler",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.45",
+    "definition": "Katekolaminler (dopamin, noradrenalin) ile 5-hidroksitriptamini (serotonin) kapsayan nörotransmitter grubudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-katekolaminler",
+    "term": "Katekolaminler",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.45",
+    "definition": "Dopamin ve noradrenalini kapsayan monoamin grubudur; kokain ve amfetamin primer olarak bu sinapsları etkiler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-glutamat",
+    "term": "Glutamat",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.36",
+    "definition": "Asidik amino asit olan, MSS'de eksitatör sinaptik iletiye aracılık eden başlıca nörotransmitterdir; Ca2+ bağımlı ekzositozla salınır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gaba",
+    "term": "GABA",
+    "aliases": [
+      "γ-aminobütirik asit"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.42",
+    "definition": "Nötral amino asit yapısında, MSS'nin her yerinde lokal ara nöronlardan salınan inhibitör nörotransmitterdir. GABAA iyonotropik, GABAB metabotropik reseptörlere bağlanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-glisin",
+    "term": "Glisin",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.42",
+    "definition": "Omurilik ve beyin sapındaki ara nöronlardan salınan, Cl- kanallı iyonotropik reseptöre bağlanan inhibitör amino asit nörotransmitterdir; reseptörü striknin tarafından bloke edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gabaa_reseptoru",
+    "term": "GABAA reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.13",
+    "definition": "Cl- iyonuna selektif geçirgen, pentamerik (α, β, γ alt birimli) iyonotropik GABA reseptörüdür; benzodiazepin, barbitürat ve zolpidem için ayrı bağlanma yerleri taşır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gabab_reseptoru",
+    "term": "GABAB reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.43",
+    "definition": "Baklofenle aktive olan, G proteinine bağlı metabotropik GABA reseptörüdür; yavaş bileşene aracılık eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ampa_reseptoru",
+    "term": "AMPA reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.38",
+    "definition": "Glutamatın iyonotropik reseptörüdür; GluA1–GluA4 alt birimlerinden oluşan heterotetramerdir ve GluA2 içerdiğinde Na+ ile K+'a geçirgen, Ca2+'a geçirgen değildir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kainat_reseptoru",
+    "term": "Kainat reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.39",
+    "definition": "Glutamatın iyonotropik reseptörüdür; hipokampüs, serebellum ve omurilikte yüksek düzeyde bulunur, Na+ ve K+'a geçirgendir ve bazı alt birim kombinasyonları Ca2+'a da geçirgendir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nmda_reseptoru",
+    "term": "NMDA reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.40",
+    "definition": "MSS'deki tüm nöronlarda bulunan, Na+, K+ ve yüksek derecede Ca2+'a geçirgen iyonotropik glutamat reseptörüdür; kanalı istirahatte Mg2+ ile bloke olduğundan açılması için glutamat bağlanması ve depolarizasyon gerekir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-uzun_sureli_potansiyalizasyon_ltp",
+    "term": "Uzun süreli potansiyalizasyon (LTP)",
+    "aliases": [
+      "LTP"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.40",
+    "definition": "NMDA reseptör kanalının açılmasıyla artan hücre içi Ca2+'a bağlı, saatlerce hatta günlerce süren sinaptik güç artışıdır; öğrenme ve belleğin hücresel mekanizması sayılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vglut",
+    "term": "VGLUT",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.36",
+    "definition": "Sinaptik veziküllerde yüksek glutamat konsantrasyonunu sağlayan veziküler glutamat taşıyıcısıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-glutamin_sentetaz",
+    "term": "Glutamin sentetaz",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.36",
+    "definition": "Glia hücrelerinde glutamatı glutamine çeviren enzimdir; glutamin sinir ucunda glutaminaz ile yeniden glutamata dönüşür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-metabotropik_glutamat_reseptoru",
+    "term": "Metabotropik glutamat reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.41",
+    "definition": "G proteinine bağlı glutamat reseptörüdür; üç gruba ayrılır. Grup I postsinaptik ve eksitatör, grup II ve III presinaptik inhibitör otoreseptördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-muskarinik_reseptor",
+    "term": "Muskarinik reseptör",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.44",
+    "definition": "MSS'de asetilkolin yanıtlarının çoğuna aracılık eden G proteini ile kenetli reseptör ailesidir; M2 yavaş inhibisyon, M1 yavaş eksitasyon yapar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dopamin_reseptorleri",
+    "term": "Dopamin reseptörleri",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.45",
+    "definition": "Beş tipi (D1–D5) olan ve hepsi metabotropik olan reseptörlerdir; D1-benzeri (D1, D5) ve D2-benzeri (D2, D3, D4) olarak ikiye ayrılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-disinhibisyon",
+    "term": "Disinhibisyon",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.46",
+    "definition": "İnhibitör bir devrenin inhibe edilmesiyle eksitatör etkinin ortaya çıkmasıdır; noradrenalinin dolaylı eksitatör mekanizmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-5_ht3_reseptoru",
+    "term": "5-HT3 reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.47",
+    "definition": "Serotonin reseptörleri içinde tek iyonotropik olan, MSS'de kısıtlı yerde hızlı eksitatör etki oluşturan reseptördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-5_ht1a_reseptoru",
+    "term": "5-HT1A reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.47",
+    "definition": "MSS'nin çoğu bölgesindeki güçlü inhibitör serotonin etkisine K+ geçirgenliğini artırarak aracılık eden metabotropik reseptördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tuberomammiller_nukleus_tmn",
+    "term": "Tuberomammiller nükleus (TMN)",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.48",
+    "definition": "Posterior hipotalamusta bulunan ve MSS'deki histaminin tek üretim yeri olan nöron grubudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noropeptid",
+    "term": "Nöropeptid",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.50",
+    "definition": "Büyük yoğun çekirdekli veziküllerde paketlenen, çoğu metabotropik reseptörlere etki eden ve modülatör rol üstlenen peptid yapılı sinyal maddesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-madde_p",
+    "term": "Madde P",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.51",
+    "definition": "Omurilik ve beyin sapındaki küçük miyelinsiz birincil duyusal nöronlardan salınan nöropeptiddir; yavaş uyarıcı postsinaptik potansiyel oluşturur ve ağrı iletiminde rol alır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-oreksin_hipokretin",
+    "term": "Oreksin (hipokretin)",
+    "aliases": [
+      "Oreksin",
+      "Hipokretin"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.52",
+    "definition": "Lateral ve posterior hipotalamusta üretilen, MSS'ye yaygın dağılan ve uyanıklığın sürdürülmesinde rol oynayan peptid nörotransmitterdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-endokannabinoidler",
+    "term": "Endokannabinoidler",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.54",
+    "definition": "Anandamid ve 2-araşidonilgliserol gibi endojen beyin lipidleridir; önceden depolanmaz, Ca2+ girişiyle hızla sentezlenir ve retrograd ulak olarak presinaptik CB1'i aktive eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cb1_reseptoru",
+    "term": "CB1 reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.54",
+    "definition": "Beyinde yüksek düzeyde bulunan, presinaptik uçlarda yerleşen ve THC ile endokannabinoidler tarafından aktive edilen kannabinoid reseptörüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anandamid",
+    "term": "Anandamid",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.54",
+    "definition": "CB1 reseptörünün endojen ligandı olan beyin lipididir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-2_arasidonilgliserol_2_ag",
+    "term": "2-araşidonilgliserol (2-AG)",
+    "aliases": [
+      "2-AG"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.54",
+    "definition": "CB1 reseptörünün endojen ligandı olan beyin lipididir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-9_tetrahidrokannabinol_9_thc",
+    "term": "Δ9-tetrahidrokannabinol (Δ9-THC)",
+    "aliases": [
+      "THC"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.54",
+    "definition": "Kannabisteki primer psikoaktif bileşendir; beyni başlıca CB1 reseptörünü aktive ederek etkiler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-retrograd_sinaptik_ulak",
+    "term": "Retrograd sinaptik ulak",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.54",
+    "definition": "Postsinaptik nörondan salınıp sinaps boyunca geriye doğru ilerleyerek presinaptik nörona etki eden haberci maddedir; endokannabinoidler bunun örneğidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nitrik_oksit_sentaz_nos",
+    "term": "Nitrik oksit sentaz (NOS)",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.56",
+    "definition": "Kalsiyum-kalmodulin ile aktive olan ve NMDA reseptörünün oluşturduğu hücre içi Ca2+ artışıyla nitrik oksit üreten nöronal enzimdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-purin_reseptorleri",
+    "term": "Purin reseptörleri",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.57",
+    "definition": "Adenozin ve ATP gibi moleküllere duyarlı reseptörlerdir; MSS'de adenozin metabotropik A1 reseptörleri üzerinden etki eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-adenozin",
+    "term": "Adenozin",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.57",
+    "definition": "ATP'nin hücre dışında nükleotidazlarla dönüşümüyle oluşan ve MSS'de metabotropik A1 reseptörlerine etki eden purindir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-a1_reseptoru",
+    "term": "A1 reseptörü",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.57",
+    "definition": "Presinaptik yerleşimde Ca2+ kanallarını inhibe ederek amino asit ve monoamin salınımını azaltan metabotropik adenozin reseptörüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-musimol",
+    "term": "Musimol",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "GABAA reseptörünün agonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nalokson",
+    "term": "Nalokson",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Mu, delta ve kappa opioid reseptörlerinin antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ondansetron",
+    "term": "Ondansetron",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "5-HT3 reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-atropin",
+    "term": "Atropin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Muskarinik M1 ve M2 reseptörlerinin antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-prazosin",
+    "term": "Prazosin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Noradrenalinin α1 reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-klonidin",
+    "term": "Klonidin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Noradrenalinin α2 reseptörünün agonistidir (Tablo 21-2); presinaptik Ca2+ kondüktansını azaltır, K+ kondüktansını artırır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aprepitant",
+    "term": "Aprepitant",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "NK1 (taşikinin) reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-rimonabant",
+    "term": "Rimonabant",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Endokannabinoid CB1 reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fenotiyazinler",
+    "term": "Fenotiyazinler",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Dopamin D1 ve D2 reseptörlerinin antagonistleridir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bromokriptin",
+    "term": "Bromokriptin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Dopamin D2 reseptörünün agonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ranitidin",
+    "term": "Ranitidin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Histamin H2 reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mepiramin",
+    "term": "Mepiramin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Histamin H1 reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tioperamid",
+    "term": "Tioperamid",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Histamin H3 reseptörünün (inhibitör otoreseptör) antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yohimbin",
+    "term": "Yohimbin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Noradrenalinin α2 reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lsd",
+    "term": "LSD",
+    "aliases": [
+      "Lizerjik asit dietilamid"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "5-HT1A ve 5-HT2A reseptörlerinin agonisti olarak Tablo 21-2'de yer alır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ketanserin",
+    "term": "Ketanserin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "5-HT2A reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kiskalat",
+    "term": "Kiskalat",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "Metabotropik glutamat reseptörlerinin agonisti olarak Tablo 21-2'de yer alır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cnqx",
+    "term": "CNQX",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "AMPA reseptörünün antagonistidir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dizosilpin",
+    "term": "Dizosilpin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Farmakoloji",
+    "instructorAndSource": "Ders notu: 1)MSS İlaçları Farmakolojisine Giriş s.35",
+    "definition": "NMDA reseptörünün antagonistlerinden biridir (Tablo 21-2).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-11-02",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]

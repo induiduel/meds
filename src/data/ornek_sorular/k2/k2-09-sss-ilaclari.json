@@ -1,0 +1,3030 @@
+{
+ "id": "k2-09-sss-ilaclari",
+ "sira": 9,
+ "kurul": 1,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "SSS İlaçları (MSS İlaçları Farmakolojisine Giriş)",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "tarih": "2026-11-02",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Öğrenci, MSS ilaçlarının kapsamını ve çoğunun sinaptik iletiyi modüle eden spesifik reseptörler üzerinden etki ettiğini; alkol ve genel anesteziklerin reseptör aracılı olmayan etkilerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "MSS'de etkili neredeyse tüm ilaçlar aşağıdakilerden hangisini değiştirir?",
+     "secenekler": {
+      "A": "Sinaptik iletiyi",
+      "B": "Aksonal miyelinizasyonu",
+      "C": "Kan-beyin bariyeri geçirgenliğini",
+      "D": "Hücre dışı iyon dengesini",
+      "E": "Nöron çoğalma hızını"
+     },
+     "dogru": "A",
+     "aciklama": "MSS'ye etkili neredeyse tüm ilaçlar sinaptik iletiyi modüle eden spesifik reseptörler üzerinden etki eder (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Sinaptik ileti, bir nöronun salgıladığı transmitterin karşı hücredeki reseptöre bağlanarak sinyal aktarmasıdır. MSS ilaçlarının neredeyse tamamı bu iletiyi artıran ya da azaltan reseptörlere bağlanır, bu yüzden ilaç etkisinin ortak düzeyi sinaptik iletidir (s. 2).",
+      "B": "Miyelinizasyon, oligodendrositlerin aksonları miyelin kılıfıyla sarmasıdır ve sinirsel iletim hızını artırır. MSS ilaçlarının çoğunun hedefi bu süreç değil transmitter reseptörleridir; miyelin bozukluğu daha çok multipl sklerozla ilişkilidir (s. 2, 7).",
+      "C": "Kan-beyin bariyeri, ilaçların beyin dokusuna geçişini sınırlayan yapıdır ve ilacın merkeze ulaşıp ulaşmayacağını belirler. İlaç merkeze ulaştıktan sonra etkisini bariyeri değiştirerek değil, sinaptik iletiyi modüle eden reseptörler üzerinden gösterir (s. 8).",
+      "D": "Hücre dışı iyon konsantrasyonlarının korunması astrositlerin homeostatik destek işlevidir ve nöronların çalışma ortamını sabit tutar. MSS ilaçlarının ortak etki yolu ise bu ortam değil, sinaptik iletiyi modüle eden reseptörlerdir (s. 2, 6).",
+      "E": "Nöronlar elektrokimyasal olarak uyarılabilen hücrelerdir ve sayıları ya da çoğalma hızı MSS ilaçlarının tipik etki düzeyi değildir. İlaçlar bu hücreler arasındaki iletiyi reseptör düzeyinde değiştirir; çoğalma hızı ilaç hedefi olarak düşünülemez (s. 2, 4)."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "MSS'ye etkileri olan neredeyse tüm ilaçların, sinaptik iletiyi modüle eden spesifik reseptörler üzerine etkidiği açıktır."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q02",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Agonist ve antagonist çalışmaları hangi nörotransmitter sistemi üzerinden anksiyete ve epilepsinin patofizyolojisini açıklayabilir?",
+     "secenekler": {
+      "A": "Dopamin",
+      "B": "GABA",
+      "C": "Serotonin",
+      "D": "Noradrenalin",
+      "E": "Asetilkolin"
+     },
+     "dogru": "B",
+     "aciklama": "Agonist ve antagonistlerin GABA reseptörleri üzerindeki etkileri anksiyete ve epilepsi patofizyolojisini açıklamada kullanılır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Dopamin, davranış ve hareket denetiminde rol oynayan bir monoamin transmitteridir; reseptörleri antipsikotik ilaçların hedefidir. Bu bilgi şizofreni hipotezlerinin temelini oluşturur, anksiyete ve epilepsi açıklamasını ise GABA reseptörleri sağlar (s. 3).",
+      "B": "GABA, MSS'nin başlıca inhibitör nörotransmitterlerinden biridir. Reseptörleri üzerinde etkili agonist ve antagonistler anksiyete ve epilepsi ilaçlarının temelini oluşturur; bu çalışmalar iki hastalığın patofizyolojisine ışık tutar (s. 3).",
+      "C": "Serotonin, birçok MSS işlevinde rol oynayan monoamin transmitteridir ve reseptörlerinin agonist ve antagonistleri ayrı olarak tanımlanır. Anksiyete ve epilepsi patofizyolojisi için öne çıkarılan sistem ise GABA reseptörleridir; ikisi karıştırılmamalıdır (s. 3).",
+      "D": "Noradrenalin, tüm reseptör alt tiplerinin metabotropik olduğu bir monoamin transmitteridir. Adrenerjik sistem ilaçlarının hedefidir, ancak anksiyete ve epilepsi hipotezleri GABA reseptörleri üzerindeki ilaç etkilerine dayandırılır (s. 3, 46).",
+      "E": "Asetilkolin, kolinerjik nöronların salgıladığı ve esteraz enzimiyle yıkılan transmitterdir; nikotinik ve muskarinik reseptörlere bağlanır. Anksiyete ve epilepsi ilişkisi bu transmitterle değil, GABA reseptörleri üzerindeki ilaç etkileriyle kurulur (s. 3)."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Çeşitli agonist ve antagonistlerin ϒ-aminobütirik asit (GABA) reseptörleri üzerindeki etkilerini değerlendiren çalışmalar, anksiyete ve epilepsi dahil bazı hastalıkların patofizyolojisine ilişkin durumları açıklayabilir."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-04",
+      "not:s3",
+      "ozen:s3"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Alkol ve genel anestezikler reseptör aracılı olmayan etkiler gösterse de sinaptik iletide aşağıdakilerden hangisi saptanabilir?",
+     "secenekler": {
+      "A": "Dopamin reseptörlerinde seçici agonizm",
+      "B": "GABA reseptörlerinin tam blokajı",
+      "C": "Gösterilebilir değişiklikler",
+      "D": "Miyelin kılıfında yıkım",
+      "E": "Veziküllerde belirgin tükenme"
+     },
+     "dogru": "C",
+     "aciklama": "Genel anestezikler ve alkol gibi reseptör aracılı olmayan etkiler bile sinaptik iletide gösterilebilir değişikliklere yol açar (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Seçici agonizm, bir ilacın belirli bir reseptörü doğal transmitter gibi aktive etmesidir ve dopamin reseptörleri için antipsikotik ilaçlarla birlikte anılır. Alkol ve genel anestezikler ise reseptör aracılı olmayan etki gösterdiğinden bu tanıma uymaz (s. 2, 3).",
+      "B": "GABA reseptörleri anksiyete ve epilepsi hipotezlerinde önemli bir hedeftir ve reseptörü bloke eden ligandlar bilinir. Alkol ve genel anesteziklerin reseptör aracılı olmayan etkileri ise tam bir reseptör blokajı olarak tanımlanmaz; bulgu sinaptik iletideki değişikliktir (s. 2, 3).",
+      "C": "Alkol ve genel anestezikler belirli bir reseptöre bağlanmadan etki eden ajanlardır. Buna rağmen bu etkiler sinaptik iletide gösterilebilir değişikliklere yol açar; yani MSS ilaçlarında ortak değişen düzey sinaptik iletidir (s. 2).",
+      "D": "Miyelin kılıfının yıkımı, oligodendrositlerin hasarıyla ilişkili olup multipl sklerozdaki temel olaydır. Alkol ve genel anesteziklerin sinaptik iletideki etkisi miyelin hasarıyla ilişkilendirilmez; karışıklık hasar türlerinin birbirine karıştırılmasından doğar (s. 2, 7).",
+      "E": "Sinaptik veziküllerde tükenme, rezerpin gibi monoaminlerin depolanmasını engelleyen ilaçlarla ilişkili presinaptik bir etkidir. Alkol ve genel anestezikler için bu soruda aranan bulgu ise sinaptik iletide gösterilebilen değişikliktir (s. 2, 23)."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q36"
+     ],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Genel anestezikler ve alkol gibi reseptör-aracılı olmayan bu etkiler bile sinaptik iletide gösterilebilir değişikliklere yol açar."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q36"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hastalık hipotezleri ile ilgili aşağıdaki ifadeler veriliyor:\nI. GABA reseptörleri üzerindeki ilaç etkileri şizofreni patofizyolojisinin temelini oluşturmuştur.\nII. Antipsikotiklerin dopamin reseptörleri üzerindeki etkisi şizofreni hipotezlerinin temelini oluşturmuştur.\nIII. GABA reseptörlerine etkili agonist ve antagonistler anksiyete ve epilepsinin patofizyolojisini açıklayabilir.\nIV. Klinik etkinliği bilinen ilaçların etkilerinin aydınlatılması, hastalık mekanizmalarıyla ilgili hipotezlerin gelişmesine yol açmıştır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "Yalnız II ve III",
+      "C": "I, III ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Şizofreni hipotezi antipsikotiklerin dopamin reseptörlerine etkisine, anksiyete ve epilepsi açıklaması GABA reseptörlerine dayanır; I bu eşleşmeyi ters kurduğu için yanlıştır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Bu seçim I'i de doğru sayar; oysa şizofreni hipotezi dopamin reseptörleri üzerindeki antipsikotik etkiye dayanır, GABA'ya değil. Üstelik doğru olan IV dışarıda kalır; doğru öncüller II, III ve IV'tür (s. 3).",
+      "B": "II ve III doğrudur: dopamin–şizofreni ve GABA–anksiyete/epilepsi eşleşmeleri slaytla uyuşur. Ancak klinik etkinliği bilinen ilaçların aydınlatılmasının hipotezlere yol açtığını söyleyen IV de doğrudur ve bu seçim onu dışarıda bırakır (s. 3).",
+      "C": "III ve IV doğrudur, ancak I yanlıştır: GABA reseptörleri şizofreni değil anksiyete ve epilepsi hipotezleriyle ilişkilidir. Ayrıca doğru olan II dışarıda bırakılmıştır (s. 3).",
+      "D": "II, III ve IV doğrudur: antipsikotiklerin dopamin reseptörlerine etkisi şizofreni hipotezlerinin temelidir, GABA reseptörü çalışmaları anksiyete ve epilepsiyi açıklar ve etkinliği bilinen ilaçların aydınlatılması hipotez doğurmuştur. I yanlıştır, çünkü şizofreni hipotezi GABA'ya değil dopamine dayanır (s. 3).",
+      "E": "Dört öncülün tamamı doğru kabul edilir; oysa I'de GABA şizofreniyle ilişkilendirilerek yanlış kurulmuştur. Şizofreni hipotezlerinin temeli dopamin reseptörleridir, GABA ise anksiyete ve epilepsiyle anılır (s. 3)."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Örn., dopamin reseptörleri üzerine antipsikotik ilaçların etkisi hakkındaki bilgiler şizofreni patofizyolojisinde önemli hipotezlerin temelini oluşturmuştur."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-04",
+      "not:s3",
+      "ozen:s3"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "MSS ilaçları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Etki mekanizmaları her zaman açıkça anlaşılmıştır",
+      "B": "Neredeyse tümü sinaptik iletiyi modüle eden reseptörlere etki eder",
+      "C": "Ağrıyı hafifleten ilaçları da kapsar",
+      "D": "Agonist ve antagonistler mekanizma çalışmalarında yararlıdır",
+      "E": "Alkol ve genel anestezikler sinaptik iletide değişiklik yapar"
+     },
+     "dogru": "A",
+     "aciklama": "Slayta göre MSS ilaçlarının etki mekanizmaları karmaşıklık nedeniyle her zaman açıkça anlaşılmış değildir; bu nedenle 'her zaman açıkça anlaşılmıştır' ifadesi yanlıştır (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade yanlıştır: MSS'nin karmaşıklığı nedeniyle çeşitli ilaçların etki mekanizmaları her zaman açıkça anlaşılmış değildir. Bu yüzden mekanizmaları çözmek için agonist ve antagonistlerden yararlanılır (s. 2).",
+      "B": "İfade doğrudur: MSS'ye etkisi olan neredeyse tüm ilaçlar sinaptik iletiyi modüle eden spesifik reseptörler üzerinden etki eder. Bu, ilaç etkisinin ortak düzeyini belirtir ve bu nedenle yanlış ifade olarak seçilemez (s. 2).",
+      "C": "İfade doğrudur: MSS ilaçları yalnız nörolojik ve psikiyatrik hastalık ilaçlarını değil, ağrıyı hafifleten, mide bulantısını bastıran ve ateşi düşüren ilaçları da kapsar. Kapsam bu nedenle çok geniştir ve psikiyatriyle sınırlı değildir (s. 2).",
+      "D": "İfade doğrudur: doğal transmitterleri taklit eden agonistler ve antagonistler, MSS ilaçlarının etki mekanizmalarının çalışılmasında oldukça yararlıdır. Bu nedenle doğru ifadedir ve yanlış seçenek olamaz (s. 2).",
+      "E": "İfade doğrudur: alkol ve genel anestezikler gibi reseptör aracılı olmayan etkiler bile sinaptik iletide gösterilebilir değişikliklere yol açar. Bu bilgi slaytla uyumludur ve yanlış ifade değildir (s. 2)."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q36"
+     ],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Karmaşıklıkları nedeniyle, çeşitli ilaçların MSS'de etki ettiği mekanizmalar her zaman açıkça anlaşılmamıştır."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q36"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "GABA sistemi üzerindeki agonist ve antagonist etkilerini inceleyen çalışmalar hangi hastalık çiftinin patofizyolojisini açıklayabilir?",
+     "secenekler": {
+      "A": "Şizofreni ve multipl skleroz",
+      "B": "Şizofreni ve Parkinson hastalığı",
+      "C": "Anksiyete ve epilepsi",
+      "D": "Multipl skleroz ve epilepsi",
+      "E": "Anksiyete ve Parkinson hastalığı"
+     },
+     "dogru": "C",
+     "aciklama": "GABA reseptörleri üzerindeki agonist ve antagonist çalışmaları anksiyete ve epilepsi dahil bazı hastalıkların patofizyolojisini açıklayabilir (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Şizofreni dopamin reseptörleri üzerindeki antipsikotik etkiyle, multipl skleroz ise oligodendrosit ve miyelin hasarıyla ilişkilendirilir. İki hastalık da GABA reseptörü çalışmalarının açıkladığı hastalık çifti değildir (s. 3, 7).",
+      "B": "Şizofreni, antipsikotiklerin dopamin reseptörleri üzerindeki etkisine dayalı hipotezlerle açıklanır; Parkinson hastalığı ise dopamin eksikliği ve L-DOPA ile anılır. GABA reseptörü çalışmaları bu ikiliyi açıklamak için öne çıkarılmaz (s. 3, 9).",
+      "C": "Anksiyete ve epilepsi, GABA reseptörlerine etkili ilaçlarla tedavi edilen iki hastalıktır. Agonist ve antagonistlerin bu reseptörler üzerindeki etkilerini inceleyen çalışmalar iki hastalığın patofizyolojisini açıklamaya yardımcı olur (s. 3).",
+      "D": "Epilepsi GABA reseptörü çalışmalarıyla açıklanabilir, ancak multipl skleroz miyelin kılıfının bozulduğu bir hastalıktır ve oligodendrositlerin hasarıyla ilişkilidir. Çift bu nedenle yanlış kurulmuştur; doğru eşleşme anksiyete ve epilepsidir (s. 3, 7).",
+      "E": "Anksiyete GABA reseptörleriyle ilişkilidir, ancak Parkinson hastalığı dopamin düzeyinin artırılmasıyla tedavi edilen bir hastalıktır. Bu çift GABA çalışmalarının açıkladığı hastalıklar olarak verilmez; doğru ikinci hastalık epilepsidir (s. 3, 9)."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Çeşitli agonist ve antagonistlerin ϒ-aminobütirik asit (GABA) reseptörleri üzerindeki etkilerini değerlendiren çalışmalar, anksiyete ve epilepsi dahil bazı hastalıkların patofizyolojisine ilişkin durumları açıklayabilir."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-04",
+      "not:s3",
+      "ozen:s3"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Merkezi sinir sisteminde etkili ilaçlar ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca psikiyatrik hastalıkların tedavisinde kullanılır",
+      "B": "Etki mekanizmaları tümüyle aydınlatılmıştır",
+      "C": "Ağrı ve ateş tedavisi kapsamın dışındadır",
+      "D": "Yalnızca reseptör aracılı olmayan etkiler gösterir",
+      "E": "Hâlâ en yaygın kullanılan farmakolojik ajan grubudur"
+     },
+     "dogru": "E",
+     "aciklama": "MSS ilaçları eski çağlardan beri bilinen ve hâlâ en yaygın kullanılan farmakolojik ajan grubudur (s. 2).",
+     "sik_aciklamalari": {
+      "A": "MSS ilaçları psikiyatrik hastalıkların yanı sıra nörolojik rahatsızlıklarda ve ayrıca ağrıda, mide bulantısında ve ateşte de kullanılır. 'Yalnızca psikiyatrik' ifadesi bu geniş kapsamı gereksiz yere daraltır, bu nedenle yanlıştır (s. 2).",
+      "B": "MSS'nin karmaşıklığı nedeniyle çeşitli ilaçların etki mekanizmaları her zaman açıkça anlaşılmamıştır. Bu yüzden mekanizmaların tümüyle aydınlatıldığı söylenemez (s. 2).",
+      "C": "Ağrıyı hafifleten, mide bulantısını bastıran ve ateşi düşüren ilaçlar da MSS ilaçları kapsamındadır. Ağrı ve ateş tedavisini kapsam dışında saymak slaytla çelişir (s. 2).",
+      "D": "MSS ilaçlarının neredeyse tamamı sinaptik iletiyi modüle eden spesifik reseptörler üzerinden etki eder; alkol ve genel anestezikler gibi reseptör aracılı olmayan etkiler ise istisnadır. 'Yalnızca' ifadesi bu nedenle yanlıştır (s. 2).",
+      "E": "MSS'de etkili ilaçlar, eski çağlarda insanlar tarafından keşfedilen ilk ilaçlar arasında yer alır ve günümüzde de en yaygın kullanılan farmakolojik ajan grubudur. Bu nedenle ifade doğrudur (s. 2)."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Merkezi sinir sisteminde (MSS) etkili ilaçlar, eski çağlarda insanlar tarafından keşfedilen ilk ilaçlar arasında ve hala en yaygın kullanılan farmakolojik ajan grubudur."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "MSS ilaçları ile ilgili aşağıdaki ifadeler veriliyor:\nI. Nörolojik ve psikiyatrik rahatsızlıkların tedavisinde kullanılan ilaçları kapsarlar.\nII. Mide bulantısını bastıran ve ateşi düşüren ilaçlar da kapsama girer.\nIII. Alkol ve genel anestezikler gibi reseptör aracılı olmayan etkiler sinaptik iletide değişiklik yaratmaz.\nIV. Doğal transmitterleri taklit eden agonistler ve antagonistler etki mekanizmalarının çalışılmasında yararlıdır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II, III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, II ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Reseptör aracılı olmayan alkol ve genel anestezik etkileri sinaptik iletide değişiklik yaratır; bu yüzden III yanlış, öteki üç öncül doğrudur (s. 2).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur, ancak bu seçim agonist ve antagonistlerin mekanizma çalışmalarındaki yararını anlatan IV'ü dışarıda bırakır. Doğal transmitterleri taklit eden bu ajanlar MSS etki mekanizmalarının incelenmesinde yaygın kullanılır (s. 2).",
+      "B": "III'ü doğru sayan bu seçim, alkol ve genel anesteziklerin sinaptik iletiyi etkilemediğini varsayar. Oysa bu ajanların reseptör aracılı olmayan etkileri bile sinaptik iletide gösterilebilir değişikliklere yol açar; ayrıca IV de doğrudur (s. 2).",
+      "C": "Bu seçim III'ü doğru sayar ve I'i dışarıda bırakır. Oysa nörolojik ve psikiyatrik hastalık ilaçlarını kapsama bilgisi doğrudur, alkol ve anesteziklerin sinaptik iletiye etkisiz olduğu bilgisi ise yanlıştır (s. 2).",
+      "D": "Dört öncül birden doğru sayılmıştır; ancak III'teki 'değişiklik yaratmaz' ifadesi yanlıştır. Alkol ve genel anestezikler reseptör aracılı olmayan etki gösterseler de sinaptik iletide değişiklik oluştururlar (s. 2).",
+      "E": "I, II ve IV doğrudur: MSS ilaçları nörolojik ve psikiyatrik hastalık ilaçlarının yanı sıra bulantı ve ateş ilaçlarını kapsar, agonist ve antagonistler mekanizma çalışmalarında yararlıdır. III yanlıştır, çünkü reseptör aracılı olmayan etkiler bile sinaptik iletide değişikliğe yol açar (s. 2)."
+     },
+     "bilgi": [
+      2,
+      5,
+      6
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q36"
+     ],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Bunlara, çeşitli nörolojik ve psikiyatrik rahatsızlıkları tedavi etmek için kullanılan ilaçlar ve ağrıyı hafifleten, mide bulantısını bastıran, ateşi düşüren ilaçlar dahildir."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q36"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q07",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Dopamin sistemi üzerindeki antipsikotik etkiye dayanan hipotezler hangi hastalığın patofizyolojisinde temel olmuştur?",
+     "secenekler": {
+      "A": "Epilepsi",
+      "B": "Şizofreni",
+      "C": "Anksiyete",
+      "D": "Multipl skleroz",
+      "E": "Parkinson hastalığı"
+     },
+     "dogru": "B",
+     "aciklama": "Antipsikotik ilaçların dopamin reseptörleri üzerindeki etkisine ilişkin bilgi, şizofreni patofizyolojisindeki hipotezlerin temelini oluşturmuştur (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Epilepsi, nöbetlerle seyreden bir hastalıktır ve patofizyolojisi GABA reseptörleri üzerindeki agonist ve antagonist çalışmalarla açıklanabilir. Dopamin reseptörleri üzerindeki antipsikotik etkiyle kurulan hipotezin konusu ise şizofreniyidir (s. 3).",
+      "B": "Şizofreni, psikoz belirtileriyle seyreden psikiyatrik bir hastalıktır ve antipsikotik ilaçlar bu hastalıkta kullanılır. Antipsikotiklerin dopamin reseptörleri üzerindeki etkisi bilindikçe şizofreni patofizyolojisine ilişkin önemli hipotezler doğmuştur (s. 3).",
+      "C": "Anksiyete, GABA reseptörlerine etkili ilaçlarla ilişkilendirilen bir rahatsızlıktır ve patofizyolojisi bu ilaçların etkisinden hareketle yorumlanır. Dopamin–antipsikotik hipotezi ise şizofreniye aittir; iki eşleşme birbirine karıştırılmamalıdır (s. 3).",
+      "D": "Multipl skleroz, oligodendrositlerin hasarına bağlı olarak miyelin kılıfının bozulduğu bir hastalıktır. Antipsikotik–dopamin hipotezinin konusu bu hastalık değildir; hastalığın ilaç geliştirme hedefleri oligodendrositler ve miyelindir (s. 3, 7).",
+      "E": "Parkinson hastalığı dopamin ile ilişkilidir ve tedavisinde dopamin öncüsü L-DOPA kullanılır. Ancak antipsikotik ilaçların dopamin reseptörleri üzerindeki etkisi, patofizyolojik hipotezlerin temeli olarak şizofreniyle ilişkilendirilir; komşu kavram tuzağına dikkat edilmelidir (s. 3, 9)."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Örn., dopamin reseptörleri üzerine antipsikotik ilaçların etkisi hakkındaki bilgiler şizofreni patofizyolojisinde önemli hipotezlerin temelini oluşturmuştur."
+     },
+     "dayanak": [
+      "ozen:s3"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q09",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Antipsikotik etkisine dayanan şizofreni hipotezi ile anksiyete ve epilepsi açıklamaları sırasıyla hangi reseptör sistemlerine dayanır?",
+     "secenekler": {
+      "A": "GABA – dopamin",
+      "B": "Dopamin – glutamat",
+      "C": "Serotonin – GABA",
+      "D": "Dopamin – GABA",
+      "E": "Asetilkolin – dopamin"
+     },
+     "dogru": "D",
+     "aciklama": "Şizofreni hipotezi dopamin reseptörlerine, anksiyete ve epilepsi açıklamaları GABA reseptörlerine dayanır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "GABA – dopamin sıralaması iki eşleşmeyi ters çevirir. Şizofreni dopamin reseptörlerine, anksiyete ve epilepsi ise GABA reseptörlerine dayandırıldığından sıralama dopamin–GABA olmalıdır (s. 3).",
+      "B": "Dopamin şizofreni için doğru sistemdir, ancak glutamat anksiyete ve epilepsi açıklamasında öne çıkarılan sistem değildir. Bu iki hastalığın açıklaması GABA reseptörleri üzerindeki ilaç çalışmalarına dayandırılır (s. 3).",
+      "C": "Serotonin birçok MSS işlevinde rol oynayan bir transmitterdir, ancak şizofreni hipotezi antipsikotiklerin dopamin reseptörleri üzerindeki etkisine dayanır. Yalnız ikinci eşleşme (GABA) doğrudur; ilk eşleşme yanlıştır (s. 3).",
+      "D": "Şizofreni hipotezi antipsikotiklerin dopamin reseptörleri üzerindeki etkisinden doğmuştur; anksiyete ve epilepsi açıklamaları ise GABA reseptörlerine etkili agonist ve antagonist çalışmalarından gelir. Sıralama bu nedenle dopamin, ardından GABA'dır (s. 3).",
+      "E": "Asetilkolin kolinerjik sistemin transmitteridir ve şizofreni hipotezinin temelini oluşturmaz; hipotez dopamin reseptörlerine dayanır. Ayrıca sıralama ters kurulmuştur, çünkü anksiyete ve epilepsi için dopamin değil GABA anılır (s. 3)."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Klinik etkinliği bilinen ilaçların etkilerinin aydınlatılması hastalık mekanizmalarıyla ilgili en verimli hipotezlerin bazılarının geliştirilmesine yol açmıştır."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-04",
+      "not:s3",
+      "ozen:s3"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q36",
+     "soru": "SSS ilaçları hakkında genel olarak aşağıdaki ifadeler veriliyor:\nI. Bu ilaçların çoğu sinaptik iletiyi modüle eder.\nII. Bu ilaçlar SSS'nin bütün fizyolojik mekanizmalarını değiştirme, yönlendirme ya da bloke etme gücüne sahiptirler.\nIII. Alkol ve genel anestezik ajanlar membranlar üzerinde nonspesifik etkilere sahiptirler.\nIV. Bu ilaçların bilinmesinde sinapsların önemli rolü olmuştur.\nBu ifadelerden hangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Öğrenci, nöron, astrosit, oligodendrosit ve mikroglianın işlevlerini ve kan-beyin bariyerinin yapısını, ilaçların bariyeri geçme koşullarını (lipofiliklik, özgül taşıma; L-DOPA örneği) açıklar.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q11",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "MSS'de projeksiyon nöronlarının aksonlarını saran ve miyelin kılıfı oluşturan hücre aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Oligodendrosit",
+      "B": "Astrosit",
+      "C": "Mikroglia",
+      "D": "Schwann hücresi",
+      "E": "Kapiller endotel hücresi"
+     },
+     "dogru": "A",
+     "aciklama": "Oligodendrositler MSS'deki projeksiyon nöronlarının aksonlarını sararak miyelin kılıfı oluşturur (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Oligodendrositler, MSS'de projeksiyon nöronlarının aksonlarını saran glia hücreleridir. Oluşturdukları miyelin kılıfı aksonları elektriksel olarak yalıtır ve sinirsel iletimin hızını artırır (s. 7).",
+      "B": "Astrositler beyindeki en bol hücrelerdir ve nöronlara besin sağlar, hücre dışı iyon düzeyini korur. Aksonları miyelinle saran hücre ise oligodendrosittir; astrosit homeostatik destek hücresidir (s. 6, 7).",
+      "C": "Mikroglia, kemik iliğinden türetilen özel makrofajlardır ve beyindeki başlıca bağışıklık savunma sistemini oluşturur. Miyelin yapımıyla değil, nöroinflamatuvar süreçlerle ilişkilidir (s. 7).",
+      "D": "Schwann hücresi periferik sinir sisteminde miyelin kılıfı oluşturur; oligodendrosit ona benzer biçimde çalışır. Soru MSS'yi sorduğu için periferik sistemdeki bu hücre doğru seçenek olmaz (s. 7).",
+      "E": "Kapiller endotel hücreleri, beyin kılcal damarlarının duvarını yapar ve aralarındaki sıkı bağlantılarla kan-beyin bariyerinin temelini oluşturur. Aksonları saran miyelin yapıcısı değildirler (s. 8)."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Oligodendrositler, MSS'deki projeksiyon nöronlarının aksonlarını saran ve miyelin kılıfı oluşturan hücrelerdir."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q12",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Nöronlara besin sağlayan ve hücre dışı iyon konsantrasyonlarını koruyan glia hücresi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Oligodendrosit",
+      "B": "Astrosit",
+      "C": "Mikroglia",
+      "D": "Schwann hücresi",
+      "E": "Kapiller endotel hücresi"
+     },
+     "dogru": "B",
+     "aciklama": "Astrositler nöronlara besin sağlar ve hücre dışı iyon konsantrasyonlarını korur (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Oligodendrositler MSS'de aksonları saran ve miyelin yapan hücrelerdir. Görevleri iletim hızını artırmaktır; besin sağlama ve iyon dengesi astrosit işlevidir (s. 6, 7).",
+      "B": "Astrositler beyindeki en bol hücrelerdir ve homeostatik destek sağlarlar. Nöronlara besin verir, hücre dışı iyon konsantrasyonlarını korur ve nörotransmitterlerin sinaptik aralıktan uzaklaştırılmasına katkıda bulunurlar (s. 6).",
+      "C": "Mikroglia, kemik iliğinden türetilmiş makrofajlardır ve MSS'nin başlıca bağışıklık savunmasını yürütür. Besin sağlama ve iyon dengesi onun işlevi değildir; nöroinflamasyonda rol alır (s. 6, 7).",
+      "D": "Schwann hücreleri periferik sinir sisteminde miyelin kılıfı oluşturur. MSS'de iyon dengesini koruma ve besin sağlama işlevi ise astrositlere aittir (s. 6, 7).",
+      "E": "Kapiller endotel hücreleri beyin damarlarının duvarını yapar ve sıkı bağlantılarla kan-beyin bariyerini oluşturur. Besin sağlayan ve hücre dışı iyon düzeyini koruyan glia hücresi değil, damar duvarı hücresidirler (s. 8)."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Astrositler beyindeki en bol bulunan hücrelerdir ve nöronlara besin sağlamak ve hücre dışı iyon konsantrasyonlarını korumak gibi homeostatik destek rolleri oynarlar."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kemik iliğinden türetilen ve MSS'de başlıca bağışıklık savunma sistemini oluşturan özel makrofajlar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Astrositler",
+      "B": "Oligodendrositler",
+      "C": "Mikroglia",
+      "D": "Schwann hücreleri",
+      "E": "Nöronlar"
+     },
+     "dogru": "C",
+     "aciklama": "Mikroglia, kemik iliğinden türetilen özel makrofajlardır ve beyindeki başlıca bağışıklık savunma sistemini oluşturur (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Astrositler beyindeki en bol hücrelerdir; besin sağlar, iyon dengesini korur ve sinapsları düzenler. Makrofaj niteliği taşımazlar; bağışıklık savunması mikroglianın görevidir (s. 6, 7).",
+      "B": "Oligodendrositler aksonları saran ve miyelin kılıfı oluşturan hücrelerdir. Hasarları multipl sklerozda miyelin bozulmasına yol açar, ancak bağışıklık savunma hücresi olarak tanımlanmazlar (s. 7).",
+      "C": "Mikroglia, MSS'ye yerleşen özel makrofajlardır ve beyindeki başlıca bağışıklık savunma sistemini oluşturur. Nörodejeneratif hastalıklar dahil birçok patolojik durumda nöroinflamatuvar süreçlere aktif olarak katılırlar (s. 7).",
+      "D": "Schwann hücreleri periferik sinir sisteminde miyelin oluşturan hücrelerdir ve MSS savunmasıyla ilişkili değildir. Soru MSS'ye yerleşen makrofajları sorduğundan bu hücre doğru olmaz (s. 7).",
+      "E": "Nöronlar bilgiyi işleyen ve ileten elektriksel olarak uyarılabilir hücrelerdir. Kemik iliği kökenli makrofaj değildirler; bağışıklık savunması mikroglia tarafından yürütülür (s. 4, 7)."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Mikroglia, MSS'ye yerleşen ve beyindeki başlıca bağışıklık savunma sistemi olan kemik iliğinden türetilen özel makrofajlardır."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q14",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Glia hücreleri ile ilgili aşağıdaki ifadeler veriliyor:\nI. Astrosit uzantıları nörotransmitterlerin salınım sonrası sinaptik aralıktan uzaklaştırılmasında rol oynar.\nII. Oligodendrositler MSS'nin başlıca bağışıklık savunma hücreleridir.\nIII. Mikroglia nörodejeneratif hastalıklar dahil birçok patolojik durumda nöroinflamatuvar süreçlerde yer alır.\nIV. Astrositler nöronal aktiviteyi değiştirebilen nöromodülatörleri serbest bırakabilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "I, II ve III",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Başlıca bağışıklık savunmasını mikroglia yürütür; oligodendrosit miyelin yapar. Bu nedenle II yanlış, I, III ve IV doğrudur (s. 6, 7).",
+     "sik_aciklamalari": {
+      "A": "I ve III doğrudur, ancak bu seçim astrositlerin nöronal aktiviteyi değiştirebilen nöromodülatörler salıverdiğini söyleyen IV'ü dışarıda bırakır. Astrositler sinaps işlevini düzenlemede aktif rol oynarlar (s. 6).",
+      "B": "II'yi doğru sayan bu seçim oligodendrositleri bağışıklık hücresi olarak görür; oysa oligodendrosit miyelin yapar ve bağışıklık savunması mikrogliadır. Ayrıca doğru olan IV dışarıda kalmıştır (s. 6, 7).",
+      "C": "III ve IV doğrudur, ancak II yanlıştır; oligodendrositler bağışıklık savunma hücresi değil miyelin yapıcısıdır. Doğru olan I de dışarıda bırakılmıştır (s. 6, 7).",
+      "D": "I, III ve IV doğrudur: astrositler nörotransmitterleri aralıktan uzaklaştırır ve nöromodülatör salabilir, mikroglia nöroinflamasyonda yer alır. II yanlıştır; başlıca bağışıklık savunmasını yürüten hücre oligodendrosit değil mikrogliadır (s. 6, 7).",
+      "E": "Dört öncülün tamamı doğru kabul edilir; oysa II'de oligodendrositler bağışıklık savunma hücresi olarak gösterilmiştir. Bu rol mikrogliaya aittir, oligodendrosit miyelin kılıfı yapar (s. 7)."
+     },
+     "bilgi": [
+      22,
+      23,
+      27,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Astrosit uzantıları, nöronal sinapslarla yakın ilişki içindedir ve nörotransmitterlerin salınım sonrasında sinaptik aralıktan uzaklaştırılması ve geri dönüştürülmesinde rol oynar."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Oligodendrositler ve miyelin kılıfı ile ilgili aşağıdaki ifadeler veriliyor:\nI. MSS'de projeksiyon nöronlarının aksonlarını sararlar.\nII. Periferik sinir sistemindeki Schwann hücrelerine benzer şekilde miyelin oluştururlar.\nIII. Miyelin kılıfı aksonları elektriksel olarak yalıtarak sinirsel iletim hızını artırır.\nIV. Oligodendrosit hasarı, kan-beyin bariyerinin sıkı bağlantılarını bozarak multipl skleroza yol açar.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Oligodendrositler MSS aksonlarını miyelinle sararak iletimi hızlandırır; hasarları multipl sklerozda miyelin kılıfının bozulmasına yol açar (s. 7).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur, ancak bu seçim miyelinin aksonları yalıtarak iletim hızını artırdığını söyleyen III'ü dışarıda bırakır. Miyelin kılıfının işlevi bu yalıtımdır (s. 7).",
+      "B": "Bu seçim IV'ü doğru sayar ve I'i dışarıda bırakır. Oysa oligodendrositlerin MSS aksonlarını sardığı doğrudur; IV'te multipl skleroz bariyer bağlantılarıyla açıklanmıştır, hâlbuki hasar miyelin kılıfını bozar (s. 7, 8).",
+      "C": "I ve III doğrudur, ancak bu seçim IV'ü de doğru sayar ve II'yi dışarıda bırakır. Oligodendrositler Schwann hücrelerine benzer biçimde miyelin yapar; IV'teki bariyer açıklaması ise yanlıştır (s. 7).",
+      "D": "Dört öncül birden doğru sayılmıştır; ancak IV'te multipl sklerozun nedeni bariyer bağlantılarının bozulması gösterilmiştir. Slayta göre hastalıkta bozulan yapı miyelin kılıfıdır (s. 7).",
+      "E": "I, II ve III doğrudur: oligodendrositler MSS aksonlarını sarar, Schwann hücrelerine benzer biçimde miyelin yapar ve miyelin iletimi hızlandırır. IV yanlıştır; oligodendrosit hasarı multipl sklerozda miyelin kılıfının bozulmasına yol açar, bariyer bağlantılarının değil (s. 7)."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Oligodendrositler, periferik sinir sistemindeki Schwann hücrelerine benzer şekilde aksonların çevresinde miyelin kılıfı oluşturur."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kan-beyin bariyeri ve ilaçların MSS'ye geçişi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Lipofilik olmayan ve özgül taşıyıcısı bulunmayan ilaçlar da bariyeri serbestçe geçer.\nII. Astrositlerin uç ayakları bariyerin oluşumuna ve sürdürülmesine katkıda bulunur.\nIII. Glikoz ve esansiyel amino asitler özgül taşıyıcı proteinlerle bariyeri geçebilir.\nIV. L-DOPA, amino asit taşıyıcılarını kullanarak beyne geçebilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "II, III ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "İlaçların MSS'ye ulaşması için yeterli lipofiliklik ya da özgül taşıma gerekir; bu nedenle I yanlış, II, III ve IV doğrudur (s. 8, 9).",
+     "sik_aciklamalari": {
+      "A": "I'i doğru sayan bu seçim, bariyerin her ilaca serbestçe geçit verdiğini varsayar. Oysa ilaçların MSS'ye ulaşması için genellikle lipofiliklik ya da özgül taşıma gerekir; ayrıca doğru olan IV dışarıda kalmıştır (s. 8, 9).",
+      "B": "II, III ve IV doğrudur: astrosit uç ayakları bariyere katkı sağlar, glikoz ve esansiyel amino asitler özgül taşıyıcılarla geçer, L-DOPA amino asit taşıyıcılarını kullanır. I yanlıştır; ilaçların geçmesi için genellikle yeterli lipofiliklik ya da özgül taşıma gerekir (s. 8, 9).",
+      "C": "II ve III doğrudur, ancak bu seçim L-DOPA'nın amino asit taşıyıcılarıyla beyne geçtiğini söyleyen IV'ü dışarıda bırakır. L-DOPA bu özgül taşımanın tipik örneğidir (s. 9).",
+      "D": "III ve IV doğrudur, ancak I yanlıştır; bariyer taşıyıcısız ve lipofilik olmayan ilaçlara serbest geçit vermez. Ayrıca doğru olan II dışarıda bırakılmıştır (s. 8, 9).",
+      "E": "Dört öncül birden doğru sayılmıştır; ancak I'deki serbest geçiş iddiası yanlıştır. Bariyer birçok maddenin geçişini sınırlar ve geçiş lipofiliklik ya da özgül taşıyıcıya bağlıdır (s. 8)."
+     },
+     "bilgi": [
+      31,
+      32,
+      34,
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "İlaçların MSS'ye ulaşabilmesi için genellikle yeterli lipofilikliğe sahip olması veya özgül taşıma mekanizmalarından yararlanması gerekir."
+     },
+     "dayanak": [
+      "ozen:s9"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q18",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Parkinson hastalığında oral yoldan dopamin yerine L-DOPA verilmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "L-DOPA dopamin reseptörlerini doğrudan bloke eder",
+      "B": "Dopamin kan-beyin bariyerini doğrudan geçerek yıkılır",
+      "C": "L-DOPA amino asit taşıyıcılarıyla beyne geçer",
+      "D": "L-DOPA bariyerin sıkı bağlantılarını açar",
+      "E": "Dopamin astrositler tarafından geri alınır"
+     },
+     "dogru": "C",
+     "aciklama": "Dopamin bariyeri doğrudan geçemez; öncüsü L-DOPA amino asit taşıyıcılarıyla beyne geçer ve orada dopamine dönüşerek dopamin düzeyini artırır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "L-DOPA, dopaminin öncüsüdür ve beyinde dopamine dönüştürülerek dopamin düzeyini artırır; reseptörleri bloke eden bir ajan değildir. Reseptör blokajı antipsikotiklerin özelliğidir ve L-DOPA kullanımının nedeni bariyeri taşıyıcılarla geçebilmesidir (s. 3, 9).",
+      "B": "Dopamin kan-beyin bariyerini doğrudan geçemez; bu seçimdeki geçiş iddiası slaytla çelişir. L-DOPA tercih edilir, çünkü bariyeri amino asit taşıyıcılarını kullanarak aşabilir (s. 9).",
+      "C": "L-DOPA dopaminin öncüsüdür ve amino asit taşıyıcılarını kullanarak kan-beyin bariyerini geçer. Beyinde dopamine dönüşerek MSS'deki dopamin düzeyini artırır; dopaminin kendisi bariyeri doğrudan geçemediği için doğrudan verilmesi etkisizdir (s. 9).",
+      "D": "Bariyerin sıkı bağlantıları endotel hücreleri arasındadır ve bariyer geçişini sınırlar. L-DOPA bu bağlantıları açarak değil, amino asit taşıyıcılarını kullanarak beyne ulaşır (s. 8, 9).",
+      "E": "Astrositler sinaptik aralıktaki nörotransmitterlerin uzaklaştırılmasında rol oynar, ancak L-DOPA tercihinin nedeni bu değildir. Neden, dopaminin bariyeri doğrudan geçememesi ve L-DOPA'nın taşıyıcılarla geçebilmesidir (s. 6, 9)."
+     },
+     "bilgi": [
+      35,
+      36
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Dopaminin öncüsü olan L-DOPA, amino asit taşıyıcılarını kullanarak beyne geçebilirken dopamin kan-beyin bariyerini doğrudan geçemez."
+     },
+     "dayanak": [
+      "ozen:s9"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kan-beyin bariyerinin temel yapısını aşağıdakilerden hangisi oluşturur?",
+     "secenekler": {
+      "A": "Endotel hücreleri arasındaki sıkı kavşaklar",
+      "B": "Astrosit uç ayaklarının tek başına oluşturduğu tabaka",
+      "C": "Oligodendrosit miyelin kılıfı",
+      "D": "Mikroglia hücre kümeleri",
+      "E": "Nöron dendrit ağı"
+     },
+     "dogru": "A",
+     "aciklama": "Bariyerin temel yapısını beyin kılcal damarlarının endotel hücreleri arasındaki sıkı bağlantılar oluşturur; astrosit uç ayakları yalnız katkıda bulunur (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Beyin kılcal damarlarının endotel hücreleri arasındaki sıkı bağlantılar, kan-beyin bariyerinin temelini oluşturur ve birçok maddenin beyne geçişini sınırlar. Astrositlerin uç ayakları ise bariyerin oluşumuna ve sürdürülmesine katkı sağlar (s. 8).",
+      "B": "Astrosit uç ayakları bariyerin oluşumuna ve işlevinin sürdürülmesine katkıda bulunur, ancak temel yapıyı onlar tek başına oluşturmaz. Temel yapı endotel hücreleri arasındaki sıkı bağlantılardır (s. 8).",
+      "C": "Oligodendrosit miyelin kılıfı aksonları sarar ve iletim hızını artırır. Kan ile MSS hücre dışı sıvısı arasındaki sınırı oluşturan yapı değildir; sınır damar duvarında bulunur (s. 7, 8).",
+      "D": "Mikroglia, MSS'nin bağışıklık savunmasını yürüten özel makrofajlardır. Kan-beyin bariyerinin yapısal bir parçası olarak tanımlanmaz; bariyer endotel bağlantılarına dayanır (s. 7, 8).",
+      "E": "Dendritler, diğer nöronlardan gelen sinyalleri alan ağaç benzeri uzantılardır. Kan ile beyin dokusu arasındaki geçişi sınırlama işlevi taşımazlar; bu işlev damar endoteline aittir (s. 5, 8)."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Bariyerin temel yapısını, beyin kılcal damarlarının endotel hücreleri arasındaki sıkı bağlantılar oluşturur."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q19",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kusma refleksinde rol oynayan ve kan-beyin bariyerinin klasik yapısının bulunmadığı beyin bölgesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Serebellum",
+      "B": "Hipokampüs",
+      "C": "Akson başlangıç segmenti",
+      "D": "Area postrema",
+      "E": "Kapiller endotel"
+     },
+     "dogru": "D",
+     "aciklama": "Sirkumventriküler organlarda bariyerin klasik yapısı bulunmaz; bunlar arasında kusma refleksinde rol oynayan area postrema vardır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Serebellum, nöronların katmanlı yapılar hâlinde bulunduğu bir beyin bölgesidir. Sirkumventriküler organ olarak tanımlanmaz ve kusma refleksiyle ilişkilendirilmez; bariyerin klasik yapısı burada bulunur (s. 4, 9).",
+      "B": "Hipokampüs, serebellum gibi nöronların katmanlı yapılar oluşturduğu bir bölgedir. Bu bölge sirkumventriküler organ olarak tanımlanmaz ve kusma refleksinde rol oynamaz; bariyer yapısı korunmuştur (s. 4, 9).",
+      "C": "Akson başlangıç segmenti, nöronda aksonun hücre gövdesinden çıktığı kısımdır ve bir beyin bölgesi değil, nöron bölümüdür. Kusma refleksi ve bariyerden yoksunlukla ilgisi yoktur (s. 5, 7, 9).",
+      "D": "Area postrema, sirkumventriküler organlar arasında yer alır ve kusma refleksinde rol oynar. Bu bölgelerde bariyerin klasik yapısı bulunmadığından kandaki bazı maddeler doğrudan algılanabilir (s. 9).",
+      "E": "Kapiller endotel, kan-beyin bariyerinin temelini oluşturan sıkı bağlantılı hücre tabakasıdır. Sirkumventriküler organlarda bu klasik yapı bulunmaz; dolayısıyla endotel bu bölgeyi tanımlamaz (s. 8, 9)."
+     },
+     "bilgi": [
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Bu organlar arasında kusma refleksinde rol oynayan area postrema ve nörohormonları dolaşıma salgılayan bazı beyin bölgeleri bulunur."
+     },
+     "dayanak": [
+      "ozen:s9"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q20",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kan-beyin bariyeri ve ilaçların MSS'ye geçişiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İkinci nesil antihistaminikler daha az sedasyon yapar",
+      "B": "L-DOPA amino asit taşıyıcılarıyla beyne geçer",
+      "C": "Sirkumventriküler organlarda bariyerin klasik yapısı bulunmaz",
+      "D": "Glikoz özgül taşıyıcı proteinlerle geçer",
+      "E": "Dopamin amino asit taşıyıcılarıyla beyne geçer"
+     },
+     "dogru": "E",
+     "aciklama": "Dopamin bariyeri doğrudan geçemez; amino asit taşıyıcılarını kullanarak beyne geçen madde öncüsü L-DOPA'dır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "İfade doğrudur: ikinci nesil antihistaminikler bariyeri daha sınırlı geçtiği için MSS'deki histamin reseptörlerine daha az ulaşır ve birinci nesillere göre genellikle daha az sedasyona yol açar. Bu nedenle yanlış ifade değildir (s. 8).",
+      "B": "İfade doğrudur: L-DOPA, amino asit taşıyıcılarını kullanarak kan-beyin bariyerini geçer ve beyinde dopamine dönüşür. Dopaminin kendisi geçemediği için bu öncü ilaç kullanılır (s. 9).",
+      "C": "İfade doğrudur: sirkumventriküler organlar bariyerin klasik yapısının bulunmadığı ya da belirgin ölçüde farklılaştığı bölgelerdir. Bu sayede kandaki bazı maddeleri doğrudan algılayabilirler (s. 9).",
+      "D": "İfade doğrudur: glikoz ve esansiyel amino asitler gibi birçok madde özgül taşıyıcı proteinler aracılığıyla bariyeri geçebilir. Bu yüzden yanlış ifade olarak seçilemez (s. 9).",
+      "E": "Bu ifade yanlıştır: amino asit taşıyıcılarını kullanarak beyne geçen madde dopamin değil, öncüsü L-DOPA'dır. Dopamin kan-beyin bariyerini doğrudan geçemez, bu yüzden Parkinson tedavisinde L-DOPA verilir (s. 9)."
+     },
+     "bilgi": [
+      33,
+      34,
+      35,
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Dopaminin öncüsü olan L-DOPA, amino asit taşıyıcılarını kullanarak beyne geçebilirken dopamin kan-beyin bariyerini doğrudan geçemez."
+     },
+     "dayanak": [
+      "ozen:s9"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Öğrenci, voltaj bağımlı ve ligand bağımlı iyon kanallarını, iyonotropik ile metabotropik reseptörleri hız, süre ve mekanizma açısından karşılaştırır; GABAA reseptörü ve ilaç bağlanma yerlerini tanır.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q21",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Membran potansiyelindeki değişikliğe yanıt olarak açılıp kapanan nöronal iyon kanalı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Voltaj bağımlı kanal",
+      "B": "Ligand bağımlı kanal",
+      "C": "Metabotropik reseptör",
+      "D": "GABAA reseptör-klorür kanalı",
+      "E": "İkinci haberci aracılı kanal"
+     },
+     "dogru": "A",
+     "aciklama": "Membran potansiyeli değişimine yanıtla açılıp kapanan kanal voltaj bağımlı kanaldır; ligand bağımlı kanal ise ligand bağlanmasıyla çalışır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Voltaj bağımlı kanallar, zarın membran potansiyelindeki değişikliğe duyarlı kanallardır ve aksiyon potansiyelinin oluşup iletilmesini sağlar. Bu soruda aranan özellik tam olarak budur, çünkü kanal kapısı gerilim değişimiyle açılıp kapanır (s. 10).",
+      "B": "Ligand bağımlı kanal, bir nörotransmitterin ya da ilacın reseptöre bağlanmasıyla açılan kanaldır ve iyonotropik reseptör adını da alır. Membran potansiyelindeki değişime doğrudan duyarlı değildir, bu yüzden voltaj bağımlı kanalla karıştırılmamalıdır (s. 12).",
+      "C": "Metabotropik reseptör, G proteini üzerinden hücre içi sinyal yollarını çalıştıran reseptör sınıfıdır. İyon kanalını doğrudan açmaz ve gerilim değişimine yanıt vermez; bu nedenle sorulan kanal türü değildir (s. 14).",
+      "D": "GABAA reseptör-klorür kanalı, GABA bağlanınca açılan ligand bağımlı bir kanaldır ve hiperpolarizasyon yapar. Açılması ligand bağlanmasına bağlıdır, membran potansiyeli değişimine değil; bu yüzden voltaj bağımlı kanal sayılmaz (s. 13).",
+      "E": "İkinci haberci aracılı kanal, metabotropik reseptörün ürettiği hücre içi habercilerle (örneğin cAMP) düzenlenen kanaldır. Açılışı gerilime değil hücre içi sinyale bağlıdır; bu yüzden membran potansiyeline yanıt veren kanal tanımına uymaz (s. 16)."
+     },
+     "bilgi": [
+      40,
+      39
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Voltaj-bağımlı kanallar, hücre zarının membran potansiyelindeki değişikliklere yanıt olarak açılır veya kapanır. Nöronlarda bu"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-12",
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q25",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Nörotransmitterlerin nöronlar üzerindeki etkilerini oluşturduğu iki temel reseptör sınıfı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Voltaj bağımlı ve ligand bağımlı reseptörler",
+      "B": "Eksitatör ve inhibitör reseptörler",
+      "C": "Presinaptik ve postsinaptik reseptörler",
+      "D": "Nikotinik ve muskarinik reseptörler",
+      "E": "İyonotropik ve metabotropik reseptörler"
+     },
+     "dogru": "E",
+     "aciklama": "Nörotransmitter reseptörleri iyonotropik (ligand bağımlı iyon kanalı) ve metabotropik (G proteini aracılı) olmak üzere iki temel sınıftır (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Voltaj bağımlı kanallar bir nörotransmitter reseptörü değildir; gerilim değişimine yanıt veren zar kanallarıdır. Ligand bağımlı kanal ise iyonotropik reseptörün diğer adıdır, dolayısıyla bu ikili reseptör sınıflaması olarak yanlıştır (s. 10, 11).",
+      "B": "Eksitatör ve inhibitör ayrımı reseptörün yaptığı fonksiyonel sonucu (depolarizasyon veya hiperpolarizasyon) tanımlar. Reseptörlerin yapısal ve işlevsel olarak iki temel sınıfa ayrılması iyonotropik–metabotropik ayrımıyla yapılır (s. 11).",
+      "C": "Presinaptik ve postsinaptik terimleri reseptörün bulunduğu yeri belirtir; reseptör sınıfı değildir. Hem iyonotropik hem metabotropik reseptörler her iki konumda da bulunabilir, bu yüzden temel sınıflama bu değildir (s. 15, 16).",
+      "D": "Nikotinik ve muskarinik reseptörler asetilkolinin farklı reseptör alt tipleridir ve belirli bir transmitterle ilişkilidir. Tüm nörotransmitterler için geçerli olan iki temel sınıf iyonotropik ve metabotropiktir (s. 11).",
+      "E": "Nörotransmitterler etkilerini ligand bağımlı iyon kanalları olan iyonotropik reseptörler ve G proteini aracılı metabotropik reseptörler olmak üzere iki temel sınıf aracılığıyla oluşturur. Bu ayrım, yanıtın hızı ve süresi bakımından da önemlidir (s. 11)."
+     },
+     "bilgi": [
+      46,
+      47,
+      58
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Nörotransmitterler, nöronlar üzerindeki etkilerini iki temel reseptör sınıfı aracılığıyla oluşturur. Bunlardan ilki, ligand"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-16",
+      "hoca:hv-k2-09-17",
+      "not:s11",
+      "ozen:s11"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Nöronların elektriksel uyarılabilirliğini, aksiyon potansiyelinin özelliklerini ve ateşleme sıklığını düzenleyen yapılar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ligand bağımlı kanalların alt birim sayısı",
+      "B": "Voltaj bağımlı Ca2+ ve K+ kanallarının farklı tipleri",
+      "C": "Metabotropik reseptörlerin G proteini tipi",
+      "D": "GABAA reseptöründeki benzodiazepin yeri",
+      "E": "Kan-beyin bariyerinin geçirgenliği"
+     },
+     "dogru": "B",
+     "aciklama": "Voltaj bağımlı Ca2+ ve K+ kanallarının tipleri uyarılabilirliği, aksiyon potansiyeli özelliklerini ve ateşleme sıklığını düzenler (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Ligand bağımlı kanalların alt birim sayısı, reseptör çeşitliliğini belirleyen yapısal bir özelliktir. Aksiyon potansiyelinin özelliklerini ve ateşleme sıklığını belirleyen düzenleyici bu değildir; bu işlev voltaj bağımlı kanallara aittir (s. 12).",
+      "B": "Voltaj bağımlı kalsiyum ve potasyum kanallarının farklı tipleri nöronun uyarılabilirliğini, aksiyon potansiyelinin özelliklerini ve ateşleme sıklığını belirler. Kalsiyum kanalları ayrıca transmitter salıverilmesiyle ilişkili olduğu için özellikle önemlidir (s. 10).",
+      "C": "Metabotropik reseptörlerin G proteini tipi, hücre içi yanıtın hangi yolla yürüyeceğini belirler ve yavaş, uzun süreli etkiler doğurur. Nöronun aksiyon potansiyeli özelliklerini ve ateşleme sıklığını doğrudan düzenleyen yapı olarak bu soruda doğru değildir (s. 14).",
+      "D": "GABAA reseptöründeki benzodiazepin bağlanma yeri, α ve γ alt birimleri arasındadır ve klorür kanalı açılmasını kolaylaştırır. İlaç etkisini belirleyen bir bölgedir; nöronun ateşleme sıklığını düzenleyen genel yapı olarak sorulanı karşılamaz (s. 13).",
+      "E": "Kan-beyin bariyeri, ilaçların ve maddelerin beyne geçişini sınırlayan yapıdır. Nöronun elektriksel uyarılabilirliği ve ateşleme sıklığı ile doğrudan ilgili değildir; bu soruda sorulan düzenleyici kanal yapılarıdır (s. 10)."
+     },
+     "bilgi": [
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Voltaj bağımlı kalsiyum (Ca²⁺) ve potasyum (K⁺) kanallarının farklı tipleri, nöronların elektriksel uyarılabilirliğini, aksiyon potansiyelinin özelliklerini ve ateşleme sıklığını düzenler. 10"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-14",
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q23",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İyon kanalları ile ilgili aşağıdaki ifadeler veriliyor:\nI. Voltaj bağımlı kanallar membran potansiyelindeki değişikliğe yanıt olarak açılır veya kapanır.\nII. Ligand bağımlı kanallar membran potansiyelindeki değişikliğe doğrudan duyarlıdır.\nIII. Voltaj bağımlı kanallar aksonun başlangıç segmentinde ve akson boyunca yoğunlaşır.\nIV. Voltaj bağımlı Ca2+ ve K+ kanalları ateşleme sıklığını düzenler.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "II ve IV",
+      "C": "I, III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "Yalnız III"
+     },
+     "dogru": "C",
+     "aciklama": "Voltaj bağımlı kanallar gerilime duyarlı, ligand bağımlı kanallar ise ligand bağlanmasıyla aktiftir; bu yüzden II yanlış, I, III ve IV doğrudur (s. 10, 12).",
+     "sik_aciklamalari": {
+      "A": "I, II ve III: I ve III doğrudur, ancak II yanlıştır; ligand bağımlı kanallar membran potansiyeli değişimine doğrudan duyarlı değildir, ligandın bağlanmasıyla açılır. IV de doğru olduğu için bu kombinasyon eksik ve hatalıdır (s. 10, 12).",
+      "B": "II ve IV: IV doğrudur, çünkü Ca2+ ve K+ kanal tipleri ateşleme sıklığını düzenler. Ancak II yanlıştır ve I ile III de doğru olduğu halde dışarıda bırakıldığı için bu kombinasyon yanlıştır (s. 10, 12).",
+      "C": "I, III ve IV doğru kombinasyondur. Voltaj bağımlı kanallar gerilim değişimine yanıt verir, akson boyunca yoğunlaşır ve Ca2+ ile K+ tipleri ateşleme sıklığını düzenler; II yanlıştır çünkü ligand bağımlı kanallar membran potansiyeli değişimine doğrudan duyarlı değildir (s. 10, 12).",
+      "D": "I, II, III ve IV: Dört ifadenin hepsinin doğru olduğunu söyler. Oysa II yanlıştır, çünkü ligand bağımlı kanallar membran potansiyeli değişimine doğrudan duyarlı değildir; temel olarak ligandın bağlanmasıyla aktive olur (s. 12).",
+      "E": "Yalnız III: Kanalların akson başlangıç segmentinde yoğunlaşması doğrudur. Ancak I ve IV de doğru olduğu için tek bir ifadeyle sınırlamak eksik bırakır ve bu seçenek yanlıştır (s. 10)."
+     },
+     "bilgi": [
+      39,
+      40,
+      41,
+      42,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Nöronlarda bu kanallar özellikle aksonun başlangıç segmentinde ve akson boyunca yoğunlaşır. Hücre"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-12",
+      "hoca:hv-k2-09-14",
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q26",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Ligand bağımlı iyon kanalları (iyonotropik reseptörler) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Membran potansiyelindeki değişikliğe doğrudan duyarlıdır",
+      "B": "Birden fazla alt birimden oluşur",
+      "C": "Ligand bağlanması kanalı doğrudan açar",
+      "D": "Açık kalma süresi milisaniyelerle ölçülür",
+      "E": "Hızlı sinaptik iletimden sorumludur"
+     },
+     "dogru": "A",
+     "aciklama": "Ligand bağımlı kanallar gerilime doğrudan duyarlı değildir, ligand bağlanmasıyla aktive olur; bu nedenle yanlış ifade A'dır (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Ligand bağımlı iyon kanalları membran potansiyelindeki değişikliğe doğrudan duyarlı değildir; temel olarak ligandın reseptöre bağlanmasıyla aktive olur. Gerilime duyarlılık voltaj bağımlı kanalların özelliğidir (s. 12).",
+      "B": "İfade doğrudur: iyonotropik reseptörler birden fazla alt birimden oluşur ve kanalı yapısında barındırır. Bu yapı, ligand bağlanmasıyla kanalın doğrudan açılıp kapanmasını mümkün kılar (s. 12).",
+      "C": "İfade doğrudur: nörotransmitterin reseptöre bağlanması reseptörün yapısındaki iyon kanalını doğrudan açar veya kapatır. İkinci haberci gerektirmez; bu da metabotropik reseptörlerden ayıran özelliktir (s. 12).",
+      "D": "İfade doğrudur: kanalın açık kalma süresi genellikle birkaç milisaniye ile onlarca milisaniye arasındadır. Bu kısa süre iyonotropik yanıtı metabotropik yanıttan ayırır (s. 12).",
+      "E": "İfade doğrudur: bu kanallar MSS'deki tipik sinaptik yolaklarda hızlı sinaptik iletimden sorumludur. Hızlı iletim iyonotropik kanalların temel özelliğidir (s. 12)."
+     },
+     "bilgi": [
+      50,
+      48,
+      51,
+      52
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Ligand bağımlı iyon kanalları, membran potansiyelindeki değişikliklere doğrudan duyarlı değildir; temel olarak ligandın reseptöre bağlanmasıyla aktive olur."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-17",
+      "hoca:hv-k2-09-18",
+      "ozen:s12"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q27",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İyonotropik ve metabotropik reseptörlerle ilgili aşağıdaki ifadeler veriliyor:\nI. İyonotropik reseptörler milisaniyeler içinde başlayan, kısa süreli etkiler oluşturur.\nII. Metabotropik reseptöre bağlanan nörotransmitter iyon kanalını doğrudan açar.\nIII. Metabotropik reseptör etkileri onlarca saniye veya dakikalar sürebilir.\nIV. Ligand bağımlı kanalların açık kalma süresi dakikalarla ölçülür.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve III",
+      "C": "I, II ve III",
+      "D": "II ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "İyonotropik etki hızlı ve kısa, metabotropik etki yavaş ve uzun sürelidir; bu nedenle I ve III doğrudur (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I: İyonotropik reseptörlerin hızlı ve kısa süreli etkisi doğrudur. Ancak III de doğru olduğu için bu seçenek eksiktir; metabotropik etkiler gerçekten onlarca saniye veya dakikalar sürebilir (s. 17).",
+      "B": "I ve III doğrudur: iyonotropik reseptörler milisaniyeler içinde hızlı ve kısa süreli, metabotropik reseptörler ise onlarca saniye veya dakikalar süren yavaş etkiler oluşturur. II ve IV yanlıştır (s. 12, 14, 17).",
+      "C": "I, II ve III: I ve III doğrudur ancak II yanlıştır. Metabotropik reseptöre bağlanma iyon kanalını doğrudan açmaz; genellikle G proteini aracılığıyla hücre içi sinyal mekanizmalarını harekete geçirir (s. 14).",
+      "D": "II ve IV: Her iki ifade de yanlıştır. Metabotropik bağlanma kanalı doğrudan açmaz ve ligand bağımlı kanalın açık kalma süresi birkaç ile onlarca milisaniye arasındadır, dakikalar değildir (s. 12, 14).",
+      "E": "III ve IV: III doğru, IV yanlıştır; ligand bağımlı kanalın açık kalma süresi milisaniyeler düzeyindedir, dakikalar süren yanıtlar ise metabotropik reseptörlere aittir. Ayrıca I doğru olduğu için bu kombinasyon eksiktir (s. 12, 17)."
+     },
+     "bilgi": [
+      72,
+      73,
+      59,
+      51
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "İyonotropik reseptörler milisaniyeler içinde ortaya çıkan hızlı ve kısa süreli etkiler oluştururken,"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-16",
+      "hoca:hv-k2-09-24",
+      "not:s17",
+      "ozen:s17"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q28",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi iyonotropik reseptör aracılı iletimi metabotropik reseptör aracılı iletimden ayıran özelliktir?",
+     "secenekler": {
+      "A": "Hücre içinde ikinci haberci üretmesi",
+      "B": "G proteini βγ alt birimiyle kanalı düzenlemesi",
+      "C": "Kanalın birkaç milisaniye açık kalması",
+      "D": "Yanıtın dakikalarca sürebilmesi",
+      "E": "MSS'de yaygın biçimde bulunması"
+     },
+     "dogru": "C",
+     "aciklama": "İyonotropik kanal birkaç ile onlarca milisaniye açık kalır ve hızlı iletim sağlar; metabotropik yanıt ise dakikalar sürebilir (s. 12, 17).",
+     "sik_aciklamalari": {
+      "A": "İkinci haberci üretimi G proteini aracılı metabotropik reseptörlerin özelliğidir; enzim aktivasyonuyla cAMP gibi habercilerin oluşmasına yol açar. İyonotropik reseptörler böyle bir basamak içermez, bu yüzden ayırt edici özellik olarak yanlıştır (s. 14, 16).",
+      "B": "G proteini βγ alt biriminin voltaj bağımlı Ca2+ ve K+ kanallarıyla etkileşmesi membranla sınırlı metabotropik sinyalin örneğidir. İyonotropik reseptörde G proteini yoktur; bu nedenle iyonotropik iletimi tanımlayan özellik değildir (s. 14).",
+      "C": "Kanalın açık kalma süresi birkaç ile onlarca milisaniye arasındadır. Bu çok kısa süre iyonotropik iletimi, onlarca saniye veya dakikalar sürebilen metabotropik yanıttan ayırır; doğru şık budur (s. 12, 17).",
+      "D": "Dakikalarca sürebilen yanıt metabotropik reseptörlerin özelliğidir. İyonotropik yanıt milisaniyeler içinde başlar ve kısa sürer; bu nedenle uzun süre iyonotropik iletimi ayıran bir özellik olamaz (s. 17).",
+      "E": "Metabotropik reseptörler MSS'de yaygındır ve iyonotropik reseptörler de MSS'de hızlı iletimden sorumludur. MSS'de bulunmak bir sınıfı diğerinden ayırmaz; asıl ayrım yanıtın hızı ve süresidir (s. 12, 17)."
+     },
+     "bilgi": [
+      51,
+      52,
+      72,
+      73
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Kanalın açık kalma süresi genellikle birkaç milisaniye ile onlarca milisaniye arasındadır."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-18",
+      "hoca:hv-k2-09-24",
+      "ozen:s12"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q24",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Depolarizasyonla açılan voltaj bağımlı K+ kanallarının açılması nöronda aşağıdakilerden hangisini doğurur?",
+     "secenekler": {
+      "A": "Hücre içine Ca2+ girişinin ve salınımın artması",
+      "B": "Membran depolarizasyonunun uzaması ve ateşlemenin hızlanması",
+      "C": "Klorür kanallarının seçici açılması ve IPSP oluşması",
+      "D": "Aksiyon potansiyeli süresinin ve sıklığının sınırlanması",
+      "E": "Ligand bağımlı kanalların kapanması ve iyon geçişinin durması"
+     },
+     "dogru": "D",
+     "aciklama": "Depolarizasyonla açılan K+ kanalları K+ çıkışıyla membranı yeniden polarize eder; böylece aksiyon potansiyeli süresi ve ateşleme sıklığı sınırlanır (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Hücre içine Ca2+ girişinin ve salınımın artması voltaj bağımlı Ca2+ kanallarının işidir ve transmitter salıverilmesiyle ilişkilidir. K+ kanalları ise hücre dışına K+ çıkışı sağlar; bu nedenle Ca2+ girişini artırmazlar (s. 11, 19).",
+      "B": "Depolarizasyonun uzaması ve ateşlemenin hızlanması K+ kanallarının tersi bir sonuçtur. K+ çıkışı membranı yeniden polarize eder; depolarizasyonu sürdürmek yerine sonlandırmaya katkıda bulunur ve ateşlemeyi sınırlar (s. 11).",
+      "C": "Klorür kanallarının seçici açılması ve IPSP oluşması inhibitör yolaklarda postsinaptik hiperpolarizasyon yapar. Depolarizasyonla açılan voltaj bağımlı K+ kanallarının sonucu olarak sayılmaz, çünkü kanal türü ve iyon farklıdır (s. 20).",
+      "D": "K+ çıkışı membranın yeniden polarize olmasına katkıda bulunur ve böylece aksiyon potansiyelinin süresini ve ateşleme sıklığını sınırlar. Bu kanallar nöronal uyarılabilirliği azaltan, yavaşlatıcı bir mekanizma gibi çalışır (s. 11).",
+      "E": "Ligand bağımlı kanalların kapanması ve iyon geçişinin durması K+ kanallarının sonucu değildir. Ligand bağımlı kanallar ligandla açılır ve membran potansiyeli değişimine doğrudan duyarlı değildir; voltaj bağımlı K+ kanallarının açılması onları kapatmaz (s. 12)."
+     },
+     "bilgi": [
+      43,
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Bu durum, membranın yeniden polarize olmasına katkıda bulunarak aksiyon potansiyelinin süresini ve nöronun ateşleme sıklığını sınırlar. Bu kanallar,"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-14",
+      "not:s11",
+      "ozen:s11"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q29",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Metabotropik reseptör etkileri ile ilgili aşağıdaki ifadeler veriliyor:\nI. G proteininin βγ alt birimi voltaj bağımlı Ca2+ kanalını inhibe ederek hücre içine Ca2+ girişini azaltır.\nII. Presinaptik metabotropik reseptör aktivasyonu transmitter salınımını azaltarak presinaptik inhibisyona yol açar.\nIII. Postsinaptik metabotropik reseptörler K+ kanallarını açarak yavaş postsinaptik inhibisyon oluşturur.\nIV. Membranla sınırlı etkiler ikinci haberciler aracılığıyla hücre içinde uzak bölgelere ulaşır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I ve II",
+      "B": "II, III ve IV",
+      "C": "I ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "βγ–Ca2+ kanalı inhibisyonu, presinaptik inhibisyon ve postsinaptik K+ aracılı yavaş inhibisyon doğrudur; uzak bölgelere ulaşan etki ikinci habercilerindir (s. 15–17).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I ve II: Her iki ifade doğrudur, ancak III de doğrudur. Postsinaptik K+ kanallarının açılması hiperpolarizasyona ve yavaş postsinaptik inhibisyona yol açar; bu nedenle seçenek eksiktir (s. 16).",
+      "B": "II, III ve IV: II ve III doğrudur, fakat I de doğru olduğu için dışarıda kalması hatadır. IV yanlıştır, çünkü membranla sınırlı etkiler reseptörün bulunduğu membran bölgesinde ortaya çıkar (s. 15, 17).",
+      "C": "I ve IV: I doğrudur, IV ise yanlıştır. Hücre içinde uzak bölgelere ulaşan etkiler ikinci haberciler aracılığıyla olur; membranla sınırlı etkiler reseptör bölgesinde kalır (s. 17).",
+      "D": "I, II ve III doğrudur: βγ alt birimi Ca2+ kanalını inhibe eder, presinaptik etki transmitter salınımını azaltır, postsinaptik K+ kanallarının açılması hiperpolarizasyonla yavaş inhibisyon yapar. IV yanlıştır, çünkü membranla sınırlı etkiler reseptörün bulunduğu bölgede kalır; uzak bölgelere ikinci haberciler ulaşır (s. 15, 16, 17).",
+      "E": "I, II, III ve IV: Dört ifadenin tümünün doğru olduğunu söyler. IV yanlıştır; membranla sınırlı etkiler reseptörün bulunduğu bölgede kalırken uzak bölgelere ulaşan etkiler ikinci haberciler aracılığıyla gerçekleşir (s. 17)."
+     },
+     "bilgi": [
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      70
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "G proteinleri, voltaj bağımlı kalsiyum (Ca²⁺) kanallarıyla etkileşerek bu kanalların aktivitesini inhibe eder ve hücre içine kalsiyum girişini azaltır. Presinaptik metabotropik"
+     },
+     "dayanak": [
+      "not:s15",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q30",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "GABAA reseptör-klorür kanalı kompleksinde flumazenilin bağlandığı yer aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "α ve β alt birimleri arasındaki GABA yeri",
+      "B": "Barbitüratların bağlandığı ayrı bölge",
+      "C": "GABAB reseptöründeki baklofen yeri",
+      "D": "β alt birimi içindeki klorür gözeneği",
+      "E": "Benzodiazepinlerin bağlandığı α ve γ arası bölge"
+     },
+     "dogru": "E",
+     "aciklama": "Flumazenil benzodiazepin antagonisti olarak benzodiazepin ve zolpidemin bağlandığı α–γ alt birimleri arasındaki bölgeye bağlanır (s. 13).",
+     "sik_aciklamalari": {
+      "A": "α ve β alt birimleri arasındaki iki yer GABA'nın kendisinin bağlandığı bölgedir ve klorür kanalının açılmasını sağlar. Flumazenil bu bölgeye değil, benzodiazepin bölgesine bağlanır (s. 13).",
+      "B": "Barbitüratların bağlanma yeri, benzodiazepin ve zolpidem bağlanma yerlerinden farklıdır. Flumazenil barbitürat bölgesine değil benzodiazepin bölgesine bağlandığı için bu seçenek yanlıştır (s. 13).",
+      "C": "Baklofen GABAB reseptörünün agonistidir ve GABAB metabotropik bir reseptördür. GABAA kompleksinin bir parçası değildir; flumazenilin bağlanma yeri olarak sorulan kanal kompleksine ait değildir (s. 13).",
+      "D": "Klorür gözeneği kanalın iyon geçişini sağlayan bölümüdür; ilaçlar ve GABA gözeneğe değil alt birimler arasındaki bağlanma yerlerine tutunur. Flumazenilin bağlandığı yer alt birimler arasındaki bölgedir (s. 13).",
+      "E": "Benzodiazepinlerin ve zolpidemin bağlanma yeri α ve γ alt birimleri arasındadır. Benzodiazepin antagonisti flumazenil de bu bölgeye bağlanarak zolpidemin hipnotik etkilerini tersine çevirebilir (s. 13)."
+     },
+     "bilgi": [
+      55,
+      56,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Benzodiazepin antagonisti flumazenil de bu bölgeye bağlanır ve zolpidemin hipnotik etkilerini tersine çevirebilir."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Öğrenci, kimyasal sinapstaki olay dizisini (aksiyon potansiyeli, Ca2+ girişi, vezikül kaynaşması), EPSP, IPSP ve presinaptik inhibisyonu açıklar.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q31",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlayan, sinir ucuna giren iyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ca2+",
+      "B": "Na+",
+      "C": "K+",
+      "D": "Cl-",
+      "E": "Mg2+"
+     },
+     "dogru": "A",
+     "aciklama": "Sinir ucundaki artmış Ca2+ konsantrasyonu sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Ca2+ aksiyon potansiyeliyle açılan voltaj duyarlı Ca2+ kanallarından sinir ucuna girer. Sinir ucundaki artmış Ca2+ konsantrasyonu veziküllerin presinaptik membrana kaynaşmasını ve transmitterin sinaptik aralığa bırakılmasını sağlar (s. 19).",
+      "B": "Na+ aksiyon potansiyelinin yayılmasında rol alan bir iyondur; ancak vezikül kaynaşmasını başlatan iyon değildir. Terminaldeki kaynaşma sinyalini veren Ca2+ girişidir, bu nedenle Na+ yanlıştır (s. 19).",
+      "C": "K+ hücre dışına çıkarak membranın yeniden polarize olmasına katkıda bulunur ve uyarılabilirliği azaltır. Vezikül kaynaşmasını sağlamaz; bu görev sinir ucuna giren Ca2+'a aittir (s. 11, 19).",
+      "D": "Cl- postsinaptik membranda klorür kanallarının açılmasıyla IPSP'ye ve hiperpolarizasyona yol açar. Presinaptik veziküllerin kaynaşmasıyla ilgisi yoktur; bu işlem Ca2+ girişine bağlıdır (s. 19, 20).",
+      "E": "Mg2+ glutamat NMDA reseptör kanalını bloke etmesiyle bilinir; presinaptik vezikül kaynaşmasını başlatan iyon değildir. Kaynaşmayı sağlayan sinir ucundaki artmış Ca2+'dır (s. 19)."
+     },
+     "bilgi": [
+      82,
+      80
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q39"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Kalsiyum sinir ucuna girer ve sinir ucundaki artmış kalsiyum konsantrasyonu sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar. Veziküller içindeki transmitter"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q39",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q36",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Eksitatör bir sinaptik giriş aktive edildiğinde postsinaptik membranda kaydedilen küçük potansiyel değişikliği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Depolarizasyon (EPSP)",
+      "B": "Hiperpolarizasyon (IPSP)",
+      "C": "Eşiği aşan aksiyon potansiyeli",
+      "D": "Presinaptik inhibisyon",
+      "E": "Vezikül kaynaşması"
+     },
+     "dogru": "A",
+     "aciklama": "Eksitatör yolak postsinaptik membranda küçük bir depolarizasyon, yani EPSP oluşturur (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Eksitatör yolak aktive edildiğinde postsinaptik membranda küçük bir depolarizasyon, yani EPSP kaydedilir. EPSP tek başına her zaman aksiyon potansiyeli oluşturmaz, eşiğe ulaşması gerekir (s. 20).",
+      "B": "Hiperpolarizasyon inhibitör yolağın sonucudur ve IPSP adını alır. Eksitatör yolakta ise küçük bir depolarizasyon kaydedilir, bu nedenle bu seçenek yanlıştır (s. 20).",
+      "C": "Eşiği aşan aksiyon potansiyeli EPSP'lerin toplanmasıyla oluşabilir; ancak tek bir eksitatör yolağın uyarılmasıyla kaydedilen küçük potansiyel değişikliği bunu tanımlamaz (s. 20, 21).",
+      "D": "Presinaptik inhibisyon aksoaksonik sinapslarda terminaldeki Ca2+ girişini ve transmitter salınımını azaltır. Eksitatör girişin postsinaptik potansiyeli olmadığı için bu soruda yanlıştır (s. 21).",
+      "E": "Vezikül kaynaşması, presinaptik terminalde Ca2+ girişiyle gerçekleşen ve transmitterin sinaptik aralığa bırakılmasını sağlayan olaydır. Postsinaptik membrandaki potansiyel değişikliği olmadığı için bu soruda yanlıştır (s. 19)."
+     },
+     "bilgi": [
+      85
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Eksitatör bir yolak aktive edildiğinde küçük bir depolarizasyon ya da eksitatör postsinaptik potansiyel (EPSP)"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q32",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Transmitter salıverilmesinden sorumlu presinaptik Ca2+ kanalları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Transmitterin bağlanmasıyla açılır",
+      "B": "Verapamile genellikle dirençlidir",
+      "C": "Membran potansiyeli değişimine yanıt vermez",
+      "D": "Postsinaptik membranda bulunur",
+      "E": "Klorür geçişine izin verir"
+     },
+     "dogru": "B",
+     "aciklama": "Transmitter salıverilmesinden sorumlu presinaptik Ca2+ kanalları verapamil gibi kalsiyum kanal blokerlerine genellikle dirençlidir (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Transmitterin bağlanmasıyla açılma ligand bağımlı kanalların özelliğidir. Presinaptik terminaldeki Ca2+ kanalları ise aksiyon potansiyeli geldiğinde voltaj değişimiyle aktive olur, bu yüzden bu ifade yanlıştır (s. 19).",
+      "B": "Transmitter salıverilmesinden sorumlu Ca2+ kanalları presinaptik terminalde bulunan voltaj duyarlı kanallardır ve aksiyon potansiyeliyle aktive olur. Verapamil gibi kalsiyum kanal bloke edici ajanlara genellikle dirençlidirler (s. 19).",
+      "C": "Bu kanallar voltaj duyarlıdır; terminal membranına ulaşan aksiyon potansiyeli onları aktive eder. Membran potansiyeli değişimine yanıt vermedikleri söylenemez, dolayısıyla seçenek yanlıştır (s. 19).",
+      "D": "Transmitter salıverilmesinden sorumlu kanallar presinaptik sinaptik terminal membranında bulunur. Postsinaptik membranda ise transmitterin reseptörleri yer alır; bu nedenle ifade yanlıştır (s. 19).",
+      "E": "Bu kanallar Ca2+ geçirir ve Ca2+ sinir ucuna girerek veziküllerin kaynaşmasını sağlar. Klorür geçişi postsinaptik klorür kanallarının işlevidir ve IPSP'ye yol açar (s. 19, 20)."
+     },
+     "bilgi": [
+      81,
+      80
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Transmitter salıverilmesinden sorumlu kalsiyum kanalları, kalsiyum- kanal bloke edici ajanlara (verapamil vb.)"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-14",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q33",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Eksitatör postsinaptik potansiyelin (EPSP) oluşumunu sağlayan temel iyonik değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klorür kanallarının seçici açılması",
+      "B": "Voltaj duyarlı Ca2+ kanallarının inhibisyonu",
+      "C": "Katyon permeabilitesinin yükselmesi",
+      "D": "Postsinaptik K+ kanallarının G proteiniyle aktivasyonu",
+      "E": "Presinaptik Ca2+ girişinin azalması"
+     },
+     "dogru": "C",
+     "aciklama": "EPSP, iyonotropik reseptöre etki eden eksitatör nörotransmitterin katyon permeabilitesini artırmasıyla oluşan depolarizasyondur (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Klorür kanallarının seçici açılması inhibitör yolak uyarıldığında membranı hiperpolarize ederek IPSP oluşturur. EPSP'nin tersi bir sonuç doğurduğu için bu seçenek yanlıştır (s. 20).",
+      "B": "Voltaj duyarlı Ca2+ kanallarının inhibisyonu G proteini aracılı presinaptik inhibisyon mekanizmasıdır ve transmitter salınımını azaltır. EPSP oluşumunu açıklamaz (s. 15).",
+      "C": "EPSP, iyonotropik bir reseptöre etki eden ve katyon permeabilitesini yükselten eksitatör nörotransmitterin oluşturduğu küçük bir depolarizasyondur. Katyon girişi membranı eşiğe doğru depolarize eder (s. 20).",
+      "D": "Postsinaptik K+ kanallarının metabotropik reseptörle aktivasyonu K+ çıkışıyla hiperpolarizasyona ve yavaş postsinaptik inhibisyona yol açar. EPSP depolarizasyondur, bu nedenle seçenek yanlıştır (s. 16).",
+      "E": "Presinaptik Ca2+ girişinin azalması transmitter salınımını azaltır ve presinaptik inhibisyonla ilişkilidir. EPSP'nin kaynağı ise postsinaptik katyon permeabilitesindeki yükselmedir (s. 20)."
+     },
+     "bilgi": [
+      85,
+      86
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Bu potansiyelin kaynağı iyonotropik bir reseptör üzerine etkiyen, katyon permeabilitesinde bir artışa neden olan eksitatör bir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q34",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kimyasal sinapsta transmitter salıverilmesi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Presinaptik terminaldeki voltaja duyarlı Ca2+ kanalları aksiyon potansiyeliyle aktive olur.\nII. Sinir ucundaki artmış Ca2+ konsantrasyonu veziküllerin membrana kaynaşmasını sağlar.\nIII. Salıverilmeden sorumlu Ca2+ kanalları verapamile genellikle duyarlıdır.\nIV. Vezikül içindeki transmitter sinaptik aralığa bırakılır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I ve II",
+      "B": "I, II, III ve IV",
+      "C": "II ve III",
+      "D": "I, II ve IV",
+      "E": "Yalnız IV"
+     },
+     "dogru": "D",
+     "aciklama": "Aksiyon potansiyeli → Ca2+ kanalı aktivasyonu → Ca2+ girişi → vezikül kaynaşması → transmitter salıverilmesi dizisi doğrudur; verapamile direnç III'ü yanlış yapar (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I ve II: Her iki ifade doğrudur ancak IV de doğrudur. Kaynaşan veziküllerin içindeki transmitter sinaptik aralığa bırakılır, bu nedenle seçenek eksiktir (s. 19).",
+      "B": "I, II, III ve IV: III yanlış olduğu halde dört ifadenin tümünü doğru sayar. Transmitter salıverilmesinden sorumlu Ca2+ kanalları verapamil gibi ajanlara genellikle dirençlidir, duyarlı değildir (s. 19).",
+      "C": "II ve III: II doğrudur, III ise yanlıştır. Kanallar verapamile genellikle dirençlidir; ayrıca I ve IV doğru olduğu halde dışarıda kalmıştır (s. 19).",
+      "D": "I, II ve IV doğrudur: aksiyon potansiyeli terminaldeki voltaja duyarlı Ca2+ kanallarını aktive eder, Ca2+ girişi vezikül kaynaşmasını sağlar ve transmitter aralığa bırakılır. III yanlıştır, çünkü bu Ca2+ kanalları verapamile genellikle dirençlidir (s. 19).",
+      "E": "Yalnız IV: Transmitterin sinaptik aralığa bırakılması doğrudur. Ancak I ve II de doğrudur; Ca2+ kanallarının aktivasyonu ve vezikül kaynaşması dışarıda bırakıldığı için seçenek eksiktir (s. 19)."
+     },
+     "bilgi": [
+      80,
+      81,
+      82,
+      83
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q39"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Presinaptik lifteki bir aksiyon potansiyeli sinaptik terminale doğru ilerler ve terminal membranındaki voltaja-duyarlı kalsiyum kanallarını aktive eder. Transmitter salıverilmesinden sorumlu kalsiyum kanalları, kalsiyum-"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q39",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q35",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İnhibitör bir sinaptik giriş uyarıldığında postsinaptik membranda IPSP oluşumunu sağlayan değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Katyon geçirgenliğinin artması",
+      "B": "Presinaptik Ca2+ girişinin artması",
+      "C": "Voltaj duyarlı Ca2+ kanallarının aktivasyonu",
+      "D": "Sinaptik veziküllerin kaynaşması",
+      "E": "Klorür kanallarının seçici açılması"
+     },
+     "dogru": "E",
+     "aciklama": "İnhibitör yolakta postsinaptik klorür kanallarının seçici açılması hiperpolarizasyona ve IPSP oluşumuna yol açar (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Katyon geçirgenliğinin artması EPSP'yi doğurur ve depolarizasyon yapar. IPSP ise hiperpolarizasyondur, bu yüzden katyon geçirgenliği artışı bu soruda yanlıştır (s. 20).",
+      "B": "Presinaptik Ca2+ girişinin artması transmitter salınımını artırır. IPSP postsinaptik membranda gerçekleşen bir potansiyel değişimidir; presinaptik Ca2+ girişi onu doğrudan açıklamaz (s. 19, 20).",
+      "C": "Voltaj duyarlı Ca2+ kanalları presinaptik terminalde aksiyon potansiyeliyle aktive olur ve transmitter salıverilmesini başlatır. IPSP'nin oluşum mekanizması bu değildir (s. 19).",
+      "D": "Sinaptik veziküllerin presinaptik membrana kaynaşması transmitterin aralığa bırakılmasını sağlayan presinaptik bir olaydır. IPSP ise transmitterin postsinaptik klorür kanallarını açmasıyla oluşur (s. 19, 20).",
+      "E": "İnhibitör yolak uyarıldığında postsinaptik membran klorür kanallarının seçici açılmasıyla hiperpolarize olur ve IPSP oluşur. Böylece membran eşik değerden uzaklaşır (s. 20)."
+     },
+     "bilgi": [
+      87
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Bir inhibitör yolak uyarıldığında postsinaptik membran klorür kanallarının seçici bir şekilde açılması ile hiperpolarize"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q40",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aksoaksonik sinapslarda gerçekleşen presinaptik inhibisyon, nörotransmitter salınımını hangi mekanizmayla azaltır?",
+     "secenekler": {
+      "A": "Postsinaptik Cl- kanallarını açarak",
+      "B": "Postsinaptik K+ kanallarını aktive ederek",
+      "C": "Vezikül kaynaşmasını hızlandırarak",
+      "D": "Katyon permeabilitesini artırarak",
+      "E": "Terminale Ca2+ girişini azaltarak"
+     },
+     "dogru": "E",
+     "aciklama": "Presinaptik inhibisyon aksoaksonik sinapslarda terminale Ca2+ girişini azaltarak transmitter salınımını düşürür (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Postsinaptik Cl- kanallarının açılması IPSP'yi ve postsinaptik hiperpolarizasyonu doğurur. Bu postsinaptik inhibisyondur; presinaptik inhibisyonun salınımı azaltma mekanizması değildir (s. 20).",
+      "B": "Postsinaptik K+ kanallarının metabotropik reseptörlerle aktivasyonu hiperpolarizasyona ve yavaş postsinaptik inhibisyona yol açar. Presinaptik terminaldeki salınımı azaltma mekanizması değildir (s. 16).",
+      "C": "Vezikül kaynaşmasını hızlandırmak transmitter salınımını artırır; inhibisyon ise tersini yapar. Presinaptik inhibisyonda kaynaşmayı sağlayan Ca2+ girişi azalır (s. 19, 21).",
+      "D": "Katyon permeabilitesinin artması postsinaptik EPSP'yi oluşturur ve depolarizasyon yapar. Presinaptik inhibisyonun mekanizması değildir; inhibisyon terminaldeki Ca2+ girişini azaltarak işler (s. 20, 21).",
+      "E": "Presinaptik inhibisyon, presinaptik nöronun sinaptik terminalindeki Ca2+ girişini azaltır. Ca2+ girişi azaldığı için veziküllerin membrana kaynaşması zayıflar ve nörotransmitter salınımı düşer (s. 21)."
+     },
+     "bilgi": [
+      89,
+      82
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Aksoaksonik sinapslarda gerçekleşen bu mekanizma, presinaptik nöronun sinaptik terminalindeki kalsiyum girişini ve böylece nörotransmitter salınımını azaltır. 21"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q37",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İstirahatte aksiyon potansiyeli oluşturabilecek bir EPSP, aynı anda gelen IPSP'nin etkisiyle aşağıdakilerden hangisine yol açabilir?",
+     "secenekler": {
+      "A": "EPSP'nin güçlenmesi ve ateşlemenin artması",
+      "B": "Eşiğe ulaşılamaması ve aksiyon potansiyelinin oluşmaması",
+      "C": "Presinaptik Ca2+ girişinin azalması",
+      "D": "Katyon permeabilitesinin ek artışı",
+      "E": "Aksoaksonik sinapsta salınımın artması"
+     },
+     "dogru": "B",
+     "aciklama": "IPSP'nin hiperpolarizasyonu nedeniyle EPSP eşik değere ulaşamayabilir ve aksiyon potansiyeli oluşmayabilir (s. 21).",
+     "sik_aciklamalari": {
+      "A": "IPSP hiperpolarizasyon yapar ve depolarizasyonu azaltır; EPSP'yi güçlendirmez. Ateşlemeyi artırdığını söyleyen ifade IPSP'nin etkisine ters düştüğü için yanlıştır (s. 20, 21).",
+      "B": "IPSP klorür kanallarının açılmasıyla membranı hiperpolarize eder; EPSP'nin depolarizasyonu bu etkiyle karşılaşınca eşik değere ulaşamayabilir. Bu nedenle istirahatte aksiyon potansiyeli doğurabilecek bir EPSP, IPSP varlığında aksiyon potansiyeli oluşturmayabilir (s. 21).",
+      "C": "Presinaptik Ca2+ girişinin azalması aksoaksonik sinapslardaki presinaptik inhibisyonun mekanizmasıdır. EPSP ile IPSP'nin postsinaptik toplamıyla ilişkili bir sonuç olmadığı için bu seçenek yanlıştır (s. 21).",
+      "D": "Katyon permeabilitesindeki artış EPSP'nin kaynağıdır ve depolarizasyon yapar. IPSP ise klorür kanallarını açarak hiperpolarize ettiği için toplam sonuç ek bir katyon artışı olmaz (s. 20).",
+      "E": "Aksoaksonik sinapslar presinaptik inhibisyon yapar ve transmitter salınımını azaltır; artırmaz. Ayrıca bu mekanizma EPSP–IPSP toplamıyla ilgili olmadığı için seçenek yanlıştır (s. 21)."
+     },
+     "bilgi": [
+      88,
+      87,
+      85
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Sonuç olarak, istirahat durumunda aksiyon potansiyeli oluşturabilecek bir eksitatör postsinaptik potansiyel (EPSP), inhibitör postsinaptik potansiyelin (IPSP) etkisiyle eşik"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q38",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Presinaptik inhibisyon ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Aksoaksonik sinapslarda gerçekleşir",
+      "B": "Terminaldeki Ca2+ girişini azaltır",
+      "C": "Postsinaptik membranı klorürle hiperpolarize eder",
+      "D": "Nörotransmitter salınımını azaltır",
+      "E": "İnhibisyonun ikinci türüdür"
+     },
+     "dogru": "C",
+     "aciklama": "Presinaptik inhibisyon terminalde Ca2+ girişini azaltır; klorürle hiperpolarizasyon postsinaptik inhibisyondur (s. 20, 21).",
+     "sik_aciklamalari": {
+      "A": "İfade doğrudur: presinaptik inhibisyon aksoaksonik sinapslarda gerçekleşir. Bu sinapslar aksonun başka bir aksonun terminaline yaptığı sinapslardır ve transmitter salınımını denetler (s. 21).",
+      "B": "İfade doğrudur: presinaptik inhibisyon, presinaptik nöronun sinaptik terminalindeki Ca2+ girişini azaltır. Ca2+ girişi azalınca veziküllerin presinaptik membrana kaynaşması zayıflar ve transmitter salınımı düşer (s. 21).",
+      "C": "Presinaptik inhibisyon aksoaksonik sinapslarda terminaldeki Ca2+ girişini ve böylece transmitter salınımını azaltır. Postsinaptik membranın klorür kanalları açılarak hiperpolarize olması ise IPSP, yani postsinaptik inhibisyondur (s. 20, 21).",
+      "D": "İfade doğrudur: presinaptik inhibisyonda terminale Ca2+ girişi azalınca nörotransmitter salınımı da azalır. Salınımın azalması bu inhibisyon türünün doğrudan sonucudur ve postsinaptik hiperpolarizasyondan farklıdır (s. 21).",
+      "E": "İfade doğrudur: inhibisyonun ikinci türü presinaptik inhibisyondur ve aksoaksonik sinapslarda gerçekleşir. İlk tür ise klorür kanallarının açılmasıyla oluşan postsinaptik inhibisyondur (s. 20, 21)."
+     },
+     "bilgi": [
+      89,
+      87
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "İnhibisyonun ikinci türü presinaptik inhibisyondur. Aksoaksonik sinapslarda gerçekleşen bu mekanizma, presinaptik nöronun sinaptik terminalindeki kalsiyum"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q39",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Postsinaptik potansiyellerle ilgili aşağıdaki ifadeler veriliyor:\nI. EPSP'nin kaynağı klorür permeabilitesini artıran inhibitör nörotransmitterdir.\nII. IPSP, klorür kanallarının seçici açılmasıyla membranı hiperpolarize eder.\nIII. İstirahatte aksiyon potansiyeli doğurabilecek bir EPSP, IPSP etkisiyle eşiğe ulaşamayabilir.\nIV. Presinaptik inhibisyon aksoaksonik sinapslarda terminaldeki Ca2+ girişini azaltır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "Yalnız II ve III",
+      "C": "I ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "EPSP katyon permeabilitesinden, IPSP klorür kanallarının açılmasından doğar; IPSP eşiğe ulaşmayı engelleyebilir, presinaptik inhibisyon Ca2+ girişini azaltır (s. 20, 21).",
+     "sik_aciklamalari": {
+      "A": "I, II ve III: II ve III doğrudur, fakat I yanlıştır; EPSP klorürü değil katyon permeabilitesini artıran eksitatör transmitterden doğar. IV de doğru olduğu için bu seçenek eksiktir (s. 20, 21).",
+      "B": "Yalnız II ve III: İkisi de doğrudur ancak IV de doğrudur. Aksoaksonik sinapslarda presinaptik inhibisyon terminaldeki Ca2+ girişini azaltır; dışarıda bırakıldığı için seçenek eksiktir (s. 21).",
+      "C": "I ve IV: I yanlıştır, çünkü EPSP katyon permeabilitesindeki artıştan doğar. IV doğrudur ancak II ve III de doğru olduğu için bu kombinasyon yanlıştır (s. 20, 21).",
+      "D": "II, III ve IV doğrudur: IPSP klorür kanallarının açılmasıyla hiperpolarizasyon yapar, bu etki EPSP'nin eşiğe ulaşmasını önleyebilir ve presinaptik inhibisyon terminalde Ca2+ girişini azaltır. I yanlıştır, çünkü EPSP katyon permeabilitesini artıran eksitatör transmitterden doğar (s. 20, 21).",
+      "E": "I, II, III ve IV: Dört ifadenin tümünün doğru olduğunu söyler. I yanlıştır, çünkü EPSP'nin kaynağı katyon permeabilitesini artıran eksitatör nörotransmitterdir; klorür permeabilitesi artışı IPSP'ye aittir (s. 20)."
+     },
+     "bilgi": [
+      86,
+      87,
+      88,
+      89
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Bu potansiyelin kaynağı iyonotropik bir reseptör üzerine etkiyen, katyon permeabilitesinde bir artışa neden olan eksitatör bir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2020-2021-q39",
+     "soru": "Sinir ucundaki artmış kalsiyum konsantrasyonu aşağıdaki olaylardan hangisinin gerçekleşmesini sağlar?",
+     "secenekler": {
+      "A": "Sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar",
+      "B": "Asetilkolinesteraz enzimini inhibe eder",
+      "C": "Dopamin sentezinin inhibisyonuna neden olur",
+      "D": "Noradrenalinin adrenaline dönüşmesini gerçekleştirir",
+      "E": "Sinaptik veziküllerin sinir ucunda parçalanmasına sebep olur"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Öğrenci, ilaçların presinaptik (sentez, depolama, salıverilme, geri alım) ve postsinaptik basamaklardaki etki yerlerini rezerpin, amfetamin, kokain, antikolinesteraz, striknin ve barbitürat örnekleriyle ilişkilendirir.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q41",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Monoaminlerin sinaptik veziküllerde depolanmasını veziküler monoamin taşıyıcısını (VMAT) engelleyerek bozan ve zamanla bu nörotransmitterlerin tükenmesine neden olan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Amfetamin",
+      "B": "Kokain",
+      "C": "Rezerpin",
+      "D": "Barbitürat",
+      "E": "Antikolinesteraz ilaç"
+     },
+     "dogru": "C",
+     "aciklama": "Rezerpin VMAT'ı inhibe ederek monoaminlerin veziküllerde depolanmasını engeller; depolanamayan monoaminler zamanla tükenir ve sinaptik iletim baskılanır (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Amfetamin adrenerjik sinapslarda noradrenalin ve dopamin gibi katekolaminlerin salıverilmesini artıran bir ilaçtır; etkisi depolamayı engellemek değil, sinaptik aralığa daha fazla transmitter çıkarmaktır. Bu nedenle VMAT inhibisyonu ve tükenme tarifine uymaz (s. 23).",
+      "B": "Kokain adrenerjik sinapslarda katekolaminlerin geri alımını engelleyerek sinaptik etkilerini uzatır; müdahale ettiği basamak depolama değil, sinaptik aralıktan geri alımdır. Bu yüzden VMAT'ı inhibe eden ilaç olarak kokain düşünülemez (s. 24).",
+      "C": "Rezerpin, monoaminlerin sinaptik veziküllerde depolanmasını sağlayan VMAT taşıyıcısını inhibe eden presinaptik etkili bir ilaçtır; depolanamayan monoaminler zamanla tükenir ve sinaptik iletim baskılanır. Soruda tarif edilen taşıyıcı inhibisyonu ve tükenme bu ilacın etkisidir (s. 23).",
+      "D": "Barbitüratlar temel olarak GABAA reseptörleri üzerinden inhibitör iletimi güçlendiren ilaçlardır; etki yerleri postsinaptik reseptördür ve monoaminlerin veziküler depolanmasını bozmazlar. Bu nedenle tarif edilen ilaç barbitürat değildir (s. 25).",
+      "E": "Antikolinesteraz ilaçlar asetilkolinesteraz enzimini inhibe ederek asetilkolinin sinaptik aralıktaki etkisini uzatır; monoaminlerin depolanmasına değil, asetilkolinin yıkımına etki ederler. Bu yüzden VMAT inhibisyonu ve tükenme bu gruba ait değildir (s. 24)."
+     },
+     "bilgi": [
+      94,
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "rezerpin veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla bu nörotransmitterlerin tükenmesine yol açar"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-30",
+      "not:s23",
+      "ozen:s23"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q45",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Asetilkolinin sinaptik aralıktaki etkisi esas olarak aşağıdakilerden hangisiyle sonlandırılır?",
+     "secenekler": {
+      "A": "Presinaptik sinir ucuna geri alım",
+      "B": "Nöroglial hücrelere taşınma",
+      "C": "VMAT aracılı veziküle geri alım",
+      "D": "Asetilkolinesteraz enzimiyle parçalanma",
+      "E": "Sentezinin presinaptik baskılanması"
+     },
+     "dogru": "D",
+     "aciklama": "Asetilkolinin etkisi geri alımla değil, esas olarak asetilkolinesteraz enzimi tarafından parçalanmasıyla sonlandırılır (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Presinaptik sinir ucuna geri alım, nörotransmitterlerin çoğu için etkiyi sonlandıran yoldur ve kokainin engellediği basamaktır. Asetilkolinde ise esas yol enzimatik yıkımdır; bu yüzden geri alım asetilkolin için doğru yanıt değildir (s. 24).",
+      "B": "Nöroglial hücrelere taşınma, birçok nörotransmitterin etkisini sonlandırarak sinaptik aralıktan uzaklaştırılma yoludur. Asetilkolinin etkisi ise taşınmayla değil asetilkolinesterazla parçalanarak sonlanır (s. 24).",
+      "C": "Veziküle geri alım, monoaminlerin veziküllerde depolanmasında rol alan VMAT'ı çağrıştırır ve rezerpinin hedefidir. Asetilkolinin etkisinin sonlanmasında böyle bir yol esas değildir; enzimatik yıkım esastır (s. 23-24).",
+      "D": "Asetilkolinesteraz, asetilkolini sinaptik aralıkta parçalayan enzimdir; asetilkolin için etkiyi sonlandıran ana yol geri alım değil bu enzimatik yıkımdır. Antikolinesteraz ilaçlar bu nedenle etkisini uzatır (s. 24).",
+      "E": "Sentezin baskılanması transmitter miktarını azaltan bir presinaptik basamaktır, fakat salınmış asetilkolinin etkisini sonlandırmaz. Sinaptik aralıktaki etkinin bitişi enzimatik yıkıma bağlıdır (s. 22-24)."
+     },
+     "bilgi": [
+      98,
+      101
+     ],
+     "benzer_cikmis": [
+      "past-1790877044780-565237"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Asetilkolinin etkisi geri-alımla (reuptake) değil, esas olarak asetilkolinesteraz enzimi tarafından parçalanmasıyla sonlandırılır"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044780-565237",
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q42",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Rezerpinin monoaminerjik sinapslarda sinaptik iletiyi baskılamasını sağlayan mekanizma ve sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Veziküler depolamanın engellenmesi, transmitter tükenmesi",
+      "B": "Katekolamin salıverilmesinin artması, etkinin güçlenmesi",
+      "C": "Geri alım taşıyıcısının blokajı, etkinin uzaması",
+      "D": "Asetilkolinesteraz inhibisyonu, asetilkolinin birikmesi",
+      "E": "GABAA üzerinden inhibisyonun güçlenmesi, sedasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Rezerpin VMAT'ı inhibe ederek monoaminlerin veziküllerde depolanmasını engeller; sonuçta transmitterler zamanla tükenir ve iletim baskılanır (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Rezerpin VMAT'ı inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller; veziküle giremeyen monoaminler zamanla tükenir ve sinaptik iletim baskılanır. Soruda sorulan mekanizma ve sonuç budur (s. 23).",
+      "B": "Katekolaminlerin salıverilmesini artırmak amfetaminin etki yeridir ve sinaptik iletiyi güçlendirir; rezerpin ise depolamayı bozarak transmitter miktarını azaltır, yani zıt yönde etki eder. İki ilaç presinaptik basamaklarda karıştırılmamalıdır (s. 23).",
+      "C": "Geri alım taşıyıcısının blokajı kokainin mekanizmasıdır ve katekolaminlerin sinaptik etkisini uzatır. Rezerpinin hedefi geri alım değil, veziküler depolamadır; sonuç da etkinin uzaması değil tükenmedir (s. 24).",
+      "D": "Asetilkolinesteraz inhibisyonu antikolinesteraz ilaçların mekanizmasıdır ve asetilkolinin etkisini uzatır. Rezerpin monoaminlerin depolanmasını etkiler; kolinerjik yıkımla ilgisi yoktur, sonucu da birikme değil tükenmedir (s. 24).",
+      "E": "GABAA reseptörleri üzerinden inhibitör iletimi güçlendirmek barbitüratların temel etkisidir. Bu postsinaptik bir etkidir; rezerpinin presinaptik depolamayı engelleyen etkisiyle karıştırılmamalıdır (s. 25)."
+     },
+     "bilgi": [
+      94,
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "rezerpin veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla bu nörotransmitterlerin tükenmesine yol açar"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-30",
+      "not:s23",
+      "ozen:s23"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q43",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Amfetaminin adrenerjik sinapslarda noradrenalin ve dopamin gibi katekolaminler üzerindeki temel etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Veziküler depolanmalarını engellemesi",
+      "B": "Geri alımlarını inhibe etmesi",
+      "C": "Postsinaptik reseptörlerini bloke etmesi",
+      "D": "Sentezlerini baskılaması",
+      "E": "Salıverilmelerini artırması"
+     },
+     "dogru": "E",
+     "aciklama": "Amfetamin adrenerjik sinapslarda katekolaminlerin sinaptik aralığa salıverilmesini artırır; depolama, geri alım ve reseptör basamakları bu ilacın temel etki yeri değildir (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Veziküler depolamanın engellenmesi rezerpinin etkisidir; VMAT inhibisyonuyla monoaminler tükenir. Amfetamin ise transmitter salıverilmesini artırır, bu yüzden iki ilacın etkisi zıt yöndedir (s. 23).",
+      "B": "Geri alımın inhibisyonu kokainin mekanizmasıdır ve katekolaminlerin sinaptik etkisini uzatır. Amfetamin aralıktaki transmitter miktarını geri alımı bloke ederek değil, salıverilmeyi artırarak yükseltir (s. 24).",
+      "C": "Postsinaptik reseptörleri bloke etmek antagonist ilaçların etkisidir. Amfetamin reseptör düzeyinde değil presinaptik düzeyde, salıverilmeyi artırarak etki ettiği için bu seçenek uygun değildir (s. 24).",
+      "D": "Sentezin baskılanması transmitter miktarını azaltarak sinaptik iletiyi baskılayabilen bir presinaptik basamaktır. Amfetamin ise katekolaminlerin salıverilmesini artırır; etkisi baskılama değil artırmadır (s. 22).",
+      "E": "Amfetamin, adrenerjik sinapslarda başta noradrenalin ve dopamin olmak üzere katekolaminlerin salıverilmesini artırır; presinaptik bir etkidir ve sinaptik aralıktaki transmitter miktarını yükseltir. Soruda sorulan temel etki budur (s. 23)."
+     },
+     "bilgi": [
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "amfetamin adrenerjik sinapslarda başta noradrenalin ve dopamin olmak üzere katekolaminlerin salıverilmesini artırır"
+     },
+     "dayanak": [
+      "ozen:s23",
+      "not:s23"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q47",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Postsinaptik hücre düzeyinde etkili ilaçlardan, nörotransmitterin etkisini taklit edenler ile bu etkiyi bloke edenler sırasıyla hangi adlarla anılır?",
+     "secenekler": {
+      "A": "Antagonist, agonist",
+      "B": "Agonist, antagonist",
+      "C": "Agonist, antikolinesteraz",
+      "D": "Antikolinesteraz, antagonist",
+      "E": "Antagonist, antikolinesteraz"
+     },
+     "dogru": "B",
+     "aciklama": "İlaçlar nörotransmitterin etkisini taklit ederek agonist, reseptörleri bloke ederek antagonist etki gösterir (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Sıralama ters kurulmuştur: taklit eden ilaç antagonist değil agonist, bloke eden ilaç da agonist değil antagonisttir. İki terim birbirine karıştırılmamalıdır (s. 24).",
+      "B": "Nörotransmitterin etkisini taklit eden ilaç agonist, reseptörü bloke eden ilaç antagonisttir. Postsinaptik reseptörler ilaçların önemli etki yerlerinden biridir ve iki grup bu sırayla adlandırılır (s. 24).",
+      "C": "Birinci terim doğru (agonist) ancak reseptörü bloke eden ilaç antikolinesteraz değildir. Antikolinesteraz asetilkolinesterazı inhibe eden, yani reseptör değil enzim düzeyinde etkili ilaçtır (s. 24).",
+      "D": "Antikolinesteraz enzimi inhibe ettiği için taklit eden ilacın adı olamaz; taklit eden ilaç agonisttir. Reseptörü bloke eden terim antagonisttir ve ikinci terim doğrudur, birinci terim yanlıştır (s. 24).",
+      "E": "Reseptörü taklit eden ilaç antagonist değildir, agonisttir. Antikolinesteraz da reseptörü bloke eden ilacın adı değil, enzim inhibitörlerinin adıdır; iki terim de yanlış yere konmuştur (s. 24)."
+     },
+     "bilgi": [
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "İlaçlar, nörotransmitterlerin etkisini taklit ederek agonist olarak etki gösterebilir veya reseptörleri bloke ederek antagonist etki oluşturabilir"
+     },
+     "dayanak": [
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q48",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "MSS'de ilaçların sinaptik iletime etki yerleri ile ilgili aşağıdaki ifadeler veriliyor:\nI. Presinaptik etkiler nörotransmitterin sentezini, depolanmasını, salınmasını ve geri alımını kapsar.\nII. Postsinaptik etkiler nörotransmitterin reseptöre bağlanmasını ve hedef hücredeki yanıtı kapsar.\nIII. Antikolinesteraz ilaçlar asetilkolinin geri alımını engelleyerek etkisini uzatır.\nIV. İlaç etkisinin seçiciliği, farklı nöron gruplarının farklı nörotransmitter ve reseptör alt tiplerini kullanmasıyla ilişkilidir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Presinaptik ve postsinaptik etki yerleri ile seçicilik doğru tanımlanmıştır; antikolinesteraz asetilkolinin geri alımını değil enzimatik yıkımını engeller, III yanlıştır (s. 22-25).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur, ancak bu şık IV'ü dışarıda bırakır. İlaç etkisinin seçiciliği, farklı nöron gruplarının farklı transmitter ve reseptör alt tiplerini kullanmasıyla ilişkilidir ve bu ifade de doğrudur (s. 25).",
+      "B": "I ve II doğrudur ancak III yanlış eklenmiştir: antikolinesteraz ilaçlar geri alımı değil, asetilkolinesterazı inhibe ederek yıkımı engeller. IV'ün doğru olduğu da bu şıkta gözden kaçmıştır (s. 24-25).",
+      "C": "II ve IV doğrudur; fakat III yanlıştır, çünkü asetilkolinin etkisi geri alımla değil enzimatik yıkımla sonlanır. Ayrıca doğru olan I de eksiktir: presinaptik etkiler sentez, depolama, salınma ve geri alımı kapsar (s. 22-24).",
+      "D": "I ve IV doğrudur; fakat III yanlıştır ve II doğru olduğu halde bu şıkta yer almaz. Postsinaptik etkiler transmitterin reseptöre bağlanmasını ve hedef hücredeki yanıtı kapsar (s. 22-24).",
+      "E": "I, II ve IV doğrudur: presinaptik etkiler sentez, depolama, salınma ve geri alımı; postsinaptik etkiler reseptöre bağlanma ve hedef yanıtı kapsar; seçicilik farklı nöron gruplarının farklı transmitter ve reseptör alt tiplerini kullanmasına bağlıdır. III yanlıştır (s. 22-25)."
+     },
+     "bilgi": [
+      91,
+      92,
+      101,
+      107
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Presinaptik etkiler nörotransmitterlerin sentezini, depolanmasını, salınmasını veya geri alımını"
+     },
+     "dayanak": [
+      "ozen:s22"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q50",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kokain, adrenerjik sinapslarda noradrenalin ve dopamin gibi katekolaminlerin sinaptik etkisini hangi basamağı engelleyerek uzatır?",
+     "secenekler": {
+      "A": "Salıverilme",
+      "B": "Veziküler depolama",
+      "C": "Enzimatik yıkım",
+      "D": "Geri alım",
+      "E": "Postsinaptik reseptör bağlanması"
+     },
+     "dogru": "D",
+     "aciklama": "Kokain katekolaminlerin sinir ucuna geri alımını engelleyerek sinaptik aralıktaki etkilerini uzatır (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Salıverilme basamağını artırmak amfetaminin etkisidir ve sinaptik aralığa daha fazla transmitter çıkarır. Kokain ise salınımı değil, salınmış transmitterin geri alımını engeller (s. 23-24).",
+      "B": "Veziküler depolama basamağının engellenmesi rezerpinin VMAT inhibisyonuyla yaptığı etkidir ve transmitter tükenmesine yol açar. Kokain etkiyi uzattığı için depolamayı bozan bir ilaç sayılamaz (s. 23-24).",
+      "C": "Enzimatik yıkım basamağının engellenmesi, asetilkolin için antikolinesteraz ilaçların mekanizmasıdır. Kokain katekolaminlerin etkisini yıkımı değil geri alımı engelleyerek uzatır (s. 24).",
+      "D": "Kokain, katekolaminlerin presinaptik sinir ucuna geri alım basamağını engeller; aralıktan uzaklaştırılamayan noradrenalin ve dopamin etkisini daha uzun süre sürdürür. Soruda sorulan mekanizma budur (s. 24).",
+      "E": "Postsinaptik reseptör düzeyindeki bloke antagonist ilaçların etkisidir ve yanıtı azaltır; reseptöre bağlanma basamağı kokainin hedefi değildir. Kokain etkiyi azaltmaz, geri alımı engelleyerek sinaptik etkiyi uzatır (s. 24)."
+     },
+     "bilgi": [
+      100
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "kokain adrenerjik sinapslarda noradrenalin ve dopamin gibi katekolaminlerin geri alımını engelleyerek sinaptik etkilerini uzatır"
+     },
+     "dayanak": [
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q44",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Sinaptik iletimi değiştiren ilaçlar ve etki yerleri ile ilgili aşağıdaki ifadeler veriliyor:\nI. Rezerpin, VMAT'ı inhibe ederek monoaminlerin veziküllerde depolanmasını engeller.\nII. Amfetamin, katekolaminlerin salıverilmesini azaltır.\nIII. Kokain, katekolaminlerin geri alımını engeller.\nIV. Striknin, glisin reseptörlerini bloke ederek inhibisyonu azaltır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "I, III ve IV",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Rezerpin depolamayı, kokain geri alımı engeller; striknin glisin reseptörünü bloke eder. Amfetamin katekolamin salıverilmesini artırır, azaltmaz; doğru kombinasyon I, III ve IV'tür (s. 23-25).",
+     "sik_aciklamalari": {
+      "A": "I ve III doğru öncüllerdir ancak bu kombinasyon IV'ü dışarıda bırakır. Striknin inhibitör transmitter glisinin reseptörlerini bloke ederek inhibisyonu azaltır ve aşırı uyarılmaya yol açar; bu da doğrudur (s. 25).",
+      "B": "I, III ve IV doğrudur: rezerpin VMAT inhibisyonuyla depolamayı engeller, kokain geri alımı bloke eder, striknin glisin reseptörlerini bloke ederek inhibisyonu azaltır. II yanlıştır çünkü amfetamin salıverilmeyi artırır (s. 23-25).",
+      "C": "I ve III doğrudur ancak II bu kombinasyona yanlış eklenmiştir; amfetamin katekolaminlerin salıverilmesini artırır, azaltmaz. Ayrıca doğru olan IV de bu şıkta eksiktir (s. 23-25).",
+      "D": "III ve IV doğrudur; fakat II yanlıştır çünkü amfetamin salıverilmeyi artırır. Bu şıkta doğru olan I de eksiktir: rezerpin VMAT'ı inhibe ederek monoaminlerin depolanmasını engeller (s. 23).",
+      "E": "Dört öncülün hepsini doğru kabul eder, oysa II yanlıştır. Amfetamin katekolaminlerin sinaptik aralığa salıverilmesini artırır; azaltma etkisi bu ilaca ait değildir (s. 23)."
+     },
+     "bilgi": [
+      95,
+      97,
+      100,
+      103
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "rezerpin veziküler monoamin taşıyıcısını (VMAT) inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla bu nörotransmitterlerin tükenmesine yol açar"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-30",
+      "ozen:s23",
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q46",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Nörotransmitter etkisinin sonlanması ve ilaçların bu basamaklara etkisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kokain katekolaminlerin geri alımını engelleyerek etkilerini uzatır",
+      "B": "Antikolinesteraz ilaçlar asetilkolinin sinaptik etkisini uzatır",
+      "C": "Asetilkolinin etkisi esas olarak geri alımla sonlanır",
+      "D": "Nörotransmitterlerin çoğu sinir ucuna veya nöroglial hücrelere taşınır",
+      "E": "Rezerpin monoaminlerin veziküler depolanmasını engeller"
+     },
+     "dogru": "C",
+     "aciklama": "Asetilkolinin etkisi geri alımla değil asetilkolinesterazla parçalanarak sonlanır; diğer dört ifade slayt bilgisiyle doğrudur (s. 23-24).",
+     "sik_aciklamalari": {
+      "A": "İfade doğrudur: kokain noradrenalin ve dopamin gibi katekolaminlerin geri alımını engeller ve sinaptik etkilerini uzatır. Yanlış ifade arandığı için bu şık elenir (s. 24).",
+      "B": "İfade doğrudur: antikolinesteraz ilaçlar asetilkolinesterazı inhibe ederek asetilkolinin sinaptik aralıktaki etkisini uzatır. Yanlış ifade arandığı için bu şık elenir (s. 24).",
+      "C": "Bu ifade yanlıştır: asetilkolin geri alımla değil, esas olarak asetilkolinesteraz enzimi tarafından parçalanarak sonlanır. Geri alım nörotransmitterlerin çoğu için geçerli olsa da asetilkolinde ana yol enzimatik yıkımdır (s. 24).",
+      "D": "İfade doğrudur: nörotransmitterlerin çoğu presinaptik sinir ucuna veya çevredeki nöroglial hücrelere taşınarak aralıktan uzaklaştırılır. Yanlış ifade arandığı için bu şık elenir (s. 24).",
+      "E": "İfade doğrudur: rezerpin VMAT'ı inhibe ederek monoaminlerin sinaptik veziküllerde depolanmasını engeller ve zamanla tükenmeye yol açar. Yanlış ifade arandığı için bu şık elenir (s. 23)."
+     },
+     "bilgi": [
+      94,
+      98,
+      99,
+      100,
+      101
+     ],
+     "benzer_cikmis": [
+      "past-1790877044780-565237"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Nörotransmitterlerin çoğu, presinaptik sinir ucuna veya çevredeki nöroglial hücrelere taşınarak sinaptik aralıktan uzaklaştırılır"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044780-565237",
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q49",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Bazı barbitüratlar eksitatör iyonotropik reseptörlerin işlevini baskılayabilse de barbitüratların temel etki mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "GABAA üzerinden inhibitör iletimi güçlendirme",
+      "B": "Glisin reseptörlerini bloke etme",
+      "C": "Monoaminlerin depolanmasını engelleme",
+      "D": "Asetilkolinesterazı inhibe etme",
+      "E": "Katekolaminlerin geri alımını engelleme"
+     },
+     "dogru": "A",
+     "aciklama": "Barbitüratların temel etkisi GABAA reseptörleri üzerinden inhibitör iletimi güçlendirmektir; eksitatör iyonotropik reseptörleri baskılamaları ikincil bir etkidir (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Barbitüratların temel etkisi GABAA reseptörleri üzerinden inhibitör iletimi güçlendirmektir; bazı barbitüratlar eksitatör iyonotropik reseptörleri de baskılayabilir, ancak bu ikincil bir etkidir. Soruda sorulan temel mekanizma budur (s. 25).",
+      "B": "Glisin reseptörlerini bloke etmek inhibisyonu azaltır ve aşırı uyarılmaya yol açar; bu striknin gibi antagonistlerin etkisidir. Barbitüratlar inhibitör iletimi azaltmaz, GABAA üzerinden güçlendirir (s. 25).",
+      "C": "Monoaminlerin depolanmasını engellemek VMAT'ı inhibe eden rezerpinin presinaptik etkisidir. Barbitüratlar presinaptik depolamayı değil postsinaptik GABAA reseptörleri üzerinden iletiyi etkiler (s. 23-25).",
+      "D": "Asetilkolinesterazı inhibe etmek antikolinesteraz ilaçların etkisidir ve asetilkolinin etkisini uzatır. Barbitüratların temel hedefi enzim değil GABAA reseptörleridir (s. 24-25).",
+      "E": "Katekolaminlerin geri alımını engellemek kokainin mekanizmasıdır ve katekolaminlerin etkisini uzatır. Barbitüratlar geri alımı etkilemez, GABAA reseptörleri üzerinden inhibitör iletimi güçlendirir (s. 24-25)."
+     },
+     "bilgi": [
+      105
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "ancak barbitüratların temel etkisi GABAA reseptörleri üzerinden inhibitör iletimi güçlendirmektir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877044780-565237",
+     "soru": "Aşağıdakilerden hangisi santral ve periferik sinir sisteminde sinaptik aralıkta esteraz enzimi tarafından yıkımlanır?",
+     "secenekler": {
+      "A": "Serotonin",
+      "B": "Dopamin",
+      "C": "Adrenalin",
+      "D": "Histamin",
+      "E": "Asetilkolin"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Öğrenci, nörotransmitter olma ölçütlerini (lokalizasyon, salıverilme, sinaptik benzerlik) sayar; hiyerarşik ve yaygın nöronal sistemleri, röle ve lokal devre nöronlarını karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q51",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Bir maddenin sinir ucundan salıverildiğinin gösterilmesi, nörotransmitter olma ölçütlerinden hangisine karşılık gelir?",
+     "secenekler": {
+      "A": "Lokalizasyon",
+      "B": "Salıverilme",
+      "C": "Sinaptik benzerlik",
+      "D": "Geri alım",
+      "E": "Enzimatik yıkım"
+     },
+     "dogru": "B",
+     "aciklama": "Nörotransmitter olma ölçütleri lokalizasyon, salıverilme ve sinaptik benzerliktir; maddenin sinir ucundan salıverildiğinin gösterilmesi salıverilme ölçütüdür (s. 26-27).",
+     "sik_aciklamalari": {
+      "A": "Lokalizasyon, maddenin incelenen yoldaki presinaptik sinir uçlarında bulunduğunu gösterir; biyokimyasal ve immünohistokimyasal yöntemlerle araştırılır. Burada sorulan şey bulunuş değil, sinir ucundan çıkıştır (s. 26).",
+      "B": "Salıverilme ölçütü, nörotransmitter olduğu düşünülen maddenin sinir ucundan salıverildiğinin gösterilmesini ister; ekstraselüler sıvı örneklemesi ve Ca2+ bağımlılığı bu ölçütün yöntemleridir. Soruda tarif edilen ölçüt budur (s. 27).",
+      "C": "Sinaptik benzerlik, dışarıdan uygulanan maddenin doğal transmitterin etkisine benzer yanıt vermesini ve bu etkinin reseptör blokajıyla engellenebilmesini ister. Sinir ucundan çıkışı göstermez (s. 28).",
+      "D": "Geri alım, salınmış transmitterin sinir ucuna veya glia hücrelerine taşınarak etkisinin sonlanmasıdır. Nörotransmitter olma ölçütlerinden biri değildir; ölçüt salınmanın kendisidir (s. 24-26).",
+      "E": "Enzimatik yıkım, asetilkolin gibi bazı transmitterlerin etkisini sonlandıran süreçtir. Nörotransmitter olma ölçütlerinden biri değildir ve maddenin sinir ucundan salıverildiğini göstermez (s. 24-26)."
+     },
+     "bilgi": [
+      108,
+      112
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q37"
+     ],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Nörotransmitter olduğu düşünülen maddenin, sinir ucundan salıverildiği gösterilmelidir"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q37"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q54",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Nörotransmitterin belirli beyin bölgelerindeki konsantrasyonunu ölçen biyokimyasal analizler hangi nörotransmitter olma ölçütünü değerlendirmeye yarar?",
+     "secenekler": {
+      "A": "Salıverilme",
+      "B": "Sinaptik benzerlik",
+      "C": "Lokalizasyon",
+      "D": "Geri alım",
+      "E": "Metabolizma"
+     },
+     "dogru": "C",
+     "aciklama": "Biyokimyasal analizler ve immünohistokimyasal yöntemler, maddenin ilgili yoldaki presinaptik sinir uçlarında bulunduğunu gösteren lokalizasyon ölçütünde kullanılır (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Salıverilme ölçütü, maddenin sinir ucundan çıktığını ekstraselüler sıvı örneklemesi ve Ca2+ bağımlılığıyla gösterir. Bölgesel konsantrasyon ölçümü maddenin varlığını gösterir, çıkışını değil (s. 27).",
+      "B": "Sinaptik benzerlik, dışarıdan uygulanan maddenin doğal transmitterin etkisine benzer yanıt vermesini ve reseptör blokajıyla engellenebilmesini ister. Konsantrasyon ölçümüyle ilgili değildir (s. 28).",
+      "C": "Lokalizasyon ölçütü, maddenin incelenen yoldaki presinaptik sinir uçlarında bulunduğunun gösterilmesini ister. Bölgesel konsantrasyon ölçümü ve immünohistokimyasal dağılım bu ölçütün yöntemleridir (s. 26).",
+      "D": "Geri alım, salınmış transmitterin sinir ucuna veya glia hücrelerine taşınmasıdır; bir ölçüt değil, etkinin sonlanma yoludur. Konsantrasyon ölçümüyle değerlendirilen ölçüt bu değildir (s. 24).",
+      "E": "Metabolizma, sinaptik iletimin düzenlenebildiği basamaklardan biridir ve nörotransmitter olma ölçütlerinden biri değildir. Bölgesel konsantrasyon ölçümü lokalizasyonu gösterir (s. 22-26)."
+     },
+     "bilgi": [
+      108,
+      109,
+      110,
+      111
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q37"
+     ],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Biyokimyasal analizler: Nörotransmitterin belirli beyin bölgelerindeki konsantrasyonu ölçülür"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q37",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q52",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için aşağıdakilerden hangisi değerlendirilir?",
+     "secenekler": {
+      "A": "Maddenin presinaptik sinir uçlarında bulunması",
+      "B": "Dışarıdan uygulanan maddenin doğal etkiyi taklit etmesi",
+      "C": "Sentezleyen enzimlerin immünohistokimyasal dağılımı",
+      "D": "Etkinin reseptör blokajıyla engellenebilmesi",
+      "E": "Sürecin hücre içine Ca2+ girişine bağımlı olması"
+     },
+     "dogru": "E",
+     "aciklama": "Salıverilmenin sinaptik iletimle ilişkili olduğunu göstermek için sürecin hücre içine Ca2+ girişine bağımlı olup olmadığına bakılır; kalsiyum girişi vezikül kaynaşmasını tetikler (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Maddenin presinaptik sinir uçlarında bulunması lokalizasyon ölçütünün konusudur ve maddenin yolaktaki yerini gösterir. Bulunuş salıverilmeyi ve Ca2+ bağımlılığını göstermez; ayrı bir ölçüttür (s. 26).",
+      "B": "Dışarıdan uygulanan maddenin doğal transmitterin etkisini taklit etmesi sinaptik benzerlik ölçütüdür ve maddenin rolünü destekler. Salıverilmenin Ca2+ bağımlılığını değil, etkinin benzerliğini gösterir (s. 28).",
+      "C": "Sentezleyen enzimlerin immünohistokimyasal dağılımı, lokalizasyon ölçütünde sinir dokusundaki dağılımı göstermek için kullanılan bir yöntemdir. Salıverilmenin sinaptik iletimle ilişkisini değil, maddenin yerini belirler (s. 26).",
+      "D": "Etkinin ilgili reseptörlerin bloke edilmesiyle engellenebilmesi, maddenin transmitter rolünü destekleyen sinaptik benzerlik ölçütüne aittir. Salıverilmenin Ca2+ girişine bağımlılığıyla ilgili bir veri sağlamaz (s. 28).",
+      "E": "Klasik kimyasal sinapslarda kalsiyum girişi sinaptik veziküllerin kaynaşmasını ve transmitter salıverilmesini tetikler. Salıverilmenin Ca2+ girişine bağımlı olması, sürecin sinaptik iletimle ilişkili olduğunu gösterir (s. 27)."
+     },
+     "bilgi": [
+      114,
+      115
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q37"
+     ],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Klasik kimyasal sinapslarda kalsiyum girişi, sinaptik veziküllerin kaynaşmasını ve nörotransmitter salıverilmesini tetikler"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-35"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q53",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Santral nörotransmitterlerin belirlenmesinde kullanılan ölçütlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Lokalizasyon ölçütü için ekstraselüler sıvı örneklemesi yapılır.\nII. Salıverilmenin sinaptik iletimle ilişkisi, Ca2+ girişine bağımlılığıyla değerlendirilir.\nIII. Sinaptik benzerlikte, dışarıdan uygulanan madde doğal transmitterin etkisine benzer yanıt vermelidir.\nIV. Sinaptik benzerlikte etkinin reseptör blokajıyla engellenebilmesi, maddenin transmitter rolünü destekler.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "II, III ve IV",
+      "B": "I, II ve III",
+      "C": "I ve III",
+      "D": "I, II, III ve IV",
+      "E": "II ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Ekstraselüler sıvı örneklemesi salıverilme ölçütünün yöntemidir, lokalizasyonun değil; Ca2+ bağımlılığı, benzer yanıt ve reseptör blokajı ifadeleri doğrudur (s. 26-28).",
+     "sik_aciklamalari": {
+      "A": "II, III ve IV doğrudur: Ca2+ bağımlılığı salıverilmenin sinaptik iletimle ilişkisini gösterir, benzer yanıt ve reseptör blokajıyla engellenebilme sinaptik benzerlik ölçütüdür. I yanlıştır, çünkü ekstraselüler sıvı örneklemesi salıverilme ölçütünün yöntemidir (s. 26-28).",
+      "B": "II ve III doğrudur; ancak I yanlış eklenmiştir, çünkü ekstraselüler sıvı örneklemesi lokalizasyon değil salıverilme ölçütüne aittir. Doğru olan IV de bu şıkta eksiktir (s. 27-28).",
+      "C": "III doğrudur ama I yanlıştır; lokalizasyonda biyokimyasal ve immünohistokimyasal yöntemler kullanılır. II ve IV de doğru olduğu halde bu şıkta yer almaz (s. 26-28).",
+      "D": "Dört öncülün tamamını doğru sayar, oysa I yanlıştır. Ekstraselüler sıvı örneklemesi, in vivo ortamda salıverilmeyi incelemek için kullanılır; lokalizasyonu belirlemez (s. 27).",
+      "E": "II ve IV doğrudur, ancak III de doğru olduğu halde bu şıkta eksiktir. Dışarıdan uygulanan maddenin doğal transmitterin etkisine benzer yanıt vermesi sinaptik benzerlik ölçütünün temelidir (s. 28)."
+     },
+     "bilgi": [
+      109,
+      113,
+      114,
+      116
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q37"
+     ],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Klasik kimyasal sinapslarda kalsiyum girişi, sinaptik veziküllerin kaynaşmasını ve nörotransmitter salıverilmesini tetikler"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-35",
+      "cikmis:d3k2-2018-2019-k4-q37"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q55",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Hiyerarşik nöronal sistemlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Duyusal algılama ve motor kontrolde doğrudan yer alan yolakları kapsar.\nII. Aksonları ince ve miyelinsizdir, iletim hızı yaklaşık 0,5 m/sn'dir.\nIII. Herhangi bir bağlantıdaki lezyon, diğer yolakların işi devralmasını sağlar.\nIV. Duyusal bilgi, kortekse giden yoldaki her röle çekirdeğinde sıralı olarak işlenir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "II ve III",
+      "C": "I, III ve IV",
+      "D": "I ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "D",
+     "aciklama": "Hiyerarşik sistemler duyusal algılama ve motor kontrolü kapsar, röle çekirdeklerinde sıralı işlem yapar; lezyon sistemi iş göremez hale getirir ve lifler hızlı geniş miyelinlidir (s. 28-29).",
+     "sik_aciklamalari": {
+      "A": "I ve IV doğrudur, ancak II hiyerarşik sistemin özelliği değildir. İnce, miyelinsiz ve yaklaşık 0,5 m/sn ileten aksonlar yaygın sistemlere aittir; hiyerarşik yolaklar 50 m/sn'den hızlı, geniş miyelinli liflerden oluşur (s. 28, 33).",
+      "B": "Her iki ifade de yanlıştır; ıI yaygın sistemlerin özelliğidir; III'te anlatılanın tersine hiyerarşik sistemde bir bağlantıdaki lezyon sistemi iş göremez hale getirir. Doğru olan I ve IV bu şıkta yer almaz (s. 28-29).",
+      "C": "I ve IV doğrudur, fakat III yanlış eklenmiştir. Hiyerarşik bir sistemde herhangi bir bağlantıdaki lezyon başka yolakların işi devralmasını sağlamaz, sistemi iş göremez hale getirir (s. 29).",
+      "D": "I ve IV doğrudur: hiyerarşik sistemler duyusal algılama ve motor kontrolde doğrudan yer alır, bilgi her röle çekirdeğinde sıralı işlenir. II yaygın sistemlere ait bir özelliktir; III yanlıştır çünkü lezyon sistemi iş göremez hale getirir (s. 28-29).",
+      "E": "I doğrudur ancak II ve III yanlıştır: ince miyelinsiz yavaş aksonlar yaygın sistemin, lezyonla sistemin iş göremez hale gelmesi hiyerarşik sistemin özelliğidir. Doğru olan IV de eksiktir (s. 28-29, 33)."
+     },
+     "bilgi": [
+      118,
+      119,
+      120,
+      121
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Herhangi bir bağlantıdaki bir lezyon, sistemi iş göremez hale getirir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q56",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Omurilikte duyusal aksonların uçlarında aksoaksonik sinapslar oluşturan lokal devre nöronları hangi olaydan sorumludur?",
+     "secenekler": {
+      "A": "Presinaptik inhibisyon",
+      "B": "Eksitatör postsinaptik potansiyel oluşumu",
+      "C": "İnhibitör postsinaptik potansiyel oluşumu",
+      "D": "Transmitterin varikozitelerden yaygın salınması",
+      "E": "Röle nöronlarında glutamat salıverilmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Aksoaksonik sinapslarda inhibitör bir nöron eksitatör lifin akson terminaline sinaps yapar; bu yolak presinaptik inhibisyondan sorumludur ve terminaldeki Ca2+ girişini azaltır (s. 21, 30-31).",
+     "sik_aciklamalari": {
+      "A": "Aksoaksonik sinapslarda inhibitör nöron eksitatör lifin akson terminaline sinaps yapar. Terminaldeki kalsiyum girişi ve transmitter salınımı azalır; bu mekanizma presinaptik inhibisyondur (Şekil 21-6B) (s. 21, 31).",
+      "B": "EPSP, postsinaptik membranda eksitatör transmitterle oluşan depolarizasyondur. Aksoaksonik sinapsta etki postsinaptik hücrede değil presinaptik terminalde gerçekleşir, bu yüzden EPSP değildir (s. 21).",
+      "C": "IPSP postsinaptik membranda hiperpolarizasyonla eşiği uzaklaştıran inhibisyondur. Aksoaksonik sinaps ise presinaptik terminale yapılır ve transmitter salınımını azaltır; IPSP postsinaptik bir olaydır (s. 21).",
+      "D": "Varikozite, yaygın sistem aksonlarındaki çok vezikül içeren periyodik genişlemedir ve transmitterin geniş alana yayılmasını sağlar. Aksoaksonik sinaps ise omurilikteki lokal devre nöronlarına aittir ve presinaptik inhibisyon yapar (s. 30, 33).",
+      "E": "Röle nöronları sinyali uzak mesafelere taşıyan eksitatör, çoğunlukla glutamat salıveren hücrelerdir. Aksoaksonik sinapsları kuran, inhibitör lokal devre nöronlarıdır (s. 29-30)."
+     },
+     "bilgi": [
+      89,
+      128,
+      131
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Omurilikte lokal devre nöronlarının özel bir sınıfı (Şekil 21-6B) duyusal aksonların uçlarında aksoaksonik sinapslar oluşturur"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-38",
+      "ozen:s31",
+      "not:s31"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q60",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Röle (projeksiyon) nöronları ile lokal devre nöronlarının transmitterleri ve konumu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Röle nöronları çoğunlukla GABA, lokal devre nöronları glutamat salıverir",
+      "B": "Röle nöronları çoğunlukla glutamat, lokal devre nöronları GABA veya glisin salıverir",
+      "C": "İki nöron tipi de çoğunlukla glutamat salıveren eksitatör hücrelerdir",
+      "D": "Lokal devre nöronlarının aksonları uzak mesafelere sinyal ileten kollateral verir",
+      "E": "Röle nöronları çoğunlukla inhibitördür, aksonları gövdenin çevresinde kalır"
+     },
+     "dogru": "B",
+     "aciklama": "Projeksiyon nöronlarından salıverilen eksitatör transmitter çoğunlukla glutamattır; lokal devre nöronlarının çoğu inhibitördür ve GABA veya glisin salıverir (s. 29-30).",
+     "sik_aciklamalari": {
+      "A": "Transmitterler ters yerleştirilmiştir. Eksitatör transmitter çoğunlukla glutamattır ve projeksiyon nöronlarından salıverilir; GABA veya glisin ise çoğunlukla inhibitör lokal devre nöronlarından salıverilir (s. 29-30).",
+      "B": "Röle nöronları sinyali uzak mesafelere ileten, büyük gövdeli hücrelerdir ve eksitatör transmitterleri çoğunlukla glutamattır. Lokal devre nöronlarının çoğu ise küçük, inhibitör hücrelerdir ve GABA veya glisin salıverir (s. 29-30).",
+      "C": "Lokal devre nöronlarının çoğu eksitatör değil inhibitördür. Projeksiyon nöronları çoğunlukla glutamat salıverir, lokal devre nöronları ise GABA veya glisin salıverir (s. 29-30).",
+      "D": "Uzak mesafelere sinyal ileten ve çevreye yaygın kollateral veren hücreler projeksiyon nöronlarıdır. Lokal devre nöronlarının aksonları hücre gövdesinin hemen çevresine dallanır (s. 29-30).",
+      "E": "Röle nöronlarının çoğunun transmitteri eksitatör glutamattır; inhibitör olanlar lokal devre nöronlarıdır. Aksonları gövde çevresinde kalan hücreler de röle değil lokal devre nöronlarıdır (s. 29-30)."
+     },
+     "bilgi": [
+      122,
+      123,
+      124,
+      125,
+      126
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Hücrelerden salıverilen eksitatör transmitter çoğunlukla glutamattır"
+     },
+     "dayanak": [
+      "not:s29",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q57",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Lokal devre nöronlarıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Çoğu inhibitördür ve GABA veya glisin salıverir.\nII. Primer olarak projeksiyon nöronlarının hücre gövdesi ile sinaps yapar.\nIII. İki ana yolak tipi tekrarlayan geri besleme ve ileri besleme yolaklarıdır.\nIV. Projeksiyon nöronlarından büyüktür ve aksonları uzak mesafelere ulaşır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, II ve III",
+      "D": "I, II, III ve IV",
+      "E": "II ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Lokal devre nöronları çoğunlukla inhibitördür, projeksiyon nöronlarının gövdesiyle sinaps yapar ve geri besleme ile ileri besleme yolaklarını oluşturur; projeksiyon nöronlarından küçüktürler (s. 30-31).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur, ancak III de doğrudur ve bu şıkta eksiktir. Tekrarlayan geri besleme ve ileri besleme yolakları lokal devre nöronlarının iki ana yolak tipidir (Şekil 21-6A) (s. 30-31).",
+      "B": "II ve III doğrudur; fakat IV yanlıştır ve I doğru olduğu halde şıkta yer almaz. Lokal devre nöronları projeksiyon nöronlarından küçüktür ve aksonları hücre gövdesinin hemen çevresine dallanır (s. 30).",
+      "C": "I, II ve III doğrudur: lokal devre nöronları çoğunlukla GABA veya glisin salıveren inhibitör hücrelerdir, primer olarak projeksiyon nöronlarının gövdesiyle sinaps yapar ve tekrarlayan geri besleme ile ileri besleme yolaklarını oluşturur. IV yanlıştır (s. 30).",
+      "D": "Dört öncülün hepsini doğru sayar, oysa IV yanlıştır. Uzak mesafelere sinyal ileten, büyük gövdeli hücreler projeksiyon nöronlarıdır; lokal devre nöronları daha küçüktür (s. 29-30).",
+      "E": "II doğrudur ancak IV yanlıştır; I ve III de doğru olduğu halde bu şıkta eksiktir. Büyük gövdeli ve uzak mesafelere ulaşan aksonlar projeksiyon nöronlarına aittir (s. 29-30)."
+     },
+     "bilgi": [
+      125,
+      126,
+      127,
+      128
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Bu nöronların çoğu inhibitördür ve GABA veya glisin salıverirler"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-38",
+      "ozen:s31",
+      "not:s31"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q58",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Monoamin içeren non-spesifik (yaygın) nöronal sistemlerin özellikleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Lifleri geniş korteks alanlarını monosinaptik etkileyebilir",
+      "B": "Aksonlarında çok sayıda vezikül içeren varikoziteler bulunur",
+      "C": "Aksonlar ince ve miyelinsizdir, iletim yaklaşık 0,5 m/sn'dir",
+      "D": "Çoğu transmitter metabotropik reseptörlere etki eder",
+      "E": "Aksonları 50 m/sn'den hızlı ileten geniş miyelinli liflerdir"
+     },
+     "dogru": "E",
+     "aciklama": "Yaygın sistemlerin aksonları ince ve miyelinsizdir, iletim yaklaşık 0,5 m/sn'dir; 50 m/sn'den hızlı geniş miyelinli lifler hiyerarşik sistemlere aittir (s. 28, 32-34).",
+     "sik_aciklamalari": {
+      "A": "İfade doğrudur: yaygın sistemlerin lifleri neokortekste teğetsel organizasyon gösterir ve geniş korteks alanlarını monosinaptik olarak etkileyebilir. Yanlış ifade arandığı için bu şık elenir (s. 33).",
+      "B": "İfade doğrudur: yaygın sistem aksonları çok sayıda vezikül içeren varikoziteler gösterir; bazı varikoziteler belirgin sinaps kurmadan transmitteri çevreye salar. Yanlış ifade arandığı için bu şık elenir (s. 33).",
+      "C": "İfade doğrudur: bu aksonlar ince ve miyelinsiz olduklarından iletimleri yaklaşık 0,5 m/sn ile çok yavaştır. Yanlış ifade arandığı için bu şık elenir (s. 33).",
+      "D": "İfade doğrudur: noradrenalin dahil çoğu transmitter metabotropik reseptörlere etki eder ve uzun süren sinaptik etkileri başlatır. Yanlış ifade arandığı için bu şık elenir (s. 34).",
+      "E": "Bu ifade yanlıştır: 50 m/sn'den hızlı ileten geniş miyelinli lifler hiyerarşik sistemlere aittir. Yaygın sistemlerin aksonları ince ve miyelinsiz olduğundan iletim çok yavaştır (s. 28, 33)."
+     },
+     "bilgi": [
+      134,
+      136,
+      139,
+      141
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Bu aksonlar ince ve miyelinsiz olduklarından, iletimleri çok yavaştır (yaklaşık 0,5 m/sn)"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-41",
+      "ozen:s34"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q59",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Noradrenalin dahil yaygın sistemlerin kullandığı nörotransmitterlerin çoğunun uzun süren sinaptik etkiler başlatması hangi özellikle ilişkilidir?",
+     "secenekler": {
+      "A": "İyonotropik reseptörlerde hızlı kanal açmaları",
+      "B": "Aksoaksonik sinapslarla presinaptik inhibisyon yapmaları",
+      "C": "Geniş miyelinli liflerle hızlı iletilmeleri",
+      "D": "Metabotropik reseptörler üzerine etki etmeleri",
+      "E": "Röle nöronlarından salıverilen eksitatör transmitter olmaları"
+     },
+     "dogru": "D",
+     "aciklama": "Yaygın sistemlerin kullandığı noradrenalin dahil çoğu nörotransmitter metabotropik reseptörler üzerine etkir ve uzun süren sinaptik etkileri başlatır (s. 34).",
+     "sik_aciklamalari": {
+      "A": "İyonotropik reseptörlerde kanal doğrudan açıldığı için yanıt hızlı ve kısa sürelidir. Yaygın sistemlerdeki uzun süreli etki ise metabotropik reseptörlerle ilişkilidir (s. 34).",
+      "B": "Aksoaksonik sinapslar omurilikteki lokal devre nöronlarına ait olup presinaptik inhibisyon yapar. Yaygın sistemlerdeki uzun süreli etkinin nedeni bu değildir (s. 30, 34).",
+      "C": "Geniş miyelinli hızlı lifler hiyerarşik sistemlerin özelliğidir. Yaygın sistemlerin aksonları ince ve miyelinsizdir; uzun süreli etki iletim hızıyla değil reseptör tipiyle ilişkilidir (s. 28, 33-34).",
+      "D": "Metabotropik reseptörler G proteinleri ve ikinci haberciler üzerinden etki eder ve yanıt yavaş ama uzun sürelidir. Yaygın sistemlerin kullandığı noradrenalin dahil çoğu transmitter bu reseptörlere etki ederek uzun süren sinaptik etkileri başlatır (s. 25, 34).",
+      "E": "Röle nöronlarından salıverilen eksitatör transmitter çoğunlukla glutamattır ve hiyerarşik sistemlere aittir. Yaygın sistemler monoaminleri kullanır; uzun süreli etki metabotropik reseptörlerle ilişkilidir (s. 29, 32, 34)."
+     },
+     "bilgi": [
+      141
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Yaygın nöronal sistemler tarafından kullanılan noradrenalin dahil çoğu nörotransmitter, metabotropik reseptörler üzerine etkir ve böylece uzun süren sinaptik etkileri başlatırlar"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-41",
+      "not:s34",
+      "ozen:s34"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q37",
+     "soru": "I. Lokalizasyon\nII. Sekresyon\nIII. Sinaptik benzerlik\nIV. Aksiyon potansiyeli\n\nSSS'de nörotransmitterlerin belirlenmesinde yukarıdakilerden hangisi/hangileri etkindir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Öğrenci, glutamat reseptörlerini (AMPA, kainat, NMDA, metabotropik) iyon geçirgenliği, Mg2+ bloğu ve LTP açısından; GABA ve glisin reseptörlerini (GABAA, GABAB, glisin; striknin, bikukulin, pikrotoksin, baklofen) etki mekanizmalarıyla ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q61",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "MSS'de eksitatör sinaptik iletiye aracılık eden amino asit nörotransmitter aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Glutamat",
+      "B": "GABA",
+      "C": "Glisin",
+      "D": "Asetilkolin",
+      "E": "Noradrenalin"
+     },
+     "dogru": "A",
+     "aciklama": "Eksitatör sinaptik iletiye aracılık eden amino asit glutamattır; glisin ve GABA ise nötral amino asit olup inhibitör etkilidir (s. 34, 36).",
+     "sik_aciklamalari": {
+      "A": "Glutamat, asidik yapılı amino asit nörotransmitterdir ve MSS'deki uyarıcı sinaptik iletiye aracılık eder. Test edilen hemen hemen tüm nöronlar glutamatla güçlü biçimde eksite olur; bu nedenle soruda aranan eksitatör amino asit glutamattır (s. 36).",
+      "B": "GABA, nötral amino asit grubunda yer alan ve lokal ara nöronlardan salıverilen inhibitör bir nörotransmitterdir. Görevi MSS'nin her yerinde inhibisyon sağlamaktır; glutamatla aynı amino asit sınıfında olduğu için karıştırılır, fakat uyarıcı değil baskılayıcı etki gösterir (s. 42).",
+      "C": "Glisin, GABA ile birlikte nötral amino asitlerdendir ve omurilik ile beyin sapındaki ara nöronlardan salıverilir. Reseptörü Cl- iyonuna selektif geçirgen bir yapıdır ve inhibitör iletim sağlar; aynı sınıftan olduğu için çeldirici olur, ancak eksitatör iletinin aracısı değildir (s. 42).",
+      "D": "Asetilkolin, MSS'de çoğunlukla G proteinine bağlı muskarinik reseptörler üzerinden yavaş yanıtlar oluşturan bir nörotransmitterdir. Bilişsel işlevlerde ve bellekte rol oynar; amino asit sınıfında değildir; MSS'deki uyarıcı iletinin asıl aracısı glutamattır (s. 44).",
+      "E": "Noradrenalin, yaygın nöronal sistemlerde kullanılan bir monoamindir ve tüm reseptör alt tipleri metabotropiktir. Etkileri yavaş ve uzun sürelidir; amino asit olmadığı için amino asit nörotransmitterlerin eksitatör üyesi olan glutamatın yerini tutamaz (s. 46)."
+     },
+     "bilgi": [
+      143,
+      155
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Eksitatör sinaptik iletiye glutamat aracılık eder; Glutamat sinaptik aralığa kalsiyuma bağımlı ekzositoz ile salıverilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-43",
+      "hoca:hv-k2-09-44",
+      "not:s34",
+      "not:s36",
+      "ozen:s34",
+      "ozen:s36"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q67",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "NMDA reseptör kanalının açılmasına eşlik eden hücre içi Ca2+ artışı sinaptik güçte uzun süreli bir artışa yol açar. Bu olay aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aksoaksonik presinaptik inhibisyon",
+      "B": "Disinhibisyon",
+      "C": "Endokannabinoid aracılı baskılama",
+      "D": "Hızlı inhibitör postsinaptik potansiyel",
+      "E": "Uzun süreli potansiyalizasyon (LTP)"
+     },
+     "dogru": "E",
+     "aciklama": "NMDA kanalının açılmasıyla artan hücre içi Ca2+, sinaptik güçte uzun süreli artışa (LTP) yol açar; bu, öğrenme ve belleğin altında yatan önemli bir hücresel mekanizmadır (s. 40, 41).",
+     "sik_aciklamalari": {
+      "A": "Presinaptik inhibisyon, bir inhibitör nöronun eksitatör lifin akson terminali üzerindeki aksoaksonik sinapsı yoluyla transmitter salıverilmesini baskılamasıdır. Sinaptik gücü artırmaz, azaltır; bu yüzden Ca2+ artışının yol açtığı güçlenmeyle karıştırılmamalıdır (s. 31).",
+      "B": "Disinhibisyon, bir inhibitör lokal devrenin inhibe edilmesiyle eksitasyonun dolaylı olarak artmasıdır ve noradrenalinin dolaylı eksitatör mekanizmasını anlatır. NMDA kaynaklı Ca2+ artışının sinaptik güçte uzun süreli artış yapması ise başka bir olaydır (s. 46).",
+      "C": "Retrograd baskılama, endokannabinoidlerin postsinaptik nörondan salınıp presinaptik CB1 reseptörlerini aktive ederek transmitter salıverilmesini azaltmasıdır. Sinaptik gücü artırmaz, baskılar; NMDA kanalı sonrası Ca2+ artışının sonucu bu değildir (s. 55).",
+      "D": "Hızlı IPSP, glisin ve GABAA reseptörlerinin Cl- geçirgenliğini artırmasıyla oluşan hızlı inhibitör postsinaptik yanıttır. Sinaptik gücü uzun süreli artırmaz ve Ca2+ girişine dayanmaz; soruda tarif edilen eksitatör, uzun süreli güçlenme IPSP ile örtüşmez (s. 43).",
+      "E": "Uzun süreli potansiyalizasyon (LTP), NMDA kanalı açıldığında hücre içi Ca2+ artışıyla sinaptik güçte oluşan uzun süreli artıştır. Saatlerce, hatta günlerce sürebilir ve öğrenme ile belleğin altında yatan önemli bir hücresel mekanizma olarak kabul edilir; soru bu olayı tarif etmektedir (s. 40)."
+     },
+     "bilgi": [
+      172,
+      173
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Kanalın açılmasına eşlik eden hücre-içi Ca2+ artışı, sinaptik güçte uzun-süreli bir artışa yol açar; bu durum uzun süreli potansiyalizasyon (long-term potentiation, LTP) olarak adlandırılır."
+     },
+     "dayanak": [
+      "not:s40",
+      "ozen:s40"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q62",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Glutamat nörotransmisyonu ile ilgili aşağıdaki ifadeler veriliyor:\nI. Sinaptik aralığa kalsiyuma bağımlı ekzositozla salıverilir.\nII. Glia hücrelerinde glutamin sentetaz glutamatı glutamine çevirir.\nIII. Sinir ucunda glutaminaz glutamini yeniden glutamata dönüştürür.\nIV. Salıverilen glutamat sinaptik aralıkta asetilkolinesterazla yıkılarak uzaklaştırılır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I ve II",
+      "B": "I, II ve III",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Glutamat ekzositozla salıverilir, gliada glutamin sentetazla glutamine, sinir ucunda glutaminazla yeniden glutamata dönüşür; sinaptik aralıktan glia taşıyıcılarıyla uzaklaştırılır, bu yüzden IV yanlıştır (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I ve II seçeneği glutamatın ekzositozla salıverilmesini ve glialardaki glutamin sentetaz basamağını kapsar. Bu iki basamak doğrudur, ancak sinir ucunda glutaminazın glutamini yeniden glutamata çevirmesi de döngünün parçasıdır; üçüncü öncülün dışarıda bırakılması seçeneği eksik kılar (s. 36).",
+      "B": "I, II ve III glutamat döngüsünün doğru basamaklarını birleştirir: kalsiyuma bağımlı ekzositoz, gliada glutamin sentetazla glutamine dönüşüm ve sinir ucunda glutaminazla glutamata geri dönüşüm. IV; öncül yanlıştır, çünkü glutamatı glia taşıyıcıları uzaklaştırır; asetilkolinesteraz asetilkolini yıkar (s. 36).",
+      "C": "II, III ve IV seçeneği döngünün iki doğru basamağını verir, ama I'i dışarıda bırakır ve IV'ü ekler. Oysa glutamat kalsiyuma bağımlı ekzositozla salınır, sinaptik aralıktan ise glia hücrelerindeki taşıyıcılar uzaklaştırır; asetilkolinesteraz asetilkolinin yıkımından sorumludur (s. 36).",
+      "D": "I, III ve IV seçeneği ekzositozu ve glutaminazı doğru sayar, fakat glialardaki glutamin sentetaz basamağını atlar ve yanlış olan IV'ü içerir. Glutamin sentetaz glutamatı glutamine çevirir ve döngünün halkasıdır; sinaptik aralıkta glutamatı glia taşıyıcıları uzaklaştırır (s. 36).",
+      "E": "Dört öncülün tümünü seçmek IV; ifadeyi de doğru kabul etmektir. Ancak asetilkolinesteraz asetilkolinin yıkımından sorumlu enzimdir; glutamat sinaptik aralıktan glia hücrelerindeki taşıyıcılarla alınır ve gliada glutamine dönüştürülür; bu yüzden IV yanlıştır (s. 36)."
+     },
+     "bilgi": [
+      156,
+      157,
+      158,
+      159
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Glialarda glutamat glutamin sentetaz tarafından glutamine dönüştürülür, gliadan salıverilir, sinir ucu tarafından alınır ve glutaminaz enzimi tarafından tekrar glutamata dönüştürülür."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-44",
+      "not:s36",
+      "ozen:s36"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q63",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Lokal ara nöronlardan salıverilen nötral amino asit nörotransmitterlerden hangisini kullanan ara nöronlar omurilik ve beyin sapıyla sınırlıdır?",
+     "secenekler": {
+      "A": "GABA",
+      "B": "Glisin",
+      "C": "Glutamat",
+      "D": "Noradrenalin",
+      "E": "Histamin"
+     },
+     "dogru": "B",
+     "aciklama": "Glisin salıveren ara nöronlar omurilik ve beyin sapıyla sınırlıdır; GABA salıveren ara nöronlar ise MSS'nin her yerinde bulunur (s. 42).",
+     "sik_aciklamalari": {
+      "A": "GABA, lokal ara nöronlardan salıverilen nötral bir amino asit ve inhibitör nörotransmitterdir. GABA salıveren ara nöronlar omurilik dahil MSS'nin her yerinde bulunur; glisinle aynı sınıftan olduğu için karıştırılır, fakat dağılımı omurilik ve beyin sapıyla sınırlı değildir (s. 42).",
+      "B": "Glisin, GABA ile birlikte lokal ara nöronlardan salıverilen inhibitör nötral amino asittir ve reseptörü Cl- iyonuna selektif geçirgen pentamerik bir yapıdır. Glisin salıveren ara nöronlar omurilik ve beyin sapıyla sınırlıdır; soruda anlatılan dağılım bu yüzden glisine uyar (s. 42).",
+      "C": "Glutamat, asidik amino asit olan ve eksitatör sinaptik iletiye aracılık eden nörotransmitterdir. Lokal ara nöronların inhibitör vericisi değildir ve nötral amino asit sınıfında yer almaz; bu nedenle hem sınıf hem de işlev bakımından soruya uymaz (s. 34).",
+      "D": "Noradrenalin, yaygın nöronal sistemlerde kullanılan monoamindir ve tüm reseptörleri metabotropiktir. Amino asit değildir ve lokal ara nöronlardan salıverilen inhibitör vericilerden biri sayılmaz; dağılımı omurilik ve beyin sapıyla sınırlı değil, MSS'ye yaygındır (s. 46).",
+      "E": "Histamin, MSS'de yalnızca posterior hipotalamustaki tuberomammiller nükleus nöronlarında üretilen bir vericidir ve uyarılma, dikkat ile hafızayı modüle eder. Amino asit nörotransmitter olmadığı ve lokal ara nöron vericisi sayılmadığı için omurilik ve beyin sapı sınırlaması ona uymaz (s. 48)."
+     },
+     "bilgi": [
+      178,
+      179,
+      143
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Glisin salıveren ara nöronlar omurilik ve beyin sapına sınırlıdır; oysa GABA salıveren ara nöronlar omurilik dahil MSS'nin her yerinde bulunmaktadır."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-43",
+      "hoca:hv-k2-09-52",
+      "not:s42",
+      "ozen:s42"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q64",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İstirahat membran potansiyelinde glutamat bağlanmasına rağmen NMDA reseptör kanalından belirgin iyon geçişi olmamasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kanalın GluA2 alt birimi içermesi",
+      "B": "Reseptörün G proteini ile kenetli olması",
+      "C": "Kanalın Mg2+ iyonlarıyla bloke olması",
+      "D": "Kanalın Cl- iyonuna selektif geçirgen olması",
+      "E": "Kanalın Ca2+'a geçirgen olmaması"
+     },
+     "dogru": "C",
+     "aciklama": "İstirahat potansiyelinde NMDA kanalı Mg2+ iyonlarıyla bloke olduğundan glutamat bağlansa bile iyon geçişi büyük ölçüde olmaz; açılma için hem glutamat bağlanması hem depolarizasyon gerekir (s. 40).",
+     "sik_aciklamalari": {
+      "A": "GluA2, AMPA reseptörlerinin çoğunda bulunan alt birimdir ve bu reseptörleri Ca2+'a geçirgen olmaktan çıkarır. NMDA kanalının istirahatteki kapalılığı alt birim bileşiminden değil, kanalın Mg2+ ile tıkanmasından kaynaklanır; bu nedenle GluA2 burada belirleyici değildir (s. 38).",
+      "B": "G proteini ile kenetlenme metabotropik glutamat reseptörlerinin özelliğidir ve iyon kanalları üzerine dolaylı yoldan etki eder. NMDA ise iyon kanalı içeren iyonotropik bir reseptördür; istirahatte iyon geçirmemesi G proteini aracılığından değil Mg2+ bloğundan kaynaklanır (s. 41).",
+      "C": "NMDA reseptörünün kanalı istirahat membran potansiyelinde Mg2+ iyonları tarafından bloke edilir. Bu yüzden glutamat bağlansa bile kanalın açılması için membranın depolarize olması da gerekir; bu özellik NMDA'yı AMPA ve kainat reseptörlerinden ayırır (s. 40).",
+      "D": "Cl- iyonuna selektif geçirgenlik glisin ve GABAA reseptörlerinin özelliğidir ve inhibisyon sağlar. NMDA reseptörü ise Na+ ve K+ yanında Ca2+'a yüksek derecede geçirgen, eksitatör bir kanaldır; istirahatteki iyon geçişsizliği bu özellikten değil Mg2+ bloğundan doğar (s. 39).",
+      "E": "Tüm NMDA reseptörleri Na+ ve K+ yanında Ca2+'a yüksek derecede geçirgendir; Ca2+ geçirgenliğinin düşük olması AMPA reseptörlerinin çoğuna özgüdür. NMDA kanalının istirahatte iyon geçirmemesi Ca2+'a geçirgensizlikle açıklanamaz, asıl neden Mg2+ bloğudur (s. 39)."
+     },
+     "bilgi": [
+      170,
+      171,
+      168
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Buna karşılık, istirahat membran potansiyelinde NMDA reseptörlerinin kanalı Mg²⁺ iyonları tarafından bloke edildiği için, glutamat bağlansa bile iyon geçişi büyük ölçüde gerçekleşmez."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-50",
+      "hoca:hv-k2-09-47",
+      "not:s40",
+      "ozen:s40"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q66",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Glutamatın iyonotropik reseptörlerinden AMPA reseptörleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dört alt birimden oluşan heterotetramerlerdir",
+      "B": "Çoğu GluA2 alt birimi içerir",
+      "C": "Na+ ve K+ iyonlarına geçirgendir",
+      "D": "Tümü Ca2+'a yüksek derecede geçirgendir",
+      "E": "Glutamatla aktive olunca kanalı açılır"
+     },
+     "dogru": "D",
+     "aciklama": "AMPA reseptörlerinin çoğu GluA2 içerir ve Ca2+'a geçirgen değildir; yalnızca GluA2'siz bazıları Ca2+ geçirir, Ca2+'a yüksek derecede geçirgen olan ise tüm NMDA reseptörleridir (s. 38, 39).",
+     "sik_aciklamalari": {
+      "A": "İfade doğrudur: nöronlardaki AMPA reseptörleri GluA1-GluA4 alt birimlerinin birleşmesiyle oluşan heterotetramerlerdir. Dört alt birimli yapı tüm iyonotropik glutamat reseptörlerinin ortak özelliğidir; bu nedenle olumsuz kökün aradığı yanlış ifade bu değildir (s. 38).",
+      "B": "İfade doğrudur: AMPA reseptörlerinin çoğu GluA2 alt birimi taşır ve GluA2 varlığı reseptörü Ca2+'a geçirgen olmaktan çıkarır. Yalnızca bazı inhibitör ara nöronlarda GluA2'siz AMPA reseptörleri bulunur; dolayısıyla yanlış ifade bu değildir (s. 38).",
+      "C": "İfade doğrudur: AMPA reseptörleri Na+ ve K+ iyonlarına geçirgendir ve glutamat bağlanınca bu katyonların geçişiyle eksitatör yanıt oluşur. Kainat reseptörleri de benzer biçimde Na+ ve K+'a geçirgendir; bu nedenle yanlış şık değildir (s. 38).",
+      "D": "Tümünün Ca2+'a yüksek derecede geçirgen olduğu ifadesi yanlıştır; Ca2+'a yüksek derecede geçirgen olan tüm NMDA reseptörleridir. AMPA reseptörlerinin çoğu GluA2 içerir ve Ca2+'a geçirgen değildir, yalnızca GluA2'siz bazıları Ca2+ geçirir; olumsuz kökün yanıtı budur (s. 38).",
+      "E": "İfade doğrudur: AMPA ve kainat reseptörlerinin glutamat tarafından aktive edilmesi iyon kanallarının açılmasını sağlar. NMDA'dan farkı budur, çünkü onun kanalı istirahatte Mg2+ ile bloke edilir; bu yüzden yanlış ifade değildir (s. 40)."
+     },
+     "bilgi": [
+      163,
+      164,
+      169
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "AMPA reseptörlerin çoğu GluA2 alt-birimi içerir ve Na+ ile K+'a geçirgendirler, ancak Ca2+'a geçirgen değildirler."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-48",
+      "hoca:hv-k2-09-47",
+      "hoca:hv-k2-09-50",
+      "not:s38",
+      "ozen:s38",
+      "ozen:s40"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q69",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "GABA reseptörleri ve ilgili ilaçlar ile ilgili aşağıdaki ifadeler veriliyor:\nI. GABAA reseptörleri Cl- iyonuna selektif geçirgen iyonotropik reseptörlerdir.\nII. Hızlı bileşene GABAA, yavaş bileşene GABAB reseptörleri aracılık eder.\nIII. Bikukulin ve pikrotoksin GABAA reseptörlerini selektif olarak inhibe eder.\nIV. Striknin GABAB reseptörlerini selektif olarak bloke eder.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "II ve IV",
+      "C": "I, III ve IV",
+      "D": "Yalnız III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "GABAA iyonotropik ve Cl- geçirgendir, hızlı bileşene GABAA yavaş bileşene GABAB aracılık eder, bikukulin ve pikrotoksin GABAA'yı inhibe eder; striknin ise glisin reseptörlerini bloke eder (s. 43).",
+     "sik_aciklamalari": {
+      "A": "I, II ve III doğrudur: GABAA reseptörleri Cl- iyonuna selektif geçirgen iyonotropik kanallardır, hızlı bileşene GABAA yavaş bileşene GABAB aracılık eder ve bikukulin ile pikrotoksin GABAA'yı inhibe edip jeneralize konvülsiyon yapar. IV yanlıştır, çünkü striknin glisin reseptörlerini bloke eder (s. 43).",
+      "B": "II doğrudur, çünkü hızlı bileşene GABAA, yavaş bileşene GABAB aracılık eder. Fakat IV yanlıştır; striknin GABAB değil glisin reseptörlerini selektif bloke eder; ayrıca I ve III de doğru olduğundan bu seçenek hem yanlış bir öncülü içerir hem doğru ikisini dışarıda bırakır (s. 43).",
+      "C": "I ve III doğrudur: GABAA Cl- iyonuna geçirgen iyonotropik reseptördür ve bikukulin ile pikrotoksin tarafından inhibe edilir. Ancak IV yanlıştır; striknin glisin reseptörlerinin blokörüdür, GABAB reseptörleri ise baklofenle aktive edilen metabotropik reseptörlerdir; II de doğru olduğundan seçenek eksik kalır (s. 43).",
+      "D": "III doğrudur, çünkü bikukulin ve pikrotoksin GABAA reseptörlerini selektif olarak inhibe eder ve jeneralize konvülsiyonlara yol açar. Bununla birlikte I ve II de doğrudur: GABAA iyonotropik ve Cl- geçirgendir, hızlı bileşene GABAA aracılık eder; tek öncülü seçmek soruyu eksik bırakır (s. 43).",
+      "E": "Dört öncülün tümünü seçmek IV'ü doğru saymaktır. Oysa striknin omuriliğe etkili güçlü bir konvülsandır ve glisin reseptörlerini selektif olarak bloke eder; GABAB reseptörleri ise baklofen tarafından aktive edilen metabotropik reseptörlerdir; bu yüzden IV yanlıştır (s. 43)."
+     },
+     "bilgi": [
+      183,
+      184,
+      185,
+      186,
+      182
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q10",
+      "past-1790877044786-322931"
+     ],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Bu reseptörler her ikisi de jeneralize konvülsiyonlara yol açan, bikukulin ve pikrotoksin tarafından selektif olarak inhibe edilirler."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-52",
+      "hoca:hv-k2-09-54",
+      "cikmis:d3k2-2018-2019-k4-q10",
+      "not:s43",
+      "ozen:s43"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q65",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "İyonotropik glutamat reseptörleri ile ilgili aşağıdaki ifadeler veriliyor:\nI. AMPA reseptörlerinin tümü Ca2+'a yüksek derecede geçirgendir.\nII. Kainat reseptörlerinin bazı alt birim kombinasyonları Ca2+'a geçirgendir.\nIII. NMDA reseptörleri MSS'deki nöronların tümünde bulunur.\nIV. Tüm iyonotropik glutamat reseptörleri dört alt birimden oluşur.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve III",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "AMPA reseptörlerinin çoğu GluA2 içerir ve Ca2+'a geçirgen değildir, bu yüzden I yanlıştır; kainatın bazı kombinasyonları Ca2+ geçirir, NMDA tüm nöronlarda bulunur ve tüm iyonotropik glutamat reseptörleri dört alt birimlidir (s. 38, 39).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I seçeneği AMPA reseptörlerinin tümünün Ca2+'a yüksek derecede geçirgen olduğunu savunur. Oysa AMPA reseptörlerinin çoğu GluA2 alt birimi içerir ve Ca2+'a geçirgen değildir; yalnızca GluA2'siz bazı AMPA reseptörleri Ca2+ geçirir; bu yüzden I yanlıştır, doğru öncüller de eksik kalır (s. 38).",
+      "B": "III; ifade doğrudur, çünkü NMDA reseptörleri AMPA kadar yaygındır ve MSS'deki tüm nöronlarda bulunur. Ancak I yanlıştır, çünkü AMPA reseptörlerinin çoğu GluA2 içerir ve Ca2+'a geçirgen değildir; ayrıca II ve IV de doğrudur, bu seçenek onları dışarıda bırakır (s. 39).",
+      "C": "II ve IV doğrudur: kainat reseptörlerinin bazı alt birim kombinasyonları Ca2+'a geçirgendir ve tüm iyonotropik glutamat reseptörleri dört alt birimden oluşur. Fakat I yanlıştır, çünkü çoğu AMPA reseptörü GluA2 taşır ve Ca2+'a geçirgen değildir; III de doğru olduğu halde bu seçenekte yoktur (s. 39).",
+      "D": "II, III ve IV doğrudur: kainat reseptörlerinin bazı alt birim kombinasyonları Ca2+'a geçirgendir, NMDA reseptörleri MSS'deki bütün nöronlarda bulunur ve iyonotropik glutamat reseptörleri dört alt birimli yapıdadır. I yanlıştır, çünkü AMPA reseptörlerinin çoğu GluA2 içerir ve Ca2+'a geçirgen değildir (s. 39).",
+      "E": "Dört öncülün tümü seçildiğinde I de doğru kabul edilir. Oysa AMPA reseptörlerinin çoğu GluA2 alt birimi içerir ve Na+ ile K+'a geçirgendir, Ca2+'a geçirgen değildir; Ca2+ geçirgenliği yalnızca GluA2'siz AMPA reseptörleri için söz konusudur (s. 38)."
+     },
+     "bilgi": [
+      163,
+      164,
+      166,
+      167
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Tüm iyonotropik reseptörler dört alt-birimden oluşurlar. Nöronlarda bulunan AMPA reseptörleri dört alt-birimin birleşmesinden oluşan heterotetramerlerdir (GluA1-GluA4)."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-47",
+      "hoca:hv-k2-09-48",
+      "not:s38",
+      "ozen:s38"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q68",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Metabotropik glutamat reseptörlerinden hangileri presinaptik yerleşimlidir ve Ca2+ kanallarını inhibe ederek transmitter salıverilmesini baskılayan inhibitör otoreseptörler olarak etki eder?",
+     "secenekler": {
+      "A": "Grup II ve III",
+      "B": "Yalnız grup I",
+      "C": "Grup I ve II",
+      "D": "Grup I ve III",
+      "E": "Yalnız grup II"
+     },
+     "dogru": "A",
+     "aciklama": "Grup II ve grup III metabotropik glutamat reseptörleri presinaptik inhibitör otoreseptörlerdir ve Ca2+ kanallarını inhibe eder; grup I ise postsinaptik ve eksitatördür (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Grup II ve grup III metabotropik glutamat reseptörleri G proteinine bağlıdır ve tipik olarak presinaptik sinir uçlarında yerleşmiş inhibitör otoreseptörlerdir. Aktivasyonları Ca2+ kanallarını inhibe ederek transmitter salıverilmesini baskılar; soruda anlatılan işlev bu iki gruba aittir (s. 41).",
+      "B": "Grup I reseptörler postsinaptik yerleşimlidir ve nonselektif katyon kanalını aktive ederek nöronal eksitasyona yol açar; fosfolipaz C üzerinden IP3 aracılı hücre içi Ca2+ salıverilmesi yapar. Presinaptik inhibitör otoreseptör özelliği taşımadıkları için tek başlarına yanıt olamazlar (s. 41).",
+      "C": "Grup II presinaptik inhibitör otoreseptör olduğu için doğru bir parçayı taşır; ancak grup I postsinaptik yerleşimli ve eksitatördür, yani transmitter salıverilmesini baskılamaz. Gruplar bu bileşimde ayrılmadığı için seçenek eksik ve hatalıdır (s. 41).",
+      "D": "Grup III presinaptik inhibitör otoreseptör olduğu için doğru bir parçayı taşır; fakat grup I postsinaptik yerleşimlidir ve nonselektif katyon kanalını aktive ederek eksitasyon yapar. Bu birleşim iki farklı işlevi karıştırır ve grup II'yi dışarıda bırakır (s. 41).",
+      "E": "Grup II presinaptik inhibitör otoreseptördür ve Ca2+ kanallarını inhibe eder, bu yönüyle doğru sayılabilir. Ancak aynı özellik grup III için de geçerlidir; yalnız grup II'yi seçmek soruda aranan iki grubun tamamını kapsamaz (s. 42)."
+     },
+     "bilgi": [
+      174,
+      175,
+      176,
+      177
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Buna karşılık, grup II ve grup III reseptörler tipik olarak presinaptik sinir uçlarında yerleşmişlerdir ve inhibitör otoreseptörler olarak etkirler."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q70",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Omuriliğe etkili güçlü bir konvülsan olan striknin ile oluşan konvülsiyonun mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "GABAB reseptörlerinin baklofenle aktive edilmesi",
+      "B": "Glisin reseptörü blokajıyla inhibisyon kaybı",
+      "C": "NMDA kanalındaki Mg2+ bloğunun güçlenmesi",
+      "D": "AMPA reseptörlerinden Ca2+ girişinin engellenmesi",
+      "E": "Presinaptik Ca2+ kanallarının inhibe edilmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Striknin, Cl- iyonuna geçirgen inhibitör glisin reseptörlerini selektif olarak bloke eder; inhibisyon kalktığı için omurilikte konvülsiyon gelişir (s. 43).",
+     "sik_aciklamalari": {
+      "A": "GABAB reseptörleri baklofenle aktive edilen metabotropik reseptörlerdir ve Ca2+ kanallarını inhibe edip K+ kanallarını aktive ederek inhibisyon sağlar. Aktivasyonları konvülsiyon yapmaz, antispastik etki verir; striknin ise bu sistemi değil glisin reseptörlerini hedefler (s. 44).",
+      "B": "Striknin, omuriliğe etkili güçlü bir konvülsandır ve glisin reseptörlerini selektif olarak bloke eder. Glisin reseptörleri Cl- iyonuna geçirgen inhibitör kanallar olduğundan blokajla inhibisyon ortadan kalkar ve konvülsiyon gelişir; soruda aranan mekanizma budur (s. 43).",
+      "C": "NMDA kanalı istirahatte Mg2+ ile bloke olur; bu blok kalkarsa eksitasyon artar, güçlenmesi ise eksitasyonu azaltır. Striknin zehirlenmesindeki konvülsiyon NMDA reseptörünün Mg2+ bloğuyla değil, glisinle sağlanan inhibisyonun ortadan kalkmasıyla ilgilidir (s. 40).",
+      "D": "AMPA reseptörleri Na+ ve K+'a geçirgen eksitatör kanallardır ve çoğu Ca2+'a geçirgen değildir. Ca2+ girişinin engellenmesi eksitasyonu artırarak konvülsiyon yapmaz; striknin AMPA reseptörlerini değil, inhibitör glisin reseptörlerini bloke eder (s. 38).",
+      "E": "Presinaptik Ca2+ kanallarının inhibisyonu transmitter salıverilmesini azaltır ve adenozin A1 ile grup II-III metabotropik glutamat reseptörlerinin inhibitör etkisini anlatır. Bu mekanizma konvülsiyon değil baskılanma üretir; striknin ise glisin reseptörlerini bloke ederek inhibisyonu kaldırır (s. 57)."
+     },
+     "bilgi": [
+      182,
+      181
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q10",
+      "past-1790877044786-322931"
+     ],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Omuriliğe etkili güçlü bir konvülsan olan ve bazı sıçan zehirlerinde kullanılan striknin, glisin reseptörlerini selektif olarak bloke eder."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-54",
+      "cikmis:d3k2-2018-2019-k4-q10",
+      "cikmis:past-1790877044786-322931",
+      "not:s43",
+      "ozen:s43"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q10",
+     "soru": "Striknin aşağıdaki nöromediyatörlerden hangisinin etkisini bloke etmek suretiyle konvülsiyona neden olur?",
+     "secenekler": {
+      "A": "GABA",
+      "B": "Met-enkefalin",
+      "C": "Glisin",
+      "D": "Dopamin",
+      "E": "Aspartat"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "past-1790877044786-322931",
+     "soru": "Aşağıdaki toksinlerden hangisi santral sinir sisteminde glisin reseptörlerini bloke eder?",
+     "secenekler": {
+      "A": "Striknin",
+      "B": "Bungarotoksin",
+      "C": "Glutamat",
+      "D": "Apamin",
+      "E": "Tübokürarin"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Öğrenci, asetilkolin, dopamin, noradrenalin, serotonin, histamin reseptörlerini ve Tablo 21-2'deki başlıca agonist ve antagonistleri; nöropeptidler, oreksin, endokannabinoidler, nitrik oksit ve purinlerin özelliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-09-sss-ilaclari-q71",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Alzheimer tipi presenil demans, MSS'de hangi nörotransmitter sistemindeki yoğun nöron kaybıyla ilişkilidir?",
+     "secenekler": {
+      "A": "Dopaminerjik",
+      "B": "Noradrenerjik",
+      "C": "Kolinerjik",
+      "D": "Histaminerjik",
+      "E": "Oreksinerjik"
+     },
+     "dogru": "C",
+     "aciklama": "Kolinerjik yolaklar bilişsel işlevlerde, özellikle bellekte rol oynar; Alzheimer tipi presenil demans yoğun bir kolinerjik nöron kaybıyla ilişkilidir (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Dopaminerjik sistem, substansiya nigrayı neostriatuma ve ventral tegmental bölgeyi limbik yapılara bağlayan yolaklardan oluşur ve metabotropik reseptörlerle yavaş inhibitör etki yapar. Alzheimer tipi demansta öne çıkan kayıp bu sistemde değil kolinerjik sistemdedir (s. 45).",
+      "B": "Noradrenerjik sistem yaygın nöronal sistemlerden biridir ve tüm reseptörleri metabotropiktir. MSS'de yavaş etkiler oluşturur; Alzheimer tipi presenil demansla ilişkilendirilen yoğun nöron kaybı noradrenerjik değil kolinerjik sistemdedir (s. 46).",
+      "C": "Kolinerjik yolaklar bilişsel işlevlerde, özellikle bellekte önemli rol oynar. Alzheimer tipi presenil demans yoğun bir kolinerjik nöron kaybıyla ilişkilidir; bu nedenle soruda aranan sistem kolinerjik sistemdir (s. 44).",
+      "D": "Histaminerjik sistem yalnızca posterior hipotalamustaki tuberomammiller nükleus nöronlarından kaynaklanır; uyarılma, dikkat, beslenme davranışı ve hafızayı modüle eder. Hafızayla ilgili olsa da Alzheimer tipi demanstaki yoğun nöron kaybı histaminerjik değil kolinerjik sistemle ilişkilendirilir (s. 48).",
+      "E": "Oreksinerjik sistem lateral ve posterior hipotalamusta üretilen oreksin nöronlarından oluşur ve özellikle uyanıklığın sürdürülmesinde rol oynar. Alzheimer tipi presenil demansla ilişkilendirilen yoğun nöron kaybı bu sistemde değil kolinerjik sistemdedir (s. 53)."
+     },
+     "bilgi": [
+      190
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Kolinerjik yolaklar bilişsel işlevlerde, özellikle bellekte önemli bir rol oynar. Alzheimer tipi presenil demans yoğun bir kolinerjik nöron kaybı ile ilişkilidir."
+     },
+     "dayanak": [
+      "ozen:s44"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q77",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi iyonotropik yapıdadır ve MSS'de kısıtlı bir yerde hızlı eksitatör yanıt verir?",
+     "secenekler": {
+      "A": "Histamin H1",
+      "B": "Dopamin D2",
+      "C": "Serotonin 5-HT3",
+      "D": "Noradrenalin α1",
+      "E": "Asetilkolin M1"
+     },
+     "dogru": "C",
+     "aciklama": "Serotonin reseptörlerinden yalnız 5-HT3 iyonotropiktir ve MSS'de kısıtlı yerde hızlı eksitatör etki yapar; histamin, dopamin, noradrenalin ve muskarinik reseptörler metabotropiktir (s. 47).",
+     "sik_aciklamalari": {
+      "A": "H1, dört histamin reseptöründen biridir ve tümü metabotropiktir. Merkezi etkili antihistaminikler H1'i bloke ederek sedasyona neden olur; iyonotropik kanal yapısı taşımadığı için hızlı eksitatör etki oluşturan reseptör bu değildir (s. 48).",
+      "B": "D2, D2-benzeri dopamin reseptörlerindendir ve tüm dopamin reseptörleri gibi metabotropiktir. Dopamin MSS nöronlarında genel olarak yavaş inhibitör etki oluşturur; hızlı eksitatör etki veren iyonotropik bir reseptör olmadığı için bu yanıt uymaz (s. 45).",
+      "C": "5-HT3, serotonin reseptörleri içinde tek iyonotropik olanıdır; öteki tüm serotonin reseptörleri metabotropiktir. MSS'de kısıtlı bir yerde hızlı eksitatör etki ortaya çıkarır; soru bu özellikleri tarif etmektedir (s. 47).",
+      "D": "α1, noradrenerjik reseptörlerdendir ve noradrenerjik alt tiplerin tümü metabotropiktir. Etkisi yavaş ve uzun sürelidir; nöron tipine göre doğrudan eksitatör mekanizmaya aracılık edebilir; hızlı iyonotropik etki oluşturmadığı için bu yanıt uymaz (s. 46).",
+      "E": "M1, asetilkolinin G proteinine bağlı muskarinik reseptörlerindendir ve yavaş eksitasyona aracılık eder. İyonotropik değil metabotropiktir; bu nedenle MSS'de hızlı eksitatör etki oluşturan serotonin 5-HT3 reseptörüyle karıştırılmamalıdır (s. 44)."
+     },
+     "bilgi": [
+      200
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "5-HT3 reseptörler hariç, tümü metabotropiktir. İyonotropik 5-HT3 reseptör MSS’de kısıtlı yerde hızlı bir eksitatör etki ortaya çıkarır."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q72",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "MSS'de asetilkolinin potasyum kanallarını açarak nöronda yavaş inhibisyon oluşturmasına hangi alt tip aracılık eder?",
+     "secenekler": {
+      "A": "M1 muskarinik",
+      "B": "Nikotinik",
+      "C": "Dopamin D2",
+      "D": "M2 muskarinik",
+      "E": "Adenozin A1"
+     },
+     "dogru": "D",
+     "aciklama": "Asetilkolin, bazı MSS bölgelerinde M2 alt tipini aktive ederek potasyum kanallarını açar ve nöronun yavaş inhibisyonuna neden olur; M1 ise yavaş eksitasyona aracılık eder (s. 44).",
+     "sik_aciklamalari": {
+      "A": "M1 muskarinik reseptörler G proteinine bağlıdır ve asetilkolinin MSS'de daha yaygın olan yavaş eksitatör etkisine aracılık eder. Aynı muskarinik ailede olmaları nedeniyle M2 ile karıştırılır, fakat K+ kanallarını açıp yavaş inhibisyon yapan alt tip M2'dir (s. 44).",
+      "B": "Nikotinik reseptörler ligand kapılı iyon kanalı yapısındadır ve hızlı yanıtlar oluşturur. MSS'deki asetilkolin yanıtlarının çoğuna ise G proteinine bağlı muskarinik reseptör ailesi aracılık eder; yavaş inhibisyon nikotinik değil M2 reseptörleriyle ilişkilidir (s. 44).",
+      "C": "D2, D2-benzeri dopamin reseptörleri arasında yer alan metabotropik bir reseptördür ve dopaminin MSS'deki genel yavaş inhibitör etkisine katkıda bulunur. Asetilkolinin değil dopaminin reseptörüdür; asetilkolinle yavaş inhibisyona aracılık eden alt tip M2'dir (s. 45).",
+      "D": "M2 muskarinik reseptör alt tipi, bazı MSS bölgelerinde asetilkolinin potasyum kanallarını açmasına ve nöronda yavaş inhibisyon oluşmasına aracılık eder. Muskarinik ailedeki M1 ise yavaş eksitasyondan sorumludur; soru M2'yi tarif etmektedir (s. 44).",
+      "E": "Adenozin A1 reseptörleri adenozinin metabotropik reseptörleridir ve presinaptik uçta Ca2+ kanallarını inhibe ederek transmitter salıverilmesini baskılar. Asetilkolinin değil adenozinin reseptörüdür; asetilkolinle yavaş inhibisyona aracılık eden alt tip M2'dir (s. 57)."
+     },
+     "bilgi": [
+      188,
+      189
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Birkaç yerde, asetilkolin, potasyum kanallarını açan M2 reseptör alt-tipini aktive ederek nöronun yavaş inhibisyonuna neden olur."
+     },
+     "dayanak": [
+      "ozen:s44"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q75",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Noradrenerjik reseptör alt tiplerinin tümünün metabotropik olması, noradrenalinin MSS'deki etkisinin hangi özelliğini belirler?",
+     "secenekler": {
+      "A": "Yavaş ve uzun süreli etki",
+      "B": "Hızlı ve kısa süreli etki",
+      "C": "Yalnız hızlı eksitasyon",
+      "D": "Doğrudan iyon kanalı açılması",
+      "E": "Yalnız presinaptik inhibisyon"
+     },
+     "dogru": "A",
+     "aciklama": "Tüm noradrenerjik alt tipler metabotropik olduğundan G proteinleri aracılığıyla dolaylı etki ortaya çıkar; bu, noradrenalinin yavaş ve uzun süren etkisini belirler (s. 46, 34).",
+     "sik_aciklamalari": {
+      "A": "Metabotropik reseptörler G proteinleri aracılığıyla dolaylı yoldan etki eder; bu nedenle noradrenalin gibi yaygın sistemlerin vericileri yavaş ve uzun süren sinaptik etkiler başlatır. Tüm noradrenerjik alt tipler metabotropik olduğundan noradrenalin etkisi yavaştır (s. 46).",
+      "B": "Hızlı ve kısa süreli yanıt iyonotropik reseptörlerin özelliğidir; kanal doğrudan ligand tarafından açılır. Noradrenerjik reseptörlerin tümü metabotropik olduğundan etki hızlı ve kısa değil, yavaş ve uzun sürelidir; seçenek iyonotropik mantığı yansıtır (s. 46).",
+      "C": "Hızlı eksitasyon, glutamat reseptörlerinden AMPA ve kainat gibi iyonotropik reseptörlerin işlevidir. Noradrenalin ise yalnız metabotropik reseptörler üzerinden etki eder ve hiperpolarizasyon ya da eksitatör uyarıların artırılması gibi yavaş etkiler oluşturur; soru etkinin hızını sorar (s. 46).",
+      "D": "Doğrudan iyon kanalı açılması ligand kapılı iyonotropik reseptörlerin mekanizmasıdır. Noradrenalinin reseptörleri G proteinine bağlı olup iyon kanalları üzerine dolaylı yoldan etki eder; bu nedenle etki yavaş ve uzun sürelidir (s. 41).",
+      "E": "Presinaptik inhibisyon, bir inhibitör nöronun eksitatör lifin terminali üzerindeki aksoaksonik sinapsla transmitter salıverilmesini baskılamasıdır ve reseptör türünün hızıyla belirlenmez. Metabotropik oluş noradrenalin etkisinin yavaş ve uzun sürmesini belirler; etki yalnız presinaptik inhibisyon değildir (s. 31)."
+     },
+     "bilgi": [
+      195,
+      141
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Tüm noradrenerjik reseptör alt-tipleri metabotropiktir. Nöronlara uygulandığında, noradrenalin potasyum geçirgenliğini artırarak onları hiperpolarize edebilir."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-55",
+      "not:s34"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q76",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Merkezi sinir sisteminde sinyal ileten nöropeptidler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Büyük, yoğun çekirdekli veziküllerde paketlenirler",
+      "B": "Etkileri yalnızca sinaptik aralıkla sınırlıdır",
+      "C": "Reseptörlerinin çoğu metabotropiktir",
+      "D": "Madde P, küçük miyelinsiz duyusal nöronlardan salınır",
+      "E": "Aynı nöronda klasik vericiyle birlikte bulunabilirler"
+     },
+     "dogru": "B",
+     "aciklama": "Salınan nöropeptidler yerel olarak etki edebildiği gibi uzun mesafelere yayılıp uzak reseptörlere de bağlanabilir; bu yüzden etkilerinin yalnızca sinaptik aralıkla sınırlı olduğu ifadesi yanlıştır (s. 50).",
+     "sik_aciklamalari": {
+      "A": "İfade doğrudur: klasik nörotransmitterler küçük sinaptik veziküllerde paketlenirken nöropeptidler genellikle büyük, yoğun çekirdekli veziküllerde paketlenir; oreksin de bu veziküllerden salınır. Bu nedenle yanlış ifade bu değildir (s. 50).",
+      "B": "Nöropeptidlerin etkisinin yalnızca sinaptik aralıkla sınırlı olduğu ifadesi yanlıştır. Salınan nöropeptidler yerel olarak etki edebildiği gibi uzun mesafelere yayılabilir ve uzak reseptörlere bağlanabilir; bu nedenle olumsuz kökün aradığı şık budur (s. 50).",
+      "C": "İfade doğrudur: çoğu nöropeptid reseptörü metabotropiktir ve nöropeptidler monoaminler gibi sinir sisteminde öncelikli olarak modülatör roller üstlenir. Bu nedenle yanlış ifade değildir (s. 50).",
+      "D": "İfade doğrudur: madde P, omurilik ve beyin sapındaki küçük miyelinsiz birincil duyusal nöronlarda bulunur ve bu nöronlardan salınır; bu lifler zararlı uyaranları iletir. Dolayısıyla yanlış ifade değildir (s. 51).",
+      "E": "İfade doğrudur: peptidler genellikle aynı nöronda geleneksel bir peptid olmayan vericiyle birlikte bulunur, ancak salınımları bağımsız olarak düzenlenebilir. Bu nedenle yanlış ifade değildir (s. 50)."
+     },
+     "bilgi": [
+      213,
+      214,
+      215,
+      216,
+      219
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Salınan nöropeptidler yerel olarak etki edebilir veya uzun mesafelere yayılabilir ve uzak reseptörlere bağlanabilir."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q78",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Klasik nörotransmitterlerden farklı olarak önceden depolanmayan ve depolarizasyonla birlikte hücre içine Ca2+ girişinin ardından hızla üretilen sinyal molekülleri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Madde P gibi nöropeptidler",
+      "B": "Oreksin (hipokretin)",
+      "C": "Glutamat gibi amino asitler",
+      "D": "Endokannabinoidler",
+      "E": "Dopamin gibi katekolaminler"
+     },
+     "dogru": "D",
+     "aciklama": "Endokannabinoidler klasik nörotransmitterlerden farklı olarak önceden depolanmaz; depolarizasyonla hücre içine Ca2+ girişi sonucu hızla sentezlenirler (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Madde P, omurilik ve beyin sapındaki küçük miyelinsiz birincil duyusal nöronlardan salınan bir nöropeptiddir ve ağrı yanıtlarında rol oynar. Nöropeptidler büyük yoğun çekirdekli veziküllerde önceden paketlenir; bu yüzden anlık sentezlenen sinyal maddesi olarak tanımlanamaz (s. 51).",
+      "B": "Oreksin, lateral ve posterior hipotalamusta üretilen, uyanıklığın sürdürülmesinde rol oynayan bir nöropeptiddir. Çoğu nöropeptid gibi büyük yoğun çekirdekli veziküllerde depolanıp salınır; önceden depolandığı için soruda tarif edilen anlık sentezle ayrışır (s. 52).",
+      "C": "Glutamat, eksitatör iletiye aracılık eden amino asittir; veziküler glutamat taşıyıcısı (VGLUT) sinaptik veziküllere doldurur ve kalsiyuma bağımlı ekzositozla salıverilir. Yani önceden depolanan klasik bir nörotransmitterdir ve soruya uymaz (s. 36).",
+      "D": "Endokannabinoidler, anandamid ve 2-AG gibi endojen beyin lipidleridir ve CB1 reseptörlerinin ligandlarıdır. Klasik nörotransmitterlerden farklı olarak önceden depolanmaz, depolarizasyon sonucu hücre içine kalsiyum girişiyle hızla sentezlenir; bu özellik soruyla örtüşür (s. 54).",
+      "E": "Dopamin, katekolamin yapılı bir monoamindir ve klasik nörotransmitter olarak etki eder. Yolakları substansiya nigra ile ventral tegmental bölgeden çıkar ve reseptörleri metabotropiktir; anlık sentezle ayrışan endokannabinoidlerin aksine klasik vericiler gibi depolanır (s. 45)."
+     },
+     "bilgi": [
+      233,
+      234
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Bu ligandlar, klasik nörotransmitterlerden farklı olarak önceden depolanmaz. Nöronlarda depolarizasyon sonucu hücre içine kalsiyum girişiyle birlikte hızla sentezlenirler."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-58",
+      "not:s54",
+      "ozen:s54"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q80",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Endojen kannabinoidlerin klasik nörotransmitterlerden farkını oluşturan, postsinaptik nörondan presinaptik uca doğru haberci olarak işlev görmeleri aşağıdakilerden hangisiyle ifade edilir?",
+     "secenekler": {
+      "A": "Büyük yoğun çekirdekli veziküllerde depolanmaları",
+      "B": "İyonotropik reseptör üzerinden etki etmeleri",
+      "C": "Presinaptik uçtan postsinaptik uca ilerlemeleri",
+      "D": "Aksoaksonik sinapsla iletilmeleri",
+      "E": "Retrograd sinaptik ulak olarak işlev görmeleri"
+     },
+     "dogru": "E",
+     "aciklama": "Endojen kannabinoidler postsinaptik nörondan salınıp sinaps boyunca geriye doğru ilerler ve presinaptik CB1 reseptörlerini aktive eder; nörotransmitterlerden farkı retrograd sinaptik ulak olmalarıdır (s. 54, 55).",
+     "sik_aciklamalari": {
+      "A": "Büyük yoğun çekirdekli veziküllerde paketlenme nöropeptidlerin özelliğidir. Endokannabinoidler ise önceden depolanmayan, depolarizasyonla Ca2+ girişi sonrası hızla sentezlenen lipid yapılı ligandlardır; nörotransmitterlerden farkı, depolama yöntemiyle değil geriye doğru ulak olmalarıyla tanımlanır (s. 54).",
+      "B": "İyonotropik reseptörler ligand kapılı iyon kanallarıdır ve hızlı yanıt verir. Endokannabinoidlerin hedefi presinaptik uçlardaki CB1 reseptörleridir ve bu reseptörler aktive olunca transmitter salıverilmesi baskılanır; seçenek reseptör türünü ve yönü yanlış verir (s. 55).",
+      "C": "Presinaptik uçtan postsinaptik uca doğru ilerleme klasik nörotransmitterlerin yönüdür. Endokannabinoidler ise postsinaptik nörondan salıverilir, sinaps boyunca geriye doğru yol alır ve presinaptik CB1 reseptörlerini aktive eder; yön ters verildiği için seçenek yanlıştır (s. 55).",
+      "D": "Aksoaksonik sinapslar omurilikte bir inhibitör nöronun eksitatör lifin akson terminali üzerinde oluşturduğu bağlantılardır ve presinaptik inhibisyondan sorumludur. Endokannabinoidler bu yolla değil, postsinaptik nörondan geriye doğru yayılarak etki eder (s. 31).",
+      "E": "Endojen kannabinoidler postsinaptik nörondan salıverilir, sinaps boyunca geriye doğru yol alır ve presinaptik CB1 reseptörlerini aktive ederek transmitter salıverilmesini baskılar. Nörotransmitterlerden farkı, retrograd sinaptik ulak olarak işlev görmeleridir (s. 54)."
+     },
+     "bilgi": [
+      235,
+      236
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Nörotransmitterlere göre farklılığı, endojen kannabinoidlerin retrograd sinaptik ulaklar olarak işlev görebilmeleridir."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-59",
+      "not:s54",
+      "ozen:s54"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q73",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "MSS stimülanı olan kokain ve amfetamin primer olarak katekolamin sinapslarını etkiler. Bu iki ilacın etki mekanizması arasındaki fark aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kokain salıverir; amfetamin geri alımı bloke eder",
+      "B": "İkisi de geri alımı bloke eder",
+      "C": "Kokain depolamayı, amfetamin salıverilmeyi engeller",
+      "D": "İkisi de presinaptik terminalden salıverir",
+      "E": "Kokain geri alımı bloke eder; amfetamin salıverir"
+     },
+     "dogru": "E",
+     "aciklama": "Kokain dopamin ve noradrenalin geri alımını bloke ederken amfetaminler presinaptik terminallerden transmitter salıverilmesine neden olur (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek iki ilacın mekanizmasını yer değiştirmiştir. Katekolamin sinapslarında geri alımı bloke eden ilaç kokaindir; amfetaminler ise presinaptik terminallerden transmitter salıverilmesine neden olur; yön ters verildiği için seçenek yanlıştır (s. 45).",
+      "B": "Kokain dopamin ve noradrenalin geri alımını bloke eder, bu yüzden ifade kokain için doğrudur. Ancak amfetamin geri alımı değil presinaptik terminallerden transmitter salıverilmesini artırır; iki ilacı aynı mekanizmaya indirgemek soruda sorulan farkı gizler (s. 45).",
+      "C": "Depolamanın engellenmesi rezerpinin presinaptik etkisini anlatır ve kokainin mekanizması değildir. Amfetamin de salıverilmeyi engellemez, tersine presinaptik terminallerden transmitter salıverilmesine neden olur; seçenek iki ilacın mekanizmasını da hatalı verir (s. 45).",
+      "D": "Amfetaminler presinaptik terminallerden transmitterlerin salıverilmesine neden olur, bu yönüyle ifade amfetamin için doğrudur. Kokain ise salıverilmeyi artırmak yerine dopamin ve noradrenalin geri alımını bloke eder; iki ilacı aynı mekanizmaya indirgemek farkı gözden kaçırır (s. 45).",
+      "E": "Kokain dopamin ve noradrenalin geri alımını bloke ederken, amfetaminler presinaptik terminallerden transmitterlerin salıvermesine neden olur. İki ilaç da primer olarak katekolamin sinapslarını etkileyen MSS stimülanlarıdır; fark mekanizmadadır ve doğru seçenek budur (s. 45)."
+     },
+     "bilgi": [
+      192
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Kokain dopamin ve noradrenalin geri- alımını bloke ederken, amfetaminler presinaptik terminallerden transmitterlerin salıvermesine neden olur."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q74",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Noradrenalin ile ilgili aşağıdaki ifadeler veriliyor:\nI. Tüm noradrenerjik reseptör alt tipleri metabotropiktir.\nII. Potasyum geçirgenliğini artırarak hiperpolarizasyon oluşturan etkiye α2 reseptörler aracılık eder.\nIII. Dolaylı eksitatör mekanizma, inhibitör lokal devrenin inhibe edilmesiyle ortaya çıkan disinhibisyondur.\nIV. Doğrudan eksitatör etkiye yalnızca α2 reseptörler aracılık eder.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Noradrenerjik reseptörlerin tümü metabotropiktir, α2 K+ geçirgenliğini artırıp hiperpolarize eder ve disinhibisyon dolaylı eksitatör mekanizmadır; doğrudan eksitatör etkiye α1 veya β aracılık eder (s. 46).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I seçeneği tüm noradrenerjik reseptör alt tiplerinin metabotropik olduğunu doğru bulur. Ancak potasyum geçirgenliğini artırıp hiperpolarizasyon yapan α2 etkisi ve inhibitör devrenin inhibisyonuyla oluşan disinhibisyon da doğrudur; bu seçenek iki doğru öncülü dışarıda bırakır (s. 46).",
+      "B": "I ve II doğrudur: noradrenerjik reseptörlerin tümü metabotropiktir ve potasyum geçirgenliğini artırarak hiperpolarizasyon yapan etkiye α2 reseptörler aracılık eder. Ancak III de doğrudur, çünkü disinhibisyon noradrenalinin dolaylı eksitatör mekanizmasıdır; seçenek bu öncülü atlar (s. 46).",
+      "C": "I, II ve III doğrudur: tüm noradrenerjik reseptörler metabotropiktir, K+ geçirgenliğini artırıp hiperpolarize eden etki α2 reseptörlere aittir ve disinhibisyon noradrenalinin dolaylı eksitatör mekanizmasıdır. IV yanlıştır, çünkü doğrudan eksitatör etkiye nöron tipine göre α1 veya β reseptörler aracılık eder (s. 46).",
+      "D": "II ve III doğrudur, fakat bu seçenek I'i dışarıda bırakır ve IV'ü ekler. Oysa tüm noradrenerjik alt tipler metabotropiktir; doğrudan eksitatör etkiye de yalnızca α2 değil, nöronun tipine bağlı olarak α1 veya β reseptörler aracılık eder; bu yüzden IV yanlıştır (s. 46).",
+      "E": "Dört öncülün tümünü seçmek IV'ü doğru saymaktır. Oysa α2 reseptörler potasyum geçirgenliğini artırarak hiperpolarizasyona aracılık eder; doğrudan eksitatör etki ise potasyum geçirgenliklerinin blokajını içerir ve nöron tipine göre α1 veya β reseptörlerle oluşur; IV bu yüzden yanlıştır (s. 46)."
+     },
+     "bilgi": [
+      195,
+      196,
+      197,
+      198
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Dolaylı mekanizma, inhibitör lokal devrenin inhibe edilmesiyle ortaya çıkan disinhibisyondur. Doğrudan mekanizma ise nöronal deşarjı yavaşlatan potasyum geçirgenliklerinin blokajını içerir."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-55"
+     ]
+    },
+    {
+     "id": "k2-09-sss-ilaclari-q79",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Endokannabinoidler ile ilgili aşağıdaki ifadeler veriliyor:\nI. CB1 reseptörleri primer olarak postsinaptik uçlarda yerleşmiştir.\nII. Önceden depolanmayıp depolarizasyonla Ca2+ girişi sonucu hızla sentezlenirler.\nIII. Postsinaptik nörondan salınıp presinaptik CB1 reseptörlerini aktive ederler.\nIV. Anandamid ve 2-araşidonilgliserol CB1 ligandlarıdır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız II",
+      "B": "I ve III",
+      "C": "I, II ve III",
+      "D": "I, II ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Endokannabinoidler önceden depolanmaz, postsinaptik nörondan salınıp presinaptik CB1'i aktive eden retrograd ulaklardır ve anandamid ile 2-AG CB1 ligandlarıdır; CB1 primer olarak presinaptik yerleşimlidir (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Yalnız II seçeneği önceden depolanmamayı doğru bulur. Ancak III ve IV de doğrudur: endokannabinoidler postsinaptik nörondan salınıp geriye doğru ilerleyerek presinaptik CB1 reseptörlerini aktive eder ve anandamid ile 2-AG CB1 ligandlarıdır; bu seçenek iki doğru öncülü atlar (s. 54).",
+      "B": "III doğrudur: endokannabinoidler retrograd ulak olarak postsinaptik nörondan presinaptik CB1 reseptörlerine ulaşır. Fakat I yanlıştır, çünkü CB1 reseptörleri primer olarak presinaptik uçlarda yerleşmiştir; ayrıca II ve IV de doğru olduğundan seçenek eksik kalır (s. 54).",
+      "C": "II ve III doğrudur, ancak I yanlıştır: CB1 reseptörleri beyinde yüksek düzeyde eksprese edilir ve primer olarak presinaptik uçlarda yerleşmiştir. Bu seçenek yanlış öncülü içerir ve doğru olan IV'ü dışarıda bırakır (s. 54).",
+      "D": "I, II ve IV seçeneği I'i doğru kabul eder. Oysa CB1 reseptörleri postsinaptik değil primer olarak presinaptik uçlarda yerleşmiştir; III'te anlatılan retrograd yönde ilerleyen endokannabinoidler bu presinaptik reseptörleri aktive eder; seçenek III'ü de atlar (s. 54).",
+      "E": "II, III ve IV doğrudur: endokannabinoidler önceden depolanmaz ve hızla sentezlenir, postsinaptik nörondan salınıp presinaptik CB1 reseptörlerini aktive eder, anandamid ve 2-AG ligandlarıdır. I yanlıştır, çünkü CB1 reseptörleri primer olarak presinaptik uçlarda bulunur (s. 54)."
+     },
+     "bilgi": [
+      232,
+      233,
+      234,
+      236
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "CB1 reseptörleri beyinde yüksek düzeylerde eksprese edilirler ve primer olarak presinaptik uçlarda yerleşmişlerdir."
+     },
+     "dayanak": [
+      "hoca:hv-k2-09-58",
+      "hoca:hv-k2-09-59",
+      "not:s54",
+      "ozen:s54"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 80
+}

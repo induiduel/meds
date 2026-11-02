@@ -192,6 +192,12 @@ def sayi_imi(cumleler) -> str:
 
 FONETIK_TTS: list[tuple[re.Pattern, str]] = [
     (re.compile(r"\bBCG(['’][a-zçğıöşü]+)?\b", re.IGNORECASE), "becege"),
+    # MSS farmakolojisi (k2-09, 2026-11-02): hocanın kelime gibi okuduğu adlar; harf harf "gee aa bee aa" yabancı geliyordu
+    (re.compile(r"\bGABA-?A(['’][a-zçğıöşü]+)?\b"), r"gaba aa\1"),
+    (re.compile(r"\bGABA-?B(['’][a-zçğıöşü]+)?\b"), r"gaba bee\1"),
+    (re.compile(r"\bGABA(['’][a-zçğıöşü]+)?\b"), r"gaba\1"),
+    (re.compile(r"\bAMPA(['’][a-zçğıöşü]+)?\b"), r"ampa\1"),
+    (re.compile(r"\bL-DOPA(['’][a-zçğıöşü]+)?\b"), r"el dopa\1"),
     (re.compile(r"\bDNA(['’][a-zçğıöşü]+)?\b"), "denea"),
     (re.compile(r"\bmRNA(['’][a-zçğıöşü]+)?\b"), "me renea"),
     (re.compile(r"\btRNA(['’][a-zçğıöşü]+)?\b"), "te renea"),
