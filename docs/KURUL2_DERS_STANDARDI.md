@@ -122,7 +122,7 @@ Kullanıcı yalnız "şu dosya şu ders" der. Aşağıdakiler her seferinde ayn�
 **A. Karşılama ve sınıflandırma (üretimden önce)**
 1. `DEGISIKLIK_KAYDI.md`, bu belge ve `KURUL2_YAPILMAYACAK_HATALAR.md` okunur; ders başka oturumda üretiliyor mu bakılır (çift iş yok).
 2. PDF içerikle (sayfa başlıkları) ders kayıt defterine (`src/data/dersler/kN.json`) eşlenir; uyuşmazsa sorulur. Kimlik kalıcıdır.
-3. **Sınama mı, güncel mi?** `data/sinama.json` kuralına (şu an: Tıbbi Farmakoloji, Kurul ≥2) ya da `anahtarlar` listesine uyan ders
+3. **Sınama mı, güncel mi?** `data/sinama.json` kuralına (2026-11-02'den beri branş kuralı yok; yalnız `anahtarlar`: k2-07) uyan ders
    **SINAMA — test verisi**dir: "Sınama" bölümünde etiketle gösterilir, güncel listeye karışmaz. Kullanıcı bir dersi sınama
    olarak gönderdiğini söylerse anahtarı `anahtarlar`'a eklenir. Betikler listeyi `?sinama=1` ile okur (yeni betik de öyle yazılır).
 4. Arşiv (`y25-*`) kopyalanmaz; ders bu yılın PDF'inden sıfırdan üretilir (§0).

@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 624,
-  "baslik": "Baş Ağrısı ve Psikiyatrik Semiyoloji sesli derslerine ekler",
+  "onem": 625,
+  "baslik": "MSS İlaçları Farmakolojisine Giriş dersi herkese açıldı",
   "maddeler": [
-    "Psikiyatrik Semiyoloji sesli dersine bellek, dikkat, çağrışım ve motor bulgu tanımları eklendi (geçen yılın öğrencilerinin en çok çalıştığı yerler).",
-    "Baş Ağrısına Yaklaşım sesli dersine primer/sekonder baş ağrısı başlıkları eklendi.",
-    "Ağrı Fizyopatolojisi sesli sınav asistanı eklendi."
+    "Farmakoloji 'MSS İlaçları Farmakolojisine Giriş' sesli dersi artık Sınama bölümünde değil, güncel ders listesinde.",
+    "Baş ağrısına yaklaşım dersinde açılmayan bir çıkmış soru işareti kaldırıldı (aynı soru diğer kopyasıyla duruyor)."
   ],
   "eklenen": [],
   "degisen": [
