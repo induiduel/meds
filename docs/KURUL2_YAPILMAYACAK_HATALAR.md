@@ -2014,3 +2014,16 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** etiketler ve meta cümleler kaldırıldı, anekdotlar kısaltıldı, slayt sözcükleri kullanıldı → 0.855 (eşik gevşetilmedi).
 - **Önleme:** Ders notu yalnız slayt bilgisinin redaksiyonudur; hoca açıklamaları sesli anlatımda ve hoca vurguları listesinde yer
   alır. Ders notunda süreç/meta cümlesi ("çıkmışta şu sorulmuştur", "slaytta yazılı değildir") yazılmaz.
+
+## H474 — Bu yılın PDF'inden üretilen Farmakoloji dersi öğrenciye görünmedi (2026-11-02)
+- **Belirti:** kullanıcı: "farma dersi erişilebilir değil, kullanıcılar göremiyor". `k2-09-sss-ilaclari` sesli ders listesinde yoktu,
+  yalnız `?donem=sinama`'da "SINAMA — test verisi" etiketiyle duruyordu.
+- **Kök neden:** `data/sinama.json` branş kuralı (`brans: ["Tıbbi Farmakoloji"], kurulMin: 2`) geçen yılın slaytından kurulan
+  k2-07 için konmuştu; kural branş düzeyinde olduğu için bu yılın PDF'inden tam hatla üretilen k2-09'u da kendiliğinden sınamaya
+  aldı. §9-A3 sınıflandırması yayından önce sorgulanmadı. İkinci tuzak: `data/` git'te olsa da `dagit.sh` onu Oracle'a taşımaz
+  (konteyner `data/`yı ayrı bağlar) — commit sonrası canlı değişmedi, dosya elle kopyalandı.
+- **Çözüm:** branş kuralı kaldırıldı, sınama yalnız `anahtarlar: ["k2-07-genel-anestezik-ilaclar"]`; dosya Oracle'a kopyalandı,
+  `/api/canli-ders` listesinde k2-09 var, `sinama` alanı yok (onem 625).
+- **Önleme:** Sınama yalnız anahtar listesiyle verilir (branş kuralı yok). Yeni ders yayınında §6 doğrulaması güncel listede
+  (`/api/canli-ders`, `donem` yok) dersin anahtarını arar; yoksa yayın bitmiş sayılmaz. `data/*.json` değişikliği Oracle'a
+  `scp + sudo cp + chown ubuntu` ile ayrıca konur ve canlı uçtan okunarak doğrulanır.
