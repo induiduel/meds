@@ -18489,7 +18489,7 @@
         "sayfa": 8
       }
     ],
-    "clinicalPearl": "Derste bilinç bozukluğu tanımları arasında konfüzyon, letarji-somnolans, stupor, koma, demans ve beyin ölümü ile birlikte sayılır."
+    "clinicalPearl": "Derste bilinç bozukluğu tanımları arasında konfüzyon, letarji-somnolans, stupor, koma, demans ve beyin ölümü ile birlikte sayılır. · Yönelim bozukluğu yanında bilinçte dalgalanma ile seyreden, acil ve ölümcül olabilen organik tablodur."
   },
   "kronik lenfositik lösemi / küçük lenfositik lenfoma (kll/sll)": {
     "term": "Kronik lenfositik lösemi / küçük lenfositik lenfoma (KLL/SLL)",
@@ -100153,7 +100153,7 @@
     "description": "Uyanıklık (arousal) ve çevresinin ve kendinin farkında olma (farkındalık) bileşenlerinden oluşan durumdur; uyanıklık beyin sapı ARAS'ına, farkındalık serebral korteks ve bağlantılarına bağlıdır.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Bilinç bozukluğunda olguların %85'i metabolik/sistemik, %15'i SSS kaynaklıdır.",
+    "clinicalPearl": "Bilinç bozukluğunda olguların %85'i metabolik/sistemik, %15'i SSS kaynaklıdır. · Psikiyatride bilinç, kişinin kendisinin ve çevresinin farkında olması ve haberdarlık derecesidir; beynin kanlanmasında, oksijenlenmesinde ve metabolizmasında önemli bir değişiklik olduğunda bozulur ve bilinç bozukluğu her zaman beyin hücrelerinin çalışmasını engelleyen bir soruna bağlıdır.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -100207,7 +100207,7 @@
     "description": "Hastanın uyuklama hâlinde olduğu, ancak çabuk uyandırılabildiği ve uyandığında farkındalığının korunduğu hafif bilinç bozukluğudur.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Letarji ile birlikte anılır; uyaran kesilince hasta yeniden uykuya dalar.",
+    "clinicalPearl": "Letarji ile birlikte anılır; uyaran kesilince hasta yeniden uykuya dalar. · Sözel uyaranla açılan, uyaran kesilince yeniden kapanan bilinç hâli; psikiyatrik semiyolojide uykuya meyilli hasta tarifidir.",
     "aliases": [
       "Somnolan",
       "Letarji"
@@ -100236,7 +100236,7 @@
     "description": "Hastanın ancak güçlü ve tekrarlayan uyaranlarla zorlukla uyandırılabildiği, farkındalığın azaldığı bilinç düzeyidir.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Komadan farkı, hastanın yine de uyandırılabilmesidir.",
+    "clinicalPearl": "Komadan farkı, hastanın yine de uyandırılabilmesidir. · Psikiyatrik semiyolojide bilinçliliğin azaldığı, hareketlerin yavaşladığı, hastanın dış objeleri izleyebildiği halde konuşamadığı durumdur.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -100261,7 +100261,7 @@
     "description": "Hastanın güçlü uyaranla bile uyandırılamadığı ve kendinin ve çevresinin farkında olmadığı en ağır bilinç bozukluğudur.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Uyandırılamama + farkındalık yokluğu = koma.",
+    "clinicalPearl": "Uyandırılamama + farkındalık yokluğu = koma. · Kişinin dış dünyayla bağının tamamen koptuğu ve ağrılı uyaranlara bile yanıt alınamadığı en ağır bilinç bozukluğudur.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -103812,7 +103812,7 @@
     "description": "Bellek kaybıdır; yeni bilgilerin öğrenilememesi ya da geçmiş bilgilerin hatırlanamaması şeklinde görülür.",
     "discipline": "Nöroloji",
     "committee": "",
-    "clinicalPearl": "Ders amnezi sözcüğünü mental durum bozuklukları listesinde verir.",
+    "clinicalPearl": "Ders amnezi sözcüğünü mental durum bozuklukları listesinde verir. · Geçmişe ait yaşantıları anımsama kusurudur; anterograd (olaydan sonraki yeni bilgiyi öğrenememe) ve retrograd (olaydan önceki bilgileri anımsayamama) olmak üzere iki türü vardır.",
     "aliases": [
       "Bellek kaybı"
     ],
@@ -110015,6 +110015,2598 @@
         "kurul": 2,
         "sayfa": 9,
         "alinti": "epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı"
+      }
+    ]
+  },
+  "semiyoloji": {
+    "term": "Semiyoloji",
+    "category": "terim",
+    "definition": "Psikiyatrik belirti ve bulguların tanımlanması, adlandırılması ve değerlendirilmesidir.",
+    "description": "Psikiyatrik belirti ve bulguların tanımlanması, adlandırılması ve değerlendirilmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Psikiyatrik semiyoloji"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "Dolayısıyla belirti ve bulguların iyi öğrenilmesi psikiyatrik bozuklukları kavramak için bir zorunluluktur."
+      }
+    ]
+  },
+  "bilişsel işlevler": {
+    "term": "Bilişsel işlevler",
+    "category": "terim",
+    "definition": "Psikiyatrik muayene şemasının ilk başlığıdır; bilinç, yönelim, bellek, dikkat, algı, düşünce, yargılama, soyut düşünce, gerçeği değerlendirme ve içgörüden oluşur.",
+    "description": "Psikiyatrik muayene şemasının ilk başlığıdır; bilinç, yönelim, bellek, dikkat, algı, düşünce, yargılama, soyut düşünce, gerçeği değerlendirme ve içgörüden oluşur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Bilişsel işlevler"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "I- BİLİŞSEL İŞLEVLER 1) Bilinç 2) Yönelim 3) Bellek 4) Dikkat 5) Algı 6) Düşünce 7) Yargılama 8) Soyut Düşünce 9) Gerçeği Değerlendirme 10) İçgörü II- DUYGULANIM III- MOTOR AKTiViTE"
+      }
+    ]
+  },
+  "işlevsellik": {
+    "term": "İşlevsellik",
+    "category": "terim",
+    "definition": "Kişinin günlük yaşamda, sosyal ilişkilerde ve meslekte görevlerini yerine getirebilme durumudur; belirtinin anormal sayılması işlevselliği bozmasına bağlıdır.",
+    "description": "Kişinin günlük yaşamda, sosyal ilişkilerde ve meslekte görevlerini yerine getirebilme durumudur; belirtinin anormal sayılması işlevselliği bozmasına bağlıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Sosyal ve mesleki işlevsellik"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "4) Defekasyon, miksiyon V- SOSYAL VE MESLEKi İŞLEVSELLiK"
+      }
+    ]
+  },
+  "yönelim": {
+    "term": "Yönelim",
+    "category": "terim",
+    "definition": "Kişinin çevreyle ilgili haberdarlık durumudur; zaman, yer ve kişi olmak üzere üç bileşeni vardır.",
+    "description": "Kişinin çevreyle ilgili haberdarlık durumudur; zaman, yer ve kişi olmak üzere üç bileşeni vardır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Oryantasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Kişinin çevreyle ilgili haberdarlık durumu yönelim (oryantasyon) olarak adlandırılır."
+      }
+    ]
+  },
+  "bellek": {
+    "term": "Bellek",
+    "category": "fizyoloji",
+    "definition": "Yakın ve uzak geçmişe ait olayları kaydetme, depolayabilme ve anımsayabilme yeteneğidir.",
+    "description": "Yakın ve uzak geçmişe ait olayları kaydetme, depolayabilme ve anımsayabilme yeteneğidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "Yakın ve uzak geçmişe ait olayları kaydetme, depolayabilme ve anımsayabilme yeteneğidir."
+      }
+    ]
+  },
+  "tespit belleği": {
+    "term": "Tespit belleği",
+    "category": "terim",
+    "definition": "Öğretilen bir şeyin anında tekrarlanabilmesidir; belleğin algılananları kayıt edip etmemesiyle ilgilidir.",
+    "description": "Öğretilen bir şeyin anında tekrarlanabilmesidir; belleğin algılananları kayıt edip etmemesiyle ilgilidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Muayenede 3-5 nesne adı ya da 5 rakamlı sayı anında tekrarlatılır.",
+    "aliases": [
+      "Kayıt belleği",
+      "Registration"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "Öğretilen bir şeyin anında tekrarlanabilmesidir. Belleğin algılananları kayıt edip etmemesi ile ilgilidir."
+      }
+    ]
+  },
+  "kısa süreli bellek": {
+    "term": "Kısa süreli bellek",
+    "category": "terim",
+    "definition": "5 dakika ile birkaç saate kadar olan bellektir.",
+    "description": "5 dakika ile birkaç saate kadar olan bellektir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Muayenede kayıt belleğinde söylenen şeyler 5 dakika sonra hatırlatılır.",
+    "aliases": [
+      "Recall belleği"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "5 dakika ile birkaç saate kadar olan bellektir."
+      }
+    ]
+  },
+  "uzun süreli bellek": {
+    "term": "Uzun süreli bellek",
+    "category": "terim",
+    "definition": "Birkaç günden yıllara uzanan bellektir; birkaç günden aya kadar olan bölümü yakın bellek, birkaç aydan yıllara uzanan bölümü uzak bellek olarak adlandırılır.",
+    "description": "Birkaç günden yıllara uzanan bellektir; birkaç günden aya kadar olan bölümü yakın bellek, birkaç aydan yıllara uzanan bölümü uzak bellek olarak adlandırılır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "Birkaç günden birkaç aya kadar olan bölümüne yakın bellek, birkaç aydan, yıllara uzanan bölümüne de uzak bellek denir."
+      }
+    ]
+  },
+  "anterograd amnezi": {
+    "term": "Anterograd amnezi",
+    "category": "terim",
+    "definition": "Bellek bozukluğuna neden olan hastalık ya da durumdan sonra kişinin yeni bilgileri öğrenmekte ve hatırlamakta sorun yaşamasıdır.",
+    "description": "Bellek bozukluğuna neden olan hastalık ya da durumdan sonra kişinin yeni bilgileri öğrenmekte ve hatırlamakta sorun yaşamasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Kısa süreli bellekten uzun süreli belleğe bilgi aktarılamaması; belleğin birkaç saatle sınırlı kalması.",
+    "aliases": [
+      "Anterograd amnezi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "Bellek bozukluğuna neden olan hastalık ya da durumdan sonra, kişinin yeni bilgileri öğrenmekte ve hatırlamakta sorun yaşamasıdır."
+      }
+    ]
+  },
+  "wernicke-korsakoff sendromu": {
+    "term": "Wernicke-Korsakoff sendromu",
+    "category": "hastalik",
+    "definition": "Kronik alkol kullanımına bağlı gelişen sendromik bir tablodur; kronik döneminin tipik bulgusu anterograd amnezidir ve tabloya retrograd amnezi de eşlik eder.",
+    "description": "Kronik alkol kullanımına bağlı gelişen sendromik bir tablodur; kronik döneminin tipik bulgusu anterograd amnezidir ve tabloya retrograd amnezi de eşlik eder.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Anterograd amnezi: kronik dönemin tipik bulgusu.",
+    "aliases": [
+      "Korsakoff sendromu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 11,
+        "alinti": "Anterograd amnezi, Wernicke- Korsakoff Sendromu’nun kronik döneminin tipik bulgusudur. Ancak, tabloya retrograd amnezi de eşlik eder."
+      }
+    ]
+  },
+  "retrograd amnezi": {
+    "term": "Retrograd amnezi",
+    "category": "terim",
+    "definition": "Bellek bozukluğuna neden olan hastalık ya da durumdan önceki bilgilerin anımsanmasındaki zorluktur.",
+    "description": "Bellek bozukluğuna neden olan hastalık ya da durumdan önceki bilgilerin anımsanmasındaki zorluktur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "En sık demansta görülür; bellek geriye doğru yıkılır.",
+    "aliases": [
+      "Retrograd amnezi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 12,
+        "alinti": "Bellek bozukluğuna neden olan hastalık ya da durumdan önceki bilgilerin anımsanmasındaki zorluktur."
+      }
+    ]
+  },
+  "füg": {
+    "term": "Füg",
+    "category": "terim",
+    "definition": "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur; dissosiyatif bozukluklarda görülür, temporal parsiyel epilepsiye bağlı da gelişebilir.",
+    "description": "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur; dissosiyatif bozukluklarda görülür, temporal parsiyel epilepsiye bağlı da gelişebilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur."
+      }
+    ]
+  },
+  "hiperemnezi": {
+    "term": "Hiperemnezi",
+    "category": "terim",
+    "definition": "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamaktır.",
+    "description": "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak."
+      }
+    ]
+  },
+  "déjà entendu": {
+    "term": "Déjà entendu",
+    "category": "terim",
+    "definition": "Bir şeyi daha önce işittiğini sanmaktır.",
+    "description": "Bir şeyi daha önce işittiğini sanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Deja entandu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Bir şeyi daha önce işittiğini sanmak"
+      }
+    ]
+  },
+  "déjà fait": {
+    "term": "Déjà fait",
+    "category": "terim",
+    "definition": "Bir şeyi daha önce de yaptığını sanmaktır.",
+    "description": "Bir şeyi daha önce de yaptığını sanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Deja fait"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Bir şeyi daha önce de yaptığını sanmak"
+      }
+    ]
+  },
+  "déjà pensé": {
+    "term": "Déjà pensé",
+    "category": "terim",
+    "definition": "Bir şeyi daha önce de düşünmüş olduğunu sanmaktır.",
+    "description": "Bir şeyi daha önce de düşünmüş olduğunu sanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Deja pense"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Bir şeyi daha önce de düşünmüş olduğunu sanmak"
+      }
+    ]
+  },
+  "déjà vu": {
+    "term": "Déjà vu",
+    "category": "terim",
+    "definition": "Bir şeyi ya da kimseyi daha önce görmüş olduğunu sanmaktır.",
+    "description": "Bir şeyi ya da kimseyi daha önce görmüş olduğunu sanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Deja vu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Bir şeyi ya da kimseyi daha önce görmüş olduğunu sanmak"
+      }
+    ]
+  },
+  "jamais vu": {
+    "term": "Jamais vu",
+    "category": "terim",
+    "definition": "Bildiği ve gördüğü bir şeyi ya da kimseyi hiç görmemiş olduğunu sanmaktır.",
+    "description": "Bildiği ve gördüğü bir şeyi ya da kimseyi hiç görmemiş olduğunu sanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Bildiği ve gördüğü bir şeyi ya da kimseyi hiç görmemiş olduğunu sanmak"
+      }
+    ]
+  },
+  "konfabülasyon": {
+    "term": "Konfabülasyon",
+    "category": "terim",
+    "definition": "Anımsanamayan olaylar yerine hikâyeler uydurmaktır; daha çok demanslılarda görülür.",
+    "description": "Anımsanamayan olaylar yerine hikâyeler uydurmaktır; daha çok demanslılarda görülür.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Bellek boşluğu hikâye uydurularak doldurulur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 13,
+        "alinti": "Anımsanamayan olaylar yerine hikayeler uydurmak. Daha çok demanslılarda görülür."
+      }
+    ]
+  },
+  "dikkat ve konsantrasyon": {
+    "term": "Dikkat ve konsantrasyon",
+    "category": "terim",
+    "definition": "Zihnin belli bir alana çekilmesidir; bunun sürdürülebilmesine konsantrasyon denir.",
+    "description": "Zihnin belli bir alana çekilmesidir; bunun sürdürülebilmesine konsantrasyon denir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Konsantrasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "Dikkat zihnin belli bir alana çekilmesi, konsantrasyon ise bunun sürdürebilmesi olarak tanımlanabilir."
+      }
+    ]
+  },
+  "distraktibilite": {
+    "term": "Distraktibilite",
+    "category": "terim",
+    "definition": "Dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır; en sık manide görülür.",
+    "description": "Dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır; en sık manide görülür.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Dikkat dağınıklığı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 15,
+        "alinti": "Dikkat kolaylıkla dış uyaranlara kayması ve dağılmasıdır."
+      }
+    ]
+  },
+  "hipervijilans": {
+    "term": "Hipervijilans",
+    "category": "terim",
+    "definition": "Dikkat kesilme, aşırı dikkatli olmaya çalışma durumudur; kişi dışarıdan gelen bir tehlike beklentisine karşı her şeye dikkat etmeye çalışır.",
+    "description": "Dikkat kesilme, aşırı dikkatli olmaya çalışma durumudur; kişi dışarıdan gelen bir tehlike beklentisine karşı her şeye dikkat etmeye çalışır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Travma sonrası stres bozukluğunda ve sanrısal bozuklukta görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 16,
+        "alinti": "Dikkat kesilme-aşırı dikkatli olmaya çalışma olarak tanımlanabilir. Kişi özellikle dışarıdan gelen bir tehlike beklentisine karşı her şeye dikkat etmeye çalışır."
+      }
+    ]
+  },
+  "algı": {
+    "term": "Algı",
+    "category": "fizyoloji",
+    "definition": "İçsel ya da dışsal uyaranların önceki deneyimler ışığında bir bilgiye dönüştürülmesi sürecidir.",
+    "description": "İçsel ya da dışsal uyaranların önceki deneyimler ışığında bir bilgiye dönüştürülmesi sürecidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 17,
+        "alinti": "İçsel ya da dışsal uyaranların, önceki deneyimler ışığında bir bilgiye dönüştürülmesi sürecidir."
+      }
+    ]
+  },
+  "halüsinasyon": {
+    "term": "Halüsinasyon",
+    "category": "terim",
+    "definition": "Dış bir uyaran olmaksızın ortaya çıkan algılamadır; görme, işitme, tat, koku ve dokunma duyularının her biriyle ilgili olabilir.",
+    "description": "Dış bir uyaran olmaksızın ortaya çıkan algılamadır; görme, işitme, tat, koku ve dokunma duyularının her biriyle ilgili olabilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Organik bir etkene bağlı değilse çoğunlukla psikoza işaret eder.",
+    "aliases": [
+      "Varsanı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 17,
+        "alinti": "Dış bir uyaran olmaksızın ortaya çıkan algılamadır. 5 duyunun her biriyle ilgili olabilir: Görme, işitme, tat, koku, dokunma."
+      }
+    ]
+  },
+  "elementer halüsinasyon": {
+    "term": "Elementer halüsinasyon",
+    "category": "terim",
+    "definition": "Tek bir duyuya ait kısa süreli halüsinasyondur; isminin seslenildiğini duymak ya da kapı çaldı sanmak gibi; normal popülasyonda rastlanabilir.",
+    "description": "Tek bir duyuya ait kısa süreli halüsinasyondur; isminin seslenildiğini duymak ya da kapı çaldı sanmak gibi; normal popülasyonda rastlanabilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Psikotik olmayan insanlarda da görülebilir.",
+    "aliases": [
+      "Basit halüsinasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "Kişinin, isminin seslenildiğini duyması, kapı veya telefon çaldı zannetmek ya da bir fare geçtiğini sanmak gibi tek bir duyuya ait kısa süreli halüsinasyonlar, elementer ya da basit halüsinasyon olarak adlandırılır"
+      }
+    ]
+  },
+  "hipnagojik ve hipnopompik halüsinasyon": {
+    "term": "Hipnagojik ve hipnopompik halüsinasyon",
+    "category": "terim",
+    "definition": "Uykuya dalarken ortaya çıkan halüsinasyondur; uzun ve birden çok duyuyla ilgili olsa da psikotik kabul edilmez.",
+    "description": "Uykuya dalarken ortaya çıkan halüsinasyondur; uzun ve birden çok duyuyla ilgili olsa da psikotik kabul edilmez.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Hipnogojik halüsinasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "Ayrıca, uykuya dalarken (hipnogojik) veya uyanırken (hipnopompik) ortaya çıkan halüsinasyonlar uzun ve birden fazla duyu ile ilgili (karmaşık, kompleks) olsalar da psikotik kabul edilmezler."
+      }
+    ]
+  },
+  "hipnopompik halüsinasyon": {
+    "term": "Hipnopompik halüsinasyon",
+    "category": "terim",
+    "definition": "Uyanırken ortaya çıkan halüsinasyondur; psikotik kabul edilmez.",
+    "description": "Uyanırken ortaya çıkan halüsinasyondur; psikotik kabul edilmez.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 18,
+        "alinti": "uyanırken (hipnopompik) ortaya çıkan halüsinasyonlar uzun ve birden fazla duyu ile ilgili (karmaşık, kompleks) olsalar da psikotik kabul edilmezler."
+      }
+    ]
+  },
+  "illüzyon": {
+    "term": "İllüzyon",
+    "category": "terim",
+    "definition": "Var olan bir uyaranın yanlış yorumlanmasıdır.",
+    "description": "Var olan bir uyaranın yanlış yorumlanmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Halüsinasyondan farkı: uyaran vardır, yanlış algılanır.",
+    "aliases": [
+      "Yanılsama"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 20,
+        "alinti": "Uyaranların yanlış yorumlanmasıdır. Var olan bir uyaran yanlış algılanır."
+      }
+    ]
+  },
+  "depersonalizasyon": {
+    "term": "Depersonalizasyon",
+    "category": "terim",
+    "definition": "Kişinin kendisini değişmiş ya da yabancı hissetmesidir.",
+    "description": "Kişinin kendisini değişmiş ya da yabancı hissetmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 21,
+        "alinti": "Kişinin kendisini değişmiş ya da yabancı hissetmesidir. Derealizasyon Dış dünyaya ilişkin yabancılık duygusudur."
+      }
+    ]
+  },
+  "derealizasyon": {
+    "term": "Derealizasyon",
+    "category": "terim",
+    "definition": "Dış dünyaya ilişkin yabancılık duygusudur; kişi çevresini ve çevresindeki kişileri değişmiş ya da yabancılarmış gibi hisseder.",
+    "description": "Dış dünyaya ilişkin yabancılık duygusudur; kişi çevresini ve çevresindeki kişileri değişmiş ya da yabancılarmış gibi hisseder.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 21,
+        "alinti": "Dış dünyaya ilişkin yabancılık duygusudur. Kişi her zamanki çevresini ve çevresindeki kişileri değişmiş ya da yabancılarmış gibi hisseder."
+      }
+    ]
+  },
+  "sinestezi": {
+    "term": "Sinestezi",
+    "category": "terim",
+    "definition": "Bir duyusal uyaranın başka bir duyu biçiminde algılanmasıdır; ışığın sesini duymak ya da sesi görmek gibi.",
+    "description": "Bir duyusal uyaranın başka bir duyu biçiminde algılanmasıdır; ışığın sesini duymak ya da sesi görmek gibi.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Bir duyusal uyaranın başka bir duyu biçiminde algılanmasıdır. Işığın sesini duymak ya da sesi görmek gibi."
+      }
+    ]
+  },
+  "makropsi": {
+    "term": "Makropsi",
+    "category": "terim",
+    "definition": "Nesneleri olduğundan büyük görmektir.",
+    "description": "Nesneleri olduğundan büyük görmektir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Makropsi: Nesneleri olduğundan büyük görmek. Mikropsi: Nesneleri olduğundan küçük görmek."
+      }
+    ]
+  },
+  "mikropsi": {
+    "term": "Mikropsi",
+    "category": "terim",
+    "definition": "Nesneleri olduğundan küçük görmektir.",
+    "description": "Nesneleri olduğundan küçük görmektir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Mikropsi: Nesneleri olduğundan küçük görmek. Negatif Halüsinasyon: Bir halüsinasyon değildir, var olan şeyleri görmemeye denir."
+      }
+    ]
+  },
+  "negatif halüsinasyon": {
+    "term": "Negatif halüsinasyon",
+    "category": "terim",
+    "definition": "Halüsinasyon değildir; var olan şeyleri görmemeye denir.",
+    "description": "Halüsinasyon değildir; var olan şeyleri görmemeye denir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Özellikle şizofrenide görülebilir ama sık değildir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Negatif Halüsinasyon: Bir halüsinasyon değildir, var olan şeyleri görmemeye denir."
+      }
+    ]
+  },
+  "negatif otoskopi": {
+    "term": "Negatif otoskopi",
+    "category": "terim",
+    "definition": "Kişinin kendisini görememesidir.",
+    "description": "Kişinin kendisini görememesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "Negatif Otoskopi: Kişinin kendisini görememesidir"
+      }
+    ]
+  },
+  "çağrışım": {
+    "term": "Çağrışım",
+    "category": "terim",
+    "definition": "Davranışlar, düşünceler ve kavramlar arasında yer ve zaman birliğinin etkisiyle kurulan bağlantılar sonucu, bilinç alanına bunlardan biri girdiğinde ötekini de bilince çekmesidir.",
+    "description": "Davranışlar, düşünceler ve kavramlar arasında yer ve zaman birliğinin etkisiyle kurulan bağlantılar sonucu, bilinç alanına bunlardan biri girdiğinde ötekini de bilince çekmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Çağrışım: Davranışlar, düşünceler ve kavramlar arasında yer ve zaman birliğinin etkisiyle kurulan bağlantılar sonucu, bilinç alanına bunlardan birisi girdiğinde ötekini de bilince çekmesi çağrışım olarak adlandırılır."
+      }
+    ]
+  },
+  "basınçlı konuşma": {
+    "term": "Basınçlı konuşma",
+    "category": "terim",
+    "definition": "Araya girerek soru sormaya, görüş bildirmeye olanak vermeyecek ölçüde hızla ve çok konuşmaktır.",
+    "description": "Araya girerek soru sormaya, görüş bildirmeye olanak vermeyecek ölçüde hızla ve çok konuşmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Basınçlı konuşma: Araya girerek soru sormaya, görüş bildirmeye olanak vermeyecek ölçüde hızla ve çok konuşmaktır."
+      }
+    ]
+  },
+  "ayrıntıcı konuşma": {
+    "term": "Ayrıntıcı konuşma",
+    "category": "terim",
+    "definition": "Daha çok obsesif karakterlerde görülür; kişi anlattığı konunun gereksiz ayrıntılarına girer ama konuyu sürdürebilir.",
+    "description": "Daha çok obsesif karakterlerde görülür; kişi anlattığı konunun gereksiz ayrıntılarına girer ama konuyu sürdürebilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Ayrıntıcı Konuşma: Daha çok obsesif karakterlerde görülür. Anlattıkları konunu gereksiz ayrıntılarına girer ancak konuyu sürdürebilirler."
+      }
+    ]
+  },
+  "lögore": {
+    "term": "Lögore",
+    "category": "terim",
+    "definition": "Konuşmanın miktarının artmasıdır; konuşma tutarlı ve mantıklıdır ancak miktarı ve hızı artmıştır.",
+    "description": "Konuşmanın miktarının artmasıdır; konuşma tutarlı ve mantıklıdır ancak miktarı ve hızı artmıştır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Lögore: Konuşmanın miktarının artmasıdır. Konuşma tutarlı ve mantıklıdır ancak miktarı ve hızı artmıştır."
+      }
+    ]
+  },
+  "çağrışım yavaşlaması": {
+    "term": "Çağrışım yavaşlaması",
+    "category": "terim",
+    "definition": "Konuşma hızının yavaşlamasıdır; daha çok depresyonda görülür.",
+    "description": "Konuşma hızının yavaşlamasıdır; daha çok depresyonda görülür.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Çağrışım Yavaşlaması: Konuşma hızının yavaşlaması daha çok depresyonda görülür."
+      }
+    ]
+  },
+  "blokaj": {
+    "term": "Blokaj",
+    "category": "terim",
+    "definition": "Hastanın bir şeyi anlatırken birden durması ve konuşmayı kesmesidir.",
+    "description": "Hastanın bir şeyi anlatırken birden durması ve konuşmayı kesmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Çağrışım azalması başlığındadır, çağrışım sapması değildir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Blokaj: Hasta bir şeyi anlatırken birden durur ve konuşmayı keser."
+      }
+    ]
+  },
+  "neolojizm": {
+    "term": "Neolojizm",
+    "category": "terim",
+    "definition": "Yeni kelimeler uydurmaktır.",
+    "description": "Yeni kelimeler uydurmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Neolojizm: Yeni kelimeler uydurmaktır. Perseverasyon: Aynı düşüncenin ısrarlı ve uygunsuz bir biçimde yinelenmesidir."
+      }
+    ]
+  },
+  "perseverasyon": {
+    "term": "Perseverasyon",
+    "category": "terim",
+    "definition": "Aynı düşüncenin ısrarlı ve uygunsuz bir biçimde yinelenmesidir.",
+    "description": "Aynı düşüncenin ısrarlı ve uygunsuz bir biçimde yinelenmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Perseverasyon: Aynı düşüncenin ısrarlı ve uygunsuz bir biçimde yinelenmesidir."
+      }
+    ]
+  },
+  "klang çağrışım": {
+    "term": "Klang çağrışım",
+    "category": "terim",
+    "definition": "Cümleler arasındaki bağlantının ses çağrışımlarıyla kurulduğu çağrışım sapmasıdır; cümleler anlamlı bir bütünlük oluşturmaz.",
+    "description": "Cümleler arasındaki bağlantının ses çağrışımlarıyla kurulduğu çağrışım sapmasıdır; cümleler anlamlı bir bütünlük oluşturmaz.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Klang"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Klang Çağrışım: Cümleler arasındaki bağlantı ses çağrışımları ile kurulur."
+      }
+    ]
+  },
+  "kelime salatası": {
+    "term": "Kelime salatası",
+    "category": "terim",
+    "definition": "Anlamlı bir cümlenin olmadığı, yan yana sıralanmış kelimelerden ibaret konuşmadır.",
+    "description": "Anlamlı bir cümlenin olmadığı, yan yana sıralanmış kelimelerden ibaret konuşmadır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 24,
+        "alinti": "Kelime Salatası: Anlamlı bir cümle yoktur. Konuşma, yan yana sıralanmış kelimelerden ibarettir."
+      }
+    ]
+  },
+  "yandan konuşma": {
+    "term": "Yandan konuşma",
+    "category": "terim",
+    "definition": "Sorulara yanıt vermek yerine konuyla bağlantılı ancak sorunun yanıtı olmayan ifadelerle cevap verilmesidir.",
+    "description": "Sorulara yanıt vermek yerine konuyla bağlantılı ancak sorunun yanıtı olmayan ifadelerle cevap verilmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Yandan Konuşma: Sorulara yanıt vermek yerine konuyla bağlantılı ancak, sorunun yanıtı olmayan ifadelerle cevap verilir."
+      }
+    ]
+  },
+  "disprosodi": {
+    "term": "Disprosodi",
+    "category": "terim",
+    "definition": "Sesteki melodinin ve ahengin kaybolmasıdır; şizofrenide görülebilir.",
+    "description": "Sesteki melodinin ve ahengin kaybolmasıdır; şizofrenide görülebilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Disprosodi: Sesteki melodinin ve ahengin kaybolmasıdır, şizofrenide görülebilir."
+      }
+    ]
+  },
+  "çelinebilir konuşma": {
+    "term": "Çelinebilir konuşma",
+    "category": "terim",
+    "definition": "Konuşmanın dış uyaranlara göre sürekli içeriğinin değişmesidir.",
+    "description": "Konuşmanın dış uyaranlara göre sürekli içeriğinin değişmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Çelinebilir Konuşma: Konuşmanın dış uyaranlara göre sürekli içeriğinin değişmesidir."
+      }
+    ]
+  },
+  "ekolali": {
+    "term": "Ekolali",
+    "category": "terim",
+    "definition": "Başkalarının söylediği şeyin tekrar edilmesidir; şizofrenlerde görülebilir.",
+    "description": "Başkalarının söylediği şeyin tekrar edilmesidir; şizofrenlerde görülebilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "Ekolali: Başkalarının söylediği şeyin tekrar edilmesidir. şizofrenlerde görülebilir."
+      }
+    ]
+  },
+  "konuşmanın fakirleşmesi": {
+    "term": "Konuşmanın fakirleşmesi",
+    "category": "terim",
+    "definition": "Konuşmanın miktarının azalması, sorulara bir veya birkaç kelimeyle yanıt verilmesidir; depresyonda daha sık görülür.",
+    "description": "Konuşmanın miktarının azalması, sorulara bir veya birkaç kelimeyle yanıt verilmesidir; depresyonda daha sık görülür.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Konuşmanın Fakirleşmesi: Konuşmanın miktarı azalmıştır. Sorulara bir veya birkaç kelimeyle yanıt verilir."
+      }
+    ]
+  },
+  "konuşma içeriğinde fakirleşme": {
+    "term": "Konuşma içeriğinde fakirleşme",
+    "category": "terim",
+    "definition": "Konuşma miktarca yeterli olmakla birlikte belirsizlik, boşluk ya da anlamsız yinelemeler nedeniyle bilgi aktarma özelliğinin kaybolmasıdır.",
+    "description": "Konuşma miktarca yeterli olmakla birlikte belirsizlik, boşluk ya da anlamsız yinelemeler nedeniyle bilgi aktarma özelliğinin kaybolmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Sıklıkla şizofreninin ileri dönemlerinde görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Konuşma İçeriğinde Fakirleşme: Konuşma miktarca yeterli olmakla birlikte, içeriğindeki belirsizlik, boşluk ya da anlamsız yinelemeler dolayısıyla bilgi aktarabilme özelliğini kaybetmiştir."
+      }
+    ]
+  },
+  "enkoherans": {
+    "term": "Enkoherans",
+    "category": "terim",
+    "definition": "Konuşmanın cümleler düzeyinde anlamlılık içermesine karşın bütününden bir anlam çıkarılamamasıdır; konuşma birbiriyle bağlantısız cümleler biçimindedir.",
+    "description": "Konuşmanın cümleler düzeyinde anlamlılık içermesine karşın bütününden bir anlam çıkarılamamasıdır; konuşma birbiriyle bağlantısız cümleler biçimindedir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Enkoherans: Hastanın konuşması, cümleler düzeyinde anlamlılık içerse de konuşması nın bütününden bir anlam çıkarılamaz."
+      }
+    ]
+  },
+  "koprolali": {
+    "term": "Koprolali",
+    "category": "terim",
+    "definition": "Küfürlü ya da uygunsuz kelimelerin kullanılmasıdır.",
+    "description": "Küfürlü ya da uygunsuz kelimelerin kullanılmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 26,
+        "alinti": "Koprolali: Küfürlü ya da uygunsuz kelimelerin kullanılmasıdır."
+      }
+    ]
+  },
+  "hezeyan": {
+    "term": "Hezeyan",
+    "category": "terim",
+    "definition": "Gerçek olmayan şeylere ve gerçek dışı düşüncelere inanmaktır.",
+    "description": "Gerçek olmayan şeylere ve gerçek dışı düşüncelere inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Sanrı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Gerçek olmayan şeylere ve gerçek dışı düşüncelere inanmak demektir."
+      }
+    ]
+  },
+  "bizar hezeyan": {
+    "term": "Bizar hezeyan",
+    "category": "terim",
+    "definition": "Gerçekleşmesi mümkün olmayan hezeyanlardır.",
+    "description": "Gerçekleşmesi mümkün olmayan hezeyanlardır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Bizar Hezeyan: Gerçekleşmesi mümkün olmayan hezeyanlardır. Duyguduruma Uygun Hezeyan: Hezeyanın, kişinin duygudurumuyla uyumlu olmasıdır."
+      }
+    ]
+  },
+  "duyguduruma uygun hezeyan": {
+    "term": "Duyguduruma uygun hezeyan",
+    "category": "terim",
+    "definition": "Hezeyanın kişinin duygudurumuyla uyumlu olmasıdır; depresyondaki kişinin suçluluk hezeyanları duyması gibi.",
+    "description": "Hezeyanın kişinin duygudurumuyla uyumlu olmasıdır; depresyondaki kişinin suçluluk hezeyanları duyması gibi.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Duyguduruma Uygun Hezeyan: Hezeyanın, kişinin duygudurumuyla uyumlu olmasıdır."
+      }
+    ]
+  },
+  "duyguduruma uygun olmayan hezeyan": {
+    "term": "Duyguduruma uygun olmayan hezeyan",
+    "category": "terim",
+    "definition": "Hezeyanın kişinin duygudurumuyla uyumsuz olmasıdır; depresyondaki bir kişinin kendisinin çok önemli biri olduğunu iddia etmesi gibi.",
+    "description": "Hezeyanın kişinin duygudurumuyla uyumsuz olmasıdır; depresyondaki bir kişinin kendisinin çok önemli biri olduğunu iddia etmesi gibi.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Duyguduruma Uygun Olmayan Hezeyan: Kişinin duygudurumuyla uyumsuzdurlar: Sözgelimi depresyondaki bir kişinin kendisinin çok önemli bir kişi olduğunu iddia etmesi gibi."
+      }
+    ]
+  },
+  "erotomanik hezeyan": {
+    "term": "Erotomanik hezeyan",
+    "category": "terim",
+    "definition": "Genellikle sosyoekonomik açıdan üst düzeydeki birinin kendisine âşık olduğuna inanmaktır.",
+    "description": "Genellikle sosyoekonomik açıdan üst düzeydeki birinin kendisine âşık olduğuna inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Erotomanik Hezeyan: Genellikle sosyoekonomik açıdan üst düzeydeki birinin kendisine aşık olduğuna inanma"
+      }
+    ]
+  },
+  "grandiyöz hezeyan": {
+    "term": "Grandiyöz hezeyan",
+    "category": "terim",
+    "definition": "Büyüklük hezeyanıdır; kişi önemli biri olduğuna ya da dünyayı kurtaracağına inanır.",
+    "description": "Büyüklük hezeyanıdır; kişi önemli biri olduğuna ya da dünyayı kurtaracağına inanır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Büyüklük hezeyanı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 27,
+        "alinti": "Grandiyöz Hezeyan: Büyüklük hezeyanları, önemli biri olduğuna, dünyayı kurtaracağına vs. inanma."
+      }
+    ]
+  },
+  "mignon hezeyan": {
+    "term": "Mignon hezeyan",
+    "category": "terim",
+    "definition": "Anne babasının başka biri olduğuna inanmaktır.",
+    "description": "Anne babasının başka biri olduğuna inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Mignon Hezeyan: Anne babasının başka biri olduğuna inanma."
+      }
+    ]
+  },
+  "nihilistik hezeyan": {
+    "term": "Nihilistik hezeyan",
+    "category": "terim",
+    "definition": "Ölmüş ya da yok olmuş olduğuna inanmaktır.",
+    "description": "Ölmüş ya da yok olmuş olduğuna inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Nihilistik Hezeyan: Ölmüş, yok olmuş olduğuna inanma. Perseküsyon Hezeyanı: Başkalarından kötülük göreceğine inanma."
+      }
+    ]
+  },
+  "perseküsyon hezeyanı": {
+    "term": "Perseküsyon hezeyanı",
+    "category": "terim",
+    "definition": "Başkalarından kötülük göreceğine inanmaktır.",
+    "description": "Başkalarından kötülük göreceğine inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Kuşku hezeyanı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Perseküsyon Hezeyanı: Başkalarından kötülük göreceğine inanma. Paylaşılmış Hezeyan: Bir kişinin hezeyanlarının başka biri veya birileri tarafından da paylaşılması."
+      }
+    ]
+  },
+  "paylaşılmış hezeyan": {
+    "term": "Paylaşılmış hezeyan",
+    "category": "terim",
+    "definition": "Bir kişinin hezeyanlarının başka biri veya birileri tarafından da paylaşılmasıdır.",
+    "description": "Bir kişinin hezeyanlarının başka biri veya birileri tarafından da paylaşılmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Paylaşılmış Hezeyan: Bir kişinin hezeyanlarının başka biri veya birileri tarafından da paylaşılması."
+      }
+    ]
+  },
+  "referans hezeyanı": {
+    "term": "Referans hezeyanı",
+    "category": "terim",
+    "definition": "Kişinin kendisiyle ilgisiz olaylardan anlam çıkarması ve bunlara inanmasıdır.",
+    "description": "Kişinin kendisiyle ilgisiz olaylardan anlam çıkarması ve bunlara inanmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Referans Hezeyanları: Kişinin kendisiyle ilgisiz olaylardan anlam çıkarması ve bunlara inanma."
+      }
+    ]
+  },
+  "kıskançlık hezeyanı": {
+    "term": "Kıskançlık hezeyanı",
+    "category": "terim",
+    "definition": "Eşinin ya da cinsel partnerinin kendisini aldattığına inanmaktır.",
+    "description": "Eşinin ya da cinsel partnerinin kendisini aldattığına inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Kıskançlık Hezeyanı: Eşinin ya da cinsel partnerinin kendisini aldattığına inanma."
+      }
+    ]
+  },
+  "somatik hezeyan": {
+    "term": "Somatik hezeyan",
+    "category": "terim",
+    "definition": "Bedensel bir hastalığı ya da bir anormalliği olduğuna inanmaktır.",
+    "description": "Bedensel bir hastalığı ya da bir anormalliği olduğuna inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 28,
+        "alinti": "Somatik Hezeyan: Bedensel bir hastalığı ya da bir anormalliği olduğuna inanma."
+      }
+    ]
+  },
+  "suçluluk hezeyanı": {
+    "term": "Suçluluk hezeyanı",
+    "category": "terim",
+    "definition": "Kişinin kendisini suçlu ve günahkâr olduğuna inanmasıdır; özellikle depresyonda görülür.",
+    "description": "Kişinin kendisini suçlu ve günahkâr olduğuna inanmasıdır; özellikle depresyonda görülür.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Günahkârlık hezeyanı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Suçluluk veya Günahkârlık Hezeyanı: Schneider Hezeyanları: Aşağıdaki hezeyanlar bu gruptandır ve daha çok şizofrenide görülürler."
+      }
+    ]
+  },
+  "schneider hezeyanları": {
+    "term": "Schneider hezeyanları",
+    "category": "terim",
+    "definition": "Düşüncelerin çekilmesi, okunması, sokulması ve yayınlanması hezeyanlarından oluşan, daha çok şizofrenide görülen hezeyan grubudur.",
+    "description": "Düşüncelerin çekilmesi, okunması, sokulması ve yayınlanması hezeyanlarından oluşan, daha çok şizofrenide görülen hezeyan grubudur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Schneider Hezeyanları: Aşağıdaki hezeyanlar bu gruptandır ve daha çok şizofrenide görülürler."
+      }
+    ]
+  },
+  "düşüncelerin çekilmesi": {
+    "term": "Düşüncelerin çekilmesi",
+    "category": "terim",
+    "definition": "Düşüncelerinin başkaları ya da bir takım güçler tarafından zihninden çekilip alındığına inanmaktır.",
+    "description": "Düşüncelerinin başkaları ya da bir takım güçler tarafından zihninden çekilip alındığına inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Düşüncelerin Çekilmesi: Düşüncelerinin başkaları ya da bir takım güçler tarafından zihninden çekilip alındığına inanma."
+      }
+    ]
+  },
+  "düşüncelerin okunması": {
+    "term": "Düşüncelerin okunması",
+    "category": "terim",
+    "definition": "İnsanların düşüncelerini ve zihninden geçenleri anladığına inanmaktır.",
+    "description": "İnsanların düşüncelerini ve zihninden geçenleri anladığına inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Düşüncelerin Okunması: insanların, düşüncelerini ve zihninden geçenleri anladığına inanma."
+      }
+    ]
+  },
+  "düşünce sokulması": {
+    "term": "Düşünce sokulması",
+    "category": "terim",
+    "definition": "Bazı düşüncelerin başkaları tarafından zihnine sokulduğuna inanmaktır.",
+    "description": "Bazı düşüncelerin başkaları tarafından zihnine sokulduğuna inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Düşünce Sokulması: Bazı düşüncelerin başkaları tarafından zihnine sokulduğuna inanma."
+      }
+    ]
+  },
+  "düşüncelerin yayılması": {
+    "term": "Düşüncelerin yayılması",
+    "category": "terim",
+    "definition": "Düşüncelerinin başkaları tarafından duyulacak şekilde yayınlandığına inanmaktır.",
+    "description": "Düşüncelerinin başkaları tarafından duyulacak şekilde yayınlandığına inanmaktır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Düşüncelerin yayınlanması"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Düşüncelerin Yayılması/Yayınlanması: Düşüncelerinin başkaları tarafından duyulacak şekilde yayınlandığına inanma."
+      }
+    ]
+  },
+  "obsesyon": {
+    "term": "Obsesyon",
+    "category": "terim",
+    "definition": "Kişiye saçma ya da anlamsız gelmesine karşın durduramadığı, zihninden atamadığı, tekrarlayıcı düşünce veya dürtülerdir.",
+    "description": "Kişiye saçma ya da anlamsız gelmesine karşın durduramadığı, zihninden atamadığı, tekrarlayıcı düşünce veya dürtülerdir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 30,
+        "alinti": "Kişiye saçma ya da anlamsız gelmesine karşın, durduramadığı, zihninden atamadığı, tekrarlayıcı düşünce veya dürtülerdir."
+      }
+    ]
+  },
+  "kompulsiyon": {
+    "term": "Kompulsiyon",
+    "category": "terim",
+    "definition": "Obsesyonları gidermek için yapılan eylemlerdir; sık sık ellerinin kirlenmiş olabileceğini düşünmek obsesyon, rahatlamak için ellerini yıkamak kompulsiyondur.",
+    "description": "Obsesyonları gidermek için yapılan eylemlerdir; sık sık ellerinin kirlenmiş olabileceğini düşünmek obsesyon, rahatlamak için ellerini yıkamak kompulsiyondur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 30,
+        "alinti": "Bu düşünceleri gidermek için yapılan eylemlere ise kompulsiyon denir. Kişinin sık sık ellerinin kirlenmiş olabileceğini düşünmesi bir obsesyon, rahatlamak için gidip ellerini yıkaması ise bir kompulsiyondur."
+      }
+    ]
+  },
+  "fobi": {
+    "term": "Fobi",
+    "category": "terim",
+    "definition": "Somut bir tehdit olmamasına karşın görülen yersiz, aşırı korkulardır.",
+    "description": "Somut bir tehdit olmamasına karşın görülen yersiz, aşırı korkulardır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 31,
+        "alinti": "Somut bir tehdit olmamasına karşın görülen yersiz, aşırı korkulardır."
+      }
+    ]
+  },
+  "özgül fobi": {
+    "term": "Özgül fobi",
+    "category": "terim",
+    "definition": "Belirli bir nesne ya da durumla sınırlı fobilerdir.",
+    "description": "Belirli bir nesne ya da durumla sınırlı fobilerdir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 31,
+        "alinti": "Özgül Fobiler: Belirli bir nesne ya da durumla sınırlı fobilerdir."
+      }
+    ]
+  },
+  "agorafobi ve klostrofobi": {
+    "term": "Agorafobi ve klostrofobi",
+    "category": "terim",
+    "definition": "Sık görülen fobiler arasında sayılan korku bozukluklarıdır; slaytta adları anılır.",
+    "description": "Sık görülen fobiler arasında sayılan korku bozukluklarıdır; slaytta adları anılır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 31,
+        "alinti": "Agorafobi, Klostrofobi Sosyal Fobi: Başka insanların yanında yapacağı kimi etkinliklerin küçümsenmesine ya da beğenilmemesine yol açabileceğini düşündüğü için, toplum içinde yemek yemek, konuşmak, dans etmek gibi çeşitli etkinliklerden bir veya"
+      }
+    ]
+  },
+  "sosyal fobi": {
+    "term": "Sosyal fobi",
+    "category": "terim",
+    "definition": "Başkalarının yanında yapılan etkinliklerin küçümsenmesine ya da beğenilmemesine yol açabileceği düşüncesiyle sıkıntı duyma ve kaçınma durumudur.",
+    "description": "Başkalarının yanında yapılan etkinliklerin küçümsenmesine ya da beğenilmemesine yol açabileceği düşüncesiyle sıkıntı duyma ve kaçınma durumudur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 31,
+        "alinti": "Sosyal Fobi: Başka insanların yanında yapacağı kimi etkinliklerin küçümsenmesine ya da beğenilmemesine yol açabileceğini düşündüğü için, toplum içinde yemek yemek, konuşmak, dans etmek gibi çeşitli etkinliklerden bir veya birkaçından ya"
+      }
+    ]
+  },
+  "yargılama": {
+    "term": "Yargılama",
+    "category": "terim",
+    "definition": "Kişinin verileri mantıklı bir neden-sonuç ya da ilgi ilişkisi içinde bir araya getirebilme yeteneğidir.",
+    "description": "Kişinin verileri mantıklı bir neden-sonuç ya da ilgi ilişkisi içinde bir araya getirebilme yeteneğidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 32,
+        "alinti": "Kişinin verileri mantıklı bir neden- sonuç veya ilgi ilişkisi içinde bir araya getirebilme yeteneğidir."
+      }
+    ]
+  },
+  "soyut düşünce": {
+    "term": "Soyut düşünce",
+    "category": "terim",
+    "definition": "Sınıflandırma, benzerlikleri ve farklılıkları ayırt edebilme gibi soyutlama yetenekleridir; atasözü yorumlama ya da beş nesneden farklı olanı ayırt etme sorularıyla muayene edilir.",
+    "description": "Sınıflandırma, benzerlikleri ve farklılıkları ayırt edebilme gibi soyutlama yetenekleridir; atasözü yorumlama ya da beş nesneden farklı olanı ayırt etme sorularıyla muayene edilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 32,
+        "alinti": "Soyut Düşünce Sınıflandırma, benzerlikleri ve farklılıkları ayırt edebilme gibi soyutlama yetenekleri, bir atasözünün anlamını sorma, ya da 5 nesneden farklı olanı ayırt edecek sorularla muayene edilir."
+      }
+    ]
+  },
+  "gerçeği değerlendirme": {
+    "term": "Gerçeği değerlendirme",
+    "category": "terim",
+    "definition": "Kişinin içsel ve dışsal uyaranları ayırt edebilme yeteneğidir.",
+    "description": "Kişinin içsel ve dışsal uyaranları ayırt edebilme yeteneğidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 33,
+        "alinti": "Kişinin içsel ve dışsal uyaranları ayırt edebilme yeteneğidir."
+      }
+    ]
+  },
+  "içgörü": {
+    "term": "İçgörü",
+    "category": "terim",
+    "definition": "Kişinin hareketlerinin ardındaki bilinçdışı motivasyonlarından haberdarlık derecesidir.",
+    "description": "Kişinin hareketlerinin ardındaki bilinçdışı motivasyonlarından haberdarlık derecesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "İnsight"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 34,
+        "alinti": "İki ayrı anlamda kullanılır, birincisi, kişinin hareketlerinin ardındaki bilinçdışı motivasyonlarından haberdarlık derecesidir."
+      }
+    ]
+  },
+  "duygudurum": {
+    "term": "Duygudurum",
+    "category": "terim",
+    "definition": "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini hissedişidir.",
+    "description": "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini hissedişidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "aliases": [
+      "Mood"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 35,
+        "alinti": "Kişinin yaygın ve sürekli olarak, belli bir zaman dilimi içinde kendisini hissedişidir."
+      }
+    ]
+  },
+  "ötimi": {
+    "term": "Ötimi",
+    "category": "terim",
+    "definition": "Duygudurumda çökme ya da yükselmenin olmadığını ifade eder.",
+    "description": "Duygudurumda çökme ya da yükselmenin olmadığını ifade eder.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 35,
+        "alinti": "Ötimi: Duygudurumda çökme ya da yükselmenin olmadığını ifade eder."
+      }
+    ]
+  },
+  "yükselmiş duygudurum": {
+    "term": "Yükselmiş duygudurum",
+    "category": "terim",
+    "definition": "Alışılmışın dışında bir neşe haliyle birlikte kişinin kendine güveninin de artmış olduğu duygudurumdur.",
+    "description": "Alışılmışın dışında bir neşe haliyle birlikte kişinin kendine güveninin de artmış olduğu duygudurumdur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 35,
+        "alinti": "Yükselmiş Duygudurum: Alışılmışın dışında bir neşe haliyle birlikte, kişinin kendine güveni de artmıştır."
+      }
+    ]
+  },
+  "çökkün duygudurum": {
+    "term": "Çökkün duygudurum",
+    "category": "terim",
+    "definition": "Ümitsizlik, keder ve elemlilik duygusunun ön planda olduğu, kişinin kendisine verdiği değer ve güvenin azaldığı duygudurumdur.",
+    "description": "Ümitsizlik, keder ve elemlilik duygusunun ön planda olduğu, kişinin kendisine verdiği değer ve güvenin azaldığı duygudurumdur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 35,
+        "alinti": "Çökkün Duygudurum: Ümitsizlik, keder, elemlilik duygusu ön plandadır ve kişinin kendisine verdiği değer ve güveni azalmıştır."
+      }
+    ]
+  },
+  "irritabl duygudurum": {
+    "term": "İrritabl duygudurum",
+    "category": "terim",
+    "definition": "Çabuk sinirlenme ve engellenmeye karşı öfkelenmeye hazır olmanın söz konusu olduğu duygudurumdur.",
+    "description": "Çabuk sinirlenme ve engellenmeye karşı öfkelenmeye hazır olmanın söz konusu olduğu duygudurumdur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 35,
+        "alinti": "“İrritabl” Duygudurum: Çabuk sinirlenme, engellenmeye karşı öfkelenmeye hazır bir duygudurum söz konusudur."
+      }
+    ]
+  },
+  "afekt": {
+    "term": "Afekt",
+    "category": "terim",
+    "definition": "Kişinin yaşadıklarına ve düşündüklerine eşlik eden, dışarıdan gözlenebilen anlık duygulanımdır.",
+    "description": "Kişinin yaşadıklarına ve düşündüklerine eşlik eden, dışarıdan gözlenebilen anlık duygulanımdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 36,
+        "alinti": "Kişinin yaşadıklarına, düşündüklerine eşlik eden ve dışarıdan gözlenebilen anlık duygulanımdır."
+      }
+    ]
+  },
+  "uygun afekt": {
+    "term": "Uygun afekt",
+    "category": "terim",
+    "definition": "Kişinin düşünce ya da konuşma içeriği ile dışa vuran duygulanımı arasında uyum olmasıdır.",
+    "description": "Kişinin düşünce ya da konuşma içeriği ile dışa vuran duygulanımı arasında uyum olmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 36,
+        "alinti": "Kişinin düşünce ya da konuşma içeriği ile dışa vuran duygulanımının arasında uyum olması."
+      }
+    ]
+  },
+  "uygunsuz afekt": {
+    "term": "Uygunsuz afekt",
+    "category": "terim",
+    "definition": "Konuşma içeriği ya da yaşanan durum ile duygulanım arasında uygunsuzluk olmasıdır.",
+    "description": "Konuşma içeriği ya da yaşanan durum ile duygulanım arasında uygunsuzluk olmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 36,
+        "alinti": "Konuşma içeriği ya da yaşanan durum ile duygulanım arasında uygunsuzluk olması halidir."
+      }
+    ]
+  },
+  "değişken afekt": {
+    "term": "Değişken afekt",
+    "category": "terim",
+    "definition": "Dış uyaranlardan bağımsız olarak afektte ani ve belirgin değişiklikler olmasıdır.",
+    "description": "Dış uyaranlardan bağımsız olarak afektte ani ve belirgin değişiklikler olmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 36,
+        "alinti": "Dış uyaranlardan bağımsız olarak, afektte ani ve belirgin değişiklikler olmasıdır."
+      }
+    ]
+  },
+  "ajitasyon": {
+    "term": "Ajitasyon",
+    "category": "terim",
+    "definition": "Motor huzursuzluğun eşlik ettiği anksiyete halidir; bacaklarını sallamak, saçlarıyla oynamak gibi.",
+    "description": "Motor huzursuzluğun eşlik ettiği anksiyete halidir; bacaklarını sallamak, saçlarıyla oynamak gibi.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 37,
+        "alinti": "Motor huzursuzluğun eşlik ettiği anksiyete halidir. Bacaklarını sallamak, saçlarıyla oynamak, parmaklarını masaya vurmak gibi."
+      }
+    ]
+  },
+  "ambivalans": {
+    "term": "Ambivalans",
+    "category": "terim",
+    "definition": "Kişinin aynı anda aynı konuyla ilgili zıt yönelimli iki duygulanımı birlikte hissetmesidir.",
+    "description": "Kişinin aynı anda aynı konuyla ilgili zıt yönelimli iki duygulanımı birlikte hissetmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 37,
+        "alinti": "Kişinin aynı anda aynı konuyla ilgili zıt yönelimli iki duygulanımı birlikte hissetmesidir."
+      }
+    ]
+  },
+  "retardasyon": {
+    "term": "Retardasyon",
+    "category": "terim",
+    "definition": "Motor aktivitelerin azalmasıdır; temel olarak depresyonda görülür.",
+    "description": "Motor aktivitelerin azalmasıdır; temel olarak depresyonda görülür.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 38,
+        "alinti": "Motor aktivitelerin azalmasıdır. Temel olarak depresyonda görülür. Eksitasyon Motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır."
+      }
+    ]
+  },
+  "eksitasyon": {
+    "term": "Eksitasyon",
+    "category": "terim",
+    "definition": "Motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır.",
+    "description": "Motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 38,
+        "alinti": "Motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır."
+      }
+    ]
+  },
+  "katalepsi": {
+    "term": "Katalepsi",
+    "category": "terim",
+    "definition": "Kişinin uzun süre hareketsiz olarak kalmasıdır; gövde ve uzuvlar sertleşmiştir.",
+    "description": "Kişinin uzun süre hareketsiz olarak kalmasıdır; gövde ve uzuvlar sertleşmiştir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 39,
+        "alinti": "Katalepsi: Kişinin uzun süre hareketsiz olarak kalmasıdır (sertleşmiş bir gövde ve uzuvlar)."
+      }
+    ]
+  },
+  "katatonik stupor": {
+    "term": "Katatonik stupor",
+    "category": "terim",
+    "definition": "Hareketlerde neredeyse durma noktasına varan bir yavaşlamanın olduğu, kişinin çevresinin farkında olmadığı izlenimini verdiği durumdur.",
+    "description": "Hareketlerde neredeyse durma noktasına varan bir yavaşlamanın olduğu, kişinin çevresinin farkında olmadığı izlenimini verdiği durumdur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 39,
+        "alinti": "Katatonik Stupor: Hareketlerde neredeyse durma noktasına varan bir yavaşlama vardır."
+      }
+    ]
+  },
+  "mutizm": {
+    "term": "Mutizm",
+    "category": "terim",
+    "definition": "Hastanın istemli olarak konuşmamasıdır; katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir.",
+    "description": "Hastanın istemli olarak konuşmamasıdır; katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 39,
+        "alinti": "Mutizm: Hastanın istemli olarak konuşmamasıdır. Katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir."
+      }
+    ]
+  },
+  "katapleksi": {
+    "term": "Katapleksi",
+    "category": "terim",
+    "definition": "Heyecan ya da ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur.",
+    "description": "Heyecan ya da ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "clinicalPearl": "Hasta cansızca yığılabilir ya da yalnız belli bir kas grubunda tonus kaybı olur; başı düşer, çenesi sarkar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 39,
+        "alinti": "Katapleksi: Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur."
+      }
+    ]
+  },
+  "diskinezi": {
+    "term": "Diskinezi",
+    "category": "terim",
+    "definition": "İstemsiz hareketlerdir.",
+    "description": "İstemsiz hareketlerdir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 40,
+        "alinti": "Diskinezi: İstemsiz hareketlerdir. Distoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır."
+      }
+    ]
+  },
+  "distoni": {
+    "term": "Distoni",
+    "category": "terim",
+    "definition": "Belli bir kas grubunun istemsiz olarak kasılmasıdır.",
+    "description": "Belli bir kas grubunun istemsiz olarak kasılmasıdır.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 40,
+        "alinti": "Distoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır."
+      }
+    ]
+  },
+  "manyerizm": {
+    "term": "Manyerizm",
+    "category": "terim",
+    "definition": "Kişide alışkanlık halini almış, istemsiz hareketlerdir.",
+    "description": "Kişide alışkanlık halini almış, istemsiz hareketlerdir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 40,
+        "alinti": "Manyerizm: Kişide alışkanlık halini almış, istemsiz hareketlerdir. Ekopraksi: Kişinin başkalarının hareketini taklit etmesidir."
+      }
+    ]
+  },
+  "ekopraksi": {
+    "term": "Ekopraksi",
+    "category": "terim",
+    "definition": "Kişinin başkalarının hareketini taklit etmesidir.",
+    "description": "Kişinin başkalarının hareketini taklit etmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 40,
+        "alinti": "Ekopraksi: Kişinin başkalarının hareketini taklit etmesidir. Akatizi: Genellikle antipsikotiklerin kullanımına bağlı olarak ortaya çıkan; huzursuzluk, gerginlik hissi ile birlikte hastanın yerinde duramaması ve hareket etme zorunluluğu hissetmesidir."
+      }
+    ]
+  },
+  "akatizi": {
+    "term": "Akatizi",
+    "category": "terim",
+    "definition": "Genellikle antipsikotiklerin kullanımına bağlı olarak ortaya çıkan; huzursuzluk ve gerginlik hissiyle birlikte hastanın yerinde duramaması ve hareket etme zorunluluğu hissetmesidir.",
+    "description": "Genellikle antipsikotiklerin kullanımına bağlı olarak ortaya çıkan; huzursuzluk ve gerginlik hissiyle birlikte hastanın yerinde duramaması ve hareket etme zorunluluğu hissetmesidir.",
+    "discipline": "Psikiyatri",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-11"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Psikiyatri /1)Psikiyatrik Semiyoloji.pdf",
+        "ders": "Psikiyatri",
+        "kurul": 2,
+        "sayfa": 40,
+        "alinti": "Akatizi: Genellikle antipsikotiklerin kullanımına bağlı olarak ortaya çıkan; huzursuzluk, gerginlik hissi ile birlikte hastanın yerinde duramaması ve hareket etme zorunluluğu hissetmesidir."
       }
     ]
   }

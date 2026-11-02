@@ -25,6 +25,8 @@ export interface Madde {
   /** Geçmiş yıl (2025-26) öğrenci derleme notu (scripts/ogrenci_onem): A çıkmış kanıtlı, B vurgulu + el notlu; not: öğrencinin
    *  düzeltilmiş el notu ya da işaretin kısa açıklaması */
   ogrenci?: { oncelik: 'A' | 'B'; not?: string };
+  /** Hocanın ders kaydındaki vurgusu (scripts/hoca_vurgu): kategori sorulur|cikmis|onemli|bilin|dikkat, söz = hocanın cümlesi, dk = kayıttaki zaman */
+  hoca?: { kategori: string; soz: string; dk?: string };
 }
 export interface Aday { id: string; sira: number; gerekce: string }
 export interface Cikmis { sinav: string; kok: string; secenekler: Record<string, string>; dogru: string; /** aynı sorunun sorulduğu diğer sınavlar */ tekrar?: string[] }

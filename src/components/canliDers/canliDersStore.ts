@@ -144,7 +144,9 @@ export interface CdDetay {
 export interface CdTerim { t: string; a: string; k: 'terim' | 'latince' | 'karisan' | 'kisaltma'; f?: string; acilim?: string; b: number[][] }
 export interface CdTerimSayfa { bos: number; t: CdTerim[] }
 /** o: geçmiş yıl öğrenci notunda önem (A: çıkmış kanıtlı, B: vurgulu + el notlu) */
-export interface CdV2Cumle { e: string; d: number; v: [string, string][]; c: string[]; a: number | null; s?: unknown; o?: 'A' | 'B' | null }
+export interface CdV2Cumle { e: string; d: number; v: [string, string][]; c: string[]; a: number | null; s?: unknown; o?: 'A' | 'B' | null;
+  /** hocanın ders kaydında bu bilgi için söylediği vurgu: [kategori, söz] (scripts/hoca_vurgu, hocaVurgu.ts) */
+  h?: [string, string] | null }
 /** s/d: elle doğrulanmış slayt (PDF sayfası) ve dosya; dogrulandi olanlar slaytta yanıp sönen chip olarak gösterilir.
  *  seviye: dogrudan (slayttaki bilgi doğrudan soruldu) | ilgili; kanit: slayttan birebir dayanak */
 export interface CdCikmisKonum { id: string; kok: string; cevap: string; yil?: number | string | null; p: number; c: number; skor: number;

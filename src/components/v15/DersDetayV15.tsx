@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BookA, Check, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards, Award } from 'lucide-react';
+import { BookA, Check, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards, Award, Megaphone } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, useCdDersSesSurumu, type CdDetay } from '../canliDers/canliDersStore';
@@ -15,6 +15,8 @@ import DersIstatV15 from './DersIstatV15';
 import DersPdfEkranV15 from './DersPdfEkranV15';
 import { DI_BOLUMLER, dersIcerikGetir, hocaSoruSayisi, type DiBolum, type DiPaket } from './dersIcerik';
 import IcerikKapaliV15 from './IcerikKapaliV15';
+import HocaVurguV15 from './HocaVurguV15';
+import { hocaVurguVar } from './hocaVurgu';
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
 import '../../styles/v15/dersler.css';
 
@@ -31,7 +33,7 @@ const anahtarOku = () => {
 
 const GRUP_KEY = 'medsoru_dd15_grup_v2'; // v2: varsayılan kapalı (eski açık tercihleri sayılmaz)
 const ICERIK_GRUP: { id: string; ad: string; idler: string[]; varsayilan: boolean }[] = [
-  { id: 'calis', ad: 'Dinle ve çalış', idler: ['sesli', 'deste', 'pdf'], varsayilan: false },
+  { id: 'calis', ad: 'Dinle ve çalış', idler: ['sesli', 'vurgu', 'deste', 'pdf'], varsayilan: false },
   { id: 'soru', ad: 'Soru çöz', idler: ['cikmis', 'cozucu', 'sorular', 'hoca', 'hocacozucu', 'hocaara', 'quiz'], varsayilan: false },
   { id: 'bilgi', ad: 'Bilgi kartları', idler: ['terimler', 'hastaliklar', 'bilgiler', 'listeler', 'tablolar', 'kartlar'], varsayilan: false },
 ];
@@ -145,7 +147,7 @@ export default function DersDetayV15() {
   const hoca = hocaYaz(ozet?.hoca || detay?.hoca);
   useV15Baslik({
     baslik,
-    alt: bolumAd ? (bolumAd === 'pdf' ? 'Ders PDF\'i' : DI_BOLUMLER.find((b) => b.id === bolumAd)?.ad || '') : [brans && cdBransKisa(brans), no != null ? `Ders ${no}` : '', hoca].filter(Boolean).join(' · '),
+    alt: bolumAd ? (bolumAd === 'pdf' ? 'Ders PDF\'i' : bolumAd === 'vurgu' ? 'Hocanın vurguladıkları' : DI_BOLUMLER.find((b) => b.id === bolumAd)?.ad || '') : [brans && cdBransKisa(brans), no != null ? `Ders ${no}` : '', hoca].filter(Boolean).join(' · '),
     geri: bolumAd ? `${pathFor('ders_detay', key)}` : brans ? bransYolu(kurul, brans) : merkezYolu(kurul),
   });
 
@@ -154,6 +156,7 @@ export default function DersDetayV15() {
   if (!key) return <p className="dd15-bos v15-card">Ders bulunamadı.</p>;
   if (icerikGizli('sesli', key)) return <IcerikKapaliV15 ne="Bu ders" geri={{ yol: '/dersler', etiket: 'Derslere dön' }} />;
   if (bolumAd === 'pdf') return <DersPdfEkranV15 dersKey={key} />;
+  if (bolumAd === 'vurgu') return <HocaVurguV15 dersKey={key} desteId={detay?.desteId || ozet?.desteId} />;
   const altSayfa = DI_BOLUMLER.find((b) => b.id === bolumAd);
   if (altSayfa && icerikGizli('paket', key.replace(/-v\d+$/, ''))) return <IcerikKapaliV15 ne="Bu içerik bölümü" geri={{ yol: pathFor('ders_detay', key), etiket: 'Derse dön' }} />;
   if (altSayfa) return <DersIcerikV15 dersKey={key} bolum={altSayfa.id} />;
@@ -165,6 +168,8 @@ export default function DersDetayV15() {
   const icerik: { id: string; tone: string; icon: React.ElementType; t: string; s: string; url: string; k?: string }[] = [
     { id: 'sesli', tone: '', icon: Headphones, t: 'Sesli ders', s: [sureDk(sure), pdfVar ? 'PDF + akan metin' : 'akan metin'].filter(Boolean).join(' · '), url: dinle, k: sureDk(sure) || 'akan metin' },
   ];
+  if (hocaVurguVar(key))
+    icerik.push({ id: 'vurgu', tone: 'is-b', icon: Megaphone, t: 'Hocanın vurguladıkları', s: 'Hocanın "sınavda sorarım, önemli, bilin" dediği yerler · işaretleyebilirsin', url: `${pathFor('ders_detay', key)}?b=vurgu`, k: 'sorulur · önemli · bilin' });
   if (desteId)
     icerik.push({ id: 'deste', tone: 'is-c', icon: Layers, t: 'Öğren destesi', s: desteSlayt ? `${desteSlayt} slayt · adım adım, mini sorularla` : 'Adım adım, mini sorularla', url: `/dersler/interaktif/${encodeURIComponent(desteId)}`, k: desteSlayt ? `${desteSlayt} slayt` : 'adım adım' });
   if (cikmis.length)

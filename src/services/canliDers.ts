@@ -473,7 +473,7 @@ export function registerCanliDersRoutes(app: Express) {
         vp.forEach((p: any, i: number) => {
           const cs = Array.isArray(p?.cumleler) ? p.cumleler : [];
           if (!cs.length || sade(cs.map((c: any) => c.ses).join(' ')) !== sade(pars[i].t)) return;
-          if (!cs.some((c: any) => (c.ekran && sade(c.ekran) !== sade(c.ses)) || c.vurgu?.length || c.cikmis?.length || c.slayt_adim != null || c.ogrenci?.oncelik)) return;
+          if (!cs.some((c: any) => (c.ekran && sade(c.ekran) !== sade(c.ses)) || c.vurgu?.length || c.cikmis?.length || c.slayt_adim != null || c.ogrenci?.oncelik || c.hoca?.kategori)) return;
           out[String(i)] = cs.map((c: any) => ({
             e: String(c.ekran || ''),
             d: Number(c.duzey) || 0,
@@ -484,6 +484,8 @@ export function registerCanliDersRoutes(app: Express) {
             s: c.spot ?? null,
             // geçmiş yıl öğrenci notunda en çok çalışılan yer (scripts/ogrenci_onem, OGRENCI_ONEM_YONTEMI.md): A çıkmış kanıtlı, B vurgulu
             o: c.ogrenci?.oncelik === 'A' || c.ogrenci?.oncelik === 'B' ? c.ogrenci.oncelik : null,
+            // hocanın ders kaydında bu bilgi için "sınavda sorarım / önemli / bilin" dediği yer (scripts/hoca_vurgu/yayinla.py)
+            h: c.hoca?.kategori ? [String(c.hoca.kategori), String(c.hoca.ifade || '')] : null,
           }));
         });
         return Object.keys(out).length ? { deste: desteId, p: out } : null;

@@ -1,0 +1,35 @@
+/* v15 · Hocanın vurguladıkları (HocaVurguV15): tür çipleri, hocanın sözü alıntı, yıldızla işaretleme. Renkler palet tokenından. */
+.hv15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 980px; margin: 0 auto; padding: 0 0 40px; width: 100%; }
+.hv15-skel { display: block; height: 220px; border-radius: 16px; }
+.hv15-bos { padding: 24px; text-align: center; color: var(--color-ink-2); }
+.hv15-giris { display: flex; gap: 12px; align-items: flex-start; padding: 14px; margin: 0; line-height: 1.55; color: var(--color-ink-2); font-size: .93rem; }
+.hv15-giris > svg { flex: none; width: 22px; height: 22px; color: var(--color-bad); margin-top: 2px; }
+.hv15-giris b { color: var(--color-ink); }
+
+.hv15-cipler { display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 4px; scrollbar-width: none; }
+.hv15-cipler button { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 14px; border-radius: 999px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-2); font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.hv15-cipler button span { font-size: .78rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.hv15-cipler button svg { width: 15px; height: 15px; }
+.hv15-cipler button:disabled { opacity: .5; cursor: default; }
+.hv15-cipler button.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff); }
+.hv15-cipler button.is-on span { color: inherit; opacity: .8; }
+
+.hv15-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 720px) { .hv15-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.hv15-m { --hv: var(--color-bad); position: relative; display: flex; flex-direction: column; gap: 8px; padding: 14px 14px 12px 18px; overflow: hidden; }
+.hv15-m::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--hv); }
+.hv15-m.is-onemli, .hv15-m.is-bilin, .hv15-m.is-dikkat { --hv: var(--color-warn); }
+.hv15-m.is-isaret { box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--color-warn) 55%, transparent); }
+.hv15-ust { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.hv15-tur { padding: 3px 9px; border-radius: 999px; font-size: .78rem; font-weight: 800; background: var(--color-bad-soft); color: var(--color-bad); }
+.hv15-tur.is-onemli, .hv15-tur.is-bilin, .hv15-tur.is-dikkat { background: var(--color-warn-soft); color: var(--color-warn); }
+.hv15-slayt, .hv15-dk { padding: 2px 8px; border-radius: 999px; background: var(--color-field); font-size: .785rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.hv15-yildiz { margin-left: auto; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; border: 0; background: none; color: var(--color-ink-3); cursor: pointer; }
+.hv15-yildiz svg { width: 20px; height: 20px; }
+.hv15-yildiz[aria-pressed="true"] { color: var(--color-warn); }
+.hv15-yildiz[aria-pressed="true"] svg { fill: currentColor; }
+.hv15-konu { margin: 0; font-weight: 700; color: var(--color-ink); line-height: 1.5; font-size: .98rem; }
+.hv15-soz { margin: 0; padding: 8px 12px; border-radius: 10px; background: var(--color-field); color: var(--color-ink-2); font-style: italic; line-height: 1.55; font-size: .9rem; }
+.hv15-git { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.hv15-git a { display: inline-flex; align-items: center; gap: 5px; font-size: .86rem; font-weight: 600; color: var(--color-accent); text-decoration: none; min-height: 32px; }
+.hv15-git a svg { width: 15px; height: 15px; }

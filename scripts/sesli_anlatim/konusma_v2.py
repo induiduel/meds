@@ -17,6 +17,7 @@ Kurul 2'den itibaren ders işçisi (TALIMAT_SESLI.md §v2) `konusma_v2.json` yaz
                    "cikmis": ["<çıkmış soru id>"],     # bu cümlenin cevapladığı çıkmışlar
                    "spot": "k2-07-s03" | null,
                    "ogrenci": {"oncelik": "A|B", "birim": "<öğrenci önem birimi>"} | null,  # geçmiş yıl öğrenci notu (OGRENCI_ONEM_YONTEMI.md)
+                   "hoca": {"id": "hv-k2-10-03", "kategori": "sorulur|cikmis|onemli|bilin|dikkat", "ifade": "…"} | null,  # hocanın ders kaydı vurgusu (scripts/hoca_vurgu)
                    "slayt": {"sayfa": 5,              # anlatılan slayt (yoksa paragrafın sayfası)
                              "satir": ["<kaynak.md o sayfasından BİREBİR kopyalanmış madde/satır>", …],
                              "sekil": "<anlatılan resim/şema/tablo kısa tarifi>" | null,

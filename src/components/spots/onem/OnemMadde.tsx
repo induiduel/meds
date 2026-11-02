@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Check, GraduationCap, ChevronDown, FileText, History, HelpCircle, RotateCcw, Sparkles, Star } from 'lucide-react';
+import { BookOpen, Check, GraduationCap, Megaphone, ChevronDown, FileText, History, HelpCircle, RotateCcw, Sparkles, Star } from 'lucide-react';
 import { kucuk } from '../spotsShared';
 import { TUR_AD, TUR_IPUCU, bantOf, dersAdi, type Cikmis, type Ders, type Madde, type Soru } from './onemVeri';
 
@@ -121,6 +121,8 @@ export interface MaddeProps {
 }
 
 const ZORLUK_AD = { kolay: 'Kolay', orta: 'Orta', zor: 'Zor' } as const;
+/** Hoca vurgusu rozeti (components/v15/hocaVurgu.ts ile aynı türler) */
+const HOCA_AD: Record<string, string> = { sorulur: 'Hoca: sınavda sorulur', cikmis: 'Hoca: çıkmıştı', onemli: 'Hoca: önemli', bilin: 'Hoca: bilin', dikkat: 'Hoca: dikkat' };
 
 export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, acik, sekme, onAc, ogrenildi, onOgren, gizle, terimler, odak, onDers }) => {
   const aday = (d.sinavAdaylari || []).find((a) => a.id === m.id);
@@ -151,6 +153,8 @@ export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, a
           <div className="on-m-meta">
             <span className={`on-tur t-${m.tur}`} title={TUR_IPUCU[m.tur]}>{TUR_AD[m.tur] || m.tur}</span>
             {aday && <span className={`on-aday${enOlasi ? ' is-en' : ''}`}><Star aria-hidden />{enOlasi ? 'En olası soru' : `Sınav adayı ${aday.sira}`}</span>}
+            {m.hoca && <span className={`on-hoca is-${m.hoca.kategori}`} title={`Hoca derste: “${m.hoca.soz}”`}>
+              <Megaphone aria-hidden />{HOCA_AD[m.hoca.kategori] || 'Hoca vurguladı'}</span>}
             {m.ogrenci && <span className={`on-ogrn is-${m.ogrenci.oncelik}`} title="Geçen yılın öğrenci notunda en önemli yerler arasında">
               <GraduationCap aria-hidden />{m.ogrenci.oncelik === 'A' ? 'Öğrenciler buraya çalıştı' : 'Öğrenci notunda'}</span>}
             {m.kaynak === 'tablo' && <span className="on-dis">Tablo · sorulmaz</span>}
@@ -192,6 +196,7 @@ export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, a
           {m.neden && (
             <p className="on-neden"><Sparkles aria-hidden /><span><b>Neden önemli:</b> {m.neden}</span></p>
           )}
+          {m.hoca?.soz && <p className="on-ogrn-g on-hoca-g"><Megaphone aria-hidden /><span><b>Hoca derste{m.hoca.dk ? ` (${m.hoca.dk})` : ''}:</b> “{m.hoca.soz}”</span></p>}
           {m.ogrenci?.not && <p className="on-ogrn-g"><GraduationCap aria-hidden /><span><b>Geçen yılın öğrenci notu:</b> {m.ogrenci.not}</span></p>}
           {aday && <p className="on-aday-g"><Star aria-hidden /><span><b>{enOlasi ? 'En olası soru' : `Sınav adayı ${aday.sira}`}:</b> {aday.gerekce}</span></p>}
           {dis && <p className="on-dis-g">Hocanın açıklamasına göre {m.kaynak === 'tablo' ? 'tablolardan' : m.kaynak === 'sekil' ? 'resim/şekillerden' : 'klinik bulgulardan'} soru sorulmayacak; bilgi olarak bilinmesi yeterli.</p>}

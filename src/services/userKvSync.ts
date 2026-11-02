@@ -43,6 +43,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_favoriler_v1$/,
   // Oyun rekorları (Sıralama › Oyun; sunucu profil yedeğinden okur)
   /^medsoru_oyun_rekor_v1$/,
+  // Hocanın vurguladıkları: öğrencinin yıldızladığı maddeler (components/v15/hocaVurgu.ts)
+  /^medsoru_hoca_vurgu_isaret_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
   /^medsoru_highlights_v1$/,

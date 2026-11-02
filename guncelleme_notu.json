@@ -1,20 +1,34 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 618,
-  "baslik": "Kolay giriş: yönetici onaylı şifre, öğrenci numarasıyla giriş",
+  "onem": 619,
+  "baslik": "Yeni ders: Psikiyatrik Semiyoloji + Hocanın vurguladıkları",
   "maddeler": [
-    "Eski hesabınla giremiyorsan: girişte \"Şifremi unuttum / Şifre belirle\" → bilgilerini ve yeni şifreni yaz. Yönetici onaylayınca kendiliğinden giriş yapılır; e-posta gerekmez.",
-    "Artık e-posta YA DA öğrenci numarası + şifreyle giriş yapabilirsin.",
-    "Hesabın ve tüm verilerin yerinde kalır."
+    "Psikiyatrik Semiyoloji (Kurul 2) eklendi: Öğren destesi, ders notu, 92 örnek soru, terimler.",
+    "Hocanın vurguladıkları: hocanın derste \"önemli, bilin, sınavda sorarım, dikkat edin\" dediği yerler ders sayfasında ayrı listede; yıldızla işaretleyebilirsin.",
+    "Sesli derste ve En önemliler listesinde \"Hoca: önemli / bilin / sınavda sorulur\" rozeti."
   ],
   "eklenen": [
-    "Yönetici onaylı şifre belirleme",
-    "Öğrenci numarasıyla giriş"
+    "Psikiyatrik Semiyoloji dersi",
+    "Hocanın vurguladıkları listesi ve rozetleri"
   ],
-  "degisen": [
-    "Soru kitapçığı yalnız PDF olarak indirilir (Drive'a yükleme kalktı)"
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "Hocanın vurguladıkları",
+      "nerede": {
+        "ad": "Ders sayfası › Dinle ve çalış",
+        "yol": "/dersler"
+      },
+      "amac": "Hocanın derste açıkça önemli ya da sınavlık dediği yerleri tek listede toplamak.",
+      "islevler": [
+        "Türe göre süzme: sınavda sorulur, çıkmıştı, önemli, bilin, dikkat",
+        "Hocanın kendi sözü ve kayıttaki zamanı",
+        "Yıldızla işaretleme ve İşaretlediklerim listesi",
+        "Sesli derste o yeri açma"
+      ],
+      "ipucu": "Sesli derste kırmızı/turuncu 'Hoca:' rozetini gördüğün cümle hocanın vurguladığı yerdir."
+    }
+  ]
 }
