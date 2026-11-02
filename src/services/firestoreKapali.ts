@@ -7,8 +7,9 @@
  * birkaç yol (CloudBridge) ağ isteği yapmadan sessizce boş döner.
  * Bayrak true yapılınca takma ad kendiliğinden kalkar, gerçek SDK kullanılır.
  */
-const kapali = () => Promise.reject(new Error('Firebase veritabanı devre dışı'));
-const ref = (..._a: unknown[]) => ({ __firestoreKapali: true });
+// Türler bilerek gevşek: çağıran eski kod gerçek SDK imzalarıyla yazılmıştı (hepsi FIREBASE_DB_ENABLED=false ile korunur).
+const kapali = (..._a: any[]): Promise<any> => Promise.reject(new Error('Firebase veritabanı kaldırıldı'));
+const ref = (..._a: any[]): any => ({ __firestoreKapali: true });
 export const getFirestore = ref;
 export const collection = ref;
 export const doc = ref;
@@ -21,8 +22,9 @@ export const getDocs = kapali;
 export const setDoc = kapali;
 export const addDoc = kapali;
 export const deleteDoc = kapali;
-export const onSnapshot = (..._a: unknown[]) => () => {};
-export const writeBatch = () => ({
+export const updateDoc = kapali;
+export const onSnapshot = (..._a: any[]): (() => void) => () => {};
+export const writeBatch = (..._a: any[]): any => ({
   set() { return this; }, update() { return this; }, delete() { return this; },
   commit: kapali,
 });

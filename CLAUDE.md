@@ -50,7 +50,12 @@ and may write to `data/*.json`. Check `git status` afterwards and revert uninten
 
 - **Secrets:** provider keys come only from the server `.env` (see `.env.example`). Never hardcode,
   base64/XOR-obfuscate, or ship keys to the client bundle. The browser calls AI only through the
-  backend (`/api/ai/generate` or feature endpoints). Firebase web `apiKey` is public by design.
+  backend (`/api/ai/generate` or feature endpoints).
+- **Auth (2026-11-02, Firebase/Google removed):** own accounts in meds-pg (`auth_hesaplar`/`auth_oturumlar`/`auth_kodlar`,
+  `deploy/pg/sql/kimlik.sql`), routes `/api/kimlik/*` (`src/services/yerelKimlik.ts`), HMAC access token verified locally
+  (`src/services/kimlikDogrulama.ts`: `requestUser`, `bearerToken`). Client `src/services/auth.ts` exposes a Firebase-like
+  `auth` object (`currentUser.getIdToken()`, `onAuthStateChanged`). uids of migrated accounts are the old Firebase uids.
+  Never add a mandatory path (login, data write, backup) that depends on an external account.
 - **Grounding:** any feature that writes or fixes a question must retrieve sources with
   `findSourcesForQuestion` and put them in the prompt via `formatSourcesForPrompt`, ask the model for
   `usedSources`, and return them with `toSourceRef`.
@@ -80,7 +85,7 @@ Supabase 2026-10-12'de kaldırıldı. Tek veritabanı `meds-pg` (Postgres 17 + p
 - Kişiler (yönetim › `/manage/kisiler/<anahtar>`): `src/services/peopleInsights.ts` — `POST /api/presence` (cihaz +
   etkin süre, `user_devices`/`user_usage_daily`), öğrenci yazma uçları ara katmanla `user_events`'e; tetikleyici →
   yalnız yöneticilere `people_changed`. Şema açılışta kendiliğinden uygulanır (`deploy/pg/sql/user_activity.sql`).
-  `/api/admin/people*` başlık e-postasına GÜVENMEZ: loopback, Firebase yönetici jetonu ya da `MEDS_PANEL_SECRET`
+  `/api/admin/people*` başlık e-postasına GÜVENMEZ: loopback, yöneticinin erişim jetonu ya da `MEDS_PANEL_SECRET`
   (iki makinenin .env'inde aynı). Yerel panel Oracle hedefindeyken istek yerel sunucudan vekille gider.
 - Şema değişikliği: `deploy/pg/sql/` altına idempotent .sql, iki makinede `docker exec -i meds-pg psql -U meds -d meds < ...`.
 - Cihazdaki eski betikler `127.0.0.1:8000/rest/v1` (PostgREST, `meds-rest`) ile çalışmaya devam eder; Oracle'da yoktur.
@@ -119,7 +124,7 @@ after a rebuild go to a small pending map. The old nested `Map<term, Map<chunkId
 
 - Admin auth (2026-10-20, `src/services/adminAuth.ts`): `isRequestAdmin`/`requireAdmin` accept only a verified
   caller — `x-panel-secret` = `MEDS_PANEL_SECRET`, genuine loopback (no `cf-connecting-ip`/`x-forwarded-for`/`x-real-ip`),
-  or `Authorization: Bearer <Firebase ID token>` of the admin email (browser adds it via `src/services/adminFetchAuth.ts`).
+  or `Authorization: Bearer <MeDSor access token>` of the admin email (browser adds it via `src/services/adminFetchAuth.ts`).
   Switch `MEDS_ADMIN_AUTH`: `log` (default) still accepts the legacy `x-admin-email`/`adminEmail`/`requestedBy` claim but
   writes it to `data/admin_auth_log.jsonl`; `strict` rejects it. Go strict only after the log stays empty of legitimate
   traffic. Scripts calling Oracle must send `x-panel-secret`. Local panel → Oracle goes same-origin with

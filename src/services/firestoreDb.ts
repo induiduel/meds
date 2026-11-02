@@ -13,18 +13,14 @@ import {
   onSnapshot,
   orderBy,
   limit
-} from 'firebase/firestore';
-import { auth } from './auth';
+} from './firestoreKapali';
 import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { Committee, QuestionItem, AdminNotification, LectureNote } from '../types';
-import firebaseConfig from '../../firebase-applet-config.json';
 import { aktifCommitteeId } from './kurulTakvimi';
 
-// Initialize Firestore using the configured database ID
-const firestoreDatabaseId = firebaseConfig.firestoreDatabaseId || undefined;
-export const db = firestoreDatabaseId
-  ? getFirestore(auth.app, firestoreDatabaseId)
-  : getFirestore(auth.app);
+// Firebase 2026-11-02'de tamamen kaldırıldı (Google projesi askıya alındı); `db` yalnız eski çağrıların tür
+// uyumu için duran boş bir başvurudur. Tüm veri Oracle meds-pg + sunucu uçlarından gelir.
+export const db = getFirestore();
 
 export const COMMITTEES_COLLECTION = 'committees';
 export const QUESTIONS_COLLECTION = 'questions';
@@ -329,7 +325,7 @@ export class FirestoreDbService {
       const snap = await withTimeout(getDocs(collection(db, COMMITTEES_COLLECTION)));
       if (!snap.empty) {
         const list: Committee[] = [];
-        snap.forEach((d) => {
+        snap.forEach((d: any) => {
           list.push(d.data() as Committee);
         });
         return filterCurrent2026_2027Committees(list);
@@ -371,7 +367,7 @@ export class FirestoreDbService {
 
       if (!snap.empty) {
         const list: QuestionItem[] = [];
-        snap.forEach((d) => {
+        snap.forEach((d: any) => {
           const item = d.data() as QuestionItem;
           // Aktif komite sorularını ve öğrenci taslaklarını dahil et, çıkmış sınav sorularını hariç tut
           if (!item.isPastExam && (!item.examYear || item.examYear === '2026-2027')) {
@@ -484,7 +480,7 @@ export class FirestoreDbService {
     try {
       const snap = await withTimeout(getDocs(collection(db, NOTIFICATIONS_COLLECTION)), 4000);
       const list: AdminNotification[] = [];
-      snap.forEach((d) => list.push(d.data() as AdminNotification));
+      snap.forEach((d: any) => list.push(d.data() as AdminNotification));
       return list.sort(
         (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
       );
@@ -502,18 +498,18 @@ export class FirestoreDbService {
     try {
       const q = query(collection(db, NOTIFICATIONS_COLLECTION), orderBy('timestamp', 'desc'), limit(5));
       let initialLoad = true;
-      const unsubscribe = onSnapshot(q, (snapshot) => {
+      const unsubscribe = onSnapshot(q, (snapshot: any) => {
         if (initialLoad) {
           initialLoad = false;
           return;
         }
-        snapshot.docChanges().forEach((change) => {
+        snapshot.docChanges().forEach((change: any) => {
           if (change.type === 'added') {
             const data = change.doc.data() as AdminNotification;
             onNotification(data);
           }
         });
-      }, (err) => {
+      }, (err: any) => {
         console.warn('[subscribeAdminNotifications] Listener hatası:', err.message);
       });
       return unsubscribe;
@@ -530,7 +526,7 @@ export class FirestoreDbService {
     try {
       const snap = await withTimeout(getDocs(collection(db, 'users')), 4000);
       const list: any[] = [];
-      snap.forEach((d) => list.push(d.data()));
+      snap.forEach((d: any) => list.push(d.data()));
       return list;
     } catch (e) {
       console.warn('Firestore getRegisteredUsers fallback:', e);
@@ -546,7 +542,7 @@ export class FirestoreDbService {
     try {
       const snap = await withTimeout(getDocs(collection(db, LECTURE_NOTES_COLLECTION)), 8000);
       const list: LectureNote[] = [];
-      snap.forEach((d) => list.push(d.data() as LectureNote));
+      snap.forEach((d: any) => list.push(d.data() as LectureNote));
       return list;
     } catch (e) {
       console.warn('Firestore getLectureNotes fallback:', e);
@@ -583,7 +579,7 @@ export class FirestoreDbService {
         const pastSnap = await withTimeout(getDocs(collection(db, PAST_QUESTIONS_COLLECTION)), 8000);
         if (!pastSnap.empty) {
           const list: QuestionItem[] = [];
-          pastSnap.forEach((d) => {
+          pastSnap.forEach((d: any) => {
             const data = d.data() as QuestionItem;
             if (data.id?.startsWith('civan-')) return;
             if (data.tags?.some((t: string) => /civan/i.test(t))) return;
@@ -596,7 +592,7 @@ export class FirestoreDbService {
       // 2. Fallback olarak questions koleksiyonundan çıkmış soruları filtrele
       const snap = await withTimeout(getDocs(collection(db, QUESTIONS_COLLECTION)), 15000);
       const list: QuestionItem[] = [];
-      snap.forEach((d) => {
+      snap.forEach((d: any) => {
         const data = d.data() as QuestionItem;
         // Strictly exclude Civan notes
         if (data.id?.startsWith('civan-')) return;
@@ -667,9 +663,9 @@ export class FirestoreDbService {
   static subscribeWorkerHeartbeat(callback: (data: any | null) => void): () => void {
     if (!FIREBASE_DB_ENABLED) return () => {};
     try {
-      const unsub = onSnapshot(doc(db, 'system_status', 'worker_heartbeat'), (snap) => {
+      const unsub = onSnapshot(doc(db, 'system_status', 'worker_heartbeat'), (snap: any) => {
         callback(snap.exists() ? snap.data() : null);
-      }, (err) => {
+      }, (err: any) => {
         console.warn('Worker heartbeat subscription error:', err.message);
       });
       return unsub;
@@ -697,9 +693,9 @@ export class FirestoreDbService {
   static subscribeSubagentMonitor(callback: (data: any | null) => void): () => void {
     if (!FIREBASE_DB_ENABLED) return () => {};
     try {
-      const unsub = onSnapshot(doc(db, 'system_status', 'ai_subagent_monitor'), (snap) => {
+      const unsub = onSnapshot(doc(db, 'system_status', 'ai_subagent_monitor'), (snap: any) => {
         callback(snap.exists() ? snap.data() : null);
-      }, (err) => {
+      }, (err: any) => {
         console.warn('Subagent monitor subscription error:', err.message);
       });
       return unsub;

@@ -8,7 +8,6 @@ import { NAV_TREE } from '../shell/navModel';
 import { pathFor } from '../../router';
 import { siteLink } from '../../services/peopleService';
 import { ORACLE_API_URL, PANEL_ON_ORACLE_AT_BOOT } from '../../config/deployment';
-import { FIREBASE_PROJECT_ID } from '../../services/auth';
 import { DRIVE_FOLDER_URL } from '../../data/driveCatalog';
 import './db-explorer.css';
 
@@ -49,7 +48,6 @@ const DIS: Card[] = [
   { label: 'Canlı yönetim paneli', hint: 'nofrostlife.com.tr/manage', icon: Server, href: 'https://nofrostlife.com.tr/manage' },
   { label: 'Drive ders klasörü', hint: 'Ders işçisinin izlediği PDF klasörü', icon: FolderOpen, href: DRIVE_FOLDER_URL },
   { label: 'GitHub deposu', hint: 'induiduel/meds', icon: Github, href: 'https://github.com/induiduel/meds' },
-  { label: 'Firebase konsolu', hint: `${FIREBASE_PROJECT_ID} · kimlik doğrulama`, icon: Flame, href: `https://console.firebase.google.com/project/${FIREBASE_PROJECT_ID}/authentication/users` },
   { label: 'Oracle Cloud', hint: 'VM, disk, ağ (92.5.55.109)', icon: Cloud, href: 'https://cloud.oracle.com/compute/instances' },
   { label: 'Cloudflare', hint: 'Alan adı, tünel (meds-tunnel)', icon: Cloud, href: 'https://dash.cloudflare.com' },
   { label: 'Gemini API anahtarları', hint: 'Google AI Studio', icon: KeyRound, href: 'https://aistudio.google.com/app/apikey' },

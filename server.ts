@@ -17,7 +17,8 @@ import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
 import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
 import { pgDb, pgHealth, pgListen } from './src/services/pgDb';
-import { requestUser } from './src/services/firebaseIdentity';
+import { requestUser } from './src/services/kimlikDogrulama';
+import { registerYerelKimlik } from './src/services/yerelKimlik';
 import * as rawLedger from './src/services/rawQuestionLedger';
 import { registerDbQueryRoute, invalidateDbQueryCache } from './src/services/dbQueryRoute';
 import { registerTtsRoute } from './src/services/ttsRoute';
@@ -91,7 +92,6 @@ import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
 import { ServerNotificationService } from './src/services/serverNotificationService.ts';
 import { notificationLinkFor, universalReportLink } from './src/services/notificationLinks.ts';
-import { CloudNotificationBridge } from './src/services/cloudNotificationBridge.ts';
 import {
   autoRepairStore,
   rollbackRepair,
@@ -407,9 +407,29 @@ app.use((req, res, next) => {
 app.use(compression({ threshold: 1024 }));
 
 app.use(express.json({ limit: '100mb' }));
-// Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin Firebase jetonu → req.adminAuth
+// Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin erişim jetonu → req.adminAuth
 configureAdminAuthLog(path.resolve(__dirname, 'data'));
 app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
+// MeDSor kendi kimlik sistemi (2026-11-02, Firebase Auth kaldırıldı): hesaplar/oturumlar meds-pg'de, /api/kimlik/*
+registerYerelKimlik(app, {
+  rootDir: __dirname,
+  adminEmail: 'nofrostlife@gmail.com',
+  isAdmin: (req) => isRequestAdmin(req),
+  // Kimlik kodları (şifre belirle / kodla giriş) zorunlu işlem e-postasıdır: genel e-posta anahtarı (smtp_config.enabled,
+  // karşılama/bildirim e-postaları) kapalı olsa da kayıtlı SMTP bilgisiyle gönderilir. Bilgi yoksa false → yönetici kodu.
+  epostaGonder: async (to, konu, html, metin) => {
+    const cfg = getSmtpConfig();
+    const transporter = createSmtpTransporter() || (cfg.user && cfg.pass ? createSmtpTransporterFrom({ ...cfg, enabled: true }) : null);
+    if (!transporter) return false;
+    try {
+      await transporter.sendMail({ from: cfg.from, to, subject: konu, html, text: metin });
+      return true;
+    } catch (e: any) {
+      console.warn('[Kimlik] SMTP:', e?.message);
+      return false;
+    }
+  },
+});
 // Yönetim v16 denetim kaydı: tüm /api/admin/* yazmaları + kişisel veri okumaları → meds-pg yonetici_denetim
 app.use(denetimAraKatmani());
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
@@ -8220,7 +8240,10 @@ function saveSmtpConfig(config: Partial<SmtpConfig>): SmtpConfig {
 }
 
 function createSmtpTransporter() {
-  const cfg = getSmtpConfig();
+  return createSmtpTransporterFrom(getSmtpConfig());
+}
+
+function createSmtpTransporterFrom(cfg: SmtpConfig) {
   if (!cfg.enabled || !cfg.user || !cfg.pass) {
     return null;
   }
@@ -8390,67 +8413,7 @@ function triggerAdminNotification(params: {
   }
 }
 
-// Supabase & Firebase Bulut Bildirim Köprüsü (Canlı nofrostlife.com.tr -> Admin E-posta & Web Push)
-const cloudNotificationBridge = new CloudNotificationBridge({
-  dataDir: DATA_DIR,
-  cloudSupabase: null,
-  onNewNotification: (params) => {
-    console.log(`[CloudBridge] 🔔 Buluttan yeni bildirim yakalandı (#${params.questionId}), yöneticiye iletiliyor...`);
-    triggerAdminNotification(params);
-    // Canlı sitede sunucuya ulaşılamayıp buluta yazılan çıkmış soru bildirimi: Faz 14 kuyruğuna da al
-    // (aynı bildirim sunucudan zaten geldiyse son 24 saatteki aynı notla eşleşir ve tekrar eklenmez)
-    try {
-      if (params.type === 'report' && getPastQuestionsDb().some((x: any) => String(x.id) === String(params.questionId))) {
-        const qid = String(params.questionId);
-        const since = Date.now() - 24 * 3600 * 1000;
-        const seen = phase14Queue.read().some((it) => it.questionId === qid && it.notes.some((n) => n.kind === 'hata' && Date.parse(n.at) > since && (n.reason || '') === String(params.reason || '').trim().slice(0, 200)));
-        if (!seen) {
-          phase14Queue.enqueue(qid, { kind: 'hata', name: params.author || 'Tıp öğrencisi', reason: params.reason, message: params.details });
-          kickPhase14UserQueue(true);
-
-          try {
-            const pastItem = getPastQuestionsDb().find((x: any) => String(x.id) === qid);
-            const poolItem = db.questions?.find((x: any) => String(x.id) === qid);
-            const source = pastItem ? 'past_question' : (poolItem ? 'practice_question' : 'past_question');
-
-            const enqueued = autoRepairStore.enqueue({
-              source,
-              targetId: qid,
-              userReport: {
-                reason: params.reason || 'Bulut Hata Bildirimi',
-                details: params.details || '',
-                reportedBy: params.author || 'Tıp öğrencisi',
-                reportedAt: new Date().toISOString(),
-              },
-              fullContext: pastItem || poolItem || null,
-            });
-
-            if (enqueued) {
-              console.log(`[AutoRepairEngine] ⚡ Realtime Bildirim Kuyruğa Alındı (#${qid}). Anında AI denetimi başlatılıyor...`);
-              processQueueItemOtomatik(enqueued.id).then(() => {
-                console.log(`[AutoRepairEngine] ✅ Realtime bildirim başarıyla incelendi (#${qid})`);
-              }).catch((err) => {
-                console.warn(`[AutoRepairEngine] ⚠️ Realtime inceleme hatası (#${qid}):`, err.message);
-              });
-            }
-          } catch (arErr: any) {
-            console.warn('[AutoRepairEngine] Buluttan gelen bildirim kuyruğa eklenemedi:', arErr.message);
-          }
-        }
-      }
-    } catch (qErr: any) {
-      console.warn('[Faz14 kullanıcı] buluttan gelen bildirim kuyruğa eklenemedi:', qErr?.message || qErr);
-    }
-  },
-  onSyncSubscriptions: (cloudSubs) => {
-    for (const sub of cloudSubs) {
-      if (sub && sub.endpoint && sub.keys) {
-        serverNotificationService.addSubscription(sub, sub.userAgent || 'Mobil Cihaz (Bulut)');
-      }
-    }
-  },
-});
-cloudNotificationBridge.start(10000);
+// Bulut bildirim köprüsü (Firestore dinleyicisi) 2026-11-02'de kaldırıldı: bildirimler doğrudan bu sunucuya gelir.
 
 // --- Admin Web Push & Mobile Notification Endpoints (Yalnızca Admin) ---
 app.get('/api/admin/push/vapid-public-key', requireAdmin, (_req, res) => {
@@ -8929,7 +8892,16 @@ app.get('/api/summaries/:id', (req, res) => {
   }
 });
 
-// User Synchronization Endpoint (syncs from Auth/Firestore to Server Database)
+// Oturumdaki kişinin sunucu profili (ad, öğrenci no, fotoğraf); yalnız doğrulanmış jetonla
+app.get('/api/users/me', async (req, res) => {
+  const { user: me } = await requestUser(req).catch(() => ({ user: null as any }));
+  if (!me) return res.status(401).json({ error: 'Oturum doğrulanamadı.' });
+  const u = loadUsers().find((x) => x.uid === me.uid);
+  if (!u) return res.json({ success: true, user: null });
+  return res.json({ success: true, user: { uid: u.uid, email: u.email, displayName: u.displayName || null, studentNumber: u.studentNumber || null, photoURL: u.photoURL || null, congratsSentCommittees: u.congratsSentCommittees || [] } });
+});
+
+// User Synchronization Endpoint (syncs from auth to Server Database)
 app.post('/api/users/sync', async (req, res) => {
   const { uid, email, displayName, studentNumber, photoURL, congratsSentCommittees } = req.body;
   if (!uid && !email) {

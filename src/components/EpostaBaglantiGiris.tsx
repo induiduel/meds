@@ -1,75 +1,144 @@
 import React, { useEffect, useState } from 'react';
-import { CheckCircle2, Loader2, MailCheck, Send } from 'lucide-react';
-import { completeEmailLinkLogin, emailLinkPending, sendEmailLoginLink, storedEmailForLink } from '../services/auth';
+import { CheckCircle2, KeyRound, Loader2, MailCheck, Send } from 'lucide-react';
+import { sendAuthCode, verifyAuthCode, AppUser } from '../services/auth';
 import './epostaBaglanti.css';
 
 /**
- * I06 · Şifresiz giriş (Firebase e-posta bağlantısı). Giriş kartının altında:
- *  - "E-postama giriş bağlantısı gönder" → bağlantı gönderildi ekranı (maskeli adres + 60 sn tekrar gönder sayacı)
- *  - Bağlantı başka cihazda açıldıysa (adres giriş bağlantısı, e-posta yerelde yok) e-postayı onaylatıp girişi tamamlar.
- * Oturum açılınca onAuthStateChanged (services/auth.ts initAuth) kullanıcıyı içeri alır; bu bileşen yalnız tetikler.
+ * E-posta kodu akışı (2026-11-02; Firebase e-posta bağlantısının yerine). Giriş kartının altında:
+ *  - amac 'sifre': "Şifremi unuttum / Şifre belirle" → e-postaya 6 haneli kod → kod + yeni şifre → oturum açılır.
+ *    Eski giriş sisteminden taşınan hesaplar da şifresini böyle belirler (uid ve tüm veri aynı kalır).
+ *  - amac 'giris': şifresiz giriş → kod → oturum açılır.
+ * Kod 15 dk geçerli, 5 hatalı denemede düşer; tekrar gönderme 60 sn sonra. Sunucu: src/services/yerelKimlik.ts.
  */
 const maskele = (e: string) => { const [a, d] = e.split('@'); return d ? `${a.slice(0, 1)}***@${d}` : e; };
 
-export function EpostaBaglantiGiris({ email, setEmail, disabled, v12 = false }: { email: string; setEmail: (v: string) => void; disabled?: boolean; v12?: boolean }) {
-  const [durum, setDurum] = useState<'bos' | 'gonderiliyor' | 'gonderildi' | 'onay' | 'tamamlaniyor' | 'tamam'>(
-    () => (emailLinkPending() && !storedEmailForLink() ? 'onay' : 'bos'));
+export type KodAmaci = 'sifre' | 'giris';
+
+export function EpostaBaglantiGiris({
+  email, setEmail, disabled, v12 = false, acik, setAcik, onGiris, sabitEposta, uyari,
+}: {
+  email: string;
+  setEmail: (v: string) => void;
+  disabled?: boolean;
+  v12?: boolean;
+  /** Açık akış (null: yalnız giriş düğmeleri) */
+  acik: KodAmaci | null;
+  setAcik: (a: KodAmaci | null) => void;
+  onGiris: (u: AppUser, mesaj: string) => void;
+  /** Yönetici girişinde e-posta sabittir */
+  sabitEposta?: string;
+  /** Akışın üstünde gösterilecek açıklama (ör. "giriş sistemimiz yenilendi") */
+  uyari?: string | null;
+}) {
+  const [durum, setDurum] = useState<'bos' | 'gonderiliyor' | 'gonderildi' | 'dogrulaniyor' | 'tamam'>('bos');
   const [gonderilen, setGonderilen] = useState('');
+  const [kod, setKod] = useState('');
+  const [yeniSifre, setYeniSifre] = useState('');
   const [sayac, setSayac] = useState(0);
   const [hata, setHata] = useState('');
+  const [bilgi, setBilgi] = useState('');
   useEffect(() => {
     if (sayac <= 0) return;
     const t = window.setTimeout(() => setSayac((s) => s - 1), 1000);
     return () => window.clearTimeout(t);
   }, [sayac]);
+  useEffect(() => { setDurum('bos'); setKod(''); setYeniSifre(''); setHata(''); setBilgi(''); }, [acik]);
+
   const btn = v12 ? 'e12-btn is-lg is-block' : 'au-google';
   const pri = v12 ? 'e12-btn is-pri is-lg is-block' : 'au-submit';
+  const spin = <Loader2 className={v12 ? 'e12-spin' : 'au-spin'} aria-hidden />;
+  const adres = (sabitEposta || email).trim().toLowerCase();
 
-  const gonder = async () => {
-    setHata('');
-    if (!email.trim()) { setHata('Bağlantı göndermek için üstteki e-posta alanını doldur.'); return; }
+  const gonder = async (amac: KodAmaci) => {
+    setHata(''); setBilgi('');
+    if (!adres || !adres.includes('@')) { setAcik(amac); setHata('Kod göndermek için üstteki e-posta alanını doldur.'); return; }
+    setAcik(amac);
     setDurum('gonderiliyor');
-    try { await sendEmailLoginLink(email); setGonderilen(email.trim().toLowerCase()); setDurum('gonderildi'); setSayac(60); }
-    catch (e: any) { setHata(e?.message || 'Bağlantı gönderilemedi.'); setDurum('bos'); }
+    try {
+      const m = await sendAuthCode(adres, amac);
+      setGonderilen(adres); setDurum('gonderildi'); setSayac(60); setBilgi(m);
+    } catch (e: any) {
+      setHata(e?.message || 'Kod gönderilemedi.'); setDurum('bos');
+    }
   };
-  const tamamla = async (e: React.FormEvent) => {
-    e.preventDefault(); setHata(''); setDurum('tamamlaniyor');
-    try { if (await completeEmailLinkLogin(email)) setDurum('tamam'); else { setHata('Giriş bağlantısı bulunamadı.'); setDurum('onay'); } }
-    catch (er: any) { setHata(er?.message || 'Giriş tamamlanamadı.'); setDurum('onay'); }
+  const dogrula = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!acik) return;
+    setHata('');
+    if (kod.replace(/\D/g, '').length !== 6) { setHata('E-postana gelen 6 haneli kodu yaz.'); return; }
+    if (acik === 'sifre' && yeniSifre.trim().length < 6) { setHata('Yeni şifre en az 6 karakter olmalı.'); return; }
+    setDurum('dogrulaniyor');
+    try {
+      const u = await verifyAuthCode(gonderilen || adres, kod, acik, acik === 'sifre' ? yeniSifre.trim() : undefined);
+      setDurum('tamam');
+      onGiris(u, acik === 'sifre' ? 'Şifren kaydedildi, giriş yapıldı' : 'Kodla giriş yapıldı');
+    } catch (er: any) {
+      setHata(er?.message || 'Kod doğrulanamadı.'); setDurum('gonderildi');
+    }
   };
 
   const hataP = hata ? <p role="alert" className="eb-hata">{hata}</p> : null;
-  if (durum === 'onay' || durum === 'tamamlaniyor' || durum === 'tamam') {
+
+  if (acik && (durum === 'gonderildi' || durum === 'dogrulaniyor' || durum === 'tamam')) {
     return (
-      <form className="eb" onSubmit={tamamla}>
-        <p className="eb-baslik"><MailCheck aria-hidden />Giriş bağlantısını açtın</p>
-        <p className="eb-not">Bağlantı başka bir cihazdan istendi. Güvenlik için bağlantının gönderildiği e-posta adresini yukarıya yazıp girişi tamamla.</p>
-        <button type="submit" className={pri} disabled={disabled || durum !== 'onay' || !email.trim()}>
-          {durum === 'tamamlaniyor' ? <Loader2 className={v12 ? 'e12-spin' : 'au-spin'} aria-hidden /> : durum === 'tamam' ? <CheckCircle2 aria-hidden /> : null}
-          {durum === 'tamam' ? 'Giriş yapıldı' : 'Girişi tamamla'}
+      <form className="eb" onSubmit={dogrula} noValidate>
+        <p className="eb-baslik"><MailCheck aria-hidden />E-postanı kontrol et</p>
+        <p className="eb-not">
+          <b>{maskele(gonderilen)}</b> adresine 6 haneli kod gönderdik{acik === 'sifre' ? '; kodu ve yeni şifreni yaz' : ''}. Gelmezse gereksiz (spam) klasörüne bak.
+          {bilgi && !bilgi.startsWith('Bu e-postayla') ? ` ${bilgi}` : ''}
+        </p>
+        <div className="eb-alanlar">
+          <input
+            className="eb-kod"
+            value={kod}
+            onChange={(e) => setKod(e.target.value.replace(/\D/g, '').slice(0, 6))}
+            inputMode="numeric"
+            autoComplete="one-time-code"
+            placeholder="6 haneli kod"
+            aria-label="E-posta kodu"
+            disabled={disabled || durum !== 'gonderildi'}
+          />
+          {acik === 'sifre' && (
+            <input
+              className="eb-kod"
+              type="password"
+              value={yeniSifre}
+              onChange={(e) => setYeniSifre(e.target.value)}
+              autoComplete="new-password"
+              placeholder="Yeni şifre (en az 6 karakter)"
+              aria-label="Yeni şifre"
+              disabled={disabled || durum !== 'gonderildi'}
+            />
+          )}
+        </div>
+        <button type="submit" className={pri} disabled={disabled || durum !== 'gonderildi'}>
+          {durum === 'dogrulaniyor' ? spin : durum === 'tamam' ? <CheckCircle2 aria-hidden /> : null}
+          {durum === 'tamam' ? 'Giriş yapıldı' : acik === 'sifre' ? 'Şifreyi kaydet ve gir' : 'Kodla giriş yap'}
         </button>
+        <div className="eb-satir">
+          <button type="button" className="eb-link" onClick={() => gonder(acik)} disabled={sayac > 0 || disabled}>
+            {sayac > 0 ? `Kodu tekrar gönder · 0:${String(sayac).padStart(2, '0')}` : 'Kodu tekrar gönder'}
+          </button>
+          <button type="button" className="eb-link" onClick={() => setAcik(null)}>Vazgeç</button>
+        </div>
         {hataP}
       </form>
     );
   }
-  if (durum === 'gonderildi') {
-    return (
-      <div className="eb" role="status">
-        <p className="eb-baslik"><MailCheck aria-hidden />E-postanı kontrol et</p>
-        <p className="eb-not"><b>{maskele(gonderilen)}</b> adresine tek kullanımlık giriş bağlantısı gönderdik. Bağlantıya bu cihazda dokunduğunda şifresiz giriş yapılır. Gelmezse gereksiz (spam) klasörüne bak.</p>
-        <button type="button" className="eb-link" onClick={gonder} disabled={sayac > 0 || disabled}>
-          {sayac > 0 ? `Bağlantıyı tekrar gönder · 0:${String(sayac).padStart(2, '0')}` : 'Bağlantıyı tekrar gönder'}
-        </button>
-        {hataP}
-      </div>
-    );
-  }
+
   return (
     <div className="eb">
-      <button type="button" className={btn} onClick={gonder} disabled={disabled || durum === 'gonderiliyor'}>
-        {durum === 'gonderiliyor' ? <Loader2 className={v12 ? 'e12-spin' : 'au-spin'} aria-hidden /> : <Send aria-hidden />}
-        Şifresiz giriş: e-postama bağlantı gönder
+      {uyari && <p className="eb-not" role="status">{uyari}</p>}
+      <button type="button" className={btn} onClick={() => gonder('sifre')} disabled={disabled || durum === 'gonderiliyor'}>
+        {durum === 'gonderiliyor' && acik === 'sifre' ? spin : <KeyRound aria-hidden />}
+        Şifremi unuttum / Şifre belirle
       </button>
+      {!sabitEposta && (
+        <button type="button" className={btn} onClick={() => gonder('giris')} disabled={disabled || durum === 'gonderiliyor'}>
+          {durum === 'gonderiliyor' && acik === 'giris' ? spin : <Send aria-hidden />}
+          Şifresiz giriş: e-postama kod gönder
+        </button>
+      )}
       {hataP}
     </div>
   );

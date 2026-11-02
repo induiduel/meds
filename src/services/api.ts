@@ -6,7 +6,7 @@ import { multiDbManager } from './multiDbManager';
 import { SupabaseDbService, getSupabaseClient } from './supabaseDb';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { offlineDatabaseService } from './offlineDatabaseService';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc } from './firestoreKapali';
 import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
 import { attachModeratorToken, isModeratorMode } from './moderatorSession';
 import { defaultApiBaseForThisHost, panelApiBase, PANEL_ON_ORACLE_AT_BOOT } from '../config/deployment';

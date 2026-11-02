@@ -1903,3 +1903,24 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   bu sisteme göre yerleştirilir; "ayakta şema" başka duruşa KOPYALANMAZ. Tutulması gereken şey tutulur (el çizilir),
   gövde kadrajda kesilmez (uyluk/örtü ile tamamlanır), sıvı davranışı duruma bağlıdır (kateter yerleşmeden idrar akmaz).
   Kural `docs/KMB_2B_STIL.md` §2-3/§2-6; önizleme `sahne3b_onizle.mjs --film` ile gerçek vuruş durumunda bakılır.
+
+## H466 — Google/Firebase projesi askıya alındı: kimse giriş yapamadı, site fiilen kapandı (2026-11-02)
+
+- **Belirti:** Kullanıcı girişi (Google ile ve e-posta+şifre) çalışmıyordu; site zorunlu giriş kapısında kaldığı için
+  öğrenciler hiçbir sayfayı açamadı. Oracle `meds-app` günlüğünde her dakika
+  `PERMISSION_DENIED: Consumer 'projects/990828780858' has been suspended` (Firestore dinleyicisi) satırı vardı.
+- **Kök neden:** Veriler 2026-10-12'de meds-pg'ye taşınmış, Firestore bayrakla kapatılmıştı; ama **kimlik** hâlâ tamamen
+  Google'a bağlıydı: istemci Firebase Auth SDK'sıyla giriş yapıyor, sunucu her jetonu Google Identity Toolkit
+  (`accounts:lookup`) ile doğruluyordu (`firebaseIdentity.ts`). Ayrıca sunucuda `CloudNotificationBridge` Firestore'u
+  dinlemeye devam ediyordu. Tek dış sağlayıcının askıya alınması tek hata noktasıydı.
+- **Çözüm:** Kendi kimlik sistemi: `src/services/yerelKimlik.ts` (hesap/oturum/kod uçları `/api/kimlik/*`, şema
+  `deploy/pg/sql/kimlik.sql`, scrypt şifre özeti, özetli yenileme jetonu, 6 haneli e-posta kodu, hız sınırı),
+  `src/services/kimlikDogrulama.ts` (HMAC-SHA256 erişim jetonu, ağsız doğrulama), istemci `src/services/auth.ts`
+  (Firebase Auth benzeri `auth` nesnesi; çağıranlar değişmedi). Eski hesaplar **aynı uid** ile taşındı (users +
+  doğrulanmış user_data e-postaları); şifreleri bilinmediği için kullanıcı bir kez kodla şifre belirler. Firestore köprüsü,
+  `firebase` paketi, Firebase yapılandırma dosyaları ve Firebase'e yazan eski betikler (arşive) kaldırıldı; Google girişi,
+  Firebase alan adı uyarısı ve Drive'a otomatik yedek kalktı.
+- **Önleme:** Kimlik, veri, yedek ve canlı yayın yalnız Oracle'da (meds-pg + sunucu). Yeni özellik dış bir hesaba bağlı
+  **zorunlu** bir yol (giriş, veri yazımı, yedek) açamaz; dış servis yalnız kesilince sitenin çalışmaya devam ettiği
+  isteğe bağlı ek olabilir (yazı tipi, LLM gibi). Jeton doğrulaması ağ çağrısı yapmaz. Kimlik e-postası (kod) SMTP'ye
+  bağlıdır; SMTP gitmezse yönetici Kullanıcılar › Erişim › "Şifre kodu üret" ile 24 saatlik kod verir.

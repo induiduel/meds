@@ -1,5 +1,6 @@
 /**
- * adminFetchAuth.ts — oturum açmış yönetici için API isteklerine Firebase kimlik jetonu ekler (2026-10-20).
+ * adminFetchAuth.ts — oturum açmış yönetici için API isteklerine MeDSor erişim jetonu ekler (2026-10-20; 2026-11-02'den beri
+ * jeton kendi kimlik sistemimizden gelir, Firebase yok).
  *
  * Sunucu artık `x-admin-email` başlığına güvenmez (src/services/adminAuth.ts); tarayıcıdaki yönetici
  * `Authorization: Bearer <idToken>` ile doğrulanır. Jeton YALNIZ kendi API'mize gider: aynı köken /api/...,
@@ -38,6 +39,8 @@ function isOurApi(input: RequestInfo | URL): boolean {
   let u: URL;
   try { u = new URL(raw, window.location.href); } catch { return false; }
   if (!u.pathname.startsWith('/api/')) return false;
+  // Kimlik uçları jetonu kendisi yönetir (yenileme isteği jeton beklerse kendini bekleyip kilitlenirdi)
+  if (u.pathname.startsWith('/api/kimlik/')) return false;
   return apiOrigins().has(u.origin);
 }
 
@@ -64,7 +67,7 @@ export function installAdminFetchAuth() {
       if (isOurApi(input)) {
         const panelSecret = getStoredPanelSecret();
         const { auth, getLocalAdminSession } = await import('./auth');
-        // Açılışta Firebase oturumu henüz geri yüklenmemişse yönetici istekleri jetonsuz gidip reddedilmesin
+        // Açılışta oturum henüz geri yüklenmemişse yönetici istekleri jetonsuz gidip reddedilmesin
         if (!auth?.currentUser && getLocalAdminSession() && typeof (auth as any)?.authStateReady === 'function') {
           await Promise.race([(auth as any).authStateReady(), new Promise((r) => setTimeout(r, 4000))]).catch(() => {});
         }

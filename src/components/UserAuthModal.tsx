@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { Sheet } from './ui/Sheet';
 import { X, AlertCircle, CheckCircle2, Eye, EyeOff, ShieldCheck, ArrowLeft, Loader2, Mail, Lock, User, Hash, Activity } from 'lucide-react';
 import { Segmented } from './ui/kit';
-import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, sendPasswordReset, ADMIN_EMAIL, AppUser } from '../services/auth';
+import { registerWithEmailPassword, loginWithEmailPassword, sifreBelirlemeGerekli, ADMIN_EMAIL, AppUser } from '../services/auth';
 import { validateNamePolicy } from '../utils/namePolicy';
 import { useAppearance } from '../utils/appearance';
 import { AuthCardV12 } from './v12/AuthV12';
-import { EpostaBaglantiGiris } from './EpostaBaglantiGiris';
+import { EpostaBaglantiGiris, KodAmaci } from './EpostaBaglantiGiris';
 
 /**
  * Giriş / kayıt kartı (kompakt). Tanıtım akışının son adımında gömülü, diğer yerlerde katmanlı pencere olarak açılır.
- * Önce Google (tek dokunuş), sonra e-posta formu; yönetici girişi altta küçük bağlantı.
- * E-posta hesabı Firebase Authentication'da gerçekten oluşturulur/doğrulanır (sahte oturum yok).
+ * E-posta + şifre formu; altında e-posta kodu akışı (şifre belirle / şifresiz giriş); yönetici girişi altta küçük bağlantı.
+ * Hesap MeDSor'un kendi kimlik sisteminde (Oracle meds-pg) gerçekten oluşturulur/doğrulanır (sahte oturum yok).
+ * Google ile giriş 2026-11-02'de kaldırıldı (Google/Firebase projesi askıya alındı).
  */
 interface UserAuthModalProps {
   isOpen: boolean;
@@ -24,15 +25,6 @@ interface UserAuthModalProps {
 }
 
 type Mode = 'login' | 'register' | 'admin';
-
-const GoogleMark = () => (
-  <svg viewBox="0 0 24 24" className="w-[18px] h-[18px]" aria-hidden="true">
-    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
-    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" />
-    <path fill="#FBBC05" d="M5.84 14.1A6.6 6.6 0 0 1 5.5 12c0-.73.13-1.44.34-2.1V7.06H2.18A11 11 0 0 0 1 12c0 1.77.43 3.45 1.18 4.94l3.66-2.84z" />
-    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" />
-  </svg>
-);
 
 export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   isOpen,
@@ -49,13 +41,17 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const [displayName, setDisplayName] = useState('');
   const [studentNumber, setStudentNumber] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
-  const [busy, setBusy] = useState<'' | 'google' | 'form'>('');
+  const [busy, setBusy] = useState<'' | 'form'>('');
+  const [kodAkisi, setKodAkisi] = useState<KodAmaci | null>(null);
+  const [kodUyari, setKodUyari] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
   useEffect(() => {
     if (isOpen) {
       setMode(initialMode);
+      setKodAkisi(null);
+      setKodUyari(null);
       setError(null);
       setSuccess(null);
     }
@@ -72,8 +68,6 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
 
   if (!isOpen) return null;
 
-  const host = typeof window !== 'undefined' ? window.location.hostname : '';
-
   const finish = (user: AppUser, token?: string | null, msg = 'Giriş yapıldı') => {
     setSuccess(msg);
     setTimeout(() => {
@@ -82,31 +76,13 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     }, 350);
   };
 
-  const googleError = (err: any) => {
-    const code = String(err?.code || err?.message || '');
-    if (code.includes('unauthorized-domain')) return `Bu adres (${host}) Google girişi için yetkili değil. nofrostlife.com.tr üzerinden deneyin.`;
-    if (code.includes('popup-blocked')) return 'Tarayıcı açılır pencereyi engelledi. Engelleyiciyi kapatıp tekrar deneyin.';
-    if (code.includes('popup-closed') || code.includes('cancelled-popup')) return 'Google penceresi kapatıldı. Tekrar deneyin.';
-    if (code.includes('network')) return 'Bağlantı kurulamadı. İnternetinizi kontrol edin.';
-    return 'Google ile giriş yapılamadı. Tekrar deneyin.';
-  };
-
-  const onGoogle = async (admin = false) => {
-    setError(null);
-    setBusy('google');
-    try {
-      const r = await googleSignIn(admin ? { preferRedirect: false } : undefined);
-      if (!r) return; // yönlendirme ile devam ediyor
-      if (admin && r.user.email?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
-        setError('Bu Google hesabının yönetici yetkisi yok.');
-        return;
-      }
-      finish(r.user, r.accessToken, admin ? 'Yönetici girişi yapıldı' : 'Google ile giriş yapıldı');
-    } catch (err: any) {
-      setError(googleError(err));
-    } finally {
-      setBusy('');
+  /** Kod akışıyla (şifre belirle / şifresiz giriş) açılan oturum */
+  const onKodGiris = (user: AppUser, msg: string) => {
+    if (mode === 'admin' && user.email?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+      setError('Bu hesabın yönetici yetkisi yok.');
+      return;
     }
+    finish(user, null, msg);
   };
 
   const onLogin = async (e: React.FormEvent) => {
@@ -117,28 +93,23 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     try {
       finish(await loginWithEmailPassword(email, password));
     } catch (err: any) {
+      if (sifreBelirlemeGerekli(err)) {
+        // Eski giriş sisteminden taşınan hesap: şifre belirleme akışı açılır (hata yerine yönlendirme)
+        setKodUyari(err?.message || null);
+        setKodAkisi('sifre');
+        return;
+      }
       setError(err?.message || 'Giriş yapılamadı.');
     } finally {
       setBusy('');
     }
   };
 
-  const onResetPassword = async () => {
+  const onResetPassword = () => {
     setError(null);
     setSuccess(null);
-    if (!email.trim() || !email.includes('@')) {
-      setError('Şifre bağlantısı göndermek için önce üstteki E-posta alanını doldurun.');
-      return;
-    }
-    setBusy('form');
-    try {
-      await sendPasswordReset(email);
-      setSuccess(`${email.trim()} adresine şifre belirleme / sıfırlama bağlantısı gönderildi. Gelen kutunuzu ve spam klasörünü kontrol edin.`);
-    } catch (err: any) {
-      setError(err?.message || 'Şifre sıfırlama e-postası gönderilemedi.');
-    } finally {
-      setBusy('');
-    }
+    setKodUyari(null);
+    setKodAkisi('sifre');
   };
 
   const onRegister = async (e: React.FormEvent) => {
@@ -158,6 +129,12 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     try {
       finish(await registerWithEmailPassword(email, password, displayName.trim(), num), null, 'Kayıt tamamlandı, giriş yapıldı');
     } catch (err: any) {
+      if (sifreBelirlemeGerekli(err)) {
+        setMode('login');
+        setKodUyari(err?.message || null);
+        setKodAkisi('sifre');
+        return;
+      }
       setError(err?.message || 'Kayıt yapılamadı.');
     } finally {
       setBusy('');
@@ -171,6 +148,11 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     try {
       finish(await loginWithEmailPassword(ADMIN_EMAIL, adminPassword), null, 'Yönetici girişi yapıldı');
     } catch (err: any) {
+      if (sifreBelirlemeGerekli(err)) {
+        setKodUyari('Yönetici hesabının şifresi henüz belirlenmedi. Aşağıdan e-postana gelen kodla şifreni belirle.');
+        setKodAkisi('sifre');
+        return;
+      }
       setError(err?.message || 'Yönetici şifresi doğrulanamadı.');
     } finally {
       setBusy('');
@@ -236,13 +218,6 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
             options={[{ value: 'login', label: 'Giriş yap' }, { value: 'register', label: 'Kayıt ol' }]}
           />
 
-          <button type="button" onClick={() => onGoogle(false)} disabled={disabled} className="au-google">
-            {busy === 'google' ? <Loader2 className="au-spin" aria-hidden /> : <GoogleMark />}
-            Google ile devam et
-          </button>
-
-          <div className="au-or" aria-hidden="true"><span>ya da e-posta ile</span></div>
-
           <form key={mode} onSubmit={mode === 'login' ? onLogin : onRegister} className="au-form" noValidate>
             {mode === 'register' && (
               <div className="au-row">
@@ -273,19 +248,15 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
               {mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
             </button>
           </form>
-          {mode === 'login' && <EpostaBaglantiGiris email={email} setEmail={setEmail} disabled={disabled} />}
+          {mode === 'login' && <EpostaBaglantiGiris email={email} setEmail={setEmail} disabled={disabled} acik={kodAkisi} setAcik={setKodAkisi} onGiris={onKodGiris} uyari={kodUyari} />}
         </>
       ) : (
         <div className="au-form">
-          <button type="button" onClick={() => onGoogle(true)} disabled={disabled} className="au-google">
-            {busy === 'google' ? <Loader2 className="au-spin" aria-hidden /> : <GoogleMark />}
-            Google ile yönetici girişi
-          </button>
-          <div className="au-or" aria-hidden="true"><span>ya da şifre ile</span></div>
           <form onSubmit={onAdminPassword} className="au-form">
             {field({ id: 'au-admin', label: 'Yönetici şifresi', icon: ShieldCheck, value: adminPassword, set: setAdminPassword, type: 'password', auto: 'current-password' })}
             <button type="submit" disabled={disabled || !adminPassword} className="au-submit">Giriş</button>
           </form>
+          <EpostaBaglantiGiris email={ADMIN_EMAIL} setEmail={() => {}} sabitEposta={ADMIN_EMAIL} disabled={disabled} acik={kodAkisi} setAcik={setKodAkisi} onGiris={onKodGiris} uyari={kodUyari} />
         </div>
       )}
 
@@ -301,7 +272,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
         <i aria-hidden>·</i>
         <a href="/policy" target="_blank" rel="noopener noreferrer">Gizlilik</a>
         <i aria-hidden>·</i>
-        <button type="button" onClick={() => { setMode(mode === 'admin' ? 'login' : 'admin'); setError(null); setSuccess(null); }}>
+        <button type="button" onClick={() => { setMode(mode === 'admin' ? 'login' : 'admin'); setKodAkisi(null); setKodUyari(null); setError(null); setSuccess(null); }}>
           {mode === 'admin' ? (<><ArrowLeft aria-hidden /> Öğrenci girişi</>) : 'Yönetici'}
         </button>
       </footer>
@@ -311,11 +282,10 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const body = v12 ? (
     <AuthCardV12
       mode={mode}
-      onMode={(m) => { setMode(m); setError(null); setSuccess(null); }}
+      onMode={(m) => { setMode(m); setKodAkisi(null); setKodUyari(null); setError(null); setSuccess(null); }}
       embedded={embedded}
       closable={!embedded && !mandatory}
       onClose={onClose}
-      googleIcon={<GoogleMark />}
       busy={busy}
       disabled={disabled}
       error={error}
@@ -332,12 +302,12 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       setStudentNumber={(v) => setStudentNumber(v.replace(/\D/g, ''))}
       adminPassword={adminPassword}
       setAdminPassword={setAdminPassword}
-      onGoogle={onGoogle}
       onLogin={onLogin}
       onRegister={onRegister}
       onAdminPassword={onAdminPassword}
       onResetPassword={onResetPassword}
-      loginExtra={<EpostaBaglantiGiris email={email} setEmail={setEmail} disabled={disabled} v12 />}
+      loginExtra={<EpostaBaglantiGiris email={email} setEmail={setEmail} disabled={disabled} v12 acik={kodAkisi} setAcik={setKodAkisi} onGiris={onKodGiris} uyari={kodUyari} />}
+      adminExtra={<EpostaBaglantiGiris email={ADMIN_EMAIL} setEmail={() => {}} sabitEposta={ADMIN_EMAIL} disabled={disabled} v12 acik={kodAkisi} setAcik={setKodAkisi} onGiris={onKodGiris} uyari={kodUyari} />}
     />
   ) : card;
 

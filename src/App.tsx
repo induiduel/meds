@@ -179,7 +179,6 @@ const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPane
 const ExamPdfModal = React.lazy(() => wrapLazy(import('./components/ExamPdfModal').then(m => ({ default: m.ExamPdfModal }))));
 const ContributeModal = React.lazy(() => wrapLazy(import('./components/ContributeModal').then(m => ({ default: m.ContributeModal }))));
 const AddCommitteeModal = React.lazy(() => wrapLazy(import('./components/AddCommitteeModal').then(m => ({ default: m.AddCommitteeModal }))));
-const AuthErrorModal = React.lazy(() => wrapLazy(import('./components/AuthErrorModal').then(m => ({ default: m.AuthErrorModal }))));
 const DriveSaveModal = React.lazy(() => wrapLazy(import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal }))));
 const UserAuthModal = React.lazy(() => wrapLazy(import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal }))));
 const ProfileSettingsView = React.lazy(() => wrapLazy(import('./components/settings/ProfileSettingsView').then(m => ({ default: m.ProfileSettingsView }))));
@@ -236,7 +235,6 @@ import type { QuestionFocus } from './services/questionFocus';
 import { multiDbManager } from './services/multiDbManager';
 import {
   initAuth,
-  googleSignIn,
   logout,
   isAdminUser,
   ADMIN_EMAIL,
@@ -332,7 +330,6 @@ export default function App() {
   // Modals state
   const [isContributeModalOpen, setIsContributeModalOpen] = useState(false);
   const [isNewCommitteeModalOpen, setIsNewCommitteeModalOpen] = useState(false);
-  const [isAuthErrorModalOpen, setIsAuthErrorModalOpen] = useState(false);
   const [isDriveModalOpen, setIsDriveModalOpen] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
   const [pdfSlideTarget, setPdfSlideTarget] = useState<{ deckId: string; slideNumber: number } | null>(null);
@@ -875,35 +872,6 @@ export default function App() {
     }
   };
 
-  // Google Login
-  const handleGoogleLogin = async () => {
-    setIsLoggingIn(true);
-    try {
-      const result = await googleSignIn();
-      if (result) {
-        setCurrentUser(result.user);
-        setAccessToken(result.accessToken);
-      }
-    } catch (err: any) {
-      console.warn('Google login exception:', err);
-      if (
-        err.code === 'auth/popup-blocked' ||
-        err.code === 'auth/cancelled-popup-request'
-      ) {
-        try {
-          await googleSignIn({ preferRedirect: true });
-          return;
-        } catch (redirErr) {
-          setIsAuthErrorModalOpen(true);
-        }
-      } else {
-        setIsAuthErrorModalOpen(true);
-      }
-    } finally {
-      setIsLoggingIn(false);
-    }
-  };
-
   // Google Logout
   const handleGoogleLogout = async () => {
     await logout();
@@ -1013,13 +981,7 @@ export default function App() {
   // "100 soru toplanıp soruların %80'i %90 doğruluğa ulaştığında otomatik olarak bir pdf oluşturup drive'da bir klasöre kayıt etmeni istiyorum."
   const thresholdStatus: ThresholdStatus = evaluateAutoBackupThreshold(questions, targetCount);
 
-  // Auto-backup trigger when threshold is met and user is signed in with Drive access
-  useEffect(() => {
-    if (thresholdStatus.isThresholdMet && accessToken && !hasAutoBackedUp && !isUploadingToDrive) {
-      // Trigger automatic Drive backup
-      handleDriveUpload(true);
-    }
-  }, [thresholdStatus.isThresholdMet, accessToken, hasAutoBackedUp]);
+  // Google Drive'a otomatik yedek 2026-11-02'de kaldırıldı (Google girişi yok); yedekler Oracle'da tutulur.
 
   // Yönetim paneli › Kısayollar › Yönetici işlemleri: kabuktaki modalleri olayla açar
   useEffect(() => {
@@ -2555,19 +2517,6 @@ export default function App() {
         </Suspense>
       )}
 
-      {isAuthErrorModalOpen && (
-        <Suspense fallback={null}>
-          <AuthErrorModal
-            isOpen={isAuthErrorModalOpen}
-            onClose={() => setIsAuthErrorModalOpen(false)}
-            onLoginSuccess={(user, token) => {
-              setCurrentUser(user);
-              if (token) setAccessToken(token);
-            }}
-          />
-        </Suspense>
-      )}
-
       {isDriveModalOpen && (
         <Suspense fallback={null}>
           <DriveSaveModal
@@ -2578,7 +2527,7 @@ export default function App() {
             currentUser={currentUser}
             accessToken={accessToken}
             onGoogleSignIn={async () => {
-              await handleGoogleLogin();
+              throw new Error('Google ile giriş kaldırıldı. PDF\'i indirip istediğin yere kaydedebilirsin.');
             }}
             onUploadSuccess={(link, fileName) => {
               setDriveUploadSuccess({

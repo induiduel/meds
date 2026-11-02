@@ -8,7 +8,8 @@ import React, { useEffect, useState } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { installAdminFetchAuth } from './services/adminFetchAuth';
 import { applyTheme, readTheme } from './utils/theme';
-import { ADMIN_EMAIL, auth, getLocalAdminSession, googleSignIn, setLocalAdminSession } from './services/auth';
+import { ADMIN_EMAIL, auth, getLocalAdminSession, loginWithEmailPassword, sifreBelirlemeGerekli, setLocalAdminSession, AppUser } from './services/auth';
+import { EpostaBaglantiGiris, KodAmaci } from './components/EpostaBaglantiGiris';
 import { setStoredPanelSecret } from './config/deployment';
 import { realtimeEventService } from './services/realtimeEvents';
 import { ManageV16 } from './components/manage16/ManageV16';
@@ -40,21 +41,39 @@ type Durum = 'bekle' | 'yonetici' | 'giris';
 const Giris: React.FC<{ tamam: () => void }> = ({ tamam }) => {
   const [hata, setHata] = useState('');
   const [mesgul, setMesgul] = useState(false);
+  const [eposta, setEposta] = useState(ADMIN_EMAIL);
+  const [sifre, setSifre] = useState('');
+  const [kod, setKod] = useState<KodAmaci | null>(null);
+  const [uyari, setUyari] = useState<string | null>(null);
+  const girdi = (u: AppUser) => { if (yoneticiMi(u.email)) tamam(); else tamUygulama(); };
   return (
     <div className="yt-giris">
       <div className="yt-giris-kart">
         <b className="yt-logo" aria-hidden="true">M</b>
         <h1>MeDSor Yönetim</h1>
         <p>Bu konsol yalnız yöneticilere ve moderatörlere açık. Hesabınla ya da kalıcı yönetici anahtarınla giriş yap.</p>
+        <form onSubmit={async (e) => {
+          e.preventDefault();
+          setMesgul(true); setHata('');
+          try { girdi(await loginWithEmailPassword(eposta, sifre)); }
+          catch (er: any) {
+            if (sifreBelirlemeGerekli(er)) { setUyari(er?.message || null); setKod('sifre'); }
+            else setHata(er?.message || 'Giriş yapılamadı.');
+          } finally { setMesgul(false); }
+        }}>
+          <label htmlFor="yt-eposta">E-posta</label>
+          <div className="yt-satir">
+            <input id="yt-eposta" type="email" autoComplete="email" value={eposta} onChange={(e) => setEposta(e.target.value)} />
+          </div>
+          <label htmlFor="yt-sifre">Şifre</label>
+          <div className="yt-satir">
+            <input id="yt-sifre" type="password" autoComplete="current-password" value={sifre} onChange={(e) => setSifre(e.target.value)} />
+            <button type="submit" className="yt-btn birincil" disabled={mesgul || !eposta || !sifre}>Giriş</button>
+          </div>
+        </form>
+        <EpostaBaglantiGiris email={eposta} setEmail={setEposta} disabled={mesgul} acik={kod} setAcik={setKod} onGiris={(u) => girdi(u)} uyari={uyari} />
         <div className="yt-giris-dugmeler">
           <a className="yt-btn" href="/">Siteye dön</a>
-          <button type="button" className="yt-btn birincil" disabled={mesgul} onClick={async () => {
-            setMesgul(true); setHata('');
-            try {
-              const r = await googleSignIn();
-              if (r?.user && yoneticiMi(r.user.email)) tamam(); else if (r?.user) tamUygulama();
-            } catch (e: any) { setHata(e?.message || 'Giriş yapılamadı.'); } finally { setMesgul(false); }
-          }}>Google ile giriş</button>
         </div>
         <form onSubmit={(e) => {
           e.preventDefault();

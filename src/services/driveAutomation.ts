@@ -1,7 +1,7 @@
 import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { LectureNote, QuestionItem, QuestionLectureMatch } from '../types';
 import { db, cleanForFirestore } from './firestoreDb';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc } from './firestoreKapali';
 import { getCustomApiUrl } from './api';
 import { 
   DRIVE_FOLDER_ID, 

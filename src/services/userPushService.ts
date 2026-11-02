@@ -9,7 +9,7 @@ import fs from 'fs';
 import path from 'path';
 import type express from 'express';
 import webpush from 'web-push';
-import { requestUser } from './firebaseIdentity';
+import { requestUser } from './kimlikDogrulama';
 
 const DEVICE_TOKEN_RE = /^dev-[a-z0-9-]{16,64}$/i;
 const MAX_PER_USER = 8;

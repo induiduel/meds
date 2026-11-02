@@ -1,19 +1,24 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 616,
-  "baslik": "KMB: 2B çizgi film videoları ve Hikâye filmi",
+  "onem": 617,
+  "baslik": "Giriş sistemi yenilendi: Google girişi kalktı",
   "maddeler": [
-    "Üretral kateter dersinin 30 videosu (12 konu + 18 adım) 2B çizgi film dilinde yeniden üretildi.",
-    "Yeni \"Hikâye filmi\": tüm bölümler kazanım ve öğretici bulgu kartlarıyla tek akışta, tam ekran.",
-    "Eski videolar korunur."
+    "Giriş artık MeDSor'un kendi sistemiyle: e-posta + şifre. Google ile giriş kaldırıldı.",
+    "Eski hesabın ve tüm verilerin yerinde: bir kez \"Şifremi unuttum / Şifre belirle\" ile e-postana gelen 6 haneli kodla yeni şifreni belirle.",
+    "Şifresiz giriş: e-postana gelen kodla da girebilirsin."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "E-posta koduyla şifre belirleme ve şifresiz giriş"
+  ],
   "degisen": [
-    "Hedefler filmi yakınlaştırma ölçüsü"
+    "Giriş ve kayıt ekranı (Google düğmesi kaldırıldı)"
   ],
   "duzeltilen": [
-    "Yakın çekimde kesilen ayrıntılar"
+    "Google hizmetleri askıya alındığı için açılamayan giriş"
   ],
-  "silinen": [],
+  "silinen": [
+    "Google ile giriş",
+    "Google Drive'a otomatik yedek (yedekler sunucuda)"
+  ],
   "yenilikler": []
 }

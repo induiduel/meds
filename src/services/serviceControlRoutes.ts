@@ -28,7 +28,7 @@ import path from 'path';
 import crypto from 'crypto';
 import { execFile } from 'child_process';
 import { isLoopback, isStrongAdmin } from './peopleInsights';
-import { requestUser } from './firebaseIdentity';
+import { requestUser } from './kimlikDogrulama';
 
 type Action = 'restart' | 'stop' | 'start';
 type Kind = 'user-unit' | 'system-unit' | 'container';

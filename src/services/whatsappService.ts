@@ -10,7 +10,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import type express from 'express';
-import { requestUser } from './firebaseIdentity';
+import { requestUser } from './kimlikDogrulama';
 
 export interface WhatsAppPrefs {
   enabled: boolean;

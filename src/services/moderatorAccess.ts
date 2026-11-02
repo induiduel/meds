@@ -15,7 +15,7 @@
 import fs from 'fs';
 import path from 'path';
 import type express from 'express';
-import { requestUser } from './firebaseIdentity';
+import { requestUser } from './kimlikDogrulama';
 import { suspensionActive } from './userAdminRoutes';
 
 type Any = Record<string, any>;

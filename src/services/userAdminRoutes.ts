@@ -15,7 +15,7 @@
  */
 import express from 'express';
 import { isLoopback, isStrongAdmin } from './peopleInsights';
-import { requestUser, oturumIptaliKur } from './firebaseIdentity';
+import { requestUser, oturumIptaliKur } from './kimlikDogrulama';
 
 type Any = Record<string, any>;
 export type UserRole = 'student' | 'moderator' | 'admin';

@@ -17,7 +17,7 @@
  * sayılmaz. Beğeni yalnız açılınca (yanıtta liked !== false) ve hedef başına bir kez.
  */
 import type express from 'express';
-import { requestUser } from '../firebaseIdentity';
+import { requestUser } from '../kimlikDogrulama';
 import type { BasarimMotor } from './basarimMotor';
 
 const KURALLAR: { m: string; re: RegExp; tur: (body: any, status: number, req: express.Request) => string | null; tekil?: boolean }[] = [

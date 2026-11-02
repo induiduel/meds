@@ -5,8 +5,7 @@
  *  - Kimlik profil yedeğiyle aynı (`backupIdentity`: Firebase jetonu ya da cihaz jetonu).
  *  - Gösterim sw.js `push` olayında; tıklama hedef yola gider (notificationclick).
  */
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './auth';
+import { auth, onAuthStateChanged } from './auth';
 import { safeJsonFetch } from './api';
 import { backupIdentity } from './userDataSyncService';
 

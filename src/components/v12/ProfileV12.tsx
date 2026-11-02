@@ -31,7 +31,7 @@ import {
   Maximize,
   Type,
 } from 'lucide-react';
-import { AppUser, updateUserProfileData, setOrUpdateAccountPassword, sendPasswordReset } from '../../services/auth';
+import { AppUser, updateUserProfileData, setOrUpdateAccountPassword } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
 import { QuestionItem } from '../../types';
 import { validateNamePolicy } from '../../utils/namePolicy';
@@ -1030,26 +1030,10 @@ const AccountPanel: React.FC<{
     try {
       await setOrUpdateAccountPassword(newPass);
       setNewPass('');
-      setPassOk('Şifreniz kaydedildi. Artık hesabınıza hem Google ile hem de e-posta + şifrenizle giriş yapabilirsiniz.');
-      toast.success('Şifre kaydedildi', 'Hem Google hem e-posta + şifre ile giriş aktif.');
+      setPassOk('Şifreniz kaydedildi. Bundan sonra e-postanız ve bu şifreyle giriş yapabilirsiniz.');
+      toast.success('Şifre kaydedildi', 'Yeni şifrenle giriş yapabilirsin.');
     } catch (err: any) {
       setPassErr(err?.message || 'Şifre kaydedilemedi.');
-    } finally {
-      setPassBusy(false);
-    }
-  };
-
-  const onSendResetMail = async () => {
-    if (!currentUser?.email) return;
-    setPassErr(null);
-    setPassOk(null);
-    setPassBusy(true);
-    try {
-      await sendPasswordReset(currentUser.email);
-      setPassOk(`${currentUser.email} adresine şifre belirleme / sıfırlama bağlantısı gönderildi.`);
-      toast.success('E-posta gönderildi', `${currentUser.email} gelen kutusunu kontrol edin.`);
-    } catch (err: any) {
-      setPassErr(err?.message || 'Şifre bağlantısı gönderilemedi.');
     } finally {
       setPassBusy(false);
     }
@@ -1154,7 +1138,7 @@ const AccountPanel: React.FC<{
                 />
               </div>
               <span className="u12-hint">
-                Google ile giriş yaptığınızda Firebase güvenlik gereği eski şifreyi kaldırır. Buradan yeni şifre tanımlayarak hesabınıza hem Google ile hem de e-posta + şifre ile giriş yapabilirsiniz.
+                En az 6 karakter. Şifreni unutursan giriş ekranındaki "Şifremi unuttum / Şifre belirle" ile e-postana gelen kodla yenisini belirleyebilirsin.
               </span>
             </div>
           </div>
@@ -1165,9 +1149,6 @@ const AccountPanel: React.FC<{
             <div className="u12-panel-f"><span className="u12-hint is-ok u12-saved" role="status"><CheckCircle2 aria-hidden />{passOk}</span></div>
           )}
           <div className="u12-panel-f">
-            <button type="button" className="u12-btn is-ghost" onClick={onSendResetMail} disabled={passBusy}>
-              E-postama şifre bağlantısı gönder
-            </button>
             <button type="submit" className="u12-btn is-pri" disabled={passBusy || newPass.trim().length < 6}>
               {passBusy ? 'İşleniyor…' : 'Şifreyi kaydet'}
             </button>

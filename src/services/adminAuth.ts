@@ -6,7 +6,7 @@
  * `req.adminAuth = { ok, via }` hesaplar; yönetici yalnız şunlardan biriyle doğrulanır:
  *   (a) `x-panel-secret` = MEDS_PANEL_SECRET (sabit zamanlı karşılaştırma) — betikler, Oracle konteynerleri,
  *   (b) gerçek loopback (vekil başlığı yok: cf-connecting-ip / x-forwarded-for / x-real-ip) — cihazdaki betikler/panel,
- *   (c) `Authorization: Bearer <Firebase ID jetonu>` ve e-postası yönetici e-postası — tarayıcıdaki yönetici.
+ *   (c) `Authorization: Bearer <MeDSor erişim jetonu>` ve e-postası yönetici e-postası — tarayıcıdaki yönetici.
  *
  * Geçiş anahtarı MEDS_ADMIN_AUTH:
  *   - 'strict' (varsayılan, 2026-10-24): yalnız doğrulanmış istek yönetici sayılır; eski iddia yine günlüğe yazılır.
@@ -20,7 +20,7 @@ import path from 'path';
 import crypto from 'crypto';
 import { Readable } from 'stream';
 import type express from 'express';
-import { requestUser, bearerToken } from './firebaseIdentity';
+import { requestUser, bearerToken } from './kimlikDogrulama';
 import { isLoopback } from './peopleInsights';
 
 export type AdminAuthVia = 'token' | 'secret' | 'loopback' | null;
@@ -29,7 +29,7 @@ export type AdminAuthState = { ok: boolean; via: AdminAuthVia };
 declare module 'express-serve-static-core' {
   interface Request {
     adminAuth?: AdminAuthState;
-    /** Ara katmanın doğruladığı Firebase kullanıcısı (geçerli Bearer jetonu varsa; yönetici olmasa da). */
+    /** Ara katmanın doğruladığı kullanıcı (geçerli Bearer jetonu varsa; yönetici olmasa da). */
     verifiedUser?: { uid: string; email: string } | null;
   }
 }
@@ -49,7 +49,7 @@ export function adminAuthMode(): 'log' | 'strict' {
   return lc(process.env.MEDS_ADMIN_AUTH) === 'log' ? 'log' : 'strict';
 }
 
-/** Doğrulanmış Firebase uid'i (ara katman hesaplar); yoksa ''. İstemcinin yolladığı uid/e-posta/ad kimlik sayılmaz. */
+/** Doğrulanmış uid (ara katman hesaplar); yoksa ''. İstemcinin yolladığı uid/e-posta/ad kimlik sayılmaz. */
 export function verifiedUid(req: express.Request): string {
   return String(req.verifiedUser?.uid || '');
 }
@@ -68,7 +68,7 @@ export function adminAuthMiddleware(adminEmail: string): express.RequestHandler 
     const qTok = req.path === '/api/realtime/events' ? String((req.query as any)?.idToken || '') : '';
     if (qTok && !req.headers.authorization) req.headers.authorization = `Bearer ${qTok}`;
     if (!bearerToken(req)) return next();
-    // firebaseIdentity jeton doğrulamasını jeton özetine göre 10 dk önbellekte tutar (her istekte Google'a gidilmez)
+    // Erişim jetonu kimlikDogrulama.ts içinde yerel olarak (HMAC) doğrulanır; dış servise gidilmez
     requestUser(req)
       .then((who) => {
         req.verifiedUser = who.user || null;

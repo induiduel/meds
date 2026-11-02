@@ -8,10 +8,26 @@ type ESatir = { uid: string; email: string; displayName: string; role: string; i
 /**
  * Kullanıcılar › Erişim: rol (öğrenci/moderatör/yönetici), askıya alma, oturumları sonlandırma.
  * Gerçek etkiler: askı tüm yazma uçlarını 403'ler; oturum sonlandırma o andan önceki girişin jetonlarını sunucuda reddeder
- * ve öğrencinin uygulaması açılışta çıkış yapar (Firebase yenileme jetonu iptal edilmez).
+ * ve yenileme jetonunu da geçersiz kılar; öğrencinin uygulaması açılışta çıkış yapar.
+ * Kimlik (2026-11-02, Firebase kaldırıldı): "Şifre" sütunu hesabın şifresinin belirlenip belirlenmediğini gösterir
+ * (eski sistemden taşınan hesaplar bir kez kodla şifre belirler). E-posta gitmezse "Şifre kodu üret" 24 saatlik kod verir;
+ * kodu öğrenciye kendi kanalından iletirsin, öğrenci giriş ekranında "Şifremi unuttum / Şifre belirle" ile kullanır.
  */
 export default function KisiErisim({ git }: SayfaProps) {
   const d = useAdminSorgu<{ users: ESatir[] }>('/api/admin/people-access', { canliOlay: ['people_changed'] });
+  const h = useAdminSorgu<{ hesaplar: { uid: string; email: string; sifre_var: boolean; kaynak: string; oturum: number; son_giris: string | null }[] }>('/api/admin/kimlik/hesaplar');
+  const hesap = new Map((h.veri?.hesaplar || []).map((x) => [x.uid, x]));
+  const kodUret = async (uids: string[]) => {
+    const x = (d.veri?.users || []).find((u) => u.uid === uids[0]);
+    if (!x || uids.length !== 1) { bildir('Kod için tek hesap seç.', 'kotu'); return false; }
+    if (!(await onayIste({ baslik: `${x.email} için şifre belirleme kodu üretilsin mi?`, onayMetni: 'Kod üret', aciklama: <>Kod 24 saat geçerlidir, öncekini geçersiz kılar. Kodu öğrenciye yalnız kendi kanalından ilet.</> }))) return false;
+    try {
+      const r = await adminIstek<any>('/api/admin/kimlik/sifirlama-kodu', { yontem: 'POST', govde: { email: x.email } });
+      await onayIste({ baslik: `Kod: ${r.kod}`, onayMetni: 'Tamam', aciklama: <>{x.email} · {r.gecerlilik} geçerli. Öğrenci giriş ekranında e-postasını yazıp <b>Şifremi unuttum / Şifre belirle</b> → bu kod + yeni şifre ile girer.</> });
+      h.yenile();
+      return true;
+    } catch (e: any) { bildir(e.message, 'kotu'); return false; }
+  };
   // H181: onay metni yazım hedefini söyler; H179: gerekçeli askı kendi penceresinde onaylandıysa (onayli) ikinci kez sorulmaz
   const uygula = async (yol: string, uids: string[], govde: any, baslik: string, tehlikeli = false, onayli = false) => {
     if (!uids.length) return;
@@ -54,11 +70,13 @@ export default function KisiErisim({ git }: SayfaProps) {
               <button className="m16-btn tehlike" onClick={async () => { if (await askiya(sec)) temizle(); }}>Askıya al</button>
               <button className="m16-btn" onClick={async () => { if (await uygula('unsuspend', sec, {}, `${sec.length} hesabın askısı kalksın mı?`)) temizle(); }}>Askıyı kaldır</button>
               <button className="m16-btn tehlike" onClick={async () => { if (await uygula('oturum-sonlandir', sec, {}, `${sec.length} hesabın tüm oturumları sonlandırılsın mı?`, true)) temizle(); }}>Oturumları sonlandır</button>
+              {sec.length === 1 && <button className="m16-btn" onClick={async () => { if (await kodUret(sec)) temizle(); }}>Şifre kodu üret</button>}
             </>
           )}
           sutunlar={[
             { anahtar: 'displayName', baslik: 'Hesap', genislik: 'minmax(200px,2fr)', sirala: true, deger: (x) => `${x.displayName} ${x.email} ${x.uid}`, hucre: (x) => <span className="m16-kisalt"><KisiBag anahtar={`u:${x.uid}`} git={git}><strong>{x.displayName || x.email}</strong></KisiBag> <small style={{ color: 'var(--color-ink-3)' }}>{x.email}</small></span> },
             { anahtar: 'role', baslik: 'Rol', genislik: '150px', deger: (x) => x.role, hucre: (x) => <span style={{ display: 'inline-flex', gap: 4 }}><RolRozeti rol={x.role} />{x.isOwner && <Rozet ton="vurgu">sahip</Rozet>}</span> },
+            { anahtar: 'sifre', baslik: 'Şifre', genislik: '130px', deger: (x) => (hesap.get(x.uid)?.sifre_var ? 1 : 0), sirala: true, hucre: (x) => { const k = hesap.get(x.uid); return !k ? <Rozet ton="kotu" title="Giriş hesabı yok">hesap yok</Rozet> : k.sifre_var ? <Rozet ton="iyi">belirlendi</Rozet> : <Rozet title="Eski sistemden taşındı; kodla şifre belirlemeli">bekliyor</Rozet>; } },
             { anahtar: 'suspended', baslik: 'Askı', genislik: 'minmax(140px,1fr)', deger: (x) => (x.suspended ? 1 : 0), sirala: true, hucre: (x) => (x.suspended ? <Rozet ton="kotu" title={x.suspension?.reason}>Askıda{x.suspension?.until ? ` · ${tarihMetni(x.suspension.until)}` : ''}</Rozet> : '—') },
             { anahtar: 'sessionsRevokedAt', baslik: 'Oturum kesildi', genislik: '120px', deger: (x) => x.sessionsRevokedAt || '', hucre: (x) => (x.sessionsRevokedAt ? zamanMetni(x.sessionsRevokedAt) : '—'), gizli: true },
             { anahtar: 'lastLoginAt', baslik: 'Son giriş', genislik: '110px', sirala: true, deger: (x) => x.lastLoginAt || '', hucre: (x) => (x.lastLoginAt ? zamanMetni(x.lastLoginAt) : '—') },

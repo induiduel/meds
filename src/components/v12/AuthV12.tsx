@@ -7,7 +7,7 @@ import '../../styles/v15/giris.css';
 
 /* =============================================================================
  * v12 "Net" — giriş / kayıt kartı ve yetkili alan adı uyarısı (canvas: Entry.dc.html "Giriş", Overlays.dc.html).
- * Durum, doğrulama ve Firebase çağrıları UserAuthModal / AuthErrorModal'da kalır; burada yalnız yapı ve görünüm.
+ * Durum, doğrulama ve kimlik çağrıları UserAuthModal'da kalır; burada yalnız yapı ve görünüm (Google girişi 2026-11-02'de kaldırıldı).
  * ============================================================================= */
 
 export type AuthModeV12 = 'login' | 'register' | 'admin';
@@ -20,8 +20,7 @@ export interface AuthCardV12Props {
   /** Kapat düğmesi gösterilsin mi (gömülü ya da zorunlu değilse) */
   closable: boolean;
   onClose: () => void;
-  googleIcon: React.ReactNode;
-  busy: '' | 'google' | 'form';
+  busy: '' | 'form';
   disabled: boolean;
   error: string | null;
   success: string | null;
@@ -37,17 +36,18 @@ export interface AuthCardV12Props {
   setStudentNumber: (v: string) => void;
   adminPassword: string;
   setAdminPassword: (v: string) => void;
-  onGoogle: (admin: boolean) => void;
   onLogin: (e: React.FormEvent) => void;
   onRegister: (e: React.FormEvent) => void;
   onAdminPassword: (e: React.FormEvent) => void;
   onResetPassword?: () => void;
-  /** Giriş kipinde formun altına eklenen bölüm (ör. I06 e-posta bağlantısıyla şifresiz giriş) */
+  /** Giriş kipinde formun altına eklenen bölüm (e-posta kodu: şifre belirle / şifresiz giriş) */
   loginExtra?: React.ReactNode;
+  /** Yönetici kipinde formun altına eklenen bölüm (yönetici şifresini kodla belirleme) */
+  adminExtra?: React.ReactNode;
 }
 
 /**
- * Canvas sırası: başlık + tek satır açıklama → Google ile devam et → "ya da e-posta" ayırıcı →
+ * Sıra: başlık + tek satır açıklama →
  * üstte etiketli alanlar (şifrede Göster) → birincil düğme → "Hesabın yok mu? Kayıt ol" → hata kutusu → alt bağlantılar.
  */
 export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
@@ -59,7 +59,7 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
     mode === 'admin'
       ? 'Yönetim konsoluna erişim'
       : mode === 'login'
-        ? (v15 ? 'İlerlemen, notların ve hücren hesabında saklanır.' : 'Tek dokunuşla Google, ya da e-postan ve şifrenle.')
+        ? (v15 ? 'İlerlemen, notların ve hücren hesabında saklanır.' : 'E-postan ve şifrenle.')
         : v15 ? 'Okul e-postan ve öğrenci numaranla hesabını oluştur.' : 'Katkıların adınla görünsün; soru eklemek için giriş şart değil.';
 
   const field = (o: {
@@ -130,17 +130,6 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
               ))}
             </div>
           )}
-          <button type="button" className="e12-btn is-lg is-block e12-google" onClick={() => p.onGoogle(false)} disabled={disabled}>
-            {p.busy === 'google' ? spin : p.googleIcon}
-            Google ile devam et
-          </button>
-
-          {v15 && mode === 'login' && (
-            <button type="button" className="e12-btn is-lg is-block v15g-yol" onClick={() => p.onMode('register')} disabled={disabled}>
-              <GraduationCap aria-hidden="true" /> Öğrenci e-postasıyla kayıt ol
-            </button>
-          )}
-          <div className="e12-or" aria-hidden="true"><span>{v15 ? 'ya da' : 'ya da e-posta ile'}</span></div>
 
           <form key={mode} onSubmit={mode === 'login' ? p.onLogin : p.onRegister} className="e12-form" noValidate>
             {mode === 'register' && (
@@ -163,11 +152,7 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
                   ? p.password.length >= 6
                     ? (<><Check aria-hidden="true" /> Yeterli uzunlukta</>)
                     : 'En az 6 karakter'
-                  : mode === 'login' && p.onResetPassword ? (
-                      <button type="button" className="e12-link" onClick={p.onResetPassword} disabled={disabled}>
-                        Şifremi unuttum / Şifre tanımla
-                      </button>
-                    ) : undefined,
+                  : undefined,
               hintOk: mode === 'register' && p.password.length >= 6,
             })}
             <button type="submit" className="e12-btn is-pri is-lg is-block" disabled={disabled}>
@@ -176,6 +161,12 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
             </button>
           </form>
           {mode === 'login' && p.loginExtra}
+
+          {v15 && mode === 'login' && (
+            <button type="button" className="e12-btn is-lg is-block v15g-yol" onClick={() => p.onMode('register')} disabled={disabled}>
+              <GraduationCap aria-hidden="true" /> Öğrenci e-postasıyla kayıt ol
+            </button>
+          )}
 
           {<p className="e12-swap">
             {mode === 'login' ? 'Hesabın yok mu?' : 'Hesabın var mı?'}{' '}
@@ -186,15 +177,11 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
         </>
       ) : (
         <>
-          <button type="button" className="e12-btn is-lg is-block e12-google" onClick={() => p.onGoogle(true)} disabled={disabled}>
-            {p.busy === 'google' ? spin : p.googleIcon}
-            Google ile yönetici girişi
-          </button>
-          <div className="e12-or" aria-hidden="true"><span>ya da şifre ile</span></div>
           <form onSubmit={p.onAdminPassword} className="e12-form">
             {field({ id: 'admin', label: 'Yönetici şifresi', value: p.adminPassword, set: p.setAdminPassword, type: 'password', auto: 'current-password' })}
             <button type="submit" className="e12-btn is-pri is-lg is-block" disabled={disabled || !p.adminPassword}>Giriş</button>
           </form>
+          {p.adminExtra}
           <p className="e12-swap">
             <button type="button" className="e12-link" onClick={() => p.onMode('login')}>
               <ArrowLeft aria-hidden="true" /> Öğrenci girişi
@@ -224,129 +211,5 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
         )}
       </footer>
     </div>
-  );
-};
-
-/* -----------------------------------------------------------------------------
- * Firebase yetkili alan adı uyarısı (AuthErrorModal v12 görünümü): sola hizalı diyalog,
- * renkli başlık şeridi yerine ton simgesi; iki çözüm çizgiyle ayrılmış iki bölüm.
- * --------------------------------------------------------------------------- */
-
-export interface AuthErrorV12Props {
-  onClose: () => void;
-  domain: string;
-  domains: string[];
-  adminEmail: string;
-  projectId: string;
-  consoleUrl: string;
-  tokenInput: string;
-  setTokenInput: (v: string) => void;
-  showTokenInput: boolean;
-  onToggleToken: () => void;
-  onCopy: (d: string) => void;
-  onBypass: () => void;
-}
-
-export const AuthErrorV12: React.FC<AuthErrorV12Props> = (p) => {
-  const id = useId();
-  const [copied, setCopied] = useState<string | null>(null);
-  const timer = useRef<number | undefined>(undefined);
-  useEffect(() => () => window.clearTimeout(timer.current), []);
-  const copy = (d: string) => {
-    p.onCopy(d);
-    setCopied(d);
-    window.clearTimeout(timer.current);
-    timer.current = window.setTimeout(() => setCopied(null), 2000);
-  };
-
-  return (
-    <EntryDialogV12 labelledBy={`${id}-t`} onClose={p.onClose} width={560}>
-      <div className="e12-dlg-h">
-        <span className="e12-lead is-warn" aria-hidden="true"><ShieldAlert /></span>
-        <div>
-          <h2 id={`${id}-t`}>Firebase Yetkili Alan Adı (Authorized Domain) Uyarısı</h2>
-          <p>Hata Kodu: <code className="e12-code">auth/unauthorized-domain</code></p>
-        </div>
-        <button type="button" className="e12-btn is-ghost is-icon is-sm" onClick={p.onClose} aria-label="Kapat"><X aria-hidden="true" /></button>
-      </div>
-
-      <div className="e12-dlg-b">
-        <p>
-          Firebase Authentication güvenlik politikası gereği, uygulamanın çalıştığı alan adını
-          (<code className="e12-code">{p.domain}</code>) Firebase konsoluna kaydetmeniz gerekir.
-        </p>
-
-        <section className="e12-sec">
-          <h3 className="e12-sec-h is-warn"><Globe aria-hidden="true" /> 1. Kalıcı Çözüm: Alan Adını Firebase'e Ekleyin (1 Dakika)</h3>
-          <ol className="e12-steps">
-            <li>
-              Aşağıdaki butona basarak Firebase Authentication ayarlarını açın:
-              <div className="e12-steps-act">
-                <a href={p.consoleUrl} target="_blank" rel="noopener noreferrer" className="e12-btn is-sm">
-                  Firebase Konsolunu Aç <ExternalLink aria-hidden="true" />
-                </a>
-              </div>
-            </li>
-            <li>
-              Açılan sayfada <strong>"Yetkili alan adları" (Authorized domains)</strong> başlığı altındaki <strong>"Alan adı ekle" (Add domain)</strong> butonuna tıklayın.
-            </li>
-            <li>
-              Aşağıdaki alan adlarını tek tek yapıştırıp kaydedin:
-              <ul className="e12-domains">
-                {p.domains.map((dom) => (
-                  <li key={dom}>
-                    <code>{dom}</code>
-                    <button type="button" className="e12-btn is-ghost is-sm" onClick={() => copy(dom)}>
-                      {copied === dom ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
-                      <span>{copied === dom ? 'Kopyalandı' : 'Kopyala'}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          </ol>
-        </section>
-
-        <section className="e12-sec">
-          <div className="e12-sec-row">
-            <h3 className="e12-sec-h is-ok"><ShieldCheck aria-hidden="true" /> 2. Beklemeden Devam Et: Yönetici Girişi Yap</h3>
-            <span className="e12-badge is-ok">Hemen Kullan</span>
-          </div>
-          <p>
-            Firebase ayarlarını yapmadan önce de sisteminizi test etmek ve tüm soruları yönetmek için doğrudan
-            <strong> {p.adminEmail}</strong> yetkili oturumuyla devam edebilirsiniz.
-          </p>
-          <button type="button" className="e12-btn is-pri is-block e12-wrap" onClick={p.onBypass}>
-            <KeyRound aria-hidden="true" />
-            <span>Yönetici Olarak Hemen Giriş Yap ({p.adminEmail})</span>
-          </button>
-          <div className="e12-token">
-            <button type="button" className="e12-link" onClick={p.onToggleToken} aria-expanded={p.showTokenInput}>
-              {p.showTokenInput ? 'Belirteç kutusunu gizle' : 'Google Drive Access Token girmek ister misiniz? (İsteğe bağlı)'}
-            </button>
-            {p.showTokenInput && (
-              <>
-                <div className="e12-field is-mono">
-                  <input
-                    type="password"
-                    aria-label="Google Drive Access Token"
-                    placeholder="ya29.a0AfH6SM..."
-                    value={p.tokenInput}
-                    onChange={(e) => p.setTokenInput(e.target.value)}
-                  />
-                </div>
-                <p className="e12-hint">Google OAuth token girerseniz Drive yüklemelerini doğrudan yapabilirsiniz.</p>
-              </>
-            )}
-          </div>
-        </section>
-      </div>
-
-      <div className="e12-dlg-f">
-        <span className="e12-dlg-meta">Proje ID: <code className="e12-code">{p.projectId}</code></span>
-        <span className="e12-grow" />
-        <button type="button" className="e12-btn" onClick={p.onClose}>Kapat</button>
-      </div>
-    </EntryDialogV12>
   );
 };

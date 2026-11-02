@@ -1,8 +1,8 @@
 /**
  * Veritabanı anahtarları (dbFlags.ts)
  *
- * FIREBASE_DB_ENABLED=false iken Firestore'a hiçbir ağ isteği yapılmaz;
- * tüm okuma/yazma/silme Supabase + yerel sunucu üzerinden yürür.
- * Yeniden açmak için true yapmanız yeterlidir.
+ * Firebase/Firestore 2026-11-02'de projeden tamamen kaldırıldı (Google projesi askıya alındı). Bu bayrak yalnız
+ * eski kod yollarını kapalı tutmak için durur; Firestore'a hiçbir ağ isteği yapılmaz, SDK pakette yoktur.
+ * Tüm okuma/yazma Oracle meds-pg + sunucu uçları üzerinden yürür. Geri açılamaz (firebase paketi kaldırıldı).
  */
 export const FIREBASE_DB_ENABLED = false;

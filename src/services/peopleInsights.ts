@@ -20,7 +20,7 @@ import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
 import { pgDb } from './pgDb';
-import { requestUser } from './firebaseIdentity';
+import { requestUser } from './kimlikDogrulama';
 import { notificationLinkFor } from './notificationLinks';
 import { listeSorgusu, diziSayfala } from './yonetim16/sayfalama';
 import { denetimHedef, denetimFark } from './yonetim16/denetim';

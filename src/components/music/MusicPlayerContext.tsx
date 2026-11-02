@@ -1,7 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import BUNDLED from '../../data/musicTracks.json';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../../services/auth';
+import { auth, onAuthStateChanged } from '../../services/auth';
 import { safeJsonFetch } from '../../services/api';
 import { isProductionHost } from '../../config/deployment';
 import { getVoterId } from '../../utils/voterId';
