@@ -415,6 +415,12 @@ registerYerelKimlik(app, {
   rootDir: __dirname,
   adminEmail: 'nofrostlife@gmail.com',
   isAdmin: (req) => isRequestAdmin(req),
+  profil: (uid) => {
+    const u: any = loadUsers().find((x) => x.uid === uid);
+    return u ? { ad: u.displayName || null, ogrenciNo: u.studentNumber || null, sonGiris: u.lastLoginAt || null, olusturma: u.createdAt || null } : null;
+  },
+  broadcastAdmin: (olay, veri) => broadcastRealtimeEvent(olay, veri, true),
+  yoneticiyeBildir: (baslik, govde, url) => { void serverNotificationService.sendAdminWebPush({ title: baslik, body: govde, url }).catch(() => {}); },
   // Kimlik kodları (şifre belirle / kodla giriş) zorunlu işlem e-postasıdır: genel e-posta anahtarı (smtp_config.enabled,
   // karşılama/bildirim e-postaları) kapalı olsa da kayıtlı SMTP bilgisiyle gönderilir. Bilgi yoksa false → yönetici kodu.
   epostaGonder: async (to, konu, html, metin) => {
@@ -8221,7 +8227,8 @@ function getSmtpConfig(): SmtpConfig {
   const host = fileConfig.host || process.env.SMTP_HOST || 'smtp.gmail.com';
   const port = fileConfig.port || Number(process.env.SMTP_PORT) || 465;
   const secure = fileConfig.secure !== undefined ? fileConfig.secure : (port === 465);
-  const service = fileConfig.service || (host.includes('gmail') ? 'gmail' : undefined);
+  // Sağlayıcıyı sunucu adı belirler (2026-11-02): eski kayıtlarda kalan service:'gmail' başka sunucuya geçişi ezmesin
+  const service = host.includes('gmail') ? 'gmail' : 'custom';
   const from = fileConfig.from || process.env.EMAIL_FROM || `MeDSor Tıp Fakültesi <${user}>`;
   const enabled = fileConfig.enabled !== false;
 
@@ -8230,9 +8237,16 @@ function getSmtpConfig(): SmtpConfig {
 
 function saveSmtpConfig(config: Partial<SmtpConfig>): SmtpConfig {
   const current = getSmtpConfig();
+  const host = String(config.host ?? current.host).trim();
+  const port = Number(config.port ?? current.port) || 465;
   const updated: SmtpConfig = {
     ...current,
     ...config,
+    host,
+    port,
+    // 465 = doğrudan TLS, 587/25/2525 = STARTTLS; port değişip secure verilmediyse porttan çıkarılır
+    secure: typeof config.secure === 'boolean' ? config.secure : (config.port !== undefined ? port === 465 : current.secure),
+    service: host.includes('gmail') ? 'gmail' : 'custom',
     pass: (config.pass !== undefined && config.pass !== '********') ? config.pass.replace(/\s+/g, '') : current.pass,
   };
   fs.writeFileSync(SMTP_CONFIG_FILE, JSON.stringify(updated, null, 2), 'utf-8');
@@ -8247,7 +8261,7 @@ function createSmtpTransporterFrom(cfg: SmtpConfig) {
   if (!cfg.enabled || !cfg.user || !cfg.pass) {
     return null;
   }
-  if (cfg.service === 'gmail' || cfg.host.includes('gmail')) {
+  if (cfg.host.includes('gmail')) {
     return nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -8272,7 +8286,7 @@ app.get('/api/admin/smtp-config', requireAdmin, (req, res) => {
   const cfg = getSmtpConfig();
   res.json({
     enabled: cfg.enabled,
-    service: cfg.service || 'gmail',
+    service: cfg.service,
     host: cfg.host,
     port: cfg.port,
     secure: cfg.secure,
@@ -8282,6 +8296,8 @@ app.get('/api/admin/smtp-config', requireAdmin, (req, res) => {
     hasPass: Boolean(cfg.pass && cfg.pass.length > 0),
     isConfigured: Boolean(cfg.user && cfg.pass && cfg.pass.length > 5),
     passMasked: cfg.pass ? '••••••••' : '',
+    // Kimlik kodları (şifre belirle / kodla giriş) "Gönderim açık" kapalıyken de bu bilgilerle gider
+    google: cfg.host.includes('gmail') || cfg.host.includes('google'),
   });
 });
 
@@ -8311,14 +8327,25 @@ app.post('/api/admin/smtp-config', requireAdmin, (req, res) => {
 app.post('/api/admin/smtp-test', requireAdmin, async (req, res) => {
   const targetEmail = req.body?.to || 'nofrostlife@gmail.com';
   const cfg = getSmtpConfig();
-  const transporter = createSmtpTransporter();
+  // "Gönderim açık" kapalıyken de kayıtlı bilgiler sınanabilsin (kimlik kodları o bilgilerle gider)
+  const transporter = cfg.user && cfg.pass ? createSmtpTransporterFrom({ ...cfg, enabled: true }) : null;
 
   if (!transporter) {
     return res.status(400).json({
       success: false,
-      error: 'SMTP şifresi (Google Uygulama Şifresi) girilmemiş. Lütfen 16 haneli şifrenizi tanımlayınız.',
-      hint: 'Gmail için: Google Hesabım > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) sayfasından oluşturunuz.'
+      error: 'SMTP kullanıcı adı ya da şifre/API anahtarı girilmemiş.',
+      hint: 'Site › Kanallar › SMTP e-posta bölümünden sağlayıcının SMTP bilgilerini girin.'
     });
+  }
+
+  // Yalnız bağlantı sınaması: e-posta gönderilmez, sunucuya giriş yapılabiliyor mu bakılır
+  if (req.body?.yalnizBaglanti) {
+    try {
+      await transporter.verify();
+      return res.json({ success: true, message: `${cfg.host}:${cfg.port} bağlantısı ve girişi başarılı (e-posta gönderilmedi).` });
+    } catch (e: any) {
+      return res.status(400).json({ success: false, error: `Bağlanılamadı: ${e?.message || e}` });
+    }
   }
 
   try {
@@ -8351,13 +8378,13 @@ app.post('/api/admin/smtp-test', requireAdmin, async (req, res) => {
     console.error('SMTP Test Error:', err);
     let userFriendly = err.message || 'SMTP sunucusuna bağlanılamadı.';
     if (err.code === 'EAUTH' || err.responseCode === 535) {
-      userFriendly = 'Gmail Giriş Hatası (535): Normal şifreniz yerine Google 2 Adımlı Doğrulama altındaki 16 haneli "Uygulama Şifresi"ni (App Password) girmelisiniz.';
+      userFriendly = 'SMTP giriş hatası (535): kullanıcı adı ya da şifre/API anahtarı sağlayıcı tarafından reddedildi.';
     }
     res.status(500).json({
       success: false,
       error: userFriendly,
       code: err.code || 'SMTP_ERR',
-      hint: 'Google Hesabınız > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) kısmından MeDSor için şifre oluşturup kaydedin.'
+      hint: 'Sağlayıcının SMTP kullanıcı adını ve SMTP anahtarını (hesap şifresi değil) girin; gönderen adresi sağlayıcıda doğrulanmış olmalı.'
     });
   }
 });
@@ -8747,7 +8774,7 @@ app.post('/api/send-welcome-email', async (req, res) => {
   let deliveryError: string | null = null;
 
   if (!transporter) {
-    deliveryError = 'SMTP sunucu ayarları (Google Uygulama Şifresi) henüz girilmemiş. Lütfen Yönetici Paneli > E-posta Ayarları sekmesinden 16 haneli şifrenizi tanımlayınız.';
+    deliveryError = 'Genel e-posta gönderimi kapalı ya da SMTP ayarları girilmemiş (Yönetim › Site › Kanallar).';
   } else {
     try {
       await transporter.sendMail({
@@ -8803,7 +8830,7 @@ app.post('/api/send-welcome-email', async (req, res) => {
       success: false,
       sentReal: false,
       error: deliveryError,
-      hint: 'Google Hesabınız > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) kısmından 16 haneli şifre alıp Yönetici Paneli > E-posta Ayarları sekmesinden kaydediniz.'
+      hint: 'Yönetim › Site › Kanallar › SMTP e-posta bölümünden ayarları girip "Gönderim açık"ı açın.'
     });
   }
 

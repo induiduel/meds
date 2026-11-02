@@ -53,3 +53,33 @@ where d.verified and coalesce(d.email, '') like '%@%'
   and not exists (select 1 from auth_hesaplar h where h.uid = d.uid)
 order by lower(d.email), d.updated_at desc
 on conflict do nothing;
+
+-- Öğrenci numarasıyla giriş (2026-11-02): hesap başına öğrenci no; boşsa users.student_number'a bakılır.
+alter table auth_hesaplar add column if not exists ogrenci_no text;
+update auth_hesaplar h set ogrenci_no = u.student_number
+from users u where u.uid = h.uid and h.ogrenci_no is null and coalesce(u.student_number, '') ~ '^[0-9]{5,12}$';
+create index if not exists auth_hesaplar_ogrenci_no on auth_hesaplar (ogrenci_no);
+
+-- Yönetici onaylı şifre talebi (e-posta gerekmez): kullanıcı e-posta/öğrenci no + kimlik bilgisi + yeni şifre yazar,
+-- şifre talep anında özetlenir; yönetici gerçek kişi olduğuna karar verip onaylarsa özet hesaba yazılır.
+-- takip_ozeti: talebi yapan cihazdaki gizli anahtarın özeti (durum sorgusu ve onay sonrası tek seferlik oturum için).
+create table if not exists auth_sifre_talepleri (
+  id text primary key,
+  uid text not null references auth_hesaplar(uid) on delete cascade,
+  email text not null,
+  sifre_ozeti text not null,
+  takip_ozeti text not null,
+  ad text,
+  ogrenci_no text,
+  aciklama text,
+  durum text not null default 'bekliyor' check (durum in ('bekliyor', 'onaylandi', 'reddedildi', 'iptal')),
+  karar_veren text,
+  karar_notu text,
+  karar_zamani timestamptz,
+  oturum_verildi boolean not null default false,
+  ip text,
+  cihaz text,
+  olusturma timestamptz not null default now()
+);
+create index if not exists auth_sifre_talepleri_durum on auth_sifre_talepleri (durum, olusturma desc);
+create index if not exists auth_sifre_talepleri_uid on auth_sifre_talepleri (uid);

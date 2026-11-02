@@ -94,9 +94,10 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       finish(await loginWithEmailPassword(email, password));
     } catch (err: any) {
       if (sifreBelirlemeGerekli(err)) {
-        // Eski giriş sisteminden taşınan hesap: şifre belirleme akışı açılır (hata yerine yönlendirme)
+        // Eski giriş sisteminden taşınan hesap: yönetici onaylı şifre belirleme açılır (hata yerine yönlendirme)
+        if (err?.veri?.email && !email.includes('@')) setEmail(err.veri.email);
         setKodUyari(err?.message || null);
-        setKodAkisi('sifre');
+        setKodAkisi('talep');
         return;
       }
       setError(err?.message || 'Giriş yapılamadı.');
@@ -109,7 +110,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     setError(null);
     setSuccess(null);
     setKodUyari(null);
-    setKodAkisi('sifre');
+    setKodAkisi('talep');
   };
 
   const onRegister = async (e: React.FormEvent) => {
@@ -132,7 +133,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       if (sifreBelirlemeGerekli(err)) {
         setMode('login');
         setKodUyari(err?.message || null);
-        setKodAkisi('sifre');
+        setKodAkisi('talep');
         return;
       }
       setError(err?.message || 'Kayıt yapılamadı.');
@@ -149,8 +150,8 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       finish(await loginWithEmailPassword(ADMIN_EMAIL, adminPassword), null, 'Yönetici girişi yapıldı');
     } catch (err: any) {
       if (sifreBelirlemeGerekli(err)) {
-        setKodUyari('Yönetici hesabının şifresi henüz belirlenmedi. Aşağıdan e-postana gelen kodla şifreni belirle.');
-        setKodAkisi('sifre');
+        setKodUyari('Yönetici hesabının şifresi henüz belirlenmedi. E-postayla kod alabilir ya da kendi bilgisayarındaki yönetim panelinden (Kullanıcılar › Şifre talepleri) talebini onaylayabilirsin.');
+        setKodAkisi('talep');
         return;
       }
       setError(err?.message || 'Yönetici şifresi doğrulanamadı.');
@@ -225,7 +226,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                 {field({ id: 'au-num', label: 'Öğrenci no', icon: Hash, value: studentNumber, set: (v) => setStudentNumber(v.replace(/\D/g, '')), mode: 'numeric', auto: 'off' })}
               </div>
             )}
-            {field({ id: 'au-email', label: 'E-posta', icon: Mail, value: email, set: setEmail, type: 'email', auto: 'email', mode: 'email' })}
+            {field({ id: 'au-email', label: mode === 'login' ? 'E-posta ya da öğrenci no' : 'E-posta', icon: Mail, value: email, set: setEmail, type: mode === 'login' ? 'text' : 'email', auto: mode === 'login' ? 'username' : 'email', mode: mode === 'login' ? undefined : 'email' })}
             {field({
               id: 'au-pass', label: 'Şifre', icon: Lock, value: password, set: setPassword, type: showPass ? 'text' : 'password',
               auto: mode === 'login' ? 'current-password' : 'new-password', end: passToggle,

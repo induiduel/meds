@@ -55,6 +55,8 @@ class MultiDbManager {
   }
 
   public setActiveMode(mode: DatabaseMode) {
+    // Firebase 2026-11-02'de kaldırıldı (H466): o kip seçilemez, Oracle meds-pg kullanılır
+    if (mode === 'firebase' || mode === 'auto') mode = 'supabase';
     this.activeMode = mode;
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem(DB_MODE_KEY, mode);
@@ -78,8 +80,8 @@ class MultiDbManager {
     const status: DatabaseStatus = {
       mode: this.activeMode,
       firebase: {
-        status: this.isFirebaseQuotaExceeded() ? 'quota_exceeded' : 'online',
-        details: this.isFirebaseQuotaExceeded() ? 'Spark günlük ücretsiz limit (50K okuma) aşıldı' : 'Aktif (Spark Plan)',
+        status: 'offline',
+        details: 'Kaldırıldı (2026-11-02): tüm veri Oracle meds-pg + sunucuda',
       },
       supabase: {
         status: 'not_configured',

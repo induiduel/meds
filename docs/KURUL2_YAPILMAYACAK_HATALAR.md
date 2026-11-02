@@ -1924,3 +1924,23 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   **zorunlu** bir yol (giriş, veri yazımı, yedek) açamaz; dış servis yalnız kesilince sitenin çalışmaya devam ettiği
   isteğe bağlı ek olabilir (yazı tipi, LLM gibi). Jeton doğrulaması ağ çağrısı yapmaz. Kimlik e-postası (kod) SMTP'ye
   bağlıdır; SMTP gitmezse yönetici Kullanıcılar › Erişim › "Şifre kodu üret" ile 24 saatlik kod verir.
+
+## H467 — Taşınan hesaplar için e-postaya bağlı şifre belirleme tek yoldu; Drive'da ölü servis hesabı yedeği (2026-11-02)
+
+- **Belirti:** Kullanıcı: şifresi Google'da kalan öğrenci yeni şifreyi e-posta olmadan, yönetici onayıyla belirleyebilmeli;
+  e-posta ya da öğrenci no + şifreyle girebilmeli. Drive denetiminde: servis hesabı yedeği `invalid_grant: account not
+  found` (askıdaki `gen-lang-client-0056595657` projesi), sınav kitapçığını Drive'a yükleme Google girişi olmadan çalışmıyor.
+- **Kök neden:** H466'daki ilk çözüm şifre belirlemeyi yalnız e-posta koduna bağladı; e-posta da bir Google hesabından
+  (Gmail SMTP) gidiyordu, yani aynı tek hata noktası. Giriş yalnız e-postayla yapılıyordu. Drive indirmesinin yedeği
+  askıdaki projeye bağlıydı ve hata sessiz geçiyordu.
+- **Çözüm:** `auth_sifre_talepleri` + `/api/kimlik/sifre-talebi(/durum)` + yönetim › Kullanıcılar › **Şifre talepleri**
+  (talepteki ad/no kayıtlı profille yan yana, eşleşme rozetleri; onay talepteki şifre özetini hesaba yazar, talep eden cihaz
+  bir kez kendiliğinden oturum alır, uid değişmez). Girişte e-posta ya da öğrenci no (`auth_hesaplar.ogrenci_no`, yoksa
+  `users.student_number`; numara birden çok hesaptaysa e-posta istenir). Drive: `02-download.mjs` ikinci herkese açık yol
+  (`drive.google.com/uc`) + virüs taraması onay sayfası (uuid) + servis hesabı hatası bir kez açıkça yazılır; Drive'a
+  yükleme kaldırıldı (PDF indirme kaldı), eski `medsoru_drive_token` silinir; `/api/admin/ogrenci-drive/indir` hedef yolu
+  izinli kökle sınırlı. SMTP ekranı: sağlayıcıyı sunucu adı belirler, port değişince `secure` porttan çıkarılır,
+  "Bağlantıyı sına" e-posta göndermez, Google dışı hazır sağlayıcılar.
+- **Önleme:** Hesap kurtarmanın en az bir yolu hiçbir dış hesaba bağlı olmamalı (yönetici onayı). Bir dış servisin yedeği
+  çalışmıyorsa sessiz geçilmez, günlüğe bir kez yazılır. İçerik alımı herkese açık Drive yoluyla çalışır; kimlikli yedek
+  için kullanıcı askıda olmayan bir hesapta yeni servis hesabı ya da `rclone config reconnect meds:` kurmalıdır.

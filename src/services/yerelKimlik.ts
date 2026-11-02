@@ -6,7 +6,9 @@
  *
  * Uçlar (/api/kimlik/*):
  *   POST kayit        { email, sifre, ad?, ogrenciNo? }   → yeni hesap + oturum
- *   POST giris        { email, sifre }                    → oturum
+ *   POST giris        { email, sifre }                    → oturum (email alanı e-posta YA DA öğrenci no olabilir)
+ *   POST sifre-talebi { kimlik, yeniSifre, ad, ogrenciNo, aciklama? } → yönetici onayına giden şifre talebi (e-posta gerekmez)
+ *   POST sifre-talebi/durum { id, takip }                 → bekliyor | reddedildi | onaylandi (+ ilk sorguda oturum)
  *   POST yenile       { yenileme }                        → yeni erişim jetonu (yenileme jetonu aynı kalır)
  *   POST cikis        { yenileme }                        → oturum silinir
  *   POST kod-gonder   { email, amac: 'sifre'|'giris' }    → e-postaya 6 haneli kod (15 dk, 5 deneme)
@@ -17,9 +19,15 @@
  *   GET  /api/admin/kimlik/hesaplar                       → yönetici: hesap listesi (özetsiz)
  *   POST /api/admin/kimlik/sifirlama-kodu { email }       → yönetici: e-posta gitmezse elle iletilecek kod
  *   POST /api/admin/kimlik/oturumlari-kapat { uid }       → yönetici: hesabın tüm oturumları
+ *   GET  /api/admin/kimlik/sifre-talepleri?durum=          → yönetici: talepler + hesabın kayıtlı profili (karşılaştırma için)
+ *   POST /api/admin/kimlik/sifre-talepleri/karar { id, karar: 'onayla'|'reddet', not? }
  *
- * Firebase döneminden taşınan hesapların şifresi bilinmez (sifre_ozeti null): kullanıcı "Şifremi unuttum / Şifre
- * belirle" ile e-postasına gelen kodla şifre koyar; uid aynı kaldığı için tüm verisi yerinde açılır.
+ * Firebase döneminden taşınan hesapların şifresi bilinmez (sifre_ozeti null). İki yol var, ikisinde de uid aynı kalır,
+ * tüm veri yerinde açılır:
+ *   1. Yönetici onaylı şifre talebi (asıl yol, e-posta gerekmez): kullanıcı e-posta/öğrenci no + ad + öğrenci no + yeni
+ *      şifre yazar; yönetici kayıtlı profille karşılaştırıp gerçek kişiyse onaylar; talepteki şifre hesaba yazılır ve
+ *      talep eden cihaz bir sonraki durum sorgusunda kendiliğinden oturum açar (başka cihazdan e-posta/no + şifreyle girer).
+ *   2. E-postaya 6 haneli kod (SMTP çalışıyorsa).
  */
 import fs from 'fs';
 import path from 'path';
@@ -36,6 +44,12 @@ type Deps = {
   epostaGonder: (to: string, konu: string, html: string, metin: string) => Promise<boolean>;
   /** Yeni hesap açıldı (karşılama e-postası, users.json kaydı server.ts'de). */
   hesapAcildi?: (h: { uid: string; email: string; ad: string; ogrenciNo: string | null }) => void;
+  /** Kayıtlı profil (users.json): yönetici talebi bununla karşılaştırır */
+  profil?: (uid: string) => { ad: string | null; ogrenciNo: string | null; sonGiris: string | null; olusturma: string | null } | null;
+  /** Yöneticilere canlı olay (SSE) */
+  broadcastAdmin?: (olay: string, veri: unknown) => void;
+  /** Yöneticiye anlık bildirim (web push) */
+  yoneticiyeBildir?: (baslik: string, govde: string, url: string) => void;
 };
 
 const YENILEME_OMRU_GUN = 180;
@@ -85,8 +99,10 @@ const ipOf = (req: express.Request) =>
 
 type Hesap = {
   uid: string; email: string; sifre_ozeti: string | null; ad: string | null; foto: string | null;
-  eposta_dogrulandi: boolean; devre_disi: boolean; kaynak: string;
+  eposta_dogrulandi: boolean; devre_disi: boolean; kaynak: string; ogrenci_no: string | null;
 };
+
+const ogrNo = (v: unknown) => String(v || '').replace(/\D/g, '').slice(0, 12);
 
 export function registerYerelKimlik(app: express.Express, d: Deps) {
   let sema = false;
@@ -112,10 +128,22 @@ export function registerYerelKimlik(app: express.Express, d: Deps) {
     (await pgDb.query('select * from auth_hesaplar where lower(email) = $1', [lc(email)])).rows[0] || null;
   const hesapUid = async (uid: string): Promise<Hesap | null> =>
     (await pgDb.query('select * from auth_hesaplar where uid = $1', [uid])).rows[0] || null;
+  /** E-posta ya da öğrenci no ile hesap. Öğrenci no birden çok hesapta varsa belirsiz sayılır (null + coklu). */
+  const hesapBul = async (girdi: string): Promise<{ h: Hesap | null; coklu?: boolean }> => {
+    const g = String(girdi || '').trim();
+    if (g.includes('@')) return { h: await hesapEposta(g) };
+    const no = ogrNo(g);
+    if (no.length < 5) return { h: null };
+    const r = (await pgDb.query(
+      `select distinct h.* from auth_hesaplar h left join users u on u.uid = h.uid
+       where h.ogrenci_no = $1 or (h.ogrenci_no is null and u.student_number = $1)`, [no])).rows;
+    if (r.length > 1) return { h: null, coklu: true };
+    return { h: r[0] || null };
+  };
 
   const disHesap = (h: Hesap) => ({
     uid: h.uid, email: h.email, displayName: h.ad || null, photoURL: h.foto || null,
-    sifreVar: !!h.sifre_ozeti, epostaDogrulandi: !!h.eposta_dogrulandi,
+    sifreVar: !!h.sifre_ozeti, epostaDogrulandi: !!h.eposta_dogrulandi, ogrenciNo: h.ogrenci_no || null,
   });
 
   /** Yeni oturum: yenileme jetonu (özeti saklanır) + erişim jetonu */
@@ -153,14 +181,18 @@ export function registerYerelKimlik(app: express.Express, d: Deps) {
     const var_ = await hesapEposta(email);
     if (var_) {
       if (!var_.sifre_ozeti) {
-        return hata(res, 409, 'Bu e-postayla hesabın zaten var (eski giriş sisteminden taşındı). "Şifremi unuttum / Şifre belirle" ile e-postana gelen kodla şifreni belirle; tüm verilerin yerinde.', { kod: 'sifre-belirle' });
+        return hata(res, 409, 'Bu e-postayla hesabın zaten var (eski giriş sisteminden taşındı); tüm verilerin yerinde. Aşağıdan yeni şifreni yaz, yönetici onaylayınca bu şifreyle girersin.', { kod: 'sifre-belirle', email: var_.email });
       }
       return hata(res, 409, 'Bu e-posta zaten kayıtlı. Giriş yapın ya da şifrenizi sıfırlayın.', { kod: 'kayitli' });
     }
+    if (ogrenciNo) {
+      const no = await hesapBul(ogrenciNo);
+      if (no.h || no.coklu) return hata(res, 409, 'Bu öğrenci numarasıyla kayıtlı bir hesap zaten var. Giriş yapın ya da "Şifre belirle" ile yönetici onayı isteyin.', { kod: 'ogrenci-no-kayitli' });
+    }
     const uid = yeniUid();
     await pgDb.query(
-      `insert into auth_hesaplar (uid, email, sifre_ozeti, ad, kaynak) values ($1, $2, $3, $4, 'yerel')`,
-      [uid, email, await sifreOzeti(sifre), ad]);
+      `insert into auth_hesaplar (uid, email, sifre_ozeti, ad, kaynak, ogrenci_no) values ($1, $2, $3, $4, 'yerel', $5)`,
+      [uid, email, await sifreOzeti(sifre), ad, ogrenciNo]);
     const h = (await hesapUid(uid))!;
     try { d.hesapAcildi?.({ uid, email, ad, ogrenciNo }); } catch { /* yok */ }
     res.json(await oturumAc(h, req));
@@ -171,15 +203,17 @@ export function registerYerelKimlik(app: express.Express, d: Deps) {
     if (!(await hazir(res))) return;
     const email = lc(req.body?.email);
     const sifre = String(req.body?.sifre || '');
-    if (!email || !sifre) return hata(res, 400, 'Lütfen e-posta ve şifrenizi giriniz.');
+    if (!email || !sifre) return hata(res, 400, 'Lütfen e-posta (ya da öğrenci numarası) ve şifrenizi giriniz.');
     if (sinirAsildi(`giris:${email}`, 10, 15 * 60_000) || sinirAsildi(`giris-ip:${ipOf(req)}`, 40, 15 * 60_000)) {
       return hata(res, 429, 'Çok fazla deneme yapıldı. Birkaç dakika sonra tekrar deneyin.');
     }
-    const h = await hesapEposta(email);
-    if (!h) return hata(res, 401, 'Bu e-postayla kayıtlı hesap yok. Önce kayıt olun.', { kod: 'yok' });
+    const bul = await hesapBul(email);
+    if (bul.coklu) return hata(res, 409, 'Bu öğrenci numarası birden çok hesapta kayıtlı. E-posta adresinle giriş yap.', { kod: 'coklu' });
+    const h = bul.h;
+    if (!h) return hata(res, 401, email.includes('@') ? 'Bu e-postayla kayıtlı hesap yok. Önce kayıt olun.' : 'Bu öğrenci numarasıyla kayıtlı hesap yok. E-postanla dene ya da kayıt ol.', { kod: 'yok' });
     if (h.devre_disi) return hata(res, 403, 'Bu hesap devre dışı bırakılmış.');
     if (!h.sifre_ozeti) {
-      return hata(res, 401, 'Giriş sistemimiz yenilendi. Hesabın ve tüm verilerin yerinde; yalnız bir kez "Şifremi unuttum / Şifre belirle" ile e-postana gelen kodla yeni şifreni belirlemen gerekiyor.', { kod: 'sifre-belirle' });
+      return hata(res, 401, 'Giriş sistemimiz yenilendi. Hesabın ve tüm verilerin yerinde; yalnız bir kez yeni şifre belirlemen gerekiyor. Aşağıdan şifreni yaz, yönetici onaylayınca bu şifreyle girersin.', { kod: 'sifre-belirle', email: h.email });
     }
     if (!(await sifreDogru(sifre, h.sifre_ozeti))) return hata(res, 401, 'E-posta ya da şifre hatalı.', { kod: 'hatali' });
     res.json(await oturumAc(h, req));
@@ -315,7 +349,110 @@ export function registerYerelKimlik(app: express.Express, d: Deps) {
     res.json({ ok: true });
   });
 
+  /* ---------------- yönetici onaylı şifre talebi ---------------- */
+  app.post('/api/kimlik/sifre-talebi', async (req, res) => {
+    if (!(await hazir(res))) return;
+    const kimlik = String(req.body?.kimlik || '').trim();
+    const yeniSifre = String(req.body?.yeniSifre || '');
+    const ad = String(req.body?.ad || '').trim().slice(0, 80);
+    const no = ogrNo(req.body?.ogrenciNo);
+    const aciklama = String(req.body?.aciklama || '').trim().slice(0, 500) || null;
+    if (!kimlik) return hata(res, 400, 'E-posta adresini ya da öğrenci numaranı yaz.');
+    if (ad.length < 3) return hata(res, 400, 'Yöneticinin seni tanıyabilmesi için ad soyadını yaz.');
+    if (no.length < 5) return hata(res, 400, 'Öğrenci numaranı yaz.');
+    if (!sifreGecerli(yeniSifre)) return hata(res, 400, 'Yeni şifre en az 6 karakter olmalı.');
+    if (sinirAsildi(`talep:${lc(kimlik)}`, 3, 60 * 60_000) || sinirAsildi(`talep-ip:${ipOf(req)}`, 10, 60 * 60_000)) {
+      return hata(res, 429, 'Çok fazla talep gönderildi. Biraz sonra tekrar dene.');
+    }
+    const bul = await hesapBul(kimlik);
+    if (bul.coklu) return hata(res, 409, 'Bu öğrenci numarası birden çok hesapta kayıtlı. E-posta adresini yaz.');
+    const h = bul.h;
+    if (!h) {
+      return hata(res, 404, kimlik.includes('@')
+        ? 'Bu e-postayla kayıtlı hesap bulunamadı. Daha önce hiç giriş yapmadıysan "Kayıt ol" ile yeni hesap açabilirsin.'
+        : 'Bu öğrenci numarasıyla hesap bulunamadı. Kayıtlı e-posta adresini yazmayı dene.', { kod: 'yok' });
+    }
+    if (h.devre_disi) return hata(res, 403, 'Bu hesap devre dışı bırakılmış.');
+    // Aynı hesabın bekleyen eski talepleri geçersiz olur (son talep geçerli)
+    await pgDb.query(`update auth_sifre_talepleri set durum = 'iptal', karar_notu = 'Yeni talep geldi', karar_zamani = now() where uid = $1 and durum = 'bekliyor'`, [h.uid]);
+    const id = crypto.randomBytes(9).toString('base64url');
+    const takip = crypto.randomBytes(24).toString('base64url');
+    await pgDb.query(
+      `insert into auth_sifre_talepleri (id, uid, email, sifre_ozeti, takip_ozeti, ad, ogrenci_no, aciklama, ip, cihaz)
+       values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+      [id, h.uid, h.email, await sifreOzeti(yeniSifre), sha(takip), ad, no, aciklama, ipOf(req).slice(0, 64), String(req.headers['user-agent'] || '').slice(0, 200)]);
+    try { d.broadcastAdmin?.('sifre_talebi', { id, at: Date.now() }); } catch { /* yok */ }
+    try { d.yoneticiyeBildir?.('Yeni şifre talebi', `${ad} (${no}) · ${h.email.replace(/^(.).*@/, '$1***@')}`, '/manage/kisi/sifre-talepleri'); } catch { /* yok */ }
+    res.json({ ok: true, id, takip, email: h.email.replace(/^(.{1,2}).*@/, '$1***@'), mesaj: 'Talebin yöneticiye iletildi. Onaylanınca bu cihazda kendiliğinden giriş yapılır; başka cihazdan e-postan ya da öğrenci numaran ve yeni şifrenle girebilirsin.' });
+  });
+
+  app.post('/api/kimlik/sifre-talebi/durum', async (req, res) => {
+    if (!(await hazir(res))) return;
+    const id = String(req.body?.id || '');
+    const takip = String(req.body?.takip || '');
+    if (!id || !takip) return hata(res, 400, 'Talep bilgisi eksik.');
+    const t = (await pgDb.query('select * from auth_sifre_talepleri where id = $1', [id])).rows[0];
+    if (!t || !crypto.timingSafeEqual(Buffer.from(sha(takip)), Buffer.from(String(t.takip_ozeti)))) return hata(res, 404, 'Talep bulunamadı.', { kod: 'yok' });
+    if (t.durum === 'bekliyor') return res.json({ ok: true, durum: 'bekliyor', olusturma: t.olusturma });
+    if (t.durum !== 'onaylandi') return res.json({ ok: true, durum: t.durum, not: t.karar_notu || null });
+    // Onaylandı: talep eden cihaza bir kez oturum verilir (sonra e-posta/no + şifreyle girilir)
+    const ilk = await pgDb.query(`update auth_sifre_talepleri set oturum_verildi = true where id = $1 and not oturum_verildi returning id`, [id]);
+    if (!ilk.rowCount) return res.json({ ok: true, durum: 'onaylandi' });
+    const h = await hesapUid(t.uid);
+    if (!h || h.devre_disi) return res.json({ ok: true, durum: 'onaylandi' });
+    res.json({ ...(await oturumAc(h, req)), durum: 'onaylandi' });
+  });
+
   /* ---------------- yönetici ---------------- */
+  app.get('/api/admin/kimlik/sifre-talepleri', async (req, res) => {
+    if (!d.isAdmin(req)) return hata(res, 403, 'Yetkisiz.');
+    if (!(await hazir(res))) return;
+    const durum = String(req.query.durum || '');
+    const r = await pgDb.query(
+      `select t.id, t.uid, t.email, t.ad, t.ogrenci_no, t.aciklama, t.durum, t.karar_veren, t.karar_notu, t.karar_zamani,
+              t.ip, t.cihaz, t.olusturma, h.ad as hesap_ad, h.ogrenci_no as hesap_ogrenci_no, h.kaynak, h.son_giris,
+              h.sifre_ozeti is not null as sifre_var
+       from auth_sifre_talepleri t join auth_hesaplar h on h.uid = t.uid
+       where ($1 = '' or t.durum = $1) order by (t.durum = 'bekliyor') desc, t.olusturma desc limit 300`, [durum]);
+    const talepler = r.rows.map((x: any) => {
+      const p = d.profil?.(x.uid) || null;
+      const kayitliNo = ogrNo(p?.ogrenciNo || x.hesap_ogrenci_no);
+      const kayitliAd = p?.ad || x.hesap_ad || null;
+      const sade = (v: string) => lc(v).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
+      return {
+        ...x,
+        profil: { ad: kayitliAd, ogrenciNo: kayitliNo || null, sonGiris: p?.sonGiris || x.son_giris || null, olusturma: p?.olusturma || null },
+        // Yöneticiye yardımcı eşleşme ipuçları (karar yine yöneticinin)
+        eslesme: {
+          ogrenciNo: kayitliNo ? kayitliNo === ogrNo(x.ogrenci_no) : null,
+          ad: kayitliAd ? sade(kayitliAd) === sade(x.ad || '') : null,
+        },
+      };
+    });
+    res.json({ ok: true, talepler, bekleyen: talepler.filter((x: any) => x.durum === 'bekliyor').length });
+  });
+
+  app.post('/api/admin/kimlik/sifre-talepleri/karar', async (req, res) => {
+    if (!d.isAdmin(req)) return hata(res, 403, 'Yetkisiz.');
+    if (!(await hazir(res))) return;
+    const id = String(req.body?.id || '');
+    const karar = req.body?.karar === 'onayla' ? 'onaylandi' : req.body?.karar === 'reddet' ? 'reddedildi' : '';
+    const not = String(req.body?.not || '').trim().slice(0, 300) || null;
+    if (!id || !karar) return hata(res, 400, 'Talep ve karar gerekli.');
+    const veren = lc((req as any).verifiedUser?.email) || ((req as any).adminAuth?.via ? `yonetici:${(req as any).adminAuth.via}` : 'yonetici');
+    const t = (await pgDb.query(
+      `update auth_sifre_talepleri set durum = $2, karar_veren = $3, karar_notu = $4, karar_zamani = now()
+       where id = $1 and durum = 'bekliyor' returning uid, sifre_ozeti, ogrenci_no`, [id, karar, veren, not])).rows[0];
+    if (!t) return hata(res, 409, 'Talep zaten sonuçlanmış ya da bulunamadı.');
+    if (karar === 'onaylandi') {
+      await pgDb.query(
+        `update auth_hesaplar set sifre_ozeti = $2, ogrenci_no = coalesce(ogrenci_no, $3), guncelleme = now() where uid = $1`,
+        [t.uid, t.sifre_ozeti, t.ogrenci_no || null]);
+    }
+    try { d.broadcastAdmin?.('sifre_talebi', { id, karar, at: Date.now() }); } catch { /* yok */ }
+    res.json({ ok: true, durum: karar });
+  });
+
   app.get('/api/admin/kimlik/hesaplar', async (req, res) => {
     if (!d.isAdmin(req)) return hata(res, 403, 'Yetkisiz.');
     if (!(await hazir(res))) return;

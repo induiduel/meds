@@ -57,13 +57,13 @@ const Giris: React.FC<{ tamam: () => void }> = ({ tamam }) => {
           setMesgul(true); setHata('');
           try { girdi(await loginWithEmailPassword(eposta, sifre)); }
           catch (er: any) {
-            if (sifreBelirlemeGerekli(er)) { setUyari(er?.message || null); setKod('sifre'); }
+            if (sifreBelirlemeGerekli(er)) { setUyari(er?.message || null); setKod('talep'); }
             else setHata(er?.message || 'Giriş yapılamadı.');
           } finally { setMesgul(false); }
         }}>
-          <label htmlFor="yt-eposta">E-posta</label>
+          <label htmlFor="yt-eposta">E-posta ya da öğrenci no</label>
           <div className="yt-satir">
-            <input id="yt-eposta" type="email" autoComplete="email" value={eposta} onChange={(e) => setEposta(e.target.value)} />
+            <input id="yt-eposta" type="text" autoComplete="username" value={eposta} onChange={(e) => setEposta(e.target.value)} />
           </div>
           <label htmlFor="yt-sifre">Şifre</label>
           <div className="yt-satir">

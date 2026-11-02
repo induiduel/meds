@@ -9,7 +9,7 @@ import {
   LayoutDashboard, Inbox, CalendarRange, BookOpen, Layers, FileQuestion, History, GitMerge, ListChecks, Archive,
   TextCursorInput, FilePen, Snowflake, Sparkles, GraduationCap, Mic, Star, Target, Award, CreditCard, Tent,
   BookA, Stethoscope, FileText, Music, Trash2, Eye, Menu as MenuIcon, Construction, Flag, Megaphone, Radio, Tag,
-  Users, ShieldCheck, Coins, TrendingUp, CalendarCheck, Activity, Lock, AlertTriangle, MessagesSquare, MessageSquare,
+  Users, ShieldCheck, KeyRound, Coins, TrendingUp, CalendarCheck, Activity, Lock, AlertTriangle, MessagesSquare, MessageSquare,
   UserPlus, StickyNote, MessageCircleHeart, Gamepad2, Puzzle, Database, HeartPulse, Bot, Terminal, GitBranch,
   HardDriveDownload, ScrollText, CloudCog, Network, FlaskConical, Link2,
   Package, Landmark, PieChart,
@@ -106,6 +106,7 @@ export const MENU: GrupTanim[] = [
   {
     id: 'kisi', etiket: 'Kullanıcılar', sayfalar: [
       { yol: 'kisi', etiket: 'Kişiler', ikon: Users, oncelik: 'P0', v14Slug: 'kisiler', anahtar: 'kullanıcı öğrenci profil', yukle: () => import('./sayfalar/KisiListe') },
+      { yol: 'kisi/sifre-talepleri', etiket: 'Şifre talepleri', ikon: KeyRound, oncelik: 'P0', aciklama: 'Giriş yapamayan öğrencilerin yönetici onaylı yeni şifre talepleri.', anahtar: 'şifre parola giriş onay talep hesap', yukle: () => import('./sayfalar/SifreTalepleri') },
       { yol: 'kisi/erisim', etiket: 'Erişim', ikon: ShieldCheck, oncelik: 'P0', v14Slug: 'kullanicilar', anahtar: 'rol askı moderatör birleştir oturum', yukle: () => import('./sayfalar/KisiErisim') },
       { yol: 'kisi/basarim', etiket: 'Puan ve ATP', ikon: Coins, oncelik: 'P1', v14Slug: 'puan-atp', yukle: () => import('./sayfalar/KisiBasarim') },
       { yol: 'kisi/ilerleme', etiket: 'Ders ilerlemesi', ikon: TrendingUp, oncelik: 'P1', v14Slug: 'ders-ilerlemesi', yukle: () => import('./sayfalar/KisiIlerleme') },

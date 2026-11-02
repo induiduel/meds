@@ -150,23 +150,13 @@ class SystemHealthMonitor {
    * Herhangi bir API / DB çağrısında hata fırlatıldığında anında tetiklenir
    */
   public recordDatabaseError(source: 'firebase' | 'supabase', error: any) {
+    // Firebase yok (2026-11-02): eski çağıranların 'firebase' kaydı da sunucu veritabanı hatası sayılır
+    void source;
     const errMsg = error?.message || String(error);
     const isQuota = /quota|resource-exhausted|exceeded|429/i.test(errMsg);
     const isPermission = /permission-denied|unauthorized|forbidden/i.test(errMsg);
 
-    if (source === 'firebase') {
-      if (isQuota) {
-        this.currentHealth.firebase.status = 'quota_exceeded';
-        this.currentHealth.firebase.details = 'Firebase Spark 50.000 günlük ücretsiz okuma kotası doldu.';
-      } else if (isPermission) {
-        this.currentHealth.firebase.status = 'permission_denied';
-        this.currentHealth.firebase.details = 'Firebase Firestore erişim yetkisi reddedildi.';
-      } else {
-        this.currentHealth.firebase.status = 'offline';
-        this.currentHealth.firebase.details = errMsg;
-      }
-      this.currentHealth.firebase.lastChecked = Date.now();
-    } else if (source === 'supabase') {
+    {
       this.currentHealth.supabase.status = 'error' as any;
       this.currentHealth.supabase.details = errMsg;
       this.currentHealth.supabase.lastChecked = Date.now();
@@ -242,10 +232,10 @@ class SystemHealthMonitor {
       this.currentHealth.firebase = {
         status: 'offline',
         sparkReadLimit: 'Kapalı',
-        details: 'Firebase veritabanı bu dağıtımda kapalı; Supabase + yerel sunucu kullanılıyor.',
+        details: 'Kaldırıldı (2026-11-02): tüm veri Oracle meds-pg + sunucuda.',
         lastChecked: Date.now(),
       };
-      if (logToConsole) console.log('ℹ️ [Firebase Firestore] Devre dışı (dağıtım tercihi).');
+      if (logToConsole) console.log('ℹ️ [Firebase] Kaldırıldı; veri Oracle meds-pg\'de.');
       return;
     }
     const start = Date.now();
@@ -468,29 +458,17 @@ class SystemHealthMonitor {
     const supa = this.currentHealth.supabase;
     const ai = this.currentHealth.ai;
 
-    const fbWorking = fb.status === 'online';
+    // Firebase 2026-11-02'de kaldırıldı: tek veritabanı meds-pg; fb yalnız eski alan uyumu için durur
+    void fb;
     const supaWorking = supa.status === 'online';
 
-    // KRİTİK VERİTABANI HATASI: Hem Firebase hem Supabase çalışmıyorsa
-    if (!fbWorking && !supaWorking) {
+    // KRİTİK VERİTABANI HATASI: sunucu veritabanı (meds-pg) çalışmıyorsa
+    if (!supaWorking) {
       this.currentHealth.databaseFailureLevel = 'critical';
       this.currentHealth.hasCriticalDatabaseError = true;
       this.currentHealth.overallStatus = 'critical';
       this.currentHealth.statusMessage =
-        '🚨 KRİTİK VERİTABANI HATASI: Hem Firebase hem Supabase veritabanlarına ulaşılamıyor! Soru havuzu ve senkronizasyon çalışamaz.';
-    } else if (!fbWorking && supaWorking) {
-      // Firebase kotası dolmuş ama Supabase devralmış
-      this.currentHealth.databaseFailureLevel = 'warning';
-      this.currentHealth.hasCriticalDatabaseError = false;
-      this.currentHealth.overallStatus = 'warning';
-      this.currentHealth.statusMessage =
-        '⚠️ Firebase Spark kotası doldu. Supabase PostgreSQL bulut veritabanı aktif olarak devraldı.';
-    } else if (fbWorking && !supaWorking) {
-      this.currentHealth.databaseFailureLevel = 'warning';
-      this.currentHealth.hasCriticalDatabaseError = false;
-      this.currentHealth.overallStatus = 'warning';
-      this.currentHealth.statusMessage =
-        '⚠️ Supabase çevrimdışı, Firebase Firestore üzerinden çalışılıyor.';
+        '🚨 KRİTİK VERİTABANI HATASI: Sunucu veritabanına (meds-pg) ulaşılamıyor! Soru havuzu ve senkronizasyon çalışamaz.';
     } else {
       this.currentHealth.databaseFailureLevel = 'none';
       this.currentHealth.hasCriticalDatabaseError = false;

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { CheckCircle2, KeyRound, Loader2, MailCheck, Send } from 'lucide-react';
-import { sendAuthCode, verifyAuthCode, AppUser } from '../services/auth';
+import { sendAuthCode, verifyAuthCode, bekleyenSifreTalebi, AppUser } from '../services/auth';
+import { SifreTalebi } from './SifreTalebi';
 import './epostaBaglanti.css';
 
 /**
- * E-posta kodu akışı (2026-11-02; Firebase e-posta bağlantısının yerine). Giriş kartının altında:
+ * Şifre belirleme / şifresiz giriş akışları (2026-11-02; Firebase e-posta bağlantısının yerine). Giriş kartının altında:
+ *  - amac 'talep' (asıl yol, e-posta gerekmez): yönetici onaylı yeni şifre — SifreTalebi.tsx.
  *  - amac 'sifre': "Şifremi unuttum / Şifre belirle" → e-postaya 6 haneli kod → kod + yeni şifre → oturum açılır.
  *    Eski giriş sisteminden taşınan hesaplar da şifresini böyle belirler (uid ve tüm veri aynı kalır).
  *  - amac 'giris': şifresiz giriş → kod → oturum açılır.
@@ -12,7 +14,7 @@ import './epostaBaglanti.css';
  */
 const maskele = (e: string) => { const [a, d] = e.split('@'); return d ? `${a.slice(0, 1)}***@${d}` : e; };
 
-export type KodAmaci = 'sifre' | 'giris';
+export type KodAmaci = 'sifre' | 'giris' | 'talep';
 
 export function EpostaBaglantiGiris({
   email, setEmail, disabled, v12 = false, acik, setAcik, onGiris, sabitEposta, uyari,
@@ -43,13 +45,15 @@ export function EpostaBaglantiGiris({
     return () => window.clearTimeout(t);
   }, [sayac]);
   useEffect(() => { setDurum('bos'); setKod(''); setYeniSifre(''); setHata(''); setBilgi(''); }, [acik]);
+  // Bu cihazda bekleyen şifre talebi varsa durum kartı kendiliğinden açılır
+  useEffect(() => { if (!acik && bekleyenSifreTalebi()) setAcik('talep'); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const btn = v12 ? 'e12-btn is-lg is-block' : 'au-google';
   const pri = v12 ? 'e12-btn is-pri is-lg is-block' : 'au-submit';
   const spin = <Loader2 className={v12 ? 'e12-spin' : 'au-spin'} aria-hidden />;
   const adres = (sabitEposta || email).trim().toLowerCase();
 
-  const gonder = async (amac: KodAmaci) => {
+  const gonder = async (amac: 'sifre' | 'giris') => {
     setHata(''); setBilgi('');
     if (!adres || !adres.includes('@')) { setAcik(amac); setHata('Kod göndermek için üstteki e-posta alanını doldur.'); return; }
     setAcik(amac);
@@ -63,7 +67,7 @@ export function EpostaBaglantiGiris({
   };
   const dogrula = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!acik) return;
+    if (!acik || acik === 'talep') return;
     setHata('');
     if (kod.replace(/\D/g, '').length !== 6) { setHata('E-postana gelen 6 haneli kodu yaz.'); return; }
     if (acik === 'sifre' && yeniSifre.trim().length < 6) { setHata('Yeni şifre en az 6 karakter olmalı.'); return; }
@@ -79,6 +83,10 @@ export function EpostaBaglantiGiris({
 
   const hataP = hata ? <p role="alert" className="eb-hata">{hata}</p> : null;
 
+  if (acik === 'talep') {
+    return <SifreTalebi kimlik={adres} v12={v12} disabled={disabled} onGiris={onGiris} onVazgec={() => setAcik(null)} uyari={uyari} />;
+  }
+
   if (acik && (durum === 'gonderildi' || durum === 'dogrulaniyor' || durum === 'tamam')) {
     return (
       <form className="eb" onSubmit={dogrula} noValidate>
@@ -89,7 +97,7 @@ export function EpostaBaglantiGiris({
         </p>
         <div className="eb-alanlar">
           <input
-            className="eb-kod"
+            className="eb-kod is-hane"
             value={kod}
             onChange={(e) => setKod(e.target.value.replace(/\D/g, '').slice(0, 6))}
             inputMode="numeric"
@@ -116,7 +124,7 @@ export function EpostaBaglantiGiris({
           {durum === 'tamam' ? 'Giriş yapıldı' : acik === 'sifre' ? 'Şifreyi kaydet ve gir' : 'Kodla giriş yap'}
         </button>
         <div className="eb-satir">
-          <button type="button" className="eb-link" onClick={() => gonder(acik)} disabled={sayac > 0 || disabled}>
+          <button type="button" className="eb-link" onClick={() => gonder(acik === 'giris' ? 'giris' : 'sifre')} disabled={sayac > 0 || disabled}>
             {sayac > 0 ? `Kodu tekrar gönder · 0:${String(sayac).padStart(2, '0')}` : 'Kodu tekrar gönder'}
           </button>
           <button type="button" className="eb-link" onClick={() => setAcik(null)}>Vazgeç</button>
@@ -129,16 +137,20 @@ export function EpostaBaglantiGiris({
   return (
     <div className="eb">
       {uyari && <p className="eb-not" role="status">{uyari}</p>}
-      <button type="button" className={btn} onClick={() => gonder('sifre')} disabled={disabled || durum === 'gonderiliyor'}>
-        {durum === 'gonderiliyor' && acik === 'sifre' ? spin : <KeyRound aria-hidden />}
+      <button type="button" className={btn} onClick={() => { setHata(''); setAcik('talep'); }} disabled={disabled}>
+        <KeyRound aria-hidden />
         Şifremi unuttum / Şifre belirle
       </button>
-      {!sabitEposta && (
-        <button type="button" className={btn} onClick={() => gonder('giris')} disabled={disabled || durum === 'gonderiliyor'}>
-          {durum === 'gonderiliyor' && acik === 'giris' ? spin : <Send aria-hidden />}
-          Şifresiz giriş: e-postama kod gönder
+      <div className="eb-satir">
+        <button type="button" className="eb-link" onClick={() => gonder('sifre')} disabled={disabled || durum === 'gonderiliyor'}>
+          {durum === 'gonderiliyor' && acik === 'sifre' ? spin : null}E-postayla kod al
         </button>
-      )}
+        {!sabitEposta && (
+          <button type="button" className="eb-link" onClick={() => gonder('giris')} disabled={disabled || durum === 'gonderiliyor'}>
+            {durum === 'gonderiliyor' && acik === 'giris' ? spin : <Send aria-hidden />}Şifresiz kodla giriş
+          </button>
+        )}
+      </div>
       {hataP}
     </div>
   );

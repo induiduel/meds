@@ -104,7 +104,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
       const syncTargets = [];
       if (result.serverSynced) syncTargets.push('Yerel Sunucu');
-      if (result.firebaseSynced) syncTargets.push('Firebase Firestore Bulutu');
+      /* Firebase kaldırıldı (2026-11-02) */
       const syncedStr = syncTargets.length > 0 ? syncTargets.join(' ve ') : 'Veritabanı';
 
       setImportSuccessMessage(
@@ -248,7 +248,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
           const syncTargets = [];
           if (importResult.serverSynced) syncTargets.push('Yerel Sunucu');
-          if (importResult.firebaseSynced) syncTargets.push('Firebase Firestore Bulut Veritabanı');
+          /* Firebase kaldırıldı (2026-11-02) */
           const syncedStr = syncTargets.length > 0 ? syncTargets.join(' ve ') : 'Veritabanı';
 
           setImportSuccessMessage(
@@ -261,7 +261,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
           setIsImporting(false);
         }
       } else {
-        setFileExtractStatus(`✓ ${res.questions.length} adet soru ayrıştırıldı. Şimdi aşağıdaki 'Tümünü Veritabanına ve Firebase'e Aktar' butonuna tıklayarak kaydedebilirsiniz.`);
+        setFileExtractStatus(`✓ ${res.questions.length} adet soru ayrıştırıldı. Şimdi aşağıdaki 'Tümünü Veritabanına Aktar' butonuna tıklayarak kaydedebilirsiniz.`);
       }
     } catch (err: any) {
       setParseError(err.message || 'Yapay zeka ayrıştırma sırasında hata oluştu.');
@@ -309,7 +309,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
       const syncTargets = [];
       if (result.serverSynced) syncTargets.push('Yerel Sunucu');
-      if (result.firebaseSynced) syncTargets.push('Firebase Firestore Bulutu');
+      /* Firebase kaldırıldı (2026-11-02) */
       const syncedStr = syncTargets.length > 0 ? syncTargets.join(' ve ') : 'Veritabanı';
 
       setImportSuccessMessage(
@@ -565,7 +565,7 @@ Cevap: A
               />
               <span className="flex items-center gap-1.5">
                 <Cloud className="w-3.5 h-3.5 text-ok" />
-                <span>Ayrıştırıldığında doğrudan Firebase & Sunucuya Otomatik Kaydet</span>
+                <span>Ayrıştırıldığında doğrudan sunucuya otomatik kaydet</span>
               </span>
             </label>
 
@@ -582,7 +582,7 @@ Cevap: A
               ) : isImporting ? (
                 <>
                   <RefreshCw className="w-4 h-4 animate-spin" />
-                  <span>Firebase & Sunucuya Kaydediliyor...</span>
+                  <span>Sunucuya kaydediliyor...</span>
                 </>
               ) : (
                 <>
@@ -620,12 +620,12 @@ Cevap: A
                   {isImporting ? (
                     <>
                       <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                      <span>Firebase & Sunucuya Aktarılıyor...</span>
+                      <span>Sunucuya aktarılıyor...</span>
                     </>
                   ) : (
                     <>
                       <Cloud className="w-4 h-4 text-ok-soft" />
-                      <span>Tümünü Firebase ve Sunucuya Aktar</span>
+                      <span>Tümünü sunucuya aktar</span>
                     </>
                   )}
                 </button>

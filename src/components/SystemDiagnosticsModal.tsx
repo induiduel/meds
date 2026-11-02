@@ -220,7 +220,7 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
                 )}
               </h2>
               <p className="text-sm text-ink-3 m-0">
-                Online Firebase, sunucu veritabanı (meds-pg) ve Yapay Zeka servislerinin canlı durum ve limit takibi
+                Sunucu veritabanı (Oracle meds-pg) ve yapay zekâ servislerinin canlı durum ve limit takibi
               </p>
             </div>
           </div>
@@ -268,10 +268,7 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
             }`}
           >
             <Database className="w-4 h-4" />
-            Veritabanları (Firebase & meds-pg)
-            {health.firebase.status === 'quota_exceeded' && (
-              <span className="w-2 h-2 rounded-full bg-warn" />
-            )}
+            Veritabanı (meds-pg)
             {health.hasCriticalDatabaseError && (
               <span className="w-2 h-2 rounded-full bg-bad" />
             )}
@@ -319,7 +316,7 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
                     <div>
                       <h4 className="font-bold text-md m-0">Online Veritabanı Kesintisi Tespit Edildi!</h4>
                       <p className="text-sm mt-1 m-0 text-bad-text">
-                        Online sitede hem Firebase Spark kotası dolmuş hem de sunucu veritabanına (meds-pg) ulaşılamıyor.
+                        Online sitede sunucu veritabanına (meds-pg) ulaşılamıyor.
                         Öğrenciler soru ekleyemez veya soruları yükleyemez. Lütfen sunucunun ve meds-pg konteynerinin çalıştığını, sunucu loglarını kontrol edin.
                       </p>
                     </div>
@@ -327,51 +324,8 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
                 </div>
               )}
 
-              {health.firebase.status === 'quota_exceeded' && health.supabase.status === 'online' && (
-                <div className="p-4 rounded-xl bg-warn-soft border border-warn text-warn">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-bold text-md m-0">✓ Otomatik Veritabanı Devri Başarılı</h4>
-                      <p className="text-sm mt-1 m-0 text-warn">
-                        Firebase Spark günlük ücretsiz 50.000 okuma kotası doldu. MeDSor otomatik failover sistemi sayesinde tüm veri trafiği kesintisiz olarak <strong>sunucu veritabanına (meds-pg PostgreSQL)</strong> aktarıldı.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
               {/* Service Cards Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Firebase Card */}
-                <div className="p-4 rounded-xl border border-line bg-canvas/40 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-bold text-md text-ink flex items-center gap-2">
-                        <Database className="w-4 h-4 text-warn" />
-                        Firebase Firestore
-                      </span>
-                      {getStatusBadge(health.firebase.status)}
-                    </div>
-                    <div className="text-xs text-ink-3 space-y-1">
-                      <div>Plan: Spark (Ücretsiz)</div>
-                      <div>Günlük Limit: 50.000 Okuma / 20.000 Yazma</div>
-                      {health.firebase.details && (
-                        <div className="text-ink-2 font-medium mt-1 text-2xs p-1.5 rounded bg-white border border-line/60">
-                          {health.firebase.details}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab('database')}
-                    className="mt-3 text-xs font-semibold text-accent hover:underline inline-flex items-center gap-1 cursor-pointer"
-                  >
-                    Detayları Görüntüle →
-                  </button>
-                </div>
-
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Sunucu veritabanı (meds-pg) kartı */}
                 <div className="p-4 rounded-xl border border-line bg-canvas/40 flex flex-col justify-between">
                   <div>
@@ -454,25 +408,6 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
           {/* TAB 2: DATABASE */}
           {activeTab === 'database' && (
             <div className="space-y-6">
-              {/* Firebase Deep Dive */}
-              <div className="p-5 rounded-xl border border-line bg-white space-y-3">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-md text-ink flex items-center gap-2 m-0">
-                    <Database className="w-5 h-5 text-warn" />
-                    Google Firebase Firestore (Spark Plan)
-                  </h3>
-                  {getStatusBadge(health.firebase.status)}
-                </div>
-                <p className="text-sm text-ink-2 m-0">
-                  Firebase Spark planı günde en fazla 50.000 okuma ve 20.000 yazma sunar. Bu sınır aşıldığında Firestore <code className="font-mono text-bad-text">resource-exhausted</code> hatası verir.
-                </p>
-                <div className="p-3 rounded-lg bg-canvas text-xs font-mono space-y-1">
-                  <div>• Proje ID: gen-lang-client-0056595657</div>
-                  <div>• Veritabanı ID: ai-studio-medsorutpkurulso-8352a999-14d5-45ab-bdf1-62102aece060</div>
-                  <div>• Son Durum: {health.firebase.details || health.firebase.status}</div>
-                </div>
-              </div>
-
               {/* meds-pg Deep Dive */}
               <div className="p-5 rounded-xl border border-line bg-white space-y-4">
                 <div className="flex items-center justify-between">
@@ -654,21 +589,6 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
                 <h4 className="font-bold text-base text-ink m-0">Aktif Veritabanı Modu</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                   <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
-                    dbMode === 'auto' ? 'border-accent bg-accent-soft' : 'border-line hover:bg-canvas'
-                  }`}>
-                    <div className="flex items-center justify-between">
-                      <span className="font-bold text-sm text-ink">Otomatik (Önerilen)</span>
-                      <input 
-                        type="radio" 
-                        name="db_mode" 
-                        checked={dbMode === 'auto'} 
-                        onChange={() => setDbMode('auto')} 
-                      />
-                    </div>
-                    <span className="text-2xs text-ink-3">Firebase Spark kotası dolarsa otomatik olarak sunucu veritabanı (meds-pg) devralır.</span>
-                  </label>
-
-                  <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
                     dbMode === 'supabase' ? 'border-accent bg-accent-soft' : 'border-line hover:bg-canvas'
                   }`}>
                     <div className="flex items-center justify-between">
@@ -680,23 +600,9 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
                         onChange={() => setDbMode('supabase')} 
                       />
                     </div>
-                    <span className="text-2xs text-ink-3">Firebase kotalarını atlar, doğrudan sunucu üzerinden meds-pg PostgreSQL kullanır.</span>
+                    <span className="text-2xs text-ink-3">Tüm veri sunucu üzerinden Oracle meds-pg PostgreSQL'de (Firebase 2026-11-02'de kaldırıldı).</span>
                   </label>
 
-                  <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
-                    dbMode === 'firebase' ? 'border-accent bg-accent-soft' : 'border-line hover:bg-canvas'
-                  }`}>
-                    <div className="flex items-center justify-between">
-                      <span className="font-bold text-sm text-ink">Yalnızca Firebase</span>
-                      <input 
-                        type="radio" 
-                        name="db_mode" 
-                        checked={dbMode === 'firebase'} 
-                        onChange={() => setDbMode('firebase')} 
-                      />
-                    </div>
-                    <span className="text-2xs text-ink-3">Yalnızca Google Firestore veritabanını kullanır.</span>
-                  </label>
                 </div>
               </div>
 

@@ -17,26 +17,47 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const safe = s => s.replace(/[\\:*?"<>|]/g, '_').split('/').map(x => x.trim()).filter(Boolean).join('/');
 
 // --- servis hesabı (isteğe bağlı yedek) ---
+// 2026-11-02: eski servis hesabı askıya alınan GCP projesindeydi (invalid_grant: account not found). Yedek yoksa ya da
+// jeton alınamazsa bir kez açıkça yazılır ve yalnız herkese açık yollar kullanılır (sessiz başarısızlık yok).
 let saTokenCache = null;
+let saUyari = false;
+const saYok = (neden) => { if (!saUyari) { saUyari = true; console.warn(`[drive] servis hesabı yedeği kullanılamıyor (${neden}); yalnız herkese açık indirme kullanılır.`); } return null; };
 async function saToken() {
-  const f = process.env.GOOGLE_SERVICE_ACCOUNT_FILE; if (!f || !fs.existsSync(f)) return null;
+  const f = process.env.GOOGLE_SERVICE_ACCOUNT_FILE; if (!f || !fs.existsSync(f)) return saYok('anahtar dosyası yok');
+  if (saUyari) return null;
   if (saTokenCache && saTokenCache.exp > Date.now() + 60000) return saTokenCache.token;
+  try {
   const sa = JSON.parse(fs.readFileSync(f, 'utf8')); const now = Math.floor(Date.now() / 1000);
   const b = o => Buffer.from(JSON.stringify(o)).toString('base64url');
   const unsigned = b({ alg: 'RS256', typ: 'JWT' }) + '.' + b({ iss: sa.client_email, scope: 'https://www.googleapis.com/auth/drive.readonly', aud: sa.token_uri, iat: now, exp: now + 3600 });
   const sig = crypto.sign('RSA-SHA256', Buffer.from(unsigned), sa.private_key).toString('base64url');
   const r = await fetch(sa.token_uri, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: unsigned + '.' + sig }) });
-  const j = await r.json(); if (!j.access_token) return null;
+  const j = await r.json(); if (!j.access_token) return saYok(j.error_description || j.error || `HTTP ${r.status}`);
   saTokenCache = { token: j.access_token, exp: Date.now() + 3500000 }; return saTokenCache.token;
+  } catch (e) { return saYok(e?.message || String(e)); }
 }
 
 async function open(id, method) {
   if (method === 'free') {
     const r = await fetch(`https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t`, { redirect: 'follow' });
     const ct = r.headers.get('content-type') || '';
-    if (!r.ok || ct.includes('text/html')) return null; // kota/izin sayfası
-    return r;
+    if (r.ok && !ct.includes('text/html')) return r;
+    // Büyük dosyada virüs taraması onay sayfası gelebilir: formdaki uuid ile bir kez daha dene
+    if (r.ok) {
+      const html = await r.text();
+      const uuid = html.match(/name="uuid" value="([^"]+)"/)?.[1];
+      if (uuid) {
+        const r2 = await fetch(`https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t&uuid=${encodeURIComponent(uuid)}`, { redirect: 'follow' });
+        if (r2.ok && !(r2.headers.get('content-type') || '').includes('text/html')) return r2;
+      }
+    }
+    return null; // kota/izin sayfası
+  }
+  if (method === 'free_uc') {
+    // İkinci herkese açık yol (eski uç); usercontent geçici olarak reddederse
+    const r = await fetch(`https://drive.google.com/uc?export=download&confirm=t&id=${id}`, { redirect: 'follow' });
+    return r.ok && !(r.headers.get('content-type') || '').includes('text/html') ? r : null;
   }
   const t = await saToken(); if (!t) return null;
   const r = await fetch(`https://www.googleapis.com/drive/v3/files/${id}?alt=media`, { headers: { Authorization: `Bearer ${t}` } });
@@ -63,7 +84,7 @@ for (const it of todo) {
   const rel = path.join(it.root, safe(it.path)); const dest = path.join(DOWNLOADS_DIR, rel); const part = dest + '.part';
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   let ok = false, via = null;
-  for (const method of ['free', 'service_account']) {
+  for (const method of ['free', 'free_uc', 'service_account']) {
     for (let t = 0; t < 2 && !ok; t++) {
       try {
         const res = await open(it.drive_id, method); if (!res) break;

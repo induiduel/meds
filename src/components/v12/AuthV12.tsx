@@ -138,7 +138,9 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
                 {field({ id: 'num', label: 'Öğrenci no', value: p.studentNumber, set: p.setStudentNumber, mode: 'numeric', auto: 'off' })}
               </div>
             )}
-            {field({ id: 'email', label: 'E-posta', value: p.email, set: p.setEmail, type: 'email', auto: 'email', mode: 'email', placeholder: 'ad.soyad@ogr.karabuk.edu.tr' })}
+            {mode === 'login'
+              ? field({ id: 'email', label: 'E-posta ya da öğrenci no', value: p.email, set: p.setEmail, type: 'text', auto: 'username', placeholder: 'ad.soyad@ogr.karabuk.edu.tr ya da 2411…' })
+              : field({ id: 'email', label: 'E-posta', value: p.email, set: p.setEmail, type: 'email', auto: 'email', mode: 'email', placeholder: 'ad.soyad@ogr.karabuk.edu.tr' })}
             {field({
               id: 'pass',
               label: 'Şifre',

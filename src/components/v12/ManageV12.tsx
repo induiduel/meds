@@ -307,11 +307,9 @@ export const ManageOverviewV12: React.FC<{
 
   const cells = useMemo<HealthCell[]>(() => {
     const db = health.supabase;
-    const fb = health.firebase;
     const ai = health.ai;
     const out: HealthCell[] = [
       { name: 'meds-pg', dot: !db.lastChecked ? 'idle' : db.status === 'online' ? 'ok' : 'bad', text: db.lastChecked ? DB_TEXT[db.status] || db.status : 'denetlenmedi' },
-      { name: 'Firebase', dot: !fb.lastChecked ? 'idle' : fb.status === 'online' ? 'ok' : fb.status === 'quota_exceeded' ? 'warn' : 'bad', text: fb.lastChecked ? DB_TEXT[fb.status] || fb.status : 'denetlenmedi' },
       { name: 'Yapay zeka', dot: !ai.lastChecked ? 'idle' : ai.status === 'ready' ? 'ok' : ai.status === 'degraded' ? 'warn' : 'bad', text: ai.lastChecked ? AI_TEXT[ai.status] || ai.status : 'denetlenmedi' },
       { name: 'Canlı kanal', dot: liveStatus === 'connected' ? 'ok' : liveStatus === 'connecting' ? 'warn' : 'bad', text: liveStatus === 'connected' ? 'bağlı' : liveStatus === 'connecting' ? 'bağlanıyor' : 'kopuk' },
     ];

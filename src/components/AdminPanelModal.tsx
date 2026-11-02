@@ -288,7 +288,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
   const handleSyncToAllDatabases = async () => {
     setIsSyncingMultiDb(true);
-    setMultiDbFeedback('Tüm veriler Supabase ve Firebase Spark havuzlarına eşitleniyor...');
+    setMultiDbFeedback('Tüm veriler sunucu veritabanına (meds-pg) eşitleniyor...');
     try {
       let supaCount = 0;
       let sparkCount = 0;
@@ -307,12 +307,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         console.warn('Supabase batch sync warning:', e.message);
       }
 
-      try {
-        await FirestoreDbService.batchSaveQuestions(questions);
-        sparkCount = questions.length;
-      } catch (e: any) {
-        console.warn('Firebase batch sync warning:', e.message);
-      }
+      void sparkCount; // Firebase kaldırıldı (2026-11-02)
 
       let notesCount = 0;
       try {
@@ -326,7 +321,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         console.warn('Lecture notes sync warning:', e.message);
       }
 
-      setMultiDbFeedback(`✓ Senkronizasyon Tamamlandı! ${supaCount} çıkmış soru, ${notesCount} ders notu Supabase'e, ${sparkCount} soru Firebase Spark'a ve yerel sunucuya başarıyla işlendi.`);
+      setMultiDbFeedback(`✓ Senkronizasyon Tamamlandı! ${supaCount} çıkmış soru, ${notesCount} ders notu sunucu veritabanına (meds-pg) başarıyla işlendi.`);
       await refreshDbStatuses();
     } catch (err: any) {
       setMultiDbFeedback(`Hata: ${err.message}`);
@@ -834,10 +829,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
   const handleSyncAuthDbBridge = async () => {
     setIsSyncingAuthDb(true);
-    setUserSyncMessage('Firebase Auth ve Realtime Veritabanı senkronize ediliyor...');
+    setUserSyncMessage('Kullanıcı hesapları sunucu veritabanıyla eşitleniyor...');
     try {
       await loadUsersData();
-      setUserSyncMessage('✓ Firebase Auth ve Veritabanı başarıyla senkronize edildi. Tüm kullanıcılar güncel!');
+      setUserSyncMessage('✓ Kullanıcı hesapları sunucu veritabanıyla eşitlendi. Tüm kullanıcılar güncel!');
     } catch (err: any) {
       setUserSyncMessage('Hata: ' + err.message);
     } finally {
@@ -1754,7 +1749,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <h3 className="text-sm font-bold text-ink">Çoklu Veritabanı Yönetimi & Kesintisiz Geçiş</h3>
                   </div>
                   <p className="text-2xs text-ink-3">
-                    Firebase Spark, Supabase (PostgreSQL) ve Yerel PC veritabanları arasında anlık geçiş yapın. Her kayıt işlemi Firebase Spark'a da otomatik yedeklenir.
+                    Sunucu veritabanı (Oracle meds-pg PostgreSQL) ile yerel PC sunucusu arasında geçiş yapın. Firebase 2026-11-02'de kaldırıldı.
                   </p>
                 </div>
 
@@ -1770,30 +1765,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
 
               {/* Live Health Badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                {/* Firebase Spark Badge */}
-                <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
-                  dbStatuses?.firebase.status === 'quota_exceeded'
-                    ? 'bg-warn-soft border-warn/60 text-warn'
-                    : 'bg-canvas border-line text-ink-3'
-                }`}>
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold flex items-center gap-1.5 text-xs">
-                      Firebase Spark
-                    </span>
-                    <span className={`text-2xs font-extrabold px-2 py-0.5 rounded-full ${
-                      dbStatuses?.firebase.status === 'quota_exceeded'
-                        ? 'bg-warn-soft text-warn border border-warn/50'
-                        : 'bg-ok-soft text-ok border border-ok/40'
-                    }`}>
-                      {dbStatuses?.firebase.status === 'quota_exceeded' ? 'Kota Doldu' : 'Aktif'}
-                    </span>
-                  </div>
-                  <span className="text-2xs opacity-80">
-                    {dbStatuses?.firebase.details || '50K günlük okuma sınırı'}
-                  </span>
-                </div>
-
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {/* Supabase Badge */}
                 <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
                   dbStatuses?.supabase.status === 'online'
@@ -1877,23 +1849,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     </div>
                     <p className="text-2xs opacity-85 mt-1">
                       Öncelikli olarak Supabase PostgreSQL sorgularını kullanır.
-                    </p>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => handleSelectDbMode('firebase')}
-                    className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
-                      dbMode === 'firebase'
-                        ? 'bg-warn text-white border-warn shadow-md ring-2 ring-warn/50'
-                        : 'bg-canvas text-ink-3 border-line hover:bg-field'
-                    }`}
-                  >
-                    <div className="font-bold flex items-center gap-1.5 text-xs">
-                      <span>Firebase Spark</span>
-                    </div>
-                    <p className="text-2xs opacity-85 mt-1">
-                      Doğrudan Cloud Firestore NoSQL veritabanını kullanır.
                     </p>
                   </button>
 
@@ -2149,66 +2104,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
             </div>
 
-            {/* Cloud Firestore Sync Card */}
-            <div className="bg-white text-ink border border-ok/50 rounded-xl p-4 sm:p-5 space-y-3 shadow-md">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-ok-soft text-ok border border-ok/30 flex items-center justify-center">
-                    <Cloud className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-sm text-ink flex items-center gap-2">
-                      <span>Firebase Firestore Bulut Senkronizasyonu</span>
-                      <span className="bg-ok-soft text-ok border border-ok/30 text-2xs font-bold px-2 py-0.5 rounded-full">
-                        Canlı Bulut
-                      </span>
-                    </h4>
-                    <p className="text-xs text-ink-3">
-                      Mevcut soru havuzunu ({questions.length} soru) Firebase Firestore bulutuna toplu olarak yazar.
-                    </p>
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={handleSyncQuestionsToFirestore}
-                  disabled={isSyncingFirestore || questions.length === 0}
-                  className="bg-ok hover:bg-ok text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50 shadow-sm shrink-0"
-                >
-                  <RefreshCw className={`w-3.5 h-3.5 ${isSyncingFirestore ? 'animate-spin' : ''}`} />
-                  <span>{isSyncingFirestore ? 'Buluta Yazılıyor...' : 'Tüm Soruları Firestore\'a Aktar'}</span>
-                </button>
-              </div>
-
-              <div className="bg-canvas border border-line rounded-lg p-3 text-2xs text-ink-3 space-y-1.5">
-                <div className="flex items-center gap-1.5 text-ok font-semibold">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Güvenli & Parçalı (Chunked) Firestore Aktarımı:</span>
-                </div>
-                <p className="leading-relaxed">
-                  Bu işlem tüm çıkmış soruları ve komite sorularını 100'lük güvenli paketlere bölerek Firestore'a kaydeder. Beğeniler (upvotes) 0'dan başlatılır ve tekil beğeni listesi (<code className="text-ok">likedBy: []</code>) standartlaştırılır.
-                </p>
-              </div>
-
-              {firestoreSyncFeedback && (
-                <div className={`p-3 rounded-lg border text-xs flex items-start gap-2 ${
-                  firestoreSyncFeedback.startsWith('✓')
-                    ? 'bg-ok/80 border-ok/50 text-ok'
-                    : firestoreSyncFeedback.startsWith('Hata')
-                    ? 'bg-bad/80 border-bad/50 text-bad-text'
-                    : 'bg-ok/80 border-ok/50 text-ok'
-                }`}>
-                  <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />
-                  <span>{firestoreSyncFeedback}</span>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* TAB 4: USERS MANAGEMENT & AUTH-DATABASE SYNC */}
-        {activeTab === 'users' && (
-          <div className="p-4 sm:p-6 overflow-y-auto space-y-5">
             {/* Top Status & Sync Banner */}
             <div className="bg-white text-ink p-4 sm:p-5 rounded-2xl border border-ok shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div className="space-y-1">
@@ -2237,7 +2132,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   onClick={handleSyncAuthDbBridge}
                   disabled={isSyncingAuthDb}
                   className="bg-ok/80 hover:bg-ok text-ok-soft border border-ok/60 font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95 disabled:opacity-50"
-                  title="Firebase Auth kullanıcıları ile veritabanını doğrula ve yenile"
+                  title="Kullanıcı hesaplarını sunucu veritabanıyla doğrula ve yenile"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isSyncingAuthDb ? 'animate-spin text-ok' : 'text-ok'}`} />
                   <span>{isSyncingAuthDb ? 'Eşitleniyor...' : 'Veritabanını Eşitle'}</span>

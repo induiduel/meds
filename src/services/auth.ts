@@ -93,7 +93,9 @@ let hazirBekleyenler: (() => void)[] = [];
 
 class AuthHatasi extends Error {
   code: string;
-  constructor(msg: string, code = '') { super(msg); this.code = code; }
+  /** Sunucunun hatayla döndürdüğü ek alanlar (ör. sifre-belirle → hesabın e-postası) */
+  veri: Record<string, any>;
+  constructor(msg: string, code = '', veri: Record<string, any> = {}) { super(msg); this.code = code; this.veri = veri; }
 }
 
 /** /api/kimlik/* çağrısı. Ağ hatası AuthHatasi('…', 'ag') fırlatır; sunucu hatası iletisiyle fırlatılır. */
@@ -113,7 +115,7 @@ async function kimlikIstek(yol: string, govde?: unknown, token?: string, method 
   try { j = await r.json(); } catch { /* boş */ }
   if (!r.ok || !j?.ok) {
     if (r.status >= 500 && !j?.error) throw new AuthHatasi('Sunucuya ulaşılamadı. Biraz sonra tekrar deneyin.', 'ag');
-    throw new AuthHatasi(j?.error || 'İşlem yapılamadı. Lütfen tekrar deneyin.', j?.kod || String(r.status));
+    throw new AuthHatasi(j?.error || 'İşlem yapılamadı. Lütfen tekrar deneyin.', j?.kod || String(r.status), j || {});
   }
   return j;
 }
@@ -243,7 +245,9 @@ function oturumKaydet(j: any): KimlikKullanici {
  * Profil önbelleği ve sunucu profili
  * ==================================================================== */
 
-let cachedAccessToken: string | null = safeStorage.getItem(LOCAL_TOKEN_KEY) || null;
+// Eski Google Drive erişim jetonu (Google girişi kalktı, H466): kayıtlı kalıntı silinir, Drive'a yükleme yapılmaz
+safeStorage.removeItem(LOCAL_TOKEN_KEY);
+let cachedAccessToken: string | null = null;
 
 export const rememberStudentInfo = (name: string, studentNumber?: string) => {
   if (name && name.trim()) {
@@ -496,6 +500,51 @@ export const verifyAuthCode = async (
   return appUser;
 };
 
+/* ---------------- yönetici onaylı şifre talebi (e-posta gerekmez) ---------------- */
+
+const TALEP_KEY = 'medsoru_sifre_talebi_v1';
+export type SifreTalebiKaydi = { id: string; takip: string; email: string; at: string };
+
+/** Bu cihazdan gönderilmiş, sonucu henüz alınmamış talep */
+export const bekleyenSifreTalebi = (): SifreTalebiKaydi | null => {
+  try { const k = JSON.parse(safeStorage.getItem(TALEP_KEY) || 'null'); return k?.id && k?.takip ? k : null; } catch { return null; }
+};
+export const sifreTalebiniUnut = () => safeStorage.removeItem(TALEP_KEY);
+
+/** Yeni şifreyi yönetici onayına gönderir. kimlik = e-posta ya da öğrenci no. */
+export const sifreTalebiGonder = async (o: { kimlik: string; yeniSifre: string; ad: string; ogrenciNo: string; aciklama?: string }): Promise<string> => {
+  if (o.yeniSifre.trim().length < 6) throw new Error('Yeni şifre en az 6 karakter olmalı.');
+  const j = await kimlikIstek('sifre-talebi', { ...o, yeniSifre: o.yeniSifre.trim() });
+  safeStorage.setItem(TALEP_KEY, JSON.stringify({ id: j.id, takip: j.takip, email: j.email, at: new Date().toISOString() }));
+  return j.mesaj;
+};
+
+/**
+ * Bekleyen talebin durumu. Onaylandıysa ve oturum bu cihaza verildiyse giriş yapılır (user döner).
+ * Sonuçlanan talep (onay/ret) yerel kayıttan silinir.
+ */
+export const sifreTalebiDurumu = async (): Promise<{ durum: 'yok' | 'bekliyor' | 'onaylandi' | 'reddedildi' | 'iptal'; not?: string | null; user?: AppUser }> => {
+  const k = bekleyenSifreTalebi();
+  if (!k) return { durum: 'yok' };
+  let j: any;
+  try {
+    j = await kimlikIstek('sifre-talebi/durum', { id: k.id, takip: k.takip });
+  } catch (e: any) {
+    if (e?.code === 'yok') { sifreTalebiniUnut(); return { durum: 'yok' }; }
+    throw e;
+  }
+  if (j.durum === 'bekliyor') return { durum: 'bekliyor' };
+  sifreTalebiniUnut();
+  if (j.durum === 'onaylandi' && j.token && j.yenileme) {
+    const kisi = oturumKaydet(j);
+    const appUser = appUserOf(kisi);
+    cacheUserProfile(appUser);
+    if (appUser.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) setLocalAdminSession(ADMIN_EMAIL);
+    return { durum: 'onaylandi', user: appUser };
+  }
+  return { durum: j.durum, not: j.not || null };
+};
+
 /** Eski ad: e-postaya şifre belirleme kodu gönderir. */
 export const sendPasswordReset = async (email: string): Promise<void> => {
   await sendAuthCode(email, 'sifre');
@@ -523,10 +572,10 @@ export const loginWithEmailPassword = async (
   const cleanPass = pass.trim();
 
   if (!cleanEmail || !cleanPass) {
-    throw new Error('Lütfen e-posta ve şifrenizi giriniz.');
+    throw new Error('Lütfen e-posta (ya da öğrenci numarası) ve şifrenizi giriniz.');
   }
 
-  // Hata AuthHatasi olarak (code: 'sifre-belirle' | 'yok' | 'hatali' …) çağırana gider
+  // cleanEmail öğrenci numarası da olabilir (sunucu ikisini de tanır). Hata AuthHatasi olarak (code: 'sifre-belirle' | 'yok' | 'hatali' …) çağırana gider
   const j = await kimlikIstek('giris', { email: cleanEmail, sifre: cleanPass });
   const kisi = oturumKaydet(j);
   let appUser = appUserOf(kisi);

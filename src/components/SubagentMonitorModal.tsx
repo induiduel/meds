@@ -58,14 +58,14 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
       id: '2',
       time: new Date(Date.now() - 20000).toLocaleTimeString('tr-TR'),
       tag: 'Bulut Köprüsü',
-      message: 'Firebase Firestore telemetrisi senkronize edildi. Kalp atışı aktif.',
+      message: 'Sunucu telemetrisi alındı. Kalp atışı aktif.',
       type: 'success'
     },
     {
       id: '3',
       time: new Date(Date.now() - 10000).toLocaleTimeString('tr-TR'),
       tag: 'Hibrit Koruma',
-      message: 'Yerel PC sunucusu port 3000 üzerinde dinlemede. Firebase kotası izleniyor.',
+      message: 'Yerel PC sunucusu port 3000 üzerinde dinlemede.',
       type: 'info'
     }
   ]);
@@ -201,7 +201,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                   </span>
                 </h2>
                 <p className="text-xs text-ink-3">
-                  Yerel bilgisayarınızdaki yapay zeka subagentleri, OCR süreçleri ve Firebase hibrit veritabanı sentinel durumu
+                  Yerel bilgisayarınızdaki yapay zeka subagentleri, OCR süreçleri ve sunucu veritabanı sentinel durumu
                 </p>
               </div>
             </div>
@@ -525,10 +525,10 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
               <div className="p-4 sm:p-5 bg-white border border-warn/30 rounded-2xl space-y-2">
                 <div className="flex items-center gap-2 text-warn font-bold text-sm">
                   <ShieldCheck className="w-5 h-5 text-warn" />
-                  <span>Hibrit Mimari: Ücretsiz Yerel PC Sunucusu & Firebase Kotasız Çalışma</span>
+                  <span>Mimari: Oracle sunucusu + yerel PC sunucusu</span>
                 </div>
                 <p className="text-xs text-ink-3 leading-relaxed">
-                  Firebase Firestore'un ücretsiz günlük okuma/yazma kotaları (50.000 okuma/gün) tükendiğinde veya site yoğun trafik aldığında; sistem otomatik olarak bilgisayarınızdaki yerel veritabanına ve Express sunucusuna yönlenir. Böylece sıfır maliyetle sınırsız hizmet verilir!
+                  Tüm veri Oracle'daki meds-pg PostgreSQL veritabanında ve sunucuda tutulur (Firebase 2026-11-02'de kaldırıldı). Yerel PC sunucusu aynı şemayla geliştirme ve içerik hattı için çalışır.
                 </p>
               </div>
 
@@ -540,16 +540,16 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-ink-3 flex items-center gap-2">
                       <Cloud className="w-4 h-4 text-accent" />
-                      Bulut: Firebase Firestore
+                      Bulut: Oracle meds-pg
                     </span>
                     <span className="text-2xs bg-ok/20 text-ok font-bold px-2 py-0.5 rounded-full border border-ok/30">
                       Çevrimiçi
                     </span>
                   </div>
                   <ul className="text-xs text-ink-3 space-y-1.5">
-                    <li>• Veritabanı ID: <code>karabuk-tip-d3-db</code></li>
-                    <li>• Durum: <strong>Aktif & Gerçek Zamanlı Dinleyici Devrede</strong></li>
-                    <li>• Kota Durumu: <strong>Normal (Sınır Aşımında Otomatik PC'ye Aktarılır)</strong></li>
+                    <li>• Veritabanı: <code>meds-pg</code> (PostgreSQL 17 + pgvector)</li>
+                    <li>• Canlı yayın: <strong>pg_notify → SSE</strong></li>
+                    <li>• Yedek: <strong>her gece 03:30, 7 gün</strong></li>
                   </ul>
                 </div>
 

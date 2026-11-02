@@ -1,24 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 617,
-  "baslik": "Giriş sistemi yenilendi: Google girişi kalktı",
+  "onem": 618,
+  "baslik": "Kolay giriş: yönetici onaylı şifre, öğrenci numarasıyla giriş",
   "maddeler": [
-    "Giriş artık MeDSor'un kendi sistemiyle: e-posta + şifre. Google ile giriş kaldırıldı.",
-    "Eski hesabın ve tüm verilerin yerinde: bir kez \"Şifremi unuttum / Şifre belirle\" ile e-postana gelen 6 haneli kodla yeni şifreni belirle.",
-    "Şifresiz giriş: e-postana gelen kodla da girebilirsin."
+    "Eski hesabınla giremiyorsan: girişte \"Şifremi unuttum / Şifre belirle\" → bilgilerini ve yeni şifreni yaz. Yönetici onaylayınca kendiliğinden giriş yapılır; e-posta gerekmez.",
+    "Artık e-posta YA DA öğrenci numarası + şifreyle giriş yapabilirsin.",
+    "Hesabın ve tüm verilerin yerinde kalır."
   ],
   "eklenen": [
-    "E-posta koduyla şifre belirleme ve şifresiz giriş"
+    "Yönetici onaylı şifre belirleme",
+    "Öğrenci numarasıyla giriş"
   ],
   "degisen": [
-    "Giriş ve kayıt ekranı (Google düğmesi kaldırıldı)"
+    "Soru kitapçığı yalnız PDF olarak indirilir (Drive'a yükleme kalktı)"
   ],
-  "duzeltilen": [
-    "Google hizmetleri askıya alındığı için açılamayan giriş"
-  ],
-  "silinen": [
-    "Google ile giriş",
-    "Google Drive'a otomatik yedek (yedekler sunucuda)"
-  ],
+  "duzeltilen": [],
+  "silinen": [],
   "yenilikler": []
 }

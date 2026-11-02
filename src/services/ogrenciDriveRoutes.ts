@@ -61,7 +61,12 @@ export function ogrenciDriveRouter(): Router {
       if (!id || !hedef) {
         return res.status(400).json({ ok: false, error: 'id ve hedef alanları zorunludur' });
       }
-      const hedefYol = path.resolve(appDir, hedef);
+      // Hedef yalnız proje ya da indirme kökleri altında olabilir (../ ile dışarı yazılmasın)
+      const hedefYol = path.resolve(appDir, String(hedef));
+      const izinli = [appDir, path.resolve(appDir, '..', 'meds_downloads'), path.resolve(appDir, '..', 'meds_temp'), path.resolve(appDir, '..', 'meds_database_v2')];
+      if (!izinli.some((k) => hedefYol === k || hedefYol.startsWith(k + path.sep))) {
+        return res.status(400).json({ ok: false, error: 'Hedef yol izinli klasörlerin dışında.' });
+      }
       const { stdout, stderr } = await execFileAsync('python3', [pythonScript, '--indir', '--id', id, '--hedef', hedefYol], { timeout: 120000 });
       return res.json({ ok: true, hedef: hedefYol, log: stdout || stderr });
     } catch (e: any) {
