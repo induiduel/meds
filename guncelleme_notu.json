@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 635,
-  "baslik": "Yönetim: Quiz havuzu canlıda görünüyor",
+  "onem": 636,
+  "baslik": "Dağıtım güvenliği: canlı sürüm damgası doğrulanmadan yazılmıyor",
   "maddeler": [
-    "Yönetim › Quiz havuzu sayfası canlı sunucuda boş görünüyordu; düzeltildi."
+    "Site güncellemesi yarım kalırsa artık fark edilip yeniden yapılıyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Quiz havuzunun canlıda boş görünmesi (H479)"
+    "Güncellemenin canlıya inmeden 'güncel' sayılması (H480)"
   ],
   "silinen": [],
   "yenilikler": []

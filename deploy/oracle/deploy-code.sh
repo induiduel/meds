@@ -98,9 +98,11 @@ rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' \
   --exclude='/.env' --exclude='/.env.*' --exclude='*.bak' --exclude='*.bak_*' --exclude='*.backup*' \
   --exclude='/get-pip.py' --exclude='/.agents' --exclude='/.claude' --exclude='/.github' \
   --exclude='/scripts/archive' --exclude='/scripts/semantic/data' \
+  --exclude='/dist/dagitim.json' \
   -e "$SSH" "$MEDS_DIR/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/" > "$CHANGED"
-# Yalnız içeriği aktarılan dosyalar (>f); tarih/sahip eşitlemesi (.f..t..) yeniden başlatma sebebi değil
-sed -n 's/^>f[^ ]* //p' "$CHANGED" > "$CHANGED.f" || true; mv "$CHANGED.f" "$CHANGED"
+# Yalnız içeriği aktarılan dosyalar; gönderimde rsync '<f' yazar ('>f' alımdır — eski kalıp hiçbir satırı tutmuyor, liste hep 0'dı, H480).
+# Tarih/sahip eşitlemesi (.f..t..) yeniden başlatma sebebi değil.
+sed -n 's/^[<>]f[^ ]* //p' "$CHANGED" > "$CHANGED.f" || true; mv "$CHANGED.f" "$CHANGED"
 echo "  $(wc -l < "$CHANGED") dosya aktarıldı"
 
 echo "==> [1b/4] sesli ders verisi (metin/hizalama/vurgu/çıkmış konumu → Oracle data/sesli_anlatim)"
@@ -192,4 +194,18 @@ if [[ "$NEED_RESTART" == "1" || "$DO_IMAGE" == "1" ]]; then
   # meds-app 3 GB tavanında derlemez (bellek koruması); derleme 2 GB sınırlı tek seferlik konteynerde
   $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR; mkdir -p deploy/oracle/logs; setsid nohup ./deploy/oracle/build-search.sh </dev/null > deploy/oracle/logs/build-search.log 2>&1 &"
 fi
+# Damga en son (H480): dist/dagitim.json kodla aynı rsync'te gidince yarıda kalan/eksik bir dağıtımda canlı "yeni commit"
+# görünüp eski kodla kalabiliyordu (dagit.sh sonra "canlı zaten güncel" deyip duruyordu). Önce sunucu kodu karması yerelle
+# eşleşmeli; eşleşmezse damga gönderilmez, dağıtım hata verir ve dagit.sh yeniden denenebilir.
+# Karşılaştırma YEREL dosya listesi üzerinden: rsync silme yapmadığı için Oracle'da eski dosyalar (firebaseIdentity.ts vb.)
+# kalıyor, Oracle'ın kendi listesiyle karma hiç eşleşmezdi.
+KOD_LISTE="$(cd "$MEDS_DIR" && find server.ts src/services src/serverLectureNotes.ts src/config src/types src/data/basarim src/data/dersler src/data/kurul_takvimi_ozet.json -type f \( -name '*.ts' -o -name '*.json' \) 2>/dev/null | LC_ALL=C sort)"
+LOKAL_KARMA="$(cd "$MEDS_DIR" && echo "$KOD_LISTE" | xargs sha256sum | sha256sum | cut -c1-16)"
+UZAK_SON="$(echo "$KOD_LISTE" | $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && xargs sha256sum | sha256sum | cut -c1-16" 2>/dev/null || true)"
+if [[ "$LOKAL_KARMA" != "$UZAK_SON" ]]; then
+  echo "DURDU: Oracle'daki sunucu kodu hedefle eşleşmiyor (yerel $LOKAL_KARMA · Oracle $UZAK_SON) — damga yazılmadı, yeniden dağıtın." >&2
+  exit 1
+fi
+rsync -az --rsync-path='sudo rsync' -e "$SSH" "$MEDS_DIR/dist/dagitim.json" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/dist/dagitim.json"
+echo "  damga: $(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["commit"][:8])' "$MEDS_DIR/dist/dagitim.json") (sunucu kodu karması $LOKAL_KARMA doğrulandı)"
 echo "BİTTİ. ($(( $(date +%s) - T0 )) sn)"

@@ -2066,3 +2066,14 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** `meds_database_v2` = `dirname(MEDS_DATABASE_DIR)/meds_database_v2` (phase14Overlay.ts kuralı), `meds_temp` = `MEDS_TEMP_DIR`.
 - **Önleme:** Sunucu kodunda kardeş veri klasörleri `rootDir/..`'dan değil ortam değişkeninden (MEDS_DATABASE_DIR, MEDS_TEMP_DIR, MEDS_DOWNLOADS_DIR) türetilir;
   yeni uç canlıda (Oracle) bir kez çağrılarak boş olmadığı doğrulanır.
+
+## H480 — Canlı damgası yeni commit'i gösterirken sunucu kodu eski kaldı (2026-11-03)
+- **Belirti:** onem 633 dağıtımından sonra `dist/dagitim.json` 67ab8ccf (H479) diyordu ama `/api/admin/quiz/havuz` hâlâ boştu, sunucu dosyası eski,
+  meds-app yeniden başlamamıştı; `dagit.sh` "Canlı zaten güncel" deyip ikinci dağıtımı reddetti (onem+1 ile zorla yeniden dağıtıldı).
+- **Kök neden:** (1) damga kodla AYNI rsync'te ve önce (`dist/` < `src/`) gidiyor, kodun hedefle eşleştiği hiç doğrulanmıyordu — kod eksik inerse
+  damga yine yeni commit'i söylüyor, sonraki dağıtımlar da "güncel" sanıp atlıyordu. (2) Aktarılan dosya listesi `^>f` ile süzülüyordu; gönderimde
+  rsync `<f` yazar → liste her dağıtımda "0 dosya" idi, yeniden başlatma yalnız kod karmasına kalmıştı. Kodun neden eksik indiği (eşzamanlı oturum
+  dağıtımı 19:05–19:07) tam yeniden kurulamadı.
+- **Çözüm:** `deploy-code.sh` damgayı ana rsync'ten çıkarır, en sonda yalnız sunucu kodu karması (yerel dosya listesi üzerinden; Oracle'daki eski
+  artık dosyalar sayılmaz) Oracle diskiyle eşleşirse gönderir, eşleşmezse DURDU (çıkış 1). Dosya listesi kalıbı `^[<>]f`.
+- **Önleme:** dağıtım "bitti" ancak canlının diskindeki kod hedef commit'le eşleşince sayılır; damga doğrulamadan önce yazılmaz.
