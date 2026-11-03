@@ -1,34 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 629,
-  "baslik": "Beyin Cerrahisi: Spinal Travmalar ayrı ders, canlı çizimler",
+  "onem": 630,
+  "baslik": "Görünüm ve dokunmatik iyileştirmeleri",
   "maddeler": [
-    "Kafa ve Omurilik Yaralanmaları ikiye bölündü: Kafa Travmaları ve Spinal Travmalar.",
-    "4 derste slayt üstü canlı çizim: anlatılan lezyon ve yapı işaretleniyor."
+    "Telefon ve tablette dokunma hedefleri ve küçük ekran düzeni gözden geçirildi."
   ],
-  "eklenen": [
-    "Spinal Travmalar sesli dersi, en önemlileri, sesli çözücüsü ve ara soruları",
-    "Beyin Cerrahisi derslerinde canlı çizim"
-  ],
+  "eklenen": [],
   "degisen": [
-    "Kafa ve Omurilik Yaralanmaları → Kafa Travmaları (yalnız kafa travması PDF'i)"
+    "Sekme simgesi ve üst çubuk ayrıntıları yenilendi"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Tam ekran pencerelerde alt çubuğun görünmesi (küçük ekranlar)"
+  ],
   "silinen": [],
-  "yenilikler": [
-    {
-      "ad": "Spinal Travmalar dersi",
-      "nerede": {
-        "ad": "Ders çalış › Kurul 2 › Beyin Cerrahisi",
-        "yol": "/dersler/ders/kurul2/k2-64-spinal-travmalar"
-      },
-      "amac": "Sinan Apaydın hocanın spinal travmalar slaytı artık ayrı bir ders.",
-      "islevler": [
-        "Sesli ders ve canlı çizim",
-        "En önemliler ve sesli çözücü",
-        "Jefferson kırığı (C1) geçen yıl soruldu, derste işaretli"
-      ],
-      "ipucu": "Servikal travmada görüntülemeden önce ilk öncelik immobilizasyondur: geçen yıl soruldu, slaytta yok."
-    }
-  ]
+  "yenilikler": []
 }

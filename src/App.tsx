@@ -139,6 +139,9 @@ const SonProvaView = React.lazy(() => wrapLazy(import('./components/sonProva/Son
 const CikmisCozucuView = React.lazy(() => wrapLazy(import('./components/cikmisCozucu/CikmisCozucuView')));
 const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
 const BasarimKatmani = React.lazy(() => wrapLazy(import('./components/basarim/BasarimKatmani')));
+// Arzu'ya özel katman: yalnız arzuKimlik.ts'teki hesaplarda yüklenir (karşılama, gezinen tilki, kalpler)
+import { arzuMu } from './components/arzu/arzuKimlik';
+const ArzuKatmani = React.lazy(() => wrapLazy(import('./components/arzu/ArzuKatmani')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
 const SinavPlaniView = React.lazy(() => wrapLazy(import('./components/takip/SinavPlaniView')));
 const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
@@ -1559,6 +1562,7 @@ export default function App() {
   // Yönetim konsolu (/manage, /yonetim) veya MeDSor Yönetim Android uygulaması açıkken öğrenci kayıt kapısı konsolu örtmez.
   const isManageRoute = activeTab === 'manage' || activeTab === 'admin';
   const girisKapisi = !isManageRoute && !isAdminAppMode() && !currentUser && aiTest !== true && (showOnboarding || (authHazir && aiTest === false));
+  const arzuKatmani = !isManageRoute && !girisKapisi && !girisUyarisi && arzuMu(currentUser);
 
   return (
     <GlossaryProvider>
@@ -1573,6 +1577,11 @@ export default function App() {
       {(currentUser?.uid || aiTest) && !girisKapisi && !isManageRoute && (
         <Suspense fallback={null}>
           <BasarimKatmani uid={currentUser?.uid || 'ai-test'} ad={currentUser?.displayName} kapali={girisUyarisi} />
+        </Suspense>
+      )}
+      {arzuKatmani && (
+        <Suspense fallback={null}>
+          <ArzuKatmani rota={activeTab} />
         </Suspense>
       )}
       {showTour && !isManageRoute && (
