@@ -1,20 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 626,
-  "baslik": "Kurul 2'ye 4 yeni ders ve \"Hocanın vurguladıkları\"",
+  "onem": 627,
+  "baslik": "Beyin ve Sinir Cerrahisi: 3 yeni sesli ders",
   "maddeler": [
-    "MSS İlaçları dersi: artık Sınama bölümünde değil, güncel ders listesinde.",
-    "Yenilikler penceresi: yeni sürümler yine kartlı görünümle gösteriliyor."
+    "Sinan Apaydın hocanın slaytları: sınav bu slaytlardan olduğu için dersler onun PDF'iyle anlatılıyor.",
+    "Geçen yıl sorulan sorular derste ayrıca belirtiliyor."
   ],
   "eklenen": [
-    "Kurul 2: Psikiyatrik Semiyoloji, MSS İlaçları, Baş Ağrısına Yaklaşım, Ağrı Fizyopatolojisi dersleri",
-    "Hocanın vurguladıkları sayfası"
+    "Kafa ve Omurilik Yaralanmaları",
+    "Medulla Spinalis Lezyonları: Omurga Tümörleri",
+    "İntrakraniyal Kitlelerde Belirti ve Bulgular"
   ],
   "degisen": [],
-  "duzeltilen": [
-    "MSS İlaçları dersinin öğrenciye görünmemesi (H474)",
-    "Yenilikler penceresinin kartsız görünmesi (H475)"
-  ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {

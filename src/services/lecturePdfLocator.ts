@@ -170,6 +170,23 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf', name: '1)Nörolojik hastaya yaklaşım.pdf', pages: 9, fileId: '1W9hP005FeexiyGBlCyKGRGcIKKg9W-jm' } as SourceFile],
   },
+  // 2026-11-03 Beyin ve Sinir Cerrahisi: derse Zeynep hoca girdi, sınav asıl hoca Sinan Apaydın'ın slaytlarından; bağlı PDF onun
+  // Drive klasöründen (1c8b1CPiZaNx2ZlxxdHWITUw15dNIT0jx). k2-12 = kafa travmaları (s.1–76) + spinal travmalar (s.77–133) birleşik.
+  'k2p-k2-12-kafa-ve-omurilik-yaralanmalari': {
+    title: 'Kafa ve Omurilik Yaralanmaları',
+    decks: [],
+    files: [{ path: 'Kurul 2/Beyin ve Sinir Cerrahisi/1)Kafa ve Omurilik Yaralanmaları.pdf', name: '1)Kafa ve Omurilik Yaralanmaları.pdf', pages: 133, fileId: 'sinan-k2-12-birlesik' } as SourceFile],
+  },
+  'k2p-k2-13-medulla-spinalis-lezyonlari': {
+    title: 'Medulla Spinalis Lezyonları: Omurga Tümörleri',
+    decks: [],
+    files: [{ path: 'Kurul 2/Beyin ve Sinir Cerrahisi/2)Omurga Tümörleri.pdf', name: '2)Omurga Tümörleri.pdf', pages: 20, fileId: '1KagKsjrTCiYoy7JE7qOfSJYMKMv7ntqk' } as SourceFile],
+  },
+  'k2p-k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular': {
+    title: 'İntrakraniyal Kitlelerde Belirti ve Bulgular',
+    decks: [],
+    files: [{ path: 'Kurul 2/Beyin ve Sinir Cerrahisi/3)Beyin Tümörleri.pdf', name: '3)Beyin Tümörleri.pdf', pages: 68, fileId: '1NoH24LBMQUz4IZjglxCXgHo5PT6XeujF' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [

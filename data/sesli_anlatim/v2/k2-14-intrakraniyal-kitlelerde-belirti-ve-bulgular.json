@@ -1,0 +1,7275 @@
+{
+ "surum": 2,
+ "ders_id": "k2-14",
+ "baslik": "İntrakraniyal Kitlelerde Belirti ve Bulgular",
+ "bolumler": [
+  {
+   "id": "k2-14-b01",
+   "baslik": "Dersin amacı ve beyin tümörlerinin sınıflaması",
+   "paragraflar": [
+    {
+     "id": "k2-14-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-14-c0001",
+       "ses": "Beyin tümörleri, kafa içinde yer kaplayan ve hem bulunduğu yere hem de kafa içi basınca bağlı belirtiler veren kitlelerdir.",
+       "ekran": "Beyin tümörü: **kafa içinde yer kaplayan** kitle; yer ve basınç belirtisi verir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kafa içinde yer kaplayan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0002",
+       "ses": "Bu derste önce tümörlerin genel klinik bulgularını, sonra tek tek tümör tiplerini, en sonda da metastazları ve hipofiz tümörlerini göreceğiz.",
+       "ekran": "Sıra: **klinik bulgular** → tümör tipleri → metastaz ve hipofiz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "klinik bulgular",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0003",
+       "ses": "Amaç, bir hastanın belirtisinden ve görüntüsünden hangi tümörü düşüneceğinizi bilmektir.",
+       "ekran": "Amaç: belirti ve görüntüden **tümörü tanımak**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tümörü tanımak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-14-c0004",
+       "ses": "Dersin öğrenme hedefleri sekiz başlıktır: tümörlerin sınıflaması, klinik bulgular, yaşa göre farklılıklar, iyi huylu ve kötü huylu davranış biçimleri, prognoz, tanı yöntemleri, benzer bulgu veren hastalıklar ve tedavi.",
+       "ekran": "Öğrenme hedefleri: **sınıflama, klinik bulgular**, yaş, benign-malign, prognoz, tanı, ayırıcı tanı, tedavi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sınıflama, klinik bulgular",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Tümörlerin sınıflaması",
+         "Klinik bulgular",
+         "Yaşa göre farklılıkları",
+         "Benign-malign davranış şekilleri",
+         "Prognozları",
+         "Tanı yöntemleri",
+         "Tedavi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-14-c0005",
+       "ses": "Santral sinir sistemi tümörleri dokuz ana grupta toplanır.",
+       "ekran": "SSS tümörleri **dokuz ana grup**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dokuz ana grup",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0006",
+       "ses": "Birincisi nöroepitelyal doku tümörleri, yani gliomlar ve nöronal tümörlerdir.",
+       "ekran": "1. **Nöroepitelyal doku** tümörleri: gliomlar, nöronal tümörler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöroepitelyal doku",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Nöroepitelial doku tümörleri"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0007",
+       "ses": "İkincisi kranyal ve spinal sinir tümörleri, üçüncüsü meninks tümörleridir.",
+       "ekran": "2. **Kranyal ve spinal sinir**, 3. **meninks** tümörleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kranyal ve spinal sinir",
+         "tur": "terim"
+        },
+        {
+         "metin": "meninks",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kranial ve spinal sinir tümörleri",
+         "Meninks tümörleri"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0008",
+       "ses": "Dördüncüsü hematopoetik neoplaziler, beşincisi germ hücreli tümörlerdir.",
+       "ekran": "4. **Hematopoetik** neoplaziler, 5. **germ hücreli** tümörler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hematopoetik",
+         "tur": "terim"
+        },
+        {
+         "metin": "germ hücreli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hematopoetik neoplaziler",
+         "Germ hücreli tümörler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0009",
+       "ses": "Altıncısı kist ve tümör benzeri lezyonlar, yedincisi sellar bölge tümörleridir.",
+       "ekran": "6. **Kist ve tümör benzeri** lezyonlar, 7. **sellar bölge** tümörleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kist ve tümör benzeri",
+         "tur": "terim"
+        },
+        {
+         "metin": "sellar bölge",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kist ve tümör benzeri lezyonlar",
+         "Sellar bölge tümörleri"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0010",
+       "ses": "Sekizincisi komşu bölge tümörlerinin kafa içine uzanımı, dokuzuncusu ise metastatik tümörlerdir.",
+       "ekran": "8. **Lokal uzanım**, 9. **metastatik** tümörler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lokal uzanım",
+         "tur": "terim"
+        },
+        {
+         "metin": "metastatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bölgesel tümörlerin lokal uzanımları",
+         "Metastatik tümörler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-14-c0011",
+       "ses": "Sınıflama tablosunda bu grupların alt tipleri ayrıntılı verilir.",
+       "ekran": "Sınıflama tablosu: grupların **alt tipleri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alt tipleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "SSS tümörleri sınıflama tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-14-c0012",
+       "ses": "Glial tümörlerin içinde astrositik tümörler, oligodendroglial tümörler, epandimal tümörler ve koroid pleksus tümörleri yer alır.",
+       "ekran": "Glial: **astrositik, oligodendroglial, epandimal, koroid pleksus**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "astrositik, oligodendroglial, epandimal, koroid pleksus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "Tablonun glial tümörler bölümü",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-14-c0013",
+       "ses": "Astrositik tümörler de diffüz olanlar ve özel alt tipler diye ikiye ayrılır; pilositik astrositom özel alt tiplerdendir.",
+       "ekran": "Astrositik: diffüz + özel alt tipler; **pilositik astrositom** özel alt tip",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pilositik astrositom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "Tablonun astrositik tümörler satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-14-c0014",
+       "ses": "Kranyal sinir tümörleri arasında schwannom ve nörofibrom, sellar bölgede kraniofarenjiom, en sonda da metastatik karsinom, lenfoma ve lösemi sayılır.",
+       "ekran": "Kranyal sinir: **schwannom**, nörofibrom; sellar: **kraniofarenjiom**; metastatik karsinom, lenfoma, lösemi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "schwannom",
+         "tur": "terim"
+        },
+        {
+         "metin": "kraniofarenjiom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "Tablonun sinir, sellar ve metastatik satırları",
+        "tablo": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b02",
+   "baslik": "Santral sinir sistemi tümörlerini diğer tümörlerden ayıran özellikler",
+   "paragraflar": [
+    {
+     "id": "k2-14-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-14-c0015",
+       "ses": "Santral sinir sistemi tümörleri vücudun diğer tümörlerinden dört özellikle ayrılır.",
+       "ekran": "SSS tümörleri **dört özellikle** ayrılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört özellikle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0016",
+       "ses": "Birincisi, iyi huylu ile kötü huylu ayrımı belirgin değildir.",
+       "ekran": "1. **Benign-malign ayrımı** az belirgin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Benign-malign ayrımı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Benign malign ayırımı az belirgin"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0017",
+       "ses": "İkincisi, beyin dokusunu korumak gerektiği için cerrahi rezeksiyon sınırlıdır.",
+       "ekran": "2. **Cerrahi rezeksiyon sınırlı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Cerrahi rezeksiyon sınırlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Cerrahi rezeksiyon sınırlı"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-14-c0018",
+       "ses": "Üçüncü özellik yerle ilgilidir.",
+       "ekran": "3. özellik: **tümörün yeri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tümörün yeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Tümörün yeri nedeniyle"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0019",
+       "ses": "Bir tümör histolojik olarak iyi huylu olsa bile, medullaya bası yapacak yerdeyse kalp ve solunumu durdurabilir.",
+       "ekran": "Benign bile olsa **medullaya bası** → kardiyorespiratuvar arrest",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "medullaya bası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "medullaya bası yaparak kardiyorespiratuar arrest"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0020",
+       "ses": "Yani beyinde tümörün yeri, histolojisi kadar belirleyicidir.",
+       "ekran": "Beyinde **yer**, histoloji kadar belirleyici",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "histolojik özelliği ne olursa olsun"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p007",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-14-c0021",
+       "ses": "Dördüncü özellik yayılımla ilgilidir.",
+       "ekran": "4. özellik: **yayılım**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yayılım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Malign olan tümörler çok nadiren MSS dışı metastaz yapar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0022",
+       "ses": "Kötü huylu santral sinir sistemi tümörleri sinir sistemi dışına çok nadir metastaz yapar.",
+       "ekran": "Malign SSS tümörü **MSS dışına çok nadir** metastaz yapar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MSS dışına çok nadir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Malign olan tümörler çok nadiren MSS dışı metastaz yapar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0023",
+       "ses": "Buna karşılık beyin omurilik sıvısı yoluyla sinir sistemi içinde yayılabilirler.",
+       "ekran": "Ama **BOS yoluyla** yayılabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BOS yoluyla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "BOS yayılımı olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b03",
+   "baslik": "Klinik bulgular ve kafa içi basınç artışı",
+   "paragraflar": [
+    {
+     "id": "k2-14-p008",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-14-c0024",
+       "ses": "Beyin tümörlerinde en sık görülen bulgu progresif nörolojik defisittir.",
+       "ekran": "En sık bulgu: **progresif nörolojik defisit**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "progresif nörolojik defisit",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Progresif nörolojik defisit(en sık)"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0025",
+       "ses": "Progresif, yavaş yavaş artan demektir; defisit ise bir işlevin kaybıdır.",
+       "ekran": "Progresif = **yavaş artan**; defisit = **işlev kaybı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yavaş artan",
+         "tur": "terim"
+        },
+        {
+         "metin": "işlev kaybı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Progresif nörolojik defisit"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0026",
+       "ses": "Bu kayıp sıklıkla motor güçsüzlük olarak ortaya çıkar.",
+       "ekran": "Sıklıkla **motor güçsüzlük**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor güçsüzlük",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "sıklıkla motor güçsüzlük"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0027",
+       "ses": "En sık bulgudan sonra baş ağrısı ve nöbet gelir.",
+       "ekran": "Sonra **baş ağrısı** ve **nöbet**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "baş ağrısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "nöbet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Baş ağrısı",
+         "Nöbet"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p009",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-14-c0028",
+       "ses": "Supratentoryal tümörler, yani beyincik çadırının üstündeki tümörler, yedi grup bulgu verir.",
+       "ekran": "**Supratentoryal** tümör: yedi bulgu grubu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Supratentoryal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0029",
+       "ses": "Birincisi artmış kafa içi basınç bulgularıdır.",
+       "ekran": "1. **Artmış KİB** bulguları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Artmış KİB",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "1- Artmış KİB bulguları"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0030",
+       "ses": "Bu artış ya tümörün kitle etkisi ve çevresindeki ödemden ya da beyin omurilik sıvısı akışının bozulmasıyla gelişen hidrosefaliden kaynaklanır.",
+       "ekran": "KİB artışı: **kitle etkisi/ödem** ya da **hidrosefali**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kitle etkisi/ödem",
+         "tur": "terim"
+        },
+        {
+         "metin": "hidrosefali",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "kitle etkisi veya ödeme bağlı",
+         "hidrosefaliye bağlı"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0031",
+       "ses": "İkincisi progresif fokal defisit, üçüncüsü baş ağrısı, dördüncüsü nöbettir.",
+       "ekran": "2. **Progresif fokal defisit**, 3. baş ağrısı, 4. nöbet",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Progresif fokal defisit",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "2- Progresif fokal defisit",
+         "3- Baş ağrısı",
+         "4- Nöbet"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0032",
+       "ses": "Beşincisi mental değişiklikler, altıncısı geçici iskemik atağı taklit eden bulgulardır.",
+       "ekran": "5. **Mental değişiklik**, 6. **TİA** bulguları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Mental değişiklik",
+         "tur": "terim"
+        },
+        {
+         "metin": "TİA",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "5- Mental değişiklikler",
+         "6- Transient iskemik atak (TİA) bulguları"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0033",
+       "ses": "Yedincisi sellar bölge tümörlerine özgü endokrin bulgular ve beyin omurilik sıvısı kaçağıdır.",
+       "ekran": "7. Sellar bölge: **endokrin bulgular**, **BOS kaçağı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "endokrin bulgular",
+         "tur": "terim"
+        },
+        {
+         "metin": "BOS kaçağı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "7- Sellar bölgeden kaynaklı endokrin bulgular, BOS kaçağı"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p010",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-14-c0034",
+       "ses": "İnfratentoryal tümörler, yani beyincik ve beyin sapının bulunduğu arka çukurdaki tümörler, dar bir alanda büyüdükleri için kafa içi basıncı erken artırır.",
+       "ekran": "**İnfratentoryal** (arka çukur) tümör: KİB erken artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnfratentoryal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0035",
+       "ses": "Bu tümörlerde baş ağrısı, bulantı-kusma ve papilödem görülür.",
+       "ekran": "**Baş ağrısı, bulantı-kusma, papilödem**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Baş ağrısı, bulantı-kusma, papilödem",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-1"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Baş ağrısı",
+         "Bulantı-kusma",
+         "Papilödem"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0036",
+       "ses": "Papilödem, artan basıncın optik sinir başını şişirmesidir.",
+       "ekran": "**Papilödem**: optik sinir başının şişmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Papilödem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Papilödem"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0037",
+       "ses": "Bunlara beyincik ve beyin sapı tutulumuna bağlı yürüme bozukluğu ya da ataksi, vertigo, diplopi, dismetri, tremor ve nistagmus eklenir.",
+       "ekran": "Ayrıca **ataksi**, vertigo, diplopi, dismetri, tremor, **nistagmus**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ataksi",
+         "tur": "terim"
+        },
+        {
+         "metin": "nistagmus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Yürüme bozukluğu/ataksi",
+         "Vertigo",
+         "Diplopi",
+         "Dismetri",
+         "Tremor",
+         "Nistagmus"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p011",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-14-c0038",
+       "ses": "Kafa içi basınç artışı geçen yıl sınavda soruldu.",
+       "ekran": "**KİB artışı** geçen yıl sınavda soruldu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "KİB artışı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Baş ağrısı",
+         "Bulantı-kusma"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0039",
+       "ses": "Soru kafa travması bağlamındaydı ve şunu soruyordu: kafa içi basınç artışının ilk bulgusu baş ağrısı ve kusmadır.",
+       "ekran": "KİB artışının ilk bulgusu: **baş ağrısı ve kusma**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "baş ağrısı ve kusma",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Baş ağrısı",
+         "Bulantı-kusma"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0040",
+       "ses": "Geçmiş yıllarda da kafa içi basınç artışının klasik bulgu üçlüsü soruldu: baş ağrısı, bulantı-kusma ve papilödem.",
+       "ekran": "Klasik üçlü: **baş ağrısı, bulantı-kusma, papilödem**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "baş ağrısı, bulantı-kusma, papilödem",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-1"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Baş ağrısı",
+         "Bulantı-kusma",
+         "Papilödem"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0041",
+       "ses": "İnfratentoryal tümör bulgularının listesinde de ilk sıralarda baş ağrısı ve bulantı-kusma, ardından papilödem yer alır.",
+       "ekran": "Listede ilk sırada: **baş ağrısı, bulantı-kusma**, sonra papilödem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "baş ağrısı, bulantı-kusma",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-1"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Baş ağrısı",
+         "Bulantı-kusma",
+         "Papilödem"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b04",
+   "baslik": "Progresif fokal defisit: lob bulguları",
+   "paragraflar": [
+    {
+     "id": "k2-14-p012",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-14-c0042",
+       "ses": "Fokal defisit, tümörün bulunduğu lobun işlevine göre değişir.",
+       "ekran": "Fokal defisit **lobun işlevine** göre değişir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lobun işlevine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0043",
+       "ses": "Slayttaki beyin şeması dört lobu ayrı renklerle gösterir ve her lobun bulgusu yanına yazılmıştır.",
+       "ekran": "Şema: **dört lob** ayrı renkte, bulguları yanında",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört lob",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Dört lobu renkli gösteren beyin şeması",
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p013",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-14-c0044",
+       "ses": "Frontal lob tümörleri abuli, yani isteksizlik ve girişimsizlik, demans, kişilik değişiklikleri, afazi ve hemiparezi yapar.",
+       "ekran": "**Frontal**: abuli, demans, kişilik değişikliği, afazi, hemiparezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Frontal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Frontal lob: abuli, demans, kişilik değişiklikleri, afazi, hemiparezi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0045",
+       "ses": "Temporal lob tümörleri hafıza bozukluğu, görme alanı bozukluğu ve halüsinasyonlara yol açar.",
+       "ekran": "**Temporal**: hafıza ve görme alanı bozukluğu, halüsinasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Temporal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Temporal lob: hafıza boz. Görme alanı boz. Halüsinasyonlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0046",
+       "ses": "Parietal lob tümörleri motor ve duyusal bozukluk yapar.",
+       "ekran": "**Parietal**: motor ve duyusal bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parietal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Parietal lob: motor ve duyusal boz."
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0047",
+       "ses": "Oksipital lob tümörlerinde ise görme alanı defektleri görülür.",
+       "ekran": "**Oksipital**: görme alanı defektleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Oksipital",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Oksipital lob: görme alanı defektleri"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p014",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-14-c0048",
+       "ses": "Bölümün sonundaki görüntü sayfasında kontrastlı manyetik rezonans kesitleri yer alır.",
+       "ekran": "**Kontrastlı MR** kesitleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kontrastlı MR",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "Kontrastlı MR kesitleri",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0049",
+       "ses": "Aynı kafa aksiyel, koronal ve sagital düzlemde iki sıra hâlinde gösterilmiştir.",
+       "ekran": "Aksiyel, koronal, sagital: **üç düzlem**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç düzlem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "İki sıra hâlinde aksiyel, koronal ve sagital MR kesitleri",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0050",
+       "ses": "Bir kitleyi üç düzlemde görmek, onun hangi lobda ve hangi yapıya komşu olduğunu anlamamızı sağlar.",
+       "ekran": "Üç düzlem → **lob ve komşuluk**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lob ve komşuluk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "Üç düzlemde aynı kitle",
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b05",
+   "baslik": "Gliomlar ve astrositomlar",
+   "paragraflar": [
+    {
+     "id": "k2-14-p015",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-14-c0051",
+       "ses": "Gliomlar, sinir sisteminin destek hücreleri olan glial hücrelerden gelişen tümörlerdir.",
+       "ekran": "Gliom: **glial hücrelerden** gelişen tümör",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "glial hücrelerden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0052",
+       "ses": "Nöroşirürji pratiğinde en sık görülen gliomlar sekiz tanedir: astrositom, glioblastom, epandimom, oligodendrogliom, primitif nöroektodermal tümör, pineal tümörler, mikst gliomlar ve koroid pleksus papillomları.",
+       "ekran": "En sık gliomlar: **astrositom, glioblastom, epandimom, oligodendrogliom**, PNET, pineal, mikst, koroid pleksus papillomu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "astrositom, glioblastom, epandimom, oligodendrogliom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Astrositom",
+         "Glioblastome",
+         "Epandimom",
+         "Oligodendrogliom",
+         "PNET",
+         "Mikst gliomlar",
+         "Koroid pleksus papillomları"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p016",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-14-c0053",
+       "ses": "Astrositom, en sık görülen intraaksiyel primer beyin tümörüdür.",
+       "ekran": "Astrositom: **en sık intraaksiyel primer** beyin tümörü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en sık intraaksiyel primer",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "En sık görülen intraaksiyal primer beyin tümörüdür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0054",
+       "ses": "İntraaksiyel, beyin dokusunun içinde demektir.",
+       "ekran": "**İntraaksiyel** = beyin dokusunun içinde",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İntraaksiyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "intraaksiyal"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0055",
+       "ses": "Astrositom astrositlerden kaynaklanır.",
+       "ekran": "Köken: **astrositler**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "astrositler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Astrositlerden kaynaklanır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0056",
+       "ses": "Erkeklerde kadınlardan iki kat sık görülür ve en sık kırk ile altmış yaş arasında ortaya çıkar.",
+       "ekran": "**E/K: 2**, en sık **40-60 yaş**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "E/K: 2",
+         "tur": "sayi"
+        },
+        {
+         "metin": "40-60 yaş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "E/K:2",
+         "40-60 yaş arası en sık görülür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0057",
+       "ses": "Sıklıkla frontal, temporal, parietal ve talamik bölgelerde yerleşir.",
+       "ekran": "Yerleşim: **frontal, temporal, parietal, talamik**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "frontal, temporal, parietal, talamik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Sıklıkla frontal, temporal, parietal ve talamik bölgelerde yerleşir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0058",
+       "ses": "Kabaca düşük dereceli astrositomlar ve anaplastik astrositomlar diye ikiye ayrılır.",
+       "ekran": "**Düşük dereceli** ve **anaplastik** astrositom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Düşük dereceli",
+         "tur": "terim"
+        },
+        {
+         "metin": "anaplastik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Kabaca düşük dereceli astrositomlar ve anaplastik astrositomlar olmak üzere ikiye ayrılır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p017",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-14-c0059",
+       "ses": "Astrositomlar büyüme biçimine göre de iki gruba ayrılır.",
+       "ekran": "Büyüme biçimi: **diffüz** ve **fokal**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "diffüz",
+         "tur": "terim"
+        },
+        {
+         "metin": "fokal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [],
+        "sekil": "Diffüz ve fokal astrositom karşılaştırma şeması",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0060",
+       "ses": "Diffüz astrositomların sınırları infiltratiftir, yani çevre dokunun içine sızar.",
+       "ekran": "Diffüz: sınırlar **infiltratif**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "infiltratif",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "sınırları infiltratif"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0061",
+       "ses": "Anaplaziye, yani daha kötü huylu bir tümöre dönüşmeye eğilimleri yüksektir.",
+       "ekran": "Diffüz: **anaplaziye eğilim yüksek**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anaplaziye eğilim yüksek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "anaplastiye eğilim"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0062",
+       "ses": "Derece iki ile dört arasındadır ve prognozları kötüdür.",
+       "ekran": "Diffüz: **grade 2-4**, prognoz kötü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "grade 2-4",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "grade 2-4",
+         "prognozları kötü"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0063",
+       "ses": "Fokal astrositomların ise sınırları belirgindir, anaplaziye eğilimleri düşüktür, düşük derecelidir ve prognozları iyidir.",
+       "ekran": "Fokal: sınır belirgin, düşük grade, **prognoz iyi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "prognoz iyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "sınırları belirgin",
+         "düşük grade",
+         "prognozları iyi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p018",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-14-c0064",
+       "ses": "Astrositom alt tipleri bu iki gruba göre dizilir.",
+       "ekran": "Alt tipler **fokal-diffüz** ayrımına göre",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fokal-diffüz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [],
+        "sekil": "Fokal ve diffüz astrositom alt tipleri tablosu",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0065",
+       "ses": "Fokal astrositomlar derece birdir; pilositik astrositom, pleomorfik ksantoastrositom ve subependimal dev hücreli astrositom bu gruptadır.",
+       "ekran": "Fokal grade I: **pilositik**, pleomorfik ksantoastrositom, subependimal dev hücreli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pilositik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Pilositik astrositom",
+         "Pleomorfik",
+         "ksantoastrositom",
+         "Subependimal dev"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0066",
+       "ses": "Diffüz astrositomlarda derece iki fibriler, gemistositik ve protoplazmik tiplerdir.",
+       "ekran": "Diffüz grade II: **fibriler, gemistositik, protoplazmik**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fibriler, gemistositik, protoplazmik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Grade II",
+         "Fibriller",
+         "Protoplazmik"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0067",
+       "ses": "Derece üç anaplastik astrositom, derece dört ise glioblastomdur.",
+       "ekran": "Grade III **anaplastik**, grade IV **glioblastom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anaplastik",
+         "tur": "terim"
+        },
+        {
+         "metin": "glioblastom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Grade III (anaplastik)",
+         "Grade IV (GBM)"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b06",
+   "baslik": "Astrositomda derecelendirme ve görüntüleme",
+   "paragraflar": [
+    {
+     "id": "k2-14-p019",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-14-c0068",
+       "ses": "Astrositomlar Doumas-Douport ölçütleriyle derecelendirilir.",
+       "ekran": "Derecelendirme: **Doumas-Douport** ölçütleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doumas-Douport",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Doumas-Douport"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0069",
+       "ses": "Dört histopatolojik ölçüt vardır: hücre atipisi yani polimorfizm, mitoz ve buna eşlik eden hücre yoğunluğu artışı yani hiperselülarite, vasküler endotel proliferasyonu ve nekroz.",
+       "ekran": "Ölçütler: **atipi, mitoz (hiperselülarite), endotel proliferasyonu, nekroz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "atipi, mitoz (hiperselülarite), endotel proliferasyonu, nekroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "atipik hücre(polimorfizm)",
+         "mitoz( hiperselülarite)",
+         "vasküler endoteliyal proliferasyon",
+         "nekroz"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p020",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-14-c0070",
+       "ses": "Derece, kaç ölçütün bulunduğuna göre verilir.",
+       "ekran": "Derece = **ölçüt sayısı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ölçüt sayısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Grade’leme"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0071",
+       "ses": "Hiçbir ölçüt yoksa derece bir, bir ölçüt varsa derece iki, iki ölçüt varsa derece üçtür.",
+       "ekran": "0 ölçüt **grade I**, 1 ölçüt **grade II**, 2 ölçüt **grade III**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "grade I",
+         "tur": "terim"
+        },
+        {
+         "metin": "grade II",
+         "tur": "terim"
+        },
+        {
+         "metin": "grade III",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "kriterlerden hiçbiri yok grade I",
+         "kriterlerden 1 tane var grade II",
+         "kriterlerden 2 tane var grade III"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0072",
+       "ses": "Üç ölçüt varsa tümör derece dörttür; nekroz varsa tanı glioblastomdur.",
+       "ekran": "3 ölçüt **grade IV**; nekroz varsa **GBM**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "grade IV",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "GBM",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "kriterlerden 3 tane var grade IV",
+         "nekroz var GBM"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0073",
+       "ses": "Ölçütler yalnız bu dördüdür: atipi, mitoz, endotel proliferasyonu ve nekroz.",
+       "ekran": "Yalnız dört ölçüt: **atipi, mitoz, endotel proliferasyonu, nekroz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "atipi, mitoz, endotel proliferasyonu, nekroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "atipik hücre(polimorfizm)",
+         "mitoz( hiperselülarite)",
+         "vasküler endoteliyal proliferasyon",
+         "nekroz"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0074",
+       "ses": "Örneğin nöron proliferasyonu bu listede yoktur, derecelendirmede kullanılmaz.",
+       "ekran": "**Nöron proliferasyonu** ölçüt değil",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöron proliferasyonu",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p021",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-14-c0075",
+       "ses": "Yüksek dereceli astrositom, kontrastlı bilgisayarlı tomografide ve te bir ağırlıklı manyetik rezonansta tipik bir görüntü verir.",
+       "ekran": "Yüksek grade: **kontrastlı BT ve T1 MR** görüntüsü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kontrastlı BT ve T1 MR",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Yüksek grade",
+         "Kontrastlı BT ve T1A MR’da"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0076",
+       "ses": "Çevresinde belirgin ödem vardır, kitle heterojendir, kenarları kontrast tutar, ortası ise kontrast tutmaz.",
+       "ekran": "**Belirgin ödem**, heterojen, **kenar kontrast +, santral kontrast −**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Belirgin ödem",
+         "tur": "terim"
+        },
+        {
+         "metin": "kenar kontrast +, santral kontrast −",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "çevresinde belirgin bir ödem ile birlikte heterojen görünümlü, kenarları kontrast (+), santrali kontrast (-) lezyon"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0077",
+       "ses": "Ortanın kontrast tutmaması nekrozu düşündürür.",
+       "ekran": "Santral kontrast tutmaması → **nekroz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nekroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "santrali kontrast (-) lezyon"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0078",
+       "ses": "Düşük dereceli astrositom ise bilgisayarlı tomografide hipodenstir ve kontrast tutmaz; ödem ve kitle etkisi yoktur.",
+       "ekran": "Düşük grade: BT'de **hipodens**, kontrast tutmaz, ödem yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipodens",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Düşük grade",
+         "BT’de hipodens, kontrast -, ödem ve kitle etkisi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0079",
+       "ses": "Manyetik rezonansta te birde hipointens, te ikide hiperintenstir.",
+       "ekran": "MR: **T1 hipointens, T2 hiperintens**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "T1 hipointens, T2 hiperintens",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "MR: hipointens",
+         "T2A MR: hiperintens"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b07",
+   "baslik": "Glioblastom",
+   "paragraflar": [
+    {
+     "id": "k2-14-p022",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-14-c0080",
+       "ses": "Glioblastom, nöroşirürjinin en cesaret kırıcı tanılarından biridir.",
+       "ekran": "**Glioblastom (GBM)**: en cesaret kırıcı tanılardan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Glioblastom (GBM)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Nöroşirürjinin tamamında en cesaret kırıcı teşhislerden birisi GBM dir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0081",
+       "ses": "Bildirilen serilerin çoğunda tüm gliomların yüzde ellisini, tüm primer beyin tümörlerinin ise en az yüzde otuzunu oluşturur.",
+       "ekran": "Gliomların **%50**'si, primer beyin tümörlerinin **en az %30**'u",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%50",
+         "tur": "sayi"
+        },
+        {
+         "metin": "en az %30",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "tüm gliomların %50 sini, tüm primer beyin tümörlerinin de en azından %30 unu"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0082",
+       "ses": "Bu oranlar nedeniyle primer beyin tümörleri arasında en sık karşılaşılan tümör olarak anılır.",
+       "ekran": "Primer beyin tümörleri arasında **en sık**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en sık",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "en sık karşılaşılan beyin tümörleridir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0083",
+       "ses": "Glioblastom en malign astrositomdur.",
+       "ekran": "**En malign astrositom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "En malign astrositom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "En malign astrositomdur"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p023",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-14-c0084",
+       "ses": "Glioblastomu pilositik astrositom, oligodendrogliom ve epandimom gibi daha iyi seyirli gliomlardan ayırın; glial tümörler içinde prognozu en kötü olanı glioblastomdur.",
+       "ekran": "Glial tümörlerde **prognozu en kötü**: glioblastom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "prognozu en kötü",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "En malign astrositomdur"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p024",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-14-c0085",
+       "ses": "Glioblastom en sık altıncı ve yedinci dekatta ortaya çıkar.",
+       "ekran": "En sık **6.-7. dekat**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6.-7. dekat",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Bu tümörler en sık olarak 6. ve 7. dekatta ortaya çıkarlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0086",
+       "ses": "Düşük dereceli ve anaplastik astrositomlarla benzer yerlerden köken alsa da santral sinir sisteminin her yerinde görülebilir.",
+       "ekran": "SSS'nin **her yerinde** görülebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "her yerinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "SSS nin her hangi bir yerinde lokalize olabilirler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0087",
+       "ses": "En sık serebral hemisferlerde yerleşir.",
+       "ekran": "En sık **serebral hemisfer**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serebral hemisfer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "serebral hemisferler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0088",
+       "ses": "Korpus kallozumu tutarak iki hemisfere yayıldığında kelebek gliom adını alır.",
+       "ekran": "Korpus kallozum tutulumu → **kelebek gliom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kelebek gliom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "korpus kallozum (butterfly glioma)"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0089",
+       "ses": "Daha nadiren derin gri çekirdeklerde, beyin sapında, beyincikte ve omurilikte bulunur.",
+       "ekran": "Nadir: **derin gri çekirdek**, beyin sapı, serebellum, spinal kord",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "derin gri çekirdek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "derin gri nükleuslar, beyin sapı, serebellum ve spinal kord"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b08",
+   "baslik": "Astrositomlarda tedavi ve prognoz",
+   "paragraflar": [
+    {
+     "id": "k2-14-p025",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-14-c0090",
+       "ses": "Düşük dereceli astrositomlarda tedavi cerrahi ve radyoterapidir.",
+       "ekran": "Düşük grade: **cerrahi + RT**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cerrahi + RT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Cerrahi tedavi",
+         "radyoterapi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0091",
+       "ses": "Pilositik astrositomda ise rekürrens görülene kadar radyoterapi verilmez.",
+       "ekran": "Pilositik: **rekürrense kadar RT yok**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "rekürrense kadar RT yok",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Pilositik astrositomlarda",
+         "rekürrens görülene kadar",
+         "RT verilmez"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p026",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-14-c0092",
+       "ses": "Yüksek dereceli astrositomlarda tedavi cerrahi, radyoterapi ve kemoterapinin birlikte uygulanmasıdır.",
+       "ekran": "Yüksek grade: **cerrahi + RT + KT**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cerrahi + RT + KT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Cerrahi + radyoterapi",
+         "kemoterapi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0093",
+       "ses": "Bazı hastalar cerrahiye uygun değildir: kelebek tarzı tutulumu olanlar, dominant lobda yaygın glioblastomu olanlar ve Karnofsky skoru düşük hastalar.",
+       "ekran": "Cerrahiye uygun değil: **kelebek tutulum**, dominant lobda yaygın GBM, **düşük Karnofsky**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kelebek tutulum",
+         "tur": "terim"
+        },
+        {
+         "metin": "düşük Karnofsky",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "kelebek tarzı tutulum",
+         "dominant lobda yaygın GBM",
+         "Karnofsky skoru düşük"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0094",
+       "ses": "Karnofsky skoru hastanın günlük işlevini gösteren performans puanıdır.",
+       "ekran": "**Karnofsky**: günlük işlev performans puanı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Karnofsky",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Karnofsky skoru düşük"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0095",
+       "ses": "Glioblastomda cerrahi ve radyoterapiyle ortalama yaşam süresi dokuz aydır.",
+       "ekran": "GBM'de cerrahi + RT ile ortalama yaşam **9 ay**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "9 ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Cerrahi+RT ile ortalama yaşam süresi 9 aydır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p027",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-14-c0096",
+       "ses": "Radyoterapi planlanırken manyetik rezonans spektroskopisi ve perfüzyon görüntülerinden yararlanılmalıdır.",
+       "ekran": "RT planı: **MR spektroskopi ve perfüzyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MR spektroskopi ve perfüzyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "RT planlaması yapılırken MR-spekro ve perfüzyon görüntülerinden yararlanılmalıdır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0097",
+       "ses": "Bunun nedeni, görüntüde tümör olarak görülen alanın iki santimetre çevresindeki normal görünen dokuda bile tümör hücrelerinin bulunduğunun kanıtlanmış olmasıdır.",
+       "ekran": "Görünen alanın **2 cm** çevresinde de tümör hücresi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2 cm",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "radyolojik olarak gözlenen alanın 2 cm periferindeki normal olarak görülen nöral doku içerisinde bile tümör hücrelerinin bulunduğu kanıtlanmıştır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p028",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-14-c0098",
+       "ses": "Astrositomlarda prognozu altı etken belirler.",
+       "ekran": "Prognozu **altı etken** belirler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "altı etken",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Prognozu etkileyen faktörler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0099",
+       "ses": "Birincisi hastanın yaşıdır, çünkü ileri yaşta tedavi ve komplikasyonları daha az tolere edilir.",
+       "ekran": "1. **Yaş**: ileri yaşta tedavi daha az tolere edilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yaş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Hastanın yaşı",
+         "İleri yaş gurubunda uygulanan tedaviler ve komplikasyonlarının daha az tolere edilmesi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0100",
+       "ses": "İkincisi tümörün histopatolojik derecesi, üçüncüsü hastanın ameliyat öncesi ve sonrası nörolojik tablosudur.",
+       "ekran": "2. **Histopatolojik grade**, 3. **nörolojik tablo**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Histopatolojik grade",
+         "tur": "terim"
+        },
+        {
+         "metin": "nörolojik tablo",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Tümörün histopatolojik grade’I",
+         "Hastanın operasyon öncesi ve sonrası nörolojik tablosu"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0101",
+       "ses": "Dördüncüsü cerrahi rezeksiyonun genişliği, beşincisi tümörün de ne a profilidir.",
+       "ekran": "4. **Rezeksiyon genişliği**, 5. **DNA profili**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Rezeksiyon genişliği",
+         "tur": "terim"
+        },
+        {
+         "metin": "DNA profili",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Uygulanan cerrahi rezeksiyonun genişliği",
+         "Tümörün DNA profili"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0102",
+       "ses": "Altıncısı metilguanin metiltransferaz enziminin metilasyonudur.",
+       "ekran": "6. **MGMT metilasyonu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MGMT metilasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Metilguaninmetiltransferaz enzim metilasyonu"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0103",
+       "ses": "Bu enzim genom bütünlüğünü sağlar ve oluşan de ne a hasarını onarır; inaktive olduğunda hücre apoptoza gider.",
+       "ekran": "MGMT: **genom bütünlüğü**, DNA hasarı onarımı; inaktif → apoptoz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "genom bütünlüğü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Genom bütünlüğünü sağlar",
+         "Oluşan DNA hasarını önler",
+         "İnaktivasyonu durumunda hücre apopitoza gider"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b09",
+   "baslik": "Oligodendrogliom",
+   "paragraflar": [
+    {
+     "id": "k2-14-p029",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-14-c0104",
+       "ses": "Oligodendrogliom, primer beyin tümörlerinin yüzde dördünü oluşturur.",
+       "ekran": "Oligodendrogliom: primer beyin tümörlerinin **%4**'ü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%4",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Primer beyin tümörlerinin %4’ünü oluşturur"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0105",
+       "ses": "Ortalama görülme yaşı kırktır; sıklığı altı ile on iki ve yirmi altı ile kırk altı yaşlarında artar.",
+       "ekran": "Ortalama yaş **40**; sıklık **6-12** ve **26-46** yaşta artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "40",
+         "tur": "sayi"
+        },
+        {
+         "metin": "6-12",
+         "tur": "sayi"
+        },
+        {
+         "metin": "26-46",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Ortalama yaş 40",
+         "İnsidansı 6-12 ve 26-46 yaşlarda artar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0106",
+       "ses": "Oligodendrogliom sıklıkla nöbetle ortaya çıkar ve çoğunlukla frontal lobdadır.",
+       "ekran": "Sıklıkla **nöbetle** başlar, çoğunlukla **frontal**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöbetle",
+         "tur": "terim"
+        },
+        {
+         "metin": "frontal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Sıklıkla nöbetlerle prezente olur",
+         "Çoğunlukla frontal loblarda görülür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p030",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-14-c0107",
+       "ses": "Oligodendrogliomun en tipik görüntü özelliği kalsifikasyondur.",
+       "ekran": "En tipik görüntü özelliği: **kalsifikasyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalsifikasyon",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Çoğunlukla kalsifiyedir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0108",
+       "ses": "Düz grafide yüzde yirmi sekiz ile altmış, bilgisayarlı tomografide ise yüzde doksan oranında kalsifiye görülür.",
+       "ekran": "Kalsifikasyon: düz grafide **%28-60**, BT'de **%90**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%28-60",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%90",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Direk grafide %28- 60, BT’de %90 kalsifiye görülür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0109",
+       "ses": "Bir pe on dokuz ku heterozigotluk kaybı prognozu iyi yönde etkiler, çünkü tümörün kemoterapi ve radyoterapiye duyarlılığını artırır.",
+       "ekran": "**1p19q LOH** → prognoz iyi, KT ve RT duyarlılığı artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1p19q LOH",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "1p19q LOH (mutasyonu) prognozu iyi yönde etkiler",
+         "KT ve RT’e duyarlılığı artırır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p031",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-14-c0110",
+       "ses": "Oligodendrogliomun tedavisi agresif rezeksiyon ve kemoterapidir; anaplastik dönüşüm olursa radyoterapi eklenir.",
+       "ekran": "Tedavi: **agresif rezeksiyon + KT**; anaplastik dönüşümde RT",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "agresif rezeksiyon + KT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Agresif rezeksiyon + KT",
+         "radyoterapi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0111",
+       "ses": "On yıllık yaşam süresi yüzde on ile otuz arasındadır.",
+       "ekran": "10 yıllık yaşam **%10-30**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%10-30",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "10 yıllık yaşam süresi %10-"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0112",
+       "ses": "Kalsifikasyon ve frontal yerleşim iyi prognoz göstergesidir.",
+       "ekran": "İyi prognoz: **kalsifikasyon** ve **frontal yerleşim**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalsifikasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "frontal yerleşim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Kalsifikasyon iyi prognoz",
+         "Frontal yerleşim iyi prognoz"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b10",
+   "baslik": "Epandimom",
+   "paragraflar": [
+    {
+     "id": "k2-14-p032",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-14-c0113",
+       "ses": "Epandimom, ventriküllerin epandim yüzeyinden ya da beyin dokusundaki epandim hücre kalıntılarından gelişir.",
+       "ekran": "Epandimom: **epandim yüzeyi** ya da epandim kalıntıları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "epandim yüzeyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Ventriküllerin epandim yüzeyinden yada beyin dokusundaki epandim hücre kalıntılarından kaynaklanır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0114",
+       "ses": "İntrakraniyal gliomların yüzde beş ile altısını oluşturur ve yüzde altmış dokuzu çocuklarda görülür.",
+       "ekran": "İntrakraniyal gliomların **%5-6**'sı; **%69**'u çocukta",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%5-6",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%69",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "İntrakranial gliomların %5-6’sını oluşturur",
+         "%69’u çocuklarda ortaya çıkar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0115",
+       "ses": "Omurilikte ise tablo farklıdır: epandimom erişkin spinal kord gliomlarının yüzde doksan altısını oluşturur, özellikle filum terminale yerleşimlidir.",
+       "ekran": "Erişkin spinal kord gliomlarının **%96**'sı; **filum terminale**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%96",
+         "tur": "sayi"
+        },
+        {
+         "metin": "filum terminale",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "filum terminaledekiler olmak üzere erişkindekilerin %96’sını yapar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p033",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-14-c0116",
+       "ses": "Epandimomun tedavisi cerrahi ve radyoterapidir.",
+       "ekran": "Tedavi: **cerrahi + RT**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cerrahi + RT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Cerrahi + Radyoterapi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0117",
+       "ses": "Dördüncü ventriküldeki epandimom çevreden iyi bir sınırla ayrılır.",
+       "ekran": "4. ventrikülde **iyi sınırlı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iyi sınırlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "İyi sınırla ayrılan"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0118",
+       "ses": "Yine de medüller çekirdeklere ve ponsa yakınlığı nedeniyle tamamen çıkarılması imkânsızdır.",
+       "ekran": "**Medüller çekirdek ve pons** yakınlığı → tam çıkarım imkânsız",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Medüller çekirdek ve pons",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "medüller nükleus ve pons yakınlığı nedeniyle komplet ekstirpasyon imkansız"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0119",
+       "ses": "Omurilikteki epandimomda ise keskin sınır sayesinde total eksizyon yapılabilir.",
+       "ekran": "Spinal: keskin sınır → **total eksizyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "total eksizyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "İntraspinal tümörlerde keskin sınır nedeniyle total eksizyon"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b11",
+   "baslik": "Medulloblastom",
+   "paragraflar": [
+    {
+     "id": "k2-14-p034",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-14-c0120",
+       "ses": "Medulloblastom, çocuklarda en sık görülen malign beyin tümörüdür.",
+       "ekran": "Medulloblastom: çocukta **en sık malign** beyin tümörü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en sık malign",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Çocuklarda en sık görülen malign beyin tümörüdür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p035",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-14-c0121",
+       "ses": "Medulloblastomun adı, hem glial hem de nöral hücrelerin öncüsü olduğu düşünülen medulloblastlardan gelir; ancak bu hücrelerin varlığı şüpheyle karşılanır.",
+       "ekran": "Ad: **medulloblastlardan**; varlığı şüpheli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "medulloblastlardan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "medulloblastlardan orijin aldığı düşünülerek isimlendirilmiştir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0122",
+       "ses": "Medulloblastom, dördüncü ventrikülün tavanında, inferior medüller velumdaki Obersteiner tabakasının multipotent hücrelerinden köken alır.",
+       "ekran": "Köken: 4. ventrikül tavanı, **Obersteiner tabakası**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Obersteiner tabakası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "4. ventrikül tavanında inferior medullar velumda bulunan Obersteiner tabakasındaki multipotent hücrelerden köken alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0123",
+       "ses": "En sık vermiste yerleşir.",
+       "ekran": "En sık **vermis**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vermis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Vermis lokalizasyonu en sıktır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0124",
+       "ses": "Beyin omurilik sıvısı dolaşımına katılarak omuriliğe ve beynin diğer bölgelerine yayılır; bu yayılıma ekim, yani seeding denir.",
+       "ekran": "BOS ile yayılım: **seeding**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "seeding",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "BOS dolaşımına katılarak spinal ve diğer beyin bölgelerine yayılırlar (seeding)"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b12",
+   "baslik": "Kraniofarenjiom",
+   "paragraflar": [
+    {
+     "id": "k2-14-p036",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-14-c0125",
+       "ses": "Kraniofarenjiomun iki tipi vardır.",
+       "ekran": "Kraniofarenjiom: **iki tip**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki tip",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [],
+        "sekil": "Adamantinomatöz ve skuamöz-papiller tip karşılaştırma şeması",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0126",
+       "ses": "Adamantinomatöz tip, Rathke cebindeki ektoblastik artıklardan gelişir.",
+       "ekran": "Adamantinomatöz: **Rathke cebi** artıkları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Rathke cebi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Adamantimoma",
+         "orijin: Ratke"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0127",
+       "ses": "İçinde keratin nodülleri, kistik bölüm, kalsifikasyon ve kolesterol kristalleri bulunur.",
+       "ekran": "İçerik: **keratin nodülü, kist, kalsifikasyon, kolesterol kristali**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "keratin nodülü, kist, kalsifikasyon, kolesterol kristali",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "içerik: keratin",
+         "nodüller, kistik",
+         "kalsifikasyon"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0128",
+       "ses": "Skuamöz-papiller tip ise adenohipofiz ya da infundibulumdaki skuamöz hücrelerin metaplazisinden gelişir.",
+       "ekran": "Skuamöz-papiller: adenohipofiz/infundibulumda **metaplazi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "metaplazi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Skuamöz-papiller",
+         "orijin: adenohipofiz veya"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0129",
+       "ses": "Sert ve fibroblastik yapıdadır; kalsifikasyon ve keratinleşme içermez.",
+       "ekran": "Sert, fibroblastik; **kalsifikasyon ve keratin yok**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalsifikasyon ve keratin yok",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "içerik: sert, fibroblastik"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p037",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-14-c0130",
+       "ses": "Kraniofarenjiom sellar bölgede büyüdüğü için görme ve endokrin bulguları öne çıkar.",
+       "ekran": "Sellar yerleşim → **görme ve endokrin** bulgular",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "görme ve endokrin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0131",
+       "ses": "İlk bulgu grubu progresif görme kaybıdır; bunun iki nedeni tümörün doğrudan basısı ve hidrosefalidir.",
+       "ekran": "**Progresif görme kaybı**: tümöral bası, hidrosefali",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Progresif görme kaybı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Progresif görme kaybı",
+         "tümöral bası",
+         "hidrosefali"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0132",
+       "ses": "Bunlara baş ağrısı ve kişilik değişiklikleri eklenir.",
+       "ekran": "**Baş ağrısı, kişilik değişikliği**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Baş ağrısı, kişilik değişikliği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Baş ağrısı, kişilik değişiklikleri"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0133",
+       "ses": "Çocukta kısa boy ve puberte gecikmesi görülür.",
+       "ekran": "Çocukta **kısa boy**, **puberte gecikmesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kısa boy",
+         "tur": "terim"
+        },
+        {
+         "metin": "puberte gecikmesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Kısa boyluluk",
+         "Pubertede gecikme"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0134",
+       "ses": "Hipofiz sapına bası başka endokrin bozukluklara da yol açar.",
+       "ekran": "**Sap basısı** → diğer endokrin bozukluklar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sap basısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Stalk kompresyonuna bağlı diğer endokrin bozukluklar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p038",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-14-c0135",
+       "ses": "Kraniofarenjiomda prognozu iki etken belirler.",
+       "ekran": "Prognoz: **iki etken**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki etken",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Prognozdan sorumlu faktörler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0136",
+       "ses": "Birincisi tümörün büyüklüğüdür: beş santimetreden küçük tümörlerde nüks yüzde yirmi, büyüklerde yüzde seksen üçtür.",
+       "ekran": "Büyüklük/nüks: **<5 cm %20**, **>5 cm %83**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "<5 cm %20",
+         "tur": "sayi"
+        },
+        {
+         "metin": ">5 cm %83",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "tümör büyüklüğü/nüks",
+         "<5 cm %20",
+         ">5 cm %83"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0137",
+       "ses": "İkincisi cerrahi rezeksiyonun genişliğidir: gros total rezeksiyonla sağkalım yüzde yetmiş dokuz, subtotal rezeksiyon ve radyoterapiyle yüzde seksen yedidir.",
+       "ekran": "Sağkalım: **gros total %79**, **subtotal + RT %87**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gros total %79",
+         "tur": "sayi"
+        },
+        {
+         "metin": "subtotal + RT %87",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "cerrahi rezeksiyon genişliği/sağ kalım",
+         "gros total rezeksiyon %79",
+         "subtotal rezeksiyon+RT %87"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0138",
+       "ses": "Histopatolojinin prognoza etkisi tartışmalıdır.",
+       "ekran": "Histopatolojinin etkisi **tartışmalı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tartışmalı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "histopatoloji"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0139",
+       "ses": "Ancak adamantinomatöz tipte tümör sinir ve damar yapılarına daha çok yapıştığı için cerrahi diseksiyon zordur.",
+       "ekran": "Adamantinomatöz: **nörovasküler yapışıklık** → zor diseksiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nörovasküler yapışıklık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Admamantimomalarda nörovasküler yapılara yapışıklığın fazla olması nedeni ile cerrahi diseksiyon daha zor"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p039",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-14-c0140",
+       "ses": "Kraniofarenjiomun görüntü sayfasında iki örnek vardır.",
+       "ekran": "Görüntü sayfası: **iki örnek**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki örnek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "Kraniofarenjiom BT ve MR örnekleri",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0141",
+       "ses": "Aksiyel bilgisayarlı tomografide suprasellar bölgede parlak kalsifikasyon görülür.",
+       "ekran": "Aksiyel BT: suprasellar **kalsifikasyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalsifikasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "Aksiyel BT'de suprasellar parlak kalsifikasyon",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0142",
+       "ses": "Sagital manyetik rezonansta ise suprasellar bölgeden yukarı uzanan büyük kistik kitle izlenir.",
+       "ekran": "Sagital MR: suprasellar **büyük kistik kitle**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "büyük kistik kitle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "Sagital MR'da suprasellar bölgeden yukarı uzanan kistik kitle",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0143",
+       "ses": "Kalsifikasyon ve kist, adamantinomatöz tipin içeriğiyle uyumludur.",
+       "ekran": "Kalsifikasyon + kist → **adamantinomatöz tip**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "adamantinomatöz tip",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b13",
+   "baslik": "Hemanjioblastom",
+   "paragraflar": [
+    {
+     "id": "k2-14-p040",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-14-c0144",
+       "ses": "Hemanjioblastom, posterior fossada yerleşen ve içinde anormal damar besleyicileri bulunan mural bir nodülle karakterize tümördür.",
+       "ekran": "Hemanjioblastom: posterior fossa, **anormal damarlı mural nodül**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anormal damarlı mural nodül",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Posterior fossada içinde anormal vasküler besleyicilerin olduğu mural bir nodül ile karakterizedir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0145",
+       "ses": "Mural nodül, kist duvarına yapışık küçük tümör parçasıdır.",
+       "ekran": "**Mural nodül**: kist duvarına yapışık tümör parçası",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Mural nodül",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "mural bir nodül"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p041",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-14-c0146",
+       "ses": "Hemanjioblastom, von Hippel-Lindau sendromu denen fakomatoz bir tabloyla birlikte bulunabilir.",
+       "ekran": "**von Hippel-Lindau** sendromuyla birlikte olabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "von Hippel-Lindau",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "von Hippel Lindau Sendromu olarak bilinen fakomatoz bir kompleks ile birlikte bulunabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0147",
+       "ses": "Bu sendromda beyincik tümörüyle birlikte retina anjiomu, böbrek, karaciğer ve pankreas kistleri, böbrek karsinomu, feokromositoma ve retina hemanjiomu görülür.",
+       "ekran": "VHL: **retina anjiomu**, böbrek-karaciğer-pankreas kisti, **renal karsinom**, **feokromositoma**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "retina anjiomu",
+         "tur": "terim"
+        },
+        {
+         "metin": "renal karsinom",
+         "tur": "terim"
+        },
+        {
+         "metin": "feokromositoma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "serebellar tümör ile birlikte retinal anjiom",
+         "böbrek, karaciğer ve pankreas kistleri",
+         "renal karsinom",
+         "feokromasitoma",
+         "retinal hemanjiom"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p042",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-14-c0148",
+       "ses": "Hemanjioblastomlu hastalarda tümörün salgıladığı eritropoetin nedeniyle polisitemi olabilir.",
+       "ekran": "**Eritropoetin** → polisitemi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Eritropoetin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "salgılanan eritropoetin faktöre bağlı olarak hastalarda polistemi olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0149",
+       "ses": "Sendromik olgularda ortalama iki virgül bir yılda yeni bir kafa içi lezyon ortaya çıkabildiği için hastalar düzenli aralıklarla izlenmelidir.",
+       "ekran": "Sendromik olgu: **2,1 yılda** yeni lezyon → periyodik izlem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2,1 yılda",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Sendromik olgularda, 2.1 yılda yeni bir intrakraniyal lezyon ortaya çıkma ihtimali"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b14",
+   "baslik": "Dermoid ve epidermoid tümörler",
+   "paragraflar": [
+    {
+     "id": "k2-14-p043",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-14-c0150",
+       "ses": "Dermoid ve epidermoid tümörlerin ikisi de konjenital kökenlidir; bu bölüm kist ve tümör benzeri lezyonlara geçer.",
+       "ekran": "Dermoid ve epidermoid: **konjenital** köken",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konjenital",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Konjenital orijin"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p044",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-14-c0151",
+       "ses": "Dermoid tümörde çoğu olguda eşlik eden bir dermal sinüs traktı vardır; bu trakt deriden içeri uzanan ince bir kanaldır.",
+       "ekran": "Dermoid: çoğunda **dermal sinüs traktı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dermal sinüs traktı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Çoğu vakada eşlik eden bir dermal sinüs traktı mevcuttur"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0152",
+       "ses": "Bu nedenle hastalar tanı konmadan önce genellikle tekrarlayan menenjit nedeniyle tedavi görmüştür.",
+       "ekran": "Tanı öncesi **tekrarlayan menenjit**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tekrarlayan menenjit",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Genellikle hastalar teşhis konulmadan önce tekrarlayan menenjit nedeniyle tedavi edilmişlerdir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0153",
+       "ses": "Dermoid tümörde hidrosefali iki yolla gelişir: tekrarlayan menenjit beyin omurilik sıvısının emilimini azaltır, tümörün yeri de sıvı dolaşımını engeller.",
+       "ekran": "**Hidrosefali**: BOS emilimi azalır, BOS dolaşımı engellenir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hidrosefali",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Hidrosefali",
+         "tekrarlayan menenjite bağlı BOS emiliminde azalma",
+         "lokalizasyonu nedeni ile BOS dolaşımında azalma"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p045",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-14-c0154",
+       "ses": "Epidermoid tümör, sürekli kendini yenileyen epitel artıklarının, dökülen keratinin ve hücre artıklarının birikmesiyle uzun sürede büyür.",
+       "ekran": "Epidermoid: epitel artığı ve **keratin birikimi**, yavaş büyür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "keratin birikimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Sürekli olarak kendilerini yineleyen epiteliyal artıklar, deskuame keratin ve hücre artıklarının birikimi sonucu uzun bir süreç içinde büyürler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0155",
+       "ses": "Epidermoid tümörün görüntülemedeki özelliği, beyin omurilik sıvısının yoğunluğunu taklit etmesidir; bu yüzden tanı koymak zor olabilir.",
+       "ekran": "**BOS dansitesini taklit** eder → tanı zor",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BOS dansitesini taklit",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Nöroradyolojik tetkiklerde BOS dansitesini taklit etmesinden dolayı tanı konulmasında sorunlar olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b15",
+   "baslik": "Primer beyin lenfoması ve germ hücreli tümörler",
+   "paragraflar": [
+    {
+     "id": "k2-14-p046",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-14-c0156",
+       "ses": "Primer beyin lenfoması, ekstranodal lenfomaların yüzde ikisini ve kafa içi tümörlerin yüzde birini oluşturur.",
+       "ekran": "Primer beyin lenfoması: ekstranodal **%2**, intrakraniyal **%1**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%2",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%1",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Ekstranodal lenfomaların %2",
+         "İntrakranial tümörlerin %1"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0157",
+       "ses": "İmmün yetmezlikte ve edinsel bağışıklık yetmezliği sendromunda sıktır, altmış yaş üstünde görülür.",
+       "ekran": "**İmmün yetmezlik, AIDS**; 60 yaş üstü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İmmün yetmezlik, AIDS",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "İmmun yetmezlik ve AIDS de sık",
+         "60 yaş+"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0158",
+       "ses": "Primer beyin lenfoması parenkimde birden çok tümöral kitle yapar, sıklıkla B hücrelidir ve prognozu kötüdür.",
+       "ekran": "**Multipl kitle**, sıklıkla **B hücreli**, prognoz kötü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Multipl kitle",
+         "tur": "terim"
+        },
+        {
+         "metin": "B hücreli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Parenkimde multipl tümöral kitleler",
+         "Sıklıkla B hücreli lenfoma",
+         "Prognoz kötü"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0159",
+       "ses": "İkincil olarak beyin omurilik sıvısını da tutabilir.",
+       "ekran": "**Sekonder BOS** tutulumu olabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sekonder BOS",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Sekonder BOS tutulumu olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p047",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-14-c0160",
+       "ses": "Germ hücreli tümörler orta hatta, pineal ve suprasellar bölgede yerleşir.",
+       "ekran": "Germ hücreli: orta hat, **pineal ve suprasellar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pineal ve suprasellar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Orta hatta,pineal ve suprasellar yerleşim"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0161",
+       "ses": "Avrupa'da yüzde sıfır virgül iki ile bir arasında görülürken Japonlarda bu oran yüzde ondur.",
+       "ekran": "Avrupa **%0,2-1**, Japonlar **%10**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%0,2-1",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%10",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Avrupa’da % 0.2-1 iken Japonlarda %10"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0162",
+       "ses": "Histolojik tipleri testisteki germ hücreli tümörlere benzer.",
+       "ekran": "Histoloji **testis** tümörlerine benzer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "testis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Testis deki histolojik tip gibidir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0163",
+       "ses": "Gonadlardaki germ hücreli tümörler sinir sistemini nadiren tuttuğu için kafa içindeki tümör primer kabul edilir ve beyin omurilik sıvısını tutabilir.",
+       "ekran": "Gonadal tümör SSS'yi nadir tutar → **primer**; BOS tutulumu olabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "primer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Gonadal germ hücreli tümörlerin SSS tutulumu nadir bu nedenle primer BOS tutulumu olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b16",
+   "baslik": "Menenjiomlar: tanım ve risk etkenleri",
+   "paragraflar": [
+    {
+     "id": "k2-14-p048",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-14-c0164",
+       "ses": "Menenjiom, yavaş büyüyen, ekstraaksiyel, genellikle iyi huylu ve araknoidden kaynaklanan bir tümördür.",
+       "ekran": "Menenjiom: yavaş, **ekstraaksiyel**, benign, **araknoid** kökenli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ekstraaksiyel",
+         "tur": "terim"
+        },
+        {
+         "metin": "araknoid",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Yavaş büyüyen, ekstra-aksiyel genellikle benign, araknoidden kaynaklı tümörlerdir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0165",
+       "ses": "Ekstraaksiyel, beyin dokusunun dışında demektir.",
+       "ekran": "**Ekstraaksiyel** = beyin dokusunun dışında",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ekstraaksiyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "ekstra-aksiyel"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0166",
+       "ses": "Menenjiom tam olarak çıkarılırsa şifa sağlanır.",
+       "ekran": "Tam çıkarılırsa **şifa**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şifa",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Tam olarak çıkartılırsa şifa sağlanır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0167",
+       "ses": "Çoğunlukla falks, konveksite ve sfenoid kemik boyunca yerleşir ve sıklıkla kalsifiyedir.",
+       "ekran": "**Falks, konveksite, sfenoid**; sıklıkla kalsifiye",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Falks, konveksite, sfenoid",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Çoğunlukla falks, konveksite ve sfenoid boyunca yerleşir",
+         "Sıklıkla kalsifiyedir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0168",
+       "ses": "Primer kafa içi tümörlerin yüzde otuz ikisi menenjiomdur ve bunların yüzde otuz dokuzu belirti vermez.",
+       "ekran": "Primer kafa içi tümörlerin **%32**'si; %39'u asemptomatik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%32",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Primer intrakranial tümörlerin %32’si menengiomdur"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p049",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-14-c0169",
+       "ses": "Menenjiomda belirgin kadın üstünlüğü vardır; kadın erkek oranı üç ile yedi arasında bire karşılık gelir.",
+       "ekran": "Belirgin **kadın üstünlüğü**: K/E **3-7/1**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kadın üstünlüğü",
+         "tur": "terim"
+        },
+        {
+         "metin": "3-7/1",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Belirgin kadın predominansı",
+         "Kadın/erkek oranı 3-7/1"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0170",
+       "ses": "Menenjiomlu hastaların yüzde altmışında kafa travması öyküsü vardır.",
+       "ekran": "Hastaların **%60**'ında kafa travması öyküsü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%60",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Meninjiomlu hastaların %60’ında kafa travması öyküsü mevcut"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0171",
+       "ses": "Kafaya radyoterapi de bir risk etkenidir: kraniyal ışınlama almış on bir bin çocukta menenjiom sıklığı normal topluma göre dört kat yüksek bulunmuştur.",
+       "ekran": "Kraniyal ışınlama: menenjiom **4 kat** fazla",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "4 kat",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Kraniyal irradiyasyona maruz kalan 11.000 çocukta meninjiom insidansı normal populasyona göre 4 kat daha fazla görülmüş"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p050",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-14-c0172",
+       "ses": "Menenjiomun diğer risk etkenleri dört başlıkta toplanır.",
+       "ekran": "Diğer risk etkenleri: **dört başlık**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört başlık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0173",
+       "ses": "Birincisi viral nedenlerdir; papovavirüsün te antijeni menenjiom büyümesini uyarır.",
+       "ekran": "1. **Viral**: papovavirüs T antijeni",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Viral",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Viral nedenler",
+         "Papavirüsün T antijeni meninjiom büyümesini indüklemektedir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0174",
+       "ses": "İkincisi kromozom anomalileridir, özellikle yirmi ikinci kromozom.",
+       "ekran": "2. **Kromozom**: 22. kromozom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kromozom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Kromozom anomalileri",
+         "22. kromozom"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0175",
+       "ses": "Üçüncüsü fakomatoz hastalıklardır, yani nörofibromatozis tip iki.",
+       "ekran": "3. **Fakomatoz**: nörofibromatozis tip 2",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fakomatoz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Fakomatoz hastalıklar",
+         "Nörofibromatozis tip II"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0176",
+       "ses": "Dördüncüsü hormonal etkenlerdir: menenjiom kadınlarda daha sıktır, meme kanseriyle birlikte sık görülür, gebelikte büyümesi artar ve östrojen ile progesteron reseptörleri taşır.",
+       "ekran": "4. **Hormonal**: kadın, meme kanseri, **gebelikte büyüme**, östrojen-progesteron reseptörü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hormonal",
+         "tur": "terim"
+        },
+        {
+         "metin": "gebelikte büyüme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Hormonal faktörler",
+         "Kadınlarda daha sık",
+         "Meme CA ile birlikte sık",
+         "Gebelik sırasında büyümelerinin artması",
+         "Östrojen ve progesteron reseptörleri"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b17",
+   "baslik": "Menenjiomlar: köken, derece ve tedavi",
+   "paragraflar": [
+    {
+     "id": "k2-14-p051",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-14-c0177",
+       "ses": "Menenjiom, araknoid granülasyonlarının dış tabakasındaki kasket hücrelerinden, yani cap hücrelerinden köken alır.",
+       "ekran": "Köken: araknoid granülasyonu **cap (kasket) hücreleri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cap (kasket) hücreleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Araknoid granulasyonlarının dış tabakasındaki cap (kasket) hücrelerinden köken alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0178",
+       "ses": "Ventrikül içindeki menenjiomlar ise tela koroideadan gelişir.",
+       "ekran": "İntraventriküler: **tela koroidea**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tela koroidea",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "İntraventriküler meninjiomalar ise tela koroidea’dan orijin alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p052",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-14-c0179",
+       "ses": "Menenjiomlar üç dereceye ayrılır.",
+       "ekran": "Menenjiom: **üç derece**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç derece",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [],
+        "sekil": "Menenjiom derece tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-14-c0180",
+       "ses": "Derece bir menenjiomlar yüzde doksandır; tipik menenjiomdur ve mitoz dörtten azdır.",
+       "ekran": "**Grade I %90**: tipik, mitoz <4",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade I %90",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Grade I %90",
+         "tipik",
+         "mitoz <4"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0181",
+       "ses": "Derece iki yüzde sekizdir; atipik menenjiomda mitoz dört ile yirmi arasındadır, şeffaf hücreli ve kordoid tipler de bu derecededir.",
+       "ekran": "**Grade II %8**: atipik (4-20 mitoz), şeffaf hücreli, kordoid",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade II %8",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Grade II %8",
+         "atipik (4-20 mitoz)",
+         "clear cell (şeffaf hücreli)",
+         "kordoid"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0182",
+       "ses": "Derece üç yüzde ikidir; anaplastik menenjiomda yirmiden fazla mitoz vardır, rabdoid ve papiller tipler de bu gruptadır.",
+       "ekran": "**Grade III %2**: anaplastik (>20 mitoz), rabdoid, papiller",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade III %2",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Grade III %2",
+         "anaplastik (20 den fazla mitoz)",
+         "rabdoid",
+         "papiller"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p053",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-14-c0183",
+       "ses": "Menenjiomda kromozom değişiklikleri bir basamak dizisi gibi ilerler.",
+       "ekran": "Kromozom değişikliği **basamak** gibi ilerler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "basamak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Kromozom anomalileri"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0184",
+       "ses": "Normal öncül hücrede yirmi ikinci kromozom değişikliği tipik menenjiomu oluşturur.",
+       "ekran": "Öncül hücre + **22. kromozom** → tipik menenjiom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "22. kromozom",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "22. kromozom",
+         "Normal prekürsör tipik meninjiom"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0185",
+       "ses": "Bir pe delesyonu tipik menenjiomu atipik menenjioma, on yedi ku mutasyonu da atipik menenjiomu malign menenjioma götürür.",
+       "ekran": "**1p delesyonu** → atipik; **17q mutasyonu** → malign",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1p delesyonu",
+         "tur": "sayi"
+        },
+        {
+         "metin": "17q mutasyonu",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "1p delesyonu",
+         "atipik meninjiom 17q mutasyon malign meninjiom"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p054",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-14-c0186",
+       "ses": "Bilgisayarlı tomografide menenjiomun malign olduğunu düşündüren dört bulgu vardır: heterojen kontrastlanma, kavitasyon, belirgin çevre ödemi ve sinir dokusunun içine mantar tarzında uzanım.",
+       "ekran": "BT malignite: **heterojen kontrast, kavitasyon, belirgin ödem, mantar tarzı uzanım**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "heterojen kontrast, kavitasyon, belirgin ödem, mantar tarzı uzanım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "BT’de malignite bulguları",
+         "Heterojen kontrastlanma",
+         "Kavitasyon",
+         "Belirgin çevre ödemi",
+         "Nöral doku içerisine mush-room uzanım"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p055",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k2-14-c0187",
+       "ses": "Menenjiomun tedavisi cerrahidir.",
+       "ekran": "Tedavi: **cerrahi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cerrahi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Cerrahi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0188",
+       "ses": "Radyoterapinin nüksleri önlediği kanıtlanmamıştır.",
+       "ekran": "RT'nin nüksü önlediği **kanıtlanmamış**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kanıtlanmamış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "RT’nin rekürrensleri önlediği kanıtlanmamış"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0189",
+       "ses": "Beş yıllık yaşam süresi yüzde doksan bir virgül üçtür.",
+       "ekran": "5 yıllık yaşam **%91,3**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%91,3",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "5 yıllık yaşam süresi: %91.3"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p056",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k2-14-c0190",
+       "ses": "Menenjiomda ameliyatın ne kadar tam olduğu, değiştirilmiş Simpson derecelendirmesiyle ölçülür.",
+       "ekran": "Rezeksiyonun tamlığı: **Simpson** derecelendirmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Simpson",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [],
+        "sekil": "Simpson derecelendirme tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-14-c0191",
+       "ses": "Derece sıfırda tümör, köken aldığı duranın bir santimetrelik çevresiyle birlikte çıkarılır ve on yılda nüks sıfırdır.",
+       "ekran": "**Grade 0**: 1 cm dura ile çıkarım, nüks **0**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade 0",
+         "tur": "sayi"
+        },
+        {
+         "metin": "0",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Grade 0",
+         "aldığı duranın (1 cm) birlikte"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0192",
+       "ses": "Derece birde tümörle birlikte köken aldığı dura çıkarılır, nüks yüzde dokuzdur.",
+       "ekran": "**Grade 1**: dura çıkarılır, nüks **%9**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade 1",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%9",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Grade 1",
+         "aldığı duranın çıkartılması"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0193",
+       "ses": "Derece ikide dural taban koagüle edilir, nüks yüzde on dokuzdur.",
+       "ekran": "**Grade 2**: dural taban koagüle, nüks **%19**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade 2",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%19",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Grade 2",
+         "dural tabanın kuagulasyonu"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0194",
+       "ses": "Derece üçte dural taban koagüle edilemez, nüks yüzde yirmi dokuzdur.",
+       "ekran": "**Grade 3**: dural taban koagüle edilemez, nüks **%29**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade 3",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%29",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Grade 3",
+         "dural tabanın kuagule edilememesi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0195",
+       "ses": "Derece dörtte tümör subtotal çıkarılır, yani kalan tümör yüzde ondan azdır ve nüks yüzde kırktır.",
+       "ekran": "**Grade 4**: subtotal (rezidü <%10), nüks **%40**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade 4",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%40",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Grade 4 Tümörün subtotal rezeksiyonu"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0196",
+       "ses": "Derece beşte yalnız biyopsi yapılır ve nüks yüzde yüzdür.",
+       "ekran": "**Grade 5**: yalnız biyopsi, nüks **%100**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grade 5",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%100",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Grade 5 Biyopsi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0197",
+       "ses": "Bu tablo, rezeksiyon küçüldükçe nüksün düzenli olarak arttığını gösterir.",
+       "ekran": "Rezeksiyon küçüldükçe **nüks artar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nüks artar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [],
+        "sekil": "Simpson tablosunun rekürrens sütunu",
+        "tablo": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b18",
+   "baslik": "Vestibüler nörilemmom ve schwannom",
+   "paragraflar": [
+    {
+     "id": "k2-14-p057",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-14-c0198",
+       "ses": "Vestibüler nörilemmom, kafa çiftlerinin Schwann hücrelerinden gelişen tümördür ve genellikle pontoserebellar köşede yerleşir.",
+       "ekran": "Vestibüler nörilemmom: **Schwann hücresi**, **pontoserebellar köşe**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Schwann hücresi",
+         "tur": "terim"
+        },
+        {
+         "metin": "pontoserebellar köşe",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Genellikle pontoserebellar köşede yerleşirler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0199",
+       "ses": "Pontoserebellar köşe, beyin sapı ile beyincik arasındaki açıdır.",
+       "ekran": "**Pontoserebellar köşe**: beyin sapı-beyincik açısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pontoserebellar köşe",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "pontoserebellar köşede"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0200",
+       "ses": "Bu tümörler köken aldıkları sinirin adıyla anılır; slaytta beşinci ve sekizinci kafa çifti örnek verilir.",
+       "ekran": "Köken sinirin adıyla anılır: **5. ve 8. kafa çifti**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "5. ve 8. kafa çifti",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Orijin aldığı sinirin ismi (5 ve 8. Kranial sinirler) ile anılırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0201",
+       "ses": "Vestibüler nörilemmom, vestibüler sinirin Schwann hücrelerinden köken alır.",
+       "ekran": "Köken: **vestibüler sinirin Schwann** hücreleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vestibüler sinirin Schwann",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Vestibüler sinirin schwann hücrelerinden orijin alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p058",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-14-c0202",
+       "ses": "Schwannom geçen yıl sınavda soruldu.",
+       "ekran": "**Schwannom** geçen yıl sınavda soruldu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Schwannom",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-pat-003"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Vestibüler sinirin schwann hücrelerinden orijin alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0203",
+       "ses": "Soru, Verocay cisimciği görülen beyin tümörünün schwannom olduğunu soruyordu.",
+       "ekran": "**Verocay cisimciği** → schwannom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Verocay cisimciği",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-pat-003"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Vestibüler sinirin schwann hücrelerinden orijin alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0204",
+       "ses": "Verocay cisimciği schwannomun mikroskopik bulgusudur.",
+       "ekran": "Verocay: schwannomun **mikroskopik bulgusu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mikroskopik bulgusu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-pat-003"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0205",
+       "ses": "Schwannom ile nörilemmom aynı tümörü anlatır, ikisi de Schwann hücresinden gelişir.",
+       "ekran": "**Schwannom = nörilemmom**; ikisi de Schwann hücresinden",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Schwannom = nörilemmom",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-pat-003"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Vestibüler sinirin schwann hücrelerinden orijin alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0206",
+       "ses": "Sınıflama tablosunda da kranyal sinir tümörleri arasında ilk sırada schwannom yer alır.",
+       "ekran": "Sınıflamada kranyal sinir tümörlerinde ilk: **schwannom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "schwannom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "Sınıflama tablosunda kranyal sinir tümörleri satırı: Schwannoma",
+        "tablo": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p059",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-14-c0207",
+       "ses": "Vestibüler nörilemmomun bulguları, pontoserebellar köşedeki komşu sinirlerden gelir ve beş tanedir.",
+       "ekran": "Bulgular komşu sinirlerden: **beş bulgu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beş bulgu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "işitme kaybı",
+         "kulak çınlaması",
+         "periferik tipte fasiyal güçsüzlük",
+         "yüz yarısında ağrı",
+         "dengesizlik"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0208",
+       "ses": "Birincisi işitme kaybıdır.",
+       "ekran": "1. **İşitme kaybı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İşitme kaybı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "işitme kaybı"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0209",
+       "ses": "İkincisi kulak çınlaması, yani tinnitustur.",
+       "ekran": "2. **Tinnitus** (kulak çınlaması)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tinnitus",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "kulak çınlaması tinnitus"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0210",
+       "ses": "Üçüncüsü periferik tipte fasiyal güçsüzlük, yani periferik fasiyal paralizidir.",
+       "ekran": "3. **Periferik fasiyal** güçsüzlük",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Periferik fasiyal",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "periferik tipte fasiyal güçsüzlük periferik fasiyal pleji"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0211",
+       "ses": "Dördüncüsü yüzün yarısında ağrı, yani trigeminal nevraljidir.",
+       "ekran": "4. **Trigeminal nevralji** (yüz yarısında ağrı)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trigeminal nevralji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "yüz yarısında ağrı trigeminal nevralji"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0212",
+       "ses": "Beşincisi dengesizlik, yani vertigodur.",
+       "ekran": "5. **Vertigo** (dengesizlik)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Vertigo",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "dengesizlik vertigo"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p060",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-14-c0213",
+       "ses": "Geçmiş yıllarda vestibüler nörilemmomun beklenen bulgusu iki ayrı soruda soruldu.",
+       "ekran": "Vestibüler nörilemmom bulgusu **iki soruda** soruldu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki soruda",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Vestibüler sinirin schwann hücrelerinden orijin alırlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0214",
+       "ses": "Birinde cevap periferik fasiyal parezi, diğerinde tek taraflı işitme kaybı, tinnitus ve dengesizlikti.",
+       "ekran": "Cevaplar: **periferik fasiyal parezi**; **tek taraflı işitme kaybı, tinnitus, dengesizlik**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "periferik fasiyal parezi",
+         "tur": "cikmis"
+        },
+        {
+         "metin": "tek taraflı işitme kaybı, tinnitus, dengesizlik",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "işitme kaybı",
+         "kulak çınlaması tinnitus",
+         "periferik tipte fasiyal güçsüzlük",
+         "dengesizlik vertigo"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0215",
+       "ses": "Çeldiriciler abuli, kişilik değişikliği ve hemiparezi gibi frontal lob bulgularıydı.",
+       "ekran": "Çeldirici: **frontal lob bulguları** (abuli, kişilik değişikliği, hemiparezi)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "frontal lob bulguları",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Frontal lob: abuli, demans, kişilik değişiklikleri, afazi, hemiparezi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0216",
+       "ses": "Pontoserebellar köşe kitlesi lob bulgusu vermez; komşu kafa çiftlerinin bulgusunu verir.",
+       "ekran": "Pontoserebellar köşe: **lob bulgusu değil**, kafa çifti bulgusu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lob bulgusu değil",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "8a4a38a05c80",
+        "6573215c6cff"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Genellikle pontoserebellar köşede yerleşirler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b19",
+   "baslik": "Metastatik beyin tümörleri",
+   "paragraflar": [
+    {
+     "id": "k2-14-p061",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k2-14-c0217",
+       "ses": "Metastatik beyin tümörlerinin büyük kısmı karsinom metastazıdır; tüm metastazların yüzde sekseni karsinomdur.",
+       "ekran": "Metastaz: **%80 karsinom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%80 karsinom",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "En sık karsinom metastazı (tüm metastazların %80)"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0218",
+       "ses": "Kaynak en sık akciğerdir, yüzde kırk dört.",
+       "ekran": "En sık kaynak: **akciğer %44**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "akciğer %44",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Akciğer %44"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0219",
+       "ses": "Onu yüzde onla meme izler; deri melanomu, böbrek ve gastrointestinal sistem diğer kaynaklardır.",
+       "ekran": "Sonra **meme %10**; melanom, böbrek, GİS",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "meme %10",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Meme % 10",
+         "Deri(melanom)",
+         "Böbrek",
+         "GIS"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p062",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k2-14-c0220",
+       "ses": "Metastazlar, hastaneye yatırılan kafa içi tümörlü hastaların yarısını oluşturur ve klinik olarak görülen en yaygın beyin tümörüdür.",
+       "ekran": "Yatan hastaların yarısı; **klinikte en yaygın beyin tümörü**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "klinikte en yaygın beyin tümörü",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Hastaneye yatan intrakraniyal tümörlü hastaların yarısını oluşturur",
+         "Klinik olarak görülen en yaygın beyin tümörüdür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0221",
+       "ses": "Bazen metastaz, kanserin ilk bulgusu olabilir.",
+       "ekran": "Metastaz bazen **ilk bulgu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk bulgu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Metastaz bazen ilk bulgu olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p063",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k2-14-c0222",
+       "ses": "Metastatik beyin tümörlerinin tipik özellikleri belirgin çevre ödemi, çok sayıda kafa içi lezyon ve gri cevher ile beyaz cevherin birleştiği sınır bölgede, yani watershed zonda yerleşimdir.",
+       "ekran": "**Belirgin ödem, çok sayıda lezyon, gri-beyaz cevher sınırı** (watershed)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Belirgin ödem, çok sayıda lezyon, gri-beyaz cevher sınırı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Belirgin çevre ödemi, çok sayıda intrakraniyal lezyon ve gri-beyaz cevher yerinde (watershed zon) yerleşim gibi tipik özellikler"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0223",
+       "ses": "Metastazın yeri kanlanmayla orantılıdır: yüzde seksen beyin hemisferlerinde, yüzde on beş beyincikte, yüzde beş beyin sapında görülür.",
+       "ekran": "Yer kanlanmayla orantılı: **hemisfer %80**, serebellum %15, beyin sapı %5",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemisfer %80",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Lokalizasyon kanlanma ile orantılı",
+         "Beyin hemisferleri %80",
+         "Serebellum %15",
+         "Beyin sapı %5"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0224",
+       "ses": "Metastazlar temporal, parietal ve oksipital lobların birleştiği yere yakın, Sylvian fissürün arka bölümünde sık yerleşir.",
+       "ekran": "**Sylvian fissür** arka bölümü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sylvian fissür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Temporal, parietal, oksipital lobların birleşim yerlerine yakın sylvian fissürün posterior parçasındadır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0225",
+       "ses": "Metastaz, erişkinde en yaygın posterior fossa tümörüdür.",
+       "ekran": "Erişkinde **en yaygın posterior fossa** tümörü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en yaygın posterior fossa",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Erişkinde en yaygın posterior fossa tümörüdür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b20",
+   "baslik": "Metastazda tedavi ve prognoz",
+   "paragraflar": [
+    {
+     "id": "k2-14-p064",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k2-14-c0226",
+       "ses": "Metastatik beyin tümörlerinde en uygun tedaviyle ortalama yaşam süresi otuz iki haftadır.",
+       "ekran": "En uygun tedaviyle ortalama yaşam **32 hafta**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "32 hafta",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "En uygun tedavi ile ortalama yaşam süreleri 32 haftadır"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0227",
+       "ses": "Çok sayıda metastaz ve yaygın sistemik kanser varsa cerrahi yapılmadan radyoterapi ve tıbbi tedavi önerilir.",
+       "ekran": "Multipl + yaygın kanser: **cerrahisiz RT** ve tıbbi tedavi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cerrahisiz RT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Multipl metastazlı, yaygın sistemik kanser durumunda cerrahi uygulamaksızın RT ve tıbbi tedavi önerilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p065",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k2-14-c0228",
+       "ses": "Metastazda cerrahinin üç amacı vardır: histolojik tanıyı koymak, belirtileri düzeltmek ve total rezeksiyonla yerel iyileşme sağlamak.",
+       "ekran": "Cerrahi amaç: **tanı, semptom düzeltme, lokal kür**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tanı, semptom düzeltme, lokal kür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Cerrahi tedavide amaçlar",
+         "histolojik tanının konulması",
+         "semptomların düzeltilmesi",
+         "total rezeksiyon ile lokal kürün elde edilmesi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p066",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k2-14-c0229",
+       "ses": "Soliter metastazda, yani tek metastazda cerrahi dört durumda yapılır.",
+       "ekran": "**Soliter** metastaz: dört cerrahi endikasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Soliter",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Soliter metastazlarda cerrahi endikasyonlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0230",
+       "ses": "Birincisi primer odağın sessiz olmasıdır.",
+       "ekran": "1. **Primer odak sessiz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Primer odak sessiz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Primer odak sessiz"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0231",
+       "ses": "İkincisi lezyonun kolay çıkarılabilir bir yerde olmasıdır.",
+       "ekran": "2. **Kolay çıkarılabilir** yer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kolay çıkarılabilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Lezyon kolaylıkla çıkartılabilir lokalizasyonda"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0232",
+       "ses": "Üçüncüsü lezyonun belirti vermesi ve hayatı tehdit etmesidir.",
+       "ekran": "3. **Semptomatik**, hayatı tehdit ediyor",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Semptomatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Lezyon semptomatik ve hayatı tehdit ediyor"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0233",
+       "ses": "Dördüncüsü tanıdan kuşku duyulmasıdır.",
+       "ekran": "4. **Tanıdan kuşku**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tanıdan kuşku",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Tanı ile ilgili kuşku"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p067",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k2-14-c0234",
+       "ses": "Çok sayıda metastazda cerrahi üç durumda yapılır.",
+       "ekran": "**Multipl** metastaz: üç cerrahi endikasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Multipl",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Multible metastazlarda cerrahi endikasyonlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0235",
+       "ses": "Birincisi lezyonlardan birinin hayatı tehdit etmesi ve kolay çıkarılabilir yerde olmasıdır.",
+       "ekran": "1. Biri **hayatı tehdit ediyor** ve kolay çıkarılabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hayatı tehdit ediyor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Lezyonlardan birisi hayatı tehdit ediyor ve kolaylıkla çıkartılabilecek lokalizasyonda"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0236",
+       "ses": "İkincisi tüm lezyonların tek bir birleşik cerrahi yaklaşımla çıkarılabilmesidir.",
+       "ekran": "2. Hepsi **tek birleşik** cerrahiyle çıkarılabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tek birleşik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Tüm lezyonlar kombine bir cerrahi yaklaşım ile çıkartılabilecek lokalizasyonda"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0237",
+       "ses": "Üçüncüsü tanıdan kuşku duyulmasıdır.",
+       "ekran": "3. **Tanıdan kuşku**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tanıdan kuşku",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Tanı ile ilgili kuşku"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0238",
+       "ses": "Çok sayıda metastazda gros total rezeksiyon başarılırsa soliter metastazla aynı sağkalıma ulaşılabilir.",
+       "ekran": "Gros total rezeksiyon → **soliterle aynı sağkalım**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "soliterle aynı sağkalım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Multipl metastazlarda gross total rezeksiyon başarılabilirse, soliter metastazlar ile aynı survival oranına ulaşmak mümkündür"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p068",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k2-14-c0239",
+       "ses": "Metastatik beyin tümörlerinde prognozu beş etken belirler: metastazların sayısı ve büyüklüğü, sinir sistemi dışındaki kanserin durumu, hastanın Karnofsky puanıyla ölçülen performansı, hastanın yaşı ve kanserin tipi.",
+       "ekran": "Prognoz: **sayı-büyüklük, sistemik hastalık, Karnofsky, yaş, kanser tipi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sayı-büyüklük, sistemik hastalık, Karnofsky, yaş, kanser tipi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Metastazların sayısı ve büyüklüğü (kitle etkisi)",
+         "SSS dışındaki sistemik kanser hastalığının durumu",
+         "Hastanın performans durumu (Karnofsky puanı)",
+         "Hastanın yaşı",
+         "Kanserin tipi"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b21",
+   "baslik": "Hipofiz tümörleri",
+   "paragraflar": [
+    {
+     "id": "k2-14-p069",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k2-14-c0240",
+       "ses": "Hipofiz tümörleri büyüklüğe göre ikiye ayrılır: bir santimetreden küçük olanlar mikroadenom, büyük olanlar makroadenomdur.",
+       "ekran": "**<1 cm mikroadenom**, büyük **makroadenom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "<1 cm mikroadenom",
+         "tur": "sayi"
+        },
+        {
+         "metin": "makroadenom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "1 cm’den küçük olanlar mikroadenom büyük olanlar makroadenom"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0241",
+       "ses": "Hipofiz tümörleri tüm kafa içi tümörlerin yaklaşık yüzde onunu oluşturur.",
+       "ekran": "Kafa içi tümörlerin yaklaşık **%10**'u",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%10",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Tüm intrakranial tümörlerin yaklaşık %10’u"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p070",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k2-14-c0242",
+       "ses": "Hipofiz tümörlerinde baş ağrısı, görme sorunları ve rinore, yani burundan sıvı gelmesi görülür.",
+       "ekran": "**Baş ağrısı, görme sorunu, rinore**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Baş ağrısı, görme sorunu, rinore",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Baş ağrısı, görme problemleri, rinore"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0243",
+       "ses": "Endokrin bozukluklar ise tümörün salgıladığı ya da baskıladığı hormona göre değişir: prolaktinoma, akromegali, Cushing sendromu, hipotiroidi ve diabetes insipidus.",
+       "ekran": "Endokrin: **prolaktinoma, akromegali, Cushing**, hipotiroidi, diabetes insipidus",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "prolaktinoma, akromegali, Cushing",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Endokrin bozukluklar; prolaktinoma, akromegali, cushing sendromu, hipotiroidizm, diabetes insipitus"
+        ],
+        "sekil": null,
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b22",
+   "baslik": "Görüntü örnekleri",
+   "paragraflar": [
+    {
+     "id": "k2-14-p071",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k2-14-c0244",
+       "ses": "Dersin son sayfaları üzerinde ad yazılmamış manyetik rezonans örnekleridir.",
+       "ekran": "Son sayfalar: **adsız MR** örnekleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "adsız MR",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [],
+        "sekil": "Adsız MR görüntü örnekleri",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0245",
+       "ses": "Bu görüntüleri, derste öğrendiğimiz görüntü tarifleriyle eşleştirerek okuyabiliriz.",
+       "ekran": "Görüntüyü **öğrenilen tarifle** eşleştir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "öğrenilen tarifle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p072",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k2-14-c0246",
+       "ses": "İlk görüntülerde, koronal ve aksiyel kesitte iki hemisfere doğru uzanan, kenarı kontrast tutan ve ortası tutmayan düzensiz kitleler vardır.",
+       "ekran": "Koronal ve aksiyel: **kenarı kontrast tutan, ortası tutmayan** kitle",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kenarı kontrast tutan, ortası tutmayan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [],
+        "sekil": "Koronal MR'da iki hemisfere uzanan halka kontrastlı kitle",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0247",
+       "ses": "Bu görünüm, yüksek dereceli astrositom ve korpus kallozumu tutan kelebek gliom tarifine uyar.",
+       "ekran": "→ **Yüksek dereceli astrositom / kelebek gliom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüksek dereceli astrositom / kelebek gliom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [],
+        "sekil": "Aksiyel MR'da korpus kallozumdan iki yana uzanan kitle",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0248",
+       "ses": "Ardından parietal bölgede küçük, halka tarzında kontrast tutan tek bir lezyon gösterilir.",
+       "ekran": "Parietal: **halka tarzı** kontrast tutan tek lezyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "halka tarzı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [],
+        "sekil": "Parietal halka tarzı kontrast tutan tek lezyon",
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p073",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k2-14-c0249",
+       "ses": "Sonraki görüntülerde posterior fossada, orta hatta, dördüncü ventrikül ve beyin sapı komşuluğunda kontrast tutan kitleler vardır.",
+       "ekran": "Posterior fossa, **orta hat** kontrastlı kitleler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "orta hat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [],
+        "sekil": "Posterior fossa orta hat kontrastlı kitle",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0250",
+       "ses": "Bir görüntüde oklar sellar ve suprasellar bölgedeki kitleyi gösterir.",
+       "ekran": "Oklar: **sellar-suprasellar** kitle",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sellar-suprasellar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [],
+        "sekil": "Oklarla gösterilen sellar-suprasellar kitle",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0251",
+       "ses": "Bir başka görüntüde sağ frontalde ödemle çevrili bir lezyon görülür.",
+       "ekran": "Sağ frontal **ödemli** lezyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ödemli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [],
+        "sekil": "Sağ frontal ödemle çevrili lezyon",
+        "tablo": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-14-p074",
+     "sayfa": 63,
+     "cumleler": [
+      {
+       "id": "k2-14-c0252",
+       "ses": "Daha sonra dura tabanlı, beyin dokusunun dışında kalan, homojen kontrast tutan büyük kitleler gösterilir; bunlar ekstraaksiyel menenjiom tarifine uyar.",
+       "ekran": "Dura tabanlı, homojen kontrastlı → **menenjiom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "menenjiom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [],
+        "sekil": "Dura tabanlı homojen kontrast tutan ekstraaksiyel kitle",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0253",
+       "ses": "Ardından oklarla işaretlenmiş pontoserebellar köşe kitleleri gelir; bu yerleşim vestibüler nörilemmomun tipik yeridir.",
+       "ekran": "Pontoserebellar köşe kitlesi → **vestibüler nörilemmom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vestibüler nörilemmom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [],
+        "sekil": "Oklarla işaretli pontoserebellar köşe kitlesi",
+        "tablo": null
+       }
+      },
+      {
+       "id": "k2-14-c0254",
+       "ses": "Son görüntüde iki hemisferde çok sayıda halka tarzı kontrast tutan lezyon vardır; bu görünüm, çok sayıda lezyon ve gri-beyaz cevher sınırı yerleşimiyle metastaz tarifine uyar.",
+       "ekran": "Çok sayıda halka lezyon → **metastaz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "metastaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [],
+        "sekil": "İki hemisferde çok sayıda halka tarzı kontrast tutan lezyon",
+        "tablo": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-14-b23",
+   "baslik": "Toparlama",
+   "paragraflar": [
+    {
+     "id": "k2-14-p075",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k2-14-c0255",
+       "ses": "Beyin tümörlerinde bulgular tümörün yerine göre belirlenir.",
+       "ekran": "Bulgular **tümörün yerine** göre",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tümörün yerine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0256",
+       "ses": "Supratentoryal tümörler lob bulgusu ve nöbet, infratentoryal tümörler ise erken kafa içi basınç artışı ve beyincik bulgusu verir.",
+       "ekran": "Supratentoryal: **lob bulgusu, nöbet**; infratentoryal: **erken KİB**, beyincik bulgusu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lob bulgusu, nöbet",
+         "tur": "terim"
+        },
+        {
+         "metin": "erken KİB",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0257",
+       "ses": "Glial tümörlerden astrositom en sık intraaksiyel primer tümör, glioblastom primer tümörler arasında en sık görüleni ve en malign astrositom, medulloblastom çocukta en sık malign tümördür.",
+       "ekran": "**Astrositom** en sık intraaksiyel; **GBM** en sık primer; **medulloblastom** çocukta en sık malign",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Astrositom",
+         "tur": "terim"
+        },
+        {
+         "metin": "GBM",
+         "tur": "terim"
+        },
+        {
+         "metin": "medulloblastom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0258",
+       "ses": "Ekstraaksiyel tümörlerde menenjiom ve vestibüler nörilemmom öne çıkar; klinikte en yaygın beyin tümörü ise metastazdır.",
+       "ekran": "Ekstraaksiyel: **menenjiom, vestibüler nörilemmom**; klinikte en yaygın: **metastaz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "menenjiom, vestibüler nörilemmom",
+         "tur": "terim"
+        },
+        {
+         "metin": "metastaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-14-c0259",
+       "ses": "Her tümörde sınavın sorduğu bilgi aynı kalıptadır: en sık görülen yer ve yaş, tipik görüntü bulgusu ve ilk klinik bulgu.",
+       "ekran": "Sınav kalıbı: **yer ve yaş, görüntü bulgusu, ilk klinik bulgu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yer ve yaş, görüntü bulgusu, ilk klinik bulgu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular"
+}
