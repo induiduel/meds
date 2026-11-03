@@ -2035,3 +2035,16 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** onem 626 notuna 4 yeni ders + "Hocanın vurguladıkları" kartları (`nerede.yol` ders sayfası) ve `eklenen/duzeltilen` yazıldı.
 - **Önleme:** öğrencinin gördüğü yeni özellik/ders içeren her dağıtımda `yenilikler` en az bir kart taşır ({ad, nerede:{ad,yol},
   amac, islevler}); yalnız küçük düzeltmede `maddeler` yeterlidir.
+
+## H476 — Ders analizi özeti "çözücü yok" diyerek düştü (setlere bölünmüş çözücü) (2026-11-03)
+- **Belirti:** k2-12 ve k2-14 (Beyin ve Sinir Cerrahisi) için `ders_analizi/uret.py` "özet yok: sesli örnek soru çözücü" verdi; çözücü canlıdaydı.
+- **Kök neden:** `birlestir.py` 40'tan çok sorulu dersin çözücüsünü ardışık setlere böler (`2b01-1.json`, `2b01-2.json`); `uret.py` yalnız
+  `<kod>.json` dosyasını arıyordu → setli her derste özet sessizce eksik kalıyordu.
+- **Çözüm:** `uret.py` `<kod>.json` ya da `<kod>-1.json` varsa çözücüyü var sayar.
+- **Önleme:** çözücü varlığını denetleyen yeni kod set biçimini (`<kod>-N`) de tanır; çözücü index.json'u (`dersler[].kod` önekiyle) tek doğru kaynaktır.
+
+## H477 — Asıl hoca derse girmediğinde sınav kaynağı (2026-11-03, Beyin ve Sinir Cerrahisi k2-12/13/14)
+- **Durum:** derse başka hoca (Zeynep) kendi slaytlarıyla girdi; sınavı asıl hoca (Sinan Apaydın) kendi slaytlarından hazırlıyor.
+- **Kural:** sınavı hazırlayan hocanın slaytı tek kaynaktır (anlatım, soru, önem); derse giren hocanın slaytı/sesi yalnız önem ipucudur,
+  metinde "hoca vurguladı" denmez, onun slaytında olup sınav hocasının slaytında olmayan bilgi eklenmez. Kullanıcının bildirdiği geçmiş
+  sorudan slaytta karşılığı olmayan (servikal travmada immobilizasyon) anlatıma uydurulmaz, kullanıcıya bildirilir.

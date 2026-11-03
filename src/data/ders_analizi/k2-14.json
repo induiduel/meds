@@ -1,0 +1,933 @@
+{
+ "surum": 1,
+ "key": "k2-14",
+ "kod": "2b03",
+ "kurul": 2,
+ "brans": "Beyin Cerrahisi",
+ "konu": "İntrakraniyal Kitlelerde Belirti ve Bulgular",
+ "ogretim_uyesi": "Doç. Dr. Aydın Sinan Apaydın",
+ "profil": "Beyin ve Sinir Cerrahisi",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2b03"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders beyin tümörlerinin sınıflamasını, genel ve yerleşime göre klinik bulgularını anlatır. Astrositom, glioblastom, oligodendrogliom, epandimom, medulloblastom, kraniofarenjiom, hemanjioblastom, dermoid ve epidermoid, lenfoma, germ hücreli tümörler, menenjiom, vestibüler schwannom, metastaz ve hipofiz adenomunun köken, görüntü, tedavi ve prognoz özelliklerini işler.",
+   "maddeler": [
+    {
+     "metin": "Dersin amacı ve beyin tümörlerinin sınıflaması"
+    },
+    {
+     "metin": "Santral sinir sistemi tümörlerini diğer tümörlerden ayıran özellikler"
+    },
+    {
+     "metin": "Klinik bulgular ve kafa içi basınç artışı"
+    },
+    {
+     "metin": "Progresif fokal defisit: lob bulguları"
+    },
+    {
+     "metin": "Gliomlar ve astrositomlar"
+    },
+    {
+     "metin": "Astrositomda derecelendirme ve görüntüleme"
+    },
+    {
+     "metin": "Glioblastom"
+    },
+    {
+     "metin": "Astrositomlarda tedavi ve prognoz"
+    },
+    {
+     "metin": "Oligodendrogliom"
+    },
+    {
+     "metin": "Epandimom"
+    },
+    {
+     "metin": "Medulloblastom"
+    },
+    {
+     "metin": "Kraniofarenjiom"
+    },
+    {
+     "metin": "Hemanjioblastom"
+    },
+    {
+     "metin": "Dermoid ve epidermoid tümörler"
+    },
+    {
+     "metin": "Primer beyin lenfoması ve germ hücreli tümörler"
+    },
+    {
+     "metin": "Menenjiomlar: tanım ve risk etkenleri"
+    },
+    {
+     "metin": "Menenjiomlar: köken, derece ve tedavi"
+    },
+    {
+     "metin": "Vestibüler nörilemmom ve schwannom"
+    },
+    {
+     "metin": "Metastatik beyin tümörleri"
+    },
+    {
+     "metin": "Metastazda tedavi ve prognoz"
+    },
+    {
+     "metin": "Hipofiz tümörleri"
+    },
+    {
+     "metin": "Görüntü örnekleri"
+    },
+    {
+     "metin": "Toparlama"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders beyin tümörlerinin sınıflamasını, genel ve yerleşime göre klinik bulgularını anlatır. Astrositom, glioblastom, oligodendrogliom, epandimom, medulloblastom, kraniofarenjiom, hemanjioblastom, dermoid ve epidermoid, lenfoma, germ hücreli tümörler, menenjiom, vestibüler schwannom, metastaz ve hipofiz adenomunun köken, görüntü, tedavi ve prognoz özelliklerini işler.",
+    "Dersin amacı ve beyin tümörlerinin sınıflaması.",
+    "Santral sinir sistemi tümörlerini diğer tümörlerden ayıran özellikler.",
+    "Klinik bulgular ve kafa içi basınç artışı.",
+    "Progresif fokal defisit: lob bulguları.",
+    "Gliomlar ve astrositomlar.",
+    "Astrositomda derecelendirme ve görüntüleme.",
+    "Glioblastom.",
+    "Astrositomlarda tedavi ve prognoz.",
+    "Oligodendrogliom.",
+    "Epandimom.",
+    "Medulloblastom.",
+    "Kraniofarenjiom.",
+    "Hemanjioblastom.",
+    "Dermoid ve epidermoid tümörler.",
+    "Primer beyin lenfoması ve germ hücreli tümörler.",
+    "Menenjiomlar: tanım ve risk etkenleri.",
+    "Menenjiomlar: köken, derece ve tedavi.",
+    "Vestibüler nörilemmom ve schwannom.",
+    "Metastatik beyin tümörleri.",
+    "Metastazda tedavi ve prognoz.",
+    "Hipofiz tümörleri.",
+    "Görüntü örnekleri.",
+    "Toparlama."
+   ],
+   "v": "0fdb25d52b"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Giriş, öğrenme hedefleri ve SSS tümörlerinin sınıflaması",
+     "metin": "Ders Dr. Aydın Sinan Apaydın'ın 'Beyin Tümörleri' sunumudur; hedefler sınıflama, klinik bulgular, yaş farkları, benign-malign davranış, prognoz, tanı ve tedavidir (s2).",
+     "s": [
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "baslik": "Klinik bulgular: genel, supratentoryal, infratentoryal, lob bulguları",
+     "metin": "En sık bulgu progresif nörolojik defisittir, sıklıkla motor güçsüzlük; ardından baş ağrısı ve nöbet gelir (s6).",
+     "s": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "baslik": "Gliomlar ve astrositomlar: sınıflama, derecelendirme, görüntüleme",
+     "metin": "Nöroşirürjide en sık gliomlar: astrositom, glioblastom, epandimom, oligodendrogliom, PNET, pineal tümörler, mikst gliomlar, koroid pleksus papillomları (s11).",
+     "s": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+     ]
+    },
+    {
+     "baslik": "Glioblastom, astrositom tedavisi ve prognozu",
+     "metin": "GBM tüm gliomların %50'si, primer beyin tümörlerinin en az %30'u, en sık beyin tümörü ve en malign astrositomdur (s17).",
+     "s": [
+      17,
+      18,
+      19,
+      20,
+      21
+     ]
+    },
+    {
+     "baslik": "Oligodendrogliom",
+     "metin": "Primer beyin tümörlerinin %4'ü, ortalama yaş 40, sıklıkla nöbetle başlar, BT'de %90 kalsifiye, çoğunlukla frontal; 1p19q LOH prognozu iyileştirir, KT ve RT duyarlılığını artırır (s22).",
+     "s": [
+      22,
+      23
+     ]
+    },
+    {
+     "baslik": "Epandimom",
+     "metin": "Ventrikül epandim yüzeyinden ya da epandim kalıntılarından gelişir; intrakraniyal gliomların %5-6'sı, %69'u çocukta; erişkin spinal kord gliomlarının %96'sı (s24).",
+     "s": [
+      24,
+      25
+     ]
+    },
+    {
+     "baslik": "Medulloblastom",
+     "metin": "Çocuklarda en sık malign beyin tümörü; 4. ventrikül tavanında inferior medüller velumdaki Obersteiner tabakasından köken alır, en sık vermiste; BOS ile yayılır (seeding) (s26).",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Kraniofarenjiom",
+     "metin": "Adamantinomatöz tip Rathke cebi artıklarından, keratin nodülü, kist, kalsifikasyon ve kolesterol kristali içerir; skuamöz-papiller tip adenohipofiz/infundibulumda metaplaziden gelir (s27).",
+     "s": [
+      27,
+      28,
+      29,
+      30
+     ]
+    },
+    {
+     "baslik": "Hemanjioblastom",
+     "metin": "Posterior fossada anormal damarlı mural nodül; VHL sendromunda retina anjiomu, böbrek-karaciğer-pankreas kistleri, renal karsinom, feokromositoma eşlik edebilir (s31).",
+     "s": [
+      31,
+      32
+     ]
+    },
+    {
+     "baslik": "Dermoid ve epidermoid tümörler",
+     "metin": "Dermoid: konjenital, dermal sinüs traktı, tekrarlayan menenjit, hidrosefali (s33).",
+     "s": [
+      33,
+      34
+     ]
+    },
+    {
+     "baslik": "Primer beyin lenfoması ve germ hücreli tümörler",
+     "metin": "Lenfoma: intrakraniyal tümörlerin %1'i, immün yetmezlik/AIDS'te sık, 60 yaş üstü, multipl kitle, sıklıkla B hücreli, kötü prognoz (s35).",
+     "s": [
+      35,
+      36
+     ]
+    },
+    {
+     "baslik": "Menenjiomlar",
+     "metin": "Yavaş büyüyen, ekstraaksiyel, genellikle benign, araknoidden kaynaklı; tam çıkarılırsa şifa; falks, konveksite, sfenoid; sıklıkla kalsifiye; primer intrakraniyal tümörlerin %32'si (s37).",
+     "s": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+     ]
+    },
+    {
+     "baslik": "Vestibüler nörilemmom (schwannom)",
+     "metin": "Pontoserebellar köşede, vestibüler sinirin Schwann hücrelerinden; işitme kaybı, tinnitus, periferik fasiyal güçsüzlük, trigeminal nevralji, vertigo (s46).",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Metastatik beyin tümörleri",
+     "metin": "Tüm metastazların %80'i karsinom; akciğer %44, meme %10; klinikte en yaygın beyin tümörü; bazen ilk bulgu (s47).",
+     "s": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+     ]
+    },
+    {
+     "baslik": "Hipofiz tümörleri",
+     "metin": "1 cm'den küçük mikroadenom, büyük makroadenom; intrakraniyal tümörlerin %10'u; baş ağrısı, görme sorunu, rinore, endokrin bozukluklar (s55).",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Görüntü örnekleri",
+     "metin": "Etiketsiz MR örnekleri: halka tarzında kontrast tutan kitleler (s56-58), posterior fossa kitleleri (s59-60), sellar-suprasellar kitle (s61), ödemli frontal lezyon (s62), dura tabanlı ekstraaksiyel kitleler (s63-64), pontoserebellar köşe kitleleri (s65-67), çok sayıda halka tarzı lezyon (s68).",
+     "s": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Giriş, öğrenme hedefleri ve SSS tümörlerinin sınıflaması: Ders Dr. Aydın Sinan Apaydın'ın 'Beyin Tümörleri' sunumudur; hedefler sınıflama, klinik bulgular, yaş farkları, benign-malign davranış, prognoz, tanı ve tedavidir (s2).",
+    "Klinik bulgular: genel, supratentoryal, infratentoryal, lob bulguları: En sık bulgu progresif nörolojik defisittir, sıklıkla motor güçsüzlük; ardından baş ağrısı ve nöbet gelir (s6).",
+    "Gliomlar ve astrositomlar: sınıflama, derecelendirme, görüntüleme: Nöroşirürjide en sık gliomlar: astrositom, glioblastom, epandimom, oligodendrogliom, PNET, pineal tümörler, mikst gliomlar, koroid pleksus papillomları (s11).",
+    "Glioblastom, astrositom tedavisi ve prognozu: GBM tüm gliomların %50'si, primer beyin tümörlerinin en az %30'u, en sık beyin tümörü ve en malign astrositomdur (s17).",
+    "Oligodendrogliom: Primer beyin tümörlerinin %4'ü, ortalama yaş 40, sıklıkla nöbetle başlar, BT'de %90 kalsifiye, çoğunlukla frontal; 1p19q LOH prognozu iyileştirir, KT ve RT duyarlılığını artırır (s22).",
+    "Epandimom: Ventrikül epandim yüzeyinden ya da epandim kalıntılarından gelişir; intrakraniyal gliomların %5-6'sı, %69'u çocukta; erişkin spinal kord gliomlarının %96'sı (s24).",
+    "Medulloblastom: Çocuklarda en sık malign beyin tümörü; 4. ventrikül tavanında inferior medüller velumdaki Obersteiner tabakasından köken alır, en sık vermiste; BOS ile yayılır (seeding) (s26).",
+    "Kraniofarenjiom: Adamantinomatöz tip Rathke cebi artıklarından, keratin nodülü, kist, kalsifikasyon ve kolesterol kristali içerir; skuamöz-papiller tip adenohipofiz/infundibulumda metaplaziden gelir (s27).",
+    "Hemanjioblastom: Posterior fossada anormal damarlı mural nodül; VHL sendromunda retina anjiomu, böbrek-karaciğer-pankreas kistleri, renal karsinom, feokromositoma eşlik edebilir (s31).",
+    "Dermoid ve epidermoid tümörler: Dermoid: konjenital, dermal sinüs traktı, tekrarlayan menenjit, hidrosefali (s33).",
+    "Primer beyin lenfoması ve germ hücreli tümörler: Lenfoma: intrakraniyal tümörlerin %1'i, immün yetmezlik/AIDS'te sık, 60 yaş üstü, multipl kitle, sıklıkla B hücreli, kötü prognoz (s35).",
+    "Menenjiomlar: Yavaş büyüyen, ekstraaksiyel, genellikle benign, araknoidden kaynaklı; tam çıkarılırsa şifa; falks, konveksite, sfenoid; sıklıkla kalsifiye; primer intrakraniyal tümörlerin %32'si (s37).",
+    "Vestibüler nörilemmom (schwannom): Pontoserebellar köşede, vestibüler sinirin Schwann hücrelerinden; işitme kaybı, tinnitus, periferik fasiyal güçsüzlük, trigeminal nevralji, vertigo (s46).",
+    "Metastatik beyin tümörleri: Tüm metastazların %80'i karsinom; akciğer %44, meme %10; klinikte en yaygın beyin tümörü; bazen ilk bulgu (s47).",
+    "Hipofiz tümörleri: 1 cm'den küçük mikroadenom, büyük makroadenom; intrakraniyal tümörlerin %10'u; baş ağrısı, görme sorunu, rinore, endokrin bozukluklar (s55).",
+    "Görüntü örnekleri: Etiketsiz MR örnekleri: halka tarzında kontrast tutan kitleler (s56-58), posterior fossa kitleleri (s59-60), sellar-suprasellar kitle (s61), ödemli frontal lezyon (s62), dura tabanlı ekstraaksiyel kitleler (s63-64), pontoserebellar köşe kitleleri (s65-67), çok sayıda halka tarzı lezyon (s68)."
+   ],
+   "v": "ff89db1d5f"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Geçen yıl iki soru doğrudan bu dersten soruldu: Verocay cisimciği görülen tümörün schwannom olduğu ve kafa içi basınç artışının ilk bulgusunun baş ağrısı ve kusma olduğu. Vestibüler schwannom bulguları 2020-21’de iki kez, kafa içi basınç üçlüsü 2023-24’te soruldu. Soruların çoğu en sık, ilk bulgu, tipik görüntü ve köken türünden tek cümlelik bilgilerdir.",
+   "maddeler": [
+    {
+     "baslik": "Kafa içi basınç artışının bulguları",
+     "metin": "Kafa içi basınç artışında baş ağrısı, bulantı-kusma ve papilödem öne çıkar; infratentoryal tümörlerde bu üçlü ilk sırada yer alır.",
+     "neden": "Geçen yıl sınavda soruldu: kafa içi basınç artışının ilk bulgusu baş ağrısı ve kusmadır; baş ağrısı, bulantı-kusma ve papilödem üçlüsü 2023-24'te de soruldu.",
+     "s": [
+      7,
+      8
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Vestibüler schwannom",
+     "metin": "Vestibüler nörilemmom pontoserebellar köşede, vestibüler sinirin Schwann hücrelerinden gelişir; işitme kaybı, tinnitus ve periferik fasiyal güçsüzlük yapar.",
+     "neden": "Geçen yıl sınavda soruldu: Verocay cisimciği görülen beyin tümörü schwannomdur; klinik bulguları 2020-21'de iki ayrı soruda soruldu.",
+     "s": [
+      46
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Beyin tümörlerinde en sık bulgu",
+     "metin": "Beyin tümörlerinde en sık klinik bulgu progresif nörolojik defisittir; bu kayıp sıklıkla motor güçsüzlük biçimindedir.",
+     "neden": "Sayfada 'en sık' diye işaretlidir; Sinan hocanın 'en sık bulgu' kalıbına birebir uyar.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Metastatik beyin tümörleri",
+     "metin": "Metastaz klinik olarak en yaygın beyin tümörüdür; metastazların %80’i karsinomdur ve en sık kaynak akciğerdir.",
+     "neden": "'En yaygın' ve 'en sık kaynak' kalıbı; primer ile metastatik kitleyi ayırmak bu dersin temel hedefidir.",
+     "s": [
+      47
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Medulloblastom",
+     "metin": "Medulloblastom çocuklarda en sık görülen malign beyin tümörüdür; en sık vermiste yerleşir ve BOS yoluyla yayılır.",
+     "neden": "'Çocukta en sık malign' kalıbı; aynı bilgi 2024-25'te patoloji sınavında da soruldu.",
+     "s": [
+      26
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Astrositom",
+     "metin": "Astrositom en sık görülen intraaksiyel primer beyin tümörüdür; astrositlerden kaynaklanır ve 40-60 yaşları arasında en sıktır.",
+     "neden": "'En sık intraaksiyel primer tümör' kalıbı; intraaksiyel ve ekstraaksiyel ayrımı soru kökünde sık kullanılır.",
+     "s": [
+      12
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Glioblastom",
+     "metin": "Glioblastom en malign astrositomdur; tüm gliomların %50’sini ve primer beyin tümörlerinin en az %30’unu oluşturur.",
+     "neden": "'En malign' kalıbı; en kötü prognozlu glial tümör 2023-24'te patoloji sınavında da soruldu.",
+     "s": [
+      17
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Doumas-Douport derecelendirmesi",
+     "metin": "Astrositomlar Doumas-Douport ölçütleriyle derecelendirilir: atipi, mitoz, vasküler endotel proliferasyonu ve nekroz; nekroz varsa GBM’dir.",
+     "neden": "Derecelendirme ölçütü kalıbı; aynı ölçütler 2025-26 patoloji sınavında da soruldu.",
+     "s": [
+      15
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Geçen yıl iki soru doğrudan bu dersten soruldu: Verocay cisimciği görülen tümörün schwannom olduğu ve kafa içi basınç artışının ilk bulgusunun baş ağrısı ve kusma olduğu. Vestibüler schwannom bulguları 2020-21’de iki kez, kafa içi basınç üçlüsü 2023-24’te soruldu. Soruların çoğu en sık, ilk bulgu, tipik görüntü ve köken türünden tek cümlelik bilgilerdir.",
+    "Kafa içi basınç artışının bulguları: Kafa içi basınç artışında baş ağrısı, bulantı-kusma ve papilödem öne çıkar; infratentoryal tümörlerde bu üçlü ilk sırada yer alır.",
+    "Vestibüler schwannom: Vestibüler nörilemmom pontoserebellar köşede, vestibüler sinirin Schwann hücrelerinden gelişir; işitme kaybı, tinnitus ve periferik fasiyal güçsüzlük yapar.",
+    "Beyin tümörlerinde en sık bulgu: Beyin tümörlerinde en sık klinik bulgu progresif nörolojik defisittir; bu kayıp sıklıkla motor güçsüzlük biçimindedir.",
+    "Metastatik beyin tümörleri: Metastaz klinik olarak en yaygın beyin tümörüdür; metastazların %80’i karsinomdur ve en sık kaynak akciğerdir.",
+    "Medulloblastom: Medulloblastom çocuklarda en sık görülen malign beyin tümörüdür; en sık vermiste yerleşir ve BOS yoluyla yayılır.",
+    "Astrositom: Astrositom en sık görülen intraaksiyel primer beyin tümörüdür; astrositlerden kaynaklanır ve 40-60 yaşları arasında en sıktır.",
+    "Glioblastom: Glioblastom en malign astrositomdur; tüm gliomların %50’sini ve primer beyin tümörlerinin en az %30’unu oluşturur.",
+    "Doumas-Douport derecelendirmesi: Astrositomlar Doumas-Douport ölçütleriyle derecelendirilir: atipi, mitoz, vasküler endotel proliferasyonu ve nekroz; nekroz varsa GBM’dir."
+   ],
+   "v": "8b78054212"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 4 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Histopatolojik incelemede Verocay cisimcikleri görülen intrakraniyal tümör aşağıdakilerden hangisidir?",
+     "cevap": "Schwannom (akustik nörinom)",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Kafa içi basınç artışı sendromunun (KİBAS) klasik ana bulguları aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "cevap": "Baş ağrısı, bulantı-kusma, papil ödem",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Vestibüler nörilemmomalarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?",
+     "cevap": "Periferik fasiyal parezi",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Vestibüler schwannomlarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?",
+     "cevap": "Tek taraflı sensörinöral işitme kaybı, tinnitus ve dengesizlik",
+     "s": [
+      46
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 4 çıkmış soru var.",
+    "2025-2026: Histopatolojik incelemede Verocay cisimcikleri görülen intrakraniyal tümör aşağıdakilerden hangisidir?",
+    "Cevap: Schwannom (akustik nörinom).",
+    "2023-2024: Kafa içi basınç artışı sendromunun (KİBAS) klasik ana bulguları aşağıdakilerin hangisinde birlikte verilmiştir?",
+    "Cevap: Baş ağrısı, bulantı-kusma, papil ödem.",
+    "2020-2021: Vestibüler nörilemmomalarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?",
+    "Cevap: Periferik fasiyal parezi.",
+    "2020-2021: Vestibüler schwannomlarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?",
+    "Cevap: Tek taraflı sensörinöral işitme kaybı, tinnitus ve dengesizlik."
+   ],
+   "v": "cce14957a7"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%50) ve mekanizma (%25) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Mekanizma",
+     "metin": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%75) ve anlama ve ilişki kurma (%25) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle yer değiştirilmiş eşleştirme ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%50) ve mekanizma (%25) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Mekanizma: Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%75) ve anlama ve ilişki kurma (%25) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle yer değiştirilmiş eşleştirme ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta."
+   ],
+   "v": "ffc2f9965e"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Kafa içi basınç artışının bulguları",
+     "metin": "Geçen yıl sınavda soruldu: kafa içi basınç artışının ilk bulgusu baş ağrısı ve kusmadır; baş ağrısı, bulantı-kusma ve papilödem üçlüsü 2023-24'te de soruldu."
+    },
+    {
+     "baslik": "Vestibüler schwannom",
+     "metin": "Geçen yıl sınavda soruldu: Verocay cisimciği görülen beyin tümörü schwannomdur; klinik bulguları 2020-21'de iki ayrı soruda soruldu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Kafa içi basınç artışının bulguları: Geçen yıl sınavda soruldu: kafa içi basınç artışının ilk bulgusu baş ağrısı ve kusmadır; baş ağrısı, bulantı-kusma ve papilödem üçlüsü 2023-24'te de soruldu.",
+    "Vestibüler schwannom: Geçen yıl sınavda soruldu: Verocay cisimciği görülen beyin tümörü schwannomdur; klinik bulguları 2020-21'de iki ayrı soruda soruldu.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "4a343814e1"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders beyin tümörlerinin sınıflamasını, genel ve yerleşime göre klinik bulgularını anlatır. Astrositom, glioblastom, oligodendrogliom, epandimom, medulloblastom, kraniofarenjiom, hemanjioblastom, dermoid ve epidermoid, lenfoma, germ hücreli tümörler, menenjiom, vestibüler schwannom, metastaz ve hipofiz adenomunun köken, görüntü, tedavi ve prognoz özelliklerini işler.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders beyin tümörlerinin sınıflamasını, genel ve yerleşime göre klinik bulgularını anlatır. Astrositom, glioblastom, oligodendrogliom, epandimom, medulloblastom, kraniofarenjiom, hemanjioblastom, dermoid ve epidermoid, lenfoma, germ hücreli tümörler, menenjiom, vestibüler schwannom, metastaz ve hipofiz adenomunun köken, görüntü, tedavi ve prognoz özelliklerini işler."
+   ],
+   "v": "0c94ce23a7"
+  },
+  {
+   "id": "2b03-03",
+   "baslik": "Beyin tümörlerinde en sık bulgu",
+   "giris": "Beyin tümörlerinde en sık klinik bulgu progresif nörolojik defisittir; bu kayıp sıklıkla motor güçsüzlük biçimindedir.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Beyin tümörlerinde en sık klinik bulgu ilerleyici yani progresif nörolojik defisittir."
+    },
+    {
+     "metin": "Bu kayıp sıklıkla motor güçsüzlük olarak ortaya çıkar."
+    },
+    {
+     "metin": "Baş ağrısı ve nöbet de beyin tümörlerinin genel bulguları arasındadır."
+    },
+    {
+     "metin": "Baş ağrısı sık görülse de listede en sık olarak işaretlenen bulgu progresif nörolojik defisittir; çeldirici olarak baş ağrısı ya da nöbet verilir."
+    }
+   ],
+   "klip": "o-2b03-03",
+   "ses": [
+    "Beyin tümörlerinde en sık bulgu.",
+    "Beyin tümörlerinde en sık klinik bulgu progresif nörolojik defisittir; bu kayıp sıklıkla motor güçsüzlük biçimindedir.",
+    "Beyin tümörlerinde en sık klinik bulgu ilerleyici yani progresif nörolojik defisittir.",
+    "Bu kayıp sıklıkla motor güçsüzlük olarak ortaya çıkar.",
+    "Baş ağrısı ve nöbet de beyin tümörlerinin genel bulguları arasındadır.",
+    "Baş ağrısı sık görülse de listede en sık olarak işaretlenen bulgu progresif nörolojik defisittir; çeldirici olarak baş ağrısı ya da nöbet verilir."
+   ],
+   "v": "e64c5f832c"
+  },
+  {
+   "id": "2b03-01",
+   "baslik": "Kafa içi basınç artışının bulguları",
+   "giris": "Kafa içi basınç artışında baş ağrısı, bulantı-kusma ve papilödem öne çıkar; infratentoryal tümörlerde bu üçlü ilk sırada yer alır.",
+   "s": [
+    7,
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Kafa içi basınç artışının ilk bulgusu baş ağrısı ve kusmadır."
+    },
+    {
+     "metin": "Baş ağrısı, bulantı-kusma ve papilödem kafa içi basınç artışının temel bulgularıdır; infratentoryal tümör bulgularının ilk üçünü oluşturur."
+    },
+    {
+     "metin": "Yürüme bozukluğu ya da ataksi, vertigo, diplopi, dismetri, tremor ve nistagmus serebellum ve beyin sapı tutulumunu gösterir."
+    },
+    {
+     "metin": "Basınç artışı kitle etkisine, ödeme ya da hidrosefaliye bağlı gelişir."
+    },
+    {
+     "metin": "Abuli, kişilik değişikliği ve afazi gibi bulgular frontal lob tutulumunu gösterir; infratentoryal listede yer almaz."
+    }
+   ],
+   "klip": "o-2b03-01",
+   "ses": [
+    "Kafa içi basınç artışının bulguları.",
+    "Kafa içi basınç artışında baş ağrısı, bulantı-kusma ve papilödem öne çıkar; infratentoryal tümörlerde bu üçlü ilk sırada yer alır.",
+    "Kafa içi basınç artışının ilk bulgusu baş ağrısı ve kusmadır.",
+    "Baş ağrısı, bulantı-kusma ve papilödem kafa içi basınç artışının temel bulgularıdır; infratentoryal tümör bulgularının ilk üçünü oluşturur.",
+    "Yürüme bozukluğu ya da ataksi, vertigo, diplopi, dismetri, tremor ve nistagmus serebellum ve beyin sapı tutulumunu gösterir.",
+    "Basınç artışı kitle etkisine, ödeme ya da hidrosefaliye bağlı gelişir.",
+    "Abuli, kişilik değişikliği ve afazi gibi bulgular frontal lob tutulumunu gösterir; infratentoryal listede yer almaz."
+   ],
+   "v": "6f7d788005"
+  },
+  {
+   "id": "2b03-06",
+   "baslik": "Astrositom",
+   "giris": "Astrositom en sık görülen intraaksiyel primer beyin tümörüdür; astrositlerden kaynaklanır ve 40-60 yaşları arasında en sıktır.",
+   "s": [
+    12
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "En sık görülen intraaksiyel yani beyin dokusu içinden gelişen primer beyin tümörüdür."
+    },
+    {
+     "metin": "Astrositlerden kaynaklanır."
+    },
+    {
+     "metin": "Erkeklerde kadınlardan iki kat sıktır; en sık 40-60 yaş arasında görülür."
+    },
+    {
+     "metin": "Sıklıkla frontal, temporal, parietal ve talamik bölgelerde bulunur."
+    },
+    {
+     "metin": "Kabaca düşük dereceli astrositomlar ve anaplastik astrositomlar olmak üzere ikiye ayrılır."
+    },
+    {
+     "metin": "Menenjiom ise beyin dokusu dışından, araknoidden gelişen ekstraaksiyel tümördür."
+    }
+   ],
+   "klip": "o-2b03-06",
+   "ses": [
+    "Astrositom.",
+    "Astrositom en sık görülen intraaksiyel primer beyin tümörüdür; astrositlerden kaynaklanır ve 40-60 yaşları arasında en sıktır.",
+    "En sık görülen intraaksiyel yani beyin dokusu içinden gelişen primer beyin tümörüdür.",
+    "Astrositlerden kaynaklanır.",
+    "Erkeklerde kadınlardan iki kat sıktır; en sık 40-60 yaş arasında görülür.",
+    "Sıklıkla frontal, temporal, parietal ve talamik bölgelerde bulunur.",
+    "Kabaca düşük dereceli astrositomlar ve anaplastik astrositomlar olmak üzere ikiye ayrılır.",
+    "Menenjiom ise beyin dokusu dışından, araknoidden gelişen ekstraaksiyel tümördür."
+   ],
+   "v": "c9fb6b1036"
+  },
+  {
+   "id": "2b03-08",
+   "baslik": "Doumas-Douport derecelendirmesi",
+   "giris": "Astrositomlar Doumas-Douport ölçütleriyle derecelendirilir: atipi, mitoz, vasküler endotel proliferasyonu ve nekroz; nekroz varsa GBM’dir.",
+   "s": [
+    15
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Atipik hücre yani polimorfizm, mitoz yani hiperselülarite, vasküler endotel proliferasyonu ve nekroz."
+    },
+    {
+     "metin": "Ölçütlerin hiçbiri yoktur."
+    },
+    {
+     "metin": "Bir ölçüt vardır."
+    },
+    {
+     "metin": "İki ölçüt vardır."
+    },
+    {
+     "metin": "Üç ölçüt vardır."
+    },
+    {
+     "metin": "Nekroz varsa tümör glioblastomdur."
+    },
+    {
+     "metin": "Kalsifikasyon ya da nöron proliferasyonu bu sistemin ölçütleri listesinde yer almaz."
+    }
+   ],
+   "klip": "o-2b03-08",
+   "ses": [
+    "Doumas-Douport derecelendirmesi.",
+    "Astrositomlar Doumas-Douport ölçütleriyle derecelendirilir: atipi, mitoz, vasküler endotel proliferasyonu ve nekroz; nekroz varsa GBM’dir.",
+    "Atipik hücre yani polimorfizm, mitoz yani hiperselülarite, vasküler endotel proliferasyonu ve nekroz.",
+    "Ölçütlerin hiçbiri yoktur.",
+    "Bir ölçüt vardır.",
+    "İki ölçüt vardır.",
+    "Üç ölçüt vardır.",
+    "Nekroz varsa tümör glioblastomdur.",
+    "Kalsifikasyon ya da nöron proliferasyonu bu sistemin ölçütleri listesinde yer almaz."
+   ],
+   "v": "41a8afcf3a"
+  },
+  {
+   "id": "2b03-10",
+   "baslik": "Astrositomun görüntüleme özellikleri",
+   "giris": "Yüksek dereceli astrositom kontrastlı BT ve T1 MR’da belirgin ödemli, heterojen, kenarı kontrast tutan ve ortası tutmayan lezyondur.",
+   "s": [
+    16
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Kontrastlı BT ve T1 ağırlıklı MR'da çevresinde belirgin ödemle birlikte heterojen görünür; kenarı kontrast tutar, ortası tutmaz."
+    },
+    {
+     "metin": "Hipodenstir, kontrast tutmaz; ödem ve kitle etkisi belirgin değildir."
+    },
+    {
+     "metin": "T1 ağırlıklı görüntüde hipointens, T2 ağırlıklı görüntüde hiperintenstir."
+    },
+    {
+     "metin": "Kenarda kontrast tutulumu ve ödem yüksek dereceyi, kontrast tutmayan hipodens lezyon düşük dereceyi düşündürür."
+    }
+   ],
+   "klip": "o-2b03-10",
+   "ses": [
+    "Astrositomun görüntüleme özellikleri.",
+    "Yüksek dereceli astrositom kontrastlı BT ve T1 MR’da belirgin ödemli, heterojen, kenarı kontrast tutan ve ortası tutmayan lezyondur.",
+    "Kontrastlı BT ve T1 ağırlıklı MR'da çevresinde belirgin ödemle birlikte heterojen görünür; kenarı kontrast tutar, ortası tutmaz.",
+    "Hipodenstir, kontrast tutmaz; ödem ve kitle etkisi belirgin değildir.",
+    "T1 ağırlıklı görüntüde hipointens, T2 ağırlıklı görüntüde hiperintenstir.",
+    "Kenarda kontrast tutulumu ve ödem yüksek dereceyi, kontrast tutmayan hipodens lezyon düşük dereceyi düşündürür."
+   ],
+   "v": "42ac352f06"
+  },
+  {
+   "id": "2b03-07",
+   "baslik": "Glioblastom",
+   "giris": "Glioblastom en malign astrositomdur; tüm gliomların %50’sini ve primer beyin tümörlerinin en az %30’unu oluşturur.",
+   "s": [
+    17
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Glioblastom en malign astrositomdur ve nöroşirürjinin en cesaret kırıcı tanılarından biridir."
+    },
+    {
+     "metin": "Serilerin çoğunda tüm gliomların %50'sini, tüm primer beyin tümörlerinin en az %30'unu oluşturur."
+    },
+    {
+     "metin": "Bu oranlarla primer beyin tümörleri içinde en sık karşılaşılanıdır; metastazlar da sayıldığında klinikte en yaygın beyin tümörü metastazdır (s. 47)."
+    },
+    {
+     "metin": "Diffüz astrositomların grade IV üyesidir; Doumas-Douport sisteminde nekroz varlığı GBM tanısı demektir."
+    },
+    {
+     "metin": "Cerrahi ve radyoterapiyle ortalama yaşam süresi 9 aydır."
+    }
+   ],
+   "klip": "o-2b03-07",
+   "ses": [
+    "Glioblastom.",
+    "Glioblastom en malign astrositomdur; tüm gliomların %50’sini ve primer beyin tümörlerinin en az %30’unu oluşturur.",
+    "Glioblastom en malign astrositomdur ve nöroşirürjinin en cesaret kırıcı tanılarından biridir.",
+    "Serilerin çoğunda tüm gliomların %50'sini, tüm primer beyin tümörlerinin en az %30'unu oluşturur.",
+    "Bu oranlarla primer beyin tümörleri içinde en sık karşılaşılanıdır; metastazlar da sayıldığında klinikte en yaygın beyin tümörü metastazdır (s. 47).",
+    "Diffüz astrositomların grade IV üyesidir; Doumas-Douport sisteminde nekroz varlığı GBM tanısı demektir.",
+    "Cerrahi ve radyoterapiyle ortalama yaşam süresi 9 aydır."
+   ],
+   "v": "4345cdc26d"
+  },
+  {
+   "id": "2b03-05",
+   "baslik": "Medulloblastom",
+   "giris": "Medulloblastom çocuklarda en sık görülen malign beyin tümörüdür; en sık vermiste yerleşir ve BOS yoluyla yayılır.",
+   "s": [
+    26
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Çocuklarda en sık görülen malign beyin tümörüdür."
+    },
+    {
+     "metin": "Hem glial hem nöral hücrelerin öncüsü olduğu düşünülen medulloblastlardan köken aldığı düşünülerek adlandırılmıştır."
+    },
+    {
+     "metin": "Dördüncü ventrikül tavanında, inferior medüller velumdaki Obersteiner tabakasının multipotent hücrelerinden gelişir."
+    },
+    {
+     "metin": "En sık vermiste yerleşir."
+    },
+    {
+     "metin": "BOS dolaşımına katılarak spinal ve diğer beyin bölgelerine yayılır; buna ekim yani seeding denir."
+    }
+   ],
+   "klip": "o-2b03-05",
+   "ses": [
+    "Medulloblastom.",
+    "Medulloblastom çocuklarda en sık görülen malign beyin tümörüdür; en sık vermiste yerleşir ve BOS yoluyla yayılır.",
+    "Çocuklarda en sık görülen malign beyin tümörüdür.",
+    "Hem glial hem nöral hücrelerin öncüsü olduğu düşünülen medulloblastlardan köken aldığı düşünülerek adlandırılmıştır.",
+    "Dördüncü ventrikül tavanında, inferior medüller velumdaki Obersteiner tabakasının multipotent hücrelerinden gelişir.",
+    "En sık vermiste yerleşir.",
+    "BOS dolaşımına katılarak spinal ve diğer beyin bölgelerine yayılır; buna ekim yani seeding denir."
+   ],
+   "v": "92750d80d8"
+  },
+  {
+   "id": "2b03-09",
+   "baslik": "Menenjiom",
+   "giris": "Menenjiom araknoidden kaynaklanan, yavaş büyüyen, ekstraaksiyel ve genellikle benign tümördür; primer intrakraniyal tümörlerin %32’sidir.",
+   "s": [
+    37
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yavaş büyüyen, ekstraaksiyel, genellikle benign, araknoidden kaynaklanan tümördür."
+    },
+    {
+     "metin": "Tam olarak çıkarılırsa şifa sağlanır."
+    },
+    {
+     "metin": "Çoğunlukla falks, konveksite ve sfenoid boyunca yerleşir."
+    },
+    {
+     "metin": "Sıklıkla kalsifiyedir."
+    },
+    {
+     "metin": "Primer intrakraniyal tümörlerin %32'si menenjiomdur ve bunların %39'u asemptomatiktir."
+    },
+    {
+     "metin": "Astrositom ise beyin dokusu içinden gelişen intraaksiyel tümördür."
+    }
+   ],
+   "klip": "o-2b03-09",
+   "ses": [
+    "Menenjiom.",
+    "Menenjiom araknoidden kaynaklanan, yavaş büyüyen, ekstraaksiyel ve genellikle benign tümördür; primer intrakraniyal tümörlerin %32’sidir.",
+    "Yavaş büyüyen, ekstraaksiyel, genellikle benign, araknoidden kaynaklanan tümördür.",
+    "Tam olarak çıkarılırsa şifa sağlanır.",
+    "Çoğunlukla falks, konveksite ve sfenoid boyunca yerleşir.",
+    "Sıklıkla kalsifiyedir.",
+    "Primer intrakraniyal tümörlerin %32'si menenjiomdur ve bunların %39'u asemptomatiktir.",
+    "Astrositom ise beyin dokusu içinden gelişen intraaksiyel tümördür."
+   ],
+   "v": "06a2d178b7"
+  },
+  {
+   "id": "2b03-02",
+   "baslik": "Vestibüler schwannom",
+   "giris": "Vestibüler nörilemmom pontoserebellar köşede, vestibüler sinirin Schwann hücrelerinden gelişir; işitme kaybı, tinnitus ve periferik fasiyal güçsüzlük yapar.",
+   "s": [
+    46
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Histolojide Verocay cisimciği görülen beyin tümörü schwannomdur."
+    },
+    {
+     "metin": "Genellikle pontoserebellar köşede yerleşir; köşe kitlesi olarak karşımıza çıkar."
+    },
+    {
+     "metin": "Köken aldığı sinirin adıyla anılır; 5. ve 8. kraniyal sinirler."
+    },
+    {
+     "metin": "Vestibüler sinirin Schwann hücrelerinden gelişir."
+    },
+    {
+     "metin": "İşitme kaybı, kulak çınlaması yani tinnitus, periferik tipte fasiyal güçsüzlük yani periferik fasiyal pleji, yüz yarısında ağrı yani trigeminal nevralji ve dengesizlik yani vertigo."
+    },
+    {
+     "metin": "Abuli, mental değişiklik, koku alamama ve karşı tarafta hemiparezi supratentoryal ya da frontal lob bulgularıdır, köşe kitlesinde beklenmez."
+    }
+   ],
+   "klip": "o-2b03-02",
+   "ses": [
+    "Vestibüler schwannom.",
+    "Vestibüler nörilemmom pontoserebellar köşede, vestibüler sinirin Schwann hücrelerinden gelişir; işitme kaybı, tinnitus ve periferik fasiyal güçsüzlük yapar.",
+    "Histolojide Verocay cisimciği görülen beyin tümörü schwannomdur.",
+    "Genellikle pontoserebellar köşede yerleşir; köşe kitlesi olarak karşımıza çıkar.",
+    "Köken aldığı sinirin adıyla anılır; 5. ve 8. kraniyal sinirler.",
+    "Vestibüler sinirin Schwann hücrelerinden gelişir.",
+    "İşitme kaybı, kulak çınlaması yani tinnitus, periferik tipte fasiyal güçsüzlük yani periferik fasiyal pleji, yüz yarısında ağrı yani trigeminal nevralji ve dengesizlik yani vertigo.",
+    "Abuli, mental değişiklik, koku alamama ve karşı tarafta hemiparezi supratentoryal ya da frontal lob bulgularıdır, köşe kitlesinde beklenmez."
+   ],
+   "v": "2037ee51e1"
+  },
+  {
+   "id": "2b03-04",
+   "baslik": "Metastatik beyin tümörleri",
+   "giris": "Metastaz klinik olarak en yaygın beyin tümörüdür; metastazların %80’i karsinomdur ve en sık kaynak akciğerdir.",
+   "s": [
+    47
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Metastaz klinik olarak görülen en yaygın beyin tümörüdür; hastanede yatan intrakraniyal tümörlü hastaların yarısını oluşturur."
+    },
+    {
+     "metin": "Tüm metastazların %80'i karsinom metastazıdır."
+    },
+    {
+     "metin": "Akciğer %44 ile ilk sıradadır, meme %10 ile ikincidir; deri yani melanom, böbrek ve gastrointestinal sistem de kaynak olabilir."
+    },
+    {
+     "metin": "Beyin metastazı bazen kanserin ilk bulgusudur."
+    },
+    {
+     "metin": "Meme kaynaklı metastaz akciğerden daha az görülür; sıralama sorusunda akciğer ilk sıradadır."
+    }
+   ],
+   "klip": "o-2b03-04",
+   "ses": [
+    "Metastatik beyin tümörleri.",
+    "Metastaz klinik olarak en yaygın beyin tümörüdür; metastazların %80’i karsinomdur ve en sık kaynak akciğerdir.",
+    "Metastaz klinik olarak görülen en yaygın beyin tümörüdür; hastanede yatan intrakraniyal tümörlü hastaların yarısını oluşturur.",
+    "Tüm metastazların %80'i karsinom metastazıdır.",
+    "Akciğer %44 ile ilk sıradadır, meme %10 ile ikincidir; deri yani melanom, böbrek ve gastrointestinal sistem de kaynak olabilir.",
+    "Beyin metastazı bazen kanserin ilk bulgusudur.",
+    "Meme kaynaklı metastaz akciğerden daha az görülür; sıralama sorusunda akciğer ilk sıradadır."
+   ],
+   "v": "5c7f321d95"
+  }
+ ]
+}

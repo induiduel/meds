@@ -1,0 +1,1806 @@
+{
+ "surum": 1,
+ "key": "k2-12",
+ "kod": "2b01",
+ "kurul": 2,
+ "brans": "Beyin Cerrahisi",
+ "konu": "Kafa ve Omurilik Yaralanmaları",
+ "ogretim_uyesi": "Doç. Dr. Aydın Sinan Apaydın",
+ "profil": "Beyin ve Sinir Cerrahisi",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2b01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders kafa travmasında görüntülemeyi, epidural ve subdural hematomu, subaraknoid kanamayı, kontüzyonu, diffüz aksonal zedelenmeyi ve herniasyonları; ardından omurga anatomisini, servikal ve torakolomber kırıkları, stabiliteyi ve tedavi kararını anlatır.",
+   "maddeler": [
+    {
+     "metin": "Kafa travmasının önemi ve görüntüleme"
+    },
+    {
+     "metin": "Primer ve sekonder hasar"
+    },
+    {
+     "metin": "Epidural hematom"
+    },
+    {
+     "metin": "Subdural hematom"
+    },
+    {
+     "metin": "Subaraknoid kanama, higroma ve kontüzyon"
+    },
+    {
+     "metin": "Penetran yaralanmalar"
+    },
+    {
+     "metin": "Diffüz aksonal zedelenme ve subkortikal zedelenme"
+    },
+    {
+     "metin": "Herniasyonlar"
+    },
+    {
+     "metin": "Omurga anatomisi ve omurga travmasının sıklığı"
+    },
+    {
+     "metin": "Servikal omurga travmaları"
+    },
+    {
+     "metin": "Torakolomber kırıklar ve Denis sınıflaması"
+    },
+    {
+     "metin": "Tedavi kararı"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders kafa travmasında görüntülemeyi, epidural ve subdural hematomu, subaraknoid kanamayı, kontüzyonu, diffüz aksonal zedelenmeyi ve herniasyonları; ardından omurga anatomisini, servikal ve torakolomber kırıkları, stabiliteyi ve tedavi kararını anlatır.",
+    "Kafa travmasının önemi ve görüntüleme.",
+    "Primer ve sekonder hasar.",
+    "Epidural hematom.",
+    "Subdural hematom.",
+    "Subaraknoid kanama, higroma ve kontüzyon.",
+    "Penetran yaralanmalar.",
+    "Diffüz aksonal zedelenme ve subkortikal zedelenme.",
+    "Herniasyonlar.",
+    "Omurga anatomisi ve omurga travmasının sıklığı.",
+    "Servikal omurga travmaları.",
+    "Torakolomber kırıklar ve Denis sınıflaması.",
+    "Tedavi kararı."
+   ],
+   "v": "1280ad33e6"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Kafa travması epidemiyolojisi",
+     "metin": "Kafa travması epidemiyolojisi: 30 yaş altı ölüm/nörolojik hasarın en önemli nedeni; motorlu araç, düşme, ateşli silah; erkekte 2-3 kat",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Radyolojik görüntülemenin önemi",
+     "metin": "Radyolojik görüntülemenin önemi: hasarın hızlı saptanması, prognoz, tedavi planı",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Direk grafiler",
+     "metin": "Direk grafiler: yeterliliği sınırlı, intrakranial hasar derecesini göstermez",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Direk grafi görüntüsü",
+     "metin": "Direk grafi görüntüsü: lateral kafa grafisinde kırık hatları",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Direk grafi",
+     "metin": "Direk grafi: okla gösterilen kalvaryum kırığı (çökme)",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "BT",
+     "metin": "BT: kısa süre, kolay ulaşılabilir, akut hemoraji ve kırıkları saptar",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "BT'de akut kanama hiperdens; ağır anemi (Hb<8) ve DIC'de hip",
+     "metin": "BT'de akut kanama hiperdens; ağır anemi (Hb<8) ve DIC'de hiperdens olmayabilir",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Kafa travmasında BT endikasyonları listesi",
+     "metin": "Kafa travmasında BT endikasyonları listesi",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "BT'ye yaklaşım",
+     "metin": "BT'ye yaklaşım: kırık, şift, SAK, subdural, kemik penceresi, intra/ekstraaksiyal",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "MRG'nin üstün olduğu durumlar",
+     "metin": "MRG'nin üstün olduğu durumlar: DAH, vasküler zedelenme, kontüzyon, izodens SDH, SAK",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Primer hasar tanımı",
+     "metin": "Primer hasar tanımı",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Primer hasar sınıflaması",
+     "metin": "Primer hasar sınıflaması",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Sekonder hasar tanımı",
+     "metin": "Sekonder hasar tanımı",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Bölüm başlığı",
+     "metin": "Bölüm başlığı: Ekstraaksiyal hemorajiler",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Epidural hematom tanımı + şema (iç tabula-dura arası)",
+     "metin": "Epidural hematom tanımı + şema (iç tabula-dura arası)",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Ameliyat görüntüsü",
+     "metin": "Ameliyat görüntüsü: dura üstünde pıhtı",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "EDH nedeni",
+     "metin": "EDH nedeni: temporal kemik kırığı %90; %90 arteriyel (a. meningea media), %10 venöz",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Çocukta kırıksız EDH",
+     "metin": "Çocukta kırıksız EDH",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "EDH tipik BT",
+     "metin": "EDH tipik BT: hiperdens bikonveks/lentiform; lokalizasyon; sütür geçmez; herniasyon",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Venöz EDH (%10)",
+     "metin": "Venöz EDH (%10): sinüs yırtığı, çocuk, posterior fossa",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "EDH BT örnekleri (temporal)",
+     "metin": "EDH BT örnekleri (temporal)",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Swirl işareti aktif kanama; kronikte dansite düşer, konkavla",
+     "metin": "Swirl işareti aktif kanama; kronikte dansite düşer, konkavlaşır",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "EDH'nin falks yapışma yerini geçebilmesi SDH'dan ayırır",
+     "metin": "EDH'nin falks yapışma yerini geçebilmesi SDH'dan ayırır",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Sinüs kırığına bağlı hava (%20), pnömosefali, şift",
+     "metin": "Sinüs kırığına bağlı hava (%20), pnömosefali, şift",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Sağ frontal ve verteks EDH görüntüsü",
+     "metin": "Sağ frontal ve verteks EDH görüntüsü",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "EDH MRG sinyal özellikleri",
+     "metin": "EDH MRG sinyal özellikleri",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "T2'de hipointens dura çizgisi EDH'yi SDH'dan ayırır",
+     "metin": "T2'de hipointens dura çizgisi EDH'yi SDH'dan ayırır",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "SSS kaynaklı venöz EDH MR ve MR venografi",
+     "metin": "SSS kaynaklı venöz EDH MR ve MR venografi",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Subdural hematom tanımı + şema",
+     "metin": "Subdural hematom tanımı + şema",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "SDH",
+     "metin": "SDH: köprü venlerinin yırtılması, venöz",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "EDH-SDH karşılaştırma şeması (orta meningeal arter / köprü v",
+     "metin": "EDH-SDH karşılaştırma şeması (orta meningeal arter / köprü ven)",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Yaşlıda minör travmayla SDH, atrofi nedeniyle geç fark edili",
+     "metin": "Yaşlıda minör travmayla SDH, atrofi nedeniyle geç fark edilir",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "SDH BT",
+     "metin": "SDH BT: konkav, konveks-elipsoid olabilir, sütür geçebilir",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Kronik SDH'de seviyelenme",
+     "metin": "Kronik SDH'de seviyelenme",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "İzodens SDH, bilateralde simetrik, şift yok",
+     "metin": "İzodens SDH, bilateralde simetrik, şift yok",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Gerekirse MRG; T1'de subakut SDH en parlak",
+     "metin": "Gerekirse MRG; T1'de subakut SDH en parlak",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "T1'de bilateral subakut SDH",
+     "metin": "T1'de bilateral subakut SDH",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Bebekte farklı evrelerde SDH",
+     "metin": "Bebekte farklı evrelerde SDH: çocuk istismarı",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "T1'de değişik evrelerde SDH",
+     "metin": "T1'de değişik evrelerde SDH",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "SAK tanımı; %50-70 anevrizma rüptürü; diğer nedenler",
+     "metin": "SAK tanımı; %50-70 anevrizma rüptürü; diğer nedenler",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "SAK BT bulgusu, FLAIR ideal",
+     "metin": "SAK BT bulgusu, FLAIR ideal",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Travmatik SAK BT ve FLAIR örneği",
+     "metin": "Travmatik SAK BT ve FLAIR örneği",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "FLAIR; SAK hidrosefaliye yol açabilir",
+     "metin": "FLAIR; SAK hidrosefaliye yol açabilir",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Subdural higroma",
+     "metin": "Subdural higroma: BOS dansitesinde, araknoid yırtığı, SDH çözülmesi sonrası",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "T2'de bilateral subdural higroma",
+     "metin": "T2'de bilateral subdural higroma",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Hemorajik kontüzyon",
+     "metin": "Hemorajik kontüzyon: inferior anterior frontal ve temporal lob",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Kontüzyon birkaç gün sonra daha kolay saptanır",
+     "metin": "Kontüzyon birkaç gün sonra daha kolay saptanır",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Posttravmatik intraventriküler hematom kötü prognoz",
+     "metin": "Posttravmatik intraventriküler hematom kötü prognoz",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Kup-kontrkup şeması",
+     "metin": "Kup-kontrkup şeması",
+     "s": [
+      50
+     ]
+    },
+    {
+     "baslik": "Kup skalp, kontrkup kontüzyon BT",
+     "metin": "Kup skalp, kontrkup kontüzyon BT",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "Penetran yaralanma tanımı",
+     "metin": "Penetran yaralanma tanımı",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Penetran yaralanma BT bulguları",
+     "metin": "Penetran yaralanma BT bulguları",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Transorbital penetran yabancı cisim skenogram",
+     "metin": "Transorbital penetran yabancı cisim skenogram",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Aksiyal kesitte yabancı cisim seyri",
+     "metin": "Aksiyal kesitte yabancı cisim seyri",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "3B rekonstrüksiyon",
+     "metin": "3B rekonstrüksiyon",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Diffüz aksonal zedelenme",
+     "metin": "Diffüz aksonal zedelenme: koma ve kötü prognozda en önemli patoloji; rotasyon/akselerasyon",
+     "s": [
+      57
+     ]
+    },
+    {
+     "baslik": "DAZ en sık yerleri; korpus kallozumda en sık splenium; beyin",
+     "metin": "DAZ en sık yerleri; korpus kallozumda en sık splenium; beyin sapı kötü prognoz",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "DAZ BT",
+     "metin": "DAZ BT: gri/beyaz cevher bileşkesinde peteşiler",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "DAZ forniks/splenium BT ve DWI",
+     "metin": "DAZ forniks/splenium BT ve DWI",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "DAZ'da BT duyarsız, lezyonlar çoğu nonhemorajik, T2 ve SWI e",
+     "metin": "DAZ'da BT duyarsız, lezyonlar çoğu nonhemorajik, T2 ve SWI en hassas",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "Subkortikal zedelenme yerleri",
+     "metin": "Subkortikal zedelenme yerleri",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "Subkortikal zedelenme MR örnekleri",
+     "metin": "Subkortikal zedelenme MR örnekleri",
+     "s": [
+      63
+     ]
+    },
+    {
+     "baslik": "Travmatik serebral ödem DWI/ADC",
+     "metin": "Travmatik serebral ödem DWI/ADC",
+     "s": [
+      64
+     ]
+    },
+    {
+     "baslik": "Herniasyon tanımı",
+     "metin": "Herniasyon tanımı: KİBAS ile kompartman değişimi",
+     "s": [
+      65
+     ]
+    },
+    {
+     "baslik": "Herniasyon tipleri şeması",
+     "metin": "Herniasyon tipleri şeması",
+     "s": [
+      66
+     ]
+    },
+    {
+     "baslik": "Subfalsin herniasyon en sık",
+     "metin": "Subfalsin herniasyon en sık: singulat girus falks altından",
+     "s": [
+      67
+     ]
+    },
+    {
+     "baslik": "Subfalsin herniasyon BT",
+     "metin": "Subfalsin herniasyon BT",
+     "s": [
+      68
+     ]
+    },
+    {
+     "baslik": "Subfalsin",
+     "metin": "Subfalsin: Monro tıkanması, ACA enfarktı",
+     "s": [
+      69
+     ]
+    },
+    {
+     "baslik": "Subfalsin herniasyon BT örnekleri",
+     "metin": "Subfalsin herniasyon BT örnekleri",
+     "s": [
+      70
+     ]
+    },
+    {
+     "baslik": "Transtentoryal (unkal) ikinci en sık; medial temporal lob su",
+     "metin": "Transtentoryal (unkal) ikinci en sık; medial temporal lob suprasellar sisterne",
+     "s": [
+      71
+     ]
+    },
+    {
+     "baslik": "Transtentoryal herniasyon BT",
+     "metin": "Transtentoryal herniasyon BT",
+     "s": [
+      72
+     ]
+    },
+    {
+     "baslik": "Transtentoryal",
+     "metin": "Transtentoryal: PCA enfarktı, Duret kanaması, III. sinir (pupil dilatasyonu), pedinkül basısı",
+     "s": [
+      73
+     ]
+    },
+    {
+     "baslik": "Asendan transtentoryal herniasyon",
+     "metin": "Asendan transtentoryal herniasyon",
+     "s": [
+      74
+     ]
+    },
+    {
+     "baslik": "Tonsiller herniasyon >5 mm",
+     "metin": "Tonsiller herniasyon >5 mm",
+     "s": [
+      75
+     ]
+    },
+    {
+     "baslik": "Kapanış",
+     "metin": "Kapanış",
+     "s": [
+      76
+     ]
+    },
+    {
+     "baslik": "Kapak: Omurilik Yaralanmaları",
+     "metin": "Kapak: Omurilik Yaralanmaları",
+     "s": [
+      77
+     ]
+    },
+    {
+     "baslik": "Omurga anatomisi",
+     "metin": "Omurga anatomisi",
+     "s": [
+      78
+     ]
+    },
+    {
+     "baslik": "Omurga eğrilikleri şeması",
+     "metin": "Omurga eğrilikleri şeması",
+     "s": [
+      79
+     ]
+    },
+    {
+     "baslik": "Servikal vertebralar C1-C7 şeması",
+     "metin": "Servikal vertebralar C1-C7 şeması",
+     "s": [
+      80
+     ]
+    },
+    {
+     "baslik": "Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks",
+     "metin": "Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks",
+     "s": [
+      81
+     ]
+    },
+    {
+     "baslik": "Bölgelere göre vertebra yapısı",
+     "metin": "Bölgelere göre vertebra yapısı",
+     "s": [
+      82
+     ]
+    },
+    {
+     "baslik": "Lomber vertebra kompresyon çizimi",
+     "metin": "Lomber vertebra kompresyon çizimi",
+     "s": [
+      83
+     ]
+    },
+    {
+     "baslik": "Etiyoloji tablosu",
+     "metin": "Etiyoloji tablosu: trafik %50, düşme %20-25, spor %15-20, diğer %14-15",
+     "s": [
+      84
+     ]
+    },
+    {
+     "baslik": "Kırık sıklığı",
+     "metin": "Kırık sıklığı: C1 %10, C2 %33, C6-C7 %50, T4 %10, T12-L2 %60-70",
+     "s": [
+      85
+     ]
+    },
+    {
+     "baslik": "Bölgelere göre kırık sıklığı grafiği",
+     "metin": "Bölgelere göre kırık sıklığı grafiği",
+     "s": [
+      86
+     ]
+    },
+    {
+     "baslik": "Kırık tipleri (mekanizma çizimleri)",
+     "metin": "Kırık tipleri (mekanizma çizimleri)",
+     "s": [
+      87
+     ]
+    },
+    {
+     "baslik": "Stabilite/instabilite tanımı",
+     "metin": "Stabilite/instabilite tanımı",
+     "s": [
+      88
+     ]
+    },
+    {
+     "baslik": "Servikal",
+     "metin": "Servikal: üst C0-C2, alt C3-C7",
+     "s": [
+      89
+     ]
+    },
+    {
+     "baslik": "Atlas-aksis anatomisi",
+     "metin": "Atlas-aksis anatomisi",
+     "s": [
+      90
+     ]
+    },
+    {
+     "baslik": "Üst servikal travma üç grubu",
+     "metin": "Üst servikal travma üç grubu",
+     "s": [
+      91
+     ]
+    },
+    {
+     "baslik": "Oksipital kondil & KSB tip A/B/C",
+     "metin": "Oksipital kondil & KSB tip A/B/C",
+     "s": [
+      92
+     ]
+    },
+    {
+     "baslik": "C1 halka ve C1-C2 tip A/B/C",
+     "metin": "C1 halka ve C1-C2 tip A/B/C",
+     "s": [
+      93
+     ]
+    },
+    {
+     "baslik": "C2 halka ve C2-C3 tip A/B/C",
+     "metin": "C2 halka ve C2-C3 tip A/B/C",
+     "s": [
+      94
+     ]
+    },
+    {
+     "baslik": "Jefferson kırığı",
+     "metin": "Jefferson kırığı: transvers ligaman, 7 mm",
+     "s": [
+      95
+     ]
+    },
+    {
+     "baslik": "Odontoid kırığı tip I-II-III-IIIA",
+     "metin": "Odontoid kırığı tip I-II-III-IIIA",
+     "s": [
+      96
+     ]
+    },
+    {
+     "baslik": "Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid",
+     "metin": "Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid vida",
+     "s": [
+      97
+     ]
+    },
+    {
+     "baslik": "Transodontoid vida grafisi",
+     "metin": "Transodontoid vida grafisi",
+     "s": [
+      98
+     ]
+    },
+    {
+     "baslik": "Hangman kırığı",
+     "metin": "Hangman kırığı: C2 pars interartikülaris",
+     "s": [
+      99
+     ]
+    },
+    {
+     "baslik": "Hangman tip I-II-III",
+     "metin": "Hangman tip I-II-III",
+     "s": [
+      100
+     ]
+    },
+    {
+     "baslik": "Hangman tip 1 görüntü",
+     "metin": "Hangman tip 1 görüntü",
+     "s": [
+      101
+     ]
+    },
+    {
+     "baslik": "Hangman tip 2 instabil",
+     "metin": "Hangman tip 2 instabil",
+     "s": [
+      102
+     ]
+    },
+    {
+     "baslik": "Hangman tip 3 instabil",
+     "metin": "Hangman tip 3 instabil",
+     "s": [
+      103
+     ]
+    },
+    {
+     "baslik": "Alt servikal travmalar",
+     "metin": "Alt servikal travmalar: fleksiyon, ekstansiyon, burst",
+     "s": [
+      104
+     ]
+    },
+    {
+     "baslik": "Hiperfleksiyon C5-6 dislokasyon",
+     "metin": "Hiperfleksiyon C5-6 dislokasyon",
+     "s": [
+      105
+     ]
+    },
+    {
+     "baslik": "Hiperekstansiyon C2 teardrop",
+     "metin": "Hiperekstansiyon C2 teardrop",
+     "s": [
+      106
+     ]
+    },
+    {
+     "baslik": "C4 burst kırığı",
+     "metin": "C4 burst kırığı",
+     "s": [
+      107
+     ]
+    },
+    {
+     "baslik": "C4 burst postoperatif",
+     "metin": "C4 burst postoperatif",
+     "s": [
+      108
+     ]
+    },
+    {
+     "baslik": "C6-7 dislokasyon miyelomalazi",
+     "metin": "C6-7 dislokasyon miyelomalazi",
+     "s": [
+      109
+     ]
+    },
+    {
+     "baslik": "C5-6 travmatik disk hernisi",
+     "metin": "C5-6 travmatik disk hernisi",
+     "s": [
+      110
+     ]
+    },
+    {
+     "baslik": "Torakolomber bileşke T11-L1 Denis sınıflaması",
+     "metin": "Torakolomber bileşke T11-L1 Denis sınıflaması",
+     "s": [
+      111
+     ]
+    },
+    {
+     "baslik": "Denis üç kolon teorisi",
+     "metin": "Denis üç kolon teorisi",
+     "s": [
+      112
+     ]
+    },
+    {
+     "baslik": "Spinal stabilite",
+     "metin": "Spinal stabilite: stabil/instabil kolon tutulumu",
+     "s": [
+      113
+     ]
+    },
+    {
+     "baslik": "Olgu",
+     "metin": "Olgu: 30 yaş erkek düşme, kama kompresyon",
+     "s": [
+      114
+     ]
+    },
+    {
+     "baslik": "Torakal kama kompresyon ve dislokasyon, kord ödemi",
+     "metin": "Torakal kama kompresyon ve dislokasyon, kord ödemi",
+     "s": [
+      115
+     ]
+    },
+    {
+     "baslik": "L1 burst kırığı",
+     "metin": "L1 burst kırığı",
+     "s": [
+      116
+     ]
+    },
+    {
+     "baslik": "T12-L1 fleksiyon distraksiyon dislokasyonu",
+     "metin": "T12-L1 fleksiyon distraksiyon dislokasyonu",
+     "s": [
+      117
+     ]
+    },
+    {
+     "baslik": "Cerrahi kararda önemli etkenler",
+     "metin": "Cerrahi kararda önemli etkenler",
+     "s": [
+      118
+     ]
+    },
+    {
+     "baslik": "Konservatif tedavi",
+     "metin": "Konservatif tedavi: stabil, kanal basısı yok; kama <%50 takip",
+     "s": [
+      119
+     ]
+    },
+    {
+     "baslik": "Cerrahi tedavi endikasyonları ve amacı",
+     "metin": "Cerrahi tedavi endikasyonları ve amacı",
+     "s": [
+      120
+     ]
+    },
+    {
+     "baslik": "Burst kırığı çizim + BT",
+     "metin": "Burst kırığı çizim + BT",
+     "s": [
+      121
+     ]
+    },
+    {
+     "baslik": "Kompresyon kırığı",
+     "metin": "Kompresyon kırığı",
+     "s": [
+      122
+     ]
+    },
+    {
+     "baslik": "Lomber kırık ameliyat öncesi/sonrası",
+     "metin": "Lomber kırık ameliyat öncesi/sonrası",
+     "s": [
+      123
+     ]
+    },
+    {
+     "baslik": "Torakal kırık ameliyat",
+     "metin": "Torakal kırık ameliyat",
+     "s": [
+      124
+     ]
+    },
+    {
+     "baslik": "L2 burst kırığı",
+     "metin": "L2 burst kırığı",
+     "s": [
+      125
+     ]
+    },
+    {
+     "baslik": "T12-L1 dekompresyon + posterior stabilizasyon",
+     "metin": "T12-L1 dekompresyon + posterior stabilizasyon",
+     "s": [
+      126
+     ]
+    },
+    {
+     "baslik": "Tip 2 odontoid kırığı BT",
+     "metin": "Tip 2 odontoid kırığı BT",
+     "s": [
+      127
+     ]
+    },
+    {
+     "baslik": "Torakolomber kırık postop",
+     "metin": "Torakolomber kırık postop",
+     "s": [
+      128
+     ]
+    },
+    {
+     "baslik": "Spinal yaralanma çizimi",
+     "metin": "Spinal yaralanma çizimi",
+     "s": [
+      129
+     ]
+    },
+    {
+     "baslik": "Ağız açık grafi (odontoid)",
+     "metin": "Ağız açık grafi (odontoid)",
+     "s": [
+      130
+     ]
+    },
+    {
+     "baslik": "Lomber kırık BT/3B",
+     "metin": "Lomber kırık BT/3B",
+     "s": [
+      131
+     ]
+    },
+    {
+     "baslik": "Servikal BT sagittal",
+     "metin": "Servikal BT sagittal",
+     "s": [
+      132
+     ]
+    },
+    {
+     "baslik": "Servikal yan grafi",
+     "metin": "Servikal yan grafi",
+     "s": [
+      133
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Kafa travması epidemiyolojisi: Kafa travması epidemiyolojisi: 30 yaş altı ölüm/nörolojik hasarın en önemli nedeni; motorlu araç, düşme, ateşli silah; erkekte 2-3 kat.",
+    "Radyolojik görüntülemenin önemi: Radyolojik görüntülemenin önemi: hasarın hızlı saptanması, prognoz, tedavi planı.",
+    "Direk grafiler: Direk grafiler: yeterliliği sınırlı, intrakranial hasar derecesini göstermez.",
+    "Direk grafi görüntüsü: Direk grafi görüntüsü: lateral kafa grafisinde kırık hatları.",
+    "Direk grafi: Direk grafi: okla gösterilen kalvaryum kırığı (çökme).",
+    "BT: BT: kısa süre, kolay ulaşılabilir, akut hemoraji ve kırıkları saptar.",
+    "BT'de akut kanama hiperdens; ağır anemi (Hb<8) ve DIC'de hip: BT'de akut kanama hiperdens; ağır anemi (Hb<8) ve DIC'de hiperdens olmayabilir.",
+    "Kafa travmasında BT endikasyonları listesi: Kafa travmasında BT endikasyonları listesi.",
+    "BT'ye yaklaşım: BT'ye yaklaşım: kırık, şift, SAK, subdural, kemik penceresi, intra/ekstraaksiyal.",
+    "MRG'nin üstün olduğu durumlar: MRG'nin üstün olduğu durumlar: DAH, vasküler zedelenme, kontüzyon, izodens SDH, SAK.",
+    "Primer hasar tanımı: Primer hasar tanımı.",
+    "Primer hasar sınıflaması: Primer hasar sınıflaması.",
+    "Sekonder hasar tanımı: Sekonder hasar tanımı.",
+    "Bölüm başlığı: Bölüm başlığı: Ekstraaksiyal hemorajiler.",
+    "Epidural hematom tanımı + şema (iç tabula-dura arası): Epidural hematom tanımı + şema (iç tabula-dura arası).",
+    "Ameliyat görüntüsü: Ameliyat görüntüsü: dura üstünde pıhtı.",
+    "EDH nedeni: EDH nedeni: temporal kemik kırığı %90; %90 arteriyel (a. meningea media), %10 venöz.",
+    "Çocukta kırıksız EDH: Çocukta kırıksız EDH.",
+    "EDH tipik BT: EDH tipik BT: hiperdens bikonveks/lentiform; lokalizasyon; sütür geçmez; herniasyon.",
+    "Venöz EDH (%10): Venöz EDH (%10): sinüs yırtığı, çocuk, posterior fossa.",
+    "EDH BT örnekleri (temporal): EDH BT örnekleri (temporal).",
+    "Swirl işareti aktif kanama; kronikte dansite düşer, konkavla: Swirl işareti aktif kanama; kronikte dansite düşer, konkavlaşır.",
+    "EDH'nin falks yapışma yerini geçebilmesi SDH'dan ayırır: EDH'nin falks yapışma yerini geçebilmesi SDH'dan ayırır.",
+    "Sinüs kırığına bağlı hava (%20), pnömosefali, şift: Sinüs kırığına bağlı hava (%20), pnömosefali, şift.",
+    "Sağ frontal ve verteks EDH görüntüsü: Sağ frontal ve verteks EDH görüntüsü.",
+    "EDH MRG sinyal özellikleri: EDH MRG sinyal özellikleri.",
+    "T2'de hipointens dura çizgisi EDH'yi SDH'dan ayırır: T2'de hipointens dura çizgisi EDH'yi SDH'dan ayırır.",
+    "SSS kaynaklı venöz EDH MR ve MR venografi: SSS kaynaklı venöz EDH MR ve MR venografi.",
+    "Subdural hematom tanımı + şema: Subdural hematom tanımı + şema.",
+    "SDH: SDH: köprü venlerinin yırtılması, venöz.",
+    "EDH-SDH karşılaştırma şeması (orta meningeal arter / köprü v: EDH-SDH karşılaştırma şeması (orta meningeal arter / köprü ven).",
+    "Yaşlıda minör travmayla SDH, atrofi nedeniyle geç fark edili: Yaşlıda minör travmayla SDH, atrofi nedeniyle geç fark edilir.",
+    "SDH BT: SDH BT: konkav, konveks-elipsoid olabilir, sütür geçebilir.",
+    "Kronik SDH'de seviyelenme: Kronik SDH'de seviyelenme.",
+    "İzodens SDH, bilateralde simetrik, şift yok: İzodens SDH, bilateralde simetrik, şift yok.",
+    "Gerekirse MRG; T1'de subakut SDH en parlak: Gerekirse MRG; T1'de subakut SDH en parlak.",
+    "T1'de bilateral subakut SDH: T1'de bilateral subakut SDH.",
+    "Bebekte farklı evrelerde SDH: Bebekte farklı evrelerde SDH: çocuk istismarı.",
+    "T1'de değişik evrelerde SDH: T1'de değişik evrelerde SDH.",
+    "SAK tanımı; %50-70 anevrizma rüptürü; diğer nedenler: SAK tanımı; %50-70 anevrizma rüptürü; diğer nedenler.",
+    "SAK BT bulgusu, FLAIR ideal: SAK BT bulgusu, FLAIR ideal.",
+    "Travmatik SAK BT ve FLAIR örneği: Travmatik SAK BT ve FLAIR örneği.",
+    "FLAIR; SAK hidrosefaliye yol açabilir: FLAIR; SAK hidrosefaliye yol açabilir.",
+    "Subdural higroma: Subdural higroma: BOS dansitesinde, araknoid yırtığı, SDH çözülmesi sonrası.",
+    "T2'de bilateral subdural higroma: T2'de bilateral subdural higroma.",
+    "Hemorajik kontüzyon: Hemorajik kontüzyon: inferior anterior frontal ve temporal lob.",
+    "Kontüzyon birkaç gün sonra daha kolay saptanır: Kontüzyon birkaç gün sonra daha kolay saptanır.",
+    "Posttravmatik intraventriküler hematom kötü prognoz: Posttravmatik intraventriküler hematom kötü prognoz.",
+    "Kup-kontrkup şeması: Kup-kontrkup şeması.",
+    "Kup skalp, kontrkup kontüzyon BT: Kup skalp, kontrkup kontüzyon BT.",
+    "Penetran yaralanma tanımı: Penetran yaralanma tanımı.",
+    "Penetran yaralanma BT bulguları: Penetran yaralanma BT bulguları.",
+    "Transorbital penetran yabancı cisim skenogram: Transorbital penetran yabancı cisim skenogram.",
+    "Aksiyal kesitte yabancı cisim seyri: Aksiyal kesitte yabancı cisim seyri.",
+    "3B rekonstrüksiyon: 3B rekonstrüksiyon.",
+    "Diffüz aksonal zedelenme: Diffüz aksonal zedelenme: koma ve kötü prognozda en önemli patoloji; rotasyon/akselerasyon.",
+    "DAZ en sık yerleri; korpus kallozumda en sık splenium; beyin: DAZ en sık yerleri; korpus kallozumda en sık splenium; beyin sapı kötü prognoz.",
+    "DAZ BT: DAZ BT: gri/beyaz cevher bileşkesinde peteşiler.",
+    "DAZ forniks/splenium BT ve DWI: DAZ forniks/splenium BT ve DWI.",
+    "DAZ'da BT duyarsız, lezyonlar çoğu nonhemorajik, T2 ve SWI e: DAZ'da BT duyarsız, lezyonlar çoğu nonhemorajik, T2 ve SWI en hassas.",
+    "Subkortikal zedelenme yerleri: Subkortikal zedelenme yerleri.",
+    "Subkortikal zedelenme MR örnekleri: Subkortikal zedelenme MR örnekleri.",
+    "Travmatik serebral ödem DWI/ADC: Travmatik serebral ödem DWI/ADC.",
+    "Herniasyon tanımı: Herniasyon tanımı: KİBAS ile kompartman değişimi.",
+    "Herniasyon tipleri şeması: Herniasyon tipleri şeması.",
+    "Subfalsin herniasyon en sık: Subfalsin herniasyon en sık: singulat girus falks altından.",
+    "Subfalsin herniasyon BT: Subfalsin herniasyon BT.",
+    "Subfalsin: Subfalsin: Monro tıkanması, ACA enfarktı.",
+    "Subfalsin herniasyon BT örnekleri: Subfalsin herniasyon BT örnekleri.",
+    "Transtentoryal (unkal) ikinci en sık; medial temporal lob su: Transtentoryal (unkal) ikinci en sık; medial temporal lob suprasellar sisterne.",
+    "Transtentoryal herniasyon BT: Transtentoryal herniasyon BT.",
+    "Transtentoryal: Transtentoryal: PCA enfarktı, Duret kanaması, III. sinir (pupil dilatasyonu), pedinkül basısı.",
+    "Asendan transtentoryal herniasyon: Asendan transtentoryal herniasyon.",
+    "Tonsiller herniasyon >5 mm: Tonsiller herniasyon >5 mm.",
+    "Kapanış: Kapanış.",
+    "Kapak: Omurilik Yaralanmaları: Kapak: Omurilik Yaralanmaları.",
+    "Omurga anatomisi: Omurga anatomisi.",
+    "Omurga eğrilikleri şeması: Omurga eğrilikleri şeması.",
+    "Servikal vertebralar C1-C7 şeması: Servikal vertebralar C1-C7 şeması.",
+    "Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks: Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks.",
+    "Bölgelere göre vertebra yapısı: Bölgelere göre vertebra yapısı.",
+    "Lomber vertebra kompresyon çizimi: Lomber vertebra kompresyon çizimi.",
+    "Etiyoloji tablosu: Etiyoloji tablosu: trafik %50, düşme %20-25, spor %15-20, diğer %14-15.",
+    "Kırık sıklığı: Kırık sıklığı: C1 %10, C2 %33, C6-C7 %50, T4 %10, T12-L2 %60-70.",
+    "Bölgelere göre kırık sıklığı grafiği: Bölgelere göre kırık sıklığı grafiği.",
+    "Kırık tipleri (mekanizma çizimleri): Kırık tipleri (mekanizma çizimleri).",
+    "Stabilite/instabilite tanımı: Stabilite/instabilite tanımı.",
+    "Servikal: Servikal: üst C0-C2, alt C3-C7.",
+    "Atlas-aksis anatomisi: Atlas-aksis anatomisi.",
+    "Üst servikal travma üç grubu: Üst servikal travma üç grubu.",
+    "Oksipital kondil & KSB tip A/B/C: Oksipital kondil & KSB tip A/B/C.",
+    "C1 halka ve C1-C2 tip A/B/C: C1 halka ve C1-C2 tip A/B/C.",
+    "C2 halka ve C2-C3 tip A/B/C: C2 halka ve C2-C3 tip A/B/C.",
+    "Jefferson kırığı: Jefferson kırığı: transvers ligaman, 7 mm.",
+    "Odontoid kırığı tip I-II-III-IIIA: Odontoid kırığı tip I-II-III-IIIA.",
+    "Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid: Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid vida.",
+    "Transodontoid vida grafisi: Transodontoid vida grafisi.",
+    "Hangman kırığı: Hangman kırığı: C2 pars interartikülaris.",
+    "Hangman tip I-II-III: Hangman tip I-II-III.",
+    "Hangman tip 1 görüntü: Hangman tip 1 görüntü.",
+    "Hangman tip 2 instabil: Hangman tip 2 instabil.",
+    "Hangman tip 3 instabil: Hangman tip 3 instabil.",
+    "Alt servikal travmalar: Alt servikal travmalar: fleksiyon, ekstansiyon, burst.",
+    "Hiperfleksiyon C5-6 dislokasyon: Hiperfleksiyon C5-6 dislokasyon.",
+    "Hiperekstansiyon C2 teardrop: Hiperekstansiyon C2 teardrop.",
+    "C4 burst kırığı: C4 burst kırığı.",
+    "C4 burst postoperatif: C4 burst postoperatif.",
+    "C6-7 dislokasyon miyelomalazi: C6-7 dislokasyon miyelomalazi.",
+    "C5-6 travmatik disk hernisi: C5-6 travmatik disk hernisi.",
+    "Torakolomber bileşke T11-L1 Denis sınıflaması: Torakolomber bileşke T11-L1 Denis sınıflaması.",
+    "Denis üç kolon teorisi: Denis üç kolon teorisi.",
+    "Spinal stabilite: Spinal stabilite: stabil/instabil kolon tutulumu.",
+    "Olgu: Olgu: 30 yaş erkek düşme, kama kompresyon.",
+    "Torakal kama kompresyon ve dislokasyon, kord ödemi: Torakal kama kompresyon ve dislokasyon, kord ödemi.",
+    "L1 burst kırığı: L1 burst kırığı.",
+    "T12-L1 fleksiyon distraksiyon dislokasyonu: T12-L1 fleksiyon distraksiyon dislokasyonu.",
+    "Cerrahi kararda önemli etkenler: Cerrahi kararda önemli etkenler.",
+    "Konservatif tedavi: Konservatif tedavi: stabil, kanal basısı yok; kama <%50 takip.",
+    "Cerrahi tedavi endikasyonları ve amacı: Cerrahi tedavi endikasyonları ve amacı.",
+    "Burst kırığı çizim + BT: Burst kırığı çizim + BT.",
+    "Kompresyon kırığı: Kompresyon kırığı.",
+    "Lomber kırık ameliyat öncesi/sonrası: Lomber kırık ameliyat öncesi/sonrası.",
+    "Torakal kırık ameliyat: Torakal kırık ameliyat.",
+    "L2 burst kırığı: L2 burst kırığı.",
+    "T12-L1 dekompresyon + posterior stabilizasyon: T12-L1 dekompresyon + posterior stabilizasyon.",
+    "Tip 2 odontoid kırığı BT: Tip 2 odontoid kırığı BT.",
+    "Torakolomber kırık postop: Torakolomber kırık postop.",
+    "Spinal yaralanma çizimi: Spinal yaralanma çizimi.",
+    "Ağız açık grafi (odontoid): Ağız açık grafi (odontoid).",
+    "Lomber kırık BT/3B: Lomber kırık BT/3B.",
+    "Servikal BT sagittal: Servikal BT sagittal.",
+    "Servikal yan grafi: Servikal yan grafi."
+   ],
+   "v": "153f860812"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Geçen yıl sınavda subdural hematomda köprü venleri, travmada ilk görüntülemenin BT olması, kafa içi basınç artışında baş ağrısı ve kusma ile epidural hematomun bikonveks görünümü soruldu. Jefferson kırığı iki ayrı yılda, en sık herniasyonun subfalsin olduğu bir yılda soruldu; sorular \"en sık, ilk, tipik görüntü\" türündedir.",
+   "maddeler": [
+    {
+     "baslik": "Subdural hematomun kaynağı: köprü venleri",
+     "metin": "Subdural hematom subdural mesafedeki köprü venlerinin yırtılmasıyla gelişir ve venöz kaynaklıdır.",
+     "neden": "Geçen yıl (2025-2026) sınavda soruldu: subdural hematomda en çok köprü venleri hasarlanır.",
+     "s": [
+      30,
+      31
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Epidural hematom BT'de bikonvekstir",
+     "metin": "Epidural hematom BT'de akut fazda hiperdens, bikonveks/lentiform şekilli ekstraaksiyal koleksiyondur; subdural hematom ise konkavdır.",
+     "neden": "Geçen yıl (2025-2026) sınavda soruldu: epidural hematom, subdural hematomdan farklı olarak BT'de bikonveks görünür.",
+     "s": [
+      20,
+      34
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kafa travmasında ilk görüntüleme BT",
+     "metin": "BT kısa sürmesi, kolay ulaşılması ve akut kanama ile kırıkları göstermesi nedeniyle kafa travmasında avantajlıdır.",
+     "neden": "Geçen yıl (2025-2026) sınavda soruldu: travmalarda ilk görüntüleme yöntemi BT'dir.",
+     "s": [
+      4,
+      7
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Atlas kırığı: Jefferson kırığı",
+     "metin": "Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+     "neden": "2023-2024 ve 2024-2025 sınavlarında soruldu: C1 kırığı Jefferson kırığıdır.",
+     "s": [
+      95
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "En sık herniasyon: subfalsin",
+     "metin": "Subfalsin herniasyon en sık tiptir; singulat girus falks serebri altından karşı tarafa herniye olur.",
+     "neden": "2023-2024 sınavında soruldu: en sık intrakraniyal herniasyon subfalsin herniasyondur.",
+     "s": [
+      67,
+      69
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Epidural hematomun en sık nedeni",
+     "metin": "Epidural hematomun en sık nedeni temporal kemik kırıklarıdır (%90); arteriyel olanda arteria meningea media yırtılır.",
+     "neden": "\"En sık neden\" türünden tek cümlelik bilgi; aynı konu bankada çıkmış benzeri olarak yer alıyor.",
+     "s": [
+      18
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Kafa travmasında BT endikasyonları",
+     "metin": "Kafa travmasında iki ve üzeri kusma ile şiddetli baş ağrısı BT endikasyonudur.",
+     "neden": "Geçen yıl (2025-2026) kafa içi basınç artışının ilk bulgusu olarak baş ağrısı ve kusma soruldu; bu iki bulgu travmada BT endikasyonu listesindedir.",
+     "s": [
+      9
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Transtentoryal herniasyonun bulguları",
+     "metin": "Transtentoryal herniasyonda posterior serebral arter basısı ve enfarkt, Duret kanaması ve üçüncü kranial sinir basısına bağlı pupiller dilatasyon görülür.",
+     "neden": "Tipik bulgu ve damar–herniasyon eşleşmesi; tek cümlelik soru kalıbına uygun.",
+     "s": [
+      73
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Geçen yıl sınavda subdural hematomda köprü venleri, travmada ilk görüntülemenin BT olması, kafa içi basınç artışında baş ağrısı ve kusma ile epidural hematomun bikonveks görünümü soruldu. Jefferson kırığı iki ayrı yılda, en sık herniasyonun subfalsin olduğu bir yılda soruldu; sorular \"en sık, ilk, tipik görüntü\" türündedir.",
+    "Subdural hematomun kaynağı: köprü venleri: Subdural hematom subdural mesafedeki köprü venlerinin yırtılmasıyla gelişir ve venöz kaynaklıdır.",
+    "Epidural hematom BT'de bikonvekstir: Epidural hematom BT'de akut fazda hiperdens, bikonveks/lentiform şekilli ekstraaksiyal koleksiyondur; subdural hematom ise konkavdır.",
+    "Kafa travmasında ilk görüntüleme BT: BT kısa sürmesi, kolay ulaşılması ve akut kanama ile kırıkları göstermesi nedeniyle kafa travmasında avantajlıdır.",
+    "Atlas kırığı: Jefferson kırığı: Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+    "En sık herniasyon: subfalsin: Subfalsin herniasyon en sık tiptir; singulat girus falks serebri altından karşı tarafa herniye olur.",
+    "Epidural hematomun en sık nedeni: Epidural hematomun en sık nedeni temporal kemik kırıklarıdır (%90); arteriyel olanda arteria meningea media yırtılır.",
+    "Kafa travmasında BT endikasyonları: Kafa travmasında iki ve üzeri kusma ile şiddetli baş ağrısı BT endikasyonudur.",
+    "Transtentoryal herniasyonun bulguları: Transtentoryal herniasyonda posterior serebral arter basısı ve enfarkt, Duret kanaması ve üçüncü kranial sinir basısına bağlı pupiller dilatasyon görülür."
+   ],
+   "v": "4e40a94358"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 6 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Kraniyal travmalarda dural venöz sinüslere açılan köprü venlerinin yırtılması sonucu gelişen, dura mater ile araknoid mater arasında biriken ve kraniyal BT'de hilal (yarım ay) şeklinde izlenen kanama aşağıdakilerden hangisidir?",
+     "cevap": "Subdural hematom",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Kafa travması geçiren hastada ilk tercih edilen görüntüleme yöntemi aşağıdakilerden hangisidir?",
+     "cevap": "Kontrastsız beyin bilgisayarlı tomografisi (BT)",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Epidural hematom, subdural hematomdan farklı olarak BT'de hangi şekilde görülür?",
+     "cevap": "Bikonveks (lentiform) şekilli ekstraaksiyal koleksiyon",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "C1 vertebranın burst (patlama) tipi kırığı aşağıdakilerden hangisidir?",
+     "cevap": "Jefferson kırığı",
+     "s": [
+      95
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Aşağıdakilerden hangisi C1 (atlas) vertebrasının kırığıdır?",
+     "cevap": "Jefferson kırığı",
+     "s": [
+      95
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "En sık görülen intrakraniyal herniasyon hangisidir?",
+     "cevap": "Subfalsin (singulat) herniasyon",
+     "s": [
+      67
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 6 çıkmış soru var.",
+    "2025-2026: Kraniyal travmalarda dural venöz sinüslere açılan köprü venlerinin yırtılması sonucu gelişen, dura mater ile araknoid mater arasında biriken ve kraniyal BT'de hilal (yarım ay) şeklinde izlenen kanama aşağıdakilerden hangisidir?",
+    "Cevap: Subdural hematom.",
+    "2025-2026: Kafa travması geçiren hastada ilk tercih edilen görüntüleme yöntemi aşağıdakilerden hangisidir?",
+    "Cevap: Kontrastsız beyin bilgisayarlı tomografisi (BT).",
+    "2025-2026: Epidural hematom, subdural hematomdan farklı olarak BT'de hangi şekilde görülür?",
+    "Cevap: Bikonveks (lentiform) şekilli ekstraaksiyal koleksiyon.",
+    "2023-2024: C1 vertebranın burst (patlama) tipi kırığı aşağıdakilerden hangisidir?",
+    "Cevap: Jefferson kırığı.",
+    "2024-2025: Aşağıdakilerden hangisi C1 (atlas) vertebrasının kırığıdır?",
+    "Cevap: Jefferson kırığı.",
+    "2023-2024: En sık görülen intrakraniyal herniasyon hangisidir?",
+    "Cevap: Subfalsin (singulat) herniasyon."
+   ],
+   "v": "359bf467de"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%33) ve tanı ve ayırıcı tanı (%33) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%47) ve hatırlama (%40) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%33) ve tanı ve ayırıcı tanı (%33) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%47) ve hatırlama (%40) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "47be0b8a10"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Transkraniyal ultrasonografi",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?"
+    },
+    {
+     "baslik": "Travmatik subdural kanama tanisında ilk yapılacak gõrüntüleme, perfüzyon MR görüntulemesid",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Așağıdakilerden hangisi kafa travması sonucu oluşan patolojler ile ilgiliyanliş bir ifadedir?"
+    },
+    {
+     "baslik": "7",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: 18 yaşında erkek hasta motosiklet kazası ile getiriliyor. Kafa travması mevcut. Glasgow Koma Skoru (GKS) değerlendirmesinde ağrılı uyaran verildiğinde gözlerini açtığı, anlamsız sesler çıkardığı ve üs."
+    },
+    {
+     "baslik": "Subdural hematomun kaynağı: köprü venleri",
+     "metin": "Geçen yıl (2025-2026) sınavda soruldu: subdural hematomda en çok köprü venleri hasarlanır."
+    },
+    {
+     "baslik": "Epidural hematom BT'de bikonvekstir",
+     "metin": "Geçen yıl (2025-2026) sınavda soruldu: epidural hematom, subdural hematomdan farklı olarak BT'de bikonveks görünür."
+    },
+    {
+     "baslik": "Kafa travmasında ilk görüntüleme BT",
+     "metin": "Geçen yıl (2025-2026) sınavda soruldu: travmalarda ilk görüntüleme yöntemi BT'dir."
+    },
+    {
+     "baslik": "Atlas kırığı: Jefferson kırığı",
+     "metin": "2023-2024 ve 2024-2025 sınavlarında soruldu: C1 kırığı Jefferson kırığıdır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Transkraniyal ultrasonografi: Çıkmışlarda 2 kez soruldu. Örnek kök: Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?",
+    "Travmatik subdural kanama tanisında ilk yapılacak gõrüntüleme, perfüzyon MR görüntulemesid: Çıkmışlarda 2 kez soruldu. Örnek kök: Așağıdakilerden hangisi kafa travması sonucu oluşan patolojler ile ilgiliyanliş bir ifadedir?",
+    "7: Çıkmışlarda 2 kez soruldu. Örnek kök: 18 yaşında erkek hasta motosiklet kazası ile getiriliyor. Kafa travması mevcut. Glasgow Koma Skoru (GKS) değerlendirmesinde ağrılı uyaran verildiğinde gözlerini açtığı, anlamsız sesler çıkardığı ve üs.",
+    "Subdural hematomun kaynağı: köprü venleri: Geçen yıl (2025-2026) sınavda soruldu: subdural hematomda en çok köprü venleri hasarlanır.",
+    "Epidural hematom BT'de bikonvekstir: Geçen yıl (2025-2026) sınavda soruldu: epidural hematom, subdural hematomdan farklı olarak BT'de bikonveks görünür.",
+    "Kafa travmasında ilk görüntüleme BT: Geçen yıl (2025-2026) sınavda soruldu: travmalarda ilk görüntüleme yöntemi BT'dir.",
+    "Atlas kırığı: Jefferson kırığı: 2023-2024 ve 2024-2025 sınavlarında soruldu: C1 kırığı Jefferson kırığıdır.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "f8cf4e8818"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders kafa travmasında görüntülemeyi, epidural ve subdural hematomu, subaraknoid kanamayı, kontüzyonu, diffüz aksonal zedelenmeyi ve herniasyonları; ardından omurga anatomisini, servikal ve torakolomber kırıkları, stabiliteyi ve tedavi kararını anlatır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders kafa travmasında görüntülemeyi, epidural ve subdural hematomu, subaraknoid kanamayı, kontüzyonu, diffüz aksonal zedelenmeyi ve herniasyonları; ardından omurga anatomisini, servikal ve torakolomber kırıkları, stabiliteyi ve tedavi kararını anlatır."
+   ],
+   "v": "39dcdfec99"
+  },
+  {
+   "id": "2b01-03",
+   "baslik": "Kafa travmasında ilk görüntüleme BT",
+   "giris": "BT kısa sürmesi, kolay ulaşılması ve akut kanama ile kırıkları göstermesi nedeniyle kafa travmasında avantajlıdır.",
+   "s": [
+    4,
+    7
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Tetkik süresi kısa, kolay ulaşılabilir; akut hemoraji ve kırıkları saptar."
+    },
+    {
+     "metin": "Kafa travmalı olgularda yeterliliği sınırlıdır; intrakraniyal hasarın derecesini göstermez."
+    },
+    {
+     "metin": "Diffüz aksonal hasar, diffüz vasküler zedelenme, kortikal kontüzyon, BT'de izodens ya da kronik subdural hemorajiler ve subaraknoid kanama."
+    },
+    {
+     "metin": "Kırık, asimetri ve şift, SAK, subdural koleksiyon aranır; kemik penceresinde kırığa bakılır; lezyonun intraaksiyal mi ekstraaksiyal mi olduğu tanımlanır."
+    }
+   ],
+   "klip": "o-2b01-03",
+   "ses": [
+    "Kafa travmasında ilk görüntüleme BT.",
+    "BT kısa sürmesi, kolay ulaşılması ve akut kanama ile kırıkları göstermesi nedeniyle kafa travmasında avantajlıdır.",
+    "Tetkik süresi kısa, kolay ulaşılabilir; akut hemoraji ve kırıkları saptar.",
+    "Kafa travmalı olgularda yeterliliği sınırlıdır; intrakraniyal hasarın derecesini göstermez.",
+    "Diffüz aksonal hasar, diffüz vasküler zedelenme, kortikal kontüzyon, BT'de izodens ya da kronik subdural hemorajiler ve subaraknoid kanama.",
+    "Kırık, asimetri ve şift, SAK, subdural koleksiyon aranır; kemik penceresinde kırığa bakılır; lezyonun intraaksiyal mi ekstraaksiyal mi olduğu tanımlanır."
+   ],
+   "v": "84e0a8c9e7"
+  },
+  {
+   "id": "2b01-04",
+   "baslik": "Kafa travmasında BT endikasyonları",
+   "giris": "Kafa travmasında iki ve üzeri kusma ile şiddetli baş ağrısı BT endikasyonudur.",
+   "s": [
+    9
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Bilinç kaybı ve GKS 15'in altında olması ya da fokal nörolojik bulgu."
+    },
+    {
+     "metin": "Kusma (iki ve üzeri) ve şiddetli baş ağrısı."
+    },
+    {
+     "metin": "Nöbet geçirilmesi."
+    },
+    {
+     "metin": "Kafatasında çökme kırığı ya da açık kırık; kafa tabanı kırığı (hemotimpanum, otore)."
+    },
+    {
+     "metin": "2 yaşın altı ya da 60 yaşın üstü hastalar."
+    },
+    {
+     "metin": "Kanama diatezi ve antikoagülan kullanımı."
+    }
+   ],
+   "klip": "o-2b01-04",
+   "ses": [
+    "Kafa travmasında BT endikasyonları.",
+    "Kafa travmasında iki ve üzeri kusma ile şiddetli baş ağrısı BT endikasyonudur.",
+    "Bilinç kaybı ve GKS 15'in altında olması ya da fokal nörolojik bulgu.",
+    "Kusma (iki ve üzeri) ve şiddetli baş ağrısı.",
+    "Nöbet geçirilmesi.",
+    "Kafatasında çökme kırığı ya da açık kırık; kafa tabanı kırığı (hemotimpanum, otore).",
+    "2 yaşın altı ya da 60 yaşın üstü hastalar.",
+    "Kanama diatezi ve antikoagülan kullanımı."
+   ],
+   "v": "2c3fad405b"
+  },
+  {
+   "id": "2b01-07",
+   "baslik": "Epidural hematomun en sık nedeni",
+   "giris": "Epidural hematomun en sık nedeni temporal kemik kırıklarıdır (%90); arteriyel olanda arteria meningea media yırtılır.",
+   "s": [
+    18
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İç tabula ile dura arasındaki boşluğa olan kanamadır."
+    },
+    {
+     "metin": "Temporal kemik kırıkları (%90)."
+    },
+    {
+     "metin": "%90 arteriyel, %10 venöz."
+    },
+    {
+     "metin": "Kırığa bağlı arteria meningea media yırtılarak epidural mesafeye kanar."
+    },
+    {
+     "metin": "Dural sinüslerin yapışma yerlerine yakın kırıklar nedeniyle vena meningea media yırtılır; venöz sinüs yırtıklarıyla oluşur, çocuklarda sıktır, kırık eşlik etmeyebilir, genellikle posterior fossa ve tentoryum komşuluğundadır."
+    }
+   ],
+   "klip": "o-2b01-07",
+   "ses": [
+    "Epidural hematomun en sık nedeni.",
+    "Epidural hematomun en sık nedeni temporal kemik kırıklarıdır (%90); arteriyel olanda arteria meningea media yırtılır.",
+    "İç tabula ile dura arasındaki boşluğa olan kanamadır.",
+    "Temporal kemik kırıkları (%90).",
+    "%90 arteriyel, %10 venöz.",
+    "Kırığa bağlı arteria meningea media yırtılarak epidural mesafeye kanar.",
+    "Dural sinüslerin yapışma yerlerine yakın kırıklar nedeniyle vena meningea media yırtılır; venöz sinüs yırtıklarıyla oluşur, çocuklarda sıktır, kırık eşlik etmeyebilir, genellikle posterior fossa ve tentoryum komşuluğundadır."
+   ],
+   "v": "0c375d4683"
+  },
+  {
+   "id": "2b01-02",
+   "baslik": "Epidural hematom BT'de bikonvekstir",
+   "giris": "Epidural hematom BT'de akut fazda hiperdens, bikonveks/lentiform şekilli ekstraaksiyal koleksiyondur; subdural hematom ise konkavdır.",
+   "s": [
+    20,
+    34
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Akut fazda hiperdens, bikonveks ya da lentiform şekilli ekstraaksiyal koleksiyon."
+    },
+    {
+     "metin": "Travma tarafında; %95 unilateral, %90-95 supratentoryal, sıklıkla temporoparietal; %5-10 posterior fossa, nadiren vertekste."
+    },
+    {
+     "metin": "Sütür geçmez; venöz epidural hematom falks ya da tentoryumu geçebilir."
+    },
+    {
+     "metin": "Kitle etkisi ve herniasyonlar, karşı tarafta subdural hematom ve kontüzyonlar olabilir."
+    },
+    {
+     "metin": "Subdural hematom konkavdır, sütür geçebilir."
+    }
+   ],
+   "klip": "o-2b01-02",
+   "ses": [
+    "Epidural hematom BT'de bikonvekstir.",
+    "Epidural hematom BT'de akut fazda hiperdens, bikonveks/lentiform şekilli ekstraaksiyal koleksiyondur; subdural hematom ise konkavdır.",
+    "Akut fazda hiperdens, bikonveks ya da lentiform şekilli ekstraaksiyal koleksiyon.",
+    "Travma tarafında; %95 unilateral, %90-95 supratentoryal, sıklıkla temporoparietal; %5-10 posterior fossa, nadiren vertekste.",
+    "Sütür geçmez; venöz epidural hematom falks ya da tentoryumu geçebilir.",
+    "Kitle etkisi ve herniasyonlar, karşı tarafta subdural hematom ve kontüzyonlar olabilir.",
+    "Subdural hematom konkavdır, sütür geçebilir."
+   ],
+   "v": "88598fc697"
+  },
+  {
+   "id": "2b01-08",
+   "baslik": "Epidural hematom sütür geçmez, falksı geçebilir",
+   "giris": "Epidural hematom sütür geçmez; falks yapışma yerini geçebilmesi onu subdural hematomdan ayırır.",
+   "s": [
+    20,
+    24
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Epidural hematom sütür geçmez; subdural hematom sütür geçebilir."
+    },
+    {
+     "metin": "Epidural hematomun falks yapışma yerini geçebilmesi subdural hematomdan ayırt edici özelliğidir."
+    },
+    {
+     "metin": "Venöz epidural hematom falks ya da tentoryumu geçebilir."
+    },
+    {
+     "metin": "%95 unilateral, %90-95 supratentoryal, %5-10 posterior fossa."
+    },
+    {
+     "metin": "Karşı tarafta subdural hematom ve kontüzyon, kitle etkisi ve herniasyon görülebilir."
+    }
+   ],
+   "klip": "o-2b01-08",
+   "ses": [
+    "Epidural hematom sütür geçmez, falksı geçebilir.",
+    "Epidural hematom sütür geçmez; falks yapışma yerini geçebilmesi onu subdural hematomdan ayırır.",
+    "Epidural hematom sütür geçmez; subdural hematom sütür geçebilir.",
+    "Epidural hematomun falks yapışma yerini geçebilmesi subdural hematomdan ayırt edici özelliğidir.",
+    "Venöz epidural hematom falks ya da tentoryumu geçebilir.",
+    "%95 unilateral, %90-95 supratentoryal, %5-10 posterior fossa.",
+    "Karşı tarafta subdural hematom ve kontüzyon, kitle etkisi ve herniasyon görülebilir."
+   ],
+   "v": "233c79f7d5"
+  },
+  {
+   "id": "2b01-01",
+   "baslik": "Subdural hematomun kaynağı: köprü venleri",
+   "giris": "Subdural hematom subdural mesafedeki köprü venlerinin yırtılmasıyla gelişir ve venöz kaynaklıdır.",
+   "s": [
+    30,
+    31
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Subdural hematom dura ile araknoid membran arasındaki boşluğa olan kanamadır."
+    },
+    {
+     "metin": "Travma sırasında subdural mesafeyi geçen köprü venleri yırtılır; kanama venöz kaynaklıdır."
+    },
+    {
+     "metin": "Epidural hematom iç tabula ile dura arasındadır; %90 arteriyeldir ve arteria meningea media yırtılır."
+    },
+    {
+     "metin": "Minör travmadan sonra bile gelişebilir; atrofi nedeniyle büyük boyutlara ulaşana dek fark edilmeyebilir."
+    },
+    {
+     "metin": "BT'de şekli konkavdır ve sütür geçebilir."
+    }
+   ],
+   "klip": "o-2b01-01",
+   "ses": [
+    "Subdural hematomun kaynağı: köprü venleri.",
+    "Subdural hematom subdural mesafedeki köprü venlerinin yırtılmasıyla gelişir ve venöz kaynaklıdır.",
+    "Subdural hematom dura ile araknoid membran arasındaki boşluğa olan kanamadır.",
+    "Travma sırasında subdural mesafeyi geçen köprü venleri yırtılır; kanama venöz kaynaklıdır.",
+    "Epidural hematom iç tabula ile dura arasındadır; %90 arteriyeldir ve arteria meningea media yırtılır.",
+    "Minör travmadan sonra bile gelişebilir; atrofi nedeniyle büyük boyutlara ulaşana dek fark edilmeyebilir.",
+    "BT'de şekli konkavdır ve sütür geçebilir."
+   ],
+   "v": "f0ef4eb3e0"
+  },
+  {
+   "id": "2b01-22",
+   "baslik": "Diffüz aksonal zedelenme: koma ve kötü prognoz",
+   "giris": "Diffüz aksonal zedelenme kafa travmalarında koma ve kötü prognoz açısından en önemli patolojidir.",
+   "s": [
+    57
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Kafa travmalarında koma ve kötü prognoz açısından en önemli patolojidir."
+    },
+    {
+     "metin": "Travma anında aksonlarda rotasyon, akselerasyon ya da deselerasyona bağlı gelişen zedelenmedir."
+    },
+    {
+     "metin": "Gri ve beyaz cevher ayrım yüzlerinde multipl peteşiyal hemorajiler görülebilir."
+    },
+    {
+     "metin": "BT yeterince duyarlı değildir; MRG'de T2 ve SWI en hassastır."
+    }
+   ],
+   "klip": "o-2b01-22",
+   "ses": [
+    "Diffüz aksonal zedelenme: koma ve kötü prognoz.",
+    "Diffüz aksonal zedelenme kafa travmalarında koma ve kötü prognoz açısından en önemli patolojidir.",
+    "Kafa travmalarında koma ve kötü prognoz açısından en önemli patolojidir.",
+    "Travma anında aksonlarda rotasyon, akselerasyon ya da deselerasyona bağlı gelişen zedelenmedir.",
+    "Gri ve beyaz cevher ayrım yüzlerinde multipl peteşiyal hemorajiler görülebilir.",
+    "BT yeterince duyarlı değildir; MRG'de T2 ve SWI en hassastır."
+   ],
+   "v": "47d2e15f9c"
+  },
+  {
+   "id": "2b01-06",
+   "baslik": "En sık herniasyon: subfalsin",
+   "giris": "Subfalsin herniasyon en sık tiptir; singulat girus falks serebri altından karşı tarafa herniye olur.",
+   "s": [
+    67,
+    69
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Subfalsin herniasyon en sık görülen herniasyon tipidir."
+    },
+    {
+     "metin": "Singulat girus falks serebri altından karşı tarafa geçer."
+    },
+    {
+     "metin": "Karşı ventrikül kompresyonu ve orta hatta şift."
+    },
+    {
+     "metin": "Foramen Monro obstrüksiyonu nedeniyle karşı ventrikül sonradan genişleyebilir."
+    },
+    {
+     "metin": "Anterior serebral arter kompresyonu ile bu arterin sulama alanında enfarkt gelişebilir."
+    },
+    {
+     "metin": "Transtentoryal herniasyon ikinci en sık tiptir."
+    }
+   ],
+   "klip": "o-2b01-06",
+   "ses": [
+    "En sık herniasyon: subfalsin.",
+    "Subfalsin herniasyon en sık tiptir; singulat girus falks serebri altından karşı tarafa herniye olur.",
+    "Subfalsin herniasyon en sık görülen herniasyon tipidir.",
+    "Singulat girus falks serebri altından karşı tarafa geçer.",
+    "Karşı ventrikül kompresyonu ve orta hatta şift.",
+    "Foramen Monro obstrüksiyonu nedeniyle karşı ventrikül sonradan genişleyebilir.",
+    "Anterior serebral arter kompresyonu ile bu arterin sulama alanında enfarkt gelişebilir.",
+    "Transtentoryal herniasyon ikinci en sık tiptir."
+   ],
+   "v": "82bacdf4e9"
+  },
+  {
+   "id": "2b01-29",
+   "baslik": "Transtentoryal herniasyonun bulguları",
+   "giris": "Transtentoryal herniasyonda posterior serebral arter basısı ve enfarkt, Duret kanaması ve üçüncü kranial sinir basısına bağlı pupiller dilatasyon görülür.",
+   "s": [
+    73
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Posterior serebral arter kompresyonu ve enfarktlar."
+    },
+    {
+     "metin": "Mezensefalonda kanamalar, yani Duret hemorajisi."
+    },
+    {
+     "metin": "Üçüncü kranial sinir kompresyonu ve pupiller dilatasyon."
+    },
+    {
+     "metin": "Serebral pedinkül basısı."
+    },
+    {
+     "metin": "Subfalsin herniasyonda anterior serebral arter basılır."
+    },
+    {
+     "metin": "Temporal yerleşimli bir epidural hematomun kitle etkisi medial temporal lobu tentoryum kenarından aşağı iter; aynı taraf pupillanın genişlemesi bu basıyı düşündürür."
+    }
+   ],
+   "klip": "o-2b01-29",
+   "ses": [
+    "Transtentoryal herniasyonun bulguları.",
+    "Transtentoryal herniasyonda posterior serebral arter basısı ve enfarkt, Duret kanaması ve üçüncü kranial sinir basısına bağlı pupiller dilatasyon görülür.",
+    "Posterior serebral arter kompresyonu ve enfarktlar.",
+    "Mezensefalonda kanamalar, yani Duret hemorajisi.",
+    "Üçüncü kranial sinir kompresyonu ve pupiller dilatasyon.",
+    "Serebral pedinkül basısı.",
+    "Subfalsin herniasyonda anterior serebral arter basılır.",
+    "Temporal yerleşimli bir epidural hematomun kitle etkisi medial temporal lobu tentoryum kenarından aşağı iter; aynı taraf pupillanın genişlemesi bu basıyı düşündürür."
+   ],
+   "v": "431a03065a"
+  },
+  {
+   "id": "2b01-05",
+   "baslik": "Atlas kırığı: Jefferson kırığı",
+   "giris": "Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+   "s": [
+    95
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Atlas, yani C1 vertebrasının kırığı Jefferson kırığı olarak adlandırılır."
+    },
+    {
+     "metin": "Genellikle transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur."
+    },
+    {
+     "metin": "Yana kayan artiküler kütlelerin taşma uzunluklarının toplamı 7 mm'den fazlaysa transvers ligaman kopmuş kabul edilir ve cerrahi gündeme gelebilir."
+    },
+    {
+     "metin": "Odontoid kırığı tip I, II, III ve IIIA; asılan adam kırığında C2 pars interartikülaristen kırılır."
+    }
+   ],
+   "klip": "o-2b01-05",
+   "ses": [
+    "Atlas kırığı: Jefferson kırığı.",
+    "Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+    "Atlas, yani C1 vertebrasının kırığı Jefferson kırığı olarak adlandırılır.",
+    "Genellikle transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+    "Yana kayan artiküler kütlelerin taşma uzunluklarının toplamı 7 mm'den fazlaysa transvers ligaman kopmuş kabul edilir ve cerrahi gündeme gelebilir.",
+    "Odontoid kırığı tip I, II, III ve IIIA; asılan adam kırığında C2 pars interartikülaristen kırılır."
+   ],
+   "v": "820fc08135"
+  }
+ ]
+}

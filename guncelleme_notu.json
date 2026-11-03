@@ -1,86 +1,35 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 627,
-  "baslik": "Beyin ve Sinir Cerrahisi: 3 yeni sesli ders",
+  "onem": 628,
+  "baslik": "Beyin ve Sinir Cerrahisi: en önemliler, sesli çözücü ve hoca soruları",
   "maddeler": [
-    "Sinan Apaydın hocanın slaytları: sınav bu slaytlardan olduğu için dersler onun PDF'iyle anlatılıyor.",
-    "Geçen yıl sorulan sorular derste ayrıca belirtiliyor."
+    "Sinan Apaydın hocanın slaytlarına göre: geçen yıl sorulanlar en üstte ve derste yanıp sönen çıkmış işaretiyle."
   ],
   "eklenen": [
-    "Kafa ve Omurilik Yaralanmaları",
-    "Medulla Spinalis Lezyonları: Omurga Tümörleri",
-    "İntrakraniyal Kitlelerde Belirti ve Bulgular"
+    "Beyin Cerrahisi en önemliler (103 madde) ve 158 soruluk sesli çözücü",
+    "3 derste 25 'hocanın sorabileceği' ara soru",
+    "Terim/kısaltma yardımcısı, ders analizi ve özet, ders içerik sayfaları"
   ],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Çok setli çözücüsü olan derslerde ders özetinin görünmemesi (H476)"
+  ],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Hocanın vurguladıkları",
+      "ad": "Beyin ve Sinir Cerrahisi dersleri",
       "nerede": {
-        "ad": "Ders sayfası › Hocanın vurguladıkları",
-        "yol": "/dersler/ders/kurul2/k2-10-bas-agrisina-yaklasim?b=vurgu"
+        "ad": "Ders çalış › Kurul 2 › Beyin Cerrahisi",
+        "yol": "/dersler/ders/kurul2/k2-12-kafa-ve-omurilik-yaralanmalari"
       },
-      "amac": "Hocanın derste \"sorulur\", \"çıkmışta var\", \"önemli\", \"bilin\" dediği yerleri tek listede toplamak.",
+      "amac": "Sınavı hazırlayan Sinan Apaydın hocanın slaytlarıyla sesli ders, en önemliler ve soru çözümü.",
       "islevler": [
-        "Türüne göre süzme (sorulur, çıkmış, önemli, bilin, dikkat)",
-        "Yıldızla işaretleme; işaretlerin hesabınla eşitlenir",
-        "\"Sesli derste aç\" ile hocanın söylediği yere git",
-        "Sesli derste ve En önemliler listesinde \"Hoca\" rozeti"
+        "Kafa ve Omurilik Yaralanmaları, Omurga Tümörleri, Beyin Tümörleri sesli dersleri",
+        "Geçen yıl sorulan yerler derste işaretli",
+        "En önemliler listesi ve şık şık sesli çözücü",
+        "Derste 'hocanın sorabileceği soru' araları"
       ],
-      "ipucu": "Sınavdan önce yalnız yıldızladıklarını süzerek hızlı tekrar yapabilirsin."
-    },
-    {
-      "ad": "Yeni ders: Psikiyatrik Semiyoloji",
-      "nerede": {
-        "ad": "Ders çalış › Kurul 2 › Psikiyatri",
-        "yol": "/dersler/ders/kurul2/k2-11-psikiyatrik-semiyoloji"
-      },
-      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
-      "islevler": [
-        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
-        "Öğren destesi, örnek sorular ve sesli soru çözücü",
-        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
-      ]
-    },
-    {
-      "ad": "Yeni ders: MSS İlaçları Farmakolojisine Giriş",
-      "nerede": {
-        "ad": "Ders çalış › Kurul 2 › Farmakoloji",
-        "yol": "/dersler/ders/kurul2/k2-09-sss-ilaclari"
-      },
-      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
-      "islevler": [
-        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
-        "Öğren destesi, örnek sorular ve sesli soru çözücü",
-        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
-      ]
-    },
-    {
-      "ad": "Yeni ders: Baş Ağrısına Yaklaşım",
-      "nerede": {
-        "ad": "Ders çalış › Kurul 2 › Nöroloji",
-        "yol": "/dersler/ders/kurul2/k2-10-bas-agrisina-yaklasim"
-      },
-      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
-      "islevler": [
-        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
-        "Öğren destesi, örnek sorular ve sesli soru çözücü",
-        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
-      ]
-    },
-    {
-      "ad": "Yeni ders: Ağrı Fizyopatolojisi",
-      "nerede": {
-        "ad": "Ders çalış › Kurul 2 › Anestezi",
-        "yol": "/dersler/ders/kurul2/k2-06-agri-yollari-ve-mekanizmalari"
-      },
-      "amac": "Bu yılın slaytından, hocanın ses kaydı ve öğrenci notlarıyla hazırlanmış eksiksiz ders.",
-      "islevler": [
-        "Sesli ders: slayt üstünde işaret ve çizimlerle anlatım, çıkmış soru işaretleri",
-        "Öğren destesi, örnek sorular ve sesli soru çözücü",
-        "En önemliler listesi, hocanın sorabileceği sorular ve quiz"
-      ]
+      "ipucu": "Servikal travmada görüntülemeden önce ilk öncelik immobilizasyondur: geçen yıl soruldu ama slaytta yok, ayrıca bil."
     }
   ]
 }

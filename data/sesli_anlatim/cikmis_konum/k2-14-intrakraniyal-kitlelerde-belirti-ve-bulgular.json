@@ -1,0 +1,71 @@
+{
+ "surum": 2,
+ "metinHash": "6745141a43b6de08ddff960a94809f4e868135e5",
+ "dogrulama": "kullanıcı bildirimi (Sinan Apaydın 2025-26) + ham belgeli banka; slayt kanıtı elle (2026-11-03)",
+ "q": [
+  {
+   "id": "d3-k2-pat-003",
+   "kok": "Histopatolojik incelemede Verocay cisimcikleri görülen intrakraniyal tümör aşağıdakilerden hangisidir?",
+   "cevap": "Schwannom (akustik nörinom)",
+   "yil": "2025-2026",
+   "s": 46,
+   "seviye": "dogrudan",
+   "kanit": "Vestibüler sinirin schwann",
+   "kaynak": "",
+   "dogrulandi": true,
+   "neden": "Kullanıcının bildirdiği geçen yıl Sinan hoca sorusu. Slaytta (metin ve görüntü, s46 ve s4 dahil) 'Verocay' geçmiyor; schwannom sayfası s46'ya (vestibüler nörilemmom, Schwann hücresi kökeni) bağlandı. s4 tablosunda 'Schwannoma' satırı var. Bankada d3-k2-pat-003 (Patoloji Kurul 2, 2025-2026) aynı soru.",
+   "p": 57,
+   "c": 0,
+   "skor": 1.0,
+   "d": 0
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-1",
+   "kok": "Kafa içi basınç artışı sendromunun (KİBAS) klasik ana bulguları aşağıdakilerin hangisinde birlikte verilmiştir?",
+   "cevap": "Baş ağrısı, bulantı-kusma, papil ödem",
+   "yil": "2023-2024",
+   "s": 8,
+   "seviye": "dogrudan",
+   "kanit": "Papilödem",
+   "kaynak": "Nöropsikiyatri gis kardiyo -2023-2024-Çıkmışları_240625_053302 (2).pdf",
+   "dogrulandi": true,
+   "neden": "Cevap A (baş ağrısı, bulantı-kusma, papil ödem) s8'deki ilk üç maddeyle birebir.",
+   "p": 9,
+   "c": 1,
+   "skor": 1.0,
+   "d": 0
+  },
+  {
+   "id": "8a4a38a05c80",
+   "kok": "Vestibüler nörilemmomalarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?",
+   "cevap": "Periferik fasiyal parezi",
+   "yil": "2020-2021",
+   "s": 46,
+   "seviye": "dogrudan",
+   "kanit": "periferik tipte fasiyal güçsüzlük",
+   "kaynak": "336f0e2a54d6 (banka konu etiketi: İntrakraniyal Kitlelerde Belirti ve Bulgular)",
+   "dogrulandi": true,
+   "neden": "Doğru şık C; çeldirici abuli s9 frontal lob bulgusu.",
+   "p": 58,
+   "c": 1,
+   "skor": 1.0,
+   "d": 0
+  },
+  {
+   "id": "6573215c6cff",
+   "kok": "Vestibüler schwannomlarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?",
+   "cevap": "Tek taraflı sensörinöral işitme kaybı, tinnitus ve dengesizlik",
+   "yil": "2020-2021",
+   "s": 46,
+   "seviye": "dogrudan",
+   "kanit": "işitme kaybı",
+   "kaynak": "336f0e2a54d6 (banka konu etiketi: İntrakraniyal Kitlelerde Belirti ve Bulgular)",
+   "dogrulandi": true,
+   "neden": "Doğru şık A; s46 işitme kaybı + tinnitus + dengesizlik (vertigo).",
+   "p": 58,
+   "c": 1,
+   "skor": 1.0,
+   "d": 0
+  }
+ ]
+}

@@ -17,7 +17,11 @@ def uret(key):
     T = os.path.join(R, '..', 'meds_temp', 'ogrenci_ders', kod, 'taslak')
     dk = os.path.join(R, 'src/data/decks/items', f'k2p-{key}.json')
     deck = J(dk) if os.path.exists(dk) else {'slides': []}
-    out = {'key': key, 'baslik': deck.get('title', ''), 'ozet': deck.get('overview', '')}
+    # Destesiz ders (Öğren ASKIDA, 2026-11-02): tablo/liste/kart/quiz/spot ve başlık taslak/ders_icerik_ek.json'dan gelir;
+    # her kayıt `n` = PDF sayfası taşır (deste yokken adım = sayfa). Deste varsa dosya yalnız eklenir.
+    ekp = os.path.join(T, 'ders_icerik_ek.json')
+    ek = J(ekp) if os.path.exists(ekp) else {}
+    out = {'key': key, 'baslik': deck.get('title', '') or ek.get('baslik', ''), 'ozet': deck.get('overview', '') or ek.get('ozet', '')}
     # --- terimler (deste terimleri + PDF terim katmanı + taslak sözlük), kısaltmalar
     ter, gor = [], set()
     def ekle(t, a, i='', e=(), s=None):
@@ -108,6 +112,7 @@ def uret(key):
                 lis.append({'t': it['prompt'], 'sira': 'numara', 'm': [{'m': x} for x in it['steps']], 'n': n, 'a': it.get('explanation', '')})
             elif ty == 'micro_quiz':
                 quiz.append({'q': it['question'], 'o': [{'k': o['key'], 't': o['text'], 'd': bool(o.get('isCorrect')), 'a': o.get('explanation', '')} for o in it['microQuizOptions']], 'n': n})
+    for k, L in (('spotlar', spot), ('tablolar', tab), ('listeler', lis), ('kartlar', kart), ('quiz', quiz)): L.extend(ek.get(k, []))
     out['spotlar'] = spot; out['tablolar'] = tab; out['listeler'] = lis; out['kartlar'] = kart; out['quiz'] = quiz
     # --- çıkmış soru konumları
     cj = os.path.join(R, 'data/sesli_anlatim/cikmis_konum', key + '.json')

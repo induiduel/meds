@@ -14,7 +14,8 @@ def metin(s):
 def adim_yaz(key):
     p = os.path.join(R, 'src/data/ders_icerik', key + '.json')
     dk = os.path.join(R, 'src/data/decks/items', f'k2p-{key}.json')
-    if not (os.path.exists(p) and os.path.exists(dk)): return None
+    if not os.path.exists(p): return None
+    if not os.path.exists(dk): return destesiz(key, p)
     d, deck = J(p), J(dk)
     sl = deck['slides']
     icerik = [s for s in sl if not s.get('isCheckpoint') and not s.get('isGameFinale')]
@@ -46,6 +47,25 @@ def adim_yaz(key):
     json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     eksik = sum(1 for k, v in d.items() if isinstance(v, list) for x in v if isinstance(x, dict) and x.get('adim') == 0)
     return eksik
+
+def destesiz(key, p):
+    """Öğren destesi olmayan ders (ASKI, 2026-11-02): adim = PDF sayfası. s/n taşıyan kayıt o sayfaya; kısaltma, taslak
+    sayfalar.json'da ({"1": metin}) ilk geçtiği sayfaya. Taslak yoksa ya da bulunamazsa 0 (kapı >%5'te HATA)."""
+    d = J(p)
+    sp = os.path.join(R, '..', 'meds_temp', 'ogrenci_ders', '-'.join(key.split('-')[:2]), 'taslak', 'sayfalar.json')
+    sayfa = J(sp) if os.path.exists(sp) else {}
+    sayfa = sayfa if isinstance(sayfa, dict) else {}
+    ilk = lambda v: (sorted(x for x in (v if isinstance(v, list) else [v]) if isinstance(x, int)) or [0])[0]
+    for k, v in d.items():
+        if not isinstance(v, list): continue
+        for x in v:
+            if not isinstance(x, dict): continue
+            if k == 'kisaltmalar':
+                re_k = re.compile(r'(?<![\wçğıöşüÇĞİÖŞÜ])' + re.escape(x['k']) + r'(?![\wçğıöşüÇĞİÖŞÜ])')
+                x['adim'] = next((int(n) for n in sorted(sayfa, key=int) if re_k.search(sayfa[n])), 0)
+            else: x['adim'] = ilk(x.get('s')) or ilk(x.get('n'))
+    json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    return sum(1 for v in d.values() if isinstance(v, list) for x in v if isinstance(x, dict) and x.get('adim') == 0)
 
 if __name__ == '__main__':
     keys = sys.argv[1:] or sorted(os.path.basename(f)[:-5] for f in glob.glob(os.path.join(R, 'src/data/ders_icerik/*.json')))

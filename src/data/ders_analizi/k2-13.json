@@ -1,0 +1,809 @@
+{
+ "surum": 1,
+ "key": "k2-13",
+ "kod": "2b02",
+ "kurul": 2,
+ "brans": "Beyin Cerrahisi",
+ "konu": "Medulla Spinalis lezyonları",
+ "ogretim_uyesi": "Doç. Dr. Aydın Sinan Apaydın",
+ "profil": "Beyin ve Sinir Cerrahisi",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2b02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders omurga tümörlerini üç grupta ele alır: primer benign kemik tümörleri, primer malign kemik tümörleri ve metastatik tümörler. Her tümör için yaş, yerleşim, yakınma, görüntü bulgusu ve tedavi seçimi verilir. Omurga tümörlerinin büyük çoğunluğu metastazdır.",
+   "maddeler": [
+    {
+     "metin": "Omurga tümörlerinin sınıflaması"
+    },
+    {
+     "metin": "Osteoid osteom"
+    },
+    {
+     "metin": "Osteoblastom"
+    },
+    {
+     "metin": "Osteokondrom ve dev hücreli tümör"
+    },
+    {
+     "metin": "Anevrizmal kemik kisti"
+    },
+    {
+     "metin": "Eozinofilik granülom ve Hand-Schüller-Christian triadı"
+    },
+    {
+     "metin": "Hemanjiom"
+    },
+    {
+     "metin": "Osteosarkom ve kondrosarkom"
+    },
+    {
+     "metin": "Ewing sarkomu"
+    },
+    {
+     "metin": "Multipl miyelom ve lenfoma"
+    },
+    {
+     "metin": "Metastatik omurga tümörleri"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders omurga tümörlerini üç grupta ele alır: primer benign kemik tümörleri, primer malign kemik tümörleri ve metastatik tümörler. Her tümör için yaş, yerleşim, yakınma, görüntü bulgusu ve tedavi seçimi verilir. Omurga tümörlerinin büyük çoğunluğu metastazdır.",
+    "Omurga tümörlerinin sınıflaması.",
+    "Osteoid osteom.",
+    "Osteoblastom.",
+    "Osteokondrom ve dev hücreli tümör.",
+    "Anevrizmal kemik kisti.",
+    "Eozinofilik granülom ve Hand-Schüller-Christian triadı.",
+    "Hemanjiom.",
+    "Osteosarkom ve kondrosarkom.",
+    "Ewing sarkomu.",
+    "Multipl miyelom ve lenfoma.",
+    "Metastatik omurga tümörleri."
+   ],
+   "v": "7673ce5018"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Primer omurga tümörleri",
+     "metin": "Omurga tümörlerinin yüzde onu primer kemik tümörüdür.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Primer benign omurga tümörleri",
+     "metin": "Primer benign omurga tümörleri: osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom, hemanjiom.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Primer malign omurga tümörleri",
+     "metin": "Primer malign omurga tümörleri: osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma, nöroblastom.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Osteoid osteom yaş",
+     "metin": "Osteoid osteom çocuk ve genç erişkinde, 10-25 yaşta görülür.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Osteoblastom",
+     "metin": "Osteoblastom agresif selim tümördür; yüzde ellinin üstünde skolyozla beraberdir.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Osteokondrom",
+     "metin": "Osteokondrom en sık kemik tümörüdür; kıkırdak kaynaklıdır.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Dev hücreli tümör",
+     "metin": "Dev hücreli tümörde omurgada korpus tutulur; en sık torasik omurgadadır.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Anevrizmal kemik kisti",
+     "metin": "Anevrizmal kemik kisti 20-30 yaşta, arka elemanlarda (%60) ve lomberde sıktır; bel ağrısı ana semptomdur.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Eozinofilik granülom",
+     "metin": "Eozinofilik granülom en sık ikinci dekadda görülür; 5 ve 10 yaşta pik yapar; torasik omurgayı tutar.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Hand-Schüller-Christian triadı",
+     "metin": "Hand-Schüller-Christian triadı kemik lezyonları, diabetes insipidus ve ekzoftalmus üçlüsüdür.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Hemanjiom",
+     "metin": "Hemanjiom vasküler kökenli selim tümördür ve sıklıkla insidentaldir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Primer malign omurga tümörleri (tekrar)",
+     "metin": "Malign tümörler bölümüne geçiş: osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma, nöroblastom.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Osteosarkom",
+     "metin": "Omurga osteosarkomu nadirdir, ileri yaşta görülür; arka elemanlarda ve korpusta litik ya da destrüktif lezyon yapar.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Kondrosarkom",
+     "metin": "Kondrosarkom 40-70 yaşta görülür; izole ise cerrahi tedavi uygulanır.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Ewing sarkomu",
+     "metin": "Ewing sarkomu kemiğin habis küçük hücreli tümörüdür; en sık ilk iki dekadda görülür.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Multipl miyelom",
+     "metin": "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; 50 yaş üstünde görülür.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Lenfoma",
+     "metin": "Omurga lenfomasında vertebra korpusunda litik lezyonlar olur; teşhis biyopsiyle, birincil tedavi radyoterapiyledir.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Metastaz oranı",
+     "metin": "Omurga tümörlerinin yüzde doksanı metastazdır; iskelet sistemi metastazları en sık omurgaya olur.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Metastaz kaynağı",
+     "metin": "Spinal metastazların yüzde ellisi akciğer, meme veya prostat kanserinden kaynaklanır.",
+     "s": [
+      20
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Primer omurga tümörleri: Omurga tümörlerinin yüzde onu primer kemik tümörüdür.",
+    "Primer benign omurga tümörleri: Primer benign omurga tümörleri: osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom, hemanjiom.",
+    "Primer malign omurga tümörleri: Primer malign omurga tümörleri: osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma, nöroblastom.",
+    "Osteoid osteom yaş: Osteoid osteom çocuk ve genç erişkinde, 10-25 yaşta görülür.",
+    "Osteoblastom: Osteoblastom agresif selim tümördür; yüzde ellinin üstünde skolyozla beraberdir.",
+    "Osteokondrom: Osteokondrom en sık kemik tümörüdür; kıkırdak kaynaklıdır.",
+    "Dev hücreli tümör: Dev hücreli tümörde omurgada korpus tutulur; en sık torasik omurgadadır.",
+    "Anevrizmal kemik kisti: Anevrizmal kemik kisti 20-30 yaşta, arka elemanlarda (%60) ve lomberde sıktır; bel ağrısı ana semptomdur.",
+    "Eozinofilik granülom: Eozinofilik granülom en sık ikinci dekadda görülür; 5 ve 10 yaşta pik yapar; torasik omurgayı tutar.",
+    "Hand-Schüller-Christian triadı: Hand-Schüller-Christian triadı kemik lezyonları, diabetes insipidus ve ekzoftalmus üçlüsüdür.",
+    "Hemanjiom: Hemanjiom vasküler kökenli selim tümördür ve sıklıkla insidentaldir.",
+    "Primer malign omurga tümörleri (tekrar): Malign tümörler bölümüne geçiş: osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma, nöroblastom.",
+    "Osteosarkom: Omurga osteosarkomu nadirdir, ileri yaşta görülür; arka elemanlarda ve korpusta litik ya da destrüktif lezyon yapar.",
+    "Kondrosarkom: Kondrosarkom 40-70 yaşta görülür; izole ise cerrahi tedavi uygulanır.",
+    "Ewing sarkomu: Ewing sarkomu kemiğin habis küçük hücreli tümörüdür; en sık ilk iki dekadda görülür.",
+    "Multipl miyelom: Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; 50 yaş üstünde görülür.",
+    "Lenfoma: Omurga lenfomasında vertebra korpusunda litik lezyonlar olur; teşhis biyopsiyle, birincil tedavi radyoterapiyledir.",
+    "Metastaz oranı: Omurga tümörlerinin yüzde doksanı metastazdır; iskelet sistemi metastazları en sık omurgaya olur.",
+    "Metastaz kaynağı: Spinal metastazların yüzde ellisi akciğer, meme veya prostat kanserinden kaynaklanır."
+   ],
+   "v": "e47555d908"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu ders için doğrulanmış çıkmış soru yoktur. Sorular tek cümlelik en sık, tipik bulgu ve görüntü özelliği bilgilerine yoğunlaşır: metastaz oranı ve kaynağı, multipl miyelom, osteoid osteom ağrısı, ağrılı skolyoz, osteokondrom ve hemanjiomun grafi bulgusu.",
+   "maddeler": [
+    {
+     "baslik": "Omurga tümörlerinin çoğu metastazdır",
+     "metin": "Omurga tümörlerinin %90'ı metastazdır; iskelet sistemi metastazları en sık omurgaya olur.",
+     "neden": "Dersin tek oran bilgisi ve 'en sık' kalıbıdır; omurgada kitle görüldüğünde ilk akla gelmesi gereken olasılığı belirler.",
+     "s": [
+      19
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Multipl miyelom: en sık habis kemik tümörü",
+     "metin": "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; omurgada litik güve yeniği görünümü tipiktir.",
+     "neden": "Slaytın ilk maddesi 'en sık' kalıbındadır; güve yeniği görünümü kırmızıyla vurgulanmıştır.",
+     "s": [
+      17
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Spinal metastazların kaynağı",
+     "metin": "Spinal metastazların %50'si akciğer, meme veya prostat kanserinden kaynaklanır.",
+     "neden": "'En sık kaynak' sorusu kalıbıdır; ayrı slaytta tek madde olarak verilmiştir.",
+     "s": [
+      20
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Osteoid osteom ağrısının özelliği",
+     "metin": "Osteoid osteom ağrısı dinlenmekle azalmaz, gece şiddetlenir ve aspirinle azalır.",
+     "neden": "Tipik bulgu kalıbıdır; slaytta aspirin sözcüğü kırmızıyla vurgulanmıştır.",
+     "s": [
+      5
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Erişkinde ağrılı skolyoz",
+     "metin": "Erişkinde ağrılı skolyozun en sık nedeni osteoid osteomdur.",
+     "neden": "Slaytta açık 'en sık nedeni' ifadesi geçer; ağrılı skolyoz üç tümörde yinelenir, bu da klasik çeldirici oluşturur.",
+     "s": [
+      5,
+      9
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Osteokondrom: en sık kemik tümörü",
+     "metin": "Osteokondrom en sık görülen kemik tümörüdür; selim ve kıkırdak kaynaklıdır.",
+     "neden": "Slaytın ilk maddesi 'en sık' kalıbındadır; multipl miyelomun 'erişkinde en sık habis' bilgisiyle karıştırılmaya açıktır.",
+     "s": [
+      7
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Hemanjiomun grafi bulgusu",
+     "metin": "Hemanjiomda direkt grafide vertikal çizgilenmeler görülür.",
+     "neden": "Görüntü özelliği soru kalıbıdır; slaytta grafi üzerinde okla gösterilmiştir.",
+     "s": [
+      12
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Primer benign omurga tümörleri",
+     "metin": "Primer benign omurga tümörleri: osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom, hemanjiom.",
+     "neden": "Sınıflama sorusunun doğrudan kaynağıdır; 'hangisi benign değildir' kalıbına uygundur.",
+     "s": [
+      3
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu ders için doğrulanmış çıkmış soru yoktur. Sorular tek cümlelik en sık, tipik bulgu ve görüntü özelliği bilgilerine yoğunlaşır: metastaz oranı ve kaynağı, multipl miyelom, osteoid osteom ağrısı, ağrılı skolyoz, osteokondrom ve hemanjiomun grafi bulgusu.",
+    "Omurga tümörlerinin çoğu metastazdır: Omurga tümörlerinin %90'ı metastazdır; iskelet sistemi metastazları en sık omurgaya olur.",
+    "Multipl miyelom: en sık habis kemik tümörü: Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; omurgada litik güve yeniği görünümü tipiktir.",
+    "Spinal metastazların kaynağı: Spinal metastazların %50'si akciğer, meme veya prostat kanserinden kaynaklanır.",
+    "Osteoid osteom ağrısının özelliği: Osteoid osteom ağrısı dinlenmekle azalmaz, gece şiddetlenir ve aspirinle azalır.",
+    "Erişkinde ağrılı skolyoz: Erişkinde ağrılı skolyozun en sık nedeni osteoid osteomdur.",
+    "Osteokondrom: en sık kemik tümörü: Osteokondrom en sık görülen kemik tümörüdür; selim ve kıkırdak kaynaklıdır.",
+    "Hemanjiomun grafi bulgusu: Hemanjiomda direkt grafide vertikal çizgilenmeler görülür.",
+    "Primer benign omurga tümörleri: Primer benign omurga tümörleri: osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom, hemanjiom."
+   ],
+   "v": "ba2c7a73f8"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusuyla doğrulanmış bir çıkmış soru eşlemesi henüz yok.",
+   "maddeler": [],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusuyla doğrulanmış bir çıkmış soru eşlemesi henüz yok."
+   ],
+   "v": "5f4ddcdb61"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok sınıflama ve adlandırma (%50) ve tanım ve kavram (%33) sorulur."
+    },
+    {
+     "baslik": "Sınıflama ve adlandırma",
+     "metin": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%100) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir.",
+    "Sorulan bilgi: En çok sınıflama ve adlandırma (%50) ve tanım ve kavram (%33) sorulur.",
+    "Sınıflama ve adlandırma: Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%100) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "e1598f6ca1"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Büyük lezyonlarda dorsal kolonlar, tractus corticospinalis ve tractus spinothalamicus etki",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Santral kord sendromu ile ilgili aşağıdakilerden hangisi doğrudur?"
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Büyük lezyonlarda dorsal kolonlar, tractus corticospinalis ve tractus spinothalamicus etki: Çıkmışlarda 2 kez soruldu. Örnek kök: Santral kord sendromu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Çalışma yolu: Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "f7ae2360e2"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders omurga tümörlerini üç grupta ele alır: primer benign kemik tümörleri, primer malign kemik tümörleri ve metastatik tümörler. Her tümör için yaş, yerleşim, yakınma, görüntü bulgusu ve tedavi seçimi verilir. Omurga tümörlerinin büyük çoğunluğu metastazdır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders omurga tümörlerini üç grupta ele alır: primer benign kemik tümörleri, primer malign kemik tümörleri ve metastatik tümörler. Her tümör için yaş, yerleşim, yakınma, görüntü bulgusu ve tedavi seçimi verilir. Omurga tümörlerinin büyük çoğunluğu metastazdır."
+   ],
+   "v": "84b416ff12"
+  },
+  {
+   "id": "2b02-08",
+   "baslik": "Primer benign omurga tümörleri",
+   "giris": "Primer benign omurga tümörleri: osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom, hemanjiom.",
+   "s": [
+    3
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom ve hemanjiom."
+    },
+    {
+     "metin": "Osteoid osteom ve osteoblastom; ikisi de arka elemanları tutar ve ağrılı skolyoz yapar."
+    },
+    {
+     "metin": "Osteokondrom."
+    },
+    {
+     "metin": "Hemanjiom."
+    },
+    {
+     "metin": "Kordoma, nöroblastom, lenfoma, osteosarkom, kondrosarkom, Ewing sarkomu ve multipl miyelom primer malign omurga tümörleridir; benign listede yer almazlar."
+    }
+   ],
+   "klip": "o-2b02-08",
+   "ses": [
+    "Primer benign omurga tümörleri.",
+    "Primer benign omurga tümörleri: osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom, hemanjiom.",
+    "Osteoid osteom, osteoblastom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom ve hemanjiom.",
+    "Osteoid osteom ve osteoblastom; ikisi de arka elemanları tutar ve ağrılı skolyoz yapar.",
+    "Osteokondrom.",
+    "Hemanjiom.",
+    "Kordoma, nöroblastom, lenfoma, osteosarkom, kondrosarkom, Ewing sarkomu ve multipl miyelom primer malign omurga tümörleridir; benign listede yer almazlar."
+   ],
+   "v": "317a9fe479"
+  },
+  {
+   "id": "2b02-09",
+   "baslik": "Primer malign omurga tümörleri",
+   "giris": "Primer malign omurga tümörleri: osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma, nöroblastom.",
+   "s": [
+    4,
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma ve nöroblastom."
+    },
+    {
+     "metin": "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür."
+    },
+    {
+     "metin": "Ewing sarkomu çocukluk ve ergenlik çağında, en sık ilk iki dekadda görülür."
+    },
+    {
+     "metin": "Osteoblastom agresif olsa da selimdir; osteoid osteom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom ve hemanjiom da benign gruptadır."
+    }
+   ],
+   "klip": "o-2b02-09",
+   "ses": [
+    "Primer malign omurga tümörleri.",
+    "Primer malign omurga tümörleri: osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma, nöroblastom.",
+    "Osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom, lenfoma, kordoma ve nöroblastom.",
+    "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür.",
+    "Ewing sarkomu çocukluk ve ergenlik çağında, en sık ilk iki dekadda görülür.",
+    "Osteoblastom agresif olsa da selimdir; osteoid osteom, osteokondrom, dev hücreli tümör, anevrizmal kemik kisti, eozinofilik granülom ve hemanjiom da benign gruptadır."
+   ],
+   "v": "9a35c3935f"
+  },
+  {
+   "id": "2b02-04",
+   "baslik": "Osteoid osteom ağrısının özelliği",
+   "giris": "Osteoid osteom ağrısı dinlenmekle azalmaz, gece şiddetlenir ve aspirinle azalır.",
+   "s": [
+    5
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Osteoid osteom ağrısı dinlenmekle azalmaz, gece şiddetlenir ve aspirin ile azalır."
+    },
+    {
+     "metin": "Çocuk ve genç erişkinde, 10–25 yaşta görülür."
+    },
+    {
+     "metin": "Geç teşhis konan bir tümördür."
+    },
+    {
+     "metin": "Erişkinde ağrılı skolyozun en sık nedenidir."
+    },
+    {
+     "metin": "Anevrizmal kemik kistinde de bel ağrısı ana yakınmadır, ancak gece artan ve aspirinle geçen ağrı osteoid osteoma özgüdür. Eozinofilik granülomda akut sırt ağrısı, osteokondromda ise nadiren ağrı görülür."
+    }
+   ],
+   "klip": "o-2b02-04",
+   "ses": [
+    "Osteoid osteom ağrısının özelliği.",
+    "Osteoid osteom ağrısı dinlenmekle azalmaz, gece şiddetlenir ve aspirinle azalır.",
+    "Osteoid osteom ağrısı dinlenmekle azalmaz, gece şiddetlenir ve aspirin ile azalır.",
+    "Çocuk ve genç erişkinde, 10–25 yaşta görülür.",
+    "Geç teşhis konan bir tümördür.",
+    "Erişkinde ağrılı skolyozun en sık nedenidir.",
+    "Anevrizmal kemik kistinde de bel ağrısı ana yakınmadır, ancak gece artan ve aspirinle geçen ağrı osteoid osteoma özgüdür. Eozinofilik granülomda akut sırt ağrısı, osteokondromda ise nadiren ağrı görülür."
+   ],
+   "v": "4e83fdca13"
+  },
+  {
+   "id": "2b02-05",
+   "baslik": "Erişkinde ağrılı skolyoz",
+   "giris": "Erişkinde ağrılı skolyozun en sık nedeni osteoid osteomdur.",
+   "s": [
+    5,
+    9
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Erişkinde ağrılı skolyozun en sık nedeni osteoid osteomdur."
+    },
+    {
+     "metin": "Ağrılı skolyoz yapar; olguların %50'den fazlası skolyozla beraberdir."
+    },
+    {
+     "metin": "Osteoblastom ve osteoid osteom gibi ağrılı skolyoz yapar."
+    },
+    {
+     "metin": "Bu üç tümör de omurganın arka elemanlarını tutma eğilimindedir."
+    },
+    {
+     "metin": "Soru 'en sık neden' diye sorulduğunda cevap osteoid osteomdur; osteoblastom ve anevrizmal kemik kisti ağrılı skolyoz yapan ama en sık neden olmayan tümörlerdir."
+    }
+   ],
+   "klip": "o-2b02-05",
+   "ses": [
+    "Erişkinde ağrılı skolyoz.",
+    "Erişkinde ağrılı skolyozun en sık nedeni osteoid osteomdur.",
+    "Erişkinde ağrılı skolyozun en sık nedeni osteoid osteomdur.",
+    "Ağrılı skolyoz yapar; olguların %50'den fazlası skolyozla beraberdir.",
+    "Osteoblastom ve osteoid osteom gibi ağrılı skolyoz yapar.",
+    "Bu üç tümör de omurganın arka elemanlarını tutma eğilimindedir.",
+    "Soru 'en sık neden' diye sorulduğunda cevap osteoid osteomdur; osteoblastom ve anevrizmal kemik kisti ağrılı skolyoz yapan ama en sık neden olmayan tümörlerdir."
+   ],
+   "v": "31a7dcc045"
+  },
+  {
+   "id": "2b02-06",
+   "baslik": "Osteokondrom: en sık kemik tümörü",
+   "giris": "Osteokondrom en sık görülen kemik tümörüdür; selim ve kıkırdak kaynaklıdır.",
+   "s": [
+    7
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Osteokondrom en sık görülen kemik tümörüdür."
+    },
+    {
+     "metin": "Selimdir; tek veya çok sayıda olabilir."
+    },
+    {
+     "metin": "Kıkırdak kaynaklıdır."
+    },
+    {
+     "metin": "Omurganın arka elemanlarını, özellikle spinöz çıkıntıyı tutar."
+    },
+    {
+     "metin": "Nadiren ağrılıdır."
+    },
+    {
+     "metin": "Düşük oranda habis dejenerasyon görülebilir."
+    },
+    {
+     "metin": "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; osteokondrom ise genel olarak en sık kemik tümörüdür ve selimdir."
+    }
+   ],
+   "klip": "o-2b02-06",
+   "ses": [
+    "Osteokondrom: en sık kemik tümörü.",
+    "Osteokondrom en sık görülen kemik tümörüdür; selim ve kıkırdak kaynaklıdır.",
+    "Osteokondrom en sık görülen kemik tümörüdür.",
+    "Selimdir; tek veya çok sayıda olabilir.",
+    "Kıkırdak kaynaklıdır.",
+    "Omurganın arka elemanlarını, özellikle spinöz çıkıntıyı tutar.",
+    "Nadiren ağrılıdır.",
+    "Düşük oranda habis dejenerasyon görülebilir.",
+    "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; osteokondrom ise genel olarak en sık kemik tümörüdür ve selimdir."
+   ],
+   "v": "4804ce1e64"
+  },
+  {
+   "id": "2b02-07",
+   "baslik": "Hemanjiomun grafi bulgusu",
+   "giris": "Hemanjiomda direkt grafide vertikal çizgilenmeler görülür.",
+   "s": [
+    12
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Direkt grafide vertikal çizgilenmeler hemanjiomun tipik bulgusudur."
+    },
+    {
+     "metin": "Selim, vasküler kökenli bir tümördür."
+    },
+    {
+     "metin": "Sıklıkla insidental, yani başka nedenle çekilen görüntülemede bulunur."
+    },
+    {
+     "metin": "%50'den fazlası omurga ve kafatasında görülür; omurgada torakolomber ya da lomber bölgede yer alır."
+    },
+    {
+     "metin": "Multipl miyelomda litik güve yeniği görünümü, osteosarkomda litik veya destrüktif lezyon, lenfomada vertebra korpusunda litik lezyonlar görülür; vertikal çizgilenme bunlardan hemanjiomu ayırır."
+    }
+   ],
+   "klip": "o-2b02-07",
+   "ses": [
+    "Hemanjiomun grafi bulgusu.",
+    "Hemanjiomda direkt grafide vertikal çizgilenmeler görülür.",
+    "Direkt grafide vertikal çizgilenmeler hemanjiomun tipik bulgusudur.",
+    "Selim, vasküler kökenli bir tümördür.",
+    "Sıklıkla insidental, yani başka nedenle çekilen görüntülemede bulunur.",
+    "%50'den fazlası omurga ve kafatasında görülür; omurgada torakolomber ya da lomber bölgede yer alır.",
+    "Multipl miyelomda litik güve yeniği görünümü, osteosarkomda litik veya destrüktif lezyon, lenfomada vertebra korpusunda litik lezyonlar görülür; vertikal çizgilenme bunlardan hemanjiomu ayırır."
+   ],
+   "v": "e9c7a19442"
+  },
+  {
+   "id": "2b02-10",
+   "baslik": "Ewing sarkomu ve osteomiyelit",
+   "giris": "Ewing sarkomu ateş, anemi, lökositoz ve yüksek sedimentasyonla seyrettiği için osteomiyelit ile karıştırılır.",
+   "s": [
+    16
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Ewing sarkomu kemiğin habis küçük hücreli tümörüdür."
+    },
+    {
+     "metin": "Çocukluk ve ergenlik çağında, en sık ilk iki dekadda görülür."
+    },
+    {
+     "metin": "Subfebril ateş, anemi, lökositoz ve yüksek sedimentasyon görülür."
+    },
+    {
+     "metin": "Bu bulgular enfeksiyonu düşündürdüğü için osteomiyelit ile karıştırılır."
+    },
+    {
+     "metin": "Kötüdür."
+    },
+    {
+     "metin": "Multipl miyelom 50 yaş üstünde, kondrosarkom 40–70 yaşta, osteosarkom ileri yaşta, lenfoma erişkin çağda görülür; çocukta ateş ve lökositozla gelen malign kemik tümörü Ewing sarkomudur."
+    }
+   ],
+   "klip": "o-2b02-10",
+   "ses": [
+    "Ewing sarkomu ve osteomiyelit.",
+    "Ewing sarkomu ateş, anemi, lökositoz ve yüksek sedimentasyonla seyrettiği için osteomiyelit ile karıştırılır.",
+    "Ewing sarkomu kemiğin habis küçük hücreli tümörüdür.",
+    "Çocukluk ve ergenlik çağında, en sık ilk iki dekadda görülür.",
+    "Subfebril ateş, anemi, lökositoz ve yüksek sedimentasyon görülür.",
+    "Bu bulgular enfeksiyonu düşündürdüğü için osteomiyelit ile karıştırılır.",
+    "Kötüdür.",
+    "Multipl miyelom 50 yaş üstünde, kondrosarkom 40–70 yaşta, osteosarkom ileri yaşta, lenfoma erişkin çağda görülür; çocukta ateş ve lökositozla gelen malign kemik tümörü Ewing sarkomudur."
+   ],
+   "v": "35a28e0033"
+  },
+  {
+   "id": "2b02-02",
+   "baslik": "Multipl miyelom: en sık habis kemik tümörü",
+   "giris": "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; omurgada litik güve yeniği görünümü tipiktir.",
+   "s": [
+    17
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür."
+    },
+    {
+     "metin": "50 yaşın üstünde görülür."
+    },
+    {
+     "metin": "Plazma hücre tümörü olduğu için yaygın tutulum yapar."
+    },
+    {
+     "metin": "Kemikte litik, güve yeniği görünümü tipiktir."
+    },
+    {
+     "metin": "Osteosarkom omurgada nadirdir ve ileri yaşta görülür; kondrosarkom 40–70 yaşta, uzun kemiklerde ve pelviste sıktır; Ewing sarkomu ise çocukluk ve ergenlik çağının tümörüdür. Kordoma da primer malign omurga tümörleri arasında sayılır."
+    },
+    {
+     "metin": "Erişkin hastada yaygın litik kemik lezyonları görüldüğünde ilk düşünülecek habis primer kemik tümörüdür."
+    }
+   ],
+   "klip": "o-2b02-02",
+   "ses": [
+    "Multipl miyelom: en sık habis kemik tümörü.",
+    "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür; omurgada litik güve yeniği görünümü tipiktir.",
+    "Multipl miyelom erişkin çağın en sık habis kemik tümörüdür.",
+    "50 yaşın üstünde görülür.",
+    "Plazma hücre tümörü olduğu için yaygın tutulum yapar.",
+    "Kemikte litik, güve yeniği görünümü tipiktir.",
+    "Osteosarkom omurgada nadirdir ve ileri yaşta görülür; kondrosarkom 40–70 yaşta, uzun kemiklerde ve pelviste sıktır; Ewing sarkomu ise çocukluk ve ergenlik çağının tümörüdür. Kordoma da primer malign omurga tümörleri arasında sayılır.",
+    "Erişkin hastada yaygın litik kemik lezyonları görüldüğünde ilk düşünülecek habis primer kemik tümörüdür."
+   ],
+   "v": "3d6e85a832"
+  },
+  {
+   "id": "2b02-01",
+   "baslik": "Omurga tümörlerinin çoğu metastazdır",
+   "giris": "Omurga tümörlerinin %90'ı metastazdır; iskelet sistemi metastazları en sık omurgaya olur.",
+   "s": [
+    19
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Omurga tümörlerinin %90'ı metastatik tümördür."
+    },
+    {
+     "metin": "Omurga tümörlerinin yalnız %10'u primer kemik tümörüdür."
+    },
+    {
+     "metin": "İskelet sistemine yapılan metastazlar en sık omurgaya yerleşir."
+    },
+    {
+     "metin": "Omurgada saptanan bir tümör, aksi kanıtlanana kadar önce metastaz olarak düşünülür; primer benign ya da malign kemik tümörleri çok daha az görülür."
+    },
+    {
+     "metin": "Primer benign grupta osteoid osteom, osteoblastom, osteokondrom gibi tümörler, primer malign grupta osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom gibi tümörler yer alır; ancak hepsi birlikte omurga tümörlerinin küçük bir bölümünü oluşturur."
+    }
+   ],
+   "klip": "o-2b02-01",
+   "ses": [
+    "Omurga tümörlerinin çoğu metastazdır.",
+    "Omurga tümörlerinin %90'ı metastazdır; iskelet sistemi metastazları en sık omurgaya olur.",
+    "Omurga tümörlerinin %90'ı metastatik tümördür.",
+    "Omurga tümörlerinin yalnız %10'u primer kemik tümörüdür.",
+    "İskelet sistemine yapılan metastazlar en sık omurgaya yerleşir.",
+    "Omurgada saptanan bir tümör, aksi kanıtlanana kadar önce metastaz olarak düşünülür; primer benign ya da malign kemik tümörleri çok daha az görülür.",
+    "Primer benign grupta osteoid osteom, osteoblastom, osteokondrom gibi tümörler, primer malign grupta osteosarkom, kondrosarkom, Ewing sarkomu, multipl miyelom gibi tümörler yer alır; ancak hepsi birlikte omurga tümörlerinin küçük bir bölümünü oluşturur."
+   ],
+   "v": "6c56c48723"
+  },
+  {
+   "id": "2b02-03",
+   "baslik": "Spinal metastazların kaynağı",
+   "giris": "Spinal metastazların %50'si akciğer, meme veya prostat kanserinden kaynaklanır.",
+   "s": [
+    20
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Spinal metastazların yarısı üç kanserden gelir: akciğer, meme ve prostat kanseri."
+    },
+    {
+     "metin": "Bu üç kanser birlikte spinal metastazların %50'sini oluşturur."
+    },
+    {
+     "metin": "Omurga tümörlerinin %90'ı metastaz olduğundan, omurgada kitle saptanan hastada bu üç kanserin öyküsü ya da bulgusu araştırılır."
+    },
+    {
+     "metin": "Multipl miyelom ve lenfoma omurgayı tutan primer malign tümörlerdir; spinal metastazın kaynağı olarak sayılan kanserler arasında yer almazlar."
+    }
+   ],
+   "klip": "o-2b02-03",
+   "ses": [
+    "Spinal metastazların kaynağı.",
+    "Spinal metastazların %50'si akciğer, meme veya prostat kanserinden kaynaklanır.",
+    "Spinal metastazların yarısı üç kanserden gelir: akciğer, meme ve prostat kanseri.",
+    "Bu üç kanser birlikte spinal metastazların %50'sini oluşturur.",
+    "Omurga tümörlerinin %90'ı metastaz olduğundan, omurgada kitle saptanan hastada bu üç kanserin öyküsü ya da bulgusu araştırılır.",
+    "Multipl miyelom ve lenfoma omurgayı tutan primer malign tümörlerdir; spinal metastazın kaynağı olarak sayılan kanserler arasında yer almazlar."
+   ],
+   "v": "485e49d025"
+  }
+ ]
+}

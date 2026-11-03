@@ -243,7 +243,9 @@ def uret(key: str) -> Path:
     klas = f"k{d['kurul']}{b['slug']}"
     op = MEDS / f"src/data/{klas}_onem/{d['kod']}.json"
     onem = json.loads(op.read_text(encoding="utf-8")) if op.exists() else None
-    cozucu_var = (MEDS / f"src/data/{klas}_cozucu/{d['kod']}.json").exists()
+    # 40'tan çok sorulu çözücü birlestir.py'de ardışık setlere bölünür (<kod>-1, <kod>-2): onlar da çözücü sayılır
+    cz = MEDS / f"src/data/{klas}_cozucu"
+    cozucu_var = (cz / f"{d['kod']}.json").exists() or (cz / f"{d['kod']}-1.json").exists()
     prf = profil(b["ad"], b.get("kisa", b["ad"]), d["konu"])
 
     analiz = klipli(analiz_kur(key, d, b, paket, onem, bolum_basliklari(key), cikmislar(key), prf), "a")

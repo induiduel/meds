@@ -1,6 +1,6 @@
 # Aşama kuralları — ders_icerik
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 44 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 47 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
 
 ### Diğer oturumlarda düzeltilen hatalardan çıkarılan dersler (tarama 2026-10-20)
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -392,4 +392,29 @@
 ### H444 — DOCX ızgara sayfaları LibreOffice/Word'de ikiye bölündü; 26 sayfa 52 oldu (soru dışa aktarıcı, 2026-10-30)
 - **Çözüm:** boş üst bilgi kaldırıldı (yalnız "her sayfada başlık" açıkken başlık üst bilgisi); hücrelere yalnız sağ/sol iç boşluk, üst boşluk hücre içi sabit paragrafla; satır aralığı yazı tipine göre bölünür (`TEK_SATIR`); sabit sayfa kipinde yazı ölçeği ×0,93, satır yüksekliği ×0,97 güvenlik payı. 26 model sayfası → 26 DOCX sayfası.
 - **Önleme:** DOCX/PPTX üreten her değişiklik LibreOffice ile PDF'e çevrilip sayfa sayısı önizlemeyle kıyaslanır (`soffice --headless --convert-to pdf` + `pdfinfo`) ve her XML parçası ayrıştırılarak denetlenir; sabit yükseklikli tablo satırına üst/alt `tcMar` verilmez.
+
+
+### H455 — Çıkmış kayıtlarında sınav yılı çok yıllı aralık ("2021-2026") ya da yılsız etiket ("Geçmiş Yıllar Çıkmışı (Arşiv)", "Kategorisiz", "2026") kalmıştı (2026-10-31)
+- **Çözüm:** `meds_temp/cikmis_yil_duzelt/yil_duzelt.py` kural zinciri (soru notu → D3K1 PDF eşlemesi → tekrar analizi kimliği → belge
+  tablosu → benzer tarihli kayıt → belirsiz) ile 1.169 kayıt tek yıla/≤2 yıla indirildi, 404'ü `Yılı belirsiz` + `yil_belirsiz`; her kararın
+  gerekçesi `yilDuzeltmesi` + `evidence`'ta. Türev dosyalar kimlikle eşitlendi.
+- **Önleme:** Yeni çıkmış kaydında `examYear` yalnız "YYYY-YYYY" (tek akademik yıl) ya da en çok iki yıl ("2021-2023") olabilir; kanıt yoksa
+  `Yılı belirsiz` + `yil_belirsiz` etiketi yazılır, asla işlem yılı/geniş aralık/kategori adı yazılmaz. Derleme/toplu içe aktarımda soru notundaki
+  yıl alana taşınır; belge yılı belge içi tarih/karne numarası/dosya adıyla doğrulanır ve `sinavKimligi.gerekce`'ye yazılır.
+  Kapı: `python3 meds_temp/cikmis_yil_duzelt/yil_duzelt.py` kuru koşusunda "Geçersiz biçimde kalan: 0" olmalı.
+
+
+### H469 — Kurul 2 EMA yolu büyük harfli kısaltmayı okumuyordu (NMDA, GABA, IP3) (2026-11-02)
+- **Çözüm:** bu partinin yazımla yazılmış anahtarları `modul_okunus.MODUL_ANAHTARLAR`'a eklendi; `KELIME`'ye GABA/GABAA/GABAB/AMPA/
+  DOPA/VMAT/VGLUT/mGluR/HANDLE/SUNCT/KİBAS; `okunus.FONETIK_TTS`'e GABA/AMPA/L-DOPA; `terim_okunus.json`'a Schneider, Renshaw,
+  Wall, Head, Graham, Leao, locus coeruleus, substantia gelatinosa, déjà vu ailesi. EMA işçisi yeniden başlatıldı (modüller
+  açılışta yüklenir).
+- **Önleme:** Yeni Kurul 2 dersinin metni yazımla tutuluyorsa anahtarı seslendirmeden ÖNCE `MODUL_ANAHTARLAR`'a eklenir ve
+  `ema_isci.tts_metni` ile örnek paragraf okunuşu denetlenir; okunuş sözlüğü değişince `meds-ema` yeniden başlatılır.
+
+
+### H472 — Hoca vurgusu `konu` alanı özetti, değerlendirme kapısı slayttan birebir istiyor (2026-11-02)
+- **Çözüm:** `meds_temp/ogrenci_ders/hv_konu_duzelt.py`: özet `konu_ozet`'e taşınır (öğrenci ekranı bunu gösterir), `konu` sayfadaki en
+  yakın birebir satıra bağlanır. Aynı aileden öğrenci notu `hedef` ve tablo hücresi alıntıları `kanit_kirp.py` ile kırpıldı.
+- **Önleme:** A1 şemasında iki alan ayrıdır: `konu` = slayttan birebir, `konu_ozet` = okunur özet. Tablo sayfasında alıntı tek hücre içinden.
 
