@@ -281,12 +281,13 @@ export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
   const RAG_BETIK = path.join(d.rootDir, 'scripts/advanced_ai/rag_vektor_hatti.py');
   const RAG_PY = path.join(d.rootDir, '.venv-ocr/bin/python');
   const ragCihaz = () => fs.existsSync(RAG_BETIK) && fs.existsSync(RAG_PY) && !process.env.DERS_ISCI_URL;
-  const RAG_LOG_DIR = path.join(KOK, 'meds_temp', 'logs');
+  const TEMP = process.env.MEDS_TEMP_DIR || path.join(KOK, 'meds_temp'); // Docker'da KOK = / (H479)
+  const RAG_LOG_DIR = path.join(TEMP, 'logs');
   let ragIs: { id: string; baslama: string; bitis?: string; kod?: number | null; kuru: boolean; log: string; kim: string } | null = null;
   app.get('/api/admin/sistem/rag', A, (_req, res) => {
     const dbDir = process.env.MEDS_DATABASE_DIR || path.join(KOK, 'meds_database');
     const rapor = oku<Any | null>(path.join(dbDir, 'derived', 'rag_vektor', 'hat_rapor.json'), null);
-    const hatDurum = oku<Any>(path.join(KOK, 'meds_temp/hat/durum.json'), {})?.rag_vektor || null;
+    const hatDurum = oku<Any>(path.join(TEMP, 'hat/durum.json'), {})?.rag_vektor || null;
     res.setHeader('Cache-Control', 'no-store');
     res.json({
       cihaz: ragCihaz(), rapor, hatDurum,

@@ -2057,3 +2057,12 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   çağrıyı reddeden sahte `claude` ile koşturuldu; anlam denetimi ayrı ajanla yapıldı. k2-13/k2-14'te ajanlar bunu onaysız yapmıştı (kayıt).
 - **Önleme:** ajan kilidi kendi başına aşmaz; takılırsa ana oturum kullanıcıya sorar. Kalıcı çözüm kullanıcı kararı bekler: kilidin yalnız
   `claude()`/`anlam_denetimi()` çağrısına taşınması ya da masaüstü oturumunu tanıyan ayrı bayrak (kilit gevşetme sayılır → kullanıcı onayı şart).
+
+## H479 — Yönetim › Quiz havuzu Oracle'da boştu (Docker'da rootDir/.. yanlış kök) (2026-11-03)
+- **Belirti:** `/api/admin/quiz/havuz` Oracle'da `toplam: 0` (k2-10/k2-11 dahil); dosyalar `meds_database_v2/ders_isci/yayinlanan/elle-*/` altında vardı.
+- **Kök neden:** Oracle'da uygulama Docker'da `/app`'te; `ekSayfalar.ts` yolu `path.resolve(rootDir,'..','meds_database_v2')` = `/meds_database_v2`
+  kuruyordu (yalnız phase14 kalıntısı olan boş bir kök klasör). Asıl bağlama `/home/ubuntu/medsor/meds_database_v2`. Yerelde iki yol çakıştığı için fark edilmedi.
+  `sistemEk.ts`'de `meds_temp` (RAG günlüğü, hat durumu) aynı hatayı taşıyordu.
+- **Çözüm:** `meds_database_v2` = `dirname(MEDS_DATABASE_DIR)/meds_database_v2` (phase14Overlay.ts kuralı), `meds_temp` = `MEDS_TEMP_DIR`.
+- **Önleme:** Sunucu kodunda kardeş veri klasörleri `rootDir/..`'dan değil ortam değişkeninden (MEDS_DATABASE_DIR, MEDS_TEMP_DIR, MEDS_DOWNLOADS_DIR) türetilir;
+  yeni uç canlıda (Oracle) bir kez çağrılarak boş olmadığı doğrulanır.

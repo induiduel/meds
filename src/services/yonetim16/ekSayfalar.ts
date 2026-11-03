@@ -118,7 +118,10 @@ export function registerEkSayfa16Routes(app: express.Express, d: EkSayfaDeps) {
   });
 
   /* ================= Quiz havuzu (salt okunur) ================= */
-  const YAYIN = path.resolve(d.rootDir, '..', 'meds_database_v2', 'ders_isci', 'yayinlanan');
+  // Oracle'da uygulama /app'te (Docker), meds_database_v2 ise ana makine yolunda bağlı: rootDir/.. yanlış yere düşer (H479).
+  // phase14Overlay.ts ile aynı kural: MEDS_DATABASE_DIR'in kardeşi.
+  const V2 = path.join(path.dirname(process.env.MEDS_DATABASE_DIR || path.resolve(d.rootDir, '..', 'meds_database')), 'meds_database_v2');
+  const YAYIN = path.join(V2, 'ders_isci', 'yayinlanan');
   let quizOnbellek: { at: number; rows: Any[]; dosyalar: Map<string, string> } | null = null;
   const quizSatirlari = () => {
     if (quizOnbellek && Date.now() - quizOnbellek.at < 60_000) return quizOnbellek;

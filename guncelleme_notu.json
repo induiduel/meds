@@ -1,16 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 632,
-  "baslik": "Beyin Cerrahisi: kelime kelime takip ve quiz havuzu",
+  "onem": 633,
+  "baslik": "Yönetim: Quiz havuzu canlıda görünüyor",
   "maddeler": [
-    "Beyin Cerrahisi sesli derslerinde kelime kelime takip.",
-    "4 derse 536 soruluk hızlı quiz havuzu (geçen yıl sorulanlar işaretli)."
+    "Yönetim › Quiz havuzu sayfası canlı sunucuda boş görünüyordu; düzeltildi."
   ],
-  "eklenen": [
-    "Beyin Cerrahisi quiz havuzu"
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Quiz havuzunun canlıda boş görünmesi (H479)"
+  ],
   "silinen": [],
   "yenilikler": []
 }
