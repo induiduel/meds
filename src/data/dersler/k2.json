@@ -169,7 +169,8 @@
    "saat_sayisi": 2,
    "pdf": null,
    "cikmis_konular": [],
-   "durum": {}
+   "durum": {},
+   "not": "2026-11-03: yalnız kafa travmaları PDF'i; spinal travmalar k2-64'e bölündü."
   },
   {
    "id": "k2-13",
@@ -884,6 +885,21 @@
    "pdf": null,
    "cikmis_konular": [],
    "durum": {}
+  },
+  {
+   "id": "k2-64",
+   "kod": "2b04",
+   "kurul": 2,
+   "brans": "Beyin ve Sinir Cerrahisi",
+   "konu": "Spinal Travmalar",
+   "ogretim_uyesi": "DOÇ. DR. AYDIN SİNAN APAYDIN",
+   "tarih": "2026-11-03",
+   "saat": "09:40-10:20",
+   "saat_sayisi": 0,
+   "pdf": null,
+   "cikmis_konular": [],
+   "durum": {},
+   "not": "2026-11-03 kullanıcı kararı: k2-12 'Kafa ve Omurilik Yaralanmaları' saatinde Sinan Apaydın'ın iki PDF'i var; spinal travmalar ayrı ders olarak bölündü (k2-12 = kafa travmaları)."
   }
  ]
 }

@@ -46,9 +46,9 @@
   {
    "kod": "2b01-1",
    "no": 12,
-   "baslik": "Kafa ve Omurilik Yaralanmaları",
-   "soru": 35,
-   "ornek": 33,
+   "baslik": "Kafa Travmaları",
+   "soru": 28,
+   "ornek": 26,
    "cikmis": 2,
    "ses": true,
    "set": 1,
@@ -61,16 +61,16 @@
   {
    "kod": "2b01-2",
    "no": 12,
-   "baslik": "Kafa ve Omurilik Yaralanmaları",
-   "soru": 34,
-   "ornek": 31,
-   "cikmis": 3,
+   "baslik": "Kafa Travmaları",
+   "soru": 27,
+   "ornek": 25,
+   "cikmis": 2,
    "ses": true,
    "set": 2,
    "setSay": 2,
    "sayfa": [
-    29,
-    120
+    23,
+    75
    ]
   },
   {
@@ -114,6 +114,19 @@
    "sayfa": [
     19,
     55
+   ]
+  },
+  {
+   "kod": "2b04",
+   "no": 64,
+   "baslik": "Spinal Travmalar",
+   "soru": 20,
+   "ornek": 19,
+   "cikmis": 1,
+   "ses": true,
+   "sayfa": [
+    8,
+    44
    ]
   }
  ]

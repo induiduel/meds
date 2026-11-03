@@ -1,0 +1,1090 @@
+{
+ "surum": 1,
+ "key": "k2-64",
+ "kod": "2b04",
+ "kurul": 2,
+ "brans": "Beyin Cerrahisi",
+ "konu": "Spinal Travmalar",
+ "ogretim_uyesi": "Doç. Dr. Aydın Sinan Apaydın",
+ "profil": "Beyin ve Sinir Cerrahisi",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2b04"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders omurga anatomisini, omurga yaralanmalarının nedenlerini ve bölgesel sıklığını, stabilite kavramını, üst ve alt servikal kırıkları, torakolomber kırıkları, Denis üç kolon sınıflamasını ve tedavi kararını anlatır.",
+   "maddeler": [
+    {
+     "metin": "Omurga anatomisi ve omurga travmasının sıklığı"
+    },
+    {
+     "metin": "Servikal omurga travmaları"
+    },
+    {
+     "metin": "Torakolomber kırıklar ve Denis sınıflaması"
+    },
+    {
+     "metin": "Tedavi kararı"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders omurga anatomisini, omurga yaralanmalarının nedenlerini ve bölgesel sıklığını, stabilite kavramını, üst ve alt servikal kırıkları, torakolomber kırıkları, Denis üç kolon sınıflamasını ve tedavi kararını anlatır.",
+    "Omurga anatomisi ve omurga travmasının sıklığı.",
+    "Servikal omurga travmaları.",
+    "Torakolomber kırıklar ve Denis sınıflaması.",
+    "Tedavi kararı."
+   ],
+   "v": "f5aa9443d9"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Kapak: Omurilik Yaralanmaları",
+     "metin": "Kapak: Omurilik Yaralanmaları",
+     "s": [
+      1
+     ]
+    },
+    {
+     "baslik": "Omurga anatomisi",
+     "metin": "Omurga anatomisi",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Omurga eğrilikleri şeması",
+     "metin": "Omurga eğrilikleri şeması",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Servikal vertebralar C1-C7 şeması",
+     "metin": "Servikal vertebralar C1-C7 şeması",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks",
+     "metin": "Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Bölgelere göre vertebra yapısı",
+     "metin": "Bölgelere göre vertebra yapısı",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Lomber vertebra kompresyon çizimi",
+     "metin": "Lomber vertebra kompresyon çizimi",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Etiyoloji tablosu",
+     "metin": "Etiyoloji tablosu: trafik %50, düşme %20-25, spor %15-20, diğer %14-15",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Kırık sıklığı",
+     "metin": "Kırık sıklığı: C1 %10, C2 %33, C6-C7 %50, T4 %10, T12-L2 %60-70",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Bölgelere göre kırık sıklığı grafiği",
+     "metin": "Bölgelere göre kırık sıklığı grafiği",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Kırık tipleri (mekanizma çizimleri)",
+     "metin": "Kırık tipleri (mekanizma çizimleri)",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Stabilite/instabilite tanımı",
+     "metin": "Stabilite/instabilite tanımı",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Servikal",
+     "metin": "Servikal: üst C0-C2, alt C3-C7",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Atlas-aksis anatomisi",
+     "metin": "Atlas-aksis anatomisi",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Üst servikal travma üç grubu",
+     "metin": "Üst servikal travma üç grubu",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Oksipital kondil & KSB tip A/B/C",
+     "metin": "Oksipital kondil & KSB tip A/B/C",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "C1 halka ve C1-C2 tip A/B/C",
+     "metin": "C1 halka ve C1-C2 tip A/B/C",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "C2 halka ve C2-C3 tip A/B/C",
+     "metin": "C2 halka ve C2-C3 tip A/B/C",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Jefferson kırığı",
+     "metin": "Jefferson kırığı: transvers ligaman, 7 mm",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Odontoid kırığı tip I-II-III-IIIA",
+     "metin": "Odontoid kırığı tip I-II-III-IIIA",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid",
+     "metin": "Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid vida",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Transodontoid vida grafisi",
+     "metin": "Transodontoid vida grafisi",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Hangman kırığı",
+     "metin": "Hangman kırığı: C2 pars interartikülaris",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Hangman tip I-II-III",
+     "metin": "Hangman tip I-II-III",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Hangman tip 1 görüntü",
+     "metin": "Hangman tip 1 görüntü",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Hangman tip 2 instabil",
+     "metin": "Hangman tip 2 instabil",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Hangman tip 3 instabil",
+     "metin": "Hangman tip 3 instabil",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Alt servikal travmalar",
+     "metin": "Alt servikal travmalar: fleksiyon, ekstansiyon, burst",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Hiperfleksiyon C5-6 dislokasyon",
+     "metin": "Hiperfleksiyon C5-6 dislokasyon",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Hiperekstansiyon C2 teardrop",
+     "metin": "Hiperekstansiyon C2 teardrop",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "C4 burst kırığı",
+     "metin": "C4 burst kırığı",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "C4 burst postoperatif",
+     "metin": "C4 burst postoperatif",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "C6-7 dislokasyon miyelomalazi",
+     "metin": "C6-7 dislokasyon miyelomalazi",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "C5-6 travmatik disk hernisi",
+     "metin": "C5-6 travmatik disk hernisi",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Torakolomber bileşke T11-L1 Denis sınıflaması",
+     "metin": "Torakolomber bileşke T11-L1 Denis sınıflaması",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Denis üç kolon teorisi",
+     "metin": "Denis üç kolon teorisi",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Spinal stabilite",
+     "metin": "Spinal stabilite: stabil/instabil kolon tutulumu",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Olgu",
+     "metin": "Olgu: 30 yaş erkek düşme, kama kompresyon",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Torakal kama kompresyon ve dislokasyon, kord ödemi",
+     "metin": "Torakal kama kompresyon ve dislokasyon, kord ödemi",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "L1 burst kırığı",
+     "metin": "L1 burst kırığı",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "T12-L1 fleksiyon distraksiyon dislokasyonu",
+     "metin": "T12-L1 fleksiyon distraksiyon dislokasyonu",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Cerrahi kararda önemli etkenler",
+     "metin": "Cerrahi kararda önemli etkenler",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Konservatif tedavi",
+     "metin": "Konservatif tedavi: stabil, kanal basısı yok; kama <%50 takip",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Cerrahi tedavi endikasyonları ve amacı",
+     "metin": "Cerrahi tedavi endikasyonları ve amacı",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Burst kırığı çizim + BT",
+     "metin": "Burst kırığı çizim + BT",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "Kompresyon kırığı",
+     "metin": "Kompresyon kırığı",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Lomber kırık ameliyat öncesi/sonrası",
+     "metin": "Lomber kırık ameliyat öncesi/sonrası",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Torakal kırık ameliyat",
+     "metin": "Torakal kırık ameliyat",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "L2 burst kırığı",
+     "metin": "L2 burst kırığı",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "T12-L1 dekompresyon + posterior stabilizasyon",
+     "metin": "T12-L1 dekompresyon + posterior stabilizasyon",
+     "s": [
+      50
+     ]
+    },
+    {
+     "baslik": "Tip 2 odontoid kırığı BT",
+     "metin": "Tip 2 odontoid kırığı BT",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "Torakolomber kırık postop",
+     "metin": "Torakolomber kırık postop",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Spinal yaralanma çizimi",
+     "metin": "Spinal yaralanma çizimi",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Ağız açık grafi (odontoid)",
+     "metin": "Ağız açık grafi (odontoid)",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Lomber kırık BT/3B",
+     "metin": "Lomber kırık BT/3B",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Servikal BT sagittal",
+     "metin": "Servikal BT sagittal",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Servikal yan grafi",
+     "metin": "Servikal yan grafi",
+     "s": [
+      57
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Kapak: Omurilik Yaralanmaları: Kapak: Omurilik Yaralanmaları.",
+    "Omurga anatomisi: Omurga anatomisi.",
+    "Omurga eğrilikleri şeması: Omurga eğrilikleri şeması.",
+    "Servikal vertebralar C1-C7 şeması: Servikal vertebralar C1-C7 şeması.",
+    "Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks: Servikal 1-7, torakal 1-12, lomber 1-5, sakrum, koksiks.",
+    "Bölgelere göre vertebra yapısı: Bölgelere göre vertebra yapısı.",
+    "Lomber vertebra kompresyon çizimi: Lomber vertebra kompresyon çizimi.",
+    "Etiyoloji tablosu: Etiyoloji tablosu: trafik %50, düşme %20-25, spor %15-20, diğer %14-15.",
+    "Kırık sıklığı: Kırık sıklığı: C1 %10, C2 %33, C6-C7 %50, T4 %10, T12-L2 %60-70.",
+    "Bölgelere göre kırık sıklığı grafiği: Bölgelere göre kırık sıklığı grafiği.",
+    "Kırık tipleri (mekanizma çizimleri): Kırık tipleri (mekanizma çizimleri).",
+    "Stabilite/instabilite tanımı: Stabilite/instabilite tanımı.",
+    "Servikal: Servikal: üst C0-C2, alt C3-C7.",
+    "Atlas-aksis anatomisi: Atlas-aksis anatomisi.",
+    "Üst servikal travma üç grubu: Üst servikal travma üç grubu.",
+    "Oksipital kondil & KSB tip A/B/C: Oksipital kondil & KSB tip A/B/C.",
+    "C1 halka ve C1-C2 tip A/B/C: C1 halka ve C1-C2 tip A/B/C.",
+    "C2 halka ve C2-C3 tip A/B/C: C2 halka ve C2-C3 tip A/B/C.",
+    "Jefferson kırığı: Jefferson kırığı: transvers ligaman, 7 mm.",
+    "Odontoid kırığı tip I-II-III-IIIA: Odontoid kırığı tip I-II-III-IIIA.",
+    "Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid: Tip II ve IIIA %80-90 konservatifle iyileşmez; transodontoid vida.",
+    "Transodontoid vida grafisi: Transodontoid vida grafisi.",
+    "Hangman kırığı: Hangman kırığı: C2 pars interartikülaris.",
+    "Hangman tip I-II-III: Hangman tip I-II-III.",
+    "Hangman tip 1 görüntü: Hangman tip 1 görüntü.",
+    "Hangman tip 2 instabil: Hangman tip 2 instabil.",
+    "Hangman tip 3 instabil: Hangman tip 3 instabil.",
+    "Alt servikal travmalar: Alt servikal travmalar: fleksiyon, ekstansiyon, burst.",
+    "Hiperfleksiyon C5-6 dislokasyon: Hiperfleksiyon C5-6 dislokasyon.",
+    "Hiperekstansiyon C2 teardrop: Hiperekstansiyon C2 teardrop.",
+    "C4 burst kırığı: C4 burst kırığı.",
+    "C4 burst postoperatif: C4 burst postoperatif.",
+    "C6-7 dislokasyon miyelomalazi: C6-7 dislokasyon miyelomalazi.",
+    "C5-6 travmatik disk hernisi: C5-6 travmatik disk hernisi.",
+    "Torakolomber bileşke T11-L1 Denis sınıflaması: Torakolomber bileşke T11-L1 Denis sınıflaması.",
+    "Denis üç kolon teorisi: Denis üç kolon teorisi.",
+    "Spinal stabilite: Spinal stabilite: stabil/instabil kolon tutulumu.",
+    "Olgu: Olgu: 30 yaş erkek düşme, kama kompresyon.",
+    "Torakal kama kompresyon ve dislokasyon, kord ödemi: Torakal kama kompresyon ve dislokasyon, kord ödemi.",
+    "L1 burst kırığı: L1 burst kırığı.",
+    "T12-L1 fleksiyon distraksiyon dislokasyonu: T12-L1 fleksiyon distraksiyon dislokasyonu.",
+    "Cerrahi kararda önemli etkenler: Cerrahi kararda önemli etkenler.",
+    "Konservatif tedavi: Konservatif tedavi: stabil, kanal basısı yok; kama <%50 takip.",
+    "Cerrahi tedavi endikasyonları ve amacı: Cerrahi tedavi endikasyonları ve amacı.",
+    "Burst kırığı çizim + BT: Burst kırığı çizim + BT.",
+    "Kompresyon kırığı: Kompresyon kırığı.",
+    "Lomber kırık ameliyat öncesi/sonrası: Lomber kırık ameliyat öncesi/sonrası.",
+    "Torakal kırık ameliyat: Torakal kırık ameliyat.",
+    "L2 burst kırığı: L2 burst kırığı.",
+    "T12-L1 dekompresyon + posterior stabilizasyon: T12-L1 dekompresyon + posterior stabilizasyon.",
+    "Tip 2 odontoid kırığı BT: Tip 2 odontoid kırığı BT.",
+    "Torakolomber kırık postop: Torakolomber kırık postop.",
+    "Spinal yaralanma çizimi: Spinal yaralanma çizimi.",
+    "Ağız açık grafi (odontoid): Ağız açık grafi (odontoid).",
+    "Lomber kırık BT/3B: Lomber kırık BT/3B.",
+    "Servikal BT sagittal: Servikal BT sagittal.",
+    "Servikal yan grafi: Servikal yan grafi."
+   ],
+   "v": "7512eb0b8f"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Atlas (C1) kırığının Jefferson kırığı olduğu 2023-2024 ve 2024-2025 sınavlarında soruldu. Sorular \"hangi kırık hangi omur, en sık yer, stabil ya da instabil, cerrahi eşiği\" türündedir.",
+   "maddeler": [
+    {
+     "baslik": "Atlas kırığı: Jefferson kırığı",
+     "metin": "Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+     "neden": "2023-2024 ve 2024-2025 sınavlarında soruldu: C1 kırığı Jefferson kırığıdır.",
+     "s": [
+      19
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Denis üç kolon teorisi ve stabilite",
+     "metin": "Denis'e göre orta kolon PLL, disk arka kısmı ve korpusun 1/3 arka kısmıdır; orta kolon tutuluşu instabildir.",
+     "neden": "Sınıflama ve stabilite kararı; spinal travmanın cerrahi kararındaki temel kavram.",
+     "s": [
+      36,
+      37
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Odontoid kırığı tipleri ve tedavisi",
+     "metin": "Odontoid tip II kırığı kaidesinden kırıktır; tip II ve IIIA kırıklar %80-90 konservatifle iyileşmez, ideal tedavi transodontoid vida fiksasyonudur.",
+     "neden": "Sınıflama ve tedavi seçimi; tip numarası ile tedavi eşleşmesi sınav kalıbına uygun.",
+     "s": [
+      20,
+      21
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Asılan adam kırığı: C2 pars interartikülaris",
+     "metin": "Asılan adam (Hangman) kırığında C2 pars interartikülarislerinden kırılarak C2 cismi öne, arka elemanlar arkaya kayar.",
+     "neden": "Jefferson kırığı çıkmışında çeldirici olarak geçiyor; ters yönden eşleştirme sorusuna uygun.",
+     "s": [
+      23,
+      24
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Stabilite ve instabilite tanımı",
+     "metin": "Normal hareketler ve fizyolojik sınırdaki yük altında nörolojik hasara neden olabilecek her spinal yaralanma instabil kabul edilir.",
+     "neden": "Kırık tiplerinin ve tedavi kararının temelindeki tanım; stabil ya da instabil ayrımı soru kökünde sık geçer.",
+     "s": [
+      12
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Dekompresyon cerrahisinin endikasyonu",
+     "metin": "Dekompresyon amaçlı cerrahi, inkomplet yaralanma ile kanalda disk ya da kemik bulunduğunda yapılır.",
+     "neden": "Tedavi endikasyonu sorusu; konservatif izlenen durumlar doğal çeldiricidir.",
+     "s": [
+      44
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Torakolomber kırıkta konservatif ve cerrahi karar",
+     "metin": "Kama kompresyon kırığında %50'nin altında çökme varsa takip edilebilir; %50'den fazla çökme, instabil patlama kırığı ve kırık-dislokasyon cerrahidir.",
+     "neden": "Sayısal eşikli tedavi kararı; slaytta tedavi seçimi olarak verilmiş.",
+     "s": [
+      43,
+      44
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Burst kırığı: aksiyel yüklenme",
+     "metin": "Alt servikal omurgada burst (patlama) kırığı aksiyel yüklenmeyle oluşur.",
+     "neden": "Mekanizma–kırık eşleme sorusu; fleksiyon ve ekstansiyon kırıkları doğal çeldiricidir.",
+     "s": [
+      28,
+      31
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Atlas (C1) kırığının Jefferson kırığı olduğu 2023-2024 ve 2024-2025 sınavlarında soruldu. Sorular \"hangi kırık hangi omur, en sık yer, stabil ya da instabil, cerrahi eşiği\" türündedir.",
+    "Atlas kırığı: Jefferson kırığı: Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+    "Denis üç kolon teorisi ve stabilite: Denis'e göre orta kolon PLL, disk arka kısmı ve korpusun 1/3 arka kısmıdır; orta kolon tutuluşu instabildir.",
+    "Odontoid kırığı tipleri ve tedavisi: Odontoid tip II kırığı kaidesinden kırıktır; tip II ve IIIA kırıklar %80-90 konservatifle iyileşmez, ideal tedavi transodontoid vida fiksasyonudur.",
+    "Asılan adam kırığı: C2 pars interartikülaris: Asılan adam (Hangman) kırığında C2 pars interartikülarislerinden kırılarak C2 cismi öne, arka elemanlar arkaya kayar.",
+    "Stabilite ve instabilite tanımı: Normal hareketler ve fizyolojik sınırdaki yük altında nörolojik hasara neden olabilecek her spinal yaralanma instabil kabul edilir.",
+    "Dekompresyon cerrahisinin endikasyonu: Dekompresyon amaçlı cerrahi, inkomplet yaralanma ile kanalda disk ya da kemik bulunduğunda yapılır.",
+    "Torakolomber kırıkta konservatif ve cerrahi karar: Kama kompresyon kırığında %50'nin altında çökme varsa takip edilebilir; %50'den fazla çökme, instabil patlama kırığı ve kırık-dislokasyon cerrahidir.",
+    "Burst kırığı: aksiyel yüklenme: Alt servikal omurgada burst (patlama) kırığı aksiyel yüklenmeyle oluşur."
+   ],
+   "v": "cac308aab3"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 2 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2023-2024",
+     "metin": "C1 vertebranın burst (patlama) tipi kırığı aşağıdakilerden hangisidir?",
+     "cevap": "Jefferson kırığı",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Aşağıdakilerden hangisi C1 (atlas) vertebrasının kırığıdır?",
+     "cevap": "Jefferson kırığı",
+     "s": [
+      19
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 2 çıkmış soru var.",
+    "2023-2024: C1 vertebranın burst (patlama) tipi kırığı aşağıdakilerden hangisidir?",
+    "Cevap: Jefferson kırığı.",
+    "2024-2025: Aşağıdakilerden hangisi C1 (atlas) vertebrasının kırığıdır?",
+    "Cevap: Jefferson kırığı."
+   ],
+   "v": "1f60adc55c"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%38) ve mekanizma (%22) sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%54) ve anlama ve ilişki kurma (%38) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%46) ve doğru ifadeyi bulma (%19) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%38) ve mekanizma (%22) sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%54) ve anlama ve ilişki kurma (%38) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+   ],
+   "v": "2f1ded93b6"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Atlas kırığı: Jefferson kırığı",
+     "metin": "2023-2024 ve 2024-2025 sınavlarında soruldu: C1 kırığı Jefferson kırığıdır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Atlas kırığı: Jefferson kırığı: 2023-2024 ve 2024-2025 sınavlarında soruldu: C1 kırığı Jefferson kırığıdır.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "043b41febd"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders omurga anatomisini, omurga yaralanmalarının nedenlerini ve bölgesel sıklığını, stabilite kavramını, üst ve alt servikal kırıkları, torakolomber kırıkları, Denis üç kolon sınıflamasını ve tedavi kararını anlatır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders omurga anatomisini, omurga yaralanmalarının nedenlerini ve bölgesel sıklığını, stabilite kavramını, üst ve alt servikal kırıkları, torakolomber kırıkları, Denis üç kolon sınıflamasını ve tedavi kararını anlatır."
+   ],
+   "v": "6f9287f327"
+  },
+  {
+   "id": "2b04-10",
+   "baslik": "Stabilite ve instabilite tanımı",
+   "giris": "Normal hareketler ve fizyolojik sınırdaki yük altında nörolojik hasara neden olabilecek her spinal yaralanma instabil kabul edilir.",
+   "s": [
+    12
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Normal hareketler sırasında ve fizyolojik sınırdaki yük altında potansiyel olarak nörolojik hasara neden olabilecek her türlü spinal yaralanma instabil kabul edilir."
+    },
+    {
+     "metin": "İnstabil omurga, dışarıdan yeni bir travma olmadan, hastanın günlük hareketleriyle bile omuriliği zedeleyebilir."
+    },
+    {
+     "metin": "Stabil ya da instabil ayrımı, cerrahi kararda önemli etkenlerin ilkidir; kırık şekli stabil ya da instabil diye değerlendirilir."
+    },
+    {
+     "metin": "Denis sınıflaması bu kavramı kolon tutuluşuna göre somutlaştırır."
+    }
+   ],
+   "klip": "o-2b04-10",
+   "ses": [
+    "Stabilite ve instabilite tanımı.",
+    "Normal hareketler ve fizyolojik sınırdaki yük altında nörolojik hasara neden olabilecek her spinal yaralanma instabil kabul edilir.",
+    "Normal hareketler sırasında ve fizyolojik sınırdaki yük altında potansiyel olarak nörolojik hasara neden olabilecek her türlü spinal yaralanma instabil kabul edilir.",
+    "İnstabil omurga, dışarıdan yeni bir travma olmadan, hastanın günlük hareketleriyle bile omuriliği zedeleyebilir.",
+    "Stabil ya da instabil ayrımı, cerrahi kararda önemli etkenlerin ilkidir; kırık şekli stabil ya da instabil diye değerlendirilir.",
+    "Denis sınıflaması bu kavramı kolon tutuluşuna göre somutlaştırır."
+   ],
+   "v": "8ccdabbbf7"
+  },
+  {
+   "id": "2b04-01",
+   "baslik": "Atlas kırığı: Jefferson kırığı",
+   "giris": "Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+   "s": [
+    19
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Atlas, yani C1 vertebrasının kırığı Jefferson kırığı olarak adlandırılır."
+    },
+    {
+     "metin": "Genellikle transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur."
+    },
+    {
+     "metin": "Yana kayan artiküler kütlelerin taşma uzunluklarının toplamı 7 mm'den fazlaysa transvers ligaman kopmuş kabul edilir ve cerrahi gündeme gelebilir."
+    },
+    {
+     "metin": "Odontoid kırığı tip I, II, III ve IIIA; asılan adam kırığında C2 pars interartikülaristen kırılır."
+    }
+   ],
+   "klip": "o-2b04-01",
+   "ses": [
+    "Atlas kırığı: Jefferson kırığı.",
+    "Atlas (C1) kırığı Jefferson kırığıdır; transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+    "Atlas, yani C1 vertebrasının kırığı Jefferson kırığı olarak adlandırılır.",
+    "Genellikle transvers ligaman yetersizliği atlantoaksiyel instabiliteye neden olur.",
+    "Yana kayan artiküler kütlelerin taşma uzunluklarının toplamı 7 mm'den fazlaysa transvers ligaman kopmuş kabul edilir ve cerrahi gündeme gelebilir.",
+    "Odontoid kırığı tip I, II, III ve IIIA; asılan adam kırığında C2 pars interartikülaristen kırılır."
+   ],
+   "v": "820fc08135"
+  },
+  {
+   "id": "2b04-05",
+   "baslik": "Odontoid kırığı tipleri ve tedavisi",
+   "giris": "Odontoid tip II kırığı kaidesinden kırıktır; tip II ve IIIA kırıklar %80-90 konservatifle iyileşmez, ideal tedavi transodontoid vida fiksasyonudur.",
+   "s": [
+    20,
+    21
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Odontoidin tepesi kırıktır, genellikle avulsiyon kırığıdır; konservatif tedaviyle iyileşir."
+    },
+    {
+     "metin": "Odontoid kaidesinden kırılmıştır."
+    },
+    {
+     "metin": "Odontoid, vertebra cisminin bir kısmıyla birlikte kırılır."
+    },
+    {
+     "metin": "Odontoid kaidesinde parçalı kırık vardır."
+    },
+    {
+     "metin": "Tip II ve IIIA kırıklar %80-90 oranında konservatif tedaviyle iyileşmez; hastaların büyük kısmı nörolojik olarak normaldir; ideal tedavi transodontoid vida ile fiksasyondur."
+    }
+   ],
+   "klip": "o-2b04-05",
+   "ses": [
+    "Odontoid kırığı tipleri ve tedavisi.",
+    "Odontoid tip II kırığı kaidesinden kırıktır; tip II ve IIIA kırıklar %80-90 konservatifle iyileşmez, ideal tedavi transodontoid vida fiksasyonudur.",
+    "Odontoidin tepesi kırıktır, genellikle avulsiyon kırığıdır; konservatif tedaviyle iyileşir.",
+    "Odontoid kaidesinden kırılmıştır.",
+    "Odontoid, vertebra cisminin bir kısmıyla birlikte kırılır.",
+    "Odontoid kaidesinde parçalı kırık vardır.",
+    "Tip II ve IIIA kırıklar %80-90 oranında konservatif tedaviyle iyileşmez; hastaların büyük kısmı nörolojik olarak normaldir; ideal tedavi transodontoid vida ile fiksasyondur."
+   ],
+   "v": "62ee20a83a"
+  },
+  {
+   "id": "2b04-11",
+   "baslik": "Tip I odontoid kırığı: tepe avulsiyonu",
+   "giris": "Tip I odontoid kırığında odontoidin tepesi kırıktır; genellikle avulsiyon kırığıdır ve konservatif tedavi ile iyileşir.",
+   "s": [
+    20
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Odontoidin tepesi kırıktır; genellikle avulsiyon kırığıdır ve konservatif tedavi ile iyileşir."
+    },
+    {
+     "metin": "Odontoid kaidesinden kırılmıştır."
+    },
+    {
+     "metin": "Odontoid, vertebra cisminin bir kısmı ile birlikte kırılır."
+    },
+    {
+     "metin": "Odontoid kaidesinde parçalı kırık vardır."
+    },
+    {
+     "metin": "Tip II ve tip III A kırıkların %80-90'ı konservatif tedavi ile iyileşmez; bunlarda ideal tedavi transodontoid vida ile fiksasyondur."
+    }
+   ],
+   "klip": "o-2b04-11",
+   "ses": [
+    "Tip I odontoid kırığı: tepe avulsiyonu.",
+    "Tip I odontoid kırığında odontoidin tepesi kırıktır; genellikle avulsiyon kırığıdır ve konservatif tedavi ile iyileşir.",
+    "Odontoidin tepesi kırıktır; genellikle avulsiyon kırığıdır ve konservatif tedavi ile iyileşir.",
+    "Odontoid kaidesinden kırılmıştır.",
+    "Odontoid, vertebra cisminin bir kısmı ile birlikte kırılır.",
+    "Odontoid kaidesinde parçalı kırık vardır.",
+    "Tip II ve tip III A kırıkların %80-90'ı konservatif tedavi ile iyileşmez; bunlarda ideal tedavi transodontoid vida ile fiksasyondur."
+   ],
+   "v": "538a53df91"
+  },
+  {
+   "id": "2b04-06",
+   "baslik": "Asılan adam kırığı: C2 pars interartikülaris",
+   "giris": "Asılan adam (Hangman) kırığında C2 pars interartikülarislerinden kırılarak C2 cismi öne, arka elemanlar arkaya kayar.",
+   "s": [
+    23,
+    24
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "C2 pars interartikülarislerinden kırılır; C2 cismi öne, arka elemanlar arkaya kayar."
+    },
+    {
+     "metin": "Kırık kemikler arasında 3 mm'den az ayrılma, öne açılanma yok."
+    },
+    {
+     "metin": "3 mm'den fazla ayrılma, öne disloke olur, açılanma var."
+    },
+    {
+     "metin": "Pars interartikülaris kırığıyla birlikte iki taraflı faset dislokasyonu vardır."
+    },
+    {
+     "metin": "Tip 2 ve tip 3 instabil olarak gösterilmiştir."
+    }
+   ],
+   "klip": "o-2b04-06",
+   "ses": [
+    "Asılan adam kırığı: C2 pars interartikülaris.",
+    "Asılan adam (Hangman) kırığında C2 pars interartikülarislerinden kırılarak C2 cismi öne, arka elemanlar arkaya kayar.",
+    "C2 pars interartikülarislerinden kırılır; C2 cismi öne, arka elemanlar arkaya kayar.",
+    "Kırık kemikler arasında 3 mm'den az ayrılma, öne açılanma yok.",
+    "3 mm'den fazla ayrılma, öne disloke olur, açılanma var.",
+    "Pars interartikülaris kırığıyla birlikte iki taraflı faset dislokasyonu vardır.",
+    "Tip 2 ve tip 3 instabil olarak gösterilmiştir."
+   ],
+   "v": "0096094849"
+  },
+  {
+   "id": "2b04-13",
+   "baslik": "Burst kırığı: aksiyel yüklenme",
+   "giris": "Alt servikal omurgada burst (patlama) kırığı aksiyel yüklenmeyle oluşur.",
+   "s": [
+    28,
+    31
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Alt servikal omurgada (C3-7) aksiyel yüklenmeyle, yani kuvvetin omurga ekseni boyunca binmesiyle oluşur."
+    },
+    {
+     "metin": "Aksiyel yüklenme sonucu oluşan C4 burst kırığı ve postoperatif yan grafisi gösterilir."
+    },
+    {
+     "metin": "Korpusta kama tipi kırık, PLL ve interspinöz bağ hasarı, travmatik disk, faset kırığı-subluksasyon."
+    },
+    {
+     "metin": "ALL yırtığı, korpus anterior gözyaşı kırığı, posterior elemanlarda kırık."
+    },
+    {
+     "metin": "İnstabil patlama kırığı cerrahi tedavi endikasyonudur."
+    }
+   ],
+   "klip": "o-2b04-13",
+   "ses": [
+    "Burst kırığı: aksiyel yüklenme.",
+    "Alt servikal omurgada burst (patlama) kırığı aksiyel yüklenmeyle oluşur.",
+    "Alt servikal omurgada (C3-7) aksiyel yüklenmeyle, yani kuvvetin omurga ekseni boyunca binmesiyle oluşur.",
+    "Aksiyel yüklenme sonucu oluşan C4 burst kırığı ve postoperatif yan grafisi gösterilir.",
+    "Korpusta kama tipi kırık, PLL ve interspinöz bağ hasarı, travmatik disk, faset kırığı-subluksasyon.",
+    "ALL yırtığı, korpus anterior gözyaşı kırığı, posterior elemanlarda kırık.",
+    "İnstabil patlama kırığı cerrahi tedavi endikasyonudur."
+   ],
+   "v": "3ba2e9d3d8"
+  },
+  {
+   "id": "2b04-04",
+   "baslik": "Denis üç kolon teorisi ve stabilite",
+   "giris": "Denis'e göre orta kolon PLL, disk arka kısmı ve korpusun 1/3 arka kısmıdır; orta kolon tutuluşu instabildir.",
+   "s": [
+    36,
+    37
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "ALL, disk ön kısmı, korpusun 2/3 ön kısmı."
+    },
+    {
+     "metin": "PLL, disk arka kısmı, korpusun 1/3 arka kısmı."
+    },
+    {
+     "metin": "Posterior kemik elemanlar, posterior ligaman kompleksi, supraspinöz ve interspinöz ligaman, ligamentum flavum, faset eklemler."
+    },
+    {
+     "metin": "Tek kolon ya da 2 komşu olmayan kolon tutuluşu."
+    },
+    {
+     "metin": "3 kolon, 2 komşu kolon ya da orta kolon tutuluşu."
+    },
+    {
+     "metin": "Normal hareketler sırasında ve fizyolojik sınırdaki yük altında nörolojik hasara neden olabilecek her yaralanma instabildir."
+    }
+   ],
+   "klip": "o-2b04-04",
+   "ses": [
+    "Denis üç kolon teorisi ve stabilite.",
+    "Denis'e göre orta kolon PLL, disk arka kısmı ve korpusun 1/3 arka kısmıdır; orta kolon tutuluşu instabildir.",
+    "ALL, disk ön kısmı, korpusun 2/3 ön kısmı.",
+    "PLL, disk arka kısmı, korpusun 1/3 arka kısmı.",
+    "Posterior kemik elemanlar, posterior ligaman kompleksi, supraspinöz ve interspinöz ligaman, ligamentum flavum, faset eklemler.",
+    "Tek kolon ya da 2 komşu olmayan kolon tutuluşu.",
+    "3 kolon, 2 komşu kolon ya da orta kolon tutuluşu.",
+    "Normal hareketler sırasında ve fizyolojik sınırdaki yük altında nörolojik hasara neden olabilecek her yaralanma instabildir."
+   ],
+   "v": "30a73314c0"
+  },
+  {
+   "id": "2b04-17",
+   "baslik": "Cerrahi kararda önemli etkenler",
+   "giris": "Cerrahi kararda fraktür şekli, omurilik tutuluşu, omurilik basısı, eşlik eden yaralanma, cerrahın deneyimi ve hasta yakınlarının arzusu önemlidir.",
+   "s": [
+    42
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Stabil ya da instabil."
+    },
+    {
+     "metin": "Total ya da parsiyel."
+    },
+    {
+     "metin": "Var ya da yok."
+    },
+    {
+     "metin": "Şiddetli ya da hafif."
+    },
+    {
+     "metin": "Var ya da yok."
+    },
+    {
+     "metin": "Kararda dikkate alınır."
+    },
+    {
+     "metin": "Vertebra stabil ve kanal basısı yoksa konservatif tedaviye devam edilebilir."
+    }
+   ],
+   "klip": "o-2b04-17",
+   "ses": [
+    "Cerrahi kararda önemli etkenler.",
+    "Cerrahi kararda fraktür şekli, omurilik tutuluşu, omurilik basısı, eşlik eden yaralanma, cerrahın deneyimi ve hasta yakınlarının arzusu önemlidir.",
+    "Stabil ya da instabil.",
+    "Total ya da parsiyel.",
+    "Var ya da yok.",
+    "Şiddetli ya da hafif.",
+    "Var ya da yok.",
+    "Kararda dikkate alınır.",
+    "Vertebra stabil ve kanal basısı yoksa konservatif tedaviye devam edilebilir."
+   ],
+   "v": "62adefe8f6"
+  },
+  {
+   "id": "2b04-08",
+   "baslik": "Torakolomber kırıkta konservatif ve cerrahi karar",
+   "giris": "Kama kompresyon kırığında %50'nin altında çökme varsa takip edilebilir; %50'den fazla çökme, instabil patlama kırığı ve kırık-dislokasyon cerrahidir.",
+   "s": [
+    43,
+    44
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Vertebra stabil ve kanal basısı yoksa sürdürülebilir; kama kompresyon kırığında %50'nin altında çökme varsa takip edilir."
+    },
+    {
+     "metin": "%50'den fazla çökmeli kompresyon kırığı, instabil patlama kırığı, kırık-dislokasyon."
+    },
+    {
+     "metin": "İnkomplet yaralanmada kanalda disk ya da kemik varsa dekompresyon; enstrümanla stabilizasyon."
+    },
+    {
+     "metin": "Kırık şekli, omurilik tutuluşu ve basısı, eşlik eden yaralanma, cerrahın deneyimi, hasta yakınlarının arzusu."
+    }
+   ],
+   "klip": "o-2b04-08",
+   "ses": [
+    "Torakolomber kırıkta konservatif ve cerrahi karar.",
+    "Kama kompresyon kırığında %50'nin altında çökme varsa takip edilebilir; %50'den fazla çökme, instabil patlama kırığı ve kırık-dislokasyon cerrahidir.",
+    "Vertebra stabil ve kanal basısı yoksa sürdürülebilir; kama kompresyon kırığında %50'nin altında çökme varsa takip edilir.",
+    "%50'den fazla çökmeli kompresyon kırığı, instabil patlama kırığı, kırık-dislokasyon.",
+    "İnkomplet yaralanmada kanalda disk ya da kemik varsa dekompresyon; enstrümanla stabilizasyon.",
+    "Kırık şekli, omurilik tutuluşu ve basısı, eşlik eden yaralanma, cerrahın deneyimi, hasta yakınlarının arzusu."
+   ],
+   "v": "dd7c5d6a9e"
+  },
+  {
+   "id": "2b04-18",
+   "baslik": "Dekompresyon cerrahisinin endikasyonu",
+   "giris": "Dekompresyon amaçlı cerrahi, inkomplet yaralanma ile kanalda disk ya da kemik bulunduğunda yapılır.",
+   "s": [
+    44
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yüzde elliden fazla çökmeli kompresyon kırığı, instabil patlama kırığı ve kırık-dislokasyon."
+    },
+    {
+     "metin": "İnkomplet yaralanma ile birlikte kanalda disk ya da kemik bulunması."
+    },
+    {
+     "metin": "Enstrüman ile omurga sabitlenir."
+    },
+    {
+     "metin": "T12-L1 disloke olguda dekompresyon ve posterior stabilizasyon uygulanmıştır."
+    },
+    {
+     "metin": "Vertebra stabil ve kanal basısı yoksa konservatif devam edilebilir."
+    }
+   ],
+   "klip": "o-2b04-18",
+   "ses": [
+    "Dekompresyon cerrahisinin endikasyonu.",
+    "Dekompresyon amaçlı cerrahi, inkomplet yaralanma ile kanalda disk ya da kemik bulunduğunda yapılır.",
+    "Yüzde elliden fazla çökmeli kompresyon kırığı, instabil patlama kırığı ve kırık-dislokasyon.",
+    "İnkomplet yaralanma ile birlikte kanalda disk ya da kemik bulunması.",
+    "Enstrüman ile omurga sabitlenir.",
+    "T12-L1 disloke olguda dekompresyon ve posterior stabilizasyon uygulanmıştır.",
+    "Vertebra stabil ve kanal basısı yoksa konservatif devam edilebilir."
+   ],
+   "v": "d1be14c793"
+  }
+ ]
+}

@@ -2048,3 +2048,12 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kural:** sınavı hazırlayan hocanın slaytı tek kaynaktır (anlatım, soru, önem); derse giren hocanın slaytı/sesi yalnız önem ipucudur,
   metinde "hoca vurguladı" denmez, onun slaytında olup sınav hocasının slaytında olmayan bilgi eklenmez. Kullanıcının bildirdiği geçmiş
   sorudan slaytta karşılığı olmayan (servikal travmada immobilizasyon) anlatıma uydurulmaz, kullanıcıya bildirilir.
+
+## H478 — LLM kilidi masaüstü Claude oturumunu zamanlayıcı sandı (2026-11-03)
+- **Belirti:** `cizim_uret.py` kullanıcı "çizimi yap" dediği hâlde `MEDS_LLM_ELLE=1` ile de çıkış 75 verdi; yerleştirme (LLM'siz) adımı da durdu.
+- **Kök neden:** `otomasyon/llm_kilit.py` `INVOCATION_ID` varsa zamanlayıcı sayar; Claude masaüstü oturumu systemd kullanıcı biriminden
+  başladığı için bu değişken etkileşimli oturumda da tanımlı. Ayrıca kilit betiğin başında: LLM çağırmayan yerleştirme de kilitleniyor.
+- **Çözüm (bu sefer):** kullanıcının açık onayıyla (2026-11-03) yalnız k2-12/k2-64 yerleştirmesi `env -u INVOCATION_ID MEDS_LLM_ELLE=1` + her
+  çağrıyı reddeden sahte `claude` ile koşturuldu; anlam denetimi ayrı ajanla yapıldı. k2-13/k2-14'te ajanlar bunu onaysız yapmıştı (kayıt).
+- **Önleme:** ajan kilidi kendi başına aşmaz; takılırsa ana oturum kullanıcıya sorar. Kalıcı çözüm kullanıcı kararı bekler: kilidin yalnız
+  `claude()`/`anlam_denetimi()` çağrısına taşınması ya da masaüstü oturumunu tanıyan ayrı bayrak (kilit gevşetme sayılır → kullanıcı onayı şart).

@@ -1,7 +1,7 @@
 {
  "surum": 2,
- "metinHash": "0838b6a5708dd350a9fa7c75c0fabbe54a284576",
- "dogrulama": "kullanıcı bildirimi (Sinan Apaydın 2025-26) + ham belgeli banka; slayt kanıtı elle (2026-11-03)",
+ "metinHash": "5820cbe0d7239f9b23745348feee1095550ffa7b",
+ "dogrulama": "kullanıcı bildirimi (Sinan Apaydın 2025-26) + ham belgeli banka; slayt kanıtı elle (2026-11-03, bölme sonrası)",
  "q": [
   {
    "id": "d3-k2-bey-001",
@@ -47,38 +47,6 @@
    "dogrulandi": true,
    "neden": "Karşıtı s34: SDH konkav.",
    "p": 18,
-   "c": 0,
-   "skor": 1.0,
-   "d": 0
-  },
-  {
-   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-2",
-   "kok": "C1 vertebranın burst (patlama) tipi kırığı aşağıdakilerden hangisidir?",
-   "cevap": "Jefferson kırığı",
-   "yil": "2023-2024",
-   "s": 95,
-   "seviye": "dogrudan",
-   "kanit": "transvers ligaman yetersizliği atlanto aksiyel instabiliteye neden olur",
-   "kaynak": "Nöropsikiyatri gis kardiyo -2023-2024-Çıkmışları_240625_053302 (2).pdf",
-   "dogrulandi": true,
-   "neden": "s95 başlığı 'Atlas (C1) Kırığı (Jefferson Kırığı)'.",
-   "p": 92,
-   "c": 0,
-   "skor": 1.0,
-   "d": 0
-  },
-  {
-   "id": "d3k2-2024-2025-h46e",
-   "kok": "Aşağıdakilerden hangisi C1 (atlas) vertebrasının kırığıdır?",
-   "cevap": "Jefferson kırığı",
-   "yil": "2024-2025",
-   "s": 95,
-   "seviye": "dogrudan",
-   "kanit": "transvers ligaman yetersizliği atlanto aksiyel instabiliteye neden olur",
-   "kaynak": "D3K2 2024-2025.pdf (öğrenci hatırlaması)",
-   "dogrulandi": true,
-   "neden": "Aynı bilgi, ikinci yıl.",
-   "p": 92,
    "c": 0,
    "skor": 1.0,
    "d": 0

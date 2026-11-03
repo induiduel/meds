@@ -1,35 +1,34 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 628,
-  "baslik": "Beyin ve Sinir Cerrahisi: en önemliler, sesli çözücü ve hoca soruları",
+  "onem": 629,
+  "baslik": "Beyin Cerrahisi: Spinal Travmalar ayrı ders, canlı çizimler",
   "maddeler": [
-    "Sinan Apaydın hocanın slaytlarına göre: geçen yıl sorulanlar en üstte ve derste yanıp sönen çıkmış işaretiyle."
+    "Kafa ve Omurilik Yaralanmaları ikiye bölündü: Kafa Travmaları ve Spinal Travmalar.",
+    "4 derste slayt üstü canlı çizim: anlatılan lezyon ve yapı işaretleniyor."
   ],
   "eklenen": [
-    "Beyin Cerrahisi en önemliler (103 madde) ve 158 soruluk sesli çözücü",
-    "3 derste 25 'hocanın sorabileceği' ara soru",
-    "Terim/kısaltma yardımcısı, ders analizi ve özet, ders içerik sayfaları"
+    "Spinal Travmalar sesli dersi, en önemlileri, sesli çözücüsü ve ara soruları",
+    "Beyin Cerrahisi derslerinde canlı çizim"
   ],
-  "degisen": [],
-  "duzeltilen": [
-    "Çok setli çözücüsü olan derslerde ders özetinin görünmemesi (H476)"
+  "degisen": [
+    "Kafa ve Omurilik Yaralanmaları → Kafa Travmaları (yalnız kafa travması PDF'i)"
   ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Beyin ve Sinir Cerrahisi dersleri",
+      "ad": "Spinal Travmalar dersi",
       "nerede": {
         "ad": "Ders çalış › Kurul 2 › Beyin Cerrahisi",
-        "yol": "/dersler/ders/kurul2/k2-12-kafa-ve-omurilik-yaralanmalari"
+        "yol": "/dersler/ders/kurul2/k2-64-spinal-travmalar"
       },
-      "amac": "Sınavı hazırlayan Sinan Apaydın hocanın slaytlarıyla sesli ders, en önemliler ve soru çözümü.",
+      "amac": "Sinan Apaydın hocanın spinal travmalar slaytı artık ayrı bir ders.",
       "islevler": [
-        "Kafa ve Omurilik Yaralanmaları, Omurga Tümörleri, Beyin Tümörleri sesli dersleri",
-        "Geçen yıl sorulan yerler derste işaretli",
-        "En önemliler listesi ve şık şık sesli çözücü",
-        "Derste 'hocanın sorabileceği soru' araları"
+        "Sesli ders ve canlı çizim",
+        "En önemliler ve sesli çözücü",
+        "Jefferson kırığı (C1) geçen yıl soruldu, derste işaretli"
       ],
-      "ipucu": "Servikal travmada görüntülemeden önce ilk öncelik immobilizasyondur: geçen yıl soruldu ama slaytta yok, ayrıca bil."
+      "ipucu": "Servikal travmada görüntülemeden önce ilk öncelik immobilizasyondur: geçen yıl soruldu, slaytta yok."
     }
   ]
 }
