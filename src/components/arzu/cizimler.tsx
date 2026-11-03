@@ -61,9 +61,8 @@ export const TilkiYuruyen: React.FC<{ className?: string; width?: number }> = ({
       <path d="M58 77 C62 68 90 64 118 60 C119 69 108 77 92 77 Z" fill={T.krem} />
       <path d="M44 72 C50 76 60 77 70 77 L54 77 C50 77 46 75 44 72 Z" fill={T.turuncuGolge} opacity=".5" />
     </g>
-    {/* yakın bacaklar */}
+    {/* yakın arka bacak */}
     <g transform="translate(50 60)"><Bacak sinif="ar-bacak-ya" arka /></g>
-    <g transform="translate(101 60)"><Bacak sinif="ar-bacak-yo" /></g>
     {/* baş */}
     <g transform="translate(106 20)"><g className="ar-bas">
       <g className="ar-kulak ar-kulak-a"><path d="M9 7 L3 -14 L24 1 Z" fill={T.turuncu} /><path d="M10 4 L6 -9 L20 1 Z" fill={T.koyu} opacity=".75" /></g>
@@ -75,6 +74,8 @@ export const TilkiYuruyen: React.FC<{ className?: string; width?: number }> = ({
       <circle cx="45.2" cy="20.2" r=".8" fill="#fff" opacity=".7" />
       <circle cx="29" cy="24" r="3.2" fill={T.yanak} opacity=".45" />
     </g></g>
+    {/* yakın ön bacak: başın önünde (selam verirken pati yüzün önüne kalkar) */}
+    <g transform="translate(101 60)"><Bacak sinif="ar-bacak-yo" /></g>
   </svg>
 );
 
@@ -209,6 +210,54 @@ export const KittyVeBatman: React.FC<{ className?: string; width?: number }> = (
         <path d="M8 56 L33 61 M6 67 L33 67 M8 78 L33 73" />
         <path d="M122 56 L97 61 M124 67 L97 67 M122 78 L97 73" />
       </g>
+    </g>
+  </svg>
+);
+
+
+/* ───────────────────────────── Zıplayan tavşan (yan görünüm, sağa bakar) ───────────────────────────── */
+const TV = { govde: '#F4F1F6', golge: '#D9D3E0', ic: '#F9B8C8', koyu: '#3A3340', burun: '#E98AA3' };
+
+export const TavsanZiplayan: React.FC<{ className?: string; width?: number }> = ({ className = '', width = 110 }) => (
+  <svg viewBox="0 0 140 110" width={width} height={width * 110 / 140} className={`ar-tavsan ${className}`} aria-hidden="true">
+    {/* kulaklar (arkadaki gölgeli) */}
+    <g className="ar-tv-kulak ar-tv-kulak-a">
+      <path d="M110 42 C110 16 122 2 129 8 C135 14 128 32 120 46 Z" fill={TV.golge} />
+      <path d="M114 42 C115 22 123 12 127 15 C130 19 125 32 120 44 Z" fill={TV.ic} opacity=".75" />
+    </g>
+    <g className="ar-tv-kulak ar-tv-kulak-o">
+      <path d="M98 42 C94 14 104 0 111 5 C118 10 114 30 110 46 Z" fill={TV.govde} />
+      <path d="M102 42 C101 20 107 10 111 12 C115 16 111 30 108 44 Z" fill={TV.ic} />
+    </g>
+    {/* kuyruk */}
+    <circle cx="30" cy="74" r="9" fill={TV.govde} />
+    <circle cx="28" cy="76" r="5" fill="#fff" opacity=".85" />
+    {/* uzak ön bacak */}
+    <g className="ar-tv-on2"><path d="M96 76 C94 84 96 92 100 96 L108 96 C110 92 108 84 106 76 Z" fill={TV.golge} /><ellipse cx="105" cy="96" rx="6" ry="3.2" fill={TV.golge} /></g>
+    {/* gövde */}
+    <g className="ar-tv-govde">
+      <path d="M40 70 C40 48 66 40 90 46 C104 50 110 60 108 74 C106 88 90 94 68 94 C50 94 40 86 40 70 Z" fill={TV.govde} />
+      <path d="M58 86 C70 92 86 92 100 84 C96 92 82 95 68 94 C62 93 59 90 58 86 Z" fill={TV.golge} opacity=".55" />
+    </g>
+    {/* arka kalça + uzun arka ayak */}
+    <g className="ar-tv-arka">
+      <circle cx="54" cy="74" r="21" fill={TV.govde} />
+      <path d="M46 62 C40 70 42 84 52 90 C44 86 38 76 42 66 Z" fill={TV.golge} opacity=".5" />
+      <path d="M36 92 C36 86 74 85 80 91 C82 97 38 100 36 92 Z" fill={TV.govde} />
+      <path d="M40 97 C52 98 68 97 78 94" stroke={TV.golge} strokeWidth="1.3" strokeLinecap="round" fill="none" />
+    </g>
+    {/* yakın ön bacak */}
+    <g className="ar-tv-on"><path d="M86 78 C84 86 86 94 90 96 L98 96 C100 92 98 84 96 78 Z" fill={TV.govde} /><ellipse cx="95" cy="96" rx="6" ry="3.2" fill={TV.govde} /><path d="M90 96 L98 96" stroke={TV.golge} strokeWidth="1" /></g>
+    {/* baş */}
+    <g className="ar-tv-bas">
+      <path d="M88 58 C88 44 98 34 112 36 C126 38 132 50 130 62 C128 72 116 76 106 74 C96 72 88 68 88 58 Z" fill={TV.govde} />
+      <path d="M108 66 C116 64 124 66 128 62 C126 70 116 76 106 74 C106 70 106 67 108 66 Z" fill="#fff" opacity=".6" />
+      <ellipse cx="113" cy="54" rx="2.8" ry="3.4" fill={TV.koyu} />
+      <circle cx="112.1" cy="52.7" r="1" fill="#fff" />
+      <path d="M126 60 l4.5 -1.6 l-1.2 4.4 z" fill={TV.burun} />
+      <path d="M120 64 Q124 67 128 64" stroke={TV.koyu} strokeWidth="1.1" strokeLinecap="round" fill="none" />
+      <g stroke={TV.koyu} strokeWidth=".9" strokeLinecap="round" opacity=".5"><path d="M122 62 L136 58 M122 63 L137 64" /></g>
+      <circle cx="105" cy="64" r="3.6" fill={TV.ic} opacity=".6" />
     </g>
   </svg>
 );

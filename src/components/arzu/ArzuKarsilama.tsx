@@ -7,6 +7,7 @@ import { createPortal } from 'react-dom';
 import { Kalp, KittyVeBatman, TilkiOturan } from './cizimler';
 import { gununCumlesi, karsilamaSelam } from './mesajlar';
 import { kalpPatlat } from './kalpPatlamasi';
+import { bugunOzelGun } from './ozelGunler';
 
 type Props = { onKapat: () => void };
 
@@ -15,12 +16,9 @@ const KALP_SAYISI = 16;
 export default function ArzuKarsilama({ onKapat }: Props) {
   const [kapaniyor, setKapaniyor] = useState(false);
   const btnRef = useRef<HTMLButtonElement>(null);
-  const selam = useMemo(() => karsilamaSelam(), []);
-  const cumle = useMemo(() => {
-    const d = new Date();
-    if (d.getMonth() === 1 && d.getDate() === 14) return 'Sevgililer günün kutlu olsun. İyi ki seninleyim.';
-    return gununCumlesi();
-  }, []);
+  const ozel = useMemo(() => bugunOzelGun(), []);
+  const selam = useMemo(() => ozel?.selam || karsilamaSelam(), [ozel]);
+  const cumle = useMemo(() => ozel?.cumle || gununCumlesi(), [ozel]);
   const isiltilar = useMemo(() => Array.from({ length: 12 }, (_, i) => ({ x: (i * 83 + 7) % 100, y: (i * 47 + 11) % 100, g: (i * 0.37) % 3, s: 6 + (i % 3) * 3 })), []);
   const kalpler = useMemo(
     () => Array.from({ length: KALP_SAYISI }, (_, i) => ({
@@ -45,7 +43,12 @@ export default function ArzuKarsilama({ onKapat }: Props) {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') kapat(); };
     window.addEventListener('keydown', onKey);
     const t = window.setTimeout(() => btnRef.current?.focus({ preventScroll: true }), 1400);
-    return () => { window.removeEventListener('keydown', onKey); window.clearTimeout(t); };
+    // Özel günde kalp yağmuru
+    const y = ozel ? window.setTimeout(() => {
+      const { innerWidth: w, innerHeight: h } = window;
+      [0.2, 0.5, 0.8].forEach((x, i) => window.setTimeout(() => kalpPatlat(w * x, h * 0.3, 20, 160), i * 220));
+    }, 1600) : undefined;
+    return () => { window.removeEventListener('keydown', onKey); window.clearTimeout(t); window.clearTimeout(y); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

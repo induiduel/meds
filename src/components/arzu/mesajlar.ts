@@ -7,24 +7,24 @@ export type Fisilti = { metin: string };
 
 const GENEL: string[] = [
   'Seni seviyorum Arzu. Bugün de, yarın da.',
-  'Çalışırken bile aklımdasın.',
+  'Her daim aklımdasın.',
   'Yorulduysan biraz ara ver, acelesi yok.',
-  'Su içmeyi unutma.',
+  'Suyunu ve ilaçlarını unutma.',
   'Bugün bir şeyler yedin mi?',
-  'Gözlerin yorulduysa bir dakika kapat.',
+  'Gözlerin yorulduysa gel yaslan omzuma',
   'İyi ki varsın.',
-  'Bugün nasıl geçiyor? Merak ediyorum.',
+  'Bugünün diğer günlerden güzel geçmesi ümidiyle',
   'Küçük bir not: seni seviyorum.',
-  'Zorlandığında bana yaz, birlikte bakarız.',
-  'Biraz gerin, omuzlarını indir.',
+  'Zorlandığında bana gel, birlikte halledelim.',
+  'Kral ben seni özlüyorum',
   'Bitirince haber ver, seni dinlemek istiyorum.',
 ];
 
 const DERS: string[] = [
   'Bu ders bitince biraz dinlen.',
   'Her ders bir adım. Seninle gurur duyuyorum.',
-  'Anlamadığın yer olursa not al, sonra birlikte bakarız.',
-  'Bir konu bittiyse kısa bir mola iyi gelir.',
+  'Anlamadığın yer olursa not al, sonra birlikte bakalım.',
+  'Bir konu bittiyse kısa bir mola iyi gelebilir belki.',
   'Zor konu olabilir, takılma; yavaş yavaş oturur.',
 ];
 
@@ -32,7 +32,7 @@ const SORU: string[] = [
   'Yanlış yaptıysan dert etme; şimdi öğrenmek sınavda öğrenmekten iyi.',
   'Bir soru daha bitti. Aferin.',
   'Acele etme, soruyu sonuna kadar oku.',
-  'Çeldiriciye takılma, bildiğin gibi çöz.',
+  'Yanlışlara takılma, bildiğin gibi çöz.',
   'Doğru sayısından çok ne öğrendiğin önemli.',
 ];
 

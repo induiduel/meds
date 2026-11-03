@@ -4,8 +4,10 @@
  * - Sekme simgesi tilki + kalp olur (çıkışta eski simge geri gelir)
  * - Karşılama ekranı: günde bir kez, siteye girdikten ~35 sn sonra (medsoru_arzu_karsilama_v1 = gün)
  * - Gezinen tilki, asılı kalp, köşeden bakan çift, fısıltı notları
- * - Klavye: metin alanı dışında "arzu" yazınca tilki geçidi + kalp yağmuru, "tilki" tek tilki, "kalp" patlama
+ * - Klavye: metin alanı dışında "arzu" yazınca tilki geçidi (sırayla) + kalp yağmuru, "tilki" tek tilki, "tavsan" tavşan, "kalp" patlama
  * - Dokunmatik: telefonu sallayınca tilki geçidi (sallama.ts), asılı kalbe uzun basınca karşılama, kalp avı (KalpAvi)
+ * - Küçük dokunuşlar (KucukDokunuslar): çift dokunma kalbi, sayfa sonu satırı, 11:11/22:22, 40 dk mola, sekme başlığı
+ * - Yoldaş tilki (Yoldas): gece uyuyan tilki, koşan tilkiye ikinci dokunuşta yanında kalan tilki; özel günler ozelGunler.ts
  */
 import React, { useEffect, useRef, useState } from 'react';
 import type { AppRoute } from '../../router';
@@ -17,6 +19,8 @@ import KalpAskisi from './KalpAskisi';
 import CiftGizli from './CiftGizli';
 import Fisiltilar from './Fisiltilar';
 import KalpAvi from './KalpAvi';
+import KucukDokunuslar from './KucukDokunuslar';
+import Yoldas from './Yoldas';
 import { sallamaDinle } from './sallama';
 import '../../styles/arzu.css';
 
@@ -97,6 +101,9 @@ export default function ArzuKatmani({ rota }: { rota: AppRoute }) {
       } else if (b.endsWith('tilki')) {
         tampon.current = '';
         window.dispatchEvent(new CustomEvent('arzu:tilki', { detail: { adet: 1 } }));
+      } else if (b.endsWith('tavsan') || b.endsWith('tavşan')) {
+        tampon.current = '';
+        window.dispatchEvent(new CustomEvent('arzu:tavsan', { detail: { adet: 1 } }));
       } else if (b.endsWith('kalp')) {
         tampon.current = '';
         kalpPatlat(window.innerWidth * (0.2 + Math.random() * 0.6), window.innerHeight * (0.25 + Math.random() * 0.4), 24, 180);
@@ -112,8 +119,10 @@ export default function ArzuKatmani({ rota }: { rota: AppRoute }) {
       <KalpAskisi onUcKez={() => setKarsilama(true)} />
       <GezinenTilki />
       <CiftGizli rota={rota} />
+      <Yoldas />
       <Fisiltilar rota={rota} />
       <KalpAvi rota={rota} />
+      <KucukDokunuslar rota={rota} />
     </>
   );
 }
