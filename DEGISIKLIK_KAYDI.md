@@ -1,3 +1,6 @@
+## 2026-11-03 (3) — Arzu katmanı yöneticiye de açık (onem 635)
+- `arzuKimlik.ts` izin listesine `ADMIN_EMAIL` eklendi: yönetici hesabı da karşılama/yaratık/kalp katmanını görür (kullanıcı kararı). Sürüm notu değişmedi.
+
 ## 2026-11-03 (2) — Arzu katmanı: yeni easter egg'ler, tek yaratık kuralı, tavşan (onem 632; sürüm notunda ANILMAZ)
 - Yeni: `KucukDokunuslar.tsx` (boş yere çift dokunma → kalp; uzun sayfa sonunda "Buraya kadar okudun"; 11:11/22:22 notu; 40 dk aralıksız → mola tilkisi + not; sekme gizlenince başlık "Tilki seni bekliyor"), `Yoldas.tsx` (gece 23–05 uyuyan tilki "z z z", dokununca uyanır; koşan tilkiye ikinci dokunuş → 5 dk yanında kalan tilki), `ozelGunler.ts` (14 Şubat + doldurulacak doğum günü/yıl dönümü satırları → karşılamada özel cümle + kalp yağmuru), tilki patileri (`.ar-pati`).
 - Kullanıcı kararı: yaratıklar aynı anda görünmez → `GezinenTilki.tsx` tek yaratık kuyruğu (geçit sırayla), yoldaş açıkken bekler (`arzu:yoldas-durum`); "selam" kipi: kenardan hızla gelir, pati sallar ("Selam!"), kaçar; tavşan eklendi (`TavsanZiplayan`, zıplama/kulak/arka ayak animasyonu, durup burun oynatma), klavye "tavsan".
