@@ -1,4 +1,7 @@
-## 2026-11-04 — Çevrimdışı ders PDF'leri internetsiz açılmıyordu (H481, dağıtılmadı)
+## 2026-11-04 (2) — İnternetsiz sesli derste PDF/slayt/çizim (H482)
+- `sw.js` `ARAMA_SIRASI`: sesli ders ve eski PDF önbellekleri eklendi (toplu indirmenin pdf.js yardımcıları bulunamıyordu). Uçtan uca internetsiz sınama geçti; dağıtıldı.
+
+## 2026-11-04 — Çevrimdışı ders PDF'leri internetsiz açılmıyordu (H481, dağıtıldı onem 637)
 - `public/sw.js`: H63'ün `/api/lecture-pdf/` kısa devresi sesli ders (`medsoru-canli-ders-offline`) ve eski PDF indirme (`medsoru-pdf-offline`) önbelleklerini atlıyordu. Artık bu adresler kümede (`cihazPdfYukle`/`cihazPdfYaniti`) tutulup cihazdan (Range → 206) veriliyor; olmayan ağa bırakılır.
 - `canliDersCevrimdisi.ts` ve `deviceStorage.ts::savePdfOffline` kayıttan sonra SW'ye `PAKET_CHANGED` gönderir. Sınama: headless Chrome internetsiz → 200 + 206. Commit/dağıtım yapılmadı.
 

@@ -2088,3 +2088,11 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   Sınama: headless Chrome, internetsiz → tam yanıt + 206.
 - **Önleme:** bir isteği SW'den "ağa bırakan" her kısa devre, o adresi yazan TÜM önbellekleri (paket, sesli ders, eski PDF) önce denetlemelidir;
   çevrimdışı düzeltmesi internetsiz gerçek sınamayla doğrulanmadan bitmiş sayılmaz.
+
+## H482
+- **Belirti (2026-11-04):** Kurul 2 toplu indirmeden sonra internetsiz sesli derste PDF görünmüyor, slayt/çizim takibi yok.
+- **Kök neden:** H481 (SW cihazdaki ders PDF'ini okumuyordu) + `onbellekte()` arama sırası sesli ders önbelleğini (`medsoru-canli-ders-offline`)
+  içermiyordu: toplu indirmenin oraya yazdığı pdf.js yardımcıları (yazı tipi, wasm) ve eşlemeler internetsiz bulunamıyordu.
+- **Çözüm:** `ARAMA_SIRASI`na `CD_OFFLINE_CACHE` ve `medsoru-pdf-offline` eklendi. Uçtan uca sınama (headless Chrome, tarayıcı önbelleği kapalı):
+  ders indir → internetsiz aç → PDF 206 cihazdan, 8 sayfa çizildi; indirmeden aynı sınama PDF açmıyor.
+- **Önleme:** yeni bir çevrimdışı önbellek adı eklenince `ARAMA_SIRASI` ve lecture-pdf kısa devresi birlikte güncellenir.

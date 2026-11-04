@@ -199,7 +199,8 @@ async function cdSesYanit(req, url) {
 // önbelleğinde binlerce ses/PDF varken açılıştaki her dosya isteği bu taramayı baştan yapıyor, paket indirmiş cihazlarda
 // (tablet) sayfa dakikalarca açılmıyordu, önbellek silinince düzeliyordu (2026-10-23). Burada yalnız tam adresle (dizinli)
 // ve bilinen önbelleklerde sırayla aranır; sorgusuz=true ise sorgu dizesiz adres de denenir.
-const ARAMA_SIRASI = [TASARIM_CACHE, KOD_CACHE, STATIC_CACHE, RUNTIME_CACHE, PAKET_CACHE, DATA_CACHE];
+// Sesli ders (CD) ve eski PDF önbelleği de aranır: toplu indirmenin pdf.js yardımcıları ve ders eşlemeleri yalnız orada (H482)
+const ARAMA_SIRASI = [TASARIM_CACHE, KOD_CACHE, STATIC_CACHE, RUNTIME_CACHE, PAKET_CACHE, DATA_CACHE, CD_OFFLINE_CACHE, 'medsoru-pdf-offline'];
 async function onbellekte(istek, sorgusuz = false) {
   const u = new URL(typeof istek === 'string' ? istek : istek.url, self.location.href);
   const adresler = sorgusuz && u.search ? [u.href, u.origin + u.pathname] : [u.href];
