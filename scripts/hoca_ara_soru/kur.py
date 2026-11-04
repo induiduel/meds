@@ -25,10 +25,20 @@ GEREK_KLIP = lambda n: [f'q-{n}', f'i-{n}', f'c-{n}', f'd-{n}', f'a-{n}'] + [f's
 
 
 def kimlik(key: str):
+    """Kod: <N>a<sıra>. H491 (2026-11-05): aynı ders numarası arşivde/sınamada başka anahtarla doluysa (ör. eski k2-07
+    SINAMA 2a07) yeni ders HARF EKİ alır (2a07b, 2a07c…); başka dersin numarasını (2a17) asla almaz. Dizinde bu anahtara
+    kayıtlı kod varsa o kullanılır (kalıcı kimlik)."""
     m = re.match(r'^k([2-6])-(\d{2})', key)
     if not m: sys.exit(f'ders anahtarı k<N>-<sıra>-… olmalı: {key}')
     brans = f'k{m[1]}hocaara'
-    return brans, f'{m[1]}a{m[2]}', MEDS.parent / 'meds_temp/spot_cozucu' / brans
+    dizin = MEDS / 'src/data' / f'{brans}_cozucu' / 'index.json'
+    dolu = {d['kod']: d.get('key') for d in (json.load(open(dizin, encoding='utf-8')).get('dersler', []) if dizin.exists() else [])}
+    for kod, k in dolu.items():
+        if k == key:
+            return brans, kod, MEDS.parent / 'meds_temp/spot_cozucu' / brans
+    taban = f'{m[1]}a{m[2]}'
+    kod = next(k for k in [taban] + [taban + h for h in 'bcdefgh'] if k not in dolu)
+    return brans, kod, MEDS.parent / 'meds_temp/spot_cozucu' / brans
 
 
 def hizalama(key: str) -> dict:

@@ -116,6 +116,11 @@ Metinler slaytı özetlemekle kalmaz, **öğretir**. Kapılar biçimi ölçer; a
     görüntüsüne bakıp panel panel kontrol eder.
 
 
+14. **Görsel yön kontrolü (H488, 2026-11-05):** fotoğraf/klinik görünüm/grafik anlatan her cümlede yazar ve denetçi sayfa
+    görüntüsüne BAKAR; envanterin `gorsel_aciklama`sı tek başına dayanak değildir. Yön denetlenir: artış↔azalma (hipertoni↔hipotoni),
+    sağ↔sol, normal↔patolojik, önce↔sonra. Görsel yorumu hoca dökümüyle çelişirse hoca + görüntü kazanır; çelişki rapora yazılır.
+    Çizim ajanı kontur çizerken anlatımla çelişen görsel görürse durdurur ve bildirir (k2-16 s.9 "hipotonik bebek" böyle yakalandı).
+
 ## 9. Yeni PDF eklendiğinde standart akış (kullanıcı kararı 2026-10-27 — sormadan uygulanır)
 Kullanıcı yalnız "şu dosya şu ders" der. Aşağıdakiler her seferinde aynı sırayla yapılır; ek talimat beklenmez.
 

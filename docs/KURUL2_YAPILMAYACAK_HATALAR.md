@@ -2189,3 +2189,20 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** satır içi bağlantı, dokunma alanı yazı yüksekliği kadar.
 - **Çözüm:** `pointer: coarse`'ta dikey dolgu + eksi kenar boşluğu (görünüm aynı, alan 43 px).
 - **Önleme:** dokunmatik hedef ≥44 px (tasarım sistemi kuralı); `sayfa_tarama.mjs` `small` listesi her turda süzülür.
+
+## H490 — Öğrenci önem kapısı geçilemez yanlış HATA veriyordu (k2-15, k2-16, k2-11; 2026-11-05)
+- **Belirti:** `ogrenci_onem/kapi.py` anlatımda bulunan bilgiler için HATA verdi (anterior singulat, temporal lob, kısa psikotikte tam dönüş, rehabilitasyon ana ilkeleri) ve bu yılın slaytında olmayan çıkmışları (LSD/izoniazid/MAO, görüşme, kalıtım %20) anlatımda istedi. Kural 28 bunları anlatıma yazmayı yasakladığı için kapı hiçbir yoldan geçilemiyordu.
+- **Kök neden:** (1) öncüllü çıkmışın cevabı ("I, II, III ve IV") cümlede aranıyordu — Romen rakamı anlatımda geçemez; (2) kısa not ↔ uzun liste cümlesi benzerliği doğal olarak düşük (0,3–0,5); (3) bilgi parçasının bu yılın slaytında olup olmadığına bakılmıyordu.
+- **Çözüm (eşik gevşetilmedi):** öncüllü cevap seçilen öncüllerin metnine açılır; bilgi slaytta AÇIKÇA yoksa (sayfa benzerliği < 0,55 VE kök örtüşmesi < 0,4) kapsamdan çıkar ve BİLGİ olarak listelenir; doğrulanmış eşleme dosyası `src/data/ogrenci_onem/esleme/<ders>.json` (`anlatim`: cümle anlatımda birebir + benzerlik ≥ 0,55 ya da anahtar terim cümlede birebir/notta ≥ 0,8; `celiski`: slayt alıntısı sayfada birebir; `slayt_disi`: terimlerin hiçbir sayfada geçmediği denetlenir). Uydurma kayıt HATA verir (sınandı). Gerçek eksik (yaz mevsimi tuzağı, k2-15) anlatıma eklendi.
+- **Kural:** kapı HATA'sı "eşleyici kaçırıyor" diye bırakılmaz: ya anlatım düzeltilir ya kapının kendisinin denetlediği kanıtlı eşleme yazılır.
+
+## H491 — Ara soru kodu başka dersin numarasını aldı (2a17 = k2-07; 2026-11-05)
+- **Belirti:** yeni k2-07 dersinin ara soruları 2a17 koduyla yayınlandı; gelecekteki k2-17 dersi aynı kodu isteyecekti.
+- **Kök neden:** `hoca_ara_soru/kur.py kimlik()` kodu yalnız ders numarasından türetiyordu; aynı numaralı eski SINAMA dersi 2a07'yi tuttuğu için ajan elle "sıradaki boş" kodu seçti.
+- **Çözüm:** `kimlik()` önce dizinde bu anahtara kayıtlı kodu kullanır; numara başka anahtarla doluysa HARF EKİ verir (2a07b, 2a07c…). 2a17 → 2a07b taşındı (veri, ses, kaynak, Oracle).
+- **Kural:** ara soru kodunu elle seçme; `kur.py iskele` atar.
+
+### H492 — Hoca vurgu alıntısı bozuk CPU dökümünden kuruldu (2026-11-05)
+- **Belirti:** k2-07/k2-15 vurgularında hocanın söylemediği ayrıntılar ("yüzde 2-3", "kaçıngan", "renarkotizasyon") hoca alıntısı gibi duruyordu.
+- **Kök neden:** ilk döküm göreli yol hatasıyla GPU'da koşmadı; düşük kaliteli dökümün boşlukları yazar tarafından slayt bilgisiyle dolduruldu.
+- **Çözüm/önleme:** döküm `hoca_dokum_gpu.sh` (realpath) ile yeniden yapıldı, 54 alıntı ±60 sn pencerede dökümle karşılaştırıldı, 4'ü düzeltildi. Kural: `alinti` yalnız dökümde geçen sözdür; slayt bilgisi `konu`'ya yazılır, alıntıya karıştırılmaz.

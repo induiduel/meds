@@ -1,14 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 647,
-  "baslik": "Ekran düzeni düzeltmeleri: katmanlar, klavye, bölünmüş ekran",
+  "onem": 648,
+  "baslik": "Kurul 2 ders düzeltmeleri",
   "maddeler": [
-    "Pencereler: Bir pencere kapandıktan sonra sayfanın kaydırılamaz kalması ve pencere açıkken arka sayfanın kayması giderildi.",
-    "Klavye: Klavye açılınca alt menü, kronometre ve yüzen düğmeler artık yazı alanını kapatmıyor; çekmeceler ve tam ekran sayfalar klavyenin üstünde kalıyor.",
-    "Bölünmüş ekran ve yatay telefon: Başarım penceresi artık kesilmiyor, Soru çöz kartlarındaki yazılar okunuyor, çekmeceler alt menüyle uyumlu açılıyor.",
-    "Katmanlar: Bildirimler tam ekran sayfaların altında kalmıyor; kronometre ve müzik oynatıcı çekmecelerle çakışmıyor.",
-    "Dokunma: Fare olmadan görünmeyen düğmeler (sesli ders yıldızı, bölüm süresi, tam ekrandan çıkış) dokunmatik cihazlarda hep görünür.",
-    "KMB: Ders ekranındaki adım şeridine telefonda dokunmak kolaylaştı."
+    "Şizofreni, Nörolojik Rehabilitasyon ve Anestezik Farmakoloji derslerinde içerik düzeltmeleri",
+    "Hoca vurgu alıntıları yeni ses dökümüyle doğrulandı",
+    "Hocanın sorabileceği soru kodu düzeltildi, kısaltma sözlüğü kayıpsız birleştirildi"
   ],
   "eklenen": [],
   "degisen": [],

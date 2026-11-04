@@ -16,6 +16,14 @@
   "definition": "Hava yolu, solunum ve dolaşım",
   "term": "ABC"
  },
+ "ABD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+  ],
+  "definition": "Anabilim dalı",
+  "term": "ABD"
+ },
  "ADH": {
   "category": "kisaltma",
   "decks": [
@@ -51,6 +59,7 @@
  "AFP": {
   "category": "kisaltma",
   "decks": [
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-27-periyodik-muayeneler"
   ],
@@ -66,8 +75,12 @@
   "term": "AIDP"
  },
  "AIDS": {
+  "baska": [
+   "Edinilmiş bağışıklık yetmezliği sendromu; primer beyin lenfoması bu hastalarda sık görülür."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-14-beyin-tumorleri",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -112,7 +125,9 @@
  "AMPA": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
    "k2-07-genel-anestezik-ilaclar",
+   "k2-09-sss-ilaclari",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-25-antiepileptik-ilaclar"
@@ -149,6 +164,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
   ],
   "definition": "Asendan retiküler aktive edici sistem",
@@ -192,6 +208,8 @@
  "ATP": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
+   "k2-09-sss-ilaclari",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
@@ -260,6 +278,8 @@
  "AVM": {
   "category": "kisaltma",
   "decks": [
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-04-serebrovaskuler-hastaliklar",
    "y25-k2-12-kafa-travmalari"
   ],
@@ -267,14 +287,17 @@
   "term": "AVM"
  },
  "B12": {
+  "baska": [
+   "B12 vitamini; eksikliği psikotik belirtilere yol açabildiği için ayırıcı tanıda düşünülür."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-15-sizofrenik-bozukluklar",
    "y25-k2-15-sizofrenik-bozukluklar",
    "y25-k2-17-periferik-noropati",
    "y25-k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-54-yaygin-anksiyete-bozuklugu",
-   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar",
-   "k2-15-sizofrenik-bozukluklar"
+   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar"
   ],
   "definition": "B12 vitamini",
   "term": "B12"
@@ -284,6 +307,7 @@
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-10-bas-agrisina-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-10-bas-agrisina-yaklasim"
@@ -327,6 +351,9 @@
   "term": "BHP"
  },
  "BIS": {
+  "baska": [
+   "Bispektral indeks. Beynin elektriksel aktivitesinden türetilen 0–100 arası puandır; genel anestezide hedef 40–60 aralığıdır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -335,16 +362,24 @@
   "term": "BIS"
  },
  "BMD": {
+  "baska": [
+   "Becker müsküler distrofi"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Becker müsküler distrofisi",
   "term": "BMD"
  },
  "BMP": {
+  "baska": [
+   "Kemik morfogenetik protein"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Kemik morfogenetik proteini",
@@ -355,6 +390,10 @@
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon",
@@ -387,6 +426,9 @@
   "category": "kisaltma",
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-14-beyin-tumorleri",
@@ -424,6 +466,7 @@
  "C3": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-13-spinal-travmalar",
    "y25-k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-46-sempatomimetikler"
@@ -447,6 +490,14 @@
   ],
   "definition": "Kromozom 9 açık okuma çerçevesi 72",
   "term": "C9ORF72"
+ },
+ "CAA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme"
+  ],
+  "definition": "Serebral amiloid anjiyopati",
+  "term": "CAA"
  },
  "CACNA1C": {
   "category": "kisaltma",
@@ -499,6 +550,8 @@
  "CMV": {
   "category": "kisaltma",
   "decks": [
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme",
    "y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon",
    "y25-k2-04-serebrovaskuler-hastaliklar",
    "y25-k2-31-medulla-spinalis-hastaliklari"
@@ -507,8 +560,12 @@
   "term": "CMV"
  },
  "CN": {
+  "baska": [
+   "Kraniyal sinir"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-05-norolojik-muayene",
    "y25-k2-05-norolojik-muayene"
   ],
   "definition": "Kranyal sinir",
@@ -518,8 +575,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
-   "y25-k2-07-genel-anestezik-ilaclar",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "y25-k2-07-genel-anestezik-ilaclar"
   ],
   "definition": "Merkezi sinir sistemi",
   "term": "CNS"
@@ -536,6 +593,7 @@
  "COL1A1": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Kollajen tip I alfa 1 zinciri geni",
@@ -544,6 +602,7 @@
  "COL1A2": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Kollajen tip I alfa 2 zinciri geni",
@@ -558,6 +617,9 @@
   "term": "COMT"
  },
  "COX": {
+  "baska": [
+   "Siklooksijenaz. Prostaglandin yapımını sağlayan enzimdir; non-opioid analjezikler bu enzimi engelleyerek etki eder."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -566,10 +628,13 @@
   "term": "COX"
  },
  "CPM": {
+  "baska": [
+   "Sürekli pasif hareket; eklemi bir cihazla sürekli ve pasif olarak hareket ettiren tedavi modalitesidir."
+  ],
   "category": "kisaltma",
   "decks": [
-   "y25-k2-16-norolojik-rehabilitasyona-giris",
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler",
+   "y25-k2-16-norolojik-rehabilitasyona-giris"
   ],
   "definition": "Sürekli pasif hareket",
   "term": "CPM"
@@ -581,6 +646,14 @@
   ],
   "definition": "Kortikal yayılan depresyon (cortical spreading depression)",
   "term": "CSD"
+ },
+ "CSF": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon"
+  ],
+  "definition": "Beyin omurilik sıvısı (cerebrospinal fluid)",
+  "term": "CSF"
  },
  "CSWS": {
   "category": "kisaltma",
@@ -599,14 +672,22 @@
   "term": "CTG"
  },
  "CVS": {
+  "baska": [
+   "Kardiyovasküler sistem",
+   "Koryonik villus örneklemesi"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Koryon villus örneklemesi",
   "term": "CVS"
  },
  "CYP": {
+  "baska": [
+   "Sitokrom P450. Karaciğerdeki ilaç yıkım enzimleridir; damar yoluyla verilen anesteziklerin etkileşimi çoğunlukla bu enzimler üzerinden olur."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -651,10 +732,13 @@
   "term": "D1"
  },
  "D2": {
+  "baska": [
+   "Dopamin reseptörünün ikinci tipidir; şizofreni tedavisinde kullanılan ilaçlar bu reseptörü bloke eder."
+  ],
   "category": "kisaltma",
   "decks": [
-   "y25-k2-46-sempatomimetikler",
-   "k2-15-sizofrenik-bozukluklar"
+   "k2-15-sizofrenik-bozukluklar",
+   "y25-k2-46-sempatomimetikler"
   ],
   "definition": "Dopamin D2 reseptörü",
   "term": "D2"
@@ -677,6 +761,9 @@
   "term": "DCX"
  },
  "DDB": {
+  "baska": [
+   "Duygudurum bozuklukları; şizoaffektif bozukluğun prognozu şizofreniden iyi, bunlardan kötüdür."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-15-sizofrenik-bozukluklar"
@@ -694,6 +781,9 @@
   "term": "DEHB"
  },
  "DIC": {
+  "baska": [
+   "Dissemine intravasküler koagülasyon; damar içinde yaygın pıhtılaşma ve pıhtı faktörlerinin tükenmesidir. Varlığında akut kanama BT'de hiperdens olmayabilir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-12-kafa-ve-omurilik-yaralanmalari"
@@ -720,6 +810,7 @@
  "DLL3": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Delta benzeri ligand 3 geni",
@@ -739,8 +830,12 @@
   "term": "DM"
  },
  "DMD": {
+  "baska": [
+   "Duchenne müsküler distrofi"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Duchenne müsküler distrofisi",
@@ -749,6 +844,8 @@
  "DNA": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-14-beyin-tumorleri",
    "y25-k2-30-norodejeneratif-hastaliklar",
@@ -809,6 +906,7 @@
  "DSM": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-22-psikosomatik-bozukluklar",
    "y25-k2-23-cinsel-kimlik-bozukluklari",
    "y25-k2-34-unipolar-depresyon",
@@ -822,11 +920,14 @@
   "term": "DSM"
  },
  "DSÖ": {
+  "baska": [
+   "Dünya Sağlık Örgütü; şizofreninin 15-44 yaş grubunda yeti yitimine yol açan hastalıklar arasında 9. sırada olduğunu bildirir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-15-sizofrenik-bozukluklar",
    "y25-k2-27-periyodik-muayeneler",
-   "y25-k2-45-intihar-ve-kendine-zarar-verme",
-   "k2-15-sizofrenik-bozukluklar"
+   "y25-k2-45-intihar-ve-kendine-zarar-verme"
   ],
   "definition": "Dünya Sağlık Örgütü",
   "term": "DSÖ"
@@ -859,6 +960,9 @@
   "term": "DVT"
  },
  "DWI": {
+  "baska": [
+   "Difüzyon ağırlıklı MR görüntülemedir; aksonal zedelenmede difüzyon kısıtlılığını parlak gösterir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-12-kafa-ve-omurilik-yaralanmalari"
@@ -882,9 +986,21 @@
   "definition": "Epstein-Barr virüsü",
   "term": "EBV"
  },
- "EDH": {
+ "ECM": {
   "category": "kisaltma",
   "decks": [
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme"
+  ],
+  "definition": "Ekstraselüler matriks",
+  "term": "ECM"
+ },
+ "EDH": {
+  "baska": [
+   "Epidural hematom; kafatası iç tabulası ile dura arasındaki kanamadır, BT'de bikonveks görünür."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-12-kafa-travmalari"
   ],
   "definition": "Epidural hematom",
@@ -914,6 +1030,9 @@
   "term": "EEG"
  },
  "EGD": {
+  "baska": [
+   "Özofagogastroduodenoskopi. Yemek borusu, mide ve onikiparmak bağırsağının endoskopla incelenmesidir; propofol monoterapisinin yeterli olduğu kısa girişimlerdendir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -922,6 +1041,9 @@
   "term": "EGD"
  },
  "EHA": {
+  "baska": [
+   "Eklem hareket açıklığı; gonyometreyle ölçülür ve rehabilitasyon sonuçlarının izlenmesinde önemli bir göstergedir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
@@ -946,10 +1068,10 @@
   "category": "kisaltma",
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-16-norolojik-rehabilitasyona-giris",
-   "y25-k2-32-felcler",
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+   "y25-k2-32-felcler"
   ],
   "definition": "Elektromiyografi",
   "term": "EMG"
@@ -978,6 +1100,14 @@
   ],
   "definition": "Solunan havadaki anestezik gaz fraksiyonu",
   "term": "F1"
+ },
+ "FA1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+  ],
+  "definition": "Birinci faringeal ark",
+  "term": "FA1"
  },
  "FDA": {
   "category": "kisaltma",
@@ -1009,6 +1139,7 @@
  "FGF": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Fibroblast büyüme faktörü",
@@ -1025,6 +1156,7 @@
  "FGFR3": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Fibroblast büyüme faktörü reseptörü 3 geni",
@@ -1039,8 +1171,12 @@
   "term": "FHM"
  },
  "FLAIR": {
+  "baska": [
+   "FLAIR, beyin omurilik sıvısının sinyalini baskılayan MR sekansıdır; subaraknoid kanamayı göstermede idealdir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-12-kafa-travmalari"
   ],
   "definition": "Sıvı atenüasyonlu inversion recovery sekansı",
@@ -1099,7 +1235,11 @@
  "GABA": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
    "k2-07-genel-anestezik-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "k2-09-sss-ilaclari",
+   "k2-15-sizofrenik-bozukluklar",
    "y25-k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
@@ -1113,9 +1253,7 @@
    "y25-k2-55-panik-bozukluk",
    "y25-k2-58-alkoller",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
-   "y25-k2-60-miyorelaksan-ilaclar",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
-   "k2-15-sizofrenik-bozukluklar"
+   "y25-k2-60-miyorelaksan-ilaclar"
   ],
   "definition": "Gama aminobütirik asit",
   "term": "GABA"
@@ -1124,6 +1262,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
+   "k2-09-sss-ilaclari",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-21-sedatif-ve-hipnotik-ilaclar",
@@ -1138,6 +1277,7 @@
  "GABAB": {
   "category": "kisaltma",
   "decks": [
+   "k2-09-sss-ilaclari",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-60-miyorelaksan-ilaclar"
   ],
@@ -1153,8 +1293,12 @@
   "term": "GABRA6"
  },
  "GBM": {
+  "baska": [
+   "Glioblastoma multiforme; nekroz içeren grade IV astrositomdur ve en kötü huylu astrositomdur."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-14-beyin-tumorleri"
   ],
   "definition": "Glioblastoma multiforme",
@@ -1169,9 +1313,13 @@
   "term": "GDP"
  },
  "GIS": {
+  "baska": [
+   "Gastrointestinal sistem; sindirim kanalıdır. Beyin metastazlarının kaynaklarından biridir."
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-14"
+   "k2-14",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular"
   ],
   "definition": "Gastrointestinal sistem",
   "term": "GIS"
@@ -1195,6 +1343,8 @@
  "GKS": {
   "category": "kisaltma",
   "decks": [
+   "k2-10-bas-agrisina-yaklasim",
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-10-bas-agrisina-yaklasim"
   ],
   "definition": "Glasgow koma skalası",
@@ -1233,6 +1383,9 @@
   "term": "GWAS"
  },
  "GYA": {
+  "baska": [
+   "Günlük yaşam aktiviteleri; giyinme, yemek yeme, banyo ve tuvalet gibi temel işlerdir ve rehabilitasyon hastasında ayrıca değerlendirilir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
@@ -1269,6 +1422,7 @@
  "HIV": {
   "category": "kisaltma",
   "decks": [
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
    "y25-k2-17-periferik-noropati",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -1279,6 +1433,9 @@
   "term": "HIV"
  },
  "HMG": {
+  "baska": [
+   "Yüksek hareketlilikli grup (high mobility group)"
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
@@ -1289,6 +1446,7 @@
  "HOX": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Homeoboks gen kümesi",
@@ -1313,6 +1471,7 @@
  "HPE": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Holoprozensefali",
@@ -1363,6 +1522,7 @@
  "IASP": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-06-agri-yollari-ve-mekanizmalari"
   ],
   "definition": "Uluslararası Ağrı Araştırmaları Teşkilatı",
@@ -1385,12 +1545,23 @@
   "term": "ICHD"
  },
  "ICP": {
+  "baska": [
+   "Kafa içi basıncı. Kafatası içindeki basınçtır; ketamin ve volatil ajanlar artırır, etomidat ve tiyopental düşürür."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "İntrakraniyal basınç",
   "term": "ICP"
+ },
+ "ID": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+  ],
+  "definition": "Entelektüel dezavantaj (zihinsel yetersizlik)",
+  "term": "ID"
  },
  "IDH": {
   "category": "kisaltma",
@@ -1411,6 +1582,7 @@
  "IHS": {
   "category": "kisaltma",
   "decks": [
+   "k2-10-bas-agrisina-yaklasim",
    "y25-k2-10-bas-agrisina-yaklasim"
   ],
   "definition": "Uluslararası Baş Ağrısı Derneği",
@@ -1427,6 +1599,9 @@
   "term": "IM"
  },
  "IMT": {
+  "baska": [
+   "İş-meşguliyet tedavisi; hastanın kendine bakım ve günlük yaşam becerilerini artırmaya yönelik egzersizlerdir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
@@ -1466,6 +1641,14 @@
   ],
   "definition": "Uluslararası ünite",
   "term": "IU"
+ },
+ "JC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon"
+  ],
+  "definition": "JC virüsü (John Cunningham virüsü)",
+  "term": "JC"
  },
  "KB": {
   "category": "kisaltma",
@@ -1581,6 +1764,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-05-norolojik-muayene",
+   "k2-10-bas-agrisina-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-05-norolojik-muayene",
    "y25-k2-10-bas-agrisina-yaklasim"
@@ -1589,9 +1774,13 @@
   "term": "KS"
  },
  "KSB": {
+  "baska": [
+   "Kranioservikal bileşke; kafatası tabanı ile üst boyun omurlarının birleştiği bölgedir."
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-12-kafa-ve-omurilik-yaralanmalari"
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
+   "k2-64-spinal-travmalar"
   ],
   "definition": "Kraniyoservikal bileşke",
   "term": "KSB"
@@ -1605,12 +1794,24 @@
   "term": "KSS"
  },
  "KT": {
+  "baska": [
+   "Kemoterapi; tümör hücrelerini ilaçla öldürmeye yönelik tedavidir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-14-beyin-tumorleri"
   ],
   "definition": "Kemoterapi",
   "term": "KT"
+ },
+ "KTE": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme"
+  ],
+  "definition": "Kronik travmatik ensefalopati",
+  "term": "KTE"
  },
  "KVS": {
   "category": "kisaltma",
@@ -1625,6 +1826,7 @@
  "KİBAS": {
   "category": "kisaltma",
   "decks": [
+   "k2-05-norolojik-muayene",
    "y25-k2-05-norolojik-muayene"
   ],
   "definition": "Kafa içi basınç artışı sendromu",
@@ -1633,6 +1835,7 @@
  "L1": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-13-spinal-travmalar"
   ],
   "definition": "Birinci lomber vertebra",
@@ -1665,6 +1868,7 @@
  "LIS1": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Lizensefali 1 geni",
@@ -1687,9 +1891,13 @@
   "term": "LMXIB"
  },
  "LOH": {
+  "baska": [
+   "Heterozigotluk kaybı (loss of heterozygosity); oligodendrogliomda 1p19q kaybı prognozu iyi yönde etkiler, KT ve RT'ye duyarlılığı artırır."
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-14"
+   "k2-14",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular"
   ],
   "definition": "Heterozigotluk kaybı",
   "term": "LOH"
@@ -1773,20 +1981,23 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
-   "y25-k2-07-genel-anestezik-ilaclar",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "y25-k2-07-genel-anestezik-ilaclar"
   ],
   "definition": "Minimum alveolar konsantrasyon",
   "term": "MAK"
  },
  "MAO": {
+  "baska": [
+   "Monoamin oksidaz. Monoaminleri yıkan enzimdir; bu enzimi inhibe eden ilaçlar cerrahiden önce kesilir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
    "y25-k2-38-travma-ve-stres-baglantili-bozukluklar",
    "y25-k2-46-sempatomimetikler",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
-   "y25-k2-63-antidepresan-ilaclar",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "y25-k2-63-antidepresan-ilaclar"
   ],
   "definition": "Monoamin oksidaz",
   "term": "MAO"
@@ -1833,6 +2044,9 @@
   "term": "MEOS"
  },
  "MEPP": {
+  "baska": [
+   "Minyatür uç plak potansiyeli. Motor uç plakta kendiliğinden salınan küçük asetilkolin paketlerinin oluşturduğu küçük potansiyeldir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -1884,6 +2098,9 @@
   "category": "kisaltma",
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-10-bas-agrisina-yaklasim",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-10-bas-agrisina-yaklasim",
@@ -1906,8 +2123,12 @@
   "term": "MRC"
  },
  "MRG": {
+  "baska": [
+   "Manyetik rezonans görüntüleme; diffüz aksonal hasarı ve izodens subdural hematomu BT'den iyi gösterir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-24-epilepsi"
@@ -1946,8 +2167,18 @@
   "term": "MS"
  },
  "MSS": {
+  "baska": [
+   "Merkezi sinir sistemi",
+   "Merkezi sinir sistemi; beyin ve omurilikten oluşur. Kötü huylu beyin tümörleri bu sistemin dışına çok nadir yayılır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "k2-06-agri-yollari-ve-mekanizmalari",
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-09-sss-ilaclari",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-14-beyin-tumorleri",
@@ -2032,15 +2263,17 @@
  "NMDA": {
   "category": "kisaltma",
   "decks": [
+   "k2-06-agri-yollari-ve-mekanizmalari",
    "k2-07-genel-anestezik-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "k2-09-sss-ilaclari",
    "y25-k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
    "y25-k2-47-adrenoseptor-antagonist-ilaclar",
-   "y25-k2-58-alkoller",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "y25-k2-58-alkoller"
   ],
   "definition": "N-metil-D-aspartat",
   "term": "NMDA"
@@ -2071,12 +2304,23 @@
   "term": "NSAI"
  },
  "NSAİİ": {
+  "baska": [
+   "Non-steroid antiinflamatuvar ilaçlar. Prostaglandin sentezini engelleyen ağrı kesicilerdir; trombosit işlev bozukluğu, mide kanaması ve böbrek etkisi yapabilir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "Non-steroid antiinflamatuvar ilaç",
   "term": "NSAİİ"
+ },
+ "OD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+  ],
+  "definition": "Otozomal dominant",
+  "term": "OD"
  },
  "OKB": {
   "category": "kisaltma",
@@ -2088,6 +2332,14 @@
   "definition": "Takıntı-zorlantı bozukluğu",
   "term": "OKB"
  },
+ "OR": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+  ],
+  "definition": "Otozomal resesif",
+  "term": "OR"
+ },
  "ORL": {
   "category": "kisaltma",
   "decks": [
@@ -2097,6 +2349,9 @@
   "term": "ORL"
  },
  "OSA": {
+  "baska": [
+   "Obstrüktif uyku apnesi. Uykuda üst hava yolunun tıkanmasıyla solunumun durmasıdır; opioide bağlı solunum depresyonu riskini artırır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -2123,6 +2378,7 @@
  "Oİ": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Osteogenezis imperfekta",
@@ -2166,6 +2422,7 @@
  "PAX3": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Eşleştirici kutu 3 geni",
@@ -2174,6 +2431,7 @@
  "PAX6": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Eşleştirici kutu 6 geni",
@@ -2206,9 +2464,13 @@
   "term": "PH"
  },
  "PLL": {
+  "baska": [
+   "Posterior longitudinal ligaman; omur gövdelerinin arka yüzü boyunca uzanır, fleksiyon travmasında hasarlanır."
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-12-kafa-ve-omurilik-yaralanmalari"
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
+   "k2-64-spinal-travmalar"
   ],
   "definition": "Posterior longitudinal ligament",
   "term": "PLL"
@@ -2230,9 +2492,13 @@
   "term": "PML"
  },
  "PNET": {
+  "baska": [
+   "Primitif nöroektodermal tümör; olgunlaşmamış sinir öncü hücrelerinden gelişen nöroepitelyal tümör grubudur."
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-14"
+   "k2-14",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular"
   ],
   "definition": "Primitif nöroektodermal tümör",
   "term": "PNET"
@@ -2254,6 +2520,9 @@
   "term": "PPMS"
  },
  "PRIS": {
+  "baska": [
+   "Propofol infüzyon sendromu. Yüksek doz ve uzun propofol infüzyonunda görülen metabolik asidoz, kardiyomiyopati ve rabdomiyoliz tablosudur."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -2305,10 +2574,10 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
-   "y25-k2-47-adrenoseptor-antagonist-ilaclar",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "y25-k2-47-adrenoseptor-antagonist-ilaclar"
   ],
   "definition": "QT aralığı",
   "term": "QT"
@@ -2348,6 +2617,9 @@
   "term": "RRMS"
  },
  "RSI": {
+  "baska": [
+   "Hızlı dizi entübasyonu. Aspirasyon riskini azaltmak için hızlı etkili ilaçlarla yapılan entübasyondur; süksinilkolin altın standarttır, rokuronyum alternatiftir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -2356,8 +2628,12 @@
   "term": "RSI"
  },
  "RT": {
+  "baska": [
+   "Radyoterapi; tümörü ışınla tedavi etmektir. Yüksek dereceli astrositomda cerrahiye eklenir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-14-beyin-tumorleri"
   ],
   "definition": "Radyoterapi",
@@ -2392,6 +2668,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-10-bas-agrisina-yaklasim",
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-10-bas-agrisina-yaklasim",
    "y25-k2-12-kafa-travmalari"
@@ -2465,8 +2743,12 @@
   "term": "SCAR9"
  },
  "SCD": {
+  "baska": [
+   "Spondilokostal dizostozis"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Spondilokostal dizostoz",
@@ -2483,6 +2765,7 @@
  "SCN1A": {
   "category": "kisaltma",
   "decks": [
+   "k2-10-bas-agrisina-yaklasim",
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
@@ -2490,24 +2773,41 @@
   "term": "SCN1A"
  },
  "SDH": {
+  "baska": [
+   "Subdural hematom; dura ile araknoid arasındaki kanamadır, köprü venlerinin yırtılmasıyla oluşur."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-12-kafa-travmalari"
   ],
   "definition": "Subdural hematom",
   "term": "SDH"
  },
+ "SED": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+  ],
+  "definition": "Spondiloepifizyal displazi",
+  "term": "SED"
+ },
  "SEDC": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Spondiloepifizyal displazi konjenita",
   "term": "SEDC"
  },
  "SHH": {
+  "baska": [
+   "Sonic hedgehog"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Sonic hedgehog geni",
@@ -2522,6 +2822,9 @@
   "term": "SLC6A4"
  },
  "SLE": {
+  "baska": [
+   "Sistemik lupus eritematozus; psikotik belirti yapabilen otoimmün bir hastalıktır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-15-sizofrenik-bozukluklar"
@@ -2632,7 +2935,12 @@
   "category": "kisaltma",
   "decks": [
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
    "k2-07-genel-anestezik-ilaclar",
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-10-bas-agrisina-yaklasim",
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-04-serebrovaskuler-hastaliklar",
    "y25-k2-07-genel-anestezik-ilaclar",
@@ -2686,8 +2994,12 @@
   "term": "SVO"
  },
  "SWI": {
+  "baska": [
+   "Duyarlılık ağırlıklı MR görüntülemedir; diffüz aksonal zedelenmede küçük kanamaları en hassas gösteren yöntemlerdendir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-12-kafa-ve-omurilik-yaralanmalari",
    "y25-k2-12-kafa-travmalari"
   ],
   "definition": "Duyarlılık ağırlıklı görüntüleme",
@@ -2701,6 +3013,22 @@
   ],
   "definition": "On ikinci torakal vertebra",
   "term": "T12"
+ },
+ "T1A": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular"
+  ],
+  "definition": "T1 ağırlıklı MR kesiti; düşük dereceli astrositom bu kesitte koyu (hipointens) görünür.",
+  "term": "T1A"
+ },
+ "T2A": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular"
+  ],
+  "definition": "T2 ağırlıklı MR kesiti; sıvı ve ödem bu kesitte parlak görünür, düşük dereceli astrositom hiperintenstir.",
+  "term": "T2A"
  },
  "TARDBP": {
   "category": "kisaltma",
@@ -2727,10 +3055,13 @@
   "term": "TCA"
  },
  "TCI": {
+  "baska": [
+   "Hedef kontrollü infüzyon. Plazma ya da etki yerindeki ilaç düzeyini bilgisayarla ayarlayan infüzyon yöntemidir; en sık propofol ve remifentanil verilir."
+  ],
   "category": "kisaltma",
   "decks": [
-   "y25-k2-35-kisilik-bozukluklari",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "y25-k2-35-kisilik-bozukluklari"
   ],
   "definition": "Mizaç ve karakter envanteri",
   "term": "TCI"
@@ -2770,14 +3101,19 @@
  "TF": {
   "category": "kisaltma",
   "decks": [
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Transkripsiyon faktörü",
   "term": "TF"
  },
  "TGF": {
+  "baska": [
+   "Dönüştürücü büyüme faktörü (transforming growth factor)"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme",
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Dönüştürücü büyüme faktörü",
@@ -2792,6 +3128,9 @@
   "term": "THC"
  },
  "TIVA": {
+  "baska": [
+   "Total intravenöz anestezi. İnhaler ajan kullanmadan anestezinin yalnız damar içi ilaçlarla, genellikle propofol ve remifentanille sürdürülmesidir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -2825,6 +3164,9 @@
   "term": "TNF"
  },
  "TOF": {
+  "baska": [
+   "Dörtlü uyarı. Kas gevşetici etkisinin sürüp sürmediğini ölçen nöromüsküler izlemdir; ekstübasyon için oranın 0,9'un üstünde olması aranır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
@@ -2841,6 +3183,9 @@
   "term": "TPH"
  },
  "TS": {
+  "baska": [
+   "Tekerlekli sandalye; fonksiyonel bağımsızlık hedeflerinde hastaya TS kullanma eğitimi verilir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
@@ -2906,8 +3251,12 @@
   "term": "TWIST"
  },
  "TİA": {
+  "baska": [
+   "Transient (geçici) iskemik atak; beynin kısa süreli kansız kalmasıyla oluşan ve kendiliğinden düzelen nörolojik belirtilerdir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "y25-k2-14-beyin-tumorleri"
   ],
   "definition": "Geçici iskemik atak",
@@ -2949,6 +3298,7 @@
  "VMAT": {
   "category": "kisaltma",
   "decks": [
+   "k2-09-sss-ilaclari",
    "y25-k2-41-otonom-sinir-sistemi-farmakolojisi"
   ],
   "definition": "Veziküler monoamin taşıyıcısı",
@@ -3036,14 +3386,18 @@
   "term": "ZY"
  },
  "cAMP": {
+  "baska": [
+   "Siklik adenozin monofosfat. Hücre içi ikinci habercidir; opioidler bu molekülü azaltarak nöronu hiperpolarize eder."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "k2-09-sss-ilaclari",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
    "y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
    "y25-k2-46-sempatomimetikler",
-   "y25-k2-47-adrenoseptor-antagonist-ilaclar",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "y25-k2-47-adrenoseptor-antagonist-ilaclar"
   ],
   "definition": "Siklik adenozin monofosfat",
   "term": "cAMP"
@@ -3068,9 +3422,9 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
    "y25-k2-07-genel-anestezik-ilaclar",
-   "y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+   "y25-k2-41-otonom-sinir-sistemi-farmakolojisi"
   ],
   "definition": "İntravenöz",
   "term": "İV"

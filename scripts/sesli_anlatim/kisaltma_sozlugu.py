@@ -363,8 +363,25 @@ def k_sozluk_disa() -> int:
         if k.get("baska"):
             k["definition"] = k["definition"]  # ilk yazım esas; farklı derslerdeki anlamlar `baska`da saklanır
     hedef = MEDS / "src" / "data" / "kisaltma_sozluk.json"
-    hedef.write_text(json.dumps(kayit, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"{len(kayit)} kısaltma → {hedef}")
+    # BİRLEŞTİR (H487): sözlükte elle ya da başka yoldan eklenmiş kayıtlar (ders katmanında olmayanlar) silinmez; mevcut
+    # tanım korunur, yalnız yeni kısaltma ve yeni ders bağı eklenir. Kayıt sayısı asla düşmez.
+    eski = json.loads(hedef.read_text(encoding="utf-8")) if hedef.exists() else {}
+    yeni_k, yeni_bag = 0, 0
+    for t, k in kayit.items():
+        if t not in eski:
+            eski[t] = k; yeni_k += 1; continue
+        e = eski[t]
+        for d in k["decks"]:
+            if d not in e.setdefault("decks", []):
+                e["decks"].append(d); yeni_bag += 1
+        e["decks"] = sorted(e["decks"])
+        if k["definition"] != e.get("definition"):
+            e.setdefault("baska", [])
+            for a in [k["definition"], *k.get("baska", [])]:
+                if a != e.get("definition") and a not in e["baska"]:
+                    e["baska"].append(a)
+    hedef.write_text(json.dumps(eski, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    print(f"{len(eski)} kısaltma ({yeni_k} yeni, {yeni_bag} yeni ders bağı; silinen yok) → {hedef}")
     return 0
 
 

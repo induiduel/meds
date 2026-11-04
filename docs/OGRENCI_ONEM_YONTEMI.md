@@ -102,6 +102,14 @@ Yorum:
    yalnız vektör yanıltır: "spastisite ve rijidite tonus artışıdır" cümlesi rijiditenin tanımını soran bilgiye 0,69 verir).
    A: anlatım kapsamı ≥ %60, çıkmış bilgisi anlatımda, önem listesinde ≥ 1 bilgi, ≥ 2 soru (eksik = HATA; bu yıl slaytta yoksa UYARI).
    B: anlatım ≥ %40, ≥ 1 soru (UYARI). Kapı eksik bilgileri listeler; yalnız o bilgiler eklenir (TAM_HAT_HIZLI_AKIS §3).
+   **H490 (2026-11-05):** öncüllü çıkmışın cevabı ("I, II ve IV") seçilen öncüllerin metnine açılır; bilgi bu yılın slaytında
+   AÇIKÇA yoksa (sayfa benzerliği < 0,55 VE kök örtüşmesi < %40; `sayfalar.json` ders klasöründen kendiliğinden okunur) kapsamdan
+   çıkar ve BİLGİ satırı olur. Kapının kaçırdığı ya da slaytla çelişen bilgi için **doğrulanmış eşleme**
+   `src/data/ogrenci_onem/esleme/<ders>.json` (`kayitlar`: `birim`, `bilgi` (kapının yazdığı metin), `tur`, `gerekce` zorunlu):
+   - `anlatim`: `cumle` (dize ya da liste) anlatımda birebir geçmeli; bilgiye benzerlik ≥ 0,55 ya da `anahtar` terimler cümlede birebir ve notta ≥ 0,8 harf benzerliği;
+   - `celiski`: `sayfa` + `slayt_alinti` o sayfada birebir (bu yılın değeri farklı: kalıtım %10 ↔ eski çıkmış %20);
+   - `slayt_disi`: `yok_terimler` (≥ 2) hiçbir sayfada geçmemeli.
+   Kapı her kaydı yeniden denetler; denetimi geçmeyen kayıt HATA'dır. "Eşleyici kaçırıyor" diye HATA bırakılmaz.
 8. **Yeni öğrenci notu gelirse:** `data/ogrenci_onem/ham/` biçiminde okunur (yönerge: `scripts/ogrenci_onem/OKUMA_YONERGESI.md`)
    → `birlestir.py` → yargı (`basari.py --hazirla`, yargıç, `--hesapla`) → analiz (`ANALIZ_YONERGESI.md`) → `belge.py`.
 

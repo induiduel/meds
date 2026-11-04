@@ -1,0 +1,102 @@
+{
+ "_aciklama": "Doğrulanmış eşleme (H490, kapi.py): anlatımda birebir bulunan ama kapının sözcük/benzerlik ölçütünün kaçırdığı bilgi (tur: anlatim, cümle anlatımda geçmeli ve bilgiye yakın olmalı) ya da bu yılın slaytıyla çelişen/slaytta olmayan çıkmış bilgisi (tur: celiski, slayt alıntısı o sayfada geçmeli). Kapı her kaydı yeniden denetler.",
+ "kayitlar": [
+  {
+   "birim": "psk-s04-b04",
+   "tur": "celiski",
+   "bilgi": "Şizofrenide kalıtımın rolü için ne söylenebilir? → Aile öyküsü olanlarda hastalık riski %20'ye kadar çıkabilir.",
+   "sayfa": 12,
+   "slayt_alinti": "Şizofreni hastalarının çocuklarında yaşam boyu risk ortalama %10",
+   "gerekce": "2026-27 slaytı riski %10 (tek ebeveyn %5-6, bir çocuk + bir ebeveyn %17, iki ebeveyn %47) verir; eski çıkmışın %20 değeri bu yılın slaytıyla çelişir, anlatım slayta uyar (kural 28)."
+  },
+  {
+   "birim": "psk-s04-b13",
+   "tur": "celiski",
+   "bilgi": "Amfetaminler LSD İzoniazid MAO inhibitörleri",
+   "sayfa": 20,
+   "slayt_alinti": "Stimulanlar (amfetamin, kokain)",
+   "gerekce": "Slayt kötüye kullanılan ilaçları stimülan (amfetamin, kokain), halüsinojen (fensiklidin), antikolinerjik ve kesilme deliryumu olarak sayar; LSD, izoniazid ve MAO inhibitörü bu yılın slaytında yok. Anlatım slayttaki ilaçları kapsar."
+  },
+  {
+   "birim": "psk-s04-b05",
+   "tur": "anlatim",
+   "bilgi": "Alt bölgeler: anterior singulat korteks *",
+   "cumle": "Şizofreni devresi denen ağ orbital, dorsolateral ve medial frontal korteks, anterior singulat, talamus, temporal lobun alt bölgeleri ve serebellumdan oluşur.",
+   "gerekce": "Anterior singulat şizofreni devresi cümlesinde adıyla geçer (s.14).",
+   "anahtar": [
+    "anterior singulat"
+   ]
+  },
+  {
+   "birim": "psk-s04-b05",
+   "tur": "anlatim",
+   "bilgi": "anterior cingulat korteks (el notu yanında)",
+   "cumle": "Şizofreni devresi denen ağ orbital, dorsolateral ve medial frontal korteks, anterior singulat, talamus, temporal lobun alt bölgeleri ve serebellumdan oluşur.",
+   "gerekce": "Aynı yapı (singulat = cingulat), devre cümlesinde geçer.",
+   "anahtar": [
+    "anterior singulat"
+   ]
+  },
+  {
+   "birim": "psk-s04-b05",
+   "tur": "anlatim",
+   "bilgi": "temporal loblar",
+   "cumle": "Şizofreni devresi denen ağ orbital, dorsolateral ve medial frontal korteks, anterior singulat, talamus, temporal lobun alt bölgeleri ve serebellumdan oluşur.",
+   "gerekce": "Temporal lobun alt bölgeleri devre cümlesinde geçer.",
+   "anahtar": [
+    "temporal lob"
+   ]
+  },
+  {
+   "birim": "psk-s04-b05",
+   "tur": "anlatim",
+   "bilgi": "temporal loblar: psk ile özellikle ilişkili",
+   "cumle": [
+    "Şizofreni devresi denen ağ orbital, dorsolateral ve medial frontal korteks, anterior singulat, talamus, temporal lobun alt bölgeleri ve serebellumdan oluşur.",
+    "Temporal lobun iç kısmındaki epilepsi de psikiyatrik belirti yapabilir."
+   ],
+   "gerekce": "Temporal lobun şizofreni devresindeki yeri ve psikiyatrik belirtiyle ilişkisi iki cümlede geçer.",
+   "anahtar": [
+    "temporal lob"
+   ]
+  },
+  {
+   "birim": "psk-s04-b05",
+   "tur": "anlatim",
+   "bilgi": "Ventriküler genişleme; Sulkuslarda genişleme; Frontal kortekste incelme; beyin ve kafaiçi hacminin küçüklüğü; Talamus; amigdala/hipokampus; bazal ganglionlar",
+   "cumle": [
+    "En bilinen yapısal bulgu ventriküllerin, yani beyin boşluklarının genişlemesidir.",
+    "Beyin kıvrımları arasındaki oluklar olan sulkuslar da genişlemiştir.",
+    "Frontal kortekste incelme olur ve beyin ile kafa içi hacmi küçüktür."
+   ],
+   "gerekce": "Yapısal bulgular ardışık üç cümlede tek tek geçer."
+  },
+  {
+   "birim": "psk-s05-b09",
+   "tur": "anlatim",
+   "bilgi": "1-3 (süslü parantez): belirtilerin en az 1'i üçünden olmalı",
+   "cumle": "Bir belirti yeter; en az biri 1–3. maddeden",
+   "gerekce": "Kısa psikotik bozukluk ölçütünde 'en az biri 1–3. maddeden' ekran maddesi birebir aynı bilgiyi taşır."
+  },
+  {
+   "birim": "psk-s05-b09",
+   "tur": "anlatim",
+   "bilgi": "tam geri dönülür: SCH'de tam geri dönülemez!!",
+   "cumle": "Takipte çoğunlukla şizofreniye dönüşme özelliği şizofreniform bozukluğa aittir; kısa psikotik bozuklukta ise tanım gereği tam dönüş vardır.",
+   "gerekce": "Kısa psikotikte tam dönüş vardır; şizofrenide tam dönüş olmadığı ayrıca 'Şizofrenide tam dönüş yok' maddesinde geçer.",
+   "anahtar": [
+    "dönüş"
+   ]
+  },
+  {
+   "birim": "psk-s04-b13",
+   "tur": "anlatim",
+   "bilgi": "Yapay bozukluk: → taklit yok",
+   "cumle": [
+    "Temaruz, ceza almamak ya da askere gitmemek gibi bir dış kazanç için hastalık belirtilerini bilerek taklit etmektir.",
+    "Yapay bozuklukta da belirtiler bilinçli olarak oluşturulur, ama amaç dış kazanç değil hasta rolünü üstlenmektir."
+   ],
+   "gerekce": "Öğrenci notu yapay bozukluğu temaruzdaki dış kazanç amaçlı taklitten ayırır; iki cümle bu ayrımı verir."
+  }
+ ]
+}
