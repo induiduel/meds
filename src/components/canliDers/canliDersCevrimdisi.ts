@@ -13,6 +13,7 @@ import { resolveDeckPdf } from '../../services/deckPdfService';
 import { OFFICIAL_CURRICULUM_COMMITTEES } from '../../data/curriculumData';
 import { cdTercihVaryant, cdDetayGetir, cdSesKisa, cdSesUrl, type CdDetay, type CdListeDers, type CdVaryant } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
+import { araResimleri, araResimYolu } from './araResimVeri';
 import {
   CD_CEVRIMDISI_DEGISTI, cdCevrimdisiKayitlari, cdCevrimdisiYaz, cdKayitSesleri, type CdCevrimdisiKayit, type CdCevrimdisiSes,
 } from './canliDersCevrimdisiKayit';
@@ -322,6 +323,13 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     const pdfler: { url: string; blob: Blob }[] = [];
     for (const p of pdfAdres) if (!p.var) pdfler.push({ url: p.url, blob: await al(p.url, 'PDF') });
     await cdCevrimdisiOnIsit();
+    // Ara resimler (mekanizma SVG'leri, küçük): sayfa içinden iner; inmeyen resim indirmeyi bozmaz
+    const resimAdres = araResimleri(key).map((r) => new URL(araResimYolu(r), location.href).href);
+    const resimler: { url: string; blob: Blob }[] = [];
+    for (const url of resimAdres) {
+      const r = await fetch(url, { cache: 'no-store', signal: ac.signal }).catch(() => null);
+      if (r?.ok) resimler.push({ url, blob: await r.blob() });
+    }
 
     // Yalnız cihazdaki seslerle ayrıntı: internet yokken oynatıcı indirilmemiş sese geçmesin
     const yerelDetay: CdDetay = { ...detay, varyantlar: secili };
@@ -334,6 +342,9 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     for (const x of silinecek) await cache.delete(sesAnahtari(key, x.vid));
     for (const p of pdfler) {
       await cache.put(p.url, new Response(p.blob, { headers: { 'Content-Type': 'application/pdf', 'Content-Length': String(p.blob.size) } }));
+    }
+    for (const p of resimler) {
+      await cache.put(p.url, new Response(p.blob, { headers: { 'Content-Type': 'image/svg+xml', 'Content-Length': String(p.blob.size) } }));
     }
     await cache.put(detayAdresi(key), json(detay));
     await cache.put(yedekDetay(key), json(yerelDetay));
@@ -366,6 +377,7 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
       no: cdDersEtiketi(detay),
       bayt: sesler.reduce((a, x) => a + x.bayt, 0) + pdfBayt,
       pdfler: pdfAdres.map((p) => p.url),
+      resimler: resimler.map((p) => p.url),
       deckId: detay.pdf?.deckId,
       at: Date.now(),
       kurul: kb?.kurul,
@@ -421,6 +433,7 @@ export async function cdCevrimdisiSil(keys: string[]): Promise<void> {
         cache.delete(detayAdresi(key)),
         cache.delete(yedekDetay(key)),
         cache.delete(yedekListe(key)),
+        ...(x.resimler || []).map((u) => cache.delete(u)),
         ...(x.pdfler || []).filter((u) => !kullanilan.has(u)).map((u) => cache.delete(u)),
         ...(x.deckId && !deckKullanilan.has(x.deckId) ? [cache.delete(deckAdresi(x.deckId))] : []),
       ]);

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Üç bozukluk: süre, belirti, gidiş">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
+<rect x="0" y="0" width="1000" height="480" fill="#fbfaf6"/>
+<text x="500" y="50" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Üç bozukluk: süre, belirti, gidiş</text>
+<rect x="295" y="78" width="200" height="60" rx="10" fill="#3a9a5b2a" stroke="#3a9a5b" stroke-width="2"/>
+<text x="395" y="117" font-size="23" fill="#3a9a5b" text-anchor="middle" font-weight="700">Kısa psikotik</text>
+<rect x="505" y="78" width="200" height="60" rx="10" fill="#b8901a2a" stroke="#b8901a" stroke-width="2"/>
+<text x="605" y="117" font-size="23" fill="#b8901a" text-anchor="middle" font-weight="700">Şizofreniform</text>
+<rect x="735" y="78" width="200" height="60" rx="10" fill="#8e3b5a2a" stroke="#8e3b5a" stroke-width="2"/>
+<text x="835" y="117" font-size="23" fill="#8e3b5a" text-anchor="middle" font-weight="700">Şizofreni</text>
+<rect x="30" y="160" width="940" height="62" rx="10" fill="#f1f1ee"/>
+<text x="45" y="200" font-size="22" fill="#1f2430" font-weight="700">Süre</text>
+<text x="395" y="200" font-size="22" fill="#3a9a5b" text-anchor="middle">1 gün–1 ay</text>
+<text x="605" y="200" font-size="22" fill="#b8901a" text-anchor="middle">1–6 ay</text>
+<text x="835" y="200" font-size="22" fill="#8e3b5a" text-anchor="middle">6 ay ve üzeri</text>
+<rect x="30" y="234" width="940" height="62" rx="10" fill="#fbfaf6"/>
+<text x="45" y="274" font-size="22" fill="#1f2430" font-weight="700">Gereken belirti</text>
+<text x="395" y="274" font-size="22" fill="#3a9a5b" text-anchor="middle">En az 1</text>
+<text x="605" y="274" font-size="22" fill="#b8901a" text-anchor="middle">En az 2</text>
+<text x="835" y="274" font-size="22" fill="#8e3b5a" text-anchor="middle">En az 2</text>
+<rect x="30" y="308" width="940" height="62" rx="10" fill="#f1f1ee"/>
+<text x="45" y="348" font-size="22" fill="#1f2430" font-weight="700">Negatif belirti</text>
+<text x="395" y="348" font-size="22" fill="#3a9a5b" text-anchor="middle">Ölçütte yok</text>
+<text x="605" y="348" font-size="22" fill="#b8901a" text-anchor="middle">Ölçütte var</text>
+<text x="835" y="348" font-size="22" fill="#8e3b5a" text-anchor="middle">Ölçütte var</text>
+<rect x="30" y="382" width="940" height="62" rx="10" fill="#fbfaf6"/>
+<text x="45" y="422" font-size="22" fill="#1f2430" font-weight="700">Gidiş</text>
+<text x="395" y="422" font-size="22" fill="#3a9a5b" text-anchor="middle" font-weight="700">Tam dönüş</text>
+<text x="605" y="408" font-size="21" fill="#b8901a" text-anchor="middle" font-weight="700">Çoğu şizofreniye</text>
+<text x="605" y="434" font-size="21" fill="#b8901a" text-anchor="middle" font-weight="700">döner</text>
+<text x="835" y="422" font-size="22" fill="#8e3b5a" text-anchor="middle" font-weight="700">Tam dönüş yok</text>
+</svg>

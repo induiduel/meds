@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <rect width="1000" height="520" fill="#ffffff"/>
+  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">Premedikasyondan uyanmaya zincir</text>
+  <defs><marker id="okz" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M0 0 L14 8 L0 16 z" fill="#475569"/></marker></defs>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="20" y="100" width="160" height="90" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="100" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#5b21b6">Premedikasyon</text>
+    <rect x="225" y="100" width="160" height="90" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="305" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#1d4ed8">İndüksiyon</text>
+    <rect x="430" y="100" width="160" height="90" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
+    <text x="510" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#15803d">İdame</text>
+    <rect x="635" y="100" width="160" height="90" rx="14" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+    <text x="715" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#b91c1c">Antagonizma</text>
+    <rect x="840" y="100" width="140" height="90" rx="14" fill="#f1f5f9" stroke="#475569" stroke-width="3"/>
+    <text x="910" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#334155">Uyanma</text>
+    <g stroke="#475569" stroke-width="4" fill="none" marker-end="url(#okz)">
+      <path d="M186 145 h33"/><path d="M391 145 h33"/><path d="M596 145 h33"/><path d="M801 145 h33"/>
+    </g>
+
+    <text x="500" y="244" text-anchor="middle" font-size="24" fill="#1e293b">Çıkışın iki yolu</text>
+    <rect x="40" y="264" width="440" height="160" rx="16" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+    <text x="260" y="304" text-anchor="middle" font-size="23" font-weight="bold" fill="#334155">Farmakokinetik yol</text>
+    <text x="260" y="342" text-anchor="middle" font-size="21" fill="#1e293b">Redistribüsyon ve klirensle</text>
+    <text x="260" y="374" text-anchor="middle" font-size="21" fill="#1e293b">ilaç kendiliğinden azalır.</text>
+
+    <rect x="520" y="264" width="440" height="160" rx="16" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+    <text x="740" y="304" text-anchor="middle" font-size="23" font-weight="bold" fill="#b91c1c">Farmakodinamik yol</text>
+    <text x="740" y="342" text-anchor="middle" font-size="21" fill="#1e293b">Nalokson, flumazenil: agonisti</text>
+    <text x="740" y="370" text-anchor="middle" font-size="21" fill="#1e293b">reseptörden yerinden eder.</text>
+    <text x="740" y="404" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Sugammadex: ilacı kanda kapsüller.</text>
+
+    <text x="500" y="480" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">İyi premedikasyon uyanma kalitesini baştan belirler.</text>
+  </g>
+</svg>

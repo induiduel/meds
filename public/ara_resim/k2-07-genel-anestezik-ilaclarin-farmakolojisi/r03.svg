@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <rect width="1000" height="520" fill="#ffffff"/>
+  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">İnhaler ajanın iki ölçüsü: güç ve hız</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="50" y="90" width="420" height="200" rx="16" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
+    <text x="260" y="134" text-anchor="middle" font-size="27" font-weight="bold" fill="#15803d">MAK = güç</text>
+    <text x="260" y="180" text-anchor="middle" font-size="21" fill="#1e293b">Yarı hastada yanıtı önleyen</text>
+    <text x="260" y="210" text-anchor="middle" font-size="21" fill="#1e293b">alveoler konsantrasyon</text>
+    <text x="260" y="256" text-anchor="middle" font-size="24" font-weight="bold" fill="#b91c1c">Küçük MAK = güçlü ilaç</text>
+
+    <rect x="530" y="90" width="420" height="200" rx="16" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
+    <text x="740" y="134" text-anchor="middle" font-size="27" font-weight="bold" fill="#15803d">Kan-gaz katsayısı = hız</text>
+    
+    <text x="740" y="192" text-anchor="middle" font-size="22" fill="#1e293b">Kan az emerse beyne çabuk geçer.</text>
+    <text x="740" y="256" text-anchor="middle" font-size="24" font-weight="bold" fill="#b91c1c">Küçük katsayı = hızlı</text>
+
+    <text x="500" y="348" text-anchor="middle" font-size="25" fill="#1e293b">Hız sırası (kan-gaz katsayısı):</text>
+    <g>
+      <rect x="70" y="378" width="190" height="86" rx="12" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+      <text x="165" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#14532d">Desfluran</text>
+      <text x="165" y="444" text-anchor="middle" font-size="24" fill="#1e293b">0,42</text>
+      <rect x="290" y="378" width="190" height="86" rx="12" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+      <text x="385" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#14532d">Sevofluran</text>
+      <text x="385" y="444" text-anchor="middle" font-size="24" fill="#1e293b">0,65</text>
+      <rect x="510" y="378" width="190" height="86" rx="12" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
+      <text x="605" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#14532d">İzofluran</text>
+      <text x="605" y="444" text-anchor="middle" font-size="24" fill="#1e293b">1,4</text>
+      <rect x="730" y="378" width="190" height="86" rx="12" fill="#fde68a" stroke="#a16207" stroke-width="2"/>
+      <text x="825" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#713f12">Halotan</text>
+      <text x="825" y="444" text-anchor="middle" font-size="24" fill="#1e293b">2,4</text>
+    </g>
+  </g>
+</svg>

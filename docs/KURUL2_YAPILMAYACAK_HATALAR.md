@@ -2106,3 +2106,33 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   pdf.js yardımcıları, merkez paketlerinde `paketiDenetle` → `paketOnar`. "İndirilenler"de "Eksikleri tamamla" düğmesi; `paketiDenetle` PDF'i de sayar.
   Sınama: ders indir → PDF'i sil → `eksikleriGider` → 2 dosya geri geldi → internetsiz 206 + 8 sayfa.
 - **Önleme:** çevrimdışı indirmeye yeni bir parça eklenince denetim (`paketiDenetle`) ve `eksikGider` aynı commit'te güncellenir; `ONARIM_SURUM` artırılır.
+
+## H484
+- **Belirti (2026-11-04, k2-07/15/16 tam hat):** üç ders paralel hazırlanırken `hazirlik.py` sayfa metni / görüntü / öğrenci notu işlerinin bir kısmı
+  0 sn'de HATA verdi.
+- **Kök neden:** `cpu_run` systemd birim adını yalnız saniye damgasıyla kuruyordu (`meds-hazirlik-<iş>-<sn>`); iki süreç aynı saniyede
+  aynı işi başlatınca "Unit … already loaded" ile reddedildi.
+- **Çözüm:** birim adına süreç numarası eklendi (`meds-hazirlik-<iş>-<pid>-<sn>`).
+- **Önleme:** systemd-run ile geçici birim açan her betik adı süreçten tekil kurar (pid ya da uuid); zaman damgası tek başına kimlik sayılmaz.
+
+## H485
+- **Belirti (2026-11-04):** destesiz taslakta `denetle.py` sayfa haritası denetiminde çöktü; değerlendirme kapısı atom/çıkmış kanıtlarının
+  yüzlercesini "slaytta yok" diye reddetti (k2-07: 153 HATA).
+- **Kök neden:** (1) taslak iskeleti elle kurulurken `taslak/sayfalar.json` olarak sayfa METNİ (sözlük) kopyalandı; ders işçisi burada
+  `cikar.sayfa_varliklari` listesini bekler. (2) Yazar ajanlar kanıtı `pdftotext -layout` metninden alıntıladı; iki sütunlu slaytta bu metin
+  satırları karıştırır, kapı ise pymupdf metninde birebir arar.
+- **Çözüm:** `meds_temp/ogrenci_ders/arac/taslak_kur.py` artık `sayfa_varliklari` üretir; `arac/kanit_onar.py` her başarısız alıntıyı sayfanın
+  pymupdf metninde birebir geçen en uzun (≥3 kelime) diziye indirir (bilgi metni değişmez, uydurma yok); taslak + çıkmış eşlemesi onarıldı,
+  üç paket 0 HATA.
+- **Önleme:** taslak iskeleti yalnız `taslak_kur.py` ile kurulur. Kanıt alıntısı yazan ajan alıntıyı `pymupdf` sayfa metninden alır ya da
+  yazım sonunda `kanit_onar.py --yaz` + `degerlendirme_dogrula.py` çalıştırır.
+
+## H486
+- **Belirti (2026-11-04):** k2-07 (genel anestezik) anlatımı ve örnek soruları bağımsız denetimde KALIR: remifentanil "plazma kolinesterazıyla"
+  yıkılıyor, sugammadex için iki farklı derin blok dozu, süksinilkolin "asetilkolin reseptörünü taklit eder", sugammadex reseptör antagonisti gibi.
+  k2-15'te önem yazarı anlatımda zaten ayıklanmış çelişkili slayt satırından ("kısa psikotikte takipte çoğunlukla şizofreni") madde ve soru kurdu.
+- **Kök neden:** yazar slayttaki yanlış/çelişkili satırı (s34 remifentanil, s48–s56 doz, s45 kısa psikotik) olduğu gibi aktardı; anlatım
+  denetiminde düzeltilen hata listesi sonraki katmanların (soru, önem, çözücü) yazarlarına verilmedi.
+- **Çözüm:** anlatım düzeltildi + yeniden denetim GEÇER; örnek sorularda 6 ifade düzeltildi; k2-15 önem/çözücü maddesi yeniden yazıldı.
+- **Önleme:** anlatım denetiminin `denetim.json` tıbbi bulguları ve `rapor.md` "slayt çelişkisi" listesi her sonraki katman yazarının istemine
+  zorunlu girdi olarak konur; ders başına soru katmanı denetçisi (`GOREV_DENETCI_SORU_K2_B3.md`) bu listeyi tek tek arar.

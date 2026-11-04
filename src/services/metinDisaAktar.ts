@@ -2,7 +2,9 @@
  * Ders metnini dosyaya aktarma motoru: .txt, .md, .docx, .pdf (Sesli ders ve Etkileşimli dersler ortak kullanır).
  * Girdi: başlık + bölümler; her bölümün gövdesi sınırlı bir Markdown alt kümesidir:
  *   "### alt başlık", "- madde", "1. madde", "> [!NOTE|IMPORTANT|TIP|WARNING]" kutusu, "| tablo |", düz paragraf;
- *   satır içi **kalın**, ==önemli== (kırmızı + kalın + marker), *eğik*.
+ *   satır içi **kalın**, ==önemli== (kırmızı + kalın + marker), *eğik*;
+ *   tek satırlık resim bloğu `![başlık](yol "alt yazı")` (sesli ders ara resimleri; SVG/PNG, kök göreli yol):
+ *   PDF'e 2× PNG olarak, DOCX'e gömülü PNG olarak girer; MD'de mutlak bağlantı, TXT'de "[Resim: …]" satırı. Yüklenemezse metin satırı yazılır.
  * Metin birebir korunur; yalnız biçim işaretleri hedef dosyanın kendi biçimine çevrilir.
  * DOCX bağımlılıksız (sıkıştırmasız ZIP + WordprocessingML), PDF jsPDF + Türkçe Liberation fontuyla üretilir.
  */
@@ -28,7 +30,14 @@ type Blok =
   | { tur: 'p' | 'h'; r: Run[] }
   | { tur: 'li'; r: Run[]; isaret: string; dz: number }
   | { tur: 'not'; etiket: string; satirlar: Run[][] }
-  | { tur: 'tablo'; satirlar: Run[][][] };
+  | { tur: 'tablo'; satirlar: Run[][][] }
+  | { tur: 'resim'; baslik: string; yol: string; alt: string };
+
+/** Resim satırı: ![başlık](yol "alt yazı") — başlıkta ] ve alt yazıda " bulunmaz (resimSatiri temizler) */
+const RESIM_RE = /^\s*!\[([^\]]*)\]\((\S+?)(?:\s+"([^"]*)")?\)\s*$/;
+/** Belgeye resim satırı yazar (başlık/alt yazıdaki ayraç karakterleri temizlenir) */
+export const resimSatiri = (baslik: string, yol: string, alt = '') =>
+  `![${baslik.replace(/[[\]\n]/g, ' ').trim()}](${yol.replace(/[\s()]/g, encodeURIComponent)}${alt ? ` "${alt.replace(/["\n]/g, "'").trim()}"` : ''})`;
 
 const NOT_AD: Record<string, string> = { NOTE: 'Not', IMPORTANT: 'Önemli', TIP: 'İpucu', WARNING: 'Dikkat', CAUTION: 'Dikkat' };
 
@@ -52,6 +61,8 @@ function bloklar(md: string): Blok[] {
   for (let k = 0; k < sat.length; k++) {
     const l = sat[k];
     if (!l.trim()) continue;
+    const rs = l.match(RESIM_RE);
+    if (rs) { girinti.length = 0; out.push({ tur: 'resim', baslik: rs[1].trim(), yol: rs[2], alt: (rs[3] || '').trim() }); continue; }
     const not = l.match(/^\s*>\s*\[!(\w+)\]\s*(.*)$/);
     if (not || /^\s*>/.test(l)) {
       const etiket = not ? NOT_AD[not[1].toUpperCase()] || 'Not' : '';
@@ -107,6 +118,7 @@ function txt(b: AktarBelge): string {
       else if (x.tur === 'li') s.push(`${'    '.repeat(x.dz)}${x.isaret} ${duz(x.r)}`);
       else if (x.tur === 'not') s.push(...x.satirlar.map((r, i) => `${i === 0 && x.etiket ? `[${x.etiket}] ` : '    '}${duz(r)}`));
       else if (x.tur === 'tablo') s.push(...x.satirlar.map((r) => r.map(duz).join(' | ')));
+      else if (x.tur === 'resim') s.push('', `[Resim: ${x.baslik}${x.alt ? ` — ${x.alt}` : ''}]`, '');
     }
   }
   return s.join('\r\n') + '\r\n';
@@ -118,10 +130,77 @@ function md(b: AktarBelge): string {
     s.push('');
     if (bo.baslik) s.push(`## ${bo.baslik}`, '');
     if (bo.alt) s.push(`_${bo.alt}_`, '');
-    s.push(bo.md.trim());
+    // resim satırı: mutlak bağlantı (dosya site dışında açılır) + alt yazı
+    s.push(bo.md.trim().split('\n').map((l) => {
+      const rs = l.match(RESIM_RE);
+      if (!rs) return l;
+      return `\n![${rs[1].trim()}](${mutlak(rs[2])})${rs[3] ? `\n\n_${rs[3].trim()}_` : ''}\n`;
+    }).join('\n'));
   }
   return s.join('\n') + '\n';
 }
+
+const mutlak = (yol: string) => { try { return new URL(yol, typeof location !== 'undefined' ? location.origin : 'https://nofrostlife.com.tr').href; } catch { return yol; } };
+
+/* ---------------- resimler (PDF / DOCX için PNG) ---------------- */
+
+interface ResimPng { png: Uint8Array; dataUrl: string; w: number; h: number }
+type Resimler = Map<string, ResimPng | null>;
+
+/** SVG (ya da PNG/JPEG) adresini 2× çözünürlüklü PNG'ye çevirir; olmazsa null */
+async function resimPng(yol: string): Promise<ResimPng | null> {
+  try {
+    const r = await fetch(yol);
+    if (!r.ok) return null;
+    const tip = r.headers.get('content-type') || '';
+    let blob: Blob;
+    let vw = 0, vh = 0;
+    if (/svg/.test(tip) || /\.svg(\?|$)/i.test(yol)) {
+      const metin = await r.text();
+      const d = new DOMParser().parseFromString(metin, 'image/svg+xml');
+      const svg = d.documentElement;
+      if (!svg || svg.nodeName.toLowerCase() !== 'svg') return null;
+      const vb = (svg.getAttribute('viewBox') || '').trim().split(/[\s,]+/).map(Number);
+      vw = vb.length === 4 && vb[2] > 0 ? vb[2] : parseFloat(svg.getAttribute('width') || '') || 800;
+      vh = vb.length === 4 && vb[3] > 0 ? vb[3] : parseFloat(svg.getAttribute('height') || '') || 500;
+      // ölçü verilmemiş SVG tarayıcıda 300×150 çizilir: viewBox ölçüsü yazılır
+      svg.setAttribute('width', String(vw)); svg.setAttribute('height', String(vh));
+      blob = new Blob([new XMLSerializer().serializeToString(svg)], { type: 'image/svg+xml' });
+    } else blob = await r.blob();
+    const url = URL.createObjectURL(blob);
+    try {
+      const img = new Image();
+      img.decoding = 'async';
+      await new Promise<void>((coz, red) => { img.onload = () => coz(); img.onerror = () => red(new Error('resim')); img.src = url; });
+      const ow = vw || img.naturalWidth, oh = vh || img.naturalHeight;
+      if (!ow || !oh) return null;
+      const olcek = Math.min(2400 / ow, Math.max(2, 1600 / ow));
+      const cw = Math.round(ow * olcek), ch = Math.round(oh * olcek);
+      const c = document.createElement('canvas');
+      c.width = cw; c.height = ch;
+      const g = c.getContext('2d');
+      if (!g) return null;
+      g.fillStyle = '#fff'; g.fillRect(0, 0, cw, ch);
+      g.drawImage(img, 0, 0, cw, ch);
+      const dataUrl = c.toDataURL('image/png');
+      const ik = atob(dataUrl.slice(dataUrl.indexOf(',') + 1));
+      const png = new Uint8Array(ik.length);
+      for (let i = 0; i < ik.length; i++) png[i] = ik.charCodeAt(i);
+      return { png, dataUrl, w: cw, h: ch };
+    } finally { URL.revokeObjectURL(url); }
+  } catch { return null; }
+}
+
+/** Belgedeki tüm resim bloklarını önceden PNG'ye çevirir (yalnız tarayıcıda) */
+async function resimleriHazirla(b: AktarBelge): Promise<Resimler> {
+  const m: Resimler = new Map();
+  if (typeof document === 'undefined') return m;
+  const yollar = new Set<string>();
+  for (const bo of b.bolumler) for (const x of bloklar(bo.md)) if (x.tur === 'resim') yollar.add(x.yol);
+  await Promise.all([...yollar].map(async (y) => { m.set(y, await resimPng(y)); }));
+  return m;
+}
+const resimYedekMetni = (x: { baslik: string; alt: string }) => `[Resim: ${x.baslik}${x.alt ? ` — ${x.alt}` : ''}]`;
 
 /* ---------------- DOCX ---------------- */
 
@@ -130,7 +209,10 @@ const runX = (r: Run) => `<w:r>${r.b || r.m || r.i ? `<w:rPr>${r.b || r.m ? '<w:
 const runsX = (r: Run[]) => r.map(runX).join('');
 const par = (stil: string, ic: string, ek = '') => `<w:p><w:pPr><w:pStyle w:val="${stil}"/>${ek}</w:pPr>${ic}</w:p>`;
 
-function docxXml(b: AktarBelge): Record<string, string> {
+function docxXml(b: AktarBelge, resimler: Resimler = new Map()): Record<string, string | Uint8Array> {
+  const medya: Record<string, Uint8Array> = {};
+  const rels: string[] = [];
+  let rn = 0;
   const g: string[] = [par('Title', runX({ t: b.baslik })), par('Subtitle', runX({ t: b.alt }))];
   for (const bo of b.bolumler) {
     if (bo.baslik) g.push(par('Heading1', runX({ t: bo.baslik })));
@@ -150,6 +232,20 @@ function docxXml(b: AktarBelge): Record<string, string> {
         g.push(`<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:tblBorders>${['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map((k) => `<w:${k} w:val="single" w:sz="4" w:color="D6DCE3"/>`).join('')}</w:tblBorders><w:tblCellMar><w:left w:w="80" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${'<w:gridCol w:w="' + gen + '"/>'.repeat(sut)}</w:tblGrid>`
           + x.satirlar.map((r, ri) => `<w:tr>${Array.from({ length: sut }, (_, ci) => `<w:tc><w:tcPr><w:tcW w:w="${gen}" w:type="dxa"/>${ri === 0 ? '<w:shd w:val="clear" w:color="auto" w:fill="EEF3F7"/>' : ''}</w:tcPr>${par('Tablo', (r[ci] || []).map((x2) => runX(ri === 0 ? { ...x2, b: true } : x2)).join(''))}</w:tc>`).join('')}</w:tr>`).join('')
           + '</w:tbl>' + par('Normal', ''));
+      } else if (x.tur === 'resim') {
+        const p = resimler.get(x.yol);
+        if (!p) { g.push(par('Normal', runX({ t: resimYedekMetni(x), i: true }))); continue; }
+        rn++;
+        const ad = `image${rn}.png`, rid = `rIdImg${rn}`;
+        medya[`word/media/${ad}`] = p.png;
+        rels.push(`<Relationship Id="${rid}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/${ad}"/>`);
+        // metin genişliği 9638 twip = 6.120.130 EMU; yükseklik en çok ~19 cm
+        let cx = 6120130, cy = Math.round(cx * p.h / p.w);
+        const maxCy = 6840000;
+        if (cy > maxCy) { cx = Math.round(cx * maxCy / cy); cy = maxCy; }
+        if (x.baslik) g.push(par('Heading2', runX({ t: x.baslik }), '<w:keepNext/>'));
+        g.push(`<w:p><w:pPr><w:keepNext/><w:jc w:val="center"/><w:spacing w:before="60" w:after="60"/></w:pPr><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="${cx}" cy="${cy}"/><wp:docPr id="${rn}" name="Resim ${rn}" descr="${xe(x.alt || x.baslik).replace(/"/g, '&quot;')}"/><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="${rn}" name="${ad}"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${rid}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`);
+        if (x.alt) g.push(par('Subtitle2', runX({ t: x.alt, i: true }), '<w:jc w:val="center"/>'));
       }
     }
   }
@@ -157,9 +253,9 @@ function docxXml(b: AktarBelge): Record<string, string> {
   const font = '<w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri" w:eastAsia="Calibri"/>';
   const stil = (id: string, ad: string, pPr: string, rPr: string, ek = '') => `<w:style w:type="paragraph" w:styleId="${id}"><w:name w:val="${ad}"/><w:basedOn w:val="Normal"/>${ek}<w:pPr>${pPr}</w:pPr><w:rPr>${rPr}</w:rPr></w:style>`;
   return {
-    '[Content_Types].xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/numbering.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"/></Types>`,
+    '[Content_Types].xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="png" ContentType="image/png"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/numbering.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"/></Types>`,
     '_rels/.rels': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`,
-    'word/_rels/document.xml.rels': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/></Relationships>`,
+    'word/_rels/document.xml.rels': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/>${rels.join('')}</Relationships>`,
     'word/styles.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles ${W}>`
       + `<w:docDefaults><w:rPrDefault><w:rPr>${font}<w:sz w:val="22"/><w:lang w:val="tr-TR"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="80" w:line="288" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>`
       + `<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/></w:style>`
@@ -175,7 +271,8 @@ function docxXml(b: AktarBelge): Record<string, string> {
     'word/numbering.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:numbering ${W}><w:abstractNum w:abstractNumId="0"><w:multiLevelType w:val="hybridMultilevel"/>`
       + [0, 1, 2].map((l) => `<w:lvl w:ilvl="${l}"><w:start w:val="1"/><w:numFmt w:val="bullet"/><w:lvlText w:val="${['•', '◦', '▪'][l]}"/><w:lvlJc w:val="left"/><w:pPr><w:ind w:left="${360 * (l + 1)}" w:hanging="360"/></w:pPr><w:rPr><w:color w:val="0D6E96"/></w:rPr></w:lvl>`).join('')
       + `</w:abstractNum><w:num w:numId="1"><w:abstractNumId w:val="0"/></w:num></w:numbering>`,
-    'word/document.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document ${W}><w:body>${g.join('')}<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="567" w:footer="567" w:gutter="0"/></w:sectPr></w:body></w:document>`,
+    ...medya,
+    'word/document.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document ${W} xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>${g.join('')}<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="567" w:footer="567" w:gutter="0"/></w:sectPr></w:body></w:document>`,
   };
 }
 
@@ -183,9 +280,9 @@ const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n+
 const crc32 = (d: Uint8Array) => { let c = 0xffffffff; for (let i = 0; i < d.length; i++) c = CRC[(c ^ d[i]) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
 
 /** Sıkıştırmasız (stored) ZIP */
-function zip(dosyalar: Record<string, string>): Blob {
+function zip(dosyalar: Record<string, string | Uint8Array>): Blob {
   const enc = new TextEncoder();
-  return zipIkili(Object.entries(dosyalar).map(([ad, icerik]) => [ad, enc.encode(icerik)]), 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+  return zipIkili(Object.entries(dosyalar).map(([ad, icerik]) => [ad, typeof icerik === 'string' ? enc.encode(icerik) : icerik]), 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
 }
 
 /** Sıkıştırmasız (stored) ZIP, ikili içerik (toplu PDF indirme) */
@@ -220,7 +317,7 @@ const TEMA_RENK: Record<PdfStil['renk'], RGB> = {
 };
 const INK: RGB = [14, 26, 38], SOL: RGB = [118, 130, 143], KIRMIZI0: RGB = [200, 38, 45], MARKER: RGB = [255, 233, 128], CIZGI: RGB = [214, 220, 227];
 
-async function pdf(b: AktarBelge, gorunum?: PdfStil): Promise<Blob> {
+async function pdf(b: AktarBelge, gorunum?: PdfStil, resimler: Resimler = new Map()): Promise<Blob> {
   const S = { ...VARSAYILAN_STIL, ...gorunum };
   const k = { kucuk: 0.88, normal: 1, buyuk: 1.12, cokbuyuk: 1.26 }[S.yaziBoyutu];
   const hk = k * { kucuk: 0.9, normal: 1, buyuk: 1.12 }[S.baslikBoyutu];
@@ -284,7 +381,20 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil): Promise<Blob> {
       cx += k.w + sonraki;
     });
   };
+  /** Resim bloğu ölçüsü: başlık + resim (genişliğe sığar, sayfaya sığacak kadar küçülür) + alt yazı tek sayfada */
+  const resimOlc = (x: Extract<Blok, { tur: 'resim' }>) => {
+    const p = resimler.get(x.yol);
+    const bs = x.baslik ? satirla([{ t: x.baslik, b: true }], CW, PT.alt) : [];
+    const as = x.alt ? satirla([{ t: x.alt, i: true }], CW, PT.kucuk) : [];
+    const bH = bs.length * lh(PT.alt) + (bs.length ? 1.5 : 0), aH = as.length * lh(PT.kucuk) + (as.length ? 1.5 : 0);
+    if (!p) return { p, bs, as, bH, aH, w: 0, h: 0, top: lh(PT.govde) + 2 };
+    let w = CW, h = (CW * p.h) / p.w;
+    const maxH = ALT - UST - bH - aH - 6;
+    if (h > maxH) { w = (w * maxH) / h; h = maxH; }
+    return { p, bs, as, bH, aH, w, h, top: bH + h + aH + 6 };
+  };
   const hesaplaBlokH = (x: Blok): number => {
+    if (x.tur === 'resim') return resimOlc(x).top;
     if (x.tur === 'h') {
       return satirla(x.r.map((r) => ({ ...r, b: true })), CW, PT.alt).length * lh(PT.alt) + 2.3;
     }
@@ -562,6 +672,19 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil): Promise<Blob> {
           y += h;
         });
         y += 3;
+      } else if (x.tur === 'resim') {
+        const o = resimOlc(x);
+        if (!o.p) { akit([{ t: resimYedekMetni(x), i: true }], M, CW, PT.govde, SOL, undefined, 1.8); continue; }
+        if (y > UST && y + o.top > ALT) { doc.addPage(); y = UST; }
+        y += 2;
+        for (const s of o.bs) { satirCiz(s, M, y + PT.alt * 0.3528, PT.alt, INK); y += lh(PT.alt); }
+        if (o.bs.length) y += 1.5;
+        try { doc.addImage(o.p.dataUrl, 'PNG', M + (CW - o.w) / 2, y, o.w, o.h, undefined, 'FAST'); }
+        catch { /* bozuk resim: alan boş kalır, akış sürer */ }
+        doc.setDrawColor(...CIZGI); doc.setLineWidth(0.25); doc.rect(M + (CW - o.w) / 2, y, o.w, o.h, 'S');
+        y += o.h + 1.5;
+        for (const s of o.as) { satirCiz(s, M, y + PT.kucuk * 0.3528, PT.kucuk, SOL); y += lh(PT.kucuk); }
+        y += 2.5;
       }
     }
   }
@@ -590,8 +713,8 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil): Promise<Blob> {
 export async function metinDosyasi(b: AktarBelge, bicim: AktarBicim, stil?: PdfStil): Promise<Blob> {
   return bicim === 'txt' ? new Blob(['﻿' + txt(b)], { type: 'text/plain;charset=utf-8' })
     : bicim === 'md' ? new Blob([md(b)], { type: 'text/markdown;charset=utf-8' })
-    : bicim === 'docx' ? zip(docxXml(b))
-    : pdf(b, stil);
+    : bicim === 'docx' ? zip(docxXml(b, await resimleriHazirla(b)))
+    : pdf(b, stil, await resimleriHazirla(b));
 }
 
 export async function metniIndir(b: AktarBelge, bicim: AktarBicim, dosyaAdi: string, duzen?: import('./pdfDuzen').PdfDuzen): Promise<void> {

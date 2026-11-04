@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440">
+  <rect width="1000" height="440" fill="#ffffff"/>
+  <defs>
+    <marker id="ok" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto">
+      <path d="M0 0 L16 9 L0 18 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">Redistribüsyon: etki neden biter?</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="20" y="90" width="210" height="170" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="125" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#1d4ed8">1. Verilir</text>
+    <text x="125" y="180" text-anchor="middle" font-size="22" fill="#1e293b">damardan</text>
+    <text x="125" y="212" text-anchor="middle" font-size="22" fill="#1e293b">hızla</text>
+
+    <rect x="270" y="90" width="210" height="170" rx="16" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+    <text x="375" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#1d4ed8">2. Beyin</text>
+    <text x="375" y="180" text-anchor="middle" font-size="22" fill="#1e293b">kanı bol;</text>
+    <text x="375" y="212" text-anchor="middle" font-size="22" fill="#1e293b">bilinç kapanır</text>
+
+    <rect x="520" y="90" width="210" height="170" rx="16" fill="#ffedd5" stroke="#c2410c" stroke-width="3"/>
+    <text x="625" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#9a3412">3. Kas ve yağ</text>
+    <text x="625" y="180" text-anchor="middle" font-size="22" fill="#1e293b">kanı az;</text>
+    <text x="625" y="212" text-anchor="middle" font-size="22" fill="#1e293b">ilaç dağılır</text>
+
+    <rect x="770" y="90" width="210" height="170" rx="16" fill="#f1f5f9" stroke="#475569" stroke-width="3"/>
+    <text x="875" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#334155">4. Etki biter</text>
+    <text x="875" y="180" text-anchor="middle" font-size="22" fill="#1e293b">kan ve beyin</text>
+    <text x="875" y="212" text-anchor="middle" font-size="22" fill="#1e293b">düzeyi düşer</text>
+
+    <g stroke="#475569" stroke-width="4" fill="none" marker-end="url(#ok)">
+      <path d="M232 175 h34"/>
+      <path d="M482 175 h34"/>
+      <path d="M732 175 h34"/>
+    </g>
+
+    <rect x="20" y="300" width="960" height="110" rx="14" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+    <text x="500" y="344" text-anchor="middle" font-size="24" fill="#1e293b">İlaç hâlâ vücuttadır.</text>
+    <text x="500" y="384" text-anchor="middle" font-size="24" font-weight="bold" fill="#b91c1c">Tekrarlanan dozda kas ve yağda birikir: kümülasyon.</text>
+  </g>
+</svg>

@@ -192,6 +192,23 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Beyin ve Sinir Cerrahisi/4)Spinal Travmalar.pdf', name: '4)Spinal Travmalar.pdf', pages: 57, fileId: '1qOQ4DYspVXBXoyxahYyNzsfvwWT4LDgf' } as SourceFile],
   },
+  // 2026-11-04 Kurul 2, 3. parti (Öğren askıda, destesiz): okul PDF'i doğrudan bağlı. k2-07'nin bu yılki PDF'i okul Drive'ında henüz
+  // yok (kullanıcı yerelden paylaştı) → fileId yok; eski 2023-24 dersi (k2p-k2-07-genel-anestezik-ilaclar, SINAMA) arşivde kalır.
+  'k2p-k2-07-genel-anestezik-ilaclarin-farmakolojisi': {
+    title: 'Genel Anestezik İlaçların Farmakolojisi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /2)Genel Anestezik İlaçların Farmakolojisi.pdf', name: '2)Genel Anestezik İlaçların Farmakolojisi.pdf', pages: 60 } as SourceFile],
+  },
+  'k2p-k2-15-sizofrenik-bozukluklar': {
+    title: 'Şizofreni ve Diğer Psikotik Bozukluklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /2)Şizofreni ve Diğer Psikotik Bozukluklar.pdf', name: '2)Şizofreni ve Diğer Psikotik Bozukluklar.pdf', pages: 49, fileId: '12rnNztA96t0UgWWLiLRvKp52XCw3FDKz' } as SourceFile],
+  },
+  'k2p-k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler': {
+    title: 'Nörolojik Rehabilitasyona Giriş ve Genel İlkeler',
+    decks: [],
+    files: [{ path: 'Kurul 2/FTR/1)Nörolojik rehabilitasyona giriş ve genel ilkeler.pdf', name: '1)Nörolojik rehabilitasyona giriş ve genel ilkeler.pdf', pages: 43, fileId: '1lj1IYdYpYjhq602-179jVlQ3vh6DpDDh' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [

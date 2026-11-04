@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540">
+  <rect width="1000" height="540" fill="#ffffff"/>
+  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">Bloğu geri çevirmenin iki yolu</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="50" y="86" width="420" height="340" rx="16" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+    <text x="260" y="130" text-anchor="middle" font-size="26" font-weight="bold" fill="#b91c1c">Neostigmin</text>
+    <text x="260" y="190" text-anchor="middle" font-size="23" fill="#1e293b">Enzimi durdurur, asetilkolin birikir.</text>
+    <text x="260" y="246" text-anchor="middle" font-size="23" fill="#1e293b">Yarışı asetilkolin kazanır.</text>
+    <rect x="90" y="282" width="340" height="124" rx="12" fill="#fecaca"/>
+    <text x="260" y="316" text-anchor="middle" font-size="23" fill="#7f1d1d">Yan etki: bradikardi,</text>
+    <text x="260" y="348" text-anchor="middle" font-size="23" fill="#7f1d1d">salgı artışı, bronkospazm.</text>
+    <text x="260" y="384" text-anchor="middle" font-size="23" font-weight="bold" fill="#7f1d1d">Atropin gerekir.</text>
+
+    <rect x="530" y="86" width="420" height="340" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="740" y="130" text-anchor="middle" font-size="26" font-weight="bold" fill="#1d4ed8">Sugammadex</text>
+    <text x="740" y="190" text-anchor="middle" font-size="23" fill="#1e293b">Rokuronyumu kandan sarar.</text>
+    <text x="740" y="246" text-anchor="middle" font-size="23" fill="#1e293b">Derin blokta da yeterlidir.</text>
+    <rect x="570" y="282" width="340" height="124" rx="12" fill="#bfdbfe"/>
+    <text x="740" y="316" text-anchor="middle" font-size="23" fill="#1e3a8a">Muskarinik yan etki yok,</text>
+    <text x="740" y="348" text-anchor="middle" font-size="23" fill="#1e3a8a">atropin gerekmez.</text>
+    <text x="740" y="384" text-anchor="middle" font-size="23" font-weight="bold" fill="#1e3a8a">Yalnız aminosteroid blokta.</text>
+
+    <text x="500" y="492" text-anchor="middle" font-size="25" font-weight="bold" fill="#1e293b">Her ikisi de yalnız non-depolarizan bloğu geri çevirir.</text>
+  </g>
+</svg>

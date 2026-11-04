@@ -36,7 +36,7 @@ API = os.environ.get("MEDS_ISCI_API", "http://127.0.0.1:3000")  # yerel site ara
 
 
 def cpu_run(ad: str, komut: list[str]) -> list[str]:
-    return ["systemd-run", "--user", "--wait", "--collect", "--quiet", "--pipe", f"--unit=meds-hazirlik-{ad}-{int(time.time())}",
+    return ["systemd-run", "--user", "--wait", "--collect", "--quiet", "--pipe", f"--unit=meds-hazirlik-{ad}-{os.getpid()}-{int(time.time())}",
             "-p", "CPUQuota=200%", "-p", "MemoryMax=2G", "-p", "OOMScoreAdjust=500",
             "-E", "CUDA_VISIBLE_DEVICES=", *komut]
 

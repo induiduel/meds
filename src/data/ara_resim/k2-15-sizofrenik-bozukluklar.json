@@ -1,0 +1,165 @@
+{
+ "key": "k2-15-sizofrenik-bozukluklar",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Çoklu vuruş: genetik yatkınlığın üstüne eklenen etkenler",
+   "aciklama": "Stres-diyatez modelinde genetik yatkınlık tek başına hastalık yapmaz; psikososyal etkenler üst üste eklenince şizofreni ortaya çıkar.",
+   "adimlar": [
+    "1. İlk vuruş genetik yatkınlıktır (diyatez).",
+    "2. Gebelik ve doğum komplikasyonları, doğum mevsimi, ebeveyn yaşı, örselenme, esrar, kent ve göç eklenir.",
+    "3. Etkenler birikince hastalık ortaya çıkar."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 4,
+   "bitis": 9,
+   "kaynak": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Dopamin fazlası pozitif, dopamin azlığı negatif belirtilerle ilişkilidir",
+   "aciklama": "Hiperdopaminerjik durum pozitif, hipodopaminerjik durum ve hipofrontalite negatif belirtilerle ilişkilidir; fensiklidin glutamat yoluyla şizofreni benzeri tablo yapar.",
+   "adimlar": [
+    "1. Dopamin fazlası: pozitif belirtiler (sanrı, varsanı).",
+    "2. Dopamin azlığı ve hipofrontalite: negatif belirtiler.",
+    "3. Fensiklidin glutamat sistemi üzerinden şizofreni benzeri belirtiler oluşturur."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 14,
+   "bitis": 14,
+   "kaynak": [
+    14,
+    16
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Şizofreni tanısı üç ölçüte dayanır: A, B ve C",
+   "aciklama": "Beş belirtiden en az ikisi bir ay bulunur ve biri mutlaka sanrı, varsanı ya da darmadağın konuşmadır; işlevsellik düşer ve süre en az altı aydır.",
+   "adimlar": [
+    "1. A ölçütü: beş belirtiden en az ikisi, bir ay boyunca.",
+    "2. Bu belirtilerden en az biri sanrı, varsanı ya da darmadağın konuşmadır.",
+    "3. B ölçütü: işlevsellik belirgin biçimde düşer.",
+    "4. C ölçütü: süregiden bulgular en az altı ay sürer."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 15,
+   "bitis": 15,
+   "kaynak": [
+    17
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Süre ayrımı: bir ay ve altı ay eşikleri",
+   "aciklama": "Belirtilerin süresi tanıyı belirler: bir günden fazla ve bir aydan kısa kısa psikotik bozukluk, bir ile altı ay şizofreniform bozukluk, altı ay ve üzeri şizofrenidir.",
+   "adimlar": [
+    "1. Bir gün ile bir ay arası: kısa psikotik bozukluk.",
+    "2. Bir ile altı ay arası: şizofreniform bozukluk.",
+    "3. Altı ay ve üzeri: şizofreni."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 16,
+   "bitis": 16,
+   "kaynak": [
+    18
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Pozitif belirtide bir şey eklenir, negatif belirtide bir şey eksilir",
+   "aciklama": "Sanrı, varsanı, formel düşünce bozukluğu ve dezorganize davranış pozitif; aloji, küntleşme, anhedoni, içe çekilme, avolüsyon, apati ve dikkat bozukluğu negatif belirtidir.",
+   "adimlar": [
+    "1. Pozitif belirtiler işlevin abartılmasıdır.",
+    "2. Negatif belirtiler var olan işlevin kaybıdır.",
+    "3. Apati negatif, enkoherans ve algı bozukluğu pozitif gruptadır."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 22,
+   "bitis": 22,
+   "kaynak": [
+    22,
+    23,
+    24
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Şizofreninin dört evresi: işlevsellik yaşla nasıl iner",
+   "aciklama": "Belirtisiz dönemi prodrom izler; aktif dönemde her ataktan sonra tam dönüş olmaz ve rezidüel dönemde işlevsellik düşük kalır.",
+   "adimlar": [
+    "1. Belirtisiz dönem: on beş yaşa dek tam işlev.",
+    "2. Prodrom: garip davranış ve silik negatif belirtiler.",
+    "3. Aktif dönem: pozitif belirtiler, ataklar ve düzelmeler; tam dönüş yok.",
+    "4. Rezidüel dönem: negatif ve bilişsel belirtiler, düşük işlevsellik."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 26,
+   "bitis": 26,
+   "kaynak": [
+    28
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Şizofreni ile sanrılı bozukluk dört noktada ayrılır",
+   "aciklama": "Sanrılı bozuklukta işlevsellik iyidir, yeti kaybı yoktur, sanrı sistematize ve odaklıdır, şizofreninin diğer belirtileri bulunmaz.",
+   "adimlar": [
+    "1. İşlevsellik: şizofrenide kötü, sanrılı bozuklukta iyi.",
+    "2. Yeti kaybı: şizofrenide var, sanrılı bozuklukta yok.",
+    "3. Sanrılar: şizofrenide yaygın, sanrılı bozuklukta sistematize ve odaklı.",
+    "4. Diğer belirtiler: şizofrenide var, sanrılı bozuklukta yok."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 37,
+   "bitis": 37,
+   "kaynak": [
+    40
+   ]
+  },
+  {
+   "id": "r08",
+   "baslik": "Şizoaffektif bozukluk iki komşusundan nasıl ayrılır",
+   "aciklama": "Duygudurum bozukluğunda ataklar arasında tam iyilik vardır; şizoaffektif bozuklukta sürekli psikozun üstüne duygudurum atakları eklenir; şizofrenide duygudurum atağı yoktur.",
+   "adimlar": [
+    "1. Duygudurum bozukluğu: ataklar arasında tam iyilik hâli.",
+    "2. Şizoaffektif bozukluk: duygudurum belirtisi olmadan en az iki hafta psikoz ve üstüne ataklar.",
+    "3. Şizofreni: sürekli psikoz, atak hâlinde duygudurum belirtisi yok."
+   ],
+   "svg": "r08.svg",
+   "paragraf": 40,
+   "bitis": 40,
+   "kaynak": [
+    43
+   ]
+  },
+  {
+   "id": "r09",
+   "baslik": "Üç bozukluk: süre, gereken belirti ve gidiş",
+   "aciklama": "Kısa psikotik bozukluk bir aydan kısa sürer ve tam düzelir; şizofreniformun çoğu şizofreniye döner; şizofrenide süre altı ayı aşar ve tam dönüş olmaz.",
+   "adimlar": [
+    "1. Süre: bir gün–bir ay, bir–altı ay, altı ay ve üzeri.",
+    "2. Gereken belirti: kısa psikotikte en az bir, diğerlerinde en az iki.",
+    "3. Negatif belirti yalnız şizofreniform ve şizofreni ölçütünde vardır.",
+    "4. Gidiş: tam dönüş, çoğu şizofreniye döner, tam dönüş yok."
+   ],
+   "svg": "r09.svg",
+   "paragraf": 46,
+   "bitis": 46,
+   "kaynak": [
+    17,
+    18,
+    46,
+    47,
+    48
+   ]
+  }
+ ]
+}

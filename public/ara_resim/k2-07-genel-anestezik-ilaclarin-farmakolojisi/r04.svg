@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540">
+  <rect width="1000" height="540" fill="#ffffff"/>
+  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="bold" fill="#1e293b">Azot protoksit: iki yönlü hareket</text>
+  <defs>
+    <marker id="okg" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto"><path d="M0 0 L16 9 L0 18 z" fill="#15803d"/></marker>
+    <marker id="okr" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto"><path d="M0 0 L16 9 L0 18 z" fill="#b91c1c"/></marker>
+  </defs>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="40" y="80" width="440" height="360" rx="16" fill="#f0fdf4" stroke="#15803d" stroke-width="3"/>
+    <text x="260" y="122" text-anchor="middle" font-size="25" font-weight="bold" fill="#15803d">Verirken: ikinci gaz etkisi</text>
+    <circle cx="140" cy="230" r="62" fill="#bbf7d0" stroke="#15803d" stroke-width="3"/>
+    <text x="140" y="238" text-anchor="middle" font-size="22" fill="#14532d">alveol</text>
+    <circle cx="380" cy="230" r="62" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+    <text x="380" y="238" text-anchor="middle" font-size="22" fill="#7f1d1d">kan</text>
+    <path d="M206 230 h104" stroke="#15803d" stroke-width="6" fill="none" marker-end="url(#okg)"/>
+    <text x="258" y="214" text-anchor="middle" font-size="22" font-weight="bold" fill="#15803d">N₂O</text>
+    <text x="260" y="340" text-anchor="middle" font-size="21" fill="#1e293b">N₂O hızla kana geçer;</text>
+    <text x="260" y="372" text-anchor="middle" font-size="21" fill="#1e293b">kalan ikinci ajan</text>
+    <text x="260" y="404" text-anchor="middle" font-size="21" fill="#1e293b">yoğunlaşır, hızlanır.</text>
+
+    <rect x="520" y="80" width="440" height="360" rx="16" fill="#fef2f2" stroke="#b91c1c" stroke-width="3"/>
+    <text x="740" y="122" text-anchor="middle" font-size="25" font-weight="bold" fill="#b91c1c">Keserken: difüzyon hipoksisi</text>
+    <circle cx="620" cy="230" r="62" fill="#bbf7d0" stroke="#15803d" stroke-width="3"/>
+    <text x="620" y="238" text-anchor="middle" font-size="22" fill="#14532d">alveol</text>
+    <circle cx="860" cy="230" r="62" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+    <text x="860" y="238" text-anchor="middle" font-size="22" fill="#7f1d1d">kan</text>
+    <path d="M794 230 h-104" stroke="#b91c1c" stroke-width="6" fill="none" marker-end="url(#okr)"/>
+    <text x="742" y="214" text-anchor="middle" font-size="22" font-weight="bold" fill="#b91c1c">N₂O</text>
+    <text x="740" y="340" text-anchor="middle" font-size="21" fill="#1e293b">N₂O kandan alveole döner;</text>
+    <text x="740" y="372" text-anchor="middle" font-size="21" fill="#1e293b">oksijen seyrelir.</text>
+    <text x="740" y="404" text-anchor="middle" font-size="21" font-weight="bold" fill="#b91c1c">Önlem: %100 O₂, 5–10 dk.</text>
+
+    <text x="500" y="496" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">Kapalı hava boşlukları (pnömotoraks, orta kulak) genişler.</text>
+  </g>
+</svg>

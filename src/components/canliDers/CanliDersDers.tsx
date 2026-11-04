@@ -26,6 +26,7 @@ import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
 import { CdOrnekChip, CdOrnekPencereKok, ornekParcaSonunda, useOrnekSorular } from './CdOrnekChip';
 import { CdHocaAraDugme, CdHocaAraKok } from './CdHocaAra';
+import { CdAraResimDugme, CdAraResimKok } from './CdAraResim';
 import { CdDersAnalizDugme } from './CdDersAnaliz';
 import { useCdTur } from './useCdTur';
 import { useUzunBasSecim } from './cdUzunBas';
@@ -2027,6 +2028,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         <span className="cd-grow" />
         <CdDersAnalizDugme dersKey={detay.key} />
         <CdHocaAraDugme dersKey={detay.key} />
+        <CdAraResimDugme dersKey={detay.key} />
         {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
         {/* v15: terim ve görünüm üst bara/Görünüm çekmecesine taşındı; çizim araçları PDF'in yanında yüzer */}
         {v15 ? (
@@ -2089,6 +2091,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
           </div>
         )}
       </div>
+      <CdAraResimKok dersKey={detay.key} />
       {/* tasarım S14: anlatılan paragrafın PDF eşleşmesi yoksa slayt soluklaşır, son eşleşen sayfa söylenir */}
       {canli && !durdu && aktif >= 0 && !(es && Number.isFinite(es.sayfa)) && eslesmeKapali !== aktif && (
         <div className="cd-eslesme-yok" role="status">

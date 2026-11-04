@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 445" width="1000" height="445" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Şizofreni tanısı: A + B + C">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
+<rect x="0" y="0" width="1000" height="445" fill="#fbfaf6"/>
+<text x="500" y="52" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Şizofreni tanısı: A + B + C</text>
+<rect x="40" y="85" width="600" height="330" rx="14" fill="#8e3b5a12" stroke="#8e3b5a" stroke-width="3"/>
+<text x="340" y="128" font-size="26" fill="#8e3b5a" text-anchor="middle" font-weight="700">A: 5 belirtiden en az 2'si, 1 ay</text>
+<rect x="70" y="145" width="540" height="40" rx="8" fill="#c8463c26"/>
+<text x="95" y="175" font-size="24" fill="#1f2430" font-weight="700">1.</text>
+<text x="135" y="175" font-size="24" fill="#1f2430">Sanrı</text>
+<rect x="70" y="191" width="540" height="40" rx="8" fill="#c8463c26"/>
+<text x="95" y="221" font-size="24" fill="#1f2430" font-weight="700">2.</text>
+<text x="135" y="221" font-size="24" fill="#1f2430">Varsanı</text>
+<rect x="70" y="237" width="540" height="40" rx="8" fill="#c8463c26"/>
+<text x="95" y="267" font-size="24" fill="#1f2430" font-weight="700">3.</text>
+<text x="135" y="267" font-size="24" fill="#1f2430">Darmadağın konuşma</text>
+<text x="95" y="313" font-size="24" fill="#1f2430" font-weight="700">4.</text>
+<text x="135" y="313" font-size="24" fill="#1f2430">Dağınık davranış, katatoni</text>
+<text x="95" y="359" font-size="24" fill="#1f2430" font-weight="700">5.</text>
+<text x="135" y="359" font-size="24" fill="#1f2430">Negatif belirti</text>
+<text x="340" y="400" font-size="22" fill="#c8463c" text-anchor="middle" font-weight="700">En az biri 1–3 arasından olmalı</text>
+<rect x="680" y="85" width="280" height="150" rx="14" fill="#fbfaf6" stroke="#8e3b5a" stroke-width="3"/>
+<text x="820" y="135" font-size="34" fill="#8e3b5a" text-anchor="middle" font-weight="700">B</text>
+<text x="820" y="175" font-size="24" fill="#1f2430" text-anchor="middle">İşlevsellik</text>
+<text x="820" y="207" font-size="24" fill="#1f2430" text-anchor="middle">belirgin düşer</text>
+<rect x="680" y="265" width="280" height="150" rx="14" fill="#fbfaf6" stroke="#8e3b5a" stroke-width="3"/>
+<text x="820" y="315" font-size="34" fill="#8e3b5a" text-anchor="middle" font-weight="700">C</text>
+<text x="820" y="360" font-size="28" fill="#1f2430" text-anchor="middle" font-weight="700">En az 6 ay</text>
+</svg>

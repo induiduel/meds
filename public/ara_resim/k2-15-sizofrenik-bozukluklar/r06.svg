@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Şizofreninin dört evresi">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
+<rect x="0" y="0" width="1000" height="640" fill="#fbfaf6"/>
+<text x="500" y="48" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Şizofreninin dört evresi</text>
+<line x1="110" y1="80" x2="110" y2="380" stroke="#1f2430" stroke-width="2"/>
+<line x1="110" y1="380" x2="940.0" y2="380" stroke="#1f2430" stroke-width="2"/>
+<text x="40" y="98.0" font-size="20" fill="#5b6170">%100</text>
+<text x="40" y="243.0" font-size="20" fill="#5b6170">%50</text>
+<polygon points="110.0,380 110.0,90.0 315.0,90.0 315.0,380" fill="#3a9a5b66" stroke="#3a9a5b" stroke-width="2"/>
+<polygon points="315.0,380 315.0,90.0 383.3333333333333,119.0 383.3333333333333,380" fill="#9a6b4555" stroke="#9a6b45" stroke-width="2"/>
+<polygon points="383.3333333333333,380 383.3333333333333,119.0 403.8333333333333,177.0 424.33333333333337,142.2 451.6666666666667,194.4 479.0,165.4 506.3333333333333,211.8 533.6666666666667,188.6 561.0,223.4 588.3333333333334,206.0 615.6666666666667,235.0 656.6666666666666,246.6 656.6666666666666,380" fill="#c8463c55" stroke="#c8463c" stroke-width="2"/>
+<polygon points="656.6666666666666,380 656.6666666666666,246.6 697.6666666666666,264.0 738.6666666666667,246.6 779.6666666666666,264.0 820.6666666666667,246.6 861.6666666666666,264.0 902.6666666666666,246.6 930.0,246.6 930.0,380" fill="#2f6db555" stroke="#2f6db5" stroke-width="2"/>
+<text x="315.0" y="410" font-size="20" fill="#5b6170" text-anchor="middle">15</text>
+<text x="383.3333333333333" y="410" font-size="20" fill="#5b6170" text-anchor="middle">20</text>
+<text x="656.6666666666666" y="410" font-size="20" fill="#5b6170" text-anchor="middle">40</text>
+<text x="930.0" y="410" font-size="20" fill="#5b6170" text-anchor="middle">60</text>
+<text x="520.0" y="410" font-size="20" fill="#5b6170" text-anchor="middle">yaş</text>
+<circle cx="212.5" cy="340" r="19" fill="#3a9a5b"/><text x="212.5" y="348" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+<circle cx="349.1666666666667" cy="340" r="19" fill="#9a6b45"/><text x="349.1666666666667" y="348" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
+<circle cx="520.0" cy="340" r="19" fill="#c8463c"/><text x="520.0" y="348" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
+<circle cx="793.3333333333334" cy="340" r="19" fill="#2f6db5"/><text x="793.3333333333334" y="348" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">4</text>
+<circle cx="70" cy="457" r="19" fill="#3a9a5b"/><text x="70" y="465" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+<text x="102" y="465" font-size="22" fill="#1f2430">Belirtisiz, tam işlev</text>
+<circle cx="70" cy="503" r="19" fill="#9a6b45"/><text x="70" y="511" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
+<text x="102" y="511" font-size="22" fill="#1f2430">Prodrom: garip davranış, silik negatif belirti</text>
+<circle cx="70" cy="549" r="19" fill="#c8463c"/><text x="70" y="557" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
+<text x="102" y="557" font-size="22" fill="#1f2430">Aktif: pozitif belirti, atak ve düzelme; tam dönüş yok</text>
+<circle cx="70" cy="595" r="19" fill="#2f6db5"/><text x="70" y="603" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">4</text>
+<text x="102" y="603" font-size="22" fill="#1f2430">Rezidüel: negatif ve bilişsel belirti</text>
+</svg>

@@ -5,7 +5,8 @@
  * Konuşma üslubu dışa aktarımda ders notu üslubuna redakte edilir (services/konusmaRedakte); PDF'de başlık + maddeleri bölünmez.
  * Önemli cümleler ==…==, terimler **…**; okunuş için yazıya dökülmüş sayılar ("iki virgül bir") rakama döner.
  */
-import type { AktarBelge } from '../../services/metinDisaAktar';
+import { resimSatiri, type AktarBelge } from '../../services/metinDisaAktar';
+import { araResimBitis, araResimleri, araResimYolu, type AraResim } from './araResimVeri';
 import { ekranYazimi } from '../../services/ekranYazim';
 import { paragrafMd } from '../../services/maddeDuzen';
 import { konusmaRedakte } from '../../services/konusmaRedakte';
@@ -33,26 +34,38 @@ const tekSatir = (t: string) => t.replace(/[ \t]*\r?\n+[ \t]*/g, ' ').trim();
 const katla = (t: string) => t.toLocaleLowerCase('tr').replace(/^\s*\d+[.)-]?\s*/, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 
 /** basliklar verilirse her paragrafın eşlendiği slaytın başlığı, değiştiği yerde alt başlık (###) olarak girer. */
+/** Ara resimler (araResimVeri) bağlı oldukları paragraf aralığının sonuna (bitis paragrafından sonra) resim bloğu olarak girer;
+ *  bitis paragrafı boşsa ya da yoksa aralıktan sonraki ilk paragraftan önce, en geç belge sonunda. */
 export function cdAktarBelgesi(detay: CdDetay, etiket: string, vurguAcik = true, basliklar?: SlaytBasliklari): AktarBelge {
+  const kalan: AraResim[] = [...araResimleri(detay.key)].sort((a, b) => araResimBitis(a) - araResimBitis(b));
+  const resimMd = (r: AraResim) => resimSatiri(r.baslik, araResimYolu(r), r.aciklama || '');
+  /** i'ye kadar (dahil) aralığı biten resimler */
+  const al = (i: number) => {
+    const out: string[] = [];
+    while (kalan.length && araResimBitis(kalan[0]) <= i) out.push(resimMd(kalan.shift()!));
+    return out;
+  };
+  const sonBolum = detay.bolumler.length - 1;
   return {
     baslik: detay.baslik,
     dersDuzeni: true,
     alt: `${etiket} · Sesli ders metni${vurguAcik && detay.vurgu ? ' · işaretli yerler çıkmış, örnek soru ve spotlarla eşleşen önemli bilgiler' : ''}`,
-    bolumler: detay.bolumler.map((b) => {
+    bolumler: detay.bolumler.map((b, bi) => {
       let onceki = katla(b.baslik);
-      return {
-        baslik: b.baslik.trim(),
-        md: b.paragraflar.filter((p) => p.metin.trim())
+      const satirlar = b.paragraflar.filter((p) => p.metin.trim())
           .map((p) => {
+            const once = al(p.i - 1);
             const govde = konusmaRedakte(paragrafMd(ekranYazimi(tekSatir(vurgula(p.metin, vurguAcik ? detay.vurgu?.[p.i] : undefined)))));
             const e = basliklar && detay.pdf?.paragraflar?.[p.i];
             const sb = e ? basliklar!.get(`${e.dosya}:${e.sayfa}`) : undefined;
-            if (!sb || katla(sb) === onceki) return govde;
+            const sonra = al(p.i);
+            const ek = (g: string) => [...once, g, ...sonra].join('\n');
+            if (!sb || katla(sb) === onceki) return ek(govde);
             onceki = katla(sb);
-            return `### ${sb}\n${govde}`;
-          })
-          .join('\n'),
-      };
+            return ek(`### ${sb}\n${govde}`);
+          });
+      if (bi === sonBolum) satirlar.push(...al(Infinity));
+      return { baslik: b.baslik.trim(), md: satirlar.join('\n') };
     }),
   };
 }

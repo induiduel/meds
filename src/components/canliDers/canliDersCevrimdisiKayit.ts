@@ -22,6 +22,8 @@ export interface CdCevrimdisiKayit {
   /** İndirilen tüm sesler (yoksa yalnız `vid`) */
   sesler?: CdCevrimdisiSes[];
   pdfler: string[];
+  /** Ara resim SVG adresleri (araResimVeri) */
+  resimler?: string[];
   deckId?: string;
   at: number;
   kurul?: number;

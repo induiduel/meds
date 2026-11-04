@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 370" width="1000" height="370" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Çoklu vuruş: stres-diyatez modeli">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
+<rect x="0" y="0" width="1000" height="370" fill="#fbfaf6"/>
+<text x="500" y="52" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Çoklu vuruş: stres-diyatez modeli</text>
+<rect x="40" y="100" width="270" height="150" rx="14" fill="#6b4fa322" stroke="#6b4fa3" stroke-width="3"/>
+<circle cx="70" cy="130" r="19" fill="#6b4fa3"/><text x="70" y="138" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+<text x="175" y="165" font-size="30" fill="#6b4fa3" text-anchor="middle" font-weight="700">Genetik</text>
+<text x="175" y="205" font-size="30" fill="#6b4fa3" text-anchor="middle" font-weight="700">yatkınlık</text>
+<text x="175" y="238" font-size="22" fill="#5b6170" text-anchor="middle">(diyatez)</text>
+<circle cx="370" cy="92" r="19" fill="#d9822b"/><text x="370" y="100" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
+<text x="530" y="100" font-size="26" fill="#d9822b" text-anchor="middle" font-weight="700">Sonraki vuruşlar</text>
+<rect x="372" y="125" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
+<text x="459" y="156" font-size="18" fill="#1f2430" text-anchor="middle">Gebelik ve doğum</text>
+<rect x="554" y="125" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
+<text x="641" y="156" font-size="18" fill="#1f2430" text-anchor="middle">Doğum mevsimi</text>
+<rect x="372" y="187" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
+<text x="459" y="218" font-size="18" fill="#1f2430" text-anchor="middle">Ebeveyn yaşı</text>
+<rect x="554" y="187" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
+<text x="641" y="218" font-size="18" fill="#1f2430" text-anchor="middle">Örselenme</text>
+<rect x="372" y="249" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
+<text x="459" y="280" font-size="18" fill="#1f2430" text-anchor="middle">Esrar</text>
+<rect x="554" y="249" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
+<text x="641" y="280" font-size="18" fill="#1f2430" text-anchor="middle">Kent ve göç</text>
+<line x1="312" y1="175" x2="366" y2="175" stroke="#1f2430" stroke-width="3" marker-end="url(#ok)"/>
+<line x1="730" y1="200" x2="768" y2="200" stroke="#1f2430" stroke-width="3" marker-end="url(#ok)"/>
+<circle cx="800" cy="120" r="19" fill="#8e3b5a"/><text x="800" y="128" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
+<rect x="770" y="145" width="200" height="110" rx="14" fill="#8e3b5a22" stroke="#8e3b5a" stroke-width="3"/>
+<text x="870" y="190" font-size="30" fill="#8e3b5a" text-anchor="middle" font-weight="700">Şizofreni</text>
+<text x="870" y="228" font-size="22" fill="#8e3b5a" text-anchor="middle">ortaya çıkar</text>
+<text x="500" y="335" font-size="22" fill="#5b6170" text-anchor="middle">Yatkınlık tek başına yetmez; etkenler üst üste eklenince hastalık başlar.</text>
+</svg>

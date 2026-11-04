@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="500" y="50" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">İnme sonrası geri dönüş: altı mekanizma</text>
+<rect x="300" y="85" width="400" height="80" rx="16" fill="#16a34a1a" stroke="#16a34a" stroke-width="4"/>
+<text x="500" y="120" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Geri dönüş mekanizmaları</text>
+<text x="500" y="150" text-anchor="middle" font-size="20" fill="#0f172a">kullanım, tekrar tekrar</text>
+<line x1="500" y1="166" x2="500" y2="210" stroke="#334155" stroke-width="4"/>
+<line x1="95" y1="210" x2="905" y2="210" stroke="#334155" stroke-width="4"/>
+<line x1="95" y1="210" x2="95" y2="278" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="20" y="282" width="150" height="150" rx="14" fill="#7c3aed1a" stroke="#7c3aed" stroke-width="6"/>
+<text x="95" y="330" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Nöroplastisite</text>
+<text x="95" y="360" text-anchor="middle" font-size="17" fill="#0f172a">haftalar sonra</text>
+<text x="95" y="388" text-anchor="middle" font-size="14" fill="#0f172a">başlar, aylar sürer</text>
+<text x="95" y="418" text-anchor="middle" font-size="20" font-weight="700" fill="#7c3aed">1</text>
+<line x1="257" y1="210" x2="257" y2="278" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="182" y="282" width="150" height="150" rx="14" fill="#2563eb1a" stroke="#2563eb" stroke-width="4"/>
+<text x="257" y="330" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Hasarlı yol</text>
+<text x="257" y="360" text-anchor="middle" font-size="17" fill="#0f172a">işe döner</text>
+<text x="257" y="418" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">2</text>
+<line x1="419" y1="210" x2="419" y2="278" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="344" y="282" width="150" height="150" rx="14" fill="#2563eb1a" stroke="#2563eb" stroke-width="4"/>
+<text x="419" y="330" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Temsil alanı</text>
+<text x="419" y="360" text-anchor="middle" font-size="17" fill="#0f172a">genişler</text>
+<text x="419" y="418" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">3</text>
+<line x1="581" y1="210" x2="581" y2="278" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="506" y="282" width="150" height="150" rx="14" fill="#2563eb1a" stroke="#2563eb" stroke-width="4"/>
+<text x="581" y="330" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Atıl nöron</text>
+<text x="581" y="360" text-anchor="middle" font-size="17" fill="#0f172a">çalışır</text>
+<text x="581" y="418" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">4</text>
+<line x1="743" y1="210" x2="743" y2="278" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="668" y="282" width="150" height="150" rx="14" fill="#2563eb1a" stroke="#2563eb" stroke-width="4"/>
+<text x="743" y="330" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Filizlenme</text>
+<text x="743" y="360" text-anchor="middle" font-size="17" fill="#0f172a">yeni yollar</text>
+<text x="743" y="418" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">5</text>
+<line x1="905" y1="210" x2="905" y2="278" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="830" y="282" width="150" height="150" rx="14" fill="#2563eb1a" stroke="#2563eb" stroke-width="4"/>
+<text x="905" y="330" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Nörokimyasal</text>
+<text x="905" y="360" text-anchor="middle" font-size="17" fill="#0f172a">değişiklikler</text>
+<text x="905" y="418" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">6</text>
+</svg>
