@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 636,
-  "baslik": "Dağıtım güvenliği: canlı sürüm damgası doğrulanmadan yazılmıyor",
+  "onem": 637,
+  "baslik": "Çevrimdışı ders PDF'leri internetsiz açılıyor",
   "maddeler": [
-    "Site güncellemesi yarım kalırsa artık fark edilip yeniden yapılıyor."
+    "İndirilen ders PDF'leri: internet yokken artık cihazdaki kopyadan açılıyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Güncellemenin canlıya inmeden 'güncel' sayılması (H480)"
+    "Sesli derste ve PDF görüntüleyicide indirilen PDF'lerin çevrimdışı açılmaması (H481)"
   ],
   "silinen": [],
   "yenilikler": []

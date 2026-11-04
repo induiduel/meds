@@ -1,3 +1,7 @@
+## 2026-11-04 — Çevrimdışı ders PDF'leri internetsiz açılmıyordu (H481, dağıtılmadı)
+- `public/sw.js`: H63'ün `/api/lecture-pdf/` kısa devresi sesli ders (`medsoru-canli-ders-offline`) ve eski PDF indirme (`medsoru-pdf-offline`) önbelleklerini atlıyordu. Artık bu adresler kümede (`cihazPdfYukle`/`cihazPdfYaniti`) tutulup cihazdan (Range → 206) veriliyor; olmayan ağa bırakılır.
+- `canliDersCevrimdisi.ts` ve `deviceStorage.ts::savePdfOffline` kayıttan sonra SW'ye `PAKET_CHANGED` gönderir. Sınama: headless Chrome internetsiz → 200 + 206. Commit/dağıtım yapılmadı.
+
 ## 2026-11-03 (3) — Arzu katmanı yöneticiye de açık (onem 635)
 - `arzuKimlik.ts` izin listesine `ADMIN_EMAIL` eklendi: yönetici hesabı da karşılama/yaratık/kalp katmanını görür (kullanıcı kararı). Sürüm notu değişmedi.
 

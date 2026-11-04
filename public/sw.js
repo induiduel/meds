@@ -72,6 +72,35 @@ function paketleriYukle() {
   return paketYukle;
 }
 paketleriYukle();
+
+// Sesli ders (CD_OFFLINE_CACHE) ve eski PDF indirmesinin (medsoru-pdf-offline) cihaza yazdığı ders PDF'leri / eşlemeleri
+const CIHAZ_PDF_CACHES = ['medsoru-canli-ders-offline', 'medsoru-pdf-offline'];
+let cihazPdf = null;
+let cihazPdfP = null;
+let cihazPdfAt = 0;
+function cihazPdfYukle() {
+  if (cihazPdfP && Date.now() - cihazPdfAt < 5000) return cihazPdfP;
+  cihazPdfAt = Date.now();
+  cihazPdfP = (async () => {
+    const m = new Set();
+    for (const ad of CIHAZ_PDF_CACHES) {
+      try {
+        if (!(await caches.has(ad))) continue;
+        for (const r of await (await caches.open(ad)).keys()) if (r.url.includes('/api/lecture-pdf/')) m.add(r.url);
+      } catch (_) { /* yok */ }
+    }
+    cihazPdf = m;
+  })();
+  return cihazPdfP;
+}
+async function cihazPdfYaniti(req, url) {
+  for (const ad of CIHAZ_PDF_CACHES) {
+    const hit = await (await caches.open(ad)).match(url.href, { ignoreVary: true }).catch(() => null);
+    if (hit) return /\/api\/lecture-pdf\/deck\/[^/]+\/\d+/.test(url.pathname) ? aralikYaniti(req, hit, 'application/pdf') : hit;
+  }
+  cihazPdfYukle();
+  return fetch(req);
+}
 /** Paket anahtarı (istemciyle aynı kural): ses klipleri sorgusuz, diğerleri tam adres */
 const paketAnahtari = (url) => (PAKET_SES_RE.test(url.pathname) ? url.origin + url.pathname : url.href);
 
@@ -268,7 +297,8 @@ self.addEventListener('fetch', (event) => {
       if (paketler.has(k)) { event.respondWith(paketDosyasi(req, url)); return; }
     } else {
       event.respondWith((paketYukle || paketleriYukle()).then(() => (paketler.has(k) ? paketDosyasi(req, url)
-        : fetch(req).catch(() => (PAKET_SES_RE.test(url.pathname) ? sessizYanit(req) : Promise.reject(new Error('çevrimdışı')))))));
+        : PAKET_SES_RE.test(url.pathname) ? fetch(req).catch(() => sessizYanit(req))
+          : cihazPdfYukle().then(() => (cihazPdf.has(url.href) ? cihazPdfYaniti(req, url) : fetch(req))))));
       return;
     }
     // Cihazda olmayan klip (ör. paket sessiz indirildi): ağ yoksa oynatıcı hata vermesin
@@ -278,7 +308,15 @@ self.addEventListener('fetch', (event) => {
     }
     // Cihazda olmayan PDF akışı (Range/206): Service Worker üzerinden yakalanmaz,
     // tarayıcının yerel ağ yığınına bırakılır (SW fetch Range/206 akışlarını kilitler/tamponlar).
+    // Ama sesli dersin / eski "çevrimdışı için indir"in cihaza yazdığı PDF önce oradan verilir (H63 sonrası bu kopyalar
+    // hiç okunmuyordu: indirilen PDF internetsiz açılmıyordu).
     if (url.pathname.startsWith('/api/lecture-pdf/')) {
+      if (cihazPdf) {
+        if (cihazPdf.has(url.href)) event.respondWith(cihazPdfYaniti(req, url));
+        else cihazPdfYukle();
+      } else if (!self.navigator.onLine) {
+        event.respondWith(cihazPdfYukle().then(() => (cihazPdf.has(url.href) ? cihazPdfYaniti(req, url) : fetch(req))));
+      } else cihazPdfYukle();
       return;
     }
   }
@@ -745,7 +783,8 @@ self.addEventListener('message', (event) => {
   if (data.type === 'CD_OFFLINE_CHANGED') {
     event.waitUntil(cdSesleriYukle());
   } else if (data.type === 'PAKET_CHANGED') {
-    event.waitUntil(paketleriYukle());
+    cihazPdfAt = 0;
+    event.waitUntil(Promise.all([paketleriYukle(), cihazPdfYukle()]));
   } else if (data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   } else if (data.type === 'CACHE_URLS' && Array.isArray(data.urls)) {

@@ -118,6 +118,7 @@ export async function savePdfOffline(url: string): Promise<void> {
   // Eşleme (dosya listesi + slayt→sayfa) de saklanır: internetsiz açılışta görüntüleyici PDF adresini bundan bulur
   const m = url.match(/^(.*\/api\/lecture-pdf\/deck\/[^/?]+)\/\d+/);
   if (m) await fetch(m[1], { cache: 'no-store' }).then((r) => (r.ok ? c.put(m[1], r) : undefined)).catch(() => {});
+  try { navigator.serviceWorker?.controller?.postMessage({ type: 'PAKET_CHANGED' }); } catch { /* SW yok */ }
   window.dispatchEvent(new Event(PDF_SAVED_EVENT));
 }
 

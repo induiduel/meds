@@ -2077,3 +2077,14 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** `deploy-code.sh` damgayı ana rsync'ten çıkarır, en sonda yalnız sunucu kodu karması (yerel dosya listesi üzerinden; Oracle'daki eski
   artık dosyalar sayılmaz) Oracle diskiyle eşleşirse gönderir, eşleşmezse DURDU (çıkış 1). Dosya listesi kalıbı `^[<>]f`.
 - **Önleme:** dağıtım "bitti" ancak canlının diskindeki kod hedef commit'le eşleşince sayılır; damga doğrulamadan önce yazılmaz.
+
+## H481
+- **Belirti (2026-11-04):** çevrimdışına indirilen ders PDF'leri internetsiz açılmıyor; kullanıcıya "PDF indirilip kaydedilmiyor" gibi görünüyor.
+- **Kök neden:** H63'te `sw.js` paket önbelleğinde (`medsor-paket-v1`) olmayan her `/api/lecture-pdf/` isteğini Range/206 kilidinden kaçmak için
+  doğrudan ağa bırakır oldu (`return`). Sesli dersin (`medsoru-canli-ders-offline`) ve eski "çevrimdışı için indir"in (`medsoru-pdf-offline`)
+  yazdığı PDF + eşleme kopyaları cihazda vardı ama hiç okunmuyordu; ağ yokken istek düşüyordu.
+- **Çözüm:** SW bu iki önbellekteki lecture-pdf adreslerini kümede tutar (`cihazPdfYukle`, PAKET_CHANGED ile tazelenir; sesli ders ve
+  `savePdfOffline` kayıttan sonra bildirir). Kümede olan istek cihazdan (`aralikYaniti`, Range → 206) verilir; olmayan yine ağa bırakılır.
+  Sınama: headless Chrome, internetsiz → tam yanıt + 206.
+- **Önleme:** bir isteği SW'den "ağa bırakan" her kısa devre, o adresi yazan TÜM önbellekleri (paket, sesli ders, eski PDF) önce denetlemelidir;
+  çevrimdışı düzeltmesi internetsiz gerçek sınamayla doğrulanmadan bitmiş sayılmaz.
