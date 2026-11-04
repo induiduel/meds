@@ -7,10 +7,10 @@
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
 import IcerikKapaliV15 from '../v15/IcerikKapaliV15';
 import React, { useEffect, useMemo, useState } from 'react';
-import { AlertTriangle, Archive, AudioLines, BookOpen, Check, ChevronDown, Clock, Download, FileText, Headphones, History, Layers, LayoutList, ListMusic, MoreHorizontal, Package, Pause, Play, Search, Star, Video, X } from 'lucide-react';
+import { AlertTriangle, Archive, AudioLines, BookOpen, Check, ChevronDown, Clock, Download, Eraser, FileText, Headphones, History, Layers, LayoutList, ListMusic, MoreHorizontal, Package, Pause, Play, Search, Star, Video, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
-  cdDosyaAdi, cdGunlukGetir, cdKonumListesi, cdMedspakUrl, cdSesKimlik, cdTercihVaryant, cdVarsayilanSesAyarla, useCdVarsayilanSes, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
+  CD_KONUM_OLAY, cdDosyaAdi, cdGunlukGetir, cdKonumListesi, cdMedspakUrl, cdSesKimlik, cdTercihVaryant, cdVarsayilanSesAyarla, useCdVarsayilanSes, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
   type CdGunluk, type CdListeDers, type CdVaryant,
 } from './canliDersStore';
 import CanliDersDers from './CanliDersDers';
@@ -25,6 +25,7 @@ import { useCdTvGezinme } from './CanliDersTv';
 import { useYildizliSayisi } from '../../services/yildizliParagrafStore';
 import { YildizliParagraflarPanel } from '../study/YildizliParagraflarModal';
 import { bittiMi, sureYaz, sesliKonuId, useKonuKaydi, useTakip } from '../../services/calismaTakip';
+import { SifirlaDugme, TemizleDiyalog } from './CdIlerlemeTemizle';
 import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
 import '../../styles/canli-ders-liste.css';
@@ -129,7 +130,14 @@ function CanliDersListe() {
   // Adresteki branş (/dersler/canliders/kurul1/tbg → ?brans=tbg): liste gelince o branş seçilir
   const [urlBrans] = useState(() => new URLSearchParams(icKonum().search).get('brans'));
   const [kapali, setKapali] = useState<Set<string>>(kapaliOku);
-  const [konum] = useState(konumHaritasi);
+  const [konum, setKonum] = useState(konumHaritasi);
+  useEffect(() => {
+    const f = () => setKonum(konumHaritasi());
+    window.addEventListener(CD_KONUM_OLAY, f);
+    window.addEventListener('storage', f);
+    return () => { window.removeEventListener(CD_KONUM_OLAY, f); window.removeEventListener('storage', f); };
+  }, []);
+  const [temizleAcik, setTemizleAcik] = useState(false);
   const tanitim = useCdTur('liste', !!dersler?.length, () => !!document.querySelector('.cd-satir'));
 
   const setDonem = (yeni: CdDonemSecim) => {
@@ -203,7 +211,7 @@ function CanliDersListe() {
       if (d) return { d, k };
     }
     return null;
-  }, [dersler]);
+  }, [dersler, konum]);
   // Sıradaki ders: son dinlenenin branşında ondan sonraki bitmemiş ders; yoksa ilk bitmemiş ders
   const siradaki = useMemo(() => {
     if (!dersler?.length) return null;
@@ -305,7 +313,16 @@ function CanliDersListe() {
             </nav>
           )}
           <KmbKarti />
+          {dersler && !!dersler.length && (yarimSayi > 0 || bittiN > 0 || Object.keys(takip.k).some((a) => a.startsWith('sesli:'))) && (
+            <div className="cdl-temizlik">
+              <p className="cdl-ray-bas">Temizlik</p>
+              <button type="button" className="cd-btn is-ince cdl-temizle-btn" onClick={() => setTemizleAcik(true)} title="Kaldığın yer kayıtlarını ve bitti işaretlerini sil; derslere sıfırdan başla">
+                <Eraser aria-hidden /> <span>İlerlemeyi temizle</span>
+              </button>
+            </div>
+          )}
         </aside>
+        {temizleAcik && dersler && <TemizleDiyalog keys={dersler.map((d) => d.key)} onKapat={() => setTemizleAcik(false)} />}
 
         <main className="cdl-icerik">
           {donem === 'sinama' && (
@@ -725,6 +742,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k, onGunlukAc }: { d: CdL
               </button>
             )}
             <KonuDugmeleri kucuk modul="sesli" konu={d.key} ad={d.baslik} onTekrar={() => { cdOynat(d, v.id, { t: 0 }); dersAc(d.key); }} />
+            <SifirlaDugme dersKey={d.key} baslik={d.baslik} konumVar={!!k} />
           </div>
           <p className="cd-secenek-bas">{sesN > 1 ? `Sesler (${sesN})` : 'Ses'}</p>
           <ul className="cd-varyantlar">

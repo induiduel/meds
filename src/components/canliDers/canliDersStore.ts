@@ -755,6 +755,33 @@ function konumKaydet(bitti = false) {
   }
 }
 export const cdKayitliKonum = (key: string) => konumlar()[key] || null;
+/** Kaldığın yer kayıtları değişince (silme/temizleme) yayılan olay; liste ekranı haritasını yeniler */
+export const CD_KONUM_OLAY = 'cd:konum';
+const konumOlayi = () => { try { window.dispatchEvent(new Event(CD_KONUM_OLAY)); } catch { /* yok */ } };
+/** Bir dersin "kaldığın yer" kaydını siler; ders o an yüklüyse ses başa alınır ve durur (yeniden kaydedilmesin). */
+export function cdKonumSil(key: string) {
+  try {
+    const all = konumlar();
+    if (key in all) { delete all[key]; localStorage.setItem(KONUM_KEY, JSON.stringify(all)); }
+  } catch { /* depolama kapalı */ }
+  if (audio && st.key === key) { audio.pause(); try { audio.currentTime = 0; } catch { /* yok */ } sonKayit = Date.now(); }
+  konumOlayi();
+}
+/** Tüm (ya da verilen derslerin) "kaldığın yer" kayıtlarını siler; silinen sayıyı döndürür. */
+export function cdKonumlariTemizle(keys?: string[]): number {
+  let n = 0;
+  try {
+    const all = konumlar();
+    const sil = keys ? keys.filter((k) => k in all) : Object.keys(all);
+    n = sil.length;
+    sil.forEach((k) => delete all[k]);
+    localStorage.setItem(KONUM_KEY, JSON.stringify(all));
+    if (audio && st.key && sil.includes(st.key)) { audio.pause(); try { audio.currentTime = 0; } catch { /* yok */ } sonKayit = Date.now(); }
+  } catch { /* depolama kapalı */ }
+  konumOlayi();
+  return n;
+}
+
 /** Tüm kaldığın yer kayıtları (en yeni önce) */
 export const cdKonumListesi = () =>
   Object.entries(konumlar())

@@ -1,3 +1,4 @@
+import { useCdKonumSurum } from '../canliDers/CdIlerlemeTemizle';
 import { useEffect, useMemo, useState } from 'react';
 import { pathFor } from '../../router';
 import { cdKonumListesi, cdListeGetir, cdSurumler, type CdListeDers, type CdSurum } from '../canliDers/canliDersStore';
@@ -56,7 +57,8 @@ export interface Ilerleme {
 /** Ders başına ilerleme: "bitti" işareti %100, yoksa kayıtlı konum / ses süresi */
 export function useIlerleme() {
   const takip = useTakip();
-  const konum = useMemo(() => new Map(cdKonumListesi().map((k) => [k.key, k])), []);
+  const konumSurum = useCdKonumSurum();
+  const konum = useMemo(() => new Map(cdKonumListesi().map((k) => [k.key, k])), [konumSurum]);
   return (d: CdListeDers): Ilerleme => {
     const kayit = takip.k[`sesli:${sesliKonuId(d.key)}`];
     const bitti = bittiMi(kayit);

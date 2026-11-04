@@ -1,5 +1,6 @@
 import React, { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import { Archive, ArrowUpDown, Check, ChevronDown, ChevronRight, Download, Headphones, RotateCcw, Search, X } from 'lucide-react';
+import { Archive, ArrowUpDown, Check, ChevronDown, ChevronRight, Download, Eraser, Headphones, RotateCcw, Search, X } from 'lucide-react';
+import { TemizleDiyalog } from '../canliDers/CdIlerlemeTemizle';
 import { cdCevrimdisiKayitlari, CD_CEVRIMDISI_DEGISTI } from '../canliDers/canliDersCevrimdisiKayit';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { icKonum } from '../../siteHaritasi';
@@ -46,6 +47,7 @@ export default function SesliListeV15() {
   const [durum, setDurum] = useState<Durum>('tum');
   const [sira, setSira] = useState<Sira>('sira');
   const [indirilen, setIndirilen] = useState(() => cdCevrimdisiKayitlari());
+  const [temizleAcik, setTemizleAcik] = useState(false);
   useEffect(() => {
     const f = () => setIndirilen(cdCevrimdisiKayitlari());
     window.addEventListener(CD_CEVRIMDISI_DEGISTI, f);
@@ -153,7 +155,16 @@ export default function SesliListeV15() {
             <button type="button" className="v15-btn is-soft" onClick={() => setArsiv(true)}><Archive aria-hidden />Geçen yılın derslerini aç</button>
           </>}</p>
         )}
+        {toplam > 0 && (
+          <p className="sl15-temizlik">
+            <button type="button" className="v15-btn is-ghost" onClick={() => setTemizleAcik(true)} title="Bu cihazdaki kaldığın yer kayıtlarını ve bitti işaretlerini sil; derslere sıfırdan başla">
+              <Eraser aria-hidden />İlerlemeyi temizle
+            </button>
+            <span>Yalnız bu cihazdaki kayıtlar silinir; ses dosyaları ve listen kalır.</span>
+          </p>
+        )}
       </div>
+      {temizleAcik && <TemizleDiyalog keys={branslar.flatMap((b) => b.dersler.map((d) => d.key))} onKapat={() => setTemizleAcik(false)} />}
     </div>
   );
 }

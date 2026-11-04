@@ -1,15 +1,31 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 642,
-  "baslik": "Diyaloglarda zıplama düzeltmesi",
+  "onem": 643,
+  "baslik": "Sesli ders: ilerlemeyi sıfırlama ve temizleme",
   "maddeler": [
-    "Pencere ve alt sayfalar açılırken ekranın ileri-geri zıplaması giderildi (özellikle telefonda, adres çubuğu hareket ederken)."
+    "Sesli derslerde cihazındaki ilerlemeyi (kaldığın yer, dinleme süresi, bitti işareti) dilediğin zaman sıfırlayıp derse baştan başlayabilirsin."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Ders sayfasında \"İlerlemeyi sıfırla\" düğmesi",
+    "Sesli ders listesinin altında \"İlerlemeyi temizle\" penceresi"
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Diyalog açılırken diyalog/arka ekran titremesi (H490)"
-  ],
+  "duzeltilen": [],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "İlerlemeyi sıfırla / temizle",
+      "nerede": {
+        "ad": "Ders çalış › Sesli dersler",
+        "yol": "/dersler/canliders"
+      },
+      "amac": "Bir dersi ya da tüm dersleri sıfırdan çalışmak istediğinde cihazındaki ilerleme kayıtlarını silmek.",
+      "islevler": [
+        "Ders sayfasında tek dersin kaldığın yerini, süresini ve bitti işaretini iki adımlı onayla siler.",
+        "Liste altındaki pencere kaldığın yer kayıtlarını ve bitti/süre kayıtlarını ayrı ayrı seçtirerek toplu siler.",
+        "Ses dosyaları, indirilenler ve listen korunur; yalnız bu cihazdaki kayıtlar silinir."
+      ],
+      "ipucu": "Kayıt yoksa düğme görünmez."
+    }
+  ]
 }

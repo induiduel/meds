@@ -235,3 +235,27 @@
 .cd-gunluk-blok h4 { margin: 0 0 4px; font-size: 12.5px; font-weight: 700; color: var(--color-ink-2); text-transform: uppercase; letter-spacing: .03em; }
 .cd-gunluk-blok ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; line-height: 1.45; color: var(--color-ink); }
 
+
+/* İlerleme temizliği (yerel kayıtlar): kenar çubuğu düğmesi, satır içi sıfırla onayı, toplu diyalog */
+.cdl-temizlik { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+.cdl-temizle-btn, .cdl-sifirla-btn { color: var(--color-ink-3); }
+.cdl-temizle-btn:hover, .cdl-sifirla-btn:hover { color: var(--color-bad); border-color: var(--color-bad); }
+.cdl-sifirla-onay { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 10px; background: color-mix(in srgb, var(--color-bad) 10%, transparent); }
+.cdl-sifirla-onay small { font-size: 12px; color: var(--color-ink-2); }
+.cdl-temizle-govde { display: flex; flex-direction: column; gap: 12px; padding: 14px 16px 16px; }
+.cdl-temizle-aciklama { margin: 0; font-size: 13.5px; color: var(--color-ink-2); line-height: 1.5; }
+.cdl-temizle-sec { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: start; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 12px; cursor: pointer; }
+.cdl-temizle-sec:has(input:disabled) { opacity: .55; cursor: default; }
+.cdl-temizle-sec:has(input:checked) { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.cdl-temizle-sec input { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--color-accent); }
+.cdl-temizle-sec span { display: flex; flex-direction: column; gap: 2px; }
+.cdl-temizle-sec b { font-size: 14px; }
+.cdl-temizle-sec small { font-size: 12.5px; color: var(--color-ink-3); line-height: 1.45; }
+.cdl-temizle-eylem { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+.cdl-temizle-sonuc { display: flex; align-items: flex-start; gap: 8px; margin: 0; font-size: 14px; color: var(--color-ok); line-height: 1.5; }
+.cdl-temizle-sonuc svg { flex: none; width: 18px; height: 18px; margin-top: 2px; }
+@media (max-width: 767px) {
+  /* alttan açılan temizlik penceresi: eylem satırı sekme çubuğunun (--sh-tabs-h) üstünde kalsın */
+  .cdl-temizle-govde { padding-bottom: calc(16px + var(--sh-tabs-h, 0px) + env(safe-area-inset-bottom, 0px)); }
+  .cdl-temizle-eylem .cd-btn { flex: 1; }
+}

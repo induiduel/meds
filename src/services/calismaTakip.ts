@@ -153,6 +153,31 @@ export const tekrarTamamlandi = (m: TakipModul, konu: string) => {
   if (k?.durum === 'tekrar') bitir(m, konu);
 };
 
+/** Konunun takip kaydını tamamen siler (süre, soru, bitti işareti, tekrar turu). Geri alınamaz. */
+export const konuSifirla = (m: TakipModul, konu: string) => {
+  if (typeof window === 'undefined' || !konu) return;
+  const v = oku();
+  const a = anahtar(m, konu);
+  if (!(a in v.k)) return;
+  const k = { ...v.k };
+  delete k[a];
+  yaz({ ...v, k });
+};
+
+/** Modülün konu kayıtlarını siler; `konular` verilirse yalnız onları (ör. görünen dönemin dersleri), verilmezse
+ *  modülün tüm konularını ve gün toplamlarını. Silinen kayıt sayısını döndürür. */
+export function modulSifirla(m: TakipModul, konular?: string[]): number {
+  if (typeof window === 'undefined') return 0;
+  const v = oku();
+  const sil = new Set(konular ? konular.map((x) => anahtar(m, x)) : Object.keys(v.k).filter((a) => a.startsWith(`${m}:`)));
+  const k = Object.fromEntries(Object.entries(v.k).filter(([a]) => !sil.has(a)));
+  const n = Object.keys(v.k).length - Object.keys(k).length;
+  const g = { ...v.g };
+  if (!konular) delete g[m];
+  yaz({ k, g });
+  return n;
+}
+
 /** Son durum: açık seçim önce gelir; seçim yoksa içerikten türetilen tamamlanma. */
 export const bittiMi = (k: KonuKaydi | undefined, turetilen = false) =>
   k?.durum === 'bitti' || (!k?.durum && turetilen);

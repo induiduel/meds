@@ -386,3 +386,14 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .dd15-surum { display: inline-flex; gap: 4px; padding: 3px; border-radius: 999px; background: color-mix(in srgb, currentColor 7%, transparent); }
 .dd15-surum a { font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; color: inherit; text-decoration: none; }
 .dd15-surum a.is-on { background: var(--color-accent, #6366f1); color: #fff; }
+
+/* İlerleme temizliği (yerel kayıtlar): liste altı düğme + ders ayrıntısında tek ders sıfırlama (CdIlerlemeTemizle) */
+.sl15-temizlik { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 4px 0 0; padding: 4px 2px; font-size: .8rem; color: var(--color-ink-3); }
+:root[data-v15='on'] .sl15-temizlik .v15-btn { min-height: 36px; padding: 0 12px; font-size: 13px; color: var(--color-ink-2); }
+:root[data-v15='on'] .sl15-temizlik .v15-btn:hover { color: var(--color-bad); }
+.dd15-sifirla { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.dd15-sifirla:empty { display: none; }
+:root[data-v15='on'] .dd15-sifirla .v15-btn { min-height: 34px; padding: 0 12px; font-size: 13px; color: var(--color-ink-2); }
+:root[data-v15='on'] .dd15-sifirla .v15-btn.is-tehlike { color: var(--color-bad); border-color: var(--color-bad); }
+.dd15-sifirla .cdl-sifirla-onay { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 12px; background: color-mix(in srgb, var(--color-bad) 10%, transparent); }
+.dd15-sifirla .cdl-sifirla-onay small { font-size: 12.5px; color: var(--color-ink-2); }

@@ -18,6 +18,7 @@ import IcerikKapaliV15 from './IcerikKapaliV15';
 import HocaVurguV15 from './HocaVurguV15';
 import { hocaVurguVar } from './hocaVurgu';
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
+import { SifirlaDugme, useCdKonumSurum } from '../canliDers/CdIlerlemeTemizle';
 import '../../styles/v15/dersler.css';
 
 /**
@@ -97,7 +98,8 @@ export default function DersDetayV15() {
 
   const takip = useTakip();
   const bitti = key ? bittiMi(takip.k[`sesli:${sesliKonuId(key)}`]) : false;
-  const konum = useMemo(() => (key ? cdKayitliKonum(key) : null), [key]);
+  const konumSurum = useCdKonumSurum();
+  const konum = useMemo(() => (key ? cdKayitliKonum(key) : null), [key, konumSurum]);
 
   const seciliSes = useCdDersSesSurumu(key || '');
   const varyant = useMemo(() => {
@@ -246,6 +248,7 @@ export default function DersDetayV15() {
                 </a>
               )}
             </div>
+            <div className="dd15-sifirla"><SifirlaDugme dersKey={key} baslik={baslik} konumVar={!!konum} sinif="v15-btn is-ghost" /></div>
           </section>
 
           <DersIstatV15 dersKey={key} desteId={desteId} cozucuUrl={coz?.url} cikmisN={cikmis.length} miniN={paket?.quiz.length || 0}
