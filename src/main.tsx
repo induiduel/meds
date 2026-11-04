@@ -90,8 +90,17 @@ if (typeof window !== 'undefined') {
     // offsetTop yalnız klavyede değil, iOS'ta adres çubuğu/kaydırma sırasında da görünür alanı
     // kaydırabilir. Her zaman yaz: tam ekran katmanları `top: var(--vvt)` ile hizalanır.
     const t = vv ? Math.max(0, Math.round(vv.offsetTop)) : 0;
-    if (h !== lastH) { lastH = h; root.style.setProperty('--vvh', `${h}px`); }
-    if (t !== lastT) { lastT = t; root.style.setProperty('--vvt', `${t}px`); }
+    // H490 (2026-11-04): --vvh/--vvt yalnız bir yazı alanı odaktayken (klavye olasılığı) yazılır. Klavye kapalıyken
+    // görsel alan iOS/Android adres çubuğu açılıp kapanırken, sıçramalı kaydırmada ve tutamaçla yakınlaştırmada her
+    // karede değişiyor; bu değişkenlere bağlı tüm katmanlar (pencere, alt sayfa, arama, ders) diyalog açılırken
+    // ileri-geri zıplıyordu. Odak yokken değişkenler kaldırılır → katmanlar 100dvh / 0px (yerleşim alanı) kullanır.
+    if (typing) {
+      if (h !== lastH) { lastH = h; root.style.setProperty('--vvh', `${h}px`); }
+      if (t !== lastT) { lastT = t; root.style.setProperty('--vvt', `${t}px`); }
+    } else if (lastH !== -1 || lastT !== -1) {
+      lastH = -1; lastT = -1;
+      root.style.removeProperty('--vvh'); root.style.removeProperty('--vvt');
+    }
     if (kb !== lastKb) { lastKb = kb; root.classList.toggle('kb-open', kb); }
   };
   const update = () => { if (!raf) raf = requestAnimationFrame(measure); };

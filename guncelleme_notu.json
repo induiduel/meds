@@ -1,15 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 641,
-  "baslik": "Ayarlar: tercih düzenlemeleri",
+  "onem": 642,
+  "baslik": "Diyaloglarda zıplama düzeltmesi",
   "maddeler": [
-    "Ayarlar › Veriler ve gizlilik bölümüne cihaz tercihleri için yeni bir satır eklendi."
+    "Pencere ve alt sayfalar açılırken ekranın ileri-geri zıplaması giderildi (özellikle telefonda, adres çubuğu hareket ederken)."
   ],
   "eklenen": [],
-  "degisen": [
-    "Ayarlar sayfasında satır düzeni"
+  "degisen": [],
+  "duzeltilen": [
+    "Diyalog açılırken diyalog/arka ekran titremesi (H490)"
   ],
-  "duzeltilen": [],
   "silinen": [],
   "yenilikler": []
 }

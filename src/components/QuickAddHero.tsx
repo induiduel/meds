@@ -1379,6 +1379,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         </form>
 
         {optimizingQuestion && (
+          <React.Suspense fallback={null}>
           <AiQuestionOptimizerModal
             question={optimizingQuestion}
             isOpen={Boolean(optimizingQuestion)}
@@ -1392,6 +1393,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               }
             }}
           />
+          </React.Suspense>
         )}
       </div>
     );
@@ -2130,6 +2132,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       </form>
 
       {optimizingQuestion && (
+        <React.Suspense fallback={null}>
         <AiQuestionOptimizerModal
           question={optimizingQuestion}
           isOpen={Boolean(optimizingQuestion)}
@@ -2143,6 +2146,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             }
           }}
         />
+        </React.Suspense>
       )}
     </div>
   );

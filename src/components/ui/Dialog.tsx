@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useRef, useState } from 'react';
+import React, { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { X } from 'lucide-react';
 import { createPortal } from 'react-dom';
@@ -37,16 +37,19 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
   const closeRef = useRef(requestClose);
   closeRef.current = requestClose;
 
+  // H490: kilit ilk boyamadan önce (Sheet ile aynı): kaydırma çubuğu bir kare sonra kalkınca sayfa kayıyordu; odak kaydırmasız
+  useLayoutEffect(() => {
+    lockScroll();
+    return unlockScroll;
+  }, []);
   useEffect(() => {
     const prevFocus = document.activeElement as HTMLElement | null;
-    panelRef.current?.focus();
+    panelRef.current?.focus({ preventScroll: true });
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && closeRef.current();
     document.addEventListener('keydown', onKey);
-    lockScroll();
     return () => {
       document.removeEventListener('keydown', onKey);
-      unlockScroll();
-      prevFocus?.focus?.();
+      prevFocus?.focus?.({ preventScroll: true });
     };
   }, []);
 

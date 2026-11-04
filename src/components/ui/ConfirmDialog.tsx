@@ -61,7 +61,7 @@ export const ConfirmHost: React.FC = () => {
   useEffect(() => {
     if (!req) return;
     const prev = document.activeElement as HTMLElement | null;
-    cancelRef.current?.focus();
+    cancelRef.current?.focus({ preventScroll: true });
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.stopImmediatePropagation();
