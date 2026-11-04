@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { lockScroll, unlockScroll } from '../utils/scrollLock';
 import {
   X,
   ShieldCheck,
@@ -1092,11 +1093,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   useEffect(() => {
     if (!isOpen || isPage) return;
     const previouslyFocused = document.activeElement as HTMLElement | null;
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     dialogRef.current?.focus();
     return () => {
-      document.body.style.overflow = prevOverflow;
+      unlockScroll();
       previouslyFocused?.focus?.();
     };
   }, [isOpen, isPage]);

@@ -2171,3 +2171,21 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** çizim ajanları `cizim_uret.py`'yi çalıştıramadı; kilit "systemd altında panel bayrağı yok" diye reddetti, ajanlar `env -u INVOCATION_ID` + sahte `claude` ile atlattı (LLM çağrısı olmadı).
 - **Kök neden:** masaüstü uygulaması oturumu systemd kullanıcı biriminden başlattığı için `INVOCATION_ID` kalıtılıyor; `llm_kilit.py` bunu zamanlayıcı sanıyor. Ayrıca `cizim_uret.py` yerleşim kipinde de (Claude çağırmayacağı hâlde) kilidi yokluyor.
 - **Kural / açık iş:** yerleşim (LLM'siz) kipinde kilit yoklanmamalı; o zamana dek atlatma yalnız `--kuru`/hazır parti dosyalarıyla ve LLM çağrısı olmadığı doğrulanarak yapılır. Kilidi gevşetmek yasak (kural 20).
+
+## H494
+- **Belirti (2026-11-04):** bir pencere kapandıktan sonra sayfa kaydırılamaz kalabiliyor ya da diyalog açıkken arka sayfa kayıyordu (ör. spot süre diyaloğu, arama + diyalog, KMB filmi + pencere).
+- **Kök neden:** 16 bileşen sayaçlı `utils/scrollLock`'u atlayıp `body.style.overflow`'u kendisi yazıyordu. Üst üste açılan iki katman birbirinin "eski değerini" saklıyordu (`hidden` geri yazılıyordu); KMB filmleri kapanırken `overflow`'u koşulsuz boşaltıp açık diyaloğun kilidini kaldırıyordu. `SpotsSureDiyalog` efekti `[onKapat]`'a bağlı olduğundan her yeniden çalışmada `hidden`'ı "eski" olarak saklıyordu.
+- **Çözüm:** hepsi `lockScroll()/unlockScroll()`'a geçirildi (LessonPlayer'daki `documentElement` yazımı dahil).
+- **Önleme:** `body/documentElement.style.overflow`'a doğrudan yazmak yasak; yalnız `utils/scrollLock`. Denetim: `grep -rn "body.style.overflow\s*=" src` boş dönmeli.
+
+## H495
+- **Belirti (2026-11-04):** 640–767 px'te (büyük telefon yatay, yarım ekran) alt sekme çubuğu görünürken çekmece ortada pencere olarak açılıyordu; klavye açıkken patoloji asistanı tam ekranı, kurulum çekmecesi, tam ekran menü perdesi ve açılır menüler klavyenin altında kalıyordu; sohbet kabuğu yakınlaştırmada yanlış yükseklik alıyordu; güncelleme penceresinde Esc yalnız odak içerideyken çalışıyordu.
+- **Kök neden:** çekmece kesme noktası (640) kabuğun kesme noktasından (768) ayrıydı (`Sheet.tsx` JS 639 da); `.pa.is-tam` `100dvh` kuralı klavye kuralından özgüldü; diğer katmanlar `--vvh`'yi hiç kullanmıyordu; `.ms-chat-shell` 768+ kuralında `/ var(--in-zoom)` unutulmuştu; Esc dinleyicisi perdenin `onKeyDown`'ındaydı.
+- **Çözüm:** çekmece/pencere eşiği 768 (CSS + `Sheet.tsx isSheet`); `katman-duzeni.css` kb-open kuralları; zoom bölmesi eklendi; Esc belge düzeyinde.
+- **Önleme:** kabuğa bağlı her bileşen kabuğun 768 eşiğini kullanır; sabit konumlu tam yükseklik katmanı `--vvh/--vvt` kalıbıyla yazılır; Esc dinleyicisi `document` üzerinde olur.
+
+## H496
+- **Belirti (2026-11-04):** sözlükte "Hastalıklar'a git" bağlantısı telefonda 17 px yükseklikte, dokunması zor.
+- **Kök neden:** satır içi bağlantı, dokunma alanı yazı yüksekliği kadar.
+- **Çözüm:** `pointer: coarse`'ta dikey dolgu + eksi kenar boşluğu (görünüm aynı, alan 43 px).
+- **Önleme:** dokunmatik hedef ≥44 px (tasarım sistemi kuralı); `sayfa_tarama.mjs` `small` listesi her turda süzülür.

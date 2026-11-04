@@ -914,7 +914,7 @@ html.kb-open .ms-onboard-nav, html.kb-open .ms-onboard-text { display: none; }
 /* Asistan: sayfa kaymaz, yalnızca mesajlar kayar; yazma alanı daima altta.
    Yükseklik LocalAiChatView içinde gerçek konuma göre --chat-top ile hesaplanır. */
 .ms-chat-shell { height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--chat-top, 120px) - 84px); min-height: 280px; }
-@media (min-width: 768px) { .ms-chat-shell { height: calc(var(--vvh, 100dvh) - var(--chat-top, 120px) - 16px); } }
+@media (min-width: 768px) { .ms-chat-shell { height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--chat-top, 120px) - 16px); } }
 html.kb-open .ms-chat-shell { height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--chat-top, 120px) - 12px); min-height: 0; }
 .ms-chat-main { padding-bottom: 0 !important; flex: none !important; }
 

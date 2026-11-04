@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { lockScroll, unlockScroll } from '../utils/scrollLock';
 import { X, Sparkles, Stethoscope, AlertCircle, ArrowRight, Check, Layers, BookOpen, CalendarDays, Hash, Lock } from 'lucide-react';
 import { OptionsEditor, OPTION_KEYS, OptionKey } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
@@ -261,11 +262,10 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !isSubmitting && requestClose();
     document.addEventListener('keydown', onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     return () => {
       document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prev;
+      unlockScroll();
     };
   }, [isOpen, isSubmitting, onClose]);
 

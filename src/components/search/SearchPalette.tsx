@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import { ArrowRight, CornerDownLeft, Loader2, Maximize, Moon, NotebookPen, Play, RotateCcw, Search, Sun, Target, Timer, X } from 'lucide-react';
 import { fetchSearch, Highlight, TypeTag, TYPE_META, type SearchHit, type SearchResponse } from './searchShared';
@@ -50,9 +51,8 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
   useEffect(() => {
     inputRef.current?.focus();
     inputRef.current?.select();
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = prev; };
+    lockScroll();
+    return () => { unlockScroll(); };
   }, []);
 
   useEffect(() => {

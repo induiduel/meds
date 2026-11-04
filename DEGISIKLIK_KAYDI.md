@@ -1,3 +1,17 @@
+## 2026-11-05 (1) — Arayüz denetimi aşama 2–3: kaydırma kilidi, klavye, kesme noktası, Esc (H494–H496, dağıtılmadı)
+- H494: 16 bileşen doğrudan `body.style.overflow` yazıyordu → sayaçlı `lockScroll/unlockScroll` (DraftDeduplicationModal, QuickAddHero, ContributeModal, AdminPanelModal, TopluPdf, PdfStudio, kmb/DersVideo, HedefFilmi, HikayeFilmi, KazanimSorulariView, SearchPalette, CanliDersView, LearnReview, AnnotationWorkspace, LessonPlayer, SpotsSureDiyalog).
+- H495: çekmece/pencere eşiği 640 → 768 (`shell.css` + `Sheet.tsx`); klavyede `.pa.is-tam`, `.kr15e-arka`, `.teg-perde`, `.pt-pop`, `.sh-pop` görünür alana uyar (`katman-duzeni.css`); `.ms-chat-shell` 768+ zoom bölmesi; UpdatePrompt Esc belge düzeyinde.
+- H496: sözlük bağlantısının dokunma alanı.
+- Bilinçli bırakılan: `.teg` (tam ekran adası) tam ekran katmanların üstünde kalmalı; spot süre/istatistik modalları içinden diyalog açılmıyor.
+- Hız ölçümü (4× CPU): `/sozluk` 0,66 sn; `/cikmis` sıcak 1,8 sn, soğuk 5,8 sn (ilk kez ~40 MB indirme, işçide; cihaz başına bir kez). Ayrı iş adayı: ince liste kaydı + ayrıntının tembel yüklenmesi.
+- Doğrulama: `tsc` bu dosyalarda temiz, `vite build` temiz, 10 sayfa × 4 görünüm taramasında taşma/hata yok. Klavye ve çekmece davranışı gerçek cihazda sınanmadı. Commit/dağıtım yok.
+
+## 2026-11-04 (6) — Arayüz denetimi aşama 1: katman, klavye, dokunma (H491–H493, dağıtılmadı)
+- Tarama: 20 sayfa × 7 görünüm (`sayfa_tarama.mjs`, başarım penceresi kapatılarak) + stil kodu katman/klavye denetimi. Bulgular ve sıradaki aşamalar: canvas https://claude.ai/artifact/VVyP72D9Bf6AwqbcQKLVnv
+- Düzeltildi: başarım penceresi kesilmesi (H491), katman sırası + klavyede alt öğeler + dokunmatikte gizli denetimler + mini oynatıcı değişken adı (H492, yeni `src/styles/katman-duzeni.css`), Soru çöz özet kartı kesilmesi (H493).
+- Açık (aşama 2–3): `.teg` katman çakışması, spot katmanları, Esc eksikleri, kaydırma kilidi sıfırlama, `100dvh` katmanlar, 640/768 kesme noktası farkı, `/cikmis` ve `/sozluk` açılış hızı.
+- `npx vite build` temiz; commit/dağıtım yapılmadı.
+
 ## 2026-11-04 (5) — Sesli ders yerel ilerlemesini sıfırlama / temizleme (onem 643)
 - Kullanıcı isteği: öğrenci sesli derslerde cihazındaki ilerlemeyi dilediği gibi sıfırlayıp yeniden çalışabilsin. Yalnız yerel kayıtlar: "kaldığın yer" (`medsoru_canli_ders_konum_v1`) ve çalışma takibi (`medsoru_calisma_takip_v1`: süre, bitti işareti, tekrar turu). Ses dosyaları, indirilenler, listem ve ayarlara dokunulmaz.
 - Yeni `src/components/canliDers/CdIlerlemeTemizle.tsx`: `SifirlaDugme` (tek ders, iki adımlı onay, 6 sn'de kendiliğinden vazgeçer) ve `TemizleDiyalog` (görünen listenin dersleri için toplu; "kaldığın yer" ve "bitti + süre" ayrı onay kutuları, sayılarıyla; sonuç satırı). Yerler: v15 sesli ders listesi altı ("İlerlemeyi temizle"), v15 ders ayrıntısı kaldığın yer kartı ("İlerlemeyi sıfırla", kayıt yoksa gizli), klasik liste kenar çubuğu "Temizlik" + satır seçenekleri.

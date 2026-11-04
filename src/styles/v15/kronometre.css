@@ -1,5 +1,5 @@
 /* v15 · Yüzen kronometre (KronometreV15, tasarım T/U): zar baloncuğu + panel; renkler palet tokenından */
-.kr15z { position: fixed; z-index: 70; width: 48px; height: 48px; display: grid; place-items: center; cursor: pointer; touch-action: none; user-select: none;
+.kr15z { position: fixed; z-index: 64; width: 48px; height: 48px; display: grid; place-items: center; cursor: pointer; touch-action: none; user-select: none;
   transition: left .32s ease-out, top .32s ease-out, right .32s ease-out; -webkit-tap-highlight-color: transparent; }
 .kr15z.is-surukle { transition: none; cursor: grabbing; }
 .kr15z:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 50%; }

@@ -6,6 +6,7 @@
  * boşluk video, Esc kapat. `?hikaye=1` ile doğrudan açılır (sınama). İzlenen adımlar `izlendi` ile bildirilir.
  */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import LottieVideo, { KMB_DURDUR, LOTTILER, lottieOnYukle } from './LottieVideo';
 import type { Ders, SesKayit } from './kmbVeri';
@@ -54,9 +55,9 @@ export default function HikayeFilmi({ ders, ses, onKapat, izlendi, onSinav }: {
   useEffect(() => {
     kap.current?.requestFullscreen?.().catch(() => { /* izin yoksa katman pencereyi kaplar */ });
     try { (screen.orientation as any)?.lock?.('landscape').catch(() => {}); } catch { /* yok */ }
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     document.body.classList.add('kmb-film-acik');
-    return () => { document.body.style.overflow = ''; document.body.classList.remove('kmb-film-acik'); window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
+    return () => { unlockScroll(); document.body.classList.remove('kmb-film-acik'); window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
   }, []);
   // sonraki video önceden yüklenir
   useEffect(() => {

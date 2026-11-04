@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { Clock, X } from 'lucide-react';
 import { dk, fmtSaat, fmtSure, type SpotBransSureGrup } from './spotsSureVeri';
 import { type Brans } from '../brans';
@@ -36,11 +37,10 @@ export const SpotsSureDiyalog: React.FC<Props> = ({
       if (e.key === 'Escape') onKapat();
     };
     document.addEventListener('keydown', handleKey);
-    const eskiOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     return () => {
       document.removeEventListener('keydown', handleKey);
-      document.body.style.overflow = eskiOverflow;
+      unlockScroll();
     };
   }, [onKapat]);
 

@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { AnnotationSurface } from './AnnotationSurface';
 import { AnnotationToolbar } from './AnnotationToolbar';
 import { PenDiagnostics } from './PenDiagnostics';
@@ -90,11 +91,11 @@ export function AnnotationWorkspace({
 
   // Açıkken arka sayfanın kaymasını engelle (iOS lastik bant kaydırması dahil).
   useEffect(() => {
-    const { overflow, overscrollBehavior } = document.body.style;
-    document.body.style.overflow = 'hidden';
+    const { overscrollBehavior } = document.body.style;
+    lockScroll();
     document.body.style.overscrollBehavior = 'none';
     return () => {
-      document.body.style.overflow = overflow;
+      unlockScroll();
       document.body.style.overscrollBehavior = overscrollBehavior;
     };
   }, []);

@@ -1,4 +1,5 @@
 import { FastTextarea } from './ui/FastTextarea';
+import { lockScroll, unlockScroll } from '../utils/scrollLock';
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
@@ -899,9 +900,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   }, []);
   useEffect(() => {
     if (!full) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = prev; };
+    lockScroll();
+    return () => { unlockScroll(); };
   }, [full]);
   // Gönderim başarılı olunca (metin temizlenir) tam ekran kapanır
   useEffect(() => {

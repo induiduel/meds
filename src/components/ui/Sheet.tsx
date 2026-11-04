@@ -5,7 +5,7 @@ import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 
 /**
  * Ortak alt sayfa (v8). Telefonda alttan açılır ve tutamaçtan/başlıktan sürüklenir; geniş ekranda
- * (≥640px) aynı içerik ortada pencere olur. Kurallar (tasarım sistemi · Hareket):
+ * (≥768px, alt sekme çubuğunun kalktığı eşik) aynı içerik ortada pencere olur. Kurallar (tasarım sistemi · Hareket):
  *  - Arka sayfa ortak sayaçlı kilitle (utils/scrollLock) kilitlenir; kaydırma konumu yerinde kalır.
  *  - Gövde kendi kayar (overscroll-behavior: contain) → kaydırma arka sayfaya zincirlenmez.
  *  - Sürükleme başlıktan başlar; gövde en üstteyken aşağı çekiş de sayfayı sürükler (iOS tarzı devir).
@@ -104,7 +104,7 @@ const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, titl
     };
   }, []);
 
-  const isSheet = () => window.matchMedia('(max-width: 639px)').matches;
+  const isSheet = () => window.matchMedia('(max-width: 767px)').matches;
 
   // Sürükleme konumunu doğrudan DOM'a yaz (kare başına bir kez)
   const paint = () => {

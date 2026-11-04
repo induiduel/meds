@@ -9,6 +9,7 @@
  * f tam ekran, Esc kapat. Veri kapısı: scripts/kmb/dogrula.py (film vuruşları, öge kimlikleri, zoom 1–2).
  */
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import { getCustomApiUrl } from '../../services/api';
 import { type SahneDurum } from './sahneler';
@@ -106,12 +107,12 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   useEffect(() => {
     kap.current?.requestFullscreen?.().then(() => setTam(true)).catch(() => { /* izin yoksa katman pencereyi kaplar */ });
     try { (screen.orientation as any)?.lock?.('landscape').catch(() => {}); } catch { /* yönlendirme kilidi yok */ }
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     document.body.classList.add('kmb-film-acik'); // kabuğun alt sekme çubuğu (zoom'lu, sabit) filmin altından görünmesin
     window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'hedef-film' }));
     const f = () => setTam(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', f);
-    return () => { document.body.style.overflow = ''; document.body.classList.remove('kmb-film-acik'); document.removeEventListener('fullscreenchange', f); audio.current?.pause(); };
+    return () => { unlockScroll(); document.body.classList.remove('kmb-film-acik'); document.removeEventListener('fullscreenchange', f); audio.current?.pause(); };
   }, []);
   // sonraki hedefin sesini önceden indir (geçişte boşluk olmasın)
   useEffect(() => {

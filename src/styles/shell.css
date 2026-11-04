@@ -189,8 +189,8 @@ html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 62px; }
 }
 
 /* ---------- Alt sayfa / pencere ---------- */
-.sh-sheet-root { position: fixed; inset: 0; z-index: 80; display: flex; align-items: flex-end; justify-content: center; }
-@media (min-width: 640px) { .sh-sheet-root { align-items: center; padding: 24px; } }
+.sh-sheet-root { position: fixed; inset: 0; z-index: 80; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1)); top: calc(var(--vvt, 0px) / var(--in-zoom, 1)); bottom: auto; display: flex; align-items: flex-end; justify-content: center; }
+@media (min-width: 768px) { .sh-sheet-root { align-items: center; padding: 24px; } }
 .sh-sheet-backdrop { position: absolute; inset: 0; background: rgb(8 12 18 / .42); animation: ui-fade var(--mo-base) var(--mo-ease) both; transition: opacity var(--mo-base); }
 html[data-mode="dark"] .sh-sheet-backdrop { background: rgb(0 0 0 / .62); }
 .sh-sheet { position: relative; width: 100%; max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - env(safe-area-inset-top, 0px) - 16px); display: flex; flex-direction: column; outline: 0;
@@ -201,7 +201,7 @@ html[data-mode="dark"] .sh-sheet-backdrop { background: rgb(0 0 0 / .62); }
 .sh-sheet-root.is-closing .sh-sheet { animation: sh-sheet-down .24s var(--mo-ease) forwards; }
 .sh-sheet-root.is-closing .sh-sheet-backdrop { animation: ui-fade .24s reverse forwards; }
 @keyframes sh-sheet-down { to { transform: translate3d(0, 105%, 0); } }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .sh-sheet { width: min(100%, var(--sheet-w, 520px)); max-height: min(760px, calc(100dvh / var(--in-zoom, 1) - 48px)); border-radius: 18px; box-shadow: var(--shadow-xl); animation: sh-dlg-in var(--mo-base) var(--mo-ease) backwards; }
   .sh-sheet.is-full { height: min(760px, calc(100dvh / var(--in-zoom, 1) - 48px)); }
   .sh-sheet-root.is-closing .sh-sheet { animation: sh-dlg-out .19s var(--mo-ease) forwards; }
@@ -211,7 +211,7 @@ html[data-mode="dark"] .sh-sheet-backdrop { background: rgb(0 0 0 / .62); }
 .sh-sheet-head { flex-shrink: 0; padding: 6px 12px 4px 18px; touch-action: none; cursor: grab; user-select: none; }
 .sh-sheet-head:active { cursor: grabbing; }
 .sh-sheet-grab { display: block; width: 38px; height: 5px; border-radius: 3px; margin: 0 auto 6px; background: var(--color-line-2); }
-@media (min-width: 640px) { .sh-sheet-head { cursor: default; touch-action: auto; padding-top: 14px; } .sh-sheet-grab { display: none; } }
+@media (min-width: 768px) { .sh-sheet-head { cursor: default; touch-action: auto; padding-top: 14px; } .sh-sheet-grab { display: none; } }
 .sh-sheet-bar { display: flex; align-items: flex-start; gap: 8px; min-height: 36px; }
 .sh-sheet-title { margin: 0; padding-top: 6px; font: 700 19px/1.25 var(--font-display); letter-spacing: -.02em; color: var(--color-ink); overflow-wrap: anywhere; }
 .sh-sheet-sub { margin: 2px 0 0; font-size: 13px; color: var(--color-ink-3); }
@@ -220,7 +220,7 @@ html[data-mode="dark"] .sh-sheet-backdrop { background: rgb(0 0 0 / .62); }
 .sh-sheet-x > svg { width: 17px; height: 17px; }
 .sh-sheet-body { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 8px 16px calc(16px + env(safe-area-inset-bottom, 0px)); }
 .sh-sheet-foot { flex-shrink: 0; display: flex; gap: 8px; justify-content: flex-end; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--color-line); background: var(--color-canvas); }
-@media (min-width: 640px) { .sh-sheet-body { padding-bottom: 18px; } .sh-sheet-foot { padding-bottom: 12px; } }
+@media (min-width: 768px) { .sh-sheet-body { padding-bottom: 18px; } .sh-sheet-foot { padding-bottom: 12px; } }
 
 /* "Daha" sayfası */
 .sh-more { display: flex; flex-direction: column; gap: 18px; }
@@ -243,7 +243,7 @@ html[data-mode="dark"] .sh-sheet-backdrop { background: rgb(0 0 0 / .62); }
 .sh-sheet-body.is-bare > * { flex: 1; min-height: 0; }
 
 /* ---------- Toast (v8) ---------- */
-.tst-host { position: fixed; z-index: 100000; left: 0; right: 0; bottom: calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 22px); display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 12px; pointer-events: none; }
+.tst-host { position: fixed; z-index: 2147483050; left: 0; right: 0; bottom: calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 22px); display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 12px; pointer-events: none; }
 @media (min-width: 768px) { .tst-host { bottom: 24px; left: auto; right: 24px; align-items: flex-end; } }
 html.kb-open .tst-host { bottom: calc(100dvh / var(--in-zoom, 1) - var(--vvh, 100dvh) / var(--in-zoom, 1) + 12px); }
 .tst { --tc: var(--color-accent); position: relative; pointer-events: auto; width: min(100%, 420px); display: flex; align-items: center; gap: 10px; padding: 10px 8px 10px 12px; border-radius: 16px; overflow: hidden;
@@ -405,7 +405,7 @@ html[data-mode="dark"] .deep-link-highlight-pulse,
 .sh-duyuru > button svg { width: 15px; height: 15px; }
 
 /* Zengin bildirim kartları (sohbet mesajı / arkadaşlık isteği): üstte, etkileşimli */
-.tst-top-host { position: fixed; z-index: 100001; left: 0; right: 0; top: calc(env(safe-area-inset-top, 0px) + 12px); display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 12px; pointer-events: none; }
+.tst-top-host { position: fixed; z-index: 2147483051; left: 0; right: 0; top: calc(env(safe-area-inset-top, 0px) + 12px); display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 12px; pointer-events: none; }
 @media (min-width: 768px) { .tst-top-host { left: auto; right: 24px; align-items: flex-end; } }
 .tst-rich { --tc: var(--color-accent); pointer-events: auto; width: min(100%, 400px); padding: 10px 10px 10px 12px; border-radius: 18px; background: var(--color-ink-surface); color: #F4F6F8; box-shadow: 0 14px 40px rgb(0 0 0 / .32); animation: tst-rich-in var(--mo-slow) var(--mo-spring) both; }
 html[data-mode="dark"] .tst-rich { background: color-mix(in srgb, var(--color-white) 92%, var(--color-ink)); color: var(--color-ink); box-shadow: 0 14px 40px rgb(0 0 0 / .6), inset 0 0 0 1px var(--color-line); }

@@ -1,0 +1,24 @@
+/* Katman ve klavye düzeni (denetim 2026-11-04): tasarımı değiştirmez, yalnız üst üste binme / klavye / dokunmatik hatalarını giderir */
+
+/* Klavye açıkken alt çubuk ve yüzen öğeler yazı alanının üstüne binmez */
+html.kb-open .sh-tabs, html.kb-open .v15-tabs, html.kb-open .s12-tabs,
+html.kb-open .as15-fab, html.kb-open .stf, html.kb-open .mux-player,
+html.kb-open .sx15-alt, html.kb-open .cd-vid-rozet, html.kb-open .kr15z { display: none !important; }
+
+/* Çekmece/diyalog açıkken (kaydırma kilidi) yüzen asistan düğmesi perdenin üstünde kalmaz */
+html.scroll-locked .as15-fab { opacity: 0; pointer-events: none; }
+
+/* Fare üstüne gelince beliren denetimler dokunmatik cihazda hep görünür */
+@media (hover: none) {
+  .ls-exit-immersive, .pa-p-yildiz, .cdb-boyn { opacity: 1 !important; pointer-events: auto; }
+}
+
+
+/* Klavye açıkken sabit 100dvh katmanlar görünür alana sığar (main.tsx --vvh/--vvt yalnız yazı alanı odaktayken yazılır) */
+html.kb-open .pa.is-tam { top: var(--vvt, 0px); bottom: auto; height: var(--vvh, 100dvh); max-height: var(--vvh, 100dvh) !important; }
+html.kb-open .kr15e-arka, html.kb-open .teg-perde { top: calc(var(--vvt, 0px) / var(--in-zoom, 1)); bottom: auto; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1)); }
+html.kb-open .pt-pop { max-height: min(440px, calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 120px)); }
+html.kb-open .sh-pop { max-height: min(640px, calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 80px)); }
+
+/* Telefonda satır içi bağlantının dokunma alanı (görünüm değişmez: dolgu kenar boşluğuyla geri alınır) */
+@media (pointer: coarse) { .g12-capraz { display: inline-block; padding-block: 13px; margin-block: -13px; } }

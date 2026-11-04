@@ -9,6 +9,7 @@
  * Stil: styles/learn-focus.css (.lr-rv-*) + ders ekranının .ls-* sınıfları (ls-root kabuğu); v12 görünümü styles/v12/learn-library.css.
  */
 import React, { useEffect, useMemo, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import { BookOpenText, Check, ChevronLeft, ChevronRight, PartyPopper, RotateCcw } from 'lucide-react';
 import { loadDeck } from '../../data/deckStore';
@@ -88,12 +89,11 @@ export const LearnReview: React.FC<{
   }, [mode, scope, round]);
 
   useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     const onKey = (ev: KeyboardEvent) => ev.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);
     return () => {
-      document.body.style.overflow = prev;
+      unlockScroll();
       document.removeEventListener('keydown', onKey);
     };
   }, [onClose]);

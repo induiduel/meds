@@ -5,6 +5,7 @@
  * İzlenen adımlar `izlendi` ile bildirilir (öğrenme yolu ilerlemesi).
  */
 import React, { useEffect, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import LottieVideo, { KMB_DURDUR, LOTTILER, lottieOnYukle } from './LottieVideo';
 import type { Ders, SesKayit } from './kmbVeri';
@@ -22,8 +23,8 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
   useEffect(() => {
     kap.current?.requestFullscreen?.().catch(() => { /* izin yoksa katman pencereyi kaplar */ });
     try { (screen.orientation as any)?.lock?.('landscape').catch(() => {}); } catch { /* yönlendirme kilidi yok */ }
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = ''; window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
+    lockScroll();
+    return () => { unlockScroll(); window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
   }, []);
   useEffect(() => { if (sonraki) lottieOnYukle(`adim-${sonraki.id}`).catch(() => {}); }, [sonraki]);
 

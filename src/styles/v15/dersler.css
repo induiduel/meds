@@ -281,6 +281,14 @@ a.k15-kart:hover { border-color: var(--color-accent); }
   .s15-oz .v15-cap { grid-column: 2; grid-row: 2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .s15-oz .v15-btn { grid-column: 3; grid-row: 1 / 3; margin: 0; min-height: 38px; padding: 0 14px; font-size: 13.5px; white-space: nowrap; }
 }
+/* Denetim 2026-11-04: 600–959 px'te (yatay telefon, yarım ekran) tek açıklama satırı "He…" diye kesiliyordu; iki satıra sarar, süs ikonu yer açar */
+@container d15 (min-width: 600px) and (max-width: 959px) {
+  .s15-oz { grid-template-columns: minmax(0, 1fr) auto; }
+  .s15-oz .s15-oz-h { display: none; }
+  .s15-oz .s15-say { grid-column: 1; }
+  .s15-oz .v15-cap { grid-column: 1; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 12px; line-height: 15px; }
+  .s15-oz .v15-btn { grid-column: 2; }
+}
 .s15-test { gap: 8px; padding: 12px 14px; }
 .s15-test .s15-test-sat { flex-direction: row; align-items: center; gap: 10px; }
 .s15-test .s15-test-sat > .v15-label { flex: none; width: 78px; }

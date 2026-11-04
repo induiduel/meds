@@ -8,6 +8,7 @@
  * Sınıf öneki `ps-` (pdf.css). Belge içindeki bloklar `pd-` önekini kullanır.
  */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import {
   X, Download, FileText, FileDown, FileCode, GraduationCap, RefreshCw, EyeOff, BookOpenCheck, Grid3x3, Check, ChevronDown,
@@ -256,12 +257,11 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
   useEffect(() => {
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     document.addEventListener('keydown', onKey);
     return () => {
       document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prev;
+      unlockScroll();
     };
   }, [isOpen, onClose]);
 

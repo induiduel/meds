@@ -165,10 +165,17 @@ const Pencere: React.FC<{ kip: 'guncelle' | 'yenilik'; baslik?: string; maddeler
   kapat: () => void; ust?: string; alt?: React.ReactNode; not?: string }> = ({ kip, baslik, maddeler, yenilikler, kapat, ust, alt, not }) => {
   const tamam = useRef<HTMLButtonElement>(null);
   useEffect(() => { if (kip === 'yenilik') tamam.current?.focus(); }, [kip]);
+  // Esc odak pencerenin dışındayken de kapatır (perdeye bağlı dinleyici yalnız odak içerideyken çalışıyordu)
+  const kapatRef = useRef(kapat); kapatRef.current = kapat;
+  useEffect(() => {
+    const tus = (e: KeyboardEvent) => { if (e.key === 'Escape') kapatRef.current(); };
+    document.addEventListener('keydown', tus);
+    return () => document.removeEventListener('keydown', tus);
+  }, []);
   const ys = (yenilikler || []).filter((y) => y && y.ad);
   const ms = (maddeler || []).filter(Boolean);
   return (
-    <div className="up-scrim" role="presentation" onKeyDown={(e) => { if (e.key === 'Escape') kapat(); }}
+    <div className="up-scrim" role="presentation"
       onClick={(e) => { if (kip === 'yenilik' && e.target === e.currentTarget) kapat(); }}>
       <div className={`up-card up-genis is-${kip}`} role={kip === 'guncelle' ? 'alertdialog' : 'dialog'} aria-modal="true" aria-labelledby="up-baslik">
         <button type="button" className="up-x" onClick={kapat} aria-label="Kapat"><X /></button>

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { lockScroll, unlockScroll } from '../utils/scrollLock';
 import { varsayilanKurul } from './kurul/KurulSecici';
 import KurulSecV15 from './v15/KurulSecV15';
 import '../styles/v15/liste2.css';
@@ -471,8 +472,8 @@ function TamEkran({
   const dogru = sorular.filter((x) => cevaplar[x.id]?.ok).length;
 
   useEffect(() => {
-    const prev = document.body.style.overflow; document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = prev; };
+    lockScroll();
+    return () => { unlockScroll(); };
   }, []);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {

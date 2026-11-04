@@ -5,6 +5,7 @@
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import IcerikKapaliV15 from '../v15/IcerikKapaliV15';
 import React, { useEffect, useMemo, useState } from 'react';
 import { AlertTriangle, Archive, AudioLines, BookOpen, Check, ChevronDown, Clock, Download, Eraser, FileText, Headphones, History, Layers, LayoutList, ListMusic, MoreHorizontal, Package, Pause, Play, Search, Star, Video, X } from 'lucide-react';
@@ -442,9 +443,8 @@ function SureDiyalog({ dersler, onKapat }: { dersler: CdListeDers[]; onKapat: ()
     kapatRef.current?.focus();
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onKapat(); };
     document.addEventListener('keydown', k);
-    const eski = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => { document.removeEventListener('keydown', k); document.body.style.overflow = eski; };
+    lockScroll();
+    return () => { document.removeEventListener('keydown', k); unlockScroll(); };
   }, [onKapat]);
   return (
     <div className="cd-dlg" role="presentation" onClick={(e) => { if (e.target === e.currentTarget) onKapat(); }}>

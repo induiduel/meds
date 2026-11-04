@@ -6,6 +6,7 @@
  * Belge üretimi çağırana aittir (`belgeAl`): tek ders "Metni indir" ile aynı biçim kullanılır.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import { FileDown, X } from 'lucide-react';
 import type { AktarBelge, AktarBolum } from '../../services/metinDisaAktar';
@@ -79,9 +80,8 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBi
     kapatRef.current?.focus();
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape' && !calisiyorRef.current) onKapat(); };
     document.addEventListener('keydown', k);
-    const eski = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => { document.removeEventListener('keydown', k); document.body.style.overflow = eski; iptal.current = true; };
+    lockScroll();
+    return () => { document.removeEventListener('keydown', k); unlockScroll(); iptal.current = true; };
   }, [onKapat]);
 
   const degis = (keys: string[], on: boolean) => setSecili((s) => {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { lockScroll, unlockScroll } from '../utils/scrollLock';
 import { confirmText } from './ui/ConfirmDialog';
 import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split, Trash2, Wand2 } from 'lucide-react';
 import { toast } from './ui/Toast';
@@ -343,11 +344,10 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     return () => {
       document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prev;
+      unlockScroll();
     };
   }, [isOpen, onClose]);
 
