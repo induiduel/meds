@@ -31,6 +31,8 @@ ws.addEventListener('message', (m) => {
 const send = (method, params = {}) => new Promise((res, rej) => { const i = ++id; pend.set(i, { res, rej }); ws.send(JSON.stringify({ id: i, method, params })); });
 const ev = async (e) => (await send('Runtime.evaluate', { expression: e, awaitPromise: true, returnByValue: true })).result.value;
 await send('Page.enable'); await send('Runtime.enable'); await send('Network.enable');
+// Zorunlu giriş: AI_COOKIE (bkz. sayfa_tarama.mjs)
+if (process.env.AI_COOKIE) await send('Network.setCookie', { name: 'meds_ai_test', value: process.env.AI_COOKIE, url: BASE, httpOnly: true, sameSite: 'Strict' });
 const req = new Map();
 L.push((d) => {
   if (d.method === 'Network.requestWillBeSent') req.set(d.params.requestId, { url: d.params.request.url, t0: d.params.timestamp });

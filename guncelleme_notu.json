@@ -1,15 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 639,
-  "baslik": "Çevrimdışı: eksikler kendiliğinden tamamlanıyor",
+  "onem": 640,
+  "baslik": "Açılış daha hızlı, tasarım düzeltmeleri",
   "maddeler": [
-    "Daha önce indirdiğin derslerde eksik kalan PDF ve slayt eşlemeleri, internet varken kendiliğinden indiriliyor.",
-    "Çevrimdışı › İndirilenler: 'Eksikleri tamamla' düğmesi."
+    "Açılıştaki atan kalp artık her sekmede 5 saniye bekletmiyor; yalnız günün ilk açılışında kısa görünür.",
+    "Siteye girince doğrudan Bugün sayfası açılır."
   ],
   "eklenen": [],
-  "degisen": [],
+  "degisen": [
+    "Açılış ekranı: günün ilk açılışında en çok ~2 sn, sonra uygulama hazır olunca hemen kalkar (H484)"
+  ],
   "duzeltilen": [
-    "Eski indirmelerde PDF'in eksik kalması ve 'Sına'nın bunu görmemesi (H483)"
+    "Açılışta 'Bu sayfa şu an kapalı' ekranı (H485)",
+    "Tablette Soru çöz özet kartlarının taşması (H488)",
+    "Telefonda üst başlığın kelime ortasından bölünmesi (H489)",
+    "Küçük dokunma alanları: kırıntı bağlantısı, 'Kurul 1 derslerine geç', 'Tümünü aç' (H487)"
   ],
   "silinen": [],
   "yenilikler": []

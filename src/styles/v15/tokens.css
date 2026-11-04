@@ -13,9 +13,11 @@
   --color-warning-soft: var(--color-warn-soft);
   --v15-font: var(--font-sans);
   --v15-serif: var(--font-read);
-  --font-sans: 'Plus Jakarta Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Plus Jakarta Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
-  --font-read: 'Newsreader', 'Literata', Georgia, serif;
+  /* H486: 'Plus Jakarta Sans' ve 'Newsreader' hiçbir yerde yüklenmiyordu (index.html yalnız Geist/Bricolage/Literata/JetBrains
+     Mono indirir); tarayıcı sessizce Geist/Literata'ya düşüyordu. Jetonlar gerçekten yüklenen yazı tiplerini adlandırır. */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-read: 'Literata', Georgia, serif;
 
   /* boşluk: space-1…8 */
   --v15-s1: 4px;

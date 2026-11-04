@@ -1,3 +1,13 @@
+## 2026-11-04 (4) — Açılış ve geçiş hızı + tasarım hataları (H484–H489, onem 640)
+- Ölçüm (4× CPU yavaşlatma, `scripts/perf/yukleme_olcum.mjs` artık `AI_COOKIE` ile zorunlu girişi geçer; soğuk açılış `acilis.mjs` ve splash ölçümü oturum geçici klasöründe): soğuk açılış 99 betik / 524 KB gz, hazır 2,4 sn; sıcak 1,5 sn (betik isteği yok, süre ayrıştırma/çalıştırma). Geçişler: /cikmis 8,6 sn (IndexedDB getAll 1,5 sn + arama alanı katlama 0,7 sn + GC), /sozluk 2,1 sn (3,4 MB ansiklopedi parçası ayrıştırma), diğer merkez sayfaları 0,6–1,6 sn.
+- **H484 (kök neden: splash her yeni sekmede ≥5 sn zorunlu bekliyordu, `sessionStorage`):** `App.tsx` — gösteri yalnız günün ilk açılışında ve en çok 1,8 sn (`localStorage medsoru_splash_gun`), sonraki açılışlarda uygulama hazır olunca hemen kalkar; Klasik (v10) eski davranışı korur. Ölçüm: ilk açılış 2,9 sn (önce ≥5), sonrakiler 1,65 sn (uygulamanın hazır olma süresi).
+- **H485:** kök adres `/` öğrenciye gizli "Soru ekle"ye düşüyor, açılış "Bu sayfa şu an kapalı" ekranıyla başlıyordu → kapalıysa Bugün'e geçer (`replaceState`, geçmişe kayıt yok); adresle girilen diğer gizli sayfalar H139 gereği ekranda kalır.
+- **H486:** v15 jetonları `'Plus Jakarta Sans'` / `'Newsreader'` istiyordu, hiçbir yerde yüklenmiyordu (index.html yalnız Geist/Bricolage/Literata/JetBrains Mono indirir); tarayıcı sessizce Geist/Literata'ya düşüyordu → jetonlar yüklenen yazı tiplerini adlandırır (görünüm değişmedi, tasarım–kod uyumsuzluğu kalktı).
+- **H487:** küçük dokunma hedefleri (tarama `sayfa_tarama.mjs`): "Kurul 1 derslerine geç" 150×19, üst çubuk kırıntısı "Soru çöz" 67×16, İstatistik "Tümünü aç" 86×19 → satır içi dolgu / telafili dolgu, görünüm aynı, tarama 0 küçük hedef.
+- **H488:** 600–959 px kapsayıcıda (tablet 820, yarım ekran) Soru çöz özet kartları tek satır düzeninde taşıyordu (sayı kesik, "Karma test · 20 soru" kart dışına) → bu aralıkta kısa düğme adı (`.s15-kisa`) + dar dolgu (`dersler.css`).
+- **H489:** telefonda üst başlık `overflow-wrap: break-word` ile tek kelimeyi hece ortasından bölüyordu ("İstatistikleri|m") → `normal` + kırpma (`shell.css`).
+- Yapılmayan / aday: `/cikmis` açılışında 4.700 zengin kaydın IndexedDB'den okunması ana iş parçacığında ~1,5 sn (4×); liste için ince kayıt + ayrıntıyı açınca yükleme ayrı iş. `/sozluk` 3,4 MB veri parçası yerine JSON getirme ayrı iş. Rolldown `codeSplitting.minSize` ile parça birleştirme denenmedi (sıcak açılış istek değil ayrıştırma ağırlıklı).
+
 ## 2026-11-04 (3) — Çevrimdışı eksik giderici (H483)
 - Yeni `src/services/cevrimdisi/eksikGider.ts` (açılışta + 'Eksikleri tamamla' düğmesi), `paketiDenetle` sesli derste PDF/eşleme sayar. Uçtan uca sınandı; dağıtıldı.
 

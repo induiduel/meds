@@ -140,7 +140,7 @@ const CikmisCozucuView = React.lazy(() => wrapLazy(import('./components/cikmisCo
 const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
 const BasarimKatmani = React.lazy(() => wrapLazy(import('./components/basarim/BasarimKatmani')));
 // Arzu'ya özel katman: yalnız arzuKimlik.ts'teki hesaplarda yüklenir (karşılama, gezinen tilki, kalpler)
-import { arzuMu } from './components/arzu/arzuKimlik';
+import { arzuHesabiMi, useArzuAcik } from './components/arzu/arzuKimlik';
 const ArzuKatmani = React.lazy(() => wrapLazy(import('./components/arzu/ArzuKatmani')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
 const SinavPlaniView = React.lazy(() => wrapLazy(import('./components/takip/SinavPlaniView')));
@@ -390,13 +390,14 @@ export default function App() {
     const el = document.getElementById('app-splash');
     if (el) {
       const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-      // Atan kalp açılışın başından itibaren en az ~5 sn görünür (imza-A çizimi + EKG taraması); uygulama daha geç
-      // hazır olursa hazır olduğu an kalkar.
-      // v11: 5 sn'lik gösteri yalnız oturumun ilk açılışında; yenilemelerde uygulama hazır olunca hemen kalkar (Klasik: her açılışta)
+      // H484 (2026-11-04): atan kalp her yeni sekmede 5 sn zorunlu bekletiyordu (sessionStorage) → açılış yavaş algılanıyordu.
+      // Artık gösteri yalnız günün ilk açılışında ve en çok ~1,8 sn (imza çizimi görünür); o gün sonraki açılışlarda ve
+      // yenilemede uygulama hazır olunca hemen kalkar. Klasik (v10) tasarım eski davranışı korur.
       let seen = false;
-      try { seen = sessionStorage.getItem('medsoru_splash_seen') === '1'; sessionStorage.setItem('medsoru_splash_seen', '1'); } catch { /* yok say */ }
-      const quick = seen && getAppearance().design !== 'v10';
-      const wait = quick ? 0 : Math.max(0, 5000 - performance.now());
+      const gun = new Date().toISOString().slice(0, 10);
+      try { seen = localStorage.getItem('medsoru_splash_gun') === gun; localStorage.setItem('medsoru_splash_gun', gun); } catch { /* yok say */ }
+      const klasik = getAppearance().design === 'v10';
+      const wait = klasik ? Math.max(0, 5000 - performance.now()) : seen ? 0 : Math.max(0, 1800 - performance.now());
       let gitti = false;
       const kaldir = () => {
         if (gitti) return;
@@ -896,6 +897,14 @@ export default function App() {
   const sayfaKapaliMi = (sayfaKapali(activeTab) && !isAdmin) || sayfaGizliMi;
   // Kapalı sayfada içerik hiç kurulmaz: aşağıdaki sayfa blokları gorunenTab'a bakar (kapalı ekranı tek başına kalır)
   const gorunenTab = (sayfaKapaliMi ? '__kapali__' : activeTab) as typeof activeTab;
+  // H485: kök adres (/) öğrenciye gizli "Soru ekle" sayfasına düşüyor ve açılışta "Bu sayfa şu an kapalı" görünüyordu.
+  // Giriş sayfası kapalıysa Bugün'e geçilir (geçmişe kayıt yazılmaz); adresle girilen diğer gizli sayfalar H139 gereği ekranda kalır.
+  useEffect(() => {
+    if (sayfaKapaliMi && activeTab === 'quick_add') {
+      try { window.history.replaceState(window.history.state, '', '/bugun'); } catch { /* yok say */ }
+      navigateTo('/bugun');
+    }
+  }, [sayfaKapaliMi, activeTab]);
   // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
   const [isModerator, setIsModerator] = useState(false);
   useEffect(() => {
@@ -1562,7 +1571,8 @@ export default function App() {
   // Yönetim konsolu (/manage, /yonetim) veya MeDSor Yönetim Android uygulaması açıkken öğrenci kayıt kapısı konsolu örtmez.
   const isManageRoute = activeTab === 'manage' || activeTab === 'admin';
   const girisKapisi = !isManageRoute && !isAdminAppMode() && !currentUser && aiTest !== true && (showOnboarding || (authHazir && aiTest === false));
-  const arzuKatmani = !isManageRoute && !girisKapisi && !girisUyarisi && arzuMu(currentUser);
+  const arzuAcik = useArzuAcik();
+  const arzuKatmani = !isManageRoute && !girisKapisi && !girisUyarisi && arzuAcik && arzuHesabiMi(currentUser);
 
   return (
     <GlossaryProvider>
