@@ -4,6 +4,7 @@
 - H496: sözlük bağlantısının dokunma alanı.
 - Bilinçli bırakılan: `.teg` (tam ekran adası) tam ekran katmanların üstünde kalmalı; spot süre/istatistik modalları içinden diyalog açılmıyor.
 - Hız ölçümü (4× CPU): `/sozluk` 0,66 sn; `/cikmis` sıcak 1,8 sn, soğuk 5,8 sn (ilk kez ~40 MB indirme, işçide; cihaz başına bir kez). Ayrı iş adayı: ince liste kaydı + ayrıntının tembel yüklenmesi.
+- KMB (onem 647): `.kmb-serit` adım şeridinin `::before` dokunma alanı (−10 px) `overflow-x:auto` kabında kırpılıyordu (gerçek hedef ~16 px); dolgu 10 px + `margin-block:-6px`, görünüm aynı.
 - Doğrulama: `tsc` bu dosyalarda temiz, `vite build` temiz, 10 sayfa × 4 görünüm taramasında taşma/hata yok. Klavye ve çekmece davranışı gerçek cihazda sınanmadı. Commit/dağıtım yok.
 
 ## 2026-11-04 (6) — Arayüz denetimi aşama 1: katman, klavye, dokunma (H491–H493, dağıtılmadı)
