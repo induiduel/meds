@@ -2096,3 +2096,13 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** `ARAMA_SIRASI`na `CD_OFFLINE_CACHE` ve `medsoru-pdf-offline` eklendi. Uçtan uca sınama (headless Chrome, tarayıcı önbelleği kapalı):
   ders indir → internetsiz aç → PDF 206 cihazdan, 8 sayfa çizildi; indirmeden aynı sınama PDF açmıyor.
 - **Önleme:** yeni bir çevrimdışı önbellek adı eklenince `ARAMA_SIRASI` ve lecture-pdf kısa devresi birlikte güncellenir.
+
+## H483
+- **Belirti (2026-11-04):** H481/H482 öncesinde indirilmiş derslerde PDF ya da eşleme eksik kalmış olabilir; "Sına" bunları sağlam gösteriyordu.
+- **Kök neden:** `paketiDenetle` sesli derste yalnız ses + konuşma metnine bakıyordu; PDF, deste eşlemesi ve PDF'siz indirilmiş dersler denetlenmiyordu.
+  Eksiği kendiliğinden tamamlayan bir adım da yoktu.
+- **Çözüm:** `src/services/cevrimdisi/eksikGider.ts`: açılışta (internet varken, 12 saatte bir, `ONARIM_SURUM` değişince hemen)
+  tüm indirilenleri tarar. Sesli derste eksik PDF/eşleme/ayrıntı ya da PDF'siz kayıt varsa aynı seslerle `cdCevrimdisiAyarla` (yalnız eksikler iner),
+  pdf.js yardımcıları, merkez paketlerinde `paketiDenetle` → `paketOnar`. "İndirilenler"de "Eksikleri tamamla" düğmesi; `paketiDenetle` PDF'i de sayar.
+  Sınama: ders indir → PDF'i sil → `eksikleriGider` → 2 dosya geri geldi → internetsiz 206 + 8 sayfa.
+- **Önleme:** çevrimdışı indirmeye yeni bir parça eklenince denetim (`paketiDenetle`) ve `eksikGider` aynı commit'te güncellenir; `ONARIM_SURUM` artırılır.

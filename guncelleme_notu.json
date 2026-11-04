@@ -1,14 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 638,
-  "baslik": "Sesli dersler internetsiz: PDF, slayt ve çizim takibi",
+  "onem": 639,
+  "baslik": "Çevrimdışı: eksikler kendiliğinden tamamlanıyor",
   "maddeler": [
-    "Toplu indirilen sesli derslerde PDF, slayt takibi ve çizimler artık internetsiz de çalışıyor."
+    "Daha önce indirdiğin derslerde eksik kalan PDF ve slayt eşlemeleri, internet varken kendiliğinden indiriliyor.",
+    "Çevrimdışı › İndirilenler: 'Eksikleri tamamla' düğmesi."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "İnternetsiz sesli derste PDF'in görünmemesi (H482)"
+    "Eski indirmelerde PDF'in eksik kalması ve 'Sına'nın bunu görmemesi (H483)"
   ],
   "silinen": [],
   "yenilikler": []

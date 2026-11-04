@@ -1,3 +1,6 @@
+## 2026-11-04 (3) — Çevrimdışı eksik giderici (H483)
+- Yeni `src/services/cevrimdisi/eksikGider.ts` (açılışta + 'Eksikleri tamamla' düğmesi), `paketiDenetle` sesli derste PDF/eşleme sayar. Uçtan uca sınandı; dağıtıldı.
+
 ## 2026-11-04 (2) — İnternetsiz sesli derste PDF/slayt/çizim (H482)
 - `sw.js` `ARAMA_SIRASI`: sesli ders ve eski PDF önbellekleri eklendi (toplu indirmenin pdf.js yardımcıları bulunamıyordu). Uçtan uca internetsiz sınama geçti; dağıtıldı.
 

@@ -698,8 +698,15 @@ export async function paketiDenetle(id: string): Promise<DenetimSonuc> {
       }
       const detay = await mod.cdYerelDetay(key).catch(() => null);
       if (!detay) eksik++;
-      return eksik ? sonuc(false, `${eksik} parça eksik (ses ya da konuşma metni).`, eksik, sesler.length + 1)
-        : sonuc(true, `${sesler.length} ses + konuşma metni cihazda.`, 0, sesler.length + 1);
+      // PDF ve eşlemesi (H483): defterdeki her PDF + deste JSON'u; ayrıntıda PDF varken PDF'siz kayıt da eksiktir
+      const pdfler = kayit.pdfler || [];
+      const pdfEksik = pdfler.filter((u) => !anahtarlar.includes(u)).length
+        + (kayit.deckId && !anahtarlar.some((u) => u.endsWith(`/api/lecture-pdf/deck/${encodeURIComponent(kayit.deckId!)}`)) ? 1 : 0)
+        + (detay?.pdf && !pdfler.length ? 1 : 0);
+      eksik += pdfEksik;
+      const toplam = sesler.length + 1 + Math.max(1, pdfler.length);
+      return eksik ? sonuc(false, `${eksik} parça eksik (${pdfEksik ? 'PDF / slayt eşlemesi' : 'ses ya da konuşma metni'}).`, eksik, toplam)
+        : sonuc(true, `${sesler.length} ses + konuşma metni${pdfler.length ? ' + PDF' : ''} cihazda.`, 0, toplam);
     }
     if (m === 'db') {
       const { offlineDatabaseService } = await import('../offlineDatabaseService');
@@ -789,7 +796,7 @@ export async function cevrimdisiBaslat() {
   await sinir(import('./uyarlayicilar').then((m) => m.uyarlayicilariKur())).catch(() => {});
   guncelle({ hazir: true });
   // Otomatik çevrimdışı sınaması (scripts/cevrimdisi_sinama) motoru arayüzsüz sürer
-  (window as any).__medsorCevrimdisi = { kuyrugaEkle, durumAl, katalogYenile, paketSil, ayarYaz, paketDurumu, cevrimdisiModuAc };
+  (window as any).__medsorCevrimdisi = { eksikleriGider: (z?: boolean) => import('./eksikGider').then((m) => m.eksikleriGider(z)), kuyrugaEkle, durumAl, katalogYenile, paketSil, ayarYaz, paketDurumu, cevrimdisiModuAc };
   void depolamaYenile();
   window.addEventListener('online', () => { void calistir(); void otomatikTur(); });
   (navigator as any).connection?.addEventListener?.('change', () => void calistir());
@@ -806,6 +813,10 @@ export async function cevrimdisiBaslat() {
     await katalogYenile().catch(() => {});
     void calistir();
     void otomatikTur();
+  }
+  // Önceden indirilmiş içerikte eksik kalan PDF / eşleme / dosyaları tamamla (H483)
+  if (Object.keys(S.kayitlar).length || localStorage.getItem('medsoru_canli_ders_cevrimdisi_v1')) {
+    void import('./eksikGider').then((m) => m.eksikleriGider()).catch(() => {});
   }
 }
 

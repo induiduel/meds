@@ -5,7 +5,7 @@
 import { useMemo, useState } from 'react';
 import { AlertTriangle, Check, ChevronDown, ExternalLink, HardDriveDownload, Loader2, RefreshCw, ShieldCheck, VolumeX, Wrench } from 'lucide-react';
 import {
-  kuyrugaEkle, paketDurumu, paketiDenetle, paketOnar, secimAl, secimDegistir, secimliBayt, useCevrimdisi, type DenetimSonuc, type Paket,
+  bildir, kuyrugaEkle, paketDurumu, paketiDenetle, paketOnar, secimAl, secimDegistir, secimliBayt, useCevrimdisi, type DenetimSonuc, type Paket,
 } from '../../services/cevrimdisi/paketMotoru';
 import { boyutYaz, dersBirimleri, UYE_AD, type DersBirimi } from '../../services/cevrimdisi/dersBirimleri';
 import { navigateTo } from '../../router';
@@ -90,6 +90,10 @@ export default function Indirilenler({ gotur }: { gotur: () => void }) {
           </span>
         )}
         {sorunlu.length > 0 && <button type="button" className="cv15-b is-a" onClick={() => void paketOnar(sorunlu.map((x) => x.id))}><Wrench aria-hidden /> <span>Hepsini onar</span></button>}
+        <button type="button" className="cv15-b" disabled={!navigator.onLine} title="İndirdiklerinde eksik kalan PDF, slayt eşlemesi ve dosyaları indirir"
+          onClick={() => void import('../../services/cevrimdisi/eksikGider').then((m) => m.eksikleriGider(true)).then((r) => {
+            if (!r.sesliOnarilan.length && !r.paketOnarilan.length) bildir(r.hata.length ? `Tamamlanamadı: ${r.hata[0]}` : 'Eksik yok: indirdiklerin internetsiz açılır.');
+          })}><Wrench aria-hidden /> <span>Eksikleri tamamla</span></button>
       </div>
 
       {gruplar.map((g) => {
