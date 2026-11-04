@@ -56,6 +56,7 @@ import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
 import { ArkaPlanRow } from './ArkaPlanRow';
+import { ArzuRow } from './ArzuRow';
 import { GorunumEkleri } from './GorunumEkleri';
 import { ProgressResetRow } from './ProgressResetRow';
 import { startWelcomeTour } from '../onboarding/tourState';
@@ -348,6 +349,7 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
           <div className="ui-group">
             <UserDataSyncRow />
             <ArkaPlanRow />
+            <ArzuRow currentUser={currentUser} />
             <Row icon={Database} iconBg="var(--color-clinic)" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
             <NotesSyncRow />
             <ProgressResetRow />

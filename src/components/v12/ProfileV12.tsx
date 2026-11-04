@@ -80,6 +80,7 @@ import { TextSizeSlider } from '../settings/TextSizeSlider';
 import { NotesSyncRow } from '../settings/NotesSyncRow';
 import { UserDataSyncRow } from '../settings/UserDataSyncRow';
 import { ArkaPlanRow } from '../settings/ArkaPlanRow';
+import { ArzuRow } from '../settings/ArzuRow';
 import { GorunumEkleri } from '../settings/GorunumEkleri';
 import { WhatsAppDailyDigestRow } from '../settings/WhatsAppDailyDigestRow';
 import { ProgressResetRow } from '../settings/ProgressResetRow';
@@ -1210,6 +1211,7 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
         <div className="u12-legacy">
           <UserDataSyncRow />
           <ArkaPlanRow />
+          <ArzuRow />
           <WhatsAppDailyDigestRow />
           <NotesSyncRow />
         </div>
