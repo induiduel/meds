@@ -1,32 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 644,
-  "baslik": "Kurul 2: Şizofreni, Genel Anestezikler, Nörolojik Rehabilitasyon + ara resimler",
+  "onem": 645,
+  "baslik": "Yeni Kurul 2 dersleri tamamlandı: sesli ders, çözücü, hoca soruları, quiz",
   "maddeler": [
-    "Üç yeni Kurul 2 dersi eklendi: Şizofreni ve Diğer Psikotik Bozukluklar, Genel Anestezik İlaçların Farmakolojisi, Nörolojik Rehabilitasyona Giriş.",
-    "Her derste En önemliler listesi, örnek sorular ve sesli soru çözücü var; FTR yeni branş olarak geldi.",
-    "Sesli derslerde mekanizmaları anlatan ara resimler gösterilir; metni PDF/Word olarak dışa aktarınca resimler ilgili paragrafın yerine yerleşir."
+    "Şizofreni, Genel Anestezikler ve Nörolojik Rehabilitasyon sesli dersleri EMA sesiyle, kelime takibi, PDF işareti ve çizimlerle hazır.",
+    "Üç dersin En önemliler sesli çözücüsü, hocanın sorabileceği ara sorular, terim ve kısaltma katmanı, ders içerik paketi ve quiz havuzu eklendi."
   ],
   "eklenen": [
-    "Şizofreni, Genel Anestezikler ve Nörolojik Rehabilitasyon dersleri",
-    "Sesli derste mekanizma ara resimleri",
-    "Dışa aktarılan metinde resimler"
+    "3 dersin sesli anlatımı ve çizimleri",
+    "Sesli çözücü (2f01, 2s02, 2t01) ve ara sorular",
+    "Quiz havuzları"
   ],
   "degisen": [],
   "duzeltilen": [],
   "silinen": [],
-  "yenilikler": [
-    {
-      "ad": "Ara resimler",
-      "nerede": {
-        "ad": "Ders çalış › Sesli dersler",
-        "yol": "/dersler/canliders"
-      },
-      "amac": "Mekanizmaları adım adım resimle anlatmak",
-      "islevler": [
-        "Anlatılan paragrafta resim açılır",
-        "Dışa aktarımda resim metnin içinde yer alır"
-      ]
-    }
-  ]
+  "yenilikler": []
 }

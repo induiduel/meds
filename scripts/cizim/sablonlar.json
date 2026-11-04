@@ -576,6 +576,20 @@
       "duzen": "deger",
       "ne_zaman": "Cümle tek bir sayıyı anlatıyor: eşik, kesim noktası, doz, oran, süre (ör. eksüda/transüda protein eşiği). Çıkmış etiketi (cikmis) yalnız doğrulanmış eşlemeyle.",
       "ornek": "3 g/dL · eksüda/transüda protein eşiği"
+    },
+    "sure_tani": {
+      "ad": "Belirti süresi → tanı",
+      "duzen": "tablo",
+      "basliklar": [
+        "Belirti süresi",
+        "Tanı"
+      ],
+      "ne_zaman": "benzer belirtili bozuklukların belirti süresine göre ayrılması (süre eşikleri tanıyı belirler)",
+      "ornek": "1 aydan kısa → kısa psikotik; 1–6 ay → şizofreniform; 6 ay+ → şizofreni",
+      "eklenme": {
+        "kaynak": "k2-15-sizofrenik-bozukluklar",
+        "zaman": "2026-11-05"
+      }
     }
   }
 }

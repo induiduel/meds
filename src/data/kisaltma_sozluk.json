@@ -40,6 +40,14 @@
   "definition": "Antiepileptik ilaç",
   "term": "AEİ"
  },
+ "AFO": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "Ayak bileği-ayak ortezi; ayağı ve ayak bileğini destekleyen yardımcı cihazdır.",
+  "term": "AFO"
+ },
  "AFP": {
   "category": "kisaltma",
   "decks": [
@@ -84,6 +92,14 @@
   ],
   "definition": "Aldehit dehidrogenaz 2 geni",
   "term": "ALDH2"
+ },
+ "ALS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "Amyotrofik lateral skleroz; motor nöronların ilerleyici hastalığıdır ve nörolojik rehabilitasyon gerektiren hastalıklar arasında sayılır.",
+  "term": "ALS"
  },
  "ALT": {
   "category": "kisaltma",
@@ -257,7 +273,8 @@
    "y25-k2-17-periferik-noropati",
    "y25-k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-54-yaygin-anksiyete-bozuklugu",
-   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar"
+   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar",
+   "k2-15-sizofrenik-bozukluklar"
   ],
   "definition": "B12 vitamini",
   "term": "B12"
@@ -308,6 +325,14 @@
   ],
   "definition": "Benign prostat hiperplazisi",
   "term": "BHP"
+ },
+ "BIS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Bispektral indeks",
+  "term": "BIS"
  },
  "BMD": {
   "category": "kisaltma",
@@ -493,7 +518,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
-   "y25-k2-07-genel-anestezik-ilaclar"
+   "y25-k2-07-genel-anestezik-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "Merkezi sinir sistemi",
   "term": "CNS"
@@ -531,10 +557,19 @@
   "definition": "Katekol-O-metiltransferaz",
   "term": "COMT"
  },
+ "COX": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Siklooksijenaz",
+  "term": "COX"
+ },
  "CPM": {
   "category": "kisaltma",
   "decks": [
-   "y25-k2-16-norolojik-rehabilitasyona-giris"
+   "y25-k2-16-norolojik-rehabilitasyona-giris",
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
   ],
   "definition": "Sürekli pasif hareket",
   "term": "CPM"
@@ -570,6 +605,14 @@
   ],
   "definition": "Koryon villus örneklemesi",
   "term": "CVS"
+ },
+ "CYP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Sitokrom P450",
+  "term": "CYP"
  },
  "CYP2C19": {
   "category": "kisaltma",
@@ -610,7 +653,8 @@
  "D2": {
   "category": "kisaltma",
   "decks": [
-   "y25-k2-46-sempatomimetikler"
+   "y25-k2-46-sempatomimetikler",
+   "k2-15-sizofrenik-bozukluklar"
   ],
   "definition": "Dopamin D2 reseptörü",
   "term": "D2"
@@ -631,6 +675,14 @@
   ],
   "definition": "Doublecortin geni",
   "term": "DCX"
+ },
+ "DDB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-15-sizofrenik-bozukluklar"
+  ],
+  "definition": "Duygudurum bozukluğu",
+  "term": "DDB"
  },
  "DEHB": {
   "category": "kisaltma",
@@ -773,7 +825,8 @@
   "category": "kisaltma",
   "decks": [
    "y25-k2-27-periyodik-muayeneler",
-   "y25-k2-45-intihar-ve-kendine-zarar-verme"
+   "y25-k2-45-intihar-ve-kendine-zarar-verme",
+   "k2-15-sizofrenik-bozukluklar"
   ],
   "definition": "Dünya Sağlık Örgütü",
   "term": "DSÖ"
@@ -860,6 +913,22 @@
   "definition": "Elektroensefalografi",
   "term": "EEG"
  },
+ "EGD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Özofagogastroduodenoskopi",
+  "term": "EGD"
+ },
+ "EHA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "Eklem hareket açıklığı",
+  "term": "EHA"
+ },
  "EKG": {
   "category": "kisaltma",
   "decks": [
@@ -879,7 +948,8 @@
    "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-16-norolojik-rehabilitasyona-giris",
-   "y25-k2-32-felcler"
+   "y25-k2-32-felcler",
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
   ],
   "definition": "Elektromiyografi",
   "term": "EMG"
@@ -923,6 +993,18 @@
   ],
   "definition": "Amerikan Gıda ve İlaç Dairesi",
   "term": "FDA"
+ },
+ "FES": {
+  "baska": [
+   "Fonksiyonel elektriksel stimülasyon; inme rehabilitasyonunda kullanılan, kasları elektrikle uyaran yaklaşımdır.",
+   "Fonksiyonel elektriksel stimülasyon; yardımcı cihazlarla birlikte kullanılan elektrikle kas uyarma yöntemidir."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "Fonksiyonel elektriksel stimülasyon; kasları elektrikle uyararak işlevsel hareketi destekleyen yöntemdir.",
+  "term": "FES"
  },
  "FGF": {
   "category": "kisaltma",
@@ -1031,7 +1113,9 @@
    "y25-k2-55-panik-bozukluk",
    "y25-k2-58-alkoller",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
-   "y25-k2-60-miyorelaksan-ilaclar"
+   "y25-k2-60-miyorelaksan-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "k2-15-sizofrenik-bozukluklar"
   ],
   "definition": "Gama aminobütirik asit",
   "term": "GABA"
@@ -1147,6 +1231,14 @@
   ],
   "definition": "Genom çapında ilişkilendirme çalışması",
   "term": "GWAS"
+ },
+ "GYA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "Günlük yaşam aktiviteleri",
+  "term": "GYA"
  },
  "HD": {
   "category": "kisaltma",
@@ -1292,6 +1384,14 @@
   "definition": "Uluslararası Baş Ağrısı Sınıflaması (International Classification of Headache Disorders)",
   "term": "ICHD"
  },
+ "ICP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "İntrakraniyal basınç",
+  "term": "ICP"
+ },
  "IDH": {
   "category": "kisaltma",
   "decks": [
@@ -1299,6 +1399,14 @@
   ],
   "definition": "İzositrat dehidrogenaz",
   "term": "IDH"
+ },
+ "IHH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "İdiyopatik intrakraniyal hipertansiyon",
+  "term": "IHH"
  },
  "IHS": {
   "category": "kisaltma",
@@ -1317,6 +1425,14 @@
   ],
   "definition": "İntramüsküler",
   "term": "IM"
+ },
+ "IMT": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "İş-meşguliyet tedavisi",
+  "term": "IMT"
  },
  "IP3": {
   "category": "kisaltma",
@@ -1354,7 +1470,8 @@
  "KB": {
   "category": "kisaltma",
   "decks": [
-   "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
+   "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-15-sizofrenik-bozukluklar"
   ],
   "definition": "Kan basıncı",
   "term": "KB"
@@ -1656,7 +1773,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
-   "y25-k2-07-genel-anestezik-ilaclar"
+   "y25-k2-07-genel-anestezik-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "Minimum alveolar konsantrasyon",
   "term": "MAK"
@@ -1667,7 +1785,8 @@
    "y25-k2-38-travma-ve-stres-baglantili-bozukluklar",
    "y25-k2-46-sempatomimetikler",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
-   "y25-k2-63-antidepresan-ilaclar"
+   "y25-k2-63-antidepresan-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "Monoamin oksidaz",
   "term": "MAO"
@@ -1712,6 +1831,14 @@
   ],
   "definition": "Mikrozomal etanol oksitleyici sistem",
   "term": "MEOS"
+ },
+ "MEPP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Motor uç plak potansiyeli",
+  "term": "MEPP"
  },
  "MERFF": {
   "category": "kisaltma",
@@ -1860,6 +1987,14 @@
   "definition": "Nöropati, ataksi ve retinitis pigmentoza",
   "term": "NARP"
  },
+ "NEADL": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Ulusal temel anestezi ilaçları listesi (National Essential Anaesthesia Drugs List)",
+  "term": "NEADL"
+ },
  "NF1": {
   "category": "kisaltma",
   "decks": [
@@ -1904,7 +2039,8 @@
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
    "y25-k2-47-adrenoseptor-antagonist-ilaclar",
-   "y25-k2-58-alkoller"
+   "y25-k2-58-alkoller",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "N-metil-D-aspartat",
   "term": "NMDA"
@@ -1934,6 +2070,14 @@
   "definition": "Nonsteroid antiinflamatuvar ilaç",
   "term": "NSAI"
  },
+ "NSAİİ": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Non-steroid antiinflamatuvar ilaç",
+  "term": "NSAİİ"
+ },
  "OKB": {
   "category": "kisaltma",
   "decks": [
@@ -1951,6 +2095,14 @@
   ],
   "definition": "Opioid reseptör benzeri 1 reseptörü",
   "term": "ORL"
+ },
+ "OSA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Obstrüktif uyku apnesi",
+  "term": "OSA"
  },
  "OSB": {
   "category": "kisaltma",
@@ -2101,6 +2253,14 @@
   "definition": "Primer ilerleyici multipl skleroz",
   "term": "PPMS"
  },
+ "PRIS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Propofol infüzyon sendromu",
+  "term": "PRIS"
+ },
  "PRNP": {
   "category": "kisaltma",
   "decks": [
@@ -2125,6 +2285,14 @@
   "definition": "Presenilin 2 geni",
   "term": "PSEN2"
  },
+ "PTC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Tetanik sonrası sayım (post-tetanic count)",
+  "term": "PTC"
+ },
  "PTE": {
   "category": "kisaltma",
   "decks": [
@@ -2139,7 +2307,8 @@
    "k2-07-genel-anestezik-ilaclar",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
-   "y25-k2-47-adrenoseptor-antagonist-ilaclar"
+   "y25-k2-47-adrenoseptor-antagonist-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "QT aralığı",
   "term": "QT"
@@ -2177,6 +2346,14 @@
   ],
   "definition": "Ataklarla seyreden multipl skleroz",
   "term": "RRMS"
+ },
+ "RSI": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Hızlı ardışık indüksiyon (rapid sequence induction)",
+  "term": "RSI"
  },
  "RT": {
   "category": "kisaltma",
@@ -2343,6 +2520,14 @@
   ],
   "definition": "Serotonin taşıyıcı geni",
   "term": "SLC6A4"
+ },
+ "SLE": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-15-sizofrenik-bozukluklar"
+  ],
+  "definition": "Sistemik lupus eritematozus",
+  "term": "SLE"
  },
  "SMN": {
   "category": "kisaltma",
@@ -2544,7 +2729,8 @@
  "TCI": {
   "category": "kisaltma",
   "decks": [
-   "y25-k2-35-kisilik-bozukluklari"
+   "y25-k2-35-kisilik-bozukluklari",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "Mizaç ve karakter envanteri",
   "term": "TCI"
@@ -2573,6 +2759,14 @@
   "definition": "TDP-43 proteini",
   "term": "TDP43"
  },
+ "TENS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "Deri üzerinden sinirleri elektrikle uyaran yöntemdir; spastisitede fiziksel tedavi modaliteleri arasında sayılır.",
+  "term": "TENS"
+ },
  "TF": {
   "category": "kisaltma",
   "decks": [
@@ -2596,6 +2790,14 @@
   ],
   "definition": "Tetrahidrokannabinol",
   "term": "THC"
+ },
+ "TIVA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Total intravenöz anestezi",
+  "term": "TIVA"
  },
  "TMN": {
   "category": "kisaltma",
@@ -2622,6 +2824,14 @@
   "definition": "Tümör nekroz faktörü",
   "term": "TNF"
  },
+ "TOF": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
+  ],
+  "definition": "Dörtlü uyarı (train-of-four)",
+  "term": "TOF"
+ },
  "TPH": {
   "category": "kisaltma",
   "decks": [
@@ -2629,6 +2839,14 @@
   ],
   "definition": "Triptofan hidroksilaz geni",
   "term": "TPH"
+ },
+ "TS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+  ],
+  "definition": "Tekerlekli sandalye",
+  "term": "TS"
  },
  "TSC": {
   "category": "kisaltma",
@@ -2824,7 +3042,8 @@
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
    "y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
    "y25-k2-46-sempatomimetikler",
-   "y25-k2-47-adrenoseptor-antagonist-ilaclar"
+   "y25-k2-47-adrenoseptor-antagonist-ilaclar",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "Siklik adenozin monofosfat",
   "term": "cAMP"
@@ -2850,177 +3069,10 @@
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
    "y25-k2-07-genel-anestezik-ilaclar",
-   "y25-k2-41-otonom-sinir-sistemi-farmakolojisi"
+   "y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
+   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
   ],
   "definition": "İntravenöz",
   "term": "İV"
- },
- "SLE": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-15-sizofrenik-bozukluklar"
-  ],
-  "definition": "Sistemik lupus eritematozus",
-  "term": "SLE"
- },
- "DDB": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-15-sizofrenik-bozukluklar"
-  ],
-  "definition": "Duygudurum bozukluğu",
-  "term": "DDB"
- },
- "BIS": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Bispektral indeks",
-  "term": "BIS"
- },
- "COX": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Siklooksijenaz",
-  "term": "COX"
- },
- "CYP": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Sitokrom P450",
-  "term": "CYP"
- },
- "EGD": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Özofagogastroduodenoskopi",
-  "term": "EGD"
- },
- "ICP": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "İntrakraniyal basınç",
-  "term": "ICP"
- },
- "IHH": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "İdiyopatik intrakraniyal hipertansiyon",
-  "term": "IHH"
- },
- "MEPP": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Motor uç plak potansiyeli",
-  "term": "MEPP"
- },
- "NEADL": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Ulusal temel anestezi ilaçları listesi (National Essential Anaesthesia Drugs List)",
-  "term": "NEADL"
- },
- "NSAİİ": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Non-steroid antiinflamatuvar ilaç",
-  "term": "NSAİİ"
- },
- "OSA": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Obstrüktif uyku apnesi",
-  "term": "OSA"
- },
- "PRIS": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Propofol infüzyon sendromu",
-  "term": "PRIS"
- },
- "PTC": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Tetanik sonrası sayım (post-tetanic count)",
-  "term": "PTC"
- },
- "RSI": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Hızlı ardışık indüksiyon (rapid sequence induction)",
-  "term": "RSI"
- },
- "TIVA": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Total intravenöz anestezi",
-  "term": "TIVA"
- },
- "TOF": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-07-genel-anestezik-ilaclarin-farmakolojisi"
-  ],
-  "definition": "Dörtlü uyarı (train-of-four)",
-  "term": "TOF"
- },
- "GYA": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
-  ],
-  "definition": "Günlük yaşam aktiviteleri",
-  "term": "GYA"
- },
- "EHA": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
-  ],
-  "definition": "Eklem hareket açıklığı",
-  "term": "EHA"
- },
- "IMT": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
-  ],
-  "definition": "İş-meşguliyet tedavisi",
-  "term": "IMT"
- },
- "TS": {
-  "category": "kisaltma",
-  "decks": [
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
-  ],
-  "definition": "Tekerlekli sandalye",
-  "term": "TS"
  }
 }

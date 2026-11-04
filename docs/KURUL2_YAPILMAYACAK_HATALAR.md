@@ -2136,3 +2136,38 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** anlatım düzeltildi + yeniden denetim GEÇER; örnek sorularda 6 ifade düzeltildi; k2-15 önem/çözücü maddesi yeniden yazıldı.
 - **Önleme:** anlatım denetiminin `denetim.json` tıbbi bulguları ve `rapor.md` "slayt çelişkisi" listesi her sonraki katman yazarının istemine
   zorunlu girdi olarak konur; ders başına soru katmanı denetçisi (`GOREV_DENETCI_SORU_K2_B3.md`) bu listeyi tek tek arar.
+
+## H491
+- **Belirti (2026-11-04):** "Hedef tamamlandı" başarım penceresi yatay telefonda / yarım ekranda (yükseklik ≤420) madalyası ekranın üstünden kesik açılıyordu.
+- **Kök neden:** `.bs-k-madalya` kartın üstüne `margin-top:-76px` ile taşıyor; kap (`.bs-k`) kartı dikeyde ortalıyor, üst boşluk 16 px ve kaydırma yok.
+- **Çözüm:** `.bs-k` üst boşluğu madalya payı kadar (84 px + güvenli alan), `overflow-y:auto`, kart `margin-block:auto`; `max-height:480px`'te küçük madalya; perde `fixed`.
+- **Önleme:** negatif kenar boşluğuyla kartın dışına taşan süs, kapta o kadar iç boşluk ister; ortalanan katman her zaman kaydırılabilir olur. Yeni katman 390×420 ve 844×390'da taranır.
+
+## H492
+- **Belirti (2026-11-04):** asistan düğmesi çekmece/diyalog/aramanın üstünde; tostlar KMB/Son Prova tam ekranının altında; kronometre çekmece perdesinin üstünde; klavye açıkken alt sekme çubuğu yazı alanını kapatıyor; mobilde mini oynatıcı sekme çubuğuyla çakışıyor.
+- **Kök neden:** z-index değerleri dosya dosya rastgele seçilmiş (900, 100000, 2147483000); `shell.css` yorumundaki "klavyede sekme çubuğu gizlenir" kuralı hiç yazılmamış; `rebuild.css` tanımsız `--sh-tab-h` değişkenine bağlıydı (doğrusu `--sh-tabs-h`).
+- **Çözüm:** `styles/katman-duzeni.css` (kb-open gizleme, scroll-locked'ta asistan gizli, hover:none'da görünür denetimler); asistan 55, kronometre 64, tost 2147483050/51; çekmece `--vvh/--vvt`'ye uyar; değişken adı düzeltildi.
+- **Önleme:** katman sırası: sabit çubuk 30–40 < yüzen düğme 45–64 < çekmece 70–80 < diyalog 85 < tam ekran 1000–2000 < tost. Yeni yüzen öğe bu aralıktan değer alır ve `html.kb-open` gizleme listesine eklenir.
+
+## H493
+- **Belirti (2026-11-04):** Soru çöz özet kartlarında yatay telefonda ve yarım ekranda açıklama "He…", "Yanlı…", "Kurul …" diye okunmaz kesiliyordu.
+- **Kök neden:** 600 px+ kompakt düzende etiket gizlenip tek açıklama satırı `nowrap + ellipsis` yapıldı; 600–959 px'te sütun ~60 px kalıyordu.
+- **Çözüm:** bu aralıkta süs ikonu gizlenir, açıklama iki satıra sarar (`line-clamp:2`).
+- **Önleme:** tek bilgi taşıyan satır asla tek satır üç noktaya düşürülmez; en dar kapsayıcı genişliğinde ekran görüntüsüyle denetlenir.
+
+## H487 — `kisaltma_sozlugu.py sozluk_disa` elle eklenmiş kısaltmaları siliyor (2026-11-04)
+- **Belirti:** k2-16 kısaltmalarını dışa aktarınca `src/data/kisaltma_sozluk.json` 347 → 317 kayda düştü; ASIC, CGRP, IHH, NEADL, LSD… gibi 30+ kayıt (elle ya da başka oturumca eklenmiş) kayboldu.
+- **Kök neden:** `sozluk_disa` dosyayı yalnız `data/sesli_anlatim/kisaltma/*.json` derslerinden YENİDEN KURUYOR; o katmanda olmayan (elle eklenen, arşiv/y25 dersleri) kayıtları korumuyor.
+- **Çözüm:** dosya geri alındı, yalnız kendi derslerin yeni kısaltmaları ve deste bağları birleştirme ile eklendi (4 yeni, 16 bağ).
+- **Kural:** `sozluk_disa` sonrası daima kayıt sayısını HEAD ile karşılaştır; düşüş varsa yazma, birleştir. (Betik birleştirme kipine geçirilmeli — açık iş.)
+
+## H488 — Slayt fotoğrafı ters yorumlandı: hipotonik bebek "tonus artışı" diye anlatıldı (k2-16 s.9, 2026-11-05)
+- **Belirti:** sesli derste "Slayttaki fotoğraflarda tonus artışının görünümü vardır: bükülü ekstremitelerle yatan bir bebek…" cümlesi; fotoğraf aslında karın üstünden tutulunca sarkan (gevşek) bebek = hipotoni. Hoca kaydı da "tonus azsa hipotonik bebek" diyor.
+- **Kök neden:** A1a sayfa envanterinde `gorsel_aciklama` görüntü tahminle yazıldı ("fleksiyon postüründe bebek, spastik tutum örnekleri"); anlatım yazarı ve çapa bu tanımı slayta yeniden BAKMADAN kullandı; anlatım denetçisi görseli hoca dökümüyle karşılaştırmadı. Yanlışı ancak çizim ajanı fotoğrafa kontur çizerken gördü.
+- **Çözüm:** cümle, ekran, çapa `sekil`, envanter tanımı düzeltildi; kısmi yeniden yayın (değişen paragraf EMA + cümle/kelime zamanı + çapa/çizim).
+- **Kural:** fotoğraf/klinik görünüm anlatan her cümlede yazar ve denetçi sayfa görüntüsüne bakar; görsel yorumu hoca dökümüyle çelişirse hoca + görüntü kazanır, envanter tanımı tek başına dayanak değildir. Denetçi yönergesine "görsel–anlatım yön kontrolü (artış/azalma, sağ/sol, normal/patolojik)" maddesi eklenir.
+
+## H489 — `cizim_uret.py` oturum içinde LLM kilidine takılıyor (INVOCATION_ID, 2026-11-05)
+- **Belirti:** çizim ajanları `cizim_uret.py`'yi çalıştıramadı; kilit "systemd altında panel bayrağı yok" diye reddetti, ajanlar `env -u INVOCATION_ID` + sahte `claude` ile atlattı (LLM çağrısı olmadı).
+- **Kök neden:** masaüstü uygulaması oturumu systemd kullanıcı biriminden başlattığı için `INVOCATION_ID` kalıtılıyor; `llm_kilit.py` bunu zamanlayıcı sanıyor. Ayrıca `cizim_uret.py` yerleşim kipinde de (Claude çağırmayacağı hâlde) kilidi yokluyor.
+- **Kural / açık iş:** yerleşim (LLM'siz) kipinde kilit yoklanmamalı; o zamana dek atlatma yalnız `--kuru`/hazır parti dosyalarıyla ve LLM çağrısı olmadığı doğrulanarak yapılır. Kilidi gevşetmek yasak (kural 20).

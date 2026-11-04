@@ -1,0 +1,226 @@
+{
+ "ders": "k2-07",
+ "key": "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+ "vurgular": [
+  {
+   "id": "hv-k2-07-05",
+   "kategori": "onemli",
+   "ifade": "olması önemli",
+   "alinti": "İdamede derinlik stabil ve sürdürülebilir olmalıdır; doz ne artıp ne azalarak, anestezi belli bir aralıkta tutulmalıdır.",
+   "konu": "İdame: anestezi derinliğini stabil ve sürdürülebilir tutmak",
+   "s": 3,
+   "dk": "6:03",
+   "p": 2,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-07",
+   "kategori": "onemli",
+   "ifade": "önemli",
+   "alinti": "Analjezi döneminde hastanın ağrıyı hissetmemesi ve koruyucu reflekslerin (öksürük, yutma) korunabilmesi önemlidir.",
+   "konu": "Analjezi dönemi: ağrısızlık, korunmuş öksürük ve yutma refleksi",
+   "s": 4,
+   "dk": "7:29",
+   "p": 3,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-09",
+   "kategori": "onemli",
+   "ifade": "muhakkak ... almak zorundayız",
+   "alinti": "Eksitasyon dönemine geçmeden önce anestezist hastadan mutlaka ayrıntılı bir anamnez almalıdır; çünkü anestezide birden çok ilaç (en az 4, çoğunlukla 5-9) birlikte kullanılır.",
+   "konu": "Preoperatif sorgulama ve çoklu ilaç kullanımı",
+   "s": 5,
+   "dk": "8:09",
+   "p": 9,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-19",
+   "kategori": "onemli",
+   "ifade": "çok çok önemli",
+   "alinti": "Hastanın kronik olarak kullandığı ilaçlar çok önemlidir; etkileşim çoğunlukla karaciğer sitokrom enzimleri üzerinden olur.",
+   "konu": "Preoperatif sorgulama: kronik ilaçlar ve sitokrom etkileşimi",
+   "s": 10,
+   "dk": "15:58",
+   "p": 9,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-23",
+   "kategori": "onemli",
+   "ifade": "başlama hızı önemli",
+   "alinti": "IV anestezikte etkinin başlama hızı önemlidir; ilaç ne kadar hızlı başlarsa o kadar etkilidir.",
+   "konu": "IV anestezikte hızlı başlangıç",
+   "s": 14,
+   "dk": "20:00",
+   "p": 13,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-25",
+   "kategori": "onemli",
+   "ifade": "önemli",
+   "alinti": "Yüksek lipit çözünürlüğü önemlidir; propofol gibi çok lipofilik ajanlar saniyeler içinde beyne geçer.",
+   "konu": "Yüksek lipit çözünürlüğü ve hızlı başlangıç",
+   "s": 15,
+   "dk": "22:48",
+   "p": 13,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-27",
+   "kategori": "bilin",
+   "ifade": "Bu bilgi de bilmiş ol",
+   "alinti": "Açılmış propofol flakonu uzun süre bekletilmemelidir (hoca 8 saati söyler); sebep ilacın bozulması değil, enfeksiyon bulaşma riskidir. Bu bilgiyi de bil.",
+   "konu": "Propofol lipid emülsiyonu: açılmış flakonun bekletilmesi",
+   "s": 16,
+   "dk": "25:21",
+   "p": 31,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-33",
+   "kategori": "sorulur",
+   "ifade": "soruyorum",
+   "alinti": "Barbitüratlar GABA-A klorür kanalının açık kalma süresini uzatır, kanalın açılma sıklığını değil; bunu sınavda soruyorum.",
+   "konu": "Barbitürat: klorür kanalının açık kalma süresi",
+   "s": 17,
+   "dk": "29:35",
+   "p": 16,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-35",
+   "kategori": "onemli",
+   "ifade": "muhakkak",
+   "alinti": "Tiyopentalin analjezik etkisi yoktur; muhakkak bir ağrı kesici eklemek gerekir.",
+   "konu": "Tiyopental: analjezi paradoksu, opioid eklenmesi",
+   "s": 18,
+   "dk": "31:00",
+   "p": 17,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-37",
+   "kategori": "bilin",
+   "ifade": "Dikkat et ... bil",
+   "alinti": "Dikkat et: etomidat tek doz sonrası bile kortizol sentezini baskılar (yaklaşık 24 saat), uzun infüzyonda özellikle; bu adrenokortikal baskılamayı bil.",
+   "konu": "Etomidat: adrenokortikal baskılanma",
+   "s": 19,
+   "dk": "32:05",
+   "p": 18,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-43",
+   "kategori": "dikkat",
+   "ifade": "dikkat etmek gerekiyor",
+   "alinti": "İzofluranla koroner çalma: kritik stenozu olan ve hipertansif hastalarda iskemi tetiklenebilir; bu hastalarda dikkat etmek gerekir.",
+   "konu": "İzofluran: koroner çalma fenomeni",
+   "s": 26,
+   "dk": "38:58",
+   "p": 25,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-52",
+   "kategori": "bilin",
+   "ifade": "dikkat etmek lazım ... Bilmelisin",
+   "alinti": "Nöroşirürji hastalarında dikkat etmek lazım; volatil ajanlar serebral vazodilatasyonla serebral kan akımını artırır, bu yüzden kafa içi basıncı artar. Bunu bilmelisin; hiperventilasyonla kompanse edilebilir.",
+   "konu": "Volatil ajanlar: serebral kan akımı ve ICP artışı",
+   "s": 30,
+   "dk": "47:24",
+   "p": 29,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-58",
+   "kategori": "onemli",
+   "ifade": "önemli",
+   "alinti": "Ketaminin kan basıncı ve kalp hızı üzerindeki etkisi önemlidir; hemodinamik yönden kritik bir ilaçtır.",
+   "konu": "Ketamin: hemodinamik etkiler",
+   "s": 35,
+   "dk": "56:11",
+   "p": 34,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-60",
+   "kategori": "bilin",
+   "ifade": "bilginiz olsun",
+   "alinti": "Ketamin kesinlikle kan/kafa içi basıncını artırır, bilginiz olsun; kafa travması ve benzeri durumlarda ketamin kesinlikle kullanılmaz.",
+   "konu": "Ketamin: basınç artışı, kafa travmasında kontrendikasyon",
+   "s": 35,
+   "dk": "56:41",
+   "p": 34,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-61",
+   "kategori": "bilin",
+   "ifade": "Siz bu yazılı olduğu şekilde öğreniniz. Belki bu önemli.",
+   "alinti": "Depolarizan ve non-depolarizan blok kafanızı çok karıştırır; bunları slaytta yazıldığı şekliyle öğrenin, bu önemli olabilir.",
+   "konu": "Depolarizan ve non-depolarizan blok ayrımı",
+   "s": 38,
+   "dk": "58:09",
+   "p": 39,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-63",
+   "kategori": "cikmis",
+   "ifade": "üç dört defa sorulmuşsun",
+   "alinti": "Bu nokta üç dört kez sorulmuş; neden bunu anlamakta zorlanıyorsunuz? (ACh artırılırsa depolarizan blokta ne olur / yarışmalı blokta ne olur)",
+   "konu": "Asetilkolin artışının depolarizan ve yarışmalı blok üzerindeki etkisi",
+   "s": 38,
+   "dk": "60:30",
+   "p": 39,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-64",
+   "kategori": "sorulur",
+   "ifade": "elli kere sorarsın",
+   "alinti": "Bu soruyu elli kere sorarım, bunu söyleyeyim.",
+   "konu": "Asetilkolin artışı / kolinesteraz inhibitörü ile blok ilişkisi",
+   "s": 38,
+   "dk": "60:41",
+   "p": 39,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-70",
+   "kategori": "bilin",
+   "ifade": "bilmemiz olsun",
+   "alinti": "NSAİİ yerine COX-2 seçici ajanlar (etorikoksib, selekoksib) ve düşük doz ketamin kullanılabilir; bunu bilelim. Meloksikam bunlara göre görece daha güvenli.",
+   "konu": "Non-opioid analjezik: COX-2 seçici ajanlar, meloksikam",
+   "s": 44,
+   "dk": "67:12",
+   "p": 43,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-73",
+   "kategori": "dikkat",
+   "ifade": "dikkat",
+   "alinti": "Nalokson kompetitif antagonisttir, tüm opioid reseptörlerine bağlanır; dikkat: etkisi geçince opioid etkisi geri dönebilir (renarkotizasyon).",
+   "konu": "Nalokson: kompetitif antagonizma, renarkotizasyon",
+   "s": 49,
+   "dk": "71:58",
+   "p": 49,
+   "adim": null
+  },
+  {
+   "id": "hv-k2-07-75",
+   "kategori": "onemli",
+   "ifade": "Dikkat, bu çok çok önemli",
+   "alinti": "Dikkat, bu çok çok önemli: uzamış sedasyon ve ilaçların birbirini güçlendirmesi (kürar tipi blokörler, süksinilkolin, volatiller).",
+   "konu": "Uyanmayı geciktiren etkenler: uzamış sedasyon, rezidüel blok",
+   "s": 54,
+   "dk": "74:55",
+   "p": 55,
+   "adim": null
+  }
+ ]
+}
