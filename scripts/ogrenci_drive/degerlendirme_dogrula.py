@@ -28,7 +28,8 @@ DEPO = MEDS.parent / "meds_database_v2" / "ders_bilgi"
 
 def norm(s: str) -> str:
     s = unicodedata.normalize("NFKC", s).replace("İ", "i").replace("I", "ı").lower()
-    s = re.sub(r"[«»“”\"'’→•–—\uf000-\uf8ff\u25aa-\u25ff]", " ", s)  # özel madde imi glifleri (U+F06E…) yok sayılır
+    s = re.sub(r"[«»“”\"'’→•–—\uf000-\uf8ff\u25aa-\u25ff\u2190-\u21ff\u27f0-\u27ff\u2794-\u27bf✓]", " ", s)  # madde imi + ok glifleri (H495) yok sayılır
+    s = re.sub(r"\s*([/(),:])\s*", r"\1", s)  # "Gpi/ SNr" = "Gpi/SNr"
     return re.sub(r"\s+", " ", s).strip()
 
 

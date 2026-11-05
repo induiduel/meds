@@ -122,6 +122,9 @@ def dogrula(d, kaynak_sayfalar=None, kaynak_metin=None):
                         if km and sy not in km:
                             h.append(f"{i}: slayt sayfası {sy} kaynakta yok")
                         for st in sl.get("satir") or []:
+                            if len(_katla(st).strip()) < 3:  # H494: "‖"/boş satır her metinde "geçer", çapasız cümle çapalı görünür
+                                h.append(f"{i}: slayt satırı boş/anlamsız: {st!r} (çapa yoksa slayt: null)")
+                                continue
                             if km and sy in km and _katla(st) not in km[sy]:
                                 h.append(f"{i}: slayt satırı s.{sy} metninde birebir yok: {st[:60]!r}")
     if capa_top and capa_bos / capa_top > CAPA_BOS_TAVAN:

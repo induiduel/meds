@@ -1,0 +1,46 @@
+{
+ "_aciklama": "Doğrulanmış eşleme (H490, kapi.py): anlatımda birebir bulunan ama kapının sözcük/benzerlik ölçütünün kaçırdığı bilgi (tur: anlatim) ya da bu yılın slaytında hiç geçmeyen çıkmış bilgisi (tur: slayt_disi, yok_terimler tüm sayfalarda aranır). Kapı her kaydı yeniden denetler.",
+ "kayitlar": [
+  {
+   "birim": "noro-s08-b07",
+   "tur": "slayt_disi",
+   "bilgi": "Karpal tünel sendromu hangi periferik sinir hasarına örnektir? → Basit mononöropati",
+   "yok_terimler": ["karpal tünel", "basit mononöropati"],
+   "gerekce": "2026-27 slaytının 23 sayfasında karpal tünel ve basit mononöropati geçmez; s.13 yalnız nöronopati, aksonopati, miyelinopati ve mononöropati multipleksi sayar. Slaytta karşılığı olmayan bilgi anlatıma girmez (kural 28)."
+  },
+  {
+   "birim": "noro-s08-b15",
+   "tur": "slayt_disi",
+   "bilgi": "Akut inflamatuvar demiyelinizan polinöropatinin (AIDP / Guillain-Barré sendromu) genellikle öncesinde görülen klinik durum aşağıdakilerden hangisidir? → Campylobacter jejuni enfeksiyonu veya viral üst solunum yolu enfeksiyonu öyküsü",
+   "yok_terimler": ["campylobacter", "jejuni", "üst solunum yolu"],
+   "gerekce": "2026-27 slaytında Campylobacter jejuni ve üst solunum yolu enfeksiyonu öyküsü geçmez; GBS yalnız miyelinopati örneği (s.13) ve VII. sinir listesinde (s.22) adıyla yer alır. Kayıt patoloji kodlu (d3-k5-pat-011), bu dersin slaytına dayanmaz."
+  },
+  {
+   "birim": "noro-s08-b01",
+   "tur": "anlatim",
+   "bilgi": "duyu ağrı-ısı.ileti hızı",
+   "cumle": "Tip C lifleri bir mikrometreden ince, miyelinsizdir ve ağrı ile ısı duyusunu saniyede iki metreden yavaş iletir.",
+   "gerekce": "Tip C lifinin ağrı-ısı duyusunu taşıdığı ve ileti hızı (<2 m/sn) bu cümlede birebir geçer (s.9).",
+   "anahtar": ["ağrı", "ileti"]
+  },
+  {
+   "birim": "noro-s08-b01",
+   "tur": "anlatim",
+   "bilgi": "miyelinli",
+   "cumle": "Tip A lifleri iki ile yirmi mikrometre çapında, miyelinli ve en kalın liflerdir.",
+   "gerekce": "Tip A liflerinin miyelinli olduğu bu cümlede geçer; Tip B'nin ince miyelinli olduğu da aynı paragrafta anlatılır (s.9).",
+   "anahtar": ["miyelinli"]
+  },
+  {
+   "birim": "noro-s08-b01",
+   "tur": "anlatim",
+   "bilgi": "İleti hızı 10-70 m/sn; İleti hızı 7-5 m/sn; duyu ağrı-ısı ileti hızı <2 m/sn",
+   "cumle": [
+    "Tip A liflerinin ileti hızı saniyede on ile yetmiş metredir; yani en hızlı haberciler bunlardır.",
+    "Tip C lifleri bir mikrometreden ince, miyelinsizdir ve ağrı ile ısı duyusunu saniyede iki metreden yavaş iletir."
+   ],
+   "gerekce": "Tip A (10-70 m/sn) ve Tip C (<2 m/sn) hızları birebir anlatılır; slayttaki Tip B değeri (7-5 m/sn) bozuk yazıldığı için anlatımda okunamadığı ve A ile C arasında kaldığı söylenir (s.9).",
+   "anahtar": ["ileti hızı"]
+  }
+ ]
+}

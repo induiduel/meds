@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
+<rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
+<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Korteksten çıkıp geri dönen iki döngü</text>
+<rect x="330" y="80" width="340" height="70" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
+<text x="500.0" y="124.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Korteks</text>
+<rect x="60" y="260" width="280" height="70" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="200.0" y="304.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Bazal ganglion</text>
+<rect x="660" y="260" width="280" height="70" rx="14" fill="#db27771f" stroke="#db2777" stroke-width="4"/>
+<text x="800.0" y="304.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Serebellum</text>
+<rect x="360" y="400" width="280" height="70" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
+<text x="500.0" y="444.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Talamus</text>
+<path d="M 380 150 L 200 255" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<path d="M 200 330 L 380 400" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<path d="M 620 150 L 800 255" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<path d="M 800 330 L 620 400" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<path d="M 500 400 L 500 155" fill="none" stroke="#16a34a" stroke-width="5" marker-end="url(#okY)"/>
+<text x="500" y="290" text-anchor="middle" font-size="20" font-weight="700" fill="#16a34a">kortekse dönüş</text>
+<text x="200" y="380" text-anchor="middle" font-size="22" font-weight="700" fill="#2563eb">döngü a</text>
+<text x="800" y="380" text-anchor="middle" font-size="22" font-weight="700" fill="#db2777">döngü b</text>
+<text x="500" y="530" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">İki döngü paralel ve birbirinden bağımsız çalışır</text>
+<text x="500" y="570" text-anchor="middle" font-size="22" fill="#475569">Hareketi artırır ya da azaltır</text>
+</svg>

@@ -590,6 +590,35 @@
         "kaynak": "k2-15-sizofrenik-bozukluklar",
         "zaman": "2026-11-05"
       }
+    },
+    "refleks_kok_sinir": {
+      "ad": "Refleks → kök ve periferik sinir",
+      "duzen": "tablo",
+      "basliklar": [
+        "Refleks",
+        "Kök",
+        "Periferik sinir"
+      ],
+      "ne_zaman": "bir derin tendon refleksinin hangi spinal kökleri ve hangi periferik siniri sınadığı",
+      "ornek": "Aşil | S1-S2 | siyatik",
+      "eklenme": {
+        "kaynak": "k2-17-periferik-noropati",
+        "zaman": "2026-11-05"
+      }
+    },
+    "etyoloji_ornek": {
+      "ad": "Neden → örnek hastalık",
+      "duzen": "tablo",
+      "basliklar": [
+        "Neden",
+        "Örnek hastalık"
+      ],
+      "ne_zaman": "bir hastalık grubunun nedenlerinden her birine dersteki örnek hastalığın eşlenmesi",
+      "ornek": "Kalıtsal → Huntington koresi",
+      "eklenme": {
+        "kaynak": "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem",
+        "zaman": "2026-11-05"
+      }
     }
   }
 }

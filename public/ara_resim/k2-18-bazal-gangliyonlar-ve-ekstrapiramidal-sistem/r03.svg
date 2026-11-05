@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
+<rect x="0" y="0" width="1000" height="620" fill="#ffffff"/>
+<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Direkt ve indirekt yol: aynı çıkış kapısı</text>
+<rect x="380" y="75" width="240" height="64" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
+<text x="500.0" y="116.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Korteks</text>
+<rect x="380" y="190" width="240" height="64" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="500.0" y="231.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Striatum</text>
+<text x="500" y="280" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">giriş</text>
+<rect x="60" y="330" width="200" height="64" rx="14" fill="#7c3aed1f" stroke="#7c3aed" stroke-width="4"/>
+<text x="160.0" y="371.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">GPe</text>
+<rect x="60" y="450" width="200" height="64" rx="14" fill="#7c3aed1f" stroke="#7c3aed" stroke-width="4"/>
+<text x="160.0" y="491.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">STN</text>
+<rect x="380" y="450" width="240" height="64" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
+<text x="500.0" y="491.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">GPi / SNr</text>
+<text x="500" y="540" text-anchor="middle" font-size="20" font-weight="700" fill="#dc2626">çıkış kapısı</text>
+<rect x="740" y="450" width="220" height="64" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
+<text x="850.0" y="491.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Talamus</text>
+<line x1="500" y1="139" x2="500" y2="186" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<line x1="500" y1="254" x2="500" y2="446" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<text x="530" y="380" text-anchor="start" font-size="24" font-weight="700" fill="#0f172a">direkt</text>
+<path d="M 380 222 L 160 222 L 160 326" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<text x="250" y="210" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">indirekt</text>
+<line x1="160" y1="394" x2="160" y2="446" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<line x1="260" y1="482" x2="376" y2="482" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<line x1="620" y1="482" x2="736" y2="482" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<path d="M 850 450 L 850 107 L 624 107" fill="none" stroke="#16a34a" stroke-width="5" marker-end="url(#okY)"/>
+<text x="870" y="300" text-anchor="start" font-size="20" font-weight="700" fill="#16a34a">kortekse</text>
+</svg>

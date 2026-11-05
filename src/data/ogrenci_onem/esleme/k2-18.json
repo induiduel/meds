@@ -1,0 +1,101 @@
+{
+ "_aciklama": "Doğrulanmış eşleme (H490, kapi.py): anlatımda birebir bulunan ama kapının sözcük/benzerlik ölçütünün kaçırdığı bilgi (tur: anlatim) ya da bu yılın slaytında hiç geçmeyen çıkmış/not bilgisi (tur: slayt_disi, terimlerin yokluğu tüm sayfalarda denetlenir). Kapı her kaydı yeniden denetler.",
+ "kayitlar": [
+  {
+   "birim": "noro-s13-b09",
+   "tur": "anlatim",
+   "bilgi": "Kore: = amaçsız, düzensiz, ani hareket. elde daha sık. günlük akt.leri engeller. Sydenham → akut eklem romatizmasının majör belirtisi. Huntington → OD.",
+   "cumle": [
+    "Kore, amaçsız, düzensiz, ani ve hızlı hareketlerdir.",
+    "Kore ellerde ayaklara göre daha sık görülür; bazen dil, dudak, yüz ve omuz hareketi şeklindedir.",
+    "Sydenham koresi akut eklem romatizmasının majör belirtisidir ve kızlarda ve çocuk yaş grubunda sıktır.",
+    "Huntington koresi otozomal dominant geçişli bir hastalıktır ve yirmi ile elli yaş arasında başlar."
+   ],
+   "gerekce": "Notun dört parçası (tanım, elde sık, Sydenham = akut eklem romatizmasının majör belirtisi, Huntington otozomal dominant) s.15 anlatımında ayrı cümlelerde birebir geçer; günlük aktiviteyi engelleme de ağır form cümlesindedir.",
+   "anahtar": [
+    "amaçsız",
+    "sydenham",
+    "akut eklem romatizmasının majör belirtisi"
+   ]
+  },
+  {
+   "birim": "noro-s13-b09",
+   "tur": "anlatim",
+   "bilgi": "Atetoz: = eldeki birbirini takip eden kıvrılma hareketi. dansöz kol ve el hareketlerine benzer. kernikterus, doğustan beyin hasarlı çocukta, dejeneratif bazal ggl.",
+   "cumle": [
+    "Atetoz, ellerde ortaya çıkan ve birbirini takip eden kıvrılma hareketidir.",
+    "Atetoz dansöz kol ve el hareketlerine benzer; el ve parmaklar dalga gibi kıvrılarak bir şekilden ötekine geçer.",
+    "Atetoz kernikterusta, doğuştan beyin hasarlı çocuklarda ve dejeneratif bazal ganglion hastalıklarında görülür."
+   ],
+   "gerekce": "Atetoz tanımı, dansöz benzetmesi ve üç nedeni (kernikterus, doğuştan beyin hasarı, dejeneratif bazal ganglion hastalığı) s.16 anlatımında birebir geçer.",
+   "anahtar": [
+    "kıvrılma hareket",
+    "dansöz",
+    "kernikterus"
+   ]
+  },
+  {
+   "birim": "noro-s13-b09",
+   "tur": "anlatim",
+   "bilgi": "Hemiballismus (daire içinde, sol kenar): çıkmış",
+   "cumle": [
+    "Çıkmış: tanım verilir → hemiballismus",
+    "soru kökü hemiballismusun bu tanımını verdi ve hangi hareket bozukluğu olduğunu sordu."
+   ],
+   "gerekce": "Öğrencinin hemiballismusa düştüğü 'çıkmış' notu anlatımda doğrulanmış çıkmış cümlesiyle verilir (d3k2-2020-2021-q67, seviye doğrudan, s.17).",
+   "anahtar": [
+    "hemiballismus",
+    "çıkmış"
+   ]
+  },
+  {
+   "birim": "noro-s13-b09",
+   "tur": "slayt_disi",
+   "bilgi": "Tremor / klinik altı: Parkinson tremoru genellikle başı tutmaz (baş tremoru esansiyel tremorda tipiktir); dudak, çene, dilde olabilir ★ tremor olabilir.",
+   "yok_terimler": [
+    "başı tutmaz",
+    "baş tremoru"
+   ],
+   "gerekce": "Notun ayırt edici bilgisi (Parkinson tremoru başı tutmaz, baş tremoru esansiyel tremorda tipik) 2026-27 slaytında yok; kural 28 gereği anlatıma girmez. Slayttaki kısmı (dudak, çene, dilde de olabilir) s.14 anlatımında geçer."
+  },
+  {
+   "birim": "noro-s13-b09",
+   "tur": "slayt_disi",
+   "bilgi": "Parkinson hastalığında görülen istirahat (statik) tremoru ile ilgili aşağıdakilerden hangisi doğrudur? → İstirahat hâlinde en belirgindir; amaçlı istemli hareketle veya uykuda kaybolur",
+   "yok_terimler": [
+    "uykuda",
+    "amaçlı istemli"
+   ],
+   "gerekce": "Çıkmışın doğru şıkkındaki 'amaçlı istemli hareketle veya uykuda kaybolur' bilgisi 2026-27 slaytında yok (s.14 yalnız statik tremorun adını, frekansını ve görünümünü verir); kural 28 gereği anlatıma girmez. İstirahat tremoru tanımı ve bu tremorun Parkinson tremoru olduğu anlatımda vardır."
+  },
+  {
+   "birim": "noro-s13-b07",
+   "tur": "anlatim",
+   "bilgi": "Oculomotor; Asosiyatif; Limbik devreler de var",
+   "cumle": [
+    "Bazal gangliyonlarda yalnız hareketi yöneten iskeletomotor devre yoktur; slaytta üç devre daha sayılır.",
+    "Okülomotor devre göz hareketlerinin kontrolünde görevlidir.",
+    "Asosiyatif devre, korteksin birleştirici, yani asosiyatif işlerinin modülasyonunu yapar.",
+    "Limbik devre ise duygularla ilgili limbik sistemin modülasyonunu yapar."
+   ],
+   "gerekce": "Üç ek devre (okülomotor, asosiyatif, limbik) ve görevleri s.9 anlatımında ayrı cümlelerle birebir geçer.",
+   "anahtar": [
+    "asosiyatif",
+    "limbik"
+   ]
+  },
+  {
+   "birim": "noro-s13-b07",
+   "tur": "anlatim",
+   "bilgi": "Limbik devreler de var: → beyin geliştikçe korteks kullanımı limbik sistem ön plana çıkar.",
+   "cumle": [
+    "Limbik devre ise duygularla ilgili limbik sistemin modülasyonunu yapar.",
+    "Hoca, nörologların daha çok motor devreyle ilgilendiğini, ama bu yapılar hastalanınca yalnız hareketin değil limbik sistemin de etkilenebildiğini anlattı."
+   ],
+   "gerekce": "Limbik devrenin varlığı ve limbik sistemin etkilenmesi s.9 anlatımında geçer; notun 'beyin geliştikçe korteks kullanımı' ek yorumu slaytta ve hoca dökümünde dayanaksız olduğu için anlatıma eklenmedi.",
+   "anahtar": [
+    "limbik"
+   ]
+  }
+ ]
+}

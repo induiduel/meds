@@ -69,6 +69,7 @@
  "AIDP": {
   "category": "kisaltma",
   "decks": [
+   "k2-17-periferik-noropati",
    "y25-k2-17-periferik-noropati"
   ],
   "definition": "Akut inflamatuar demiyelinizan polinöropati",
@@ -293,6 +294,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-15-sizofrenik-bozukluklar",
+   "k2-17-periferik-noropati",
    "y25-k2-15-sizofrenik-bozukluklar",
    "y25-k2-17-periferik-noropati",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -341,6 +343,17 @@
   ],
   "definition": "Becker müsküler distrofisi",
   "term": "BECKER"
+ },
+ "BG": {
+  "baska": [
+   "Bazal ganglion; yapıları arasında direkt ve indirekt yol devreleri kurulur."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem"
+  ],
+  "definition": "Bazal ganglion; beynin derininde hareketi ayarlayan çekirdek grubudur.",
+  "term": "BG"
  },
  "BHP": {
   "category": "kisaltma",
@@ -530,6 +543,14 @@
   ],
   "definition": "Nikotinik asetilkolin reseptörü alfa 4 alt birimi geni",
   "term": "CHRNA4"
+ },
+ "CIDP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-17-periferik-noropati"
+  ],
+  "definition": "Chronic inflammatory demyelinating polyneuropathy (Türkçesi KIDP)",
+  "term": "CIDP"
  },
  "CJD": {
   "category": "kisaltma",
@@ -724,8 +745,12 @@
   "term": "CYP3A4"
  },
  "D1": {
+  "baska": [
+   "Dopamin D1 reseptörü; bazal gangliyonlarda dopamin bu reseptörde uyarıcı etki yapar."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem",
    "y25-k2-46-sempatomimetikler"
   ],
   "definition": "Dopamin D1 reseptörü",
@@ -733,11 +758,13 @@
  },
  "D2": {
   "baska": [
-   "Dopamin reseptörünün ikinci tipidir; şizofreni tedavisinde kullanılan ilaçlar bu reseptörü bloke eder."
+   "Dopamin reseptörünün ikinci tipidir; şizofreni tedavisinde kullanılan ilaçlar bu reseptörü bloke eder.",
+   "Dopamin D2 reseptörü; bazal gangliyonlarda dopamin bu reseptörde bastırıcı etki yapar."
   ],
   "category": "kisaltma",
   "decks": [
    "k2-15-sizofrenik-bozukluklar",
+   "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem",
    "y25-k2-46-sempatomimetikler"
   ],
   "definition": "Dopamin D2 reseptörü",
@@ -943,6 +970,7 @@
  "DTR": {
   "category": "kisaltma",
   "decks": [
+   "k2-17-periferik-noropati",
    "y25-k2-17-periferik-noropati",
    "y25-k2-22-psikosomatik-bozukluklar",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -1423,6 +1451,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "k2-17-periferik-noropati",
    "y25-k2-17-periferik-noropati",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -1702,6 +1731,7 @@
  "KIDP": {
   "category": "kisaltma",
   "decks": [
+   "k2-17-periferik-noropati",
    "y25-k2-17-periferik-noropati"
   ],
   "definition": "Kronik inflamatuar demiyelinizan polinöropati",
@@ -2115,8 +2145,12 @@
   "term": "MR"
  },
  "MRC": {
+  "baska": [
+   "Medical Research Council"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-17-periferik-noropati",
    "y25-k2-17-periferik-noropati"
   ],
   "definition": "Medical Research Council kas gücü ölçeği",
@@ -2757,7 +2791,8 @@
  "SCM": {
   "category": "kisaltma",
   "decks": [
-   "k2-05-norolojik-muayene"
+   "k2-05-norolojik-muayene",
+   "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem"
   ],
   "definition": "Sternokleidomastoid kas",
   "term": "SCM"
@@ -2959,6 +2994,14 @@
   ],
   "definition": "Santral sinir sistemi",
   "term": "SSS"
+ },
+ "STN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem"
+  ],
+  "definition": "Subtalamik nükleus, öbür adıyla korpus Luysii; indirekt yolda GPe ile çıkış kapısı arasındaki ara duraktır.",
+  "term": "STN"
  },
  "STRP": {
   "category": "kisaltma",

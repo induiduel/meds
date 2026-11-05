@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
+<rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
+<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Ölçekleme ve odaklama</text>
+<rect x="60" y="90" width="260" height="70" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
+<text x="190.0" y="133.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Motor korteks</text>
+<rect x="680" y="90" width="260" height="70" rx="14" fill="#0891b21f" stroke="#0891b2" stroke-width="4"/>
+<text x="810.0" y="133.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Medulla spinalis</text>
+<line x1="320" y1="125" x2="676" y2="125" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="60" y="300" width="260" height="70" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
+<text x="190.0" y="343.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Parietal korteks</text>
+<rect x="370" y="260" width="260" height="110" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="500.0" y="311.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Bazal ganglion</text>
+<text x="500.0" y="339.0" text-anchor="middle" font-size="20" fill="#475569">kıyaslar</text>
+<path d="M 500 125 L 500 256" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<text x="488" y="200" text-anchor="end" font-size="20" font-weight="700" fill="#475569">kopya</text>
+<line x1="320" y1="335" x2="366" y2="335" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<text x="190" y="400" text-anchor="middle" font-size="20" font-weight="700" fill="#475569">derin duyu</text>
+<rect x="680" y="280" width="260" height="70" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
+<text x="810.0" y="323.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Talamus</text>
+<line x1="630" y1="315" x2="676" y2="315" stroke="#16a34a" stroke-width="4" marker-end="url(#okY)"/>
+<path d="M 810 280 L 810 230 L 240 230 L 240 164" fill="none" stroke="#16a34a" stroke-width="4" marker-end="url(#okY)"/>
+<text x="700" y="222" text-anchor="middle" font-size="20" font-weight="700" fill="#16a34a">düzeltme</text>
+<text x="500" y="440" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Odaklama</text>
+<rect x="60" y="460" width="420" height="100" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
+<text x="270.0" y="506.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Direkt yol</text>
+<text x="270.0" y="534.0" text-anchor="middle" font-size="20" fill="#475569">istenen bileşen güçlenir</text>
+<rect x="520" y="460" width="420" height="100" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
+<text x="730.0" y="506.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">İndirekt yol</text>
+<text x="730.0" y="534.0" text-anchor="middle" font-size="20" fill="#475569">istenmeyen bileşen bastırılır</text>
+</svg>

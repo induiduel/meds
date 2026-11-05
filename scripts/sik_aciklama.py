@@ -11,7 +11,8 @@ kelime = lambda s: len(re.findall(r'\w+', s))
 # tek başına öğretmeyen kalıplar (şıkkın kimliği/işlevi verilmeden kullanılamaz)
 BOS_KALIP = re.compile(
     r"(bu )?sorunun (cevab[ıi]|yan[ıi]t[ıi]) değil|\bcevap değil|olarak geçmez|arasında (yer almaz|geçmez|sayılmaz)"
-    r"|ile ilişkilendirilmez|bu soruyla ilgisi yok", re.I)
+    r"|ile ilişkilendirilmez|bu soruyla ilgisi yok"
+    r"|soruda aranan (yan[ıi]t|cevap)|aranan yan[ıi]t (ise|değil|bu)|listesinde yer almaz", re.I)  # H496: kelime dolduran kalıp ek
 OLUMSUZ = re.compile(r"\b(değil\w*|yapmaz|geçmez|almaz|yoktur|olmaz|etmez|sağlamaz|toplamaz|görülmez|bulunmaz|sayılmaz)\b", re.I)
 
 

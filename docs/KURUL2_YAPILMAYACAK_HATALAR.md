@@ -2206,3 +2206,23 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** k2-07/k2-15 vurgularında hocanın söylemediği ayrıntılar ("yüzde 2-3", "kaçıngan", "renarkotizasyon") hoca alıntısı gibi duruyordu.
 - **Kök neden:** ilk döküm göreli yol hatasıyla GPU'da koşmadı; düşük kaliteli dökümün boşlukları yazar tarafından slayt bilgisiyle dolduruldu.
 - **Çözüm/önleme:** döküm `hoca_dokum_gpu.sh` (realpath) ile yeniden yapıldı, 54 alıntı ±60 sn pencerede dökümle karşılaştırıldı, 4'ü düzeltildi. Kural: `alinti` yalnız dökümde geçen sözdür; slayt bilgisi `konu`'ya yazılır, alıntıya karıştırılmaz.
+
+### H493 — Saat kilidi kalktı, hoca dökümü sessizce CPU'da yapıldı (2026-11-05)
+- **Belirti:** k2-17/k2-18 hoca dökümü CPU'da; ~35 "İzlediğiniz için teşekkür ederim" türü uydurma cümle, resim anlatılan aralıklar boş.
+- **Kök neden:** `nvidia-clock-lock` (300–1500) etkin görünürken `nvidia-clocks` servisi tavanı 3000'e açmış; `hoca_dokum.py` saati >2500 ölçünce kural gereği CPU'ya döndü, hazırlık bunu "OK" saydı.
+- **Çözüm/önleme:** `hoca_dokum_gpu.sh` başlamadan kilit servisini yeniden uygular. Döküm başlığında `cihaz: cpu` ise A1b'ye geçilmez; döküm GPU'da yeniden alınır (vurgu/alıntı CPU dökümünden kurulmaz).
+
+### H494 — Boş çapa satırı ("‖") çapasız cümleyi çapalı gösterdi (2026-11-05)
+- **Belirti:** k2-06 (6), k2-09 (6), k2-16 (11) cümlede PDF işareti boş satıra gidiyordu.
+- **Kök neden:** v2 üreteci (`_uret.py`, dersten derse kopyalandı) çapasız cümleye `satir: ["‖"]` yazdı; `konusma_v2.dogrula` katlanmış boş dize her metinde "geçtiği" için yakalamadı.
+- **Çözüm/önleme:** `konusma_v2.dogrula` 3 harften kısa çapa satırını HATA sayar; yayındaki 23 kayıt `slayt: null` yapıldı. Çapasız cümle her zaman `slayt: null` yazılır.
+
+### H495 — Ok glifi (↓ ⟸ ←) ve "Gpi/ SNr" boşluğu kanıt eşleşmesini bozdu (2026-11-05)
+- **Belirti:** k2-18 şema slaytlarında (s8) doğru alıntılar "kanıt s8'de yok" HATA'sı verdi.
+- **Kök neden:** `degerlendirme_dogrula.norm` yalnız → okunu siliyordu; pymupdf metni ↓/⟸/← ve "/ " boşluğu taşıyor.
+- **Çözüm/önleme:** doğrulayıcı ve `kanit_onar.py` aynı norm: tüm ok blokları (U+2190–21FF, U+27F0–27FF, U+2794–27BF) ve noktalama çevresi boşluk yok sayılır. Kanıt düzeltilince `cikmis_konum_yaz.py` yeniden çalıştırılır (konum dosyası eski kanıtı tutar).
+
+### H496 — Kısa şık açıklaması betikle kalıp ekle uzatıldı (2026-11-05)
+- **Belirti:** k2-17 örnek sorularda 93, çözücüde 36 şıkta "; soruda aranan yanıt ise X (s. N)" eki; seste her yanlış şıkta aynı cümle.
+- **Kök neden:** yazar 20 kelime alt sınırını geçmek için açıklamaları betikle doldurdu (k2-16'dan kopyalanan yol); `sik_aciklama.py` bu kalıbı tanımıyordu.
+- **Çözüm/önleme:** kalıp `BOS_KALIP`'a eklendi (HATA); sayısal alt sınır ancak şıkka özgü bilgiyle aşılır, betikle ek yazılmaz. k2-16 dahil yayındakiler taranır.

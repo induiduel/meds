@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Bazal ganglion nörotransmiterleri ne yapar?</text>
+<rect x="120" y="90" width="300" height="66" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="270.0" y="132.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">GABA</text>
+<line x1="430" y1="123" x2="560" y2="123" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="570" y="90" width="330" height="66" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
+<text x="735.0" y="132.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">baskılar</text>
+<rect x="120" y="178" width="300" height="66" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="270.0" y="220.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Glutamat</text>
+<line x1="430" y1="211" x2="560" y2="211" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="570" y="178" width="330" height="66" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
+<text x="735.0" y="220.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">uyarır</text>
+<rect x="120" y="266" width="300" height="66" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="270.0" y="308.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Dopamin D1</text>
+<line x1="430" y1="299" x2="560" y2="299" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="570" y="266" width="330" height="66" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
+<text x="735.0" y="308.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">uyarır</text>
+<rect x="120" y="354" width="300" height="66" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="270.0" y="396.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Dopamin D2</text>
+<line x1="430" y1="387" x2="560" y2="387" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="570" y="354" width="330" height="66" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
+<text x="735.0" y="396.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">baskılar</text>
+<rect x="120" y="442" width="300" height="66" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
+<text x="270.0" y="484.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Asetilkolin</text>
+<line x1="430" y1="475" x2="560" y2="475" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
+<rect x="570" y="442" width="330" height="66" rx="14" fill="#7c3aed1f" stroke="#7c3aed" stroke-width="4"/>
+<text x="735.0" y="484.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">düzenler (modülatör)</text>
+</svg>

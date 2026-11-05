@@ -1,0 +1,126 @@
+{
+ "key": "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Korteksten çıkıp geri dönen iki döngü",
+   "aciklama": "Bazal ganglion döngüsü ve serebellum döngüsü talamus üzerinden kortekse döner; ikisi paralel ve bağımsız çalışır.",
+   "adimlar": [
+    "1. Döngü a: korteks, bazal ganglion, talamus, korteks.",
+    "2. Döngü b: korteks, serebellum, talamus, korteks.",
+    "3. Dönüş talamustan kortekse olur; döngüler hareketi artırır ya da azaltır."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 1,
+   "bitis": 1,
+   "kaynak": [
+    2,
+    3
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Bazal ganglion nörotransmiterlerinin etkisi",
+   "aciklama": "GABA baskılar, glutamat uyarır; dopamin D1 reseptöründe uyarır, D2 reseptöründe baskılar; asetilkolin modülatördür.",
+   "adimlar": [
+    "GABA: baskılayıcı.",
+    "Glutamat: uyarıcı.",
+    "Dopamin: D1 uyarıcı, D2 bastırıcı.",
+    "Asetilkolin: modülatör, ne uyarır ne baskılar."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 7,
+   "bitis": 7,
+   "kaynak": [
+    7
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Direkt ve indirekt yol aynı çıkış kapısında buluşur",
+   "aciklama": "Direkt yol striatumdan doğrudan GPi ve SNr'ye, indirekt yol GPe ve STN üzerinden aynı çıkışa gider; çıkış talamusa, talamus kortekse bağlanır.",
+   "adimlar": [
+    "1. Giriş: korteksten striatuma.",
+    "2. Direkt: striatumdan GPi ve SNr'ye.",
+    "3. İndirekt: putamenden GPe ve STN üzerinden GPi ve SNr'ye.",
+    "4. Çıkış: GPi ve SNr'den talamusa, oradan kortekse."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 10,
+   "bitis": 10,
+   "kaynak": [
+    8
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Baskının baskılanması: iki yolun zıt etkisi",
+   "aciklama": "Direkt yolda çıkış kapısının talamus üzerindeki baskısı azalır ve hareket kolaylaşır; indirekt yolda STN serbest kalır ve talamus daha çok baskılanır.",
+   "adimlar": [
+    "1. Direkt: striatum çıkış kapısını baskılar.",
+    "2. Talamus serbest kalır, korteksi uyarır.",
+    "3. İndirekt: putamen GPe'yi baskılar, STN serbest kalır.",
+    "4. STN çıkış kapısını uyarır, talamus daha çok baskılanır, hareket azalır."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 11,
+   "bitis": 11,
+   "kaynak": [
+    7,
+    8,
+    11
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Ölçekleme ve odaklama",
+   "aciklama": "Bazal ganglion hareket komutunun kopyasını derin duyu bilgisiyle kıyaslar ve düzeltmeyi talamus üzerinden kortekse bildirir.",
+   "adimlar": [
+    "1. Korteks medulla spinalise komut gönderir; kopyası bazal gangliona gelir.",
+    "2. Parietal korteksten derin duyu bilgisi gelir.",
+    "3. Bazal ganglion ikisini kıyaslar, düzeltmeyi talamus üzerinden kortekse yollar.",
+    "4. Odaklama: istenen bileşen direkt yolla güçlenir, istenmeyen indirekt yolla bastırılır."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 14,
+   "bitis": 15,
+   "kaynak": [
+    11
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Kore ile atetoz nasıl ayrılır?",
+   "aciklama": "Kore ani, hızlı ve düzensizdir; atetoz yavaş bir kıvrılma hareketidir; ikisi birleşince koreatetoz adını alır.",
+   "adimlar": [
+    "Kore: amaçsız, düzensiz, ani ve hızlı.",
+    "Atetoz: ellerde birbirini izleyen kıvrılma, dansöz el hareketine benzer.",
+    "Koreatetoz: iki hareket birleşir, ayırmak zorlaşır."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 22,
+   "bitis": 22,
+   "kaynak": [
+    15,
+    16
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "İlaca bağlı dört hareket bozukluğu",
+   "aciklama": "Akut distoni tek dozla hemen, tardif diskinezi uzun süreli nöroleptikle geç ortaya çıkar; ilaca bağlı Parkinson ve L-dopa diskinezisi de bu gruptadır.",
+   "adimlar": [
+    "Akut distoni: tek doz yeterli.",
+    "İlaca bağlı Parkinson: lityum ve tipik antipsikotikler.",
+    "Tardif diskinezi: uzun süreli nöroleptik, genellikle kalıcı.",
+    "L-dopa diskinezisi: L-dopa tedavisinde görülür."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 26,
+   "bitis": 29,
+   "kaynak": [
+    19
+   ]
+  }
+ ]
+}
