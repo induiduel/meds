@@ -83,6 +83,11 @@ def _parca(d: str):
 
 def yol(d: str):
     """SVG yolu → Lottie 'sh' (tek alt yol)."""
+    # Birden çok alt yol (M…M): her biri ayrı 'sh' (liste döner, G düzleştirir). Eskiden tek şekle birleşip
+    # alt yolları çizgiyle bağlıyordu (çarpı "Z" görünüyordu; 2026-11-05).
+    alt = [m.group(0) for m in re.finditer(r'[Mm][^Mm]*', d.strip())]
+    if len(alt) > 1 and not d.strip()[0] == 'm':
+        return [yol(a) for a in alt]
     v, ii, oo, kapali = [], [], [], False
     for s in _parca(d):
         if s[0] == 'M':
@@ -183,6 +188,7 @@ def tm(e, s=None):
 def G(*it, p=(0, 0), a=(0, 0), s=(100, 100), r=0, o=100):
     """Şekil grubu. Lottie'de grupta önce gelen öge üstte çizilir; burada yazım sırası alttan üste olsun diye iç gruplar
     ve ardışık şekil/boya blokları ters sıralanır (bloğun kendi içi — şekil, dolgu, çizgi, kırpma — korunur)."""
+    it = [y for x in it for y in (x if isinstance(x, list) else [x])]  # yol() çoklu alt yolu liste verir
     bloklar, cari = [], []
     for x in it:
         if x.get('ty') == 'gr':

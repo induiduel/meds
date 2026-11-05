@@ -9,7 +9,7 @@
   ],
   "degerlendirme": "Uygulama yüz yüze yaptırılarak ya da video kaydından puanlanır; finalde yaptırılan iki uygulamanın ortalaması final notudur.",
   "beceriler": [
-    { "kod": "01", "slug": "nazogastrik-sonda", "ad": "Nazogastrik sonda takma", "belgeKodu": "TIS301.43.1", "hocalar": ["Dr. Büşra Bildik", "Dr. Şengül Metin Tarhan"], "durum": "kaynak-bekleniyor" },
+    { "kod": "01", "slug": "nazogastrik-sonda", "ad": "Nazogastrik sonda takma", "belgeKodu": "TIS301.43.1", "hocalar": ["Dr. Büşra Bildik", "Dr. Şengül Metin Tarhan"], "durum": "hazir" },
     { "kod": "02", "slug": "uretral-kateter", "ad": "Üretral kateter takma", "belgeKodu": "TIS301.43.2", "hocalar": ["Dr. Özer Baran", "Dr. Salih Bürlükara"], "durum": "hazir" },
     { "kod": "03", "slug": "atel", "ad": "Atel uygulama", "belgeKodu": "TIS301.43.3", "hocalar": ["Dr. Selçuk Korkmazer", "Dr. Yılmaz Ergişi"], "durum": "kaynak-bekleniyor" },
     { "kod": "04", "slug": "burun-kanamasi", "ad": "Burun kanaması yönetimi", "belgeKodu": "TIS301.43.4", "hocalar": [], "durum": "kaynak-bekleniyor" },

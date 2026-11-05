@@ -12,6 +12,9 @@ export { u, Ortak, Boru };
 import { SAHNELER_2B_A, MALZEMELER } from './sahneler_2b_a';
 import { SAHNELER_2B_B } from './sahneler_2b_b';
 import { SAHNELER_2B_C } from './sahneler_2b_c';
+import { SAHNELER_NG_A } from './sahneler_ng_a';
+import { SAHNELER_NG_B } from './sahneler_ng_b';
+import { SAHNELER_NG_C } from './sahneler_ng_c';
 
 /** Erkek (sırtüstü, yandan; baş solda, ön yüz yukarıda, ayaklar sağda → inferior = sağ, anterior = yukarı).
  *  Üretra: mesane boynu → prostatik (aşağı-sağ) → membranöz → bulbar (perinede, simfizin arka-altında öne kıvrılır) → penil (dik tutulan peniste yukarı) → meatus. */
@@ -153,7 +156,7 @@ const Erkek: Sahne = {
 };
 
 /** Tüm sahneler 2B düz çizgi film stilinde (eski gerçekçi çizimler 2026-11-01'de kaldırıldı; git geçmişinde). */
-export const SAHNELER: Record<string, Sahne> = { erkek: Erkek, ...SAHNELER_2B_A, ...SAHNELER_2B_B, ...SAHNELER_2B_C };
+export const SAHNELER: Record<string, Sahne> = { erkek: Erkek, ...SAHNELER_2B_A, ...SAHNELER_2B_B, ...SAHNELER_2B_C, ...SAHNELER_NG_A, ...SAHNELER_NG_B, ...SAHNELER_NG_C };
 
 /** Bir sahnedeki tüm öge kimlikleri (doğrulayıcı ve hotspot için) */
 export const SAHNE_OGELERI: Record<string, string[]> = {
@@ -171,6 +174,13 @@ export const SAHNE_OGELERI: Record<string, string[]> = {
   'yakin-erkek-jel': ['j-prepisyum', 'j-glans', 'j-dolum', 'j-meatus', 'j-temizlik', 'j-siringa', 'j-parmak'],
   maket: ['mk-govde', 'mk-hazne', 'mk-hazne-dolu', 'mk-kadin', 'mk-erkek'],
   'foley-kesit': ['c-drenaj-lumen', 'c-balon-lumen', 'c-olcek-eriskin', 'c-olcek-cocuk'],
+  // Nazogastrik sonda (01, 2026-11-05) — sözleşme meds_temp/kmb/ng/SAHNE_SOZLESMESI.md
+  'ng-kesit': ['nk-bas', 'nk-burun-delik', 'nk-burun-bosluk', 'nk-sert-damak', 'nk-yumusak-damak', 'nk-nazofarinks', 'nk-orofarinks', 'nk-dil', 'nk-epiglot', 'nk-larinks', 'nk-trakea', 'nk-ozofagus', 'nk-kafa-tabani', 'nk-yuz-kemik', 'nk-sonda', 'nk-sonda-trakea', 'nk-ok-duz', 'nk-ok-asagi', 'nk-epiglot-kapali', 'nk-su', 'nk-dil-kivrim', 'nk-kirik', 'nk-yanik', 'nk-varis', 'nk-kusmuk'],
+  'ng-burun': ['nr-yuz', 'nr-burun', 'nr-delik-sag', 'nr-delik-sol', 'nr-septum', 'nr-sonda', 'nr-jel', 'nr-parmak', 'nr-ok-yukari', 'nr-flaster-burun', 'nr-flaster-sarim', 'nr-ek-bant', 'nr-kanama', 'nr-sapma'],
+  'ng-govde': ['nb-govde', 'nb-bas', 'nb-burun', 'nb-kulak', 'nb-ksifoid', 'nb-mide', 'nb-olcu-1', 'nb-olcu-2', 'nb-sonda-olcu', 'nb-isaret', 'nb-sonda', 'nb-ozofagus', 'nb-epigastr', 'nb-stetoskop', 'nb-enjektor', 'nb-ses'],
+  'ng-mide': ['nd-karin', 'nd-ozofagus', 'nd-mide', 'nd-mide-sivi', 'nd-duodenum', 'nd-epigastr', 'nd-sonda', 'nd-hava', 'nd-ses', 'nd-stetoskop', 'nd-enjektor', 'nd-su', 'nd-torba', 'nd-akis', 'nd-beslenme', 'nd-tipa'],
+  'ng-malzeme': ['nm-sonda', 'nm-kalinlik', 'nm-beslenme', 'nm-jel', 'nm-vazelin', 'nm-enjektor-can', 'nm-enjektor-normal', 'nm-stetoskop', 'nm-flaster', 'nm-eldiven', 'nm-ortu', 'nm-poset', 'nm-torba', 'nm-su'],
+  'ng-pozisyon': ['np-yatak', 'np-hasta', 'np-hekim', 'np-lavabo', 'np-ortu', 'np-poset', 'np-eldiven', 'np-el-bas', 'np-ok-egim', 'np-sonda', 'np-yardimci'],
 };
 
 export function SahneCiz({ sahne, durum, onSec, secilebilir, isaret, olcek = 1 }: {

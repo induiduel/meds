@@ -41,9 +41,10 @@ def klipler(d: dict) -> dict[str, list[str]]:
     for x in d.get('hedefCalisma', []):
         K[f'h-{x["no"]}'] = [oku(f'Hedef {x["no"]}. {x["ne"]}'), *[oku(c) for c in x['nasil']], oku(x['neden']), 'Sınavda sık yapılan bir hata var.', oku(x['hata'])]
         K[f'h-{x["no"]}-s'] = [oku(f'Hedef {x["no"]}. {x["hoca"]}'), 'Önce kendin sesli anlat, sonra cevabı aç.']
-    lidx = VERI / 'lottie/index.json'
-    if lidx.exists() and d['kod'] == '02':
+    lidx = VERI / ('lottie/index.json' if d['kod'] == '02' else 'lottie2b/index.json')  # 01: yalnız 2B, ad öneki ng-
+    if lidx.exists() and d['kod'] in ('02', '01'):
         for v in json.loads(lidx.read_text(encoding='utf-8')):
+            if d['kod'] == '01' and not v['ad'].startswith('ng-'): continue
             K[f'l-{v["ad"]}'] = [oku(b['metin']) for b in v['bolumler']]
     for b in d['sinav']['bul']:
         K[f'b-{b["id"]}'] = [oku(b['yonerge'])]

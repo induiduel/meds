@@ -239,8 +239,12 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
     const el = kök?.querySelector<SVGGraphicsElement>(`[data-id="${sd.odak}"]`);
     if (!el || typeof el.getBBox !== 'function') { setKam(TAM); return; }
     try {
-      const b = el.getBBox();
-      if (!b.width && !b.height) { setKam(TAM); return; }
+      const b0 = el.getBBox();
+      if (!b0.width && !b0.height) { setKam(TAM); return; }
+      // getBBox ögenin kendi koordinatındadır; ata grupta transform varsa (ng-kesit translate(60 0)) kutu kayar → sahne köküne çevir
+      const svg = el.ownerSVGElement, m = svg && el.getCTM() && svg.getCTM() ? svg.getCTM()!.inverse().multiply(el.getCTM()!) : null;
+      const kose = m ? [[b0.x, b0.y], [b0.x + b0.width, b0.y], [b0.x, b0.y + b0.height], [b0.x + b0.width, b0.y + b0.height]].map(([x, y]) => new DOMPoint(x, y).matrixTransform(m)) : null;
+      const b = kose ? { x: Math.min(...kose.map((q) => q.x)), y: Math.min(...kose.map((q) => q.y)), width: Math.max(...kose.map((q) => q.x)) - Math.min(...kose.map((q) => q.x)), height: Math.max(...kose.map((q) => q.y)) - Math.min(...kose.map((q) => q.y)) } : b0;
       // H462: yakınlaşma ılımlı (≤1,35) ve odak kutusu + etiket payı kadrajın en çok %70'ini kaplar; daha yakın çekim
       // komşu ayrıntıları ve etiketleri kesiyordu. Kutu zaten büyükse yakınlaşma yapılmaz (yalnız spot).
       const pay = 24;

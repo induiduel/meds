@@ -537,7 +537,8 @@ def gizli_listesi(sahne):
 
 
 ON_EK = {'foley': 'f', 'mesane': 'g', 'erkek': 'e', 'travma': 't', 'malzeme': 'm', 'pozisyon': 'p', 'kadin': 'k', 'yakin-mesane': 'y',
-         'yakin-uretra': 'z', 'yakin-kadin': 'v', 'yakin-el': 'h', 'yakin-erkek-jel': 'j', 'foley-kesit': 'c', 'maket': 'mk'}
+         'yakin-uretra': 'z', 'yakin-kadin': 'v', 'yakin-el': 'h', 'yakin-erkek-jel': 'j', 'foley-kesit': 'c', 'maket': 'mk',
+         'ng-kesit': 'nk', 'ng-burun': 'nr', 'ng-govde': 'nb', 'ng-mide': 'nd', 'ng-malzeme': 'nm', 'ng-pozisyon': 'np'}
 
 
 def donustur(sahne: str):

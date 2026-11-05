@@ -1,20 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 650,
-  "baslik": "Şık açıklamaları düzeltildi",
+  "onem": 651,
+  "baslik": "KMB: Nazogastrik sonda dersi eklendi",
   "maddeler": [
-    "Enfeksiyon, Patoloji, Üroloji, Genetik ve Kurul 2 çözücü/asistanlarında geçiştirme açıklamaları yeniden yazıldı",
-    "Kurul 1 ve Kurul 2 örnek sorularında 50 şık açıklaması geliştirildi",
-    "Değişen açıklamaların sesleri yenilendi"
+    "KMB görsel asistana Nazogastrik sonda takma becerisi eklendi: 19 adımlık sesli animasyonlu ders, hedef kartları, OSCE sıralama, vaka soruları",
+    "Kime takılır / kime takılmaz (kontrendikasyonlar), ölçüm ve yer kontrolü hocanın sınav vurgularıyla anlatıldı",
+    "KMB videolarında kırmızı çarpı ve bazı çizgilerin hatalı çizimi düzeltildi"
   ],
-  "eklenen": [],
+  "eklenen": [
+    "KMB Nazogastrik sonda dersi"
+  ],
   "degisen": [],
   "duzeltilen": [
-    "Kaydırma kilidi",
-    "Klavye açıkken ekran düzeni",
-    "Bölünmüş ekran / yatay telefon düzeni",
-    "Katman sırası",
-    "Dokunmatik denetimler"
+    "KMB video çizim hataları"
   ],
   "silinen": [],
   "yenilikler": []

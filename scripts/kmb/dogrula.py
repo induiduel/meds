@@ -170,8 +170,9 @@ def denetle(p: Path, S):
     H += TU.denetle_yapi(d, p.stem)
     # 3B sahne kapısı (sahne3b/sahneler3b*.ts): her 3B sahne SVG sahnesinin TÜM öge kimliklerini kurmalı (eylem/odak aynı veriyle çalışır)
     H += sahne3b_denetle(S)
-    ai = VERI / 'lottie/adimlar.json'
-    av = {v['adim']: v for v in json.loads(ai.read_text(encoding='utf-8'))} if ai.exists() else {}
+    av = {}
+    for ai in (VERI / 'lottie/adimlar.json', VERI / 'lottie2b/adimlar.json'):  # 01 (ng-) yalnız 2B hattında
+        if ai.exists(): av.update({v['adim']: v for v in json.loads(ai.read_text(encoding='utf-8'))})
     for a in d['adimlar']:
         v = av.get(a['id'])
         if not v: H.append(f'adım {a["id"]}: adım videosu yok (adim_lottie.py) — her cümle videoda olmalı')
@@ -179,9 +180,10 @@ def denetle(p: Path, S):
         elif [b['metin'] for b in v['bolumler']] != [c['metin'] for c in a['cumleler']]: H.append(f'adım {a["id"]}: video metni ders metniyle aynı değil (adim_lottie.py yeniden)')
         elif not v.get('sesli'): U.append(f'adım {a["id"]}: adım videosu ses zamanlı değil')
         if v: H += LD.etiket_denetle(v)
-    li = VERI / 'lottie/index.json'
+    li = VERI / ('lottie/index.json' if d['kod'] == '02' else 'lottie2b/index.json')
     if li.exists():
         for v in json.loads(li.read_text(encoding='utf-8')):
+            if d['kod'] == '01' and not v['ad'].startswith('ng-'): continue
             if not 15 <= v['sure'] <= 90: H.append(f'lottie {v["ad"]}: süre {v["sure"]} sn (15–90)')
             H += LD.etiket_denetle(v)
             for b in v['bolumler']: H += TU.denetle(b['metin'], f'lottie {v["ad"]}')

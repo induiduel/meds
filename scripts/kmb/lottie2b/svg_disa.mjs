@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 const MEDS = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const OUT = path.join(MEDS, 'scripts/kmb/lottie2b/svg');
 fs.mkdirSync(OUT, { recursive: true });
-const TUM = ['foley', 'mesane', 'erkek', 'travma', 'malzeme', 'pozisyon', 'kadin', 'yakin-mesane', 'yakin-uretra', 'yakin-kadin', 'yakin-el', 'yakin-erkek-jel', 'foley-kesit', 'maket'];
+const TUM = ['foley', 'mesane', 'erkek', 'travma', 'malzeme', 'pozisyon', 'kadin', 'yakin-mesane', 'yakin-uretra', 'yakin-kadin', 'yakin-el', 'yakin-erkek-jel', 'foley-kesit', 'maket', 'ng-kesit', 'ng-burun', 'ng-govde', 'ng-mide', 'ng-malzeme', 'ng-pozisyon'];
 const sahneler = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const secili = sahneler.length ? sahneler : TUM;
 const secret = (fs.readFileSync(path.join(MEDS, '.env'), 'utf8').match(/^MEDS_PANEL_SECRET=(.*)$/m) || [])[1]?.replace(/"/g, '').trim();
@@ -38,7 +38,7 @@ for (const s of secili) {
   await send('Page.navigate', { url: `http://localhost:3000/kmb?sahne=${s}&goster=1&w=800` });
   await sleep(3500);
   const r = await ev(`(()=>{const svg=document.querySelector('svg.kmb-sahne');if(!svg)return null;const b={};
-    for(const g of svg.querySelectorAll('[data-id]')){const x=g.getBBox();b[g.dataset.id]=[+x.x.toFixed(1),+x.y.toFixed(1),+x.width.toFixed(1),+x.height.toFixed(1)];}
+    for(const g of svg.querySelectorAll('[data-id]')){const x=g.getBBox();const m=svg.getCTM().inverse().multiply(g.getCTM());const k=[[x.x,x.y],[x.x+x.width,x.y],[x.x,x.y+x.height],[x.x+x.width,x.y+x.height]].map(([a,c])=>new DOMPoint(a,c).matrixTransform(m));const X=k.map(q=>q.x),Y=k.map(q=>q.y);const x0=Math.min(...X),y0=Math.min(...Y);b[g.dataset.id]=[+x0.toFixed(1),+y0.toFixed(1),+(Math.max(...X)-x0).toFixed(1),+(Math.max(...Y)-y0).toFixed(1)];} /* ata transform dahil kök koordinatı (2026-11-05) */
     return {svg:svg.outerHTML,b};})()`);
   if (!r) { console.error(`${s}: sahne bulunamadı`); continue; }
   fs.writeFileSync(path.join(OUT, `${s}.svg`), r.svg + '\n');

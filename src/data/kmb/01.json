@@ -1,0 +1,3589 @@
+{
+ "kod": "01",
+ "slug": "nazogastrik-sonda",
+ "ad": "Nazogastrik sonda takma",
+ "belgeKodu": "TIS301.43.1",
+ "amac": "Mide lavajı gerekecek zehirlenmeli olgular başta olmak üzere ihtiyaç halinde nazogastrik sonda takmak.",
+ "kaynaklar": [
+  {
+   "tur": "ses",
+   "ad": "KMB Nazogastrik sonda dersi (amfi + maket uygulaması, 37 dk, Dr. Büşra Bildik)",
+   "dosya": "meds_temp/kmb/kaynak/nazogastrik.m4a"
+  },
+  {
+   "tur": "belge",
+   "ad": "TIS301 Klinik Mesleki Beceri IV ders bilgi paketi, TIS301.43.1 öğrenim hedefleri"
+  }
+ ],
+ "hedefler": [
+  {
+   "no": 1,
+   "metin": "Hastaya kendini tanıtır.",
+   "adimlar": [
+    "ng-hazirlik"
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Hastaya yapacağı işlemi anlatır.",
+   "adimlar": [
+    "ng-hazirlik"
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Malzemeleri hazırlar ve kontrol eder.",
+   "adimlar": [
+    "ng-malzeme",
+    "ng-malzeme-kontrol"
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Ellerini yıkar, eldiven giyer.",
+   "adimlar": [
+    "ng-hazirlik"
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Nazogastrik sondanın hastaya uygulanacak kısmının boyunu ölçer.",
+   "adimlar": [
+    "ng-olcum"
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Sondaya kayganlaştırıcı (su bazlı) sürer.",
+   "adimlar": [
+    "ng-kayganlastirma",
+    "ng-malzeme"
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Sondayı burun deliğinden sokup palatin kemiğine paralel iter.",
+   "adimlar": [
+    "ng-ilerletme",
+    "ng-anatomi"
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Sonda ucu orofarenkse ulaşınca hastaya yutmasını telkin eder ya da su içirir.",
+   "adimlar": [
+    "ng-yutkunma"
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Sondayı mideye kadar iter ve kontrol etmek için içeriye hava verirken stetoskopla mideyi dinler.",
+   "adimlar": [
+    "ng-yer-kontrol"
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "İşlem sırasında öksürme vb. hava yolu irritasyon bulgusu gelişmişse sondayı geri çeker.",
+   "adimlar": [
+    "ng-oksuruk"
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Sondayı burun kanatlarına flaster vb. ile sabitler.",
+   "adimlar": [
+    "ng-sabitleme"
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Mide lavajı için mideye 300 ml su verip çeker.",
+   "adimlar": [
+    "ng-lavaj"
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Sondayı işlem sonunda sabitleme bandını söküp çıkarır.",
+   "adimlar": [
+    "ng-cikarma"
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Yaptığı işlemleri gerçekleşen komplikasyonlarla birlikte kaydeder.",
+   "adimlar": [
+    "ng-cikarma"
+   ]
+  }
+ ],
+ "adimlar": [
+  {
+   "id": "ng-giris",
+   "baslik": "Nazogastrik sonda nedir, neden sen takacaksın?",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "Nazogastrik sonda, burun deliğinden girip farinks ve özofagus yoluyla mideye ulaşan esnek plastik bir borudur.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-burun-delik"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-ozofagus"
+      }
+     ]
+    },
+    {
+     "metin": "Serviste bu işi çoğu zaman hemşireler yapar; ama hasta bilinçsizse, iş birliği yapamıyorsa ya da çocuksa sonda takmak hekime kalır.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-bas"
+      }
+     ]
+    },
+    {
+     "metin": "Bu yüzden tekniği bir gün tek başına uygulayacakmış gibi öğrenmen gerekir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "İşlemde üç soruya cevap vereceksin: kime takılır, kime takılmaz ve sonda doğru yere nasıl ulaştırılır.",
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nk-trakea"
+      },
+      {
+       "t": "renk",
+       "id": "nk-trakea",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "renk",
+       "id": "nk-ozofagus",
+       "renk": "yesil"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-endikasyon",
+   "baslik": "Endikasyonlar: kime takılır?",
+   "sahne": "ng-mide",
+   "cumleler": [
+    {
+     "metin": "Föydeki dersin amacı, başta mide lavajı gerekecek zehirlenmeli olgular olmak üzere gerektiğinde nazogastrik sonda takabilmektir.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nd-su"
+      },
+      {
+       "t": "ciz",
+       "id": "nd-su"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-mide"
+      }
+     ]
+    },
+    {
+     "metin": "İkinci büyük endikasyon beslenmedir: ağızdan beslenemeyen ve başka enteral yolu olmayan hasta, örneğin PEG takılana kadar sondadan beslenir.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-beslenme"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-beslenme"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-duodenum"
+      }
+     ]
+    },
+    {
+     "metin": "Mide içeriğini görmek ya da boşaltmak gerektiğinde de sonda takılır.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-torba"
+      },
+      {
+       "t": "ciz",
+       "id": "nd-akis"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-torba"
+      }
+     ]
+    },
+    {
+     "metin": "Örneğin üst gastrointestinal kanama şüphesinde midede kanlı içerik olup olmadığını sondayla anlarsın.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-mide-sivi"
+      },
+      {
+       "t": "renk",
+       "id": "nd-mide-sivi",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-mide-sivi"
+      }
+     ]
+    },
+    {
+     "metin": "Sondadan ilaç da verilebilir; ezilen ilaç sıvıya karıştırılıp sondadan mideye verilir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Hoca kime takılıp kime takılmayacağını sınavda mutlaka soruyor; endikasyonları ve kontrendikasyonları birlikte bilmelisin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-mide"
+      }
+     ]
+    }
+   ],
+   "puf": [
+    "Kime takarız: zehirlenmede mide lavajı, ağızdan beslenemeyen hastada beslenme, mide içeriğini görmek ya da boşaltmak (üst GİS kanaması şüphesi), ilaç verme."
+   ]
+  },
+  {
+   "id": "ng-kontrendikasyon-travma",
+   "baslik": "Kontrendikasyon 1–2: yüz travması ve kafa tabanı kırığı",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "Kime takılır, kime takılmaz sorusunu hoca sınavda mutlaka soruyor; kontrendikasyonların ilk ikisi travmayla ilgilidir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-yuz-kemik"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-yuz-kemik"
+      }
+     ]
+    },
+    {
+     "metin": "Sondayı burundan ağız içine, oradan özofagusa ilerletirken yüz, burun ve üst damağı içine alan bölgeden geçersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-sert-damak"
+      }
+     ]
+    },
+    {
+     "metin": "Bu bölgede bir kırık varsa, hele dışarıdan görmediğin deprese bir kırıksa, anatomisi bozulmuş yapıya sonda iterek daha fazla zarar verirsin.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nk-kirik"
+      },
+      {
+       "t": "renk",
+       "id": "nk-yuz-kemik",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-kirik"
+      }
+     ]
+    },
+    {
+     "metin": "Kafa tabanı kırığında da nazogastrik sonda takılmaz; kafa kemiklerinin alt kısmı burun boşluğunun hemen üstündedir ve sonda kırık hattından kafa içine ilerleyebilir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-kafa-tabani"
+      },
+      {
+       "t": "renk",
+       "id": "nk-kafa-tabani",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-kafa-tabani"
+      }
+     ]
+    }
+   ],
+   "dikkat": [
+    "Maksillofasiyal travma ve kafa tabanı kırığı: nazogastrik sonda takılmaz."
+   ]
+  },
+  {
+   "id": "ng-kontrendikasyon-koroziv",
+   "baslik": "Kontrendikasyon 3: koroziv madde içen hasta",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "Ağızdan koroziv yani yakıcı madde almış hastaya nazogastrik sonda takılmaz.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-yanik"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-yanik"
+      }
+     ]
+    },
+    {
+     "metin": "Birinci neden: madde yutulurken farinks ve özofagus mukozasını zaten yakmıştır; sonda yanmış dokuya değerek ona yeniden zarar verir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-yanik"
+      },
+      {
+       "t": "renk",
+       "id": "nk-ozofagus",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-ozofagus"
+      }
+     ]
+    },
+    {
+     "metin": "İkinci neden: işlem mide bulandırıcıdır, hasta kusarsa madde yukarı çıkar ve aynı dokuyu bir kez daha yakar.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-kusmuk"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-kusmuk"
+      }
+     ]
+    },
+    {
+     "metin": "Bu yüzden zehirlenmede lavaj endikasyonu olsa bile, içilen madde koroziv ise sonda takılmaz.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-yanik"
+      },
+      {
+       "t": "renk",
+       "id": "nk-yanik",
+       "renk": "kirmizi"
+      }
+     ]
+    }
+   ],
+   "dikkat": [
+    "Zehirlenme = lavaj endikasyonu; ama koroziv madde = kontrendikasyon. Sınavda bu ikisi birlikte sorulur."
+   ]
+  },
+  {
+   "id": "ng-kontrendikasyon-bilinc",
+   "baslik": "Kontrendikasyon 4: bilinci kapalı, hava yolu korunmamış hasta",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "Bilinci kapalı ve hava yolu korunmamış hastaya nazogastrik sonda takılmaz.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-larinks"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-larinks"
+      }
+     ]
+    },
+    {
+     "metin": "Böyle bir hasta hava yolunu hiçbir şekilde koruyamaz; sonda bulantı yapar ve hasta kusarsa mide içeriği trakeaya kaçar.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-kusmuk"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-kusmuk"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-trakea"
+      }
+     ]
+    },
+    {
+     "metin": "Mide içeriğinin akciğere kaçmasına aspirasyon denir ve hastanın yaşamını tehdit eder.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-trakea"
+      },
+      {
+       "t": "renk",
+       "id": "nk-trakea",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-kusmuk"
+      }
+     ]
+    },
+    {
+     "metin": "Önce hava yolunu güvenceye almak gerekir; hava yolu korunmuyorken bu işleme başlanmaz.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-epiglot"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-epiglot"
+      }
+     ]
+    }
+   ],
+   "dikkat": [
+    "Ayrıntıya dikkat: kontrendikasyon \"bilinci kapalı VE hava yolu korunmamış\" hastadır."
+   ]
+  },
+  {
+   "id": "ng-kontrendikasyon-varis",
+   "baslik": "Kontrendikasyon 5: özofagus varisi",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "Varis, bir bölgedeki venöz ağın genişlemesidir; bacak varisinde olduğu gibi özofagusun venleri de çeşitli nedenlerle genişleyip özofagus varisini oluşturur.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-varis"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-varis"
+      }
+     ]
+    },
+    {
+     "metin": "Bu hastalar kanamaya yatkındır ve üst gastrointestinal kanamayla acile gelebilirler.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-varis"
+      },
+      {
+       "t": "renk",
+       "id": "nk-varis",
+       "renk": "kirmizi"
+      }
+     ]
+    },
+    {
+     "metin": "Kanama şüphesi normalde sonda endikasyonudur; ama özofagus varisi olduğunu bildiğin hastaya sonda takmazsın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-ozofagus"
+      }
+     ]
+    },
+    {
+     "metin": "Sonda genişlemiş venlere sürtünerek kanamayı artırabilir; hoca bu riski teorik olarak anlatır ama varisi bilinen hastaya sonda takılmamasını ister.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-varis"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-varis"
+      }
+     ]
+    }
+   ],
+   "puf": [
+    "Kime takılmaz (5 madde): yüz–burun–üst damak travması/kırığı, kafa tabanı kırığı, koroziv madde alımı, bilinci kapalı ve hava yolu korunmamış hasta, bilinen özofagus varisi."
+   ]
+  },
+  {
+   "id": "ng-anatomi",
+   "baslik": "Anatomi: iki delik ve başın öne eğilmesi",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "Farinksin aşağısında iki giriş vardır: önde larinks yoluyla trakea, arkada özofagus.",
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nk-trakea"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-ozofagus"
+      },
+      {
+       "t": "renk",
+       "id": "nk-trakea",
+       "renk": "mavi"
+      },
+      {
+       "t": "renk",
+       "id": "nk-ozofagus",
+       "renk": "yesil"
+      }
+     ]
+    },
+    {
+     "metin": "Sonda larinksten geçerse trakeaya girer; özofagus girişinden geçerse aşağı doğru mideye ilerler.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda-trakea"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-sonda-trakea"
+      },
+      {
+       "t": "renk",
+       "id": "nk-sonda-trakea",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-sonda-trakea"
+      }
+     ]
+    },
+    {
+     "metin": "Hastanın başını hafifçe öne eğdirdiğinde yol özofagusa doğru açılır ve sonda daha rahat ilerler.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-sonda-trakea"
+      },
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Laboratuvardaki maket immobil, başı arkaya düşmüş bir hasta gibi durduğu için bu açıyı tam vermez; gerçek hastada başı mutlaka öne eğdirirsin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-bas"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-bas"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-malzeme",
+   "baslik": "Malzeme 1: sonda, kayganlaştırıcı, beslenme sondası",
+   "sahne": "ng-malzeme",
+   "cumleler": [
+    {
+     "metin": "Sondaların uç kısmında farklı renkler vardır; bu renkler sondanın kalınlığını gösterir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-kalinlik"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-kalinlik"
+      }
+     ]
+    },
+    {
+     "metin": "Mideye ulaşmak için gereken yol aşağı yukarı aynı olduğundan sondaların boyları birbirine benzer, kalınlıkları farklıdır.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-kalinlik"
+      }
+     ]
+    },
+    {
+     "metin": "Sondanın üzerinde üretici firmaya göre çizgi ya da 50, 60 gibi sayılarla uzunluk işareti bulunur; ne kadar ilerlediğini bununla izlersin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Sonda kapalı pakette gelir ve işlemden hemen önce açılır; işlem steril değildir ama malzeme temiz olmalı ve eldivenle çalışılır.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-eldiven"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-eldiven"
+      }
+     ]
+    },
+    {
+     "metin": "Burun kaygan bir alan olmadığı için su bazlı kayganlaştırıcı jel kullanılır; üretral kateterde kullandığın jel bunun için uygundur.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-jel"
+      },
+      {
+       "t": "renk",
+       "id": "nm-jel",
+       "renk": "yesil"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-jel"
+      }
+     ]
+    },
+    {
+     "metin": "Jel bulamazsan vazelin akla gelir; ama vazelin bir petrol ürünüdür, ilk tercih asla değildir ve yalnız çaresiz kaldığında çok az miktarda kullanılır; ultrason jeli gibi başka su bazlı jeller de olur.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-vazelin"
+      },
+      {
+       "t": "renk",
+       "id": "nm-vazelin",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-vazelin"
+      }
+     ]
+    },
+    {
+     "metin": "Standart nazogastrik sondanın içinde tel yoktur, manevrayla takılır; beslenme sondası adıyla satılanlar ise ince ve yumuşaktır, içlerinde kılavuz tel bulunur.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-beslenme"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-beslenme"
+      }
+     ]
+    },
+    {
+     "metin": "Beslenme sondası aynı teknikle takılır, ucu mide ile duodenumun başlangıcı arasına yerleşir; sonra tel çıkarılır, yer kontrol edilir ve sondası sabitlenir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-beslenme"
+      },
+      {
+       "t": "vurgula",
+       "id": "nm-sonda"
+      }
+     ]
+    }
+   ],
+   "puf": [
+    "Kayganlaştırıcı: su bazlı jel. Vazelin petrol ürünüdür; ilk tercih değildir, yalnız başka hiçbir şey yoksa çok az."
+   ]
+  },
+  {
+   "id": "ng-malzeme-kontrol",
+   "baslik": "Malzeme 2: yer kontrolü, sabitleme ve korunma",
+   "sahne": "ng-malzeme",
+   "cumleler": [
+    {
+     "metin": "Yer kontrolü için çan uçlu enjektör gerekir; ucu sondanın ağzına tam oturan 50 mililitrelik enjektördür.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-enjektor-can"
+      },
+      {
+       "t": "renk",
+       "id": "nm-enjektor-can",
+       "renk": "yesil"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-enjektor-can"
+      }
+     ]
+    },
+    {
+     "metin": "Normal enjektörün ucu sondaya oturmaz ve verdiğin hava kenardan kaçar.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-enjektor-normal"
+      },
+      {
+       "t": "renk",
+       "id": "nm-enjektor-normal",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-enjektor-normal"
+      }
+     ]
+    },
+    {
+     "metin": "Mideyi dinlemek için stetoskop, sondayı burna sabitlemek için flaster hazırlanır.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-stetoskop"
+      },
+      {
+       "t": "vurgula",
+       "id": "nm-flaster"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-stetoskop"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-flaster"
+      }
+     ]
+    },
+    {
+     "metin": "İşlem kirlidir: hasta öğürür, öksürür, hapşırır ve her yere partikül saçılır; bu yüzden hastanın göğsüne serilecek emici bir örtü ve kusma poşeti hazırlanır.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-ortu"
+      },
+      {
+       "t": "vurgula",
+       "id": "nm-poset"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-ortu"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-poset"
+      }
+     ]
+    },
+    {
+     "metin": "Lavaj ve boşaltma için su ile sondanın ucuna takılacak bir torba da tepside olmalıdır.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-su"
+      },
+      {
+       "t": "vurgula",
+       "id": "nm-torba"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-su"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-torba"
+      }
+     ]
+    }
+   ],
+   "dikkat": [
+    "Normal enjektör sondaya oturmaz; yer kontrolü için çan uçlu enjektör şart."
+   ]
+  },
+  {
+   "id": "ng-hazirlik",
+   "baslik": "El yıkama, kendini tanıtma, onam, örtü",
+   "sahne": "ng-pozisyon",
+   "cumleler": [
+    {
+     "metin": "Her işlemden önce ellerini su ve sabunla yıkarsın; eldiven giysen ya da dezenfektan kullansan bile hiçbir şey su ve sabunun yerini tutmaz.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-lavabo"
+      },
+      {
+       "t": "etiket",
+       "id": "np-lavabo"
+      }
+     ]
+    },
+    {
+     "metin": "Çalışmalar, hastane enfeksiyonlarının önemli bir basamağının sağlık çalışanlarının elleri olduğunu gösterir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ]
+    },
+    {
+     "metin": "Sonra eldivenini giyer ve malzemelerle hastanın yanına gidersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-eldiven"
+      },
+      {
+       "t": "etiket",
+       "id": "np-eldiven"
+      }
+     ]
+    },
+    {
+     "metin": "Kendini tanıtırsın: \"Merhaba, ben Doktor Büşra; size nazogastrik sonda takacağım.\"",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      },
+      {
+       "t": "etiket",
+       "id": "np-hekim"
+      }
+     ]
+    },
+    {
+     "metin": "İşlemi anlatırsın: mide bulandırabilir, burunda hafif tahriş ya da küçük bir kanama olabilir, kusmanız gerekirse poşet tutacağım, söylediklerimi uygularsanız kısa sürecek.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      },
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ]
+    },
+    {
+     "metin": "Hastanın sorusu varsa cevaplar, onayını alırsın; ardından örtüyü göğsüne yemek peçetesi gibi serer, kusma poşetini verirsin; örtü yerine sıvı geçirmeyen hasta altı bezi ya da peçete de olur.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-ortu"
+      },
+      {
+       "t": "goster",
+       "id": "np-poset"
+      },
+      {
+       "t": "etiket",
+       "id": "np-ortu"
+      },
+      {
+       "t": "etiket",
+       "id": "np-poset"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-olcum",
+   "baslik": "Ölçüm: burun → kulak memesi → ksifoid",
+   "sahne": "ng-govde",
+   "cumleler": [
+    {
+     "metin": "Sondayı itmeden önce ne kadar ilerleteceğini ölçersin; iki metre boyunda 120 kiloluk bir hastayla 1,40 boyunda 40 kiloluk bir hastanın mesafesi aynı değildir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nb-bas"
+      },
+      {
+       "t": "vurgula",
+       "id": "nb-govde"
+      }
+     ]
+    },
+    {
+     "metin": "Sondanın ucunu burun deliğine koyarsın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-sonda-olcu"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-burun"
+      },
+      {
+       "t": "vurgula",
+       "id": "nb-burun"
+      }
+     ]
+    },
+    {
+     "metin": "Oradan kulak memesine uzatırsın.",
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nb-olcu-1"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-kulak"
+      },
+      {
+       "t": "vurgula",
+       "id": "nb-kulak"
+      }
+     ]
+    },
+    {
+     "metin": "Kulak memesinden de ksifoid çıkıntıya, yani epigastriumun üst sınırına kadar götürürsün.",
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nb-olcu-2"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-ksifoid"
+      },
+      {
+       "t": "vurgula",
+       "id": "nb-ksifoid"
+      }
+     ]
+    },
+    {
+     "metin": "Ksifoide denk gelen yeri sondanın üzerinde işaretler, bunun kaç santimetreye ya da kaçıncı çizgiye geldiğini aklında tutarsın; sondayı bu işarete kadar ilerleteceksin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-isaret"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-isaret"
+      }
+     ]
+    },
+    {
+     "metin": "Bu ölçüm sınavda en çok hata yapılan basamaktır; başlangıç noktası burun deliğidir, ikinci nokta kulak memesi, son nokta ksifoid.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nb-isaret"
+      },
+      {
+       "t": "renk",
+       "id": "nb-isaret",
+       "renk": "yesil"
+      }
+     ]
+    }
+   ],
+   "dikkat": [
+    "Ölçüm sırası: burun deliği → kulak memesi → ksifoid. Başlangıç noktasını burun dışında bir yer seçmek sık sınav hatasıdır."
+   ]
+  },
+  {
+   "id": "ng-kayganlastirma",
+   "baslik": "Kayganlaştırma ve baş pozisyonu",
+   "sahne": "ng-burun",
+   "ek": [
+    "ng-pozisyon"
+   ],
+   "cumleler": [
+    {
+     "metin": "Sondanın ucunda yan delikler vardır ve önce bu kısım burna girer; bu yüzden uçtan yaklaşık 5 santimetrelik bölümü jellersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nr-jel"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-jel"
+      }
+     ]
+    },
+    {
+     "metin": "Jeli doğrudan sondanın üzerine sıkabilirsin ya da baskın olmayan elinin eldiveninin üstüne koyup sondanın ucunu içinden geçirebilirsin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-jel"
+      }
+     ]
+    },
+    {
+     "metin": "Jelli uç burnu da kayganlaştırdığı için sondanın geri kalanı rahat ilerler.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Hastadan başını hafifçe öne eğmesini istersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-ok-egim"
+      },
+      {
+       "t": "ciz",
+       "id": "np-ok-egim"
+      },
+      {
+       "t": "etiket",
+       "id": "np-ok-egim"
+      }
+     ]
+    },
+    {
+     "metin": "İnsanlar bu işlemde içgüdüsel olarak başını geri atar; anlatamayacağın bir hastaysa elini başının arkasına koyar, başın geri gitmesini engellersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-el-bas"
+      },
+      {
+       "t": "etiket",
+       "id": "np-el-bas"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-ilerletme",
+   "baslik": "İlerletme: damağa paralel düz, farinkste aşağı",
+   "sahne": "ng-kesit",
+   "ek": [
+    "ng-burun"
+   ],
+   "cumleler": [
+    {
+     "metin": "Bazı insanların burun delikleri yukarı değil aşağı bakar; o zaman burun ucunu parmağınla hafifçe yukarı kaldırırsın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-parmak"
+      },
+      {
+       "t": "goster",
+       "id": "nr-ok-yukari"
+      },
+      {
+       "t": "ciz",
+       "id": "nr-ok-yukari"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-parmak"
+      }
+     ]
+    },
+    {
+     "metin": "Sondayı burun deliğinden sokar, sert damağa yani palatin kemiğe paralel olarak dümdüz arkaya itersin; yukarı doğru değil.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nk-ok-duz"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-ok-duz"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-sert-damak"
+      }
+     ]
+    },
+    {
+     "metin": "Bu düz bölüm aşağı yukarı kulak memesi hizasına kadar sürer.",
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-nazofarinks"
+      }
+     ]
+    },
+    {
+     "metin": "Farinkse gelince sonda aşağı doğru döner ve onu aşağı yönde ilerletirsin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-ok-asagi"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-ok-asagi"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-orofarinks"
+      }
+     ]
+    },
+    {
+     "metin": "Bazı hastalar, özellikle bilinci bulanık olanlar, dilini arkaya çeker ve sonda dilin çevresinde kıvrılabilir; bu hastadan dilini dışarı çıkarmasını istersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-dil-kivrim"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-dil-kivrim"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-dil"
+      }
+     ]
+    },
+    {
+     "metin": "Septum deviasyonu nedeniyle bir burun deliğinden ilerleyemezsen zorlamazsın; diğer burun deliğini denersin, işlemden önce karşıdan bakıp hangisinin geniş olduğunu görebilirsin.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-dil-kivrim"
+      },
+      {
+       "t": "goster",
+       "id": "nr-sapma"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-sapma"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-delik-sol"
+      }
+     ]
+    }
+   ],
+   "dikkat": [
+    "Sonda yukarı doğru değil, sert damağa (palatin kemiğe) paralel arkaya itilir.",
+    "Bir burun deliğinden geçmiyorsa zorlama; diğer deliği dene."
+   ]
+  },
+  {
+   "id": "ng-yutkunma",
+   "baslik": "Orofarinks: yutkunma telkini ve su",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "Sondanın ucu orofarinkse ulaşınca hastaya \"Ben söyleyince yutkunun\" dersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "vurgula",
+       "id": "nk-orofarinks"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-orofarinks"
+      }
+     ]
+    },
+    {
+     "metin": "Yutkunmayı anlamayan hastaya \"ekmek yutar gibi yutkunun\" diye tarif edersin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-dil"
+      }
+     ]
+    },
+    {
+     "metin": "Yutma refleksinde epiglot larinksi kapatır ve sonda, yemek lokması gibi trakeaya değil özofagusa gider; yutkunmayı bu yüzden istersin.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-epiglot"
+      },
+      {
+       "t": "goster",
+       "id": "nk-epiglot-kapali"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-epiglot-kapali"
+      },
+      {
+       "t": "renk",
+       "id": "nk-ozofagus",
+       "renk": "yesil"
+      }
+     ]
+    },
+    {
+     "metin": "Hasta her yutkunduğunda sondayı biraz daha iterek ölçtüğün işarete kadar ilerletirsin.",
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-ozofagus"
+      }
+     ]
+    },
+    {
+     "metin": "Bilinci açık ve suyu yönetebilecek hastaya enjektörle yarımşar mililitre su verip yutkunmasını kolaylaştırabilirsin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-su"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-su"
+      }
+     ]
+    },
+    {
+     "metin": "Suyu güvenle yutamayacak hastaya (yaşlı, yutma güçlüğü olan, küçük çocuk) su vermezsin; yutkunma telkini ancak sonda burundan rahat ilerledikten sonra anlamlıdır.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-su"
+      },
+      {
+       "t": "vurgula",
+       "id": "nk-trakea"
+      },
+      {
+       "t": "renk",
+       "id": "nk-trakea",
+       "renk": "kirmizi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-oksuruk",
+   "baslik": "Öksürük ve hava yolu irritasyonu: geri çek",
+   "sahne": "ng-kesit",
+   "cumleler": [
+    {
+     "metin": "İşlem sırasında hasta öksürüyor ya da hava yolu irritasyonu bulgusu gösteriyorsa sonda büyük olasılıkla larinkse girmiştir.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda-trakea"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-sonda-trakea"
+      },
+      {
+       "t": "renk",
+       "id": "nk-sonda-trakea",
+       "renk": "kirmizi"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-sonda-trakea"
+      }
+     ]
+    },
+    {
+     "metin": "Bu durumda sondayı hemen geri çekersin.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-sonda-trakea"
+      },
+      {
+       "t": "vurgula",
+       "id": "nk-larinks"
+      }
+     ]
+    },
+    {
+     "metin": "Yer kontrolünde mideden ses duymadığında da doğru yerde değilsindir; yine geri çeker ve işlemi yeniden yaparsın.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-trakea"
+      },
+      {
+       "t": "etiket",
+       "id": "nk-trakea"
+      }
+     ]
+    },
+    {
+     "metin": "Hastanın boğulur gibi olmasına güvenme; sonda trakeaya girse bile insanlar çoğu zaman sanıldığı kadar boğulmaz, bu yüzden yer kontrolünü mutlaka yaparsın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      },
+      {
+       "t": "renk",
+       "id": "nk-ozofagus",
+       "renk": "yesil"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-yer-kontrol",
+   "baslik": "Yer kontrolü: hava ver, epigastriumu dinle",
+   "sahne": "ng-mide",
+   "ek": [
+    "ng-govde"
+   ],
+   "cumleler": [
+    {
+     "metin": "Çan uçlu enjektöre hava çekip sondanın ucuna takarsın ve havayı aniden verirsin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nd-enjektor"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-enjektor"
+      }
+     ]
+    },
+    {
+     "metin": "Aynı anda stetoskobu epigastrik bölgeye koyar, fokurdama sesi gelip gelmediğini dinlersin; bir tabak suyun içine birden hava basınca suyun köpürmesine benzer bir sestir.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-stetoskop"
+      },
+      {
+       "t": "goster",
+       "id": "nd-hava"
+      },
+      {
+       "t": "goster",
+       "id": "nd-ses"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-ses"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-epigastr"
+      }
+     ]
+    },
+    {
+     "metin": "Ses, sıvı dolu mideye hava girdiği için duyulur; sonda trakeadaysa hava zaten hava dolu bir yapıya girer ve bu sesi duymazsın.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-mide-sivi"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-mide-sivi"
+      }
+     ]
+    },
+    {
+     "metin": "Havayı yavaş yavaş verirsen ses oluşmaz; bu yüzden aniden verirsin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-enjektor"
+      }
+     ]
+    },
+    {
+     "metin": "Sonda jellenmiş olduğu için bırakırsan kayıp çıkar; bu yüzden bir elinle sondayı tutarken diğer elinle hava verirsin, stetoskobu da önceden boynuna takmış olursun.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nb-stetoskop"
+      },
+      {
+       "t": "goster",
+       "id": "nb-enjektor"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-stetoskop"
+      }
+     ]
+    },
+    {
+     "metin": "Yanında yardımcı varsa enjektörü ona verirsin ama dinlemeyi sondayı takan sen yaparsın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-ses"
+      },
+      {
+       "t": "vurgula",
+       "id": "nb-epigastr"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-epigastr"
+      }
+     ]
+    },
+    {
+     "metin": "Boğaza dokunmak ya da hastanın boğulur gibi olmasına bakmak güvenilir değildir; mide içeriğinin gelip gelmediğine bakmak da kullanılır, ultrasonla görmek mümkündür ama hava yolu görüntüsü karışık olduğundan kritik değildir.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Dinleme hocanın öğrettiği ve sınavda istenen yöntemdir; klinikte kesin doğrulama için mide içeriği aspirasyonu ve gerekirse akciğer grafisi kullanılır.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-mide-sivi"
+      }
+     ]
+    }
+   ],
+   "puf": [
+    "Yer kontrolü: çan uçlu enjektörle ANİDEN hava + epigastriumda stetoskopla fokurdama sesi. Ses yoksa geri çek, yeniden dene."
+   ],
+   "dikkat": [
+    "Sondayı hiçbir an bırakma: jelli sonda kayıp çıkar."
+   ]
+  },
+  {
+   "id": "ng-sabitleme",
+   "baslik": "Sabitleme: flasterle buruna",
+   "sahne": "ng-burun",
+   "cumleler": [
+    {
+     "metin": "Yer doğrulanınca sondayı buruna sabitlersin; yeri değişir ya da çıkarsa içerik akciğere kaçabilir, bu yüzden emin olmalısın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-sonda"
+      },
+      {
+       "t": "vurgula",
+       "id": "nr-sonda"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Flasterden ince bir şerit kesersin; kalın bir parçanın anlamı yoktur.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-flaster-burun"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-flaster-burun"
+      }
+     ]
+    },
+    {
+     "metin": "Şeridin bir ucunu burnun üzerine yapıştırır, diğer ucunu sondanın etrafına sararsın; böylece sonda hem buruna bağlanır hem sarılır.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-flaster-sarim"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-flaster-sarim"
+      }
+     ]
+    },
+    {
+     "metin": "Bandı diğer burun deliğini kapatmayacak şekilde, hastanın nefes alabileceği biçimde yerleştirirsin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-delik-sol"
+      },
+      {
+       "t": "renk",
+       "id": "nr-delik-sol",
+       "renk": "yesil"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-delik-sol"
+      }
+     ]
+    },
+    {
+     "metin": "Terleyen ya da yağlı cilde sahip hastada ve hareketli, ajite hastada bant çabuk kayar; gerekirse üzerine ek ince bir bant yapıştırırsın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-ek-bant"
+      },
+      {
+       "t": "etiket",
+       "id": "nr-ek-bant"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-lavaj",
+   "baslik": "Mide lavajı, ilaç verme ve ucu kapatma",
+   "sahne": "ng-mide",
+   "cumleler": [
+    {
+     "metin": "Mide lavajında sondadan mideye 300 ile 500 mililitre su verirsin; föyde bu miktar 300 mililitre olarak geçer.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nd-su"
+      },
+      {
+       "t": "ciz",
+       "id": "nd-su"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-su"
+      }
+     ]
+    },
+    {
+     "metin": "Ardından sondanın ucuna bir idrar torbası takar, mide hizasının altında tutar ve akmasını beklersin.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nd-su"
+      },
+      {
+       "t": "goster",
+       "id": "nd-torba"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-torba"
+      }
+     ]
+    },
+    {
+     "metin": "Sıvı akmaya başlayınca sifon etkisiyle geri kalanı da çekilir ve mide içeriği torbaya dolar.",
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nd-akis"
+      },
+      {
+       "t": "vurgula",
+       "id": "nd-mide-sivi"
+      }
+     ]
+    },
+    {
+     "metin": "Sondadan ilaç verdiysen sonrasında sondanın ucunu kapatırsın: tıpası varsa tıpayla, yoksa ucu kıvırıp kapatarak.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nd-torba"
+      },
+      {
+       "t": "goster",
+       "id": "nd-tipa"
+      },
+      {
+       "t": "etiket",
+       "id": "nd-tipa"
+      }
+     ]
+    },
+    {
+     "metin": "Midenin boşalmasını istiyorsan ucu kapatmaz, torbaya bağlarsın.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nd-tipa"
+      },
+      {
+       "t": "goster",
+       "id": "nd-torba"
+      },
+      {
+       "t": "ciz",
+       "id": "nd-akis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ng-cikarma",
+   "baslik": "Sondayı çıkarma ve kayıt",
+   "sahne": "ng-pozisyon",
+   "cumleler": [
+    {
+     "metin": "Sondayı çıkarırken de hastanın yanına gider, kendini tanıtır ve ne yapacağını anlatırsın.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-sonda"
+      },
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      },
+      {
+       "t": "etiket",
+       "id": "np-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Çıkarmak da mide bulandırıcıdır; yine örtüyü serer ve kusma poşetini verirsin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-ortu"
+      },
+      {
+       "t": "goster",
+       "id": "np-poset"
+      },
+      {
+       "t": "etiket",
+       "id": "np-ortu"
+      }
+     ]
+    },
+    {
+     "metin": "Sabitleme bantlarını söker, sondayı örtüyle birlikte toplayarak çekersin.",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-eldiven"
+      },
+      {
+       "t": "vurgula",
+       "id": "np-sonda"
+      }
+     ]
+    },
+    {
+     "metin": "Örtüyle birlikte çekmenin nedeni, sondayla gelen sümük ve mide içeriği partiküllerinin çevreye saçılmamasıdır; ardından örtüyü toplayıp atarsın.",
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "np-sonda"
+      },
+      {
+       "t": "vurgula",
+       "id": "np-ortu"
+      }
+     ]
+    },
+    {
+     "metin": "Son olarak yaptığın işlemi, ölçtüğün uzunluğu, yer kontrolünün sonucunu ve burun kanaması, öksürük ya da kusma gibi gelişen komplikasyonları kaydedersin.",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      },
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sinav": {
+  "akislar": [
+   {
+    "id": "takma",
+    "ad": "Sonda takma",
+    "yonerge": "Nazogastrik sonda takma basamaklarını doğru sıraya koy.",
+    "basamaklar": [
+     {
+      "id": "endikasyon",
+      "metin": "Endikasyonu ve kontrendikasyonları gözden geçir",
+      "aciklama": "Sonda zehirlenmede lavaj, beslenme, mide içeriğini görme ya da boşaltma ve ilaç verme için takılır. Yüz ya da kafa tabanı kırığı, koroziv madde alımı, bilinci kapalı ve hava yolu korunmamış hasta ve bilinen özofagus varisi varsa takılmaz.",
+      "adim": "ng-kontrendikasyon-travma"
+     },
+     {
+      "id": "malzeme",
+      "metin": "Malzemeleri hazırla ve kontrol et",
+      "aciklama": "Uygun kalınlıkta sonda, su bazlı jel, çan uçlu enjektör, stetoskop, flaster, eldiven, emici örtü, kusma poşeti, su ve torba tepsiye konur. Sonda paketi işlemden hemen önce açılır.",
+      "adim": "ng-malzeme"
+     },
+     {
+      "id": "el",
+      "metin": "Ellerini yıka, eldiven giy",
+      "aciklama": "Eller su ve sabunla yıkanır; dezenfektan ya da eldiven bunun yerini tutmaz. Ardından steril olmayan eldiven giyilir, çünkü işlem steril değil temiz bir işlemdir.",
+      "adim": "ng-hazirlik"
+     },
+     {
+      "id": "tanit",
+      "metin": "Kendini tanıt, işlemi anlat, onam al",
+      "aciklama": "Adını ve görevini söyler, sondayı neden takacağını ve mide bulantısı, burunda tahriş ya da küçük kanama olabileceğini anlatırsın. Hastanın sorularını cevaplar ve onayını alırsın.",
+      "adim": "ng-hazirlik"
+     },
+     {
+      "id": "ortu",
+      "metin": "Örtüyü göğse ser, kusma poşetini ver",
+      "aciklama": "Emici örtü hastanın göğsüne yemek peçetesi gibi serilir. Kusma poşeti hastanın eline verilir; işlem öğürtür ve partikül saçar.",
+      "adim": "ng-hazirlik"
+     },
+     {
+      "id": "olcum",
+      "metin": "Burun–kulak memesi–ksifoid mesafesini ölç ve işaretle",
+      "aciklama": "Sondanın ucu burun deliğine konur, kulak memesine, oradan ksifoide uzatılır. Ksifoide denk gelen çizgi ya da santimetre aklında tutulur; sonda bu işarete kadar ilerletilecektir.",
+      "adim": "ng-olcum"
+     },
+     {
+      "id": "jel",
+      "metin": "Sondanın uç 5 santimetresini su bazlı jelle kayganlaştır",
+      "aciklama": "Jel sondaya sıkılır ya da baskın olmayan elin eldiveni üzerine konup uç içinden geçirilir. Vazelin ilk tercih değildir.",
+      "adim": "ng-kayganlastirma"
+     },
+     {
+      "id": "bas",
+      "metin": "Başı hafifçe öne eğdir, geri atmasını engelle",
+      "aciklama": "Baş öne eğilince yol özofagusa doğru açılır. Hasta içgüdüyle başını geri atabileceğinden gerekirse elini başının arkasına koyarsın.",
+      "adim": "ng-kayganlastirma"
+     },
+     {
+      "id": "ilerlet",
+      "metin": "Burun deliğinden gir, damağa paralel düz it",
+      "aciklama": "Burun ucu gerekirse hafifçe kaldırılır ve sonda sert damağa paralel olarak kulak memesi hizasına kadar düz itilir. Bir delikten geçmiyorsa zorlamadan diğer delik denenir.",
+      "adim": "ng-ilerletme"
+     },
+     {
+      "id": "yutkun",
+      "metin": "Orofarinkste yutkunmasını iste, yutkundukça işarete kadar ilerlet",
+      "aciklama": "Yutma refleksinde epiglot larinksi kapatır ve sonda özofagusa yönelir. Suyu yönetebilen hastaya enjektörle az miktar su verilebilir.",
+      "adim": "ng-yutkunma"
+     },
+     {
+      "id": "kontrol",
+      "metin": "Çan uçlu enjektörle aniden hava ver, epigastriumu dinle",
+      "aciklama": "Bir elle sonda tutulurken diğer elle hava aniden verilir ve stetoskop epigastriuma konur. Mideye giren havanın fokurdama sesi duyulup duyulmadığına bakılır.",
+      "adim": "ng-yer-kontrol",
+      "dal": {
+       "soru": "Epigastriumda fokurdama sesi duydun mu?",
+       "yollar": [
+        {
+         "id": "ses-var",
+         "etiket": "Ses var",
+         "basamaklar": [
+          {
+           "id": "sabitle",
+           "metin": "Sondayı flasterle buruna sabitle",
+           "aciklama": "İnce flaster şeridi burna yapıştırılır, diğer ucu sondanın çevresine sarılır. Diğer burun deliği açık kalır; terli ya da ajite hastada ek bant yapıştırılır.",
+           "adim": "ng-sabitleme"
+          },
+          {
+           "id": "lavaj",
+           "metin": "Lavaj için 300–500 mL su ver, torbayı mide hizasının altına tak",
+           "aciklama": "Su sondadan mideye verilir, ardından ucuna torba takılıp mide hizasının altında tutulur. Akış başlayınca negatif basınç mide içeriğini torbaya çeker.",
+           "adim": "ng-lavaj"
+          },
+          {
+           "id": "kaydet",
+           "metin": "İşlemi ve komplikasyonları kaydet",
+           "aciklama": "Yapılan işlem, ölçülen uzunluk, yer kontrolünün sonucu ve gelişen komplikasyonlar kayda geçirilir. Burun kanaması, öksürük ya da kusma varsa yazılır.",
+           "adim": "ng-cikarma"
+          }
+         ]
+        },
+        {
+         "id": "ses-yok",
+         "etiket": "Ses yok / öksürüyor",
+         "basamaklar": [
+          {
+           "id": "geri",
+           "metin": "Sondayı geri çek ve işlemi yeniden yap",
+           "aciklama": "Ses yoksa ya da hasta öksürüyorsa sonda doğru yerde değildir, büyük olasılıkla larinkse girmiştir. Sonda geri çekilir, baş pozisyonu ve yutkunma telkiniyle yeniden ilerletilir, kontrol tekrarlanır.",
+           "adim": "ng-oksuruk"
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "cikarma",
+    "ad": "Sondayı çıkarma",
+    "yonerge": "Nazogastrik sondayı çıkarma basamaklarını doğru sıraya koy.",
+    "basamaklar": [
+     {
+      "id": "tanit2",
+      "metin": "Hastanın yanına git, kendini tanıt, ne yapacağını anlat",
+      "aciklama": "Çıkarma da mide bulandırıcı bir işlemdir ve hasta önceden bilgilendirilir. Kendini tanıtıp sondayı çıkaracağını söylersin.",
+      "adim": "ng-cikarma"
+     },
+     {
+      "id": "el2",
+      "metin": "Ellerini yıka, eldiven giy",
+      "aciklama": "Çıkarmada da eller yıkanır ve eldiven giyilir. Sondayla sümük ve mide içeriği gelebilir.",
+      "adim": "ng-hazirlik"
+     },
+     {
+      "id": "ortu2",
+      "metin": "Örtüyü ser, kusma poşetini ver",
+      "aciklama": "Örtü göğse serilir, kusma poşeti verilir. Çıkarırken de hasta öğürebilir.",
+      "adim": "ng-cikarma"
+     },
+     {
+      "id": "bant",
+      "metin": "Sabitleme bantlarını sök",
+      "aciklama": "Burun üzerindeki ve sondanın çevresine sarılı flaster sökülür. Bant sökülmeden sonda çekilmez.",
+      "adim": "ng-cikarma"
+     },
+     {
+      "id": "cek",
+      "metin": "Sondayı örtüyle birlikte toplayarak çek",
+      "aciklama": "Sonda örtünün içine toplanarak çekilir. Böylece sümük ve mide içeriği partikülleri çevreye saçılmaz.",
+      "adim": "ng-cikarma"
+     },
+     {
+      "id": "at",
+      "metin": "Örtüyü topla, at; işlemi kaydet",
+      "aciklama": "Örtü sondayla birlikte toplanıp atılır, eldiven çıkarılır. Çıkarma işlemi ve varsa komplikasyonlar kaydedilir.",
+      "adim": "ng-cikarma"
+     }
+    ]
+   }
+  ],
+  "senaryolar": [
+   {
+    "id": "koroziv",
+    "baslik": "Lavabo açıcı (koroziv madde) içen hasta",
+    "sahne": "ng-kesit",
+    "adim": "ng-kontrendikasyon-koroziv",
+    "soru": "35 yaşında hasta, intihar amacıyla yüksek miktarda kostik içerikli lavabo açıcı içtikten 30 dakika sonra acile getiriliyor. Bilinci açık. Arkadaşın \"zehirlenme var, hemen nazogastrik sonda takıp lavaj yapalım\" diyor. Doğru yaklaşım hangisi?",
+    "secenekler": [
+     {
+      "metin": "Nazogastrik sonda takılmaz; koroziv madde alımı kontrendikasyondur.",
+      "dogru": true,
+      "aciklama": "Koroziv madde yutulurken farinks ve özofagus mukozasını yakar. Sonda yanmış dokuya değerek zararı artırır, bulantıyla kusma olursa madde yukarı çıkıp aynı dokuyu yeniden yakar; bu nedenle sonda takılmaz."
+     },
+     {
+      "metin": "Sonda takılır ve 300 mL suyla lavaj yapılır.",
+      "dogru": false,
+      "aciklama": "Mide lavajı zehirlenmede sondanın ana endikasyonudur ve 300–500 mL suyla yapılır. Ancak içilen madde koroziv olduğu için sonda yanık mukozaya zarar verir ve kusma maddeyi yeniden yukarı taşır; bu hastada lavaj uygulanmaz."
+     },
+     {
+      "metin": "Sonda bol jelle ve yavaşça takılırsa sorun olmaz.",
+      "dogru": false,
+      "aciklama": "Su bazlı jel sondanın burundan kolay geçmesini sağlayan kayganlaştırıcıdır. Jel miktarı yanmış mukozaya verilen zararı ve kusmayla maddenin yeniden yakmasını önlemez; kontrendikasyon tekniğe göre değişmez."
+     },
+     {
+      "metin": "Önce hastaya su içirip sonra sonda takılır.",
+      "dogru": false,
+      "aciklama": "Su içirmek ya da enjektörle az su vermek orofarinkste yutkunmayı kolaylaştıran bir yardımdır. Koroziv alımında sorun yutkunma değil yanık dokudur; sonda yine takılmaz."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nk-yanik"
+     }
+    ],
+    "puf": "Zehirlenme lavaj endikasyonudur ama koroziv madde kontrendikasyondur."
+   },
+   {
+    "id": "yuz-travma",
+    "baslik": "Yüzüne darbe alan motosiklet sürücüsü",
+    "sahne": "ng-kesit",
+    "adim": "ng-kontrendikasyon-travma",
+    "soru": "Motosiklet kazası geçiren hastanın orta yüzünde şişlik ve burnunda deformite var; maksiller kırık düşünülüyor. Mide içeriğini boşaltmak için sonda istendi. Ne yaparsın?",
+    "secenekler": [
+     {
+      "metin": "Nazogastrik sonda takmam; yüz–burun–üst damak travması kontrendikasyondur.",
+      "dogru": true,
+      "aciklama": "Sonda burundan ağız içine ve farinkse ilerlerken yüz, burun ve üst damaktan geçer. Bu bölgede kırık varsa anatomisi bozulmuş, belki deprese yapıya sonda iterek daha fazla zarar veririm; bu yüzden takmam."
+     },
+     {
+      "metin": "Sondayı kırık olmayan taraftaki burun deliğinden takarım.",
+      "dogru": false,
+      "aciklama": "Diğer burun deliğini denemek septum deviasyonunda bir delikten geçilemediğinde kullanılan çözümdür. Yüz kırığında sorun tek bir deliğin darlığı değil, bütün bölgenin bozulmuş anatomisidir; sonda takılmaz."
+     },
+     {
+      "metin": "Başını öne eğdirip daha dikkatli ilerletirim.",
+      "dogru": false,
+      "aciklama": "Başı öne eğdirmek sondanın trakea yerine özofagusa yönelmesini kolaylaştıran pozisyondur. Bu manevra kırık kemiklere verilecek zararı önlemez; travmalı hastada sonda yine takılmaz."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nk-kirik"
+     }
+    ]
+   },
+   {
+    "id": "kafa-tabani",
+    "baslik": "Kulaktan kanama ve göz çevresinde morluk",
+    "sahne": "ng-kesit",
+    "adim": "ng-kontrendikasyon-travma",
+    "soru": "Düşme sonrası gelen hastada her iki göz çevresinde morluk ve kulaktan kanlı akıntı var; kafa tabanı kırığı düşünülüyor. Kusma nedeniyle sonda istendi. Hangisi doğrudur?",
+    "secenekler": [
+     {
+      "metin": "Kafa tabanı kırığında nazogastrik sonda takılmaz.",
+      "dogru": true,
+      "aciklama": "Kafa tabanı kafatasının alt kısmıdır ve burun boşluğunun hemen üstünde yer alır. Kırık hattı olan bu bölgede burundan sonda ilerletmek kırık yapılara zarar verebilir; bu yüzden sonda takılmaz."
+     },
+     {
+      "metin": "Bilinci açıksa sonda takılabilir.",
+      "dogru": false,
+      "aciklama": "Bilinç ve hava yolu durumu ayrı bir kontrendikasyonun ölçütüdür; bilinci kapalı ve hava yolu korunmamış hastaya sonda takılmaz. Bilinç açık olsa da kafa tabanı kırığı tek başına sonda takmamak için yeterli nedendir."
+     },
+     {
+      "metin": "İnce bir beslenme sondası seçilirse takılabilir.",
+      "dogru": false,
+      "aciklama": "Beslenme sondası ince, yumuşak ve kılavuz telli bir sondadır, aynı yoldan burundan takılır. Kalınlığın azalması kırık bölgeden geçme sorununu ortadan kaldırmaz; kontrendikasyon sürer."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nk-kirik"
+     }
+    ],
+    "puf": "Kafa tabanı kırığı = burundan sonda yok."
+   },
+   {
+    "id": "bilinc",
+    "baslik": "Bilinci kapalı, hava yolu korunmamış hasta",
+    "sahne": "ng-kesit",
+    "adim": "ng-kontrendikasyon-bilinc",
+    "soru": "Bilinci kapalı, öğürme refleksi alınmayan ve entübe edilmemiş bir hastada mide boşaltmak için sonda düşünülüyor. En doğru ifade hangisi?",
+    "secenekler": [
+     {
+      "metin": "Hava yolu güvenceye alınmadan sonda takılmaz; kusarsa aspirasyon olur.",
+      "dogru": true,
+      "aciklama": "Bilinci kapalı ve hava yolu korunmamış hasta hava yolunu kendi koruyamaz. Sondanın yaptığı bulantıyla kusarsa mide içeriği trakeaya kaçar; bu aspirasyon hayatı tehdit eder, bu yüzden önce hava yolu sağlanır."
+     },
+     {
+      "metin": "Başı öne eğik tutulur ve yutkunma beklenmeden yavaşça ilerletilir.",
+      "dogru": false,
+      "aciklama": "Başı öne eğdirmek sondanın özofagusa yönelmesini kolaylaştıran pozisyondur. Ancak bu hasta hava yolunu koruyamaz; sondanın yaptığı bulantıyla kusarsa aspirasyon olur, pozisyon bu riski kaldırmaz."
+     },
+     {
+      "metin": "Yutkunma telkini yerine bol su verilerek sonda ilerletilir.",
+      "dogru": false,
+      "aciklama": "Enjektörle az miktarda su vermek, bilinci açık ve suyu yönetebilen hastada yutkunmayı kolaylaştırır. Bilinci kapalı hastada verilen su doğrudan aspirasyon riskidir."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nk-kusmuk"
+     }
+    ]
+   },
+   {
+    "id": "varis",
+    "baslik": "Siroz ve bilinen özofagus varisi",
+    "sahne": "ng-kesit",
+    "adim": "ng-kontrendikasyon-varis",
+    "soru": "Sirozlu ve endoskopide özofagus varisi saptanmış hasta kanlı kusma ile acile geliyor. Arkadaşın midede kan var mı diye bakmak için sonda takmak istiyor. Ne dersin?",
+    "secenekler": [
+     {
+      "metin": "Bilinen özofagus varisi olan hastaya sonda takmayız.",
+      "dogru": true,
+      "aciklama": "Özofagus varisi özofagus venlerinin genişlemesidir ve bu hastalar kanamaya yatkındır. Kanama şüphesi normalde sonda endikasyonu olsa da sonda genişlemiş venlere sürtünüp kanamayı artırabilir; bu yüzden takılmaz."
+     },
+     {
+      "metin": "Kanama şüphesi sonda endikasyonu olduğu için takarız.",
+      "dogru": false,
+      "aciklama": "Üst gastrointestinal kanama şüphesinde midede kanlı içerik olup olmadığını görmek gerçekten bir endikasyondur. Ancak varisi bilinen hastada sonda kanamayı artırabilir; bu durumda kontrendikasyon öne geçer."
+     },
+     {
+      "metin": "Sondayı çan uçlu enjektörle hava vererek hızla ilerletiriz.",
+      "dogru": false,
+      "aciklama": "Çan uçlu enjektör sonda yerleştikten sonra hava verip epigastriumu dinleyerek yer kontrolü yapmaya yarar. Sondanın varis üzerinden geçmesini güvenli hale getirmez."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nk-varis"
+     }
+    ]
+   },
+   {
+    "id": "zehir-lavaj",
+    "baslik": "İlaç zehirlenmesi, bilinci açık",
+    "sahne": "ng-mide",
+    "adim": "ng-endikasyon",
+    "soru": "Bilinci açık, hava yolunu koruyan hasta yüksek miktarda tablet içtiği için getiriliyor; koroziv madde yok, travma yok. Mide lavajı istendi. Föye göre ne yaparsın?",
+    "secenekler": [
+     {
+      "metin": "Sondayı takar, yerini kontrol eder, 300 mL su verip geri çekerim.",
+      "dogru": true,
+      "aciklama": "Mide lavajı gerekecek zehirlenme, föyde nazogastrik sondanın ilk sıradaki amacıdır. Kontrendikasyon yoksa sonda takılır, yeri hava ve dinlemeyle doğrulanır, sonra mideye su verilip torbayla geri alınır."
+     },
+     {
+      "metin": "Zehirlenmede sonda kontrendikedir, takmam.",
+      "dogru": false,
+      "aciklama": "Zehirlenmede mide lavajı ihtiyacı, föyde nazogastrik sondanın başlıca endikasyonu olarak geçer. Kontrendikasyon olan durum koroziv madde alımıdır ve bu hasta tablet içmiştir."
+     },
+     {
+      "metin": "Yer kontrolü yapmadan hemen su veririm.",
+      "dogru": false,
+      "aciklama": "Yer kontrolü sondanın midede olduğunu doğrulayan adımdır. Kontrol yapmadan verilen su sonda trakeadaysa doğrudan akciğere gider; su ancak yer doğrulandıktan sonra verilir."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nd-sonda"
+     },
+     {
+      "t": "goster",
+      "id": "nd-su"
+     }
+    ]
+   },
+   {
+    "id": "olcum",
+    "baslik": "Ne kadar ilerleteceksin?",
+    "sahne": "ng-govde",
+    "adim": "ng-olcum",
+    "soru": "Sondayı takmadan önce ne kadar ilerleteceğini belirlemek istiyorsun. Doğru ölçüm hangisidir?",
+    "secenekler": [
+     {
+      "metin": "Burun deliği → kulak memesi → ksifoid mesafesi ölçülüp sondada işaretlenir.",
+      "dogru": true,
+      "aciklama": "Bu ölçüm sondanın burundan mideye kadar gideceği yolu kişinin kendi vücut ölçüsüyle verir. Ksifoide denk gelen çizgi ya da santimetre işaretlenir ve sonda bu işarete kadar ilerletilir."
+     },
+     {
+      "metin": "Herkese aynı uzunluk, örneğin 50 santimetre ilerletilir.",
+      "dogru": false,
+      "aciklama": "Sondadaki 50, 60 gibi işaretler ne kadar ilerlediğini izlemek içindir. İnsanların boyu ve yapısı çok farklı olduğundan sabit bir uzunluk sondayı ya kısa bırakır ya fazla ilerletir."
+     },
+     {
+      "metin": "Ağız köşesinden göbeğe kadar olan mesafe ölçülür.",
+      "dogru": false,
+      "aciklama": "Ölçümün başlangıç noktası sondanın gireceği burun deliğidir, bitiş noktası mideye denk gelen ksifoid ve epigastriumdur. Ağız ve göbek bu yolu göstermez; başlangıç noktasını yanlış seçmek sık yapılan sınav hatasıdır."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nb-sonda-olcu"
+     }
+    ],
+    "puf": "Burun deliği → kulak memesi → ksifoid."
+   },
+   {
+    "id": "oksuruk",
+    "baslik": "İlerletirken öksürük",
+    "sahne": "ng-kesit",
+    "adim": "ng-oksuruk",
+    "soru": "Sondayı orofarinksten ilerletirken hasta şiddetle öksürmeye başlıyor ve konuşmakta zorlanıyor. Ne yaparsın?",
+    "secenekler": [
+     {
+      "metin": "Sondayı geri çekerim; larinkse girmiş olabilir.",
+      "dogru": true,
+      "aciklama": "Öksürük ve hava yolu irritasyonu sondanın larinks ya da trakeaya girdiğini düşündürür. Föy bu durumda sondanın geri çekilmesini ister; sonra baş öne eğik, yutkunma telkiniyle yeniden denenir."
+     },
+     {
+      "metin": "Öksürük normaldir, sondayı işarete kadar itmeye devam ederim.",
+      "dogru": false,
+      "aciklama": "Hafif öğürme bu işlemde sık görülür, ancak öksürük ve konuşma güçlüğü hava yolu irritasyon bulgusudur. Sondayı itmeye devam etmek onu trakeada ilerletir."
+     },
+     {
+      "metin": "Hava verip dinlerim, ses gelmezse yine de sabitlerim.",
+      "dogru": false,
+      "aciklama": "Hava verip epigastriumu dinlemek yer kontrolüdür ve ses duyulmaması sondanın midede olmadığını gösterir. Ses yokken sabitlemek yanlış yerdeki sondayı bırakmak demektir."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nk-sonda-trakea"
+     }
+    ]
+   },
+   {
+    "id": "ses-yok",
+    "baslik": "Epigastriumda ses yok",
+    "sahne": "ng-mide",
+    "adim": "ng-yer-kontrol",
+    "soru": "Sondayı işarete kadar ilerlettin, çan uçlu enjektörle aniden hava verdin ama epigastriumda hiçbir ses duymadın. Ne düşünür, ne yaparsın?",
+    "secenekler": [
+     {
+      "metin": "Sonda midede değil; trakeada ya da ağızda kıvrılmış olabilir, geri çekip yeniden yaparım.",
+      "dogru": true,
+      "aciklama": "Fokurdama sesi sıvı dolu mideye hava girince oluşur. Sonda trakeadaysa hava zaten hava dolu bir yapıya gider, ağızda kıvrılmışsa mideye ulaşmaz; sonda geri çekilir, işlem tekrarlanır."
+     },
+     {
+      "metin": "Havayı yavaşça yeniden veririm, ses gelmese de sabitlerim.",
+      "dogru": false,
+      "aciklama": "Yavaş verilen hava sıvıda fokurdama oluşturmaz, bu yüzden hava aniden verilir. Ses duyulmadan sabitlemek sondanın yanlış yerde kalmasına ve sonra akciğere içerik kaçmasına yol açabilir."
+     },
+     {
+      "metin": "Sondayı 5 santimetre daha ilerletip sabitlerim.",
+      "dogru": false,
+      "aciklama": "Ölçüm burun–kulak memesi–ksifoid mesafesiyle yapılır ve sonda bu işarete kadar ilerletilir. Ses yokken daha fazla itmek trakeadaki ya da kıvrılmış sondayı düzeltmez; önce geri çekilip yeniden denenir."
+     }
+    ],
+    "eylem": [
+     {
+      "t": "goster",
+      "id": "nd-sonda"
+     },
+     {
+      "t": "goster",
+      "id": "nd-stetoskop"
+     }
+    ]
+   },
+   {
+    "id": "enjektor",
+    "baslik": "Hangi enjektör?",
+    "sahne": "ng-malzeme",
+    "adim": "ng-malzeme-kontrol",
+    "soru": "Yer kontrolü için tepside iki enjektör var: küçük luer uçlu normal enjektör ve 50 mL çan uçlu enjektör. Hangisini seçersin?",
+    "secenekler": [
+     {
+      "metin": "Çan uçlu enjektörü; ucu sondanın ağzına tam oturur.",
+      "dogru": true,
+      "aciklama": "Çan uçlu enjektörün geniş konik ucu sondanın bağlantı ağzına tam oturur. Böylece verilen hava kaçmadan mideye gider ve epigastriumda fokurdama sesi duyulabilir."
+     },
+     {
+      "metin": "Normal enjektörü; daha hassas hava verir.",
+      "dogru": false,
+      "aciklama": "Normal enjektör küçük luer uçludur ve damar ya da kas içine ilaç vermekte kullanılır. Ucu sondanın ağzına oturmadığı için verilen hava kenardan kaçar ve yer kontrolü güvenilir olmaz."
+     },
+     {
+      "metin": "Enjektör gerekmez, hastaya su içirmek yeterlidir.",
+      "dogru": false,
+      "aciklama": "Enjektörle az miktarda su vermek orofarinkste yutkunmayı kolaylaştırmak için kullanılır. Sondanın midede olduğunu göstermez; yer kontrolü için çan uçlu enjektörle hava ve stetoskopla dinleme gerekir."
+     }
+    ]
+   },
+   {
+    "id": "vazelin",
+    "baslik": "Jel bitti",
+    "sahne": "ng-malzeme",
+    "adim": "ng-malzeme",
+    "soru": "Sondayı kayganlaştırmak için jel bulamadın, tepside vazelin var. Hangisi doğrudur?",
+    "secenekler": [
+     {
+      "metin": "Vazelin petrol ürünüdür, ilk tercih değildir; başka hiçbir şey yoksa çok az kullanılabilir.",
+      "dogru": true,
+      "aciklama": "Önerilen kayganlaştırıcı su bazlı jeldir ve üretral kateterde kullanılan jel bunun için uygundur. Vazelin bir petrol ürünüdür; hoca yalnız çaresiz kalındığında çok az miktarda kullanılabileceğini söyler."
+     },
+     {
+      "metin": "Vazelin en iyi kayganlaştırıcıdır, bolca sürülür.",
+      "dogru": false,
+      "aciklama": "Vazelin yağlı bir petrol ürünüdür ve bu işlem için önerilen kayganlaştırıcı su bazlı jeldir. Bolca vazelin sürmek doğru tercih olmaz."
+     },
+     {
+      "metin": "Kayganlaştırıcı gerekmez, sonda kuru takılır.",
+      "dogru": false,
+      "aciklama": "Burun kaygan bir alan değildir ve föy sondaya su bazlı kayganlaştırıcı sürülmesini ister. Kuru sonda mukozayı tahriş eder ve ilerlemesi zorlaşır."
+     }
+    ]
+   }
+  ],
+  "bul": [
+   {
+    "id": "bul-ozofagus",
+    "sahne": "ng-kesit",
+    "yonerge": "Sondanın girmesi gereken yapıyı bul.",
+    "hedef": "nk-ozofagus",
+    "aciklama": "Sonda özofagusa girmelidir; özofagus trakeanın arkasında yer alır. Trakea önde, larinksin devamıdır ve sonda oraya girerse hasta öksürür.",
+    "adim": "ng-anatomi"
+   },
+   {
+    "id": "bul-damak",
+    "sahne": "ng-kesit",
+    "yonerge": "Sondayı iterken paralel gideceğin kemiği bul.",
+    "hedef": "nk-sert-damak",
+    "aciklama": "Sonda sert damağa yani palatin kemiğe paralel olarak dümdüz arkaya itilir. Yukarı doğru itmek sondayı burun boşluğunun tavanına çarptırır.",
+    "adim": "ng-ilerletme"
+   },
+   {
+    "id": "bul-kulak",
+    "sahne": "ng-govde",
+    "yonerge": "Ölçümde burun deliğinden sonra uzandığın noktayı bul.",
+    "hedef": "nb-kulak",
+    "aciklama": "Ölçüm burun deliği, kulak memesi ve ksifoid sırasıyla yapılır. Kulak memesi ikinci noktadır.",
+    "adim": "ng-olcum"
+   },
+   {
+    "id": "bul-epigastr",
+    "sahne": "ng-govde",
+    "yonerge": "Yer kontrolünde stetoskobu koyacağın bölgeyi bul.",
+    "hedef": "nb-epigastr",
+    "aciklama": "Stetoskop epigastrik bölgeye konur. Çan uçlu enjektörle aniden verilen hava midede fokurdama sesi yapar.",
+    "adim": "ng-yer-kontrol"
+   },
+   {
+    "id": "bul-enjektor",
+    "sahne": "ng-malzeme",
+    "yonerge": "Yer kontrolünde kullanacağın enjektörü bul.",
+    "hedef": "nm-enjektor-can",
+    "aciklama": "Çan uçlu 50 mililitrelik enjektörün ucu sondanın ağzına tam oturur. Normal enjektörden verilen hava kenardan kaçar.",
+    "adim": "ng-malzeme-kontrol"
+   }
+  ]
+ },
+ "hedefCalisma": [
+  {
+   "no": 1,
+   "sahne": "ng-pozisyon",
+   "ne": "Hastaya adını ve görevini söyleyerek kendini tanıtırsın.",
+   "nasil": [
+    "Hastanın yanına gidip yüzüne bakarak \"Merhaba, ben Doktor …\" diye başlarsın.",
+    "Sınavda maket başında da bu cümleyi yüksek sesle söylersin; bu adım puanlanır."
+   ],
+   "neden": "Hasta kendisine kimin dokunacağını bilince güvenir ve işlemde iş birliği yapar.",
+   "hata": "Hastayla konuşmadan doğrudan sondaya uzanmak.",
+   "hoca": "Hastaya ilk ne söylersin?",
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hekim",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hekim"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "sahne": "ng-pozisyon",
+   "ne": "Yapacağın işlemi ve ne hissedebileceğini hastaya anlatır, onayını alırsın.",
+   "nasil": [
+    "Mide bulandırabileceğini, burunda tahriş ya da küçük kanama olabileceğini söylersin.",
+    "Kusmak isterse poşet tutacağını, söylediklerini uygularsa işlemin kısa süreceğini anlatır, sorusu olup olmadığını sorarsın."
+   ],
+   "neden": "Ne olacağını bilen hasta öğürse bile başını geri atmaz, yutkunma komutlarına uyar.",
+   "hata": "Bilgilendirme yapmadan ya da onay almadan işleme başlamak.",
+   "hoca": "Hastaya işlemi nasıl anlatırsın?",
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-poset",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-poset",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hasta",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    }
+   ],
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hasta"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "sahne": "ng-malzeme",
+   "ne": "Malzemeleri hazırlar ve kontrol edersin.",
+   "nasil": [
+    "Uygun kalınlıkta sonda, su bazlı jel, çan uçlu enjektör, stetoskop, flaster, eldiven, örtü, kusma poşeti, su ve torba hazırlanır.",
+    "Sondanın renkli ucu kalınlığını, gövdesindeki çizgi ve sayılar uzunluğu gösterir; paket işlemden hemen önce açılır."
+   ],
+   "neden": "Eksik malzeme işlemi yarıda keser; özellikle çan uçlu enjektör yoksa yer kontrolü yapılamaz.",
+   "hata": "Normal enjektör hazırlamak: ucu sondaya oturmaz, hava kaçar.",
+   "hoca": "Tepsiye neleri koyarsın?",
+   "film": [
+    {
+     "sahne": "ng-malzeme",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-sonda"
+      }
+     ],
+     "odak": "nm-sonda",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nm-jel"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-enjektor-can"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-kalinlik"
+      }
+     ],
+     "odak": "nm-kalinlik",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-enjektor-can"
+      }
+     ],
+     "odak": "nm-enjektor-can",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nm-enjektor-normal"
+      }
+     ],
+     "odak": "nm-enjektor-normal",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nm-enjektor-normal",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nm-enjektor-normal",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "nm-sonda"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "sahne": "ng-pozisyon",
+   "ne": "Ellerini su ve sabunla yıkar, eldiven giyersin.",
+   "nasil": [
+    "Eldiven giyecek olsan ya da dezenfektan kullansan da önce ellerini yıkarsın.",
+    "Ardından steril olmayan eldiven giyersin; işlem steril değil, temiz bir işlemdir."
+   ],
+   "neden": "Hastane enfeksiyonlarının önemli bir basamağı sağlık çalışanlarının elleridir.",
+   "hata": "Dezenfektanı ya da eldiveni el yıkamanın yerine saymak.",
+   "hoca": "El yıkamayı neden atlamazsın?",
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-eldiven"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-eldiven"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-lavabo",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-lavabo"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "sahne": "ng-govde",
+   "ne": "Sondanın ilerletilecek uzunluğunu hastanın üzerinde ölçersin.",
+   "nasil": [
+    "Sondanın ucunu burun deliğine koyar, kulak memesine, oradan ksifoide uzatırsın.",
+    "Ksifoide denk gelen çizgiyi ya da santimetreyi işaretler, sondayı bu işarete kadar ilerletirsin."
+   ],
+   "neden": "İnsanların boyu ve yapısı farklıdır; sabit bir uzunluk sondayı kısa bırakır ya da fazla ilerletir.",
+   "hata": "Ölçüme burun deliği dışında bir yerden başlamak ya da sırayı karıştırmak.",
+   "hoca": "Sondanın uzunluğunu nasıl ölçersin?",
+   "film": [
+    {
+     "sahne": "ng-govde",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-sonda-olcu"
+      }
+     ],
+     "odak": "nb-burun",
+     "zoom": 1.35
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nb-olcu-1"
+      }
+     ],
+     "odak": "nb-kulak",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nb-olcu-2"
+      }
+     ],
+     "odak": "nb-ksifoid",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-isaret"
+      }
+     ],
+     "odak": "nb-isaret",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nb-burun"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-kulak"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-ksifoid"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nb-burun"
+      }
+     ],
+     "odak": "nb-burun",
+     "zoom": 1.35
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nb-sonda-olcu"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "sahne": "ng-burun",
+   "ne": "Sondanın ucuna su bazlı kayganlaştırıcı sürersin.",
+   "nasil": [
+    "Uçtan yaklaşık 5 santimetrelik bölümü jellersin.",
+    "Jeli sondaya sıkabilir ya da baskın olmayan elinin eldiveni üzerine koyup ucu içinden geçirebilirsin."
+   ],
+   "neden": "Burun kaygan bir alan değildir; jel mukozayı korur ve sondanın rahat ilerlemesini sağlar.",
+   "hata": "Jel yerine ilk tercih olarak vazelin kullanmak.",
+   "hoca": "Sondayı neyle, ne kadar kayganlaştırırsın?",
+   "film": [
+    {
+     "sahne": "ng-burun",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nr-jel"
+      }
+     ],
+     "odak": "nr-jel",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nr-jel"
+      }
+     ],
+     "odak": "nr-jel",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-jel"
+      }
+     ],
+     "odak": "nr-sonda",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-burun"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "sahne": "ng-malzeme",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-vazelin"
+      }
+     ],
+     "odak": "nm-vazelin",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nm-vazelin",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nm-vazelin",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nr-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nr-jel"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "sahne": "ng-kesit",
+   "ne": "Sondayı burun deliğinden sokup sert damağa (palatin kemiğe) paralel itersin.",
+   "nasil": [
+    "Başı hafifçe öne eğik hastada burun ucunu gerekirse kaldırır, sondayı dümdüz arkaya itersin.",
+    "Kulak memesi hizasından sonra farinkste sonda aşağı döner; onu aşağı yönde ilerletirsin."
+   ],
+   "neden": "Damağa paralel itilen sonda burun tabanını izler ve nazofarinkse kolayca ulaşır.",
+   "hata": "Sondayı yukarı doğru itmek ya da geçmeyen delikte zorlamak.",
+   "hoca": "Sondayı hangi yönde itersin?",
+   "film": [
+    {
+     "sahne": "ng-kesit",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      }
+     ],
+     "odak": "nk-burun-delik",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-ok-duz"
+      }
+     ],
+     "odak": "nk-sert-damak",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-ok-asagi"
+      }
+     ],
+     "odak": "nk-orofarinks",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-sert-damak"
+      }
+     ],
+     "odak": "nk-sert-damak",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nk-kafa-tabani",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nk-burun-bosluk",
+     "zoom": 1.25
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nk-sonda"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "sahne": "ng-kesit",
+   "ne": "Sondanın ucu orofarinkse ulaşınca hastadan yutkunmasını istersin ya da su içirirsin.",
+   "nasil": [
+    "\"Ben söyleyince yutkunun\" der, hasta her yutkunduğunda sondayı biraz daha ilerletirsin.",
+    "Bilinci açık ve suyu yönetebilen hastaya enjektörle az miktarda su verebilirsin."
+   ],
+   "neden": "Yutkunmada epiglot larinksi kapatır ve sonda trakea yerine özofagusa gider.",
+   "hata": "Suyu güvenle yutamayacak hastaya su vermek.",
+   "hoca": "Orofarinkste ne istersin, neden?",
+   "film": [
+    {
+     "sahne": "ng-kesit",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      }
+     ],
+     "odak": "nk-orofarinks",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nk-orofarinks"
+      }
+     ],
+     "odak": "nk-orofarinks",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-su"
+      }
+     ],
+     "odak": "nk-su",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-epiglot"
+      },
+      {
+       "t": "goster",
+       "id": "nk-epiglot-kapali"
+      }
+     ],
+     "odak": "nk-larinks",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-trakea"
+      }
+     ],
+     "odak": "nk-trakea",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nk-trakea",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nk-trakea",
+     "zoom": 1.25
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nk-sonda"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "sahne": "ng-mide",
+   "ne": "Sondayı işarete kadar iter, hava verirken stetoskopla mideyi dinlersin.",
+   "nasil": [
+    "Çan uçlu enjektörle havayı aniden verir, stetoskobu epigastriuma koyarsın.",
+    "Fokurdama sesi duyarsan sonda midededir; bir elin sondayı hiç bırakmaz."
+   ],
+   "neden": "Ses sıvı dolu mideye hava girince oluşur; trakeadaki sondadan verilen havada bu ses duyulmaz.",
+   "hata": "Havayı yavaş vermek ya da sondayı bırakıp kaymasına izin vermek.",
+   "hoca": "Sondanın midede olduğunu nasıl anlarsın?",
+   "film": [
+    {
+     "sahne": "ng-mide",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nd-enjektor"
+      }
+     ],
+     "odak": "nd-enjektor",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-stetoskop"
+      }
+     ],
+     "odak": "nd-epigastr",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-hava"
+      },
+      {
+       "t": "goster",
+       "id": "nd-ses"
+      }
+     ],
+     "odak": "nd-mide",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nd-ses"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-enjektor"
+      }
+     ],
+     "odak": "nd-enjektor",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nd-enjektor",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nd-enjektor",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nd-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nd-enjektor"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "sahne": "ng-kesit",
+   "ne": "Öksürük gibi hava yolu irritasyon bulgusu gelişirse sondayı geri çekersin.",
+   "nasil": [
+    "Öksürük, konuşma güçlüğü sondanın larinkse girdiğini düşündürür.",
+    "Sondayı geri çeker, başı öne eğip yutkunma telkiniyle yeniden denersin."
+   ],
+   "neden": "Trakeaya ilerletilen sondadan verilecek sıvı doğrudan akciğere gider.",
+   "hata": "Öksürüğe rağmen sondayı işarete kadar itmeye devam etmek.",
+   "hoca": "Hasta öksürürse ne yaparsın?",
+   "film": [
+    {
+     "sahne": "ng-kesit",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda-trakea"
+      }
+     ],
+     "odak": "nk-larinks",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nk-sonda-trakea"
+      }
+     ],
+     "odak": "nk-trakea",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-sonda-trakea"
+      },
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      }
+     ],
+     "odak": "nk-ozofagus",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nk-ozofagus",
+       "renk": "yesil"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-trakea"
+      }
+     ],
+     "odak": "nk-trakea",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nk-trakea",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nk-trakea",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nk-sonda-trakea"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "sahne": "ng-burun",
+   "ne": "Sondayı flasterle buruna sabitlersin.",
+   "nasil": [
+    "İnce bir flaster şeridinin bir ucunu burnun üzerine yapıştırır, diğer ucunu sondanın etrafına sararsın.",
+    "Terli, yağlı ya da hareketli hastada üzerine ek ince bir bant koyarsın."
+   ],
+   "neden": "Yeri değişen ya da çıkan sonda içeriğin akciğere kaçmasına yol açabilir.",
+   "hata": "Kalın bir bantla diğer burun deliğini de kapatmak.",
+   "hoca": "Sondayı nasıl sabitlersin?",
+   "film": [
+    {
+     "sahne": "ng-burun",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nr-flaster-burun"
+      }
+     ],
+     "odak": "nr-flaster-burun",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-flaster-sarim"
+      }
+     ],
+     "odak": "nr-flaster-sarim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-ek-bant"
+      }
+     ],
+     "odak": "nr-ek-bant",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nr-flaster-burun"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-delik-sol"
+      }
+     ],
+     "odak": "nr-delik-sol",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nr-delik-sol",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nr-delik-sol",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nr-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nr-flaster-burun"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "sahne": "ng-mide",
+   "ne": "Mide lavajı için mideye su verip geri alırsın.",
+   "nasil": [
+    "Föye göre 300 mililitre, hocaya göre 300 ile 500 mililitre su verirsin.",
+    "Ardından sondanın ucuna torba takar, mide hizasının altında tutarsın; içerik negatif basınçla torbaya akar."
+   ],
+   "neden": "Lavaj zehirlenmede midedeki maddenin uzaklaştırılmasını sağlar.",
+   "hata": "Yer kontrolü yapmadan su vermek.",
+   "hoca": "Lavajı nasıl yaparsın?",
+   "film": [
+    {
+     "sahne": "ng-mide",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nd-su"
+      }
+     ],
+     "odak": "nd-mide",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nd-su"
+      }
+     ],
+     "odak": "nd-mide",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nd-su"
+      },
+      {
+       "t": "goster",
+       "id": "nd-torba"
+      }
+     ],
+     "odak": "nd-torba",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nd-akis"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-sonda"
+      }
+     ],
+     "odak": "nd-sonda",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nd-sonda",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nd-sonda",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nd-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nd-su"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "sahne": "ng-pozisyon",
+   "ne": "İşlem sonunda sabitleme bandını söker, sondayı çıkarırsın.",
+   "nasil": [
+    "Kendini tanıtıp anlatır, örtüyü serer ve kusma poşetini verirsin.",
+    "Bantları söker, sondayı örtüyle birlikte toplayarak çeker, örtüyü toplayıp atarsın."
+   ],
+   "neden": "Sondayla gelen sümük ve mide içeriği örtünün içinde kalır, çevreye saçılmaz.",
+   "hata": "Bandı sökmeden çekmek ya da sondayı örtüsüz çekip partikül saçmak.",
+   "hoca": "Sondayı nasıl çıkarırsın?",
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-sonda"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-ortu"
+      },
+      {
+       "t": "goster",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-ortu",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-sonda"
+      }
+     ],
+     "odak": "np-sonda",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "np-sonda"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-ortu"
+      }
+     ],
+     "odak": "np-ortu",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-ortu",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-ortu",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "np-sonda"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "sahne": "ng-pozisyon",
+   "ne": "Yaptığın işlemi, gelişen komplikasyonlarla birlikte kaydedersin.",
+   "nasil": [
+    "İşlemi, ölçtüğün uzunluğu ve yer kontrolünün sonucunu yazarsın.",
+    "Burun kanaması, öksürük ya da kusma gibi komplikasyonları da kayda geçirirsin."
+   ],
+   "neden": "Kayıt, sondanın yerini sonradan değerlendirecek ekibe ve medikolegal açıdan sana yol gösterir.",
+   "hata": "Komplikasyonu kaydetmeden işlemi bitirmek.",
+   "hoca": "Kayda neleri yazarsın?",
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hekim",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    }
+   ],
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hekim"
+    }
+   ]
+  }
+ ]
+}

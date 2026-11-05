@@ -39,7 +39,9 @@ const ikiB = (ad: string) => !eskiLottie() && !!VERI2[`../../data/kmb/lottie2b/$
 /** Konu videoları (lottie_uret.py) + adım videoları (adim_lottie.py: her cümle bir bölüm, ses `o-<adım>`); 2B kaydı eskinin yerine geçer */
 const ESKI = [...(LINDEX as unknown as LottieBilgi[]), ...(AINDEX as unknown as LottieBilgi[])];
 const YENI = [...(LINDEX2 as unknown as LottieBilgi[]), ...(AINDEX2 as unknown as LottieBilgi[])];
-export const LOTTILER: LottieBilgi[] = ESKI.map((v) => (ikiB(v.ad) && YENI.find((y) => y.ad === v.ad)) || v);
+export const LOTTILER: LottieBilgi[] = ESKI.map((v) => (ikiB(v.ad) && YENI.find((y) => y.ad === v.ad)) || v)
+  // yalnız 2B hattında olan videolar (2026-11-05: Nazogastrik sonda 01, ad öneki ng-)
+  .concat(YENI.filter((y) => !ESKI.some((v) => v.ad === y.ad)));
 export const klipAdi = (v: LottieBilgi) => (v.adim ? `o-${v.adim}` : `l-${v.ad}`);
 export const sn = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 export const KMB_DURDUR = 'kmb-durdur';

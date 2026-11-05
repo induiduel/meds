@@ -111,7 +111,9 @@ def damla(x, y, s=1.0, renk=IDRAR):
 
 
 def carpi(A, x, y, b, fr=0.3, r=36, son=None):
-    A.ekle(f'carpi-{b}', G(yol(f'M{x - r} {y - r} L{x + r} {y + r} M{x + r} {y - r} L{x - r} {y + r}'), st(KIRMIZI, 9)), o=belir(A, b, fr, son if son is not None else b))
+    # iki ayrı kol: lottie_dsl.yol tek alt yol üretir; tek yolda ikinci M birleşip "Z" çiziyordu (2026-11-05)
+    A.ekle(f'carpi-{b}', G(yol(f'M{x - r} {y - r} L{x + r} {y + r}'), st(KIRMIZI, 9)), G(yol(f'M{x + r} {y - r} L{x - r} {y + r}'), st(KIRMIZI, 9)),
+           o=belir(A, b, fr, son if son is not None else b))
 
 
 def tik(A, x, y, b, fr=0.3, son=None):

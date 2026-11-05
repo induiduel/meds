@@ -2227,3 +2227,23 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** yazar 20 kelime alt sınırını geçmek için açıklamaları betikle doldurdu (k2-16'dan kopyalanan yol); `sik_aciklama.py` bu kalıbı tanımıyordu.
 - **Çözüm/önleme:** kalıp `BOS_KALIP`'a eklendi (HATA); sayısal alt sınır ancak şıkka özgü bilgiyle aşılır, betikle ek yazılmaz. k2-16 dahil yayındakiler taranır.
 - **H496 ek (2026-11-05, temizlik):** yayınlanmış 59 dosyada 111 eşleşme tarandı; 109'u yeniden yazıldı (2 meşru tıbbi ifade gerekçeyle bırakıldı). Kök neden 2: src/data'daki düzeltme sesi yenilemez — ses `meds_temp/.../cikti_tam` ve `asistan/cikti` içindeki `ses` alanından üretilir; metni değişen her açıklamada `ses` alanı da güncellenmeli, sonra ses.py/asistan_ses.py. Not: `patoloji_onem/asistan_ses.py` CUDA'yı kendisi kapatır (GPU sarmalayıcıda bile CPU'da çalışır).
+
+### H497 — KMB Lottie: çarpı "Z" çiziyordu; çok alt yollu SVG tek şekle birleşiyordu (2026-11-05)
+- **Belirti:** KMB videolarında kırmızı çarpı (ortak2b.carpi) iki kol yerine Z biçiminde; kesik çizgi/akış yollarında alt yollar arası fazladan çizgi.
+- **Kök neden:** `lottie_dsl.yol` her yolu tek Lottie `sh` alt yolu sayıyordu; `M… L… M… L…` dizisinde ikinci M bir önceki noktadan çizgiyle bağlandı.
+- **Çözüm/önleme:** `yol` çok-M yolu alt yol başına ayrı `sh` listesi döndürür, `G` listeleri düzleştirir; `carpi` iki ayrı kol çizer. 02 (eski + 2B) videoları yeniden üretildi.
+
+### H498 — KMB: ata grupta transform olan sahnede kutular (bbox) 60 px kaydı (2026-11-05)
+- **Belirti:** ng-kesit sahnesinde video halkaları/etiketleri ve Hedefler filmi kamerası farinks bölgesinde 50–80 px kayık hedefliyordu.
+- **Kök neden:** `getBBox` ögenin kendi koordinatını verir; sahne çizimi `translate(60 0)` grubunun içindeydi. `svg_disa.mjs` ve `HedefFilmi.tsx` dönüşümü hesaba katmıyordu.
+- **Çözüm/önleme:** ikisi de kutuyu `svg.getCTM()⁻¹ · el.getCTM()` ile sahne köküne çevirir. Sahnede grup kaydırması serbest; kutular hep kök koordinatında.
+
+### H499 — KMB: clipPath'li sıvı Lottie'de dikdörtgen olarak organ dışına taştı (2026-11-05)
+- **Belirti:** ng-mide videolarında mide içeriği mide dışına taşan dikdörtgen.
+- **Kök neden:** `svg_lottie.py` süzgeç/desen/kırpma taşımaz; sahnede sıvı `clipPath` ile kırpılmış dikdörtgendi.
+- **Çözüm/önleme:** sıvı organ biçiminde açık yol olarak çizildi. Kural: Lottie'ye gidecek KMB sahnelerinde `clipPath`/`mask`/`filter` kullanılmaz; biçim yolla verilir.
+
+### H500 — KMB: altyazı bandı (alt %24) kesitteki ana yapıları örtüyordu (2026-11-05)
+- **Belirti:** Nazogastrik kesitte larinks/trakea/özofagus girişi ve aspirasyon oku altyazı açıkken görünmüyordu.
+- **Kök neden:** sahne anatomisi tüm 500 px yüksekliğe yayılmıştı; kamera kadraj kenarını aşamadığı için yakınlaşma da kurtarmadı.
+- **Çözüm/önleme:** anatomi 70 px yukarı taşındı, alt yapılar kadraj altına uzatıldı. Yeni KMB sahnesinde anlatılacak yapılar y ≤ 380 içinde çizilir.

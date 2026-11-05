@@ -66,7 +66,7 @@ def erkek_ilerleyis(z):
 
 def ureticiler():
     out = [erkek_ilerleyis]
-    for mod in ('uret2b_a', 'uret2b_b'):
+    for mod in ('uret2b_a', 'uret2b_b', 'uret2b_ng'):
         try:
             m = __import__(mod)
             out += list(m.URETICILER)
@@ -77,6 +77,8 @@ def ureticiler():
 
 def uret(secili=None):
     ses = json.loads(SES.read_text(encoding='utf-8')) if SES.exists() else {}
+    s01 = SES.with_name('ses_01.json')  # ng- önekli videolar Nazogastrik sonda (01) klipleridir
+    ses01 = json.loads(s01.read_text(encoding='utf-8')) if s01.exists() else {}
     CIKTI.mkdir(parents=True, exist_ok=True)
     idx_yol = CIKTI / 'index.json'
     idx = {x['ad']: x for x in json.loads(idx_yol.read_text(encoding='utf-8'))} if idx_yol.exists() else {}
@@ -84,7 +86,7 @@ def uret(secili=None):
         on = f(None)
         if secili and on.ad not in secili:
             continue
-        k = ses.get(f'l-{on.ad}')
+        k = (ses01 if on.ad.startswith('ng-') else ses).get(f'l-{on.ad}')
         z = k['zaman'] if k and len(k['zaman']) == len(on.bolumler) else None
         A = f(z) if z else on
         (CIKTI / f'{A.ad}.json').write_text(json.dumps(A.json(), ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
