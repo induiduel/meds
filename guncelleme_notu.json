@@ -1,12 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 649,
-  "baslik": "Yeni Nöroloji dersleri: Polinöropatiler ve Bazal Ganglionlar",
+  "onem": 650,
+  "baslik": "Şık açıklamaları düzeltildi",
   "maddeler": [
-    "Polinöropatiler ve Bazal Ganglionlar: sesli ders (EMA), şekil anlatımları ve canlı çizim",
-    "İki ders için en önemliler, sesli soru çözücü ve hocanın sorabileceği sorular",
-    "Terimler, kısaltmalar, ders içerik paketi ve quiz havuzu",
-    "Şık açıklamalarında geçiştirme kalıpları için yeni denetim"
+    "Enfeksiyon, Patoloji, Üroloji, Genetik ve Kurul 2 çözücü/asistanlarında geçiştirme açıklamaları yeniden yazıldı",
+    "Kurul 1 ve Kurul 2 örnek sorularında 50 şık açıklaması geliştirildi",
+    "Değişen açıklamaların sesleri yenilendi"
   ],
   "eklenen": [],
   "degisen": [],

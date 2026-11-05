@@ -1724,7 +1724,7 @@
       "E": "Yalnız D-dimer yüksek"
      },
      "dogru": "D",
-     "aciklama": "VII ekstrinsik yola özgüdür; aPTT listesinde yer almaz.",
+     "aciklama": "Faktör VII ekstrinsik yola özgüdür ve PT ekstrinsik yol ile ortak yolu (VII, X, V, II, fibrinojen) ölçer. aPTT ise intrinsik ve ortak yolu değerlendirdiği için Faktör VII içermez; izole eksiklikte PT uzar, aPTT normal kalır.",
      "sik_aciklamalari": {
       "A": "Yanlış. Bu intrinsik yol faktörü (ör. VIII, IX) eksikliğinin örüntüsüdür (s. 22).",
       "B": "Yanlış. Bu ortak yol faktörü eksikliğinin örüntüsüdür (s. 22).",
@@ -3083,7 +3083,7 @@
      "dogru": "E",
      "aciklama": "Endotel aktivasyonunda pıhtılaşma inhibitörlerinden trombomodulin, protein C reseptörü ve TFPI azalır. Endotel protein C reseptörü hem sağlam endotelin antikoagülan ürünüdür hem de aktivasyonda kaybedilir.",
      "sik_aciklamalari": {
-      "A": "Yanlış: trombosit inhibitör ve vazodilatördür; antikoagülan grupta değildir ve aktivasyon listesinde yer almaz (s. 29, 35).",
+      "A": "Yanlış: nitrik oksit sağlam endotelin ürettiği trombosit inhibitörü ve vazodilatör bir moleküldür. Antikoagülan grupta değil antitrombosit grupta yer alır; endotel aktivasyonunda azaldığı sayılan pıhtılaşma inhibitörleri ise trombomodulin, protein C reseptörü ve TFPI'dır (s. 29, 35).",
       "B": "Yanlış: fibrinolitik etkilidir, antikoagülan değildir; aktivasyonda fibrinoliz PAI artışıyla azalır (s. 29, 35).",
       "C": "Yanlış: trombosit inhibitör grupta yer alır; aktivasyonda azalan inhibitörler listesinde değildir (s. 29, 35).",
       "D": "Yanlış: sağlam endotelin trombosit inhibitör ürünüdür; kaynakta aktivasyonda azalan moleküller arasında sayılmaz (s. 29, 35).",

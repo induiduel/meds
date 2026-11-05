@@ -221,7 +221,7 @@
       "A": "Madde kullanımı veya kesilmesine bağlı başağrısı ICHD-3'ün 8. başlığıdır ve ilaç ya da madde ile ilişkisi olduğundan sekonder gruptadır. Bu yüzden sekonder olmayanı arayan soruda seçilmez (sayfa 4).",
       "B": "Homeostaz bozukluğuna bağlı başağrısı 10. başlıktır ve vücudun iç dengesinin bozulmasına bağlı oluşan bir semptomdur. Sekonder grupta yer aldığından yanlış seçenek değildir (sayfa 4).",
       "C": "Psikiyatrik bozukluklara bağlı başağrısı 12. başlıktır ve ruhsal bir hastalığın belirtisi olarak ortaya çıkar. Sekonder grubun son başlığı olduğundan bu soruda doğru yanıt olamaz (sayfa 4).",
-      "D": "Damarsal olmayan intrakraniyal bozukluklara bağlı başağrısı 7. başlıktır; kafa içi bir yapısal sorunun belirtisidir. Sekonder gruba ait olduğu için aranan yanıt değildir (sayfa 4).",
+      "D": "Damarsal olmayan intrakraniyal bozukluklara bağlı başağrısı sınıflamanın 7. başlığıdır ve kafa içindeki yapısal bir sorunun belirtisi olarak ortaya çıkar. Altta yatan bir nedene bağlı olduğu için sekonder başağrıları grubuna aittir; soru ise bu gruptan ayrı bir başlığı sormaktadır (sayfa 4).",
       "E": "Gerilim tipi başağrısı en sık görülen primer başağrısıdır; bizzat kendisi hastalık olduğundan sekonder değil primer gruba girer. Soru sekonder olmayanı sorduğu için doğru yanıt budur (sayfa 3 ve 18)."
      },
      "bilgi": [
@@ -530,9 +530,9 @@
      "aciklama": "Anamnezde mutlaka sorulacak on iki başlıktan biri emosyonel faktörlerin ağrıyla ilişkisidir; hoca bunun önemli olduğunu özellikle belirtmiştir. Papilödem, ense sertliği, sedimantasyon ve BBT ise muayene ve yardımcı tanı yöntemleridir (sayfa 7, 9 ve 10).",
      "sik_aciklamalari": {
       "A": "Emosyonel faktörler anamnezin mutlaka sorulacak başlıklarındandır; yaşanan olaylar başağrısını artırabilir. Bu bilgi özellikle gerilim tipi ve migren ağrılarında tetikleyici ilişkiyi göstermek için sorgulanır (sayfa 7).",
-      "B": "Papilödem göz dibi muayenesiyle saptanan bir bulgudur ve sekonder başağrısı düşündürür. Öykü sırasında hastaya sorulan bir başlık değil, fizik muayene bulgusu olduğundan anamnez listesinde yer almaz (sayfa 9).",
+      "B": "Papilödem göz dibi muayenesiyle saptanan bir bulgudur ve sekonder başağrısını düşündürür. Hastaya öyküde sorulan bir başlık olmayıp hekimin fizik muayenede kendisinin gördüğü bir bulgu olduğundan anamnez başlıklarıyla karıştırılmamalıdır (sayfa 9).",
       "C": "Sedimantasyon kan testleriyle ölçülen bir yardımcı tanı yöntemidir; temporal arterit gibi durumlarda yükselir. Anamnezde sorulan bir bilgi olmadığı için bu listenin parçası değildir (sayfa 10).",
-      "D": "BBT hemoraji, hidrosefali ve tümörü gösteren bir görüntüleme yöntemidir. Hekimin hastaya sorduğu bir öykü başlığı olmadığından anamnez listesinde yer almaz; sekonder neden düşünüldüğünde istenir (sayfa 10).",
+      "D": "BBT hemoraji, hidrosefali ve tümörü gösteren bir görüntüleme yöntemidir ve sekonder neden düşünüldüğünde istenir. Hekimin hastaya sorduğu bir öykü başlığı değil, öyküden sonra başvurulan bir tetkiktir; bu yüzden anamnez başlıklarından ayrı tutulur (sayfa 10).",
       "E": "Ense sertliği ateşle birlikte sekonder başağrısı düşündüren bir muayene bulgusudur. Hekimin muayenede aradığı bir bulgu olduğundan anamnezde sorulacaklar listesine girmez (sayfa 9)."
      },
      "bilgi": [
@@ -935,9 +935,9 @@
      "aciklama": "Aura migrenin ağrıdan önceki geçici nörolojik belirtileridir ve anamnezde sorulan bir özelliktir; sekonder nedeni düşündüren on iki öykü özelliği arasında yer almaz. Erkek cinsiyet, 10 yaşından önce başlangıç, en şiddetli ağrı ve malignite bu listededir (sayfa 8 ve 12).",
      "sik_aciklamalari": {
       "A": "Erkek cinsiyet sekonder başağrısı düşündüren öykü özelliklerinden biridir; erkek hastada altta bir neden olma ihtimali daha yüksektir. Hoca cinsiyetin önemini özellikle belirtmiştir (sayfa 8).",
-      "B": "Belirli bir şekle uymayan başağrısı sekonder nedeni düşündürür; hoca anamnezi ve muayeneyi bilinen bir kalıba sokamıyorsak hastayı sekonder kabul edip tedbirli davranmak gerektiğini söylemiştir. Listede yer aldığından olumsuz kökte aranan yanıt değildir (sayfa 8).",
+      "B": "Belirli bir şekle uymayan başağrısı sekonder nedeni düşündürür; anamnez ve muayene bilinen bir kalıba sokulamıyorsa hasta sekonder kabul edilip tedbirli davranılır. Bu özellik slayttaki uyarıcı durumlar listesinde bulunduğundan olumsuz kökün istediği seçenek bu değildir (sayfa 8).",
       "C": "Hastanın yaşamındaki en şiddetli başağrısı tanımı sekonder nedeni, özellikle subaraknoid kanamayı düşündürür. Listede yer alan bu özellik soru kökündeki olumsuzlamaya uymaz (sayfa 8).",
-      "D": "Mevcut malignite tanısı bulunan hastada başağrısı metastaz gibi sekonder nedenleri düşündürür. Liste içinde yer aldığından aranan yanıt değildir (sayfa 8).",
+      "D": "Mevcut malignite tanısı bulunan hastada başağrısı metastaz gibi sekonder nedenleri düşündürür ve ileri inceleme gerektirir. Bu durum slayttaki uyarıcı durumlar listesinde açıkça bulunduğundan olumsuz kökte işaretlenecek seçenek olamaz (sayfa 8).",
       "E": "Aura, migrenli hastaların %10–15'inde ağrıdan önce görülen geçici nörolojik belirtidir (beyaz ışıklar, kırık çizgiler, hemianopsi). Primer bir başağrısına özgü olduğundan sekonder neden düşündürmez (sayfa 12)."
      },
      "bilgi": [
@@ -1064,11 +1064,11 @@
      "dogru": "E",
      "aciklama": "Bilinç bozukluğu, senkop, epileptik nöbet, fokal nörolojik bulgu, papilödem, subhyaloid hemoraji, ateş, ense sertliği, kilo kaybı, kranial sinir tutulumları ve Horner sendromu sekonder başağrısı düşündürür (sayfa 9). Fotofobi ve fonofobi ise migrenin eşlik eden belirtileridir.",
      "sik_aciklamalari": {
-      "A": "Bilinç bozukluğu ve senkop slayttaki sekonder başağrısı düşündüren muayene bulgularının ilk maddesidir. Bu nedenle olumsuz kökte aranan yanıt değildir (sayfa 9).",
+      "A": "Bilinç bozukluğu ve senkop, sekonder başağrısı düşündüren muayene bulgularının ilk maddesidir ve kafa içi ciddi bir sürece işaret edebilir. Slaytta bu listede ilk sırada sayıldığı için olumsuz kökte işaretlenecek seçenek bu değildir (sayfa 9).",
       "B": "Epileptik nöbet sekonder başağrısı düşündüren muayene bulgularındandır ve altta yatan bir beyin hastalığına işaret edebilir. Listede yer aldığından aranan yanıt olamaz (sayfa 9).",
-      "C": "Papilödem ve subhyaloid hemoraji göz dibi bulgularıdır ve kafa içi basınç artışı ya da kanamayı düşündürür. Slayttaki sekonder başağrısı bulguları arasında yer aldıkları için olumsuz kökte aranan yanıt değildir (sayfa 9).",
-      "D": "Horner sendromu sekonder başağrısı düşündüren muayene bulgularındandır ve sempatik sinir tutulumuna işaret eder. Listede yer aldığı için aranan yanıt değildir (sayfa 9).",
-      "E": "Fotofobi ışık, fonofobi ses hassasiyetidir; migrende bulantı-kusma ile birlikte eşlik eder ve gerilim tipinde de görülebilir. Muayene bulgusu olmayan bu yakınmalar sekonder neden listesinde yer almaz (sayfa 11 ve 18)."
+      "C": "Papilödem ve subhyaloid hemoraji göz dibi bulgularıdır; kafa içi basınç artışını ya da kanamayı düşündürür. Slayttaki sekonder başağrısı bulguları arasında sayıldıkları için olumsuz kökün istediği seçenek bunlar olamaz (sayfa 9).",
+      "D": "Horner sendromu sempatik sinir tutulumuna işaret eden bir muayene bulgusudur ve sekonder başağrısını düşündürür. Slayttaki uyarıcı muayene bulguları arasında sayıldığı için olumsuz kökte işaretlenecek seçenek bu değildir (sayfa 9).",
+      "E": "Fotofobi ışığa, fonofobi sese aşırı hassasiyettir; migrende bulantı-kusmayla birlikte eşlik eder ve gerilim tipi başağrısında da görülebilir. Muayenede saptanan bir bulgu değil, primer başağrılarına eşlik eden bir yakınma olduğundan sekonder nedeni düşündüren bulgulardan ayrılır; doğru seçenek budur (sayfa 11 ve 18)."
      },
      "bilgi": [
       46,
@@ -1967,7 +1967,7 @@
      "aciklama": "Migren profilaksisi ayda 3'ten fazla atak, komplike atak, uzamış atak ya da hasta tarafından dayanılmaz bulunan atak varlığında düşünülür (sayfa 17). Yılda iki kez gelen hafif atak bu ölçütlerden hiçbirini karşılamaz.",
      "sik_aciklamalari": {
       "A": "Ayda 3'ten fazla atak geçirilmesi profilaktik tedavi endikasyonudur ve slaytta ilk madde olarak verilir. Bu yüzden endikasyon değil seçeneği değildir (sayfa 17).",
-      "B": "Komplike atak, örneğin konuşma ya da görme kaybıyla giden atak, profilaktik tedavi endikasyonudur. Slayttaki ikinci maddedir ve bu seçenek ölçütü karşıladığından olumsuz kökte aranan yanıt değildir (sayfa 17).",
+      "B": "Komplike atak, örneğin konuşma ya da görme kaybıyla giden atak, profilaktik tedavi endikasyonudur. Slayttaki ikinci madde olarak bu ölçütü karşıladığından olumsuz kökte işaretlenecek seçenek bu değildir (sayfa 17).",
       "C": "Uzamış atak profilaksi için endikasyondur; süresi nedeniyle hastanın yaşamını ciddi biçimde etkiler. Slayttaki üçüncü madde kapsamında olduğundan olumsuz kökte aranan yanıt olamaz (sayfa 17).",
       "D": "Hasta tarafından dayanılmaz bulunan atakların varlığı profilaktik tedavi endikasyonudur. Hastanın yaşam kalitesini bozduğu için slaytta ölçüt olarak sayılmıştır (sayfa 17).",
       "E": "Profilaksi, atakların sık, komplike ya da dayanılmaz olduğu durumlarda başlanan sürekli bir tedavidir. Yılda iki hafif atak için günlük ilaç gerekmez; atak tedavisi yeterlidir (sayfa 17)."
@@ -2005,9 +2005,9 @@
      "aciklama": "Migren profilaksisinde beta bloker olarak propranolol, antiepileptik olarak topiramat ve valproat, antidepresan olarak amitriptilin ve venlafaksin kullanılır (sayfa 17). Eletriptan ise atak tedavisinde kullanılan bir triptandır.",
      "sik_aciklamalari": {
       "A": "Amitriptilin migren profilaksisinde kullanılan bir antidepresandır; gerilim tipi başağrısı profilaksisinde de birinci seçenektir. Venlafaksin ise migrenin diğer antidepresanıdır (sayfa 17 ve 20).",
-      "B": "Propranolol bir beta blokerdir ve migren profilaksisinde kullanılır. Antidepresan sınıfında olmadığı için bu soruda aranan yanıt değildir; antidepresanlar amitriptilin ve venlafaksindir (sayfa 17).",
-      "C": "Topiramat migren profilaksisinde kullanılan, SUNCT tedavisinde de yer alan bir antiepileptiktir. Antidepresan grubuna girmediğinden bu soruda aranan yanıt değildir (sayfa 17 ve 24).",
-      "D": "Valproat migren profilaksisinde kullanılan, SUNCT'ta da işe yarayan bir antiepileptiktir. Antidepresan sınıfında olmadığından bu soruda aranan yanıt değildir (sayfa 17 ve 24).",
+      "B": "Propranolol bir beta blokerdir ve migren profilaksisinde kullanılır. Antidepresan sınıfından olmadığı için soru kökünü karşılamaz; profilakside kullanılan antidepresanlar amitriptilin ve venlafaksindir (sayfa 17).",
+      "C": "Topiramat migren profilaksisinde kullanılan, SUNCT tedavisinde de yer alan bir antiepileptiktir. Antiepileptik grubunda bulunduğu için soru kökünün istediği antidepresan sınıfını karşılamaz (sayfa 17 ve 24).",
+      "D": "Valproat migren profilaksisinde kullanılan, SUNCT'ta da işe yarayan bir antiepileptiktir. Antiepileptik grubunda bulunduğu için soru kökünün istediği antidepresan sınıfını karşılamaz; o sınıftan amitriptilin ve venlafaksin kullanılır (sayfa 17 ve 24).",
       "E": "Eletriptan 40 mg dozunda kullanılan bir triptandır ve atak tedavisinde yer alır. Profilaksi ilacı olmadığı gibi antidepresan da değildir (sayfa 16)."
      },
      "bilgi": [
@@ -2214,7 +2214,7 @@
       "B": "İki taraflı yerleşim gerilim tipi başağrısının özelliğidir; ağrı oksipital ya da frontal bölgede iki yanlı hissedilir. Migrende ise tek taraflılık tipiktir (sayfa 18).",
       "C": "Künt ya da sıkıştırıcı karakter gerilim tipi başağrısının tipik niteliğidir ve hoca \"taş var, yük var\" gibi tarif edildiğini anlatmıştır. Zonklayıcı migren ağrısından ayrılır (sayfa 18).",
       "D": "Ağrı hafif ya da orta şiddettedir; bu özellik gerilim tipi başağrısının gerçek bir özelliğidir. Migrenin orta-şiddetli seyrinden farklı olarak hastayı günlük işlerinden alıkoymaz (sayfa 11 ve 18).",
-      "E": "Gerilim tipi başağrısı günlük aktiviteyi engellemez; migrende ise ağrı fiziksel aktiviteden etkilenir. İfade gerilim tipinin gerçek bir özelliği olduğundan olumsuz kökte aranan yanıt değildir (sayfa 11 ve 18)."
+      "E": "Gerilim tipi başağrısı günlük aktiviteyi engellemez; migrende ise ağrı fiziksel aktiviteden etkilenir. Bu ifade gerilim tipinin gerçek bir özelliği olduğundan olumsuz kökte işaretlenecek seçenek bu değildir (sayfa 11 ve 18)."
      },
      "bilgi": [
       104,
@@ -2626,7 +2626,7 @@
      "dogru": "E",
      "aciklama": "Trigeminootonomik başağrıları küme başağrısı, paroksismal hemikranya, SUNCT, hemikrania kontünia ve olası trigeminal otonomik sefaljilerdir (sayfa 21). Gerilim tipi başağrısı ICHD-3'ün ayrı bir primer başlığıdır.",
      "sik_aciklamalari": {
-      "A": "Küme başağrısı trigeminootonomik grubun en tanınmış üyesidir ve ağrı tarafında gözde kızarma-yaşarma ile seyreder. Gruba girdiği için aranan yanıt değildir (sayfa 21 ve 22).",
+      "A": "Küme başağrısı trigeminootonomik grubun en tanınmış üyesidir ve ağrı tarafında gözde kızarma-yaşarmayla seyreder. Bu gruba girdiği için olumsuz kökte işaretlenecek seçenek küme başağrısı olamaz (sayfa 21 ve 22).",
       "B": "Paroksismal hemikranya grubun bir üyesidir ve 2–30 dakika süren, günde 5–20 atakla seyreder. Gruba dahil olduğundan aranan yanıt olamaz (sayfa 21 ve 23).",
       "C": "SUNCT, konjonktival kanlanma ve yaşarmalı kısa süreli tek taraflı nöraljiform başağrısı demektir ve grubun bir üyesidir. Bu yüzden yanlış seçenek değildir (sayfa 21).",
       "D": "Hemikrania kontünia grubun sürekli ağrı ile seyreden üyesidir ve indometazine yanıtlıdır. Gruba girdiği için aranan yanıt olamaz (sayfa 21 ve 25).",

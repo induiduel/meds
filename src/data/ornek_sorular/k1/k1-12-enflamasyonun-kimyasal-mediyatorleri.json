@@ -367,7 +367,7 @@
      "dogru": "D",
      "aciklama": "Hücre kaynaklı mediyatörlerin kaynakları doku makrofajları, dendritik hücreler, mast hücreleri, nötrofiller, trombositler, endotel ve epitel hücreleridir (s. 6).",
      "sik_aciklamalari": {
-      "A": "Yanlış; eritrositler kaynak hücreler listesinde yer almaz (s. 6).",
+      "A": "Yanlış; eritrositler bir kan hücresidir, ancak hücre kaynaklı mediyatörlerin kaynak hücreleri olarak sayılmaz. Kaynak hücreler doku makrofajları, dendritik hücreler, mast hücreleri, nötrofiller, trombositler, endotel ve epitel hücreleridir (s. 6).",
       "B": "Yanlış; karaciğer plazma kaynaklı mediyatörlerin kaynağıdır, hücre kaynaklı listede hepatosit sayılmaz (s. 6, 13).",
       "C": "Yanlış; osteositler kaynak hücreler arasında sayılmaz (s. 6).",
       "D": "Doğru; doku makrofajları hücre kaynaklı mediyatörlerin başlıca kaynaklarındandır (s. 6).",
@@ -3356,7 +3356,7 @@
      "sik_aciklamalari": {
       "A": "Doğru. Dendritik hücreler IL-1 kaynağıdır, TNF listesinde yoktur (s. 31).",
       "B": "Yanlış. Makrofajlar her iki sitokinin de ortak kaynağıdır (s. 31).",
-      "C": "Yanlış. T lenfositleri TNF kaynağıdır, IL-1 listesinde yer almaz (s. 31).",
+      "C": "Yanlış: T lenfositleri TNF kaynağıdır; ancak IL-1 kaynakları makrofaj, dendritik hücre, bazı epitel ve endotel hücreleridir ve T lenfositi bunlara dahil değildir. Soru IL-1 kaynağı olup TNF kaynağı olmayanı istediğinden durum tersine döner (s. 31).",
       "D": "Yanlış. Mast hücreleri TNF kaynağı olarak sayılır; IL-1 için verilmemiştir (s. 31).",
       "E": "Yanlış. Bazofiller PAF kaynağı olarak geçer; TNF/IL-1 kaynağı değildir (s. 43)."
      },
@@ -6087,7 +6087,7 @@
      "aciklama": "Stratejik tedavi düğüm noktaları: COX, lökotrien yolu, TNF, IL-1, IL-6, IL-17 ve komplemandır.",
      "sik_aciklamalari": {
       "A": "Doğru. Tedavi hedefleri arasında TNF, IL-1, IL-6 ve IL-17 sayılmıştır (s. 46).",
-      "B": "Yanlış. Bunlar stratejik düğüm noktaları listesinde yer almaz (s. 46).",
+      "B": "Yanlış: Substance P bir nöropeptit, bradikinin ise kallikrein–kinin sisteminin ürünüdür; ikisi de inflamasyonda rol oynar. Tedavide hedeflenen stratejik düğüm noktaları ise COX, lökotrien yolu, TNF, IL-1, IL-6, IL-17 ve komplemandır (s. 46).",
       "C": "Yanlış. PAF ve NO tedavi düğüm noktası olarak sayılmamıştır (s. 46).",
       "D": "Yanlış. Kemokinler stratejik düğüm noktaları listesinde verilmemiştir (s. 46).",
       "E": "Yanlış. Bunlar kompleman düzenleyici proteinlerdir, tedavi düğüm noktası olarak sayılmaz (s. 41, s. 46)."
@@ -6147,7 +6147,7 @@
      "aciklama": "Eikozanoid tarafındaki düğüm noktaları COX (NSAİİ'lerin hedefi) ve lökotrien yoludur (zileuton, reseptör antagonistleri).",
      "sik_aciklamalari": {
       "A": "Doğru. Tedavi hedefleri arasında COX ve lökotrien yolu sayılmıştır (s. 46).",
-      "B": "Yanlış. Bunlar stratejik düğüm noktaları listesinde yer almaz (s. 46).",
+      "B": "Yanlış: Kallikrein–kinin sistemi bradikinin üreten bir plazma sistemidir, nöropeptitler ise substance P gibi sinir kaynaklı mediyatörlerdir; ikisi de eikozanoid değildir. Eikozanoid tarafındaki stratejik düğüm noktaları COX ve lökotrien yoludur (s. 46).",
       "C": "Yanlış. NOS izoformları tedavi düğüm noktası olarak verilmemiştir (s. 44, s. 46).",
       "D": "Yanlış. Bunlar kompleman düzenleyici proteinleridir; listede kompleman genel olarak geçer (s. 41, s. 46).",
       "E": "Yanlış. PAF ve substance P stratejik tedavi hedefleri arasında sayılmaz (s. 46)."
