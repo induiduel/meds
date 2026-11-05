@@ -146,7 +146,7 @@
      ]
     },
     {
-     "metin": "Serviste bu işi çoğu zaman hemşireler yapar; ama hasta bilinçsizse, iş birliği yapamıyorsa ya da çocuksa sonda takmak hekime kalır.",
+     "metin": "Serviste bu işi çoğu zaman hekim denetimi gerekmeden hemşireler yapar; ama hasta iş birliği yapamıyorsa ya da çocuksa sonda takmak hekime kalır.",
      "eylem": [
       {
        "t": "vurgula",
@@ -155,7 +155,7 @@
      ]
     },
     {
-     "metin": "Bu yüzden tekniği bir gün tek başına uygulayacakmış gibi öğrenmen gerekir.",
+     "metin": "Bu yüzden tekniği bir gün tek başına uygulayacakmış gibi öğrenmen gerekir; sınavda da hoca önce bir grup malzeme verip gerekenleri seçtirir, sonra işlem basamaklarını sorar.",
      "eylem": [
       {
        "t": "vurgula",
@@ -190,7 +190,7 @@
    "sahne": "ng-mide",
    "cumleler": [
     {
-     "metin": "Föydeki dersin amacı, başta mide lavajı gerekecek zehirlenmeli olgular olmak üzere gerektiğinde nazogastrik sonda takabilmektir.",
+     "metin": "Föydeki dersin amacı, başta mide lavajı gerekecek zehirlenmeli olgular olmak üzere gerektiğinde nazogastrik sonda takabilmektir; hoca da ilk sırada zehirlenmede mide yıkamayı sayar.",
      "eylem": [
       {
        "t": "goster",
@@ -276,7 +276,7 @@
      ]
     },
     {
-     "metin": "Hoca kime takılıp kime takılmayacağını sınavda mutlaka soruyor; endikasyonları ve kontrendikasyonları birlikte bilmelisin.",
+     "metin": "Hoca özellikle kontrendikasyonları sınavda mutlaka sorduğunu söyler; bu yüzden endikasyonları ve kontrendikasyonları birlikte bilmelisin.",
      "eylem": [
       {
        "t": "vurgula",
@@ -371,11 +371,11 @@
   },
   {
    "id": "ng-kontrendikasyon-koroziv",
-   "baslik": "Kontrendikasyon 3: koroziv madde içen hasta",
+   "baslik": "Kontrendikasyon 3: kostik (koroziv) madde içen hasta",
    "sahne": "ng-kesit",
    "cumleler": [
     {
-     "metin": "Ağızdan koroziv yani yakıcı madde almış hastaya nazogastrik sonda takılmaz.",
+     "metin": "Ağızdan kostik, yani yakıcı (koroziv) madde almış hastaya nazogastrik sonda takılmaz.",
      "eylem": [
       {
        "t": "goster",
@@ -419,7 +419,7 @@
      ]
     },
     {
-     "metin": "Bu yüzden zehirlenmede lavaj endikasyonu olsa bile, içilen madde koroziv ise sonda takılmaz.",
+     "metin": "Bu yüzden zehirlenmede lavaj endikasyonu olsa bile, içilen madde kostik ise sonda takılmaz.",
      "eylem": [
       {
        "t": "vurgula",
@@ -434,7 +434,7 @@
     }
    ],
    "dikkat": [
-    "Zehirlenme = lavaj endikasyonu; ama koroziv madde = kontrendikasyon. Sınavda bu ikisi birlikte sorulur."
+    "Zehirlenme = lavaj endikasyonu; ama kostik (koroziv) madde = kontrendikasyon. İkisini birbirine karıştırma."
    ]
   },
   {
@@ -527,7 +527,7 @@
      ]
     },
     {
-     "metin": "Bu hastalar kanamaya yatkındır ve üst gastrointestinal kanamayla acile gelebilirler.",
+     "metin": "Bu hastalar kanamaya yatkındır ve mide kanaması geçiriyormuş gibi, kan kusarak acile gelebilirler.",
      "eylem": [
       {
        "t": "vurgula",
@@ -558,7 +558,7 @@
      ]
     },
     {
-     "metin": "Sonda genişlemiş venlere sürtünerek kanamayı artırabilir; hoca bu riski teorik olarak anlatır ama varisi bilinen hastaya sonda takılmamasını ister.",
+     "metin": "Hoca, sondanın bu hastada kanamayı artırıp zarar verebileceğini teorik bir risk olarak anlatır ve varisi bilinen hastaya sonda takılmamasını ister.",
      "eylem": [
       {
        "t": "vurgula",
@@ -572,7 +572,7 @@
     }
    ],
    "puf": [
-    "Kime takılmaz (5 madde): yüz–burun–üst damak travması/kırığı, kafa tabanı kırığı, koroziv madde alımı, bilinci kapalı ve hava yolu korunmamış hasta, bilinen özofagus varisi."
+    "Kime takılmaz (5 madde): yüz–burun–üst damak travması/kırığı, kafa tabanı kırığı, kostik (koroziv) madde alımı, bilinci kapalı ve hava yolu korunmamış hasta, bilinen özofagus varisi."
    ]
   },
   {
@@ -604,7 +604,7 @@
      ]
     },
     {
-     "metin": "Sonda larinksten geçerse trakeaya girer; özofagus girişinden geçerse aşağı doğru mideye ilerler.",
+     "metin": "Sonda ses tellerinin arasından geçerse trakeaya girer; özofagusun ağzından girerse aşağı doğru mideye ilerler.",
      "eylem": [
       {
        "t": "goster",
@@ -647,7 +647,7 @@
      ]
     },
     {
-     "metin": "Laboratuvardaki maket immobil, başı arkaya düşmüş bir hasta gibi durduğu için bu açıyı tam vermez; gerçek hastada başı mutlaka öne eğdirirsin.",
+     "metin": "Laboratuvardaki maketin duruşu hareketsiz yatan yaşlı bir hastaya benzer ve bu açıyı tam vermez; gerçek hastada başı hafifçe öne eğdirirsin.",
      "eylem": [
       {
        "t": "vurgula",
@@ -715,7 +715,7 @@
      ]
     },
     {
-     "metin": "Burun kaygan bir alan olmadığı için su bazlı kayganlaştırıcı jel kullanılır; üretral kateterde kullandığın jel bunun için uygundur.",
+     "metin": "Burun kaygan bir alan olmadığı için su bazlı kayganlaştırıcı jel kullanılır; hazır paketli kateter jeli bunun için uygundur.",
      "eylem": [
       {
        "t": "vurgula",
@@ -733,7 +733,7 @@
      ]
     },
     {
-     "metin": "Jel bulamazsan vazelin akla gelir; ama vazelin bir petrol ürünüdür, ilk tercih asla değildir ve yalnız çaresiz kaldığında çok az miktarda kullanılır; ultrason jeli gibi başka su bazlı jeller de olur.",
+     "metin": "Jel bulamazsan vazelin akla gelir; ama vazelin bir petrol ürünüdür, ilk tercih asla değildir ve yalnız çaresiz kaldığında çok az miktarda kullanılır; varsa ultrason jeli gibi başka jeller de kayganlaştırmak için kullanılabilir.",
      "eylem": [
       {
        "t": "vurgula",
@@ -742,7 +742,7 @@
       {
        "t": "renk",
        "id": "nm-vazelin",
-       "renk": "kirmizi"
+       "renk": "sari"
       },
       {
        "t": "etiket",
@@ -764,7 +764,7 @@
      ]
     },
     {
-     "metin": "Beslenme sondası aynı teknikle takılır, ucu mide ile duodenumun başlangıcı arasına yerleşir; sonra tel çıkarılır, yer kontrol edilir ve sondası sabitlenir.",
+     "metin": "Beslenme sondası aynı teknikle takılır, ucu mide ile duodenumun başlangıcı arasına yerleşir; sonra tel çıkarılır, yer kontrol edilir ve sonda sabitlenir.",
      "eylem": [
       {
        "t": "vurgula",
@@ -865,7 +865,7 @@
      ]
     },
     {
-     "metin": "Lavaj ve boşaltma için su ile sondanın ucuna takılacak bir torba da tepside olmalıdır.",
+     "metin": "Lavaj ve boşaltma için su ile sondanın ucuna takılacak bir idrar torbası da tepside olmalıdır.",
      "eylem": [
       {
        "t": "vurgula",
@@ -885,6 +885,9 @@
       }
      ]
     }
+   ],
+   "puf": [
+    "Sınavda hoca bir grup malzeme verip gerekenleri seçtirir: sonda, su bazlı jel, çan uçlu enjektör, stetoskop, flaster, eldiven, örtü, kusma poşeti, su ve idrar torbası."
    ],
    "dikkat": [
     "Normal enjektör sondaya oturmaz; yer kontrolü için çan uçlu enjektör şart."
@@ -981,7 +984,7 @@
   },
   {
    "id": "ng-olcum",
-   "baslik": "Ölçüm: burun → kulak memesi → ksifoid",
+   "baslik": "Ölçüm: burun → kulak memesi → epigastrium",
    "sahne": "ng-govde",
    "cumleler": [
     {
@@ -1032,7 +1035,7 @@
      ]
     },
     {
-     "metin": "Kulak memesinden de ksifoid çıkıntıya, yani epigastriumun üst sınırına kadar götürürsün.",
+     "metin": "Kulak memesinden de epigastrik bölgeye, ksifoid çıkıntı hizasına kadar götürürsün.",
      "eylem": [
       {
        "t": "ciz",
@@ -1049,7 +1052,7 @@
      ]
     },
     {
-     "metin": "Ksifoide denk gelen yeri sondanın üzerinde işaretler, bunun kaç santimetreye ya da kaçıncı çizgiye geldiğini aklında tutarsın; sondayı bu işarete kadar ilerleteceksin.",
+     "metin": "Epigastriuma denk gelen yeri sondanın üzerinde işaretler, bunun kaç santimetreye ya da kaçıncı çizgiye geldiğini aklında tutarsın; sondayı bu işarete kadar ilerleteceksin.",
      "eylem": [
       {
        "t": "goster",
@@ -1062,7 +1065,7 @@
      ]
     },
     {
-     "metin": "Bu ölçüm sınavda en çok hata yapılan basamaktır; başlangıç noktası burun deliğidir, ikinci nokta kulak memesi, son nokta ksifoid.",
+     "metin": "Sınavda öğrenciler ölçümü sık sık farklı bir sırayla yapar; hoca bunun teorik olarak aynı olduğunu, ama sonda burundan girdiği için burundan başlamanın daha kolay ve mantıklı olduğunu söyler.",
      "eylem": [
       {
        "t": "vurgula",
@@ -1077,7 +1080,7 @@
     }
    ],
    "dikkat": [
-    "Ölçüm sırası: burun deliği → kulak memesi → ksifoid. Başlangıç noktasını burun dışında bir yer seçmek sık sınav hatasıdır."
+    "Ölçüm: burun deliği → kulak memesi → epigastrium (ksifoid hizası). Herkese sabit bir uzunluk kullanılmaz; her hastada ayrı ölçülür."
    ]
   },
   {
@@ -1236,7 +1239,7 @@
      ]
     },
     {
-     "metin": "Bazı hastalar, özellikle bilinci bulanık olanlar, dilini arkaya çeker ve sonda dilin çevresinde kıvrılabilir; bu hastadan dilini dışarı çıkarmasını istersin.",
+     "metin": "Bazı hastalar dilini arkaya doğru çeker ve sonda dilin çevresinde kıvrılabilir; bu hastadan dilini dışarı çıkarmasını istersin.",
      "eylem": [
       {
        "t": "goster",
@@ -1253,7 +1256,7 @@
      ]
     },
     {
-     "metin": "Septum deviasyonu nedeniyle bir burun deliğinden ilerleyemezsen zorlamazsın; diğer burun deliğini denersin, işlemden önce karşıdan bakıp hangisinin geniş olduğunu görebilirsin.",
+     "metin": "Sonda iki burun deliğinden de takılabilir; ama özellikle yaşlılarda septum deviasyonu olabilir, bir delikten ilerleyemezsen zorlamaz, diğerini denersin; deviasyonu işlemden önce karşıdan bakarak görebilirsin.",
      "eylem": [
       {
        "t": "gizle",
@@ -1276,7 +1279,7 @@
    ],
    "dikkat": [
     "Sonda yukarı doğru değil, sert damağa (palatin kemiğe) paralel arkaya itilir.",
-    "Bir burun deliğinden geçmiyorsa zorlama; diğer deliği dene."
+    "Bir burun deliğinden geçmiyorsa zorlama; diğer deliği dene. Septum deviasyonu özellikle yaşlılarda olur."
    ]
   },
   {
@@ -1285,7 +1288,7 @@
    "sahne": "ng-kesit",
    "cumleler": [
     {
-     "metin": "Sondanın ucu orofarinkse ulaşınca hastaya \"Ben söyleyince yutkunun\" dersin.",
+     "metin": "Sonda kulak memesi hizasını geçip orofarinkse doğru aşağı dönmeye başlayınca hastaya \"Ben söyleyince yutkunun\" dersin.",
      "eylem": [
       {
        "t": "goster",
@@ -1346,7 +1349,7 @@
      ]
     },
     {
-     "metin": "Bilinci açık ve suyu yönetebilecek hastaya enjektörle yarımşar mililitre su verip yutkunmasını kolaylaştırabilirsin.",
+     "metin": "Komutu anlayamayan ama bilinci açık ve suyu yutabilecek hastada yanındaki kişi, sen söyledikçe enjektörle yarımşar mililitre su verir; böylece yutkunmayı teşvik edersin.",
      "eylem": [
       {
        "t": "goster",
@@ -1359,7 +1362,7 @@
      ]
     },
     {
-     "metin": "Suyu güvenle yutamayacak hastaya (yaşlı, yutma güçlüğü olan, küçük çocuk) su vermezsin; yutkunma telkini ancak sonda burundan rahat ilerledikten sonra anlamlıdır.",
+     "metin": "Suyu güvenle yutamayacak hastaya su vermezsin; yutkunmanın amacı sondanın ses tellerine değil özofagusa geçmesidir, bu bölge geçilince sonda rahat ilerler ve yutkunmanın ek yararı kalmaz.",
      "eylem": [
       {
        "t": "gizle",
@@ -1477,7 +1480,7 @@
      ]
     },
     {
-     "metin": "Aynı anda stetoskobu epigastrik bölgeye koyar, fokurdama sesi gelip gelmediğini dinlersin; bir tabak suyun içine birden hava basınca suyun köpürmesine benzer bir sestir.",
+     "metin": "Aynı anda stetoskobu epigastrik bölgeye koyar, \"gurp\" diye bir fokurdama sesi gelip gelmediğini dinlersin; bir tabak suyun içine birden hava basınca suyun köpürmesine benzer bir sestir.",
      "eylem": [
       {
        "t": "goster",
@@ -1562,7 +1565,7 @@
      ]
     },
     {
-     "metin": "Boğaza dokunmak ya da hastanın boğulur gibi olmasına bakmak güvenilir değildir; mide içeriğinin gelip gelmediğine bakmak da kullanılır, ultrasonla görmek mümkündür ama hava yolu görüntüsü karışık olduğundan kritik değildir.",
+     "metin": "Boğaza dokunup sondayı hissetmeye çalışmak güvenilir değildir; mide içeriğinin gelip gelmediğine bakmak istenen yöntem olmasa da yapılır, ultrasonla görmek mümkündür ama pratik değildir ve görüntü karışık olduğundan sondayı net seçemeyebilirsin.",
      "eylem": [
       {
        "t": "vurgula",
@@ -1575,7 +1578,7 @@
      ]
     },
     {
-     "metin": "Dinleme hocanın öğrettiği ve sınavda istenen yöntemdir; klinikte kesin doğrulama için mide içeriği aspirasyonu ve gerekirse akciğer grafisi kullanılır.",
+     "metin": "Hoca hava verip dinlemeyi çok daha kolay yol olarak öğretir ve sınavda bunu ister; klinikte kesin doğrulama için mide içeriği aspirasyonu ve gerekirse akciğer grafisi kullanılır.",
      "eylem": [
       {
        "t": "vurgula",
@@ -1699,7 +1702,7 @@
      ]
     },
     {
-     "metin": "Ardından sondanın ucuna bir idrar torbası takar, mide hizasının altında tutar ve akmasını beklersin.",
+     "metin": "Ardından sondanın ucuna bir idrar torbası takar ve akmasını beklersin.",
      "eylem": [
       {
        "t": "gizle",
@@ -1716,7 +1719,7 @@
      ]
     },
     {
-     "metin": "Sıvı akmaya başlayınca sifon etkisiyle geri kalanı da çekilir ve mide içeriği torbaya dolar.",
+     "metin": "Ucu kapalı idrar torbası negatif basınçlıdır ve sıvıyı bir miktar çeker; akış bir kez başlayınca mide içeriği torbaya dolar.",
      "eylem": [
       {
        "t": "ciz",
@@ -1855,13 +1858,13 @@
      {
       "id": "endikasyon",
       "metin": "Endikasyonu ve kontrendikasyonları gözden geçir",
-      "aciklama": "Sonda zehirlenmede lavaj, beslenme, mide içeriğini görme ya da boşaltma ve ilaç verme için takılır. Yüz ya da kafa tabanı kırığı, koroziv madde alımı, bilinci kapalı ve hava yolu korunmamış hasta ve bilinen özofagus varisi varsa takılmaz.",
+      "aciklama": "Sonda zehirlenmede lavaj, beslenme, mide içeriğini görme ya da boşaltma ve ilaç verme için takılır. Yüz ya da kafa tabanı kırığı, kostik madde alımı, bilinci kapalı ve hava yolu korunmamış hasta ve bilinen özofagus varisi varsa takılmaz.",
       "adim": "ng-kontrendikasyon-travma"
      },
      {
       "id": "malzeme",
       "metin": "Malzemeleri hazırla ve kontrol et",
-      "aciklama": "Uygun kalınlıkta sonda, su bazlı jel, çan uçlu enjektör, stetoskop, flaster, eldiven, emici örtü, kusma poşeti, su ve torba tepsiye konur. Sonda paketi işlemden hemen önce açılır.",
+      "aciklama": "Uygun kalınlıkta sonda, su bazlı jel, çan uçlu enjektör, stetoskop, flaster, eldiven, emici örtü, kusma poşeti, su ve idrar torbası tepsiye konur. Sonda paketi işlemden hemen önce açılır.",
       "adim": "ng-malzeme"
      },
      {
@@ -1884,8 +1887,8 @@
      },
      {
       "id": "olcum",
-      "metin": "Burun–kulak memesi–ksifoid mesafesini ölç ve işaretle",
-      "aciklama": "Sondanın ucu burun deliğine konur, kulak memesine, oradan ksifoide uzatılır. Ksifoide denk gelen çizgi ya da santimetre aklında tutulur; sonda bu işarete kadar ilerletilecektir.",
+      "metin": "Burun–kulak memesi–epigastrium mesafesini ölç ve işaretle",
+      "aciklama": "Sondanın ucu burun deliğine konur, kulak memesine, oradan epigastriuma uzatılır. Epigastriuma denk gelen çizgi ya da santimetre aklında tutulur; sonda bu işarete kadar ilerletilecektir.",
       "adim": "ng-olcum"
      },
      {
@@ -1909,7 +1912,7 @@
      {
       "id": "yutkun",
       "metin": "Orofarinkste yutkunmasını iste, yutkundukça işarete kadar ilerlet",
-      "aciklama": "Yutma refleksinde epiglot larinksi kapatır ve sonda özofagusa yönelir. Suyu yönetebilen hastaya enjektörle az miktar su verilebilir.",
+      "aciklama": "Yutma refleksinde epiglot larinksi kapatır ve sonda özofagusa yönelir. Suyu yutabilen hastaya enjektörle yarımşar mililitre su verilebilir.",
       "adim": "ng-yutkunma"
      },
      {
@@ -1932,8 +1935,8 @@
           },
           {
            "id": "lavaj",
-           "metin": "Lavaj için 300–500 mL su ver, torbayı mide hizasının altına tak",
-           "aciklama": "Su sondadan mideye verilir, ardından ucuna torba takılıp mide hizasının altında tutulur. Akış başlayınca negatif basınç mide içeriğini torbaya çeker.",
+           "metin": "Lavaj için 300–500 mL su ver, ucuna idrar torbası tak",
+           "aciklama": "Su sondadan mideye verilir, ardından ucuna idrar torbası takılıp akması beklenir. Akış başlayınca torbanın negatif basıncı mide içeriğini torbaya çeker.",
            "adim": "ng-lavaj"
           },
           {
@@ -2205,9 +2208,9 @@
     "soru": "Sondayı takmadan önce ne kadar ilerleteceğini belirlemek istiyorsun. Doğru ölçüm hangisidir?",
     "secenekler": [
      {
-      "metin": "Burun deliği → kulak memesi → ksifoid mesafesi ölçülüp sondada işaretlenir.",
+      "metin": "Burun deliği → kulak memesi → epigastrium mesafesi ölçülüp sondada işaretlenir.",
       "dogru": true,
-      "aciklama": "Bu ölçüm sondanın burundan mideye kadar gideceği yolu kişinin kendi vücut ölçüsüyle verir. Ksifoide denk gelen çizgi ya da santimetre işaretlenir ve sonda bu işarete kadar ilerletilir."
+      "aciklama": "Bu ölçüm sondanın burundan mideye kadar gideceği yolu kişinin kendi vücut ölçüsüyle verir. Epigastriuma denk gelen çizgi ya da santimetre işaretlenir ve sonda bu işarete kadar ilerletilir."
      },
      {
       "metin": "Herkese aynı uzunluk, örneğin 50 santimetre ilerletilir.",
@@ -2217,7 +2220,7 @@
      {
       "metin": "Ağız köşesinden göbeğe kadar olan mesafe ölçülür.",
       "dogru": false,
-      "aciklama": "Ölçümün başlangıç noktası sondanın gireceği burun deliğidir, bitiş noktası mideye denk gelen ksifoid ve epigastriumdur. Ağız ve göbek bu yolu göstermez; başlangıç noktasını yanlış seçmek sık yapılan sınav hatasıdır."
+      "aciklama": "Ölçümün başlangıç noktası sondanın gireceği burun deliğidir, bitiş noktası mideye denk gelen epigastriumdur. Ağız köşesi ve göbek bu yolu göstermez; ölçüm sondanın gerçekten izleyeceği yola göre yapılır."
      }
     ],
     "eylem": [
@@ -2226,7 +2229,7 @@
       "id": "nb-sonda-olcu"
      }
     ],
-    "puf": "Burun deliği → kulak memesi → ksifoid."
+    "puf": "Burun deliği → kulak memesi → epigastrium."
    },
    {
     "id": "oksuruk",
@@ -2278,7 +2281,7 @@
      {
       "metin": "Sondayı 5 santimetre daha ilerletip sabitlerim.",
       "dogru": false,
-      "aciklama": "Ölçüm burun–kulak memesi–ksifoid mesafesiyle yapılır ve sonda bu işarete kadar ilerletilir. Ses yokken daha fazla itmek trakeadaki ya da kıvrılmış sondayı düzeltmez; önce geri çekilip yeniden denenir."
+      "aciklama": "Ölçüm burun–kulak memesi–epigastrium mesafesiyle yapılır ve sonda bu işarete kadar ilerletilir. Ses yokken daha fazla itmek trakeadaki ya da kıvrılmış sondayı düzeltmez; önce geri çekilip yeniden denenir."
      }
     ],
     "eylem": [
@@ -2326,7 +2329,7 @@
      {
       "metin": "Vazelin petrol ürünüdür, ilk tercih değildir; başka hiçbir şey yoksa çok az kullanılabilir.",
       "dogru": true,
-      "aciklama": "Önerilen kayganlaştırıcı su bazlı jeldir ve üretral kateterde kullanılan jel bunun için uygundur. Vazelin bir petrol ürünüdür; hoca yalnız çaresiz kalındığında çok az miktarda kullanılabileceğini söyler."
+      "aciklama": "Önerilen kayganlaştırıcı su bazlı jeldir ve hazır paketli kateter jeli bunun için uygundur. Vazelin bir petrol ürünüdür; hoca yalnız çaresiz kalındığında çok az miktarda kullanılabileceğini söyler."
      },
      {
       "metin": "Vazelin en iyi kayganlaştırıcıdır, bolca sürülür.",
@@ -2363,7 +2366,7 @@
     "sahne": "ng-govde",
     "yonerge": "Ölçümde burun deliğinden sonra uzandığın noktayı bul.",
     "hedef": "nb-kulak",
-    "aciklama": "Ölçüm burun deliği, kulak memesi ve ksifoid sırasıyla yapılır. Kulak memesi ikinci noktadır.",
+    "aciklama": "Ölçüm burun deliği, kulak memesi ve epigastrium sırasıyla yapılır. Kulak memesi ikinci noktadır.",
     "adim": "ng-olcum"
    },
    {
@@ -2391,7 +2394,7 @@
    "ne": "Hastaya adını ve görevini söyleyerek kendini tanıtırsın.",
    "nasil": [
     "Hastanın yanına gidip yüzüne bakarak \"Merhaba, ben Doktor …\" diye başlarsın.",
-    "Sınavda maket başında da bu cümleyi yüksek sesle söylersin; bu adım puanlanır."
+    "Sınavda hoca işlem basamaklarını sorar; maket başında da bu cümleyi yüksek sesle söylersin."
    ],
    "neden": "Hasta kendisine kimin dokunacağını bilince güvenir ve işlemde iş birliği yapar.",
    "hata": "Hastayla konuşmadan doğrudan sondaya uzanmak.",
@@ -2555,7 +2558,7 @@
     "Uygun kalınlıkta sonda, su bazlı jel, çan uçlu enjektör, stetoskop, flaster, eldiven, örtü, kusma poşeti, su ve torba hazırlanır.",
     "Sondanın renkli ucu kalınlığını, gövdesindeki çizgi ve sayılar uzunluğu gösterir; paket işlemden hemen önce açılır."
    ],
-   "neden": "Eksik malzeme işlemi yarıda keser; özellikle çan uçlu enjektör yoksa yer kontrolü yapılamaz.",
+   "neden": "Sınavda hoca bir grup malzeme verip gerekenleri seçtirir; eksik malzeme işlemi yarıda keser, çan uçlu enjektör yoksa yer kontrolü yapılamaz.",
    "hata": "Normal enjektör hazırlamak: ucu sondaya oturmaz, hava kaçar.",
    "hoca": "Tepsiye neleri koyarsın?",
    "film": [
@@ -2718,11 +2721,11 @@
    "sahne": "ng-govde",
    "ne": "Sondanın ilerletilecek uzunluğunu hastanın üzerinde ölçersin.",
    "nasil": [
-    "Sondanın ucunu burun deliğine koyar, kulak memesine, oradan ksifoide uzatırsın.",
-    "Ksifoide denk gelen çizgiyi ya da santimetreyi işaretler, sondayı bu işarete kadar ilerletirsin."
+    "Sondanın ucunu burun deliğine koyar, kulak memesine, oradan epigastriuma uzatırsın.",
+    "Epigastriuma denk gelen çizgiyi ya da santimetreyi işaretler, sondayı bu işarete kadar ilerletirsin."
    ],
    "neden": "İnsanların boyu ve yapısı farklıdır; sabit bir uzunluk sondayı kısa bırakır ya da fazla ilerletir.",
-   "hata": "Ölçüme burun deliği dışında bir yerden başlamak ya da sırayı karıştırmak.",
+   "hata": "Ölçmeden ilerletmek ya da herkese sabit bir uzunluk kullanmak.",
    "hoca": "Sondanın uzunluğunu nasıl ölçersin?",
    "film": [
     {
@@ -2810,7 +2813,7 @@
     "Jeli sondaya sıkabilir ya da baskın olmayan elinin eldiveni üzerine koyup ucu içinden geçirebilirsin."
    ],
    "neden": "Burun kaygan bir alan değildir; jel mukozayı korur ve sondanın rahat ilerlemesini sağlar.",
-   "hata": "Jel yerine ilk tercih olarak vazelin kullanmak.",
+   "hata": "Jel varken vazelini ilk tercih yapmak ya da bolca sürmek.",
    "hoca": "Sondayı neyle, ne kadar kayganlaştırırsın?",
    "film": [
     {
@@ -2873,7 +2876,7 @@
       {
        "t": "renk",
        "id": "nm-vazelin",
-       "renk": "kirmizi"
+       "renk": "sari"
       }
      ],
      "odak": "nm-vazelin",
@@ -2978,7 +2981,7 @@
    "ne": "Sondanın ucu orofarinkse ulaşınca hastadan yutkunmasını istersin ya da su içirirsin.",
    "nasil": [
     "\"Ben söyleyince yutkunun\" der, hasta her yutkunduğunda sondayı biraz daha ilerletirsin.",
-    "Bilinci açık ve suyu yönetebilen hastaya enjektörle az miktarda su verebilirsin."
+    "Bilinci açık ve suyu yutabilen hastaya enjektörle yarımşar mililitre su verebilirsin."
    ],
    "neden": "Yutkunmada epiglot larinksi kapatır ve sonda trakea yerine özofagusa gider.",
    "hata": "Suyu güvenle yutamayacak hastaya su vermek.",
@@ -3332,7 +3335,7 @@
    "ne": "Mide lavajı için mideye su verip geri alırsın.",
    "nasil": [
     "Föye göre 300 mililitre, hocaya göre 300 ile 500 mililitre su verirsin.",
-    "Ardından sondanın ucuna torba takar, mide hizasının altında tutarsın; içerik negatif basınçla torbaya akar."
+    "Ardından sondanın ucuna idrar torbası takarsın; mide içeriği torbanın negatif basıncıyla torbaya akar."
    ],
    "neden": "Lavaj zehirlenmede midedeki maddenin uzaklaştırılmasını sağlar.",
    "hata": "Yer kontrolü yapmadan su vermek.",

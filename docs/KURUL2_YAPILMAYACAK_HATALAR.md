@@ -2247,3 +2247,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Nazogastrik kesitte larinks/trakea/özofagus girişi ve aspirasyon oku altyazı açıkken görünmüyordu.
 - **Kök neden:** sahne anatomisi tüm 500 px yüksekliğe yayılmıştı; kamera kadraj kenarını aşamadığı için yakınlaşma da kurtarmadı.
 - **Çözüm/önleme:** anatomi 70 px yukarı taşındı, alt yapılar kadraj altına uzatıldı. Yeni KMB sahnesinde anlatılacak yapılar y ≤ 380 içinde çizilir.
+
+### H501 — Hoca dökümü sarmalayıcısı model seçimini yutuyordu; turbo dökümüyle hocanın sözü yanlış okundu (2026-11-06)
+- **Belirti:** KMB 01'de "ölçüm sınavda en çok hata yapılan basamak" yazıldı; hoca aslında öğrencilerin farklı sırayla ölçtüğünü, bunun teorik olarak aynı olduğunu, burundan başlamanın kolay olduğunu söylüyordu. Sınav biçimi (34:03 "malzeme seçtiririm, basamakları sorarım") dökümde hiç yoktu.
+- **Kök neden:** `hoca_dokum_gpu.sh` yalnız iki argüman aktarıyordu; `--model large-v3` sessizce yok sayıldı, turbo modeli bozuk/eksik döküm verdi; yazar belirsiz pasajı yorumla doldurdu.
+- **Çözüm/önleme:** sarmalayıcı kalan argümanları aktarır (`"$@"`). Hocanın sınav vurgusu içeren ders kayıtları `--model Systran/faster-whisper-large-v3` ile dökülür; belirsiz pasaj içerikte iddiaya çevrilmez, zaman damgasıyla "emin değil" listesine yazılır.

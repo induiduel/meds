@@ -1,18 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 651,
-  "baslik": "KMB: Nazogastrik sonda dersi eklendi",
+  "onem": 652,
+  "baslik": "KMB Nazogastrik sonda: hoca anlatımına göre düzeltildi",
   "maddeler": [
-    "KMB görsel asistana Nazogastrik sonda takma becerisi eklendi: 19 adımlık sesli animasyonlu ders, hedef kartları, OSCE sıralama, vaka soruları",
-    "Kime takılır / kime takılmaz (kontrendikasyonlar), ölçüm ve yer kontrolü hocanın sınav vurgularıyla anlatıldı",
-    "KMB videolarında kırmızı çarpı ve bazı çizgilerin hatalı çizimi düzeltildi"
+    "Nazogastrik sonda dersi hocanın ses kaydıyla yeniden karşılaştırıldı; anlatım, notlar ve sorular hocanın sözlerine göre düzeltildi",
+    "Sınavda sorulanlar (malzeme seçimi, işlem basamakları) ve kostik madde kontrendikasyonu hocanın ifadesiyle anlatılıyor"
   ],
-  "eklenen": [
-    "KMB Nazogastrik sonda dersi"
-  ],
+  "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "KMB video çizim hataları"
+    "KMB Nazogastrik sonda anlatımı"
   ],
   "silinen": [],
   "yenilikler": []

@@ -284,7 +284,7 @@ def a_lavaj(A):
            *[G(yol(f'M{772} {370 + i * 22} L{788} {370 + i * 22}'), st(NG[1], 1.4)) for i in range(4)],
            G(rc(748, 461, 80, 16, 6), fl(ICERIK, o=70)), o=to)
     A.ekle('hiza', G(yol('M300 330 L792 330'), st('#5b6676', 2, kesik=(8, 8))), o=belir(A, 1, .3, 1))
-    et(A, 1, 560, 160, 'Torba mide hizasının altında', 'dogru', .25)
+    et(A, 1, 560, 160, 'İdrar torbası takılır', 'dogru', .25)
     # s2: sifonla sarı akış mideden sonda boyunca torbaya; torbada içerik yükselir
     AKIS = DIS + ' ' + TORBA_HORTUM.replace('M680 150', 'L680 150')
     akis(A, AKIS, T(2, .05), T(2, 1), renk=ICERIK, w=3, nm='akis1',

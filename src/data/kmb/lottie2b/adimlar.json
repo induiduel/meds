@@ -4329,7 +4329,7 @@
  {
   "ad": "adim-ng-giris",
   "baslik": "Nazogastrik sonda nedir, neden sen takacaksın?",
-  "sure": 27.5,
+  "sure": 33.57,
   "bolumler": [
    {
     "baslik": "Nazogastrik sonda, burun deliğinden",
@@ -4340,24 +4340,24 @@
    },
    {
     "baslik": "Serviste bu işi çoğu",
-    "metin": "Serviste bu işi çoğu zaman hemşireler yapar; ama hasta bilinçsizse, iş birliği yapamıyorsa ya da çocuksa sonda takmak hekime kalır.",
-    "bas": 7.58,
-    "son": 14.82,
-    "ses_bas": 6.446
+    "metin": "Serviste bu işi çoğu zaman hekim denetimi gerekmeden hemşireler yapar; ama hasta iş birliği yapamıyorsa ya da çocuksa sonda takmak hekime kalır.",
+    "bas": 7.57,
+    "son": 15.43,
+    "ses_bas": 6.442
    },
    {
     "baslik": "Bu yüzden tekniği bir",
-    "metin": "Bu yüzden tekniği bir gün tek başına uygulayacakmış gibi öğrenmen gerekir.",
-    "bas": 15.73,
-    "son": 19.56,
-    "ses_bas": 14.147
+    "metin": "Bu yüzden tekniği bir gün tek başına uygulayacakmış gibi öğrenmen gerekir; sınavda da hoca önce bir grup malzeme verip gerekenleri seçtirir, sonra işlem basamaklarını sorar.",
+    "bas": 16.33,
+    "son": 25.64,
+    "ses_bas": 14.75
    },
    {
     "baslik": "İşlemde üç soruya cevap",
     "metin": "İşlemde üç soruya cevap vereceksin: kime takılır, kime takılmaz ve sonda doğru yere nasıl ulaştırılır.",
-    "bas": 20.46,
-    "son": 26.2,
-    "ses_bas": 18.437
+    "bas": 26.54,
+    "son": 32.27,
+    "ses_bas": 24.513
    }
   ],
   "kamera": [
@@ -4380,13 +4380,13 @@
     100
    ],
    [
-    20.464,
+    26.54,
     400.0,
     250.0,
     100
    ],
    [
-    21.864,
+    27.94,
     495,
     368.42,
     190
@@ -4394,7 +4394,7 @@
   ],
   "etiketler": [
    {
-    "bas": 1.04,
+    "bas": 1.03,
     "son": 6.67,
     "x": 175,
     "y": 70,
@@ -4410,48 +4410,48 @@
     "tur": "dogru"
    },
    {
-    "bas": 7.94,
-    "son": 14.82,
+    "bas": 7.96,
+    "son": 15.43,
     "x": 300,
     "y": 40.0,
     "metin": "Çoğu zaman: hemşire",
     "tur": "bilgi"
    },
    {
-    "bas": 10.84,
-    "son": 14.82,
+    "bas": 11.11,
+    "son": 15.43,
     "x": 300,
     "y": 260,
     "metin": "Bilinçsiz, çocuk: hekim",
     "tur": "uyari"
    },
    {
-    "bas": 16.49,
-    "son": 19.56,
+    "bas": 18.19,
+    "son": 25.64,
     "x": 300,
     "y": 50,
     "metin": "Tek başına uygulayabil",
     "tur": "dogru"
    },
    {
-    "bas": 21.86,
-    "son": 26.2,
+    "bas": 27.94,
+    "son": 32.27,
     "x": 495,
     "y": 257.9,
     "metin": "Kime? Kime değil? Nasıl?",
     "tur": "bilgi"
    },
    {
-    "bas": 21.9,
-    "son": 26.2,
+    "bas": 27.97,
+    "son": 32.27,
     "x": 420,
     "y": 310,
     "metin": "Trakea: yanlış yol",
     "tur": "uyari"
    },
    {
-    "bas": 22.18,
-    "son": 26.2,
+    "bas": 28.26,
+    "son": 32.27,
     "x": 600,
     "y": 290,
     "metin": "Özofagus: doğru yol",
@@ -4465,49 +4465,49 @@
  {
   "ad": "adim-ng-endikasyon",
   "baslik": "Endikasyonlar: kime takılır?",
-  "sure": 41.31,
+  "sure": 45.08,
   "bolumler": [
    {
     "baslik": "Föydeki dersin amacı, başta",
-    "metin": "Föydeki dersin amacı, başta mide lavajı gerekecek zehirlenmeli olgular olmak üzere gerektiğinde nazogastrik sonda takabilmektir.",
+    "metin": "Föydeki dersin amacı, başta mide lavajı gerekecek zehirlenmeli olgular olmak üzere gerektiğinde nazogastrik sonda takabilmektir; hoca da ilk sırada zehirlenmede mide yıkamayı sayar.",
     "bas": 0.8,
-    "son": 7.57,
+    "son": 10.49,
     "ses_bas": 0.12
    },
    {
     "baslik": "İkinci büyük endikasyon beslenmedir",
     "metin": "İkinci büyük endikasyon beslenmedir: ağızdan beslenemeyen ve başka enteral yolu olmayan hasta, örneğin PEG takılana kadar sondadan beslenir.",
-    "bas": 8.47,
-    "son": 16.33,
-    "ses_bas": 7.343
+    "bas": 11.39,
+    "son": 19.24,
+    "ses_bas": 10.264
    },
    {
     "baslik": "Mide içeriğini görmek ya",
     "metin": "Mide içeriğini görmek ya da boşaltmak gerektiğinde de sonda takılır.",
-    "bas": 17.23,
-    "son": 20.87,
-    "ses_bas": 15.647
+    "bas": 20.14,
+    "son": 23.79,
+    "ses_bas": 18.566
    },
    {
     "baslik": "Örneğin üst gastrointestinal kanama",
     "metin": "Örneğin üst gastrointestinal kanama şüphesinde midede kanlı içerik olup olmadığını sondayla anlarsın.",
-    "bas": 21.77,
-    "son": 27.04,
-    "ses_bas": 19.743
+    "bas": 24.69,
+    "son": 29.95,
+    "ses_bas": 22.66
    },
    {
     "baslik": "Sondadan ilaç da verilebilir",
     "metin": "Sondadan ilaç da verilebilir; ezilen ilaç sıvıya karıştırılıp sondadan mideye verilir.",
-    "bas": 27.94,
-    "son": 32.66,
-    "ses_bas": 25.459
+    "bas": 30.85,
+    "son": 35.57,
+    "ses_bas": 28.374
    },
    {
-    "baslik": "Hoca kime takılıp kime",
-    "metin": "Hoca kime takılıp kime takılmayacağını sınavda mutlaka soruyor; endikasyonları ve kontrendikasyonları birlikte bilmelisin.",
-    "bas": 33.56,
-    "son": 40.01,
-    "ses_bas": 30.634
+    "baslik": "Hoca özellikle kontrendikasyonları sınavda",
+    "metin": "Hoca özellikle kontrendikasyonları sınavda mutlaka sorduğunu söyler; bu yüzden endikasyonları ve kontrendikasyonları birlikte bilmelisin.",
+    "bas": 36.47,
+    "son": 43.78,
+    "ses_bas": 33.547
    }
   ],
   "kamera": [
@@ -4532,96 +4532,96 @@
   ],
   "etiketler": [
    {
-    "bas": 1.48,
-    "son": 7.57,
+    "bas": 1.77,
+    "son": 10.49,
     "x": 470,
     "y": 230,
     "metin": "Mide",
     "tur": "etiket"
    },
    {
-    "bas": 3.85,
-    "son": 7.57,
+    "bas": 5.16,
+    "son": 10.49,
     "x": 640,
     "y": 120,
     "metin": "Mide lavajı: zehirlenme",
     "tur": "dogru"
    },
    {
-    "bas": 9.26,
-    "son": 16.33,
+    "bas": 12.18,
+    "son": 19.24,
     "x": 560,
     "y": 60,
     "metin": "Beslenme sondası",
     "tur": "bilgi"
    },
    {
-    "bas": 11.61,
-    "son": 16.33,
+    "bas": 14.53,
+    "son": 19.24,
     "x": 230,
     "y": 230,
     "metin": "Duodenum",
     "tur": "etiket"
    },
    {
-    "bas": 13.18,
-    "son": 16.33,
+    "bas": 16.1,
+    "son": 19.24,
     "x": 560,
     "y": 330,
     "metin": "PEG takılana kadar",
     "tur": "dogru"
    },
    {
-    "bas": 17.59,
-    "son": 20.87,
+    "bas": 20.51,
+    "son": 23.79,
     "x": 700,
     "y": 110,
     "metin": "Drenaj torbası",
     "tur": "bilgi"
    },
    {
-    "bas": 18.5,
-    "son": 20.87,
+    "bas": 21.42,
+    "son": 23.79,
     "x": 470,
     "y": 330,
     "metin": "Mide içeriği boşaltılır",
     "tur": "dogru"
    },
    {
-    "bas": 22.82,
-    "son": 27.04,
+    "bas": 25.74,
+    "son": 29.95,
     "x": 420,
     "y": 120,
     "metin": "Kanlı içerik: üst GİS kanama",
     "tur": "uyari"
    },
    {
-    "bas": 28.31,
-    "son": 32.66,
+    "bas": 31.23,
+    "son": 35.57,
     "x": 560,
     "y": 50,
     "metin": "Ezilmiş ilaç + sıvı",
     "tur": "bilgi"
    },
    {
-    "bas": 29.83,
-    "son": 32.66,
+    "bas": 32.74,
+    "son": 35.57,
     "x": 300,
     "y": 160,
     "metin": "Nazogastrik sonda",
     "tur": "etiket"
    },
    {
-    "bas": 33.88,
-    "son": 40.01,
+    "bas": 36.84,
+    "son": 43.78,
     "x": 560,
     "y": 60,
     "metin": "Lavaj · beslenme · boşaltma",
     "tur": "dogru"
    },
    {
-    "bas": 36.46,
-    "son": 40.01,
+    "bas": 39.76,
+    "son": 43.78,
     "x": 560,
     "y": 330,
     "metin": "Kontrendikasyonla birlikte",
@@ -4782,36 +4782,36 @@
  },
  {
   "ad": "adim-ng-kontrendikasyon-koroziv",
-  "baslik": "Kontrendikasyon 3: koroziv madde içen hasta",
-  "sure": 27.52,
+  "baslik": "Kontrendikasyon 3: kostik (koroziv) madde içen hasta",
+  "sure": 28.1,
   "bolumler": [
    {
-    "baslik": "Ağızdan koroziv yani yakıcı",
-    "metin": "Ağızdan koroziv yani yakıcı madde almış hastaya nazogastrik sonda takılmaz.",
+    "baslik": "Ağızdan kostik, yani yakıcı",
+    "metin": "Ağızdan kostik, yani yakıcı (koroziv) madde almış hastaya nazogastrik sonda takılmaz.",
     "bas": 0.8,
-    "son": 4.89,
+    "son": 5.49,
     "ses_bas": 0.12
    },
    {
     "baslik": "Birinci neden: madde yutulurken",
     "metin": "Birinci neden: madde yutulurken farinks ve özofagus mukozasını zaten yakmıştır; sonda yanmış dokuya değerek ona yeniden zarar verir.",
-    "bas": 5.79,
-    "son": 13.04,
-    "ses_bas": 4.659
+    "bas": 6.39,
+    "son": 13.65,
+    "ses_bas": 5.263
    },
    {
     "baslik": "İkinci neden: işlem mide",
     "metin": "İkinci neden: işlem mide bulandırıcıdır, hasta kusarsa madde yukarı çıkar ve aynı dokuyu bir kez daha yakar.",
-    "bas": 13.94,
-    "son": 20.15,
-    "ses_bas": 12.364
+    "bas": 14.55,
+    "son": 20.77,
+    "ses_bas": 12.973
    },
    {
     "baslik": "Bu yüzden zehirlenmede lavaj",
-    "metin": "Bu yüzden zehirlenmede lavaj endikasyonu olsa bile, içilen madde koroziv ise sonda takılmaz.",
-    "bas": 21.05,
-    "son": 26.22,
-    "ses_bas": 19.027
+    "metin": "Bu yüzden zehirlenmede lavaj endikasyonu olsa bile, içilen madde kostik ise sonda takılmaz.",
+    "bas": 21.67,
+    "son": 26.8,
+    "ses_bas": 19.64
    }
   ],
   "kamera": [
@@ -4834,25 +4834,25 @@
     100
    ],
    [
-    5.788,
+    6.392,
     400.0,
     250.0,
     100
    ],
    [
-    7.188,
+    7.792,
     490,
     330,
     170
    ],
    [
-    21.054,
+    21.667,
     490,
     330,
     170
    ],
    [
-    22.454,
+    23.067,
     400.0,
     250.0,
     100
@@ -4860,51 +4860,51 @@
   ],
   "etiketler": [
    {
-    "bas": 1.0,
-    "son": 4.89,
+    "bas": 1.03,
+    "son": 5.49,
     "x": 120,
     "y": 140,
     "metin": "Yakıcı madde",
     "tur": "uyari"
    },
    {
-    "bas": 2.03,
-    "son": 4.89,
+    "bas": 2.21,
+    "son": 5.49,
     "x": 610,
     "y": 230,
-    "metin": "Koroziv yanık",
+    "metin": "Kostik yanık",
     "tur": "uyari"
    },
    {
-    "bas": 10.14,
-    "son": 13.04,
+    "bas": 10.75,
+    "son": 13.65,
     "x": 400,
     "y": 206.5,
     "metin": "Yanmış mukozaya sürtünür",
     "tur": "uyari"
    },
    {
-    "bas": 15.18,
-    "son": 20.15,
+    "bas": 15.79,
+    "son": 20.77,
     "x": 620,
     "y": 206.5,
     "metin": "Kusma: yeniden yakar",
     "tur": "uyari"
    },
    {
-    "bas": 22.45,
-    "son": 26.22,
+    "bas": 23.07,
+    "son": 26.8,
     "x": 330,
     "y": 40.0,
     "metin": "Lavaj gerekse bile",
     "tur": "bilgi"
    },
    {
-    "bas": 23.38,
-    "son": 26.22,
+    "bas": 23.98,
+    "son": 26.8,
     "x": 330,
     "y": 124.0,
-    "metin": "Koroziv: sonda takılmaz",
+    "metin": "Kostik: sonda takılmaz",
     "tur": "uyari"
    }
   ],
@@ -5043,7 +5043,7 @@
  {
   "ad": "adim-ng-kontrendikasyon-varis",
   "baslik": "Kontrendikasyon 5: özofagus varisi",
-  "sure": 31.51,
+  "sure": 32.42,
   "bolumler": [
    {
     "baslik": "Varis, bir bölgedeki venöz",
@@ -5054,24 +5054,24 @@
    },
    {
     "baslik": "Bu hastalar kanamaya yatkındır",
-    "metin": "Bu hastalar kanamaya yatkındır ve üst gastrointestinal kanamayla acile gelebilirler.",
+    "metin": "Bu hastalar kanamaya yatkındır ve mide kanaması geçiriyormuş gibi, kan kusarak acile gelebilirler.",
     "bas": 10.01,
-    "son": 14.69,
-    "ses_bas": 8.876
+    "son": 15.5,
+    "ses_bas": 8.877
    },
    {
     "baslik": "Kanama şüphesi normalde sonda",
     "metin": "Kanama şüphesi normalde sonda endikasyonudur; ama özofagus varisi olduğunu bildiğin hastaya sonda takmazsın.",
-    "bas": 15.59,
-    "son": 21.41,
-    "ses_bas": 14.015
+    "bas": 16.4,
+    "son": 22.22,
+    "ses_bas": 14.817
    },
    {
-    "baslik": "Sonda genişlemiş venlere sürtünerek",
-    "metin": "Sonda genişlemiş venlere sürtünerek kanamayı artırabilir; hoca bu riski teorik olarak anlatır ama varisi bilinen hastaya sonda takılmamasını ister.",
-    "bas": 22.31,
-    "son": 30.21,
-    "ses_bas": 20.287
+    "baslik": "Hoca, sondanın bu hastada",
+    "metin": "Hoca, sondanın bu hastada kanamayı artırıp zarar verebileceğini teorik bir risk olarak anlatır ve varisi bilinen hastaya sonda takılmamasını ister.",
+    "bas": 23.12,
+    "son": 31.12,
+    "ses_bas": 21.089
    }
   ],
   "kamera": [
@@ -5112,48 +5112,48 @@
     "tur": "uyari"
    },
    {
-    "bas": 10.71,
-    "son": 14.69,
+    "bas": 10.83,
+    "son": 15.5,
     "x": 400,
     "y": 230,
     "metin": "Kanamaya yatkın",
     "tur": "uyari"
    },
    {
-    "bas": 12.35,
-    "son": 14.69,
+    "bas": 12.75,
+    "son": 15.5,
     "x": 400,
     "y": 50,
     "metin": "Üst GİS kanamasıyla gelir",
     "tur": "bilgi"
    },
    {
-    "bas": 15.88,
-    "son": 21.41,
+    "bas": 16.69,
+    "son": 22.22,
     "x": 330,
     "y": 40.0,
     "metin": "Kanama: normalde endikasyon",
     "tur": "bilgi"
    },
    {
-    "bas": 19.09,
-    "son": 21.41,
+    "bas": 19.89,
+    "son": 22.22,
     "x": 330,
     "y": 230,
     "metin": "Varis biliniyorsa: takma",
     "tur": "uyari"
    },
    {
-    "bas": 23.89,
-    "son": 30.21,
+    "bas": 24.72,
+    "son": 31.12,
     "x": 620,
     "y": 45,
     "metin": "Sürtünme kanamayı artırır",
     "tur": "uyari"
    },
    {
-    "bas": 27.45,
-    "son": 30.21,
+    "bas": 28.32,
+    "son": 31.12,
     "x": 300,
     "y": 80,
     "metin": "Varis bilinen: takılmaz",
@@ -5167,7 +5167,7 @@
  {
   "ad": "adim-ng-anatomi",
   "baslik": "Anatomi: iki delik ve başın öne eğilmesi",
-  "sure": 27.88,
+  "sure": 28.34,
   "bolumler": [
    {
     "baslik": "Farinksin aşağısında iki giriş",
@@ -5177,25 +5177,25 @@
     "ses_bas": 0.12
    },
    {
-    "baslik": "Sonda larinksten geçerse trakeaya",
-    "metin": "Sonda larinksten geçerse trakeaya girer; özofagus girişinden geçerse aşağı doğru mideye ilerler.",
+    "baslik": "Sonda ses tellerinin arasından",
+    "metin": "Sonda ses tellerinin arasından geçerse trakeaya girer; özofagusun ağzından girerse aşağı doğru mideye ilerler.",
     "bas": 6.55,
-    "son": 11.9,
-    "ses_bas": 5.422
+    "son": 12.61,
+    "ses_bas": 5.424
    },
    {
     "baslik": "Hastanın başını hafifçe öne",
     "metin": "Hastanın başını hafifçe öne eğdirdiğinde yol özofagusa doğru açılır ve sonda daha rahat ilerler.",
-    "bas": 12.8,
-    "son": 17.89,
-    "ses_bas": 11.222
+    "bas": 13.51,
+    "son": 18.6,
+    "ses_bas": 11.93
    },
    {
-    "baslik": "Laboratuvardaki maket immobil, başı",
-    "metin": "Laboratuvardaki maket immobil, başı arkaya düşmüş bir hasta gibi durduğu için bu açıyı tam vermez; gerçek hastada başı mutlaka öne eğdirirsin.",
-    "bas": 18.79,
-    "son": 26.58,
-    "ses_bas": 16.764
+    "baslik": "Laboratuvardaki maketin duruşu hareketsiz",
+    "metin": "Laboratuvardaki maketin duruşu hareketsiz yatan yaşlı bir hastaya benzer ve bu açıyı tam vermez; gerçek hastada başı hafifçe öne eğdirirsin.",
+    "bas": 19.5,
+    "son": 27.04,
+    "ses_bas": 17.474
    }
   ],
   "kamera": [
@@ -5218,13 +5218,13 @@
     190
    ],
    [
-    12.8,
+    13.507,
     495,
     368.42,
     190
    ],
    [
-    14.2,
+    14.907,
     400.0,
     250.0,
     100
@@ -5248,48 +5248,48 @@
     "tur": "dogru"
    },
    {
-    "bas": 8.96,
-    "son": 11.9,
+    "bas": 9.28,
+    "son": 12.61,
     "x": 400,
     "y": 257.9,
     "metin": "Larinksten: trakeaya",
     "tur": "uyari"
    },
    {
-    "bas": 10.56,
-    "son": 11.9,
+    "bas": 11.09,
+    "son": 12.61,
     "x": 610,
     "y": 260,
     "metin": "Özofagustan: mideye",
     "tur": "dogru"
    },
    {
-    "bas": 14.2,
-    "son": 17.89,
+    "bas": 14.91,
+    "son": 18.6,
     "x": 330,
     "y": 320,
     "metin": "Çene göğse: baş öne",
     "tur": "dogru"
    },
    {
-    "bas": 15.35,
-    "son": 17.89,
+    "bas": 16.05,
+    "son": 18.6,
     "x": 620,
     "y": 130,
     "metin": "Yol özofagusa açılır",
     "tur": "dogru"
    },
    {
-    "bas": 21.52,
-    "son": 26.58,
+    "bas": 22.14,
+    "son": 27.04,
     "x": 330,
     "y": 290,
     "metin": "Maket: baş arkada",
     "tur": "uyari"
    },
    {
-    "bas": 23.08,
-    "son": 26.58,
+    "bas": 23.65,
+    "son": 27.04,
     "x": 330,
     "y": 336,
     "metin": "Hasta: başı öne eğdir",
@@ -5303,7 +5303,7 @@
  {
   "ad": "adim-ng-malzeme",
   "baslik": "Malzeme 1: sonda, kayganlaştırıcı, beslenme sondası",
-  "sure": 69.58,
+  "sure": 70.51,
   "bolumler": [
    {
     "baslik": "Sondaların uç kısmında farklı",
@@ -5316,7 +5316,7 @@
     "baslik": "Mideye ulaşmak için gereken",
     "metin": "Mideye ulaşmak için gereken yol aşağı yukarı aynı olduğundan sondaların boyları birbirine benzer, kalınlıkları farklıdır.",
     "bas": 6.41,
-    "son": 12.71,
+    "son": 12.72,
     "ses_bas": 5.284
    },
    {
@@ -5324,42 +5324,42 @@
     "metin": "Sondanın üzerinde üretici firmaya göre çizgi ya da 50, 60 gibi sayılarla uzunluk işareti bulunur; ne kadar ilerlediğini bununla izlersin.",
     "bas": 13.62,
     "son": 21.11,
-    "ses_bas": 12.036
+    "ses_bas": 12.038
    },
    {
     "baslik": "Sonda kapalı pakette gelir",
     "metin": "Sonda kapalı pakette gelir ve işlemden hemen önce açılır; işlem steril değildir ama malzeme temiz olmalı ve eldivenle çalışılır.",
     "bas": 22.01,
-    "son": 28.91,
-    "ses_bas": 19.981
+    "son": 28.92,
+    "ses_bas": 19.984
    },
    {
     "baslik": "Burun kaygan bir alan",
-    "metin": "Burun kaygan bir alan olmadığı için su bazlı kayganlaştırıcı jel kullanılır; üretral kateterde kullandığın jel bunun için uygundur.",
-    "bas": 29.81,
-    "son": 36.99,
-    "ses_bas": 27.336
+    "metin": "Burun kaygan bir alan olmadığı için su bazlı kayganlaştırıcı jel kullanılır; hazır paketli kateter jeli bunun için uygundur.",
+    "bas": 29.82,
+    "son": 36.58,
+    "ses_bas": 27.34
    },
    {
     "baslik": "Jel bulamazsan vazelin akla",
-    "metin": "Jel bulamazsan vazelin akla gelir; ama vazelin bir petrol ürünüdür, ilk tercih asla değildir ve yalnız çaresiz kaldığında çok az miktarda kullanılır; ultrason jeli gibi başka su bazlı jeller de olur.",
-    "bas": 37.89,
-    "son": 49.12,
-    "ses_bas": 34.965
+    "metin": "Jel bulamazsan vazelin akla gelir; ama vazelin bir petrol ürünüdür, ilk tercih asla değildir ve yalnız çaresiz kaldığında çok az miktarda kullanılır; varsa ultrason jeli gibi başka jeller de kayganlaştırmak için kullanılabilir.",
+    "bas": 37.48,
+    "son": 50.13,
+    "ses_bas": 34.554
    },
    {
     "baslik": "Standart nazogastrik sondanın içinde",
     "metin": "Standart nazogastrik sondanın içinde tel yoktur, manevrayla takılır; beslenme sondası adıyla satılanlar ise ince ve yumuşaktır, içlerinde kılavuz tel bulunur.",
-    "bas": 50.02,
-    "son": 58.77,
-    "ses_bas": 46.641
+    "bas": 51.03,
+    "son": 59.78,
+    "ses_bas": 47.656
    },
    {
     "baslik": "Beslenme sondası aynı teknikle",
-    "metin": "Beslenme sondası aynı teknikle takılır, ucu mide ile duodenumun başlangıcı arasına yerleşir; sonra tel çıkarılır, yer kontrol edilir ve sondası sabitlenir.",
-    "bas": 59.67,
-    "son": 68.28,
-    "ses_bas": 55.839
+    "metin": "Beslenme sondası aynı teknikle takılır, ucu mide ile duodenumun başlangıcı arasına yerleşir; sonra tel çıkarılır, yer kontrol edilir ve sonda sabitlenir.",
+    "bas": 60.68,
+    "son": 69.21,
+    "ses_bas": 56.855
    }
   ],
   "kamera": [
@@ -5382,73 +5382,73 @@
     170
    ],
    [
-    13.615,
+    13.617,
     340,
     147.06,
     170
    ],
    [
-    15.015,
+    15.017,
     250.0,
     156.25,
     160
    ],
    [
-    22.01,
+    22.012,
     250.0,
     156.25,
     160
    ],
    [
-    23.41,
+    23.412,
     400.0,
     250.0,
     100
    ],
    [
-    29.815,
+    29.818,
     400.0,
     250.0,
     100
    ],
    [
-    31.215,
+    31.218,
     520,
     250,
     160
    ],
    [
-    37.894,
+    37.482,
     520,
     250,
     160
    ],
    [
-    39.294,
+    38.882,
     533.33,
     250,
     150
    ],
    [
-    50.02,
+    51.034,
     533.33,
     250,
     150
    ],
    [
-    51.42,
+    52.434,
     400.0,
     250.0,
     100
    ],
    [
-    59.668,
+    60.683,
     400.0,
     250.0,
     100
    ],
    [
-    61.068,
+    62.083,
     400.0,
     250.0,
     100
@@ -5465,7 +5465,7 @@
    },
    {
     "bas": 6.73,
-    "son": 12.71,
+    "son": 12.72,
     "x": 300,
     "y": 40,
     "metin": "Boyları benzer",
@@ -5473,7 +5473,7 @@
    },
    {
     "bas": 9.25,
-    "son": 12.71,
+    "son": 12.72,
     "x": 300,
     "y": 170,
     "metin": "Kalınlıkları farklı",
@@ -5488,7 +5488,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 16.61,
+    "bas": 16.62,
     "son": 21.11,
     "x": 320,
     "y": 40,
@@ -5497,7 +5497,7 @@
    },
    {
     "bas": 23.41,
-    "son": 28.91,
+    "son": 28.92,
     "x": 260,
     "y": 200,
     "metin": "Paket hemen önce açılır",
@@ -5505,79 +5505,79 @@
    },
    {
     "bas": 25.12,
-    "son": 28.91,
+    "son": 28.92,
     "x": 324,
     "y": 300,
     "metin": "Temiz + eldiven, steril değil",
     "tur": "bilgi"
    },
    {
-    "bas": 31.21,
-    "son": 36.99,
+    "bas": 31.22,
+    "son": 36.58,
     "x": 470,
     "y": 140,
     "metin": "Su bazlı jel",
     "tur": "dogru"
    },
    {
-    "bas": 33.05,
-    "son": 36.99,
+    "bas": 32.86,
+    "son": 36.58,
     "x": 470,
     "y": 316.2,
     "metin": "Üretral kateter jeli uygun",
     "tur": "bilgi"
    },
    {
-    "bas": 39.29,
-    "son": 49.12,
+    "bas": 38.88,
+    "son": 50.13,
     "x": 600,
     "y": 150,
-    "metin": "Vazelin: petrol ürünü",
+    "metin": "Vazelin: ilk tercih değil",
     "tur": "uyari"
    },
    {
-    "bas": 43.51,
-    "son": 49.12,
+    "bas": 43.81,
+    "son": 50.13,
     "x": 600,
     "y": 320,
-    "metin": "Yalnız çaresizsen, çok az",
-    "tur": "uyari"
+    "metin": "Zor durumda: çok az",
+    "tur": "bilgi"
    },
    {
-    "bas": 51.42,
-    "son": 58.77,
+    "bas": 52.43,
+    "son": 59.78,
     "x": 120,
     "y": 200,
     "metin": "Standart: tel yok",
     "tur": "bilgi"
    },
    {
-    "bas": 53.96,
-    "son": 58.77,
+    "bas": 54.97,
+    "son": 59.78,
     "x": 640,
     "y": 160,
     "metin": "Beslenme: ince, telli",
     "tur": "bilgi"
    },
    {
-    "bas": 60.96,
-    "son": 68.28,
+    "bas": 61.96,
+    "son": 69.21,
     "x": 200,
     "y": 200,
     "metin": "Uç: mide–duodenum başı",
     "tur": "dogru"
    },
    {
-    "bas": 63.54,
-    "son": 68.28,
+    "bas": 64.52,
+    "son": 69.21,
     "x": 600,
     "y": 60,
     "metin": "Tel çıkarılır",
     "tur": "bilgi"
    },
    {
-    "bas": 65.69,
-    "son": 68.28,
+    "bas": 66.65,
+    "son": 69.21,
     "x": 600,
     "y": 110,
     "metin": "Yer kontrolü, sabitleme",
@@ -5591,7 +5591,7 @@
  {
   "ad": "adim-ng-malzeme-kontrol",
   "baslik": "Malzeme 2: yer kontrolü, sabitleme ve korunma",
-  "sure": 33.28,
+  "sure": 33.78,
   "bolumler": [
    {
     "baslik": "Yer kontrolü için çan",
@@ -5604,29 +5604,29 @@
     "baslik": "Normal enjektörün ucu sondaya",
     "metin": "Normal enjektörün ucu sondaya oturmaz ve verdiğin hava kenardan kaçar.",
     "bas": 7.63,
-    "son": 11.47,
-    "ses_bas": 6.501
+    "son": 11.48,
+    "ses_bas": 6.504
    },
    {
     "baslik": "Mideyi dinlemek için stetoskop",
     "metin": "Mideyi dinlemek için stetoskop, sondayı burna sabitlemek için flaster hazırlanır.",
-    "bas": 12.37,
-    "son": 16.71,
-    "ses_bas": 10.795
+    "bas": 12.38,
+    "son": 16.72,
+    "ses_bas": 10.8
    },
    {
     "baslik": "İşlem kirlidir: hasta öğürür",
     "metin": "İşlem kirlidir: hasta öğürür, öksürür, hapşırır ve her yere partikül saçılır; bu yüzden hastanın göğsüne serilecek emici bir örtü ve kusma poşeti hazırlanır.",
-    "bas": 17.61,
-    "son": 26.43,
-    "ses_bas": 15.587
+    "bas": 17.62,
+    "son": 26.44,
+    "ses_bas": 15.595
    },
    {
     "baslik": "Lavaj ve boşaltma için",
-    "metin": "Lavaj ve boşaltma için su ile sondanın ucuna takılacak bir torba da tepside olmalıdır.",
-    "bas": 27.33,
-    "son": 31.98,
-    "ses_bas": 24.853
+    "metin": "Lavaj ve boşaltma için su ile sondanın ucuna takılacak bir idrar torbası da tepside olmalıdır.",
+    "bas": 27.34,
+    "son": 32.48,
+    "ses_bas": 24.865
    }
   ],
   "kamera": [
@@ -5649,49 +5649,49 @@
     170
    ],
    [
-    7.63,
+    7.633,
     235.29,
     240,
     170
    ],
    [
-    9.03,
+    9.033,
     320,
     240,
     170
    ],
    [
-    12.373,
+    12.378,
     320,
     240,
     170
    ],
    [
-    13.773,
+    13.778,
     250.0,
     340,
     160
    ],
    [
-    17.614,
+    17.622,
     250.0,
     340,
     160
    ],
    [
-    19.014,
+    19.022,
     480,
     333.33,
     150
    ],
    [
-    27.329,
+    27.341,
     480,
     333.33,
     150
    ],
    [
-    28.729,
+    28.741,
     533.33,
     320,
     150
@@ -5708,7 +5708,7 @@
    },
    {
     "bas": 9.03,
-    "son": 11.47,
+    "son": 11.48,
     "x": 320,
     "y": 160,
     "metin": "Normal uç oturmaz",
@@ -5716,63 +5716,63 @@
    },
    {
     "bas": 9.36,
-    "son": 11.47,
+    "son": 11.48,
     "x": 330,
     "y": 302.4,
     "metin": "Hava kenardan kaçar",
     "tur": "uyari"
    },
    {
-    "bas": 13.77,
-    "son": 16.71,
+    "bas": 13.78,
+    "son": 16.72,
     "x": 120,
     "y": 260,
     "metin": "Stetoskop: mideyi dinle",
     "tur": "bilgi"
    },
    {
-    "bas": 14.11,
-    "son": 16.71,
+    "bas": 14.12,
+    "son": 16.72,
     "x": 250,
     "y": 300,
     "metin": "Flaster: burna sabitle",
     "tur": "bilgi"
    },
    {
-    "bas": 19.01,
-    "son": 21.14,
+    "bas": 19.02,
+    "son": 21.15,
     "x": 460,
     "y": 250,
     "metin": "İşlem kirli: öğürme, öksürük",
     "tur": "uyari"
    },
    {
-    "bas": 20.26,
-    "son": 26.43,
+    "bas": 20.27,
+    "son": 26.44,
     "x": 400,
     "y": 300,
     "metin": "Emici örtü: göğse",
     "tur": "bilgi"
    },
    {
-    "bas": 22.46,
-    "son": 26.43,
+    "bas": 22.47,
+    "son": 26.44,
     "x": 580,
     "y": 250,
     "metin": "Kusma poşeti",
     "tur": "bilgi"
    },
    {
-    "bas": 28.73,
-    "son": 31.98,
+    "bas": 28.74,
+    "son": 32.48,
     "x": 710,
     "y": 180.0,
     "metin": "Su: lavaj",
     "tur": "bilgi"
    },
    {
-    "bas": 29.19,
-    "son": 31.98,
+    "bas": 29.4,
+    "son": 32.48,
     "x": 640,
     "y": 310,
     "metin": "Torba: boşaltma",
@@ -6011,50 +6011,50 @@
  },
  {
   "ad": "adim-ng-olcum",
-  "baslik": "Ölçüm: burun → kulak memesi → ksifoid",
-  "sure": 41.14,
+  "baslik": "Ölçüm: burun → kulak memesi → epigastrium",
+  "sure": 43.86,
   "bolumler": [
    {
     "baslik": "Sondayı itmeden önce ne",
     "metin": "Sondayı itmeden önce ne kadar ilerleteceğini ölçersin; iki metre boyunda 120 kiloluk bir hastayla 1,40 boyunda 40 kiloluk bir hastanın mesafesi aynı değildir.",
     "bas": 0.8,
-    "son": 10.47,
+    "son": 10.46,
     "ses_bas": 0.12
    },
    {
     "baslik": "Sondanın ucunu burun deliğine",
     "metin": "Sondanın ucunu burun deliğine koyarsın.",
-    "bas": 11.37,
-    "son": 13.37,
-    "ses_bas": 10.242
+    "bas": 11.36,
+    "son": 13.36,
+    "ses_bas": 10.235
    },
    {
     "baslik": "Oradan kulak memesine uzatırsın.",
     "metin": "Oradan kulak memesine uzatırsın.",
-    "bas": 14.27,
-    "son": 16.03,
-    "ses_bas": 12.687
+    "bas": 14.26,
+    "son": 16.02,
+    "ses_bas": 12.678
    },
    {
-    "baslik": "Kulak memesinden de ksifoid",
-    "metin": "Kulak memesinden de ksifoid çıkıntıya, yani epigastriumun üst sınırına kadar götürürsün.",
-    "bas": 16.93,
-    "son": 21.69,
-    "ses_bas": 14.902
+    "baslik": "Kulak memesinden de epigastrik",
+    "metin": "Kulak memesinden de epigastrik bölgeye, ksifoid çıkıntı hizasına kadar götürürsün.",
+    "bas": 16.92,
+    "son": 21.42,
+    "ses_bas": 14.892
    },
    {
-    "baslik": "Ksifoide denk gelen yeri",
-    "metin": "Ksifoide denk gelen yeri sondanın üzerinde işaretler, bunun kaç santimetreye ya da kaçıncı çizgiye geldiğini aklında tutarsın; sondayı bu işarete kadar ilerleteceksin.",
-    "bas": 22.59,
-    "son": 31.5,
-    "ses_bas": 20.116
+    "baslik": "Epigastriuma denk gelen yeri",
+    "metin": "Epigastriuma denk gelen yeri sondanın üzerinde işaretler, bunun kaç santimetreye ya da kaçıncı çizgiye geldiğini aklında tutarsın; sondayı bu işarete kadar ilerleteceksin.",
+    "bas": 22.32,
+    "son": 31.56,
+    "ses_bas": 19.844
    },
    {
-    "baslik": "Bu ölçüm sınavda en",
-    "metin": "Bu ölçüm sınavda en çok hata yapılan basamaktır; başlangıç noktası burun deliğidir, ikinci nokta kulak memesi, son nokta ksifoid.",
-    "bas": 32.4,
-    "son": 39.84,
-    "ses_bas": 29.47
+    "baslik": "Sınavda öğrenciler ölçümü sık",
+    "metin": "Sınavda öğrenciler ölçümü sık sık farklı bir sırayla yapar; hoca bunun teorik olarak aynı olduğunu, ama sonda burundan girdiği için burundan başlamanın daha kolay ve mantıklı olduğunu söyler.",
+    "bas": 32.46,
+    "son": 42.56,
+    "ses_bas": 29.537
    }
   ],
   "kamera": [
@@ -6077,61 +6077,61 @@
     100
    ],
    [
-    11.371,
+    11.364,
     400.0,
     250.0,
     100
    ],
    [
-    12.771,
+    12.764,
     380,
     150,
     200
    ],
    [
-    14.265,
+    14.256,
     380,
     150,
     200
    ],
    [
-    15.665,
+    15.656,
     410,
     150,
     200
    ],
    [
-    16.929,
+    16.919,
     410,
     150,
     200
    ],
    [
-    18.329,
+    18.319,
     400,
     260,
     140
    ],
    [
-    22.592,
+    22.321,
     400,
     260,
     140
    ],
    [
-    23.992,
+    23.721,
     380,
     280,
     170
    ],
    [
-    32.395,
+    32.464,
     380,
     280,
     170
    ],
    [
-    33.795,
+    33.864,
     400,
     230,
     125
@@ -6140,7 +6140,7 @@
   "etiketler": [
    {
     "bas": 1.77,
-    "son": 10.47,
+    "son": 10.46,
     "x": 150,
     "y": 60,
     "metin": "2 m · 120 kg",
@@ -6148,7 +6148,7 @@
    },
    {
     "bas": 3.7,
-    "son": 10.47,
+    "son": 10.46,
     "x": 690,
     "y": 150,
     "metin": "1,40 m · 40 kg",
@@ -6156,82 +6156,82 @@
    },
    {
     "bas": 6.12,
-    "son": 10.47,
+    "son": 10.46,
     "x": 420,
     "y": 330,
     "metin": "Mesafe kişiye özel: ölç",
     "tur": "dogru"
    },
    {
-    "bas": 11.67,
-    "son": 13.37,
+    "bas": 11.66,
+    "son": 13.36,
     "x": 250,
     "y": 80,
     "metin": "1) Burun deliği",
     "tur": "bilgi"
    },
    {
-    "bas": 15.32,
-    "son": 16.03,
+    "bas": 15.31,
+    "son": 16.02,
     "x": 520,
     "y": 70,
     "metin": "2) Kulak memesi",
     "tur": "bilgi"
    },
    {
-    "bas": 20.26,
-    "son": 21.69,
+    "bas": 20.07,
+    "son": 21.42,
     "x": 250,
     "y": 310,
-    "metin": "3) Ksifoid",
+    "metin": "3) Epigastrium (ksifoid)",
     "tur": "bilgi"
    },
    {
-    "bas": 23.99,
-    "son": 31.5,
+    "bas": 23.72,
+    "son": 31.56,
     "x": 250,
     "y": 300,
     "metin": "Sondada işaretle",
     "tur": "dogru"
    },
    {
-    "bas": 26.6,
-    "son": 31.5,
+    "bas": 26.48,
+    "son": 31.56,
     "x": 250,
     "y": 200,
     "metin": "Kaç cm? Kaçıncı çizgi?",
     "tur": "bilgi"
    },
    {
-    "bas": 33.8,
-    "son": 39.84,
+    "bas": 33.86,
+    "son": 42.56,
     "x": 220,
     "y": 100,
     "metin": "1) Burun deliği",
     "tur": "dogru"
    },
    {
-    "bas": 33.8,
-    "son": 39.84,
+    "bas": 33.86,
+    "son": 42.56,
     "x": 600,
     "y": 200,
-    "metin": "En sık sınav hatası",
-    "tur": "uyari"
+    "metin": "Burundan başla: kolay",
+    "tur": "bilgi"
    },
    {
-    "bas": 34.63,
-    "son": 39.84,
+    "bas": 35.49,
+    "son": 42.56,
     "x": 600,
     "y": 100,
     "metin": "2) Kulak memesi",
     "tur": "dogru"
    },
    {
-    "bas": 36.12,
-    "son": 39.84,
+    "bas": 37.51,
+    "son": 42.56,
     "x": 220,
     "y": 314.8,
-    "metin": "3) Ksifoid",
+    "metin": "3) Epigastrium (ksifoid)",
     "tur": "dogru"
    }
   ],
@@ -6365,7 +6365,7 @@
  {
   "ad": "adim-ng-ilerletme",
   "baslik": "İlerletme: damağa paralel düz, farinkste aşağı",
-  "sure": 44.07,
+  "sure": 44.31,
   "bolumler": [
    {
     "baslik": "Bazı insanların burun delikleri",
@@ -6379,35 +6379,35 @@
     "metin": "Sondayı burun deliğinden sokar, sert damağa yani palatin kemiğe paralel olarak dümdüz arkaya itersin; yukarı doğru değil.",
     "bas": 7.84,
     "son": 14.31,
-    "ses_bas": 6.712
+    "ses_bas": 6.711
    },
    {
     "baslik": "Bu düz bölüm aşağı",
     "metin": "Bu düz bölüm aşağı yukarı kulak memesi hizasına kadar sürer.",
     "bas": 15.21,
     "son": 18.59,
-    "ses_bas": 13.636
+    "ses_bas": 13.633
    },
    {
     "baslik": "Farinkse gelince sonda aşağı",
     "metin": "Farinkse gelince sonda aşağı doğru döner ve onu aşağı yönde ilerletirsin.",
-    "bas": 19.49,
+    "bas": 19.48,
     "son": 23.41,
-    "ses_bas": 17.46
+    "ses_bas": 17.456
    },
    {
-    "baslik": "Bazı hastalar, özellikle bilinci",
-    "metin": "Bazı hastalar, özellikle bilinci bulanık olanlar, dilini arkaya çeker ve sonda dilin çevresinde kıvrılabilir; bu hastadan dilini dışarı çıkarmasını istersin.",
+    "baslik": "Bazı hastalar dilini arkaya",
+    "metin": "Bazı hastalar dilini arkaya doğru çeker ve sonda dilin çevresinde kıvrılabilir; bu hastadan dilini dışarı çıkarmasını istersin.",
     "bas": 24.31,
-    "son": 32.81,
-    "ses_bas": 21.836
+    "son": 31.13,
+    "ses_bas": 21.832
    },
    {
-    "baslik": "Septum deviasyonu nedeniyle bir",
-    "metin": "Septum deviasyonu nedeniyle bir burun deliğinden ilerleyemezsen zorlamazsın; diğer burun deliğini denersin, işlemden önce karşıdan bakıp hangisinin geniş olduğunu görebilirsin.",
-    "bas": 33.71,
-    "son": 42.77,
-    "ses_bas": 30.787
+    "baslik": "Sonda iki burun deliğinden",
+    "metin": "Sonda iki burun deliğinden de takılabilir; ama özellikle yaşlılarda septum deviasyonu olabilir, bir delikten ilerleyemezsen zorlamaz, diğerini denersin; deviasyonu işlemden önce karşıdan bakarak görebilirsin.",
+    "bas": 32.03,
+    "son": 43.01,
+    "ses_bas": 29.098
    }
   ],
   "kamera": [],
@@ -6421,7 +6421,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 9.14,
+    "bas": 9.13,
     "son": 14.31,
     "x": 600,
     "y": 150,
@@ -6437,7 +6437,7 @@
     "tur": "uyari"
    },
    {
-    "bas": 16.23,
+    "bas": 16.22,
     "son": 18.59,
     "x": 560,
     "y": 60,
@@ -6461,32 +6461,32 @@
     "tur": "dogru"
    },
    {
-    "bas": 28.14,
-    "son": 32.81,
+    "bas": 27.38,
+    "son": 31.13,
     "x": 260,
     "y": 50,
     "metin": "Sonda dilde kıvrıldı",
     "tur": "uyari"
    },
    {
-    "bas": 30.26,
-    "son": 32.81,
+    "bas": 29.08,
+    "son": 31.13,
     "x": 600,
     "y": 230,
     "metin": "\"Dilinizi çıkarın\"",
     "tur": "bilgi"
    },
    {
-    "bas": 34.62,
-    "son": 42.77,
+    "bas": 33.12,
+    "son": 43.01,
     "x": 400,
     "y": 120,
     "metin": "Septum deviasyonu: zorlama",
     "tur": "uyari"
    },
    {
-    "bas": 38.24,
-    "son": 42.77,
+    "bas": 37.52,
+    "son": 43.01,
     "x": 600,
     "y": 240,
     "metin": "Öbür burun deliğini dene",
@@ -6500,49 +6500,49 @@
  {
   "ad": "adim-ng-yutkunma",
   "baslik": "Orofarinks: yutkunma telkini ve su",
-  "sure": 41.22,
+  "sure": 47.62,
   "bolumler": [
    {
-    "baslik": "Sondanın ucu orofarinkse ulaşınca",
-    "metin": "Sondanın ucu orofarinkse ulaşınca hastaya \"Ben söyleyince yutkunun\" dersin.",
+    "baslik": "Sonda kulak memesi hizasını",
+    "metin": "Sonda kulak memesi hizasını geçip orofarinkse doğru aşağı dönmeye başlayınca hastaya \"Ben söyleyince yutkunun\" dersin.",
     "bas": 0.8,
-    "son": 4.62,
+    "son": 6.88,
     "ses_bas": 0.12
    },
    {
     "baslik": "Yutkunmayı anlamayan hastaya \"ekmek",
     "metin": "Yutkunmayı anlamayan hastaya \"ekmek yutar gibi yutkunun\" diye tarif edersin.",
-    "bas": 5.52,
-    "son": 9.51,
-    "ses_bas": 4.387
+    "bas": 7.78,
+    "son": 11.78,
+    "ses_bas": 6.654
    },
    {
     "baslik": "Yutma refleksinde epiglot larinksi",
     "metin": "Yutma refleksinde epiglot larinksi kapatır ve sonda, yemek lokması gibi trakeaya değil özofagusa gider; yutkunmayı bu yüzden istersin.",
-    "bas": 10.41,
-    "son": 17.83,
-    "ses_bas": 8.835
+    "bas": 12.68,
+    "son": 20.09,
+    "ses_bas": 11.1
    },
    {
     "baslik": "Hasta her yutkunduğunda sondayı",
     "metin": "Hasta her yutkunduğunda sondayı biraz daha iterek ölçtüğün işarete kadar ilerletirsin.",
-    "bas": 18.73,
-    "son": 23.27,
-    "ses_bas": 16.698
+    "bas": 20.99,
+    "son": 25.53,
+    "ses_bas": 18.96
    },
    {
-    "baslik": "Bilinci açık ve suyu",
-    "metin": "Bilinci açık ve suyu yönetebilecek hastaya enjektörle yarımşar mililitre su verip yutkunmasını kolaylaştırabilirsin.",
-    "bas": 24.17,
-    "son": 30.22,
-    "ses_bas": 21.689
+    "baslik": "Komutu anlayamayan ama bilinci",
+    "metin": "Komutu anlayamayan ama bilinci açık ve suyu yutabilecek hastada yanındaki kişi, sen söyledikçe enjektörle yarımşar mililitre su verir; böylece yutkunmayı teşvik edersin.",
+    "bas": 26.43,
+    "son": 35.41,
+    "ses_bas": 23.949
    },
    {
     "baslik": "Suyu güvenle yutamayacak hastaya",
-    "metin": "Suyu güvenle yutamayacak hastaya (yaşlı, yutma güçlüğü olan, küçük çocuk) su vermezsin; yutkunma telkini ancak sonda burundan rahat ilerledikten sonra anlamlıdır.",
-    "bas": 31.12,
-    "son": 39.92,
-    "ses_bas": 28.191
+    "metin": "Suyu güvenle yutamayacak hastaya su vermezsin; yutkunmanın amacı sondanın ses tellerine değil özofagusa geçmesidir, bu bölge geçilince sonda rahat ilerler ve yutkunmanın ek yararı kalmaz.",
+    "bas": 36.31,
+    "son": 46.32,
+    "ses_bas": 33.387
    }
   ],
   "kamera": [
@@ -6553,25 +6553,25 @@
     100
    ],
    [
-    2.899,
+    4.146,
     400,
     250,
     100
    ],
    [
-    4.299,
+    5.546,
     440,
     275,
     125
    ],
    [
-    31.118,
+    36.312,
     440,
     275,
     125
    ],
    [
-    32.518,
+    37.712,
     420,
     260,
     120
@@ -6579,88 +6579,88 @@
   ],
   "etiketler": [
    {
-    "bas": 3.09,
-    "son": 4.62,
+    "bas": 5.55,
+    "son": 6.88,
     "x": 590,
     "y": 230,
     "metin": "Orofarinks",
     "tur": "etiket"
    },
    {
-    "bas": 3.28,
-    "son": 4.62,
+    "bas": 5.55,
+    "son": 6.88,
     "x": 330,
     "y": 107.0,
     "metin": "\"Ben söyleyince yutkunun\"",
     "tur": "bilgi"
    },
    {
-    "bas": 5.92,
-    "son": 9.51,
+    "bas": 8.18,
+    "son": 11.78,
     "x": 330,
     "y": 160,
     "metin": "\"Ekmek yutar gibi yutkunun\"",
     "tur": "bilgi"
    },
    {
-    "bas": 12.49,
-    "son": 17.83,
+    "bas": 14.75,
+    "son": 20.09,
     "x": 600,
     "y": 230,
     "metin": "Epiglot larinksi kapatır",
     "tur": "dogru"
    },
    {
-    "bas": 14.12,
-    "son": 17.83,
+    "bas": 16.38,
+    "son": 20.09,
     "x": 600,
     "y": 110,
     "metin": "Sonda özofagusa gider",
     "tur": "dogru"
    },
    {
-    "bas": 18.95,
-    "son": 23.27,
+    "bas": 21.21,
+    "son": 25.53,
     "x": 330,
     "y": 107.0,
     "metin": "Her yutkunmada biraz it",
     "tur": "bilgi"
    },
    {
-    "bas": 21.0,
-    "son": 23.27,
+    "bas": 23.26,
+    "son": 25.53,
     "x": 600,
     "y": 230,
     "metin": "İşarete kadar ilerlet",
     "tur": "dogru"
    },
    {
-    "bas": 25.07,
-    "son": 30.22,
+    "bas": 27.77,
+    "son": 35.41,
     "x": 340,
     "y": 107.0,
     "metin": "Enjektörle 0,5 mL su",
     "tur": "bilgi"
    },
    {
-    "bas": 26.89,
-    "son": 30.22,
+    "bas": 30.47,
+    "son": 35.41,
     "x": 600,
     "y": 230,
     "metin": "Bilinci açık hasta",
     "tur": "dogru"
    },
    {
-    "bas": 32.52,
-    "son": 39.92,
+    "bas": 37.71,
+    "son": 46.32,
     "x": 330,
     "y": 90,
     "metin": "Yutamayana su verilmez",
     "tur": "uyari"
    },
    {
-    "bas": 33.76,
-    "son": 39.92,
+    "bas": 39.32,
+    "son": 46.32,
     "x": 600,
     "y": 230,
     "metin": "Aspirasyon riski",
@@ -6763,7 +6763,7 @@
  {
   "ad": "adim-ng-yer-kontrol",
   "baslik": "Yer kontrolü: hava ver, epigastriumu dinle",
-  "sure": 65.9,
+  "sure": 69.5,
   "bolumler": [
    {
     "baslik": "Çan uçlu enjektöre hava",
@@ -6774,52 +6774,52 @@
    },
    {
     "baslik": "Aynı anda stetoskobu epigastrik",
-    "metin": "Aynı anda stetoskobu epigastrik bölgeye koyar, fokurdama sesi gelip gelmediğini dinlersin; bir tabak suyun içine birden hava basınca suyun köpürmesine benzer bir sestir.",
+    "metin": "Aynı anda stetoskobu epigastrik bölgeye koyar, \"gurp\" diye bir fokurdama sesi gelip gelmediğini dinlersin; bir tabak suyun içine birden hava basınca suyun köpürmesine benzer bir sestir.",
     "bas": 6.21,
-    "son": 15.24,
-    "ses_bas": 5.078
+    "son": 16.17,
+    "ses_bas": 5.077
    },
    {
     "baslik": "Ses, sıvı dolu mideye",
     "metin": "Ses, sıvı dolu mideye hava girdiği için duyulur; sonda trakeadaysa hava zaten hava dolu bir yapıya girer ve bu sesi duymazsın.",
-    "bas": 16.14,
-    "son": 23.19,
-    "ses_bas": 14.566
+    "bas": 17.07,
+    "son": 24.11,
+    "ses_bas": 15.486
    },
    {
     "baslik": "Havayı yavaş yavaş verirsen",
     "metin": "Havayı yavaş yavaş verirsen ses oluşmaz; bu yüzden aniden verirsin.",
-    "bas": 24.09,
-    "son": 27.96,
-    "ses_bas": 22.06
+    "bas": 25.01,
+    "son": 28.88,
+    "ses_bas": 22.98
    },
    {
     "baslik": "Sonda jellenmiş olduğu için",
     "metin": "Sonda jellenmiş olduğu için bırakırsan kayıp çıkar; bu yüzden bir elinle sondayı tutarken diğer elinle hava verirsin, stetoskobu da önceden boynuna takmış olursun.",
-    "bas": 28.86,
-    "son": 37.5,
-    "ses_bas": 26.38
+    "bas": 29.78,
+    "son": 38.41,
+    "ses_bas": 27.3
    },
    {
     "baslik": "Yanında yardımcı varsa enjektörü",
     "metin": "Yanında yardımcı varsa enjektörü ona verirsin ama dinlemeyi sondayı takan sen yaparsın.",
-    "bas": 38.4,
-    "son": 43.16,
-    "ses_bas": 35.467
+    "bas": 39.31,
+    "son": 44.08,
+    "ses_bas": 36.386
    },
    {
-    "baslik": "Boğaza dokunmak ya da",
-    "metin": "Boğaza dokunmak ya da hastanın boğulur gibi olmasına bakmak güvenilir değildir; mide içeriğinin gelip gelmediğine bakmak da kullanılır, ultrasonla görmek mümkündür ama hava yolu görüntüsü karışık olduğundan kritik değildir.",
-    "bas": 44.06,
-    "son": 55.71,
-    "ses_bas": 40.682
+    "baslik": "Boğaza dokunup sondayı hissetmeye",
+    "metin": "Boğaza dokunup sondayı hissetmeye çalışmak güvenilir değildir; mide içeriğinin gelip gelmediğine bakmak istenen yöntem olmasa da yapılır, ultrasonla görmek mümkündür ama pratik değildir ve görüntü karışık olduğundan sondayı net seçemeyebilirsin.",
+    "bas": 44.98,
+    "son": 57.61,
+    "ses_bas": 41.601
    },
    {
-    "baslik": "Dinleme hocanın öğrettiği ve",
-    "metin": "Dinleme hocanın öğrettiği ve sınavda istenen yöntemdir; klinikte kesin doğrulama için mide içeriği aspirasyonu ve gerekirse akciğer grafisi kullanılır.",
-    "bas": 56.61,
-    "son": 64.6,
-    "ses_bas": 52.783
+    "baslik": "Hoca hava verip dinlemeyi",
+    "metin": "Hoca hava verip dinlemeyi çok daha kolay yol olarak öğretir ve sınavda bunu ister; klinikte kesin doğrulama için mide içeriği aspirasyonu ve gerekirse akciğer grafisi kullanılır.",
+    "bas": 58.51,
+    "son": 68.2,
+    "ses_bas": 54.684
    }
   ],
   "kamera": [
@@ -6830,37 +6830,37 @@
     100
    ],
    [
-    6.208,
+    6.207,
     400,
     250,
     100
    ],
    [
-    7.608,
+    7.607,
     470,
     220,
     125
    ],
    [
-    28.858,
+    29.778,
     470,
     220,
     125
    ],
    [
-    29.358,
+    30.278,
     400.0,
     250.0,
     100
    ],
    [
-    44.06,
+    44.977,
     400.0,
     250.0,
     100
    ],
    [
-    44.56,
+    45.477,
     400.0,
     250.0,
     100
@@ -6877,7 +6877,7 @@
    },
    {
     "bas": 2.42,
-    "son": 3.96,
+    "son": 3.95,
     "x": 560,
     "y": 200,
     "metin": "Sondanın ucuna tak",
@@ -6893,127 +6893,127 @@
    },
    {
     "bas": 7.61,
-    "son": 15.24,
+    "son": 16.17,
     "x": 300,
     "y": 250,
     "metin": "Epigastrium",
     "tur": "etiket"
    },
    {
-    "bas": 9.82,
-    "son": 15.24,
+    "bas": 10.19,
+    "son": 16.17,
     "x": 330,
     "y": 60,
     "metin": "Fokurdama sesi",
     "tur": "dogru"
    },
    {
-    "bas": 16.85,
-    "son": 23.19,
+    "bas": 17.77,
+    "son": 24.11,
     "x": 600,
     "y": 304.8,
     "metin": "Sıvı dolu mide: ses olur",
     "tur": "dogru"
    },
    {
-    "bas": 20.02,
-    "son": 23.19,
+    "bas": 20.94,
+    "son": 24.11,
     "x": 250,
     "y": 304.8,
     "metin": "Trakeada ses olmaz",
     "tur": "uyari"
    },
    {
-    "bas": 24.67,
-    "son": 26.22,
+    "bas": 25.59,
+    "son": 27.14,
     "x": 560,
     "y": 90,
     "metin": "Yavaş verirsen ses yok",
     "tur": "uyari"
    },
    {
-    "bas": 26.87,
-    "son": 27.96,
+    "bas": 27.79,
+    "son": 28.88,
     "x": 560,
     "y": 90,
     "metin": "Aniden ver: fokurdama",
     "tur": "dogru"
    },
    {
-    "bas": 30.15,
-    "son": 37.5,
+    "bas": 31.07,
+    "son": 38.41,
     "x": 220,
     "y": 90,
     "metin": "Bir el sondayı tutar",
     "tur": "bilgi"
    },
    {
-    "bas": 32.31,
-    "son": 37.5,
+    "bas": 33.23,
+    "son": 38.41,
     "x": 150,
     "y": 200,
     "metin": "Öbür el hava verir",
     "tur": "bilgi"
    },
    {
-    "bas": 34.04,
-    "son": 37.5,
+    "bas": 34.96,
+    "son": 38.41,
     "x": 600,
     "y": 230,
     "metin": "Stetoskop önceden boyunda",
     "tur": "bilgi"
    },
    {
-    "bas": 38.87,
-    "son": 43.16,
+    "bas": 39.79,
+    "son": 44.08,
     "x": 620,
     "y": 300,
     "metin": "Dinleyen: sondayı takan sen",
     "tur": "dogru"
    },
    {
-    "bas": 40.54,
-    "son": 43.16,
+    "bas": 41.46,
+    "son": 44.08,
     "x": 200,
     "y": 90,
     "metin": "Enjektör yardımcıya",
     "tur": "bilgi"
    },
    {
-    "bas": 44.64,
-    "son": 50.47,
+    "bas": 45.61,
+    "son": 51.92,
     "x": 240,
     "y": 80,
     "metin": "Boğaza dokunmak: güvenilmez",
     "tur": "uyari"
    },
    {
-    "bas": 50.47,
-    "son": 55.71,
+    "bas": 51.92,
+    "son": 57.61,
     "x": 240,
     "y": 80,
     "metin": "Mide içeriği gelir: kullanılır",
     "tur": "dogru"
    },
    {
-    "bas": 52.22,
-    "son": 55.71,
+    "bas": 53.82,
+    "son": 57.61,
     "x": 600,
     "y": 330,
     "metin": "USG: kritik değil",
     "tur": "bilgi"
    },
    {
-    "bas": 57.01,
-    "son": 64.6,
+    "bas": 58.99,
+    "son": 68.2,
     "x": 240,
     "y": 80,
     "metin": "Sınavda: dinleme yöntemi",
     "tur": "dogru"
    },
    {
-    "bas": 60.21,
-    "son": 64.6,
+    "bas": 62.87,
+    "son": 68.2,
     "x": 600,
     "y": 330,
     "metin": "Klinikte: aspirat + grafi",
@@ -7139,7 +7139,7 @@
  {
   "ad": "adim-ng-lavaj",
   "baslik": "Mide lavajı, ilaç verme ve ucu kapatma",
-  "sure": 32.63,
+  "sure": 33.06,
   "bolumler": [
    {
     "baslik": "Mide lavajında sondadan mideye",
@@ -7150,31 +7150,31 @@
    },
    {
     "baslik": "Ardından sondanın ucuna bir",
-    "metin": "Ardından sondanın ucuna bir idrar torbası takar, mide hizasının altında tutar ve akmasını beklersin.",
+    "metin": "Ardından sondanın ucuna bir idrar torbası takar ve akmasını beklersin.",
     "bas": 8.55,
-    "son": 14.04,
-    "ses_bas": 7.422
+    "son": 12.39,
+    "ses_bas": 7.423
    },
    {
-    "baslik": "Sıvı akmaya başlayınca sifon",
-    "metin": "Sıvı akmaya başlayınca sifon etkisiyle geri kalanı da çekilir ve mide içeriği torbaya dolar.",
-    "bas": 14.94,
-    "son": 19.83,
-    "ses_bas": 13.362
+    "baslik": "Ucu kapalı idrar torbası",
+    "metin": "Ucu kapalı idrar torbası negatif basınçlıdır ve sıvıyı bir miktar çeker; akış bir kez başlayınca mide içeriği torbaya dolar.",
+    "bas": 13.29,
+    "son": 20.26,
+    "ses_bas": 11.708
    },
    {
     "baslik": "Sondadan ilaç verdiysen sonrasında",
     "metin": "Sondadan ilaç verdiysen sonrasında sondanın ucunu kapatırsın: tıpası varsa tıpayla, yoksa ucu kıvırıp kapatarak.",
-    "bas": 20.73,
-    "son": 26.98,
-    "ses_bas": 18.702
+    "bas": 21.16,
+    "son": 27.41,
+    "ses_bas": 19.132
    },
    {
     "baslik": "Midenin boşalmasını istiyorsan ucu",
     "metin": "Midenin boşalmasını istiyorsan ucu kapatmaz, torbaya bağlarsın.",
-    "bas": 27.88,
-    "son": 31.33,
-    "ses_bas": 25.403
+    "bas": 28.31,
+    "son": 31.76,
+    "ses_bas": 25.834
    }
   ],
   "kamera": [],
@@ -7196,40 +7196,40 @@
     "tur": "bilgi"
    },
    {
-    "bas": 9.92,
-    "son": 14.04,
+    "bas": 9.51,
+    "son": 12.39,
     "x": 560,
     "y": 160,
-    "metin": "Torba mide hizasının altında",
+    "metin": "İdrar torbası takılır",
     "tur": "dogru"
    },
    {
-    "bas": 15.43,
-    "son": 19.83,
+    "bas": 13.98,
+    "son": 20.26,
     "x": 560,
     "y": 160,
     "metin": "Sifon: içerik torbaya",
     "tur": "dogru"
    },
    {
-    "bas": 21.98,
-    "son": 26.98,
+    "bas": 22.41,
+    "son": 27.41,
     "x": 560,
     "y": 90,
     "metin": "İlaçtan sonra: tıpayla kapat",
     "tur": "dogru"
    },
    {
-    "bas": 24.17,
-    "son": 26.98,
+    "bas": 24.6,
+    "son": 27.41,
     "x": 560,
     "y": 260,
     "metin": "Tıpa yoksa ucu kıvır",
     "tur": "bilgi"
    },
    {
-    "bas": 28.23,
-    "son": 31.33,
+    "bas": 28.66,
+    "son": 31.76,
     "x": 560,
     "y": 90,
     "metin": "Boşaltma: torbaya bağla",

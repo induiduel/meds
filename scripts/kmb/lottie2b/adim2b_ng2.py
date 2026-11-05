@@ -83,10 +83,10 @@ def a_ng_malzeme(A):
     et(A, 4, 470, 320, 'Üretral kateter jeli uygun', 'bilgi', .45)
     A.kamera(4, 520, 250, 160)
     # s5: vazelin (petrol ürünü, ilk tercih değil)
-    vurgu(A, s, 'nm-vazelin', 5, renk=KIRMIZI, f1=.05)
-    carpi(A, 600, 243, 5, .25, r=30)
-    et(A, 5, 600, 150, 'Vazelin: petrol ürünü', 'uyari', .05)
-    et(A, 5, 600, 320, 'Yalnız çaresizsen, çok az', 'uyari', .5)
+    # yasak değil: zor durumda az miktar kullanılabilir → çarpı yok, sarı (kullanıcı 2026-11-06)
+    vurgu(A, s, 'nm-vazelin', 5, renk=SARI, f1=.05)
+    et(A, 5, 600, 150, 'Vazelin: ilk tercih değil', 'uyari', .05)
+    et(A, 5, 600, 320, 'Zor durumda: çok az', 'bilgi', .5)
     A.kamera(5, 560, 250, 150)
     # s6: standart sonda telsiz; beslenme sondası ince, yumuşak, kılavuz telli
     vurgu(A, s, 'nm-sonda', 6, f1=.05, f2=.45)
@@ -232,7 +232,7 @@ def a_ng_olcum(A):
     # s3: kulak memesi → ksifoid (epigastriumun üst sınırı)
     A.ekle('olcu-2', G(yol(s.cz('nb-olcu-2')[0]['d']), st(MAVI, 2.5, kesik=(8, 6)), tm(K((0, 0), (T(3, .1), 0), (T(3, .75), 100)))), o=belir(A, 3, .1))
     halka(A, 389, 336, 20, 20, 3, renk=MAVI, f1=.7, f2=.98, nm='h-ksifoid')
-    et(A, 3, 250, 310, '3) Ksifoid', 'bilgi', .7)
+    et(A, 3, 250, 310, '3) Epigastrium (ksifoid)', 'bilgi', .7)
     A.kamera(3, 400, 260, 140)
     # s4: ksifoide denk gelen nokta sondada işaretlenir; sonda kalan boyuyla görünür
     A.ekle('isaret', *s.katman('nb-isaret'), o=belir(A, 4, .1))
@@ -245,9 +245,9 @@ def a_ng_olcum(A):
         halka(A, x, y, rx, ry, 5, renk=YESIL, f1=.1 + i * .2, f2=.98, nm=f'h-sira-{i}')
     et(A, 5, 220, 100, '1) Burun deliği', 'dogru', .1)
     et(A, 5, 600, 100, '2) Kulak memesi', 'dogru', .3)
-    et(A, 5, 220, 330, '3) Ksifoid', 'dogru', .5)
+    et(A, 5, 220, 330, '3) Epigastrium (ksifoid)', 'dogru', .5)
     tik(A, 440, 320, 5, .65)
-    et(A, 5, 600, 200, 'En sık sınav hatası', 'uyari', .02)
+    et(A, 5, 600, 200, 'Burundan başla: kolay', 'bilgi', .02)
     A.kamera(5, 400, 230, 125)
 
 

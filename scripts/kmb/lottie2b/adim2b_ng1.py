@@ -252,7 +252,7 @@ def a_koroziv(A):
     A.ekle('yanik', *s.katman('nk-yanik'), o=belir(A, 0, .2))
     halka(A, 505, 302, 46, 112, 0, renk=KIRMIZI, f1=.3, nm='halka-yanik0')
     et(A, 0, 120, 140, 'Yakıcı madde', 'uyari', .05)
-    et(A, 0, 610, 230, 'Koroziv yanık', 'uyari', .3)
+    et(A, 0, 610, 230, 'Kostik yanık', 'uyari', .3)
     A.kamera_sabit(0, 0, 400, 250, 100)
     # s1: sonda yanmış mukozaya değer → yeniden zarar
     A.kamera(1, 490, 330, 170, f=.0)
@@ -272,7 +272,7 @@ def a_koroziv(A):
     # s3: lavaj endikasyonu olsa bile takılmaz
     A.kamera(3, 400, 250, 100, f=.0)
     et(A, 3, 330, 10, 'Lavaj gerekse bile', 'bilgi', .05)
-    takilmaz(A, 3, 330, 180, fr=.35, r=44, et_xy=(330, 80), metin='Koroziv: sonda takılmaz')
+    takilmaz(A, 3, 330, 180, fr=.35, r=44, et_xy=(330, 80), metin='Kostik: sonda takılmaz')
 
 
 # ———————————————————————— 5. Kontrendikasyon 4: bilinç kapalı, hava yolu korunmuyor
