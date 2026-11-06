@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 666,
-  "baslik": "Farmakoloji: Sedatif ve Hipnotik İlaçlar sesli dersi eklendi",
+  "onem": 667,
+  "baslik": "Farmakoloji: Sedatif ve Hipnotik İlaçlar dersi tamamlandı",
   "maddeler": [
-    "Sedatif ve Hipnotik İlaçlar sesli dersi (yaklaşık 42 dk) PDF üzerinde işaret ve çizimlerle yayında.",
-    "28 çıkmış soru ders içinde ilgili slaytlarda işaretlendi.",
-    "Önem listesi ve sesli çözücü sonraki güncellemede eklenecek."
+    "Sedatif ve Hipnotik İlaçlar için önem listesi (44 madde) ve sesli soru çözücü (46 soru) yayında.",
+    "Hocanın sorabileceği sorular (12 soru, sesli) ve ayrıntılı ders analizi eklendi.",
+    "Ders içerik sayfaları ve 378 soruluk quiz havuzu eklendi."
   ],
   "eklenen": [
     "Psikiyatrik Bozukluklarda Uygulanan Tedaviler: sesli ders (hocanın örnekleri ve vurgularıyla, 7 ara resim), en önemliler, sesli soru çözücü, hocanın sorabileceği ara sorular, ders içerik paketi, ders analizi (çıkmışlar ayrıntılı) ve quiz eklendi."
