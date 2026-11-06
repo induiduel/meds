@@ -1,12 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 653,
-  "baslik": "iPad pencere kipinde geri dönüş düzeltildi",
+  "onem": 654,
+  "baslik": "Sesli ders: altyazı modu ve otomatik çöz düğmesi",
   "maddeler": [
-    "iPad'de bölünmüş ekran ya da pencere kipinde sistem düğmeleri geri tuşunu kapatıyordu: üst çubuk artık sağa kayar",
-    "Sayfa başlığına dokunarak bir önceki sayfaya dönebilirsin",
-    "iPad pencere kipinde ekranın altında yüzen bir geri düğmesi çıkar; kaydırırken küçülür",
-    "Sol kenardan sağa kaydırma, Esc ve ⌘[ tuşlarıyla da geri gidilir"
+    "Slayt + altyazı modunda slayt artık ekrana bütün olarak sığıyor; alt kısmı altyazının altında kalmıyor",
+    "Altyazı şeridi daha derli toplu: slayta daha çok yer kalıyor",
+    "Hocanın sorabileceği soru penceresine 'Otomatik çöz' düğmesi eklendi: kapatırsan soru okunduktan sonra sen şıkkını seçene ya da 'Çözümü göster'e basana kadar bekler"
   ],
   "eklenen": [],
   "degisen": [],

@@ -972,7 +972,8 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           </>
         ) : (
           <>
-            {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} />}
+            {/* Slayt + altyazı: slayt bütün olarak sığar (genişliğe sığınca alt kısım altyazının altında kalıyordu, 2026-11-06) */}
+            {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} sigdir={mod === 'altyazi'} />}
             {metinGoster && <CdMetinBolme detay={detay} canli={buDers} kamp={!!kamp} />}
             {mod === 'altyazi' && <CdAltyazi detay={detay} canli={buDers} />}
           </>
@@ -1813,7 +1814,7 @@ function DersBolumEtiketi({ detay }: { detay: CdDetay }) {
 
 /* ---------------- PDF ---------------- */
 
-function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
+function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: boolean; sigdir?: boolean }) {
   const pdf = detay.pdf!;
   const info = useDeckPdf(pdf.deckId);
   const aktif = useCd((s) => (canli ? s.aktif : -1));
@@ -2077,7 +2078,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               onZoom={setZoom}
               onVisiblePage={onVisible}
               onError={setHataMsj}
-              fit="width"
+              fit={sigdir ? 'page' : 'width'}
               pageOverlay={pageOverlay}
               ekAlt={gorunum.iliski ? ekAlt : null}
             />

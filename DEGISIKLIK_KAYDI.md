@@ -1,3 +1,7 @@
+## 2026-11-06 (3) — Sesli ders altyazı modu + ara soru otomatik çöz düğmesi (onem 654)
+- `CanliDersDers.tsx`: Slayt + altyazı modunda `CdPdfBolme sigdir` → `PdfDocView fit="page"` (genişliğe sığınca slaytın altı kesiliyordu); altyazı şeridi en çok 22vh.
+- `CdHocaAra.tsx`: "Otomatik çöz" onay kutusu (`medsoru_hoca_ara_coz_v1`, varsayılan açık); kapalıyken okuma sonrası geri sayım durur, öğrenci şık seçer ya da "Çözümü göster"e basar; düşünme sırasında açılırsa hemen çözer.
+
 ## 2026-11-06 (2) — iPad pencere kipinde geri dönüş (H502, onem 653)
 - `components/shell/ipadPencere.tsx`: iPad pencere/bölünmüş ekran algısı (`:root[data-pencere='dar']`, üst çubuk 84 px sağa), alt yüzen geri hapı,
   sol kenar kaydırması + Esc/⌘[/Alt+←, yedek yollar 2 kez kullanılırsa hap cihazda kalıcı (`medsoru_ipad_geri_hap`). `ShellV15`: başlık = geri düğmesi.

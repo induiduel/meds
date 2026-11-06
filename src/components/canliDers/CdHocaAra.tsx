@@ -56,6 +56,10 @@ export function useHocaAra(key: string | null | undefined): AraDers | null {
 const TERCIH = 'medsoru_hoca_ara_oto_v1';
 const otoAcik = () => { try { return localStorage.getItem(TERCIH) !== '0'; } catch { return true; } };
 const otoYaz = (v: boolean) => { try { localStorage.setItem(TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } };
+/* ── tercih: soru okununca kendiliğinden çözülsün mü (2026-11-06; kapalıysa öğrenci şık seçer ya da Çöz'e basar) ── */
+const COZ_TERCIH = 'medsoru_hoca_ara_coz_v1';
+const cozAcik = () => { try { return localStorage.getItem(COZ_TERCIH) !== '0'; } catch { return true; } };
+const cozYaz = (v: boolean) => { try { localStorage.setItem(COZ_TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } };
 
 /* ── açık sayfa durumu ── */
 type Acik = { veri: AraDers; liste: AraSoru[]; i: number; hepsi: boolean; caliyordu: boolean; devam: number | null } | null;
@@ -162,6 +166,9 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   const [kalan, setKalan] = useState(BEKLE_SN);
   const [durdu, setDurdu] = useState(false);
   const [oto, setOto] = useState(otoAcik);
+  const [otoCoz, setOtoCoz] = useState(cozAcik);
+  const otoCozRef = useRef(otoCoz);
+  otoCozRef.current = otoCoz;
   const akis = useRef(0);
   const { brans, ders, ortak } = veri;
 
@@ -219,6 +226,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
         setKalan(s);
         await new Promise((r) => setTimeout(r, 1000));
         if (dur()) return;
+        if (!otoCozRef.current) return; // otomatik çöz kapalı: öğrencinin seçimini bekle
       }
       cozVeAnlat(q.no, null);
     })();
@@ -244,6 +252,10 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     cozVeAnlat(q.no, h === q.dogru ? null : h, h === q.dogru);
   };
   const hemenCoz = () => { akis.current++; cozVeAnlat(q.no, null); };
+  const otoCozDegis = (v: boolean) => {
+    setOtoCoz(v); cozYaz(v);
+    if (v && evre === 'dusun') hemenCoz(); // bekleyen soruyu hemen çöz
+  };
   const duraklat = () => {
     if (!ses) return;
     if (durdu) { ses.play().catch(() => {}); setDurdu(false); } else { ses.pause(); setDurdu(true); }
@@ -278,7 +290,10 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
             })}
           </div>
           {evre === 'dusun' && (
-            <p className="ha-dusun">Düşün: {kalan} sn sonra çözüyorum · <button type="button" onClick={hemenCoz}>Hemen çöz</button></p>
+            <p className="ha-dusun">
+              {otoCoz ? <>Düşün: {kalan} sn sonra çözüyorum · </> : <>Şıkkını seç ya da · </>}
+              <button type="button" onClick={hemenCoz}>{otoCoz ? 'Hemen çöz' : 'Çözümü göster'}</button>
+            </p>
           )}
           {(evre === 'anlat' || evre === 'bitti') && (
             <section className={`ha-anlat${vurgu === 'anlatim' ? ' is-okunan' : ''}`} aria-label="Slaytlardan çözüm">
@@ -294,6 +309,10 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
               Derste kendiliğinden göster
             </label>
           )}
+          <label className="ha-oto">
+            <input type="checkbox" checked={otoCoz} onChange={(e) => otoCozDegis(e.target.checked)} />
+            Otomatik çöz
+          </label>
           <span className="ha-bosluk" />
           {cozuldu && sira < liste.length - 1 && <button type="button" className="ha-btn is-soft" onClick={() => git(sira + 1)}>Sonraki soru</button>}
           <button type="button" className="ha-btn" onClick={onKapat}><Play aria-hidden /> {hepsi ? 'Kapat' : 'Derse dön'}</button>

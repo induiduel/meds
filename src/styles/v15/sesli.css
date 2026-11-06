@@ -292,7 +292,7 @@
 /* S04 Slayt + altyazı: PDF tüm alanı alır, okunan cümle altta şeritte */
 .cd-govde.is-altyazi { display: flex; flex-direction: column; }
 .cd-govde.is-altyazi > :first-child { flex: 1; min-height: 0; }
-.cd-altyazi { flex: none; padding: 12px 20px calc(14px + var(--cd-dock-h, 0px)); background: var(--color-white); border-top: 1px solid var(--color-line-soft, var(--color-line)); text-align: center; font-family: var(--cd-okuma-font, var(--font-serif, Georgia, serif)); font-size: 17px; line-height: 1.5; color: var(--color-ink); max-height: 30vh; overflow-y: auto; }
+.cd-altyazi { flex: none; padding: 12px 20px calc(14px + var(--cd-dock-h, 0px)); background: var(--color-white); border-top: 1px solid var(--color-line-soft, var(--color-line)); text-align: center; font-family: var(--cd-okuma-font, var(--font-serif, Georgia, serif)); font-size: 17px; line-height: 1.45; color: var(--color-ink); max-height: 22vh; overflow-y: auto; }
 .cd-altyazi.is-bos { color: var(--color-ink-3); font-size: 14px; font-family: var(--font-sans); }
 .cd-altyazi-once { color: var(--color-ink-3); }
 .cd-altyazi-simdi { background: var(--color-hl, var(--color-accent-soft)); color: var(--color-hl-ink, var(--color-ink)); border-radius: 4px; padding: 0 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
