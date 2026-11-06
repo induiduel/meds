@@ -1,22 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 495" width="1000" height="495" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Dopamin ve belirti grupları">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
-<rect x="0" y="0" width="1000" height="495" fill="#fbfaf6"/>
-<text x="500" y="52" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Dopamin ve belirti grupları</text>
-<rect x="40" y="90" width="380" height="110" rx="14" fill="#c8463c22" stroke="#c8463c" stroke-width="3"/>
-<text x="230" y="135" font-size="30" fill="#c8463c" text-anchor="middle" font-weight="700">Dopamin fazla</text>
-<text x="230" y="175" font-size="24" fill="#c8463c" text-anchor="middle">hiperdopaminerjik</text>
-<line x1="425" y1="145" x2="570" y2="145" stroke="#1f2430" stroke-width="3" marker-end="url(#ok)"/>
-<rect x="575" y="90" width="385" height="110" rx="14" fill="#fbfaf6" stroke="#c8463c" stroke-width="3"/>
-<text x="767" y="135" font-size="28" fill="#c8463c" text-anchor="middle" font-weight="700">Pozitif belirtiler</text>
-<text x="767" y="175" font-size="24" fill="#1f2430" text-anchor="middle">sanrı, varsanı</text>
-<rect x="40" y="230" width="380" height="130" rx="14" fill="#2f6db522" stroke="#2f6db5" stroke-width="3"/>
-<text x="230" y="275" font-size="30" fill="#2f6db5" text-anchor="middle" font-weight="700">Dopamin az</text>
-<text x="230" y="312" font-size="24" fill="#2f6db5" text-anchor="middle">hipodopaminerjik</text>
-<text x="230" y="345" font-size="24" fill="#2f6db5" text-anchor="middle" font-weight="700">+ hipofrontalite</text>
-<line x1="425" y1="295" x2="570" y2="295" stroke="#1f2430" stroke-width="3" marker-end="url(#ok)"/>
-<rect x="575" y="240" width="385" height="110" rx="14" fill="#fbfaf6" stroke="#2f6db5" stroke-width="3"/>
-<text x="767" y="285" font-size="28" fill="#2f6db5" text-anchor="middle" font-weight="700">Negatif belirtiler</text>
-<text x="767" y="325" font-size="24" fill="#1f2430" text-anchor="middle">aloji, apati</text>
-<rect x="40" y="395" width="920" height="70" rx="14" fill="#f1f1ee" stroke="#8a8f99" stroke-width="2"/>
-<text x="500" y="440" font-size="26" fill="#1f2430" text-anchor="middle">Fensiklidin → glutamat → şizofreni benzeri belirtiler</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Dopamin fazlası pozitif, dopamin azlığı negatif belirtilerle ilişkilidir</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">Dopamin sinapsı · dopamin düzeyi ve belirti türü · glutamat (slayt 14, 16)</text>
+<rect x="30" y="96" width="560" height="460" rx="18" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · Dopamin sinapsı ve hipotezin iki dayanağı</text>
+<path d="M210 150 C210 220 190 250 225 292 C260 322 420 322 450 292 C490 250 470 220 470 150 Z" stroke="#c2410c" stroke-width="2.5" fill="url(#turuncu)" stroke-linecap="round" opacity="0.9"/>
+<circle cx="270" cy="222" r="19" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+<use href="#da" transform="translate(264 217) scale(0.6)"/>
+<use href="#da" transform="translate(276 218) scale(0.6)"/>
+<use href="#da" transform="translate(270 229) scale(0.6)"/>
+<circle cx="335" cy="250" r="19" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+<use href="#da" transform="translate(329 245) scale(0.6)"/>
+<use href="#da" transform="translate(341 246) scale(0.6)"/>
+<use href="#da" transform="translate(335 257) scale(0.6)"/>
+<circle cx="405" cy="225" r="19" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+<use href="#da" transform="translate(399 220) scale(0.6)"/>
+<use href="#da" transform="translate(411 221) scale(0.6)"/>
+<use href="#da" transform="translate(405 232) scale(0.6)"/>
+<circle cx="360" cy="190" r="19" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+<use href="#da" transform="translate(354 185) scale(0.6)"/>
+<use href="#da" transform="translate(366 186) scale(0.6)"/>
+<use href="#da" transform="translate(360 197) scale(0.6)"/>
+<circle cx="290" cy="182" r="19" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+<use href="#da" transform="translate(284 177) scale(0.6)"/>
+<use href="#da" transform="translate(296 178) scale(0.6)"/>
+<use href="#da" transform="translate(290 189) scale(0.6)"/>
+<use href="#da" transform="translate(210 330) scale(1)"/>
+<use href="#da" transform="translate(250 345) scale(1)"/>
+<use href="#da" transform="translate(300 335) scale(1)"/>
+<use href="#da" transform="translate(345 348) scale(1)"/>
+<use href="#da" transform="translate(390 332) scale(1)"/>
+<use href="#da" transform="translate(430 343) scale(1)"/>
+<path d="M100 382 C200 364 420 364 520 382 L520 470 C420 488 200 488 100 470 Z" stroke="#1d4ed8" stroke-width="2.5" fill="url(#mavi)" stroke-linecap="round" opacity="0.85"/>
+<path d="M174 360 C174 384 206 384 206 360" stroke="#1e3a8a" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M254 360 C254 384 286 384 286 360" stroke="#1e3a8a" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M334 360 C334 384 366 384 366 360" stroke="#1e3a8a" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M414 360 C414 384 446 384 446 360" stroke="#1e3a8a" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="414" y="346" width="32" height="14" rx="4" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+<line x1="186" y1="184" x2="214" y2="184" stroke="#9a3412" stroke-width="1.5"/>
+<text x="46" y="190" font-size="17" fill="#9a3412" text-anchor="start" font-weight="bold">Presinaptik uç</text>
+<line x1="140" y1="244" x2="250" y2="224" stroke="#9a3412" stroke-width="1.2"/>
+<text x="46" y="236" font-size="17" fill="#9a3412" text-anchor="start">Kesecikte</text>
+<text x="46" y="256" font-size="17" fill="#9a3412" text-anchor="start">dopamin</text>
+<line x1="270" y1="378" x2="250" y2="494" stroke="#1e3a8a" stroke-width="1.5"/>
+<text x="120" y="512" font-size="17" fill="#1e3a8a" text-anchor="start" font-weight="bold">Postsinaptik nöron: D2 reseptörü</text>
+<text x="120" y="534" font-size="17" fill="#1e3a8a" text-anchor="start">(dopamin reseptörlerinin beş tipi vardır)</text>
+<text x="470" y="350" font-size="17" fill="#7f1d1d" text-anchor="start" font-weight="bold">D2 blokeri</text>
+<path d="M510 236 C505 256 480 262 455 262" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" marker-end="url(#okk)"/>
+<text x="478" y="180" font-size="17" fill="#7f1d1d" text-anchor="start" font-weight="bold">Amfetamin:</text>
+<text x="478" y="202" font-size="17" fill="#7f1d1d" text-anchor="start">dopamini</text>
+<text x="478" y="224" font-size="17" fill="#7f1d1d" text-anchor="start">artırır</text>
+<text x="52" y="330" font-size="17" fill="#a16207" text-anchor="start">Sinaptik</text>
+<text x="52" y="350" font-size="17" fill="#a16207" text-anchor="start">aralık</text>
+<rect x="610" y="96" width="560" height="460" rx="18" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+<text x="632" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">B · Dopamin düzeyi ve belirti türü</text>
+<line x1="640" y1="320" x2="1140" y2="320" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="1140" y="312" font-size="17" fill="#64748b" text-anchor="end">olağan düzey</text>
+<path d="M640 320 C700 150 800 150 860 320 C920 490 1040 490 1110 320" stroke="#a16207" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="750" cy="192" r="9" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+<circle cx="985" cy="446" r="9" fill="#2563eb" stroke="#1e3a8a" stroke-width="2"/>
+<text x="760" y="150" font-size="18" fill="#991b1b" text-anchor="middle" font-weight="bold">Hiperdopaminerjik durum</text>
+<text x="760" y="172" font-size="18" fill="#991b1b" text-anchor="middle">→ pozitif belirtiler</text>
+<text x="985" y="488" font-size="18" fill="#1e3a8a" text-anchor="middle" font-weight="bold">Hipodopaminerjik durum</text>
+<text x="985" y="510" font-size="18" fill="#1e3a8a" text-anchor="middle">→ negatif belirtiler</text>
+<path d="M1100 522 C1080 500 1040 470 1000 458" stroke="#1d4ed8" stroke-width="2.5" fill="none" stroke-linecap="round" marker-end="url(#okm)"/>
+<text x="1150" y="542" font-size="17" fill="#1e3a8a" text-anchor="end" font-weight="bold">Hipofrontalite</text>
+<text x="930" y="180" font-size="17" fill="#475569" text-anchor="start">Destek: D2 blokeri işe</text>
+<text x="930" y="202" font-size="17" fill="#475569" text-anchor="start">yarar, amfetamin</text>
+<text x="930" y="224" font-size="17" fill="#475569" text-anchor="start">belirti yapar.</text>
+<rect x="30" y="572" width="1140" height="182" rx="18" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+<text x="52" y="606" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">C · Şizofreni yalnız dopaminle açıklanmaz</text>
+<path d="M30 660 C30 626 270 626 270 660 C270 694 30 694 30 660 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round"/>
+<text x="150" y="666" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">Fensiklidin</text>
+<path d="M360 660 C360 626 600 626 600 660 C600 694 360 694 360 660 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round"/>
+<text x="480" y="655" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">Glutamat</text>
+<text x="480" y="677" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">sistemi</text>
+<path d="M720 660 C720 626 960 626 960 660 C960 694 720 694 720 660 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round"/>
+<text x="840" y="655" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">Şizofreni benzeri</text>
+<text x="840" y="677" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">belirtiler</text>
+<line x1="272" y1="660" x2="352" y2="660" stroke="#15803d" stroke-width="3" marker-end="url(#oky)"/>
+<line x1="602" y1="660" x2="712" y2="660" stroke="#15803d" stroke-width="3" marker-end="url(#oky)"/>
+<text x="60" y="728" font-size="17" fill="#334155" text-anchor="start">Araştırılan diğer sistemler: serotonin, noradrenalin, glutamat, GABA, nöromodülatörler, nöropeptidler.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 14, 16 · negatif belirtiler hem dopamin azlığı hem hipofrontaliteyle bağlantılıdır</text>
 </svg>

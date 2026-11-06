@@ -61,8 +61,17 @@ def svg_denetle(yol, yer, h, u):
         h.append(f'{yer}: hiç metin ögesi (<text>) yok — resim Türkçe etiketlerle okunmalı')
     toplam = ' '.join(metin)
     n = len(re.findall(r'\w+', toplam))
-    if n > 60: h.append(f'{yer}: SVG içi metin {n} kelime (en çok ~40; resim slayt kopyası olmamalı)')
-    elif n > 40: u.append(f'{yer}: SVG içi metin {n} kelime (hedef ≤40)')
+    # 2026-11-06 kullanıcı kararı (H506): ara resim ayrıntılı, akademik, şematik olur; kısa kelime öbekli kutu dizisi yasak
+    if n < 45: h.append(f'{yer}: SVG içi metin {n} kelime — resim kısa öbeklerle anlaşılmaz kalıyor (en az 45; etiket, açıklama, sonuç)')
+    sekil = sum(1 for el in kok.iter() if yerel(el.tag) in ('path', 'circle', 'ellipse', 'polygon', 'polyline', 'line', 'use'))
+    egri = sum(1 for el in kok.iter() if yerel(el.tag) == 'path' and re.search(r'[CcQqSsTtAa]', el.get('d') or ''))
+    kutu = sum(1 for el in kok.iter() if yerel(el.tag) == 'rect')
+    if sekil < 15: h.append(f'{yer}: yalnız {sekil} çizim ögesi (path/çember/çizgi) — kutu+yazı değil, yapı/mekanizma çizilmeli (en az 15)')
+    if egri < 2: h.append(f'{yer}: eğri yol (organik/anatomik çizim) yok — en az 2 eğrili <path> (yapı, zar, akış)')
+    if kutu > max(6, sekil): u.append(f'{yer}: {kutu} dikdörtgen > {sekil} çizim ögesi — resim kutu şemasına kayıyor')
+    if not any(yerel(el.tag) == 'marker' or 'marker-end' in el.attrib for el in kok.iter()):
+        u.append(f'{yer}: ok işareti (marker) yok — süreç/yön okla gösterilmeli')
+    if len(metin) < 12: h.append(f'{yer}: yalnız {len(metin)} etiket — yapılar tek tek adlandırılmalı (en az 12 <text>)')
     for t in metin: h.extend(uslup(t, f'{yer} <text>'))
     # okunabilirlik: font-size < 14 (viewBox birimiyle, genişlik ≈1000 varsayımı) uyarı
     for el in kok.iter():
@@ -92,7 +101,6 @@ def main():
     resimler = veri.get('resimler')
     if not isinstance(resimler, list) or not resimler:
         h.append('resimler boş ya da dizi değil'); resimler = []
-    if len(resimler) > 12: u.append(f'{len(resimler)} resim (tipik 4–10)')
 
     # paragraf sayısı ve PDF sayfa sayısı
     n_par = None
@@ -123,7 +131,6 @@ def main():
             if not isinstance(v, str) or not v.strip(): h.append(f'{yer}: {alan} boş')
             else: h.extend(uslup(v, f'{yer}.{alan}'))
         if isinstance(r.get('baslik'), str) and len(r['baslik']) > 90: u.append(f'{yer}: başlık uzun ({len(r["baslik"])} karakter)')
-        if isinstance(r.get('aciklama'), str) and len(re.findall(r'\w+', r['aciklama'])) > 45: u.append(f'{yer}: alt yazı 1–2 cümleyi aşıyor')
         ad = r.get('adimlar')
         if ad is not None:
             if not isinstance(ad, list) or not all(isinstance(x, str) and x.strip() for x in ad): h.append(f'{yer}: adimlar dizgi dizisi değil')
@@ -142,6 +149,17 @@ def main():
         if k is None or k == []: u.append(f'{yer}: kaynak sayfa yok (slayt kaynaklı olmalı)')
         elif not isinstance(k, list) or not all(isinstance(x, int) and not isinstance(x, bool) for x in k): h.append(f'{yer}: kaynak tamsayı dizisi değil')
         elif n_sayfa and any(x < 1 or x > n_sayfa for x in k): h.append(f'{yer}: kaynak sayfa 1..{n_sayfa} dışında ({k})')
+        lot = r.get('lottie')
+        if lot is not None:
+            if not isinstance(lot, str) or not re.match(r'^[a-z0-9][a-z0-9_.-]{0,60}\.json$', lot): h.append(f'{yer}: lottie dosya adı geçersiz ({lot!r})')
+            else:
+                ly = kok / 'public/ara_resim' / a.key / lot
+                try:
+                    lj = json.loads(ly.read_text(encoding='utf-8'))
+                    if not all(k in lj for k in ('v', 'fr', 'ip', 'op', 'w', 'h', 'layers')): h.append(f'{yer}: lottie şeması eksik (v/fr/ip/op/w/h/layers)')
+                    if lj.get('assets') and any(x.get('p') and not str(x.get('p')).startswith('data:') for x in lj['assets']): h.append(f'{yer}: lottie harici varlık yasak')
+                except FileNotFoundError: h.append(f'{yer}: lottie yok ({ly})')
+                except json.JSONDecodeError as e: h.append(f'{yer}: lottie JSON bozuk ({e})')
         svg = r.get('svg')
         if not isinstance(svg, str) or not SVG_AD_RE.match(svg): h.append(f'{yer}: svg dosya adı geçersiz ({svg!r})')
         else:

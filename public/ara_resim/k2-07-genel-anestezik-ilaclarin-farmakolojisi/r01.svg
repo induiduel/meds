@@ -1,21 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540">
-  <rect width="1000" height="540" fill="#ffffff"/>
-  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">GABA-A kanalı: aynı kapı, iki farklı etki</text>
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <rect x="60" y="80" width="400" height="290" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
-    <text x="260" y="124" text-anchor="middle" font-size="27" font-weight="bold" fill="#1d4ed8">Benzodiazepin</text>
-    <text x="260" y="162" text-anchor="middle" font-size="24" fill="#1e293b">daha sık açtırır</text>
-    <path d="M110 250 h40 v-60 h40 v60 h40 v-60 h40 v60 h40 v-60 h40 v60 h40" stroke="#2563eb" stroke-width="5" fill="none"/>
-    <text x="260" y="320" text-anchor="middle" font-size="23" fill="#475569">açılma sıklığı artar</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <linearGradient id="altb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a7f3d0"/><stop offset="0.5" stop-color="#6ee7b7"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+    <linearGradient id="altb2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+    <radialGradient id="cl" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+    <g id="fos"><circle r="7" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/><path d="M-3 7 q-2 14 1 26 M3 7 q2 14 -1 26" stroke="#c2410c" stroke-width="2" fill="none"/></g>
+    <g id="clion"><circle r="14" fill="url(#cl)" stroke="#a16207" stroke-width="1.5"/><text y="6" text-anchor="middle" font-size="17" font-weight="bold" fill="#713f12">Cl⁻</text></g>
+  </defs>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">GABA-A reseptörü: aynı klorür kanalı, iki farklı ilaç etkisi</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Nöron zarı kesiti · kanal kayıtları · sonuç (slayt 13, 17, 33)</text>
 
-    <rect x="540" y="80" width="400" height="290" rx="18" fill="#f5f3ff" stroke="#7c3aed" stroke-width="3"/>
-    <text x="740" y="124" text-anchor="middle" font-size="27" font-weight="bold" fill="#6d28d9">Barbitürat</text>
-    <text x="740" y="162" text-anchor="middle" font-size="24" fill="#1e293b">daha uzun açık tutar</text>
-    <path d="M590 250 h30 v-60 h220 v60 h40" stroke="#7c3aed" stroke-width="5" fill="none"/>
-    <text x="740" y="320" text-anchor="middle" font-size="23" fill="#475569">açık kalma süresi uzar</text>
-
-    <rect x="60" y="400" width="880" height="110" rx="16" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
-    <text x="500" y="444" text-anchor="middle" font-size="25" fill="#1e293b">İkisinde de içeri klorür girer, nöron hiperpolarize olur.</text>
-    <text x="500" y="484" text-anchor="middle" font-size="25" font-weight="bold" fill="#b91c1c">Sonuç: bilinç kapanır.</text>
+  <!-- PANEL A: zar ve reseptör -->
+  <rect x="30" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Zardaki reseptör ve bağlanma bölgeleri</text>
+  <text x="54" y="182" font-size="17" fill="#64748b">Hücre dışı</text>
+  <text x="54" y="520" font-size="17" fill="#64748b">Hücre içi (nöron)</text>
+  <!-- çift katlı lipid zar -->
+  <g>
+    <use href="#fos" x="70" y="290"/><use href="#fos" x="96" y="290"/><use href="#fos" x="122" y="290"/><use href="#fos" x="148" y="290"/><use href="#fos" x="174" y="290"/><use href="#fos" x="200" y="290"/>
+    <use href="#fos" x="400" y="290"/><use href="#fos" x="426" y="290"/><use href="#fos" x="452" y="290"/><use href="#fos" x="478" y="290"/><use href="#fos" x="504" y="290"/><use href="#fos" x="530" y="290"/><use href="#fos" x="556" y="290"/>
+    <g transform="translate(0 680) scale(1 -1)">
+      <use href="#fos" x="70" y="290"/><use href="#fos" x="96" y="290"/><use href="#fos" x="122" y="290"/><use href="#fos" x="148" y="290"/><use href="#fos" x="174" y="290"/><use href="#fos" x="200" y="290"/>
+      <use href="#fos" x="400" y="290"/><use href="#fos" x="426" y="290"/><use href="#fos" x="452" y="290"/><use href="#fos" x="478" y="290"/><use href="#fos" x="504" y="290"/><use href="#fos" x="530" y="290"/><use href="#fos" x="556" y="290"/>
+    </g>
   </g>
+  <!-- reseptör: beş alt birimli kanal (kesitte üç alt birim görünür) -->
+  <path d="M222 220 q-8 70 4 150 q6 50 20 80 h40 q10 -40 8 -110 q-2 -70 -10 -120 z" fill="url(#altb)" stroke="#047857" stroke-width="2.5"/>
+  <path d="M344 220 q8 70 -4 150 q-6 50 -20 80 h-40 q-10 -40 -8 -110 q2 -70 10 -120 z" fill="url(#altb)" stroke="#047857" stroke-width="2.5"/>
+  <path d="M262 214 q22 -14 44 0 l-4 30 q-18 -8 -36 0 z" fill="url(#altb2)" stroke="#047857" stroke-width="2"/>
+  <!-- gözenek -->
+  <path d="M286 240 q-6 100 0 210" stroke="#0f766e" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+  <line x1="300" y1="236" x2="400" y2="178" stroke="#065f46" stroke-width="1.5"/><text x="404" y="176" font-size="17" fill="#065f46">kanal gözeneği</text>
+  <!-- bağlanma bölgeleri -->
+  <circle cx="222" cy="252" r="22" fill="#2563eb" stroke="#1e3a8a" stroke-width="2"/><text x="222" y="257" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">GABA</text>
+  <path d="M332 262 l16 -14 l16 14 l-16 14 z" fill="#0ea5e9" stroke="#075985" stroke-width="2"/>
+  <rect x="336" y="356" width="26" height="26" rx="5" fill="#7c3aed" stroke="#4c1d95" stroke-width="2"/>
+  <line x1="207" y1="252" x2="150" y2="214" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="66" y="208" font-size="17" fill="#1e3a8a" font-weight="bold">GABA bölgesi</text>
+  <line x1="364" y1="262" x2="420" y2="226" stroke="#075985" stroke-width="2"/>
+  <text x="380" y="214" font-size="17" fill="#075985" font-weight="bold">Benzodiazepin bölgesi</text>
+  <line x1="362" y1="369" x2="410" y2="414" stroke="#4c1d95" stroke-width="2"/>
+  <text x="380" y="438" font-size="17" fill="#4c1d95" font-weight="bold">Barbitürat bölgesi</text>
+  <text x="380" y="458" font-size="17" fill="#4c1d95">(ayrı, kendi bölgesi)</text>
+  <!-- klorür akışı -->
+  <use href="#clion" x="286" y="160"/>
+  <use href="#clion" x="286" y="300"/>
+  <use href="#clion" x="286" y="400"/>
+  <path d="M286 176 V 280" stroke="#b45309" stroke-width="3" marker-end="url(#okk)" fill="none"/>
+  <path d="M286 418 V 488" stroke="#b45309" stroke-width="3" marker-end="url(#okk)" fill="none"/>
+  <text x="300" y="512" font-size="17" fill="#92400e" font-weight="bold">Cl⁻ içeri girer</text>
+  <text x="300" y="534" font-size="17" fill="#92400e">→ hiperpolarizasyon, nöron susar</text>
+
+  <!-- PANEL B: kanal kayıtları -->
+  <rect x="610" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="634" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Tek kanal davranışı (açık = yukarı)</text>
+  <g font-size="17" fill="#475569">
+    <text x="634" y="176">Yalnız GABA</text>
+    <path d="M640 230 h40 v-30 h14 v30 h80 v-30 h14 v30 h100 v-30 h14 v30 h180" stroke="#64748b" stroke-width="3" fill="none"/>
+  </g>
+  <text x="634" y="276" font-size="18" font-weight="bold" fill="#075985">Benzodiazepin + GABA: açılma SIKLIĞI artar</text>
+  <path d="M640 336 h20 v-30 h14 v30 h22 v-30 h14 v30 h22 v-30 h14 v30 h22 v-30 h14 v30 h22 v-30 h14 v30 h22 v-30 h14 v30 h22 v-30 h14 v30 h22 v-30 h14 v30 h120" stroke="#0ea5e9" stroke-width="3.5" fill="none"/>
+  <text x="1006" y="330" font-size="17" fill="#075985">kısa ama çok açılış</text>
+  <text x="634" y="384" font-size="18" font-weight="bold" fill="#4c1d95">Barbitürat + GABA: açık kalma SÜRESİ uzar</text>
+  <path d="M640 444 h40 v-30 h170 v30 h70 v-30 h150 v30 h80" stroke="#7c3aed" stroke-width="3.5" fill="none"/>
+  <text x="680" y="406" font-size="17" fill="#4c1d95">az ama uzun açılış</text>
+  <rect x="634" y="470" width="512" height="80" rx="12" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="652" y="502" font-size="17" fill="#4c1d95" font-weight="bold">Yüksek dozda barbitürat GABA olmadan da</text>
+  <text x="652" y="528" font-size="17" fill="#4c1d95">kanalı kendisi açar → güvenlik aralığı dar.</text>
+
+  <!-- PANEL C: sonuç zinciri -->
+  <rect x="30" y="590" width="1140" height="190" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="626" font-size="22" font-weight="bold" fill="#0f172a">C · Hücreden bilince</text>
+  <g font-size="17">
+    <rect x="54" y="648" width="230" height="92" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="169" y="684" text-anchor="middle" font-weight="bold" fill="#78350f">Klorür girişi artar</text>
+    <text x="169" y="710" text-anchor="middle" fill="#78350f">zar hiperpolarize olur</text>
+    <path d="M290 694 h50" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+    <rect x="348" y="648" width="250" height="92" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="473" y="684" text-anchor="middle" font-weight="bold" fill="#0c4a6e">RAS ve korteks</text>
+    <text x="473" y="710" text-anchor="middle" fill="#0c4a6e">baskılanır</text>
+    <path d="M604 694 h50" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+    <rect x="662" y="648" width="486" height="92" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="905" y="680" text-anchor="middle" font-weight="bold" fill="#7f1d1d">Doza bağlı basamak</text>
+    <text x="760" y="714" text-anchor="middle" fill="#7f1d1d">sedasyon</text>
+    <path d="M806 708 h24" stroke="#7f1d1d" stroke-width="2" marker-end="url(#ok)"/>
+    <text x="880" y="714" text-anchor="middle" fill="#7f1d1d">hipnoz</text>
+    <path d="M918 708 h24" stroke="#7f1d1d" stroke-width="2" marker-end="url(#ok)"/>
+    <text x="1030" y="714" text-anchor="middle" font-weight="bold" fill="#7f1d1d">genel anestezi</text>
+  </g>
+  <text x="600" y="768" text-anchor="middle" font-size="17" fill="#475569">Benzodiazepinin etkisi flumazenille geri çevrilir; barbitüratın özgül antidotu yoktur.</text>
 </svg>

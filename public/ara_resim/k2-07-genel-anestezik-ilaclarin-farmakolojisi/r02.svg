@@ -1,40 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440">
-  <rect width="1000" height="440" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
   <defs>
-    <marker id="ok" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto">
-      <path d="M0 0 L16 9 L0 18 z" fill="#475569"/>
-    </marker>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <radialGradient id="beyin" cx="0.4" cy="0.4" r="0.7"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></radialGradient>
+    <linearGradient id="kas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient>
+    <radialGradient id="yag" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fffbeb"/><stop offset="1" stop-color="#fcd34d"/></radialGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+    <g id="ilac"><circle r="7" fill="#7c3aed" stroke="#4c1d95" stroke-width="1.5"/></g>
+    <g id="hucre"><circle r="20" fill="url(#yag)" stroke="#b45309" stroke-width="1.5"/></g>
   </defs>
-  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">Redistribüsyon: etki neden biter?</text>
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <rect x="20" y="90" width="210" height="170" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
-    <text x="125" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#1d4ed8">1. Verilir</text>
-    <text x="125" y="180" text-anchor="middle" font-size="22" fill="#1e293b">damardan</text>
-    <text x="125" y="212" text-anchor="middle" font-size="22" fill="#1e293b">hızla</text>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">Redistribüsyon: etki biter, ilaç vücutta kalır</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Damar içi anesteziğin dokular arasında yer değiştirmesi (slayt 15)</text>
 
-    <rect x="270" y="90" width="210" height="170" rx="16" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
-    <text x="375" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#1d4ed8">2. Beyin</text>
-    <text x="375" y="180" text-anchor="middle" font-size="22" fill="#1e293b">kanı bol;</text>
-    <text x="375" y="212" text-anchor="middle" font-size="22" fill="#1e293b">bilinç kapanır</text>
+  <!-- PANEL A -->
+  <rect x="30" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · İlacın gittiği dokular</text>
+  <!-- damar -->
+  <path d="M70 330 C150 300 230 360 310 330 S470 300 560 330" stroke="#b91c1c" stroke-width="22" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <use href="#ilac" x="110" y="322"/><use href="#ilac" x="170" y="330"/><use href="#ilac" x="240" y="340"/><use href="#ilac" x="300" y="332"/>
+  <line x1="90" y1="345" x2="80" y2="380" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="54" y="402" font-size="17" fill="#7f1d1d" font-weight="bold">Damar (plazma)</text>
+  <!-- beyin -->
+  <path d="M190 170 c-40 0 -60 30 -50 60 c-20 20 0 55 30 50 c20 22 70 22 90 0 c30 5 50 -30 30 -55 c10 -35 -30 -60 -60 -50 c-10 -12 -30 -10 -40 -5 z" fill="url(#beyin)" stroke="#be185d" stroke-width="2.5"/>
+  <path d="M170 210 q20 -15 40 0 q20 15 40 0 M165 245 q25 -12 50 0 q20 12 40 0" stroke="#be185d" stroke-width="1.8" fill="none"/>
+  <use href="#ilac" x="185" y="230"/><use href="#ilac" x="225" y="225"/><use href="#ilac" x="205" y="260"/>
+  <path d="M200 318 C200 300 205 290 205 284" stroke="#7c3aed" stroke-width="3" fill="none" marker-end="url(#okm)"/>
+  <line x1="280" y1="200" x2="330" y2="180" stroke="#be185d" stroke-width="1.5"/>
+  <text x="336" y="176" font-size="17" fill="#9d174d" font-weight="bold">Beyin: kanı bol</text>
+  <text x="336" y="198" font-size="17" fill="#9d174d">ilk alım, bilinç kapanır</text>
+  <!-- kas -->
+  <path d="M110 450 q60 -40 150 0 q-60 40 -150 0 z" fill="url(#kas)" stroke="#991b1b" stroke-width="2"/>
+  <path d="M130 444 q55 -20 110 0 M130 456 q55 20 110 0" stroke="#7f1d1d" stroke-width="1.2" fill="none"/>
+  <use href="#ilac" x="170" y="450"/><use href="#ilac" x="205" y="448"/>
+  <path d="M190 350 C185 380 185 400 186 426" stroke="#7c3aed" stroke-width="3" fill="none" marker-end="url(#okm)"/>
+  <text x="120" y="506" font-size="17" fill="#7f1d1d" font-weight="bold">Kas: kanı daha az</text>
+  <!-- yağ -->
+  <use href="#hucre" x="410" y="440"/><use href="#hucre" x="450" y="430"/><use href="#hucre" x="430" y="470"/><use href="#hucre" x="470" y="465"/><use href="#hucre" x="390" y="475"/>
+  <use href="#ilac" x="430" y="450"/><use href="#ilac" x="462" y="448"/>
+  <path d="M420 348 C425 380 430 395 432 412" stroke="#7c3aed" stroke-width="3" fill="none" marker-end="url(#okm)"/>
+  <text x="370" y="526" font-size="17" fill="#92400e" font-weight="bold">Yağ dokusu: kanı en az</text>
+  <text x="370" y="548" font-size="17" fill="#92400e">ilaç burada birikir</text>
 
-    <rect x="520" y="90" width="210" height="170" rx="16" fill="#ffedd5" stroke="#c2410c" stroke-width="3"/>
-    <text x="625" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#9a3412">3. Kas ve yağ</text>
-    <text x="625" y="180" text-anchor="middle" font-size="22" fill="#1e293b">kanı az;</text>
-    <text x="625" y="212" text-anchor="middle" font-size="22" fill="#1e293b">ilaç dağılır</text>
+  <!-- PANEL B: zaman grafiği -->
+  <rect x="610" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="634" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Dokudaki ilaç düzeyi, zamanla (şematik)</text>
+  <line x1="680" y1="480" x2="1140" y2="480" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+  <line x1="680" y1="480" x2="680" y2="170" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+  <text x="1040" y="510" font-size="17" fill="#334155">zaman →</text>
+  <text x="640" y="166" font-size="17" fill="#334155">düzey</text>
+  <path d="M684 200 C720 200 760 330 860 400 S1060 455 1130 460" stroke="#be185d" stroke-width="4" fill="none"/>
+  <path d="M684 470 C760 300 820 300 900 360 S1060 440 1130 445" stroke="#dc2626" stroke-width="4" fill="none" stroke-dasharray="10 6"/>
+  <path d="M684 476 C800 460 900 330 1130 300" stroke="#d97706" stroke-width="4" fill="none"/>
+  <text x="730" y="196" font-size="17" fill="#9d174d" font-weight="bold">plazma ve beyin</text>
+  <text x="820" y="296" font-size="17" fill="#b91c1c" font-weight="bold">kas</text>
+  <text x="1000" y="296" font-size="17" fill="#b45309" font-weight="bold">yağ</text>
+  <line x1="880" y1="400" x2="880" y2="480" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="890" y="430" font-size="17" fill="#334155">beyin düzeyi düşer,</text>
+  <text x="890" y="452" font-size="17" fill="#334155">etki biter</text>
+  <text x="634" y="534" font-size="17" fill="#475569">Etki biterken ilaç hâlâ kas ve yağdadır;</text><text x="634" y="556" font-size="17" fill="#475569">vücuttan atılması saatler, hatta günler sürebilir.</text>
 
-    <rect x="770" y="90" width="210" height="170" rx="16" fill="#f1f5f9" stroke="#475569" stroke-width="3"/>
-    <text x="875" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#334155">4. Etki biter</text>
-    <text x="875" y="180" text-anchor="middle" font-size="22" fill="#1e293b">kan ve beyin</text>
-    <text x="875" y="212" text-anchor="middle" font-size="22" fill="#1e293b">düzeyi düşer</text>
-
-    <g stroke="#475569" stroke-width="4" fill="none" marker-end="url(#ok)">
-      <path d="M232 175 h34"/>
-      <path d="M482 175 h34"/>
-      <path d="M732 175 h34"/>
-    </g>
-
-    <rect x="20" y="300" width="960" height="110" rx="14" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
-    <text x="500" y="344" text-anchor="middle" font-size="24" fill="#1e293b">İlaç hâlâ vücuttadır.</text>
-    <text x="500" y="384" text-anchor="middle" font-size="24" font-weight="bold" fill="#b91c1c">Tekrarlanan dozda kas ve yağda birikir: kümülasyon.</text>
+  <!-- PANEL C -->
+  <rect x="30" y="590" width="1140" height="190" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="626" font-size="22" font-weight="bold" fill="#0f172a">C · Dört adım ve tekrarlanan dozun sonucu</text>
+  <g font-size="17">
+    <rect x="54" y="646" width="240" height="86" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="174" y="680" text-anchor="middle" font-weight="bold" fill="#4c1d95">1 · Hızlı verilir</text>
+    <text x="174" y="706" text-anchor="middle" fill="#4c1d95">bilinç hızla kapanır</text>
+    <path d="M298 689 h28" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+    <rect x="332" y="646" width="240" height="86" rx="12" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+    <text x="452" y="680" text-anchor="middle" font-weight="bold" fill="#831843">2 · Beyne gider</text>
+    <text x="452" y="706" text-anchor="middle" fill="#831843">ilk alım, hızlı etki</text>
+    <path d="M576 689 h28" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+    <rect x="610" y="646" width="260" height="86" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="740" y="680" text-anchor="middle" font-weight="bold" fill="#7f1d1d">3 · Kas ve yağa dağılır</text>
+    <text x="740" y="706" text-anchor="middle" fill="#7f1d1d">düşük perfüzyona doğru</text>
+    <path d="M874 689 h28" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+    <rect x="908" y="646" width="240" height="86" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="1028" y="680" text-anchor="middle" font-weight="bold" fill="#0c4a6e">4 · Düzey düşer</text>
+    <text x="1028" y="706" text-anchor="middle" fill="#0c4a6e">plazma, beyin; etki biter</text>
   </g>
+  <text x="600" y="764" text-anchor="middle" font-size="17" fill="#92400e">Tekrarlanan dozda ilaç kas ve yağda birikir (kümülasyon); yavaşça kana dönüp uyanmayı geciktirebilir.</text>
 </svg>

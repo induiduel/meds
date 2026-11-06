@@ -23,6 +23,72 @@
    ]
   },
   {
+   "id": "r10",
+   "baslik": "Kalıtım: hasta akraba sayısı ve yakınlığı arttıkça risk artar",
+   "aciklama": "Tek ebeveyn hastaysa risk yüzde beş–altı, iki ebeveyn hastaysa yüzde kırk yedidir; tek yumurta ikizinde bile risk yüzde kırk altıda kalır.",
+   "adimlar": [
+    "1. Hasta ebeveynin çocuğunda ortalama risk yüzde ondur.",
+    "2. Ailede hasta sayısı arttıkça risk yüzde on yedi ve kırk yediye çıkar.",
+    "3. Tek yumurta ikizinde yüzde kırk altı, çift yumurta ikizinde yüzde on dört.",
+    "4. Antisipasyon: hastalık kuşaklar boyunca daha erken ve şiddetli başlar."
+   ],
+   "svg": "r10.svg",
+   "paragraf": 10,
+   "bitis": 10,
+   "kaynak": [
+    12
+   ]
+  },
+  {
+   "id": "r11",
+   "baslik": "Yapısal beyin bulguları: doku azalır, boşluklar genişler",
+   "aciklama": "Ventriküller ve sulkuslar genişler, frontal korteks incelir; ventrikül genişlemesi kötü uyum, negatif belirti ve tedaviye kötü yanıtla ilişkilidir.",
+   "adimlar": [
+    "1. Ventriküller ve sulkuslar genişler, korteks incelir.",
+    "2. Ventrikül genişlemesi negatif belirtiler ve bilişsel kayıplarla ilişkilidir.",
+    "3. Frontal bölge en son, on beş ile yirmi beş yaş arasında olgunlaşır."
+   ],
+   "svg": "r11.svg",
+   "paragraf": 11,
+   "bitis": 11,
+   "kaynak": [
+    13
+   ]
+  },
+  {
+   "id": "r12",
+   "baslik": "Hipofrontalite ve şizofreni devresi",
+   "aciklama": "Fonksiyonel görüntülemede frontal lob beklenenden az çalışır; sorun frontal korteks, singulat, talamus, temporal lob ve serebellumu bağlayan devrenin işleyişindedir.",
+   "adimlar": [
+    "1. Hipofrontalite: frontal lob az çalışır, negatif belirtilerle ilişkilidir.",
+    "2. Odak prefrontal ve dorsolateral prefrontal kortekstir.",
+    "3. Hiperfrontalite şizofrenide beklenmeyen bulgudur.",
+    "4. Devre bölgeleri birlikte çalışır; anatomi normal olsa da sinyalleşme bozuk olabilir."
+   ],
+   "svg": "r12.svg",
+   "paragraf": 12,
+   "bitis": 12,
+   "kaynak": [
+    14
+   ]
+  },
+  {
+   "id": "r14",
+   "baslik": "Nöropatoloji: küçük nöronlar, azalmış sinaps, gliozis yok",
+   "aciklama": "Korteks ve hipokampusta nöronlar küçüktür, sinaps ve dendrit azalmıştır; gliozisin olmaması sorunun beyin gelişimi sırasında oluştuğunu düşündürür.",
+   "adimlar": [
+    "1. Korteks ve hipokampusta nöronlar küçük, dorsal talamusta sayıca azdır.",
+    "2. Hipokampusta sinaps ve dendrit azalır.",
+    "3. Gliozis yoktur: sonradan hasar değil gelişimsel sorun düşünülür."
+   ],
+   "svg": "r14.svg",
+   "paragraf": 13,
+   "bitis": 13,
+   "kaynak": [
+    15
+   ]
+  },
+  {
    "id": "r02",
    "baslik": "Dopamin fazlası pozitif, dopamin azlığı negatif belirtilerle ilişkilidir",
    "aciklama": "Hiperdopaminerjik durum pozitif, hipodopaminerjik durum ve hipofrontalite negatif belirtilerle ilişkilidir; fensiklidin glutamat yoluyla şizofreni benzeri tablo yapar.",
@@ -91,13 +157,29 @@
    ]
   },
   {
-   "id": "r06",
-   "baslik": "Şizofreninin dört evresi: işlevsellik yaşla nasıl iner",
-   "aciklama": "Belirtisiz dönemi prodrom izler; aktif dönemde her ataktan sonra tam dönüş olmaz ve rezidüel dönemde işlevsellik düşük kalır.",
+   "id": "r13",
+   "baslik": "Belirti boyutları: pozitif grup ikiye bölünür",
+   "aciklama": "Sanrı ve varsanı psikotik boyuta, konuşma ve davranış bozukluğu ile uygunsuz duygulanım dezorganizasyon boyutuna, aloji, küntleşme ve avolüsyon negatif boyuta gider.",
    "adimlar": [
-    "1. Belirtisiz dönem: on beş yaşa dek tam işlev.",
-    "2. Prodrom: garip davranış ve silik negatif belirtiler.",
-    "3. Aktif dönem: pozitif belirtiler, ataklar ve düzelmeler; tam dönüş yok.",
+    "1. Psikotik boyut: sanrılar ve varsanılar.",
+    "2. Dezorganizasyon boyutu: dezorganize konuşma, garip davranış, uygunsuz duygulanım.",
+    "3. Negatif boyut: aloji, küntleşme, avolüsyon; anhedoni ve dikkat bozukluğu sık."
+   ],
+   "svg": "r13.svg",
+   "paragraf": 23,
+   "bitis": 23,
+   "kaynak": [
+    25
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Şizofreni evreleri: her atak neden kalıcı iz bırakır",
+   "aciklama": "Aktif dönemdeki her atak nöronlarda hasar bırakır; ilaçla toparlansa da nöron kaybı sürer ve işlevsellik önceki düzeyine tam dönmez.",
+   "adimlar": [
+    "1. Belirtisiz dönem: yaklaşık on beş yaşa dek tam işlev.",
+    "2. Prodrom: garip davranış ve silik negatif belirtiler; belirtisiz değildir.",
+    "3. Aktif dönem: her alevlenme nöronlarda kalıcı hasar bırakır.",
     "4. Rezidüel dönem: negatif ve bilişsel belirtiler, düşük işlevsellik."
    ],
    "svg": "r06.svg",
@@ -105,6 +187,23 @@
    "bitis": 26,
    "kaynak": [
     28
+   ]
+  },
+  {
+   "id": "r16",
+   "baslik": "Katalepsi, balmumu esnekliği ve postur alma nasıl ayrılır",
+   "aciklama": "Katalepside konum edilgin olarak korunur, balmumu esnekliğinde konumu muayene eden verir, postur almada kişi konumu kendisi etkin biçimde sürdürür.",
+   "adimlar": [
+    "1. Katalepsi: yer çekimine karşı edilgin konum.",
+    "2. Balmumu esnekliği: verilen konuma çok az direnç.",
+    "3. Postur alma: konum kendiliğinden ve etkin biçimde sürdürülür."
+   ],
+   "svg": "r16.svg",
+   "paragraf": 31,
+   "bitis": 31,
+   "kaynak": [
+    32,
+    33
    ]
   },
   {
@@ -122,6 +221,23 @@
    "bitis": 37,
    "kaynak": [
     40
+   ]
+  },
+  {
+   "id": "r15",
+   "baslik": "Paylaşılmış psikoz: sanrı baskın kişiden edilgin kişiye geçer",
+   "aciklama": "Bağımlı ilişkide sanrı baskın kişiden edilgin kişiye geçer; tedavide baskın kişiye antipsikotik verilir ve edilgin kişi ondan ayrılır.",
+   "adimlar": [
+    "1. İki ya da daha fazla kişi aynı sanrı sistemini paylaşır.",
+    "2. Sanrı baskın kişiden edilgin kişiye geçer.",
+    "3. İçerik çoğunlukla persekütif ya da hipokondriaktır.",
+    "4. Tedavi: baskın kişiye antipsikotik, edilgin kişi ayrılır."
+   ],
+   "svg": "r15.svg",
+   "paragraf": 38,
+   "bitis": 38,
+   "kaynak": [
+    41
    ]
   },
   {

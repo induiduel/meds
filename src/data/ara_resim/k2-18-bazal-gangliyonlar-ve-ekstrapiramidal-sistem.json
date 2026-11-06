@@ -3,30 +3,32 @@
  "resimler": [
   {
    "id": "r01",
-   "baslik": "Korteksten çıkıp geri dönen iki döngü",
-   "aciklama": "Bazal ganglion döngüsü ve serebellum döngüsü talamus üzerinden kortekse döner; ikisi paralel ve bağımsız çalışır.",
+   "baslik": "Motor yollar: inen yollar komutu taşır, döngüler ayarlar",
+   "aciklama": "İnen yollar komutu korteksten pons, beyin sapı ve omuriliğe taşır; bazal ganglion ve serebellum döngüleri talamus üzerinden kortekse dönerek hareketi artırır ya da azaltır.",
    "adimlar": [
-    "1. Döngü a: korteks, bazal ganglion, talamus, korteks.",
-    "2. Döngü b: korteks, serebellum, talamus, korteks.",
-    "3. Dönüş talamustan kortekse olur; döngüler hareketi artırır ya da azaltır."
+    "1. İnen yollar: kortikospinal, kortikobulber ve kortikopontin.",
+    "2. Döngü a: korteks, bazal ganglion, talamus, korteks.",
+    "3. Döngü b: korteks, serebellum, talamus, korteks.",
+    "4. İki döngü paraleldir, birbirine karışmaz.",
+    "5. Kaynak alanlar motor programı hazırlar ve sıralar."
    ],
    "svg": "r01.svg",
    "paragraf": 1,
-   "bitis": 1,
+   "bitis": 2,
    "kaynak": [
-    2,
-    3
+    2
    ]
   },
   {
    "id": "r02",
-   "baslik": "Bazal ganglion nörotransmiterlerinin etkisi",
-   "aciklama": "GABA baskılar, glutamat uyarır; dopamin D1 reseptöründe uyarır, D2 reseptöründe baskılar; asetilkolin modülatördür.",
+   "baslik": "Bazal ganglion nörotransmiterleri: aynı sinaps, farklı yön",
+   "aciklama": "GABA baskılar, glutamat uyarır; dopamin D1 reseptöründe uyarır, D2 reseptöründe bastırır; asetilkolin modülatördür; substance P ve enkefalin nöropeptit örnekleridir.",
    "adimlar": [
     "GABA: baskılayıcı.",
     "Glutamat: uyarıcı.",
     "Dopamin: D1 uyarıcı, D2 bastırıcı.",
-    "Asetilkolin: modülatör, ne uyarır ne baskılar."
+    "Asetilkolin: modülatör, ne uyarır ne baskılar.",
+    "Nöropeptitler: substance P, enkefalin."
    ],
    "svg": "r02.svg",
    "paragraf": 7,
@@ -37,8 +39,8 @@
   },
   {
    "id": "r03",
-   "baslik": "Direkt ve indirekt yol aynı çıkış kapısında buluşur",
-   "aciklama": "Direkt yol striatumdan doğrudan GPi ve SNr'ye, indirekt yol GPe ve STN üzerinden aynı çıkışa gider; çıkış talamusa, talamus kortekse bağlanır.",
+   "baslik": "Bazal ganglion çekirdekleri: giriş, ara durak ve çıkış",
+   "aciklama": "Striatum giriş, GPe ve STN ara durak, GPi ve SNr çıkıştır; direkt yol girişten doğrudan çıkışa, indirekt yol putamenden GPe ve STN üzerinden aynı çıkışa gider.",
    "adimlar": [
     "1. Giriş: korteksten striatuma.",
     "2. Direkt: striatumdan GPi ve SNr'ye.",
@@ -46,40 +48,42 @@
     "4. Çıkış: GPi ve SNr'den talamusa, oradan kortekse."
    ],
    "svg": "r03.svg",
-   "paragraf": 10,
+   "paragraf": 9,
    "bitis": 10,
    "kaynak": [
+    4,
+    5,
+    6,
     8
    ]
   },
   {
    "id": "r04",
    "baslik": "Baskının baskılanması: iki yolun zıt etkisi",
-   "aciklama": "Direkt yolda çıkış kapısının talamus üzerindeki baskısı azalır ve hareket kolaylaşır; indirekt yolda STN serbest kalır ve talamus daha çok baskılanır.",
+   "aciklama": "İstirahatte çıkış kapısı talamusu baskılar; direkt yolda bu baskı kalkar ve hareket kolaylaşır, indirekt yolda STN serbest kalır ve talamus daha güçlü baskılanır.",
    "adimlar": [
-    "1. Direkt: striatum çıkış kapısını baskılar.",
-    "2. Talamus serbest kalır, korteksi uyarır.",
-    "3. İndirekt: putamen GPe'yi baskılar, STN serbest kalır.",
-    "4. STN çıkış kapısını uyarır, talamus daha çok baskılanır, hareket azalır."
+    "1. İstirahat: GPi ve SNr talamusu GABA ile baskılar.",
+    "2. Direkt: striatum çıkış kapısını baskılar, talamus serbest kalır.",
+    "3. İndirekt: putamen GPe'yi baskılar, STN üzerindeki baskı kalkar.",
+    "4. STN çıkış kapısını uyarır, talamus daha güçlü baskılanır, hareket azalır."
    ],
    "svg": "r04.svg",
    "paragraf": 11,
    "bitis": 11,
    "kaynak": [
     7,
-    8,
-    11
+    8
    ]
   },
   {
    "id": "r05",
    "baslik": "Ölçekleme ve odaklama",
-   "aciklama": "Bazal ganglion hareket komutunun kopyasını derin duyu bilgisiyle kıyaslar ve düzeltmeyi talamus üzerinden kortekse bildirir.",
+   "aciklama": "Bazal ganglion hareket komutunun kopyasını parietal korteksten gelen derin duyu bilgisiyle kıyaslar ve düzeltmeyi talamus üzerinden kortekse bildirir; odaklamada istenen bileşeni güçlendirir, istenmeyeni baskılar.",
    "adimlar": [
     "1. Korteks medulla spinalise komut gönderir; kopyası bazal gangliona gelir.",
-    "2. Parietal korteksten derin duyu bilgisi gelir.",
+    "2. Parietal korteksten proprioseptif ve bilinçsiz derin duyu gelir.",
     "3. Bazal ganglion ikisini kıyaslar, düzeltmeyi talamus üzerinden kortekse yollar.",
-    "4. Odaklama: istenen bileşen direkt yolla güçlenir, istenmeyen indirekt yolla bastırılır."
+    "4. Odaklama: istenen bileşen direkt yolla güçlenir, istenmeyen indirekt yolla baskılanır."
    ],
    "svg": "r05.svg",
    "paragraf": 14,
@@ -89,11 +93,28 @@
    ]
   },
   {
+   "id": "r08",
+   "baslik": "Tremor: antagonist kasların sırayla kasılması",
+   "aciklama": "Antagonist kaslar sırayla kasılınca el gidip gelir; istirahat tremoru el dinlenirken 4–7 Hz ile görülür, intensiyonel tremor hedefe yaklaştıkça artar.",
+   "adimlar": [
+    "1. Antagonist kaslar sırayla kasılır, az ya da çok ritmik titreme olur.",
+    "2. Statik tremor: istirahat tremoru ya da Parkinson tremoru, 4–7 Hz.",
+    "3. Hap yapma ya da para sayma, pedal hareketi; dudak, çene, dil.",
+    "4. İntensiyonel tremor: hedefe yaklaştıkça artar."
+   ],
+   "svg": "r08.svg",
+   "paragraf": 18,
+   "bitis": 19,
+   "kaynak": [
+    14
+   ]
+  },
+  {
    "id": "r06",
    "baslik": "Kore ile atetoz nasıl ayrılır?",
-   "aciklama": "Kore ani, hızlı ve düzensizdir; atetoz yavaş bir kıvrılma hareketidir; ikisi birleşince koreatetoz adını alır.",
+   "aciklama": "Kore ani, hızlı ve düzensizdir, vücudun bir yerinden ötekine atlar; atetoz yavaş, birbirini izleyen kıvrılma hareketidir; ikisi birleşince koreatetoz adını alır.",
    "adimlar": [
-    "Kore: amaçsız, düzensiz, ani ve hızlı.",
+    "Kore: amaçsız, düzensiz, ani ve hızlı; ellerde daha sık.",
     "Atetoz: ellerde birbirini izleyen kıvrılma, dansöz el hareketine benzer.",
     "Koreatetoz: iki hareket birleşir, ayırmak zorlaşır."
    ],
@@ -106,14 +127,48 @@
    ]
   },
   {
-   "id": "r07",
-   "baslik": "İlaca bağlı dört hareket bozukluğu",
-   "aciklama": "Akut distoni tek dozla hemen, tardif diskinezi uzun süreli nöroleptikle geç ortaya çıkar; ilaca bağlı Parkinson ve L-dopa diskinezisi de bu gruptadır.",
+   "id": "r09",
+   "baslik": "Hemiballismus: omuzdan başlayan fırlatıcı hareket",
+   "aciklama": "Vücudun bir yarısını tutan, proksimalden başlayan, ani, fırlatıcı ve geniş amplitüdlü istemsiz harekettir; hasta duvara çarpıp yaralanabilir.",
    "adimlar": [
-    "Akut distoni: tek doz yeterli.",
+    "1. Tek yarı: bir kol ve aynı taraftaki bacak.",
+    "2. Başlangıç proksimalden, kolda omuzdan.",
+    "3. Ani, fırlatıcı, geniş amplitüdlü.",
+    "4. Duvara çarpma ve yatağa sürtünmeyle deri soyulması."
+   ],
+   "svg": "r09.svg",
+   "paragraf": 23,
+   "bitis": 23,
+   "kaynak": [
+    17
+   ]
+  },
+  {
+   "id": "r10",
+   "baslik": "Distoni: uzun eksende yavaş burulma",
+   "aciklama": "Distonide ekstremite, gövde ve boyunda yavaş, geniş amplitüdlü kıvrılma olur ve vücut anormal postürde kalır; boyunda SCM spazmı başı karşı tarafa çevirir.",
+   "adimlar": [
+    "1. Uzun eksen etrafında yavaş, geniş kıvrılma.",
+    "2. Vücut anormal postür alır; kaslar hipertrofik olur.",
+    "3. Spazmodik tortikolis: SCM spazmı, baş karşı tarafa döner.",
+    "4. Retrokolis: boyun geriye bükülür."
+   ],
+   "svg": "r10.svg",
+   "paragraf": 24,
+   "bitis": 25,
+   "kaynak": [
+    18
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "İlaca bağlı hareket bozuklukları: ne zaman, nerede?",
+   "aciklama": "Akut distoni tek dozla hemen yüz, boyun, dil, çene ve gözlerde başlar; tardif diskinezi uzun süreli nöroleptikle geç başlar, ağız ve dili tutar ve genellikle kalıcıdır.",
+   "adimlar": [
+    "Akut distoni: tek doz yeterli; okülojirik kriz.",
     "İlaca bağlı Parkinson: lityum ve tipik antipsikotikler.",
     "Tardif diskinezi: uzun süreli nöroleptik, genellikle kalıcı.",
-    "L-dopa diskinezisi: L-dopa tedavisinde görülür."
+    "L-dopa diskinezisi: dozu kendi başına artıran hastada."
    ],
    "svg": "r07.svg",
    "paragraf": 26,

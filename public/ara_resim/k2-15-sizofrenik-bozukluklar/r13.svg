@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Belirti boyutları: pozitif grup ikiye bölünür</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">Pozitif–negatif ayrımından üç boyuta geçiş (slayt 25)</text>
+<rect x="30" y="96" width="1140" height="512" rx="18" fill="#ffffff" stroke="#fdba74" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · Hangi belirti hangi boyuta gider</text>
+<path d="M760 155 C760 135 780 135 800 135 L1100 135 C1130 135 1140 145 1140 165 L1140 200 C1140 220 1130 230 1100 230 L800 230 C780 230 760 230 760 210 Z" stroke="#dc2626" stroke-width="2.5" fill="#fef2f2" stroke-linecap="round"/>
+<text x="784" y="169" font-size="19" fill="#dc2626" text-anchor="start" font-weight="bold">Psikotik boyut</text>
+<text x="784" y="199" font-size="17" fill="#334155" text-anchor="start">varsanılar ve sanrılar</text>
+<path d="M760 270 C760 250 780 250 800 250 L1100 250 C1130 250 1140 260 1140 280 L1140 365 C1140 385 1130 395 1100 395 L800 395 C780 395 760 395 760 375 Z" stroke="#ea580c" stroke-width="2.5" fill="#fff7ed" stroke-linecap="round"/>
+<text x="784" y="284" font-size="19" fill="#ea580c" text-anchor="start" font-weight="bold">Dezorganizasyon boyutu</text>
+<text x="784" y="314" font-size="17" fill="#334155" text-anchor="start">konuşma, davranış ve duygulanım</text>
+<text x="784" y="336" font-size="17" fill="#334155" text-anchor="start">dağılır; ör. acı bir olayı</text>
+<text x="784" y="358" font-size="17" fill="#334155" text-anchor="start">gülerek anlatmak</text>
+<path d="M760 430 C760 410 780 410 800 410 L1100 410 C1130 410 1140 420 1140 440 L1140 560 C1140 580 1130 590 1100 590 L800 590 C780 590 760 590 760 570 Z" stroke="#2563eb" stroke-width="2.5" fill="#eff6ff" stroke-linecap="round"/>
+<text x="784" y="444" font-size="19" fill="#2563eb" text-anchor="start" font-weight="bold">Negatif boyut</text>
+<text x="784" y="474" font-size="17" fill="#334155" text-anchor="start">var olan işlevler eksilir:</text>
+<text x="784" y="496" font-size="17" fill="#334155" text-anchor="start">konuşma, duygu dışavurumu,</text>
+<text x="784" y="518" font-size="17" fill="#334155" text-anchor="start">istenç</text>
+<circle cx="330" cy="160" r="8" fill="#dc2626" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="166" font-size="17" fill="#0f172a" text-anchor="end">Sanrılar</text>
+<path d="M338 160 C520 160 580 182 754 182" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="205" r="8" fill="#dc2626" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="211" font-size="17" fill="#0f172a" text-anchor="end">Varsanılar</text>
+<path d="M338 205 C520 205 580 182 754 182" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="262" r="8" fill="#dc2626" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="268" font-size="17" fill="#0f172a" text-anchor="end">Dezorganize konuşma</text>
+<path d="M338 262 C520 262 580 322 754 322" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="307" r="8" fill="#dc2626" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="313" font-size="17" fill="#0f172a" text-anchor="end">Garip / dezorganize davranış</text>
+<path d="M338 307 C520 307 580 322 754 322" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="352" r="8" fill="#ea580c" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="358" font-size="17" fill="#0f172a" text-anchor="end">Uygunsuz duygulanım</text>
+<path d="M338 352 C520 352 580 322 754 322" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="420" r="8" fill="#2563eb" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="426" font-size="17" fill="#0f172a" text-anchor="end">Aloji</text>
+<path d="M338 420 C520 420 580 500 754 500" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="462" r="8" fill="#2563eb" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="468" font-size="17" fill="#0f172a" text-anchor="end">Duygulanımda küntleşme</text>
+<path d="M338 462 C520 462 580 500 754 500" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="504" r="8" fill="#2563eb" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="510" font-size="17" fill="#0f172a" text-anchor="end">Avolüsyon</text>
+<path d="M338 504 C520 504 580 500 754 500" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<circle cx="330" cy="556" r="8" fill="#60a5fa" stroke="#0f172a" stroke-width="1.5"/>
+<text x="316" y="562" font-size="17" fill="#0f172a" text-anchor="end">Anhedoni, dikkat bozukluğu (sık)</text>
+<path d="M338 556 C520 556 580 500 754 500" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" opacity="0.55"/>
+<path d="M50 150 C40 150 40 160 40 170 L40 300 C40 310 40 318 50 318" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="54" y="236" font-size="17" fill="#991b1b" text-anchor="start" font-weight="bold">pozitif</text>
+<path d="M50 410 C40 410 40 420 40 430 L40 500 C40 510 40 514 50 514" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="54" y="470" font-size="17" fill="#1e3a8a" text-anchor="start" font-weight="bold">negatif</text>
+<rect x="30" y="624" width="1140" height="130" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="56" y="664" font-size="18" fill="#7c2d12" text-anchor="start">Boyut ayrımında pozitif grup ikiye bölünür: sanrı ve varsanı psikotik boyutta, konuşma ve davranış bozukluğu</text>
+<text x="56" y="687" font-size="18" fill="#7c2d12" text-anchor="start">dezorganizasyon boyutunda yer alır. Uygunsuz duygulanım, anlatılan konuya uymayan duygu göstermektir.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 25 (pozitif–negatif listeler: slayt 23–24)</text>
+</svg>

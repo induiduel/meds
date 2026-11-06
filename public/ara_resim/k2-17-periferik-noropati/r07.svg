@@ -1,11 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
 <defs>
-<marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
-<marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
-<marker id="okM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
-<marker id="okK" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
-<marker id="okG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="gaks" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="gmiy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="0.5" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+<radialGradient id="ggov" cx="0.35" cy="0.35" r="0.75"><stop offset="0" stop-color="#ede9fe"/><stop offset="1" stop-color="#8b5cf6"/></radialGradient>
+<linearGradient id="gkas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="0.5" stop-color="#f87171"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<radialGradient id="gom" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2e8f0"/></radialGradient>
+<linearGradient id="gsag" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+<g id="miy"><path d="M-22 -9 h44 a9 9 0 0 1 0 18 h-44 a9 9 0 0 1 0 -18 z" fill="url(#gmiy)" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="fos"><circle r="7" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/><path d="M-3 7 q-2 12 1 22 M3 7 q2 12 -1 22" stroke="#c2410c" stroke-width="2" fill="none"/></g>
+<g id="mak"><path d="M-16 -4 q2 -14 16 -12 q14 -4 16 10 q6 12 -6 18 q-10 8 -20 0 q-12 -2 -6 -16 z" fill="#ddd6fe" stroke="#6d28d9" stroke-width="1.5"/><circle cx="2" cy="1" r="5" fill="#6d28d9"/></g>
+<g id="glob"><circle r="5" fill="#7dd3fc" stroke="#0369a1" stroke-width="1"/></g>
 </defs>
-<rect x="0" y="0" width="1000" height="520" fill="#ffffff"/>
-<text x="500" y="46" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Hangi lif, hangi duyu belirtisi?</text><text x="450" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#2563eb">Kalın miyelinli lif</text><text x="800" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#16a34a">İnce miyelinsiz lif</text><text x="140" y="220" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Negatif</text><text x="140" y="250" text-anchor="middle" font-size="20" font-weight="400" fill="#64748b">duyu kaybı</text><text x="140" y="400" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Pozitif</text><text x="140" y="430" text-anchor="middle" font-size="20" font-weight="400" fill="#64748b">fazladan duyu</text><rect x="290" y="150" width="320" height="150" rx="14" fill="#2563eb1a" stroke="#2563eb" stroke-width="3"/><text x="450.0" y="205.42" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">dokunma, pozisyon kaybı</text><text x="450.0" y="232.7" text-anchor="middle" font-size="22" font-weight="400" fill="#0f172a">keçelenme</text><text x="450.0" y="259.98" text-anchor="middle" font-size="22" font-weight="400" fill="#0f172a">gece dengesizlik</text><rect x="640" y="150" width="320" height="150" rx="14" fill="#16a34a1a" stroke="#16a34a" stroke-width="3"/><text x="800.0" y="205.42" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">ağrı-ısı kaybı</text><text x="800.0" y="232.7" text-anchor="middle" font-size="22" font-weight="400" fill="#0f172a">ağrısız yanık</text><text x="800.0" y="259.98" text-anchor="middle" font-size="22" font-weight="400" fill="#0f172a">ağrısız travma</text><rect x="290" y="330" width="320" height="150" rx="14" fill="#2563eb1a" stroke="#2563eb" stroke-width="3"/><text x="450.0" y="399.06" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">distal parestezi</text><text x="450.0" y="426.34" text-anchor="middle" font-size="22" font-weight="400" fill="#0f172a">karıncalanma</text><rect x="640" y="330" width="320" height="150" rx="14" fill="#16a34a1a" stroke="#16a34a" stroke-width="3"/><text x="800.0" y="385.42" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">ağrılı belirtiler</text><text x="800.0" y="412.7" text-anchor="middle" font-size="22" font-weight="400" fill="#0f172a">dizestezi, hiperaljezi</text><text x="800.0" y="439.98" text-anchor="middle" font-size="22" font-weight="400" fill="#0f172a">kozalji</text>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Hangi lif, hangi duyu belirtisi?</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" font-weight="normal" fill="#475569">Negatif fenomen bir duyunun kaybı, pozitif fenomen normalde olmayan bir duyunun gelmesidir (slayt 14, 15)</text>
+<text x="390" y="130" font-size="20" text-anchor="middle" font-weight="bold" fill="#2563eb">Negatif fenomen: ses kesilir</text>
+<text x="870" y="130" font-size="20" text-anchor="middle" font-weight="bold" fill="#dc2626">Pozitif fenomen: yayın yokken cızırtı</text>
+<path d="M240 160 C 270 140 290 180 320 160 S 370 140 400 160" stroke="#2563eb" stroke-width="3" fill="none"/><path d="M410 160 H 540" stroke="#2563eb" stroke-width="3" stroke-dasharray="3 8"/>
+<path d="M720 160 l10 -14 l10 24 l10 -30 l10 30 l10 -18 l10 12 l10 -20 l10 26 l10 -10 l10 0" stroke="#dc2626" stroke-width="3" fill="none"/>
+<rect x="30" y="190" width="1140" height="205" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="290" r="52" fill="url(#gmiy)" stroke="#0369a1" stroke-width="2"/><circle cx="120" cy="290" r="30" fill="url(#gaks)" stroke="#b45309"/>
+<text x="120" y="380" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">Kalın miyelinli lif</text>
+<path d="M240 210 v165" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+<circle cx="262" cy="240" r="5" fill="#2563eb"/>
+<text x="276" y="246" font-size="18" text-anchor="start" font-weight="bold" fill="#0f172a">Dokunma ve eklem pozisyonu kaybı</text>
+<circle cx="262" cy="292" r="5" fill="#2563eb"/>
+<text x="276" y="298" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">El ve ayakta keçelenme</text>
+<circle cx="262" cy="344" r="5" fill="#2563eb"/>
+<text x="276" y="350" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Gece dengesiz yürüyüş (karanlık)</text>
+<path d="M720 210 v165" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+<circle cx="742" cy="240" r="5" fill="#dc2626"/>
+<text x="756" y="246" font-size="18" text-anchor="start" font-weight="bold" fill="#0f172a">Distal parestezi ve karıncalanma</text>
+<circle cx="742" cy="292" r="5" fill="#dc2626"/>
+<text x="756" y="298" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Uyaransız ortaya çıkan anormal his</text>
+<circle cx="742" cy="344" r="5" fill="#dc2626"/>
+<text x="756" y="350" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">(iğnelenme)</text>
+<rect x="30" y="410" width="1140" height="205" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="120" cy="510" r="16" fill="url(#gaks)" stroke="#b45309" stroke-width="2"/><path d="M80 540 q40 -24 80 0" stroke="#94a3b8" fill="none"/>
+<text x="120" y="600" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">İnce miyelinsiz lif</text>
+<path d="M240 430 v165" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+<circle cx="262" cy="460" r="5" fill="#2563eb"/>
+<text x="276" y="466" font-size="18" text-anchor="start" font-weight="bold" fill="#0f172a">Ağrı ve ısıyı değerlendirme kaybı</text>
+<circle cx="262" cy="512" r="5" fill="#2563eb"/>
+<text x="276" y="518" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Ağrısız yanık ve travma</text>
+<circle cx="262" cy="564" r="5" fill="#2563eb"/>
+<text x="276" y="570" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Diyabetik ayak: yanığı kokusundan anlar</text>
+<path d="M720 430 v165" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+<circle cx="742" cy="460" r="5" fill="#dc2626"/>
+<text x="756" y="466" font-size="18" text-anchor="start" font-weight="bold" fill="#0f172a">Dizestezi: çarşafın değmesi bile acı</text>
+<circle cx="742" cy="512" r="5" fill="#dc2626"/>
+<text x="756" y="518" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Hiperaljezi: ağrıya aşırı ağrı</text>
+<circle cx="742" cy="564" r="5" fill="#dc2626"/>
+<text x="756" y="570" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Kozalji: travma sonrası yanma ağrısı</text>
+<rect x="30" y="640" width="357" height="70" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="209" y="681" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Kalın lif: dokunma, pozisyon</text>
+<line x1="390" y1="675.0" x2="418" y2="675.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="421" y="640" width="357" height="70" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="600" y="681" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">İnce lif: ağrı, ısı</text>
+<line x1="782" y1="675.0" x2="810" y2="675.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="813" y="640" width="357" height="70" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="991" y="659" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Negatif sorulursa karıncalanma,</text>
+<text x="991" y="681" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">dizestezi, hiperaljezi, kozalji</text>
+<text x="991" y="703" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">yanlış şıktır</text>
+<text x="600" y="740" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Ağrılı nöropatide en sık nedenler diyabetik polinöropati ve kriptojenik duysal polinöropatidir.</text>
+<text x="600" y="778" font-size="17" text-anchor="middle" font-weight="normal" fill="#475569">Çıkmış: polinöropatide negatif fenomen ağrısız yanma ve travmadır. His kaybı amputasyona kadar gidebilir.</text>
 </svg>

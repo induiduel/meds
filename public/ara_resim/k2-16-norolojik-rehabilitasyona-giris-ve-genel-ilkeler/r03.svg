@@ -1,5 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker></defs>
-<rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
-<text x="500" y="50" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Tonus: hangi kas grubunda değişir?</text><rect x="30" y="90" width="280" height="70" rx="16" fill="#2563eb1a" stroke="#2563eb" stroke-width="4"/><text x="170.0" y="134.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Hipotoni</text><rect x="50" y="185" width="110" height="60" rx="10" fill="#2563eb55" stroke="#2563eb" stroke-width="3"/><rect x="180" y="185" width="110" height="60" rx="10" fill="#2563eb55" stroke="#2563eb" stroke-width="3"/><text x="105" y="277" text-anchor="middle" font-size="20" font-weight="600" fill="#0f172a">agonist</text><text x="235" y="277" text-anchor="middle" font-size="20" font-weight="600" fill="#0f172a">antagonist</text><text x="170" y="317" text-anchor="middle" font-size="22" font-weight="700" fill="#2563eb">segmenter lezyon</text><rect x="360" y="90" width="280" height="70" rx="16" fill="#ea580c1a" stroke="#ea580c" stroke-width="4"/><text x="500.0" y="134.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Spastisite</text><rect x="380" y="185" width="110" height="180" rx="10" fill="#ea580c55" stroke="#ea580c" stroke-width="3"/><rect x="510" y="185" width="110" height="60" rx="10" fill="#ea580c55" stroke="#ea580c" stroke-width="3"/><text x="435" y="397" text-anchor="middle" font-size="20" font-weight="600" fill="#0f172a">agonist</text><text x="565" y="397" text-anchor="middle" font-size="20" font-weight="600" fill="#0f172a">antagonist</text><text x="500" y="437" text-anchor="middle" font-size="22" font-weight="700" fill="#ea580c">piramidal yol</text><rect x="690" y="90" width="280" height="70" rx="16" fill="#dc26261a" stroke="#dc2626" stroke-width="4"/><text x="830.0" y="134.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Rijidite</text><rect x="710" y="185" width="110" height="180" rx="10" fill="#dc262655" stroke="#dc2626" stroke-width="3"/><rect x="840" y="185" width="110" height="180" rx="10" fill="#dc262655" stroke="#dc2626" stroke-width="3"/><text x="765" y="397" text-anchor="middle" font-size="20" font-weight="600" fill="#0f172a">agonist</text><text x="895" y="397" text-anchor="middle" font-size="20" font-weight="600" fill="#0f172a">antagonist</text><text x="830" y="437" text-anchor="middle" font-size="22" font-weight="700" fill="#dc2626">ekstrapiramidal</text><text x="830" y="530" text-anchor="middle" font-size="22" font-weight="600" fill="#dc2626">Parkinson: dişli çark</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <linearGradient id="deri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde7cf"/><stop offset="1" stop-color="#eab98a"/></linearGradient>
+    <linearGradient id="kas" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient>
+    <linearGradient id="kasA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fee2e2"/><stop offset="1" stop-color="#fca5a5"/></linearGradient>
+    <linearGradient id="sinir" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+    <radialGradient id="beyin" cx="0.4" cy="0.35" r="0.75"><stop offset="0" stop-color="#fdf2f8"/><stop offset="1" stop-color="#f9a8d4"/></radialGradient>
+    <radialGradient id="hasar" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f87171" stop-opacity="0.3"/></radialGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+    <marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+    <marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/></marker>
+    <g id="noron"><path d="M0 0 q-16 -10 -26 -24 M0 0 q-20 4 -30 0 M0 0 q-6 18 -18 26" stroke="#64748b" stroke-width="2.5" fill="none"/><circle r="9" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+    <g id="noronA"><path d="M0 0 q-16 -10 -26 -24 M0 0 q-20 4 -30 0 M0 0 q-6 18 -18 26" stroke="#2563eb" stroke-width="2.5" fill="none"/><circle r="9" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/></g>
+  </defs>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">Tonus: segmenter devre, hipotoni ve hipertoni</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Tonusu kim sağlar, nerede bozulur, nasıl artar (slayt 9–10)</text>
+  <rect x="30" y="100" width="620" height="440" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="52" y="134" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">A · Tonusu sağlayan devre ve lezyon yerleri</text>
+  <ellipse cx="300" cy="400" rx="120" ry="82" fill="#fefce8" stroke="#a16207" stroke-width="2.5"/>
+  <path d="M300 390 C270 330 220 340 238 380 C250 410 210 440 230 458 C260 470 286 430 300 410 C314 430 340 470 370 458 C390 440 350 410 362 380 C380 340 330 330 300 390 Z" stroke="#64748b" stroke-width="2" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="512" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Omurilik segmenti (kesit)</text>
+  <path d="M240 344 C190 290 130 290 90 320" stroke="#2563eb" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="150" cy="296" rx="18" ry="11" fill="#bfdbfe" stroke="#2563eb" stroke-width="2" transform="rotate(-10 150 296)"/>
+  <path d="M238 450 C180 480 130 470 90 430" stroke="#dc2626" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 320 C60 350 64 400 90 430" stroke="#7c3aed" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="64" cy="374" rx="22" ry="56" fill="url(#kas)" stroke="#b91c1c" stroke-width="2"/>
+  <text x="56" y="470" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">Kas</text>
+  <line x1="114" y1="308" x2="180" y2="302" stroke="#2563eb" stroke-width="2" marker-end="url(#okm)"/>
+  <line x1="190" y1="474" x2="120" y2="456" stroke="#dc2626" stroke-width="2" marker-end="url(#okk)"/>
+  <circle cx="248" cy="434" r="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+  <text x="248" y="440" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="middle">1</text>
+  <circle cx="196" cy="304" r="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+  <text x="196" y="310" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="middle">2</text>
+  <circle cx="72" cy="408" r="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+  <text x="72" y="414" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="middle">3</text>
+  <circle cx="64" cy="348" r="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+  <text x="64" y="354" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="middle">4</text>
+  <text x="440" y="340" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="start">1 Ön boynuz hastalığı</text>
+  <text x="440" y="366" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="start">2 Tabes dorsalis</text>
+  <text x="440" y="392" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="start">3 Polinöropati</text>
+  <text x="440" y="418" font-size="17" font-weight="bold" fill="#9a3412" text-anchor="start">4 Kas hastalıkları</text>
+  <text x="440" y="314" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">Hipotoni yapan lezyonlar:</text>
+  <ellipse cx="160" cy="170" rx="70" ry="30" fill="url(#beyin)" stroke="#db2777" stroke-width="2"/>
+  <text x="160" y="176" font-size="17" font-weight="bold" fill="#831843" text-anchor="middle">Hemisfer</text>
+  <ellipse cx="310" cy="170" rx="64" ry="26" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="310" y="176" font-size="17" font-weight="bold" fill="#831843" text-anchor="middle">Beyin sapı</text>
+  <ellipse cx="460" cy="170" rx="70" ry="26" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="460" y="176" font-size="17" font-weight="bold" fill="#831843" text-anchor="middle">Serebellum</text>
+  <path d="M310 198 C310 240 300 280 300 312" stroke="#db2777" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+  <text x="318" y="236" font-size="17" font-weight="normal" fill="#831843" text-anchor="start">Suprasegmenter ayar</text>
+  <text x="318" y="260" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Bu yapılar bozulunca da tonus</text>
+  <text x="318" y="282" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">değişir.</text>
+  <rect x="670" y="100" width="500" height="440" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="692" y="134" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">B · Agonist ve antagonistte tonus</text>
+  <text x="692" y="184" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="start">Hipotoni</text>
+  <text x="692" y="208" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Tonus azalır</text>
+  <path d="M960 146 L960 234" stroke="#94a3b8" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="940" cy="190" rx="12" ry="40" fill="url(#kasA)" stroke="#b91c1c" stroke-width="2"/>
+  <ellipse cx="982" cy="190" rx="12" ry="40" fill="url(#kasA)" stroke="#b91c1c" stroke-width="2"/>
+  <text x="692" y="299" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="start">Spastisite</text>
+  <text x="692" y="323" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Birinde diğerine göre artış</text>
+  <path d="M960 261 L960 349" stroke="#94a3b8" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="940" cy="305" rx="22" ry="40" fill="url(#kas)" stroke="#b91c1c" stroke-width="2"/>
+  <ellipse cx="982" cy="305" rx="12" ry="40" fill="url(#kasA)" stroke="#b91c1c" stroke-width="2"/>
+  <text x="692" y="414" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="start">Rijidite</text>
+  <text x="692" y="438" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">İkisinde birden artış</text>
+  <path d="M960 376 L960 464" stroke="#94a3b8" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="940" cy="420" rx="22" ry="40" fill="url(#kas)" stroke="#b91c1c" stroke-width="2"/>
+  <ellipse cx="982" cy="420" rx="22" ry="40" fill="url(#kas)" stroke="#b91c1c" stroke-width="2"/>
+  <text x="1022" y="186" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Sol: agonist</text>
+  <text x="1022" y="208" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Sağ: antagonist</text>
+  <text x="692" y="488" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">Örnek: spastisitede artış biseps ya da trisepsten</text>
+  <text x="692" y="510" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">yalnız birindedir.</text>
+  <rect x="30" y="556" width="1140" height="206" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="52" y="590" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">C · Hangi hastalık hangi tonus değişikliği</text>
+  <rect x="60" y="600" width="340" height="110" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="230.0" y="628" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Piramidal yol hastalığı</text>
+  <text x="230.0" y="652" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Spastisite; pasif harekete direnç</text>
+  <rect x="430" y="600" width="340" height="110" rx="12" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="600.0" y="628" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Ekstrapiramidal: Parkinson</text>
+  <text x="600.0" y="652" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Rijidite; direnç kesik kesik</text>
+  <text x="600.0" y="674" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">çözülür: dişli çark belirtisi</text>
+  <rect x="800" y="600" width="340" height="110" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="970.0" y="628" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Akut hemipleji, parapleji</text>
+  <text x="970.0" y="652" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Erken dönemde tendon refleksleri</text>
+  <text x="970.0" y="674" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">kaybolur, bir süre hipotoni</text>
+  <text x="60" y="738" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">Ayırmanın yolu: tonus tek kas grubunda mı arttı (spastisite), karşılıklı iki grupta mı (rijidite)?</text>
+  <text x="600" y="788" text-anchor="middle" font-size="17" fill="#64748b">Kaynak: slayt 9–10 · Tonus: istirahatteki kasta pasif hareket sırasında hissedilen gerginlik</text>
 </svg>

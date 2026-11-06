@@ -1,46 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
-<rect x="0" y="0" width="1000" height="800" fill="#ffffff"/>
-<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Direkt yol kolaylaştırır, indirekt yol baskılar</text>
-<text x="250" y="95" text-anchor="middle" font-size="26" font-weight="700" fill="#2563eb">Direkt yol</text>
-<text x="750" y="95" text-anchor="middle" font-size="26" font-weight="700" fill="#7c3aed">İndirekt yol</text>
-<line x1="500" y1="80" x2="500" y2="770" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="8 8"/>
-<rect x="140" y="120" width="220" height="58" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
-<text x="250.0" y="157.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Striatum</text>
-<rect x="140" y="225" width="220" height="58" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
-<text x="250.0" y="262.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">GPi / SNr</text>
-<rect x="140" y="330" width="220" height="58" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
-<text x="250.0" y="367.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Talamus</text>
-<rect x="140" y="435" width="220" height="58" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
-<text x="250.0" y="472.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Korteks</text>
-<line x1="250" y1="180" x2="250" y2="221" stroke="#dc2626" stroke-width="4" marker-end="url(#okK)"/>
-<text x="270" y="210" text-anchor="start" font-size="20" font-weight="700" fill="#dc2626">baskı</text>
-<line x1="250" y1="285" x2="250" y2="326" stroke="#dc2626" stroke-width="4" marker-end="url(#okK)"/>
-<text x="270" y="315" text-anchor="start" font-size="20" font-weight="700" fill="#dc2626">baskı azalır</text>
-<line x1="250" y1="390" x2="250" y2="431" stroke="#16a34a" stroke-width="4" marker-end="url(#okY)"/>
-<text x="270" y="420" text-anchor="start" font-size="20" font-weight="700" fill="#16a34a">uyarır</text>
-<text x="250" y="560" text-anchor="middle" font-size="24" font-weight="700" fill="#16a34a">Hareket kolaylaşır</text>
-<rect x="640" y="120" width="220" height="58" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
-<text x="750.0" y="157.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Putamen</text>
-<rect x="640" y="225" width="220" height="58" rx="14" fill="#7c3aed1f" stroke="#7c3aed" stroke-width="4"/>
-<text x="750.0" y="262.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">GPe</text>
-<rect x="640" y="330" width="220" height="58" rx="14" fill="#7c3aed1f" stroke="#7c3aed" stroke-width="4"/>
-<text x="750.0" y="367.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">STN</text>
-<rect x="640" y="435" width="220" height="58" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
-<text x="750.0" y="472.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">GPi / SNr</text>
-<rect x="640" y="540" width="220" height="58" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
-<text x="750.0" y="577.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Talamus</text>
-<rect x="640" y="645" width="220" height="58" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
-<text x="750.0" y="682.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Korteks</text>
-<line x1="750" y1="180" x2="750" y2="221" stroke="#dc2626" stroke-width="4" marker-end="url(#okK)"/>
-<text x="770" y="210" text-anchor="start" font-size="20" font-weight="700" fill="#dc2626">baskı</text>
-<line x1="750" y1="285" x2="750" y2="326" stroke="#dc2626" stroke-width="4" marker-end="url(#okK)"/>
-<text x="770" y="315" text-anchor="start" font-size="20" font-weight="700" fill="#dc2626">baskı kalkar</text>
-<line x1="750" y1="390" x2="750" y2="431" stroke="#16a34a" stroke-width="4" marker-end="url(#okY)"/>
-<text x="770" y="420" text-anchor="start" font-size="20" font-weight="700" fill="#16a34a">uyarır</text>
-<line x1="750" y1="495" x2="750" y2="536" stroke="#dc2626" stroke-width="4" marker-end="url(#okK)"/>
-<text x="770" y="525" text-anchor="start" font-size="20" font-weight="700" fill="#dc2626">baskı artar</text>
-<line x1="750" y1="600" x2="750" y2="641" stroke="#16a34a" stroke-width="4" marker-end="url(#okY)"/>
-<text x="770" y="630" text-anchor="start" font-size="20" font-weight="700" fill="#16a34a">uyarı azalır</text>
-<text x="750" y="770" text-anchor="middle" font-size="24" font-weight="700" fill="#dc2626">Hareket azalır</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" font-family="Segoe UI, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient><radialGradient id="soma" cx="0.35" cy="0.35" r="0.8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cbd5e1"/></radialGradient><linearGradient id="kor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient><linearGradient id="deri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f4c39b"/></linearGradient><linearGradient id="kas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient><marker id="uy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker><marker id="bs" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><path d="M4 0 h3 v10 h-3 z" fill="#b91c1c"/></marker><marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker><marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker><marker id="okp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker><g id="hap"><path d="M0,0 h22 a10,10 0 0 1 0,20 h-22 a10,10 0 0 1 0,-20 Z" fill="#fde68a" stroke="#b45309" stroke-width="1.8"/></g></defs>
+<rect width="1200" height="820" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Baskının baskılanması: iki yolun hareket üzerindeki zıt etkisi</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" fill="#475569">Aynı ölçekte üç durum · çizgi kalınlığı = etkinlik (slayt 7, 8)</text>
+<rect x="30" y="100" width="370" height="580" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="134" font-size="21" font-weight="bold" fill="#0f172a">A · İstirahat</text>
+<rect x="415" y="100" width="370" height="580" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="437" y="134" font-size="21" font-weight="bold" fill="#0f172a">B · Direkt yol</text>
+<rect x="800" y="100" width="370" height="580" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="822" y="134" font-size="21" font-weight="bold" fill="#0f172a">C · İndirekt yol</text>
+<path d="M45,192 Q45,158 77.5,163 Q93.75,136 110.0,163 Q158.75,136 175.0,163 Q223.75,136 240.0,163 Q298.5,148 305,192 Z" fill="url(#kor)" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M110,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M175,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M240,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<text x="195" y="184" font-size="17" text-anchor="middle" font-weight="bold" fill="#78350f">Korteks</text>
+<path d="M126.6,250 C126.6,236.448 156.696,228 195,228 C237.13440000000003,228 263.4,237.68 263.4,250 C263.4,261.088 233.304,272 195,272 C160.5264,272 126.6,262.32 126.6,250 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+<text x="195" y="256" font-size="17" text-anchor="middle" font-weight="bold" fill="#94a3b8">Striatum</text>
+<path d="M121.30000000000001,470 C121.30000000000001,456.448 153.728,448 195,448 C240.3992,448 268.7,457.68 268.7,470 C268.7,481.088 236.272,492 195,492 C157.8552,492 121.30000000000001,482.32 121.30000000000001,470 Z" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+<text x="195" y="476" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">GPi + SNr</text>
+<path d="M131.9,560 C131.9,546.448 159.664,538 195,538 C233.86960000000002,538 258.1,547.68 258.1,560 C258.1,571.088 230.336,582 195,582 C163.1976,582 131.9,572.32 131.9,560 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+<text x="195" y="566" font-size="17" text-anchor="middle" font-weight="bold" fill="#94a3b8">Talamus</text>
+<path d="M195,494 Q193,513 195,532" fill="none" stroke="#dc2626" stroke-width="9" stroke-linecap="round" marker-end="url(#bs)"/>
+<path d="M257,554 C360,520 360,230 275,188" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round" marker-end="url(#uy)" stroke-dasharray="6 6"/>
+<text x="52" y="400" font-size="17" font-weight="bold" fill="#dc2626">Çıkış kapısı sürekli</text>
+<text x="52" y="422" font-size="17" fill="#dc2626">GABA ile baskılar.</text>
+<text x="52" y="620" font-size="17" fill="#334155">Talamus baskı altındadır; korteks</text>
+<text x="52" y="644" font-size="17" fill="#334155">sakin kalır.</text>
+<path d="M430,192 Q430,158 462.5,163 Q478.75,136 495.0,163 Q543.75,136 560.0,163 Q608.75,136 625.0,163 Q683.5,148 690,192 Z" fill="url(#kor)" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M495,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M560,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M625,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<text x="580" y="184" font-size="17" text-anchor="middle" font-weight="bold" fill="#78350f">Korteks</text>
+<path d="M511.6,250 C511.6,236.448 541.696,228 580,228 C622.1344,228 648.4,237.68 648.4,250 C648.4,261.088 618.304,272 580,272 C545.5264,272 511.6,262.32 511.6,250 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+<text x="580" y="256" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">Striatum</text>
+<path d="M580,192 Q580,209 580,226" fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round" marker-end="url(#ok)"/>
+<path d="M580,274 Q572,358 580,442" fill="none" stroke="#dc2626" stroke-width="9" stroke-linecap="round" marker-end="url(#bs)"/>
+<path d="M506.3,470 C506.3,456.448 538.728,448 580,448 C625.3992,448 653.7,457.68 653.7,470 C653.7,481.088 621.272,492 580,492 C542.8552,492 506.3,482.32 506.3,470 Z" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
+<text x="580" y="476" font-size="17" text-anchor="middle" font-weight="bold" fill="#94a3b8">GPi + SNr</text>
+<path d="M580,494 Q578,514 580,534" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" marker-end="url(#bs)"/>
+<path d="M516.9,560 C516.9,546.448 544.664,538 580,538 C618.8696,538 643.1,547.68 643.1,560 C643.1,571.088 615.336,582 580,582 C548.1976,582 516.9,572.32 516.9,560 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+<text x="580" y="566" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">Talamus</text>
+<path d="M642,554 C745,520 745,230 660,188" fill="none" stroke="#16a34a" stroke-width="7" stroke-linecap="round" marker-end="url(#uy)"/>
+<text x="437" y="340" font-size="17" font-weight="bold" fill="#dc2626">1. Striatum çıkış</text>
+<text x="437" y="362" font-size="17" fill="#dc2626">kapısını baskılar.</text>
+<text x="437" y="604" font-size="17" fill="#14532d">2. Talamus serbest kalır, korteksi</text>
+<text x="437" y="628" font-size="17" font-weight="bold" fill="#14532d">uyarır: hareket kolaylaşır.</text>
+<path d="M890,192 Q890,158 922.5,163 Q938.75,136 955.0,163 Q1003.75,136 1020.0,163 Q1068.75,136 1085.0,163 Q1143.5,148 1150,192 Z" fill="url(#kor)" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M955,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M1020,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M1085,164 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<text x="1040" y="184" font-size="17" text-anchor="middle" font-weight="bold" fill="#78350f">Korteks</text>
+<path d="M976.9,250 C976.9,236.448 1004.664,228 1040,228 C1078.8696,228 1103.1,237.68 1103.1,250 C1103.1,261.088 1075.336,272 1040,272 C1008.1976,272 976.9,262.32 976.9,250 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+<text x="1040" y="256" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">Putamen</text>
+<path d="M1040,192 Q1040,209 1040,226" fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round" marker-end="url(#ok)"/>
+<path d="M998.1,320 C998.1,306.448 1016.536,298 1040,298 C1065.8104,298 1081.9,307.68 1081.9,320 C1081.9,331.088 1063.464,342 1040,342 C1018.8824,342 998.1,332.32 998.1,320 Z" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+<text x="1040" y="326" font-size="17" text-anchor="middle" font-weight="bold" fill="#94a3b8">GPe</text>
+<path d="M998.1,395 C998.1,381.448 1016.536,373 1040,373 C1065.8104,373 1081.9,382.68 1081.9,395 C1081.9,406.088 1063.464,417 1040,417 C1018.8824,417 998.1,407.32 998.1,395 Z" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+<text x="1040" y="401" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">STN</text>
+<path d="M1040,274 Q1039,285 1040,296" fill="none" stroke="#dc2626" stroke-width="8" stroke-linecap="round" marker-end="url(#bs)"/>
+<path d="M1040,344 Q1039,358 1040,371" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" marker-end="url(#bs)"/>
+<path d="M1040,419 Q1039,432 1040,446" fill="none" stroke="#16a34a" stroke-width="8" stroke-linecap="round" marker-end="url(#uy)"/>
+<path d="M966.3,470 C966.3,456.448 998.728,448 1040,448 C1085.3992,448 1113.7,457.68 1113.7,470 C1113.7,481.088 1081.272,492 1040,492 C1002.8552,492 966.3,482.32 966.3,470 Z" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+<text x="1040" y="476" font-size="17" text-anchor="middle" font-weight="bold" fill="#0f172a">GPi + SNr</text>
+<path d="M1040,494 Q1038,513 1040,532" fill="none" stroke="#dc2626" stroke-width="12" stroke-linecap="round" marker-end="url(#bs)"/>
+<path d="M976.9,560 C976.9,546.448 1004.664,538 1040,538 C1078.8696,538 1103.1,547.68 1103.1,560 C1103.1,571.088 1075.336,582 1040,582 C1008.1976,582 976.9,572.32 976.9,560 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+<text x="1040" y="566" font-size="17" text-anchor="middle" font-weight="bold" fill="#94a3b8">Talamus</text>
+<path d="M1102,554 C1145,520 1145,230 1120,188" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round" marker-end="url(#uy)" stroke-dasharray="6 6"/>
+<text x="822" y="300" font-size="17" font-weight="bold" fill="#dc2626">1. Putamen GPe'yi</text>
+<text x="822" y="322" font-size="17" fill="#dc2626">baskılar.</text>
+<text x="822" y="372" font-size="17" font-weight="bold" fill="#92400e">2. GPe'nin STN</text>
+<text x="822" y="394" font-size="17" fill="#92400e">üstündeki baskısı</text>
+<text x="822" y="416" font-size="17" fill="#92400e">kalkar.</text>
+<text x="822" y="604" font-size="17" fill="#7f1d1d">3. STN çıkış kapısını uyarır; talamus</text>
+<text x="822" y="628" font-size="17" font-weight="bold" fill="#7f1d1d">daha güçlü baskılanır: hareket azalır.</text>
+<rect x="30" y="700" width="1140" height="104" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="734" font-size="21" font-weight="bold" fill="#0f172a">D · Okuma anahtarı</text>
+<path d="M60,770 h50" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round" marker-end="url(#bs)"/>
+<text x="124" y="776" font-size="17" fill="#1e293b">baskılayıcı (GABA)</text>
+<path d="M320,770 h50" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" marker-end="url(#uy)"/>
+<text x="384" y="776" font-size="17" fill="#1e293b">uyarıcı</text>
+<text x="480" y="764" font-size="17" fill="#334155">Başka bir hayırı engelleyen hayır, sonunda evet olur. İki yol arasındaki</text>
+<text x="480" y="786" font-size="17" fill="#334155">denge bozulunca ekstrapiramidal sistem hastalıkları ortaya çıkar.</text>
 </svg>

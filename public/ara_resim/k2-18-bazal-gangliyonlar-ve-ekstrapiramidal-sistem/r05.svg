@@ -1,31 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
-<rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
-<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Ölçekleme ve odaklama</text>
-<rect x="60" y="90" width="260" height="70" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
-<text x="190.0" y="133.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Motor korteks</text>
-<rect x="680" y="90" width="260" height="70" rx="14" fill="#0891b21f" stroke="#0891b2" stroke-width="4"/>
-<text x="810.0" y="133.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Medulla spinalis</text>
-<line x1="320" y1="125" x2="676" y2="125" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<rect x="60" y="300" width="260" height="70" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
-<text x="190.0" y="343.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Parietal korteks</text>
-<rect x="370" y="260" width="260" height="110" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
-<text x="500.0" y="311.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Bazal ganglion</text>
-<text x="500.0" y="339.0" text-anchor="middle" font-size="20" fill="#475569">kıyaslar</text>
-<path d="M 500 125 L 500 256" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<text x="488" y="200" text-anchor="end" font-size="20" font-weight="700" fill="#475569">kopya</text>
-<line x1="320" y1="335" x2="366" y2="335" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<text x="190" y="400" text-anchor="middle" font-size="20" font-weight="700" fill="#475569">derin duyu</text>
-<rect x="680" y="280" width="260" height="70" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
-<text x="810.0" y="323.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Talamus</text>
-<line x1="630" y1="315" x2="676" y2="315" stroke="#16a34a" stroke-width="4" marker-end="url(#okY)"/>
-<path d="M 810 280 L 810 230 L 240 230 L 240 164" fill="none" stroke="#16a34a" stroke-width="4" marker-end="url(#okY)"/>
-<text x="700" y="222" text-anchor="middle" font-size="20" font-weight="700" fill="#16a34a">düzeltme</text>
-<text x="500" y="440" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Odaklama</text>
-<rect x="60" y="460" width="420" height="100" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
-<text x="270.0" y="506.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Direkt yol</text>
-<text x="270.0" y="534.0" text-anchor="middle" font-size="20" fill="#475569">istenen bileşen güçlenir</text>
-<rect x="520" y="460" width="420" height="100" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
-<text x="730.0" y="506.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">İndirekt yol</text>
-<text x="730.0" y="534.0" text-anchor="middle" font-size="20" fill="#475569">istenmeyen bileşen bastırılır</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" font-family="Segoe UI, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient><radialGradient id="soma" cx="0.35" cy="0.35" r="0.8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cbd5e1"/></radialGradient><linearGradient id="kor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient><linearGradient id="deri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f4c39b"/></linearGradient><linearGradient id="kas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient><marker id="uy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker><marker id="bs" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><path d="M4 0 h3 v10 h-3 z" fill="#b91c1c"/></marker><marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker><marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker><marker id="okp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker><g id="hap"><path d="M0,0 h22 a10,10 0 0 1 0,20 h-22 a10,10 0 0 1 0,-20 Z" fill="#fde68a" stroke="#b45309" stroke-width="1.8"/></g></defs>
+<rect width="1200" height="820" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Ölçekleme ve odaklama: bazal ganglion hareketi nasıl ayarlar?</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" fill="#475569">Komutun kopyası · derin duyu ile kıyas · düzeltme · istenen ve istenmeyen bileşen (slayt 11)</text>
+<rect x="30" y="100" width="720" height="580" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="134" font-size="21" font-weight="bold" fill="#0f172a">A · Ölçekleme: komut ile gerçek hareket kıyaslanır</text>
+<path d="M60,200 Q60,160 90.0,165 Q105.0,138 120.0,165 Q165.0,138 180.0,165 Q225.0,138 240.0,165 Q285.0,138 300.0,165 Q345.0,138 360.0,165 Q405.0,138 420.0,165 Q465.0,138 480.0,165 Q525.0,138 540.0,165 Q585.0,138 600.0,165 Q645.0,138 660.0,165 Q714.0,150 720,200 Z" fill="url(#kor)" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M120,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M180,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M240,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M300,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M360,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M420,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M480,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M540,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M600,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M660,166 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M420,152 L420,200" fill="none" stroke="#78350f" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="230" y="188" font-size="18" text-anchor="middle" font-weight="bold" fill="#78350f">Motor korteks</text>
+<text x="570" y="188" font-size="18" text-anchor="middle" font-weight="bold" fill="#78350f">Parietal korteks</text>
+<path d="M110,600 C100,560 100,520 110,500 C120,470 150,470 160,500 C170,520 170,560 160,600 Z" fill="#e2e8f0" stroke="#475569" stroke-width="2.5" stroke-linecap="round"/>
+<text x="135" y="632" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">Medulla spinalis</text>
+<path d="M150,212 C140,330 130,420 135,492" fill="none" stroke="#0f172a" stroke-width="6" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="52" y="270" font-size="17" font-weight="bold" fill="#1e293b">Hareket</text>
+<text x="52" y="292" font-size="17" font-weight="bold" fill="#1e293b">komutu</text>
+<path d="M314,410 C314,385.36 356.24,370 410,370 C469.136,370 506,387.6 506,410 C506,430.16 463.76,450 410,450 C361.616,450 314,432.4 314,410 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="410" y="416" font-size="18" text-anchor="middle" font-weight="bold" fill="#1e3a8a">Bazal ganglion</text>
+<path d="M142,350 C220,350 270,380 312,402" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#okm)" stroke-dasharray="9 6"/>
+<text x="170" y="338" font-size="17" font-weight="bold" fill="#2563eb">komutun kopyası</text>
+<path d="M590,212 C590,300 560,370 506,398" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" marker-end="url(#okp)"/>
+<text x="600" y="272" font-size="17" font-weight="bold" fill="#7c3aed">proprioseptif ve</text>
+<text x="600" y="294" font-size="17" font-weight="bold" fill="#7c3aed">bilinçsiz derin</text>
+<text x="600" y="316" font-size="17" font-weight="bold" fill="#7c3aed">duyu</text>
+<path d="M410,462 L410,500 M370,476 L450,476" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+<path d="M370,476 q-14,20 0,24 q14,-4 0,-24 M450,476 q-14,20 0,24 q14,-4 0,-24" fill="#cbd5e1" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+<text x="470" y="500" font-size="17" font-weight="bold" fill="#1e293b">kıyaslar</text>
+<path d="M346,580 C346,563.984 374.15999999999997,554 410,554 C449.424,554 474,565.44 474,580 C474,593.104 445.84000000000003,606 410,606 C377.74399999999997,606 346,594.56 346,580 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="410" y="586" font-size="17" text-anchor="middle" font-weight="bold" fill="#14532d">Talamus</text>
+<path d="M410,502 Q410,527 410,552" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round" marker-end="url(#ok)"/>
+<path d="M474,580 C640,570 690,330 330,206" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" marker-end="url(#uy)"/>
+<text x="560" y="560" font-size="17" font-weight="bold" fill="#15803d">düzeltme kortekse:</text>
+<text x="560" y="600" font-size="17" font-style="italic" fill="#15803d">“doğru, devam et”</text>
+<text x="560" y="624" font-size="17" font-style="italic" fill="#15803d">“biraz fazla”</text>
+<text x="230" y="644" font-size="17" fill="#475569">İstirahatte bazal ganglion talamusu baskılar ve</text>
+<text x="230" y="666" font-size="17" fill="#475569">korteksin uyarılabilirliğini kontrol altında tutar.</text>
+<rect x="770" y="100" width="400" height="580" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="792" y="134" font-size="21" font-weight="bold" fill="#0f172a">B · Odaklama: bardağa uzanmak</text>
+<path d="M820,330 C830,290 870,280 900,300 C930,320 940,350 930,380 L850,420 C830,400 815,370 820,330 Z" fill="url(#deri)" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+<path d="M900,330 C960,360 1000,380 1040,385 L1040,412 C995,412 950,405 900,382 Z" fill="url(#deri)" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+<path d="M1040,385 C1055,378 1070,382 1076,392 C1070,404 1058,414 1040,412 Z" fill="url(#deri)" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+<path d="M1090,360 L1140,360 L1132,440 L1098,440 Z" fill="#cffafe" stroke="#0e7490" stroke-width="2.5" stroke-linecap="round"/>
+<text x="1115" y="470" font-size="17" text-anchor="middle" font-weight="bold" fill="#0e7490">Bardak</text>
+<path d="M930,280 C990,250 1050,270 1100,330" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round" marker-end="url(#uy)"/>
+<text x="792" y="214" font-size="17" font-weight="bold" fill="#15803d">İstenen bileşen: kol bardağa</text>
+<text x="792" y="238" font-size="17" fill="#15803d">gider; direkt yolla güçlenir.</text>
+<path d="M960,450 q20,30 40,0 q20,-30 40,0" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 5"/>
+<path d="M965,470 L1035,430 M965,430 L1035,470" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+<text x="792" y="530" font-size="17" font-weight="bold" fill="#dc2626">İstenmeyen bileşen: gereksiz</text>
+<text x="792" y="554" font-size="17" fill="#dc2626">yerlere kayan hareket; indirekt</text>
+<text x="792" y="578" font-size="17" fill="#dc2626">yolla baskılanır.</text>
+<text x="792" y="630" font-size="17" fill="#334155">İki yol dengede çalışınca</text>
+<text x="792" y="654" font-size="17" fill="#334155">hareket akıcı olur.</text>
+<rect x="30" y="700" width="1140" height="104" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="734" font-size="21" font-weight="bold" fill="#0f172a">C · Sonuç</text>
+<text x="52" y="764" font-size="17" fill="#334155">Ölçeklemede düzeltme talamus üzerinden kortekse bildirilir; odaklamada istenen bileşen güçlenir, istenmeyen susturulur.</text>
+<text x="52" y="786" font-size="17" fill="#334155">Denge bozulunca istemsiz hareket ya da hareketi başlatamama ortaya çıkar.</text>
 </svg>

@@ -1,32 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Üç bozukluk: süre, belirti, gidiş">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
-<rect x="0" y="0" width="1000" height="480" fill="#fbfaf6"/>
-<text x="500" y="50" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Üç bozukluk: süre, belirti, gidiş</text>
-<rect x="295" y="78" width="200" height="60" rx="10" fill="#3a9a5b2a" stroke="#3a9a5b" stroke-width="2"/>
-<text x="395" y="117" font-size="23" fill="#3a9a5b" text-anchor="middle" font-weight="700">Kısa psikotik</text>
-<rect x="505" y="78" width="200" height="60" rx="10" fill="#b8901a2a" stroke="#b8901a" stroke-width="2"/>
-<text x="605" y="117" font-size="23" fill="#b8901a" text-anchor="middle" font-weight="700">Şizofreniform</text>
-<rect x="735" y="78" width="200" height="60" rx="10" fill="#8e3b5a2a" stroke="#8e3b5a" stroke-width="2"/>
-<text x="835" y="117" font-size="23" fill="#8e3b5a" text-anchor="middle" font-weight="700">Şizofreni</text>
-<rect x="30" y="160" width="940" height="62" rx="10" fill="#f1f1ee"/>
-<text x="45" y="200" font-size="22" fill="#1f2430" font-weight="700">Süre</text>
-<text x="395" y="200" font-size="22" fill="#3a9a5b" text-anchor="middle">1 gün–1 ay</text>
-<text x="605" y="200" font-size="22" fill="#b8901a" text-anchor="middle">1–6 ay</text>
-<text x="835" y="200" font-size="22" fill="#8e3b5a" text-anchor="middle">6 ay ve üzeri</text>
-<rect x="30" y="234" width="940" height="62" rx="10" fill="#fbfaf6"/>
-<text x="45" y="274" font-size="22" fill="#1f2430" font-weight="700">Gereken belirti</text>
-<text x="395" y="274" font-size="22" fill="#3a9a5b" text-anchor="middle">En az 1</text>
-<text x="605" y="274" font-size="22" fill="#b8901a" text-anchor="middle">En az 2</text>
-<text x="835" y="274" font-size="22" fill="#8e3b5a" text-anchor="middle">En az 2</text>
-<rect x="30" y="308" width="940" height="62" rx="10" fill="#f1f1ee"/>
-<text x="45" y="348" font-size="22" fill="#1f2430" font-weight="700">Negatif belirti</text>
-<text x="395" y="348" font-size="22" fill="#3a9a5b" text-anchor="middle">Ölçütte yok</text>
-<text x="605" y="348" font-size="22" fill="#b8901a" text-anchor="middle">Ölçütte var</text>
-<text x="835" y="348" font-size="22" fill="#8e3b5a" text-anchor="middle">Ölçütte var</text>
-<rect x="30" y="382" width="940" height="62" rx="10" fill="#fbfaf6"/>
-<text x="45" y="422" font-size="22" fill="#1f2430" font-weight="700">Gidiş</text>
-<text x="395" y="422" font-size="22" fill="#3a9a5b" text-anchor="middle" font-weight="700">Tam dönüş</text>
-<text x="605" y="408" font-size="21" fill="#b8901a" text-anchor="middle" font-weight="700">Çoğu şizofreniye</text>
-<text x="605" y="434" font-size="21" fill="#b8901a" text-anchor="middle" font-weight="700">döner</text>
-<text x="835" y="422" font-size="22" fill="#8e3b5a" text-anchor="middle" font-weight="700">Tam dönüş yok</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Üç bozukluk: süre, gereken belirti ve gidiş</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">Aynı ölçekte işlevsellik eğrileri · A ölçütü karşılaştırması (slayt 17, 18, 46–48)</text>
+<rect x="30" y="96" width="1140" height="350" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · İşlevsellik zamanla nasıl değişir</text>
+<line x1="470" y1="140" x2="470" y2="430" stroke="#b91c1c" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="476" y="158" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">1 ay</text>
+<line x1="800" y1="140" x2="800" y2="430" stroke="#b91c1c" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="806" y="158" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">6 ay</text>
+<text x="56" y="206" font-size="19" fill="#16a34a" text-anchor="start" font-weight="bold">Kısa psikotik</text>
+<line x1="330" y1="190" x2="1140" y2="190" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="7 6"/>
+<path d="M330 190 C360 190 360 240 390 240 C430 240 440 190 480 190 L1130 190" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="56" y="306" font-size="19" fill="#ea580c" text-anchor="start" font-weight="bold">Şizofreniform</text>
+<line x1="330" y1="290" x2="1140" y2="290" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="7 6"/>
+<path d="M330 290 C360 290 360 340 410 340 C580 340 630 300 780 300" stroke="#ea580c" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="56" y="406" font-size="19" fill="#7c3aed" text-anchor="start" font-weight="bold">Şizofreni</text>
+<line x1="330" y1="390" x2="1140" y2="390" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="7 6"/>
+<path d="M330 390 C360 390 360 412 430 412 C630 412 680 420 750 420 C830 420 930 428 1130 428" stroke="#7c3aed" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M780 300 C860 300 920 380 1000 390" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)" stroke-dasharray="7 6"/>
+<text x="1134" y="180" font-size="17" fill="#14532d" text-anchor="end" font-weight="bold">hastalık öncesi düzeye tam dönüş</text>
+<text x="810" y="280" font-size="17" fill="#9a3412" text-anchor="start" font-weight="bold">çoğu şizofreniye döner</text>
+<text x="1134" y="404" font-size="17" fill="#4c1d95" text-anchor="end" font-weight="bold">tam dönüş yok</text>
+<text x="56" y="436" font-size="17" fill="#64748b" text-anchor="start">kesikli yatay: hastalık öncesi düzey</text>
+<rect x="30" y="462" width="1140" height="292" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="52" y="496" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">B · A ölçütünde sayılan belirtiler</text>
+<text x="560" y="506" font-size="18" fill="#16a34a" text-anchor="middle" font-weight="bold">Kısa psikotik</text>
+<text x="560" y="528" font-size="17" fill="#16a34a" text-anchor="middle">≥1 belirti</text>
+<text x="790" y="506" font-size="18" fill="#ea580c" text-anchor="middle" font-weight="bold">Şizofreniform</text>
+<text x="790" y="528" font-size="17" fill="#ea580c" text-anchor="middle">≥2 belirti</text>
+<text x="1020" y="506" font-size="18" fill="#7c3aed" text-anchor="middle" font-weight="bold">Şizofreni</text>
+<text x="1020" y="528" font-size="17" fill="#7c3aed" text-anchor="middle">≥2 belirti</text>
+<text x="56" y="566" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Sanrılar</text>
+<path d="M548 560 C552 564 556 568 558 570 C564 560 570 552 574 548" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M778 560 C782 564 786 568 788 570 C794 560 800 552 804 548" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1008 560 C1012 564 1016 568 1018 570 C1024 560 1030 552 1034 548" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="56" y="600" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Varsanılar</text>
+<path d="M548 594 C552 598 556 602 558 604 C564 594 570 586 574 582" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M778 594 C782 598 786 602 788 604 C794 594 800 586 804 582" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1008 594 C1012 598 1016 602 1018 604 C1024 594 1030 586 1034 582" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="56" y="634" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Darmadağın konuşma</text>
+<path d="M548 628 C552 632 556 636 558 638 C564 628 570 620 574 616" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M778 628 C782 632 786 636 788 638 C794 628 800 620 804 616" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1008 628 C1012 632 1016 636 1018 638 C1024 628 1030 620 1034 616" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="56" y="668" font-size="17" fill="#0f172a" text-anchor="start">Dağınık davranış / katatoni</text>
+<path d="M548 662 C552 666 556 670 558 672 C564 662 570 654 574 650" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M778 662 C782 666 786 670 788 672 C794 662 800 654 804 650" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1008 662 C1012 666 1016 670 1018 672 C1024 662 1030 654 1034 650" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="56" y="702" font-size="17" fill="#0f172a" text-anchor="start">Silik (negatif) belirtiler</text>
+<path d="M550 686 L570 706 M570 686 L550 706" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M778 696 C782 700 786 704 788 706 C794 696 800 688 804 684" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1008 696 C1012 700 1016 704 1018 706 C1024 696 1030 688 1034 684" stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="56" y="740" font-size="17" fill="#334155" text-anchor="start">Üçünde de en az biri sanrı, varsanı ya da darmadağın konuşmadır; negatif belirti yalnız kısa psikotik listede yoktur.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 17, 18, 46, 47, 48</text>
 </svg>

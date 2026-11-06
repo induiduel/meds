@@ -1,5 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker></defs>
-<rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
-<text x="500" y="50" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Aynı parmak kaybı, üç düzey</text><rect x="40" y="90" width="280" height="120" rx="16" fill="#ea580c1a" stroke="#ea580c" stroke-width="4"/><text x="180.0" y="143.52" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">1. Bozukluk</text><text x="180.0" y="173.28" text-anchor="middle" font-size="24" font-weight="400" fill="#0f172a">yapı ve fonksiyon kaybı</text><rect x="360" y="90" width="280" height="120" rx="16" fill="#7c3aed1a" stroke="#7c3aed" stroke-width="4"/><text x="500.0" y="143.52" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">2. Özürlülük</text><text x="500.0" y="173.28" text-anchor="middle" font-size="24" font-weight="400" fill="#0f172a">düğme ilikleyemez</text><rect x="680" y="90" width="280" height="120" rx="16" fill="#dc26261a" stroke="#dc2626" stroke-width="4"/><text x="820.0" y="143.52" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">3. Engellilik</text><text x="820.0" y="173.28" text-anchor="middle" font-size="24" font-weight="400" fill="#0f172a">meslek yapılamaz</text><line x1="322" y1="150" x2="356" y2="150" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/><circle cx="322" cy="150" r="6" fill="#ffffff" stroke="#ea580c" stroke-width="3"/><line x1="642" y1="150" x2="676" y2="150" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/><circle cx="642" cy="150" r="6" fill="#ffffff" stroke="#ea580c" stroke-width="3"/><text x="40" y="290" text-anchor="start" font-size="28" font-weight="700" fill="#2563eb">Futbolcu</text><rect x="180" y="250" width="140" height="70" rx="16" fill="#ea580c1a" stroke="#ea580c" stroke-width="4"/><text x="250.0" y="294.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">var</text><rect x="430" y="250" width="140" height="70" rx="16" fill="#7c3aed1a" stroke="#7c3aed" stroke-width="4"/><text x="500.0" y="294.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">var</text><rect x="750" y="250" width="140" height="70" rx="16" fill="#16a34a1a" stroke="#16a34a" stroke-width="4"/><text x="820.0" y="294.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">yok</text><text x="40" y="410" text-anchor="start" font-size="28" font-weight="700" fill="#2563eb">Piyanist</text><rect x="180" y="370" width="140" height="70" rx="16" fill="#ea580c1a" stroke="#ea580c" stroke-width="4"/><text x="250.0" y="414.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">var</text><rect x="430" y="370" width="140" height="70" rx="16" fill="#7c3aed1a" stroke="#7c3aed" stroke-width="4"/><text x="500.0" y="414.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">var</text><rect x="750" y="370" width="140" height="70" rx="16" fill="#dc26261a" stroke="#dc2626" stroke-width="4"/><text x="820.0" y="414.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">var</text><text x="500" y="510" text-anchor="middle" font-size="26" font-weight="700" fill="#dc2626">Fark yalnız engellilikte: sosyal ve mesleki rol</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <linearGradient id="deri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde7cf"/><stop offset="1" stop-color="#eab98a"/></linearGradient>
+    <linearGradient id="kas" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient>
+    <linearGradient id="kasA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fee2e2"/><stop offset="1" stop-color="#fca5a5"/></linearGradient>
+    <linearGradient id="sinir" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+    <radialGradient id="beyin" cx="0.4" cy="0.35" r="0.75"><stop offset="0" stop-color="#fdf2f8"/><stop offset="1" stop-color="#f9a8d4"/></radialGradient>
+    <radialGradient id="hasar" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f87171" stop-opacity="0.3"/></radialGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+    <marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+    <marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/></marker>
+    <g id="noron"><path d="M0 0 q-16 -10 -26 -24 M0 0 q-20 4 -30 0 M0 0 q-6 18 -18 26" stroke="#64748b" stroke-width="2.5" fill="none"/><circle r="9" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+    <g id="noronA"><path d="M0 0 q-16 -10 -26 -24 M0 0 q-20 4 -30 0 M0 0 q-6 18 -18 26" stroke="#2563eb" stroke-width="2.5" fill="none"/><circle r="9" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/></g>
+  </defs>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">Aynı parmak kaybı, üç ayrı düzey</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Futbolcu ve piyanist vakası · Dünya Sağlık Örgütünün eski sınıflaması (slayt 4)</text>
+  <rect x="30" y="100" width="370" height="440" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="52" y="134" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">A · Bozukluk: yapı kaybı</text>
+  <g transform="translate(50 -24)">
+  <path d="M150 500 C138 450 140 410 152 372 L290 372 C304 410 306 450 296 500 Z" stroke="#c08457" stroke-width="2.5" fill="url(#deri)" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M152 400 C120 392 96 370 84 336 C80 322 96 314 106 326 C120 346 138 360 160 366" stroke="#c08457" stroke-width="2.5" fill="url(#deri)" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M191 374 L191 228 Q206 208 221 228 L221 374" stroke="#c08457" stroke-width="2.5" fill="url(#deri)" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M227 374 L227 242 Q242 222 257 242 L257 374" stroke="#c08457" stroke-width="2.5" fill="url(#deri)" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M261 374 L261 276 Q276 256 291 276 L291 374" stroke="#c08457" stroke-width="2.5" fill="url(#deri)" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M156 374 L156 292 Q170 280 186 292 L186 374" stroke="#c08457" stroke-width="2.5" fill="url(#deri)" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M156 292 L156 262 Q171 240 186 262 L186 292" stroke="#dc2626" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
+  <path d="M152 292 q10 -6 19 0 q10 6 19 0" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <line x1="204" y1="226" x2="150" y2="180" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="48" y="172" font-size="18" font-weight="bold" fill="#dc2626" text-anchor="start">Kopan distal falanks</text>
+  <line x1="204" y1="290" x2="160" y2="246" stroke="#64748b" stroke-width="1.5"/>
+  <text x="48" y="244" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">İşaret parmağı</text>
+  <text x="50" y="508" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">İki kişinin tanısı ortaktır;</text>
+  <text x="50" y="529" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">bozukluk iskelet sistemindedir.</text>
+  <rect x="420" y="100" width="750" height="440" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="442" y="134" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">B · İki kişide üç düzey</text>
+  <circle cx="820" cy="175" r="30" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+  <polygon points="820,162 832,171 828,186 812,186 808,171" fill="#0f172a"/>
+  <path d="M820 162 L820 146 M832 171 L848 166 M828 186 L838 200 M812 186 L802 200 M808 171 L792 166" stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="820" y="228" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Futbolcu</text>
+  <path d="M1000 150 L1100 150 L1100 200 L1000 200 Z" stroke="#0f172a" stroke-width="2.5" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1020 150 L1020 200 M1040 150 L1040 200 M1060 150 L1060 200 M1080 150 L1080 200" stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1014 150 l12 0 l0 30 l-12 0 z" stroke="#0f172a" stroke-width="1" fill="#0f172a" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1034 150 l12 0 l0 30 l-12 0 z" stroke="#0f172a" stroke-width="1" fill="#0f172a" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1074 150 l12 0 l0 30 l-12 0 z" stroke="#0f172a" stroke-width="1" fill="#0f172a" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1050" y="228" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Piyanist</text>
+  <line x1="440" y1="244" x2="1150" y2="244" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="444" y="282" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="start">Bozukluk (impairment)</text>
+  <text x="444" y="306" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Yapı ve fonksiyon kaybı</text>
+  <circle cx="820" cy="280" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <path d="M812 280 l6 7 l11 -13" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1050" cy="280" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <path d="M1042 280 l6 7 l11 -13" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="440" y1="334" x2="1150" y2="334" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="444" y="372" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="start">Özürlülük (disability)</text>
+  <text x="444" y="396" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Düğme iliklenemez, giyinme</text>
+  <text x="444" y="418" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">güçleşir</text>
+  <circle cx="820" cy="370" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <path d="M812 370 l6 7 l11 -13" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1050" cy="370" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <path d="M1042 370 l6 7 l11 -13" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="440" y1="424" x2="1150" y2="424" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="444" y="462" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="start">Engellilik (handicap)</text>
+  <text x="444" y="486" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Sosyal ve mesleki işlev</text>
+  <text x="444" y="508" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">yerine getirilemez</text>
+  <circle cx="820" cy="460" r="17" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <path d="M813 453 l14 14 M827 453 l-14 14" stroke="#dc2626" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1050" cy="460" r="17" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <path d="M1042 460 l6 7 l11 -13" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="820" y="516" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Futbola parmak gerekmez</text>
+  <text x="1050" y="516" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">Mesleğini sürdüremez</text>
+  <rect x="30" y="556" width="1140" height="206" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="52" y="590" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">C · Düzeyler arası ilişki ve sınav tuzağı</text>
+  <rect x="60" y="600" width="320" height="92" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="220.0" y="628" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Bozukluk</text>
+  <text x="220.0" y="652" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Organ ya da doku düzeyindeki</text>
+  <text x="220.0" y="674" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">hasar</text>
+  <rect x="440" y="600" width="320" height="92" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <text x="600.0" y="628" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Özürlülük</text>
+  <text x="600.0" y="652" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Yeni adı: aktivite kısıtlılığı</text>
+  <rect x="820" y="600" width="320" height="92" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="980.0" y="628" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Engellilik</text>
+  <text x="980.0" y="652" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Yeni adı: katılım kısıtlılığı</text>
+  <line x1="384" y1="646" x2="434" y2="646" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+  <line x1="764" y1="646" x2="814" y2="646" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+  <text x="60" y="722" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">Çıkmış tuzağı: piyanistin düğme ilikleyememesi engellilik değil özürlülüktür, çünkü aynı kısıtlılık futbolcuda da</text>
+  <text x="60" y="744" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">vardır. Engellilik kişinin sosyal ve mesleki rolüne göre değişir.</text>
+  <text x="600" y="788" text-anchor="middle" font-size="17" fill="#64748b">Kaynak: slayt 4 · Aynı bozukluk iki kişide aynı özürlülüğü yapar</text>
 </svg>

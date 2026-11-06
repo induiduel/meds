@@ -1,23 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
-<rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
-<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Korteksten çıkıp geri dönen iki döngü</text>
-<rect x="330" y="80" width="340" height="70" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
-<text x="500.0" y="124.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Korteks</text>
-<rect x="60" y="260" width="280" height="70" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
-<text x="200.0" y="304.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Bazal ganglion</text>
-<rect x="660" y="260" width="280" height="70" rx="14" fill="#db27771f" stroke="#db2777" stroke-width="4"/>
-<text x="800.0" y="304.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Serebellum</text>
-<rect x="360" y="400" width="280" height="70" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
-<text x="500.0" y="444.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Talamus</text>
-<path d="M 380 150 L 200 255" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<path d="M 200 330 L 380 400" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<path d="M 620 150 L 800 255" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<path d="M 800 330 L 620 400" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<path d="M 500 400 L 500 155" fill="none" stroke="#16a34a" stroke-width="5" marker-end="url(#okY)"/>
-<text x="500" y="290" text-anchor="middle" font-size="20" font-weight="700" fill="#16a34a">kortekse dönüş</text>
-<text x="200" y="380" text-anchor="middle" font-size="22" font-weight="700" fill="#2563eb">döngü a</text>
-<text x="800" y="380" text-anchor="middle" font-size="22" font-weight="700" fill="#db2777">döngü b</text>
-<text x="500" y="530" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">İki döngü paralel ve birbirinden bağımsız çalışır</text>
-<text x="500" y="570" text-anchor="middle" font-size="22" fill="#475569">Hareketi artırır ya da azaltır</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 880" width="1200" height="880" font-family="Segoe UI, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient><radialGradient id="soma" cx="0.35" cy="0.35" r="0.8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cbd5e1"/></radialGradient><linearGradient id="kor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient><linearGradient id="deri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f4c39b"/></linearGradient><linearGradient id="kas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient><marker id="uy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker><marker id="bs" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><path d="M4 0 h3 v10 h-3 z" fill="#b91c1c"/></marker><marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker><marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker><marker id="okp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker><g id="hap"><path d="M0,0 h22 a10,10 0 0 1 0,20 h-22 a10,10 0 0 1 0,-20 Z" fill="#fde68a" stroke="#b45309" stroke-width="1.8"/></g></defs>
+<rect width="1200" height="880" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Motor yollar: inen yollar komutu taşır, döngüler ayarlar</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" fill="#475569">İnen yollar · geri dönen iki döngü · kaynak alanlar (slayt 2)</text>
+<rect x="30" y="100" width="560" height="520" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="134" font-size="21" font-weight="bold" fill="#0f172a">A · İnen yollar: komutu taşıyan hatlar</text>
+<path d="M60,215 Q60,170 91.25,175 Q106.875,148 122.5,175 Q169.375,148 185.0,175 Q231.875,148 247.5,175 Q294.375,148 310.0,175 Q356.875,148 372.5,175 Q419.375,148 435.0,175 Q481.875,148 497.5,175 Q553.75,160 560,215 Z" fill="url(#kor)" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M122,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M185,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M248,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M310,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M372,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M435,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M498,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<text x="310" y="205" font-size="18" text-anchor="middle" font-weight="bold" fill="#78350f">Kortikal motor alanlar</text>
+<path d="M120,222 Q110,308 120,395" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="130" y="320" font-size="17" font-weight="bold" fill="#0f172a">Kortikopontin</text>
+<text x="130" y="342" font-size="17" fill="#0f172a">yol</text>
+<path d="M280,222 Q267,331 280,440" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="290" y="320" font-size="17" font-weight="bold" fill="#0f172a">Kortikobulber</text>
+<text x="290" y="342" font-size="17" fill="#0f172a">yol</text>
+<path d="M430,222 Q413,364 430,505" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="440" y="320" font-size="17" font-weight="bold" fill="#0f172a">Kortikospinal</text>
+<text x="440" y="342" font-size="17" fill="#0f172a">yol</text>
+<path d="M60,422 C60,407.216 86.4,398 120,398 C156.96,398 180,408.56 180,422 C180,434.096 153.6,446 120,446 C89.75999999999999,446 60,435.44 60,422 Z" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+<text x="120" y="428" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">Pons</text>
+<path d="M208,467 C208,452.216 239.68,443 280,443 C324.35200000000003,443 352,453.56 352,467 C352,479.096 320.32,491 280,491 C243.712,491 208,480.44 208,467 Z" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+<text x="280" y="473" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">Beyin sapı</text>
+<path d="M358,532 C358,518.448 389.68,510 430,510 C474.35200000000003,510 502,519.68 502,532 C502,543.088 470.32,554 430,554 C393.712,554 358,544.32 358,532 Z" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+<text x="430" y="538" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">Omurilik</text>
+<text x="52" y="580" font-size="17" fill="#334155">Adları, komutun korteksten nereye taşındığını söyler;</text>
+<text x="52" y="602" font-size="17" fill="#334155">kası harekete geçiren bu hatlardır.</text>
+<rect x="610" y="100" width="560" height="520" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="632" y="134" font-size="21" font-weight="bold" fill="#0f172a">B · Geri dönen iki döngü: ayar yapan hatlar</text>
+<path d="M640,215 Q640,170 671.25,175 Q686.875,148 702.5,175 Q749.375,148 765.0,175 Q811.875,148 827.5,175 Q874.375,148 890.0,175 Q936.875,148 952.5,175 Q999.375,148 1015.0,175 Q1061.875,148 1077.5,175 Q1133.75,160 1140,215 Z" fill="url(#kor)" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M702,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M765,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M828,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M890,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M952,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M1015,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M1078,176 q-5,8 -2,16" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+<text x="890" y="205" font-size="18" text-anchor="middle" font-weight="bold" fill="#78350f">Korteks</text>
+<path d="M642,300 C642,280.288 676.3199999999999,268 720,268 C768.048,268 798,282.08 798,300 C798,316.128 763.6800000000001,332 720,332 C680.688,332 642,317.92 642,300 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="720" y="306" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e3a8a">Bazal ganglion</text>
+<path d="M1009,315 C1009,291.592 1038.04,277 1075,277 C1115.656,277 1141,293.72 1141,315 C1141,334.152 1111.96,353 1075,353 C1041.736,353 1009,336.28 1009,315 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<path d="M1032,298 q44,-12 88,0" fill="none" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M1032,308 q44,-12 88,0" fill="none" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M1032,318 q44,-12 88,0" fill="none" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M1032,328 q44,-12 88,0" fill="none" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round"/>
+<text x="1075" y="370" font-size="17" text-anchor="middle" font-weight="bold" fill="#5b21b6">Serebellum</text>
+<path d="M816,410 C816,387.824 848.56,374 890,374 C935.5840000000001,374 964,389.84 964,410 C964,428.144 931.44,446 890,446 C852.704,446 816,430.16 816,410 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="890" y="416" font-size="17" text-anchor="middle" font-weight="bold" fill="#14532d">Talamus</text>
+<path d="M700,222 Q700,245 708,266" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#okm)"/>
+<path d="M770,325 Q809,348 830,388" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#okm)"/>
+<path d="M1060,222 Q1059,249 1068,274" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" marker-end="url(#okp)"/>
+<path d="M1020,345 Q983,364 962,400" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" marker-end="url(#okp)"/>
+<path d="M880,372 Q898,298 880,224" fill="none" stroke="#15803d" stroke-width="5" stroke-linecap="round" marker-end="url(#uy)"/>
+<text x="896" y="250" font-size="17" font-weight="bold" fill="#15803d">kortekse dönüş</text>
+<text x="632" y="478" font-size="17" font-weight="bold" fill="#1d4ed8">a · Kortiko-bazal ganglia-talamo-kortikal yol</text>
+<text x="632" y="504" font-size="17" font-weight="bold" fill="#6d28d9">b · Kortiko-serebellar-talamo-kortikal yol</text>
+<text x="632" y="540" font-size="17" fill="#334155">İki döngü paralel ve bağımsız çalışır; ikisi de</text>
+<text x="632" y="562" font-size="17" fill="#334155">talamustan geçer ama birbirine karışmaz.</text>
+<rect x="30" y="640" width="1140" height="212" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="674" font-size="21" font-weight="bold" fill="#0f172a">C · Döngüler ne yapar, kaynak alanlar ne hazırlar?</text>
+<text x="52" y="706" font-size="18" fill="#1e293b">Geri dönen yollar modülatördür: hareketi kendileri</text>
+<text x="52" y="729" font-size="18" fill="#1e293b">yaptırmaz, kortekse dönerek hareketi artırır</text>
+<text x="52" y="753" font-size="18" fill="#1e293b">(fasilitasyon) ya da azaltır (inhibisyon).</text>
+<text x="52" y="792" font-size="18" font-weight="bold" fill="#78350f">Kaynak alanlar: lateral premotor, suplementer ve singulat</text>
+<text x="52" y="815" font-size="18" font-weight="bold" fill="#78350f">motor alan.</text>
+<text x="660" y="700" font-size="17" fill="#334155">Bu alanlar motor programı hazırlar, sıralar ve</text>
+<text x="660" y="722" font-size="17" fill="#334155">duyusal bilgiyle bütünleştirir.</text>
+<circle cx="720" cy="775" r="14" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+<text x="720" y="820" font-size="17" text-anchor="middle" fill="#1e293b">Bardağa uzanmak</text>
+<path d="M740,775 Q805,759 870,775" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round" marker-end="url(#ok)"/>
+<circle cx="890" cy="775" r="14" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+<text x="890" y="820" font-size="17" text-anchor="middle" fill="#1e293b">Parmakları açmak</text>
+<path d="M910,775 Q975,759 1040,775" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round" marker-end="url(#ok)"/>
+<circle cx="1060" cy="775" r="14" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+<text x="1060" y="820" font-size="17" text-anchor="middle" fill="#1e293b">Bardağı kavramak</text>
+<text x="600" y="872" font-size="17" text-anchor="middle" fill="#64748b">Not: döngülerin talamus üzerinden kortekse dönüşü slayt 3 şemasında ayrıca gösterilir.</text>
 </svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <linearGradient id="deri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde7cf"/><stop offset="1" stop-color="#eab98a"/></linearGradient>
+    <linearGradient id="kas" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient>
+    <linearGradient id="kasA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fee2e2"/><stop offset="1" stop-color="#fca5a5"/></linearGradient>
+    <linearGradient id="sinir" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+    <radialGradient id="beyin" cx="0.4" cy="0.35" r="0.75"><stop offset="0" stop-color="#fdf2f8"/><stop offset="1" stop-color="#f9a8d4"/></radialGradient>
+    <radialGradient id="hasar" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f87171" stop-opacity="0.3"/></radialGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+    <marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+    <marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/></marker>
+    <g id="noron"><path d="M0 0 q-16 -10 -26 -24 M0 0 q-20 4 -30 0 M0 0 q-6 18 -18 26" stroke="#64748b" stroke-width="2.5" fill="none"/><circle r="9" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+    <g id="noronA"><path d="M0 0 q-16 -10 -26 -24 M0 0 q-20 4 -30 0 M0 0 q-6 18 -18 26" stroke="#2563eb" stroke-width="2.5" fill="none"/><circle r="9" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/></g>
+  </defs>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">Rehabilitasyonun dönemleri: önce koru, sonra kazandır</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Kısa vadeli amaçlar, akut dönem, subakut ve kronik dönem (slayt 26–29)</text>
+  <rect x="30" y="100" width="560" height="440" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="52" y="134" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">A · Akut dönem: ilk 12–24 saatte başlar</text>
+  <path d="M60 380 L560 380 M70 380 L70 420 M550 380 L550 420" stroke="#64748b" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 360 Q60 344 76 344 L544 344 Q560 344 560 360 L560 380 L60 380 Z" stroke="#94a3b8" stroke-width="2" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="110" cy="320" rx="26" ry="22" fill="#fde7cf" stroke="#c08457" stroke-width="2"/>
+  <path d="M136 326 C200 310 300 312 360 324 L500 326" stroke="#c08457" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M136 326 C200 310 300 312 360 324 L500 326" stroke="#fde7cf" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 326 Q516 300 512 284" stroke="#c08457" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M486 268 A40 40 0 0 1 540 300" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+  <path d="M540 310 A40 40 0 0 1 480 262" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)" opacity="0.6"/>
+  <text x="380" y="196" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="start">Ayak bileği pompası</text>
+  <text x="380" y="216" font-size="17" font-weight="normal" fill="#2563eb" text-anchor="start">plantar fleksiyon ve</text>
+  <text x="380" y="236" font-size="17" font-weight="normal" fill="#2563eb" text-anchor="start">dorsifleksiyon</text>
+  <path d="M190 220 A50 30 0 1 1 280 240" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+  <text x="130" y="172" font-size="17" font-weight="bold" fill="#6d28d9" text-anchor="start">Yatak pozisyonu düzenli değişir</text>
+  <circle cx="160" cy="314" r="9" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+  <line x1="160" y1="305" x2="200" y2="266" stroke="#b45309" stroke-width="1.5"/>
+  <text x="204" y="262" font-size="17" font-weight="bold" fill="#b45309" text-anchor="start">Hemiplejik omuz</text>
+  <text x="52" y="446" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">Flask evrede omuz aşağı kayabilir (inferior</text>
+  <text x="52" y="467" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">subluksasyon): omuz çekilmez, zorlanmaz. Aktif ve pasif</text>
+  <text x="52" y="488" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">eklem hareket açıklığı egzersizleri yapılır, aktivite</text>
+  <text x="52" y="509" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">ilerleyici artırılır; el bileği, dirsek ve omuz</text>
+  <text x="52" y="530" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">egzersizleri hasta yakınına öğretilir.</text>
+  <rect x="610" y="100" width="560" height="440" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="632" y="134" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">B · Subakut ve kronik dönem: basamak basamak</text>
+  <path d="M630 500 L640 470 L760 470 L760 410 L880 410 L880 350 L1000 350 L1000 290 L1120 290 L1120 500 Z" stroke="#16a34a" stroke-width="2.5" fill="#dcfce7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="662" cy="488" r="13" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="662" y="494" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">1</text>
+  <text x="644" y="437" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">Yatak içi</text>
+  <text x="644" y="458" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">egzersizler</text>
+  <circle cx="782" cy="428" r="13" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="782" y="434" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">2</text>
+  <text x="764" y="356" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">Oturma,</text>
+  <text x="764" y="377" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">ayakta</text>
+  <text x="764" y="398" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">durma</text>
+  <circle cx="902" cy="368" r="13" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="902" y="374" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">3</text>
+  <text x="884" y="296" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">Transfer,</text>
+  <text x="884" y="317" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">yürüme,</text>
+  <text x="884" y="338" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">merdiven</text>
+  <circle cx="1022" cy="308" r="13" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="1022" y="314" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">4</text>
+  <text x="1004" y="257" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">Denge ve</text>
+  <text x="1004" y="278" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">koordinasyon</text>
+  <path d="M660 520 C760 520 960 470 1110 300" stroke="#15803d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)" stroke-dasharray="8 6"/>
+  <text x="632" y="170" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">Erken mobilizasyonla başlar; hoca sırayı yürümeyi yeni</text>
+  <text x="632" y="192" font-size="17" font-weight="normal" fill="#475569" text-anchor="start">öğrenen bir çocuğa benzetti.</text>
+  <text x="632" y="222" font-size="17" font-weight="bold" fill="#b45309" text-anchor="start">Ortez: elde istirahat splinti,</text>
+  <text x="632" y="244" font-size="17" font-weight="bold" fill="#b45309" text-anchor="start">alt ekstremitede AFO.</text>
+  <rect x="30" y="556" width="1140" height="206" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="52" y="590" font-size="21" font-weight="bold" fill="#0f172a" text-anchor="start">C · Kısa vadeli amaçlar ve aynı dönemde bakılan beş alan</text>
+  <rect x="60" y="598" width="250" height="112" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="185.0" y="626" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">İmmobilizasyon</text>
+  <text x="185.0" y="650" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Hareketsizliğin yol</text>
+  <text x="185.0" y="672" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">açtığı sorunları önlemek</text>
+  <rect x="325" y="598" width="250" height="112" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="450.0" y="626" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Deformite ve yara</text>
+  <text x="450.0" y="650" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Deformite, bası yarası</text>
+  <text x="450.0" y="672" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">ve atrofiyi önlemek</text>
+  <rect x="590" y="598" width="250" height="112" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="715.0" y="626" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Mesane ve barsak</text>
+  <text x="715.0" y="650" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Sorunları ve otonomik</text>
+  <text x="715.0" y="672" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">disrefleksiyi önlemek</text>
+  <rect x="855" y="598" width="290" height="112" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="1000.0" y="626" font-size="19" font-weight="bold" fill="#0f172a" text-anchor="middle">Ayrıca değerlendirilir</text>
+  <text x="1000.0" y="650" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">Yutma, afazi, kognitif,</text>
+  <text x="1000.0" y="672" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">psikolojik durum,</text>
+  <text x="1000.0" y="694" font-size="17" font-weight="normal" fill="#475569" text-anchor="middle">mesane-barsak</text>
+  <text x="60" y="738" font-size="17" font-weight="normal" fill="#0f172a" text-anchor="start">Yutamayan hasta beslenemez, malnütrisyon gelişir; yiyecek solunum yoluna kaçarsa aspirasyon pnömonisi olur.</text>
+  <text x="600" y="788" text-anchor="middle" font-size="17" fill="#64748b">Kaynak: slayt 26–29 · Akut dönem önler ve korur; subakut ve kronik dönem hareketi ve günlük becerileri kazandırır</text>
+</svg>

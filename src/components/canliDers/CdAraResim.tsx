@@ -7,7 +7,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState, useSyncExternalSto
 import { createPortal } from 'react-dom';
 import { ChevronDown, ChevronUp, Images, Maximize2, Undo2, X } from 'lucide-react';
 import { cdParagrafa, useCd } from './canliDersStore';
-import { araResimBitis, araResimBul, araResimleri, araResimYolu, type AraResim } from './araResimVeri';
+import { araResimBitis, araResimBul, araResimleri, araResimYolu, araResimLottieYolu, type AraResim } from './araResimVeri';
 import { usePdfGorunum } from './CdTerimKatman';
 import '../../styles/v15/ara_resim.css';
 
@@ -16,6 +16,30 @@ let gizli: string | null = null;
 const dinle = new Set<() => void>();
 const gizle = (id: string | null) => { if (gizli !== id) { gizli = id; dinle.forEach((f) => f()); } };
 const abone = (f: () => void) => { dinle.add(f); return () => { dinle.delete(f); }; };
+
+/** Lottie varsa oynatır (hareketi azalt → son kare), yoksa ya da yüklenemezse durağan SVG */
+function Gorsel({ r, alt, lazy }: { r: AraResim; alt: string; lazy?: boolean }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [oldu, setOldu] = useState(false);
+  const yol = araResimLottieYolu(r);
+  useEffect(() => {
+    if (!yol) return;
+    let anim: { destroy: () => void } | null = null, iptal = false;
+    const azalt = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    Promise.all([import('lottie-web/build/player/lottie_light'), fetch(yol).then((x) => (x.ok ? x.json() : Promise.reject()))])
+      .then(([{ default: lottie }, veri]) => {
+        if (iptal || !ref.current) return;
+        const a = lottie.loadAnimation({ container: ref.current, renderer: 'svg', loop: !azalt, autoplay: !azalt, animationData: veri });
+        if (azalt) a.goToAndStop(a.totalFrames - 1, true);
+        anim = a; setOldu(true);
+      }).catch(() => setOldu(false));
+    return () => { iptal = true; anim?.destroy(); };
+  }, [yol]);
+  return <>
+    {yol && <div ref={ref} className="ar-lottie" role="img" aria-label={alt} hidden={!oldu} />}
+    {!oldu && <img src={araResimYolu(r)} alt={alt} loading={lazy ? 'lazy' : undefined} draggable={false} />}
+  </>;
+}
 
 function Buyuk({ r, onKapat }: { r: AraResim; onKapat: () => void }) {
   useEffect(() => {
@@ -30,7 +54,7 @@ function Buyuk({ r, onKapat }: { r: AraResim; onKapat: () => void }) {
           <b>{r.baslik}</b>
           <button type="button" className="ar-ib" onClick={onKapat} aria-label="Büyük görünümü kapat" title="Kapat"><X /></button>
         </div>
-        <div className="ar-buyuk-resim"><img src={araResimYolu(r)} alt={r.aciklama || r.baslik} /></div>
+        <div className="ar-buyuk-resim"><Gorsel r={r} alt={r.aciklama || r.baslik} /></div>
         {r.aciklama && <p className="ar-alt">{r.aciklama}</p>}
       </div>
     </div>,
@@ -86,7 +110,7 @@ export function CdAraResimKok({ dersKey }: { dersKey: string }) {
           </button>
         </div>
         <button type="button" className="ar-resim" onClick={() => setBuyuk(true)} aria-label="Resmi büyüt">
-          <img src={araResimYolu(goster)} alt={goster.aciklama || goster.baslik} draggable={false} />
+          <Gorsel r={goster} alt={goster.aciklama || goster.baslik} />
         </button>
         <figcaption className="ar-yazi">
           {goster.aciklama && <p className="ar-alt">{goster.aciklama}</p>}

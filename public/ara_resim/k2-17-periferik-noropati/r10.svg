@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="gaks" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="gmiy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="0.5" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+<radialGradient id="ggov" cx="0.35" cy="0.35" r="0.75"><stop offset="0" stop-color="#ede9fe"/><stop offset="1" stop-color="#8b5cf6"/></radialGradient>
+<linearGradient id="gkas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="0.5" stop-color="#f87171"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<radialGradient id="gom" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2e8f0"/></radialGradient>
+<linearGradient id="gsag" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+<g id="miy"><path d="M-22 -9 h44 a9 9 0 0 1 0 18 h-44 a9 9 0 0 1 0 -18 z" fill="url(#gmiy)" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="fos"><circle r="7" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/><path d="M-3 7 q-2 12 1 22 M3 7 q2 12 -1 22" stroke="#c2410c" stroke-width="2" fill="none"/></g>
+<g id="mak"><path d="M-16 -4 q2 -14 16 -12 q14 -4 16 10 q6 12 -6 18 q-10 8 -20 0 q-12 -2 -6 -16 z" fill="#ddd6fe" stroke="#6d28d9" stroke-width="1.5"/><circle cx="2" cy="1" r="5" fill="#6d28d9"/></g>
+<g id="glob"><circle r="5" fill="#7dd3fc" stroke="#0369a1" stroke-width="1"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Polinöropatilerin sınıflaması ve vaskülitik sinir hasarı</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" font-weight="normal" fill="#475569">Hasarın yerine göre üç grup; mononöropati multipleks ayrı mekanizmayla gelişir (slayt 13)</text>
+<rect x="30" y="100" width="620" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="132" font-size="21" text-anchor="start" font-weight="bold" fill="#0f172a">A · Hasar yeri ve örnekler</text>
+<path d="M70 300 q-6 -34 24 -40 q30 -6 38 22 q8 30 -22 40 q-34 8 -40 -22 z" fill="url(#ggov)" stroke="#5b21b6" stroke-width="2"/><circle cx="100" cy="292" r="9" fill="#4c1d95"/>
+<path d="M134 296 C 300 290 450 300 600 296" stroke="url(#gaks)" stroke-width="8" fill="none"/>
+<use href="#miy" x="190" y="296"/>
+<use href="#miy" x="260" y="296"/>
+<use href="#miy" x="330" y="296"/>
+<use href="#miy" x="400" y="296"/>
+<use href="#miy" x="470" y="296"/>
+<use href="#miy" x="540" y="296"/>
+<line x1="100" y1="270" x2="100" y2="186" stroke="#94a3b8" stroke-width="1.3"/><circle cx="100" cy="270" r="3" fill="#334155"/>
+<text x="64" y="180" font-size="18" text-anchor="start" font-weight="bold" fill="#5b21b6">Gövde → nöronopati</text>
+<line x1="330" y1="290" x2="330" y2="186" stroke="#94a3b8" stroke-width="1.3"/><circle cx="330" cy="290" r="3" fill="#334155"/>
+<text x="284" y="180" font-size="18" text-anchor="start" font-weight="bold" fill="#b45309">Akson → aksonopati</text>
+<line x1="470" y1="305" x2="470" y2="360" stroke="#94a3b8" stroke-width="1.3"/><circle cx="470" cy="305" r="3" fill="#334155"/>
+<text x="424" y="380" font-size="18" text-anchor="start" font-weight="bold" fill="#0369a1">Miyelin → miyelinopati</text>
+<text x="50" y="208" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Motor nöron hastalığı,</text>
+<text x="50" y="230" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">polio, varisella zoster</text>
+<text x="290" y="208" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Toksik, metabolik (diyabet en</text>
+<text x="290" y="230" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">sık), nutrisyonel</text>
+<text x="410" y="410" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">AIDP (Guillain-Barré,</text>
+<text x="410" y="432" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">akut) ve KIDP (kronik)</text>
+<text x="50" y="400" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">Nutrisyonel neden bugün en çok</text>
+<text x="50" y="422" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">küçük bir ameliyattan sonra</text>
+<text x="50" y="444" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">komplikasyon olarak görülür.</text>
+<text x="50" y="500" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">Guillain-Barré nöromüsküler kavşak hastalığı değil,</text>
+<text x="50" y="522" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">miyelini bozan periferik sinir hastalığıdır.</text>
+<text x="50" y="590" font-size="17" text-anchor="start" font-weight="normal" fill="#dc2626">Çıkmış: gövde hasarı nöronopatidir (dört yıl sorulmuş).</text>
+<rect x="665" y="100" width="505" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="685" y="132" font-size="21" text-anchor="start" font-weight="bold" fill="#0f172a">B · Mononöropati multipleks</text>
+<path d="M700 200 C 820 188 960 212 1140 200" stroke="url(#gaks)" stroke-width="9" fill="none"/>
+<path d="M700 226 C 820 218 960 234 1140 226" stroke="#fca5a5" stroke-width="3" fill="none"/>
+<path d="M700 300 C 820 288 960 312 1140 300" stroke="url(#gaks)" stroke-width="9" fill="none"/>
+<path d="M700 326 C 820 318 960 334 1140 326" stroke="#dc2626" stroke-width="6" fill="none"/>
+<path d="M700 400 C 820 388 960 412 1140 400" stroke="url(#gaks)" stroke-width="9" fill="none"/>
+<path d="M700 426 C 820 418 960 434 1140 426" stroke="#fca5a5" stroke-width="3" fill="none"/>
+<path d="M900 286 h70 v28 h-70 z" fill="#475569" opacity="0.8"/>
+<circle cx="935" cy="326" r="14" fill="none" stroke="#dc2626" stroke-width="3"/>
+<line x1="935" y1="340" x2="935" y2="451" stroke="#94a3b8" stroke-width="1.3"/><circle cx="935" cy="340" r="3" fill="#334155"/>
+<text x="864" y="470" font-size="17" text-anchor="start" font-weight="normal" fill="#dc2626">Vaskülit: damar duvarı iltihabı</text>
+<line x1="940" y1="300" x2="1000" y2="254" stroke="#94a3b8" stroke-width="1.3"/><circle cx="940" cy="300" r="3" fill="#334155"/>
+<text x="1004" y="260" font-size="17" text-anchor="start" font-weight="normal" fill="#334155">Bu sinirde nekroz</text>
+<text x="700" y="180" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">Sinir 1 ve damarı</text>
+<text x="700" y="380" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">Sinir 3 ve damarı</text>
+<text x="690" y="510" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Hangi sinirin damarı tutulursa o sinir</text>
+<text x="690" y="532" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">etkilenir: farklı sinirler, ayrı zamanlarda,</text>
+<text x="690" y="554" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">asimetrik ve yama yama.</text>
+<text x="690" y="596" font-size="17" text-anchor="start" font-weight="normal" fill="#dc2626">Nekrotizan vaskülit: PAN, Churg-Strauss</text>
+<rect x="30" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="160" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Siniri besleyen damarda</text>
+<text x="160" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">vaskülit</text>
+<line x1="292" y1="677.0" x2="320" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="324" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="453" y="683" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">O sinirde nekroz</text>
+<line x1="586" y1="677.0" x2="614" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="617" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="747" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Çok odaklı, asimetrik</text>
+<text x="747" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">tutulum</text>
+<line x1="880" y1="677.0" x2="908" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="910" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="1040" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Yaygın ve simetrik</text>
+<text x="1040" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">polinöropatiden ayrılır</text>
+<text x="600" y="778" font-size="17" text-anchor="middle" font-weight="normal" fill="#475569">Polinöropatilerin tamamında en sık neden diyabettir; diyabet metabolik bir aksonopatidir.</text>
+</svg>

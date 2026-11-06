@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Yapısal beyin bulguları: doku azalır, boşluklar genişler</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">Şematik koronal kesit · ilişkili klinik özellikler · olgunlaşma yönü (slayt 13)</text>
+<rect x="30" y="96" width="760" height="470" rx="18" fill="#ffffff" stroke="#f9a8d4" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · Koronal kesit (şematik): sağlıklı ve şizofreni</text>
+<path d="M347.9 320.0 Q354.8 341.0 339.6 358.7 Q337.3 380.4 315.6 392.8 Q304.5 412.5 279.0 418.1 Q260.3 433.5 233.9 431.6 Q210.0 440.8 186.1 431.6 Q159.7 433.5 141.1 418.1 Q115.5 412.5 104.4 392.8 Q82.7 380.4 80.4 358.7 Q65.2 341.0 72.1 320.0 Q65.2 299.0 80.4 281.3 Q82.7 259.6 104.4 247.2 Q115.5 227.5 141.0 221.9 Q159.7 206.5 186.1 208.4 Q210.0 199.2 233.9 208.4 Q260.3 206.5 278.9 221.9 Q304.5 227.5 315.6 247.2 Q337.3 259.6 339.6 281.3 Q354.8 299.0 347.9 320.0 Z" stroke="#be185d" stroke-width="3" fill="url(#beyin)" stroke-linecap="round"/>
+<path d="M325.0 320.0 Q327.7 336.3 318.0 350.8 Q313.5 366.9 298.1 378.0 Q286.8 391.8 267.5 398.1 Q250.9 408.1 230.0 408.8 Q210.0 413.7 190.0 408.8 Q169.1 408.1 152.5 398.1 Q133.2 391.8 121.9 378.0 Q106.5 366.9 102.0 350.8 Q92.3 336.3 95.0 320.0 Q92.3 303.7 102.0 289.2 Q106.5 273.1 121.9 262.0 Q133.2 248.2 152.5 241.9 Q169.1 231.9 190.0 231.2 Q210.0 226.3 230.0 231.2 Q250.9 231.9 267.5 241.9 Q286.8 248.2 298.1 262.0 Q313.5 273.1 318.0 289.2 Q327.7 303.7 325.0 320.0 Z" stroke="#f9a8d4" stroke-width="2" fill="#fdf2f8" stroke-linecap="round" stroke-dasharray="7 6"/>
+<line x1="210" y1="205" x2="210" y2="300" stroke="#be185d" stroke-width="2.5"/>
+<path d="M77 280 Q94 284 99 288" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M129 224 Q141 233 142 242" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M291 224 Q291 233 278 242" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M343 280 Q338 284 321 288" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M343 360 Q338 356 321 352" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M77 360 Q94 356 99 352" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M196 298 C156 290 140 322 156 334 C168 324 186 322 196 330 Z" stroke="#0369a1" stroke-width="2" fill="#bae6fd" stroke-linecap="round"/>
+<path d="M224 298 C264 290 280 322 264 334 C252 324 234 322 224 330 Z" stroke="#0369a1" stroke-width="2" fill="#bae6fd" stroke-linecap="round"/>
+<path d="M727.9 320.0 Q734.8 341.0 719.6 358.7 Q717.3 380.4 695.6 392.8 Q684.5 412.5 659.0 418.1 Q640.3 433.5 613.9 431.6 Q590.0 440.8 566.1 431.6 Q539.7 433.5 521.1 418.1 Q495.5 412.5 484.4 392.8 Q462.7 380.4 460.4 358.7 Q445.2 341.0 452.1 320.0 Q445.2 299.0 460.4 281.3 Q462.7 259.6 484.4 247.2 Q495.5 227.5 521.0 221.9 Q539.7 206.5 566.1 208.4 Q590.0 199.2 613.9 208.4 Q640.3 206.5 658.9 221.9 Q684.5 227.5 695.6 247.2 Q717.3 259.6 719.6 281.3 Q734.8 299.0 727.9 320.0 Z" stroke="#be185d" stroke-width="3" fill="url(#beyin)" stroke-linecap="round"/>
+<path d="M714.9 320.0 Q717.8 338.1 707.3 354.2 Q702.4 372.0 685.7 384.3 Q673.4 399.7 652.4 406.7 Q634.4 417.8 611.7 418.6 Q590.0 424.0 568.3 418.6 Q545.6 417.8 527.6 406.7 Q506.6 399.7 494.3 384.3 Q477.6 372.0 472.7 354.2 Q462.2 338.1 465.1 320.0 Q462.2 301.9 472.7 285.8 Q477.6 268.0 494.3 255.7 Q506.6 240.3 527.6 233.3 Q545.6 222.2 568.3 221.4 Q590.0 216.0 611.7 221.4 Q634.4 222.2 652.4 233.3 Q673.4 240.3 685.7 255.7 Q702.4 268.0 707.3 285.8 Q717.8 301.9 714.9 320.0 Z" stroke="#f9a8d4" stroke-width="2" fill="#fdf2f8" stroke-linecap="round" stroke-dasharray="7 6"/>
+<line x1="590" y1="205" x2="590" y2="300" stroke="#be185d" stroke-width="2.5"/>
+<path d="M457 280 Q478 285 487 290" stroke="#9d174d" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M509 224 Q524 236 527 248" stroke="#9d174d" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M671 224 Q668 236 653 248" stroke="#9d174d" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M723 280 Q714 285 693 290" stroke="#9d174d" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M723 360 Q714 355 693 350" stroke="#9d174d" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M457 360 Q478 355 487 350" stroke="#9d174d" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M576 283 C508 269 481 322 508 344 C528 324 566 322 576 337 Z" stroke="#0369a1" stroke-width="2" fill="#bae6fd" stroke-linecap="round"/>
+<path d="M604 283 C672 269 699 322 672 344 C652 324 614 322 604 337 Z" stroke="#0369a1" stroke-width="2" fill="#bae6fd" stroke-linecap="round"/>
+<text x="210" y="470" font-size="19" fill="#0f172a" text-anchor="middle" font-weight="bold">Sağlıklı</text>
+<text x="590" y="470" font-size="19" fill="#0f172a" text-anchor="middle" font-weight="bold">Şizofreni</text>
+<line x1="640" y1="316" x2="690" y2="214" stroke="#0369a1" stroke-width="1.8"/>
+<text x="650" y="180" font-size="17" fill="#0369a1" text-anchor="start" font-weight="bold">Genişlemiş</text>
+<text x="650" y="200" font-size="17" fill="#0369a1" text-anchor="start" font-weight="bold">ventriküller</text>
+<line x1="470" y1="280" x2="400" y2="180" stroke="#9d174d" stroke-width="1.8"/>
+<text x="330" y="160" font-size="17" fill="#9d174d" text-anchor="start" font-weight="bold">Genişlemiş sulkuslar</text>
+<line x1="700" y1="400" x2="735" y2="434" stroke="#be185d" stroke-width="1.8"/>
+<text x="770" y="456" font-size="17" fill="#be185d" text-anchor="end" font-weight="bold">İncelmiş korteks</text>
+<text x="410" y="530" font-size="17" fill="#475569" text-anchor="middle">Beyin ve kafa içi hacmi küçüktür; ilk atakta görüntüleme çoğu zaman normaldir.</text>
+<text x="410" y="552" font-size="17" fill="#475569" text-anchor="middle">Bulgular yıllar içinde belirginleşir.</text>
+<rect x="810" y="96" width="360" height="470" rx="18" fill="#ffffff" stroke="#f9a8d4" stroke-width="2"/>
+<text x="832" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">B · Ventrikül genişlemesi</text>
+<text x="834" y="166" font-size="17" fill="#334155" text-anchor="start" font-weight="bold">Şunlarla ilişkilidir:</text>
+<circle cx="839" cy="193" r="4.5" fill="#0369a1"/>
+<text x="852" y="198" font-size="17" fill="#1e293b" text-anchor="start">kötü hastalık öncesi uyum</text>
+<circle cx="839" cy="221.1" r="4.5" fill="#0369a1"/>
+<text x="852" y="226" font-size="17" fill="#1e293b" text-anchor="start">negatif belirtiler</text>
+<circle cx="839" cy="249.2" r="4.5" fill="#0369a1"/>
+<text x="852" y="254" font-size="17" fill="#1e293b" text-anchor="start">tedaviye kötü yanıt</text>
+<circle cx="839" cy="277.3" r="4.5" fill="#0369a1"/>
+<text x="852" y="282" font-size="17" fill="#1e293b" text-anchor="start">bilişsel kayıplar</text>
+<text x="834" y="330" font-size="17" fill="#334155" text-anchor="start" font-weight="bold">Etkilenen alt bölgeler:</text>
+<circle cx="839" cy="357.40000000000003" r="4.5" fill="#be185d"/>
+<text x="852" y="362" font-size="17" fill="#1e293b" text-anchor="start">talamus</text>
+<circle cx="839" cy="385.50000000000006" r="4.5" fill="#be185d"/>
+<text x="852" y="391" font-size="17" fill="#1e293b" text-anchor="start">amigdala ve hipokampus</text>
+<circle cx="839" cy="413.6000000000001" r="4.5" fill="#be185d"/>
+<text x="852" y="419" font-size="17" fill="#1e293b" text-anchor="start">temporal loblar</text>
+<circle cx="839" cy="441.7000000000001" r="4.5" fill="#be185d"/>
+<text x="852" y="447" font-size="17" fill="#1e293b" text-anchor="start">bazal ganglionlar</text>
+<rect x="30" y="582" width="1140" height="172" rx="18" fill="#ffffff" stroke="#f9a8d4" stroke-width="2"/>
+<text x="52" y="616" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">C · Beyin arkadan öne olgunlaşır</text>
+<path d="M135.6 710.4 C130.0 685.2 152.4 660.0 188.8 657.2 C222.4 654.4 258.8 668.4 267.2 696.4 C271.4 713.2 261.6 727.2 244.8 728.6 C230.8 730.0 216.8 724.4 205.6 732.8 C194.4 741.2 174.8 741.2 166.4 730.0 C155.2 724.4 139.8 727.2 135.6 710.4 Z" stroke="#be185d" stroke-width="2" fill="url(#beyin)" stroke-linecap="round"/>
+<path d="M233.6 730.0 C242.0 727.8 263.0 728.6 261.6 739.8 C258.8 749.6 239.2 749.6 232.2 741.2 C229.4 737.0 230.2 731.7 233.6 730.0 Z" stroke="#be185d" stroke-width="1.5" fill="#fbcfe8" stroke-linecap="round"/>
+<path d="M262 652 C230 632 170 632 136 654" stroke="#be185d" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#okk)"/>
+<text x="128" y="716" font-size="17" fill="#9d174d" text-anchor="end" font-weight="bold">ön</text>
+<text x="330" y="640" font-size="18" fill="#1e293b" text-anchor="start">Frontal bölge en son, 15–25 yaş arasında olgunlaşır; dürtü kontrolü bu dönemde</text>
+<text x="330" y="663" font-size="18" fill="#1e293b" text-anchor="start">gelişir. Bu yüzden on yaşındaki bir çocuk öfkeyle daha kolay kavga edebilir.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 13 · koronal kesit şematiktir; oranlar ölçü değildir</text>
+</svg>

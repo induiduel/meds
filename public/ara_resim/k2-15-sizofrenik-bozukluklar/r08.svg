@@ -1,25 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 610" width="1000" height="610" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Şizoaffektif bozukluk iki komşusundan nasıl ayrılır">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
-<rect x="0" y="0" width="1000" height="610" fill="#fbfaf6"/>
-<text x="500" y="50" font-size="30" fill="#1f2430" text-anchor="middle" font-weight="700">Şizoaffektif bozukluk iki komşusundan nasıl ayrılır</text>
-<text x="40" y="100" font-size="24" fill="#1f2430" font-weight="700">Duygudurum bozukluğu</text>
-<text x="40" y="248" font-size="24" fill="#1f2430" font-weight="700">Şizoaffektif bozukluk</text>
-<text x="40" y="440" font-size="24" fill="#1f2430" font-weight="700">Şizofreni</text>
-<rect x="80" y="130" width="180" height="44" rx="8" fill="#c2549b66" stroke="#c2549b" stroke-width="2"/>
-<rect x="420" y="130" width="180" height="44" rx="8" fill="#c2549b66" stroke="#c2549b" stroke-width="2"/>
-<rect x="760" y="130" width="180" height="44" rx="8" fill="#c2549b66" stroke="#c2549b" stroke-width="2"/>
-<text x="340.0" y="160" font-size="20" fill="#3a9a5b" text-anchor="middle" font-weight="700">tam iyilik</text>
-<text x="680.0" y="160" font-size="20" fill="#3a9a5b" text-anchor="middle" font-weight="700">tam iyilik</text>
-<rect x="60" y="322" width="900" height="30" rx="8" fill="#8e3b5a55" stroke="#8e3b5a" stroke-width="2"/>
-<rect x="330" y="284" width="190" height="36" rx="8" fill="#c2549b66" stroke="#c2549b" stroke-width="2"/>
-<rect x="700" y="284" width="190" height="36" rx="8" fill="#c2549b66" stroke="#c2549b" stroke-width="2"/>
-<line x1="70" y1="365" x2="320" y2="365" stroke="#8e3b5a" stroke-width="3"/>
-<line x1="70" y1="357" x2="70" y2="373" stroke="#8e3b5a" stroke-width="3"/>
-<line x1="320" y1="357" x2="320" y2="373" stroke="#8e3b5a" stroke-width="3"/>
-<text x="195" y="398" font-size="20" fill="#8e3b5a" text-anchor="middle" font-weight="700">en az 2 hafta yalnız psikoz</text>
-<rect x="60" y="492" width="900" height="30" rx="8" fill="#8e3b5a55" stroke="#8e3b5a" stroke-width="2"/>
-<rect x="60" y="560" width="34" height="22" rx="5" fill="#8e3b5a55" stroke="#8e3b5a"/>
-<text x="104" y="578" font-size="22" fill="#1f2430">psikotik belirti</text>
-<rect x="420" y="560" width="34" height="22" rx="5" fill="#c2549b66" stroke="#c2549b"/>
-<text x="464" y="578" font-size="22" fill="#1f2430">duygudurum atağı</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Şizoaffektif bozukluk iki komşusundan nasıl ayrılır</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">Aynı zaman ekseninde üç gidiş · mor: psikotik belirtiler, sarı: duygudurum atakları (slayt 43)</text>
+<rect x="30" y="96" width="1140" height="500" rx="18" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · Psikoz ile duygudurum ataklarının zamanda dizilişi</text>
+<text x="56" y="210" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">Duygudurum</text>
+<text x="56" y="234" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">bozukluğu</text>
+<path d="M360 240 C414 160 486 160 540 240 Z" stroke="#b45309" stroke-width="2.5" fill="url(#amber)" stroke-linecap="round" opacity="0.95"/>
+<path d="M780 240 C834 160 906 160 960 240 Z" stroke="#b45309" stroke-width="2.5" fill="url(#amber)" stroke-linecap="round" opacity="0.95"/>
+<line x1="300" y1="240" x2="1140" y2="240" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<text x="56" y="370" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">Şizoaffektif</text>
+<text x="56" y="394" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">bozukluk</text>
+<path d="M300 400 L300 374 Q310 366 320 374 Q330 382 340 374 Q350 366 360 374 Q370 382 380 374 Q390 366 400 374 Q410 382 420 374 Q430 366 440 374 Q450 382 460 374 Q470 366 480 374 Q490 382 500 374 Q510 366 520 374 Q530 382 540 374 Q550 366 560 374 Q570 382 580 374 Q590 366 600 374 Q610 382 620 374 Q630 366 640 374 Q650 382 660 374 Q670 366 680 374 Q690 382 700 374 Q710 366 720 374 Q730 382 740 374 Q750 366 760 374 Q770 382 780 374 Q790 366 800 374 Q810 382 820 374 Q830 366 840 374 Q850 382 860 374 Q870 366 880 374 Q890 382 900 374 Q910 366 920 374 Q930 382 940 374 Q950 366 960 374 Q970 382 980 374 Q990 366 1000 374 Q1010 382 1020 374 Q1030 366 1040 374 Q1050 382 1060 374 Q1070 366 1080 374 Q1090 382 1100 374 Q1110 366 1120 374 Q1130 382 1140 374 L1140 400 Z" stroke="#7c3aed" stroke-width="2" fill="url(#mor)" stroke-linecap="round" opacity="0.8"/>
+<path d="M560 374 C608 294 672 294 720 374 Z" stroke="#b45309" stroke-width="2.5" fill="url(#amber)" stroke-linecap="round" opacity="0.95"/>
+<path d="M900 374 C948 294 1012 294 1060 374 Z" stroke="#b45309" stroke-width="2.5" fill="url(#amber)" stroke-linecap="round" opacity="0.95"/>
+<line x1="300" y1="400" x2="1140" y2="400" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<text x="56" y="520" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">Şizofreni</text>
+<path d="M300 550 L300 524 Q310 516 320 524 Q330 532 340 524 Q350 516 360 524 Q370 532 380 524 Q390 516 400 524 Q410 532 420 524 Q430 516 440 524 Q450 532 460 524 Q470 516 480 524 Q490 532 500 524 Q510 516 520 524 Q530 532 540 524 Q550 516 560 524 Q570 532 580 524 Q590 516 600 524 Q610 532 620 524 Q630 516 640 524 Q650 532 660 524 Q670 516 680 524 Q690 532 700 524 Q710 516 720 524 Q730 532 740 524 Q750 516 760 524 Q770 532 780 524 Q790 516 800 524 Q810 532 820 524 Q830 516 840 524 Q850 532 860 524 Q870 516 880 524 Q890 532 900 524 Q910 516 920 524 Q930 532 940 524 Q950 516 960 524 Q970 532 980 524 Q990 516 1000 524 Q1010 532 1020 524 Q1030 516 1040 524 Q1050 532 1060 524 Q1070 516 1080 524 Q1090 532 1100 524 Q1110 516 1120 524 Q1130 532 1140 524 L1140 550 Z" stroke="#7c3aed" stroke-width="2" fill="url(#mor)" stroke-linecap="round" opacity="0.8"/>
+<line x1="300" y1="550" x2="1140" y2="550" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<text x="660" y="262" font-size="17" fill="#14532d" text-anchor="middle" font-weight="bold">ataklar arasında tam iyilik hâli</text>
+<line x1="560" y1="230" x2="760" y2="230" stroke="#15803d" stroke-width="5"/>
+<path d="M320 352 L320 344 L540 344 L540 352" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<text x="430" y="330" font-size="17" fill="#7f1d1d" text-anchor="middle" font-weight="bold">duygudurum belirtisi olmadan</text>
+<text x="430" y="308" font-size="17" fill="#7f1d1d" text-anchor="middle" font-weight="bold">en az 2 hafta psikoz</text>
+<text x="980" y="300" font-size="17" fill="#78350f" text-anchor="middle">psikozun üstüne eklenen ataklar</text>
+<text x="720" y="470" font-size="17" fill="#4c1d95" text-anchor="middle">sürekli psikoz, atak hâlinde duygudurum belirtisi yok</text>
+<text x="1140" y="580" font-size="17" fill="#475569" text-anchor="end">zaman</text>
+<rect x="30" y="612" width="1140" height="142" rx="12" fill="#fffbeb" stroke="#b45309" stroke-width="2"/>
+<text x="56" y="646" font-size="20" fill="#78350f" text-anchor="start" font-weight="bold">B · İki ayrım noktası</text>
+<circle cx="61" cy="675" r="4.5" fill="#b45309"/>
+<text x="74" y="680" font-size="18" fill="#1e293b" text-anchor="start">Duygudurum bozukluğundan: şizoaffektif bozuklukta ataklar arasında tam iyilik hâli yoktur.</text>
+<circle cx="61" cy="704.4" r="4.5" fill="#b45309"/>
+<text x="74" y="709" font-size="18" fill="#1e293b" text-anchor="start">Şizofreniden: psikotik belirtilerin üstüne ataklar hâlinde duygudurum belirtileri eklenir.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 43 · iki haftalık şart psikozun yalnız depresyon ya da mani dönemine bağlı olmadığını gösterir</text>
 </svg>

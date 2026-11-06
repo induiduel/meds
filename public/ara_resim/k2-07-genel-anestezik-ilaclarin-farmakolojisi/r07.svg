@@ -1,25 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540">
-  <rect width="1000" height="540" fill="#ffffff"/>
-  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">Bloğu geri çevirmenin iki yolu</text>
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <rect x="50" y="86" width="420" height="340" rx="16" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
-    <text x="260" y="130" text-anchor="middle" font-size="26" font-weight="bold" fill="#b91c1c">Neostigmin</text>
-    <text x="260" y="190" text-anchor="middle" font-size="23" fill="#1e293b">Enzimi durdurur, asetilkolin birikir.</text>
-    <text x="260" y="246" text-anchor="middle" font-size="23" fill="#1e293b">Yarışı asetilkolin kazanır.</text>
-    <rect x="90" y="282" width="340" height="124" rx="12" fill="#fecaca"/>
-    <text x="260" y="316" text-anchor="middle" font-size="23" fill="#7f1d1d">Yan etki: bradikardi,</text>
-    <text x="260" y="348" text-anchor="middle" font-size="23" fill="#7f1d1d">salgı artışı, bronkospazm.</text>
-    <text x="260" y="384" text-anchor="middle" font-size="23" font-weight="bold" fill="#7f1d1d">Atropin gerekir.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <linearGradient id="kas" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+    <linearGradient id="kan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fee2e2"/><stop offset="1" stop-color="#fca5a5"/></linearGradient>
+    <radialGradient id="halka" cx="0.5" cy="0.5" r="0.6"><stop offset="0.45" stop-color="#ffffff"/><stop offset="1" stop-color="#a78bfa"/></radialGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+    <g id="ach"><circle r="8" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/></g>
+    <g id="rok"><rect x="-10" y="-10" width="20" height="20" rx="5" fill="#2563eb" stroke="#1e3a8a" stroke-width="2"/></g>
+    <g id="rsp"><path d="M-12 0 v-28 q12 -12 24 0 v28 z" fill="#38bdf8" stroke="#075985" stroke-width="2"/></g>
+    <g id="sug"><path d="M-26 0 C-26 -20 26 -20 26 0 C26 20 -26 20 -26 0 z" fill="url(#halka)" stroke="#6d28d9" stroke-width="3"/></g>
+  </defs>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">Bloğu geri çevirmenin iki yolu: neostigmin ve sugammadex</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Biri asetilkolini çoğaltır, öteki kas gevşeticiyi kanda kapsüller (slayt 47, 48)</text>
 
-    <rect x="530" y="86" width="420" height="340" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
-    <text x="740" y="130" text-anchor="middle" font-size="26" font-weight="bold" fill="#1d4ed8">Sugammadex</text>
-    <text x="740" y="190" text-anchor="middle" font-size="23" fill="#1e293b">Rokuronyumu kandan sarar.</text>
-    <text x="740" y="246" text-anchor="middle" font-size="23" fill="#1e293b">Derin blokta da yeterlidir.</text>
-    <rect x="570" y="282" width="340" height="124" rx="12" fill="#bfdbfe"/>
-    <text x="740" y="316" text-anchor="middle" font-size="23" fill="#1e3a8a">Muskarinik yan etki yok,</text>
-    <text x="740" y="348" text-anchor="middle" font-size="23" fill="#1e3a8a">atropin gerekmez.</text>
-    <text x="740" y="384" text-anchor="middle" font-size="23" font-weight="bold" fill="#1e3a8a">Yalnız aminosteroid blokta.</text>
+  <!-- PANEL A -->
+  <rect x="30" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Neostigmin: asetilkolin yarışı kazanır</text>
+  <path d="M60 170 C120 200 460 200 560 170 V150 H60 z" fill="#fef08a" stroke="#a16207" stroke-width="2"/>
+  <text x="70" y="166" font-size="17" fill="#713f12">sinir ucu</text>
+  <path d="M60 330 q35 -20 70 0 q35 20 70 0 q35 -20 70 0 q35 20 70 0 q35 -20 70 0 q35 20 70 0 q35 -20 70 0 V380 H60 z" fill="url(#kas)" stroke="#991b1b" stroke-width="2"/>
+  <use href="#rsp" x="150" y="334"/><use href="#rsp" x="270" y="334"/><use href="#rsp" x="390" y="334"/>
+  <use href="#rok" x="390" y="294"/>
+  <use href="#ach" x="140" y="296"/><use href="#ach" x="162" y="300"/><use href="#ach" x="262" y="296"/><use href="#ach" x="282" y="302"/><use href="#ach" x="200" y="250"/><use href="#ach" x="230" y="262"/><use href="#ach" x="330" y="250"/>
+  <path d="M470 250 l16 -12 l16 12 l-16 12 z" fill="#a855f7" stroke="#581c87" stroke-width="2"/>
+  <path d="M474 236 L500 264 M500 236 L474 264" stroke="#dc2626" stroke-width="4"/>
+  <line x1="502" y1="254" x2="520" y2="290" stroke="#581c87" stroke-width="1.5"/>
+  <text x="430" y="310" font-size="17" fill="#581c87" font-weight="bold">enzim inhibe</text>
+  <text x="300" y="222" font-size="17" fill="#14532d" font-weight="bold">asetilkolin birikir</text>
+  <text x="70" y="408" font-size="17" fill="#991b1b" font-weight="bold">Nikotinik reseptör: iletim kademeli döner</text>
+  <text x="70" y="440" font-size="17" fill="#1e293b">Doz 0,04–0,07 mg/kg IV; etki 10–30 dakikada belirgin.</text>
+  <text x="70" y="464" font-size="17" fill="#1e293b">Dörtlü uyarı oranı 0,2'nin üzerindeyken verilir.</text>
+  <rect x="54" y="480" width="512" height="76" rx="12" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="70" y="510" font-size="17" fill="#7c2d12" font-weight="bold">Muskarinik yan etki: bradikardi, bronkospazm</text>
+  <text x="70" y="536" font-size="17" fill="#7c2d12">Önlem: atropin (0,02 mg/kg) ya da glikopirolat</text>
 
-    <text x="500" y="492" text-anchor="middle" font-size="25" font-weight="bold" fill="#1e293b">Her ikisi de yalnız non-depolarizan bloğu geri çevirir.</text>
+  <!-- PANEL B -->
+  <rect x="610" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="634" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Sugammadex: kanda kapsülleme</text>
+  <path d="M640 230 C760 200 1000 260 1150 220 V170 C1000 200 760 150 640 180 z" fill="url(#kan)" stroke="#dc2626" stroke-width="2"/>
+  <text x="650" y="168" font-size="17" fill="#991b1b" font-weight="bold">Plazma</text>
+  <use href="#sug" x="760" y="200"/><use href="#rok" x="760" y="200"/>
+  <use href="#sug" x="900" y="214"/><use href="#rok" x="900" y="214"/>
+  <use href="#sug" x="1040" y="206"/>
+  <line x1="1060" y1="190" x2="1090" y2="160" stroke="#6d28d9" stroke-width="1.5"/>
+  <text x="980" y="154" font-size="17" fill="#6d28d9" font-weight="bold">gama-siklodekstrin</text>
+  <path d="M640 380 q35 -20 70 0 q35 20 70 0 q35 -20 70 0 q35 20 70 0 q35 -20 70 0 q35 20 70 0 q35 -20 70 0 V430 H640 z" fill="url(#kas)" stroke="#991b1b" stroke-width="2"/>
+  <use href="#rsp" x="760" y="384"/><use href="#rsp" x="900" y="384"/><use href="#rsp" x="1040" y="384"/>
+  <use href="#rok" x="1040" y="344"/>
+  <path d="M1040 330 C1040 300 1040 270 1040 236" stroke="#6d28d9" stroke-width="3" fill="none" marker-end="url(#okm)"/>
+  <text x="820" y="300" font-size="17" fill="#4c1d95">serbest ilaç azalır, reseptördeki</text>
+  <text x="820" y="322" font-size="17" fill="#4c1d95">molekül kana çekilir</text>
+  <text x="650" y="458" font-size="17" fill="#1e293b">Rokuronyum ve vekuronyumu steroid iskeletinden sarar;</text>
+  <text x="650" y="482" font-size="17" fill="#1e293b">etkisiz kompleks idrarla atılır.</text>
+  <rect x="634" y="496" width="512" height="60" rx="12" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="650" y="532" font-size="17" fill="#4c1d95" font-weight="bold">Dörtlü uyarı sıfırken bile dakikalarda tam tersleme</text>
+
+  <!-- PANEL C -->
+  <rect x="30" y="590" width="1140" height="190" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="626" font-size="22" font-weight="bold" fill="#0f172a">C · İkisini yan yana ayırmak</text>
+  <g font-size="17">
+    <rect x="54" y="644" width="540" height="96" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+    <text x="70" y="672" font-weight="bold" fill="#7c2d12">Neostigmin</text>
+    <text x="70" y="698" fill="#7c2d12">Atropin eklenir; derin blokta yetersiz kalır.</text>
+    <text x="70" y="722" fill="#7c2d12">Maliyeti sugammadexe göre belirgin avantajdır.</text>
+    <rect x="606" y="644" width="540" height="96" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="622" y="672" font-weight="bold" fill="#4c1d95">Sugammadex (derin blokta altın standart)</text>
+    <text x="622" y="698" fill="#4c1d95">Muskarinik yan etki yok, atropin gerekmez.</text>
+    <text x="622" y="722" fill="#4c1d95">Böbrek yetmezliğinde kompleks birikir.</text>
   </g>
+  <text x="600" y="766" text-anchor="middle" font-size="17" fill="#475569">Sugammadex yetersiz dozda verilirse rokuronyum düzeyi yeniden yükselir ve blok geri gelir: rekürarizasyon.</text>
 </svg>

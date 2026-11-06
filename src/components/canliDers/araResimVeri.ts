@@ -3,7 +3,10 @@
 // Gösterim CdAraResim.tsx, dışa aktarım canliDersDisaAktar.ts (resim bağlı paragraf aralığının sonuna), çevrimdışı canliDersCevrimdisi.ts.
 export interface AraResim {
   id: string; baslik: string; aciklama: string; adimlar?: string[];
-  svg: string; paragraf: number; bitis?: number; kaynak?: number[];
+  svg: string;
+  /** isteğe bağlı Lottie animasyonu (public/ara_resim/<key>/<ad>.json); svg her zaman durağan yedek + dışa aktarım */
+  lottie?: string;
+  paragraf: number; bitis?: number; kaynak?: number[];
   /** yükleyicinin eklediği: verinin ders anahtarı (SVG klasörü) */
   dersKey?: string;
 }
@@ -30,3 +33,4 @@ export const araResimBitis = (r: AraResim) => r.bitis ?? r.paragraf;
 export const araResimYolu = (r: AraResim) => `/ara_resim/${encodeURIComponent(r.dersKey || '')}/${encodeURIComponent(r.svg)}`;
 /** Etkin paragrafın resmi */
 export const araResimBul = (liste: AraResim[], aktif: number) => liste.find((r) => aktif >= r.paragraf && aktif <= araResimBitis(r)) || null;
+export const araResimLottieYolu = (r: AraResim) => r.lottie ? `/ara_resim/${encodeURIComponent(r.dersKey || '')}/${encodeURIComponent(r.lottie)}` : null;

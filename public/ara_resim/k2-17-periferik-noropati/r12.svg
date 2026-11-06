@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="gaks" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="gmiy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="0.5" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+<radialGradient id="ggov" cx="0.35" cy="0.35" r="0.75"><stop offset="0" stop-color="#ede9fe"/><stop offset="1" stop-color="#8b5cf6"/></radialGradient>
+<linearGradient id="gkas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="0.5" stop-color="#f87171"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<radialGradient id="gom" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2e8f0"/></radialGradient>
+<linearGradient id="gsag" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+<g id="miy"><path d="M-22 -9 h44 a9 9 0 0 1 0 18 h-44 a9 9 0 0 1 0 -18 z" fill="url(#gmiy)" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="fos"><circle r="7" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/><path d="M-3 7 q-2 12 1 22 M3 7 q2 12 -1 22" stroke="#c2410c" stroke-width="2" fill="none"/></g>
+<g id="mak"><path d="M-16 -4 q2 -14 16 -12 q14 -4 16 10 q6 12 -6 18 q-10 8 -20 0 q-12 -2 -6 -16 z" fill="#ddd6fe" stroke="#6d28d9" stroke-width="1.5"/><circle cx="2" cy="1" r="5" fill="#6d28d9"/></g>
+<g id="glob"><circle r="5" fill="#7dd3fc" stroke="#0369a1" stroke-width="1"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Romberg testi: göz kapanınca neden düşer?</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" font-weight="normal" fill="#475569">Pozisyon duyusu kaybında görme tek dayanaktır; lezyon ganglionda ya da arka kordondadır (slayt 19)</text>
+<rect x="30" y="100" width="640" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="132" font-size="21" text-anchor="start" font-weight="bold" fill="#0f172a">A · Gözler açık ve kapalı</text>
+<g transform="rotate(0 190 540)"><circle cx="190" cy="210" r="28" fill="#f1f5f9" stroke="#475569" stroke-width="2.5"/><path d="M190 238 C 186 300 194 360 190 420" stroke="#475569" stroke-width="4" fill="none"/><path d="M190 270 C 160 300 154 340 156 370 M190 270 C 220 300 226 340 224 370" stroke="#475569" stroke-width="4" fill="none"/><path d="M190 420 C 184 470 182 510 184 540 M190 420 C 196 470 198 510 196 540" stroke="#475569" stroke-width="4" fill="none"/><circle cx="180" cy="206" r="4" fill="#0f172a"/><circle cx="200" cy="206" r="4" fill="#0f172a"/></g>
+<g transform="rotate(9 480 540)"><circle cx="480" cy="210" r="28" fill="#f1f5f9" stroke="#475569" stroke-width="2.5"/><path d="M480 238 C 476 300 484 360 480 420" stroke="#475569" stroke-width="4" fill="none"/><path d="M480 270 C 450 300 444 340 446 370 M480 270 C 510 300 516 340 514 370" stroke="#475569" stroke-width="4" fill="none"/><path d="M480 420 C 474 470 472 510 474 540 M480 420 C 486 470 488 510 486 540" stroke="#475569" stroke-width="4" fill="none"/><path d="M464 206 h12 M484 206 h12" stroke="#0f172a" stroke-width="3"/></g>
+<path d="M150 548 h80 M440 548 h80" stroke="#334155" stroke-width="4"/>
+<path d="M560 230 C 600 260 600 320 570 360" stroke="#dc2626" stroke-width="3" fill="none" marker-end="url(#okm)"/>
+<text x="190" y="170" font-size="18" text-anchor="middle" font-weight="bold" fill="#059669">Göz açık: dengede</text>
+<text x="480" y="170" font-size="18" text-anchor="middle" font-weight="bold" fill="#dc2626">Göz kapalı: sallanır</text>
+<line x1="200" y1="206" x2="250" y2="284" stroke="#94a3b8" stroke-width="1.3"/><circle cx="200" cy="206" r="3" fill="#334155"/>
+<text x="254" y="290" font-size="17" text-anchor="start" font-weight="normal" fill="#059669">Görme dengeyi</text>
+<text x="254" y="312" font-size="17" text-anchor="start" font-weight="normal" fill="#059669">telafi eder</text>
+<line x1="196" y1="540" x2="250" y2="494" stroke="#94a3b8" stroke-width="1.3"/><circle cx="196" cy="540" r="3" fill="#334155"/>
+<text x="254" y="500" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Ayaklar bitişik</text>
+<text x="50" y="596" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">Gözler kapanınca dengesini kaybederse test pozitiftir.</text>
+<rect x="685" y="100" width="485" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="705" y="132" font-size="21" text-anchor="start" font-weight="bold" fill="#0f172a">B · Bozulan pozisyon duyusu yolu</text>
+<ellipse cx="880" cy="300" rx="87.5" ry="70" fill="url(#gom)" stroke="#64748b" stroke-width="2"/>
+<path transform="translate(880 300) scale(1.0)" d="M-6 -8 C-20 -50 -50 -55 -46 -38 C-42 -20 -26 -14 -22 -4 C-30 10 -58 22 -50 42 C-40 58 -16 36 -6 10 Z M6 -8 C20 -50 50 -55 46 -38 C42 -20 26 -14 22 -4 C30 10 58 22 50 42 C40 58 16 36 6 10 Z" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+<path d="M872 238 C 856 260 904 260 888 238 C 892 270 868 270 872 238 Z" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/>
+<path d="M940 260 C 980 220 1020 210 1060 220" stroke="#2563eb" stroke-width="5" fill="none"/>
+<ellipse cx="1030" cy="214" rx="24" ry="16" fill="url(#ggov)" stroke="#dc2626" stroke-width="3"/>
+<path d="M1060 220 C 1100 240 1120 300 1130 360" stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#okd)" transform="rotate(180 1095 290)"/>
+<line x1="1030" y1="198" x2="1030" y2="184" stroke="#94a3b8" stroke-width="1.3"/><circle cx="1030" cy="198" r="3" fill="#334155"/>
+<text x="1146" y="178" font-size="17" text-anchor="end" font-weight="normal" fill="#dc2626">Arka kök ganglionu</text>
+<line x1="880" y1="254" x2="826" y2="194" stroke="#94a3b8" stroke-width="1.3"/><circle cx="880" cy="254" r="3" fill="#334155"/>
+<text x="724" y="200" font-size="17" text-anchor="start" font-weight="normal" fill="#dc2626">Arka kordon</text>
+<line x1="1110" y1="330" x2="1110" y2="401" stroke="#94a3b8" stroke-width="1.3"/><circle cx="1110" cy="330" r="3" fill="#334155"/>
+<text x="1146" y="420" font-size="17" text-anchor="end" font-weight="normal" fill="#2563eb">Eklemden gelen pozisyon bilgisi</text>
+<text x="705" y="470" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Ganglion: duysal nöronopati (duysal gövde</text>
+<text x="705" y="492" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">burada, gövde hasarı kuralı).</text>
+<text x="705" y="535" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Arka kordon: medulla spinalis lezyonu, örnek</text>
+<text x="705" y="557" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">B12 eksikliği.</text>
+<rect x="30" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="160" y="683" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Pozisyon duyusu kaybolur</text>
+<line x1="292" y1="677.0" x2="320" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="324" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="453" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Yürüyüş ataksik,</text>
+<text x="453" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">sendeleyerek</text>
+<line x1="586" y1="677.0" x2="614" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="617" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="747" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Gözler kapanınca tek</text>
+<text x="747" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">dayanak da gider</text>
+<line x1="880" y1="677.0" x2="908" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="910" y="640" width="260" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="1040" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Romberg pozitif: ganglion</text>
+<text x="1040" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">ya da arka kordon</text>
+<text x="600" y="778" font-size="17" text-anchor="middle" font-weight="normal" fill="#475569">Muayenede ayrıca trofik değişiklik aranır: mavi soğuk ekstremite, kıl kaybı, gevrek parmaklar.</text>
+</svg>

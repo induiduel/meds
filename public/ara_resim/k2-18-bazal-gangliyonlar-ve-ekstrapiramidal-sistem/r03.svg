@@ -1,29 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="okY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker><marker id="okK" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><rect x="3" y="0" width="4" height="10" fill="#dc2626"/></marker></defs>
-<rect x="0" y="0" width="1000" height="620" fill="#ffffff"/>
-<text x="500.0" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Direkt ve indirekt yol: aynı çıkış kapısı</text>
-<rect x="380" y="75" width="240" height="64" rx="14" fill="#ea580c1f" stroke="#ea580c" stroke-width="4"/>
-<text x="500.0" y="116.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Korteks</text>
-<rect x="380" y="190" width="240" height="64" rx="14" fill="#2563eb1f" stroke="#2563eb" stroke-width="4"/>
-<text x="500.0" y="231.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Striatum</text>
-<text x="500" y="280" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">giriş</text>
-<rect x="60" y="330" width="200" height="64" rx="14" fill="#7c3aed1f" stroke="#7c3aed" stroke-width="4"/>
-<text x="160.0" y="371.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">GPe</text>
-<rect x="60" y="450" width="200" height="64" rx="14" fill="#7c3aed1f" stroke="#7c3aed" stroke-width="4"/>
-<text x="160.0" y="491.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">STN</text>
-<rect x="380" y="450" width="240" height="64" rx="14" fill="#dc26261f" stroke="#dc2626" stroke-width="4"/>
-<text x="500.0" y="491.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">GPi / SNr</text>
-<text x="500" y="540" text-anchor="middle" font-size="20" font-weight="700" fill="#dc2626">çıkış kapısı</text>
-<rect x="740" y="450" width="220" height="64" rx="14" fill="#16a34a1f" stroke="#16a34a" stroke-width="4"/>
-<text x="850.0" y="491.1" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Talamus</text>
-<line x1="500" y1="139" x2="500" y2="186" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<line x1="500" y1="254" x2="500" y2="446" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<text x="530" y="380" text-anchor="start" font-size="24" font-weight="700" fill="#0f172a">direkt</text>
-<path d="M 380 222 L 160 222 L 160 326" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<text x="250" y="210" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">indirekt</text>
-<line x1="160" y1="394" x2="160" y2="446" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<line x1="260" y1="482" x2="376" y2="482" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<line x1="620" y1="482" x2="736" y2="482" stroke="#334155" stroke-width="4" marker-end="url(#ok)"/>
-<path d="M 850 450 L 850 107 L 624 107" fill="none" stroke="#16a34a" stroke-width="5" marker-end="url(#okY)"/>
-<text x="870" y="300" text-anchor="start" font-size="20" font-weight="700" fill="#16a34a">kortekse</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" font-family="Segoe UI, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient><radialGradient id="soma" cx="0.35" cy="0.35" r="0.8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cbd5e1"/></radialGradient><linearGradient id="kor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient><linearGradient id="deri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f4c39b"/></linearGradient><linearGradient id="kas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#dc2626"/></linearGradient><marker id="uy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker><marker id="bs" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><path d="M4 0 h3 v10 h-3 z" fill="#b91c1c"/></marker><marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker><marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker><marker id="okp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker><g id="hap"><path d="M0,0 h22 a10,10 0 0 1 0,20 h-22 a10,10 0 0 1 0,-20 Z" fill="#fde68a" stroke="#b45309" stroke-width="1.8"/></g></defs>
+<rect width="1200" height="820" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Bazal ganglion çekirdekleri: giriş, ara durak ve çıkış</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" fill="#475569">Koronal kesitte yerleşim · iki yolun izlediği roller (slayt 4–6, 8)</text>
+<rect x="30" y="100" width="720" height="580" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="134" font-size="21" font-weight="bold" fill="#0f172a">A · Koronal kesit (sol yarıküre, şematik)</text>
+<path d="M600,150 C470,140 300,160 200,240 C100,330 95,480 180,570 C260,640 470,650 600,630 Z" fill="#fff7ed" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+<path d="M600,150 C470,140 300,160 200,240 C100,330 95,480 180,570 C260,640 470,650 600,630" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+<path d="M600,192 Q520,188 440,222" fill="none" stroke="#cbd5e1" stroke-width="12" stroke-linecap="round"/>
+<path d="M560,212 Q515,236 520,300 Q535,282 575,276 Q556,248 580,215 Z" fill="#64748b" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+<path d="M450,262 C450,237.35999999999999 462.32,222 478,222 C495.248,222 506,239.6 506,262 C506,282.16 493.68,302 478,302 C463.888,302 450,284.4 450,262 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<path d="M432,222 Q395,340 452,470" fill="none" stroke="#cbd5e1" stroke-width="16" stroke-linecap="round"/>
+<path d="M432,222 Q395,340 452,470" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 6"/>
+<path d="M256,370 C256,321.952 275.36,292 300,292 C327.104,292 344,326.32 344,370 C344,409.312 324.64,448 300,448 C277.824,448 256,413.68 256,370 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<path d="M338,382 C338,347.504 346.8,326 358,326 C370.32,326 378,350.64 378,382 C378,410.224 369.2,438 358,438 C347.92,438 338,413.36 338,382 Z" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<path d="M376,392 C376,364.896 383.04,348 392,348 C401.856,348 408,367.36 408,392 C408,414.176 400.96,436 392,436 C383.936,436 376,416.64 376,392 Z" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<path d="M458,405 C458,370.504 485.28,349 520,349 C558.192,349 582,373.64 582,405 C582,433.224 554.72,461 520,461 C488.752,461 458,436.36 458,405 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<path d="M458,496 C458,488.608 468.56,484 482,484 C496.784,484 506,489.28 506,496 C506,502.048 495.44,508 482,508 C469.904,508 458,502.72 458,496 Z" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<path d="M412,532 C412,524.608 432.24,520 458,520 C486.336,520 504,525.28 504,532 C504,538.048 483.76,544 458,544 C434.816,544 412,538.72 412,532 Z" fill="#fee2e2" stroke="#dc2626" stroke-width="2" transform="rotate(-12 458 532)"/>
+<path d="M176,330 Q150,380 178,440" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+<line x1="560" y1="250" x2="606" y2="230" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="560" cy="250" r="3.5" fill="#64748b"/>
+<text x="612" y="236" font-size="17" font-weight="bold" fill="#1e293b">Lateral</text>
+<text x="612" y="256" font-size="17" font-weight="bold" fill="#1e293b">ventrikül</text>
+<line x1="495" y1="240" x2="606" y2="294" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="495" cy="240" r="3.5" fill="#64748b"/>
+<text x="612" y="300" font-size="17" font-weight="bold" fill="#1e293b">Nükleus</text>
+<text x="612" y="320" font-size="17" font-weight="bold" fill="#1e293b">kaudatus</text>
+<line x1="575" y1="420" x2="606" y2="438" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="575" cy="420" r="3.5" fill="#64748b"/>
+<text x="612" y="444" font-size="17" font-weight="bold" fill="#1e293b">Talamus</text>
+<line x1="420" y1="330" x2="606" y2="364" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="420" cy="330" r="3.5" fill="#64748b"/>
+<text x="612" y="370" font-size="17" font-weight="bold" fill="#1e293b">Kapsula</text>
+<text x="612" y="390" font-size="17" font-weight="bold" fill="#1e293b">interna</text>
+<line x1="160" y1="385" x2="110" y2="300" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="160" cy="385" r="3.5" fill="#64748b"/>
+<text x="52" y="292" font-size="17" font-weight="bold" fill="#1e293b">İnsula</text>
+<line x1="270" y1="420" x2="150" y2="610" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="270" cy="420" r="3.5" fill="#64748b"/>
+<text x="70" y="632" font-size="17" font-weight="bold" fill="#2563eb">Putamen</text>
+<line x1="358" y1="430" x2="300" y2="612" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="358" cy="430" r="3.5" fill="#64748b"/>
+<text x="300" y="632" font-size="17" text-anchor="middle" font-weight="bold" fill="#d97706">GPe</text>
+<line x1="392" y1="425" x2="380" y2="612" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="392" cy="425" r="3.5" fill="#64748b"/>
+<text x="380" y="632" font-size="17" text-anchor="middle" font-weight="bold" fill="#dc2626">GPi</text>
+<line x1="482" y1="505" x2="470" y2="612" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="482" cy="505" r="3.5" fill="#64748b"/>
+<text x="470" y="632" font-size="17" text-anchor="middle" font-weight="bold" fill="#d97706">STN</text>
+<line x1="440" y1="540" x2="560" y2="612" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="440" cy="540" r="3.5" fill="#64748b"/>
+<text x="560" y="632" font-size="17" text-anchor="middle" font-weight="bold" fill="#dc2626">SNr</text>
+<text x="52" y="664" font-size="17" fill="#475569">Talamus bazal ganglion değildir; diensefalonun parçasıdır, döngülerin geçtiği istasyondur.</text>
+<rect x="770" y="100" width="400" height="580" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="792" y="134" font-size="21" font-weight="bold" fill="#0f172a">B · Roller ve iki yol</text>
+<path d="M906.9,180 C906.9,165.216 934.664,156 970,156 C1008.8696,156 1033.1,166.56 1033.1,180 C1033.1,192.096 1005.336,204 970,204 C938.1976,204 906.9,193.44 906.9,180 Z" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+<text x="970" y="186" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">Korteks</text>
+<path d="M859.2,270 C859.2,255.216 907.952,246 970,246 C1038.2528,246 1080.8,256.56 1080.8,270 C1080.8,282.096 1032.048,294 970,294 C914.1568,294 859.2,283.44 859.2,270 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="970" y="276" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">Striatum · giriş</text>
+<path d="M976.3,370 C976.3,355.216 1008.728,346 1050,346 C1095.3992,346 1123.7,356.56 1123.7,370 C1123.7,382.096 1091.272,394 1050,394 C1012.8552,394 976.3,383.44 976.3,370 Z" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="1050" y="376" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">GPe → STN</text>
+<path d="M853.9,470 C853.9,455.216 904.984,446 970,446 C1041.5176000000001,446 1086.1,456.56 1086.1,470 C1086.1,482.096 1035.016,494 970,494 C911.4856,494 853.9,483.44 853.9,470 Z" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="970" y="476" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">GPi + SNr · çıkış</text>
+<path d="M906.9,570 C906.9,555.216 934.664,546 970,546 C1008.8696,546 1033.1,556.56 1033.1,570 C1033.1,582.096 1005.336,594 970,594 C938.1976,594 906.9,583.44 906.9,570 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="970" y="576" font-size="17" text-anchor="middle" font-weight="bold" fill="#1e293b">Talamus</text>
+<path d="M970,206 Q970,225 970,244" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round" marker-end="url(#ok)"/>
+<path d="M905,294 Q883,371 915,444" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#okm)"/>
+<text x="790" y="375" font-size="17" font-weight="bold" fill="#2563eb">direkt</text>
+<path d="M1000,294 Q1025,315 1040,344" fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round" marker-end="url(#ok)"/>
+<path d="M1040,396 Q1030,424 1010,446" fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="1075" y="322" font-size="17" text-anchor="middle" font-weight="bold" fill="#d97706">indirekt</text>
+<path d="M970,494 Q970,519 970,544" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round" marker-end="url(#ok)"/>
+<path d="M1032,565 C1185,520 1185,210 1040,182" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round" marker-end="url(#uy)" stroke-dasharray="8 6"/>
+<text x="1125" y="596" font-size="17" text-anchor="middle" fill="#15803d">kortekse</text>
+<text x="1125" y="616" font-size="17" text-anchor="middle" fill="#15803d">dönüş</text>
+<text x="792" y="640" font-size="17" fill="#475569">İndirekt yol putamenden başlar.</text>
+<rect x="30" y="700" width="1140" height="104" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="52" y="734" font-size="21" font-weight="bold" fill="#0f172a">C · Çıkmış sınav noktası</text>
+<text x="52" y="764" font-size="18" fill="#7c2d12">Bazal gangliyonların eferent (çıkış) çekirdeği GPi ve SNr'dir; çeldiriciler kaudat, putamen, talamus ve GPe gibi</text>
+<text x="52" y="787" font-size="18" fill="#7c2d12">aynı şemadaki öbür duraklardır.</text>
 </svg>

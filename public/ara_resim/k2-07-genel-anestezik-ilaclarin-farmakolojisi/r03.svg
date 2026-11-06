@@ -1,33 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
-  <rect width="1000" height="520" fill="#ffffff"/>
-  <text x="500" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#1e293b">İnhaler ajanın iki ölçüsü: güç ve hız</text>
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <rect x="50" y="90" width="420" height="200" rx="16" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
-    <text x="260" y="134" text-anchor="middle" font-size="27" font-weight="bold" fill="#15803d">MAK = güç</text>
-    <text x="260" y="180" text-anchor="middle" font-size="21" fill="#1e293b">Yarı hastada yanıtı önleyen</text>
-    <text x="260" y="210" text-anchor="middle" font-size="21" fill="#1e293b">alveoler konsantrasyon</text>
-    <text x="260" y="256" text-anchor="middle" font-size="24" font-weight="bold" fill="#b91c1c">Küçük MAK = güçlü ilaç</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <radialGradient id="alv" cx="0.5" cy="0.4" r="0.7"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/></radialGradient>
+    <linearGradient id="kan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+    <linearGradient id="cubuk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#99f6e4"/><stop offset="1" stop-color="#0d9488"/></linearGradient>
+    <linearGradient id="cubuk2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#ea580c"/></linearGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+    <g id="gaz"><circle r="8" fill="#14b8a6" stroke="#0f766e" stroke-width="1.5"/></g>
+  </defs>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">İnhaler ajanda güç ve hız: MAK ile kan-gaz katsayısı</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">İki ölçü de ters okunur: küçük değer güçlü ya da hızlı ajanı gösterir (slayt 24)</text>
 
-    <rect x="530" y="90" width="420" height="200" rx="16" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
-    <text x="740" y="134" text-anchor="middle" font-size="27" font-weight="bold" fill="#15803d">Kan-gaz katsayısı = hız</text>
-    
-    <text x="740" y="192" text-anchor="middle" font-size="22" fill="#1e293b">Kan az emerse beyne çabuk geçer.</text>
-    <text x="740" y="256" text-anchor="middle" font-size="24" font-weight="bold" fill="#b91c1c">Küçük katsayı = hızlı</text>
+  <!-- PANEL A -->
+  <rect x="30" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Alveolden kana, kandan beyne</text>
+  <path d="M120 300 C80 220 140 160 220 170 C280 140 360 170 370 230 C420 260 400 330 340 340 C300 370 160 370 120 300 z" fill="url(#alv)" stroke="#0369a1" stroke-width="2.5"/>
+  <use href="#gaz" x="180" y="230"/><use href="#gaz" x="230" y="210"/><use href="#gaz" x="280" y="240"/><use href="#gaz" x="210" y="280"/><use href="#gaz" x="320" y="280"/>
+  <line x1="150" y1="200" x2="90" y2="172" stroke="#0369a1" stroke-width="1.5"/>
+  <text x="54" y="166" font-size="17" fill="#0369a1" font-weight="bold">Alveol</text>
+  <path d="M60 400 C160 380 300 420 420 395 S540 380 570 392" stroke="url(#kan)" stroke-width="40" fill="none" stroke-linecap="round"/>
+  <use href="#gaz" x="200" y="396"/><use href="#gaz" x="300" y="404"/>
+  <path d="M250 330 C250 350 252 365 254 380" stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#okt)"/>
+  <text x="262" y="362" font-size="17" fill="#0f766e">difüzyon</text>
+  <text x="70" y="456" font-size="17" fill="#991b1b" font-weight="bold">Kan: ilacı sünger gibi emer</text>
+  <path d="M470 380 C500 320 500 250 470 200" stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#okt)"/>
+  <path d="M440 190 c-20 -30 20 -50 40 -35 c20 -20 60 -5 55 20 c25 10 15 45 -10 45 c-15 15 -45 10 -50 -5 c-25 0 -40 -10 -35 -25 z" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+  <text x="450" y="256" font-size="17" fill="#9d174d" font-weight="bold">Beyin</text>
+  <rect x="54" y="476" width="512" height="80" rx="12" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="70" y="506" font-size="17" fill="#134e4a">Kanda az çözünen ilaç (küçük λ) kanı hızla doyurur,</text>
+  <text x="70" y="532" font-size="17" fill="#134e4a">beyne çabuk geçer: indüksiyon ve uyanma hızlı olur.</text>
 
-    <text x="500" y="348" text-anchor="middle" font-size="25" fill="#1e293b">Hız sırası (kan-gaz katsayısı):</text>
-    <g>
-      <rect x="70" y="378" width="190" height="86" rx="12" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
-      <text x="165" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#14532d">Desfluran</text>
-      <text x="165" y="444" text-anchor="middle" font-size="24" fill="#1e293b">0,42</text>
-      <rect x="290" y="378" width="190" height="86" rx="12" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
-      <text x="385" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#14532d">Sevofluran</text>
-      <text x="385" y="444" text-anchor="middle" font-size="24" fill="#1e293b">0,65</text>
-      <rect x="510" y="378" width="190" height="86" rx="12" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
-      <text x="605" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#14532d">İzofluran</text>
-      <text x="605" y="444" text-anchor="middle" font-size="24" fill="#1e293b">1,4</text>
-      <rect x="730" y="378" width="190" height="86" rx="12" fill="#fde68a" stroke="#a16207" stroke-width="2"/>
-      <text x="825" y="412" text-anchor="middle" font-size="24" font-weight="bold" fill="#713f12">Halotan</text>
-      <text x="825" y="444" text-anchor="middle" font-size="24" fill="#1e293b">2,4</text>
-    </g>
+  <!-- PANEL B -->
+  <rect x="610" y="100" width="560" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="634" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Kan-gaz katsayısı (λ), hızlıdan yavaşa</text>
+  <g font-size="18">
+    <text x="634" y="196" font-weight="bold" fill="#0f172a">Desfluran</text>
+    <path d="M770 176 h63 q8 0 8 8 v12 q0 8 -8 8 h-63 z" fill="url(#cubuk)"/><text x="852" y="196" fill="#0f172a">0,42</text>
+    <text x="634" y="266" font-weight="bold" fill="#0f172a">Sevofluran</text>
+    <path d="M770 246 h98 q8 0 8 8 v12 q0 8 -8 8 h-98 z" fill="url(#cubuk)"/><text x="886" y="266" fill="#0f172a">0,65</text>
+    <text x="634" y="336" font-weight="bold" fill="#0f172a">İzofluran</text>
+    <path d="M770 316 h210 q8 0 8 8 v12 q0 8 -8 8 h-210 z" fill="url(#cubuk2)"/><text x="998" y="336" fill="#0f172a">1,4</text>
+    <text x="634" y="406" font-weight="bold" fill="#0f172a">Halotan</text>
+    <path d="M770 386 h360 q8 0 8 8 v12 q0 8 -8 8 h-360 z" fill="url(#cubuk2)"/><text x="1080" y="376" fill="#0f172a">2,4</text>
   </g>
+  <line x1="770" y1="160" x2="770" y2="420" stroke="#334155" stroke-width="2"/>
+  <path d="M640 450 H1140" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+  <text x="640" y="478" font-size="17" fill="#0f766e" font-weight="bold">en hızlı: desfluran</text>
+  <text x="1140" y="478" text-anchor="end" font-size="17" fill="#c2410c" font-weight="bold">en yavaş: halotan</text>
+  <text x="634" y="530" font-size="17" fill="#475569">λ düştükçe kan-beyin dengesi hızlanır.</text>
+
+  <!-- PANEL C -->
+  <rect x="30" y="590" width="1140" height="190" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="626" font-size="22" font-weight="bold" fill="#0f172a">C · MAK: gücün ölçüsü</text>
+  <g font-size="17">
+    <rect x="54" y="646" width="520" height="92" rx="12" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="70" y="676" font-weight="bold" fill="#164e63">Minimum alveoler konsantrasyon</text>
+    <text x="70" y="702" fill="#164e63">Hastaların %50'sinde cilt insizyonuna motor</text>
+    <text x="70" y="726" fill="#164e63">yanıtı önleyen alveoler konsantrasyon.</text>
+    <path d="M580 692 h40" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+    <rect x="628" y="646" width="520" height="92" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="644" y="676" font-weight="bold" fill="#78350f">Küçük MAK = güçlü ilaç</text>
+    <text x="644" y="702" fill="#78350f">Meyer-Overton kuralı: güç, yağda çözünürlükle</text>
+    <text x="644" y="726" fill="#78350f">(lipofilite) doğru orantılıdır.</text>
+  </g>
+  <text x="600" y="766" text-anchor="middle" font-size="17" fill="#475569">Güç için MAK'a, hız için kan-gaz katsayısına bakılır; ikisinde de küçük değer avantajdır.</text>
 </svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="gaks" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="gmiy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="0.5" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+<radialGradient id="ggov" cx="0.35" cy="0.35" r="0.75"><stop offset="0" stop-color="#ede9fe"/><stop offset="1" stop-color="#8b5cf6"/></radialGradient>
+<linearGradient id="gkas" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="0.5" stop-color="#f87171"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<radialGradient id="gom" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2e8f0"/></radialGradient>
+<linearGradient id="gsag" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+<g id="miy"><path d="M-22 -9 h44 a9 9 0 0 1 0 18 h-44 a9 9 0 0 1 0 -18 z" fill="url(#gmiy)" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="fos"><circle r="7" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/><path d="M-3 7 q-2 12 1 22 M3 7 q2 12 -1 22" stroke="#c2410c" stroke-width="2" fill="none"/></g>
+<g id="mak"><path d="M-16 -4 q2 -14 16 -12 q14 -4 16 10 q6 12 -6 18 q-10 8 -20 0 q-12 -2 -6 -16 z" fill="#ddd6fe" stroke="#6d28d9" stroke-width="1.5"/><circle cx="2" cy="1" r="5" fill="#6d28d9"/></g>
+<g id="glob"><circle r="5" fill="#7dd3fc" stroke="#0369a1" stroke-width="1"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Duyu muayenesi: hangi test hangi lifi sınar?</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" font-weight="normal" fill="#475569">Kalın ve ince lif testleri, eldiven-çorap dağılımı (slayt 18)</text>
+<rect x="30" y="100" width="640" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="132" font-size="21" text-anchor="start" font-weight="bold" fill="#0f172a">A · Testler ve sınadıkları lifler</text>
+<circle cx="110" cy="210" r="40" fill="url(#gmiy)" stroke="#0369a1" stroke-width="2"/><circle cx="110" cy="210" r="22" fill="url(#gaks)" stroke="#b45309"/>
+<text x="170" y="190" font-size="19" text-anchor="start" font-weight="bold" fill="#0369a1">Kalın miyelinli lif</text>
+<circle cx="182" cy="222" r="4" fill="#0369a1"/>
+<text x="194" y="228" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Yüzeyel dokunma</text>
+<circle cx="182" cy="252" r="4" fill="#0369a1"/>
+<text x="194" y="258" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">İki nokta ayrımı: iki uç ayrı hissediliyor mu?</text>
+<circle cx="182" cy="282" r="4" fill="#0369a1"/>
+<text x="194" y="288" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Vibrasyon duyusu</text>
+<circle cx="182" cy="312" r="4" fill="#0369a1"/>
+<text x="194" y="318" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Eklem pozisyonu: göz kapalı, parmak yukarı mı aşağı mı?</text>
+<circle cx="110" cy="420" r="14" fill="url(#gaks)" stroke="#b45309" stroke-width="2"/><path d="M80 446 q30 -18 60 0" stroke="#94a3b8" fill="none"/>
+<text x="170" y="410" font-size="19" text-anchor="start" font-weight="bold" fill="#b45309">İnce miyelinli ve miyelinsiz lif</text>
+<circle cx="182" cy="442" r="4" fill="#b45309"/>
+<text x="194" y="448" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Isı algılama</text>
+<circle cx="182" cy="472" r="4" fill="#b45309"/>
+<text x="194" y="478" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Ağrı algılama</text>
+<path d="M540 440 L505 555 M540 440 L575 555" stroke="#334155" stroke-width="3"/><circle cx="540" cy="440" r="6" fill="#334155"/>
+<path d="M470 566 C 510 552 580 552 620 566" stroke="#d97706" stroke-width="6" fill="none"/>
+<line x1="575" y1="557" x2="507" y2="594" stroke="#94a3b8" stroke-width="1.3"/><circle cx="575" cy="557" r="3" fill="#334155"/>
+<text x="284" y="600" font-size="17" text-anchor="start" font-weight="normal" fill="#0f172a">Deri: iki uç aynı anda değer</text>
+<rect x="685" y="100" width="485" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="705" y="132" font-size="21" text-anchor="start" font-weight="bold" fill="#0f172a">B · Simetrik eldiven-çorap tarzı kayıp</text>
+<circle cx="925" cy="175" r="30" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+<path d="M885 210 C 875 260 875 330 889 380 L961 380 C 975 330 975 260 965 210 Z" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+<path d="M885 215 C 845 260 830 320 825 380" stroke="#475569" stroke-width="16" stroke-linecap="round" fill="none"/>
+<path d="M885 215 C 845 260 830 320 825 380" stroke="#f1f5f9" stroke-width="12" stroke-linecap="round" fill="none"/>
+<path d="M828 360 C 825 380 821 400 821 412" stroke="#7c3aed" stroke-width="20" stroke-linecap="round" fill="none"/>
+<path d="M905 380 C 899 450 895 500 893 540" stroke="#475569" stroke-width="20" stroke-linecap="round" fill="none"/>
+<path d="M905 380 C 899 450 895 500 893 540" stroke="#f1f5f9" stroke-width="16" stroke-linecap="round" fill="none"/>
+<path d="M895 500 C 894 520 893 540 881 556" stroke="#7c3aed" stroke-width="22" stroke-linecap="round" fill="none"/>
+<path d="M965 215 C 1005 260 1020 320 1025 380" stroke="#475569" stroke-width="16" stroke-linecap="round" fill="none"/>
+<path d="M965 215 C 1005 260 1020 320 1025 380" stroke="#f1f5f9" stroke-width="12" stroke-linecap="round" fill="none"/>
+<path d="M1022 360 C 1025 380 1029 400 1029 412" stroke="#7c3aed" stroke-width="20" stroke-linecap="round" fill="none"/>
+<path d="M945 380 C 951 450 955 500 957 540" stroke="#475569" stroke-width="20" stroke-linecap="round" fill="none"/>
+<path d="M945 380 C 951 450 955 500 957 540" stroke="#f1f5f9" stroke-width="16" stroke-linecap="round" fill="none"/>
+<path d="M955 500 C 956 520 957 540 969 556" stroke="#7c3aed" stroke-width="22" stroke-linecap="round" fill="none"/>
+<line x1="1029" y1="405" x2="1050" y2="324" stroke="#94a3b8" stroke-width="1.3"/><circle cx="1029" cy="405" r="3" fill="#334155"/>
+<text x="1054" y="330" font-size="17" text-anchor="start" font-weight="normal" fill="#7c3aed">Eldiven alanı</text>
+<line x1="965" y1="548" x2="1020" y2="494" stroke="#94a3b8" stroke-width="1.3"/><circle cx="965" cy="548" r="3" fill="#334155"/>
+<text x="1024" y="500" font-size="17" text-anchor="start" font-weight="normal" fill="#7c3aed">Çorap alanı</text>
+<line x1="821" y1="405" x2="821" y2="441" stroke="#94a3b8" stroke-width="1.3"/><circle cx="821" cy="405" r="3" fill="#334155"/>
+<text x="764" y="460" font-size="17" text-anchor="start" font-weight="normal" fill="#7c3aed">İki yanda eşit</text>
+<text x="705" y="596" font-size="17" text-anchor="start" font-weight="normal" fill="#475569">Kayıp el ve ayak uçlarında, simetrik başlar</text>
+<rect x="30" y="640" width="357" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="209" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Kalın lif testleri: dokunma, iki</text>
+<text x="209" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">nokta, vibrasyon, pozisyon</text>
+<line x1="390" y1="677.0" x2="418" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="421" y="640" width="357" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="600" y="683" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">İnce lif testleri: ısı ve ağrı</text>
+<line x1="782" y1="677.0" x2="810" y2="677.0" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="813" y="640" width="357" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+<text x="991" y="672" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">Polinöropatide kayıp simetrik,</text>
+<text x="991" y="694" font-size="17" text-anchor="middle" font-weight="normal" fill="#0f172a">eldiven-çorap tarzı</text>
+<text x="600" y="778" font-size="17" text-anchor="middle" font-weight="normal" fill="#475569">Duyu muayenesi, belirtilerden sonra muayenenin ilk adımıdır.</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Paylaşılmış psikoz: sanrı baskın kişiden edilgin kişiye geçer</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">İki kişi, tek sanrı sistemi · içerik · tedavide ayırma (slayt 41)</text>
+<rect x="30" y="96" width="760" height="450" rx="18" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · Bağımlı ilişkide sanrının aktarımı</text>
+<use href="#kisi" transform="translate(220 470) scale(1.8)"/>
+<use href="#kisi" transform="translate(560 470) scale(1.4)" opacity="0.85"/>
+<text x="220" y="506" font-size="19" fill="#134e4a" text-anchor="middle" font-weight="bold">Baskın kişi</text>
+<text x="560" y="506" font-size="19" fill="#134e4a" text-anchor="middle" font-weight="bold">Edilgin kişi</text>
+<path d="M70.0 230 C70.0 146.0 370.0 146.0 370.0 230 C370.0 302.0 70.0 302.0 70.0 230 Z" stroke="#0d9488" stroke-width="2.5" fill="#ccfbf1" stroke-linecap="round"/>
+<circle cx="210" cy="320" r="8.0" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<path d="M432.5 260 C432.5 188.60000000000002 687.5 188.60000000000002 687.5 260 C687.5 321.2 432.5 321.2 432.5 260 Z" stroke="#0d9488" stroke-width="2.5" fill="#ccfbf1" stroke-linecap="round"/>
+<circle cx="550" cy="336" r="6.8" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="220" y="226" font-size="18" fill="#134e4a" text-anchor="middle" font-weight="bold">Tuvalete kamera</text>
+<text x="220" y="250" font-size="18" fill="#134e4a" text-anchor="middle" font-weight="bold">konduğuna inanır</text>
+<text x="560" y="256" font-size="17" fill="#134e4a" text-anchor="middle" font-weight="bold">Aynı sanrıyı</text>
+<text x="560" y="278" font-size="17" fill="#134e4a" text-anchor="middle" font-weight="bold">paylaşır</text>
+<path d="M370 210 C420 160 470 170 500 200" stroke="#0f766e" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="436" y="150" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">sanrı geçer</text>
+<path d="M290 420 C360 440 440 440 500 420" stroke="#64748b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="7 6"/>
+<text x="395" y="460" font-size="17" fill="#475569" text-anchor="middle">bağımlı ilişki</text>
+<rect x="810" y="96" width="360" height="450" rx="18" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+<text x="832" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">B · Sanrının içeriği</text>
+<circle cx="839" cy="163" r="4.5" fill="#0d9488"/>
+<text x="852" y="168" font-size="18" fill="#1e293b" text-anchor="start">Persekütif: zarar görme</text>
+<circle cx="839" cy="194.4" r="4.5" fill="#0d9488"/>
+<text x="852" y="199" font-size="18" fill="#1e293b" text-anchor="start">Hipokondriak: hastalık kuşkusu</text>
+<text x="834" y="253" font-size="17" fill="#1e293b" text-anchor="start">Yakınlara “kim koydu, nasıl</text>
+<text x="834" y="275" font-size="17" fill="#1e293b" text-anchor="start">anlaşıldı” diye sorulunca tutarlı</text>
+<text x="834" y="297" font-size="17" fill="#1e293b" text-anchor="start">yanıt verilemez. İki ya da daha</text>
+<text x="834" y="319" font-size="17" fill="#1e293b" text-anchor="start">fazla kişi aynı sanrı sistemini</text>
+<text x="834" y="341" font-size="17" fill="#1e293b" text-anchor="start">paylaşır.</text>
+<rect x="30" y="562" width="1140" height="192" rx="18" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+<text x="52" y="596" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">C · Tedavide iki adım</text>
+<use href="#kisi" transform="translate(150 700) scale(0.9)"/>
+<path d="M210 650 C240 630 270 630 300 650" stroke="#15803d" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#oky)"/>
+<rect x="310" y="636" width="54" height="24" rx="12" fill="url(#yesil)" stroke="#15803d" stroke-width="2"/>
+<text x="380" y="640" font-size="18" fill="#14532d" text-anchor="start" font-weight="bold">Baskın kişiye</text>
+<text x="380" y="663" font-size="18" fill="#14532d" text-anchor="start" font-weight="bold">antipsikotik verilir.</text>
+<use href="#kisi" transform="translate(700 700) scale(0.75)"/>
+<use href="#kisi" transform="translate(1000 700) scale(0.75)"/>
+<path d="M840 660 C810 640 780 640 756 656" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)"/>
+<path d="M860 660 C890 640 920 640 944 656" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)"/>
+<line x1="850" y1="620" x2="850" y2="700" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="850" y="730" font-size="18" fill="#134e4a" text-anchor="middle" font-weight="bold">Edilgin kişi baskın kişiden ayrılır.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 41 · pasif kişiyi baskın kişiden dikkatle ayırmak gerekir</text>
+</svg>

@@ -1,31 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 370" width="1000" height="370" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Çoklu vuruş: stres-diyatez modeli">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
-<rect x="0" y="0" width="1000" height="370" fill="#fbfaf6"/>
-<text x="500" y="52" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Çoklu vuruş: stres-diyatez modeli</text>
-<rect x="40" y="100" width="270" height="150" rx="14" fill="#6b4fa322" stroke="#6b4fa3" stroke-width="3"/>
-<circle cx="70" cy="130" r="19" fill="#6b4fa3"/><text x="70" y="138" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
-<text x="175" y="165" font-size="30" fill="#6b4fa3" text-anchor="middle" font-weight="700">Genetik</text>
-<text x="175" y="205" font-size="30" fill="#6b4fa3" text-anchor="middle" font-weight="700">yatkınlık</text>
-<text x="175" y="238" font-size="22" fill="#5b6170" text-anchor="middle">(diyatez)</text>
-<circle cx="370" cy="92" r="19" fill="#d9822b"/><text x="370" y="100" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
-<text x="530" y="100" font-size="26" fill="#d9822b" text-anchor="middle" font-weight="700">Sonraki vuruşlar</text>
-<rect x="372" y="125" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
-<text x="459" y="156" font-size="18" fill="#1f2430" text-anchor="middle">Gebelik ve doğum</text>
-<rect x="554" y="125" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
-<text x="641" y="156" font-size="18" fill="#1f2430" text-anchor="middle">Doğum mevsimi</text>
-<rect x="372" y="187" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
-<text x="459" y="218" font-size="18" fill="#1f2430" text-anchor="middle">Ebeveyn yaşı</text>
-<rect x="554" y="187" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
-<text x="641" y="218" font-size="18" fill="#1f2430" text-anchor="middle">Örselenme</text>
-<rect x="372" y="249" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
-<text x="459" y="280" font-size="18" fill="#1f2430" text-anchor="middle">Esrar</text>
-<rect x="554" y="249" width="174" height="48" rx="10" fill="#d9822b18" stroke="#d9822b" stroke-width="2"/>
-<text x="641" y="280" font-size="18" fill="#1f2430" text-anchor="middle">Kent ve göç</text>
-<line x1="312" y1="175" x2="366" y2="175" stroke="#1f2430" stroke-width="3" marker-end="url(#ok)"/>
-<line x1="730" y1="200" x2="768" y2="200" stroke="#1f2430" stroke-width="3" marker-end="url(#ok)"/>
-<circle cx="800" cy="120" r="19" fill="#8e3b5a"/><text x="800" y="128" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
-<rect x="770" y="145" width="200" height="110" rx="14" fill="#8e3b5a22" stroke="#8e3b5a" stroke-width="3"/>
-<text x="870" y="190" font-size="30" fill="#8e3b5a" text-anchor="middle" font-weight="700">Şizofreni</text>
-<text x="870" y="228" font-size="22" fill="#8e3b5a" text-anchor="middle">ortaya çıkar</text>
-<text x="500" y="335" font-size="22" fill="#5b6170" text-anchor="middle">Yatkınlık tek başına yetmez; etkenler üst üste eklenince hastalık başlar.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Çoklu vuruş: genetik yatkınlığın üstüne eklenen etkenler</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">Stres-diyatez modeli · gebe kalmadan genç erişkinliğe uzanan vuruşlar (slayt 6–11)</text>
+<rect x="30" y="96" width="1140" height="460" rx="18" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · Yatkın kişide vuruşlar üst üste eklenir, eşik aşılınca hastalık başlar</text>
+<line x1="70" y1="272" x2="1140" y2="272" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="7 6"/>
+<text x="74" y="294" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">hastalık eşiği</text>
+<path d="M70 440 L100 440 C120 440 124 412 146 412 L285 412 C305 412 309 384 331 384 L470 384 C490 384 494 356 516 356 L655 356 C675 356 679 322 701 322 L840 322 C860 322 864 288 886 288 L1025 288 C1045 288 1049 246 1071 246 L1140 246 L1140 500 L70 500 Z" stroke="#7c3aed" stroke-width="0" fill="url(#mor)" stroke-linecap="round" opacity="0.55"/>
+<path d="M70 440 L100 440 C120 440 124 412 146 412 L285 412 C305 412 309 384 331 384 L470 384 C490 384 494 356 516 356 L655 356 C675 356 679 322 701 322 L840 322 C860 322 864 288 886 288 L1025 288 C1045 288 1049 246 1071 246 L1140 246" stroke="#6d28d9" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="82" y="478" font-size="18" fill="#3b0764" text-anchor="start" font-weight="bold">1. vuruş: genetik yatkınlık (diyatez) — tek başına hastalığı başlatmaz</text>
+<line x1="70" y1="500" x2="1146" y2="500" stroke="#334155" stroke-width="2.5" marker-end="url(#ok)"/>
+<line x1="130" y1="494" x2="130" y2="506" stroke="#334155" stroke-width="2"/>
+<text x="130" y="526" font-size="17" fill="#334155" text-anchor="middle">Gebe kalma</text>
+<line x1="315" y1="494" x2="315" y2="506" stroke="#334155" stroke-width="2"/>
+<text x="315" y="526" font-size="17" fill="#334155" text-anchor="middle">Gebelik</text>
+<line x1="500" y1="494" x2="500" y2="506" stroke="#334155" stroke-width="2"/>
+<text x="500" y="526" font-size="17" fill="#334155" text-anchor="middle">Doğum</text>
+<line x1="685" y1="494" x2="685" y2="506" stroke="#334155" stroke-width="2"/>
+<text x="685" y="526" font-size="17" fill="#334155" text-anchor="middle">Çocukluk</text>
+<line x1="870" y1="494" x2="870" y2="506" stroke="#334155" stroke-width="2"/>
+<text x="870" y="526" font-size="17" fill="#334155" text-anchor="middle">Ergenlik</text>
+<line x1="1055" y1="494" x2="1055" y2="506" stroke="#334155" stroke-width="2"/>
+<text x="1055" y="526" font-size="17" fill="#334155" text-anchor="middle">Genç erişkinlik</text>
+<rect x="42" y="146" width="176" height="90" rx="10" fill="#faf5ff" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="130" y="168" font-size="17" fill="#3b0764" text-anchor="middle" font-weight="bold">İleri baba yaşı</text>
+<text x="130" y="190" font-size="17" fill="#3b0764" text-anchor="middle">(Gregory, 1959;</text>
+<text x="130" y="212" font-size="17" fill="#3b0764" text-anchor="middle">toplum çalışmaları)</text>
+<line x1="130" y1="236" x2="130" y2="404" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#ok)"/>
+<circle cx="130" cy="412" r="6" fill="#7c3aed" stroke="#3b0764" stroke-width="1.5"/>
+<rect x="227" y="146" width="176" height="112" rx="10" fill="#faf5ff" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="315" y="168" font-size="17" fill="#3b0764" text-anchor="middle" font-weight="bold">Gebelik ve doğum</text>
+<text x="315" y="190" font-size="17" fill="#3b0764" text-anchor="middle">komplikasyonları:</text>
+<text x="315" y="212" font-size="17" fill="#3b0764" text-anchor="middle">hipoksi-iskemi,</text>
+<text x="315" y="234" font-size="17" fill="#3b0764" text-anchor="middle">erken doğum</text>
+<line x1="315" y1="258" x2="315" y2="376" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#ok)"/>
+<circle cx="315" cy="384" r="6" fill="#7c3aed" stroke="#3b0764" stroke-width="1.5"/>
+<rect x="412" y="146" width="176" height="90" rx="10" fill="#faf5ff" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="500" y="168" font-size="17" fill="#3b0764" text-anchor="middle" font-weight="bold">Kış ve ilkbahar</text>
+<text x="500" y="190" font-size="17" fill="#3b0764" text-anchor="middle">başında doğum:</text>
+<text x="500" y="212" font-size="17" fill="#3b0764" text-anchor="middle">görece risk ≈ %10</text>
+<line x1="500" y1="236" x2="500" y2="348" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#ok)"/>
+<circle cx="500" cy="356" r="6" fill="#7c3aed" stroke="#3b0764" stroke-width="1.5"/>
+<rect x="597" y="146" width="176" height="90" rx="10" fill="#faf5ff" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="685" y="168" font-size="17" fill="#3b0764" text-anchor="middle" font-weight="bold">Çocukluk çağı</text>
+<text x="685" y="190" font-size="17" fill="#3b0764" text-anchor="middle">örselenmesi</text>
+<text x="685" y="212" font-size="17" fill="#3b0764" text-anchor="middle">(travma)</text>
+<line x1="685" y1="236" x2="685" y2="314" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#ok)"/>
+<circle cx="685" cy="322" r="6" fill="#7c3aed" stroke="#3b0764" stroke-width="1.5"/>
+<rect x="782" y="146" width="176" height="90" rx="10" fill="#faf5ff" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="870" y="168" font-size="17" fill="#3b0764" text-anchor="middle" font-weight="bold">Esrar (25 yaştan</text>
+<text x="870" y="190" font-size="17" fill="#3b0764" text-anchor="middle">önce); kent 2–4 kat,</text>
+<text x="870" y="212" font-size="17" fill="#3b0764" text-anchor="middle">göç 2,7 kat</text>
+<line x1="870" y1="236" x2="870" y2="280" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#ok)"/>
+<circle cx="870" cy="288" r="6" fill="#7c3aed" stroke="#3b0764" stroke-width="1.5"/>
+<rect x="967" y="146" width="176" height="68" rx="10" fill="#faf5ff" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="1055" y="168" font-size="17" fill="#3b0764" text-anchor="middle" font-weight="bold">Stresör: üniversite,</text>
+<text x="1055" y="190" font-size="17" fill="#3b0764" text-anchor="middle">askerlik, uykusuzluk</text>
+<line x1="1055" y1="214" x2="1055" y2="238" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#ok)"/>
+<circle cx="1055" cy="246" r="6" fill="#7c3aed" stroke="#3b0764" stroke-width="1.5"/>
+<path d="M1080 220 l8 18 l20 2 l-15 13 l5 20 l-18 -11 l-18 11 l5 -20 l-15 -13 l20 -2 z" stroke="#b91c1c" stroke-width="2" fill="#fecaca" stroke-linecap="round"/>
+<rect x="30" y="572" width="560" height="182" rx="18" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+<text x="52" y="606" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">B · Aynı stresör, farklı sonuç</text>
+<line x1="60" y1="712" x2="300" y2="712" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<line x1="60" y1="636" x2="296" y2="636" stroke="#b91c1c" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M60 700 C140 700 170 668 200 668 C230 668 250 690 296 690" stroke="#16a34a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M60 676 C140 676 170 622 200 622 C230 622 250 630 296 628" stroke="#7c3aed" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="64" y="740" font-size="17" fill="#475569" text-anchor="start">zaman (stresör ortada)</text>
+<text x="316" y="636" font-size="17" fill="#1e293b" text-anchor="start">Mor: yatkın kişi, stresör</text>
+<text x="316" y="658" font-size="17" fill="#1e293b" text-anchor="start">eşiği aşar. Yeşil: yatkın</text>
+<text x="316" y="680" font-size="17" fill="#1e293b" text-anchor="start">olmayan kişi aynı</text>
+<text x="316" y="702" font-size="17" fill="#1e293b" text-anchor="start">değişikliğe uyum sağlar.</text>
+<rect x="610" y="572" width="560" height="182" rx="18" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+<text x="632" y="606" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">C · Klinik sonuç</text>
+<circle cx="639" cy="633" r="4.5" fill="#334155"/>
+<text x="652" y="638" font-size="17" fill="#1e293b" text-anchor="start">Ailede hastalık öyküsü ve genç yaşta davranış</text>
+<text x="652" y="660" font-size="17" fill="#1e293b" text-anchor="start">değişikliği hekimin şüphesini artırır.</text>
+<circle cx="639" cy="683.2" r="4.5" fill="#334155"/>
+<text x="652" y="688" font-size="17" fill="#1e293b" text-anchor="start">Hastalık başladıktan sonra tek nedene bağlanamaz;</text>
+<text x="652" y="710" font-size="17" fill="#1e293b" text-anchor="start">yakınların “neden oldu” sorusuna kesin yanıt yoktur.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 6–11 · şizofreni, kanser gibi çoklu vuruş hastalığı olarak düşünülür</text>
 </svg>

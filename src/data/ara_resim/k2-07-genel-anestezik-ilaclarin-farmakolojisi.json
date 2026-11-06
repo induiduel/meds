@@ -1,148 +1,163 @@
 {
- "key": "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
- "resimler": [
-  {
-   "id": "r01",
-   "baslik": "GABA-A kanalı: barbitürat süreyi, benzodiazepin sıklığı artırır",
-   "aciklama": "Aynı klorür kanalında iki ilaç grubunun farklı etkisi; ikisi de nöronu hiperpolarize eder.",
-   "adimlar": [
-    "1. Benzodiazepin kanalı daha sık açtırır.",
-    "2. Barbitürat kanalı daha uzun açık tutar.",
-    "3. İkisinde de klorür girer, nöron hiperpolarize olur ve bilinç kapanır."
-   ],
-   "svg": "r01.svg",
-   "paragraf": 12,
-   "bitis": 12,
-   "kaynak": [
-    13,
-    17,
-    33
-   ]
-  },
-  {
-   "id": "r02",
-   "baslik": "Redistribüsyon: etki biter, ilaç vücutta kalır",
-   "aciklama": "Damar içi anesteziğin beyinden kas ve yağ dokusuna dağılarak etkisini yitirmesi.",
-   "adimlar": [
-    "1. İlaç damardan hızla verilir.",
-    "2. Kanı bol olan beyne gider, bilinç kapanır.",
-    "3. Kanı az olan kas ve yağ dokusuna dağılır.",
-    "4. Kan ve beyin düzeyi düşer, etki biter.",
-    "5. İlaç vücutta kalır; tekrarlanan dozda birikir."
-   ],
-   "svg": "r02.svg",
-   "paragraf": 14,
-   "bitis": 14,
-   "kaynak": [
-    15
-   ]
-  },
-  {
-   "id": "r03",
-   "baslik": "İnhaler ajanda güç ve hız: MAK ile kan-gaz katsayısı",
-   "aciklama": "İki ölçü de ters okunur: küçük değer güçlü ya da hızlı ajanı gösterir.",
-   "adimlar": [
-    "1. MAK gücü gösterir: hastaların yarısında yanıtı önleyen alveoler konsantrasyon; küçük MAK, güçlü ilaç.",
-    "2. Kan-gaz katsayısı hızı gösterir: küçük katsayı, hızlı indüksiyon ve uyanma.",
-    "3. Katsayı sırası: desfluran, sevofluran, izofluran, halotan."
-   ],
-   "svg": "r03.svg",
-   "paragraf": 23,
-   "bitis": 23,
-   "kaynak": [
-    24
-   ]
-  },
-  {
-   "id": "r04",
-   "baslik": "Azot protoksit: ikinci gaz etkisi ve difüzyon hipoksisi",
-   "aciklama": "Gaz verilirken alveolden kana geçip yanındaki ajanın alımını hızlandırır, kesilince kandan alveole dönüp oksijeni seyreltir.",
-   "adimlar": [
-    "1. Verirken azot protoksit alveolden kana hızla geçer.",
-    "2. Alveolde kalan ikinci ajan yoğunlaşır, alımı hızlanır.",
-    "3. Keserken azot protoksit kandan alveole döner ve oksijeni seyreltir.",
-    "4. Önlem: saf oksijenle beş on dakika ventilasyon.",
-    "5. Hava içeren kapalı boşluklar genişler."
-   ],
-   "svg": "r04.svg",
-   "paragraf": 28,
-   "bitis": 28,
-   "kaynak": [
-    29
-   ]
-  },
-  {
-   "id": "r05",
-   "baslik": "Sinirden kasa iletim: dört adım",
-   "aciklama": "Asetilkolinin salınmasından yıkılmasına kadar nöromüsküler iletimin basamakları.",
-   "adimlar": [
-    "1. Sinir ucundan asetilkolin salınır.",
-    "2. Asetilkolin nikotinik reseptöre bağlanır, uç plak uyarılır.",
-    "3. Kalsiyum salınır, kas kasılır.",
-    "4. Asetilkolinesteraz asetilkolini yıkar, uyarı biter."
-   ],
-   "svg": "r05.svg",
-   "paragraf": 36,
-   "bitis": 36,
-   "kaynak": [
-    37,
-    38
-   ]
-  },
-  {
-   "id": "r06",
-   "baslik": "Depolarizan ve non-depolarizan blok: asetilkolin artınca ne olur",
-   "aciklama": "İki blok türünün mekanizması ve asetilkolin artışına verdikleri zıt yanıt.",
-   "adimlar": [
-    "1. Süksinilkolin reseptörü açar ve açık bırakır.",
-    "2. Kürar tipi blokör asetilkolinle yarışır, reseptörü açmaz.",
-    "3. Asetilkolin artarsa depolarizan blok kötüleşir.",
-    "4. Asetilkolin artarsa non-depolarizan blok çözülür."
-   ],
-   "svg": "r06.svg",
-   "paragraf": 39,
-   "bitis": 39,
-   "kaynak": [
-    39,
-    40
-   ]
-  },
-  {
-   "id": "r07",
-   "baslik": "Bloğu geri çevirmenin iki yolu: neostigmin ve sugammadex",
-   "aciklama": "Biri asetilkolini artırır, diğeri kas gevşeticiyi kandan toplar.",
-   "adimlar": [
-    "1. Neostigmin enzimi durdurur, asetilkolin birikir ve yarışı kazanır.",
-    "2. Muskarinik yan etkiler için atropin eklenir.",
-    "3. Sugammadex rokuronyumu sarar, kompleks idrarla atılır.",
-    "4. Sugammadexte muskarinik yan etki yoktur."
-   ],
-   "svg": "r07.svg",
-   "paragraf": 46,
-   "bitis": 47,
-   "kaynak": [
-    47,
-    48
-   ]
-  },
-  {
-   "id": "r08",
-   "baslik": "Premedikasyondan uyanmaya zincir ve çıkışın iki yolu",
-   "aciklama": "Anestezinin beş halkası ile uyanmayı sağlayan farmakokinetik ve farmakodinamik yollar; sugammadex reseptöre değil ilaca bağlanır.",
-   "adimlar": [
-    "1. Zincir: premedikasyon, indüksiyon, idame, antagonizma, uyanma.",
-    "2. Farmakokinetik yol: redistribüsyon ve klirensle ilaç azalır.",
-    "3. Farmakodinamik yol: nalokson ve flumazenil agonisti reseptörden yerinden eder.",
-    "4. Sugammadex kas gevşeticiyi kanda kapsüller.",
-    "5. İyi premedikasyon uyanma kalitesini baştan belirler."
-   ],
-   "svg": "r08.svg",
-   "paragraf": 54,
-   "bitis": 57,
-   "kaynak": [
-    53,
-    59
-   ]
-  }
- ]
+  "key": "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "GABA-A kanalı: barbitürat süreyi, benzodiazepin sıklığı artırır",
+      "aciklama": "Aynı klorür kanalında iki ilaç grubunun farklı etkisi; ikisi de nöronu hiperpolarize eder.",
+      "adimlar": [
+        "1. Benzodiazepin kanalı daha sık açtırır.",
+        "2. Barbitürat kanalı daha uzun açık tutar.",
+        "3. İkisinde de klorür girer, nöron hiperpolarize olur ve bilinç kapanır."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 12,
+      "bitis": 12,
+      "kaynak": [
+        13,
+        17,
+        33
+      ]
+    },
+    {
+      "id": "r02",
+      "baslik": "Redistribüsyon: etki biter, ilaç vücutta kalır",
+      "aciklama": "Damar içi anesteziğin beyinden kas ve yağ dokusuna dağılarak etkisini yitirmesi.",
+      "adimlar": [
+        "1. İlaç damardan hızla verilir.",
+        "2. Kanı bol olan beyne gider, bilinç kapanır.",
+        "3. Kanı az olan kas ve yağ dokusuna dağılır.",
+        "4. Kan ve beyin düzeyi düşer, etki biter.",
+        "5. İlaç vücutta kalır; tekrarlanan dozda birikir."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 14,
+      "bitis": 14,
+      "kaynak": [
+        15
+      ]
+    },
+    {
+      "id": "r03",
+      "baslik": "İnhaler ajanda güç ve hız: MAK ile kan-gaz katsayısı",
+      "aciklama": "İki ölçü de ters okunur: küçük değer güçlü ya da hızlı ajanı gösterir.",
+      "adimlar": [
+        "1. MAK gücü gösterir: hastaların yarısında yanıtı önleyen alveoler konsantrasyon; küçük MAK, güçlü ilaç.",
+        "2. Kan-gaz katsayısı hızı gösterir: küçük katsayı, hızlı indüksiyon ve uyanma.",
+        "3. Katsayı sırası: desfluran, sevofluran, izofluran, halotan."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 23,
+      "bitis": 23,
+      "kaynak": [
+        24
+      ]
+    },
+    {
+      "id": "r04",
+      "baslik": "Azot protoksit: ikinci gaz etkisi ve difüzyon hipoksisi",
+      "aciklama": "Gaz verilirken alveolden kana geçip yanındaki ajanın alımını hızlandırır, kesilince kandan alveole dönüp oksijeni seyreltir.",
+      "adimlar": [
+        "1. Verirken azot protoksit alveolden kana hızla geçer.",
+        "2. Alveolde kalan ikinci ajan yoğunlaşır, alımı hızlanır.",
+        "3. Keserken azot protoksit kandan alveole döner ve oksijeni seyreltir.",
+        "4. Önlem: saf oksijenle beş on dakika ventilasyon.",
+        "5. Hava içeren kapalı boşluklar genişler."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 28,
+      "bitis": 28,
+      "kaynak": [
+        29
+      ]
+    },
+    {
+      "id": "r05",
+      "baslik": "Sinirden kasa iletim: dört adım",
+      "aciklama": "Asetilkolinin salınmasından yıkılmasına kadar nöromüsküler iletimin basamakları.",
+      "adimlar": [
+        "1. Sinir ucundan asetilkolin salınır.",
+        "2. Asetilkolin nikotinik reseptöre bağlanır, uç plak uyarılır.",
+        "3. Kalsiyum salınır, kas kasılır.",
+        "4. Asetilkolinesteraz asetilkolini yıkar, uyarı biter."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 36,
+      "bitis": 36,
+      "kaynak": [
+        37,
+        38
+      ]
+    },
+    {
+      "id": "r06",
+      "baslik": "Depolarizan ve non-depolarizan blok: asetilkolin artınca ne olur",
+      "aciklama": "İki blok türünün mekanizması ve asetilkolin artışına verdikleri zıt yanıt.",
+      "adimlar": [
+        "1. Süksinilkolin reseptörü açar ve açık bırakır; kas önce seğirir, sonra gevşer.",
+        "2. Non-depolarizan blokör asetilkolinle yarışır, reseptörü açmaz.",
+        "3. Asetilkolin artarsa depolarizan blok kötüleşir.",
+        "4. Asetilkolin artarsa non-depolarizan blok çözülür."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 39,
+      "bitis": 39,
+      "kaynak": [
+        39,
+        40
+      ]
+    },
+    {
+      "id": "r07",
+      "baslik": "Bloğu geri çevirmenin iki yolu: neostigmin ve sugammadex",
+      "aciklama": "Biri asetilkolini artırır, diğeri kas gevşeticiyi kandan toplar.",
+      "adimlar": [
+        "1. Neostigmin enzimi durdurur, asetilkolin birikir ve yarışı kazanır.",
+        "2. Muskarinik yan etkiler için atropin eklenir.",
+        "3. Sugammadex rokuronyumu sarar, kompleks idrarla atılır.",
+        "4. Sugammadexte muskarinik yan etki yoktur."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 46,
+      "bitis": 47,
+      "kaynak": [
+        47,
+        48
+      ]
+    },
+    {
+      "id": "r08",
+      "baslik": "Uyanmanın iki yolu ve uyanmayı gölgeleyen üç sorun",
+      "aciklama": "İlacın beyinden uzaklaşması ya da reseptörde terslenmesi ve uyanmayı geciktiren analjezi, sedasyon, kalıntı blok sorunları.",
+      "adimlar": [
+        "1. Redistribüsyonla ilaç beyinden yağ ve kasa dağılır.",
+        "2. Klirensle karaciğer ve böbrek yoluyla plazmadan uzaklaşır.",
+        "3. Nalokson ve flumazenil agonisti yerinden eder; sugammadex kas gevşeticiyi kanda sarar.",
+        "4. Yetersiz analjezi, uzamış sedasyon ve kalıntı blok uyanmayı gölgeler."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 54,
+      "bitis": 55,
+      "kaynak": [
+        53,
+        54
+      ]
+    },
+    {
+      "id": "r09",
+      "baslik": "Uyanmada ilaç etkileşimleri: sorun üst üste binmeden doğar",
+      "aciklama": "Sedatif, opioid ve benzodiazepinin solunumu birlikte baskılaması ve uyanma belirtilerinin ilaç ikililerinden kaynaklanması.",
+      "adimlar": [
+        "1. Sedatif, opioid ve benzodiazepin birlikte verilince solunum depresyonu katlanır.",
+        "2. Titreme, düzensiz solunum, salgı artışı ve hipotansiyon ilaç ikililerinden doğar.",
+        "3. Önlem: BİS izlemi, volatil ve opioid dozunu birlikte azaltmak, dörtlü uyarıyla kalıntı bloğu denetlemek."
+      ],
+      "svg": "r09.svg",
+      "paragraf": 56,
+      "bitis": 56,
+      "kaynak": [
+        58
+      ]
+    }
+  ]
 }

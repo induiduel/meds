@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <linearGradient id="akc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fecdd3"/><stop offset="1" stop-color="#fb7185"/></linearGradient>
+    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+    <linearGradient id="b2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#93c5fd"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="b3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#0d9488"/></linearGradient>
+    <marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <path id="battaniye" d="M0 0 C40 -14 80 14 120 0 S200 -14 240 0 S320 14 360 0 v26 C320 40 280 12 240 26 S160 40 120 26 S40 12 0 26 z"/>
+  </defs>
+  <rect width="1200" height="800" fill="url(#zemin)"/>
+  <text x="600" y="44" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f172a">Uyanmada ilaç etkileşimleri: sorun üst üste binmeden doğar</text>
+  <text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Kombine solunum depresyonu, belirtilerin kaynağı ve önlemler (slayt 58)</text>
+
+  <!-- PANEL A -->
+  <rect x="30" y="100" width="520" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Üst üste konan battaniyeler</text>
+  <!-- akciğerler -->
+  <path d="M190 470 C130 470 110 400 130 330 C145 280 180 260 205 270 C220 280 222 330 222 400 C222 450 215 470 190 470 z" fill="url(#akc)" stroke="#be123c" stroke-width="2.5"/>
+  <path d="M350 470 C410 470 430 400 410 330 C395 280 360 260 335 270 C320 280 318 330 318 400 C318 450 325 470 350 470 z" fill="url(#akc)" stroke="#be123c" stroke-width="2.5"/>
+  <path d="M270 200 V255 M270 255 C255 262 240 268 222 290 M270 255 C285 262 300 268 318 290" stroke="#9f1239" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M222 300 C200 320 185 340 175 370 M200 330 C185 340 170 350 160 360 M318 300 C340 320 355 340 365 370 M340 330 C355 340 370 350 380 360" stroke="#9f1239" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="160" cy="395" r="9" fill="#ffe4e6" stroke="#be123c" stroke-width="1.5"/><circle cx="185" cy="425" r="9" fill="#ffe4e6" stroke="#be123c" stroke-width="1.5"/><circle cx="380" cy="395" r="9" fill="#ffe4e6" stroke="#be123c" stroke-width="1.5"/><circle cx="355" cy="425" r="9" fill="#ffe4e6" stroke="#be123c" stroke-width="1.5"/>
+  <use href="#battaniye" x="90" y="166" fill="url(#b3)" stroke="#115e59" stroke-width="2" opacity="0.92"/>
+  <use href="#battaniye" x="90" y="206" fill="url(#b2)" stroke="#1e3a8a" stroke-width="2" opacity="0.92"/>
+  <use href="#battaniye" x="90" y="246" fill="url(#b1)" stroke="#4c1d95" stroke-width="2" opacity="0.92"/>
+  <text x="270" y="186" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">benzodiazepin</text>
+  <text x="270" y="226" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">opioid</text>
+  <text x="270" y="266" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">sedatif</text>
+  <text x="270" y="420" text-anchor="middle" font-size="17" fill="#881337" font-weight="bold">solunum</text>
+  <text x="270" y="442" text-anchor="middle" font-size="17" fill="#881337">baskılanır</text>
+  <text x="54" y="508" font-size="17" fill="#1e293b">Depresyon birbirini katlayarak artar; tek tek güvenli</text>
+  <text x="54" y="532" font-size="17" fill="#1e293b">dozlar birlikte verildiğinde ciddi risk taşıyabilir.</text>
+  <text x="54" y="556" font-size="17" fill="#475569">Titrasyon kombinasyonun bütün etkisine göre yapılır.</text>
+
+  <!-- PANEL B -->
+  <rect x="570" y="100" width="600" height="470" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="594" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Belirti ve ardındaki ikili</text>
+  <g font-size="17">
+    <rect x="594" y="160" width="190" height="72" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="689" y="202" text-anchor="middle" font-weight="bold" fill="#0c4a6e">Titreme</text>
+    <path d="M790 196 C810 186 830 186 850 196" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+    <text x="862" y="190" fill="#1e293b">ısı kaybı +</text>
+    <text x="862" y="214" fill="#1e293b">opioid-inhaler etkileşimi</text>
+    <rect x="594" y="256" width="190" height="72" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="689" y="288" text-anchor="middle" font-weight="bold" fill="#4c1d95">Düzensiz</text>
+    <text x="689" y="310" text-anchor="middle" font-weight="bold" fill="#4c1d95">solunum</text>
+    <path d="M790 292 C810 282 830 282 850 292" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+    <text x="862" y="286" fill="#1e293b">kalan blok +</text>
+    <text x="862" y="310" fill="#1e293b">sedatif</text>
+    <rect x="594" y="352" width="190" height="72" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="689" y="384" text-anchor="middle" font-weight="bold" fill="#78350f">Salgı artışı,</text>
+    <text x="689" y="406" text-anchor="middle" font-weight="bold" fill="#78350f">bulantı</text>
+    <path d="M790 388 C810 378 830 378 850 388" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+    <text x="862" y="382" fill="#1e293b">neostigminin muskarinik uyarısı</text>
+    <text x="862" y="406" fill="#1e293b">+ opioidin sindirim etkisi</text>
+    <rect x="594" y="448" width="190" height="72" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="689" y="490" text-anchor="middle" font-weight="bold" fill="#7f1d1d">Hipotansiyon</text>
+    <path d="M790 484 C810 474 830 474 850 484" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+    <text x="862" y="478" fill="#1e293b">propofol + opioid:</text>
+    <text x="862" y="502" fill="#1e293b">birlikte damar genişlemesi</text>
+  </g>
+  <text x="594" y="552" font-size="17" fill="#475569">Her belirti tek ilaçtan değil, iki etkenin birlikteliğinden doğar.</text>
+
+  <!-- PANEL C -->
+  <rect x="30" y="590" width="1140" height="190" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="626" font-size="22" font-weight="bold" fill="#0f172a">C · Önlem üç başlıktır</text>
+  <g font-size="17">
+    <rect x="54" y="646" width="350" height="86" rx="12" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="229" y="680" text-anchor="middle" font-weight="bold" fill="#164e63">BİS izlemi</text>
+    <text x="229" y="706" text-anchor="middle" fill="#164e63">aşırı sedasyondan kaçınılır</text>
+    <rect x="424" y="646" width="350" height="86" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="599" y="680" text-anchor="middle" font-weight="bold" fill="#4c1d95">Doz birlikte azaltılır</text>
+    <text x="599" y="706" text-anchor="middle" fill="#4c1d95">volatil ajan ve opioid</text>
+    <rect x="794" y="646" width="352" height="86" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+    <text x="970" y="680" text-anchor="middle" font-weight="bold" fill="#065f46">Dörtlü uyarı denetimi</text>
+    <text x="970" y="706" text-anchor="middle" fill="#065f46">kalıntı blok yakalanır</text>
+  </g>
+  <text x="600" y="764" text-anchor="middle" font-size="17" fill="#475569">Uyanmadaki solunum sorunları genellikle ilaçların üst üste binmesinden doğar.</text>
+</svg>

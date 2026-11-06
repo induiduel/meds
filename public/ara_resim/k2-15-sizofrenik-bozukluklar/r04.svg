@@ -1,22 +1,195 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 370" width="1000" height="370" font-family="DejaVu Sans, Noto Sans, Arial, sans-serif" role="img" aria-label="Süre ayrımı: 1 ay ve 6 ay eşikleri">
-<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2430"/></marker></defs>
-<rect x="0" y="0" width="1000" height="370" fill="#fbfaf6"/>
-<text x="500" y="52" font-size="32" fill="#1f2430" text-anchor="middle" font-weight="700">Süre ayrımı: 1 ay ve 6 ay eşikleri</text>
-<rect x="60" y="170" width="230" height="80" rx="12" fill="#3a9a5b33" stroke="#3a9a5b" stroke-width="3"/>
-<rect x="290" y="170" width="330" height="80" rx="12" fill="#b8901a33" stroke="#b8901a" stroke-width="3"/>
-<rect x="620" y="170" width="320" height="80" rx="12" fill="#8e3b5a33" stroke="#8e3b5a" stroke-width="3"/>
-<text x="175" y="220" font-size="26" fill="#3a9a5b" text-anchor="middle" font-weight="700">Kısa psikotik</text>
-<text x="455" y="220" font-size="26" fill="#b8901a" text-anchor="middle" font-weight="700">Şizofreniform</text>
-<text x="780" y="220" font-size="26" fill="#8e3b5a" text-anchor="middle" font-weight="700">Şizofreni</text>
-<line x1="60" y1="140" x2="60" y2="280" stroke="#1f2430" stroke-width="3" stroke-dasharray="6 5"/>
-<text x="60" y="130" font-size="24" fill="#1f2430" text-anchor="middle" font-weight="700">1 gün</text>
-<line x1="290" y1="140" x2="290" y2="280" stroke="#1f2430" stroke-width="3" stroke-dasharray="6 5"/>
-<text x="290" y="130" font-size="24" fill="#1f2430" text-anchor="middle" font-weight="700">1 ay</text>
-<line x1="620" y1="140" x2="620" y2="280" stroke="#1f2430" stroke-width="3" stroke-dasharray="6 5"/>
-<text x="620" y="130" font-size="24" fill="#1f2430" text-anchor="middle" font-weight="700">6 ay</text>
-<line x1="60" y1="305" x2="950" y2="305" stroke="#5b6170" stroke-width="2" marker-end="url(#ok)"/>
-<text x="950" y="292" font-size="20" fill="#5b6170" text-anchor="middle">süre</text>
-<text x="175" y="340" font-size="21" fill="#5b6170" text-anchor="middle">1 gün–1 ay</text>
-<text x="455" y="340" font-size="21" fill="#5b6170" text-anchor="middle">1–6 ay</text>
-<text x="780" y="340" font-size="21" fill="#5b6170" text-anchor="middle">6 ay ve üzeri</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="mor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd6fe"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="kirmizi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#f87171"/></linearGradient>
+<linearGradient id="mavi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+<linearGradient id="yesil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+<linearGradient id="turuncu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="beyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3"/><stop offset="1" stop-color="#f9a8d4"/></linearGradient>
+<radialGradient id="soma" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#6366f1"/></radialGradient>
+<radialGradient id="dop" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#eab308"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="kisi"><circle cx="0" cy="-58" r="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/><path d="M-30 0 C-30 -30 -18 -36 0 -36 C18 -36 30 -30 30 0 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/></g>
+<g id="noron"><path d="M0 -14 C-10 -30 -18 -40 -34 -52 M0 -14 C8 -32 14 -42 30 -56 M-12 4 C-30 8 -44 4 -58 10 M12 4 C30 10 42 6 56 14 M0 14 C2 34 0 60 4 90" stroke="#4338ca" stroke-width="3" fill="none" stroke-linecap="round"/><circle r="16" fill="url(#soma)" stroke="#3730a3" stroke-width="2"/></g>
+<g id="sinaps"><circle r="4" fill="#f59e0b" stroke="#b45309" stroke-width="1"/></g>
+<g id="da"><circle r="7" fill="url(#dop)" stroke="#a16207" stroke-width="1.2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" fill="#0f172a" text-anchor="middle" font-weight="bold">Süre ayrımı: bir ay ve altı ay eşikleri</text>
+<text x="600" y="76" font-size="19" fill="#475569" text-anchor="middle">Belirti süresi cetveli · vaka çözme adımları · ilk psikozda dışlama (slayt 18)</text>
+<rect x="30" y="96" width="1140" height="340" rx="18" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+<text x="52" y="130" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">A · Süre cetveli: iki eşik çizgisi üç tanıyı ayırır</text>
+<rect x="80" y="230" width="1050" height="54" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+<rect x="120" y="234" width="300" height="46" fill="url(#yesil)"/>
+<rect x="420" y="234" width="360" height="46" fill="url(#turuncu)"/>
+<rect x="780" y="234" width="346" height="46" fill="url(#mor)"/>
+<line x1="80" y1="230" x2="80" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="90" y1="230" x2="90" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="100" y1="230" x2="100" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="110" y1="230" x2="110" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="120" y1="230" x2="120" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="130" y1="230" x2="130" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="140" y1="230" x2="140" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="150" y1="230" x2="150" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="160" y1="230" x2="160" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="170" y1="230" x2="170" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="180" y1="230" x2="180" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="190" y1="230" x2="190" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="200" y1="230" x2="200" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="210" y1="230" x2="210" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="220" y1="230" x2="220" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="230" y1="230" x2="230" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="240" y1="230" x2="240" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="250" y1="230" x2="250" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="260" y1="230" x2="260" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="270" y1="230" x2="270" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="280" y1="230" x2="280" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="290" y1="230" x2="290" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="300" y1="230" x2="300" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="310" y1="230" x2="310" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="320" y1="230" x2="320" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="330" y1="230" x2="330" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="340" y1="230" x2="340" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="350" y1="230" x2="350" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="360" y1="230" x2="360" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="370" y1="230" x2="370" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="380" y1="230" x2="380" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="390" y1="230" x2="390" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="400" y1="230" x2="400" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="410" y1="230" x2="410" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="420" y1="230" x2="420" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="430" y1="230" x2="430" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="440" y1="230" x2="440" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="450" y1="230" x2="450" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="460" y1="230" x2="460" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="470" y1="230" x2="470" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="480" y1="230" x2="480" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="490" y1="230" x2="490" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="500" y1="230" x2="500" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="510" y1="230" x2="510" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="520" y1="230" x2="520" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="530" y1="230" x2="530" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="540" y1="230" x2="540" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="550" y1="230" x2="550" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="560" y1="230" x2="560" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="570" y1="230" x2="570" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="580" y1="230" x2="580" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="590" y1="230" x2="590" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="600" y1="230" x2="600" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="610" y1="230" x2="610" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="620" y1="230" x2="620" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="630" y1="230" x2="630" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="640" y1="230" x2="640" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="650" y1="230" x2="650" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="660" y1="230" x2="660" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="670" y1="230" x2="670" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="680" y1="230" x2="680" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="690" y1="230" x2="690" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="700" y1="230" x2="700" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="710" y1="230" x2="710" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="720" y1="230" x2="720" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="730" y1="230" x2="730" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="740" y1="230" x2="740" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="750" y1="230" x2="750" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="760" y1="230" x2="760" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="770" y1="230" x2="770" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="780" y1="230" x2="780" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="790" y1="230" x2="790" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="800" y1="230" x2="800" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="810" y1="230" x2="810" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="820" y1="230" x2="820" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="830" y1="230" x2="830" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="840" y1="230" x2="840" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="850" y1="230" x2="850" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="860" y1="230" x2="860" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="870" y1="230" x2="870" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="880" y1="230" x2="880" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="890" y1="230" x2="890" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="900" y1="230" x2="900" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="910" y1="230" x2="910" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="920" y1="230" x2="920" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="930" y1="230" x2="930" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="940" y1="230" x2="940" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="950" y1="230" x2="950" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="960" y1="230" x2="960" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="970" y1="230" x2="970" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="980" y1="230" x2="980" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="990" y1="230" x2="990" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1000" y1="230" x2="1000" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1010" y1="230" x2="1010" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1020" y1="230" x2="1020" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1030" y1="230" x2="1030" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="1040" y1="230" x2="1040" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1050" y1="230" x2="1050" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1060" y1="230" x2="1060" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1070" y1="230" x2="1070" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1080" y1="230" x2="1080" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="1090" y1="230" x2="1090" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1100" y1="230" x2="1100" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1110" y1="230" x2="1110" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1120" y1="230" x2="1120" y2="238" stroke="#334155" stroke-width="1.2"/>
+<line x1="1130" y1="230" x2="1130" y2="244" stroke="#334155" stroke-width="1.2"/>
+<line x1="120" y1="190" x2="120" y2="300" stroke="#b91c1c" stroke-width="3"/>
+<text x="120" y="180" font-size="19" fill="#b91c1c" text-anchor="middle" font-weight="bold">1 gün</text>
+<line x1="420" y1="190" x2="420" y2="300" stroke="#b91c1c" stroke-width="3"/>
+<text x="420" y="180" font-size="19" fill="#b91c1c" text-anchor="middle" font-weight="bold">1 ay (4 hafta)</text>
+<line x1="780" y1="190" x2="780" y2="300" stroke="#b91c1c" stroke-width="3"/>
+<text x="780" y="180" font-size="19" fill="#b91c1c" text-anchor="middle" font-weight="bold">6 ay</text>
+<path d="M1060 300 C1090 300 1110 300 1140 300" stroke="#4c1d95" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="270" y="266" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">bir günden bir aya</text>
+<text x="600" y="266" font-size="18" fill="#7c2d12" text-anchor="middle" font-weight="bold">bir ile altı ay arası</text>
+<text x="955" y="266" font-size="18" fill="#3b0764" text-anchor="middle" font-weight="bold">altı ay ve üzeri</text>
+<text x="270" y="330" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">Kısa psikotik bozukluk ya da</text>
+<text x="270" y="353" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">başka türlü</text>
+<text x="270" y="377" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">sınıflandırılmayan psikotik</text>
+<text x="270" y="400" font-size="18" fill="#14532d" text-anchor="middle" font-weight="bold">bozukluk</text>
+<text x="600" y="330" font-size="18" fill="#7c2d12" text-anchor="middle" font-weight="bold">Şizofreniform bozukluk</text>
+<text x="955" y="330" font-size="18" fill="#3b0764" text-anchor="middle" font-weight="bold">Şizofreni</text>
+<rect x="30" y="452" width="560" height="302" rx="18" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+<text x="52" y="486" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">B · Vaka sorusunda iki adım</text>
+<rect x="70" y="520" width="120" height="110" rx="10" fill="#fff" stroke="#334155" stroke-width="2"/>
+<rect x="70" y="520" width="120" height="28" rx="10" fill="#c4b5fd" stroke="#334155" stroke-width="2"/>
+<circle cx="88" cy="570" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="116" cy="570" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="144" cy="570" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="172" cy="570" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="88" cy="592" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="116" cy="592" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="144" cy="592" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="172" cy="592" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="88" cy="614" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="116" cy="614" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="144" cy="614" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<circle cx="172" cy="614" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+<path d="M200 575 C240 575 250 575 280 575" stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#ok)"/>
+<text x="296" y="548" font-size="17" fill="#1e293b" text-anchor="start">1. Belirtiler kaç gündür ya</text>
+<text x="296" y="570" font-size="17" fill="#1e293b" text-anchor="start">da kaç aydır sürüyor? Önce</text>
+<text x="296" y="592" font-size="17" fill="#1e293b" text-anchor="start">süreyi bul.</text>
+<text x="296" y="640" font-size="17" fill="#1e293b" text-anchor="start">2. Süreyi cetvele yerleştir:</text>
+<text x="296" y="662" font-size="17" fill="#1e293b" text-anchor="start">bir ay ve altı ay eşiklerine</text>
+<text x="296" y="684" font-size="17" fill="#1e293b" text-anchor="start">göre tanıyı seç.</text>
+<path d="M240 610 C240 660 260 680 280 680" stroke="#334155" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="7 6"/>
+<rect x="610" y="452" width="560" height="302" rx="18" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+<text x="632" y="486" font-size="21" fill="#0f172a" text-anchor="start" font-weight="bold">C · İlk psikozda hemen şizofreni denmez</text>
+<path d="M640.4 625.6 C630.0 578.8 671.6 532.0 739.2 526.8 C801.6 521.6 869.2 547.6 884.8 599.6 C892.6 630.8 874.4 656.8 843.2 659.4 C817.2 662.0 791.2 651.6 770.4 667.2 C749.6 682.8 713.2 682.8 697.6 662.0 C676.8 651.6 648.2 656.8 640.4 625.6 Z" stroke="#be185d" stroke-width="2.5" fill="url(#beyin)" stroke-linecap="round"/>
+<path d="M822.4 662.0 C838.0 657.8 877.0 659.4 874.4 680.2 C869.2 698.4 832.8 698.4 819.8 682.8 C814.6 675.0 816.2 665.1 822.4 662.0 Z" stroke="#be185d" stroke-width="2" fill="#fbcfe8" stroke-linecap="round"/>
+<path d="M700 590 C720 570 750 600 770 580" stroke="#9d174d" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M780 620 C800 600 820 630 840 610" stroke="#9d174d" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="810" cy="600" r="10" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<line x1="818" y1="594" x2="900" y2="540" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="906" y="520" font-size="17" fill="#7f1d1d" text-anchor="start" font-weight="bold">Dışlanacaklar:</text>
+<circle cx="911" cy="543" r="4.5" fill="#334155"/>
+<text x="924" y="548" font-size="17" fill="#1e293b" text-anchor="start">madde kullanımı</text>
+<circle cx="911" cy="569.1" r="4.5" fill="#334155"/>
+<text x="924" y="574" font-size="17" fill="#1e293b" text-anchor="start">tümör</text>
+<circle cx="911" cy="595.2" r="4.5" fill="#334155"/>
+<text x="924" y="600" font-size="17" fill="#1e293b" text-anchor="start">kanama</text>
+<text x="640" y="712" font-size="17" fill="#1e293b" text-anchor="start">Önce bunlar dışlanır, gerekirse nörolojik inceleme</text>
+<text x="640" y="734" font-size="17" fill="#1e293b" text-anchor="start">istenir.</text>
+<text x="600" y="778" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 18 · altı aylık süre şizofreniyi iki komşu bozukluktan ayırır</text>
 </svg>
