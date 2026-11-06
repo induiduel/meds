@@ -9,7 +9,7 @@ import { CircleHelp, ClipboardList, ListChecks, Pause, Play, X } from 'lucide-re
 import { cdDurum, cdDuraklat } from './canliDersStore';
 import '../../styles/v15/ders_analizi.css';
 
-interface Madde { baslik?: string; metin: string; neden?: string; cevap?: string; s?: number[]; cikmis?: boolean }
+interface Madde { baslik?: string; metin: string; neden?: string; cevap?: string; aciklama?: string[]; ornek?: string; tuzak?: string; s?: number[]; cikmis?: boolean }
 interface Bolum { id: string; baslik: string; giris?: string; guven?: string; s?: number[]; cikmis?: boolean; maddeler: Madde[]; klip: string; v: string }
 export interface DersAnaliz {
   key: string; kod: string; brans: string; konu: string; ogretim_uyesi?: string;
@@ -118,6 +118,9 @@ export function CdDersAnaliz({ dersKey, baslangic = 'analiz', onKapat }: { dersK
                       {m.baslik && <b>{m.baslik}{m.cikmis && <em className="da-rozet">çıkmış</em>}</b>}
                       <span>{m.metin}</span>
                       {m.cevap && <span className="da-cevap">Cevap: {m.cevap}</span>}
+                      {m.aciklama?.length ? <div className="da-aciklama">{m.aciklama.map((a, k) => <p key={k}>{a}</p>)}</div> : null}
+                      {m.ornek && <p className="da-ornek"><b>Örnek:</b> {m.ornek}</p>}
+                      {m.tuzak && <p className="da-tuzak"><b>Tuzak:</b> {m.tuzak}</p>}
                       {m.neden && <small className="da-neden">{m.neden}</small>}
                       {m.s?.length ? <small className="da-sayfa">{sayfa(m.s)}</small> : null}
                     </li>

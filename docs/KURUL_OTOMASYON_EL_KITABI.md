@@ -488,6 +488,8 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
     çözücü bittikten SONRA onlardan derlenir (eksikse `ozetEksik`). `python3 scripts/ders_analizi/uret.py <key>` (LLM yok, 0 HATA;
     `turkce_uslup` kapısı içinde) → `src/data/ders_analizi/<key>.json`; EMA sesi `bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh
     meds/scripts/ders_analizi/ses.py <key>` → `data/k<N>dersanaliz_cozucu/ses/<kod>/` (git dışı, Oracle'a rsync). İçerik değişince ikisi yeniden koşulur.
+    **Ayrıntılı çıkmış analizi (2026-11-06, AGENTS 29):** `uret.py` öncesi `degerlendirme/cikmis_analiz.json` yazılır (her çıkmışa aciklama ≥3 cümle +
+    ornek + tuzak, genel eğilim `giris`); `--dogrula` eksikte HATA.
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
     ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
 11c. **Patoloji dersi ise hoca üslubu soru katmanı (ZORUNLU, 2026-10-29):** `scripts/patoloji_soru_isci/hazirla.py` + `TALIMAT.md` akışı; çıktı `src/data/hoca_uslubu_sorular/k2/<ders-id>.json` (derste ayrı "Hoca soruları" kartı); sesli hoca çözücü `cozucu_kur.py` (iskele → TALIMAT_COZUCU yazımı → dogrula → birlestir → EMA GPU `cozucu_ses_gpu.sh … ses.py --brans k2patolojihoca <kod>`); kapı `dogrula.py` 0 HATA. Kurallar `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (AGENTS.md kural 25).

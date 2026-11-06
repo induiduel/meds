@@ -1,18 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 662,
-  "baslik": "Sesli derslerde ara resimler ayrıntılı çizimlerle yenilendi",
+  "onem": 663,
+  "baslik": "Yeni ders: Bipolar Duygudurum Bozukluğu (sesli ders, önemliler, çözücü, ara sorular)",
   "maddeler": [
-    "Ara resimler: Şizofreni, Bipolar, Bazal ganglionlar, Periferik nöropati, Nörolojik rehabilitasyon ve Genel anestezik derslerinin mekanizma resimleri baştan çizildi; yapılar (zar, sinaps, beyin kesiti, sinir, refleks yayı) etiketli ve panelli.",
-    "Yeni resimler: slaytta resmi olmayan mekanizma ve aşamalar için 23 yeni ara resim eklendi.",
-    "Hareketli resim: ara resimler artık animasyon (Lottie) da gösterebiliyor."
+    "Bipolar Duygudurum Bozukluğu: sesli ders (hocanın örnekleri ve vurgularıyla), en önemliler, sesli soru çözücü, hocanın sorabileceği ara sorular, ders içerik paketi ve quiz eklendi.",
+    "Ders analizi: çıkmış sorular artık tek tek açıklanıyor — sorunun ölçtüğü kavram, doğru cevabın dayanağı, en güçlü çeldiricinin neden yanlış olduğu, örnek ve tuzak."
   ],
   "eklenen": [
-    "Yeni resimler: slaytta resmi olmayan mekanizma ve aşamalar için 23 yeni ara resim eklendi.",
-    "Hareketli resim: ara resimler artık animasyon (Lottie) da gösterebiliyor."
+    "Bipolar Duygudurum Bozukluğu: sesli ders (hocanın örnekleri ve vurgularıyla), en önemliler, sesli soru çözücü, hocanın sorabileceği ara sorular, ders içerik paketi ve quiz eklendi."
   ],
   "degisen": [
-    "Ara resimler: Şizofreni, Bipolar, Bazal ganglionlar, Periferik nöropati, Nörolojik rehabilitasyon ve Genel anestezik derslerinin mekanizma resimleri baştan çizildi; yapılar (zar, sinaps, beyin kesiti, sinir, refleks yayı) etiketli ve panelli."
+    "Ders analizi: çıkmış sorular artık tek tek açıklanıyor — sorunun ölçtüğü kavram, doğru cevabın dayanağı, en güçlü çeldiricinin neden yanlış olduğu, örnek ve tuzak."
   ],
   "duzeltilen": [],
   "silinen": [],

@@ -106,6 +106,11 @@ def cikmislar(key: str) -> list[dict]:
     return [x for x in q if x.get("dogrulandi")]
 
 
+def cikmis_analizi(key: str) -> dict:
+    f = KOK / "meds_database_v2/ders_bilgi" / key / "degerlendirme/cikmis_analiz.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+
+
 def profil(ders_ad: str, kisa: str, konu: str) -> tuple[dict, dict | None, str]:
     from profil_oku import konu_bul, profil_yukle
 
@@ -125,6 +130,11 @@ def ses_metni(b: dict) -> list[str]:
         c.append(nokta(f"{m['baslik']}: {m['metin']}" if m.get("baslik") else m["metin"]))
         if m.get("cevap"):
             c.append(nokta(f"Cevap: {m['cevap']}"))
+        c += [nokta(a) for a in m.get("aciklama", [])]
+        if m.get("ornek"):
+            c.append(nokta(f"Örnek: {m['ornek']}"))
+        if m.get("tuzak"):
+            c.append(nokta(f"Tuzak: {m['tuzak']}"))
     return c
 
 
@@ -158,9 +168,20 @@ def analiz_kur(key, d, b, paket, onem, basliklar, cik, prf) -> list[dict]:
                          "giris": f"Bu dersin konusundan doğrulanmış {len(cik)} çıkmış soru var.",
                          "maddeler": [{"baslik": ({"Hatırlanan": "Öğrenci hatırlaması"}.get(sade(str(x.get('yil', ''))), sade(str(x.get('yil', '')))) or None), "metin": sade(x["kok"]),
                                        "cevap": sade(x.get("cevap", "")), "s": [x["s"]] if x.get("s") else []} for x in cik]})
-        for m in bolumler[-1]["maddeler"]:
+        # Ayrıntılı çıkmış analizi (ZORUNLU, 2026-11-06): degerlendirme/cikmis_analiz.json — soru başına
+        # aciklama (ne soruldu, kavram, neden bu cevap, çeldiriciler), ornek (pekiştiren klinik/ders örneği), tuzak
+        ca = cikmis_analizi(key)
+        if ca.get("giris"):
+            bolumler[-1]["giris"] = sade(ca["giris"])
+        for m, x in zip(bolumler[-1]["maddeler"], cik):
             if m["baslik"] is None:
                 m.pop("baslik")
+            e = ca.get("sorular", {}).get(str(x.get("id")))
+            if e:
+                m["aciklama"] = [sade(a) for a in e.get("aciklama", []) if sade(a)]
+                for k in ("ornek", "tuzak"):
+                    if e.get(k):
+                        m[k] = sade(e[k])
     else:
         bolumler.append({"id": "cikmis", "baslik": "Çıkmış sorularda ne soruldu",
                          "giris": "Bu dersin konusuyla doğrulanmış bir çıkmış soru eşlemesi henüz yok.", "maddeler": []})
@@ -274,6 +295,14 @@ def dogrula(key: str) -> list[str]:
     var = {b["id"] for b in o["analiz"]}
     if gerekli - var:
         hata.append(f"eksik analiz bölümü: {sorted(gerekli - var)}")
+    # Ayrıntılı çıkmış analizi kapısı (2026-11-06, H-cikmis-analiz): 2026-11-06 sonrası her derste her çıkmış maddesi
+    # ≥3 cümlelik aciklama + ornek taşır (kural: KURUL_OTOMASYON_EL_KITABI §11d, AGENTS 21)
+    if (KOK / "meds_database_v2/ders_bilgi" / key / "degerlendirme/cikmis_analiz.json").exists() or o.get("_cikmisAnalizZorunlu"):
+        for b in o["analiz"]:
+            if b["id"] == "cikmis":
+                for i, m in enumerate(b["maddeler"]):
+                    if len(m.get("aciklama", [])) < 3 or not m.get("ornek"):
+                        hata.append(f"çıkmış {i+1}: ayrıntılı analiz eksik (aciklama ≥3 cümle + ornek)")
     for ad in ("analiz", "ozet"):
         for b in o.get(ad) or []:
             if not b.get("ses") or not all(c.strip() for c in b["ses"]):

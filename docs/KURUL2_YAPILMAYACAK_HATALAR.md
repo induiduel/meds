@@ -2284,3 +2284,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** (1) başlık-geri yalnız kabuk üst barındaki `.v15-top-h.is-geri`'ye bağlıydı; sesli ders odak ekranı kabuk barını çizmez, kendi `.cd15-baslik`'ını çizer → işleyici yoktu. (2) Alt "‹ Geri" hapı yalnız pencere kipi algılanınca (`data-pencere="dar"`) ya da 2 yedek kullanımdan sonra çıkıyordu; tam ekran Safari'de algı tutmadığı için hiç görünmüyordu.
 - **Çözüm:** `shell/ipadPencere.tsx` — iPad'de `.cd15-baslik` tıklaması `geriTetikle()`; hap iPad'de her zaman (geri varken) gösterilir.
 - **Kural:** Geri yolu eklerken odak ekranlarını (kabuk dışı başlıklar) ayrıca kapsa; "algılanırsa göster" türü güvenlik yollarını algının başarısız olduğu durumda da sına.
+
+### H508 — Drive'daki ses dosyasının adı başka dersi gösteriyordu: "TSSB Psikaytr 2" aslında EKT (Tedaviler) dersinin başıydı (2026-11-06)
+- **Belirti:** Kullanıcı "psikiyatri için bazı derslerden ikişer ses var" dedi; TSSB iki kayıt birleştirildi, k2-20 (Tedaviler) ise s1–7 için "kayıtta yok" görünüyordu.
+- **Kök neden:** Öğrenci Drive'ında dosya adı içerikle eşleştirilmeden derse bağlandı (ad = "TSSB … 2"). Döküm hizalanınca 2. kaydın EKT tarihçe/etki kuramları/hazırlık/endikasyon anlattığı ve TSSB slaytlarının hiçbirine düşmediği görüldü; k2-20 ana kaydı s8 sonundan başlıyordu.
+- **Kalıcı çözüm:** 2. kayıt k2-20'nin başı ("ek" kayıt, s1–8) olarak hizalandı; TSSB yalnız 1. kayıttan işlendi.
+- **Önleme:** Ses dosyası, PDF gibi, **içerikle** eşleşir (KURUL2_DERS_STANDARDI §1): hizada slayta düşmeyen ≥3 dk'lık blok "ders dışı" işaretlenir ve aynı kurulun diğer derslerinin slaytlarıyla karşılaştırılır; bir dersin başı/sonu sessizse öbür kayıtlar o derse ait olabilir diye taranır.

@@ -40,3 +40,8 @@
   .da { max-height: none; border-radius: 0; }
   .da-bas, .da-arac, .da-govde { padding-left: 16px; padding-right: 16px; }
 }
+
+.da-aciklama { margin-top: 6px; display: grid; gap: 4px; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.da-aciklama p, .da-ornek, .da-tuzak { margin: 0; }
+.da-ornek, .da-tuzak { margin-top: 6px; padding: 6px 10px; border-radius: 8px; font-size: 13px; line-height: 1.45; background: var(--color-surface-2); color: var(--color-ink-2); }
+.da-tuzak { border-left: 3px solid var(--color-warning, #c77700); }

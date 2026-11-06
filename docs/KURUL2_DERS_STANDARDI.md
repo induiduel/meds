@@ -56,6 +56,13 @@ Bir aşama ders için uygulanamıyorsa (ör. branşta çözücü yok) nedeni de�
 - Anlatımda "Bu bilgi çıkmış sınavda sorulmuştur" yalnız `seviye: dogrudan` eşlemede; "ilgili" eşleme vurgulanmaz.
 - Slayt sağ üstünde yanıp sönen **Çıkmış** chip'i: dokununca ses durur, soru normal/tam ekran çözülür, kaynak satırı ve
   **"Çıkmış sorularda aç"** düğmesi görünür; kapatınca ders aynı saniyeden sürer.
+- **Ayrıntılı çıkmış analizi (ZORUNLU, 2026-11-06, AGENTS 29):** ders analizinde her doğrulanmış çıkmış soru + cevapla
+  bırakılmaz; `degerlendirme/cikmis_analiz.json` ile her birine ≥3 cümlelik çözümleme (ölçülen kavram → doğru cevabın
+  slayttaki dayanağı → en güçlü çeldiricinin neden yanlış olduğu), hocanın örneği ya da slayt vakasıyla pekiştiren `ornek`
+  ve karıştırılan komşu kavramı söyleyen `tuzak` yazılır; `giris` tekrar eden alt başlıkları ve kök kalıbını özetler.
+  Kapı `scripts/ders_analizi/uret.py --dogrula <key>`.
+- **Öğrenci notu yoksa** çıkmış taraması iki geçişte yapılır (konu, anahtar terim, hoca adı; tüm yıllar); hoca sesindeki
+  vurgu ve örnekler önem listesine, anlatıma ve hoca vurgu katmanına eksiksiz girer. Derse ait birden çok ses varsa hepsi dökülür.
 
 ## 4. PDF üstü işaret, çizim ve zoom (H85 — kullanıcı kararı 2026-10-27)
 **Okumayı bozmamak her şeyin önündedir.**
@@ -115,6 +122,12 @@ Metinler slaytı özetlemekle kalmaz, **öğretir**. Kapılar biçimi ölçer; a
     yorumuna girmez", "yalnız adını verir", "… gösterilir" diye geçmek YASAK (`metin_denetle.py` HATA). Denetçi şekilli her sayfanın
     görüntüsüne bakıp panel panel kontrol eder.
 
+13. **Konu bütünlüğü, bağlamsız gönderme yasağı (H434, kullanıcı kararı 2026-10-28):** "bu hastalıkta", "bu durumda", "bu tümörde",
+    "burada", "bunlarda" gibi adsız göndermeler yeni paragraf/bölüm/slayt parçası başında YASAK. Derste birden çok hastalık/kavram
+    anlatılır; öğrenci hangisinin kastedildiğini karıştırır. Her yeni parça, hastalığı/kavramı **adıyla** anar ("Duchenne
+    müsküler distrofisinde…"); aynı paragrafın içinde art arda gönderme ancak konu o cümlede adıyla geçmişse serbesttir.
+    Parçalar arası geçişte konu değişiyorsa değiştiği söylenir. Metin sesli dinlendiği için ekran/önceki cümle hatırlanmaz.
+    Kapı: `metin_denetle.py` HATA; denetçi her paragrafı tek başına okuyup "hangi hastalık?" sorusunu yanıtlayabilmelidir.
 
 14. **Görsel yön kontrolü (H488, 2026-11-05):** fotoğraf/klinik görünüm/grafik anlatan her cümlede yazar ve denetçi sayfa
     görüntüsüne BAKAR; envanterin `gorsel_aciklama`sı tek başına dayanak değildir. Yön denetlenir: artış↔azalma (hipertoni↔hipotoni),

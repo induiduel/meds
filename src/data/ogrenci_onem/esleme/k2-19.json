@@ -1,0 +1,200 @@
+{
+ "_aciklama": "k2-19 doğrulanmış eşleme (H490, kapi.py)",
+ "kayitlar": [
+  {
+   "birim": "psk-s01-b01",
+   "tur": "anlatim",
+   "bilgi": "Siklotimi: = en az 2 yıl sürmeli, en fazla 2 ay iyi kalınabilmiş olmalı. kadın = erkek",
+   "cumle": [
+    "Tanı için tablo en az iki yıldır sürmeli ve bu sürede hasta en fazla iki ay sürekli iyi kalabilmelidir.",
+    "Siklotiminin yaşam boyu görülme sıklığı yaklaşık yüzde sıfır virgül dört ile bir arasındadır ve kadınlarla erkeklerde eşit yaygınlıktadır."
+   ],
+   "gerekce": "Siklotimi notunun üç parçası (en az iki yıl, en fazla iki ay iyi kalma, kadın = erkek) s.11 anlatımında iki cümlede birebir geçer.",
+   "anahtar": [
+    "siklotimi",
+    "en fazla"
+   ]
+  },
+  {
+   "birim": "psk-s01-b01",
+   "tur": "anlatim",
+   "bilgi": "Maddenin/İlacın Yol Açtığı Bipolar ve İlişkili Bozukluk: = Antidepresan/diğer tedaviyle ortaya çıkan ve ilacın fizyolojik etkisi süresince kalan duygudurum yükselmesi bipolar I/II sayılmaz (madde/ilaç kaynaklı bozukluk); ancak ilacın etkisinin ötesinde tam sendrom düzeyinde süren manik epizod DSM-5'te bipolar I tanısı için yeterlidir.",
+   "cumle": [
+    "Maddenin ya da ilacın yol açtığı bipolar bozuklukta, klinik tabloya egemen, kabarmış, taşkın ya da çabuk kızan, olağan dışı ve sürekli bir duygudurum dönemi vardır.",
+    "tablo bir antidepresandan sonra ve yalnızca ilacın fizyolojik etkisiyle ortaya çıktıysa bu tanı konmaz.",
+    "Buna karşılık tedavinin fizyolojik etkisinin ötesinde, sendrom düzeyinde süren tam bir hipomani dönemi hipomani tanısı için yeterli bir kanıttır."
+   ],
+   "gerekce": "Notun madde/ilaç kaynaklı bozukluk ayrımı s.12 anlatımında aynen var: yalnız fizyolojik etkiyle ortaya çıkan tablo bu tanıyı almaz, etkinin ötesinde sendrom düzeyinde süren dönem yeterli kanıttır (bu yılın slaytı hipomani der, anlatım slayta uyar).",
+   "anahtar": [
+    "fizyolojik",
+    "antidepresan"
+   ]
+  },
+  {
+   "birim": "psk-s01-b01",
+   "tur": "anlatim",
+   "bilgi": "Hipomani tanısı alan bir kişi için aşağıda verilenlerden hangisi/hangileri doğrudur? I. En az 4 gün sürmesi gerekir II. Psikotik belirtileri vardır III. Amaca yönelik davranışlarda belirgin bir artış IV. Ciddi meslekî işlev kaybı vardır → Yalnız I ve III",
+   "cumle": [
+    "majör depresyon dönemi en az iki hafta, hipomani dönemi en az dört gün sürmelidir.",
+    "Hipomanide belirtiler ılımlıdır; ağır işlev kaybı, hastaneye yatış ya da psikotik belirti varsa tablo artık hipomani değil, manidir."
+   ],
+   "gerekce": "Çıkmışın doğru öncülleri (en az dört gün, işlev kaybı/psikoz yok) s.10 anlatımında hipomani süresi ve hipomaniyi maniden ayıran şart olarak birebir anlatılır.",
+   "anahtar": [
+    "hipomani",
+    "psikotik"
+   ]
+  },
+  {
+   "birim": "psk-s01-b01",
+   "tur": "anlatim",
+   "bilgi": "Aşağıdakilerden hangisi Bipolar I bozuklukta görülen akut manik atağın tanısal özelliklerinden biri DEĞİLDİR? → Psikomotor retardasyon ve aşırı hipersomni",
+   "cumle": [
+    "Bu nedenle çıkmış sınavda manik nöbetin belirtisi olmayan seçenek hipersomni, yani aşırı uyku olarak sorulmuştur.",
+    "Manide psikomotor ajitasyon vardır; psikomotor yavaşlama ise maninin değil, depresyonun özelliğidir."
+   ],
+   "gerekce": "Çıkmışın cevabı (psikomotor yavaşlama ve hipersomni manide olmaz) s.29 anlatımında iki cümlede çıkmış vurgusuyla birebir geçer.",
+   "anahtar": [
+    "hipersomni",
+    "psikomotor"
+   ]
+  },
+  {
+   "birim": "psk-s01-b01",
+   "tur": "anlatim",
+   "bilgi": "En az 4 gün sürmesi gerekir. Amaca yönelik davranışlarda belirgin bir artış vardır.",
+   "cumle": [
+    "majör depresyon dönemi en az iki hafta, hipomani dönemi en az dört gün sürmelidir."
+   ],
+   "gerekce": "Hipomani için en az dört gün süre şartı s.10 anlatımında birebir geçer.",
+   "anahtar": [
+    "hipomani"
+   ]
+  },
+  {
+   "birim": "psk-s01-b09",
+   "tur": "anlatim",
+   "bilgi": "iii. Duygudurum (s21): coşkunluk, taşkınlık, aşırı güven. Kişinin davranışları engellenirse öfkelenir. Eleştiriye aşırı duyarlı. 2 mizaç arası sık oynamalar.",
+   "cumle": [
+    "manide mizaç öfori, coşkunluk, taşkınlık ve aşırı güvenle belirlenir.",
+    "Kişinin davranışları engellenirse tablo aniden öforiden öfke, kızgınlık ve huzursuzluğun ağır bastığı bir mizaca döner.",
+    "Bu hastalar eleştiriye aşırı duyarlıdır, kolay öfkelenir ve sıklıkla kavgacı olurlar.",
+    "Bipolar bozukluğun en önemli özelliklerinden biri de iki mizaç arasındaki oynamaların sık olmasıdır."
+   ],
+   "gerekce": "Notun duygudurum maddesi (coşkunluk, taşkınlık, aşırı güven, engellenince öfke, eleştiriye duyarlılık, iki mizaç arası oynama) s.21 anlatımında dört cümlede birebir var.",
+   "anahtar": [
+    "taşkınlık",
+    "eleştiriye"
+   ]
+  },
+  {
+   "birim": "psk-s01-b09",
+   "tur": "anlatim",
+   "bilgi": "iv. Bilişsel yetiler (s22): bazen uykusuzluğa bağlı delirium görülür (bilinç). Manik delirium dışında yönelim bozukluğu YOK. Bellekte artış. İstemli dikkat ↓, spontan dikkat ↑.",
+   "cumle": [
+    "beslenme bozukluğu ve uykusuzluk nedeniyle ileri derecede bitkin düşmüş manik hastalarda, manik tablonun üzerine binmiş bir delirium görülebilir.",
+    "manik delirium tablosu dışında manik hastada genellikle yönelim bozukluğu olmaz.",
+    "İstemli dikkat, kişinin kendi isteğiyle bir konuya yoğunlaşmasıdır; manik hastada istemli dikkat azalır.",
+    "Spontan dikkat ise çevredeki uyaranların dikkati kendiliğinden çekmesidir; manik hastada spontan dikkat artar."
+   ],
+   "gerekce": "Bilişsel yetiler notu (manik delirium, delirium dışında yönelim korunur, istemli dikkat azalır, spontan dikkat artar) s.22 anlatımında birebir geçer; bellekte artma da çıkmış cümlesinde anlatılır.",
+   "anahtar": [
+    "delirium",
+    "spontan dikkat"
+   ]
+  },
+  {
+   "birim": "psk-s01-b09",
+   "tur": "anlatim",
+   "bilgi": "Algı bozuklukları (s23): kısa süreli işitme-görme halüsinasyonları olabilir ⇒ psikotik mani",
+   "cumle": [
+    "Ağır manik hastaların yaklaşık yüzde yirmi beşinde, daha çok işitme ve görme halüsinasyonları olmak üzere, halüsinasyonlar bulunur.",
+    "Manideki halüsinasyonlar kısa süreli olma eğilimindedir ve hastayı bir şeyler yapmaya zorlamaz."
+   ],
+   "gerekce": "Kısa süreli işitme ve görme halüsinasyonları s.23 anlatımında birebir geçer.",
+   "anahtar": [
+    "halüsinasyon",
+    "kısa süreli"
+   ]
+  },
+  {
+   "birim": "psk-s01-b09",
+   "tur": "anlatim",
+   "bilgi": "v. Düşünce (s24): düşünce akışında hızlanma (düşünce süreci); düşünce içerikleri: büyük işlerin peşinde koşma, kendini süper, üstün görme, yeteneklerin abartılması",
+   "cumle": [
+    "Düşünce sürecinde manik hastalarda düşünce akışında bir hızlanma görülür.",
+    "Manik hastanın düşünceleri büyük işlerin peşinde koşma tasarıları ve kişisel nitelik ve yeteneklerin abartılmasıyla yüklüdür."
+   ],
+   "gerekce": "Düşünce süreci (akışta hızlanma) ve içeriği (büyük işlerin peşinde koşma, yeteneklerin abartılması) s.24 anlatımında birebir geçer.",
+   "anahtar": [
+    "düşünce akış",
+    "abartılması"
+   ]
+  },
+  {
+   "birim": "psk-s01-b09",
+   "tur": "anlatim",
+   "bilgi": "YOK (yönelim bozukluğu)",
+   "cumle": [
+    "manik delirium tablosu dışında manik hastada genellikle yönelim bozukluğu olmaz."
+   ],
+   "gerekce": "Notun \"yönelim bozukluğu yok\" vurgusu s.22 anlatımında manik delirium dışında yönelim bozukluğu olmaz cümlesiyle birebir geçer.",
+   "anahtar": [
+    "yönelim bozukluğu"
+   ]
+  },
+  {
+   "birim": "psk-s01-b21",
+   "tur": "anlatim",
+   "bilgi": "Ayırıcı Tanı yıldızı",
+   "cumle": [
+    "Maniyi taklit edebilen durumlar ayırıcı tanı listesinde toplanır; ilki madde kötüye kullanımıdır, başta kokain ve amfetamin."
+   ],
+   "gerekce": "Notun Ayırıcı Tanı başlığına koyduğu yıldız s.34 anlatımında ayırıcı tanı listesinin başında madde kötüye kullanımıyla karşılanır.",
+   "anahtar": [
+    "ayırıcı tanı"
+   ]
+  },
+  {
+   "birim": "psk-s01-b29",
+   "tur": "slayt_disi",
+   "bilgi": "Tedavi: = stres engellenmeye çalışılır.",
+   "yok_terimler": [
+    "stres engellenmeye",
+    "engellenmeye çalışılır"
+   ],
+   "gerekce": "Bu yılın tedavi slaytında (s.41) stresin engellenmesine ilişkin madde yok; el notu slayt dışıdır, anlatıma girmez (kural 28)."
+  },
+  {
+   "birim": "psk-s01-b29",
+   "tur": "slayt_disi",
+   "bilgi": "Benzodiazepinler: = hastayı yatıştırmak için.",
+   "yok_terimler": [
+    "yatıştırmak",
+    "hastayı yatıştır"
+   ],
+   "gerekce": "Bu yılın slaytı benzodiazepinleri yalnız ilaç grubu olarak sayar; yatıştırma amacı slaytta yok, anlatıma girmez."
+  },
+  {
+   "birim": "psk-s01-b29",
+   "tur": "slayt_disi",
+   "bilgi": "Lityum, bupropion, venlafaksin Fluoksetin, paroksetin, lamotrijin Duygudurum dengele ",
+   "yok_terimler": [
+    "bupropion",
+    "venlafaksin",
+    "lamotrijin",
+    "paroksetin"
+   ],
+   "gerekce": "Geçmiş yıl çıkmışındaki bupropion, venlafaksin, fluoksetin, paroksetin ve lamotrijin bu yılın hiçbir slaytında geçmiyor; anlatım yalnız slayttaki lityum, valproik asit ve karbamazepin üçlüsünü verir."
+  },
+  {
+   "birim": "psk-s01-b27",
+   "tur": "slayt_disi",
+   "bilgi": "hastalık öncesi işlevsellik düzeyine dönülür: → atak sonrası iyileşildiğinde bile dikkatte azalma, eskisi gibi iyi akıl yürütememe görülür.",
+   "yok_terimler": [
+    "akıl yürütememe",
+    "iyileşildiğinde"
+   ],
+   "gerekce": "Atak sonrası akıl yürütme güçlüğü el notu s.37 slaytında yok; anlatım slayttaki hastalık öncesi işlevselliğe dönüşü verir."
+  }
+ ]
+}
