@@ -1,3 +1,7 @@
+## 2026-11-06 (6) — Kıstırma yumuşatıldı (onem 657)
+- `PdfDocView.tsx`: önizleme her sayfa yerine tek `.pdv-track` dönüşümü (parmak ortası çapa, iki parmak kaydırma, kare başına bir çizim);
+  bırakınca çapa sayfa + sayfa içi oranla geri kurulur (sayfa araları ölçeklenmediği için düz y·k kayıyordu). Belirti: büyütürken sıçrama, bırakınca başka yere atlama.
+
 ## 2026-11-06 (5) — Ara resim kullanıcı tercihi (onem 656)
 - `CdTerimKatman.tsx` PDF_GORUNUM'a `araResim` katmanı (`cd-pdf-araResim`, varsayılan açık); `CdV15` Görünüm › PDF katmanları satırı; `CdAraResim` kapalıyken kart açılmaz (galeri düğmesi kalır).
 

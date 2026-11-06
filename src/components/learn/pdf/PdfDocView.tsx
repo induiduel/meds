@@ -233,6 +233,8 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
   const anchor = useRef<{ i: number; frac: number } | null>(null);
   const cb = useRef({ onVisiblePage, onLoaded, onError, onZoom, onSearch });
   cb.current = { onVisiblePage, onLoaded, onError, onZoom, onSearch };
+  const kipCapaRef = useRef<{ x: number; k: number; mx: number; my: number; i: number; frac: number } | null>(null);
+  const geoRef = useRef<{ tops: number[]; ph: (i: number) => number }>({ tops: [], ph: () => 0 });
 
   /* ---- belge ---- */
   useEffect(() => {
@@ -343,6 +345,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     acc += s.h * scaleOf(i) * (1 + ekOf(i)) + GAP;
   });
   const totalH = acc + PAD - GAP;
+  geoRef.current = { tops, ph: (i: number) => (dims[i] ? dims[i].h * scaleOf(i) : 0) };
   const geo = useRef({ tops, sizes: dims, scaleOf, rot });
   geo.current = { tops, sizes: dims, scaleOf, rot };
 
@@ -578,6 +581,17 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     const was = prevGeo.current;
     prevGeo.current = k;
     const el = scrollRef.current;
+    // Kıstırma bitti: yeni ölçekte parmakların altındaki nokta yerinde kalsın; önizleme dönüşümü aynı karede kalkar
+    const kc = kipCapaRef.current;
+    if (kc && el) {
+      kipCapaRef.current = null;
+      const tr = el.querySelector<HTMLElement>('.pdv-track');
+      if (tr) { tr.style.transform = ''; tr.style.willChange = ''; }
+      el.scrollLeft = kc.x * kc.k - kc.mx;
+      const t = tops[kc.i];
+      if (t != null && dims[kc.i]) el.scrollTop = t + kc.frac * dims[kc.i].h * scaleOf(kc.i) - kc.my;
+      return;
+    }
     const a = anchor.current;
     if (!was || was === k || !doc || !el || !a) return;
     const t = tops[a.i];
@@ -624,6 +638,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
   // Ctrl/⌘ + tekerlek (ve dokunmatik yüzey kıstırma) ile yakınlaştırma
   const zoomRef = useRef(zoom);
   zoomRef.current = zoom;
+  const kipCapa = kipCapaRef;
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
@@ -633,29 +648,57 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       const z = Math.max(0.5, Math.min(4, zoomRef.current * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
       cb.current.onZoom?.(Math.round(z * 100) / 100);
     };
-    // İki parmakla kıstırma (dokunmatik, 2026-11-06): tarayıcının sayfa yakınlaştırması yerine PDF ölçeği değişir;
-    // hareket sırasında anlık ölçek CSS ile önizlenir, parmak kalkınca tek seferde onZoom (yeniden çizim tek kez)
-    let bas: { d: number; z: number } | null = null;
-    let son = 0;
+    // İki parmakla kıstırma (dokunmatik, 2026-11-06; yumuşatıldı): hareket sırasında yalnız .pdv-track'e GPU dönüşümü
+    // (parmakların ortası çapa, iki parmakla kaydırma da izlenir, rAF ile kare başına bir kez); parmak kalkınca tek onZoom,
+    // yeniden ölçeklenen düzende parmak altındaki nokta aynı yerde kalacak şekilde kaydırma ayarlanır (kipCapa, aşağıda).
+    let bas: { d: number; z: number; mx: number; my: number; x: number; y: number } | null = null;
+    let son = 1, tx = 0, ty = 0, kare = 0, mx = 0, my = 0;
+    const iz = () => el.querySelector<HTMLElement>('.pdv-track');
+    const orta = (t: TouchList) => {
+      const r = el.getBoundingClientRect();
+      return { x: (t[0].clientX + t[1].clientX) / 2 - r.left, y: (t[0].clientY + t[1].clientY) / 2 - r.top };
+    };
     const mesafe = (t: TouchList) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
     const sinirla = (z: number) => Math.round(Math.max(0.5, Math.min(4, z)) * 100) / 100;
+    const ciz = () => {
+      kare = 0;
+      const tr = iz();
+      if (tr && bas) tr.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${son / bas.z})`;
+    };
     const onStart = (e: TouchEvent) => {
       if (e.touches.length !== 2) return;
-      bas = { d: mesafe(e.touches), z: zoomRef.current };
-      son = bas.z;
-      el.style.transformOrigin = `${(e.touches[0].clientX + e.touches[1].clientX) / 2 - el.getBoundingClientRect().left + el.scrollLeft}px ${(e.touches[0].clientY + e.touches[1].clientY) / 2 - el.getBoundingClientRect().top + el.scrollTop}px`;
+      const m = orta(e.touches);
+      bas = { d: mesafe(e.touches) || 1, z: zoomRef.current, mx: m.x, my: m.y, x: el.scrollLeft + m.x, y: el.scrollTop + m.y };
+      son = bas.z; tx = 0; ty = 0; mx = m.x; my = m.y;
+      const tr = iz();
+      if (tr) { tr.style.transformOrigin = `${bas.x}px ${bas.y}px`; tr.style.willChange = 'transform'; tr.style.transition = 'none'; }
     };
     const onMove = (e: TouchEvent) => {
       if (!bas || e.touches.length !== 2) return;
       e.preventDefault();
+      const m = orta(e.touches);
+      mx = m.x; my = m.y;
+      tx = m.x - bas.mx; ty = m.y - bas.my;
       son = sinirla(bas.z * (mesafe(e.touches) / bas.d));
-      const k = son / bas.z;
-      for (const c of Array.from(el.children) as HTMLElement[]) c.style.transform = `scale(${k})`;
+      if (!kare) kare = requestAnimationFrame(ciz);
     };
     const onEnd = (e: TouchEvent) => {
       if (!bas || e.touches.length >= 2) return;
-      for (const c of Array.from(el.children) as HTMLElement[]) c.style.transform = '';
-      if (son !== bas.z) cb.current.onZoom?.(son);
+      if (kare) { cancelAnimationFrame(kare); kare = 0; }
+      const k = son / bas.z;
+      if (son === bas.z) {
+        const tr = iz();
+        if (tr) { tr.style.transform = ''; tr.style.willChange = ''; }
+        el.scrollLeft -= tx; el.scrollTop -= ty;
+      } else {
+        // çapa sayfa + sayfa içi oran olarak saklanır (sayfa araları ölçeklenmez; düz y*k sonraki sayfalarda kayardı)
+        const g = geoRef.current;
+        let i = 0;
+        while (i + 1 < g.tops.length && g.tops[i + 1] <= bas.y) i++;
+        const ph = g.ph(i) || 1;
+        kipCapa.current = { x: bas.x, k, mx, my, i, frac: (bas.y - (g.tops[i] ?? 0)) / ph };
+        cb.current.onZoom?.(son);
+      }
       bas = null;
     };
     const engelle = (e: Event) => e.preventDefault(); // iOS Safari sayfa yakınlaştırması
