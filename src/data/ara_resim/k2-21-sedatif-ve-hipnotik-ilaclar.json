@@ -1,37 +1,156 @@
 {
- "key": "k2-21-sedatif-ve-hipnotik-ilaclar",
- "resimler": [
-  {"id": "r01", "baslik": "Doz arttıkça baskı: doğrusal eğri ile yataylaşan eğri",
-   "aciklama": "A ilacında doz artışı sedasyondan anesteziye, komaya ve ölüme kadar gider; B ilacının eğrisi hipnozdan sonra yataylaşır.",
-   "adimlar": ["1. Yatay eksende doz, dikey eksende sedasyondan komaya etki artar.", "2. A ilacı (barbitürat, alkol) düz bir doğru gibi komaya tırmanır.", "3. Yüksek dozda medulladaki solunum ve damar merkezleri baskılanır.", "4. B ilacında daha derin baskı için doz orantısız biçimde artırılmalıdır."],
-   "svg": "r01.svg", "paragraf": 1, "bitis": 1, "kaynak": [3]},
-  {"id": "r02", "baslik": "Benzodiazepin metabolizması: faz I'den faz II'ye",
-   "aciklama": "Karaciğerde önce CYP3A4 ile oksidasyon, sonra glukuronide bağlanma olur; etkili metabolitler uzun ömürlüyse ilaç tekrarlanan dozlarla birikir.",
-   "adimlar": ["1. Faz I: başta CYP3A4 ile oksidasyon; metabolitlerin çoğu hâlâ etkilidir.", "2. Diazepam, klordiazepoksit, prazepam ve klorazepat nordiazepama dönüşür.", "3. Faz II: glukuronide bağlanma ve idrarla atılım.", "4. Uzun ömürlü ilaç ya da metabolit tekrarlanan dozlarla birikir."],
-   "svg": "r02.svg", "paragraf": 9, "bitis": 11, "kaynak": [10, 11, 12]},
-  {"id": "r03", "baslik": "GABA-A reseptörü: beş alt birim, üç ayrı bağlanma yeri",
-   "aciklama": "İki alfa bir, iki beta iki ve bir gama iki alt birimi ortadaki klorür kanalını çevreler; GABA, benzodiazepin ve barbitüratın bağlandığı yerler farklıdır.",
-   "adimlar": ["1. Beş alt birim ortadaki klorür kanalını çevreler.", "2. GABA iki yere, alfa bir ile beta iki arasına bağlanır.", "3. Benzodiazepin, flumazenil ve zolpidem alfa bir ile gama iki arasına bağlanır.", "4. Barbitüratın bağlanma yeri ayrıdır."],
-   "svg": "r03.svg", "paragraf": 19, "bitis": 19, "kaynak": [20]},
-  {"id": "r04", "baslik": "Benzodiazepin ile barbitürat: aynı kanal, farklı etki",
-   "aciklama": "Benzodiazepin GABA'nın etkisini başka bir yerden bağlanarak artırır; barbitürat kanalın açık kalma süresini uzatır, yüksek derişimde kanalı doğrudan açar.",
-   "adimlar": ["1. Benzodiazepin kanalı kendisi açmaz; allosterik artırma yapar.", "2. Barbitürat klorür kanalının açık kalma süresini uzatır.", "3. Yüksek derişimde barbitürat kanalı doğrudan açar.", "4. Barbitürat AMPA üzerinden glutamatı da baskılar; daha az seçicidir."],
-   "svg": "r04.svg", "paragraf": 20, "bitis": 21, "kaynak": [21, 22]},
-  {"id": "r05", "baslik": "Benzodiazepin bağlanma yerinde üç tip ligand",
-   "aciklama": "Aynı bağlanma yerine agonist GABA etkisini artırır, antagonist flumazenil etkiyi engeller, ters agonist reseptör işlevini azaltıp anksiyete ve nöbet yapabilir.",
-   "adimlar": ["1. Agonist GABA etkisini kolaylaştırır.", "2. Antagonist flumazenil benzodiazepin ve Z-ilaç etkisini engeller.", "3. Ters agonist negatif allosterik modülatördür; anksiyete ve nöbet yapabilir."],
-   "svg": "r05.svg", "paragraf": 22, "bitis": 22, "kaynak": [23]},
-  {"id": "r06", "baslik": "Sedatif-hipnotikler uyku düzenini dört yönde değiştirir",
-   "aciklama": "Uykuya dalma süresi kısalır, evre iki NREM uzar, REM ve evre dört yavaş dalga uykusu azalır; yeni hipnotiklerin profilleri farklıdır.",
-   "adimlar": ["1. Uykuya dalma süresi kısalır.", "2. Evre iki NREM uzar.", "3. REM kısalır, evre dört yavaş dalga uykusu azalır.", "4. Zolpidem, zaleplon ve eszopiklonun etkileri birbirinden farklıdır."],
-   "svg": "r06.svg", "paragraf": 24, "bitis": 24, "kaynak": [25]},
-  {"id": "r07", "baslik": "Tolerans, bağımlılık ve yoksunluk: uzun kullanımın akışı",
-   "aciklama": "Tekrarlanan kullanımda aynı dozun etkisi azalır; vücut ilaca uyum sağlar ve ilaç aniden kesilince aşırı uyarılabilir santral sinir sistemiyle yoksunluk başlar.",
-   "adimlar": ["1. Tolerans: aynı dozun etkisi zamanla azalır.", "2. Benzodiazepinde reseptör sayısı azalır (aşağı regülasyon).", "3. Bağımlılık: ilaç gerektiren değişmiş fizyolojik durum.", "4. Kesilince anksiyete ve uykusuzluktan konvülsiyona uzanan yoksunluk.", "5. Yüksek doz, ani kesilme ve kısa yarılanma ömrü yoksunluğu ağırlaştırır."],
-   "svg": "r07.svg", "paragraf": 28, "bitis": 31, "kaynak": [29, 30, 31, 32]},
-  {"id": "r08", "baslik": "Flumazenilin kısa etkisi ve sedasyonun geri gelmesi",
-   "aciklama": "Flumazenil benzodiazepin bağlanma yerinde yarışmalı antagonisttir ve hızla etki eder; benzodiazepinden kısa sürdüğü için sedasyon genellikle geri gelir.",
-   "adimlar": ["1. Flumazenil aynı yere yüksek afiniteyle bağlanır.", "2. Benzodiazepin ve Z-ilaçlarını geri çevirir; barbitürat, etanol ve opioidi çeviremez.", "3. Damardan verilince hızla uyandırır.", "4. Hızla temizlenince sedasyon yeniden ortaya çıkar."],
-   "svg": "r08.svg", "paragraf": 32, "bitis": 33, "kaynak": [33, 34]}
- ]
+  "key": "k2-21-sedatif-ve-hipnotik-ilaclar",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Doz arttıkça baskı: doğrusal eğri ile yataylaşan eğri",
+      "aciklama": "A ilacında doz artışı sedasyondan anesteziye, komaya ve ölüme kadar gider; B ilacının eğrisi hipnozdan sonra yataylaşır.",
+      "adimlar": [
+        "1. Yatay eksende doz, dikey eksende sedasyondan komaya etki artar.",
+        "2. A ilacı (barbitürat, alkol) düz bir doğru gibi komaya tırmanır.",
+        "3. Yüksek dozda medulladaki solunum ve damar merkezleri baskılanır.",
+        "4. B ilacında daha derin baskı için doz orantısız biçimde artırılmalıdır."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 1,
+      "bitis": 1,
+      "kaynak": [
+        3
+      ],
+      "lottie": "r01.json"
+    },
+    {
+      "id": "r02",
+      "baslik": "Benzodiazepin metabolizması: faz I'den faz II'ye",
+      "aciklama": "Karaciğerde önce CYP3A4 ile oksidasyon, sonra glukuronide bağlanma olur; etkili metabolitler uzun ömürlüyse ilaç tekrarlanan dozlarla birikir.",
+      "adimlar": [
+        "1. Faz I: başta CYP3A4 ile oksidasyon; metabolitlerin çoğu hâlâ etkilidir.",
+        "2. Diazepam, klordiazepoksit, prazepam ve klorazepat nordiazepama dönüşür.",
+        "3. Faz II: glukuronide bağlanma ve idrarla atılım.",
+        "4. Uzun ömürlü ilaç ya da metabolit tekrarlanan dozlarla birikir."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 9,
+      "bitis": 11,
+      "kaynak": [
+        10,
+        11,
+        12
+      ],
+      "lottie": "r02.json"
+    },
+    {
+      "id": "r03",
+      "baslik": "GABA-A reseptörü: beş alt birim, üç ayrı bağlanma yeri",
+      "aciklama": "İki alfa bir, iki beta iki ve bir gama iki alt birimi ortadaki klorür kanalını çevreler; GABA, benzodiazepin ve barbitüratın bağlandığı yerler farklıdır.",
+      "adimlar": [
+        "1. Beş alt birim ortadaki klorür kanalını çevreler.",
+        "2. GABA iki yere, alfa bir ile beta iki arasına bağlanır.",
+        "3. Benzodiazepin, flumazenil ve zolpidem alfa bir ile gama iki arasına bağlanır.",
+        "4. Barbitüratın bağlanma yeri ayrıdır."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 19,
+      "bitis": 19,
+      "kaynak": [
+        20
+      ],
+      "lottie": "r03.json"
+    },
+    {
+      "id": "r04",
+      "baslik": "Benzodiazepin ile barbitürat: aynı kanal, farklı etki",
+      "aciklama": "Benzodiazepin GABA'nın etkisini başka bir yerden bağlanarak artırır; barbitürat kanalın açık kalma süresini uzatır, yüksek derişimde kanalı doğrudan açar.",
+      "adimlar": [
+        "1. Benzodiazepin kanalı kendisi açmaz; allosterik artırma yapar.",
+        "2. Barbitürat klorür kanalının açık kalma süresini uzatır.",
+        "3. Yüksek derişimde barbitürat kanalı doğrudan açar.",
+        "4. Barbitürat AMPA üzerinden glutamatı da baskılar; daha az seçicidir."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 20,
+      "bitis": 21,
+      "kaynak": [
+        21,
+        22
+      ],
+      "lottie": "r04.json"
+    },
+    {
+      "id": "r05",
+      "baslik": "Benzodiazepin bağlanma yerinde üç tip ligand",
+      "aciklama": "Aynı bağlanma yerine agonist GABA etkisini artırır, antagonist flumazenil etkiyi engeller, ters agonist reseptör işlevini azaltıp anksiyete ve nöbet yapabilir.",
+      "adimlar": [
+        "1. Agonist GABA etkisini kolaylaştırır.",
+        "2. Antagonist flumazenil benzodiazepin ve Z-ilaç etkisini engeller.",
+        "3. Ters agonist negatif allosterik modülatördür; anksiyete ve nöbet yapabilir."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 22,
+      "bitis": 22,
+      "kaynak": [
+        23
+      ],
+      "lottie": "r05.json"
+    },
+    {
+      "id": "r06",
+      "baslik": "Sedatif-hipnotikler uyku düzenini dört yönde değiştirir",
+      "aciklama": "Uykuya dalma süresi kısalır, evre iki NREM uzar, REM ve evre dört yavaş dalga uykusu azalır; yeni hipnotiklerin profilleri farklıdır.",
+      "adimlar": [
+        "1. Uykuya dalma süresi kısalır.",
+        "2. Evre iki NREM uzar.",
+        "3. REM kısalır, evre dört yavaş dalga uykusu azalır.",
+        "4. Zolpidem, zaleplon ve eszopiklonun etkileri birbirinden farklıdır."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 24,
+      "bitis": 24,
+      "kaynak": [
+        25
+      ],
+      "lottie": "r06.json"
+    },
+    {
+      "id": "r07",
+      "baslik": "Tolerans, bağımlılık ve yoksunluk: uzun kullanımın akışı",
+      "aciklama": "Tekrarlanan kullanımda aynı dozun etkisi azalır; vücut ilaca uyum sağlar ve ilaç aniden kesilince aşırı uyarılabilir santral sinir sistemiyle yoksunluk başlar.",
+      "adimlar": [
+        "1. Tolerans: aynı dozun etkisi zamanla azalır.",
+        "2. Benzodiazepinde reseptör sayısı azalır (aşağı regülasyon).",
+        "3. Bağımlılık: ilaç gerektiren değişmiş fizyolojik durum.",
+        "4. Kesilince anksiyete ve uykusuzluktan konvülsiyona uzanan yoksunluk.",
+        "5. Yüksek doz, ani kesilme ve kısa yarılanma ömrü yoksunluğu ağırlaştırır."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 28,
+      "bitis": 31,
+      "kaynak": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "lottie": "r07.json"
+    },
+    {
+      "id": "r08",
+      "baslik": "Flumazenilin kısa etkisi ve sedasyonun geri gelmesi",
+      "aciklama": "Flumazenil benzodiazepin bağlanma yerinde yarışmalı antagonisttir ve hızla etki eder; benzodiazepinden kısa sürdüğü için sedasyon genellikle geri gelir.",
+      "adimlar": [
+        "1. Flumazenil aynı yere yüksek afiniteyle bağlanır.",
+        "2. Benzodiazepin ve Z-ilaçlarını geri çevirir; barbitürat, etanol ve opioidi çeviremez.",
+        "3. Damardan verilince hızla uyandırır.",
+        "4. Hızla temizlenince sedasyon yeniden ortaya çıkar."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 32,
+      "bitis": 33,
+      "kaynak": [
+        33,
+        34
+      ],
+      "lottie": "r08.json"
+    }
+  ]
 }
