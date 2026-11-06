@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 659,
-  "baslik": "Güncelleme uyarısı düzeltildi",
+  "onem": 660,
+  "baslik": "Sesli derslerde PDF açılmama sorunu düzeltildi",
   "maddeler": [
-    "Güncelleme: \"Siteyi güncelle\" artık eski sürümü geri açmıyor; aynı güncelleme uyarısı tekrar tekrar çıkmıyor.",
-    "Ayarlar: Veri bölümündeki bazı hesap ayarları yeniden görünüyor."
+    "Sesli ders: Polinöropati, Bazal Ganglionlar ve yeni psikiyatri/farmakoloji derslerinin PDF'i artık uygulama içinde açılıyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Güncelleme: \"Siteyi güncelle\" artık eski sürümü geri açmıyor; aynı güncelleme uyarısı tekrar tekrar çıkmıyor.",
-    "Ayarlar: Veri bölümündeki bazı hesap ayarları yeniden görünüyor."
+    "Sesli ders: Polinöropati, Bazal Ganglionlar ve yeni psikiyatri/farmakoloji derslerinin PDF'i artık uygulama içinde açılıyor."
   ],
   "silinen": [],
   "yenilikler": []

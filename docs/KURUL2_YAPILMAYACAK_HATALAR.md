@@ -2267,3 +2267,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** sürpriz katmanını kapatma düğmesi ayarlarda yoktu.
 - **Kök neden:** v12 ayarlar (`ProfileV12` › Veri) `<ArzuRow />`'u kullanıcı geçirmeden çağırıyordu; satır `auth.currentUser`'a düşüyor, yerel kimlik sisteminde (H466) bu nesne hesabı tanıtmadığından satır gizleniyordu.
 - **Çözüm/önleme:** `DataPanel`'e `currentUser` geçirildi. Kural: hesap koşullu satırlar kullanıcıyı prop olarak alır, `auth.currentUser` yedeğine güvenilmez.
+
+### H505 — Polinöropati ve Bazal Ganglionlar sesli derslerinde PDF açılmıyor, yalnız "Drive'da aç" çıkıyordu (2026-11-06)
+- **Belirti:** sesli ders görüntüleyicisi "Bu dersin PDF'i uygulama içinde açılamıyor" + "Drive'da aç" gösteriyordu (k2-17, k2-18; canlıda k2-19 de).
+- **Kök neden:** destesiz (Öğren askıda) yeni derslerin PDF'i yalnız `src/services/lecturePdfLocator.ts::SANAL_DESTELER` kaydıyla bulunur. (1) k2-17/k2-18 hizalaması yazılmış ama kayıt eklenmemişti → `/api/lecture-pdf/deck/<id>` boş dosya listesi. (2) k2-15/16 kaydı eklenmiş, `meds-web` yeniden başlatılmadığı için yerel sunucuda görünmüyordu (AGENTS 12); k2-19/20/21 kaydı commit/dağıtım bekliyordu.
+- **Çözüm/önleme:** iki kayıt eklendi, sunucu yeniden başlatıldı, dağıtıldı. Yeni kapı `python3 scripts/kapilar/ders_pdf_kapisi.py [--sunucu …]`: her `data/sesli_anlatim/hizalama/k2-*.json` deckId'si sunucu kataloğunda açılabilir PDF'le bulunmalı (0 HATA). Kural: `ders-ekle`/hizalama sonrası SANAL_DESTELER kaydı + `meds-web` restart + bu kapı (yerel ve Oracle) — kapı geçmeden ders yayında sayılmaz.

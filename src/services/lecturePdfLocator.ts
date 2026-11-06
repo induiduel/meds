@@ -209,6 +209,43 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/FTR/1)Nörolojik rehabilitasyona giriş ve genel ilkeler.pdf', name: '1)Nörolojik rehabilitasyona giriş ve genel ilkeler.pdf', pages: 43, fileId: '1lj1IYdYpYjhq602-179jVlQ3vh6DpDDh' } as SourceFile],
   },
+  // 2026-11-06 Kurul 2, 5. parti (Öğren askıda, destesiz): okul PDF'i doğrudan bağlı.
+  'k2p-k2-19-bipolar-bozukluk': {
+    title: 'Bipolar Duygudurum Bozukluğu',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /3)Bipolar Duygudurum Boz..pdf', name: '3)Bipolar Duygudurum Boz..pdf', pages: 44, fileId: '1HIwUJUNM8We6Ca3ktASvsQLJu_WQ29AH' } as SourceFile],
+  },
+  'k2p-k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler': {
+    title: 'Psikiyatrik Bozukluklarda Uygulanan Tedaviler',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /6)Psikiyatride Tedaviler.pdf', name: '6)Psikiyatride Tedaviler.pdf', pages: 32, fileId: '1i-HGVkF67IhZQzntDD4Ebbnm-DUIbJm2' } as SourceFile],
+  },
+  'k2p-k2-21-sedatif-ve-hipnotik-ilaclar': {
+    title: 'Sedatif ve Hipnotik İlaçlar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /3)Sedatif ve Hipnotik İlaçlar.pdf', name: '3)Sedatif ve Hipnotik İlaçlar.pdf', pages: 55, fileId: '19yvtKOAtgBQpWEdbSIKaPBtEeSq4MoF4' } as SourceFile],
+  },
+  // 2026-11-06 H?: k2-17/k2-18 sesli dersleri kayıtsızdı → görüntüleyici "Drive'da aç" yedeğine düşüyordu.
+  'k2p-k2-17-periferik-noropati': {
+    title: 'Periferik Nöropati',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/5)POLİNÖROPATİLER.pdf', name: '5)POLİNÖROPATİLER.pdf', pages: 23, fileId: '1lrl3iqDXRocQPW3oesoWzLePPhMfclsQ' } as SourceFile],
+  },
+  'k2p-k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem': {
+    title: 'Bazal Gangliyonlar ve Ekstrapiramidal Sistem',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/6)Bazal Ganglionlar.pdf', name: '6)Bazal Ganglionlar.pdf', pages: 20, fileId: '1-O48d9vY81Z--Kx3COklUtyn4kRwNTC5' } as SourceFile],
+  },
+  'k2p-k2-37-okb-ve-iliskili-bozukluklar': {
+    title: 'OKB ve İlişkili Diğer Bozukluklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /4)OKB.pdf', name: '4)OKB.pdf', pages: 23, fileId: '1Naxqd5sF5saLsUVpq6HvT6LME3Daq2MV' } as SourceFile],
+  },
+  'k2p-k2-38-travma-ve-stres-baglantili-bozukluklar': {
+    title: 'Travma ve Stres Bağlantılı Bozukluklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /5)TSSB.pdf', name: '5)TSSB.pdf', pages: 28, fileId: '1C8cwvudGGlO19JebFMKyf9cLIG7Tq2jK' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [
