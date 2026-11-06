@@ -1,133 +1,140 @@
 {
- "key": "k2-37-okb-ve-iliskili-bozukluklar",
- "resimler": [
-  {
-   "id": "r01",
-   "baslik": "Obsesyon kaygıyı yükseltir, kompulsiyon azaltmaya çalışır",
-   "aciklama": "Kirli olduğu düşüncesi belirgin anksiyete yaratır; kişi bu kaygıyı azaltmak için yıkar. Düşünce obsesyon, yıkama kompulsiyondur.",
-   "adimlar": [
-    "1. Zorla gelen düşünce gelir: \"Çok kirliyim.\"",
-    "2. Belirgin anksiyete yükselir.",
-    "3. Kaygıyı azaltmak için yıkama kompulsiyonu yapılır.",
-    "4. Kaygı bir süre azalır."
-   ],
-   "svg": "r01.svg",
-   "paragraf": 2,
-   "bitis": 2,
-   "kaynak": [
-    4
-   ]
-  },
-  {
-   "id": "r02",
-   "baslik": "Obsesyonu güçlendiren beş hatalı inanç",
-   "aciklama": "Bilişsel davranışçı modeldeki beş hatalı inanç, hocanın kapı kolu, bıçak ve pembe fil örnekleriyle; hepsi abartma yönündedir.",
-   "adimlar": [
-    "1. Abartılmış tehdit algısı: kapı kolundan ölümcül mikrop kapma korkusu.",
-    "2. Belirsizliğe toleransın düşük olması: nadir riske dayanamamak.",
-    "3. Abartılmış sorumluluk: zarar verme düşüncesiyle bıçakları saklamak.",
-    "4. Düşüncelere aşırı önem: önem verdikçe düşünce daha sık gelir.",
-    "5. Düşünceyi kontrol etmeye çalışmak: pembe fil gibi, bastırılan düşünce canlı kalır."
-   ],
-   "svg": "r02.svg",
-   "paragraf": 8,
-   "bitis": 9,
-   "kaynak": [
-    8
-   ]
-  },
-  {
-   "id": "r03",
-   "baslik": "Obsesyon teması ve eşleştiği kompulsiyon",
-   "aciklama": "Kirlenme düşüncesi yıkamayla, patolojik şüphe kontrolle eşleşir; ritüelin obsesyonla gerçekçi bir bağı yoktur.",
-   "adimlar": [
-    "1. Kir-kontaminasyon obsesyonu → yıkama kompulsiyonu.",
-    "2. Patolojik şüphe obsesyonu → kontrol kompulsiyonu.",
-    "3. Anneye zarar gelecek düşüncesi → düğmeyi üç kez açıp kapama: gerçekçi bağ yok.",
-    "4. Sık kompulsiyonlar: yıkama/temizlik, kontrol, dokunma, sayma, düzenleme, biriktirme."
-   ],
-   "svg": "r03.svg",
-   "paragraf": 11,
-   "bitis": 12,
-   "kaynak": [
-    9,
-    10
-   ]
-  },
-  {
-   "id": "r04",
-   "baslik": "PANDAS: streptokok sonrası immün reaksiyon",
-   "aciklama": "Çocuklarda streptokok enfeksiyonundan sonra gelişen immün reaksiyon; putamen, globus pallidus ve kaudat nükleusta hacim değişiklikleri görülür.",
-   "adimlar": [
-    "1. Çocukta streptokok enfeksiyonu geçirilir.",
-    "2. Bağışıklık sistemi immün reaksiyon verir.",
-    "3. Putamen, globus pallidus ve kaudatta hacim değişikliği saptanır.",
-    "4. Ani başlayan tabloda streptokok araştırılır; tedavi streptokok tedavisidir."
-   ],
-   "svg": "r04.svg",
-   "paragraf": 16,
-   "bitis": 16,
-   "kaynak": [
-    12,
-    7
-   ]
-  },
-  {
-   "id": "r05",
-   "baslik": "OKB'de ilaç tedavisinin zaman çizelgesi",
-   "aciklama": "Olağan antidepresan dozundan yüksek doz; antiobsesyonel etki 6–8, en yüksek etki 8–16 haftada; yüksek nüks nedeniyle 1–2 yıl sürdürme.",
-   "adimlar": [
-    "1. İlk seçenek SSGİ; klomipramin etkinliği kanıtlanmış ilk ilaçtır.",
-    "2. Doz olağan antidepresan dozundan yüksektir.",
-    "3. İlk haftalardaki yan etkiler geçicidir.",
-    "4. Antiobsesyonel etki 6–8. haftada, en yüksek etki 8–16. haftada görülür.",
-    "5. Yüksek nüks riski nedeniyle tedavi 1–2 yıl sürer."
-   ],
-   "svg": "r05.svg",
-   "paragraf": 19,
-   "bitis": 20,
-   "kaynak": [
-    14,
-    15
-   ]
-  },
-  {
-   "id": "r06",
-   "baslik": "Maruz bırakma ve tepki engelleme",
-   "aciklama": "Hasta korkulan durumla basamak basamak yüzleşir, kompulsiyon yapılmaz; düşünce ile olumsuz duygu arasındaki koşullanmış bağ söner.",
-   "adimlar": [
-    "1. Kapının yanına gelir.",
-    "2. Kapı koluna eldivenle dokunur.",
-    "3. Eldivensiz kısa süre, sonra 1 dakika, sonra 5 dakika tutar.",
-    "4. Kompulsiyon (yıkama) engellenir.",
-    "5. Koşullanmış bağ söndürülür."
-   ],
-   "svg": "r06.svg",
-   "paragraf": 21,
-   "bitis": 21,
-   "kaynak": [
-    16
-   ]
-  },
-  {
-   "id": "r07",
-   "baslik": "Trikotilomani ile OKB'nin farkı",
-   "aciklama": "Trikotilomanide saç yolmadan önce obsesyon yoktur, davranış haz verir ve hastaların hemen hepsinde iyi içgörü vardır.",
-   "adimlar": [
-    "1. OKB'de davranış bir obsesyonu nötrlemek için yapılır.",
-    "2. Trikotilomanide öncesinde obsesyon yoktur.",
-    "3. Saç yolma haz verir; çoğu farkında olmadan yapar.",
-    "4. Psikoz ve psikotik depresyondaki saç çekme trikotilomani değildir."
-   ],
-   "svg": "r07.svg",
-   "paragraf": 26,
-   "bitis": 26,
-   "kaynak": [
-    18,
-    19,
-    20,
-    21
-   ]
-  }
- ]
+  "key": "k2-37-okb-ve-iliskili-bozukluklar",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Obsesyon kaygıyı yükseltir, kompulsiyon azaltmaya çalışır",
+      "aciklama": "Kirli olduğu düşüncesi belirgin anksiyete yaratır; kişi bu kaygıyı azaltmak için yıkar. Düşünce obsesyon, yıkama kompulsiyondur.",
+      "adimlar": [
+        "1. Zorla gelen düşünce gelir: \"Çok kirliyim.\"",
+        "2. Belirgin anksiyete yükselir.",
+        "3. Kaygıyı azaltmak için yıkama kompulsiyonu yapılır.",
+        "4. Kaygı bir süre azalır."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 2,
+      "bitis": 2,
+      "kaynak": [
+        4
+      ],
+      "lottie": "r01.json"
+    },
+    {
+      "id": "r02",
+      "baslik": "Obsesyonu güçlendiren beş hatalı inanç",
+      "aciklama": "Bilişsel davranışçı modeldeki beş hatalı inanç, hocanın kapı kolu, bıçak ve pembe fil örnekleriyle; hepsi abartma yönündedir.",
+      "adimlar": [
+        "1. Abartılmış tehdit algısı: kapı kolundan ölümcül mikrop kapma korkusu.",
+        "2. Belirsizliğe toleransın düşük olması: nadir riske dayanamamak.",
+        "3. Abartılmış sorumluluk: zarar verme düşüncesiyle bıçakları saklamak.",
+        "4. Düşüncelere aşırı önem: önem verdikçe düşünce daha sık gelir.",
+        "5. Düşünceyi kontrol etmeye çalışmak: pembe fil gibi, bastırılan düşünce canlı kalır."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 8,
+      "bitis": 9,
+      "kaynak": [
+        8
+      ],
+      "lottie": "r02.json"
+    },
+    {
+      "id": "r03",
+      "baslik": "Obsesyon teması ve eşleştiği kompulsiyon",
+      "aciklama": "Kirlenme düşüncesi yıkamayla, patolojik şüphe kontrolle eşleşir; ritüelin obsesyonla gerçekçi bir bağı yoktur.",
+      "adimlar": [
+        "1. Kir-kontaminasyon obsesyonu → yıkama kompulsiyonu.",
+        "2. Patolojik şüphe obsesyonu → kontrol kompulsiyonu.",
+        "3. Anneye zarar gelecek düşüncesi → düğmeyi üç kez açıp kapama: gerçekçi bağ yok.",
+        "4. Sık kompulsiyonlar: yıkama/temizlik, kontrol, dokunma, sayma, düzenleme, biriktirme."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 11,
+      "bitis": 12,
+      "kaynak": [
+        9,
+        10
+      ],
+      "lottie": "r03.json"
+    },
+    {
+      "id": "r04",
+      "baslik": "PANDAS: streptokok sonrası immün reaksiyon",
+      "aciklama": "Çocuklarda streptokok enfeksiyonundan sonra gelişen immün reaksiyon; putamen, globus pallidus ve kaudat nükleusta hacim değişiklikleri görülür.",
+      "adimlar": [
+        "1. Çocukta streptokok enfeksiyonu geçirilir.",
+        "2. Bağışıklık sistemi immün reaksiyon verir.",
+        "3. Putamen, globus pallidus ve kaudatta hacim değişikliği saptanır.",
+        "4. Ani başlayan tabloda streptokok araştırılır; tedavi streptokok tedavisidir."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 16,
+      "bitis": 16,
+      "kaynak": [
+        12,
+        7
+      ],
+      "lottie": "r04.json"
+    },
+    {
+      "id": "r05",
+      "baslik": "OKB'de ilaç tedavisinin zaman çizelgesi",
+      "aciklama": "Olağan antidepresan dozundan yüksek doz; antiobsesyonel etki 6–8, en yüksek etki 8–16 haftada; yüksek nüks nedeniyle 1–2 yıl sürdürme.",
+      "adimlar": [
+        "1. İlk seçenek SSGİ; klomipramin etkinliği kanıtlanmış ilk ilaçtır.",
+        "2. Doz olağan antidepresan dozundan yüksektir.",
+        "3. İlk haftalardaki yan etkiler geçicidir.",
+        "4. Antiobsesyonel etki 6–8. haftada, en yüksek etki 8–16. haftada görülür.",
+        "5. Yüksek nüks riski nedeniyle tedavi 1–2 yıl sürer."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 19,
+      "bitis": 20,
+      "kaynak": [
+        14,
+        15
+      ],
+      "lottie": "r05.json"
+    },
+    {
+      "id": "r06",
+      "baslik": "Maruz bırakma ve tepki engelleme",
+      "aciklama": "Hasta korkulan durumla basamak basamak yüzleşir, kompulsiyon yapılmaz; düşünce ile olumsuz duygu arasındaki koşullanmış bağ söner.",
+      "adimlar": [
+        "1. Kapının yanına gelir.",
+        "2. Kapı koluna eldivenle dokunur.",
+        "3. Eldivensiz kısa süre, sonra 1 dakika, sonra 5 dakika tutar.",
+        "4. Kompulsiyon (yıkama) engellenir.",
+        "5. Koşullanmış bağ söndürülür."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 21,
+      "bitis": 21,
+      "kaynak": [
+        16
+      ],
+      "lottie": "r06.json"
+    },
+    {
+      "id": "r07",
+      "baslik": "Trikotilomani ile OKB'nin farkı",
+      "aciklama": "Trikotilomanide saç yolmadan önce obsesyon yoktur, davranış haz verir ve hastaların hemen hepsinde iyi içgörü vardır.",
+      "adimlar": [
+        "1. OKB'de davranış bir obsesyonu nötrlemek için yapılır.",
+        "2. Trikotilomanide öncesinde obsesyon yoktur.",
+        "3. Saç yolma haz verir; çoğu farkında olmadan yapar.",
+        "4. Psikoz ve psikotik depresyondaki saç çekme trikotilomani değildir."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 26,
+      "bitis": 26,
+      "kaynak": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "lottie": "r07.json"
+    }
+  ]
 }

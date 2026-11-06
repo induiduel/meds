@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 669,
-  "baslik": "Sedatif-hipnotik dersinde hareketli ara resimler",
+  "onem": 670,
+  "baslik": "Tüm Kurul 2 sesli derslerinde hareketli ara resimler",
   "maddeler": [
-    "Sedatif ve Hipnotik İlaçlar sesli dersindeki 8 ara resim artık hareketli: eğriler çiziliyor, klorür iyonları kanaldan geçiyor, bağlanma yerleri sırayla yanıyor.",
-    "Hareketi azalt ayarı açıksa resim durağan son hâliyle gösterilir."
+    "Ara resmi olan 10 sesli dersin 106 mekanizma resminin tamamı artık hareketli: yolaklar ve eğriler sırayla çiziliyor, sinyaller ilerliyor, yapılar anlatım sırasına göre yanıyor.",
+    "Hareketi azalt ayarı açıksa resimler durağan son hâliyle gösterilir."
   ],
   "eklenen": [
     "Psikiyatrik Bozukluklarda Uygulanan Tedaviler: sesli ders (hocanın örnekleri ve vurgularıyla, 7 ara resim), en önemliler, sesli soru çözücü, hocanın sorabileceği ara sorular, ders içerik paketi, ders analizi (çıkmışlar ayrıntılı) ve quiz eklendi."

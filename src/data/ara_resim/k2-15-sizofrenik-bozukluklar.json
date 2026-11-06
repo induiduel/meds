@@ -1,281 +1,297 @@
 {
- "key": "k2-15-sizofrenik-bozukluklar",
- "resimler": [
-  {
-   "id": "r01",
-   "baslik": "Çoklu vuruş: genetik yatkınlığın üstüne eklenen etkenler",
-   "aciklama": "Stres-diyatez modelinde genetik yatkınlık tek başına hastalık yapmaz; psikososyal etkenler üst üste eklenince şizofreni ortaya çıkar.",
-   "adimlar": [
-    "1. İlk vuruş genetik yatkınlıktır (diyatez).",
-    "2. Gebelik ve doğum komplikasyonları, doğum mevsimi, ebeveyn yaşı, örselenme, esrar, kent ve göç eklenir.",
-    "3. Etkenler birikince hastalık ortaya çıkar."
-   ],
-   "svg": "r01.svg",
-   "paragraf": 4,
-   "bitis": 9,
-   "kaynak": [
-    6,
-    7,
-    8,
-    9,
-    10,
-    11
-   ]
-  },
-  {
-   "id": "r10",
-   "baslik": "Kalıtım: hasta akraba sayısı ve yakınlığı arttıkça risk artar",
-   "aciklama": "Tek ebeveyn hastaysa risk yüzde beş–altı, iki ebeveyn hastaysa yüzde kırk yedidir; tek yumurta ikizinde bile risk yüzde kırk altıda kalır.",
-   "adimlar": [
-    "1. Hasta ebeveynin çocuğunda ortalama risk yüzde ondur.",
-    "2. Ailede hasta sayısı arttıkça risk yüzde on yedi ve kırk yediye çıkar.",
-    "3. Tek yumurta ikizinde yüzde kırk altı, çift yumurta ikizinde yüzde on dört.",
-    "4. Antisipasyon: hastalık kuşaklar boyunca daha erken ve şiddetli başlar."
-   ],
-   "svg": "r10.svg",
-   "paragraf": 10,
-   "bitis": 10,
-   "kaynak": [
-    12
-   ]
-  },
-  {
-   "id": "r11",
-   "baslik": "Yapısal beyin bulguları: doku azalır, boşluklar genişler",
-   "aciklama": "Ventriküller ve sulkuslar genişler, frontal korteks incelir; ventrikül genişlemesi kötü uyum, negatif belirti ve tedaviye kötü yanıtla ilişkilidir.",
-   "adimlar": [
-    "1. Ventriküller ve sulkuslar genişler, korteks incelir.",
-    "2. Ventrikül genişlemesi negatif belirtiler ve bilişsel kayıplarla ilişkilidir.",
-    "3. Frontal bölge en son, on beş ile yirmi beş yaş arasında olgunlaşır."
-   ],
-   "svg": "r11.svg",
-   "paragraf": 11,
-   "bitis": 11,
-   "kaynak": [
-    13
-   ]
-  },
-  {
-   "id": "r12",
-   "baslik": "Hipofrontalite ve şizofreni devresi",
-   "aciklama": "Fonksiyonel görüntülemede frontal lob beklenenden az çalışır; sorun frontal korteks, singulat, talamus, temporal lob ve serebellumu bağlayan devrenin işleyişindedir.",
-   "adimlar": [
-    "1. Hipofrontalite: frontal lob az çalışır, negatif belirtilerle ilişkilidir.",
-    "2. Odak prefrontal ve dorsolateral prefrontal kortekstir.",
-    "3. Hiperfrontalite şizofrenide beklenmeyen bulgudur.",
-    "4. Devre bölgeleri birlikte çalışır; anatomi normal olsa da sinyalleşme bozuk olabilir."
-   ],
-   "svg": "r12.svg",
-   "paragraf": 12,
-   "bitis": 12,
-   "kaynak": [
-    14
-   ]
-  },
-  {
-   "id": "r14",
-   "baslik": "Nöropatoloji: küçük nöronlar, azalmış sinaps, gliozis yok",
-   "aciklama": "Korteks ve hipokampusta nöronlar küçüktür, sinaps ve dendrit azalmıştır; gliozisin olmaması sorunun beyin gelişimi sırasında oluştuğunu düşündürür.",
-   "adimlar": [
-    "1. Korteks ve hipokampusta nöronlar küçük, dorsal talamusta sayıca azdır.",
-    "2. Hipokampusta sinaps ve dendrit azalır.",
-    "3. Gliozis yoktur: sonradan hasar değil gelişimsel sorun düşünülür."
-   ],
-   "svg": "r14.svg",
-   "paragraf": 13,
-   "bitis": 13,
-   "kaynak": [
-    15
-   ]
-  },
-  {
-   "id": "r02",
-   "baslik": "Dopamin fazlası pozitif, dopamin azlığı negatif belirtilerle ilişkilidir",
-   "aciklama": "Hiperdopaminerjik durum pozitif, hipodopaminerjik durum ve hipofrontalite negatif belirtilerle ilişkilidir; fensiklidin glutamat yoluyla şizofreni benzeri tablo yapar.",
-   "adimlar": [
-    "1. Dopamin fazlası: pozitif belirtiler (sanrı, varsanı).",
-    "2. Dopamin azlığı ve hipofrontalite: negatif belirtiler.",
-    "3. Fensiklidin glutamat sistemi üzerinden şizofreni benzeri belirtiler oluşturur."
-   ],
-   "svg": "r02.svg",
-   "paragraf": 14,
-   "bitis": 14,
-   "kaynak": [
-    14,
-    16
-   ]
-  },
-  {
-   "id": "r03",
-   "baslik": "Şizofreni tanısı üç ölçüte dayanır: A, B ve C",
-   "aciklama": "Beş belirtiden en az ikisi bir ay bulunur ve biri mutlaka sanrı, varsanı ya da darmadağın konuşmadır; işlevsellik düşer ve süre en az altı aydır.",
-   "adimlar": [
-    "1. A ölçütü: beş belirtiden en az ikisi, bir ay boyunca.",
-    "2. Bu belirtilerden en az biri sanrı, varsanı ya da darmadağın konuşmadır.",
-    "3. B ölçütü: işlevsellik belirgin biçimde düşer.",
-    "4. C ölçütü: süregiden bulgular en az altı ay sürer."
-   ],
-   "svg": "r03.svg",
-   "paragraf": 15,
-   "bitis": 15,
-   "kaynak": [
-    17
-   ]
-  },
-  {
-   "id": "r04",
-   "baslik": "Süre ayrımı: bir ay ve altı ay eşikleri",
-   "aciklama": "Belirtilerin süresi tanıyı belirler: bir günden fazla ve bir aydan kısa kısa psikotik bozukluk, bir ile altı ay şizofreniform bozukluk, altı ay ve üzeri şizofrenidir.",
-   "adimlar": [
-    "1. Bir gün ile bir ay arası: kısa psikotik bozukluk.",
-    "2. Bir ile altı ay arası: şizofreniform bozukluk.",
-    "3. Altı ay ve üzeri: şizofreni."
-   ],
-   "svg": "r04.svg",
-   "paragraf": 16,
-   "bitis": 16,
-   "kaynak": [
-    18
-   ]
-  },
-  {
-   "id": "r05",
-   "baslik": "Pozitif belirtide bir şey eklenir, negatif belirtide bir şey eksilir",
-   "aciklama": "Sanrı, varsanı, formel düşünce bozukluğu ve dezorganize davranış pozitif; aloji, küntleşme, anhedoni, içe çekilme, avolüsyon, apati ve dikkat bozukluğu negatif belirtidir.",
-   "adimlar": [
-    "1. Pozitif belirtiler işlevin abartılmasıdır.",
-    "2. Negatif belirtiler var olan işlevin kaybıdır.",
-    "3. Apati negatif, enkoherans ve algı bozukluğu pozitif gruptadır."
-   ],
-   "svg": "r05.svg",
-   "paragraf": 22,
-   "bitis": 22,
-   "kaynak": [
-    22,
-    23,
-    24
-   ]
-  },
-  {
-   "id": "r13",
-   "baslik": "Belirti boyutları: pozitif grup ikiye bölünür",
-   "aciklama": "Sanrı ve varsanı psikotik boyuta, konuşma ve davranış bozukluğu ile uygunsuz duygulanım dezorganizasyon boyutuna, aloji, küntleşme ve avolüsyon negatif boyuta gider.",
-   "adimlar": [
-    "1. Psikotik boyut: sanrılar ve varsanılar.",
-    "2. Dezorganizasyon boyutu: dezorganize konuşma, garip davranış, uygunsuz duygulanım.",
-    "3. Negatif boyut: aloji, küntleşme, avolüsyon; anhedoni ve dikkat bozukluğu sık."
-   ],
-   "svg": "r13.svg",
-   "paragraf": 23,
-   "bitis": 23,
-   "kaynak": [
-    25
-   ]
-  },
-  {
-   "id": "r06",
-   "baslik": "Şizofreni evreleri: her atak neden kalıcı iz bırakır",
-   "aciklama": "Aktif dönemdeki her atak nöronlarda hasar bırakır; ilaçla toparlansa da nöron kaybı sürer ve işlevsellik önceki düzeyine tam dönmez.",
-   "adimlar": [
-    "1. Belirtisiz dönem: yaklaşık on beş yaşa dek tam işlev.",
-    "2. Prodrom: garip davranış ve silik negatif belirtiler; belirtisiz değildir.",
-    "3. Aktif dönem: her alevlenme nöronlarda kalıcı hasar bırakır.",
-    "4. Rezidüel dönem: negatif ve bilişsel belirtiler, düşük işlevsellik."
-   ],
-   "svg": "r06.svg",
-   "paragraf": 26,
-   "bitis": 26,
-   "kaynak": [
-    28
-   ]
-  },
-  {
-   "id": "r16",
-   "baslik": "Katalepsi, balmumu esnekliği ve postur alma nasıl ayrılır",
-   "aciklama": "Katalepside konum edilgin olarak korunur, balmumu esnekliğinde konumu muayene eden verir, postur almada kişi konumu kendisi etkin biçimde sürdürür.",
-   "adimlar": [
-    "1. Katalepsi: yer çekimine karşı edilgin konum.",
-    "2. Balmumu esnekliği: verilen konuma çok az direnç.",
-    "3. Postur alma: konum kendiliğinden ve etkin biçimde sürdürülür."
-   ],
-   "svg": "r16.svg",
-   "paragraf": 31,
-   "bitis": 31,
-   "kaynak": [
-    32,
-    33
-   ]
-  },
-  {
-   "id": "r07",
-   "baslik": "Şizofreni ile sanrılı bozukluk dört noktada ayrılır",
-   "aciklama": "Sanrılı bozuklukta işlevsellik iyidir, yeti kaybı yoktur, sanrı sistematize ve odaklıdır, şizofreninin diğer belirtileri bulunmaz.",
-   "adimlar": [
-    "1. İşlevsellik: şizofrenide kötü, sanrılı bozuklukta iyi.",
-    "2. Yeti kaybı: şizofrenide var, sanrılı bozuklukta yok.",
-    "3. Sanrılar: şizofrenide yaygın, sanrılı bozuklukta sistematize ve odaklı.",
-    "4. Diğer belirtiler: şizofrenide var, sanrılı bozuklukta yok."
-   ],
-   "svg": "r07.svg",
-   "paragraf": 37,
-   "bitis": 37,
-   "kaynak": [
-    40
-   ]
-  },
-  {
-   "id": "r15",
-   "baslik": "Paylaşılmış psikoz: sanrı baskın kişiden edilgin kişiye geçer",
-   "aciklama": "Bağımlı ilişkide sanrı baskın kişiden edilgin kişiye geçer; tedavide baskın kişiye antipsikotik verilir ve edilgin kişi ondan ayrılır.",
-   "adimlar": [
-    "1. İki ya da daha fazla kişi aynı sanrı sistemini paylaşır.",
-    "2. Sanrı baskın kişiden edilgin kişiye geçer.",
-    "3. İçerik çoğunlukla persekütif ya da hipokondriaktır.",
-    "4. Tedavi: baskın kişiye antipsikotik, edilgin kişi ayrılır."
-   ],
-   "svg": "r15.svg",
-   "paragraf": 38,
-   "bitis": 38,
-   "kaynak": [
-    41
-   ]
-  },
-  {
-   "id": "r08",
-   "baslik": "Şizoaffektif bozukluk iki komşusundan nasıl ayrılır",
-   "aciklama": "Duygudurum bozukluğunda ataklar arasında tam iyilik vardır; şizoaffektif bozuklukta sürekli psikozun üstüne duygudurum atakları eklenir; şizofrenide duygudurum atağı yoktur.",
-   "adimlar": [
-    "1. Duygudurum bozukluğu: ataklar arasında tam iyilik hâli.",
-    "2. Şizoaffektif bozukluk: duygudurum belirtisi olmadan en az iki hafta psikoz ve üstüne ataklar.",
-    "3. Şizofreni: sürekli psikoz, atak hâlinde duygudurum belirtisi yok."
-   ],
-   "svg": "r08.svg",
-   "paragraf": 40,
-   "bitis": 40,
-   "kaynak": [
-    43
-   ]
-  },
-  {
-   "id": "r09",
-   "baslik": "Üç bozukluk: süre, gereken belirti ve gidiş",
-   "aciklama": "Kısa psikotik bozukluk bir aydan kısa sürer ve tam düzelir; şizofreniformun çoğu şizofreniye döner; şizofrenide süre altı ayı aşar ve tam dönüş olmaz.",
-   "adimlar": [
-    "1. Süre: bir gün–bir ay, bir–altı ay, altı ay ve üzeri.",
-    "2. Gereken belirti: kısa psikotikte en az bir, diğerlerinde en az iki.",
-    "3. Negatif belirti yalnız şizofreniform ve şizofreni ölçütünde vardır.",
-    "4. Gidiş: tam dönüş, çoğu şizofreniye döner, tam dönüş yok."
-   ],
-   "svg": "r09.svg",
-   "paragraf": 46,
-   "bitis": 46,
-   "kaynak": [
-    17,
-    18,
-    46,
-    47,
-    48
-   ]
-  }
- ]
+  "key": "k2-15-sizofrenik-bozukluklar",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Çoklu vuruş: genetik yatkınlığın üstüne eklenen etkenler",
+      "aciklama": "Stres-diyatez modelinde genetik yatkınlık tek başına hastalık yapmaz; psikososyal etkenler üst üste eklenince şizofreni ortaya çıkar.",
+      "adimlar": [
+        "1. İlk vuruş genetik yatkınlıktır (diyatez).",
+        "2. Gebelik ve doğum komplikasyonları, doğum mevsimi, ebeveyn yaşı, örselenme, esrar, kent ve göç eklenir.",
+        "3. Etkenler birikince hastalık ortaya çıkar."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 4,
+      "bitis": 9,
+      "kaynak": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "lottie": "r01.json"
+    },
+    {
+      "id": "r10",
+      "baslik": "Kalıtım: hasta akraba sayısı ve yakınlığı arttıkça risk artar",
+      "aciklama": "Tek ebeveyn hastaysa risk yüzde beş–altı, iki ebeveyn hastaysa yüzde kırk yedidir; tek yumurta ikizinde bile risk yüzde kırk altıda kalır.",
+      "adimlar": [
+        "1. Hasta ebeveynin çocuğunda ortalama risk yüzde ondur.",
+        "2. Ailede hasta sayısı arttıkça risk yüzde on yedi ve kırk yediye çıkar.",
+        "3. Tek yumurta ikizinde yüzde kırk altı, çift yumurta ikizinde yüzde on dört.",
+        "4. Antisipasyon: hastalık kuşaklar boyunca daha erken ve şiddetli başlar."
+      ],
+      "svg": "r10.svg",
+      "paragraf": 10,
+      "bitis": 10,
+      "kaynak": [
+        12
+      ],
+      "lottie": "r10.json"
+    },
+    {
+      "id": "r11",
+      "baslik": "Yapısal beyin bulguları: doku azalır, boşluklar genişler",
+      "aciklama": "Ventriküller ve sulkuslar genişler, frontal korteks incelir; ventrikül genişlemesi kötü uyum, negatif belirti ve tedaviye kötü yanıtla ilişkilidir.",
+      "adimlar": [
+        "1. Ventriküller ve sulkuslar genişler, korteks incelir.",
+        "2. Ventrikül genişlemesi negatif belirtiler ve bilişsel kayıplarla ilişkilidir.",
+        "3. Frontal bölge en son, on beş ile yirmi beş yaş arasında olgunlaşır."
+      ],
+      "svg": "r11.svg",
+      "paragraf": 11,
+      "bitis": 11,
+      "kaynak": [
+        13
+      ],
+      "lottie": "r11.json"
+    },
+    {
+      "id": "r12",
+      "baslik": "Hipofrontalite ve şizofreni devresi",
+      "aciklama": "Fonksiyonel görüntülemede frontal lob beklenenden az çalışır; sorun frontal korteks, singulat, talamus, temporal lob ve serebellumu bağlayan devrenin işleyişindedir.",
+      "adimlar": [
+        "1. Hipofrontalite: frontal lob az çalışır, negatif belirtilerle ilişkilidir.",
+        "2. Odak prefrontal ve dorsolateral prefrontal kortekstir.",
+        "3. Hiperfrontalite şizofrenide beklenmeyen bulgudur.",
+        "4. Devre bölgeleri birlikte çalışır; anatomi normal olsa da sinyalleşme bozuk olabilir."
+      ],
+      "svg": "r12.svg",
+      "paragraf": 12,
+      "bitis": 12,
+      "kaynak": [
+        14
+      ],
+      "lottie": "r12.json"
+    },
+    {
+      "id": "r14",
+      "baslik": "Nöropatoloji: küçük nöronlar, azalmış sinaps, gliozis yok",
+      "aciklama": "Korteks ve hipokampusta nöronlar küçüktür, sinaps ve dendrit azalmıştır; gliozisin olmaması sorunun beyin gelişimi sırasında oluştuğunu düşündürür.",
+      "adimlar": [
+        "1. Korteks ve hipokampusta nöronlar küçük, dorsal talamusta sayıca azdır.",
+        "2. Hipokampusta sinaps ve dendrit azalır.",
+        "3. Gliozis yoktur: sonradan hasar değil gelişimsel sorun düşünülür."
+      ],
+      "svg": "r14.svg",
+      "paragraf": 13,
+      "bitis": 13,
+      "kaynak": [
+        15
+      ],
+      "lottie": "r14.json"
+    },
+    {
+      "id": "r02",
+      "baslik": "Dopamin fazlası pozitif, dopamin azlığı negatif belirtilerle ilişkilidir",
+      "aciklama": "Hiperdopaminerjik durum pozitif, hipodopaminerjik durum ve hipofrontalite negatif belirtilerle ilişkilidir; fensiklidin glutamat yoluyla şizofreni benzeri tablo yapar.",
+      "adimlar": [
+        "1. Dopamin fazlası: pozitif belirtiler (sanrı, varsanı).",
+        "2. Dopamin azlığı ve hipofrontalite: negatif belirtiler.",
+        "3. Fensiklidin glutamat sistemi üzerinden şizofreni benzeri belirtiler oluşturur."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 14,
+      "bitis": 14,
+      "kaynak": [
+        14,
+        16
+      ],
+      "lottie": "r02.json"
+    },
+    {
+      "id": "r03",
+      "baslik": "Şizofreni tanısı üç ölçüte dayanır: A, B ve C",
+      "aciklama": "Beş belirtiden en az ikisi bir ay bulunur ve biri mutlaka sanrı, varsanı ya da darmadağın konuşmadır; işlevsellik düşer ve süre en az altı aydır.",
+      "adimlar": [
+        "1. A ölçütü: beş belirtiden en az ikisi, bir ay boyunca.",
+        "2. Bu belirtilerden en az biri sanrı, varsanı ya da darmadağın konuşmadır.",
+        "3. B ölçütü: işlevsellik belirgin biçimde düşer.",
+        "4. C ölçütü: süregiden bulgular en az altı ay sürer."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 15,
+      "bitis": 15,
+      "kaynak": [
+        17
+      ],
+      "lottie": "r03.json"
+    },
+    {
+      "id": "r04",
+      "baslik": "Süre ayrımı: bir ay ve altı ay eşikleri",
+      "aciklama": "Belirtilerin süresi tanıyı belirler: bir günden fazla ve bir aydan kısa kısa psikotik bozukluk, bir ile altı ay şizofreniform bozukluk, altı ay ve üzeri şizofrenidir.",
+      "adimlar": [
+        "1. Bir gün ile bir ay arası: kısa psikotik bozukluk.",
+        "2. Bir ile altı ay arası: şizofreniform bozukluk.",
+        "3. Altı ay ve üzeri: şizofreni."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 16,
+      "bitis": 16,
+      "kaynak": [
+        18
+      ],
+      "lottie": "r04.json"
+    },
+    {
+      "id": "r05",
+      "baslik": "Pozitif belirtide bir şey eklenir, negatif belirtide bir şey eksilir",
+      "aciklama": "Sanrı, varsanı, formel düşünce bozukluğu ve dezorganize davranış pozitif; aloji, küntleşme, anhedoni, içe çekilme, avolüsyon, apati ve dikkat bozukluğu negatif belirtidir.",
+      "adimlar": [
+        "1. Pozitif belirtiler işlevin abartılmasıdır.",
+        "2. Negatif belirtiler var olan işlevin kaybıdır.",
+        "3. Apati negatif, enkoherans ve algı bozukluğu pozitif gruptadır."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 22,
+      "bitis": 22,
+      "kaynak": [
+        22,
+        23,
+        24
+      ],
+      "lottie": "r05.json"
+    },
+    {
+      "id": "r13",
+      "baslik": "Belirti boyutları: pozitif grup ikiye bölünür",
+      "aciklama": "Sanrı ve varsanı psikotik boyuta, konuşma ve davranış bozukluğu ile uygunsuz duygulanım dezorganizasyon boyutuna, aloji, küntleşme ve avolüsyon negatif boyuta gider.",
+      "adimlar": [
+        "1. Psikotik boyut: sanrılar ve varsanılar.",
+        "2. Dezorganizasyon boyutu: dezorganize konuşma, garip davranış, uygunsuz duygulanım.",
+        "3. Negatif boyut: aloji, küntleşme, avolüsyon; anhedoni ve dikkat bozukluğu sık."
+      ],
+      "svg": "r13.svg",
+      "paragraf": 23,
+      "bitis": 23,
+      "kaynak": [
+        25
+      ],
+      "lottie": "r13.json"
+    },
+    {
+      "id": "r06",
+      "baslik": "Şizofreni evreleri: her atak neden kalıcı iz bırakır",
+      "aciklama": "Aktif dönemdeki her atak nöronlarda hasar bırakır; ilaçla toparlansa da nöron kaybı sürer ve işlevsellik önceki düzeyine tam dönmez.",
+      "adimlar": [
+        "1. Belirtisiz dönem: yaklaşık on beş yaşa dek tam işlev.",
+        "2. Prodrom: garip davranış ve silik negatif belirtiler; belirtisiz değildir.",
+        "3. Aktif dönem: her alevlenme nöronlarda kalıcı hasar bırakır.",
+        "4. Rezidüel dönem: negatif ve bilişsel belirtiler, düşük işlevsellik."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 26,
+      "bitis": 26,
+      "kaynak": [
+        28
+      ],
+      "lottie": "r06.json"
+    },
+    {
+      "id": "r16",
+      "baslik": "Katalepsi, balmumu esnekliği ve postur alma nasıl ayrılır",
+      "aciklama": "Katalepside konum edilgin olarak korunur, balmumu esnekliğinde konumu muayene eden verir, postur almada kişi konumu kendisi etkin biçimde sürdürür.",
+      "adimlar": [
+        "1. Katalepsi: yer çekimine karşı edilgin konum.",
+        "2. Balmumu esnekliği: verilen konuma çok az direnç.",
+        "3. Postur alma: konum kendiliğinden ve etkin biçimde sürdürülür."
+      ],
+      "svg": "r16.svg",
+      "paragraf": 31,
+      "bitis": 31,
+      "kaynak": [
+        32,
+        33
+      ],
+      "lottie": "r16.json"
+    },
+    {
+      "id": "r07",
+      "baslik": "Şizofreni ile sanrılı bozukluk dört noktada ayrılır",
+      "aciklama": "Sanrılı bozuklukta işlevsellik iyidir, yeti kaybı yoktur, sanrı sistematize ve odaklıdır, şizofreninin diğer belirtileri bulunmaz.",
+      "adimlar": [
+        "1. İşlevsellik: şizofrenide kötü, sanrılı bozuklukta iyi.",
+        "2. Yeti kaybı: şizofrenide var, sanrılı bozuklukta yok.",
+        "3. Sanrılar: şizofrenide yaygın, sanrılı bozuklukta sistematize ve odaklı.",
+        "4. Diğer belirtiler: şizofrenide var, sanrılı bozuklukta yok."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 37,
+      "bitis": 37,
+      "kaynak": [
+        40
+      ],
+      "lottie": "r07.json"
+    },
+    {
+      "id": "r15",
+      "baslik": "Paylaşılmış psikoz: sanrı baskın kişiden edilgin kişiye geçer",
+      "aciklama": "Bağımlı ilişkide sanrı baskın kişiden edilgin kişiye geçer; tedavide baskın kişiye antipsikotik verilir ve edilgin kişi ondan ayrılır.",
+      "adimlar": [
+        "1. İki ya da daha fazla kişi aynı sanrı sistemini paylaşır.",
+        "2. Sanrı baskın kişiden edilgin kişiye geçer.",
+        "3. İçerik çoğunlukla persekütif ya da hipokondriaktır.",
+        "4. Tedavi: baskın kişiye antipsikotik, edilgin kişi ayrılır."
+      ],
+      "svg": "r15.svg",
+      "paragraf": 38,
+      "bitis": 38,
+      "kaynak": [
+        41
+      ],
+      "lottie": "r15.json"
+    },
+    {
+      "id": "r08",
+      "baslik": "Şizoaffektif bozukluk iki komşusundan nasıl ayrılır",
+      "aciklama": "Duygudurum bozukluğunda ataklar arasında tam iyilik vardır; şizoaffektif bozuklukta sürekli psikozun üstüne duygudurum atakları eklenir; şizofrenide duygudurum atağı yoktur.",
+      "adimlar": [
+        "1. Duygudurum bozukluğu: ataklar arasında tam iyilik hâli.",
+        "2. Şizoaffektif bozukluk: duygudurum belirtisi olmadan en az iki hafta psikoz ve üstüne ataklar.",
+        "3. Şizofreni: sürekli psikoz, atak hâlinde duygudurum belirtisi yok."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 40,
+      "bitis": 40,
+      "kaynak": [
+        43
+      ],
+      "lottie": "r08.json"
+    },
+    {
+      "id": "r09",
+      "baslik": "Üç bozukluk: süre, gereken belirti ve gidiş",
+      "aciklama": "Kısa psikotik bozukluk bir aydan kısa sürer ve tam düzelir; şizofreniformun çoğu şizofreniye döner; şizofrenide süre altı ayı aşar ve tam dönüş olmaz.",
+      "adimlar": [
+        "1. Süre: bir gün–bir ay, bir–altı ay, altı ay ve üzeri.",
+        "2. Gereken belirti: kısa psikotikte en az bir, diğerlerinde en az iki.",
+        "3. Negatif belirti yalnız şizofreniform ve şizofreni ölçütünde vardır.",
+        "4. Gidiş: tam dönüş, çoğu şizofreniye döner, tam dönüş yok."
+      ],
+      "svg": "r09.svg",
+      "paragraf": 46,
+      "bitis": 46,
+      "kaynak": [
+        17,
+        18,
+        46,
+        47,
+        48
+      ],
+      "lottie": "r09.json"
+    }
+  ]
 }

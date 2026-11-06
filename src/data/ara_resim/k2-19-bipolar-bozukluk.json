@@ -1,185 +1,195 @@
 {
- "key": "k2-19-bipolar-bozukluk",
- "resimler": [
-  {
-   "id": "r01",
-   "baslik": "Alt tipi belirleyen dönem",
-   "aciklama": "Bipolar I'i tek bir mani dönemi, bipolar II'yi mani olmadan hipomani ile majör depresyon, siklotimiyi en az iki yıl süren hafif dalgalanmalar belirler.",
-   "adimlar": [
-    "1. Bipolar I: tek mani dönemi tanı için yeterlidir; depresyon olabilir ama şart değildir.",
-    "2. Bipolar II: en az birer hipomani (en az 4 gün) ve majör depresyon (en az 2 hafta) dönemi vardır, mani yoktur.",
-    "3. Bipolar II izlenen hastada mani çıkarsa tanı bipolar I olur.",
-    "4. Siklotimi: hafif dalgalanmalar en az 2 yıl sürer, sürekli iyilik en çok 2 aydır."
-   ],
-   "svg": "r01.svg",
-   "paragraf": 9,
-   "bitis": 9,
-   "kaynak": [
-    8,
-    9,
-    10,
-    11
-   ]
-  },
-  {
-   "id": "r08",
-   "baslik": "Başlangıç, gecikmiş tanı ve tekrarlama",
-   "aciklama": "Hastalık 15–24 yaşta başlar ama doğru tanı 5–10 yıl gecikir; tek mani atağından sonra her on hastanın yaklaşık dokuzu yeni atak geçirir.",
-   "adimlar": [
-    "1. Başlangıç 15–24 yaş arasıdır.",
-    "2. Ataklar arası uzun olabilir, atağı doktor görmemiş olabilir, ilk ataklar depresyonla gelebilir.",
-    "3. Mani görülmeden bipolar tanısı konamaz.",
-    "4. Tekrarlama %90 olduğu için tek mani atağından sonra duygudurum düzenleyici başlanır.",
-    "5. Yıllık intihar oranı %0,4, genel toplumun yaklaşık 20 katıdır."
-   ],
-   "svg": "r08.svg",
-   "paragraf": 12,
-   "bitis": 12,
-   "kaynak": [
-    13
-   ]
-  },
-  {
-   "id": "r02",
-   "baslik": "Monoamin hipotezi: mani iki yoldan doğabilir",
-   "aciklama": "Limbik sistemdeki sinapsta noradrenalin, dopamin ve histamin mutlak ya da göreceli olarak fazladır ya da madde normal miktardayken reseptörler bu maddelere aşırı duyarlıdır; iki yol da maniye götürür.",
-   "adimlar": [
-    "1. Olayın yeri limbik sistemdir.",
-    "2. Noradrenalin, dopamin ve histamin mutlak ya da göreceli olarak fazladır.",
-    "3. Ya da madde normal miktarda iken reseptör duyarlılığı artmıştır.",
-    "4. İki yol da aynı sonuca, maniye götürür."
-   ],
-   "svg": "r02.svg",
-   "paragraf": 13,
-   "bitis": 13,
-   "kaynak": [
-    14,
-    15
-   ]
-  },
-  {
-   "id": "r09",
-   "baslik": "Psikososyal etken: yaşam olaylarının ağırlığı azalır",
-   "aciklama": "İlk manik atakla gelen hastaların üçte ikisinde, sonraki ataklarda ise beşte birinde yaşam olayı gösterilir; uyku düzeninin bozulması da bir stres türüdür.",
-   "adimlar": [
-    "1. Yaşam olayı belli başlangıcı ve süresi olan sosyal bir deneyimdir.",
-    "2. İlk manik atakta hastaların üçte ikisinde yaşam olayı vardır.",
-    "3. Sonraki ataklarda bu oran beşte bire düşer; ataklar kendiliğinden gelmeye başlar.",
-    "4. Uyku düzeni bozulmasın diye bipolar hasta yalnız gündüz görevlendirilir."
-   ],
-   "svg": "r09.svg",
-   "paragraf": 17,
-   "bitis": 17,
-   "kaynak": [
-    17
-   ]
-  },
-  {
-   "id": "r03",
-   "baslik": "Psikoanalitik açıklama: kısmi özdeşimler",
-   "aciklama": "Zıt kişilikteki anne ve babadan parça parça alınan özdeşimler arasındaki gidiş gelişin mani ya da depresyon nöbetlerine yol açabileceği ileri sürülür.",
-   "adimlar": [
-    "1. Bir ebeveyn saldırgan, öteki baş eğicidir.",
-    "2. Çocuk belirgin bir özdeşim yerine kısmi özdeşimler geliştirir.",
-    "3. Kısmi özdeşimler arasında gidiş gelişler olur.",
-    "4. Bu gidiş gelişler mani ya da depresyon nöbeti olarak yorumlanır."
-   ],
-   "svg": "r03.svg",
-   "paragraf": 18,
-   "bitis": 18,
-   "kaynak": [
-    18
-   ]
-  },
-  {
-   "id": "r10",
-   "baslik": "Manik delirium: bitkinlikten bilinç bulanıklığına",
-   "aciklama": "Günlerce uykusuz, aç ve susuz kalıp ileri derecede bitkin düşen manik hastada manik tablonun üzerine delirium binebilir; bu hastada tansiyon, EKG ve yeme içme mutlaka değerlendirilir.",
-   "adimlar": [
-    "1. Uykusuzluk ve beslenme bozukluğu ileri bitkinlik yapar.",
-    "2. Manik tablonun üzerine bilincin bulanıklaştığı delirium biner.",
-    "3. Aşırı stres yükü tansiyonu ve kan şekerini yükseltebilir.",
-    "4. Hemen \"psikiyatri\" yazılmaz; tansiyon, EKG, şikâyet süresi ve yeme içme sorulur."
-   ],
-   "svg": "r10.svg",
-   "paragraf": 22,
-   "bitis": 22,
-   "kaynak": [
-    22
-   ]
-  },
-  {
-   "id": "r04",
-   "baslik": "Manide dikkat iki zıt yöne değişir",
-   "aciklama": "Manik hastada istenen konuya yoğunlaşma (istemli dikkat) azalır, önemsiz dış uyaranların dikkati kendiliğinden çekmesi (spontan dikkat) artar.",
-   "adimlar": [
-    "1. İstemli dikkat azalır: hasta sorulan soruya yoğunlaşamaz.",
-    "2. Spontan dikkat artar: öksürük, geçen araba ya da kravat dikkatini hemen çeker.",
-    "3. Sonuç: hasta konudan konuya savrulur."
-   ],
-   "svg": "r04.svg",
-   "paragraf": 24,
-   "bitis": 24,
-   "kaynak": [
-    22
-   ]
-  },
-  {
-   "id": "r05",
-   "baslik": "Manik ve majör depresif epizod ölçütleri",
-   "aciklama": "Hipomani, mani ve majör depresyonun süreleri aynı gün ölçeğinde gösterilir; mani en az bir hafta ve üç belirtiyle, majör depresyon en az on beş gün ve beş belirtiyle tanınır.",
-   "adimlar": [
-    "1. Mani: en az 1 hafta, en az 3 belirti (irritabl mizaçta 4).",
-    "2. Mani: işlev kaybı, yatış ya da psikoz; madde ve tıbbi neden dışlanır.",
-    "3. Majör depresyon: 8 belirtiden en az 5'i, en az 15 gün.",
-    "4. Majör depresyon: işlev kaybı vardır, yas dışlanır."
-   ],
-   "svg": "r05.svg",
-   "paragraf": 34,
-   "bitis": 34,
-   "kaynak": [
-    29,
-    30
-   ]
-  },
-  {
-   "id": "r11",
-   "baslik": "Klinik gidiş: hızlı düzelme, yüksek tekrarlama",
-   "aciklama": "Hastalar tedaviyle 3–4 haftada düzelir, ilk üç ay tekrarlama için en kritik dönemdir; adölesanda lityum kesilince 18 ayda relaps %92, devam edilince %37'dir.",
-   "adimlar": [
-    "1. Tedaviyle 3–4 haftada önemli düzelme olur; ileri yaşta uzun hareketlilik aritmi tetikleyebilir.",
-    "2. Belirtiler kalktıktan sonraki ilk 3 ay en kritik dönemdir.",
-    "3. Tek manik ataktan sonra %90'dan fazlası yeni epizod geçirir.",
-    "4. Olguların %20–35'inde kronik gidiş izlenir.",
-    "5. Lityum kesilen adölesanda 18 ayda relaps %92, devam edende %37."
-   ],
-   "svg": "r11.svg",
-   "paragraf": 41,
-   "bitis": 43,
-   "kaynak": [
-    35,
-    36,
-    37
-   ]
-  },
-  {
-   "id": "r07",
-   "baslik": "Tedavide ilaçların zaman içindeki yeri",
-   "aciklama": "Atakta duygudurum dengeleyicinin yanına antipsikotik ya da benzodiazepin eklenir; atak geçince ekler azaltılır, dengeleyici sürer, antidepresan manide kesilir.",
-   "adimlar": [
-    "1. Atakta dengeleyiciye antipsikotik ya da benzodiazepin eklenir.",
-    "2. Atak geçince gerekmeyen ek ilaçlar azaltılır; uyku ilacı gerekirse sürer.",
-    "3. Duygudurum dengeleyici relaps olmasın diye sürer.",
-    "4. Antidepresan maniyi tetikleyebildiği için yalnız çökkün dönemde verilir.",
-    "5. Duygudurum düzenleyiciler: lityum, valproik asit, karbamazepin."
-   ],
-   "svg": "r07.svg",
-   "paragraf": 47,
-   "bitis": 47,
-   "kaynak": [
-    40,
-    41
-   ]
-  }
- ]
+  "key": "k2-19-bipolar-bozukluk",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Alt tipi belirleyen dönem",
+      "aciklama": "Bipolar I'i tek bir mani dönemi, bipolar II'yi mani olmadan hipomani ile majör depresyon, siklotimiyi en az iki yıl süren hafif dalgalanmalar belirler.",
+      "adimlar": [
+        "1. Bipolar I: tek mani dönemi tanı için yeterlidir; depresyon olabilir ama şart değildir.",
+        "2. Bipolar II: en az birer hipomani (en az 4 gün) ve majör depresyon (en az 2 hafta) dönemi vardır, mani yoktur.",
+        "3. Bipolar II izlenen hastada mani çıkarsa tanı bipolar I olur.",
+        "4. Siklotimi: hafif dalgalanmalar en az 2 yıl sürer, sürekli iyilik en çok 2 aydır."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 9,
+      "bitis": 9,
+      "kaynak": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "lottie": "r01.json"
+    },
+    {
+      "id": "r08",
+      "baslik": "Başlangıç, gecikmiş tanı ve tekrarlama",
+      "aciklama": "Hastalık 15–24 yaşta başlar ama doğru tanı 5–10 yıl gecikir; tek mani atağından sonra her on hastanın yaklaşık dokuzu yeni atak geçirir.",
+      "adimlar": [
+        "1. Başlangıç 15–24 yaş arasıdır.",
+        "2. Ataklar arası uzun olabilir, atağı doktor görmemiş olabilir, ilk ataklar depresyonla gelebilir.",
+        "3. Mani görülmeden bipolar tanısı konamaz.",
+        "4. Tekrarlama %90 olduğu için tek mani atağından sonra duygudurum düzenleyici başlanır.",
+        "5. Yıllık intihar oranı %0,4, genel toplumun yaklaşık 20 katıdır."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 12,
+      "bitis": 12,
+      "kaynak": [
+        13
+      ],
+      "lottie": "r08.json"
+    },
+    {
+      "id": "r02",
+      "baslik": "Monoamin hipotezi: mani iki yoldan doğabilir",
+      "aciklama": "Limbik sistemdeki sinapsta noradrenalin, dopamin ve histamin mutlak ya da göreceli olarak fazladır ya da madde normal miktardayken reseptörler bu maddelere aşırı duyarlıdır; iki yol da maniye götürür.",
+      "adimlar": [
+        "1. Olayın yeri limbik sistemdir.",
+        "2. Noradrenalin, dopamin ve histamin mutlak ya da göreceli olarak fazladır.",
+        "3. Ya da madde normal miktarda iken reseptör duyarlılığı artmıştır.",
+        "4. İki yol da aynı sonuca, maniye götürür."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 13,
+      "bitis": 13,
+      "kaynak": [
+        14,
+        15
+      ],
+      "lottie": "r02.json"
+    },
+    {
+      "id": "r09",
+      "baslik": "Psikososyal etken: yaşam olaylarının ağırlığı azalır",
+      "aciklama": "İlk manik atakla gelen hastaların üçte ikisinde, sonraki ataklarda ise beşte birinde yaşam olayı gösterilir; uyku düzeninin bozulması da bir stres türüdür.",
+      "adimlar": [
+        "1. Yaşam olayı belli başlangıcı ve süresi olan sosyal bir deneyimdir.",
+        "2. İlk manik atakta hastaların üçte ikisinde yaşam olayı vardır.",
+        "3. Sonraki ataklarda bu oran beşte bire düşer; ataklar kendiliğinden gelmeye başlar.",
+        "4. Uyku düzeni bozulmasın diye bipolar hasta yalnız gündüz görevlendirilir."
+      ],
+      "svg": "r09.svg",
+      "paragraf": 17,
+      "bitis": 17,
+      "kaynak": [
+        17
+      ],
+      "lottie": "r09.json"
+    },
+    {
+      "id": "r03",
+      "baslik": "Psikoanalitik açıklama: kısmi özdeşimler",
+      "aciklama": "Zıt kişilikteki anne ve babadan parça parça alınan özdeşimler arasındaki gidiş gelişin mani ya da depresyon nöbetlerine yol açabileceği ileri sürülür.",
+      "adimlar": [
+        "1. Bir ebeveyn saldırgan, öteki baş eğicidir.",
+        "2. Çocuk belirgin bir özdeşim yerine kısmi özdeşimler geliştirir.",
+        "3. Kısmi özdeşimler arasında gidiş gelişler olur.",
+        "4. Bu gidiş gelişler mani ya da depresyon nöbeti olarak yorumlanır."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 18,
+      "bitis": 18,
+      "kaynak": [
+        18
+      ],
+      "lottie": "r03.json"
+    },
+    {
+      "id": "r10",
+      "baslik": "Manik delirium: bitkinlikten bilinç bulanıklığına",
+      "aciklama": "Günlerce uykusuz, aç ve susuz kalıp ileri derecede bitkin düşen manik hastada manik tablonun üzerine delirium binebilir; bu hastada tansiyon, EKG ve yeme içme mutlaka değerlendirilir.",
+      "adimlar": [
+        "1. Uykusuzluk ve beslenme bozukluğu ileri bitkinlik yapar.",
+        "2. Manik tablonun üzerine bilincin bulanıklaştığı delirium biner.",
+        "3. Aşırı stres yükü tansiyonu ve kan şekerini yükseltebilir.",
+        "4. Hemen \"psikiyatri\" yazılmaz; tansiyon, EKG, şikâyet süresi ve yeme içme sorulur."
+      ],
+      "svg": "r10.svg",
+      "paragraf": 22,
+      "bitis": 22,
+      "kaynak": [
+        22
+      ],
+      "lottie": "r10.json"
+    },
+    {
+      "id": "r04",
+      "baslik": "Manide dikkat iki zıt yöne değişir",
+      "aciklama": "Manik hastada istenen konuya yoğunlaşma (istemli dikkat) azalır, önemsiz dış uyaranların dikkati kendiliğinden çekmesi (spontan dikkat) artar.",
+      "adimlar": [
+        "1. İstemli dikkat azalır: hasta sorulan soruya yoğunlaşamaz.",
+        "2. Spontan dikkat artar: öksürük, geçen araba ya da kravat dikkatini hemen çeker.",
+        "3. Sonuç: hasta konudan konuya savrulur."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 24,
+      "bitis": 24,
+      "kaynak": [
+        22
+      ],
+      "lottie": "r04.json"
+    },
+    {
+      "id": "r05",
+      "baslik": "Manik ve majör depresif epizod ölçütleri",
+      "aciklama": "Hipomani, mani ve majör depresyonun süreleri aynı gün ölçeğinde gösterilir; mani en az bir hafta ve üç belirtiyle, majör depresyon en az on beş gün ve beş belirtiyle tanınır.",
+      "adimlar": [
+        "1. Mani: en az 1 hafta, en az 3 belirti (irritabl mizaçta 4).",
+        "2. Mani: işlev kaybı, yatış ya da psikoz; madde ve tıbbi neden dışlanır.",
+        "3. Majör depresyon: 8 belirtiden en az 5'i, en az 15 gün.",
+        "4. Majör depresyon: işlev kaybı vardır, yas dışlanır."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 34,
+      "bitis": 34,
+      "kaynak": [
+        29,
+        30
+      ],
+      "lottie": "r05.json"
+    },
+    {
+      "id": "r11",
+      "baslik": "Klinik gidiş: hızlı düzelme, yüksek tekrarlama",
+      "aciklama": "Hastalar tedaviyle 3–4 haftada düzelir, ilk üç ay tekrarlama için en kritik dönemdir; adölesanda lityum kesilince 18 ayda relaps %92, devam edilince %37'dir.",
+      "adimlar": [
+        "1. Tedaviyle 3–4 haftada önemli düzelme olur; ileri yaşta uzun hareketlilik aritmi tetikleyebilir.",
+        "2. Belirtiler kalktıktan sonraki ilk 3 ay en kritik dönemdir.",
+        "3. Tek manik ataktan sonra %90'dan fazlası yeni epizod geçirir.",
+        "4. Olguların %20–35'inde kronik gidiş izlenir.",
+        "5. Lityum kesilen adölesanda 18 ayda relaps %92, devam edende %37."
+      ],
+      "svg": "r11.svg",
+      "paragraf": 41,
+      "bitis": 43,
+      "kaynak": [
+        35,
+        36,
+        37
+      ],
+      "lottie": "r11.json"
+    },
+    {
+      "id": "r07",
+      "baslik": "Tedavide ilaçların zaman içindeki yeri",
+      "aciklama": "Atakta duygudurum dengeleyicinin yanına antipsikotik ya da benzodiazepin eklenir; atak geçince ekler azaltılır, dengeleyici sürer, antidepresan manide kesilir.",
+      "adimlar": [
+        "1. Atakta dengeleyiciye antipsikotik ya da benzodiazepin eklenir.",
+        "2. Atak geçince gerekmeyen ek ilaçlar azaltılır; uyku ilacı gerekirse sürer.",
+        "3. Duygudurum dengeleyici relaps olmasın diye sürer.",
+        "4. Antidepresan maniyi tetikleyebildiği için yalnız çökkün dönemde verilir.",
+        "5. Duygudurum düzenleyiciler: lityum, valproik asit, karbamazepin."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 47,
+      "bitis": 47,
+      "kaynak": [
+        40,
+        41
+      ],
+      "lottie": "r07.json"
+    }
+  ]
 }

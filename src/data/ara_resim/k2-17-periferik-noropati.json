@@ -1,213 +1,225 @@
 {
- "key": "k2-17-periferik-noropati",
- "resimler": [
-  {
-   "id": "r01",
-   "baslik": "Omurilikten deri ve kasa: tek sinirde iki yol",
-   "aciklama": "Duysal uyarı deriden omuriliğe, motor emir ön boynuzdan kasa gider; arka ve ön kök birleşip motor, duysal ve otonom lif taşıyan karma siniri oluşturur.",
-   "adimlar": [
-    "1. Duysal uyarı deride reseptörde başlar ve omuriliğe doğru ilerler.",
-    "2. Duysal hücre gövdesi omurilik dışında, arka kök ganglionundadır.",
-    "3. Motor hücre gövdesi ön boynuzdaki alfa motor nörondur; emir ön kökten kasa iner.",
-    "4. İki kök omurilik dışında birleşir; lifler aynı kılıfta karışmadan yürür.",
-    "5. Bu yüzden karma sinir hasarında kuvvet ve his birlikte bozulabilir."
-   ],
-   "svg": "r01.svg",
-   "paragraf": 0,
-   "bitis": 2,
-   "kaynak": [
-    2,
-    3,
-    4
-   ]
-  },
-  {
-   "id": "r02",
-   "baslik": "Hasarın yeri hastalığa adını verir",
-   "aciklama": "Sinir hücresinin gövdesi, aksonu ve miyelin kılıfı ayrı hedeflerdir; hasarlı parça hem hastalığın adını hem de bozulmanın biçimini belirler.",
-   "adimlar": [
-    "1. Gövde hasarı nöronopatidir: kabloya güç veren santral bozulur.",
-    "2. Akson hasarı aksonopatidir: tel kopar, ötesine akım gitmez.",
-    "3. Schwann hücresi, yani miyelin hasarı miyelinopatidir: yalıtım soyulur, akım bozulur ve yavaşlar."
-   ],
-   "svg": "r02.svg",
-   "paragraf": 4,
-   "bitis": 4,
-   "kaynak": [
-    6
-   ]
-  },
-  {
-   "id": "r03",
-   "baslik": "Pompadan aksiyon potansiyeline",
-   "aciklama": "Sodyum-potasyum pompası içeride potasyumu, dışarıda sodyumu bol tutar ve zarın içini eksi yetmiş milivoltta korur; uyarıda sodyum içeri girer ve zar artı otuz milivolta çıkar.",
-   "adimlar": [
-    "1. Pompa enerji harcayarak sodyumu dışarı, potasyumu içeri taşır.",
-    "2. İçeride potasyum ve negatif yüklü proteinler, dışarıda sodyum ve klor boldur.",
-    "3. Dinlenimde zarın içi dışına göre eksi yetmiş milivolttur.",
-    "4. Uyarıda sodyum içeri girer, zar artı otuz milivolta çıkar ve aksiyon potansiyeli sinir boyunca iletilir."
-   ],
-   "svg": "r03.svg",
-   "paragraf": 5,
-   "bitis": 5,
-   "kaynak": [
-    7
-   ]
-  },
-  {
-   "id": "r04",
-   "baslik": "Miyelinsiz lifte adım adım, miyelinli lifte atlayarak",
-   "aciklama": "Miyelinsiz lifte akım komşu zarı sırayla uyarır ve ileti yavaştır; miyelinli lifte uyarı yalnız Ranvier nodlarında doğar ve noddan noda atlar.",
-   "adimlar": [
-    "1. Miyelinsiz lif: uyarılan bölgede yükler ters döner, akım bitişik zara geçer.",
-    "2. Miyelinli lif: miyelin yalıtır, uyarı yalnız Ranvier nodunda yeniden doğar.",
-    "3. Akım bir noddan sonrakine atlar; bu saltatorik ileti çok daha hızlıdır."
-   ],
-   "svg": "r04.svg",
-   "paragraf": 6,
-   "bitis": 6,
-   "kaynak": [
-    8
-   ]
-  },
-  {
-   "id": "r09",
-   "baslik": "Kalınlık ve miyelin ileti hızını belirler",
-   "aciklama": "Tip A kalın ve miyelinli, Tip B ince miyelinli, Tip C miyelinsiz ve en incedir; lif kalınlaştıkça ve miyelini arttıkça ileti hızlanır.",
-   "adimlar": [
-    "1. Tip A: 2–20 mikrometre, miyelinli; vibrasyon ve propriosepsiyon; 10–70 metre/saniye.",
-    "2. Tip B: yaklaşık 3 mikrometre, ince miyelinli, preganglionik otonom; hızı A ile C arasında.",
-    "3. Tip C: 1 mikrometreden ince, miyelinsiz; ağrı ve ısı; 2 metre/saniyeden yavaş.",
-    "4. Tip C gibi ince lifler EMG ile ölçülemez."
-   ],
-   "svg": "r09.svg",
-   "paragraf": 7,
-   "bitis": 7,
-   "kaynak": [
-    9
-   ]
-  },
-  {
-   "id": "r05",
-   "baslik": "Üç yıkım biçiminde hücre düzeyinde ne olur?",
-   "aciklama": "Waller dejenerasyonunda kesinin distali yıkılıp makrofajlarla temizlenir, segmental demiyelinizasyonda akson ve kas korunur, distal aksonal dejenerasyonda akson uçtan gövdeye doğru ölür.",
-   "adimlar": [
-    "1. Waller: yaralanmanın distalinde akson bozulur, miyelin globüllere ayrılır, makrofajlar temizler.",
-    "2. Segmental demiyelinizasyon: akson sağlam, yer yer miyelin kaybı, kas denerve değil, prognoz iyi.",
-    "3. Remiyelinizasyon 15 gün ile 6 ay arasında sürer.",
-    "4. Distal aksonal dejenerasyon: akson uçtan geriye ölür, miyelin kaybı sekonder, prognoz en kötü."
-   ],
-   "svg": "r05.svg",
-   "paragraf": 8,
-   "bitis": 10,
-   "kaynak": [
-    10,
-    11
-   ]
-  },
-  {
-   "id": "r06",
-   "baslik": "Travmatik sinir yaralanması: yalıtımdan kılıfa",
-   "aciklama": "Seddon ve Sunderland sınıflamasında hasar yalnız miyelinden başlayıp aksona, en ağır derecede de endonöral tüp, perinöryum ve epinöryuma kadar derinleşir.",
-   "adimlar": [
-    "1. Endonöryum her lifi, perinöryum lif demetini, epinöryum bütün siniri sarar.",
-    "2. Nöropraksi: yalnız miyelin hasarı, akson sağlam; tedaviye en iyi yanıt.",
-    "3. Aksonotmezis: akson kaybı ve değişik derecede kılıf hasarı; yanıt ihtimali azalır.",
-    "4. Nörotmezis: akson, endonöral tüp, perinöryum ve epinöryum hasarı; uçlar ayrılabilir, cerrahi gerekebilir."
-   ],
-   "svg": "r06.svg",
-   "paragraf": 11,
-   "bitis": 11,
-   "kaynak": [
-    12
-   ]
-  },
-  {
-   "id": "r10",
-   "baslik": "Polinöropatilerin sınıflaması ve vaskülitik sinir hasarı",
-   "aciklama": "Polinöropatiler hasarın gövdede, aksonda ya da miyelinde olmasına göre üç gruba ayrılır; mononöropati multipleks ise siniri besleyen damarın vaskülitiyle gelişen asimetrik tutulumdur.",
-   "adimlar": [
-    "1. Nöronopati: motor nöron hastalığı, polio, varisella zoster.",
-    "2. Aksonopati: toksik, metabolik (en sık diyabet), nutrisyonel.",
-    "3. Miyelinopati: AIDP (Guillain-Barré, akut) ve KIDP (kronik).",
-    "4. Mononöropati multipleks: besleyen damarda vaskülit, o sinirde nekroz, yama yama asimetrik tutulum."
-   ],
-   "svg": "r10.svg",
-   "paragraf": 12,
-   "bitis": 13,
-   "kaynak": [
-    13
-   ]
-  },
-  {
-   "id": "r07",
-   "baslik": "Hangi lif, hangi duyu belirtisi?",
-   "aciklama": "Negatif fenomen bir duyunun kaybı, pozitif fenomen normalde olmayan bir duyunun ortaya çıkmasıdır; belirtiyi tutulan lifin kalın ya da ince olması belirler.",
-   "adimlar": [
-    "1. Kalın lif, negatif: dokunma ve pozisyon kaybı, keçelenme, gece dengesizlik.",
-    "2. İnce lif, negatif: ağrı ve ısı kaybı, ağrısız yanık ve travma.",
-    "3. Kalın lif, pozitif: distal parestezi ve karıncalanma.",
-    "4. İnce lif, pozitif: dizestezi, hiperaljezi, kozalji."
-   ],
-   "svg": "r07.svg",
-   "paragraf": 14,
-   "bitis": 15,
-   "kaynak": [
-    14,
-    15
-   ]
-  },
-  {
-   "id": "r11",
-   "baslik": "Duyu muayenesi: hangi test hangi lifi sınar?",
-   "aciklama": "Kalın miyelinli lifler dokunma, iki nokta ayrımı, vibrasyon ve eklem pozisyonuyla, ince lifler ısı ve ağrı algılamayla sınanır; polinöropatide kayıp simetrik ve eldiven-çorap tarzındadır.",
-   "adimlar": [
-    "1. Kalın lif testleri: yüzeyel dokunma, iki nokta ayrımı, vibrasyon, eklem pozisyonu.",
-    "2. İnce lif testleri: ısı ve ağrı algılama.",
-    "3. Kayıp iki yanda eşit, eldiven ve çorabın örttüğü alanlarda başlar."
-   ],
-   "svg": "r11.svg",
-   "paragraf": 18,
-   "bitis": 18,
-   "kaynak": [
-    18
-   ]
-  },
-  {
-   "id": "r12",
-   "baslik": "Romberg testi: göz kapanınca neden düşer?",
-   "aciklama": "Pozisyon duyusu kaybolan hasta dengesini gözle korur; gözler kapanınca sallanır. Sorun arka kök ganglionunda ya da medulla spinalis arka kordonundadır.",
-   "adimlar": [
-    "1. Hasta ayaklar bitişik, gözler açık durur, sonra gözlerini kapatır.",
-    "2. Pozisyon duyusu bozuksa görme tek dayanaktır; gözler kapanınca dengesini kaybeder.",
-    "3. Romberg pozitifliği arka kök ganglionunu tutan duysal nöronopatiyi ya da arka kordon lezyonunu düşündürür.",
-    "4. Arka kordon lezyonuna örnek B12 eksikliğidir."
-   ],
-   "svg": "r12.svg",
-   "paragraf": 19,
-   "bitis": 19,
-   "kaynak": [
-    19
-   ]
-  },
-  {
-   "id": "r08",
-   "baslik": "Derin tendon refleksi: dört halkalı zincir",
-   "aciklama": "Kas iğciğinin gerilmesiyle başlayan refleks, afferent lif ve alfa motor nöron üzerinden kası kasar; polinöropati afferent ve motor halkayı bozduğu için refleks azalır.",
-   "adimlar": [
-    "1. Kas iğciği gerilir.",
-    "2. İğciğin afferent lifleri uyarılır ve haber omuriliğe gider.",
-    "3. Afferent lif alfa motor nöronla monosinaptik bağlanır, kas kasılır.",
-    "4. Gama motor nöron lifleri iğciğin gerginliğini ayarlar.",
-    "5. Biseps C5–C6, triseps C6–C8, patella L2–L4, Aşil S1–S2 köklerini sınar."
-   ],
-   "svg": "r08.svg",
-   "paragraf": 21,
-   "bitis": 22,
-   "kaynak": [
-    20,
-    21
-   ]
-  }
- ]
+  "key": "k2-17-periferik-noropati",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Omurilikten deri ve kasa: tek sinirde iki yol",
+      "aciklama": "Duysal uyarı deriden omuriliğe, motor emir ön boynuzdan kasa gider; arka ve ön kök birleşip motor, duysal ve otonom lif taşıyan karma siniri oluşturur.",
+      "adimlar": [
+        "1. Duysal uyarı deride reseptörde başlar ve omuriliğe doğru ilerler.",
+        "2. Duysal hücre gövdesi omurilik dışında, arka kök ganglionundadır.",
+        "3. Motor hücre gövdesi ön boynuzdaki alfa motor nörondur; emir ön kökten kasa iner.",
+        "4. İki kök omurilik dışında birleşir; lifler aynı kılıfta karışmadan yürür.",
+        "5. Bu yüzden karma sinir hasarında kuvvet ve his birlikte bozulabilir."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 0,
+      "bitis": 2,
+      "kaynak": [
+        2,
+        3,
+        4
+      ],
+      "lottie": "r01.json"
+    },
+    {
+      "id": "r02",
+      "baslik": "Hasarın yeri hastalığa adını verir",
+      "aciklama": "Sinir hücresinin gövdesi, aksonu ve miyelin kılıfı ayrı hedeflerdir; hasarlı parça hem hastalığın adını hem de bozulmanın biçimini belirler.",
+      "adimlar": [
+        "1. Gövde hasarı nöronopatidir: kabloya güç veren santral bozulur.",
+        "2. Akson hasarı aksonopatidir: tel kopar, ötesine akım gitmez.",
+        "3. Schwann hücresi, yani miyelin hasarı miyelinopatidir: yalıtım soyulur, akım bozulur ve yavaşlar."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 4,
+      "bitis": 4,
+      "kaynak": [
+        6
+      ],
+      "lottie": "r02.json"
+    },
+    {
+      "id": "r03",
+      "baslik": "Pompadan aksiyon potansiyeline",
+      "aciklama": "Sodyum-potasyum pompası içeride potasyumu, dışarıda sodyumu bol tutar ve zarın içini eksi yetmiş milivoltta korur; uyarıda sodyum içeri girer ve zar artı otuz milivolta çıkar.",
+      "adimlar": [
+        "1. Pompa enerji harcayarak sodyumu dışarı, potasyumu içeri taşır.",
+        "2. İçeride potasyum ve negatif yüklü proteinler, dışarıda sodyum ve klor boldur.",
+        "3. Dinlenimde zarın içi dışına göre eksi yetmiş milivolttur.",
+        "4. Uyarıda sodyum içeri girer, zar artı otuz milivolta çıkar ve aksiyon potansiyeli sinir boyunca iletilir."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 5,
+      "bitis": 5,
+      "kaynak": [
+        7
+      ],
+      "lottie": "r03.json"
+    },
+    {
+      "id": "r04",
+      "baslik": "Miyelinsiz lifte adım adım, miyelinli lifte atlayarak",
+      "aciklama": "Miyelinsiz lifte akım komşu zarı sırayla uyarır ve ileti yavaştır; miyelinli lifte uyarı yalnız Ranvier nodlarında doğar ve noddan noda atlar.",
+      "adimlar": [
+        "1. Miyelinsiz lif: uyarılan bölgede yükler ters döner, akım bitişik zara geçer.",
+        "2. Miyelinli lif: miyelin yalıtır, uyarı yalnız Ranvier nodunda yeniden doğar.",
+        "3. Akım bir noddan sonrakine atlar; bu saltatorik ileti çok daha hızlıdır."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 6,
+      "bitis": 6,
+      "kaynak": [
+        8
+      ],
+      "lottie": "r04.json"
+    },
+    {
+      "id": "r09",
+      "baslik": "Kalınlık ve miyelin ileti hızını belirler",
+      "aciklama": "Tip A kalın ve miyelinli, Tip B ince miyelinli, Tip C miyelinsiz ve en incedir; lif kalınlaştıkça ve miyelini arttıkça ileti hızlanır.",
+      "adimlar": [
+        "1. Tip A: 2–20 mikrometre, miyelinli; vibrasyon ve propriosepsiyon; 10–70 metre/saniye.",
+        "2. Tip B: yaklaşık 3 mikrometre, ince miyelinli, preganglionik otonom; hızı A ile C arasında.",
+        "3. Tip C: 1 mikrometreden ince, miyelinsiz; ağrı ve ısı; 2 metre/saniyeden yavaş.",
+        "4. Tip C gibi ince lifler EMG ile ölçülemez."
+      ],
+      "svg": "r09.svg",
+      "paragraf": 7,
+      "bitis": 7,
+      "kaynak": [
+        9
+      ],
+      "lottie": "r09.json"
+    },
+    {
+      "id": "r05",
+      "baslik": "Üç yıkım biçiminde hücre düzeyinde ne olur?",
+      "aciklama": "Waller dejenerasyonunda kesinin distali yıkılıp makrofajlarla temizlenir, segmental demiyelinizasyonda akson ve kas korunur, distal aksonal dejenerasyonda akson uçtan gövdeye doğru ölür.",
+      "adimlar": [
+        "1. Waller: yaralanmanın distalinde akson bozulur, miyelin globüllere ayrılır, makrofajlar temizler.",
+        "2. Segmental demiyelinizasyon: akson sağlam, yer yer miyelin kaybı, kas denerve değil, prognoz iyi.",
+        "3. Remiyelinizasyon 15 gün ile 6 ay arasında sürer.",
+        "4. Distal aksonal dejenerasyon: akson uçtan geriye ölür, miyelin kaybı sekonder, prognoz en kötü."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 8,
+      "bitis": 10,
+      "kaynak": [
+        10,
+        11
+      ],
+      "lottie": "r05.json"
+    },
+    {
+      "id": "r06",
+      "baslik": "Travmatik sinir yaralanması: yalıtımdan kılıfa",
+      "aciklama": "Seddon ve Sunderland sınıflamasında hasar yalnız miyelinden başlayıp aksona, en ağır derecede de endonöral tüp, perinöryum ve epinöryuma kadar derinleşir.",
+      "adimlar": [
+        "1. Endonöryum her lifi, perinöryum lif demetini, epinöryum bütün siniri sarar.",
+        "2. Nöropraksi: yalnız miyelin hasarı, akson sağlam; tedaviye en iyi yanıt.",
+        "3. Aksonotmezis: akson kaybı ve değişik derecede kılıf hasarı; yanıt ihtimali azalır.",
+        "4. Nörotmezis: akson, endonöral tüp, perinöryum ve epinöryum hasarı; uçlar ayrılabilir, cerrahi gerekebilir."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 11,
+      "bitis": 11,
+      "kaynak": [
+        12
+      ],
+      "lottie": "r06.json"
+    },
+    {
+      "id": "r10",
+      "baslik": "Polinöropatilerin sınıflaması ve vaskülitik sinir hasarı",
+      "aciklama": "Polinöropatiler hasarın gövdede, aksonda ya da miyelinde olmasına göre üç gruba ayrılır; mononöropati multipleks ise siniri besleyen damarın vaskülitiyle gelişen asimetrik tutulumdur.",
+      "adimlar": [
+        "1. Nöronopati: motor nöron hastalığı, polio, varisella zoster.",
+        "2. Aksonopati: toksik, metabolik (en sık diyabet), nutrisyonel.",
+        "3. Miyelinopati: AIDP (Guillain-Barré, akut) ve KIDP (kronik).",
+        "4. Mononöropati multipleks: besleyen damarda vaskülit, o sinirde nekroz, yama yama asimetrik tutulum."
+      ],
+      "svg": "r10.svg",
+      "paragraf": 12,
+      "bitis": 13,
+      "kaynak": [
+        13
+      ],
+      "lottie": "r10.json"
+    },
+    {
+      "id": "r07",
+      "baslik": "Hangi lif, hangi duyu belirtisi?",
+      "aciklama": "Negatif fenomen bir duyunun kaybı, pozitif fenomen normalde olmayan bir duyunun ortaya çıkmasıdır; belirtiyi tutulan lifin kalın ya da ince olması belirler.",
+      "adimlar": [
+        "1. Kalın lif, negatif: dokunma ve pozisyon kaybı, keçelenme, gece dengesizlik.",
+        "2. İnce lif, negatif: ağrı ve ısı kaybı, ağrısız yanık ve travma.",
+        "3. Kalın lif, pozitif: distal parestezi ve karıncalanma.",
+        "4. İnce lif, pozitif: dizestezi, hiperaljezi, kozalji."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 14,
+      "bitis": 15,
+      "kaynak": [
+        14,
+        15
+      ],
+      "lottie": "r07.json"
+    },
+    {
+      "id": "r11",
+      "baslik": "Duyu muayenesi: hangi test hangi lifi sınar?",
+      "aciklama": "Kalın miyelinli lifler dokunma, iki nokta ayrımı, vibrasyon ve eklem pozisyonuyla, ince lifler ısı ve ağrı algılamayla sınanır; polinöropatide kayıp simetrik ve eldiven-çorap tarzındadır.",
+      "adimlar": [
+        "1. Kalın lif testleri: yüzeyel dokunma, iki nokta ayrımı, vibrasyon, eklem pozisyonu.",
+        "2. İnce lif testleri: ısı ve ağrı algılama.",
+        "3. Kayıp iki yanda eşit, eldiven ve çorabın örttüğü alanlarda başlar."
+      ],
+      "svg": "r11.svg",
+      "paragraf": 18,
+      "bitis": 18,
+      "kaynak": [
+        18
+      ],
+      "lottie": "r11.json"
+    },
+    {
+      "id": "r12",
+      "baslik": "Romberg testi: göz kapanınca neden düşer?",
+      "aciklama": "Pozisyon duyusu kaybolan hasta dengesini gözle korur; gözler kapanınca sallanır. Sorun arka kök ganglionunda ya da medulla spinalis arka kordonundadır.",
+      "adimlar": [
+        "1. Hasta ayaklar bitişik, gözler açık durur, sonra gözlerini kapatır.",
+        "2. Pozisyon duyusu bozuksa görme tek dayanaktır; gözler kapanınca dengesini kaybeder.",
+        "3. Romberg pozitifliği arka kök ganglionunu tutan duysal nöronopatiyi ya da arka kordon lezyonunu düşündürür.",
+        "4. Arka kordon lezyonuna örnek B12 eksikliğidir."
+      ],
+      "svg": "r12.svg",
+      "paragraf": 19,
+      "bitis": 19,
+      "kaynak": [
+        19
+      ],
+      "lottie": "r12.json"
+    },
+    {
+      "id": "r08",
+      "baslik": "Derin tendon refleksi: dört halkalı zincir",
+      "aciklama": "Kas iğciğinin gerilmesiyle başlayan refleks, afferent lif ve alfa motor nöron üzerinden kası kasar; polinöropati afferent ve motor halkayı bozduğu için refleks azalır.",
+      "adimlar": [
+        "1. Kas iğciği gerilir.",
+        "2. İğciğin afferent lifleri uyarılır ve haber omuriliğe gider.",
+        "3. Afferent lif alfa motor nöronla monosinaptik bağlanır, kas kasılır.",
+        "4. Gama motor nöron lifleri iğciğin gerginliğini ayarlar.",
+        "5. Biseps C5–C6, triseps C6–C8, patella L2–L4, Aşil S1–S2 köklerini sınar."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 21,
+      "bitis": 22,
+      "kaynak": [
+        20,
+        21
+      ],
+      "lottie": "r08.json"
+    }
+  ]
 }

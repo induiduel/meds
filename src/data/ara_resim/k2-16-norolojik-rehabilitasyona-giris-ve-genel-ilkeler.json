@@ -1,191 +1,201 @@
 {
- "key": "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler",
- "resimler": [
-  {
-   "id": "r01",
-   "baslik": "Aynı parmak kaybı, üç ayrı düzey",
-   "aciklama": "Futbolcu ile piyanistte bozukluk ve özürlülük ortaktır; engellilik yalnız mesleğini yapamayan piyanistte ortaya çıkar.",
-   "adimlar": [
-    "1. Bozukluk: işaret parmağının distal falanksı kaybedilir; iki kişide de hasar iskelet sistemindedir.",
-    "2. Özürlülük: düğme iliklenemez, giyinme zorlaşır; iki kişide de vardır.",
-    "3. Engellilik: sosyal ve mesleki işlev yerine getirilemez; yalnız piyanistte vardır.",
-    "4. Çıkmış tuzağı: piyanistin düğme ilikleyememesi engellilik değil özürlülüktür."
-   ],
-   "svg": "r01.svg",
-   "paragraf": 3,
-   "bitis": 3,
-   "kaynak": [
-    4
-   ]
-  },
-  {
-   "id": "r02",
-   "baslik": "Manuel kas gücü testi: sıfırdan beşe",
-   "aciklama": "Her derece bir öncekine bir koşul ekler: kasılma, eklem hareketi, yerçekimine karşı hareket, en son direnç.",
-   "adimlar": [
-    "0: görülebilir kasılma yok.",
-    "1: kasılma var, eklem hareketi yok.",
-    "2: yerçekimi ortadan kalkınca hareket var.",
-    "3: yerçekimine karşı tam hareket.",
-    "4: normal hareket ama dirençle yenilir.",
-    "5: normal kas gücü."
-   ],
-   "svg": "r02.svg",
-   "paragraf": 7,
-   "bitis": 7,
-   "kaynak": [
-    8
-   ]
-  },
-  {
-   "id": "r03",
-   "baslik": "Tonus: segmenter devre, hipotoni ve hipertoni",
-   "aciklama": "Tonus omuriliğin segmenter devresiyle sağlanır, üst yapılarca ayarlanır; spastisitede tek kas grubunda, rijiditede iki grupta birden artar.",
-   "adimlar": [
-    "1. Tonus segmenter mekanizmayla sağlanır; beyin sapı, serebellum ve hemisfer ayarlar.",
-    "2. Ön boynuz, tabes dorsalis, polinöropati ve kas hastalıklarında hipotoni olur.",
-    "3. Spastisite: agonist ya da antagonistten birinde artış, piramidal yol hastalığı.",
-    "4. Rijidite: iki grupta birden artış, ekstrapiramidal hastalık; Parkinson'da dişli çark belirtisi.",
-    "5. Akut hemipleji ve paraplejide erken dönemde bir süre hipotoni görülür."
-   ],
-   "svg": "r03.svg",
-   "paragraf": 8,
-   "bitis": 9,
-   "kaynak": [
-    9,
-    10
-   ]
-  },
-  {
-   "id": "r08",
-   "baslik": "Modifiye Ashworth Skalası: pasif harekete direnç",
-   "aciklama": "Spastisitenin şiddeti altı derecede ölçülür; derece arttıkça direnç hareket açıklığının daha büyük bölümüne yayılır.",
-   "adimlar": [
-    "0: kas tonusunda hiç artış yok; 1: hafif artış.",
-    "2: tutukluğun ardından hareketin yarısından azında minimal direnç.",
-    "3: hareket açıklığının büyük bölümünde belirgin artış.",
-    "4: belirgin artış, pasif hareket güç; 5: fleksiyon ya da ekstansiyonda rijit.",
-    "Kas gücü testi aktif hareketi, Ashworth pasif harekete direnci ölçer."
-   ],
-   "svg": "r08.svg",
-   "paragraf": 10,
-   "bitis": 10,
-   "kaynak": [
-    11
-   ]
-  },
-  {
-   "id": "r09",
-   "baslik": "Serebellar bulgular lezyonla aynı tarafta",
-   "aciklama": "Serebellar hemisfer lezyonunda hipotoni, dismetri, disdiadokokinezi ve ataksi aynı tarafta görülür; tremor harekette ortaya çıkar.",
-   "adimlar": [
-    "1. Dissinerji: agonist kasılırken antagonist gevşeyemez.",
-    "2. Disdiadokokinezi: hızlı pronasyon ve supinasyon düzensiz yapılır.",
-    "3. Dismetri: parmak burnu bulamaz, burna ya da yanağa çarpar.",
-    "4. İntansiyonel tremor: hedefe yaklaştıkça artar.",
-    "5. Ataksi: hasta lezyon tarafına sapar ya da düşer."
-   ],
-   "svg": "r09.svg",
-   "paragraf": 11,
-   "bitis": 12,
-   "kaynak": [
-    12,
-    13
-   ]
-  },
-  {
-   "id": "r10",
-   "baslik": "Afazi ile dizartri: dil mi, konuşma kasları mı?",
-   "aciklama": "Afazide beynin belirli bölgesinin zedelenmesiyle anlama ya da ifade seçici bozulur; dizartride dil sağlamdır, konuşma kaslarının uyumu bozulur.",
-   "adimlar": [
-    "1. Afazi: konuşma öğrenildikten sonra, vasküler, travmatik ya da tümöral zedelenmeyle ortaya çıkar.",
-    "2. Anlama, ifade ya da ikisi birden bozulur.",
-    "3. Dizartri: konuşmayı sağlayan kaslar arasındaki sinerji bozulur.",
-    "4. Psikiyatrik mutizm afazi değildir; hasta hiç konuşmaz."
-   ],
-   "svg": "r10.svg",
-   "paragraf": 14,
-   "bitis": 14,
-   "kaynak": [
-    15
-   ]
-  },
-  {
-   "id": "r05",
-   "baslik": "Brunnstrom evrelemesi: spastisite ve sinerjinin seyri",
-   "aciklama": "Spastisite ikinci evrede başlar, üçüncüde en belirgindir, beşincide azalır; sinerji dışına ilk çıkış dördüncü evrededir.",
-   "adimlar": [
-    "Evre 1: aktif hareket yok.",
-    "Evre 2: spastisite başlar, zayıf sinerjiler.",
-    "Evre 3: spastisite belirgin, hareket sinerji içinde.",
-    "Evre 4: sinerji dışında özgün hareketler.",
-    "Evre 5: spastisite azalır, çoğu hareket bağımsız.",
-    "Evre 6: fazik, iyi koordine izole hareketler."
-   ],
-   "svg": "r05.svg",
-   "paragraf": 19,
-   "bitis": 20,
-   "kaynak": [
-    20,
-    21
-   ]
-  },
-  {
-   "id": "r11",
-   "baslik": "Rehabilitasyonun dönemleri: önce koru, sonra kazandır",
-   "aciklama": "Akut dönem ilk 12–24 saatte başlar ve komplikasyonları önler; subakut ve kronik dönem hareketi ve günlük becerileri basamak basamak geri kazandırır.",
-   "adimlar": [
-    "1. Kısa vadeli amaçlar: immobilizasyon komplikasyonları, deformite, bası yarası, atrofi, mesane-barsak sorunları önlenir.",
-    "2. Akut dönem: eklem hareket açıklığı egzersizleri, pozisyon değişimi, ayak bileği pompası.",
-    "3. Flask evrede hemiplejik omuz çekilmez, zorlanmaz.",
-    "4. Subakut ve kronik dönem: yatak içi, oturma ve ayakta durma, transfer ve yürüme, denge.",
-    "5. Aynı dönemde yutma, afazi, kognitif ve psikolojik durum değerlendirilir."
-   ],
-   "svg": "r11.svg",
-   "paragraf": 25,
-   "bitis": 28,
-   "kaynak": [
-    26,
-    27,
-    28,
-    29
-   ]
-  },
-  {
-   "id": "r06",
-   "baslik": "Nöroplastisite: kullanıldıkça güçlenen ağ",
-   "aciklama": "İyileşme iskemiden hemen sonra başlar; nöroplastisite birkaç hafta sonra devreye girer, aylarca sürer ve kullanıma bağlıdır.",
-   "adimlar": [
-    "1. Kısmen hasarlı yollar yeniden işlev kazanır.",
-    "2. Atıl nöronlar çalışır hâle gelir.",
-    "3. Nöronal filizlenmeyle yeni yollar oluşur.",
-    "4. Beyin haritasında temsil alanı genişler; nörokimyasal değişiklikler olur.",
-    "5. Etkilenen ekstremitenin tekrarlı kullanımı ağı güçlendirir."
-   ],
-   "svg": "r06.svg",
-   "paragraf": 29,
-   "bitis": 30,
-   "kaynak": [
-    30,
-    31
-   ]
-  },
-  {
-   "id": "r07",
-   "baslik": "Spastisite ne zaman tedavi edilir?",
-   "aciklama": "Spastisite bakımı ya da işlevi bozuyorsa tedavi edilir; alt ekstremitede stabilite sağlıyorsa yararlı olabilir, yalnız olumsuz etkisi belirgin olan tedavi edilir.",
-   "adimlar": [
-    "1. Aktivite ya da hijyen güçleşiyorsa tedavi edilir.",
-    "2. Yetersiz tedavi ağrı, kontraktür ve bası yarasına yol açar.",
-    "3. Bacakta stabilite sağlıyorsa yararlı olabilir; yalnız zararlı olan tedavi edilir.",
-    "4. Hocanın anlattığı sıra: oral ilaç, lokal botulinum toksin, gerekirse intratekal baklofen."
-   ],
-   "svg": "r07.svg",
-   "paragraf": 39,
-   "bitis": 39,
-   "kaynak": [
-    40
-   ]
-  }
- ]
+  "key": "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Aynı parmak kaybı, üç ayrı düzey",
+      "aciklama": "Futbolcu ile piyanistte bozukluk ve özürlülük ortaktır; engellilik yalnız mesleğini yapamayan piyanistte ortaya çıkar.",
+      "adimlar": [
+        "1. Bozukluk: işaret parmağının distal falanksı kaybedilir; iki kişide de hasar iskelet sistemindedir.",
+        "2. Özürlülük: düğme iliklenemez, giyinme zorlaşır; iki kişide de vardır.",
+        "3. Engellilik: sosyal ve mesleki işlev yerine getirilemez; yalnız piyanistte vardır.",
+        "4. Çıkmış tuzağı: piyanistin düğme ilikleyememesi engellilik değil özürlülüktür."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 3,
+      "bitis": 3,
+      "kaynak": [
+        4
+      ],
+      "lottie": "r01.json"
+    },
+    {
+      "id": "r02",
+      "baslik": "Manuel kas gücü testi: sıfırdan beşe",
+      "aciklama": "Her derece bir öncekine bir koşul ekler: kasılma, eklem hareketi, yerçekimine karşı hareket, en son direnç.",
+      "adimlar": [
+        "0: görülebilir kasılma yok.",
+        "1: kasılma var, eklem hareketi yok.",
+        "2: yerçekimi ortadan kalkınca hareket var.",
+        "3: yerçekimine karşı tam hareket.",
+        "4: normal hareket ama dirençle yenilir.",
+        "5: normal kas gücü."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 7,
+      "bitis": 7,
+      "kaynak": [
+        8
+      ],
+      "lottie": "r02.json"
+    },
+    {
+      "id": "r03",
+      "baslik": "Tonus: segmenter devre, hipotoni ve hipertoni",
+      "aciklama": "Tonus omuriliğin segmenter devresiyle sağlanır, üst yapılarca ayarlanır; spastisitede tek kas grubunda, rijiditede iki grupta birden artar.",
+      "adimlar": [
+        "1. Tonus segmenter mekanizmayla sağlanır; beyin sapı, serebellum ve hemisfer ayarlar.",
+        "2. Ön boynuz, tabes dorsalis, polinöropati ve kas hastalıklarında hipotoni olur.",
+        "3. Spastisite: agonist ya da antagonistten birinde artış, piramidal yol hastalığı.",
+        "4. Rijidite: iki grupta birden artış, ekstrapiramidal hastalık; Parkinson'da dişli çark belirtisi.",
+        "5. Akut hemipleji ve paraplejide erken dönemde bir süre hipotoni görülür."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 8,
+      "bitis": 9,
+      "kaynak": [
+        9,
+        10
+      ],
+      "lottie": "r03.json"
+    },
+    {
+      "id": "r08",
+      "baslik": "Modifiye Ashworth Skalası: pasif harekete direnç",
+      "aciklama": "Spastisitenin şiddeti altı derecede ölçülür; derece arttıkça direnç hareket açıklığının daha büyük bölümüne yayılır.",
+      "adimlar": [
+        "0: kas tonusunda hiç artış yok; 1: hafif artış.",
+        "2: tutukluğun ardından hareketin yarısından azında minimal direnç.",
+        "3: hareket açıklığının büyük bölümünde belirgin artış.",
+        "4: belirgin artış, pasif hareket güç; 5: fleksiyon ya da ekstansiyonda rijit.",
+        "Kas gücü testi aktif hareketi, Ashworth pasif harekete direnci ölçer."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 10,
+      "bitis": 10,
+      "kaynak": [
+        11
+      ],
+      "lottie": "r08.json"
+    },
+    {
+      "id": "r09",
+      "baslik": "Serebellar bulgular lezyonla aynı tarafta",
+      "aciklama": "Serebellar hemisfer lezyonunda hipotoni, dismetri, disdiadokokinezi ve ataksi aynı tarafta görülür; tremor harekette ortaya çıkar.",
+      "adimlar": [
+        "1. Dissinerji: agonist kasılırken antagonist gevşeyemez.",
+        "2. Disdiadokokinezi: hızlı pronasyon ve supinasyon düzensiz yapılır.",
+        "3. Dismetri: parmak burnu bulamaz, burna ya da yanağa çarpar.",
+        "4. İntansiyonel tremor: hedefe yaklaştıkça artar.",
+        "5. Ataksi: hasta lezyon tarafına sapar ya da düşer."
+      ],
+      "svg": "r09.svg",
+      "paragraf": 11,
+      "bitis": 12,
+      "kaynak": [
+        12,
+        13
+      ],
+      "lottie": "r09.json"
+    },
+    {
+      "id": "r10",
+      "baslik": "Afazi ile dizartri: dil mi, konuşma kasları mı?",
+      "aciklama": "Afazide beynin belirli bölgesinin zedelenmesiyle anlama ya da ifade seçici bozulur; dizartride dil sağlamdır, konuşma kaslarının uyumu bozulur.",
+      "adimlar": [
+        "1. Afazi: konuşma öğrenildikten sonra, vasküler, travmatik ya da tümöral zedelenmeyle ortaya çıkar.",
+        "2. Anlama, ifade ya da ikisi birden bozulur.",
+        "3. Dizartri: konuşmayı sağlayan kaslar arasındaki sinerji bozulur.",
+        "4. Psikiyatrik mutizm afazi değildir; hasta hiç konuşmaz."
+      ],
+      "svg": "r10.svg",
+      "paragraf": 14,
+      "bitis": 14,
+      "kaynak": [
+        15
+      ],
+      "lottie": "r10.json"
+    },
+    {
+      "id": "r05",
+      "baslik": "Brunnstrom evrelemesi: spastisite ve sinerjinin seyri",
+      "aciklama": "Spastisite ikinci evrede başlar, üçüncüde en belirgindir, beşincide azalır; sinerji dışına ilk çıkış dördüncü evrededir.",
+      "adimlar": [
+        "Evre 1: aktif hareket yok.",
+        "Evre 2: spastisite başlar, zayıf sinerjiler.",
+        "Evre 3: spastisite belirgin, hareket sinerji içinde.",
+        "Evre 4: sinerji dışında özgün hareketler.",
+        "Evre 5: spastisite azalır, çoğu hareket bağımsız.",
+        "Evre 6: fazik, iyi koordine izole hareketler."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 19,
+      "bitis": 20,
+      "kaynak": [
+        20,
+        21
+      ],
+      "lottie": "r05.json"
+    },
+    {
+      "id": "r11",
+      "baslik": "Rehabilitasyonun dönemleri: önce koru, sonra kazandır",
+      "aciklama": "Akut dönem ilk 12–24 saatte başlar ve komplikasyonları önler; subakut ve kronik dönem hareketi ve günlük becerileri basamak basamak geri kazandırır.",
+      "adimlar": [
+        "1. Kısa vadeli amaçlar: immobilizasyon komplikasyonları, deformite, bası yarası, atrofi, mesane-barsak sorunları önlenir.",
+        "2. Akut dönem: eklem hareket açıklığı egzersizleri, pozisyon değişimi, ayak bileği pompası.",
+        "3. Flask evrede hemiplejik omuz çekilmez, zorlanmaz.",
+        "4. Subakut ve kronik dönem: yatak içi, oturma ve ayakta durma, transfer ve yürüme, denge.",
+        "5. Aynı dönemde yutma, afazi, kognitif ve psikolojik durum değerlendirilir."
+      ],
+      "svg": "r11.svg",
+      "paragraf": 25,
+      "bitis": 28,
+      "kaynak": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "lottie": "r11.json"
+    },
+    {
+      "id": "r06",
+      "baslik": "Nöroplastisite: kullanıldıkça güçlenen ağ",
+      "aciklama": "İyileşme iskemiden hemen sonra başlar; nöroplastisite birkaç hafta sonra devreye girer, aylarca sürer ve kullanıma bağlıdır.",
+      "adimlar": [
+        "1. Kısmen hasarlı yollar yeniden işlev kazanır.",
+        "2. Atıl nöronlar çalışır hâle gelir.",
+        "3. Nöronal filizlenmeyle yeni yollar oluşur.",
+        "4. Beyin haritasında temsil alanı genişler; nörokimyasal değişiklikler olur.",
+        "5. Etkilenen ekstremitenin tekrarlı kullanımı ağı güçlendirir."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 29,
+      "bitis": 30,
+      "kaynak": [
+        30,
+        31
+      ],
+      "lottie": "r06.json"
+    },
+    {
+      "id": "r07",
+      "baslik": "Spastisite ne zaman tedavi edilir?",
+      "aciklama": "Spastisite bakımı ya da işlevi bozuyorsa tedavi edilir; alt ekstremitede stabilite sağlıyorsa yararlı olabilir, yalnız olumsuz etkisi belirgin olan tedavi edilir.",
+      "adimlar": [
+        "1. Aktivite ya da hijyen güçleşiyorsa tedavi edilir.",
+        "2. Yetersiz tedavi ağrı, kontraktür ve bası yarasına yol açar.",
+        "3. Bacakta stabilite sağlıyorsa yararlı olabilir; yalnız zararlı olan tedavi edilir.",
+        "4. Hocanın anlattığı sıra: oral ilaç, lokal botulinum toksin, gerekirse intratekal baklofen."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 39,
+      "bitis": 39,
+      "kaynak": [
+        40
+      ],
+      "lottie": "r07.json"
+    }
+  ]
 }
