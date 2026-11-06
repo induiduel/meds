@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="beyin" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#fde2e4"/><stop offset="1" stop-color="#f4a7b0"/></radialGradient>
+<radialGradient id="isik" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#facc15"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<g id="vez"><circle r="9" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/><circle r="3" fill="#b45309"/></g>
+<g id="ay"><path d="M0 -14 A14 14 0 1 0 10 10 A11 11 0 1 1 0 -14 z" fill="#64748b"/></g>
+<g id="gunes"><circle r="12" fill="#facc15" stroke="#ca8a04" stroke-width="2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">EKT'de riskin arttığı durumlar: nöbet vücuda ne yapar?</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Mutlak kontrendikasyon yok · yedi durum dikkat ister (slayt 10, hocanın açıklaması)</text>
+<rect x="30" y="100" width="430" height="560" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Nöbet sırasında</text>
+<path d="M245 140 C300 140 330 180 330 225 C330 275 300 300 245 300 C190 300 160 275 160 225 C160 180 190 140 245 140 z" fill="#fde2e4" stroke="#9f1239" stroke-width="2.5"/>
+<path d="M215 300 L210 330 L120 360 C95 370 90 400 95 440 L110 620 L380 620 L395 440 C400 400 395 370 370 360 L280 330 L275 300" fill="#f1f5f9" stroke="#475569" stroke-width="2.5"/>
+<path d="M228 420 C210 395 180 405 185 430 C190 455 228 475 228 475 C228 475 266 455 271 430 C276 405 246 395 228 420 z" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+<line x1="245" y1="215" x2="245" y2="160" stroke="#b91c1c" stroke-width="3" marker-end="url(#okk)"/>
+<line x1="330" y1="400" x2="330" y2="360" stroke="#b91c1c" stroke-width="3" marker-end="url(#okk)"/>
+<line x1="330" y1="560" x2="330" y2="520" stroke="#b91c1c" stroke-width="3" marker-end="url(#okk)"/>
+<text x="340" y="190" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">kafa içi</text>
+<text x="340" y="212" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">basınç</text>
+<text x="340" y="395" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">göğüs içi</text>
+<text x="340" y="555" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">karın içi</text>
+<text x="50" y="500" font-size="18" fill="#991b1b" text-anchor="start" font-weight="bold">Sempatik uyarı,</text>
+<text x="50" y="524" font-size="18" fill="#991b1b" text-anchor="start" font-weight="bold">noradrenalin deşarjı:</text>
+<text x="50" y="548" font-size="18" fill="#1e293b" text-anchor="start">kalp ve damar yükü</text>
+<line x1="200" y1="450" x2="150" y2="485" stroke="#991b1b" stroke-width="1.6"/>
+<circle cx="200" cy="450" r="3" fill="#991b1b"/>
+<text x="50" y="645" font-size="17" fill="#475569" text-anchor="start">Kasılmayla basınç artar.</text>
+<rect x="480" y="100" width="690" height="560" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="500" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Bu yük kimde tehlikeli?</text>
+<circle cx="515" cy="164" r="15" fill="#c2410c"/>
+<text x="515" y="170" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="545" y="164" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Yer kaplayan serebral lezyon</text>
+<text x="545" y="188" font-size="17" fill="#475569" text-anchor="start">basınç artışıyla beyin dokusunda kayma</text>
+<circle cx="515" cy="232" r="15" fill="#c2410c"/>
+<text x="515" y="238" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="545" y="232" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Kafa içi basınç artışı</text>
+<text x="545" y="256" font-size="17" fill="#475569" text-anchor="start">zaten yüksek basınç daha da artar</text>
+<circle cx="515" cy="300" r="15" fill="#c2410c"/>
+<text x="515" y="306" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="545" y="300" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Yakın geçmişte miyokard infarktüsü</text>
+<text x="545" y="324" font-size="17" fill="#475569" text-anchor="start">nöbetin stresi kalbi yükler</text>
+<circle cx="515" cy="368" r="15" fill="#c2410c"/>
+<text x="515" y="374" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="545" y="368" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Yakın geçmişte serebrovasküler hastalık</text>
+<text x="545" y="392" font-size="17" fill="#475569" text-anchor="start">kanama ya da yeni inme</text>
+<circle cx="515" cy="436" r="15" fill="#c2410c"/>
+<text x="515" y="442" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<text x="545" y="436" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Anevrizma</text>
+<text x="545" y="460" font-size="17" fill="#475569" text-anchor="start">damar duvarındaki balonlaşma yırtılabilir</text>
+<circle cx="515" cy="504" r="15" fill="#c2410c"/>
+<text x="515" y="510" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">6</text>
+<text x="545" y="504" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Retina dekolmanı</text>
+<text x="545" y="528" font-size="17" fill="#475569" text-anchor="start">basınç ve stresle ağırlaşabilir</text>
+<circle cx="515" cy="572" r="15" fill="#c2410c"/>
+<text x="515" y="578" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text>
+<text x="545" y="572" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Feokromositoma</text>
+<text x="545" y="596" font-size="17" fill="#475569" text-anchor="start">hormonlar birden kana karışır: feo krizi</text>
+<path d="M1080 505 C1080 470 1120 455 1135 480 C1150 505 1125 535 1100 530" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<path d="M1060 545 C1080 540 1100 535 1110 520" fill="none" stroke="#b91c1c" stroke-width="4"/>
+<text x="1040" y="580" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">anevrizma</text>
+<rect x="30" y="680" width="1140" height="95" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="60" y="720" font-size="19" fill="#9a3412" text-anchor="start" font-weight="bold">EKT için mutlak kontrendikasyon yoktur: bu yedi durum yasak değil, riskin arttığı durumlardır.</text>
+<text x="60" y="752" font-size="18" fill="#1e293b" text-anchor="start">Hoca listenin mantığına bakılmasını ve durumların genel olarak bilinmesini istedi.</text>
+</svg>

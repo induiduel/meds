@@ -54,7 +54,10 @@ def destesiz(key, p):
     d = J(p)
     sp = os.path.join(R, '..', 'meds_temp', 'ogrenci_ders', '-'.join(key.split('-')[:2]), 'taslak', 'sayfalar.json')
     sayfa = J(sp) if os.path.exists(sp) else {}
-    sayfa = sayfa if isinstance(sayfa, dict) else {}
+    if not isinstance(sayfa, dict):  # yeni hat: taslak/sayfalar.json liste biçimi; düz metin ders klasöründeki sayfalar.json'da
+        dp = os.path.join(os.path.dirname(os.path.dirname(sp)), 'sayfalar.json')
+        sayfa = J(dp) if os.path.exists(dp) else {}
+        sayfa = sayfa if isinstance(sayfa, dict) else {}
     ilk = lambda v: (sorted(x for x in (v if isinstance(v, list) else [v]) if isinstance(x, int)) or [0])[0]
     for k, v in d.items():
         if not isinstance(v, list): continue

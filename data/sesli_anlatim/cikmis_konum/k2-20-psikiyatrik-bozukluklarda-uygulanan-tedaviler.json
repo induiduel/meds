@@ -1,0 +1,71 @@
+{
+ "surum": 2,
+ "metinHash": "98f649b4f8872431e4ea66b70098af20db803de2",
+ "dogrulama": "ham belge + slayt kanıtı, elle (A1, 2026-11-02); p/c/metinHash anlatım v2'sinden",
+ "q": [
+  {
+   "id": "d3k2-2020-2021-q77",
+   "kok": "Elektrokonvülsif tedavide aşağıda verilen yan etkilerden hangisi beklenmez?",
+   "cevap": "Ataksi",
+   "yil": "2020-2021",
+   "s": 11,
+   "seviye": "dogrudan",
+   "kanit": "Konfüzyon Sersemlik Baş ağrısı Ajitasyon Amnezi",
+   "kaynak": "D3K2 2020-2021.pdf s.40 (soru 77, karne satırı 'Psikiyatri · Psikiyatrik Boz. Uygulanan Tedaviler', cevap 'Ataksi')",
+   "dogrulandi": true,
+   "neden": "Şıklardan konfüzyon, baş ağrısı, ajitasyon ve amnezi s11'deki SSS yan etkileri listesinde birebir; ataksi EKT yan etkileri (s11–s13) arasında yok.",
+   "p": 12,
+   "c": 4,
+   "skor": 1.0,
+   "d": 0
+  },
+  {
+   "id": "d3k2-2024-2025-h38",
+   "kok": "Psikiyatrik bozukluklarda uygulanan tedavilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "cevap": "EKT yan etkilerinden en sık görüleni ataksidir.",
+   "yil": "2024-2025",
+   "s": 11,
+   "seviye": "dogrudan",
+   "kanit": "Konfüzyon Sersemlik Baş ağrısı Ajitasyon Amnezi",
+   "kaynak": "D3K2 2024-2025.pdf s.4 (öğrenci hatırlaması, 06.12.2024 13:46: 'Psikyatrik bozukluklarda uygulanan tedavilerle ilgili hangisi yanlış? Cevap EKT yan etkilerinden en çok ataksi olmalı')",
+   "dogrulandi": true,
+   "neden": "Ham belgede yalnız kök ve cevap var; banka şıkları sonradan kurulmuş. Yanlış önerme ataksi (s11'de yok); kurulan doğru şıkların dayanağı: %85 MD s7, benzodiazepin nöbet eşiği s14, TMS daha az bilişsel bozulma s15, ışık tedavisi mevsimsel s27. q77 ile aynı bilgi iki ayrı yılda soruldu.",
+   "p": 12,
+   "c": 4,
+   "skor": 1.0,
+   "d": 0
+  },
+  {
+   "id": "d3-b-072",
+   "kok": "Elektrokonvülsif tedavi (EKT) hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+   "cevap": "Antipsikotiklerin neden olduğu ekstrapiramidal sistem yan etkilerinde artmaya neden olur.",
+   "yil": "2022-2023",
+   "s": 8,
+   "seviye": "dogrudan",
+   "kanit": "Kronik şizofrenide etkin değildir",
+   "kaynak": "22-23D3Butunleme_101817.pdf s.16 (2022-2023 Dönem 3 Bütünleme); aynı soru 22-23 Büt _240624_124604.pdf s.16",
+   "dogrulandi": true,
+   "neden": "s8'de antipsikotiğe bağlı EPS bir EKT endikasyonudur, artış değil. Doğru şıklar: en sık endikasyon MD %85 (s7), kronik şizofrenide etkin değil (s8), gebelik (s7 antidepresan kullanamayan gebe, s8 mani/şizofrenide gebelik), bilişsel bozulma kişiye ve doza bağlı (s13). Bütünleme sınavı, Kurul 2 değil.",
+   "p": 8,
+   "c": 0,
+   "skor": 1.0,
+   "d": 0
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-78",
+   "kok": "Non-invaziv yolla depolarizasyon dalgası oluşturarak depresyon tedavisinde FDA onayı almış yöntem aşağıdakilerden hangisidir?",
+   "cevap": "Transkraniyal manyetik stimülasyon",
+   "yil": "2025-2026",
+   "s": 15,
+   "seviye": "dogrudan",
+   "kanit": "Non-invazif olan bu yöntemde magnetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşur.",
+   "kaynak": "25-26 dönem 3 kurul 2.pdf s.2 (öğrenci hatırlaması, madde 78: 'Non-invaziv depolarizasyon dalgası yaparak depresyon tedavisinde FDA onayı alan yöntem? A) Transkranial magnetik stimulasyon')",
+   "dogrulandi": true,
+   "neden": "Kök s15'in tanım cümlesi + s17 'en az bir ilaç tedavisinden fayda görmemiş depresyon için FDA izni'. Çeldiriciler: EKT (s3, invaziv değil ama konvülziyon), DC stimülasyonu = tDCS (s21 hiçbir endikasyonda onaysız), derin beyin uyarımı (s24 invaziv, FDA onayı OKB). Vagus siniri stimülasyonu slaytta yok (ham belgede E şıkkı da yok).",
+   "p": 17,
+   "c": 2,
+   "skor": 1.0,
+   "d": 0
+  }
+ ]
+}

@@ -2290,3 +2290,15 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** Öğrenci Drive'ında dosya adı içerikle eşleştirilmeden derse bağlandı (ad = "TSSB … 2"). Döküm hizalanınca 2. kaydın EKT tarihçe/etki kuramları/hazırlık/endikasyon anlattığı ve TSSB slaytlarının hiçbirine düşmediği görüldü; k2-20 ana kaydı s8 sonundan başlıyordu.
 - **Kalıcı çözüm:** 2. kayıt k2-20'nin başı ("ek" kayıt, s1–8) olarak hizalandı; TSSB yalnız 1. kayıttan işlendi.
 - **Önleme:** Ses dosyası, PDF gibi, **içerikle** eşleşir (KURUL2_DERS_STANDARDI §1): hizada slayta düşmeyen ≥3 dk'lık blok "ders dışı" işaretlenir ve aynı kurulun diğer derslerinin slaytlarıyla karşılaştırılır; bir dersin başı/sonu sessizse öbür kayıtlar o derse ait olabilir diye taranır.
+
+### H509 — Destesiz derste ders içerik paketinin kısaltmaları "Ek"e düşüyordu (adim 0), kapı %5 sınırında HATA verdi (2026-11-06)
+- **Belirti:** k2-20 `ders_icerik_dogrula.py` → "adim eşlenemeyen kayıt %5"; 22 kısaltmanın hepsi `adim: 0` (PDF akışında ders sonuna "Ek" olarak atılır). k2-19'da da kısaltmalar 0'dı, oran düşük kaldığı için fark edilmedi.
+- **Kök neden:** `ders_icerik_adim.py::destesiz` kısaltmanın sayfasını `taslak/sayfalar.json`'dan `{"1": metin}` biçiminde arıyordu; yeni hatta bu dosya sayfa nesnelerinden oluşan **liste** (tablolar/görsel/vurgulu) ve düz metin yok → sözlük boş, her kısaltma 0.
+- **Kalıcı çözüm:** liste biçiminde ders klasöründeki `meds_temp/ogrenci_ders/<ders>/sayfalar.json` (düz sayfa metni) kullanılır; k2-20'de eşlenemeyen 22 → 0.
+- **Önleme:** Biçim değişen ara dosyayı okuyan betik, beklenen biçim gelmezse sessizce boş sözlükle sürmez; destesiz her derste paketten sonra `ders_icerik_adim.py` çıktısındaki "eşlenemeyen" sayısı 0 değilse nedeni bulunur (eşik altı olsa da).
+
+### H510 — Değerlendirme kapısı kaynakça sayfasındaki yazar baş harflerini "sözlükte yok kısaltma" sayıyordu (2026-11-06)
+- **Belirti:** k2-37 değerlendirme paketi `s23: kısaltma 'MG'/'DS'/'RP'/'MB' sözlükte yok` HATA'ları verdi; s23 "Kaynaklar" sayfası (Craske MG, Baldwin DS…).
+- **Kök neden:** `degerlendirme_dogrula.py` her sayfadaki 2–5 büyük harfli öbeği kısaltma adayı sayıyordu; kaynakça sayfaları ayrılmıyordu. Ders atlamamak için uydurma kısaltma anlamı yazmak tek yol gibi görünüyordu.
+- **Kalıcı çözüm:** "Kaynaklar/Kaynakça/Kaynak/References" başlıklı sayfa kısaltma denetiminden çıkarıldı.
+- **Önleme:** Kapıyı geçmek için sözlüğe anlamı bilinmeyen kısaltma eklemek YASAK; yanlış pozitifin kökü kapıda düzeltilir.

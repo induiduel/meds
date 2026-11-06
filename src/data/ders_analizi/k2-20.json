@@ -1,0 +1,790 @@
+{
+ "surum": 1,
+ "key": "k2-20",
+ "kod": "2s04",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Nefise Demir",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s04"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders psikiyatride ilaç dışı biyolojik tedavileri anlatır. EKT tanımı, etki mekanizması, uygulama, endikasyonlar, riskin arttığı durumlar, yan etkiler ve ilaç etkileşimleriyle ayrıntılı işlenir; ardından TMS, derin TMS, tDCS, derin beyin uyarımı, ışık tedavisi, uyku yoksunluğu ve psikoşirürji tanıtılır.",
+   "maddeler": [
+    {
+     "metin": "Biyolojik tedavilere genel bakış"
+    },
+    {
+     "metin": "EKT: tanım, tarihçe ve etki mekanizması"
+    },
+    {
+     "metin": "EKT'nin uygulanışı"
+    },
+    {
+     "metin": "EKT endikasyonları"
+    },
+    {
+     "metin": "EKT'de riskin arttığı durumlar"
+    },
+    {
+     "metin": "EKT'nin yan etkileri"
+    },
+    {
+     "metin": "İlaç ve EKT"
+    },
+    {
+     "metin": "Transkraniyal manyetik stimülasyon (TMS)"
+    },
+    {
+     "metin": "Transkraniyal doğru akım stimülasyonu (tDCS)"
+    },
+    {
+     "metin": "Derin beyin uyarımı (DBS)"
+    },
+    {
+     "metin": "Fototerapi (ışık tedavisi)"
+    },
+    {
+     "metin": "Uyku yoksunluğu"
+    },
+    {
+     "metin": "Psikoşirürji"
+    },
+    {
+     "metin": "Ders sonu: yedi yöntemi birbirinden ayırmak"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders psikiyatride ilaç dışı biyolojik tedavileri anlatır. EKT tanımı, etki mekanizması, uygulama, endikasyonlar, riskin arttığı durumlar, yan etkiler ve ilaç etkileşimleriyle ayrıntılı işlenir; ardından TMS, derin TMS, tDCS, derin beyin uyarımı, ışık tedavisi, uyku yoksunluğu ve psikoşirürji tanıtılır.",
+    "Biyolojik tedavilere genel bakış.",
+    "EKT: tanım, tarihçe ve etki mekanizması.",
+    "EKT'nin uygulanışı.",
+    "EKT endikasyonları.",
+    "EKT'de riskin arttığı durumlar.",
+    "EKT'nin yan etkileri.",
+    "İlaç ve EKT.",
+    "Transkraniyal manyetik stimülasyon (TMS).",
+    "Transkraniyal doğru akım stimülasyonu (tDCS).",
+    "Derin beyin uyarımı (DBS).",
+    "Fototerapi (ışık tedavisi).",
+    "Uyku yoksunluğu.",
+    "Psikoşirürji.",
+    "Ders sonu: yedi yöntemi birbirinden ayırmak."
+   ],
+   "v": "81d84b7407"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "EKT Endikasyonları",
+     "metin": "Çıkmış (dogrudan): Kronik şizofrenide etkin değildir",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "EKT-Yan etkiler",
+     "metin": "Çıkmış (dogrudan): Konfüzyon Sersemlik Baş ağrısı Ajitasyon Amnezi",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Transkraniyal magnetik",
+     "metin": "Çıkmış (dogrudan): Non-invazif olan bu yöntemde magnetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşur.",
+     "s": [
+      15
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "EKT Endikasyonları: Çıkmış (dogrudan): Kronik şizofrenide etkin değildir.",
+    "EKT-Yan etkiler: Çıkmış (dogrudan): Konfüzyon Sersemlik Baş ağrısı Ajitasyon Amnezi.",
+    "Transkraniyal magnetik: Çıkmış (dogrudan): Non-invazif olan bu yöntemde magnetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşur."
+   ],
+   "v": "29e5f90fd4"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersten gelen sorular iki noktada yoğunlaşır: EKT yan etkileri (2020-21 ve 2024-25'te ataksi \"beklenmeyen yan etki\" olarak soruldu) ve TMS'nin tanımı (2025-26). EKT endikasyonları, kronik şizofrenide etkisizlik, mutlak kontrendikasyonun olmaması ve EKT öncesi kesilecek ilaçlar diğer sık sorulan yerlerdir.",
+   "maddeler": [
+    {
+     "baslik": "EKT yan etkileri: santral sinir sistemi",
+     "metin": "EKT'nin santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezidir; ataksi bu listede yoktur.",
+     "neden": "2020-21 ve 2024-25'te soruldu; iki yılda da beklenmeyen yan etki olarak ataksi cevaptı.",
+     "s": [
+      11
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "TMS: tanım ve FDA izni",
+     "metin": "Transkraniyal manyetik stimülasyon non-invazif bir yöntemdir; manyetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşturur.",
+     "neden": "2025-26'da tanımından yöntem soruldu; kök \"non-invaziv, depolarizasyon dalgası, FDA onayı\" üçlüsüyle kuruldu.",
+     "s": [
+      15,
+      17
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Şizofrenide EKT: kronik şizofrenide etkin değil",
+     "metin": "EKT kronik şizofrenide etkin değildir; antipsikotiklerin neden olduğu EPS belirtileri ise bir EKT endikasyonudur.",
+     "neden": "2022-23 bütünlemesinde \"EKT antipsikotiklere bağlı EPS'yi artırır\" yanlış önerme olarak soruldu; kronik şizofreni aynı soruda doğru önermeydi.",
+     "s": [
+      8
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Majör depresyon: en sık EKT endikasyonu",
+     "metin": "Günümüzde EKT uygulanan hastaların %85'inde tanı majör depresyondur; unipolar ve bipolar depresyon birlikte sayılır.",
+     "neden": "En sık endikasyon %85 oranıyla iki ayrı çıkmışta doğru önerme olarak yer aldı; gebe ve intihar riski yüksek hasta vakası sık kurulur.",
+     "s": [
+      7
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "EKT öncesi kesilecek ilaçlar",
+     "metin": "Benzodiazepinler ve antiepileptikler nöbet eşiğini artırdığından EKT'ye başlamadan önce kesilmelidir.",
+     "neden": "Hoca nöbet eşiğini etkileyen ilaçların mutlaka bilinmesini istedi; 2024-25 çıkmışında doğru önerme olarak yer aldı.",
+     "s": [
+      14
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "EKT için mutlak kontrendikasyon yoktur",
+     "metin": "EKT için mutlak kontrendikasyon yoktur; çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+     "neden": "Klasik tuzak: \"mutlak kontrendikasyonu vardır\" ya da \"hiçbir koşulda uygulanamaz\" önermeleri yanlıştır.",
+     "s": [
+      13
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "TMS'nin etkinlik profili",
+     "metin": "TMS'nin depresyonda sınırlı bir etkiye sahip olduğu bildirilir; psikoz için etkisizdir ve EKT'den daha az bilişsel bozulma yapar.",
+     "neden": "TMS iki yakın yıl çıkmışında soruldu; \"psikozda etkilidir\" klasik yanlış önermedir.",
+     "s": [
+      15,
+      17
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "EKT'nin bilişsel etkileri",
+     "metin": "EKT sonrası bilişsel bozukluk uygulamadan hemen sonra ve tedavi bitiminde görülür; derecesi kişiye ve dozaja bağlıdır, teşhisten teşhise değişmez.",
+     "neden": "2022-23 bütünlemesinde doza bağlılık doğru önerme olarak soruldu; \"tanıya göre değişir\" ters yön tuzağıdır.",
+     "s": [
+      13
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu dersten gelen sorular iki noktada yoğunlaşır: EKT yan etkileri (2020-21 ve 2024-25'te ataksi \"beklenmeyen yan etki\" olarak soruldu) ve TMS'nin tanımı (2025-26). EKT endikasyonları, kronik şizofrenide etkisizlik, mutlak kontrendikasyonun olmaması ve EKT öncesi kesilecek ilaçlar diğer sık sorulan yerlerdir.",
+    "EKT yan etkileri: santral sinir sistemi: EKT'nin santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezidir; ataksi bu listede yoktur.",
+    "TMS: tanım ve FDA izni: Transkraniyal manyetik stimülasyon non-invazif bir yöntemdir; manyetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşturur.",
+    "Şizofrenide EKT: kronik şizofrenide etkin değil: EKT kronik şizofrenide etkin değildir; antipsikotiklerin neden olduğu EPS belirtileri ise bir EKT endikasyonudur.",
+    "Majör depresyon: en sık EKT endikasyonu: Günümüzde EKT uygulanan hastaların %85'inde tanı majör depresyondur; unipolar ve bipolar depresyon birlikte sayılır.",
+    "EKT öncesi kesilecek ilaçlar: Benzodiazepinler ve antiepileptikler nöbet eşiğini artırdığından EKT'ye başlamadan önce kesilmelidir.",
+    "EKT için mutlak kontrendikasyon yoktur: EKT için mutlak kontrendikasyon yoktur; çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+    "TMS'nin etkinlik profili: TMS'nin depresyonda sınırlı bir etkiye sahip olduğu bildirilir; psikoz için etkisizdir ve EKT'den daha az bilişsel bozulma yapar.",
+    "EKT'nin bilişsel etkileri: EKT sonrası bilişsel bozukluk uygulamadan hemen sonra ve tedavi bitiminde görülür; derecesi kişiye ve dozaja bağlıdır, teşhisten teşhise değişmez."
+   ],
+   "v": "b08121f17e"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin çıkmışları 2020-21'den 2025-26'ya kadar dört soruda iki alt başlıkta toplanır: EKT'nin yan etki ve endikasyon listeleri (s. 7-13) ile TMS'nin tanımı ve FDA onayı (s. 15-17). EKT soruları 'hangisi beklenmez / hangisi yanlıştır / hangisi söylenemez' kalıbında kurulur; doğru şıklar slayttaki listelerden birebir alınır, yanlış şık ise listede olmayan bir bulgu (ataksi) ya da doğru bilginin tersine çevrilmiş hâlidir (EPS'nin endikasyon değil 'artış' diye verilmesi). TMS sorusu ise tanım cümlesinden kurulan 'hangi yöntemdir' kalıbındadır ve çeldiriciler aynı dersin öteki yöntemleridir (EKT, tDCS, derin beyin uyarımı). Bu yüzden her yöntemi 'ne kullanır, invaziv mi, neyde onaylı' sorularıyla ayırmak ve EKT listelerini (endikasyon, riskli durum, yan etki) eksiksiz bilmek gerekir.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Elektrokonvülsif tedavide aşağıda verilen yan etkilerden hangisi beklenmez?",
+     "cevap": "Ataksi",
+     "s": [
+      11
+     ],
+     "aciklama": [
+      "Soru, EKT'nin santral sinir sistemi yan etkilerini ve bu listede bulunmayan bir bulguyu ayırt edebilmeyi ölçer; cevap ataksidir.",
+      "Dayanak sayfa 11'dir: EKT'nin santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve anterograd/retrograd amnezidir; sayfa 12'deki kardiyovasküler (hipertansiyon, taşikardi, aritmi, bradikardi) ve kas-iskelet (kasılma, kırık-çıkık, kas-eklem ağrısı) listelerinde de ataksi yoktur.",
+      "En güçlü çeldirici amnezidir; 'kalıcı olabilen ciddi bir bellek sorunu beklenmez' diye düşünülerek işaretlenebilir, oysa amnezi listede açıkça yazılıdır ve kalıcılaşabilen yan etkidir. Konfüzyon, baş ağrısı ve ajitasyon da listede olduğu için beklenen yan etkilerdir."
+     ],
+     "ornek": "Derste anlatılan tabloda EKT yapılan hasta uyandığında o gün biraz konfüzyonu, sersemliği, baş ağrısı ve hafif bir ajitasyon hissi olabilir; bunlar genellikle gelip geçicidir, amnezi ise kalıcı hâle gelebilir. Dengesizlik ya da yürüme bozukluğu (ataksi) bu tabloda sayılmaz.",
+     "tuzak": "Ataksi, nöbet sonrası 'sersemlik' ile karıştırılır; sersemlik listede vardır, koordinasyon bozukluğu olan ataksi yoktur."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Psikiyatrik bozukluklarda uygulanan tedavilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "EKT yan etkilerinden en sık görüleni ataksidir.",
+     "s": [
+      11
+     ],
+     "aciklama": [
+      "Soru, psikiyatride uygulanan biyolojik tedavilerle ilgili yanlış önermeyi bulmayı ölçer; yanlış önerme 'EKT yan etkilerinden en sık görüleni ataksidir' ifadesidir.",
+      "Dayanak sayfa 11'dir: EKT'de en sık yan etkiler santral sinir sistemine aittir ve konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amneziden oluşur; ataksi bu listede yer almaz, dolayısıyla en sık yan etki olamaz.",
+      "Öteki şıklar dersin farklı sayfalarından doğru bilgilerdir: EKT uygulananların %85'inde tanı majör depresyondur (s. 7), benzodiazepinler nöbet eşiğini artırdığı için EKT öncesi kesilir (s. 14), TMS EKT'den daha az bilişsel bozulma yapar (s. 15) ve ışık tedavisi mevsimsel affektif bozuklukta kullanılır (s. 27). Bu doğru şıklardan herhangi birini ters okuyan öğrenci yanılır; özellikle benzodiazepinin nöbet eşiğini 'düşürdüğü' sanılırsa o şık yanlış diye seçilebilir."
+     ],
+     "ornek": "Derste benzodiazepin ve antiepileptik kullanan hastanın daha zor nöbet geçireceği, bu yüzden EKT öncesi bu ilaçların kesildiği ve seanslar bitince yeniden başlandığı anlatılır. Aynı soruda bu bilginin doğru şık olarak durduğunu bilmek, yanlış şıkkı (ataksi) güvenle seçmeyi sağlar.",
+     "tuzak": "Bu soru 2020-21'deki ataksi sorusunun 'en sık yan etki' kalıbıyla yeniden sorulmuş hâlidir; nöbet eşiğini artıran (benzodiazepin, antiepileptik) ile status riski taşıyan (teofilin) ilaç da birbirine karıştırılır."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Elektrokonvülsif tedavi (EKT) hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+     "cevap": "Antipsikotiklerin neden olduğu ekstrapiramidal sistem yan etkilerinde artmaya neden olur.",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Soru, EKT'nin endikasyonlarını ve özellikle antipsikotiğe bağlı ekstrapiramidal sistem (EPS) belirtileriyle ilişkisini ölçer; söylenemeyecek ifade 'antipsikotiklerin neden olduğu EPS'de artmaya neden olur' şıkkıdır.",
+      "Dayanak sayfa 8'dir: şizofrenide EKT'nin kullanıldığı durumlar arasında 'antipsikotiklerin neden olduğu EPS belirtileri' ve gebelik sayılır; yani EPS bir EKT endikasyonudur, EKT bu belirtileri artırmaz.",
+      "Doğru şıklar başka sayfalardan gelir: en sık endikasyon majör depresyondur (%85, s. 7), EKT kronik şizofrenide etkin değildir (s. 8), gebelikte uygulanabilir (s. 7-8) ve bilişsel bozulmanın derecesi kişiye ve doza bağlıdır (s. 13). En güçlü çeldirici 'kronik şizofrenide etkin değildir' şıkkıdır; olumsuz bir ifade olduğu için yanlış sanılabilir, oysa slayttaki bilgiyle birebir aynıdır."
+     ],
+     "ornek": "Derste antipsikotik ilaçların ekstrapiramidal sistemle ilgili kasılma ve distoni gibi belirtilere yol açabildiği, bu belirtilerde EKT'nin kullanılabileceği anlatılır. Kronik şizofreni için ayrıca uyarılır: bu tabloda negatif belirtiler öne çıkar ve EKT kaybolmuş beceriyi geri getirmez, yalnız pozitif belirtileri yatıştırır; pozitif bulgusu, katatonisi ya da duygudurum belirtisi olan hasta ise EKT'den daha çok yarar görür. Gebelikte de yüksek doz ilaca çıkılamadığı için şiddetli tabloda EKT ilaçlardan daha güvenilir bir seçenek olarak sunulur.",
+     "tuzak": "EPS'nin EKT için 'endikasyon' olduğu, 'yan etki' ya da 'kontrendikasyon' sanılır; kronik şizofrenide etkisizlik ile tedaviye dirençli şizofrenide kullanım da birbirine karıştırılır."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Non-invaziv yolla depolarizasyon dalgası oluşturarak depresyon tedavisinde FDA onayı almış yöntem aşağıdakilerden hangisidir?",
+     "cevap": "Transkraniyal manyetik stimülasyon",
+     "s": [
+      15
+     ],
+     "aciklama": [
+      "Soru, non-invaziv nöromodülasyon yöntemlerini tanımından tanıyabilmeyi ölçer; 'non-invaziv, depolarizasyon dalgası oluşturan ve depresyonda FDA onaylı yöntem' transkraniyal manyetik stimülasyondur (TMS).",
+      "Dayanak sayfa 15 ve 17'dir: TMS'de manyetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşturur ve yöntem en az bir ilaç tedavisinden yarar görmemiş depresyonda FDA onayı almıştır.",
+      "En güçlü çeldirici transkraniyal doğru akım stimülasyonudur (tDCS); o da kafa derisinden uygulanan non-invaziv bir yöntemdir, ancak manyetik alan değil 0,5-2 mA doğru akım kullanır, yalnız eşik altı modülasyon yapar ve hiçbir endikasyon için onaylı değildir (s. 20-21). EKT jeneralize konvülziyon oluşturur, derin beyin uyarımı ise kafatasına delik açılarak yapılan invaziv bir yöntemdir ve onaylı psikiyatrik endikasyonu OKB'dir (s. 3, 24)."
+     ],
+     "ornek": "Derste TMS'de verilen uyarının elektrik akımı değil, MR cihazının içindeki gibi bir manyetik uyarı olduğu anlatılır; başa bir başlık yerleştirilir ve belirli bir bölge hedeflenir. Örnek protokolde hasta bir ay boyunca haftanın 5 günü, toplam 20 seans alır; EKT ise gün aşırı ve sınırlı sayıda seansla yapılır.",
+     "tuzak": "TMS (manyetik alan, depresyonda onaylı) ile tDCS (doğru akım, onaysız) ve DBS (invaziv, OKB'de onaylı) birbirine karıştırılır; 'non-invaziv' sözcüğü tek başına TMS'yi tDCS'den ayırmaz, ayırt eden manyetik uyaran ve FDA onayıdır."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin çıkmışları 2020-21'den 2025-26'ya kadar dört soruda iki alt başlıkta toplanır: EKT'nin yan etki ve endikasyon listeleri (s. 7-13) ile TMS'nin tanımı ve FDA onayı (s. 15-17). EKT soruları 'hangisi beklenmez / hangisi yanlıştır / hangisi söylenemez' kalıbında kurulur; doğru şıklar slayttaki listelerden birebir alınır, yanlış şık ise listede olmayan bir bulgu (ataksi) ya da doğru bilginin tersine çevrilmiş hâlidir (EPS'nin endikasyon değil 'artış' diye verilmesi). TMS sorusu ise tanım cümlesinden kurulan 'hangi yöntemdir' kalıbındadır ve çeldiriciler aynı dersin öteki yöntemleridir (EKT, tDCS, derin beyin uyarımı). Bu yüzden her yöntemi 'ne kullanır, invaziv mi, neyde onaylı' sorularıyla ayırmak ve EKT listelerini (endikasyon, riskli durum, yan etki) eksiksiz bilmek gerekir.",
+    "2020-2021: Elektrokonvülsif tedavide aşağıda verilen yan etkilerden hangisi beklenmez?",
+    "Cevap: Ataksi.",
+    "Soru, EKT'nin santral sinir sistemi yan etkilerini ve bu listede bulunmayan bir bulguyu ayırt edebilmeyi ölçer; cevap ataksidir.",
+    "Dayanak sayfa 11'dir: EKT'nin santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve anterograd/retrograd amnezidir; sayfa 12'deki kardiyovasküler (hipertansiyon, taşikardi, aritmi, bradikardi) ve kas-iskelet (kasılma, kırık-çıkık, kas-eklem ağrısı) listelerinde de ataksi yoktur.",
+    "En güçlü çeldirici amnezidir; 'kalıcı olabilen ciddi bir bellek sorunu beklenmez' diye düşünülerek işaretlenebilir, oysa amnezi listede açıkça yazılıdır ve kalıcılaşabilen yan etkidir. Konfüzyon, baş ağrısı ve ajitasyon da listede olduğu için beklenen yan etkilerdir.",
+    "Örnek: Derste anlatılan tabloda EKT yapılan hasta uyandığında o gün biraz konfüzyonu, sersemliği, baş ağrısı ve hafif bir ajitasyon hissi olabilir; bunlar genellikle gelip geçicidir, amnezi ise kalıcı hâle gelebilir. Dengesizlik ya da yürüme bozukluğu (ataksi) bu tabloda sayılmaz.",
+    "Tuzak: Ataksi, nöbet sonrası 'sersemlik' ile karıştırılır; sersemlik listede vardır, koordinasyon bozukluğu olan ataksi yoktur.",
+    "2024-2025: Psikiyatrik bozukluklarda uygulanan tedavilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: EKT yan etkilerinden en sık görüleni ataksidir.",
+    "Soru, psikiyatride uygulanan biyolojik tedavilerle ilgili yanlış önermeyi bulmayı ölçer; yanlış önerme 'EKT yan etkilerinden en sık görüleni ataksidir' ifadesidir.",
+    "Dayanak sayfa 11'dir: EKT'de en sık yan etkiler santral sinir sistemine aittir ve konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amneziden oluşur; ataksi bu listede yer almaz, dolayısıyla en sık yan etki olamaz.",
+    "Öteki şıklar dersin farklı sayfalarından doğru bilgilerdir: EKT uygulananların %85'inde tanı majör depresyondur (s. 7), benzodiazepinler nöbet eşiğini artırdığı için EKT öncesi kesilir (s. 14), TMS EKT'den daha az bilişsel bozulma yapar (s. 15) ve ışık tedavisi mevsimsel affektif bozuklukta kullanılır (s. 27). Bu doğru şıklardan herhangi birini ters okuyan öğrenci yanılır; özellikle benzodiazepinin nöbet eşiğini 'düşürdüğü' sanılırsa o şık yanlış diye seçilebilir.",
+    "Örnek: Derste benzodiazepin ve antiepileptik kullanan hastanın daha zor nöbet geçireceği, bu yüzden EKT öncesi bu ilaçların kesildiği ve seanslar bitince yeniden başlandığı anlatılır. Aynı soruda bu bilginin doğru şık olarak durduğunu bilmek, yanlış şıkkı (ataksi) güvenle seçmeyi sağlar.",
+    "Tuzak: Bu soru 2020-21'deki ataksi sorusunun 'en sık yan etki' kalıbıyla yeniden sorulmuş hâlidir; nöbet eşiğini artıran (benzodiazepin, antiepileptik) ile status riski taşıyan (teofilin) ilaç da birbirine karıştırılır.",
+    "2022-2023: Elektrokonvülsif tedavi (EKT) hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+    "Cevap: Antipsikotiklerin neden olduğu ekstrapiramidal sistem yan etkilerinde artmaya neden olur.",
+    "Soru, EKT'nin endikasyonlarını ve özellikle antipsikotiğe bağlı ekstrapiramidal sistem (EPS) belirtileriyle ilişkisini ölçer; söylenemeyecek ifade 'antipsikotiklerin neden olduğu EPS'de artmaya neden olur' şıkkıdır.",
+    "Dayanak sayfa 8'dir: şizofrenide EKT'nin kullanıldığı durumlar arasında 'antipsikotiklerin neden olduğu EPS belirtileri' ve gebelik sayılır; yani EPS bir EKT endikasyonudur, EKT bu belirtileri artırmaz.",
+    "Doğru şıklar başka sayfalardan gelir: en sık endikasyon majör depresyondur (%85, s. 7), EKT kronik şizofrenide etkin değildir (s. 8), gebelikte uygulanabilir (s. 7-8) ve bilişsel bozulmanın derecesi kişiye ve doza bağlıdır (s. 13). En güçlü çeldirici 'kronik şizofrenide etkin değildir' şıkkıdır; olumsuz bir ifade olduğu için yanlış sanılabilir, oysa slayttaki bilgiyle birebir aynıdır.",
+    "Örnek: Derste antipsikotik ilaçların ekstrapiramidal sistemle ilgili kasılma ve distoni gibi belirtilere yol açabildiği, bu belirtilerde EKT'nin kullanılabileceği anlatılır. Kronik şizofreni için ayrıca uyarılır: bu tabloda negatif belirtiler öne çıkar ve EKT kaybolmuş beceriyi geri getirmez, yalnız pozitif belirtileri yatıştırır; pozitif bulgusu, katatonisi ya da duygudurum belirtisi olan hasta ise EKT'den daha çok yarar görür. Gebelikte de yüksek doz ilaca çıkılamadığı için şiddetli tabloda EKT ilaçlardan daha güvenilir bir seçenek olarak sunulur.",
+    "Tuzak: EPS'nin EKT için 'endikasyon' olduğu, 'yan etki' ya da 'kontrendikasyon' sanılır; kronik şizofrenide etkisizlik ile tedaviye dirençli şizofrenide kullanım da birbirine karıştırılır.",
+    "2025-2026: Non-invaziv yolla depolarizasyon dalgası oluşturarak depresyon tedavisinde FDA onayı almış yöntem aşağıdakilerden hangisidir?",
+    "Cevap: Transkraniyal manyetik stimülasyon.",
+    "Soru, non-invaziv nöromodülasyon yöntemlerini tanımından tanıyabilmeyi ölçer; 'non-invaziv, depolarizasyon dalgası oluşturan ve depresyonda FDA onaylı yöntem' transkraniyal manyetik stimülasyondur (TMS).",
+    "Dayanak sayfa 15 ve 17'dir: TMS'de manyetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşturur ve yöntem en az bir ilaç tedavisinden yarar görmemiş depresyonda FDA onayı almıştır.",
+    "En güçlü çeldirici transkraniyal doğru akım stimülasyonudur (tDCS); o da kafa derisinden uygulanan non-invaziv bir yöntemdir, ancak manyetik alan değil 0,5-2 mA doğru akım kullanır, yalnız eşik altı modülasyon yapar ve hiçbir endikasyon için onaylı değildir (s. 20-21). EKT jeneralize konvülziyon oluşturur, derin beyin uyarımı ise kafatasına delik açılarak yapılan invaziv bir yöntemdir ve onaylı psikiyatrik endikasyonu OKB'dir (s. 3, 24).",
+    "Örnek: Derste TMS'de verilen uyarının elektrik akımı değil, MR cihazının içindeki gibi bir manyetik uyarı olduğu anlatılır; başa bir başlık yerleştirilir ve belirli bir bölge hedeflenir. Örnek protokolde hasta bir ay boyunca haftanın 5 günü, toplam 20 seans alır; EKT ise gün aşırı ve sınırlı sayıda seansla yapılır.",
+    "Tuzak: TMS (manyetik alan, depresyonda onaylı) ile tDCS (doğru akım, onaysız) ve DBS (invaziv, OKB'de onaylı) birbirine karıştırılır; 'non-invaziv' sözcüğü tek başına TMS'yi tDCS'den ayırmaz, ayırt eden manyetik uyaran ve FDA onayıdır."
+   ],
+   "v": "fa2daa2816"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok ilac_yan_etki (%43) ve tanım ve kavram (%29) sorulur."
+    },
+    {
+     "baslik": "Ilac_yan_etki",
+     "metin": "Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%86) ve hatırlama (%14) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle yer değiştirilmiş eşleştirme ya da aynı türden başka bir kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok ilac_yan_etki (%43) ve tanım ve kavram (%29) sorulur.",
+    "Ilac_yan_etki: Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%86) ve hatırlama (%14) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle yer değiştirilmiş eşleştirme ya da aynı türden başka bir kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor."
+   ],
+   "v": "406af712a5"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "EKT yan etkileri: santral sinir sistemi",
+     "metin": "2020-21 ve 2024-25'te soruldu; iki yılda da beklenmeyen yan etki olarak ataksi cevaptı."
+    },
+    {
+     "baslik": "TMS: tanım ve FDA izni",
+     "metin": "2025-26'da tanımından yöntem soruldu; kök \"non-invaziv, depolarizasyon dalgası, FDA onayı\" üçlüsüyle kuruldu."
+    },
+    {
+     "baslik": "Şizofrenide EKT: kronik şizofrenide etkin değil",
+     "metin": "2022-23 bütünlemesinde \"EKT antipsikotiklere bağlı EPS'yi artırır\" yanlış önerme olarak soruldu; kronik şizofreni aynı soruda doğru önermeydi."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta ilac_yan_etki bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "EKT yan etkileri: santral sinir sistemi: 2020-21 ve 2024-25'te soruldu; iki yılda da beklenmeyen yan etki olarak ataksi cevaptı.",
+    "TMS: tanım ve FDA izni: 2025-26'da tanımından yöntem soruldu; kök \"non-invaziv, depolarizasyon dalgası, FDA onayı\" üçlüsüyle kuruldu.",
+    "Şizofrenide EKT: kronik şizofrenide etkin değil: 2022-23 bütünlemesinde \"EKT antipsikotiklere bağlı EPS'yi artırır\" yanlış önerme olarak soruldu; kronik şizofreni aynı soruda doğru önermeydi.",
+    "Çalışma yolu: Okurken her başlıkta ilac_yan_etki bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "b48ab213a6"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders psikiyatride ilaç dışı biyolojik tedavileri anlatır. EKT tanımı, etki mekanizması, uygulama, endikasyonlar, riskin arttığı durumlar, yan etkiler ve ilaç etkileşimleriyle ayrıntılı işlenir; ardından TMS, derin TMS, tDCS, derin beyin uyarımı, ışık tedavisi, uyku yoksunluğu ve psikoşirürji tanıtılır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders psikiyatride ilaç dışı biyolojik tedavileri anlatır. EKT tanımı, etki mekanizması, uygulama, endikasyonlar, riskin arttığı durumlar, yan etkiler ve ilaç etkileşimleriyle ayrıntılı işlenir; ardından TMS, derin TMS, tDCS, derin beyin uyarımı, ışık tedavisi, uyku yoksunluğu ve psikoşirürji tanıtılır."
+   ],
+   "v": "6aa3c3a360"
+  },
+  {
+   "id": "2s04-04",
+   "baslik": "Majör depresyon: en sık EKT endikasyonu",
+   "giris": "Günümüzde EKT uygulanan hastaların %85'inde tanı majör depresyondur; unipolar ve bipolar depresyon birlikte sayılır.",
+   "s": [
+    7
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "EKT uygulanan hastaların %85'inde tanı majör depresyondur."
+    },
+    {
+     "metin": "şiddetli belirtileri olan, işlevselliği ileri derecede bozulmuş, katatonik ve psikotik belirtiler gösteren hastalar."
+    },
+    {
+     "metin": "hızla yanıt istenen, intihar riski yüksek, oral alımı reddeden hastalar."
+    },
+    {
+     "metin": "gebe ya da GTD nedeniyle antidepresan kullanamayan, daha önce EKT'ye iyi yanıt vermiş hastalar."
+    },
+    {
+     "metin": "başkasını öldürme riski yüksek, ajitasyonda ya da stuporda olan hastalar ve ilaca yanıt vermeyen depresyon."
+    },
+    {
+     "metin": "EKT kesildikten sonra ilaç tedavisine devam edilmelidir."
+    }
+   ],
+   "klip": "o-2s04-04",
+   "ses": [
+    "Majör depresyon: en sık EKT endikasyonu.",
+    "Günümüzde EKT uygulanan hastaların %85'inde tanı majör depresyondur; unipolar ve bipolar depresyon birlikte sayılır.",
+    "EKT uygulanan hastaların %85'inde tanı majör depresyondur.",
+    "şiddetli belirtileri olan, işlevselliği ileri derecede bozulmuş, katatonik ve psikotik belirtiler gösteren hastalar.",
+    "hızla yanıt istenen, intihar riski yüksek, oral alımı reddeden hastalar.",
+    "gebe ya da GTD nedeniyle antidepresan kullanamayan, daha önce EKT'ye iyi yanıt vermiş hastalar.",
+    "başkasını öldürme riski yüksek, ajitasyonda ya da stuporda olan hastalar ve ilaca yanıt vermeyen depresyon.",
+    "EKT kesildikten sonra ilaç tedavisine devam edilmelidir."
+   ],
+   "v": "6293ab2c5e"
+  },
+  {
+   "id": "2s04-03",
+   "baslik": "Şizofrenide EKT: kronik şizofrenide etkin değil",
+   "giris": "EKT kronik şizofrenide etkin değildir; antipsikotiklerin neden olduğu EPS belirtileri ise bir EKT endikasyonudur.",
+   "s": [
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "kronik şizofreni."
+    },
+    {
+     "metin": "belirgin pozitif bulgular, katatonik ya da duygudurum belirtileri, tedaviye dirençli hastalar, homisid ya da suisid riski, antipsikotiklerin neden olduğu EPS belirtileri ve gebelik."
+    },
+    {
+     "metin": "EKT antipsikotiğe bağlı EPS belirtilerini artırmaz; bu belirtilerde tedavi seçeneğidir."
+    },
+    {
+     "metin": "depresyonda antidepresan kullanamayan gebe hasta, manide ve şizofrenide gebelik EKT endikasyonları arasındadır."
+    },
+    {
+     "metin": "bilişsel bozulmanın derecesi kişiden kişiye değişir ve dozaja da bağlıdır."
+    },
+    {
+     "metin": "EKT uygulanan hastaların %85'inde tanı majör depresyondur."
+    }
+   ],
+   "klip": "o-2s04-03",
+   "ses": [
+    "Şizofrenide EKT: kronik şizofrenide etkin değil.",
+    "EKT kronik şizofrenide etkin değildir; antipsikotiklerin neden olduğu EPS belirtileri ise bir EKT endikasyonudur.",
+    "kronik şizofreni.",
+    "belirgin pozitif bulgular, katatonik ya da duygudurum belirtileri, tedaviye dirençli hastalar, homisid ya da suisid riski, antipsikotiklerin neden olduğu EPS belirtileri ve gebelik.",
+    "EKT antipsikotiğe bağlı EPS belirtilerini artırmaz; bu belirtilerde tedavi seçeneğidir.",
+    "depresyonda antidepresan kullanamayan gebe hasta, manide ve şizofrenide gebelik EKT endikasyonları arasındadır.",
+    "bilişsel bozulmanın derecesi kişiden kişiye değişir ve dozaja da bağlıdır.",
+    "EKT uygulanan hastaların %85'inde tanı majör depresyondur."
+   ],
+   "v": "1bc014de36"
+  },
+  {
+   "id": "2s04-01",
+   "baslik": "EKT yan etkileri: santral sinir sistemi",
+   "giris": "EKT'nin santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezidir; ataksi bu listede yoktur.",
+   "s": [
+    11
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezi görülür; amnezi anterograd ya da retrograd olabilir."
+    },
+    {
+     "metin": "ataksi EKT yan etkileri arasında sayılmaz; \"hangisi beklenmez\" kalıbında cevap budur."
+    },
+    {
+     "metin": "hipertansiyon, taşikardi, aritmi ve bradikardi."
+    },
+    {
+     "metin": "miyoklonik-tonik kasılma, kırık ve çıkıklar, kas ve eklem ağrıları."
+    },
+    {
+     "metin": "EKT uygulanan hastaların %85'inde tanı majör depresyondur; benzodiazepinler nöbet eşiğini artırdığından EKT öncesinde kesilir; TMS, EKT'ye göre daha az bilişsel bozulma yapar; ışık tedavisi ilk olarak mevsimsel affektif bozuklukta uygulanmaya başlanmıştır."
+    }
+   ],
+   "klip": "o-2s04-01",
+   "ses": [
+    "EKT yan etkileri: santral sinir sistemi.",
+    "EKT'nin santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezidir; ataksi bu listede yoktur.",
+    "konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezi görülür; amnezi anterograd ya da retrograd olabilir.",
+    "ataksi EKT yan etkileri arasında sayılmaz; \"hangisi beklenmez\" kalıbında cevap budur.",
+    "hipertansiyon, taşikardi, aritmi ve bradikardi.",
+    "miyoklonik-tonik kasılma, kırık ve çıkıklar, kas ve eklem ağrıları.",
+    "EKT uygulanan hastaların %85'inde tanı majör depresyondur; benzodiazepinler nöbet eşiğini artırdığından EKT öncesinde kesilir; TMS, EKT'ye göre daha az bilişsel bozulma yapar; ışık tedavisi ilk olarak mevsimsel affektif bozuklukta uygulanmaya başlanmıştır."
+   ],
+   "v": "6216549a64"
+  },
+  {
+   "id": "2s04-06",
+   "baslik": "EKT için mutlak kontrendikasyon yoktur",
+   "giris": "EKT için mutlak kontrendikasyon yoktur; çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "yoktur; yakın geçmişte miyokard enfarktüsü gibi riskli durumlar uygulamayı yasaklamaz, dikkatli değerlendirme gerektirir."
+    },
+    {
+     "metin": "çalışmalar EKT'nin beyne zarar vermediğini göstermiştir."
+    },
+    {
+     "metin": "TSA ile birlikte EKT kardiyak riski artırır; kardiyovasküler yan etkiler arasında hipertansiyon, taşikardi, aritmi ve bradikardi vardır."
+    },
+    {
+     "metin": "terapötik dozlarda bile EKT ile birlikte hastanın statusa girmesine neden olabilir; nöbeti kısaltmak için verilmez."
+    }
+   ],
+   "klip": "o-2s04-06",
+   "ses": [
+    "EKT için mutlak kontrendikasyon yoktur.",
+    "EKT için mutlak kontrendikasyon yoktur; çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+    "yoktur; yakın geçmişte miyokard enfarktüsü gibi riskli durumlar uygulamayı yasaklamaz, dikkatli değerlendirme gerektirir.",
+    "çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+    "TSA ile birlikte EKT kardiyak riski artırır; kardiyovasküler yan etkiler arasında hipertansiyon, taşikardi, aritmi ve bradikardi vardır.",
+    "terapötik dozlarda bile EKT ile birlikte hastanın statusa girmesine neden olabilir; nöbeti kısaltmak için verilmez."
+   ],
+   "v": "c30ac55588"
+  },
+  {
+   "id": "2s04-08",
+   "baslik": "EKT'nin bilişsel etkileri",
+   "giris": "EKT sonrası bilişsel bozukluk uygulamadan hemen sonra ve tedavi bitiminde görülür; derecesi kişiye ve dozaja bağlıdır, teşhisten teşhise değişmez.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "bilişsel bozukluklar EKT uygulandıktan hemen sonra ve tedavi bitimi sonunda ortaya çıkar."
+    },
+    {
+     "metin": "etkilenmenin derecesi kişiden kişiye değişir."
+    },
+    {
+     "metin": "bilişsel etkilenme dozaja da bağlıdır."
+    },
+    {
+     "metin": "EKT'nin bilişsel işlevlere etkisi teşhisten teşhise değişmez; bu yüzden \"tanıya göre belirgin değişir\" ifadesi yanlıştır."
+    },
+    {
+     "metin": "çalışmalar EKT'nin beyne zarar vermediğini göstermiştir."
+    },
+    {
+     "metin": "santral sinir sistemi yan etkileri içinde anterograd ve retrograd amnezi yer alır."
+    }
+   ],
+   "klip": "o-2s04-08",
+   "ses": [
+    "EKT'nin bilişsel etkileri.",
+    "EKT sonrası bilişsel bozukluk uygulamadan hemen sonra ve tedavi bitiminde görülür; derecesi kişiye ve dozaja bağlıdır, teşhisten teşhise değişmez.",
+    "bilişsel bozukluklar EKT uygulandıktan hemen sonra ve tedavi bitimi sonunda ortaya çıkar.",
+    "etkilenmenin derecesi kişiden kişiye değişir.",
+    "bilişsel etkilenme dozaja da bağlıdır.",
+    "EKT'nin bilişsel işlevlere etkisi teşhisten teşhise değişmez; bu yüzden \"tanıya göre belirgin değişir\" ifadesi yanlıştır.",
+    "çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+    "santral sinir sistemi yan etkileri içinde anterograd ve retrograd amnezi yer alır."
+   ],
+   "v": "60ce38d28b"
+  },
+  {
+   "id": "2s04-05",
+   "baslik": "EKT öncesi kesilecek ilaçlar",
+   "giris": "Benzodiazepinler ve antiepileptikler nöbet eşiğini artırdığından EKT'ye başlamadan önce kesilmelidir.",
+   "s": [
+    14
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "benzodiazepinler ve antiepileptikler."
+    },
+    {
+     "metin": "ikisi de nöbet eşiğini artırır; EKT'nin etkisi jeneralize konvülziyon oluşturmaya dayandığı için eşiği yükselten ilaç uygulamayı zorlaştırır."
+    },
+    {
+     "metin": "uzun süredir benzodiazepin kullanan hastada EKT planlanırsa ilaç EKT başlamadan önce kesilir; doz artırmak ya da ilacı aynen sürdürmek uygun değildir."
+    },
+    {
+     "metin": "teofilin terapötik dozda bile statusa yol açabilir; nöbet uzunluğunu artırmak için kafein önerenler vardır."
+    }
+   ],
+   "klip": "o-2s04-05",
+   "ses": [
+    "EKT öncesi kesilecek ilaçlar.",
+    "Benzodiazepinler ve antiepileptikler nöbet eşiğini artırdığından EKT'ye başlamadan önce kesilmelidir.",
+    "benzodiazepinler ve antiepileptikler.",
+    "ikisi de nöbet eşiğini artırır; EKT'nin etkisi jeneralize konvülziyon oluşturmaya dayandığı için eşiği yükselten ilaç uygulamayı zorlaştırır.",
+    "uzun süredir benzodiazepin kullanan hastada EKT planlanırsa ilaç EKT başlamadan önce kesilir; doz artırmak ya da ilacı aynen sürdürmek uygun değildir.",
+    "teofilin terapötik dozda bile statusa yol açabilir; nöbet uzunluğunu artırmak için kafein önerenler vardır."
+   ],
+   "v": "636825732c"
+  },
+  {
+   "id": "2s04-09",
+   "baslik": "İlaç ve EKT etkileşimleri",
+   "giris": "TSA ile birlikte EKT kardiyak riski artırır; teofilin terapötik dozda bile statusa yol açabilir, kafein ise nöbet uzunluğunu artırmak için önerilir.",
+   "s": [
+    14
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "EKT ile birlikte kardiyak riski artırır."
+    },
+    {
+     "metin": "nöbet eşiğini artırdıklarından EKT başlamadan önce kesilir."
+    },
+    {
+     "metin": "nöbeti zorlaştırmaz, tersine terapötik dozlarda bile hastanın status epileptikusa girmesine neden olabilir."
+    },
+    {
+     "metin": "nöbet uzunluğunu artırmak için kullanılmasını önerenler vardır."
+    },
+    {
+     "metin": "benzodiazepin ve antiepileptik nöbeti zorlaştırır, teofilin ve kafein nöbeti kolaylaştırır ya da uzatır."
+    }
+   ],
+   "klip": "o-2s04-09",
+   "ses": [
+    "İlaç ve EKT etkileşimleri.",
+    "TSA ile birlikte EKT kardiyak riski artırır; teofilin terapötik dozda bile statusa yol açabilir, kafein ise nöbet uzunluğunu artırmak için önerilir.",
+    "EKT ile birlikte kardiyak riski artırır.",
+    "nöbet eşiğini artırdıklarından EKT başlamadan önce kesilir.",
+    "nöbeti zorlaştırmaz, tersine terapötik dozlarda bile hastanın status epileptikusa girmesine neden olabilir.",
+    "nöbet uzunluğunu artırmak için kullanılmasını önerenler vardır.",
+    "benzodiazepin ve antiepileptik nöbeti zorlaştırır, teofilin ve kafein nöbeti kolaylaştırır ya da uzatır."
+   ],
+   "v": "084c39e8c0"
+  },
+  {
+   "id": "2s04-02",
+   "baslik": "TMS: tanım ve FDA izni",
+   "giris": "Transkraniyal manyetik stimülasyon non-invazif bir yöntemdir; manyetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşturur.",
+   "s": [
+    15,
+    17
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "güçlü ve hızla dalgalanan mıknatıs, elektrik akımları üreten bir manyetik alan oluşturur; manyetik uyaranlar kafa derisinden geçer ve uygulandığı bölgede depolarizasyon dalgası yaratır."
+    },
+    {
+     "metin": "kafatası açılmaz, kablo yerleştirilmez; bu yönüyle derin beyin uyarımından ayrılır."
+    },
+    {
+     "metin": "jeneralize konvülziyon oluşturmak EKT'nin ilkesidir; TMS'de nöbet ise istenmeyen en ciddi endişedir."
+    },
+    {
+     "metin": "en az bir ilaç tedavisinden fayda görmemiş depresyon için izin almıştır."
+    },
+    {
+     "metin": "tDCS şu anda hiçbir endikasyon için onaylı değildir; derin beyin uyarımı invazif bir yöntemdir; psikiyatrideki FDA onayı dirençli OKB içindir, depresyon için onaylı değildir."
+    }
+   ],
+   "klip": "o-2s04-02",
+   "ses": [
+    "TMS: tanım ve FDA izni.",
+    "Transkraniyal manyetik stimülasyon non-invazif bir yöntemdir; manyetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşturur.",
+    "güçlü ve hızla dalgalanan mıknatıs, elektrik akımları üreten bir manyetik alan oluşturur; manyetik uyaranlar kafa derisinden geçer ve uygulandığı bölgede depolarizasyon dalgası yaratır.",
+    "kafatası açılmaz, kablo yerleştirilmez; bu yönüyle derin beyin uyarımından ayrılır.",
+    "jeneralize konvülziyon oluşturmak EKT'nin ilkesidir; TMS'de nöbet ise istenmeyen en ciddi endişedir.",
+    "en az bir ilaç tedavisinden fayda görmemiş depresyon için izin almıştır.",
+    "tDCS şu anda hiçbir endikasyon için onaylı değildir; derin beyin uyarımı invazif bir yöntemdir; psikiyatrideki FDA onayı dirençli OKB içindir, depresyon için onaylı değildir."
+   ],
+   "v": "c6d0947bd7"
+  },
+  {
+   "id": "2s04-07",
+   "baslik": "TMS'nin etkinlik profili",
+   "giris": "TMS'nin depresyonda sınırlı bir etkiye sahip olduğu bildirilir; psikoz için etkisizdir ve EKT'den daha az bilişsel bozulma yapar.",
+   "s": [
+    15,
+    17
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "sınırlı bir etkiye sahip olduğu bildirilir; tekrarlı TMS'nin depresyonda etkili olduğunu gösteren çalışmalar vardır."
+    },
+    {
+     "metin": "etkisizdir."
+    },
+    {
+     "metin": "beyin dokusu kafatasından daha uzakta olduğundan etki gücü daha da sınırlıdır."
+    },
+    {
+     "metin": "EKT'den daha az bilişsel bozulmaya neden olur."
+    },
+    {
+     "metin": "en az bir ilaç tedavisinden fayda görmemiş depresyon için izin almıştır."
+    }
+   ],
+   "klip": "o-2s04-07",
+   "ses": [
+    "TMS'nin etkinlik profili.",
+    "TMS'nin depresyonda sınırlı bir etkiye sahip olduğu bildirilir; psikoz için etkisizdir ve EKT'den daha az bilişsel bozulma yapar.",
+    "sınırlı bir etkiye sahip olduğu bildirilir; tekrarlı TMS'nin depresyonda etkili olduğunu gösteren çalışmalar vardır.",
+    "etkisizdir.",
+    "beyin dokusu kafatasından daha uzakta olduğundan etki gücü daha da sınırlıdır.",
+    "EKT'den daha az bilişsel bozulmaya neden olur.",
+    "en az bir ilaç tedavisinden fayda görmemiş depresyon için izin almıştır."
+   ],
+   "v": "418008d2d4"
+  },
+  {
+   "id": "2s04-10",
+   "baslik": "Derin TMS",
+   "giris": "Derin TMS H-bobinle kafatasının yaklaşık 4 cm altına ve iki yarımküreye aynı anda ulaşır; 2020'de kısa süreli sigara bırakmada FDA onayı almıştır.",
+   "s": [
+    17,
+    19
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "sekiz rakamı şeklindeki bobinler yalnız yüzeysel beyin bölgelerini tek taraflı uyarır ve yaklaşık 2 cm derinliğe ulaşır."
+    },
+    {
+     "metin": "bu kısıtlama bağımlılık bozukluklarında kritik rol oynayan daha derin yapıların hedeflenmesini engeller; derin TMS bu sınırı aşmak için geliştirilmiştir."
+    },
+    {
+     "metin": "kaskın çeşitli düzlemlerindeki çoklu sargılarla kafatasının yaklaşık 4 cm altına ulaşır."
+    },
+    {
+     "metin": "iki yarımküreyi aynı anda modüle edebilir."
+    },
+    {
+     "metin": "2020'de kısa süreli sigara bırakmada onay almış, minimal yan etkilerle farmakoterapilerle karşılaştırılabilir etkinlik göstermiştir."
+    }
+   ],
+   "klip": "o-2s04-10",
+   "ses": [
+    "Derin TMS.",
+    "Derin TMS H-bobinle kafatasının yaklaşık 4 cm altına ve iki yarımküreye aynı anda ulaşır; 2020'de kısa süreli sigara bırakmada FDA onayı almıştır.",
+    "sekiz rakamı şeklindeki bobinler yalnız yüzeysel beyin bölgelerini tek taraflı uyarır ve yaklaşık 2 cm derinliğe ulaşır.",
+    "bu kısıtlama bağımlılık bozukluklarında kritik rol oynayan daha derin yapıların hedeflenmesini engeller; derin TMS bu sınırı aşmak için geliştirilmiştir.",
+    "kaskın çeşitli düzlemlerindeki çoklu sargılarla kafatasının yaklaşık 4 cm altına ulaşır.",
+    "iki yarımküreyi aynı anda modüle edebilir.",
+    "2020'de kısa süreli sigara bırakmada onay almış, minimal yan etkilerle farmakoterapilerle karşılaştırılabilir etkinlik göstermiştir."
+   ],
+   "v": "e35f213653"
+  }
+ ]
+}

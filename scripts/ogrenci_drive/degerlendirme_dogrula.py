@@ -75,7 +75,10 @@ def main() -> int:
 
     kis = json.loads((MEDS / "src/data/kisaltma_sozluk.json").read_text(encoding="utf-8"))
     for s, m in sayfa.items():
-        for k in set(re.findall(r"(?<![\wçğıöşü])([A-ZÇĞİÖŞÜ]{2,5})(?![\wçğıöşü])", pymupdf.open(a.pdf)[s - 1].get_text())):
+        metin = pymupdf.open(a.pdf)[s - 1].get_text()
+        if re.match(r"\s*(Kaynaklar|Kaynakça|Kaynak|References)\b", metin):
+            continue  # kaynakça sayfası: yazar baş harfleri (MG, DS) kısaltma değildir (H510)
+        for k in set(re.findall(r"(?<![\wçğıöşü])([A-ZÇĞİÖŞÜ]{2,5})(?![\wçğıöşü])", metin)):
             if k not in kis and KS.kisaltma_mi(k):
                 hata.append(f"s{s}: kısaltma '{k}' sözlükte yok")
     for v in paket.get("hoca_vurgulari", []):

@@ -1,0 +1,41 @@
+{
+ "_aciklama": "k2-20 doğrulanmış eşleme (H490, kapi.py)",
+ "kayitlar": [
+  {
+   "birim": "psk-s06-b04",
+   "tur": "anlatim",
+   "bilgi": "Elektrokonvülzif tedavide aşağıda verilen yan etkilerden hangisi beklenmez? → B (2)",
+   "cumle": [
+    "ataksi, yani denge ve koordinasyon bozukluğu, EKT'nin yan etki listesinde yoktur."
+   ],
+   "gerekce": "Çıkmışın cevabı ataksi (beklenmeyen yan etki); s.11 anlatımında ataksinin EKT yan etki listesinde olmadığı birebir söylenir.",
+   "anahtar": [
+    "yan etki",
+    "EKT"
+   ]
+  },
+  {
+   "birim": "psk-s06-b04",
+   "tur": "slayt_disi",
+   "bilgi": "Akut distonik reaksiyon Akatizi ve parkinsonizm Perioral tremor ve tardif diskinezi",
+   "yok_terimler": [
+    "akatizi",
+    "tardif diskinezi",
+    "perioral tremor"
+   ],
+   "gerekce": "Antipsikotiklere bağlı ekstrapiramidal yan etki türleri bu yılın slaytlarında (s.1–32) geçmiyor; ders yalnız ilaç dışı biyolojik tedavileri işliyor, anlatıma girmez (kural 28)."
+  },
+  {
+   "birim": "psk-s06-b06",
+   "tur": "slayt_disi",
+   "bilgi": "I. Ekstrapiramidal yan etkileri azaltmak için antiserotonerjik etkili klozapin ve risperidon gibi atipik ajanlar tercih edilmelidir.",
+   "yok_terimler": [
+    "klozapin",
+    "risperidon",
+    "antiserotonerjik",
+    "antikolinerjik"
+   ],
+   "gerekce": "Atipik antipsikotik seçimi ve antikolinerjik kombinasyonu bu yılın slaytlarında yok; çıkmış antipsikotik konusuna ait, EKT dersinin anlatımına girmez (kural 28)."
+  }
+ ]
+}

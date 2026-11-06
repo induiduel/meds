@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="beyin" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#fde2e4"/><stop offset="1" stop-color="#f4a7b0"/></radialGradient>
+<radialGradient id="isik" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#facc15"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<g id="vez"><circle r="9" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/><circle r="3" fill="#b45309"/></g>
+<g id="ay"><path d="M0 -14 A14 14 0 1 0 10 10 A11 11 0 1 1 0 -14 z" fill="#64748b"/></g>
+<g id="gunes"><circle r="12" fill="#facc15" stroke="#ca8a04" stroke-width="2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">tDCS: kutup, nöronun ateşlemeye yakınlığını değiştirir</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Eşik altı modülasyon · anodal artırır, katodal azaltır (slayt 20–22)</text>
+<rect x="30" y="100" width="420" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Düzenek</text>
+<path d="M240 160 C330 160 380 230 380 310 C380 400 320 450 240 450 C160 450 100 400 100 310 C100 230 150 160 240 160 z" fill="#fde2e4" stroke="#9f1239" stroke-width="2.5"/>
+<path d="M240 165 C230 230 250 330 240 445" fill="none" stroke="#be123c" stroke-width="2"/>
+<ellipse cx="155" cy="250" rx="34" ry="22" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+<ellipse cx="325" cy="250" rx="34" ry="22" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2"/>
+<rect x="200" y="510" width="80" height="80" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+<path d="M155 272 C140 400 190 470 215 510" fill="none" stroke="#991b1b" stroke-width="2.5"/>
+<path d="M325 272 C340 400 290 470 265 510" fill="none" stroke="#1e3a8a" stroke-width="2.5"/>
+<text x="60" y="205" font-size="18" fill="#991b1b" text-anchor="start" font-weight="bold">Anot (+)</text>
+<text x="320" y="205" font-size="18" fill="#1e3a8a" text-anchor="start" font-weight="bold">Katot (−)</text>
+<text x="240" y="556" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">0,5–2 mA</text>
+<text x="290" y="610" font-size="17" fill="#475569" text-anchor="start">pil benzeri cihaz</text>
+<text x="40" y="470" font-size="17" fill="#475569" text-anchor="start">Tuzlu suyla</text>
+<text x="40" y="494" font-size="17" fill="#475569" text-anchor="start">ıslatılmış ped</text>
+<rect x="470" y="100" width="700" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="490" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Zar potansiyeli (eşik altı)</text>
+<line x1="520" y1="560" x2="1130" y2="560" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<line x1="520" y1="560" x2="520" y2="160" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<text x="530" y="170" font-size="17" fill="#475569" text-anchor="start">zar potansiyeli</text>
+<text x="1050" y="590" font-size="17" fill="#475569" text-anchor="start">zaman</text>
+<line x1="520" y1="230" x2="1130" y2="230" stroke="#0f172a" stroke-width="2" stroke-dasharray="9 6"/>
+<text x="1000" y="222" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">ateşleme eşiği</text>
+<line x1="520" y1="400" x2="1130" y2="400" stroke="#94a3b8" stroke-width="2"/>
+<text x="530" y="392" font-size="17" fill="#475569" text-anchor="start">dinlenim</text>
+<path d="M560 400 L700 400 C730 400 740 300 780 300 L1100 300" fill="none" stroke="#dc2626" stroke-width="4"/>
+<path d="M560 400 L700 400 C730 400 740 490 780 490 L1100 490" fill="none" stroke="#2563eb" stroke-width="4"/>
+<text x="800" y="332" font-size="17" fill="#dc2626" text-anchor="start" font-weight="bold">Anodal: depolarizasyon,</text>
+<text x="800" y="354" font-size="17" fill="#dc2626" text-anchor="start" font-weight="bold">uyarılabilirlik artar</text>
+<text x="800" y="520" font-size="17" fill="#2563eb" text-anchor="start" font-weight="bold">Katodal: hiperpolarizasyon,</text>
+<text x="800" y="542" font-size="17" fill="#2563eb" text-anchor="start" font-weight="bold">uyarılabilirlik azalır</text>
+<text x="540" y="258" font-size="17" fill="#475569" text-anchor="start">Eşiğe yaklaşır ama tek başına aşmaz</text>
+<rect x="30" y="640" width="1140" height="135" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="60" y="680" font-size="19" fill="#14532d" text-anchor="start" font-weight="bold">tDCS tamamen nöromodülatördür; TMS hem nörostimülatör hem nöromodülatördür.</text>
+<text x="60" y="714" font-size="17" fill="#1e293b" text-anchor="start">Etki uyarının süresine, yoğunluğuna ve polaritesine bağlıdır; akım yalnız en yüzeysel kortekse ulaşır.</text>
+<text x="60" y="748" font-size="17" fill="#475569" text-anchor="start">tDCS şu anda hiçbir endikasyon için onaylı değildir; yan etkiler hafif: cilt tahrişi, yanma hissi.</text>
+</svg>

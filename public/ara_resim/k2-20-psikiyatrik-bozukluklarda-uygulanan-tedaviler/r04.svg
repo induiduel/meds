@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="beyin" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#fde2e4"/><stop offset="1" stop-color="#f4a7b0"/></radialGradient>
+<radialGradient id="isik" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#facc15"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<g id="vez"><circle r="9" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/><circle r="3" fill="#b45309"/></g>
+<g id="ay"><path d="M0 -14 A14 14 0 1 0 10 10 A11 11 0 1 1 0 -14 z" fill="#64748b"/></g>
+<g id="gunes"><circle r="12" fill="#facc15" stroke="#ca8a04" stroke-width="2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">Bobin biçimi TMS'nin ne kadar derine indiğini belirler</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Koronal kesit şeması · standart rTMS ile derin TMS (slayt 16, 17, 19)</text>
+<rect x="30" y="100" width="560" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Standart rTMS: sekiz biçimli bobin</text>
+<path d="M110 560 C90 330 190 230 310 230 C430 230 530 330 510 560" fill="#f8fafc" stroke="#64748b" stroke-width="10"/>
+<path d="M130 560 C115 345 200 255 310 255 C420 255 505 345 490 560" fill="url(#beyin)" stroke="#9f1239" stroke-width="2"/>
+<path d="M180 560 C170 390 230 320 310 320 C390 320 450 390 440 560" fill="none" stroke="#be123c" stroke-width="1.5" stroke-dasharray="5 5"/>
+<ellipse cx="265" cy="500" rx="30" ry="22" fill="#fca5a5" stroke="#9f1239" stroke-width="1.5"/>
+<ellipse cx="355" cy="500" rx="30" ry="22" fill="#fca5a5" stroke="#9f1239" stroke-width="1.5"/>
+<text x="55" y="215" font-size="17" fill="#64748b" text-anchor="start">kafatası</text>
+<line x1="135" y1="300" x2="90" y2="225" stroke="#64748b" stroke-width="1.6"/>
+<circle cx="135" cy="300" r="3" fill="#64748b"/>
+<circle cx="278" cy="190" r="28" fill="none" stroke="#1d4ed8" stroke-width="9"/>
+<circle cx="342" cy="190" r="28" fill="none" stroke="#1d4ed8" stroke-width="9"/>
+<path d="M240 262 Q310 330 380 262 Z" fill="#1d4ed8" fill-opacity="0.4"/>
+<line x1="460" y1="255" x2="460" y2="320" stroke="#0f172a" stroke-width="2"/>
+<text x="470" y="295" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">~2 cm</text>
+<text x="380" y="175" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">tel bobin</text>
+<text x="50" y="595" font-size="18" fill="#1d4ed8" text-anchor="start" font-weight="bold">Yalnız yüzeysel ve tek taraflı uyarım</text>
+<text x="280" y="545" font-size="17" fill="#9f1239" text-anchor="start">derin yapılar</text>
+<rect x="610" y="100" width="560" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Derin TMS: H bobini (Hesed)</text>
+<path d="M690 560 C670 330 770 230 890 230 C1010 230 1110 330 1090 560" fill="#f8fafc" stroke="#64748b" stroke-width="10"/>
+<path d="M710 560 C695 345 780 255 890 255 C1000 255 1085 345 1070 560" fill="url(#beyin)" stroke="#9f1239" stroke-width="2"/>
+<path d="M760 560 C750 390 810 320 890 320 C970 320 1030 390 1020 560" fill="none" stroke="#be123c" stroke-width="1.5" stroke-dasharray="5 5"/>
+<ellipse cx="845" cy="500" rx="30" ry="22" fill="#fca5a5" stroke="#9f1239" stroke-width="1.5"/>
+<ellipse cx="935" cy="500" rx="30" ry="22" fill="#fca5a5" stroke="#9f1239" stroke-width="1.5"/>
+<text x="635" y="215" font-size="17" fill="#64748b" text-anchor="start">kafatası</text>
+<line x1="715" y1="300" x2="670" y2="225" stroke="#64748b" stroke-width="1.6"/>
+<circle cx="715" cy="300" r="3" fill="#64748b"/>
+<path d="M675 470 C655 290 765 195 890 195 C1015 195 1125 290 1105 470" fill="none" stroke="#1d4ed8" stroke-width="7"/>
+<path d="M662 430 C650 270 780 180 890 180" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-dasharray="10 6"/>
+<path d="M715 440 C700 330 780 255 890 255 C1000 255 1080 330 1065 440 L1000 440 C1005 375 960 390 890 390 C820 390 775 375 780 440 Z" fill="#1d4ed8" fill-opacity="0.35"/>
+<line x1="890" y1="255" x2="890" y2="390" stroke="#0f172a" stroke-width="2"/>
+<text x="810" y="330" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">~4 cm</text>
+<text x="850" y="168" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">kasktaki çoklu sargılar</text>
+<text x="630" y="595" font-size="18" fill="#1d4ed8" text-anchor="start" font-weight="bold">Derin ve iki taraflı: iki yarımküre birlikte</text>
+<rect x="30" y="640" width="1140" height="135" rx="16" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="60" y="680" font-size="18" fill="#1e3a8a" text-anchor="start" font-weight="bold">Bağımlılıkta önemli derin yapılara sekiz biçimli bobin ulaşamaz; derin TMS bu yüzden geliştirildi.</text>
+<text x="60" y="714" font-size="18" fill="#1e293b" text-anchor="start">2020: derin TMS kısa süreli sigara bırakmada FDA onayı aldı.</text>
+<text x="60" y="748" font-size="18" fill="#475569" text-anchor="start">Yaşlıda beyin kafatasından uzaklaştığı için TMS'nin etkisi daha da sınırlıdır.</text>
+</svg>

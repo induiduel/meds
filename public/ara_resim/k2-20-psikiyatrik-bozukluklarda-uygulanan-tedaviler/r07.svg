@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="beyin" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#fde2e4"/><stop offset="1" stop-color="#f4a7b0"/></radialGradient>
+<radialGradient id="isik" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#facc15"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<g id="vez"><circle r="9" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/><circle r="3" fill="#b45309"/></g>
+<g id="ay"><path d="M0 -14 A14 14 0 1 0 10 10 A11 11 0 1 1 0 -14 z" fill="#64748b"/></g>
+<g id="gunes"><circle r="12" fill="#facc15" stroke="#ca8a04" stroke-width="2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">Uyku yoksunluğu: hızlı ama kısa ömürlü antidepresan etki</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Depresyonda tam uyku yoksunluğu · 1971'den beri (slayt 28–29)</text>
+<rect x="30" y="100" width="640" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Gün gün etki</text>
+<line x1="80" y1="470" x2="640" y2="470" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<line x1="80" y1="470" x2="80" y2="150" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<text x="90" y="160" font-size="17" fill="#475569" text-anchor="start">düzelen hasta oranı</text>
+<use href="#ay" x="150" y="440"/>
+<text x="150" y="500" font-size="17" fill="#475569" text-anchor="middle">uykusuz gece</text>
+<path d="M260 470 L260 250 L340 250 L340 470" fill="#0e7490" fill-opacity="0.75" stroke="#0e7490" stroke-width="2"/>
+<path d="M420 470 L420 420 L500 420 L500 470" fill="#0e7490" fill-opacity="0.45" stroke="#0e7490" stroke-width="2"/>
+<text x="300" y="240" font-size="19" fill="#0e7490" text-anchor="middle" font-weight="bold">%40–60</text>
+<text x="300" y="500" font-size="17" fill="#475569" text-anchor="middle">ertesi gün</text>
+<text x="460" y="410" font-size="19" fill="#0e7490" text-anchor="middle" font-weight="bold">%10–15</text>
+<text x="460" y="500" font-size="17" fill="#475569" text-anchor="middle">sonraki gün</text>
+<path d="M520 330 C560 330 575 390 605 445" fill="none" stroke="#b91c1c" stroke-width="3" marker-end="url(#okk)"/>
+<text x="470" y="260" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Kısa kestirme:</text>
+<text x="470" y="284" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">şiddetli tekrarlama</text>
+<rect x="690" y="100" width="480" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="710" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Biyolojik etkiler</text>
+<path d="M816 328 C797 262 854 205 930 205 C1016 200 1063 252 1054 310 C1052 348 1016 366 968 359 C940 376 902 371 873 357 C835 366 811 352 816 328 z" fill="url(#beyin)" stroke="#9f1239" stroke-width="2.5"/>
+<path d="M844 281 Q892 243 930 272" fill="none" stroke="#be123c" stroke-width="2"/>
+<path d="M873 319 Q920 290 968 319" fill="none" stroke="#be123c" stroke-width="2"/>
+<path d="M940 234 Q978 262 1016 243" fill="none" stroke="#be123c" stroke-width="2"/>
+<path d="M968 300 Q996 319 1034 300" fill="none" stroke="#be123c" stroke-width="2"/>
+<text x="710" y="430" font-size="18" fill="#0e7490" text-anchor="start" font-weight="bold">5HT dönüşümü artar</text>
+<text x="710" y="458" font-size="18" fill="#0e7490" text-anchor="start" font-weight="bold">DA artar: psikostimülan etki</text>
+<text x="710" y="486" font-size="18" fill="#0e7490" text-anchor="start" font-weight="bold">T3 ve T4 artar</text>
+<text x="710" y="514" font-size="17" fill="#0e7490" text-anchor="start" font-weight="bold">frontal ve limbik kan akımı değişir</text>
+<line x1="840" y1="250" x2="780" y2="190" stroke="#0e7490" stroke-width="1.6"/>
+<circle cx="840" cy="250" r="3" fill="#0e7490"/>
+<text x="725" y="180" font-size="17" fill="#475569" text-anchor="start">frontal</text>
+<path d="M890 330 C900 300 950 295 965 320 C975 340 950 355 925 350" fill="none" stroke="#7c3aed" stroke-width="3" stroke-dasharray="6 4"/>
+<line x1="950" y1="345" x2="1000" y2="385" stroke="#0e7490" stroke-width="1.6"/>
+<circle cx="950" cy="345" r="3" fill="#0e7490"/>
+<text x="960" y="408" font-size="17" fill="#475569" text-anchor="start">limbik (derin)</text>
+<rect x="30" y="570" width="1140" height="205" rx="16" fill="#ecfeff" stroke="#67e8f9" stroke-width="2"/>
+<use href="#ay" x="90" y="620"/>
+<text x="90" y="660" font-size="17" fill="#475569" text-anchor="middle">uykusuz</text>
+<use href="#gunes" x="175" y="620"/>
+<text x="175" y="660" font-size="17" fill="#475569" text-anchor="middle">normal</text>
+<use href="#gunes" x="260" y="620"/>
+<text x="260" y="660" font-size="17" fill="#475569" text-anchor="middle">normal</text>
+<use href="#ay" x="345" y="620"/>
+<text x="345" y="660" font-size="17" fill="#475569" text-anchor="middle">uykusuz</text>
+<use href="#gunes" x="430" y="620"/>
+<text x="430" y="660" font-size="17" fill="#475569" text-anchor="middle">normal</text>
+<use href="#ay" x="515" y="620"/>
+<text x="515" y="660" font-size="17" fill="#475569" text-anchor="middle">uykusuz</text>
+<text x="600" y="615" font-size="18" fill="#155e75" text-anchor="start" font-weight="bold">Sürdürmek için haftalarca aralıklı uygulama;</text>
+<text x="600" y="641" font-size="18" fill="#1e293b" text-anchor="start">arada 1–2 gün normal uyku dönemi vardır.</text>
+<text x="60" y="710" font-size="18" fill="#155e75" text-anchor="start" font-weight="bold">Antidepresan ya da lityumla birlikte: düzelme kalıcılaşır, antidepresanın etkinliği artar.</text>
+<text x="60" y="744" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">Hoca: kısa süreli kestirme bile şiddetli tekrarlama yapar, buna dikkat edilmeli.</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="beyin" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#fde2e4"/><stop offset="1" stop-color="#f4a7b0"/></radialGradient>
+<radialGradient id="isik" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#facc15"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<g id="vez"><circle r="9" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/><circle r="3" fill="#b45309"/></g>
+<g id="ay"><path d="M0 -14 A14 14 0 1 0 10 10 A11 11 0 1 1 0 -14 z" fill="#64748b"/></g>
+<g id="gunes"><circle r="12" fill="#facc15" stroke="#ca8a04" stroke-width="2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">EKT nasıl etki eder? Net mekanizma yok, üç kuram grubu</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Nöbet tüm beyinde uyarı yapar · biyokimyasal, nörofizyolojik, nöroplastisite (slayt 3–4)</text>
+<rect x="30" y="100" width="360" height="420" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Nöbet tüm beyinde</text>
+<path d="M84 362 C63 288 126 225 210 225 C304 220 357 278 346 340 C344 382 304 404 252 395 C220 414 178 409 147 393 C105 404 79 388 84 362 z" fill="url(#beyin)" stroke="#9f1239" stroke-width="2.5"/>
+<path d="M116 309 Q168 267 210 298" fill="none" stroke="#be123c" stroke-width="2"/>
+<path d="M147 351 Q200 320 252 351" fill="none" stroke="#be123c" stroke-width="2"/>
+<path d="M220 256 Q262 288 304 267" fill="none" stroke="#be123c" stroke-width="2"/>
+<path d="M252 330 Q284 351 326 330" fill="none" stroke="#be123c" stroke-width="2"/>
+<path d="M170 330 A40 32 0 0 1 250 330" fill="none" stroke="#c2410c" stroke-width="2.5" stroke-dasharray="7 5"/>
+<path d="M135 330 A75 60 0 0 1 285 330" fill="none" stroke="#c2410c" stroke-width="2.5" stroke-dasharray="7 5"/>
+<path d="M100 330 A110 88 0 0 1 320 330" fill="none" stroke="#c2410c" stroke-width="2.5" stroke-dasharray="7 5"/>
+<ellipse cx="80" cy="250" rx="16" ry="11" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+<ellipse cx="340" cy="250" rx="16" ry="11" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+<text x="55" y="175" font-size="18" fill="#475569" text-anchor="start" font-weight="bold">Elektrot</text>
+<line x1="80" y1="240" x2="80" y2="185" stroke="#334155" stroke-width="1.6"/>
+<circle cx="80" cy="240" r="3" fill="#334155"/>
+<text x="48" y="448" font-size="17" fill="#c2410c" text-anchor="start" font-weight="bold">Akım → jeneralize konvülziyon</text>
+<text x="48" y="474" font-size="17" fill="#1e293b" text-anchor="start">uyarı ve nörotransmitter</text>
+<text x="48" y="496" font-size="17" fill="#1e293b" text-anchor="start">değişimi her yerde</text>
+<rect x="410" y="100" width="380" height="420" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="430" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Biyokimyasal hipotezler</text>
+<path d="M450 170 C450 140 560 140 560 170 L560 250 C560 280 450 280 450 250 z" fill="#e0f2fe" stroke="#0369a1" stroke-width="2.5"/>
+<use href="#vez" x="480" y="190"/>
+<use href="#vez" x="510" y="215"/>
+<use href="#vez" x="535" y="190"/>
+<use href="#vez" x="495" y="245"/>
+<path d="M440 330 C480 300 530 300 570 330" fill="none" stroke="#0369a1" stroke-width="5"/>
+<rect x="458" y="312" width="14" height="16" rx="3" fill="#c2410c"/>
+<rect x="498" y="306" width="14" height="16" rx="3" fill="#c2410c"/>
+<rect x="538" y="312" width="14" height="16" rx="3" fill="#c2410c"/>
+<line x1="505" y1="268" x2="505" y2="300" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+<text x="585" y="185" font-size="17" fill="#0369a1" text-anchor="start" font-weight="bold">Presinaptik uç</text>
+<text x="585" y="240" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">DA artar</text>
+<text x="585" y="264" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">5HT iletimi artar</text>
+<text x="585" y="320" font-size="17" fill="#1e293b" text-anchor="start">5HT2A yoğunluğu artar</text>
+<line x1="552" y1="318" x2="582" y2="316" stroke="#334155" stroke-width="1.6"/>
+<circle cx="552" cy="318" r="3" fill="#334155"/>
+<text x="430" y="370" font-size="17" fill="#1e293b" text-anchor="start">β-adrenerjik reseptör: down regülasyon</text>
+<text x="430" y="410" font-size="17" fill="#1e293b" text-anchor="start">HPA aksı uyarılır (nöroendokrin)</text>
+<text x="430" y="450" font-size="17" fill="#1e293b" text-anchor="start">BDNF artar: nöronun büyümesine</text>
+<text x="430" y="472" font-size="17" fill="#1e293b" text-anchor="start">ve yaşamasına destek</text>
+<rect x="810" y="100" width="360" height="420" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="830" y="136" font-size="22" font-weight="bold" fill="#0f172a">C · Nöroplastisite</text>
+<circle cx="960" cy="320" r="26" fill="#ede9fe" stroke="#6d28d9" stroke-width="2.5"/>
+<path d="M940 302 C910 270 880 250 850 240" fill="none" stroke="#6d28d9" stroke-width="3"/>
+<path d="M980 300 C1000 260 1030 240 1060 230" fill="none" stroke="#6d28d9" stroke-width="3"/>
+<path d="M940 340 C905 370 880 395 860 420" fill="none" stroke="#6d28d9" stroke-width="3"/>
+<path d="M985 335 C1020 360 1045 385 1080 400" fill="none" stroke="#6d28d9" stroke-width="3"/>
+<circle cx="870" cy="248" r="5" fill="#a78bfa"/>
+<circle cx="895" cy="262" r="5" fill="#a78bfa"/>
+<circle cx="1040" cy="238" r="5" fill="#a78bfa"/>
+<circle cx="1015" cy="255" r="5" fill="#a78bfa"/>
+<circle cx="880" cy="400" r="5" fill="#a78bfa"/>
+<circle cx="1055" cy="388" r="5" fill="#a78bfa"/>
+<path d="M1060 230 C1090 215 1110 230 1120 250" fill="none" stroke="#16a34a" stroke-width="3" stroke-dasharray="6 4"/>
+<text x="1010" y="205" font-size="17" fill="#16a34a" text-anchor="start" font-weight="bold">yeni bağlantı</text>
+<text x="870" y="300" font-size="17" fill="#6d28d9" text-anchor="start">nöron</text>
+<text x="1020" y="280" font-size="17" fill="#6d28d9" text-anchor="start">dikencik</text>
+<text x="830" y="450" font-size="17" fill="#1e293b" text-anchor="start">Hipokampusta sinaptik plastisite;</text>
+<text x="830" y="472" font-size="17" fill="#1e293b" text-anchor="start">dikencik ve bağlantılar güçlenir;</text>
+<text x="830" y="494" font-size="17" fill="#1e293b" text-anchor="start">nörogenez artar, apoptoz baskılanır</text>
+<rect x="30" y="540" width="1140" height="230" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="60" y="580" font-size="20" fill="#9a3412" text-anchor="start" font-weight="bold">Nörofizyolojik hipotez: kan-beyin bariyerinin geçirgenliği artar.</text>
+<path d="M70 640 C250 610 450 670 640 640" fill="none" stroke="#dc2626" stroke-width="6"/>
+<path d="M70 680 C250 650 450 710 640 680" fill="none" stroke="#dc2626" stroke-width="6"/>
+<line x1="330" y1="655" x2="330" y2="725" stroke="#c2410c" stroke-width="3" marker-end="url(#okk)"/>
+<text x="345" y="720" font-size="17" fill="#9a3412" text-anchor="start">geçiş artar</text>
+<text x="90" y="625" font-size="17" fill="#475569" text-anchor="start">kılcal damar duvarı</text>
+<text x="680" y="640" font-size="19" fill="#1e293b" text-anchor="start" font-weight="bold">Plastisite, şekil alabilirlik demektir:</text>
+<text x="680" y="668" font-size="18" fill="#1e293b" text-anchor="start">şekil verilebilen kaplara plastik kap denir.</text>
+<text x="680" y="704" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">Hoca: nöroplastisite kavramını unutmayın.</text>
+<text x="680" y="740" font-size="17" fill="#475569" text-anchor="start">Net mekanizma yok; etki kuramlarla açıklanır.</text>
+</svg>

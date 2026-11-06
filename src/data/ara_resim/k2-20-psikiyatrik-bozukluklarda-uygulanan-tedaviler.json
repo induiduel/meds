@@ -1,0 +1,126 @@
+{
+ "key": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "EKT'nin etkisini açıklayan üç kuram grubu",
+   "aciklama": "Nöbet beynin her yerinde uyarı oluşturduğu için EKT'nin net bir mekanizması yoktur; etkisi biyokimyasal, nörofizyolojik ve nöroplastisite kuramlarıyla açıklanır.",
+   "adimlar": [
+    "1. EKT ile oluşan nöbet tüm beyinde uyarı ve nörotransmitter değişimi yapar.",
+    "2. Biyokimyasal: β-adrenerjik reseptör azalır; dopamin, serotonin iletimi, HPA aksı ve BDNF artar.",
+    "3. Nörofizyolojik: kan-beyin bariyerinin geçirgenliği artar.",
+    "4. Nöroplastisite: hipokampusta sinaptik plastisite ve nörogenez artar, apoptoz baskılanır."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 2,
+   "bitis": 2,
+   "kaynak": [
+    3,
+    4
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Nöbet neden riskli durum yaratır?",
+   "aciklama": "EKT'de mutlak kontrendikasyon yoktur; riskin arttığı yedi durum, nöbetin yarattığı basınç artışı ve sempatik uyarıyla açıklanır.",
+   "adimlar": [
+    "1. Nöbette kafa, göğüs ve karın içi basınç artar.",
+    "2. Yer kaplayan lezyonda kayma olabilir, kafa içi basınç daha da yükselir.",
+    "3. Sempatik uyarı ve noradrenalin deşarjı kalbi ve beyin damarlarını yükler.",
+    "4. Yakın MI ya da inmede kanama, anevrizmada yırtılma, retinada dekolman, feokromositomada kriz riski doğar."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 10,
+   "bitis": 11,
+   "kaynak": [
+    10
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "EKT öncesi ilaçlar ve nöbet eşiği",
+   "aciklama": "EKT nöbet üzerinden çalıştığı için nöbet eşiğini değiştiren ilaçlar ve kalp riskini artıran trisiklik antidepresanlar uygulamadan önce gözden geçirilir.",
+   "adimlar": [
+    "1. Benzodiazepin ve antiepileptik nöbet eşiğini yükseltir; EKT öncesi kesilir.",
+    "2. Teofilin terapötik dozda bile status riski taşır.",
+    "3. TSA ile birlikte EKT kardiyak riski artırır.",
+    "4. Seanslar bitince kesilen ilaç yeniden başlanır."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 16,
+   "bitis": 16,
+   "kaynak": [
+    14
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Bobin biçimi uyarının derinliğini belirler",
+   "aciklama": "Standart rTMS'deki sekiz biçimli bobin yaklaşık 2 cm derine ve tek tarafa ulaşır; derin TMS'deki H bobini yaklaşık 4 cm derine iner ve iki yarımküreyi birlikte uyarır.",
+   "adimlar": [
+    "1. Sekiz biçimli bobin: yüzeysel, tek taraflı, yaklaşık 2 cm.",
+    "2. Bu sınır bağımlılıkta önemli derin yapıların hedeflenmesini engeller.",
+    "3. H bobini: kaskta çoklu sargı, yaklaşık 4 cm, iki taraflı uyarım."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 21,
+   "bitis": 21,
+   "kaynak": [
+    19
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "tDCS'de kutup etkinin yönünü belirler",
+   "aciklama": "Anodal tDCS nöronları depolarize edip korteksin uyarılabilirliğini artırır, katodal tDCS hiperpolarize edip azaltır; etki eşik altıdır.",
+   "adimlar": [
+    "1. Anot (artı kutup): depolarizasyon, uyarılabilirlik artar.",
+    "2. Katot (eksi kutup): hiperpolarizasyon, uyarılabilirlik azalır.",
+    "3. tDCS yalnız nöromodülatördür ve hiçbir endikasyonda onaylı değildir."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 23,
+   "bitis": 24,
+   "kaynak": [
+    20,
+    21,
+    22
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Fototerapi: ışık melatonini baskılar",
+   "aciklama": "Mevsimsel depresyon ışığın azaldığı kış başında başlar; parlak gündüz ışığı melatonin salınımını azaltarak sirkadiyen ritmi ve duygudurumu etkiler, yanıt 2–4 günde görülür.",
+   "adimlar": [
+    "1. Kış başında gündüz kısalır, mevsimsel depresyon başlar ve çoğunlukla atipik özellik gösterir.",
+    "2. Melatonin karanlıkta salgılanır; parlak ışık salınımını azaltır.",
+    "3. Böylece sirkadiyen ritim ve duygudurum etkilenir.",
+    "4. Uygulama: 2.500–10.000 lüks, 30 dakika–2 saat; yanıt 2–4 gün."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 30,
+   "bitis": 30,
+   "kaynak": [
+    27
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Uyku yoksunluğunun etkisi hızlı ama kısa ömürlü",
+   "aciklama": "Tam uyku yoksunluğu ertesi gün depresyonların yüzde 40–60'ında düzelme sağlar, ama etki sonraki gün yüzde 10–15'e iner ve kısa bir kestirme şiddetli tekrarlamaya yol açar.",
+   "adimlar": [
+    "1. Uykusuz gece: tam uyku yoksunluğu.",
+    "2. Ertesi gün %40–60 düzelme, sonraki gün %10–15'e düşüş.",
+    "3. Kısa kestirme şiddetli tekrarlama yapar.",
+    "4. Sürdürmek için haftalarca aralıklı uygulama; antidepresan ya da lityumla kalıcılık artar."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 31,
+   "bitis": 32,
+   "kaynak": [
+    28,
+    29
+   ]
+  }
+ ]
+}

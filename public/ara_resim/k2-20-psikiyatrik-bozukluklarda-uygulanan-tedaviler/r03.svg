@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="beyin" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#fde2e4"/><stop offset="1" stop-color="#f4a7b0"/></radialGradient>
+<radialGradient id="isik" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#facc15"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<g id="vez"><circle r="9" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/><circle r="3" fill="#b45309"/></g>
+<g id="ay"><path d="M0 -14 A14 14 0 1 0 10 10 A11 11 0 1 1 0 -14 z" fill="#64748b"/></g>
+<g id="gunes"><circle r="12" fill="#facc15" stroke="#ca8a04" stroke-width="2"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">İlaç ve EKT: nöbet eşiği ve nöbetin uzaması</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">EKT nöbet üzerinden çalışır · ilaçlar uygulamadan önce gözden geçirilir (slayt 14)</text>
+<rect x="30" y="100" width="560" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Nöbet eşiği yükselirse</text>
+<line x1="80" y1="480" x2="560" y2="480" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<line x1="80" y1="480" x2="80" y2="150" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+<text x="90" y="160" font-size="17" fill="#475569" text-anchor="start">uyarı düzeyi</text>
+<text x="470" y="505" font-size="17" fill="#475569" text-anchor="start">zaman</text>
+<line x1="80" y1="330" x2="560" y2="330" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="9 6"/>
+<line x1="80" y1="230" x2="560" y2="230" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="9 6"/>
+<text x="370" y="322" font-size="17" fill="#16a34a" text-anchor="start" font-weight="bold">olağan nöbet eşiği</text>
+<text x="250" y="222" font-size="17" fill="#7c3aed" text-anchor="start" font-weight="bold">BZD ya da antiepileptikle eşik</text>
+<path d="M100 470 C150 470 170 290 210 285 C250 280 260 470 300 470" fill="none" stroke="#c2410c" stroke-width="4"/>
+<text x="150" y="270" font-size="17" fill="#c2410c" text-anchor="start" font-weight="bold">EKT uyarısı</text>
+<circle cx="174" cy="330" r="7" fill="#16a34a"/>
+<circle cx="246" cy="330" r="7" fill="#16a34a"/>
+<text x="320" y="380" font-size="17" fill="#1e293b" text-anchor="start">Olağan eşik aşılır:</text>
+<text x="320" y="402" font-size="17" fill="#1e293b" text-anchor="start">nöbet olur.</text>
+<text x="320" y="432" font-size="17" fill="#7c3aed" text-anchor="start" font-weight="bold">Yükselmiş eşik aşılamaz:</text>
+<text x="320" y="454" font-size="17" fill="#7c3aed" text-anchor="start">hasta zor nöbet geçirir.</text>
+<rect x="610" y="100" width="560" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Nöbetin süresi</text>
+<text x="630" y="180" font-size="18" fill="#334155" text-anchor="start" font-weight="bold">Olağan nöbet</text>
+<path d="M630 230 Q660 195 670 230 Q680 265 690 230 Q700 195 710 230 Q720 265 730 230 Q740 195 750 230 Q760 265 770 230 Q780 195 790 230 Q800 265 810 230 Q820 195 830 230 Q840 265 850 230" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="630" y="310" font-size="18" fill="#b91c1c" text-anchor="start" font-weight="bold">Teofilin ile: terapötik dozda bile status riski</text>
+<path d="M630 360 Q660 325 670 360 Q680 395 690 360 Q700 325 710 360 Q720 395 730 360 Q740 325 750 360 Q760 395 770 360 Q780 325 790 360 Q800 395 810 360 Q820 325 830 360 Q840 395 850 360 Q860 325 870 360 Q880 395 890 360 Q900 325 910 360 Q920 395 930 360 Q940 325 950 360 Q960 395 970 360 Q980 325 990 360 Q1000 395 1010 360 Q1020 325 1030 360 Q1040 395 1050 360 Q1060 325 1070 360 Q1080 395 1090 360 Q1100 325 1110 360 Q1120 395 1130 360" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
+<text x="630" y="450" font-size="17" fill="#1e293b" text-anchor="start">Status: nöbet durmadan uzar ya da</text>
+<text x="630" y="474" font-size="17" fill="#1e293b" text-anchor="start">nöbetler ardı ardına gelir.</text>
+<text x="630" y="515" font-size="17" fill="#475569" text-anchor="start">Kafein: nöbet uzunluğunu artırmak için önerenler var.</text>
+<rect x="30" y="570" width="1140" height="205" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<path d="M95 640 C77 615 47 625 52 650 C57 675 95 695 95 695 C95 695 133 675 138 650 C143 625 113 615 95 640 z" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+<text x="160" y="625" font-size="19" fill="#9a3412" text-anchor="start" font-weight="bold">Trisiklik antidepresan + EKT: kardiyak risk artar (hoca: antikolinerjik etki).</text>
+<text x="160" y="660" font-size="18" fill="#1e293b" text-anchor="start">Benzodiazepin ve antiepileptik nöbet eşiğini artırır, uygulamadan önce kesilir.</text>
+<text x="160" y="695" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">Hoca: nöbet eşiğini etkileyen psikiyatrik ilaçları mutlaka bilin.</text>
+<text x="160" y="730" font-size="18" fill="#475569" text-anchor="start">Seanslar bitince kesilen ilaç yeniden başlanabilir.</text>
+</svg>
