@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="Century Gothic, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c2833"/></marker>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdfefe"/><stop offset="1" stop-color="#eef3f7"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="720" fill="url(#zemin)"/>
+<text x="40" y="52" font-size="30" fill="#1c2833" font-weight="bold" text-anchor="start">TSSB'de ilaç tedavisi: basamaklar, eklenen ilaç ve süre</text>
+<path d="M54,80 H386 Q400,80 400,94 V266 Q400,280 386,280 H54 Q40,280 40,266 V94 Q40,80 54,80 Z" fill="#ffffff" stroke="#27ae60" stroke-width="2.5"/>
+<text x="56" y="112" font-size="21" fill="#27ae60" font-weight="bold" text-anchor="start">1. basamak</text>
+<circle cx="60" cy="134.05" r="5" fill="#566573"/>
+<text x="74" y="140" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">SSGİ ya da venlafaksin (SNRI)</text>
+<circle cx="60" cy="168.05" r="5" fill="#566573"/>
+<text x="74" y="174" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Etkili, yan etkisi kolay tolere edilir</text>
+<path d="M484,80 H816 Q830,80 830,94 V266 Q830,280 816,280 H484 Q470,280 470,266 V94 Q470,80 484,80 Z" fill="#ffffff" stroke="#e67e22" stroke-width="2.5"/>
+<text x="486" y="112" font-size="21" fill="#e67e22" font-weight="bold" text-anchor="start">2. basamak</text>
+<circle cx="490" cy="134.05" r="5" fill="#566573"/>
+<text x="504" y="140" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Etkisizse trisiklik antidepresan</text>
+<circle cx="490" cy="168.05" r="5" fill="#566573"/>
+<text x="504" y="174" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Örnek: imipramin, amitriptilin</text>
+<path d="M402,180 Q436,150 466,180" fill="none" stroke="#566573" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M894,80 H1146 Q1160,80 1160,94 V266 Q1160,280 1146,280 H894 Q880,280 880,266 V94 Q880,80 894,80 Z" fill="#ffffff" stroke="#8e44ad" stroke-width="2.5"/>
+<text x="896" y="112" font-size="21" fill="#8e44ad" font-weight="bold" text-anchor="start">Belirtiye göre eklenir</text>
+<circle cx="898" cy="134.05" r="5" fill="#566573"/>
+<text x="912" y="140" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Öfkede karbamazepin eklenir</text>
+<circle cx="898" cy="168.05" r="5" fill="#566573"/>
+<text x="912" y="174" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Sık dalgalanma bipolar değildir</text>
+<path d="M1020,284 Q1020,320 960,330" fill="none" stroke="#8e44ad" stroke-width="2" marker-end="url(#ok)" stroke-dasharray="8 6"/>
+<text x="600" y="345" font-size="17" fill="#8e44ad" font-weight="normal" text-anchor="middle">Her basamağa, öne çıkan belirtiye göre eklenebilir</text>
+<line x1="80" y1="590" x2="1140" y2="590" stroke="#1c2833" stroke-width="3" marker-end="url(#ok)"/>
+<line x1="80" y1="580" x2="80" y2="600" stroke="#1c2833" stroke-width="3"/>
+<text x="80" y="625" font-size="17" fill="#1c2833" font-weight="bold" text-anchor="middle">başlangıç</text>
+<line x1="250" y1="580" x2="250" y2="600" stroke="#1c2833" stroke-width="3"/>
+<text x="250" y="625" font-size="17" fill="#1c2833" font-weight="bold" text-anchor="middle">2–3. ay</text>
+<line x1="680" y1="580" x2="680" y2="600" stroke="#1c2833" stroke-width="3"/>
+<text x="680" y="625" font-size="17" fill="#1c2833" font-weight="bold" text-anchor="middle">12. ay</text>
+<line x1="1080" y1="580" x2="1080" y2="600" stroke="#1c2833" stroke-width="3"/>
+<text x="1080" y="625" font-size="17" fill="#1c2833" font-weight="bold" text-anchor="middle">24. ay</text>
+<path d="M80,470 H250" stroke="#27ae60" stroke-width="18" stroke-linecap="round"/>
+<text x="260" y="476" font-size="17" fill="#27ae60" font-weight="bold" text-anchor="start">Belirtilerin kalkması 2–3 ay sürer</text>
+<path d="M80,505 H680" stroke="#2471a3" stroke-width="18" stroke-linecap="round"/>
+<text x="690" y="511" font-size="17" fill="#2471a3" font-weight="bold" text-anchor="start">Yanıt verende ilaç ortalama 12 ay</text>
+<path d="M80,540 H1080" stroke="#8e44ad" stroke-width="18" stroke-linecap="round"/>
+<text x="700" y="570" font-size="17" fill="#8e44ad" font-weight="bold" text-anchor="start">Kronik TSSB'de 24 aya kadar</text>
+<text x="40" y="420" font-size="18" fill="#1c2833" font-weight="normal" text-anchor="start">Üç süre aynı başlangıçtan ölçülür; antidepresan 10 günlük antibiyotik kürü gibi değildir.</text>
+<circle cx="1110" cy="440" r="26" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+<path d="M1094,440 Q1110,420 1126,440 Q1110,460 1094,440 Z" fill="#c0392b" opacity="0.5"/>
+<text x="1074" y="447" font-size="17" fill="#c0392b" font-weight="bold" text-anchor="end">Abse benzetmesi: açılmazsa geçmez, terapi şart</text>
+<text x="40" y="704" font-size="18" fill="#566573" font-weight="normal" text-anchor="start">Kaynak: slayt 14–15; hocanın antibiyotik benzetmesi; terapi olmazsa olmaz</text>
+</svg>

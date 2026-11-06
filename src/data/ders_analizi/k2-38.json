@@ -1,0 +1,829 @@
+{
+ "surum": 1,
+ "key": "k2-38",
+ "kod": "2s10",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Travma ve Stres Bağlantılı Bozukluklar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Nefise Demir",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s10"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders travma ve stres bağlantılı bozuklukları iki ana başlıkta işler. Travma sonrası stres bozukluğunun tanımı, süre ölçütleri, epidemiyolojisi, etiyolojisi, bilişsel davranışçı modeli, klinik özellikleri, seyri, ayırıcı tanısı ve tedavisi anlatılır; ardından uyum bozukluğunun tanımı, epidemiyolojisi, risk etkenleri, alt tipleri, zaman ölçütleri, seyri ve tedavisi verilir.",
+   "maddeler": [
+    {
+     "metin": "Travma ve stres bağlantılı bozukluklar grubu"
+    },
+    {
+     "metin": "TSSB: tanım, süreler ve travmanın anlamı"
+    },
+    {
+     "metin": "TSSB: epidemiyoloji ve etyoloji"
+    },
+    {
+     "metin": "TSSB nasıl gelişir: bilişsel-davranışçı model"
+    },
+    {
+     "metin": "TSSB: risk faktörleri ve klinik özellikler"
+    },
+    {
+     "metin": "TSSB: seyir, prognoz ve ayırıcı tanı"
+    },
+    {
+     "metin": "TSSB: tedavi"
+    },
+    {
+     "metin": "Uyum bozukluğu: tanım ve epidemiyoloji"
+    },
+    {
+     "metin": "Uyum bozukluğu: etyoloji"
+    },
+    {
+     "metin": "Uyum bozukluğu: tanı ve klinik özellikler"
+    },
+    {
+     "metin": "Uyum bozukluğu: eşlik eden bozukluklar, ayırıcı tanı ve seyir"
+    },
+    {
+     "metin": "Uyum bozukluğu: tedavi"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders travma ve stres bağlantılı bozuklukları iki ana başlıkta işler. Travma sonrası stres bozukluğunun tanımı, süre ölçütleri, epidemiyolojisi, etiyolojisi, bilişsel davranışçı modeli, klinik özellikleri, seyri, ayırıcı tanısı ve tedavisi anlatılır; ardından uyum bozukluğunun tanımı, epidemiyolojisi, risk etkenleri, alt tipleri, zaman ölçütleri, seyri ve tedavisi verilir.",
+    "Travma ve stres bağlantılı bozukluklar grubu.",
+    "TSSB: tanım, süreler ve travmanın anlamı.",
+    "TSSB: epidemiyoloji ve etyoloji.",
+    "TSSB nasıl gelişir: bilişsel-davranışçı model.",
+    "TSSB: risk faktörleri ve klinik özellikler.",
+    "TSSB: seyir, prognoz ve ayırıcı tanı.",
+    "TSSB: tedavi.",
+    "Uyum bozukluğu: tanım ve epidemiyoloji.",
+    "Uyum bozukluğu: etyoloji.",
+    "Uyum bozukluğu: tanı ve klinik özellikler.",
+    "Uyum bozukluğu: eşlik eden bozukluklar, ayırıcı tanı ve seyir.",
+    "Uyum bozukluğu: tedavi."
+   ],
+   "v": "8c44b1f191"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "TRAVMA SONRASI STRES BOZUKLUĞU",
+     "metin": "Çıkmış (ilgili): Akut stres bozukluğu: travma sonrası ilk 4 hafta içinde başlayıp 3 günle 4 hafta arasında sürmektedir.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "TRAVMA SONRASI STRES BOZUKLUĞU",
+     "metin": "Çıkmış (dogrudan): Travmaya eşlik etmiş uyaranlardan kaçınma davranışı ve aşırı uyarılmışlık hali gözlenir. (s11: uykuya dalmakta güçlük, irritabilite ve öfke patlamaları)",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "TRAVMA SONRASI STRES BOZUKLUĞU",
+     "metin": "Çıkmış (dogrudan): Semptomların ani başlaması, premorbid uyumun iyi, sosyal desteğin güçlü olması, başkaca psikiyatrik ve tıbbi hastalığın bulunmaması iyi prognoz göstergeleridir. (Çeldiriciler: s6 kadınlarda 2 kat; s3 akut stres bozukluğu 3 gün–4 hafta, TSSB >1 ay; s12 saatler ya da yıllar sonra başlayabilir; s15 ilk seçenek SSGİ/venlafaksin)",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Uyum Bozuklukları",
+     "metin": "Çıkmış (dogrudan): Uyum bozukluğu, stresli yaşam olayından veya yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar. (s21) / Yetişkinlerin sık karşılaştığı stres etkenleri: evlilik sorunları, boşanma, ekonomik ve sağlık sorunları. (s19)",
+     "s": [
+      21
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "TRAVMA SONRASI STRES BOZUKLUĞU: Çıkmış (ilgili): Akut stres bozukluğu: travma sonrası ilk 4 hafta içinde başlayıp 3 günle 4 hafta arasında sürmektedir.",
+    "TRAVMA SONRASI STRES BOZUKLUĞU: Çıkmış (dogrudan): Travmaya eşlik etmiş uyaranlardan kaçınma davranışı ve aşırı uyarılmışlık hali gözlenir. (s11: uykuya dalmakta güçlük, irritabilite ve öfke patlamaları).",
+    "TRAVMA SONRASI STRES BOZUKLUĞU: Çıkmış (dogrudan): Semptomların ani başlaması, premorbid uyumun iyi, sosyal desteğin güçlü olması, başkaca psikiyatrik ve tıbbi hastalığın bulunmaması iyi prognoz göstergeleridir. (Çeldiriciler: s6 kadınlarda 2 kat; s3 akut stres bozukluğu 3 gün–4 hafta, TSSB >1 ay; s12 saatler ya da yıllar sonra başlayabilir; s15 ilk seçenek SSGİ/venlafaksin).",
+    "Uyum Bozuklukları: Çıkmış (dogrudan): Uyum bozukluğu, stresli yaşam olayından veya yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar. (s21) / Yetişkinlerin sık karşılaştığı stres etkenleri: evlilik sorunları, boşanma, ekonomik ve sağlık sorunları. (s19)."
+   ],
+   "v": "d48f26f509"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmışların çoğu uyum bozukluğuna düşer: alt tiplerin belirtileri yer değiştirilerek (2020-21) ve maddi kayıp sonrası vaka olarak (2025-26) soruldu. TSSB'de iyi prognoz göstergesi (2023-24) ve aşırı uyarılmışlık ile hipervijilans (2025-26) soruldu; süre ölçütleri, ilk seçenek ilaçlar ve uyum bozukluğunun 3 ay ile 6 ay sınırları hocanın ayrıca vurguladığı yerlerdir.",
+   "maddeler": [
+    {
+     "baslik": "Uyum bozukluğunun alt tipleri ve belirtileri",
+     "metin": "Uyum bozukluğunda saldırganlık, topluma aykırı davranış, kavga etme ve okuldan kaçma davranım bozukluğunun belirgin olduğu alt tipe aittir.",
+     "neden": "2020-21'de soruldu: belirtiler alt tipler arasında yer değiştirilerek 'hangisi yanlıştır' kalıbında sorulur.",
+     "s": [
+      21,
+      22
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Ekonomik kayıp sonrası tablo: uyum bozukluğu",
+     "metin": "Ölüm tehdidi ya da ağır yaralanma içermeyen ekonomik kayıp gibi bir stres etkeninden sonra 3 ay içinde başlayan sıkıntı uyum bozukluğudur.",
+     "neden": "2025-26'da vaka olarak soruldu: maddi kayıptan sonra haftalardır süren sıkıntı.",
+     "s": [
+      19,
+      21
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "TSSB seyri ve iyi prognoz göstergeleri",
+     "metin": "TSSB'de semptomların ani başlaması, iyi premorbid uyum, güçlü sosyal destek ve eşlik eden hastalık olmaması iyi prognoz göstergeleridir.",
+     "neden": "2023-24'te soruldu; ani başlangıcın iyi prognoz göstergesi olması sezgiye ters olduğu için tuzak olarak kullanılır.",
+     "s": [
+      12
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "TSSB'de kaçınma ve aşırı uyarılmışlık",
+     "metin": "TSSB'de kişi olayı tekrar tekrar anımsar, travmaya eşlik eden uyaranlardan kaçınır ve aşırı uyarılmışlık hali gösterir.",
+     "neden": "2025-26'da soruldu: aşırı tetikte olma hali olan hipervijilansın en çok görüldüğü bozukluk TSSB'dir.",
+     "s": [
+      10
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "TSSB ve akut stres bozukluğunun süre ölçütleri",
+     "metin": "TSSB'de belirtiler bir aydan uzun, kronik TSSB'de 3 aydan uzun sürer; akut stres bozukluğu ilk 4 haftada başlar ve 3 gün ile 4 hafta sürer.",
+     "neden": "Hoca süreleri ayrıca vurguladı; süre ölçütleri vaka sorularında tanıyı ayırır.",
+     "s": [
+      3
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Uyum bozukluğu stres etkeninden sonra 3 ay içinde başlar",
+     "metin": "Uyum bozukluğu stresli yaşam olayından ya da yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar.",
+     "neden": "Hoca derste bu süreyi ayrıca vurguladı; vaka sorularında başlangıç zamanı tanıyı belirler.",
+     "s": [
+      21
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Uyum bozukluğunda süre sınırı ve yas",
+     "metin": "Tetikleyici etken ya da sonuçları ortadan kalkınca uyum bozukluğunun belirtileri altı aydan uzun sürmez; belirtiler olağan yası göstermez.",
+     "neden": "Hoca iki zaman sınırını yan yana verdi: sorun çıkınca 3 ay içinde belirti başlar, sorun kalkınca belirti 6 ay içinde kalkar.",
+     "s": [
+      22
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "TSSB tanımı",
+     "metin": "TSSB, gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit içeren olayı yaşama ya da tanık olma sonrası korku, çaresizlik ve dehşetle karakterizedir.",
+     "neden": "Hoca tanımı 'altını çizerek' okudu; tanım vaka köklerinde doğrudan kullanılır.",
+     "s": [
+      3
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmışların çoğu uyum bozukluğuna düşer: alt tiplerin belirtileri yer değiştirilerek (2020-21) ve maddi kayıp sonrası vaka olarak (2025-26) soruldu. TSSB'de iyi prognoz göstergesi (2023-24) ve aşırı uyarılmışlık ile hipervijilans (2025-26) soruldu; süre ölçütleri, ilk seçenek ilaçlar ve uyum bozukluğunun 3 ay ile 6 ay sınırları hocanın ayrıca vurguladığı yerlerdir.",
+    "Uyum bozukluğunun alt tipleri ve belirtileri: Uyum bozukluğunda saldırganlık, topluma aykırı davranış, kavga etme ve okuldan kaçma davranım bozukluğunun belirgin olduğu alt tipe aittir.",
+    "Ekonomik kayıp sonrası tablo: uyum bozukluğu: Ölüm tehdidi ya da ağır yaralanma içermeyen ekonomik kayıp gibi bir stres etkeninden sonra 3 ay içinde başlayan sıkıntı uyum bozukluğudur.",
+    "TSSB seyri ve iyi prognoz göstergeleri: TSSB'de semptomların ani başlaması, iyi premorbid uyum, güçlü sosyal destek ve eşlik eden hastalık olmaması iyi prognoz göstergeleridir.",
+    "TSSB'de kaçınma ve aşırı uyarılmışlık: TSSB'de kişi olayı tekrar tekrar anımsar, travmaya eşlik eden uyaranlardan kaçınır ve aşırı uyarılmışlık hali gösterir.",
+    "TSSB ve akut stres bozukluğunun süre ölçütleri: TSSB'de belirtiler bir aydan uzun, kronik TSSB'de 3 aydan uzun sürer; akut stres bozukluğu ilk 4 haftada başlar ve 3 gün ile 4 hafta sürer.",
+    "Uyum bozukluğu stres etkeninden sonra 3 ay içinde başlar: Uyum bozukluğu stresli yaşam olayından ya da yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar.",
+    "Uyum bozukluğunda süre sınırı ve yas: Tetikleyici etken ya da sonuçları ortadan kalkınca uyum bozukluğunun belirtileri altı aydan uzun sürmez; belirtiler olağan yası göstermez.",
+    "TSSB tanımı: TSSB, gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit içeren olayı yaşama ya da tanık olma sonrası korku, çaresizlik ve dehşetle karakterizedir."
+   ],
+   "v": "21465e5910"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin çıkmışları 2018-19'dan 2025-26'ya kadar dağılır ve üç alt başlıkta toplanır: süre ölçütleri ve iyi prognoz göstergeleri (s. 3, 6, 12, 15), TSSB'nin belirti kümeleri (s. 10) ve uyum bozukluğunun başlangıç zamanı, alt tipleri ve ayırıcı tanısı (s. 19, 21-24). En sık kök kalıbı \"hangisi doğrudur / yanlıştır\" önermeleridir; çeldiriciler slayt cümlelerinin tersine çevrilmesiyle kurulur (cinsiyet oranı, süre, başlangıç zamanı, ilk seçenek ilaç, alt tip belirtilerinin yer değiştirmesi). İkinci kalıp kısa vaka sorusudur: stres etkeninin türü ve belirtilerin süresi verilir, uyum bozukluğu ile TSSB, akut stres bozukluğu ve yas arasında seçim istenir. Bu yüzden sayıları (3 gün-4 hafta, 1 ay, 3 ay, 6 ay, 2 kat) ve her bilginin yönünü birlikte öğrenmek gerekir. TSSB etyolojisi, bilişsel davranışçı model ve uyum bozukluğu tedavisinden henüz doğrudan çıkmış yoktur.",
+   "maddeler": [
+    {
+     "baslik": "2023-2024",
+     "metin": "Aşağıdakilerden hangisi travma sonrası stres bozukluğu (TSSB) ile ilgili doğrudur?",
+     "cevap": "Semptomların ani başlaması iyi prognoz göstergesidir.",
+     "s": [
+      12
+     ],
+     "aciklama": [
+      "Soru, TSSB'nin epidemiyoloji, süre, başlangıç, prognoz ve tedavi bilgilerini tek bir 'hangisi doğrudur' listesinde ölçer.",
+      "Doğru cevap 'semptomların ani başlaması iyi prognoz göstergesidir' önermesidir; s. 12'de ani başlangıç, iyi premorbid uyum, güçlü sosyal destek ve başka psikiyatrik ya da tıbbi hastalığın bulunmaması iyi prognoz göstergeleri olarak sayılır.",
+      "Çeldiricilerin her biri slayttaki bir bilginin tersine çevrilmiş hâlidir: TSSB kadınlarda 2 kat sıktır (s. 6), 3 gün ile 4 hafta akut stres bozukluğunun süresidir ve TSSB bir aydan uzun sürer (s. 3), belirtiler saatler sonra başlayabileceği gibi yıllar sonra da başlayabilir (s. 12). En güçlü çeldirici ilk seçenek ilaç şıkkıdır: ilk seçenek SSGİ ve venlafaksindir (s. 15); benzodiazepin derste yalnız uyum bozukluğunda kısa süreli kullanılan ilaç olarak geçer (s. 26)."
+     ],
+     "ornek": "Hoca seyri anlatırken kronik seyrin hiç iyileşmez demek olmadığını, belirtilerin 10 yıl sonra başka bir travmayla ya da yıldönümünde yeniden tetiklenebileceğini söyledi. Süre için de depremin ertesi günü 'çok korktum, gözümün önüne geliyor' diyen kişiye akut stres bozukluğu denmeyeceğini, en az üç gün bekleneceğini örnek verdi.",
+     "tuzak": "Akut stres bozukluğunun süresi (3 gün-4 hafta) ile TSSB'nin süresi (bir aydan uzun) yer değiştirir; uyum bozukluğundaki kısa süreli benzodiazepin TSSB'nin ilk seçeneği sanılır."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "42 yaşındaki erkek hasta, iş yerindeki ağır maddi kayıplar nedeniyle yaklaşık 20 gündür huzursuzluk, sıkıntı, bunalım, stres ve bıkkınlık yaşadığını anlatıyor. Bu hastada en olası tanı hangisidir?",
+     "cevap": "Uyum bozukluğu",
+     "s": [
+      21
+     ],
+     "aciklama": [
+      "Soru, stres etkeninin türüne ve belirtilerin süresine bakarak uyum bozukluğunu TSSB, akut stres bozukluğu ve yastan ayırmayı ölçer.",
+      "Doğru cevap uyum bozukluğudur: iş yerindeki maddi kayıp, s. 19'da yetişkinlerin sık karşılaştığı ekonomik sorunlar arasındadır ve belirtiler olaydan sonraki 3 ay içinde (burada 20 gün) başlamıştır (s. 21). Hastada huzursuzluk, sıkıntı ve bunalım vardır; bunlar uyum çabası döneminde ortaya çıkan sıkıntı ve duygusal belirtilerdir (s. 17).",
+      "En güçlü çeldiriciler TSSB ve akut stres bozukluğudur; süre akut stres bozukluğuna uyar gibi görünür. Ancak her ikisi de ölüm ya da ölüm tehdidi, ağır yaralanma içeren travmatik bir olay ister (s. 3); maddi kayıp bu ölçütü karşılamaz. Yas ise ölüm sonrası ölen kişinin ardından duyulan özlemle ilişkilidir ve ayırıcı tanıda yer alır (s. 22, 24)."
+     ],
+     "ornek": "Hocanın derste verdiği örnek: selde malını kaybeden çiftçi 'kabul edemiyorum, nasıl ödeyeceğimi bilemiyorum' diyorsa uyum bozukluğu düşünülür; aynı selde kalıp ölümle karşılaşan, görüntüleri yeniden yaşayan kişide ise TSSB düşünülür. Hoca ayrıca borsada para kaybetmeyi ve seldeki zararı devlet tazmin edince belirtilerin kalkması gerektiğini örnek verdi.",
+     "tuzak": "Belirtilerin süresine bakıp akut stres bozukluğu seçmek; oysa önce stres etkeninin travma olup olmadığına bakılır. Ekonomik kayıp travma değildir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Uyum bozukluğu konusunda aşağıda verilen bilgilerden hangisi yanlıştır?",
+     "cevap": "Anksiyete belirtilerinin olduğu alt tipte; saldırganlık, topluma aykırı davranışlar, kavga etme gibi belirtiler vardır.",
+     "s": [
+      21
+     ],
+     "aciklama": [
+      "Soru, uyum bozukluğunun epidemiyoloji, alt tip, intihar ve başlangıç bilgilerini 'hangisi yanlıştır' kalıbıyla ölçer.",
+      "Yanlış önerme anksiyeteli alt tipe saldırganlık, topluma aykırı davranış ve kavga etmeyi yazan şıktır; s. 21'e göre bu belirtiler davranım bozukluğunun belirgin olduğu alt tipe aittir, anksiyeteli alt tipte ise aşırı kaygı, sinirlilik, çarpıntı ve hiperventilasyon vardır.",
+      "Öteki şıkların her biri slayttan birebir doğrudur: hemen her yaşta gelişebilir (s. 18), depresif belirtilerle ortaya çıkabilir (s. 21), intihar eğilimi artmıştır (s. 23), belirtiler genellikle 3 ay içinde başlar (s. 21). En güçlü çeldirici intihar şıkkıdır, çünkü uyum bozukluğu hafif bir tanı gibi düşünülür; oysa özellikle alkol-madde kullanımı ya da kişilik bozukluğu eşlik edince intihar eğilimi artar."
+     ],
+     "ornek": "Hoca davranım alt tipinin genelde ergenlerde görüldüğünü anlatırken düzenli okula giden bir ergenin birden derste uyumaya, devamsızlık yapmaya ve arkadaşlarıyla kavga etmeye başlamasını örnek verdi; bu durumda hayatındaki değişiklik, örneğin anne-babanın boşanması araştırılır. İntihar için de acile intihar girişimiyle gelenlerde boşanma ya da kumarda para kaybı gibi ani gelişmelerin sık öykü olduğunu söyledi.",
+     "tuzak": "Alt tiplerin belirtileri birbirinin yerine konur: saldırganlık ve okuldan kaçma davranım alt tipine, çarpıntı ve hiperventilasyon anksiyeteli alt tipe aittir."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Hipervijilans en çok aşağıdakilerden hangisinde görülür?",
+     "cevap": "Travma sonrası stres bozukluğu",
+     "s": [
+      10
+     ],
+     "aciklama": [
+      "Soru, hipervijilansın (aşırı tetikte olma) hangi bozukluğun çekirdek belirtisi olduğunu ölçer.",
+      "Doğru cevap travma sonrası stres bozukluğudur: s. 10'da TSSB'de travmaya eşlik etmiş uyaranlardan kaçınma ve aşırı uyarılmışlık hâli gözlendiği yazılır; hipervijilans bu aşırı uyarılmışlığın adıdır. s. 11'deki uykuya dalma güçlüğü, irritabilite ve öfke patlamaları da aynı kümenin belirtileridir.",
+      "Hipervijilans terimi slaytta geçmez, bu yüzden öğrenci terimi tanımazsa en güçlü çeldiriciler yaygın anksiyete bozukluğu ve özgül fobi olur; ikisi de kaygıyla gider. Ancak bu derste aşırı uyarılmışlık yalnız TSSB'nin belirti kümesi olarak tanımlanır; yaygın anksiyete bozukluğu, majör depresyon ve fobik bozukluk TSSB'nin ayırıcı tanı listesinde (s. 13) yer alır."
+     ],
+     "ornek": "Hoca aşırı uyarılmışlığı uykusuzluk, çabuk sinirlenme ve huzursuzluk olarak anlattı. Bilişsel davranışçı modeldeki örneğiyle de bağladı: akşam bir yolda saldırıya uğrayan kişi tehlike geçtikten sonra o yoldan her geçişinde çarpıntı ve nefes darlığı yaşar, kaçmak ister.",
+     "tuzak": "Aşırı uyarılmışlığı genel kaygıyla eş tutup yaygın anksiyete bozukluğunu seçmek; travmayla bağlantılı tetikte olma TSSB'nin belirtisidir."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi DSM-IV'e göre anksiyete bozuklukları arasında yer almaz?",
+     "cevap": "Beden dismorfik bozukluğu",
+     "s": [
+      3
+     ],
+     "aciklama": [
+      "Soru, DSM-IV'te anksiyete bozuklukları grubunun üyelerini ölçer; bu derse yalnız 'ilgili' düzeyde bağlıdır, çünkü akut stres bozukluğu şıklardan biridir.",
+      "Doğru cevap beden dismorfik bozukluğudur; bu tablo OKB ve ilişkili bozukluklar dersinin konusudur. Akut stres bozukluğu ise DSM-IV'te anksiyete bozuklukları altında yer alıyordu; hoca bu dersin başında travma ilişkili bozuklukların DSM-IV'te anksiyete bozuklukları altında geçtiğini, DSM-5'te ayrı grup olduğunu anlattı.",
+      "En güçlü çeldirici akut stres bozukluğudur: bugün DSM-5'te travma ve stres bağlantılı bozukluklar grubundadır (s. 2), bu yüzden 'anksiyete bozukluğu değildir' diye seçilebilir. Ancak soru DSM-IV'ü sorar; DSM-IV'te akut stres bozukluğu anksiyete bozuklukları arasındadır. Akut stres bozukluğunun kendisi ilk 4 haftada başlayıp 3 gün ile 4 hafta süren tablodur (s. 3)."
+     ],
+     "ornek": "Hoca grubun DSM-5'te neden ayrıldığını şöyle açıkladı: burada sorun yalnız bir anksiyete değil, travmanın sonucunda ortaya çıkan anksiyetedir; bu nedenle grup 'travma ilişkili bozukluklar' adıyla ayrı tutulur.",
+     "tuzak": "Sorunun DSM-IV'ü mü DSM-5'i mi sorduğu: DSM-5'e göre düşünülürse akut stres bozukluğu da anksiyete grubunda 'yer almaz' gibi görünür."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin çıkmışları 2018-19'dan 2025-26'ya kadar dağılır ve üç alt başlıkta toplanır: süre ölçütleri ve iyi prognoz göstergeleri (s. 3, 6, 12, 15), TSSB'nin belirti kümeleri (s. 10) ve uyum bozukluğunun başlangıç zamanı, alt tipleri ve ayırıcı tanısı (s. 19, 21-24). En sık kök kalıbı \"hangisi doğrudur / yanlıştır\" önermeleridir; çeldiriciler slayt cümlelerinin tersine çevrilmesiyle kurulur (cinsiyet oranı, süre, başlangıç zamanı, ilk seçenek ilaç, alt tip belirtilerinin yer değiştirmesi). İkinci kalıp kısa vaka sorusudur: stres etkeninin türü ve belirtilerin süresi verilir, uyum bozukluğu ile TSSB, akut stres bozukluğu ve yas arasında seçim istenir. Bu yüzden sayıları (3 gün-4 hafta, 1 ay, 3 ay, 6 ay, 2 kat) ve her bilginin yönünü birlikte öğrenmek gerekir. TSSB etyolojisi, bilişsel davranışçı model ve uyum bozukluğu tedavisinden henüz doğrudan çıkmış yoktur.",
+    "2023-2024: Aşağıdakilerden hangisi travma sonrası stres bozukluğu (TSSB) ile ilgili doğrudur?",
+    "Cevap: Semptomların ani başlaması iyi prognoz göstergesidir.",
+    "Soru, TSSB'nin epidemiyoloji, süre, başlangıç, prognoz ve tedavi bilgilerini tek bir 'hangisi doğrudur' listesinde ölçer.",
+    "Doğru cevap 'semptomların ani başlaması iyi prognoz göstergesidir' önermesidir; s. 12'de ani başlangıç, iyi premorbid uyum, güçlü sosyal destek ve başka psikiyatrik ya da tıbbi hastalığın bulunmaması iyi prognoz göstergeleri olarak sayılır.",
+    "Çeldiricilerin her biri slayttaki bir bilginin tersine çevrilmiş hâlidir: TSSB kadınlarda 2 kat sıktır (s. 6), 3 gün ile 4 hafta akut stres bozukluğunun süresidir ve TSSB bir aydan uzun sürer (s. 3), belirtiler saatler sonra başlayabileceği gibi yıllar sonra da başlayabilir (s. 12). En güçlü çeldirici ilk seçenek ilaç şıkkıdır: ilk seçenek SSGİ ve venlafaksindir (s. 15); benzodiazepin derste yalnız uyum bozukluğunda kısa süreli kullanılan ilaç olarak geçer (s. 26).",
+    "Örnek: Hoca seyri anlatırken kronik seyrin hiç iyileşmez demek olmadığını, belirtilerin 10 yıl sonra başka bir travmayla ya da yıldönümünde yeniden tetiklenebileceğini söyledi. Süre için de depremin ertesi günü 'çok korktum, gözümün önüne geliyor' diyen kişiye akut stres bozukluğu denmeyeceğini, en az üç gün bekleneceğini örnek verdi.",
+    "Tuzak: Akut stres bozukluğunun süresi (3 gün-4 hafta) ile TSSB'nin süresi (bir aydan uzun) yer değiştirir; uyum bozukluğundaki kısa süreli benzodiazepin TSSB'nin ilk seçeneği sanılır.",
+    "2025-2026: 42 yaşındaki erkek hasta, iş yerindeki ağır maddi kayıplar nedeniyle yaklaşık 20 gündür huzursuzluk, sıkıntı, bunalım, stres ve bıkkınlık yaşadığını anlatıyor. Bu hastada en olası tanı hangisidir?",
+    "Cevap: Uyum bozukluğu.",
+    "Soru, stres etkeninin türüne ve belirtilerin süresine bakarak uyum bozukluğunu TSSB, akut stres bozukluğu ve yastan ayırmayı ölçer.",
+    "Doğru cevap uyum bozukluğudur: iş yerindeki maddi kayıp, s. 19'da yetişkinlerin sık karşılaştığı ekonomik sorunlar arasındadır ve belirtiler olaydan sonraki 3 ay içinde (burada 20 gün) başlamıştır (s. 21). Hastada huzursuzluk, sıkıntı ve bunalım vardır; bunlar uyum çabası döneminde ortaya çıkan sıkıntı ve duygusal belirtilerdir (s. 17).",
+    "En güçlü çeldiriciler TSSB ve akut stres bozukluğudur; süre akut stres bozukluğuna uyar gibi görünür. Ancak her ikisi de ölüm ya da ölüm tehdidi, ağır yaralanma içeren travmatik bir olay ister (s. 3); maddi kayıp bu ölçütü karşılamaz. Yas ise ölüm sonrası ölen kişinin ardından duyulan özlemle ilişkilidir ve ayırıcı tanıda yer alır (s. 22, 24).",
+    "Örnek: Hocanın derste verdiği örnek: selde malını kaybeden çiftçi 'kabul edemiyorum, nasıl ödeyeceğimi bilemiyorum' diyorsa uyum bozukluğu düşünülür; aynı selde kalıp ölümle karşılaşan, görüntüleri yeniden yaşayan kişide ise TSSB düşünülür. Hoca ayrıca borsada para kaybetmeyi ve seldeki zararı devlet tazmin edince belirtilerin kalkması gerektiğini örnek verdi.",
+    "Tuzak: Belirtilerin süresine bakıp akut stres bozukluğu seçmek; oysa önce stres etkeninin travma olup olmadığına bakılır. Ekonomik kayıp travma değildir.",
+    "2020-2021: Uyum bozukluğu konusunda aşağıda verilen bilgilerden hangisi yanlıştır?",
+    "Cevap: Anksiyete belirtilerinin olduğu alt tipte; saldırganlık, topluma aykırı davranışlar, kavga etme gibi belirtiler vardır.",
+    "Soru, uyum bozukluğunun epidemiyoloji, alt tip, intihar ve başlangıç bilgilerini 'hangisi yanlıştır' kalıbıyla ölçer.",
+    "Yanlış önerme anksiyeteli alt tipe saldırganlık, topluma aykırı davranış ve kavga etmeyi yazan şıktır; s. 21'e göre bu belirtiler davranım bozukluğunun belirgin olduğu alt tipe aittir, anksiyeteli alt tipte ise aşırı kaygı, sinirlilik, çarpıntı ve hiperventilasyon vardır.",
+    "Öteki şıkların her biri slayttan birebir doğrudur: hemen her yaşta gelişebilir (s. 18), depresif belirtilerle ortaya çıkabilir (s. 21), intihar eğilimi artmıştır (s. 23), belirtiler genellikle 3 ay içinde başlar (s. 21). En güçlü çeldirici intihar şıkkıdır, çünkü uyum bozukluğu hafif bir tanı gibi düşünülür; oysa özellikle alkol-madde kullanımı ya da kişilik bozukluğu eşlik edince intihar eğilimi artar.",
+    "Örnek: Hoca davranım alt tipinin genelde ergenlerde görüldüğünü anlatırken düzenli okula giden bir ergenin birden derste uyumaya, devamsızlık yapmaya ve arkadaşlarıyla kavga etmeye başlamasını örnek verdi; bu durumda hayatındaki değişiklik, örneğin anne-babanın boşanması araştırılır. İntihar için de acile intihar girişimiyle gelenlerde boşanma ya da kumarda para kaybı gibi ani gelişmelerin sık öykü olduğunu söyledi.",
+    "Tuzak: Alt tiplerin belirtileri birbirinin yerine konur: saldırganlık ve okuldan kaçma davranım alt tipine, çarpıntı ve hiperventilasyon anksiyeteli alt tipe aittir.",
+    "2025-2026: Hipervijilans en çok aşağıdakilerden hangisinde görülür?",
+    "Cevap: Travma sonrası stres bozukluğu.",
+    "Soru, hipervijilansın (aşırı tetikte olma) hangi bozukluğun çekirdek belirtisi olduğunu ölçer.",
+    "Doğru cevap travma sonrası stres bozukluğudur: s. 10'da TSSB'de travmaya eşlik etmiş uyaranlardan kaçınma ve aşırı uyarılmışlık hâli gözlendiği yazılır; hipervijilans bu aşırı uyarılmışlığın adıdır. s. 11'deki uykuya dalma güçlüğü, irritabilite ve öfke patlamaları da aynı kümenin belirtileridir.",
+    "Hipervijilans terimi slaytta geçmez, bu yüzden öğrenci terimi tanımazsa en güçlü çeldiriciler yaygın anksiyete bozukluğu ve özgül fobi olur; ikisi de kaygıyla gider. Ancak bu derste aşırı uyarılmışlık yalnız TSSB'nin belirti kümesi olarak tanımlanır; yaygın anksiyete bozukluğu, majör depresyon ve fobik bozukluk TSSB'nin ayırıcı tanı listesinde (s. 13) yer alır.",
+    "Örnek: Hoca aşırı uyarılmışlığı uykusuzluk, çabuk sinirlenme ve huzursuzluk olarak anlattı. Bilişsel davranışçı modeldeki örneğiyle de bağladı: akşam bir yolda saldırıya uğrayan kişi tehlike geçtikten sonra o yoldan her geçişinde çarpıntı ve nefes darlığı yaşar, kaçmak ister.",
+    "Tuzak: Aşırı uyarılmışlığı genel kaygıyla eş tutup yaygın anksiyete bozukluğunu seçmek; travmayla bağlantılı tetikte olma TSSB'nin belirtisidir.",
+    "2018-2019: Aşağıdakilerden hangisi DSM-IV'e göre anksiyete bozuklukları arasında yer almaz?",
+    "Cevap: Beden dismorfik bozukluğu.",
+    "Soru, DSM-IV'te anksiyete bozuklukları grubunun üyelerini ölçer; bu derse yalnız 'ilgili' düzeyde bağlıdır, çünkü akut stres bozukluğu şıklardan biridir.",
+    "Doğru cevap beden dismorfik bozukluğudur; bu tablo OKB ve ilişkili bozukluklar dersinin konusudur. Akut stres bozukluğu ise DSM-IV'te anksiyete bozuklukları altında yer alıyordu; hoca bu dersin başında travma ilişkili bozuklukların DSM-IV'te anksiyete bozuklukları altında geçtiğini, DSM-5'te ayrı grup olduğunu anlattı.",
+    "En güçlü çeldirici akut stres bozukluğudur: bugün DSM-5'te travma ve stres bağlantılı bozukluklar grubundadır (s. 2), bu yüzden 'anksiyete bozukluğu değildir' diye seçilebilir. Ancak soru DSM-IV'ü sorar; DSM-IV'te akut stres bozukluğu anksiyete bozuklukları arasındadır. Akut stres bozukluğunun kendisi ilk 4 haftada başlayıp 3 gün ile 4 hafta süren tablodur (s. 3).",
+    "Örnek: Hoca grubun DSM-5'te neden ayrıldığını şöyle açıkladı: burada sorun yalnız bir anksiyete değil, travmanın sonucunda ortaya çıkan anksiyetedir; bu nedenle grup 'travma ilişkili bozukluklar' adıyla ayrı tutulur.",
+    "Tuzak: Sorunun DSM-IV'ü mü DSM-5'i mi sorduğu: DSM-5'e göre düşünülürse akut stres bozukluğu da anksiyete grubunda 'yer almaz' gibi görünür."
+   ],
+   "v": "6406cdca4e"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%40) ve sınıflama ve adlandırma (%40) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Sınıflama ve adlandırma",
+     "metin": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%40) ve hatırlama (%40) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%40) ve sınıflama ve adlandırma (%40) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Sınıflama ve adlandırma: Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%40) ve hatırlama (%40) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "49d1f8f60e"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Anksiyete belirtilerinin olduğu alt tipte saldırganlık, topluma aykırı davranışlar, kavga",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi uyum bozukluğu ile ilgili yanlış bir bilgidir?"
+    },
+    {
+     "baslik": "Uyum bozukluğunun alt tipleri ve belirtileri",
+     "metin": "2020-21'de soruldu: belirtiler alt tipler arasında yer değiştirilerek 'hangisi yanlıştır' kalıbında sorulur."
+    },
+    {
+     "baslik": "Ekonomik kayıp sonrası tablo: uyum bozukluğu",
+     "metin": "2025-26'da vaka olarak soruldu: maddi kayıptan sonra haftalardır süren sıkıntı."
+    },
+    {
+     "baslik": "TSSB seyri ve iyi prognoz göstergeleri",
+     "metin": "2023-24'te soruldu; ani başlangıcın iyi prognoz göstergesi olması sezgiye ters olduğu için tuzak olarak kullanılır."
+    },
+    {
+     "baslik": "TSSB'de kaçınma ve aşırı uyarılmışlık",
+     "metin": "2025-26'da soruldu: aşırı tetikte olma hali olan hipervijilansın en çok görüldüğü bozukluk TSSB'dir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Anksiyete belirtilerinin olduğu alt tipte saldırganlık, topluma aykırı davranışlar, kavga: Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi uyum bozukluğu ile ilgili yanlış bir bilgidir?",
+    "Uyum bozukluğunun alt tipleri ve belirtileri: 2020-21'de soruldu: belirtiler alt tipler arasında yer değiştirilerek 'hangisi yanlıştır' kalıbında sorulur.",
+    "Ekonomik kayıp sonrası tablo: uyum bozukluğu: 2025-26'da vaka olarak soruldu: maddi kayıptan sonra haftalardır süren sıkıntı.",
+    "TSSB seyri ve iyi prognoz göstergeleri: 2023-24'te soruldu; ani başlangıcın iyi prognoz göstergesi olması sezgiye ters olduğu için tuzak olarak kullanılır.",
+    "TSSB'de kaçınma ve aşırı uyarılmışlık: 2025-26'da soruldu: aşırı tetikte olma hali olan hipervijilansın en çok görüldüğü bozukluk TSSB'dir.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "4df8d68f88"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders travma ve stres bağlantılı bozuklukları iki ana başlıkta işler. Travma sonrası stres bozukluğunun tanımı, süre ölçütleri, epidemiyolojisi, etiyolojisi, bilişsel davranışçı modeli, klinik özellikleri, seyri, ayırıcı tanısı ve tedavisi anlatılır; ardından uyum bozukluğunun tanımı, epidemiyolojisi, risk etkenleri, alt tipleri, zaman ölçütleri, seyri ve tedavisi verilir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders travma ve stres bağlantılı bozuklukları iki ana başlıkta işler. Travma sonrası stres bozukluğunun tanımı, süre ölçütleri, epidemiyolojisi, etiyolojisi, bilişsel davranışçı modeli, klinik özellikleri, seyri, ayırıcı tanısı ve tedavisi anlatılır; ardından uyum bozukluğunun tanımı, epidemiyolojisi, risk etkenleri, alt tipleri, zaman ölçütleri, seyri ve tedavisi verilir."
+   ],
+   "v": "80c88eb85b"
+  },
+  {
+   "id": "2s10-06",
+   "baslik": "TSSB ve akut stres bozukluğunun süre ölçütleri",
+   "giris": "TSSB'de belirtiler bir aydan uzun, kronik TSSB'de 3 aydan uzun sürer; akut stres bozukluğu ilk 4 haftada başlar ve 3 gün ile 4 hafta sürer.",
+   "s": [
+    3
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "belirtiler bir aydan uzun sürer; günlük işlevlerde, toplumsal ve mesleki alanlarda bozulmaya yol açar."
+    },
+    {
+     "metin": "belirtilerin 3 aydan fazla sürmesi."
+    },
+    {
+     "metin": "travmadan sonraki ilk 4 hafta içinde başlar ve 3 gün ile 4 hafta arasında sürer."
+    },
+    {
+     "metin": "depremden beş gün sonra başlayıp 10 gündür süren yeniden anımsama, kâbus ve kaçınma bir ayı doldurmadığı için TSSB değil akut stres bozukluğudur."
+    },
+    {
+     "metin": "TSSB ve akut stres bozukluğu travmatik olay ister; uyum bozukluğu ise yaşam koşullarındaki değişikliğe ya da stresli yaşam olayına uyum döneminde ortaya çıkar."
+    }
+   ],
+   "klip": "o-2s10-06",
+   "ses": [
+    "TSSB ve akut stres bozukluğunun süre ölçütleri.",
+    "TSSB'de belirtiler bir aydan uzun, kronik TSSB'de 3 aydan uzun sürer; akut stres bozukluğu ilk 4 haftada başlar ve 3 gün ile 4 hafta sürer.",
+    "belirtiler bir aydan uzun sürer; günlük işlevlerde, toplumsal ve mesleki alanlarda bozulmaya yol açar.",
+    "belirtilerin 3 aydan fazla sürmesi.",
+    "travmadan sonraki ilk 4 hafta içinde başlar ve 3 gün ile 4 hafta arasında sürer.",
+    "depremden beş gün sonra başlayıp 10 gündür süren yeniden anımsama, kâbus ve kaçınma bir ayı doldurmadığı için TSSB değil akut stres bozukluğudur.",
+    "TSSB ve akut stres bozukluğu travmatik olay ister; uyum bozukluğu ise yaşam koşullarındaki değişikliğe ya da stresli yaşam olayına uyum döneminde ortaya çıkar."
+   ],
+   "v": "f949f761d7"
+  },
+  {
+   "id": "2s10-07",
+   "baslik": "TSSB tanımı",
+   "giris": "TSSB, gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit içeren olayı yaşama ya da tanık olma sonrası korku, çaresizlik ve dehşetle karakterizedir.",
+   "s": [
+    3
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit."
+    },
+    {
+     "metin": "olayı kendisi yaşayabilir ya da başkalarının böyle bir durumuna tanık olabilir."
+    },
+    {
+     "metin": "korku, çaresizlik ya da dehşete düşme."
+    },
+    {
+     "metin": "semptomlar bir aydan uzun sürer; 3 aydan fazlası kronik TSSB'dir."
+    },
+    {
+     "metin": "günlük işlevlerde, toplumsal ve mesleki alanlarda bozulma."
+    },
+    {
+     "metin": "aynı olaydan sonra 3 gün ile 4 hafta süren tablo akut stres bozukluğudur; stresli yaşam olayına uyum döneminde gelişen sıkıntı uyum bozukluğudur."
+    }
+   ],
+   "klip": "o-2s10-07",
+   "ses": [
+    "TSSB tanımı.",
+    "TSSB, gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit içeren olayı yaşama ya da tanık olma sonrası korku, çaresizlik ve dehşetle karakterizedir.",
+    "gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit.",
+    "olayı kendisi yaşayabilir ya da başkalarının böyle bir durumuna tanık olabilir.",
+    "korku, çaresizlik ya da dehşete düşme.",
+    "semptomlar bir aydan uzun sürer; 3 aydan fazlası kronik TSSB'dir.",
+    "günlük işlevlerde, toplumsal ve mesleki alanlarda bozulma.",
+    "aynı olaydan sonra 3 gün ile 4 hafta süren tablo akut stres bozukluğudur; stresli yaşam olayına uyum döneminde gelişen sıkıntı uyum bozukluğudur."
+   ],
+   "v": "f6c211bceb"
+  },
+  {
+   "id": "2s10-05",
+   "baslik": "TSSB'de kaçınma ve aşırı uyarılmışlık",
+   "giris": "TSSB'de kişi olayı tekrar tekrar anımsar, travmaya eşlik eden uyaranlardan kaçınır ve aşırı uyarılmışlık hali gösterir.",
+   "s": [
+    10
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "savaş, terör, işkence, tecavüz, trafik kazası ya da doğal afet sonrasında aşırı korku, çaresizlik ve dehşete kapılma."
+    },
+    {
+     "metin": "kişi olayı tekrar tekrar anımsar ya da sıkıntı veren biçimde rüyalarında görür."
+    },
+    {
+     "metin": "travmaya eşlik etmiş uyaranlardan kaçınma davranışı görülür."
+    },
+    {
+     "metin": "travmaya eşlik eden uyaranlardan kaçınmayla birlikte gözlenir. Sürekli tetikte olma anlamına gelen hipervijilans bu aşırı uyarılmışlık haliyle örtüştüğü için TSSB ile ilişkilendirilir."
+    },
+    {
+     "metin": "uykuya dalmakta ve uykuyu sürdürmekte güçlük, irritabilite ve öfke patlamaları ayrı klinik özellikler olarak verilir; bunlar tetikte olma haliyle uyumludur."
+    },
+    {
+     "metin": "bozukluk toplumsal, mesleki ve diğer önemli alanlarda bozulmaya yol açar."
+    }
+   ],
+   "klip": "o-2s10-05",
+   "ses": [
+    "TSSB'de kaçınma ve aşırı uyarılmışlık.",
+    "TSSB'de kişi olayı tekrar tekrar anımsar, travmaya eşlik eden uyaranlardan kaçınır ve aşırı uyarılmışlık hali gösterir.",
+    "savaş, terör, işkence, tecavüz, trafik kazası ya da doğal afet sonrasında aşırı korku, çaresizlik ve dehşete kapılma.",
+    "kişi olayı tekrar tekrar anımsar ya da sıkıntı veren biçimde rüyalarında görür.",
+    "travmaya eşlik etmiş uyaranlardan kaçınma davranışı görülür.",
+    "travmaya eşlik eden uyaranlardan kaçınmayla birlikte gözlenir. Sürekli tetikte olma anlamına gelen hipervijilans bu aşırı uyarılmışlık haliyle örtüştüğü için TSSB ile ilişkilendirilir.",
+    "uykuya dalmakta ve uykuyu sürdürmekte güçlük, irritabilite ve öfke patlamaları ayrı klinik özellikler olarak verilir; bunlar tetikte olma haliyle uyumludur.",
+    "bozukluk toplumsal, mesleki ve diğer önemli alanlarda bozulmaya yol açar."
+   ],
+   "v": "b1c84dbffe"
+  },
+  {
+   "id": "2s10-04",
+   "baslik": "TSSB seyri ve iyi prognoz göstergeleri",
+   "giris": "TSSB'de semptomların ani başlaması, iyi premorbid uyum, güçlü sosyal destek ve eşlik eden hastalık olmaması iyi prognoz göstergeleridir.",
+   "s": [
+    12
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "travmadan saatler sonra başlayabileceği gibi yıllar sonra da başlayabilir; belirtilerin ilk saatlerde başlaması zorunlu değildir."
+    },
+    {
+     "metin": "kronik seyir gösterir; stresli yaşam dönemlerinde ya da travmanın yıldönümlerinde belirtiler artabilir."
+    },
+    {
+     "metin": "semptomların ani başlaması, premorbid uyumun iyi olması, sosyal desteğin güçlü olması, başka psikiyatrik ve tıbbi hastalığın bulunmaması."
+    },
+    {
+     "metin": "TSSB kadınlarda erkeklere göre 2 kat sık görülür; 3 gün ile 4 hafta arasında süren tablo akut stres bozukluğudur, TSSB'de belirtiler bir aydan uzun sürer; ilk seçilecek ilaçlar SSGİ ve venlafaksindir."
+    }
+   ],
+   "klip": "o-2s10-04",
+   "ses": [
+    "TSSB seyri ve iyi prognoz göstergeleri.",
+    "TSSB'de semptomların ani başlaması, iyi premorbid uyum, güçlü sosyal destek ve eşlik eden hastalık olmaması iyi prognoz göstergeleridir.",
+    "travmadan saatler sonra başlayabileceği gibi yıllar sonra da başlayabilir; belirtilerin ilk saatlerde başlaması zorunlu değildir.",
+    "kronik seyir gösterir; stresli yaşam dönemlerinde ya da travmanın yıldönümlerinde belirtiler artabilir.",
+    "semptomların ani başlaması, premorbid uyumun iyi olması, sosyal desteğin güçlü olması, başka psikiyatrik ve tıbbi hastalığın bulunmaması.",
+    "TSSB kadınlarda erkeklere göre 2 kat sık görülür; 3 gün ile 4 hafta arasında süren tablo akut stres bozukluğudur, TSSB'de belirtiler bir aydan uzun sürer; ilk seçilecek ilaçlar SSGİ ve venlafaksindir."
+   ],
+   "v": "75a38bc668"
+  },
+  {
+   "id": "2s10-09",
+   "baslik": "Uyum bozukluğunun epidemiyolojisi",
+   "giris": "Uyum bozukluğu yaygındır; psikiyatri polikliniğinde %5-10, konsültasyon istenen yatan hastalarda %50'ye ulaşır ve kadınlarda iki kat sıktır.",
+   "s": [
+    18
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "uyum bozukluğu yaygın görülen bir ruhsal rahatsızlıktır, ancak epidemiyolojik veriler sınırlıdır."
+    },
+    {
+     "metin": "başvuranlarda tanı oranı %5-10."
+    },
+    {
+     "metin": "yatan ve psikiyatri konsültasyonu istenen hastalarda oran %50'ye ulaşabilir."
+    },
+    {
+     "metin": "kadınlarda erkeklere göre iki kat fazla görülür."
+    },
+    {
+     "metin": "hemen her yaşta gelişebilir."
+    },
+    {
+     "metin": "TSSB de kadınlarda erkeklere göre 2 kat fazla ve her yaşta görülür."
+    }
+   ],
+   "klip": "o-2s10-09",
+   "ses": [
+    "Uyum bozukluğunun epidemiyolojisi.",
+    "Uyum bozukluğu yaygındır; psikiyatri polikliniğinde %5-10, konsültasyon istenen yatan hastalarda %50'ye ulaşır ve kadınlarda iki kat sıktır.",
+    "uyum bozukluğu yaygın görülen bir ruhsal rahatsızlıktır, ancak epidemiyolojik veriler sınırlıdır.",
+    "başvuranlarda tanı oranı %5-10.",
+    "yatan ve psikiyatri konsültasyonu istenen hastalarda oran %50'ye ulaşabilir.",
+    "kadınlarda erkeklere göre iki kat fazla görülür.",
+    "hemen her yaşta gelişebilir.",
+    "TSSB de kadınlarda erkeklere göre 2 kat fazla ve her yaşta görülür."
+   ],
+   "v": "5792b5a228"
+  },
+  {
+   "id": "2s10-02",
+   "baslik": "Ekonomik kayıp sonrası tablo: uyum bozukluğu",
+   "giris": "Ölüm tehdidi ya da ağır yaralanma içermeyen ekonomik kayıp gibi bir stres etkeninden sonra 3 ay içinde başlayan sıkıntı uyum bozukluğudur.",
+   "s": [
+    19,
+    21
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "psikososyal stres etkeni uyum bozukluğunun temel nedenidir; yetişkinlerde evlilik sorunları, boşanma, ekonomik ve sağlık sorunları sık görülür."
+    },
+    {
+     "metin": "belirtiler stresli yaşam olayından sonra genellikle 3 ay içinde başlar."
+    },
+    {
+     "metin": "travma sonrası stres bozukluğu ve akut stres bozukluğu gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit içeren bir olay gerektirir; maddi kayıp bu tanıma girmez."
+    },
+    {
+     "metin": "travmadan sonraki ilk 4 hafta içinde başlar, 3 gün ile 4 hafta arasında sürer."
+    },
+    {
+     "metin": "uyum bozukluğunun belirtileri olağan yası göstermez; yas ayırıcı tanıda düşünülür."
+    },
+    {
+     "metin": "bu dersin travma ve stres bağlantılı bozukluklar grubunda yer almaz."
+    }
+   ],
+   "klip": "o-2s10-02",
+   "ses": [
+    "Ekonomik kayıp sonrası tablo: uyum bozukluğu.",
+    "Ölüm tehdidi ya da ağır yaralanma içermeyen ekonomik kayıp gibi bir stres etkeninden sonra 3 ay içinde başlayan sıkıntı uyum bozukluğudur.",
+    "psikososyal stres etkeni uyum bozukluğunun temel nedenidir; yetişkinlerde evlilik sorunları, boşanma, ekonomik ve sağlık sorunları sık görülür.",
+    "belirtiler stresli yaşam olayından sonra genellikle 3 ay içinde başlar.",
+    "travma sonrası stres bozukluğu ve akut stres bozukluğu gerçek bir ölüm ya da ölüm tehdidi, ağır yaralanma ya da fizik bütünlüğüne tehdit içeren bir olay gerektirir; maddi kayıp bu tanıma girmez.",
+    "travmadan sonraki ilk 4 hafta içinde başlar, 3 gün ile 4 hafta arasında sürer.",
+    "uyum bozukluğunun belirtileri olağan yası göstermez; yas ayırıcı tanıda düşünülür.",
+    "bu dersin travma ve stres bağlantılı bozukluklar grubunda yer almaz."
+   ],
+   "v": "521e6f169d"
+  },
+  {
+   "id": "2s10-01",
+   "baslik": "Uyum bozukluğunun alt tipleri ve belirtileri",
+   "giris": "Uyum bozukluğunda saldırganlık, topluma aykırı davranış, kavga etme ve okuldan kaçma davranım bozukluğunun belirgin olduğu alt tipe aittir.",
+   "s": [
+    21,
+    22
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "depresif duygudurum, ağlama, umutsuzluk."
+    },
+    {
+     "metin": "aşırı kaygı, sinirlilik, çarpıntı, hiperventilasyon."
+    },
+    {
+     "metin": "Davranım bozukluklarının belirgin olduğu alt tip: saldırgan, topluma aykırı davranışlar, kavga etme, okuldan kaçma."
+    },
+    {
+     "metin": "kimi olgularda anksiyete ile depresif belirtiler ya da davranım bozukluğu ile depresif belirtiler bir arada görülür."
+    },
+    {
+     "metin": "ergenlerde daha çok davranım bozukluğu belirtileri, yetişkinlerde anksiyete ve depresif belirtiler önde olur."
+    },
+    {
+     "metin": "uyum bozukluğu her yaşta gelişebilir, depresif belirtilerle ortaya çıkabilir, intihar eğilimi artar ve belirtiler stres etkeninden sonra genellikle 3 ay içinde başlar."
+    }
+   ],
+   "klip": "o-2s10-01",
+   "ses": [
+    "Uyum bozukluğunun alt tipleri ve belirtileri.",
+    "Uyum bozukluğunda saldırganlık, topluma aykırı davranış, kavga etme ve okuldan kaçma davranım bozukluğunun belirgin olduğu alt tipe aittir.",
+    "depresif duygudurum, ağlama, umutsuzluk.",
+    "aşırı kaygı, sinirlilik, çarpıntı, hiperventilasyon.",
+    "Davranım bozukluklarının belirgin olduğu alt tip: saldırgan, topluma aykırı davranışlar, kavga etme, okuldan kaçma.",
+    "kimi olgularda anksiyete ile depresif belirtiler ya da davranım bozukluğu ile depresif belirtiler bir arada görülür.",
+    "ergenlerde daha çok davranım bozukluğu belirtileri, yetişkinlerde anksiyete ve depresif belirtiler önde olur.",
+    "uyum bozukluğu her yaşta gelişebilir, depresif belirtilerle ortaya çıkabilir, intihar eğilimi artar ve belirtiler stres etkeninden sonra genellikle 3 ay içinde başlar."
+   ],
+   "v": "0d08965aab"
+  },
+  {
+   "id": "2s10-03",
+   "baslik": "Uyum bozukluğu stres etkeninden sonra 3 ay içinde başlar",
+   "giris": "Uyum bozukluğu stresli yaşam olayından ya da yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar.",
+   "s": [
+    21
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "belirtiler stresli yaşam olayından ya da yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar."
+    },
+    {
+     "metin": "boşanmadan bir yıl sonra başlayan sıkıntı ve umutsuzluk, olaydan sonraki 3 ay içinde başlamadığı için boşanmaya bağlı uyum bozukluğu sayılmaz."
+    },
+    {
+     "metin": "tetikleyici etken ya da sonuçları ortadan kalkınca belirtiler altı aydan uzun sürmez."
+    },
+    {
+     "metin": "uyum bozukluğu hemen her yaşta gelişebilir ve kadınlarda erkeklere göre iki kat sık görülür; erkek olmak tanıyı dışlamaz."
+    },
+    {
+     "metin": "boşanma, yetişkinlerin sık karşılaştığı stres etkenlerindendir."
+    }
+   ],
+   "klip": "o-2s10-03",
+   "ses": [
+    "Uyum bozukluğu stres etkeninden sonra 3 ay içinde başlar.",
+    "Uyum bozukluğu stresli yaşam olayından ya da yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar.",
+    "belirtiler stresli yaşam olayından ya da yaşam koşullarındaki değişiklikten sonra genellikle 3 ay içinde başlar.",
+    "boşanmadan bir yıl sonra başlayan sıkıntı ve umutsuzluk, olaydan sonraki 3 ay içinde başlamadığı için boşanmaya bağlı uyum bozukluğu sayılmaz.",
+    "tetikleyici etken ya da sonuçları ortadan kalkınca belirtiler altı aydan uzun sürmez.",
+    "uyum bozukluğu hemen her yaşta gelişebilir ve kadınlarda erkeklere göre iki kat sık görülür; erkek olmak tanıyı dışlamaz.",
+    "boşanma, yetişkinlerin sık karşılaştığı stres etkenlerindendir."
+   ],
+   "v": "4891e8bc4a"
+  },
+  {
+   "id": "2s10-11",
+   "baslik": "Uyum bozukluğunda süre sınırı ve yas",
+   "giris": "Tetikleyici etken ya da sonuçları ortadan kalkınca uyum bozukluğunun belirtileri altı aydan uzun sürmez; belirtiler olağan yası göstermez.",
+   "s": [
+    22
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "tetikleyici etken ya da getirdiği sonuçlar ortadan kalkınca belirtiler altı aydan uzun sürmez."
+    },
+    {
+     "metin": "stres etkeninden sonra genellikle 3 ay içinde başlar."
+    },
+    {
+     "metin": "belirtiler olağan yası göstermez; yas tepkisi ayırıcı tanıda düşünülür."
+    },
+    {
+     "metin": "kişinin toplumsal ve mesleki işlevselliği bozulur."
+    },
+    {
+     "metin": "ergenlerde davranım bozukluğu belirtileri, yetişkinlerde anksiyete ve depresif belirtiler önde olur."
+    }
+   ],
+   "klip": "o-2s10-11",
+   "ses": [
+    "Uyum bozukluğunda süre sınırı ve yas.",
+    "Tetikleyici etken ya da sonuçları ortadan kalkınca uyum bozukluğunun belirtileri altı aydan uzun sürmez; belirtiler olağan yası göstermez.",
+    "tetikleyici etken ya da getirdiği sonuçlar ortadan kalkınca belirtiler altı aydan uzun sürmez.",
+    "stres etkeninden sonra genellikle 3 ay içinde başlar.",
+    "belirtiler olağan yası göstermez; yas tepkisi ayırıcı tanıda düşünülür.",
+    "kişinin toplumsal ve mesleki işlevselliği bozulur.",
+    "ergenlerde davranım bozukluğu belirtileri, yetişkinlerde anksiyete ve depresif belirtiler önde olur."
+   ],
+   "v": "4b81a315ab"
+  },
+  {
+   "id": "2s10-08",
+   "baslik": "Uyum bozukluğunda intihar eğilimi ve eşlik eden bozukluklar",
+   "giris": "Uyum bozukluğunda intihar eğilimi artar; özellikle alkol-madde kullanımı ya da kişilik bozukluğu eşlik ettiğinde.",
+   "s": [
+    23
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "uyum bozukluğu olan hastalarda intihar eğilimi artar; alkol-madde kullanımı ya da kişilik bozukluğu eşlik ettiğinde bu artış daha belirgindir."
+    },
+    {
+     "metin": "B kümesi kişilik bozuklukları, alkol-madde kullanım bozuklukları, somatoform bozukluklar ve yapay bozukluklar."
+    },
+    {
+     "metin": "'intihar eğilimi artmaz' ifadesi yanlış önermedir."
+    },
+    {
+     "metin": "TSSB'de de suçluluk ve intihar düşünceleri olabilir; iki tabloda da intihar riski göz ardı edilmez."
+    }
+   ],
+   "klip": "o-2s10-08",
+   "ses": [
+    "Uyum bozukluğunda intihar eğilimi ve eşlik eden bozukluklar.",
+    "Uyum bozukluğunda intihar eğilimi artar; özellikle alkol-madde kullanımı ya da kişilik bozukluğu eşlik ettiğinde.",
+    "uyum bozukluğu olan hastalarda intihar eğilimi artar; alkol-madde kullanımı ya da kişilik bozukluğu eşlik ettiğinde bu artış daha belirgindir.",
+    "B kümesi kişilik bozuklukları, alkol-madde kullanım bozuklukları, somatoform bozukluklar ve yapay bozukluklar.",
+    "'intihar eğilimi artmaz' ifadesi yanlış önermedir.",
+    "TSSB'de de suçluluk ve intihar düşünceleri olabilir; iki tabloda da intihar riski göz ardı edilmez."
+   ],
+   "v": "6263e623a2"
+  }
+ ]
+}

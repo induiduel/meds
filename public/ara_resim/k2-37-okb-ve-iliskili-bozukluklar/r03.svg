@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="ten" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f5c7a1"/></radialGradient>
+<radialGradient id="bulut" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ede9fe"/></radialGradient>
+<linearGradient id="ankz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#fecaca" stop-opacity="0.1"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="damla"><path d="M0 -10 C5 -3 7 2 7 5 A7 7 0 0 1 -7 5 C-7 2 -5 -3 0 -10 z" fill="#7dd3fc" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="mikrop"><circle r="7" fill="#a3e635" stroke="#3f6212" stroke-width="1.5"/><path d="M-9 0 h-4 M9 0 h4 M0 -9 v-4 M0 9 v4" stroke="#3f6212" stroke-width="1.5"/></g>
+<g id="kok"><circle r="9" fill="#fca5a5" stroke="#991b1b" stroke-width="1.5"/></g>
+<g id="ab"><path d="M0 14 V0 M0 0 L-9 -12 M0 0 L9 -12" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">Her obsesyon temasının sık eşleştiği bir kompulsiyon vardır</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Tema düşüncedir, kompulsiyon davranış ya da zihinsel eylemdir (slayt 9–10)</text>
+<rect x="30" y="100" width="640" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Obsesyon teması  →  kompulsiyon</text>
+<text x="70" y="160" font-size="18" fill="#7c3aed" text-anchor="start" font-weight="bold">OBSESYON (zihinde)</text>
+<text x="420" y="160" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">KOMPULSİYON (yapılan)</text>
+<path d="M50 254 C30 222 105 180 149 204 C182 175 259 190 254 226 C290 240 248 295 193 278 C160 300 94 295 50 254 z" fill="url(#bulut)" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="160" y="236" font-size="17" fill="#7c3aed" text-anchor="middle" font-weight="bold">Kir-kontaminasyon</text>
+<text x="160" y="258" font-size="17" fill="#7c3aed" text-anchor="middle">"Ellerim kirli"</text>
+<path d="M265 240 C320 220 380 220 430 240" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#okk)"/>
+<path d="M476 298 C471 276 474 254 480 241 C485 232 493 234 493 245 L496 228 C498 219 509 219 509 230 L511 234 C513 225 524 228 522 239 L522 265 C526 276 520 296 511 298 z" fill="url(#ten)" stroke="#9a5b34" stroke-width="2"/>
+<path d="M526 298 C521 276 524 254 530 241 C535 232 543 234 543 245 L546 228 C548 219 559 219 559 230 L561 234 C563 225 574 228 572 239 L572 265 C576 276 570 296 561 298 z" fill="url(#ten)" stroke="#9a5b34" stroke-width="2"/>
+<use href="#damla" x="505" y="205"/>
+<use href="#damla" x="530" y="215"/>
+<use href="#damla" x="552" y="200"/>
+<text x="600" y="250" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">yıkama</text>
+<path d="M65 414 C45 382 112 340 150 364 C179 335 246 350 241 386 C275 400 236 455 188 438 C160 460 103 455 65 414 z" fill="url(#bulut)" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="160" y="396" font-size="17" fill="#7c3aed" text-anchor="middle" font-weight="bold">Patolojik şüphe</text>
+<text x="160" y="418" font-size="17" fill="#7c3aed" text-anchor="middle">"Kilitledim mi?"</text>
+<path d="M265 400 C320 380 380 380 430 400" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#okk)"/>
+<rect x="470" y="360" width="70" height="90" rx="6" fill="#e7d3b8" stroke="#92400e" stroke-width="2"/>
+<path d="M520 390 C530 386 545 386 552 392 C552 398 545 400 538 400 L522 400 C516 400 514 394 520 390 z" fill="#facc15" stroke="#a16207" stroke-width="1.5"/>
+<path d="M570 380 C590 370 610 380 605 400 C600 420 585 420 575 410" fill="none" stroke="#c2410c" stroke-width="3" marker-end="url(#okk)"/>
+<text x="560" y="450" font-size="18" fill="#c2410c" text-anchor="start" font-weight="bold">kontrol</text>
+<text x="60" y="520" font-size="17" fill="#475569" text-anchor="start">Kirlenme bir temadır; ona karşı yapılan yıkamadır.</text>
+<rect x="690" y="100" width="480" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="710" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Ritüelin gerçekçi bağı yoktur</text>
+<path d="M780 224 C760 192 855 150 915 174 C960 145 1065 160 1058 196 C1100 210 1050 265 975 248 C930 270 840 265 780 224 z" fill="url(#bulut)" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="930" y="206" font-size="18" fill="#7c3aed" text-anchor="middle" font-weight="bold">"Anneme zarar gelecek"</text>
+<text x="930" y="230" font-size="17" fill="#7c3aed" text-anchor="middle">obsesyon</text>
+<rect x="760" y="300" width="90" height="140" rx="10" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+<rect x="785" y="330" width="40" height="80" rx="6" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+<rect x="790" y="335" width="30" height="35" rx="4" fill="#f97316"/>
+<line x1="825" y1="350" x2="880" y2="330" stroke="#334155" stroke-width="1.6"/>
+<circle cx="825" cy="350" r="3" fill="#334155"/>
+<text x="885" y="336" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">elektrik düğmesi</text>
+<text x="885" y="372" font-size="17" fill="#c2410c" text-anchor="start" font-weight="bold">aç–kapa, aç–kapa, aç–kapa:</text>
+<text x="885" y="396" font-size="17" fill="#c2410c" text-anchor="start" font-weight="bold">üç kez</text>
+<text x="720" y="480" font-size="17" fill="#1e293b" text-anchor="start">Düğme ile annenin güvenliği arasında</text>
+<text x="720" y="504" font-size="17" fill="#1e293b" text-anchor="start">gerçek bir ilişki yoktur; hasta yine de</text>
+<text x="720" y="528" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">bir süre rahatlar.</text>
+<path d="M930 260 C930 280 900 300 860 320" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#okm)"/>
+<rect x="30" y="570" width="1140" height="200" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="60" y="610" font-size="20" fill="#c2410c" text-anchor="start" font-weight="bold">Sık karşılaşılan altı kompulsiyon:</text>
+<circle cx="70" cy="654" r="9" fill="#c2410c"/>
+<text x="90" y="660" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">yıkama / temizlik</text>
+<circle cx="440" cy="654" r="9" fill="#c2410c"/>
+<text x="460" y="660" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">kontrol etme</text>
+<circle cx="810" cy="654" r="9" fill="#c2410c"/>
+<text x="830" y="660" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">dokunma</text>
+<circle cx="70" cy="704" r="9" fill="#c2410c"/>
+<text x="90" y="710" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">sayma</text>
+<circle cx="440" cy="704" r="9" fill="#c2410c"/>
+<text x="460" y="710" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">düzenleme</text>
+<circle cx="810" cy="704" r="9" fill="#c2410c"/>
+<text x="830" y="710" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">biriktirme</text>
+<text x="600" y="755" font-size="17" fill="#dc2626" text-anchor="middle" font-weight="bold">Kirlenme bu listede yoktur: o bir obsesyon temasıdır.</text>
+</svg>

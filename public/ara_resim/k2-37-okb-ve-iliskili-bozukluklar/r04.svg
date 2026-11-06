@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="ten" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f5c7a1"/></radialGradient>
+<radialGradient id="bulut" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ede9fe"/></radialGradient>
+<linearGradient id="ankz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#fecaca" stop-opacity="0.1"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="damla"><path d="M0 -10 C5 -3 7 2 7 5 A7 7 0 0 1 -7 5 C-7 2 -5 -3 0 -10 z" fill="#7dd3fc" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="mikrop"><circle r="7" fill="#a3e635" stroke="#3f6212" stroke-width="1.5"/><path d="M-9 0 h-4 M9 0 h4 M0 -9 v-4 M0 9 v4" stroke="#3f6212" stroke-width="1.5"/></g>
+<g id="kok"><circle r="9" fill="#fca5a5" stroke="#991b1b" stroke-width="1.5"/></g>
+<g id="ab"><path d="M0 14 V0 M0 0 L-9 -12 M0 0 L9 -12" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">PANDAS: streptokok enfeksiyonundan sonra gelen immün reaksiyon</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">OKB ayırıcı tanısında tıbbi bir tablo · bazal ganglionlarda hacim değişikliği (slayt 12; yapılar slayt 7)</text>
+<rect x="30" y="100" width="360" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · Çocukta streptokok</text>
+<path d="M110 200 C110 160 200 150 220 190 C240 230 230 300 210 330 C190 360 140 360 120 330 C100 300 110 240 110 200 z" fill="#fecdd3" stroke="#9f1239" stroke-width="2.5"/>
+<text x="165" y="190" font-size="17" fill="#9f1239" text-anchor="middle">enfeksiyon</text>
+<use href="#kok" x="145" y="255"/>
+<use href="#kok" x="161" y="263"/>
+<use href="#kok" x="177" y="255"/>
+<use href="#kok" x="193" y="263"/>
+<use href="#kok" x="209" y="255"/>
+<line x1="200" y1="262" x2="260" y2="220" stroke="#334155" stroke-width="1.6"/>
+<circle cx="200" cy="262" r="3" fill="#334155"/>
+<text x="250" y="212" font-size="17" fill="#991b1b" text-anchor="start" font-weight="bold">streptokok</text>
+<text x="60" y="400" font-size="17" fill="#1e293b" text-anchor="start">Enfeksiyon geçirilir;</text>
+<text x="60" y="424" font-size="17" fill="#1e293b" text-anchor="start">bağışıklık sistemi yanıt verir.</text>
+<use href="#ab" x="280" y="300"/>
+<use href="#ab" x="310" y="330"/>
+<use href="#ab" x="330" y="290"/>
+<text x="255" y="370" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">antikor</text>
+<text x="60" y="470" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">PANDAS: çocuklarda streptokok</text>
+<text x="60" y="494" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">enfeksiyonlarının neden olduğu</text>
+<text x="60" y="518" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">immün reaksiyonlar</text>
+<rect x="410" y="100" width="420" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="430" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Beyin kesiti (şematik)</text>
+<path d="M480 300 C470 200 540 150 620 150 C700 150 770 200 760 300 C755 380 720 440 620 450 C520 440 485 380 480 300 z" fill="#fde2e4" stroke="#9f1239" stroke-width="2.5"/>
+<path d="M620 160 L620 445" stroke="#9f1239" stroke-width="1.5" stroke-dasharray="5 5"/>
+<path d="M600 250 C580 240 570 260 572 285 C575 300 590 300 598 290 z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/>
+<path d="M545 275 C520 280 515 330 535 360 C550 370 558 340 558 310 z" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<path d="M560 300 C568 305 570 335 562 350 L556 340 C558 320 558 310 560 300 z" fill="#86efac" stroke="#15803d" stroke-width="2"/>
+<path d="M640 250 C660 240 670 260 668 285 C665 300 650 300 642 290 z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/>
+<path d="M695 275 C720 280 725 330 705 360 C690 370 682 340 682 310 z" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<path d="M680 300 C672 305 670 335 678 350 L684 340 C682 320 682 310 680 300 z" fill="#86efac" stroke="#15803d" stroke-width="2"/>
+<line x1="575" y1="260" x2="505" y2="205" stroke="#334155" stroke-width="1.6"/>
+<circle cx="575" cy="260" r="3" fill="#334155"/>
+<text x="440" y="188" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">kaudat nükleus</text>
+<line x1="705" y1="330" x2="760" y2="480" stroke="#334155" stroke-width="1.6"/>
+<circle cx="705" cy="330" r="3" fill="#334155"/>
+<text x="700" y="505" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">putamen</text>
+<line x1="565" y1="330" x2="520" y2="480" stroke="#334155" stroke-width="1.6"/>
+<circle cx="565" cy="330" r="3" fill="#334155"/>
+<text x="430" y="505" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">globus pallidus</text>
+<text x="620" y="395" font-size="17" fill="#dc2626" text-anchor="middle" font-weight="bold">hacim</text>
+<text x="620" y="418" font-size="17" fill="#dc2626" text-anchor="middle" font-weight="bold">değişiklikleri</text>
+<rect x="850" y="100" width="320" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="870" y="136" font-size="22" font-weight="bold" fill="#0f172a">C · Klinikte</text>
+<text x="870" y="170" font-size="17" fill="#1e293b" text-anchor="start">Obsesif özelliği</text>
+<text x="870" y="194" font-size="17" fill="#1e293b" text-anchor="start">olmayan çocukta ya da</text>
+<text x="870" y="218" font-size="17" fill="#1e293b" text-anchor="start">ergende tablo aniden</text>
+<text x="870" y="242" font-size="17" fill="#1e293b" text-anchor="start">başlar.</text>
+<line x1="1010" y1="260" x2="1010" y2="300" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+<text x="870" y="330" font-size="17" fill="#991b1b" text-anchor="start" font-weight="bold">Kanda streptokok</text>
+<text x="870" y="354" font-size="17" fill="#991b1b" text-anchor="start" font-weight="bold">araştırılır.</text>
+<line x1="1010" y1="370" x2="1010" y2="410" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+<text x="870" y="440" font-size="18" fill="#15803d" text-anchor="start" font-weight="bold">Tedavi: streptokok</text>
+<text x="870" y="464" font-size="18" fill="#15803d" text-anchor="start" font-weight="bold">tedavisi; OKB ilacı</text>
+<text x="870" y="488" font-size="18" fill="#15803d" text-anchor="start" font-weight="bold">değil (hoca).</text>
+<rect x="30" y="560" width="1140" height="210" rx="16" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="60" y="600" font-size="18" fill="#0f172a" text-anchor="start" font-weight="bold">Ayırıcı tanıdaki öteki tıbbi hastalıklar: Tourette sendromu, diğer tik bozuklukları, temporal lob epilepsisi.</text>
+<text x="60" y="640" font-size="17" fill="#1e293b" text-anchor="start">Kaudat nükleus ve bazal ganglionlar, OKB'de beyin görüntüleme çalışmalarında da öne çıkan bölgelerdir.</text>
+<text x="60" y="680" font-size="17" fill="#1e293b" text-anchor="start">Hoca: PANDAS'ta hacim değişikliği, OKB çalışmalarında öne çıkan bu bölgelerde saptanmıştır.</text>
+<text x="60" y="730" font-size="17" fill="#475569" text-anchor="start">Çizim şematiktir: yapıların yerleşimi sadeleştirilmiştir.</text>
+</svg>

@@ -12,7 +12,8 @@ kelime = lambda s: len(re.findall(r'\w+', s))
 BOS_KALIP = re.compile(
     r"(bu )?sorunun (cevab[ıi]|yan[ıi]t[ıi]) değil|\bcevap değil|olarak geçmez|arasında (yer almaz|geçmez|sayılmaz)"
     r"|ile ilişkilendirilmez|bu soruyla ilgisi yok"
-    r"|soruda aranan (yan[ıi]t|cevap)|aranan yan[ıi]t (ise|değil|bu)|listesinde yer almaz", re.I)  # H496: kelime dolduran kalıp ek
+    r"|soruda aranan (yan[ıi]t|cevap)|aranan yan[ıi]t (ise|değil|bu)|listesinde yer almaz"
+    r"|seçilecek (ifade|seçenek|şık) bu değil|kökte tarif edilen duruma uyan|dışarıda kalan seçenek ise", re.I)  # H496 + H511
 OLUMSUZ = re.compile(r"\b(değil\w*|yapmaz|geçmez|almaz|yoktur|olmaz|etmez|sağlamaz|toplamaz|görülmez|bulunmaz|sayılmaz)\b", re.I)
 
 

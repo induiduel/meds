@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="ten" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f5c7a1"/></radialGradient>
+<radialGradient id="bulut" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ede9fe"/></radialGradient>
+<linearGradient id="ankz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#fecaca" stop-opacity="0.1"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="damla"><path d="M0 -10 C5 -3 7 2 7 5 A7 7 0 0 1 -7 5 C-7 2 -5 -3 0 -10 z" fill="#7dd3fc" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="mikrop"><circle r="7" fill="#a3e635" stroke="#3f6212" stroke-width="1.5"/><path d="M-9 0 h-4 M9 0 h4 M0 -9 v-4 M0 9 v4" stroke="#3f6212" stroke-width="1.5"/></g>
+<g id="kok"><circle r="9" fill="#fca5a5" stroke="#991b1b" stroke-width="1.5"/></g>
+<g id="ab"><path d="M0 14 V0 M0 0 L-9 -12 M0 0 L9 -12" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">Saç yolma kompulsiyon değildir: trikotilomani ile OKB'nin farkı</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Öncesinde obsesyon yok · haz verir · içgörü iyi (slayt 18–21)</text>
+<rect x="30" y="100" width="560" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">A · OKB (yıkama kompulsiyonu)</text>
+<rect x="610" y="100" width="560" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="136" font-size="22" font-weight="bold" fill="#0f172a">B · Trikotilomani</text>
+<path d="M102 402 C66 378 60 294 102 258 C144 222 216 234 228 294 C234 318 246 330 252 348 C246 354 236 356 234 364 C236 378 228 396 204 396 C186 400 180 420 180 444 L108 444 C108 426 104 414 102 402 z" fill="url(#ten)" stroke="#9a5b34" stroke-width="2.5"/>
+<path d="M230 212 C210 184 280 145 320 168 C350 140 420 155 415 188 C450 200 410 250 360 234 C330 255 270 250 230 212 z" fill="url(#bulut)" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="330" y="205" font-size="18" fill="#7c3aed" text-anchor="middle" font-weight="bold">obsesyon var</text>
+<path d="M330 245 C340 300 360 320 400 340" fill="none" stroke="#7c3aed" stroke-width="3" marker-end="url(#okm)"/>
+<path d="M404 436 C399 412 401 388 408 374 C413 364 423 366 423 378 L425 359 C428 350 440 350 440 362 L442 366 C444 357 456 359 454 371 L454 400 C459 412 452 434 442 436 z" fill="url(#ten)" stroke="#9a5b34" stroke-width="2"/>
+<use href="#damla" x="420" y="335"/>
+<use href="#damla" x="445" y="345"/>
+<text x="400" y="455" font-size="17" fill="#c2410c" text-anchor="start" font-weight="bold">yıkama</text>
+<text x="60" y="500" font-size="17" fill="#1e293b" text-anchor="start">Davranış obsesyonu nötrlemek için yapılır.</text>
+<text x="60" y="526" font-size="17" fill="#1e293b" text-anchor="start">Kaygıyı geçici olarak azaltır, haz vermez.</text>
+<text x="60" y="560" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">Klasik OKB'de içgörü vardır.</text>
+<text x="60" y="590" font-size="17" fill="#475569" text-anchor="start" font-weight="bold">Kadın = erkek görülür.</text>
+<path d="M682 402 C646 378 640 294 682 258 C724 222 796 234 808 294 C814 318 826 330 832 348 C826 354 816 356 814 364 C816 378 808 396 784 396 C766 400 760 420 760 444 L688 444 C688 426 684 414 682 402 z" fill="url(#ten)" stroke="#9a5b34" stroke-width="2.5"/>
+<path d="M690 265 C700 225 760 215 790 240 C800 250 790 262 775 262 C760 255 740 255 725 265 C715 270 700 272 690 265 z" fill="#b45309" stroke="#78350f" stroke-width="2"/>
+<ellipse cx="755" cy="250" rx="18" ry="9" fill="#fde7d4" stroke="#9a5b34" stroke-width="1.5"/>
+<line x1="755" y1="250" x2="840" y2="170" stroke="#334155" stroke-width="1.6"/>
+<circle cx="755" cy="250" r="3" fill="#334155"/>
+<text x="845" y="168" font-size="17" fill="#78350f" text-anchor="start" font-weight="bold">seyrelmiş alan</text>
+<path d="M774 336 C769 312 771 288 778 274 C783 264 793 266 793 278 L795 259 C798 250 810 250 810 262 L812 266 C814 257 826 259 824 271 L824 300 C829 312 822 334 812 336 z" fill="url(#ten)" stroke="#9a5b34" stroke-width="2"/>
+<path d="M800 285 C800 270 790 262 775 258" fill="none" stroke="#c2410c" stroke-width="2.5" marker-end="url(#okk)"/>
+<path d="M880 254 C860 222 940 180 988 204 C1024 175 1108 190 1102 226 C1140 240 1096 295 1036 278 C1000 300 928 295 880 254 z" fill="url(#bulut)" stroke="#475569" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="1000" y="236" font-size="18" fill="#475569" text-anchor="middle" font-weight="bold">obsesyon yok</text>
+<text x="1000" y="260" font-size="17" fill="#475569" text-anchor="middle">nötrlenecek düşünce</text>
+<text x="640" y="470" font-size="17" fill="#1e293b" text-anchor="start">%75 farkında olmadan yapar: ders çalışırken,</text>
+<text x="640" y="494" font-size="17" fill="#1e293b" text-anchor="start">televizyon izlerken el saça gider.</text>
+<text x="640" y="528" font-size="17" fill="#c2410c" text-anchor="start" font-weight="bold">Davranış haz verir.</text>
+<text x="640" y="552" font-size="17" fill="#1e293b" text-anchor="start">Psikanalitik açıklama: serbest yüzen</text>
+<text x="640" y="576" font-size="17" fill="#1e293b" text-anchor="start">anksiyeteyi azaltır.</text>
+<text x="640" y="604" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">Hemen hepsinde iyi içgörü · kadınlarda daha sık.</text>
+<rect x="30" y="640" width="1140" height="130" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="60" y="680" font-size="18" fill="#0f172a" text-anchor="start" font-weight="bold">Başka nedenler de düşünülür: önce dermatolojik hastalık için konsültasyon istenir.</text>
+<text x="60" y="714" font-size="17" fill="#1e293b" text-anchor="start">Psikotik bozuklukta saç çekme özgül bir hezeyana yanıt olabilir; psikotik depresyonda kendinden</text>
+<text x="60" y="740" font-size="17" fill="#1e293b" text-anchor="start">nefret etmenin sonucu olabilir. Bu durumlar trikotilomani değildir.</text>
+</svg>

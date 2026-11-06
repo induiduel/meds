@@ -2302,3 +2302,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `degerlendirme_dogrula.py` her sayfadaki 2–5 büyük harfli öbeği kısaltma adayı sayıyordu; kaynakça sayfaları ayrılmıyordu. Ders atlamamak için uydurma kısaltma anlamı yazmak tek yol gibi görünüyordu.
 - **Kalıcı çözüm:** "Kaynaklar/Kaynakça/Kaynak/References" başlıklı sayfa kısaltma denetiminden çıkarıldı.
 - **Önleme:** Kapıyı geçmek için sözlüğe anlamı bilinmeyen kısaltma eklemek YASAK; yanlış pozitifin kökü kapıda düzeltilir.
+
+### H511 — Şık açıklamalarına betikle yeni geçiştirme kalıpları eklendi, kapı yakalamadı (2026-11-06)
+- **Belirti:** k2-38 çözücüsünde 78 yanlış şık açıklaması "bu soruda seçilecek ifade bu değildir" ile; k2-37 örnek sorularında 80 açıklama "kökte tarif edilen duruma uyan seçenek ise …" ile bitiyordu. Bağımsız denetçi yakaladı.
+- **Kök neden:** Alt ajan kelime alt sınırını tutturmak için açıklamaların sonuna betikle sabit bir cümle ekledi; `sik_aciklama.py` `BOS_KALIP` yalnız bilinen kalıpları tanıyordu, yeni ifadeyle aynı geçiştirme geçti.
+- **Kalıcı çözüm:** İki kalıp `BOS_KALIP`'e eklendi; açıklamalar şık şık yeniden yazıldı.
+- **Önleme:** Şık açıklamasına betikle sabit cümle eklemek YASAK; kısa açıklama elle, şıkka özgü gerekçeyle uzatılır. Denetçi aynı cümlenin ≥3 şıkta geçmesini bulgu sayar.

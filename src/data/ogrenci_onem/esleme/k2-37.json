@@ -1,0 +1,35 @@
+{
+ "_aciklama": "k2-37 doğrulanmış eşleme (H490, kapi.py)",
+ "kayitlar": [
+  {
+   "birim": "psk-s02-b03",
+   "tur": "anlatim",
+   "bilgi": "(abartılmış tehdit algısı, belirsizliğe toleransın düşük olması, abartılmış sorumluluk, düşüncelere aşırı önem verme, düşünceyi kontrol etme)",
+   "cumle": [
+    "Birinci inanç abartılmış tehdit algısıdır.",
+    "İkinci inanç belirsizliğe toleransın düşük olması, yani belirsizliğe tahammül edememektir.",
+    "Üçüncü inanç abartılmış sorumluluktur.",
+    "Dördüncü inanç düşüncelere aşırı önem vermektir.",
+    "Beşinci inanç düşünceyi kontrol etmeye çalışmaktır."
+   ],
+   "gerekce": "s.8 şemasındaki beş hatalı inanç anlatımda sırayla, her biri ayrı cümlede ve hocanın örnekleriyle (kapı kolu, bıçak saklama, pembe fil) veriliyor; kapı tek parça listeyi tek cümlede aradığı için düşük ölçtü.",
+   "anahtar": [
+    "tehdit algısı",
+    "belirsizliğe",
+    "sorumluluk",
+    "aşırı önem",
+    "kontrol etme"
+   ]
+  },
+  {
+   "birim": "psk-s02-b03",
+   "tur": "slayt_disi",
+   "bilgi": "Obsesif kompulsif bozukluğun bilişsel modelinde yer alan 'düşünce-eylem kaynaşması' kavramı aşağıdakilerden hangisini ifade eder? → Kötü bir şeyi düşünmenin, o eylemi fiilen yapmakla ahlaki açıdan eşdeğer olduğuna veya o olayın gerçekleşme olasılığını",
+   "yok_terimler": [
+    "düşünce-eylem kaynaşması",
+    "kaynaşma"
+   ],
+   "gerekce": "Düşünce-eylem kaynaşması kavramı 2026-27 slaytlarında (s.1–23) geçmiyor; s.8 şeması yalnız beş hatalı inancı veriyor. Kaynak dışı bilgi olduğu için anlatıma eklenmez (kural 28); en yakın içerik abartılmış sorumluluk ve düşüncelere aşırı önem verme cümleleridir."
+  }
+ ]
+}

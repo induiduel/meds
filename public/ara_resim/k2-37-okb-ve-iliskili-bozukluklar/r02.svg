@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="ten" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#fde7d4"/><stop offset="1" stop-color="#f5c7a1"/></radialGradient>
+<radialGradient id="bulut" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ede9fe"/></radialGradient>
+<linearGradient id="ankz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#fecaca" stop-opacity="0.1"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2410c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="damla"><path d="M0 -10 C5 -3 7 2 7 5 A7 7 0 0 1 -7 5 C-7 2 -5 -3 0 -10 z" fill="#7dd3fc" stroke="#0369a1" stroke-width="1.2"/></g>
+<g id="mikrop"><circle r="7" fill="#a3e635" stroke="#3f6212" stroke-width="1.5"/><path d="M-9 0 h-4 M9 0 h4 M0 -9 v-4 M0 9 v4" stroke="#3f6212" stroke-width="1.5"/></g>
+<g id="kok"><circle r="9" fill="#fca5a5" stroke="#991b1b" stroke-width="1.5"/></g>
+<g id="ab"><path d="M0 14 V0 M0 0 L-9 -12 M0 0 L9 -12" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#0f172a">Obsesyonu güçlendiren beş hatalı inanç</text>
+<text x="600" y="76" text-anchor="middle" font-size="19" fill="#475569">Bilişsel davranışçı model · hocanın örnekleri (slayt 8)</text>
+<rect x="30" y="100" width="560" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="136" font-size="22" font-weight="bold" fill="#0f172a">1–2 · Tehdit algısı ve belirsizlik</text>
+<rect x="70" y="150" width="150" height="250" rx="6" fill="#e7d3b8" stroke="#92400e" stroke-width="2.5"/>
+<path d="M180 270 C200 262 232 262 248 270 C252 276 248 282 240 282 L190 282 C182 282 176 276 180 270 z" fill="#facc15" stroke="#a16207" stroke-width="2"/>
+<use href="#mikrop" x="236" y="255"/>
+<use href="#mikrop" x="256" y="286"/>
+<use href="#mikrop" x="214" y="296"/>
+<line x1="205" y1="268" x2="260" y2="200" stroke="#334155" stroke-width="1.6"/>
+<circle cx="205" cy="268" r="3" fill="#334155"/>
+<text x="262" y="196" font-size="17" fill="#a16207" text-anchor="start" font-weight="bold">kapı kolu</text>
+<text x="290" y="240" font-size="18" fill="#dc2626" text-anchor="start" font-weight="bold">Tehdit abartılır:</text>
+<text x="290" y="264" font-size="17" fill="#1e293b" text-anchor="start">ölümcül mikrop kapma riski</text>
+<text x="290" y="286" font-size="17" fill="#1e293b" text-anchor="start">çok düşüktür, hasta bunu bilir</text>
+<text x="290" y="312" font-size="17" fill="#1e293b" text-anchor="start">ama düşünceyi durduramaz.</text>
+<text x="290" y="350" font-size="18" fill="#7c3aed" text-anchor="start" font-weight="bold">Belirsizliğe tahammül yok:</text>
+<text x="290" y="374" font-size="17" fill="#1e293b" text-anchor="start">"Çok nadir de olsa risk var,</text>
+<text x="290" y="396" font-size="17" fill="#1e293b" text-anchor="start">dokunmayayım daha iyi."</text>
+<rect x="610" y="100" width="560" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="136" font-size="22" font-weight="bold" fill="#0f172a">3 · Abartılmış sorumluluk</text>
+<rect x="650" y="230" width="220" height="140" rx="8" fill="#d6c3a5" stroke="#78350f" stroke-width="2.5"/>
+<rect x="665" y="250" width="190" height="55" rx="6" fill="#efe3cf" stroke="#78350f" stroke-width="2"/>
+<path d="M690 280 L800 270 C820 268 830 275 822 284 L690 290 z" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+<rect x="790" y="272" width="45" height="14" rx="4" fill="#1f2937"/>
+<line x1="750" y1="280" x2="720" y2="190" stroke="#334155" stroke-width="1.6"/>
+<circle cx="750" cy="280" r="3" fill="#334155"/>
+<text x="660" y="182" font-size="17" fill="#78350f" text-anchor="start" font-weight="bold">bıçaklar çekmecede saklanır</text>
+<path d="M895 232 C875 204 942 165 980 188 C1009 160 1076 175 1071 208 C1105 220 1066 270 1018 254 C990 275 933 270 895 232 z" fill="url(#bulut)" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="990" y="216" font-size="17" fill="#7c3aed" text-anchor="middle" font-weight="bold">Ya birine</text>
+<text x="990" y="238" font-size="17" fill="#7c3aed" text-anchor="middle" font-weight="bold">zarar verirsem?</text>
+<text x="890" y="320" font-size="18" fill="#0f172a" text-anchor="start" font-weight="bold">Akıldan geçmesi,</text>
+<text x="890" y="344" font-size="17" fill="#1e293b" text-anchor="start">yapacağı anlamına</text>
+<text x="890" y="366" font-size="17" fill="#1e293b" text-anchor="start">gelmez.</text>
+<rect x="30" y="450" width="560" height="320" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="486" font-size="22" font-weight="bold" fill="#0f172a">4 · Düşünceye aşırı önem</text>
+<circle cx="120" cy="600" r="22" fill="url(#bulut)" stroke="#7c3aed" stroke-width="2"/>
+<circle cx="210" cy="600" r="34" fill="url(#bulut)" stroke="#7c3aed" stroke-width="3"/>
+<circle cx="325" cy="600" r="50" fill="url(#bulut)" stroke="#7c3aed" stroke-width="4"/>
+<path d="M140 560 C160 530 180 530 195 555" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#okm)"/>
+<path d="M240 555 C260 520 290 520 305 540" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#okm)"/>
+<text x="400" y="580" font-size="17" fill="#1e293b" text-anchor="start">"Aklımdan geçtiyse</text>
+<text x="400" y="602" font-size="17" fill="#1e293b" text-anchor="start">önemlidir."</text>
+<text x="60" y="690" font-size="17" fill="#1e293b" text-anchor="start">Herkesin aklından saçma düşünceler gelip geçer;</text>
+<text x="60" y="714" font-size="17" fill="#7c3aed" text-anchor="start" font-weight="bold">önem verildikçe daha sık gelir.</text>
+<rect x="610" y="450" width="560" height="320" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="486" font-size="22" font-weight="bold" fill="#0f172a">5 · Düşünceyi kontrol etmeye çalışmak</text>
+<path d="M700 640 C690 590 720 555 780 555 C840 555 880 580 880 625 C880 650 866 662 850 662 L850 700 L830 700 L828 665 L760 665 L758 700 L738 700 L736 660 C718 660 704 655 700 640 z" fill="#f9a8d4" stroke="#9d174d" stroke-width="2.5"/>
+<path d="M700 620 C670 625 662 660 680 690" fill="none" stroke="#9d174d" stroke-width="5" stroke-linecap="round"/>
+<circle cx="725" cy="600" r="5" fill="#1f2937"/>
+<path d="M655 540 L905 715 M905 540 L655 715" stroke="#dc2626" stroke-width="4" opacity="0.55"/>
+<text x="930" y="560" font-size="18" fill="#9d174d" text-anchor="start" font-weight="bold">"Pembe fil</text>
+<text x="930" y="584" font-size="18" fill="#9d174d" text-anchor="start" font-weight="bold">düşünmeyin!"</text>
+<text x="930" y="630" font-size="17" fill="#1e293b" text-anchor="start">Düşünmemeye</text>
+<text x="930" y="654" font-size="17" fill="#1e293b" text-anchor="start">çalıştıkça fil</text>
+<text x="930" y="678" font-size="17" fill="#1e293b" text-anchor="start">zihne gelir:</text>
+<text x="930" y="702" font-size="17" fill="#dc2626" text-anchor="start" font-weight="bold">düşünce canlı kalır.</text>
+<text x="600" y="790" font-size="17" fill="#475569" text-anchor="middle">Beşi de abartma yönündedir: tehdit, sorumluluk, önem ve kontrol çabası artar; belirsizliğe tolerans düşer.</text>
+</svg>

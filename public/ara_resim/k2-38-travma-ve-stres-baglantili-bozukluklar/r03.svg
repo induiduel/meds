@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="Century Gothic, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c2833"/></marker>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdfefe"/><stop offset="1" stop-color="#eef3f7"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="720" fill="url(#zemin)"/>
+<text x="40" y="52" font-size="30" fill="#1c2833" font-weight="bold" text-anchor="start">TSSB'nin üç belirti kümesi ve eşlik eden belirtiler</text>
+<circle cx="600" cy="330" r="95" fill="#f4ecf7" stroke="#8e44ad" stroke-width="4"/>
+<text x="600" y="315" font-size="20" fill="#8e44ad" font-weight="bold" text-anchor="middle">TSSB</text>
+<text x="600" y="339" font-size="20" fill="#8e44ad" font-weight="bold" text-anchor="middle">travmatik olaydan</text>
+<text x="600" y="363" font-size="20" fill="#8e44ad" font-weight="bold" text-anchor="middle">sonra</text>
+<ellipse cx="200" cy="170" rx="190" ry="95" fill="#ffffff" stroke="#8e44ad" stroke-width="2.5"/>
+<text x="200" y="125" font-size="20" fill="#8e44ad" font-weight="bold" text-anchor="middle">1 · Yeniden yaşantılama</text>
+<text x="200" y="158" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">Olayı tekrar tekrar anımsar,</text>
+<text x="200" y="181" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">rüyalarında görür; olay gözünün</text>
+<text x="200" y="204" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">önünde fotoğraf gibi canlanır.</text>
+<ellipse cx="1000" cy="170" rx="190" ry="95" fill="#ffffff" stroke="#8e44ad" stroke-width="2.5"/>
+<text x="1000" y="125" font-size="20" fill="#8e44ad" font-weight="bold" text-anchor="middle">2 · Kaçınma</text>
+<text x="1000" y="158" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">Olayı hatırlatan yer, araç ve</text>
+<text x="1000" y="181" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">durumlardan uzak durur:</text>
+<text x="1000" y="204" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">eve girememe, arabaya binememe.</text>
+<ellipse cx="600" cy="560" rx="190" ry="95" fill="#ffffff" stroke="#8e44ad" stroke-width="2.5"/>
+<text x="600" y="515" font-size="20" fill="#8e44ad" font-weight="bold" text-anchor="middle">3 · Aşırı uyarılmışlık</text>
+<text x="600" y="548" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">Sürekli tetikte (hipervijilans):</text>
+<text x="600" y="571" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">uykusuzluk, çabuk sinirlenme,</text>
+<text x="600" y="594" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">huzursuzluk.</text>
+<path d="M515,290 Q420,250 375,215" fill="none" stroke="#8e44ad" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M685,290 Q780,250 825,215" fill="none" stroke="#8e44ad" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M600,425 Q600,445 600,462" fill="none" stroke="#8e44ad" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M54,330 H356 Q370,330 370,344 V546 Q370,560 356,560 H54 Q40,560 40,546 V344 Q40,330 54,330 Z" fill="#ffffff" stroke="#566573" stroke-width="2.5"/>
+<text x="56" y="362" font-size="21" fill="#566573" font-weight="bold" text-anchor="start">Eşlik edenler (slayt 11)</text>
+<circle cx="56" cy="384.05" r="5" fill="#566573"/>
+<text x="70" y="390" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">İlgi-istek azalması, uzaklaşma</text>
+<circle cx="56" cy="414.05" r="5" fill="#566573"/>
+<text x="70" y="420" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Duygularda kısıtlılık, donukluk</text>
+<circle cx="56" cy="444.05" r="5" fill="#566573"/>
+<text x="70" y="450" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Uykuya dalma, sürdürme güçlüğü</text>
+<circle cx="56" cy="474.05" r="5" fill="#566573"/>
+<text x="70" y="480" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">İrritabilite, öfke patlamaları</text>
+<circle cx="56" cy="504.05" r="5" fill="#566573"/>
+<text x="70" y="510" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Bellek ve dikkat bozukluğu</text>
+<path d="M844,330 H1146 Q1160,330 1160,344 V546 Q1160,560 1146,560 H844 Q830,560 830,546 V344 Q830,330 844,330 Z" fill="#ffffff" stroke="#c0392b" stroke-width="2.5"/>
+<text x="846" y="362" font-size="21" fill="#c0392b" font-weight="bold" text-anchor="start">Dikkat edilecekler</text>
+<circle cx="846" cy="384.05" r="5" fill="#566573"/>
+<text x="860" y="390" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Ağlama nöbetleri, suçluluk</text>
+<circle cx="846" cy="414.05" r="5" fill="#566573"/>
+<text x="860" y="420" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">İntihar düşüncesi: risk artar</text>
+<circle cx="846" cy="444.05" r="5" fill="#566573"/>
+<text x="860" y="450" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Depresyon eşlik edebilir</text>
+<circle cx="846" cy="474.05" r="5" fill="#566573"/>
+<text x="860" y="480" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="start">Hepsi işlevselliği bozar</text>
+<text x="40" y="704" font-size="18" fill="#566573" font-weight="normal" text-anchor="start">Kaynak: slayt 10–11; hocanın fotoğraf ve aşırı uyarılmışlık örnekleri</text>
+</svg>

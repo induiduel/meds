@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="Century Gothic, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c2833"/></marker>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdfefe"/><stop offset="1" stop-color="#eef3f7"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="720" fill="url(#zemin)"/>
+<text x="40" y="52" font-size="30" fill="#1c2833" font-weight="bold" text-anchor="start">Gerçek alarm ile öğrenilmiş alarm arasındaki fark</text>
+<path d="M54,80 H566 Q580,80 580,94 V486 Q580,500 566,500 H54 Q40,500 40,486 V94 Q40,80 54,80 Z" fill="#ffffff" stroke="#27ae60" stroke-width="2.5"/>
+<text x="56" y="112" font-size="21" fill="#27ae60" font-weight="bold" text-anchor="start">A · Gerçek alarm: tehlike gerçek</text>
+<circle cx="150" cy="230" r="16.0" fill="#34495e"/>
+<path d="M126.0,300.0 Q124.0,252.0 150,250.0 Q176.0,252.0 174.0,300.0 Z" fill="#34495e"/>
+<text x="310" y="150" font-size="18" fill="#27ae60" font-weight="bold" text-anchor="middle">Tehlike şu anda gerçekten var</text>
+<path d="M420,300 Q440,262 480,268 Q520,262 540,290 L540,320 L520,320 L515,298 L470,302 L460,322 L440,322 Z" fill="#7e5109"/>
+<circle cx="530" cy="272" r="14" fill="#7e5109"/>
+<path d="M420,290 Q320,250 200,262" fill="none" stroke="#c0392b" stroke-width="3" marker-end="url(#ok)"/>
+<text x="310" y="230" font-size="17" fill="#c0392b" font-weight="normal" text-anchor="middle">havlayarak koşan köpek</text>
+<path d="M140,398.0 C110.0,376.0 126.0,354.0 140,370.0 C154.0,354.0 170.0,376.0 140,398.0 Z" fill="#c0392b"/>
+<text x="180" y="385" font-size="18" fill="#1c2833" font-weight="normal" text-anchor="start">Uyanıklık artar, kalp ve</text>
+<text x="180" y="410" font-size="18" fill="#1c2833" font-weight="normal" text-anchor="start">solunum hızlanır, kişi kaçar.</text>
+<text x="70" y="450" font-size="18" fill="#27ae60" font-weight="bold" text-anchor="start">Korku koşullanması bu anda kişiyi korur.</text>
+<path d="M634,80 H1146 Q1160,80 1160,94 V486 Q1160,500 1146,500 H634 Q620,500 620,486 V94 Q620,80 634,80 Z" fill="#ffffff" stroke="#8e44ad" stroke-width="2.5"/>
+<text x="636" y="112" font-size="21" fill="#8e44ad" font-weight="bold" text-anchor="start">B · Öğrenilmiş alarm: tehlike geçmiş</text>
+<path d="M660,330 C760,250 900,380 1120,260" fill="none" stroke="#95a5a6" stroke-width="40" stroke-linecap="round"/>
+<path d="M660,330 C760,250 900,380 1120,260" fill="none" stroke="#fdfefe" stroke-width="3" stroke-dasharray="14 12"/>
+<circle cx="860" cy="200" r="14.4" fill="#34495e"/>
+<path d="M838.4,263.0 Q836.6,219.8 860,218.0 Q883.4,219.8 881.6,263.0 Z" fill="#34495e"/>
+<path d="M860,248.1 C846.5,238.2 853.7,228.3 860,235.5 C866.3,228.3 873.5,238.2 860,248.1 Z" fill="#ffffff"/>
+<text x="905" y="235" font-size="17" fill="#8e44ad" font-weight="normal" text-anchor="start">çarpıntı</text>
+<text x="700" y="150" font-size="18" fill="#8e44ad" font-weight="bold" text-anchor="start">Saldırının olduğu yol</text>
+<text x="660" y="400" font-size="18" fill="#1c2833" font-weight="normal" text-anchor="start">Tehlike yoktur, ama yol tehlikeyle eşleşmiştir:</text>
+<text x="660" y="425" font-size="18" fill="#1c2833" font-weight="normal" text-anchor="start">her geçişte çarpıntı, nefes darlığı ve kaçma</text>
+<text x="660" y="450" font-size="18" fill="#1c2833" font-weight="normal" text-anchor="start">isteği olur. Hatırlatıcı alarmı yeniden çaldırır.</text>
+<path d="M40,530 H1160" stroke="#d5d8dc" stroke-width="2"/>
+<ellipse cx="180" cy="610" rx="120" ry="36" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2"/>
+<text x="180" y="617" font-size="18" fill="#1c2833" font-weight="bold" text-anchor="middle">Öğrenilmiş alarm</text>
+<path d="M302,610 L321,610" fill="none" stroke="#1c2833" stroke-width="3" marker-end="url(#ok)"/>
+<ellipse cx="445" cy="610" rx="120" ry="36" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2"/>
+<text x="445" y="617" font-size="18" fill="#1c2833" font-weight="bold" text-anchor="middle">Anksiyete</text>
+<path d="M567,610 L591,610" fill="none" stroke="#1c2833" stroke-width="3" marker-end="url(#ok)"/>
+<ellipse cx="715" cy="610" rx="120" ry="36" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2"/>
+<text x="715" y="617" font-size="18" fill="#1c2833" font-weight="bold" text-anchor="middle">Kaçınma, donukluk</text>
+<path d="M837,610 L881,610" fill="none" stroke="#1c2833" stroke-width="3" marker-end="url(#ok)"/>
+<ellipse cx="1005" cy="610" rx="120" ry="36" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2"/>
+<text x="1005" y="617" font-size="18" fill="#1c2833" font-weight="bold" text-anchor="middle">Zayıf destek → TSSB</text>
+<text x="40" y="704" font-size="18" fill="#566573" font-weight="normal" text-anchor="start">Kaynak: slayt 8; hocanın köpek ve saldırı yaşanan yol örnekleri</text>
+</svg>

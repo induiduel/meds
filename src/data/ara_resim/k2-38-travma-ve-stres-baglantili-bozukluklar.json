@@ -1,0 +1,125 @@
+{
+ "key": "k2-38-travma-ve-stres-baglantili-bozukluklar",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Travmadan sonra süre ekseni",
+   "aciklama": "Akut stres bozukluğu ile TSSB'yi ayıran şey süredir: 3 gün–4 hafta akut stres bozukluğu, 1 aydan uzun TSSB, 3 aydan uzun kronik TSSB.",
+   "adimlar": [
+    "1. İlk günlerdeki korku ve uykusuzluk normal tepkidir.",
+    "2. İlk 4 haftada başlayıp 3 gün–4 hafta süren tablo akut stres bozukluğudur.",
+    "3. Belirtiler 1 aydan uzun sürerse TSSB, 3 aydan uzun sürerse kronik TSSB denir."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 2,
+   "bitis": 3,
+   "kaynak": [
+    3
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Gerçek alarm ile öğrenilmiş alarm",
+   "aciklama": "Gerçek tehlikede çalan alarm kişiyi korur; öğrenilmiş alarm ise tehlike geçtikten sonra hatırlatıcı durumlarda yeniden çalar ve kaçınmaya götürür.",
+   "adimlar": [
+    "1. Koşan köpek: uyanıklık, kalp ve solunum hızı artar, kişi kaçar.",
+    "2. Saldırı yaşanan yol tehlikeyle eşleşir.",
+    "3. Tehlike yokken de alarm çalar: anksiyete, kaçınma.",
+    "4. Destek ve baş etme zayıfsa TSSB gelişir."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 9,
+   "bitis": 10,
+   "kaynak": [
+    8
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "TSSB'nin üç belirti kümesi",
+   "aciklama": "Yeniden yaşantılama, kaçınma ve aşırı uyarılmışlık TSSB'nin çekirdeğidir; ilgi kaybı, duygusal donukluk, uyku sorunu ve intihar düşüncesi bunlara eşlik edebilir.",
+   "adimlar": [
+    "1. Yeniden yaşantılama: anılar, rüyalar.",
+    "2. Kaçınma: hatırlatıcılardan uzak durma.",
+    "3. Aşırı uyarılmışlık: uykusuzluk, sinirlilik, tetikte olma.",
+    "4. Eşlik edenler ve intihar riski."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 12,
+   "bitis": 13,
+   "kaynak": [
+    10,
+    11
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "TSSB'de ilaç basamakları ve süre",
+   "aciklama": "İlk seçenek SSGİ ya da venlafaksindir; etkisizse trisikliğe geçilir, karbamazepin belirtiye göre eklenir. Yanıt 2–3 ayda gelir, ilaç ortalama 12 ay, kronik TSSB'de 24 aya dek sürer.",
+   "adimlar": [
+    "1. SSGİ ya da venlafaksin ile başlanır.",
+    "2. Etkisizse trisiklik antidepresana geçilir.",
+    "3. Öfke ve dalgalanmada karbamazepin eklenebilir.",
+    "4. Yanıt 2–3 ayda; tedavi 12 ay, kronikte 24 ay."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 18,
+   "bitis": 18,
+   "kaynak": [
+    14,
+    15
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Aynı sel, iki farklı tablo",
+   "aciklama": "Selde malını kaybedip alışamayan çiftçide uyum bozukluğu, selde ölümle karşılaşıp görüntüleri yeniden yaşayan çiftçide TSSB düşünülür.",
+   "adimlar": [
+    "1. Olay ortaktır: sel.",
+    "2. Kayba alışamama, borç kaygısı: uyum bozukluğu.",
+    "3. Ölümle karşılaşma, görüntüler ve rüyalar: TSSB."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 25,
+   "bitis": 25,
+   "kaynak": [
+    21
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Uyum bozukluğunda 3 ay ve 6 ay kuralı",
+   "aciklama": "Belirtiler stres etkeninden sonra genellikle 3 ay içinde başlar; etken ya da sonuçları kalkınca 6 aydan uzun sürmez.",
+   "adimlar": [
+    "1. Yaşam değişikliği olur.",
+    "2. 3 ay içinde belirtiler başlar.",
+    "3. Etken kalkınca belirtiler 6 ay içinde geçer.",
+    "4. TSSB'den farkı: travma yok, süre sınırlı."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 26,
+   "bitis": 26,
+   "kaynak": [
+    21,
+    22
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Artık tanı: önce öteki tablolar elenir",
+   "aciklama": "Gösterilebilir stres etkenine tepki olup başka özgül ruhsal bozukluk tanısı konamıyorsa uyum bozukluğu denir; bu yüzden ayırıcı tanı çok önemlidir.",
+   "adimlar": [
+    "1. Depresyon, anksiyete, panik, davranım bozukluğu düşünülür.",
+    "2. Travma varsa akut stres bozukluğu ya da TSSB, ölüm sonrasıysa yas.",
+    "3. Psikotik ve kişilik bozuklukları elenir.",
+    "4. Geriye kalan stres tepkisi uyum bozukluğudur."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 28,
+   "bitis": 28,
+   "kaynak": [
+    24
+   ]
+  }
+ ]
+}

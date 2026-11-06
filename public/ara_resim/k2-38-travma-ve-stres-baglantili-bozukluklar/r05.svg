@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="Century Gothic, Arial, sans-serif">
+<defs><marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c2833"/></marker>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdfefe"/><stop offset="1" stop-color="#eef3f7"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="720" fill="url(#zemin)"/>
+<text x="40" y="52" font-size="30" fill="#1c2833" font-weight="bold" text-anchor="start">Aynı sel, iki farklı tablo: uyum bozukluğu mu, TSSB mi?</text>
+<path d="M420,250 C480,210 540,290 600,250 C660,210 720,290 780,250 L780,320 L420,320 Z" fill="#aed6f1" stroke="#2471a3" stroke-width="3"/>
+<path d="M480,250 V205 L520,175 L560,205 V250 Z" fill="#d35400" stroke="#6e2c00" stroke-width="2"/>
+<circle cx="690" cy="175" r="12.8" fill="#34495e"/>
+<path d="M670.8,231.0 Q669.2,192.6 690,191.0 Q710.8,192.6 709.2,231.0 Z" fill="#34495e"/>
+<text x="520" y="300" font-size="17" fill="#2471a3" font-weight="normal" text-anchor="middle">su basmış ev, tarla</text>
+<text x="690" y="300" font-size="17" fill="#1c2833" font-weight="normal" text-anchor="middle">çiftçi</text>
+<text x="600" y="120" font-size="22" fill="#1c2833" font-weight="bold" text-anchor="middle">Ortak olay: selde zarar gören çiftçi</text>
+<text x="600" y="160" font-size="18" fill="#566573" font-weight="normal" text-anchor="middle">Olay aynı; kişinin bakış açısı ve belirtileri farklı</text>
+<path d="M470,330 Q350,380 300,420" fill="none" stroke="#2471a3" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M730,330 Q850,380 900,420" fill="none" stroke="#8e44ad" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M54,420 H546 Q560,420 560,434 V656 Q560,670 546,670 H54 Q40,670 40,656 V434 Q40,420 54,420 Z" fill="#ffffff" stroke="#2471a3" stroke-width="2.5"/>
+<text x="56" y="452" font-size="21" fill="#2471a3" font-weight="bold" text-anchor="start">Uyum bozukluğu</text>
+<circle cx="60" cy="473.35" r="5" fill="#566573"/>
+<text x="74" y="480" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Kaybı kabul edemiyor, alışamıyor</text>
+<circle cx="60" cy="507.35" r="5" fill="#566573"/>
+<text x="74" y="514" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Borcu nasıl ödeyeceğini bilmiyor</text>
+<circle cx="60" cy="541.35" r="5" fill="#566573"/>
+<text x="74" y="548" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Travma yok, yaşam değişikliği var</text>
+<circle cx="60" cy="575.35" r="5" fill="#566573"/>
+<text x="74" y="582" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Belirtiler 3 ay içinde başlar</text>
+<circle cx="60" cy="609.35" r="5" fill="#566573"/>
+<text x="74" y="616" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Zarar tazmin edilince belirti kalkar</text>
+<path d="M654,420 H1146 Q1160,420 1160,434 V656 Q1160,670 1146,670 H654 Q640,670 640,656 V434 Q640,420 654,420 Z" fill="#ffffff" stroke="#8e44ad" stroke-width="2.5"/>
+<text x="656" y="452" font-size="21" fill="#8e44ad" font-weight="bold" text-anchor="start">TSSB</text>
+<circle cx="660" cy="473.35" r="5" fill="#566573"/>
+<text x="674" y="480" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Selde kalmış, ölümle karşılaşmış</text>
+<circle cx="660" cy="507.35" r="5" fill="#566573"/>
+<text x="674" y="514" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Görüntüler gözünün önüne geliyor</text>
+<circle cx="660" cy="541.35" r="5" fill="#566573"/>
+<text x="674" y="548" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Olayı rüyalarında görüyor</text>
+<circle cx="660" cy="575.35" r="5" fill="#566573"/>
+<text x="674" y="582" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Travmatik olay şarttır</text>
+<circle cx="660" cy="609.35" r="5" fill="#566573"/>
+<text x="674" y="616" font-size="19" fill="#1c2833" font-weight="normal" text-anchor="start">Belirtiler 1 aydan uzun sürer</text>
+<text x="40" y="704" font-size="18" fill="#566573" font-weight="normal" text-anchor="start">Kaynak: slayt 3, 17, 21; hocanın seldeki çiftçi örneği</text>
+</svg>
