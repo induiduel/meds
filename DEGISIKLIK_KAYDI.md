@@ -1,3 +1,6 @@
+## 2026-11-06 (7) — Sesli ders yakınlık sınırı %80–%140 (onem 658)
+- `CanliDersDers.tsx` `Z_MIN/Z_MAX` (0,8/1,4): düğmeler ±0,1, kayıtlı değer sınır dışıysa 1; `PdfDocView` `zoomMin/zoomMax` (kıstırma + tekerlek; varsayılan 0,5–4 öteki ekranlarda).
+
 ## 2026-11-06 (6) — Kıstırma yumuşatıldı (onem 657)
 - `PdfDocView.tsx`: önizleme her sayfa yerine tek `.pdv-track` dönüşümü (parmak ortası çapa, iki parmak kaydırma, kare başına bir çizim);
   bırakınca çapa sayfa + sayfa içi oranla geri kurulur (sayfa araları ölçeklenmediği için düz y·k kayıyordu). Belirti: büyütürken sıçrama, bırakınca başka yere atlama.

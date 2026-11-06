@@ -33,6 +33,9 @@ export interface PdfDocViewProps {
   /** 1 = sayfa genişliğine sığdır */
   zoom: number;
   onZoom?: (z: number) => void;
+  /** kıstırma/tekerlek yakınlık sınırları (varsayılan 0,5–4) */
+  zoomMin?: number;
+  zoomMax?: number;
   onVisiblePage?: (p: number) => void;
   onLoaded?: (numPages: number) => void;
   onError?: (message: string) => void;
@@ -208,7 +211,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null, pageOverlay, ekAlt = null, izgara = null }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null, pageOverlay, ekAlt = null, izgara = null, zoomMin = 0.5, zoomMax = 4 }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -638,6 +641,8 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
   // Ctrl/⌘ + tekerlek (ve dokunmatik yüzey kıstırma) ile yakınlaştırma
   const zoomRef = useRef(zoom);
   zoomRef.current = zoom;
+  const sinirRef = useRef([zoomMin, zoomMax]);
+  sinirRef.current = [zoomMin, zoomMax];
   const kipCapa = kipCapaRef;
   useEffect(() => {
     const el = scrollRef.current;
@@ -645,7 +650,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     const onWheel = (e: WheelEvent) => {
       if (!e.ctrlKey && !e.metaKey) return;
       e.preventDefault();
-      const z = Math.max(0.5, Math.min(4, zoomRef.current * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
+      const z = Math.max(sinirRef.current[0], Math.min(sinirRef.current[1], zoomRef.current * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
       cb.current.onZoom?.(Math.round(z * 100) / 100);
     };
     // İki parmakla kıstırma (dokunmatik, 2026-11-06; yumuşatıldı): hareket sırasında yalnız .pdv-track'e GPU dönüşümü
@@ -659,7 +664,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       return { x: (t[0].clientX + t[1].clientX) / 2 - r.left, y: (t[0].clientY + t[1].clientY) / 2 - r.top };
     };
     const mesafe = (t: TouchList) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
-    const sinirla = (z: number) => Math.round(Math.max(0.5, Math.min(4, z)) * 100) / 100;
+    const sinirla = (z: number) => Math.round(Math.max(sinirRef.current[0], Math.min(sinirRef.current[1], z)) * 100) / 100;
     const ciz = () => {
       kare = 0;
       const tr = iz();

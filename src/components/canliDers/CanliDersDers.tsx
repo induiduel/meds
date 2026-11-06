@@ -1814,6 +1814,9 @@ function DersBolumEtiketi({ detay }: { detay: CdDetay }) {
 
 /* ---------------- PDF ---------------- */
 
+/** Sesli ders slayt yakınlığı sınırı (kullanıcı kararı 2026-11-06): %80–%140 */
+const Z_MIN = 0.8, Z_MAX = 1.4;
+
 function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: boolean; sigdir?: boolean }) {
   const pdf = detay.pdf!;
   const info = useDeckPdf(pdf.deckId);
@@ -1822,13 +1825,13 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
   const { durdu, durdur, surdur } = useTakip();
   // Yakınlık kalıcı (2026-11-06): kıstırma/düğmeyle seçilen ölçek görünüm başına (genişlik/sayfa sığdırma) saklanır
   const zoomKey = `medsoru_cd_pdf_zoom_${sigdir ? 'sayfa' : 'genislik'}`;
-  const [zoom, setZoomHam] = useState(() => { try { const v = Number(localStorage.getItem(zoomKey)); return v >= 0.5 && v <= 4 ? v : 1; } catch { return 1; } });
+  const [zoom, setZoomHam] = useState(() => { try { const v = Number(localStorage.getItem(zoomKey)); return v >= Z_MIN && v <= Z_MAX ? v : 1; } catch { return 1; } });
   const setZoom = useCallback((z: number | ((o: number) => number)) => setZoomHam((o) => {
-    const n = typeof z === 'function' ? z(o) : z;
+    const n = Math.max(Z_MIN, Math.min(Z_MAX, Math.round((typeof z === 'function' ? z(o) : z) * 100) / 100));
     try { localStorage.setItem(zoomKey, String(n)); } catch { /* yok */ }
     return n;
   }), [zoomKey]);
-  useEffect(() => { try { const v = Number(localStorage.getItem(zoomKey)); setZoomHam(v >= 0.5 && v <= 4 ? v : 1); } catch { /* yok */ } }, [zoomKey]);
+  useEffect(() => { try { const v = Number(localStorage.getItem(zoomKey)); setZoomHam(v >= Z_MIN && v <= Z_MAX ? v : 1); } catch { /* yok */ } }, [zoomKey]);
   const [barGizli, setBarGizli] = useState(() => { try { return localStorage.getItem('cd_pdf_bar_gizli') === '1'; } catch { return false; } });
   const barDegis = () => setBarGizli((g) => { try { localStorage.setItem('cd_pdf_bar_gizli', g ? '0' : '1'); } catch { /* yok */ } return !g; });
   const [sayfaTema, setSayfaTema] = useState<'ozgun' | 'temiz' | 'sepya' | 'gece'>(() => {
@@ -2052,14 +2055,14 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
         )}
         {/* H332: v15'te sayfa teması (seyrek) PDF ⋯ menüsüne girdi; yakınlaştırma masaüstünde görünür, telefonda (≤600 px) menüde */}
         {!v15 && <button type="button" className="cd-ib" onClick={sonrakiTema} aria-label="Sayfa temasını değiştir" title={`Sayfa teması: ${({ ozgun: 'Özgün', temiz: 'Temiz', sepya: 'Sepya', gece: 'Gece' })[sayfaTema]} (değiştirmek için tıkla)`}><Palette /></button>}
-        <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır" title="Uzaklaştır"><Minus /></button>
+        <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => z - 0.1)} aria-label="Uzaklaştır" title="Uzaklaştır"><Minus /></button>
         <span className="cd-pdf-zoom">{Math.round(zoom * 100)}%</span>
-        <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))} aria-label="Yakınlaştır" title="Yakınlaştır"><Plus /></button>
+        <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => z + 0.1)} aria-label="Yakınlaştır" title="Yakınlaştır"><Plus /></button>
         {v15 && (
           <CdTasmaMenu etiket="PDF seçenekleri" className="cd-pdf-tm" ogeler={[
             { ad: `Sayfa teması: ${({ ozgun: 'Özgün', temiz: 'Temiz', sepya: 'Sepya', gece: 'Gece' })[sayfaTema]}`, ikon: <Palette />, ipucu: 'değiştir', kalAcik: true, onSec: sonrakiTema },
-            { ad: 'Yakınlaştır', ikon: <Plus />, ipucu: `%${Math.round(zoom * 100)}`, kalAcik: true, disabled: zoom >= 3, ayrac: true, onSec: () => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2))) },
-            { ad: 'Uzaklaştır', ikon: <Minus />, kalAcik: true, disabled: zoom <= 0.5, onSec: () => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2))) },
+            { ad: 'Yakınlaştır', ikon: <Plus />, ipucu: `%${Math.round(zoom * 100)}`, kalAcik: true, disabled: zoom >= Z_MAX, ayrac: true, onSec: () => setZoom((z) => z + 0.1) },
+            { ad: 'Uzaklaştır', ikon: <Minus />, kalAcik: true, disabled: zoom <= Z_MIN, onSec: () => setZoom((z) => z - 0.1) },
             { ad: 'Sayfaya sığdır (%100)', ikon: <FileText />, kalAcik: true, disabled: zoom === 1, onSec: () => setZoom(1) },
           ]} />
         )}
@@ -2084,6 +2087,8 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
               preload={preload}
               zoom={zoom}
               onZoom={setZoom}
+              zoomMin={Z_MIN}
+              zoomMax={Z_MAX}
               onVisiblePage={onVisible}
               onError={setHataMsj}
               fit={sigdir ? 'page' : 'width'}
