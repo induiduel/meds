@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 660,
-  "baslik": "Sesli derslerde PDF açılmama sorunu düzeltildi",
+  "onem": 661,
+  "baslik": "iPad'de sesli dersten geri çıkma düzeltildi",
   "maddeler": [
-    "Sesli ders: Polinöropati, Bazal Ganglionlar ve yeni psikiyatri/farmakoloji derslerinin PDF'i artık uygulama içinde açılıyor."
+    "iPad: Sesli ders başlığına dokununca geri dönülüyor; alt 'Geri' düğmesi artık her iPad'de görünüyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Sesli ders: Polinöropati, Bazal Ganglionlar ve yeni psikiyatri/farmakoloji derslerinin PDF'i artık uygulama içinde açılıyor."
+    "iPad: Sesli ders başlığına dokununca geri dönülüyor; alt 'Geri' düğmesi artık her iPad'de görünüyor."
   ],
   "silinen": [],
   "yenilikler": []

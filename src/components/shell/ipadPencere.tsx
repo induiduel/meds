@@ -81,12 +81,21 @@ export function useIpadPencere(): boolean {
       if (dx > 80 && dy < 50 && Date.now() - bas.t < 600 && !pencereAcik()) geriTetikle();
       bas = null;
     };
+    // Başlık = geri (odak ekranları dahil): sesli ders başlığı (.cd15-baslik) kabuk dışında çizildiği için
+    // .v15-top-h.is-geri yolu oraya hiç ulaşmıyordu; iPad'de başlığa dokunmak her ekranda geri götürür.
+    const baslik = (e: MouseEvent) => {
+      if (!ipadMi() || !(e.target instanceof Element) || !e.target.closest('.cd15-baslik')) return;
+      e.preventDefault();
+      geriTetikle(false);
+    };
+    document.addEventListener('click', baslik);
     window.addEventListener('keydown', tus);
     window.addEventListener('touchstart', dokun, { passive: true });
     window.addEventListener('touchend', birak, { passive: true });
     return () => {
       window.removeEventListener('resize', guncelle);
       window.visualViewport?.removeEventListener('resize', guncelle);
+      document.removeEventListener('click', baslik);
       window.removeEventListener('keydown', tus);
       window.removeEventListener('touchstart', dokun);
       window.removeEventListener('touchend', birak);
@@ -111,7 +120,7 @@ export const IpadGeriHap: React.FC<{ goster: boolean; etiket?: string }> = ({ go
     window.addEventListener('scroll', kay, { capture: true, passive: true });
     return () => { window.removeEventListener('ipad-hap', ogren); window.removeEventListener('scroll', kay, { capture: true }); };
   }, []);
-  if (!goster || (!kalici && document.documentElement.dataset.pencere !== 'dar')) return null;
+  if (!goster || (!kalici && !ipadMi() && document.documentElement.dataset.pencere !== 'dar')) return null;
   return createPortal(
     <button type="button" className={`ipad-geri-hap print:hidden${kucuk ? ' is-kucuk' : ''}`} onClick={() => geriTetikle(false)} aria-label={etiket ? `Geri: ${etiket}` : 'Geri'}>
       <ChevronLeft aria-hidden="true" />

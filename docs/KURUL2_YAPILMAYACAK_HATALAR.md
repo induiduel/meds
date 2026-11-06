@@ -2272,3 +2272,15 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** sesli ders görüntüleyicisi "Bu dersin PDF'i uygulama içinde açılamıyor" + "Drive'da aç" gösteriyordu (k2-17, k2-18; canlıda k2-19 de).
 - **Kök neden:** destesiz (Öğren askıda) yeni derslerin PDF'i yalnız `src/services/lecturePdfLocator.ts::SANAL_DESTELER` kaydıyla bulunur. (1) k2-17/k2-18 hizalaması yazılmış ama kayıt eklenmemişti → `/api/lecture-pdf/deck/<id>` boş dosya listesi. (2) k2-15/16 kaydı eklenmiş, `meds-web` yeniden başlatılmadığı için yerel sunucuda görünmüyordu (AGENTS 12); k2-19/20/21 kaydı commit/dağıtım bekliyordu.
 - **Çözüm/önleme:** iki kayıt eklendi, sunucu yeniden başlatıldı, dağıtıldı. Yeni kapı `python3 scripts/kapilar/ders_pdf_kapisi.py [--sunucu …]`: her `data/sesli_anlatim/hizalama/k2-*.json` deckId'si sunucu kataloğunda açılabilir PDF'le bulunmalı (0 HATA). Kural: `ders-ekle`/hizalama sonrası SANAL_DESTELER kaydı + `meds-web` restart + bu kapı (yerel ve Oracle) — kapı geçmeden ders yayında sayılmaz.
+
+### H506 — Ara resimler kısa kelime öbekli kutu şemasıydı, öğretmiyordu (2026-11-06)
+- **Belirti:** Kullanıcı: ara resimler "kısa kelime cümle öbekleri ile anlaşılmaz", ucuz ve ihmalkâr; akademik doğru, ayrıntılı, vektörel/Lottie/illüstrasyon istendi.
+- **Kök neden:** `ARA_RESIM_KURALLARI.md` resim içi metni "en çok ~40 kelime" ile sınırlıyordu, kapı 40'ı aşanı UYARI/60'ı HATA sayıyordu; çizim zenginliği hiç ölçülmüyordu. Yazar bu yüzden 2–3 renkli kutu + 3 kelimelik etiket üretti. Ayrıca kural "slayt resmi" çağrışımıyla dar yorumlandı.
+- **Kalıcı çözüm:** Üst sınır kaldırıldı; standart "Ayrıntı ve akademik çizim" bölümü (yapı çizimi, paneller, kılavuzlu etiket, slayt kaynaklı doğruluk, isteğe bağlı Lottie `lottie` alanı). Slaytta resim olmasa da mekanizma/sıralı aşama/görselleştirilebilir konu resimlenir; slayttaki mevcut resmi yeniden çizmek yasak. Kapı (`dogrula.py`): <45 kelime, <12 etiket, <15 çizim ögesi, <2 eğrili yol → HATA. Ekran `CdAraResim` Lottie oynatır (SVG yedek).
+- **Önleme:** Yeni ara resim kapıdan 0 HATA geçmeden yayına girmez; ölçü örneği k2-07 r01.
+
+### H507 — iPad'de sesli dersten geri çıkılamıyordu; "başlığa bas = geri" çalışmıyordu (2026-11-06)
+- **Belirti:** iPad'de geri tuşu görünmüyor (sistem düğmeleri kapatıyor); sesli ders başlığına basınca da geri gidilmiyordu.
+- **Kök neden:** (1) başlık-geri yalnız kabuk üst barındaki `.v15-top-h.is-geri`'ye bağlıydı; sesli ders odak ekranı kabuk barını çizmez, kendi `.cd15-baslik`'ını çizer → işleyici yoktu. (2) Alt "‹ Geri" hapı yalnız pencere kipi algılanınca (`data-pencere="dar"`) ya da 2 yedek kullanımdan sonra çıkıyordu; tam ekran Safari'de algı tutmadığı için hiç görünmüyordu.
+- **Çözüm:** `shell/ipadPencere.tsx` — iPad'de `.cd15-baslik` tıklaması `geriTetikle()`; hap iPad'de her zaman (geri varken) gösterilir.
+- **Kural:** Geri yolu eklerken odak ekranlarını (kabuk dışı başlıklar) ayrıca kapsa; "algılanırsa göster" türü güvenlik yollarını algının başarısız olduğu durumda da sına.
