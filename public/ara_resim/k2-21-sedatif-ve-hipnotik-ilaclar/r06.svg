@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" width="1200" height="740" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<radialGradient id="kre" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/></radialGradient>
+<radialGradient id="kar" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#ffedd5"/><stop offset="1" stop-color="#fdba74"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="cl"><circle r="11" fill="#bbf7d0" stroke="#15803d" stroke-width="1.5"/><text y="5" text-anchor="middle" font-size="17" font-weight="bold" fill="#14532d">Cl⁻</text></g>
+<g id="gaba"><path d="M0 -10 L9 5 L-9 5 z" fill="#a78bfa" stroke="#5b21b6" stroke-width="1.5"/></g>
+<g id="bzd"><rect x="-9" y="-9" width="18" height="18" rx="3" fill="#60a5fa" stroke="#1e40af" stroke-width="1.5"/></g>
+<g id="bar"><path d="M0 -11 L11 0 L0 11 L-11 0 z" fill="#fb923c" stroke="#9a3412" stroke-width="1.5"/></g>
+</defs>
+<rect width="1200" height="740" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="27" font-weight="bold" fill="#0f172a">Sedatif-hipnotikler uyku düzenini dört yönde değiştirir</text>
+<text x="600" y="74" text-anchor="middle" font-size="18" fill="#475569">Benzodiazepinler ve eski sedatif-hipnotikler · slayt 25</text>
+<rect x="30" y="95" width="1140" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="129" font-size="21" font-weight="bold" fill="#0f172a">A · Uyku evrelerinin süresi: ilaçsız ve ilaçla</text>
+<text x="60" y="178" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Uykuya dalma</text>
+<rect x="330" y="160" width="120" height="22" rx="6" fill="#94a3b8" opacity="0.45"/>
+<rect x="330" y="186" width="70" height="22" rx="6" fill="#94a3b8"/>
+<text x="470" y="198" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">kısalır</text>
+<text x="60" y="240" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Evre 2 NREM</text>
+<rect x="330" y="222" width="260" height="22" rx="6" fill="#60a5fa" opacity="0.45"/>
+<rect x="330" y="248" width="360" height="22" rx="6" fill="#60a5fa"/>
+<text x="710" y="260" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">uzar</text>
+<text x="60" y="302" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Evre 4 NREM (yavaş dalga)</text>
+<rect x="330" y="284" width="200" height="22" rx="6" fill="#1e40af" opacity="0.45"/>
+<rect x="330" y="310" width="110" height="22" rx="6" fill="#1e40af"/>
+<text x="550" y="322" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">azalır</text>
+<text x="60" y="364" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">REM</text>
+<rect x="330" y="346" width="220" height="22" rx="6" fill="#a78bfa" opacity="0.45"/>
+<rect x="330" y="372" width="140" height="22" rx="6" fill="#a78bfa"/>
+<text x="570" y="384" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">kısalır</text>
+<rect x="830" y="150" width="20" height="14" fill="#94a3b8" opacity="0.45"/><text x="860" y="163" font-size="17" fill="#475569" text-anchor="start">ilaçsız</text>
+<rect x="830" y="175" width="20" height="14" fill="#94a3b8"/><text x="860" y="188" font-size="17" fill="#475569" text-anchor="start">ilaçla</text>
+<path d="M900 250 C890 215 918 188 955 193 C974 170 1020 175 1029 202 C1066 207 1070 252 1033 266 C1015 293 955 293 936 269 C909 274 898 264 900 250 z" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<path d="M943 208 C961 225 952 247 970 263" stroke="#6d28d9" stroke-width="1.6" fill="none"/>
+<path d="M998 193 C996 225 1012 240 1019 261" stroke="#6d28d9" stroke-width="1.6" fill="none"/>
+<text x="982" y="312" font-size="17" fill="#5b21b6" text-anchor="middle">uyku beyinde düzenlenir</text>
+<path d="M880 355 C895 330 910 382 925 355 C940 330 955 382 970 355 C985 332 1000 378 1015 355" stroke="#1d4ed8" stroke-width="2.5" fill="none"/>
+<path d="M880 388 C910 340 940 436 970 388 C1000 342 1030 434 1060 388" stroke="#1e40af" stroke-width="3" fill="none"/>
+<text x="948" y="340" font-size="17" fill="#1d4ed8" text-anchor="middle">hızlı dalga</text>
+<text x="970" y="418" font-size="17" fill="#1e40af" text-anchor="middle">yavaş dalga</text>
+<rect x="30" y="440" width="1140" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="474" font-size="21" font-weight="bold" fill="#0f172a">B · Yeni hipnotiklerin farklı profili (hepsi uykuya dalmayı kısaltır)</text>
+<circle cx="74" cy="512" r="10" fill="#2563eb"/>
+<text x="94" y="518" font-size="18" fill="#1e3a8a" text-anchor="start" font-weight="bold">Zolpidem</text>
+<text x="94" y="548" font-size="17" fill="#1e293b" text-anchor="start">REM'i azaltır; yavaş dalga</text>
+<text x="94" y="572" font-size="17" fill="#1e293b" text-anchor="start">uykusuna çok az etki</text>
+<circle cx="444" cy="512" r="10" fill="#2563eb"/>
+<text x="464" y="518" font-size="18" fill="#1e3a8a" text-anchor="start" font-weight="bold">Zaleplon</text>
+<text x="464" y="548" font-size="17" fill="#1e293b" text-anchor="start">yalnız uykunun başlama</text>
+<text x="464" y="572" font-size="17" fill="#1e293b" text-anchor="start">süresini kısaltır</text>
+<circle cx="814" cy="512" r="10" fill="#2563eb"/>
+<text x="834" y="518" font-size="18" fill="#1e3a8a" text-anchor="start" font-weight="bold">Eszopiklon</text>
+<text x="834" y="548" font-size="17" fill="#1e293b" text-anchor="start">evre 2 NREM'i artırarak</text>
+<text x="834" y="572" font-size="17" fill="#1e293b" text-anchor="start">toplam uyku süresini uzatır</text>
+<rect x="30" y="646" width="1140" height="54" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="600" y="680" font-size="18" fill="#0f172a" text-anchor="middle" font-weight="bold">Bu ilaçlar uyku kalıplarını etkilemez demek yanlıştır: dört evrenin dördü de değişir.</text>
+<text x="600" y="726" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 25 · çubuk boyları şematiktir, ölçü değildir</text>
+</svg>

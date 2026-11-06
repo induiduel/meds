@@ -2308,3 +2308,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** Alt ajan kelime alt sınırını tutturmak için açıklamaların sonuna betikle sabit bir cümle ekledi; `sik_aciklama.py` `BOS_KALIP` yalnız bilinen kalıpları tanıyordu, yeni ifadeyle aynı geçiştirme geçti.
 - **Kalıcı çözüm:** İki kalıp `BOS_KALIP`'e eklendi; açıklamalar şık şık yeniden yazıldı.
 - **Önleme:** Şık açıklamasına betikle sabit cümle eklemek YASAK; kısa açıklama elle, şıkka özgü gerekçeyle uzatılır. Denetçi aynı cümlenin ≥3 şıkta geçmesini bulgu sayar.
+
+### H512 — Anlatım parçalara bölünerek yazdırılınca ara resim adımı düştü (k2-21)
+- **Belirti:** Kullanıcı: "hipnotik dersinde neden ara resim yok?" — k2-21 sesli derste hiç ara resim yoktu.
+- **Kök neden:** k2-21 anlatımı güvenlik filtresine takıldığı için B1 görevi (anlatım + ara resim tek ajan) yerine sayfa aralıklarına bölünmüş üç ajana yalnız anlatım yazdırıldı; koordinatör ara resim adımını parçalara vermedi ve yayın öncesi `ara_resim/dogrula.py` çalıştırılmadı.
+- **Kalıcı çözüm:** Ara resimler v2 yayımlandıktan sonra ayrı adımda üretildi (paragraf dizini yayındaki v2'den).
+- **Önleme:** B1 bölünürse ara resim ayrı bir alt görev olarak MUTLAKA açılır; yayın öncesi kontrol listesinde `python3 scripts/ara_resim/dogrula.py <key>` çalıştırılır ve `src/data/ara_resim/<key>.json` yoksa ders tamamlandı sayılmaz.

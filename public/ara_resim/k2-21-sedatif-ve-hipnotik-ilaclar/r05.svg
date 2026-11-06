@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<radialGradient id="kre" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/></radialGradient>
+<radialGradient id="kar" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#ffedd5"/><stop offset="1" stop-color="#fdba74"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<g id="cl"><circle r="11" fill="#bbf7d0" stroke="#15803d" stroke-width="1.5"/><text y="5" text-anchor="middle" font-size="17" font-weight="bold" fill="#14532d">Cl⁻</text></g>
+<g id="gaba"><path d="M0 -10 L9 5 L-9 5 z" fill="#a78bfa" stroke="#5b21b6" stroke-width="1.5"/></g>
+<g id="bzd"><rect x="-9" y="-9" width="18" height="18" rx="3" fill="#60a5fa" stroke="#1e40af" stroke-width="1.5"/></g>
+<g id="bar"><path d="M0 -11 L11 0 L0 11 L-11 0 z" fill="#fb923c" stroke="#9a3412" stroke-width="1.5"/></g>
+</defs>
+<rect width="1200" height="720" fill="url(#zemin)"/>
+<text x="600" y="44" text-anchor="middle" font-size="27" font-weight="bold" fill="#0f172a">Benzodiazepin bağlanma yerinde üç tip ligand</text>
+<text x="600" y="74" text-anchor="middle" font-size="18" fill="#475569">Agonist, antagonist, ters agonist · slayt 23</text>
+<rect x="30" y="95" width="370" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="129" font-size="21" font-weight="bold" fill="#0f172a">A · Agonist</text>
+<path d="M90 220 C90 160 180 150 215 150 C250 150 340 160 340 220 L340 260 L90 260 z" fill="#fca5a5" stroke="#991b1b" stroke-width="2"/>
+<path d="M190 260 C190 230 240 230 240 260" fill="#ffffff" stroke="#991b1b" stroke-width="2"/>
+<rect x="198" y="238" width="34" height="26" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+<text x="215" y="200" font-size="17" fill="#7f1d1d" text-anchor="middle">bağlanma yeri</text>
+<text x="50" y="300" font-size="17" fill="#2563eb" text-anchor="start" font-weight="bold">GABA etkisini kolaylaştırır</text>
+<text x="50" y="332" font-size="17" fill="#1e293b" text-anchor="start">Benzodiazepinler;</text>
+<text x="50" y="356" font-size="17" fill="#1e293b" text-anchor="start">Z-ilaçları yalnız α1 içeren</text>
+<text x="50" y="380" font-size="17" fill="#1e293b" text-anchor="start">yerde seçici agonist</text>
+<path d="M215 420 L215 460" stroke="#2563eb" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="50" y="470" width="330" height="80" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="215" y="505" font-size="19" fill="#2563eb" text-anchor="middle" font-weight="bold">↑ GABA etkisi</text>
+<text x="215" y="532" font-size="17" fill="#0f172a" text-anchor="middle">Kanal işlevi artar</text>
+<rect x="415" y="95" width="370" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="435" y="129" font-size="21" font-weight="bold" fill="#0f172a">B · Antagonist</text>
+<path d="M475 220 C475 160 565 150 600 150 C635 150 725 160 725 220 L725 260 L475 260 z" fill="#fca5a5" stroke="#991b1b" stroke-width="2"/>
+<path d="M575 260 C575 230 625 230 625 260" fill="#ffffff" stroke="#991b1b" stroke-width="2"/>
+<rect x="583" y="238" width="34" height="26" rx="5" fill="#f1f5f9" stroke="#475569" stroke-width="2.5"/>
+<text x="600" y="200" font-size="17" fill="#7f1d1d" text-anchor="middle">bağlanma yeri</text>
+<text x="435" y="300" font-size="17" fill="#475569" text-anchor="start" font-weight="bold">Yere oturur, etki yaratmaz</text>
+<text x="435" y="332" font-size="17" fill="#1e293b" text-anchor="start">Örnek: flumazenil.</text>
+<text x="435" y="356" font-size="17" fill="#1e293b" text-anchor="start">Benzodiazepin ve Z-ilaç</text>
+<text x="435" y="380" font-size="17" fill="#1e293b" text-anchor="start">etkisini engeller</text>
+<path d="M600 420 L600 460" stroke="#475569" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="435" y="470" width="330" height="80" rx="12" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+<text x="600" y="505" font-size="19" fill="#475569" text-anchor="middle" font-weight="bold">= GABA etkisi</text>
+<text x="600" y="532" font-size="17" fill="#0f172a" text-anchor="middle">Agonist etkisi engellenir</text>
+<rect x="800" y="95" width="370" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="820" y="129" font-size="21" font-weight="bold" fill="#0f172a">C · Ters agonist</text>
+<path d="M860 220 C860 160 950 150 985 150 C1020 150 1110 160 1110 220 L1110 260 L860 260 z" fill="#fca5a5" stroke="#991b1b" stroke-width="2"/>
+<path d="M960 260 C960 230 1010 230 1010 260" fill="#ffffff" stroke="#991b1b" stroke-width="2"/>
+<rect x="968" y="238" width="34" height="26" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+<text x="985" y="200" font-size="17" fill="#7f1d1d" text-anchor="middle">bağlanma yeri</text>
+<text x="820" y="300" font-size="17" fill="#dc2626" text-anchor="start" font-weight="bold">Negatif allosterik modülatör</text>
+<text x="820" y="332" font-size="17" fill="#1e293b" text-anchor="start">Reseptör işlevini azaltır;</text>
+<text x="820" y="356" font-size="17" fill="#1e293b" text-anchor="start">benzodiazepin bağlanmasını</text>
+<text x="820" y="380" font-size="17" fill="#1e293b" text-anchor="start">da engelleyebilir</text>
+<path d="M985 420 L985 460" stroke="#dc2626" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="820" y="470" width="330" height="80" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="985" y="505" font-size="19" fill="#dc2626" text-anchor="middle" font-weight="bold">↓ GABA etkisi</text>
+<text x="985" y="532" font-size="17" fill="#0f172a" text-anchor="middle">Anksiyete, epileptik nöbet</text>
+<rect x="30" y="610" width="1140" height="54" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="600" y="644" font-size="18" fill="#0f172a" text-anchor="middle" font-weight="bold">Aynı yer, üç zıt sonuç: artırır, etkisiz bırakır ya da azaltır.</text>
+<text x="600" y="706" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 23</text>
+</svg>

@@ -488,8 +488,10 @@
   },
   {
    "id": "quiz_havuzu",
+   "kapali": true,
+   "kapali_not": "Kullanıcı kararı 2026-11-07: quiz üretimi kapatıldı (AGENTS 19).",
    "kapsam": "ders",
-   "durum": "hazir",
+   "durum": "plan",
    "gerekir": [
     "sesli_ders_metni",
     "yayin"
