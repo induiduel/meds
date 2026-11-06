@@ -1,3 +1,8 @@
+## 2026-11-06 (2) — iPad pencere kipinde geri dönüş (H502, onem 653)
+- `components/shell/ipadPencere.tsx`: iPad pencere/bölünmüş ekran algısı (`:root[data-pencere='dar']`, üst çubuk 84 px sağa), alt yüzen geri hapı,
+  sol kenar kaydırması + Esc/⌘[/Alt+←, yedek yollar 2 kez kullanılırsa hap cihazda kalıcı (`medsoru_ipad_geri_hap`). `ShellV15`: başlık = geri düğmesi.
+- Arzu katmanı: bir kerelik "sürprizler açık kalsın mı" sorusu (`arzu/ArzuSoru.tsx`, `medsoru_arzu_soru_v1`, yöneticide sorulmaz). Sürüm notunda anılmaz.
+
 ## 2026-11-06 (1) — KMB 01 hoca kaydına göre tam denetim (H501)
 - Kayıt large-v3 ile yeniden döküldü (`meds_temp/kmb/kaynak/nazogastrik_metin_l3.txt`); tüm anlatım, notlar, akış, vakalar, hedef kartları satır satır kıyaslandı (cümle sayıları korunarak): "kostik" terimi, sınav biçimi (malzeme seçtirme + basamaklar, 34:03), ölçüm son noktası "epigastrium (ksifoid hizası)", ölçümde "en sık hata" iddiası kaldırıldı (32:49), septum deviasyonu yaşlılarda, yutkunmada yarımşar mL su, idrar torbası, kayıtta olmayan iddialar çıkarıldı. Vazelin kullanıcı kararıyla "zor durumda az" (sarı, çarpı yok). 27 klip yeniden seslendirildi, 19 video yeniden üretildi, kapılar 0 HATA.
 - `hoca_dokum_gpu.sh` ek argümanları aktarır (H501).
