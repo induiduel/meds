@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 665,
-  "baslik": "Psikiyatri: OKB ve Travma-Stres dersleri eklendi",
+  "onem": 666,
+  "baslik": "Farmakoloji: Sedatif ve Hipnotik İlaçlar sesli dersi eklendi",
   "maddeler": [
-    "OKB ve İlişkili Bozukluklar sesli dersi, önem listesi ve sesli çözücüsü yayında.",
-    "Travma ve Stres Bağlantılı Bozukluklar sesli dersi (iki ses kaydı birleştirildi), önem listesi ve sesli çözücüsü yayında.",
-    "Her iki derse hocanın sorabileceği sorular, ayrıntılı çıkmış analizi, terim/kısaltma ve quiz eklendi."
+    "Sedatif ve Hipnotik İlaçlar sesli dersi (yaklaşık 42 dk) PDF üzerinde işaret ve çizimlerle yayında.",
+    "28 çıkmış soru ders içinde ilgili slaytlarda işaretlendi.",
+    "Önem listesi ve sesli çözücü sonraki güncellemede eklenecek."
   ],
   "eklenen": [
     "Psikiyatrik Bozukluklarda Uygulanan Tedaviler: sesli ders (hocanın örnekleri ve vurgularıyla, 7 ara resim), en önemliler, sesli soru çözücü, hocanın sorabileceği ara sorular, ders içerik paketi, ders analizi (çıkmışlar ayrıntılı) ve quiz eklendi."
