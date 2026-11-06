@@ -38,6 +38,7 @@ import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import ArkaPlanGosterge from './ArkaPlanGosterge';
+import AsistanPanel from '../asistan/AsistanPanel';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { SearchPalette } from '../search/SearchPalette';
 import { Sheet } from '../ui/Sheet';
@@ -54,6 +55,7 @@ import { useV15BaslikOku } from './baslik';
 import { kronometreAc } from './KronometreV15';
 import { kapsulAc } from './KapsulV15';
 import { Target } from 'lucide-react';
+import { IpadGeriHap, useIpadPencere } from '../shell/ipadPencere';
 import { MENU_SAYFALARI, geriGit, geriHedefe, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
 import '../../styles/v15/shell.css';
@@ -168,8 +170,8 @@ function useAraclar(kapat: () => void, ek: { onPdf?: () => void; onOffline?: () 
     ...(ek.onPdf ? [{ id: 'kitapcik', ad: 'Kitapçık', icon: FileText, tikla: yap(ek.onPdf) }] : []),
     ...(ek.onOffline ? [{ id: 'cevrimdisi', ad: 'İndirilen', icon: Database, tikla: yap(ek.onOffline) }] : []),
     { id: 'kuyruk', ad: 'Kuyruk', icon: CloudUpload, rozet: queued, tikla: yap(() => window.dispatchEvent(new Event('medsoru:pending'))) },
-    ...(canInstall ? [{ id: 'yukle', ad: 'Yükle', icon: Smartphone, tikla: yap(() => pwaService.promptInstall()) }] : []),
     { id: 'denetci', ad: 'Sorunlar', icon: Stethoscope, tikla: yap(() => window.dispatchEvent(new Event('medsoru:denetci'))) },
+    ...(canInstall ? [{ id: 'yukle', ad: 'Yükle', icon: Smartphone, tikla: yap(() => pwaService.promptInstall()) }] : []),
   ];
 }
 
@@ -362,6 +364,9 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
   const geriVar = !!sayfa?.geri || !kokMu(active);
   // Odak ekranı: sesli ders açıkken kendi üst barını kullanır (tasarım sistemi v15 › Kabuk)
   const odak = odakEkrani(active);
+  // iPad pencere kipi: sistem düğmeleri geri tuşunu kapatır → algı, alt hap, başlık-geri, klavye/kenar yedekleri
+  useIpadPencere();
+  const geri = () => (sayfa?.geri ? geriHedefe(sayfa.geri) : geriGit(active));
   // H431: odak ekranı kök sınıfı (durum çubuğu payı shell.css'te .v15-odak .sh-main)
   useEffect(() => {
     document.documentElement.classList.toggle('v15-odak', odak);
@@ -376,16 +381,20 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
   const crumb = sec && sec.id !== 'bugun' && active !== sec.hub ? sec : undefined;
 
   if (odak) {
-    return search ? (
-      <SearchPalette initialQuery={searchQuery} onClose={() => setSearch(false)} onOpenResults={(q, focusId, hit) => onSearch?.(q, focusId, hit)} onGo={onGo} />
-    ) : null;
+    return (
+      <>
+        <IpadGeriHap goster />
+        {search && <SearchPalette initialQuery={searchQuery} onClose={() => setSearch(false)} onOpenResults={(q, focusId, hit) => onSearch?.(q, focusId, hit)} onGo={onGo} />}
+      </>
+    );
   }
 
   return (
     <>
+    <IpadGeriHap goster={geriVar} etiket={crumb?.label} />
     <header className="v15-top print:hidden">
       {geriVar && (
-        <button type="button" className="v15-ib v15-back" onClick={() => (sayfa?.geri ? geriHedefe(sayfa.geri) : geriGit(active))} aria-label="Geri" title="Geri">
+        <button type="button" className="v15-ib v15-back" onClick={geri} aria-label="Geri" title="Geri (Esc, ⌘[)">
           <ChevronLeft aria-hidden="true" />
         </button>
       )}
@@ -400,13 +409,18 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
             <ChevronRight aria-hidden="true" />
           </a>
         )}
-        <p className="v15-top-h">{title}</p>
+        {geriVar ? (
+          <button type="button" className="v15-top-h is-geri" onClick={geri} title="Geri dön">{title}</button>
+        ) : (
+          <p className="v15-top-h">{title}</p>
+        )}
         {sub && <p className="v15-top-sub">{sub}</p>}
       </div>
       <div id={TOP_SLOT_ID} className="v15-top-slot" />
       <div className="v15-top-tools">
         <OfflineStatusBadge onClick={() => onOpenOffline?.()} isAdmin={isAdmin} className="v15-ofb" />
         <ArkaPlanGosterge />
+        <AsistanPanel />
         <GuncellemeSimgesi className="v15-ib" />
         <button type="button" className="v15-search" onClick={() => setSearch(true)} aria-label="Ara ( / ya da Ctrl+K )">
           <Search aria-hidden="true" />

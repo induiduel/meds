@@ -21,6 +21,7 @@ import Fisiltilar from './Fisiltilar';
 import KalpAvi from './KalpAvi';
 import KucukDokunuslar from './KucukDokunuslar';
 import Yoldas from './Yoldas';
+import ArzuSoru from './ArzuSoru';
 import { sallamaDinle } from './sallama';
 import '../../styles/arzu.css';
 
@@ -61,7 +62,7 @@ function metinAlanindaMi(t: EventTarget | null): boolean {
   return tag === 'input' || tag === 'textarea' || tag === 'select' || el.isContentEditable;
 }
 
-export default function ArzuKatmani({ rota }: { rota: AppRoute }) {
+export default function ArzuKatmani({ rota, soruSor = false }: { rota: AppRoute; soruSor?: boolean }) {
   const [karsilama, setKarsilama] = useState(false);
   const tampon = useRef('');
 
@@ -123,6 +124,7 @@ export default function ArzuKatmani({ rota }: { rota: AppRoute }) {
       <Fisiltilar rota={rota} />
       <KalpAvi rota={rota} />
       <KucukDokunuslar rota={rota} />
+      {soruSor && <ArzuSoru />}
     </>
   );
 }

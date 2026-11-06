@@ -350,3 +350,21 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
   @media (prefers-reduced-motion: reduce) { & .ap15g-spin { animation: none; } }
 }
 @keyframes ap15g-don { to { transform: rotate(360deg); } }
+
+/* iPad pencere kipi (2026-11-06): sistem kapat/küçült/tam ekran düğmeleri sol üstü kaplar → içerik sağa,
+ * başlık geri düğmesi olur, alt hap başparmak bölgesinde. Chromium'un titlebar-area-x değeri varsa o kullanılır. */
+:root[data-pencere='dar'] :is(.v15-top, .cd15-bas) { padding-left: max(env(titlebar-area-x, 0px), 84px); }
+.v15-top-h.is-geri { padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; max-width: 100%; }
+.v15-top-h.is-geri::before { content: '‹ '; color: var(--color-accent); }
+:root:not([data-pencere='dar']) .v15-top-h.is-geri::before { content: none; }
+.ipad-geri-hap { position: fixed; z-index: 60; left: 50%; translate: -50% 0; bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
+  display: inline-flex; align-items: center; gap: 4px; max-width: 60vw; min-height: 44px; padding: 0 16px 0 10px;
+  border: 1px solid var(--color-line, rgba(0,0,0,.08)); border-radius: 999px; cursor: pointer;
+  font: 600 14px/1 var(--font-sans); color: var(--color-ink); background: color-mix(in srgb, var(--color-canvas) 82%, transparent);
+  backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); box-shadow: 0 6px 20px rgba(0,0,0,.14);
+  transition: padding .2s, max-width .2s; }
+.ipad-geri-hap svg { width: 20px; height: 20px; color: var(--color-accent); flex: none; }
+.ipad-geri-hap span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ipad-geri-hap.is-kucuk { max-width: 44px; padding: 0 12px; }
+.ipad-geri-hap.is-kucuk span { display: none; }
+@media print { .ipad-geri-hap { display: none; } }

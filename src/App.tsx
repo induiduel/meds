@@ -1591,7 +1591,7 @@ export default function App() {
       )}
       {arzuKatmani && (
         <Suspense fallback={null}>
-          <ArzuKatmani rota={activeTab} />
+          <ArzuKatmani rota={activeTab} soruSor={!isAdmin} />
         </Suspense>
       )}
       {showTour && !isManageRoute && (

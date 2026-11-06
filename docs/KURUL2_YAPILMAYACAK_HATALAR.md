@@ -2252,3 +2252,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** KMB 01'de "ölçüm sınavda en çok hata yapılan basamak" yazıldı; hoca aslında öğrencilerin farklı sırayla ölçtüğünü, bunun teorik olarak aynı olduğunu, burundan başlamanın kolay olduğunu söylüyordu. Sınav biçimi (34:03 "malzeme seçtiririm, basamakları sorarım") dökümde hiç yoktu.
 - **Kök neden:** `hoca_dokum_gpu.sh` yalnız iki argüman aktarıyordu; `--model large-v3` sessizce yok sayıldı, turbo modeli bozuk/eksik döküm verdi; yazar belirsiz pasajı yorumla doldurdu.
 - **Çözüm/önleme:** sarmalayıcı kalan argümanları aktarır (`"$@"`). Hocanın sınav vurgusu içeren ders kayıtları `--model Systran/faster-whisper-large-v3` ile dökülür; belirsiz pasaj içerikte iddiaya çevrilmez, zaman damgasıyla "emin değil" listesine yazılır.
+
+### H502 — iPad pencere kipinde sistem düğmeleri geri tuşunu kapatıyordu; kullanıcı geri çıkamıyordu (2026-11-06)
+- **Belirti:** iPad'de bölünmüş ekran / Stage Manager penceresinde sol üstteki kapat-küçült-tam ekran düğmeleri uygulamanın geri tuşunun üstüne biniyor, dokunuşu sistem yutuyordu.
+- **Kök neden:** tek çıkış yolu sol üst köşedeki geri tuşuydu; iPadOS bu bölgeyi sayfaya bildirmez (Safari'de `env(safe-area-inset-*)` / `titlebar-area-*` yok), sayfa katmanı göremez.
+- **Çözüm/önleme:** `components/shell/ipadPencere.tsx`: pencere kipi algısı (`:root[data-pencere='dar']` → üst çubuk 84 px sağa), başlık = geri düğmesi, alt yüzen geri hapı, sol kenar kaydırması + Esc/⌘[/Alt+←, yedek yollar 2 kez kullanılırsa hap cihazda kalıcı. Kural: hiçbir ekranda tek çıkış yolu sol üst köşe olamaz; görünürlük denetiminde `offsetParent` değil `getClientRects()` kullanılır (yapışkan/sabit atada null döner).
