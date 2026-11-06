@@ -28,8 +28,9 @@ const KATMAN_AD: Record<PdfGorunumId, [string, string]> = {
   iliski: ['İlişki okları ve şemalar', 'Kavramlar arası oklar ve paneller çizilir'],
   not: ['Öğrenci ve hoca işaretleri', 'Notlarda önemli işaretli yerler gösterilir'],
   cikmis: ['Çıkmış soru işaretleri', 'Slaytta çip; dokununca soru açılır'],
+  araResim: ['Ara resimler', 'Mekanizma anlatılırken slaytın üstünde resim kartı açılır'],
 };
-const KATMAN_SIRA: PdfGorunumId[] = ['metin', 'resim', 'tablo', 'iliski', 'not', 'cikmis'];
+const KATMAN_SIRA: PdfGorunumId[] = ['metin', 'resim', 'tablo', 'iliski', 'not', 'cikmis', 'araResim'];
 
 /* =============================================================================
  * Üst bar

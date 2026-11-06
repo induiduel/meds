@@ -1,3 +1,6 @@
+## 2026-11-06 (5) — Ara resim kullanıcı tercihi (onem 656)
+- `CdTerimKatman.tsx` PDF_GORUNUM'a `araResim` katmanı (`cd-pdf-araResim`, varsayılan açık); `CdV15` Görünüm › PDF katmanları satırı; `CdAraResim` kapalıyken kart açılmaz (galeri düğmesi kalır).
+
 ## 2026-11-06 (4) — PDF iki parmak kıstırma + kalıcı yakınlık (onem 655)
 - `PdfDocView.tsx`: dokunmatik iki parmak kıstırma (hareket sırasında CSS ölçek önizlemesi, parmak kalkınca tek `onZoom`), iOS `gesture*` engeli; `pdfDoc.css` `.pdv { touch-action: pan-x pan-y }`.
 - `CanliDersDers.tsx` `CdPdfBolme`: yakınlık `medsoru_cd_pdf_zoom_{genislik|sayfa}` anahtarında kalıcı.

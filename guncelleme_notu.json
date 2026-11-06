@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 655,
-  "baslik": "Sesli ders: PDF iki parmakla yakınlaştırılır, yakınlık hatırlanır",
+  "onem": 656,
+  "baslik": "Sesli ders: ara resimler isteğe bağlı",
   "maddeler": [
-    "Tablet ve telefonda slaytı iki parmakla kıstırarak büyütüp küçültebilirsin",
-    "Seçtiğin yakınlık kaydedilir: dersi kapatıp açtığında aynı ölçekle devam eder (Slayt ve Slayt + altyazı görünümleri ayrı hatırlanır)"
+    "Ara resim kartlarını Görünüm › PDF katmanları bölümündeki 'Ara resimler' anahtarıyla açıp kapatabilirsin; seçimin hatırlanır",
+    "Kapalıyken de araç çubuğundaki resim düğmesinden tüm ara resimlere bakabilirsin"
   ],
   "eklenen": [],
   "degisen": [],

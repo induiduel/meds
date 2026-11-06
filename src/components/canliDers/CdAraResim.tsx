@@ -8,6 +8,7 @@ import { createPortal } from 'react-dom';
 import { ChevronDown, ChevronUp, Images, Maximize2, Undo2, X } from 'lucide-react';
 import { cdParagrafa, useCd } from './canliDersStore';
 import { araResimBitis, araResimBul, araResimleri, araResimYolu, type AraResim } from './araResimVeri';
+import { usePdfGorunum } from './CdTerimKatman';
 import '../../styles/v15/ara_resim.css';
 
 /* "Slayta dön" ile gizlenen resim: aralığı bitene dek; galeri ve tam ekran durumu (tek ders ekranı) */
@@ -43,12 +44,13 @@ export function CdAraResimKok({ dersKey }: { dersKey: string }) {
   const aktif = useCd((s) => s.aktif);
   const gz = useSyncExternalStore(abone, () => gizli);
   const [buyuk, setBuyuk] = useState(false);
+  const katmanAcik = usePdfGorunum().araResim; // kullanıcı tercihi (Görünüm › PDF katmanları), 2026-11-06
   const [adimAcik, setAdimAcik] = useState(() => !(typeof window !== 'undefined' && window.matchMedia?.('(max-width: 599px)').matches));
   const ref = useRef<HTMLDivElement>(null);
   const r = liste.length ? araResimBul(liste, aktif) : null;
   // gizlenen resmin aralığı bitti → gizleme düşer
   useEffect(() => { if (gz && (!r || r.id !== gz)) gizle(null); }, [gz, r]);
-  const goster = r && r.id !== gz ? r : null;
+  const goster = katmanAcik && r && r.id !== gz ? r : null;
   useEffect(() => { setBuyuk(false); }, [goster?.id]);
   // Kart PDF gövdesinin (araç çubuğunun altı) üstüne oturur; çubuk gizlenip açılınca yeniden ölçülür
   useLayoutEffect(() => {
