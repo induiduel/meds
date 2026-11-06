@@ -1,15 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 658,
-  "baslik": "Sesli ders: slayt yakınlığı %80–%140 arasında",
+  "onem": 659,
+  "baslik": "Güncelleme uyarısı düzeltildi",
   "maddeler": [
-    "Sesli derste slayt yakınlığı parmakla, düğmeyle ya da tekerlekle %80 ile %140 arasında ayarlanır",
-    "Düğmeler %10'luk adımlarla ilerler"
+    "Güncelleme: \"Siteyi güncelle\" artık eski sürümü geri açmıyor; aynı güncelleme uyarısı tekrar tekrar çıkmıyor.",
+    "Ayarlar: Veri bölümündeki bazı hesap ayarları yeniden görünüyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "KMB Nazogastrik sonda anlatımı"
+    "Güncelleme: \"Siteyi güncelle\" artık eski sürümü geri açmıyor; aynı güncelleme uyarısı tekrar tekrar çıkmıyor.",
+    "Ayarlar: Veri bölümündeki bazı hesap ayarları yeniden görünüyor."
   ],
   "silinen": [],
   "yenilikler": []

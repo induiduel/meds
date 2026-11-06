@@ -86,6 +86,16 @@ async function guncelle() {
     // index.html ve sürümsüz çalışma zamanı kopyaları eski sürümü geri vermesin (canlı ders çevrimdışı önbelleği korunur)
     if ('caches' in window) {
       for (const k of await caches.keys()) if (/^medsoru-(runtime|static)-/.test(k)) await caches.delete(k);
+      // SW gezinmede kabuğu bütün önbelleklerde arar; başka önbellekte kalan eski '/' ya da '/index.html'
+      // "Güncelle"den sonra eski sürümü geri açıyordu (H503)
+      for (const k of await caches.keys()) {
+        if (/canli-ders|pdf-offline|paket|bekleyen|paylasim/.test(k)) continue; // çevrimdışı ders paketleri korunur
+        const c = await caches.open(k);
+        for (const r of await c.keys()) {
+          const u = new URL(r.url);
+          if (u.origin === location.origin && (u.pathname === '/' || u.pathname.endsWith('.html') || !/\.[a-z0-9]+$/i.test(u.pathname)) && !u.pathname.startsWith('/api/')) await c.delete(r);
+        }
+      }
     }
   } catch { /* yine de yenile */ }
   window.location.reload();
@@ -104,7 +114,9 @@ const UpdatePrompt: React.FC = () => {
     try {
       const once = localStorage.getItem(YENILIK_KEY) ?? localStorage.getItem(GORULDU_KEY);
       if (once !== null && Number(once) < ONEM && ONEM > 0) yay({ yenilik: true });
-      localStorage.setItem(YENILIK_KEY, String(ONEM));
+      // Kayıt yalnız ileri gider: önbellekten açılan eski kabuk (daha küçük ONEM) kaydı geri yazarsa
+      // yeni sürüm her açılışta "Yenilikler"i yeniden gösteriyordu (H503)
+      if (once === null || Number(once) < ONEM) localStorage.setItem(YENILIK_KEY, String(ONEM));
     } catch { /* depolama kapalı */ }
     // Bu sekme zaten yeni sürümdeyse kaydı ilerlet (başka sekmede/yenilemede aynı sürüm yeniden sorulmasın)
     gorulduYaz(ONEM);

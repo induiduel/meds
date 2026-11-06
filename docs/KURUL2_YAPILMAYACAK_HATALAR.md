@@ -2257,3 +2257,13 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** iPad'de bölünmüş ekran / Stage Manager penceresinde sol üstteki kapat-küçült-tam ekran düğmeleri uygulamanın geri tuşunun üstüne biniyor, dokunuşu sistem yutuyordu.
 - **Kök neden:** tek çıkış yolu sol üst köşedeki geri tuşuydu; iPadOS bu bölgeyi sayfaya bildirmez (Safari'de `env(safe-area-inset-*)` / `titlebar-area-*` yok), sayfa katmanı göremez.
 - **Çözüm/önleme:** `components/shell/ipadPencere.tsx`: pencere kipi algısı (`:root[data-pencere='dar']` → üst çubuk 84 px sağa), başlık = geri düğmesi, alt yüzen geri hapı, sol kenar kaydırması + Esc/⌘[/Alt+←, yedek yollar 2 kez kullanılırsa hap cihazda kalıcı. Kural: hiçbir ekranda tek çıkış yolu sol üst köşe olamaz; görünürlük denetiminde `offsetParent` değil `getClientRects()` kullanılır (yapışkan/sabit atada null döner).
+
+### H503 — "Güncelle"ye basınca eski sürüm açılıyor, sürekli güncelleme varmış gibi görünüyordu (2026-11-06)
+- **Belirti:** güncelleme diyaloğu/Yenilikler penceresi tekrar tekrar çıkıyor, sırası karışıyor; onaylayınca site eski sürüme dönüyordu.
+- **Kök neden:** (1) SW gezinmede ağ 400 ms'de yanıtlamazsa kabuğu `ARAMA_SIRASI`'ndaki TÜM önbelleklerde arıyor; `guncelle()` yalnız `medsoru-static/runtime-*` siliyordu, başka önbellekte kalan eski `/`/rota kabuğu yeniden açılıyordu. (2) Eski kabuk açılınca `medsoru_yenilik_goruldu_v1` daha küçük ONEM ile geri yazılıyor, yeni sürümde Yenilikler her açılışta yeniden çıkıyordu.
+- **Çözüm/önleme:** `UpdatePrompt.tsx`: güncellemede çevrimdışı ders/paket önbellekleri dışındaki tüm önbelleklerden HTML/rota kabuğu kayıtları silinir; sürüm kayıtları yalnız ileri yazılır. Kural: cihaz sürüm kaydı asla geriye yazılmaz; kabuk silme, SW'nin aradığı bütün önbellekleri kapsar.
+
+### H504 — Ayarlarda "Küçük sürprizler" satırı görünmüyordu (2026-11-06)
+- **Belirti:** sürpriz katmanını kapatma düğmesi ayarlarda yoktu.
+- **Kök neden:** v12 ayarlar (`ProfileV12` › Veri) `<ArzuRow />`'u kullanıcı geçirmeden çağırıyordu; satır `auth.currentUser`'a düşüyor, yerel kimlik sisteminde (H466) bu nesne hesabı tanıtmadığından satır gizleniyordu.
+- **Çözüm/önleme:** `DataPanel`'e `currentUser` geçirildi. Kural: hesap koşullu satırlar kullanıcıyı prop olarak alır, `auth.currentUser` yedeğine güvenilmez.

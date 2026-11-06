@@ -468,7 +468,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
         <AccountPanel currentUser={currentUser} isAdmin={isAdmin} ed={ed} nameRef={nameRef} photo={photo} onPickPhoto={pickPhoto}
           onRemovePhoto={() => ed.save({ photoURL: '' })} onOpenAuth={onOpenAuth} onLogout={onLogout} onOpenAdmin={onOpenAdmin} onAppearance={() => setView('gorunum')} />
       )}
-      {view === 'veri' && <DataPanel onOpenOffline={onOpenOffline} />}
+      {view === 'veri' && <DataPanel currentUser={currentUser} onOpenOffline={onOpenOffline} />}
       {view === 'erisim' && <ErisimPanel />}
       {view === 'gorunum' && <AppearancePanel />}
       {view === 'tamekran' && <TamEkranAyarV15 />}
@@ -637,7 +637,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
             onAppearance={() => setView('gorunum')}
           />
         )}
-        {view === 'veri' && <DataPanel onOpenOffline={onOpenOffline} />}
+        {view === 'veri' && <DataPanel currentUser={currentUser} onOpenOffline={onOpenOffline} />}
         {view === 'erisim' && <ErisimPanel />}
         {view === 'gorunum' && <AppearancePanel />}
       </div>
@@ -1187,7 +1187,7 @@ const AccountPanel: React.FC<{
  * Veriler ve gizlilik
  * ---------------------------------------------------------------------------------------------- */
 
-const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) => {
+const DataPanel: React.FC<{ currentUser: AppUser | null; onOpenOffline: () => void }> = ({ currentUser, onOpenOffline }) => {
   const download = useCallback(() => {
     try {
       const blob = new Blob([JSON.stringify(collectLocalUserData(), null, 2)], { type: 'application/json' });
@@ -1211,7 +1211,7 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
         <div className="u12-legacy">
           <UserDataSyncRow />
           <ArkaPlanRow />
-          <ArzuRow />
+          <ArzuRow currentUser={currentUser} />
           <WhatsAppDailyDigestRow />
           <NotesSyncRow />
         </div>
