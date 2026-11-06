@@ -1,3 +1,7 @@
+## 2026-11-06 (4) — PDF iki parmak kıstırma + kalıcı yakınlık (onem 655)
+- `PdfDocView.tsx`: dokunmatik iki parmak kıstırma (hareket sırasında CSS ölçek önizlemesi, parmak kalkınca tek `onZoom`), iOS `gesture*` engeli; `pdfDoc.css` `.pdv { touch-action: pan-x pan-y }`.
+- `CanliDersDers.tsx` `CdPdfBolme`: yakınlık `medsoru_cd_pdf_zoom_{genislik|sayfa}` anahtarında kalıcı.
+
 ## 2026-11-06 (3) — Sesli ders altyazı modu + ara soru otomatik çöz düğmesi (onem 654)
 - `CanliDersDers.tsx`: Slayt + altyazı modunda `CdPdfBolme sigdir` → `PdfDocView fit="page"` (genişliğe sığınca slaytın altı kesiliyordu); altyazı şeridi en çok 22vh.
 - `CdHocaAra.tsx`: "Otomatik çöz" onay kutusu (`medsoru_hoca_ara_coz_v1`, varsayılan açık); kapalıyken okuma sonrası geri sayım durur, öğrenci şık seçer ya da "Çözümü göster"e basar; düşünme sırasında açılırsa hemen çözer.

@@ -633,8 +633,48 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       const z = Math.max(0.5, Math.min(4, zoomRef.current * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
       cb.current.onZoom?.(Math.round(z * 100) / 100);
     };
+    // İki parmakla kıstırma (dokunmatik, 2026-11-06): tarayıcının sayfa yakınlaştırması yerine PDF ölçeği değişir;
+    // hareket sırasında anlık ölçek CSS ile önizlenir, parmak kalkınca tek seferde onZoom (yeniden çizim tek kez)
+    let bas: { d: number; z: number } | null = null;
+    let son = 0;
+    const mesafe = (t: TouchList) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+    const sinirla = (z: number) => Math.round(Math.max(0.5, Math.min(4, z)) * 100) / 100;
+    const onStart = (e: TouchEvent) => {
+      if (e.touches.length !== 2) return;
+      bas = { d: mesafe(e.touches), z: zoomRef.current };
+      son = bas.z;
+      el.style.transformOrigin = `${(e.touches[0].clientX + e.touches[1].clientX) / 2 - el.getBoundingClientRect().left + el.scrollLeft}px ${(e.touches[0].clientY + e.touches[1].clientY) / 2 - el.getBoundingClientRect().top + el.scrollTop}px`;
+    };
+    const onMove = (e: TouchEvent) => {
+      if (!bas || e.touches.length !== 2) return;
+      e.preventDefault();
+      son = sinirla(bas.z * (mesafe(e.touches) / bas.d));
+      const k = son / bas.z;
+      for (const c of Array.from(el.children) as HTMLElement[]) c.style.transform = `scale(${k})`;
+    };
+    const onEnd = (e: TouchEvent) => {
+      if (!bas || e.touches.length >= 2) return;
+      for (const c of Array.from(el.children) as HTMLElement[]) c.style.transform = '';
+      if (son !== bas.z) cb.current.onZoom?.(son);
+      bas = null;
+    };
+    const engelle = (e: Event) => e.preventDefault(); // iOS Safari sayfa yakınlaştırması
     el.addEventListener('wheel', onWheel, { passive: false });
-    return () => el.removeEventListener('wheel', onWheel);
+    el.addEventListener('touchstart', onStart, { passive: true });
+    el.addEventListener('touchmove', onMove, { passive: false });
+    el.addEventListener('touchend', onEnd);
+    el.addEventListener('touchcancel', onEnd);
+    el.addEventListener('gesturestart', engelle);
+    el.addEventListener('gesturechange', engelle);
+    return () => {
+      el.removeEventListener('wheel', onWheel);
+      el.removeEventListener('touchstart', onStart);
+      el.removeEventListener('touchmove', onMove);
+      el.removeEventListener('touchend', onEnd);
+      el.removeEventListener('touchcancel', onEnd);
+      el.removeEventListener('gesturestart', engelle);
+      el.removeEventListener('gesturechange', engelle);
+    };
   }, []);
 
   const [hs, he] = highlight || [0, -1];

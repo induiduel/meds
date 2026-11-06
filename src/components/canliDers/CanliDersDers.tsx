@@ -1820,7 +1820,15 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
   const aktif = useCd((s) => (canli ? s.aktif : -1));
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
-  const [zoom, setZoom] = useState(1);
+  // Yakınlık kalıcı (2026-11-06): kıstırma/düğmeyle seçilen ölçek görünüm başına (genişlik/sayfa sığdırma) saklanır
+  const zoomKey = `medsoru_cd_pdf_zoom_${sigdir ? 'sayfa' : 'genislik'}`;
+  const [zoom, setZoomHam] = useState(() => { try { const v = Number(localStorage.getItem(zoomKey)); return v >= 0.5 && v <= 4 ? v : 1; } catch { return 1; } });
+  const setZoom = useCallback((z: number | ((o: number) => number)) => setZoomHam((o) => {
+    const n = typeof z === 'function' ? z(o) : z;
+    try { localStorage.setItem(zoomKey, String(n)); } catch { /* yok */ }
+    return n;
+  }), [zoomKey]);
+  useEffect(() => { try { const v = Number(localStorage.getItem(zoomKey)); setZoomHam(v >= 0.5 && v <= 4 ? v : 1); } catch { /* yok */ } }, [zoomKey]);
   const [barGizli, setBarGizli] = useState(() => { try { return localStorage.getItem('cd_pdf_bar_gizli') === '1'; } catch { return false; } });
   const barDegis = () => setBarGizli((g) => { try { localStorage.setItem('cd_pdf_bar_gizli', g ? '0' : '1'); } catch { /* yok */ } return !g; });
   const [sayfaTema, setSayfaTema] = useState<'ozgun' | 'temiz' | 'sepya' | 'gece'>(() => {

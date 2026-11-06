@@ -46,7 +46,7 @@
 .dpv-btn.is-primary { background: var(--color-accent); color: var(--color-on-accent, #fff); }
 
 /* ---------- PDF.js sayfaları ---------- */
-.pdv { position: relative; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: var(--color-canvas); outline: none; -webkit-overflow-scrolling: touch; }
+.pdv { position: relative; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: var(--color-canvas); outline: none; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y; }
 .pdv-track { position: relative; min-height: 100%; }
 .pdv-page.has-ek { overflow: visible; border-radius: 4px 4px 0 0; }
 /* sayfa altı ek alanı: sayfanın alt kenar rengiyle, slaytın devamı gibi; panel (y > 1) bunun üstünde durur */

@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 654,
-  "baslik": "Sesli ders: altyazı modu ve otomatik çöz düğmesi",
+  "onem": 655,
+  "baslik": "Sesli ders: PDF iki parmakla yakınlaştırılır, yakınlık hatırlanır",
   "maddeler": [
-    "Slayt + altyazı modunda slayt artık ekrana bütün olarak sığıyor; alt kısmı altyazının altında kalmıyor",
-    "Altyazı şeridi daha derli toplu: slayta daha çok yer kalıyor",
-    "Hocanın sorabileceği soru penceresine 'Otomatik çöz' düğmesi eklendi: kapatırsan soru okunduktan sonra sen şıkkını seçene ya da 'Çözümü göster'e basana kadar bekler"
+    "Tablet ve telefonda slaytı iki parmakla kıstırarak büyütüp küçültebilirsin",
+    "Seçtiğin yakınlık kaydedilir: dersi kapatıp açtığında aynı ölçekle devam eder (Slayt ve Slayt + altyazı görünümleri ayrı hatırlanır)"
   ],
   "eklenen": [],
   "degisen": [],
