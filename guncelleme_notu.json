@@ -1,17 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 670,
-  "baslik": "Tüm Kurul 2 sesli derslerinde hareketli ara resimler",
+  "onem": 671,
+  "baslik": "Başarım ve bakım güncellemesi",
   "maddeler": [
-    "Ara resmi olan 10 sesli dersin 106 mekanizma resminin tamamı artık hareketli: yolaklar ve eğriler sırayla çiziliyor, sinyaller ilerliyor, yapılar anlatım sırasına göre yanıyor.",
-    "Hareketi azalt ayarı açıksa resimler durağan son hâliyle gösterilir."
+    "Sunucu eski derleme parçalarını kendiliğinden temizliyor; site dosyaları daha hızlı sunuluyor.",
+    "Oracle sunucusunda 50 GB gereksiz derleme önbelleği temizlendi."
   ],
-  "eklenen": [
-    "Psikiyatrik Bozukluklarda Uygulanan Tedaviler: sesli ders (hocanın örnekleri ve vurgularıyla, 7 ara resim), en önemliler, sesli soru çözücü, hocanın sorabileceği ara sorular, ders içerik paketi, ders analizi (çıkmışlar ayrıntılı) ve quiz eklendi."
-  ],
+  "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Bipolar dersi: ders içerik paketinde kısaltmalar artık doğru sayfaya bağlı."
+    "Çıkmış sorular: Parkinson tremoru ve aksonal nöropati sorularının yılı 2025-2026 olarak düzeltildi."
   ],
   "silinen": [],
   "yenilikler": []

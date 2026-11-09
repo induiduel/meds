@@ -29,6 +29,8 @@ export default defineConfig(({ mode }) => {
       cssCodeSplit: true,
       minify: 'esbuild',
       emptyOutDir: false,
+      // dist/.vite/manifest.json: sunucu eski hash'li parçaları budarken güncel kümeyi buradan okur (server.ts pruneDistAssets)
+      manifest: true,
       chunkSizeWarningLimit: 2500,
       rollupOptions: {
         // Yönetim ayrı girişi (2026-10-28): /manage öğrenci uygulamasının ortak girişini yüklemez (src/manage-main.tsx)

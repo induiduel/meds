@@ -11967,22 +11967,52 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
  * dist/assets → kalıcı arşiv (yalnız arşivde olmayanlar kopyalanır; hash'li adlar değişmez). Güncel sürümde
  * olmayıp 21 günden eski parçalar budanır. Açılışı bekletmez; hata sunucuyu etkilemez.
  */
-async function archiveDistAssets(srcDir: string, archiveDir: string) {
+// Güncel derlemenin dosya kümesi: Vite manifest'i (dist/.vite/manifest.json, build.manifest: true). Manifest yoksa null.
+function readDistManifestFiles(distDir: string): Set<string> | null {
+  try {
+    const raw = fs.readFileSync(path.join(distDir, '.vite', 'manifest.json'), 'utf8');
+    const man = JSON.parse(raw) as Record<string, { file?: string; css?: string[]; assets?: string[] }>;
+    const live = new Set<string>();
+    const add = (f?: string) => { if (f && f.startsWith('assets/')) live.add(f.slice('assets/'.length)); };
+    for (const e of Object.values(man)) { add(e.file); (e.css || []).forEach(add); (e.assets || []).forEach(add); }
+    return live.size ? live : null;
+  } catch { return null; }
+}
+
+// dist/assets temizliği (2026-11-09): emptyOutDir:false + rsync --delete'siz dağıtım yüzünden eski hash'li parçalar
+// hiç silinmiyordu (cihazda 473 derleme / 3 GB, Oracle'da 92 bin dosya / 5,2 GB + arşiv 5,9 GB). Arşiv budaması
+// "güncel" kümesini dist/assets'ten okuduğu için hiçbir şey budanmıyordu. Artık güncel küme Vite manifest'inden gelir;
+// manifest dışındaki ve 7 günden eski parçalar dist/assets'ten de silinir (açık sekmeler UpdatePrompt ile zaten yenilenir).
+// 7 gün: cihazda günde ~30 derleme oluyor (14 günde 64 bin dosya); açık sekme eksik parçada kendini yeniler (__medsoruTazeYukle).
+const ASSET_KEEP_MS = 7 * 24 * 3600 * 1000;
+async function pruneDistAssets(srcDir: string, live: Set<string>) {
+  let pruned = 0;
+  const cutoff = Date.now() - ASSET_KEEP_MS;
+  for (const name of await fs.promises.readdir(srcDir).catch(() => [] as string[])) {
+    if (live.has(name)) continue;
+    const p = path.join(srcDir, name);
+    const st = await fs.promises.stat(p).catch(() => null);
+    if (st && st.isFile() && st.mtimeMs < cutoff) { await fs.promises.unlink(p).catch(() => {}); pruned++; }
+  }
+  if (pruned) console.log(`[Assets] dist/assets: ${pruned} eski parça silindi`);
+}
+
+async function archiveDistAssets(srcDir: string, archiveDir: string, live: Set<string> | null) {
   try {
     await fs.promises.mkdir(archiveDir, { recursive: true });
-    const current = new Set(await fs.promises.readdir(srcDir));
+    const current = live ?? new Set(await fs.promises.readdir(srcDir));
     const archived = new Set(await fs.promises.readdir(archiveDir));
     let copied = 0;
     const now = new Date();
     for (const name of current) {
       // Güncel parçanın zamanı tazelenir: budama süresi sürümden kalktığı andan sayılır
       if (archived.has(name)) await fs.promises.utimes(path.join(archiveDir, name), now, now).catch(() => {});
-      else {
+      else if (fs.existsSync(path.join(srcDir, name))) {
         await fs.promises.copyFile(path.join(srcDir, name), path.join(archiveDir, name));
         copied++;
       }
     }
-    const cutoff = Date.now() - 21 * 24 * 3600 * 1000;
+    const cutoff = Date.now() - ASSET_KEEP_MS;
     let pruned = 0;
     for (const name of archived) {
       if (current.has(name)) continue;
@@ -12099,7 +12129,11 @@ async function startServer() {
     // Cihazda vite build eski parçaları dist'te bırakır (emptyOutDir: false); arşiv yalnız konteynerde gerekir.
     const assetArchive = path.join(DATA_DIR, 'asset-archive');
     const archiveOn = process.env.MEDS_ASSET_ARCHIVE ? process.env.MEDS_ASSET_ARCHIVE === '1' : fs.existsSync('/.dockerenv');
-    if (archiveOn) void archiveDistAssets(path.resolve(__dirname, 'dist', 'assets'), assetArchive);
+    const distAssetsDir = path.resolve(__dirname, 'dist', 'assets');
+    const liveAssets = readDistManifestFiles(path.resolve(__dirname, 'dist'));
+    if (liveAssets) void pruneDistAssets(distAssetsDir, liveAssets);
+    else console.warn('[Assets] dist/.vite/manifest.json yok: eski parça budaması atlandı (npx vite build gerekir)');
+    if (archiveOn) void archiveDistAssets(distAssetsDir, assetArchive, liveAssets);
     const archiveOptions = { maxAge: '1y', immutable: true, index: false as const };
     app.use('/assets', express.static(assetArchive, archiveOptions));
     app.use('/meds/assets', express.static(assetArchive, archiveOptions));
