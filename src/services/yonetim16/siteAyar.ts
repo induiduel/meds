@@ -211,6 +211,8 @@ export function registerSiteAyarRoutes(app: express.Express, d: {
  */
 export const BAYRAKLAR: { ad: string; etiket: string; aciklama: string }[] = [
   { ad: 'oyunlar', etiket: 'Oyunlar', aciklama: 'Kapalıyken Oyunlar sayfası öğrenciye gizlenir, /api/oyun/* ve canlı oda (WebSocket) katılımı reddedilir.' },
+  { ad: 'oyun_masa', etiket: 'Taş Masası (okey + Uno)', aciklama: 'Kapalıyken Yedili Okey / Takım / 101 / Uno masaları kurulamaz ve katılınamaz (/api/masa/*, /api/masa/ws).' },
+  { ad: 'oyun_eski', etiket: 'Eski soru yarışmaları', aciklama: 'Açıkken Oyunlar sayfası Taş Masası yerine eski soru yarışması modlarını gösterir (varsayılan kapalı).' },
   { ad: 'topluluk_sohbet', etiket: 'Topluluk sohbet odaları', aciklama: 'Kapalıyken sohbet odası listesi, katılma ve mesaj gönderme uçları 403 döner (kanal mesajları etkilenmez).' },
   { ad: 'topluluk_mesaj', etiket: 'Topluluk kanal mesajları', aciklama: 'Kapalıyken topluluk kanallarına yeni mesaj yazılamaz (okuma sürer).' },
   { ad: 'arkadaslik', etiket: 'Arkadaşlık', aciklama: 'Kapalıyken Arkadaşlar sayfası gizlenir, /api/arkadas/* uçları 403 döner.' },

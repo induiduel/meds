@@ -39,6 +39,7 @@ import { registerTerimSesRoutes } from './src/services/terimSes';
 import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalog';
 import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
 import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
+import { masaSunucu } from './src/services/masa/sunucu';
 import { oyunKaynaklari, oyunSorulari } from './src/services/quiz/oyunSoruKaynagi';
 import { registerTopluluk } from './src/services/topluluk';
 import { registerToplulukSohbet } from './src/services/toplulukSohbet';
@@ -170,6 +171,7 @@ import {
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
+import { registerAsistanRoutes } from './src/services/asistan/routes.ts';
 import { registerBakimHataRoutes } from './src/services/bakimHataRoutes.ts';
 import { denetimAraKatmani, registerDenetimRoutes } from './src/services/yonetim16/denetim.ts';
 import { registerSiteAyarRoutes, bayrakKapisi, icerikKapisi } from './src/services/yonetim16/siteAyar.ts';
@@ -10625,6 +10627,7 @@ app.post('/api/rag/ask', async (req, res) => {
 // 3. RAG Stats: Current indexing and database state
 // Saklanan vektörlerden ilgili/benzer/kopya içerik (embed servisi gerekmez)
 registerRagRelatedRoutes(app);
+registerAsistanRoutes(app);
 
 app.get('/api/rag/stats', async (req, res) => {
   try {
@@ -11721,6 +11724,8 @@ async function ensurePastReportIds(pastList: any[]): Promise<number> {
 registerDenetimRoutes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, isPgOnline: () => pgOnline, broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true) });
 registerSiteAyarRoutes(app, { rootDir: __dirname, requireAdmin, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), bakim: bakimCtl, kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });
 registerOyunYonetimRoutes(app, { requireAdmin, quiz: quizRealtimeServer });
+// Taş Masası (Yedili Okey, Takım, 101, Uno): REST uçları; soket httpServer açılınca bağlanır
+masaSunucu.registerRoutes(app);
 registerSiteSurumRoutes(app, { rootDir: __dirname, requireAdmin });
 registerOzetRoutes(app, {
   rootDir: __dirname,
@@ -12169,6 +12174,19 @@ async function startServer() {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
     // ⚡ Düşük Gecikmeli (Low-Latency) Realtime Quiz WebSocket Sunucusunu Başlat
     quizRealtimeServer.initialize(httpServerRef);
+    {
+      let harita = new Map<string, string>(); let haritaAt = 0;
+      masaSunucu.initialize(httpServerRef, {
+        rootDir: __dirname, isPgOnline: () => pgOnline,
+        kisiKimlik: (uid) => basarimMotor.kisiKimlik(uid),
+        kisiAd: (uid) => { try { return basarimMotor.kisi(uid).ad || ''; } catch { return ''; } },
+        uidBul: (kimlik) => {
+          if (Date.now() - haritaAt > 60_000) { harita = new Map(basarimMotor.hepsi().map((k) => [basarimMotor.kisiKimlik(k.uid), k.uid])); haritaAt = Date.now(); }
+          return harita.get(kimlik) || null;
+        },
+        notifyStudent: (target, n) => notifyStudent(target, n as any),
+      });
+    }
     // 🤖 Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonunu Başlat
     hydrateExistingReportsToAutoRepair();
     startAutoRepairWorker();

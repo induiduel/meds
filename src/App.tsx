@@ -8,7 +8,7 @@ import { foldTurkish } from './utils/fuzzyMatching';
 import type { SearchHit } from './components/search/searchShared';
 import { AppRoute, parseLocation, writeLocation, pathFor, icPathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
 import { icKonum, kanonik } from './siteHaritasi';
-import { sayfaKapali, sayfaYonlendir, useSiteAyar, yoneticiAyarla } from './services/siteAyar';
+import { bayrak, sayfaKapali, sayfaYonlendir, useSiteAyar, yoneticiAyarla } from './services/siteAyar';
 import {
   Sparkles,
   Plus,
@@ -162,6 +162,7 @@ const PdfSihirbaziV15 = React.lazy(() => wrapLazy(import('./components/v15/PdfSi
 const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV15')));
 const VideoDersV15 = React.lazy(() => wrapLazy(import('./components/v15/VideoDersV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
+const MasaView = React.lazy(() => wrapLazy(import('./components/masa/MasaView')));
 const SoruAktarV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruAktarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const ProgramEkleV15 = React.lazy(() => wrapLazy(import('./components/v15/ProgramEkleV15')));
@@ -2191,7 +2192,8 @@ export default function App() {
         {/* TAB: /oyunlar (görünen /sorular/oyunlar) — canlı soru yarışması (/api/quiz/ws) */}
         {gorunenTab === 'oyunlar' && (
           <Suspense fallback={<ViewFallback />}>
-            <OyunlarV15 />
+            {/* Taş Masası (okey taşlı oyunlar + Uno) Oyunlar'ın ana içeriğidir; eski soru yarışmaları `oyun_eski` bayrağı ya da ?eski=1 ile */}
+            {bayrak('oyun_eski', false) || new URLSearchParams(window.location.search).has('eski') ? <OyunlarV15 /> : <MasaView />}
           </Suspense>
         )}
 

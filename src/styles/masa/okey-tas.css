@@ -1,0 +1,103 @@
+/* Okey taşı (TasGorsel). Boyut --om-b (genişlik); 3B kalınlığı üst sınıf .om-3b ile gelir. */
+.om-tas {
+  --om-tas-zemin: #f7f0dd;
+  --om-tas-zemin2: #efe5c8;
+  --om-tas-yan: #cdbd92;
+  --om-tas-ust: #fffaf0;
+  --om-tas-cizgi: rgba(88, 66, 22, 0.28);
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: var(--om-b, 44px);
+  height: calc(var(--om-b, 44px) * 1.38);
+  font-family: 'Avenir Next', 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.om-tas--kitty {
+  --om-tas-zemin: #fffafc;
+  --om-tas-zemin2: #ffeef4;
+  --om-tas-yan: #f2a9c1;
+  --om-tas-ust: #ffffff;
+  --om-tas-cizgi: rgba(200, 70, 115, 0.3);
+}
+.om-tas-yuz {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--om-b, 44px) * 0.07);
+  border-radius: calc(var(--om-b, 44px) * 0.16);
+  background: linear-gradient(170deg, var(--om-tas-ust) 0%, var(--om-tas-zemin) 38%, var(--om-tas-zemin2) 100%);
+  box-shadow:
+    inset 0 0 0 1px var(--om-tas-cizgi),
+    inset 0 calc(var(--om-b, 44px) * -0.07) 0 rgba(0, 0, 0, 0.09),
+    0 calc(var(--om-b, 44px) * 0.06) 0 var(--om-tas-yan),
+    0 calc(var(--om-b, 44px) * 0.1) calc(var(--om-b, 44px) * 0.1) rgba(0, 0, 0, 0.32);
+  padding-bottom: calc(var(--om-b, 44px) * 0.06);
+}
+.om-tas-sayi {
+  font-size: calc(var(--om-b, 44px) * 0.68);
+  font-weight: 800;
+  color: var(--om-renk);
+  letter-spacing: -0.02em;
+}
+.om-tas-sayi--iki { font-size: calc(var(--om-b, 44px) * 0.58); letter-spacing: -0.07em; }
+.om-tas-isaret {
+  width: calc(var(--om-b, 44px) * 0.3);
+  height: calc(var(--om-b, 44px) * 0.3);
+  fill: var(--om-renk);
+}
+.om-tas-sahte { width: 62%; height: auto; fill: var(--om-renk); }
+.om-tas-sahte--kedi { width: 78%; }
+.om-tas-alt {
+  font-size: calc(var(--om-b, 44px) * 0.28);
+  font-weight: 800;
+  color: var(--om-renk);
+}
+.om-tas-rozet {
+  position: absolute;
+  top: calc(var(--om-b, 44px) * -0.1);
+  right: calc(var(--om-b, 44px) * -0.1);
+  width: calc(var(--om-b, 44px) * 0.4);
+  height: calc(var(--om-b, 44px) * 0.4);
+  border-radius: 50%;
+  background: #ffc531;
+  box-shadow: 0 0 0 1.5px #fff, 0 1px 3px rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+}
+.om-tas-rozet svg { width: 72%; height: 72%; fill: #7a4b00; }
+.om-tas--okey .om-tas-yuz { box-shadow: inset 0 0 0 2px #f0b21c, inset 0 calc(var(--om-b, 44px) * -0.07) 0 rgba(0, 0, 0, 0.09), 0 calc(var(--om-b, 44px) * 0.06) 0 var(--om-tas-yan), 0 calc(var(--om-b, 44px) * 0.1) calc(var(--om-b, 44px) * 0.1) rgba(0, 0, 0, 0.32); }
+.om-tas-yerine {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--om-b, 44px) * -0.08);
+  transform: translateX(-50%);
+  min-width: calc(var(--om-b, 44px) * 0.46);
+  padding: 0 calc(var(--om-b, 44px) * 0.08);
+  height: calc(var(--om-b, 44px) * 0.36);
+  border-radius: 99px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  font-size: calc(var(--om-b, 44px) * 0.28);
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+/* kapalı taş */
+.om-tas--kapali .om-tas-yuz { background: linear-gradient(165deg, #fbf5e6, #e9dcba); padding: 0; }
+.om-tas--kapali.om-tas--kitty .om-tas-yuz { background: linear-gradient(165deg, #ffd9e6, #f9a9c4); }
+.om-tas-arka { width: 70%; height: auto; }
+.om-tas-arka--klasik {
+  width: 56%;
+  height: 62%;
+  border-radius: calc(var(--om-b, 44px) * 0.1);
+  box-shadow: inset 0 0 0 1.5px rgba(120, 92, 36, 0.35);
+  background: repeating-linear-gradient(45deg, rgba(120, 92, 36, 0.16) 0 2px, transparent 2px 6px), repeating-linear-gradient(-45deg, rgba(120, 92, 36, 0.16) 0 2px, transparent 2px 6px);
+}

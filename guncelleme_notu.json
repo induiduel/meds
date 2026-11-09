@@ -1,24 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 679,
-  "baslik": "Soru dışa aktarıcıda yeni PDF tasarım seçenekleri; sesli ders PDF'inde çıkmış sorular kart görünümünde",
+  "onem": 680,
+  "baslik": "Oyunlar: Taş Masası — Yedili Okey, Takım Yedili, 101 Okey ve Uno (arkadaşlarla ya da bota karşı, gerçek zamanlı)",
   "maddeler": [
-    "Soru dışa aktarıcı: yaprakta 2 sayfa ve katlanır kitapçık düzeni, çift yüz cilt payı, kesim çizgileri, logo, başlık bandı, üç bölgeli alt bilgi ve yer tutucular, not alanı, zemin deseni, kapak biçimi.",
-    "Soru kutusu (çerçeve, zemin, kart), köşe yarıçapı, asılı girinti, şık aralığı ve puntosu, çözüm kutusu biçimi; yalnız sorular / yalnız çözümler çıktısı ve sayfa aralığı; Akademik ve Kesilebilir kartlar modları.",
-    "Sesli ders metni dışa aktarımında çıkmış sorular artık soru kartı olarak dizilir: numara rozeti, yıl etiketi, ayrı satırlarda önermeler, belirgin cevap şeridi (PDF, Word, Markdown ve düz metin)."
+    "Yedili Okey (ana oyun): 104 taş, jokersiz, 7 taşla başla; per aç, masadaki perlere işle (seriyi bölerek işleme dahil), elini bitiren kazanır. Açabilecekken ya da işleyebilecekken çekmek/devretmek cezadır (−5 + ceza taşı).",
+    "Takım Yedili (karşılıklı takımlar, hediye taş), 101 Okey (gösterge, okey, 101 ya da 5 çiftle açma) ve Uno (Klasik, Stitch, Harry Potter esintili temalar).",
+    "Masa: iki katlı ahşap ıstaka, sürükle bırak / dokun seç / basılı tut, 2B ve 3B görünüm, Klasik ve Hello Kitty esintili tema, kurucunun seçtiği taş renkleri, yardımcı asistan (ipucu, otomatik işle, en iyi hamle).",
+    "Kodla ya da arkadaş davetiyle masa, bot ekleme, oyunu durdur / devam ettir / bitir, yarım kalan oyuna dönme; genel ve rakibe göre ayrı istatistik; kurallar sayfası."
   ],
   "eklenen": [
-    "Soru dışa aktarıcı: yaprak düzeni, çift yüz, logo, başlık/alt bilgi/kapak seçenekleri, soru kutusu, özel CSS",
-    "Dışa aktarma motoru: soru kartı bloğu (çıkmış sorular)"
+    "Oyunlar › Taş Masası: Yedili Okey, Takım Yedili, 101 Okey, Uno",
+    "Oyunlar › İstatistiklerim ve Nasıl oynanır"
   ],
   "degisen": [
-    "Sesli ders PDF'inde \"Bu dersten çıkmış sorular\" eki kart görünümünde"
+    "Oyunlar sayfası artık Taş Masası ile açılır; eski soru yarışmaları gizlendi"
   ],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
-    "Soru dışa aktarıcı: yaprakta 2 sayfa ve katlanır kitapçık düzeni, çift yüz cilt payı, kesim çizgileri, logo, başlık bandı, üç bölgeli alt bilgi ve yer tutucular, not alanı, zemin deseni, kapak biçimi.",
-    "Soru kutusu (çerçeve, zemin, kart), köşe yarıçapı, asılı girinti, şık aralığı ve puntosu, çözüm kutusu biçimi; yalnız sorular / yalnız çözümler çıktısı ve sayfa aralığı; Akademik ve Kesilebilir kartlar modları.",
-    "Sesli ders metni dışa aktarımında çıkmış sorular artık soru kartı olarak dizilir: numara rozeti, yıl etiketi, ayrı satırlarda önermeler, belirgin cevap şeridi (PDF, Word, Markdown ve düz metin)."
+    "Taş Masası: arkadaşlarınla ya da bota karşı gerçek zamanlı Yedili Okey, Takım Yedili, 101 Okey ve Uno. Oyunlar sayfasından masa kur, kodu paylaş."
   ]
 }
