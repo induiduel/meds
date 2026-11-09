@@ -9,8 +9,8 @@
 import type { PdfOption } from '../../pdf/pdfSources';
 import { kaynakAdi, type AQ } from './kaynak';
 import {
-  ALAN_RENK, ALT_MM, BASLIK_MM, GRUP_MM, KAGIT, PX_MM, SERIT_MM, YAZI, baslikYazi, buyukCss, cozumZeminCss, dersRengi, dogruZeminCss, govde, izgara, karistir,
-  kaynakSirasi, ogeRenk, paletRenkleri, sayfaOlcu, stilCss, yaziBaglantilari,
+  ALAN_RENK, ALT_MM, BASLIK_MM, GRUP_MM, KAGIT, NOT_PAY_MM, PX_MM, SERIT_MM, YAZI, altBilgiVar, baslikYazi, buyukCss, cozumZeminCss, dersRengi, dogruZeminCss, govde, izgara, karistir,
+  kaynakSirasi, ogeRenk, paletRenkleri, sayfaAraligi, sayfaOlcu, stilCss, yaprakOlcu, yaziBaglantilari,
   type Alan, type Ayar, type Govde, type RenkAlan,
 } from './ayar';
 
@@ -330,38 +330,81 @@ export function belgeCss(a: Ayar, onizleme = false): string {
         : a.sikHarfStil === 'normal' ? `color:${R('sikHarf')};font-weight:400;`
           : `color:${R('sikHarf')};font-weight:700;`;
   const kokStil = stilCss(a.kokStil) || (a.kokKalin ? 'font-weight:600;' : '');
+  const yp = yaprakOlcu(a);
+  const yr = `${a.kutuYaricap}mm`;
+  const desenR = R('desen');
+  const desen =
+    a.desen === 'cizgili' ? `background-image:repeating-linear-gradient(to bottom,transparent 0 ${(a.punto * a.satir * 0.3528 * 1.35).toFixed(2)}mm,${desenR} 0 calc(${(a.punto * a.satir * 0.3528 * 1.35).toFixed(2)}mm + .25pt));`
+      : a.desen === 'kareli' ? `background-image:linear-gradient(${desenR} .25pt,transparent .25pt),linear-gradient(90deg,${desenR} .25pt,transparent .25pt);background-size:5mm 5mm;`
+        : a.desen === 'noktali' ? `background-image:radial-gradient(${desenR} .35pt,transparent .5pt);background-size:5mm 5mm;`
+          : '';
+  const soruKutu =
+    a.soruKutu === 'cizgi' ? `border:.6pt solid ${R('kutuKenar')};border-radius:${yr};padding:${a.kutuIc}mm;background:${R('kutuZemin') || 'transparent'};`
+      : a.soruKutu === 'zemin' ? `border-radius:${yr};padding:${a.kutuIc}mm;background:${R('kutuZemin') || `color-mix(in srgb,${vurgu} 5%,${zemin})`};`
+        : a.soruKutu === 'golge' ? `border-radius:${yr};padding:${a.kutuIc}mm;background:${R('kutuZemin') || zemin};box-shadow:0 .5mm 1.6mm rgb(0 0 0 / .2),0 0 0 .45pt ${R('kutuKenar')};`
+          : '';
+  const cozumKutu =
+    a.cozumStil === 'kutu' ? `border:.6pt solid ${R('cozumKenar')};border-radius:${yr};background:${cozumZeminCss(a)};padding:1.8mm 2.4mm;`
+      : a.cozumStil === 'zemin' ? `border-radius:${yr};background:${cozumZeminCss(a)};padding:1.8mm 2.4mm;`
+        : a.cozumStil === 'sade' ? `border-top:.5pt solid ${R('cozumKenar')};padding:1.4mm 0 0;background:none;border-radius:0;`
+          : `padding:1.6mm 2.2mm;border-radius:${Math.max(0.8, a.kutuYaricap)}mm;background:${cozumZeminCss(a)};border-left:.8mm solid ${R('cozumKenar')};`;
+  const baslikKutu =
+    a.baslikStil === 'bant' ? `background:${R('baslikZemin')};color:${zemin};padding:0 3mm 2.2mm;margin:0 -${a.cerceve ? a.cerceveIc : 0}mm;border-bottom:0;border-radius:${a.cerceve ? `${Math.max(0, a.cerceveYaricap - 0.5)}mm ${Math.max(0, a.cerceveYaricap - 0.5)}mm` : '0 0'} 0 0;`
+      : a.baslikStil === 'kutu' ? `border:.7pt solid ${R('baslikCizgi')};border-radius:${yr};padding:0 3mm 2.2mm;`
+        : a.baslikStil === 'sade' ? `border-bottom:0;`
+          : '';
+  const baslikRenk = a.baslikStil === 'bant' ? zemin : R('baslik');
+  const baslikAlt = a.baslikStil === 'bant' ? `color-mix(in srgb,${zemin} 82%,${R('baslikZemin')})` : R('altBilgi');
   return `
-@page{size:${w}mm ${h}mm;margin:0}
+@page{size:${yp.w}mm ${yp.h}mm;margin:0}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{font-family:${YAZI[a.yazi].css};font-weight:${a.agirlik};color:${a.metinRenk};-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:${a.punto}pt;line-height:${a.satir};letter-spacing:${a.harfAralik}em;text-rendering:geometricPrecision;font-kerning:normal}
-${onizleme ? `html{background:#d4d7dd}body{padding:14px 0}.pg{margin:0 auto 14px;box-shadow:0 2px 10px rgb(0 0 0 / .18)}` : ''}
+${onizleme ? `html{background:#d4d7dd}body{padding:14px 0}.pg,.yp{margin:0 auto 14px;box-shadow:0 2px 10px rgb(0 0 0 / .18)}.yp .pg{margin:0;box-shadow:none}` : ''}
 .pg{width:${w}mm;height:${h}mm;padding:${kt}mm ${ks}mm ${ka}mm ${kl}mm;position:relative;overflow:hidden;background:${zemin};break-after:page;page-break-after:always}
+.pg.cift{padding:${kt}mm ${kl}mm ${ka}mm ${ks}mm}
 .pg:last-child{break-after:auto;page-break-after:auto}
-.pg-in{height:100%;position:relative;${a.cerceve ? `border:${a.cerceveKalin}pt ${a.cerceveStil} ${a.cerceveRenk};border-radius:${a.cerceveYaricap}mm;padding:${ic}mm;` : ''}}
+.yp{width:${yp.w}mm;height:${yp.h}mm;display:flex;justify-content:center;align-items:center;overflow:hidden;background:${zemin};break-after:page;page-break-after:always;position:relative}
+.yp:last-child{break-after:auto;page-break-after:auto}
+.yp>div{width:${(w * yp.olcek).toFixed(3)}mm;height:${(h * yp.olcek).toFixed(3)}mm;overflow:hidden;flex:none;position:relative}
+.yp>div>.pg{transform:scale(${yp.olcek.toFixed(5)});transform-origin:0 0;break-after:auto;page-break-after:auto}
+${a.yaprak === 'kitapcik' && !onizleme ? '' : a.yaprak !== 'tek' ? `.yp>div+div::before{content:'';position:absolute;left:-.3pt;top:0;bottom:0;border-left:.3pt dashed ${R('kesim')};opacity:.6}` : ''}
+.pg-in{height:100%;position:relative;${a.cerceve ? `border:${a.cerceveKalin}pt ${a.cerceveStil} ${a.cerceveRenk};border-radius:${a.cerceveYaricap}mm;padding:${ic}mm;` : ''}${desen}}
+.pg-logo{height:${a.logoYuk}mm;width:auto;max-width:60mm;object-fit:contain;flex:none;display:block}
+.pg-not{height:${a.notAlani + NOT_PAY_MM}mm;padding-top:${NOT_PAY_MM - 1.5}mm;position:relative;z-index:1;overflow:hidden}
+.pg-not b{display:block;font-size:${Math.max(6.5, a.punto * 0.72)}pt;color:${R('altBilgi')};line-height:1.2;margin-bottom:.6mm;font-weight:600}
+.pg-not i{display:block;height:${(a.punto * a.satir * 1.35).toFixed(2)}pt;border-bottom:.5pt solid ${R('notCizgi')}}
 .fil{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:0}
 .fil span{transform:rotate(-32deg);font-size:${Math.min(w, h) / 7}mm;font-weight:800;font-family:${basF};color:${R('filigran')};opacity:.06;white-space:nowrap;letter-spacing:.04em}
-.pg-bas{height:${BASLIK_MM}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;padding-bottom:2.2mm;border-bottom:1.1pt solid ${R('baslikCizgi')};position:relative;z-index:1}
-.pg-bas h1{margin:0;font-family:${basF};font-size:${Math.min(16, a.punto * a.baslikOran)}pt;line-height:1.15;color:${R('baslik')};font-weight:${a.baslikAgirlik};${buyukCss(a.baslikBuyuk)}white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pg-bas p{margin:.6mm 0 0;font-size:${Math.max(7, a.punto * 0.8)}pt;line-height:1.2;color:${R('altBilgi')};white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pg-bas .bl{min-width:0}
-.pg-bas .br{flex:none;display:grid;gap:1.6mm;font-size:${Math.max(7, a.punto * 0.78)}pt;color:${R('altBilgi')};text-align:left}
+.pg-bas{height:${BASLIK_MM}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;padding-bottom:2.2mm;border-bottom:1.1pt solid ${R('baslikCizgi')};position:relative;z-index:1;${baslikKutu}}
+.pg-bas.orta{justify-content:center;text-align:center}
+.pg-bas.orta .bl{flex:1}
+.pg-bas h1{margin:0;font-family:${basF};font-size:${Math.min(16, a.punto * a.baslikOran)}pt;line-height:1.15;color:${baslikRenk};font-weight:${a.baslikAgirlik};${buyukCss(a.baslikBuyuk)}white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-bas p{margin:.6mm 0 0;font-size:${Math.max(7, a.punto * 0.8)}pt;line-height:1.2;color:${baslikAlt};white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-bas .bl{min-width:0;display:flex;align-items:flex-end;gap:3mm}
+.pg-bas .bl>div{min-width:0}
+.pg-bas .br{flex:none;display:grid;gap:1.6mm;font-size:${Math.max(7, a.punto * 0.78)}pt;color:${baslikAlt};text-align:left}
 .pg-bas .br span{display:flex;gap:2mm;align-items:flex-end}
-.pg-bas .br i{display:inline-block;width:42mm;border-bottom:.6pt solid ${R('altBilgi')};height:1em}
+.pg-bas .br i{display:inline-block;width:42mm;border-bottom:.6pt solid ${baslikAlt};height:1em}
 .pg-bant{height:${GRUP_MM}mm;display:flex;align-items:center;gap:2.5mm;font-family:${basF};font-weight:${a.baslikAgirlik};font-size:${Math.max(8, a.punto * 1.05)}pt;color:${R('bant')};${buyukCss(a.grupBuyuk)}border-bottom:.6pt solid ${R('anahtarKenar')};position:relative;z-index:1;white-space:nowrap;overflow:hidden}
 .pg-bant::before{content:'';width:2.6mm;height:2.6mm;border-radius:1mm;background:var(--bk,${R('bant')});flex:none}
 .pg-gv{position:relative;z-index:1;overflow:hidden}
 .pg-serit{height:${SERIT_MM}mm;border-top:.6pt dashed ${R('ayirici')};padding-top:1.4mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;line-height:1.35;color:${R('cozumMetin')};overflow:hidden;position:relative;z-index:1}
 .pg-serit b{color:${R('cevapHarfi')}}
-.pg-alt{height:${ALT_MM}mm;display:flex;align-items:flex-end;justify-content:space-between;font-size:${Math.max(6.5, a.punto * 0.72)}pt;color:${R('altBilgi')};position:relative;z-index:1}
+.pg-alt{height:${ALT_MM}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:3mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;color:${R('altBilgi')};position:relative;z-index:1;${a.altCizgi ? `border-top:.5pt solid ${R('anahtarKenar')};` : ''}}
+.pg-alt>span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-alt>span:nth-child(2){text-align:center}.pg-alt>span:nth-child(3){text-align:right}
 .izg{display:grid;height:100%}
 .hc{overflow:hidden;position:relative;min-width:0}
-.hc.cer{border:.7pt solid ${R('hucreKenar')};border-radius:2mm;padding:${HUCRE_IC}mm}
+.hc.cer{border:.7pt solid ${R('hucreKenar')};border-radius:${Math.max(0.5, a.kutuYaricap)}mm;padding:${HUCRE_IC}mm}
+${a.kesimCizgi ? `.izg.kes{position:relative}.izg.kes .hc{outline:.35pt dashed ${R('kesim')};outline-offset:${(a.hucreAralik / 2).toFixed(2)}mm}` : ''}
 .akis{display:flex;height:100%;gap:${KOLON_ARA}mm}
 .kol{position:relative;min-width:0}
 ${a.sutunCizgi ? `.kol+.kol::before{content:'';position:absolute;left:-${KOLON_ARA / 2}mm;top:0;bottom:0;border-left:.6pt solid ${R('sutunCizgi')}}` : ''}
 .sb,.cb,.gb{font-size:calc(${a.punto}pt * var(--k,1));line-height:${a.satir};padding-bottom:calc(${a.soruArasi}mm * var(--k,1));break-inside:avoid;position:relative}
 .sb{${a.iki ? 'text-align:justify;hyphens:auto;' : ''}}
+${soruKutu ? `.sb.kt{${soruKutu}padding-bottom:${a.kutuIc}mm;margin-bottom:calc(${a.soruArasi}mm * var(--k,1))}.hc>.sb.kt{margin-bottom:0;min-height:100%}.sb.kt.ay{border-bottom:${cizgi(a.ayirici, R('ayirici'))}}` : ''}
+${a.asiliGirinti ? `.sb .kok{display:flex;gap:.35em;align-items:baseline}.sb .kok .no{margin-right:0;flex:0 0 auto;white-space:nowrap;min-width:var(--nw,1.6em)}.sb .kok .km{flex:1 1 0;min-width:0}.sb .sk{padding-left:calc(var(--nw,1.6em) + .35em + ${a.sikGirinti}mm)}` : ''}
 .sb.ay{border-bottom:${cizgi(a.ayirici, R('ayirici'))};margin-bottom:calc(${a.soruArasi * 0.5}mm * var(--k,1))}
 .hc>.sb,.hc>.cb{padding-bottom:0;border-bottom:0;margin-bottom:0}
 .sb.r-serit,.cb.r-serit{border-left:1.2mm solid var(--rk);padding-left:2.6mm}
@@ -379,7 +422,7 @@ ${a.etiketRenk === 'ozel' ? `.et span:not(.rk){background:${a.etiketZemin};color
 .kok{margin:0 0 calc(${a.paragraf}pt * var(--k,1));color:${R('kok')};${kokStil}overflow-wrap:anywhere}
 .no{margin-right:.35em;font-style:normal;${numara}}
 .sb.r-numara .no{display:inline-block;background:var(--rk);color:${zemin};border:0;border-radius:.3em;padding:0 .35em;min-width:1.6em;text-align:center;text-decoration:none}
-.sk{list-style:none;margin:0;padding:0 0 0 ${a.sikGirinti}mm;display:grid;gap:calc(${a.paragraf * 0.6}pt * var(--k,1)) 4mm;color:${R('sik')};${stilCss(a.sikStil)}}
+.sk{list-style:none;margin:0;padding:0 0 0 ${a.sikGirinti}mm;display:grid;gap:calc(${a.sikAralik}pt * var(--k,1)) 4mm;color:${R('sik')};font-size:${a.sikOran}em;${stilCss(a.sikStil)}}
 .sk.iki{grid-template-columns:1fr 1fr}
 .sk.yan{display:flex;flex-wrap:wrap;gap:.2em 1.4em}
 .sk li{display:flex;gap:.35em;min-width:0;overflow-wrap:anywhere;align-items:baseline}
@@ -389,7 +432,7 @@ ${a.isaretStil === 'daire' ? `.sk li.dg .hf{border:.13em solid ${dogru};border-r
 ${a.isaretStil === 'tik' ? `.sk li.dg>span::after{content:' ✓';color:${dogru}}` : ''}
 .yz{margin-top:calc(${a.paragraf}pt * var(--k,1))}
 .yz i{display:block;height:${(a.punto * a.satir * 1.35).toFixed(2)}pt;border-bottom:.5pt solid ${R('yazmaCizgi')}}
-.cz{margin-top:calc(${a.paragraf * 1.5}pt * var(--k,1));padding:1.6mm 2.2mm;border-radius:1.4mm;background:${cozumZeminCss(a)};border-left:.8mm solid ${R('cozumKenar')};color:${R('cozumMetin')};font-size:.9em}
+.cz{margin-top:calc(${a.paragraf * 1.5}pt * var(--k,1));${cozumKutu}color:${R('cozumMetin')};font-size:.9em}
 .cb{color:${R('cozumMetin')}}
 .cz p,.cb p{margin:0 0 .35em}
 .cz ul,.cb ul{margin:0;padding:0;list-style:none;display:grid;gap:.2em}
@@ -418,6 +461,10 @@ ${a.grupStil === 'sade' ? `.gb{padding:.1em 0}` : ''}
 .opt b{width:8mm;text-align:right;font-weight:700}
 .opt i{width:4.6mm;height:4.6mm;border-radius:50%;border:.6pt solid ${R('altBilgi')};display:grid;place-items:center;font-style:normal;font-size:6pt;color:${R('altBilgi')}}
 .kp{height:100%;display:flex;flex-direction:column;justify-content:center;gap:7mm;padding:0 6mm;position:relative;z-index:1}
+${a.kapakStil === 'bant' ? `.kp{border-left:4mm solid ${vurgu};padding-left:8mm}` : ''}
+${a.kapakStil === 'zemin' ? `.pg.kpk{background:${vurgu}}.pg.kpk .pg-in{border-color:color-mix(in srgb,${zemin} 50%,${vurgu})}.kp{color:${zemin}}.kp .ust,.kp h1,.kp h2,.kp .sy b,.kp .sy span,.kp .not,.kp .alan,.kp .lj{color:${zemin}}.kp .sy div{border-color:color-mix(in srgb,${zemin} 55%,${vurgu})}.kp .yon{background:color-mix(in srgb,${zemin} 14%,${vurgu});border-color:${zemin};color:${zemin}}.kp .alan i{border-color:${zemin}}.kp .kpn{color:${zemin}}` : ''}
+.kp .kpn{margin:0;font-size:10pt;line-height:1.5;white-space:pre-wrap;color:${R('cozumMetin')}}
+.kp .pg-logo{height:${Math.max(a.logoYuk, 14)}mm;max-width:80mm}
 .kp .ust{font-size:9pt;letter-spacing:.18em;text-transform:uppercase;color:${vurgu};font-weight:800}
 .kp h1{margin:0;font-family:${basF};font-size:30pt;line-height:1.08;color:${R('kapakBaslik')};font-weight:${a.baslikAgirlik};${buyukCss(a.baslikBuyuk)}}
 .kp h2{margin:0;font-size:13pt;font-weight:500;color:${R('altBilgi')}}
@@ -433,6 +480,7 @@ ${a.grupStil === 'sade' ? `.gb{padding:.1em 0}` : ''}
 .lj{display:flex;flex-wrap:wrap;gap:2mm 4mm;font-size:8.5pt}
 .lj span{display:flex;align-items:center;gap:1.4mm}
 .lj i{width:3mm;height:3mm;border-radius:.8mm;background:var(--rk)}
+${a.ozelCss ? `\n/* özel */\n${a.ozelCss.replace(/<\/style/gi, '')}` : ''}
 `;
 }
 /** Google Fonts bağlantıları (önizleme, ölçüm ve sunucu PDF'i) */
@@ -469,10 +517,12 @@ export function soruHtml(h: HS, a: Ayar, k = 1, o: { isaret?: boolean; satir?: b
   const altinda = a.cozumYeri === 'altinda' ? cozumIcerik(h, a) : null;
   const sk = a.secenekDuzen === 'iki' ? ' iki' : a.secenekDuzen === 'yan' ? ' yan' : '';
   const ay = (o.ayirici ?? true) && a.ayirici !== 'yok' ? ' ay' : '';
-  return `<div class="sb${renkSinif(h, a)}${ay}" style="${renkStil(h)}--k:${k}">`
+  const kt = a.soruKutu !== 'yok' ? ' kt' : '';
+  const nw = a.asiliGirinti ? `--nw:${(numaraMetni(h.no, a).length * 0.62 + 0.3).toFixed(2)}em;` : '';
+  return `<div class="sb${renkSinif(h, a)}${ay}${kt}" style="${renkStil(h)}${nw}--k:${k}">`
     + (o.basliklar || []).map((b) => grupHtml(b, a, k, true)).join('')
     + etiketHtml(h, a, 'ust')
-    + `<div class="kok"><span class="no">${esc(numaraMetni(h.no, a))}</span>${zengin(h.q.stem)}</div>`
+    + `<div class="kok"><span class="no">${esc(numaraMetni(h.no, a))}</span><span class="km">${zengin(h.q.stem)}</span></div>`
     + `<ol class="sk${sk}">${h.secenek.map((x) => `<li${isaret && x.key === h.dogru ? ' class="dg"' : ''}><b class="hf">${esc(harfMetni(x.key, a))}</b><span>${zengin(x.text)}</span></li>`).join('')}</ol>`
     + etiketHtml(h, a, 'alt')
     + ((o.satir ?? true) && a.yazmaSatiri > 0 ? `<div class="yz">${'<i></i>'.repeat(a.yazmaSatiri)}</div>` : '')
@@ -826,29 +876,52 @@ export function bilgi(hs: HS[]): BelgeBilgi {
   };
 }
 
+/** Alt bilgi / kapak yer tutucuları: {sayfa} {toplam} {tarih} {baslik} {altbaslik} {soru} */
+export function yerTutucu(t: string, v: { sayfa: number; toplam: number; tarih: string; baslik: string; altbaslik: string; soru: number }): string {
+  return String(t || '').replace(/\{(sayfa|toplam|tarih|baslik|altbaslik|soru)\}/g, (_, k: keyof typeof v) => String(v[k] ?? ''));
+}
+export const sayfaNoMetni = (no: number, toplam: number, a: Ayar) =>
+  a.sayfaNoBicim === 'duz' ? `${no}` : a.sayfaNoBicim === 'sayfa' ? `Sayfa ${no}` : a.sayfaNoBicim === 'tire' ? `– ${no} –` : `${no} / ${toplam}`;
+/** Alt bilginin üç bölgesi (sol, orta, sağ); sayfa numarası seçilen bölgeye eklenir (bölgede {sayfa} yoksa) */
+export function altBolgeler(a: Ayar, no: number, toplam: number, b: BelgeBilgi): [string, string, string] {
+  const v = { sayfa: no, toplam, tarih: b.tarih, baslik: a.baslik, altbaslik: a.altBaslik, soru: b.toplam };
+  const ham: [string, string, string] = [a.altMetin || '', a.altOrta || '', a.altSag || ''];
+  const out = ham.map((t) => yerTutucu(t, v)) as [string, string, string];
+  if (a.sayfaNo) {
+    const i = a.sayfaNoYer === 'sol' ? 0 : a.sayfaNoYer === 'orta' ? 1 : 2;
+    if (!/\{sayfa\}/.test(ham[i])) out[i] = out[i] ? `${out[i]} · ${sayfaNoMetni(no, toplam, a)}` : sayfaNoMetni(no, toplam, a);
+  }
+  return out;
+}
+const logoHtml = (a: Ayar, yer: 'baslik' | 'kapak') => (a.logo && (a.logoYer === yer || a.logoYer === 'ikisi') ? `<img class="pg-logo" src="${a.logo}" alt="">` : '');
+
 function sayfaHtml(p: Sayfa, a: Ayar, no: number, toplam: number, b: BelgeBilgi, lejant: { v: string; renk: string }[]): string {
   const fil = a.filigran.trim() ? `<div class="fil"><span>${esc(a.filigran.trim())}</span></div>` : '';
+  const cift = a.ciftYuz && no % 2 === 0 ? ' cift' : '';
   if (p.tur === 'kapak') {
-    return `<section class="pg"><div class="pg-in">${fil}<div class="kp">`
+    const v = { sayfa: 0, toplam, tarih: b.tarih, baslik: a.baslik, altbaslik: a.altBaslik, soru: b.toplam };
+    return `<section class="pg kpk"><div class="pg-in">${fil}<div class="kp">`
+      + logoHtml(a, 'kapak')
       + `<div class="ust">${esc(b.kaynaklar.join(' · '))}</div>`
       + `<h1>${esc(a.baslik || 'Soru kitapçığı')}</h1>${a.altBaslik ? `<h2>${esc(a.altBaslik)}</h2>` : ''}`
+      + (a.kapakNot.trim() ? `<p class="kpn">${esc(yerTutucu(a.kapakNot, v))}</p>` : '')
       + `<div class="sy"><div><b>${b.toplam}</b><span>soru</span></div><div><b>${b.dersler.length}</b><span>ders</span></div><div><b>${toplam}</b><span>sayfa</span></div></div>`
       + (b.dersler.length ? `<p class="not" style="margin:0;font-size:9.5pt">${esc(b.dersler.slice(0, 14).join(' · '))}${b.dersler.length > 14 ? ' …' : ''}</p>` : '')
       + (lejant.length ? `<div class="lj">${lejant.slice(0, 24).map((l) => `<span style="--rk:${l.renk}"><i></i>${esc(l.v)}</span>`).join('')}</div>` : '')
       + `<div class="yon">Her sorunun yalnız bir doğru cevabı vardır.${a.optik ? ' Cevaplarını sondaki cevap kâğıdına işaretle.' : ''}${a.cevapAnahtari ? ' Cevap anahtarı belgenin sonundadır.' : ''}</div>`
       + (a.adSoyad || a.tarih ? `<div class="alan">${a.adSoyad ? '<span>Ad Soyad <i></i></span><span>Numara <i></i></span>' : ''}${a.tarih ? '<span>Tarih <i></i></span>' : ''}</div>` : '')
-      + `<p class="not" style="margin:0;font-size:8.5pt;opacity:.8">${esc(b.tarih)}${a.altMetin ? ` · ${esc(a.altMetin)}` : ''}</p>`
+      + `<p class="not" style="margin:0;font-size:8.5pt;opacity:.8">${esc(b.tarih)}${a.altMetin ? ` · ${esc(yerTutucu(a.altMetin, v))}` : ''}</p>`
       + `</div></div></section>`;
   }
   const g = p.g;
   const bas = g.baslik
-    ? `<header class="pg-bas"><div class="bl"><h1>${esc(a.baslik)}</h1>${a.altBaslik ? `<p>${esc(a.altBaslik)}</p>` : ''}</div>${a.adSoyad || a.tarih ? `<div class="br">${a.adSoyad ? '<span>Ad Soyad:<i></i></span>' : ''}${a.tarih ? `<span>Tarih:<i style="width:${a.adSoyad ? 42 : 30}mm"></i></span>` : ''}</div>` : ''}</header>`
+    ? `<header class="pg-bas${a.baslikHiza === 'orta' ? ' orta' : ''}"><div class="bl">${logoHtml(a, 'baslik')}<div><h1>${esc(a.baslik)}</h1>${a.altBaslik ? `<p>${esc(a.altBaslik)}</p>` : ''}</div></div>${a.adSoyad || a.tarih ? `<div class="br">${a.adSoyad ? '<span>Ad Soyad:<i></i></span>' : ''}${a.tarih ? `<span>Tarih:<i style="width:${a.adSoyad ? 42 : 30}mm"></i></span>` : ''}</div>` : ''}</header>`
     : '';
   const bant = p.bant ? `<div class="pg-bant" style="${p.bant.renk ? `--bk:${p.bant.renk}` : ''}">${esc(p.bant.ad)}</div>` : '';
   let gv = '';
   if (p.izgara && p.hucre) {
     const { sut, sat, cw, ch } = p.izgara;
-    gv = `<div class="izg" style="grid-template-columns:repeat(${sut},${cw}mm);grid-template-rows:repeat(${sat},${ch}mm);gap:${a.hucreAralik}mm">`
+    gv = `<div class="izg${a.kesimCizgi ? ' kes' : ''}" style="grid-template-columns:repeat(${sut},${cw}mm);grid-template-rows:repeat(${sat},${ch}mm);gap:${a.hucreAralik}mm">`
       + p.hucre.map((h) => `<div class="hc${a.hucreCerceve ? ' cer' : ''}">${h ? blokHtml(h, a) : ''}</div>`).join('') + `</div>`;
   } else if (p.kolon) {
     gv = `<div class="akis">${p.kolon.map((c) => `<div class="kol" style="width:${p.kolonW}mm">${c.map((x) => blokHtml(x, a)).join('')}</div>`).join('')}</div>`;
@@ -859,19 +932,68 @@ function sayfaHtml(p: Sayfa, a: Ayar, no: number, toplam: number, b: BelgeBilgi,
     gv = `<div class="opt" style="grid-template-columns:repeat(${p.optikSut},${OPTIK_W}mm);grid-auto-flow:column;grid-template-rows:repeat(${sat},${OPTIK_H}mm)">${p.optik.map((n) => `<div><b>${n}</b>${['A', 'B', 'C', 'D', 'E'].map((h) => `<i>${h}</i>`).join('')}</div>`).join('')}</div>`;
   }
   const seritHtml = p.serit ? `<div class="pg-serit"><b>Cevaplar</b> · ${p.serit.map((x) => `${x.no}-${esc(x.harf)}`).join('  ')}</div>` : '';
-  const altVar = a.sayfaNo || !!a.altMetin.trim();
-  const alt = altVar ? `<footer class="pg-alt"><span>${esc(a.altMetin)}</span><span>${a.sayfaNo ? `${no} / ${toplam}` : ''}</span></footer>` : '';
-  return `<section class="pg"><div class="pg-in">${fil}${bas}${bant}<div class="pg-gv" style="height:${g.h}mm">${gv}</div>${seritHtml}${alt}</div></section>`;
+  const alt = altBilgiVar(a) ? `<footer class="pg-alt">${altBolgeler(a, no, toplam, b).map((t) => `<span>${esc(t)}</span>`).join('')}</footer>` : '';
+  const satirYuk = a.punto * a.satir * 1.35 * 0.3528; // mm
+  const notHtml = a.notAlani > 0 ? `<div class="pg-not"><b>Notlar</b>${'<i></i>'.repeat(Math.max(1, Math.floor(a.notAlani / satirYuk)))}</div>` : '';
+  return `<section class="pg${cift}"><div class="pg-in">${fil}${bas}${bant}<div class="pg-gv" style="height:${g.h}mm">${gv}</div>${seritHtml}${notHtml}${alt}</div></section>`;
+}
+
+/** Çıktı süzgeci: "yalnız sorular" (kapak, soru, cevap kâğıdı) · "yalnız çözümler" (çözüm, cevap anahtarı) · sayfa aralığı. Belge modeli değişmez, sayfalar seçilir */
+export function ciktiSuz(belge: Belge, a: Ayar): Belge {
+  let sayfalar = belge.sayfalar;
+  if (a.cikti === 'sorular') sayfalar = sayfalar.filter((p) => p.tur === 'kapak' || p.tur === 'soru' || p.tur === 'optik');
+  else if (a.cikti === 'cozumler') sayfalar = sayfalar.filter((p) => p.tur === 'cozum' || p.tur === 'anahtar');
+  const aralik = sayfaAraligi(a.sayfaAralik);
+  if (aralik) {
+    const kapakVar = sayfalar[0]?.tur === 'kapak';
+    sayfalar = sayfalar.filter((p, i) => aralik.has(kapakVar ? i : i + 1));
+  }
+  return sayfalar === belge.sayfalar ? belge : { ...belge, sayfalar };
+}
+
+/** Yaprak sayısı: 2'li ve kitapçıkta iki sayfa bir yaprakta; kitapçık 4'ün katına tamamlanır (çift yüzde kapak ardı boş sayfa dahil) */
+export function yaprakSayisi(n: number, a: Ayar, kapakVar = false): number {
+  const m = n + (a.ciftYuz && kapakVar ? 1 : 0);
+  if (a.yaprak === 'tek' || a.bicim !== 'pdf') return m;
+  if (a.yaprak === 'kitapcik') return Math.ceil(m / 4) * 2;
+  return Math.ceil(m / 2);
 }
 
 /** tum/toplamSayfa: önizleme yalnız ilk soruları sayfaladığında kapak, renk anahtarı ve sayfa numaraları tüm seçimi göstersin */
+/**
+ * `ilk`: önizlemede gösterilecek yaprak sayısı (tek kipte sayfa). Çift yüzde kapağın ardına boş sayfa girer (içerik sağ
+ * sayfadan başlar); 2'li yaprakta sayfalar sırayla ikişer, kitapçıkta katlama sırasıyla (ön: son–ilk, arka: 2–sondan bir önce) dizilir.
+ */
 export function belgeHtml(belge: Belge, a: Ayar, o: { onizleme?: boolean; ilk?: number; baslik?: string; tum?: HS[]; toplamSayfa?: number } = {}): string {
   const b = bilgi(o.tum || belge.hs);
   const kapakVar = belge.sayfalar[0]?.tur === 'kapak';
   const toplam = o.toplamSayfa || belge.sayfalar.length;
   const lejant = renkHaritasi((o.tum || belge.hs).map((h) => h.q), a);
-  const sayfalar = o.ilk ? belge.sayfalar.slice(0, o.ilk) : belge.sayfalar;
-  const govdeHtml = sayfalar.map((p, i) => sayfaHtml(p, a, kapakVar ? i : i + 1, kapakVar ? toplam - 1 : toplam, b, lejant)).join('');
+  // sayfa HTML'leri (null = boş sayfa)
+  const html: (string | null)[] = belge.sayfalar.map((p, i) => sayfaHtml(p, a, kapakVar ? i : i + 1, kapakVar ? toplam - 1 : toplam, b, lejant));
+  if (a.ciftYuz && kapakVar) html.splice(1, 0, null);
+  const bos = `<section class="pg"><div class="pg-in"></div></section>`;
+  const yp = yaprakOlcu(a);
+  let govdeHtml: string;
+  if (yp.sayfa === 1) {
+    govdeHtml = (o.ilk ? html.slice(0, o.ilk) : html).map((h) => h ?? bos).join('');
+  } else {
+    let sira: (number | null)[][];
+    if (a.yaprak === 'kitapcik') {
+      const n = Math.ceil(html.length / 4) * 4;
+      const s = (i: number) => (i < html.length ? i : null);
+      sira = [];
+      for (let i = 0; i < n / 2; i += 1) {
+        // ön yüz: son–ilk; arka yüz: ikinci–sondan ikinci (katlanınca sıra doğru)
+        sira.push(i % 2 === 0 ? [s(n - 1 - i), s(i)] : [s(i), s(n - 1 - i)]);
+      }
+    } else {
+      sira = [];
+      for (let i = 0; i < html.length; i += 2) sira.push([i, i + 1 < html.length ? i + 1 : null]);
+    }
+    if (o.ilk) sira = sira.slice(0, o.ilk);
+    govdeHtml = sira.map((y) => `<div class="yp">${y.map((i) => `<div>${i == null ? bos : (html[i] ?? bos)}</div>`).join('')}</div>`).join('');
+  }
   return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>${esc(o.baslik || a.baslik || 'Sorular')}</title>${yaziLinkHtml(a)}<style>${belgeCss(a, o.onizleme)}</style></head><body>${govdeHtml}</body></html>`;
 }
 

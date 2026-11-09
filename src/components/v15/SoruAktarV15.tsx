@@ -1,17 +1,17 @@
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import {
-  Check, CheckSquare, Columns2, Eye, FileDown, FileText, Filter, LayoutGrid, ListChecks, Loader2, Palette, Plus, Presentation, Printer,
+  Check, CheckSquare, Columns2, Eye, FileDown, FileText, Filter, ImagePlus, LayoutGrid, ListChecks, Loader2, Palette, Plus, Presentation, Printer,
   RotateCcw, Save, Search, Shuffle, SlidersHorizontal, Trash2, Type, X,
 } from 'lucide-react';
 import { useV15Baslik } from './baslik';
 import { BOS_SUZGEC, KAYNAKLAR, kaynakYukle, miniDesteler, secenekler, suz, type AQ, type KaynakId, type Suzgec } from './soruAktar/kaynak';
 import {
-  AGIRLIKLAR, ALANLAR, EN_COK_GRUP, KAGIT, PALETLER, PX_MM, RENK_GRUP_AD, RENK_OGELERI, SIRALAMALAR, TASARIMLAR, TEMALAR, VARSAYILAN, YAZI, YAZI_TUR_AD,
-  alanAdi, ayarNormal, karistir, ogeRenk, sayfaOlcu, tasarimUygula, temaUygula, yaziBaglantilari,
+  AGIRLIKLAR, ALANLAR, EN_COK_GRUP, KAGIT, LOGO_EN_COK, PALETLER, PX_MM, RENK_GRUP_AD, RENK_OGELERI, SIRALAMALAR, TASARIMLAR, TEMALAR, VARSAYILAN, YAZI, YAZI_TUR_AD,
+  alanAdi, ayarNormal, karistir, ogeRenk, sayfaAraligi, tasarimUygula, temaUygula, yaprakOlcu, yaziBaglantilari,
   type Alan, type Ayar, type Bicim, type Duzen, type RenkOge, type TasarimId, type YaziId,
 } from './soruAktar/ayar';
-import { Olcer, belgeHtml, hazirla, kagitAdi, renkHaritasi, sayfala, type HS } from './soruAktar/belge';
+import { Olcer, belgeHtml, ciktiSuz, hazirla, kagitAdi, renkHaritasi, sayfala, yaprakSayisi, type HS } from './soruAktar/belge';
 import { downloadBlob, printDocument, renderPdfOnServer, safeFileName } from '../pdf/pdfDocument';
 import { toast } from '../ui/Toast';
 import type { DeckCatalogEntry } from '../../data/deckStore';
@@ -133,8 +133,46 @@ function YaziSec({ ad, deger, degis, ayni, ornek }: { ad: string; deger: string;
     </div>
   );
 }
-function Metin({ ad, deger, degis, yer }: { ad: string; deger: string; degis: (v: string) => void; yer?: string }) {
-  return <label className="sx15-in"><span>{ad}</span><input type="text" value={deger} placeholder={yer} maxLength={140} onChange={(e) => degis(e.target.value)} /></label>;
+function Metin({ ad, deger, degis, yer, cok, enCok = 140, ipucu }: { ad: string; deger: string; degis: (v: string) => void; yer?: string; cok?: boolean; enCok?: number; ipucu?: string }) {
+  return (
+    <label className="sx15-in"><span>{ad}</span>
+      {cok ? <textarea className="sx15-ta" value={deger} placeholder={yer} maxLength={enCok} rows={4} spellCheck={false} onChange={(e) => degis(e.target.value)} />
+        : <input type="text" value={deger} placeholder={yer} maxLength={enCok} onChange={(e) => degis(e.target.value)} />}
+      {ipucu && <small className="sx15-ip">{ipucu}</small>}
+    </label>
+  );
+}
+/** Logo yükleme: resim küçültülür (en çok 900 × 360 px), PNG → sığmazsa JPEG; veri adresi ayarda saklanır (yalnız PDF/yazdırma) */
+function LogoSec({ deger, degis }: { deger: string; degis: (v: string) => void }) {
+  const al = (f: File | undefined) => {
+    if (!f) return;
+    if (!/^image\/(png|jpeg|webp|gif)$/.test(f.type)) { toast.error('Desteklenmeyen dosya', 'PNG, JPEG, WebP ya da GIF seç.'); return; }
+    const img = new Image();
+    const url = URL.createObjectURL(f);
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const k = Math.min(1, 900 / img.naturalWidth, 360 / img.naturalHeight);
+      const c = document.createElement('canvas');
+      c.width = Math.max(1, Math.round(img.naturalWidth * k));
+      c.height = Math.max(1, Math.round(img.naturalHeight * k));
+      c.getContext('2d')!.drawImage(img, 0, 0, c.width, c.height);
+      let d = c.toDataURL('image/png');
+      if (d.length > LOGO_EN_COK) d = c.toDataURL('image/jpeg', 0.85);
+      if (d.length > LOGO_EN_COK) { toast.error('Logo çok büyük', 'Daha küçük ya da sade bir görsel seç (en çok ~160 KB).'); return; }
+      degis(d);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); toast.error('Görsel okunamadı'); };
+    img.src = url;
+  };
+  return (
+    <div className="sx15-logo">
+      {deger ? <img src={deger} alt="Logo" /> : <span className="sx15-logo-bos"><ImagePlus aria-hidden />Logo yok</span>}
+      <div className="sx15-logo-b">
+        <label className="v15-btn is-soft sx15-logo-sec"><input type="file" accept="image/png,image/jpeg,image/webp,image/gif" onChange={(e) => { al(e.target.files?.[0]); e.target.value = ''; }} />{deger ? 'Değiştir' : 'Logo yükle'}</label>
+        {deger && <button type="button" className="v15-btn is-ghost" onClick={() => degis('')}><Trash2 aria-hidden />Kaldır</button>}
+      </div>
+    </div>
+  );
 }
 function CokSecim({ ad, liste, secili, degis, ad2 }: { ad: string; liste: { v: string; n: number }[]; secili: string[]; degis: (v: string[]) => void; ad2?: (v: string) => string }) {
   const [ara, setAra] = useState('');
@@ -255,14 +293,14 @@ function SoruListesi({ liste, cikarilan, ac }: { liste: AQ[]; cikarilan: Set<str
 /* ---------------------------------------------------------------------------
  * Önizleme
  * ------------------------------------------------------------------------- */
-interface Oniz { html: string; sayfa: number; tahmini: boolean; tasan: number; gosterilen: number; /** sayfaya sığdırın seçtiği yazı ölçeği */ olcek: number; not?: string }
+interface Oniz { html: string; sayfa: number; /** yaprak sayısı (2'li / kitapçık) */ yaprak: number; yaprakli: boolean; tahmini: boolean; tasan: number; /** önizlemede gösterilen yaprak/sayfa */ gosterilen: number; /** sayfaya sığdırın seçtiği yazı ölçeği */ olcek: number; not?: string }
 
 function Onizleme({ oniz, ayar, yukleniyor, zum }: { oniz: Oniz | null; ayar: Ayar; yukleniyor: boolean; zum: 'sigdir' | number }) {
   const dis = useRef<HTMLDivElement>(null);
   const fr = useRef<HTMLIFrameElement>(null);
   const [gen, setGen] = useState(600);
   const [aktif, setAktif] = useState(1);
-  const { w, h } = sayfaOlcu(ayar);
+  const { w, h } = yaprakOlcu(ayar);
   const pw = w * PX_MM + 28;
   useEffect(() => {
     const el = dis.current;
@@ -301,8 +339,9 @@ function Onizleme({ oniz, ayar, yukleniyor, zum }: { oniz: Oniz | null; ayar: Ay
       </div>
       {oniz && (
         <div className="sx15-oz-alt" aria-live="polite">
-          Sayfa {aktif} / {oniz.tahmini ? '≈' : ''}{oniz.sayfa}
-          {oniz.gosterilen < oniz.sayfa && <span> · önizlemede ilk {oniz.gosterilen} sayfa</span>}
+          {oniz.yaprakli ? 'Yaprak' : 'Sayfa'} {aktif} / {oniz.tahmini ? '≈' : ''}{oniz.yaprakli ? oniz.yaprak : oniz.sayfa}
+          {oniz.yaprakli && <span> · {oniz.tahmini ? '≈' : ''}{oniz.sayfa} sayfa</span>}
+          {oniz.gosterilen < (oniz.yaprakli ? oniz.yaprak : oniz.sayfa) && <span> · önizlemede ilk {oniz.gosterilen} {oniz.yaprakli ? 'yaprak' : 'sayfa'}</span>}
         </div>
       )}
     </div>
@@ -404,11 +443,17 @@ export default function SoruAktarV15() {
       const olcer = await new Olcer(ayar).hazir();
       try {
         const parca = hs.slice(0, ONIZ_SORU);
-        const b = await sayfala(parca, ayar, { olcer });
+        const b = ciktiSuz(await sayfala(parca, ayar, { olcer }), ayar);
         if (no !== sira.current) return;
         const tahmini = hs.length > parca.length;
         const toplam = tahmini ? Math.max(b.sayfalar.length, Math.round((b.sayfalar.length * hs.length) / parca.length)) : b.sayfalar.length;
-        setOniz({ html: belgeHtml(b, ayar, { onizleme: true, ilk: ONIZ_SAYFA, tum: hs, toplamSayfa: tahmini ? toplam : undefined }), sayfa: toplam, tahmini, tasan: b.tasan, gosterilen: Math.min(ONIZ_SAYFA, b.sayfalar.length), olcek: b.olcek, not: b.sigdirNot });
+        const kapakVar = b.sayfalar[0]?.tur === 'kapak';
+        const yaprakli = yaprakOlcu(ayar).sayfa > 1;
+        setOniz({
+          html: belgeHtml(b, ayar, { onizleme: true, ilk: ONIZ_SAYFA, tum: hs, toplamSayfa: tahmini ? toplam : undefined }),
+          sayfa: toplam, yaprak: yaprakSayisi(toplam, ayar, kapakVar), yaprakli, tahmini, tasan: b.tasan,
+          gosterilen: Math.min(ONIZ_SAYFA, yaprakSayisi(b.sayfalar.length, ayar, kapakVar)), olcek: b.olcek, not: b.sigdirNot,
+        });
       } catch (e) {
         console.warn('[soru-aktar] önizleme', e);
       } finally {
@@ -427,7 +472,8 @@ export default function SoruAktarV15() {
     const ad = `${safeFileName(a.baslik || 'Sorular')}_${hs.length}_soru.${bicim.uz}`;
     try {
       setUretim(`${hs.length} soru sayfalanıyor…`);
-      const b = await sayfala(hs, yazdir ? { ...a, bicim: 'pdf' } : a);
+      const b = ciktiSuz(await sayfala(hs, yazdir ? { ...a, bicim: 'pdf' } : a), a);
+      if (!b.sayfalar.length) { toast.info('Seçime uyan sayfa yok', 'Çıktı seçimini ya da sayfa aralığını değiştir.'); return; }
       if (yazdir || a.bicim === 'pdf') {
         const html = belgeHtml(b, a, { baslik: a.baslik });
         if (yazdir) { setUretim('Yazdırma penceresi açılıyor…'); await printDocument(html); return; }
@@ -550,6 +596,7 @@ export default function SoruAktarV15() {
         ) : (
           <>
             <Anahtar ad="Hücre çerçevesi" alt="Her soru yuvarlak köşeli kutuda" acik={ayar.hucreCerceve} degis={(v) => set({ hucreCerceve: v })} />
+            <Anahtar ad="Kesim çizgileri" alt="Hücreler arasında kesik çizgi: kartları makasla kesmek için" acik={ayar.kesimCizgi} degis={(v) => set({ kesimCizgi: v })} />
             <Kaydir ad="Hücre aralığı" deger={ayar.hucreAralik} min={0} max={20} adim={0.5} birim="mm" degis={(v) => set({ hucreAralik: v })} />
           </>
         )}
@@ -620,6 +667,19 @@ export default function SoruAktarV15() {
             <Seg ad="Yön" deger={ayar.yatay ? 'y' : 'd'} degis={(v) => set({ yatay: v === 'y' })} ogeler={[{ v: 'd', ad: 'Dikey' }, { v: 'y', ad: 'Yatay' }]} />
           </>
         )}
+        {ayar.bicim === 'pdf' && (
+          <>
+            <span className="sx15-etk">Yaprak düzeni</span>
+            <Seg ad="Yaprak düzeni" kucuk deger={ayar.yaprak} degis={(yaprak) => set({ yaprak })} ogeler={[{ v: 'tek', ad: 'Sayfa başına 1' }, { v: 'iki', ad: 'Yaprakta 2 sayfa', title: 'İki sayfa yan yana, yatay yaprakta yarım ölçekte' }, { v: 'kitapcik', ad: 'Kitapçık', title: 'Katlanınca sıra doğru çıkar: yaprakları çift yüz basıp ortadan katla' }]} />
+            {ayar.yaprak !== 'tek' && <p className="v15-cap">{ayar.yaprak === 'kitapcik' ? `Sayfalar ${kagitAdi({ ...ayar, yatay: !ayar.yatay })} yaprağa katlama sırasıyla dizilir; "çift yüz, kısa kenardan çevir" ile bas, ortadan katla.` : `İki sayfa ${kagitAdi({ ...ayar, yatay: !ayar.yatay })} yaprakta yan yana basılır (yarım ölçek, aradan kesilebilir).`} Word ve PowerPoint tek sayfa kalır.</p>}
+          </>
+        )}
+        <Anahtar ad="Çift yüz baskı (cilt payı)" alt="Sol kenar iç kenar olur, çift sayfalarda sağa geçer; kapak varsa ardına boş sayfa gelir" acik={ayar.ciftYuz} degis={(v) => set({ ciftYuz: v })} />
+      </Bolum>
+      <Bolum baslik="Dışa aktarım" alt="Belgenin hangi sayfaları indirilir. Öğrenci ve öğretmen kopyası için iki kez indir.">
+        <Seg ad="Çıktı" kucuk deger={ayar.cikti} degis={(cikti) => set({ cikti })} ogeler={[{ v: 'hepsi', ad: 'Tüm sayfalar' }, { v: 'sorular', ad: 'Yalnız sorular', title: 'Kapak, soru sayfaları ve cevap kâğıdı; çözüm ve cevap anahtarı çıkmaz' }, { v: 'cozumler', ad: 'Yalnız çözümler', title: 'Çözüm sayfaları ve cevap anahtarı' }]} />
+        {ayar.cikti === 'cozumler' && ayar.cozumYeri === 'yok' && !ayar.cevapAnahtari && <p className="sx15-uyari">Çözüm yeri "yok" ve cevap anahtarı kapalı: bu seçimde sayfa çıkmaz.</p>}
+        <Metin ad="Sayfa aralığı" deger={ayar.sayfaAralik} degis={(v) => set({ sayfaAralik: v.replace(/[^\d,\- ]/g, '') })} yer="ör. 1-4, 7 (boş = tümü)" enCok={60} ipucu={ayar.sayfaAralik && !sayfaAraligi(ayar.sayfaAralik) ? 'Aralık okunamadı; tümü dışa aktarılır.' : 'Kapak sayılmaz; numaralar belgedeki sayfa numarasıdır.'} />
       </Bolum>
       <Bolum baslik="Kenar boşlukları" sag={<span className="sx15-sag">{[0, 8, 15, 25].map((v) => <button key={v} type="button" className="sx15-lnk" onClick={() => set({ kenar: [v, v, v, v] })}>{v === 0 ? 'Yok' : v === 8 ? 'Dar' : v === 15 ? 'Normal' : 'Geniş'}</button>)}</span>}>
         <Anahtar ad="Dört kenar eşit" acik={ayar.kenarKilit} degis={(v) => set({ kenarKilit: v, kenar: v ? [ayar.kenar[0], ayar.kenar[0], ayar.kenar[0], ayar.kenar[0]] : ayar.kenar })} />
@@ -637,21 +697,64 @@ export default function SoruAktarV15() {
           </>
         )}
       </Bolum>
-      <Bolum baslik="Başlık ve alt bilgi">
+      <Bolum baslik="Sayfa başlığı">
         <Anahtar ad="Sayfa başlığı" acik={ayar.baslikAcik} degis={(v) => set({ baslikAcik: v })} />
         <Metin ad="Başlık" deger={ayar.baslik} degis={(v) => set({ baslik: v })} yer="Soru kitapçığı" />
         <Metin ad="Alt başlık" deger={ayar.altBaslik} degis={(v) => set({ altBaslik: v })} yer="ör. Kurul 2 · Patoloji tekrar" />
         {ayar.baslikAcik && (
-          <div className="sx15-iki">
-            <Anahtar ad="Ad Soyad alanı" acik={ayar.adSoyad} degis={(v) => set({ adSoyad: v })} />
-            <Anahtar ad="Tarih alanı" acik={ayar.tarih} degis={(v) => set({ tarih: v })} />
-            <Anahtar ad="Her sayfada" alt="Kapalıysa yalnız ilk sayfada" acik={ayar.baslikHerSayfa} degis={(v) => set({ baslikHerSayfa: v })} />
-          </div>
+          <>
+            <div className="sx15-iki">
+              <Anahtar ad="Ad Soyad alanı" acik={ayar.adSoyad} degis={(v) => set({ adSoyad: v })} />
+              <Anahtar ad="Tarih alanı" acik={ayar.tarih} degis={(v) => set({ tarih: v })} />
+              <Anahtar ad="Her sayfada" alt="Kapalıysa yalnız ilk sayfada" acik={ayar.baslikHerSayfa} degis={(v) => set({ baslikHerSayfa: v })} />
+            </div>
+            <span className="sx15-etk">Başlık biçimi</span>
+            <Seg ad="Başlık biçimi" kucuk deger={ayar.baslikStil} degis={(baslikStil) => set({ baslikStil })} ogeler={[{ v: 'cizgi', ad: 'Alt çizgi' }, { v: 'bant', ad: 'Renkli bant', title: 'Vurgu renkli tam genişlik bant, açık yazı' }, { v: 'kutu', ad: 'Kutu' }, { v: 'sade', ad: 'Sade' }]} />
+            <Seg ad="Başlık hizası" kucuk deger={ayar.baslikHiza} degis={(baslikHiza) => set({ baslikHiza })} ogeler={[{ v: 'sol', ad: 'Sola' }, { v: 'orta', ad: 'Ortaya' }]} />
+          </>
         )}
+      </Bolum>
+      <Bolum baslik="Logo" alt="Başlıkta ve/veya kapakta görsel (okul, dernek, kişisel amblem). PDF ve yazdırmada görünür; Word/PowerPoint'e aktarılmaz.">
+        <LogoSec deger={ayar.logo} degis={(v) => set({ logo: v })} />
+        {ayar.logo && (
+          <>
+            <Seg ad="Logo yeri" kucuk deger={ayar.logoYer} degis={(logoYer) => set({ logoYer })} ogeler={[{ v: 'ikisi', ad: 'Başlık + kapak' }, { v: 'baslik', ad: 'Yalnız başlık' }, { v: 'kapak', ad: 'Yalnız kapak' }]} />
+            <Kaydir ad="Yükseklik" deger={ayar.logoYuk} min={4} max={24} adim={0.5} birim="mm" degis={(v) => set({ logoYuk: v })} />
+          </>
+        )}
+      </Bolum>
+      <Bolum baslik="Alt bilgi" alt="Üç bölge: sol, orta, sağ. Yer tutucular: {sayfa} {toplam} {tarih} {baslik} {altbaslik} {soru}">
+        <Metin ad="Sol" deger={ayar.altMetin} degis={(v) => set({ altMetin: v })} yer="ör. MeDSor · {tarih}" />
+        <div className="sx15-iki">
+          <Metin ad="Orta" deger={ayar.altOrta} degis={(v) => set({ altOrta: v })} yer="ör. {baslik}" />
+          <Metin ad="Sağ" deger={ayar.altSag} degis={(v) => set({ altSag: v })} yer="ör. {soru} soru" />
+        </div>
         <Anahtar ad="Sayfa numarası" acik={ayar.sayfaNo} degis={(v) => set({ sayfaNo: v })} />
-        <Metin ad="Alt bilgi metni" deger={ayar.altMetin} degis={(v) => set({ altMetin: v })} yer="ör. MeDSor · 2026" />
+        {ayar.sayfaNo && (
+          <>
+            <Seg ad="Sayfa numarası yeri" kucuk deger={ayar.sayfaNoYer} degis={(sayfaNoYer) => set({ sayfaNoYer })} ogeler={[{ v: 'sol', ad: 'Solda' }, { v: 'orta', ad: 'Ortada' }, { v: 'sag', ad: 'Sağda' }]} />
+            <Seg ad="Sayfa numarası biçimi" kucuk deger={ayar.sayfaNoBicim} degis={(sayfaNoBicim) => set({ sayfaNoBicim })} ogeler={[{ v: 'bolme', ad: '3 / 12' }, { v: 'duz', ad: '3' }, { v: 'sayfa', ad: 'Sayfa 3' }, { v: 'tire', ad: '– 3 –' }]} />
+          </>
+        )}
+        <Anahtar ad="Alt bilgi üstünde çizgi" acik={ayar.altCizgi} degis={(v) => set({ altCizgi: v })} />
+        <Kaydir ad="Not alanı" deger={ayar.notAlani} min={0} max={80} adim={2} birim="mm" degis={(v) => set({ notAlani: v })} />
+        {ayar.notAlani > 0 && <p className="v15-cap">Her sayfanın altında "Notlar" başlıklı çizgili alan; sorular bu alanın üstünde kalır.</p>}
+      </Bolum>
+      <Bolum baslik="Kapak ve zemin">
         <Anahtar ad="Kapak sayfası" alt="Başlık, soru/ders sayısı, renk anahtarı, ad alanı" acik={ayar.kapak} degis={(v) => set({ kapak: v })} />
+        {ayar.kapak && (
+          <>
+            <Seg ad="Kapak biçimi" kucuk deger={ayar.kapakStil} degis={(kapakStil) => set({ kapakStil })} ogeler={[{ v: 'sade', ad: 'Sade' }, { v: 'bant', ad: 'Yan bant' }, { v: 'zemin', ad: 'Renkli zemin', title: 'Vurgu renginde tam sayfa, açık yazı' }]} />
+            <Metin ad="Kapak notu" cok enCok={200} deger={ayar.kapakNot} degis={(v) => set({ kapakNot: v })} yer="ör. Süre: 60 dakika · Her soru 2,5 puan" ipucu="Yer tutucular: {tarih} {soru} {toplam}" />
+          </>
+        )}
         <Metin ad="Filigran" deger={ayar.filigran} degis={(v) => set({ filigran: v })} yer="ör. TASLAK" />
+        <span className="sx15-etk">Zemin deseni</span>
+        <Seg ad="Zemin deseni" kucuk deger={ayar.desen} degis={(desen) => set({ desen })} ogeler={[{ v: 'yok', ad: 'Düz' }, { v: 'cizgili', ad: 'Çizgili' }, { v: 'kareli', ad: 'Kareli' }, { v: 'noktali', ad: 'Noktalı' }]} />
+        {ayar.desen !== 'yok' && <p className="v15-cap">Defter kâğıdı görünümü; rengi Renk › Öge renkleri › "Zemin deseni". PDF ve yazdırmada.</p>}
+      </Bolum>
+      <Bolum baslik="Gelişmiş: özel CSS" alt="Belge CSS'ine eklenen kurallar (önizleme, PDF ve yazdırma). Sınıflar: .pg sayfa, .pg-bas başlık, .sb soru, .kok kök, .sk şıklar, .no numara, .hf şık harfi, .cz çözüm, .gb grup başlığı, .et etiketler, .pg-alt alt bilgi.">
+        <Metin ad="Özel CSS" cok enCok={4000} deger={ayar.ozelCss} degis={(v) => set({ ozelCss: v })} yer={'.kok{text-transform:none}\n.sb:nth-child(odd){background:#f8fafc}'} />
       </Bolum>
     </>
   );
@@ -696,6 +799,15 @@ export default function SoruAktarV15() {
         <span className="sx15-etk">Şık harfi biçimi</span>
         <Seg ad="Şık harfi biçimi" kucuk deger={ayar.sikHarfStil} degis={(sikHarfStil) => set({ sikHarfStil })} ogeler={[{ v: 'kalin', ad: <b>Kalın</b> }, { v: 'normal', ad: 'Normal' }, { v: 'daire', ad: <span className="sx15-orn-daire">A</span> }, { v: 'kutu', ad: <span className="sx15-orn-kutu">A</span> }]} />
         <Kaydir ad="Şık girintisi" deger={ayar.sikGirinti} min={0} max={12} adim={0.5} birim="mm" degis={(v) => set({ sikGirinti: v })} />
+        <Anahtar ad="Asılı girinti" alt="Numara dışarıda kalır, şıklar soru metninin hizasından başlar" acik={ayar.asiliGirinti} degis={(v) => set({ asiliGirinti: v })} />
+        <Kaydir ad="Şıklar arası" deger={ayar.sikAralik} min={0} max={8} adim={0.2} birim="pt" degis={(v) => set({ sikAralik: v })} />
+        <Kaydir ad="Şık puntosu" deger={ayar.sikOran} min={0.7} max={1.2} adim={0.02} birim="× punto" degis={(v) => set({ sikOran: v })} />
+      </Bolum>
+      <Bolum baslik="Soru kutusu" alt="Her soru bloğunun çevresi (akış ve ızgarada). Renkleri Renk › Öge renkleri › Çizgiler ve kenarlar altında.">
+        <Seg ad="Soru kutusu" kucuk deger={ayar.soruKutu} degis={(soruKutu) => set({ soruKutu })} ogeler={[{ v: 'yok', ad: 'Yok' }, { v: 'cizgi', ad: 'Çerçeve' }, { v: 'zemin', ad: 'Zemin' }, { v: 'golge', ad: 'Kart (gölge)' }]} />
+        {ayar.soruKutu !== 'yok' && <Kaydir ad="İç boşluk" deger={ayar.kutuIc} min={0} max={8} adim={0.5} birim="mm" degis={(v) => set({ kutuIc: v })} />}
+        <Kaydir ad="Köşe yarıçapı" deger={ayar.kutuYaricap} min={0} max={6} adim={0.2} birim="mm" degis={(v) => set({ kutuYaricap: v })} />
+        <p className="v15-cap">Köşe yarıçapı soru kutusu, çözüm kutusu, hücre çerçevesi ve başlık kutusuna uygulanır. Word/PowerPoint'te soru kutusu yaklaşık (zemin/çerçeve) aktarılmaz.</p>
       </Bolum>
     </>
   );
@@ -830,6 +942,11 @@ export default function SoruAktarV15() {
         </div>
         {ayar.cozumYeri === 'arkada' && ayar.duzen !== 'akis' && <Anahtar ad="Arka yüzü aynala" alt="Çift yüz baskıda her kartın çözümü arkasına denk gelir" acik={ayar.arkaAyna} degis={(v) => set({ arkaAyna: v })} />}
       </Bolum>
+      {(ayar.cozumYeri === 'altinda') && (
+        <Bolum baslik="Çözüm kutusu">
+          <Seg ad="Çözüm kutusu biçimi" kucuk deger={ayar.cozumStil} degis={(cozumStil) => set({ cozumStil })} ogeler={[{ v: 'bant', ad: 'Sol bant' }, { v: 'kutu', ad: 'Çerçeve' }, { v: 'zemin', ad: 'Yalnız zemin' }, { v: 'sade', ad: 'Üst çizgi' }]} />
+        </Bolum>
+      )}
       {ayar.cozumYeri !== 'yok' && ayar.cozumYeri !== 'sayfaAlti' && (
         <Bolum baslik="Çözümde neler olsun">
           <Anahtar ad="Yalnız doğru şıkkı açıkla" alt="Çeldirici çözümlemesi yazılmaz; doğru seçeneğin gerekçesi (yoksa genel açıklama) verilir" acik={ayar.cozumIcerik.yalnizDogru} degis={(v) => set({ cozumIcerik: { ...ayar.cozumIcerik, yalnizDogru: v } })} />
@@ -884,7 +1001,7 @@ export default function SoruAktarV15() {
           {bicimSec}
           <div className="sx15-ust-s">
             <span className="sx15-ozet">{ozet}</span>
-            <Seg ad="Yakınlık" kucuk deger={zum} degis={setZum} ogeler={[{ v: 'sigdir', ad: 'Sığdır' }, { v: 0.75, ad: '%75' }, { v: 1, ad: '%100' }]} />
+            <Seg ad="Yakınlık" kucuk deger={zum} degis={setZum} ogeler={[{ v: 'sigdir', ad: 'Sığdır' }, { v: 0.5, ad: '%50' }, { v: 0.75, ad: '%75' }, { v: 1, ad: '%100' }, { v: 1.5, ad: '%150' }]} />
           </div>
           {oniz && oniz.tasan > 0 && <p className="sx15-uyari">{oniz.tasan} soru hücresine en küçük ölçekte de sığmadı ve kırpıldı; sayfa başına daha az soru seç ya da puntoyu küçült.</p>}
           {oniz && ayar.sigdir !== 'yok' && (
@@ -895,6 +1012,7 @@ export default function SoruAktarV15() {
           )}
           {oniz?.not && <p className="sx15-uyari">{oniz.not}</p>}
           {ayar.bicim === 'pptx' && <p className="v15-cap">Her sayfa bir slayt olur; cevap kâğıdı slaytta da daireler hâlinde çizilir.</p>}
+          {ayar.cikti !== 'hepsi' && <p className="v15-cap">Çıktı: {ayar.cikti === 'sorular' ? 'yalnız soru sayfaları (öğrenci kopyası)' : 'yalnız çözüm ve cevap anahtarı (öğretmen kopyası)'}.</p>}
           {ayar.bicim === 'docx' && ayar.duzen === 'akis' && ayar.cozumYeri !== 'arkada' && ayar.cozumYeri !== 'sayfaAlti' && <p className="v15-cap">Word'de akış düzeni düzenlenebilir metin olarak gelir; sayfa sonları Word'ün yazı tipine göre birkaç satır kayabilir.</p>}
         </div>
         <Onizleme oniz={oniz} ayar={ayar} yukleniyor={onizYuk} zum={zum} />

@@ -9,7 +9,7 @@ import { disciplineKey, type DisciplineKey } from '../../../utils/discipline';
 export type Bicim = 'pdf' | 'docx' | 'pptx';
 export type Kagit = 'a4' | 'a5' | 'a3' | 'b5' | 'letter';
 export type Duzen = 'akis' | 1 | 2 | 4 | 8;
-export type TasarimId = 'sinav' | 'modern' | 'sade' | 'kart' | 'defter' | 'kompakt';
+export type TasarimId = 'sinav' | 'modern' | 'sade' | 'kart' | 'defter' | 'kompakt' | 'akademik' | 'kesilir';
 export type YaziId =
   | 'sans' | 'serif' | 'kitap' | 'modern' | 'mono'
   | 'inter' | 'roboto' | 'opensans' | 'lato' | 'montserrat' | 'poppins' | 'nunito' | 'firasans' | 'notosans' | 'sourcesans' | 'plexsans' | 'lexend' | 'atkinson' | 'dmsans' | 'manrope' | 'raleway' | 'ubuntu' | 'ptsans'
@@ -27,7 +27,8 @@ export type RenkOge =
   | 'sayfaZemin' | 'baslik' | 'baslikCizgi' | 'altBilgi' | 'bant' | 'grup'
   | 'numara' | 'kok' | 'sik' | 'sikHarf' | 'dogru' | 'dogruZemin'
   | 'cozumZemin' | 'cozumKenar' | 'cozumMetin' | 'cevapHarfi' | 'kaynak'
-  | 'ayirici' | 'sutunCizgi' | 'hucreKenar' | 'yazmaCizgi' | 'anahtarKenar' | 'filigran' | 'kapakBaslik';
+  | 'ayirici' | 'sutunCizgi' | 'hucreKenar' | 'yazmaCizgi' | 'anahtarKenar' | 'filigran' | 'kapakBaslik'
+  | 'baslikZemin' | 'kutuKenar' | 'kutuZemin' | 'desen' | 'notCizgi' | 'kesim';
 export type Renkler = Record<RenkOge, string>;
 export type TemaId = 'klasik' | 'lacivert' | 'bordo' | 'orman' | 'mor' | 'turuncu' | 'okyanus' | 'sepya' | 'gri' | 'pembe' | 'gece' | 'kahve' | 'zeytin' | 'mavi-gri' | 'ozel';
 export type CizgiStil = 'solid' | 'dashed' | 'dotted' | 'double';
@@ -71,7 +72,19 @@ export type PaletId = 'canli' | 'pastel' | 'koyu' | 'gri' | 'sicak' | 'soguk' | 
 export type EtiketSekil = 'hap' | 'kutu' | 'kose' | 'cizgi' | 'duz';
 export type EtiketRenk = 'gri' | 'alan' | 'ders' | 'ozel';
 export type EtiketDizilim = 'sol' | 'sag' | 'orta' | 'dikey';
+/** Yaprak düzeni (PDF/yazdırma): tek sayfa · yaprakta 2 sayfa · katlanır kitapçık (sayfa sırası baskıya göre dizilir) */
+export type Yaprak = 'tek' | 'iki' | 'kitapcik';
+export type BaslikStil = 'cizgi' | 'bant' | 'kutu' | 'sade';
+export type SoruKutu = 'yok' | 'cizgi' | 'zemin' | 'golge';
+export type CozumStil = 'bant' | 'kutu' | 'zemin' | 'sade';
+export type Desen = 'yok' | 'cizgili' | 'kareli' | 'noktali';
+export type SayfaNoBicim = 'bolme' | 'duz' | 'sayfa' | 'tire';
+export type KapakStil = 'sade' | 'bant' | 'zemin';
+/** Hangi sayfalar dışa aktarılır: hepsi · yalnız soru sayfaları (öğrenci kopyası) · yalnız çözüm + cevap anahtarı (öğretmen kopyası) */
+export type Cikti = 'hepsi' | 'sorular' | 'cozumler';
 export const EN_COK_GRUP = 4;
+/** Logo veri adresi için üst sınır (localStorage'da saklanır) */
+export const LOGO_EN_COK = 160 * 1024;
 
 export interface Ayar {
   tasarim: TasarimId;
@@ -105,6 +118,53 @@ export interface Ayar {
   altMetin: string;
   kapak: boolean;
   filigran: string;
+  /* sayfa tasarımı (2026-11-09) */
+  /** yaprak düzeni: PDF ve yazdırmada; Office belgeleri tek sayfa kipinde kalır */
+  yaprak: Yaprak;
+  /** çift yüz baskı: sol kenar cilt payı (iç kenar) olur, çift sayfalarda sağa geçer; kapak varsa ardına boş sayfa gelir */
+  ciftYuz: boolean;
+  /** ızgarada hücreler arası kesik kesim çizgileri (kart kesmek için) */
+  kesimCizgi: boolean;
+  baslikStil: BaslikStil;
+  baslikHiza: 'sol' | 'orta';
+  /** logo (data: adresi, PNG/JPEG; yalnız PDF ve yazdırma) */
+  logo: string;
+  logoYer: 'baslik' | 'kapak' | 'ikisi';
+  /** logo yüksekliği (mm) */
+  logoYuk: number;
+  /** alt bilgi orta ve sağ bölge; `altMetin` sol bölge. Yer tutucular: {sayfa} {toplam} {tarih} {baslik} {altbaslik} {soru} */
+  altOrta: string;
+  altSag: string;
+  sayfaNoYer: 'sol' | 'orta' | 'sag';
+  sayfaNoBicim: SayfaNoBicim;
+  /** alt bilgi üstünde ince çizgi */
+  altCizgi: boolean;
+  /** sayfa zemin deseni (çizgili / kareli / noktalı defter kâğıdı) */
+  desen: Desen;
+  /** her sayfanın altında not alanı (mm; 0 = yok) */
+  notAlani: number;
+  kapakStil: KapakStil;
+  /** kapakta serbest not (yönerge, sınav bilgisi) */
+  kapakNot: string;
+  /* soru bloğu tasarımı */
+  soruKutu: SoruKutu;
+  /** kutuların köşe yarıçapı (mm): soru kutusu, çözüm kutusu, hücre çerçevesi */
+  kutuYaricap: number;
+  /** soru kutusu iç boşluğu (mm) */
+  kutuIc: number;
+  /** şıklar soru kökünün metin hizasından başlar (numara dışarıda asılı) */
+  asiliGirinti: boolean;
+  /** şıklar arası boşluk (pt) */
+  sikAralik: number;
+  /** şık puntosu (gövde puntosuna oran) */
+  sikOran: number;
+  cozumStil: CozumStil;
+  /* dışa aktarım */
+  cikti: Cikti;
+  /** sayfa aralığı, ör. "1-4, 7" (boş = tümü); kapak 0 sayılır */
+  sayfaAralik: string;
+  /** belge CSS'ine eklenen özel kurallar (ileri düzey; önizleme ve PDF'te uygulanır) */
+  ozelCss: string;
   /* metin */
   yazi: YaziId;
   /** başlık, grup ve kapak yazısı ('ayni' = gövde yazısı) */
@@ -270,7 +330,9 @@ export const RENK_OGELERI: { id: RenkOge; ad: string; grup: 'sayfa' | 'metin' | 
   { id: 'bant', ad: 'Bölüm bandı', grup: 'sayfa' },
   { id: 'grup', ad: 'Grup başlıkları', grup: 'sayfa' },
   { id: 'kapakBaslik', ad: 'Kapak başlığı', grup: 'sayfa' },
+  { id: 'baslikZemin', ad: 'Başlık bandı zemini', grup: 'sayfa' },
   { id: 'filigran', ad: 'Filigran', grup: 'sayfa' },
+  { id: 'desen', ad: 'Zemin deseni', grup: 'sayfa' },
   { id: 'numara', ad: 'Soru numarası', grup: 'metin' },
   { id: 'kok', ad: 'Soru kökü', grup: 'metin' },
   { id: 'sik', ad: 'Şık metni', grup: 'metin' },
@@ -287,6 +349,10 @@ export const RENK_OGELERI: { id: RenkOge; ad: string; grup: 'sayfa' | 'metin' | 
   { id: 'sutunCizgi', ad: 'Sütun çizgisi', grup: 'cizgi' },
   { id: 'hucreKenar', ad: 'Hücre kenarı', grup: 'cizgi' },
   { id: 'yazmaCizgi', ad: 'Yazma satırı', grup: 'cizgi' },
+  { id: 'kutuKenar', ad: 'Soru kutusu kenarı', grup: 'cizgi' },
+  { id: 'kutuZemin', ad: 'Soru kutusu zemini', grup: 'cizgi' },
+  { id: 'notCizgi', ad: 'Not alanı çizgisi', grup: 'cizgi' },
+  { id: 'kesim', ad: 'Kesim çizgisi', grup: 'cizgi' },
 ];
 export const RENK_GRUP_AD: Record<'sayfa' | 'metin' | 'cevap' | 'cizgi', string> = { sayfa: 'Sayfa ve başlıklar', metin: 'Soru metni', cevap: 'Cevap ve çözüm', cizgi: 'Çizgiler ve kenarlar' };
 
@@ -331,8 +397,13 @@ export function ogeRenk(a: Ayar, k: RenkOge): string {
     case 'kaynak': return '#6b7280';
     case 'ayirici': case 'sutunCizgi': return '#9ca3af';
     case 'hucreKenar': return '#cbd5e1';
-    case 'yazmaCizgi': return '#c7cbd1';
+    case 'yazmaCizgi': case 'notCizgi': return '#c7cbd1';
     case 'anahtarKenar': return '#d1d5db';
+    case 'baslikZemin': return a.vurgu;
+    case 'kutuKenar': return '#cbd5e1';
+    case 'kutuZemin': return '';
+    case 'desen': return '#d1d5db';
+    case 'kesim': return '#9ca3af';
     default: return a.vurgu;
   }
 }
@@ -389,6 +460,10 @@ const ORTAK: Ayar = {
   cerceveYaricap: 0, cerceveIc: 4, hucreCerceve: false, hucreAralik: 6, sutunCizgi: true,
   baslikAcik: true, baslik: 'Soru kitapçığı', altBaslik: '', adSoyad: true, tarih: true, baslikHerSayfa: false,
   sayfaNo: true, altMetin: 'MeDSor', kapak: false, filigran: '',
+  yaprak: 'tek', ciftYuz: false, kesimCizgi: false, baslikStil: 'cizgi', baslikHiza: 'sol', logo: '', logoYer: 'ikisi', logoYuk: 10,
+  altOrta: '', altSag: '', sayfaNoYer: 'sag', sayfaNoBicim: 'bolme', altCizgi: false, desen: 'yok', notAlani: 0, kapakStil: 'sade', kapakNot: '',
+  soruKutu: 'yok', kutuYaricap: 1.6, kutuIc: 2.5, asiliGirinti: false, sikAralik: 1.2, sikOran: 1, cozumStil: 'bant',
+  cikti: 'hepsi', sayfaAralik: '', ozelCss: '',
   yazi: 'serif', yaziBaslik: 'ayni', agirlik: 400, baslikAgirlik: 800, harfAralik: 0, kokStil: 'normal', sikStil: 'normal', baslikBuyuk: 'normal', grupBuyuk: 'normal',
   numaraStil: 'kalin', sikHarfStil: 'kalin', baslikOran: 1.45, sikGirinti: 0, punto: 10.5, satir: 1.3, paragraf: 2, soruArasi: 6, iki: false, kokKalin: true, secenekDuzen: 'alt',
   numara: '1.', harf: 'A)', metinRenk: '#111827', vurgu: '#1d4ed8', tema: 'klasik', renkler: {}, paletOzel: [], ayirici: 'yok', yazmaSatiri: 0,
@@ -423,6 +498,14 @@ export const TASARIMLAR: TasarimTanim[] = [
   {
     id: 'defter', ad: 'Çalışma kâğıdı', alt: 'Her sorunun altında not satırları, sayfa çerçevesi',
     ayar: { yazi: 'kitap', punto: 11, satir: 1.45, duzen: 2, cerceve: true, cerceveStil: 'solid', cerceveKalin: 0.8, cerceveYaricap: 3, hucreCerceve: false, numara: 'Soru 1', harf: 'A)', kokKalin: true, renkAlan: 'yok', etiket: { ...ORTAK.etiket, konu: true }, ayirici: 'dashed', vurgu: '#0f766e', metinRenk: '#111827', yazmaSatiri: 4, dogruIsaret: false, cozumYeri: 'sonda', optik: false, kapak: false, baslikAcik: true, adSoyad: true },
+  },
+  {
+    id: 'akademik', ad: 'Akademik', alt: 'Serif, asılı girinti, başlık bandı, çift yüz cilt payı, çözüm sonda',
+    ayar: { yazi: 'sourceserif', yaziBaslik: 'montserrat', punto: 10.5, satir: 1.38, duzen: 'akis', sutun: 1, sutunCizgi: false, cerceve: false, hucreCerceve: false, numara: '1.', harf: 'A)', kokKalin: false, kokStil: 'normal', asiliGirinti: true, secenekDuzen: 'alt', renkAlan: 'yok', etiket: { ...ORTAK.etiket, konu: true }, etiketSekil: 'duz', ayirici: 'yok', soruArasi: 7, vurgu: '#1e3a8a', metinRenk: '#0f172a', tema: 'lacivert', renkler: { numara: '#1e40af', dogru: '#1d4ed8', cozumZemin: '#eef2ff', cozumKenar: '#3730a3' }, baslikStil: 'bant', baslikHerSayfa: true, baslikBuyuk: 'kucukBuyuk', ciftYuz: true, kenar: [16, 14, 16, 20], sayfaNoYer: 'orta', sayfaNoBicim: 'tire', altCizgi: true, dogruIsaret: false, cozumYeri: 'sonda', cozumStil: 'kutu', cevapAnahtari: true, optik: false, kapak: true, kapakStil: 'bant', yazmaSatiri: 0, soruKutu: 'yok' },
+  },
+  {
+    id: 'kesilir', ad: 'Kesilebilir kartlar', alt: 'Sayfada 8 kart, kesim çizgileri, çözüm kartın arkasında (çift yüz)',
+    ayar: { yazi: 'inter', punto: 9.5, satir: 1.3, duzen: 8, hucreCerceve: false, hucreAralik: 0, kesimCizgi: true, cerceve: false, numara: 'S1.', harf: 'A)', kokKalin: true, renkAlan: 'ders', renkStil: 'etiket', etiket: { ...ORTAK.etiket, ders: true, konu: true }, ayirici: 'yok', vurgu: '#0f766e', metinRenk: '#111827', dogruIsaret: false, cozumYeri: 'arkada', arkaAyna: true, cozumIcerik: { harf: true, aciklama: true, siklar: false, kaynak: false, yalnizDogru: true }, cevapAnahtari: false, optik: false, kapak: false, baslikAcik: false, sayfaNo: false, altMetin: '', yazmaSatiri: 0, soruKutu: 'yok', kutuIc: 3, kenar: [10, 10, 10, 10] },
   },
   {
     id: 'kompakt', ad: 'Kompakt tekrar', alt: 'Küçük punto, iki sütun, doğru şık işaretli, şıklar yan yana',
@@ -472,6 +555,27 @@ export function ayarNormal(raw: any): Ayar {
   if (!SIRALAMALAR.some((x) => x.id === a.sirala)) a.sirala = 'kaynak';
   a.etiketBoyut = Math.min(1.1, Math.max(0.5, Number(a.etiketBoyut) || 0.72));
   a.sigdirHedef = Math.min(999, Math.max(0, Math.round(Number(a.sigdirHedef) || 0)));
+  if (!['tek', 'iki', 'kitapcik'].includes(a.yaprak)) a.yaprak = 'tek';
+  if (!['cizgi', 'bant', 'kutu', 'sade'].includes(a.baslikStil)) a.baslikStil = 'cizgi';
+  if (!['sol', 'orta'].includes(a.baslikHiza)) a.baslikHiza = 'sol';
+  if (typeof a.logo !== 'string' || !/^data:image\/(png|jpeg|webp|gif);base64,/.test(a.logo) || a.logo.length > LOGO_EN_COK * 1.4) a.logo = '';
+  if (!['baslik', 'kapak', 'ikisi'].includes(a.logoYer)) a.logoYer = 'ikisi';
+  a.logoYuk = Math.min(24, Math.max(4, Number(a.logoYuk) || 10));
+  if (!['sol', 'orta', 'sag'].includes(a.sayfaNoYer)) a.sayfaNoYer = 'sag';
+  if (!['bolme', 'duz', 'sayfa', 'tire'].includes(a.sayfaNoBicim)) a.sayfaNoBicim = 'bolme';
+  if (!['yok', 'cizgili', 'kareli', 'noktali'].includes(a.desen)) a.desen = 'yok';
+  a.notAlani = Math.min(80, Math.max(0, Number(a.notAlani) || 0));
+  if (!['sade', 'bant', 'zemin'].includes(a.kapakStil)) a.kapakStil = 'sade';
+  if (!['yok', 'cizgi', 'zemin', 'golge'].includes(a.soruKutu)) a.soruKutu = 'yok';
+  a.kutuYaricap = Math.min(6, Math.max(0, Number(a.kutuYaricap) || 0));
+  a.kutuIc = Math.min(8, Math.max(0, Number(a.kutuIc) || 0));
+  a.sikAralik = Math.min(8, Math.max(0, Number(a.sikAralik) || 0));
+  a.sikOran = Math.min(1.2, Math.max(0.7, Number(a.sikOran) || 1));
+  if (!['bant', 'kutu', 'zemin', 'sade'].includes(a.cozumStil)) a.cozumStil = 'bant';
+  if (!['hepsi', 'sorular', 'cozumler'].includes(a.cikti)) a.cikti = 'hepsi';
+  a.sayfaAralik = String(a.sayfaAralik || '').replace(/[^\d,\- ]/g, '').slice(0, 60);
+  a.ozelCss = String(a.ozelCss || '').slice(0, 4000);
+  for (const k of ['altOrta', 'altSag', 'kapakNot'] as const) a[k] = String(a[k] || '').slice(0, 200);
   return a as Ayar;
 }
 
@@ -483,6 +587,33 @@ export const BASLIK_MM = 16;
 export const ALT_MM = 7;
 export const SERIT_MM = 11;
 export const GRUP_MM = 9;
+/** not alanının başlık + üst boşluk payı (mm) */
+export const NOT_PAY_MM = 4;
+/** alt bilgi var mı: sayfa numarası ya da üç bölgeden birinde metin */
+export const altBilgiVar = (a: Ayar) => a.sayfaNo || !!(a.altMetin || '').trim() || !!(a.altOrta || '').trim() || !!(a.altSag || '').trim();
+
+/** Sayfa aralığı metni ("1-4, 7") → sayfa numarası kümesi; boş/bozuk = null (tümü). Kapak 0 sayılır */
+export function sayfaAraligi(t: string): Set<number> | null {
+  const out = new Set<number>();
+  for (const p of String(t || '').split(',')) {
+    const m = /^\s*(\d+)\s*(?:-\s*(\d+))?\s*$/.exec(p);
+    if (!m) continue;
+    const a = Number(m[1]);
+    const b = m[2] ? Number(m[2]) : a;
+    for (let i = Math.min(a, b); i <= Math.max(a, b) && i <= 2000; i++) out.add(i);
+  }
+  return out.size ? out : null;
+}
+/** Yaprak başına sayfa ve yaprak ölçüsü (mm): 2'li ve kitapçıkta sayfa yatay yaprağa yarım ölçekte yerleşir */
+export function yaprakOlcu(a: Ayar): { w: number; h: number; sayfa: 1 | 2; olcek: number } {
+  const { w, h } = sayfaOlcu(a);
+  if (a.yaprak === 'tek' || a.bicim !== 'pdf') return { w, h, sayfa: 1, olcek: 1 };
+  // yaprak: sayfanın uzun kenarı yaprağın kısa kenarı olur (A4 dikey → A4 yatay yaprakta 2 × A5)
+  const yw = Math.max(w, h);
+  const yh = Math.min(w, h);
+  const olcek = Math.min((yw / 2) / w, yh / h);
+  return { w: yw, h: yh, sayfa: 2, olcek };
+}
 
 export function sayfaOlcu(a: Ayar): { w: number; h: number } {
   if (a.bicim === 'pptx' && a.slayt !== 'kagit') return { ...SLAYT[a.slayt] };
@@ -510,9 +641,10 @@ export function govde(a: Ayar, o: { ilk: boolean; serit: boolean; grup: boolean 
   const { w, h } = sayfaOlcu(a);
   const ic = a.cerceve ? a.cerceveIc + a.cerceveKalin * 0.35 : 0;
   const baslik = a.baslikAcik && (o.ilk || a.baslikHerSayfa);
-  const altVar = a.sayfaNo || !!a.altMetin.trim();
+  const altVar = altBilgiVar(a);
   const gw = w - a.kenar[1] - a.kenar[3] - ic * 2;
-  const gh = h - a.kenar[0] - a.kenar[2] - ic * 2 - (baslik ? BASLIK_MM : 0) - (altVar ? ALT_MM : 0) - (o.serit ? SERIT_MM : 0) - (o.grup ? GRUP_MM : 0);
+  const not = a.notAlani > 0 ? a.notAlani + NOT_PAY_MM : 0;
+  const gh = h - a.kenar[0] - a.kenar[2] - ic * 2 - (baslik ? BASLIK_MM : 0) - (altVar ? ALT_MM : 0) - (o.serit ? SERIT_MM : 0) - (o.grup ? GRUP_MM : 0) - not;
   return { w: Math.max(20, gw), h: Math.max(20, gh), baslik };
 }
 

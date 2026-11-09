@@ -31,10 +31,69 @@ type Blok =
   | { tur: 'li'; r: Run[]; isaret: string; dz: number }
   | { tur: 'not'; etiket: string; satirlar: Run[][] }
   | { tur: 'tablo'; satirlar: Run[][][] }
-  | { tur: 'resim'; baslik: string; yol: string; alt: string };
+  | { tur: 'resim'; baslik: string; yol: string; alt: string }
+  /** Çıkmış/örnek soru kartı: "?# no | yıl | etiket" satırıyla başlar; sonraki satırlar kök, "?- önerme", "?+ soru cümlesi", "?= cevap"; boş satırda biter */
+  | { tur: 'soru'; no: string; yil: string; etiket: string; kok: Run[]; onerme: Run[][]; ek: Run[]; cevap: Run[] };
 
 /** Resim satırı: ![başlık](yol "alt yazı") — başlıkta ] ve alt yazıda " bulunmaz (resimSatiri temizler) */
 const RESIM_RE = /^\s*!\[([^\]]*)\]\((\S+?)(?:\s+"([^"]*)")?\)\s*$/;
+const SORU_RE = /^\s*\?#\s*(.*)$/;
+
+/** Soru kartı satırları (canliDersDisaAktar gibi üreticiler bunu yazar; motor ayrıştırır). Metinler tek satır olmalı. */
+export function soruSatirlari(o: { no: number | string; yil?: string | number | null; etiket?: string; kok: string; onerme?: string[]; ek?: string; cevap?: string }): string {
+  const tek = (t: string) => t.replace(/\s*\r?\n+\s*/g, ' ').trim();
+  const s = [`?# ${o.no} | ${o.yil ?? ''} | ${o.etiket || ''}`, tek(o.kok)];
+  for (const x of o.onerme || []) if (tek(x)) s.push(`?- ${tek(x)}`);
+  if (o.ek?.trim()) s.push(`?+ ${tek(o.ek)}`);
+  if (o.cevap?.trim()) s.push(`?= ${tek(o.cevap)}`);
+  return s.join('\n');
+}
+const ROMEN = /(?:^|\s)((?:I{1,3}|IV|V|VI{0,3}|IX|X)[.)])\s+(?=\S)/g;
+/** Soru kökünü parçalar: "Kurgu Soru:" etiketi, Romen rakamlı önermeler (I. II. III.) ayrı satır, sondaki soru cümlesi ayrı. */
+export function soruKokParcala(kokHam: string): { etiket: string; kok: string; onerme: string[]; ek: string } {
+  let kok = kokHam.replace(/\s*\r?\n+\s*/g, ' ').trim(), etiket = '';
+  const kg = kok.match(/^kurgu soru\s*[:\-–]\s*/i);
+  if (kg) { etiket = 'Kurgu soru'; kok = kok.slice(kg[0].length); }
+  const isaretler = [...kok.matchAll(ROMEN)];
+  if (isaretler.length < 2) return { etiket, kok, onerme: [], ek: '' };
+  const bas = isaretler[0].index! + (isaretler[0][0].length - isaretler[0][0].trimStart().length);
+  const on = kok.slice(0, bas).trim();
+  const parcalar: string[] = [];
+  for (let i = 0; i < isaretler.length; i++) {
+    const s = isaretler[i].index! + (isaretler[i][0].length - isaretler[i][0].trimStart().length);
+    const e = i + 1 < isaretler.length ? isaretler[i + 1].index! : kok.length;
+    parcalar.push(kok.slice(s, e).trim());
+  }
+  // son önermenin kuyruğundaki soru cümlesi ("Bu ifadelerden hangileri doğrudur?") ayrılır
+  let ek = '';
+  const son = parcalar[parcalar.length - 1];
+  const m = son.match(/^(.+?)\s+((?:Bu|Buna|Bunlardan|Bunların|Yukarıdaki|Yukarıdakilerden|Verilen|Verilenlerden|Hangi|Hangisi|Hangileri|Aşağıdaki|Aşağıdakilerden|İfadelerden|Seçeneklerden|Numaralı|Numaralanmış)\b[^?]*\?)\s*$/)
+    || son.match(/^(.*?[.!)])\s+([A-ZÇĞİÖŞÜ][^.!?]*\?)\s*$/);
+  if (m && m[1].trim()) { parcalar[parcalar.length - 1] = m[1].trim(); ek = m[2].trim(); }
+  return { etiket, kok: on, onerme: parcalar, ek };
+}
+
+/** Metindeki soru kartı gruplarını (?# … boş satıra dek) düz Markdown'a çevirir; diğer satırlar yerinde kalır */
+function soruMdDonustur(md: string): string {
+  if (!/^\s*\?#/m.test(md)) return md;
+  const sat = md.replace(/\r/g, '').split('\n'), out: string[] = [];
+  for (let k = 0; k < sat.length; k++) {
+    if (!SORU_RE.test(sat[k])) { out.push(sat[k]); continue; }
+    const grup = [sat[k]];
+    while (k + 1 < sat.length && sat[k + 1].trim() && !SORU_RE.test(sat[k + 1])) grup.push(sat[++k]);
+    for (const x of bloklar(grup.join('\n'))) if (x.tur === 'soru') out.push(...soruMdDuz(x));
+  }
+  return out.join('\n');
+}
+/** Soru kartının düz Markdown karşılığı (MD dosyası ve kart desteklemeyen hedefler) */
+function soruMdDuz(x: Extract<Blok, { tur: 'soru' }>): string[] {
+  const bas = `**${x.no}.** ${x.etiket ? `*${x.etiket}:* ` : ''}${mdYaz(x.kok)}${x.yil ? ` *(${x.yil})*` : ''}`;
+  const s = [bas, ...x.onerme.map((r) => `   - ${mdYaz(r)}`)];
+  if (x.ek.length) s.push(`   ${mdYaz(x.ek)}`);
+  if (x.cevap.length) s.push(`   **Cevap:** ${mdYaz(x.cevap)}`);
+  return s;
+}
+const mdYaz = (r: Run[]) => r.map((x) => `${x.b ? '**' : ''}${x.m ? '==' : ''}${x.i ? '*' : ''}${x.t}${x.i ? '*' : ''}${x.m ? '==' : ''}${x.b ? '**' : ''}`).join('');
 /** Belgeye resim satırı yazar (başlık/alt yazıdaki ayraç karakterleri temizlenir) */
 export const resimSatiri = (baslik: string, yol: string, alt = '') =>
   `![${baslik.replace(/[[\]\n]/g, ' ').trim()}](${yol.replace(/[\s()]/g, encodeURIComponent)}${alt ? ` "${alt.replace(/["\n]/g, "'").trim()}"` : ''})`;
@@ -63,6 +122,21 @@ function bloklar(md: string): Blok[] {
     if (!l.trim()) continue;
     const rs = l.match(RESIM_RE);
     if (rs) { girinti.length = 0; out.push({ tur: 'resim', baslik: rs[1].trim(), yol: rs[2], alt: (rs[3] || '').trim() }); continue; }
+    const sb = l.match(SORU_RE);
+    if (sb) {
+      girinti.length = 0;
+      const [no = '', yil = '', etiket = ''] = sb[1].split('|').map((t) => t.trim());
+      const kok: string[] = [], onerme: Run[][] = [], ek: string[] = [], cevap: string[] = [];
+      while (k + 1 < sat.length && sat[k + 1].trim() && !SORU_RE.test(sat[k + 1])) {
+        const t = sat[++k].trim();
+        if (t.startsWith('?-')) onerme.push(satirIci(t.slice(2).trim()));
+        else if (t.startsWith('?+')) ek.push(t.slice(2).trim());
+        else if (t.startsWith('?=')) cevap.push(t.slice(2).trim());
+        else kok.push(t);
+      }
+      out.push({ tur: 'soru', no, yil, etiket, kok: satirIci(kok.join(' ')), onerme, ek: satirIci(ek.join(' ')), cevap: satirIci(cevap.join(' ')) });
+      continue;
+    }
     const not = l.match(/^\s*>\s*\[!(\w+)\]\s*(.*)$/);
     if (not || /^\s*>/.test(l)) {
       const etiket = not ? NOT_AD[not[1].toUpperCase()] || 'Not' : '';
@@ -119,6 +193,11 @@ function txt(b: AktarBelge): string {
       else if (x.tur === 'not') s.push(...x.satirlar.map((r, i) => `${i === 0 && x.etiket ? `[${x.etiket}] ` : '    '}${duz(r)}`));
       else if (x.tur === 'tablo') s.push(...x.satirlar.map((r) => r.map(duz).join(' | ')));
       else if (x.tur === 'resim') s.push('', `[Resim: ${x.baslik}${x.alt ? ` — ${x.alt}` : ''}]`, '');
+      else if (x.tur === 'soru') {
+        s.push('', `${x.no}. ${x.etiket ? `[${x.etiket}] ` : ''}${duz(x.kok)}${x.yil ? ` (${x.yil})` : ''}`, ...x.onerme.map((r) => `    ${duz(r)}`));
+        if (x.ek.length) s.push(`    ${duz(x.ek)}`);
+        if (x.cevap.length) s.push(`    Cevap: ${duz(x.cevap)}`);
+      }
     }
   }
   return s.join('\r\n') + '\r\n';
@@ -130,8 +209,9 @@ function md(b: AktarBelge): string {
     s.push('');
     if (bo.baslik) s.push(`## ${bo.baslik}`, '');
     if (bo.alt) s.push(`_${bo.alt}_`, '');
-    // resim satırı: mutlak bağlantı (dosya site dışında açılır) + alt yazı
-    s.push(bo.md.trim().split('\n').map((l) => {
+    // resim satırı: mutlak bağlantı (dosya site dışında açılır) + alt yazı; soru kartı düz maddeye (sıra korunur)
+    const govde = soruMdDonustur(bo.md);
+    s.push(govde.trim().split('\n').map((l) => {
       const rs = l.match(RESIM_RE);
       if (!rs) return l;
       return `\n![${rs[1].trim()}](${mutlak(rs[2])})${rs[3] ? `\n\n_${rs[3].trim()}_` : ''}\n`;
@@ -232,6 +312,11 @@ function docxXml(b: AktarBelge, resimler: Resimler = new Map()): Record<string, 
         g.push(`<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:tblBorders>${['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map((k) => `<w:${k} w:val="single" w:sz="4" w:color="D6DCE3"/>`).join('')}</w:tblBorders><w:tblCellMar><w:left w:w="80" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${'<w:gridCol w:w="' + gen + '"/>'.repeat(sut)}</w:tblGrid>`
           + x.satirlar.map((r, ri) => `<w:tr>${Array.from({ length: sut }, (_, ci) => `<w:tc><w:tcPr><w:tcW w:w="${gen}" w:type="dxa"/>${ri === 0 ? '<w:shd w:val="clear" w:color="auto" w:fill="EEF3F7"/>' : ''}</w:tcPr>${par('Tablo', (r[ci] || []).map((x2) => runX(ri === 0 ? { ...x2, b: true } : x2)).join(''))}</w:tc>`).join('')}</w:tr>`).join('')
           + '</w:tbl>' + par('Normal', ''));
+      } else if (x.tur === 'soru') {
+        g.push(par('SoruKok', runX({ t: `${x.no}.\t`, b: true }) + (x.etiket ? runX({ t: `${x.etiket}: `, i: true }) : '') + runsX(x.kok) + (x.yil ? runX({ t: `  (${x.yil})`, i: true }) : ''), '<w:keepNext/><w:keepLines/>'));
+        for (const r of x.onerme) g.push(par('SoruOnerme', runsX(r), '<w:keepNext/>'));
+        if (x.ek.length) g.push(par('SoruOnerme', runsX(x.ek), '<w:keepNext/>'));
+        if (x.cevap.length) g.push(par('SoruCevap', runX({ t: 'Cevap: ', b: true }) + runsX(x.cevap)));
       } else if (x.tur === 'resim') {
         const p = resimler.get(x.yol);
         if (!p) { g.push(par('Normal', runX({ t: resimYedekMetni(x), i: true }))); continue; }
@@ -267,6 +352,9 @@ function docxXml(b: AktarBelge, resimler: Resimler = new Map()): Record<string, 
       + stil('ListParagraph', 'List Paragraph', '<w:ind w:left="360" w:hanging="360"/>', '')
       + stil('Callout', 'Not kutusu', '<w:pBdr><w:left w:val="single" w:sz="18" w:space="8" w:color="0D6E96"/></w:pBdr><w:shd w:val="clear" w:color="auto" w:fill="EEF5F9"/><w:ind w:left="200"/><w:spacing w:after="0"/>', '')
       + stil('Tablo', 'Tablo metni', '<w:spacing w:after="0" w:line="252" w:lineRule="auto"/>', '<w:sz w:val="19"/>')
+      + stil('SoruKok', 'Soru kökü', '<w:ind w:left="454" w:hanging="454"/><w:spacing w:before="160" w:after="40"/>', '')
+      + stil('SoruOnerme', 'Soru önermesi', '<w:ind w:left="794"/><w:spacing w:after="0"/>', '')
+      + stil('SoruCevap', 'Soru cevabı', '<w:pBdr><w:left w:val="single" w:sz="18" w:space="8" w:color="0D6E96"/></w:pBdr><w:shd w:val="clear" w:color="auto" w:fill="EEF5F9"/><w:ind w:left="454"/><w:spacing w:before="60" w:after="160"/>', '')
       + `</w:styles>`,
     'word/numbering.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:numbering ${W}><w:abstractNum w:abstractNumId="0"><w:multiLevelType w:val="hybridMultilevel"/>`
       + [0, 1, 2].map((l) => `<w:lvl w:ilvl="${l}"><w:start w:val="1"/><w:numFmt w:val="bullet"/><w:lvlText w:val="${['•', '◦', '▪'][l]}"/><w:lvlJc w:val="left"/><w:pPr><w:ind w:left="${360 * (l + 1)}" w:hanging="360"/></w:pPr><w:rPr><w:color w:val="0D6E96"/></w:rPr></w:lvl>`).join('')
@@ -394,7 +482,83 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil, resimler: Resimler = new Ma
     if (h > maxH) { w = (w * maxH) / h; h = maxH; }
     return { p, bs, as, bH, aH, w, h, top: bH + h + aH + 6 };
   };
+  /** Soru kartı yerleşimi: numara rozeti, yıl etiketi, kök (asılı), önermeler (girintili), soru cümlesi, cevap şeridi */
+  const soruOlc = (x: Extract<Blok, { tur: 'soru' }>) => {
+    const IC = 9, ON = 6, pt = PT.govde, ptC = PT.not, ptK = PT.kucuk * 0.9;
+    doc.setFont(F, 'normal'); doc.setFontSize(ptK);
+    const yilW = x.yil ? doc.getTextWidth(T(x.yil)) + 4 : 0;
+    const etW = x.etiket ? doc.getTextWidth(T(x.etiket)) + 4 : 0;
+    const sagPay = yilW + etW + (yilW && etW ? 1.5 : 0);
+    const kokSat = satirla(x.kok, CW - IC - (sagPay ? sagPay + 2 : 0), pt);
+    const onSat = x.onerme.map((r) => satirla(romenKalin(r), CW - IC - ON, pt));
+    const ekSat = x.ek.length ? satirla(x.ek, CW - IC, pt) : [];
+    const cvSat = x.cevap.length ? satirla([{ t: 'Cevap: ', b: true }, ...x.cevap], CW - IC - 5, ptC) : [];
+    const h = Math.max(kokSat.length, 1) * lh(pt) + (onSat.length ? 0.8 + onSat.flat().length * lh(pt) : 0) + (ekSat.length ? 0.8 + ekSat.length * lh(pt) : 0)
+      + (cvSat.length ? 1.6 + cvSat.length * lh(ptC) + 2.2 : 0) + 3.2;
+    return { IC, ON, pt, ptC, ptK, yilW, etW, kokSat, onSat, ekSat, cvSat, h };
+  };
+  /** "I. …" önermesinde Romen işaretini kalın (==) yaparak vurgu rengiyle çizdirir (satirCiz: m → kırmızı yerine burada vurgu) */
+  const romenKalin = (r: Run[]): Run[] => {
+    if (!r.length) return r;
+    const m = r[0].t.match(/^((?:I{1,3}|IV|V|VI{0,3}|IX|X)[.)])(\s+)/);
+    if (!m) return r;
+    return [{ t: m[1], b: true, i: true }, { ...r[0], t: r[0].t.slice(m[1].length) }, ...r.slice(1)];
+  };
+  const soruCiz = (x: Extract<Blok, { tur: 'soru' }>) => {
+    const o = soruOlc(x);
+    // kart tek sayfaya sığıyor ama kalan yere sığmıyorsa yeni sayfa; sığmıyorsa kök + ilk satırlar birlikte başlar
+    if (o.h <= ALT - UST && y + o.h > ALT) { doc.addPage(); y = UST; }
+    else if (y + Math.max(o.kokSat.length, 1) * lh(o.pt) + lh(o.pt) > ALT) { doc.addPage(); y = UST; }
+    const ust = y;
+    // numara rozeti
+    const no = T(x.no);
+    doc.setFont(F, 'bold'); doc.setFontSize(o.pt * 0.92);
+    const nw = Math.max(6.2, doc.getTextWidth(no) + 3);
+    doc.setFillColor(...VURGU); doc.roundedRect(M, y + 0.2, nw, lh(o.pt) - 0.2, 1, 1, 'F');
+    doc.setTextColor(255, 255, 255); doc.text(no, M + nw / 2, y + o.pt * 0.3528 + 0.1, { align: 'center' });
+    // yıl ve etiket (sağ üst)
+    let sx = W - M;
+    const cip = (metin: string, zemin: RGB, yazi: RGB, w: number) => {
+      sx -= w;
+      doc.setFillColor(...zemin); doc.roundedRect(sx, y + 0.3, w, lh(o.pt) - 0.6, 0.9, 0.9, 'F');
+      doc.setFont(F, 'normal'); doc.setFontSize(o.ptK); doc.setTextColor(...yazi);
+      doc.text(T(metin), sx + w / 2, y + o.pt * 0.3528, { align: 'center' });
+      sx -= 1.5;
+    };
+    if (x.yil) cip(x.yil, NOT_ZEMIN, SOL, o.yilW);
+    if (x.etiket) cip(x.etiket, [255, 240, 214], [160, 92, 10], o.etW);
+    // kök
+    for (const s of o.kokSat) { if (y + lh(o.pt) > ALT) { doc.addPage(); y = UST; } satirCiz(s, M + o.IC, y + o.pt * 0.3528, o.pt, INK); y += lh(o.pt); }
+    if (!o.kokSat.length) y += lh(o.pt);
+    // önermeler
+    if (o.onSat.length) {
+      y += 0.8;
+      for (const sat of o.onSat) for (const s of sat) {
+        if (y + lh(o.pt) > ALT) { doc.addPage(); y = UST; }
+        satirCiz(s, M + o.IC + o.ON, y + o.pt * 0.3528, o.pt, INK); y += lh(o.pt);
+      }
+    }
+    if (o.ekSat.length) {
+      y += 0.8;
+      for (const s of o.ekSat) { if (y + lh(o.pt) > ALT) { doc.addPage(); y = UST; } satirCiz(s, M + o.IC, y + o.pt * 0.3528, o.pt, INK); y += lh(o.pt); }
+    }
+    // cevap şeridi (bölünmez)
+    if (o.cvSat.length) {
+      const h = o.cvSat.length * lh(o.ptC) + 2.2;
+      y += 1.6;
+      if (y + h > ALT) { doc.addPage(); y = UST; }
+      doc.setFillColor(...NOT_ZEMIN); doc.roundedRect(M + o.IC, y, CW - o.IC, h, 0.8, 0.8, 'F');
+      doc.setFillColor(...VURGU); doc.rect(M + o.IC, y, 1.1, h, 'F');
+      o.cvSat.forEach((s, j) => satirCiz(s, M + o.IC + 4, y + 1.1 + j * lh(o.ptC) + o.ptC * 0.3528, o.ptC, INK));
+      y += h;
+    }
+    // ayırıcı
+    y += 1.6;
+    if (y > ust) { doc.setDrawColor(...CIZGI); doc.setLineWidth(0.2); doc.line(M + o.IC, y, W - M, y); }
+    y += 1.6;
+  };
   const hesaplaBlokH = (x: Blok): number => {
+    if (x.tur === 'soru') return soruOlc(x).h;
     if (x.tur === 'resim') return resimOlc(x).top;
     if (x.tur === 'h') {
       return satirla(x.r.map((r) => ({ ...r, b: true })), CW, PT.alt).length * lh(PT.alt) + 2.3;
@@ -673,6 +837,8 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil, resimler: Resimler = new Ma
           y += h;
         });
         y += 3;
+      } else if (x.tur === 'soru') {
+        soruCiz(x);
       } else if (x.tur === 'resim') {
         const o = resimOlc(x);
         if (!o.p) { akit([{ t: resimYedekMetni(x), i: true }], M, CW, PT.govde, SOL, undefined, 1.8); continue; }

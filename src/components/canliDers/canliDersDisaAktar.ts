@@ -7,7 +7,7 @@
  * İçerik seçenekleri (CdAktarSecenek): kapsam (tüm metin / yalnız önemli yerler), üslup (ders notu / konuşma metni), işaretler,
  * slayt başlıkları, resimler, bölüm seçimi ve ekler (terimler ve kısaltmalar, doğrulanmış çıkmış sorular). Seçimler cihazda hatırlanır.
  */
-import { resimSatiri, type AktarBelge } from '../../services/metinDisaAktar';
+import { resimSatiri, soruKokParcala, soruSatirlari, type AktarBelge } from '../../services/metinDisaAktar';
 import { araResimBitis, araResimleri, araResimYolu, type AraResim } from './araResimVeri';
 import { ekranYazimi } from '../../services/ekranYazim';
 import { cumleler, paragrafMd } from '../../services/maddeDuzen';
@@ -96,14 +96,19 @@ function sozlukMd(detay: CdDetay): string {
   return out.join('\n');
 }
 
-/** Ek: doğrulanmış çıkmış sorular (anlatım sırasıyla), kökü ve cevabıyla */
+/** Ek: doğrulanmış çıkmış sorular (anlatım sırasıyla) — soru kartı bloğu: numara, yıl, kök, önermeler, cevap şeridi */
 function cikmisMd(detay: CdDetay): string {
   const gorulen = new Set<string>();
-  return (detay.cikmisKonum || [])
+  const liste = (detay.cikmisKonum || [])
     .filter((c) => c.dogrulandi && c.kok?.trim() && !gorulen.has(c.id) && gorulen.add(c.id))
-    .sort((a, b) => a.p - b.p || a.c - b.c)
-    .map((c, i) => `${i + 1}. ${tekSatir(c.kok)}${c.yil ? ` *(${c.yil})*` : ''}${c.cevap?.trim() ? `\n  - **Cevap:** ${tekSatir(c.cevap)}` : ''}`)
-    .join('\n');
+    .sort((a, b) => a.p - b.p || a.c - b.c);
+  if (!liste.length) return '';
+  const yillar = [...new Set(liste.map((c) => String(c.yil || '').trim()).filter(Boolean))].sort();
+  const giris = `Bu derse ait doğrulanmış ${liste.length} çıkmış soru, anlatım sırasıyla.${yillar.length ? ` Yıllar: ${yillar.join(', ')}.` : ''} Cevaplar her sorunun altındaki şeritte.`;
+  return [giris, '', ...liste.map((c, i) => {
+    const p = soruKokParcala(c.kok);
+    return soruSatirlari({ no: i + 1, yil: c.yil ? String(c.yil) : '', etiket: p.etiket, kok: p.kok, onerme: p.onerme, ek: p.ek, cevap: c.cevap ? tekSatir(c.cevap) : '' }) + '\n';
+  })].join('\n');
 }
 
 /** basliklar verilirse her paragrafın eşlendiği slaytın başlığı, değiştiği yerde alt başlık (###) olarak girer. */
