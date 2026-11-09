@@ -1,15 +1,35 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
   "onem": 672,
-  "baslik": "Tablet görünüm düzeltmesi",
+  "baslik": "Soru dışa aktarıcı: renk temaları ve yazı stilleri",
   "maddeler": [
-    "Örnek sorular ders listesinde \"Hoca üslubu\" rozeti tablet ve bilgisayarda öğretim üyesi adının üstüne biniyordu; artık yan yana, sığmazsa alt satıra sarıyor."
+    "Soru dışa aktar (PDF/Word/PowerPoint): 15 hazır renk teması ve 24 ögenin (sayfa zemini, başlık, numara, şık, doğru şık, çözüm kutusu, çizgiler…) rengi tek tek ayarlanabiliyor.",
+    "Renk anahtarı paleti 15 seçeneğe çıktı; \"Kendi paletim\" ile istediğiniz renkleri ekleyebilirsiniz.",
+    "44 yazı tipi, ayrı başlık yazısı, kalınlık, harf aralığı, kök/şık stili, büyük harf, numara ve şık harfi biçimleri eklendi.",
+    "Yazı ve okuma ayarlarında arayüz yazı tipi seçimi ve daha fazla yazı tipi (20 arayüz, 19 okuma) ile ince/çok kalın okuma kalınlıkları."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Soru dışa aktar › Renk: tema kartları, öge renkleri, kendi paletim",
+    "Soru dışa aktar › Metin: yazı tipi/stil seçenekleri",
+    "Yazı ayarı: arayüz yazı tipi seçici"
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Örnek sorular: ders satırındaki \"Hoca üslubu · N yeni soru\" rozeti ile öğretim üyesi adı üst üste binmiyor."
-  ],
+  "duzeltilen": [],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "Soru dışa aktarıcıda renk ve yazı özelleştirme",
+      "nerede": {
+        "ad": "Soru çöz › Dışa aktar",
+        "yol": "/sorular/disa-aktar"
+      },
+      "amac": "İndirdiğiniz PDF/Word/PowerPoint belgesini kendi renk ve yazı tercihlerinize göre biçimlendirmek.",
+      "islevler": [
+        "15 renk teması, 24 öge rengi",
+        "15 renk paleti + kendi paletiniz",
+        "44 yazı tipi, başlık yazısı, kalınlık ve stil seçenekleri"
+      ],
+      "ipucu": "Boş bıraktığınız öge rengi vurgu renginden türetilir; × ile geri alabilirsiniz."
+    }
+  ]
 }

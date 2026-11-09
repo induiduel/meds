@@ -1,3 +1,9 @@
+## 2026-11-09 — Soru dışa aktarıcı: renk temaları, öge renkleri, yazı stilleri (H510, onem 672)
+- `/sorular/disa-aktar` (`v15/soruAktar/ayar.ts`): 15 renk teması (`TEMALAR`/`temaUygula`), 24 öge rengi `renkler` + `ogeRenk(a,k)` (boş → vurgu/metinden türetilir), palet 15 + `paletOzel`; 44 yazı tipi (`YAZI`, Google Fonts bağlantısı önizleme/ölçüm/sunucu PDF/panelde), ayrı başlık yazısı, kalınlık, harf aralığı, başlık oranı, kök/şık stili, büyük harf, numara ve şık harfi biçimi, şık girintisi.
+- `belge.ts`/`docx.ts`/`pptx.ts` tüm renkleri `ogeRenk` ile alır; DOCX sayfa zemini (`w:background`), başlık fontu, caps/altı çizili run; PPTX slayt zemini + `BAS_FONT`.
+- Site: `appearance.ts` FONT_LIST arayüz 20 / okuma 19, `OkumaAyar.kalinlik` 300–700; `YaziAyarV15` arayüz yazı tipi seçici.
+- Doğrulama: tsc + vite build temiz; Sepya + Lora/Montserrat ile DOCX/PPTX (LibreOffice açtı) ve sunucu PDF (fontlar gömülü) üretildi. Eski kayıtlı ayarlar `ayarNormal` ile uyumlu.
+
 ## 2026-11-09 — Tablet düzen taraması: örnek soru satırında rozet/yazar üst üste binmesi (H514, dağıtılmadı)
 - 14 rota × 6 boyut (700/768/820 dikey, 1024/1180 yatay, 1024×1366) `sayfa_tarama.mjs` ile tarandı: yatay taşma yok.
   Tek gerçek kusur `/sorular/ornek` ders listesinde "Hoca üslubu · N yeni soru" rozetinin yazar adına binmesiydi (iki span aynı `grid-area: who`).

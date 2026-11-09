@@ -62,7 +62,7 @@ export default function YaziAyarV15() {
             ))}
           </div>
         </div>
-        <Seg ad="Kalınlık" deger={ok.kalinlik} secenek={[[400, 'Normal'], [500, 'Orta'], [600, 'Kalın']]} set={(v) => setAppearance({ okuma: { kalinlik: v } })} />
+        <Seg ad="Kalınlık" deger={ok.kalinlik} secenek={[[300, 'İnce'], [400, 'Normal'], [500, 'Orta'], [600, 'Kalın'], [700, 'Çok kalın']]} set={(v) => setAppearance({ okuma: { kalinlik: v } })} />
         <Seg ad="Hizalama" deger={ok.hizala} secenek={[['sol', 'Sola'], ['iki', 'İki yana']]} set={(v) => setAppearance({ okuma: { hizala: v } })} />
         <Kaydir ad="Satır aralığı" deger={ok.satir} min={1.3} max={2.2} step={0.05} goster={ok.satir.toFixed(2).replace('.', ',')} set={(v) => setAppearance({ okuma: { satir: v } })} />
         <Kaydir ad="Harf aralığı" deger={ok.harf} min={0} max={0.12} step={0.01} goster={ok.harf ? `+${Math.round(ok.harf * 100)}` : 'Normal'} set={(v) => setAppearance({ okuma: { harf: v } })} />
@@ -80,6 +80,15 @@ export default function YaziAyarV15() {
 
       <section className="v15-card kre-kart ya15-k">
         <h2 className="v15-cap">Arayüz</h2>
+        <div className="ya15-sat ya15-font">
+          <span className="ya15-ad">Arayüz yazı tipi</span>
+          <div className="ya15-cipler" role="radiogroup" aria-label="Arayüz yazı tipi">
+            <button type="button" role="radio" aria-checked={!a.fontUi} className={`o15-cip${!a.fontUi ? ' is-on' : ''}`} onClick={() => setAppearance({ fontUi: undefined })}>Varsayılan</button>
+            {FONT_LIST.filter((f) => f.kind === 'ui').map((f) => (
+              <button key={f.id} type="button" role="radio" aria-checked={a.fontUi === f.id} className={`o15-cip${a.fontUi === f.id ? ' is-on' : ''}`} style={{ fontFamily: f.family }} title={f.hint} onClick={() => setAppearance({ fontUi: f.id })}>{f.name}</button>
+            ))}
+          </div>
+        </div>
         <Kaydir ad="Yazı ve arayüz ölçeği" deger={a.textPx} min={TEXT_PX_MIN} max={TEXT_PX_MAX} step={1} goster={`${a.textPx} px`} set={(v) => setAppearance({ textPx: v })} />
       </section>
 

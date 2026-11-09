@@ -12,7 +12,7 @@ import {
   cozumBos, cozumIcerik, etiketler, harfMetni, numaraMetni, parcala, KOLON_ARA, MIN_K,
   type Belge, type Blok, type HS, type Sayfa,
 } from './belge';
-import { ALT_MM, BASLIK_MM, GRUP_MM, SERIT_MM, YAZI, sayfaOlcu, type Ayar } from './ayar';
+import { ALT_MM, BASLIK_MM, GRUP_MM, SERIT_MM, YAZI, baslikYazi, ogeRenk, sayfaOlcu, type Ayar, type HarfBuyuk, type MetinStil } from './ayar';
 import { kaynakAdi } from './kaynak';
 
 const tw = (mm: number) => Math.max(0, Math.round(mm * 56.6929));
@@ -28,9 +28,11 @@ export const xml = (t: string) =>
   String(t ?? '').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g, '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
 const DAIRE: Record<string, string> = { A: 'Ⓐ', B: 'Ⓑ', C: 'Ⓒ', D: 'Ⓓ', E: 'Ⓔ', F: 'Ⓕ' };
 
-interface RunO { b?: boolean; i?: boolean; renk?: string; fs: number; shd?: string; alt?: boolean; /** çerçeve rengi (etiket "çizgi" biçimi) */ bdr?: string }
+interface RunO { b?: boolean; i?: boolean; renk?: string; fs: number; shd?: string; alt?: boolean; /** çerçeve rengi (etiket "çizgi" biçimi) */ bdr?: string; /** başlık yazı tipi (gövdeden farklıysa) */ font?: string; caps?: HarfBuyuk; u?: boolean }
+let BAS_FONT: string | undefined;
+const stilO = (st: MetinStil): Partial<RunO> => ({ b: st === 'kalin' || st === 'kalinItalik', i: st === 'italik' || st === 'kalinItalik' });
 const rPr = (o: RunO) =>
-  `<w:rPr>${o.b ? '<w:b/><w:bCs/>' : ''}${o.i ? '<w:i/><w:iCs/>' : ''}${o.renk ? `<w:color w:val="${hex(o.renk)}"/>` : ''}<w:sz w:val="${hp(o.fs)}"/><w:szCs w:val="${hp(o.fs)}"/>${o.bdr ? `<w:bdr w:val="single" w:sz="4" w:space="1" w:color="${hex(o.bdr)}"/>` : ''}${o.shd ? `<w:shd w:val="clear" w:color="auto" w:fill="${o.shd}"/>` : ''}</w:rPr>`;
+  `<w:rPr>${o.font ? `<w:rFonts w:ascii="${xml(o.font)}" w:hAnsi="${xml(o.font)}" w:cs="${xml(o.font)}"/>` : ''}${o.b ? '<w:b/><w:bCs/>' : ''}${o.i ? '<w:i/><w:iCs/>' : ''}${o.caps === 'buyuk' ? '<w:caps/>' : o.caps === 'kucukBuyuk' ? '<w:smallCaps/>' : ''}${o.u ? '<w:u w:val="single"/>' : ''}${o.renk ? `<w:color w:val="${hex(o.renk)}"/>` : ''}<w:sz w:val="${hp(o.fs)}"/><w:szCs w:val="${hp(o.fs)}"/>${o.bdr ? `<w:bdr w:val="single" w:sz="4" w:space="1" w:color="${hex(o.bdr)}"/>` : ''}${o.shd ? `<w:shd w:val="clear" w:color="auto" w:fill="${o.shd}"/>` : ''}</w:rPr>`;
 const run = (t: string, o: RunO) => `<w:r>${rPr(o)}<w:t xml:space="preserve">${xml(t)}</w:t></w:r>`;
 const zengin = (t: string, o: RunO) => parcala(t).map((p) => (p.br ? `<w:r>${rPr(o)}<w:br/></w:r>` : run(p.t, { ...o, b: o.b || p.b }))).join('');
 
@@ -105,15 +107,16 @@ function cozumParas(h: HS, a: Ayar, k: number, w: number, kutu: boolean, baslikN
   const c = cozumIcerik(h, a);
   if (baslikNo && !c.harf) c.harf = h.dogru || '—';
   const fs = a.punto * k * (kutu ? 0.9 : 1);
-  const ortak: ParaO = kutu ? { sol: { renk: a.vurgu, kalin: 18 }, shd: karis(a.vurgu, 0.07) } : blokOrtak(h, a);
+  const ortak: ParaO = kutu ? { sol: { renk: ogeRenk(a, 'cozumKenar'), kalin: 18 }, shd: ogeRenk(a, 'cozumZemin') ? hex(ogeRenk(a, 'cozumZemin')) : karis(a.vurgu, 0.07, hex(ogeRenk(a, 'sayfaZemin'))) } : blokOrtak(h, a);
   const sat = a.satir;
   const out: string[] = [];
-  if (baslikNo) out.push(para(run(numaraMetni(h.no, a) + '  ', { fs, b: true, renk: a.vurgu }) + (c.harf ? run(`Cevap: ${c.harf}`, { fs, b: true, renk: a.vurgu }) : ''), { ...ortak, keep: true, satir: sat, after: 1.5 * k }));
-  else if (c.harf) out.push(para(run(`Cevap: ${c.harf}`, { fs, b: true, renk: a.vurgu }), { ...ortak, keep: true, satir: sat, after: 1.5 * k }));
-  if (c.aciklama) out.push(para(zengin(c.aciklama, { fs }), { ...ortak, keep: true, satir: sat, after: 1.5 * k, jc: a.iki ? 'both' : undefined }));
+  const cm = ogeRenk(a, 'cozumMetin');
+  if (baslikNo) out.push(para(run(numaraMetni(h.no, a) + '  ', { fs, b: true, renk: ogeRenk(a, 'numara') }) + (c.harf ? run(`Cevap: ${c.harf}`, { fs, b: true, renk: ogeRenk(a, 'cevapHarfi') }) : ''), { ...ortak, keep: true, satir: sat, after: 1.5 * k }));
+  else if (c.harf) out.push(para(run(`Cevap: ${c.harf}`, { fs, b: true, renk: ogeRenk(a, 'cevapHarfi') }), { ...ortak, keep: true, satir: sat, after: 1.5 * k }));
+  if (c.aciklama) out.push(para(zengin(c.aciklama, { fs, renk: cm }), { ...ortak, keep: true, satir: sat, after: 1.5 * k, jc: a.iki ? 'both' : undefined }));
   const ind = Math.min(tw(9), Math.round(w * 0.12));
-  for (const x of c.siklar) out.push(para(run(harfMetni(x.k, a), { fs, b: true, renk: x.dogru ? a.vurgu : undefined }) + '<w:r><w:tab/></w:r>' + zengin(x.t, { fs, renk: x.dogru ? a.vurgu : undefined }), { ...ortak, keep: true, satir: sat, after: 1 * k, ind: [ind, ind], tab: [{ pos: ind, al: 'left' }] }));
-  if (c.kaynak) out.push(para(run(c.kaynak, { fs: fs * 0.88, renk: '6B7280' }), { ...ortak, keep: true, satir: sat }));
+  for (const x of c.siklar) out.push(para(run(harfMetni(x.k, a), { fs, b: true, renk: x.dogru ? ogeRenk(a, 'dogru') : cm }) + '<w:r><w:tab/></w:r>' + zengin(x.t, { fs, renk: x.dogru ? ogeRenk(a, 'dogru') : cm }), { ...ortak, keep: true, satir: sat, after: 1 * k, ind: [ind, ind], tab: [{ pos: ind, al: 'left' }] }));
+  if (c.kaynak) out.push(para(run(c.kaynak, { fs: fs * 0.88, renk: ogeRenk(a, 'kaynak') }), { ...ortak, keep: true, satir: sat }));
   return out;
 }
 
@@ -129,14 +132,21 @@ function soruParas(h: HS, a: Ayar, k: number, w: number, o: { ayirici?: boolean;
   const numara = numaraMetni(h.no, a);
   const noRun = h.renk && a.renkStil === 'numara'
     ? run(` ${numara} `, { fs, b: true, renk: 'FFFFFF', shd: hex(h.renk) }) + run(' ', { fs })
-    : run(numara + ' ', { fs, b: true, renk: a.vurgu });
-  out.push(para(noRun + zengin(h.q.stem, { fs, b: a.kokKalin }), { ...ortak, keep: true, satir: sat, after: par, jc: a.iki ? 'both' : undefined }));
+    : a.numaraStil === 'kutu' ? run(` ${numara} `, { fs, b: true, renk: hex(ogeRenk(a, 'sayfaZemin')), shd: hex(ogeRenk(a, 'numara')) }) + run(' ', { fs })
+      : a.numaraStil === 'daire' ? run((DAIRE[String(h.no)] || `(${h.no})`) + ' ', { fs, b: true, renk: ogeRenk(a, 'numara') })
+        : run(numara + ' ', { fs, b: a.numaraStil !== 'duz', u: a.numaraStil === 'altCizgi', renk: ogeRenk(a, 'numara') });
+  const kokO = a.kokStil === 'normal' ? { b: a.kokKalin } : stilO(a.kokStil);
+  out.push(para(noRun + zengin(h.q.stem, { fs, ...kokO, renk: ogeRenk(a, 'kok') }), { ...ortak, keep: true, satir: sat, after: par, jc: a.iki ? 'both' : undefined }));
   const isaretli = (key: string) => a.dogruIsaret && key === h.dogru;
   const sikRuns = (x: { key: string; text: string }) => {
     const dg = isaretli(x.key);
     const harf = dg && a.isaretStil === 'daire' && DAIRE[x.key] ? DAIRE[x.key] : harfMetni(x.key, a);
-    const ro: RunO = { fs, b: dg, renk: dg && (a.isaretStil === 'kalin' || a.isaretStil === 'daire') ? a.vurgu : undefined, shd: dg && a.isaretStil === 'zemin' ? karis(a.vurgu, 0.16) : undefined };
-    return { harf: run(harf, { fs, b: true, renk: dg && a.isaretStil === 'daire' ? a.vurgu : undefined }), metin: zengin(x.text, ro) + (dg && a.isaretStil === 'tik' ? run(' ✓', { fs, b: true, renk: a.vurgu }) : '') };
+    const dr = ogeRenk(a, 'dogru');
+    const dz = ogeRenk(a, 'dogruZemin');
+    const ro: RunO = { fs, ...stilO(a.sikStil), b: dg || stilO(a.sikStil).b, renk: dg && (a.isaretStil === 'kalin' || a.isaretStil === 'daire') ? dr : ogeRenk(a, 'sik'), shd: dg && a.isaretStil === 'zemin' ? (dz.length === 7 ? hex(dz) : karis(a.vurgu, 0.16, hex(ogeRenk(a, 'sayfaZemin')))) : undefined };
+    const hfO: RunO = a.sikHarfStil === 'kutu' ? { fs, b: true, renk: hex(ogeRenk(a, 'sayfaZemin')), shd: hex(ogeRenk(a, 'sikHarf')) } : { fs, b: a.sikHarfStil !== 'normal', renk: dg && a.isaretStil === 'daire' ? dr : ogeRenk(a, 'sikHarf') };
+    const harf2 = a.sikHarfStil === 'daire' && !(dg && a.isaretStil === 'daire') && DAIRE[x.key] ? DAIRE[x.key] : harf;
+    return { harf: run(harf2, hfO), metin: zengin(x.text, ro) + (dg && a.isaretStil === 'tik' ? run(' ✓', { fs, b: true, renk: dr }) : '') };
   };
   const araSik = a.paragraf * 0.6 * k;
   if (a.secenekDuzen === 'yan') {
@@ -163,7 +173,7 @@ function soruParas(h: HS, a: Ayar, k: number, w: number, o: { ayirici?: boolean;
     });
   }
   if (et && a.etiketYeri === 'alt') out.push(para(et, { ...ortak, keep: true, satir: sat, before: par }));
-  for (let i = 0; i < a.yazmaSatiri; i++) out.push(para('', { ...ortak, tamH: a.punto * a.satir * 1.35 * 0.3528 * k, alt: { renk: 'C7CBD1', stil: 'single', kalin: 4 } }));
+  for (let i = 0; i < a.yazmaSatiri; i++) out.push(para('', { ...ortak, tamH: a.punto * a.satir * 1.35 * 0.3528 * k, alt: { renk: hex(ogeRenk(a, 'yazmaCizgi')), stil: 'single', kalin: 4 } }));
   if (a.cozumYeri === 'altinda') {
     const c = cozumIcerik(h, a);
     if (!cozumBos(c)) out.push(...cozumParas(h, a, k, w, true, false));
@@ -172,7 +182,7 @@ function soruParas(h: HS, a: Ayar, k: number, w: number, o: { ayirici?: boolean;
   const son = out.length - 1;
   const ayir = (o.ayirici ?? true) && a.ayirici !== 'yok';
   out[son] = out[son].replace(/<w:keepNext\/>/, '').replace(/<w:spacing w:before="(\d+)" w:after="\d+"/, `<w:spacing w:before="$1" w:after="${Math.round(a.soruArasi * k * 56.69)}"`);
-  if (ayir) out.push(para('', { tamH: 0.8, alt: { renk: '9CA3AF', stil: stilAd(a.ayirici), kalin: a.ayirici === 'double' ? 6 : 4 } }), para('', { tamH: a.soruArasi * 0.5 * k }));
+  if (ayir) out.push(para('', { tamH: 0.8, alt: { renk: hex(ogeRenk(a, 'ayirici')), stil: stilAd(a.ayirici), kalin: a.ayirici === 'double' ? 6 : 4 } }), para('', { tamH: a.soruArasi * 0.5 * k }));
   return out;
 }
 
@@ -181,13 +191,13 @@ const GRUP_OLCEK = [1.28, 1.12, 1.0, 0.92];
 function grupPara(b: { ad: string; renk: string | null; seviye?: number; sayi?: number; k?: number }, a: Ayar): string {
   const sv = Math.min(3, b.seviye ?? 0);
   const fs = a.punto * GRUP_OLCEK[sv] * (b.k ?? 1);
-  const renk = b.renk || a.vurgu;
+  const renk = b.renk || ogeRenk(a, 'grup');
   const o: ParaO = { keep: true, satir: 1.15, after: a.soruArasi * 1.4 * (b.k ?? 1), before: sv ? 1 : 2, ind: sv ? [tw(sv * 1.5), 0] : undefined };
   if (a.grupStil === 'cizgi') o.alt = { renk: karis(renk, 0.55), stil: 'single', kalin: sv >= 2 ? 4 : 6 };
   else if (a.grupStil === 'bant') { o.sol = { renk, kalin: 24 }; o.shd = karis(renk, sv >= 2 ? 0.05 : 0.1); }
   else if (a.grupStil === 'kutu') { o.alt = { renk: karis(renk, 0.55), stil: 'single', kalin: 4 }; o.ust = { renk: karis(renk, 0.55), stil: 'single' }; }
-  const sayi = a.grupSayi && b.sayi != null ? run(`  ${b.sayi} soru`, { fs: fs * 0.78, b: true, renk: '6B7280' }) : '';
-  return para(run(b.ad, { fs, b: true, renk }) + sayi, o);
+  const sayi = a.grupSayi && b.sayi != null ? run(`  ${b.sayi} soru`, { fs: fs * 0.78, b: true, renk: ogeRenk(a, 'altBilgi') }) : '';
+  return para(run(b.ad, { fs, b: true, renk, font: BAS_FONT, caps: a.grupBuyuk }) + sayi, o);
 }
 
 function blokParas(b: Blok, a: Ayar, w: number, o: { hucrede?: boolean } = {}): string[] {
@@ -200,21 +210,21 @@ function blokParas(b: Blok, a: Ayar, w: number, o: { hucrede?: boolean } = {}): 
  * Sayfa parçaları
  * ------------------------------------------------------------------------- */
 function baslikTablo(a: Ayar, w: number): string {
-  const fs = Math.min(16, a.punto * 1.45);
+  const fs = Math.min(16, a.punto * a.baslikOran);
   const sag = Math.round(w * 0.42);
-  const sol = para(run(a.baslik, { fs, b: true, renk: a.vurgu }), { satir: 1.1, after: 1 }) + (a.altBaslik ? para(run(a.altBaslik, { fs: Math.max(7, a.punto * 0.8), renk: '4B5563' }), { satir: 1.1 }) : '');
-  const alan = (ad: string) => para(run(ad + ' ', { fs: Math.max(7, a.punto * 0.78), renk: '374151' }) + '<w:r><w:tab/></w:r>', { satir: 1.2, after: 2, tab: [{ pos: sag - 60, al: 'right', lider: 'underscore' }] });
+  const sol = para(run(a.baslik, { fs, b: true, renk: ogeRenk(a, 'baslik'), font: BAS_FONT, caps: a.baslikBuyuk }), { satir: 1.1, after: 1 }) + (a.altBaslik ? para(run(a.altBaslik, { fs: Math.max(7, a.punto * 0.8), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.1 }) : '');
+  const alan = (ad: string) => para(run(ad + ' ', { fs: Math.max(7, a.punto * 0.78), renk: ogeRenk(a, 'altBilgi') }) + '<w:r><w:tab/></w:r>', { satir: 1.2, after: 2, tab: [{ pos: sag - 60, al: 'right', lider: 'underscore' }] });
   const sagIc = (a.adSoyad ? alan('Ad Soyad:') : '') + (a.tarih ? alan('Tarih:') : '');
-  const kenar = `<w:tcBorders><w:bottom w:val="single" w:sz="9" w:color="${hex(a.vurgu)}"/></w:tcBorders>`;
+  const kenar = `<w:tcBorders><w:bottom w:val="single" w:sz="9" w:color="${hex(ogeRenk(a, 'baslikCizgi'))}"/></w:tcBorders>`;
   const hucre = (gen: number, ic: string) => `<w:tc><w:tcPr><w:tcW w:w="${gen}" w:type="dxa"/>${kenar}<w:vAlign w:val="bottom"/></w:tcPr>${ic || BOS_P}</w:tc>`;
   return tablo([w - sag, sag], [tr(hucre(w - sag, sol) + hucre(sag, sagIc), BASLIK_MM - 0.4)]);
 }
 
 const bantPara = (ad: string, renk: string | null, a: Ayar) =>
-  para(run('■ ', { fs: Math.max(8, a.punto * 1.05), renk: renk || a.vurgu }) + run(ad, { fs: Math.max(8, a.punto * 1.05), b: true, renk: a.vurgu }), { tamH: GRUP_MM, alt: { renk: 'D1D5DB', stil: 'single', kalin: 4 } });
+  para(run('■ ', { fs: Math.max(8, a.punto * 1.05), renk: renk || ogeRenk(a, 'bant') }) + run(ad, { fs: Math.max(8, a.punto * 1.05), b: true, renk: ogeRenk(a, 'bant'), font: BAS_FONT, caps: a.grupBuyuk }), { tamH: GRUP_MM, alt: { renk: hex(ogeRenk(a, 'anahtarKenar')), stil: 'single', kalin: 4 } });
 
 const seritPara = (p: Sayfa, a: Ayar) =>
-  para(run('Cevaplar · ', { fs: Math.max(6.5, a.punto * 0.72), b: true, renk: a.vurgu }) + run((p.serit || []).map((x) => `${x.no}-${x.harf}`).join('   '), { fs: Math.max(6.5, a.punto * 0.72), renk: '374151' }), { tamH: SERIT_MM, ust: { renk: '9CA3AF', stil: 'dashed' } });
+  para(run('Cevaplar · ', { fs: Math.max(6.5, a.punto * 0.72), b: true, renk: ogeRenk(a, 'cevapHarfi') }) + run((p.serit || []).map((x) => `${x.no}-${x.harf}`).join('   '), { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'cozumMetin') }), { tamH: SERIT_MM, ust: { renk: hex(ogeRenk(a, 'ayirici')), stil: 'dashed' } });
 
 /** Sayfa kipinde tek sayfa: (başlık) (bant) gövde tablosu (şerit) */
 function sabitSayfa(p: Sayfa, a: Ayar): string {
@@ -259,14 +269,14 @@ function kapakXml(b: Belge, a: Ayar, w: number): string {
   const alan = (ad: string) => para(run(ad + ' ', { fs: 10 }) + '<w:r><w:tab/></w:r>', { after: 10, tab: [{ pos: Math.round(w * 0.7), al: 'left', lider: 'underscore' }] });
   return [
     para(run(kaynaklar.join(' · ').toLocaleUpperCase('tr'), { fs: 9, b: true, renk: a.vurgu }), { after: 14 }),
-    para(run(a.baslik || 'Soru kitapçığı', { fs: 30, b: true }), { after: 8, satir: 1.05 }),
-    a.altBaslik ? para(run(a.altBaslik, { fs: 13, renk: '4B5563' }), { after: 16 }) : '',
-    para(run(`${b.hs.length}`, { fs: 17, b: true, renk: a.vurgu }) + run(' soru     ', { fs: 9, renk: '6B7280' }) + run(`${dersler.length}`, { fs: 17, b: true, renk: a.vurgu }) + run(' ders', { fs: 9, renk: '6B7280' }), { after: 12 }),
-    dersler.length ? para(run(dersler.slice(0, 14).join(' · ') + (dersler.length > 14 ? ' …' : ''), { fs: 9.5, renk: '374151' }), { after: 16 }) : '',
-    para(run(`Her sorunun yalnız bir doğru cevabı vardır.${a.optik ? ' Cevaplarını sondaki cevap kâğıdına işaretle.' : ''}${a.cevapAnahtari ? ' Cevap anahtarı belgenin sonundadır.' : ''}`, { fs: 9, renk: '374151' }), { sol: { renk: a.vurgu, kalin: 24 }, shd: 'F8FAFC', after: 18, satir: 1.5 }),
+    para(run(a.baslik || 'Soru kitapçığı', { fs: 30, b: true, renk: ogeRenk(a, 'kapakBaslik'), font: BAS_FONT, caps: a.baslikBuyuk }), { after: 8, satir: 1.05 }),
+    a.altBaslik ? para(run(a.altBaslik, { fs: 13, renk: ogeRenk(a, 'altBilgi') }), { after: 16 }) : '',
+    para(run(`${b.hs.length}`, { fs: 17, b: true, renk: a.vurgu }) + run(' soru     ', { fs: 9, renk: ogeRenk(a, 'altBilgi') }) + run(`${dersler.length}`, { fs: 17, b: true, renk: a.vurgu }) + run(' ders', { fs: 9, renk: ogeRenk(a, 'altBilgi') }), { after: 12 }),
+    dersler.length ? para(run(dersler.slice(0, 14).join(' · ') + (dersler.length > 14 ? ' …' : ''), { fs: 9.5, renk: ogeRenk(a, 'altBilgi') }), { after: 16 }) : '',
+    para(run(`Her sorunun yalnız bir doğru cevabı vardır.${a.optik ? ' Cevaplarını sondaki cevap kâğıdına işaretle.' : ''}${a.cevapAnahtari ? ' Cevap anahtarı belgenin sonundadır.' : ''}`, { fs: 9, renk: ogeRenk(a, 'cozumMetin') }), { sol: { renk: ogeRenk(a, 'cozumKenar'), kalin: 24 }, shd: ogeRenk(a, 'cozumZemin') ? hex(ogeRenk(a, 'cozumZemin')) : karis(a.vurgu, 0.07, hex(ogeRenk(a, 'sayfaZemin'))), after: 18, satir: 1.5 }),
     a.adSoyad ? alan('Ad Soyad') + alan('Numara') : '',
     a.tarih ? alan('Tarih') : '',
-    para(run(new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) + (a.altMetin ? ` · ${a.altMetin}` : ''), { fs: 8.5, renk: '9CA3AF' }), { before: 12 }),
+    para(run(new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) + (a.altMetin ? ` · ${a.altMetin}` : ''), { fs: 8.5, renk: ogeRenk(a, 'altBilgi') }), { before: 12 }),
   ].join('');
 }
 
@@ -278,7 +288,7 @@ function anahtarXml(sayfalar: Sayfa[], a: Ayar, w: number): string {
   for (let i = 0; i < liste.length; i += sut) {
     satirlar.push(tr(Array.from({ length: sut }, (_, j) => {
       const x = liste[i + j];
-      return tc(g, x ? para(run(String(x.no), { fs: Math.max(8, a.punto * 0.92), b: true }) + '<w:r><w:tab/></w:r>' + run(x.harf, { fs: Math.max(8, a.punto * 0.92), b: true, renk: a.vurgu }), { satir: 1, tab: [{ pos: g - 160, al: 'right' }] }) : '', { kenar: !!x, mar: 50, shd: x?.renk ? karis(x.renk, 0.1) : undefined });
+      return tc(g, x ? para(run(String(x.no), { fs: Math.max(8, a.punto * 0.92), b: true }) + '<w:r><w:tab/></w:r>' + run(x.harf, { fs: Math.max(8, a.punto * 0.92), b: true, renk: ogeRenk(a, 'cevapHarfi') }), { satir: 1, tab: [{ pos: g - 160, al: 'right' }] }) : '', { kenar: !!x, mar: 50, shd: x?.renk ? karis(x.renk, 0.1) : undefined });
     }).join(''), 6.4, false));
   }
   return bantPara('Cevap anahtarı', null, a) + para('', { tamH: 2 }) + tablo(Array(sut).fill(g), satirlar);
@@ -306,6 +316,9 @@ interface Bolum { icerik: string; sutun: number; kapak?: boolean; ustBilgi?: boo
 
 export async function docxUret(belge: Belge, a: Ayar): Promise<Blob> {
   SATIR_F = TEK_SATIR[YAZI[a.yazi].ofis] || 1.15;
+  BAS_FONT = a.yaziBaslik !== 'ayni' ? baslikYazi(a).ofis : undefined;
+  const zeminHex = hex(ogeRenk(a, 'sayfaZemin'));
+  const zeminVar = zeminHex !== 'FFFFFF';
   const { w: PW, h: PH } = sayfaOlcu(a);
   const ic = a.cerceve ? a.cerceveIc + a.cerceveKalin * 0.35 : 0;
   const altVar = a.sayfaNo || !!a.altMetin.trim();
@@ -380,9 +393,9 @@ export async function docxUret(belge: Belge, a: Ayar): Promise<Blob> {
 
   const NS = 'xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"';
   const font = YAZI[a.yazi].ofis;
-  const docXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document ${NS}><w:body>${govdeXml}</w:body></w:document>`;
+  const docXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document ${NS}>${zeminVar ? `<w:background w:color="${zeminHex}"/>` : ''}<w:body>${govdeXml}</w:body></w:document>`;
   const stiller = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles ${NS}><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="${xml(font)}" w:hAnsi="${xml(font)}" w:cs="${xml(font)}" w:eastAsia="${xml(font)}"/><w:color w:val="${hex(a.metinRenk)}"/><w:sz w:val="${hp(a.punto)}"/><w:szCs w:val="${hp(a.punto)}"/><w:lang w:val="tr-TR"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:before="0" w:after="0" w:line="${satirTw(a.satir)}" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style><w:style w:type="table" w:default="1" w:styleId="TableNormal"><w:name w:val="Normal Table"/><w:tblPr><w:tblInd w:w="0" w:type="dxa"/><w:tblCellMar><w:top w:w="0" w:type="dxa"/><w:left w:w="0" w:type="dxa"/><w:bottom w:w="0" w:type="dxa"/><w:right w:w="0" w:type="dxa"/></w:tblCellMar></w:tblPr></w:style></w:styles>`;
-  const ayarlar = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:settings ${NS}><w:defaultTabStop w:val="709"/><w:characterSpacingControl w:val="doNotCompress"/><w:compat><w:compatSetting w:name="compatibilityMode" w:uri="http://schemas.microsoft.com/office/word" w:val="15"/></w:compat></w:settings>`;
+  const ayarlar = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:settings ${NS}>${zeminVar ? '<w:displayBackgroundShape/>' : ''}<w:defaultTabStop w:val="709"/><w:characterSpacingControl w:val="doNotCompress"/><w:compat><w:compatSetting w:name="compatibilityMode" w:uri="http://schemas.microsoft.com/office/word" w:val="15"/></w:compat></w:settings>`;
   const altFs = Math.max(6.5, a.punto * 0.72);
   const sagTab = tw(PW - a.kenar[1] - a.kenar[3] - ic * 2);
   const sayfaAlan = belge.sayfalar[0]?.tur === 'kapak'

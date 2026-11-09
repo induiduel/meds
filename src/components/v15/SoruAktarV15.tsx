@@ -7,8 +7,9 @@ import {
 import { useV15Baslik } from './baslik';
 import { BOS_SUZGEC, KAYNAKLAR, kaynakYukle, miniDesteler, secenekler, suz, type AQ, type KaynakId, type Suzgec } from './soruAktar/kaynak';
 import {
-  ALANLAR, EN_COK_GRUP, KAGIT, PALETLER, PX_MM, SIRALAMALAR, TASARIMLAR, VARSAYILAN, YAZI, alanAdi, ayarNormal, karistir, sayfaOlcu, tasarimUygula,
-  type Alan, type Ayar, type Bicim, type Duzen, type TasarimId,
+  AGIRLIKLAR, ALANLAR, EN_COK_GRUP, KAGIT, PALETLER, PX_MM, RENK_GRUP_AD, RENK_OGELERI, SIRALAMALAR, TASARIMLAR, TEMALAR, VARSAYILAN, YAZI, YAZI_TUR_AD,
+  alanAdi, ayarNormal, karistir, ogeRenk, sayfaOlcu, tasarimUygula, temaUygula, yaziBaglantilari,
+  type Alan, type Ayar, type Bicim, type Duzen, type RenkOge, type TasarimId, type YaziId,
 } from './soruAktar/ayar';
 import { Olcer, belgeHtml, hazirla, kagitAdi, renkHaritasi, sayfala, type HS } from './soruAktar/belge';
 import { downloadBlob, printDocument, renderPdfOnServer, safeFileName } from '../pdf/pdfDocument';
@@ -84,8 +85,53 @@ function Kaydir({ ad, deger, min, max, adim = 1, birim, degis }: { ad: string; d
     </div>
   );
 }
-function Renk({ ad, deger, degis }: { ad: string; deger: string; degis: (v: string) => void }) {
-  return <label className="sx15-renk"><input type="color" value={deger} onChange={(e) => degis(e.target.value)} /><span>{ad}</span></label>;
+function Renk({ ad, deger, degis, sifirla }: { ad: string; deger: string; degis: (v: string) => void; sifirla?: () => void }) {
+  return (
+    <label className="sx15-renk">
+      <input type="color" value={hex6(deger)} onChange={(e) => degis(e.target.value)} />
+      <span>{ad}</span>
+      {sifirla && <button type="button" className="sx15-renk-x" aria-label={`${ad} rengini sıfırla`} title="Varsayılana dön" onClick={(e) => { e.preventDefault(); sifirla(); }}><X aria-hidden /></button>}
+    </label>
+  );
+}
+/** #rrggbb(aa) → #rrggbb; saydam ton beyazla karıştırılır; boş değer gri */
+function hex6(c: string, zemin = '#ffffff'): string {
+  const m = /^#([0-9a-f]{6})([0-9a-f]{2})?$/i.exec(c || '');
+  if (!m) return '#9ca3af';
+  if (!m[2]) return `#${m[1].toLowerCase()}`;
+  return karisHex(`#${m[1]}`, parseInt(m[2], 16) / 255, zemin);
+}
+function karisHex(c: string, oran: number, zemin: string): string {
+  const p = (h: string, i: number) => parseInt(h.slice(i, i + 2), 16);
+  const a = c.replace('#', ''), b = (/^#[0-9a-f]{6}/i.test(zemin) ? zemin : '#ffffff').replace('#', '');
+  return '#' + [0, 2, 4].map((i) => Math.round(p(a, i) * oran + p(b, i) * (1 - oran)).toString(16).padStart(2, '0')).join('');
+}
+/** Öge renginin renk kutusunda görünen değeri (türetilmiş/saydam renkler düz tona çevrilir) */
+function ogeGoster(a: Ayar, k: RenkOge): string {
+  const v = ogeRenk(a, k);
+  const zemin = hex6(ogeRenk(a, 'sayfaZemin'));
+  if (!v) return karisHex(a.vurgu, 0.07, zemin);
+  return hex6(v, zemin);
+}
+const YAZI_GRUPLARI = (Object.keys(YAZI_TUR_AD) as (keyof typeof YAZI_TUR_AD)[]).map((t) => ({ t, ad: YAZI_TUR_AD[t], ids: (Object.keys(YAZI) as YaziId[]).filter((k) => YAZI[k].tur === t) }));
+function YaziSec({ ad, deger, degis, ayni, ornek }: { ad: string; deger: string; degis: (v: string) => void; ayni?: boolean; ornek: string }) {
+  const id = deger === 'ayni' ? undefined : (deger as YaziId);
+  const t = id ? YAZI[id] : undefined;
+  return (
+    <div className="sx15-yazi">
+      <label className="sx15-sel"><span>{ad}</span>
+        <select value={deger} onChange={(e) => degis(e.target.value)}>
+          {ayni && <option value="ayni">Gövde yazısıyla aynı</option>}
+          {YAZI_GRUPLARI.map((g) => (
+            <optgroup key={g.t} label={g.ad}>
+              {g.ids.map((k) => <option key={k} value={k}>{YAZI[k].ad}{YAZI[k].alt ? ` — ${YAZI[k].alt}` : ''}{YAZI[k].g ? '' : ' (sistem)'}</option>)}
+            </optgroup>
+          ))}
+        </select>
+      </label>
+      {t && <p className="sx15-yazi-on" style={{ fontFamily: t.css }}><b>{t.ad}</b> · {ornek}</p>}
+    </div>
+  );
 }
 function Metin({ ad, deger, degis, yer }: { ad: string; deger: string; degis: (v: string) => void; yer?: string }) {
   return <label className="sx15-in"><span>{ad}</span><input type="text" value={deger} placeholder={yer} maxLength={140} onChange={(e) => degis(e.target.value)} /></label>;
@@ -287,6 +333,15 @@ export default function SoruAktarV15() {
   const setS = useCallback((p: Partial<Suzgec>) => setSuzgec((s) => ({ ...s, ...p })), []);
 
   useEffect(() => yaz(AKEY, ayar), [ayar]);
+  // seçili Google yazı tiplerini panel önizlemesi için sayfaya da yükle
+  useEffect(() => {
+    for (const href of yaziBaglantilari(ayar)) {
+      if (document.querySelector(`link[href="${href}"]`)) continue;
+      const l = document.createElement('link');
+      l.rel = 'stylesheet'; l.href = href;
+      document.head.appendChild(l);
+    }
+  }, [ayar.yazi, ayar.yaziBaslik]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => yaz(SKEY, { ...suzgec, arama: '' }), [suzgec]);
   useEffect(() => yaz(TKEY, sablon), [sablon]);
 
@@ -603,21 +658,27 @@ export default function SoruAktarV15() {
 
   const panelMetin = (
     <>
-      <Bolum baslik="Yazı">
-        <label className="sx15-sel"><span>Yazı tipi</span>
-          <select value={ayar.yazi} onChange={(e) => set({ yazi: e.target.value as Ayar['yazi'] })}>
-            {(Object.keys(YAZI) as Ayar['yazi'][]).map((k) => <option key={k} value={k}>{YAZI[k].ad}</option>)}
-          </select>
-        </label>
+      <Bolum baslik="Yazı tipi" alt="Gövde ve başlık için ayrı yazı tipi seçebilirsin; Google yazı tipleri önizlemede, PDF'te ve Office belgelerinde (yüklüyse) kullanılır.">
+        <YaziSec ad="Gövde yazısı" deger={ayar.yazi} degis={(v) => set({ yazi: v as YaziId })} ornek="Hücre zedelenmesi geri dönüşlü evrede şişme ile başlar. 0123456789" />
+        <YaziSec ad="Başlık ve grup yazısı" ayni deger={ayar.yaziBaslik} degis={(v) => set({ yaziBaslik: v as Ayar['yaziBaslik'] })} ornek="Tıbbi Patoloji · Hücre Zedelenmesi" />
         <Kaydir ad="Punto" deger={ayar.punto} min={7} max={16} adim={0.5} birim="pt" degis={(v) => set({ punto: v })} />
-        <div className="sx15-iki">
-          <Anahtar ad="Soru kökü kalın" acik={ayar.kokKalin} degis={(v) => set({ kokKalin: v })} />
-          <Anahtar ad="İki yana yasla" acik={ayar.iki} degis={(v) => set({ iki: v })} />
-        </div>
-        <div className="sx15-iki">
-          <Renk ad="Metin rengi" deger={ayar.metinRenk} degis={(v) => set({ metinRenk: v })} />
-          <Renk ad="Vurgu rengi" deger={ayar.vurgu} degis={(v) => set({ vurgu: v })} />
-        </div>
+        <Kaydir ad="Başlık oranı" deger={ayar.baslikOran} min={1} max={2.2} adim={0.05} birim="× punto" degis={(v) => set({ baslikOran: v })} />
+        <Kaydir ad="Harf aralığı" deger={ayar.harfAralik} min={-0.05} max={0.2} adim={0.005} birim="em" degis={(v) => set({ harfAralik: v })} />
+      </Bolum>
+      <Bolum baslik="Yazı stili" alt="Kalınlık değişken Google yazı tiplerinde tam uygulanır; sistem yazılarında normal/kalın olarak yuvarlanır.">
+        <span className="sx15-etk">Gövde kalınlığı</span>
+        <Seg ad="Gövde kalınlığı" kucuk deger={ayar.agirlik} degis={(agirlik) => set({ agirlik })} ogeler={AGIRLIKLAR.map((x) => ({ v: x.v, ad: <span style={{ fontWeight: x.v }}>{x.ad}</span> }))} />
+        <span className="sx15-etk">Başlık kalınlığı</span>
+        <Seg ad="Başlık kalınlığı" kucuk deger={ayar.baslikAgirlik} degis={(baslikAgirlik) => set({ baslikAgirlik })} ogeler={AGIRLIKLAR.map((x) => ({ v: x.v, ad: <span style={{ fontWeight: x.v }}>{x.ad}</span> }))} />
+        <span className="sx15-etk">Soru kökü</span>
+        <Seg ad="Soru kökü stili" kucuk deger={ayar.kokStil} degis={(kokStil) => set({ kokStil, kokKalin: kokStil === 'kalin' || kokStil === 'kalinItalik' })} ogeler={[{ v: 'normal', ad: 'Normal' }, { v: 'kalin', ad: <b>Kalın</b> }, { v: 'italik', ad: <i>İtalik</i> }, { v: 'kalinItalik', ad: <b><i>Kalın italik</i></b> }]} />
+        <span className="sx15-etk">Şık metni</span>
+        <Seg ad="Şık metni stili" kucuk deger={ayar.sikStil} degis={(sikStil) => set({ sikStil })} ogeler={[{ v: 'normal', ad: 'Normal' }, { v: 'kalin', ad: <b>Kalın</b> }, { v: 'italik', ad: <i>İtalik</i> }, { v: 'kalinItalik', ad: <b><i>Kalın italik</i></b> }]} />
+        <span className="sx15-etk">Sayfa başlığı harfleri</span>
+        <Seg ad="Sayfa başlığı harfleri" kucuk deger={ayar.baslikBuyuk} degis={(baslikBuyuk) => set({ baslikBuyuk })} ogeler={[{ v: 'normal', ad: 'Olduğu gibi' }, { v: 'buyuk', ad: 'BÜYÜK HARF' }, { v: 'kucukBuyuk', ad: <span style={{ fontVariantCaps: 'small-caps' }}>Küçük Büyük</span> }]} />
+        <span className="sx15-etk">Grup ve bant harfleri</span>
+        <Seg ad="Grup başlığı harfleri" kucuk deger={ayar.grupBuyuk} degis={(grupBuyuk) => set({ grupBuyuk })} ogeler={[{ v: 'normal', ad: 'Olduğu gibi' }, { v: 'buyuk', ad: 'BÜYÜK HARF' }, { v: 'kucukBuyuk', ad: <span style={{ fontVariantCaps: 'small-caps' }}>Küçük Büyük</span> }]} />
+        <Anahtar ad="İki yana yasla" acik={ayar.iki} degis={(v) => set({ iki: v })} />
       </Bolum>
       <Bolum baslik="Satır ve aralık">
         <Kaydir ad="Satır aralığı" deger={ayar.satir} min={1} max={2.2} adim={0.05} birim="×" degis={(v) => set({ satir: v })} />
@@ -630,27 +691,81 @@ export default function SoruAktarV15() {
         <Seg ad="Şık düzeni" deger={ayar.secenekDuzen} degis={(secenekDuzen) => set({ secenekDuzen })} ogeler={[{ v: 'alt', ad: 'Alt alta' }, { v: 'iki', ad: 'İki sütun' }, { v: 'yan', ad: 'Yan yana' }]} />
         <Seg ad="Soru numarası" kucuk deger={ayar.numara} degis={(numara) => set({ numara })} ogeler={[{ v: '1.', ad: '1.' }, { v: '1)', ad: '1)' }, { v: 'S1.', ad: 'S1.' }, { v: 'Soru 1', ad: 'Soru 1' }]} />
         <Seg ad="Şık harfi" kucuk deger={ayar.harf} degis={(harf) => set({ harf })} ogeler={[{ v: 'A)', ad: 'A)' }, { v: 'A.', ad: 'A.' }, { v: '(A)', ad: '(A)' }, { v: 'a)', ad: 'a)' }]} />
+        <span className="sx15-etk">Numara biçimi</span>
+        <Seg ad="Numara biçimi" kucuk deger={ayar.numaraStil} degis={(numaraStil) => set({ numaraStil })} ogeler={[{ v: 'kalin', ad: <b>Kalın</b> }, { v: 'duz', ad: 'Düz' }, { v: 'kutu', ad: <span className="sx15-orn-kutu">1.</span> }, { v: 'daire', ad: <span className="sx15-orn-daire">1</span> }, { v: 'altCizgi', ad: <u>Altı çizili</u> }]} />
+        <span className="sx15-etk">Şık harfi biçimi</span>
+        <Seg ad="Şık harfi biçimi" kucuk deger={ayar.sikHarfStil} degis={(sikHarfStil) => set({ sikHarfStil })} ogeler={[{ v: 'kalin', ad: <b>Kalın</b> }, { v: 'normal', ad: 'Normal' }, { v: 'daire', ad: <span className="sx15-orn-daire">A</span> }, { v: 'kutu', ad: <span className="sx15-orn-kutu">A</span> }]} />
+        <Kaydir ad="Şık girintisi" deger={ayar.sikGirinti} min={0} max={12} adim={0.5} birim="mm" degis={(v) => set({ sikGirinti: v })} />
       </Bolum>
     </>
   );
 
+  const ogeSet = (k: RenkOge, v: string | null) => {
+    const r = { ...ayar.renkler };
+    if (v) r[k] = v; else delete r[k];
+    set({ renkler: r, tema: 'ozel' });
+  };
+  const ozelRenkSayisi = Object.keys(ayar.renkler).length;
   const panelRenk = (
     <>
+      <Bolum baslik="Renk teması" alt="Bir tema seçince metin, vurgu ve tüm öge renkleri dolar; sonra her ögeyi aşağıdan tek tek değiştirebilirsin.">
+        <div className="sx15-tema" role="radiogroup" aria-label="Renk teması">
+          {TEMALAR.map((t) => (
+            <button key={t.id} type="button" role="radio" aria-checked={ayar.tema === t.id} className={ayar.tema === t.id ? 'is-on' : ''} title={t.alt} onClick={() => setAyar((a) => (t.id === 'ozel' ? { ...a, tema: 'ozel' } : temaUygula(a, t.id)))}>
+              <span className="sx15-tema-sw" style={{ background: t.renkler.sayfaZemin || '#fff' }}>
+                <i style={{ background: t.renkler.kok || t.metin }} /><i style={{ background: t.vurgu }} /><i style={{ background: t.renkler.dogru || t.vurgu }} /><i style={{ background: t.renkler.cozumZemin || karisHex(t.vurgu, 0.12, t.renkler.sayfaZemin || '#ffffff') }} />
+              </span>
+              <b>{t.ad}</b><small>{t.alt}</small>
+            </button>
+          ))}
+        </div>
+        <div className="sx15-iki">
+          <Renk ad="Metin rengi" deger={ayar.metinRenk} degis={(v) => set({ metinRenk: v, tema: 'ozel' })} />
+          <Renk ad="Vurgu rengi" deger={ayar.vurgu} degis={(v) => set({ vurgu: v, tema: 'ozel' })} />
+        </div>
+      </Bolum>
+      <Bolum baslik="Öge renkleri" alt="Her ögenin rengi ayrı ayrı. Boş bırakılan öge vurgu/metin renginden türetilir; × ile türetilmişe dönersin." sag={ozelRenkSayisi > 0 ? <button type="button" className="sx15-lnk" onClick={() => set({ renkler: {}, tema: 'ozel' })}><RotateCcw aria-hidden />Tümünü türet ({ozelRenkSayisi})</button> : undefined}>
+        {(Object.keys(RENK_GRUP_AD) as (keyof typeof RENK_GRUP_AD)[]).map((g) => (
+          <details key={g} className="sx15-oge-g" open={g === 'metin'}>
+            <summary>{RENK_GRUP_AD[g]}<em>{RENK_OGELERI.filter((o) => o.grup === g && ayar.renkler[o.id]).length || ''}</em></summary>
+            <div className="sx15-oge">
+              {RENK_OGELERI.filter((o) => o.grup === g).map((o) => (
+                <Renk key={o.id} ad={o.ad} deger={ogeGoster(ayar, o.id)} degis={(v) => ogeSet(o.id, v)} sifirla={ayar.renkler[o.id] ? () => ogeSet(o.id, null) : undefined} />
+              ))}
+            </div>
+          </details>
+        ))}
+      </Bolum>
       <Bolum baslik="Renklendirme" alt="Soruları bir özelliğe göre renklendir: aynı ders/konu/yıl aynı rengi alır. Derste her dersin sitedeki sabit rengi kullanılır.">
         <Seg ad="Renk anahtarı" kucuk deger={ayar.renkAlan} degis={(renkAlan) => set({ renkAlan })} ogeler={[{ v: 'yok' as const, ad: 'Yok' }, ...ALANLAR.map((x) => ({ v: x.id as Ayar['renkAlan'], ad: x.ad, title: x.alt }))]} />
         {ayar.renkAlan !== 'yok' && (
           <>
             <Seg ad="Renk biçimi" deger={ayar.renkStil} degis={(renkStil) => set({ renkStil })} ogeler={[{ v: 'serit', ad: 'Şerit' }, { v: 'etiket', ad: 'Etiket' }, { v: 'zemin', ad: 'Zemin' }, { v: 'numara', ad: 'Numara' }]} />
             {ayar.renkAlan === 'ders' && <Anahtar ad="Her dersin kendi rengi" alt="Patoloji pembe, Farmakoloji mor … (sitedeki ders renkleri); kapalıysa palet sırası" acik={ayar.dersRenkleri} degis={(v) => set({ dersRenkleri: v })} />}
-            {!(ayar.renkAlan === 'ders' && ayar.dersRenkleri) && (
+            {!(ayar.renkAlan === 'ders' && ayar.dersRenkleri) && (<>
               <div className="sx15-palet" role="radiogroup" aria-label="Palet">
                 {(Object.keys(PALETLER) as Ayar['palet'][]).map((p) => (
                   <button key={p} type="button" role="radio" aria-checked={ayar.palet === p} className={ayar.palet === p ? 'is-on' : ''} onClick={() => set({ palet: p })}>
-                    <span>{PALETLER[p].renk.slice(0, 6).map((c) => <i key={c} style={{ background: c }} />)}</span>{PALETLER[p].ad}
+                    <span>{(p === 'ozel' ? (ayar.paletOzel.length ? ayar.paletOzel : ['#e5e7eb', '#d1d5db', '#9ca3af']) : PALETLER[p].renk).slice(0, 6).map((c, i) => <i key={`${c}${i}`} style={{ background: c }} />)}</span>{PALETLER[p].ad}
                   </button>
                 ))}
               </div>
-            )}
+              {ayar.palet === 'ozel' && (
+                <div className="sx15-palozel">
+                  <div className="sx15-coklu-b"><b>Kendi paletim ({ayar.paletOzel.length})</b>{ayar.paletOzel.length > 0 && <button type="button" className="sx15-lnk" onClick={() => set({ paletOzel: [] })}>Temizle</button>}</div>
+                  <div className="sx15-palozel-l">
+                    {ayar.paletOzel.map((c, i) => (
+                      <span key={i} className="sx15-palozel-r">
+                        <input type="color" aria-label={`${i + 1}. palet rengi`} value={c} onChange={(e) => set({ paletOzel: ayar.paletOzel.map((x, j) => (j === i ? e.target.value : x)) })} />
+                        <button type="button" aria-label="Rengi kaldır" onClick={() => set({ paletOzel: ayar.paletOzel.filter((_, j) => j !== i) })}><X aria-hidden /></button>
+                      </span>
+                    ))}
+                    {ayar.paletOzel.length < 24 && <button type="button" className="sx15-cip is-dev" onClick={() => set({ paletOzel: [...ayar.paletOzel, PALETLER.canli.renk[ayar.paletOzel.length % PALETLER.canli.renk.length]] })}><Plus aria-hidden /><span>Renk ekle</span></button>}
+                  </div>
+                  <p className="v15-cap">Boş bırakılırsa Canlı palet kullanılır. Renkler sırayla gruplara dağıtılır.</p>
+                </div>
+              )}
+            </>)}
             {lejant.length > 0 && (
               <div className="sx15-lejant">
                 <div className="sx15-coklu-b"><b>Renk anahtarı ({lejant.length})</b>{Object.keys(ayar.renkOzel).some((k) => k.startsWith(`${ayar.renkAlan}:`)) && <button type="button" className="sx15-lnk" onClick={() => set({ renkOzel: Object.fromEntries(Object.entries(ayar.renkOzel).filter(([k]) => !k.startsWith(`${ayar.renkAlan}:`))) })}>Renkleri sıfırla</button>}</div>

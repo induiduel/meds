@@ -6,7 +6,7 @@
  */
 import JSZip from 'jszip';
 import { cozumBos, cozumIcerik, etiketler, harfMetni, numaraMetni, parcala, KOLON_ARA, ANAHTAR_H, OPTIK_H, OPTIK_W, type Belge, type Blok, type HS, type Sayfa } from './belge';
-import { ALT_MM, BASLIK_MM, GRUP_MM, SERIT_MM, YAZI, sayfaOlcu, type Ayar } from './ayar';
+import { ALT_MM, BASLIK_MM, GRUP_MM, SERIT_MM, YAZI, baslikYazi, ogeRenk, sayfaOlcu, type Ayar, type HarfBuyuk } from './ayar';
 import { coreXml, karis, xml } from './docx';
 import { kaynakAdi } from './kaynak';
 
@@ -15,11 +15,15 @@ const hex = (c: string) => (/^#?[0-9a-f]{6}/i.exec(c)?.[0] || '#111827').replace
 const DAIRE: Record<string, string> = { A: 'Ⓐ', B: 'Ⓑ', C: 'Ⓒ', D: 'Ⓓ', E: 'Ⓔ', F: 'Ⓕ' };
 const NS = 'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"';
 
-interface RO { fs: number; b?: boolean; renk?: string; vurgu?: string }
+interface RO { fs: number; b?: boolean; i?: boolean; u?: boolean; renk?: string; vurgu?: string; bas?: boolean; caps?: HarfBuyuk }
 let FONT = 'Arial';
-const rPr = (o: RO, tag = 'a:rPr') =>
-  `<${tag} lang="tr-TR" sz="${Math.max(100, Math.round(o.fs * 100))}"${o.b ? ' b="1"' : ''} dirty="0">${o.renk ? `<a:solidFill><a:srgbClr val="${hex(o.renk)}"/></a:solidFill>` : ''}${o.vurgu ? `<a:highlight><a:srgbClr val="${o.vurgu}"/></a:highlight>` : ''}<a:latin typeface="${xml(FONT)}"/><a:cs typeface="${xml(FONT)}"/></${tag}>`;
-const r = (t: string, o: RO) => (t ? `<a:r>${rPr(o)}<a:t>${xml(t)}</a:t></a:r>` : '');
+let BAS_FONT = 'Arial';
+const rPr = (o: RO, tag = 'a:rPr') => {
+  const f = o.bas ? BAS_FONT : FONT;
+  return `<${tag} lang="tr-TR" sz="${Math.max(100, Math.round(o.fs * 100))}"${o.b ? ' b="1"' : ''}${o.i ? ' i="1"' : ''}${o.u ? ' u="sng"' : ''}${o.caps === 'buyuk' ? ' cap="all"' : o.caps === 'kucukBuyuk' ? ' cap="small"' : ''} dirty="0">${o.renk ? `<a:solidFill><a:srgbClr val="${hex(o.renk)}"/></a:solidFill>` : ''}${o.vurgu ? `<a:highlight><a:srgbClr val="${o.vurgu}"/></a:highlight>` : ''}<a:latin typeface="${xml(f)}"/><a:cs typeface="${xml(f)}"/></${tag}>`;
+};
+let METIN = '#111827';
+const r = (t: string, o: RO) => (t ? `<a:r>${rPr(o.renk ? o : { ...o, renk: METIN })}<a:t>${xml(t)}</a:t></a:r>` : '');
 const zengin = (t: string, o: RO) => parcala(t).map((p) => (p.br ? `<a:br>${rPr(o)}</a:br>` : r(p.t, { ...o, b: o.b || p.b }))).join('');
 const TAB = '<a:r><a:rPr lang="tr-TR" dirty="0"/><a:t>\t</a:t></a:r>';
 
@@ -45,14 +49,21 @@ function soruP(h: HS, a: Ayar, k: number, wMm: number): string[] {
     return ayrac + r(dolgulu ? ` ${e.ad} ` : e.ad, { fs: efs, b: a.etiketKalin, renk: metin, vurgu: dolgulu ? (ozel && !e.renkli ? a.etiketZemin.replace('#', '').toUpperCase() : karis(e.renk, 0.14)) : undefined });
   }).join(''), { satir: sat, sonra: par, algn: a.etiketDizilim === 'sag' ? 'r' : a.etiketDizilim === 'orta' ? 'ctr' : undefined }, { fs: efs });
   if (et.length && a.etiketYeri === 'ust') out.push(etP());
-  const numRenk = h.renk && (a.renkStil === 'numara' || a.renkStil === 'etiket') ? h.renk : a.vurgu;
-  out.push(p(r(numaraMetni(h.no, a) + ' ', { fs, b: true, renk: numRenk }) + zengin(h.q.stem, { fs, b: a.kokKalin }), { satir: sat, sonra: par, algn: a.iki ? 'just' : undefined }, { fs }));
+  const numRenk = h.renk && (a.renkStil === 'numara' || a.renkStil === 'etiket') ? h.renk : ogeRenk(a, 'numara');
+  const kokB = a.kokStil === 'normal' ? a.kokKalin : a.kokStil === 'kalin' || a.kokStil === 'kalinItalik';
+  const kokI = a.kokStil === 'italik' || a.kokStil === 'kalinItalik';
+  out.push(p(r(numaraMetni(h.no, a) + ' ', { fs, b: a.numaraStil !== 'duz', u: a.numaraStil === 'altCizgi', renk: numRenk, vurgu: a.numaraStil === 'kutu' ? karis(numRenk, 0.18, hex(ogeRenk(a, 'sayfaZemin'))) : undefined }) + zengin(h.q.stem, { fs, b: kokB, i: kokI, renk: ogeRenk(a, 'kok') }), { satir: sat, sonra: par, algn: a.iki ? 'just' : undefined }, { fs }));
   const ind = EMU(Math.min(7, wMm * 0.1));
   const sik = (x: { key: string; text: string }) => {
     const dg = a.dogruIsaret && x.key === h.dogru;
     const harf = dg && a.isaretStil === 'daire' && DAIRE[x.key] ? DAIRE[x.key] : harfMetni(x.key, a);
-    const o: RO = { fs, b: dg, renk: dg && a.isaretStil !== 'zemin' && a.isaretStil !== 'tik' ? a.vurgu : undefined, vurgu: dg && a.isaretStil === 'zemin' ? karis(a.vurgu, 0.22) : undefined };
-    return r(harf, { fs, b: true, renk: dg && a.isaretStil === 'daire' ? a.vurgu : undefined }) + TAB + zengin(x.text, o) + (dg && a.isaretStil === 'tik' ? r(' ✓', { fs, b: true, renk: a.vurgu }) : '');
+    const dr = ogeRenk(a, 'dogru');
+    const sikB = a.sikStil === 'kalin' || a.sikStil === 'kalinItalik';
+    const sikI = a.sikStil === 'italik' || a.sikStil === 'kalinItalik';
+    const dz = ogeRenk(a, 'dogruZemin');
+    const o: RO = { fs, b: dg || sikB, i: sikI, renk: dg && a.isaretStil !== 'zemin' && a.isaretStil !== 'tik' ? dr : ogeRenk(a, 'sik'), vurgu: dg && a.isaretStil === 'zemin' ? (dz.length === 7 ? hex(dz) : karis(a.vurgu, 0.22, hex(ogeRenk(a, 'sayfaZemin')))) : undefined };
+    const harf2 = a.sikHarfStil === 'daire' && !(dg && a.isaretStil === 'daire') && DAIRE[x.key] ? DAIRE[x.key] : harf;
+    return r(harf2, { fs, b: a.sikHarfStil !== 'normal', renk: dg && a.isaretStil === 'daire' ? dr : ogeRenk(a, 'sikHarf'), vurgu: a.sikHarfStil === 'kutu' ? karis(ogeRenk(a, 'sikHarf'), 0.18, hex(ogeRenk(a, 'sayfaZemin'))) : undefined }) + TAB + zengin(x.text, o) + (dg && a.isaretStil === 'tik' ? r(' ✓', { fs, b: true, renk: dr }) : '');
   };
   const ara = a.paragraf * 0.6 * k;
   if (a.secenekDuzen === 'yan') {
@@ -69,7 +80,7 @@ function soruP(h: HS, a: Ayar, k: number, wMm: number): string[] {
   if (et.length && a.etiketYeri === 'alt') out.push(etP());
   if (a.yazmaSatiri > 0) {
     const n = Math.max(8, Math.floor(wMm / (fs * 0.3528 * 0.5)));
-    for (let i = 0; i < a.yazmaSatiri; i++) out.push(p(r('_'.repeat(n), { fs, renk: 'C7CBD1' }), { satir: sat * 1.1, sonra: 0 }, { fs }));
+    for (let i = 0; i < a.yazmaSatiri; i++) out.push(p(r('_'.repeat(n), { fs, renk: ogeRenk(a, 'yazmaCizgi') }), { satir: sat * 1.1, sonra: 0 }, { fs }));
   }
   if (a.cozumYeri === 'altinda') {
     const c = cozumIcerik(h, a);
@@ -84,12 +95,13 @@ function cozumP(h: HS, a: Ayar, k: number, wMm: number, numarali: boolean): stri
   const fs = a.punto * k;
   const sat = a.satir;
   const out: string[] = [];
-  const bas = (numarali ? r(numaraMetni(h.no, a) + '  ', { fs, b: true, renk: h.renk || a.vurgu }) : '') + (c.harf ? r(`Cevap: ${c.harf}`, { fs, b: true, renk: a.vurgu }) : '');
+  const cm = ogeRenk(a, 'cozumMetin');
+  const bas = (numarali ? r(numaraMetni(h.no, a) + '  ', { fs, b: true, renk: h.renk || ogeRenk(a, 'numara') }) : '') + (c.harf ? r(`Cevap: ${c.harf}`, { fs, b: true, renk: ogeRenk(a, 'cevapHarfi') }) : '');
   if (bas) out.push(p(bas, { satir: sat, sonra: 1.5 * k }, { fs }));
-  if (c.aciklama) out.push(p(zengin(c.aciklama, { fs }), { satir: sat, sonra: 1.5 * k, algn: a.iki ? 'just' : undefined }, { fs }));
+  if (c.aciklama) out.push(p(zengin(c.aciklama, { fs, renk: cm }), { satir: sat, sonra: 1.5 * k, algn: a.iki ? 'just' : undefined }, { fs }));
   const ind = EMU(Math.min(9, wMm * 0.12));
-  for (const x of c.siklar) out.push(p(r(harfMetni(x.k, a), { fs, b: true, renk: x.dogru ? a.vurgu : undefined }) + TAB + zengin(x.t, { fs, renk: x.dogru ? a.vurgu : undefined }), { satir: sat, sonra: k, ind, tab: [{ pos: ind, algn: 'l' }] }, { fs }));
-  if (c.kaynak) out.push(p(r(c.kaynak, { fs: fs * 0.88, renk: '6B7280' }), { satir: sat }, { fs }));
+  for (const x of c.siklar) out.push(p(r(harfMetni(x.k, a), { fs, b: true, renk: x.dogru ? ogeRenk(a, 'dogru') : cm }) + TAB + zengin(x.t, { fs, renk: x.dogru ? ogeRenk(a, 'dogru') : cm }), { satir: sat, sonra: k, ind, tab: [{ pos: ind, algn: 'l' }] }, { fs }));
+  if (c.kaynak) out.push(p(r(c.kaynak, { fs: fs * 0.88, renk: ogeRenk(a, 'kaynak') }), { satir: sat }, { fs }));
   return out;
 }
 /** Bloğun son paragrafına bloklar arası boşluk (mm → pt) */
@@ -99,7 +111,7 @@ const sonBosluk = (l: string[], mm: number) => {
   return l;
 };
 const grupP = (b: { ad: string; renk: string | null; seviye: number; sayi: number; k: number }, a: Ayar, ic = false): string =>
-  p(r(b.ad, { fs: a.punto * (ic ? 0.9 : [1.28, 1.12, 1.0, 0.92][Math.min(3, b.seviye)]) * b.k, b: true, renk: b.renk || a.vurgu }) + (a.grupSayi ? r(`  ${b.sayi} soru`, { fs: a.punto * 0.8 * b.k, renk: '6B7280' }) : ''), { satir: 1.15, sonra: (ic ? a.paragraf : a.soruArasi * 1.4) * b.k, ind: b.seviye && !ic ? EMU(b.seviye * 1.5) : undefined }, { fs: a.punto });
+  p(r(b.ad, { fs: a.punto * (ic ? 0.9 : [1.28, 1.12, 1.0, 0.92][Math.min(3, b.seviye)]) * b.k, b: true, bas: true, caps: a.grupBuyuk, renk: b.renk || ogeRenk(a, 'grup') }) + (a.grupSayi ? r(`  ${b.sayi} soru`, { fs: a.punto * 0.8 * b.k, renk: ogeRenk(a, 'altBilgi') }) : ''), { satir: 1.15, sonra: (ic ? a.paragraf : a.soruArasi * 1.4) * b.k, ind: b.seviye && !ic ? EMU(b.seviye * 1.5) : undefined }, { fs: a.punto });
 const blokP = (b: Blok, a: Ayar, wMm: number): string[] =>
   b.t === 'soru' ? [...(b.basliklar || []).map((g) => grupP({ ...g, k: b.k }, a, true)), ...soruP(b.h, a, b.k, wMm)]
     : b.t === 'cozum' ? sonBosluk(cozumP(b.h, a, b.k, wMm, true), a.soruArasi * b.k)
@@ -132,7 +144,7 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
   const ic = a.cerceve ? a.cerceveIc + a.cerceveKalin * 0.35 : 0;
   const x0 = a.kenar[3] + ic;
   let y = a.kenar[0] + ic;
-  if (a.filigran.trim()) s.kutu(0, PH / 2 - 25, PW, 50, [p(r(a.filigran.trim(), { fs: Math.min(PW, PH) / 7 * 2.835, b: true, renk: karis(a.metinRenk, 0.07) }), { satir: 1, algn: 'ctr' }, { fs: 20 })], { anchor: 'ctr', don: -32 });
+  if (a.filigran.trim()) s.kutu(0, PH / 2 - 25, PW, 50, [p(r(a.filigran.trim(), { fs: Math.min(PW, PH) / 7 * 2.835, b: true, bas: true, renk: karis(ogeRenk(a, 'filigran'), 0.07, hex(ogeRenk(a, 'sayfaZemin'))) }), { satir: 1, algn: 'ctr' }, { fs: 20 })], { anchor: 'ctr', don: -32 });
   if (a.cerceve && pg.tur !== 'kapak') s.kutu(a.kenar[3], a.kenar[0], PW - a.kenar[1] - a.kenar[3], PH - a.kenar[0] - a.kenar[2], [], { cizgi: { renk: a.cerceveRenk, kalin: a.cerceveKalin, kesik: a.cerceveStil === 'dashed' || a.cerceveStil === 'dotted' }, yuvarlak: a.cerceveYaricap > 0 });
 
   if (pg.tur === 'kapak') {
@@ -141,12 +153,12 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
     const kaynaklar = [...new Set(b.hs.map((h) => kaynakAdi(h.q.kaynak)))];
     s.kutu(a.kenar[3] + 6, a.kenar[0], W, PH - a.kenar[0] - a.kenar[2], [
       p(r(kaynaklar.join(' · ').toLocaleUpperCase('tr'), { fs: 9, b: true, renk: a.vurgu }), { satir: 1.2, sonra: 14 }, { fs: 9 }),
-      p(r(a.baslik || 'Soru kitapçığı', { fs: 30, b: true, renk: a.metinRenk }), { satir: 1.1, sonra: 8 }, { fs: 30 }),
-      a.altBaslik ? p(r(a.altBaslik, { fs: 13, renk: '4B5563' }), { satir: 1.2, sonra: 16 }, { fs: 13 }) : '',
-      p(r(`${b.hs.length}`, { fs: 17, b: true, renk: a.vurgu }) + r(' soru     ', { fs: 9, renk: '6B7280' }) + r(`${dersler.length}`, { fs: 17, b: true, renk: a.vurgu }) + r(' ders', { fs: 9, renk: '6B7280' }), { satir: 1.2, sonra: 12 }, { fs: 9 }),
-      dersler.length ? p(r(dersler.slice(0, 14).join(' · '), { fs: 9.5, renk: '374151' }), { satir: 1.3, sonra: 16 }, { fs: 9.5 }) : '',
-      a.adSoyad ? p(r('Ad Soyad  ______________________________', { fs: 10 }), { satir: 1.6, sonra: 6 }, { fs: 10 }) : '',
-      p(r(new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) + (a.altMetin ? ` · ${a.altMetin}` : ''), { fs: 8.5, renk: '9CA3AF' }), { satir: 1.2, once: 10 }, { fs: 8.5 }),
+      p(r(a.baslik || 'Soru kitapçığı', { fs: 30, b: true, bas: true, caps: a.baslikBuyuk, renk: ogeRenk(a, 'kapakBaslik') }), { satir: 1.1, sonra: 8 }, { fs: 30 }),
+      a.altBaslik ? p(r(a.altBaslik, { fs: 13, renk: ogeRenk(a, 'altBilgi') }), { satir: 1.2, sonra: 16 }, { fs: 13 }) : '',
+      p(r(`${b.hs.length}`, { fs: 17, b: true, renk: a.vurgu }) + r(' soru     ', { fs: 9, renk: ogeRenk(a, 'altBilgi') }) + r(`${dersler.length}`, { fs: 17, b: true, renk: a.vurgu }) + r(' ders', { fs: 9, renk: ogeRenk(a, 'altBilgi') }), { satir: 1.2, sonra: 12 }, { fs: 9 }),
+      dersler.length ? p(r(dersler.slice(0, 14).join(' · '), { fs: 9.5, renk: ogeRenk(a, 'altBilgi') }), { satir: 1.3, sonra: 16 }, { fs: 9.5 }) : '',
+      a.adSoyad ? p(r('Ad Soyad  ______________________________', { fs: 10, renk: a.metinRenk }), { satir: 1.6, sonra: 6 }, { fs: 10 }) : '',
+      p(r(new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) + (a.altMetin ? ` · ${a.altMetin}` : ''), { fs: 8.5, renk: ogeRenk(a, 'altBilgi') }), { satir: 1.2, once: 10 }, { fs: 8.5 }),
     ].filter(Boolean), { anchor: 'ctr' });
     return s;
   }
@@ -155,17 +167,17 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
   if (g.baslik) {
     const sag = a.adSoyad || a.tarih ? Math.min(60, g.w * 0.42) : 0;
     s.kutu(x0, y, g.w - sag, BASLIK_MM - 1, [
-      p(r(a.baslik, { fs: Math.min(16, a.punto * 1.45), b: true, renk: a.vurgu }), { satir: 1.1 }, { fs: 12 }),
-      a.altBaslik ? p(r(a.altBaslik, { fs: Math.max(7, a.punto * 0.8), renk: '4B5563' }), { satir: 1.1 }, { fs: 8 }) : '',
+      p(r(a.baslik, { fs: Math.min(16, a.punto * a.baslikOran), b: true, bas: true, caps: a.baslikBuyuk, renk: ogeRenk(a, 'baslik') }), { satir: 1.1 }, { fs: 12 }),
+      a.altBaslik ? p(r(a.altBaslik, { fs: Math.max(7, a.punto * 0.8), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.1 }, { fs: 8 }) : '',
     ].filter(Boolean), { anchor: 'b' });
-    if (sag) s.kutu(x0 + g.w - sag, y, sag, BASLIK_MM - 1, [a.adSoyad ? p(r('Ad Soyad: _______________', { fs: Math.max(7, a.punto * 0.78), renk: '374151' }), { satir: 1.3 }, { fs: 8 }) : '', a.tarih ? p(r('Tarih: _______________', { fs: Math.max(7, a.punto * 0.78), renk: '374151' }), { satir: 1.3 }, { fs: 8 }) : ''].filter(Boolean), { anchor: 'b' });
-    s.dortgen(x0, y + BASLIK_MM - 0.45, g.w, 0.4, a.vurgu);
+    if (sag) s.kutu(x0 + g.w - sag, y, sag, BASLIK_MM - 1, [a.adSoyad ? p(r('Ad Soyad: _______________', { fs: Math.max(7, a.punto * 0.78), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.3 }, { fs: 8 }) : '', a.tarih ? p(r('Tarih: _______________', { fs: Math.max(7, a.punto * 0.78), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.3 }, { fs: 8 }) : ''].filter(Boolean), { anchor: 'b' });
+    s.dortgen(x0, y + BASLIK_MM - 0.45, g.w, 0.4, ogeRenk(a, 'baslikCizgi'));
     y += BASLIK_MM;
   }
   if (pg.bant) {
-    s.dortgen(x0, y + GRUP_MM / 2 - 1.3, 2.6, 2.6, pg.bant.renk || a.vurgu);
-    s.kutu(x0 + 5, y, g.w - 5, GRUP_MM - 0.4, [p(r(pg.bant.ad, { fs: Math.max(8, a.punto * 1.05), b: true, renk: a.vurgu }), { satir: 1.1 }, { fs: 10 })], { anchor: 'ctr' });
-    s.dortgen(x0, y + GRUP_MM - 0.3, g.w, 0.2, '#D1D5DB');
+    s.dortgen(x0, y + GRUP_MM / 2 - 1.3, 2.6, 2.6, pg.bant.renk || ogeRenk(a, 'bant'));
+    s.kutu(x0 + 5, y, g.w - 5, GRUP_MM - 0.4, [p(r(pg.bant.ad, { fs: Math.max(8, a.punto * 1.05), b: true, bas: true, caps: a.grupBuyuk, renk: ogeRenk(a, 'bant') }), { satir: 1.1 }, { fs: 10 })], { anchor: 'ctr' });
+    s.dortgen(x0, y + GRUP_MM - 0.3, g.w, 0.2, ogeRenk(a, 'anahtarKenar'));
     y += GRUP_MM;
   }
   const gy = y;
@@ -176,12 +188,12 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
       const rr = Math.floor(i / sut);
       const hx = x0 + c * (cw + a.hucreAralik);
       const hy = gy + rr * (ch + a.hucreAralik);
-      if (!bl) { if (a.hucreCerceve) s.kutu(hx, hy, cw, ch, [], { cizgi: { renk: '#CBD5E1', kalin: 0.7 }, yuvarlak: true }); return; }
+      if (!bl) { if (a.hucreCerceve) s.kutu(hx, hy, cw, ch, [], { cizgi: { renk: ogeRenk(a, 'hucreKenar'), kalin: 0.7 }, yuvarlak: true }); return; }
       const h = bl.t === 'grup' ? null : bl.h;
       const serit = !!(h?.renk && a.renkStil === 'serit');
       const ic2 = a.hucreCerceve ? 3 : 0;
-      const zemin = h?.renk && a.renkStil === 'zemin' ? karis(h.renk, 0.09) : undefined;
-      if (a.hucreCerceve || zemin) s.kutu(hx, hy, cw, ch, [], { cizgi: a.hucreCerceve ? { renk: '#CBD5E1', kalin: 0.7 } : undefined, yuvarlak: true, dolgu: zemin });
+      const zemin = h?.renk && a.renkStil === 'zemin' ? karis(h.renk, 0.09, hex(ogeRenk(a, 'sayfaZemin'))) : undefined;
+      if (a.hucreCerceve || zemin) s.kutu(hx, hy, cw, ch, [], { cizgi: a.hucreCerceve ? { renk: ogeRenk(a, 'hucreKenar'), kalin: 0.7 } : undefined, yuvarlak: true, dolgu: zemin });
       if (serit) s.dortgen(hx + ic2, hy + ic2, 1.2, ch - ic2 * 2, h!.renk!);
       const sol = serit ? 3.8 : 0;
       const icW = cw - ic2 * 2 - sol;
@@ -191,7 +203,7 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
     const kw = pg.kolonW!;
     pg.kolon.forEach((kol, i) => {
       const kx = x0 + i * (kw + KOLON_ARA);
-      if (i && a.sutunCizgi) s.dortgen(kx - KOLON_ARA / 2 - 0.1, gy, 0.2, g.h, '#9CA3AF');
+      if (i && a.sutunCizgi) s.dortgen(kx - KOLON_ARA / 2 - 0.1, gy, 0.2, g.h, ogeRenk(a, 'sutunCizgi'));
       s.kutu(kx, gy, kw, g.h, kol.flatMap((bl) => blokP(bl, a, kw)), { sigdir: true });
     });
   } else if (pg.anahtar) {
@@ -200,7 +212,7 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
     pg.anahtar.forEach((x, i) => {
       const c = i % sut;
       const rr = Math.floor(i / sut);
-      s.kutu(x0 + c * (cw + 1.2), gy + rr * ANAHTAR_H, cw, ANAHTAR_H - 1.2, [p(r(String(x.no), { fs: Math.max(8, a.punto * 0.92), b: true }) + TAB + r(x.harf, { fs: Math.max(8, a.punto * 0.92), b: true, renk: a.vurgu }), { satir: 1, tab: [{ pos: EMU(cw - 4), algn: 'r' }] }, { fs: 9 })], { ic: 1, anchor: 'ctr', cizgi: { renk: '#D1D5DB', kalin: 0.6 }, dolgu: x.renk ? karis(x.renk, 0.1) : undefined });
+      s.kutu(x0 + c * (cw + 1.2), gy + rr * ANAHTAR_H, cw, ANAHTAR_H - 1.2, [p(r(String(x.no), { fs: Math.max(8, a.punto * 0.92), b: true }) + TAB + r(x.harf, { fs: Math.max(8, a.punto * 0.92), b: true, renk: ogeRenk(a, 'cevapHarfi') }), { satir: 1, tab: [{ pos: EMU(cw - 4), algn: 'r' }] }, { fs: 9 })], { ic: 1, anchor: 'ctr', cizgi: { renk: ogeRenk(a, 'anahtarKenar'), kalin: 0.6 }, dolgu: x.renk ? karis(x.renk, 0.1, hex(ogeRenk(a, 'sayfaZemin'))) : undefined });
     });
   } else if (pg.optik) {
     const sut = pg.optikSut || 4;
@@ -213,12 +225,12 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
   }
   y += g.h;
   if (pg.serit) {
-    s.dortgen(x0, y, g.w, 0.2, '#9CA3AF');
-    s.kutu(x0, y + 0.8, g.w, SERIT_MM - 1, [p(r('Cevaplar · ', { fs: Math.max(6.5, a.punto * 0.72), b: true, renk: a.vurgu }) + r(pg.serit.map((x) => `${x.no}-${x.harf}`).join('   '), { fs: Math.max(6.5, a.punto * 0.72), renk: '374151' }), { satir: 1.3 }, { fs: 7 })]);
+    s.dortgen(x0, y, g.w, 0.2, ogeRenk(a, 'ayirici'));
+    s.kutu(x0, y + 0.8, g.w, SERIT_MM - 1, [p(r('Cevaplar · ', { fs: Math.max(6.5, a.punto * 0.72), b: true, renk: ogeRenk(a, 'cevapHarfi') }) + r(pg.serit.map((x) => `${x.no}-${x.harf}`).join('   '), { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'cozumMetin') }), { satir: 1.3 }, { fs: 7 })]);
     y += SERIT_MM;
   }
   if (a.sayfaNo || a.altMetin.trim()) {
-    s.kutu(x0, y, g.w, ALT_MM, [p(r(a.altMetin, { fs: Math.max(6.5, a.punto * 0.72), renk: '6B7280' }) + TAB + (a.sayfaNo ? r(`${no} / ${toplam}`, { fs: Math.max(6.5, a.punto * 0.72), renk: '6B7280' }) : ''), { satir: 1, tab: [{ pos: EMU(g.w), algn: 'r' }] }, { fs: 7 })], { anchor: 'b' });
+    s.kutu(x0, y, g.w, ALT_MM, [p(r(a.altMetin, { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'altBilgi') }) + TAB + (a.sayfaNo ? r(`${no} / ${toplam}`, { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'altBilgi') }) : ''), { satir: 1, tab: [{ pos: EMU(g.w), algn: 'r' }] }, { fs: 7 })], { anchor: 'b' });
   }
   return s;
 }
@@ -229,6 +241,9 @@ const STIL = '<a:lvl1pPr><a:defRPr/></a:lvl1pPr>';
 
 export async function pptxUret(belge: Belge, a: Ayar): Promise<Blob> {
   FONT = YAZI[a.yazi].ofis;
+  BAS_FONT = baslikYazi(a).ofis;
+  METIN = a.metinRenk;
+  const zeminHex = hex(ogeRenk(a, 'sayfaZemin'));
   const { w, h } = sayfaOlcu(a);
   const kapakVar = belge.sayfalar[0]?.tur === 'kapak';
   const toplam = belge.sayfalar.length - (kapakVar ? 1 : 0);
@@ -245,7 +260,7 @@ export async function pptxUret(belge: Belge, a: Ayar): Promise<Blob> {
   zip.file('ppt/viewProps.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:viewPr ${NS}><p:normalViewPr><p:restoredLeft sz="15620"/><p:restoredTop sz="94660"/></p:normalViewPr><p:gridSpacing cx="76200" cy="76200"/></p:viewPr>`);
   zip.file('ppt/tableStyles.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><a:tblStyleLst xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" def="{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}"/>`);
   zip.file('ppt/theme/theme1.xml', TEMA);
-  zip.file('ppt/slideMasters/slideMaster1.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:sldMaster ${NS}><p:cSld><p:bg><p:bgPr><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill><a:effectLst/></p:bgPr></p:bg>${BOS_AGAC}</p:cSld><p:clrMap bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/><p:sldLayoutIdLst><p:sldLayoutId id="2147483649" r:id="rId1"/></p:sldLayoutIdLst><p:txStyles><p:titleStyle>${STIL}</p:titleStyle><p:bodyStyle>${STIL}</p:bodyStyle><p:otherStyle>${STIL}</p:otherStyle></p:txStyles></p:sldMaster>`);
+  zip.file('ppt/slideMasters/slideMaster1.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:sldMaster ${NS}><p:cSld><p:bg><p:bgPr><a:solidFill><a:srgbClr val="${zeminHex}"/></a:solidFill><a:effectLst/></p:bgPr></p:bg>${BOS_AGAC}</p:cSld><p:clrMap bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/><p:sldLayoutIdLst><p:sldLayoutId id="2147483649" r:id="rId1"/></p:sldLayoutIdLst><p:txStyles><p:titleStyle>${STIL}</p:titleStyle><p:bodyStyle>${STIL}</p:bodyStyle><p:otherStyle>${STIL}</p:otherStyle></p:txStyles></p:sldMaster>`);
   zip.file('ppt/slideMasters/_rels/slideMaster1.xml.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="${REL}/slideLayout" Target="../slideLayouts/slideLayout1.xml"/><Relationship Id="rId2" Type="${REL}/theme" Target="../theme/theme1.xml"/></Relationships>`);
   zip.file('ppt/slideLayouts/slideLayout1.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:sldLayout ${NS} type="blank" preserve="1"><p:cSld name="Boş">${BOS_AGAC}</p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sldLayout>`);
   zip.file('ppt/slideLayouts/_rels/slideLayout1.xml.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="${REL}/slideMaster" Target="../slideMasters/slideMaster1.xml"/></Relationships>`);

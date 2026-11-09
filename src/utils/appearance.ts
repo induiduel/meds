@@ -120,7 +120,7 @@ export interface Appearance {
   okuma?: OkumaAyar;
 }
 
-export interface OkumaAyar { kalinlik: 400 | 500 | 600; hizala: 'sol' | 'iki'; satir: number; harf: number; vurgu?: string }
+export interface OkumaAyar { kalinlik: 300 | 400 | 500 | 600 | 700; hizala: 'sol' | 'iki'; satir: number; harf: number; vurgu?: string }
 export const OKUMA_VARSAYILAN: OkumaAyar = { kalinlik: 400, hizala: 'sol', satir: 1.65, harf: 0 };
 /** Vurgu (işaretleyici) rengi seçenekleri: [kimlik, ad, açık zemin rengi, koyu tema rengi] — yazı rengi --color-hl-ink */
 export const VURGU_RENKLERI: [string, string, string, string][] = [
@@ -135,7 +135,7 @@ export function okumaNormal(o: unknown): OkumaAyar | undefined {
   const x = o as Partial<OkumaAyar>;
   const sayi = (v: unknown, a: number, b: number, d: number) => (typeof v === 'number' && isFinite(v) ? Math.min(b, Math.max(a, v)) : d);
   return {
-    kalinlik: x.kalinlik === 500 || x.kalinlik === 600 ? x.kalinlik : 400,
+    kalinlik: x.kalinlik === 300 || x.kalinlik === 500 || x.kalinlik === 600 || x.kalinlik === 700 ? x.kalinlik : 400,
     hizala: x.hizala === 'iki' ? 'iki' : 'sol',
     satir: sayi(x.satir, 1.3, 2.2, OKUMA_VARSAYILAN.satir),
     harf: sayi(x.harf, 0, 0.12, 0),
@@ -164,11 +164,38 @@ export const FONT_LIST: FontDef[] = [
   { id: 'lexend', name: 'Lexend', hint: 'Okuma güçlüğü', kind: 'ui', family: 'Lexend, system-ui, sans-serif', g: 'Lexend:wght@400;500;600;700' },
   { id: 'atkinson', name: 'Atkinson Hyperlegible', hint: 'Az görme · ayırt edici', kind: 'ui', family: "'Atkinson Hyperlegible', system-ui, sans-serif", g: 'Atkinson+Hyperlegible:wght@400;700' },
   { id: 'nunito', name: 'Nunito', hint: 'Yuvarlak, sıcak', kind: 'ui', family: 'Nunito, system-ui, sans-serif', g: 'Nunito:wght@400;500;600;700' },
+  { id: 'roboto', name: 'Roboto', hint: 'Android · okunaklı', kind: 'ui', family: 'Roboto, system-ui, sans-serif', g: 'Roboto:wght@400;500;700' },
+  { id: 'opensans', name: 'Open Sans', hint: 'Geniş, dost', kind: 'ui', family: "'Open Sans', system-ui, sans-serif", g: 'Open+Sans:wght@400;500;600;700' },
+  { id: 'lato', name: 'Lato', hint: 'Yumuşak, sıcak', kind: 'ui', family: 'Lato, system-ui, sans-serif', g: 'Lato:wght@400;700' },
+  { id: 'montserrat', name: 'Montserrat', hint: 'Geometrik başlıklar', kind: 'ui', family: 'Montserrat, system-ui, sans-serif', g: 'Montserrat:wght@400;500;600;700' },
+  { id: 'poppins', name: 'Poppins', hint: 'Yuvarlak, modern', kind: 'ui', family: 'Poppins, system-ui, sans-serif', g: 'Poppins:wght@400;500;600;700' },
+  { id: 'firasans', name: 'Fira Sans', hint: 'Hümanist, teknik', kind: 'ui', family: "'Fira Sans', system-ui, sans-serif", g: 'Fira+Sans:wght@400;500;600;700' },
+  { id: 'notosans', name: 'Noto Sans', hint: 'Türkçe tam', kind: 'ui', family: "'Noto Sans', system-ui, sans-serif", g: 'Noto+Sans:wght@400;500;600;700' },
+  { id: 'sourcesans', name: 'Source Sans 3', hint: 'Sade, dar', kind: 'ui', family: "'Source Sans 3', system-ui, sans-serif", g: 'Source+Sans+3:wght@400;500;600;700' },
+  { id: 'dmsans', name: 'DM Sans', hint: 'Ferah, düşük kontrast', kind: 'ui', family: "'DM Sans', system-ui, sans-serif", g: 'DM+Sans:wght@400;500;600;700' },
+  { id: 'manrope', name: 'Manrope', hint: 'Modern, net', kind: 'ui', family: 'Manrope, system-ui, sans-serif', g: 'Manrope:wght@400;500;600;700' },
+  { id: 'figtree', name: 'Figtree', hint: 'Dost, yuvarlak', kind: 'ui', family: 'Figtree, system-ui, sans-serif', g: 'Figtree:wght@400;500;600;700' },
+  { id: 'outfit', name: 'Outfit', hint: 'Geometrik, modern', kind: 'ui', family: 'Outfit, system-ui, sans-serif', g: 'Outfit:wght@400;500;600;700' },
+  { id: 'ubuntu', name: 'Ubuntu', hint: 'Yuvarlak, teknik', kind: 'ui', family: 'Ubuntu, system-ui, sans-serif', g: 'Ubuntu:wght@400;500;700' },
+  { id: 'raleway', name: 'Raleway', hint: 'Zarif, ince', kind: 'ui', family: 'Raleway, system-ui, sans-serif', g: 'Raleway:wght@400;500;600;700' },
   { id: 'newsreader', name: 'Newsreader', hint: 'Okuma · varsayılan', kind: 'read', family: "'Newsreader', 'Literata', Georgia, serif", g: 'Newsreader:opsz,wght@6..72,400;6..72,600' },
   { id: 'sourceserif', name: 'Source Serif 4', hint: 'Okuma · uzun metin', kind: 'read', family: "'Source Serif 4', Georgia, serif", g: 'Source+Serif+4:opsz,wght@8..60,400;8..60,600' },
   { id: 'literata', name: 'Literata', hint: 'Okuma · e-kitap', kind: 'read', family: 'Literata, Georgia, serif' },
   { id: 'merriweather', name: 'Merriweather', hint: 'Okuma · küçük ekran', kind: 'read', family: 'Merriweather, Georgia, serif', g: 'Merriweather:wght@400;700' },
   { id: 'lora', name: 'Lora', hint: 'Notlar', kind: 'read', family: 'Lora, Georgia, serif', g: 'Lora:wght@400;600' },
+  { id: 'ebgaramond', name: 'EB Garamond', hint: 'Klasik kitap', kind: 'read', family: "'EB Garamond', Garamond, Georgia, serif", g: 'EB+Garamond:wght@400;500;600;700' },
+  { id: 'crimson', name: 'Crimson Pro', hint: 'Akademik', kind: 'read', family: "'Crimson Pro', Georgia, serif", g: 'Crimson+Pro:wght@400;500;600;700' },
+  { id: 'spectral', name: 'Spectral', hint: 'Ekran serifi', kind: 'read', family: 'Spectral, Georgia, serif', g: 'Spectral:wght@400;500;600;700' },
+  { id: 'librebask', name: 'Libre Baskerville', hint: 'Geleneksel', kind: 'read', family: "'Libre Baskerville', Georgia, serif", g: 'Libre+Baskerville:wght@400;700' },
+  { id: 'ptserif', name: 'PT Serif', hint: 'Dar, çok metin', kind: 'read', family: "'PT Serif', Georgia, serif", g: 'PT+Serif:wght@400;700' },
+  { id: 'notoserif', name: 'Noto Serif', hint: 'Türkçe tam', kind: 'read', family: "'Noto Serif', Georgia, serif", g: 'Noto+Serif:wght@400;500;600;700' },
+  { id: 'plexserif', name: 'IBM Plex Serif', hint: 'Teknik serif', kind: 'read', family: "'IBM Plex Serif', Georgia, serif", g: 'IBM+Plex+Serif:wght@400;500;600;700' },
+  { id: 'vollkorn', name: 'Vollkorn', hint: 'Kalın, koyu', kind: 'read', family: 'Vollkorn, Georgia, serif', g: 'Vollkorn:wght@400;500;600;700' },
+  { id: 'alegreya', name: 'Alegreya', hint: 'Edebî, canlı', kind: 'read', family: 'Alegreya, Georgia, serif', g: 'Alegreya:wght@400;500;600;700' },
+  { id: 'gelasio', name: 'Gelasio', hint: 'Georgia benzeri', kind: 'read', family: 'Gelasio, Georgia, serif', g: 'Gelasio:wght@400;500;600;700' },
+  { id: 'readsans', name: 'Atkinson (okuma)', hint: 'Düz · az görme', kind: 'read', family: "'Atkinson Hyperlegible', system-ui, sans-serif", g: 'Atkinson+Hyperlegible:wght@400;700' },
+  { id: 'readlexend', name: 'Lexend (okuma)', hint: 'Düz · okuma güçlüğü', kind: 'read', family: 'Lexend, system-ui, sans-serif', g: 'Lexend:wght@400;500;600;700' },
+  { id: 'readinter', name: 'Inter (okuma)', hint: 'Düz · nötr', kind: 'read', family: 'Inter, system-ui, sans-serif', g: 'Inter:wght@400;500;600;700' },
   { id: 'plexmono', name: 'IBM Plex Mono', hint: 'Doz, değer, kod', kind: 'read', family: "'IBM Plex Mono', ui-monospace, monospace", g: 'IBM+Plex+Mono:wght@400;600' },
 ];
 const findFont = (id: string | undefined, kind: 'ui' | 'read') => FONT_LIST.find((f) => f.id === id && f.kind === kind);
