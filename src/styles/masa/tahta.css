@@ -1,0 +1,79 @@
+/* Tahta oyunları (Go, Çizgi Yarışı, XOX) — `tm-` önekli; renkler .mk kökünden. Tasarım planı: docs/TAHTA_OYUNLARI.md */
+
+.tm-kok { position: relative; height: 100%; display: flex; flex-direction: column; gap: 8px; padding: 8px max(12px, env(safe-area-inset-left)) max(10px, env(safe-area-inset-bottom)); color: var(--mk-fildisi); overflow: hidden; }
+.tm-not { margin: 0; text-align: center; font-size: .86rem; opacity: .9; }
+.tm-not.is-uyari { color: #ffd88a; font-weight: 600; }
+
+/* oyuncu şeridi */
+.tm-serit { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 6px 12px; border-radius: 14px; background: rgba(0, 0, 0, .28); border: 1px solid rgba(255, 255, 255, .08); transition: box-shadow .2s ease, background .2s ease; }
+.tm-serit.is-sira { background: rgba(0, 0, 0, .4); box-shadow: 0 0 0 2px var(--mk-vurgu); }
+.tm-serit-ad { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+.tm-serit-ad b { font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tm-serit-isaret { display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; opacity: .85; white-space: nowrap; }
+.tm-serit-sag { margin-left: auto; display: inline-flex; align-items: center; gap: 10px; flex: none; }
+.tm-sira-hap { padding: 3px 10px; border-radius: 999px; background: var(--mk-vurgu); color: var(--mk-vurgu-yazi); font-size: .74rem; font-weight: 800; white-space: nowrap; }
+.tm-eylem { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.tm-eylem .tm-not { flex: 1; text-align: left; }
+
+/* ---------------- Go ---------------- */
+.tm-go { background: #3a2414; }
+.tm-go-ahsap { position: absolute; inset: 0; pointer-events: none; background:
+  repeating-linear-gradient(97deg, rgba(255, 255, 255, .025) 0 3px, transparent 3px 11px),
+  radial-gradient(120% 80% at 50% 40%, #5a3820 0%, #3a2414 60%, #24150a 100%); }
+.tm-go-sahne { position: relative; z-index: 1; flex: 1; min-height: 0; container-type: size; display: grid; place-items: center; }
+.tm-go-tahta { width: min(100cqw, 100cqh, 760px); height: auto; aspect-ratio: 1; border-radius: 10px; box-shadow: 0 18px 40px rgba(0, 0, 0, .55), 0 0 0 4px #b98a46, 0 0 0 6px #6b4a22; touch-action: manipulation; user-select: none; }
+.tm-go-koor { fill: #5b3d18; font-weight: 700; font-family: inherit; }
+.tm-go-vurgu { stroke: #fff; stroke-width: .07; stroke-opacity: .85; }
+.tm-go-golge-nokta { fill: #2a1c0c; opacity: .18; }
+.tm-go-alan.is-S { fill: #111; opacity: .75; }
+.tm-go-alan.is-B { fill: #fff; stroke: #333; stroke-width: .03; }
+.tm-go-ikon { display: inline-block; width: 14px; height: 14px; border-radius: 50%; }
+.tm-go-ikon.is-S { background: radial-gradient(circle at 35% 30%, #777, #050505 70%); }
+.tm-go-ikon.is-B { background: radial-gradient(circle at 35% 30%, #fff, #c9c3b6 80%); }
+.tm-go-kase { display: inline-flex; align-items: center; gap: 5px; font-size: .82rem; }
+.tm-go-kase i { width: 30px; height: 18px; border-radius: 0 0 16px 16px; background: linear-gradient(#8a5a34, #4e2f15); box-shadow: inset 0 3px 0 rgba(0, 0, 0, .35); position: relative; }
+.tm-go-kase.is-S i::after, .tm-go-kase.is-B i::after { content: ""; position: absolute; left: 8px; top: -3px; width: 12px; height: 8px; border-radius: 50%; }
+.tm-go-kase.is-S i::after { background: #111; }
+.tm-go-kase.is-B i::after { background: #eee; }
+.tm-go-kase b { font-variant-numeric: tabular-nums; }
+.tm-go-sayim { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 4px 12px; padding: 8px 12px; border-radius: 12px; background: rgba(0, 0, 0, .35); text-align: center; }
+.tm-go-sayim small { flex-basis: 100%; opacity: .85; }
+.tm-saat { padding: 3px 9px; border-radius: 8px; background: rgba(0, 0, 0, .35); font-variant-numeric: tabular-nums; font-weight: 700; font-size: .86rem; }
+.tm-saat.is-aktif { background: var(--mk-fildisi); color: var(--mk-murekkep); }
+.tm-saat.is-az { background: var(--mk-eksi); color: #fff; animation: tm-nabiz 1s ease-in-out infinite; }
+@keyframes tm-nabiz { 50% { opacity: .65; } }
+
+/* ---------------- Çizgi Yarışı ---------------- */
+.tm-cz { background: linear-gradient(#1e3a4c, #142a38); }
+.tm-cz-renk { display: inline-block; width: 18px; height: 6px; border-radius: 3px; }
+.tm-cz-ilerleme { font-variant-numeric: tabular-nums; font-weight: 700; }
+.tm-cz-pist { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; display: flex; justify-content: center; padding: 6px; border-radius: 14px; background: rgba(0, 0, 0, .22); scrollbar-width: thin; }
+.tm-cz-svg { flex: none; border-radius: 8px; box-shadow: 0 8px 22px rgba(0, 0, 0, .4); }
+.tm-cz-kale.is-hedef { fill: #2563eb; opacity: .16; }
+.tm-cz-kale.is-ben { fill: #e4572e; opacity: .16; }
+.tm-cz-orta { stroke: #1d2b2a; stroke-width: 2.5; stroke-dasharray: 8 5; opacity: .5; }
+.tm-cz-satir { font-size: 9px; fill: #52615f; font-family: inherit; }
+.tm-cz-zarlar { min-height: 58px; display: flex; justify-content: center; align-items: center; }
+.tm-cz-kapisma { display: flex; align-items: center; gap: 12px; font-size: .9rem; }
+.tm-cz-kapisma.is-soluk { opacity: .7; }
+.tm-cz-fark { font-size: 1.3rem; font-weight: 900; }
+.tm-cz-fark.is-iyi { color: #7ee2a8; }
+.tm-cz-fark.is-kotu { color: #ff9b8a; }
+.tm-zar { width: 48px; height: 48px; flex: none; }
+.tm-zar rect { fill: #fffaf0; stroke: #c9bfa6; stroke-width: 3; }
+.tm-zar circle { fill: #1d2b2a; }
+.tm-zar.is-kazan rect { fill: #fde68a; stroke: var(--mk-vurgu-koyu); stroke-width: 6; }
+.tm-zar.is-kayip { opacity: .55; }
+
+/* ---------------- XOX ---------------- */
+.tm-xox { background: radial-gradient(120% 90% at 50% 30%, #2f5d50, #173a33); }
+.tm-xox-sahne { position: relative; z-index: 1; flex: 1; min-height: 0; container-type: size; display: grid; place-items: center; }
+.tm-xox-tahta { width: min(100cqw, 100cqh, 560px); height: auto; aspect-ratio: 1; touch-action: manipulation; user-select: none; }
+.tm-xox-kagit { fill: #fffaf0; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .35)); }
+.tm-xox-ikon { font-size: 1rem; font-weight: 900; }
+
+@media (max-width: 560px) {
+  .tm-kok { gap: 6px; padding-left: 8px; padding-right: 8px; }
+  .tm-serit { min-height: 46px; padding: 4px 10px; }
+  .tm-eylem .mk-dugme { padding: 0 12px; }
+}

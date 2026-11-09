@@ -16,8 +16,9 @@ import { KartGorsel } from './uno/Kart';
 
 /** İşaretli puan: +12 · −7 · 0 (gerçek eksi işareti) */
 export const puanYaz = (n: number) => (n > 0 ? `+${n}` : n < 0 ? `−${Math.abs(n)}` : '0');
-export const tasMi = (tur: OyunTur) => tur !== 'uno';
-export const birim = (tur: OyunTur) => (tur === 'uno' ? 'kart' : 'taş');
+/** Okey taşıyla oynanan oyunlar (taş rengi/teması seçilir); kart ve tahta oyunları değil */
+export const tasMi = (tur: OyunTur) => !(['uno', 'pisti', 'go', 'cizgi', 'xox'] as string[]).includes(tur);
+export const birim = (tur: OyunTur) => (tur === 'uno' ? 'kart' : tur === 'cizgi' ? 'kare' : tur === 'xox' ? 'işaret' : 'taş');
 /** Bot adındaki "(bot)" eki rozetle gösterilir, metinden düşülür */
 export const sadeAd = (ad: string) => ad.replace(/\s*\(bot\)$/i, '');
 
@@ -212,6 +213,31 @@ export function OyunResmi({ tur }: { tur: OyunTur }) {
       {tur === 'domino' && [tasCiz(30, 50, -90, '4', '#d62839', 0), tasCiz(58, 42, 0, '4', '#1f6feb', 1), tasCiz(86, 42, 0, '5', '#1f6feb', 2), tasCiz(110, 50, 90, '6', '#1f6feb', 3)]}
       {tur === 'pisti' && [kartCiz(48, 44, -10, '#1d1d1f', 'J', 0), kartCiz(84, 44, 10, '#d62839', 'J', 1)]}
       {tur === 'uno' && [kartCiz(38, 44, -16, '#d8323c', '7', 0), kartCiz(66, 40, 0, '#f2b417', '2', 1), kartCiz(94, 44, 16, '#2a6fdb', '9', 2)]}
+      {tur === 'go' && (
+        <g>
+          <rect x="26" y="8" width="80" height="68" rx="6" fill="#ddb065" stroke="#6b4a22" strokeWidth="2.5" />
+          {[0, 1, 2, 3, 4].map((k) => <g key={k} stroke="#2a1c0c" strokeWidth="1"><line x1="36" x2="96" y1={16 + k * 13} y2={16 + k * 13} /><line y1="16" y2="68" x1={36 + k * 15} x2={36 + k * 15} /></g>)}
+          {[[51, 29, '#111'], [66, 42, '#f4f1ea'], [66, 29, '#111'], [81, 42, '#f4f1ea'], [51, 42, '#111']].map(([x, y, r], i) => <circle key={i} cx={x as number} cy={y as number} r="6" fill={r as string} stroke="#000" strokeOpacity=".3" />)}
+        </g>
+      )}
+      {tur === 'cizgi' && (
+        <g>
+          <rect x="40" y="4" width="52" height="76" rx="5" fill="#fdfaf2" stroke="#7aa3c9" strokeWidth="2" />
+          <path d="M57 74V52H66V36" stroke="#e4572e" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M75 10V30" stroke="#2563eb" strokeWidth="5" strokeLinecap="round" fill="none" />
+          <line x1="40" x2="92" y1="42" y2="42" stroke="#1d2b2a" strokeDasharray="4 3" opacity=".5" />
+          <rect x="96" y="48" width="26" height="26" rx="6" fill="#fffaf0" stroke="#c9bfa6" strokeWidth="2" /><circle cx="103" cy="55" r="2.6" /><circle cx="115" cy="67" r="2.6" /><circle cx="109" cy="61" r="2.6" />
+        </g>
+      )}
+      {tur === 'xox' && (
+        <g strokeLinecap="round" fill="none">
+          <rect x="34" y="6" width="72" height="72" rx="8" fill="#fffaf0" stroke="none" />
+          <g stroke="#3b3b3b" strokeOpacity=".55" strokeWidth="2.5"><line x1="58" x2="58" y1="12" y2="72" /><line x1="82" x2="82" y1="12" y2="72" /><line x1="40" x2="100" y1="30" y2="30" /><line x1="40" x2="100" y1="54" y2="54" /></g>
+          <g stroke="#c2410c" strokeWidth="4"><path d="M41 13l11 11M52 13l-11 11M65 37l11 11M76 37l-11 11M89 61l11 11M100 61l-11 11" /></g>
+          <circle cx="94" cy="18" r="6.5" stroke="#1d4ed8" strokeWidth="3.5" /><circle cx="46" cy="66" r="6.5" stroke="#1d4ed8" strokeWidth="3.5" />
+          <line x1="40" y1="12" x2="100" y2="72" stroke="#111" strokeOpacity=".7" strokeWidth="3" />
+        </g>
+      )}
     </svg>
   );
 }

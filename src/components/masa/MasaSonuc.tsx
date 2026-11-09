@@ -55,12 +55,14 @@ export function ElSonu({ oda, sonuc, macBitti, macaGec }: { oda: OdaGorunum; son
     else if (hal === 'kaybetti') { sesCal('kaybet'); titret(60); }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const baslik = hal === 'kazandi'
+  const tahta = oda.tur === 'go' || oda.tur === 'cizgi' || oda.tur === 'xox';
+  const baslik = tahta && hal !== 'notr' ? (hal === 'kazandi' ? 'Eli kazandın!' : `${ad(bitiren)} kazandı`) : hal === 'kazandi'
     ? (takim && bitiren !== oda.ben ? 'Takımın kazandı!' : uno ? 'Kartlarını bitirdin!' : 'Elini bitirdin!')
     : hal === 'kaybetti'
       ? (takim ? `${sonuc.kazananTakim || ''} takımı kazandı` : `${ad(bitiren)} ${uno ? 'kartlarını' : 'elini'} bitirdi`)
       : sonuc.neden === 'berabere' ? 'Berabere' : 'Deste bitti';
-  const altMetin = hal === 'kazandi'
+  const altMetin = tahta ? (hal === 'kaybetti' ? `${benim?.aciklama || ''}. ${TESELLI[oda.elNo % TESELLI.length]}` : hal === 'kazandi' ? (benim?.aciklama || '') : 'Tahta doldu, dizi çıkmadı: bu elin kazananı yok.')
+    : hal === 'kazandi'
     ? (takim && bitiren !== oda.ben ? `${ad(bitiren)} elini bitirdi; kalan taşların sayılmadı.` : uno ? 'Rakiplerin elindeki kartların puanı senin.' : 'Rakiplerin kalan taşları eksi yazıldı.')
     : hal === 'kaybetti'
       ? `${benim!.aciklama || `${benim!.kalan} ${birim(oda.tur)} kaldı`}. ${TESELLI[oda.elNo % TESELLI.length]}`
@@ -86,7 +88,7 @@ export function ElSonu({ oda, sonuc, macBitti, macaGec }: { oda: OdaGorunum; son
           </div>
           <h2>{baslik}</h2>
           {hal === 'kazandi' && <p className="mk-sonuc-puan">{puanYaz(sayac)} <small>puan</small></p>}
-          {hal === 'notr' && benim && <p className="mk-sonuc-puan is-notr">{puanYaz(sayac)} <small>puan · {benim.kalan} {birim(oda.tur)} kaldı</small></p>}
+          {hal === 'notr' && benim && !tahta && <p className="mk-sonuc-puan is-notr">{puanYaz(sayac)} <small>puan · {benim.kalan} {birim(oda.tur)} kaldı</small></p>}
           <p className="mk-sonuc-alt">{altMetin}</p>
         </div>
 

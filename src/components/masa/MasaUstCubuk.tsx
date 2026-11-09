@@ -5,7 +5,7 @@ import { BookOpen, Bot, Box, DoorOpen, Flag, Home, Menu, Pause, Play, Smile, Squ
 import { masa } from '../../services/masa/istemci';
 import { OYUN_ADI, TEPKILER, type OdaGorunum, type OkeyGorunum } from '../../services/masa/tipler';
 import { oyuncuAdi, sesCal, tercihYaz, titret, useTercih } from './ortak';
-import { Avatar, Onay, SkorTablo, Yaprak, cezaBilgi, puanYaz, sadeAd } from './kabukOrtak';
+import { Avatar, Onay, SkorTablo, Yaprak, cezaBilgi, puanYaz, sadeAd, tasMi } from './kabukOrtak';
 
 export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merkezeDon }: {
   oda: OdaGorunum; baglanti: string; gecikme: number; kurallarAc: () => void; merkezeDon: () => void;
@@ -19,7 +19,7 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
   const sonTepki = useRef(0);
 
   const kurucu = oda.kurucu === oda.ben;
-  const okey = oda.tur !== 'uno';
+  const okey = tasMi(oda.tur);
   const oyunda = oda.asama === 'oyun';
   const sira = oda.oyun?.sira;
   const bende = oyunda && sira === oda.ben;

@@ -1,15 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 684,
-  "baslik": "Taş Masası: Taş Domino açılış hatası düzeltildi",
+  "onem": 685,
+  "baslik": "Taş Masası: Go, Çizgi Yarışı ve XOX geldi",
   "maddeler": [
-    "Taş Domino: oyun başlayınca masa yerine hata ekranı çıkıyordu; düzeltildi."
+    "Tahta oyunları: Oyunlar › Taş Masası’nda yeni “Tahta oyunları” bölümü; Go, Çizgi Yarışı ve XOX’u bota karşı ya da arkadaşınla oynayabilirsin.",
+    "Go: ahşap tahta (9×9, 13×13, 19×19), dokun → onayla ile taş koyma, esir kâsesi, ko ve süperko, handikap (2–9 taş), komi, süreli oyun (ana süre + byo-yomi), sayımda ölü taş işaretleme.",
+    "Çizgi Yarışı: 32/64/96/128 karelik yol; zar at, çizgini kare kare ilerlet, yüz yüze gelince iki zarla kapışma; son 4 tur ve gerileme izi tahtada görünür.",
+    "XOX: 3×3’ten 6×6’ya; büyük tahtalarda dörtlü/beşli dizi, elle çizilen X/O ve kazanan dizi çizgisi."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Go, Çizgi Yarışı ve XOX tahta oyunları (kurallar sekmesiyle)"
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Taş Domino masası açılırken çöküyordu"
-  ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": []
 }

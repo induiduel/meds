@@ -4,7 +4,8 @@ import { AlertTriangle, ArrowLeftRight, BookOpen, Bot, Check, Copy, Crown, LogOu
 import { safeJsonFetch } from '../../services/api';
 import { masa } from '../../services/masa/istemci';
 import { EL_SECENEK, OKEY_TEMALAR, UNO_MODLAR, OYUNCU_SINIR, OYUN_ADI, UNO_TEMALAR, VARSAYILAN_RENKLER, type OdaGorunum, type OyuncuBilgi, type Takim } from '../../services/masa/tipler';
-import { Avatar, KartOrnek, Onay, TEMA_BILGI, TasOrnek, Yaprak, bildir, sadeAd } from './kabukOrtak';
+import { Avatar, KartOrnek, Onay, TEMA_BILGI, TasOrnek, Yaprak, bildir, sadeAd, tasMi } from './kabukOrtak';
+import { TahtaAyar, tahtaMi } from './tahta/ortak';
 import type { KuralSekme } from './MasaKurallar';
 
 const PALETLER: { ad: string; renkler: string[] }[] = [
@@ -35,6 +36,9 @@ const OZET: Record<string, string[]> = {
   pisti: ['2 ya da 4 oyuncu, 52 kart; dört kişide karşılıklı oturanlar ortak.', 'Yerdeki üst kartla aynı değerde kart ya da Vale atarsan yerdeki bütün kartları alırsın.', 'Yerde tek kart varken aynısıyla alırsan Pişti: 10 puan (Vale’ye Vale 20).', 'As, Vale 1; ♣2 2; ♦10 3; en çok kart +3. En çok puanı toplayan eli alır.'],
   domino: ['Zincirin bir ucuna rengi ya da sayısı tutan taşı koy.', 'Aynı renkten ardışık koyarsan ya da iki uç aynı sayı olursa bir taş daha koyarsın.', 'Koyamıyorsan uyan taş gelene dek çek; geleni hemen koyabilirsin.', 'Eli ilk bitiren rakiplerin el toplamını kazanır.'],
   uno: ['7 kartla başlarsın. Rengi, sayıyı ya da simgeyi tutturan kartı atarsın; joker her zaman, +4 yalnız elinde o renkten kart yokken oynanır.', 'Oynayamıyorsan 1 kart çekersin; çektiğin kart uyuyorsa hemen oynayabilirsin.', '+4 sana gelince kabul edersin ya da itiraz edersin. Tek kartın kalınca UNO de; yakalanırsan 2 kart çekersin.', 'Kartlarını bitiren, rakiplerin elindeki kartların puanını alır. Modlar: Klasik, Yığma, 7-0, Çek-çek.'],
+  go: ['Siyah başlar; sırayla boş kesişime taş koyarsınız. Özgürlüğü kalmayan grup tahtadan alınır.', 'İntihar yasak; ko ve süperko: tahtayı eski bir dizilişe döndüren hamle yapılamaz.', 'Art arda iki pas → sayım: ölü grupları işaretleyip ikiniz de onaylarsınız.', 'Puan: diri taşlar + çevrili boş noktalar; beyaza komi eklenir. Çok puanlı kazanır.'],
+  cizgi: ['Zar atar, çizgini attığın kadar kare kare ilerletirsin; amaç rakibin kale satırına ilk ulaşmak.', 'Önün rakip çizgisiyle kapalıysa yan sütuna geçebilirsin; yan geçiş hakkın sınırlıdır.', 'Yüz yüze gelince (biriniz rakip sahadaysa) iki zar atılır: büyük atan farkı kadar ilerler, küçük atan geriler.', 'Kalesinden başka hücresi kalmayan kapışmayı yine kaybederse kalesi alınır.'],
+  xox: ['X başlar; sırayla boş kareye işaret koyarsınız. Her elde başlayan değişir.', '3×3 ve 4×4’te tahta boyu, 5×5’te 4, 6×6’da 5 işaret yan yana dizilince kazanırsın.', 'Yatay, dikey ve çapraz diziler sayılır.', 'Tahta dolar da dizi çıkmazsa el berabere biter.'],
 };
 
 interface Arkadas { kimlik: string; ad: string; foto?: string }
@@ -42,7 +46,8 @@ interface Arkadas { kimlik: string; ad: string; foto?: string }
 export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunum; baglanti: string; kurallarAc: (s?: KuralSekme) => void }) {
   const kurucu = oda.kurucu === oda.ben;
   const [enAz, enCok] = OYUNCU_SINIR[oda.tur];
-  const okey = oda.tur !== 'uno';
+  const okey = tasMi(oda.tur);
+  const tahta = tahtaMi(oda.tur);
   const [kopyalandi, setKopyalandi] = useState(false);
   const [davet, setDavet] = useState(false);
   const [cikis, setCikis] = useState(false);
@@ -178,16 +183,18 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
             {oda.ayar.elSayisi === 0 && <small className="mk-alan-not">Maç, kurucu menüden “Oyunu bitir” diyene dek sürer.</small>}
           </div>
 
-          <div className="mk-alan">
+          {tahta && <TahtaAyar tur={oda.tur} ayar={oda.ayar} degistir={(a) => masa.ayar(a)} kilitli={!kurucu} />}
+
+          {(!tahta || oda.tur === 'go') && <div className="mk-alan">
             <span className="mk-alan-ad"><Sparkles size={16} /> Oyun modu</span>
             <div className="mk-secenek" role="radiogroup" aria-label="Oyun modu">
               <button type="button" role="radio" aria-checked={oda.ayar.asistan} disabled={!kurucu} className={oda.ayar.asistan ? 'is-on' : ''} onClick={() => masa.ayar({ asistan: true })}>Normal</button>
               <button type="button" role="radio" aria-checked={!oda.ayar.asistan} disabled={!kurucu} className={!oda.ayar.asistan ? 'is-on' : ''} onClick={() => masa.ayar({ asistan: false })}>Zorlu</button>
             </div>
             <small className="mk-alan-not">{oda.ayar.asistan
-              ? 'İpucu, otomatik işleme, en iyi hamle, ıstakayı ve masayı otomatik dizme açık.'
-              : 'Yardımcı yok: ipucu, otomatik işleme ve otomatik dizme kapalı. Masadaki perler yalnız el bitince kendiliğinden dizilir.'}</small>
-          </div>
+              ? (tahta ? 'Tahtada konulabilecek noktalar hafifçe gösterilir (9×9).' : 'İpucu, otomatik işleme, en iyi hamle, ıstakayı ve masayı otomatik dizme açık.')
+              : tahta ? 'Yardımcı yok: yasal nokta gösterilmez.' : 'Yardımcı yok: ipucu, otomatik işleme ve otomatik dizme kapalı. Masadaki perler yalnız el bitince kendiliğinden dizilir.'}</small>
+          </div>}
 
           {oda.tur === 'uno' && (
             <div className="mk-alan">
@@ -219,7 +226,7 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
             </div>
           )}
 
-          <div className="mk-alan">
+          {!tahta && <div className="mk-alan">
             <span className="mk-alan-ad">Tema</span>
             <div className="mk-temalar" role="radiogroup" aria-label="Tema">
               {temalar.map((t) => (
@@ -236,7 +243,7 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
                 </button>
               ))}
             </div>
-          </div>
+          </div>}
 
           {okey && (
             <div className="mk-alan">

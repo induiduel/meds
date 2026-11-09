@@ -18,7 +18,7 @@ import { erisimJetonuDogrula } from '../kimlikDogrulama';
 import { bayrakAcik } from '../yonetim16/siteAyar';
 import { MOTORLAR } from './motorlar';
 import {
-  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER, UNO_MODLAR,
+  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER, UNO_MODLAR, GO_SURELER,
   type ElOzet, type ElSonuc, type Istatistik, type IstemciMesaj, type OdaAsama, type OdaAyar, type OdaGorunum, type OdaOzet,
   type Olay, type OyunTur, type Rng, type SunucuMesaj, type Takim,
 } from './tipler';
@@ -34,6 +34,8 @@ interface Oda {
   skor: Record<string, number>; eller: ElOzet[]; surum: number; olusturma: number; guncel: number;
   /** Geri al: sırası olan oyuncunun bu turdaki per açma / işleme hamlelerinden önceki durumlar (son eleman en yeni) */
   geri?: { kim: string; durumlar: unknown[] };
+  /** Durdurulduğu an (süreli oyunda saat durakta işlemesin) */
+  durduZ?: number;
 }
 interface Bag { ws: any; uid: string; id: string; ad: string; kod: string | null; son: number; sayac: number; pencere: number }
 interface Deps {
@@ -47,7 +49,7 @@ interface Deps {
   notifyStudent: (target: { uid?: string | null }, n: { type: string; title: string; message: string; deepLinkUrl?: string; dedupeKey?: string }) => unknown;
 }
 
-const TURLER: OyunTur[] = ['yedili', 'takim', 'yuzbir', 'uno', 'remi', 'kastet', 'duz', 'pisti', 'domino'];
+const TURLER: OyunTur[] = ['yedili', 'takim', 'yuzbir', 'uno', 'go', 'cizgi', 'xox', 'remi', 'kastet', 'duz', 'pisti', 'domino'];
 const BOT_ADLARI = ['Defne', 'Aras', 'Mira', 'Kaan', 'Ece', 'Poyraz', 'Lina'];
 const KOD = /^[A-Z0-9]{5}$/;
 const HEX = /^#[0-9a-f]{6}$/i;
@@ -63,6 +65,7 @@ class MasaSunucu {
   private baglar = new Map<string, Map<string, Bag>>();
   private tum = new Set<Bag>();
   private botZaman = new Map<string, any>();
+  private sureZaman = new Map<string, any>();
   private kayitZaman = new Map<string, any>();
   private d!: Deps;
   private sema = false;
@@ -271,6 +274,9 @@ class MasaSunucu {
         const yeni = m.t === 'durdur';
         if (oda.durdu === yeni) return;
         oda.durdu = yeni;
+        const motorD = MOTORLAR[oda.tur];
+        if (yeni) oda.durduZ = Date.now();
+        else if (oda.durduZ && motorD.saatKaydir && oda.durum != null) { oda.durum = motorD.saatKaydir(oda.durum, Date.now() - oda.durduZ); oda.durduZ = undefined; }
         return this.yayin(oda, [{ t: yeni ? 'durdu' : 'devam', o: b.id }]);
       }
       case 'bitir': {
@@ -313,6 +319,13 @@ class MasaSunucu {
       unoMod: kilit ? (kilit.unoMod ?? 'klasik') : UNO_MODLAR.some((m) => m.id === a.unoMod) ? a.unoMod : 'klasik',
       tema: temalar.includes(String(a.tema)) ? String(a.tema) : 'klasik',
       renkler,
+      // Tahta oyunları (go/cizgi/xox)
+      goBoyut: kilit ? kilit.goBoyut : ([9, 13, 19] as const).find((n) => n === Number(a.goBoyut)) ?? 9,
+      goHandikap: kilit ? kilit.goHandikap : Number.isInteger(Number(a.goHandikap)) ? Math.max(0, Math.min(9, Number(a.goHandikap))) : 0,
+      goSure: kilit ? kilit.goSure : GO_SURELER.find((x) => x.id === a.goSure)?.id ?? 'yok',
+      komi: kilit ? kilit.komi : Number.isFinite(Number(a.komi)) && Number(a.komi) >= 0 && Number(a.komi) <= 15 ? Math.round(Number(a.komi) * 2) / 2 : 6.5,
+      cizgiKare: kilit ? kilit.cizgiKare : ([32, 64, 96, 128] as const).find((n) => n === Number(a.cizgiKare)) ?? 64,
+      xoxBoyut: kilit ? kilit.xoxBoyut : ([3, 4, 5, 6] as const).find((n) => n === Number(a.xoxBoyut)) ?? 3,
     };
   }
 
@@ -395,6 +408,7 @@ class MasaSunucu {
     for (const b of this.baglar.get(kod)?.values() || []) { b.kod = null; this.yolla(b, { t: 'cikti' }); }
     this.baglar.delete(kod);
     clearTimeout(this.botZaman.get(kod)); this.botZaman.delete(kod);
+    clearTimeout(this.sureZaman.get(kod)); this.sureZaman.delete(kod);
     void this.kaydet(kod);
   }
 
@@ -413,6 +427,8 @@ class MasaSunucu {
 
   private hamle(oda: Oda, oyuncu: string, h: unknown, b?: Bag) {
     const motor = MOTORLAR[oda.tur];
+    // Süreli oyun: saat yalnız sunucu zamanıyla işler (istemcinin yolladığı z yok sayılır)
+    if (motor.sureSonu && h && typeof h === 'object') h = { ...(h as object), z: Date.now() };
     let r: ReturnType<typeof motor.uygula>;
     try { r = motor.uygula(oda.durum, oyuncu, h, rng); }
     catch (e: any) { console.error('[Masa] motor istisnası:', oda.tur, JSON.stringify(h), e?.stack || e); r = { hata: 'Bu hamle işlenemedi.' }; }
@@ -465,6 +481,22 @@ class MasaSunucu {
     }
     if (kalici) this.kaydetPlanla(oda);
     this.botPlanla(oda);
+    this.surePlanla(oda);
+  }
+
+  /** Süreli oyunlarda sıradakinin süresi bitince el kaybettirilir (bot zamanlayıcısı kalıbı; durakta işlemez) */
+  private surePlanla(oda: Oda) {
+    clearTimeout(this.sureZaman.get(oda.kod)); this.sureZaman.delete(oda.kod);
+    const motor = MOTORLAR[oda.tur];
+    if (!motor.sureSonu || oda.asama !== 'oyun' || oda.durdu || oda.durum == null) return;
+    const sonu = motor.sureSonu(oda.durum);
+    if (sonu == null) return;
+    this.sureZaman.set(oda.kod, setTimeout(() => {
+      this.sureZaman.delete(oda.kod);
+      if (this.odalar.get(oda.kod) !== oda || oda.asama !== 'oyun' || oda.durdu) return;
+      const sira = (motor.gorunum(oda.durum, null) as { sira?: string }).sira;
+      if (sira) this.hamle(oda, sira, { t: 'sureBitti' });
+    }, Math.min(2 ** 31 - 1, Math.max(0, sonu - Date.now()) + 60)));
   }
 
   private botPlanla(oda: Oda) {

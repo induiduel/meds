@@ -11,12 +11,18 @@
  *   takim   Yedili'nin takımlı türü (A/B karşılıklı), takım açılışı ortak, "hediye taş" kuralı.
  *   yuzbir  101 Okey: 106 taş, gösterge + okey (joker), 21 taş, 101 ile ya da 5 çiftle açma, taş atma.
  *   uno     Uno: 108 kart.
+ *   go      Go (ahşap tahta): 9/13/19, alan puanı + komi, ko, intihar yasak, iki pas → ölü taş işaretleme. 2 oyuncu.
+ *   cizgi   Çizgi Yarışı: zarla kare kare ilerleyen çizgi rakip sahaya ulaşmaya çalışır (32/64/96/128 kare). 2 oyuncu.
+ *   xox     XOX: 3×3, 4×4, 5×5, 6×6. 2 oyuncu.
+ * Tahta oyunlarının kuralları ve arayüz planı: meds/docs/TAHTA_OYUNLARI.md
  */
 
 import type { PistiGorunum, PistiHamle } from './motor/pisti';
 import type { DominoGorunum, DominoHamle } from './motor/domino';
 
-export type OyunTur = 'yedili' | 'takim' | 'yuzbir' | 'uno' | 'remi' | 'kastet' | 'duz' | 'pisti' | 'domino';
+export type OyunTur = 'yedili' | 'takim' | 'yuzbir' | 'uno' | 'go' | 'cizgi' | 'xox' | 'remi' | 'kastet' | 'duz' | 'pisti' | 'domino';
+/** Arayüzü hazır olmayan türler lobide gösterilmez, sunucu oda kurdurmaz (TURLER). Arayüz bitince sunucu TURLER'e eklenir. */
+export const TAHTA_TURLER = ['go', 'cizgi', 'xox'] as const;
 export type Takim = 'A' | 'B';
 /** [0,1) düzgün rastgele sayı (sunucu kripto kaynaklı verir; sınamada tohumlu) */
 export type Rng = () => number;
@@ -175,8 +181,139 @@ export const UNO_MODLAR: { id: UnoMod; ad: string; aciklama: string }[] = [
   { id: 'cekCek', ad: 'Çek-çek', aciklama: 'Oynayacak kartın yoksa uyan kart gelene dek çekersin; gelen kartı oynayabilirsin.' },
 ];
 
-export type OyunGorunum = OkeyGorunum | UnoGorunum | PistiGorunum | DominoGorunum;
-export type Hamle = OkeyHamle | UnoHamle | PistiHamle | DominoHamle;
+/* ------------------------------------------------------------------ go ------------------------------------------------------------------ */
+
+/** Kesişim dizini: i = y * boyut + x (x sütun, y satır; 0,0 sol üst) */
+export type GoTas = 'S' | 'B'; // siyah, beyaz (siyah başlar)
+export type GoBoyut = 9 | 13 | 19;
+export type GoHamle =
+  | { t: 'koy'; i: number }
+  | { t: 'pas' }
+  | { t: 'teslim' }
+  /** Sayım aşaması: grubun ölü/diri işaretini değiştir (grubun herhangi bir taşı). Her değişiklik iki onayı da sıfırlar. */
+  | { t: 'olu'; i: number }
+  /** Sayım aşaması: işaretlemeyi onayla (iki taraf onaylayınca el biter) */
+  | { t: 'onayla' }
+  /** Sayım aşaması: anlaşmazlık, oyuna dön (pas sayacı sıfırlanır, sıra karşıdadır) */
+  | { t: 'devam' }
+  /** Sıradakinin süresi bitti (sunucu zamanlayıcısı yollar; motor saati doğrular) */
+  | { t: 'sureBitti' };
+
+export interface GoGorunum {
+  tur: 'go';
+  elNo: number;
+  boyut: GoBoyut;
+  /** boyut² uzunlukta: '' boş, 'S' / 'B' */
+  tahta: ('' | GoTas)[];
+  sira: string;
+  /** Oyuncu → renk */
+  renkler: Record<string, GoTas>;
+  /** Esir (yakalanan rakip taşı) sayısı, renge göre */
+  esir: Record<GoTas, number>;
+  komi: number;
+  /** Son hamle (i, pas için -1) — tahtada halka */
+  son: { renk: GoTas; i: number } | null;
+  /** Ko nedeniyle şu an konulamayan nokta */
+  ko: number | null;
+  /** Sıradakinin yasal noktaları (asistan / gölge taş için) */
+  yasal: number[];
+  /** Yıldız noktaları (hoshi) */
+  yildiz: number[];
+  asama: 'oyun' | 'sayim';
+  /** Sayım: ölü işaretli taş dizinleri, onaylayanlar, anlık puan önizlemesi */
+  olu: number[];
+  onay: string[];
+  alan?: { S: number[]; B: number[] };
+  puan?: Record<GoTas, number>;
+  hamleSayisi: number;
+  bitti: boolean;
+  /** Handikap taşı sayısı (0: yok) */
+  handikap: number;
+  /** Süre sınırı (ms): kalan ana süre + byo-yomi hakkı; gecen = sıradakinin bu görünüm gönderilirken harcadığı */
+  saat: { ana: Record<GoTas, number>; periyot: Record<GoTas, number>; byo: number; gecen: number } | null;
+}
+/** Go süre seçenekleri: ana süre (sn) + byo-yomi (periyot × sn) */
+export type GoSure = 'yok' | 'hizli' | 'normal' | 'uzun';
+export const GO_SURELER: { id: GoSure; ad: string; ana: number; byo: number; periyot: number }[] = [
+  { id: 'yok', ad: 'Süresiz', ana: 0, byo: 0, periyot: 0 },
+  { id: 'hizli', ad: '5 dk + 3×30 sn', ana: 300, byo: 30, periyot: 3 },
+  { id: 'normal', ad: '10 dk + 5×30 sn', ana: 600, byo: 30, periyot: 5 },
+  { id: 'uzun', ad: '20 dk + 5×60 sn', ana: 1200, byo: 60, periyot: 5 },
+];
+
+/* ------------------------------------------------------------------ çizgi yarışı ------------------------------------------------------------------ */
+
+/** Hücre: s sütun (0..genislik-1), r satır (0 = 1. oyuncunun kalesi, uzunluk-1 = 2. oyuncunun kalesi) */
+export interface Hucre { s: number; r: number }
+export type CizgiKare = 32 | 64 | 96 | 128;
+export type CizgiHamle =
+  /** Zar at (sunucu atar) */
+  | { t: 'zar' }
+  /** Zar atıldıktan sonra adımları harca. yan: önündeki hücre rakip çizgisiyle doluysa yandaki sütuna geç (1 adım, yan hakkı düşer). */
+  | { t: 'ilerle'; yon: 'duz' | 'sol' | 'sag' }
+  /** Kalan adımları yak (ilerleyemiyorsan ya da beklemek istiyorsan) */
+  | { t: 'bekle' };
+
+export interface CizgiAdim {
+  /** el içi tur numarası */
+  tur: number;
+  o: string;
+  zar: number;
+  /** pozitif ilerleme, negatif gerileme (kapışmada mağlup) */
+  fark: number;
+  /** Bu turda eklenen / silinen hücreler (tasarımda son 3–4 tur vurgusu) */
+  eklenen: Hucre[];
+  silinen: Hucre[];
+  kapisma?: { rakipZar: number; kazanan: string | null };
+}
+
+export interface CizgiGorunum {
+  tur: 'cizgi';
+  elNo: number;
+  kare: CizgiKare;
+  /** Satır sayısı (uzunluk) ve sütun sayısı */
+  uzunluk: number;
+  genislik: number;
+  sira: string;
+  /** Oyuncu → çizgi (baş son eleman); 1. oyuncu r artarak, 2. oyuncu r azalarak ilerler */
+  cizgiler: Record<string, Hucre[]>;
+  /** Oyuncu → kalan yan geçiş hakkı */
+  yanHak: Record<string, number>;
+  /** Sıradakinin atılmış zarı ve kalan adımı (null: zar atılmadı) */
+  zar: number | null;
+  kalan: number;
+  /** Çizgiler baş başa ve iki baş da kendi yarısını geçmiş tarafta: zar düellosu (kazanan ilerler, kaybeden geriler) */
+  kapisma: boolean;
+  /** Son 4 tur (en yeni sonda) */
+  gecmis: CizgiAdim[];
+  /** Sıradakinin şu an yapabileceği ilerle yönleri */
+  yonler: ('duz' | 'sol' | 'sag')[];
+  bitti: boolean;
+}
+
+/* ------------------------------------------------------------------ xox ------------------------------------------------------------------ */
+
+export type XoxBoyut = 3 | 4 | 5 | 6;
+export type XoxHamle = { t: 'koy'; i: number } | { t: 'teslim' };
+export interface XoxGorunum {
+  tur: 'xox';
+  elNo: number;
+  boyut: XoxBoyut;
+  /** Kazanmak için yan yana gereken işaret */
+  hedef: number;
+  tahta: ('' | 'X' | 'O')[];
+  sira: string;
+  isaretler: Record<string, 'X' | 'O'>;
+  son: number | null;
+  /** Kazanan sıra (vurgu çizgisi) */
+  cizgi: number[] | null;
+  bitti: boolean;
+}
+/** Boyut → yan yana hedef (3×3 klasik; büyük tahtalarda berabereliği azaltmak için) */
+export const XOX_HEDEF: Record<XoxBoyut, number> = { 3: 3, 4: 4, 5: 4, 6: 5 };
+
+export type OyunGorunum = OkeyGorunum | UnoGorunum | GoGorunum | CizgiGorunum | XoxGorunum | PistiGorunum | DominoGorunum;
+export type Hamle = OkeyHamle | UnoHamle | GoHamle | CizgiHamle | XoxHamle | PistiHamle | DominoHamle;
 
 /* ------------------------------------------------------------------ olaylar ------------------------------------------------------------------ */
 
@@ -248,6 +385,10 @@ export interface Motor {
   botHamle(durum: unknown, bot: string, rng: Rng): unknown | null;
   /** El bittiyse sonuç */
   sonuc(durum: unknown): ElSonuc | null;
+  /** Süreli oyunlar: sıradakinin süresinin biteceği an (ms). Sunucu bu anda `{ t: 'sureBitti' }` uygular; hamlelere `z` (sunucu saati) basar. */
+  sureSonu?(durum: unknown): number | null;
+  /** Oyun durdurulup sürdürülünce saati ms kadar ileri kaydır (durakta süre işlemez) */
+  saatKaydir?(durum: unknown, ms: number): unknown;
 }
 
 /* ------------------------------------------------------------------ oda ------------------------------------------------------------------ */
@@ -273,6 +414,16 @@ export interface OdaAyar {
   tema: string;
   /** Okey taş renkleri (4 adet #rrggbb) */
   renkler: string[];
+  /** go: tahta boyutu (varsayılan 9), komi (varsayılan 6.5) */
+  goBoyut?: GoBoyut;
+  komi?: number;
+  /** go: handikap taşı 0–9 (≥1 iken komi 0,5; ≥2 iken taşlar yıldızlara, beyaz başlar), süre seçeneği */
+  goHandikap?: number;
+  goSure?: GoSure;
+  /** cizgi: kare (yol uzunluğu, varsayılan 64) */
+  cizgiKare?: CizgiKare;
+  /** xox: tahta boyutu (varsayılan 3) */
+  xoxBoyut?: XoxBoyut;
 }
 
 export interface OyuncuBilgi {
@@ -342,10 +493,10 @@ export type SunucuMesaj =
   | { t: 'pong'; z: number; s: number };
 
 export const TEPKILER = ['👏', '😂', '😮', '😢', '🔥', '❤️', '😎', '🤔'] as const;
-export const OYUN_ADI: Record<OyunTur, string> = { yedili: 'Yedili Okey', takim: 'Takım Yedili', yuzbir: '101 Okey', uno: 'Uno', remi: 'Remi', kastet: 'Kastet', duz: 'Düz Okey', pisti: 'Pişti', domino: 'Taş Domino' };
+export const OYUN_ADI: Record<OyunTur, string> = { yedili: 'Yedili Okey', takim: 'Takım Yedili', yuzbir: '101 Okey', uno: 'Uno', go: 'Go', cizgi: 'Çizgi Yarışı', xox: 'XOX', remi: 'Remi', kastet: 'Kastet', duz: 'Düz Okey', pisti: 'Pişti', domino: 'Taş Domino' };
 /** Takım Yedili kişi başı taş: 5–6 oyuncuda 4, 2–4 oyuncuda kurucunun seçtiği 7 ya da 14 */
 export const takimElTas = (n: number, secim?: number): number => (n >= 5 ? 4 : secim === 14 ? 14 : 7);
-export const OYUNCU_SINIR: Record<OyunTur, [number, number]> = { yedili: [2, 6], takim: [2, 6], yuzbir: [2, 4], uno: [2, 8], remi: [2, 4], kastet: [2, 4], duz: [2, 4], pisti: [2, 4], domino: [2, 4] };
+export const OYUNCU_SINIR: Record<OyunTur, [number, number]> = { yedili: [2, 6], takim: [2, 6], yuzbir: [2, 4], uno: [2, 8], go: [2, 2], cizgi: [2, 2], xox: [2, 2], remi: [2, 4], kastet: [2, 4], duz: [2, 4], pisti: [2, 4], domino: [2, 4] };
 
 /* ------------------------------------------------------------------ istatistik (GET /api/masa/istatistik) ------------------------------------------------------------------ */
 

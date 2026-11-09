@@ -7,5 +7,8 @@ import { kastetMotor, remiMotor } from './motor/acikMasa';
 import { duzMotor } from './motor/duzOkey';
 import { pistiMotor } from './motor/pisti';
 import { dominoMotor } from './motor/domino';
+import { goMotor } from './motor/go';
+import { cizgiMotor } from './motor/cizgi';
+import { xoxMotor } from './motor/xox';
 
-export const MOTORLAR: Record<OyunTur, Motor> = { yedili: yediliMotor, takim: takimMotor, yuzbir: yuzbirMotor, uno: unoMotor, remi: remiMotor, kastet: kastetMotor, duz: duzMotor, pisti: pistiMotor, domino: dominoMotor };
+export const MOTORLAR: Record<OyunTur, Motor> = { yedili: yediliMotor, takim: takimMotor, yuzbir: yuzbirMotor, uno: unoMotor, go: goMotor, cizgi: cizgiMotor, xox: xoxMotor, remi: remiMotor, kastet: kastetMotor, duz: duzMotor, pisti: pistiMotor, domino: dominoMotor };

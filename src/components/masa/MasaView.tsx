@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Pause, Play, RefreshCw, WifiOff } from 'lucide-react';
 import { masa, useMasa } from '../../services/masa/istemci';
-import { OYUN_ADI, type OdaGorunum, type OyunTur } from '../../services/masa/tipler';
+import { OYUN_ADI, type OdaAyar, type OdaGorunum, type OyunTur } from '../../services/masa/tipler';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { azHareket, sesCal } from './ortak';
 import { Bildirimler, HataSiniri, Yaprak, bildir, sadeAd } from './kabukOrtak';
@@ -24,6 +24,9 @@ const OkeyMasa = React.lazy(() => import('./okey/OkeyMasa'));
 const UnoMasa = React.lazy(() => import('./uno/UnoMasa'));
 const PistiMasa = React.lazy(() => import('./pisti/PistiMasa'));
 const DominoMasa = React.lazy(() => import('./domino/DominoMasa'));
+const GoMasa = React.lazy(() => import('./go/GoMasa'));
+const CizgiMasa = React.lazy(() => import('./cizgi/CizgiMasa'));
+const XoxMasa = React.lazy(() => import('./xox/XoxMasa'));
 const MasaKurallar = React.lazy(() => import('./MasaKurallar'));
 
 const SON_KEY = 'medsoru_masa_son';
@@ -105,9 +108,9 @@ export default function MasaView() {
     }
   }), []);
 
-  const kur = (tur: OyunTur, botSayisi: number, elSayisi?: number) => {
+  const kur = (tur: OyunTur, botSayisi: number, ayar?: Partial<OdaAyar>) => {
     botPlan.current = botSayisi;
-    masa.kur(tur, elSayisi === undefined ? undefined : { elSayisi });
+    masa.kur(tur, ayar);
   };
   const merkezeDon = () => {
     ayrik = true;
@@ -205,7 +208,7 @@ function MasaOyun({ oda, baglanti, gecikme, ucanlar, kurallarAc, istatAc, merkez
   }, [oda.kod, oda.asama, oda.elNo, sonucVar]);
 
   const kurucu = oda.kurucu === oda.ben;
-  const Masa = oda.tur === 'pisti' ? PistiMasa : oda.tur === 'domino' ? DominoMasa : oda.tur === 'uno' ? UnoMasa : OkeyMasa;
+  const Masa = oda.tur === 'pisti' ? PistiMasa : oda.tur === 'domino' ? DominoMasa : oda.tur === 'uno' ? UnoMasa : oda.tur === 'go' ? GoMasa : oda.tur === 'cizgi' ? CizgiMasa : oda.tur === 'xox' ? XoxMasa : OkeyMasa;
   const az = azHareket();
 
   return createPortal(

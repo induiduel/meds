@@ -11,9 +11,10 @@ import KastetKurallar from './kurallar/KastetKurallar';
 import RemiKurallar from './kurallar/RemiKurallar';
 import PistiKurallar from './kurallar/PistiKurallar';
 import DominoKurallar from './kurallar/DominoKurallar';
+import { CizgiKurallar, GoKurallar, XoxKurallar } from './kurallar/TahtaKurallar';
 
 export type KuralSekme = OyunTur | 'ceza' | 'ipucu';
-const SEKMELER: [KuralSekme, string][] = [['yedili', OYUN_ADI.yedili], ['takim', OYUN_ADI.takim], ['yuzbir', OYUN_ADI.yuzbir], ['duz', OYUN_ADI.duz], ['kastet', OYUN_ADI.kastet], ['remi', OYUN_ADI.remi], ['domino', OYUN_ADI.domino], ['uno', OYUN_ADI.uno], ['pisti', OYUN_ADI.pisti], ['ceza', 'Cezalar ve puan'], ['ipucu', 'Masa ve ipuçları']];
+const SEKMELER: [KuralSekme, string][] = [['yedili', OYUN_ADI.yedili], ['takim', OYUN_ADI.takim], ['yuzbir', OYUN_ADI.yuzbir], ['duz', OYUN_ADI.duz], ['kastet', OYUN_ADI.kastet], ['remi', OYUN_ADI.remi], ['domino', OYUN_ADI.domino], ['uno', OYUN_ADI.uno], ['pisti', OYUN_ADI.pisti], ['go', OYUN_ADI.go], ['cizgi', OYUN_ADI.cizgi], ['xox', OYUN_ADI.xox], ['ceza', 'Cezalar ve puan'], ['ipucu', 'Masa ve ipuçları']];
 
 type T = [number, 0 | 1 | 2 | 3];
 type K = [UnoRenk | null, UnoDeger];
@@ -250,6 +251,10 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
       {sekme === 'remi' && <RemiKurallar renkler={rk} />}
       {sekme === 'domino' && <DominoKurallar renkler={rk} />}
       {sekme === 'pisti' && <PistiKurallar />}
+
+      {sekme === 'go' && <GoKurallar />}
+      {sekme === 'cizgi' && <CizgiKurallar />}
+      {sekme === 'xox' && <XoxKurallar />}
 
       {sekme === 'ceza' && (
         <article className="mk-kural" role="tabpanel">
