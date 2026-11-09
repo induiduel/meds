@@ -10,6 +10,7 @@ export const CEZA_BILGI: Record<string, { kisa: string; ad: string }> = {
   islekAtti: { kisa: 'İ', ad: 'İşlek taş attı' },
   okeyAtti: { kisa: '★', ad: 'Okey attı' },
   acmadi: { kisa: 'A', ad: 'Açamadı' },
+  gosterge: { kisa: 'G', ad: 'Rakip göstergeyi gösterdi' },
 };
 
 export function CezaRozetleri({ o }: { o: OkeyOyuncuGorunum }) {
@@ -61,13 +62,13 @@ export default function Koltuk({ oda, g, o, yon, sarsil, gizli, alinabilir }: { 
           <span className="om-koltuk-ad"><span className="om-koltuk-adyazi">{ad}</span>{o.takim && <em className="om-takim">{o.takim}</em>}</span>
           <span className="om-koltuk-alt">
             <span className="om-tassay" title="Elindeki taş"><i aria-hidden="true" />{o.tasSayisi}</span>
-            <span className={`om-acti${acti ? ' om-acti--evet' : ''}`}>{o.ciftActi ? 'Çift açtı' : acti ? 'Açtı' : 'Açmadı'}</span>
+            {(g.tur as string) !== 'duz' && <span className={`om-acti${acti ? ' om-acti--evet' : ''}`}>{o.ciftActi ? 'Çift açtı' : acti ? 'Açtı' : 'Açmadı'}</span>}
             <CezaRozetleri o={o} />
           </span>
         </span>
         {sira && <span className="om-koltuk-sira">Sırası</span>}
       </div>
-      {g.tur === 'yuzbir' && <AtikYigini o={o} oda={oda} okey={g.okey} gizli={gizli} alinabilir={alinabilir} />}
+      {(g.tur === 'yuzbir' || (g.tur as string) === 'duz') && <AtikYigini o={o} oda={oda} okey={g.okey} gizli={gizli} alinabilir={alinabilir} />}
     </div>
   );
 }

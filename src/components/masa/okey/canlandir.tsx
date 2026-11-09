@@ -96,8 +96,12 @@ export function olaylariIsle(olaylar: Olay[], oda: OdaGorunum, rectAl: (id: numb
         akis.push(`${ad(o)} son hamlesini ${f(o, 'geri aldı')}`);
         break;
       case 'duzenledi':
-        akis.push(`${ad(o)} masadaki perleri ${f(o, 'yeniden düzenledi')}`);
+        akis.push(typeof e.adet === 'number' ? `${ad(o)} masaya ${e.adet} taş ${f(o, 'koydu')}${typeof e.acilis === 'number' ? ` (açılış ${e.acilis})` : ''}` : `${ad(o)} masadaki perleri ${f(o, 'yeniden düzenledi')}`);
+        if (typeof e.adet === 'number') sesCal('ac');
         break;
+      case 'pas': akis.push(`${ad(o)} pas ${f(o, 'geçti')}`); break;
+      case 'gosterdi': akis.push(`${ad(o)} göstergeyi ${f(o, 'gösterdi')}`); break;
+      case 'bitirdi': akis.push(`${ad(o)} eli ${f(o, 'bitirdi')}${e.okeyle ? ' (okey atarak)' : ''}${e.cift ? ' (çiftle)' : ''}`); sesCal('ac'); break;
       case 'dagit':
         sesCal('dagit');
         g.elim.forEach((ts) => ekleUcus({ tas: ts, kimden: DESTE, hedef: `[data-om-elt="${ts.id}"]`, gizle: ts.id }, 38));

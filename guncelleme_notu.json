@@ -1,30 +1,24 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 682,
-  "baslik": "Taş Masası: Eğlence bölümü, Takım Yedili 4/7/14 taş, masayı düzenle, geri al, Zorlu mod ve yeni Uno modları",
+  "onem": 683,
+  "baslik": "Taş Masası: 5 yeni oyun — Remi, Kastet, Düz Okey, Pişti ve Taş Domino",
   "maddeler": [
-    "Sol menüde yeni Eğlence bölümü: Taş Masası (okey modları ve kart oyunları) ve Hücrem buradan açılır.",
-    "Oyun başlatılamama sorunu giderildi: istekler artık kaybolmaz, beklerken bekleme ekranı görünür, yanıt gelmezse uyarı çıkar.",
-    "Takım Yedili: 5–6 oyuncuda kişi başı 4 taş; 2–4 oyuncuda kurucu 7 ya da 14 taş seçer.",
-    "Yedili ve Takım: masadaki perler yeniden düzenlenebilir (taş ele alınmaz); per açma, işleme ve ıstaka hareketleri Geri al ile geri alınır.",
-    "Oyun modu: Normal (ipucu, otomatik işle, ıstakayı ve masayı dizme) ya da Zorlu (yardımcı yok; masa yalnız el bitince dizilir).",
-    "Uno: dengeli dağıtım (bir ele joker yığılmaz), resmî kurallar (+4 itirazı, ilk kartın etkisi) ve yeni modlar: Yığma, 7-0, Çek-çek, Atlama, Hızlı."
+    "Düz Okey: klasik okey; çek, at, elini perlere ya da yedi çifte ayırıp son taşla bitir, gösterge göster.",
+    "Kastet: taş atılmaz; ya yere açarsın ya çekersin, masadaki taşlar ortaktır ve elindekilerle yeniden dizilir, 26 seri alanı ve çift alanı.",
+    "Remi: elinden 30 ile aç, sonra masadaki bütün perleri serbestçe yeniden kur; ilk bitiren kazanır.",
+    "Pişti: 52 kart, 2 ya da 4 kişi (eşli); Vale ile topla, tek karta pişti yap.",
+    "Taş Domino (akıl oyunu): rengi ya da sayısı tutan taşı zincire ekle, ardışık koyunca ek hamle kazan.",
+    "Hepsi botlarla ya da arkadaşlarla oynanır; kurallar sayfasında her oyunun ayrıntılı kuralları var."
   ],
   "eklenen": [
-    "Sol menü › Eğlence",
-    "Takım Yedili taş sayısı seçimi",
-    "Masayı düzenle ve Geri al",
-    "Uno modları: Yığma, 7-0, Çek-çek, Atlama, Hızlı"
+    "Okey modları: Düz Okey, Kastet, Remi",
+    "Kart oyunları: Pişti",
+    "Akıl oyunları: Taş Domino"
   ],
-  "degisen": [
-    "Yardımcı asistan anahtarı yerine Normal / Zorlu oyun modu",
-    "Uno resmî kurallarla oynanır (+4 itirazı)"
-  ],
-  "duzeltilen": [
-    "Oyun bazen başlatılamıyor ve hata göstermiyordu"
-  ],
+  "degisen": [],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
-    "Eğlence: sol menüde oyunlar için yeni bölüm. Takım Yedili’de 4/7/14 taş, masayı düzenle, geri al, Zorlu mod; Uno’da dengeli dağıtım, resmî kurallar ve 6 mod."
+    "Eğlence › Taş Masası’na 5 yeni oyun: Düz Okey, Kastet, Remi, Pişti ve Taş Domino."
   ]
 }

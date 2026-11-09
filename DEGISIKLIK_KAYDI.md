@@ -1,3 +1,10 @@
+## 2026-11-10 — Taş Masası 3. tur: Remi, Kastet, Düz Okey, Pişti, Taş Domino (onem 683)
+- **Motorlar:** `motor/acikMasa.ts` (Kastet + Remi tek motor: genel `duzenle` = masadaki taşların tamamı + elden taşlar, Kastet 26 seri alanı + kilitli çift alanı, 22 taş sınırı, açan çekemez/çeken açamaz, bitene +50; Remi elden ≥30 ilk açılış, 2 sahte okey joker), `motor/duzOkey.ts` (çek-at, `bitir` perler/7 çift, okey/çift çarpanı, `goster`), `motor/pisti.ts` (52 kart, 2/4 eşli, pişti 10/Vale piştisi 20, puan tablosu), `motor/domino.ts` (rengi ya da sayısı tutan taş, uyan gelene dek çek, "Ek hamle": ardışık ya da iki uç eş sayı). Her birinin `*.sinama.ts` sınaması + bot benzetimi.
+- **Domino tasarım kararı:** ilk kural (aynı renk ±1 / aynı sayı) bot ellerinin %94'ünü kilitle bitiriyordu; uyma kuralı genişletildi (kilit %0, el 14–19 tur), strateji ek hamle kuralında.
+- **Arayüz:** `okey/OkeyMasa.tsx` kastet/remi/duz bayrakları (elden taslağa taş, Pas, Bitir, Gösterge, Kastet seri sayacı ve çift alanı, Remi 30 rozeti); `pisti/`, `domino/` yeni masalar; kurallar `components/masa/kurallar/*Kurallar.tsx`. Merkez kategorileri: Okey modları, Akıl oyunları, Kart oyunları.
+- **Not:** aynı anda başka oturum go/cizgi/xox tahta oyunlarını ortak dosyalarda işlemeden tutuyordu; bu commit ortak dosyalara yalnız HEAD + bu turun eklemeleri olarak girdi (çalışma ağacında iki oturumun satırları birlikte duruyor).
+- **Sınama:** 5 oyun başsız Chrome'da 1280×800 ve 375×740'ta açıldı (taşma ve konsol hatası yok); motor sınamaları geçti. Elle tam oyun oynanmadı.
+
 ## 2026-11-10 — Taş Masası 2. tur: başlatma hatası, Eğlence bölümü, Takım taş sayısı, masayı düzenle, geri al, Zorlu mod, Uno modları (H523, onem 682)
 - **Belirti:** "Oyun başlatılamıyor, hata da görünmüyor"; oyun içinde takılma hissi.
 - **Kök neden:** kimlik doğrulanmadan (`girdi` öncesi) gönderilen kur/başlat sunucuda yanıtsız atılıyordu; kopukken basılan başlat/sonraki el istemcide hiç gönderilmiyordu (ayrıntı H523).

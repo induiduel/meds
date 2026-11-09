@@ -13,7 +13,10 @@
  *   uno     Uno: 108 kart.
  */
 
-export type OyunTur = 'yedili' | 'takim' | 'yuzbir' | 'uno';
+import type { PistiGorunum, PistiHamle } from './motor/pisti';
+import type { DominoGorunum, DominoHamle } from './motor/domino';
+
+export type OyunTur = 'yedili' | 'takim' | 'yuzbir' | 'uno' | 'remi' | 'kastet' | 'duz' | 'pisti' | 'domino';
 export type Takim = 'A' | 'B';
 /** [0,1) düzgün rastgele sayı (sunucu kripto kaynaklı verir; sınamada tohumlu) */
 export type Rng = () => number;
@@ -60,7 +63,13 @@ export type OkeyHamle =
   | { t: 'at'; tas: number }
   /** yedili/takim: masadaki perleri yeniden kur (yer değiştir, taşları perler arasında yeniden diz). Masadaki taşların TAMAMI
    *  kullanılır, ele taş alınmaz, elden taş eklenmez; her yeni per geçerli olmalıdır. Sıra sendeyken ve açmışken (takımda takım açmışken). */
-  | { t: 'duzenle'; perler: number[][] }
+  | { t: 'duzenle'; perler: number[][]; ciftler?: number[][] }
+  /** kastet/remi: sırayı geçir (Kastet'te el boşken el biter) */
+  | { t: 'pas' }
+  /** duz: son taşı atıp bitir; gruplar kalan 14 taş */
+  | { t: 'bitir'; tas: number; gruplar: number[][] }
+  /** duz: ilk turda göstergeyi göster */
+  | { t: 'goster' }
   /** yedili/takim: eli devret (turu bitirir) */
   | { t: 'devret' };
 
@@ -81,7 +90,7 @@ export interface OkeyOyuncuGorunum {
 }
 
 export interface OkeyGorunum {
-  tur: 'yedili' | 'takim' | 'yuzbir';
+  tur: 'yedili' | 'takim' | 'yuzbir' | 'kastet' | 'remi' | 'duz';
   elNo: number;
   /** Sırası olan oyuncu */
   sira: string;
@@ -166,8 +175,8 @@ export const UNO_MODLAR: { id: UnoMod; ad: string; aciklama: string }[] = [
   { id: 'cekCek', ad: 'Çek-çek', aciklama: 'Oynayacak kartın yoksa uyan kart gelene dek çekersin; gelen kartı oynayabilirsin.' },
 ];
 
-export type OyunGorunum = OkeyGorunum | UnoGorunum;
-export type Hamle = OkeyHamle | UnoHamle;
+export type OyunGorunum = OkeyGorunum | UnoGorunum | PistiGorunum | DominoGorunum;
+export type Hamle = OkeyHamle | UnoHamle | PistiHamle | DominoHamle;
 
 /* ------------------------------------------------------------------ olaylar ------------------------------------------------------------------ */
 
@@ -333,10 +342,10 @@ export type SunucuMesaj =
   | { t: 'pong'; z: number; s: number };
 
 export const TEPKILER = ['👏', '😂', '😮', '😢', '🔥', '❤️', '😎', '🤔'] as const;
-export const OYUN_ADI: Record<OyunTur, string> = { yedili: 'Yedili Okey', takim: 'Takım Yedili', yuzbir: '101 Okey', uno: 'Uno' };
+export const OYUN_ADI: Record<OyunTur, string> = { yedili: 'Yedili Okey', takim: 'Takım Yedili', yuzbir: '101 Okey', uno: 'Uno', remi: 'Remi', kastet: 'Kastet', duz: 'Düz Okey', pisti: 'Pişti', domino: 'Taş Domino' };
 /** Takım Yedili kişi başı taş: 5–6 oyuncuda 4, 2–4 oyuncuda kurucunun seçtiği 7 ya da 14 */
 export const takimElTas = (n: number, secim?: number): number => (n >= 5 ? 4 : secim === 14 ? 14 : 7);
-export const OYUNCU_SINIR: Record<OyunTur, [number, number]> = { yedili: [2, 6], takim: [2, 6], yuzbir: [2, 4], uno: [2, 8] };
+export const OYUNCU_SINIR: Record<OyunTur, [number, number]> = { yedili: [2, 6], takim: [2, 6], yuzbir: [2, 4], uno: [2, 8], remi: [2, 4], kastet: [2, 4], duz: [2, 4], pisti: [2, 4], domino: [2, 4] };
 
 /* ------------------------------------------------------------------ istatistik (GET /api/masa/istatistik) ------------------------------------------------------------------ */
 

@@ -1,0 +1,35 @@
+/* Taş Domino masası. Önek dm-. Renk ve tema değişkenleri .om-kok'tan (okey.css) gelir. */
+.dm-kok { gap: 6px; padding: 8px max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-bottom)); }
+.dm-ust { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.dm-rakip { display: flex; align-items: center; gap: 6px; min-width: 0; padding: 4px 8px 4px 10px; border-radius: 999px; background: var(--om-kart); box-shadow: inset 0 0 0 1px var(--om-kart-kenar); }
+.dm-rakip.is-sira { box-shadow: inset 0 0 0 2px var(--om-vurgu); }
+.dm-rakip-ad { max-width: 9em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
+.dm-rakip-say { min-width: 1.6em; padding: 1px 6px; border-radius: 999px; background: var(--om-vurgu); color: var(--om-vurgu-yazi); font-weight: 800; text-align: center; }
+.dm-deste { display: flex; align-items: center; gap: 6px; margin-left: auto; font-weight: 800; }
+
+.dm-alan { position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; border-radius: 18px; background: var(--om-alan); box-shadow: inset 0 0 0 1.5px var(--om-alan-kenar); padding: 6px; }
+.dm-zincir { display: flex; flex-direction: column; justify-content: center; align-items: stretch; height: 100%; }
+.dm-satir { display: flex; justify-content: flex-start; align-items: center; gap: 4px; }
+.dm-satir.is-ters { flex-direction: row-reverse; }
+.dm-ztas.is-son { filter: drop-shadow(0 0 6px rgba(var(--om-isik), 0.9)); }
+
+.dm-yuva { flex: none; border: 2px dashed rgba(255, 255, 255, 0.28); border-radius: 8px; background: transparent; cursor: pointer; padding: 0; }
+.dm-yuva:disabled { cursor: default; }
+.dm-yuva.is-hedef { border-style: solid; border-color: var(--om-vurgu); background: rgba(var(--om-isik), 0.16); box-shadow: 0 0 14px rgba(var(--om-isik), 0.55); }
+.dm-yuva.is-ipucu { background: rgba(var(--om-isik), 0.35); }
+.dm-yuva:focus-visible, .dm-tas:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+.dm-alt { display: flex; flex-direction: column; gap: 6px; flex: none; }
+.dm-durum { text-align: center; font-weight: 700; color: var(--om-yazi2); min-height: 1.3em; }
+.dm-durum.is-ben { color: var(--om-vurgu); }
+.dm-el { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; padding: 8px; border-radius: 14px; background: linear-gradient(var(--om-ahsap1), var(--om-ahsap2)); box-shadow: inset 0 -4px 0 var(--om-ahsap3); touch-action: none; }
+.dm-tas { position: relative; padding: 0; border: 0; background: none; cursor: grab; border-radius: 8px; transition: transform 0.18s ease; touch-action: none; }
+.dm-tas:disabled { cursor: default; }
+.dm-tas.is-uygun { box-shadow: 0 0 0 2px rgba(var(--om-isik), 0.75); }
+.dm-tas.is-secili { transform: translateY(-8px); box-shadow: 0 0 0 3px var(--om-vurgu); }
+.dm-tas.is-ipucu { box-shadow: 0 0 0 3px #fff, 0 0 12px rgba(var(--om-isik), 0.9); }
+.dm-tas--surukle { z-index: 20; transition: none; cursor: grabbing; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.4)); }
+.dm-tas.is-sars { animation: dm-sars 0.4s ease; }
+@keyframes dm-sars { 0%, 100% { translate: 0; } 20%, 60% { translate: -6px 0; } 40%, 80% { translate: 6px 0; } }
+.dm-dugmeler { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+@media (prefers-reduced-motion: reduce) { .dm-tas, .dm-tas.is-sars { transition: none; animation: none; } }

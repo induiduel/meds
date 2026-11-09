@@ -47,7 +47,7 @@ interface Deps {
   notifyStudent: (target: { uid?: string | null }, n: { type: string; title: string; message: string; deepLinkUrl?: string; dedupeKey?: string }) => unknown;
 }
 
-const TURLER: OyunTur[] = ['yedili', 'takim', 'yuzbir', 'uno'];
+const TURLER: OyunTur[] = ['yedili', 'takim', 'yuzbir', 'uno', 'remi', 'kastet', 'duz', 'pisti', 'domino'];
 const BOT_ADLARI = ['Defne', 'Aras', 'Mira', 'Kaan', 'Ece', 'Poyraz', 'Lina'];
 const KOD = /^[A-Z0-9]{5}$/;
 const HEX = /^#[0-9a-f]{6}$/i;

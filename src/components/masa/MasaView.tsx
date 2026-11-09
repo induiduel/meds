@@ -22,6 +22,8 @@ import '../../styles/masa/kabuk-oyun.css';
 
 const OkeyMasa = React.lazy(() => import('./okey/OkeyMasa'));
 const UnoMasa = React.lazy(() => import('./uno/UnoMasa'));
+const PistiMasa = React.lazy(() => import('./pisti/PistiMasa'));
+const DominoMasa = React.lazy(() => import('./domino/DominoMasa'));
 const MasaKurallar = React.lazy(() => import('./MasaKurallar'));
 
 const SON_KEY = 'medsoru_masa_son';
@@ -203,7 +205,7 @@ function MasaOyun({ oda, baglanti, gecikme, ucanlar, kurallarAc, istatAc, merkez
   }, [oda.kod, oda.asama, oda.elNo, sonucVar]);
 
   const kurucu = oda.kurucu === oda.ben;
-  const Masa = oda.tur === 'uno' ? UnoMasa : OkeyMasa;
+  const Masa = oda.tur === 'pisti' ? PistiMasa : oda.tur === 'domino' ? DominoMasa : oda.tur === 'uno' ? UnoMasa : OkeyMasa;
   const az = azHareket();
 
   return createPortal(

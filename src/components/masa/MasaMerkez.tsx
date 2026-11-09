@@ -12,15 +12,21 @@ const OYUNLAR: { tur: OyunTur; cumle: string; etiket?: string }[] = [
   { tur: 'yedili', cumle: 'Yedi taşla başla, per aç, masadaki perlere işle; elini ilk bitiren kazanır.', etiket: 'Ana oyun' },
   { tur: 'takim', cumle: 'Yedili’nin eşli hâli: karşındaki ortağınla aynı perlere işle, birlikte bitir.' },
   { tur: 'yuzbir', cumle: 'Okeyli klasik: 101 sayıyla ya da beş çiftle aç, taşlarını erit, son taşını at.' },
+  { tur: 'duz', cumle: 'Çek, at, elini perlere ya da yedi çifte ayırıp son taşla bitir: herkesin bildiği okey.' },
+  { tur: 'kastet', cumle: 'Taş atmadan açtıkça aç; masadaki taşları elindekilerle yeniden dizdiğin ortak masa okeyi.' },
+  { tur: 'remi', cumle: 'Elinden 30 ile aç, sonra masadaki bütün perleri yeniden kur; ilk bitiren kazanır.' },
+  { tur: 'domino', cumle: 'Okey taşlarıyla domino: rengi ya da sayısı tutan taşı zincire ekle, ardışık koyup ek hamle kazan.' },
+  { tur: 'pisti', cumle: 'Yerdeki kartı eşle, Vale ile topla, tek karta pişti yap: klasik Pişti 2 ya da 4 kişiyle.' },
   { tur: 'uno', cumle: 'Rengi ya da sayıyı tuttur, kartlarını bitir. Resmî kurallar ya da Yığma, 7-0, Çek-çek modları.' },
 ];
 /** Eğlence bölgesindeki kategoriler: okey taşlı modlar ve kart oyunları */
 const KATEGORILER: { ad: string; alt: string; turler: OyunTur[] }[] = [
-  { ad: 'Okey modları', alt: 'Taşlı oyunlar', turler: ['yedili', 'takim', 'yuzbir'] },
-  { ad: 'Kart oyunları', alt: 'Uno', turler: ['uno'] },
+  { ad: 'Okey modları', alt: 'Taşlı oyunlar', turler: ['yedili', 'takim', 'yuzbir', 'duz', 'kastet', 'remi'] },
+  { ad: 'Akıl oyunları', alt: 'Okey taşıyla', turler: ['domino'] },
+  { ad: 'Kart oyunları', alt: 'Uno ve Pişti', turler: ['uno', 'pisti'] },
 ];
-const BOT_SECENEK: Record<OyunTur, number[]> = { yedili: [1, 2, 3, 4, 5], takim: [1, 3, 5], yuzbir: [1, 2, 3], uno: [1, 2, 3, 4, 5, 6, 7] };
-const BOT_VARSAYILAN: Record<OyunTur, number> = { yedili: 2, takim: 3, yuzbir: 3, uno: 3 };
+const BOT_SECENEK: Record<OyunTur, number[]> = { yedili: [1, 2, 3, 4, 5], takim: [1, 3, 5], yuzbir: [1, 2, 3], uno: [1, 2, 3, 4, 5, 6, 7], remi: [1, 2, 3], kastet: [1, 2, 3], duz: [1, 2, 3], pisti: [1, 3], domino: [1, 2, 3] };
+const BOT_VARSAYILAN: Record<OyunTur, number> = { yedili: 2, takim: 3, yuzbir: 3, uno: 3, remi: 1, kastet: 3, duz: 3, pisti: 1, domino: 1 };
 export const elAdi = (n: number) => (n === 0 ? 'Bitirene dek' : `${n} el`);
 
 export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurallarAc, istatAc }: {

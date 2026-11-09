@@ -6,9 +6,14 @@ import React, { useState } from 'react';
 import { Check, X } from 'lucide-react';
 import { OYUN_ADI, VARSAYILAN_RENKLER, type OyunTur, type UnoDeger, type UnoRenk } from '../../services/masa/tipler';
 import { CEZA_BILGI, KartOrnek, TasOrnek } from './kabukOrtak';
+import DuzKurallar from './kurallar/DuzKurallar';
+import KastetKurallar from './kurallar/KastetKurallar';
+import RemiKurallar from './kurallar/RemiKurallar';
+import PistiKurallar from './kurallar/PistiKurallar';
+import DominoKurallar from './kurallar/DominoKurallar';
 
 export type KuralSekme = OyunTur | 'ceza' | 'ipucu';
-const SEKMELER: [KuralSekme, string][] = [['yedili', OYUN_ADI.yedili], ['takim', OYUN_ADI.takim], ['yuzbir', OYUN_ADI.yuzbir], ['uno', OYUN_ADI.uno], ['ceza', 'Cezalar ve puan'], ['ipucu', 'Masa ve ipuçları']];
+const SEKMELER: [KuralSekme, string][] = [['yedili', OYUN_ADI.yedili], ['takim', OYUN_ADI.takim], ['yuzbir', OYUN_ADI.yuzbir], ['duz', OYUN_ADI.duz], ['kastet', OYUN_ADI.kastet], ['remi', OYUN_ADI.remi], ['domino', OYUN_ADI.domino], ['uno', OYUN_ADI.uno], ['pisti', OYUN_ADI.pisti], ['ceza', 'Cezalar ve puan'], ['ipucu', 'Masa ve ipuçları']];
 
 type T = [number, 0 | 1 | 2 | 3];
 type K = [UnoRenk | null, UnoDeger];
@@ -239,6 +244,12 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
           <p>El bitince kaybedenler <b>ellerindeki kartların değeri kadar eksi</b> alır; kazanan bu değerlerin <b>toplamını artı</b> olarak alır. Son kart +2 ya da +4 ise sıradaki oyuncu yine çeker ve o kartlar da sayılır.</p>
         </article>
       )}
+
+      {sekme === 'duz' && <DuzKurallar renkler={rk} />}
+      {sekme === 'kastet' && <KastetKurallar renkler={rk} />}
+      {sekme === 'remi' && <RemiKurallar renkler={rk} />}
+      {sekme === 'domino' && <DominoKurallar renkler={rk} />}
+      {sekme === 'pisti' && <PistiKurallar />}
 
       {sekme === 'ceza' && (
         <article className="mk-kural" role="tabpanel">

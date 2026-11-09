@@ -1,0 +1,15 @@
+/* Kastet çift alanı (Kastet / Remi / Düz Okey ek stilleri; okey.css değişkenlerini kullanır) */
+.om-ciftalan {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
+  margin: 0 8px 6px; padding: 4px 8px; min-height: 28px;
+  border: 1px dashed color-mix(in srgb, currentColor 30%, transparent); border-radius: 10px;
+  font-size: 12px; max-width: 100%; box-sizing: border-box; overflow: hidden;
+  --om-b: 24px;
+}
+.om-ciftalan-baslik { opacity: .8; white-space: nowrap; }
+.om-ciftalan-baslik b { font-variant-numeric: tabular-nums; }
+.om-cift { display: inline-flex; gap: 1px; }
+.om-cift .om-pertas { display: inline-block; width: var(--om-b); }
+@media (max-width: 420px) {
+  .om-ciftalan { margin: 0 4px 4px; padding: 3px 6px; font-size: 11px; --om-b: 20px; }
+}
