@@ -70,3 +70,24 @@ olaylar (SSE), yönetim paneli, soru ekleme gönderimi (kuyruğa alınır, bağl
       sınavı ATP kilidi (KilitKapisi) internetsizken iskelette kalıyordu → açık kilitler cihazda saklanır (`medsoru_basarim_kilit_v1:<uid>`),
       açılmamışsa "internet gerekir" bilgisi.
 - [ ] Telefonda (iOS Safari / Android Chrome) uçak modu turu — elle.
+
+## 5. Sesli ders ek katmanları (2026-11-09)
+
+Sesli ders paketi (`sesli:<key>`, `canliDersCevrimdisi.ts`) artık ses + PDF + ayrıntı dışında `canliDersCevrimdisiEk.ts` listesini de indirir:
+
+| Katman | Adres | Önbellek anahtarı | SW dalı |
+|---|---|---|---|
+| Hocanın sorabileceği ara sorular (CdHocaAra) | `/api/cozucu-ses/k<N>hocaara/ema/<kod>/<klip>.mp3?v=` + `ortak/*` | sorgusuz yol + `X-Cd-Surum` | `cdEkYaniti` (PAKET_SES_RE, paketlerde yoksa) |
+| Ders analizi / özeti sesleri (CdDersAnaliz) | `/api/cozucu-ses/k<N>dersanaliz/ema/<kod>/<klip>.mp3?v=` | aynı | aynı |
+| Çıkmış chip'i tam soru (CdCikmisChip) | `/api/past-exams/tek/<id>` | tam adres | genel API dalı, ağ hatasında `onbellekte()` |
+| Örnek soru chip'i (gömülü değilse) | `/api/content/ornek/k<N>/<id>` | tam adres | aynı |
+| Terim / kısaltma sesi (TerimSesDugme) | `/api/terim-ses?b=&g=` (klip yoksa 404 → atlanır) | tam adres | `/api/terim-ses` dalı |
+| Günlük | `/api/canli-ders/<key>/gunluk` | tam adres | genel API dalı |
+| Ara resim Lottie | `/ara_resim/<key>/<ad>.json` | tam adres | `/ara_resim/*.json` dalı |
+
+- Kayıt defteri (`medsoru_canli_ders_cevrimdisi_v1`): `ekler[]` (anahtarlar), `ekEksik` (inemeyen zorunlu ek sayısı). Silmede
+  başka kayıtta geçen ek (ortak klipler) silinmez.
+- Ders çevrimiçi açılınca `cdYerelDetayTazele`: ayrıntı kopyası (yalnız cihazdaki seslerle) tazelenir, yeni eklerin eksikleri
+  arka planda iner (oturumda ders başına bir kez; süren indirme varsa dokunmaz).
+- Sınama: `DERS=<key> node scripts/cevrimdisi_sinama/sesli_ek.mjs` (vekil :3100 açık olmalı). Yeni katman eklerken üç yer
+  birlikte: `cdEkDosyalar()` satırı, sw.js dalı, `sesli_ek.mjs` denemesi.

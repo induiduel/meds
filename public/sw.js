@@ -197,6 +197,23 @@ async function cdSesYanit(req, url) {
 
 // Önbellek araması. caches.match(…, { ignoreSearch }) TÜM önbellekleri dizinsiz, kayıt kayıt tarar; çevrimdışı paket
 // önbelleğinde binlerce ses/PDF varken açılıştaki her dosya isteği bu taramayı baştan yapıyor, paket indirmiş cihazlarda
+/**
+ * Sesli dersin EK dosyaları (canliDersCevrimdisiEk.ts: ara soru / ders analizi klipleri, terim sesleri): CD_OFFLINE_CACHE'te
+ * sorgusuz yol + X-Cd-Surum ile durur. Aynı sürümse cihazdan (Range/206); sürüm değiştiyse önce ağ, ağ yoksa cihazdaki kopya.
+ * Cihazda yoksa null (çağıran ağa gider).
+ */
+async function cdEkYaniti(req, url) {
+  if (!(await caches.has(CD_OFFLINE_CACHE))) return null;
+  const c = await caches.open(CD_OFFLINE_CACHE);
+  const hit = (await c.match(url.origin + url.pathname, { ignoreVary: true })) || (await c.match(url.href, { ignoreVary: true }));
+  if (!hit) return null;
+  const istenen = url.searchParams.get('v');
+  const surum = hit.headers.get('X-Cd-Surum') || '';
+  if (istenen && surum && istenen !== surum) {
+    try { const r = await fetch(req); if (r.ok || r.status === 206) return r; } catch (_) { /* ağ yok: cihazdaki kopya */ }
+  }
+  return aralikYaniti(req, hit, 'audio/mpeg');
+}
 // (tablet) sayfa dakikalarca açılmıyordu, önbellek silinince düzeliyordu (2026-10-23). Burada yalnız tam adresle (dizinli)
 // ve bilinen önbelleklerde sırayla aranır; sorgusuz=true ise sorgu dizesiz adres de denenir.
 // Sesli ders (CD) ve eski PDF önbelleği de aranır: toplu indirmenin pdf.js yardımcıları ve ders eşlemeleri yalnız orada (H482)
@@ -298,13 +315,14 @@ self.addEventListener('fetch', (event) => {
       if (paketler.has(k)) { event.respondWith(paketDosyasi(req, url)); return; }
     } else {
       event.respondWith((paketYukle || paketleriYukle()).then(() => (paketler.has(k) ? paketDosyasi(req, url)
-        : PAKET_SES_RE.test(url.pathname) ? fetch(req).catch(() => sessizYanit(req))
+        : PAKET_SES_RE.test(url.pathname) ? cdEkYaniti(req, url).then((r) => r || fetch(req).catch(() => sessizYanit(req)))
           : cihazPdfYukle().then(() => (cihazPdf.has(url.href) ? cihazPdfYaniti(req, url) : fetch(req))))));
       return;
     }
-    // Cihazda olmayan klip (ör. paket sessiz indirildi): ağ yoksa oynatıcı hata vermesin
+    // Sesli dersin ek klipleri (ara soru, ders analizi) cihazdaysa oradan; cihazda olmayan klip (ör. paket sessiz indirildi)
+    // ağ yoksa oynatıcı hata vermesin diye sessiz klip
     if (PAKET_SES_RE.test(url.pathname)) {
-      event.respondWith(fetch(req).catch(() => sessizYanit(req)));
+      event.respondWith(cdEkYaniti(req, url).then((r) => r || fetch(req).catch(() => sessizYanit(req))));
       return;
     }
     // Cihazda olmayan PDF akışı (Range/206): Service Worker üzerinden yakalanmaz,
@@ -452,6 +470,17 @@ self.addEventListener('fetch', (event) => {
       event.respondWith((cdSesYukle || cdSesleriYukle()).then(() => karar(cdSesler) || fetch(req)));
       return;
     }
+  }
+
+  // Terim / kısaltma sesleri (değişmez klip, anahtar sorgudadır): sesli ders paketi cihaza yazdıysa oradan, yoksa ağ
+  if (url.pathname === '/api/terim-ses') {
+    event.respondWith(cdEkYaniti(req, url).then((r) => r || fetch(req)));
+    return;
+  }
+  // Ara resim Lottie animasyonu (/ara_resim/<ders>/<ad>.json): sesli ders paketi cihaza yazdıysa oradan, ağ yoksa 404 (SVG yedek)
+  if (url.origin === self.location.origin && url.pathname.startsWith('/ara_resim/') && url.pathname.endsWith('.json')) {
+    event.respondWith((async () => (await onbellekte(req.url)) || fetch(req).catch(() => new Response(null, { status: 404 })))());
+    return;
   }
 
   // Uygulamanın kendi ses klipleri (/ses/: sessiz klip, sesli ders motivasyon/mola): cihazdaysa Range/206 ile oradan
@@ -636,6 +665,13 @@ self.addEventListener('fetch', (event) => {
         try {
           return await network;
         } catch (err) {
+          // Sesli dersin cihaza yazdığı ek JSON'lar (çıkmış soru, örnek soru, günlük) ve öteki önbelleklerdeki kopya
+          const yedek = await onbellekte(req.url);
+          if (yedek) {
+            const h = new Headers(yedek.headers);
+            h.set('X-From-Cache', '1');
+            return new Response(await yedek.clone().blob(), { status: yedek.status, headers: h });
+          }
           // Önbellekte yok ve ağ yok: komite listesi gerçek varsayılanlarla, diğerleri dürüst 503 ile döner
           // (eskiden boş liste 200 dönüyordu → istemci "veri yok" sanıp boş ekran gösteriyordu)
           if (url.pathname.includes('/api/committees')) {

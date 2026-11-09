@@ -17,6 +17,7 @@ import { araResimleri, araResimYolu } from './araResimVeri';
 import {
   CD_CEVRIMDISI_DEGISTI, cdCevrimdisiKayitlari, cdCevrimdisiYaz, cdKayitSesleri, type CdCevrimdisiKayit, type CdCevrimdisiSes,
 } from './canliDersCevrimdisiKayit';
+import { cdEkDosyalar, cdEkDosyalariIndir } from './canliDersCevrimdisiEk';
 
 export const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
 const SILME_GECIKME_GUN = 3;
@@ -301,7 +302,7 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     const ilerle = (n: number) => {
       alinan += n;
       const t = Date.now();
-      if (t - sonYay > 150) { sonYay = t; isYaz(key, { oran: Math.min(0.99, alinan / toplam) }); }
+      if (t - sonYay > 150) { sonYay = t; isYaz(key, { oran: Math.min(0.9, (alinan / toplam) * 0.9) }); }
     };
 
     // Önce arka plan indiricisi (destek varsa); yoksa sayfa içi indirme
@@ -331,6 +332,10 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
       if (r?.ok) resimler.push({ url, blob: await r.blob() });
     }
 
+    // Ek dosyalar (ara soru / analiz klipleri, çıkmış-örnek soru verisi, terim sesleri, günlük, Lottie): elden geldiğince,
+    // eksik kalan ek dersi bozmaz. Ana dosyalar yazıldıktan sonra inerler (aşağıda), burada yalnız liste çıkar.
+    const ekListe = await cdEkDosyalar(key, detay).catch(() => []);
+
     // Yalnız cihazdaki seslerle ayrıntı: internet yokken oynatıcı indirilmemiş sese geçmesin
     const yerelDetay: CdDetay = { ...detay, varyantlar: secili };
     const json = (o: unknown) => new Response(JSON.stringify(o), { headers: { 'Content-Type': 'application/json; charset=utf-8' } });
@@ -346,7 +351,9 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     for (const p of resimler) {
       await cache.put(p.url, new Response(p.blob, { headers: { 'Content-Type': 'image/svg+xml', 'Content-Length': String(p.blob.size) } }));
     }
-    await cache.put(detayAdresi(key), json(detay));
+    // İki kopya da yalnız cihazdaki seslerle: sw.js ağ yokken detayAdresi kopyasını verir (H-çevrimdışı 2026-11-09),
+    // indirilmemiş bir ses seçilip oynatıcının hata vermesi böyle önlenir
+    await cache.put(detayAdresi(key), json(yerelDetay));
     await cache.put(yedekDetay(key), json(yerelDetay));
     if (deckJson && detay.pdf?.deckId) await cache.put(deckAdresi(detay.pdf.deckId), json(deckJson));
     try { navigator.serviceWorker?.controller?.postMessage({ type: 'PAKET_CHANGED' }); } catch { /* SW yok */ }
@@ -358,6 +365,16 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     // SW'nin ağ yedeği olarak tam liste (ağdan alınabilirse)
     const lr = await fetch(listeAdresi(), { cache: 'no-store' }).catch(() => null);
     if (lr?.ok) await cache.put(listeAdresi(), lr);
+    // Ek dosyalar: ilerleme %90 → %99
+    isYaz(key, { oran: 0.9 });
+    const ek = await cdEkDosyalariIndir(cache, ekListe, {
+      signal: ac.signal,
+      ilerle: (i, n) => { const t = Date.now(); if (t - sonYay > 150) { sonYay = t; isYaz(key, { oran: 0.9 + 0.09 * (i / Math.max(1, n)) }); } },
+    });
+    const ekler = [...new Set([...ek.olan, ...ek.yazilan])];
+    let ekBayt = 0;
+    for (const u of ek.yazilan) { const r = await cache.match(u); ekBayt += Number(r?.headers.get('Content-Length')) || 0; }
+    for (const u of ek.olan) { const r = await cache.match(u); ekBayt += Number(r?.headers.get('Content-Length')) || 0; }
 
     const sesler: CdCevrimdisiSes[] = secili.map((v) => {
       const yeni = yeniSes.find((x) => x.v.id === v.id);
@@ -375,9 +392,11 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
       sesler,
       baslik: detay.baslik,
       no: cdDersEtiketi(detay),
-      bayt: sesler.reduce((a, x) => a + x.bayt, 0) + pdfBayt,
+      bayt: sesler.reduce((a, x) => a + x.bayt, 0) + pdfBayt + ekBayt,
       pdfler: pdfAdres.map((p) => p.url),
       resimler: resimler.map((p) => p.url),
+      ekler,
+      ekEksik: ek.hata || 0,
       deckId: detay.pdf?.deckId,
       at: Date.now(),
       kurul: kb?.kurul,
@@ -422,6 +441,8 @@ export async function cdCevrimdisiSil(keys: string[]): Promise<void> {
   const tum = cdCevrimdisiKayitlari();
   const kalan = Object.entries(tum).filter(([k]) => !keys.includes(k));
   const kullanilan = new Set(kalan.flatMap(([, x]) => x.pdfler || []));
+  // Ortak klipler (ör. "yanlış" sesi) aynı branşın başka derslerinde de kullanılır: başka kayıtta geçen ek silinmez
+  const ekKullanilan = new Set(kalan.flatMap(([, x]) => x.ekler || []));
   const deckKullanilan = new Set(kalan.map(([, x]) => x.deckId).filter(Boolean));
   if (cdCevrimdisiDestek()) {
     const cache = await caches.open(CD_OFFLINE_CACHE);
@@ -434,6 +455,7 @@ export async function cdCevrimdisiSil(keys: string[]): Promise<void> {
         cache.delete(yedekDetay(key)),
         cache.delete(yedekListe(key)),
         ...(x.resimler || []).map((u) => cache.delete(u)),
+        ...(x.ekler || []).filter((u) => !ekKullanilan.has(u)).map((u) => cache.delete(u)),
         ...(x.pdfler || []).filter((u) => !kullanilan.has(u)).map((u) => cache.delete(u)),
         ...(x.deckId && !deckKullanilan.has(x.deckId) ? [cache.delete(deckAdresi(x.deckId))] : []),
       ]);
@@ -460,6 +482,42 @@ export async function cdCevrimdisiDogrula(): Promise<void> {
       cdCevrimdisiYaz(key, { ...tum[key], vid: kalan[0].vid, surum: kalan[0].surum, etiket: kalan[0].etiket, sesler: kalan, bayt: Math.max(0, tum[key].bayt - dusen) });
     }
   }
+}
+
+/* ---------------- çevrimiçi tazeleme ---------------- */
+const tazelenen = new Set<string>();
+/**
+ * Ders çevrimiçi açılıp ayrıntısı ağdan gelince cihazdaki kopya tazelenir: sonradan eklenen katmanlar (çizim, çıkmış chip'i,
+ * terim sözlüğü, v2 cümleler…) internetsiz oturumda da görünsün. Yeni eklerin (klip/JSON) eksikleri arka planda iner;
+ * oturumda ders başına bir kez. İndirme sürüyorsa dokunulmaz.
+ */
+export function cdYerelDetayTazele(key: string, detay: CdDetay): void {
+  if (!cdCevrimdisiDestek() || iptaller.has(key)) return;
+  const kayit = cdCevrimdisiKayitlari()[key];
+  if (!kayit) return;
+  const sesler = cdKayitSesleri(kayit);
+  const secili = detay.varyantlar.filter((v) => sesler.some((x) => x.vid === v.id));
+  if (!secili.length) return;
+  void (async () => {
+    const cache = await caches.open(CD_OFFLINE_CACHE);
+    const json = (o: unknown) => new Response(JSON.stringify(o), { headers: { 'Content-Type': 'application/json; charset=utf-8' } });
+    const yerel = { ...detay, varyantlar: secili };
+    await cache.put(detayAdresi(key), json(yerel));
+    await cache.put(yedekDetay(key), json(yerel));
+    if (tazelenen.has(key)) return;
+    tazelenen.add(key);
+    const liste = await cdEkDosyalar(key, detay).catch(() => []);
+    const ek = await cdEkDosyalariIndir(cache, liste, { esZamanli: 2 });
+    const ekler = [...new Set([...ek.olan, ...ek.yazilan])];
+    const eski = cdCevrimdisiKayitlari()[key];
+    if (!eski || iptaller.has(key)) return;
+    let fark = 0;
+    for (const u of ek.yazilan) { const r = await cache.match(u); fark += Number(r?.headers.get('Content-Length')) || 0; }
+    if (ek.yazilan.length || (eski.ekler || []).length !== ekler.length) {
+      cdCevrimdisiYaz(key, { ...eski, ekler, ekEksik: ek.hata || 0, bayt: (eski.bayt || 0) + fark });
+      swBildir();
+    }
+  })().catch(() => { /* tazeleme isteğe bağlı */ });
 }
 
 /* ---------------- store yedekleri (ağ yokken) ---------------- */

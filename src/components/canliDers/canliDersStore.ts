@@ -302,6 +302,8 @@ export function cdDetayGetir(key: string, yenile = false): Promise<CdDetay> {
       throw new Error(r.status === 404 ? 'Bu ders bulunamadı.' : r.error || `Ders alınamadı (${r.status})`);
     }
     surumKaydet(key, r.data.varyantlar as any);
+    // Ders cihazda indirilmişse kopyası tazelenir, yeni eklenen katmanların dosyaları arka planda iner
+    if (cdCevrimdisiKayitlari()[key]) import('./canliDersCevrimdisi').then((m) => m.cdYerelDetayTazele(key, r.data!)).catch(() => {});
     return sayilariDuzelt(r.data);
   });
   detayCache.set(key, { p, at: Date.now() });

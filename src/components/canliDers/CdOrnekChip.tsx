@@ -20,6 +20,13 @@ const loaders = import.meta.glob('../../data/ornek_sorular/k[1-6]/k[1-6]-*.json'
 const INDEX: IndexRow[] = Object.keys(indexModules).flatMap((k) => indexModules[k] || []);
 
 const onbellek = new Map<string, Promise<OrnekSoru[]>>();
+/** Derlemeye gömülü değilse örnek soruların canlı içerik adresi (çevrimdışı paket bu kopyayı saklar); gömülüyse null */
+export function ornekApiAdresi(key: string): string | null {
+  const satir = INDEX.find((r) => r.id === key) || INDEX.find((r) => r.id.startsWith(`${key}-`));
+  const kurul = /^k(\d)-/.exec(key)?.[1];
+  if (!satir || !kurul || loaders[`../../data/ornek_sorular/k${kurul}/${satir.id}.json`]) return null;
+  return `/api/content/ornek/k${kurul}/${satir.id}`;
+}
 /** Sesli ders anahtarına (k2-07) karşılık gelen örnek soru dosyasını yükler; yoksa boş liste */
 export function ornekSorulariYukle(key: string): Promise<OrnekSoru[]> {
   let p = onbellek.get(key);

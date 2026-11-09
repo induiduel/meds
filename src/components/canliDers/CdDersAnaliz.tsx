@@ -21,6 +21,8 @@ const kisaKey = (k: string) => /^k\d-\d{2}/.exec(k)?.[0] || k;
 const dosya = (key: string) => VERI[`../../data/ders_analizi/${kisaKey(key)}.json`];
 
 export const dersAnalizVar = (key: string | null | undefined) => !!key && !!dosya(key);
+/** Dersin analiz verisi (yoksa null) — çevrimdışı paket ses kliplerinin listesini buradan çıkarır */
+export const dersAnalizYukle = (key: string): Promise<DersAnaliz | null> => { const f = dosya(key); return f ? f().catch(() => null) : Promise.resolve(null); };
 
 export function useDersAnaliz(key: string | null | undefined, acik: boolean): DersAnaliz | null {
   const [v, setV] = useState<DersAnaliz | null>(null);

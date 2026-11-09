@@ -24,6 +24,10 @@ export interface CdCevrimdisiKayit {
   pdfler: string[];
   /** Ara resim SVG adresleri (araResimVeri) */
   resimler?: string[];
+  /** Ek dosyaların önbellek anahtarları (ara soru/analiz klipleri, çıkmış-örnek verisi, terim sesleri…; canliDersCevrimdisiEk) */
+  ekler?: string[];
+  /** Son indirmede inemeyen zorunlu ek sayısı (0 = tam) */
+  ekEksik?: number;
   deckId?: string;
   at: number;
   kurul?: number;

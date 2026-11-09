@@ -1,40 +1,39 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
   "onem": 677,
-  "baslik": "Sesli ders metni: derse girmeden dışa aktarma penceresi, içerik seçenekleri, toplu Word/Markdown",
+  "baslik": "Sesli dersler çevrimdışı eksiksiz: ara sorular, ders analizi, çıkmış ve terim sesleri de cihaza iner",
   "maddeler": [
-    "Dışa aktarma penceresi: ders sayfasından, sesli ders listesinin '⋯' menüsünden ve oynatıcıdan açılır; derse girmek gerekmez.",
-    "İçerik seçenekleri: tüm metin ya da yalnız önemli yerler, ders notu ya da konuşma metni, işaretler, slayt başlıkları, resimler, bölüm seçimi.",
-    "Ekler: terimler ve kısaltmalar ile doğrulanmış çıkmış sorular belgenin sonuna eklenebilir.",
-    "Toplu dışa aktar: PDF'in yanında Word, Markdown ve düz metin; sesli derslerde aynı içerik seçenekleri."
+    "İndirilen sesli ders internetsizken tüm katmanlarıyla çalışır: hocanın sorabileceği ara sorular, ders analizi sesleri, çıkmış soru kartları, terim sesleri ve hareketli ara resimler.",
+    "Ders internetliyken açılınca cihazdaki kopya kendini tazeler; sonradan eklenen katmanlar arka planda iner.",
+    "Wi-Fi var ama internet yokken oynatıcı yalnız cihazdaki sesi seçer."
   ],
   "eklenen": [
-    "Ders sayfası › Ders metnini dışa aktar",
-    "Sesli ders listesi › ⋯ › Metni dışa aktar",
-    "Dışa aktarma penceresi: içerik seçenekleri, ekler, bölüm seçimi, dersin kendi metniyle önizleme, Kopyala",
-    "Toplu dışa aktar: Word, Markdown, düz metin"
+    "Sesli ders çevrimdışı paketi: ara soru, ders analizi, çıkmış, terim sesi, Lottie ekleri"
   ],
   "degisen": [
-    "Oynatıcıdaki 'Metni indir' menüsü yeni dışa aktarma penceresini açar"
+    "Çevrimdışı ders kopyası internetli açılışta kendiliğinden güncellenir"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "İndirilmiş derste internetsizken ara soru sayfasının sessiz kalması ve çıkmış kartının yüklenememesi"
+  ],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Sesli ders metnini derse girmeden dışa aktar",
+      "ad": "Sesli dersler çevrimdışı eksiksiz",
       "nerede": {
-        "ad": "Ders sayfası › Ders metnini dışa aktar",
+        "ad": "Sesli ders › Cihaza indir",
         "yol": "/dersler"
       },
-      "amac": "Dersin metnini istediğin kapsam ve biçimde, sesli derse girmeden indirmek.",
+      "amac": "İndirdiğin sesli dersi uçakta ya da internetsiz yerde hiçbir katmanı eksilmeden çalışmak.",
       "islevler": [
-        "Biçim: PDF, Word, Markdown, düz metin",
-        "Kapsam: tüm metin ya da yalnız önemli yerler",
-        "Ekler: terimler, kısaltmalar, çıkmış sorular",
-        "Bölüm seçimi ve dersin kendi metniyle PDF önizleme",
-        "Kopyala: metni panoya al"
+        "Hocanın sorabileceği ara sorular sesli çözülür",
+        "Ders analizi ve özet sesleri çalar",
+        "Çıkmış soru kartları açılır",
+        "Terim ve kısaltma sesleri dinlenir",
+        "Hareketli ara resimler oynar",
+        "Kopya internetli açılışta kendini tazeler"
       ],
-      "ipucu": "Sınav öncesi 'Yalnız önemli yerler' + 'Çıkmış sorular' ile kısa bir tekrar notu çıkar."
+      "ipucu": "Dersi indirdikten sonra bir kez internetliyken aç; sonradan eklenen katmanlar arka planda cihazına iner."
     }
   ]
 }
