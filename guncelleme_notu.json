@@ -1,24 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 683,
-  "baslik": "Taş Masası: 5 yeni oyun — Remi, Kastet, Düz Okey, Pişti ve Taş Domino",
+  "onem": 684,
+  "baslik": "Taş Masası: Taş Domino açılış hatası düzeltildi",
   "maddeler": [
-    "Düz Okey: klasik okey; çek, at, elini perlere ya da yedi çifte ayırıp son taşla bitir, gösterge göster.",
-    "Kastet: taş atılmaz; ya yere açarsın ya çekersin, masadaki taşlar ortaktır ve elindekilerle yeniden dizilir, 26 seri alanı ve çift alanı.",
-    "Remi: elinden 30 ile aç, sonra masadaki bütün perleri serbestçe yeniden kur; ilk bitiren kazanır.",
-    "Pişti: 52 kart, 2 ya da 4 kişi (eşli); Vale ile topla, tek karta pişti yap.",
-    "Taş Domino (akıl oyunu): rengi ya da sayısı tutan taşı zincire ekle, ardışık koyunca ek hamle kazan.",
-    "Hepsi botlarla ya da arkadaşlarla oynanır; kurallar sayfasında her oyunun ayrıntılı kuralları var."
+    "Taş Domino: oyun başlayınca masa yerine hata ekranı çıkıyordu; düzeltildi."
   ],
-  "eklenen": [
-    "Okey modları: Düz Okey, Kastet, Remi",
-    "Kart oyunları: Pişti",
-    "Akıl oyunları: Taş Domino"
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Taş Domino masası açılırken çöküyordu"
+  ],
   "silinen": [],
-  "yenilikler": [
-    "Eğlence › Taş Masası’na 5 yeni oyun: Düz Okey, Kastet, Remi, Pişti ve Taş Domino."
-  ]
+  "yenilikler": []
 }

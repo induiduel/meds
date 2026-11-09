@@ -373,3 +373,8 @@
 - **Yerel sınama kimliği:** `.env` `MEDS_MASA_TEST=1` + `?masatest=<ad>` (yalnız yerel; Oracle'a konmaz).
 - **Doğrulama:** üç motor sınaması geçti (yedili 40 sınama + 5.000 botlu el, 101 ve Uno birim + rastgele + bulanık); gerçek sunucuda botlu maçlar soketten uçtan uca; tarayıcıda (başsız Chrome, dokunma olayları) merkez/lobi/masa/sonuç 1024×768, 820×1180, 375×812, 1440×900.
 - **Sınanmayan / bilinen sınır:** gerçek tablet/iOS, ses, arkadaş daveti gönderimi, dolu istatistik ekranı (sınama kimliği REST'te geçmez); 3B taşlar gerçek küp değil (perspektif + katmanlı gölge); 5–6 oyuncuda berabere hâlâ çoğunluk; 101'de 4 oyuncuda ellerin ~2/3'ü deste bitişiyle kapanır (gerçek 101 deste boyu).
+
+## 2026-11-10 — Taş Masası: Taş Domino açılış çökmesi (H524, onem 684)
+- **Belirti:** canlıda Taş Domino masası `Cannot read properties of undefined (reading 'length')` ile çöküyordu.
+- **Kök neden:** `MasaUstCubuk.tsx:49` Uno dışındaki her oyunu okey görünümü sayıp domino oyuncularında olmayan `cezalar` alanını okuyordu.
+- **Çözüm:** `o.cezalar?.length`. Yalnız bu satır işlendi; dosyadaki öteki işlenmemiş değişiklikler (tahta oyunları çalışması) çalışma ağacında duruyor.

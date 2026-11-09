@@ -46,7 +46,7 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
   };
   const sec = (fn: () => void) => () => { setMenu(false); fn(); };
   const elMetni = `El ${oda.elNo}${oda.ayar.elSayisi ? `/${oda.ayar.elSayisi}` : ''}`;
-  const cezali = okey && oda.oyun ? (oda.oyun as OkeyGorunum).oyuncular.filter((o) => o.cezalar.length) : [];
+  const cezali = okey && oda.oyun ? (oda.oyun as OkeyGorunum).oyuncular.filter((o) => o.cezalar?.length) : [];
 
   return (
     <header className="mk-cubuk">
