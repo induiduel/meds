@@ -458,7 +458,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     if (!acik) setSecili([]);
     setDuzen2({ gruplar: perSirala(masaPerler).map((p) => p.taslar.map((t) => t.id)), secili: [] });
     bildir(acik
-      ? 'Masadaki ve ıstakandaki taşlara dokunarak seç, sonra bir pere ya da “+ Ayrı per”e dokun. Masadaki taşlar ele dönmez; Vazgeç her şeyi geri koyar.'
+      ? 'Masadaki ve ıstakandaki taşlara dokunarak seç, sonra bir pere ya da “+ Ayrı per”e dokun. Elinden koyduğun taşa dokununca ıstakana döner; masadaki taşlar ele dönmez, Vazgeç her şeyi geri koyar.'
       : 'Masadaki taşlara dokunarak seç, sonra bir pere ya da “+ Ayrı per”e dokun. Hiçbir taş ele dönmez.', 'bilgi');
   };
   const duzenTasi = (hedef: number | 'yeni') => {
@@ -625,7 +625,10 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
               onUc={(per, uc) => hedefeDokun(() => { if (duzen2) duzenTasi(per - 1000); else if (secili.length) isle(secili, per, uc); })}
               onPer={(per) => hedefeDokun(() => { if (duzen2) duzenTasi(per - 1000); else if (secili.length) isle(secili, per); })}
               onYeni={() => hedefeDokun(() => { if (duzen2) duzenTasi('yeni'); else if (secili.length) perAc(secili); })}
-              duzen={duzen2 ? { secili: new Set(duzen2.secili), gecersiz: taslakGecersiz, onTas: (id) => setDuzen2((d) => d && ({ ...d, secili: d.secili.includes(id) ? d.secili.filter((x) => x !== id) : [...d.secili, id] })) } : undefined}
+              duzen={duzen2 ? { secili: new Set(duzen2.secili), gecersiz: taslakGecersiz, onTas: (id) => setDuzen2((d) => d && (elMap.has(id)
+                // Taslağa elden konan taş: dokununca ıstakaya geri döner
+                ? { gruplar: d.gruplar.map((x) => x.filter((y) => y !== id)), secili: d.secili.filter((x) => x !== id) }
+                : { ...d, secili: d.secili.includes(id) ? d.secili.filter((x) => x !== id) : [...d.secili, id] })) } : undefined}
             />
             <div className="om-destekolon">
               <div

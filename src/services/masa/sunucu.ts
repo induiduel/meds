@@ -36,6 +36,8 @@ interface Oda {
   geri?: { kim: string; durumlar: unknown[] };
   /** Durdurulduğu an (süreli oyunda saat durakta işlemesin) */
   durduZ?: number;
+  /** Koltuk devri: izleyicinin bağlantı kimliği → oturduğu (eski bot) koltuk kimliği */
+  devir?: Record<string, string>;
 }
 interface Bag { ws: any; uid: string; id: string; ad: string; kod: string | null; son: number; sayac: number; pencere: number }
 interface Deps {
@@ -66,6 +68,10 @@ class MasaSunucu {
   private tum = new Set<Bag>();
   private botZaman = new Map<string, any>();
   private sureZaman = new Map<string, any>();
+  /** kod → izleyici bağlantı kimliği → ad + istediği bot koltuğu (oyun başlamışken gelenler) */
+  private izleyici = new Map<string, Map<string, { ad: string; istek?: string }>>();
+  /** `kod:koltuk` → bağlantının koptuğu an */
+  private kopZ = new Map<string, number>();
   private kayitZaman = new Map<string, any>();
   private d!: Deps;
   private sema = false;
@@ -168,6 +174,11 @@ class MasaSunucu {
     try { return erisimJetonuDogrula(jeton)?.uid || null; } catch { return null; }
   }
 
+  /** Bağlantı kimliği → koltuk kimliği (koltuk devri yoksa aynısı) */
+  private sid(oda: Oda, id: string) { return oda.devir?.[id] || id; }
+  /** Şu an bağlı koltuklar */
+  private bagliSet(oda: Oda) { return new Set([...(this.baglar.get(oda.kod)?.keys() || [])].map((id) => this.sid(oda, id))); }
+
   /** Bağlantı odadan düşer (koltuk kalır) */
   private kopar(b: Bag) {
     if (!b.kod) return;
@@ -176,6 +187,8 @@ class MasaSunucu {
       m.delete(b.id);
       if (!m.size) this.baglar.delete(b.kod);
       const oda = this.odalar.get(b.kod);
+      if (this.izleyici.get(b.kod)?.delete(b.id)) { /* izleyici gitti */ }
+      else if (oda) this.kopZ.set(`${b.kod}:${this.sid(oda, b.id)}`, Date.now());
       if (oda) this.yayin(oda, [], false);
     }
     b.kod = null;
@@ -189,6 +202,7 @@ class MasaSunucu {
     if (eski && eski !== b) { eski.kod = null; this.yolla(eski, { t: 'cikti' }); }
     m.set(b.id, b);
     b.kod = oda.kod;
+    this.kopZ.delete(`${oda.kod}:${this.sid(oda, b.id)}`);
   }
 
   /* ------------------------------------------------------------ mesajlar ------------------------------------------------------------ */
@@ -201,9 +215,10 @@ class MasaSunucu {
     if (m.t === 'katil') return this.katil(b, String(m.kod || '').toUpperCase());
     const oda = b.kod ? this.odalar.get(b.kod) : null;
     if (!oda) return this.hata(b, 'Oda bulunamadı.', 'oda-yok');
-    const koltuk = oda.oyuncular.find((k) => k.id === b.id);
-    if (!koltuk) return this.hata(b, 'Bu odada değilsin.', 'oda-yok');
-    const kurucu = oda.kurucu === b.id;
+    const id = this.sid(oda, b.id);
+    const koltuk = oda.oyuncular.find((k) => k.id === id);
+    if (!koltuk) return this.izleyiciIsle(b, oda, m);
+    const kurucu = oda.kurucu === id;
     const yalnizKurucu = () => { if (!kurucu) this.hata(b, 'Bunu yalnız odayı kuran yapabilir.'); return kurucu; };
     const motor = MOTORLAR[oda.tur];
     const [, enCok] = OYUNCU_SINIR[oda.tur];
@@ -229,7 +244,7 @@ class MasaSunucu {
         return this.yayin(oda);
       }
       case 'cikar': {
-        if (!yalnizKurucu() || oda.asama !== 'lobi' || m.hedef === b.id) return;
+        if (!yalnizKurucu() || oda.asama !== 'lobi' || m.hedef === id) return;
         const i = oda.oyuncular.findIndex((k) => k.id === m.hedef);
         if (i < 0) return;
         oda.oyuncular.splice(i, 1);
@@ -254,20 +269,20 @@ class MasaSunucu {
       }
       case 'sonrakiEl': {
         if (oda.asama !== 'elSonu') return;
-        if (!kurucu && this.baglar.get(oda.kod)?.has(oda.kurucu)) return this.hata(b, 'Sonraki eli kurucu başlatır.');
+        if (!kurucu && this.bagliSet(oda).has(oda.kurucu)) return this.hata(b, 'Sonraki eli kurucu başlatır.');
         return this.elBaslat(oda);
       }
       case 'hamle': {
         if (oda.asama !== 'oyun' || oda.durum == null) return this.hata(b, 'Şu an hamle yapılamaz.', 'hamle');
         if (oda.durdu) return this.hata(b, 'Oyun durduruldu. Kurucunun devam ettirmesi bekleniyor.', 'hamle');
-        return this.hamle(oda, b.id, m.h, b);
+        return this.hamle(oda, id, m.h, b);
       }
       case 'geriAl': {
         if (oda.asama !== 'oyun' || oda.durdu || oda.durum == null) return this.hata(b, 'Şu an geri alınamaz.', 'hamle');
         const y = oda.geri;
-        if (!y || y.kim !== b.id || !y.durumlar.length) return this.hata(b, 'Geri alınacak hamle yok. Taş çekme ve eli devretme geri alınmaz.', 'hamle');
+        if (!y || y.kim !== id || !y.durumlar.length) return this.hata(b, 'Geri alınacak hamle yok. Taş çekme ve eli devretme geri alınmaz.', 'hamle');
         oda.durum = y.durumlar.pop();
-        return this.yayin(oda, [{ t: 'geriAldi', o: b.id }]);
+        return this.yayin(oda, [{ t: 'geriAldi', o: id }]);
       }
       case 'durdur': case 'devam': {
         if (!yalnizKurucu() || (oda.asama !== 'oyun' && oda.asama !== 'elSonu')) return;
@@ -277,29 +292,69 @@ class MasaSunucu {
         const motorD = MOTORLAR[oda.tur];
         if (yeni) oda.durduZ = Date.now();
         else if (oda.durduZ && motorD.saatKaydir && oda.durum != null) { oda.durum = motorD.saatKaydir(oda.durum, Date.now() - oda.durduZ); oda.durduZ = undefined; }
-        return this.yayin(oda, [{ t: yeni ? 'durdu' : 'devam', o: b.id }]);
+        return this.yayin(oda, [{ t: yeni ? 'durdu' : 'devam', o: id }]);
       }
       case 'bitir': {
         if (!yalnizKurucu() || oda.asama === 'lobi' || oda.asama === 'bitti') return;
         oda.asama = 'bitti'; oda.durdu = false;
         if (!motor.sonuc(oda.durum)) oda.elSonuc = undefined; // yarım el puanlanmaz
-        return this.yayin(oda, [{ t: 'macBitti', o: b.id }]);
+        return this.yayin(oda, [{ t: 'macBitti', o: id }]);
       }
       case 'botDevral': {
         if (!yalnizKurucu() || oda.asama === 'lobi' || oda.asama === 'bitti') return;
         const h = oda.oyuncular.find((k) => k.id === m.hedef);
-        if (!h || h.bot || h.id === b.id) return;
-        if (this.baglar.get(oda.kod)?.has(h.id)) return this.hata(b, 'Bu oyuncu hâlâ bağlı.');
+        if (!h || h.bot || h.id === id) return;
+        if (this.bagliSet(oda).has(h.id)) return this.hata(b, 'Bu oyuncu hâlâ bağlı.');
         h.bot = true;
         return this.yayin(oda, [{ t: 'botDevraldi', o: h.id }]);
       }
       case 'tepki': {
         if (!(TEPKILER as readonly string[]).includes(m.e)) return;
-        return this.yayin(oda, [{ t: 'tepki', o: b.id, e: m.e }], false);
+        return this.yayin(oda, [{ t: 'tepki', o: id, e: m.e }], false);
+      }
+      case 'koltukVer': {
+        // Kurucu, izleyicinin bir bot koltuğunu almasını onaylar (koltuk kimliği aynı kalır, motor durumu bozulmaz)
+        if (!yalnizKurucu() || oda.asama === 'lobi' || oda.asama === 'bitti') return;
+        const iz = this.izleyici.get(oda.kod);
+        const kisi = iz?.get(m.kime);
+        const ib = this.baglar.get(oda.kod)?.get(m.kime);
+        const hedef = oda.oyuncular.find((k) => k.id === (m.hedef || kisi?.istek));
+        if (!kisi || !ib) return this.hata(b, 'Bu izleyici artık masada değil.');
+        if (!hedef || !hedef.bot) return this.hata(b, 'Bu koltukta bot oynamıyor; başka koltuk seç.');
+        for (const [k, v] of Object.entries(oda.devir || {})) if (v === hedef.id) delete oda.devir![k];
+        oda.devir = { ...(oda.devir || {}), [m.kime]: hedef.id };
+        hedef.bot = false; hedef.ad = ib.ad; hedef.uid = ib.uid; hedef.foto = this.d.foto?.(ib.uid);
+        iz!.delete(m.kime);
+        return this.yayin(oda, [{ t: 'katildi', o: hedef.id }, { t: 'koltukAldi', o: hedef.id }]);
+      }
+      case 'koltukRed': {
+        if (!yalnizKurucu()) return;
+        const kisi = this.izleyici.get(oda.kod)?.get(m.kime);
+        if (!kisi?.istek) return;
+        kisi.istek = undefined;
+        const ib = this.baglar.get(oda.kod)?.get(m.kime);
+        if (ib) this.hata(ib, 'Kurucu koltuk isteğini şimdilik kabul etmedi. İzlemeye devam edebilirsin.');
+        return this.yayin(oda, [], false);
       }
       case 'cik': return this.ayril(b);
       default: return;
     }
+  }
+
+  /** Koltuğu olmayan bağlantı: oyun başlamışken gelen izleyici (yalnız izler, tepki atar, bot koltuğu ister ya da kalkar) */
+  private izleyiciIsle(b: Bag, oda: Oda, m: IstemciMesaj) {
+    const kisi = this.izleyici.get(oda.kod)?.get(b.id);
+    if (!kisi) return this.hata(b, 'Bu odada değilsin.', 'oda-yok');
+    if (m.t === 'cik') return this.ayril(b);
+    if (m.t === 'tepki') return (TEPKILER as readonly string[]).includes(m.e) ? this.yayin(oda, [{ t: 'tepki', o: b.id, e: m.e }], false) : undefined;
+    if (m.t === 'koltukIste') {
+      const hedef = oda.oyuncular.find((k) => k.id === m.hedef);
+      if (oda.asama === 'lobi' || oda.asama === 'bitti') return this.hata(b, 'Şu an koltuk devri yapılamaz.');
+      if (!hedef?.bot) return this.hata(b, 'Yalnız bot oynayan koltuk istenebilir.');
+      kisi.istek = hedef.id;
+      return this.yayin(oda, [{ t: 'koltukIstek', o: b.id, kime: oda.kurucu }], false);
+    }
+    return this.hata(b, 'İzleyicisin: oynamak için bot oynayan bir koltuğu iste (kurucu onaylar).', 'hamle');
   }
 
   private azTakim(oda: Oda): Takim {
@@ -346,8 +401,19 @@ class MasaSunucu {
     this.yayin(oda);
   }
 
+  /** Kodda bulunmayan, karıştırılan karakterler (O/0 → D, I/1 → L/J/T…) için var olan odayı bulur */
+  private kodBenzer(kod: string): string {
+    if (this.odalar.has(kod) || /^[ABCDEFGHJKLMNPRSTUVYZ2-9]{5}$/.test(kod)) return kod;
+    const es: Record<string, string[]> = { O: ['D'], '0': ['D'], Q: ['D'], I: ['L', 'J', 'T'], '1': ['L', 'J', 'T'], W: ['V'], X: ['Y', 'K'] };
+    let adaylar = [''];
+    for (const c of kod) adaylar = adaylar.flatMap((x) => (es[c] || [c]).map((y) => x + y)).slice(0, 200);
+    return adaylar.find((k) => this.odalar.has(k)) || kod;
+  }
+
   private katil(b: Bag, kod: string) {
-    if (!KOD.test(kod)) return this.hata(b, 'Masa kodu 5 karakterdir.', 'oda-yok');
+    kod = kod.replace(/[^A-Z0-9]/g, '');
+    if (!KOD.test(kod)) return this.hata(b, 'Masa kodu 5 karakterdir (harf ve rakam). Bağlantıyla geldiysen bağlantıyı yeniden aç.', 'oda-yok');
+    kod = this.kodBenzer(kod);
     let oda = this.odalar.get(kod);
     if (!oda && !this.yuklendi) {
       // Sunucu yeni açıldı, odalar henüz geri yüklenmedi: istemcinin kendiliğinden geri oturması boşa düşmesin
@@ -370,15 +436,27 @@ class MasaSunucu {
   private katilHazir(b: Bag, kod: string) {
     const oda = this.odalar.get(kod);
     if (!oda) return this.hata(b, 'Bu kodla bir masa yok. Kodu kontrol et.', 'oda-yok');
-    const koltuk = oda.oyuncular.find((k) => k.id === b.id);
+    // Koltuğu devredilmiş eski sahibi geri gelirse izleyici olur (koltuk yeni oyuncuda)
+    const devredildi = !oda.devir?.[b.id] && Object.values(oda.devir || {}).includes(b.id);
+    const koltuk = devredildi ? undefined : oda.oyuncular.find((k) => k.id === this.sid(oda, b.id));
     if (koltuk) {
       const dondu = koltuk.bot; // yerine bot oynuyorduysa koltuğunu geri alır
       koltuk.bot = false; koltuk.ad = b.ad;
       this.otur(b, oda);
       return this.yayin(oda, dondu ? [{ t: 'katildi', o: b.id }] : [], dondu);
     }
-    if (oda.asama !== 'lobi') return this.hata(b, 'Bu masada oyun başlamış.', 'basladi');
-    if (oda.oyuncular.length >= OYUNCU_SINIR[oda.tur][1]) return this.hata(b, 'Masa dolu.', 'dolu');
+    if (oda.asama === 'bitti') return this.hata(b, 'Bu masadaki maç bitti. Yeni bir masa kur ya da arkadaşından yeni kod iste.', 'basladi');
+    if (oda.asama !== 'lobi' || devredildi) {
+      // Oyun sürüyor: izleyici olarak oturur; bot koltuğunu kurucu onayıyla alabilir
+      let iz = this.izleyici.get(oda.kod);
+      if (!iz) this.izleyici.set(oda.kod, (iz = new Map()));
+      if (!iz.has(b.id) && iz.size >= 12) return this.hata(b, 'Bu masada çok izleyici var. Oyun bitince yeniden dene.', 'dolu');
+      iz.set(b.id, { ad: b.ad, istek: iz.get(b.id)?.istek });
+      this.otur(b, oda);
+      return this.yayin(oda, [{ t: 'izleyici', o: b.id }], false);
+    }
+    const [, enCokK] = OYUNCU_SINIR[oda.tur];
+    if (oda.oyuncular.length >= enCokK) return this.hata(b, `Masa dolu (${enCokK}/${enCokK}). Kurucudan bir botu çıkarmasını iste ya da yeni masa kur.`, 'dolu');
     oda.oyuncular.push({ id: b.id, uid: b.uid, ad: b.ad, bot: false, takim: oda.tur === 'takim' ? this.azTakim(oda) : undefined, foto: this.d.foto?.(b.uid) });
     this.otur(b, oda);
     this.yayin(oda, [{ t: 'katildi', o: b.id }]);
@@ -392,14 +470,16 @@ class MasaSunucu {
     b.kod = null;
     this.yolla(b, { t: 'cikti' });
     if (!oda) return;
-    const i = oda.oyuncular.findIndex((k) => k.id === b.id);
+    if (this.izleyici.get(oda.kod)?.delete(b.id)) return this.yayin(oda, [], false);
+    const sid = this.sid(oda, b.id);
+    const i = oda.oyuncular.findIndex((k) => k.id === sid);
     if (i < 0) return;
-    const olaylar: Olay[] = [{ t: 'ayrildi', o: b.id }];
+    const olaylar: Olay[] = [{ t: 'ayrildi', o: sid }];
     if (oda.asama === 'lobi' || oda.asama === 'bitti') oda.oyuncular.splice(i, 1);
-    else { oda.oyuncular[i].bot = true; olaylar.push({ t: 'botDevraldi', o: b.id }); }
+    else { oda.oyuncular[i].bot = true; olaylar.push({ t: 'botDevraldi', o: sid }); }
     const insanlar = oda.oyuncular.filter((k) => !k.bot);
     if (!insanlar.length) { this.odaSil(oda.kod); return; }
-    if (oda.kurucu === b.id) oda.kurucu = (insanlar.find((k) => this.baglar.get(oda.kod)?.has(k.id)) || insanlar[0]).id;
+    if (oda.kurucu === sid) oda.kurucu = (insanlar.find((k) => this.bagliSet(oda).has(k.id)) || insanlar[0]).id;
     this.yayin(oda, olaylar);
   }
 
@@ -407,6 +487,7 @@ class MasaSunucu {
     this.odalar.delete(kod);
     for (const b of this.baglar.get(kod)?.values() || []) { b.kod = null; this.yolla(b, { t: 'cikti' }); }
     this.baglar.delete(kod);
+    this.izleyici.delete(kod);
     clearTimeout(this.botZaman.get(kod)); this.botZaman.delete(kod);
     clearTimeout(this.sureZaman.get(kod)); this.sureZaman.delete(kod);
     void this.kaydet(kod);
@@ -459,13 +540,23 @@ class MasaSunucu {
     return true;
   }
 
-  private gorunum(oda: Oda, ben: string): OdaGorunum {
-    const bagli = this.baglar.get(oda.kod);
+  private gorunum(oda: Oda, bagId: string): OdaGorunum {
+    const bagli = this.bagliSet(oda);
+    const sid = this.sid(oda, bagId);
+    const izliyor = !oda.oyuncular.some((k) => k.id === sid);
+    const ben = izliyor ? bagId : sid;
+    const simdi = Date.now();
+    const iz = this.izleyici.get(oda.kod);
     return {
       kod: oda.kod, tur: oda.tur, ayar: oda.ayar, asama: oda.asama, durdu: oda.durdu, kurucu: oda.kurucu, ben,
-      oyuncular: oda.oyuncular.map((k) => ({ id: k.id, ad: k.ad, bot: k.bot || undefined, takim: k.takim, bagli: k.bot || !!bagli?.has(k.id), foto: k.foto })),
+      oyuncular: oda.oyuncular.map((k) => {
+        const kz = !k.bot && !bagli.has(k.id) ? this.kopZ.get(`${oda.kod}:${k.id}`) : undefined;
+        return { id: k.id, ad: k.ad, bot: k.bot || undefined, takim: k.takim, bagli: k.bot || bagli.has(k.id), foto: k.foto, kopSn: kz ? Math.floor((simdi - kz) / 1000) : undefined };
+      }),
+      izliyor: izliyor || undefined,
+      izleyiciler: iz?.size ? [...iz].map(([id, v]) => ({ id, ad: v.ad, istek: v.istek })) : undefined,
       elNo: oda.elNo,
-      oyun: oda.durum != null && oda.asama !== 'lobi' ? MOTORLAR[oda.tur].gorunum(oda.durum, ben) : undefined,
+      oyun: oda.durum != null && oda.asama !== 'lobi' ? MOTORLAR[oda.tur].gorunum(oda.durum, izliyor ? null : ben) : undefined,
       elSonuc: oda.elSonuc, skor: oda.skor, eller: oda.eller.slice(-30), surum: oda.surum,
       geriAl: oda.geri?.kim === ben ? oda.geri.durumlar.length : 0,
     };
@@ -476,7 +567,8 @@ class MasaSunucu {
     oda.surum += 1;
     oda.guncel = Date.now();
     for (const b of this.baglar.get(oda.kod)?.values() || []) {
-      try { this.yolla(b, { t: 'durum', oda: this.gorunum(oda, b.id), olaylar: olaylar.filter((o) => !o.kime || o.kime === b.id) }); }
+      const sid = this.sid(oda, b.id);
+      try { this.yolla(b, { t: 'durum', oda: this.gorunum(oda, b.id), olaylar: olaylar.filter((o) => !o.kime || o.kime === sid) }); }
       catch (e: any) { console.error('[Masa] görünüm hatası:', oda.tur, e?.stack || e); }
     }
     if (kalici) this.kaydetPlanla(oda);

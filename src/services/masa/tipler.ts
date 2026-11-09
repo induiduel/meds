@@ -433,6 +433,8 @@ export interface OyuncuBilgi {
   takim?: Takim;
   bagli: boolean;
   foto?: string;
+  /** Bağlantısı kopalı kaç saniye oldu (yalnız kopuk insan oyuncuda) */
+  kopSn?: number;
 }
 
 export type OdaAsama = 'lobi' | 'oyun' | 'elSonu' | 'bitti';
@@ -461,6 +463,10 @@ export interface OdaGorunum {
   surum: number;
   /** Sırası olan bakanın bu turda geri alabileceği hamle sayısı (per açma / işleme) */
   geriAl?: number;
+  /** Bu istemci koltuksuz izleyici (oyun başladıktan sonra geldi) */
+  izliyor?: boolean;
+  /** İzleyiciler; istek: almak istediği bot koltuğu (kurucu onaylar) */
+  izleyiciler?: { id: string; ad: string; istek?: string }[];
 }
 
 /** İstemci → sunucu */
@@ -481,6 +487,9 @@ export type IstemciMesaj =
   | { t: 'bitir' }
   | { t: 'botDevral'; hedef: string }
   | { t: 'tepki'; e: string }
+  | { t: 'koltukIste'; hedef: string }
+  | { t: 'koltukVer'; kime: string; hedef?: string }
+  | { t: 'koltukRed'; kime: string }
   | { t: 'cik' }
   | { t: 'ping'; z: number };
 

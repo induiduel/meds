@@ -1,10 +1,11 @@
 /** Oyun içi üst çubuk (48 px): menü, oyun adı + kod, el, sıra, skor tablosu, tepki, 2B/3B, ses, bağlantı. */
 import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { BookOpen, Bot, Box, DoorOpen, Flag, Home, Menu, Pause, Play, Smile, Square, Trophy, Vibrate, Volume2, VolumeX } from 'lucide-react';
+import { BookOpen, Bot, Box, DoorOpen, Flag, Home, Menu, Pause, Play, Smile, Square, Trophy, UserPlus, Vibrate, Volume2, VolumeX } from 'lucide-react';
 import { masa } from '../../services/masa/istemci';
 import { OYUN_ADI, TEPKILER, type OdaGorunum, type OkeyGorunum } from '../../services/masa/tipler';
 import { oyuncuAdi, sesCal, tercihYaz, titret, useTercih } from './ortak';
+import { DavetYapragi } from './MasaLobi';
 import { Avatar, Onay, SkorTablo, Yaprak, cezaBilgi, puanYaz, sadeAd, tasMi } from './kabukOrtak';
 
 export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merkezeDon }: {
@@ -26,6 +27,12 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
   const puanim = oda.skor[oda.ben] || 0;
   const kopuklar = oda.oyuncular.filter((o) => !o.bot && !o.bagli && o.id !== oda.ben);
   const hazir = baglanti === 'hazir';
+  const [agAc, setAgAc] = useState(false);
+  const [davet, setDavet] = useState(false);
+  const ag = !hazir ? { sinif: ' is-kopuk', ad: 'Bağlantı yok', ne: 'Sunucuya ulaşılamıyor; yeniden bağlanılıyor. Koltuğun masada duruyor.' }
+    : gecikme > 1000 ? { sinif: ' is-kopuk', ad: `Çok yavaş bağlantı (${gecikme} ms)`, ne: 'Hamlelerin masaya geç ulaşır; taşın bir süre “gönderiliyor” görünebilir. Wi-Fi/mobil veriyi değiştirmeyi dene.' }
+    : gecikme > 400 ? { sinif: ' is-yavas', ad: `Yavaş bağlantı (${gecikme} ms)`, ne: 'Hamleler biraz gecikmeli işlenebilir; oyun sürer.' }
+    : { sinif: '', ad: `Bağlantı iyi (${gecikme} ms)`, ne: 'Hamlelerin anında masaya ulaşıyor.' };
   const yalniz = !oda.oyuncular.some((o) => !o.bot && o.id !== oda.ben);
 
   // Tepki kutusu: dışarı dokununca / Esc ile kapanır
@@ -82,9 +89,10 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
       <button type="button" className="mk-cubuk-dugme is-ses" onClick={() => tercihYaz({ ses: !tercih.ses })} aria-label={tercih.ses ? 'Sesi kapat' : 'Sesi aç'} aria-pressed={tercih.ses}>
         {tercih.ses ? <Volume2 size={20} /> : <VolumeX size={20} />}
       </button>
-      <span className={`mk-baglanti-gosterge${hazir ? (gecikme > 400 ? ' is-yavas' : '') : ' is-kopuk'}`} role="img" aria-label={hazir ? `Bağlantı iyi, gecikme ${gecikme} milisaniye` : 'Bağlantı koptu'}>
+      <button type="button" className={`mk-baglanti-gosterge${ag.sinif}`} onClick={() => setAgAc((x) => !x)} aria-expanded={agAc} aria-label={`${ag.ad}. Açıklama için dokun`}>
         <i />{hazir ? <small>{gecikme} ms</small> : <small>yok</small>}
-      </span>
+      </button>
+      {agAc && <div className={`mk-ag-aciklama${ag.sinif}`} role="status" onClick={() => setAgAc(false)}><b>{ag.ad}</b><span>{ag.ne}</span></div>}
 
       {/* Menü */}
       <Yaprak ac={menu} kapat={() => setMenu(false)} baslik={<>{OYUN_ADI[oda.tur]} <code className="mk-kod-kucuk">{oda.kod}</code></>} tema={oda.ayar.tema}>
@@ -117,6 +125,7 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
             </>
           )}
           <li className="mk-menu-ayrac">Masa</li>
+          <li><button type="button" onClick={sec(() => setDavet(true))}><UserPlus size={20} /><span><b>Arkadaş davet et</b><small>Bildirim gider; oyun sürerken izleyici olarak gelir, bot koltuğunu isteyebilir</small></span></button></li>
           <li><button type="button" onClick={sec(merkezeDon)}><Home size={20} /><span><b>Merkeze dön (oyun sürsün)</b><small>Koltuğun kalır; “Yarım kalan oyunların”dan dönersin</small></span></button></li>
           <li><button type="button" className="is-tehlike" onClick={sec(() => (oda.asama === 'bitti' ? masa.cik() : setOnay('kalk')))}><DoorOpen size={20} /><span><b>Masadan kalk</b><small>{oda.asama === 'bitti' ? 'Maç bitti; merkeze dönersin' : yalniz ? 'Masada başka oyuncu yok: masa kapanır' : 'Yerine bot oynar; kodla geri dönebilirsin'}</small></span></button></li>
         </ul>
@@ -150,6 +159,7 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
         )}
       </Yaprak>
 
+      <DavetYapragi ac={davet} kapat={() => setDavet(false)} kod={oda.kod} masadakiler={oda.oyuncular.map((o) => o.id)} />
       <Onay ac={onay === 'bitir'} kapat={() => setOnay(null)} baslik="Oyunu bitir" onayAd="Oyunu bitir" tehlike onay={() => masa.bitir()}
         metin={oyunda ? 'Maç şimdiki toplam puanlarla biter. Yarım el puanlanmaz.' : 'Maç şimdiki toplam puanlarla biter.'} />
       <Onay ac={onay === 'kalk'} kapat={() => setOnay(null)} baslik="Masadan kalk" onayAd="Masadan kalk" tehlike onay={() => masa.cik()}

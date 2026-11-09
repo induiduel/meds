@@ -142,12 +142,10 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
         <section className="mk-pano">
           <div className="mk-pano-bas">
             <h2>Oyuncular <small>{oda.oyuncular.length}/{enCok}</small></h2>
-            {kurucu && (
-              <div className="mk-pano-dugmeler">
-                <button type="button" className="mk-cip" onClick={() => masa.botEkle()} disabled={dolu}><Bot size={16} /> Bot ekle</button>
-                <button type="button" className="mk-cip" onClick={() => setDavet(true)} disabled={dolu}><UserPlus size={16} /> Arkadaş davet et</button>
-              </div>
-            )}
+            <div className="mk-pano-dugmeler">
+              {kurucu && <button type="button" className="mk-cip" onClick={() => masa.botEkle()} disabled={dolu}><Bot size={16} /> Bot ekle</button>}
+              <button type="button" className="mk-cip" onClick={() => setDavet(true)} disabled={dolu}><UserPlus size={16} /> Arkadaş davet et</button>
+            </div>
           </div>
           {oda.tur === 'takim' ? (
             <div className="mk-takimlar">
@@ -226,7 +224,8 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
             </div>
           )}
 
-          {!tahta && <div className="mk-alan">
+          {/* Pişti kendi kart görünümünü kullanır: Uno/okey temaları burada anlamsız */}
+          {!tahta && oda.tur !== 'pisti' && <div className="mk-alan">
             <span className="mk-alan-ad">Tema</span>
             <div className="mk-temalar" role="radiogroup" aria-label="Tema">
               {temalar.map((t) => (
@@ -307,7 +306,7 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
   );
 }
 
-function DavetYapragi({ ac, kapat, kod, masadakiler }: { ac: boolean; kapat: () => void; kod: string; masadakiler: string[] }) {
+export function DavetYapragi({ ac, kapat, kod, masadakiler }: { ac: boolean; kapat: () => void; kod: string; masadakiler: string[] }) {
   const [liste, setListe] = useState<Arkadas[] | null>(null);
   const [durum, setDurum] = useState<Record<string, 'gidiyor' | 'gitti' | string>>({});
   useEffect(() => {

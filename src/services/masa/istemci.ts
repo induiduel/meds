@@ -23,6 +23,9 @@ export interface MasaDurum {
   gecikme: number;
   /** Sunucudan yanıt beklenen istek (kur, katıl, başlat, hamle…): bekleme ekranı bundan çizilir */
   bekliyor: { ne: string; at: number } | null;
+  /** Kopukken: kaçıncı yeniden deneme ve bir sonrakinin zamanı */
+  deneme: number;
+  sonrakiDeneme: number;
 }
 type OlayDinleyici = (olaylar: Olay[], oda: OdaGorunum, onceki: OdaGorunum | null) => void;
 
@@ -33,14 +36,17 @@ export const masaAdi = (): string => {
   return (auth.currentUser?.displayName || getRememberedStudentInfo().name || 'Oyuncu').split(' ')[0];
 };
 
+/** Elle yazılan kod: Türkçe büyük harf, boşluk/tire atılır (O/0, I/1 karışıklığını sunucu çözer) */
+export const kodDuzelt = (s: string) => s.toLocaleUpperCase('tr-TR').replace(/İ/g, 'I').replace(/[^A-Z0-9]/g, '').slice(0, 5);
+
 /** Yanıtı beklenen istekler ve bekleme ekranındaki açıklaması */
 const BEKLEME: Partial<Record<IstemciMesaj['t'], string>> = {
-  kur: 'Masa kuruluyor', katil: 'Masaya oturuluyor', baslat: 'Taşlar dağıtılıyor', sonrakiEl: 'Yeni el dağıtılıyor', hamle: 'Hamle işleniyor', geriAl: 'Hamle geri alınıyor',
+  kur: 'Masa kuruluyor', katil: 'Masaya oturuluyor', baslat: 'Taşlar dağıtılıyor', sonrakiEl: 'Yeni el dağıtılıyor', hamle: 'Hamlen gönderiliyor', geriAl: 'Hamle geri alınıyor',
 };
 
 class MasaIstemci {
   private ws: WebSocket | null = null;
-  private durum: MasaDurum = { baglanti: 'kapali', ben: '', ad: '', oda: null, hata: null, gecikme: 0, bekliyor: null };
+  private durum: MasaDurum = { baglanti: 'kapali', ben: '', ad: '', oda: null, hata: null, gecikme: 0, bekliyor: null, deneme: 0, sonrakiDeneme: 0 };
   private aboneler = new Set<() => void>();
   private olayAboneleri = new Set<OlayDinleyici>();
   private deneme = 0;
@@ -54,6 +60,16 @@ class MasaIstemci {
   private sonKod = '';
   /** Dışarıdan sınama için sahte kimlik (yalnız MEDS_MASA_TEST=1 sunucuda geçer): ?masatest=<ad> */
   private testAd = (() => { try { return new URLSearchParams(window.location.search).get('masatest') || ''; } catch { return ''; } })();
+
+  /** Yalnız ?masatest kipinde sınama kancası: yapay gecikme (ms) ve belirli süre bağlanamama */
+  private testGecikme = 0;
+  private testEngel = 0;
+  constructor() {
+    if (this.testAd && typeof window !== 'undefined') (window as any).__masaTest = {
+      gecikme: (ms: number) => { this.testGecikme = Math.max(0, ms | 0); },
+      kopar: (sn: number) => { this.testEngel = Date.now() + sn * 1000; try { this.ws?.close(); } catch { /* yok */ } },
+    };
+  }
 
   abone = (fn: () => void) => { this.aboneler.add(fn); return () => { this.aboneler.delete(fn); }; };
   oku = () => this.durum;
@@ -72,6 +88,7 @@ class MasaIstemci {
     this.istekli = true;
     if (this.ws && (this.ws.readyState === WebSocket.OPEN || this.ws.readyState === WebSocket.CONNECTING)) return;
     clearTimeout(this.yeniden);
+    if (Date.now() < this.testEngel) return this.tekrarPlanla();
     this.yaz({ baglanti: this.deneme ? 'koptu' : 'baglaniyor' });
     let ws: WebSocket;
     try { ws = new WebSocket(this.adres()); } catch { return this.tekrarPlanla(); }
@@ -83,15 +100,19 @@ class MasaIstemci {
       if (this.ws !== ws) return;
       this.yolla({ t: 'gir', jeton, ad: this.testAd || masaAdi() });
     };
-    ws.onmessage = (e) => { let m: SunucuMesaj; try { m = JSON.parse(e.data); } catch { return; } this.al(m); };
+    ws.onmessage = (e) => {
+      let m: SunucuMesaj; try { m = JSON.parse(e.data); } catch { return; }
+      if (this.testGecikme) setTimeout(() => this.al(m), this.testGecikme / 2); else this.al(m);
+    };
     ws.onclose = () => { if (this.ws !== ws) return; this.ws = null; clearInterval(this.nabiz); if (this.istekli) this.tekrarPlanla(); else this.yaz({ baglanti: 'kapali' }); };
     ws.onerror = () => { /* onclose izler */ };
   }
 
   private tekrarPlanla() {
-    this.yaz({ baglanti: 'koptu' });
     clearTimeout(this.yeniden);
-    this.yeniden = setTimeout(() => this.baglan(), Math.min(8000, 600 * 2 ** this.deneme++));
+    const bekle = Math.min(8000, 600 * 2 ** this.deneme++);
+    this.yaz({ baglanti: 'koptu', deneme: this.deneme, sonrakiDeneme: Date.now() + bekle });
+    this.yeniden = setTimeout(() => this.baglan(), bekle);
   }
 
   /** Sayfadan çıkarken: soket kapanır, koltuk sunucuda kalır (geri dönülebilir) */
@@ -106,7 +127,11 @@ class MasaIstemci {
   /** Kimlik doğrulanmadan (girdi gelmeden) sunucu gir/ping dışında mesaj işlemez: yalnız hazırken gönderilir */
   private yolla(m: IstemciMesaj) {
     const hazir = m.t === 'gir' || m.t === 'ping' || this.durum.baglanti === 'hazir';
-    if (hazir && this.ws?.readyState === WebSocket.OPEN) { this.ws.send(JSON.stringify(m)); return true; }
+    if (hazir && this.ws?.readyState === WebSocket.OPEN) {
+      const ws = this.ws, veri = JSON.stringify(m);
+      if (this.testGecikme) setTimeout(() => { if (ws.readyState === WebSocket.OPEN) ws.send(veri); }, this.testGecikme / 2); else ws.send(veri);
+      return true;
+    }
     return false;
   }
 
@@ -132,9 +157,9 @@ class MasaIstemci {
     switch (m.t) {
       case 'girdi': {
         this.deneme = 0;
-        this.yaz({ baglanti: 'hazir', ben: m.ben, ad: m.ad });
+        this.yaz({ baglanti: 'hazir', ben: m.ben, ad: m.ad, deneme: 0, sonrakiDeneme: 0 });
         clearInterval(this.nabiz);
-        this.nabiz = setInterval(() => this.yolla({ t: 'ping', z: Date.now() }), 20_000);
+        this.nabiz = setInterval(() => this.yolla({ t: 'ping', z: Date.now() }), 8_000);
         this.yolla({ t: 'ping', z: Date.now() });
         const kuyruk = this.bekleyen.length ? this.bekleyen : this.sonKod ? [{ t: 'katil', kod: this.sonKod } as IstemciMesaj] : [];
         this.bekleyen = [];
@@ -170,6 +195,9 @@ class MasaIstemci {
     }
   }
 
+  /** Kopukken "Şimdi dene": beklemeyi atlar */
+  simdiDene() { if (this.durum.baglanti === 'koptu') { clearTimeout(this.yeniden); this.baglan(); } }
+
   hataSil() { clearTimeout(this.hataZaman); this.yaz({ hata: null }); }
 
   /** Bağlıysa hemen, değilse bağlanınca gönderir (yalnız kur/katıl kuyruğa alınır) */
@@ -187,7 +215,10 @@ class MasaIstemci {
   }
 
   kur(tur: OyunTur, ayar?: Partial<OdaAyar>) { this.gonder({ t: 'kur', tur, ayar }); }
-  katil(kod: string) { this.gonder({ t: 'katil', kod: kod.trim().toUpperCase() }); }
+  katil(kod: string) { this.gonder({ t: 'katil', kod: kodDuzelt(kod) }); }
+  koltukIste(hedef: string) { this.gonder({ t: 'koltukIste', hedef }); }
+  koltukVer(kime: string, hedef?: string) { this.gonder({ t: 'koltukVer', kime, hedef }); }
+  koltukRed(kime: string) { this.gonder({ t: 'koltukRed', kime }); }
   hamle(h: Hamle) { this.gonder({ t: 'hamle', h }); }
   geriAl() { this.gonder({ t: 'geriAl' }); }
   ayar(ayar: Partial<OdaAyar>) { this.gonder({ t: 'ayar', ayar }); }

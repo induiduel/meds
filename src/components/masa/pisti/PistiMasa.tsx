@@ -164,7 +164,7 @@ function Masa({ oda, oyun }: { oda: OdaGorunum; oyun: PistiGorunum }) {
       {benim && (
         <div className={`pm-ben${oyun.sira === ben && !oyun.bitti ? ' is-sira' : ''}`} ref={(el) => { if (el) koltuk.current.set(ben, el); }}>
           <span className="pm-ad">{siraBende ? 'Sıra sende' : 'Sen'}{oyun.esli ? ` · Takım ${benim.takim}` : ''}</span>
-          <span className="pm-sayac">{benim.aldigi} kart{benim.pisti ? ` · ${benim.pisti} pişti` : ''}</span>
+          <span className="pm-sayac">Topladığın {benim.aldigi} kart{benim.pisti ? ` · ${benim.pisti} pişti` : ''}</span>
           {asistan && siraBende && (
             <button type="button" className="pm-ipucu" onClick={ipucu} aria-label="İpucu"><Lightbulb size={16} aria-hidden="true" /><span>İpucu</span></button>
           )}
@@ -203,8 +203,8 @@ function Koltuk({ p, ad, yer, sira, ortak, refAl }: { p: PistiOyuncuGorunum; ad:
       <div className="pm-koltuk-el" aria-hidden="true">
         {Array.from({ length: p.kartSayisi }, (_, i) => <KartArka key={i} style={{ transform: `rotate(${(i - (p.kartSayisi - 1) / 2) * 9}deg)` }} />)}
       </div>
-      <span className="pm-ad">{ad}{ortak ? ' (ortak)' : ''}</span>
-      <span className="pm-sayac">{p.aldigi} kart{p.pisti ? ` · ${p.pisti} pişti` : ''}</span>
+      <span className="pm-ad">{ad.replace(/\s*\(bot\)$/i, '')}{/\(bot\)$/i.test(ad) ? ' · bot' : ''}{ortak ? ' · ortağın' : ''}</span>
+      <span className="pm-sayac">Topladığı {p.aldigi} kart{p.pisti ? ` · ${p.pisti} pişti` : ''}</span>
     </div>
   );
 }

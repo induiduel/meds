@@ -432,3 +432,14 @@
 .om-duzenserit { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); z-index: 30; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center;
   max-width: calc(100% - 16px); padding: 6px 10px; border-radius: 12px; background: rgba(15, 20, 25, 0.86); color: #fff; font-size: 13px; }
 .om-duzenserit .om-dugme { min-height: 34px; }
+
+/* Dar ekran eylem çubuğu (H525): 3–4 satıra yığılmasın; tek satır, simge üstte kısa yazı, yatay kaydırılır, durum yazısı kesilmez */
+.om-kok--dar .om-eylem-dugmeler { flex-wrap: nowrap; min-height: 0; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; padding: 2px 2px 4px; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
+.om-kok--dar .om-eylem-dugmeler::-webkit-scrollbar { display: none; }
+.om-kok--dar .om-dugme { flex: none; flex-direction: column; justify-content: center; gap: 1px; min-width: 58px; height: 50px; padding: 2px 6px; font-size: 10.5px; line-height: 1.1; }
+.om-kok--dar .om-dugme--birincil { order: -1; }
+.om-kok--dar .om-eylem-durum { white-space: normal; text-align: center; font-size: 13px; }
+/* Durum yazısı ("Sıra sende: taş çek") düğmeler çoğalınca "Sıra…" diye kesilmesin: düğmeler alt satıra geçer */
+.om-eylem-bilgi { min-width: 150px; }
+.om-eylem-durum { white-space: normal; line-height: 1.25; }
+.om-eylem-dugmeler { flex: 0 1 auto; flex-wrap: wrap; }

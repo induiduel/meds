@@ -5,8 +5,10 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { Pause, Play, RefreshCw, WifiOff } from 'lucide-react';
-import { masa, useMasa } from '../../services/masa/istemci';
+import { Pause, Play, RefreshCw } from 'lucide-react';
+import { kodDuzelt, masa, useMasa } from '../../services/masa/istemci';
+import { auth } from '../../services/auth';
+import { IzleyiciSerit, KopukKatman, RakipBaglanti } from './MasaBaglanti';
 import { OYUN_ADI, type OdaAyar, type OdaGorunum, type OyunTur } from '../../services/masa/tipler';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { azHareket, sesCal } from './ortak';
@@ -30,6 +32,8 @@ const XoxMasa = React.lazy(() => import('./xox/XoxMasa'));
 const MasaKurallar = React.lazy(() => import('./MasaKurallar'));
 
 const SON_KEY = 'medsoru_masa_son';
+/** Bağlantıyla gelen (henüz giriş yapmamış olabilir) kişinin masa kodu: girişten sonra masaya döner */
+const DAVET_KEY = 'medsoru_masa_davet';
 const KOD = /^[A-Z0-9]{5}$/;
 /** "Merkeze dön (oyun sürsün)": koltuk sunucuda kalır, bu sekme kendiliğinden geri oturmaz */
 let ayrik = false;
@@ -49,7 +53,9 @@ export default function MasaView() {
   // Bağlantı ömrü + adresle / yarım kalan masaya kendiliğinden oturma
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
-    const kod = (p.get('masa') || '').trim().toUpperCase();
+    let kod = kodDuzelt(p.get('masa') || '');
+    if (!kod) { try { kod = sessionStorage.getItem(DAVET_KEY) || ''; } catch { /* yok */ } }
+    if (KOD.test(kod)) { try { sessionStorage.setItem(DAVET_KEY, kod); } catch { /* yok */ } }
     if (p.has('masa')) {
       p.delete('masa');
       const s = p.toString();
@@ -61,12 +67,22 @@ export default function MasaView() {
     else if (ayrik) { /* kullanıcı masa seçene dek bağlanma */ }
     else if (KOD.test(son)) { sessiz.current = true; masa.katil(son); }
     else masa.baglan();
-    return () => masa.kapat();
+    // Giriş yapılmadan açıldıysa: giriş tamamlanınca bağlantı yenilenir ve davet edilen masaya oturulur
+    const girisYok = !auth.currentUser;
+    const kapat = auth.onAuthStateChanged((k) => {
+      if (!k || !girisYok) return;
+      let d = '';
+      try { d = sessionStorage.getItem(DAVET_KEY) || ''; } catch { /* yok */ }
+      setKalici(null); masa.kapat(); ayrik = false;
+      if (KOD.test(d)) masa.katil(d); else masa.baglan();
+    });
+    return () => { kapat(); masa.kapat(); };
   }, []);
 
   // Sunucu hataları
   useEffect(() => {
     if (!hata) return;
+    if (hata.kod === 'oda-yok' || hata.kod === 'basladi' || hata.kod === 'dolu') { try { sessionStorage.removeItem(DAVET_KEY); } catch { /* yok */ } }
     if (sessiz.current && (hata.kod === 'oda-yok' || hata.kod === 'basladi' || hata.kod === 'dolu')) {
       sessiz.current = false;
       try { localStorage.removeItem(SON_KEY); } catch { /* yok */ }
@@ -82,6 +98,7 @@ export default function MasaView() {
     if (!oda) return;
     sessiz.current = false; ayrik = false;
     setKalici(null);
+    try { sessionStorage.removeItem(DAVET_KEY); } catch { /* yok */ }
     // Bota karşı: masa kurulunca botlar eklenir ve oyun hemen başlar
     if (botPlan.current && oda.asama === 'lobi' && oda.kurucu === oda.ben && oda.oyuncular.length === 1) {
       const n = botPlan.current;
@@ -100,7 +117,10 @@ export default function MasaView() {
         setUcanlar((l) => [...l.slice(-7), { id, e: o.e as string, ad: o.o === yeni.ben ? 'Sen' : ad(o.o), x: 12 + ((id * 37) % 70) }]);
         setTimeout(() => setUcanlar((l) => l.filter((u) => u.id !== id)), 2200);
         if (o.o !== yeni.ben) sesCal('tepki');
-      } else if (o.t === 'katildi' && o.o !== yeni.ben) bildir(`${ad(o.o)} masaya ${yeni.asama === 'lobi' ? 'katıldı' : 'geri döndü'}.`, 'iyi');
+      } else if (o.t === 'katildi' && o.o !== yeni.ben && !olaylar.some((x) => x.t === 'koltukAldi')) bildir(`${ad(o.o)} masaya ${yeni.asama === 'lobi' ? 'katıldı' : 'geri döndü'}.`, 'iyi');
+      else if (o.t === 'izleyici') bildir(o.o === yeni.ben ? 'Oyun başlamış: izleyici olarak girdin. Bot koltuğunu isteyebilirsin.' : `${ad(o.o) === 'Oyuncu' ? (yeni.izleyiciler?.find((i) => i.id === o.o)?.ad || 'Biri') : ad(o.o)} masayı izliyor.`, 'iyi', 4500);
+      else if (o.t === 'koltukIstek') { bildir(`${yeni.izleyiciler?.find((i) => i.id === o.o)?.ad || 'Bir izleyici'} oynamak için koltuk istiyor.`, 'bilgi', 5000); sesCal('tepki'); }
+      else if (o.t === 'koltukAldi') bildir(o.o === yeni.ben ? 'Koltuğa oturdun; sıra gelince oynarsın.' : `${ad(o.o)} koltuğu devraldı.`, 'iyi');
       else if (o.t === 'botDevraldi') bildir(`${ad(o.o)} yerine bot oynuyor.`);
       else if (o.t === 'ayrildi' && o.o !== yeni.ben && !olaylar.some((x) => x.t === 'botDevraldi' && x.o === o.o)) bildir(`${ad(o.o)} masadan ayrıldı.`);
       else if (o.t === 'durdu') bildir(o.o === yeni.ben ? 'Oyunu durdurdun.' : 'Kurucu oyunu durdurdu.');
@@ -151,11 +171,11 @@ export default function MasaView() {
 function MasaBekleme() {
   const { bekliyor, baglanti, oda } = useMasa();
   const [gorun, setGorun] = useState(false);
-  const hamle = bekliyor?.ne === 'Hamle işleniyor' || bekliyor?.ne === 'Hamle geri alınıyor';
+  const hamle = bekliyor?.ne === 'Hamlen gönderiliyor' || bekliyor?.ne === 'Hamle geri alınıyor';
   useEffect(() => {
     setGorun(false);
     if (!bekliyor) return;
-    const t = setTimeout(() => setGorun(true), hamle ? 700 : 250);
+    const t = setTimeout(() => setGorun(true), hamle ? 350 : 250);
     return () => clearTimeout(t);
   }, [bekliyor?.at]); // eslint-disable-line react-hooks/exhaustive-deps
   const [sure, setSure] = useState(0);
@@ -191,7 +211,8 @@ function MasaOyun({ oda, baglanti, gecikme, ucanlar, kurallarAc, istatAc, merkez
   const gorulen = useRef(0);
   const sonucVar = !!oda.elSonuc;
 
-  useEffect(() => { lockScroll(); return unlockScroll; }, []);
+  // Oyun sırasında sitenin ağ/sorun hapı masanın üst çubuğunu örtmesin (bağlantıyı masa kendi gösterir)
+  useEffect(() => { lockScroll(); document.documentElement.classList.add('mk-oyunda'); return () => { unlockScroll(); document.documentElement.classList.remove('mk-oyunda'); }; }, []);
 
   useEffect(() => {
     setElAcik(0); setMacAcik(false);
@@ -208,11 +229,13 @@ function MasaOyun({ oda, baglanti, gecikme, ucanlar, kurallarAc, istatAc, merkez
   }, [oda.kod, oda.asama, oda.elNo, sonucVar]);
 
   const kurucu = oda.kurucu === oda.ben;
+  const { bekliyor: bekleyen } = useMasa();
+  const bekliyor = bekleyen?.ne === 'Hamlen gönderiliyor';
   const Masa = oda.tur === 'pisti' ? PistiMasa : oda.tur === 'domino' ? DominoMasa : oda.tur === 'uno' ? UnoMasa : oda.tur === 'go' ? GoMasa : oda.tur === 'cizgi' ? CizgiMasa : oda.tur === 'xox' ? XoxMasa : OkeyMasa;
   const az = azHareket();
 
   return createPortal(
-    <div className="mk mk-kabuk" data-tema={oda.ayar.tema} data-tur={oda.tur}>
+    <div className={`mk mk-kabuk${oda.izliyor ? ' is-izleyici' : ''}${bekliyor ? ' is-gonderiliyor' : ''}`} data-tema={oda.ayar.tema} data-tur={oda.tur}>
       <MasaUstCubuk oda={oda} baglanti={baglanti} gecikme={gecikme} kurallarAc={kurallarAc} merkezeDon={merkezeDon} />
       <div className="mk-sahne">
         <div className="mk-masa-yuva">
@@ -229,13 +252,11 @@ function MasaOyun({ oda, baglanti, gecikme, ucanlar, kurallarAc, istatAc, merkez
           </HataSiniri>
         </div>
 
-        <AnimatePresence>
-          {baglanti !== 'hazir' && (
-            <motion.div key="kopuk" className="mk-serit" role="status" initial={{ y: -40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -40, opacity: 0 }} transition={{ duration: 0.22 }}>
-              <WifiOff size={16} /> Yeniden bağlanılıyor…
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div className="mk-durum-yigin">
+          <IzleyiciSerit oda={oda} />
+          <RakipBaglanti oda={oda} />
+        </div>
+        <KopukKatman />
 
         <AnimatePresence>
           {oda.durdu && oda.asama === 'oyun' && (

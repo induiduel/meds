@@ -1,18 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 685,
-  "baslik": "Taş Masası: Go, Çizgi Yarışı ve XOX geldi",
+  "onem": 686,
+  "baslik": "Taş Masası: arkadaşla kolay katılım ve bağlantı göstergeleri",
   "maddeler": [
-    "Tahta oyunları: Oyunlar › Taş Masası’nda yeni “Tahta oyunları” bölümü; Go, Çizgi Yarışı ve XOX’u bota karşı ya da arkadaşınla oynayabilirsin.",
-    "Go: ahşap tahta (9×9, 13×13, 19×19), dokun → onayla ile taş koyma, esir kâsesi, ko ve süperko, handikap (2–9 taş), komi, süreli oyun (ana süre + byo-yomi), sayımda ölü taş işaretleme.",
-    "Çizgi Yarışı: 32/64/96/128 karelik yol; zar at, çizgini kare kare ilerlet, yüz yüze gelince iki zarla kapışma; son 4 tur ve gerileme izi tahtada görünür.",
-    "XOX: 3×3’ten 6×6’ya; büyük tahtalarda dörtlü/beşli dizi, elle çizilen X/O ve kazanan dizi çizgisi."
+    "İzleyici: oyun başlamış masaya bağlantıyla ya da kodla gelen arkadaşın izleyici olarak girer; bot oynayan koltuğu ister, kurucu “Onayla” deyince o koltuktan oynar.",
+    "Kolay katılım: davet bağlantısıyla gelip önce giriş yapan kişi girişten sonra masaya kendiliğinden oturur; kodda O/0, I/1 karışıklığı ve küçük harf sorun olmaz; oyun sırasında menüden de arkadaş davet edilir.",
+    "Bağlantı: üst çubukta yavaş (sarı) / çok yavaş (kırmızı) ağ göstergesi ve açıklaması; kopunca “Bağlantı koptu, n. deneme” katmanı, geri sayım ve “Şimdi dene”; hamle yanıtı gecikince “Hamlen gönderiliyor”.",
+    "Rakip koptuğunda süresiyle “bağlantı bekleniyor” rozeti; sıra ondaysa herkese bekleme kartı, kurucuya “Bot devralsın” düğmesi.",
+    "Düzeltmeler: Remi/Kastet düzenlemede elden konan taş dokununca ıstakaya döner; dar ekranda eylem düğmeleri tek satır ve durum yazısı kesilmez; Pişti lobisinde anlamsız tema kaldırıldı, koltuk adları ve “Topladığı n kart” düzeldi; oyun sırasında sitenin sorun hapı üst çubuğu örtmez."
   ],
   "eklenen": [
-    "Go, Çizgi Yarışı ve XOX tahta oyunları (kurallar sekmesiyle)"
+    "Taş Masası izleyici ve koltuk devri",
+    "Bağlantı/gecikme göstergeleri"
   ],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Remi/Kastet taslak taşı ele dönmüyordu",
+    "Dar ekranda eylem çubuğu kalabalığı"
+  ],
   "silinen": [],
   "yenilikler": []
 }
