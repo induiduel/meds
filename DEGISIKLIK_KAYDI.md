@@ -1,3 +1,9 @@
+## 2026-11-09 — Tablet düzen taraması: örnek soru satırında rozet/yazar üst üste binmesi (H514, dağıtılmadı)
+- 14 rota × 6 boyut (700/768/820 dikey, 1024/1180 yatay, 1024×1366) `sayfa_tarama.mjs` ile tarandı: yatay taşma yok.
+  Tek gerçek kusur `/sorular/ornek` ders listesinde "Hoca üslubu · N yeni soru" rozetinin yazar adına binmesiydi (iki span aynı `grid-area: who`).
+- `KazanimSorulariView.tsx`: tek `.ks-lesson-who` (yazar · rozet); `v12/secondary.css`: alan sarar. `vite build` yapıldı; commit/dağıtım yok (onem artırılmadı).
+- Bilinen ve kabul edilmiş: 1180 px yatayda Bugün sağ sütununda "KRONOME…" kısaltması (H343 kararı).
+
 ## 2026-11-06 (7) — Sesli ders yakınlık sınırı %80–%140 (onem 658)
 - `CanliDersDers.tsx` `Z_MIN/Z_MAX` (0,8/1,4): düğmeler ±0,1, kayıtlı değer sınır dışıysa 1; `PdfDocView` `zoomMin/zoomMax` (kıstırma + tekerlek; varsayılan 0,5–4 öteki ekranlarda).
 

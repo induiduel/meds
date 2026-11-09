@@ -1,15 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 671,
-  "baslik": "Başarım ve bakım güncellemesi",
+  "onem": 672,
+  "baslik": "Tablet görünüm düzeltmesi",
   "maddeler": [
-    "Sunucu eski derleme parçalarını kendiliğinden temizliyor; site dosyaları daha hızlı sunuluyor.",
-    "Oracle sunucusunda 50 GB gereksiz derleme önbelleği temizlendi."
+    "Örnek sorular ders listesinde \"Hoca üslubu\" rozeti tablet ve bilgisayarda öğretim üyesi adının üstüne biniyordu; artık yan yana, sığmazsa alt satıra sarıyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Çıkmış sorular: Parkinson tremoru ve aksonal nöropati sorularının yılı 2025-2026 olarak düzeltildi."
+    "Örnek sorular: ders satırındaki \"Hoca üslubu · N yeni soru\" rozeti ile öğretim üyesi adı üst üste binmiyor."
   ],
   "silinen": [],
   "yenilikler": []

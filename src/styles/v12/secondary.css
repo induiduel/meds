@@ -212,7 +212,7 @@
     & .o12-ks-list .ks-lesson-no { grid-area: no; align-self: start; padding-top: 2px; font: 500 12px var(--font-mono); color: var(--color-ink-3); }
     & .o12-ks-list .ks-lesson-t { grid-area: t; font-size: 14px; font-weight: 500; letter-spacing: 0; line-height: 1.35;
       display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
-    & .o12-ks-list .ks-lesson-who { grid-area: who; font-size: 12.5px; }
+    & .o12-ks-list .ks-lesson-who { grid-area: who; font-size: 12.5px; white-space: normal; line-height: 1.3; } /* H514: yazar + hoca rozeti tek alanda, sığmazsa sarar */
     & .o12-ks-list .hk-eyebrow { grid-area: disc; justify-self: start; max-width: 100%; font-size: 12px; font-weight: 500; }
     & .o12-ks-list .ks-lesson-bar { grid-area: bar; margin: 0; height: 4px; border-radius: 4px; background: var(--color-field); }
     & .o12-ks-list .ks-lesson-bar > span { border-radius: 4px; background: var(--color-accent); }

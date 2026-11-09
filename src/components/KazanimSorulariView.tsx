@@ -906,8 +906,12 @@ export const KazanimSorulariView: React.FC<{
                   <span className="ks-lesson-no hk-num">{String(x.sira).padStart(2, '0')}</span>
                 </span>
                 <span className="ks-lesson-t">{x.konu}</span>
-                {hocaSayi(x.id) > 0 && <span className="ks-lesson-who" style={{ color: 'var(--color-accent, currentColor)', fontWeight: 600 }}>Hoca üslubu · {hocaSayi(x.id)} yeni soru</span>}
-                <span className="ks-lesson-who">{x.ogretim_uyesi}</span>
+                {/* H514: tek "who" ızgara alanına iki ayrı span yazılınca tablet/masaüstü satırında rozet yazar adının üstüne biniyordu; tek satırda birleşik */}
+                <span className="ks-lesson-who">
+                  {x.ogretim_uyesi}
+                  {hocaSayi(x.id) > 0 && x.ogretim_uyesi ? ' · ' : ''}
+                  {hocaSayi(x.id) > 0 && <b style={{ color: 'var(--color-accent, currentColor)', fontWeight: 600 }}>Hoca üslubu · {hocaSayi(x.id)} yeni soru</b>}
+                </span>
                 <span className="ks-lesson-bar" aria-hidden><span style={{ width: `${yuzde}%` }} /></span>
                 <span className="ks-lesson-foot">
                   {n ? <><b className="hk-num">{n}/{x.soru_sayisi}</b> çözüldü · {d} doğru</> : <>{x.soru_sayisi} soru · {x.kazanim} kazanım</>}
