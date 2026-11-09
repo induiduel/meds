@@ -156,7 +156,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
 
         <span className="ui-row-main" style={{ flex: 1, minWidth: 0, paddingRight: '12px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <b style={{ fontSize: '15px' }}>WhatsApp Günlük Tekrarı</b>
+            <b style={{ fontSize: '15px' }}>WhatsApp günlük tekrarı</b>
             {serverStatus?.configured && (
               <span
                 style={{

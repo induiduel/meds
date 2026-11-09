@@ -1,30 +1,87 @@
-/* v15 · Profil ve ayarlar (ProfileV12 › v15 dalı): profil kartı + gruplu ayar satırları; renkler palet tokenından,
-   satır simgesinin tonu bölüm kimliği (iOS Ayarlar düzeni) */
+/* v15 · Ayarlar (ProfileV12 › v15 dalı). Telefonda liste → bölüm (içeri girilir); kabın kendi genişliği ≥ 860 px olunca
+   (.is-genis, ResizeObserver) liste solda sabit, bölüm sağda. Renkler palet tokenından; satır simgesinin tonu bölüm kimliği.
+   Ölçü pencereden değil kaptan: yan ray, bölünmüş ekran ve iPad pencere kipinde pencere genişliği yanıltır. */
 .pf15 { container-type: inline-size; display: flex; flex-direction: column; gap: 10px; max-width: 720px; width: 100%; margin-inline: auto; }
+.pf15-menu { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+/* yükseklik sınırlı sütunda kartlar büzülmesin (overflow:hidden liste tek satıra çöküyordu), sütun kaysın */
+.pf15-menu > * { flex: none; }
+.pf15.is-genis { max-width: 1180px; display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 18px; align-items: start; }
+.pf15.is-genis > .pf15-menu { position: sticky; top: calc(var(--sh-top-h, 60px) + 8px); max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--sh-top-h, 60px) - 28px);
+  overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding: 0 4px 8px 0; }
+.pf15.is-genis > .pf15-panel { max-width: 780px; }
+
 .pf15-kart { display: flex; align-items: center; gap: 14px; padding: 16px; }
 .pf15-av { flex: none; }
 .pf15-kt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
-.pf15-kt b { font-size: 1.15rem; color: var(--color-ink); }
+.pf15-kt b { font-size: 1.15rem; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pf15-kt span, .pf15-kt small { color: var(--color-ink-3); font-size: .85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pf15-btn { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; }
+.pf15-btn { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; }
 .pf15-btn.is-pri { background: var(--color-accent); color: var(--color-on-accent); border-color: transparent; }
 .pf15-btn svg { width: 15px; height: 15px; }
-.pf15-h { margin: 10px 4px 0; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
-.pf15-liste { list-style: none; margin: 0; padding: 2px 0; overflow: hidden; }
-.pf15-liste li + li .pf15-s { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
-.pf15-liste li + li .pf15-s { border-top-left-radius: 0; }
-.pf15-s { width: 100%; display: flex; align-items: center; gap: 12px; padding: 11px 14px; min-height: 58px; border: 0; background: none; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
+.pf15-btn:focus-visible, .pf15-s:focus-visible, .pf15-tema button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+/* geniş düzende kart dar sütunda: düğme alta iner, ad kırpılmaz */
+.pf15.is-genis .pf15-kart { flex-wrap: wrap; padding: 14px; gap: 12px; }
+.pf15.is-genis .pf15-kart .pf15-btn { width: 100%; justify-content: center; }
+@container (max-width: 300px) { .pf15-kart { flex-wrap: wrap; } .pf15-kart .pf15-btn { width: 100%; justify-content: center; } }
+
+/* hızlı satır: arama + tema (en sık değişen ayar bir dokunuşta) */
+.pf15-hizli { display: flex; align-items: center; gap: 8px; }
+.pf15-ara { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 6px 0 12px; border-radius: 12px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-3); }
+.pf15-ara:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+.pf15-ara svg { flex: none; width: 17px; height: 17px; }
+/* 16 px: iOS odakta sayfayı yakınlaştırmasın */
+.pf15-ara input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: none; color: var(--color-ink); font: inherit; font-size: 16px; appearance: none; }
+.pf15-ara input::-webkit-search-cancel-button { display: none; }
+.pf15-ara input::placeholder { color: var(--color-ink-3); }
+.pf15-ara button { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border: 0; border-radius: 9px; background: none; color: var(--color-ink-3); cursor: pointer; }
+.pf15-ara button:hover { background: var(--color-field); color: var(--color-ink); }
+.pf15-tema { flex: none; display: inline-flex; padding: 3px; gap: 2px; height: 44px; border-radius: 12px; background: var(--color-field); }
+.pf15-tema button { width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 9px; background: none; color: var(--color-ink-3); cursor: pointer; transition: background-color .15s, color .15s; }
+.pf15-tema button svg { width: 17px; height: 17px; }
+.pf15-tema button:hover { color: var(--color-ink); }
+.pf15-tema button.is-on { background: var(--color-white); color: var(--color-accent); box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 14%, transparent); }
+
+.pf15-h { margin: 8px 4px 0; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+.pf15-liste { list-style: none; margin: 0; padding: 0; overflow: hidden; }
+.pf15-liste li + li .pf15-s::before { content: ''; position: absolute; top: 0; right: 0; left: 58px; height: 1px; background: var(--color-line-soft, var(--color-line)); }
+.pf15-s { position: relative; width: 100%; display: flex; align-items: center; gap: 12px; padding: 10px 14px; min-height: 58px; border: 0; background: none; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; transition: background-color .12s; }
 .pf15-s:hover { background: var(--color-field); }
-.pf15-ic { flex: none; width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; background: var(--t); color: var(--color-white); }
+.pf15-s:active { background: var(--color-accent-soft); }
+.pf15-s.is-on { background: var(--color-accent-soft); }
+.pf15-s.is-on .pf15-st b { color: var(--color-accent); }
+.pf15-s.is-on .pf15-ok { color: var(--color-accent); }
+.pf15-s.is-tehlike .pf15-st b { color: var(--color-bad, #c62828); }
+.pf15-ic { flex: none; width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; background: var(--t); color: #fff; }
 .pf15-ic svg { width: 17px; height: 17px; }
 .pf15-st { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .pf15-st b { font-weight: 600; }
 .pf15-st small { color: var(--color-ink-3); font-size: .8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pf15.is-genis .pf15-st small { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; }
 .pf15-ok { flex: none; width: 17px; height: 17px; color: var(--color-ink-3); }
-/* alt ekranlarda v12 panelleri: v15 yazı tipi, eş aralıklı rakam yerine tablo rakamı */
-.pf15-panel { display: flex; flex-direction: column; gap: 12px; }
+.pf15-bos { margin: 0; padding: 22px 16px; text-align: center; color: var(--color-ink-3); font-size: .9rem; line-height: 1.5; }
+
+/* bölüm: v12 panelleri v15 kart diliyle (yuvarlak köşe, tablo rakamı), tek tip anahtar ve dokunma ölçüsü */
+.pf15-panel { display: flex; flex-direction: column; gap: 12px; min-width: 0; animation: pf15-gir .18s ease-out both; }
 :root[data-v15='on'][data-design] .pf15 .pf15-panel.u12-pf, :root[data-v15='on'][data-design] .pf15 .pf15-panel .u12-panel { --font-mono: var(--font-sans); font-variant-numeric: tabular-nums; }
 :root[data-v15='on'] .pf15-panel .u12-panel { border-radius: 16px; }
+:root[data-v15='on'] .pf15-panel {
+  /* anahtar: Tam ekran bölümündeki .kre-tgl ile aynı ölçü ve görünüm (eskiden iki ayrı anahtar vardı) */
+  & .u12-switch { width: 44px; height: 26px; background: var(--color-line); box-shadow: none; }
+  & .u12-switch-t { top: 3px; left: 3px; width: 20px; height: 20px; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .25); }
+  & .u12-switch[aria-checked='true'] { background: var(--color-accent); box-shadow: none; }
+  & .u12-switch[aria-checked='true'] .u12-switch-t { transform: translateX(18px); background: #fff; }
+  /* 44 px dokunma alanı: görünen ölçü değişmeden */
+  & :is(.u12-switch, .kre-tgl)::after { content: ''; position: absolute; inset: -9px -4px; }
+  & .u12-seg > button { min-height: 36px; }
+  /* başlığın hemen altındaki segment panel kenarına yapışmasın (Erişilebilirlik › Hareket) */
+  & .u12-panel > .u12-seg { margin: 12px 16px 0; align-self: flex-start; }
+  & .u12-panel > .u12-foot { margin: 0; padding: 10px 16px 12px; }
+  /* ayar satırı: açıklama uzun, denetim geniş olunca denetim tam satıra iner; yarım sığıp taşmaz */
+  & .u12-srow > :is(.u12-seg, .u12-swatches) { max-width: 100%; }
+  & .u12-field input { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .pf15-panel { animation: none; } }
+:root[data-motion='reduced'] .pf15-panel { animation: none; }
 
 /* G04 profil özeti: 4'lü stat + haftalık etkinlik */
 .pf15-oz { display: flex; flex-direction: column; gap: 10px; }
@@ -40,3 +97,5 @@
 .pf15-oz-cubuk i { width: 100%; max-width: 28px; border-radius: 6px 6px 2px 2px; background: var(--color-accent-soft); }
 .pf15-oz-cubuk span.is-on i { background: var(--color-accent); }
 .pf15-oz-cubuk small { font-size: .7rem; color: var(--color-ink-3); }
+
+@keyframes pf15-gir { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }

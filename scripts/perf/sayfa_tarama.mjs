@@ -79,6 +79,8 @@ for (const vp of VPS) {
     // açık kalan tur/diyalogları kapat
     await ev(`document.querySelectorAll('[aria-label="Kapat"],[aria-label="Turu kapat"],[aria-label="Atla"]').forEach(b => { if (b.closest('[class*=tur],[class*=tour]')) b.click(); }); 1`);
     await sleep(300);
+    // PRE: denetimden önce çalışacak sayfa içi ifade (ör. kutlama kartını geç, bir düğmeye bas); PRE_WAIT ms beklenir
+    if (process.env.PRE) { await ev(process.env.PRE); await sleep(+(process.env.PRE_WAIT || 1200)); }
     const a = await ev(AUDIT);
     const name = `${vp.tag}_${route.replace(/[/?=&]+/g, '_').replace(/^_|_$/g, '') || 'root'}`;
     const shot = await send('Page.captureScreenshot', { format: 'jpeg', quality: 60, captureBeyondViewport: FULL, ...(FULL ? { clip: { x: 0, y: 0, width: vp.w, height: Math.min(a?.h || vp.h, 4000), scale: 1 } } : {}) });

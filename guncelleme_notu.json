@@ -1,18 +1,42 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 674,
-  "baslik": "Açılış ekranı sunucu beklerken takılmıyor",
+  "onem": 675,
+  "baslik": "Ayarlar yeniden düzenlendi; sesli ders ekran düzeltmeleri",
   "maddeler": [
-    "Site güncellenirken sunucu 1-2 dakika yeniden başlıyor; bu sırada açılan sayfa artık sessizce açılış ekranında kalmıyor: \"Sunucu başlatılıyor, yeniden deneniyor\" yazısı çıkıyor ve sunucu hazır olunca sayfa kendiliğinden açılıyor.",
-    "İnternet yokken açılış ekranı bunu söylüyor; bağlantı gelince devam ediyor. Beklemek istemeyen için Yenile düğmesi var."
+    "Ayarlar: satırlar yedi gruba ayrıldı (Profilim, İçeriklerim, Görünüm ve okuma, Uygulama, Hesap ve veri, Yardım, Oturum); üstte \"Ayarlarda ara\" ve tek dokunuşla tema seçimi.",
+    "Ayarlar (tablet yatay ve bilgisayar): liste solda sabit kalır, seçtiğin bölüm sağda açılır.",
+    "Ayarlar: Çevrimdışı kullanım, Cihaza yükle, Yardım merkezi, Öğren turu ve Güncelleme günlüğü doğrudan listede; anahtarlar her bölümde aynı görünümde ve daha kolay dokunuluyor.",
+    "Üst bar: bölünmüş ekranda ve yan menü açıkken sayfa başlığı artık kırpılmıyor.",
+    "Sesli ders: Oynatıcı seçeneklerinde Hız satırı hizalandı; ders listesinde süzgeç hapları sıralama düğmesinin altına girmiyor."
   ],
   "eklenen": [
-    "Açılış ekranında sunucu/ağ durum yazısı ve kendiliğinden yeniden deneme"
+    "Ayarlarda arama ve hızlı tema seçici",
+    "Geniş ekranda iki bölmeli Ayarlar"
   ],
-  "degisen": [],
+  "degisen": [
+    "Ayarlar grupları ve simgeleri",
+    "Ayar anahtarlarının görünümü"
+  ],
   "duzeltilen": [
-    "Dağıtım sırasında açılan sayfanın açılış ekranında takılı kalması"
+    "Üst bar başlığının kırpılması (H517)",
+    "Oynatıcı çekmecesinde Hız hizası (H519)",
+    "Sesli ders listesinde hapların üst üste binmesi (H520)"
   ],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "Yeni Ayarlar düzeni",
+      "nerede": {
+        "ad": "Menü › Ayarlar",
+        "yol": "/ayarlar"
+      },
+      "amac": "Aradığın ayarı daha hızlı bulmak: mantıklı gruplar, arama ve geniş ekranda yan yana düzen.",
+      "islevler": [
+        "Ayarlarda ara: \"tema\", \"şifre\", \"bildirim\" gibi bir sözcük yaz",
+        "Tema: güneş · kitap · ay simgeleriyle tek dokunuş",
+        "Tablet yatay ve bilgisayarda liste solda, bölüm sağda"
+      ],
+      "ipucu": "Görünüm ve tasarım bölümünde palet, yazı boyutu ve soru kartı ayarları duruyor."
+    }
+  ]
 }

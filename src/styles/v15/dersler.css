@@ -405,3 +405,8 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 :root[data-v15='on'] .dd15-sifirla .v15-btn.is-tehlike { color: var(--color-bad); border-color: var(--color-bad); }
 .dd15-sifirla .cdl-sifirla-onay { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 12px; background: color-mix(in srgb, var(--color-bad) 10%, transparent); }
 .dd15-sifirla .cdl-sifirla-onay small { font-size: 12.5px; color: var(--color-ink-2); }
+
+/* H520: süzgeç hapları satırı (.o15-cipler.v15-hscroll) kenardan kenara kaysın diye iki yana eksi kenar boşluğuyla taşar;
+   ama sağında sıralama/arama düğmesi varken bu taşma düğmenin ALTINA giriyordu: telefonda "Arşiv" hapının üstüne sıralama
+   simgesi biniyor, tablette son hap yarım kesiliyordu. Sağında kardeş varken sağ taşma kapatılır (solma maskesi kalır). */
+:root[data-v15='on'] .o15-ust > .o15-cipler.v15-hscroll:not(:last-child) { margin-right: 0; }

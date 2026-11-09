@@ -284,9 +284,12 @@
 .cd15-bl button.is-on .cd15-bl-no { background: var(--color-accent); color: var(--color-on-accent); }
 .cd15-bl-ad { flex: 1; min-width: 0; font-size: .9rem; line-height: 1.35; }
 .cd15-bl-t { flex: none; font-size: .78rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
-.cd15-sat.cd15-sat-blok { flex-direction: column; align-items: stretch; gap: 8px; }
-.cd15-sat-blok .cd15-hizlar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.cd15-sat-blok > .cd15-sat-t { padding: 0; margin: 0; }
+/* H519: bu üç kural kök öneksizdi (0,2,0); iç içe `:root[data-v15] { & .cd15-sat { align-items: center } }` (0,2,1) kazanıp
+   "Hız" başlığını ve hız haplarını ortalıyor, başlık öteki satırlara göre içeriden başlıyordu. Önek eklendi. */
+:root[data-v15='on'] .cd15-sat.cd15-sat-blok { flex-direction: column; align-items: stretch; gap: 8px; cursor: default; }
+:root[data-v15='on'] .cd15-sat-blok .cd15-hizlar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); min-width: 0; }
+:root[data-v15='on'] .cd15-sat-blok > .cd15-sat-t { flex: none; padding: 0; margin: 0; }
+:root[data-v15='on'] .cd15-sheet .cd-sec select { font-weight: 500; }
 
 
 /* S04 Slayt + altyazı: PDF tüm alanı alır, okunan cümle altta şeritte */

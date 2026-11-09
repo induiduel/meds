@@ -80,9 +80,9 @@ export const UserDataSyncRow: React.FC = () => {
       const res = await restoreUserDataFromDatabase();
       if (res.success) {
         refreshStats();
-        toast.success('Veriler Geri Yüklendi', 'Veritabanındaki tüm verileriniz yerel depolama ile birleştirildi.');
+        toast.success('Veriler geri yüklendi', 'Veritabanındaki tüm verileriniz yerel depolama ile birleştirildi.');
       } else {
-        toast.error('Geri Yükleme Başarısız', res.error || 'Veritabanında kayıtlı yedek bulunamadı.');
+        toast.error('Geri yükleme başarısız', res.error || 'Veritabanında kayıtlı yedek bulunamadı.');
       }
     } catch (err: any) {
       toast.error('Hata', err.message);
@@ -103,7 +103,7 @@ export const UserDataSyncRow: React.FC = () => {
             <ShieldCheck strokeWidth={2.1} />
           </span>
           <span className="ui-row-main">
-            <b>Veritabanı Eşitleme & Yedekleme</b>
+            <b>Eşitleme ve yedekleme</b>
             <span>
               {backupAt
                 ? `Son yedek: ${new Date(backupAt).toLocaleString('tr-TR', { dateStyle: 'short', timeStyle: 'short' })}`
@@ -119,16 +119,16 @@ export const UserDataSyncRow: React.FC = () => {
             disabled={busyRestore || busyBackup}
             title="Veritabanındaki verileri indir ve birleştir"
           >
-            <Download className="w-3.5 h-3.5" /> Geri Yükle
+            <Download className="w-3.5 h-3.5" /> Geri yükle
           </button>
           <button
             type="button"
             className={`ui-btn is-sm is-primary ${busyBackup ? 'is-loading' : ''}`}
             onClick={handleBackup}
             disabled={busyBackup || busyRestore}
-            title="Tüm verileri sunucuya ve Supabase veritabanına kaydet"
+            title="Tüm verileri sunucuya kaydet"
           >
-            <CloudUpload className="w-3.5 h-3.5" /> Veritabanına Yedekle
+            <CloudUpload className="w-3.5 h-3.5" /> Şimdi yedekle
           </button>
         </div>
       </div>

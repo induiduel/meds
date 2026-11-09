@@ -142,6 +142,21 @@
     & .v15-search-l { display: block; flex: 1; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     & .v15-search-k { display: inline-block; }
   }
+  /* H517: üst bar ölçüleri pencere genişliğine bağlıydı; yan ray açıkken (1024–1280) 260 px arama kutusu, bölünmüş
+     ekranda (600–839) tam "Kurul N" çipi + yükle düğmesi başlığa ~100 px bırakıyor, "Sesli dersler" → "Sesli …" kırpılıyordu.
+     Geniş ekranda önce arama kutusu daralır (araç grubu başlıktan 1000 kat istekli küçülür); dar tablette çip kısalır,
+     yükle düğmesi hesap menüsünde kalır, başlık telefondaki gibi iki satıra sarabilir. */
+  @media (min-width: 1024px) {
+    & .v15-top-tools { flex: 0 1000 auto; min-width: 0; }
+    & .v15-top-tools > * { flex: none; }
+    & .v15-top-tools > .v15-search { flex: 0 1 260px; width: auto; min-width: 44px; }
+  }
+  @media (min-width: 600px) and (max-width: 839px) {
+    & .v15-chip.v15-only-tab { display: none; }
+    & .v15-chip-k.v15-only-phone { display: inline-flex; justify-content: center; min-width: 40px; height: 34px; padding: 0 8px; margin: 0 2px; font-size: 12.5px; }
+    & .v15-top-tools > .v15-ib.v15-not-phone { display: none; }
+    & .v15-top-h { white-space: normal; font-size: 18px; line-height: 1.2; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow-wrap: normal; overflow: hidden; }
+  }
 
   /* =========================================================================
    * Alt sekme çubuğu (<600)

@@ -30,6 +30,14 @@ import {
   GraduationCap,
   Maximize,
   Type,
+  Clapperboard,
+  CloudDownload,
+  LifeBuoy,
+  Moon,
+  ScrollText,
+  Search,
+  Sun,
+  Trophy,
 } from 'lucide-react';
 import { AppUser, updateUserProfileData, setOrUpdateAccountPassword } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
@@ -412,17 +420,19 @@ const CONTRIB_SEGS: { id: ContribKind; label: string; note: string; empty: strin
  * ---------------------------------------------------------------------------------------------- */
 
 export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
-  const v15 = useAppearance().v15;
+  const look = useAppearance();
+  const v15 = look.v15;
   const profil = useProfil();
   const [view, setView0] = useState<View>(() => {
     const h = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
     if (v15 && !h) return 'menu';
     return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : h === 'erisim' ? 'erisim' : h === 'veri' ? 'veri' : h === 'tamekran' ? 'tamekran' : h === 'yazi' ? 'yazi' : 'genel';
   });
+  const genisRef = useRef(false);
   // v15: her bölüm kendi ekranı; adres #bolum, üst bardaki Geri ve tarayıcı geri listeye (#'siz) döner
   const setView = (v: View) => {
     setView0(v);
-    if (v15) { try { history.pushState(history.state, '', `${location.pathname}${v === 'menu' ? '' : `#${v}`}`); } catch { /* yok */ } }
+    if (v15) { try { history[genisRef.current ? 'replaceState' : 'pushState'](history.state, '', `${location.pathname}${v === 'menu' ? '' : `#${v}`}`); } catch { /* yok */ } }
   };
   useEffect(() => {
     if (!v15) return;
@@ -430,8 +440,26 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
     window.addEventListener('popstate', f); window.addEventListener('hashchange', f);
     return () => { window.removeEventListener('popstate', f); window.removeEventListener('hashchange', f); };
   }, [v15]);
-  const BOLUM_AD: Record<View, string> = { menu: 'Profil ve ayarlar', genel: 'Genel bakış', katki: 'Katkılarım', kayit: 'Kaydettiklerim', hesap: 'Hesap', veri: 'Veriler ve gizlilik', erisim: 'Erişilebilirlik', gorunum: 'Görünüm ve tasarım', tamekran: 'Tam ekran ve kısayollar', yazi: 'Yazı ve okuma' };
-  useV15Baslik(v15 ? (view === 'menu' ? { baslik: 'Profil ve ayarlar' } : { baslik: BOLUM_AD[view], alt: 'Profil ve ayarlar', geri: '/ayarlar' }) : null);
+  const BOLUM_AD: Record<View, string> = { menu: 'Ayarlar', genel: 'Genel bakış', katki: 'Katkılarım', kayit: 'Kaydettiklerim', hesap: 'Hesap', veri: 'Veriler ve gizlilik', erisim: 'Erişilebilirlik', gorunum: 'Görünüm ve tasarım', tamekran: 'Tam ekran ve kısayollar', yazi: 'Yazı ve okuma' };
+  // v15 geniş düzen (tablet yatay / masaüstü): liste solda sabit, bölüm sağda. Ölçü pencereden değil kabın kendi genişliğinden
+  // alınır (yan ray, bölünmüş ekran ve iPad pencere kipinde pencere genişliği yanıltır).
+  const kokRef = useRef<HTMLDivElement>(null);
+  const [genis, setGenis] = useState(false);
+  useEffect(() => {
+    // .pf15 dar düzende 720 px ile sınırlı; kullanılabilir alan üst kaptan ölçülür
+    const el = kokRef.current?.parentElement;
+    if (!v15 || !el || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(([e]) => setGenis(e.contentRect.width >= 860));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [v15]);
+  // geniş düzende liste hep açık olduğundan "menu" yerine ilk bölüm gösterilir
+  genisRef.current = genis;
+  const gosterilen: View = genis && view === 'menu' ? 'genel' : view;
+  // telefon üst barı dar: tek kelimelik uzun başlık kırpılmasın diye hece sınırına görünmez tire (H518)
+  const ustBaslik = (v: View) => (v === 'erisim' ? 'Erişile\u00ADbilirlik' : BOLUM_AD[v]);
+  useV15Baslik(v15 ? (view === 'menu' || genis ? { baslik: 'Ayarlar', ...(genis ? { alt: BOLUM_AD[gosterilen] } : {}) } : { baslik: ustBaslik(view), alt: 'Ayarlar', geri: '/ayarlar' }) : null);
+  const [ara, setAra] = useState('');
   const ed = useProfileEditor(currentUser, onUpdateUser);
   const [cropFile, setCropFile] = useState<File | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -461,18 +489,18 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
 
   const paneller = (
     <>
-      {view === 'genel' && <OverviewPanel currentUser={currentUser} questions={questions} />}
-      {view === 'katki' && <ContribPanel currentUser={currentUser} questions={questions} onOpenAuth={onOpenAuth} />}
-      {view === 'kayit' && <SavedPanel questions={questions} />}
-      {view === 'hesap' && (
+      {gosterilen === 'genel' && <OverviewPanel currentUser={currentUser} questions={questions} />}
+      {gosterilen === 'katki' && <ContribPanel currentUser={currentUser} questions={questions} onOpenAuth={onOpenAuth} />}
+      {gosterilen === 'kayit' && <SavedPanel questions={questions} />}
+      {gosterilen === 'hesap' && (
         <AccountPanel currentUser={currentUser} isAdmin={isAdmin} ed={ed} nameRef={nameRef} photo={photo} onPickPhoto={pickPhoto}
-          onRemovePhoto={() => ed.save({ photoURL: '' })} onOpenAuth={onOpenAuth} onLogout={onLogout} onOpenAdmin={onOpenAdmin} onAppearance={() => setView('gorunum')} />
+          onRemovePhoto={() => ed.save({ photoURL: '' })} onOpenAuth={onOpenAuth} onLogout={onLogout} onOpenAdmin={onOpenAdmin} onAppearance={() => setView('gorunum')} sade={v15} />
       )}
-      {view === 'veri' && <DataPanel currentUser={currentUser} onOpenOffline={onOpenOffline} />}
-      {view === 'erisim' && <ErisimPanel />}
-      {view === 'gorunum' && <AppearancePanel />}
-      {view === 'tamekran' && <TamEkranAyarV15 />}
-      {view === 'yazi' && <YaziAyarV15 />}
+      {gosterilen === 'veri' && <DataPanel currentUser={currentUser} onOpenOffline={onOpenOffline} />}
+      {gosterilen === 'erisim' && <ErisimPanel />}
+      {gosterilen === 'gorunum' && <AppearancePanel />}
+      {gosterilen === 'tamekran' && <TamEkranAyarV15 />}
+      {gosterilen === 'yazi' && <YaziAyarV15 />}
     </>
   );
   const dosyaGirdi = (
@@ -488,69 +516,113 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
   );
 
   if (v15) {
-    const satir = (id: View | string, Icon: React.ElementType, ad: string, alt: string, git: () => void, ton = 'var(--color-accent)') => (
-      <li key={id}>
-        <button type="button" className="pf15-s" onClick={git}>
-          <span className="pf15-ic" style={{ '--t': ton } as React.CSSProperties}><Icon aria-hidden /></span>
-          <span className="pf15-st"><b>{ad}</b><small>{alt}</small></span>
-          <ChevronRight aria-hidden className="pf15-ok" />
-        </button>
-      </li>
-    );
     const sayfa = (r: Parameters<typeof pathFor>[0]) => () => navigateTo(pathFor(r));
+    const kurulu = pwaService.getState().isInstalled;
+    type Satir = { id: string; ic: React.ElementType; ad: string; alt: string; git: () => void; ton: string; ek?: string; dis?: boolean; tehlike?: boolean };
+    const bolum = (id: Tab | 'gorunum' | 'tamekran' | 'yazi', ic: React.ElementType, alt: string, ton: string, ek = ''): Satir => ({ id, ic, ad: BOLUM_AD[id], alt, git: () => setView(id), ton, ek });
+    // Sınıflandırma: önce "ben", sonra görünüş, uygulamanın davranışı, hesap/veri, yardım. `ek` yalnız aramada eşleşir.
+    const gruplar: { ad: string; satirlar: (Satir | false | null | undefined)[] }[] = [
+      { ad: 'Profilim', satirlar: [
+        bolum('genel', BarChart3, 'Sayıların, son etkinlik, devam eden dersler', '#0A84FF', 'istatistik özet'),
+        currentUser && { id: 'okul', ic: GraduationCap, ad: 'Okul ve hedef', alt: profil.tamam ? [profil.universite, profil.hedef ? `${profil.hedef.ad} hedef` : ''].filter(Boolean).join(' · ') : 'Üniversite, sınıf, kurul, günlük hedef', git: profilKurulumAc, ton: '#5E5CE6', dis: true },
+        { id: 'basarim', ic: Trophy, ad: 'Başarımlar ve ATP', alt: 'Hedefler, rozetler, kıdem', git: sayfa('basarimlar'), ton: '#34C759', ek: 'puan ödül', dis: true },
+      ] },
+      { ad: 'İçeriklerim', satirlar: [
+        bolum('katki', MessageSquare, 'Eklediğin sorular, parçalar, şıklar, yorumlar', '#30B0C7'),
+        bolum('kayit', Bookmark, 'Kaydettiğin sorular ve kartlar', '#FF9F0A', 'favori yıldız'),
+      ] },
+      { ad: 'Görünüm ve okuma', satirlar: [
+        bolum('gorunum', PaletteIcon, 'Tema, palet, arayüz ölçeği, yazı boyutu, soru kartı', '#AF52DE', 'koyu açık sarı renk motif zemin süzgeç etiket hareket'),
+        bolum('yazi', Type, 'Yazı tipi, kalınlık, aralık, vurgu rengi, sesli ders metni', '#FF9F0A', 'font okuma'),
+        bolum('erisim', Accessibility, 'Hareket, kontrast, satır aralığı, odak halkası', '#5E5CE6', 'animasyon disleksi klavye'),
+      ] },
+      { ad: 'Uygulama', satirlar: [
+        { id: 'bildirim', ic: Bell, ad: 'Bildirim tercihleri', alt: 'Tür başına aç/kapa, sessiz saatler', git: () => navigateTo('/bildirimler?gorunum=tercih'), ton: '#FF3B30', dis: true },
+        bolum('tamekran', Maximize, 'Tam ekran, ekran kararmasın, yatayda yan yana, klavye', '#0A84FF', 'kısayol sesli ders'),
+        { id: 'cevrimdisi', ic: CloudDownload, ad: 'Çevrimdışı kullanım', alt: 'Soruları, sözlüğü ve kartları cihaza indir', git: onOpenOffline, ton: '#30B0C7', ek: 'internetsiz indir', dis: true },
+        !kurulu && { id: 'kur', ic: Smartphone, ad: 'Cihaza yükle', alt: 'Ana ekrana ekle; tarayıcı çubuğu olmadan açılır', git: () => pwaService.promptInstall(), ton: '#1f6f62', ek: 'pwa uygulama ana ekran', dis: true },
+      ] },
+      { ad: 'Hesap ve veri', satirlar: [
+        bolum('hesap', Lock, currentUser ? 'Ad, fotoğraf, şifre, oturum' : 'Giriş yap; katkıların adınla görünsün', '#64748B', 'parola e-posta öğrenci numarası'),
+        bolum('veri', Database, 'Eşitleme, yedek, verilerimi indir, ilerlemeyi sıfırla', '#FF3B30', 'whatsapp not gizlilik json'),
+      ] },
+      { ad: 'Yardım', satirlar: [
+        { id: 'yardim', ic: LifeBuoy, ad: 'Yardım merkezi', alt: 'Sık sorulanlar ve kullanım ipuçları', git: sayfa('yardim'), ton: '#0A84FF', dis: true },
+        { id: 'tur', ic: Compass, ad: 'Tanıtım turu', alt: 'Sayfaları ve özellikleri yeniden gez', git: startWelcomeTour, ton: '#32ADE6', dis: true },
+        { id: 'tanitim', ic: Clapperboard, ad: 'Tanıtım videoları', alt: 'Sesli ders, soru çözücü, oyunlar ve daha fazlası', git: () => window.dispatchEvent(new CustomEvent('medsoru:tanitim')), ton: '#1f6f62', dis: true },
+        { id: 'ogrentur', ic: BookOpen, ad: 'Öğren turu', alt: 'Ders kitaplığı ve etkileşim türleri', git: onLearnTour, ton: '#AF52DE', dis: true },
+        { id: 'surum', ic: ScrollText, ad: 'Güncelleme günlüğü', alt: 'Sürüm notları ve yenilikler', git: () => navigateTo('/guncellemeler'), ton: '#64748B', dis: true },
+      ] },
+      { ad: 'Oturum', satirlar: [
+        isAdmin && { id: 'yonetim', ic: ShieldCheck, ad: 'Yönetim konsolu', alt: 'Taslaklar, moderasyon, sistem', git: onOpenAdmin, ton: '#64748B', dis: true },
+        currentUser && { id: 'cikis', ic: LogOut, ad: 'Çıkış yap', alt: 'Eşitlenmiş ilerlemen hesabında kalır', git: onLogout, ton: '#FF3B30', tehlike: true },
+      ] },
+    ];
+    const katla = (t: string) => t.toLocaleLowerCase('tr-TR').replace(/ı/g, 'i').normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const q = katla(ara.trim());
+    const suzulmus = gruplar
+      .map((g) => ({ ad: g.ad, satirlar: (g.satirlar.filter(Boolean) as Satir[]).filter((r) => !q || katla(`${r.ad} ${r.alt} ${r.ek || ''} ${g.ad}`).includes(q)) }))
+      .filter((g) => g.satirlar.length);
+    const liste = (
+      <nav className="pf15-menu" aria-label="Ayar bölümleri">
+        <section className="pf15-kart v15-card">
+          <div className="u12-av-wrap pf15-av">
+            <span className="u12-av" aria-hidden="true">{photo ? <img src={photo} alt="" /> : currentUser ? initialsOf(currentUser) : <UserRound />}</span>
+            {currentUser && <button type="button" className="u12-av-edit" aria-label="Profil fotoğrafını değiştir" onClick={pickPhoto}><Pencil aria-hidden /></button>}
+          </div>
+          <div className="pf15-kt">
+            <b>{shownName}</b>
+            <span>{currentUser ? currentUser.email : 'Giriş yapmadın'}</span>
+            {currentUser?.studentNumber && <small>Öğrenci no {currentUser.studentNumber}</small>}
+            {profil.universite && <small>{[profil.universite, profil.sinif ? `${profil.sinif}. sınıf` : '', profil.kurul ? `Kurul ${profil.kurul}` : ''].filter(Boolean).join(' · ')}</small>}
+          </div>
+          {currentUser
+            ? <button type="button" className="pf15-btn" onClick={() => { setView('hesap'); setFocusName(true); }}><Pencil aria-hidden />Düzenle</button>
+            : <button type="button" className="pf15-btn is-pri" onClick={onOpenAuth}><LogIn aria-hidden />Giriş yap</button>}
+        </section>
+
+        {currentUser && !genis && !q && <ProfilOzetV15 />}
+
+        <div className="pf15-hizli">
+          <label className="pf15-ara">
+            <Search aria-hidden />
+            <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Ayarlarda ara" aria-label="Ayarlarda ara" enterKeyHint="search" autoComplete="off" />
+            {ara && <button type="button" aria-label="Aramayı temizle" onClick={() => setAra('')}><X aria-hidden /></button>}
+          </label>
+          <div className="pf15-tema" role="radiogroup" aria-label="Tema">
+            {([['light', Sun], ['sepia', BookOpen], ['dark', Moon]] as [ThemeMode, React.ElementType][]).map(([m, Ic]) => (
+              <button key={m} type="button" role="radio" aria-checked={look.mode === m} aria-label={`${MODE_LABELS[m]} tema`} title={`${MODE_LABELS[m]} tema`} className={look.mode === m ? 'is-on' : undefined} onClick={() => look.set({ mode: m })}><Ic aria-hidden /></button>
+            ))}
+          </div>
+        </div>
+
+        {suzulmus.map((g) => (
+          <React.Fragment key={g.ad}>
+            <h2 className="pf15-h">{g.ad}</h2>
+            <ul className="pf15-liste v15-card">
+              {g.satirlar.map((r) => {
+                const secili = genis && r.id === gosterilen;
+                return (
+                  <li key={r.id}>
+                    <button type="button" className={`pf15-s${secili ? ' is-on' : ''}${r.tehlike ? ' is-tehlike' : ''}`} aria-current={secili ? 'page' : undefined} onClick={r.git}>
+                      <span className="pf15-ic" style={{ '--t': r.ton } as React.CSSProperties}><r.ic aria-hidden /></span>
+                      <span className="pf15-st"><b>{r.ad}</b><small>{r.alt}</small></span>
+                      {!r.tehlike && <ChevronRight aria-hidden className="pf15-ok" />}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </React.Fragment>
+        ))}
+        {!suzulmus.length && <p className="pf15-bos" role="status">“{ara.trim()}” ile eşleşen ayar yok. Tema, yazı, bildirim, şifre gibi bir sözcük dene.</p>}
+      </nav>
+    );
+    const bolme = <div className="pf15-panel u12-pf" key={gosterilen}>{genis && gosterilen === 'genel' && currentUser && <ProfilOzetV15 />}{paneller}</div>;
     return (
-      <div className="pf15">
-        <h1 className="sr-only">{BOLUM_AD[view]}</h1>
-        {view === 'menu' ? (
-          <>
-            <section className="pf15-kart v15-card">
-              <div className="u12-av-wrap pf15-av">
-                <span className="u12-av" aria-hidden="true">{photo ? <img src={photo} alt="" /> : currentUser ? initialsOf(currentUser) : <UserRound />}</span>
-                {currentUser && <button type="button" className="u12-av-edit" aria-label="Profil fotoğrafını değiştir" onClick={pickPhoto}><Pencil aria-hidden /></button>}
-              </div>
-              <div className="pf15-kt">
-                <b>{shownName}</b>
-                <span>{currentUser ? currentUser.email : 'Giriş yapmadın'}</span>
-                {currentUser?.studentNumber && <small>Öğrenci no {currentUser.studentNumber}</small>}
-                {profil.universite && <small>{[profil.universite, profil.sinif ? `${profil.sinif}. sınıf` : '', profil.kurul ? `Kurul ${profil.kurul}` : ''].filter(Boolean).join(' · ')}</small>}
-              </div>
-              {currentUser
-                ? <button type="button" className="pf15-btn" onClick={() => { setView('hesap'); setFocusName(true); }}><Pencil aria-hidden />Düzenle</button>
-                : <button type="button" className="pf15-btn is-pri" onClick={onOpenAuth}><LogIn aria-hidden />Giriş yap</button>}
-            </section>
-
-            {currentUser && <ProfilOzetV15 />}
-            <h2 className="pf15-h">Ben</h2>
-            <ul className="pf15-liste v15-card">
-              {satir('genel', BarChart3, 'Genel bakış', 'Sayıların, son etkinlik, devam eden dersler', () => setView('genel'), '#0A84FF')}
-              {satir('katki', MessageSquare, 'Katkılarım', 'Eklediğin sorular, parçalar, şıklar, yorumlar', () => setView('katki'), '#30B0C7')}
-              {currentUser && satir('okul', GraduationCap, 'Okul ve hedef', profil.tamam ? [profil.universite, profil.hedef ? `${profil.hedef.ad} hedef` : ''].filter(Boolean).join(' · ') : 'Üniversite, sınıf, kurul, günlük hedef', profilKurulumAc, '#5E5CE6')}
-              {satir('kayit', Bookmark, 'Kaydettiklerim', 'Kaydettiğin sorular ve kartlar', () => setView('kayit'), '#FF9F0A')}
-              {satir('basarim', ThumbsUp, 'Başarımlar ve ATP', 'Hedefler, rozetler, kıdem', sayfa('basarimlar'), '#34C759')}
-            </ul>
-
-            <h2 className="pf15-h">Ayarlar</h2>
-            <ul className="pf15-liste v15-card">
-              {satir('gorunum', PaletteIcon, 'Görünüm ve tasarım', 'Tasarım, tema, palet, yazı boyutu', () => setView('gorunum'), '#AF52DE')}
-              {satir('yazi', Type, 'Yazı ve okuma', 'Yazı tipi, kalınlık, aralık, vurgu rengi, sesli ders', () => setView('yazi'), '#FF9F0A')}
-              {satir('bildirim', Bell, 'Bildirim tercihleri', 'Tür başına aç/kapa, sessiz saatler', () => navigateTo('/bildirimler?gorunum=tercih'), '#FF3B30')}
-              {satir('tamekran', Maximize, 'Tam ekran ve kısayollar', 'Tam ekran, ekran kararmasın, klavye', () => setView('tamekran'), '#0A84FF')}
-              {satir('erisim', Accessibility, 'Erişilebilirlik', 'Hareket, kontrast, satır aralığı, odak', () => setView('erisim'), '#5E5CE6')}
-              {satir('hesap', Lock, 'Hesap', 'Ad, fotoğraf, şifre, oturum', () => setView('hesap'), '#64748B')}
-              {satir('veri', Database, 'Veriler ve gizlilik', 'Eşitleme, bildirimler, indir, sıfırla', () => setView('veri'), '#FF3B30')}
-            </ul>
-
-            <h2 className="pf15-h">Diğer</h2>
-            <ul className="pf15-liste v15-card">
-              {satir('tur', Compass, 'Tanıtım turu', 'Sayfaları ve özellikleri yeniden gez', startWelcomeTour, '#32ADE6')}
-              {satir('tanitim', Compass, 'Tanıtım videoları', 'Sesli ders, soru çözücü, oyunlar ve daha fazlası', () => window.dispatchEvent(new CustomEvent('medsoru:tanitim')), '#1f6f62')}
-              {isAdmin && satir('yonetim', ShieldCheck, 'Yönetim konsolu', 'Taslaklar, moderasyon, sistem', onOpenAdmin, '#64748B')}
-              {currentUser && satir('cikis', LogOut, 'Çıkış yap', 'Eşitlenmiş ilerlemen hesabında kalır', onLogout, '#FF3B30')}
-            </ul>
-          </>
-        ) : (
-          <div className="pf15-panel u12-pf">{paneller}</div>
-        )}
+      <div className={`pf15${genis ? ' is-genis' : ''}`} ref={kokRef}>
+        <h1 className="sr-only">{BOLUM_AD[gosterilen]}</h1>
+        {genis ? <>{liste}{bolme}</> : view === 'menu' ? liste : bolme}
         {dosyaGirdi}
       </div>
     );
@@ -1016,7 +1088,9 @@ const AccountPanel: React.FC<{
   onLogout: () => void;
   onOpenAdmin: () => void;
   onAppearance: () => void;
-}> = ({ currentUser, isAdmin, ed, nameRef, photo, onPickPhoto, onRemovePhoto, onOpenAuth, onLogout, onOpenAdmin, onAppearance }) => {
+  /** v15: gezinme satırları (görünüm, yükle, turlar, yönetim) Ayarlar listesinde; burada yinelenmez */
+  sade?: boolean;
+}> = ({ currentUser, isAdmin, ed, nameRef, photo, onPickPhoto, onRemovePhoto, onOpenAuth, onLogout, onOpenAdmin, onAppearance, sade }) => {
   const nameErr = !!ed.error && /isim|ad/i.test(ed.error);
   const [newPass, setNewPass] = useState('');
   const [passBusy, setPassBusy] = useState(false);
@@ -1164,7 +1238,9 @@ const AccountPanel: React.FC<{
         </section>
       )}
 
+      {(!sade || currentUser) && (
       <section className="u12-panel">
+        {!sade && (<>
         <NavRow icon={PaletteIcon} title="Görünüm ve tasarım (Net v12)" sub="Tasarım, tema, palet, yoğunluk, yazı, süzgeç modu" onClick={onAppearance} />
         {!pwaService.getState().isInstalled && (
           <NavRow icon={Smartphone} title="Uygulamayı cihaza yükle (Tam Ekran PWA)" sub="iOS Safari, iOS Chrome, Android ve bilgisayarda ana ekrana ekle" onClick={() => pwaService.promptInstall()} />
@@ -1173,12 +1249,14 @@ const AccountPanel: React.FC<{
         <NavRow icon={Compass} title="Tanıtım videoları" sub="Sesli ders, soru çözücü, oyunlar ve daha fazlası" onClick={() => window.dispatchEvent(new CustomEvent('medsoru:tanitim'))} />
         <NavRow icon={Compass} title="Öğren turu" sub="Ders kitaplığı ve etkileşim türleri" onClick={onLearnTour} />
         {isAdmin && <NavRow icon={ShieldCheck} title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
+        </>)}
         {currentUser && (
           <SetRow id="u12-oturum" title="Oturum" sub="Bu cihazda çıkış yaparsın. Eşitlenmiş ilerlemen hesabında kalır.">
             <button type="button" className="u12-btn is-sm is-danger" onClick={onLogout}><LogOut aria-hidden />Çıkış yap</button>
           </SetRow>
         )}
       </section>
+      )}
     </div>
   );
 };
@@ -1207,7 +1285,7 @@ const DataPanel: React.FC<{ currentUser: AppUser | null; onOpenOffline: () => vo
   return (
     <div role="tabpanel" id="u12-panel-veri" aria-labelledby="u12-tab-veri" className="u12-stack">
       <section className="u12-panel">
-        <div className="u12-panel-h"><h2 className="u12-h2 u12-grow">Eşitleme ve Bildirimler</h2></div>
+        <div className="u12-panel-h"><h2 className="u12-h2 u12-grow">Eşitleme ve bildirimler</h2></div>
         <div className="u12-legacy">
           <UserDataSyncRow />
           <ArkaPlanRow />
@@ -1220,7 +1298,7 @@ const DataPanel: React.FC<{ currentUser: AppUser | null; onOpenOffline: () => vo
       <section className="u12-panel">
         {!pwaService.getState().isInstalled && (
           <SetRow id="u12-pwa-kur" title="Uygulamayı cihaza yükle (PWA)" sub="Tarayıcı adres çubuklarını kaldırarak gerçek tam ekran ve çevrimdışı uygulama olarak çalıştır.">
-            <button type="button" className="u12-btn is-sm is-pri" onClick={() => pwaService.promptInstall()}><Smartphone aria-hidden />Ana Ekrana Ekle</button>
+            <button type="button" className="u12-btn is-sm is-pri" onClick={() => pwaService.promptInstall()}><Smartphone aria-hidden />Ana ekrana ekle</button>
           </SetRow>
         )}
         <SetRow id="u12-indir" title="Verilerimi indir" sub="Bu cihazdaki ilerleme, test geçmişi, kaydedilenler, notlar ve bildirimler tek JSON dosyasında.">
