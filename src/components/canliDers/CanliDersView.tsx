@@ -16,6 +16,7 @@ import {
 } from './canliDersStore';
 import CanliDersDers from './CanliDersDers';
 import { TopluPdfDugme } from './CanliDersTopluPdf';
+import { SesliMetinAktarDugme } from './CanliDersAktarPencere';
 import { cdListeOzetleri, useCdListe } from './canliDersListe';
 import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
@@ -726,6 +727,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k, onGunlukAc }: { d: CdL
           <div className="cd-secenek-arac">
             <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
             <ListeEkleDugme dersKey={d.key} baslik={d.baslik} etiketli />
+            <SesliMetinAktarDugme dersKey={d.key} />
             {d.desteId && (
               <button type="button" className="cd-btn is-ince" onClick={() => navigateTo(`/dersler/interaktif/${d.desteId}`)}>
                 <BookOpen aria-hidden /> <span>Öğren Destesi</span>

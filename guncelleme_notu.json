@@ -1,35 +1,40 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 676,
-  "baslik": "PDF ayar penceresi: geniş renk paleti, kayıtlı renk ve görünümler, büyük canlı önizleme",
+  "onem": 677,
+  "baslik": "Sesli ders metni: derse girmeden dışa aktarma penceresi, içerik seçenekleri, toplu Word/Markdown",
   "maddeler": [
-    "PDF ayarları: başlık rengi 18 hazır renk + özel renk seçici; seçilen renk 'Rengi kaydet' ile Kayıtlı renklerim'e eklenir.",
-    "Görünümlerim: o anki tüm PDF ayarları adla kaydedilir, tek tıkla geri yüklenir (bu cihazda).",
-    "Canlı önizleme büyütülebilir ya da tam ekran açılabilir; büyütünce sayfa keskin yeniden çizilir."
+    "Dışa aktarma penceresi: ders sayfasından, sesli ders listesinin '⋯' menüsünden ve oynatıcıdan açılır; derse girmek gerekmez.",
+    "İçerik seçenekleri: tüm metin ya da yalnız önemli yerler, ders notu ya da konuşma metni, işaretler, slayt başlıkları, resimler, bölüm seçimi.",
+    "Ekler: terimler ve kısaltmalar ile doğrulanmış çıkmış sorular belgenin sonuna eklenebilir.",
+    "Toplu dışa aktar: PDF'in yanında Word, Markdown ve düz metin; sesli derslerde aynı içerik seçenekleri."
   ],
   "eklenen": [
-    "PDF ayarları › Başlık rengi: özel renk ve kayıtlı renkler",
-    "PDF ayarları › Görünümlerim",
-    "PDF ayarları › Önizleme: Büyüt / Tam ekran"
+    "Ders sayfası › Ders metnini dışa aktar",
+    "Sesli ders listesi › ⋯ › Metni dışa aktar",
+    "Dışa aktarma penceresi: içerik seçenekleri, ekler, bölüm seçimi, dersin kendi metniyle önizleme, Kopyala",
+    "Toplu dışa aktar: Word, Markdown, düz metin"
   ],
-  "degisen": [],
+  "degisen": [
+    "Oynatıcıdaki 'Metni indir' menüsü yeni dışa aktarma penceresini açar"
+  ],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "PDF ayarlarında renk, kayıt ve büyük önizleme",
+      "ad": "Sesli ders metnini derse girmeden dışa aktar",
       "nerede": {
-        "ad": "Sesli ders › Metni indir › PDF ayarları",
+        "ad": "Ders sayfası › Ders metnini dışa aktar",
         "yol": "/dersler"
       },
-      "amac": "PDF'in görünümünü istediğin renkle kurmak, beğendiğin ayarları saklamak ve sonucu büyük önizlemede görmek.",
+      "amac": "Dersin metnini istediğin kapsam ve biçimde, sesli derse girmeden indirmek.",
       "islevler": [
-        "Başlık rengi: 18 hazır renk + özel renk",
-        "Rengi kaydet: Kayıtlı renklerim",
-        "Görünümlerim: ayarları adla kaydet / yükle",
-        "Önizleme: Büyüt ve Tam ekran"
+        "Biçim: PDF, Word, Markdown, düz metin",
+        "Kapsam: tüm metin ya da yalnız önemli yerler",
+        "Ekler: terimler, kısaltmalar, çıkmış sorular",
+        "Bölüm seçimi ve dersin kendi metniyle PDF önizleme",
+        "Kopyala: metni panoya al"
       ],
-      "ipucu": "Sık kullandığın düzeni 'Görünümlerim'e kaydet, her seferinde tek tıkla seç."
+      "ipucu": "Sınav öncesi 'Yalnız önemli yerler' + 'Çıkmış sorular' ile kısa bir tekrar notu çıkar."
     }
   ]
 }

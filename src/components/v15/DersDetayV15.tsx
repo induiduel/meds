@@ -19,6 +19,7 @@ import HocaVurguV15 from './HocaVurguV15';
 import { hocaVurguVar } from './hocaVurgu';
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
 import { SifirlaDugme, useCdKonumSurum } from '../canliDers/CdIlerlemeTemizle';
+import { SesliMetinAktarDugme } from '../canliDers/CanliDersAktarPencere';
 import '../../styles/v15/dersler.css';
 
 /**
@@ -247,6 +248,8 @@ export default function DersDetayV15() {
                   <Download aria-hidden />
                 </a>
               )}
+              {/* Derse girmeden metni indir: biçim, içerik ve PDF görünümü pencerede seçilir */}
+              <SesliMetinAktarDugme dersKey={key} detay={detay || undefined} sinif="v15-btn is-ghost dd15-dl" etiket="Ders metnini dışa aktar" yalnizIkon />
             </div>
             <div className="dd15-sifirla"><SifirlaDugme dersKey={key} baslik={baslik} konumVar={!!konum} sinif="v15-btn is-ghost" /></div>
           </section>

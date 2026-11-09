@@ -7,7 +7,7 @@
 import { sayilariYaz } from './sayiYazim';
 
 /** Cümlelere böler; açık kalan kalın ve vurgu işaretleri parça sonunda kapatılıp sonraki parçada yeniden açılır. */
-function cumleler(t: string): string[] {
+export function cumleler(t: string): string[] {
   const ham = t.split(/(?<=[.!?…](?:\*\*|==)*["”’)]?)\s+(?=(?:\*\*|==)*["“(]?[A-ZÇĞİÖŞÜ0-9%])/u);
   const out: string[] = [];
   let acik: string[] = [];

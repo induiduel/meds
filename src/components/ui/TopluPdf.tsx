@@ -4,12 +4,13 @@
  *  - Tek PDF: ilk sayfada içindekiler, her ders yeni sayfada, PDF yer imleriyle
  * Dersler sırayla hazırlanır; ilerleme gösterilir, iptal edilebilir, alınamayanlar atlanıp sonda listelenir.
  * Belge üretimi çağırana aittir (`belgeAl`): tek ders "Metni indir" ile aynı biçim kullanılır.
+ * Dosya türü PDF, Word, Markdown ya da düz metin olabilir; çağıran kendi içerik seçeneklerini `ekAyar` ile pencereye koyar.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import { FileDown, X } from 'lucide-react';
-import type { AktarBelge, AktarBolum } from '../../services/metinDisaAktar';
+import type { AktarBelge, AktarBicim, AktarBolum } from '../../services/metinDisaAktar';
 import { duzenOku, duzenYaz, type PdfDuzen } from '../../services/pdfDuzen';
 import { PdfAyarDugme } from './PdfDuzenSecici';
 import '../../styles/toplu-pdf.css';
@@ -25,6 +26,8 @@ export interface TopluPdfProps {
   secenek?: { vurgu?: boolean; basliklar?: boolean };
   /** Birleşik PDF'in alt satırı */
   altMetin?: (n: number, ayar: TopluAyar) => string;
+  /** Çağıranın kendi içerik seçenekleri (durumu çağıranda; belgeAl okur) */
+  ekAyar?: React.ReactNode;
   dugmeSinif?: string;
   /** düğme yazısı (varsayılan "Toplu PDF") */
   dugmeYazi?: string;
@@ -46,7 +49,7 @@ export function TopluPdfDugme(p: TopluPdfProps) {
   const [acik, setAcik] = useState(false);
   return (
     <>
-      <button type="button" className={p.dugmeSinif || 'tp-btn'} onClick={() => setAcik(true)} aria-haspopup="dialog" title="Birden çok dersin metnini PDF olarak indir">
+      <button type="button" className={p.dugmeSinif || 'tp-btn'} onClick={() => setAcik(true)} aria-haspopup="dialog" title="Birden çok dersin metnini PDF, Word ya da metin dosyası olarak indir">
         <FileDown aria-hidden /> <span>{p.dugmeYazi || 'Toplu PDF'}</span>
       </button>
       {/* body'ye taşınır: sayfa kabının katman bağlamında kalınca v15 üst/alt çubuğu pencerenin üstüne biniyordu */}
@@ -55,7 +58,9 @@ export function TopluPdfDugme(p: TopluPdfProps) {
   );
 }
 
-function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBitti }: TopluPdfProps & { onKapat: () => void }) {
+const TURLER: [AktarBicim, string][] = [['pdf', 'PDF'], ['docx', 'Word'], ['md', 'Markdown'], ['txt', 'Düz metin']];
+
+function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, ekAyar, altMetin, onKapat, onBitti }: TopluPdfProps & { onKapat: () => void }) {
   const gruplar = useMemo(() => {
     const m = new Map<string, TopluOge[]>();
     for (const o of ogeler) m.set(o.grup, [...(m.get(o.grup) || []), o]);
@@ -64,6 +69,7 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBi
   const sirali = useMemo(() => gruplar.flatMap((g) => g.l), [gruplar]);
   const [secili, setSecili] = useState<Set<string>>(() => new Set(ogeler.map((d) => d.key)));
   const [bicim, setBicim] = useState<'zip' | 'tek'>('zip');
+  const [tur, setTur] = useState<AktarBicim>('pdf');
   const [vurgu, setVurgu] = useState(true);
   const [basliklar, setBasliklar] = useState(true);
   const [duzen, setDuzenH] = useState<PdfDuzen>(duzenOku);
@@ -98,7 +104,7 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBi
     const ayar: TopluAyar = { vurgu: !!secenek?.vurgu && vurgu, basliklar: !!secenek?.basliklar && basliklar };
     const { metinDosyasi: hamPdf, zipIkili } = await import('../../services/metinDisaAktar');
     const { pdfDuzenle } = await import('../../services/pdfDuzen');
-    const metinDosyasi = async (b: AktarBelge, f: 'pdf') => pdfDuzenle(await hamPdf(b, f, duzen), duzen);
+    const metinDosyasi = async (b: AktarBelge) => (tur === 'pdf' ? pdfDuzenle(await hamPdf(b, 'pdf', duzen), duzen) : hamPdf(b, tur));
     const dosyalar: [string, Uint8Array][] = [];
     const birlesik: AktarBolum[] = [];
     const icindekiler: string[] = [];
@@ -112,14 +118,16 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBi
       try {
         const belge = await belgeAl(d.key, ayar);
         if (bicim === 'zip') {
-          const blob = await metinDosyasi(belge, 'pdf');
-          let dosya = `${String(i + 1).padStart(2, '0')} ${dosyaAdi(tamAd)}.pdf`;
-          while (adlar.has(dosya)) dosya = dosya.replace(/\.pdf$/, ' (2).pdf');
+          const blob = await metinDosyasi(belge);
+          let dosya = `${String(i + 1).padStart(2, '0')} ${dosyaAdi(tamAd)}.${tur}`;
+          while (adlar.has(dosya)) dosya = dosya.replace(/\.\w+$/, ` (2).${tur}`);
           adlar.add(dosya);
           dosyalar.push([dosya, new Uint8Array(await blob.arrayBuffer())]);
         } else {
           icindekiler.push(`- ${d.etiket ? `**${d.etiket}** ` : ''}${d.baslik}`);
-          belge.bolumler.forEach((b, j) => birlesik.push(j === 0 ? { ...b, ders: { baslik: tamAd, alt: belge.alt } } : b));
+          // PDF: yeni sayfa + ders başlığı + yer imi; öteki türlerde ders adı ayrı başlık satırı olur
+          if (tur !== 'pdf' && belge.bolumler.length) birlesik.push({ baslik: tamAd, alt: belge.alt, md: '' });
+          belge.bolumler.forEach((b, j) => birlesik.push(j === 0 && tur === 'pdf' ? { ...b, ders: { baslik: tamAd, alt: belge.alt } } : b));
         }
       } catch (e) {
         atlanan.push(`${tamAd}${e instanceof Error && e.message ? ` (${e.message})` : ''}`);
@@ -139,7 +147,7 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBi
           alt: altMetin ? altMetin(icindekiler.length, ayar) : `${icindekiler.length} ders`,
           bolumler: [{ baslik: 'İçindekiler', md: icindekiler.join('\n') }, ...birlesik],
         };
-        indir(await metinDosyasi(belge, 'pdf'), `${ad} - ${icindekiler.length} ders - ${tarih}.pdf`);
+        indir(await metinDosyasi(belge), `${ad} - ${icindekiler.length} ders - ${tarih}.${tur}`);
       }
     } catch (e) {
       atlanan.push(`Dosya oluşturulamadı${e instanceof Error && e.message ? `: ${e.message}` : ''}`);
@@ -153,22 +161,36 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBi
     <div className="tp-perde" role="presentation" onClick={(e) => { if (e.target === e.currentTarget && !calisiyor) onKapat(); }}>
       <div className="tp-kart" role="dialog" aria-modal="true" aria-labelledby="tp-b">
         <header className="tp-bas">
-          <b id="tp-b" className="tp-baslik"><FileDown aria-hidden /> Toplu PDF indir</b>
+          <b id="tp-b" className="tp-baslik"><FileDown aria-hidden /> Toplu dışa aktar</b>
           <button ref={kapatRef} type="button" className="tp-btn is-ikon" onClick={() => { iptal.current = true; onKapat(); }} aria-label="Kapat"><X aria-hidden /></button>
         </header>
         <div className="tp-govde">
           <fieldset className="tp-ayar" disabled={calisiyor}>
             <legend className="tp-gizli">Biçim</legend>
-            <label><input type="radio" name="tp-bicim" checked={bicim === 'zip'} onChange={() => setBicim('zip')} /> Her ders ayrı PDF <small>(tek ZIP dosyası)</small></label>
-            <label><input type="radio" name="tp-bicim" checked={bicim === 'tek'} onChange={() => setBicim('tek')} /> Tek PDF <small>(içindekiler + her ders yeni sayfada)</small></label>
+            <div className="tp-tur" role="radiogroup" aria-label="Dosya türü">
+              {TURLER.map(([id, a]) => (
+                <label key={id} className={tur === id ? 'is-on' : ''}><input type="radio" name="tp-tur" checked={tur === id} onChange={() => setTur(id)} />{a}</label>
+              ))}
+            </div>
+            <label><input type="radio" name="tp-bicim" checked={bicim === 'zip'} onChange={() => setBicim('zip')} /> Her ders ayrı dosya <small>(tek ZIP dosyası)</small></label>
+            <label><input type="radio" name="tp-bicim" checked={bicim === 'tek'} onChange={() => setBicim('tek')} /> Tek dosya <small>(içindekiler + dersler art arda{tur === 'pdf' ? ', her ders yeni sayfada' : ''})</small></label>
             {secenek?.vurgu && <label><input type="checkbox" checked={vurgu} onChange={(e) => setVurgu(e.target.checked)} /> Önemli yer işaretleri</label>}
             {secenek?.basliklar && <label><input type="checkbox" checked={basliklar} onChange={(e) => setBasliklar(e.target.checked)} /> Slayt başlıkları <small>(daha yavaş)</small></label>}
           </fieldset>
 
-          <fieldset className="tp-ayar" disabled={calisiyor}>
-            <legend className="tp-gizli">Sayfa düzeni</legend>
-            <PdfAyarDugme ad="tp-duzen" deger={duzen} onDegis={setDuzen} />
-          </fieldset>
+          {ekAyar && (
+            <fieldset className="tp-ayar" disabled={calisiyor}>
+              <legend className="tp-gizli">İçerik</legend>
+              {ekAyar}
+            </fieldset>
+          )}
+
+          {tur === 'pdf' && (
+            <fieldset className="tp-ayar" disabled={calisiyor}>
+              <legend className="tp-gizli">Sayfa düzeni</legend>
+              <PdfAyarDugme ad="tp-duzen" deger={duzen} onDegis={setDuzen} />
+            </fieldset>
+          )}
 
           <div className="tp-ust">
             <span>{secilenler.length} / {sirali.length} ders seçili</span>
