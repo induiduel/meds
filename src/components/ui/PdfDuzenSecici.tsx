@@ -4,7 +4,7 @@
  */
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { RotateCcw, Settings2, X } from 'lucide-react';
+import { Bookmark, Maximize2, Minimize2, Plus, RotateCcw, Settings2, X, ZoomIn } from 'lucide-react';
 import { VARSAYILAN_DUZEN, type PdfDuzen, type PdfStil, type SayfaSayisi } from '../../services/pdfDuzen';
 import '../../styles/pdf-duzen.css';
 
@@ -13,7 +13,19 @@ const RENK: { id: PdfStil['renk']; ad: string; hex: string }[] = [
   { id: 'mavi', ad: 'Mavi', hex: '#0d6e96' }, { id: 'yesil', ad: 'Yeşil', hex: '#167852' },
   { id: 'mor', ad: 'Mor', hex: '#6840a8' }, { id: 'bordo', ad: 'Bordo', hex: '#96243a' },
   { id: 'turuncu', ad: 'Turuncu', hex: '#be5c14' }, { id: 'murekkep', ad: 'Siyah-beyaz', hex: '#282828' },
+  { id: '#1d4ed8', ad: 'Kraliyet mavisi', hex: '#1d4ed8' }, { id: '#0f766e', ad: 'Petrol', hex: '#0f766e' },
+  { id: '#0e7490', ad: 'Camgöbeği', hex: '#0e7490' }, { id: '#4d7c0f', ad: 'Zeytin', hex: '#4d7c0f' },
+  { id: '#a16207', ad: 'Hardal', hex: '#a16207' }, { id: '#b91c1c', ad: 'Kırmızı', hex: '#b91c1c' },
+  { id: '#be185d', ad: 'Fuşya', hex: '#be185d' }, { id: '#9d174d', ad: 'Vişne', hex: '#9d174d' },
+  { id: '#4338ca', ad: 'Çivit', hex: '#4338ca' }, { id: '#1e3a5f', ad: 'Lacivert', hex: '#1e3a5f' },
+  { id: '#78350f', ad: 'Kahve', hex: '#78350f' }, { id: '#475569', ad: 'Arduvaz', hex: '#475569' },
 ];
+const RENK_ANAHTAR = 'medsoru_pdf_renkler';
+const GORUNUM_ANAHTAR = 'medsoru_pdf_gorunumler';
+function oku<T>(k: string, v: T): T { try { const x = localStorage.getItem(k); return x ? JSON.parse(x) as T : v; } catch { return v; } }
+function yaz(k: string, v: unknown) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* özel pencere */ } }
+const renkHex = (r: PdfStil['renk']) => RENK.find((x) => x.id === r)?.hex || (r.startsWith('#') ? r : '#0d6e96');
+const renkAd = (r: PdfStil['renk']) => RENK.find((x) => x.id === r)?.ad || `Özel ${r.toUpperCase()}`;
 const SABLON: { ad: string; alt: string; p: Partial<PdfDuzen> }[] = [
   { ad: 'Standart', alt: 'Ekranda okumak için', p: {} },
   { ad: 'Az kâğıt', alt: 'Bir kâğıda 2 sayfa, siyah-beyaz', p: { nup: 2, kenar: 'dar', satirAraligi: 'sik', renk: 'murekkep', yaziBoyutu: 'kucuk' } },
@@ -61,13 +73,49 @@ function Anahtar({ ad, alt, deger, onDegis }: { ad: string; alt?: string; deger:
 export function PdfDuzenSecici({ deger, onDegis, ad = 'pdz' }: { deger: PdfDuzen; onDegis: (d: PdfDuzen) => void; ad?: string }) {
   const set = (p: Partial<PdfDuzen>) => onDegis({ ...deger, ...p });
   const sablonMu = (p: Partial<PdfDuzen>) => Object.entries({ ...VARSAYILAN_DUZEN, ...p }).every(([k, v]) => deger[k as keyof PdfDuzen] === v);
+  const [boyut, setBoyut] = useState<'normal' | 'buyuk'>(() => oku('medsoru_pdf_oniz_boyut', 'normal'));
+  const [tam, setTam] = useState(false);
+  const [renklerim, setRenklerim] = useState<string[]>(() => oku(RENK_ANAHTAR, []));
+  const [gorunumler, setGorunumler] = useState<{ ad: string; d: PdfDuzen }[]>(() => oku(GORUNUM_ANAHTAR, []));
+  const [gAd, setGAd] = useState('');
+  const boyutDegis = (b: 'normal' | 'buyuk') => { setBoyut(b); yaz('medsoru_pdf_oniz_boyut', b); };
+  const renkKaydet = (h: string) => { const l = [h, ...renklerim.filter((x) => x !== h)].slice(0, 12); setRenklerim(l); yaz(RENK_ANAHTAR, l); };
+  const renkSil = (h: string) => { const l = renklerim.filter((x) => x !== h); setRenklerim(l); yaz(RENK_ANAHTAR, l); };
+  const gorunumKaydet = () => {
+    const isim = gAd.trim() || `Görünüm ${gorunumler.length + 1}`;
+    const l = [{ ad: isim, d: { ...deger } }, ...gorunumler.filter((g) => g.ad !== isim)].slice(0, 10);
+    setGorunumler(l); yaz(GORUNUM_ANAHTAR, l); setGAd('');
+  };
+  const gorunumSil = (isim: string) => { const l = gorunumler.filter((g) => g.ad !== isim); setGorunumler(l); yaz(GORUNUM_ANAHTAR, l); };
+  const ozelSecili = deger.renk.startsWith('#') && !RENK.some((r) => r.id === deger.renk);
+  useEffect(() => {
+    if (!tam) return;
+    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); setTam(false); } };
+    document.addEventListener('keydown', k, true);
+    return () => document.removeEventListener('keydown', k, true);
+  }, [tam]);
+  const onizleme = (
+    <React.Suspense fallback={<div className="pdo"><div className="pdo-kagit is-yuk" /></div>}>
+      <PdfOnizleme d={deger} />
+    </React.Suspense>
+  );
   return (
-    <div className="pdz">
+    <div className={`pdz${boyut === 'buyuk' ? ' is-buyuk' : ''}`}>
       <div className="pdz-oniz-kol">
-        <React.Suspense fallback={<div className="pdo"><div className="pdo-kagit is-yuk" /></div>}>
-          <PdfOnizleme d={deger} />
-        </React.Suspense>
+        <div className="pdz-oniz-arac" role="group" aria-label="Önizleme boyutu">
+          <span className="pdz-canli"><i aria-hidden /> Canlı önizleme</span>
+          <button type="button" onClick={() => boyutDegis(boyut === 'buyuk' ? 'normal' : 'buyuk')} aria-pressed={boyut === 'buyuk'} title={boyut === 'buyuk' ? 'Önizlemeyi küçült' : 'Önizlemeyi büyüt'}>
+            {boyut === 'buyuk' ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}<span>{boyut === 'buyuk' ? 'Küçült' : 'Büyüt'}</span>
+          </button>
+          <button type="button" onClick={() => setTam(true)} title="Tam ekran önizleme"><ZoomIn aria-hidden /><span>Tam ekran</span></button>
+        </div>
+        {!tam && onizleme}
       </div>
+      {tam && createPortal(
+        <div className="pdz-tam" data-ls-keep role="dialog" aria-modal="true" aria-label="Tam ekran önizleme" onClick={(e) => { if (e.target === e.currentTarget) setTam(false); }}>
+          <div className="pdz-tam-ic">{onizleme}</div>
+          <button type="button" className="pdz-tam-x" onClick={() => setTam(false)} aria-label="Tam ekrandan çık"><X aria-hidden /></button>
+        </div>, document.body)}
 
       <div className="pdz-ayarlar">
         <Soru baslik="Hazır görünümler">
@@ -77,6 +125,28 @@ export function PdfDuzenSecici({ deger, onDegis, ad = 'pdz' }: { deger: PdfDuzen
                 <b>{s.ad}</b><small>{s.alt}</small>
               </button>
             ))}
+          </div>
+        </Soru>
+
+        <Soru baslik="Görünümlerim">
+          {gorunumler.length > 0 && (
+            <div className="pdz-gorunumler">
+              {gorunumler.map((g) => {
+                const on = JSON.stringify(g.d) === JSON.stringify(deger);
+                return (
+                  <span key={g.ad} className={`pdz-gorunum${on ? ' is-on' : ''}`}>
+                    <button type="button" onClick={() => onDegis({ ...VARSAYILAN_DUZEN, ...g.d })}>
+                      <i style={{ background: renkHex(g.d.renk) }} aria-hidden /><b>{g.ad}</b>
+                    </button>
+                    <button type="button" className="pdz-sil" onClick={() => gorunumSil(g.ad)} aria-label={`${g.ad} görünümünü sil`}><X aria-hidden /></button>
+                  </span>
+                );
+              })}
+            </div>
+          )}
+          <div className="pdz-kaydet">
+            <input className="pdz-girdi" maxLength={30} placeholder="Ad ver · örnek: Patoloji çıktısı" value={gAd} onChange={(e) => setGAd(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') gorunumKaydet(); }} />
+            <button type="button" onClick={gorunumKaydet}><Bookmark aria-hidden /> Şu anki ayarları kaydet</button>
           </div>
         </Soru>
 
@@ -91,13 +161,39 @@ export function PdfDuzenSecici({ deger, onDegis, ad = 'pdz' }: { deger: PdfDuzen
         </Soru>
 
         <Soru baslik="Başlık rengi">
-          <div className="pdz-renkler" role="radiogroup" aria-label="Başlık rengi">
-            {RENK.map((r) => (
-              <button key={r.id} type="button" role="radio" aria-checked={deger.renk === r.id} aria-label={r.ad} title={r.ad} className={deger.renk === r.id ? 'is-on' : ''} onClick={() => set({ renk: r.id })}>
-                <i style={{ background: r.hex }} aria-hidden />
+          <div className="pdz-renk-kart">
+            <div className="pdz-renk-ust">
+              <i style={{ background: renkHex(deger.renk) }} aria-hidden />
+              <span><b>{renkAd(deger.renk)}</b><small>{renkHex(deger.renk).toUpperCase()}</small></span>
+              <label className="pdz-renk-ozel" title="Kendi rengini seç">
+                <input type="color" value={renkHex(deger.renk)} onChange={(e) => set({ renk: e.target.value as PdfStil['renk'] })} aria-label="Özel renk seç" />
+                <Plus aria-hidden /> Özel renk
+              </label>
+              <button type="button" className="pdz-renk-kaydet" onClick={() => renkKaydet(renkHex(deger.renk))} disabled={renklerim.includes(renkHex(deger.renk))}>
+                <Bookmark aria-hidden /> {renklerim.includes(renkHex(deger.renk)) ? 'Kayıtlı' : 'Rengi kaydet'}
               </button>
-            ))}
-            <span className="pdz-renk-ad">{RENK.find((r) => r.id === deger.renk)?.ad}</span>
+            </div>
+            <div className="pdz-renkler" role="radiogroup" aria-label="Başlık rengi">
+              {RENK.map((r) => (
+                <button key={r.id} type="button" role="radio" aria-checked={deger.renk === r.id} aria-label={r.ad} title={r.ad} className={deger.renk === r.id ? 'is-on' : ''} onClick={() => set({ renk: r.id })}>
+                  <i style={{ background: r.hex }} aria-hidden />
+                </button>
+              ))}
+            </div>
+            {(renklerim.length > 0 || ozelSecili) && <>
+              <small className="pdz-renk-baslik">Kayıtlı renklerim</small>
+              <div className="pdz-renkler" role="radiogroup" aria-label="Kayıtlı renkler">
+                {renklerim.map((h) => (
+                  <span key={h} className="pdz-renk-kayitli">
+                    <button type="button" role="radio" aria-checked={deger.renk === h} aria-label={`Kayıtlı renk ${h}`} title={h.toUpperCase()} className={deger.renk === h ? 'is-on' : ''} onClick={() => set({ renk: h as PdfStil['renk'] })}>
+                      <i style={{ background: h }} aria-hidden />
+                    </button>
+                    <button type="button" className="pdz-sil" onClick={() => renkSil(h)} aria-label={`${h} rengini sil`}><X aria-hidden /></button>
+                  </span>
+                ))}
+                {!renklerim.length && <small className="pdz-renk-ipucu">Özel rengi kaydedersen burada kalır.</small>}
+              </div>
+            </>}
           </div>
         </Soru>
 
@@ -160,7 +256,7 @@ export function PdfAyarDugme({ deger, onDegis, ad = 'pdz' }: { deger: PdfDuzen; 
   const ozet = [
     deger.nup > 1 ? `${deger.nup} sayfa/yaprak` : deger.kagit.toUpperCase(),
     { kucuk: 'küçük yazı', normal: 'normal yazı', buyuk: 'büyük yazı', cokbuyuk: 'çok büyük yazı' }[deger.yaziBoyutu],
-    RENK.find((r) => r.id === deger.renk)?.ad.toLowerCase(),
+    renkAd(deger.renk).toLowerCase(),
     deger.kapak && 'kapak',
     deger.sayfaAraligi.trim() && `sayfa ${deger.sayfaAraligi.trim()}`,
   ].filter(Boolean).join(' · ');

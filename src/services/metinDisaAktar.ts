@@ -312,7 +312,7 @@ export function zipIkili(dosyalar: [string, Uint8Array][], tip = 'application/zi
 /* ---------------- PDF ---------------- */
 
 type RGB = readonly [number, number, number];
-const TEMA_RENK: Record<PdfStil['renk'], RGB> = {
+const TEMA_RENK: Record<string, RGB> = {
   mavi: [13, 110, 150], yesil: [22, 120, 82], mor: [104, 64, 168], bordo: [150, 36, 58], turuncu: [190, 92, 20], murekkep: [40, 40, 40],
 };
 const INK: RGB = [14, 26, 38], SOL: RGB = [118, 130, 143], KIRMIZI0: RGB = [200, 38, 45], MARKER: RGB = [255, 233, 128], CIZGI: RGB = [214, 220, 227];
@@ -322,7 +322,8 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil, resimler: Resimler = new Ma
   const k = { kucuk: 0.88, normal: 1, buyuk: 1.12, cokbuyuk: 1.26 }[S.yaziBoyutu];
   const hk = k * { kucuk: 0.9, normal: 1, buyuk: 1.12 }[S.baslikBoyutu];
   const PT = { govde: 10.5 * k, alt: 11.2 * hk, kucuk: 9.5 * k, not: 10 * k, tablo: 9 * k, belge: 19 * hk, ders: 17 * hk, bolum: (b.dersDuzeni ? 15.5 : 13) * hk };
-  const VURGU = TEMA_RENK[S.renk];
+  const hex = /^#[0-9a-f]{6}$/i.test(S.renk) ? S.renk.slice(1) : '';
+  const VURGU: RGB = hex ? [parseInt(hex.slice(0, 2), 16), parseInt(hex.slice(2, 4), 16), parseInt(hex.slice(4, 6), 16)] : TEMA_RENK[S.renk] || TEMA_RENK.mavi;
   const KIRMIZI: RGB = S.renk === 'murekkep' ? INK : KIRMIZI0;
   const NOT_ZEMIN: RGB = S.renk === 'murekkep' ? [244, 244, 244] : [Math.round(255 - (255 - VURGU[0]) * 0.08), Math.round(255 - (255 - VURGU[1]) * 0.08), Math.round(255 - (255 - VURGU[2]) * 0.08)];
   const { jsPDF } = await import('jspdf');

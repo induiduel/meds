@@ -14,7 +14,8 @@ export interface PdfStil {
   baslikBoyutu: 'kucuk' | 'normal' | 'buyuk';
   satirAraligi: 'sik' | 'normal' | 'ferah';
   kenar: 'dar' | 'normal' | 'genis';
-  renk: 'mavi' | 'yesil' | 'mor' | 'bordo' | 'turuncu' | 'murekkep';
+  /** hazır ad ya da özel renk (#rrggbb) */
+  renk: 'mavi' | 'yesil' | 'mor' | 'bordo' | 'turuncu' | 'murekkep' | `#${string}`;
   /** ==önemli== işaretleri: sarı fosfor + kırmızı */
   vurgu: boolean;
   kapak: boolean;
