@@ -21,6 +21,8 @@ export interface MasaDurum {
   hata: { mesaj: string; kod?: string; at: number } | null;
   /** Gidiş-dönüş gecikmesi (ms) */
   gecikme: number;
+  /** Sunucudan yanıt beklenen istek (kur, katıl, başlat, hamle…): bekleme ekranı bundan çizilir */
+  bekliyor: { ne: string; at: number } | null;
 }
 type OlayDinleyici = (olaylar: Olay[], oda: OdaGorunum, onceki: OdaGorunum | null) => void;
 
@@ -31,9 +33,14 @@ export const masaAdi = (): string => {
   return (auth.currentUser?.displayName || getRememberedStudentInfo().name || 'Oyuncu').split(' ')[0];
 };
 
+/** Yanıtı beklenen istekler ve bekleme ekranındaki açıklaması */
+const BEKLEME: Partial<Record<IstemciMesaj['t'], string>> = {
+  kur: 'Masa kuruluyor', katil: 'Masaya oturuluyor', baslat: 'Taşlar dağıtılıyor', sonrakiEl: 'Yeni el dağıtılıyor', hamle: 'Hamle işleniyor', geriAl: 'Hamle geri alınıyor',
+};
+
 class MasaIstemci {
   private ws: WebSocket | null = null;
-  private durum: MasaDurum = { baglanti: 'kapali', ben: '', ad: '', oda: null, hata: null, gecikme: 0 };
+  private durum: MasaDurum = { baglanti: 'kapali', ben: '', ad: '', oda: null, hata: null, gecikme: 0, bekliyor: null };
   private aboneler = new Set<() => void>();
   private olayAboneleri = new Set<OlayDinleyici>();
   private deneme = 0;
@@ -41,8 +48,9 @@ class MasaIstemci {
   private nabiz: any = null;
   private hataZaman: any = null;
   private istekli = false;
-  /** Bağlantı kurulunca yapılacak ilk iş (kur/katıl) */
-  private bekleyen: IstemciMesaj | null = null;
+  /** Bağlantı doğrulanınca gönderilecek iş (kur/katıl ve kopukken basılan başlat/sonraki el) */
+  private bekleyen: IstemciMesaj[] = [];
+  private bekleZaman: any = null;
   private sonKod = '';
   /** Dışarıdan sınama için sahte kimlik (yalnız MEDS_MASA_TEST=1 sunucuda geçer): ?masatest=<ad> */
   private testAd = (() => { try { return new URLSearchParams(window.location.search).get('masatest') || ''; } catch { return ''; } })();
@@ -95,9 +103,29 @@ class MasaIstemci {
     this.yaz({ baglanti: 'kapali', oda: null });
   }
 
+  /** Kimlik doğrulanmadan (girdi gelmeden) sunucu gir/ping dışında mesaj işlemez: yalnız hazırken gönderilir */
   private yolla(m: IstemciMesaj) {
-    if (this.ws?.readyState === WebSocket.OPEN) { this.ws.send(JSON.stringify(m)); return true; }
+    const hazir = m.t === 'gir' || m.t === 'ping' || this.durum.baglanti === 'hazir';
+    if (hazir && this.ws?.readyState === WebSocket.OPEN) { this.ws.send(JSON.stringify(m)); return true; }
     return false;
+  }
+
+  private bekle(ne: string | null) {
+    clearTimeout(this.bekleZaman);
+    this.yaz({ bekliyor: ne ? { ne, at: Date.now() } : null });
+    if (!ne) return;
+    // Yanıt gelmezse kullanıcı sonsuz beklemesin: hata göster, soketi yenile
+    this.bekleZaman = setTimeout(() => {
+      this.yaz({ bekliyor: null });
+      this.hataYaz('Sunucu yanıt vermedi. Bağlantı yenileniyor, birazdan yeniden dene.');
+      try { this.ws?.close(); } catch { /* yok */ }
+    }, 15_000);
+  }
+
+  private hataYaz(mesaj: string, kod?: string) {
+    this.yaz({ hata: { mesaj, kod, at: Date.now() } });
+    clearTimeout(this.hataZaman);
+    this.hataZaman = setTimeout(() => this.yaz({ hata: null }), 4000);
   }
 
   private al(m: SunucuMesaj) {
@@ -108,9 +136,11 @@ class MasaIstemci {
         clearInterval(this.nabiz);
         this.nabiz = setInterval(() => this.yolla({ t: 'ping', z: Date.now() }), 20_000);
         this.yolla({ t: 'ping', z: Date.now() });
-        const ilk = this.bekleyen || (this.sonKod ? ({ t: 'katil', kod: this.sonKod } as IstemciMesaj) : null);
-        this.bekleyen = null;
-        if (ilk) this.yolla(ilk);
+        const kuyruk = this.bekleyen.length ? this.bekleyen : this.sonKod ? [{ t: 'katil', kod: this.sonKod } as IstemciMesaj] : [];
+        this.bekleyen = [];
+        // Kopukken basılan başlat/sonraki el için önce masaya geri oturulur
+        if (this.sonKod && kuyruk.length && kuyruk[0].t !== 'kur' && kuyruk[0].t !== 'katil') kuyruk.unshift({ t: 'katil', kod: this.sonKod });
+        kuyruk.forEach((m) => this.yolla(m));
         break;
       }
       case 'durum': {
@@ -119,6 +149,7 @@ class MasaIstemci {
         this.sonKod = m.oda.kod;
         try { localStorage.setItem(SON_KEY, m.oda.kod); } catch { /* yok */ }
         this.yaz({ oda: m.oda });
+        if (this.durum.bekliyor) this.bekle(null);
         if (m.olaylar.length) this.olayAboneleri.forEach((f) => { try { f(m.olaylar, m.oda, onceki); } catch (e) { console.warn('[masa] olay dinleyici', e); } });
         break;
       }
@@ -126,13 +157,13 @@ class MasaIstemci {
         this.sonKod = '';
         try { localStorage.removeItem(SON_KEY); } catch { /* yok */ }
         this.yaz({ oda: null });
+        if (this.durum.bekliyor) this.bekle(null);
         break;
       }
       case 'hata': {
         if (m.kod === 'oda-yok' || m.kod === 'basladi' || m.kod === 'dolu') { this.sonKod = ''; }
-        this.yaz({ hata: { mesaj: m.mesaj, kod: m.kod, at: Date.now() } });
-        clearTimeout(this.hataZaman);
-        this.hataZaman = setTimeout(() => this.yaz({ hata: null }), 4000);
+        if (this.durum.bekliyor) this.bekle(null);
+        this.hataYaz(m.mesaj, m.kod);
         break;
       }
       case 'pong': this.yaz({ gecikme: Math.max(0, Date.now() - m.z) }); break;
@@ -143,13 +174,22 @@ class MasaIstemci {
 
   /** Bağlıysa hemen, değilse bağlanınca gönderir (yalnız kur/katıl kuyruğa alınır) */
   gonder(m: IstemciMesaj) {
-    if (this.yolla(m)) return;
-    if (m.t === 'kur' || m.t === 'katil') { this.bekleyen = m; this.baglan(); }
+    const ne = BEKLEME[m.t];
+    if (this.yolla(m)) { if (ne) this.bekle(ne); return; }
+    if (m.t === 'kur' || m.t === 'katil' || m.t === 'baslat' || m.t === 'sonrakiEl') {
+      // Bağlantı hazır değil: sessizce düşmesin, doğrulanınca gönderilsin
+      this.bekleyen = [...this.bekleyen.filter((x) => x.t !== m.t), m];
+      if (ne) this.bekle(ne);
+      this.baglan();
+      return;
+    }
+    if (m.t === 'hamle' || m.t === 'geriAl') this.hataYaz('Bağlantı yeniden kuruluyor; hamlen gönderilemedi. Birazdan yeniden dene.');
   }
 
   kur(tur: OyunTur, ayar?: Partial<OdaAyar>) { this.gonder({ t: 'kur', tur, ayar }); }
   katil(kod: string) { this.gonder({ t: 'katil', kod: kod.trim().toUpperCase() }); }
   hamle(h: Hamle) { this.gonder({ t: 'hamle', h }); }
+  geriAl() { this.gonder({ t: 'geriAl' }); }
   ayar(ayar: Partial<OdaAyar>) { this.gonder({ t: 'ayar', ayar }); }
   takim(takim: Takim, hedef?: string) { this.gonder({ t: 'takim', takim, hedef }); }
   botEkle() { this.gonder({ t: 'botEkle' }); }

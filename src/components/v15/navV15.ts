@@ -11,7 +11,7 @@ import { menudeGorunur, siteAyarAbone } from '../../services/siteAyar';
  * gruptaki sayfalar sona eklenir. Böylece kenar menüsü, ray, alt sekme ve merkez sayfaları aynı listeyi gösterir.
  */
 export interface V15Section {
-  id: 'bugun' | 'dersler' | 'sorular' | 'kamplar' | 'kaynaklar';
+  id: 'bugun' | 'dersler' | 'sorular' | 'kamplar' | 'kaynaklar' | 'eglence';
   label: string;
   /** Alt sekme ve rayda kısa ad */
   short: string;
@@ -21,7 +21,10 @@ export interface V15Section {
   items: NavItem[];
 }
 
-const NAV_GROUP: Record<Exclude<V15Section['id'], 'bugun'>, string> = {
+/** Eğlence bölgesi: gizlenmemiş oyunlar (Taş Masası: okey modları + Uno, Hücrem). Soru çöz listesinde tekrar görünmez. */
+const OYUNLAR: AppRoute[] = ['oyunlar', 'hucrem'];
+
+const NAV_GROUP: Record<Exclude<V15Section['id'], 'bugun' | 'eglence'>, string> = {
   dersler: 'Ders çalış',
   sorular: 'Soru çöz',
   kamplar: 'Sınava hazırlan',
@@ -29,7 +32,8 @@ const NAV_GROUP: Record<Exclude<V15Section['id'], 'bugun'>, string> = {
 };
 
 const itemsOf = (id: Exclude<V15Section['id'], 'bugun'>): NavItem[] => {
-  const seen = new Set<AppRoute>();
+  if (id === 'eglence') return OYUNLAR.filter((r) => menudeGorunur(r)).map((r) => NAV_ITEMS[r]).filter(Boolean);
+  const seen = new Set<AppRoute>(OYUNLAR);
   const out: NavItem[] = [];
   const add = (it?: NavItem) => {
     if (!it || seen.has(it.id)) return;
@@ -47,6 +51,7 @@ export const V15_SECTIONS: V15Section[] = [
   { id: 'sorular', label: 'Soru çöz', short: 'Soru', icon: CircleHelp, hub: 'hub_sorular', items: [] },
   { id: 'kamplar', label: 'Sınava hazırlan', short: 'Sınav', icon: Flag, hub: 'hub_kamplar', items: [] },
   { id: 'kaynaklar', label: 'Başvuru', short: 'Başvuru', icon: Library, hub: 'hub_kaynaklar', items: [] },
+  { id: 'eglence', label: 'Eğlence', short: 'Eğlence', icon: Gamepad2, hub: 'oyunlar', items: [] },
 ];
 /** Bölüm listeleri çalışma anında (site ayarı değişince) yerinde yenilenir; merkezModel/navModel aboneleri önce çalışır */
 function bolumSuz() {
@@ -60,16 +65,15 @@ const ALT_SAYFA: Partial<Record<AppRoute, V15Section['id']>> = { ders_detay: 'de
 
 /** Sayfanın bölümü (merkez sayfası da kendi bölümüne aittir); kişisel sayfalarda undefined */
 export const sectionOf = (r: AppRoute): V15Section | undefined =>
-  V15_SECTIONS.find((s) => s.hub === r || ALT_SAYFA[r] === s.id || s.items.some((it) => it.id === r));
+  V15_SECTIONS.find((s) => s.hub === r) || V15_SECTIONS.find((s) => ALT_SAYFA[r] === s.id || s.items.some((it) => it.id === r));
 
 /* ---------------------------------------------------------------------------
  * Bütün sayfalar menüsü (telefon/tablet "Menü" ızgarası ve masaüstü kenar çubuğu aynı listeyi kullanır).
  * Yeni sayfa NAV_TREE'ye (shell/navModel) eklenince burada kendiliğinden görünür; Kişisel'e yalnız aşağıdaki liste.
  * ------------------------------------------------------------------------- */
 export interface MenuGrubu { id: string; label: string; icon: React.ElementType; hub?: AppRoute; items: NavItem[]; alt?: string }
-/** Tasarım A03: Oyunlar dört işin yanında ayrı bölüm (yarışma, Hücrem, başarımlar) */
+/** Tasarım A03: Eğlence (oyunlar) dört işin yanında ayrı bölüm */
 // H147: Başarımlar ve Güncelleme günlüğü hesap sayfalarıyla birlikte Kişisel'de (Oyunlar/Başvuru altında aranmıyordu)
-const OYUNLAR: AppRoute[] = ['oyunlar', 'hucrem'];
 // H305: Arka plan işleri Çevrimdışı ve indirmeler'e katıldı; menüde tek giriş
 const KISISEL: AppRoute[] = ['bitirdiklerim', 'basarimlar', 'guncellemeler', 'study', 'notlarim', 'bildirimler', 'stats', 'pdf_olustur', 'cevrimdisi', 'music', 'ilk_adimlar', 'settings', 'dil_bolge', 'yardim'];
 
@@ -87,7 +91,7 @@ export function menuGruplari(isAdmin: boolean): MenuGrubu[] {
     { id: 'kamplar', label: 'Sınava hazırlan', icon: Flag, hub: 'hub_kamplar', items: al(sec('kamplar').items) },
     { id: 'checkup', label: 'Check Up', icon: Stethoscope, items: al(grup('Check Up')) },
     { id: 'kaynaklar', label: 'Başvuru', icon: Library, hub: 'hub_kaynaklar', items: al(sec('kaynaklar').items) },
-    { id: 'oyunlar', label: 'Oyunlar', icon: Gamepad2, items: oyun },
+    { id: 'eglence', label: 'Eğlence', icon: Gamepad2, items: oyun },
     { id: 'topluluk', label: 'Topluluk', icon: MessagesSquare, items: al(grup('Topluluk')) },
     { id: 'kisisel', label: 'Kişisel', icon: UserRound, items: al([...KISISEL.filter((r) => menudeGorunur(r)).map((r) => NAV_ITEMS[r]), ...(isAdmin ? [YONETIM] : [])]) },
   ];

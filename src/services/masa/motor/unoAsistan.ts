@@ -44,14 +44,20 @@ type Oneri = { hamle: UnoHamle; aciklama: string };
 /** Yalnız sıra hamlesi (oyna / çek / pas). Bot ve asistan aynı mantığı kullanır; sıra `ben`de değilse null. */
 export function siraOnerisi(g: UnoGorunum, ben: string): Oneri | null {
   if (g.bitti || g.sira !== ben) return null;
-  const uygun = g.elim.filter((k) => g.oynanabilir.includes(k.id));
+  const sayim: Record<UnoRenk, number> = { k: 0, s: 0, y: 0, m: 0 };
+  for (const k of g.elim) if (k.renk) sayim[k.renk]++;
+  const enCok = (): UnoRenk => { let r: UnoRenk = g.aktifRenk; for (const x of UNO_RENKLER) if (sayim[x] > sayim[r]) r = x; return r; };
+  if (g.renkSec) { const renk = enCok(); return { hamle: { t: 'renk', renk }, aciklama: `İlk kart joker: elinde en çok ${UNO_RENK_AD[renk].toLocaleLowerCase('tr')} var, onu seç.` }; }
+  if (g.dortBekle?.hedef === ben) return { hamle: { t: 'kabul' }, aciklama: '+4 sana oynandı. Kabul edersen 4 çekersin. İtiraz edersen: oynayanın elinde önceki renkten kart varsa o 4 çeker, yoksa sen 6 çekersin.' };
+  // +4 yalnız elde aktif renkten kart yokken dürüstçe oynanır (itirazda yakalanmamak için)
+  const renkVar = g.elim.some((k) => k.renk === g.aktifRenk);
+  const uygun = g.elim.filter((k) => g.oynanabilir.includes(k.id) && (k.deger !== '+4' || !renkVar || !!g.yigin));
   if (!uygun.length) {
+    if (g.yigin && !g.cektiBuTur) return { hamle: { t: 'cek' }, aciklama: `Ekleyecek kartın yok: biriken ${g.yigin} kartı çek.` };
     return g.cektiBuTur
       ? { hamle: { t: 'pas' }, aciklama: 'Çektiğin kart uymuyor: sırayı geç.' }
       : { hamle: { t: 'cek' }, aciklama: 'Oynanabilir kartın yok: desteden çek.' };
   }
-  const sayim: Record<UnoRenk, number> = { k: 0, s: 0, y: 0, m: 0 };
-  for (const k of g.elim) if (k.renk) sayim[k.renk]++;
   const tehdit = g.oyuncular.some((o) => o.id !== ben && o.kartSayisi <= 2);
   const puan = (k: UnoKart): number => {
     if (tehdit && k.deger === '+2') return 1000;

@@ -1,4 +1,5 @@
 /** Yedili Okey (ana mod) ve Takım Yedili kural motoru. Saf: durum düz JSON, `uygula` girdiyi değiştirmez. */
+import { takimElTas } from '../tipler';
 import type { Ceza, ElSatir, ElSonuc, Motor, OkeyGorunum, Olay, Per, Rng, Takim, Tas } from '../tipler';
 import { bolunmus, islemeUcu, islenmis, karistir, perDiz, perTuru, sonrakiPerId, tasSeti } from './okeyOrtak';
 import { planCekirdek, zorunluCekirdek } from './yediliAsistan';
@@ -89,15 +90,16 @@ function motorYap(tur: 'yedili' | 'takim'): Motor {
   return {
     tur, min: 2, max: 6,
 
-    elBaslat({ oyuncular, elNo, baslayan, rng }) {
+    elBaslat({ oyuncular, elNo, baslayan, rng, ayar }) {
       const n = oyuncular.length;
       if (n < 2 || n > 6) throw new Error('Oyuncu sayısı 2–6 olmalı.');
       const deste = karistir(tasSeti(), rng);
+      const elTas = tur === 'takim' ? takimElTas(n, ayar?.tasSayisi) : EL_TAS;
       const d: YediliDurum = {
         tur, elNo,
         oyuncular: oyuncular.map((o, i) => ({
           id: o.id, ...(tur === 'takim' ? { takim: o.takim ?? (i % 2 ? 'B' : 'A') } : {}),
-          el: deste.splice(deste.length - EL_TAS, EL_TAS), acti: false, cezalar: [],
+          el: deste.splice(deste.length - elTas, elTas), acti: false, cezalar: [],
         })),
         sira: (((tamSayi(baslayan) ? baslayan : 0) % n) + n) % n,
         deste, perler: [], cekti: false, hamleYapti: false, kuru: 0, bitti: false, sonuc: null,
@@ -162,6 +164,33 @@ function motorYap(tur: 'yedili' | 'takim'): Motor {
           olaylar.push({ t: 'isledi', o: ben.id, per: per.id, tas, uc });
         }
         eridi(per);
+        return { durum: d, olaylar };
+      }
+
+      if (h.t === 'duzenle') {
+        const gr = h.perler;
+        if (!Array.isArray(gr) || !gr.length || !gr.every((x) => Array.isArray(x) && x.every(tamSayi))) return { hata: 'Geçersiz hamle.' };
+        if (!hak(d, i)) return { hata: 'Masayı düzenlemek için önce per açmalısın.' };
+        const masada = new Map(d.perler.flatMap((p) => p.taslar.map((t) => [t.id, t] as const)));
+        const ids = gr.flat();
+        if (new Set(ids).size !== ids.length) return { hata: 'Aynı taş iki pere konamaz.' };
+        if (ids.some((id) => !masada.has(id))) return { hata: 'Masayı düzenlerken elden taş eklenemez.' };
+        if (ids.length !== masada.size) return { hata: 'Masadaki taşlar ele geri alınamaz; her taş bir perde kalmalı.' };
+        const yeni: Per[] = [];
+        // Taşlarının çoğu aynı kalan per kimliğini ve sahibini korur (işleme/animasyon sürekliliği)
+        const kullanilan = new Set<number>();
+        for (const grup of gr) {
+          const taslar = grup.map((id) => masada.get(id)!);
+          const pt = perTuru(taslar);
+          if (!pt) return { hata: `${taslar.map((t) => t.s).join('-')} geçerli bir per değil: her per aynı renk ardışık ya da aynı sayı farklı renk, en az 3 taş.` };
+          const eski = d.perler.filter((p) => !kullanilan.has(p.id)).map((p) => ({ p, ortak: p.taslar.filter((t) => grup.includes(t.id)).length })).sort((x, y) => y.ortak - x.ortak)[0];
+          const koru = eski && eski.ortak > 0 ? eski.p : null;
+          if (koru) kullanilan.add(koru.id);
+          yeni.push({ id: koru ? koru.id : -1, tur: pt, taslar: perDiz(taslar), sahip: koru ? koru.sahip : ben.id });
+        }
+        for (const p of yeni) if (p.id < 0) { p.id = Math.max(sonrakiPerId(d.perler), sonrakiPerId(yeni)); }
+        d.perler = yeni;
+        olaylar.push({ t: 'duzenledi', o: ben.id });
         return { durum: d, olaylar };
       }
 

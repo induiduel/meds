@@ -314,3 +314,11 @@
 }
 @keyframes um-sade { 0% { opacity: 0; } 12%, 85% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes um-sade-dalga { from { transform: scale(0.5); opacity: 0.35; } to { transform: scale(0.5); opacity: 0; } }
+
+/* Yığma modu: biriken ceza rozeti · +4 itiraz penceresi */
+.um-yigin-rozet { position: absolute; transform: translate(-50%, -100%); z-index: 20; padding: 4px 12px; border-radius: 999px; background: #c62828; color: #fff; font-size: 14px; white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,.35); pointer-events: none; }
+.um-itiraz { position: absolute; inset: 0; z-index: 40; display: grid; place-items: center; background: rgba(0,0,0,.45); padding: 16px; }
+.um-itiraz-kutu { max-width: 420px; width: 100%; background: rgba(20,24,30,.96); color: #fff; border-radius: 16px; padding: 18px; display: grid; gap: 10px; }
+.um-itiraz-kutu p { margin: 0; font-size: 14px; line-height: 1.45; opacity: .92; }
+.um-itiraz-dugmeler { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+.um-itiraz-dugmeler .um-dugme { position: static; }

@@ -220,7 +220,7 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
       <nav aria-label="Ana menü" className="v15-side is-rail print:hidden">
         {link('today', <Mark />, 'v15-rail-mark', 'MeDSor · Bugün')}
         <div className="v15-rail-list">
-          {V15_SECTIONS.map((s) => {
+          {V15_SECTIONS.filter((s) => s.id !== 'eglence' || s.items.length).map((s) => {
             const Icon = s.icon;
             const on = here?.id === s.id;
             return (
@@ -519,7 +519,7 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
   return (
     <>
       <nav aria-label="Alt gezinme" className="v15-tabs ms-hide-on-kb print:hidden">
-        {V15_SECTIONS.filter((s) => s.id !== 'kaynaklar').map((s) => {
+        {V15_SECTIONS.filter((s) => s.id !== 'kaynaklar' && s.id !== 'eglence').map((s) => {
           const Icon = s.icon;
           const on = sekme === s.id;
           return (

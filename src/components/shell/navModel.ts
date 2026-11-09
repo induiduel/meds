@@ -102,7 +102,7 @@ const I: Record<string, NavItem> = {
   ornek_sorular: { id: 'ornek_sorular', label: 'Örnek sorular', short: 'Örnek', hint: 'Kazanım temelli sorular', icon: Target, tint: '#FF9500' },
   soru_aktar: { id: 'soru_aktar', label: 'Soru dışa aktarıcı', short: 'Dışa aktar', tile: 'Dışa aktar', hint: 'Soruları seç, düzenle; PDF, Word ya da PowerPoint indir', icon: FileDown, tint: '#0A84FF' },
   yanlislarim: { id: 'yanlislarim', label: 'Yanlışlarım', short: 'Yanlışlar', tile: 'Yanlışlarım', hint: 'Yanlış yaptığın sorular 48 saat sonra yeniden', icon: RotateCcw, tint: '#FF3B30' },
-  oyunlar: { id: 'oyunlar', label: 'Oyunlar', short: 'Oyun', tile: 'Oyunlar', hint: 'Canlı soru yarışması: oda kur, kodu paylaş', icon: Gamepad2, tint: '#AF52DE' },
+  oyunlar: { id: 'oyunlar', label: 'Oyunlar', short: 'Oyun', tile: 'Oyunlar', hint: 'Taş Masası: okey modları (Yedili, Takım, 101) ve Uno', icon: Gamepad2, tint: '#AF52DE' },
   soru_haritasi: { id: 'soru_haritasi', label: 'Soru haritası', short: 'Harita', tile: 'Soru haritası', hint: 'Ders × yıl: hangi dersten kaç çıkmış soru', icon: Grid3x3, tint: '#5E5CE6' },
   olasi_sorular: { id: 'olasi_sorular', label: 'Olası sorular', short: 'Olası', hint: 'Sınavdan sonra hatıralardan kurulan sorular; çöz, doğrula', icon: Sparkles, tint: '#AF52DE' },
   practice: { id: 'practice', label: 'Deneme sınavı', short: 'Deneme', hint: 'Süreli deneme sınavı', icon: Timer, tint: '#0A84FF' },

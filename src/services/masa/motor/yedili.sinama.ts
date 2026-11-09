@@ -379,8 +379,9 @@ console.log('Birim: dağıtım, görünüm, gizlilik, bot');
 sina('elBaslat', () => {
   for (const m of [yediliMotor, takimMotor]) for (let n = 2; n <= 6; n++) {
     const d = m.elBaslat({ oyuncular: Array.from({ length: n }, (_, i) => ({ id: 'o' + i, takim: i % 2 ? 'B' as const : 'A' as const })), elNo: 3, baslayan: n - 1, rng: tohumlu(n) }) as YediliDurum;
-    assert.ok(d.oyuncular.every((o) => o.el.length === 7));
-    assert.equal(d.deste.length, 104 - 7 * n);
+    const et = m === takimMotor && n >= 5 ? 4 : 7;
+    assert.ok(d.oyuncular.every((o) => o.el.length === et));
+    assert.equal(d.deste.length, 104 - et * n);
     assert.equal(d.sira, n - 1);
     assert.equal(d.elNo, 3);
     assert.equal(new Set([...d.deste, ...d.oyuncular.flatMap((o) => o.el)].map((t) => t.id)).size, 104);
@@ -558,3 +559,36 @@ for (const m of [yediliMotor, takimMotor]) for (let n = 2; n <= 6; n++) {
 }
 
 console.log(`\nTAMAM: ${adet} sınama geçti.`);
+
+sina('duzenle: masadaki perler yeniden kurulur, taş ele dönmez, elden taş eklenmez', () => {
+  const t = (s: number, r: 0 | 1 | 2 | 3, k = 0) => ({ id: r * 13 + (s - 1) + k * 52, s, r });
+  const d0 = yediliMotor.elBaslat({ oyuncular: [{ id: 'a' }, { id: 'b' }], elNo: 1, baslayan: 0, rng: () => 0.3 }) as YediliDurum;
+  const d = structuredClone(d0);
+  d.oyuncular[0].acti = true;
+  d.oyuncular[0].el = [t(9, 3, 1)];
+  d.perler = [
+    { id: 0, tur: 'seri', taslar: [t(3, 0), t(4, 0), t(5, 0), t(6, 0)], sahip: 'a' },
+    { id: 1, tur: 'grup', taslar: [t(6, 1), t(6, 2), t(6, 3)], sahip: 'b' },
+  ];
+  // 6 kırmızıyı gruba taşı: 3-4-5 kırmızı seri + 6'lı dörtlü grup
+  const r = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id, t(5, 0).id], [t(6, 0).id, t(6, 1).id, t(6, 2).id, t(6, 3).id]] }, () => 0) as any;
+  assert.ok(!r.hata, r.hata);
+  assert.equal(r.durum.perler.length, 2);
+  assert.deepEqual(r.durum.perler.map((p: any) => p.id).sort(), [0, 1]);
+  const eksik = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id, t(5, 0).id], [t(6, 1).id, t(6, 2).id, t(6, 3).id]] }, () => 0) as any;
+  assert.ok(eksik.hata);
+  const elden = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id, t(5, 0).id, t(6, 0).id], [t(6, 1).id, t(6, 2).id, t(6, 3).id, t(9, 3, 1).id]] }, () => 0) as any;
+  assert.ok(elden.hata);
+  const gecersiz = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id], [t(5, 0).id, t(6, 0).id, t(6, 1).id, t(6, 2).id, t(6, 3).id]] }, () => 0) as any;
+  assert.ok(gecersiz.hata);
+});
+
+sina('takim: 5–6 oyuncuda 4 taş, 2–4 oyuncuda kurucu seçimi 7/14', () => {
+  const oy = (n: number) => Array.from({ length: n }, (_, i) => ({ id: `o${i}`, takim: (i % 2 ? 'B' : 'A') as 'A' | 'B' }));
+  const say = (n: number, tasSayisi?: 7 | 14) => (takimMotor.elBaslat({ oyuncular: oy(n), elNo: 1, baslayan: 0, rng: () => 0.5, ayar: tasSayisi ? { tasSayisi } : undefined }) as YediliDurum).oyuncular.map((o) => o.el.length);
+  assert.deepEqual(say(6, 14), [4, 4, 4, 4, 4, 4]);
+  assert.deepEqual(say(4, 14), [14, 14, 14, 14]);
+  assert.deepEqual(say(4), [7, 7, 7, 7]);
+  assert.deepEqual(say(2, 14), [14, 14]);
+  assert.equal((takimMotor.elBaslat({ oyuncular: oy(4), elNo: 1, baslayan: 0, rng: () => 0.5, ayar: { tasSayisi: 14 } }) as YediliDurum).deste.length, 104 - 56);
+});

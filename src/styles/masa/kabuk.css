@@ -333,3 +333,12 @@
   .mk-dugme, .mk-oyun-kart, .mk-anahtar, .mk-anahtar::after { transition: none; }
   .mk-donen { animation-duration: 2.4s; }
 }
+
+/* Bekleme ekranı: kurma / katılma / dağıtım tam ekran, hamle küçük hap */
+.mk-bekleme { position: fixed; inset: 0; z-index: 2147483000; display: grid; place-items: center; background: rgba(8, 12, 16, 0.55); backdrop-filter: blur(2px); }
+.mk-bekleme.is-hap { inset: auto 0 auto 0; top: 12px; background: none; backdrop-filter: none; pointer-events: none; }
+.mk-bekleme-kutu { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 26px; border-radius: 16px; background: rgba(20, 24, 30, 0.92); color: #fff; text-align: center; max-width: min(320px, calc(100vw - 32px)); }
+.mk-bekleme-kutu small { opacity: 0.8; }
+.mk-bekleme.is-hap .mk-bekleme-kutu { flex-direction: row; padding: 8px 14px; border-radius: 999px; font-size: 14px; }
+.mk-kategori { grid-column: 1 / -1; margin: 6px 0 -2px; font-size: 15px; display: flex; align-items: baseline; gap: 8px; }
+.mk-kategori small { font-weight: 400; opacity: 0.7; font-size: 13px; }

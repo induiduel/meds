@@ -12,7 +12,12 @@ const OYUNLAR: { tur: OyunTur; cumle: string; etiket?: string }[] = [
   { tur: 'yedili', cumle: 'Yedi taşla başla, per aç, masadaki perlere işle; elini ilk bitiren kazanır.', etiket: 'Ana oyun' },
   { tur: 'takim', cumle: 'Yedili’nin eşli hâli: karşındaki ortağınla aynı perlere işle, birlikte bitir.' },
   { tur: 'yuzbir', cumle: 'Okeyli klasik: 101 sayıyla ya da beş çiftle aç, taşlarını erit, son taşını at.' },
-  { tur: 'uno', cumle: 'Rengi ya da sayıyı tuttur, kartlarını bitir; tek kart kalınca UNO demeyi unutma.' },
+  { tur: 'uno', cumle: 'Rengi ya da sayıyı tuttur, kartlarını bitir. Resmî kurallar ya da Yığma, 7-0, Çek-çek modları.' },
+];
+/** Eğlence bölgesindeki kategoriler: okey taşlı modlar ve kart oyunları */
+const KATEGORILER: { ad: string; alt: string; turler: OyunTur[] }[] = [
+  { ad: 'Okey modları', alt: 'Taşlı oyunlar', turler: ['yedili', 'takim', 'yuzbir'] },
+  { ad: 'Kart oyunları', alt: 'Uno', turler: ['uno'] },
 ];
 const BOT_SECENEK: Record<OyunTur, number[]> = { yedili: [1, 2, 3, 4, 5], takim: [1, 3, 5], yuzbir: [1, 2, 3], uno: [1, 2, 3, 4, 5, 6, 7] };
 const BOT_VARSAYILAN: Record<OyunTur, number> = { yedili: 2, takim: 3, yuzbir: 3, uno: 3 };
@@ -106,7 +111,9 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
       {!kalici && baglanti === 'koptu' && <div className="mk-uyari" role="status"><p><WifiOff size={16} /> Oyun sunucusuna bağlanılıyor…</p></div>}
 
       <section className="mk-oyunlar" aria-label="Oyunlar">
-        {OYUNLAR.map((o) => (
+        {KATEGORILER.flatMap((k) => [
+          <h2 key={`k-${k.ad}`} className="mk-kategori">{k.ad}<small>{k.alt}</small></h2>,
+          ...OYUNLAR.filter((o) => k.turler.includes(o.tur)).map((o) => (
           <button key={o.tur} type="button" className={`mk-oyun-kart${o.tur === 'yedili' ? ' is-ana' : ''}`} onClick={() => ac(o.tur)} disabled={bekle}>
             <span className="mk-oyun-kece"><OyunResmi tur={o.tur} /></span>
             <span className="mk-oyun-metin">
@@ -117,7 +124,7 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
             </span>
             <ArrowRight className="mk-oyun-ok" size={20} />
           </button>
-        ))}
+        ))])}
       </section>
 
       <div className="mk-merkez-ikili">

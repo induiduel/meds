@@ -18,7 +18,7 @@ import { erisimJetonuDogrula } from '../kimlikDogrulama';
 import { bayrakAcik } from '../yonetim16/siteAyar';
 import { MOTORLAR } from './motorlar';
 import {
-  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER,
+  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER, UNO_MODLAR,
   type ElOzet, type ElSonuc, type Istatistik, type IstemciMesaj, type OdaAsama, type OdaAyar, type OdaGorunum, type OdaOzet,
   type Olay, type OyunTur, type Rng, type SunucuMesaj, type Takim,
 } from './tipler';
@@ -32,6 +32,8 @@ interface Oda {
   kod: string; tur: OyunTur; ayar: OdaAyar; asama: OdaAsama; durdu: boolean; kurucu: string;
   oyuncular: Koltuk[]; elNo: number; baslayan: number; durum: unknown | null; elSonuc?: ElSonuc;
   skor: Record<string, number>; eller: ElOzet[]; surum: number; olusturma: number; guncel: number;
+  /** Geri al: sırası olan oyuncunun bu turdaki per açma / işleme hamlelerinden önceki durumlar (son eleman en yeni) */
+  geri?: { kim: string; durumlar: unknown[] };
 }
 interface Bag { ws: any; uid: string; id: string; ad: string; kod: string | null; son: number; sayac: number; pencere: number }
 interface Deps {
@@ -117,7 +119,7 @@ class MasaSunucu {
       await pgDb.query(
         `insert into masa_oda (kod, veri, asama, uidler, guncel) values ($1, $2::jsonb, $3, $4, now())
          on conflict (kod) do update set veri = excluded.veri, asama = excluded.asama, uidler = excluded.uidler, guncel = now()`,
-        [kod, JSON.stringify(oda), oda.asama, oda.oyuncular.map((k) => k.uid).filter(Boolean)]);
+        [kod, JSON.stringify({ ...oda, geri: undefined }), oda.asama, oda.oyuncular.map((k) => k.uid).filter(Boolean)]);
     } catch (e: any) { console.warn('[Masa] kayıt:', e?.message); }
   }
 
@@ -138,7 +140,8 @@ class MasaSunucu {
       const simdi = Date.now();
       if (!b) {
         if (m.t === 'ping') return this.yolla({ ws }, { t: 'pong', z: Number(m.z) || 0, s: simdi });
-        if (m.t !== 'gir' || ++ilk.sayac > 5) { if (ilk.sayac > 5) ws.close(); return; }
+        if (m.t !== 'gir') return this.hata({ ws }, 'Bağlantı henüz doğrulanmadı; birazdan yeniden dene.', 'kimlik-bekle');
+        if (++ilk.sayac > 5) return ws.close();
         if (!bayrakAcik('oyun_masa')) return this.hata({ ws }, 'Oyun şu an kapalı.', 'kapali');
         const uid = this.kimlikCoz(String(m.jeton || ''));
         if (!uid) return this.hata({ ws }, 'Oturumun doğrulanamadı. Sayfayı yenileyip yeniden dene.', 'kimlik');
@@ -256,6 +259,13 @@ class MasaSunucu {
         if (oda.durdu) return this.hata(b, 'Oyun durduruldu. Kurucunun devam ettirmesi bekleniyor.', 'hamle');
         return this.hamle(oda, b.id, m.h, b);
       }
+      case 'geriAl': {
+        if (oda.asama !== 'oyun' || oda.durdu || oda.durum == null) return this.hata(b, 'Şu an geri alınamaz.', 'hamle');
+        const y = oda.geri;
+        if (!y || y.kim !== b.id || !y.durumlar.length) return this.hata(b, 'Geri alınacak hamle yok. Taş çekme ve eli devretme geri alınmaz.', 'hamle');
+        oda.durum = y.durumlar.pop();
+        return this.yayin(oda, [{ t: 'geriAldi', o: b.id }]);
+      }
       case 'durdur': case 'devam': {
         if (!yalnizKurucu() || (oda.asama !== 'oyun' && oda.asama !== 'elSonu')) return;
         const yeni = m.t === 'durdur';
@@ -299,6 +309,8 @@ class MasaSunucu {
     return {
       elSayisi: kilit ? kilit.elSayisi : (EL_SECENEK as readonly number[]).includes(Number(a.elSayisi)) ? Number(a.elSayisi) : 3,
       asistan: kilit ? kilit.asistan : a.asistan !== false,
+      tasSayisi: kilit ? (kilit.tasSayisi === 14 ? 14 : 7) : Number(a.tasSayisi) === 14 ? 14 : 7,
+      unoMod: kilit ? (kilit.unoMod ?? 'klasik') : UNO_MODLAR.some((m) => m.id === a.unoMod) ? a.unoMod : 'klasik',
       tema: temalar.includes(String(a.tema)) ? String(a.tema) : 'klasik',
       renkler,
     };
@@ -393,7 +405,8 @@ class MasaSunucu {
     if (oda.ayar.elSayisi > 0 && oda.elNo >= oda.ayar.elSayisi) { oda.asama = 'bitti'; return this.yayin(oda, [{ t: 'macBitti' }]); }
     oda.elNo += 1;
     oda.baslayan = (oda.baslayan + 1) % oda.oyuncular.length;
-    oda.durum = motor.elBaslat({ oyuncular: oda.oyuncular.map((k) => ({ id: k.id, takim: k.takim })), elNo: oda.elNo, baslayan: oda.baslayan, rng });
+    oda.durum = motor.elBaslat({ oyuncular: oda.oyuncular.map((k) => ({ id: k.id, takim: k.takim })), elNo: oda.elNo, baslayan: oda.baslayan, rng, ayar: oda.ayar });
+    oda.geri = undefined;
     oda.elSonuc = undefined; oda.asama = 'oyun'; oda.durdu = false;
     this.yayin(oda, [{ t: 'dagit' }]);
   }
@@ -404,8 +417,18 @@ class MasaSunucu {
     try { r = motor.uygula(oda.durum, oyuncu, h, rng); }
     catch (e: any) { console.error('[Masa] motor istisnası:', oda.tur, JSON.stringify(h), e?.stack || e); r = { hata: 'Bu hamle işlenemedi.' }; }
     if ('hata' in r) { if (b) this.hata(b, r.hata, 'hamle'); return false; }
+    const onceki = oda.durum;
     oda.durum = r.durum;
     const olaylar = [...r.olaylar];
+    // Geri al yalnız gizli bilgi açmayan, turu bitirmeyen per açma / işleme hamlelerinde (çekme, devretme, atma, hediye geri alınmaz)
+    const hm = (h as any)?.t;
+    const geriAlinir = oda.tur !== 'uno' && (hm === 'ac' || hm === 'ac101' || hm === 'isle' || hm === 'duzenle')
+      && !olaylar.some((o) => o.t === 'hediye' || o.t === 'elBitti' || o.t === 'sira' || o.t === 'cektim');
+    if (geriAlinir) {
+      if (oda.geri?.kim !== oyuncu) oda.geri = { kim: oyuncu, durumlar: [] };
+      oda.geri.durumlar.push(onceki);
+      if (oda.geri.durumlar.length > 30) oda.geri.durumlar.shift();
+    } else oda.geri = undefined;
     const s = motor.sonuc(oda.durum);
     if (s) {
       oda.asama = 'elSonu'; oda.elSonuc = s;
@@ -428,6 +451,7 @@ class MasaSunucu {
       elNo: oda.elNo,
       oyun: oda.durum != null && oda.asama !== 'lobi' ? MOTORLAR[oda.tur].gorunum(oda.durum, ben) : undefined,
       elSonuc: oda.elSonuc, skor: oda.skor, eller: oda.eller.slice(-30), surum: oda.surum,
+      geriAl: oda.geri?.kim === ben ? oda.geri.durumlar.length : 0,
     };
   }
 

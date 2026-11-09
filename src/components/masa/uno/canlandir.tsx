@@ -269,6 +269,28 @@ export function useOlayCanlandir(bRef: React.MutableRefObject<Baglam>, depo: Sah
             });
             t += 480;
             break;
+          case 'atladi':
+            at((_b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'bilgi', metin: 'Atladı!', alt: benMi ? 'Tıpkı kartla sıranı aldın' : ad(kim), x: d.x, y: d.y }); sesCal('uno'); });
+            t += 300;
+            break;
+          case 'itiraz':
+            at((b, yer) => {
+              const hakli = !!o.hakli, ceken = hakli ? (o.hedef as string) : kim;
+              const d = damgaNokta(yer, ceken, ben);
+              depo.damga({ tur: 'yakala', metin: hakli ? 'İtiraz haklı! +4' : 'İtiraz boşa! +6', alt: hakli ? '+4 kuralsız oynanmıştı' : '+4 kurala uygundu', x: d.x, y: d.y });
+              b.sars(ceken); sesCal('ceza');
+            });
+            t += 520;
+            break;
+          case 'yigin':
+            at((_b, yer) => { depo.damga({ tur: 'arti', metin: `Biriken +${o.adet}`, x: yer.atik.x, y: yer.atik.y }); sesCal('isle'); });
+            t += 300;
+            break;
+          case 'takas':
+          case 'devir':
+            at((_b, yer) => { depo.damga({ tur: 'bilgi', metin: o.t === 'takas' ? 'Eller takas edildi' : 'Eller döndü', alt: o.t === 'takas' ? `${ad(kim)} ↔ ${ad(o.hedef as string)}` : undefined, x: yer.W / 2, y: yer.atik.y }); sesCal('isle'); });
+            t += 420;
+            break;
           case 'karildi':
             at((b, yer) => {
               for (let j = 0; j < 6; j++) depo.ucur({ kapali: true, w: yer.pk, x0: yer.atik.x, y0: yer.atik.y, a0: yiginAci(j * 7), s0: 1, x1: yer.deste.x, y1: yer.deste.y, a1: 360, s1: 1, sure: 420, gecikme: j * 55 });

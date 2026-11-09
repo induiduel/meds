@@ -148,7 +148,7 @@
 .om-benatik { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
 
 /* ---------- masa ---------- */
-.om-sahne { flex: 1; min-width: 0; min-height: 0; }
+.om-sahne { flex: 1; min-width: 0; min-height: 0; position: relative; }
 .om-masa { height: 100%; display: flex; gap: 8px; }
 .om-peralan {
   flex: 1;
@@ -424,3 +424,11 @@
   .om-serit { animation: om-ceza-sade 2.4s linear forwards; }
 }
 @keyframes om-ceza-sade { 0%, 90% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Masayı düzenle kipi */
+.om-pertas--secili { transform: translateY(-18%); filter: drop-shadow(0 0 6px rgba(var(--om-isik), 0.9)); }
+.om-pertas[role='button'] { cursor: pointer; transition: transform 0.12s ease; }
+.om-per--gecersiz .om-per-taslar { box-shadow: 0 0 0 2px #e5484d, 0 0 12px rgba(229, 72, 77, 0.5); border-radius: 6px; }
+.om-duzenserit { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); z-index: 30; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center;
+  max-width: calc(100% - 16px); padding: 6px 10px; border-radius: 12px; background: rgba(15, 20, 25, 0.86); color: #fff; font-size: 13px; }
+.om-duzenserit .om-dugme { min-height: 34px; }

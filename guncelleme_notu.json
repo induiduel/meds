@@ -1,23 +1,30 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 681,
-  "baslik": "Oyunlar: Taş Masası — Yedili Okey, Takım Yedili, 101 Okey ve Uno (arkadaşlarla ya da bota karşı, gerçek zamanlı)",
+  "onem": 682,
+  "baslik": "Taş Masası: Eğlence bölümü, Takım Yedili 4/7/14 taş, masayı düzenle, geri al, Zorlu mod ve yeni Uno modları",
   "maddeler": [
-    "Yedili Okey (ana oyun): 104 taş, jokersiz, 7 taşla başla; per aç, masadaki perlere işle (seriyi bölerek işleme dahil), elini bitiren kazanır. Açabilecekken ya da işleyebilecekken çekmek/devretmek cezadır (−5 + ceza taşı).",
-    "Takım Yedili (karşılıklı takımlar, hediye taş), 101 Okey (gösterge, okey, 101 ya da 5 çiftle açma) ve Uno (Klasik, Stitch, Harry Potter esintili temalar).",
-    "Masa: iki katlı ahşap ıstaka, sürükle bırak / dokun seç / basılı tut, 2B ve 3B görünüm, Klasik ve Hello Kitty esintili tema, kurucunun seçtiği taş renkleri, yardımcı asistan (ipucu, otomatik işle, en iyi hamle).",
-    "Kodla ya da arkadaş davetiyle masa, bot ekleme, oyunu durdur / devam ettir / bitir, yarım kalan oyuna dönme; genel ve rakibe göre ayrı istatistik; kurallar sayfası."
+    "Sol menüde yeni Eğlence bölümü: Taş Masası (okey modları ve kart oyunları) ve Hücrem buradan açılır.",
+    "Oyun başlatılamama sorunu giderildi: istekler artık kaybolmaz, beklerken bekleme ekranı görünür, yanıt gelmezse uyarı çıkar.",
+    "Takım Yedili: 5–6 oyuncuda kişi başı 4 taş; 2–4 oyuncuda kurucu 7 ya da 14 taş seçer.",
+    "Yedili ve Takım: masadaki perler yeniden düzenlenebilir (taş ele alınmaz); per açma, işleme ve ıstaka hareketleri Geri al ile geri alınır.",
+    "Oyun modu: Normal (ipucu, otomatik işle, ıstakayı ve masayı dizme) ya da Zorlu (yardımcı yok; masa yalnız el bitince dizilir).",
+    "Uno: dengeli dağıtım (bir ele joker yığılmaz), resmî kurallar (+4 itirazı, ilk kartın etkisi) ve yeni modlar: Yığma, 7-0, Çek-çek, Atlama, Hızlı."
   ],
   "eklenen": [
-    "Oyunlar › Taş Masası: Yedili Okey, Takım Yedili, 101 Okey, Uno",
-    "Oyunlar › İstatistiklerim ve Nasıl oynanır"
+    "Sol menü › Eğlence",
+    "Takım Yedili taş sayısı seçimi",
+    "Masayı düzenle ve Geri al",
+    "Uno modları: Yığma, 7-0, Çek-çek, Atlama, Hızlı"
   ],
   "degisen": [
-    "Oyunlar sayfası artık Taş Masası ile açılır; eski soru yarışmaları gizlendi"
+    "Yardımcı asistan anahtarı yerine Normal / Zorlu oyun modu",
+    "Uno resmî kurallarla oynanır (+4 itirazı)"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Oyun bazen başlatılamıyor ve hata göstermiyordu"
+  ],
   "silinen": [],
   "yenilikler": [
-    "Taş Masası: arkadaşlarınla ya da bota karşı gerçek zamanlı Yedili Okey, Takım Yedili, 101 Okey ve Uno. Oyunlar sayfasından masa kur, kodu paylaş."
+    "Eğlence: sol menüde oyunlar için yeni bölüm. Takım Yedili’de 4/7/14 taş, masayı düzenle, geri al, Zorlu mod; Uno’da dengeli dağıtım, resmî kurallar ve 6 mod."
   ]
 }

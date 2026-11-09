@@ -66,6 +66,20 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
             <Taslar t={[[4, 2], [5, 2], [6, 2], [7, 2], [8, 2]]} ad="5-6-7 serisine 4 baştan, 8 sondan işlenir" iyi />
             <Taslar t={[[9, 0], [9, 1], [9, 2], [9, 3]]} ad="Üçlü gruba dördüncü renk işlenir" iyi />
           </div>
+          <h3>Masayı düzenleme</h3>
+          <p>Masadaki perler dokunulmaz değildir. Per açtıktan sonra sıran gelince <b>Masayı düzenle</b> ile perlerin yerini değiştirebilir, taşları perler arasında yeniden dizebilirsin: örneğin 3-4-5-6 kırmızı serinin 6’sını 6’lı gruba taşıyıp dörtlü grup yaparsın. Kurallar:</p>
+          <ul>
+            <li>Masadaki taşların <b>hepsi masada kalır</b>; hiçbir taş ele geri alınamaz, düzenleme sırasında elden taş eklenmez.</li>
+            <li>Onayladığında her per yine geçerli olmalıdır (en az 3 taşlık seri ya da grup).</li>
+            <li>Düzenleme taş eritmez: ardından elindeki taşları yeni duruma göre işleyebilir ya da per açabilirsin.</li>
+          </ul>
+          <h3>Geri al</h3>
+          <p>Kendi sırandaki per açma, taş işleme ve masa düzenleme hamlelerini <b>Geri al</b> ile tek tek geri alabilirsin; ıstakadaki taş yer değiştirmelerin de geri alınır. Taş çekme, eli devretme ve hediye taş verdiren hamle geri alınmaz (gizli taş açılmıştır).</p>
+          <h3>Normal ve zorlu mod</h3>
+          <ul>
+            <li><b>Normal mod:</b> ipucu, otomatik işleme, en iyi hamle, ıstakayı sıralama ve masayı dizme yardımcıları açıktır.</li>
+            <li><b>Zorlu mod:</b> yardımcıların hiçbiri yoktur; ıstakayı ve masayı otomatik dizemezsin, taşlarını elle yerleştirirsin. Masadaki perler yalnız <b>el bitince</b> kendiliğinden dizilir. Masayı düzenleme ve geri al her iki modda da vardır.</li>
+          </ul>
           <h3>Seriyi bölerek işleme</h3>
           <p>Masadaki bir serinin <b>ortasındaki</b> bir sayının eş taşı (aynı renk, aynı sayı) elindeyse onu da o seriye işleyebilirsin: seri o taştan <b>ikiye bölünür</b>. Bölünen iki parçanın ikisi de en az 3 taş olmalıdır; bu yüzden en az 5 taşlık serilerde ve uçlardan en az üçüncü sıradaki sayılarda olur.</p>
           <div className="mk-ornekler">
@@ -95,7 +109,13 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
 
       {sekme === 'takim' && (
         <article className="mk-kural" role="tabpanel">
-          <p className="mk-kural-giris">Yedili Okey’in eşli hâli. Takımlar eşit sayıda olur (1–1, 2–2 ya da 3–3); A ve B oyuncuları masada <b>sırayla, ortaklar karşılıklı</b> oturur. Taşlar, perler, seriyi bölerek işleme, zorunluluk ve −5’lik cezalar Yedili Okey ile aynıdır. Farklar:</p>
+          <p className="mk-kural-giris">Yedili Okey’in eşli hâli. Takımlar eşit sayıda olur (1–1, 2–2 ya da 3–3); A ve B oyuncuları masada <b>sırayla, ortaklar karşılıklı</b> oturur. Taşlar, perler, seriyi bölerek işleme, masayı düzenleme, geri al, zorunluluk ve −5’lik cezalar Yedili Okey ile aynıdır. Farklar:</p>
+          <h3>Kişi başı taş</h3>
+          <ul>
+            <li><b>2–4 oyuncu</b> (1–1, 2–2): kurucu lobide <b>7 ya da 14 taş</b> seçer. 14 taşla eller uzun sürer, takım açılışı ve işleme fırsatı artar; 4 oyuncuda destede 48 taş kalır.</li>
+            <li><b>5–6 oyuncu</b> (3–3): herkese <b>4 taş</b> dağıtılır, destede 80 taş kalır. Elde per açacak taş azdır; çoğu tur taş çekerek geçer, ortağın açması takım için daha da değerlidir.</li>
+            <li>Ceza puanları değişmez: kaybeden kalan taşı kadar eksi alır (14 taşlı ellerde eksiler doğal olarak büyür).</li>
+          </ul>
           <h3>Takım açılışı ortaktır</h3>
           <p>Takımdan biri per açtığında <b>ortağı da masadaki perlere taş işleyebilir</b>; kendi peri olmasa bile. Bu yüzden işleme zorunluluğu da ortağın açmasıyla başlar: ortağın açtıysa ve elinde işlek taş varsa, çekmek ya da devretmek ceza getirir.</p>
           <h3>Hediye taş</h3>
@@ -165,12 +185,20 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
 
       {sekme === 'uno' && (
         <article className="mk-kural" role="tabpanel">
-          <p className="mk-kural-giris">2–8 oyuncu, 108 kart. Herkese <b>7 kart</b> dağıtılır, ortaya bir sayı kartı açılır. Amaç kartlarını ilk bitiren olmak.</p>
+          <p className="mk-kural-giris">2–8 oyuncu, 108 kart: dört renkte (kırmızı, sarı, yeşil, mavi) birer 0, ikişer 1–9, ikişer Atlat, Yön ve +2; ayrıca 4 Joker ve 4 +4. Herkese <b>7 kart</b> dağıtılır. Amaç elindeki kartları <b>ilk bitiren</b> olmak. Masada resmî Uno kuralları geçerlidir; kurucu lobide başka bir mod seçebilir.</p>
+          <h3>Dağıtım ve ilk kart</h3>
+          <ul>
+            <li>Deste tamamen rastgele karılır. <b>Dengeli dağıtım:</b> bir ele 2’den çok Joker/+4 (en çok bir +4) ya da 3’ten çok aksiyon kartı (Atlat, Yön, +2) düşerse fazlası destedeki rastgele bir sayı kartıyla değiştirilir. Elinde zaten 3 Joker/+4 olan oyuncu desteden dördüncüsünü çekmez. Böylece bir oyuncu jokerlerle eli birkaç turda bitiremez.</li>
+            <li>Ortaya bir kart açılır. <b>+4</b> açılırsa desteye geri konur, yeni kart açılır.</li>
+            <li><b>Joker</b> açılırsa ilk oyuncu rengi seçer, sonra oynar.</li>
+            <li><b>Atlat</b> açılırsa ilk oyuncunun sırası geçer; <b>Yön</b> açılırsa sıra ters döner ve ilk oyuncunun sağındaki başlar; <b>+2</b> açılırsa ilk oyuncu 2 kart çeker, sırası geçer.</li>
+          </ul>
           <h3>Kart oynama</h3>
-          <p>Ortadaki kartla <b>rengi</b>, <b>sayısı</b> ya da <b>simgesi</b> aynı olan kartı atarsın. Joker ve +4 her zaman oynanır.</p>
+          <p>Ortadaki kartla <b>rengi</b>, <b>sayısı</b> ya da <b>simgesi</b> aynı olan kartı atarsın. Joker her zaman oynanır.</p>
           <div className="mk-ornekler">
             <Kartlar k={[['k', '7'], ['k', '2']]} ad="Aynı renk" iyi />
             <Kartlar k={[['k', '7'], ['m', '7']]} ad="Aynı sayı" iyi />
+            <Kartlar k={[['y', 'pas'], ['m', 'pas']]} ad="Aynı simge" iyi />
             <Kartlar k={[['k', '7'], ['y', '3']]} ad="Renk de sayı da tutmuyor" iyi={false} />
           </div>
           <p>Oynayacak kartın yoksa (ya da oynamak istemiyorsan) desteden <b>1 kart çekersin</b>. Çektiğin kart uyuyorsa hemen oynayabilirsin; o tur başka kart oynayamazsın. Uymuyorsa sırayı geçersin. Deste biterse ortadaki kartlar (en üstteki hariç) karılıp yeni deste olur.</p>
@@ -182,12 +210,24 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
             <Kartlar k={[[null, 'joker']]} ad="Joker: rengi sen seçersin" />
             <Kartlar k={[[null, '+4']]} ad="+4: rengi seçersin; sıradaki 4 kart çeker, sırası geçer" />
           </div>
+          <h3>+4 ve itiraz</h3>
+          <p>+4’ü yalnız elinde <b>ortadaki renkten kart yokken</b> oynayabilirsin (aynı sayı ya da başka joker olması sorun değildir). Yine de oynanabilir; ama sıradaki oyuncu iki seçenekten birini seçer:</p>
           <ul>
-            <li>+2 ve +4 <b>üst üste eklenmez</b>: çeken oyuncu karşılık veremez.</li>
-            <li>+4 için itiraz yoktur; elinde uyan renk olsa da oynayabilirsin.</li>
+            <li><b>Kabul et:</b> 4 kart çeker, sırası geçer.</li>
+            <li><b>İtiraz et:</b> oynayanın eli kontrol edilir. Elinde o renkten kart vardıysa +4 kuralsızdır: <b>oynayan 4 kart çeker</b>, itiraz eden normal oynar. Kart yoktuysa itiraz boşa çıkar: <b>itiraz eden 6 kart çeker</b>, sırası geçer.</li>
           </ul>
+          <p>Klasik kuralda +2 ve +4 <b>üst üste eklenmez</b>: kart çeken oyuncu karşılık veremez.</p>
           <h3>UNO demek</h3>
           <p>Sondan bir önceki kartını oynarken <b>UNO</b> dersin. Demeyi unutursan, sıradaki oyuncu hamle yapana dek herhangi bir rakip seni <b>yakalayabilir</b>: 2 kart çekersin. Yakalanmadan önce fark edip UNO dersen kurtulursun.</p>
+          <h3>Oyun modları</h3>
+          <ul>
+            <li><b>Klasik:</b> yukarıdaki resmî kurallar.</li>
+            <li><b>Yığma:</b> +2’nin üstüne +2 ya da +4, +4’ün üstüne +4 eklenebilir; ceza birikir (ör. +2, +2, +4 = 8 kart). Ekleyecek kartı olmayan biriken kartların hepsini çeker ve sırası geçer. Bu modda +4’e itiraz yoktur.</li>
+            <li><b>7-0:</b> 7 oynayan, elini en az kartı olan rakibiyle değiştirir. 0 oynanınca herkes elini oyun yönündeki komşusuna verir. Takastan sonra UNO durumu yeniden sayılır.</li>
+            <li><b>Atlama:</b> ortadaki kartın <b>tıpkısı</b> (aynı renk ve aynı sayı ya da simge) elindeyse sıranı beklemeden atarsın; sıra senden devam eder, atlanan oyuncular sırasını kaybeder. Joker ve +4 ile atlanmaz. En hızlı davranan kazanır.</li>
+            <li><b>Hızlı:</b> herkese 7 yerine 5 kart dağıtılır; kurallar klasikle aynıdır, eller kısa sürer.</li>
+            <li><b>Çek-çek:</b> oynayamıyorsan uyan bir kart gelene dek çekmeye devam edersin; gelen kartı hemen oynayabilir ya da geçebilirsin.</li>
+          </ul>
           <h3>Puan</h3>
           <table className="mk-kural-tablo">
             <tbody>

@@ -34,6 +34,8 @@ export interface PerAlaniProps {
   onUc(per: number, uc: 'bas' | 'son' | 'bol' | null): void;
   onPer(per: number): void;
   onYeni(): void;
+  /** Masayı düzenleme kipi: masadaki taşlara dokunulur (seçilir), geçersiz perler işaretlenir */
+  duzen?: { secili: ReadonlySet<number>; gecersiz: ReadonlySet<number>; onTas(id: number): void };
 }
 
 export default function PerAlani(p: PerAlaniProps) {
@@ -79,12 +81,15 @@ export default function PerAlani(p: PerAlaniProps) {
           );
           const perUygun = [...p.uygun].some((k) => k.startsWith(`${per.id}:`));
           return (
-            <div key={per.id} className={`om-per om-per--${per.tur}${perUygun ? ' om-per--uygun' : ''}${p.aktif && !perUygun ? ' om-per--sonuk' : ''}${p.ipucuPer === per.id ? ' om-per--ipucu' : ''}${p.bolunen.has(per.id) ? ' om-per--bolundu' : ''}`} data-om-hedef="per" data-per={per.id} onClick={(e) => { e.stopPropagation(); p.onPer(per.id); }}>
+            <div key={per.id} className={`om-per om-per--${per.tur}${p.duzen?.gecersiz.has(per.id) ? ' om-per--gecersiz' : ''}${perUygun ? ' om-per--uygun' : ''}${p.aktif && !perUygun ? ' om-per--sonuk' : ''}${p.ipucuPer === per.id ? ' om-per--ipucu' : ''}${p.bolunen.has(per.id) ? ' om-per--bolundu' : ''}`} data-om-hedef="per" data-per={per.id} onClick={(e) => { e.stopPropagation(); p.onPer(per.id); }}>
               <span className="om-per-sahip">{per.sahip === p.oda.ben ? 'Sen' : oyuncuAdi(p.oda, per.sahip)}</span>
               <div className="om-per-taslar">
                 {uc.bas && ucYuva('bas')}
                 {per.taslar.map((t) => (
-                  <span key={t.id} className={`om-pertas${p.gizli.has(t.id) ? ' om-gizli' : ''}${p.hale.has(t.id) ? ' om-pertas--hale' : ''}`} data-om-pertas={t.id}>
+                  <span
+                    key={t.id} className={`om-pertas${p.gizli.has(t.id) ? ' om-gizli' : ''}${p.hale.has(t.id) ? ' om-pertas--hale' : ''}${p.duzen?.secili.has(t.id) ? ' om-pertas--secili' : ''}`} data-om-pertas={t.id}
+                    {...(p.duzen ? { role: 'button', tabIndex: 0, 'aria-pressed': p.duzen.secili.has(t.id), onClick: (e: React.MouseEvent) => { e.stopPropagation(); p.duzen!.onTas(t.id); } } : null)}
+                  >
                     <TasGorsel tas={t} renkler={p.oda.ayar.renkler} tema={p.oda.ayar.tema} okey={p.okey} />
                     {p.bolSayi === t.s && p.uygun.has(`${per.id}:bol`) && (
                       <button type="button" className="om-bol" data-om-hedef="uc" data-per={per.id} data-uc="bol" aria-label={`Seriyi ${t.s} taşından bölerek işle`} onClick={(e) => { e.stopPropagation(); p.onUc(per.id, 'bol'); }}>
@@ -99,8 +104,8 @@ export default function PerAlani(p: PerAlaniProps) {
             </div>
           );
         })}
-        <button type="button" className={`om-yeniper${p.ipucuYeni ? ' om-yeniper--ipucu' : ''}`} tabIndex={p.yeniUygun ? 0 : -1} onClick={(e) => { e.stopPropagation(); p.onYeni(); }} aria-label="Seçili taşlarla yeni per aç">
-          <span>+ Yeni per</span>
+        <button type="button" className={`om-yeniper${p.ipucuYeni ? ' om-yeniper--ipucu' : ''}`} tabIndex={p.yeniUygun ? 0 : -1} onClick={(e) => { e.stopPropagation(); p.onYeni(); }} aria-label={p.duzen ? 'Seçili masa taşlarıyla ayrı per kur' : 'Seçili taşlarla yeni per aç'}>
+          <span>{p.duzen ? '+ Ayrı per' : '+ Yeni per'}</span>
         </button>
       </div>
     </div>

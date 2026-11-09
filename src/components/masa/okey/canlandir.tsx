@@ -92,6 +92,12 @@ export function olaylariIsle(olaylar: Olay[], oda: OdaGorunum, rectAl: (id: numb
   for (const e of olaylar) {
     const o = e.o as string | undefined;
     switch (e.t) {
+      case 'geriAldi':
+        akis.push(`${ad(o)} son hamlesini ${f(o, 'geri aldı')}`);
+        break;
+      case 'duzenledi':
+        akis.push(`${ad(o)} masadaki perleri ${f(o, 'yeniden düzenledi')}`);
+        break;
       case 'dagit':
         sesCal('dagit');
         g.elim.forEach((ts) => ekleUcus({ tas: ts, kimden: DESTE, hedef: `[data-om-elt="${ts.id}"]`, gizle: ts.id }, 38));

@@ -74,6 +74,56 @@ function sina(ad: string, f: () => void): void {
 
 console.log('Birim');
 
+sina('modlar: yığma birikir, 7-0 takas/devir, çek-çek uyan karta dek', () => {
+  const y = kur({ a: [['k', '+2'], ['k', '1']], b: [['s', '+2'], ['s', '3']], c: [['y', '1'], ['y', '2']] }, ['k', '5'], { mod: 'yigma', yigin: 0 });
+  const y1 = yap(y, 'a', { t: 'oyna', kart: kid(y, 'a', 'k', '+2') });
+  assert.equal(y1.d.yigin, 2); assert.equal(siradaki(y1.d), 'b'); assert.equal(y1.d.eller.b.length, 2);
+  assert.deepEqual(gor(y1.d, 'b').oynanabilir, [kid(y1.d, 'b', 's', '+2')]);
+  const y2 = yap(y1.d, 'b', { t: 'oyna', kart: kid(y1.d, 'b', 's', '+2') });
+  assert.equal(y2.d.yigin, 4); assert.equal(siradaki(y2.d), 'c');
+  const y3 = yap(y2.d, 'c', { t: 'cek' });
+  assert.equal(y3.d.eller.c.length, 6); assert.equal(y3.d.yigin, 0); assert.equal(siradaki(y3.d), 'a');
+  korunum(y3.d);
+
+  const z = kur({ a: [['k', '7'], ['k', '1'], ['k', '2']], b: [['s', '1'], ['s', '2'], ['s', '3'], ['s', '4']], c: [['y', '1']] }, ['k', '5'], { mod: 'yediSifir' });
+  const z1 = yap(z, 'a', { t: 'oyna', kart: kid(z, 'a', 'k', '7') });
+  assert.equal(z1.d.eller.a.length, 1); assert.equal(z1.d.eller.c.length, 2); assert(z1.olaylar.some((o) => o.t === 'takas' && o.hedef === 'c'));
+  const s0 = kur({ a: [['k', '0'], ['k', '1']], b: [['s', '1']], c: [['y', '1'], ['y', '2'], ['y', '3']] }, ['k', '5'], { mod: 'yediSifir' });
+  const s1 = yap(s0, 'a', { t: 'oyna', kart: kid(s0, 'a', 'k', '0') });
+  assert.equal(s1.d.eller.b.length, 1); assert.equal(s1.d.eller.b[0].deger, '1'); assert.equal(s1.d.eller.b[0].renk, 'k');
+  assert.equal(s1.d.eller.c[0].renk, 's'); assert.equal(s1.d.eller.a.length, 3);
+
+  const at = kur({ a: [['k', '1'], ['m', '2']], b: [['s', '1'], ['s', '2']], c: [['k', '5'], ['y', '2']] }, ['k', '5'], { mod: 'atlama' });
+  assert.deepEqual(gor(at, 'c').oynanabilir, [kid(at, 'c', 'k', '5')]);
+  const at1 = yap(at, 'c', { t: 'oyna', kart: kid(at, 'c', 'k', '5') });
+  assert.equal(siradaki(at1.d), 'a'); assert(at1.olaylar.some((o) => o.t === 'atladi' && o.o === 'c'));
+  hata(at, 'c', { t: 'oyna', kart: kid(at, 'c', 'y', '2') }, /tıpkısını/);
+  hata(kur({ a: [['k', '1']], c: [['k', '5']] }, ['k', '5']), 'c', { t: 'oyna', kart: 0 }, /Sıra sende değil/);
+  const hz = unoMotor.elBaslat({ oyuncular: [{ id: 'a' }, { id: 'b' }], elNo: 1, baslayan: 0, rng: tohumlu(5), ayar: { unoMod: 'hizli' } }) as UnoDurum;
+  assert.equal(hz.eller.b.length, 5);
+
+  const c = kur({ a: [['m', '1']], b: [['s', '1']] }, ['k', '5'], { mod: 'cekCek' });
+  usteAl(c, 'k', '9'); usteAl(c, 'y', '3'); usteAl(c, 'y', '4');
+  const c1 = yap(c, 'a', { t: 'cek' });
+  assert.equal(c1.d.eller.a.length, 4); assert.deepEqual(gor(c1.d, 'a').oynanabilir, [c1.d.eller.a[3].id]);
+});
+
+sina('dengeli dağıtım: 20.000 elde hiçbir el 2\'den çok joker/+4 ya da 1\'den çok +4 almaz', () => {
+  let r = 0;
+  for (let t = 0; t < 2500; t++) {
+    const oy = Array.from({ length: 8 }, (_, i) => ({ id: `o${i}` }));
+    const d = unoMotor.elBaslat({ oyuncular: oy, elNo: 1, baslayan: 0, rng: tohumlu(t + 77) }) as UnoDurum;
+    korunum(d);
+    for (const o of oy) {
+      const el = d.eller[o.id].slice(0, 7);
+      if (d.atik[0].deger === '+2' && o.id === 'o0') continue;
+      assert.ok(el.filter((k) => k.renk === null).length <= 2); assert.ok(el.filter((k) => k.deger === '+4').length <= 1);
+      r += el.filter((k) => k.renk === null).length;
+    }
+  }
+  assert.ok(r > 2500, 'jokerler yine de dağıtılıyor');
+});
+
 sina('deste bileşimi: 108 kart, dağılım', () => {
   const d = unoDeste();
   assert.equal(d.length, 108);
@@ -90,25 +140,32 @@ sina('deste bileşimi: 108 kart, dağılım', () => {
   assert.equal(d.filter((k) => k.renk === null).length, 8);
 });
 
-sina('elBaslat: 7 kart, ilk kart sayı, aktif renk, başlayan, yön', () => {
+sina('elBaslat: 7 kart, dengeli dağıtım, ilk kart resmî kurala göre (+4 değil, etkisi ilk oyuncuya)', () => {
   for (let n = 2; n <= 8; n++) for (let t = 0; t < 200; t++) {
     const oyuncular = Array.from({ length: n }, (_, i) => ({ id: `o${i}` }));
     const d = unoMotor.elBaslat({ oyuncular, elNo: 3, baslayan: t % n, rng: tohumlu(n * 1000 + t) }) as UnoDurum;
     korunum(d);
-    for (const o of oyuncular) assert.equal(d.eller[o.id].length, 7);
+    const ilk = d.atik[0];
     assert.equal(d.atik.length, 1);
-    assert.match(d.atik[0].deger, /^\d$/);
-    assert.equal(d.aktifRenk, d.atik[0].renk);
-    assert.equal(siradaki(d), `o${t % n}`);
-    assert.equal(d.yon, 1);
-    assert.equal(d.deste.length, 108 - 7 * n - 1);
+    assert.notEqual(ilk.deger, '+4');
+    for (const [j, o] of oyuncular.entries()) {
+      const el = d.eller[o.id];
+      assert.equal(el.length, ilk.deger === '+2' && j === t % n ? 9 : 7);
+      assert.ok(el.filter((k) => k.renk === null).length <= 2 + (ilk.deger === '+2' && j === t % n ? 2 : 0), 'en çok 2 joker');
+      assert.ok(el.filter((k) => k.deger === '+4').length <= 1 + (ilk.deger === '+2' && j === t % n ? 2 : 0), 'en çok 1 +4');
+    }
+    const b = t % n;
+    if (ilk.deger === 'joker') { assert.equal(d.renkSec, true); assert.equal(siradaki(d), `o${b}`); }
+    else assert.equal(d.aktifRenk, ilk.renk);
+    if (ilk.deger === 'pas' || ilk.deger === '+2') assert.equal(siradaki(d), `o${(b + 1) % n}`);
+    else if (ilk.deger === 'yon') { assert.equal(d.yon, -1); assert.equal(siradaki(d), `o${(b - 1 + n) % n}`); }
+    else if (ilk.deger !== 'joker') { assert.equal(siradaki(d), `o${b}`); assert.equal(d.yon, 1); }
     assert.deepEqual(JSON.parse(JSON.stringify(d)), d, 'düz JSON');
   }
-  // Bozuk rng'de de sonlanır ve sayı kartı açılır
   for (const r of [() => 0, () => 0.999999, () => 1, () => NaN, () => -3]) {
     const d = unoMotor.elBaslat({ oyuncular: [{ id: 'a' }, { id: 'b' }], elNo: 1, baslayan: 0, rng: r }) as UnoDurum;
     korunum(d);
-    assert.match(d.atik[0].deger, /^\d$/);
+    assert.notEqual(d.atik[0].deger, '+4');
   }
   assert.throws(() => unoMotor.elBaslat({ oyuncular: [{ id: 'a' }], elNo: 1, baslayan: 0, rng: rng0 }));
 });
@@ -170,17 +227,32 @@ sina('+2 / +4: sıradaki çeker ve sırası geçer; joker/+4 renksiz hata', () =
   hata(d, 'a', { t: 'oyna', kart: kid(d, 'a', null, '+4') }, /renk seçmelisin/);
   hata(d, 'a', { t: 'oyna', kart: kid(d, 'a', null, 'joker') }, /renk seçmelisin/);
   hata(d, 'a', { t: 'oyna', kart: kid(d, 'a', null, 'joker'), renk: 'x' }, /renk seçmelisin/);
+  // Resmî +4: sıradaki kabul eder (4 çeker, sırası geçer) ya da itiraz eder
   const r4 = yap(d, 'a', { t: 'oyna', kart: kid(d, 'a', null, '+4'), renk: 'm' });
-  assert.equal(r4.d.eller.b.length, 6);
+  assert.equal(r4.d.eller.b.length, 2);
   assert.equal(r4.d.aktifRenk, 'm');
-  assert.equal(siradaki(r4.d), 'c');
+  assert.equal(siradaki(r4.d), 'b');
+  assert.deepEqual(gor(r4.d, 'b').dortBekle, { oynayan: 'a', hedef: 'b' });
+  assert.deepEqual(gor(r4.d, 'b').oynanabilir, []);
+  hata(r4.d, 'b', { t: 'cek' }, /kabul et ya da itiraz/);
+  hata(r4.d, 'c', { t: 'kabul' }, /İtiraz edilecek/);
   assert.equal(r4.d.atik[r4.d.atik.length - 1].renk, null);
   assert(r4.olaylar.some((o) => o.t === 'renk' && o.renk === 'm'));
-  assert.equal(r4.olaylar.find((o) => o.t === 'cekti')?.adet, 4);
+  const kb = yap(r4.d, 'b', { t: 'kabul' });
+  assert.equal(kb.d.eller.b.length, 6); assert.equal(siradaki(kb.d), 'c');
+  // a'nın elinde kırmızı 1 vardı (aktif renk kırmızı): itiraz haklı → a 4 çeker, b oynar
+  const it = yap(r4.d, 'b', { t: 'itiraz' });
+  assert.equal(it.d.eller.a.length, 3 + 4); assert.equal(it.d.eller.b.length, 2); assert.equal(siradaki(it.d), 'b');
+  // Kurala uygun +4'e itiraz: itiraz eden 6 çeker, sırası geçer
+  const dd = kur({ a: [[null, '+4'], ['m', '1']], b: [['s', '1'], ['s', '2']], c: [['y', '1']] }, ['k', '5']);
+  const r5 = yap(dd, 'a', { t: 'oyna', kart: kid(dd, 'a', null, '+4'), renk: 'm' });
+  const it2 = yap(r5.d, 'b', { t: 'itiraz' });
+  assert.equal(it2.d.eller.b.length, 8); assert.equal(siradaki(it2.d), 'c');
+  korunum(it2.d);
   // 2 oyuncuda +2: oynayan yeniden oynar
   const d2 = kur({ a: el.a, b: el.b }, ['k', '5']);
   assert.equal(siradaki(yap(d2, 'a', { t: 'oyna', kart: kid(d2, 'a', 'k', '+2') }).d), 'a');
-  // joker: renk değişir, sıra normal ilerler; +4 her zaman oynanabilir (elde aktif renk olsa da)
+  // joker: renk değişir, sıra normal ilerler
   const rj = yap(d, 'a', { t: 'oyna', kart: kid(d, 'a', null, 'joker'), renk: 'y' });
   assert.equal(rj.d.aktifRenk, 'y');
   assert.equal(siradaki(rj.d), 'b');
@@ -245,7 +317,8 @@ sina('deste yenileme: atık (üst hariç) karılır; ikisi de boşsa 0 kart ve o
   assert.deepEqual(gor(rb.d, 'a').oynanabilir, []);
   assert.equal(siradaki(yap(rb.d, 'a', { t: 'pas' }).d), 'b');
   // +4 hedefi çekebildiği kadar çeker: atıkta yalnız eski üst kart var → karılır, 4 yerine 1 kart
-  const r4 = yap(yap(rb.d, 'a', { t: 'pas' }).d, 'b', { t: 'oyna', kart: kid(b, 'b', null, '+4'), renk: 'k' });
+  const r4a = yap(yap(rb.d, 'a', { t: 'pas' }).d, 'b', { t: 'oyna', kart: kid(b, 'b', null, '+4'), renk: 'k' });
+  const r4 = yap(r4a.d, 'c', { t: 'kabul' });
   assert.equal(r4.olaylar.find((o) => o.t === 'cekti')?.adet, 1);
   assert(r4.olaylar.some((o) => o.t === 'karildi'));
   assert.equal(r4.d.deste.length + r4.d.atik.length, 1);
@@ -343,7 +416,7 @@ sina('el sonu: son kart +2 ile bitiş, puan tablosu, bittikten sonra hamle hata'
 
 sina('gizlilik: görünüm ve olaylarda başkasının kartı yok', () => {
   const d = kur({ a: [['k', '+2'], ['k', '1'], ['m', '3']], b: [['s', '1'], ['s', '2']], c: [['y', '1'], ['y', '2']] }, ['k', '5']);
-  const anahtarlar = ['aktifRenk', 'atikSayisi', 'bitti', 'cektiBuTur', 'deste', 'elNo', 'elim', 'oynanabilir', 'oyuncular', 'sira', 'tur', 'ust', 'yakalanabilir', 'yon'];
+  const anahtarlar = ['aktifRenk', 'atikSayisi', 'bitti', 'cektiBuTur', 'deste', 'elNo', 'elim', 'mod', 'oynanabilir', 'oyuncular', 'sira', 'tur', 'ust', 'yakalanabilir', 'yigin', 'yon'];
   for (const b of ['a', 'b', 'c', null, 'yabanci']) {
     const g = gor(d, b);
     assert.deepEqual(Object.keys(g).sort(), anahtarlar);
@@ -385,12 +458,12 @@ sina('bot ve asistan: öncelikler, joker rengi, UNO, yakalama belirlenimci', () 
   // değer eşleşmesiyle çok renkten oynar: üst k5, elde m5 (m çok) → m5
   const d5 = kur({ a: [['k', '9'], ['m', '5'], ['m', '2'], ['m', '4']], b: [['s', '1'], ['s', '2'], ['s', '3']] }, ['k', '5']);
   assert.deepEqual(bot(d5, 'a'), { t: 'oyna', kart: kid(d5, 'a', 'm', '5') });
-  // rakip 1–2 kartta: +2 > +4 > pas
+  // rakip 1–2 kartta: +2 > pas (+4 yalnız aktif renk yokken)
   const t = kur({ a: [['k', '8'], ['k', 'pas'], ['k', '+2'], [null, '+4'], ['m', '1']], b: [['s', '1'], ['s', '2']] }, ['k', '5']);
   assert.deepEqual(bot(t, 'a'), { t: 'oyna', kart: kid(t, 'a', 'k', '+2') });
   t.eller.a = t.eller.a.filter((k) => k.deger !== '+2');
-  assert.deepEqual(bot(t, 'a'), { t: 'oyna', kart: kid(t, 'a', null, '+4'), renk: 'k' });
-  t.eller.a = t.eller.a.filter((k) => k.deger !== '+4');
+  // Elde aktif renk (k) varken +4 dürüstçe oynanmaz (itirazda yakalanır): pas oynar
+
   assert.deepEqual(bot(t, 'a'), { t: 'oyna', kart: kid(t, 'a', 'k', 'pas') });
   // yalnız joker uyuyor: en çok olan renk; 2 karttan 1'e düşerken uno:true
   const j = kur({ a: [[null, 'joker'], ['y', '1'], ['y', '2'], ['s', '3']], b: [['s', '1'], ['s', '2'], ['s', '4']] }, ['k', '5']);

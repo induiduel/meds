@@ -58,6 +58,9 @@ export type OkeyHamle =
   | { t: 'geriKoy' }
   /** yuzbir: taş at (turu bitirir) */
   | { t: 'at'; tas: number }
+  /** yedili/takim: masadaki perleri yeniden kur (yer değiştir, taşları perler arasında yeniden diz). Masadaki taşların TAMAMI
+   *  kullanılır, ele taş alınmaz, elden taş eklenmez; her yeni per geçerli olmalıdır. Sıra sendeyken ve açmışken (takımda takım açmışken). */
+  | { t: 'duzenle'; perler: number[][] }
   /** yedili/takim: eli devret (turu bitirir) */
   | { t: 'devret' };
 
@@ -114,7 +117,12 @@ export type UnoHamle =
   /** Tek kartı kalan ve UNO demeyi unutan oyuncu, yakalanmadan önce söyler */
   | { t: 'uno' }
   /** UNO demeyen oyuncuyu yakala (2 kart çeker) */
-  | { t: 'yakala'; hedef: string };
+  | { t: 'yakala'; hedef: string }
+  /** El ilk kartı joker açıldıysa ilk oyuncu rengi seçer */
+  | { t: 'renk'; renk: UnoRenk }
+  /** +4 sana oynandı: kabul et (4 çek, sıra geçer) ya da itiraz et (resmî kural) */
+  | { t: 'kabul' }
+  | { t: 'itiraz' };
 
 export interface UnoGorunum {
   tur: 'uno';
@@ -137,7 +145,26 @@ export interface UnoGorunum {
   /** UNO demediği için şu an yakalanabilecek oyuncular */
   yakalanabilir: string[];
   bitti: boolean;
+  /** Oyun modu (UNO_MODLAR) */
+  mod: UnoMod;
+  /** Yığma modunda biriken çekme cezası (0 = yok) */
+  yigin: number;
+  /** +4 itirazı bekleniyor: hedef kabul ya da itiraz eder */
+  dortBekle?: { oynayan: string; hedef: string };
+  /** İlk açılan kart joker: sıradaki oyuncu renk seçer */
+  renkSec?: boolean;
 }
+
+/** Uno modları: klasik = resmî kurallar (+4 itirazı, üst üste ekleme yok) */
+export type UnoMod = 'klasik' | 'yigma' | 'yediSifir' | 'cekCek' | 'atlama' | 'hizli';
+export const UNO_MODLAR: { id: UnoMod; ad: string; aciklama: string }[] = [
+  { id: 'klasik', ad: 'Klasik', aciklama: 'Resmî kurallar: +2 ve +4 üst üste eklenmez, +4’e itiraz edilebilir.' },
+  { id: 'yigma', ad: 'Yığma', aciklama: '+2 üstüne +2 ya da +4, +4 üstüne +4 eklenir; ceza birikir, ekleyemeyen hepsini çeker.' },
+  { id: 'yediSifir', ad: '7-0', aciklama: '7 oynayan en az kartı olan rakiple elini değiştirir; 0 oynanınca herkes elini yöndeki oyuncuya verir.' },
+  { id: 'atlama', ad: 'Atlama', aciklama: 'Ortadaki kartın tıpkısı (aynı renk, aynı sayı ya da simge) elindeyse sıranı beklemeden atarsın; sıra senden devam eder.' },
+  { id: 'hizli', ad: 'Hızlı', aciklama: 'Herkese 5 kart dağıtılır; eller kısa sürer. Kurallar klasikle aynıdır.' },
+  { id: 'cekCek', ad: 'Çek-çek', aciklama: 'Oynayacak kartın yoksa uyan kart gelene dek çekersin; gelen kartı oynayabilirsin.' },
+];
 
 export type OyunGorunum = OkeyGorunum | UnoGorunum;
 export type Hamle = OkeyHamle | UnoHamle;
@@ -204,7 +231,7 @@ export interface Motor {
   tur: OyunTur;
   min: number;
   max: number;
-  elBaslat(g: { oyuncular: { id: string; takim?: Takim }[]; elNo: number; baslayan: number; rng: Rng }): unknown;
+  elBaslat(g: { oyuncular: { id: string; takim?: Takim }[]; elNo: number; baslayan: number; rng: Rng; ayar?: Partial<OdaAyar> }): unknown;
   uygula(durum: unknown, oyuncu: string, hamle: unknown, rng: Rng): { durum: unknown; olaylar: Olay[] } | { hata: string };
   /** bakan = null: izleyici (hiçbir el görünmez) */
   gorunum(durum: unknown, bakan: string | null): OyunGorunum;
@@ -227,8 +254,12 @@ export const EL_SECENEK = [1, 3, 5, 7, 0] as const; // 0 = kurucu bitirene dek
 export interface OdaAyar {
   /** Maç kaç el; 0 = sınırsız (kurucu "Oyunu bitir" diyene dek) */
   elSayisi: number;
-  /** Yardımcı asistan (ipucu, otomatik işle, en iyi plan) açık mı */
+  /** Normal mod (true): ipucu, otomatik işle/diz, en iyi plan açık. Zorlu mod (false): yardımcı yok, ıstaka/masa elle dizilemez; masa el bitince dizilir. */
   asistan: boolean;
+  /** Uno modu (UNO_MODLAR) */
+  unoMod?: UnoMod;
+  /** Takım Yedili, 2–4 oyuncu: kişi başı 7 ya da 14 taş (kurucu seçer). 5–6 oyuncuda her zaman 4 taş. */
+  tasSayisi: 7 | 14;
   /** okey: 'klasik' | 'kitty' · uno: 'klasik' | 'stitch' | 'buyucu' */
   tema: string;
   /** Okey taş renkleri (4 adet #rrggbb) */
@@ -268,6 +299,8 @@ export interface OdaGorunum {
   eller: ElOzet[];
   /** Her değişiklikte artar */
   surum: number;
+  /** Sırası olan bakanın bu turda geri alabileceği hamle sayısı (per açma / işleme) */
+  geriAl?: number;
 }
 
 /** İstemci → sunucu */
@@ -281,6 +314,7 @@ export type IstemciMesaj =
   | { t: 'cikar'; hedef: string }
   | { t: 'baslat' }
   | { t: 'hamle'; h: Hamle }
+  | { t: 'geriAl' }
   | { t: 'sonrakiEl' }
   | { t: 'durdur' }
   | { t: 'devam' }
@@ -295,11 +329,13 @@ export type SunucuMesaj =
   | { t: 'girdi'; ben: string; ad: string }
   | { t: 'durum'; oda: OdaGorunum; olaylar: Olay[] }
   | { t: 'cikti' }
-  | { t: 'hata'; mesaj: string; kod?: 'kimlik' | 'oda-yok' | 'dolu' | 'basladi' | 'hamle' | 'kapali' }
+  | { t: 'hata'; mesaj: string; kod?: 'kimlik' | 'kimlik-bekle' | 'oda-yok' | 'dolu' | 'basladi' | 'hamle' | 'kapali' }
   | { t: 'pong'; z: number; s: number };
 
 export const TEPKILER = ['👏', '😂', '😮', '😢', '🔥', '❤️', '😎', '🤔'] as const;
 export const OYUN_ADI: Record<OyunTur, string> = { yedili: 'Yedili Okey', takim: 'Takım Yedili', yuzbir: '101 Okey', uno: 'Uno' };
+/** Takım Yedili kişi başı taş: 5–6 oyuncuda 4, 2–4 oyuncuda kurucunun seçtiği 7 ya da 14 */
+export const takimElTas = (n: number, secim?: number): number => (n >= 5 ? 4 : secim === 14 ? 14 : 7);
 export const OYUNCU_SINIR: Record<OyunTur, [number, number]> = { yedili: [2, 6], takim: [2, 6], yuzbir: [2, 4], uno: [2, 8] };
 
 /* ------------------------------------------------------------------ istatistik (GET /api/masa/istatistik) ------------------------------------------------------------------ */

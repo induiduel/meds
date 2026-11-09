@@ -135,7 +135,41 @@ export default function MasaView() {
         {istat && <MasaIstatistik />}
       </Yaprak>
       <Bildirimler />
+      <MasaBekleme />
     </>
+  );
+}
+
+/* ------------------------------------------------------------------ bekleme ekranı ------------------------------------------------------------------ */
+
+/** Sunucudan yanıt beklenirken: masa kurma/katılma/dağıtımda tam ekran, hamlede küçük hap (kısa beklemede hiç görünmez) */
+function MasaBekleme() {
+  const { bekliyor, baglanti, oda } = useMasa();
+  const [gorun, setGorun] = useState(false);
+  const hamle = bekliyor?.ne === 'Hamle işleniyor' || bekliyor?.ne === 'Hamle geri alınıyor';
+  useEffect(() => {
+    setGorun(false);
+    if (!bekliyor) return;
+    const t = setTimeout(() => setGorun(true), hamle ? 700 : 250);
+    return () => clearTimeout(t);
+  }, [bekliyor?.at]); // eslint-disable-line react-hooks/exhaustive-deps
+  const [sure, setSure] = useState(0);
+  useEffect(() => {
+    if (!gorun) { setSure(0); return; }
+    const i = setInterval(() => setSure(Math.floor((Date.now() - (bekliyor?.at || Date.now())) / 1000)), 500);
+    return () => clearInterval(i);
+  }, [gorun, bekliyor?.at]);
+  if (!bekliyor || !gorun) return null;
+  const alt = baglanti !== 'hazir' ? 'Sunucuya bağlanılıyor…' : sure >= 5 ? 'Sunucu biraz yavaş yanıt veriyor, bekleniyor…' : 'Lütfen bekle';
+  return createPortal(
+    <div className={`mk mk-bekleme${hamle && oda ? ' is-hap' : ''}`} role="status" aria-live="polite" data-tema={oda?.ayar.tema}>
+      <div className="mk-bekleme-kutu">
+        <span className="mk-donen" />
+        <b>{bekliyor.ne}…</b>
+        {!hamle && <small>{alt}</small>}
+      </div>
+    </div>,
+    document.body,
   );
 }
 

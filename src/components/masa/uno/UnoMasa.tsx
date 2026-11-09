@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { ArrowDownUp, Lightbulb, Megaphone, Play, SkipForward } from 'lucide-react';
+import { ArrowDownUp, Check, Gavel, Lightbulb, Megaphone, Play, SkipForward } from 'lucide-react';
 import type { OdaGorunum, UnoGorunum, UnoHamle, UnoKart, UnoRenk } from '../../../services/masa/tipler';
 import { masa, useMasa } from '../../../services/masa/istemci';
 import { elSirala, oneri as oneriBul } from '../../../services/masa/motor/unoAsistan';
@@ -267,7 +267,7 @@ function Masa({ oda, oyun, W, H, tema }: { oda: OdaGorunum; oyun: UnoGorunum; W:
     >
       <Orta
         yer={yer} tema={tema} yigin={yigin} deste={oyun.deste} renk={halkaRenk} yon={oyun.yon} yonVurus={yonVurus}
-        cekilebilir={siraBende && !oyun.cektiBuTur && renkIste === null} hedef={surukle} oneriCek={oneriH?.t === 'cek'}
+        cekilebilir={siraBende && !oyun.cektiBuTur && renkIste === null && !oyun.dortBekle && !oyun.renkSec} hedef={surukle} oneriCek={oneriH?.t === 'cek'}
         onCek={cek} onReddet={cekReddet}
       />
       <Rakipler oda={oda} oyun={oyun} yer={yer} tema={tema} etkin={etkin} sarsilan={sarsilan} oneriHedef={oneriH?.t === 'yakala' ? oneriH.hedef : null} onYakala={(id) => { masa.hamle({ t: 'yakala', hedef: id }); titret(15); }} />
@@ -331,6 +331,26 @@ function Masa({ oda, oyun, W, H, tema }: { oda: OdaGorunum; oyun: UnoGorunum; W:
         </div>
       )}
 
+      {oyun.yigin > 0 && !oyun.bitti && (
+        <div className="um-yigin-rozet" role="status" style={{ left: yer.atik.x, top: Math.max(8, yer.atik.y - yer.kw * 1.1) }}>
+          Biriken <b>+{oyun.yigin}</b>{siraBende ? ' · ekle ya da çek' : ''}
+        </div>
+      )}
+      {siraBende && oyun.dortBekle?.hedef === ben && !oda.durdu && (
+        <div className="um-itiraz" role="dialog" aria-modal="true" aria-label="+4 itirazı">
+          <div className="um-itiraz-kutu">
+            <b>{oyuncuAdi(oda, oyun.dortBekle.oynayan)} sana +4 oynadı</b>
+            <p>Kabul edersen 4 kart çekersin, sıran geçer. İtiraz edersen kartları açılır: elinde önceki renkten kart vardıysa +4 kuralsızdır ve <b>o 4 çeker</b>, sen oynarsın; yoksa <b>sen 6 çekersin</b>.</p>
+            <div className="um-itiraz-dugmeler">
+              <button type="button" className="um-dugme" onClick={() => { masa.hamle({ t: 'kabul' }); titret(15); }}><Check size={18} aria-hidden="true" /> <span className="um-dugme-yazi um-hep">Kabul et (+4)</span></button>
+              <button type="button" className="um-dugme um-dugme-uno" onClick={() => { masa.hamle({ t: 'itiraz' }); titret(25); }}><Gavel size={18} aria-hidden="true" /> <span className="um-dugme-yazi um-hep">İtiraz et</span></button>
+            </div>
+          </div>
+        </div>
+      )}
+      {siraBende && oyun.renkSec && !oda.durdu && (
+        <RenkSecici yer={yer} tema={tema} onSec={(r) => masa.hamle({ t: 'renk', renk: r })} onVazgec={() => bildir('İlk açılan kart joker: oyuna başlamak için bir renk seç.')} />
+      )}
       <SahneKatmani depo={depo} tema={tema} />
       {renkIste !== null && <RenkSecici yer={yer} tema={tema} onSec={(r) => { const id = renkIste; setRenkIste(null); gonder(id, r); }} onVazgec={renkVazgec} />}
     </div>

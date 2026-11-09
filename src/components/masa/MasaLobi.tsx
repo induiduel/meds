@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { AlertTriangle, ArrowLeftRight, BookOpen, Bot, Check, Copy, Crown, LogOut, Play, Share2, Sparkles, UserPlus, WifiOff, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { masa } from '../../services/masa/istemci';
-import { EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, UNO_TEMALAR, VARSAYILAN_RENKLER, type OdaGorunum, type OyuncuBilgi, type Takim } from '../../services/masa/tipler';
+import { EL_SECENEK, OKEY_TEMALAR, UNO_MODLAR, OYUNCU_SINIR, OYUN_ADI, UNO_TEMALAR, VARSAYILAN_RENKLER, type OdaGorunum, type OyuncuBilgi, type Takim } from '../../services/masa/tipler';
 import { Avatar, KartOrnek, Onay, TEMA_BILGI, TasOrnek, Yaprak, bildir, sadeAd } from './kabukOrtak';
 import type { KuralSekme } from './MasaKurallar';
 
@@ -26,10 +26,10 @@ const kontrast = (hex: string) => { const a = isik(FILDISI) + 0.05, b = isik(hex
 const fark = (a: string, b: string) => Math.hypot(...[1, 3, 5].map((i) => parseInt(a.slice(i, i + 2), 16) - parseInt(b.slice(i, i + 2), 16)));
 
 const OZET: Record<string, string[]> = {
-  yedili: ['7 taşla başlarsın. En az 3 taşlık per (seri ya da grup) açarsın.', 'Per açtıktan sonra masadaki her pere taş işleyebilirsin; eş taşla uzun seriyi ikiye de bölebilirsin.', 'Açabilecekken ya da işleyebilecekken taş çekmek ve eli devretmek cezadır (−5).', 'Elini bitiren kazanır; diğerleri kalan taşı kadar eksi alır.'],
-  takim: ['Ortağın karşında oturur. Takımdan biri per açınca ikiniz de işleyebilirsiniz.', 'Biriniz elini bitirince takım kazanır.', 'Bir grup 4 taşa tamamlanınca rakip takımın her oyuncusu 1 hediye taş çeker.', 'Açabilecekken ya da işleyebilecekken çekmek ve devretmek cezadır (−5).'],
+  yedili: ['7 taşla başlarsın. En az 3 taşlık per (seri ya da grup) açarsın.', 'Per açtıktan sonra masadaki her pere taş işleyebilirsin; eş taşla uzun seriyi ikiye de bölebilirsin. Sıran gelince masadaki perleri yeniden düzenleyebilirsin; masadan ele taş alınmaz.', 'Açabilecekken ya da işleyebilecekken taş çekmek ve eli devretmek cezadır (−5).', 'Elini bitiren kazanır; diğerleri kalan taşı kadar eksi alır.'],
+  takim: ['2–4 oyuncuda kurucunun seçtiği gibi 7 ya da 14, 5–6 oyuncuda 4 taş dağıtılır. Ortağın karşında oturur. Takımdan biri per açınca ikiniz de işleyebilirsiniz.', 'Biriniz elini bitirince takım kazanır.', 'Bir grup 4 taşa tamamlanınca rakip takımın her oyuncusu 1 hediye taş çeker.', 'Açabilecekken ya da işleyebilecekken çekmek ve devretmek cezadır (−5).'],
   yuzbir: ['21 taş dağıtılır; gösterge taşının bir üstü okeydir (joker).', 'Perlerinin toplamı 101 olunca ya da 5 çiftle açarsın.', 'Her tur taş çeker (desteden ya da yandan), sonunda bir taş atarsın.', 'Son taşını atan bitirir: +101. Açamayan −202 alır.'],
-  uno: ['7 kartla başlarsın. Rengi, sayıyı ya da simgeyi tutturan kartı atarsın.', 'Oynayamıyorsan 1 kart çekersin.', 'Tek kartın kalınca UNO de; demezsen yakalanırsan 2 kart çekersin.', 'Kartlarını bitiren, rakiplerin elindeki kartların puanını alır.'],
+  uno: ['7 kartla başlarsın. Rengi, sayıyı ya da simgeyi tutturan kartı atarsın; joker her zaman, +4 yalnız elinde o renkten kart yokken oynanır.', 'Oynayamıyorsan 1 kart çekersin; çektiğin kart uyuyorsa hemen oynayabilirsin.', '+4 sana gelince kabul edersin ya da itiraz edersin. Tek kartın kalınca UNO de; yakalanırsan 2 kart çekersin.', 'Kartlarını bitiren, rakiplerin elindeki kartların puanını alır. Modlar: Klasik, Yığma, 7-0, Çek-çek.'],
 };
 
 interface Arkadas { kimlik: string; ad: string; foto?: string }
@@ -173,13 +173,46 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
             {oda.ayar.elSayisi === 0 && <small className="mk-alan-not">Maç, kurucu menüden “Oyunu bitir” diyene dek sürer.</small>}
           </div>
 
-          <label className="mk-anahtar-satir">
-            <span>
-              <b><Sparkles size={16} /> Yardımcı asistan</b>
-              <small>İpucu verir, işlek taşı gösterir, istenirse en iyi hamleyi oynar. Kapalıyken herkes kendi gözüne güvenir.</small>
-            </span>
-            <input type="checkbox" className="mk-anahtar" checked={oda.ayar.asistan} disabled={!kurucu} onChange={(e) => masa.ayar({ asistan: e.target.checked })} />
-          </label>
+          <div className="mk-alan">
+            <span className="mk-alan-ad"><Sparkles size={16} /> Oyun modu</span>
+            <div className="mk-secenek" role="radiogroup" aria-label="Oyun modu">
+              <button type="button" role="radio" aria-checked={oda.ayar.asistan} disabled={!kurucu} className={oda.ayar.asistan ? 'is-on' : ''} onClick={() => masa.ayar({ asistan: true })}>Normal</button>
+              <button type="button" role="radio" aria-checked={!oda.ayar.asistan} disabled={!kurucu} className={!oda.ayar.asistan ? 'is-on' : ''} onClick={() => masa.ayar({ asistan: false })}>Zorlu</button>
+            </div>
+            <small className="mk-alan-not">{oda.ayar.asistan
+              ? 'İpucu, otomatik işleme, en iyi hamle, ıstakayı ve masayı otomatik dizme açık.'
+              : 'Yardımcı yok: ipucu, otomatik işleme ve otomatik dizme kapalı. Masadaki perler yalnız el bitince kendiliğinden dizilir.'}</small>
+          </div>
+
+          {oda.tur === 'uno' && (
+            <div className="mk-alan">
+              <span className="mk-alan-ad">Uno modu</span>
+              <div className="mk-secenek" role="radiogroup" aria-label="Uno modu">
+                {UNO_MODLAR.map((m) => (
+                  <button key={m.id} type="button" role="radio" aria-checked={(oda.ayar.unoMod ?? 'klasik') === m.id} disabled={!kurucu} className={(oda.ayar.unoMod ?? 'klasik') === m.id ? 'is-on' : ''} onClick={() => masa.ayar({ unoMod: m.id })}>{m.ad}</button>
+                ))}
+              </div>
+              <small className="mk-alan-not">{UNO_MODLAR.find((m) => m.id === (oda.ayar.unoMod ?? 'klasik'))?.aciklama}</small>
+            </div>
+          )}
+
+          {oda.tur === 'takim' && (
+            <div className="mk-alan">
+              <span className="mk-alan-ad">Kişi başı taş</span>
+              {oda.oyuncular.length >= 5 ? (
+                <small className="mk-alan-not">5–6 oyunculu masada herkese <b>4 taş</b> dağıtılır.</small>
+              ) : (
+                <>
+                  <div className="mk-secenek" role="radiogroup" aria-label="Kişi başı taş">
+                    {([7, 14] as const).map((n) => (
+                      <button key={n} type="button" role="radio" aria-checked={oda.ayar.tasSayisi === n} disabled={!kurucu} className={oda.ayar.tasSayisi === n ? 'is-on' : ''} onClick={() => masa.ayar({ tasSayisi: n })}>{n} taş</button>
+                    ))}
+                  </div>
+                  <small className="mk-alan-not">2–4 oyuncuda kurucu seçer. Masa 5–6 kişiye çıkarsa herkese 4 taş dağıtılır.</small>
+                </>
+              )}
+            </div>
+          )}
 
           <div className="mk-alan">
             <span className="mk-alan-ad">Tema</span>

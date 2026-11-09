@@ -1,3 +1,13 @@
+## 2026-11-10 — Taş Masası 2. tur: başlatma hatası, Eğlence bölümü, Takım taş sayısı, masayı düzenle, geri al, Zorlu mod, Uno modları (H523, onem 682)
+- **Belirti:** "Oyun başlatılamıyor, hata da görünmüyor"; oyun içinde takılma hissi.
+- **Kök neden:** kimlik doğrulanmadan (`girdi` öncesi) gönderilen kur/başlat sunucuda yanıtsız atılıyordu; kopukken basılan başlat/sonraki el istemcide hiç gönderilmiyordu (ayrıntı H523).
+- **Çözüm:** `istemci.ts` kuyruk + `bekliyor` durumu + 15 sn zaman aşımı, `MasaView.tsx` `MasaBekleme`; sunucu `kimlik-bekle` hatası.
+- **Takım Yedili:** 5–6 oyuncu 4 taş, 2–4 oyuncu kurucu seçimi 7/14 (`OdaAyar.tasSayisi`, `takimElTas`; `Motor.elBaslat` artık `ayar` alır).
+- **Yedili/Takım:** `duzenle` hamlesi (masadaki taşların tamamı yeniden perlere dizilir; ele taş dönmez, elden eklenmez; kullanıcı kararı 2026-11-10), `geriAl` (sunucu tur içi yığın: per açma/işleme/düzenleme; çekme, devretme, hediye taş, el sonu sıfırlar; ıstaka hareketleri istemcide). Oyun modu Normal / Zorlu (`asistan:false`: yardımcı ve elle dizme yok, masa el bitince dizilir).
+- **Uno:** dengeli dağıtım (elde ≤2 joker/+4, ≤1 +4, ≤3 aksiyon; çekişte 4. joker verilmez), resmî kurallar (ilk kart etkisi, ilk joker → `renk`, +4 `kabul`/`itiraz`, botlar +4'ü dürüst oynar), `UNO_MODLAR`: Klasik, Yığma, 7-0, Çek-çek, Atlama, Hızlı. Kurallar sayfası yeniden yazıldı.
+- **Menü:** `navV15` yeni `eglence` bölümü (ray + Menü; oyunlar Soru çöz'den çıktı); merkezde "Okey modları / Kart oyunları".
+- **Sınama:** `yedili.sinama.ts` (40+2), `uno.sinama.ts` (16), 6 Uno modu × 300 el ve 14 taşlı takım × 45 el bot benzetimi, soket uçtan uca (14 taş, geri al, kimlik öncesi), başsız Chrome ekran görüntüleri. Gerçek telefon sınanmadı.
+
 ## 2026-11-09 — Açılış ekranı sunucu kapalıyken kendiliğinden yeniden deniyor (H516, onem 674)
 - **Belirti:** Kullanıcı "site açılmıyor, splash ekranından geçmiyor" dedi (22:05). Aynı dakikada başka oturumun Oracle dağıtımı (onem 672) `meds-app`'i yeniden başlatmıştı; sunucu RAG indeksini yüklerken 1-2 dk yanıt vermiyor.
 - **Kök neden:** Dağıtım kesintisinde service worker kabuğu (index.html) verdiği için sayfa açılıyor ama uygulama hiçbir API yanıtı alamıyor; splash React hazır olunca kalktığından sonsuza dek kalıyor. `__medsoruTazeYukle` yalnız `/api/surum` 200 ise yenilediğinden kesinti sırasında hiçbir şey olmuyor, kullanıcı elle yenilemeden kurtulamıyordu. Kod hatası değil, "sunucu yok" durumunun ekranda karşılığı yoktu.
