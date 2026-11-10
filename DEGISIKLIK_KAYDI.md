@@ -1,3 +1,9 @@
+## 2026-11-10 — Taş Masası: hamleler anında görünür, ağ gecikmesi gizlendi (H529, onem 688)
+- **Belirti:** tüm oyun modlarında hamle gecikmesi.
+- **Kök neden:** istemci her hamlede tünel üstünden sunucu yanıtını bekleyip masayı kilitliyordu (medyan 94 ms, p99 673 ms, en kötü 2,4 sn); sunucu içi ≤18 ms.
+- **Çözüm:** `src/services/masa/tahmin.ts` (iyimser tahmin) + `istemci.ts` (`onayli`, geri dönüş, 15 sn güvenlik). Ayrıntı H529.
+- **Açık:** Okey çek/aç/işle tahmin edilmiyor; ağ sıçramalarının kökü (tünel) için WS'ye ayrı alt alan kullanıcı erişimi ister.
+
 ## 2026-11-10 — Taş Masası: Go, Çizgi Yarışı, XOX arayüzü + Go eksikleri (onem 685)
 - **Açıldı:** `sunucu.ts` `TURLER` += go/cizgi/xox; merkezde "Tahta oyunları" kategorisi; ekranlar `components/masa/{go,cizgi,xox}/`, ortak `tahta/ortak.tsx` (`TahtaAyar` merkez + lobi ayar seçicisi, `OyuncuSerit`), kurallar `kurallar/TahtaKurallar.tsx`, stil `styles/masa/tahta.css`. Bota karşı kurulumda tahta ayarları `kur(tur, bot, ayar)` ile gider (MasaView `kur` artık `Partial<OdaAyar>` alır).
 - **Go motoru:** konumsal süperko (`gecmis` tahta özetleri), handikap 0–9 (`handikapNoktalari`, beyaz başlar, komi 0,5), süre `goSure` (`GO_SURELER`, ana + byo-yomi; sunucu hamleye `z` basar, `Motor.sureSonu` + `surePlanla` zamanlayıcısı `sureBitti`, durakta `saatKaydir`), bot sayımda kendi diri grubunun (`diriMi`) ölü işaretini geri alır. Sınama 49 → 53.

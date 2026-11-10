@@ -1,24 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 687,
-  "baslik": "Oyunlar: düzenli merkez, yeni lobi ve resimli kurallar",
+  "onem": 688,
+  "baslik": "Oyunlar: hamleler artık anında görünüyor",
   "maddeler": [
-    "Kategoriler: oyunlar Okey, Açık masa, Kart oyunları ve Tahta oyunları başlıkları altında sıralandı; “Kodla katıl” ve yarım kalan oyunlar en üstte.",
-    "Lobi: başlıkta oyunun adı ve çizimi; Uno modu ve zorluk artık açıklamalı kartlardan seçilir (bitişik yazı hatası giderildi); “Kısaca” adımları numaralı.",
-    "Bota karşı oyun: kurulum ekranında Uno modu, Normal/Zorlu ve Takım Yedili’de taş sayısı seçilebilir.",
-    "Nasıl oynanır: her oyunda künye, “Taşları / Kartları tanı” panosu ve bir turun akış şeması; Pişti sahneleri, Go, Çizgi Yarışı ve XOX tahta şemaları eklendi.",
-    "Düzeltmeler: Taş Domino çiziminde üst üste binen taşlar, “2–2 oyuncu” yazısı, kural metinlerinde kaybolan numara ve madde imleri."
+    "Gecikme: taş, kart ve işaret hamleleri sunucu yanıtı beklenmeden anında masaya yansır; yavaş internette de oyun akıcı.",
+    "Hata olursa: sunucu hamleyi reddederse masa kendiliğinden doğru duruma döner."
   ],
-  "eklenen": [
-    "Resimli oyun kuralları",
-    "Bot oyununda mod ve zorluk seçimi"
-  ],
+  "eklenen": [],
   "degisen": [
-    "Oyunlar merkezi kategorileri",
-    "Lobi düzeni"
+    "Tüm oyunlarda hamle hızı"
   ],
   "duzeltilen": [
-    "Lobide bitişik görünen mod seçenekleri"
+    "Oyunlarda internet gecikmesi"
   ],
   "silinen": [],
   "yenilikler": []

@@ -9,6 +9,7 @@
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl } from '../api';
 import { auth, getRememberedStudentInfo } from '../auth';
+import { hamleTahmini } from './tahmin';
 import type { Hamle, IstemciMesaj, OdaAyar, OdaGorunum, Olay, OyunTur, SunucuMesaj, Takim } from './tipler';
 
 export interface MasaDurum {
@@ -58,6 +59,9 @@ class MasaIstemci {
   private bekleyen: IstemciMesaj[] = [];
   private bekleZaman: any = null;
   private sonKod = '';
+  /** Son sunucu onaylı görünüm (iyimser tahmin reddedilirse buna dönülür) */
+  private onayli: OdaGorunum | null = null;
+  private tahminZaman: any = null;
   /** Dışarıdan sınama için sahte kimlik (yalnız MEDS_MASA_TEST=1 sunucuda geçer): ?masatest=<ad> */
   private testAd = (() => { try { return new URLSearchParams(window.location.search).get('masatest') || ''; } catch { return ''; } })();
 
@@ -121,6 +125,7 @@ class MasaIstemci {
     clearTimeout(this.yeniden); clearInterval(this.nabiz);
     const ws = this.ws; this.ws = null;
     try { ws?.close(); } catch { /* yok */ }
+    this.onayli = null; clearTimeout(this.tahminZaman);
     this.yaz({ baglanti: 'kapali', oda: null });
   }
 
@@ -169,8 +174,9 @@ class MasaIstemci {
         break;
       }
       case 'durum': {
-        const onceki = this.durum.oda;
+        const onceki = this.onayli;
         if (onceki && onceki.kod === m.oda.kod && m.oda.surum < onceki.surum) break; // sırası bozulmuş eski paket
+        this.onayli = m.oda; clearTimeout(this.tahminZaman);
         this.sonKod = m.oda.kod;
         try { localStorage.setItem(SON_KEY, m.oda.kod); } catch { /* yok */ }
         this.yaz({ oda: m.oda });
@@ -179,7 +185,7 @@ class MasaIstemci {
         break;
       }
       case 'cikti': {
-        this.sonKod = '';
+        this.sonKod = ''; this.onayli = null;
         try { localStorage.removeItem(SON_KEY); } catch { /* yok */ }
         this.yaz({ oda: null });
         if (this.durum.bekliyor) this.bekle(null);
@@ -188,6 +194,7 @@ class MasaIstemci {
       case 'hata': {
         if (m.kod === 'oda-yok' || m.kod === 'basladi' || m.kod === 'dolu') { this.sonKod = ''; }
         if (this.durum.bekliyor) this.bekle(null);
+        this.tahminGeriAl();
         this.hataYaz(m.mesaj, m.kod);
         break;
       }
@@ -219,7 +226,24 @@ class MasaIstemci {
   koltukIste(hedef: string) { this.gonder({ t: 'koltukIste', hedef }); }
   koltukVer(kime: string, hedef?: string) { this.gonder({ t: 'koltukVer', kime, hedef }); }
   koltukRed(kime: string) { this.gonder({ t: 'koltukRed', kime }); }
-  hamle(h: Hamle) { this.gonder({ t: 'hamle', h }); }
+  /** Hamle: tahmin edilebiliyorsa sunucu yanıtı beklenmeden ekrana yansır (tahmin.ts); sunucu durumu her zaman son sözdür */
+  hamle(h: Hamle) {
+    const oda = this.durum.oda;
+    const t = oda ? hamleTahmini(oda, h) : null;
+    if (!t || !this.yolla({ t: 'hamle', h })) return this.gonder({ t: 'hamle', h });
+    this.yaz({ oda: t });
+    // Yanıt hiç gelmezse tahmin ekranda takılı kalmasın: onaylı görünüme dön, soketi yenile
+    clearTimeout(this.tahminZaman);
+    this.tahminZaman = setTimeout(() => {
+      this.tahminGeriAl();
+      this.hataYaz('Sunucu yanıt vermedi. Bağlantı yenileniyor, birazdan yeniden dene.');
+      try { this.ws?.close(); } catch { /* yok */ }
+    }, 15_000);
+  }
+  private tahminGeriAl() {
+    clearTimeout(this.tahminZaman);
+    if (this.onayli && this.durum.oda && this.durum.oda !== this.onayli && this.durum.oda.kod === this.onayli.kod) this.yaz({ oda: this.onayli });
+  }
   geriAl() { this.gonder({ t: 'geriAl' }); }
   ayar(ayar: Partial<OdaAyar>) { this.gonder({ t: 'ayar', ayar }); }
   takim(takim: Takim, hedef?: string) { this.gonder({ t: 'takim', takim, hedef }); }
