@@ -131,7 +131,8 @@ def klipler(modul: str) -> dict[str, list[str]]:
                     continue
                 k = f"{st['id']}-{q['no']}"
                 if st["tur"] == "bosluk":
-                    K[f"h-{k}"] = [nokta(oku(re.sub(r"_{2,}", " boşluk ", q["metin"])))]
+                    # Boşluklu kök okunmaz: okunuş için soru biçimine çevrilmiş `okunus` (dogrula.py zorunlu tutar)
+                    K[f"h-{k}"] = [nokta(oku(q.get("okunus") or re.sub(r"_{2,}", " boşluk ", q["metin"])))]
                     K[f"hc-{k}"] = [nokta(f"Cevap: {oku(q['cevap'])}")] + parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip())) + hata_ses(q)
                 elif st["tur"] == "dy":
                     K[f"h-{k}"] = [nokta(oku(q["metin"])), "Doğru mu, yanlış mı?"]

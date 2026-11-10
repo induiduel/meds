@@ -1,16 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 710,
-  "baslik": "Hocanın çalışma soruları: PDF ile sesli çözüm",
+  "onem": 711,
+  "baslik": "Sesli çalışma soruları daha doğal okunuyor",
   "maddeler": [
-    "Hoca soruları: çözümlü kitapçık sesle eş zamanlı ilerler, okunan satır yanar (hata notlu sorular dahil)",
-    "Sesli çözüm oynatıcısı sesli derslerdeki gibi: soru soru çubuk, atlama, hız"
+    "Boşluk doldurma soruları artık “boşluk” diye değil, soru cümlesi olarak okunur; kitapçıkta soru satırı yanar"
   ],
-  "eklenen": [
-    "Hocanın çalışma sorularında “PDF ile” kipi: soru okunurken kök ve şıklar, çözümde doğru şık ve çözüm satırları kitapçıkta yanar"
-  ],
+  "eklenen": [],
   "degisen": [
-    "Hoca soruları sesli çözüm oynatıcısı sesli ders düzenine geçti (soru parçalı çubukta istediğin yere atla, ±10 sn, önceki/sonraki soru, hız)"
+    "Hocanın 100 boşluk doldurma sorusu doğal soru biçiminde yeniden seslendirildi (örn. “Uyku tulumu, vücudun ne kaybını önlemek için kullanılır?”)"
   ],
   "duzeltilen": [],
   "silinen": [],

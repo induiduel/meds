@@ -11,25 +11,29 @@
      "no": 1,
      "metin": "Kamp alanı ____ bir arazide ve yangın tehlikesinden uzak olmalıdır.",
      "cevap": "düz ve açık",
-     "cozum": "Kamp alanı düz ve açık bir arazide, yangın tehlikesinden uzak olmalıdır. Düz zemin çadırın güvenle kurulmasını ve rahat uyunmasını sağlar, açık alan ise yangın ve çevre risklerini azaltır."
+     "cozum": "Kamp alanı düz ve açık bir arazide, yangın tehlikesinden uzak olmalıdır. Düz zemin çadırın güvenle kurulmasını ve rahat uyunmasını sağlar, açık alan ise yangın ve çevre risklerini azaltır.",
+     "okunus": "Kamp alanı nasıl bir arazide olmalı ve yangın tehlikesinden uzak olmalıdır?"
     },
     {
      "no": 2,
      "metin": "Çadır, kampçıyı ____, ____, ____ ve güneşten korur.",
      "cevap": "rüzgâr, yağmur, soğuk",
-     "cozum": "Çadır, kampçıyı rüzgâr, yağmur, soğuk ve güneşten korur. Bu sayede vücut ısısı korunur ve kötü hava koşullarında kampçı güvende kalır."
+     "cozum": "Çadır, kampçıyı rüzgâr, yağmur, soğuk ve güneşten korur. Bu sayede vücut ısısı korunur ve kötü hava koşullarında kampçı güvende kalır.",
+     "okunus": "Çadır, kampçıyı güneşin yanı sıra hangi üç etkenden korur?"
     },
     {
      "no": 3,
      "metin": "Kamp alanı sel, çığ ve ____ riski olan yerlerde kurulmamalıdır.",
      "cevap": "kaya düşmesi",
-     "cozum": "Kamp alanı sel, çığ ve kaya düşmesi riski olan yerlerde kurulmamalıdır. Çünkü bu tehlikeler uyku sırasında bile can kaybına yol açabilir."
+     "cozum": "Kamp alanı sel, çığ ve kaya düşmesi riski olan yerlerde kurulmamalıdır. Çünkü bu tehlikeler uyku sırasında bile can kaybına yol açabilir.",
+     "okunus": "Kamp alanı sel ve çığ dışında hangi riskin olduğu yerlerde kurulmamalıdır?"
     },
     {
      "no": 4,
      "metin": "Uyku tulumu, vücudun ____ kaybını önlemek için kullanılır.",
      "cevap": "ısı",
-     "cozum": "Uyku tulumu, vücudun ısı kaybını önlemek için kullanılır. Tulum kendisi ısıtmaz, vücudun ürettiği ısıyı çevrede kaybolmadan korur."
+     "cozum": "Uyku tulumu, vücudun ısı kaybını önlemek için kullanılır. Tulum kendisi ısıtmaz, vücudun ürettiği ısıyı çevrede kaybolmadan korur.",
+     "okunus": "Uyku tulumu, vücudun ne kaybını önlemek için kullanılır?"
     },
     {
      "no": 5,
@@ -41,199 +45,232 @@
       "dogrusu": "Tuvalet alanı sudan en az 50 metre uzak olmalıdır.",
       "neden": "Hoca üç seçenekli sorularda aynı uzaklığı 50 metre diye işaretliyor, ders anlatımı da 50 metreyi esas alıyor; iz bırakmama ilkesinde yaygın değer de yaklaşık 50–70 metredir.",
       "yazilma": "Hocanın boşluk doldurma anahtarı 150 metre dediği için soru anahtarıyla birlikte korundu; hoca farklı sorularda 50, 150 ve 50–70 metre gibi farklı değerler veriyor."
-     }
+     },
+     "okunus": "Kamp sırasında tuvalet alanı sudan en az kaç metre uzak olmalıdır?"
     },
     {
      "no": 6,
      "metin": "Çadırın dikiş yerlerinde ____ kullanmak su sızmasını engeller.",
      "cevap": "dikiş mühürleyici",
-     "cozum": "Çadırın dikiş yerlerinde dikiş mühürleyici kullanmak su sızmasını engeller. Dikiş delikleri yağmurda su alabilecek en zayıf noktalardır, mühürleyici bu açıkları kapatır."
+     "cozum": "Çadırın dikiş yerlerinde dikiş mühürleyici kullanmak su sızmasını engeller. Dikiş delikleri yağmurda su alabilecek en zayıf noktalardır, mühürleyici bu açıkları kapatır.",
+     "okunus": "Çadırın dikiş yerlerinde su sızmasını engellemek için ne kullanılır?"
     },
     {
      "no": 7,
      "metin": "Kış kampında ____ tulumları sıcak tutar fakat ıslandığında zor kurur.",
      "cevap": "kaz tüyü",
-     "cozum": "Kış kampında kaz tüyü tulumlar sıcak tutar ama ıslandığında zor kurur. Islanınca yalıtımını kaybettiği için nemli ortamlarda bu özellik önemli bir risktir."
+     "cozum": "Kış kampında kaz tüyü tulumlar sıcak tutar ama ıslandığında zor kurur. Islanınca yalıtımını kaybettiği için nemli ortamlarda bu özellik önemli bir risktir.",
+     "okunus": "Kış kampında hangi tulumlar sıcak tutar fakat ıslandığında zor kurur?"
     },
     {
      "no": 8,
      "metin": "Doğada giyimde en önemli kural, kalın tek kat yerine ____ ince kat giyinmektir.",
      "cevap": "birden fazla",
-     "cozum": "Doğada giyimde en önemli kural, kalın tek kat yerine birden fazla ince kat giyinmektir. Katmanlar arasında hava birikir, hava ve sıcaklığa göre kat çıkarıp giyerek vücut ısısı dengelenir."
+     "cozum": "Doğada giyimde en önemli kural, kalın tek kat yerine birden fazla ince kat giyinmektir. Katmanlar arasında hava birikir, hava ve sıcaklığa göre kat çıkarıp giyerek vücut ısısı dengelenir.",
+     "okunus": "Doğada giyimde en önemli kural nedir; kalın tek kat yerine nasıl giyinilmelidir?"
     },
     {
      "no": 9,
      "metin": "Kamp ateşi ____ ve ____ amaçlı kullanılabilir.",
      "cevap": "ısınma, yemek pişirme",
-     "cozum": "Kamp ateşi ısınma ve yemek pişirme amacıyla kullanılabilir. Ateş yakılırken güvenlik kurallarına uymak gerekir, çünkü kontrolsüz ateş yangına yol açar."
+     "cozum": "Kamp ateşi ısınma ve yemek pişirme amacıyla kullanılabilir. Ateş yakılırken güvenlik kurallarına uymak gerekir, çünkü kontrolsüz ateş yangına yol açar.",
+     "okunus": "Kamp ateşi hangi iki amaçla kullanılabilir?"
     },
     {
      "no": 10,
      "metin": "Sırt çantasında ağır eşyalar sırta ____, hafif eşyalar ise ____ yerleştirilmelidir.",
      "cevap": "yakın, dışa doğru",
-     "cozum": "Sırt çantasında ağır eşyalar sırta yakın, hafif eşyalar ise dışa doğru yerleştirilmelidir. Ağır yükün sırta yakın durması dengeyi korur ve yürürken omurgayı yormaz."
+     "cozum": "Sırt çantasında ağır eşyalar sırta yakın, hafif eşyalar ise dışa doğru yerleştirilmelidir. Ağır yükün sırta yakın durması dengeyi korur ve yürürken omurgayı yormaz.",
+     "okunus": "Sırt çantasında ağır eşyalar ve hafif eşyalar nereye yerleştirilmelidir?"
     },
     {
      "no": 11,
      "metin": "Çadır kurmadan önce zemin ____ ve ____ olmalıdır.",
      "cevap": "düz, taşsız",
-     "cozum": "Çadır kurmadan önce zemin düz ve taşsız olmalıdır. Taşlar ve eğim hem uykuyu bozar hem de çadır tabanını yırtabilir."
+     "cozum": "Çadır kurmadan önce zemin düz ve taşsız olmalıdır. Taşlar ve eğim hem uykuyu bozar hem de çadır tabanını yırtabilir.",
+     "okunus": "Çadır kurmadan önce zemin nasıl olmalıdır?"
     },
     {
      "no": 12,
      "metin": "Çadırın dış tentesi ____, iç tentesi ise ____ olmalıdır.",
      "cevap": "su geçirmez, hava geçirir",
-     "cozum": "Çadırın dış tentesi su geçirmez, iç tentesi ise hava geçirir olmalıdır. Dış tente yağmuru dışarıda tutar, iç tente nemin ve buharın dışarı çıkmasına izin verir."
+     "cozum": "Çadırın dış tentesi su geçirmez, iç tentesi ise hava geçirir olmalıdır. Dış tente yağmuru dışarıda tutar, iç tente nemin ve buharın dışarı çıkmasına izin verir.",
+     "okunus": "Çadırın dış tentesi ve iç tentesi nasıl olmalıdır?"
     },
     {
      "no": 13,
      "metin": "Çadırın altına serilen koruyucu örtüye ____ denir.",
      "cevap": "tabanlık",
-     "cozum": "Çadırın altına serilen koruyucu örtüye tabanlık denir. Tabanlık zeminden gelen suyu geçirmez ve çadır tabanını aşınmaya karşı korur."
+     "cozum": "Çadırın altına serilen koruyucu örtüye tabanlık denir. Tabanlık zeminden gelen suyu geçirmez ve çadır tabanını aşınmaya karşı korur.",
+     "okunus": "Çadırın altına serilen koruyucu örtüye ne denir?"
     },
     {
      "no": 14,
      "metin": "Çadırın içine girerken ____ kapatılmalıdır.",
      "cevap": "kapı",
-     "cozum": "Çadırın içine girerken kapı kapatılmalıdır. Açık kapı soğuğun, böceklerin ve rüzgârın içeri girmesine neden olur."
+     "cozum": "Çadırın içine girerken kapı kapatılmalıdır. Açık kapı soğuğun, böceklerin ve rüzgârın içeri girmesine neden olur.",
+     "okunus": "Çadırın içine girerken ne kapatılmalıdır?"
     },
     {
      "no": 15,
      "metin": "Uyku tulumu ____ tutulmalı, ıslandığında mutlaka ____ edilmelidir.",
      "cevap": "kuru, kurutulmalı",
-     "cozum": "Uyku tulumu kuru tutulmalı, ıslandığında mutlaka kurutulmalıdır. Islak tulum yalıtım özelliğini yitirir ve hipotermi riskini artırır."
+     "cozum": "Uyku tulumu kuru tutulmalı, ıslandığında mutlaka kurutulmalıdır. Islak tulum yalıtım özelliğini yitirir ve hipotermi riskini artırır.",
+     "okunus": "Uyku tulumu nasıl tutulmalı, ıslandığında ne yapılmalıdır?"
     },
     {
      "no": 16,
      "metin": "Uyku tulumu içine girmeden önce ____ giysiler giyilmelidir.",
      "cevap": "kuru",
-     "cozum": "Uyku tulumuna girmeden önce kuru giysiler giyilmelidir. Nemli giysi vücuttan ısı çeker ve kişiyi üşütür."
+     "cozum": "Uyku tulumuna girmeden önce kuru giysiler giyilmelidir. Nemli giysi vücuttan ısı çeker ve kişiyi üşütür.",
+     "okunus": "Uyku tulumuna girmeden önce nasıl giysiler giyilmelidir?"
     },
     {
      "no": 17,
      "metin": "Uyku tulumunun altına serilen yalıtım malzemesine ____ denir.",
      "cevap": "mat",
-     "cozum": "Uyku tulumunun altına serilen yalıtım malzemesine mat denir. Mat, vücut ile zemin arasındaki ısı kaybını önler."
+     "cozum": "Uyku tulumunun altına serilen yalıtım malzemesine mat denir. Mat, vücut ile zemin arasındaki ısı kaybını önler.",
+     "okunus": "Uyku tulumunun altına serilen yalıtım malzemesine ne denir?"
     },
     {
      "no": 18,
      "metin": "Sıcak havalarda başı korumak için ____ kullanılmalıdır.",
      "cevap": "şapka",
-     "cozum": "Sıcak havalarda başı korumak için şapka kullanılmalıdır. Şapka güneş çarpması ve aşırı ısınma riskini azaltır."
+     "cozum": "Sıcak havalarda başı korumak için şapka kullanılmalıdır. Şapka güneş çarpması ve aşırı ısınma riskini azaltır.",
+     "okunus": "Sıcak havalarda başı korumak için ne kullanılmalıdır?"
     },
     {
      "no": 19,
      "metin": "Soğuk havalarda ısı kaybını önlemek için ____ ve ____ takılmalıdır.",
      "cevap": "bere, eldiven",
-     "cozum": "Soğuk havalarda ısı kaybını önlemek için bere ve eldiven takılmalıdır. Baş ve eller ısının kolayca kaybedildiği bölgelerdir."
+     "cozum": "Soğuk havalarda ısı kaybını önlemek için bere ve eldiven takılmalıdır. Baş ve eller ısının kolayca kaybedildiği bölgelerdir.",
+     "okunus": "Soğuk havalarda ısı kaybını önlemek için hangi ikisi takılmalıdır?"
     },
     {
      "no": 20,
      "metin": "Kamp alanında yiyecekler ____ kaplarda saklanmalıdır.",
      "cevap": "kapalı",
-     "cozum": "Kamp alanında yiyecekler kapalı kaplarda saklanmalıdır. Kapalı ve hava geçirmez kap hem kokuyu tutar hem de yabani hayvanları çekmeyi önler."
+     "cozum": "Kamp alanında yiyecekler kapalı kaplarda saklanmalıdır. Kapalı ve hava geçirmez kap hem kokuyu tutar hem de yabani hayvanları çekmeyi önler.",
+     "okunus": "Kamp alanında yiyecekler nasıl kaplarda saklanmalıdır?"
     },
     {
      "no": 21,
      "metin": "Kamp alanı hayvan geçiş yollarına ____ olmalıdır.",
      "cevap": "uzak",
-     "cozum": "Kamp alanı hayvan geçiş yollarına uzak olmalıdır. Böylece hayvanlarla karşılaşma riski azalır ve doğal yaşam rahatsız edilmez."
+     "cozum": "Kamp alanı hayvan geçiş yollarına uzak olmalıdır. Böylece hayvanlarla karşılaşma riski azalır ve doğal yaşam rahatsız edilmez.",
+     "okunus": "Kamp alanı hayvan geçiş yollarına göre nerede olmalıdır?"
     },
     {
      "no": 22,
      "metin": "Uyku tulumu faaliyet sonrasında ____ yerlerinden asılmalıdır.",
      "cevap": "asma",
-     "cozum": "Uyku tulumu faaliyet sonrasında asma yerlerinden asılmalıdır. Asılarak saklanan tulumun dolgusu ezilmez ve havalanarak kurur."
+     "cozum": "Uyku tulumu faaliyet sonrasında asma yerlerinden asılmalıdır. Asılarak saklanan tulumun dolgusu ezilmez ve havalanarak kurur.",
+     "okunus": "Uyku tulumu faaliyet sonrasında nerelerinden asılmalıdır?"
     },
     {
      "no": 23,
      "metin": "Çadırın içindeki eşyalar ____ bir şekilde yerleştirilmelidir.",
      "cevap": "düzenli",
-     "cozum": "Çadırın içindeki eşyalar düzenli bir şekilde yerleştirilmelidir. Düzen, karanlıkta eşyaya kolay ulaşmayı sağlar ve takılıp düşmeyi önler."
+     "cozum": "Çadırın içindeki eşyalar düzenli bir şekilde yerleştirilmelidir. Düzen, karanlıkta eşyaya kolay ulaşmayı sağlar ve takılıp düşmeyi önler.",
+     "okunus": "Çadırın içindeki eşyalar nasıl yerleştirilmelidir?"
     },
     {
      "no": 24,
      "metin": "Kamp sırasında kullanılan bıçak, çakı gibi aletler ____ kullanılmalıdır.",
      "cevap": "dikkatli",
-     "cozum": "Bıçak ve çakı gibi aletler dikkatli kullanılmalıdır. Kamp alanında bir kesik, ilk yardım ve sağlık hizmetine uzak olunduğu için ciddi bir sorun olabilir."
+     "cozum": "Bıçak ve çakı gibi aletler dikkatli kullanılmalıdır. Kamp alanında bir kesik, ilk yardım ve sağlık hizmetine uzak olunduğu için ciddi bir sorun olabilir.",
+     "okunus": "Kampta bıçak, çakı gibi aletler nasıl kullanılmalıdır?"
     },
     {
      "no": 25,
      "metin": "Kamp sırasında enerji sağlamak için ____ bir akşam yemeği önemlidir.",
      "cevap": "iyi / dengeli",
-     "cozum": "Enerji sağlamak için iyi ve dengeli bir akşam yemeği önemlidir. Karbonhidrat ve proteinli yemek, gece ısınmaya ve ertesi günün yürüyüşüne güç verir."
+     "cozum": "Enerji sağlamak için iyi ve dengeli bir akşam yemeği önemlidir. Karbonhidrat ve proteinli yemek, gece ısınmaya ve ertesi günün yürüyüşüne güç verir.",
+     "okunus": "Kampta enerji sağlamak için nasıl bir akşam yemeği önemlidir?"
     },
     {
      "no": 26,
      "metin": "Çadırın iç ve dış tentesi birbirine ____ etmemelidir.",
      "cevap": "değmemelidir",
-     "cozum": "Çadırın iç ve dış tentesi birbirine değmemelidir. Değerse dış tentedeki nem içeri geçer ve çadırın içi ıslanır."
+     "cozum": "Çadırın iç ve dış tentesi birbirine değmemelidir. Değerse dış tentedeki nem içeri geçer ve çadırın içi ıslanır.",
+     "okunus": "Çadırın iç ve dış tentesi arasındaki ilişki nasıl olmalıdır?"
     },
     {
      "no": 27,
      "metin": "Kamp çantasındaki sıvı maddeler (örneğin benzin) ____ yerleştirilmelidir.",
      "cevap": "en alt kısma",
-     "cozum": "Çantadaki sıvı maddeler, örneğin benzin, en alt kısma yerleştirilmelidir. Sızıntı olursa diğer eşyaları ve yiyecekleri bozmaz."
+     "cozum": "Çantadaki sıvı maddeler, örneğin benzin, en alt kısma yerleştirilmelidir. Sızıntı olursa diğer eşyaları ve yiyecekleri bozmaz.",
+     "okunus": "Kamp çantasında benzin gibi sıvı maddeler nereye yerleştirilmelidir?"
     },
     {
      "no": 28,
      "metin": "Çadır ____ riski olan mağara duvarlarına yakın kurulmamalıdır.",
      "cevap": "çökme",
-     "cozum": "Çadır çökme riski olan mağara duvarlarına yakın kurulmamalıdır. Duvardan kopan parçalar uyuyan kişiler için büyük tehlike oluşturur."
+     "cozum": "Çadır çökme riski olan mağara duvarlarına yakın kurulmamalıdır. Duvardan kopan parçalar uyuyan kişiler için büyük tehlike oluşturur.",
+     "okunus": "Çadır, hangi riski olan mağara duvarlarına yakın kurulmamalıdır?"
     },
     {
      "no": 29,
      "metin": "Uyku tulumunda fazla boşluk kalırsa ____ giysilerle doldurulabilir.",
      "cevap": "polar",
-     "cozum": "Uyku tulumunda fazla boşluk kalırsa polar giysilerle doldurulabilir. Boşluk kalan yerde hava ısınmak zorunda kalır, doldurmak ısı kaybını azaltır."
+     "cozum": "Uyku tulumunda fazla boşluk kalırsa polar giysilerle doldurulabilir. Boşluk kalan yerde hava ısınmak zorunda kalır, doldurmak ısı kaybını azaltır.",
+     "okunus": "Uyku tulumunda fazla boşluk kalırsa hangi giysilerle doldurulabilir?"
     },
     {
      "no": 30,
      "metin": "Çadırın içerisi ____ bırakılmamalı, çıkarken kapı ____ kapatılmalıdır.",
      "cevap": "açık, mutlaka",
-     "cozum": "Çadırın içi açık bırakılmamalı, çıkarken kapı mutlaka kapatılmalıdır. Açık çadıra hayvanlar girebilir ve rüzgâr eşyaları ıslatabilir."
+     "cozum": "Çadırın içi açık bırakılmamalı, çıkarken kapı mutlaka kapatılmalıdır. Açık çadıra hayvanlar girebilir ve rüzgâr eşyaları ıslatabilir.",
+     "okunus": "Çadırın içerisi nasıl bırakılmamalı, çıkarken kapı nasıl kapatılmalıdır?"
     },
     {
      "no": 31,
      "metin": "Uyku tulumu temizlenirken ____ kullanılmamalıdır.",
      "cevap": "deterjan",
-     "cozum": "Uyku tulumu temizlenirken deterjan kullanılmamalıdır. Deterjan dolgunun yalıtım özelliğine zarar verir."
+     "cozum": "Uyku tulumu temizlenirken deterjan kullanılmamalıdır. Deterjan dolgunun yalıtım özelliğine zarar verir.",
+     "okunus": "Uyku tulumu temizlenirken ne kullanılmamalıdır?"
     },
     {
      "no": 32,
      "metin": "Doğada teri dışarı atabilen ____ karışımlı giysiler tercih edilmelidir.",
      "cevap": "sentetik / yün",
-     "cozum": "Doğada teri dışarı atabilen sentetik ya da yün karışımlı giysiler tercih edilmelidir. Bu kumaşlar teri vücuttan uzaklaştırır, pamuk ise ıslanınca üşütür."
+     "cozum": "Doğada teri dışarı atabilen sentetik ya da yün karışımlı giysiler tercih edilmelidir. Bu kumaşlar teri vücuttan uzaklaştırır, pamuk ise ıslanınca üşütür.",
+     "okunus": "Doğada teri dışarı atabilen hangi karışımlı giysiler tercih edilmelidir?"
     },
     {
      "no": 33,
      "metin": "Kamp sırasında çöpler mutlaka ____ toplanmalıdır.",
      "cevap": "ayrıştırılarak / poşetlerde",
-     "cozum": "Kamp sırasında çöpler mutlaka ayrıştırılarak toplanmalıdır. Çöp gömülmez ve yakılmaz, geri taşınarak doğanın temiz kalması sağlanır."
+     "cozum": "Kamp sırasında çöpler mutlaka ayrıştırılarak toplanmalıdır. Çöp gömülmez ve yakılmaz, geri taşınarak doğanın temiz kalması sağlanır.",
+     "okunus": "Kamp sırasında çöpler nasıl toplanmalıdır?"
     },
     {
      "no": 34,
      "metin": "Kamp çantasındaki ağır eşyalar ____ olmalıdır.",
      "cevap": "sırta yakın",
-     "cozum": "Kamp çantasındaki ağır eşyalar sırta yakın olmalıdır. Böylece ağırlık merkezi vücuda yakın kalır ve denge bozulmaz."
+     "cozum": "Kamp çantasındaki ağır eşyalar sırta yakın olmalıdır. Böylece ağırlık merkezi vücuda yakın kalır ve denge bozulmaz.",
+     "okunus": "Kamp çantasındaki ağır eşyalar nerede olmalıdır?"
     },
     {
      "no": 35,
      "metin": "Uyku tulumu içine girmeden önce hafif bir ____ yapmak vücudu ısıtır.",
      "cevap": "yürüyüş",
-     "cozum": "Uyku tulumuna girmeden önce hafif bir yürüyüş yapmak vücudu ısıtır. Önceden ısınmış vücut tulumu daha çabuk ısıtır."
+     "cozum": "Uyku tulumuna girmeden önce hafif bir yürüyüş yapmak vücudu ısıtır. Önceden ısınmış vücut tulumu daha çabuk ısıtır.",
+     "okunus": "Uyku tulumuna girmeden önce vücudu ısıtmak için ne yapılır?"
     },
     {
      "no": 36,
      "metin": "Kış kamplarında sıcak su dolu şişe ____ içine konabilir.",
      "cevap": "uyku tulumu",
-     "cozum": "Kış kamplarında sıcak su dolu şişe uyku tulumunun içine konabilir. Sıcak şişe vücut ısısını hızla yükseltir ve geceyi daha rahat geçirmeyi sağlar."
+     "cozum": "Kış kamplarında sıcak su dolu şişe uyku tulumunun içine konabilir. Sıcak şişe vücut ısısını hızla yükseltir ve geceyi daha rahat geçirmeyi sağlar.",
+     "okunus": "Kış kamplarında sıcak su dolu şişe nerenin içine konabilir?"
     },
     {
      "no": 37,
      "metin": "Kamp ateşi yakmadan önce ____ kontrol edilmelidir.",
      "cevap": "rüzgâr yönü",
-     "cozum": "Kamp ateşi yakmadan önce rüzgâr yönü kontrol edilmelidir. Rüzgâr kıvılcımı taşıyıp yangın çıkarabilir."
+     "cozum": "Kamp ateşi yakmadan önce rüzgâr yönü kontrol edilmelidir. Rüzgâr kıvılcımı taşıyıp yangın çıkarabilir.",
+     "okunus": "Kamp ateşi yakmadan önce ne kontrol edilmelidir?"
     },
     {
      "no": 38,
@@ -245,379 +282,442 @@
       "dogrusu": "Çadır kazıkları toprağa 45 derece açıyla çakılmalıdır.",
       "neden": "Hoca üç seçenekli sorularda doğru cevap olarak 45 dereceyi işaretliyor, ders anlatımı da 45 dereceyi esas alıyor; eğik çakılan kazık gergi ipinin çekişine daha iyi direnir.",
       "yazilma": "Hocanın boşluk doldurma anahtarında 90 derece yazdığı için soru olduğu gibi tutuldu; hoca bu konuda kendi içinde çelişiyor."
-     }
+     },
+     "okunus": "Çadır kazıkları toprağa hangi açıyla çakılmalıdır?"
     },
     {
      "no": 39,
      "metin": "Çadırın bakımında en önemli kural ____ ve ____ saklamaktır.",
      "cevap": "kuru, havalandırılmış",
-     "cozum": "Çadırın bakımında en önemli kural, onu kuru ve havalandırılmış saklamaktır. Nemli saklanan çadır küflenir ve su geçirmezlik özelliğini yitirir."
+     "cozum": "Çadırın bakımında en önemli kural, onu kuru ve havalandırılmış saklamaktır. Nemli saklanan çadır küflenir ve su geçirmezlik özelliğini yitirir.",
+     "okunus": "Çadırın bakımında en önemli kural nedir; çadır nasıl saklanmalıdır?"
     },
     {
      "no": 40,
      "metin": "Kamp alanı seçerken bölgenin ____ kısmına hâkim olunmalıdır.",
      "cevap": "üçte ikilik / yüksek",
-     "cozum": "Kamp alanı seçerken bölgenin yüksek kısmına hâkim olunmalıdır. Hâkim konum çevreyi görmeyi ve sel gibi risklerden uzak durmayı sağlar."
+     "cozum": "Kamp alanı seçerken bölgenin yüksek kısmına hâkim olunmalıdır. Hâkim konum çevreyi görmeyi ve sel gibi risklerden uzak durmayı sağlar.",
+     "okunus": "Kamp alanı seçerken bölgenin hangi kısmına hâkim olunmalıdır?"
     },
     {
      "no": 41,
      "metin": "Çadır kurarken rüzgârın yönü dikkate alınmalı, çadırın ____ kısmı rüzgâr yönüne gelecek şekilde konumlandırılmalıdır.",
      "cevap": "arka",
-     "cozum": "Çadırın arka kısmı rüzgâr yönüne gelecek şekilde konumlandırılmalıdır. Böylece kapı hâkim rüzgâra bakmaz ve içeri rüzgâr dolmaz."
+     "cozum": "Çadırın arka kısmı rüzgâr yönüne gelecek şekilde konumlandırılmalıdır. Böylece kapı hâkim rüzgâra bakmaz ve içeri rüzgâr dolmaz.",
+     "okunus": "Çadır kurarken çadırın hangi kısmı rüzgâr yönüne gelecek şekilde konumlandırılmalıdır?"
     },
     {
      "no": 42,
      "metin": "İyi bir kamp alanı, doğaya zarar vermemek için ____ kamp alanı ilkesine uygun seçilmelidir.",
      "cevap": "“iz bırakma” / Leave No Trace",
-     "cozum": "İyi bir kamp alanı, doğaya zarar vermemek için iz bırakma ilkesine uygun seçilmelidir. Amaç, ayrılırken ekolojik dengeyi bozmayacak şekilde alanı eski hâline getirmektir."
+     "cozum": "İyi bir kamp alanı, doğaya zarar vermemek için iz bırakma ilkesine uygun seçilmelidir. Amaç, ayrılırken ekolojik dengeyi bozmayacak şekilde alanı eski hâline getirmektir.",
+     "okunus": "Doğaya zarar vermemek için kamp alanı hangi ilkeye uygun seçilmelidir?"
     },
     {
      "no": 43,
      "metin": "Uyku tulumunun ısı yalıtımı, içindeki ____ miktarına ve ____ kalitesine bağlıdır.",
      "cevap": "hava, dolgu malzemesi",
-     "cozum": "Uyku tulumunun ısı yalıtımı, içindeki hava miktarına ve dolgu malzemesinin kalitesine bağlıdır. Hava hapsedildikçe ısı kaybı azalır."
+     "cozum": "Uyku tulumunun ısı yalıtımı, içindeki hava miktarına ve dolgu malzemesinin kalitesine bağlıdır. Hava hapsedildikçe ısı kaybı azalır.",
+     "okunus": "Uyku tulumunun ısı yalıtımı nelere bağlıdır?"
     },
     {
      "no": 44,
      "metin": "Kış kamplarında çadır altına konan kar tabakası ____ amacıyla kullanılır.",
      "cevap": "yalıtım / izolasyon",
-     "cozum": "Kış kamplarında çadır altına konan kar tabakası yalıtım amacıyla kullanılır. Kar hava hapsettiği için zeminin soğuğunu kesmeye yardımcı olur."
+     "cozum": "Kış kamplarında çadır altına konan kar tabakası yalıtım amacıyla kullanılır. Kar hava hapsettiği için zeminin soğuğunu kesmeye yardımcı olur.",
+     "okunus": "Kış kamplarında çadır altına konan kar tabakası hangi amaçla kullanılır?"
     },
     {
      "no": 45,
      "metin": "Çadırın içindeki nemin dışarı çıkabilmesi için ____ sistemi bulunmalıdır.",
      "cevap": "havalandırma",
-     "cozum": "Çadırın içindeki nemin dışarı çıkabilmesi için havalandırma sistemi bulunmalıdır. Havalandırma olmazsa solunum nemi yoğuşur ve eşyalar ıslanır."
+     "cozum": "Çadırın içindeki nemin dışarı çıkabilmesi için havalandırma sistemi bulunmalıdır. Havalandırma olmazsa solunum nemi yoğuşur ve eşyalar ıslanır.",
+     "okunus": "Çadırın içindeki nemin dışarı çıkabilmesi için hangi sistem bulunmalıdır?"
     },
     {
      "no": 46,
      "metin": "Kamp ocaklarında yakıt olarak genellikle ____ veya ____ türü gazlar kullanılır.",
      "cevap": "propan, bütan",
-     "cozum": "Kamp ocaklarında yakıt olarak genellikle propan veya bütan türü gazlar kullanılır. Bu gazlar kartuşlarda taşınır ve çadırdan uzakta, açık alanda yakılır."
+     "cozum": "Kamp ocaklarında yakıt olarak genellikle propan veya bütan türü gazlar kullanılır. Bu gazlar kartuşlarda taşınır ve çadırdan uzakta, açık alanda yakılır.",
+     "okunus": "Kamp ocaklarında yakıt olarak genellikle hangi gazlar kullanılır?"
     },
     {
      "no": 47,
      "metin": "Ağaç altına çadır kurmak tehlikelidir, çünkü ____ riski her zaman vardır.",
      "cevap": "dal kırılması / düşen dal",
-     "cozum": "Ağaç altına çadır kurmak tehlikelidir, çünkü dal kırılması riski her zaman vardır. Ayrıca ağaç, yıldırım çarpması riskini de artırır."
+     "cozum": "Ağaç altına çadır kurmak tehlikelidir, çünkü dal kırılması riski her zaman vardır. Ayrıca ağaç, yıldırım çarpması riskini de artırır.",
+     "okunus": "Ağaç altına çadır kurmak neden tehlikelidir?"
     },
     {
      "no": 48,
      "metin": "Kamp sırasında enerji kaybını önlemek için karbonhidrat ve ____ açısından zengin yiyecekler tüketilmelidir.",
      "cevap": "protein",
-     "cozum": "Kamp sırasında enerji kaybını önlemek için karbonhidrat ve protein açısından zengin yiyecekler tüketilmelidir. Karbonhidrat hızlı enerji, protein ise kas onarımı sağlar."
+     "cozum": "Kamp sırasında enerji kaybını önlemek için karbonhidrat ve protein açısından zengin yiyecekler tüketilmelidir. Karbonhidrat hızlı enerji, protein ise kas onarımı sağlar.",
+     "okunus": "Kampta enerji kaybını önlemek için karbonhidrat dışında neyce zengin yiyecekler tüketilmelidir?"
     },
     {
      "no": 49,
      "metin": "Kar mağarası veya iglo inşa ederken, içeride ____ deliği bırakmak karbonmonoksit zehirlenmesini önler.",
      "cevap": "havalandırma",
-     "cozum": "Kar mağarası veya iglo yaparken içeride havalandırma deliği bırakmak karbonmonoksit zehirlenmesini önler. Kapalı alanda yanma ve solunum havayı bozar, delik temiz hava girmesini sağlar."
+     "cozum": "Kar mağarası veya iglo yaparken içeride havalandırma deliği bırakmak karbonmonoksit zehirlenmesini önler. Kapalı alanda yanma ve solunum havayı bozar, delik temiz hava girmesini sağlar.",
+     "okunus": "Kar mağarası ya da iglo yaparken karbonmonoksit zehirlenmesini önlemek için içeride hangi delik bırakılır?"
     },
     {
      "no": 50,
      "metin": "Uzun süreli kamp faaliyetlerinde çadır ve tulumların küflenmesini önlemek için ____ ve ____ yapılması gerekir.",
      "cevap": "kurutma, havalandırma",
-     "cozum": "Uzun süreli kamplarda çadır ve tulumların küflenmesini önlemek için kurutma ve havalandırma yapılması gerekir. Nem küf oluşturur ve malzemeye zarar verir."
+     "cozum": "Uzun süreli kamplarda çadır ve tulumların küflenmesini önlemek için kurutma ve havalandırma yapılması gerekir. Nem küf oluşturur ve malzemeye zarar verir.",
+     "okunus": "Uzun kamplarda çadır ve tulumların küflenmesini önlemek için hangi iki işlem yapılmalıdır?"
     },
     {
      "no": 51,
      "metin": "Pusula, ____ özelliğine dayanarak yön belirlemeye yarayan bir alettir.",
      "cevap": "yerkürenin manyetik",
-     "cozum": "Pusula, yerkürenin manyetik özelliğine dayanarak yön belirlemeye yarayan bir alettir. İbre bu alanla hizalanarak kuzeyi gösterir."
+     "cozum": "Pusula, yerkürenin manyetik özelliğine dayanarak yön belirlemeye yarayan bir alettir. İbre bu alanla hizalanarak kuzeyi gösterir.",
+     "okunus": "Pusula, hangi özelliğe dayanarak yön belirlemeye yarar?"
     },
     {
      "no": 52,
      "metin": "Pusulada ağırlıklı uç genellikle ____ yönünü gösterir.",
      "cevap": "güney",
-     "cozum": "Pusulada ağırlıklı uç genellikle güney yönünü gösterir. Kırmızı uç ise kuzeyi gösterir."
+     "cozum": "Pusulada ağırlıklı uç genellikle güney yönünü gösterir. Kırmızı uç ise kuzeyi gösterir.",
+     "okunus": "Pusulada ağırlıklı uç genellikle hangi yönü gösterir?"
     },
     {
      "no": 53,
      "metin": "Pusulada N, S, E, W harfleri sırasıyla ____, ____, ____, ____ yönlerini gösterir.",
      "cevap": "kuzey, güney, doğu, batı",
-     "cozum": "Pusulada N, S, E ve W harfleri sırasıyla kuzey, güney, doğu ve batı yönlerini gösterir. Bu harfler İngilizce yön adlarının baş harfleridir."
+     "cozum": "Pusulada N, S, E ve W harfleri sırasıyla kuzey, güney, doğu ve batı yönlerini gösterir. Bu harfler İngilizce yön adlarının baş harfleridir.",
+     "okunus": "Pusulada N, S, E ve W harfleri sırasıyla hangi yönleri gösterir?"
     },
     {
      "no": 54,
      "metin": "Jeolog pusulası, ____ (eğim ölçer) ve ____ (düzey ölçer) kısımlarından oluşur.",
      "cevap": "klinometre, el düzeçi",
-     "cozum": "Jeolog pusulası klinometre ve el düzeci kısımlarından oluşur. Klinometre eğimi ölçer, el düzeci ise aletin yatay tutulmasını sağlar."
+     "cozum": "Jeolog pusulası klinometre ve el düzeci kısımlarından oluşur. Klinometre eğimi ölçer, el düzeci ise aletin yatay tutulmasını sağlar.",
+     "okunus": "Jeolog pusulası, eğim ölçen ve düzey ölçen hangi kısımlardan oluşur?"
     },
     {
      "no": 55,
      "metin": "Pusula tabanı üzerinde E-W harfleri ____ olarak yazılır.",
      "cevap": "yer değiştirmiş",
-     "cozum": "Pusula tabanı üzerinde E ve W harfleri yer değiştirmiş olarak yazılır. Bunun nedeni, ibrenin saat ibresinin tersi yönünde dönmesidir."
+     "cozum": "Pusula tabanı üzerinde E ve W harfleri yer değiştirmiş olarak yazılır. Bunun nedeni, ibrenin saat ibresinin tersi yönünde dönmesidir.",
+     "okunus": "Pusula tabanı üzerinde E ve W harfleri nasıl yazılır?"
     },
     {
      "no": 56,
      "metin": "Doğrultu açısı, pusula ibresinin ____ ile yaptığı ____ açıdır.",
      "cevap": "kuzey, dar",
-     "cozum": "Doğrultu açısı, pusula ibresinin kuzey ile yaptığı dar açıdır. Bu açı E, N ve W aralığında okunur."
+     "cozum": "Doğrultu açısı, pusula ibresinin kuzey ile yaptığı dar açıdır. Bu açı E, N ve W aralığında okunur.",
+     "okunus": "Doğrultu açısı, pusula ibresinin neyle yaptığı nasıl bir açıdır?"
     },
     {
      "no": 57,
      "metin": "Eğim yönünü bulmak için pusulanın ____ veya ____ kenarı ölçülecek düzleme yaslanır.",
      "cevap": "N, S",
-     "cozum": "Eğim yönünü bulmak için pusulanın N veya S kenarı ölçülecek düzleme yaslanır. Hangi kenar yaslanırsa, ibrenin karşıt ucu eğim yönünü gösterir."
+     "cozum": "Eğim yönünü bulmak için pusulanın N veya S kenarı ölçülecek düzleme yaslanır. Hangi kenar yaslanırsa, ibrenin karşıt ucu eğim yönünü gösterir.",
+     "okunus": "Eğim yönünü bulmak için pusulanın hangi kenarı ölçülecek düzleme yaslanır?"
     },
     {
      "no": 58,
      "metin": "Eğim açısı ____ yardımıyla okunur.",
      "cevap": "klinometre düzeci",
-     "cozum": "Eğim açısı klinometre düzeci yardımıyla okunur. Düzecin kabarcığı ortalandığında açı değeri güvenle okunabilir."
+     "cozum": "Eğim açısı klinometre düzeci yardımıyla okunur. Düzecin kabarcığı ortalandığında açı değeri güvenle okunabilir.",
+     "okunus": "Eğim açısı ne yardımıyla okunur?"
     },
     {
      "no": 59,
      "metin": "Pusula ile yer belirleme yöntemlerinden biri ____ kestirme, diğeri ____ kestirme yöntemidir.",
      "cevap": "geriden, ileriden",
-     "cozum": "Pusula ile yer belirleme yöntemlerinden biri geriden kestirme, diğeri ileriden kestirme yöntemidir. Geriden kestirmede bulunduğumuz yer, ileriden kestirmede ulaşılamayan bir nokta belirlenir."
+     "cozum": "Pusula ile yer belirleme yöntemlerinden biri geriden kestirme, diğeri ileriden kestirme yöntemidir. Geriden kestirmede bulunduğumuz yer, ileriden kestirmede ulaşılamayan bir nokta belirlenir.",
+     "okunus": "Pusula ile yer belirlemede kullanılan iki kestirme yöntemi hangileridir?"
     },
     {
      "no": 60,
      "metin": "Pusula–altimetre yöntemiyle yer belirlemede, ____ ölçülür ve haritadaki ____ eğrisi üzerinden konum belirlenir.",
      "cevap": "yükseklik, eşyükseklik",
-     "cozum": "Pusula ve altimetre yönteminde yükseklik ölçülür ve haritadaki eşyükselti eğrisi üzerinden konum belirlenir. Altimetre yükseklik bilgisini verir, pusula doğrultuyu ekler."
+     "cozum": "Pusula ve altimetre yönteminde yükseklik ölçülür ve haritadaki eşyükselti eğrisi üzerinden konum belirlenir. Altimetre yükseklik bilgisini verir, pusula doğrultuyu ekler.",
+     "okunus": "Pusula altimetre yönteminde ne ölçülür ve konum haritadaki hangi eğri üzerinden belirlenir?"
     },
     {
      "no": 61,
      "metin": "Jeolog pusulası, hem ____ ölçümü hem de ____ tayini için kullanılır.",
      "cevap": "düzlemsel yapıların, çizgisel yapıların",
-     "cozum": "Jeolog pusulası hem düzlemsel yapıların ölçümü hem de çizgisel yapıların yön tayini için kullanılır. Bu sayede tabaka ve çizgisel yapıların konumu sahada kaydedilir."
+     "cozum": "Jeolog pusulası hem düzlemsel yapıların ölçümü hem de çizgisel yapıların yön tayini için kullanılır. Bu sayede tabaka ve çizgisel yapıların konumu sahada kaydedilir.",
+     "okunus": "Jeolog pusulası hangi yapıların ölçümü ve tayini için kullanılır?"
     },
     {
      "no": 62,
      "metin": "Pusula ibresi, ____ alanı sayesinde yön tayini yapar.",
      "cevap": "Dünya’nın manyetik",
-     "cozum": "Pusula ibresi, Dünya'nın manyetik alanı sayesinde yön tayini yapar. İbre bu alanın çizgileriyle hizalanarak kuzeyi gösterir."
+     "cozum": "Pusula ibresi, Dünya'nın manyetik alanı sayesinde yön tayini yapar. İbre bu alanın çizgileriyle hizalanarak kuzeyi gösterir.",
+     "okunus": "Pusula ibresi hangi alan sayesinde yön tayini yapar?"
     },
     {
      "no": 63,
      "metin": "Eğer pusula ibresinin ağırlıklı ucu yoksa, ____ işaretli uç kuzeyi gösterir.",
      "cevap": "N harfiyle",
-     "cozum": "Pusula ibresinin ağırlıklı ucu yoksa, N harfiyle işaretli uç kuzeyi gösterir. Doğru uç bilinmezse yön yanlış okunur."
+     "cozum": "Pusula ibresinin ağırlıklı ucu yoksa, N harfiyle işaretli uç kuzeyi gösterir. Doğru uç bilinmezse yön yanlış okunur.",
+     "okunus": "Pusula ibresinin ağırlıklı ucu yoksa kuzeyi hangi uç gösterir?"
     },
     {
      "no": 64,
      "metin": "Pusula tabanı üzerinde E-W harflerinin yer değiştirmesi, ibrenin ____ yönünde dönmesinden kaynaklanır.",
      "cevap": "saat ibresinin tersi",
-     "cozum": "E ve W harflerinin yer değiştirmesi, ibrenin saat ibresinin tersi yönünde dönmesinden kaynaklanır. Böylece okuma doğrudan doğru yönü verir."
+     "cozum": "E ve W harflerinin yer değiştirmesi, ibrenin saat ibresinin tersi yönünde dönmesinden kaynaklanır. Böylece okuma doğrudan doğru yönü verir.",
+     "okunus": "Pusula tabanında E ve W harflerinin yer değiştirmesi, ibrenin hangi yönde dönmesinden kaynaklanır?"
     },
     {
      "no": 65,
      "metin": "Doğrultu açısı, ____ aralığında ibrenin kuzeyle yaptığı dar açıdır.",
      "cevap": "E–N–W",
-     "cozum": "Doğrultu açısı, E, N ve W aralığında ibrenin kuzeyle yaptığı dar açıdır. Ölçümden önce pusula tabanı yatay hâle getirilir."
+     "cozum": "Doğrultu açısı, E, N ve W aralığında ibrenin kuzeyle yaptığı dar açıdır. Ölçümden önce pusula tabanı yatay hâle getirilir.",
+     "okunus": "Doğrultu açısı, hangi aralıkta ibrenin kuzeyle yaptığı dar açıdır?"
     },
     {
      "no": 66,
      "metin": "Eğim ölçümü sırasında pusulanın klinometreli kenarı ölçülen düzleme ____ konumda tutulur.",
      "cevap": "dik",
-     "cozum": "Eğim ölçümü sırasında pusulanın klinometreli kenarı ölçülen düzleme dik konumda tutulur. Böylece klinometre eğimi doğru okur."
+     "cozum": "Eğim ölçümü sırasında pusulanın klinometreli kenarı ölçülen düzleme dik konumda tutulur. Böylece klinometre eğimi doğru okur.",
+     "okunus": "Eğim ölçümünde pusulanın klinometreli kenarı ölçülen düzleme göre nasıl tutulur?"
     },
     {
      "no": 67,
      "metin": "Brunton pusulasında, eğim açısı ____ kabarcıklı düzeci yataylanarak ölçülür.",
      "cevap": "silindirik",
-     "cozum": "Brunton pusulasında eğim açısı, silindirik kabarcıklı düzeç yataylanarak ölçülür. Düzecin ortalanması ölçüm doğruluğunu sağlar."
+     "cozum": "Brunton pusulasında eğim açısı, silindirik kabarcıklı düzeç yataylanarak ölçülür. Düzecin ortalanması ölçüm doğruluğunu sağlar.",
+     "okunus": "Brunton pusulasında eğim açısı hangi kabarcıklı düzeç yataylanarak ölçülür?"
     },
     {
      "no": 68,
      "metin": "Breithaupt pusulasında, eğim açısı pusula içindeki ____ yardımıyla okunur.",
      "cevap": "oynar sarkaç",
-     "cozum": "Breithaupt pusulasında eğim açısı, pusula içindeki oynar sarkaç yardımıyla okunur. Sarkaç yerçekimiyle düşey kalır ve açıyı gösterir."
+     "cozum": "Breithaupt pusulasında eğim açısı, pusula içindeki oynar sarkaç yardımıyla okunur. Sarkaç yerçekimiyle düşey kalır ve açıyı gösterir.",
+     "okunus": "Breithaupt pusulasında eğim açısı pusula içindeki ne yardımıyla okunur?"
     },
     {
      "no": 69,
      "metin": "Çizgisel elemanların yönü belirlenirken dalım yönü, çizgisel yapının ____ yönüdür.",
      "cevap": "eğildiği / daldığı",
-     "cozum": "Çizgisel yapılarda dalım yönü, yapının eğildiği veya daldığı yöndür. Bu yön çizgisel elemanın konumunu tarif etmek için ölçülür."
+     "cozum": "Çizgisel yapılarda dalım yönü, yapının eğildiği veya daldığı yöndür. Bu yön çizgisel elemanın konumunu tarif etmek için ölçülür.",
+     "okunus": "Çizgisel elemanlarda dalım yönü, çizgisel yapının hangi yönüdür?"
     },
     {
      "no": 70,
      "metin": "Pusula ile yapılan geriden kestirme yönteminde, haritada iki farklı noktadan çizilen doğruların ____ bulunduğumuz konumu verir.",
      "cevap": "kesişim noktası",
-     "cozum": "Geriden kestirmede haritada iki farklı noktadan çizilen doğruların kesişim noktası bulunduğumuz konumu verir. Bu nedenle çizilen iki doğrultu mümkün olduğunca farklı açıda olmalıdır."
+     "cozum": "Geriden kestirmede haritada iki farklı noktadan çizilen doğruların kesişim noktası bulunduğumuz konumu verir. Bu nedenle çizilen iki doğrultu mümkün olduğunca farklı açıda olmalıdır.",
+     "okunus": "Geriden kestirme yönteminde iki noktadan çizilen doğruların neresi bulunduğumuz konumu verir?"
     },
     {
      "no": 71,
      "metin": "Pusula ile yapılan ileriden kestirme yönteminde, ölçüm yapılan noktalar ____ bölgeye doğrudan ulaşılamadığı durumlarda kullanılır.",
      "cevap": "ulaşılamayan / girilemeyen",
-     "cozum": "İleriden kestirme yönteminde ölçüm noktaları, ulaşılamayan bölgeye doğrudan gidilemediği durumlarda kullanılır. Uzaktaki noktanın yeri iki ölçümün kesişmesiyle bulunur."
+     "cozum": "İleriden kestirme yönteminde ölçüm noktaları, ulaşılamayan bölgeye doğrudan gidilemediği durumlarda kullanılır. Uzaktaki noktanın yeri iki ölçümün kesişmesiyle bulunur.",
+     "okunus": "İleriden kestirme yöntemi, nasıl bir bölgeye doğrudan ulaşılamadığında kullanılır?"
     },
     {
      "no": 72,
      "metin": "Pusula–altimetre yönteminde, pusula ____ yönünü verirken, altimetre ____ bilgisini sağlar.",
      "cevap": "doğrultu, yükseklik",
-     "cozum": "Pusula ve altimetre yönteminde pusula doğrultuyu, altimetre yükseklik bilgisini verir. İkisi birlikte haritada konumu daraltır."
+     "cozum": "Pusula ve altimetre yönteminde pusula doğrultuyu, altimetre yükseklik bilgisini verir. İkisi birlikte haritada konumu daraltır.",
+     "okunus": "Pusula altimetre yönteminde pusula ve altimetre hangi bilgileri sağlar?"
     },
     {
      "no": 73,
      "metin": "Eğim yönü, pusulanın N kenarı yaslanırsa ibrenin ____ ucu, S kenarı yaslanırsa ibrenin ____ ucu tarafından gösterilir.",
      "cevap": "S, N",
-     "cozum": "Eğim yönü, pusulanın N kenarı yaslanırsa ibrenin S ucu, S kenarı yaslanırsa ibrenin N ucu tarafından gösterilir. Eğim yönü her zaman doğrultuya diktir."
+     "cozum": "Eğim yönü, pusulanın N kenarı yaslanırsa ibrenin S ucu, S kenarı yaslanırsa ibrenin N ucu tarafından gösterilir. Eğim yönü her zaman doğrultuya diktir.",
+     "okunus": "Pusulanın N kenarı ya da S kenarı yaslandığında eğim yönünü ibrenin hangi ucu gösterir?"
     },
     {
      "no": 74,
      "metin": "Doğrultu ölçümü sırasında pusula tabanı ____ hale getirilmeden ölçüm yapılmamalıdır.",
      "cevap": "yatay",
-     "cozum": "Doğrultu ölçümü sırasında pusula tabanı yatay hâle getirilmeden ölçüm yapılmamalıdır. Yatay olmayan taban ibrenin serbest dönmesini engeller ve hatalı sonuç verir."
+     "cozum": "Doğrultu ölçümü sırasında pusula tabanı yatay hâle getirilmeden ölçüm yapılmamalıdır. Yatay olmayan taban ibrenin serbest dönmesini engeller ve hatalı sonuç verir.",
+     "okunus": "Doğrultu ölçümünde pusula tabanı nasıl bir hale getirilmeden ölçüm yapılmamalıdır?"
     },
     {
      "no": 75,
      "metin": "Düzlemsel yapılarla çizgisel yapıların farkı, düzlemsel yapıların ____, çizgisel yapıların ise ____ özelliğe sahip olmasıdır.",
      "cevap": "yüzeysel, doğrusal",
-     "cozum": "Düzlemsel yapıların yüzeysel, çizgisel yapıların ise doğrusal özelliğe sahip olması aradaki farktır. Bu yüzden düzlemsel yapılar eğim, çizgisel yapılar dalım yönüyle tarif edilir."
+     "cozum": "Düzlemsel yapıların yüzeysel, çizgisel yapıların ise doğrusal özelliğe sahip olması aradaki farktır. Bu yüzden düzlemsel yapılar eğim, çizgisel yapılar dalım yönüyle tarif edilir.",
+     "okunus": "Düzlemsel yapılarla çizgisel yapılar hangi özellikleriyle ayrılır?"
     },
     {
      "no": 76,
      "metin": "Harita üzerinde yer belirleme sırasında yapılan ölçümlerde hata payını azaltmak için ____ fazla noktadan atış yapılmalıdır.",
      "cevap": "iki’den",
-     "cozum": "Hata payını azaltmak için ikiden fazla noktadan atış yapılmalıdır. Daha fazla doğrultu, kesişim noktasını daha güvenilir yapar."
+     "cozum": "Hata payını azaltmak için ikiden fazla noktadan atış yapılmalıdır. Daha fazla doğrultu, kesişim noktasını daha güvenilir yapar.",
+     "okunus": "Yer belirlemede hata payını azaltmak için kaç noktadan fazla atış yapılmalıdır?"
     },
     {
      "no": 77,
      "metin": "Arazide yüksekliği belirlemek için altimetre, ____ değişimine bağlı olarak ölçüm yapar.",
      "cevap": "hava basıncı",
-     "cozum": "Altimetre, hava basıncı değişimine bağlı olarak yüksekliği ölçer. Yükseldikçe hava basıncı azaldığı için bu azalma yükseklik bilgisine çevrilir."
+     "cozum": "Altimetre, hava basıncı değişimine bağlı olarak yüksekliği ölçer. Yükseldikçe hava basıncı azaldığı için bu azalma yükseklik bilgisine çevrilir.",
+     "okunus": "Altimetre, yüksekliği neyin değişimine bağlı olarak ölçer?"
     },
     {
      "no": 78,
      "metin": "Jeolog pusulasında ayna parçası, ölçüm sırasında hem ____ hem de ____ doğruluğunu sağlamaya yarar.",
      "cevap": "göz hizası, düzlem konumu",
-     "cozum": "Jeolog pusulasındaki ayna parçası ölçüm sırasında göz hizası ve düzlem konumu doğruluğunu sağlar. Böylece alet doğru konumda tutulur."
+     "cozum": "Jeolog pusulasındaki ayna parçası ölçüm sırasında göz hizası ve düzlem konumu doğruluğunu sağlar. Böylece alet doğru konumda tutulur.",
+     "okunus": "Jeolog pusulasında ayna parçası, ölçümde hangi ikisinin doğruluğunu sağlar?"
     },
     {
      "no": 79,
      "metin": "Pusula ibresinin sapması, yakın çevrede bulunan ____ veya ____ maddelerden etkilenebilir.",
      "cevap": "manyetik, metalik",
-     "cozum": "Pusula ibresinin sapması, yakın çevredeki manyetik veya metalik maddelerden etkilenebilir. Bu yüzden metal saat, telefon ve araç gövdesi ölçümden uzak tutulur."
+     "cozum": "Pusula ibresinin sapması, yakın çevredeki manyetik veya metalik maddelerden etkilenebilir. Bu yüzden metal saat, telefon ve araç gövdesi ölçümden uzak tutulur.",
+     "okunus": "Pusula ibresinin sapması, yakındaki hangi maddelerden etkilenebilir?"
     },
     {
      "no": 80,
      "metin": "Arazide eğim ölçümü yaparken tabaka yüzeyi düzgün değilse, ölçüm yüzeyi ____ veya ____ ile düzleştirilir.",
      "cevap": "jeolog çekici, defter",
-     "cozum": "Tabaka yüzeyi düzgün değilse ölçüm yüzeyi jeolog çekici veya defter ile düzleştirilir. Düz yüzey, pusulanın tabaka düzlemine tam oturmasını sağlar."
+     "cozum": "Tabaka yüzeyi düzgün değilse ölçüm yüzeyi jeolog çekici veya defter ile düzleştirilir. Düz yüzey, pusulanın tabaka düzlemine tam oturmasını sağlar.",
+     "okunus": "Tabaka yüzeyi düzgün değilse ölçüm yüzeyi neyle düzleştirilir?"
     },
     {
      "no": 81,
      "metin": "Pusula ibresinin kuzeyi göstermediği durumlarda, ölçüm hatasının nedeni genellikle ____ sapmasıdır.",
      "cevap": "manyetik / deklinasyon",
-     "cozum": "Pusula ibresi kuzeyi göstermiyorsa, ölçüm hatasının nedeni genellikle manyetik sapmadır. Bu sapma manyetik deklinasyon olarak adlandırılır."
+     "cozum": "Pusula ibresi kuzeyi göstermiyorsa, ölçüm hatasının nedeni genellikle manyetik sapmadır. Bu sapma manyetik deklinasyon olarak adlandırılır.",
+     "okunus": "Pusula ibresi kuzeyi göstermiyorsa ölçüm hatasının nedeni genellikle hangi sapmadır?"
     },
     {
      "no": 82,
      "metin": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkına ____ denir.",
      "cevap": "manyetik deklinasyon",
-     "cozum": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkına manyetik deklinasyon denir. Haritadaki gerçek kuzeye göre okuma yaparken bu farkın düzeltilmesi gerekir."
+     "cozum": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkına manyetik deklinasyon denir. Haritadaki gerçek kuzeye göre okuma yaparken bu farkın düzeltilmesi gerekir.",
+     "okunus": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkına ne denir?"
     },
     {
      "no": 83,
      "metin": "Manyetik deklinasyon, her yıl ____ gösterdiği için arazide ölçüm yapılmadan önce mutlaka güncel harita ile düzeltilmelidir.",
      "cevap": "değişim",
-     "cozum": "Manyetik deklinasyon her yıl değişim gösterdiği için ölçüm yapılmadan önce güncel haritayla düzeltilmelidir. Eski değerle yapılan okuma yön hatası doğurur."
+     "cozum": "Manyetik deklinasyon her yıl değişim gösterdiği için ölçüm yapılmadan önce güncel haritayla düzeltilmelidir. Eski değerle yapılan okuma yön hatası doğurur.",
+     "okunus": "Manyetik deklinasyon her yıl ne gösterdiği için ölçümden önce güncel haritayla düzeltilmelidir?"
     },
     {
      "no": 84,
      "metin": "Jeomanyetik eğim (inclination), manyetik alan çizgilerinin yatay düzlemle yaptığı ____ açısıdır.",
      "cevap": "daldığı / eğim",
-     "cozum": "Jeomanyetik eğim, manyetik alan çizgilerinin yatay düzlemle yaptığı eğim açısıdır. Bu açı kutuplara yaklaştıkça artar."
+     "cozum": "Jeomanyetik eğim, manyetik alan çizgilerinin yatay düzlemle yaptığı eğim açısıdır. Bu açı kutuplara yaklaştıkça artar.",
+     "okunus": "Jeomanyetik eğim, manyetik alan çizgilerinin yatay düzlemle yaptığı hangi açıdır?"
     },
     {
      "no": 85,
      "metin": "Doğrultu-eğim ölçümlerinde, eğim yönü daima doğrultuya ____ olmalıdır.",
      "cevap": "dik",
-     "cozum": "Doğrultu ve eğim ölçümlerinde eğim yönü daima doğrultuya dik olmalıdır. Eğim, tabakanın en dik düştüğü yönü gösterdiği için doğrultuyla dik açı yapar."
+     "cozum": "Doğrultu ve eğim ölçümlerinde eğim yönü daima doğrultuya dik olmalıdır. Eğim, tabakanın en dik düştüğü yönü gösterdiği için doğrultuyla dik açı yapar.",
+     "okunus": "Doğrultu eğim ölçümlerinde eğim yönü doğrultuya göre nasıl olmalıdır?"
     },
     {
      "no": 86,
      "metin": "Pusula ile yapılan ölçümlerde kabarcıklı düzeç ortalanmamışsa, sonuçlar ____ hatası içerir.",
      "cevap": "horizontallik / seviye",
-     "cozum": "Kabarcıklı düzeç ortalanmamışsa sonuçlar seviye hatası içerir. Düzeç, aletin yatay olduğunu doğrular."
+     "cozum": "Kabarcıklı düzeç ortalanmamışsa sonuçlar seviye hatası içerir. Düzeç, aletin yatay olduğunu doğrular.",
+     "okunus": "Kabarcıklı düzeç ortalanmamışsa ölçüm sonuçları hangi hatayı içerir?"
     },
     {
      "no": 87,
      "metin": "Jeolog pusulası üzerindeki dereceli daire ____ sistemine göre 0°–360° olarak kalibre edilmiştir.",
      "cevap": "azimut / yatay açı",
-     "cozum": "Jeolog pusulasındaki dereceli daire azimut sistemine göre sıfırdan üç yüz altmışa kadar kalibre edilmiştir. Bu sistemde açılar kuzeyden saat yönünde ölçülür."
+     "cozum": "Jeolog pusulasındaki dereceli daire azimut sistemine göre sıfırdan üç yüz altmışa kadar kalibre edilmiştir. Bu sistemde açılar kuzeyden saat yönünde ölçülür.",
+     "okunus": "Jeolog pusulasındaki dereceli daire, sıfırdan üç yüz altmış dereceye hangi sisteme göre kalibre edilmiştir?"
     },
     {
      "no": 88,
      "metin": "Dip direction-dip amount (DDD) ifadesinde, ilk sayı ____, ikinci sayı ____ anlamına gelir.",
      "cevap": "eğim yönü, eğim açısı",
-     "cozum": "Dip direction dip amount yazımında ilk sayı eğim yönü, ikinci sayı eğim açısı anlamına gelir. Yani önce tabakanın hangi yöne düştüğü, sonra ne kadar düştüğü yazılır."
+     "cozum": "Dip direction dip amount yazımında ilk sayı eğim yönü, ikinci sayı eğim açısı anlamına gelir. Yani önce tabakanın hangi yöne düştüğü, sonra ne kadar düştüğü yazılır.",
+     "okunus": "Eğim yönü ve eğim miktarı ifadesinde ilk sayı ve ikinci sayı ne anlama gelir?"
     },
     {
      "no": 89,
      "metin": "Strike-dip ölçümünde, doğrultu genellikle ____ yönü referans alınarak verilir.",
      "cevap": "kuzey",
-     "cozum": "Strike dip ölçümünde doğrultu genellikle kuzey yönü referans alınarak verilir. Doğrultu, kuzeyle yapılan açı olarak ifade edilir."
+     "cozum": "Strike dip ölçümünde doğrultu genellikle kuzey yönü referans alınarak verilir. Doğrultu, kuzeyle yapılan açı olarak ifade edilir.",
+     "okunus": "Doğrultu eğim ölçümünde doğrultu genellikle hangi yön referans alınarak verilir?"
     },
     {
      "no": 90,
      "metin": "Ölçülen bir tabakanın eğim yönü kuzeydoğu ise, doğrultu genellikle ____ – ____ şeklinde ifade edilir.",
      "cevap": "kuzeybatı, güneydoğu",
-     "cozum": "Eğim yönü kuzeydoğu ise doğrultu kuzeybatı, güneydoğu şeklinde ifade edilir. Doğrultu, eğim yönüne dik olduğu için bu iki yön birbirine dik düşer."
+     "cozum": "Eğim yönü kuzeydoğu ise doğrultu kuzeybatı, güneydoğu şeklinde ifade edilir. Doğrultu, eğim yönüne dik olduğu için bu iki yön birbirine dik düşer.",
+     "okunus": "Bir tabakanın eğim yönü kuzeydoğu ise doğrultu genellikle nasıl ifade edilir?"
     },
     {
      "no": 91,
      "metin": "İzohips (eş-yükseklik) eğrileri üzerinde yapılan pusula-altimetre kestirmelerinde konum, aynı anda ____ ve ____ verileriyle belirlenir.",
      "cevap": "doğrultu, yükseklik",
-     "cozum": "Pusula ve altimetre ile yapılan kestirmelerde konum, doğrultu ve yükseklik verileriyle belirlenir. Eş yükselti eğrisi ile doğrultu çizgisinin kesiştiği yer konumu verir."
+     "cozum": "Pusula ve altimetre ile yapılan kestirmelerde konum, doğrultu ve yükseklik verileriyle belirlenir. Eş yükselti eğrisi ile doğrultu çizgisinin kesiştiği yer konumu verir.",
+     "okunus": "Eş yükseklik eğrileri üzerindeki pusula altimetre kestirmelerinde konum hangi iki veriyle belirlenir?"
     },
     {
      "no": 92,
      "metin": "Geriden kestirme yönteminde kullanılan iki noktanın arasındaki açı dar ise, kesişim noktası ____ hatası verir.",
      "cevap": "belirsizlik / büyük",
-     "cozum": "Geriden kestirmede kullanılan iki nokta arasındaki açı dar ise kesişim noktası büyük bir belirsizlik hatası verir. Doğrular birbirine çok yakın olduğu için kesişim yeri kesin belirlenemez."
+     "cozum": "Geriden kestirmede kullanılan iki nokta arasındaki açı dar ise kesişim noktası büyük bir belirsizlik hatası verir. Doğrular birbirine çok yakın olduğu için kesişim yeri kesin belirlenemez.",
+     "okunus": "Geriden kestirmede iki nokta arasındaki açı dar ise kesişim noktası nasıl bir hata verir?"
     },
     {
      "no": 93,
      "metin": "İleriden kestirme yöntemi, doğrudan ulaşılamayan bir noktanın ____ harita üzerinde belirlenmesini sağlar.",
      "cevap": "konumunun / yerinin",
-     "cozum": "İleriden kestirme yöntemi, doğrudan ulaşılamayan bir noktanın yerini harita üzerinde belirlemeyi sağlar. Uzaktaki nokta iki ayrı yerden alınan doğrultuların kesişimiyle bulunur."
+     "cozum": "İleriden kestirme yöntemi, doğrudan ulaşılamayan bir noktanın yerini harita üzerinde belirlemeyi sağlar. Uzaktaki nokta iki ayrı yerden alınan doğrultuların kesişimiyle bulunur.",
+     "okunus": "İleriden kestirme yöntemi, doğrudan ulaşılamayan bir noktanın neyinin haritada belirlenmesini sağlar?"
     },
     {
      "no": 94,
      "metin": "Manyetik kuzeyin yıllık sapma miktarı ____ birimiyle ifade edilir.",
      "cevap": "derece / yıl",
-     "cozum": "Manyetik kuzeyin yıllık sapma miktarı derece bölü yıl birimiyle ifade edilir. Bu değer her yıl değiştiği için güncel bilgi gerekir."
+     "cozum": "Manyetik kuzeyin yıllık sapma miktarı derece bölü yıl birimiyle ifade edilir. Bu değer her yıl değiştiği için güncel bilgi gerekir.",
+     "okunus": "Manyetik kuzeyin yıllık sapma miktarı hangi birimle ifade edilir?"
     },
     {
      "no": 95,
      "metin": "Azimut ölçümü, bir doğrultunun ____ ile yaptığı açının saat yönünde ölçülmesidir.",
      "cevap": "coğrafi kuzey",
-     "cozum": "Azimut ölçümü, bir doğrultunun coğrafi kuzey ile yaptığı açının saat yönünde ölçülmesidir. Sonuç sıfır ile üç yüz altmış derece arasında bir sayıdır."
+     "cozum": "Azimut ölçümü, bir doğrultunun coğrafi kuzey ile yaptığı açının saat yönünde ölçülmesidir. Sonuç sıfır ile üç yüz altmış derece arasında bir sayıdır.",
+     "okunus": "Azimut ölçümü, bir doğrultunun neyle yaptığı açının saat yönünde ölçülmesidir?"
     },
     {
      "no": 96,
      "metin": "Pusula ile yapılan ölçümlerde metal saat, telefon veya araç gövdesi gibi nesneler ____ etkisi yaratarak ölçüm doğruluğunu bozar.",
      "cevap": "manyetik alan / sapma",
-     "cozum": "Metal saat, telefon veya araç gövdesi gibi nesneler manyetik alan etkisi yaratarak ölçüm doğruluğunu bozar. Bu yüzden pusula bu nesnelerden uzak tutulur."
+     "cozum": "Metal saat, telefon veya araç gövdesi gibi nesneler manyetik alan etkisi yaratarak ölçüm doğruluğunu bozar. Bu yüzden pusula bu nesnelerden uzak tutulur.",
+     "okunus": "Metal saat, telefon ya da araç gövdesi gibi nesneler pusula ölçümünde nasıl bir etki yaratır?"
     },
     {
      "no": 97,
      "metin": "Eğim yönü ölçülürken pusula kenarı tabaka yüzeyine tam oturmuyorsa, yüzey ____ hale getirilmelidir.",
      "cevap": "pürüzsüz / düz",
-     "cozum": "Pusula kenarı tabaka yüzeyine tam oturmuyorsa yüzey düz hâle getirilmelidir. Düz temas olmadan eğim yönü ve açısı doğru ölçülmez."
+     "cozum": "Pusula kenarı tabaka yüzeyine tam oturmuyorsa yüzey düz hâle getirilmelidir. Düz temas olmadan eğim yönü ve açısı doğru ölçülmez.",
+     "okunus": "Pusula kenarı tabaka yüzeyine tam oturmuyorsa yüzey nasıl bir hale getirilmelidir?"
     },
     {
      "no": 98,
      "metin": "Klinometre kullanılarak ölçülen eğim açısının doğruluğu, pusula tabanının ____ konumda tutulmasına bağlıdır.",
      "cevap": "düşey",
-     "cozum": "Klinometre ile ölçülen eğim açısının doğruluğu, pusula tabanının düşey konumda tutulmasına bağlıdır. Taban düşey durmazsa okunan açı yanlış olur."
+     "cozum": "Klinometre ile ölçülen eğim açısının doğruluğu, pusula tabanının düşey konumda tutulmasına bağlıdır. Taban düşey durmazsa okunan açı yanlış olur.",
+     "okunus": "Klinometreyle ölçülen eğim açısının doğruluğu, pusula tabanının hangi konumda tutulmasına bağlıdır?"
     },
     {
      "no": 99,
      "metin": "Dalım yönü, çizgisel yapıların yer altında ____ yöneldiğini gösteren vektörel bir büyüklüktür.",
      "cevap": "daldığı / eğildiği",
-     "cozum": "Dalım yönü, çizgisel yapıların yer altında daldığı veya eğildiği yönü gösterir. Çizgisel yapının hangi yöne daldığı bu yönle tarif edilir."
+     "cozum": "Dalım yönü, çizgisel yapıların yer altında daldığı veya eğildiği yönü gösterir. Çizgisel yapının hangi yöne daldığı bu yönle tarif edilir.",
+     "okunus": "Dalım yönü, çizgisel yapıların yer altında nasıl yöneldiğini gösteren vektörel bir büyüklüktür?"
     },
     {
      "no": 100,
      "metin": "Arazide yapılan tüm pusula ölçümleri, sahada ____ numaralı notlarla saha defterine kaydedilmelidir.",
      "cevap": "lokasyon / koordinat",
-     "cozum": "Arazide yapılan tüm pusula ölçümleri, lokasyon numaralı notlarla saha defterine kaydedilmelidir. Numaralandırma, ölçümün hangi yerde alındığının sonradan karıştırılmamasını sağlar."
+     "cozum": "Arazide yapılan tüm pusula ölçümleri, lokasyon numaralı notlarla saha defterine kaydedilmelidir. Numaralandırma, ölçümün hangi yerde alındığının sonradan karıştırılmamasını sağlar.",
+     "okunus": "Arazideki pusula ölçümleri saha defterine hangi bilgiyle numaralanarak kaydedilmelidir?"
     }
    ]
   },

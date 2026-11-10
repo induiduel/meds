@@ -9,6 +9,7 @@ içerik **basit, zevkli, kolay ezberlenir** olur. Ayrıntıya boğulmaz: her kon
 ## Hocanın çalışma soruları varsa: ESAS KAYNAK odur
 Modülün çalışma klasöründe (`/home/indu/medsor/meds_temp/ek_modul/<modul>/hoca_calisma_sorulari.txt`) dersin hocasına ait
 çalışma soruları (boşluk doldurma, doğru–yanlış, çoktan seçmeli; cevaplı) varsa:
+  Boşluk doldurma sorusunda (`____`) her soruya seste okunacak soru biçimli `okunus` yazılır ("Uyku tulumu, vücudun ne kaybını önlemek için kullanılır?"); "boşluk" okunmaz, kapı okunuşsuz soruda HATA verir (H552).
 - Konuna düşen **her hoca sorusunun bilgisi** anlatımda (ekran ya da ses) açıkça geçer. Hiçbiri atlanmaz. Önce hoca
   metnini baştan sona oku, konuna ait soruları işaretle, anlatımı onların üstüne kur; kalan yeri beceri bilgisiyle doldur.
 - Hocanın ifadesi ve sayısı esastır. Bilgi çerçevesi ya da genel bilgi hocayla çelişirse **hocanınki** yazılır.

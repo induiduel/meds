@@ -1,3 +1,7 @@
+## 2026-11-10 — Sesli çalışma soruları: boşluk doldurma doğal soru olarak okunuyor (H552, onem 711)
+- **Belirti/kök:** `ek_modul/ses.py` `____`'yi " boşluk " diye okuyordu (ekran metni sese gidiyordu).
+- **Çözüm:** `hoca_sorulari.json` bosluk setinin 100 sorusuna soru biçimli `okunus` alanı; `ses.py` onu okur (ekran/kitapçık `metin` aynen). h-bosluk-* sesleri GPU'da yeniden üretildi, `pdf_esle_hoca.py` yeniden koşuldu (1262/1262). `dogrula.py --modul` okunuşsuz boşluklu soruda HATA verir. Diğer setlerde (doğru–yanlış, çoktan seçmeli) boşluk yok.
+
 ## 2026-11-10 — Ek modül hoca soruları: "PDF ile" eş zamanlı sesli çözüm + sesli ders tarzı oynatıcı (onem 708)
 - **Eşleme (`scripts/ek_modul/pdf_esle_hoca.py`, yeni):** çözümlü kitapçıkta her soru bloğu (sol kenarda "N.", çözüm kutusu zemini #EEF3EE) bulunur; h-/hc- klibinin cümleleri satırlara bağlanır (kök, şık şık; çözümde doğru şık + kutu satırları karakter oranıyla), cümle zamanı `pdf_esle.py::cumle_zamanlari`. Yuruyus-kampcilik: 480 soru, 960 klip, 1220/1220 cümle sınırı duraklamaya oturdu → `src/data/ek_moduller/<modül>/hoca_pdf_esle.json`. Tuzak: "100." numarası metinle aynı satıra birleşiyordu (yalnız `^\d+\.` başı aranır).
 - **Ekran:** `EkPdfHoca.tsx` (soru bloğu kırpılır, okunan satır yanar), `EkHoca.tsx` "PDF ile / Yalnız soru" kipi, `EkSesliOynatici.tsx` (canlı ders v15 alt oynatıcı düzeni: soru parçalı çubuk + sürükle/atla, ±10, önceki/sonraki soru, hız hapı, ⋯). `useSira` `konum(i, t)` ve `cal(n, bas)` kazandı.

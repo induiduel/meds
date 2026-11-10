@@ -277,6 +277,22 @@ def hoca_pdf_denet(kok: Path) -> list[str]:
     return out
 
 
+def okunus_denet(kok: Path) -> list[str]:
+    """Boşluklu (____) her hoca sorusu, seste okunacak soru biçimli `okunus` taşımalı (H547)."""
+    out = []
+    for st in json.loads((kok / "hoca_sorulari.json").read_text())["setler"]:
+        for q in st["sorular"]:
+            kok_m = q.get("metin") or q.get("kok") or ""
+            if "__" not in kok_m:
+                continue
+            o = q.get("okunus", "")
+            if not o:
+                out.append(f"HATA  hoca {st['id']}-{q['no']}: boşluklu soruda okunuş yok")
+            elif "_" in o or not o.rstrip().endswith("?"):
+                out.append(f"HATA  hoca {st['id']}-{q['no']}: okunuş soru biçiminde değil ({o})")
+    return out
+
+
 def main() -> int:
     arg = sys.argv[1:]
     if arg[:1] == ["--modul"]:
@@ -294,6 +310,9 @@ def main() -> int:
     if arg[:1] == ["--modul"] and (kok / "pdf_esle.json").exists():
         for satir in pdf_esle_denet(kok):
             print(satir); hata += satir.startswith("HATA")
+    if arg[:1] == ["--modul"] and (kok / "hoca_sorulari.json").exists():
+        for satir in okunus_denet(kok):
+            print(satir); hata += 1
     if arg[:1] == ["--modul"] and (kok / "hoca_pdf_esle.json").exists():
         for satir in hoca_pdf_denet(kok):
             print(satir); hata += satir.startswith("HATA")
