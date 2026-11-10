@@ -64,6 +64,8 @@ export interface EkModul {
   genel: EkSoru[];
   klip: Record<string, EkKlip>;
   hoca: { kaynak: string; setler: HocaSet[] } | null;
+  /** Çalışma föyü: hoca sorularının konuya göre düzeni (set id → soru no listesi) + konu bilgi özeti */
+  foy: { konular: { id: string; bilgiler: string[]; sorular: Record<string, number[]> }[] } | null;
 }
 
 export const EK_MODULLER = (dizinHam as { moduller: EkModulOzet[] }).moduller;
@@ -87,11 +89,11 @@ export function ekModulYukle(id: string): Promise<EkModul | null> {
       const adlar = Object.keys(DOSYA).map((k) => new RegExp(`/${id}/(b\\d+)\\.json$`).exec(k)?.[1]).filter(Boolean) as string[];
       const basliklar = (await Promise.all(adlar.map((a) => al<EkBaslik>(a)))).filter(Boolean) as EkBaslik[];
       basliklar.sort((a, b) => a.no - b.no);
-      const [so, g, klip, hoca] = await Promise.all([
+      const [so, g, klip, hoca, foy] = await Promise.all([
         al<EkModul['sinavOncesi']>('sinav_oncesi'), al<{ sorular: EkSoru[] }>('genel_sorular'), al<Record<string, EkKlip>>('klip'),
-        al<EkModul['hoca']>('hoca_sorulari'),
+        al<EkModul['hoca']>('hoca_sorulari'), al<EkModul['foy']>('foy'),
       ]);
-      return { ozet, basliklar, sinavOncesi: so, genel: g?.sorular || [], klip: klip || {}, hoca };
+      return { ozet, basliklar, sinavOncesi: so, genel: g?.sorular || [], klip: klip || {}, hoca, foy: hoca ? foy : null };
     })();
     bellek.set(id, p);
   }

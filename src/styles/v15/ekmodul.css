@@ -213,3 +213,36 @@
 .ekm-goster { align-self: flex-start; }
 
 @media (prefers-reduced-motion: reduce) { .ekm-ilerle i, .ekm-bolumler > li { transition: none; } }
+
+/* çalışma föyü */
+.ekm-genel.is-foy > svg:first-child { color: var(--color-ok); }
+.ekm-foy-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 720px) { .ekm-foy-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ekm-foy-liste button { width: 100%; height: 100%; display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 0; font: inherit; text-align: left; cursor: pointer; color: inherit; }
+.ekm-foy-liste i { flex: none; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 11px; background: var(--color-accent-soft); color: var(--color-accent); font-style: normal; font-weight: 800; }
+.ekm-foy-liste b { display: block; color: var(--color-ink); font-size: .95rem; line-height: 1.3; }
+.ekm-foy-liste small { display: block; color: var(--color-ink-3); font-size: .8rem; margin-top: 2px; line-height: 1.4; }
+.ekm-foy-liste svg { flex: none; width: 18px; height: 18px; margin-left: auto; color: var(--color-ink-3); }
+.ekm-foy-bilgi { padding: 16px; }
+.ekm-foy-bilgi h3, .ekm-foy-pdf h3 { margin: 0 0 10px; font-size: 1rem; color: var(--color-ink); display: flex; align-items: center; gap: 8px; }
+.ekm-foy-pdf h3 svg { width: 18px; height: 18px; color: var(--color-accent); }
+.ekm-foy-bilgi ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ekm-foy-bilgi li { position: relative; padding-left: 16px; }
+.ekm-foy-bilgi li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--color-warn); }
+.ekm-foy-turler { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.ekm-foy-turler button { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; padding: 16px; border: 0; font: inherit; text-align: left; cursor: pointer; color: inherit; }
+.ekm-foy-turler svg { width: 24px; height: 24px; color: var(--color-warn); }
+.ekm-foy-turler .is-dy svg { color: var(--color-ok); }
+.ekm-foy-turler .is-cs svg { color: var(--color-accent); }
+.ekm-foy-turler b { color: var(--color-ink); }
+.ekm-foy-turler span { font-size: .84rem; color: var(--color-ink-3); }
+.ekm-foy-pdf { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.ekm-foy-pdf h3 { margin: 0; }
+.ekm-foy-sec { display: flex; flex-wrap: wrap; gap: 6px; }
+.ekm-foy-sec .ekm-kucuk { min-width: 44px; }
+.ekm-foy-not { margin: 0; font-size: .85rem; color: var(--color-ink-3); line-height: 1.45; }
+.ekm-foy-not.is-hata { color: var(--color-bad); }
+.ekm-foy-alt { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.ekm-don { animation: ekm-don 1s linear infinite; }
+@keyframes ekm-don { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .ekm-don { animation: none; } }

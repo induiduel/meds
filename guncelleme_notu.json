@@ -1,37 +1,32 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 700,
-  "baslik": "Ek modüller: Yürüyüş ve Kampçılık",
+  "onem": 701,
+  "baslik": "Ek modüller: çalışma föyü ve PDF oluşturma",
   "maddeler": [
-    "Ek modüller: Ders çalış altında, kurul derslerinin dışındaki seçmeli ve geçici dersler için yeni sayfa.",
-    "Yürüyüş ve Kampçılık: hocanın çalışma sorularına göre hazırlanan 16 konu; sesli ders, spot bilgiler ve sınav öncesi tekrar EMA sesiyle.",
-    "160 soru: konu soruları, genel tekrar ve her açılışta yenilenen 20 soruluk sınav denemesi; her sorunun çözümü sesli.",
-    "Hocanın çalışma soruları: 480 soru boşluk doldurma, doğru–yanlış ve çoktan seçmeli olarak çözülebilir.",
-    "PDF: resimli ders kitapçığı, spot bilgiler, sınav öncesi özet ve soru kitapçığı indirilebilir."
+    "Çalışma föyü: Yürüyüş ve Kampçılık'ta hocanın çalışma soruları konu konu düzenlendi; her konuda görsel, bilgi özeti, boşluk doldurma, doğru–yanlış ve çoktan seçmeli alıştırmalar.",
+    "PDF oluştur: istediğin konuları seç, cevap anahtarlı ya da anahtarsız föyünü indir. Bütün konuların hazır föyü de PDF listesinde.",
+    "Ek modüller: sesli ders, spot bilgiler, sınav öncesi tekrar ve sesli çözümlü 160 soru Ders çalış › Ek modüller'de."
   ],
   "eklenen": [
-    "Ek modüller sayfası",
-    "Yürüyüş ve Kampçılık modülü"
+    "Çalışma föyü",
+    "Föy PDF oluşturma"
   ],
   "degisen": [],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Ek modüller",
+      "ad": "Çalışma föyü",
       "nerede": {
-        "ad": "Ders çalış › Ek modüller",
-        "yol": "/dersler/ek-moduller"
+        "ad": "Ders çalış › Ek modüller › Yürüyüş ve Kampçılık",
+        "yol": "/dersler/ek-moduller/kurul2/yuruyus-kampcilik/foy"
       },
-      "amac": "Seçmeli ve geçici derslere kurul derslerinden ayrı, tek yerden çalışmak.",
+      "amac": "Hocanın çalışma sorularını konu konu, bilgi özetiyle birlikte çalışmak ve kâğıda basmak.",
       "islevler": [
-        "Sesli ders: ekranda kısa not, kulakta anlatım",
-        "Spot bilgiler ve sınav öncesi tekrar",
-        "Sesli çözümlü sorular ve 20 soruluk sınav denemesi",
-        "Hocanın çalışma soruları",
-        "PDF kitapçıkları"
-      ],
-      "ipucu": "İlk modül: Yürüyüş ve Kampçılık (Kurul 2)."
+        "Konu başına görsel ve bilgi özeti",
+        "Boşluk doldurma, doğru–yanlış, çoktan seçmeli alıştırmalar",
+        "Seçtiğin konuların föyünü PDF olarak oluşturma"
+      ]
     }
   ]
 }

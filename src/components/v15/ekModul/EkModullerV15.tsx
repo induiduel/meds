@@ -11,6 +11,7 @@ import {
 } from './ekVeri';
 import { EkMd, Etkinlik, OynatCubugu, dk, useSira } from './ekOrtak';
 import { HocaSetCoz, HocaSetler } from './EkHoca';
+import { FoyKonu, FoyListe } from './EkFoy';
 import '../../../styles/v15/ekmodul.css';
 
 /**
@@ -19,7 +20,7 @@ import '../../../styles/v15/ekmodul.css';
  * sesli çözümlü sorular (konu soruları: yalnız o konuya kadar öğretilenler; genel tekrar; sınav denemesi) + PDF kitapçıkları.
  * Ekranda not biçimi (`ekran`) durur; EMA ayrı yazılmış konuşma metnini (`ses`) okur — okuma metni ekranda gösterilmez.
  */
-type Bolum = '' | 'ders' | 'spot' | 'sinav-oncesi' | 'sorular' | 'hoca';
+type Bolum = '' | 'ders' | 'spot' | 'sinav-oncesi' | 'sorular' | 'hoca' | 'foy';
 interface Adres { kurul: number | null; modul: string | null; b: Bolum; konu: string | null }
 
 const oku = (): Adres => {
@@ -103,6 +104,7 @@ const Modul: React.FC<{ id: string; a: Adres }> = ({ id, a }) => {
     const set = m.hoca.setler.find((s) => s.id === a.konu);
     return set ? <HocaSayfa key={set.id} m={m} setId={set.id} /> : <HocaSayfa m={m} setId={null} />;
   }
+  if (a.b === 'foy' && m.foy) return <FoySayfa key={konu?.id || 'liste'} m={m} konuId={konu?.id || null} />;
   return <ModulAna m={m} ana={ana} />;
 };
 
@@ -188,6 +190,13 @@ const ModulAna: React.FC<{ m: EkModul; ana: string }> = ({ m, ana }) => {
         </ol>
       </section>
 
+      {m.foy && (
+        <Bag to={`${ana}/foy`} className="ekm-genel v15-card is-foy">
+          <FileDown aria-hidden />
+          <span><b>Çalışma föyü</b><small>Hocanın çalışma soruları konu konu: bilgi özeti, boşluk doldurma, doğru–yanlış, çoktan seçmeli. Seçtiğin konuların föyü PDF olur.</small></span>
+          <ChevronRight aria-hidden />
+        </Bag>
+      )}
       {m.hoca && (
         <Bag to={`${ana}/hoca`} className="ekm-genel v15-card is-hoca">
           <BookOpenCheck aria-hidden />
@@ -215,6 +224,23 @@ const ModulAna: React.FC<{ m: EkModul; ana: string }> = ({ m, ana }) => {
           ))}
         </ul>
       </section>
+    </div>
+  );
+};
+
+/* ——— çalışma föyü ——— */
+const FoySayfa: React.FC<{ m: EkModul; konuId: string | null }> = ({ m, konuId }) => {
+  const ana = adres(m.ozet.kurul, m.ozet.id);
+  const konu = konuId ? konulariAl(m).find((k) => k.id === konuId) : null;
+  useV15Baslik({ baslik: konu ? konu.baslik : 'Çalışma föyü', alt: konu ? 'Çalışma föyü' : m.ozet.ad, geri: konu ? `${ana}/foy` : ana });
+  if (konu) return <FoyKonu m={m} konuId={konu.id} />;
+  return (
+    <div className="ekm">
+      <p className="ekm-giris v15-card"><BookOpenCheck aria-hidden />
+        <span><b>Çalışma soruları konu konu düzenlendi.</b> Her konuda önce bilmen gerekenleri oku, sonra boşlukları doldur, doğru–yanlışları işaretle,
+          soruları çöz. İstediğin konuları seçip föyü PDF olarak da indirebilirsin.</span>
+      </p>
+      <FoyListe m={m} ac={(id) => navigateTo(`${ana}/foy/${id}`)} />
     </div>
   );
 };

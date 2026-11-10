@@ -1,0 +1,908 @@
+{
+ "konular": [
+  {
+   "id": "1a",
+   "bilgiler": [
+    "**Dağcılık:** Yalnız fiziksel dayanıklılık yetmez; başarı ruhsal hazırlığa ve dengeye de bağlıdır.",
+    "**Yaz dağcılığı:** 21 Mart – 21 Aralık arasındaki etkinliklerdir; 21 Aralık – 21 Mart arası kış dağcılığıdır.",
+    "**Alpinizm:** Yalnız kaya tırmanışı değildir; kaya, kar ve buzulu birlikte barındıran karma bir disiplindir.",
+    "**Ferrata:** Kayaya sabitlenmiş metal aksamlarla yapılan tırmanıştır; rotaları bolt kullanılmadan oluşturulmaz.",
+    "**Ekspedisyon:** Kısa süreli, günübirlik tırmanış anlamına gelmez.",
+    "**Dağların sınıflandırılması:** Yalnız yüksekliğe göre yapılmaz; ekosistem özellikleri de dikkate alınır.",
+    "**Kaza riski:** Her etkinlik önceden planlansa bile dağcılıkta kaza riski vardır.",
+    "**Ticari tırmanış:** Ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanışlardır; etik tartışmalara en çok konu olan modeldir."
+   ],
+   "sorular": {
+    "bosluk": [],
+    "dy-dagcilik": [
+     1,
+     2,
+     3,
+     4,
+     13,
+     33,
+     51,
+     52,
+     53,
+     54,
+     55
+    ],
+    "dy-kamp": [],
+    "cs3": [],
+    "cs5-zor": [
+     47
+    ],
+    "cs5": []
+   }
+  },
+  {
+   "id": "1b",
+   "bilgiler": [
+    "**Mont Blanc:** 1786'daki çıkış dünyada ilk modern dağcılık tırmanışı ve dağcılığın başlangıcı kabul edilir.",
+    "**Everest:** Himalayalar'da yer alır.",
+    "**Reinhold Messner:** 8000 metrelik dağların tümüne tırmanan ilk kişidir; Everest'e ilk çıkan insan değildir.",
+    "**Türkiye'de ilk etkinlik:** İlk dağcılık etkinliği bilimsel amaçla yapılmıştır.",
+    "**1924:** Miralay Cemil Cahit Toydemir'in Erciyes tırmanışı Türk dağcılığının başlangıcı sayılır.",
+    "**1939:** Türkiye Dağcılık Federasyonu'nun kökeni olan Dağcılık ve Kış Sporları Federasyonu kurulmuştur.",
+    "**1966:** Türkiye Dağcılık Federasyonu resmen kurulmuştur.",
+    "**En yüksek dağ:** Türkiye'nin en yüksek dağı Cilo değildir; Ağrı Dağı'nın yüksekliği de 3916 metre değildir.",
+    "**Spor tırmanış:** Türkiye Dağcılık Federasyonu, 2016 Rio Olimpiyatları'nda spor tırmanışı olimpik branş olarak tanıtmıştır.",
+    "**UIAA üyeliği:** Türkiye'nin üyeliği 1936'da gerçekleşmemiştir."
+   ],
+   "sorular": {
+    "bosluk": [],
+    "dy-dagcilik": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     56,
+     57,
+     58,
+     59,
+     60,
+     61
+    ],
+    "dy-kamp": [],
+    "cs3": [],
+    "cs5-zor": [],
+    "cs5": []
+   }
+  },
+  {
+   "id": "2a",
+   "bilgiler": [
+    "**Kireçtaşı:** Çökelti kökenli bir kayaçtır; magmatik değildir.",
+    "**Granit:** Tortul değildir; yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur.",
+    "**Gnays:** Yüksek basınç ve sıcaklık altında oluşmuş başkalaşım kayasıdır; kristalleri çıplak gözle görülmez.",
+    "**Şist:** Yer kabuğunun katlanması sırasında yüksek basınç altında oluşur.",
+    "**Buzul hareketi:** Buzullar eğim yönünde akar; ilerleme hızları dünyanın her yerinde aynı değildir.",
+    "**Bergschrund:** Buzul ile kaya duvarı arasındaki sınırı belirleyen buz çatlağıdır.",
+    "**Serak:** Buzul yüzeyinde oluşan dev buz kuleleridir; buzulun yatay ilerlediği yerlerde oluşmaz.",
+    "**Moren:** Buzulun taşıdığı döküntülerin birikmesiyle oluşur.",
+    "**Buzul burnu:** Buzulun inceldiği ve sonlandığı noktadır.",
+    "**İklim göstergesi:** Buzullar iklim değişikliğinin doğrudan göstergeleridir."
+   ],
+   "sorular": {
+    "bosluk": [],
+    "dy-dagcilik": [
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     70
+    ],
+    "dy-kamp": [],
+    "cs3": [],
+    "cs5-zor": [],
+    "cs5": []
+   }
+  },
+  {
+   "id": "2b",
+   "bilgiler": [
+    "**Oksijen:** Yükseklik arttıkça oksijen azalır.",
+    "**Sıcaklık:** Her 100 metrede ortalama 0,6 °C azalır.",
+    "**Gece–gündüz farkı:** Dağlarda gece ile gündüz arasındaki sıcaklık farkı büyüktür.",
+    "**Zonlaşma:** Bitki örtüsünün yüksekliğe göre değişmesine yüksekliğe dayalı zonlaşma denir.",
+    "**Yüksek rakım bitkileri:** Yaprakları kalın ve tüylüdür; tüyler su kaybını azaltır.",
+    "**Fotosentez:** Oksijen azaldıkça bitkilerin fotosentez oranı artmaz.",
+    "**Hayvanlar:** Kış uykusu sert iklime uyum yöntemidir; kışın aktivitelerini düşürerek enerji kaybını azaltırlar.",
+    "**Plastik poşet:** Doğada on yılda da yüz yılda da yok olmaz; yüzlerce yıl kalır.",
+    "**Çöp:** Dağda çöpü gömmek de yakmak da doğru yöntem değildir."
+   ],
+   "sorular": {
+    "bosluk": [],
+    "dy-dagcilik": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     71,
+     72,
+     73,
+     74,
+     75
+    ],
+    "dy-kamp": [],
+    "cs3": [],
+    "cs5-zor": [],
+    "cs5": []
+   }
+  },
+  {
+   "id": "3a",
+   "bilgiler": [
+    "**İz bırakmama:** Dağ etiğinin temelidir.",
+    "**Tirol (Troll) Deklarasyonu:** UIAA'nın tırmanış etiğini belirleyen bildirgesidir.",
+    "**Katmandu Bildirgesi:** Dağ ortamlarının ve kültürel mirasın korunmasını, yerel halkın haklarına saygıyı öngörür.",
+    "**Dağ Etikleri Bildirgesi:** UIAA'nın bu bildirgesi dağ rehberlerinin etik yükümlülüklerine de değinir.",
+    "**Tarz:** Sonuca ulaşmaktan önemlidir; kullanılan ekipman, rota ve destek yöntemleri şeffafça belirtilir.",
+    "**İlk çıkışlar:** Kullanılan teknikler ayrıntılı olarak bildirilir.",
+    "**Oksijen desteği:** Yüksek irtifada kullanmak etik dışı değildir; boş tüpleri dağda bırakmak etik değildir.",
+    "**Takım ruhu:** Fedakârlık ve denge ister; kendi performansı için gruptan kopmak buna en aykırı davranıştır.",
+    "**Yerel kültür:** Yabancı ülkede yerel kültüre, kutsal dağlarda yerel geleneklere uyulur.",
+    "**Sponsorluk ve ticari tırmanış:** Sponsorlukta etik kurallara uyulur; müşteriler kurtarma riskleri konusunda bilgilendirilir."
+   ],
+   "sorular": {
+    "bosluk": [],
+    "dy-dagcilik": [
+     29,
+     30,
+     31,
+     32,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82
+    ],
+    "dy-kamp": [],
+    "cs3": [],
+    "cs5-zor": [
+     22,
+     23
+    ],
+    "cs5": []
+   }
+  },
+  {
+   "id": "3b",
+   "bilgiler": [
+    "**Çöp:** Ayrıştırılarak toplanır ve geri taşınır; gömülmez, yakılmaz, organik olanı da gömülmez.",
+    "**Tuvalet çukuru:** Su kaynağından en az 50 metre uzakta, küçük ve kişisel açılır; bir yerde 150 metre de geçiyor.",
+    "**Kap yıkama:** Kaplar nehirde ya da gölde yıkanmaz; sudan uzakta yıkanır, su toprakta süzdürülür.",
+    "**Temizlik suyu:** Diş fırçalama suyu da dahil akarsuya dökülmez; biyolojik olarak çözünür sabun kullanılır.",
+    "**Kamp sonrası:** Alan eski hâline getirilir; küçük atıklar için tamamı taranır, taş ve dallar yerine konur.",
+    "**Yaban hayatı:** Hayvan beslenmez; yiyecekle insana alıştırmak en ağır müdahaledir, yemek artığı vahşi hayvanları çeker.",
+    "**Bitki ve taş:** Bitki koparmak ya da taş toplamak doğal dengeye zarar verir.",
+    "**Gürültü:** Yaban hayatını ve öteki kampçıları rahatsız eder; sessizlik yalnız gece değil her zaman önemlidir.",
+    "**Mahremiyet:** Başka çadırların fotoğrafını izinsiz çekmek kamp etiğine en aykırı davranıştır.",
+    "**Kampçı:** Doğada hem misafir hem koruyucudur; iz bırakmamanın amacı ekolojik dengeyi korumaktır."
+   ],
+   "sorular": {
+    "bosluk": [
+     5,
+     33,
+     42
+    ],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     27,
+     28,
+     29,
+     30,
+     43,
+     44,
+     45,
+     49,
+     50,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100
+    ],
+    "cs3": [
+     10,
+     13,
+     14,
+     30,
+     45,
+     51,
+     60,
+     65,
+     71,
+     78,
+     80
+    ],
+    "cs5-zor": [
+     1,
+     9,
+     21,
+     27,
+     33,
+     38,
+     43,
+     50
+    ],
+    "cs5": [
+     12,
+     13,
+     19,
+     27,
+     45,
+     49,
+     50
+    ]
+   }
+  },
+  {
+   "id": "4a",
+   "bilgiler": [
+    "**Katmanlı giyim:** Kalın tek kat yerine birden fazla ince kat giyilir; amaç vücut ısısını dengelemektir.",
+    "**İç katman:** Teri vücuttan uzaklaştırır; polipropilen gibi sentetik ya da yün kumaş uygundur.",
+    "**Orta ve dış katman:** Orta katman ısıyı yalıtır; dış katman rüzgâr ve yağıştan korur.",
+    "**Pamuk:** Islanınca geç kurur ve üşütür; pamuklu çorap ayağın su toplamasını önlemez.",
+    "**Yün:** Islanınca yalıtım özelliğini tamamen kaybetmez.",
+    "**Kaz tüyü:** Islanınca yalıtmaz ve geç kurur; nemli ortamda sentetik dolgu daha avantajlıdır.",
+    "**Baş:** Vücut ısısının yarısından fazlası baştan kaybedilebilir; sıcakta şapka, soğukta bere ve eldiven kullanılır.",
+    "**Tozluk:** Pantolon paçası ile bot arasındaki boşluğu kapatarak su girişini önler.",
+    "**Plastik bot:** Kar ve buzlu zeminler içindir; sıcak ve kuru iklime uygun değildir.",
+    "**Güneşten korunma:** Güneş kremi yüksekte de etkilidir; gözlük UV ışınından ve kardaki yansımadan korur."
+   ],
+   "sorular": {
+    "bosluk": [
+     8,
+     18,
+     19,
+     32
+    ],
+    "dy-dagcilik": [
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     83,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90,
+     91,
+     92,
+     93
+    ],
+    "dy-kamp": [
+     81,
+     82
+    ],
+    "cs3": [
+     29,
+     63,
+     69
+    ],
+    "cs5-zor": [
+     15,
+     19,
+     30,
+     48
+    ],
+    "cs5": [
+     7,
+     8,
+     21,
+     23,
+     33,
+     34,
+     35,
+     39
+    ]
+   }
+  },
+  {
+   "id": "4b",
+   "bilgiler": [
+    "**Ağır eşya:** Sırta yakın yerleştirilir; hafif eşyalar dışa doğru konur, alt kısma değil.",
+    "**Sıvı maddeler:** Benzin gibi sıvılar çantanın en alt kısmına yerleştirilir.",
+    "**Yağmurluk ve ilk yardım:** Kolay ulaşılan üst kısımda durur.",
+    "**Bel kemeri:** Ağırlığın büyük kısmını kalçaya aktarır; leğen kemiğine oturmuyorsa çanta bedene uymuyordur.",
+    "**Malzeme sınıfları:** Uyku tulumu kişisel malzemedir; çadır, ocak ve mat teknik malzeme sayılmaz.",
+    "**Klasik kazma:** Kar emniyeti ve kayışı durdurma içindir; dik buz duvarında teknik tırmanışta kullanılmaz.",
+    "**İp ve emniyet malzemesi:** Kuru ve gölgede saklanır; yarım ip dağ yürüyüşlerinde güvenlik için seçilir.",
+    "**Emniyet kemeri:** Tam vücut (full body) kemer ağırlığı tüm vücuda dengeli dağıtır.",
+    "**Aydınlatma:** Kafa lambası ile yedek pilli el feneri birlikte taşınır; gece yürüyüşünde fener yere, adım önüne tutulur.",
+    "**Baton:** Alt uçlarındaki tungsten pimler değiştirilebilir."
+   ],
+   "sorular": {
+    "bosluk": [
+     10,
+     24,
+     27,
+     34
+    ],
+    "dy-dagcilik": [
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100
+    ],
+    "dy-kamp": [
+     19,
+     20,
+     21,
+     22
+    ],
+    "cs3": [
+     7,
+     27,
+     40,
+     61,
+     62,
+     70,
+     77,
+     79
+    ],
+    "cs5-zor": [
+     24,
+     35,
+     36,
+     37,
+     39,
+     40,
+     45
+    ],
+    "cs5": [
+     5,
+     22,
+     24,
+     30,
+     43,
+     44
+    ]
+   }
+  },
+  {
+   "id": "5a",
+   "bilgiler": [
+    "**Kamp yeri:** İlk ölçüt güvenli ve düz zemindir; manzara en son bakılacak unsurdur.",
+    "**Riskli yerler:** Sel, çığ, kaya düşmesi riski olan yerlere ve çökme riski taşıyan mağara duvarlarına yakın kurulmaz.",
+    "**Su kaynağı:** Kamp alanı suya yakın ama taşkın riskinden uzak olmalıdır; hayvan geçiş yollarından da uzak durulur.",
+    "**Ağaç altı:** Düşen dal ve yıldırım riski nedeniyle çadır kurmak sakıncalıdır.",
+    "**Zemin:** Düz ve taşsız olmalıdır; çakıllı ve köklü zemine çadır kurulmaz.",
+    "**Rüzgâr:** Çadırın arka kısmı rüzgâr yönüne gelir; kapı hâkim rüzgâra bakmaz.",
+    "**Kazık:** 45° açıyla çakılır; bir yerde 90° de geçiyor.",
+    "**Tabanlık:** Çadırın altına serilen koruyucu örtüdür; su geçişini önler.",
+    "**Tenteler:** Dış tente su geçirmez, iç tente hava geçirir; birbirine değmez, dış tente gevşek kalırsa su birikir.",
+    "**Havalandırma:** Nemi dışarı atar; yağışta da üst pencereler açık tutulur, yoksa yoğuşma oluşur."
+   ],
+   "sorular": {
+    "bosluk": [
+     1,
+     2,
+     3,
+     6,
+     11,
+     12,
+     13,
+     14,
+     21,
+     23,
+     26,
+     28,
+     30,
+     38,
+     39,
+     40,
+     41,
+     45,
+     47
+    ],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     84
+    ],
+    "cs3": [
+     1,
+     2,
+     4,
+     8,
+     31,
+     32,
+     33,
+     34,
+     36,
+     47,
+     48,
+     49,
+     64,
+     73
+    ],
+    "cs5-zor": [
+     5,
+     17,
+     31,
+     32,
+     42
+    ],
+    "cs5": [
+     1,
+     2,
+     3,
+     11,
+     20,
+     31,
+     48
+    ]
+   }
+  },
+  {
+   "id": "5b",
+   "bilgiler": [
+    "**Uyku tulumu:** Vücudun ısı kaybını önler; kendisi ısıtmaz, vücut ısısını korur.",
+    "**Tuluma giriş:** İnce ve kuru giysiyle girilir; kalın giysi terletir.",
+    "**Boşluk:** Tulumda fazla boşluk kalırsa polar giysilerle doldurulur.",
+    "**Yalıtım:** Tulumun içindeki hava miktarına ve dolgu malzemesinin kalitesine bağlıdır.",
+    "**Kaz tüyü tulum:** Sıcak tutar ama ıslanınca zor kurur; nemli ortamda sentetikten dayanıklı değildir.",
+    "**Bakım:** Deterjanla yıkanmaz, asma yerlerinden asılır, sıkıştırılmış olarak saklanmaz.",
+    "**Mat:** Vücut ile zemin arasındaki ısı kaybını önler; şişme mat genellikle köpük mattan ağırdır.",
+    "**Kış kampı:** Çadır altındaki kar tabakası yalıtım sağlar; tuluma konan sıcak su şişesi vücut ısısını hızla yükseltir.",
+    "**Kar mağarası ve iglo:** Havalandırma deliği bırakmak karbonmonoksit zehirlenmesini önler.",
+    "**Yüksek irtifa:** Pamuklu içlik, ıslak çorap ve dar tulum hipotermi riskini en çok artıran üçlüdür."
+   ],
+   "sorular": {
+    "bosluk": [
+     4,
+     7,
+     15,
+     16,
+     17,
+     22,
+     29,
+     31,
+     35,
+     36,
+     43,
+     44,
+     49,
+     50
+    ],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "cs3": [
+     3,
+     6,
+     35,
+     41,
+     74
+    ],
+    "cs5-zor": [
+     2,
+     6,
+     10,
+     18
+    ],
+    "cs5": [
+     4,
+     6
+    ]
+   }
+  },
+  {
+   "id": "6a",
+   "bilgiler": [
+    "**Kamp ateşi:** Isınma ve yemek pişirme amacıyla kullanılır.",
+    "**Hazırlık:** Önce rüzgâr yönü kontrol edilir, zemin ve çevredeki kuru yapraklar temizlenir.",
+    "**Ateş yeri:** Toprak zeminde, önceden açılmış çukurda, taşlarla çevrili yakılır; çadırdan en az 3 metre uzakta olur.",
+    "**Rüzgârlı hava:** Ateş yakmak tehlikelidir; kıvılcım sıçrar, alev yayılır.",
+    "**Söndürme:** Üzerine su dökülür ve karıştırılır; yalnız toprak atmak yetmez.",
+    "**Ayrılırken:** Kül ve yanık kalıntıları uzaklaştırılır, ateş yerinin üstü doğal malzemeyle kapatılır.",
+    "**Ateş yasağı:** Yasak bölgede taşınabilir, kapalı sistem kamp ocağı kullanılır.",
+    "**Kamp ocağı:** Açık ve havadar alanda, çadırdan uzakta yakılır; çadır içinde kullanılmaz.",
+    "**Ocak yakıtı:** Genellikle propan ve bütandır; kartuşlu propan–bütan ocak soğukta ve yüksekte en çok güç kaybeder.",
+    "**Mum:** Çadır içinde mum yakmak yangın riskini en çok artıran uygulamadır."
+   ],
+   "sorular": {
+    "bosluk": [
+     9,
+     37,
+     46
+    ],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     23,
+     24,
+     25,
+     26,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     74,
+     75
+    ],
+    "cs3": [
+     5,
+     9,
+     11,
+     12,
+     37,
+     38,
+     39,
+     56,
+     57,
+     67,
+     72
+    ],
+    "cs5-zor": [
+     3,
+     16,
+     20,
+     44
+    ],
+    "cs5": [
+     9,
+     10,
+     32,
+     38
+    ]
+   }
+  },
+  {
+   "id": "6b",
+   "bilgiler": [
+    "**Su içme:** Az ama sık aralıklarla içilir; yürüyüş öncesinde vücudun sıvı dengesi sağlanır.",
+    "**Doğal su:** Kaynatılmadan içilmez; kaynatma mikroorganizmaları öldürür.",
+    "**Arıtma tableti:** Mikroorganizmaları öldürmek için kullanılır.",
+    "**Filtre:** Kimyasal kirleticileri tamamen yok etmez.",
+    "**Su alma yeri:** Suyu en yukarı noktadan almak tek başına yeterli değildir.",
+    "**Yemek:** İyi ve dengeli akşam yemeği enerji sağlar; karbonhidrat ve protein açısından zengin yiyecekler seçilir.",
+    "**Yemek planı:** En kritik hata hacmi büyük ama kalorisi düşük gıda taşımaktır.",
+    "**Yiyecek saklama:** Kapalı, hava geçirmez kaplarda saklanır; güneş altına konmaz, çadır dışında bırakmak hayvan saldırısını önlemez.",
+    "**Hijyen:** Kişisel hijyen ihmal edilmez; su yoksa eller dezenfektanla temizlenir.",
+    "**Yemek alanı:** Yemek hazırlama alanı rüzgâr altına kurulmaz."
+   ],
+   "sorular": {
+    "bosluk": [
+     20,
+     25,
+     48
+    ],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     41,
+     42,
+     46,
+     47,
+     48,
+     65,
+     76,
+     77,
+     78,
+     79,
+     80
+    ],
+    "cs3": [
+     19,
+     24,
+     28,
+     42,
+     43,
+     46,
+     50
+    ],
+    "cs5-zor": [
+     8,
+     49
+    ],
+    "cs5": [
+     14,
+     16,
+     25,
+     41,
+     42
+    ]
+   }
+  },
+  {
+   "id": "7a",
+   "bilgiler": [
+    "**Pusula:** Yerkürenin manyetik alanına dayanarak yön gösterir; kırmızı uç kuzeyi, ağırlıklı uç genellikle güneyi gösterir.",
+    "**Yön harfleri:** N kuzey, S güney, E doğu, W batıdır; pusula üzerindeki sıra N, E, S, W'dir.",
+    "**Sapma:** Metal saat, telefon, araç gövdesi ve çelik iskeletli çanta ölçümü bozar; pusula düz ve sabit tutulur.",
+    "**Manyetik deklinasyon:** Manyetik kuzey ile gerçek kuzey arasındaki açıdır; her yıl değişir, birimi derece/yıldır.",
+    "**Azimut:** Bir doğrultunun coğrafi kuzeyle yaptığı açının saat yönünde ölçülmesidir.",
+    "**Geriden kestirme:** İki noktadan çizilen doğruların kesişimi konumu verir; aradaki açı darsa hata büyür.",
+    "**İleriden kestirme:** Doğrudan ulaşılamayan bir noktanın konumunu haritada belirler.",
+    "**Pusula–altimetre:** Pusula doğrultuyu, altimetre hava basıncı değişimiyle yüksekliği verir; konum eşyükselti eğrisi üzerinde bulunur.",
+    "**Harita:** Yön bulurken harita kuzeye çevrilir.",
+    "**Pusulasız yön:** Öğle vakti gölge kuzeyi gösterir; gece Kutup Yıldızı kullanılır, güneş her zaman tam doğudan doğmaz."
+   ],
+   "sorular": {
+    "bosluk": [
+     51,
+     52,
+     53,
+     59,
+     60,
+     62,
+     63,
+     70,
+     71,
+     72,
+     76,
+     77,
+     79,
+     81,
+     82,
+     83,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96
+    ],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60
+    ],
+    "cs3": [
+     15,
+     16,
+     17,
+     44,
+     58,
+     68,
+     75
+    ],
+    "cs5-zor": [
+     4,
+     12,
+     13,
+     14,
+     28,
+     41
+    ],
+    "cs5": [
+     17,
+     18,
+     29,
+     40,
+     47
+    ]
+   }
+  },
+  {
+   "id": "7b",
+   "bilgiler": [
+    "**Jeolog pusulası:** Düzlemsel yapıların ölçümü ve çizgisel yapıların yön tayini için kullanılır; klinometre ve el düzeci içerir.",
+    "**E–W harfleri:** Tabanda yer değiştirmiş yazılır, çünkü ibre saat ibresinin tersi yönünde döner.",
+    "**Doğrultu açısı:** İbrenin kuzeyle E–N–W aralığında yaptığı dar açıdır; ölçümden önce taban yatay hâle getirilir.",
+    "**Eğim yönü:** N kenarı yaslanırsa ibrenin S ucu, S kenarı yaslanırsa N ucu gösterir; daima doğrultuya diktir.",
+    "**Eğim açısı:** Klinometre düzeciyle okunur; klinometreli kenar düzleme dik, taban düşey tutulur.",
+    "**Brunton ve Breithaupt:** Brunton'da silindirik kabarcıklı düzeç yataylanır; Breithaupt'ta eğim açısı oynar sarkaçla okunur.",
+    "**Gösterim:** DDD'de ilk sayı eğim yönü, ikinci sayı eğim açısıdır; strike–dip'te doğrultu kuzeye göre verilir.",
+    "**Dalım yönü:** Çizgisel yapının daldığı, eğildiği yöndür.",
+    "**Düzgün olmayan yüzey:** Ölçüm yüzeyi jeolog çekici ya da defterle düzleştirilir.",
+    "**Kayıt:** Tüm ölçümler lokasyon numaralı notlarla saha defterine yazılır."
+   ],
+   "sorular": {
+    "bosluk": [
+     54,
+     55,
+     56,
+     57,
+     58,
+     61,
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     73,
+     74,
+     75,
+     78,
+     80,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90,
+     97,
+     98,
+     99,
+     100
+    ],
+    "dy-dagcilik": [],
+    "dy-kamp": [],
+    "cs3": [],
+    "cs5-zor": [
+     11,
+     29
+    ],
+    "cs5": []
+   }
+  },
+  {
+   "id": "8a",
+   "bilgiler": [
+    "**Tempo:** Öncü, tempoyu grubun en yavaş üyesine göre ayarlar; böylece grup dağılmaz.",
+    "**Grup düzeni:** Rehber önde, en deneyimli ikinci kişi en arkada yürür.",
+    "**Lider:** Grup liderinin görevi temponun dengesini korumaktır.",
+    "**İniş ve mola:** İniş hızı çıkış hızından fazladır; sık mola enerji kaybını artırmaz.",
+    "**Hava durumu:** Kamp planlamasında mutlaka kontrol edilir, çünkü kamp güvenliğini etkiler.",
+    "**Fırtına ve yıldırım:** Fırtınada açık alanda durmak tehlikelidir; yıldırım tehlikesinde metal eşyalar uzaklaştırılır.",
+    "**İletişim:** Haberleşme yalnız telsizle olmaz; el işaretleri ve düdük de kullanılır.",
+    "**Üç kısa düdük:** Uluslararası yardım çağrısıdır.",
+    "**Yönlendirme işaretleri:** Rastgele yerlere bırakılmaz.",
+    "**Güneş çarpması riski:** En yüksek risk açık sırtta, öğle güneşinde, ağır çantayla hızlı çıkıştadır."
+   ],
+   "sorular": {
+    "bosluk": [],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     61,
+     62,
+     63,
+     64,
+     83,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90
+    ],
+    "cs3": [
+     18,
+     25,
+     26,
+     59,
+     76
+    ],
+    "cs5-zor": [
+     7,
+     26
+    ],
+    "cs5": [
+     26,
+     36,
+     37
+    ]
+   }
+  },
+  {
+   "id": "8b",
+   "bilgiler": [
+    "**Hipotermi:** Vücut ısısının 35 °C'nin altına düşmesidir; ani yüksek ateş tipik bulgusu değildir.",
+    "**Donma:** Etkilenen bölge ovulmaz ve hemen sıcak suya sokulmaz.",
+    "**Güneş çarpması:** Kişi gölge ve serin bir yere alınır; korunmak için güneş kremi ve şapka kullanılır.",
+    "**Sıcak çarpması:** Terleme mekanizmasının bozulmasıyla oluşur.",
+    "**Burkulma:** Soğuk uygulama ve dinlenme en uygun ilk yardımdır.",
+    "**Yılan ısırığı:** Turnike uygulanmaz; yara kalp hizasında tutulur ve tıbbi yardım çağrılır.",
+    "**Arı sokması:** Bölgeye soğuk uygulama yapılır; böcek kovucu ısırık riskini azaltır.",
+    "**Yükseklik hastalığı:** En önemli korunma yavaş yükselmek ve uyku irtifasını kontrollü artırmaktır.",
+    "**Yüksekte sıvı kaybı:** Yüksek irtifada nefes verirken su buharı kaybı artar.",
+    "**İlk yardım çantası:** Tıbbi dikiş seti bulunur; mutfak eşyası bu çantaya ait değildir."
+   ],
+   "sorular": {
+    "bosluk": [],
+    "dy-dagcilik": [],
+    "dy-kamp": [
+     66,
+     67,
+     68,
+     69,
+     70,
+     71,
+     72,
+     73
+    ],
+    "cs3": [
+     20,
+     21,
+     22,
+     23,
+     52,
+     53,
+     54,
+     55,
+     66
+    ],
+    "cs5-zor": [
+     25,
+     34,
+     46
+    ],
+    "cs5": [
+     15,
+     28,
+     46
+    ]
+   }
+  }
+ ]
+}
