@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oke" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Alkol yoksunluğu: saat saat ne olur, ne verilir?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Belirtilerin zaman penceresi ve iki ilkeli detoksifikasyon · slayt 35–38</text>
+<rect x="30" y="95" width="1140" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Alkol kesildikten sonra geçen süre</text>
+<line x1="90" y1="370" x2="1130.842105263158" y2="370" stroke="#0f172a" stroke-width="2.5" marker-end="url(#ok)"/>
+<line x1="90.0" y1="370" x2="90.0" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="90.0" y="396" font-size="12" fill="#0f172a" text-anchor="middle">0. gün</text>
+<line x1="198.42105263157896" y1="370" x2="198.42105263157896" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="198.42105263157896" y="396" font-size="12" fill="#0f172a" text-anchor="middle">1. gün</text>
+<line x1="306.8421052631579" y1="370" x2="306.8421052631579" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="306.8421052631579" y="396" font-size="12" fill="#0f172a" text-anchor="middle">2. gün</text>
+<line x1="415.2631578947368" y1="370" x2="415.2631578947368" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="415.2631578947368" y="396" font-size="12" fill="#0f172a" text-anchor="middle">3. gün</text>
+<line x1="523.6842105263158" y1="370" x2="523.6842105263158" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="523.6842105263158" y="396" font-size="12" fill="#0f172a" text-anchor="middle">4. gün</text>
+<line x1="632.1052631578947" y1="370" x2="632.1052631578947" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="632.1052631578947" y="396" font-size="12" fill="#0f172a" text-anchor="middle">5. gün</text>
+<line x1="740.5263157894736" y1="370" x2="740.5263157894736" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="740.5263157894736" y="396" font-size="12" fill="#0f172a" text-anchor="middle">6. gün</text>
+<line x1="848.9473684210526" y1="370" x2="848.9473684210526" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="848.9473684210526" y="396" font-size="12" fill="#0f172a" text-anchor="middle">7. gün</text>
+<line x1="957.3684210526316" y1="370" x2="957.3684210526316" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="957.3684210526316" y="396" font-size="12" fill="#0f172a" text-anchor="middle">8. gün</text>
+<line x1="1065.7894736842104" y1="370" x2="1065.7894736842104" y2="378" stroke="#0f172a" stroke-width="2"/>
+<text x="1065.7894736842104" y="396" font-size="12" fill="#0f172a" text-anchor="middle">9. gün</text>
+<text x="1126.842105263158" y="396" font-size="12" fill="#0f172a" text-anchor="end" font-style="italic">aylar</text>
+<line x1="117.10526315789474" y1="150" x2="117.10526315789474" y2="370" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="121.10526315789474" y="162" font-size="12" fill="#0f766e" text-anchor="start" font-weight="bold">6–8 saat: nabız ↑, kan basıncı ↑, tremor, anksiyete, uykusuzluk</text>
+<path d="M122.52631578947368 185 L1109.157894736842 205 L361.05263157894734 228 L122.52631578947368 228 Z" stroke="#0f766e" stroke-width="1.5" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="144.21052631578948" y="212" font-size="11" fill="#0f766e" text-anchor="start">erken belirtiler (anksiyete, uykusuzluk, tremor, çarpıntı, bulantı) — 1–2 günde azalır, hafifleyerek aylarca sürebilir</text>
+<path d="M111.6842105263158 240 L447.7894736842105 240 L491.15789473684214 258 L447.7894736842105 276 L111.6842105263158 276 Z" stroke="#2563eb" stroke-width="1.5" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="133.3684210526316" y="263" font-size="12" fill="#2563eb" text-anchor="start" font-weight="bold">yoksunluk nöbetleri (ilk 1–5 gün)</text>
+<path d="M155.05263157894737 284 L447.7894736842105 284 L491.15789473684214 301 L447.7894736842105 318 L155.05263157894737 318 Z" stroke="#be185d" stroke-width="1.5" fill="#fce7f3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="176.73684210526318" y="306" font-size="12" fill="#be185d" text-anchor="start" font-weight="bold">alkolik halüsinasyonlar</text>
+<path d="M306.8421052631579 326 L914.0 326 L989.8947368421053 345 L914.0 364 L306.8421052631579 364 Z" stroke="#b91c1c" stroke-width="2" fill="#fee2e2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="339.36842105263156" y="342" font-size="12" fill="#b91c1c" text-anchor="start" font-weight="bold">DELİRYUM TREMENS — tipik başlangıç 48–72 saat</text>
+<text x="339.36842105263156" y="359" font-size="11" fill="#b91c1c" text-anchor="start">deliryum, ajitasyon, otonom düzensizlik, hafif ateş, terleme</text>
+<rect x="30" y="445" width="560" height="260" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="477" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Tedavinin amacı ve ilkeleri</text>
+<text x="55" y="495" font-size="13" fill="#1e293b" text-anchor="start" font-weight="bold">Amaç: nöbet, deliryum ve aritmiyi ÖNLEMEK</text>
+<text x="55" y="516" font-size="13" fill="#1e293b" text-anchor="start">• K, Mg, fosfat hızla düzeltilir (böbreğe uygun) → aritmi</text>
+<text x="55" y="537" font-size="13" fill="#1e293b" text-anchor="start">• Tiamin HERKESE → Wernicke-Korsakoff</text>
+<text x="55" y="558" font-size="13" fill="#1e293b" text-anchor="start">• Hafif yoksunlukta ilaç gerekmeyebilir</text>
+<rect x="55" y="590" width="240" height="90" rx="10" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<text x="175.0" y="623.3333333333334" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="bold">İlke 1</text>
+<text x="175.0" y="639.3333333333334" font-size="13" fill="#0f766e" text-anchor="middle">alkol yerine uzun etkili</text>
+<text x="175.0" y="655.3333333333334" font-size="13" fill="#0f766e" text-anchor="middle">sedatif-hipnotik koy</text>
+<line x1="298" y1="635" x2="330" y2="635" stroke="#0f766e" stroke-width="2.5" marker-end="url(#oke)"/>
+<rect x="335" y="590" width="230" height="90" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="450.0" y="623.3333333333334" font-size="13" fill="#15803d" text-anchor="middle" font-weight="bold">İlke 2</text>
+<text x="450.0" y="639.3333333333334" font-size="13" fill="#15803d" text-anchor="middle">dozu yavaş yavaş azalt</text>
+<text x="450.0" y="655.3333333333334" font-size="13" fill="#15803d" text-anchor="middle">(reseptörler normale döner)</text>
+<rect x="610" y="445" width="560" height="260" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="477" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">C · Hangi benzodiazepin?</text>
+<rect x="635" y="495" width="250" height="95" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="760.0" y="524.0" font-size="12" fill="#6d28d9" text-anchor="middle" font-weight="bold">UZUN ETKİLİ</text>
+<text x="760.0" y="539.0" font-size="12" fill="#6d28d9" text-anchor="middle">klordiazepoksit, diazepam</text>
+<text x="760.0" y="554.0" font-size="12" fill="#6d28d9" text-anchor="middle">+ seyrek doz</text>
+<text x="760.0" y="569.0" font-size="12" fill="#6d28d9" text-anchor="middle">– aktif metabolit birikir</text>
+<rect x="905" y="495" width="245" height="95" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="1027.5" y="524.0" font-size="12" fill="#15803d" text-anchor="middle" font-weight="bold">KISA ETKİLİ</text>
+<text x="1027.5" y="539.0" font-size="12" fill="#15803d" text-anchor="middle">lorazepam, oksazepam</text>
+<text x="1027.5" y="554.0" font-size="12" fill="#15803d" text-anchor="middle">inaktif, suda çözünen metabolit</text>
+<text x="1027.5" y="569.0" font-size="12" fill="#15803d" text-anchor="middle">→ karaciğer hastasında tercih</text>
+<path d="M760 592 C760 625 850 640 890 640" stroke="#6d28d9" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<path d="M1027 592 C1027 625 940 640 900 640" stroke="#15803d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)"/>
+<text x="893" y="668" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">karaciğer sağlam ↔ karaciğer hasta</text>
+<text x="893" y="690" font-size="12" fill="#475569" text-anchor="middle">hafif/orta: oral · şiddetli: parenteral</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 35–38 (Şekil 23-2 saatlerle genişletildi) · teal erken belirti/tedavi · mavi nöbet · pembe halüsinasyon · kırmızı deliryum tremens</text>
+</svg>

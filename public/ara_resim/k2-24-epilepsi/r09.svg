@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Status epileptikus: nöbet durmazsa dakika dakika ne yapılır?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Tanım ve tedavi algoritmasının zaman çizgisi · slayt 49–50</text>
+<rect x="30" y="95" width="1140" height="175" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Olağan nöbet ↔ status epileptikus (iki kol)</text>
+<text x="50" y="160" font-size="14" fill="#15803d" text-anchor="start" font-weight="bold">olağan nöbet</text>
+<path d="M180.0 162.0 Q182.5 162.0 185.0 164.2 Q187.5 164.2 190.0 164.7 Q192.5 164.7 195.0 143.8 Q197.5 143.8 200.0 171.8 Q202.5 171.8 205.0 159.3 Q207.5 159.3 210.0 159.8 Q212.5 159.8 215.0 162.0 Q217.5 162.0 220.0 164.2 Q222.5 164.2 225.0 164.7 Q227.5 164.7 230.0 143.8 Q232.5 143.8 235.0 171.8 Q237.5 171.8 240.0 159.3 Q242.5 159.3 245.0 159.9 Q247.5 159.9 250.0 162.1 Q252.5 162.1 255.0 164.3 Q257.5 164.3 260.0 164.7 Q262.5 164.7 265.0 143.8 Q267.5 143.8 270.0 171.8 " stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270.0 161.5 Q273.0 161.5 276.0 163.1 Q279.0 163.1 282.0 161.3 Q285.0 161.3 288.0 161.3 Q291.0 161.3 294.0 159.6 Q297.0 159.6 300.0 161.1 Q303.0 161.1 306.0 163.4 Q309.0 163.4 312.0 164.1 Q315.0 164.1 318.0 158.2 Q321.0 158.2 324.0 158.2 Q327.0 158.2 330.0 162.9 Q333.0 162.9 336.0 164.7 Q339.0 164.7 342.0 161.1 Q345.0 161.1 348.0 160.0 Q351.0 160.0 354.0 160.3 Q357.0 160.3 360.0 161.6 Q363.0 161.6 366.0 162.9 Q369.0 162.9 372.0 162.2 Q375.0 162.2 378.0 160.5 Q381.0 160.5 384.0 161.5 Q387.0 161.5 390.0 165.2 Q393.0 165.2 396.0 164.3 Q399.0 164.3 402.0 162.4 Q405.0 162.4 408.0 159.5 " stroke="#15803d" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="420" y="166" font-size="13" fill="#15803d" text-anchor="start">dakikalarla sınırlı, kendiliğinden biter</text>
+<text x="50" y="207" font-size="14" fill="#b91c1c" text-anchor="start" font-weight="bold">SE kol 1</text>
+<path d="M180.0 210.0 Q182.5 210.0 185.0 212.2 Q187.5 212.2 190.0 212.7 Q192.5 212.7 195.0 191.8 Q197.5 191.8 200.0 219.8 Q202.5 219.8 205.0 207.3 Q207.5 207.3 210.0 207.8 Q212.5 207.8 215.0 210.0 Q217.5 210.0 220.0 212.2 Q222.5 212.2 225.0 212.7 Q227.5 212.7 230.0 191.8 Q232.5 191.8 235.0 219.8 Q237.5 219.8 240.0 207.3 Q242.5 207.3 245.0 207.9 Q247.5 207.9 250.0 210.1 Q252.5 210.1 255.0 212.3 Q257.5 212.3 260.0 212.7 Q262.5 212.7 265.0 191.8 Q267.5 191.8 270.0 219.8 Q272.5 219.8 275.0 207.2 Q277.5 207.2 280.0 207.9 Q282.5 207.9 285.0 210.1 Q287.5 210.1 290.0 212.3 Q292.5 212.3 295.0 212.7 Q297.5 212.7 300.0 191.8 Q302.5 191.8 305.0 219.8 Q307.5 219.8 310.0 207.2 Q312.5 207.2 315.0 207.9 Q317.5 207.9 320.0 210.2 Q322.5 210.2 325.0 212.3 Q327.5 212.3 330.0 212.7 Q332.5 212.7 335.0 191.8 Q337.5 191.8 340.0 219.8 Q342.5 219.8 345.0 207.2 Q347.5 207.2 350.0 208.0 Q352.5 208.0 355.0 210.2 Q357.5 210.2 360.0 212.3 Q362.5 212.3 365.0 212.7 Q367.5 212.7 370.0 191.8 Q372.5 191.8 375.0 219.8 Q377.5 219.8 380.0 207.2 Q382.5 207.2 385.0 208.0 Q387.5 208.0 390.0 210.3 Q392.5 210.3 395.0 212.4 Q397.5 212.4 400.0 212.6 Q402.5 212.6 405.0 191.8 Q407.5 191.8 410.0 219.8 Q412.5 219.8 415.0 207.2 Q417.5 207.2 420.0 208.0 Q422.5 208.0 425.0 210.3 Q427.5 210.3 430.0 212.4 Q432.5 212.4 435.0 212.6 Q437.5 212.6 440.0 191.8 Q442.5 191.8 445.0 219.8 Q447.5 219.8 450.0 207.2 Q452.5 207.2 455.0 208.1 Q457.5 208.1 460.0 210.4 Q462.5 210.4 465.0 212.4 Q467.5 212.4 470.0 212.6 Q472.5 212.6 475.0 191.8 Q477.5 191.8 480.0 219.8 Q482.5 219.8 485.0 207.2 Q487.5 207.2 490.0 208.1 Q492.5 208.1 495.0 210.4 Q497.5 210.4 500.0 212.4 Q502.5 212.4 505.0 212.6 Q507.5 212.6 510.0 191.8 " stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="520" y="214" font-size="13" fill="#b91c1c" text-anchor="start">alışılmıştan uzun tek nöbet</text>
+<text x="50" y="252" font-size="14" fill="#b91c1c" text-anchor="start" font-weight="bold">SE kol 2</text>
+<path d="M180.0 255.0 Q182.5 255.0 185.0 257.2 Q187.5 257.2 190.0 257.7 Q192.5 257.7 195.0 236.8 Q197.5 236.8 200.0 264.8 Q202.5 264.8 205.0 252.3 Q207.5 252.3 210.0 252.8 Q212.5 252.8 215.0 255.0 Q217.5 255.0 220.0 257.2 Q222.5 257.2 225.0 257.7 Q227.5 257.7 230.0 236.8 Q232.5 236.8 235.0 264.8 Q237.5 264.8 240.0 252.3 Q242.5 252.3 245.0 252.9 Q247.5 252.9 250.0 255.1 " stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250.0 253.8 Q252.5 253.8 255.0 260.8 Q257.5 260.8 260.0 260.1 Q262.5 260.1 265.0 260.3 Q267.5 260.3 270.0 264.4 Q272.5 264.4 275.0 259.7 Q277.5 259.7 280.0 254.9 Q282.5 254.9 285.0 256.7 Q287.5 256.7 290.0 254.0 " stroke="#ea580c" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M290.0 255.0 Q292.5 255.0 295.0 257.2 Q297.5 257.2 300.0 257.7 Q302.5 257.7 305.0 236.8 Q307.5 236.8 310.0 264.8 Q312.5 264.8 315.0 252.3 Q317.5 252.3 320.0 252.8 Q322.5 252.8 325.0 255.0 Q327.5 255.0 330.0 257.2 Q332.5 257.2 335.0 257.7 Q337.5 257.7 340.0 236.8 Q342.5 236.8 345.0 264.8 Q347.5 264.8 350.0 252.3 Q352.5 252.3 355.0 252.9 Q357.5 252.9 360.0 255.1 " stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360.0 255.9 Q362.5 255.9 365.0 259.4 Q367.5 259.4 370.0 258.1 Q372.5 258.1 375.0 260.5 Q377.5 260.5 380.0 259.3 Q382.5 259.3 385.0 257.4 Q387.5 257.4 390.0 259.9 Q392.5 259.9 395.0 256.8 Q397.5 256.8 400.0 249.5 " stroke="#ea580c" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M400.0 255.0 Q402.5 255.0 405.0 257.2 Q407.5 257.2 410.0 257.7 Q412.5 257.7 415.0 236.8 Q417.5 236.8 420.0 264.8 Q422.5 264.8 425.0 252.3 Q427.5 252.3 430.0 252.8 Q432.5 252.8 435.0 255.0 Q437.5 255.0 440.0 257.2 Q442.5 257.2 445.0 257.7 Q447.5 257.7 450.0 236.8 Q452.5 236.8 455.0 264.8 Q457.5 264.8 460.0 252.3 Q462.5 252.3 465.0 252.9 Q467.5 252.9 470.0 255.1 " stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470.0 254.2 Q472.5 254.2 475.0 256.4 Q477.5 256.4 480.0 261.1 Q482.5 261.1 485.0 259.7 Q487.5 259.7 490.0 262.7 Q492.5 262.7 495.0 261.4 Q497.5 261.4 500.0 256.8 Q502.5 256.8 505.0 254.8 Q507.5 254.8 510.0 252.6 " stroke="#ea580c" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="520" y="259" font-size="13" fill="#b91c1c" text-anchor="start">arada bilinç açılmadan art arda nöbetler</text>
+<text x="790" y="150" font-size="13" fill="#0f172a" text-anchor="start">Tanım (slayt 49): nöbetin alışılmıştan uzun</text>
+<text x="790" y="168" font-size="13" fill="#0f172a" text-anchor="start">sürmesi YA DA hasta eski nörolojik durumuna</text>
+<text x="790" y="186" font-size="13" fill="#0f172a" text-anchor="start">dönmeden çok sayıda nöbetin tekrarlaması.</text>
+<text x="790" y="204" font-size="13" fill="#0f172a" text-anchor="start">Algoritma 5. dakikada başlar; 10 dakikalık</text>
+<text x="790" y="222" font-size="13" fill="#0f172a" text-anchor="start">nöbet olağan değildir (çıkmış).</text>
+<rect x="30" y="285" width="1140" height="250" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="317" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · 5 → 30 → 60 dakika: basamaklar</text>
+<path d="M60 368 C400 368 800 368 1140 368" stroke="#0f172a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<circle cx="210" cy="368" r="14" fill="#facc15" stroke="#0f172a" stroke-width="2"/>
+<text x="210" y="350" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">5 dk</text>
+<text x="210" y="398" font-size="14" fill="#a16207" text-anchor="middle" font-weight="bold">ERKEN SE</text>
+<text x="210" y="414" font-size="13" fill="#475569" text-anchor="middle" font-style="italic">hastane öncesi / acil</text>
+<text x="210" y="433" font-size="13" fill="#a16207" text-anchor="middle" font-weight="bold">benzodiazepin</text>
+<text x="210" y="449" font-size="13" fill="#0f172a" text-anchor="middle">IV diazepam 5-10 mg (en çok 20 mg)</text>
+<text x="210" y="465" font-size="13" fill="#0f172a" text-anchor="middle">damar yolu yoksa IM ya da bukkal</text>
+<text x="210" y="481" font-size="13" fill="#0f172a" text-anchor="middle">midazolam ya da rektal diazepam 10 mg</text>
+<text x="210" y="497" font-size="13" fill="#0f172a" text-anchor="middle">yaşlı / &lt; 50 kg: 5 mg, 10 dk sonra tekrar</text>
+<circle cx="590" cy="368" r="14" fill="#ea580c" stroke="#0f172a" stroke-width="2"/>
+<text x="590" y="350" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">30 dk</text>
+<text x="590" y="398" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">DİRENÇLİ SE</text>
+<text x="590" y="414" font-size="13" fill="#475569" text-anchor="middle" font-style="italic">hastane</text>
+<text x="590" y="433" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">IV yüklenen antiepileptik</text>
+<text x="590" y="449" font-size="13" fill="#0f172a" text-anchor="middle">fenitoin 15-20 mg/kg · valproat 15-30 mg/kg</text>
+<text x="590" y="465" font-size="13" fill="#0f172a" text-anchor="middle">levetirasetam 30-60 mg/kg · fenobarbital 10-20</text>
+<text x="590" y="481" font-size="13" fill="#0f172a" text-anchor="middle">lakozamid 200-400 mg</text>
+<text x="590" y="497" font-size="13" fill="#0f172a" text-anchor="middle">pregabalin listede YOK (çıkmış)</text>
+<circle cx="960" cy="368" r="14" fill="#b91c1c" stroke="#0f172a" stroke-width="2"/>
+<text x="960" y="350" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">60 dk</text>
+<text x="960" y="398" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">SÜPER DİRENÇLİ SE</text>
+<text x="960" y="414" font-size="13" fill="#475569" text-anchor="middle" font-style="italic">yoğun bakım</text>
+<text x="960" y="433" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">anestezik infüzyon + EEG izlemi</text>
+<text x="960" y="449" font-size="13" fill="#0f172a" text-anchor="middle">midazolam · propofol · pentotal</text>
+<text x="960" y="465" font-size="13" fill="#0f172a" text-anchor="middle">ketamin bolus + infüzyon</text>
+<text x="960" y="481" font-size="13" fill="#0f172a" text-anchor="middle">kasılma görülmez, EEG zorunlu</text>
+<path d="M60 524 C400 532 800 532 1140 524" stroke="#1d4ed8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<text x="600" y="517" font-size="13" fill="#1d4ed8" text-anchor="middle">her evrede: hava yolu, kan basıncı, damar yolu, EKG, kan sayımı, şeker, elektrolit, ilaç düzeyi, kan gazı, toksin taraması</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 49 (SE tanımı), 50 (tedavi algoritması: erken / dirençli / süper dirençli) · kırmızı = epileptik boşalım, sarı-turuncu-kırmızı = evreler, mavi = destek</text>
+</svg>

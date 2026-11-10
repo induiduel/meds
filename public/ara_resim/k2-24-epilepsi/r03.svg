@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Eskrimci postürü ve figür 4: uzanan kolun karşısı odaktır</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Frontal lob nöbetlerinde lateralizasyon · slayt 15</text>
+<rect x="30" y="95" width="370" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Eskrimci postürü</text>
+<circle cx="221.6" cy="180" r="16.5" fill="#fde7d6" stroke="#1d4ed8" stroke-width="2"/>
+<path d="M193.0 284.5 C188.6 224.0 201.8 199.8 215 199.8 C228.2 199.8 241.4 224.0 237.0 284.5 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M197.4 210.8 L151.4 206.8 L133.7 244.7" stroke="#1d4ed8" stroke-width="7.700000000000001" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M232.6 210.8 L278.6 214.8 L320.4 214.8" stroke="#1d4ed8" stroke-width="7.700000000000001" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M205.1 284.5 L201.8 345.0" stroke="#1d4ed8" stroke-width="8.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M224.9 284.5 L228.2 345.0" stroke="#1d4ed8" stroke-width="8.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 218 C155 226 150 232 146 240" stroke="#ea580c" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300" y1="222" x2="262" y2="246" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="300" cy="222" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="258" y="258" font-size="13.5" fill="#b91c1c" text-anchor="start">sağ kol</text>
+<text x="258" y="275" font-size="13.5" fill="#b91c1c" text-anchor="start">ekstansiyonda</text>
+<line x1="150" y1="232" x2="120" y2="318" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="150" cy="232" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="50" y="335" font-size="13.5" fill="#ea580c" text-anchor="start">sol kol dirsek ve</text>
+<text x="50" y="352" font-size="13.5" fill="#ea580c" text-anchor="start">bilekten fleksör</text>
+<text x="50" y="395" font-size="13.5" fill="#1e293b" text-anchor="start">Bir kol ekstansör postürde, karşı kol dirsek ve</text>
+<text x="50" y="413" font-size="13.5" fill="#1e293b" text-anchor="start">bilekten fleksör postürde tonik kasılır.</text>
+<text x="50" y="431" font-size="13.5" fill="#1e293b" text-anchor="start">Odak: ekstansör kolun KARŞI tarafı →</text>
+<text x="50" y="449" font-size="13.5" fill="#1e293b" text-anchor="start">sağ kol uzanıyorsa odak sol frontal lob.</text>
+<rect x="420" y="95" width="370" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="440" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Figür 4 pozisyonu</text>
+<circle cx="605.0" cy="180" r="16.5" fill="#fde7d6" stroke="#1d4ed8" stroke-width="2"/>
+<path d="M583.0 284.5 C578.6 224.0 591.8 199.8 605 199.8 C618.2 199.8 631.4 224.0 627.0 284.5 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M587.4 210.8 L541.2 210.8 L577.4 231.7" stroke="#1d4ed8" stroke-width="7.700000000000001" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M622.6 210.8 L668.8 210.8 L710.6 210.8" stroke="#1d4ed8" stroke-width="7.700000000000001" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M595.1 284.5 L591.8 345.0" stroke="#1d4ed8" stroke-width="8.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M614.9 284.5 L618.2 345.0" stroke="#1d4ed8" stroke-width="8.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M588 229 C600 232 640 236 672 231" stroke="#ea580c" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="690" y1="222" x2="655" y2="246" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="690" cy="222" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="650" y="258" font-size="13.5" fill="#b91c1c" text-anchor="start">sağ kol ekstansör</text>
+<text x="650" y="275" font-size="13.5" fill="#b91c1c" text-anchor="start">tonik kasılma</text>
+<line x1="545" y1="214" x2="500" y2="318" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="545" cy="214" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="440" y="335" font-size="13.5" fill="#ea580c" text-anchor="start">sol kol dirsekten</text>
+<text x="440" y="352" font-size="13.5" fill="#ea580c" text-anchor="start">fleksör tonik kasılma</text>
+<text x="500" y="300" font-size="30" fill="#b91c1c" text-anchor="middle" font-weight="bold">“4”</text>
+<text x="440" y="395" font-size="13.5" fill="#1e293b" text-anchor="start">Bir kolda ekstansör, karşı kolda dirsekten</text>
+<text x="440" y="413" font-size="13.5" fill="#1e293b" text-anchor="start">fleksör tonik kasılma → kollar 4 rakamı gibi.</text>
+<text x="440" y="431" font-size="13.5" fill="#1e293b" text-anchor="start">Ekstansör kolun karşı hemisferi</text>
+<text x="440" y="449" font-size="13.5" fill="#1e293b" text-anchor="start">epileptojenik alanla ilişkilendirilir.</text>
+<rect x="810" y="95" width="360" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="830" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Lateralizasyon kuralı</text>
+<path d="M830 250 C820 180 870 140 900 145 C930 140 980 180 970 250 C960 300 840 300 830 250 Z" stroke="#b91c1c" stroke-width="2.5" fill="#fecaca" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="900" y="325" font-size="13" fill="#b91c1c" text-anchor="middle">sol hemisfer</text>
+<path d="M1010 250 C1000 180 1050 140 1080 145 C1110 140 1160 180 1150 250 C1140 300 1020 300 1010 250 Z" stroke="#1d4ed8" stroke-width="2.5" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1080" y="325" font-size="13" fill="#1d4ed8" text-anchor="middle">sağ hemisfer</text>
+<circle cx="905" cy="205" r="13" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="905" y="185" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">odak</text>
+<path d="M917 205 C980 170 1060 190 1095 350" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)" stroke-dasharray="6 4"/>
+<text x="1080" y="375" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">karşı tarafa: sağ kol ekstansiyon</text>
+<text x="830" y="420" font-size="13" fill="#1e293b" text-anchor="start">Sol frontal odak → sağ kol ekstansiyon.</text>
+<text x="830" y="437" font-size="13" fill="#1e293b" text-anchor="start">Tonik baş dönmesi de karşı tarafa işaret</text>
+<text x="830" y="454" font-size="13" fill="#1e293b" text-anchor="start">eder ama lateralize edici değeri düşüktür.</text>
+<text x="830" y="471" font-size="13" fill="#1e293b" text-anchor="start">Jaksonyen yayılım: hareket komşu bölgelere ilerler.</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 15 (frontal lob kökenli fokal nöbetlerin 1–4. özellikleri) · kırmızı = ekstansör kol / odak, turuncu = fleksör kol</text>
+</svg>

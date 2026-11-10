@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oke" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Alkol bağımlılığında üç onaylı ilaç üç farklı yerden tutar</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Naltrekson ödül yolunu, akamprosat NMDA–GABA-A dengesini, disülfiram ALDH'yi hedefler; onaysızlar ayrı listede · slayt 39–44</text>
+<rect x="30" y="95" width="560" height="460" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Beyin: naltrekson ve akamprosat</text>
+<path d="M160 330 C120 290 130 210 200 190 C230 150 330 140 370 180 C440 165 500 210 490 270 C520 310 490 360 440 365 C410 400 330 410 290 385 C240 410 180 385 160 330 Z" stroke="#64748b" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="325" y="175" font-size="13" fill="#64748b" text-anchor="middle" font-weight="bold">BEYİN</text>
+<circle cx="230" cy="290" r="34" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<text x="230" y="286" font-size="13" fill="#b45309" text-anchor="middle" font-weight="bold">ödül</text>
+<text x="230" y="302" font-size="12" fill="#b45309" text-anchor="middle">sistemi</text>
+<text x="230" y="350" font-size="11" fill="#b45309" text-anchor="middle">dopamin · serotonin · opioidler</text>
+<path d="M210 240 L210 260 L227.0 260 C223.0 250.0 223.0 250.0 227.0 240 Z" stroke="#b45309" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 240 L250 260 L233.0 260 C237.0 250.0 237.0 250.0 233.0 240 Z" stroke="#b45309" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230" y="232" font-size="11" fill="#b45309" text-anchor="middle">mü-opioid reseptörü</text>
+<rect x="60" y="440" width="210" height="50" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="165.0" y="469.6666666666667" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">NALTREKSON</text>
+<path d="M165 440 C165 400 200 350 215 262" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="215" cy="262" r="11" fill="#fff" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="209" y1="262" x2="221" y2="262" stroke="#b91c1c" stroke-width="3"/>
+<text x="60" y="508" font-size="11" fill="#b91c1c" text-anchor="start">mü-opioid antagonisti → ödül azalır</text>
+<text x="60" y="524" font-size="11" fill="#b91c1c" text-anchor="start">özlem ↓ · 50 mg/gün oral · 4 haftada im</text>
+<text x="60" y="540" font-size="11" fill="#b91c1c" text-anchor="start">dikkat: doz-bağımlı hepatotoksisite</text>
+<rect x="330" y="300" width="200" height="22" fill="url(#zar)" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="339" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="339" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="357" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="357" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="375" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="375" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="393" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="393" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="411" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="411" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="429" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="429" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="447" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="447" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="465" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="465" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="483" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="483" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="501" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="501" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="519" cy="305" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="519" cy="317" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<path d="M355 290 L355 334 L370.0 334 C366.0 312.0 366.0 312.0 370.0 290 Z" stroke="#b45309" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M391 290 L391 334 L376.0 334 C380.0 312.0 380.0 312.0 376.0 290 Z" stroke="#b45309" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="373" y="282" font-size="11" fill="#b45309" text-anchor="middle" font-weight="bold">NMDA</text>
+<path d="M455 290 L455 334 L461.0 334 C457.0 312.0 457.0 312.0 461.0 290 Z" stroke="#0f766e" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M491 290 L491 334 L485.0 334 C489.0 312.0 489.0 312.0 485.0 290 Z" stroke="#0f766e" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="473" y="282" font-size="11" fill="#0f766e" text-anchor="middle" font-weight="bold">GABA-A</text>
+<rect x="340" y="440" width="220" height="50" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="450.0" y="469.6666666666667" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">AKAMPROSAT</text>
+<path d="M400 440 C400 400 380 370 375 340" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="375" cy="340" r="11" fill="#fff" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="369" y1="340" x2="381" y2="340" stroke="#b91c1c" stroke-width="3"/>
+<path d="M480 440 C480 400 475 370 473 345" stroke="#15803d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)"/>
+<text x="330" y="508" font-size="11" fill="#b91c1c" text-anchor="start">zayıf NMDA antagonisti + GABA-A aktivatörü</text>
+<text x="330" y="524" font-size="11" fill="#b91c1c" text-anchor="start">etanolsüz dengesizliği yumuşatır · 3 × 333 mg</text>
+<text x="330" y="540" font-size="11" fill="#b91c1c" text-anchor="start">dikkat: ciddi böbrek yetmezliği</text>
+<rect x="620" y="95" width="550" height="260" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">B · Karaciğer: disülfiram</text>
+<circle cx="680" cy="215" r="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="680" y="250" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="bold">etanol</text>
+<line x1="696" y1="215" x2="760" y2="215" stroke="#2563eb" stroke-width="2.5" marker-end="url(#okb)"/>
+<ellipse cx="800" cy="215" rx="38" ry="22" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="800" y="220" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="bold">ADH</text>
+<line x1="840" y1="215" x2="895" y2="215" stroke="#ea580c" stroke-width="2.5" marker-end="url(#okt)"/>
+<circle cx="915" cy="215" r="16" fill="#ffedd5" stroke="#ea580c" stroke-width="2.5"/>
+<text x="915" y="250" font-size="12" fill="#ea580c" text-anchor="middle" font-weight="bold">asetaldehid</text>
+<text x="915" y="266" font-size="12" fill="#ea580c" text-anchor="middle" font-weight="bold">BİRİKİR</text>
+<line x1="933" y1="215" x2="985" y2="215" stroke="#ea580c" stroke-width="2.5" marker-end="url(#okt)"/>
+<ellipse cx="1025" cy="215" rx="40" ry="22" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="1025" y="220" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="bold">ALDH</text>
+<line x1="1067" y1="215" x2="1115" y2="215" stroke="#64748b" stroke-width="2.5" marker-end="url(#okg)" stroke-dasharray="5 4"/>
+<text x="1140" y="220" font-size="12" fill="#64748b" text-anchor="middle">asetat</text>
+<rect x="1000" y="300" width="150" height="40" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="1075.0" y="324.3333333333333" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">DİSÜLFİRAM</text>
+<path d="M1075 300 C1075 280 1040 262 1025 240" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1025" cy="240" r="11" fill="#fff" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="1019" y1="240" x2="1031" y2="240" stroke="#b91c1c" stroke-width="3"/>
+<text x="640" y="300" font-size="11" fill="#b91c1c" text-anchor="start">ALDH blokajı → içince dakikalar içinde flushing,</text>
+<text x="640" y="316" font-size="11" fill="#b91c1c" text-anchor="start">bulantı, kusma, hipotansiyon · tam etki 12 saat</text>
+<rect x="620" y="375" width="550" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="407" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Onaylı mı, onaysız mı? Hangi organ?</text>
+<rect x="640" y="420" width="250" height="110" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="765.0" y="455.3333333333333" font-size="13" fill="#15803d" text-anchor="middle" font-weight="bold">FDA ONAYLI (3)</text>
+<text x="765.0" y="471.3333333333333" font-size="13" fill="#15803d" text-anchor="middle">disülfiram</text>
+<text x="765.0" y="487.3333333333333" font-size="13" fill="#15803d" text-anchor="middle">naltrekson</text>
+<text x="765.0" y="503.3333333333333" font-size="13" fill="#15803d" text-anchor="middle">akamprosat</text>
+<rect x="905" y="420" width="245" height="110" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="1027.5" y="456.5" font-size="12" fill="#64748b" text-anchor="middle" font-weight="bold">ONAYSIZ</text>
+<text x="1027.5" y="471.5" font-size="12" fill="#64748b" text-anchor="middle">nalmefen · topiramat</text>
+<text x="1027.5" y="486.5" font-size="12" fill="#64748b" text-anchor="middle">gabapentin · valproat</text>
+<text x="1027.5" y="501.5" font-size="12" fill="#64748b" text-anchor="middle">baklofen · SSRI · ondansetron</text>
+<rect x="640" y="548" width="245" height="70" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="762.5" y="572.0" font-size="12" fill="#b91c1c" text-anchor="middle" font-weight="bold">karaciğer dikkat:</text>
+<text x="762.5" y="587.0" font-size="12" fill="#b91c1c" text-anchor="middle">naltrekson + disülfiram</text>
+<text x="762.5" y="602.0" font-size="12" fill="#b91c1c" text-anchor="middle">birlikte verilmez</text>
+<rect x="905" y="548" width="245" height="70" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<text x="1027.5" y="572.0" font-size="12" fill="#b45309" text-anchor="middle" font-weight="bold">böbrek dikkat:</text>
+<text x="1027.5" y="587.0" font-size="12" fill="#b45309" text-anchor="middle">akamprosat ciddi böbrek</text>
+<text x="1027.5" y="602.0" font-size="12" fill="#b45309" text-anchor="middle">yetmezliğinde kullanılmaz</text>
+<text x="895" y="650" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">Temel tedavi ilaç değil, yoğun psikososyal tedavidir; ilaçlar yardımcıdır.</text>
+<text x="895" y="675" font-size="12" fill="#475569" text-anchor="middle">Disülfiram fenitoin, oral antikoagülan ve izoniazid yıkımını da inhibe eder.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 39–44 · kırmızı ilaç/blokaj · amber ödül-NMDA · teal GABA-A · mor enzim · turuncu asetaldehid · yeşil onaylı</text>
+</svg>

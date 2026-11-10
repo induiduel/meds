@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Üç etken katmanı ve performans kaygısı döngüsü</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Yatkınlaştırıcı zemin → başlatıcı tetik → sürdürücü döngü · slayt 24–25</text>
+<rect x="30" y="95" width="620" height="640" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Sorun nasıl başlar ve neden sürer</text>
+<line x1="70" y1="650" x2="620" y2="650" stroke="#64748b" stroke-width="3" marker-end="url(#okg)"/>
+<text x="80" y="680" font-size="13" fill="#64748b" text-anchor="start">Çocukluk</text>
+<text x="345" y="680" font-size="13" fill="#64748b" text-anchor="middle">Erişkinlik</text>
+<text x="610" y="680" font-size="13" fill="#64748b" text-anchor="end">Bugün</text>
+<path d="M70 640 C 150 600, 250 630, 340 590 C 420 560, 520 590, 620 540 L620 650 L70 650 Z" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="250" y="632" font-size="15" fill="#6d28d9" text-anchor="start" font-weight="bold">Yatkınlaştırıcı zemin</text>
+<text x="90" y="150" font-size="13" fill="#6d28d9" text-anchor="start" font-weight="bold">Yatkınlaştırıcı (kişiyi savunmasız kılar):</text>
+<text x="90" y="169" font-size="13" fill="#6d28d9" text-anchor="start">yetiştirilme ve cinselliğe olumsuz bakış, bozuk aile ilişkisi,</text>
+<text x="90" y="188" font-size="13" fill="#6d28d9" text-anchor="start">yetersiz ya da yanlış cinsel bilgi, travmatik cinsel deneyim,</text>
+<text x="90" y="207" font-size="13" fill="#6d28d9" text-anchor="start">cinsiyet rolünde güvensizlik, intrapsişik çatışma</text>
+<path d="M560 160 L530 240 L565 235 L540 310 L600 215 L567 222 L595 160 Z" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="565" y="335" font-size="13" fill="#ea580c" text-anchor="middle" font-style="italic">tetik</text>
+<text x="90" y="240" font-size="13" fill="#ea580c" text-anchor="start" font-weight="bold">Başlatıcı (sorunu ortaya çıkarır):</text>
+<text x="90" y="259" font-size="13" fill="#ea580c" text-anchor="start">abartılı performans beklentisi, bedensel hastalık ve ilaç</text>
+<text x="90" y="278" font-size="13" fill="#ea580c" text-anchor="start">yan etkisi, depresyon, alkol ve madde, yaşlanma,</text>
+<text x="90" y="297" font-size="13" fill="#ea580c" text-anchor="start">sadakatsizlik, eş kaybı</text>
+<text x="90" y="345" font-size="13" fill="#b91c1c" text-anchor="start" font-weight="bold">Sürdürücü (sorunu devam ettirir):</text>
+<text x="90" y="364" font-size="13" fill="#b91c1c" text-anchor="start">performans kaygısı, ilişki sorunu ve zayıf iletişim,</text>
+<text x="90" y="383" font-size="13" fill="#b91c1c" text-anchor="start">cinsel mitler, çekicilik kaybı, suçluluk, yakınlık korkusu,</text>
+<text x="90" y="402" font-size="13" fill="#b91c1c" text-anchor="start">kısıtlı ön sevişme, süren hastalık, ilaç, alkol ve madde</text>
+<path d="M560 420 C 600 440, 615 470, 612 500" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="570" y="480" font-size="12" fill="#b91c1c" text-anchor="start" font-style="italic">döngüye</text>
+<text x="330" y="455" font-size="13" fill="#0f172a" text-anchor="middle" font-style="italic">Zemin yıllar önce hazırlanır, tetik o anda çeker, döngü kalıcılaştırır</text>
+<rect x="680" y="95" width="490" height="640" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="700" y="127" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">B · Performans kaygısı döngüsü (seyircilik)</text>
+<path d="M925.0 250.0 A170 170 0 0 1 1095.0 420.0" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<path d="M755.0 420.0 A170 170 0 0 1 925.0 250.0" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<path d="M925.0 590.0 A170 170 0 0 1 755.0 420.0" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<path d="M1095.0 420.0 A170 170 0 0 1 925.0 590.0" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<rect x="830" y="218" width="190" height="64" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="925.0" y="245.66666666666666" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">Başarısızlık korkusu</text>
+<text x="925.0" y="263.66666666666663" font-size="14" fill="#b91c1c" text-anchor="middle">etkinliğe kaygıyla girer</text>
+<rect x="1000" y="388" width="190" height="64" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="1095.0" y="415.6666666666667" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">Seyircilik</text>
+<text x="1095.0" y="433.6666666666667" font-size="14" fill="#6d28d9" text-anchor="middle">kendini dışarıdan izler</text>
+<rect x="830" y="558" width="190" height="64" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="925.0" y="585.6666666666666" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">Uyarılma azalır</text>
+<text x="925.0" y="603.6666666666666" font-size="14" fill="#ea580c" text-anchor="middle">odak kaybolur</text>
+<rect x="660" y="388" width="190" height="64" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="755.0" y="415.6666666666667" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">Başarısızlık</text>
+<text x="755.0" y="433.6666666666667" font-size="14" fill="#b91c1c" text-anchor="middle">daha çok korku</text>
+<text x="925" y="425" font-size="14" fill="#64748b" text-anchor="middle" font-style="italic">kısır döngü</text>
+<path d="M1032 288 A170 170 0 0 1 1057 313" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<path d="M1057 527 A170 170 0 0 1 1032 552" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<path d="M818 552 A170 170 0 0 1 793 527" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<path d="M793 313 A170 170 0 0 1 818 288" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="925" y="660" font-size="13" fill="#b91c1c" text-anchor="middle">Başlatıcı neden kalksa bile döngü sorunu sürdürür</text>
+<text x="925" y="690" font-size="13" fill="#15803d" text-anchor="middle" font-weight="bold">Duyusal odaklanma bu döngüyü başından keser</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 24 (yatkınlaştırıcı, başlatıcı), 25 (sürdürücü, döngü), 35 (duyusal odaklanma)</text>
+</svg>

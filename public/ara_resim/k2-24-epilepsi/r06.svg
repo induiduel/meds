@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Epileptogenez: akut hasardan epilepsi hastalığına giden yol</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Akut semptomatik nöbet ve epileptogenez şeması · slayt 24–25</text>
+<rect x="30" y="95" width="1140" height="290" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Beyin ağı zamanla yeniden kurulur</text>
+<path d="M81.8 221.2 C75.6 184.0 106.6 162.3 143.8 165.4 C174.8 156.1 218.2 177.8 221.3 211.9 C224.4 236.7 202.7 249.1 177.9 246.0 C168.6 261.5 143.8 264.6 131.4 252.2 C100.4 255.3 78.7 242.9 81.8 221.2 Z" stroke="#ea580c" stroke-width="2.5" fill="#fde7d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112.8 190.2 C131.4 208.8 156.2 205.7 174.8 187.1" stroke="#ea580c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.4 224.3 C125.2 239.8 162.4 236.7 193.4 221.2" stroke="#ea580c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 180 L140 200 L155 185 L170 210" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="300" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">Başlangıç hasarı</text>
+<text x="150" y="320" font-size="13" fill="#0f172a" text-anchor="middle">kafa travması, inme,</text>
+<text x="150" y="338" font-size="13" fill="#0f172a" text-anchor="middle">metabolik/toksik olay</text>
+<line x1="235" y1="215" x2="345" y2="215" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<line x1="290" y1="150" x2="290" y2="195" stroke="#6d28d9" stroke-width="2.5" marker-end="url(#okm)"/>
+<text x="290" y="142" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="bold">genetik</text>
+<line x1="290" y1="280" x2="290" y2="235" stroke="#64748b" stroke-width="2.5" marker-end="url(#okg)"/>
+<text x="290" y="298" font-size="13" fill="#64748b" text-anchor="middle" font-weight="bold">yaş-cins</text>
+<path d="M371.8 221.2 C365.6 184.0 396.6 162.3 433.8 165.4 C464.8 156.1 508.2 177.8 511.3 211.9 C514.4 236.7 492.7 249.1 467.9 246.0 C458.6 261.5 433.8 264.6 421.4 252.2 C390.4 255.3 368.7 242.9 371.8 221.2 Z" stroke="#ea580c" stroke-width="2.5" fill="#fde7d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M402.8 190.2 C421.4 208.8 446.2 205.7 464.8 187.1" stroke="#ea580c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M390.4 224.3 C415.2 239.8 452.4 236.7 483.4 221.2" stroke="#ea580c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M400 230 L410 205 L420 240 L430 200 L440 235" stroke="#b91c1c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="440" y="300" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">1. nöbet</text>
+<text x="440" y="320" font-size="13" fill="#0f172a" text-anchor="middle">akut semptomatik</text>
+<text x="440" y="338" font-size="13" fill="#0f172a" text-anchor="middle">(tetiklenmiş) olabilir</text>
+<line x1="525" y1="215" x2="635" y2="215" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<line x1="580" y1="150" x2="580" y2="195" stroke="#6d28d9" stroke-width="2.5" marker-end="url(#okm)"/>
+<text x="580" y="142" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="bold">genetik</text>
+<line x1="580" y1="280" x2="580" y2="235" stroke="#64748b" stroke-width="2.5" marker-end="url(#okg)"/>
+<text x="580" y="298" font-size="13" fill="#64748b" text-anchor="middle" font-weight="bold">yaş-cins</text>
+<path d="M661.8 221.2 C655.6 184.0 686.6 162.3 723.8 165.4 C754.8 156.1 798.2 177.8 801.3 211.9 C804.4 236.7 782.7 249.1 757.9 246.0 C748.6 261.5 723.8 264.6 711.4 252.2 C680.4 255.3 658.7 242.9 661.8 221.2 Z" stroke="#b91c1c" stroke-width="2.5" fill="#fecaca" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M692.8 190.2 C711.4 208.8 736.2 205.7 754.8 187.1" stroke="#b91c1c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M680.4 224.3 C705.2 239.8 742.4 236.7 773.4 221.2" stroke="#b91c1c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M690 230 L700 205 L710 240 L720 200 L730 235" stroke="#b91c1c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M740 250 C755 225 775 230 785 250" stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M675 255 C690 235 710 240 725 258" stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="730" y="300" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">Yapısal ve fonksiyonel</text>
+<text x="730" y="320" font-size="13" fill="#0f172a" text-anchor="middle">değişiklikler</text>
+<text x="730" y="338" font-size="13" fill="#0f172a" text-anchor="middle">ağ yeniden şekillenir</text>
+<line x1="815" y1="215" x2="925" y2="215" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<line x1="870" y1="150" x2="870" y2="195" stroke="#6d28d9" stroke-width="2.5" marker-end="url(#okm)"/>
+<text x="870" y="142" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="bold">genetik</text>
+<line x1="870" y1="280" x2="870" y2="235" stroke="#64748b" stroke-width="2.5" marker-end="url(#okg)"/>
+<text x="870" y="298" font-size="13" fill="#64748b" text-anchor="middle" font-weight="bold">yaş-cins</text>
+<path d="M951.8 221.2 C945.6 184.0 976.6 162.3 1013.8 165.4 C1044.8 156.1 1088.2 177.8 1091.3 211.9 C1094.4 236.7 1072.7 249.1 1047.9 246.0 C1038.6 261.5 1013.8 264.6 1001.4 252.2 C970.4 255.3 948.7 242.9 951.8 221.2 Z" stroke="#b91c1c" stroke-width="2.5" fill="#fecaca" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M982.8 190.2 C1001.4 208.8 1026.2 205.7 1044.8 187.1" stroke="#b91c1c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M970.4 224.3 C995.2 239.8 1032.4 236.7 1063.4 221.2" stroke="#b91c1c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M980 230 L990 205 L1000 240 L1010 200 L1020 235" stroke="#b91c1c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1030 250 C1045 225 1065 230 1075 250" stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<path d="M965 255 C980 235 1000 240 1015 258" stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="1020" y="300" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">Epilepsi</text>
+<text x="1020" y="320" font-size="13" fill="#0f172a" text-anchor="middle">kalıcı nöbet</text>
+<text x="1020" y="338" font-size="13" fill="#0f172a" text-anchor="middle">yatkınlığı</text>
+<text x="600" y="370" font-size="13" fill="#1e293b" text-anchor="middle">Şemada kalın yazılan durak yapısal ve fonksiyonel değişikliklerdir: beyin kalıcı olarak nöbete yatkın hâle gelir.</text>
+<rect x="30" y="400" width="1140" height="125" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="432" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Akut semptomatik nöbet nerede durur?</text>
+<text x="50" y="455" font-size="13" fill="#1e293b" text-anchor="start">Akut semptomatik nöbet tetikleyici olayla yakın zamansal ilişki içinde gelir; tekrar olasılığı epilepsideki gibi artmaz → tek başına epilepsi tanısı koydurmaz.</text>
+<text x="50" y="476" font-size="13" fill="#1e293b" text-anchor="start">Ama hastalık yatıştıktan sonra bile epilepsi gelişme riski artmıştır; her geçişi genetik yapı ile yaş ve cins etkiler.</text>
+<text x="50" y="497" font-size="13" fill="#1e293b" text-anchor="start">Epilepsi hastasında da akut semptomatik nöbet gelişebilir.</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 24 (akut semptomatik nöbet), 25 (epileptogenez şeması) · turuncu = akut/tetiklenmiş, kırmızı = epilepsi, mor = genetik, gri = yaş-cins</text>
+</svg>

@@ -1,0 +1,152 @@
+{
+ "key": "k2-23-cinsel-kimlik-bozukluklari",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Beş bağımsız boyut: biri diğerini söylemez",
+   "aciklama": "Biyolojik cinsiyet, cinsiyet kimliği, rol, ifade ve yönelim ayrı eksenlerdir; sınav transseksüelliğe homoseksüel yönelimin tanımını vererek tuzak kurar.",
+   "adimlar": [
+    "1. Beş boyut aynı kişide ayrı ayrı ölçülür; birini bilmek diğerini söylemez.",
+    "2. Kimlik ekseni atanan cinsiyetle uyum derecesini, yönelim ekseni kime çekim duyulduğunu gösterir.",
+    "3. Üç yönelimin hiçbiri DSM-5-TR'de tanı değildir.",
+    "4. Transseksüellik kimlik eksenindedir; kendi cinsine ilgi homoseksüel yönelimin tanımıdır."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 6,
+   "bitis": 6,
+   "kaynak": [
+    4,
+    6,
+    8
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Cinsiyet kimliği dört basamakta gelişir",
+   "aciklama": "Kimlik iki üç yaşta oluşur, üç dört yaşta zamanla değişmeyeceği, beş yedi yaşta görünüş değişse de değişmediği anlaşılır; ergenlikte pekişir ve yönelim belirginleşir.",
+   "adimlar": [
+    "1. 2–3 yaş: çocuk kendini kız ya da erkek olarak tanımlar.",
+    "2. 3–4 yaş: cinsiyetin zamanla değişmeyeceğini anlar (kararlılık).",
+    "3. 5–7 yaş: kıyafet ya da oyun değişse de cinsiyet değişmez (sabitlik).",
+    "4. Ergenlik: ikincil cinsiyet özellikleri gelişir, yönelim belirginleşir."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 3,
+   "bitis": 3,
+   "kaynak": [
+    5
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Cinsel yanıt döngüsü: üç model, üç bakış",
+   "aciklama": "Masters ve Johnson dört evreyi istek olmadan sıralar, Kaplan başa istek evresini ekler, Basson isteğin uyarılmayla birlikte ortaya çıktığı döngüyü tanımlar.",
+   "adimlar": [
+    "1. Masters ve Johnson: uyarılma → plato → orgazm → çözülme; istek yok.",
+    "2. Kaplan: istek → uyarılma → orgazm; bugünkü sınıflamanın temeli.",
+    "3. Basson: yakınlık → uyarılma → istek → doyum, döngü başa döner.",
+    "4. Yanıt olarak istek normaldir; kendiliğinden istek duymamak tek başına bozukluk değildir."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 17,
+   "bitis": 17,
+   "kaynak": [
+    19
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Cinsel yanıtın iki bileşeni ve beş madde",
+   "aciklama": "Uyarılma parasempatik ve nitrik oksit aracılı damar genişlemesidir; orgazm sempatik emisyon ve somatik boşalmadan oluşan refleks kasılmadır; dopamin, nitrik oksit ve testosteron işlevi destekler, serotonin ve prolaktin bastırır.",
+   "adimlar": [
+    "1. Parasempatik uyarı nitrik oksit salar, damar genişler, kan dolar: ereksiyon ve vajinal ıslanma.",
+    "2. Orgazm refleksi ritmik kasılmadır; emisyon sempatik, boşalma somatik (pudendal) kontroldedir.",
+    "3. Dopamin, nitrik oksit, testosteron işlevi destekler.",
+    "4. Serotonin isteği azaltıp orgazmı geciktirir; prolaktin yüksekliği isteği ve ereksiyonu azaltır."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 18,
+   "bitis": 18,
+   "kaynak": [
+    20,
+    26
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Üç etken katmanı ve performans kaygısı döngüsü",
+   "aciklama": "Yatkınlaştırıcı etkenler zemini hazırlar, başlatıcı olay sorunu tetikler, sürdürücü etkenler ve performans kaygısı döngüsü sorunu kalıcılaştırır.",
+   "adimlar": [
+    "1. Yatkınlaştırıcı: yetiştirilme, yanlış cinsel bilgi, travma, güvensizlik; kişiyi savunmasız kılar.",
+    "2. Başlatıcı: performans beklentisi, hastalık ve ilaç, depresyon, alkol, yaşlanma, eş kaybı.",
+    "3. Sürdürücü: performans kaygısı, ilişki sorunu, mitler, suçluluk, kısıtlı ön sevişme.",
+    "4. Döngü: başarısızlık korkusu → seyircilik → uyarılma azalır → başarısızlık → daha çok korku."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 22,
+   "bitis": 23,
+   "kaynak": [
+    24,
+    25,
+    35
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "İlaçlar cinsel işlevi hangi yoldan bozar?",
+   "aciklama": "SSRI ve SNRI serotonini artırarak isteği azaltır ve orgazmı geciktirir, antipsikotikler prolaktini yükseltir, tiyazid ve beta bloker gibi antihipertansifler de işlevi bozar (slayt mekanizma vermez); tanı yakınmanın ilaçla zamansal ilişkisine dayanır.",
+   "adimlar": [
+    "1. SSRI/SNRI en sık nedendir: serotonin aralıkta birikir, istek azalır, orgazm gecikir.",
+    "2. Antipsikotikler prolaktini artırır; yüksek prolaktin isteği ve ereksiyonu azaltır.",
+    "3. Tiyazid ve beta bloker, 5-alfa redüktaz inhibitörü, opioid, alkol ve madde de bozar.",
+    "4. Tanı ölçütü: yakınma ilacın başlanması, doz artışı ya da kesilmesiyle zamansal ilişkilidir."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 24,
+   "bitis": 24,
+   "kaynak": [
+    26,
+    20,
+    42
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Sertleşme bozukluğu: erken haberci ve organik–psikojenik ayrım",
+   "aciklama": "Penil arterler koronerlerden ince olduğu için ateroskleroz sertleşmeyi koroner hastalıktan yıllar önce bozar; sabah ereksiyonu normalse neden psikojeniktir, çoğu olgu zamanla karma olur.",
+   "adimlar": [
+    "1. Aynı plak ince penil arterde akımı önce keser: sertleşme bozukluğu koroner hastalığın erken habercisidir.",
+    "2. Her olguda kalp-damar risk değerlendirmesi yapılır.",
+    "3. Organik: yavaş, her durumda, sabah ereksiyonu yetersiz; psikojenik: ani, durumsal, sabah ereksiyonu normal.",
+    "4. Organik sorun zamanla performans kaygısını başlatır; iki etken birlikte tedavi edilir."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 27,
+   "bitis": 28,
+   "kaynak": [
+    29,
+    30,
+    23
+   ]
+  },
+  {
+   "id": "r08",
+   "baslik": "Her parafili bozukluk değildir: iki koşul, sekiz tür",
+   "aciklama": "Parafili yoğun ve süreğen alışılmadık cinsel ilgidir; kişide sıkıntı ya da işlev kaybı varsa veya eylem başkasına zarar veriyorsa parafilik bozukluk olur; sekiz tür uyarılmanın kaynağına göre ayrılır.",
+   "adimlar": [
+    "1. Parafili tek başına tanı değildir; cinsel davranışın bir çeşitlemesi olabilir.",
+    "2. Belirgin sıkıntı ya da işlev bozukluğu varsa parafilik bozukluktur.",
+    "3. Başkasına zarar ya da rızası olmayan kişiye eylem varsa da parafilik bozukluktur; en az 6 ay.",
+    "4. Sekiz tür: röntgenci izler, teşhirci gösterir; mazoşist acıyı alır, sadist verir; pedofili, fetişizm, frotörizm, transvestik."
+   ],
+   "svg": "r08.svg",
+   "paragraf": 35,
+   "bitis": 36,
+   "kaynak": [
+    37,
+    38,
+    40
+   ]
+  }
+ ]
+}

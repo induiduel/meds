@@ -241,6 +241,27 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Psikiyatri /4)OKB.pdf', name: '4)OKB.pdf', pages: 23, fileId: '1Naxqd5sF5saLsUVpq6HvT6LME3Daq2MV' } as SourceFile],
   },
+  // 2026-11-09 6. parti (k2-22, k2-23, k2-24, k2-58): deste yok, PDF sanal desteyle bağlanır.
+  'k2p-k2-22-psikosomatik-bozukluklar': {
+    title: 'Psikosomatik Bozukluklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /7)Psikosomatik Hastalıklar.pdf', name: '7)Psikosomatik Hastalıklar.pdf', pages: 51, fileId: '1aHOgFatMfF77svtBsLRuZKMMXbEt5kk1' } as SourceFile],
+  },
+  'k2p-k2-23-cinsel-kimlik-bozukluklari': {
+    title: 'Cinsel Kimlik ve İşlev Bozuklukları',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /8)Cinsel Kimlik ve İşlev Bozuklukları.pdf', name: '8)Cinsel Kimlik ve İşlev Bozuklukları.pdf', pages: 44, fileId: '1gK3h7HLvGvuHNjBc6VmC6p_701rEl52X' } as SourceFile],
+  },
+  'k2p-k2-24-epilepsi': {
+    title: 'Epilepsi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/7)Epilepsi.pdf', name: '7)Epilepsi.pdf', pages: 51, fileId: '1hM273583cLORxhcCSW8ySEEH66tOkws_' } as SourceFile],
+  },
+  'k2p-k2-58-alkoller': {
+    title: 'Alkoller',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /4)Alkoller.pdf', name: '4)Alkoller.pdf', pages: 53, fileId: '1MZQ1Xlesc_NQbQJZFwYtKbDsf7d16_LQ' } as SourceFile],
+  },
   'k2p-k2-38-travma-ve-stres-baglantili-bozukluklar': {
     title: 'Travma ve Stres Bağlantılı Bozukluklar',
     decks: [],

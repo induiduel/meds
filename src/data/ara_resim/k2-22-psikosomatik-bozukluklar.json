@@ -1,0 +1,167 @@
+{
+ "key": "k2-22-psikosomatik-bozukluklar",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Beyin bir tahmin makinesidir: duyum nasıl belirtiye dönüşür?",
+   "aciklama": "Algı, bedenden gelen sinyal ile beynin beklentisinin birleşimidir; dikkat, felaket yorumu ve kaygı duyumu büyütüp döngüyü kapatır.",
+   "adimlar": [
+    "1. Beklenti (deneyim, inanç, korku, dikkat) yukarıdan gelir.",
+    "2. Sinyal (kalp atımı, ağrı, kas duyusu) aşağıdan gelir.",
+    "3. Algılanan belirti ikisinin en iyi tahminidir.",
+    "4. Duyum → dikkat → felaket yorumu → kaygı → duyum artar."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 4,
+   "bitis": 5,
+   "kaynak": [
+    6,
+    7
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Ayşe Hanım mı, Mert mi? Belirti var mı sorusu ayrımı belirler",
+   "aciklama": "Bedensel belirti bozukluğunda gerçek belirti ve ona verilen aşırı yanıt vardır; hastalık kaygısı bozukluğunda belirti yok ya da hafiftir, korku hastalığın kendisinedir.",
+   "adimlar": [
+    "1. Gerçek bedensel belirti var mı diye sor.",
+    "2. Varsa ve yanıt aşırıysa (B ölçütü, >6 ay) bedensel belirti bozukluğu.",
+    "3. Yoksa ya da çok hafifse ve korku hastalığa yönelikse hastalık kaygısı bozukluğu.",
+    "4. Tipik davranış: belirtiyle uğraş ve tetkik ↔ kontrol, araştırma ya da kaçınma."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 22,
+   "bitis": 22,
+   "kaynak": [
+    13,
+    22,
+    23,
+    24
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "İşlevsel belirti nasıl oluşur? Dikkat, beklenti ve faillik",
+   "aciklama": "Dikkat belirtiye yönelince otomatik hareket bozulur, güçlü olumsuz beklenti hareket programını baskılar ve faillik duygusu kaybolur; ortak zemin amigdala ile motor alanlar arasındaki artmış bağlantıdır.",
+   "adimlar": [
+    "1. Dikkat: otomatik hareket, dikkatle yapılınca bozulur.",
+    "2. Beklenti: “bu bacak tutmuyor” tahmini hareketi baskılar.",
+    "3. Faillik: hareket istemsiz yaşanır; sağ temporoparietal bileşkede düşük etkinlik.",
+    "4. Ortak zemin: amigdala–motor alan bağlantısı artmıştır."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 27,
+   "bitis": 27,
+   "kaynak": [
+    29
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "3P modeli: yatkınlaştırıcı, ortaya çıkarıcı ve sürdürücü etkenler",
+   "aciklama": "İşlevsel belirtinin öyküsü üç soruyla düzenlenir: kişiyi ne savunmasız kıldı, belirtiyi ne başlattı ve belirti neden geçmiyor.",
+   "adimlar": [
+    "1. Yatkınlaştırıcı: çocukluk travması ve ihmali, somatizasyon eğilimi, nörolojik hastalık.",
+    "2. Ortaya çıkarıcı: yaşam olayı, yaralanma ya da ameliyat, panik atağı, migren, bayılma.",
+    "3. Sürdürücü: belirtinin çatışmayı çözmesi, hasta rolü ve kaçınma, yinelenen tetkik.",
+    "4. Örnek: çocuklukta ihmal → trafik kazası → sağ kolda güçsüzlük → tetkik ve kullanmama."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 28,
+   "bitis": 28,
+   "kaynak": [
+    30
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Olumlu bulgu mantığı: istemli harekette bozuk, otomatik harekette normal",
+   "aciklama": "İşlevsel güçsüzlükte aynı kas dikkatle (istemli) zayıf, dikkat başka yöndeyken (otomatik) güçlüdür; bu iç tutarsızlık yapısal lezyonla açıklanamaz ve tanıyı koydurur.",
+   "adimlar": [
+    "1. İstemli denemede zayıf bacak az basar, açılamaz; titreme kendi ritmini sürdürür.",
+    "2. Dikkat sağlam bacağa ya da ritme çekilince zayıf bacak güçlü basar, açılır; titreme sağlam ele uyar ya da durur.",
+    "3. Tünel görme: alan uzaklıkla genişlemez (fizik kurallarına aykırı).",
+    "4. Organik felçte zayıflık her iki durumda sürer; güzel aldırmazlık güvenilir bulgu değildir."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 29,
+   "bitis": 29,
+   "kaynak": [
+    31,
+    32,
+    33,
+    34
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Uykudan çıkan nöbet mi, uyku görünümü mü? EEG zaman çizgisi",
+   "aciklama": "Epileptik nöbet gerçek uykunun içinden başlar ve EEG'de deşarj ile postiktal yavaşlama görülür; işlevsel nöbette hasta uyuyor gibi görünse de olayın iki yanında uyanık alfa ritmi vardır.",
+   "adimlar": [
+    "1. Epileptik: uyku dalgaları → iktal diken-dalga deşarjı → postiktal yavaşlama.",
+    "2. İşlevsel: alfa → yalnız hareket ve kas artefaktı → hemen alfa.",
+    "3. Gözler kapalı olmak uyku demek değildir; EEG uyanıklığı gösterir.",
+    "4. %22 çift tanı: tek bulgu tanı koydurmaz, video-EEG altın standart."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 35,
+   "bitis": 36,
+   "kaynak": [
+    36,
+    37
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Konversiyon: çatışmadan belirtiye, belirtiden kazanca",
+   "aciklama": "Bilinçdışı çatışmanın enerjisi bedensel belirtiye dönüşür; birincil kazanç içeride kaygıyı azaltır, ikincil kazanç dışarıdan ilgi ve destek getirir; güzel aldırmazlık tarihsel bir kavramdır.",
+   "adimlar": [
+    "1. Bilinçdışı çatışma, bastırılmış duygu ya da travmatik anı belirtinin kaynağıdır.",
+    "2. Psişik enerji biçim değiştirir: kaygı yerine felç, duyu kaybı gibi belirti çıkar.",
+    "3. Birincil kazanç: çatışma bilinç dışında kalır, kaygı azalır.",
+    "4. İkincil kazanç: destek, ilgi, sorumluluktan uzaklaşma; güzel aldırmazlık ve özdeşim yardımcı kavramlardır."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 37,
+   "bitis": 37,
+   "kaynak": [
+    3,
+    38
+   ]
+  },
+  {
+   "id": "r08",
+   "baslik": "Takotsubo: stresten kırık kalbe giden zincir",
+   "aciklama": "Yoğun duygusal ya da fiziksel stres ani katekolamin boşalımıyla kalp kasını sersemletir; apeks balon gibi şişer, tablo kalp krizini taklit eder ama koroner damarlar açıktır.",
+   "adimlar": [
+    "1. Tetik: duygusal stres (%28) ya da fiziksel stres (%36); %29'unda tetik yok.",
+    "2. Ani katekolamin (adrenalin) fırtınası kalp kasını sersemletir.",
+    "3. Apeks kasılamaz ve şişer, taban aşırı kasılır: ahtapot tuzağı çömleği biçimi.",
+    "4. Göğüs ağrısı, ST yükselmesi, troponin artışı; anjiyografide tıkanıklık yok; haftalarda düzelir, akut dönem ağır olabilir."
+   ],
+   "svg": "r08.svg",
+   "paragraf": 41,
+   "bitis": 41,
+   "kaynak": [
+    42
+   ]
+  },
+  {
+   "id": "r09",
+   "baslik": "Bilinçli mi, ne için? Üç tabloyu tek eksende ayırmak",
+   "aciklama": "Bedensel belirti ve işlevsel bozuklukta belirti istemsizdir; yapay bozuklukta bilinçli üretilir ama amaç hasta rolüdür; temaruzda hem üretim hem amaç bilinçlidir ve dış kazanç vardır.",
+   "adimlar": [
+    "1. Belirti bilinçli mi üretiliyor? Hayır → bedensel belirti ya da işlevsel bozukluk.",
+    "2. Evet ise dış kazanç var mı? Hayır → yapay bozukluk (hasta rolü).",
+    "3. Evet → temaruz: para, rapor, cezadan kaçış; ruhsal bozukluk sayılmaz.",
+    "4. Yapay bozukluğun başkasına yüklenen tipi (vekaleten Münchausen) aynı zamanda çocuk istismarıdır."
+   ],
+   "svg": "r09.svg",
+   "paragraf": 46,
+   "bitis": 46,
+   "kaynak": [
+    47
+   ]
+  }
+ ]
+}

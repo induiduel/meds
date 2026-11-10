@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Takotsubo: stresten kırık kalbe giden zincir</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Ruh–beden bağlantısının canlı örneği · slayt 42</text>
+<rect x="110" y="100" width="290" height="92" rx="14" fill="#ffffff" stroke="#6d28d9" stroke-width="2.5"/>
+<text x="255" y="128" font-size="17" fill="#6d28d9" text-anchor="middle" font-weight="bold">Yoğun stres</text>
+<text x="255" y="152" font-size="14" fill="#1e293b" text-anchor="middle">yas, korku, öfke (%28)</text>
+<text x="255" y="172" font-size="14" fill="#1e293b" text-anchor="middle">ameliyat, ağır hastalık (%36)</text>
+<rect x="420" y="100" width="290" height="92" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="2.5"/>
+<text x="565" y="128" font-size="17" fill="#ea580c" text-anchor="middle" font-weight="bold">Katekolamin fırtınası</text>
+<text x="565" y="152" font-size="14" fill="#1e293b" text-anchor="middle">ani adrenalin boşalımı</text>
+<text x="565" y="172" font-size="14" fill="#1e293b" text-anchor="middle">kalp kasını “sersemletir”</text>
+<rect x="730" y="100" width="290" height="92" rx="14" fill="#ffffff" stroke="#b91c1c" stroke-width="2.5"/>
+<text x="875" y="128" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">Apikal balonlaşma</text>
+<text x="875" y="152" font-size="14" fill="#1e293b" text-anchor="middle">apeks kasılamaz, şişer</text>
+<text x="875" y="172" font-size="14" fill="#1e293b" text-anchor="middle">taban aşırı kasılır</text>
+<path d="M400 146 C410 140 412 150 420 146" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<path d="M710 146 C720 140 722 150 730 146" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="1100" y="128" font-size="22" fill="#64748b" text-anchor="middle" font-weight="bold">%29</text>
+<text x="1100" y="150" font-size="14" fill="#64748b" text-anchor="middle">belirgin tetik yok</text>
+<circle cx="560" cy="215" r="6" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="590" cy="232" r="6" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="620" cy="212" r="6" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="650" cy="236" r="6" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="680" cy="218" r="6" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+<text x="620" y="262" font-size="14" fill="#ea580c" text-anchor="middle">adrenalin</text>
+<rect x="30" y="280" width="560" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="312" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · Sol ventrikül: normal ↔ Takotsubo</text>
+<path d="M160 345 C125 363 118 425 140 475 C158 510 202 510 220 475 C242 425 235 363 200 345 C185 338 175 338 160 345 Z" stroke="#0f766e" stroke-width="3" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="160" y="568" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="bold">Normal: düzgün oval</text>
+<path d="M400 340 C385 345 380 372 392 385 C352 398 335 450 358 490 C382 525 448 525 472 490 C495 450 478 398 440 385 C452 372 447 345 432 340 C422 335 410 335 400 340 Z" stroke="#ea580c" stroke-width="3" fill="#ffedd5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="392" y1="385" x2="375" y2="325" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="392" cy="385" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="369" y="330" font-size="14" fill="#b91c1c" text-anchor="end">taban aşırı kasılır</text>
+<line x1="462" y1="495" x2="560" y2="540" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="462" cy="495" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="554" y="545" font-size="14" fill="#b91c1c" text-anchor="end">apeks balon gibi şişer</text>
+<text x="445" y="568" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">Takotsubo: ahtapot çömleği biçimi</text>
+<path d="M240 430 C280 410 320 410 360 430" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<rect x="620" y="280" width="550" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="312" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">B · Kalp krizini taklit eder</text>
+<path d="M640 420 L690 420 C700 420 705 408 712 420 L730 420 L742 395 L752 445 L760 405 C768 400 790 400 800 410 C820 395 840 395 860 415 L900 420 L950 420 C960 420 965 408 972 420 L990 420 L1002 395 L1012 445 L1020 405 C1028 400 1050 400 1060 410 C1080 395 1100 395 1120 415 L1150 420" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="830" y1="398" x2="870" y2="365" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="830" cy="398" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="876" y="370" font-size="14" fill="#b91c1c" text-anchor="start">ST yükselmesi</text>
+<text x="640" y="470" font-size="15" fill="#1e293b" text-anchor="start">• ani göğüs ağrısı, nefes darlığı</text>
+<text x="640" y="494" font-size="15" fill="#1e293b" text-anchor="start">• EKG'de ST yükselmesi, troponin artışı</text>
+<text x="640" y="518" font-size="15" fill="#1e293b" text-anchor="start">• koroner anjiyografi: tıkanıklık YOK</text>
+<text x="640" y="555" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">Kimde? %90 kadın, menopoz sonrası, ortalama yaş 67</text>
+<rect x="30" y="600" width="1140" height="118" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="632" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Seyir ve anlam</text>
+<path d="M60 700 C200 665 400 665 560 672" stroke="#15803d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)"/>
+<text x="310" y="654" font-size="15" fill="#15803d" text-anchor="middle" font-weight="bold">haftalar içinde çoğunlukla düzelir</text>
+<path d="M600 668 C680 700 780 700 850 690" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)" stroke-dasharray="6 4"/>
+<text x="725" y="711" font-size="14" fill="#b91c1c" text-anchor="middle">akut dönem ağır olabilir: hastane içi şok ve ölüm kalp krizine benzer</text>
+<text x="880" y="640" font-size="14" fill="#1e293b" text-anchor="start">Diğer tıbbi durumları etkileyen</text>
+<text x="880" y="658" font-size="14" fill="#1e293b" text-anchor="start">psikolojik etkenlerin canlı örneği:</text>
+<text x="880" y="676" font-size="14" fill="#1e293b" text-anchor="start">hastalık gerçek, tetik ruhsal olabilir.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 42 (Templin ve ark., N Engl J Med 2015; Uluslararası Takotsubo Kaydı, 1750 hasta)</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Febril nöbet: beş ölçüt basit ile komplikeyi ayırır, risk merdiven gibi yükselir</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Duruma bağlı nöbetler · slayt 21–23</text>
+<rect x="30" y="95" width="640" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Basit ↔ komplike febril nöbet (5 ölçüt)</text>
+<rect x="60" y="150" width="22" height="170" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+<rect x="66" y="220" width="10" height="98" rx="5" fill="#ea580c"/>
+<path d="M50 338 C50 318 92 318 92 338 C92 358 50 358 50 338 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M71 365 C71 385 95 395 110 410" stroke="#ea580c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<text x="71" y="440" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">ateş</text>
+<text x="40" y="462" font-size="13" fill="#475569" text-anchor="start">6 ay – 5 yaş</text>
+<text x="40" y="477" font-size="13" fill="#475569" text-anchor="start">çocukların %2-5'i</text>
+<text x="40" y="492" font-size="13" fill="#475569" text-anchor="start">ateş nöbet sonrası</text>
+<text x="40" y="507" font-size="13" fill="#475569" text-anchor="start">erken dönemde mutlaka</text>
+<text x="330" y="148" font-size="15" fill="#15803d" text-anchor="middle" font-weight="bold">BASİT</text>
+<text x="530" y="148" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">KOMPLİKE</text>
+<line x1="160" y1="193" x2="650" y2="193" stroke="#e2e8f0" stroke-width="1"/>
+<text x="165" y="183" font-size="13.5" fill="#0f172a" text-anchor="start" font-weight="bold">Süre</text>
+<circle cx="320" cy="178" r="6" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="335" y="183" font-size="13.5" fill="#15803d" text-anchor="start">&lt; 15 dk</text>
+<circle cx="455" cy="178" r="6" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="470" y="183" font-size="13.5" fill="#b91c1c" text-anchor="start">&gt; 15 dk olabilir</text>
+<line x1="160" y1="233" x2="650" y2="233" stroke="#e2e8f0" stroke-width="1"/>
+<text x="165" y="223" font-size="13.5" fill="#0f172a" text-anchor="start" font-weight="bold">Nöbet tipi</text>
+<circle cx="320" cy="218" r="6" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="335" y="223" font-size="13.5" fill="#15803d" text-anchor="start">jeneralize</text>
+<circle cx="455" cy="218" r="6" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="470" y="223" font-size="13.5" fill="#b91c1c" text-anchor="start">fokal ya da jeneralize</text>
+<line x1="160" y1="273" x2="650" y2="273" stroke="#e2e8f0" stroke-width="1"/>
+<text x="165" y="263" font-size="13.5" fill="#0f172a" text-anchor="start" font-weight="bold">24 saatte tekrar</text>
+<circle cx="320" cy="258" r="6" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="335" y="263" font-size="13.5" fill="#15803d" text-anchor="start">hayır</text>
+<circle cx="455" cy="258" r="6" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="470" y="263" font-size="13.5" fill="#b91c1c" text-anchor="start">olabilir</text>
+<line x1="160" y1="313" x2="650" y2="313" stroke="#e2e8f0" stroke-width="1"/>
+<text x="165" y="303" font-size="13.5" fill="#0f172a" text-anchor="start" font-weight="bold">Fokal defisit</text>
+<circle cx="320" cy="298" r="6" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="335" y="303" font-size="13.5" fill="#15803d" text-anchor="start">yok</text>
+<circle cx="455" cy="298" r="6" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="470" y="303" font-size="13.5" fill="#b91c1c" text-anchor="start">olabilir</text>
+<line x1="160" y1="353" x2="650" y2="353" stroke="#e2e8f0" stroke-width="1"/>
+<text x="165" y="343" font-size="13.5" fill="#0f172a" text-anchor="start" font-weight="bold">Todd parezisi</text>
+<circle cx="320" cy="338" r="6" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="335" y="343" font-size="13.5" fill="#15803d" text-anchor="start">yok</text>
+<circle cx="455" cy="338" r="6" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="470" y="343" font-size="13.5" fill="#b91c1c" text-anchor="start">olabilir</text>
+<rect x="160" y="400" width="490" height="34" rx="8" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="405" y="422" font-size="13.5" fill="#b91c1c" text-anchor="middle" font-weight="bold">Komplike özelliklerden EN AZ BİRİ varsa nöbet komplikedir</text>
+<text x="200" y="458" font-size="13" fill="#1e293b" text-anchor="start">Basit febril nöbette sürekli antiepileptik önerilmez;</text>
+<text x="200" y="474" font-size="13" fill="#1e293b" text-anchor="start">rektal ya da oral diazepam profilaksisi yapılabilir.</text>
+<text x="200" y="490" font-size="13" fill="#1e293b" text-anchor="start">Komplike nöbette akut nörolojik sendrom ya da Dravet sendromu araştırılır.</text>
+<rect x="700" y="95" width="470" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="720" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Epilepsiye giden risk merdiveni</text>
+<rect x="720" y="430" width="96" height="40" rx="6" fill="#15803d" opacity="0.85"/>
+<text x="768" y="420" font-size="16" fill="#15803d" text-anchor="middle" font-weight="bold">%0,5</text>
+<text x="768" y="488" font-size="13" fill="#0f172a" text-anchor="middle">toplum</text>
+<rect x="828" y="400" width="96" height="70" rx="6" fill="#ea580c" opacity="0.85"/>
+<text x="876" y="390" font-size="16" fill="#ea580c" text-anchor="middle" font-weight="bold">%1-1,5</text>
+<text x="876" y="488" font-size="13" fill="#0f172a" text-anchor="middle">febril nöbet</text>
+<rect x="936" y="340" width="96" height="130" rx="6" fill="#b91c1c" opacity="0.85"/>
+<text x="984" y="330" font-size="16" fill="#b91c1c" text-anchor="middle" font-weight="bold">%4-15</text>
+<text x="984" y="488" font-size="13" fill="#0f172a" text-anchor="middle">komplike</text>
+<rect x="1044" y="240" width="96" height="230" rx="6" fill="#b91c1c" opacity="0.85"/>
+<text x="1092" y="230" font-size="16" fill="#b91c1c" text-anchor="middle" font-weight="bold">%49</text>
+<text x="1092" y="488" font-size="13" fill="#0f172a" text-anchor="middle">3 özellik birden</text>
+<path d="M780 410 C840 340 960 290 1130 225" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)" stroke-dasharray="5 4"/>
+<text x="940" y="160" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">epilepsi gelişme riski</text>
+<text x="720" y="185" font-size="13" fill="#475569" text-anchor="start">Febril nöbetin tekrar riski %30-40; artıranlar:</text>
+<text x="720" y="201" font-size="13" fill="#475569" text-anchor="start">&lt; 15 ay başlangıç, aile öyküsü, sık ateşli</text>
+<text x="720" y="217" font-size="13" fill="#475569" text-anchor="start">hastalık, düşük ateşte nöbet.</text>
+<text x="1140" y="500" font-size="12.5" fill="#b91c1c" text-anchor="end" font-style="italic">uzun + tekrarlayan + fokal</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 21 (tanım, ölçütler), 22 (tablo), 23 (riskler ve tedavi) · yeşil = basit / düşük risk, kırmızı = komplike / yüksek risk, turuncu = ateş</text>
+</svg>

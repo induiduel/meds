@@ -24,6 +24,12 @@ KACAMAK = (
     r'\byalnız(?:ca)?\s+ad(?:ı|ını|larını)\s+(?:verir|sayar|geçer)',
     r'\b(?:slayt|şekil|çizim|resim|fotoğraf|görsel)(?:ta|te|da|de)?\b[^.]{0,40}\b(?:ayrıntı|yorum)[^.]{0,20}\b(?:yok|verilmez|yer\s+almaz)',
 )
+# Bağlamsız gönderme (H434, 2026-10-28): yeni paragraf/parça "bu hastalıkta" gibi adsız göndermeyle açılamaz;
+# derste birden çok hastalık/kavram var, öğrenci hangisinin kastedildiğini karıştırır. Konu adı açıkça söylenir.
+BAGLAMSIZ = (
+    r'^(?:bu|şu|söz\s+konusu|ilgili|yukarıdaki|aynı)\s+(?:\w+\s+)?(?:hastalık|hastalığ|hasta|olgu|tümör|tümörü|sendrom|tablo|durum|bozukluk|enfeksiyon|lezyon|ilaç|grup|tip|form|mekanizma|süreç|bulgu|kavram)\w*',
+    r'^(?:bu\s+hastalarda|bunda|bunlarda|burada|bu\s+durumda|bu\s+tabloda)\b',
+)
 SEKIL_RE = r'\b(çizim|şekil|resim|fotoğraf|görsel|panel)'
 BETIM_RE = r'(gösterilir|görülür|yer alır|gösterir)[.!?]?$'
 
@@ -49,6 +55,7 @@ def denetle(p: Path):
         if l.startswith(('# ', '@@ ')) or not l.strip():
             continue
         if YAZIM:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
             import modul_okunus
             l = modul_okunus.donustur(l)
         if re.search(r'[*#|>\[\]{}=_`~]', l): hatalar.append(f'{i}: markdown/simge: {l[:70]}')
@@ -81,6 +88,8 @@ def denetle(p: Path):
         n = len(x.split())
         if n > 200: uyarilar.append(f'uzun paragraf ({n} kelime): {x[:50]}…')
         cs = [c for c in re.split(r'(?<=[.!?])\s+', x.strip()) if c.strip()]
+        if cs and not x.lstrip().startswith('#') and any(re.search(k, cs[0].strip().lower()) for k in BAGLAMSIZ):
+            hatalar.append(f'bağlamsız gönderme (H434 — paragraf konu adıyla açılmalı): "{cs[0][:60]}"')
         if n < 45 and re.search(SEKIL_RE, x, re.I) and cs and all(re.search(BETIM_RE, c.strip()) for c in cs):
             uyarilar.append(f'şekil yalnız betimlenmiş (H127 — ne sınar, sonuçlar, paneller): {x[:70]}…')
     onemli = len(re.findall(r'[Bb]urası önemli', text))

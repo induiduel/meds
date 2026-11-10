@@ -27,6 +27,7 @@
  "ADH": {
   "category": "kisaltma",
   "decks": [
+   "k2-58-alkoller",
    "y25-k2-58-alkoller"
   ],
   "definition": "Alkol dehidrogenaz",
@@ -41,6 +42,9 @@
   "term": "ADH1B"
  },
  "ADHD": {
+  "baska": [
+   "Dikkat eksikliği hiperaktivite bozukluğu; bipolar bozuklukta ek tanılı durumlar arasında sayılır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-19-bipolar-bozukluk"
@@ -51,6 +55,7 @@
  "AEİ": {
   "category": "kisaltma",
   "decks": [
+   "k2-24-epilepsi",
    "y25-k2-24-epilepsi"
   ],
   "definition": "Antiepileptik ilaç",
@@ -90,6 +95,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-22-psikosomatik-bozukluklar",
    "y25-k2-14-beyin-tumorleri",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -100,8 +106,12 @@
   "term": "AIDS"
  },
  "ALDH": {
+  "baska": [
+   "Aldehid dehidrogenaz"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-58-alkoller",
    "y25-k2-58-alkoller"
   ],
   "definition": "Aldehit dehidrogenaz",
@@ -137,6 +147,7 @@
    "k2-06-agri-yollari-ve-mekanizmalari",
    "k2-07-genel-anestezik-ilaclar",
    "k2-09-sss-ilaclari",
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-25-antiepileptik-ilaclar"
@@ -295,6 +306,14 @@
   "definition": "Arteriyovenöz malformasyon",
   "term": "AVM"
  },
+ "B1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "B1 vitamini (tiamin)",
+  "term": "B1"
+ },
  "B12": {
   "baska": [
    "B12 vitamini; eksikliği psikotik belirtilere yol açabildiği için ayırıcı tanıda düşünülür."
@@ -334,8 +353,12 @@
   "term": "BD"
  },
  "BDNF": {
+  "baska": [
+   "Beyin kaynaklı nörotrofik faktör; EKT ile artışı biyokimyasal hipotezler arasındadır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-30-norodejeneratif-hastaliklar",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
@@ -383,6 +406,9 @@
   "term": "BIS"
  },
  "BK": {
+  "baska": [
+   "Biyokimya; EKT öncesi rutin kan biyokimyası tetkikleri istenir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
@@ -458,6 +484,7 @@
    "k2-04-serebrovaskuler-hastaliklar-ve-inme",
    "k2-12-kafa-ve-omurilik-yaralanmalari",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-24-epilepsi",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-14-beyin-tumorleri",
@@ -567,6 +594,14 @@
   ],
   "definition": "Kalsitonin geniyle ilişkili peptit",
   "term": "CGRP"
+ },
+ "CHD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "Coronary heart disease (koroner kalp hastalığı)",
+  "term": "CHD"
  },
  "CHRNA4": {
   "category": "kisaltma",
@@ -711,6 +746,7 @@
  "CSWS": {
   "category": "kisaltma",
   "decks": [
+   "k2-24-epilepsi",
    "y25-k2-24-epilepsi"
   ],
   "definition": "Uykuda devamlı diken ve dalga",
@@ -768,6 +804,7 @@
  "CYP3A4": {
   "category": "kisaltma",
   "decks": [
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
    "y25-k2-21-sedatif-ve-hipnotik-ilaclar",
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
@@ -797,14 +834,19 @@
   "decks": [
    "k2-15-sizofrenik-bozukluklar",
    "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem",
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
    "y25-k2-46-sempatomimetikler"
   ],
   "definition": "Dopamin D2 reseptörü",
   "term": "D2"
  },
  "DBS": {
+  "baska": [
+   "Derin beyin uyarımı; FDA tarafından dirençli OKB tedavisinde onaylanmıştır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-25-antiepileptik-ilaclar"
   ],
@@ -820,6 +862,9 @@
   "term": "DCX"
  },
  "DD": {
+  "baska": [
+   "Duygudurum; DD bozuklukları duygusal ve bilişsel işlevlerden sorumlu nöronların işlev bozukluğu olarak görülür."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-19-bipolar-bozukluk"
@@ -913,6 +958,7 @@
   "decks": [
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-58-alkoller",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-14-beyin-tumorleri",
    "y25-k2-30-norodejeneratif-hastaliklar",
@@ -925,6 +971,7 @@
  "DNET": {
   "category": "kisaltma",
   "decks": [
+   "k2-24-epilepsi",
    "y25-k2-24-epilepsi"
   ],
   "definition": "Disembriyoplastik nöroepitelyal tümör",
@@ -974,6 +1021,9 @@
   "category": "kisaltma",
   "decks": [
    "k2-06-agri-yollari-ve-mekanizmalari",
+   "k2-22-psikosomatik-bozukluklar",
+   "k2-23-cinsel-kimlik-bozukluklari",
+   "k2-37-okb-ve-iliskili-bozukluklar",
    "y25-k2-22-psikosomatik-bozukluklar",
    "y25-k2-23-cinsel-kimlik-bozukluklari",
    "y25-k2-34-unipolar-depresyon",
@@ -993,6 +1043,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-15-sizofrenik-bozukluklar",
+   "k2-23-cinsel-kimlik-bozukluklari",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-45-intihar-ve-kendine-zarar-verme"
   ],
@@ -1046,6 +1097,14 @@
   "definition": "Dizigot ikiz",
   "term": "DZ"
  },
+ "EAH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-24-epilepsi"
+  ],
+  "definition": "Eğitim ve Araştırma Hastanesi",
+  "term": "EAH"
+ },
  "EBV": {
   "category": "kisaltma",
   "decks": [
@@ -1087,6 +1146,9 @@
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
    "k2-07-genel-anestezik-ilaclar",
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
+   "k2-22-psikosomatik-bozukluklar",
+   "k2-24-epilepsi",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-20-psikiyatrik-tedaviler",
@@ -1124,6 +1186,7 @@
   "decks": [
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "k2-07-genel-anestezik-ilaclar",
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
@@ -1162,6 +1225,9 @@
   "term": "EP"
  },
  "EPS": {
+  "baska": [
+   "Ekstrapiramidal sistem; antipsikotiklere bağlı EPS belirtileri şizofrenide EKT endikasyonudur."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
@@ -1194,8 +1260,15 @@
   "term": "FA1"
  },
  "FDA": {
+  "baska": [
+   "ABD Gıda ve İlaç Dairesi; tedavi yöntemlerine kullanım izni veren kurumdur.",
+   "Amerikan Gıda ve İlaç Dairesi (Food and Drug Administration)"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
+   "k2-58-alkoller",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-21-sedatif-ve-hipnotik-ilaclar",
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
@@ -1266,6 +1339,14 @@
   "definition": "Sıvı atenüasyonlu inversion recovery sekansı",
   "term": "FLAIR"
  },
+ "FN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-24-epilepsi"
+  ],
+  "definition": "Febril nöbet",
+  "term": "FN"
+ },
  "FND": {
   "category": "kisaltma",
   "decks": [
@@ -1324,6 +1405,8 @@
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
    "k2-09-sss-ilaclari",
    "k2-15-sizofrenik-bozukluklar",
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
+   "k2-58-alkoller",
    "y25-k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
@@ -1347,6 +1430,8 @@
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
    "k2-09-sss-ilaclari",
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
+   "k2-58-alkoller",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-21-sedatif-ve-hipnotik-ilaclar",
@@ -1375,6 +1460,14 @@
   ],
   "definition": "GABA A alfa 6 alt birimi geni",
   "term": "GABRA6"
+ },
+ "GAD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-21-sedatif-ve-hipnotik-ilaclar"
+  ],
+  "definition": "Yaygın anksiyete bozukluğu (generalized anxiety disorder)",
+  "term": "GAD"
  },
  "GBM": {
   "baska": [
@@ -1451,6 +1544,9 @@
   "term": "GTBA"
  },
  "GTD": {
+  "baska": [
+   "Genel tıbbi durum; antidepresan kullanamayan, genel tıbbi durumu olan hastalarda EKT seçilebilir."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
@@ -1494,8 +1590,12 @@
   "term": "HD"
  },
  "HDL": {
+  "baska": [
+   "High-density lipoprotein (yüksek-dansiteli lipoprotein)"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-58-alkoller",
    "y25-k2-47-adrenoseptor-antagonist-ilaclar",
    "y25-k2-58-alkoller"
   ],
@@ -1516,6 +1616,7 @@
   "decks": [
    "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
    "k2-17-periferik-noropati",
+   "k2-22-psikosomatik-bozukluklar",
    "y25-k2-17-periferik-noropati",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -1562,6 +1663,9 @@
   "term": "HOXD"
  },
  "HPA": {
+  "baska": [
+   "Hipotalamus-hipofiz-adrenal aks; EKT'nin nöroendokrin etkisi bu aksın uyarılmasıyla açıklanır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
@@ -1594,6 +1698,14 @@
   ],
   "definition": "Hipertansiyon",
   "term": "HT"
+ },
+ "HT3": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "5-HT3: 5-hidroksitriptamin (serotonin) tip 3 reseptörü",
+  "term": "HT3"
  },
  "HTLV": {
   "category": "kisaltma",
@@ -1809,6 +1921,14 @@
   "definition": "Kronik inflamatuar demiyelinizan polinöropati",
   "term": "KIDP"
  },
+ "KKH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "Koroner kalp hastalığı",
+  "term": "KKH"
+ },
  "KKK": {
   "category": "kisaltma",
   "decks": [
@@ -1979,6 +2099,7 @@
  "LKS": {
   "category": "kisaltma",
   "decks": [
+   "k2-24-epilepsi",
    "y25-k2-24-epilepsi"
   ],
   "definition": "Landau-Kleffner sendromu",
@@ -2096,6 +2217,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "k2-38-travma-ve-stres-baglantili-bozukluklar",
    "y25-k2-38-travma-ve-stres-baglantili-bozukluklar",
    "y25-k2-46-sempatomimetikler",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
@@ -2123,7 +2245,8 @@
  "MD": {
   "category": "kisaltma",
   "decks": [
-   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
   ],
   "definition": "Müsküler distrofi",
   "term": "MD"
@@ -2138,8 +2261,12 @@
   "term": "MDB"
  },
  "MEOS": {
+  "baska": [
+   "Mikrozomal etanol-oksidleyici sistem"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-58-alkoller",
    "y25-k2-58-alkoller"
   ],
   "definition": "Mikrozomal etanol oksitleyici sistem",
@@ -2203,6 +2330,7 @@
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "k2-10-bas-agrisina-yaklasim",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-22-psikosomatik-bozukluklar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-10-bas-agrisina-yaklasim",
@@ -2230,11 +2358,14 @@
  },
  "MRG": {
   "baska": [
-   "Manyetik rezonans görüntüleme; diffüz aksonal hasarı ve izodens subdural hematomu BT'den iyi gösterir."
+   "Manyetik rezonans görüntüleme; diffüz aksonal hasarı ve izodens subdural hematomu BT'den iyi gösterir.",
+   "Manyetik rezonans görüntüleme; EKT öncesi BT yerine istenebilir."
   ],
   "category": "kisaltma",
   "decks": [
    "k2-12-kafa-ve-omurilik-yaralanmalari",
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
+   "k2-24-epilepsi",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-24-epilepsi"
@@ -2260,6 +2391,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
+   "k2-22-psikosomatik-bozukluklar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -2285,6 +2417,8 @@
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "k2-09-sss-ilaclari",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
+   "k2-58-alkoller",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-14-beyin-tumorleri",
@@ -2315,6 +2449,30 @@
   ],
   "definition": "Monozigot ikiz",
   "term": "MZ"
+ },
+ "NAD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "Nikotinamid adenin dinükleotid",
+  "term": "NAD"
+ },
+ "NADH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "Nikotinamid adenin dinükleotidin indirgenmiş (hidrojen almış) biçimi",
+  "term": "NADH"
+ },
+ "NADPH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "Nikotinamid adenin dinükleotid fosfatın indirgenmiş biçimi",
+  "term": "NADPH"
  },
  "NARP": {
   "category": "kisaltma",
@@ -2366,6 +2524,14 @@
   "definition": "Amonyak",
   "term": "NH3"
  },
+ "NHS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-23-cinsel-kimlik-bozukluklari"
+  ],
+  "definition": "National Health Service (Birleşik Krallık Ulusal Sağlık Hizmeti)",
+  "term": "NHS"
+ },
  "NMDA": {
   "category": "kisaltma",
   "decks": [
@@ -2373,6 +2539,7 @@
    "k2-07-genel-anestezik-ilaclar",
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
    "k2-09-sss-ilaclari",
+   "k2-58-alkoller",
    "y25-k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
@@ -2394,6 +2561,9 @@
   "term": "NMO"
  },
  "NMS": {
+  "baska": [
+   "Nöroleptik malign sendrom; antipsikotiklere bağlı ağır tablo, EKT'nin diğer endikasyonları arasındadır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
@@ -2402,6 +2572,9 @@
   "term": "NMS"
  },
  "NREM": {
+  "baska": [
+   "Hızlı göz hareketi olmayan uyku (non-rapid eye movement)"
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-21-sedatif-ve-hipnotik-ilaclar"
@@ -2445,8 +2618,16 @@
   "term": "OD"
  },
  "OKB": {
+  "baska": [
+   "Obsesif kompulsif bozukluk; EKT'nin diğer endikasyonları arasında sayılır.",
+   "Obsesif kompulsif bozukluk; obsesyon ve kompulsiyonlarla karakterli, işlevselliği bozan ruhsal bozukluktur.",
+   "Obsesif kompulsif bozukluk; bu hastalarda trikotilomani görülme oranı %9'dur."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
+   "k2-22-psikosomatik-bozukluklar",
+   "k2-37-okb-ve-iliskili-bozukluklar",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-37-okb-ve-iliskili-bozukluklar",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
@@ -2497,6 +2678,22 @@
   "definition": "Orthodenticle homeobox geni (OTX1, OTX2)",
   "term": "OTX"
  },
+ "OX1R": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-21-sedatif-ve-hipnotik-ilaclar"
+  ],
+  "definition": "Oreksin-1 reseptörü",
+  "term": "OX1R"
+ },
+ "OX2R": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-21-sedatif-ve-hipnotik-ilaclar"
+  ],
+  "definition": "Oreksin-2 reseptörü",
+  "term": "OX2R"
+ },
  "Oİ": {
   "category": "kisaltma",
   "decks": [
@@ -2509,6 +2706,8 @@
  "P450": {
   "category": "kisaltma",
   "decks": [
+   "k2-21-sedatif-ve-hipnotik-ilaclar",
+   "k2-58-alkoller",
    "y25-k2-21-sedatif-ve-hipnotik-ilaclar",
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
@@ -2516,6 +2715,14 @@
   ],
   "definition": "Sitokrom P450 enzim ailesi",
   "term": "P450"
+ },
+ "PANDAS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-37-okb-ve-iliskili-bozukluklar"
+  ],
+  "definition": "Çocuklarda streptokok enfeksiyonlarının yol açtığı bağışıklık tepkisine bağlı tablodur; OKB ayırıcı tanısında yer alır.",
+  "term": "PANDAS"
  },
  "PARK2": {
   "category": "kisaltma",
@@ -2577,8 +2784,12 @@
   "term": "PFK"
  },
  "PH": {
+  "baska": [
+   "Parkinson hastalığı; TMS bu hastalıkta orta düzeyde etkili bildirilir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "y25-k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -2703,6 +2914,14 @@
   ],
   "definition": "QT aralığı",
   "term": "QT"
+ },
+ "REM": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-21-sedatif-ve-hipnotik-ilaclar"
+  ],
+  "definition": "Hızlı göz hareketi uykusu (rapid eye movement)",
+  "term": "REM"
  },
  "RFLP": {
   "category": "kisaltma",
@@ -3005,6 +3224,9 @@
   "term": "SNP"
  },
  "SNRI": {
+  "baska": [
+   "Serotonin noradrenalin geri alım inhibitörü; OKB farmakoterapisinde sayılan ilaç gruplarındandır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-37-okb-ve-iliskili-bozukluklar"
@@ -3046,8 +3268,14 @@
   "term": "SRY"
  },
  "SSGİ": {
+  "baska": [
+   "Seçici serotonin geri alım inhibitörü; fluoksetin, sertralin gibi ilaçlar bu gruptadır ve OKB'de ilk seçenektir.",
+   "Seçici serotonin geri alım inhibitörü; OKB'de olağan antidepresan dozlarından yüksek dozda kullanılır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-37-okb-ve-iliskili-bozukluklar",
+   "k2-38-travma-ve-stres-baglantili-bozukluklar",
    "y25-k2-37-okb-ve-iliskili-bozukluklar",
    "y25-k2-38-travma-ve-stres-baglantili-bozukluklar"
   ],
@@ -3055,9 +3283,13 @@
   "term": "SSGİ"
  },
  "SSRI": {
+  "baska": [
+   "Seçici serotonin geri alım inhibitörü; SSGİ'nin İngilizce kısaltmasıdır, trikotilomani tedavisinde kullanılır."
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-37-okb-ve-iliskili-bozukluklar"
+   "k2-37-okb-ve-iliskili-bozukluklar",
+   "k2-58-alkoller"
   ],
   "definition": "Seçici serotonin geri alım inhibitörü",
   "term": "SSRI"
@@ -3176,6 +3408,22 @@
   ],
   "definition": "T2 ağırlıklı MR kesiti; sıvı ve ödem bu kesitte parlak görünür, düşük dereceli astrositom hiperintenstir.",
   "term": "T2A"
+ },
+ "T3": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
+  ],
+  "definition": "Triiyodotironin; tiroit hormonudur, uyku yoksunluğuyla artar.",
+  "term": "T3"
+ },
+ "T4": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
+  ],
+  "definition": "Tiroksin; tiroit hormonudur, uyku yoksunluğuyla artar.",
+  "term": "T4"
  },
  "TARDBP": {
   "category": "kisaltma",
@@ -3302,8 +3550,14 @@
   "term": "TMN"
  },
  "TMS": {
+  "baska": [
+   "Transkraniyal manyetik uyarım; bipolar bozuklukta biyolojik tedaviler arasında sayılır.",
+   "Transkraniyal manyetik stimülasyon; kafa derisinden manyetik uyaranla depolarizasyon oluşturan non-invaziv yöntemdir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-19-bipolar-bozukluk",
+   "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "y25-k2-19-bipolar-bozukluk",
    "y25-k2-20-psikiyatrik-tedaviler"
   ],
@@ -3349,6 +3603,9 @@
   "term": "TS"
  },
  "TSA": {
+  "baska": [
+   "Trisiklik antidepresan; EKT ile birlikte kardiyak riski artırır."
+  ],
   "category": "kisaltma",
   "decks": [
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler"
@@ -3400,6 +3657,7 @@
  "TSSB": {
   "category": "kisaltma",
   "decks": [
+   "k2-38-travma-ve-stres-baglantili-bozukluklar",
    "y25-k2-38-travma-ve-stres-baglantili-bozukluklar"
   ],
   "definition": "Travma sonrası stres bozukluğu",
@@ -3483,6 +3741,14 @@
   "definition": "Değişken sayıda ardışık tekrar",
   "term": "VNTR"
  },
+ "VPA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-24-epilepsi"
+  ],
+  "definition": "Valproat",
+  "term": "VPA"
+ },
  "VPL": {
   "category": "kisaltma",
   "decks": [
@@ -3515,6 +3781,14 @@
   "definition": "Dünya Aile Hekimleri Birliği",
   "term": "WONCA"
  },
+ "WPATH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-23-cinsel-kimlik-bozukluklari"
+  ],
+  "definition": "World Professional Association for Transgender Health (Dünya Trans Sağlığı Birliği)",
+  "term": "WPATH"
+ },
  "WTI": {
   "category": "kisaltma",
   "decks": [
@@ -3526,10 +3800,19 @@
  "XXY": {
   "category": "kisaltma",
   "decks": [
+   "k2-24-epilepsi",
    "y25-k2-24-epilepsi"
   ],
   "definition": "Klinefelter sendromu",
   "term": "XXY"
+ },
+ "YDL": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-58-alkoller"
+  ],
+  "definition": "Yüksek-dansiteli lipoprotein",
+  "term": "YDL"
  },
  "YKL": {
   "category": "kisaltma",
@@ -3572,6 +3855,14 @@
   ],
   "definition": "Özgül öğrenme bozukluğu",
   "term": "ÖÖB"
+ },
+ "İM": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-21-sedatif-ve-hipnotik-ilaclar"
+  ],
+  "definition": "İntramüsküler",
+  "term": "İM"
  },
  "İPA": {
   "category": "kisaltma",

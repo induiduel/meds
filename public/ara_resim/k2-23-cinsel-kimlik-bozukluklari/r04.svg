@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Cinsel yanıtın iki bileşeni ve beş madde</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Vazokonjesyon parasempatik ve nitrik oksit · kontraksiyon sempatik ve somatik · slayt 20</text>
+<rect x="30" y="95" width="560" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Genital vazokonjesyon (uyarılma, plato)</text>
+<path d="M60 230 C 120 215, 170 215, 230 230" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 270 C 120 285, 170 285, 230 270" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 230 C 120 215, 170 215, 230 230 L230 270 C 170 285, 120 285, 60 270 Z" fill="#ccfbf1" opacity="0.7"/>
+<path d="M330 200 C 400 170, 480 170, 560 200" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 300 C 400 330, 480 330, 560 300" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 200 C 400 170, 480 170, 560 200 L560 300 C 480 330, 400 330, 330 300 Z" fill="#fee2e2" opacity="0.8"/>
+<circle cx="360" cy="250" r="9" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<circle cx="405" cy="250" r="9" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<circle cx="450" cy="250" r="9" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<circle cx="495" cy="250" r="9" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<circle cx="540" cy="250" r="9" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<line x1="240" y1="250" x2="320" y2="250" stroke="#0f766e" stroke-width="3" marker-end="url(#okt)"/>
+<text x="145" y="320" font-size="13" fill="#0f766e" text-anchor="middle">Dinlenme: damar dar</text>
+<text x="445" y="350" font-size="13" fill="#b91c1c" text-anchor="middle">Uyarılma: damar genişler, kan dolar</text>
+<line x1="280" y1="240" x2="280" y2="145" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="280" cy="240" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="286" y="150" font-size="14" fill="#0f766e" text-anchor="start">Parasempatik uyarı → nitrik oksit salınır</text>
+<text x="300" y="172" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Sonuç: penil ereksiyon, vajinal ıslanma</text>
+<text x="310" y="395" font-size="13" fill="#0f766e" text-anchor="middle" font-style="italic">Sertleşme bir damar olayıdır</text>
+<rect x="620" y="95" width="550" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="127" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Kontraksiyon (orgazm refleksi)</text>
+<path d="M650 180 C 700 168, 750 192, 800 180 S 900 192, 950 180" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M650 208 C 700 196, 750 220, 800 208 S 900 220, 950 208" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M650 236 C 700 224, 750 248, 800 236 S 900 248, 950 236" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M650 264 C 700 252, 750 276, 800 264 S 900 276, 950 264" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="310" font-size="13" fill="#ea580c" text-anchor="middle">Ritmik kas kasılmaları</text>
+<rect x="980" y="160" width="170" height="60" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="1065.0" y="185.66666666666666" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">Emisyon</text>
+<text x="1065.0" y="203.66666666666666" font-size="14" fill="#b91c1c" text-anchor="middle">sempatik</text>
+<rect x="980" y="240" width="170" height="60" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="1065.0" y="265.8333333333333" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">Boşalma</text>
+<text x="1065.0" y="282.8333333333333" font-size="13" fill="#0f172a" text-anchor="middle">somatik, pudendal sinir</text>
+<line x1="1065" y1="220" x2="1065" y2="240" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<text x="895" y="360" font-size="13" fill="#0f172a" text-anchor="middle">Emisyon meniyi üretraya toplar; boşalma dışarı atar</text>
+<text x="895" y="395" font-size="13" fill="#b91c1c" text-anchor="middle" font-style="italic">Uyarılma parasempatik, orgazm sempatik ve somatik</text>
+<rect x="30" y="445" width="1140" height="290" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="477" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Beş madde ve cinsel işleve etkisi</text>
+<rect x="60" y="500" width="200" height="150" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="160" y="530" font-size="15" fill="#15803d" text-anchor="middle" font-weight="bold">Dopamin</text>
+<line x1="160" y1="600" x2="160" y2="550" stroke="#15803d" stroke-width="4" marker-end="url(#oky)"/>
+<text x="160" y="625" font-size="12" fill="#1e293b" text-anchor="middle">isteği ve uyarılmayı artırır</text>
+<text x="160" y="643" font-size="12" fill="#15803d" text-anchor="middle" font-style="italic">işlevi destekler</text>
+<rect x="282" y="500" width="200" height="150" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="382" y="530" font-size="15" fill="#15803d" text-anchor="middle" font-weight="bold">Nitrik oksit</text>
+<line x1="382" y1="600" x2="382" y2="550" stroke="#15803d" stroke-width="4" marker-end="url(#oky)"/>
+<text x="382" y="625" font-size="12" fill="#1e293b" text-anchor="middle">damar genişlemesi, ereksiyon</text>
+<text x="382" y="643" font-size="12" fill="#15803d" text-anchor="middle" font-style="italic">işlevi destekler</text>
+<rect x="504" y="500" width="200" height="150" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="604" y="530" font-size="15" fill="#15803d" text-anchor="middle" font-weight="bold">Testosteron</text>
+<line x1="604" y1="600" x2="604" y2="550" stroke="#15803d" stroke-width="4" marker-end="url(#oky)"/>
+<text x="604" y="625" font-size="12" fill="#1e293b" text-anchor="middle">her iki cinsiyette isteği destekler</text>
+<text x="604" y="643" font-size="12" fill="#15803d" text-anchor="middle" font-style="italic">işlevi destekler</text>
+<rect x="726" y="500" width="200" height="150" rx="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="826" y="530" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">Serotonin</text>
+<line x1="826" y1="550" x2="826" y2="600" stroke="#b91c1c" stroke-width="4" marker-end="url(#okk)"/>
+<text x="826" y="625" font-size="12" fill="#1e293b" text-anchor="middle">isteği azaltır, orgazmı geciktirir</text>
+<text x="826" y="643" font-size="12" fill="#b91c1c" text-anchor="middle" font-style="italic">işlevi bastırır</text>
+<rect x="948" y="500" width="200" height="150" rx="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="1048" y="530" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">Prolaktin yüksekliği</text>
+<line x1="1048" y1="550" x2="1048" y2="600" stroke="#b91c1c" stroke-width="4" marker-end="url(#okk)"/>
+<text x="1048" y="625" font-size="12" fill="#1e293b" text-anchor="middle">isteği ve ereksiyonu azaltır</text>
+<text x="1048" y="643" font-size="12" fill="#b91c1c" text-anchor="middle" font-style="italic">işlevi bastırır</text>
+<text x="600" y="690" font-size="13" fill="#b91c1c" text-anchor="middle">Serotonin satırı SSRI yan etkisini, prolaktin satırı antipsikotik yan etkisini açıklar</text>
+<text x="600" y="715" font-size="13" fill="#0f172a" text-anchor="middle">Hipogonadizm (testosteron düşüklüğü) isteği azaltır</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 20 (fizyoloji ve madde tablosu), 26 (ilaçlar)</text>
+</svg>

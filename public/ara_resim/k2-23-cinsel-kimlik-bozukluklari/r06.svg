@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">İlaçlar cinsel işlevi hangi yoldan bozar?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">SSRI serotonin · antipsikotik prolaktin · diğer ilaçlar ve tıbbi durumlar · zamansal ilişki ölçütü · slayt 26</text>
+<rect x="30" y="95" width="370" height="400" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · SSRI ve SNRI: en sık neden</text>
+<path d="M60 200 C 120 170, 170 170, 200 220 C 215 250, 215 270, 200 300 C 170 350, 120 350, 60 320" stroke="#ea580c" stroke-width="3" fill="#fff7ed" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360 200 C 300 170, 250 170, 230 220 C 218 250, 218 270, 230 300 C 250 350, 300 350, 360 320" stroke="#6d28d9" stroke-width="3" fill="#ede9fe" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="206" cy="240" r="5" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<circle cx="214" cy="262" r="5" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<circle cx="206" cy="284" r="5" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<circle cx="222" cy="250" r="5" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<circle cx="222" cy="274" r="5" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="130" y="260" font-size="13" fill="#ea580c" text-anchor="middle">Sinir ucu</text>
+<text x="295" y="260" font-size="13" fill="#6d28d9" text-anchor="middle">Alıcı hücre</text>
+<line x1="214" y1="262" x2="120" y2="390" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="214" cy="262" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="126" y="395" font-size="13" fill="#15803d" text-anchor="start">Serotonin aralıkta birikir (geri alım engellenir)</text>
+<line x1="140" y1="232" x2="175" y2="232" stroke="#b91c1c" stroke-width="4"/>
+<text x="100" y="236" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">SSRI</text>
+<text x="60" y="430" font-size="13" fill="#b91c1c" text-anchor="start">Serotonin artışı isteği azaltır,</text>
+<text x="60" y="449" font-size="13" fill="#b91c1c" text-anchor="start">orgazmı geciktirir (en sık ilaç nedeni)</text>
+<rect x="430" y="95" width="370" height="400" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="450" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">B · Antipsikotik → prolaktin</text>
+<path d="M520 190 C 480 150, 560 120, 620 140 C 700 130, 740 190, 700 240 C 690 290, 560 300, 520 250 C 490 230, 490 210, 520 190 Z" stroke="#6d28d9" stroke-width="3" fill="#ede9fe" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="615" cy="300" rx="32" ry="24" fill="#fef3c7" stroke="#ea580c" stroke-width="2.5"/>
+<text x="575" y="305" font-size="13" fill="#ea580c" text-anchor="end">Hipofiz</text>
+<text x="615" y="200" font-size="13" fill="#6d28d9" text-anchor="middle">Beyin</text>
+<path d="M615 324 C 640 370, 690 380, 740 400" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<text x="700" y="430" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">Prolaktin ↑</text>
+<text x="460" y="460" font-size="13" fill="#6d28d9" text-anchor="start">Yüksek prolaktin isteği ve ereksiyonu azaltır;</text>
+<text x="460" y="479" font-size="13" fill="#6d28d9" text-anchor="start">hiperprolaktinemi tıbbi nedenler listesinde de var</text>
+<rect x="830" y="95" width="340" height="400" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="850" y="127" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">C · Diğer ilaç ve tıbbi durum</text>
+<rect x="850" y="150" width="300" height="48" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="1000.0" y="178.33333333333334" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">Antihipertansifler: tiyazid, beta bloker</text>
+<rect x="850" y="208" width="300" height="48" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="1000.0" y="236.33333333333334" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">5-alfa redüktaz inhibitörleri, opioidler</text>
+<rect x="850" y="266" width="300" height="48" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="1000.0" y="294.3333333333333" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">Alkol, sigara, madde</text>
+<text x="1000" y="340" font-size="12" fill="#64748b" text-anchor="middle" font-style="italic">Slayt bu ilaçlar için mekanizma vermez;</text>
+<text x="1000" y="356" font-size="12" fill="#64748b" text-anchor="middle" font-style="italic">öyküde sorgulanır</text>
+<path d="M845 400 C 890 392, 955 392, 1000 400" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M845 430 C 890 438, 955 438, 1000 430" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M890 430 C 905 408, 940 408, 955 430 Z" fill="#b91c1c" opacity="0.8"/>
+<text x="1010" y="418" font-size="13" fill="#0f766e" text-anchor="start">Diyabet, hipertansiyon,</text>
+<text x="1010" y="436" font-size="13" fill="#0f766e" text-anchor="start">ateroskleroz (damar)</text>
+<text x="1000" y="475" font-size="12" fill="#0f172a" text-anchor="middle">Hipogonadizm, hiperprolaktinemi, tiroid; MS, omurilik</text>
+<rect x="30" y="515" width="1140" height="220" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="547" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">D · Madde ya da ilacın yol açtığı cinsel işlev bozukluğu: zamansal ilişki</text>
+<line x1="80" y1="640" x2="1120" y2="640" stroke="#64748b" stroke-width="3" marker-end="url(#okg)"/>
+<circle cx="300" cy="640" r="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+<text x="300" y="675" font-size="13" fill="#ea580c" text-anchor="middle">İlaç başlanır</text>
+<path d="M300 628 C 320 590, 360 580, 390 600" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="400" y="596" font-size="12" fill="#b91c1c" text-anchor="start">yakınma</text>
+<circle cx="600" cy="640" r="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+<text x="600" y="675" font-size="13" fill="#ea580c" text-anchor="middle">Doz artırılır</text>
+<path d="M600 628 C 620 590, 660 580, 690 600" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="700" y="596" font-size="12" fill="#b91c1c" text-anchor="start">yakınma</text>
+<circle cx="900" cy="640" r="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+<text x="900" y="675" font-size="13" fill="#ea580c" text-anchor="middle">İlaç kesilir</text>
+<path d="M900 628 C 920 590, 960 580, 990 600" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="1000" y="596" font-size="12" fill="#b91c1c" text-anchor="start">yakınma</text>
+<text x="600" y="710" font-size="13" fill="#0f172a" text-anchor="middle">Yakınma bu üç olaydan biriyle zamansal ilişki içinde ortaya çıkarsa tanı ilaca bağlanır (ör. sertralin sonrası orgazm sorunu)</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 26 (tıbbi durumlar, ilaçlar, ölçüt), 20 (serotonin ve prolaktin satırları), 42 (vaka 3)</text>
+</svg>

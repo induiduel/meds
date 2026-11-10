@@ -1,0 +1,175 @@
+{
+ "key": "k2-24-epilepsi",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Epilepsi tanısına giden üç kapı; tetiklenmiş nöbet neden dışarıda kalır?",
+   "aciklama": "Yirmi dört saat arayla iki tetiklenmemiş nöbet, tek nöbet artı en az yüzde altmış tekrar riski ya da bir epilepsi sendromu tanı koydurur; eşiği geçici düşüren tetiklenmiş nöbet epilepsi sayılmaz, refleks nöbet sayılır.",
+   "adimlar": [
+    "1. Aralarında en az 24 saat olan iki tetiklenmemiş ya da refleks nöbet.",
+    "2. Tek nöbet + 10 yılda en az %60 tekrar riski (yeni inme, yapısal lezyon, interiktal epileptiform aktivite).",
+    "3. Epilepsi sendromu varlığı.",
+    "4. Metabolik/toksik neden, kafa travması, inme eşiği akut düşürür → tetiklenmiş nöbet, epilepsi değil.",
+    "5. Işık ya da sıcak suyla gelen refleks nöbet tetiklenmiş sayılmaz, epilepsi tanımına girer."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 2,
+   "bitis": 3,
+   "kaynak": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Fokal nöbet: odaktan başlar, üç aşamada değerlendirilir, iki yana yayılabilir",
+   "aciklama": "Fokal nöbet tek hemisferdeki bir odaktan çıkar; önce farkındalık, sonra motor ya da nonmotor ana belirti değerlendirilir, üçüncü aşama boşalımın iki yana yayılarak bilateral tonik-klonik nöbete dönüşmesidir.",
+   "adimlar": [
+    "1. Odak tek hemisferde; belirti odağın görevine göre.",
+    "2. Farkındalık korunmuş ya da bozulmuş.",
+    "3. Ana belirti motor (7 tip) ya da nonmotor (5 tip); ikisi aynı aşamanın kollarıdır.",
+    "4. Boşalım iki yana yayılırsa fokal başlayan bilateral tonik-klonik nöbet."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 9,
+   "bitis": 11,
+   "kaynak": [
+    10,
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Eskrimci postürü ve figür 4: uzanan kolun karşısı odaktır",
+   "aciklama": "Eskrimci postüründe bir kol ekstansiyonda, karşı kol dirsek ve bilekten fleksiyonda kasılır; figür dörtte karşı dirsek fleksiyonu kolları 4 rakamına benzetir; iki postürde de ekstansör kolun karşı hemisferi epileptojenik alandır.",
+   "adimlar": [
+    "1. Eskrimci postürü: bir kol ekstansör, karşı kol dirsek ve bilekten fleksör tonik kasılma.",
+    "2. Figür 4: bir kol ekstansör, karşı kol dirsekten fleksör → 4 görünümü.",
+    "3. Kural: ekstansör kolun KARŞI hemisferi odak.",
+    "4. Tonik baş dönmesi de karşı tarafa işaret eder, lateralize edici değeri düşüktür."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 13,
+   "bitis": 13,
+   "kaynak": [
+    15
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Miyoklonik sıçramadan sonra ne gelir? İki zincir ve absansın EEG frekansı",
+   "aciklama": "Miyoklonik sıçramayı tonik-klonik nöbet izliyorsa juvenil miyoklonik epilepsi, tonus kaybı ve düşme izliyorsa Lennox-Gastaut düşünülür; tipik absans ani başlayıp biter ve üç hertz, atipik absans sinsidir ve iki buçuk hertzin altındadır.",
+   "adimlar": [
+    "1. Miyoklonik → tonik-klonik = miyoklonik-tonik-klonik nöbet (JME).",
+    "2. Miyoklonik → tonus kaybı → düşme = miyoklonik-atonik nöbet (Lennox-Gastaut).",
+    "3. Atonik nöbette bilinç saniyeler içinde döner.",
+    "4. Tipik absans ani, 3 Hz; atipik absans sinsi, < 2,5 Hz; ayrım EEG ile.",
+    "5. Miyoklonik absans 10–60 sn, 3 Hz jeneralize diken-dalga."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 17,
+   "bitis": 18,
+   "kaynak": [
+    19,
+    20,
+    39
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Febril nöbet: beş ölçüt basit ile komplikeyi ayırır, risk merdiven gibi yükselir",
+   "aciklama": "Basit febril nöbet kısa, jeneralize, tek ve iz bırakmayan nöbettir; uzun, fokal, tekrarlayan ya da Todd parezili nöbet komplikedir ve epilepsi riski toplumdaki yüzde yarımdan üç özellikli komplike nöbette yüzde kırk dokuza yükselir.",
+   "adimlar": [
+    "1. Beş ölçüt: süre < 15 dk, jeneralize tip, 24 saatte tekrar yok, fokal defisit yok, Todd parezisi yok → basit.",
+    "2. Komplike özelliklerden en az biri varsa komplike.",
+    "3. Epilepsi riski: toplum %0,5 → febril nöbet %1-1,5 → komplike %4-15 → üç özellik %49.",
+    "4. Basit nöbette sürekli antiepileptik yok; komplikede Dravet gibi ensefalopati araştırılır."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 19,
+   "bitis": 21,
+   "kaynak": [
+    21,
+    22,
+    23
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Epileptogenez: akut hasardan epilepsi hastalığına giden yol",
+   "aciklama": "Başlangıç hasarı ilk nöbeti doğurur, nöbetler ve hasar beyin ağında yapısal ve fonksiyonel değişiklik bırakır, bu değişiklikler yerleşince beyin kalıcı olarak nöbete yatkın hâle gelir; her geçişi genetik yapı ile yaş ve cins etkiler.",
+   "adimlar": [
+    "1. Başlangıç hasarı: travma, inme, metabolik/toksik olay.",
+    "2. 1. nöbet akut semptomatik (tetiklenmiş) olabilir; tek başına epilepsi değildir.",
+    "3. Yapısal ve fonksiyonel değişiklikler ağı yeniden şekillendirir.",
+    "4. Epilepsi: kalıcı nöbet yatkınlığı.",
+    "5. Her basamakta genetik ve yaş-cins etkisi."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 22,
+   "bitis": 23,
+   "kaynak": [
+    24,
+    25
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Üç atak, üç hasta: senkop, epilepsi ve psikojen atağı ayıran ipuçları",
+   "aciklama": "Senkop ayakta, yavaş başlayan, beyaz ve saniyeler süren bayılmadır; epilepsi uykuda da gelen, moraran, dilin yanını ısırtan, dakikalar süren ve konfüzyon bırakan nöbettir; psikojen atak uyanıkken, pelvik ve asenkron hareketlerle, göz açmaya dirençle ve çok uzun süreyle gelir.",
+   "adimlar": [
+    "1. Senkop: ayakta, presenkop, beyaz, saniyeler, hızlı düzelme, EEG yok.",
+    "2. Epilepsi: ani/aura, morarma, uykuda sık, dil yanı, idrar kaçırma, dakikalar, postiktal konfüzyon, iktal EEG çoğunlukla.",
+    "3. Psikojen atak: uyanıkken, ağlama, pelvik hareket, yuvarlanma, göz açmaya direnç, indüklenebilme, dil ucu, çok uzun süre, EEG yok.",
+    "4. Çıkmış: epileptik nöbet 10 dakika sürer ifadesi yanlıştır; uzayan nöbet status epileptikustur."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 43,
+   "bitis": 43,
+   "kaynak": [
+    44,
+    45
+   ]
+  },
+  {
+   "id": "r08",
+   "baslik": "Antiepileptikler üç etkileşim grubunda: indükleyen, baskılayan, etkileşmeyen",
+   "aciklama": "Karbamazepin, fenitoin ve fenobarbital karaciğer enzimlerini uyarıp başka ilaçların düzeyini düşürür; valproat ve felbamat enzimleri baskılayıp düzeyi yükseltir; levetirasetam, pregabalin, gabapentin ve zonisamid enzim kullanmadan böbrekten atıldığı için etkileşmez; karbamazepin kendi enzimlerini de uyarır ve yarı ömrü kronik kullanımda kısalır.",
+   "adimlar": [
+    "1. İndükleyici: karbamazepin, fenitoin, fenobarbital → lamotrijin ve perampanel düzeyi düşer.",
+    "2. İnhibitör: valproat, felbamat → lamotrijin ömrü uzar, rufinamid düzeyi %70 artar.",
+    "3. Etkileşimsiz: levetirasetam, pregabalin, gabapentin, zonisamid (az protein bağlanma, değişmeden idrar).",
+    "4. Otoindüksiyon: karbamazepin yarı ömrü tek dozda 24-45, kronikte 8-24 saat."
+   ],
+   "svg": "r08.svg",
+   "paragraf": 45,
+   "bitis": 46,
+   "kaynak": [
+    47,
+    48
+   ]
+  },
+  {
+   "id": "r09",
+   "baslik": "Status epileptikus: nöbet durmazsa dakika dakika ne yapılır?",
+   "aciklama": "Status epileptikus alışılmıştan uzun süren tek nöbet ya da arada bilinç açılmadan tekrarlayan nöbetlerdir; beşinci dakikada benzodiazepin, otuzuncu dakikada damar yolundan yüklenen antiepileptik, altmışıncı dakikada yoğun bakımda anestezik infüzyon ve EEG izlemi gelir.",
+   "adimlar": [
+    "1. Tanım: alışılmıştan uzun nöbet YA DA arada düzelmeden art arda nöbetler.",
+    "2. 5 dk, erken SE: IV diazepam 5-10 mg (en çok 20); damar yolu yoksa IM/bukkal midazolam ya da rektal diazepam 10 mg.",
+    "3. 30 dk, dirençli SE: IV fenitoin, valproat, levetirasetam, fenobarbital ya da lakozamid; pregabalin listede yok (çıkmış).",
+    "4. 60 dk, süper dirençli SE: midazolam, propofol, pentotal ya da ketamin infüzyonu + EEG monitorizasyonu.",
+    "5. Her evrede hava yolu, kan basıncı, şeker, elektrolit, toksin taraması."
+   ],
+   "svg": "r09.svg",
+   "paragraf": 47,
+   "bitis": 48,
+   "kaynak": [
+    49,
+    50
+   ]
+  }
+ ]
+}

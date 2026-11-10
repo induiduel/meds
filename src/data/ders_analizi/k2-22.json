@@ -1,0 +1,980 @@
+{
+ "surum": 1,
+ "key": "k2-22",
+ "kod": "2s05",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Psikosomatik Bozukluklar",
+ "ogretim_uyesi": "Doç. Dr. Zuhal Koç Apaydın",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s05"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders psikosomatik kavramını, etiyoloji kuramlarını ve belirtiyi büyüten mekanizmaları anlattıktan sonra DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubunun altı başlığını işler: bedensel belirti bozukluğu, hastalık kaygısı bozukluğu, işlevsel nörolojik belirti (konversiyon) bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler (Takotsubo örneğiyle) ve yapay bozukluk. Her bozuklukta tanı ölçütleri, klinik özellikler, epidemiyoloji, ayırıcı tanı ve gidiş verilir; işlevsel bozuklukta olumlu muayene bulguları ve epileptik nöbet ile işlevsel nöbet ayrımı ayrıntılı anlatılır.",
+   "maddeler": [
+    {
+     "metin": "Psikosomatik kavramı: ruh ve beden tek sistem"
+    },
+    {
+     "metin": "Etiyolojiye farklı bakışlar, organ dili ve aleksitimi"
+    },
+    {
+     "metin": "Güncel model: öngörüsel işleme ve belirtiyi büyüten mekanizmalar"
+    },
+    {
+     "metin": "DSM-5-TR sınıflaması"
+    },
+    {
+     "metin": "Bedensel belirti bozukluğu: vaka, ölçütler ve klinik özellikler"
+    },
+    {
+     "metin": "Bedensel belirti bozukluğu: sıklık ve nedenler"
+    },
+    {
+     "metin": "Bedensel belirti bozukluğu: ayırıcı tanı ve gidiş"
+    },
+    {
+     "metin": "Hastalık kaygısı bozukluğu"
+    },
+    {
+     "metin": "İşlevsel nörolojik belirti bozukluğu: adı ve ölçütleri"
+    },
+    {
+     "metin": "İşlevsel bozukluk: sıklık, mekanizma ve 3P modeli"
+    },
+    {
+     "metin": "Muayenede olumlu bulgular"
+    },
+    {
+     "metin": "Epileptik nöbet ile işlevsel nöbet ayrımı"
+    },
+    {
+     "metin": "Klasik kavramlar ve gidiş"
+    },
+    {
+     "metin": "Diğer tıbbi durumları etkileyen psikolojik etkenler ve Takotsubo"
+    },
+    {
+     "metin": "Yapay bozukluk"
+    },
+    {
+     "metin": "Ayırt etmenin anahtarı: bilinçli mi, ne için"
+    },
+    {
+     "metin": "Dört vaka ve eve götürülecek mesajlar"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders psikosomatik kavramını, etiyoloji kuramlarını ve belirtiyi büyüten mekanizmaları anlattıktan sonra DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubunun altı başlığını işler: bedensel belirti bozukluğu, hastalık kaygısı bozukluğu, işlevsel nörolojik belirti (konversiyon) bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler (Takotsubo örneğiyle) ve yapay bozukluk. Her bozuklukta tanı ölçütleri, klinik özellikler, epidemiyoloji, ayırıcı tanı ve gidiş verilir; işlevsel bozuklukta olumlu muayene bulguları ve epileptik nöbet ile işlevsel nöbet ayrımı ayrıntılı anlatılır.",
+    "Psikosomatik kavramı: ruh ve beden tek sistem.",
+    "Etiyolojiye farklı bakışlar, organ dili ve aleksitimi.",
+    "Güncel model: öngörüsel işleme ve belirtiyi büyüten mekanizmalar.",
+    "DSM-5-TR sınıflaması.",
+    "Bedensel belirti bozukluğu: vaka, ölçütler ve klinik özellikler.",
+    "Bedensel belirti bozukluğu: sıklık ve nedenler.",
+    "Bedensel belirti bozukluğu: ayırıcı tanı ve gidiş.",
+    "Hastalık kaygısı bozukluğu.",
+    "İşlevsel nörolojik belirti bozukluğu: adı ve ölçütleri.",
+    "İşlevsel bozukluk: sıklık, mekanizma ve 3P modeli.",
+    "Muayenede olumlu bulgular.",
+    "Epileptik nöbet ile işlevsel nöbet ayrımı.",
+    "Klasik kavramlar ve gidiş.",
+    "Diğer tıbbi durumları etkileyen psikolojik etkenler ve Takotsubo.",
+    "Yapay bozukluk.",
+    "Ayırt etmenin anahtarı: bilinçli mi, ne için.",
+    "Dört vaka ve eve götürülecek mesajlar."
+   ],
+   "v": "f324c2c120"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "DSM-5-T R ( APA, 20 22)",
+     "metin": "Çıkmış (dogrudan): Bedensel belirti ve ilişkili bozukluklar (DSM-5-TR): Bedensel belirti bozukluğu · Hastalık kaygısı bozukluğu · İşlevsel nörolojik belirti bozukluğu (dönüşüm bozukluğu) · Diğer tıbbi durumları etkileyen psikolojik etkenler · Yapay bozukluk · Belirlenmiş / belirlenmemiş diğer. (s18 ayırıcı tanıda 'Beden algısı bzk.' ruhsal bozukluklar arasında ayrı sayılır.)",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "ET IYOLOJ I · 2",
+     "metin": "Çıkmış (dogrudan): Psikodinamik — Bastırılan öfke: başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır. Yardımı geri çevirme: hasta öfkesini, başkalarının yardım ve ilgisini reddederek dolaylı yoldan dışa vurur.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "GI DIŞ V E SONLAN IŞ",
+     "metin": "Çıkmış (ilgili): Seyir dönemseldir; dönemler aylar ya da yıllar sürebilir (s19). Depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir (s15). Normal tetkik ve hekim güvencesi rahatlatmaz; doktor doktor dolaşma, yinelenen tetkik isteği (s14).",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "DSM-5-T R T AN I ÖLÇÜTLERI · 1/2",
+     "metin": "Çıkmış (dogrudan): Bedensel belirti yok ya da çok hafif",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "AYIRI CI T AN I",
+     "metin": "Çıkmış (dogrudan): Çoğunlukla 2 dakikadan uzun; şiddeti artıp azalır",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "KLASIK KAVRA MLAR",
+     "metin": "Çıkmış (dogrudan): Ciddi belirtiye karşın uygunsuz kayıtsızlık.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "KLIN IK IPUÇLARI",
+     "metin": "Çıkmış (dogrudan): Olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo",
+     "s": [
+      46
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "DSM-5-T R ( APA, 20 22): Çıkmış (dogrudan): Bedensel belirti ve ilişkili bozukluklar (DSM-5-TR): Bedensel belirti bozukluğu · Hastalık kaygısı bozukluğu · İşlevsel nörolojik belirti bozukluğu (dönüşüm bozukluğu) · Diğer tıbbi durumları etkileyen psikolojik etkenler · Yapay bozukluk · Belirlenmiş / belirlenmemiş diğer. (s18 ayırıcı tanıda 'Beden algısı bzk.' ruhsal bozukluklar arasında ayrı sayılır.).",
+    "ET IYOLOJ I · 2: Çıkmış (dogrudan): Psikodinamik — Bastırılan öfke: başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır. Yardımı geri çevirme: hasta öfkesini, başkalarının yardım ve ilgisini reddederek dolaylı yoldan dışa vurur.",
+    "GI DIŞ V E SONLAN IŞ: Çıkmış (ilgili): Seyir dönemseldir; dönemler aylar ya da yıllar sürebilir (s19). Depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir (s15). Normal tetkik ve hekim güvencesi rahatlatmaz; doktor doktor dolaşma, yinelenen tetkik isteği (s14).",
+    "DSM-5-T R T AN I ÖLÇÜTLERI · 1/2: Çıkmış (dogrudan): Bedensel belirti yok ya da çok hafif.",
+    "AYIRI CI T AN I: Çıkmış (dogrudan): Çoğunlukla 2 dakikadan uzun; şiddeti artıp azalır.",
+    "KLASIK KAVRA MLAR: Çıkmış (dogrudan): Ciddi belirtiye karşın uygunsuz kayıtsızlık.",
+    "KLIN IK IPUÇLARI: Çıkmış (dogrudan): Olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo."
+   ],
+   "v": "254a893e5a"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmışlar hep tanı adı ister: kısa vaka ya da tek ayırt edici özellikten tanı (hastalık kaygısı bozukluğu 2020-21, yapay bozukluk 2022-23, konversiyon 2019-20), kavram adı (güzel aldırmazlık 2018-19) ya da olumsuz kök (grupta sayılmayan beden algısı bozukluğu 2021-22; epileptik–işlevsel nöbet tablosunda yanlış önerme 2025-26). Somatizasyon nedenleri 2023-24'te soruldu. Çeldiriciler istisnasız aynı aileden komşu tanılardır; bu yüzden her bozukluğun tek ayırt edici ölçütü ve karşılaştırma tabloları öncelikli bilgidir. Hoca derste psikosomatiğin hayali olmadığını, A ölçütünü, depresyon ve anksiyete eş tanısını, büyük taklitçileri, ruhsal ayırıcı tanıyı, birincil ve ikincil kazancı ve güzel aldırmazlığın artık tanısal değeri olmadığını sınav için vurguladı.",
+   "maddeler": [
+    {
+     "baslik": "Güzel aldırmazlık: konversiyonun klasik kavramı",
+     "metin": "Güzel aldırmazlık (la belle indifférence) ciddi belirtiye karşın uygunsuz kayıtsızlıktır; işlevsel nörolojik belirti (konversiyon) bozukluğunda tanımlanır, tarihseldir, tanısal değeri yoktur.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. 2018-19 ve 2019-20'de soruldu: bir yıl kavramın adı, öteki yıl hangi bozuklukta görüldüğü istendi; çeldiriciler her seferinde aynı aileden komşu tanılardır.",
+     "s": [
+      31,
+      38
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Hastalık kaygısı bozukluğu: belirti yok, korku var",
+     "metin": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir; kişi ciddi bir hastalığı olduğu ya da olacağıyla uğraşır.",
+     "neden": "2020-21'de vaka olarak soruldu (tıbbi sorunu ve şikâyeti yok, kanser korkusu, internet okumaları); vaka→tanı kalıbının tipik örneğidir.",
+     "s": [
+      21,
+      22
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "DSM-5-TR grubu: altı başlık, beden algısı bozukluğu dışarıda",
+     "metin": "DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubu altı başlıktır; beden algısı bozukluğu bu grupta yer almaz.",
+     "neden": "2021-22 finalde soruldu: grupta sayılmayan tanı (beden algısı bozukluğu) istendi; sınıflama sorusu her yıl sorulabilecek biçimdedir.",
+     "s": [
+      9,
+      18
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Yapay bozukluk: klinik ipuçları",
+     "metin": "Yapay bozuklukta olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo; tedaviye yanıtsızlık; biri düzelince yeni belirti; girişime ve teste isteklilik görülür.",
+     "neden": "2022-23'te soruldu: ipuçları arka arkaya dizilmiş uzun bir kökten tanı istendi; en güçlü çeldirici simülasyondu.",
+     "s": [
+      46
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Epileptik nöbet ile işlevsel nöbet ayrımı",
+     "metin": "Epileptik nöbet genellikle 1–2 dakika sürer, gözler çoğunlukla açıktır; işlevsel (dissosiyatif) nöbet çoğunlukla 2 dakikadan uzundur, gözler kapalıdır ve açtırmaya direnç vardır.",
+     "neden": "2025-26'da soruldu: tablonun süre satırı ters çevrilerek 'hangisi yanlıştır' kalıbında istendi (ham belgede yalnız kök ve cevap var; beş şık hatırlamadan yeniden kurulmuştur, prolaktin şıkkı ders dışı ek bilgidir); diğer satırlar aynı kalıpla yeniden sorulabilir.",
+     "s": [
+      35
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Psikodinamik etkenler: bastırılan öfke, kefaret",
+     "metin": "Psikodinamik etkenlerde başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır; ağrı suçluluğa karşı kefaret işlevi görür.",
+     "neden": "2023-24'te 'somatizasyon nedenleri' olarak soruldu; doğru cevap bastırılan öfkenin bedene aktarılması cümlesinin kendisidir.",
+     "s": [
+      17
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Birincil kazanç, ikincil kazanç, özdeşim",
+     "metin": "Birincil kazanç içsel çatışmanın bilinç dışında tutulmasıdır; ikincil kazanç hasta rolünün getirdiği destek, ilgi ve sorumluluktan uzaklaşma gibi dış yararlardır; özdeşim önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. Geçen yılın öğrenci notunda el yazısıyla vurgulanan klasik kavramlar; birincil ve ikincil kazancın yer değiştirilmesi klasik çeldiricidir.",
+     "s": [
+      3,
+      38
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Önce büyük taklitçileri düşünün",
+     "metin": "Büyük taklitçi, birçok organı tutabilen, dalgalı ve değişken belirtilerle başlayan, erken evrede rutin tetkikleri normal çıkabildiği için kolayca 'psikolojik' sanılan hastalıktır.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. Ayırıcı tanı listesi 'hangisi büyük taklitçi değildir' kalıbına uygundur; ruhsal bozukluklar sütunundan bir ad tıbbi liste içine çeldirici olarak karıştırılır.",
+     "s": [
+      18
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmışlar hep tanı adı ister: kısa vaka ya da tek ayırt edici özellikten tanı (hastalık kaygısı bozukluğu 2020-21, yapay bozukluk 2022-23, konversiyon 2019-20), kavram adı (güzel aldırmazlık 2018-19) ya da olumsuz kök (grupta sayılmayan beden algısı bozukluğu 2021-22; epileptik–işlevsel nöbet tablosunda yanlış önerme 2025-26). Somatizasyon nedenleri 2023-24'te soruldu. Çeldiriciler istisnasız aynı aileden komşu tanılardır; bu yüzden her bozukluğun tek ayırt edici ölçütü ve karşılaştırma tabloları öncelikli bilgidir. Hoca derste psikosomatiğin hayali olmadığını, A ölçütünü, depresyon ve anksiyete eş tanısını, büyük taklitçileri, ruhsal ayırıcı tanıyı, birincil ve ikincil kazancı ve güzel aldırmazlığın artık tanısal değeri olmadığını sınav için vurguladı.",
+    "Güzel aldırmazlık: konversiyonun klasik kavramı: Güzel aldırmazlık (la belle indifférence) ciddi belirtiye karşın uygunsuz kayıtsızlıktır; işlevsel nörolojik belirti (konversiyon) bozukluğunda tanımlanır, tarihseldir, tanısal değeri yoktur.",
+    "Hastalık kaygısı bozukluğu: belirti yok, korku var: Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir; kişi ciddi bir hastalığı olduğu ya da olacağıyla uğraşır.",
+    "DSM-5-TR grubu: altı başlık, beden algısı bozukluğu dışarıda: DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubu altı başlıktır; beden algısı bozukluğu bu grupta yer almaz.",
+    "Yapay bozukluk: klinik ipuçları: Yapay bozuklukta olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo; tedaviye yanıtsızlık; biri düzelince yeni belirti; girişime ve teste isteklilik görülür.",
+    "Epileptik nöbet ile işlevsel nöbet ayrımı: Epileptik nöbet genellikle 1–2 dakika sürer, gözler çoğunlukla açıktır; işlevsel (dissosiyatif) nöbet çoğunlukla 2 dakikadan uzundur, gözler kapalıdır ve açtırmaya direnç vardır.",
+    "Psikodinamik etkenler: bastırılan öfke, kefaret: Psikodinamik etkenlerde başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır; ağrı suçluluğa karşı kefaret işlevi görür.",
+    "Birincil kazanç, ikincil kazanç, özdeşim: Birincil kazanç içsel çatışmanın bilinç dışında tutulmasıdır; ikincil kazanç hasta rolünün getirdiği destek, ilgi ve sorumluluktan uzaklaşma gibi dış yararlardır; özdeşim önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır.",
+    "Önce büyük taklitçileri düşünün: Büyük taklitçi, birçok organı tutabilen, dalgalı ve değişken belirtilerle başlayan, erken evrede rutin tetkikleri normal çıkabildiği için kolayca 'psikolojik' sanılan hastalıktır."
+   ],
+   "v": "6a3de54330"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış 9 çıkmışı 2018-19'dan 2025-26'ya yayılır ve neredeyse hepsi tanı adı ister. Üç alt başlık tekrar sorulur: hastalık kaygısı bozukluğu ile bedensel belirti bozukluğunun ayrımı (belirtisiz kanser korkusu vakası, 2020-21), konversiyonun klasik kavramı güzel aldırmazlık (2018-19 ve 2019-20, iki yönde) ve DSM-5 sınıflamasında beden algısı bozukluğunun grupta sayılmaması (2021-22 final). Yapay bozukluk klinik ipuçlarının art arda dizildiği uzun kök (2022-23) ve epileptik nöbet ile işlevsel nöbet tablosunun yanlış önerme kalıbı (2025-26) daha yeni sorulardır. Çeldiriciler her zaman aynı ailenin komşu tanılarıdır: somatizasyon, hipokondriyazis, konversiyon, yapay bozukluk, simülasyon ve vücut dismorfik bozukluğu; bu yüzden her tanının hem eski hem yeni adı bilinmelidir.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Epileptik nöbet ile psödonöbet (psikojenik non-epileptik nöbet) ayrımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Epileptik nöbet genellikle 10 dakika kadar sürer",
+     "s": [
+      35
+     ],
+     "aciklama": [
+      "Soru epileptik nöbet ile işlevsel (psikojenik non-epileptik) nöbetin yatak başı ayrımını ölçer ve tablodaki satırlardan birini ters çevirerek yanlış önerme kalıbıyla sorar.",
+      "Doğru cevap sürelerin ters çevrildiği önermedir: slayt epileptik nöbeti genellikle 1–2 dakika, işlevsel nöbeti çoğunlukla 2 dakikadan uzun ve şiddeti artıp azalan bir olay olarak verir (s. 35); 'epileptik nöbet 10 dakika sürer, psödonöbet daha kısadır' demek bu satırı tam tersine çevirir.",
+      "Diğer önermeler aynı tablonun doğru satırlarıdır: işlevsel nöbette gözler çoğunlukla kapalı ve açtırmaya dirençlidir, hareketler düzensiz ve iki taraf uyumsuzdur, nöbet sonrası ağlama ve hızlı toparlanma görülür; epileptik nöbette ise gözler açık, hareketler kalıplaşmış ve senkron, nöbet sonrası bilinç bulanıklığı vardır (s. 35).",
+      "En güçlü çeldirici, doğru satırları yanlış sanmaktır; özellikle 'işlevsel nöbette gözler kapalıdır' önermesi öğrenciye ters gelir, oysa slayt kapalı gözü ve açtırmaya direnci işlevsel nöbetin tipik bulgusu sayar."
+     ],
+     "ornek": "Slaytın uyku ve video-EEG sayfaları aynı ayrımı pekiştirir: gözleri kapalı 'uyuyor gibi' yatan hastada EEG olaydan hemen önce uyanık alfa ritmi (8–13 Hz) gösterir ve olay sırasında yalnız kas artefaktı vardır; gerçek epileptik nöbette ise iktal diken-dalga ve ardından postiktal yavaşlama görülür (s. 36–37). Video-EEG'de deşarj yokluğu altın standarttır. Hoca da derste aynı ayrımı sayarak anlattı: epileptik nöbet genellikle 1–2 dakika sürer ve gözler açıktır; işlevsel nöbet çoğunlukla 2 dakikadan uzun sürer, şiddeti nöbet sırasında artıp azalır, gözler kapalıdır ve açtırmaya çalışınca hasta direnç gösterir.",
+     "tuzak": "Süreleri ters öğrenmek ve uzun süren nöbeti epileptik sanmak; ayrıca işlevsel nöbeti olanların %22'sinde epilepsi de bulunduğu için tek bir bulguyla tanı koymak (s. 36)."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdaki bozuklukların hangisinde hastada güzel aldırmazlık (la belle indifférence) vardır?",
+     "cevap": "Konversiyon bozukluğu",
+     "s": [
+      38
+     ],
+     "aciklama": [
+      "Soru güzel aldırmazlık (la belle indifférence) kavramının hangi bozuklukla anıldığını ölçer; doğrudan kök kalıbıdır.",
+      "Doğru cevap konversiyon bozukluğudur, yani bugünkü adıyla işlevsel nörolojik belirti bozukluğu: slayt güzel aldırmazlığı bu bozukluğun klasik kavramları arasında 'ciddi belirtiye karşın uygunsuz kayıtsızlık' diye tanımlar (s. 38).",
+      "Çeldiriciler aynı ailenin komşu tanılarıdır: somatizasyon bozukluğunda hasta belirtisini umursamaz değil, tam tersine sürekli belirtiyle uğraşır ve tetkik ister (s. 14); hipokondriyaziste (hastalık kaygısı bozukluğu) kayıtsızlık değil, hastalık korkusu ön plandadır (s. 22); vücut dismorfik bozukluğu bu grupta bile değildir (s. 18).",
+      "Slayt kavramı tarihsel sayar ve tanısal değerinin olmadığını, muayenede güvenilir bulgular arasında yer almadığını açıkça yazar (s. 31, 38); sınavda kavram adı ile bozukluk eşleştirilir, ama 'tanı koydurur' denemez."
+     ],
+     "ornek": "Slayttaki 19 yaşındaki öğrenci vakası (sınav sonrası sol kolunu kaldıramıyor, dikkat dağıtınca güç artıyor) konversiyonun bugünkü tanı mantığını gösterir: tanıyı güzel aldırmazlık gibi tutum bulguları değil, dikkat dağıldığında gücün artması gibi olumlu muayene bulguları koydurur (s. 48–49). Hoca olumlu muayene bulgusuna derste titreme örneğini verdi: hastadan sağlam eliyle hekimin ritmine eşlik etmesi istenir; hekim ritmi yavaşlatıp hızlandırdıkça titreyen el de bu ritme uyar ya da durur, çünkü hasta ikisini aynı anda yapamaz.",
+     "tuzak": "Güzel aldırmazlığı tanı ölçütü sanmak; slayt onu orta hatta bölünen duyu kaybı ve telkinle düzelmeyle birlikte 'güvenilir değil' listesine koyar (s. 31)."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Konversiyon bozukluğunda hastanın ciddi semptomlarına karşı lakayt tutumuna ne denir?",
+     "cevap": "Güzel aldırmazlık",
+     "s": [
+      38
+     ],
+     "aciklama": [
+      "Soru aynı kavramı ters yönden sorar: konversiyon hastasının ciddi belirtisine karşı gösterdiği kayıtsız tutumun adı istenir.",
+      "Doğru cevap güzel aldırmazlıktır; slayt tanımı 'ciddi belirtiye karşın uygunsuz kayıtsızlık' biçimindedir ve kavramı birincil kazanç, ikincil kazanç ve özdeşimle aynı sayfada verir (s. 38).",
+      "En güçlü çeldirici 'yansıtmalı özdeşim'dir; slayttaki özdeşim kavramı önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır ve yasta görülür (s. 38), tutumla değil belirtinin kaynağıyla ilgilidir. Birincil kazanç da belirtinin çatışmayı bilinç dışında tutmasıdır, bir tutum adı değildir.",
+      "Kavramın adı Fransızca kökenlidir (la belle indifférence) ve slaytın okuma listesindeki Stone 2006 makalesi tam bu kavramın tanısal değerini sorgular (s. 51)."
+     ],
+     "ornek": "Slayt klasik kavramları dört kartta yan yana verir: birincil kazanç içsel çatışmanın bilinç dışında tutulması, ikincil kazanç hasta rolünün dış yararları (destek, ilgi, sorumluluktan uzaklaşma), güzel aldırmazlık uygunsuz kayıtsızlık, özdeşim önemli kişinin belirtisinin örnek alınması (s. 38). Dördü birlikte öğrenildiğinde çeldiriciler birbirinden ayrılır. Hoca derste bu ayrımı şöyle özetledi: dışarıdan bakınca hastanın ikincil kazancı var gibi görünebilir; birincil kazanç bilinç dışı çatışmanın bilince çıkmamasıdır, ikincil kazanç hastalığa bağlı görülen ilgi ve destektir. Hasta ise yakınmasını tümüyle bedensel bir hastalık olarak yaşar ve bu kazançları fark etmez.",
+     "tuzak": "Özdeşim ile güzel aldırmazlığı, birincil kazanç ile ikincil kazancı birbirine karıştırmak."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+     "cevap": "Beden algısı bozukluğu",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Soru DSM-5 bedensel belirti ve ilişkili bozukluklar grubunun üyelerini ölçer ve grupta olmayan tanıyı olumsuz kökle ister.",
+      "Doğru cevap beden algısı bozukluğudur: slaytın sınıflama tablosu altı başlık sayar (bedensel belirti bozukluğu, hastalık kaygısı bozukluğu, işlevsel nörolojik belirti bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler, yapay bozukluk, belirlenmiş/belirlenmemiş diğer) ve beden algısı bozukluğu bu listede yoktur (s. 9).",
+      "Slayt beden algısı bozukluğunu ayırıcı tanı sayfasında komşu ruhsal bozukluklar arasında, depresyon, panik ve sanrısal bozuklukla birlikte sayar (s. 18); yani bu grubun üyesi değil, ayırıcı tanısıdır.",
+      "Diğer dört şık (yapay bozukluk, konversiyon bozukluğu, hastalık kaygısı bozukluğu, bedensel belirti bozukluğu) tablonun satırlarıyla birebir örtüşür; konversiyon adı tabloda 'işlevsel nörolojik belirti bozukluğu (dönüşüm bozukluğu)' olarak geçer."
+     ],
+     "ornek": "Slaytın dört vakalık kapanış sayfası grubun dört büyük üyesini tek tek pekiştirir: ağrılı ve belirtisiyle uğraşan kadın (bedensel belirti bozukluğu), kolunu kaldıramayan öğrenci (işlevsel nörolojik belirti bozukluğu), insülin saklayan hemşire (yapay bozukluk), belirtisiz tümör korkusu olan erkek (hastalık kaygısı bozukluğu); beden algısı bozukluğuna ait bir vaka yoktur (s. 48–49). Hoca grubun sınırını derste migren örneğiyle açtı: belirti tıbben açıklanabilir olsa da, örneğin migren tanısı konmuş ama migreniyle aşırı uğraşan hastaya da bedensel belirti bozukluğu tanısı konabilir.",
+     "tuzak": "Beden algısı (dismorfik) bozukluğunu bedensel belirti grubunda sanmak; adında 'beden' geçmesi yanıltır, slayt onu ayırıcı tanı listesine koyar."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikâyeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendini işlerine veremediğini ifade eden hastada ön tanı ne olabilir?",
+     "cevap": "Hastalık kaygısı bozukluğu",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Soru belirtisiz hastalık korkusu vakasında öntanıyı ister ve bedensel belirti bozukluğu ile hastalık kaygısı bozukluğunun ayrımını ölçer.",
+      "Doğru cevap hastalık kaygısı bozukluğudur: slayttaki B ölçütü 'bedensel belirti yok ya da çok hafif', A ölçütü 'ciddi bir hastalığı olduğu ya da olacağı ile uğraş' ve D ölçütündeki bakım arayan tip (sürekli kendini kontrol etme, tetkik) vakadaki 'şikâyeti yok, kanser korkusu, internet okumaları' üçlüsüyle birebir örtüşür (s. 22–23).",
+      "En güçlü çeldirici somatik (bedensel) belirti bozukluğudur; karşılaştırma tablosuna göre orada belirti belirgin ve sıkıntı vericidir, kaygının odağı belirtinin ciddiyetidir ve davranış belirtiyle uğraş, tetkik ve analjeziktir; vakada belirti olmadığı için bu tanı elenir (s. 24).",
+      "Yaygın kaygı bozukluğu ve yapay bozukluk çeldiricileri de slaytla elenir: YAB hastalık kaygısı bozukluğunun F ölçütünde dışlanması gereken, hastalık odaklı olmayan yaygın kaygıdır (s. 23); yapay bozuklukta belirti bilinçli üretilir, bu hasta belirti üretmez (s. 45)."
+     ],
+     "ornek": "Slayttaki Mert vakası sınav vakasının aynısıdır: 22 yaşında, hiçbir belirtisi yok, arkadaşının babası kolon kanserinden ölünce 'ya bende de varsa' diye takılmış, gece forumlarda belirti okuyor, üç ayda iki kez kolonoskopi istemiş ve normal sonuç onu yalnız bir hafta rahatlatıyor (s. 21). Slaytın sorusu 'belirti yoksa sorun nerede' diyerek cevabı verir: korku hastalığın kendisinedir. Hoca da bu bozukluğu 'dönem 3 hastalığı' diye örnekledi: tıp öğrencisi yeni hastalıklar öğrendikçe bir belirti görünce 'acaba bende var mı' diye kaygılanabilir ve bu kaygı öğrendikçe geçer.",
+     "tuzak": "Belirtisiz kanser korkusuna bedensel belirti bozukluğu demek; ayrım tek soruyla yapılır: bedensel belirti var mı? Yoksa hastalık kaygısı bozukluğudur."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere ve testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerin gelişimi şeklinde ortaya çıkan bir tabloda aşağıdakilerden hangisi düşünülmelidir?",
+     "cevap": "Yapay bozukluk",
+     "s": [
+      46
+     ],
+     "aciklama": [
+      "Soru yapay bozukluğun klinik ipuçlarını uzun bir kökte art arda dizer ve tanıyı ister; kök slaytın 'ne zaman şüphelenmeli' listesinin cümle hâline getirilmiş biçimidir.",
+      "Doğru cevap yapay bozukluktur: olağandışı ve dramatik, tıbbi bilgiyle örtüşmeyen tablo, beklenen tedaviye yanıtsızlık ve biri düzelince yenisinin çıkması, girişime ve teste istekli olma, öyküyü yeniden anlatmaya heves ve belirtinin ne zaman kötüleşeceğini önceden bilme slaytta yapay bozukluğun ipuçları olarak sıralanır (s. 46).",
+      "En güçlü çeldirici simülasyondur (temaruz); bilinçlilik tablosuna göre ikisinde de belirti bilinçli üretilir, ama yapay bozuklukta dış ödül yoktur ve güdü bilinçdışı hasta rolüdür, temaruzda para, rapor ya da cezadan kaçış gibi bilinçli dış kazanç vardır ve temaruz bir ruhsal bozukluk değildir (s. 47).",
+      "Konversiyon, hastalık kaygısı ve bedensel belirti bozukluğu çeldiricileri belirtinin istemsiz üretildiği tanılardır; kökteki test isteği ve dramatik sunum bunlara uymaz (s. 47)."
+     ],
+     "ornek": "Slayttaki örnek olgu bu ipuçlarının canlı hâlidir: hekim kızı olan bir ameliyathane teknikeri kendine defalarca Pseudomonas enjekte ederek yinelenen sepsis atakları geçirir ve böbrek yetmezliğinden ölür; para, izin ya da dava kazancı yoktur (s. 44). Sağlık mesleği, kendine hasar ve dış ödül yokluğu Yates ve Feldman'ın 455 olguluk serisindeki profille (%66 kadın, 34 yaş, %59 kendine hasar) örtüşür (s. 46). Hoca bu olguyu anlatırken amacı vurguladı: hasta para ya da izin almıyor, dış bir kazancı yok; amacı hasta rolüdür. Bunu temaruzla karşılaştırdı: cezadan kaçmak için şizofreni taklidi yapan katil ya da engelli raporu almak için belirti uyduran kişi temaruzdur, çünkü rapor, para ya da cezadan kaçış gibi dış bir ödül vardır.",
+     "tuzak": "Yapay bozuklukla temaruzu karıştırmak; ikisinde de belirti bilinçli üretilir, ayrım dış ödülün varlığıdır. Konversiyonu düşünmek de hatadır, çünkü konversiyonda belirti istemsizdir."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Kurgu Soru: Aşağıdakilerden hangisi somatizasyonun (bedensel belirti bozukluğu) nedenlerinden biridir?",
+     "cevap": "Başkalarına yönelik saldırgan ve düşmanca arzuların bedensel yakınmalara aktarılması",
+     "s": [
+      17
+     ],
+     "aciklama": [
+      "Soru 2023-24 öğrenci derlemesinde yalnız kökle kayıtlıdır ('somatizasyon nedenleri') ve bedensel belirti bozukluğunun psikodinamik etiyolojisini ölçer.",
+      "Doğru cevap bastırılan öfkedir: slayt psikodinamik etkenler altında 'başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır' der; aynı kümede yardımı geri çevirme (öfkenin yardım ve ilgiyi reddederek dışa vurulması) ve kefaret olarak acı (suçluluk ve düşük benlik değerine karşı ağrının ceza işlevi görmesi) vardır (s. 17).",
+      "En güçlü çeldiriciler komşu tanıların tanımlarıdır: dış kazanç için bilinçli belirti üretme temaruzun, dış ödül olmadan aldatmaya dayalı belirti üretme yapay bozukluğun tanımıdır (s. 47); ikisi de somatizasyonun nedeni değildir, çünkü bedensel belirti bozukluğunda belirti istemsizdir.",
+      "Slayt etiyolojiyi dört kümede verir: biyolojik (genetik, santral duyarlılaşma, stres fizyolojisi), psikolojik (nörotisizm, aleksitimi, hastalık inançları), sosyal (çocukluk yaşantıları, aile, kültür) ve psikodinamik; 'yüksek sosyoekonomik düzey' gibi ters yönlü önermeler çeldiricidir, çünkü yüksek düzey iyi prognoz göstergesidir (s. 16–19)."
+     ],
+     "ornek": "Slaytın organ dili sayfasındaki boşanma sürecindeki 45 yaşındaki hasta örneği aynı mekanizmayı gösterir: 'Nasıl hissediyorsunuz' sorusuna üzüntü ya da öfke sözcüğü kullanamadan 'göğsüm sıkışıyor, midem yanıyor' diye yanıt verir; söze dökülemeyen duygu bedenden konuşur (s. 5). Aleksitimi psikolojik, bastırılan öfke psikodinamik etkendir. Hoca derste aleksitimiyi duyguları tanımada ve adlandırmada güçlük diye tanımladı ve aynı hastayı örnek verdi: 'İyiyim hocam, sadece göğsüm sıkışıyor.' Duyguyu ayırt edemeyen kişi onu bedensel bir yolla dile getirir.",
+     "tuzak": "Yapay bozukluk ya da temaruz tanımını somatizasyon nedeni sanmak; bedensel belirti bozukluğunda belirti bilinçli üretilmez."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+     "cevap": "Semptomlar 30 yaşından sonra başlar",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Soru eski adıyla somatizasyon bozukluğunun özelliklerini yanlış önerme kalıbıyla sorar; kökteki belirti sayıları DSM-IV ölçütleridir ve 2026-27 slaytında yer almaz, bu yüzden eşleme ilgili düzeyindedir.",
+      "Doğru cevap 'semptomlar 30 yaşından sonra başlar' önermesidir; diğer önermeler slaytla örtüşür: seyir dönemseldir ve dönemler aylar ya da yıllar sürebilir (s. 19), depresyon ve anksiyeteyle eş tanı çok yüksektir (s. 15), hasta normal tetkik ve hekim güvencesiyle rahatlamaz, doktor doktor dolaşır ve yinelenen tetkik ister (s. 14).",
+      "DSM-5-TR'de bu bozukluğun adı bedensel belirti bozukluğudur ve belirti sayısı şartı kaldırılmıştır: ölçüt belirtinin tıbben açıklanamaması ya da belirli sayıda belirti değil, belirtiye verilen aşırı yanıttır (s. 10, 13).",
+      "En güçlü çeldirici kronik seyir ve işlev kaybı önermesidir; öğrenci 'olguların %33–50'si düzelir' bilgisinden yola çıkıp kronikliği yanlış sanabilir, oysa slayt seyri dalgalı ve uzun soluklu diye tanımlar (s. 19)."
+     ],
+     "ornek": "Slayttaki Ayşe Hanım vakası eski somatizasyon tablosunun bugünkü karşılığıdır: iki yılda dört uzmanlığa karın ağrısı, yorgunluk ve eklem ağrısıyla başvurmuş, tetkikleri normal ama rahatlamıyor, günde saatlerce belirtilerini izliyor; sayı değil, belirtiye verilen yanıt tanıyı koydurur (s. 12–13).",
+     "tuzak": "DSM-IV'ün belirti sayısı ve 30 yaş öncesi başlangıç ölçütlerini DSM-5-TR bedensel belirti bozukluğunun ölçütü sanmak."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+     "cevap": "Semptomlar 30 yaşından sonra başlar",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Bu soru 2019-20'deki somatizasyon sorusunun bir önceki yıl sorulan kopyasıdır ve aynı bilgiyi ölçer: somatizasyon bozukluğu için yanlış önerme.",
+      "Doğru cevap yine 30 yaş sonrası başlangıç önermesidir; dersin 2026-27 slaytı yaş eşiği vermez, ancak doğru önermelerin bilgisi slayttadır: dalgalı ve dönemsel seyir (s. 19), yüksek eş tanı (s. 15), hastanın psikolojik kökeni kabul etmeyip tetkik istemesi (s. 14).",
+      "Slayt 'hasta yakınmayı tümüyle bedensel yaşar' ve 'normal tetkik ve hekim güvencesi rahatlatmaz' diyerek hastanın psikolojik kökeni kolay kabul etmediğini anlatır; aksi önerme de yanlış olurdu (s. 14).",
+      "En güçlü çeldirici eş tanı önermesidir; depresyon ve anksiyete eşlik ettiğinde öğrenci tanının değiştiğini sanabilir, oysa slayt eş tanının çok yüksek olduğunu ve belirtiyi görünce ruh halinin de sorulması gerektiğini söyler (s. 15)."
+     ],
+     "ornek": "Slayt prognoz sayfasında düzelebilir depresyon ya da anksiyetenin eşlik etmesini iyi prognoz göstergesi sayar; çok sayıda belirti, çocukluk çağı olumsuz yaşantıları ve süreğen tıbbi hastalık ise kötü gidişle ilişkilidir (s. 19). Eş tanı tanıyı bozmaz, seyri belirler. Hoca da depresyon ve anksiyete bozukluklarıyla eş tanının çok sık olduğunu, bu yüzden hangi bölümde hekim olunursa olunsun hastanın ruh hâlinin mutlaka sorgulanması gerektiğini vurguladı.",
+     "tuzak": "Eş tanının tanıyı dışladığını ya da hastanın psikolojik kökeni kolayca kabul ettiğini sanmak."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış 9 çıkmışı 2018-19'dan 2025-26'ya yayılır ve neredeyse hepsi tanı adı ister. Üç alt başlık tekrar sorulur: hastalık kaygısı bozukluğu ile bedensel belirti bozukluğunun ayrımı (belirtisiz kanser korkusu vakası, 2020-21), konversiyonun klasik kavramı güzel aldırmazlık (2018-19 ve 2019-20, iki yönde) ve DSM-5 sınıflamasında beden algısı bozukluğunun grupta sayılmaması (2021-22 final). Yapay bozukluk klinik ipuçlarının art arda dizildiği uzun kök (2022-23) ve epileptik nöbet ile işlevsel nöbet tablosunun yanlış önerme kalıbı (2025-26) daha yeni sorulardır. Çeldiriciler her zaman aynı ailenin komşu tanılarıdır: somatizasyon, hipokondriyazis, konversiyon, yapay bozukluk, simülasyon ve vücut dismorfik bozukluğu; bu yüzden her tanının hem eski hem yeni adı bilinmelidir.",
+    "2025-2026: Epileptik nöbet ile psödonöbet (psikojenik non-epileptik nöbet) ayrımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Epileptik nöbet genellikle 10 dakika kadar sürer.",
+    "Soru epileptik nöbet ile işlevsel (psikojenik non-epileptik) nöbetin yatak başı ayrımını ölçer ve tablodaki satırlardan birini ters çevirerek yanlış önerme kalıbıyla sorar.",
+    "Doğru cevap sürelerin ters çevrildiği önermedir: slayt epileptik nöbeti genellikle 1–2 dakika, işlevsel nöbeti çoğunlukla 2 dakikadan uzun ve şiddeti artıp azalan bir olay olarak verir (s. 35); 'epileptik nöbet 10 dakika sürer, psödonöbet daha kısadır' demek bu satırı tam tersine çevirir.",
+    "Diğer önermeler aynı tablonun doğru satırlarıdır: işlevsel nöbette gözler çoğunlukla kapalı ve açtırmaya dirençlidir, hareketler düzensiz ve iki taraf uyumsuzdur, nöbet sonrası ağlama ve hızlı toparlanma görülür; epileptik nöbette ise gözler açık, hareketler kalıplaşmış ve senkron, nöbet sonrası bilinç bulanıklığı vardır (s. 35).",
+    "En güçlü çeldirici, doğru satırları yanlış sanmaktır; özellikle 'işlevsel nöbette gözler kapalıdır' önermesi öğrenciye ters gelir, oysa slayt kapalı gözü ve açtırmaya direnci işlevsel nöbetin tipik bulgusu sayar.",
+    "Örnek: Slaytın uyku ve video-EEG sayfaları aynı ayrımı pekiştirir: gözleri kapalı 'uyuyor gibi' yatan hastada EEG olaydan hemen önce uyanık alfa ritmi (8–13 Hz) gösterir ve olay sırasında yalnız kas artefaktı vardır; gerçek epileptik nöbette ise iktal diken-dalga ve ardından postiktal yavaşlama görülür (s. 36–37). Video-EEG'de deşarj yokluğu altın standarttır. Hoca da derste aynı ayrımı sayarak anlattı: epileptik nöbet genellikle 1–2 dakika sürer ve gözler açıktır; işlevsel nöbet çoğunlukla 2 dakikadan uzun sürer, şiddeti nöbet sırasında artıp azalır, gözler kapalıdır ve açtırmaya çalışınca hasta direnç gösterir.",
+    "Tuzak: Süreleri ters öğrenmek ve uzun süren nöbeti epileptik sanmak; ayrıca işlevsel nöbeti olanların %22'sinde epilepsi de bulunduğu için tek bir bulguyla tanı koymak (s. 36).",
+    "2019-2020: Aşağıdaki bozuklukların hangisinde hastada güzel aldırmazlık (la belle indifférence) vardır?",
+    "Cevap: Konversiyon bozukluğu.",
+    "Soru güzel aldırmazlık (la belle indifférence) kavramının hangi bozuklukla anıldığını ölçer; doğrudan kök kalıbıdır.",
+    "Doğru cevap konversiyon bozukluğudur, yani bugünkü adıyla işlevsel nörolojik belirti bozukluğu: slayt güzel aldırmazlığı bu bozukluğun klasik kavramları arasında 'ciddi belirtiye karşın uygunsuz kayıtsızlık' diye tanımlar (s. 38).",
+    "Çeldiriciler aynı ailenin komşu tanılarıdır: somatizasyon bozukluğunda hasta belirtisini umursamaz değil, tam tersine sürekli belirtiyle uğraşır ve tetkik ister (s. 14); hipokondriyaziste (hastalık kaygısı bozukluğu) kayıtsızlık değil, hastalık korkusu ön plandadır (s. 22); vücut dismorfik bozukluğu bu grupta bile değildir (s. 18).",
+    "Slayt kavramı tarihsel sayar ve tanısal değerinin olmadığını, muayenede güvenilir bulgular arasında yer almadığını açıkça yazar (s. 31, 38); sınavda kavram adı ile bozukluk eşleştirilir, ama 'tanı koydurur' denemez.",
+    "Örnek: Slayttaki 19 yaşındaki öğrenci vakası (sınav sonrası sol kolunu kaldıramıyor, dikkat dağıtınca güç artıyor) konversiyonun bugünkü tanı mantığını gösterir: tanıyı güzel aldırmazlık gibi tutum bulguları değil, dikkat dağıldığında gücün artması gibi olumlu muayene bulguları koydurur (s. 48–49). Hoca olumlu muayene bulgusuna derste titreme örneğini verdi: hastadan sağlam eliyle hekimin ritmine eşlik etmesi istenir; hekim ritmi yavaşlatıp hızlandırdıkça titreyen el de bu ritme uyar ya da durur, çünkü hasta ikisini aynı anda yapamaz.",
+    "Tuzak: Güzel aldırmazlığı tanı ölçütü sanmak; slayt onu orta hatta bölünen duyu kaybı ve telkinle düzelmeyle birlikte 'güvenilir değil' listesine koyar (s. 31).",
+    "2018-2019: Konversiyon bozukluğunda hastanın ciddi semptomlarına karşı lakayt tutumuna ne denir?",
+    "Cevap: Güzel aldırmazlık.",
+    "Soru aynı kavramı ters yönden sorar: konversiyon hastasının ciddi belirtisine karşı gösterdiği kayıtsız tutumun adı istenir.",
+    "Doğru cevap güzel aldırmazlıktır; slayt tanımı 'ciddi belirtiye karşın uygunsuz kayıtsızlık' biçimindedir ve kavramı birincil kazanç, ikincil kazanç ve özdeşimle aynı sayfada verir (s. 38).",
+    "En güçlü çeldirici 'yansıtmalı özdeşim'dir; slayttaki özdeşim kavramı önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır ve yasta görülür (s. 38), tutumla değil belirtinin kaynağıyla ilgilidir. Birincil kazanç da belirtinin çatışmayı bilinç dışında tutmasıdır, bir tutum adı değildir.",
+    "Kavramın adı Fransızca kökenlidir (la belle indifférence) ve slaytın okuma listesindeki Stone 2006 makalesi tam bu kavramın tanısal değerini sorgular (s. 51).",
+    "Örnek: Slayt klasik kavramları dört kartta yan yana verir: birincil kazanç içsel çatışmanın bilinç dışında tutulması, ikincil kazanç hasta rolünün dış yararları (destek, ilgi, sorumluluktan uzaklaşma), güzel aldırmazlık uygunsuz kayıtsızlık, özdeşim önemli kişinin belirtisinin örnek alınması (s. 38). Dördü birlikte öğrenildiğinde çeldiriciler birbirinden ayrılır. Hoca derste bu ayrımı şöyle özetledi: dışarıdan bakınca hastanın ikincil kazancı var gibi görünebilir; birincil kazanç bilinç dışı çatışmanın bilince çıkmamasıdır, ikincil kazanç hastalığa bağlı görülen ilgi ve destektir. Hasta ise yakınmasını tümüyle bedensel bir hastalık olarak yaşar ve bu kazançları fark etmez.",
+    "Tuzak: Özdeşim ile güzel aldırmazlığı, birincil kazanç ile ikincil kazancı birbirine karıştırmak.",
+    "2021-2022: Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+    "Cevap: Beden algısı bozukluğu.",
+    "Soru DSM-5 bedensel belirti ve ilişkili bozukluklar grubunun üyelerini ölçer ve grupta olmayan tanıyı olumsuz kökle ister.",
+    "Doğru cevap beden algısı bozukluğudur: slaytın sınıflama tablosu altı başlık sayar (bedensel belirti bozukluğu, hastalık kaygısı bozukluğu, işlevsel nörolojik belirti bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler, yapay bozukluk, belirlenmiş/belirlenmemiş diğer) ve beden algısı bozukluğu bu listede yoktur (s. 9).",
+    "Slayt beden algısı bozukluğunu ayırıcı tanı sayfasında komşu ruhsal bozukluklar arasında, depresyon, panik ve sanrısal bozuklukla birlikte sayar (s. 18); yani bu grubun üyesi değil, ayırıcı tanısıdır.",
+    "Diğer dört şık (yapay bozukluk, konversiyon bozukluğu, hastalık kaygısı bozukluğu, bedensel belirti bozukluğu) tablonun satırlarıyla birebir örtüşür; konversiyon adı tabloda 'işlevsel nörolojik belirti bozukluğu (dönüşüm bozukluğu)' olarak geçer.",
+    "Örnek: Slaytın dört vakalık kapanış sayfası grubun dört büyük üyesini tek tek pekiştirir: ağrılı ve belirtisiyle uğraşan kadın (bedensel belirti bozukluğu), kolunu kaldıramayan öğrenci (işlevsel nörolojik belirti bozukluğu), insülin saklayan hemşire (yapay bozukluk), belirtisiz tümör korkusu olan erkek (hastalık kaygısı bozukluğu); beden algısı bozukluğuna ait bir vaka yoktur (s. 48–49). Hoca grubun sınırını derste migren örneğiyle açtı: belirti tıbben açıklanabilir olsa da, örneğin migren tanısı konmuş ama migreniyle aşırı uğraşan hastaya da bedensel belirti bozukluğu tanısı konabilir.",
+    "Tuzak: Beden algısı (dismorfik) bozukluğunu bedensel belirti grubunda sanmak; adında 'beden' geçmesi yanıltır, slayt onu ayırıcı tanı listesine koyar.",
+    "2020-2021: Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikâyeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendini işlerine veremediğini ifade eden hastada ön tanı ne olabilir?",
+    "Cevap: Hastalık kaygısı bozukluğu.",
+    "Soru belirtisiz hastalık korkusu vakasında öntanıyı ister ve bedensel belirti bozukluğu ile hastalık kaygısı bozukluğunun ayrımını ölçer.",
+    "Doğru cevap hastalık kaygısı bozukluğudur: slayttaki B ölçütü 'bedensel belirti yok ya da çok hafif', A ölçütü 'ciddi bir hastalığı olduğu ya da olacağı ile uğraş' ve D ölçütündeki bakım arayan tip (sürekli kendini kontrol etme, tetkik) vakadaki 'şikâyeti yok, kanser korkusu, internet okumaları' üçlüsüyle birebir örtüşür (s. 22–23).",
+    "En güçlü çeldirici somatik (bedensel) belirti bozukluğudur; karşılaştırma tablosuna göre orada belirti belirgin ve sıkıntı vericidir, kaygının odağı belirtinin ciddiyetidir ve davranış belirtiyle uğraş, tetkik ve analjeziktir; vakada belirti olmadığı için bu tanı elenir (s. 24).",
+    "Yaygın kaygı bozukluğu ve yapay bozukluk çeldiricileri de slaytla elenir: YAB hastalık kaygısı bozukluğunun F ölçütünde dışlanması gereken, hastalık odaklı olmayan yaygın kaygıdır (s. 23); yapay bozuklukta belirti bilinçli üretilir, bu hasta belirti üretmez (s. 45).",
+    "Örnek: Slayttaki Mert vakası sınav vakasının aynısıdır: 22 yaşında, hiçbir belirtisi yok, arkadaşının babası kolon kanserinden ölünce 'ya bende de varsa' diye takılmış, gece forumlarda belirti okuyor, üç ayda iki kez kolonoskopi istemiş ve normal sonuç onu yalnız bir hafta rahatlatıyor (s. 21). Slaytın sorusu 'belirti yoksa sorun nerede' diyerek cevabı verir: korku hastalığın kendisinedir. Hoca da bu bozukluğu 'dönem 3 hastalığı' diye örnekledi: tıp öğrencisi yeni hastalıklar öğrendikçe bir belirti görünce 'acaba bende var mı' diye kaygılanabilir ve bu kaygı öğrendikçe geçer.",
+    "Tuzak: Belirtisiz kanser korkusuna bedensel belirti bozukluğu demek; ayrım tek soruyla yapılır: bedensel belirti var mı? Yoksa hastalık kaygısı bozukluğudur.",
+    "2022-2023: Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere ve testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerin gelişimi şeklinde ortaya çıkan bir tabloda aşağıdakilerden hangisi düşünülmelidir?",
+    "Cevap: Yapay bozukluk.",
+    "Soru yapay bozukluğun klinik ipuçlarını uzun bir kökte art arda dizer ve tanıyı ister; kök slaytın 'ne zaman şüphelenmeli' listesinin cümle hâline getirilmiş biçimidir.",
+    "Doğru cevap yapay bozukluktur: olağandışı ve dramatik, tıbbi bilgiyle örtüşmeyen tablo, beklenen tedaviye yanıtsızlık ve biri düzelince yenisinin çıkması, girişime ve teste istekli olma, öyküyü yeniden anlatmaya heves ve belirtinin ne zaman kötüleşeceğini önceden bilme slaytta yapay bozukluğun ipuçları olarak sıralanır (s. 46).",
+    "En güçlü çeldirici simülasyondur (temaruz); bilinçlilik tablosuna göre ikisinde de belirti bilinçli üretilir, ama yapay bozuklukta dış ödül yoktur ve güdü bilinçdışı hasta rolüdür, temaruzda para, rapor ya da cezadan kaçış gibi bilinçli dış kazanç vardır ve temaruz bir ruhsal bozukluk değildir (s. 47).",
+    "Konversiyon, hastalık kaygısı ve bedensel belirti bozukluğu çeldiricileri belirtinin istemsiz üretildiği tanılardır; kökteki test isteği ve dramatik sunum bunlara uymaz (s. 47).",
+    "Örnek: Slayttaki örnek olgu bu ipuçlarının canlı hâlidir: hekim kızı olan bir ameliyathane teknikeri kendine defalarca Pseudomonas enjekte ederek yinelenen sepsis atakları geçirir ve böbrek yetmezliğinden ölür; para, izin ya da dava kazancı yoktur (s. 44). Sağlık mesleği, kendine hasar ve dış ödül yokluğu Yates ve Feldman'ın 455 olguluk serisindeki profille (%66 kadın, 34 yaş, %59 kendine hasar) örtüşür (s. 46). Hoca bu olguyu anlatırken amacı vurguladı: hasta para ya da izin almıyor, dış bir kazancı yok; amacı hasta rolüdür. Bunu temaruzla karşılaştırdı: cezadan kaçmak için şizofreni taklidi yapan katil ya da engelli raporu almak için belirti uyduran kişi temaruzdur, çünkü rapor, para ya da cezadan kaçış gibi dış bir ödül vardır.",
+    "Tuzak: Yapay bozuklukla temaruzu karıştırmak; ikisinde de belirti bilinçli üretilir, ayrım dış ödülün varlığıdır. Konversiyonu düşünmek de hatadır, çünkü konversiyonda belirti istemsizdir.",
+    "2023-2024: Kurgu Soru: Aşağıdakilerden hangisi somatizasyonun (bedensel belirti bozukluğu) nedenlerinden biridir?",
+    "Cevap: Başkalarına yönelik saldırgan ve düşmanca arzuların bedensel yakınmalara aktarılması.",
+    "Soru 2023-24 öğrenci derlemesinde yalnız kökle kayıtlıdır ('somatizasyon nedenleri') ve bedensel belirti bozukluğunun psikodinamik etiyolojisini ölçer.",
+    "Doğru cevap bastırılan öfkedir: slayt psikodinamik etkenler altında 'başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır' der; aynı kümede yardımı geri çevirme (öfkenin yardım ve ilgiyi reddederek dışa vurulması) ve kefaret olarak acı (suçluluk ve düşük benlik değerine karşı ağrının ceza işlevi görmesi) vardır (s. 17).",
+    "En güçlü çeldiriciler komşu tanıların tanımlarıdır: dış kazanç için bilinçli belirti üretme temaruzun, dış ödül olmadan aldatmaya dayalı belirti üretme yapay bozukluğun tanımıdır (s. 47); ikisi de somatizasyonun nedeni değildir, çünkü bedensel belirti bozukluğunda belirti istemsizdir.",
+    "Slayt etiyolojiyi dört kümede verir: biyolojik (genetik, santral duyarlılaşma, stres fizyolojisi), psikolojik (nörotisizm, aleksitimi, hastalık inançları), sosyal (çocukluk yaşantıları, aile, kültür) ve psikodinamik; 'yüksek sosyoekonomik düzey' gibi ters yönlü önermeler çeldiricidir, çünkü yüksek düzey iyi prognoz göstergesidir (s. 16–19).",
+    "Örnek: Slaytın organ dili sayfasındaki boşanma sürecindeki 45 yaşındaki hasta örneği aynı mekanizmayı gösterir: 'Nasıl hissediyorsunuz' sorusuna üzüntü ya da öfke sözcüğü kullanamadan 'göğsüm sıkışıyor, midem yanıyor' diye yanıt verir; söze dökülemeyen duygu bedenden konuşur (s. 5). Aleksitimi psikolojik, bastırılan öfke psikodinamik etkendir. Hoca derste aleksitimiyi duyguları tanımada ve adlandırmada güçlük diye tanımladı ve aynı hastayı örnek verdi: 'İyiyim hocam, sadece göğsüm sıkışıyor.' Duyguyu ayırt edemeyen kişi onu bedensel bir yolla dile getirir.",
+    "Tuzak: Yapay bozukluk ya da temaruz tanımını somatizasyon nedeni sanmak; bedensel belirti bozukluğunda belirti bilinçli üretilmez.",
+    "2019-2020: Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+    "Cevap: Semptomlar 30 yaşından sonra başlar.",
+    "Soru eski adıyla somatizasyon bozukluğunun özelliklerini yanlış önerme kalıbıyla sorar; kökteki belirti sayıları DSM-IV ölçütleridir ve 2026-27 slaytında yer almaz, bu yüzden eşleme ilgili düzeyindedir.",
+    "Doğru cevap 'semptomlar 30 yaşından sonra başlar' önermesidir; diğer önermeler slaytla örtüşür: seyir dönemseldir ve dönemler aylar ya da yıllar sürebilir (s. 19), depresyon ve anksiyeteyle eş tanı çok yüksektir (s. 15), hasta normal tetkik ve hekim güvencesiyle rahatlamaz, doktor doktor dolaşır ve yinelenen tetkik ister (s. 14).",
+    "DSM-5-TR'de bu bozukluğun adı bedensel belirti bozukluğudur ve belirti sayısı şartı kaldırılmıştır: ölçüt belirtinin tıbben açıklanamaması ya da belirli sayıda belirti değil, belirtiye verilen aşırı yanıttır (s. 10, 13).",
+    "En güçlü çeldirici kronik seyir ve işlev kaybı önermesidir; öğrenci 'olguların %33–50'si düzelir' bilgisinden yola çıkıp kronikliği yanlış sanabilir, oysa slayt seyri dalgalı ve uzun soluklu diye tanımlar (s. 19).",
+    "Örnek: Slayttaki Ayşe Hanım vakası eski somatizasyon tablosunun bugünkü karşılığıdır: iki yılda dört uzmanlığa karın ağrısı, yorgunluk ve eklem ağrısıyla başvurmuş, tetkikleri normal ama rahatlamıyor, günde saatlerce belirtilerini izliyor; sayı değil, belirtiye verilen yanıt tanıyı koydurur (s. 12–13).",
+    "Tuzak: DSM-IV'ün belirti sayısı ve 30 yaş öncesi başlangıç ölçütlerini DSM-5-TR bedensel belirti bozukluğunun ölçütü sanmak.",
+    "2018-2019: Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+    "Cevap: Semptomlar 30 yaşından sonra başlar.",
+    "Bu soru 2019-20'deki somatizasyon sorusunun bir önceki yıl sorulan kopyasıdır ve aynı bilgiyi ölçer: somatizasyon bozukluğu için yanlış önerme.",
+    "Doğru cevap yine 30 yaş sonrası başlangıç önermesidir; dersin 2026-27 slaytı yaş eşiği vermez, ancak doğru önermelerin bilgisi slayttadır: dalgalı ve dönemsel seyir (s. 19), yüksek eş tanı (s. 15), hastanın psikolojik kökeni kabul etmeyip tetkik istemesi (s. 14).",
+    "Slayt 'hasta yakınmayı tümüyle bedensel yaşar' ve 'normal tetkik ve hekim güvencesi rahatlatmaz' diyerek hastanın psikolojik kökeni kolay kabul etmediğini anlatır; aksi önerme de yanlış olurdu (s. 14).",
+    "En güçlü çeldirici eş tanı önermesidir; depresyon ve anksiyete eşlik ettiğinde öğrenci tanının değiştiğini sanabilir, oysa slayt eş tanının çok yüksek olduğunu ve belirtiyi görünce ruh halinin de sorulması gerektiğini söyler (s. 15).",
+    "Örnek: Slayt prognoz sayfasında düzelebilir depresyon ya da anksiyetenin eşlik etmesini iyi prognoz göstergesi sayar; çok sayıda belirti, çocukluk çağı olumsuz yaşantıları ve süreğen tıbbi hastalık ise kötü gidişle ilişkilidir (s. 19). Eş tanı tanıyı bozmaz, seyri belirler. Hoca da depresyon ve anksiyete bozukluklarıyla eş tanının çok sık olduğunu, bu yüzden hangi bölümde hekim olunursa olunsun hastanın ruh hâlinin mutlaka sorgulanması gerektiğini vurguladı.",
+    "Tuzak: Eş tanının tanıyı dışladığını ya da hastanın psikolojik kökeni kolayca kabul ettiğini sanmak."
+   ],
+   "v": "da191fa912"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanı ve ayırıcı tanı (%50) ve tanım ve kavram (%25) sorulur."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%62) ve hatırlama (%25) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanı ve ayırıcı tanı (%50) ve tanım ve kavram (%25) sorulur.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%62) ve hatırlama (%25) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "405a9e554d"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Hastalık Kaygısı Bozukluğu",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yap."
+    },
+    {
+     "baslik": "Beden algısı bozukluğu",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?"
+    },
+    {
+     "baslik": "Güzel aldırmazlık: konversiyonun klasik kavramı",
+     "metin": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. 2018-19 ve 2019-20'de soruldu: bir yıl kavramın adı, öteki yıl hangi bozuklukta görüldüğü istendi; çeldiriciler her seferinde aynı aileden komşu tanılardır."
+    },
+    {
+     "baslik": "Hastalık kaygısı bozukluğu: belirti yok, korku var",
+     "metin": "2020-21'de vaka olarak soruldu (tıbbi sorunu ve şikâyeti yok, kanser korkusu, internet okumaları); vaka→tanı kalıbının tipik örneğidir."
+    },
+    {
+     "baslik": "DSM-5-TR grubu: altı başlık, beden algısı bozukluğu dışarıda",
+     "metin": "2021-22 finalde soruldu: grupta sayılmayan tanı (beden algısı bozukluğu) istendi; sınıflama sorusu her yıl sorulabilecek biçimdedir."
+    },
+    {
+     "baslik": "Yapay bozukluk: klinik ipuçları",
+     "metin": "2022-23'te soruldu: ipuçları arka arkaya dizilmiş uzun bir kökten tanı istendi; en güçlü çeldirici simülasyondu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Hastalık Kaygısı Bozukluğu: Çıkmışlarda 3 kez soruldu. Örnek kök: Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yap.",
+    "Beden algısı bozukluğu: Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+    "Güzel aldırmazlık: konversiyonun klasik kavramı: Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. 2018-19 ve 2019-20'de soruldu: bir yıl kavramın adı, öteki yıl hangi bozuklukta görüldüğü istendi; çeldiriciler her seferinde aynı aileden komşu tanılardır.",
+    "Hastalık kaygısı bozukluğu: belirti yok, korku var: 2020-21'de vaka olarak soruldu (tıbbi sorunu ve şikâyeti yok, kanser korkusu, internet okumaları); vaka→tanı kalıbının tipik örneğidir.",
+    "DSM-5-TR grubu: altı başlık, beden algısı bozukluğu dışarıda: 2021-22 finalde soruldu: grupta sayılmayan tanı (beden algısı bozukluğu) istendi; sınıflama sorusu her yıl sorulabilecek biçimdedir.",
+    "Yapay bozukluk: klinik ipuçları: 2022-23'te soruldu: ipuçları arka arkaya dizilmiş uzun bir kökten tanı istendi; en güçlü çeldirici simülasyondu.",
+    "Çalışma yolu: Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "5cafc6e2cc"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders psikosomatik kavramını, etiyoloji kuramlarını ve belirtiyi büyüten mekanizmaları anlattıktan sonra DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubunun altı başlığını işler: bedensel belirti bozukluğu, hastalık kaygısı bozukluğu, işlevsel nörolojik belirti (konversiyon) bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler (Takotsubo örneğiyle) ve yapay bozukluk. Her bozuklukta tanı ölçütleri, klinik özellikler, epidemiyoloji, ayırıcı tanı ve gidiş verilir; işlevsel bozuklukta olumlu muayene bulguları ve epileptik nöbet ile işlevsel nöbet ayrımı ayrıntılı anlatılır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders psikosomatik kavramını, etiyoloji kuramlarını ve belirtiyi büyüten mekanizmaları anlattıktan sonra DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubunun altı başlığını işler: bedensel belirti bozukluğu, hastalık kaygısı bozukluğu, işlevsel nörolojik belirti (konversiyon) bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler (Takotsubo örneğiyle) ve yapay bozukluk. Her bozuklukta tanı ölçütleri, klinik özellikler, epidemiyoloji, ayırıcı tanı ve gidiş verilir; işlevsel bozuklukta olumlu muayene bulguları ve epileptik nöbet ile işlevsel nöbet ayrımı ayrıntılı anlatılır."
+   ],
+   "v": "f4a6017249"
+  },
+  {
+   "id": "2s05-15",
+   "baslik": "Birincil kazanç, ikincil kazanç, özdeşim",
+   "giris": "Birincil kazanç içsel çatışmanın bilinç dışında tutulmasıdır; ikincil kazanç hasta rolünün getirdiği destek, ilgi ve sorumluluktan uzaklaşma gibi dış yararlardır; özdeşim önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır.",
+   "s": [
+    3,
+    38
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "içsel çatışmanın bilinç dışında tutulması; belirti sembolik anlam taşır. Freud'un psikanalitik bakışında kişinin kaygı verici çatışmanın bilincine varmasının bedensel belirtiyle önlenmesidir."
+    },
+    {
+     "metin": "hasta rolünün getirdiği dış yararlar: destek, ilgi, sorumluluktan uzaklaşma. Bedensel belirti bozukluğunda dışarıdan ikincil kazanç var gibi görünür; hasta ise yakınmayı tümüyle bedensel yaşar."
+    },
+    {
+     "metin": "önemli bir kişinin belirtilerinin bilinçdışı örnek alınması; yasta görülebilir. Yansıtmalı özdeşimle karıştırılmamalı."
+    },
+    {
+     "metin": "ciddi belirtiye karşın uygunsuz kayıtsızlık; tarihsel, tanısal değeri yok."
+    },
+    {
+     "metin": "bedensel tutuluş psikojeniktir (gerçek kaynak bilinçdışı çatışma, bastırılmış duygu ya da travmatik anı); belirti bir çözüm yoludur; enerji kaybolmaz biçim değiştirir, çatışma kaygı yerine bedensel belirtiye dönüşür. Bugünkü sınıflamalar tanıyı bu kurama dayandırmaz."
+    }
+   ],
+   "klip": "o-2s05-15",
+   "ses": [
+    "Birincil kazanç, ikincil kazanç, özdeşim.",
+    "Birincil kazanç içsel çatışmanın bilinç dışında tutulmasıdır; ikincil kazanç hasta rolünün getirdiği destek, ilgi ve sorumluluktan uzaklaşma gibi dış yararlardır; özdeşim önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır.",
+    "içsel çatışmanın bilinç dışında tutulması; belirti sembolik anlam taşır. Freud'un psikanalitik bakışında kişinin kaygı verici çatışmanın bilincine varmasının bedensel belirtiyle önlenmesidir.",
+    "hasta rolünün getirdiği dış yararlar: destek, ilgi, sorumluluktan uzaklaşma. Bedensel belirti bozukluğunda dışarıdan ikincil kazanç var gibi görünür; hasta ise yakınmayı tümüyle bedensel yaşar.",
+    "önemli bir kişinin belirtilerinin bilinçdışı örnek alınması; yasta görülebilir. Yansıtmalı özdeşimle karıştırılmamalı.",
+    "ciddi belirtiye karşın uygunsuz kayıtsızlık; tarihsel, tanısal değeri yok.",
+    "bedensel tutuluş psikojeniktir (gerçek kaynak bilinçdışı çatışma, bastırılmış duygu ya da travmatik anı); belirti bir çözüm yoludur; enerji kaybolmaz biçim değiştirir, çatışma kaygı yerine bedensel belirtiye dönüşür. Bugünkü sınıflamalar tanıyı bu kurama dayandırmaz."
+   ],
+   "v": "8f4b7222d6"
+  },
+  {
+   "id": "2s05-02",
+   "baslik": "DSM-5-TR grubu: altı başlık, beden algısı bozukluğu dışarıda",
+   "giris": "DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubu altı başlıktır; beden algısı bozukluğu bu grupta yer almaz.",
+   "s": [
+    9,
+    18
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "sıkıntı veren belirtiler ve bunlara aşırı düşünce, duygu, davranış."
+    },
+    {
+     "metin": "belirti yok ya da hafif; ciddi hastalık korkusu."
+    },
+    {
+     "metin": "İşlevsel nörolojik belirti bozukluğu (dönüşüm bozukluğu): nörolojik hastalıkla uyuşmayan motor ya da duyusal belirtiler."
+    },
+    {
+     "metin": "Diğer tıbbi durumları etkileyen psikolojik etkenler: var olan bir hastalığın seyrini olumsuz etkileyen ruhsal etkenler."
+    },
+    {
+     "metin": "dış ödül olmadan, aldatmaya dayalı belirti üretme."
+    },
+    {
+     "metin": "ölçütleri tam karşılamayan tablolar."
+    },
+    {
+     "metin": "beden algısı bozukluğu, depresyon, panik bozukluğu, yaygın anksiyete, sanrısal bozukluk ve temaruz ayırıcı tanı tablosunda ruhsal bozukluklar sütununda sayılır; temaruz DSM-5-TR'de ruhsal bozukluk sayılmaz. Soru \"hangisi bu grupta sayılmaz\" biçiminde geldiğinde beden algısı bozukluğu aranır; \"hangisi bu gruptadır\" biçiminde geldiğinde yapay bozukluk ya da dönüşüm bozukluğu gibi altı başlıktan biri seçilir."
+    }
+   ],
+   "klip": "o-2s05-02",
+   "ses": [
+    "DSM-5-TR grubu: altı başlık, beden algısı bozukluğu dışarıda.",
+    "DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubu altı başlıktır; beden algısı bozukluğu bu grupta yer almaz.",
+    "sıkıntı veren belirtiler ve bunlara aşırı düşünce, duygu, davranış.",
+    "belirti yok ya da hafif; ciddi hastalık korkusu.",
+    "İşlevsel nörolojik belirti bozukluğu (dönüşüm bozukluğu): nörolojik hastalıkla uyuşmayan motor ya da duyusal belirtiler.",
+    "Diğer tıbbi durumları etkileyen psikolojik etkenler: var olan bir hastalığın seyrini olumsuz etkileyen ruhsal etkenler.",
+    "dış ödül olmadan, aldatmaya dayalı belirti üretme.",
+    "ölçütleri tam karşılamayan tablolar.",
+    "beden algısı bozukluğu, depresyon, panik bozukluğu, yaygın anksiyete, sanrısal bozukluk ve temaruz ayırıcı tanı tablosunda ruhsal bozukluklar sütununda sayılır; temaruz DSM-5-TR'de ruhsal bozukluk sayılmaz. Soru \"hangisi bu grupta sayılmaz\" biçiminde geldiğinde beden algısı bozukluğu aranır; \"hangisi bu gruptadır\" biçiminde geldiğinde yapay bozukluk ya da dönüşüm bozukluğu gibi altı başlıktan biri seçilir."
+   ],
+   "v": "7a09fe6d22"
+  },
+  {
+   "id": "2s05-21",
+   "baslik": "Bedensel belirti bozukluğu: ne kadar sık?",
+   "giris": "Bedensel belirti bozukluğu genel erişkin toplumda %5–7, öz-bildirim ölçekleriyle %12,9 yaygınlıktadır; kadınlarda ve birinci basamakta daha sıktır; depresyon ve anksiyeteyle eş tanı çok yüksektir.",
+   "s": [
+    15
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "genel erişkin toplumda tahmini %5–7 (DSM-5-TR); öz-bildirim ölçekleriyle toplum örneklemlerinde %12,9 (Löwe ve ark., 2022)."
+    },
+    {
+     "metin": "kadınlar erkeklerden daha çok bedensel belirti bildirir; birinci basamakta daha sık görülür."
+    },
+    {
+     "metin": "depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir; belirtiyi gördüğünüzde ruh halini de sormak gerekir."
+    },
+    {
+     "metin": "işlevsel nörolojik belirti bozukluğunda nöroloji polikliniğine yeni başvuranların %16'sında işlevsel/psikolojik tanı konur ve kadın/erkek oranı 2–3:1'dir; iki epidemiyoloji sayfası karıştırılmamalı."
+    }
+   ],
+   "klip": "o-2s05-21",
+   "ses": [
+    "Bedensel belirti bozukluğu: ne kadar sık?",
+    "Bedensel belirti bozukluğu genel erişkin toplumda %5–7, öz-bildirim ölçekleriyle %12,9 yaygınlıktadır; kadınlarda ve birinci basamakta daha sıktır; depresyon ve anksiyeteyle eş tanı çok yüksektir.",
+    "genel erişkin toplumda tahmini %5–7 (DSM-5-TR); öz-bildirim ölçekleriyle toplum örneklemlerinde %12,9 (Löwe ve ark., 2022).",
+    "kadınlar erkeklerden daha çok bedensel belirti bildirir; birinci basamakta daha sık görülür.",
+    "depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir; belirtiyi gördüğünüzde ruh halini de sormak gerekir.",
+    "işlevsel nörolojik belirti bozukluğunda nöroloji polikliniğine yeni başvuranların %16'sında işlevsel/psikolojik tanı konur ve kadın/erkek oranı 2–3:1'dir; iki epidemiyoloji sayfası karıştırılmamalı."
+   ],
+   "v": "08ce4fa0c9"
+  },
+  {
+   "id": "2s05-07",
+   "baslik": "Psikodinamik etkenler: bastırılan öfke, kefaret",
+   "giris": "Psikodinamik etkenlerde başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır; ağrı suçluluğa karşı kefaret işlevi görür.",
+   "s": [
+    17
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır."
+    },
+    {
+     "metin": "hasta öfkesini, başkalarının yardım ve ilgisini reddederek dolaylı yoldan dışa vurur."
+    },
+    {
+     "metin": "suçluluk, \"doğuştan kötü olma\" duygusu ve düşük benlik değerine karşı ağrı bir ceza ve kefaret işlevi görür."
+    },
+    {
+     "metin": "biyolojik (genetik yatkınlık, santral duyarlılaşma, stres fizyolojisi), psikolojik (olumsuz duygulanım, aleksitimi ve bedene odaklı dikkat, hastalık inançları), sosyal (çocukluk yaşantıları, öğrenme ve aile, kültür ve sağlık sistemi)."
+    },
+    {
+     "metin": "belirtinin maddi çıkar için bilinçli üretilmesi temaruz, hasta rolü için taklit yapay bozukluktur; bunlar bedensel belirti bozukluğunun nedeni değildir. Yüksek sosyoekonomik düzey bu bozuklukta iyi prognoz göstergesidir, neden olarak sayılmaz; düşük eğitim ve düşük sosyoekonomik düzey ise işlevsel bozukluğun risk etkenleri arasında anılır. Duyguları rahat ifade edebilme aleksitiminin karşıtıdır, neden değildir."
+    }
+   ],
+   "klip": "o-2s05-07",
+   "ses": [
+    "Psikodinamik etkenler: bastırılan öfke, kefaret.",
+    "Psikodinamik etkenlerde başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır; ağrı suçluluğa karşı kefaret işlevi görür.",
+    "başkalarına yönelik saldırgan ve düşmanca arzular bastırılır ve bedensel yakınmalara aktarılır.",
+    "hasta öfkesini, başkalarının yardım ve ilgisini reddederek dolaylı yoldan dışa vurur.",
+    "suçluluk, \"doğuştan kötü olma\" duygusu ve düşük benlik değerine karşı ağrı bir ceza ve kefaret işlevi görür.",
+    "biyolojik (genetik yatkınlık, santral duyarlılaşma, stres fizyolojisi), psikolojik (olumsuz duygulanım, aleksitimi ve bedene odaklı dikkat, hastalık inançları), sosyal (çocukluk yaşantıları, öğrenme ve aile, kültür ve sağlık sistemi).",
+    "belirtinin maddi çıkar için bilinçli üretilmesi temaruz, hasta rolü için taklit yapay bozukluktur; bunlar bedensel belirti bozukluğunun nedeni değildir. Yüksek sosyoekonomik düzey bu bozuklukta iyi prognoz göstergesidir, neden olarak sayılmaz; düşük eğitim ve düşük sosyoekonomik düzey ise işlevsel bozukluğun risk etkenleri arasında anılır. Duyguları rahat ifade edebilme aleksitiminin karşıtıdır, neden değildir."
+   ],
+   "v": "2a20941f91"
+  },
+  {
+   "id": "2s05-23",
+   "baslik": "Önce büyük taklitçileri düşünün",
+   "giris": "Büyük taklitçi, birçok organı tutabilen, dalgalı ve değişken belirtilerle başlayan, erken evrede rutin tetkikleri normal çıkabildiği için kolayca 'psikolojik' sanılan hastalıktır.",
+   "s": [
+    18
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "birçok organı tutabilen, dalgalı, belirsiz ve değişken belirtilerle başlayan, erken evrede rutin tetkiklerin normal çıkabildiği ve bu yüzden kolayca \"psikolojik\" sanılan hastalık."
+    },
+    {
+     "metin": "multipl skleroz, miyastenia gravis, HIV/AIDS, neoplaziler, SLE, endokrinopatiler, nörodejeneratif hastalıklar, paraneoplastik sendromlar."
+    },
+    {
+     "metin": "depresyon, yaygın anksiyete, sanrısal bozukluk, yapay bozukluk, panik bozukluğu, hastalık kaygısı, beden algısı bozukluğu, temaruz."
+    },
+    {
+     "metin": "tıbbi bir hastalığın varlığı tanıyı dışlamaz; belirleyici olan belirtiye verilen orantısız yanıttır. Önce büyük taklitçi düşünülür, sonra yanıtın orantısızlığına bakılır."
+    }
+   ],
+   "klip": "o-2s05-23",
+   "ses": [
+    "Önce büyük taklitçileri düşünün.",
+    "Büyük taklitçi, birçok organı tutabilen, dalgalı ve değişken belirtilerle başlayan, erken evrede rutin tetkikleri normal çıkabildiği için kolayca 'psikolojik' sanılan hastalıktır.",
+    "birçok organı tutabilen, dalgalı, belirsiz ve değişken belirtilerle başlayan, erken evrede rutin tetkiklerin normal çıkabildiği ve bu yüzden kolayca \"psikolojik\" sanılan hastalık.",
+    "multipl skleroz, miyastenia gravis, HIV/AIDS, neoplaziler, SLE, endokrinopatiler, nörodejeneratif hastalıklar, paraneoplastik sendromlar.",
+    "depresyon, yaygın anksiyete, sanrısal bozukluk, yapay bozukluk, panik bozukluğu, hastalık kaygısı, beden algısı bozukluğu, temaruz.",
+    "tıbbi bir hastalığın varlığı tanıyı dışlamaz; belirleyici olan belirtiye verilen orantısız yanıttır. Önce büyük taklitçi düşünülür, sonra yanıtın orantısızlığına bakılır."
+   ],
+   "v": "3654c630b0"
+  },
+  {
+   "id": "2s05-37",
+   "baslik": "Ayırıcı tanıda ruhsal bozukluklar",
+   "giris": "Bedensel belirti bozukluğunun ayırıcı tanısında depresyon, panik, yaygın anksiyete, hastalık kaygısı, sanrısal bozukluk, beden algısı bozukluğu, yapay bozukluk ve temaruz akla gelmelidir.",
+   "s": [
+    18
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "depresyon, panik bozukluğu, yaygın anksiyete, hastalık kaygısı, sanrısal bozukluk, beden algısı bozukluğu, yapay bozukluk ve temaruz."
+    },
+    {
+     "metin": "önce büyük taklitçi tıbbi durumlar dışlanır, ardından bu ruhsal tablolar değerlendirilir."
+    },
+    {
+     "metin": "ayırıcı tanıda ayrı bir komşu tanı olarak durur; bedensel belirti ve ilişkili bozukluklar grubunun üyesi değildir."
+    },
+    {
+     "metin": "ikisinde de belirti bilinçli üretilir; yapay bozuklukta amaç hasta rolü, temaruzda dış kazançtır."
+    },
+    {
+     "metin": "tıbbi bir hastalığın varlığı tanıyı dışlamaz; belirleyici olan belirtiye verilen orantısız yanıttır."
+    }
+   ],
+   "klip": "o-2s05-37",
+   "ses": [
+    "Ayırıcı tanıda ruhsal bozukluklar.",
+    "Bedensel belirti bozukluğunun ayırıcı tanısında depresyon, panik, yaygın anksiyete, hastalık kaygısı, sanrısal bozukluk, beden algısı bozukluğu, yapay bozukluk ve temaruz akla gelmelidir.",
+    "depresyon, panik bozukluğu, yaygın anksiyete, hastalık kaygısı, sanrısal bozukluk, beden algısı bozukluğu, yapay bozukluk ve temaruz.",
+    "önce büyük taklitçi tıbbi durumlar dışlanır, ardından bu ruhsal tablolar değerlendirilir.",
+    "ayırıcı tanıda ayrı bir komşu tanı olarak durur; bedensel belirti ve ilişkili bozukluklar grubunun üyesi değildir.",
+    "ikisinde de belirti bilinçli üretilir; yapay bozuklukta amaç hasta rolü, temaruzda dış kazançtır.",
+    "tıbbi bir hastalığın varlığı tanıyı dışlamaz; belirleyici olan belirtiye verilen orantısız yanıttır."
+   ],
+   "v": "27440755f0"
+  },
+  {
+   "id": "2s05-01",
+   "baslik": "Hastalık kaygısı bozukluğu: belirti yok, korku var",
+   "giris": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir; kişi ciddi bir hastalığı olduğu ya da olacağıyla uğraşır.",
+   "s": [
+    21,
+    22
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "kişinin aklı sürekli \"Kanser miyim? Kalbimde bir sorun mu var?\" sorusuyla meşguldür; uğraş ciddi bir hastalığı olduğu ya da olacağı düşüncesidir."
+    },
+    {
+     "metin": "bedensel belirti yoktur ya da çok hafiftir. Küçük bir ben gibi bir belirti ya da güçlü aile öyküsü gibi yüksek risk varsa bile uğraş açıkça orantısızdır."
+    },
+    {
+     "metin": "sağlıkla ilgili yüksek kaygı ve kolayca alarma geçme; bir tanıdığın hastalandığını duymak, televizyonda sağlık haberi ya da tahlilde küçük bir sapma yoğun paniğe yol açar."
+    },
+    {
+     "metin": "22 yaşındaki Mert'in hiçbir belirtisi yoktur; arkadaşının babası kolon kanserinden ölünce \"Ya bende de varsa?\" diye takılır, her gün kendini kontrol eder, gece forumlarda belirti okur, üç ayda iki kez kolonoskopi ister; normal sonuç onu yalnızca bir hafta rahatlatır."
+    },
+    {
+     "metin": "bedensel belirti bozukluğunda belirti belirgin ve sıkıntı vericidir; konversiyonda motor ya da duyusal işlev değişikliği, yapay bozuklukta aldatmaya dayalı belirti üretimi vardır; yaygın kaygı bozukluğunda kaygı tek bir hastalık fikrine değil birçok alana yayılır. Belirti yokken kanser korkusu ve internet araştırması hastalık kaygısı bozukluğudur."
+    }
+   ],
+   "klip": "o-2s05-01",
+   "ses": [
+    "Hastalık kaygısı bozukluğu: belirti yok, korku var.",
+    "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir; kişi ciddi bir hastalığı olduğu ya da olacağıyla uğraşır.",
+    "kişinin aklı sürekli \"Kanser miyim? Kalbimde bir sorun mu var?\" sorusuyla meşguldür; uğraş ciddi bir hastalığı olduğu ya da olacağı düşüncesidir.",
+    "bedensel belirti yoktur ya da çok hafiftir. Küçük bir ben gibi bir belirti ya da güçlü aile öyküsü gibi yüksek risk varsa bile uğraş açıkça orantısızdır.",
+    "sağlıkla ilgili yüksek kaygı ve kolayca alarma geçme; bir tanıdığın hastalandığını duymak, televizyonda sağlık haberi ya da tahlilde küçük bir sapma yoğun paniğe yol açar.",
+    "22 yaşındaki Mert'in hiçbir belirtisi yoktur; arkadaşının babası kolon kanserinden ölünce \"Ya bende de varsa?\" diye takılır, her gün kendini kontrol eder, gece forumlarda belirti okur, üç ayda iki kez kolonoskopi ister; normal sonuç onu yalnızca bir hafta rahatlatır.",
+    "bedensel belirti bozukluğunda belirti belirgin ve sıkıntı vericidir; konversiyonda motor ya da duyusal işlev değişikliği, yapay bozuklukta aldatmaya dayalı belirti üretimi vardır; yaygın kaygı bozukluğunda kaygı tek bir hastalık fikrine değil birçok alana yayılır. Belirti yokken kanser korkusu ve internet araştırması hastalık kaygısı bozukluğudur."
+   ],
+   "v": "4a9c5ead24"
+  },
+  {
+   "id": "2s05-03",
+   "baslik": "Güzel aldırmazlık: konversiyonun klasik kavramı",
+   "giris": "Güzel aldırmazlık (la belle indifférence) ciddi belirtiye karşın uygunsuz kayıtsızlıktır; işlevsel nörolojik belirti (konversiyon) bozukluğunda tanımlanır, tarihseldir, tanısal değeri yoktur.",
+   "s": [
+    31,
+    38
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "ciddi bir belirtiye (felç, körlük, nöbet) karşın hastanın uygunsuz biçimde kayıtsız kalması; işlevsel nörolojik belirti bozukluğunun eski adıyla konversiyon bozukluğunun klasik kavramlarından biridir."
+    },
+    {
+     "metin": "tarihsel bir kavramdır, tanısal değeri yoktur; muayene odasında güvenilir olmayan bulgular arasında orta hatta bölünen duyu kaybı ve telkinle düzelmeyle birlikte sayılır."
+    },
+    {
+     "metin": "olumlu muayene bulgularıyla (Hoover, kalça abdüktör, sürüklenen bacak, titremede sürüklenme, tünel görme, video-EEG'de deşarj yokluğu)."
+    },
+    {
+     "metin": "özdeşim önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır; birincil kazanç çatışmanın bilinç dışında tutulması, ikincil kazanç hasta rolünün dış yararlarıdır. Somatizasyon (bedensel belirti) bozukluğunda ve hipokondriyaziste (hastalık kaygısı) hasta belirtiye kayıtsız değil tersine aşırı kaygılıdır; vücut dismorfik (beden algısı) bozukluğu bu grupta değildir."
+    }
+   ],
+   "klip": "o-2s05-03",
+   "ses": [
+    "Güzel aldırmazlık: konversiyonun klasik kavramı.",
+    "Güzel aldırmazlık (la belle indifférence) ciddi belirtiye karşın uygunsuz kayıtsızlıktır; işlevsel nörolojik belirti (konversiyon) bozukluğunda tanımlanır, tarihseldir, tanısal değeri yoktur.",
+    "ciddi bir belirtiye (felç, körlük, nöbet) karşın hastanın uygunsuz biçimde kayıtsız kalması; işlevsel nörolojik belirti bozukluğunun eski adıyla konversiyon bozukluğunun klasik kavramlarından biridir.",
+    "tarihsel bir kavramdır, tanısal değeri yoktur; muayene odasında güvenilir olmayan bulgular arasında orta hatta bölünen duyu kaybı ve telkinle düzelmeyle birlikte sayılır.",
+    "olumlu muayene bulgularıyla (Hoover, kalça abdüktör, sürüklenen bacak, titremede sürüklenme, tünel görme, video-EEG'de deşarj yokluğu).",
+    "özdeşim önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır; birincil kazanç çatışmanın bilinç dışında tutulması, ikincil kazanç hasta rolünün dış yararlarıdır. Somatizasyon (bedensel belirti) bozukluğunda ve hipokondriyaziste (hastalık kaygısı) hasta belirtiye kayıtsız değil tersine aşırı kaygılıdır; vücut dismorfik (beden algısı) bozukluğu bu grupta değildir."
+   ],
+   "v": "e1c9b2d4f9"
+  },
+  {
+   "id": "2s05-05",
+   "baslik": "Epileptik nöbet ile işlevsel nöbet ayrımı",
+   "giris": "Epileptik nöbet genellikle 1–2 dakika sürer, gözler çoğunlukla açıktır; işlevsel (dissosiyatif) nöbet çoğunlukla 2 dakikadan uzundur, gözler kapalıdır ve açtırmaya direnç vardır.",
+   "s": [
+    35
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "epileptik nöbet genellikle 1–2 dakika; işlevsel nöbet çoğunlukla 2 dakikadan uzun, şiddeti artıp azalır. \"Epileptik nöbet 10 dakika sürer\" gibi ters çevrilmiş süre önermesi yanlıştır."
+    },
+    {
+     "metin": "epileptikte çoğunlukla açık; işlevselde çoğunlukla kapalı, açtırmaya direnç."
+    },
+    {
+     "metin": "epileptikte kalıplaşmış, her seferinde benzer, iki taraf eş zamanlı; işlevselde düzensiz, iki taraf uyumsuz, başı iki yana sallama, kalçayı ileri itme (pelvik itme)."
+    },
+    {
+     "metin": "epileptikte dilin yan kenarında; işlevselde nadir, olursa dil ucunda."
+    },
+    {
+     "metin": "epileptik nöbet gerçek uykudan başlayabilir; işlevsel nöbette hasta uyuyor gibi görünür ama EEG uyanık olduğunu gösterir."
+    },
+    {
+     "metin": "epileptikte bilinç bulanıklığı (postiktal konfüzyon), uyku hali; işlevselde ağlama, hızlı toparlanma, olayı hatırlayabilme."
+    },
+    {
+     "metin": "epileptikte nöbet sırasında epileptik deşarj var; işlevselde yok, bu altın standarttır."
+    }
+   ],
+   "klip": "o-2s05-05",
+   "ses": [
+    "Epileptik nöbet ile işlevsel nöbet ayrımı.",
+    "Epileptik nöbet genellikle 1–2 dakika sürer, gözler çoğunlukla açıktır; işlevsel (dissosiyatif) nöbet çoğunlukla 2 dakikadan uzundur, gözler kapalıdır ve açtırmaya direnç vardır.",
+    "epileptik nöbet genellikle 1–2 dakika; işlevsel nöbet çoğunlukla 2 dakikadan uzun, şiddeti artıp azalır. \"Epileptik nöbet 10 dakika sürer\" gibi ters çevrilmiş süre önermesi yanlıştır.",
+    "epileptikte çoğunlukla açık; işlevselde çoğunlukla kapalı, açtırmaya direnç.",
+    "epileptikte kalıplaşmış, her seferinde benzer, iki taraf eş zamanlı; işlevselde düzensiz, iki taraf uyumsuz, başı iki yana sallama, kalçayı ileri itme (pelvik itme).",
+    "epileptikte dilin yan kenarında; işlevselde nadir, olursa dil ucunda.",
+    "epileptik nöbet gerçek uykudan başlayabilir; işlevsel nöbette hasta uyuyor gibi görünür ama EEG uyanık olduğunu gösterir.",
+    "epileptikte bilinç bulanıklığı (postiktal konfüzyon), uyku hali; işlevselde ağlama, hızlı toparlanma, olayı hatırlayabilme.",
+    "epileptikte nöbet sırasında epileptik deşarj var; işlevselde yok, bu altın standarttır."
+   ],
+   "v": "5e2099aa48"
+  },
+  {
+   "id": "2s05-04",
+   "baslik": "Yapay bozukluk: klinik ipuçları",
+   "giris": "Yapay bozuklukta olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo; tedaviye yanıtsızlık; biri düzelince yeni belirti; girişime ve teste isteklilik görülür.",
+   "s": [
+    46
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo; beklenen tedaviye yanıtsızlık, biri düzelince yenisinin çıkması; girişime ve teste istekli olma, öyküyü yeniden anlatmaya heves; eski kayıtlara ya da aileyle görüşmeye izin vermeme."
+    },
+    {
+     "metin": "çok sayıda yatış, ameliyat izi, çoklu ilaç alerjisi; tıbbi terminolojiye hâkimiyet, sağlıkla ilgili meslek; az ziyaretçi; hastanın belirtilerinin ne zaman kötüleşeceğini önceden \"bilmesi\", çünkü kendisi oluşturur."
+    },
+    {
+     "metin": "%66 kadın, ortalama yaş 34, %59 kendine hasar veriyor, %42 depresyon öyküsü; en sık meslek sağlık ya da laboratuvar."
+    },
+    {
+     "metin": "ikisinde de belirti bilinçli üretilir; yapay bozuklukta dış ödül yoktur, amaç hasta rolüdür; temaruzda para, rapor ya da cezadan kaçış gibi dış kazanç vardır."
+    },
+    {
+     "metin": "Konversiyon, hastalık kaygısı ve bedensel belirti bozukluğundan farkı: bunlarda belirti istemsiz üretilir, aldatma yoktur."
+    }
+   ],
+   "klip": "o-2s05-04",
+   "ses": [
+    "Yapay bozukluk: klinik ipuçları.",
+    "Yapay bozuklukta olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo; tedaviye yanıtsızlık; biri düzelince yeni belirti; girişime ve teste isteklilik görülür.",
+    "olağandışı, dramatik, tıbbi bilgiyle örtüşmeyen tablo; beklenen tedaviye yanıtsızlık, biri düzelince yenisinin çıkması; girişime ve teste istekli olma, öyküyü yeniden anlatmaya heves; eski kayıtlara ya da aileyle görüşmeye izin vermeme.",
+    "çok sayıda yatış, ameliyat izi, çoklu ilaç alerjisi; tıbbi terminolojiye hâkimiyet, sağlıkla ilgili meslek; az ziyaretçi; hastanın belirtilerinin ne zaman kötüleşeceğini önceden \"bilmesi\", çünkü kendisi oluşturur.",
+    "%66 kadın, ortalama yaş 34, %59 kendine hasar veriyor, %42 depresyon öyküsü; en sık meslek sağlık ya da laboratuvar.",
+    "ikisinde de belirti bilinçli üretilir; yapay bozuklukta dış ödül yoktur, amaç hasta rolüdür; temaruzda para, rapor ya da cezadan kaçış gibi dış kazanç vardır.",
+    "Konversiyon, hastalık kaygısı ve bedensel belirti bozukluğundan farkı: bunlarda belirti istemsiz üretilir, aldatma yoktur."
+   ],
+   "v": "b10468b506"
+  }
+ ]
+}

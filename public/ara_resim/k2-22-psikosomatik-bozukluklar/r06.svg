@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Uykudan çıkan nöbet mi, uyku görünümü mü? EEG zaman çizgisi</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Epileptik nöbet ile işlevsel nöbette uyku ve video-EEG · slayt 36–37</text>
+<rect x="30" y="95" width="1140" height="255" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · Epileptik nöbet: gerçek uykudan çıkış</text>
+<path d="M60 230 C75.0 208 105.0 252 120 230 C135.0 208 165.0 252 180 230 C195.0 208 225.0 252 240 230 C255.0 208 285.0 252 300 230" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 230 C305 218 310 242 315 230 C320 212 326 248 331 230 C336 220 341 240 346 230" stroke="#0f766e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350 230 L358 196 L368 258 L376 230" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M380 230 C395.0 208 425.0 252 440 230" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 230 L457.8 190 L461.7 238 Q468.2 254 476 230 L483.8 190 L487.7 238 Q494.2 254 502 230 L509.8 190 L513.7 238 Q520.2 254 528 230 L535.8 190 L539.7 238 Q546.2 254 554 230 L561.8 190 L565.7 238 Q572.2 254 580 230 L587.8 190 L591.7 238 Q598.2 254 606 230 L613.8 190 L617.7 238 Q624.2 254 632 230 L639.8 190 L643.7 238 Q650.2 254 658 230 L665.8 190 L669.7 238 Q676.2 254 684 230 L691.8 190 L695.7 238 Q702.2 254 710 230 L717.8 190 L721.7 238 Q728.2 254 736 230 L743.8 190 L747.7 238 Q754.2 254 762 230 L769.8 190 L773.7 238 Q780.2 254 788 230" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M800 230 C821.25 200 863.75 260 885 230 C906.25 200 948.75 260 970 230 C991.25 200 1033.75 260 1055 230 C1076.25 200 1118.75 260 1140 230" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="445" y1="150" x2="445" y2="300" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="795" y1="150" x2="795" y2="300" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="250" y="158" font-size="14" fill="#0f766e" text-anchor="middle" font-weight="bold">uyku dalgaları: yavaş dalga,</text>
+<text x="250" y="174" font-size="14" fill="#0f766e" text-anchor="middle">uyku iğciği, K kompleksi</text>
+<text x="620" y="158" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">iktal: ritmik diken-dalga</text>
+<text x="620" y="174" font-size="14" fill="#b91c1c" text-anchor="middle">deşarjı başlar ve yayılır</text>
+<text x="970" y="158" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">postiktal: büyük, yavaş</text>
+<text x="970" y="174" font-size="14" fill="#b91c1c" text-anchor="middle">dalgalar (yavaşlama)</text>
+<line x1="323" y1="215" x2="290" y2="190" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="323" cy="215" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="284" y="195" font-size="14" fill="#0f766e" text-anchor="end">uyku iğciği</text>
+<line x1="360" y1="200" x2="400" y2="185" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="360" cy="200" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="406" y="190" font-size="14" fill="#0f766e" text-anchor="start">K kompleksi</text>
+<path d="M80 300 C100 285 130 285 150 300" stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="170" y="305" font-size="14" fill="#475569" text-anchor="start">hasta gerçekten uyuyor; deşarj uykunun içinden başlar</text>
+<text x="1150" y="320" font-size="14" fill="#475569" text-anchor="end">nöbet sonrası: bilinç bulanıklığı, uyku hali</text>
+<rect x="30" y="370" width="1140" height="255" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="402" font-size="20" fill="#15803d" text-anchor="start" font-weight="bold">B · İşlevsel nöbet: “psödo-uyku” — gözler kapalı ama beyin uyanık</text>
+<path d="M60 505 C62.25 499 66.75 511 69 505 C71.25 499 75.75 511 78 505 C80.25 499 84.75 511 87 505 C89.25 499 93.75 511 96 505 C98.25 499 102.75 511 105 505 C107.25 499 111.75 511 114 505 C116.25 499 120.75 511 123 505 C125.25 499 129.75 511 132 505 C134.25 499 138.75 511 141 505 C143.25 499 147.75 511 150 505 C152.25 499 156.75 511 159 505 C161.25 499 165.75 511 168 505 C170.25 499 174.75 511 177 505 C179.25 499 183.75 511 186 505 C188.25 499 192.75 511 195 505 C197.25 499 201.75 511 204 505 C206.25 499 210.75 511 213 505 C215.25 499 219.75 511 222 505 C224.25 499 228.75 511 231 505 C233.25 499 237.75 511 240 505 C242.25 499 246.75 511 249 505 C251.25 499 255.75 511 258 505 C260.25 499 264.75 511 267 505 C269.25 499 273.75 511 276 505 C278.25 499 282.75 511 285 505 C287.25 499 291.75 511 294 505 C296.25 499 300.75 511 303 505 C305.25 499 309.75 511 312 505 C314.25 499 318.75 511 321 505 C323.25 499 327.75 511 330 505 C332.25 499 336.75 511 339 505 C341.25 499 345.75 511 348 505 C350.25 499 354.75 511 357 505 C359.25 499 363.75 511 366 505 C368.25 499 372.75 511 375 505 C377.25 499 381.75 511 384 505 C386.25 499 390.75 511 393 505 C395.25 499 399.75 511 402 505 C404.25 499 408.75 511 411 505 C413.25 499 417.75 511 420 505 C422.25 499 426.75 511 429 505 C431.25 499 435.75 511 438 505" stroke="#15803d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 505 L452.5 488 L455 517 L457.5 484 L460 528 L462.5 493 L465 513 L467.5 480 L470 521 L472.5 488 L475 519 L477.5 480 L480 528 L482.5 483 L485 517 L487.5 488 L490 517 L492.5 479 L495 525 L497.5 495 L500 515 L502.5 490 L505 514 L507.5 486 L510 513 L512.5 487 L515 528 L517.5 483 L520 526 L522.5 483 L525 527 L527.5 491 L530 524 L532.5 492 L535 514 L537.5 491 L540 528 L542.5 489 L545 521 L547.5 482 L550 522 L552.5 482 L555 529 L557.5 483 L560 524 L562.5 482 L565 520 L567.5 485 L570 513 L572.5 487 L575 518 L577.5 485 L580 516 L582.5 489 L585 521 L587.5 486 L590 516 L592.5 493 L595 528 L597.5 480 L600 515 L602.5 484 L605 515 L607.5 482 L610 517 L612.5 495 L615 522 L617.5 482 L620 526 L622.5 492 L625 514 L627.5 494 L630 525 L632.5 485 L635 521 L637.5 479 L640 520 L642.5 494 L645 522 L647.5 495 L650 515 L652.5 492 L655 514 L657.5 489 L660 526 L662.5 486 L665 521 L667.5 491 L670 514 L672.5 485 L675 523 L677.5 484 L680 517 L682.5 483 L685 525 L687.5 481 L690 529 L692.5 483 L695 516 L697.5 479 L700 521 L702.5 482 L705 520 L707.5 486 L710 526 L712.5 487 L715 529 L717.5 486 L720 523 L722.5 495 L725 526 L727.5 485 L730 513 L732.5 483 L735 517 L737.5 494 L740 523 L742.5 481 L745 524 L747.5 484 L750 521 L752.5 480 L755 513 L757.5 494 L760 513 L762.5 484 L765 521 L767.5 481 L770 522 L772.5 485 L775 518 L777.5 484 L780 518 L782.5 485 L785 524 L787.5 487 L790 522" stroke="#15803d" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M800 505 C802.25 499 806.75 511 809 505 C811.25 499 815.75 511 818 505 C820.25 499 824.75 511 827 505 C829.25 499 833.75 511 836 505 C838.25 499 842.75 511 845 505 C847.25 499 851.75 511 854 505 C856.25 499 860.75 511 863 505 C865.25 499 869.75 511 872 505 C874.25 499 878.75 511 881 505 C883.25 499 887.75 511 890 505 C892.25 499 896.75 511 899 505 C901.25 499 905.75 511 908 505 C910.25 499 914.75 511 917 505 C919.25 499 923.75 511 926 505 C928.25 499 932.75 511 935 505 C937.25 499 941.75 511 944 505 C946.25 499 950.75 511 953 505 C955.25 499 959.75 511 962 505 C964.25 499 968.75 511 971 505 C973.25 499 977.75 511 980 505 C982.25 499 986.75 511 989 505 C991.25 499 995.75 511 998 505 C1000.25 499 1004.75 511 1007 505 C1009.25 499 1013.75 511 1016 505 C1018.25 499 1022.75 511 1025 505 C1027.25 499 1031.75 511 1034 505 C1036.25 499 1040.75 511 1043 505 C1045.25 499 1049.75 511 1052 505 C1054.25 499 1058.75 511 1061 505 C1063.25 499 1067.75 511 1070 505 C1072.25 499 1076.75 511 1079 505 C1081.25 499 1085.75 511 1088 505 C1090.25 499 1094.75 511 1097 505 C1099.25 499 1103.75 511 1106 505 C1108.25 499 1112.75 511 1115 505 C1117.25 499 1121.75 511 1124 505 C1126.25 499 1130.75 511 1133 505" stroke="#15803d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="445" y1="425" x2="445" y2="575" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="795" y1="425" x2="795" y2="575" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="250" y="433" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">öncesi: alfa ritmi 8–13 Hz</text>
+<text x="250" y="449" font-size="14" fill="#15803d" text-anchor="middle">= uyanık beyin</text>
+<text x="620" y="433" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">olay: yalnız hareket ve kas</text>
+<text x="620" y="449" font-size="14" fill="#15803d" text-anchor="middle">artefaktı; deşarj yok</text>
+<text x="970" y="433" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">hemen sonra yine alfa:</text>
+<text x="970" y="449" font-size="14" fill="#15803d" text-anchor="middle">hızlı toparlanma</text>
+<path d="M80 575 C100 560 130 560 150 575" stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="170" y="580" font-size="14" fill="#475569" text-anchor="start">gözler kapalı, uyuyor gibi; EEG kişinin uyanık olduğunu gösterir</text>
+<text x="1150" y="600" font-size="14" fill="#475569" text-anchor="end">olayı hatırlayabilir; ağlama ile sonlanır</text>
+<rect x="30" y="645" width="1140" height="75" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="677" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Sonuç</text>
+<text x="50" y="697" font-size="14" fill="#1e293b" text-anchor="start">Video-EEG altın standarttır: epileptik nöbette deşarj ve postiktal yavaşlama, işlevsel nöbette artefaktın iki yanında kesintisiz alfa.</text>
+<text x="50" y="713" font-size="14" fill="#1e293b" text-anchor="start">İşlevsel nöbeti olanların %22'sinde epilepsi de vardır; tek bulgu tanı koydurmaz.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 36 (uyku ile ilişki, %22 çift tanı) ve slayt 37 (video-EEG şeritleri) · teal/kırmızı = epileptik, yeşil = işlevsel</text>
+</svg>

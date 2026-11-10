@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Beş bağımsız boyut: biri diğerini söylemez</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Cinsiyet, kimlik, rol, ifade ve yönelim ayrı eksenlerdir · slayt 4, 6, 8</text>
+<rect x="30" y="95" width="560" height="560" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Bir kişi, beş ayrı boyut</text>
+<circle cx="300" cy="240" r="21.0" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M273.0 345.0 C267.0 285.0 285.0 264.0 300 264.0 C315.0 264.0 333.0 285.0 327.0 345.0 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M286.5 345.0 L283.5 417.0" stroke="#0f766e" stroke-width="10.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M313.5 345.0 L316.5 417.0" stroke="#0f766e" stroke-width="10.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="300" cy="335" r="150" fill="none" stroke="#0f172a" stroke-width="2" stroke-dasharray="8 6"/>
+<circle cx="500" cy="330" r="12.6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M483.8 393.0 C480.2 357.0 491.0 344.4 500 344.4 C509.0 344.4 519.8 357.0 516.2 393.0 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M491.9 393.0 L490.1 436.2" stroke="#ea580c" stroke-width="6.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M508.1 393.0 L509.9 436.2" stroke="#ea580c" stroke-width="6.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M340 340 C 390 120, 470 230, 488 300" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<line x1="296" y1="232" x2="250" y2="170" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="296" cy="232" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="60" y="150" font-size="14" fill="#6d28d9" text-anchor="start">Cinsiyet kimliği: kendini kadın,</text>
+<text x="60" y="170" font-size="14" fill="#6d28d9" text-anchor="start">erkek ya da başka hissetme</text>
+<text x="60" y="190" font-size="13" fill="#6d28d9" text-anchor="start" font-style="italic">(içten duyulan his)</text>
+<text x="430" y="150" font-size="14" fill="#ea580c" text-anchor="start" font-weight="bold">Cinsel yönelim:</text>
+<text x="430" y="170" font-size="14" fill="#ea580c" text-anchor="start">çekim duyulan cinsiyet</text>
+<line x1="276" y1="310" x2="150" y2="540" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="276" cy="310" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="50" y="560" font-size="14" fill="#6b7280" text-anchor="start">Cinsiyet ifadesi: giyim,</text>
+<text x="50" y="580" font-size="14" fill="#6b7280" text-anchor="start">saç, davranış, ses</text>
+<line x1="292" y1="415" x2="300" y2="575" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="292" cy="415" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="300" y="595" font-size="14" fill="#0f766e" text-anchor="middle">Biyolojik cinsiyet: kromozom,</text>
+<text x="300" y="615" font-size="14" fill="#0f766e" text-anchor="middle">gonad, üreme organı, hormon</text>
+<line x1="450" y1="335" x2="470" y2="540" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="450" cy="335" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="410" y="560" font-size="14" fill="#0f172a" text-anchor="start">Cinsiyet rolü: toplumun</text>
+<text x="410" y="580" font-size="14" fill="#0f172a" text-anchor="start">beklediği tutum, sorumluluk</text>
+<text x="300" y="642" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">Birini bilmek diğerleri hakkında bilgi vermez.</text>
+<rect x="620" y="95" width="550" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="127" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">B · Sınavın karıştırdığı iki eksen</text>
+<line x1="650" y1="190" x2="1140" y2="190" stroke="#6d28d9" stroke-width="3" marker-end="url(#okm)"/>
+<text x="655" y="175" font-size="15" fill="#6d28d9" text-anchor="start" font-weight="bold">Kimlik ekseni</text>
+<text x="670" y="212" font-size="13" fill="#6d28d9" text-anchor="start">Atanan cinsiyetle uyumlu</text>
+<text x="1130" y="212" font-size="13" fill="#6d28d9" text-anchor="end">Atanan cinsiyetten farklı hissetme</text>
+<circle cx="1040" cy="190" r="9" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="985" y="242" font-size="13" fill="#6d28d9" text-anchor="middle">Transseksüellik (eski ad) → cinsiyet hoşnutsuzluğu</text>
+<line x1="650" y1="320" x2="1140" y2="320" stroke="#ea580c" stroke-width="3" marker-end="url(#oko)"/>
+<text x="655" y="305" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">Yönelim ekseni</text>
+<circle cx="700" cy="320" r="9" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="700" y="350" font-size="13" fill="#ea580c" text-anchor="middle">Heteroseksüel</text>
+<circle cx="895" cy="320" r="9" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="895" y="350" font-size="13" fill="#ea580c" text-anchor="middle">Biseksüel</text>
+<circle cx="1090" cy="320" r="9" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="1090" y="350" font-size="13" fill="#ea580c" text-anchor="middle">Homoseksüel</text>
+<text x="895" y="372" font-size="13" fill="#ea580c" text-anchor="middle" font-style="italic">Üç yönelim de DSM-5-TR'de tanı değildir</text>
+<path d="M1090 310 C 1135 290, 1140 240, 1060 200" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<line x1="1118" y1="262" x2="1144" y2="288" stroke="#b91c1c" stroke-width="4"/><line x1="1144" y1="262" x2="1118" y2="288" stroke="#b91c1c" stroke-width="4"/>
+<text x="895" y="396" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">Yanlış önerme: transseksüellik, kendi cinsiyetine</text>
+<text x="895" y="414" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">cinsel ilgi duymaktır</text>
+<rect x="620" y="445" width="550" height="210" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="477" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Tekrar eden tuzağın çözümü</text>
+<rect x="640" y="495" width="240" height="60" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="760.0" y="520.6666666666666" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">Yönelim</text>
+<text x="760.0" y="538.6666666666666" font-size="14" fill="#ea580c" text-anchor="middle">kime çekim duyduğun</text>
+<rect x="910" y="495" width="240" height="60" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="1030.0" y="520.6666666666666" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">Kimlik</text>
+<text x="1030.0" y="538.6666666666666" font-size="14" fill="#6d28d9" text-anchor="middle">kendini kim hissettiğin</text>
+<line x1="880" y1="525" x2="910" y2="525" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<text x="895" y="590" font-size="13" fill="#0f172a" text-anchor="middle">Kendi cinsine ilgi = homoseksüel yönelim; transseksüellik = kimlik uyumsuzluğu</text>
+<text x="895" y="615" font-size="13" fill="#b91c1c" text-anchor="middle">Tanı yalnız uyumsuzluk sıkıntı yaratınca konur (cinsiyet hoşnutsuzluğu)</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 4 (beş boyut), 6 (yönelim), 8 (tanım ve ad değişimi) · tuzak çıkmışları 2022-23, 2024-25, 2025-26; 2020-21 temel kavramlar sorusu</text>
+</svg>

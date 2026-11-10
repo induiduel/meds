@@ -17,6 +17,7 @@ MODUL_ANAHTARLAR = {"k1-70-tbg-sinav-kampi", "k1-59-immunofarmakoloji-v2"}  # V2
 # okunuşla yazılmış hece dizilerini tanıdığı için büyük harfli kısaltma bu yoldan okunur (H23)
 MODUL_ANAHTARLAR |= {"k2-09-sss-ilaclari", "k2-10-bas-agrisina-yaklasim", "k2-06-agri-yollari-ve-mekanizmalari"}
 MODUL_ANAHTARLAR |= {"k2-17-periferik-noropati", "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem"}  # 2026-11-05, metin yazımla
+MODUL_ANAHTARLAR |= {"k2-22-psikosomatik-bozukluklar", "k2-23-cinsel-kimlik-bozukluklari", "k2-24-epilepsi", "k2-58-alkoller"}  # 2026-11-09 6. parti, metin yazımla (H469)
 SON_PROVA = re.compile(r"^k\d+-\d+-(son-prova|blok-ozet)-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
 
 

@@ -1,0 +1,3044 @@
+{
+ "id": "k2-22-psikosomatik-bozukluklar",
+ "sira": 22,
+ "kurul": 2,
+ "ders": "Psikiyatri",
+ "konu": "Psikosomatik Bozukluklar (Bedensel Belirti ve İlişkili Bozukluklar)",
+ "ogretim_uyesi": "Doç. Dr. Zuhal Koç Apaydın",
+ "tarih": "2026-11-09",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Psikosomatik kavramını, ruh–beden etkileşiminin iki yönünü ve psikanalitik, öğrenme, bilişsel, stres fizyolojisi, biyopsikososyal ve öngörüsel işleme modellerini açıklar (s. 2–7).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Psikosomatik kavramı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Terimi ilk kez Heinroth 1818'de kullanmıştır.",
+      "B": "Ruh ile beden arasındaki etkileşim çift yönlüdür.",
+      "C": "Psikosomatik belirtiler hayalidir ve gerçek bir bedensel karşılığı bulunmaz.",
+      "D": "Kronik ağrı zamanla depresyona yol açabilir.",
+      "E": "Psikosomatik tıp biyolojik, psikolojik ve sosyal etkenlerin ilişkisini inceler."
+     },
+     "dogru": "C",
+     "aciklama": "Psikosomatik hayali demek değildir; belirtiler gerçektir. Terim Heinroth'a aittir, etkileşim ruhtan bedene ve bedenden ruha iki yönlü işler (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Heinroth psikosomatik terimini tıbba 1818'de kazandıran hekimdir. Bu tarih ve ad slaytın tanım sayfasında verildiği için ifade doğrudur ve yanlış aranan soruda seçilmez (s. 2).",
+      "B": "Çift yönlülük, sınav kaygısının mide krampına ve kronik ağrının depresyona yol açması gibi iki yönlü örneklerle anlatılan temel ilkedir. Doğru bir ifade olduğundan yanlış seçenek bu değildir (s. 2).",
+      "C": "Psikosomatik terimi ruh ve bedenin birbirini karşılıklı etkilemesini anlatır; belirtiler bedende gerçekten yaşanır. 'Hayali' ya da uydurma anlamı taşımaz, bu yüzden ifade yanlıştır ve aranan cevaptır (s. 2).",
+      "D": "Bedenden ruha yön, kronik ağrının depresyona ve hipotiroidinin çökkünlüğe yol açmasıyla örneklenir. Bu yön gerçek bir mekanizma olduğundan ifade doğrudur (s. 2).",
+      "E": "Psikosomatik tıp, sağlık ve hastalıkta psikolojik, biyolojik ve sosyal etkenlerin ilişkisini inceleyen bütüncül bir disiplindir. Tanım slayttaki ifadeyle örtüşür, dolayısıyla doğrudur (s. 2)."
+     },
+     "bilgi": [
+      1,
+      2,
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Psikosomatik hayali demek değildir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-01"
+     ],
+     "s": 2
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Freud'un psikanalitik kuramında, kaygı verici bir çatışmanın bilince çıkmasının bedensel belirti aracılığıyla önlenmesine ne ad verilir?",
+     "secenekler": {
+      "A": "Birincil kazanç",
+      "B": "Psikojenik bedensel tutuluş",
+      "C": "Psişik enerjinin boşalımı",
+      "D": "Ruhtan bedene etkileşim",
+      "E": "Bedenden ruha etkileşim"
+     },
+     "dogru": "A",
+     "aciklama": "Freud'a göre belirti bir çözüm yoludur; birincil kazanç, kişinin kaygı verici çatışmanın bilincine varmasının önlenmesidir (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Birincil kazanç, Freud'un kuramında belirtinin asıl işlevidir: çatışma bilinç dışında tutulur ve kaygı yerine bedensel belirti ortaya çıkar. Soruda tarif edilen süreç tam olarak budur (s. 3).",
+      "B": "Psikojenik bedensel tutuluş, Freud kuramının ilk adımıdır: felç ya da duyu kaybı gibi görünen belirtinin kaynağı bilinçdışı bir çatışmadır. Belirtinin kökenini anlatır, çatışmanın bilince çıkmasının önlenmesine verilen ad değildir (s. 3).",
+      "C": "Psişik enerjinin boşalımı kuramın üçüncü adımıdır: biriken enerji kaybolmaz, fizyolojik çıkışlarla boşalır. Dönüşümün nasıl gerçekleştiğini açıklar, kişiyi kaygıdan koruyan kazancın adı değildir (s. 3).",
+      "D": "Ruhtan bedene etkileşim, sınav kaygısının mide krampı yapması gibi ruhsal durumun bedeni etkilemesidir. Psikosomatik kavramının bir yönünü anlatan genel bir ilkedir, Freud'un tanımladığı özgül kazanç değildir (s. 2).",
+      "E": "Bedenden ruha etkileşim, kronik ağrının depresyona ya da hipotiroidinin çökkünlüğe yol açması gibi bedensel durumun ruhu etkilemesidir. Yönü ters olduğu için çatışmanın bedensel belirtiyle bilinç dışında tutulmasını anlatmaz (s. 2)."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Birincil kazanç: kişinin kaygı"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 3
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Duyguları tanıma ve adlandırmada güçlük, duygu ile bedensel duyumu ayırt edememe ve somut, dışa dönük düşünme biçimiyle tanımlanan özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Olumsuz duygulanım eğilimi",
+      "B": "Organ dili",
+      "C": "Aleksitimi",
+      "D": "Özgül çatışma",
+      "E": "Birincil kazanç"
+     },
+     "dogru": "C",
+     "aciklama": "Sifneos'un 1973'te türettiği aleksitimi, 'a + lexis + thymos' yani duyguya söz bulamama durumudur; duygu ile bedensel duyum ayrılamaz, düşünce somut ve dışa dönüktür (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Olumsuz duygulanım eğilimi, kaygı ve üzüntüye yatkın olma özelliğidir ve sıkıntının bedensel yolla ifadesini kolaylaştıran kişilik özelliklerinden biridir. Duyguyu yoğun yaşamayı anlatır, duyguya söz bulamamayı tanımlamaz (s. 4).",
+      "B": "Organ dili, söze dökülemeyen duygunun bedenden konuşmasıdır; gerilime uğrayan sistem en yatkın organı seçip onun işleyişini bozar. Duygunun hangi yoldan çıktığını anlatır, soruda tanımlanan kişilik özelliğinin adı değildir (s. 5).",
+      "C": "Aleksitimi, Sifneos'un türettiği terimle duyguları tanıma ve adlandırmada güçlük, duygu ile bedensel duyumu ayırt edememe ve somut düşünmedir. Soru bu tanımı birebir vermektedir (s. 5).",
+      "D": "Özgül çatışma kuramında Alexander her hastalığa özgü bir bilinçdışı çatışma olduğunu öne sürmüştür; bu kuram bugün geçerli değildir. Bir etiyoloji kuramıdır, duyguları adlandırma güçlüğünü tanımlamaz (s. 4).",
+      "E": "Birincil kazanç, Freud'a göre kaygı verici çatışmanın bilince çıkmasının bedensel belirtiyle önlenmesidir. Belirtinin psikolojik işlevini anlatır, duygu ile bedensel duyumu ayırt edememe özelliğini tanımlamaz (s. 3)."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "a (yok) + lexis (söz) + thymos (duygu)"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 5
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Belirtiyi büyüten mekanizmalarla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Somatosensoriyel amplifikasyon, olağan bedensel duyumları yoğun ve tehlikeli algılama eğilimidir.\nII. Seçici dikkat, normalde fark edilmeyen bedensel sinyalleri bilince taşır.\nIII. Felaketleştirme, belirsiz bir duyumun en iyimser olasılıkla yorumlanmasıdır.\nIV. Santral duyarlılaşmada zararsız uyaran da ağrılı algılanır.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "Yalnız IV"
+     },
+     "dogru": "B",
+     "aciklama": "Amplifikasyon, seçici dikkat ve santral duyarlılaşma slayttaki gibi tanımlanmıştır; felaketleştirme ise en kötü olasılıkla yorumlamadır, en iyimser değil (s. 7).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğru tanımlardır: amplifikasyon duyumu tehlikeli algılatır, seçici dikkat sinyali bilince taşır. Ancak santral duyarlılaşmayı anlatan IV de doğru olduğundan bu küme eksik kalır (s. 7).",
+      "B": "Amplifikasyon, seçici dikkat ve santral duyarlılaşma slayttaki tanımlarıyla birebir verilmiştir. III ise felaketleştirmeyi ters çevirir; en kötü olasılıkla yorumlama en iyimser diye yazılmıştır, bu yüzden dışarıda kalır (s. 7).",
+      "C": "II seçici dikkati doğru anlatır. III ise felaketleştirmeyi en iyimser yorum diye tanımlar; oysa felaketleştirme 'baş ağrısı = beyin tümörü' gibi en kötü olasılığı seçmektir (s. 7).",
+      "D": "I ve IV doğru önermelerdir. Kümeye alınan III felaketleştirmenin tanımını tersine çevirdiği ve doğru olan II kümede yer almadığı için seçenek hatalıdır (s. 7).",
+      "E": "IV santral duyarlılaşmayı doğru anlatır: ağrı yolları duyarlanır, zararsız uyaran ağrılı algılanır. Ancak I ve II de doğru olduğundan tek başına yetersizdir (s. 7)."
+     },
+     "bilgi": [
+      23,
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Belirsiz bir duyumun en kötü olasılıkla yorumlanması"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 7
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Beynin bedenden gelen sinyalleri olduğu gibi okumadığı, geçmiş deneyimine göre ne hissetmesi gerektiğini tahmin ettiği ve algılanan belirtinin sinyal ile tahminin birleşimi olduğu görüşü aşağıdaki modellerden hangisine aittir?",
+     "secenekler": {
+      "A": "Biyopsikososyal model",
+      "B": "Öğrenme kuramı",
+      "C": "Özgül çatışma kuramı",
+      "D": "Öngörüsel işleme modeli",
+      "E": "Psikanalitik kuram"
+     },
+     "dogru": "D",
+     "aciklama": "Öngörüsel işleme modelinde beyin bir tahmin makinesidir; yukarıdan aşağı beklenti ile aşağıdan yukarı sinyal birleşir ve algılanan belirti ikisinin en iyi tahminidir (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Engel'in biyopsikososyal modeli hiçbir hastalığın tek nedenli olmadığını, biyolojik, psikolojik ve sosyal etkenlerin birlikte değerlendirileceğini söyler. Beynin sinyali tahminle birleştirmesi bu modelin konusu değildir (s. 4).",
+      "B": "Öğrenme kuramına göre hasta rolü ilgi ve destekle pekişir, çocuk hasta ebeveyninin yakınma biçimini model alır. Kuram davranışın pekişmesini açıklar; algının tahminle kurulmasını anlatmaz (s. 4).",
+      "C": "Alexander'ın özgül çatışma kuramı her hastalığa özgü bir bilinçdışı çatışma öngörür, örneğin bağımlılık çatışmasının ülsere yol açması. Bugün geçerli sayılmaz ve beyin tahmini kavramını içermez (s. 4).",
+      "D": "Öngörüsel işleme modelinde beyin geçmiş deneyime dayanarak ne hissedeceğini tahmin eder; beklenti ile sinyal birleşir ve algılanan belirti ortaya çıkar. Soru bu güncel modeli tarif etmektedir (s. 6).",
+      "E": "Psikanalitik kuram belirtiyi bilinçdışı çatışmanın bedene dönüşmesi olarak açıklar ve birincil kazanç kavramını kullanır. Sinyal ile tahminin birleşimi fikri Freud'a değil güncel nörobilime aittir (s. 3)."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Beyin bedenden gelen sinyalleri olduğu gibi okumaz"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 6
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q29",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Yapısal lezyon olmaksızın felç, nöbet ve duyu kaybı yaşayan hastaları 19. yüzyılda 'histeri' olarak adlandıran ve belirtilerin hipnozla oluşturulup giderilebildiğini gösteren hekim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Freud",
+      "B": "Breuer",
+      "C": "Charcot",
+      "D": "Heinroth",
+      "E": "Engel"
+     },
+     "dogru": "C",
+     "aciklama": "Charcot, Salpêtrière Hastanesi'nde yapısal lezyon olmadan felç, nöbet ve duyu kaybı yaşayan hastaları histeri olarak tanımladı ve hipnozla belirtilerin oluşturulup giderilebildiğini gösterdi (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Freud, Breuer ile birlikte 1895'te konversiyon kavramını geliştirdi: bastırılan çatışmanın enerjisi bedensel belirtiye dönüştürülür. Hipnozla histeri gösterileri Freud'dan önce Charcot'ya aittir (s. 26).",
+      "B": "Breuer, Freud ile birlikte konversiyon adının sahibidir ve çatışmanın belirtiye dönüşmesi fikrini savunur. Salpêtrière'deki hipnoz gösterileri ona ait değildir (s. 26).",
+      "C": "Charcot, on dokuzuncu yüzyılda Salpêtrière Hastanesi'nde lezyonsuz felç, nöbet ve duyu kaybını histeri olarak tanımlamış hekimdir. Belirtileri hipnozla oluşturup giderebildiğini göstermesi onu doğru cevap yapar (s. 26).",
+      "D": "Heinroth, psikosomatik terimini 1818'de ilk kez kullanan hekimdir ve ruh–beden etkileşimi kavramının adını koymuştur. Histeri hastalarını hipnozla inceleyen kişi o değildir (s. 2).",
+      "E": "Engel, 1977'de biyopsikososyal modeli öne süren hekimdir; hiçbir hastalığın tek nedenli olmadığını savunur. Histeri hastalarını hipnozla inceleyen kişi o değildir (s. 4)."
+     },
+     "bilgi": [
+      72,
+      73
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "yapısal lezyon olmadan felç, nöbet ve duyu kaybı"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 26
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q63",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Başka bir branşta izlenen hastanın yakınmaları için 'psikosomatik' denmesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Eşlik eden tıbbi bir hastalığın varlığı psikosomatik değerlendirmeyi tümüyle dışlar.",
+      "B": "Psikosomatik tıp yalnız ruhsal etkenleri inceler, sosyal ve biyolojik etkenleri dışarıda bırakır.",
+      "C": "Belirtiler hayalidir; hasta yakınmalarını bilinçli olarak uydurmaktadır.",
+      "D": "Etkileşim yalnız ruhtan bedene doğru işler, bedenden ruha doğru bir etki beklenmez.",
+      "E": "Belirtiler gerçektir ve hasta gerçekten sıkıntı çekmektedir."
+     },
+     "dogru": "E",
+     "aciklama": "Psikosomatik hayali demek değildir; belirtiler gerçektir ve küçümsenmemelidir. Etkileşim iki yönlüdür, tıbbi hastalık varlığı tanıyı dışlamaz (s. 2, 18).",
+     "sik_aciklamalari": {
+      "A": "Ayırıcı tanı slaytı tıbbi bir hastalığın varlığının tanıyı dışlamadığını, belirleyici olanın belirtiye verilen orantısız yanıt olduğunu söyler. Bu nedenle tümüyle dışlar demek yanlıştır (s. 18).",
+      "B": "Psikosomatik tıp sağlık ve hastalıkta psikolojik, biyolojik ve sosyal etkenlerin ilişkisini inceleyen bütüncül bir disiplindir. Yalnız ruhsal etkenle sınırlamak tanıma aykırıdır (s. 2).",
+      "C": "Belirtilerin bilinçli olarak uydurulması yapay bozukluk ve temaruzu tanımlar. Psikosomatik terimi ruh ile bedenin karşılıklı etkileşimini anlatır ve hayali anlamı taşımaz; bu yüzden ifade yanlıştır (s. 2, 47).",
+      "D": "Ruh ile beden arasındaki etkileşim çift yönlüdür: sınav kaygısı mide krampı yapar, kronik ağrı da depresyona yol açar. Tek yönlü etkileşim varsaymak slayttaki tanımla çelişir (s. 2).",
+      "E": "Psikosomatik belirti hastanın bedeninde gerçekten yaşanan, sıkıntı veren bir belirtidir. Hangi branşta çalışılırsa çalışılsın bu yakınma küçümsenmemelidir; doğru ifade budur (s. 2)."
+     },
+     "bilgi": [
+      1,
+      2,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "hayali demek değildir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-01"
+     ],
+     "s": 2
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "DSM-5-TR bedensel belirti ve ilişkili bozukluklar grubunun altı başlığını sayar; tanının belirtinin açıklanamamasına değil belirtiye verilen aşırı yanıta dayandığını ve beden algısı bozukluğunun bu grupta olmadığını belirtir (s. 9–10, 18).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q06",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi DSM-5-TR'de bedensel belirti ve ilişkili bozukluklar grubunda yer alan bir bozukluktur?",
+     "secenekler": {
+      "A": "Beden algısı bozukluğu",
+      "B": "Panik bozukluğu",
+      "C": "Yapay bozukluk",
+      "D": "Yaygın anksiyete bozukluğu",
+      "E": "Obsesif kompulsif bozukluk"
+     },
+     "dogru": "C",
+     "aciklama": "DSM-5-TR grubunda bedensel belirti, hastalık kaygısı, işlevsel nörolojik belirti bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler, yapay bozukluk ve belirlenmiş/belirlenmemiş diğer başlıkları vardır; beden algısı bozukluğu grupta değildir (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Beden algısı bozukluğu, bedenin görünümüyle ilgili algılanan kusurla aşırı uğraştır ve ayırıcı tanıda komşu ruhsal bozukluk olarak anılır. DSM-5-TR bu grubun altı başlığı arasında onu saymaz (s. 9, 18).",
+      "B": "Panik bozukluğu, yineleyen panik atakları ve bunlarla ilgili kaygıyla giden bir anksiyete bozukluğudur. Bedensel belirti bozukluğunun ayırıcı tanısında düşünülür, ancak bu grubun üyesi olmaz (s. 18).",
+      "C": "Yapay bozukluk, dış ödül olmadan aldatmaya dayalı belirti üretmedir ve DSM-5-TR bedensel belirti ve ilişkili bozukluklar tablosunda açıkça yer alır. Bu yüzden doğru cevaptır (s. 9).",
+      "D": "Yaygın anksiyete bozukluğu birçok olay hakkında sürekli, kontrol edilemeyen endişeyle tanımlanan anksiyete bozukluğudur. Hastalık kaygısı bozukluğunun F ölçütünde dışlanması gereken komşu tanıdır, grubun üyesi olmaz (s. 23).",
+      "E": "Obsesif kompulsif bozukluk, beden algısı bozukluğunun da içinde yer aldığı ayrı bir tanı grubunun adıdır. DSM-5-TR bedensel belirti ve ilişkili bozukluklar tablosundaki altı başlık arasında yer almadığı için doğru cevap olamaz (s. 9)."
+     },
+     "bilgi": [
+      28,
+      33,
+      55
+     ],
+     "benzer_cikmis": [
+      "d3-f-210"
+     ],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Dış ödül olmadan, aldatmaya dayalı belirti üretme"
+     },
+     "dayanak": [
+      "cikmis:d3-f-210",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 9
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "DSM-5-TR bedensel belirti ve ilişkili bozukluklar sınıflaması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Grupta altı başlık yer alır.",
+      "B": "Beden algısı bozukluğu bu grubun başlıklarından biridir.",
+      "C": "Dönüşüm bozukluğu, işlevsel nörolojik belirti bozukluğu adıyla yer alır.",
+      "D": "Diğer tıbbi durumları etkileyen psikolojik etkenler bu gruptadır.",
+      "E": "Ölçütleri tam karşılamayan tablolar belirlenmiş/belirlenmemiş diğer başlığında kodlanır."
+     },
+     "dogru": "B",
+     "aciklama": "Beden algısı bozukluğu bu grupta değildir; ayırıcı tanı tablosunda komşu ruhsal bozukluk olarak geçer. Öteki dört ifade sınıflama tablosuyla uyuşur (s. 9, 18).",
+     "sik_aciklamalari": {
+      "A": "DSM-5-TR tablosu bedensel belirti, hastalık kaygısı, işlevsel nörolojik belirti bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler, yapay bozukluk ve belirlenmiş/belirlenmemiş diğer olmak üzere altı başlık sayar. Altı sayısı tabloyla uyuştuğu için bu ifade doğrudur (s. 9).",
+      "B": "Beden algısı bozukluğu, görünümdeki algılanan kusurla aşırı uğraşla giden bir bozukluktur ve bu derste yalnızca ayırıcı tanıda komşu tanı olarak anılır. Grubun üyesi olmadığı için ifade yanlıştır ve aranan cevaptır (s. 9, 18).",
+      "C": "DSM-5 ve DSM-5-TR konversiyon yerine işlevsel adını benimsemiştir; sorun sinir sisteminin yapısında değil işleyişindedir. Tabloda 'işlevsel nörolojik belirti bozukluğu (dönüşüm bozukluğu)' yazıldığı için ifade doğrudur (s. 9, 26).",
+      "D": "Diğer tıbbi durumları etkileyen psikolojik etkenler, var olan bir hastalığın seyrini olumsuz etkileyen ruhsal etkenleri kodlayan tanıdır. Tabloda dördüncü başlık olarak yer alır, ifade doğrudur (s. 9).",
+      "E": "Belirlenmiş ve belirlenmemiş diğer bedensel belirti ve ilişkili bozukluk başlıkları, ölçütleri tam karşılamayan tablolar için ayrılmıştır. Tabloda son satır bu işlevi taşır, ifade doğrudur (s. 9)."
+     },
+     "bilgi": [
+      28,
+      31,
+      34,
+      55
+     ],
+     "benzer_cikmis": [
+      "d3-f-210"
+     ],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Belirlenmiş / belirlenmemiş diğer Ölçütleri tam karşılamayan tablolar"
+     },
+     "dayanak": [
+      "cikmis:d3-f-210",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 9
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "DSM-5-TR'ye göre bedensel belirti bozukluğu tanısında temel alınan ölçüt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirtinin tıbben açıklanamaması",
+      "B": "Belirtiye verilen aşırı yanıt",
+      "C": "Belirtinin psikolojik bir stresörden sonra başlaması",
+      "D": "Eşlik eden tıbbi hastalığın bulunmaması",
+      "E": "Belirtinin birden çok organ sistemini tutması"
+     },
+     "dogru": "B",
+     "aciklama": "DSM-5-TR'nin temel yaklaşımı ölçütün belirtinin açıklanamaması değil, belirtiye verilen aşırı yanıt olmasıdır; tıbbi hastalık tanıyı dışlamaz (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Belirtinin tıbben açıklanamaması eski yaklaşımın dayanağıydı; bunu kanıtlamak zordur ve zihin–beden ikiliğini besler. DSM-5-TR tanıyı bu koşula dayandırmaz (s. 10).",
+      "B": "Belirtiye verilen aşırı düşünce, duygu ve davranış, DSM-5-TR'de bedensel belirti bozukluğunun B ölçütü ve tanının çekirdeğidir. Soru tam bu temel yaklaşımı sormaktadır (s. 10, 13).",
+      "C": "Psikolojik stresörden sonra başlama işlevsel nörolojik belirti bozukluğunda bir belirleyicidir ve orada bile tanı için kanıtlanması gerekmez. Bedensel belirti bozukluğunun ölçütlerinde yer almaz (s. 27).",
+      "D": "Tıbbi hastalığın bulunmaması bir koşul değildir; kanserli bir hastada da bedensel belirti bozukluğu tanısı konabilir. Belirleyici olan belirtiye verilen orantısız yanıttır (s. 10, 18).",
+      "E": "Birden çok organ sistemini tutma büyük taklitçi hastalıkları düşündüren bir özelliktir. Bedensel belirti bozukluğu tek bir belirtiyle, bazen yalnızca ağrıyla da tanı alabilir (s. 14, 18)."
+     },
+     "bilgi": [
+      35,
+      36,
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "belirtiye verilen aşırı yanıttır"
+     },
+     "dayanak": [
+      "profil",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 10
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q09",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "DSM-5-TR'nin bedensel belirti ve ilişkili bozukluklara yaklaşımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tanı, belirtinin tıbben açıklanamamasına dayanmaz.",
+      "B": "Kanser tanılı bir hastada da bedensel belirti bozukluğu tanısı konabilir.",
+      "C": "Açıklanamamayı kanıtlamaya dayanan yaklaşım zihin–beden ikiliğini besler.",
+      "D": "Hasta ikincil kazanç için yakınmasını bilinçli olarak sürdürür.",
+      "E": "Belirleyici olan, belirtiye verilen orantısız yanıttır."
+     },
+     "dogru": "D",
+     "aciklama": "Dışarıdan ikincil kazanç var gibi görünür, ancak hasta yakınmayı tümüyle bedensel yaşar; bilinçli sürdürme yapay bozukluk ve temaruzun özelliğidir (s. 14, 47).",
+     "sik_aciklamalari": {
+      "A": "DSM-5-TR tanıyı belirtinin tıbben açıklanamamasına dayandırmaz; bu kanıtlanması zor bir koşuldur. İfade slayttaki temel yaklaşımla uyumludur, dolayısıyla doğrudur (s. 10).",
+      "B": "Kanserli bir hastada bedensel belirti bozukluğu olabileceği slaytta açık örnek olarak verilir; tıbbi hastalık tanıyı engellemez. Kanser örneği slaytın kendi cümlesi olduğundan ifade doğrudur (s. 10).",
+      "C": "Açıklanamamayı kanıtlama yaklaşımı belirtiyi ya bedene ya ruha yakıştırmaya zorlar; slayt bunun zihin–beden ikiliğini beslediğini söyler. İkilik eleştirisi slaytın gerekçesi olduğundan ifade doğrudur (s. 10).",
+      "D": "İkincil kazanç, hasta rolünün getirdiği ilgi ve destek gibi dış yararlardır ve dışarıdan bakan göze varmış gibi görünür. Ancak hasta yakınmayı tümüyle bedensel yaşar, bilinçli sürdürmez; bilinçli üretim yapay bozukluk ve temaruza aittir, bu yüzden ifade yanlıştır (s. 14, 47).",
+      "E": "Orantısız yanıt, DSM-5-TR'de bedensel belirti bozukluğunun çekirdek ölçütüdür ve tanıyı belirler. İfade slaytın özetiyle birebir örtüşür, doğrudur (s. 10, 18)."
+     },
+     "bilgi": [
+      35,
+      36,
+      45,
+      145
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Dışarıdan “ikincil kazanç” var"
+     },
+     "dayanak": [
+      "ozen:s14",
+      "profil"
+     ],
+     "s": 14
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q10",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "DSM-5-TR tablosunda 'dış ödül olmadan, aldatmaya dayalı belirti üretme' biçiminde özetlenen bozukluk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirlenmiş ya da belirlenmemiş diğer bozukluk",
+      "B": "İşlevsel nörolojik belirti bozukluğu",
+      "C": "Bedensel belirti bozukluğu",
+      "D": "Hastalık kaygısı bozukluğu",
+      "E": "Yapay bozukluk"
+     },
+     "dogru": "E",
+     "aciklama": "Yapay bozuklukta belirti aldatmaya dayalı olarak üretilir, ancak belirgin bir dış ödül yoktur; amaç hasta rolüdür (s. 9, 45).",
+     "sik_aciklamalari": {
+      "A": "Belirlenmiş ya da belirlenmemiş diğer bozukluk, grubun ölçütlerini tam karşılamayan tablolar için kullanılan başlıktır. Aldatmaya dayalı belirti üretme tanımını taşımadığı için soruda özetlenen bozukluk değildir (s. 9).",
+      "B": "İşlevsel nörolojik belirti bozukluğunda nörolojik hastalıkla uyuşmayan motor ya da duyusal belirtiler vardır ve belirti istemsizdir. Aldatma ögesi bulunmaz (s. 9, 47).",
+      "C": "Bedensel belirti bozukluğu, sıkıntı veren gerçek belirtilere aşırı düşünce, duygu ve davranışla yanıt vermedir. Belirti bilinçli üretilmez; aldatma söz konusu değildir (s. 9).",
+      "D": "Hastalık kaygısı bozukluğunda belirti yok ya da hafiftir, çekirdek ciddi hastalık korkusudur. Belirti üretimi ya da aldatma içermez (s. 9).",
+      "E": "Yapay bozukluk, belirgin dış ödül olmaksızın belirtilerin aldatmaya dayalı uydurulması ya da hastalık oluşturulmasıdır. Tablodaki kısa tanım bu bozukluğa aittir (s. 9, 45)."
+     },
+     "bilgi": [
+      33,
+      137,
+      138
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "aldatmaya dayalı belirti üretme"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 9
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi bedensel belirti bozukluğunun ayırıcı tanısında 'büyük taklitçi' olarak düşünülmesi gereken tıbbi durumlardan biri değildir?",
+     "secenekler": {
+      "A": "Multipl skleroz",
+      "B": "Miyastenia gravis",
+      "C": "Sistemik lupus eritematozus",
+      "D": "Panik bozukluğu",
+      "E": "HIV/AIDS"
+     },
+     "dogru": "D",
+     "aciklama": "Multipl skleroz, miyastenia gravis, SLE, HIV/AIDS, neoplaziler ve endokrinopatiler erken evrede normal tetkikle gelen büyük taklitçi tıbbi durumlardır; panik bozukluğu ise ayırıcı tanıdaki ruhsal bozukluklardandır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Multipl skleroz, dalgalı ve değişken nörolojik belirtilerle başlayıp erken evrede tetkikleri normal çıkabilen demiyelinizan hastalıktır. Slayt onu büyük taklitçi tıbbi durumlar arasında sayar (s. 18).",
+      "B": "Miyastenia gravis, kas güçsüzlüğü ve yorulma ile seyreden nöromüsküler kavşak hastalığıdır; belirtileri değişkendir. Ayırıcı tanı tablosunda tıbbi büyük taklitçiler arasında yer alır (s. 18).",
+      "C": "Sistemik lupus eritematozus, birçok organı tutabilen ve belirsiz belirtilerle başlayan otoimmün hastalıktır. Tabloda tıbbi durumlar sütununda sayıldığı için büyük taklitçidir (s. 18).",
+      "D": "Panik bozukluğu, yineleyen panik ataklarıyla giden bir anksiyete bozukluğudur ve ayırıcı tanıda ruhsal bozukluklar sütununda yer alır. Tıbbi bir büyük taklitçi olmadığı için aranan cevaptır (s. 18).",
+      "E": "HIV/AIDS, çok sayıda sistemi tutabilen ve erken evrede belirsiz yakınmalarla gelen bir enfeksiyon hastalığıdır. Slayt onu tıbbi büyük taklitçiler arasında listeler (s. 18)."
+     },
+     "bilgi": [
+      53,
+      54,
+      55
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Multipl skleroz SLE Depresyon Panik bozukluğu"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-11",
+      "ozen:s18",
+      "profil"
+     ],
+     "s": 18
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Birçok organı tutabilen, dalgalı ve değişken belirtilerle başlayan, erken evrede rutin tetkikleri normal çıkabildiği için kolayca 'psikolojik' sanılan hastalıklar aşağıdaki kavramlardan hangisiyle adlandırılır?",
+     "secenekler": {
+      "A": "Organ dili",
+      "B": "Büyük taklitçi",
+      "C": "Santral duyarlılaşma",
+      "D": "Belirti büyütme döngüsü",
+      "E": "Öngörüsel işleme"
+     },
+     "dogru": "B",
+     "aciklama": "Büyük taklitçi, erken evrede tetkikleri normal çıkabilen ve bu yüzden psikolojik sanılan, çok organ tutan dalgalı hastalıklardır; bedensel belirti bozukluğu düşünülürken önce bunlar dışlanır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Organ dili, gerilime uğrayan sistemin en yatkın organı seçip onun işleyişini bozarak boşalım bulmasıdır. Bir tıbbi hastalığın psikolojik sanılmasını değil, ruhsal gerilimin bedensel ifadesini anlatır (s. 5).",
+      "B": "Büyük taklitçi, çok organı tutan, dalgalı ve değişken belirtilerle başlayan, erken dönemde rutin tetkikleri normal çıkabilen hastalıklardır. Kolayca psikolojik sanıldıkları için ayırıcı tanıda önce düşünülürler (s. 18).",
+      "C": "Santral duyarlılaşma, süreğen stres ve ağrının omurilik ve beyindeki ağrı yollarını duyarlı hale getirmesidir; zararsız uyaran ağrılı algılanır. Hastalık adı değil, belirtiyi büyüten bir mekanizmadır (s. 7).",
+      "D": "Belirti büyütme döngüsü duyum, dikkat, felaket yorumu, kaygı ve artan duyum halkalarından oluşur. Bedensel belirtinin neden sürdüğünü açıklar; tıbbi hastalıkların gözden kaçmasını adlandırmaz (s. 7).",
+      "E": "Öngörüsel işleme, beynin sinyali geçmiş deneyime dayalı tahminle birleştirerek algı oluşturmasıdır. Algı modelidir; ayırıcı tanıdaki tıbbi hastalık grubunu adlandırmaz (s. 6)."
+     },
+     "bilgi": [
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "kolayca psikolojik sanılan hastalık"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-11",
+      "ozen:s18",
+      "profil"
+     ],
+     "s": 18
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q65",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi bedensel belirti bozukluğunun ayırıcı tanısında düşünülmesi gereken ruhsal bozukluklardan biri değildir?",
+     "secenekler": {
+      "A": "Hastalık kaygısı bozukluğu",
+      "B": "Yaygın anksiyete bozukluğu",
+      "C": "Sanrısal bozukluk",
+      "D": "Temaruz",
+      "E": "Multipl skleroz"
+     },
+     "dogru": "E",
+     "aciklama": "Ayırıcı tanı slaytında ruhsal bozukluklar depresyon, panik bozukluğu, yaygın anksiyete, hastalık kaygısı, sanrısal bozukluk, beden algısı bozukluğu, yapay bozukluk ve temaruzdur; multipl skleroz tıbbi taklitçidir (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Hastalık kaygısı bozukluğu hasta olma fikrine yönelik kaygıyla giden komşu bir tanıdır. Ayırıcı tanı tablosunun ruhsal bozukluklar sütununda yer aldığı için ifade doğrudur (s. 18).",
+      "B": "Yaygın anksiyete bozukluğu süreğen kaygıyla birlikte bedensel yakınmalarla da seyredebilen bir kaygı bozukluğudur. Ayırıcı tanı tablosunun ruhsal bozukluklar sütununda sayıldığı için akla gelmelidir (s. 18).",
+      "C": "Sanrısal bozuklukta hastalıkla ilgili inanç sanrı düzeyine ulaşabilir. Tablonun ruhsal bozukluklar sütununda yer alır ve ayırıcı tanıda akla gelmelidir (s. 18).",
+      "D": "Temaruz dış kazanç için belirtinin bilinçli üretilmesidir. Ruhsal bozukluk sayılmasa da ayırıcı tanı tablosunun ruhsal sütununda listelenir, bu yüzden aranan seçenek değildir (s. 18, 47).",
+      "E": "Multipl skleroz birçok organı tutabilen, dalgalı seyirli bir büyük taklitçidir. Ayırıcı tanıda tıbbi durumlar sütununda yer alır, ruhsal bozukluk olmadığı için aranan cevaptır (s. 18)."
+     },
+     "bilgi": [
+      54,
+      55
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Ruhsal bozukluklar"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-12",
+      "hoca:hv-k2-22-11",
+      "ozen:s18"
+     ],
+     "s": 18
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q66",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Bedensel belirti bozukluğu düşünülen bir hastada ayırıcı tanı ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Tanı koymadan önce büyük taklitçi tıbbi durumlar değerlendirilmelidir.\nII. Depresyon ve hastalık kaygısı gibi ruhsal bozukluklar da ayırıcı tanıda yer alır.\nIII. Eşlik eden tıbbi bir hastalığın varlığı bu tanıyı dışlar.\nIV. Yapay bozukluk ve temaruz ayırıcı tanı listesinde bulunur.",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "II, III ve IV",
+      "C": "I, II, III ve IV",
+      "D": "Yalnız I",
+      "E": "I ve II"
+     },
+     "dogru": "A",
+     "aciklama": "Önce büyük taklitçiler, sonra ruhsal bozukluklar (yapay bozukluk ve temaruz dahil) düşünülür; tıbbi hastalığın varlığı ise tanıyı dışlamaz (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Büyük taklitçiler tanıdan önce düşünülür, depresyon ve hastalık kaygısı ruhsal ayırıcı tanıdadır, yapay bozukluk ve temaruz da listede yer alır. Tıbbi hastalık tanıyı dışlamadığı için III çıkarılınca doğru seçenek budur (s. 18).",
+      "B": "Bu seçenek III'ü içerir; oysa slayt tıbbi bir hastalığın varlığının tanıyı dışlamadığını, belirleyici olanın orantısız yanıt olduğunu açıkça söyler. I'in dışarıda bırakılması da büyük taklitçi ilkesine aykırıdır (s. 18).",
+      "C": "Tüm öncülleri kabul etmek III'ü de doğru saymak demektir. Tıbbi bir hastalık ile bedensel belirti bozukluğu birlikte bulunabildiği için III yanlıştır ve bu seçenek kabul edilmez (s. 18).",
+      "D": "Yalnız I, büyük taklitçilerin dışlanmasını içerir. Ruhsal bozuklukların ve yapay bozukluk ile temaruzun da ayırıcı tanıda yer alması göz ardı edildiği için eksik bir seçenektir (s. 18).",
+      "E": "I ve II büyük taklitçileri ve ruhsal bozuklukları kapsar. Ancak yapay bozukluk ve temaruz da ruhsal sütunda listelendiği için IV dışarıda kalınca seçenek eksik olur (s. 18)."
+     },
+     "bilgi": [
+      53,
+      54,
+      55
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Tıbbi bir hastalığın varlığı tanıyı dışlamaz"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-12",
+      "hoca:hv-k2-22-11",
+      "ozen:s18"
+     ],
+     "s": 18
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-210",
+     "soru": "Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Yapay bozukluk",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "B",
+       "text": "Konversiyon bozukluğu",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Beden algısı bozukluğu",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "D",
+       "text": "Hastalık kaygısı bozukluğu",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Bedensel belirti bozukluğu",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Bedensel belirti bozukluğunun A+B+C ölçütlerini, belirleyicilerini, klinik özelliklerini, epidemiyolojisini, dört etken kümesini, büyük taklitçileri ve prognoz göstergelerini açıklar (s. 12–19).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "36 yaşında kadın hasta, iki yıldır karın ağrısı, yorgunluk ve eklem ağrıları nedeniyle gastroenteroloji, nöroloji ve romatolojiye başvurmuş; tetkiklerinin çoğu normal çıkmıştır. Normal sonuçlar onu rahatlatmıyor, 'bir şeyin gözden kaçtığını' düşünüyor ve günde saatlerce belirtilerini izliyor. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastalık kaygısı bozukluğu",
+      "B": "İşlevsel nörolojik belirti bozukluğu",
+      "C": "Bedensel belirti bozukluğu",
+      "D": "Yapay bozukluk",
+      "E": "Panik bozukluğu"
+     },
+     "dogru": "C",
+     "aciklama": "Gerçek ve sıkıntı veren birden çok belirti (A), belirtilere aşırı zaman ve enerji ayırma ile orantısız düşünce (B) ve iki yıllık süre (C) bedensel belirti bozukluğu ölçütlerini karşılar (s. 12–13).",
+     "sik_aciklamalari": {
+      "A": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir; kaygının odağı hasta olma fikridir. Bu hastada belirgin ve sıkıntı veren belirtiler bulunduğu için uymaz (s. 22, 24).",
+      "B": "İşlevsel nörolojik belirti bozukluğunda nörolojik hastalıkla uyuşmayan güçsüzlük, nöbet ya da duyu kaybı gibi motor/duyusal belirtiler vardır. Karın ağrısı, yorgunluk ve eklem ağrısı bu tabloya ait değildir (s. 27).",
+      "C": "Bedensel belirti bozukluğunda gerçek belirtilere orantısız düşünce ve aşırı zaman ayırma eşlik eder, normal tetkik rahatlatmaz ve tablo 6 aydan uzun sürer. Hastanın öyküsü A, B ve C ölçütlerini karşılar (s. 12, 13).",
+      "D": "Yapay bozuklukta belirtiler aldatmaya dayalı olarak uydurulur ya da oluşturulur. Burada aldatma kanıtı yoktur; hasta yakınmayı gerçekten yaşar ve tetkikler onu rahatlatmaz (s. 45).",
+      "E": "Panik bozukluğu, ani başlayan dakikalar süren panik ataklarıyla tanınır ve ayırıcı tanıda düşünülür. İki yıl süren karın ve eklem ağrısı odaklı bu tablo atak biçiminde değildir (s. 18)."
+     },
+     "bilgi": [
+      38,
+      39,
+      40,
+      41,
+      42
+     ],
+     "benzer_cikmis": [
+      "dd00370e9106"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Normal sonuçlar onu rahatlatmıyor"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-06",
+      "cikmis:dd00370e9106",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 12
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q14",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Bedensel belirti bozukluğunun DSM-5-TR tanı ölçütleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sıkıntı veren ya da günlük yaşamı bozan bir ya da daha fazla bedensel belirti bulunur.",
+      "B": "Belirtinin ciddiyetine ilişkin orantısız ve sürekli düşünceler B ölçütünün ögelerindendir.",
+      "C": "Belirtili olma hali genellikle 6 aydan uzun sürer.",
+      "D": "Tanı için belirtilerin tıbben açıklanamadığının gösterilmesi zorunludur.",
+      "E": "Ağrının baskın olduğu tip bir belirleyici olarak kodlanır."
+     },
+     "dogru": "D",
+     "aciklama": "Belirtiler tıbben açıklanabilir de olabilir; ölçüt açıklanamama değil aşırı yanıttır. A, B, C ölçütleri ve ağrı belirleyicisi slayttaki gibidir (s. 13).",
+     "sik_aciklamalari": {
+      "A": "A ölçütü sıkıntı veren ya da günlük yaşamı belirgin bozan bir ya da daha fazla bedensel belirtidir. Tek belirti bile yeterlidir; ifade doğrudur (s. 13).",
+      "B": "B ölçütü aşırı düşünce, duygu ya da davranıştır ve orantısız sürekli düşünceler bunun ilk ögesidir; en az biri bulunmalıdır. Orantısız düşünce B ölçütünde açıkça sayıldığı için ifade doğrudur (s. 13).",
+      "C": "C ölçütüne göre tek bir belirti sürekli olmasa da belirtili olma hali genellikle 6 aydan uzun sürer. Altı ay eşiği C ölçütünün kendisi olduğundan ifade doğrudur (s. 13).",
+      "D": "Belirleyiciler satırı 'belirtiler tıbben açıklanabilir de olabilir' der; DSM-5-TR tanıyı açıklanamamaya dayandırmaz. Açıklanamamayı göstermek zorunlu olmadığı için ifade yanlıştır ve aranan cevaptır (s. 10, 13).",
+      "E": "Belirleyiciler arasında ağrının baskın olduğu, süreğen ve hafif/orta/ağır seçenekleri yer alır. Ağrı belirleyicisi gerçekten kodlanır; ifade doğrudur (s. 13)."
+     },
+     "bilgi": [
+      40,
+      41,
+      42,
+      43
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Belirtiler tıbben açıklanabilir de olabilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-06",
+      "ozen:s13",
+      "profil",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 13
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q15",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Bedensel belirti bozukluğunda C ölçütüne göre belirtili olma hali genellikle en az ne kadar sürer?",
+     "secenekler": {
+      "A": "1 ay",
+      "B": "3 ay",
+      "C": "6 ay",
+      "D": "1 yıl",
+      "E": "2 yıl"
+     },
+     "dogru": "C",
+     "aciklama": "C ölçütü: tek bir belirti sürekli olmasa da belirtili olma hali genellikle 6 aydan uzun sürer (s. 13).",
+     "sik_aciklamalari": {
+      "A": "1 ay, akut tabloları kronik olanlardan ayırmak için kullanılan kısa bir süredir. Bedensel belirti bozukluğunun C ölçütü için yeterli değildir (s. 13).",
+      "B": "3 ay, bazı ruhsal bozukluklarda kullanılan ara bir süre eşiğidir ve kısa süreli tabloları ayırmaya yarar. Bedensel belirti bozukluğunun C ölçütünde aranan süre bunun iki katı, yani 6 aydır (s. 13).",
+      "C": "6 ay, C ölçütünde belirtili olma halinin genellikle aşması gereken süredir; hastalık kaygısı bozukluğunun E ölçütünde de aynı süre geçerlidir. Altı ay C ölçütünün süresi olduğu için doğru cevap budur (s. 13, 23).",
+      "D": "1 yıl, bedensel belirti bozukluğunda belirtili dönemlerin yıllarca sürebileceği gidiş sayfasında anılır. Tanı ölçütü olan süre eşiği değildir (s. 13, 19).",
+      "E": "2 yıl, slayttaki kurgusal vaka Ayşe Hanım'ın yakınma süresidir. Tanı ölçütündeki süre eşiği bundan çok daha kısadır (s. 12, 13)."
+     },
+     "bilgi": [
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "hali genellikle 6 aydan"
+     },
+     "dayanak": [
+      "ozen:s13",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 13
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q16",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Bedensel belirti bozukluğunun klinik özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Belirtiler stres ya da çatışmadan sonra alevlenir.",
+      "B": "Normal tetkik sonuçları ve hekim güvencesi hastayı rahatlatmaz.",
+      "C": "Hasta yakınmalarının psikolojik kökenli olduğunu kolayca kabul eder ve yeni tetkik istemez.",
+      "D": "Doktor doktor dolaşma ve yinelenen tetkik isteği görülür.",
+      "E": "Ağrı baskınsa aşırı analjezik kullanımı riski vardır."
+     },
+     "dogru": "C",
+     "aciklama": "Hasta yakınmayı tümüyle bedensel yaşar, hekim güvencesi rahatlatmaz ve yinelenen tetkik ister; psikolojik kökeni kolayca kabul etmez (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Stres ya da çatışmadan sonra belirtilerin alevlenmesi, ruhsal gerilimin bedensel yakınmayı tetiklediğini gösteren klinik özelliktir. Slaytta açıkça sayıldığı için ifade doğrudur, yanlış aranan soruda seçilmez (s. 14).",
+      "B": "Normal tetkik sonucu ve hekim güvencesinin rahatlatmaması, hastanın belirtiye verdiği aşırı yanıtın en görünür göstergesidir. Bu özellik klinik özellikler sayfasında yer aldığından ifade doğrudur (s. 14).",
+      "C": "Hasta yakınmayı tümüyle bedensel yaşar, bu yüzden doktor doktor dolaşır ve yinelenen tetkik ister. Psikolojik kökeni kolayca kabul etmez; ifade yanlıştır ve aranan cevaptır (s. 14).",
+      "D": "Doktor doktor dolaşma ve yinelenen tetkik isteği, hastanın yakınmayı tümüyle bedensel yaşamasının ve güvenceyle rahatlamamasının doğal sonucudur. Slaytta klinik özellik olarak verildiği için ifade doğrudur (s. 14).",
+      "E": "Ağrının baskın olduğu tipte hasta rahatlamak için ağrı kesiciye sık başvurur ve aşırı analjezik kullanımı riski doğar. Bu risk slaytta ayrıca vurgulandığı için ifade doğrudur (s. 14)."
+     },
+     "bilgi": [
+      44,
+      45
+     ],
+     "benzer_cikmis": [
+      "past-1790877044849-897865",
+      "d3k2-2018-2019-k4-q51"
+     ],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Stres ya da çatışmadan sonra"
+     },
+     "dayanak": [
+      "ozen:s14",
+      "cikmis:past-1790877044849-897865",
+      "cikmis:d3k2-2018-2019-k4-q51"
+     ],
+     "s": 14
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q17",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Bedensel belirti bozukluğunun epidemiyolojisi ve eş tanıları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genel erişkin toplumda yaygınlık %5–7 olarak tahmin edilir.",
+      "B": "Kadınlar erkeklerden daha çok bedensel belirti bildirir.",
+      "C": "Birinci basamakta daha sık görülür.",
+      "D": "Depresyon ve anksiyete bozukluklarıyla eş tanı nadirdir.",
+      "E": "Öz-bildirim ölçekleriyle toplum örneklemlerinde %12,9 bulunmuştur."
+     },
+     "dogru": "D",
+     "aciklama": "Depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir; belirtiyi gördüğünüzde ruh halini de sormak gerekir. Diğer veriler slayttaki gibidir (s. 15).",
+     "sik_aciklamalari": {
+      "A": "%5–7, DSM-5-TR'nin genel erişkin toplum için verdiği tahmini yaygınlıktır ve bozukluğun hiç de nadir olmadığını gösterir. Sayı slayttaki epidemiyoloji verisiyle uyuştuğu için ifade doğrudur (s. 15).",
+      "B": "Kadınların erkeklerden daha çok bedensel belirti bildirmesi slaytta K>E biçiminde verilir ve cinsiyet dağılımının temel verisidir. Dolayısıyla ifade doğrudur, yanlış aranan soruda seçilmez (s. 15).",
+      "C": "Hastalar yakınmalarını bedensel yaşadığı için ilk olarak pratisyen ya da aile hekimine gider; bu yüzden bozukluk birinci basamakta daha sık görülür. İfade slaytla uyumludur, doğrudur (s. 15).",
+      "D": "Depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir, nadir değildir; slayt belirtiyi görünce ruh halini de sormayı öğütler. İfade yanlıştır ve aranan cevaptır (s. 15).",
+      "E": "%12,9, Löwe ve arkadaşlarının 2022 derlemesinde öz-bildirim ölçekleriyle toplum örneklemlerinde bulunan orandır; ölçek tabanlı tarama tanı görüşmesinden yüksek değer verir. Yüzde on iki dokuz slayttaki Löwe verisi olduğundan ifade doğrudur (s. 15)."
+     },
+     "bilgi": [
+      46,
+      47,
+      48
+     ],
+     "benzer_cikmis": [
+      "past-1790877044849-897865"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-09",
+      "cikmis:past-1790877044849-897865"
+     ],
+     "s": 15
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q18",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Başkalarına yönelik saldırgan ve düşmanca arzuların bastırılarak bedensel yakınmalara aktarılması, bedensel belirti bozukluğunun hangi etken kümesinde yer alır?",
+     "secenekler": {
+      "A": "Biyolojik etkenler",
+      "B": "Psikodinamik etkenler",
+      "C": "Sosyal etkenler",
+      "D": "Öğrenme ve aile",
+      "E": "Kültür ve sağlık sistemi"
+     },
+     "dogru": "B",
+     "aciklama": "Bastırılan öfke psikodinamik etkenlerin ilk maddesidir: saldırgan ve düşmanca arzular bastırılır, bedensel yakınmalara aktarılır (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Biyolojik etkenler genetik yatkınlık, santral duyarlılaşma ve stres fizyolojisini kapsar; bedensel sinyale duyarlılığı açıklar. Bastırılan öfke bu kümede yer almaz (s. 16).",
+      "B": "Psikodinamik etkenler bastırılan öfke, yardımı geri çevirme ve kefaret olarak acıdan oluşur. Saldırgan arzuların bedene aktarılması bu kümenin ilk maddesidir; doğru cevaptır (s. 17).",
+      "C": "Sosyal etkenler çocuklukta ağır hastalık geçirmek, hasta ebeveynle büyümek, ihmal ya da istismar gibi yaşantılardır. Bilinçdışı öfkenin bedene aktarılması sosyal değil ruhsal bir mekanizmadır (s. 17).",
+      "D": "Öğrenme ve aile etkeninde yakınma ilgi ya da sorumluluktan uzaklaşmayla ödüllendirilir ve 'bedenden konuşma' ailede öğrenilir. Pekiştirmeyi anlatır, bastırılan öfkeyi değil (s. 17).",
+      "E": "Kültür ve sağlık sistemi etkeninde ruhsal sıkıntının damgalandığı ortamda sıkıntı bedenle anlatılır ve gereksiz tetkikler hastalık inancını güçlendirir. Toplumsal bir etkendir; psikodinamik mekanizma değildir (s. 17)."
+     },
+     "bilgi": [
+      52
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h42"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "arzular bastırılır ve bedensel yakınmalara aktarılır"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h42"
+     ],
+     "s": 17
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q19",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi bedensel belirti bozukluğunda psikodinamik etkenler arasında sayılır?",
+     "secenekler": {
+      "A": "Bedensel sinyallere karşı merkezi sinir sisteminde santral duyarlılaşma gelişmesi",
+      "B": "Kaygı ve üzüntüye yatkın olumsuz duygulanım eğilimi",
+      "C": "Suçluluk duygusuna karşı ağrının kefaret işlevi görmesi",
+      "D": "Çocuklukta hasta bir ebeveynle büyümüş olmak",
+      "E": "Gereksiz tetkiklerin hastalık inancını güçlendirmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Kefaret olarak acı: suçluluk, doğuştan kötü olma duygusu ve düşük benlik değerine karşı ağrı bir ceza ve kefaret işlevi görür; bastırılan öfke ve yardımı geri çevirme ile birlikte psikodinamik etkenlerdir (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Santral duyarlılaşma, merkezi sinir sisteminin bedensel sinyallere aşırı duyarlı hale gelmesidir ve biyolojik etkenler arasında yer alır. Bilinçdışı bir çatışmayı değil, sinir sistemi işleyişini anlatır (s. 16).",
+      "B": "Olumsuz duygulanım (nörotisizm) kaygı ve üzüntüye yatkın kişilerin duyumları daha sık fark edip tehdit edici yorumlamasıdır. Psikolojik etkenler kümesindedir, psikodinamik mekanizma sayılmaz (s. 16).",
+      "C": "Kefaret olarak acı, suçluluk ve düşük benlik değerine karşı ağrının ceza işlevi görmesidir; bastırılan öfke ve yardımı geri çevirme ile birlikte psikodinamik etkenleri oluşturur. Psikodinamik kümenin üçüncü maddesi olduğu için doğru cevap budur (s. 17).",
+      "D": "Hasta bir ebeveynle büyümek, ağır hastalık geçirmek ve ihmal gibi çocukluk yaşantıları sosyal etkenler kümesindedir. Çevresel bir yaşantıdır, psikodinamik bir çatışma değildir (s. 17).",
+      "E": "Gereksiz tetkiklerin hastalık inancını güçlendirmesi kültür ve sağlık sistemi etkenine aittir. Sağlık sisteminin davranışını anlatır; bilinçdışı çatışmayla ilgisi yoktur (s. 17)."
+     },
+     "bilgi": [
+      50,
+      51,
+      52
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h42"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "ağrı bir ceza ve kefaret işlevi görür"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h42"
+     ],
+     "s": 17
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q20",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Bedensel belirti bozukluğunun gidişi ve prognozu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Olguların üçte biri ile yarısı zamanla düzelir.",
+      "B": "Seyir dönemseldir; dönemler aylar ya da yıllar sürebilir.",
+      "C": "Çocukluktaki bedensel yakınmalar çoğunlukla erişkinlikte geriler.",
+      "D": "Ani başlangıç kötü prognoz göstergesidir.",
+      "E": "Çok sayıda belirti kötü gidişle ilişkilidir."
+     },
+     "dogru": "D",
+     "aciklama": "Ani başlangıç iyi prognoz göstergeleri arasındadır; kötü gidişle ilişkili olanlar çok sayıda belirti, çocukluk çağı olumsuz yaşantıları, süreğen tıbbi hastalık ve sosyal strestir (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Olguların üçte biri ile yarısının zamanla düzelmesi (%33–50), bozukluğun kalıcı değil dalgalı ve kısmen iyileşen bir gidişi olduğunu gösterir. Gidiş sayfasındaki bu veri doğrudur, aranan yanlış ifade değildir (s. 19).",
+      "B": "Seyrin dönemsel olması, belirtili ve belirtisiz dönemlerin aylar ya da yıllar boyunca birbirini izlemesi demektir; hasta uzun süre izlenir. Dönemsel seyir gidiş sayfasının ana cümlesi olduğundan ifade doğrudur (s. 19).",
+      "C": "Çocukluktaki bedensel yakınmaların çoğunlukla erişkinlikte gerilemesi, erken yaştaki belirtilerin iyi seyirli olabileceğini gösteren gidiş verisidir. İfade slaytla uyumludur, doğrudur (s. 19).",
+      "D": "Ani başlangıç, yüksek sosyoekonomik düzey ve düzelebilir depresyon gibi iyi prognoz göstergeleri arasında sayılır. Kötü prognoz göstergesi diye verilmesi yanlıştır; aranan cevap budur (s. 19).",
+      "E": "Çok sayıda belirti, bozukluğun yaygın ve dirençli olduğunu gösterir ve çocukluk çağı olumsuz yaşantıları ile süreğen tıbbi hastalıkla birlikte kötü gidişle ilişkilendirilir. Çok sayıda belirti kötü gidiş listesinde olduğu için ifade doğrudur (s. 19)."
+     },
+     "bilgi": [
+      57,
+      58,
+      59
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q51"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Olguların üçte biri ile yarısı"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q51"
+     ],
+     "s": 19
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q21",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Bedensel belirti bozukluğunda aşağıdakilerden hangisi iyi prognoz göstergesidir?",
+     "secenekler": {
+      "A": "Çok sayıda belirti",
+      "B": "Çocukluk çağı olumsuz yaşantıları",
+      "C": "Eşlik eden süreğen tıbbi hastalık",
+      "D": "Yüksek sosyoekonomik düzey",
+      "E": "Kişilik bozukluğunun bulunması"
+     },
+     "dogru": "D",
+     "aciklama": "İyi prognoz göstergeleri: yüksek sosyoekonomik düzey, ani başlangıç, düzelebilir depresyon ya da anksiyete, kişilik bozukluğu ve eşlik eden tıbbi hastalık olmaması (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Çok sayıda belirti, bozukluğun birçok sistemi tuttuğunu ve tedaviye daha dirençli olduğunu gösteren bir özelliktir. Gidiş sayfasında kötü gidişle ilişkili etkenler arasında sayıldığı için iyi prognoz göstergesi olamaz (s. 19).",
+      "B": "Çocukluk çağı olumsuz yaşantıları, ağır hastalık geçirmek ya da ihmal gibi deneyimlerdir; hem bozukluğun sosyal risk etkeni hem de kötü gidiş göstergesidir. Prognozu iyileştirmez, kötüleştirir (s. 17, 19).",
+      "C": "Eşlik eden süreğen tıbbi hastalık belirtileri karmaşıklaştırır ve kötü gidişle ilişkilidir; iyi prognoz için tıbbi hastalığın olmaması aranır (s. 19).",
+      "D": "Yüksek sosyoekonomik düzey, iyi prognoz göstergelerinin ilk maddesidir; tedaviye erişimi, bilgiye ulaşmayı ve sosyal destek olanaklarını yansıtır. Bu yüzden gidişi olumlu yönde etkiler ve doğru cevaptır (s. 19).",
+      "E": "Kişilik bozukluğu, hastanın ilişkilerini ve tedavi iş birliğini zorlaştıran kalıcı bir örüntüdür. Slayt iyi prognoz için kişilik bozukluğunun olmamasını arar; bulunması gidişi zorlaştırır, iyi gösterge değildir (s. 19)."
+     },
+     "bilgi": [
+      58,
+      59
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Olguların üçte biri ile yarısı İyi prognoz göstergeleri"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 19
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q64",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "45 yaşında kadın hasta, bir yıldır süren baş ve sırt ağrısı nedeniyle nöroloji polikliniğine başvuruyor. Tetkikleri normal çıkmış, belirtilerini günde saatlerce araştırıyor. Bu hastada eş tanı sıklığı en yüksek olduğu için mutlaka sorgulanması gereken durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İşlevsel nörolojik belirti bozukluğu",
+      "B": "Yapay bozukluk",
+      "C": "Beden algısı bozukluğu",
+      "D": "Depresyon ve anksiyete bozuklukları",
+      "E": "Hastalık kaygısı bozukluğu"
+     },
+     "dogru": "D",
+     "aciklama": "Bedensel belirti bozukluğunda depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir; hangi branşta olunursa olunsun belirtiyi gören hekim ruh halini de sormalıdır (s. 15).",
+     "sik_aciklamalari": {
+      "A": "İşlevsel nörolojik belirti bozukluğu, nörolojik hastalıkla uyuşmayan motor ya da duyusal belirtilerle tanımlanan ayrı bir başlıktır. Bu hastada motor ya da duyusal işlev kaybı yoktur ve sık eşlik eden tablo olarak bildirilmez (s. 9, 15).",
+      "B": "Yapay bozukluk, dış ödül olmadan aldatmaya dayalı belirti üretmedir. Bu hastada belirtinin bilinçli üretildiğini düşündüren bir bulgu yoktur ve yapay bozukluğun sık eşlik ettiği bildirilmez (s. 9, 15).",
+      "C": "Beden algısı bozukluğu, obsesif kompulsif ve ilişkili bozukluklar grubunda yer alan ayrı bir tanıdır ve bu grubun üyesi değildir. Bedensel belirti bozukluğuna sık eşlik eden tablo olarak verilmez (s. 9, 15).",
+      "D": "Depresyon ve anksiyete bozuklukları bedensel belirti bozukluğuna en sık eşlik eden ruhsal tablolardır. Eş tanı çok yüksek olduğu için belirtiyi gören her hekim ruh halini sorgulamalıdır; doğru seçenek budur (s. 15).",
+      "E": "Hastalık kaygısı bozukluğunda belirti yoktur ya da hafiftir, çekirdek sorun ciddi hastalık korkusudur. Bu hastada belirgin ağrılar vardır ve hastalık kaygısı bozukluğu sık eş tanı olarak bildirilmez (s. 9, 15)."
+     },
+     "bilgi": [
+      48
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Depresyon ve anksiyete bozukluklarıyla eş tanı çok yüksektir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-09"
+     ],
+     "s": 15
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877044849-897865",
+     "soru": "Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Bozukluğun gidişi süresince hastada fizik muayene veya laboratuvar tetkiklerinde hiçbiri yeterince açıklanamayan en az 4 ağrı, 2 GİS, 1 cinsel ve 1 nörolojik semptom görülür",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Hastalar yaşamlarının büyük kısmında hastalıklı oldukları inancını sıklıkla taşırlar",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Psikolojik sıkıntı ve kişilerarası ilişki sorunları belirgindir; anksiyete ve depresyon en sık ortaya çıkan psikiyatrik durumlardır",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Semptomlar 30 yaşından sonra başlar",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Somatizasyon bozukluğu kronik ve sıklıkla işlev kaybına yol açan bir bozukluktur",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q51",
+     "soru": "Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Bozukluğun gidişi sürecinde hastada fizik muayene veya laboratuvar tetkikleri ile yeterince açıklanamayan en az 4 ağrı, 2 GİS, 1 cinsel ve 1 psödonörolojik semptom görülür",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Hastalar yaşamlarının büyük kısmında hastalıklı oldukları inancını sıklıkla taşırlar",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Psikolojik sıkıntı ve kişiler arası ilişki sorunları belirgindir. Anksiyete ve depresyon en sık ortaya çıkan psikiyatrik durumlardır",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Semptomlar 30 yaşından sonra başlar",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Somatizasyon bozukluğu kronik ve sıklıkla işlev kaybına yol açan bir bozukluktur",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2023-2024-h42",
+     "soru": "Kurgu Soru: Aşağıdakilerden hangisi somatizasyonun (bedensel belirti bozukluğu) nedenlerinden biridir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Belirtilerin maddi ya da hukuki çıkar sağlamak amacıyla bilinçli olarak üretilmesi",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Hasta rolüne bürünüp tıbbi ilgi görmek için hastalığın bilerek taklit edilmesi",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Başkalarına yönelik saldırgan ve düşmanca arzuların bedensel yakınmalara aktarılması",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Sosyal statü ve eğitim düzeyinin yüksek olması",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Duygu ve düşüncelerin sözel olarak rahatça ifade edilebilmesi",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Hastalık kaygısı bozukluğunun A–F ölçütlerini, bakım arayan/kaçınan tiplerini sayar ve bedensel belirti bozukluğundan belirti varlığı, kaygı odağı ve davranış üzerinden ayırt eder (s. 21–24).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q22",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "24 yaşında erkek hasta, bir yakınının kolon kanserinden ölmesinden sonra kendisinde de kanser olduğu düşüncesine kapılmış. Ağrısı, kanaması ya da kilo kaybı yok; yine de her gün kendini kontrol ediyor, geceleri internette belirti okuyor ve kısa sürede iki kez kolonoskopi istemiş. Normal sonuçlar onu yalnızca bir hafta rahatlatıyor. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bedensel belirti bozukluğu",
+      "B": "Hastalık kaygısı bozukluğu",
+      "C": "Yaygın anksiyete bozukluğu",
+      "D": "Obsesif kompulsif bozukluk",
+      "E": "Sanrısal bozukluk, bedensel tip"
+     },
+     "dogru": "B",
+     "aciklama": "Bedensel belirti yokken ciddi hastalık korkusu, sürekli kontrol, araştırma ve tetkik isteği hastalık kaygısı bozukluğunun bakım arayan tipine uyar (s. 21–23).",
+     "sik_aciklamalari": {
+      "A": "Bedensel belirti bozukluğunda belirgin ve sıkıntı veren gerçek belirtiler vardır ve kaygı belirtinin anlamına odaklanır. Bu hastada hiçbir bedensel belirti olmadığı için uymaz (s. 24).",
+      "B": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir, kişi ciddi hastalığı olduğu düşüncesiyle uğraşır ve bakım arayan tipte sürekli kontrol ile tetkik ister. Vaka bu tabloyu tarif eder (s. 22, 23).",
+      "C": "Yaygın anksiyete bozukluğunda endişe tek bir konuyla sınırlı kalmaz, birçok yaşam alanına yayılır. Burada kaygı yalnızca kanser olma fikrine odaklıdır (s. 23).",
+      "D": "Obsesif kompulsif bozukluk yineleyen obsesyonlar ve kompulsiyonlarla gider ve hastalık kaygısı bozukluğunun F ölçütünde dışlanır. Buradaki kontrol davranışı hastalık korkusuna bağlıdır, genel bir OKB tablosu yoktur (s. 23).",
+      "E": "Sanrısal bozukluğun bedensel tipinde kişi hasta olduğuna sarsılmaz bir inançla bağlıdır. Bu hastanın normal sonuçlarla bir hafta rahatlaması inancın sanrı düzeyinde olmadığını gösterir (s. 23)."
+     },
+     "bilgi": [
+      60,
+      61,
+      62,
+      63,
+      65
+     ],
+     "benzer_cikmis": [
+      "dd00370e9106"
+     ],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Üç ayda iki kez kolonoskopi istedi"
+     },
+     "dayanak": [
+      "cikmis:dd00370e9106",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 21
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q23",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Hastalık kaygısı bozukluğunun DSM-5-TR ölçütleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ciddi bir hastalığı olduğu ya da olacağı ile uğraş vardır.",
+      "B": "Bedensel belirti yoktur ya da çok hafiftir.",
+      "C": "Tanı için belirtilerin en az 1 ay sürmesi yeterlidir.",
+      "D": "Sağlıkla ilgili kaygı eşiği çok düşüktür; kişi kolayca alarma geçer.",
+      "E": "Panik bozukluğu ve obsesif kompulsif bozukluk dışlanmalıdır."
+     },
+     "dogru": "C",
+     "aciklama": "E ölçütü en az 6 ay sürmeyi gerektirir; A, B, C ve F ölçütleri slayttaki gibidir (s. 22–23).",
+     "sik_aciklamalari": {
+      "A": "A ölçütü, kişinin aklının sürekli 'Kanser miyim, kalbimde bir sorun mu var?' sorusuyla meşgul olması yani ciddi hastalıkla uğraştır. Bozukluğun çekirdeğini oluşturan bu ölçüt slayttaki gibi yazıldığı için ifade doğrudur (s. 22).",
+      "B": "B ölçütü bedensel belirtinin yok ya da çok hafif olmasıdır; bu, bedensel belirti bozukluğundan ayıran ölçüttür. Belirti yokluğu B ölçütünün özü olduğundan ifade doğrudur (s. 22).",
+      "C": "E ölçütü uğraşın en az 6 ay sürmesini ister; korkulan hastalık bu sürede değişebilir. 1 ay yeterli değildir, dolayısıyla ifade yanlıştır ve aranan cevaptır (s. 23).",
+      "D": "C ölçütü sağlıkla ilgili yüksek kaygı ve kolayca alarma geçmedir; bir sağlık haberi bile yoğun paniğe yol açar. Düşük kaygı eşiği C ölçütünde anlatıldığı için ifade doğrudur (s. 22).",
+      "E": "F ölçütü tablonun bedensel belirti bozukluğu, panik bozukluğu, yaygın anksiyete bozukluğu, OKB ve sanrısal bozuklukla daha iyi açıklanamamasını ister. Panik ve OKB dışlama listesinde yer aldığından ifade doğrudur (s. 23)."
+     },
+     "bilgi": [
+      62,
+      63,
+      64,
+      66,
+      67
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "En az 6 ay sürer"
+     },
+     "dayanak": [
+      "profil",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 23
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q24",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Hastalık kaygısı bozukluğunu bedensel belirti bozukluğundan ayırt eden en önemli ölçüt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bedensel belirtinin yok ya da çok hafif olması",
+      "B": "Belirtilerin 6 aydan uzun sürmesi",
+      "C": "Normal tetkik sonuçlarının rahatlatmaması",
+      "D": "Doktor doktor dolaşma davranışı",
+      "E": "Depresyonla eş tanının sık olması"
+     },
+     "dogru": "A",
+     "aciklama": "B ölçütü ayırt edici ölçüttür: hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir; bedensel belirti bozukluğunda ise belirti belirgin ve sıkıntı vericidir (s. 22, 24).",
+     "sik_aciklamalari": {
+      "A": "Bedensel belirtinin yok ya da çok hafif olması hastalık kaygısı bozukluğunun B ölçütüdür ve karşılaştırma tablosunun ilk satırıdır. İki bozukluğu birbirinden bu özellik ayırır (s. 22, 24).",
+      "B": "Belirtili olma halinin 6 ayı aşması her iki bozuklukta da süre ölçütüdür (C ve E ölçütleri). Ortak olduğu için ayırt etmez (s. 13, 23).",
+      "C": "Normal tetkik sonuçlarının rahatlatmaması bedensel belirti bozukluğunda klinik özellik, hastalık kaygısı bozukluğunda ise kısa süreli rahatlamayla ortaya çıkar. Her ikisinde görülür, ayırıcı değildir (s. 14, 21).",
+      "D": "Doktor doktor dolaşma bedensel belirti bozukluğunda görülür; hastalık kaygısı bozukluğunun bakım arayan tipinde de doktor değiştirme vardır. Ortak davranış olduğu için ayırt etmez (s. 14, 23).",
+      "E": "Depresyon ve anksiyeteyle eş tanı bedensel belirti bozukluğunda çok yüksektir; hastalık kaygısında da kaygı bozuklukları dışlanmalıdır. Eş tanı sıklığı iki tabloyu ayıran ölçüt değildir (s. 15, 23)."
+     },
+     "bilgi": [
+      63,
+      68
+     ],
+     "benzer_cikmis": [
+      "dd00370e9106"
+     ],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Bedensel belirti yok ya da çok hafif"
+     },
+     "dayanak": [
+      "ozen:s22",
+      "cikmis:dd00370e9106",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 22
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q25",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Korkusu nedeniyle doktora ya da hastaneye hiç gitmeyen hastalık kaygısı bozukluğu hastası hangi tip olarak adlandırılır?",
+     "secenekler": {
+      "A": "Bakım arayan tip",
+      "B": "Bakımdan kaçınan tip",
+      "C": "Ağrının baskın olduğu tip",
+      "D": "Süreğen tip",
+      "E": "Kendine yüklenen tip"
+     },
+     "dogru": "B",
+     "aciklama": "D ölçütünde iki tip vardır: bakım arayan tip sürekli kontrol eder ve tetkik ister; bakımdan kaçınan tip korkudan doktora ve hastaneye hiç gitmez (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Bakım arayan tip sürekli kendini kontrol eder, tetkik ister ve doktor değiştirir. Hekime gitmekten kaçınan hasta bu tipin tersidir (s. 23).",
+      "B": "Bakımdan kaçınan tip, D ölçütündeki uyumsuz kaçınma davranışının karşılığıdır: korkudan doktora ve hastaneye hiç gitmez. Soru bu tipi tarif etmektedir (s. 23).",
+      "C": "Ağrının baskın olduğu tip, bedensel belirti bozukluğunun belirleyicisidir ve ağrı yakınmasının öne çıktığı olguları adlandırır. Hastalık kaygısı bozukluğuyla ilgisi yoktur (s. 13).",
+      "D": "Süreğen belirleyicisi uzun süren tabloyu kodlayan bir zaman etiketidir; bedensel belirti bozukluğunda süre verilmez, işlevsel bozuklukta 6 ay ve üzeri olarak tanımlanır. Hastanın hekime gitme davranışını anlatmadığı için soruya uymaz (s. 13, 27).",
+      "E": "Kendine yüklenen tip, yapay bozuklukta kişinin belirtiyi kendi bedeninde oluşturmasıdır ve eski adı Münchausen sendromudur. Hastalık kaygısı bozukluğunun tipleri arasında yer almadığı için bu soruda seçilmez (s. 45)."
+     },
+     "bilgi": [
+      65
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Bakımdan kaçınan tip: korkudan doktora, hastaneye hiç gitmeme"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 23
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q26",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi hastalık kaygısı bozukluğunda beklenen bir özellik değildir?",
+     "secenekler": {
+      "A": "Korkulan hastalığın zamanla değişmesi (önce kanser, sonra MS)",
+      "B": "Tahlilde küçük bir sapmanın yoğun paniğe yol açması",
+      "C": "Sürekli kendini kontrol etme ve tetkik isteme",
+      "D": "Belirgin ve sıkıntı verici bedensel belirtilerin tabloya egemen olması",
+      "E": "Yüksek riskli aile öyküsü olsa bile uğraşın açıkça orantısız olması"
+     },
+     "dogru": "D",
+     "aciklama": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir (B ölçütü); belirgin belirti bedensel belirti bozukluğunun özelliğidir (s. 22, 24).",
+     "sik_aciklamalari": {
+      "A": "Korkulan hastalığın önce kanser, birkaç ay sonra MS olarak değişmesi E ölçütünün açıklamasında verilir; kaygı nesnesi değişse de uğraş sürer. Bozuklukta beklenen bir seyir olduğundan bu soruda seçilmez (s. 23).",
+      "B": "Kaygı eşiği çok düşüktür; tahlilde küçük bir sapma, bir sağlık haberi ya da tanıdığın hastalanması yoğun paniğe yol açar. C ölçütünün tipik görünümüdür (s. 22).",
+      "C": "Sürekli kendini kontrol etme ve tetkik isteme, D ölçütündeki aşırı sağlık davranışının bakım arayan tipteki görünümüdür. Bozuklukta beklenen bir özellik olduğundan bu soruda seçilmez (s. 23).",
+      "D": "Belirgin ve sıkıntı verici bedensel belirti bedensel belirti bozukluğunun özelliğidir; hastalık kaygısında belirti yok ya da çok hafiftir. Beklenmeyen özellik bu olduğu için aranan cevaptır (s. 22, 24).",
+      "E": "B ölçütünde küçük bir ben ya da güçlü aile öyküsü varsa bile uğraşın açıkça orantısız olduğu belirtilir. Beklenen bir özelliktir (s. 22)."
+     },
+     "bilgi": [
+      62,
+      63,
+      64,
+      65,
+      66
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "varsa bile uğraş açıkça orantısızdır"
+     },
+     "dayanak": [
+      "ozen:s22",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 22
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q27",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Hastalık kaygısı bozukluğu ile bedensel belirti bozukluğunun karşılaştırılmasıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Bedensel belirti bozukluğunda kaygının odağı belirtinin ciddiyeti ve anlamıdır.\nII. Hastalık kaygısı bozukluğunda kaygının odağı hasta olma ya da hastalanma fikridir.\nIII. Hastalık kaygısı bozukluğunda tipik davranış belirtiyle uğraş ve analjezik kullanımıdır.\nIV. Bedensel belirti bozukluğunda bedensel belirti belirgin ve sıkıntı vericidir.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "I, III ve IV",
+      "E": "Yalnız II"
+     },
+     "dogru": "C",
+     "aciklama": "Karşılaştırma tablosunda kaygının odağı ve belirti satırları I, II ve IV'teki gibidir; belirtiyle uğraş ve analjezik kullanımı ise bedensel belirti bozukluğunun tipik davranışıdır (s. 24).",
+     "sik_aciklamalari": {
+      "A": "I ve II kaygının odağını iki bozukluk için doğru verir. Ancak bedensel belirtinin belirgin olduğunu söyleyen IV de doğru olduğundan küme eksik kalır (s. 24).",
+      "B": "II doğrudur; III ise bedensel belirti bozukluğunun davranışını hastalık kaygısına yakıştırır. Hastalık kaygısında tipik davranış kontrol, araştırma ya da kaçınmadır (s. 24).",
+      "C": "I, II ve IV karşılaştırma tablosunun kaygı odağı ve bedensel belirti satırlarıyla birebir uyuşur. III ise analjezik kullanımını yanlış bozukluğa yüklediği için dışarıda kalır; doğru cevaptır (s. 24).",
+      "D": "I ve IV doğru önermelerdir. Kümeye alınan III hastalık kaygısında belirtiyle uğraş ve analjezik kullanımı olduğunu söyler, oysa belirti olmayan bu bozuklukta analjezik kullanımı tipik değildir (s. 24).",
+      "E": "II hastalık kaygısı bozukluğunda kaygının odağını doğru verir. Ancak I ve IV de doğru olduğundan tek başına yeterli değildir (s. 24)."
+     },
+     "bilgi": [
+      68,
+      69,
+      70
+     ],
+     "benzer_cikmis": [
+      "dd00370e9106"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Hasta olma ya da hastalanma fikri"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b01",
+      "cikmis:dd00370e9106"
+     ],
+     "s": 24
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q28",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hastalık kaygısı bozukluğu için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sanrısal bozukluğun bedensel tipi eşlik ediyorsa iki tanı birlikte konur.",
+      "B": "Bedensel belirti belirgin ve sıkıntı vericidir.",
+      "C": "Kişi kolayca alarma geçer; kaygı eşiği çok düşüktür.",
+      "D": "Yaygın anksiyete bozukluğunun eşlik etmesi tanıyı güçlendirir.",
+      "E": "Tipik davranış ağrı için analjezik kullanımıdır."
+     },
+     "dogru": "C",
+     "aciklama": "C ölçütü sağlıkla ilgili yüksek kaygı ve kolayca alarma geçmedir; sanrısal bozukluk ve yaygın anksiyete dışlanır, belirti yok ya da hafif, tipik davranış kontrol ve araştırmadır (s. 22–24).",
+     "sik_aciklamalari": {
+      "A": "Sanrısal bozukluğun bedensel tipi, hasta olduğuna sarsılmaz inançla giden psikotik bir tablodur. F ölçütü bu bozukluğu dışlamayı ister; birlikte tanı konmaz (s. 23).",
+      "B": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir; belirgin ve sıkıntı verici belirti bedensel belirti bozukluğunun özelliğidir (s. 22, 24).",
+      "C": "C ölçütü sağlıkla ilgili yüksek kaygı ve kolayca alarma geçmedir; bir tanıdığın hastalanması ya da bir sağlık haberi bile yoğun paniğe yol açar. Kolay alarma geçme C ölçütünün tanımı olduğu için doğru cevap budur (s. 22).",
+      "D": "F ölçütüne göre tablo yaygın anksiyete bozukluğuyla daha iyi açıklanıyorsa hastalık kaygısı tanısı konmaz; yaygın anksiyete dışlanmalıdır. Eşlik etmesi tanıyı güçlendirmez (s. 23).",
+      "E": "Analjezik kullanımı bedensel belirti bozukluğunda ağrı baskınken görülen tipik davranıştır. Hastalık kaygısında tipik davranış kontrol, araştırma ya da kaçınmadır (s. 14, 24)."
+     },
+     "bilgi": [
+      64,
+      66,
+      67,
+      70
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Sağlıkla ilgili yüksek kaygı; kolayca alarma geçme"
+     },
+     "dayanak": [
+      "ozen:s22"
+     ],
+     "s": 22
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "dd00370e9106",
+     "soru": "Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikâyeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendini işlerine veremediğini ifade eden hastada ön tanı ne olabilir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Somatik belirti bozukluğu",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Hastalık kaygısı bozukluğu",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Konversiyon bozukluğu",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Yapay bozukluk",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Yaygın kaygı bozukluğu",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "İşlevsel nörolojik belirti (konversiyon) bozukluğunun ad değişimini, dört ölçütünü, sekiz belirti tipini, epidemiyolojisini, dikkat–beklenti–faillik mekanizmasını ve 3P modelini açıklar (s. 26–30).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q30",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İşlevsel nörolojik belirti (dönüşüm) bozukluğunun DSM-5-TR ölçütleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İstemli motor ya da duyusal işlevde bir ya da daha fazla değişiklik bulunur.",
+      "B": "Klinik bulgular, belirti ile bilinen nörolojik durumlar arasında uyumsuzluk gösterir.",
+      "C": "Tanı için belirtiden önce bir psikolojik stres etkeninin kanıtlanması zorunludur.",
+      "D": "Tablo başka bir tıbbi ya da ruhsal bozuklukla daha iyi açıklanamaz.",
+      "E": "Belirgin sıkıntı, işlev bozukluğu ya da tıbbi değerlendirme gerekliliği vardır."
+     },
+     "dogru": "C",
+     "aciklama": "Tanı için gerekmeyenler: belirtiden önce psikolojik stres etkeni bulunduğunu kanıtlamak ve hastanın numara yapmadığını göstermek; tanıyı muayenedeki olumlu bulgular koydurur (s. 27).",
+     "sik_aciklamalari": {
+      "A": "A ölçütü istemli motor ya da duyusal işlevde bir ya da daha fazla değişikliktir; güçsüzlük, duyu kaybı ya da nöbet gibi. Motor ya da duyusal değişiklik A ölçütünün kendisi olduğundan ifade doğrudur (s. 27).",
+      "B": "B ölçütü ayırt edici ölçüttür: klinik bulgular belirti ile bilinen nörolojik ya da tıbbi durumlar arasında uyumsuzluk gösterir. Uyumsuzluk B ölçütünün özü olduğundan ifade doğrudur (s. 27).",
+      "C": "DSM-5-TR psikolojik stresörü yalnızca belirleyici olarak kodlar; tanı için stres etkenini kanıtlamak gerekmez, tanıyı olumlu muayene bulguları koydurur. Zorunlu sayılması yanlıştır, aranan cevaptır (s. 27).",
+      "D": "C ölçütü, tablonun başka bir tıbbi ya da ruhsal bozuklukla daha iyi açıklanamamasını ister; böylece organik hastalık ve öteki tanılar dışlanır. Slayttaki ölçütle örtüştüğü için ifade doğrudur (s. 27).",
+      "E": "D ölçütü belirgin sıkıntı, işlev bozukluğu ya da tıbbi değerlendirme gerekliliğidir; belirtinin klinik önem taşıdığını güvence altına alır. Klinik önem şartı D ölçütü olarak verildiği için ifade doğrudur (s. 27)."
+     },
+     "bilgi": [
+      75,
+      76,
+      77,
+      80
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "numara yapmadığını göstermek. Tanıyı muayenedeki olumlu"
+     },
+     "dayanak": [
+      "ozen:s27",
+      "profil",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 27
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q31",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "DSM-5 ile birlikte 'konversiyon' yerine 'işlevsel nörolojik belirti bozukluğu' adının benimsenmesinin dayandığı temel görüş aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirtilerin bilinçli olarak üretilmesi",
+      "B": "Sorunun sinir sisteminin yapısında değil işleyişinde olması",
+      "C": "Belirtilerin rahmin vücutta yer değiştirmesinden kaynaklanması",
+      "D": "Bastırılan çatışma enerjisinin bedene dönüştürülmesi",
+      "E": "Bozukluğun yalnızca kadınlarda görülmesi"
+     },
+     "dogru": "B",
+     "aciklama": "İşlevsel adı, sorunun sinir sisteminin yapısında değil işleyişinde olduğunu vurgular; tanı muayenedeki olumlu bulgulara dayanır ve damgalayıcı değildir (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Belirtinin bilinçli üretilmesi yapay bozukluk ve temaruzun ortak özelliğidir; işlevsel bozuklukta ise belirti istemsizdir. Ad değişiminin dayanağı bilinçli üretim değil, sinir sisteminin işleyiş sorunudur (s. 26, 47).",
+      "B": "İşlevsel terimi sinir sisteminin yapısında değil işleyişinde sorun olduğunu anlatır; tanı olumlu bulgulara dayanır ve ad damgalayıcı değildir. Ad değişiminin gerekçesi budur (s. 26).",
+      "C": "Rahmin (hystera) vücutta yer değiştirmesi Antik Yunan'daki histeri açıklamasıdır. Terk edilen eski inanıştır, yeni adın dayanağı değildir (s. 26).",
+      "D": "Bastırılan çatışmanın enerjisinin bedensel belirtiye dönüştürülmesi Freud ve Breuer'in konversiyon kavramıdır. İşlevsel adı tam da bu kuramsal yüklemeden uzaklaşır (s. 26).",
+      "E": "Histeri terimi zamanla kadınlara özgü ve damgalayıcı anlam kazanmıştır; bozukluk ise her iki cinsiyette görülür. Yeni ad damgayı kaldırmak için seçilmiştir, kadına özgülük bir dayanak değildir (s. 26, 28)."
+     },
+     "bilgi": [
+      74
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "sinir sisteminin yapısında değil"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 26
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q32",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi işlevsel nörolojik belirti bozukluğunda sayılan sekiz belirti tipinden biri değildir?",
+     "secenekler": {
+      "A": "Güçsüzlük ya da felç",
+      "B": "Yutma belirtileri",
+      "C": "Nöbet ya da atak",
+      "D": "Anestezi ya da duyu kaybı",
+      "E": "Ciddi hastalık korkusu"
+     },
+     "dogru": "E",
+     "aciklama": "Sekiz tip: güçsüzlük/felç, olağandışı hareket, yutma, konuşma, nöbet ya da atak, anestezi/duyu kaybı, özel duyu belirtisi ve karma. Ciddi hastalık korkusu hastalık kaygısı bozukluğunun çekirdeğidir (s. 27, 22).",
+     "sik_aciklamalari": {
+      "A": "Güçsüzlük ya da felç, işlevsel bozukluğun ilk belirti tipidir; Hoover belirtisi gibi muayene bulgularıyla tanınır. Sekiz tipten biridir (s. 27).",
+      "B": "Yutma belirtileri, boğazda takılma ya da yutamama gibi işlevsel belirtileri kapsayan tiptir ve DSM-5-TR'nin sekiz tipi arasında sayılır. Bu yüzden 'tiplerden biri değildir' sorusunda seçilmez (s. 27).",
+      "C": "Nöbet ya da atak tipi, epileptik nöbeti taklit eden ama video-EEG'de deşarj göstermeyen işlevsel (dissosiyatif) nöbetleri kapsar. Sekiz belirti tipinden biri olduğu için bu soruda seçilmez (s. 27, 35).",
+      "D": "Anestezi ya da duyu kaybı tipi, dermatom dağılımına uymayan uyuşma ve his kaybı gibi duyusal belirtileri içerir. DSM-5-TR'nin sekiz tipinden biri olduğundan bu soruda seçilmez (s. 27).",
+      "E": "Ciddi hastalık korkusu, hastalık kaygısı bozukluğunun A ölçütüdür; motor ya da duyusal bir belirti değildir. İşlevsel bozukluğun tipleri arasında olmadığı için aranan cevaptır (s. 22, 27)."
+     },
+     "bilgi": [
+      78
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Dört ölçüt, sekiz belirti tipi"
+     },
+     "dayanak": [
+      "ozen:s27"
+     ],
+     "s": 27
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q33",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Stone ve arkadaşlarının 3781 hastalık nöroloji polikliniği serisinde işlevsel/psikolojik tanılar baş ağrısından sonra ikinci sırada yer almıştır. Bu tanıların payı yaklaşık yüzde kaçtır?",
+     "secenekler": {
+      "A": "%4",
+      "B": "%16",
+      "C": "%22",
+      "D": "%33",
+      "E": "%50"
+     },
+     "dogru": "B",
+     "aciklama": "Nöroloji polikliniğine yeni gelenlerde işlevsel/psikolojik tanılar %16 ile baş ağrısından sonra ikinci sıradadır (s. 28).",
+     "sik_aciklamalari": {
+      "A": "%4, işlevsel nörolojik bozuklukta yanlış tanı oranıdır ve olumlu bulgularla konan tanının güvenilirliğini gösterir. Nöroloji polikliniğindeki işlevsel tanı payını anlatmaz (s. 50).",
+      "B": "%16, Stone serisinde nöroloji polikliniğine yeni gelenlerde işlevsel/psikolojik tanıların payıdır ve baş ağrısından sonra ikinci sırada gelir. Bozukluğun nadir olmadığını gösteren bu sayı doğru cevaptır (s. 28).",
+      "C": "%22, işlevsel nöbeti olanların yaklaşık beşte birinde epilepsinin de bulunma oranıdır; bu yüzden tek bir bulgu tanı koydurmaz. Poliklinik payıyla ilgili bir sayı değildir (s. 36).",
+      "D": "%33, bedensel belirti bozukluğunda zamanla düzelen olguların alt sınırıdır (%33–50) ve gidişle ilgili bir veridir. Nöroloji polikliniğindeki işlevsel tanı payını göstermez (s. 19).",
+      "E": "%50, bedensel belirti bozukluğunda zamanla düzelen olguların üst sınırıdır (%33–50) ve gidişle ilgili bir sayıdır. Nöroloji polikliniğindeki işlevsel tanı payını göstermez (s. 19)."
+     },
+     "bilgi": [
+      81
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Nöroloji polikliniğine yeni Kadın / erkek oranı"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 28
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q34",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İşlevsel nörolojik belirti bozukluğunun epidemiyolojisi ve risk etkenleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kadın/erkek oranı 2–3:1'dir.",
+      "B": "Çocuklukta cinsiyet farkı daha azdır.",
+      "C": "Nöbet tipi daha çok 3., motor tip 4. on yılda başlar.",
+      "D": "Eşlik eden nörolojik hastalık, örneğin epilepsi, riski azaltır.",
+      "E": "Çocukluk çağı istismarı ve ihmali risk etkenidir."
+     },
+     "dogru": "D",
+     "aciklama": "Eşlik eden nörolojik hastalık (ör. epilepsi) risk etkenleri arasında sayılır; riski azaltmaz, artırır (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Kadın/erkek oranının 2–3:1 olması, işlevsel bozukluğun kadınlarda belirgin biçimde daha sık görüldüğünü anlatan epidemiyoloji verisidir. İki üç kata bir oranı epidemiyoloji sayfasında yazdığından ifade doğrudur (s. 28).",
+      "B": "Çocuklukta cinsiyet farkının daha az olması, kadın baskınlığının erişkinlikte belirginleştiğini gösterir. Epidemiyoloji sayfasında aynı satırda verildiği için ifade doğrudur (s. 28).",
+      "C": "Nöbet tipinin daha çok üçüncü, motor tipin dördüncü on yılda başlaması, belirti tipine göre başlangıç yaşının değiştiğini gösteren veridir. Slaytta 'her yaş' sütununda yazdığı için ifade doğrudur (s. 28).",
+      "D": "Eşlik eden nörolojik hastalık, örneğin epilepsi, risk etkenleri arasında listelenir ve işlevsel nöbeti olanların %22'sinde epilepsi de vardır. Riski azalttığını söylemek yanlıştır; aranan cevaptır (s. 28, 36).",
+      "E": "Çocukluk çağı istismarı ve ihmali, stresli yaşam olayları ve uyumsuz kişilik özellikleriyle birlikte risk etkenleri satırında sayılır; 3P modelinde de yatkınlaştırıcıdır. İstismar ve ihmal risk satırında sayıldığı için ifade doğrudur (s. 28, 30)."
+     },
+     "bilgi": [
+      82,
+      83
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Çocukluk çağı istismarı ve ihmali, stresli yaşam olayları"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 28
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q35",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İşlevsel nörolojik belirti bozukluğunda 'bu bacak tutmuyor' beklentisinin güçlü olması nedeniyle hareket programının baskılanması, beyin–beden iletişimindeki hangi soruna karşılık gelir?",
+     "secenekler": {
+      "A": "Dikkat",
+      "B": "Faillik",
+      "C": "Beklenti",
+      "D": "Birincil kazanç",
+      "E": "Santral duyarlılaşma"
+     },
+     "dogru": "C",
+     "aciklama": "Beyin hareketi önceden tahmin eder; 'bu bacak tutmuyor' beklentisi güçlüyse hareket programı baskılanır. Bu ikinci sorun olan beklentidir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Dikkat sorunu, normalde otomatik olan yürüme ve konuşmanın dikkat belirtiye yönelince bozulmasıdır; merdiven inerken her adımı düşünenin sendelemesi gibi. Beklentiye değil dikkate ait bir mekanizmadır (s. 29).",
+      "B": "Faillik, 'bu hareketi ben yapıyorum' duygusudur; bozulunca hareket olur ama istemsiz yaşanır ve sağ temporoparietal bileşkede düşük etkinlik görülür. Hareket programının baskılanmasını açıklamaz (s. 29).",
+      "C": "Beklenti sorununda beyin hareketi önceden tahmin eder; bacağın tutmayacağı beklentisi güçlüyse hareket programı baskılanır. Soru bu mekanizmayı tarif eder (s. 29).",
+      "D": "Birincil kazanç, Freud kuramında kaygı verici çatışmanın bilince çıkmasının bedensel belirtiyle önlenmesidir. Belirtinin psikolojik işlevini anlatan klasik bir kavramdır; beyin–beden iletişimindeki üç sorundan biri değildir (s. 3).",
+      "E": "Santral duyarlılaşma, ağrı yollarının duyarlanmasıyla zararsız uyaranın ağrılı algılanmasıdır. Ağrıyla ilgili bir mekanizmadır; motor programın baskılanmasını anlatmaz (s. 7, 16)."
+     },
+     "bilgi": [
+      84,
+      85,
+      86
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "otomatik hareket bozulur. hareket programı baskılanır"
+     },
+     "dayanak": [
+      "ozen:s29"
+     ],
+     "s": 29
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q36",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Çocukluğunda ihmal yaşamış 32 yaşında kadın hasta, küçük bir trafik kazasında boynunu incittikten sonra sağ kolunda güçsüzlük gelişmiş; 'sinir hasarı' korkusuyla kolunu hiç kullanmıyor ve çok sayıda tetkik yaptırıyor. 3P modeline göre kolunu hiç kullanmaması ve yinelenen tetkikler hangi etken grubuna girer?",
+     "secenekler": {
+      "A": "Yatkınlaştırıcı",
+      "B": "Ortaya çıkarıcı",
+      "C": "Sürdürücü",
+      "D": "Birincil kazanç",
+      "E": "Aleksitimi"
+     },
+     "dogru": "C",
+     "aciklama": "3P modelinde çocukluk ihmali yatkınlaştırıcı, trafik kazası ortaya çıkarıcı, kolu kullanmama ve yinelenen tetkikler sürdürücü etkendir (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Yatkınlaştırıcı etkenler kişiyi savunmasız kılan geçmiş özelliklerdir; bu vakada çocukluk çağı ihmali bu gruba girer. Kaçınma ve tetkikler ise sonradan gelen süreçlerdir (s. 30).",
+      "B": "Ortaya çıkarıcı etken belirtiyi başlatan olaydır; burada küçük trafik kazasında boynun incinmesi bu rolü oynar. Kolu kullanmama belirtiyi başlatmaz, sürdürür (s. 30).",
+      "C": "Sürdürücü etkenler 'neden geçmiyor' sorusunu yanıtlar: hasta rolünün benimsenmesi, kaçınma, yinelenen tetkik ve belirsiz açıklamalar. Kolu hiç kullanmama ve çok sayıda tetkik bu gruptadır; doğru cevaptır (s. 30).",
+      "D": "Birincil kazanç, Freud'un kuramında çatışmanın bilince çıkmasının bedensel belirtiyle önlenmesidir ve belirtinin psikolojik işlevini açıklar. 3P modelinin etken gruplarından biri olmadığı için soruya uymaz (s. 3).",
+      "E": "Aleksitimi, duyguları tanıma ve adlandırmada güçlük çekme ve duyguyu bedensel duyumdan ayırt edememe özelliğidir. Bir kişilik özelliğidir; 3P modelinin yatkınlaştırıcı, ortaya çıkarıcı ve sürdürücü basamaklarından biri olarak verilmez (s. 5)."
+     },
+     "bilgi": [
+      88,
+      89,
+      90,
+      91
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "korkusuyla kolunu hiç kullanmıyor, çok sayıda tetkik yapılıyor"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 30
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q37",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "19 yaşında öğrenci, sınavın ardından sol kolunu kaldıramadığı için kliniğe getiriliyor; dikkati başka yöne çekildiğinde kolundaki güç artıyor, nörolojik muayenesinde yapısal lezyonu düşündüren bulgu yok. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İşlevsel nörolojik belirti bozukluğu",
+      "B": "Bedensel belirti bozukluğu",
+      "C": "Hastalık kaygısı bozukluğu",
+      "D": "Yapay bozukluk",
+      "E": "Temaruz"
+     },
+     "dogru": "A",
+     "aciklama": "Stresör sonrası akut güçsüzlük ve dikkat dağıtılınca gücün artması (istemli bozuk, otomatik normal) işlevsel nörolojik belirti bozukluğunun güçsüzlük tipidir (s. 31, 48–49).",
+     "sik_aciklamalari": {
+      "A": "İşlevsel nörolojik belirti bozukluğunda istemli hareket bozuk, otomatik hareket normaldir; dikkat dağıtılınca gücün artması bu iç tutarsızlığın göstergesidir. Slayttaki dört vakadan ikincisinin yanıtı da budur (s. 31, 49).",
+      "B": "Bedensel belirti bozukluğunda ağrı gibi sıkıntı veren belirtilere aşırı düşünce ve davranış eşlik eder, tablo genellikle 6 aydan uzundur. Akut tek bir motor güçsüzlük bu tanıya uymaz (s. 13).",
+      "C": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da çok hafiftir ve çekirdek ciddi hastalık korkusudur. Burada belirgin bir motor belirti vardır (s. 22).",
+      "D": "Yapay bozuklukta belirti aldatmaya dayalı olarak bilinçli üretilir ve amaç hasta rolüdür. Dikkat dağıtılınca gücün kendiliğinden artması belirtinin istemsiz ve iç tutarsız olduğunu gösterir, aldatmayı düşündürmez (s. 47).",
+      "E": "Temaruzda belirti bilinçli üretilir ve rapor, para gibi dış kazanç vardır. Sınav sonrası ortaya çıkan ve otomatik hareketle düzelen güçsüzlükte bilinçli üretim ya da dış ödül kanıtı yoktur (s. 47)."
+     },
+     "bilgi": [
+      92,
+      102,
+      147,
+      149
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Güçsüzlük ile; akut, psikolojik stresörlü"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b07",
+      "profil"
+     ],
+     "s": 49
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q38",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İşlevsel nörolojik belirti bozukluğunda tanının olumlu muayene bulgularıyla konmasının temel mantığı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirtinin hekimin telkiniyle azalıp yeniden ortaya çıkması",
+      "B": "Aynı hareketin istemli yapıldığında bozuk, otomatik yapıldığında normal olması",
+      "C": "Duyu kaybının vücudu orta hatta keskin bir sınırla ikiye bölmesi",
+      "D": "Hastanın ciddi belirtisine karşı uygunsuz bir kayıtsızlık göstermesi",
+      "E": "Belirtinin tanımlanabilir bir psikolojik stresörden hemen sonra başlaması"
+     },
+     "dogru": "B",
+     "aciklama": "Aynı hareket dikkatle (istemli) yapıldığında bozuk, dikkat başka yöndeyken (otomatik) normaldir; bu iç tutarsızlık yapısal lezyonla açıklanamaz. Telkinle düzelme, orta hat duyu kaybı ve güzel aldırmazlık güvenilir değildir (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Telkinle düzelme, belirtinin hekimin sözüyle azalıp artmasıdır ve eskiden konversiyon kanıtı sayılırdı. Slayt onu güvenilir olmayan bulgular arasına koyar; olumlu bulgu mantığı bu değildir (s. 31).",
+      "B": "Olumlu bulguların ortak mantığı istemli hareketin bozuk, otomatik hareketin normal olmasıdır; Hoover, kalça abdüktör ve sürüklenme bulguları hep bu iç tutarsızlığı arar. İstemli bozuk, otomatik normal ilkesi tanının temeli olduğundan doğru cevap budur (s. 31).",
+      "C": "Orta hatta keskin sınırla bölünen duyu kaybı eskiden konversiyon bulgusu sayılırdı; slayt onu güvenilir olmayan bulgular arasına koyar. Tanı bu bulguya dayandırılmaz (s. 31).",
+      "D": "Ciddi belirtiye kayıtsızlık güzel aldırmazlıktır; tarihsel bir kavramdır, tanısal değeri yoktur ve güvenilir değildir. Olumlu bulgu mantığını oluşturmaz (s. 31, 38).",
+      "E": "Psikolojik stresörden sonra başlama DSM-5-TR'de yalnız belirleyicidir; tanı için kanıtlanması gerekmez. Tanıyı muayenedeki olumlu bulgular koydurur (s. 27)."
+     },
+     "bilgi": [
+      92,
+      99
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Tanı olumlu bulgularla konur"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b07",
+      "profil"
+     ],
+     "s": 31
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q47",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İşlevsel nörolojik belirti bozukluğunun gidişi ve prognozu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bu hastalarda nörolojik hastalık toplumdan daha seyrektir.",
+      "B": "Belirti ile tanı arasındaki zamanın kısa olması iyi prognoz göstergesidir.",
+      "C": "Tanıya ilişkin içgörü iyi prognozla ilişkilidir.",
+      "D": "Başlangıç çoğunlukla anidir ve akut olguların büyük kısmı kısa sürede geriler.",
+      "E": "Yaklaşık dörtte biri bir yıl içinde yineler."
+     },
+     "dogru": "A",
+     "aciklama": "Bu hastalarda nörolojik hastalık toplumdan daha sıktır, ikisi bir arada olabilir; başlangıç ani, dörtte biri yineler, kısa tanı aralığı ve içgörü iyi prognoz göstergesidir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "İşlevsel bozukluğu olanlarda nörolojik hastalık toplumdan daha sıktır; örneğin işlevsel nöbeti olanların %22'sinde epilepsi de vardır. Daha seyrek denmesi yanlıştır; aranan cevaptır (s. 36, 39).",
+      "B": "Belirti ile tanı arasındaki zamanın kısa olması, hastanın gereksiz tetkik ve belirsizlik döngüsüne girmeden tanı almasını sağlar. İyi prognoz göstergeleri arasında sayıldığı için ifade doğrudur (s. 39).",
+      "C": "Tanıya ilişkin içgörü iyi prognoz listesinde yer alır; genç yaş ve iyi sosyal destek de öyledir. İçgörü iyi prognoz listesinde bulunduğu için ifade doğrudur (s. 39).",
+      "D": "Gidiş sayfası başlangıcın çoğunlukla ani olduğunu ve akut olguların büyük kısmının kısa sürede gerilediğini söyler; bu, bozukluğun çoğu zaman iyi seyirli olduğunu gösterir. Ani başlangıç ve kısa sürede gerileme gidiş sayfasında yazdığından ifade doğrudur (s. 39).",
+      "E": "Yaklaşık dörtte birinin bir yıl içinde yinelemesi, iyi seyre karşın nükslerin azımsanmayacağını gösterir; ilk dönemin seyri prognozu öngörür. Dörtte bir yineleme oranı gidiş sayfasında verildiğinden ifade doğrudur (s. 39)."
+     },
+     "bilgi": [
+      124,
+      125,
+      126
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Bu hastalarda nörolojik hastalık toplumdan daha"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 39
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Olumlu muayene bulgularını (Hoover, kalça abdüktör, sürüklenen bacak, titremede sürüklenme, tünel görme) uygular, epileptik nöbet ile işlevsel nöbeti tablo, uyku ve video-EEG bulgularıyla ayırır; birincil/ikincil kazanç, güzel aldırmazlık ve özdeşim kavramlarını ve prognozu açıklar (s. 31–39).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q39",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Sırtüstü yatan hastada hekim elini zayıf bacağın topuğu altına koyar; hasta topuğunu bastırmaya çalışırken ele çok az baskı gelir, ancak sağlam bacağını havaya kaldırması istendiğinde 'zayıf' bacak yatağa güçlü biçimde bastırır. Bu bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kalça abdüktör belirtisi",
+      "B": "Sürüklenen bacak",
+      "C": "Titremede sürüklenme",
+      "D": "Hoover belirtisi",
+      "E": "Tünel görme"
+     },
+     "dogru": "D",
+     "aciklama": "Hoover belirtisinde istemli denemede kalça ekstansiyonu zayıf görünür, sağlam bacak kaldırılırken zayıf bacak istemsiz ve güçlü biçimde yatağa bastırır: istemli bozuk, otomatik normal (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Kalça abdüktör belirtisinde hekim ellerini iki ayak bileğinin dış yanına koyar ve bacakları dışa açtırır; sağlam bacak açılırken zayıf bacak eline güçlü iter. Abdüksiyon sınanır, topuk bastırma değil (s. 33).",
+      "B": "Sürüklenen bacak, koridorda yürüyüş gözleminde bacağın yay çizmeden, ayak dışa dönük halde yerde sürüklenerek çekilmesidir; inmedeki sirkümdüksiyonun tersidir. Yatakta topuk basıncıyla sınanan bir bulgu değildir (s. 33).",
+      "C": "Titremede sürüklenme, titreyen elin sağlam elin ritmine uymasını ya da durmasını arayan bulgudur; organik titreme kendi frekansını korur. El titremesi için kullanılır, bacak güçsüzlüğü için değil (s. 34).",
+      "D": "Hoover belirtisi iki adımlıdır: istemli topuk bastırmada zayıf ekstansiyon, sağlam bacak kaldırılırken zayıf bacağın istemsiz güçlü bastırması. Soru bu iki adımı tarif eder (s. 32).",
+      "E": "Tünel görme, görme alanının 1 ve 2 metrede aynı çapta kalması yani uzaklıkla genişlememesidir. Görme kaybı bulgusudur, motor muayene değildir (s. 34)."
+     },
+     "bilgi": [
+      93,
+      100,
+      101,
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Hoover belirtisi nasıl bakılır"
+     },
+     "dayanak": [
+      "ozen:s32",
+      "ogrenci:A:psk-s13-b07"
+     ],
+     "s": 32
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q40",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "İşlevsel nörolojik belirti bozukluğunda olumlu muayene bulguları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hoover belirtisinde karşı kalça bükülünce zayıf kalça güçlü ekstansiyon yapar.",
+      "B": "Kalça abdüktör belirtisinde sağlam bacak dışa açılınca 'zayıf' kalça da güçlü açılır.",
+      "C": "İşlevsel titreme sağlam elin ritmine uyar ya da durur.",
+      "D": "İşlevsel görme kaybında görme alanı uzaklıkla koni gibi genişler.",
+      "E": "İşlevsel yürüyüşte bacak yay çizmeden, ayak yerde sürüklenerek çekilir."
+     },
+     "dogru": "D",
+     "aciklama": "İşlevsel görme kaybında görme alanı uzaklıkla genişlemez, her iki uzaklıkta aynı çapta kalır (tünel görme); koni gibi genişleme normal görme alanının özelliğidir (s. 31, 34).",
+     "sik_aciklamalari": {
+      "A": "Hoover belirtisinde karşı kalça bükülünce zayıf kalça güçlü ekstansiyon yapar; otomatik hareket normal, istemli hareket bozuktur. Tablodaki ifadeyle birebir örtüştüğü için doğrudur (s. 31, 32).",
+      "B": "Kalça abdüktör belirtisinde sağlam bacak dışa açılınca 'zayıf' kalça da güçlü açılır ve hekimin eline dışa doğru iter; otomatik hareket normaldir. Tablodaki ifadeyle uyuştuğu için doğrudur (s. 31, 33).",
+      "C": "Titremede sürüklenme bulgusunda işlevsel titreme sağlam elin ritmine uyar ya da durur; organik titreme ise kendi frekansını korur. Slayttaki tanımla örtüştüğü için ifade doğrudur (s. 31, 34).",
+      "D": "Normal görme alanı uzaklıkla koni gibi genişler; işlevsel görme kaybında alan 1 ve 2 metrede aynı çapta kalır, buna tünel görme denir. Genişleme yazılması yanlıştır; aranan cevaptır (s. 34).",
+      "E": "Sürüklenen bacak yürüyüşünde bacak yay çizmez, ayak dışa dönük halde yerde sürüklenir; inmede ise sirkümdüksiyon görülür. Yay çizmeyen sürüklenen bacak slayttaki yürüyüş bulgusu olduğundan ifade doğrudur (s. 33)."
+     },
+     "bilgi": [
+      93,
+      94,
+      95,
+      96,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Görme alanı uzaklıkla genişlemez"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b07"
+     ],
+     "s": 31
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q41",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi işlevsel nörolojik belirti bozukluğu tanısında güvenilir bulgular arasında değildir?",
+     "secenekler": {
+      "A": "Titremede sürüklenme",
+      "B": "Tünel görme",
+      "C": "Hoover belirtisi",
+      "D": "Kalça abdüktör belirtisi",
+      "E": "Güzel aldırmazlık"
+     },
+     "dogru": "E",
+     "aciklama": "Güvenilir olmayanlar: orta hatta bölünen duyu kaybı, güzel aldırmazlık ve telkinle düzelme. Hoover, kalça abdüktör, sürüklenme ve tünel görme olumlu bulgulardır (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Titremede sürüklenme, titreyen elin sağlam elin ritmine uyması ya da durmasıdır; organik titreme kendi frekansını korur. Güvenilir olumlu bulgudur (s. 31, 34).",
+      "B": "Tünel görme, görme alanının 1 ve 2 metrede aynı çapta kalması yani uzaklıkla genişlememesidir; normal alan koni gibi genişler. İşlevsel görme kaybının güvenilir bulgusudur (s. 31, 34).",
+      "C": "Hoover belirtisi, karşı kalça bükülünce zayıf kalçanın güçlü ekstansiyon yapmasıdır; istemli hareket bozukken otomatik hareketin normal kaldığını gösterir. Güvenilir olumlu bulgular tablosunda yer alır (s. 31, 32).",
+      "D": "Kalça abdüktör belirtisi, sağlam bacak dışa açılırken zayıf kalçanın da güçlü açılmasıdır. Olumlu muayene bulguları tablosunda yer alır (s. 31, 33).",
+      "E": "Güzel aldırmazlık, ciddi belirtiye karşın uygunsuz kayıtsızlıktır; tarihsel bir kavramdır ve tanısal değeri yoktur. Slayt onu güvenilir olmayan bulgular arasında sayar; aranan cevaptır (s. 31, 38)."
+     },
+     "bilgi": [
+      99,
+      122
+     ],
+     "benzer_cikmis": [
+      "past-1790877044852-954374",
+      "d3k2-2018-2019-k4-q50"
+     ],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "güzel aldırmazlık, telkinle düzelme"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-27",
+      "cikmis:past-1790877044852-954374",
+      "cikmis:d3k2-2018-2019-k4-q50",
+      "ogrenci:A:psk-s13-b07"
+     ],
+     "s": 31
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q42",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Güzel aldırmazlık (la belle indifférence) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İşlevsel nörolojik belirti bozukluğu tanısı için zorunlu bir ölçüttür.",
+      "B": "Ciddi belirtiye karşın uygunsuz kayıtsızlıktır; tanısal değeri yoktur.",
+      "C": "Yapay bozukluğa özgü bir muayene bulgusudur.",
+      "D": "Hastanın belirtisini bilinçli ürettiğini gösteren kanıttır.",
+      "E": "Temaruzu işlevsel bozukluktan ayıran bulgudur."
+     },
+     "dogru": "B",
+     "aciklama": "Güzel aldırmazlık ciddi belirtiye karşın uygunsuz kayıtsızlıktır; klasik konversiyon kavramıdır ama tarihseldir, tanısal değeri yoktur ve güvenilir bulgu sayılmaz (s. 38, 31).",
+     "sik_aciklamalari": {
+      "A": "DSM-5-TR ölçütleri A–D arasında güzel aldırmazlık yer almaz; tanıyı muayenedeki olumlu bulgular koydurur. Zorunlu ölçüt sayılması yanlıştır (s. 27, 38).",
+      "B": "Güzel aldırmazlık, konversiyonun klasik kavramlarından biridir ve ciddi belirtiye karşın uygunsuz kayıtsızlığı anlatır; tarihsel olduğu ve tanısal değeri bulunmadığı slaytta açıkça yazar. Tanısal değeri olmayan tarihsel kavram tanımı slaytla örtüştüğünden doğru cevap budur (s. 38).",
+      "C": "Güzel aldırmazlık konversiyon kavramları arasında anlatılır; yapay bozukluğun ipuçları dramatik sunum, çoklu yatış ve tıbbi meslek gibi özelliklerdir. Yapay bozukluğa özgü bulgu değildir (s. 38, 46).",
+      "D": "İşlevsel bozuklukta belirti istemsizdir; hastanın kayıtsız tutumu bilinçli üretimi göstermez. Bilinçli üretim yapay bozukluk ve temaruzun özelliğidir, güzel aldırmazlık bunun kanıtı sayılmaz (s. 38, 47).",
+      "E": "Temaruz ile işlevsel bozukluk, belirtinin bilinçli üretilip üretilmediği ve dış ödül bulunup bulunmadığıyla ayrılır. Güzel aldırmazlık bu karşılaştırma tablosunda yer almayan, tanısal değeri olmayan tarihsel bir kavramdır (s. 47, 38)."
+     },
+     "bilgi": [
+      122,
+      99
+     ],
+     "benzer_cikmis": [
+      "past-1790877044852-954374",
+      "d3k2-2018-2019-k4-q50"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Ciddi belirtiye karşın uygunsuz kayıtsızlık"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-26",
+      "hoca:hv-k2-22-27",
+      "ozen:s38",
+      "cikmis:past-1790877044852-954374",
+      "cikmis:d3k2-2018-2019-k4-q50",
+      "ogrenci:A:psk-s13-b01"
+     ],
+     "s": 38
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q43",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "İşlevsel nörolojik belirti bozukluğundaki klasik kavramlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Birincil kazanç, içsel çatışmanın bilinç dışında tutulmasıdır.",
+      "B": "İkincil kazanç, hasta rolünün getirdiği destek ve ilgi gibi dış yararlardır.",
+      "C": "Güzel aldırmazlık, ciddi belirtiye karşın uygunsuz kayıtsızlıktır.",
+      "D": "Özdeşim, önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır.",
+      "E": "İkincil kazanç, içsel çatışmanın bilinç dışında tutulmasıdır."
+     },
+     "dogru": "E",
+     "aciklama": "İçsel çatışmanın bilinç dışında tutulması birincil kazançtır; ikincil kazanç hasta rolünün dış yararlarıdır. İki kazanç türü sınavda en çok karıştırılan çifttir (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Birincil kazanç, içsel çatışmanın bilinç dışında tutulmasıdır ve belirti sembolik anlam taşır; Freud'un kuramından gelen klasik kavramdır. Slayttaki tanımla örtüştüğü için ifade doğrudur (s. 38).",
+      "B": "İkincil kazanç, hasta rolünün getirdiği destek, ilgi ve sorumluluktan uzaklaşma gibi dış yararlardır; birincil kazançtan bu dış yönüyle ayrılır. Slayttaki tanımla uyuştuğu için ifade doğrudur (s. 38).",
+      "C": "Güzel aldırmazlık, ciddi belirtiye karşın uygunsuz kayıtsızlıktır ve klasik konversiyon kavramları arasında tanımlanır. Tanım slayttaki cümleyle örtüştüğü için ifade doğrudur (s. 38).",
+      "D": "Özdeşim, önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır ve yasta ortaya çıkabilir. Klasik kavramlar sayfasındaki tanımla uyuştuğu için ifade doğrudur (s. 38).",
+      "E": "İçsel çatışmanın bilinç dışında tutulması birincil kazancın tanımıdır; ikincil kazanç ise hasta rolünün getirdiği destek, ilgi ve sorumluluktan uzaklaşmadır. İki kavram yer değiştirildiği için ifade yanlıştır ve aranan cevaptır (s. 38)."
+     },
+     "bilgi": [
+      120,
+      121,
+      122,
+      123
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "uygunsuz kayıtsızlık. Tarihsel; Önemli bir kişinin"
+     },
+     "dayanak": [
+      "hoca:hv-k2-22-26",
+      "ozen:s38",
+      "ogrenci:A:psk-s13-b01",
+      "profil"
+     ],
+     "s": 38
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q44",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Epileptik nöbet ile işlevsel (dissosiyatif) nöbetin ayrımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İşlevsel nöbette dil ısırma dilin yan kenarında görülür.",
+      "B": "Epileptik nöbet gerçek uykudan başlayabilir.",
+      "C": "İşlevsel nöbette video-EEG'de nöbet sırasında epileptik deşarj yoktur.",
+      "D": "Epileptik nöbet genellikle 1–2 dakika sürer; işlevsel nöbet çoğunlukla 2 dakikadan uzundur.",
+      "E": "İşlevsel nöbette gözler çoğunlukla kapalıdır ve açtırmaya direnç vardır."
+     },
+     "dogru": "A",
+     "aciklama": "Dilin yan kenarında ısırma epileptik nöbete aittir; işlevsel nöbette dil ısırma nadirdir, olursa dil ucundadır. Süre, göz, uyku ve video-EEG satırları tablodaki gibidir (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Dilin yan kenarında ısırma epileptik nöbetin bulgusudur; işlevsel nöbette dil ısırma nadirdir ve olursa dil ucundadır. Yan kenar yazılması yanlıştır; aranan cevaptır (s. 35).",
+      "B": "Epileptik nöbet gerçek uykudan başlayabilir ve EEG'de nöbetten hemen önce uyku dalgaları, uyku iğcikleri ve K kompleksleri görülür. Uykuyla ilişki satırındaki bu bilgi doğrudur (s. 35, 36).",
+      "C": "Video-EEG altın standarttır; işlevsel nöbette nöbet sırasında epileptik deşarj yoktur, yalnızca hareket ve kas artefaktı görülür. Tablonun son satırıyla uyuştuğu için ifade doğrudur (s. 35, 37).",
+      "D": "Tablonun süre satırı epileptik nöbeti genellikle 1–2 dakika, işlevsel nöbeti çoğunlukla 2 dakikadan uzun ve şiddeti artıp azalan biçimde verir. Süreler bu yönde olduğu için ifade doğrudur (s. 35).",
+      "E": "İşlevsel nöbette gözler çoğunlukla kapalıdır ve açtırmaya direnç vardır; epileptik nöbette ise gözler çoğunlukla açıktır. Tablonun gözler satırıyla uyuştuğu için ifade doğrudur (s. 35)."
+     },
+     "bilgi": [
+      107,
+      108,
+      110,
+      111,
+      113
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-86"
+     ],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Nadir; olursa dil ucunda"
+     },
+     "dayanak": [
+      "ozen:s35",
+      "cikmis:q-25-26_d_nem_3_kurul_2-86",
+      "ogrenci:A:psk-s13-b08"
+     ],
+     "dayanak_notu": "2025-26 nöbet çıkmışının ham belgesinde yalnız kök + cevap (epileptik nöbetin 10 dakika sürdüğü önermesi yanlış) var; şıklar sonradan kurulmuştur. Bu soru çıkmışın yalnız kök bilgisine (süre satırı) ve s35 tablosunun öteki satırlarına dayanır, sonradan kurulan şıklara dayanmaz.",
+     "s": 35
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q45",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "21 yaşında kadın hasta, bir tartışmanın ardından yere yığılıp yaklaşık 15 dakika süren, düzensiz ve iki tarafı uyumsuz hareketler ile başını iki yana sallama nedeniyle acile getiriliyor. Gözleri kapalı, açtırmaya direniyor; olay ağlamayla sonlanıyor ve hızla toparlanıyor. Bu tabloda tanıyı destekleyen altın standart inceleme bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Video-EEG'de olay sırasında epileptik deşarj bulunmaması",
+      "B": "EEG'de olaydan hemen önce uyku iğcikleri ve K kompleksleri",
+      "C": "Olay sonrasında uzun süren bilinç bulanıklığı ve uyku hali",
+      "D": "EEG'de olay sırasında iktal diken-dalga kompleksleri",
+      "E": "Olay sonrasında EEG'de belirgin postiktal yavaşlama"
+     },
+     "dogru": "A",
+     "aciklama": "Stresör sonrası, 2 dakikadan uzun, düzensiz hareketler, kapalı göz ve ağlamayla sonlanma işlevsel nöbeti düşündürür; altın standart video-EEG'de nöbet sırasında epileptik deşarj bulunmamasıdır (s. 35, 37).",
+     "sik_aciklamalari": {
+      "A": "Video-EEG işlevsel nöbet tanısında altın standarttır ve nöbet sırasında epileptik deşarjın bulunmaması tanıyı destekler. Vakadaki süre, hareket, göz ve sonlanma özellikleri bu tabloyla uyumludur; doğru cevaptır (s. 35).",
+      "B": "Uyku iğcikleri ve K kompleksleri gerçek uykunun EEG işaretleridir; nöbetten hemen önce görülmeleri epileptik nöbetin uykudan başladığını gösterir. İşlevsel nöbette hasta uyuyor gibi görünse de EEG uyanık alfa ritmi gösterir (s. 36).",
+      "C": "Nöbet sonrası bilinç bulanıklığı ve uyku hali epileptik nöbetin tipik seyridir. İşlevsel nöbette ağlama ve hızlı toparlanma görülür, hasta olayı hatırlayabilir (s. 35).",
+      "D": "İktal diken-dalga, epileptik nöbette ritmik deşarjın başlayıp yayılmasıdır. Bu bulgu epileptik nöbeti gösterir; işlevsel nöbette olay sırasında yalnızca hareket artefaktı görülür (s. 37).",
+      "E": "Postiktal yavaşlama, epileptik nöbet sonrasında beynin yorgun kalmasıyla ortaya çıkan büyük yavaş dalgalardır ve nöbet sonrası bilinç bulanıklığına eşlik eder. İşlevsel nöbette olaydan hemen sonra normal alfa ritmi görülür (s. 37)."
+     },
+     "bilgi": [
+      107,
+      108,
+      109,
+      112,
+      113
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-86"
+     ],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "epileptik deşarj yok (altın standart)"
+     },
+     "dayanak": [
+      "ozen:s35",
+      "cikmis:q-25-26_d_nem_3_kurul_2-86",
+      "ogrenci:A:psk-s13-b08"
+     ],
+     "dayanak_notu": "2025-26 nöbet çıkmışının ham belgesinde yalnız kök + cevap var; vaka yalnız kök bilgisini (işlevsel nöbet 2 dakikadan uzun sürer) ve s35 tablosunu kullanır, sonradan kurulan şıklara dayanmaz.",
+     "s": 35
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q46",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "İşlevsel nöbette video-EEG incelemesinde aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Olaydan hemen sonra alfa ritminin sürmesi",
+      "B": "Hasta uyuyor görünse de EEG'nin uyanık ritim göstermesi",
+      "C": "Olaydan hemen önce normal alfa ritmi",
+      "D": "Olay sırasında hareket ve kas artefaktı",
+      "E": "Olay sırasında ritmik yayılan epileptik deşarj"
+     },
+     "dogru": "E",
+     "aciklama": "İşlevsel nöbette olaydan önce ve hemen sonra uyanık beynin alfa ritmi (8–13 Hz) vardır; olay sırasında yalnızca hareket ve kas artefaktı görülür, epileptik deşarj yoktur (s. 36–37).",
+     "sik_aciklamalari": {
+      "A": "Olaydan hemen sonra alfa ritminin sürmesi, epileptik nöbetteki postiktal yavaşlamanın yokluğunu gösterir ve işlevsel nöbeti destekler. Beklenen bulgu olduğu için bu soruda seçilmez (s. 37).",
+      "B": "Psödo-uykuda hasta gözleri kapalı uyuyor gibi yatar ama EEG uyanık alfa ritmi gösterir. İşlevsel nöbette beklenen bulgudur (s. 36).",
+      "C": "Olaydan hemen önce uyanık beynin normal alfa ritminin (8–13 Hz) görülmesi, işlevsel nöbetin tipik EEG örüntüsüdür ve hastanın aslında uyanık olduğunu gösterir. Beklenen bulgu olduğu için bu soruda seçilmez (s. 37).",
+      "D": "Olay sırasında yalnızca hareket ve kas artefaktının görülmesi, işlevsel nöbette deşarj olmadığının göstergesidir; kas etkinliği EEG'yi kirletir ama beyin kaynaklı diken-dalga yoktur. Beklenen bulgudur (s. 37).",
+      "E": "Ritmik başlayıp yayılan epileptik deşarj (iktal diken-dalga) epileptik nöbetin bulgusudur. İşlevsel nöbette olay sırasında deşarj bulunmaz; beklenmeyen bulgu bu olduğu için aranan cevaptır (s. 37)."
+     },
+     "bilgi": [
+      115,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "Olay sırasında yalnızca hareket ve kas artefaktı görülür"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b08"
+     ],
+     "s": 37
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q48",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Konversiyon (işlevsel nörolojik belirti) bozukluğunda ayırıcı fizik muayene bulguları ile belirtilerin eşleştirilmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bacakta güçsüzlük – Hoover belirtisi",
+      "B": "Bacakta güçsüzlük – Kalça abdüktör belirtisi",
+      "C": "Yürüme bozukluğu – Sürüklenen bacak",
+      "D": "Görme kaybı – Titremede sürüklenme",
+      "E": "Nöbet – Video-EEG'de nöbet sırasında epileptik deşarj yokluğu"
+     },
+     "dogru": "D",
+     "aciklama": "Konversiyonda ayırıcı fizik muayene tablosunda görme kaybının bulgusu tünel görmedir; titremede sürüklenme titremenin bulgusudur. Bacakta güçsüzlükte Hoover ve kalça abdüktör belirtisi, yürümede sürüklenen bacak, nöbette video-EEG'de deşarj yokluğu bakılır (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Hoover belirtisi, bacakta güçsüzlük yakınmasında bakılır: karşı kalça bükülünce zayıf kalça güçlü ekstansiyon yapar. Tablodaki eşleşme doğru olduğundan yanlış aranan soruda seçilmez (s. 31, 32).",
+      "B": "Kalça abdüktör belirtisi de bacakta güçsüzlük için kullanılır: sağlam bacak dışa açılınca zayıf kalça da güçlü açılır. Belirti–bulgu eşleşmesi tabloyla uyuştuğu için doğrudur (s. 31, 33).",
+      "C": "Sürüklenen bacak, yürüyüş gözleminde bacağın yay çizmeden, ayak yerde sürüklenerek çekilmesidir ve yürüme bozukluğunun bulgusudur. Eşleşme tablodaki gibi olduğundan doğrudur (s. 31, 33).",
+      "D": "Titremede sürüklenme, titreyen elin sağlam elin ritmine uymasını ya da durmasını arayan bulgudur; titreme yakınmasına aittir. Görme kaybının bulgusu ise görme alanının uzaklıkla genişlememesi yani tünel görmedir; eşleşme yanlıştır, aranan cevaptır (s. 31, 34).",
+      "E": "İşlevsel nöbette gözler kapalı, seyir dalgalıdır ve video-EEG'de nöbet sırasında epileptik deşarj yoktur. Tablonun nöbet satırıyla uyuştuğu için eşleşme doğrudur (s. 31, 35)."
+     },
+     "bilgi": [
+      93,
+      94,
+      95,
+      96,
+      97,
+      98
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Görme kaybı Tünel görme Görme alanı uzaklıkla genişlemez"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s13-b07"
+     ],
+     "s": 31
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q49",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Epileptik nöbet ile psödonöbet (işlevsel, dissosiyatif nöbet) ayrımında aşağıdaki bulgulardan hangisi psödonöbeti düşündürür?",
+     "secenekler": {
+      "A": "Nöbetin genellikle 1–2 dakika içinde sonlanması",
+      "B": "Dilin yan kenarının ısırılması",
+      "C": "Nöbet sırasında gözlerin çoğunlukla açık olması",
+      "D": "Nöbet sonrasında bilinç bulanıklığı ve uyku hali",
+      "E": "Hareketlerin düzensiz olması ve iki tarafın uyumsuz çalışması"
+     },
+     "dogru": "E",
+     "aciklama": "Psödonöbette (işlevsel nöbet) hareketler düzensiz ve iki taraf uyumsuzdur, başı iki yana sallama ve kalçayı ileri itme görülür; 1–2 dakika süre, dilin yan kenarında ısırık, açık gözler ve nöbet sonrası uyku hali epileptik nöbetin satırlarıdır (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Epileptik nöbet genellikle 1–2 dakika sürer; psödonöbet çoğunlukla 2 dakikadan uzundur ve şiddeti artıp azalır. Kısa süre epileptik nöbeti düşündürür (s. 35).",
+      "B": "Dilin yan kenarında ısırık epileptik nöbette görülür; psödonöbette dil ısırma nadirdir, olursa dil ucundadır. Bu bulgu epileptik nöbetin lehinedir (s. 35).",
+      "C": "Epileptik nöbette gözler çoğunlukla açıktır; psödonöbette ise çoğunlukla kapalıdır ve açtırmaya direnç vardır. Açık gözler epileptik nöbeti düşündürür (s. 35).",
+      "D": "Nöbet sonrası bilinç bulanıklığı ve uyku hali epileptik nöbetin tipik seyridir; psödonöbet ağlama ve hızlı toparlanmayla sonlanır, hasta olayı hatırlayabilir. Bu bulgu epileptik nöbete aittir (s. 35).",
+      "E": "Psödonöbette hareketler düzensiz ve iki taraf uyumsuzdur; başı iki yana sallama ve kalçayı ileri itme eşlik eder. Epileptik nöbetin kalıplaşmış, eş zamanlı hareketlerinin tersi olduğu için psödonöbeti düşündürür (s. 35)."
+     },
+     "bilgi": [
+      107,
+      108,
+      109,
+      110,
+      112
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Düzensiz, iki taraf uyumsuz; başı iki yana sallama"
+     },
+     "dayanak": [
+      "ozen:s35",
+      "ogrenci:A:psk-s13-b08"
+     ],
+     "s": 35
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q67",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Titremede sürüklenme ve tünel görme bulguları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sürüklenme testinde hastadan sağlam eliyle hekimin gösterdiği ritimde parmak vurması istenir.",
+      "B": "İşlevsel titremede titreyen el kendi hızını bırakıp sağlam elin ritmine uyar ya da durur.",
+      "C": "Organik titreme dış ritme kapılmaz ve kendi frekansını korur.",
+      "D": "Tünel görme testinde görme alanı 1 metre ve 2 metre uzaklıkta ayrı ayrı ölçülür.",
+      "E": "İşlevsel görme kaybında da görme alanı uzaklıkla koni gibi genişler."
+     },
+     "dogru": "E",
+     "aciklama": "Normalde görme alanı uzaklıkla koni gibi genişler; işlevsel görme kaybında ise her iki uzaklıkta aynı çapta kalır ve buna tüp görme denir (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Sürüklenme testi hastanın sağlam eliyle hekimin ritmini izlemesine dayanır; parmak vurma ya da el açıp kapama kullanılır. Testin yapılışı slayttaki gibidir, ifade doğrudur (s. 34).",
+      "B": "İşlevsel titreme dikkat başka yöne çekilince dış ritme kapılır ya da durur. Bu sürüklenme bulgusunun kendisidir ve ifade doğrudur (s. 34).",
+      "C": "Organik titreme yapısal bir nedene bağlı olduğu için kendi frekansını korur. İşlevsel titremeyi ayıran nokta budur; ifade doğrudur (s. 34).",
+      "D": "Tünel görme testinde alan konfrontasyon ya da tanjant ekranıyla iki uzaklıkta ayrı ayrı ölçülür. Testin yapılışı slayttaki gibidir, ifade doğrudur (s. 34).",
+      "E": "Koni gibi genişleme normal görme alanının özelliğidir. İşlevsel görme kaybında alan her iki uzaklıkta aynı çapta kalır ve fizik kurallarına aykırı tüp görme ortaya çıkar; ifade yanlıştır ve aranan cevaptır (s. 34)."
+     },
+     "bilgi": [
+      96,
+      97,
+      105,
+      106
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Organik titreme kendi frekansını korur."
+     },
+     "dayanak": [
+      "ozen:s34",
+      "ogrenci:A:psk-s13-b07"
+     ],
+     "s": 34
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877044852-954374",
+     "soru": "Aşağıdaki bozuklukların hangisinde hastada güzel aldırmazlık (la belle indifférence) vardır?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Vücut dismorfik bozukluğu",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "B",
+       "text": "Anoreksiya nervoza",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Somatizasyon bozukluğu",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Konversiyon bozukluğu",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "E",
+       "text": "Hipokondriyazis",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q50",
+     "soru": "Konversiyon bozukluğunda hastanın ciddi semptomlarına karşı lakayt tutumuna ne denir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Yansıtmalı özdeşim",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Kronik ilgisizlik sendromu",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Somatizasyon bozukluğu",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Hipokondriyazis",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Güzel aldırmazlık",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "E"
+    },
+    {
+     "id": "q-25-26_d_nem_3_kurul_2-86",
+     "soru": "Epileptik nöbet ile psödonöbet (psikojenik non-epileptik nöbet) ayrımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Psödonöbet sırasında gözler sıklıkla sıkıca kapalıdır, epileptik nöbette ise genellikle açıktır",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Psödonöbette senkron olmayan, dalgalanan hareketler ve pelvik itme hareketleri görülebilir",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Jeneralize tonik-klonik nöbetten sonraki 10–20 dakika içinde serum prolaktin düzeyi yükselir",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Epileptik nöbet genellikle 10 dakika kadar sürer",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Epileptik nöbetten sonra postiktal konfüzyon beklenir, psödonöbette genellikle görülmez",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Diğer tıbbi durumları etkileyen psikolojik etkenleri tanımlar ve Takotsubo kardiyomiyopatisini tetikleyici, epidemiyoloji, klinik, mekanizma ve seyir yönünden açıklar (s. 41–42).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q50",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi DSM-5-TR'deki 'diğer tıbbi durumları etkileyen psikolojik etkenler' başlığına örnek değildir?",
+     "secenekler": {
+      "A": "Astımı olan hastada kaygıyla tetiklenen alevlenmeler",
+      "B": "Diyabetli hastada tedaviye uyumu bozan inkâr tutumu",
+      "C": "Göğüs ağrısında hekime gitmeyi geciktiren inkâr",
+      "D": "Belirtisi olmayan kişinin tümör korkusuyla her ay MR istemesi",
+      "E": "Ani duygusal stresle gelişen Takotsubo kardiyomiyopatisi"
+     },
+     "dogru": "D",
+     "aciklama": "Bu tanıda var olan bir tıbbi durum ruhsal etkenle kötüleşir. Belirti olmadan hastalık korkusuyla tetkik istemek ise hastalık kaygısı bozukluğudur (s. 41, 48–49).",
+     "sik_aciklamalari": {
+      "A": "Astımda kaygıyla tetiklenen alevlenme, var olan tıbbi hastalığın psikolojik etkenle kötüleşmesidir ve slaytta bu tanının ilk örneği olarak verilir. Başlığa uyduğu için 'örnek değildir' sorusunda seçilmez (s. 41).",
+      "B": "Diyabette inkârın tedaviye uyumu bozması, psikolojik etkenin tıbbi durumun seyrini olumsuz etkilemesine slayttaki ikinci örnektir. Tanıma uyduğu için bu soruda seçilmez (s. 41).",
+      "C": "Göğüs ağrısında inkârın hekime gitmeyi geciktirmesi, psikolojik etkenin var olan tıbbi durumun sağlık riskini artırmasıdır ve slayttaki üçüncü örnektir. Başlığa uyduğu için bu soruda seçilmez (s. 41).",
+      "D": "Belirti yokken beyin tümörü korkusuyla her ay MR istemek, hastalık kaygısı bozukluğunun bakım arayan tipidir; slayttaki dördüncü vakanın yanıtı da budur. Var olan bir tıbbi durum bulunmadığı için bu başlığa örnek olamaz (s. 48, 49).",
+      "E": "Takotsubo, ani duygusal stresle gelişen 'kırık kalp' kardiyomiyopatisidir ve ruh–beden bağlantısının canlı örneği olarak bu başlıkta verilir (s. 41, 42)."
+     },
+     "bilgi": [
+      127,
+      128,
+      148,
+      149
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Kaygıyla tetiklenen Tedaviye uyumu bozan inkâr"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 41
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q51",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Diğer tıbbi durumları etkileyen psikolojik etkenler tanısı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Etkenin bir ruhsal bozukluk olması zorunludur.",
+      "B": "Kişilik özelliği ya da baş etme biçimi de etken olabilir.",
+      "C": "Ağırlık hafif, orta, ağır ve aşırı olarak belirlenir.",
+      "D": "Var olan bir tıbbi durum bulunur.",
+      "E": "Psikolojik etkenler hastalığın seyrini ya da tedaviye uyumu olumsuz etkiler."
+     },
+     "dogru": "A",
+     "aciklama": "Etkenin bir ruhsal bozukluk olması gerekmez; kişilik özelliği, baş etme biçimi ya da sağlıksız davranış da etken olabilir (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Slayt etkenin bir ruhsal bozukluk olmasının gerekmediğini açıkça söyler; kişilik özelliği, baş etme biçimi ya da sağlıksız davranış da yeterlidir. Zorunlu denmesi yanlıştır, aranan cevap budur (s. 41).",
+      "B": "Kişilik özelliği, baş etme biçimi ya da sağlıksız davranışın etken olabilmesi, tanının ruhsal bozukluk gerektirmediğini gösteren slayt notudur. İfade doğru olduğu için yanlış aranan soruda seçilmez (s. 41).",
+      "C": "Ağırlığın hafif, orta, ağır ve aşırı olarak derecelendirilmesi, psikolojik etkenin tıbbi durumu ne ölçüde etkilediğini kodlar. Slaytta bu dört düzey verildiği için ifade doğrudur (s. 41).",
+      "D": "Tanım 'bir tıbbi durum vardır' ile başlar; psikolojik ya da davranışsal etkenler bu gerçek hastalığı olumsuz etkiler. Tanının ön koşulu olan bu ifade slaytla uyumludur, doğrudur (s. 41).",
+      "E": "Psikolojik ya da davranışsal etkenler tıbbi durumun seyrini, tedaviye uyumu, sağlık riskini ya da fizyopatolojiyi olumsuz etkiler; astımda kaygıyla alevlenme buna örnektir. Seyir, uyum ve risk üzerindeki olumsuz etki tanımın parçası olduğundan ifade doğrudur (s. 41)."
+     },
+     "bilgi": [
+      127,
+      129
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Etkenin bir ruhsal bozukluk olması gerekmez"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 41
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q52",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "68 yaşında kadın hasta, eşinin ani ölümünden saatler sonra başlayan göğüs ağrısı ve nefes darlığı ile acile getiriliyor. EKG'de ST yükselmesi ve troponin artışı saptanıyor; koroner anjiyografide tıkanıklık yok, ekokardiyografide sol ventrikül apeksinin balon gibi şiştiği görülüyor. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bedensel belirti bozukluğu",
+      "B": "Yapay bozukluk",
+      "C": "Kalp krizi (miyokart enfarktüsü)",
+      "D": "Panik bozukluğu",
+      "E": "Takotsubo kardiyomiyopatisi"
+     },
+     "dogru": "E",
+     "aciklama": "Yoğun duygusal stres sonrası göğüs ağrısı, ST yükselmesi ve troponin artışıyla kalp krizini taklit eden, ancak koroner anjiyografide tıkanıklık olmayan ve apeksin balonlaştığı tablo Takotsubo'dur (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Bedensel belirti bozukluğunda gerçek belirtilere aşırı düşünce ve davranış eşlik eder, ancak ventrikül işlev bozukluğu gibi nesnel kardiyak bulgu beklenmez. Burada ekokardiyografide yapısal bulgu olduğu için bu tanı uymaz (s. 13).",
+      "B": "Yapay bozuklukta belirti aldatmaya dayalı olarak üretilir ve ipuçları dramatik sunum, çoklu yatış ve tıbbi meslektir. Yas sonrası ortaya çıkan nesnel kardiyak bulgular aldatmayı düşündürmez (s. 46).",
+      "C": "Kalp krizi de göğüs ağrısı, ST yükselmesi ve troponin artışı yapar; Takotsubo tam da bu tabloyu taklit eder. Ancak koroner anjiyografide tıkanıklık bulunmaması ve apikal balonlaşma tanıyı kalp krizinden uzaklaştırır (s. 42).",
+      "D": "Panik bozukluğunda göğüs ağrısı ve çarpıntı atakları olabilir, ancak EKG'de ST yükselmesi, troponin artışı ve ventrikül işlev bozukluğu beklenmez. Ayırıcı tanıda ruhsal bozukluk olarak düşünülür (s. 18).",
+      "E": "Takotsubo, yoğun duygusal stresle tetiklenen ani ve geçici sol ventrikül işlev bozukluğudur; apeks balon gibi şişer, EKG ve troponin kalp krizini taklit eder, anjiyografi temizdir. Yaşlı kadın ve yas tetikleyicisi tipiktir (s. 42)."
+     },
+     "bilgi": [
+      130,
+      131,
+      132,
+      133
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "koroner anjiyografide tıkanıklık yoktur"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 42
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q53",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Takotsubo kardiyomiyopatisinde kalp kasının geçici olarak 'sersemlemesinden' sorumlu tutulan mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Koroner arterde ani tıkanıklık",
+      "B": "Ani katekolamin (adrenalin) fırtınası",
+      "C": "Süreğen stresle kortizol artışı",
+      "D": "Bedensel sinyallere santral duyarlılaşma",
+      "E": "Sağ temporoparietal bileşkede düşük etkinlik"
+     },
+     "dogru": "B",
+     "aciklama": "Mekanizma: ani katekolamin (adrenalin) fırtınasının kalp kasını 'sersemletmesi' düşünülür; koroner anjiyografide tıkanıklık yoktur (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Koroner arter tıkanıklığı kalp krizinin mekanizmasıdır. Takotsubo'da anjiyografide tıkanıklık bulunmaz; kalp krizini taklit eden ama ondan ayrılan özellik budur (s. 42).",
+      "B": "Ani katekolamin fırtınası, yoğun stresle salınan adrenalinin kalp kasını geçici olarak sersemletmesidir; apeksin balonlaşmasını açıklayan düşünülen mekanizmadır. Katekolamin fırtınası slaytın mekanizma satırında anıldığı için doğru cevap budur (s. 42).",
+      "C": "Süreğen stresin HPA eksenini uyararak kortizol ve sitokinleri artırması, psikosomatik hastalıkların genel stres fizyolojisidir. Takotsubo'daki ani ve geçici tablo bu kronik mekanizmayla açıklanmaz (s. 4).",
+      "D": "Santral duyarlılaşma, ağrı yollarının duyarlanmasıyla zararsız uyaranın ağrılı algılanmasıdır ve bedensel belirti bozukluğunun biyolojik etkenlerindendir. Kalp kasının kasılma bozukluğunu açıklamaz (s. 16).",
+      "E": "Sağ temporoparietal bileşkede düşük etkinlik, işlevsel nörolojik bozuklukta faillik duygusunun bozulmasıyla ilişkilidir. Kalp kasıyla ilgili bir mekanizma değildir (s. 29)."
+     },
+     "bilgi": [
+      134
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "ani katekolamin (adrenalin) fırtınasının"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 42
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q54",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Takotsubo ('kırık kalp') sendromu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Olguların yaklaşık %90'ı kadındır ve çoğu menopoz sonrasıdır.",
+      "B": "Fiziksel tetikleyiciler duygusal tetikleyicilerden daha sıktır.",
+      "C": "Sol ventrikül apeksi kasılamaz ve balon gibi şişer.",
+      "D": "Akut dönemde hastane içi şok ve ölüm oranı kalp krizine benzer.",
+      "E": "Koroner anjiyografide tıkanıklık saptanması tanıyı destekler."
+     },
+     "dogru": "E",
+     "aciklama": "Takotsubo kalp krizini taklit eder ama koroner anjiyografide tıkanıklık yoktur; tıkanıklık saptanması tanıyı desteklemez, kalp krizini düşündürür (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Uluslararası Takotsubo Kaydı'nda olguların yaklaşık %90'ı kadın ve çoğu menopoz sonrasıdır, ortalama yaş 67'dir. Yüzde doksan kadın ve ortalama yaş altmış yedi slayttaki kayıt verisi olduğundan ifade doğrudur (s. 42).",
+      "B": "Fiziksel tetikleyicilerin (%36) duygusal tetikleyicilerden (%28) daha sık olması, Takotsubo'nun yalnız 'kırık kalp' öyküsüyle sınırlı olmadığını gösterir; %29'unda belirgin tetik yoktur. Yüzde otuz altıya karşı yüzde yirmi sekiz oranı slaytta verildiğinden ifade doğrudur (s. 42).",
+      "C": "Takotsubo'da kalbin tepesi kasılamaz ve balon gibi şişer, tabanı aşırı kasılır; adı ahtapot tuzağı çömleğinden gelir. Apikal balonlaşma tanımın kendisi olduğundan ifade doğrudur (s. 42).",
+      "D": "Seyir çoğunlukla haftalar içinde düzelir, ancak akut dönemde hastane içi şok ve ölüm oranı kalp krizine benzer. Hastane içi şok ve ölüm riski seyir satırında yazdığından ifade doğrudur (s. 42).",
+      "E": "Takotsubo'da EKG ve troponin kalp krizini taklit eder, ancak koroner anjiyografide tıkanıklık yoktur. Tıkanıklık saptanması tanıyı desteklemez, aksine kalp krizini düşündürür; aranan cevaptır (s. 42)."
+     },
+     "bilgi": [
+      130,
+      131,
+      132,
+      133,
+      135
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Kalp krizini taklit eder"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 42
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Yapay bozukluğun A–D ölçütlerini, kendine/başkasına yüklenen tiplerini ve klinik ipuçlarını sayar; bedensel belirti/işlevsel bozukluk, yapay bozukluk ve temaruzu bilinçlilik, motivasyon ve dış ödül üzerinden ayırt eder (s. 44–47).",
+   "sorular": [
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q55",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Hemşire olan 34 yaşında kadın hasta, açıklanamayan yinelenen hipoglisemi atakları nedeniyle servise yatırılıyor; dolabında insülin flakonları bulunuyor. Olaydan maddi bir kazancı yok, izin ya da dava beklentisi de bulunmuyor. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Temaruz",
+      "B": "Yapay bozukluk, kendine yüklenen",
+      "C": "Bedensel belirti bozukluğu",
+      "D": "İşlevsel nörolojik belirti bozukluğu",
+      "E": "Hastalık kaygısı bozukluğu"
+     },
+     "dogru": "B",
+     "aciklama": "Sağlık mesleği, gizlice insülinle oluşturulan hipoglisemi ve dış ödülün bulunmaması kendine yüklenen yapay bozukluğa işaret eder; slayttaki üçüncü vakanın yanıtı da budur (s. 48–49, 45).",
+     "sik_aciklamalari": {
+      "A": "Temaruzda belirti bilinçli üretilir ama para, rapor ya da cezadan kaçış gibi dış kazanç vardır. Bu hastada maddi kazanç, izin ya da dava beklentisi olmadığı için temaruz dışlanır (s. 47).",
+      "B": "Yapay bozuklukta belirti aldatmaya dayalı olarak oluşturulur, dış ödül yoktur ve amaç hasta rolüdür; sağlık mesleği klinik ipuçlarındandır. İnsülinle oluşturulan hipoglisemi kendine yüklenen tipin tipik örneğidir (s. 45, 46, 49).",
+      "C": "Bedensel belirti bozukluğunda belirti istemsizdir ve hasta yakınmayı gerçekten yaşar; aldatma ögesi yoktur. Dolaptaki insülin flakonları belirtinin bilinçli oluşturulduğunu gösterdiği için bu tanı uymaz (s. 47).",
+      "D": "İşlevsel nörolojik belirti bozukluğunda nörolojik hastalıkla uyuşmayan motor ya da duyusal belirti vardır ve belirti istemsizdir. Hipoglisemi atakları ve insülin kanıtı bu tabloya uymaz (s. 27, 47).",
+      "E": "Hastalık kaygısı bozukluğunda bedensel belirti yok ya da hafiftir, çekirdek ciddi hastalık korkusudur. Burada gerçek ve oluşturulmuş hipoglisemi atakları vardır (s. 22)."
+     },
+     "bilgi": [
+      136,
+      137,
+      138,
+      148,
+      149
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+     ],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "dolabında insülin flakonu. Maddi kazancı yok."
+     },
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+      "ogrenci:A:psk-s13-b05"
+     ],
+     "s": 48
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q56",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Yapay bozukluğun klinik ipuçları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hasta eski kayıtlara ulaşılmasını ve aileyle görüşülmesini kolaylaştırır.",
+      "B": "Hasta girişime ve teste isteklidir; öyküsünü yeniden anlatmaya heveslidir.",
+      "C": "Çok sayıda yatış, ameliyat izi ve çoklu ilaç alerjisi bulunabilir.",
+      "D": "Belirtiler olağandışı, dramatik ve tıbbi bilgiyle örtüşmeyen bir tablo oluşturur.",
+      "E": "Beklenen tedaviye yanıtsızlık görülür; biri düzelince yeni belirti ortaya çıkar."
+     },
+     "dogru": "A",
+     "aciklama": "Yapay bozuklukta hasta eski kayıtlara ya da aileyle görüşmeye izin vermez; diğer dört ifade klinik ipuçları listesindedir (s. 46).",
+     "sik_aciklamalari": {
+      "A": "Yapay bozuklukta hasta eski kayıtlara ya da aileyle görüşmeye izin vermez, çünkü aldatmanın açığa çıkmasından çekinir. Kolaylaştırdığını söylemek yanlıştır; aranan cevaptır (s. 46).",
+      "B": "Girişime ve teste istekli olma ile öyküyü yeniden anlatmaya heves, hasta rolünü sürdürme arzusunu yansıtan ipuçlarıdır; sıradan hasta tetkikten kaçınırken yapay bozukluk hastası ister. Test ve girişim isteği ipuçları listesinde yer aldığından ifade doğrudur (s. 46).",
+      "C": "Çok sayıda yatış, ameliyat izi ve çoklu ilaç alerjisi, geniş tıbbi öykü ve yineleyen girişimlerin bedendeki izleridir. Klinik ipuçları listesinde yer aldığı için ifade doğrudur (s. 46).",
+      "D": "Olağandışı, dramatik ve tıbbi bilgiyle örtüşmeyen tablo, yapay bozuklukta şüphenin ilk basamağıdır; belirtiler bilinen hastalık kalıplarına oturmaz. İpuçları listesinin ilk maddesi olduğu için ifade doğrudur (s. 46).",
+      "E": "Beklenen tedaviye yanıtsızlık ve bir belirti düzelince yenisinin ortaya çıkması, hastanın hasta rolünü sürdürme çabasının göstergesidir. Klinik ipuçları arasında sayıldığı için ifade doğrudur (s. 46)."
+     },
+     "bilgi": [
+      141,
+      142
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+     ],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Eski kayıtlara ya da aileyle görüşmeye izin vermeme"
+     },
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+      "ogrenci:A:psk-s13-b05"
+     ],
+     "s": 46
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q57",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Yapay bozukluğu temaruzdan ayırmada en önemli özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirgin bir dış ödül olmadan aldatıcı davranışın sürmesi",
+      "B": "Belirtinin nörolojik hastalıkla uyuşmaması",
+      "C": "Para ya da rapor gibi kazanç beklentisinin bulunması",
+      "D": "Belirtinin bilinçli üretilmesi",
+      "E": "Belirtinin istemsiz ortaya çıkması"
+     },
+     "dogru": "A",
+     "aciklama": "Her ikisinde belirti bilinçli üretilir; ayıran, yapay bozuklukta dış ödülün olmaması (C ölçütü) ve amacın hasta rolü olması, temaruzda ise para, rapor ya da cezadan kaçış gibi dış kazançtır (s. 45, 47).",
+     "sik_aciklamalari": {
+      "A": "C ölçütüne göre yapay bozuklukta belirgin dış ödül olmadan da aldatıcı davranış sürer ve motivasyon bilinçdışı hasta rolüdür. Temaruzda ise dış kazanç vardır; ayırt edici özellik budur (s. 45, 47).",
+      "B": "Belirtinin bilinen nörolojik ya da tıbbi durumlarla uyumsuzluğu, işlevsel nörolojik belirti bozukluğunun B ölçütüdür ve organik hastalıktan ayırmaya yarar. Yapay bozukluk ile temaruz ayrımında kullanılmaz (s. 27).",
+      "C": "Para, rapor ya da cezadan kaçış gibi kazanç beklentisi temaruzun özelliğidir; yapay bozuklukta bulunmaz. Soru yapay bozukluğun ayırt edici özelliğini sorduğu için bu seçenek ters tarafı tanımlar (s. 47).",
+      "D": "Bilinçli üretim yapay bozukluk ile temaruzun ortak özelliğidir; ikisini bedensel belirti ve işlevsel bozukluktan ayırır. Ortak olduğu için yapay bozukluğu temaruzdan ayırmaz (s. 47).",
+      "E": "İstemsiz ortaya çıkma bedensel belirti ve işlevsel bozukluğun özelliğidir. Yapay bozuklukta ve temaruzda belirti bilinçli üretildiği için bu seçenek ikisine de uymaz (s. 47)."
+     },
+     "bilgi": [
+      138,
+      145,
+      146
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+     ],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Belirgin bir dış ödül olmadan da aldatıcı davranış"
+     },
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+      "ogrenci:A:psk-s13-b05",
+      "profil"
+     ],
+     "s": 46
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q58",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Bedensel belirti/işlevsel bozukluk, yapay bozukluk ve temaruzun karşılaştırılmasıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Bedensel belirti ve işlevsel bozuklukta belirti istemsiz üretilir.\nII. Yapay bozuklukta belirti bilinçli üretilir, motivasyon bilinçdışıdır ve amaç hasta rolüdür.\nIII. Temaruzda dış ödül yoktur.\nIV. Temaruz DSM-5-TR'de bir ruhsal bozukluk olarak sınıflandırılmaz.",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, II ve III",
+      "E": "Yalnız II"
+     },
+     "dogru": "B",
+     "aciklama": "Karşılaştırma tablosunda belirti üretimi istemsiz/bilinçli/bilinçli, motivasyon bilinçdışı/hasta rolü/dış kazanç, dış ödül yok/yok/var, ruhsal bozukluk evet/evet/hayırdır (s. 47).",
+     "sik_aciklamalari": {
+      "A": "I doğrudur; III ise temaruzda dış ödül olmadığını söyler, oysa temaruzun ayırt edici özelliği para, rapor ya da cezadan kaçış gibi dış ödüldür. Küme hatalıdır (s. 47).",
+      "B": "I, II ve IV tablonun belirti üretimi, motivasyon ve ruhsal bozukluk satırlarıyla birebir uyuşur. III temaruzda dış ödül bulunmadığını söylediği için dışarıda kalır; doğru cevaptır (s. 47).",
+      "C": "II yapay bozukluğu doğru anlatır. III ise temaruzda dış ödülü yok sayar; temaruzda dış ödül vardır ve yapay bozukluktan tam bu noktada ayrılır (s. 47).",
+      "D": "I ve II doğru önermelerdir. Ancak III temaruzda dış ödül bulunmadığını söylediği için yanlıştır ve doğru olan IV kümede yoktur (s. 47).",
+      "E": "II yapay bozukluğun bilinçli üretim ve bilinçdışı hasta rolü motivasyonunu doğru verir. Ancak I ve IV de doğru olduğundan tek başına yeterli değildir (s. 47)."
+     },
+     "bilgi": [
+      144,
+      145,
+      146
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Para, rapor, cezadan kaçış"
+     },
+     "dayanak": [
+      "ozen:s47",
+      "ogrenci:A:psk-s13-b05"
+     ],
+     "s": 47
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q59",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Bir ebeveynin baktığı çocukta hastalık belirtileri oluşturması durumunda DSM-5-TR'deki karşılığı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Diğer tıbbi durumları etkileyen psikolojik etkenler",
+      "B": "Bedensel belirti bozukluğu",
+      "C": "Kendine yüklenen yapay bozukluk",
+      "D": "Temaruz",
+      "E": "Başkasına yüklenen yapay bozukluk"
+     },
+     "dogru": "E",
+     "aciklama": "Başkasına yüklenen yapay bozukluk (vekaleten Münchausen): tanı belirtiyi oluşturan kişiye, çoğunlukla çocuğuna bakan ebeveyne konur; aynı zamanda çocuk istismarıdır (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Diğer tıbbi durumları etkileyen psikolojik etkenlerde kişinin kendi tıbbi hastalığı ruhsal etkenle kötüleşir. Başkasında belirti oluşturmakla ilgisi yoktur (s. 41).",
+      "B": "Bedensel belirti bozukluğunda kişi kendi gerçek belirtilerine aşırı yanıt verir; belirti üretimi istemsizdir. Çocukta belirti oluşturma aldatmaya dayalıdır, bu tabloya uymaz (s. 13, 47).",
+      "C": "Kendine yüklenen yapay bozuklukta kişi belirtiyi kendi bedeninde oluşturur; eski adı Münchausen sendromudur. Çocukta belirti oluşturma bu tip değildir (s. 45).",
+      "D": "Temaruzda kişi para, rapor ya da cezadan kaçış gibi dış kazanç için belirti üretir. Çocukta hastalık oluşturan ebeveynin motivasyonu hasta rolüdür, dış ödül değildir (s. 47).",
+      "E": "Başkasına yüklenen yapay bozukluk, vekaleten Münchausen adıyla bilinir; tanı belirtiyi oluşturan ebeveyne konur ve durum çocuk istismarı sayılır. Vekaleten Münchausen tanımı slaytla birebir uyuştuğundan doğru cevap budur (s. 45)."
+     },
+     "bilgi": [
+      140
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Tanı, belirtiyi oluşturan kişiye konur; çoğunlukla"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 45
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q60",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi temaruzun özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Belirti bilinçli olarak üretilir.",
+      "B": "Motivasyon bilinçli bir dış kazançtır.",
+      "C": "Para, rapor ya da cezadan kaçış gibi dış ödül vardır.",
+      "D": "DSM-5-TR'de klinik ilgi odağı olabilecek diğer durumlar arasında yer alır.",
+      "E": "Amaç hasta rolünü sürdürmektir."
+     },
+     "dogru": "E",
+     "aciklama": "Hasta rolü yapay bozukluğun bilinçdışı motivasyonudur; temaruzda motivasyon bilinçli dış kazançtır, dış ödül vardır ve ruhsal bozukluk sayılmaz (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Temaruzda belirti bilinçli üretilir; bu özelliği yapay bozuklukla paylaşır ve ikisini istemsiz bozukluklardan ayırır. Temaruza ait bir özellik olduğu için 'değildir' sorusunda seçilmez (s. 47).",
+      "B": "Temaruzda motivasyon bilinçlidir ve rapor, para gibi dış kazanca yöneliktir; yapay bozukluktaki bilinçdışı hasta rolünden tam bu noktada ayrılır. İfade temaruza uyduğu için bu soruda seçilmez (s. 47).",
+      "C": "Para, rapor ve cezadan kaçış, karşılaştırma tablosunda temaruzun dış ödülleri olarak sayılır ve temaruzu yapay bozukluktan ayıran ölçüttür. İfade temaruza uyar (s. 47).",
+      "D": "Temaruz ruhsal bozukluk sayılmaz; DSM-5-TR'de klinik ilgi odağı olabilecek diğer durumlar arasında yer alır. İfade temaruza uyar (s. 47).",
+      "E": "Hasta rolünü amaçlamak yapay bozukluğun bilinçdışı motivasyonudur; temaruzda amaç dış kazançtır. Bu özellik temaruza ait olmadığı için aranan cevaptır (s. 47)."
+     },
+     "bilgi": [
+      145,
+      146
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "hasta rolü Bilinçli: dış kazanç"
+     },
+     "dayanak": [
+      "ozen:s47",
+      "ogrenci:A:psk-s13-b05"
+     ],
+     "s": 47
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q61",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Yapay bozukluğun DSM-5-TR ölçütleri ve tipleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Belirgin bir dış ödülün bulunması tanı için zorunludur.",
+      "B": "Kendine yüklenen tipin eski adı Münchausen sendromudur.",
+      "C": "Başkasına yüklenen tip aynı zamanda çocuk istismarıdır.",
+      "D": "Belirtiler aldatmaya dayalı olarak uydurulur ya da hastalık oluşturulur.",
+      "E": "Kişi kendini ya da başkasını hasta, engelli ya da yaralı olarak sunar."
+     },
+     "dogru": "A",
+     "aciklama": "C ölçütü dış ödül olmadan da aldatıcı davranışın sürmesidir; dış ödül varsa temaruz düşünülür. A, B ölçütleri ve iki tip slayttaki gibidir (s. 45, 47).",
+     "sik_aciklamalari": {
+      "A": "C ölçütü belirgin bir dış ödül olmadan da aldatıcı davranışın sürmesidir; dış ödül bulunması temaruza işaret eder. Zorunlu sayılması yanlıştır; aranan cevaptır (s. 45, 47).",
+      "B": "Kendine yüklenen yapay bozukluğun eski adı Münchausen sendromudur; kişi belirtiyi kendi bedeninde oluşturur. Slaytta açıkça yazdığı için ifade doğrudur (s. 45).",
+      "C": "Başkasına yüklenen tip vekaleten Münchausen'dir; tanı belirtiyi oluşturan ebeveyne konur ve çocukta hastalık oluşturulduğu için aynı zamanda çocuk istismarıdır. Çocuk istismarı notu slaytta açıkça yazdığından ifade doğrudur (s. 45).",
+      "D": "A ölçütü, bedensel ya da ruhsal belirtilerin aldatmaya dayalı uydurulması ya da hastalık/yaralanma oluşturulmasıdır; kendine insülin yapmak buna örnektir. Slayttaki ölçütle uyuştuğu için ifade doğrudur (s. 45).",
+      "E": "B ölçütü, kişinin kendini ya da başkasını hasta, engelli ya da yaralı olarak sunmasıdır ve kendine ya da başkasına yüklenen tipleri kapsar. Slayttaki ölçütle örtüştüğü için ifade doğrudur (s. 45)."
+     },
+     "bilgi": [
+      137,
+      138,
+      139,
+      140
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Eski adıyla Münchausen sendromu"
+     },
+     "dayanak": [
+      "profil",
+      "ogrenci:A:psk-s13-b05"
+     ],
+     "s": 45
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q62",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Bedensel belirti/işlevsel bozukluk, yapay bozukluk ve temaruzu birbirinden ayırt etmede kullanılan iki temel soru aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirti bilinçli mi üretiliyor ve ne için?",
+      "B": "Belirti hangi organı tutuyor ve tıbben açıklanabiliyor mu?",
+      "C": "Tetkikler normal mi ve hasta güvenceyle rahatlıyor mu?",
+      "D": "Bir stresör var mı ve belirti telkinle düzeliyor mu?",
+      "E": "Belirti ne zaman başladı ve ne kadar sürdü?"
+     },
+     "dogru": "A",
+     "aciklama": "Ayırt etmenin anahtarı iki sorudur: belirti bilinçli mi üretiliyor ve ne için? Eksen bilinçdışı–istemsizden bilinçli–istemliye uzanır (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Belirtinin bilinçli üretilip üretilmediği ve ne için üretildiği sorularıyla istemsiz bozukluklar, hasta rolü amaçlayan yapay bozukluk ve dış kazanç amaçlayan temaruz birbirinden ayrılır. Bilinçlilik ve amaç soruları ayırt etmenin anahtarı olarak verildiğinden doğru cevap budur (s. 47).",
+      "B": "Tutulan organ ve tıbbi açıklanabilirlik DSM-5-TR'de tanıyı belirlemez; ölçüt belirtiye verilen yanıttır ve tıbbi hastalık tanıyı dışlamaz. Üç tabloyu ayıran soru bu değildir (s. 10).",
+      "C": "Tetkiklerin normal çıkması ve güvencenin rahatlatmaması, bedensel belirti bozukluğunun klinik özelliğidir ve hastanın belirtiye verdiği aşırı yanıtı gösterir. Yapay bozukluk ile temaruzu birbirinden ayırmaz (s. 14).",
+      "D": "Stresör varlığı yalnız belirleyicidir ve kanıtlanması gerekmez; telkinle düzelme güvenilir olmayan bulgudur. İkisi de bilinçlilik ve amaç eksenini sorgulamaz (s. 27, 31).",
+      "E": "Başlangıç zamanı ve süre, DSM-5-TR'de akut (<6 ay) ve süreğen (≥6 ay) belirleyicisini kodlamaya yarar. Üç tablo arasında ayrım yapmaz, çünkü her birinde belirti kısa ya da uzun sürebilir (s. 27)."
+     },
+     "bilgi": [
+      144
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Bilinçli mi? Ne için?"
+     },
+     "dayanak": [
+      "ozen:s47",
+      "profil",
+      "ogrenci:A:psk-s13-b05"
+     ],
+     "s": 47
+    },
+    {
+     "id": "k2-22-psikosomatik-bozukluklar-q68",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Hekim kızı olan bir ameliyathane teknikeri kendine defalarca Pseudomonas enjekte ederek yinelenen sepsis atakları geçiriyor. Para, iş izni ya da dava gibi bir dış kazancı yoktur. Bu davranışın amacı ve en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hasta rolünü üstlenmek · yapay bozukluk",
+      "B": "Hastalık kaygısını yatıştırmak · hastalık kaygısı bozukluğu",
+      "C": "Belirtiye aşırı uğraş · bedensel belirti bozukluğu",
+      "D": "Dış kazanç sağlamak · temaruz",
+      "E": "İçsel çatışmayı bilinç dışında tutmak · işlevsel nörolojik belirti bozukluğu"
+     },
+     "dogru": "A",
+     "aciklama": "Belirti dış ödül olmadan bilinçli ve aldatmaya dayalı olarak oluşturulur; para, izin ve dava yoktur, amaç hasta rolüdür. Bu tablo yapay bozukluktur (s. 9, 44).",
+     "sik_aciklamalari": {
+      "A": "Yapay bozuklukta belirti dış ödül olmadan, aldatmaya dayalı olarak üretilir; olguda para, izin ve dava olmadan kişi kendine hastalık oluşturur. Amaç hasta rolüdür, bu yüzden doğru cevap budur (s. 9, 44).",
+      "B": "Hastalık kaygısı bozukluğunda kişi hasta olma fikriyle uğraşır ve belirti üretmez. Kendine bakteri enjekte ederek hastalık oluşturmak bu tabloyla açıklanamaz (s. 22, 47).",
+      "C": "Bedensel belirti bozukluğunda sıkıntı veren gerçek belirtiler vardır ve kişi bunlara aşırı düşünce, duygu ve davranışla yanıt verir. Belirti bilinçli oluşturulmaz; kendine bakteri enjekte etmek bu tabloyla açıklanamaz (s. 9, 13).",
+      "D": "Temaruzda belirti bilinçli üretilir ve amaç para, rapor ya da cezadan kaçış gibi dış kazançtır. Olguda para, izin ve dava olmadığı için temaruz düşünülmez (s. 44, 47).",
+      "E": "Birincil kazanç içsel çatışmanın bilinç dışında tutulmasıdır ve işlevsel nörolojik belirti bozukluğunda belirti istemsizdir. Kendine bakteri enjekte etmek bilinçli bir üretim olduğundan bu tanı uymaz (s. 38, 47)."
+     },
+     "bilgi": [
+      136,
+      137,
+      138,
+      144
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Para yok. İzin yok."
+     },
+     "dayanak": [
+      "ozen:s44",
+      "ogrenci:A:psk-s13-b05"
+     ],
+     "s": 44
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+     "soru": "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere ve testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerin gelişimi şeklinde ortaya çıkan bir tabloda aşağıdakilerden hangisi düşünülmelidir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Konversiyon bozukluğu",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "B",
+       "text": "Hastalık kaygısı bozukluğu",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Yapay bozukluk",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "D",
+       "text": "Simülasyon",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Somatik belirti bozukluğu",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "C"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 68
+}

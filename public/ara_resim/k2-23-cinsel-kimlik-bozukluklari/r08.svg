@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Her parafili bozukluk değildir: iki koşul, sekiz tür</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Sıkıntı ya da başkasına zarar varsa parafilik bozukluk · slayt 37–38</text>
+<rect x="30" y="95" width="560" height="640" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Karar akışı</text>
+<rect x="130" y="140" width="360" height="70" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="310.0" y="170.66666666666666" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">Parafili</text>
+<text x="310.0" y="188.66666666666666" font-size="14" fill="#ea580c" text-anchor="middle">alışılmadık nesne, eylem ya da duruma yoğun, süreğen cinsel ilgi</text>
+<line x1="310" y1="210" x2="310" y2="250" stroke="#64748b" stroke-width="3" marker-end="url(#okg)"/>
+<path d="M310 250 L470 315 L310 380 L150 315 Z" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="310" y="305" font-size="13" fill="#b91c1c" text-anchor="middle">Kişide belirgin sıkıntı</text>
+<text x="310" y="323" font-size="13" fill="#b91c1c" text-anchor="middle">ya da işlev bozukluğu var mı?</text>
+<line x1="310" y1="380" x2="310" y2="420" stroke="#64748b" stroke-width="3" marker-end="url(#okg)"/>
+<text x="330" y="405" font-size="12" fill="#64748b" text-anchor="start">hayır</text>
+<path d="M310 420 L470 485 L310 550 L150 485 Z" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="310" y="475" font-size="13" fill="#b91c1c" text-anchor="middle">Başkasına zarar ya da zarar riski,</text>
+<text x="310" y="493" font-size="13" fill="#b91c1c" text-anchor="middle">rızası olmayan kişiye eylem var mı?</text>
+<path d="M470 315 C 530 330, 540 560, 500 600" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="540" y="450" font-size="12" fill="#b91c1c" text-anchor="start">evet</text>
+<path d="M470 485 C 510 520, 510 570, 500 600" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<rect x="330" y="600" width="240" height="70" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="450.0" y="630.6666666666666" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">Parafilik bozukluk</text>
+<text x="450.0" y="648.6666666666666" font-size="14" fill="#b91c1c" text-anchor="middle">en az 6 ay; tedavi hedefi kontrol</text>
+<path d="M150 485 C 100 520, 90 580, 110 600" stroke="#15803d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)"/>
+<text x="70" y="560" font-size="12" fill="#15803d" text-anchor="start">hayır</text>
+<rect x="50" y="600" width="250" height="70" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="175.0" y="630.6666666666666" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">Yalnız parafili</text>
+<text x="175.0" y="648.6666666666666" font-size="14" fill="#15803d" text-anchor="middle">tanı değil; davranış çeşitlemesi</text>
+<text x="310" y="710" font-size="12" fill="#0f172a" text-anchor="middle" font-style="italic">Cinsiyet hoşnutsuzluğundaki gibi: ilgi değil, sıkıntı ya da zarar tanıyı belirler</text>
+<rect x="620" y="95" width="550" height="640" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="127" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Sekiz tür: uyarılmanın kaynağı</text>
+<rect x="640" y="150" width="510" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="177" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="182" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">1</text>
+<text x="690" y="172" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Röntgencilik (voyörizm)</text>
+<text x="690" y="194" font-size="12" fill="#334155" text-anchor="start">habersiz kişiyi gizlice izlemek</text>
+<text x="1135" y="182" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">izler</text>
+<rect x="640" y="216" width="510" height="54" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="243" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="248" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">2</text>
+<text x="690" y="238" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Teşhircilik</text>
+<text x="690" y="260" font-size="12" fill="#334155" text-anchor="start">organlarını beklemeyen yabancıya göstermek</text>
+<text x="1135" y="248" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">gösterir</text>
+<rect x="640" y="282" width="510" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="309" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="314" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">3</text>
+<text x="690" y="304" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Sürtünmecilik (frotörizm)</text>
+<text x="690" y="326" font-size="12" fill="#334155" text-anchor="start">rızası olmayan kişiye dokunmak, sürtünmek</text>
+<text x="1135" y="314" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">dokunur</text>
+<rect x="640" y="348" width="510" height="54" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="375" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="380" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">4</text>
+<text x="690" y="370" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Cinsel mazoşizm</text>
+<text x="690" y="392" font-size="12" fill="#334155" text-anchor="start">aşağılanmak, dövülmek, acı çekmek</text>
+<text x="1135" y="380" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">acıyı alır</text>
+<rect x="640" y="414" width="510" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="441" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="446" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">5</text>
+<text x="690" y="436" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Cinsel sadizm</text>
+<text x="690" y="458" font-size="12" fill="#334155" text-anchor="start">başkasının bedensel ya da ruhsal acısı</text>
+<text x="1135" y="446" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">acıyı verir</text>
+<rect x="640" y="480" width="510" height="54" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="507" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="512" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">6</text>
+<text x="690" y="502" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Pedofili</text>
+<text x="690" y="524" font-size="12" fill="#334155" text-anchor="start">ergenlik öncesi çocuk; kişi 16 yaş ve üstü, 5 yaş büyük</text>
+<text x="1135" y="512" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">çocuk</text>
+<rect x="640" y="546" width="510" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="573" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="578" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">7</text>
+<text x="690" y="568" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Fetişizm</text>
+<text x="690" y="590" font-size="12" fill="#334155" text-anchor="start">cansız nesne ya da genital olmayan beden bölümü</text>
+<text x="1135" y="578" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">nesne</text>
+<rect x="640" y="612" width="510" height="54" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="665" cy="639" r="12" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<text x="665" y="644" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">8</text>
+<text x="690" y="634" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Karşıt giyim (transvestik)</text>
+<text x="690" y="656" font-size="12" fill="#334155" text-anchor="start">diğer cinsiyetin giysilerini giymek</text>
+<text x="1135" y="644" font-size="12" fill="#ea580c" text-anchor="end" font-style="italic">giysi</text>
+<text x="895" y="700" font-size="13" fill="#b91c1c" text-anchor="middle">Çiftler: röntgenci izler, teşhirci gösterir; mazoşist çeker, sadist çektirir</text>
+<text x="895" y="722" font-size="12" fill="#64748b" text-anchor="middle">Diğer: zoofili, nekrofili, ürofili, koprofili, klizmafili</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 37 (temel ayrım, ölçüt), 38 (türler), 40 (tedavi hedefi)</text>
+</svg>

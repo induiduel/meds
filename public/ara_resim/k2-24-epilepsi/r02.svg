@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Fokal nöbet: odaktan başlar, üç aşamada değerlendirilir, iki yana yayılabilir</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">ILAE 2017 fokal başlangıç · slayt 10–13</text>
+<rect x="30" y="95" width="560" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Tek hemisferde odak → yayılım</text>
+<path d="M95 290 C80 190 150 130 190 140 C230 130 300 190 285 290 C270 360 110 360 95 290 Z" stroke="#1d4ed8" stroke-width="3" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130 200 C160 230 220 170 250 210" stroke="#1d4ed8" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 270 C170 300 210 240 260 280" stroke="#1d4ed8" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="190" y="388" font-size="14" fill="#1d4ed8" text-anchor="middle">sol hemisfer</text>
+<path d="M325 290 C310 190 380 130 420 140 C460 130 530 190 515 290 C500 360 340 360 325 290 Z" stroke="#1d4ed8" stroke-width="3" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360 200 C390 230 450 170 480 210" stroke="#1d4ed8" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350 270 C400 300 440 240 490 280" stroke="#1d4ed8" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="420" y="388" font-size="14" fill="#1d4ed8" text-anchor="middle">sağ hemisfer</text>
+<line x1="305" y1="135" x2="305" y2="360" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 4"/>
+<circle cx="160" cy="235" r="16" fill="#fecaca" stroke="#b91c1c" stroke-width="3"/>
+<circle cx="160" cy="235" r="6" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<line x1="160" y1="235" x2="52" y2="165" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="160" cy="235" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="58" y="170" font-size="14" fill="#b91c1c" text-anchor="start">epileptojenik odak</text>
+<path d="M176 235 C230 200 280 220 320 235" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)" stroke-dasharray="6 4"/>
+<path d="M320 235 C370 250 420 230 470 235" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)" stroke-dasharray="6 4"/>
+<text x="300" y="415" font-size="13.5" fill="#b91c1c" text-anchor="middle" font-weight="bold">3. aşama: fokal başlayan bilateral tonik-klonik nöbet</text>
+<text x="300" y="434" font-size="13" fill="#475569" text-anchor="middle" font-style="italic">(şemanın alt kutusu: tek hemisferden iki yana yayılım)</text>
+<text x="50" y="468" font-size="13" fill="#1e293b" text-anchor="start">Fokal nöbet tek hemisferde, sınırlı ya da geniş bir bölgeden kaynaklanır;</text>
+<text x="50" y="485" font-size="13" fill="#1e293b" text-anchor="start">belirti odağın görevine göre değişir (el bölgesi → sıçrama, koku bölgesi → koku).</text>
+<text x="50" y="502" font-size="13" fill="#1e293b" text-anchor="start">Boşalım iki yana yayılırsa bilateral tonik-klonik nöbete dönüşür.</text>
+<rect x="620" y="95" width="550" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Üç aşamalı değerlendirme</text>
+<rect x="645" y="140" width="280" height="70" rx="12" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5"/>
+<text x="785" y="168" font-size="15" fill="#1d4ed8" text-anchor="middle" font-weight="bold">1. aşama · FARKINDALIK</text>
+<text x="785" y="192" font-size="14" fill="#0f172a" text-anchor="middle">korunmuş  /  bozulmuş</text>
+<path d="M785 210 C785 228 785 235 785 252" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<rect x="645" y="255" width="280" height="70" rx="12" fill="#ffffff" stroke="#ea580c" stroke-width="2.5"/>
+<text x="785" y="283" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">2. aşama · ANA BELİRTİ</text>
+<text x="785" y="307" font-size="14" fill="#0f172a" text-anchor="middle">motor  /  nonmotor</text>
+<path d="M785 325 C785 343 785 350 785 367" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<rect x="645" y="370" width="280" height="70" rx="12" fill="#ffffff" stroke="#b91c1c" stroke-width="2.5"/>
+<text x="785" y="398" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">3. aşama · YAYILIM</text>
+<text x="785" y="422" font-size="14" fill="#0f172a" text-anchor="middle">fokal → bilateral tonik-klonik</text>
+<text x="940" y="165" font-size="13" fill="#1d4ed8" text-anchor="start">hasta nöbeti anlatabilir</text>
+<text x="940" y="182" font-size="13" fill="#1d4ed8" text-anchor="start">mi, hatırlar mı?</text>
+<text x="940" y="262" font-size="13" fill="#ea580c" text-anchor="start">motor: otomatizma, atonik,</text>
+<text x="940" y="277" font-size="13" fill="#ea580c" text-anchor="start">tonik, klonik, miyoklonik,</text>
+<text x="940" y="292" font-size="13" fill="#ea580c" text-anchor="start">spazm, hiperkinetik (7)</text>
+<text x="940" y="307" font-size="13" fill="#ea580c" text-anchor="start">nonmotor: otonom, duraklama,</text>
+<text x="940" y="322" font-size="13" fill="#ea580c" text-anchor="start">kognitif, emosyonel, duysal (5)</text>
+<text x="940" y="390" font-size="13" fill="#b91c1c" text-anchor="start">motor + nonmotor aynı</text>
+<text x="940" y="407" font-size="13" fill="#b91c1c" text-anchor="start">aşamanın iki koludur;</text>
+<text x="940" y="424" font-size="13" fill="#b91c1c" text-anchor="start">üçüncü aşama değil</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 10 (ILAE 2017 şeması), 11–13 (fokal başlangıçlı nöbetler) · mavi = normal beyin, kırmızı = epileptik boşalım, turuncu = belirti tipi</text>
+</svg>

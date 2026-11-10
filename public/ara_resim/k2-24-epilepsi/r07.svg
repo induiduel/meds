@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Üç atak, üç hasta: senkop, epilepsi ve psikojen atağı ayıran ipuçları</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Ayırıcı tanı tablosunun ayırt ettiren satırları · slayt 45</text>
+<rect x="30" y="95" width="365" height="430" rx="16" fill="#f1f5f9" stroke="#64748b" stroke-width="2.5"/>
+<text x="212" y="128" font-size="18" fill="#64748b" text-anchor="middle" font-weight="bold">SENKOP</text>
+<circle cx="130.0" cy="150" r="9.0" fill="#fde7d6" stroke="#64748b" stroke-width="2"/>
+<path d="M118.0 207.0 C115.6 174.0 122.8 160.8 130 160.8 C137.2 160.8 144.4 174.0 142.0 207.0 Z" stroke="#64748b" stroke-width="2" fill="#64748b" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120.4 166.8 L111.8 190.5 L100.4 210.2" stroke="#64748b" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M139.6 166.8 L148.2 190.5 L152.2 212.9" stroke="#64748b" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M124.6 207.0 L122.8 240.0" stroke="#64748b" stroke-width="4.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M135.4 207.0 L137.2 240.0" stroke="#64748b" stroke-width="4.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 190 C200 200 230 215 260 235" stroke="#64748b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="280" y="232" font-size="13" fill="#64748b" text-anchor="start">ayakta → yere</text>
+<path d="M230.0 178.1 Q233.0 178.1 236.0 182.2 Q239.0 182.2 242.0 182.6 Q245.0 182.6 248.0 177.0 Q251.0 177.0 254.0 177.9 Q257.0 177.9 260.0 179.1 Q263.0 179.1 266.0 181.3 Q269.0 181.3 272.0 179.9 Q275.0 179.9 278.0 176.7 Q281.0 176.7 284.0 178.7 Q287.0 178.7 290.0 180.4 Q293.0 180.4 296.0 183.0 Q299.0 183.0 302.0 180.9 Q305.0 180.9 308.0 178.2 Q311.0 178.2 314.0 180.0 Q317.0 180.0 320.0 183.0 Q323.0 183.0 326.0 181.1 Q329.0 181.1 332.0 180.2 Q335.0 180.2 338.0 176.8 Q341.0 176.8 344.0 178.3 Q347.0 178.3 350.0 182.8 Q353.0 182.8 356.0 183.1 Q359.0 183.1 362.0 179.6 Q365.0 179.6 368.0 175.8 " stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375" y="170" font-size="12.5" fill="#64748b" text-anchor="end">EEG</text>
+<circle cx="58" cy="268" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="272" font-size="13" fill="#1e293b" text-anchor="start">ayakta, yavaş başlar (presenkop)</text>
+<circle cx="58" cy="295" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="299" font-size="13" fill="#1e293b" text-anchor="start">beyaz, terli</text>
+<circle cx="58" cy="322" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="326" font-size="13" fill="#1e293b" text-anchor="start">bilinç kaybı saniyeler, hızlı düzelme</text>
+<circle cx="58" cy="349" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="353" font-size="13" fill="#1e293b" text-anchor="start">postiktal konfüzyon yok</text>
+<circle cx="58" cy="376" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="380" font-size="13" fill="#1e293b" text-anchor="start">dil ısırma yok, idrar kaçırma seyrek</text>
+<circle cx="58" cy="403" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="407" font-size="13" fill="#1e293b" text-anchor="start">iktal EEG yok</text>
+<circle cx="58" cy="430" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="434" font-size="13" fill="#1e293b" text-anchor="start">artıran: ayakta uzun kalma, sıcak, açlık</text>
+<circle cx="58" cy="457" r="4" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="70" y="461" font-size="13" fill="#1e293b" text-anchor="start">kalp hastalığı, presenkop öyküsü</text>
+<text x="212" y="505" font-size="13" fill="#64748b" text-anchor="middle" font-style="italic">en sık valvüler neden aort stenozu (slayt 44)</text>
+<rect x="415" y="95" width="365" height="430" rx="16" fill="#fef2f2" stroke="#b91c1c" stroke-width="2.5"/>
+<text x="597" y="128" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="bold">EPİLEPSİ</text>
+<path d="M455 230 C475 195 555 190 575 230" stroke="#b91c1c" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="585" cy="222" r="13" fill="#fde7d6" stroke="#b91c1c" stroke-width="2"/>
+<path d="M475 230 L481 208 L487 232 L493 210 L499 230" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="515" y="160" font-size="13" fill="#b91c1c" text-anchor="middle">tonik kasılma, morarma</text>
+<path d="M615.0 180.0 Q617.5 180.0 620.0 182.2 Q622.5 182.2 625.0 182.7 Q627.5 182.7 630.0 161.8 Q632.5 161.8 635.0 189.8 Q637.5 189.8 640.0 177.3 Q642.5 177.3 645.0 177.8 Q647.5 177.8 650.0 180.0 Q652.5 180.0 655.0 182.2 Q657.5 182.2 660.0 182.7 Q662.5 182.7 665.0 161.8 Q667.5 161.8 670.0 189.8 Q672.5 189.8 675.0 177.3 Q677.5 177.3 680.0 177.9 Q682.5 177.9 685.0 180.1 Q687.5 180.1 690.0 182.3 Q692.5 182.3 695.0 182.7 Q697.5 182.7 700.0 161.8 Q702.5 161.8 705.0 189.8 Q707.5 189.8 710.0 177.2 Q712.5 177.2 715.0 177.9 Q717.5 177.9 720.0 180.1 Q722.5 180.1 725.0 182.3 Q727.5 182.3 730.0 182.7 Q732.5 182.7 735.0 161.8 Q737.5 161.8 740.0 189.8 Q742.5 189.8 745.0 177.2 Q747.5 177.2 750.0 177.9 Q752.5 177.9 755.0 180.2 " stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="760" y="170" font-size="12.5" fill="#b91c1c" text-anchor="end">EEG: dikenler</text>
+<circle cx="443" cy="268" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="272" font-size="13" fill="#1e293b" text-anchor="start">her postür, ani ya da aura</text>
+<circle cx="443" cy="295" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="299" font-size="13" fill="#1e293b" text-anchor="start">morarma; uykuda SIK</text>
+<circle cx="443" cy="322" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="326" font-size="13" fill="#1e293b" text-anchor="start">bilinç kaybı dakikalar, yavaş düzelme</text>
+<circle cx="443" cy="349" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="353" font-size="13" fill="#1e293b" text-anchor="start">postiktal konfüzyon SIK</text>
+<circle cx="443" cy="376" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="380" font-size="13" fill="#1e293b" text-anchor="start">dil YAN tarafı, idrar kaçırma sık</text>
+<circle cx="443" cy="403" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="407" font-size="13" fill="#1e293b" text-anchor="start">iktal EEG çoğunlukla var</text>
+<circle cx="443" cy="430" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="434" font-size="13" fill="#1e293b" text-anchor="start">artıran: uykusuzluk, stres, refleks uyaran</text>
+<circle cx="443" cy="457" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="455" y="461" font-size="13" fill="#1e293b" text-anchor="start">stereotipik atak, senkron kasılma</text>
+<text x="597" y="505" font-size="13" fill="#b91c1c" text-anchor="middle" font-style="italic">10 dakikayı aşan nöbet → status epileptikus (çıkmış)</text>
+<rect x="800" y="95" width="365" height="430" rx="16" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2.5"/>
+<text x="982" y="128" font-size="18" fill="#6d28d9" text-anchor="middle" font-weight="bold">PSİKOJEN ATAK</text>
+<path d="M840 230 C860 205 890 250 915 215 C935 195 955 240 965 230" stroke="#6d28d9" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="975" cy="222" r="13" fill="#fde7d6" stroke="#6d28d9" stroke-width="2"/>
+<path d="M910 215 C915 185 925 185 930 215" stroke="#6d28d9" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<text x="900" y="160" font-size="13" fill="#6d28d9" text-anchor="middle">pelvik, asenkron hareket</text>
+<path d="M1000.0 179.6 Q1003.0 179.6 1006.0 183.8 Q1009.0 183.8 1012.0 180.5 Q1015.0 180.5 1018.0 178.9 Q1021.0 178.9 1024.0 177.6 Q1027.0 177.6 1030.0 181.5 Q1033.0 181.5 1036.0 184.3 Q1039.0 184.3 1042.0 180.0 Q1045.0 180.0 1048.0 176.3 Q1051.0 176.3 1054.0 179.5 Q1057.0 179.5 1060.0 182.9 Q1063.0 182.9 1066.0 180.9 Q1069.0 180.9 1072.0 179.3 Q1075.0 179.3 1078.0 176.2 Q1081.0 176.2 1084.0 180.4 Q1087.0 180.4 1090.0 180.8 Q1093.0 180.8 1096.0 181.4 Q1099.0 181.4 1102.0 178.3 Q1105.0 178.3 1108.0 177.0 Q1111.0 177.0 1114.0 180.0 Q1117.0 180.0 1120.0 183.6 Q1123.0 183.6 1126.0 182.8 Q1129.0 182.8 1132.0 178.9 Q1135.0 178.9 1138.0 178.0 " stroke="#6d28d9" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1145" y="170" font-size="12.5" fill="#6d28d9" text-anchor="end">EEG: normal</text>
+<circle cx="828" cy="268" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="272" font-size="13" fill="#1e293b" text-anchor="start">her postür, uyanıkken (uykuda YOK)</text>
+<circle cx="828" cy="295" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="299" font-size="13" fill="#1e293b" text-anchor="start">ağlama sık, kalabalıkta</text>
+<circle cx="828" cy="322" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="326" font-size="13" fill="#1e293b" text-anchor="start">süre yok ya da ÇOK uzun</text>
+<circle cx="828" cy="349" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="353" font-size="13" fill="#1e293b" text-anchor="start">pelvik hareket, yuvarlanma, asenkron</text>
+<circle cx="828" cy="376" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="380" font-size="13" fill="#1e293b" text-anchor="start">göz açmaya direnç, indüklenebilme</text>
+<circle cx="828" cy="403" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="407" font-size="13" fill="#1e293b" text-anchor="start">dil ucu seyrek ısırılır; iktal EEG yok</text>
+<circle cx="828" cy="430" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="434" font-size="13" fill="#1e293b" text-anchor="start">artıran: stresli olay, kötüye kullanılma</text>
+<circle cx="828" cy="457" r="4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="840" y="461" font-size="13" fill="#1e293b" text-anchor="start">fibromiyalji, somatoform tablolar</text>
+<text x="982" y="505" font-size="13" fill="#6d28d9" text-anchor="middle" font-style="italic">video-EEG ile epilepsiden ayrılır</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 45 (26 satırlık karşılaştırma tablosu) ve slayt 44 (senkop alt tipleri) · gri = senkop, kırmızı = epilepsi, mor = psikojen atak</text>
+</svg>

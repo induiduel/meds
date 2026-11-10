@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Cinsiyet kimliği dört basamakta gelişir</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Kimlik → kararlılık → sabitlik → pekişme · slayt 5</text>
+<rect x="30" y="95" width="1140" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · Yaşa göre basamaklar</text>
+<rect x="80" y="400" width="250" height="105" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<circle cx="140" cy="318.0" r="8.4" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M129.2 360.0 C126.8 336.0 134.0 327.6 140 327.6 C146.0 327.6 153.2 336.0 150.8 360.0 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M134.6 360.0 L133.4 388.8" stroke="#0f766e" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M145.4 360.0 L146.6 388.8" stroke="#0f766e" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="205" y="430" font-size="20" fill="#6d28d9" text-anchor="middle" font-weight="bold">2–3 yaş</text>
+<text x="205" y="455" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">Kimlik</text>
+<text x="205" y="480" font-size="13" fill="#1e293b" text-anchor="middle">Çocuk kendini kız ya da</text>
+<text x="205" y="498" font-size="13" fill="#1e293b" text-anchor="middle">erkek olarak tanımlar</text>
+<rect x="350" y="355" width="250" height="150" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<circle cx="410" cy="255.0" r="10.5" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M396.5 307.5 C393.5 277.5 402.5 267.0 410 267.0 C417.5 267.0 426.5 277.5 423.5 307.5 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M403.25 307.5 L401.75 343.5" stroke="#0f766e" stroke-width="5.25" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M416.75 307.5 L418.25 343.5" stroke="#0f766e" stroke-width="5.25" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="475" y="385" font-size="20" fill="#6d28d9" text-anchor="middle" font-weight="bold">3–4 yaş</text>
+<text x="475" y="410" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">Kararlılık</text>
+<text x="475" y="435" font-size="13" fill="#1e293b" text-anchor="middle">Cinsiyetin zamanla</text>
+<text x="475" y="453" font-size="13" fill="#1e293b" text-anchor="middle">değişmeyeceğini anlar</text>
+<rect x="620" y="310" width="250" height="195" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<circle cx="680" cy="192.0" r="12.6" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M663.8 255.0 C660.2 219.0 671.0 206.4 680 206.4 C689.0 206.4 699.8 219.0 696.2 255.0 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M671.9 255.0 L670.1 298.2" stroke="#0f766e" stroke-width="6.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M688.1 255.0 L689.9 298.2" stroke="#0f766e" stroke-width="6.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="745" y="340" font-size="20" fill="#6d28d9" text-anchor="middle" font-weight="bold">5–7 yaş</text>
+<text x="745" y="365" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">Sabitlik</text>
+<text x="745" y="390" font-size="13" fill="#1e293b" text-anchor="middle">Kıyafet ya da oyun değişse de</text>
+<text x="745" y="408" font-size="13" fill="#1e293b" text-anchor="middle">cinsiyetin değişmediğini anlar</text>
+<rect x="890" y="265" width="250" height="240" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<circle cx="950" cy="129.0" r="14.700000000000001" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M931.1 202.5 C926.9 160.5 939.5 145.8 950 145.8 C960.5 145.8 973.1 160.5 968.9 202.5 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M940.55 202.5 L938.45 252.9" stroke="#ea580c" stroke-width="7.3500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M959.45 202.5 L961.55 252.9" stroke="#ea580c" stroke-width="7.3500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1015" y="295" font-size="20" fill="#6d28d9" text-anchor="middle" font-weight="bold">Ergenlik</text>
+<text x="1015" y="320" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">Pekişme</text>
+<text x="1015" y="345" font-size="13" fill="#1e293b" text-anchor="middle">İkincil cinsiyet özellikleri gelişir;</text>
+<text x="1015" y="363" font-size="13" fill="#1e293b" text-anchor="middle">cinsel yönelim belirginleşir</text>
+<path d="M80 280 C 250 220, 500 170, 860 125" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<text x="330" y="150" font-size="13" fill="#6d28d9" text-anchor="middle" font-style="italic">Zaman ilerledikçe kimlik önce oluşur,</text>
+<text x="330" y="170" font-size="13" fill="#6d28d9" text-anchor="middle" font-style="italic">sonra değişmezliği anlaşılır, en son pekişir</text>
+<rect x="30" y="545" width="1140" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="577" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · İki sayı, bir uyum</text>
+<rect x="60" y="595" width="320" height="100" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="220.0" y="631.0" font-size="15" fill="#6d28d9" text-anchor="middle" font-weight="bold">2–3 yaş</text>
+<text x="220.0" y="650.0" font-size="15" fill="#6d28d9" text-anchor="middle">kimlik büyük ölçüde oluşur</text>
+<text x="220.0" y="669.0" font-size="15" fill="#6d28d9" text-anchor="middle">(sınavda doğru önerme)</text>
+<rect x="420" y="595" width="320" height="100" rx="10" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<text x="580.0" y="631.0" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="bold">Çoğu kişide</text>
+<text x="580.0" y="650.0" font-size="15" fill="#0f766e" text-anchor="middle">doğumda atanan cinsiyetle</text>
+<text x="580.0" y="669.0" font-size="15" fill="#0f766e" text-anchor="middle">uyumludur</text>
+<rect x="780" y="595" width="360" height="100" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="960.0" y="631.6666666666666" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">Biyolojik etkenler + aile + toplum</text>
+<text x="960.0" y="649.6666666666666" font-size="14" fill="#0f172a" text-anchor="middle">birlikte rol oynar;</text>
+<text x="960.0" y="667.6666666666666" font-size="14" fill="#0f172a" text-anchor="middle">tek belirleyici yoktur</text>
+<line x1="380" y1="645" x2="420" y2="645" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<line x1="740" y1="645" x2="780" y2="645" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<text x="600" y="720" font-size="13" fill="#0f172a" text-anchor="middle">Kararlılık zamana karşı, sabitlik dış görünüşe karşı değişmezliktir</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 5 · geçen yılın öğrencileri 2–3 yaş sayısını işaretlemiştir</text>
+</svg>

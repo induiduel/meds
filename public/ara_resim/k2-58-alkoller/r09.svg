@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oke" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Metanol: zehir metabolitleridir, tedavi ilk basamağı kapatır</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Formaldehid ve formatın oluşumu, hedef organlar ve üç özgül tedavi · slayt 45–50</text>
+<rect x="30" y="95" width="420" height="610" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">A · Toksik metabolit zinciri</text>
+<rect x="90" y="140" width="300" height="50" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="240.0" y="161.33333333333334" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="bold">METANOL</text>
+<text x="240.0" y="177.33333333333334" font-size="13" fill="#2563eb" text-anchor="middle">kendisi görece az toksik</text>
+<path d="M240 190 C240 205 240 215 240 232" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<text x="262" y="203" font-size="13" fill="#6d28d9" text-anchor="start" font-weight="bold">alkol dehidrogenaz</text>
+<rect x="90" y="235" width="300" height="50" rx="10" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="240.0" y="256.3333333333333" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">FORMALDEHİD</text>
+<text x="240.0" y="272.3333333333333" font-size="13" fill="#ea580c" text-anchor="middle">toksik</text>
+<path d="M240 285 C240 300 240 310 240 327" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<text x="255" y="310" font-size="13" fill="#6d28d9" text-anchor="start" font-weight="bold">aldehid dehidrogenaz</text>
+<rect x="90" y="330" width="300" height="50" rx="10" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<text x="240.0" y="351.3333333333333" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">FORMAT (formik asit)</text>
+<text x="240.0" y="367.3333333333333" font-size="13" fill="#ea580c" text-anchor="middle">toksik → asidoz, göz</text>
+<path d="M240 380 C240 400 240 410 240 427" stroke="#15803d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)"/>
+<text x="255" y="405" font-size="13" fill="#15803d" text-anchor="start" font-weight="bold">folat-bağımlı yolak</text>
+<rect x="90" y="430" width="300" height="46" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="240.0" y="449.3333333333333" font-size="13" fill="#15803d" text-anchor="middle" font-weight="bold">CO2 + H2O</text>
+<text x="240.0" y="465.3333333333333" font-size="13" fill="#15803d" text-anchor="middle">zararsız</text>
+<rect x="60" y="520" width="150" height="44" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="135.0" y="546.3333333333334" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">FOMEPİZOL</text>
+<rect x="230" y="520" width="150" height="44" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="305.0" y="546.3333333333334" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">ETANOL (iv)</text>
+<path d="M135 520 C100 520 70 500 70 460 L70 240 C70 222 85 212 110 212 L226 212" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M305 520 C340 520 410 500 410 460 L410 240 C410 222 395 212 380 212 L254 212" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="240" cy="212" r="11" fill="#fff" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="234" y1="212" x2="246" y2="212" stroke="#b91c1c" stroke-width="3"/>
+<text x="60" y="590" font-size="12" fill="#b91c1c" text-anchor="start">Fomepizol ADH inhibitörü; etanolün ADH'ye ilgisi</text>
+<text x="60" y="607" font-size="12" fill="#b91c1c" text-anchor="start">metanolden fazla → aynı kapıyı tutar.</text>
+<text x="60" y="624" font-size="12" fill="#b91c1c" text-anchor="start">Dönüşüm yavaş: belirtiler 6–30 saat gecikir.</text>
+<text x="240" y="665" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">zehir ilk okun altında doğar → ilk oku kapat</text>
+<rect x="480" y="95" width="330" height="610" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="500" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Klinik tablo</text>
+<path d="M520 200 C560 160 640 160 680 200 C640 240 560 240 520 200 Z" stroke="#0f172a" stroke-width="2.5" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="600" cy="200" r="18" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="600" cy="200" r="8" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<circle cx="670.0" cy="200.0" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="681.9406863140936" cy="219.57344903500535" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="669.6203164463144" cy="235.24971093323677" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="615.330468096513" cy="243.90755110219965" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="579.3246093829291" cy="243.82314338951878" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="529.6445542550532" cy="235.01329385995646" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="536.7149500588057" cy="219.23209461052232" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="509.00321607910786" cy="199.62167386847833" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="499.5630573705755" cy="180.08658005173163" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="556.9498336432098" cy="164.5163635508212" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="580.8175822517991" cy="156.01114470507065" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="626.3627216108986" cy="156.26436187691806" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="644.4285013159845" cy="165.22559805998057" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<circle cx="682.5946283979556" cy="181.11061919720635" r="2.5" fill="#fff" stroke="#64748b" stroke-width="1"/>
+<text x="600" y="265" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">"kar fırtınası içinde kalmak"</text>
+<text x="600" y="283" font-size="11" fill="#ea580c" text-anchor="middle">en karakteristik belirti; körlüğe ilerleyebilir</text>
+<text x="600" y="298" font-size="11" fill="#ea580c" text-anchor="middle">retina bulgusu genellikle geç</text>
+<rect x="505" y="310" width="280" height="50" rx="10" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<text x="645.0" y="331.3333333333333" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="bold">anyon açıklı metabolik asidoz</text>
+<text x="645.0" y="347.3333333333333" font-size="13" fill="#ea580c" text-anchor="middle">(format birikimi)</text>
+<text x="505" y="395" font-size="12" fill="#1e293b" text-anchor="start">Erken: nonspesifik — sarhoşluk, gastrit;</text>
+<text x="505" y="412" font-size="12" fill="#1e293b" text-anchor="start">ciddi olguda nefes ve idrarda</text>
+<text x="505" y="429" font-size="12" fill="#1e293b" text-anchor="start">formaldehid kokusu.</text>
+<text x="505" y="465" font-size="12" fill="#b91c1c" text-anchor="start">Kötü prognoz: bradikardi, uzamış koma,</text>
+<text x="505" y="482" font-size="12" fill="#b91c1c" text-anchor="start">nöbet, dirençli asidoz;</text>
+<text x="505" y="499" font-size="12" fill="#b91c1c" text-anchor="start">ölüm = ani solunum durması.</text>
+<rect x="505" y="540" width="280" height="60" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="645.0" y="566.5" font-size="12" fill="#0f172a" text-anchor="middle" font-weight="bold">serum metanol > 20 mg/dL → tedavi</text>
+<text x="645.0" y="581.5" font-size="12" fill="#0f172a" text-anchor="middle">> 50 mg/dL → hemodiyaliz</text>
+<text x="645" y="640" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">önce her zaman solunum desteği</text>
+<rect x="840" y="95" width="330" height="610" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="860" y="127" font-size="20" fill="#15803d" text-anchor="start" font-weight="bold">C · Üç özgül tedavi</text>
+<rect x="860" y="150" width="290" height="80" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="1005.0" y="179.0" font-size="12" fill="#b91c1c" text-anchor="middle" font-weight="bold">1 · Toksik dönüşümü ENGELLE</text>
+<text x="1005.0" y="194.0" font-size="12" fill="#b91c1c" text-anchor="middle">fomepizol (15 → 10 → 15 mg/kg, 12 saatte bir)</text>
+<text x="1005.0" y="209.0" font-size="12" fill="#b91c1c" text-anchor="middle">ya da iv etanol</text>
+<rect x="860" y="255" width="290" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="1005.0" y="284.0" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="bold">2 · UZAKLAŞTIR</text>
+<text x="1005.0" y="299.0" font-size="12" fill="#2563eb" text-anchor="middle">hemodiyaliz: metanol + format</text>
+<text x="1005.0" y="314.0" font-size="12" fill="#2563eb" text-anchor="middle">kandan temizlenir</text>
+<rect x="860" y="360" width="290" height="80" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="1005.0" y="396.5" font-size="12" fill="#15803d" text-anchor="middle" font-weight="bold">3 · ASİDOZU DENGELE</text>
+<text x="1005.0" y="411.5" font-size="12" fill="#15803d" text-anchor="middle">alkalinizasyon: bikarbonat</text>
+<rect x="860" y="465" width="290" height="70" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="1005.0" y="496.5" font-size="12" fill="#15803d" text-anchor="middle" font-weight="bold">+ folinik / folik asit</text>
+<text x="1005.0" y="511.5" font-size="12" fill="#15803d" text-anchor="middle">format → CO2 yolunu hızlandırır</text>
+<text x="860" y="575" font-size="12" fill="#475569" text-anchor="start">Fomepizol 48 saat sonra dozu artırılır:</text>
+<text x="860" y="592" font-size="12" fill="#475569" text-anchor="start">P450 ile kendi yıkımını indükler.</text>
+<text x="860" y="609" font-size="12" fill="#475569" text-anchor="start">Yan etki: infüzyon yerinde yanma,</text>
+<text x="860" y="626" font-size="12" fill="#475569" text-anchor="start">baş ağrısı, bulantı, baş dönmesi.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 45–50 (Şekil 23-3 tedaviyle genişletildi) · mavi metanol · turuncu toksik metabolit · mor enzim · kırmızı blokaj · yeşil zararsız ürün/tedavi</text>
+</svg>

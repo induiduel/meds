@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oke" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Alkol–ilaç etkileşimi: akut alkol yıkımı yavaşlatır, kronik alkol hızlandırır</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Farmakokinetik iki zıt yön, asetaminofen örneği ve farmakodinamik aditif depresyon · slayt 31–32</text>
+<rect x="30" y="95" width="550" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · AKUT alkol → enzim inhibisyonu</text>
+<path d="M80 230 C60 170 160 140 220 160 C300 150 340 190 330 240 C320 300 250 320 180 300 C120 290 90 270 80 230 Z" stroke="#92400e" stroke-width="2.5" fill="#fef3c7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="205" y="235" font-size="13" fill="#92400e" text-anchor="middle" font-weight="bold">karaciğer</text>
+<text x="205" y="255" font-size="11" fill="#b91c1c" text-anchor="middle">enzim aktivitesi ↓, kan akımı ↓</text>
+<circle cx="110" cy="190" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="150" cy="175" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="250" cy="180" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="170" y="150" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="bold">etanol (akut)</text>
+<rect x="370" y="150" width="190" height="44" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="465.0" y="176.33333333333334" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">diğer ilaç</text>
+<path d="M465 194 C465 220 440 240 350 250" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<circle cx="395" cy="245" r="11" fill="#fff" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="389" y1="245" x2="401" y2="245" stroke="#b91c1c" stroke-width="3"/>
+<rect x="370" y="290" width="190" height="70" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="465.0" y="321.5" font-size="12" fill="#b91c1c" text-anchor="middle" font-weight="bold">ilacın yıkımı YAVAŞLAR</text>
+<text x="465.0" y="336.5" font-size="12" fill="#b91c1c" text-anchor="middle">kan düzeyi ↑ → etki/toksisite ↑</text>
+<text x="60" y="380" font-size="12" fill="#b91c1c" text-anchor="start" font-weight="bold">Etkilenen ilaçlar: fenotiazinler, trisiklik antidepresanlar, sedatif-hipnotikler</text>
+<rect x="620" y="95" width="550" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">B · KRONİK alkol → enzim indüksiyonu (MEOS)</text>
+<path d="M670 230 C650 170 750 140 810 160 C890 150 930 190 920 240 C910 300 840 320 770 300 C710 290 680 270 670 230 Z" stroke="#92400e" stroke-width="2.5" fill="#fef3c7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="795" y="235" font-size="13" fill="#92400e" text-anchor="middle" font-weight="bold">karaciğer</text>
+<text x="795" y="255" font-size="11" fill="#6d28d9" text-anchor="middle">P450 (CYP2E1) çoğalmış</text>
+<circle cx="700" cy="190" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="740" cy="175" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="780" cy="185" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="820" cy="172" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="860" cy="188" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="780" y="150" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="bold">etanol (günde ≥3 içki, uzun süre)</text>
+<rect x="960" y="150" width="190" height="44" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="1055.0" y="176.33333333333334" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">asetaminofen</text>
+<path d="M1055 194 C1055 220 1030 240 940 250" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<path d="M1055 194 C1055 220 1030 240 940 250" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)" opacity="0.4"/>
+<rect x="960" y="290" width="190" height="70" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="1055.0" y="321.5" font-size="12" fill="#b91c1c" text-anchor="middle" font-weight="bold">reaktif hepatotoksik</text>
+<text x="1055.0" y="336.5" font-size="12" fill="#b91c1c" text-anchor="middle">metabolit ↑ → hepatotoksisite</text>
+<text x="650" y="380" font-size="12" fill="#6d28d9" text-anchor="start" font-weight="bold">Karaciğer hasarı olmadan da diğer ilaçların biyotransformasyonu artar.</text>
+<rect x="30" y="420" width="1140" height="280" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="452" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">C · FARMAKODİNAMİK: aynı sistemde etkiler toplanır</text>
+<rect x="90" y="530" width="420" height="26" fill="url(#zar)" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="99" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="99" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="117" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="117" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="135" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="135" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="153" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="153" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="171" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="171" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="189" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="189" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="207" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="207" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="225" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="225" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="243" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="243" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="261" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="261" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="279" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="279" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="297" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="297" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="315" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="315" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="333" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="333" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="351" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="351" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="369" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="369" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="387" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="387" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="405" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="405" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="423" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="423" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="441" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="441" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="459" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="459" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="477" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="477" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="495" cy="535" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="495" cy="551" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<path d="M260 518 L260 570 L272.0 570 C268.0 544.0 268.0 544.0 272.0 518 Z" stroke="#0f766e" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M308 518 L308 570 L296.0 570 C300.0 544.0 300.0 544.0 296.0 518 Z" stroke="#0f766e" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="284" y="510" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="bold">GABA-A</text>
+<circle cx="200" cy="490" r="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="200" y="470" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="bold">etanol</text>
+<circle cx="360" cy="490" r="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<text x="360" y="470" font-size="12" fill="#6d28d9" text-anchor="middle" font-weight="bold">sedatif-hipnotik</text>
+<path d="M210 495 C230 505 245 510 258 520" stroke="#2563eb" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<path d="M350 495 C330 505 315 510 302 520" stroke="#6d28d9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<line x1="284" y1="580" x2="284" y2="615" stroke="#0f766e" stroke-width="3" marker-end="url(#oke)"/>
+<text x="284" y="640" font-size="14" fill="#0f766e" text-anchor="middle" font-weight="bold">ADİTİF MSS DEPRESYONU (en önemli etkileşim)</text>
+<text x="560" y="490" font-size="13" fill="#1e293b" text-anchor="start" font-weight="bold">Alkol ayrıca sedatif olmayan ilaçların etkisini de güçlendirir:</text>
+<text x="560" y="511" font-size="13" fill="#1e293b" text-anchor="start">• vazodilatörler (etanolün kendisi vazodilatör)</text>
+<text x="560" y="532" font-size="13" fill="#1e293b" text-anchor="start">• oral hipoglisemikler (etanol glukoneogenezi bozar → hipoglisemi)</text>
+<rect x="560" y="575" width="580" height="100" rx="10" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+<text x="850.0" y="613.3333333333334" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="bold">Kural</text>
+<text x="850.0" y="629.3333333333334" font-size="13" fill="#0f172a" text-anchor="middle">AKUT → inhibisyon → ilaç düzeyi ↑</text>
+<text x="850.0" y="645.3333333333334" font-size="13" fill="#0f172a" text-anchor="middle">KRONİK → indüksiyon → ilaç düzeyi ↓ (asetaminofende toksik ürün ↑)</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 31–32 · mavi etanol · kırmızı inhibisyon/toksisite · mor P450 indüksiyonu · teal GABA-A ortak hedef</text>
+</svg>

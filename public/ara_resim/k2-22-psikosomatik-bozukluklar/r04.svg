@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">3P modeli: yatkınlaştırıcı, ortaya çıkarıcı ve sürdürücü etkenler</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Öyküyü üç soruyla düzenlemek · slayt 30</text>
+<path d="M60 300 C300 290 600 310 1140 300" stroke="#0f172a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="1120" y="285" font-size="15" fill="#64748b" text-anchor="end">zaman</text>
+<circle cx="230" cy="300" r="18" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="230" y="250" font-size="20" fill="#6d28d9" text-anchor="middle" font-weight="bold">Yatkınlaştırıcı</text>
+<text x="230" y="272" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">Kişiyi ne savunmasız kılıyor?</text>
+<circle cx="600" cy="300" r="18" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<text x="600" y="250" font-size="20" fill="#ea580c" text-anchor="middle" font-weight="bold">Ortaya çıkarıcı</text>
+<text x="600" y="272" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">Belirtiyi ne başlattı?</text>
+<circle cx="970" cy="300" r="18" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="970" y="250" font-size="20" fill="#b91c1c" text-anchor="middle" font-weight="bold">Sürdürücü</text>
+<text x="970" y="272" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">Neden geçmiyor?</text>
+<rect x="40" y="330" width="360" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="60" y="362" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">Yatkınlaştırıcı etkenler</text>
+<text x="60" y="395" font-size="15" fill="#1e293b" text-anchor="start">• Çocukluk çağı travması ve ihmali</text>
+<text x="60" y="419" font-size="15" fill="#1e293b" text-anchor="start">  (cinsel istismar dahil)</text>
+<text x="60" y="443" font-size="15" fill="#1e293b" text-anchor="start">• Somatizasyon eğilimi, iletişim güçlüğü</text>
+<text x="60" y="467" font-size="15" fill="#1e293b" text-anchor="start">• Altta yatan nörolojik hastalık</text>
+<rect x="420" y="330" width="360" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="440" y="362" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">Ortaya çıkarıcı etkenler</text>
+<text x="440" y="395" font-size="15" fill="#1e293b" text-anchor="start">• Yaşam olayları, travmatik deneyim</text>
+<text x="440" y="419" font-size="15" fill="#1e293b" text-anchor="start">• Fiziksel yaralanma, ameliyat</text>
+<text x="440" y="443" font-size="15" fill="#1e293b" text-anchor="start">• Panik atağı, migren, bayılma</text>
+<rect x="800" y="330" width="370" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="820" y="362" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">Sürdürücü etkenler</text>
+<text x="820" y="395" font-size="15" fill="#1e293b" text-anchor="start">• Belirtinin çatışmayı “çözmesi”</text>
+<text x="820" y="419" font-size="15" fill="#1e293b" text-anchor="start">• Hasta rolünün benimsenmesi, kaçınma</text>
+<text x="820" y="443" font-size="15" fill="#1e293b" text-anchor="start">• Yinelenen tetkik, belirsiz açıklamalar</text>
+<path d="M985 470 C1060 450 1100 490 1060 510 C1030 525 990 515 985 495" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="1080" y="465" font-size="14" fill="#b91c1c" text-anchor="start">kısır döngü</text>
+<rect x="40" y="545" width="1130" height="170" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="60" y="577" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">Örnek olgu (slayt 30)</text>
+<circle cx="90" cy="600" r="8.4" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M79.2 642.0 C76.8 618.0 84.0 609.6 90 609.6 C96.0 609.6 103.2 618.0 100.8 642.0 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M84.6 642.0 L83.4 670.8" stroke="#0f766e" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M95.4 642.0 L96.6 670.8" stroke="#0f766e" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="600" font-size="16" fill="#0f172a" text-anchor="start" font-weight="bold">32 yaşında kadın</text>
+<path d="M150 640 C200 620 250 620 300 640" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<path d="M460 640 C510 620 560 620 610 640" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<path d="M790 640 C840 620 890 620 940 640" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="150" y="670" font-size="15" fill="#6d28d9" text-anchor="start" font-weight="bold">çocuklukta ihmal</text>
+<text x="150" y="688" font-size="15" fill="#6d28d9" text-anchor="start">(yatkınlaştırıcı)</text>
+<text x="320" y="630" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">küçük trafik kazası,</text>
+<text x="320" y="648" font-size="15" fill="#ea580c" text-anchor="start">boyun incinmesi</text>
+<text x="320" y="668" font-size="14" fill="#475569" text-anchor="start">(ortaya çıkarıcı)</text>
+<text x="630" y="630" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">sağ kolda güçsüzlük;</text>
+<text x="630" y="648" font-size="15" fill="#b91c1c" text-anchor="start">“sinir hasarı” korkusu</text>
+<text x="950" y="620" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">kolu hiç kullanmama,</text>
+<text x="950" y="638" font-size="15" fill="#b91c1c" text-anchor="start">çok sayıda tetkik</text>
+<text x="950" y="656" font-size="15" fill="#b91c1c" text-anchor="start">(sürdürücü)</text>
+<path d="M985 300 C1000 285 1020 285 1035 300" stroke="#64748b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M615 300 C630 285 650 285 665 300" stroke="#64748b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M245 300 C260 285 280 285 295 300" stroke="#64748b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<text x="600" y="110" font-size="16" fill="#475569" text-anchor="middle" font-style="italic">Üç soru: kişiyi ne savunmasız kıldı · belirtiyi ne başlattı · neden geçmiyor</text>
+<text x="60" y="150" font-size="15" fill="#1e293b" text-anchor="start">Yatkınlık tek başına hastalık yapmaz; bir tetik belirtiyi başlatır, sürdürücü etkenler onu kronikleştirir.</text>
+<text x="60" y="174" font-size="15" fill="#1e293b" text-anchor="start">Sürdürücü etkenler (kaçınma, yinelenen tetkik, belirsiz açıklama) belirtinin neden geçmediğini açıklar.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 30 (3P modeli ve örnek olgu)</text>
+</svg>

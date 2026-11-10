@@ -76,9 +76,18 @@ def main() -> int:
     kis = json.loads((MEDS / "src/data/kisaltma_sozluk.json").read_text(encoding="utf-8"))
     for s, m in sayfa.items():
         metin = pymupdf.open(a.pdf)[s - 1].get_text()
-        if re.match(r"\s*(Kaynaklar|Kaynakça|Kaynak|References)\b", metin):
+        ilk = re.sub(r"\s+", "", metin.strip().split("\n", 1)[0]).upper()  # harf aralıklı başlık ("KAYN AKLAR") da yakalanır (H515)
+        if re.match(r"\s*(Kaynaklar|Kaynakça|Kaynak|References)\b", metin) or ilk.startswith(("KAYNAK", "REFERENCES", "OKUMALISTESI")):
             continue  # kaynakça sayfası: yazar baş harfleri (MG, DS) kısaltma değildir (H510)
-        for k in set(re.findall(r"(?<![\wçğıöşü])([A-ZÇĞİÖŞÜ]{2,5})(?![\wçğıöşü])", metin)):
+        # H515: tasarım PDF'lerinde harf aralıklı başlıklar ("Y A N I TL A R", "DS M - 5 - T R") kısaltma gibi görünür;
+        # ardışık ≥4 kısa büyük harf parçası (1–2 harf, araya "-" girebilir) tek başlık sayılır ve adaylardan çıkarılır.
+        metin_k = re.sub(r"(?:(?<!\S)[A-ZÇĞİÖŞÜ]{1,2}(?:\s+-)?\s+){3,}[A-ZÇĞİÖŞÜ]{1,5}(?!\S)", " ", metin)
+        # Aynı neden: harf aralığı düzensiz de olabilir ("YAN ITLAR", "ALEKS IT IMI") → TAMAMI büyük harf olan satırlar
+        # (başlık/üst yazı) aday taramasından çıkarılır; kısaltma satır içinde küçük harfli metinle birlikte aranır.
+        metin_k = "\n".join(l for l in metin_k.split("\n") if re.search(r"[a-zçğıöşü]", l))
+        # Atıf satırındaki yazar baş harfleri ("Yates GP, Feldman MD.") kısaltma değildir (H510 ile aynı kök).
+        metin_k = re.sub(r"\b[A-ZÇĞİÖŞÜ][a-zçğıöşü]+(?:-[A-ZÇĞİÖŞÜ][a-zçğıöşü]+)? [A-ZÇĞİÖŞÜ]{1,3}(?=[,.;])", " ", metin_k)
+        for k in set(re.findall(r"(?<![\wçğıöşü])([A-ZÇĞİÖŞÜ]{2,5})(?![\wçğıöşü])", metin_k)):
             if k not in kis and KS.kisaltma_mi(k):
                 hata.append(f"s{s}: kısaltma '{k}' sözlükte yok")
     for v in paket.get("hoca_vurgulari", []):

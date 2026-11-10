@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Bilinçli mi, ne için? Üç tabloyu tek eksende ayırmak</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Bedensel belirti / işlevsel bozukluk, yapay bozukluk ve temaruz · slayt 47</text>
+<linearGradient id="eksen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#99f6e4"/><stop offset="0.5" stop-color="#fed7aa"/><stop offset="1" stop-color="#fecaca"/></linearGradient>
+<rect x="60" y="100" width="1080" height="26" rx="13" fill="url(#eksen)"/>
+<text x="70" y="150" font-size="15" fill="#0f766e" text-anchor="start" font-weight="bold">bilinçdışı, istemsiz</text>
+<text x="1130" y="150" font-size="15" fill="#b91c1c" text-anchor="end" font-weight="bold">bilinçli, istemli</text>
+<line x1="560" y1="113" x2="1130" y2="113" stroke="#0f172a" stroke-width="2" marker-end="url(#ok)"/>
+<line x1="640" y1="113" x2="70" y2="113" stroke="#0f172a" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="60" y="170" width="340" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="80" y="202" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">Bedensel belirti / işlevsel</text>
+<circle cx="110" cy="215" r="7.700000000000001" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M100.1 253.5 C97.9 231.5 104.5 223.8 110 223.8 C115.5 223.8 122.1 231.5 119.9 253.5 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M105.05 253.5 L103.95 279.9" stroke="#0f766e" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114.95 253.5 L116.05 279.9" stroke="#0f766e" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 230 C170 210 200 205 220 215 C245 205 275 220 265 240 C272 258 240 268 220 258 C200 268 168 255 170 230 Z" stroke="#0f766e" stroke-width="1.8" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="220" y="241" font-size="14" fill="#0f766e" text-anchor="middle" font-weight="bold">istemsiz</text>
+<circle cx="155" cy="262" r="4" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<circle cx="146" cy="272" r="2.5" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<text x="80" y="335" font-size="14" fill="#1e293b" text-anchor="start">Belirti üretimi: istemsiz</text>
+<text x="80" y="359" font-size="14" fill="#1e293b" text-anchor="start">Motivasyon: bilinçdışı</text>
+<text x="80" y="383" font-size="14" fill="#1e293b" text-anchor="start">Dış ödül: yok</text>
+<text x="80" y="407" font-size="14" fill="#1e293b" text-anchor="start">Ruhsal bozukluk: evet</text>
+<text x="80" y="450" font-size="14" fill="#475569" text-anchor="start" font-style="italic">hasta belirtiyi gerçekten yaşar</text>
+<rect x="430" y="170" width="340" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="450" y="202" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">Yapay bozukluk</text>
+<circle cx="480" cy="215" r="7.700000000000001" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M470.1 253.5 C467.9 231.5 474.5 223.8 480 223.8 C485.5 223.8 492.1 231.5 489.9 253.5 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M475.05 253.5 L473.95 279.9" stroke="#ea580c" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M484.95 253.5 L486.05 279.9" stroke="#ea580c" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M540 230 C540 210 570 205 590 215 C615 205 645 220 635 240 C642 258 610 268 590 258 C570 268 538 255 540 230 Z" stroke="#ea580c" stroke-width="1.8" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="590" y="241" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">bilinçli</text>
+<circle cx="525" cy="262" r="4" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<circle cx="516" cy="272" r="2.5" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<text x="450" y="335" font-size="14" fill="#1e293b" text-anchor="start">Belirti üretimi: bilinçli</text>
+<text x="450" y="359" font-size="14" fill="#1e293b" text-anchor="start">Motivasyon: bilinçdışı → hasta rolü</text>
+<text x="450" y="383" font-size="14" fill="#1e293b" text-anchor="start">Dış ödül: yok</text>
+<text x="450" y="407" font-size="14" fill="#1e293b" text-anchor="start">Ruhsal bozukluk: evet</text>
+<text x="450" y="450" font-size="14" fill="#475569" text-anchor="start" font-style="italic">Münchausen; vekaleten = çocuk istismarı</text>
+<rect x="800" y="170" width="340" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="820" y="202" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">Temaruz</text>
+<circle cx="850" cy="215" r="7.700000000000001" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<path d="M840.1 253.5 C837.9 231.5 844.5 223.8 850 223.8 C855.5 223.8 862.1 231.5 859.9 253.5 Z" stroke="#b91c1c" stroke-width="2" fill="#b91c1c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M845.05 253.5 L843.95 279.9" stroke="#b91c1c" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M854.95 253.5 L856.05 279.9" stroke="#b91c1c" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M910 230 C910 210 940 205 960 215 C985 205 1015 220 1005 240 C1012 258 980 268 960 258 C940 268 908 255 910 230 Z" stroke="#b91c1c" stroke-width="1.8" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="960" y="241" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">bilinçli</text>
+<circle cx="895" cy="262" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<circle cx="886" cy="272" r="2.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="820" y="335" font-size="14" fill="#1e293b" text-anchor="start">Belirti üretimi: bilinçli</text>
+<text x="820" y="359" font-size="14" fill="#1e293b" text-anchor="start">Motivasyon: bilinçli → dış kazanç</text>
+<text x="820" y="383" font-size="14" fill="#1e293b" text-anchor="start">Dış ödül: para, rapor, cezadan kaçış</text>
+<text x="820" y="407" font-size="14" fill="#1e293b" text-anchor="start">Ruhsal bozukluk: hayır*</text>
+<text x="820" y="450" font-size="14" fill="#475569" text-anchor="start" font-style="italic">*klinik ilgi odağı olabilecek diğer durumlar</text>
+<rect x="60" y="490" width="1080" height="230" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="80" y="522" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">Karar: iki soru yeter</text>
+<rect x="440" y="530" width="320" height="44" rx="22" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="600" y="558" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">Belirti bilinçli mi üretiliyor?</text>
+<path d="M440 552 C360 552 300 580 250 605" stroke="#0f766e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<text x="180" y="640" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="bold">HAYIR → bedensel belirti bzk. ya da</text>
+<text x="180" y="660" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="bold">işlevsel nörolojik belirti bzk.</text>
+<path d="M760 552 C840 552 880 575 900 598" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<rect x="780" y="604" width="260" height="40" rx="20" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="910" y="630" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">Dış kazanç var mı?</text>
+<path d="M820 644 C780 670 740 680 700 690" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<path d="M1000 644 C1040 670 1070 680 1090 690" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="650" y="712" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">HAYIR → yapay bozukluk (amaç hasta rolü)</text>
+<text x="1060" y="712" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">EVET → temaruz</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 47 (bilinçlilik ekseni ve dört satırlı tablo) · teal = istemsiz, turuncu = bilinçli ama hasta rolü, kırmızı = bilinçli dış kazanç</text>
+</svg>

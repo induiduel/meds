@@ -1,0 +1,529 @@
+{
+ "surum": 1,
+ "key": "k2-58",
+ "kod": "2f12",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Alkoller",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f12"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Alkol neden bir farmakoloji konusu"
+    },
+    {
+     "metin": "Etanolün farmakokinetiği: emilim, dağılım ve sıfır derece yıkım"
+    },
+    {
+     "metin": "Etanol nasıl yıkılır: ADH, MEOS ve ALDH"
+    },
+    {
+     "metin": "Akut etkiler: merkezi sinir sistemi ve doz merdiveni"
+    },
+    {
+     "metin": "Akut etkiler: kalp ve düz kas"
+    },
+    {
+     "metin": "Kronik tüketim: genel mekanizma, karaciğer ve sindirim sistemi"
+    },
+    {
+     "metin": "Tolerans, bağımlılık ve yoksunluğun moleküler temeli"
+    },
+    {
+     "metin": "Nörotoksisite: nöropati, Wernicke-Korsakoff ve görme"
+    },
+    {
+     "metin": "Kardiyovasküler sistem: kardiyomiyopati, aritmi, hipertansiyon, koroner hastalık"
+    },
+    {
+     "metin": "Kan, endokrin sistem ve elektrolit dengesi"
+    },
+    {
+     "metin": "Fetal alkol sendromu"
+    },
+    {
+     "metin": "İmmün sistem ve kanser riski"
+    },
+    {
+     "metin": "Alkol–ilaç etkileşimleri"
+    },
+    {
+     "metin": "Klinik farmakoloji ve akut alkol zehirlenmesinin tedavisi"
+    },
+    {
+     "metin": "Alkol yoksunluk sendromu ve tedavisi"
+    },
+    {
+     "metin": "Alkolizmin tedavisi: naltrekson, akamprosat, disülfiram ve diğer ilaçlar"
+    },
+    {
+     "metin": "Metanol zehirlenmesi"
+    },
+    {
+     "metin": "Etilen glikol zehirlenmesi"
+    },
+    {
+     "metin": "Dersin bütünü"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Alkol neden bir farmakoloji konusu.",
+    "Etanolün farmakokinetiği: emilim, dağılım ve sıfır derece yıkım.",
+    "Etanol nasıl yıkılır: ADH, MEOS ve ALDH.",
+    "Akut etkiler: merkezi sinir sistemi ve doz merdiveni.",
+    "Akut etkiler: kalp ve düz kas.",
+    "Kronik tüketim: genel mekanizma, karaciğer ve sindirim sistemi.",
+    "Tolerans, bağımlılık ve yoksunluğun moleküler temeli.",
+    "Nörotoksisite: nöropati, Wernicke-Korsakoff ve görme.",
+    "Kardiyovasküler sistem: kardiyomiyopati, aritmi, hipertansiyon, koroner hastalık.",
+    "Kan, endokrin sistem ve elektrolit dengesi.",
+    "Fetal alkol sendromu.",
+    "İmmün sistem ve kanser riski.",
+    "Alkol–ilaç etkileşimleri.",
+    "Klinik farmakoloji ve akut alkol zehirlenmesinin tedavisi.",
+    "Alkol yoksunluk sendromu ve tedavisi.",
+    "Alkolizmin tedavisi: naltrekson, akamprosat, disülfiram ve diğer ilaçlar.",
+    "Metanol zehirlenmesi.",
+    "Etilen glikol zehirlenmesi.",
+    "Dersin bütünü."
+   ],
+   "v": "97a0f6a29b"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "✓Alkolün midedeki metabolizmasında görülen bu farklılık, kadınların",
+     "metin": "Çıkmış (ilgili): Aşırı NADH üretiminin, kronik alkolizme eşlik eden metabolik bozukluklara ve akut alkol zehirlenmesine sıklıkla eşlik eden laktik asidoz ve hipoglisemiye katkıda bulunduğu sanılmaktadır.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "B. Mikrozomal Etanol-Oksidleyici Sistem (MEOS)",
+     "metin": "Çıkmış (ilgili): B. Mikrozomal Etanol-Oksidleyici Sistem (MEOS) … kofaktör olarak NADPH'yi kullanır ve başlıca sitokrom P450 2E1, 1A2 ve 3A4'den oluşur (s7).",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "C. Asetaldehid Metabolizması",
+     "metin": "Çıkmış (dogrudan): Alkolden oluşan asetaldehidin çoğu karaciğerde, mitokondriyal NAD- bağımlı aldehid dehidrogenaz",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "✓Kronik alkolizmde en yaygın olarak görülen nörolojik bozukluk, ellerin",
+     "metin": "Çıkmış (ilgili): koma ve ölüme kadar ilerleyebilen, eksternal göz kaslarının paralizi, ataksi ve bir konfüzyon durumu ile karakterize, sık görülmeyen fakat önemli bir hastalıktır.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "✓Her ikisi de potansiyel hepatotoksik ilaçlar oldukları için, naltrekson",
+     "metin": "Çıkmış (dogrudan): Alkol bağımlılığının tedavisinde kullanılan akamprosat, bu endikasyon için FDA'den de onay almıştır (s41). s39: Üç ilaç — disulfiram, naltrekson ve akamprosat — alkol bağımlılığında yardımcı tedavi için FDA'den onay almıştır.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "✓Disulfiram etkisini aldehid dehidrogenaz enzimini inhibe ederek",
+     "metin": "Çıkmış (dogrudan): Disulfiram etkisini aldehid dehidrogenaz enzimini inhibe ederek gösterir; bu nedenle, kullanıldığında alkol her zamanki gibi metabolize edilir, asetaldehid ise birikir (s43). s8: asetaldehidin oksidasyonu … disülfiram tarafından inhibe edilir; s9 Şekil 23-1'de Disülfiram → (–) Aldehid dehidrogenaz.",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Diğer Alkollerin Farmakolojisi",
+     "metin": "Çıkmış (dogrudan): İnsanlarda metanolün başlıca eliminasyon mekanizması formaldehid, formik asit ve CO2'ye oksidasyondur (Şekil 23-3). İnsanların metanol toksisitesine özgü duyarlılığı metanolün kendisine değil, format ve formaldehide metabolize edilmesine bağlıdır. (s46 şema: Metanol → ADH → Formaldehid → ALDH → Format → folat-bağımlı yolak → CO2)",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "✓Bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen",
+     "metin": "Çıkmış (dogrudan): Bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen glikol zehirlenmeleri için onay almıştır (s49, slayt cümlesi soru köküyle birebir). s52: etilen glikol zehirlenmesinin standart ilacı da fomepizol'dür.",
+     "s": [
+      49
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "✓Alkolün midedeki metabolizmasında görülen bu farklılık, kadınların: Çıkmış (ilgili): Aşırı NADH üretiminin, kronik alkolizme eşlik eden metabolik bozukluklara ve akut alkol zehirlenmesine sıklıkla eşlik eden laktik asidoz ve hipoglisemiye katkıda bulunduğu sanılmaktadır.",
+    "B. Mikrozomal Etanol-Oksidleyici Sistem (MEOS): Çıkmış (ilgili): B. Mikrozomal Etanol-Oksidleyici Sistem (MEOS) … kofaktör olarak NADPH'yi kullanır ve başlıca sitokrom P450 2E1, 1A2 ve 3A4'den oluşur (s7).",
+    "C. Asetaldehid Metabolizması: Çıkmış (dogrudan): Alkolden oluşan asetaldehidin çoğu karaciğerde, mitokondriyal NAD- bağımlı aldehid dehidrogenaz.",
+    "✓Kronik alkolizmde en yaygın olarak görülen nörolojik bozukluk, ellerin: Çıkmış (ilgili): koma ve ölüme kadar ilerleyebilen, eksternal göz kaslarının paralizi, ataksi ve bir konfüzyon durumu ile karakterize, sık görülmeyen fakat önemli bir hastalıktır.",
+    "✓Her ikisi de potansiyel hepatotoksik ilaçlar oldukları için, naltrekson: Çıkmış (dogrudan): Alkol bağımlılığının tedavisinde kullanılan akamprosat, bu endikasyon için FDA'den de onay almıştır (s41). s39: Üç ilaç — disulfiram, naltrekson ve akamprosat — alkol bağımlılığında yardımcı tedavi için FDA'den onay almıştır.",
+    "✓Disulfiram etkisini aldehid dehidrogenaz enzimini inhibe ederek: Çıkmış (dogrudan): Disulfiram etkisini aldehid dehidrogenaz enzimini inhibe ederek gösterir; bu nedenle, kullanıldığında alkol her zamanki gibi metabolize edilir, asetaldehid ise birikir (s43). s8: asetaldehidin oksidasyonu … disülfiram tarafından inhibe edilir; s9 Şekil 23-1'de Disülfiram → (–) Aldehid dehidrogenaz.",
+    "Diğer Alkollerin Farmakolojisi: Çıkmış (dogrudan): İnsanlarda metanolün başlıca eliminasyon mekanizması formaldehid, formik asit ve CO2'ye oksidasyondur (Şekil 23-3). İnsanların metanol toksisitesine özgü duyarlılığı metanolün kendisine değil, format ve formaldehide metabolize edilmesine bağlıdır. (s46 şema: Metanol → ADH → Formaldehid → ALDH → Format → folat-bağımlı yolak → CO2).",
+    "✓Bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen: Çıkmış (dogrudan): Bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen glikol zehirlenmeleri için onay almıştır (s49, slayt cümlesi soru köküyle birebir). s52: etilen glikol zehirlenmesinin standart ilacı da fomepizol'dür."
+   ],
+   "v": "4d7dadadbd"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Alkoller dersinin doğrulanmış 12 çıkmışı 2018-19'dan 2025-26'ya uzanır ve dört bilgi etrafında yoğunlaşır. En çok tekrar eden konu fomepizoldür: 2020-21'de 'alkol dehidrogenaz inhibitörü olan ve metanol ile etilen glikol zehirlenmeleri için onay alan madde' biçiminde (aynı karnede beş kopya), 2023-24'te ters yönde ('fomepizolün etki mekanizması') ve 2025-26'da uzun vaka kökünde yeniden sorulmuştur (s. 49, Şekil 23-3). İkinci sırada metanolün toksik metaboliti gelir: 2019-20 ve 2021-22'de birebir aynı kökle 'formaldehit' cevabı istenmiştir (s. 45–46). Üçüncü kalıp alkol bağımlılığı tedavisinde onaylı ilaç sorusudur; 2020-21 final ve 2024-25'te aynı çeldirici setiyle (fenitoin, izoniazid, etilen glikol, glisin) akamprosat sorulmuştur (s. 39, 41). Dördüncü kalıp disülfiram ve aldehid dehidrogenazdır: 2019-20'de disülfiramın mekanizması, yılı belirsiz bir derlemede de s. 8'in cümlesi boşluk doldurma olarak çıkmıştır. Üç soru farmakoloji dışı bölümlerden (patoloji) gelse de aynı slaytların bilgisini ölçer: CYP2E1'in mikrozomal yerleşimi (2018-19), etanol metabolizmasının toksik etkileri arasında NAD+/NADH oranının artmadığı (2021-22) ve tiamin eksikliğinde Wernicke ensefalopatisi (2020-21). Hocanın kök kalıbı kısadır ve tek ilaç–tek bilgi ölçer: '… olan madde hangisidir?', '… etki mekanizması hangisidir?', '… rol oynayan toksik metabolit hangisidir?'. Çeldiriciler neredeyse her zaman aynı dersin komşu ilaç ve metabolitleridir (asetaldehit, asetik asit, etilen glikol; fenitoin, izoniazid; ALDH inhibisyonu, µ-opioid blokajı, zayıf NMDA antagonizması). Dört kayıtta (2023-24 h66, 2025-26 far-009, 2024-25 hg3) ham belgede yalnız kök ve cevap vardır; şıklar sonradan tamamlanmıştır.",
+   "maddeler": [
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi metanol (metil alkol) zehirlenmesinde rol oynayan toksik metabolittir?",
+     "cevap": "Formaldehit",
+     "s": [
+      45
+     ],
+     "aciklama": [
+      "Soru, metanol zehirlenmesinde zehirli olanın metanolün kendisi mi yoksa metaboliti mi olduğunu, yani toksik alkol kavramının temelini ölçüyor.",
+      "Doğru cevap formaldehittir: s. 45'e göre insanların metanol toksisitesine duyarlılığı metanolün kendisine değil, format ve formaldehide metabolize edilmesine bağlıdır; s. 46'daki Şekil 23-3'te metanol alkol dehidrogenazla formaldehide, formaldehid aldehid dehidrogenazla formata çevrilir.",
+      "En güçlü çeldirici asetaldehittir; bu etanolün aynı enzimle oluşan metabolitidir ve disülfiram reaksiyonundan sorumludur, metanol zincirinde yer almaz (s. 8). Etilen glikol ayrı bir toksik alkoldür (s. 51), asetik asit ise etanol zincirinin zararsız son ürünüdür (s. 8)."
+     ],
+     "ornek": "Şekil 23-3'teki dikey akışta (s. 46) metanol → formaldehid → format → CO2 sırası okunur; fomepizol ve etanol kutuları ilk oka eksi işaretiyle bağlıdır, yani ilk basamak kesilirse formaldehid hiç oluşmaz ve hasta zehirlenmez.",
+     "tuzak": "Etanolün metaboliti asetaldehidi metanolün metaboliti sanmak; iki alkol aynı enzimleri kullanır ama ürünleri farklıdır (asetaldehid–asetat ile formaldehid–format)."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Aşağıdakilerden hangisi metanol (metil alkol) zehirlenmesinde rol oynayan metabolittir?",
+     "cevap": "Formaldehit",
+     "s": [
+      45
+     ],
+     "aciklama": [
+      "2019-20'deki sorunun 2021-22 finalde yalnız şık sırası değiştirilmiş kopyasıdır; metanol zehirlenmesinde rol oynayan metabolit sorulur.",
+      "Doğru cevap formaldehittir: s. 45 metanolün başlıca eliminasyon yolunu formaldehid, formik asit ve CO2'ye oksidasyon olarak verir ve toksisiteyi format ile formaldehide bağlar; s. 46 şeması bu zinciri gösterir.",
+      "Çeldiriciler aynıdır: asetaldehit etanolün ara ürünü, asetik asit etanolün son ürünü, etilen glikol antifrizdeki ayrı toksik alkol, glutamik asit bir amino asittir ve alkol metabolizmasında yer almaz."
+     ],
+     "ornek": "s. 47'deki klinik tablo aynı metabolitin sonucudur: formaldehid ve format birikince anyon açıklı metabolik asidoz ve 'kar fırtınası içinde kalmak' biçiminde görme bozukluğu gelişir; nefes ve idrarda formaldehid kokusu alınabilir.",
+     "tuzak": "Aynı sorunun iki yılda çıkması, hocanın bu bilgiyi doğrudan yineleme eğilimini gösterir; şık sırasına değil metabolit adına odaklanılmalıdır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi alkolizm tedavisinde kullanılan disülfiramın etki mekanizmasını açıklar?",
+     "cevap": "Aldehit dehidrogenaz inhibisyonu",
+     "s": [
+      43
+     ],
+     "aciklama": [
+      "Soru, alkolizm tedavisinde caydırıcı olarak kullanılan disülfiramın hangi enzimi hedeflediğini ölçüyor.",
+      "Doğru cevap aldehid dehidrogenaz inhibisyonudur: s. 43'e göre disülfiram etkisini aldehid dehidrogenazı inhibe ederek gösterir, alkol her zamanki gibi metabolize edilir ama asetaldehid birikir; s. 8 ve Şekil 23-1 (s. 9) de disülfiramı ALDH basamağına bağlar.",
+      "En güçlü çeldirici alkol dehidrogenaz aktivasyonudur; ADH'yi etkileyen ilaç fomepizoldür ve o da aktive değil inhibe eder (s. 49). GABA reseptör agonizması benzodiazepinlerin (s. 38), dopamin ve opioid mekanizmaları ise naltreksonun alanıdır (s. 39)."
+     ],
+     "ornek": "s. 42'deki tablo mekanizmanın klinik kanıtıdır: disülfiram alan kişi alkol içince dakikalar içinde flushing, zonklayıcı baş ağrısı, bulantı, kusma, terleme, hipotansiyon ve konfüzyon gelişir; bu belirtiler ilacın değil biriken asetaldehidin etkisidir.",
+     "tuzak": "Fomepizol ile disülfiramı karıştırmak: fomepizol ADH'yi (ilk basamak), disülfiram ALDH'yi (ikinci basamak) inhibe eder."
+    },
+    {
+     "baslik": "Yılı belirsiz",
+     "metin": "Alkolden oluşan asetaldehitin çoğu karaciğerde, mitokondriyal NAD-bağımlı ………… tarafından katalize edilen bir reaksiyon ile okside edilir. Cümledeki boşluk aşağıdaki terimlerden hangisinde doğru olarak verilmiştir?",
+     "cevap": "Aldehit dehidrogenaz",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Boşluk doldurma kökü s. 8'in ilk cümlesinin kelimesi kelimesine kopyasıdır; asetaldehidi okside eden enzimin adı sorulur.",
+      "Doğru cevap aldehid dehidrogenazdır: asetaldehidin çoğu karaciğerde mitokondriyal NAD-bağımlı aldehid dehidrogenaz ile asetata okside edilir; 'mitokondriyal' ve 'NAD-bağımlı' sözcükleri bu enzimi işaret eder.",
+      "En güçlü çeldirici alkol dehidrogenazdır; ADH sitozoliktir ve etanolü asetaldehide çevirir (s. 5). MEOS mikrozomaldir ve NADPH kullanır (s. 7); asetaldehit substratın kendisidir; disülfiram enzim değil bu enzimi inhibe eden ilaçtır."
+     ],
+     "ornek": "Şekil 23-1'de (s. 9) asetaldehidden asetata inen okun üstünde 'aldehid dehidrogenaz' ve yanında NAD+ → NADH yazar; aynı oka disülfiram kutusundan eksi işaretli ok gelir.",
+     "tuzak": "Üç enzimin hücre içi yerini karıştırmak: ADH sitozol, MEOS mikrozom, ALDH mitokondri."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Bir alkol dehidrogenaz inhibitörü olan ve metanol ile etilen glikol zehirlenmeleri için onay alan madde aşağıdakilerden hangisidir?",
+     "cevap": "Fomepizol",
+     "s": [
+      49
+     ],
+     "aciklama": [
+      "Soru, alkol dehidrogenaz inhibitörü olan ve metanol ile etilen glikol zehirlenmesinde onaylı antidotun adını ölçüyor; hocanın en sık yinelediği alkol sorusudur.",
+      "Doğru cevap fomepizoldür: s. 49'un ilk maddesi 'bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen glikol zehirlenmeleri için onay almıştır' der; s. 52 etilen glikolde de standart ilacın fomepizol olduğunu yineler.",
+      "Çeldiriciler aynı dersin komşu ilaçlarıdır: fenitoin disülfiramın metabolizmasını inhibe ettiği ilaçtır (s. 43), diazepam ve lorazepam yoksunluk tedavisinin benzodiazepinleridir (s. 38), glisin ise konu dışı bir nörotransmiterdir."
+     ],
+     "ornek": "s. 49'daki doz şeması sorunun uzantısıdır: 15 mg/kg yükleme, 48 saat boyunca 12 saatte bir 10 mg/kg, sonra 15 mg/kg; doz artışı fomepizolün sitokrom P450 ile kendi metabolizmasını indüklemesine bağlıdır.",
+     "tuzak": "Fomepizolün yerine disülfiramı seçmek ya da alternatif olan intravenöz etanolü 'onaylı antidot' sanmak; etanol alternatiftir, onaylı ilaç fomepizoldür (s. 50)."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Fomepizolün etki mekanizması aşağıdakilerden hangisidir?",
+     "cevap": "Alkol dehidrogenaz inhibisyonu",
+     "s": [
+      49
+     ],
+     "aciklama": [
+      "2020-21 sorusunun ters yönüdür: ilacın adı verilip mekanizması sorulur; ham belgede yalnız kök ve cevap bulunur, şıklar sonradan tamamlanmıştır.",
+      "Doğru cevap alkol dehidrogenaz inhibisyonudur: s. 49 fomepizolü alkol dehidrogenaz inhibitörü olarak tanımlar; Şekil 23-3 (s. 46) fomepizol kutusundan ilk basamağa giden eksi işaretli okla bunu gösterir.",
+      "En güçlü çeldirici aldehid dehidrogenaz inhibisyonudur; bu disülfiramın mekanizmasıdır (s. 43). µ-opioid blokajı naltreksonun (s. 39), zayıf NMDA antagonizması akamprosatın (s. 41), folat bağımlı oksidasyon ise formatın yıkım yolunun (s. 50) bilgisidir."
+     ],
+     "ornek": "s. 50'de etanolün aynı noktaya etkisi anlatılır: etanolün ADH'ye afinitesi metanolden fazladır, enzimi kapatır ve metanol toksik metabolitlere dönüşemez; fomepizol aynı kapıyı doğrudan inhibisyonla kapatır.",
+     "tuzak": "Dersin dört mekanizmasını (ADH inhibisyonu, ALDH inhibisyonu, µ-opioid blokajı, NMDA antagonizması) doğru ilaçla eşleştirememek."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Metanol ve etilen glikol zehirlenmesinde toksik metabolitlerin (formik asit ve oksalik asit) oluşumunu engellemek amacıyla alkol dehidrogenaz enzimini kompetitif olarak inhibe eden spesifik antidot hangisidir?",
+     "cevap": "Fomepizol (4-metilpirazol)",
+     "s": [
+      49
+     ],
+     "aciklama": [
+      "2025-26 hatırlama kaydıdır; ham belgede 'alkol dehidrogenaz inhibitörü / fomepizol' satırı vardır, uzun vaka kökü ve şıklar sonradan kurulmuştur (kökteki 'kompetitif' ve 'oksalik asit' ayrıntıları slaytta anlatılmaz).",
+      "Doğru cevap fomepizoldür: s. 49 fomepizolün ADH inhibitörü olduğunu ve metanol ile etilen glikol için onaylandığını söyler; s. 46 ve s. 51–52 toksik metabolitlerin (formaldehid–format, aldehid–oksalat) bu enzimle oluştuğunu gösterir.",
+      "En güçlü çeldirici disülfiramdır; o ALDH'yi inhibe eder ve alkol bağımlılığında caydırıcıdır (s. 43). Nalokson, flumazenil ve asetilsistein başka zehirlenmelerin antidotlarıdır ve bu derste geçmez."
+     ],
+     "ornek": "s. 52'de etilen glikol için aynı ilke yinelenir: standart ilaç fomepizoldür, intravenöz tedaviye hızla başlanır ve serum etilen glikol 20–30 mg/dL altına inene kadar sürdürülür; alternatif yine etanoldür.",
+     "tuzak": "Antidot adlarını karıştırmak: asetilsistein asetaminofen, nalokson opioid, flumazenil benzodiazepin içindir; toksik alkollerin antidotu fomepizoldür."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Alkol bağımlılığının tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Akamprosat",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "2024-25 hatırlama kaydıdır ('alkol tedavisinde akamprosat'); kök ve şıklar 2020-21 finaldeki aynı sorudan tamamlanmıştır. Soru alkol bağımlılığının sürdürüm tedavisinde kullanılan ilacı ölçer.",
+      "Doğru cevap akamprosattır: s. 41'e göre akamprosat alkol bağımlılığı tedavisinde FDA onayı almıştır ve en iyi tanımlanmış etkisi zayıf NMDA antagonisti ile GABA-A aktivatörü olmasıdır; s. 39 onaylı üçlüyü (disülfiram, naltrekson, akamprosat) sayar.",
+      "Çeldiriciler aynı dersin başka sayfalarındandır: fenitoin ve izoniazid disülfiramın metabolizmasını inhibe ettiği ilaçlardır (s. 43), etilen glikol antifrizdeki toksik alkoldür (s. 51), glisin konu dışıdır."
+     ],
+     "ornek": "s. 42'deki kullanım bilgisi aynı ilacın devamıdır: günde üç kez 333 mg bağırsak kaplamalı tablet; etkileşim yapmaz, yan etkileri gastrointestinal ve döküntüdür, ciddi böbrek yetmezliğinde verilmez.",
+     "tuzak": "Onaylı üçlüyü onaysızlarla karıştırmak: nalmefen, topiramat, gabapentin, valproat, baklofen, SSRI ve ondansetron FDA onaylı değildir (s. 40, 44)."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Alkol bağımlılığının tedavisinde kullanım için onay alan madde aşağıdakilerden hangisidir?",
+     "cevap": "Akamprosat",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "2020-21 final karnesinde 'alkol bağımlılığının tedavisinde kullanım için onay alan madde' sorulmuştur; kök s. 41'in FDA cümlesini doğrudan hedefler.",
+      "Doğru cevap akamprosattır: slayt akamprosatın bu endikasyon için FDA onayı aldığını açıkça yazar; üç onaylı ilaç s. 39'da disülfiram, naltrekson ve akamprosat olarak listelenir.",
+      "En güçlü çeldirici fenitoindir; fenitoin ve izoniazid alkol dersinde yalnız disülfiramın inhibe ettiği ilaçlar olarak geçer (s. 43), bu yüzden tanıdık gelir ama bağımlılık tedavisinde yeri yoktur. Etilen glikol toksik alkoldür (s. 51)."
+     ],
+     "ornek": "s. 41'deki etkinlik cümlesi hocanın verdiği ayrıntıdır: akamprosat tek başına ya da naltreksonla kombine edildiğinde istatistiksel olarak anlamlı etki göstermemiştir; onaylı olması çalışmalarda güçlü etki anlamına gelmez.",
+     "tuzak": "Aynı çeldirici seti (fenitoin, izoniazid, etilen glikol, glisin) iki yılda kullanılmıştır; disülfiramla etkileşen ilaçları bağımlılık ilacı sanmamak gerekir."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Etanol metabolizmasında rol alan sitokrom P450 ve onun CYP2E1 izoformu hangi organeldedir?",
+     "cevap": "Mikrozom",
+     "s": [
+      7
+     ],
+     "aciklama": [
+      "Tıbbi Patoloji bölümünde sorulmuş olsa da bilgi bu slayttandır: etanol metabolizmasındaki sitokrom P450 ve CYP2E1'in organel yerleşimi sorulur.",
+      "Doğru cevap mikrozomdur: s. 7 ikinci yolağı 'mikrozomal etanol oksidleyici sistem (MEOS)' olarak adlandırır ve başlıca sitokrom P450 2E1, 1A2 ve 3A4'ten oluştuğunu söyler; adı yerleşimini verir.",
+      "En güçlü çeldirici sitozoldür; sitozol alkol dehidrogenazın yeridir (s. 5). Mitokondri aldehid dehidrogenazın yeridir (s. 8); peroksizom ve lizozom bu derste geçmez."
+     ],
+     "ornek": "Şekil 23-1'de (s. 9) sağ kolda MEOS, NADPH + O2 → NADP+ + H2O ile çalışır; s. 7 kronik alkolde bu sistemin indüklendiğini ve öteki ilaçların klirensini artırdığını anlatır.",
+     "tuzak": "Üç enzimin yerleşimini karıştırmak: ADH sitozol, MEOS mikrozom, ALDH mitokondri."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Aşağıdakilerden hangisi etanol metabolizmasından kaynaklanan toksik etkiler arasında yer almaz?",
+     "cevap": "NAD⁺/NADH oranında artış",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Kurul 1 patoloji sorusudur; etanol metabolizmasından kaynaklanan toksik etkiler arasında yer almayan önermeyi ister. Dört doğru önermenin hepsi bu slaytlarda vardır.",
+      "Doğru cevap (yanlış önerme) NAD+/NADH oranında artıştır: s. 6'ya göre ADH etanolden hidrojeni NAD+'ya aktarır, NADH oluşur ve karaciğerde fazla miktarda NADH birikir; yani oran artmaz, düşer. Bu fazla NADH laktik asidoz ve hipoglisemiye katkıda bulunur.",
+      "Öteki önermeler doğrudur: asetaldehid üretimi (s. 4, 30), bağırsak kaynaklı endotoksin (s. 16), sitokrom P450 ile reaktif oksijen türleri (s. 7, 30) ve karaciğerde yağ birikimi (s. 15–16) slaytta tek tek anlatılır."
+     ],
+     "ornek": "s. 16 karaciğer hasarının mekanizmalarını sıralar: yağ asidi yıkımının azalıp sentezinin artması ve bağırsak endotoksinlerinin doğal bağışıklığı aktive edip inflamasyon yapması; s. 30 asetaldehid ve reaktif oksijen türlerinin DNA'yı zedelediğini ekler.",
+     "tuzak": "NADH artışını 'NAD+/NADH oranı artar' diye okumak; oranın payı NAD+ olduğu için NADH artınca oran düşer."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Tiamin eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom hangisidir?",
+     "cevap": "Wernicke ensefalopatisi",
+     "s": [
+      20
+     ],
+     "aciklama": [
+      "Patoloji (miyelin hastalıkları) bölümünde sorulmuş bir tanı sorusudur: tiamin eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksiyle giden sendrom istenir.",
+      "Doğru cevap Wernicke ensefalopatisidir: s. 20 Wernicke-Korsakoff sendromunu eksternal göz kaslarının paralizisi, ataksi ve konfüzyonla karakterize, tiamin (B1) eksikliğiyle ilişkili ve alkolizm olmadan nadir görülen bir hastalık olarak tanımlar.",
+      "Çeldiriciler (Von Hippel-Lindau, tüberoz skleroz, multipl skleroz, nöromiyelitis optika) nörolojik hastalıklardır ama tiamin eksikliğiyle ilgisi yoktur; multipl skleroz demiyelinizan olduğu için en yakın çeldiricidir, oysa alkolizmde demiyelinizan hastalık nadirdir (s. 20)."
+     ],
+     "ornek": "s. 21'deki kural bu sendromun klinik uzantısıdır: tiamin zararsız olduğu için şüphelenilen bütün hastalar, acile bilinç bozukluğu ya da nöbetle gelenler dahil, tiamin almalıdır; akut zehirlenmede (s. 34) ve yoksunlukta (s. 37) da tiamin verilir.",
+     "tuzak": "Wernicke-Korsakoff'u alkolizmin en yaygın nörolojik bozukluğu sanmak; en yaygın olan periferik nöropatidir, Wernicke sık görülmeyen ama önemli bir hastalıktır (s. 20)."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Alkoller dersinin doğrulanmış 12 çıkmışı 2018-19'dan 2025-26'ya uzanır ve dört bilgi etrafında yoğunlaşır. En çok tekrar eden konu fomepizoldür: 2020-21'de 'alkol dehidrogenaz inhibitörü olan ve metanol ile etilen glikol zehirlenmeleri için onay alan madde' biçiminde (aynı karnede beş kopya), 2023-24'te ters yönde ('fomepizolün etki mekanizması') ve 2025-26'da uzun vaka kökünde yeniden sorulmuştur (s. 49, Şekil 23-3). İkinci sırada metanolün toksik metaboliti gelir: 2019-20 ve 2021-22'de birebir aynı kökle 'formaldehit' cevabı istenmiştir (s. 45–46). Üçüncü kalıp alkol bağımlılığı tedavisinde onaylı ilaç sorusudur; 2020-21 final ve 2024-25'te aynı çeldirici setiyle (fenitoin, izoniazid, etilen glikol, glisin) akamprosat sorulmuştur (s. 39, 41). Dördüncü kalıp disülfiram ve aldehid dehidrogenazdır: 2019-20'de disülfiramın mekanizması, yılı belirsiz bir derlemede de s. 8'in cümlesi boşluk doldurma olarak çıkmıştır. Üç soru farmakoloji dışı bölümlerden (patoloji) gelse de aynı slaytların bilgisini ölçer: CYP2E1'in mikrozomal yerleşimi (2018-19), etanol metabolizmasının toksik etkileri arasında NAD+/NADH oranının artmadığı (2021-22) ve tiamin eksikliğinde Wernicke ensefalopatisi (2020-21). Hocanın kök kalıbı kısadır ve tek ilaç–tek bilgi ölçer: '… olan madde hangisidir?', '… etki mekanizması hangisidir?', '… rol oynayan toksik metabolit hangisidir?'. Çeldiriciler neredeyse her zaman aynı dersin komşu ilaç ve metabolitleridir (asetaldehit, asetik asit, etilen glikol; fenitoin, izoniazid; ALDH inhibisyonu, µ-opioid blokajı, zayıf NMDA antagonizması). Dört kayıtta (2023-24 h66, 2025-26 far-009, 2024-25 hg3) ham belgede yalnız kök ve cevap vardır; şıklar sonradan tamamlanmıştır.",
+    "2019-2020: Aşağıdakilerden hangisi metanol (metil alkol) zehirlenmesinde rol oynayan toksik metabolittir?",
+    "Cevap: Formaldehit.",
+    "Soru, metanol zehirlenmesinde zehirli olanın metanolün kendisi mi yoksa metaboliti mi olduğunu, yani toksik alkol kavramının temelini ölçüyor.",
+    "Doğru cevap formaldehittir: s. 45'e göre insanların metanol toksisitesine duyarlılığı metanolün kendisine değil, format ve formaldehide metabolize edilmesine bağlıdır; s. 46'daki Şekil 23-3'te metanol alkol dehidrogenazla formaldehide, formaldehid aldehid dehidrogenazla formata çevrilir.",
+    "En güçlü çeldirici asetaldehittir; bu etanolün aynı enzimle oluşan metabolitidir ve disülfiram reaksiyonundan sorumludur, metanol zincirinde yer almaz (s. 8). Etilen glikol ayrı bir toksik alkoldür (s. 51), asetik asit ise etanol zincirinin zararsız son ürünüdür (s. 8).",
+    "Örnek: Şekil 23-3'teki dikey akışta (s. 46) metanol → formaldehid → format → CO2 sırası okunur; fomepizol ve etanol kutuları ilk oka eksi işaretiyle bağlıdır, yani ilk basamak kesilirse formaldehid hiç oluşmaz ve hasta zehirlenmez.",
+    "Tuzak: Etanolün metaboliti asetaldehidi metanolün metaboliti sanmak; iki alkol aynı enzimleri kullanır ama ürünleri farklıdır (asetaldehid–asetat ile formaldehid–format).",
+    "2021-2022: Aşağıdakilerden hangisi metanol (metil alkol) zehirlenmesinde rol oynayan metabolittir?",
+    "Cevap: Formaldehit.",
+    "2019-20'deki sorunun 2021-22 finalde yalnız şık sırası değiştirilmiş kopyasıdır; metanol zehirlenmesinde rol oynayan metabolit sorulur.",
+    "Doğru cevap formaldehittir: s. 45 metanolün başlıca eliminasyon yolunu formaldehid, formik asit ve CO2'ye oksidasyon olarak verir ve toksisiteyi format ile formaldehide bağlar; s. 46 şeması bu zinciri gösterir.",
+    "Çeldiriciler aynıdır: asetaldehit etanolün ara ürünü, asetik asit etanolün son ürünü, etilen glikol antifrizdeki ayrı toksik alkol, glutamik asit bir amino asittir ve alkol metabolizmasında yer almaz.",
+    "Örnek: s. 47'deki klinik tablo aynı metabolitin sonucudur: formaldehid ve format birikince anyon açıklı metabolik asidoz ve 'kar fırtınası içinde kalmak' biçiminde görme bozukluğu gelişir; nefes ve idrarda formaldehid kokusu alınabilir.",
+    "Tuzak: Aynı sorunun iki yılda çıkması, hocanın bu bilgiyi doğrudan yineleme eğilimini gösterir; şık sırasına değil metabolit adına odaklanılmalıdır.",
+    "2019-2020: Aşağıdakilerden hangisi alkolizm tedavisinde kullanılan disülfiramın etki mekanizmasını açıklar?",
+    "Cevap: Aldehit dehidrogenaz inhibisyonu.",
+    "Soru, alkolizm tedavisinde caydırıcı olarak kullanılan disülfiramın hangi enzimi hedeflediğini ölçüyor.",
+    "Doğru cevap aldehid dehidrogenaz inhibisyonudur: s. 43'e göre disülfiram etkisini aldehid dehidrogenazı inhibe ederek gösterir, alkol her zamanki gibi metabolize edilir ama asetaldehid birikir; s. 8 ve Şekil 23-1 (s. 9) de disülfiramı ALDH basamağına bağlar.",
+    "En güçlü çeldirici alkol dehidrogenaz aktivasyonudur; ADH'yi etkileyen ilaç fomepizoldür ve o da aktive değil inhibe eder (s. 49). GABA reseptör agonizması benzodiazepinlerin (s. 38), dopamin ve opioid mekanizmaları ise naltreksonun alanıdır (s. 39).",
+    "Örnek: s. 42'deki tablo mekanizmanın klinik kanıtıdır: disülfiram alan kişi alkol içince dakikalar içinde flushing, zonklayıcı baş ağrısı, bulantı, kusma, terleme, hipotansiyon ve konfüzyon gelişir; bu belirtiler ilacın değil biriken asetaldehidin etkisidir.",
+    "Tuzak: Fomepizol ile disülfiramı karıştırmak: fomepizol ADH'yi (ilk basamak), disülfiram ALDH'yi (ikinci basamak) inhibe eder.",
+    "Yılı belirsiz: Alkolden oluşan asetaldehitin çoğu karaciğerde, mitokondriyal NAD-bağımlı ………… tarafından katalize edilen bir reaksiyon ile okside edilir. Cümledeki boşluk aşağıdaki terimlerden hangisinde doğru olarak verilmiştir?",
+    "Cevap: Aldehit dehidrogenaz.",
+    "Boşluk doldurma kökü s. 8'in ilk cümlesinin kelimesi kelimesine kopyasıdır; asetaldehidi okside eden enzimin adı sorulur.",
+    "Doğru cevap aldehid dehidrogenazdır: asetaldehidin çoğu karaciğerde mitokondriyal NAD-bağımlı aldehid dehidrogenaz ile asetata okside edilir; 'mitokondriyal' ve 'NAD-bağımlı' sözcükleri bu enzimi işaret eder.",
+    "En güçlü çeldirici alkol dehidrogenazdır; ADH sitozoliktir ve etanolü asetaldehide çevirir (s. 5). MEOS mikrozomaldir ve NADPH kullanır (s. 7); asetaldehit substratın kendisidir; disülfiram enzim değil bu enzimi inhibe eden ilaçtır.",
+    "Örnek: Şekil 23-1'de (s. 9) asetaldehidden asetata inen okun üstünde 'aldehid dehidrogenaz' ve yanında NAD+ → NADH yazar; aynı oka disülfiram kutusundan eksi işaretli ok gelir.",
+    "Tuzak: Üç enzimin hücre içi yerini karıştırmak: ADH sitozol, MEOS mikrozom, ALDH mitokondri.",
+    "2020-2021: Bir alkol dehidrogenaz inhibitörü olan ve metanol ile etilen glikol zehirlenmeleri için onay alan madde aşağıdakilerden hangisidir?",
+    "Cevap: Fomepizol.",
+    "Soru, alkol dehidrogenaz inhibitörü olan ve metanol ile etilen glikol zehirlenmesinde onaylı antidotun adını ölçüyor; hocanın en sık yinelediği alkol sorusudur.",
+    "Doğru cevap fomepizoldür: s. 49'un ilk maddesi 'bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen glikol zehirlenmeleri için onay almıştır' der; s. 52 etilen glikolde de standart ilacın fomepizol olduğunu yineler.",
+    "Çeldiriciler aynı dersin komşu ilaçlarıdır: fenitoin disülfiramın metabolizmasını inhibe ettiği ilaçtır (s. 43), diazepam ve lorazepam yoksunluk tedavisinin benzodiazepinleridir (s. 38), glisin ise konu dışı bir nörotransmiterdir.",
+    "Örnek: s. 49'daki doz şeması sorunun uzantısıdır: 15 mg/kg yükleme, 48 saat boyunca 12 saatte bir 10 mg/kg, sonra 15 mg/kg; doz artışı fomepizolün sitokrom P450 ile kendi metabolizmasını indüklemesine bağlıdır.",
+    "Tuzak: Fomepizolün yerine disülfiramı seçmek ya da alternatif olan intravenöz etanolü 'onaylı antidot' sanmak; etanol alternatiftir, onaylı ilaç fomepizoldür (s. 50).",
+    "2023-2024: Fomepizolün etki mekanizması aşağıdakilerden hangisidir?",
+    "Cevap: Alkol dehidrogenaz inhibisyonu.",
+    "2020-21 sorusunun ters yönüdür: ilacın adı verilip mekanizması sorulur; ham belgede yalnız kök ve cevap bulunur, şıklar sonradan tamamlanmıştır.",
+    "Doğru cevap alkol dehidrogenaz inhibisyonudur: s. 49 fomepizolü alkol dehidrogenaz inhibitörü olarak tanımlar; Şekil 23-3 (s. 46) fomepizol kutusundan ilk basamağa giden eksi işaretli okla bunu gösterir.",
+    "En güçlü çeldirici aldehid dehidrogenaz inhibisyonudur; bu disülfiramın mekanizmasıdır (s. 43). µ-opioid blokajı naltreksonun (s. 39), zayıf NMDA antagonizması akamprosatın (s. 41), folat bağımlı oksidasyon ise formatın yıkım yolunun (s. 50) bilgisidir.",
+    "Örnek: s. 50'de etanolün aynı noktaya etkisi anlatılır: etanolün ADH'ye afinitesi metanolden fazladır, enzimi kapatır ve metanol toksik metabolitlere dönüşemez; fomepizol aynı kapıyı doğrudan inhibisyonla kapatır.",
+    "Tuzak: Dersin dört mekanizmasını (ADH inhibisyonu, ALDH inhibisyonu, µ-opioid blokajı, NMDA antagonizması) doğru ilaçla eşleştirememek.",
+    "2025-2026: Metanol ve etilen glikol zehirlenmesinde toksik metabolitlerin (formik asit ve oksalik asit) oluşumunu engellemek amacıyla alkol dehidrogenaz enzimini kompetitif olarak inhibe eden spesifik antidot hangisidir?",
+    "Cevap: Fomepizol (4-metilpirazol).",
+    "2025-26 hatırlama kaydıdır; ham belgede 'alkol dehidrogenaz inhibitörü / fomepizol' satırı vardır, uzun vaka kökü ve şıklar sonradan kurulmuştur (kökteki 'kompetitif' ve 'oksalik asit' ayrıntıları slaytta anlatılmaz).",
+    "Doğru cevap fomepizoldür: s. 49 fomepizolün ADH inhibitörü olduğunu ve metanol ile etilen glikol için onaylandığını söyler; s. 46 ve s. 51–52 toksik metabolitlerin (formaldehid–format, aldehid–oksalat) bu enzimle oluştuğunu gösterir.",
+    "En güçlü çeldirici disülfiramdır; o ALDH'yi inhibe eder ve alkol bağımlılığında caydırıcıdır (s. 43). Nalokson, flumazenil ve asetilsistein başka zehirlenmelerin antidotlarıdır ve bu derste geçmez.",
+    "Örnek: s. 52'de etilen glikol için aynı ilke yinelenir: standart ilaç fomepizoldür, intravenöz tedaviye hızla başlanır ve serum etilen glikol 20–30 mg/dL altına inene kadar sürdürülür; alternatif yine etanoldür.",
+    "Tuzak: Antidot adlarını karıştırmak: asetilsistein asetaminofen, nalokson opioid, flumazenil benzodiazepin içindir; toksik alkollerin antidotu fomepizoldür.",
+    "2024-2025: Alkol bağımlılığının tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Akamprosat.",
+    "2024-25 hatırlama kaydıdır ('alkol tedavisinde akamprosat'); kök ve şıklar 2020-21 finaldeki aynı sorudan tamamlanmıştır. Soru alkol bağımlılığının sürdürüm tedavisinde kullanılan ilacı ölçer.",
+    "Doğru cevap akamprosattır: s. 41'e göre akamprosat alkol bağımlılığı tedavisinde FDA onayı almıştır ve en iyi tanımlanmış etkisi zayıf NMDA antagonisti ile GABA-A aktivatörü olmasıdır; s. 39 onaylı üçlüyü (disülfiram, naltrekson, akamprosat) sayar.",
+    "Çeldiriciler aynı dersin başka sayfalarındandır: fenitoin ve izoniazid disülfiramın metabolizmasını inhibe ettiği ilaçlardır (s. 43), etilen glikol antifrizdeki toksik alkoldür (s. 51), glisin konu dışıdır.",
+    "Örnek: s. 42'deki kullanım bilgisi aynı ilacın devamıdır: günde üç kez 333 mg bağırsak kaplamalı tablet; etkileşim yapmaz, yan etkileri gastrointestinal ve döküntüdür, ciddi böbrek yetmezliğinde verilmez.",
+    "Tuzak: Onaylı üçlüyü onaysızlarla karıştırmak: nalmefen, topiramat, gabapentin, valproat, baklofen, SSRI ve ondansetron FDA onaylı değildir (s. 40, 44).",
+    "2020-2021: Alkol bağımlılığının tedavisinde kullanım için onay alan madde aşağıdakilerden hangisidir?",
+    "Cevap: Akamprosat.",
+    "2020-21 final karnesinde 'alkol bağımlılığının tedavisinde kullanım için onay alan madde' sorulmuştur; kök s. 41'in FDA cümlesini doğrudan hedefler.",
+    "Doğru cevap akamprosattır: slayt akamprosatın bu endikasyon için FDA onayı aldığını açıkça yazar; üç onaylı ilaç s. 39'da disülfiram, naltrekson ve akamprosat olarak listelenir.",
+    "En güçlü çeldirici fenitoindir; fenitoin ve izoniazid alkol dersinde yalnız disülfiramın inhibe ettiği ilaçlar olarak geçer (s. 43), bu yüzden tanıdık gelir ama bağımlılık tedavisinde yeri yoktur. Etilen glikol toksik alkoldür (s. 51).",
+    "Örnek: s. 41'deki etkinlik cümlesi hocanın verdiği ayrıntıdır: akamprosat tek başına ya da naltreksonla kombine edildiğinde istatistiksel olarak anlamlı etki göstermemiştir; onaylı olması çalışmalarda güçlü etki anlamına gelmez.",
+    "Tuzak: Aynı çeldirici seti (fenitoin, izoniazid, etilen glikol, glisin) iki yılda kullanılmıştır; disülfiramla etkileşen ilaçları bağımlılık ilacı sanmamak gerekir.",
+    "2018-2019: Etanol metabolizmasında rol alan sitokrom P450 ve onun CYP2E1 izoformu hangi organeldedir?",
+    "Cevap: Mikrozom.",
+    "Tıbbi Patoloji bölümünde sorulmuş olsa da bilgi bu slayttandır: etanol metabolizmasındaki sitokrom P450 ve CYP2E1'in organel yerleşimi sorulur.",
+    "Doğru cevap mikrozomdur: s. 7 ikinci yolağı 'mikrozomal etanol oksidleyici sistem (MEOS)' olarak adlandırır ve başlıca sitokrom P450 2E1, 1A2 ve 3A4'ten oluştuğunu söyler; adı yerleşimini verir.",
+    "En güçlü çeldirici sitozoldür; sitozol alkol dehidrogenazın yeridir (s. 5). Mitokondri aldehid dehidrogenazın yeridir (s. 8); peroksizom ve lizozom bu derste geçmez.",
+    "Örnek: Şekil 23-1'de (s. 9) sağ kolda MEOS, NADPH + O2 → NADP+ + H2O ile çalışır; s. 7 kronik alkolde bu sistemin indüklendiğini ve öteki ilaçların klirensini artırdığını anlatır.",
+    "Tuzak: Üç enzimin yerleşimini karıştırmak: ADH sitozol, MEOS mikrozom, ALDH mitokondri.",
+    "2021-2022: Aşağıdakilerden hangisi etanol metabolizmasından kaynaklanan toksik etkiler arasında yer almaz?",
+    "Cevap: NAD⁺/NADH oranında artış.",
+    "Kurul 1 patoloji sorusudur; etanol metabolizmasından kaynaklanan toksik etkiler arasında yer almayan önermeyi ister. Dört doğru önermenin hepsi bu slaytlarda vardır.",
+    "Doğru cevap (yanlış önerme) NAD+/NADH oranında artıştır: s. 6'ya göre ADH etanolden hidrojeni NAD+'ya aktarır, NADH oluşur ve karaciğerde fazla miktarda NADH birikir; yani oran artmaz, düşer. Bu fazla NADH laktik asidoz ve hipoglisemiye katkıda bulunur.",
+    "Öteki önermeler doğrudur: asetaldehid üretimi (s. 4, 30), bağırsak kaynaklı endotoksin (s. 16), sitokrom P450 ile reaktif oksijen türleri (s. 7, 30) ve karaciğerde yağ birikimi (s. 15–16) slaytta tek tek anlatılır.",
+    "Örnek: s. 16 karaciğer hasarının mekanizmalarını sıralar: yağ asidi yıkımının azalıp sentezinin artması ve bağırsak endotoksinlerinin doğal bağışıklığı aktive edip inflamasyon yapması; s. 30 asetaldehid ve reaktif oksijen türlerinin DNA'yı zedelediğini ekler.",
+    "Tuzak: NADH artışını 'NAD+/NADH oranı artar' diye okumak; oranın payı NAD+ olduğu için NADH artınca oran düşer.",
+    "2020-2021: Tiamin eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom hangisidir?",
+    "Cevap: Wernicke ensefalopatisi.",
+    "Patoloji (miyelin hastalıkları) bölümünde sorulmuş bir tanı sorusudur: tiamin eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksiyle giden sendrom istenir.",
+    "Doğru cevap Wernicke ensefalopatisidir: s. 20 Wernicke-Korsakoff sendromunu eksternal göz kaslarının paralizisi, ataksi ve konfüzyonla karakterize, tiamin (B1) eksikliğiyle ilişkili ve alkolizm olmadan nadir görülen bir hastalık olarak tanımlar.",
+    "Çeldiriciler (Von Hippel-Lindau, tüberoz skleroz, multipl skleroz, nöromiyelitis optika) nörolojik hastalıklardır ama tiamin eksikliğiyle ilgisi yoktur; multipl skleroz demiyelinizan olduğu için en yakın çeldiricidir, oysa alkolizmde demiyelinizan hastalık nadirdir (s. 20).",
+    "Örnek: s. 21'deki kural bu sendromun klinik uzantısıdır: tiamin zararsız olduğu için şüphelenilen bütün hastalar, acile bilinç bozukluğu ya da nöbetle gelenler dahil, tiamin almalıdır; akut zehirlenmede (s. 34) ve yoksunlukta (s. 37) da tiamin verilir.",
+    "Tuzak: Wernicke-Korsakoff'u alkolizmin en yaygın nörolojik bozukluğu sanmak; en yaygın olan periferik nöropatidir, Wernicke sık görülmeyen ama önemli bir hastalıktır (s. 20)."
+   ],
+   "v": "e94525764b"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%57) ve mekanizma (%29) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Mekanizma",
+     "metin": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%71) ve anlama ve ilişki kurma (%29) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%57) ve mekanizma (%29) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Mekanizma: Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%71) ve anlama ve ilişki kurma (%29) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta."
+   ],
+   "v": "bd03e980c4"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "55d56db90f"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

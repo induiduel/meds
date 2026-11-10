@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Olumlu bulgu mantığı: istemli harekette bozuk, otomatik harekette normal</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">İşlevsel güçsüzlük, titreme ve görme kaybında muayene · slayt 31–34</text>
+<rect x="330" y="92" width="400" height="40" rx="20" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="530" y="118" font-size="16" fill="#ea580c" text-anchor="middle" font-weight="bold">Dikkat belirtide (istemli deneme)</text>
+<rect x="760" y="92" width="400" height="40" rx="20" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="960" y="118" font-size="16" fill="#15803d" text-anchor="middle" font-weight="bold">Dikkat başka yerde (otomatik hareket)</text>
+<line x1="40" y1="250" x2="1160" y2="250" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="40" y="205" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Hoover belirtisi</text>
+<line x1="40" y1="370" x2="1160" y2="370" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="40" y="325" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Kalça abdüktör belirtisi</text>
+<line x1="40" y1="490" x2="1160" y2="490" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="40" y="445" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Titremede sürüklenme</text>
+<line x1="40" y1="610" x2="1160" y2="610" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="40" y="565" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Tünel görme</text>
+<text x="40" y="225" font-size="14" fill="#475569" text-anchor="start">topuğu yatağa bastır</text>
+<text x="40" y="345" font-size="14" fill="#475569" text-anchor="start">bacağı dışa aç</text>
+<text x="40" y="465" font-size="14" fill="#475569" text-anchor="start">sağlam el hekimin ritminde</text>
+<text x="40" y="585" font-size="14" fill="#475569" text-anchor="start">1 m ve 2 m uzaktan ölçüm</text>
+<path d="M380 205 L470 205" stroke="#0f172a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470 205 L560 212" stroke="#ea580c" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="560" y1="185" x2="560" y2="205" stroke="#ea580c" stroke-width="2" marker-end="url(#oko)" stroke-dasharray="4 3"/>
+<text x="600" y="200" font-size="14" fill="#ea580c" text-anchor="start">az baskı</text>
+<path d="M810 205 L900 205" stroke="#0f172a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M900 205 L990 212" stroke="#ea580c" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M900 205 L980 165" stroke="#15803d" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="995" y1="180" x2="995" y2="212" stroke="#ea580c" stroke-width="4" marker-end="url(#oko)"/>
+<line x1="975" y1="160" x2="975" y2="135" stroke="#15803d" stroke-width="3" marker-end="url(#oky)"/>
+<text x="1030" y="200" font-size="14" fill="#15803d" text-anchor="start">güçlü baskı</text>
+<path d="M380 325 L470 325" stroke="#0f172a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M470 325 L560 330" stroke="#ea580c" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="560" y1="345" x2="560" y2="365" stroke="#ea580c" stroke-width="2" marker-end="url(#oko)" stroke-dasharray="4 3"/>
+<text x="600" y="330" font-size="14" fill="#ea580c" text-anchor="start">açılamaz</text>
+<path d="M810 325 L900 325" stroke="#0f172a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M900 325 L985 295" stroke="#15803d" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M900 325 L985 355" stroke="#ea580c" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="990" y1="300" x2="1010" y2="280" stroke="#15803d" stroke-width="3" marker-end="url(#oky)"/>
+<line x1="990" y1="350" x2="1010" y2="372" stroke="#ea580c" stroke-width="4" marker-end="url(#oko)"/>
+<text x="1030" y="330" font-size="14" fill="#15803d" text-anchor="start">zayıf da güçlü açılır</text>
+<path d="M380 445 C386 430 392 460 398 445 C404 430 410 460 416 445 C422 430 428 460 434 445 C440 430 446 460 452 445 C458 430 464 460 470 445 C476 430 482 460 488 445" stroke="#ea580c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="600" y="450" font-size="14" fill="#ea580c" text-anchor="start">kendi hızlı ritmi</text>
+<path d="M810 445 C830 420 850 470 870 445 C890 420 910 470 930 445 C950 420 970 470 990 445" stroke="#15803d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M810 475 C830 450 850 500 870 475 C890 450 910 500 930 475 C950 450 970 500 990 475" stroke="#ea580c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1030" y="452" font-size="14" fill="#15803d" text-anchor="start">sağlam elin ritmine</text>
+<text x="1030" y="470" font-size="14" fill="#15803d" text-anchor="start">uyar ya da durur</text>
+<ellipse cx="395" cy="585" rx="14" ry="9" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+<circle cx="395" cy="585" r="4" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<rect x="430" y="568" width="150" height="34" rx="3" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="600" y="590" font-size="14" fill="#ea580c" text-anchor="start">“tüp”: aynı çap</text>
+<ellipse cx="825" cy="585" rx="14" ry="9" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+<circle cx="825" cy="585" r="4" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<path d="M840 585 L1000 552" stroke="#15803d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<path d="M840 585 L1000 618" stroke="#15803d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<line x1="1000" y1="552" x2="1000" y2="618" stroke="#15803d" stroke-width="3"/>
+<text x="1030" y="582" font-size="14" fill="#15803d" text-anchor="start">normal: koni gibi</text>
+<text x="1030" y="600" font-size="14" fill="#15803d" text-anchor="start">genişler</text>
+<rect x="40" y="625" width="1130" height="95" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="60" y="657" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">Yorum</text>
+<text x="60" y="680" font-size="14" fill="#1e293b" text-anchor="start">İşlevsel: istemli hareket bozuk, otomatik hareket normal → kas aslında güçlüdür; iç tutarsızlık yapısal lezyonla açıklanamaz.</text>
+<text x="60" y="702" font-size="14" fill="#1e293b" text-anchor="start">Organik felç: her iki durumda da zayıflık sürer. Güvenilir olmayanlar: orta hatta bölünen duyu kaybı, güzel aldırmazlık, telkinle düzelme.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 31 (mantık ve tablo), 32 (Hoover), 33 (kalça abdüktör), 34 (titreme, tünel görme) · turuncu = zayıf/işlevsel, yeşil = sağlam/normal</text>
+</svg>

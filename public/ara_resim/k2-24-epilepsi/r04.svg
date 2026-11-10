@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Miyoklonik sıçramadan sonra ne gelir? İki zincir ve absansın EEG frekansı</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Jeneralize motor tipler ve absans · slayt 19–20, 39</text>
+<rect x="30" y="95" width="1140" height="235" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Miyoklonik → tonik-klonik (JME)  ↔  miyoklonik → atonik düşme (Lennox-Gastaut)</text>
+<circle cx="100.0" cy="150" r="8.25" fill="#fde7d6" stroke="#1d4ed8" stroke-width="2"/>
+<path d="M89.0 202.25 C86.8 172.0 93.4 159.9 100 159.9 C106.6 159.9 113.2 172.0 111.0 202.25 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M91.2 165.4 L71.2 177.0 L50.6 180.6" stroke="#1d4ed8" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M108.8 165.4 L128.8 177.0 L142.2 193.0" stroke="#1d4ed8" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M95.05 202.25 L93.4 232.5" stroke="#1d4ed8" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M104.95 202.25 L106.6 232.5" stroke="#1d4ed8" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="100" y="250" font-size="13" fill="#0f172a" text-anchor="middle">miyoklonik sıçrama</text>
+<line x1="155" y1="190" x2="225" y2="190" stroke="#b91c1c" stroke-width="3" marker-end="url(#okk)"/>
+<circle cx="275.0" cy="150" r="8.25" fill="#fde7d6" stroke="#b91c1c" stroke-width="2"/>
+<path d="M264.0 202.25 C261.8 172.0 268.4 159.9 275 159.9 C281.6 159.9 288.2 172.0 286.0 202.25 Z" stroke="#b91c1c" stroke-width="2" fill="#b91c1c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M266.2 165.4 L262.2 142.7 L258.6 122.1" stroke="#b91c1c" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M283.8 165.4 L287.8 142.7 L291.4 122.1" stroke="#b91c1c" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270.05 202.25 L268.4 232.5" stroke="#b91c1c" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M279.95 202.25 L281.6 232.5" stroke="#b91c1c" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="275" y="250" font-size="13" fill="#b91c1c" text-anchor="middle">tonik kasılma → kloniler</text>
+<text x="360" y="180" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">juvenil miyoklonik epilepsi</text>
+<text x="360" y="202" font-size="13" fill="#0f172a" text-anchor="start">tonik-klonik nöbet: sürekli kasılma → kloniler</text>
+<text x="360" y="224" font-size="13" fill="#475569" text-anchor="start" font-style="italic">(slayt 19)</text>
+<circle cx="660.0" cy="150" r="8.25" fill="#fde7d6" stroke="#1d4ed8" stroke-width="2"/>
+<path d="M649.0 202.25 C646.8 172.0 653.4 159.9 660 159.9 C666.6 159.9 673.2 172.0 671.0 202.25 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M651.2 165.4 L631.2 177.0 L610.6 180.6" stroke="#1d4ed8" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M668.8 165.4 L688.8 177.0 L702.2 193.0" stroke="#1d4ed8" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M655.05 202.25 L653.4 232.5" stroke="#1d4ed8" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M664.95 202.25 L666.6 232.5" stroke="#1d4ed8" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="660" y="250" font-size="13" fill="#0f172a" text-anchor="middle">miyoklonik sıçrama</text>
+<line x1="715" y1="190" x2="785" y2="190" stroke="#ea580c" stroke-width="3" marker-end="url(#oko)"/>
+<path d="M795 225 C805 195 845 185 870 195 C885 205 870 225 860 228 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="882" cy="192" r="9" fill="#fde7d6" stroke="#ea580c" stroke-width="2"/>
+<text x="835" y="250" font-size="13" fill="#ea580c" text-anchor="middle">yere düşer</text>
+<text x="920" y="180" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">Lennox-Gastaut sendromu</text>
+<text x="920" y="202" font-size="13" fill="#0f172a" text-anchor="start">tonus kaybı → düşme atağı</text>
+<text x="920" y="224" font-size="13" fill="#475569" text-anchor="start" font-style="italic">gelişimsel ve epileptik ensefalopati</text>
+<text x="60" y="300" font-size="13" fill="#1e293b" text-anchor="start">Atonik nöbette bilinç, tonus kaybı bitince saniyeler içinde döner; tonik-klonik nöbetten sonra toparlanma uzundur.</text>
+<rect x="30" y="345" width="1140" height="180" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="377" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Absans: ani ↔ sinsi, EEG frekansı ayırır</text>
+<text x="50" y="405" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">Tipik absans</text>
+<text x="50" y="425" font-size="13.5" fill="#0f172a" text-anchor="start">ani başlar, ani biter · 3 Hz</text>
+<path d="M250.0 410.0 Q252.5 410.0 255.0 413.1 Q257.5 413.1 260.0 413.9 Q262.5 413.9 265.0 384.0 Q267.5 384.0 270.0 424.0 Q272.5 424.0 275.0 406.1 Q277.5 406.1 280.0 406.9 Q282.5 406.9 285.0 410.1 Q287.5 410.1 290.0 413.2 Q292.5 413.2 295.0 413.9 Q297.5 413.9 300.0 384.0 Q302.5 384.0 305.0 424.0 Q307.5 424.0 310.0 406.1 Q312.5 406.1 315.0 407.0 Q317.5 407.0 320.0 410.1 Q322.5 410.1 325.0 413.2 Q327.5 413.2 330.0 413.9 Q332.5 413.9 335.0 384.0 Q337.5 384.0 340.0 424.0 Q342.5 424.0 345.0 406.1 Q347.5 406.1 350.0 407.0 Q352.5 407.0 355.0 410.2 Q357.5 410.2 360.0 413.3 Q362.5 413.3 365.0 413.8 Q367.5 413.8 370.0 384.0 Q372.5 384.0 375.0 424.0 Q377.5 424.0 380.0 406.1 Q382.5 406.1 385.0 407.0 Q387.5 407.0 390.0 410.3 Q392.5 410.3 395.0 413.3 Q397.5 413.3 400.0 413.8 Q402.5 413.8 405.0 384.0 Q407.5 384.0 410.0 424.0 Q412.5 424.0 415.0 406.0 Q417.5 406.0 420.0 407.1 Q422.5 407.1 425.0 410.3 Q427.5 410.3 430.0 413.3 Q432.5 413.3 435.0 413.8 Q437.5 413.8 440.0 384.0 Q442.5 384.0 445.0 424.0 Q447.5 424.0 450.0 406.0 Q452.5 406.0 455.0 407.1 Q457.5 407.1 460.0 410.4 Q462.5 410.4 465.0 413.4 Q467.5 413.4 470.0 413.8 Q472.5 413.8 475.0 384.0 Q477.5 384.0 480.0 424.0 Q482.5 424.0 485.0 406.0 Q487.5 406.0 490.0 407.2 Q492.5 407.2 495.0 410.5 Q497.5 410.5 500.0 413.4 Q502.5 413.4 505.0 413.8 Q507.5 413.8 510.0 384.0 Q512.5 384.0 515.0 424.0 Q517.5 424.0 520.0 406.0 Q522.5 406.0 525.0 407.2 Q527.5 407.2 530.0 410.5 Q532.5 410.5 535.0 413.4 Q537.5 413.4 540.0 413.7 Q542.5 413.7 545.0 384.0 Q547.5 384.0 550.0 424.0 " stroke="#b91c1c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="50" y="472" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">Atipik absans</text>
+<text x="50" y="492" font-size="13.5" fill="#0f172a" text-anchor="start">sinsi başlar/biter, tonus değişir · &lt; 2,5 Hz</text>
+<path d="M250.0 481.3 Q253.0 481.3 256.0 485.7 Q259.0 485.7 262.0 492.6 Q265.0 492.6 268.0 496.5 Q271.0 496.5 274.0 494.2 Q277.0 494.2 280.0 493.2 Q283.0 493.2 286.0 487.3 Q289.0 487.3 292.0 480.1 Q295.0 480.1 298.0 474.2 Q301.0 474.2 304.0 464.9 Q307.0 464.9 310.0 460.2 Q313.0 460.2 316.0 463.3 Q319.0 463.3 322.0 466.1 Q325.0 466.1 328.0 472.3 Q331.0 472.3 334.0 483.2 Q337.0 483.2 340.0 487.9 Q343.0 487.9 346.0 495.7 Q349.0 495.7 352.0 495.1 Q355.0 495.1 358.0 497.4 Q361.0 497.4 364.0 493.4 Q367.0 493.4 370.0 486.4 Q373.0 486.4 376.0 479.2 Q379.0 479.2 382.0 474.0 Q385.0 474.0 388.0 464.0 Q391.0 464.0 394.0 465.6 Q397.0 465.6 400.0 465.5 Q403.0 465.5 406.0 463.8 Q409.0 463.8 412.0 473.7 Q415.0 473.7 418.0 480.0 Q421.0 480.0 424.0 486.6 Q427.0 486.6 430.0 497.0 Q433.0 497.0 436.0 494.8 Q439.0 494.8 442.0 495.8 Q445.0 495.8 448.0 493.4 Q451.0 493.4 454.0 487.7 Q457.0 487.7 460.0 480.1 Q463.0 480.1 466.0 471.7 Q469.0 471.7 472.0 466.9 Q475.0 466.9 478.0 465.2 Q481.0 465.2 484.0 464.0 Q487.0 464.0 490.0 465.0 Q493.0 465.0 496.0 475.5 Q499.0 475.5 502.0 481.5 Q505.0 481.5 508.0 487.8 Q511.0 487.8 514.0 495.5 Q517.0 495.5 520.0 498.4 Q523.0 498.4 526.0 499.9 Q529.0 499.9 532.0 490.1 Q535.0 490.1 538.0 483.8 Q541.0 483.8 544.0 476.4 Q547.0 476.4 550.0 474.0 " stroke="#ea580c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="575" y1="385" x2="575" y2="515" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="600" y="400" font-size="13" fill="#1e293b" text-anchor="start">Miyoklonik absans: 10–60 sn, miyoklonik sıçramalar,</text>
+<text x="600" y="419" font-size="13" fill="#1e293b" text-anchor="start">3 Hz jeneralize diken-dalga.</text>
+<text x="600" y="438" font-size="13" fill="#1e293b" text-anchor="start">Frekans sırası (slayt 39): atipik absans &lt; 2,5 Hz →</text>
+<text x="600" y="457" font-size="13" fill="#1e293b" text-anchor="start">tipik absans 3 Hz → miyoklonik nöbet &gt; 3 Hz.</text>
+<text x="600" y="476" font-size="13" fill="#1e293b" text-anchor="start">Klinik benzeşebilir; tipik ↔ atipik ayrımında karar EEG'nindir.</text>
+<path d="M600 505 C700 525 900 525 1120 505" stroke="#64748b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="860" y="500" font-size="13" fill="#64748b" text-anchor="middle" font-style="italic">yavaştan hızlıya</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 19 (jeneralize motor nöbetler), 20 (absans), 39 (EEG paternleri) · kırmızı = tonik-klonik / tipik, turuncu = atonik / atipik, mavi = hasta</text>
+</svg>

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oke" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Etanol sinapsta: GABA-A'yı güçlendirir, NMDA'yı susturur</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Akut etkinin reseptör temeli ve Tablo 23-1 doz merdiveni · slayt 10–12</text>
+<rect x="30" y="95" width="700" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Postsinaptik zar üzerinde iki kapı</text>
+<path d="M120 162 C200 142 560 142 640 162 C650 180 650 192 640 202 L120 202 C110 192 110 172 120 162 Z" stroke="#64748b" stroke-width="2" fill="#f1f5f9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="380" y="175" font-size="13" fill="#64748b" text-anchor="middle" font-style="italic">presinaptik uç</text>
+<circle cx="230" cy="185" r="9" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+<circle cx="260" cy="185" r="9" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+<circle cx="520" cy="185" r="9" fill="#fff" stroke="#b45309" stroke-width="2"/>
+<circle cx="550" cy="185" r="9" fill="#fff" stroke="#b45309" stroke-width="2"/>
+<circle cx="240" cy="225" r="4" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<circle cx="255" cy="240" r="4" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<circle cx="225" cy="245" r="4" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<circle cx="525" cy="225" r="4" fill="#b45309" stroke="#b45309" stroke-width="1"/>
+<circle cx="545" cy="242" r="4" fill="#b45309" stroke="#b45309" stroke-width="1"/>
+<circle cx="510" cy="243" r="4" fill="#b45309" stroke="#b45309" stroke-width="1"/>
+<text x="245" y="215" font-size="13" fill="#0f766e" text-anchor="end" font-weight="bold">GABA</text>
+<text x="560" y="215" font-size="13" fill="#b45309" text-anchor="start" font-weight="bold">glutamat</text>
+<rect x="100" y="270" width="600" height="26" fill="url(#zar)" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="109" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="109" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="127" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="127" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="145" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="145" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="163" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="163" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="181" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="181" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="199" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="199" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="217" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="217" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="235" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="235" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="253" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="253" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="271" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="271" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="289" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="289" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="307" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="307" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="325" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="325" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="343" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="343" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="361" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="361" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="379" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="379" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="397" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="397" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="415" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="415" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="433" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="433" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="451" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="451" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="469" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="469" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="487" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="487" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="505" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="505" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="523" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="523" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="541" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="541" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="559" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="559" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="577" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="577" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="595" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="595" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="613" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="613" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="631" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="631" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="649" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="649" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="667" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="667" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="685" cy="275" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<circle cx="685" cy="291" r="4" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+<text x="110" y="318" font-size="12" fill="#92400e" text-anchor="start" font-style="italic">postsinaptik nöron</text>
+<path d="M220 258 L220 308 L230.0 308 C226.0 283.0 226.0 283.0 230.0 258 Z" stroke="#0f766e" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M264 258 L264 308 L254.0 308 C258.0 283.0 258.0 283.0 254.0 258 Z" stroke="#0f766e" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="242" y1="236" x2="242" y2="318" stroke="#0f766e" stroke-width="2.5" marker-end="url(#oke)"/>
+<text x="242" y="340" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="bold">GABA-A kanalı</text>
+<text x="242" y="358" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="bold">Cl⁻ girişi ↑ → nöron susar</text>
+<path d="M520 258 L520 308 L539.0 308 C535.0 283.0 535.0 283.0 539.0 258 Z" stroke="#b45309" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M564 258 L564 308 L545.0 308 C549.0 283.0 549.0 283.0 545.0 258 Z" stroke="#b45309" stroke-width="2" fill="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M542 236 L542 262" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<text x="542" y="340" font-size="13" fill="#b45309" text-anchor="middle" font-weight="bold">NMDA kanalı (kapalı)</text>
+<text x="542" y="358" font-size="13" fill="#b45309" text-anchor="middle" font-weight="bold">katyon kanalı açılamaz → uyarı ↓</text>
+<circle cx="180" cy="300" r="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="300" cy="305" r="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="480" cy="305" r="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="600" cy="300" r="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="140" y="305" font-size="13" fill="#2563eb" text-anchor="end" font-weight="bold">etanol</text>
+<path d="M190 300 C205 285 215 285 225 290" stroke="#2563eb" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<path d="M490 305 C505 290 515 290 525 290" stroke="#2563eb" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<rect x="80" y="370" width="280" height="60" rx="10" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<text x="220.0" y="396.1666666666667" font-size="14" fill="#0f766e" text-anchor="middle" font-weight="bold">GABA etkisi ARTAR (+)</text>
+<text x="220.0" y="413.1666666666667" font-size="14" fill="#0f766e" text-anchor="middle">sedasyon · anksiyoliz</text>
+<rect x="420" y="370" width="280" height="60" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<text x="560.0" y="396.1666666666667" font-size="14" fill="#b45309" text-anchor="middle" font-weight="bold">NMDA açılması ENGELLENİR (–)</text>
+<text x="560.0" y="413.1666666666667" font-size="14" fill="#b45309" text-anchor="middle">bellek kaybı</text>
+<text x="80" y="460" font-size="13" fill="#1e293b" text-anchor="start">Kanıt: GABA-mimetikler alkolün etkisini şiddetlendirir, GABA-A antagonistleri azaltır.</text>
+<text x="80" y="479" font-size="13" fill="#1e293b" text-anchor="start">Etanolün tek reseptörü yoktur; iyon kanalları, Na+/K+-ATPaz, adenilil siklaz, fosfolipaz C de etkilenir.</text>
+<text x="80" y="515" font-size="14" fill="#0f172a" text-anchor="start" font-weight="bold">Eşleme: sedasyon → GABA-A, unutma → NMDA.</text>
+<rect x="760" y="95" width="410" height="600" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="780" y="127" font-size="20" fill="#2563eb" text-anchor="start" font-weight="bold">B · Tablo 23-1 (mg/dL)</text>
+<rect x="790" y="620" width="360" height="78" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="802" y="650" font-size="16" fill="#0f172a" text-anchor="start" font-weight="bold">50–100</text>
+<text x="802" y="676" font-size="13" fill="#0f172a" text-anchor="start">sedasyon, tepki süresi ↑</text>
+<rect x="812" y="525" width="338" height="78" rx="8" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="824" y="555" font-size="16" fill="#0f172a" text-anchor="start" font-weight="bold">100–200</text>
+<text x="824" y="581" font-size="13" fill="#0f172a" text-anchor="start">ataksi, geveleyerek konuşma</text>
+<rect x="834" y="430" width="316" height="78" rx="8" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+<text x="846" y="460" font-size="16" fill="#0f172a" text-anchor="start" font-weight="bold">200–300</text>
+<text x="846" y="486" font-size="13" fill="#0f172a" text-anchor="start">emezis, stupor</text>
+<rect x="856" y="335" width="294" height="78" rx="8" fill="#60a5fa" stroke="#2563eb" stroke-width="1.5"/>
+<text x="868" y="365" font-size="16" fill="#fff" text-anchor="start" font-weight="bold">300–400</text>
+<text x="868" y="391" font-size="13" fill="#fff" text-anchor="start">koma</text>
+<rect x="878" y="240" width="272" height="78" rx="8" fill="#2563eb" stroke="#2563eb" stroke-width="1.5"/>
+<text x="890" y="270" font-size="16" fill="#fff" text-anchor="start" font-weight="bold">> 400</text>
+<text x="890" y="296" font-size="13" fill="#fff" text-anchor="start">solunum depresyonu, ölüm</text>
+<path d="M775 640 L775 165" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<text x="975" y="160" font-size="11" fill="#475569" text-anchor="middle" font-style="italic">tolerans gelişmemiş birey; kronik içicide daha hafif tablo</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 10–12 · teal = GABA (baskılayıcı), amber = glutamat/NMDA (uyarıcı), mavi = etanol ve kan düzeyi basamakları</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oke" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Alkolik karaciğer hastalığı nasıl gelişir: üç mekanizma, üç basamak</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Metabolik değişiklik, yağ birikimi ve bağırsak kaynaklı endotoksin → yağlanma → hepatit → siroz · slayt 15–16</text>
+<rect x="30" y="95" width="760" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Bağırsak–karaciğer ekseni</text>
+<path d="M70 200 C120 170 170 170 220 200 L220 400 C170 430 120 430 70 400 Z" stroke="#be185d" stroke-width="2.5" fill="#fce7f3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 220 C110 208 140 232 212 220" stroke="#be185d" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 256 C110 244 140 268 212 256" stroke="#be185d" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 292 C110 280 140 304 212 292" stroke="#be185d" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 328 C110 316 140 340 212 328" stroke="#be185d" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 364 C110 352 140 376 212 364" stroke="#be185d" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="145" y="160" font-size="14" fill="#be185d" text-anchor="middle" font-weight="bold">BAĞIRSAK</text>
+<circle cx="95" cy="215" r="5" fill="#fda4af" stroke="#be185d" stroke-width="1"/>
+<circle cx="130" cy="250" r="5" fill="#fda4af" stroke="#be185d" stroke-width="1"/>
+<circle cx="170" cy="235" r="5" fill="#fda4af" stroke="#be185d" stroke-width="1"/>
+<circle cx="120" cy="300" r="5" fill="#fda4af" stroke="#be185d" stroke-width="1"/>
+<circle cx="160" cy="330" r="5" fill="#fda4af" stroke="#be185d" stroke-width="1"/>
+<circle cx="100" cy="360" r="5" fill="#fda4af" stroke="#be185d" stroke-width="1"/>
+<text x="145" y="442" font-size="12" fill="#be185d" text-anchor="middle" font-weight="bold">bakteriyel endotoksinler</text>
+<text x="145" y="458" font-size="12" fill="#be185d" text-anchor="middle">(alkol duvarı bozar → geçiş ↑)</text>
+<path d="M222 300 C280 300 300 300 350 300" stroke="#be185d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="285" y="290" font-size="12" fill="#64748b" text-anchor="middle" font-style="italic">portal ven</text>
+<path d="M520 190 C440 160 360 190 350 260 C340 330 390 400 470 410 C560 420 640 390 690 350 C740 310 730 230 670 200 C620 175 560 205 520 190 Z" stroke="#92400e" stroke-width="3" fill="#fef3c7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="540" y="240" font-size="15" fill="#92400e" text-anchor="middle" font-weight="bold">KARACİĞER</text>
+<circle cx="470" cy="320" r="16" fill="#fde68a" stroke="#92400e" stroke-width="2"/>
+<text x="470" y="350" font-size="12" fill="#92400e" text-anchor="middle" font-weight="bold">Kupffer hücresi</text>
+<path d="M486 312 C520 300 540 300 560 300" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<rect x="565" y="280" width="120" height="40" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="625.0" y="296.5" font-size="12" fill="#b91c1c" text-anchor="middle" font-weight="bold">inflamasyon</text>
+<text x="625.0" y="311.5" font-size="12" fill="#b91c1c" text-anchor="middle">+ hasar</text>
+<circle cx="600" cy="360" r="9" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+<circle cx="630" cy="380" r="9" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+<circle cx="560" cy="375" r="9" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+<circle cx="640" cy="340" r="9" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="600" y="438" font-size="12" fill="#a16207" text-anchor="middle" font-weight="bold">yağ birikimi (yağ asidi yıkımı ↓, sentez ↑)</text>
+<circle cx="390" cy="150" r="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="410" y="155" font-size="12" fill="#2563eb" text-anchor="start" font-weight="bold">etanol → ADH/MEOS → NADH fazlası, asetaldehid</text>
+<line x1="400" y1="162" x2="440" y2="215" stroke="#2563eb" stroke-width="2.5" marker-end="url(#okb)"/>
+<text x="60" y="480" font-size="13" fill="#1e293b" text-anchor="start">Mekanizma 1 · etanol yıkımının metabolik değişiklikleri (NADH fazlası, asetaldehid)</text>
+<text x="60" y="497" font-size="13" fill="#1e293b" text-anchor="start">Mekanizma 2 · yağ asidi yıkımı azalır, sentezi artar → hepatosit içinde yağ</text>
+<text x="60" y="514" font-size="13" fill="#1e293b" text-anchor="start">Mekanizma 3 · bağırsak bariyeri bozulur → endotoksin → doğal bağışıklık (Kupffer) → inflamasyon</text>
+<rect x="820" y="95" width="350" height="600" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="840" y="127" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">B · Klinik basamaklar</text>
+<rect x="850" y="150" width="290" height="60" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+<text x="995.0" y="176.16666666666666" font-size="14" fill="#a16207" text-anchor="middle" font-weight="bold">1 · Yağlanma</text>
+<text x="995.0" y="193.16666666666666" font-size="14" fill="#a16207" text-anchor="middle">REVERSİBL — bırakınca düzelir</text>
+<line x1="995" y1="212" x2="995" y2="240" stroke="#0f172a" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="850" y="245" width="290" height="60" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="995.0" y="271.1666666666667" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">2 · Alkolik hepatit</text>
+<text x="995.0" y="288.1666666666667" font-size="14" fill="#b91c1c" text-anchor="middle">inflamasyon + hasar</text>
+<line x1="995" y1="307" x2="995" y2="335" stroke="#0f172a" stroke-width="2.5" marker-end="url(#ok)"/>
+<rect x="850" y="340" width="290" height="60" rx="10" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<text x="995.0" y="366.1666666666667" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">3 · Siroz, karaciğer yetmezliği</text>
+<text x="995.0" y="383.1666666666667" font-size="14" fill="#b91c1c" text-anchor="middle">portal basınç ↑</text>
+<line x1="995" y1="402" x2="995" y2="430" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#okk)"/>
+<rect x="850" y="435" width="290" height="56" rx="10" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<text x="995.0" y="459.3333333333333" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="bold">özofagus / mide varisleri</text>
+<text x="995.0" y="475.3333333333333" font-size="13" fill="#b91c1c" text-anchor="middle">yırtılma → büyük kanama</text>
+<text x="850" y="530" font-size="13" fill="#1e293b" text-anchor="start">Risk: günlük miktar + süre;</text>
+<text x="850" y="549" font-size="13" fill="#1e293b" text-anchor="start">kadınlar daha duyarlı; hepatit B/C</text>
+<text x="850" y="568" font-size="13" fill="#1e293b" text-anchor="start">eş enfeksiyonu riski artırır.</text>
+<text x="850" y="587" font-size="13" fill="#1e293b" text-anchor="start">Ağır içicilerin %15–30'unda ciddi</text>
+<text x="850" y="606" font-size="13" fill="#1e293b" text-anchor="start">karaciğer hastalığı gelişir.</text>
+<text x="995" y="665" font-size="12" fill="#92400e" text-anchor="middle" font-weight="bold">Pankreas: kronik pankreatitin en önemli nedeni</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 15–16 · mavi etanol · pembe bağırsak/endotoksin · kırmızı inflamasyon ve ileri hasar · sarı yağ</text>
+</svg>

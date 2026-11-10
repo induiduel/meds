@@ -78,7 +78,15 @@ def gpu_nefes(hesap_sn: float):
     elif t > 72:
         time.sleep(hesap_sn * 1.5)
 # Ham ses en iyi sonucu veriyor (süzgeç/normalleştirme denendi, 2026-10-27). PyAV sürüm uyumsuzluğu (metadata_errors) yüzünden ses ffmpeg ile 16 kHz mono float'a çözülür
-ham = subprocess.run(["ffmpeg", "-v", "error", "-i", ses, "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+# İstisna (2026-11-10, H530): ortalaması -28 dB'den kısık amfi kaydında ham ses sanrı üretiyordu ("İzlediğiniz için…",
+# uydurma adlar); süzgeç + dinamik normalleştirme aynı parçada belirgin daha anlaşılır döküm verdi → yalnız kısık kayıtta uygulanır.
+_vd = subprocess.run(["ffmpeg", "-hide_banner", "-i", ses, "-af", "volumedetect", "-t", "600", "-f", "null", "-"],
+                     capture_output=True, text=True).stderr
+_ort = float(next((s.split("mean_volume:")[1].split()[0] for s in _vd.splitlines() if "mean_volume:" in s), "0"))
+SUZGEC = ["-af", "highpass=f=90,lowpass=f=7500,afftdn=nf=-25,dynaudnorm=f=150:g=15:p=0.9"] if _ort < -28 else []
+if SUZGEC:
+    print(f"kısık kayıt (ortalama {_ort} dB): süzgeç + normalleştirme", file=sys.stderr, flush=True)
+ham = subprocess.run(["ffmpeg", "-v", "error", "-i", ses, *SUZGEC, "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
                      capture_output=True, check=True).stdout
 # Tüm dosya tek seferde verilince model "Altyazı M.K." sanrısıyla erken bitiyor → 60 sn parçalar (2 sn bindirme)
 ses_d = np.frombuffer(ham, dtype=np.float32)

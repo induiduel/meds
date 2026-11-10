@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Beyin bir tahmin makinesidir: duyum nasıl belirtiye dönüşür?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Öngörüsel işleme modeli ve belirtiyi büyüten döngü · slayt 6–7</text>
+<rect x="30" y="95" width="560" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · Öngörüsel işleme: algı = sinyal + tahmin</text>
+<path d="M200 330 C170 300 180 240 230 225 C245 185 320 175 350 210 C400 195 450 230 440 280 C470 310 450 360 410 365 C390 395 330 400 300 380 C260 400 215 380 200 330 Z" stroke="#6d28d9" stroke-width="3" fill="#ede9fe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 250 C270 300 330 300 350 260" stroke="#6d28d9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 230 C330 270 370 280 400 240" stroke="#6d28d9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M235 310 C275 345 335 350 380 320" stroke="#6d28d9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="322" y="300" font-size="16" fill="#6d28d9" text-anchor="middle" font-weight="bold">ALGILANAN BELİRTİ</text>
+<text x="322" y="322" font-size="15" fill="#6d28d9" text-anchor="middle" font-style="italic">ikisinin “en iyi tahmini”</text>
+<path d="M322 175 C322 190 322 200 322 215" stroke="#6d28d9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<text x="322" y="162" font-size="16" fill="#6d28d9" text-anchor="middle" font-weight="bold">BEKLENTİ (yukarıdan aşağı)</text>
+<text x="380" y="190" font-size="15" fill="#475569" text-anchor="start">önceki deneyim, inançlar,</text>
+<text x="380" y="208" font-size="15" fill="#475569" text-anchor="start">korku, dikkat</text>
+<path d="M322 470 C322 440 322 410 322 378" stroke="#0f766e" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<path d="M300 480 C290 465 300 450 312 456 C318 460 322 466 322 468 C322 466 326 460 332 456 C344 450 354 465 344 480 C338 490 322 500 322 500 C322 500 306 490 300 480 Z" stroke="#0f766e" stroke-width="2" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="350" y="490" font-size="16" fill="#0f766e" text-anchor="start" font-weight="bold">SİNYAL (aşağıdan yukarı)</text>
+<text x="350" y="510" font-size="14" fill="#475569" text-anchor="start">kalp atımı, ağrı, kas ve eklem duyusu</text>
+<text x="50" y="400" font-size="15" fill="#1e293b" text-anchor="start">Beyin sinyali olduğu gibi okumaz;</text>
+<text x="50" y="418" font-size="15" fill="#1e293b" text-anchor="start">ne hissetmesi gerektiğini geçmişe</text>
+<text x="50" y="436" font-size="15" fill="#1e293b" text-anchor="start">göre tahmin eder.</text>
+<rect x="620" y="95" width="550" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="640" y="127" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Belirtiyi büyüten kapalı döngü</text>
+<path d="M930 200 Q981 201 997 248" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<path d="M1020 316 Q1035 365 995 395" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<path d="M938 437 Q895 467 855 438" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<path d="M796 397 Q755 365 770 318" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<path d="M791 250 Q809 201 858 201" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<circle cx="895.0" cy="195.0" r="34" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="895.0" y="200.0" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">Duyum</text>
+<circle cx="1013.8820645368942" cy="281.37287570313157" r="34" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="1013.8820645368942" y="286.37287570313157" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">Dikkat</text>
+<circle cx="968.4731565365591" cy="421.12712429686843" r="34" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="968.4731565365591" y="419.12712429686843" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">Felaket</text>
+<text x="968.4731565365591" y="434.12712429686843" font-size="14" fill="#ea580c" text-anchor="middle">yorumu</text>
+<circle cx="821.5268434634409" cy="421.12712429686843" r="34" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="821.5268434634409" y="426.12712429686843" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">Kaygı</text>
+<circle cx="776.1179354631058" cy="281.37287570313157" r="34" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="776.1179354631058" y="279.37287570313157" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">Duyum</text>
+<text x="776.1179354631058" y="294.37287570313157" font-size="14" fill="#ea580c" text-anchor="middle">artar</text>
+<line x1="925.0" y1="179.0" x2="935" y2="150" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="925.0" cy="179.0" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="941" y="155" font-size="14" fill="#475569" text-anchor="start">somatosensoriyel</text>
+<text x="941" y="170" font-size="14" fill="#475569" text-anchor="start">amplifikasyon (Barsky):</text>
+<text x="941" y="187" font-size="14" fill="#475569" text-anchor="start">olağan duyum yoğun ve</text>
+<text x="941" y="204" font-size="14" fill="#475569" text-anchor="start">tehlikeli algılanır</text>
+<line x1="1033.8820645368942" y1="311.37287570313157" x2="1150" y2="365" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="1033.8820645368942" cy="311.37287570313157" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="1144" y="370" font-size="14" fill="#475569" text-anchor="end">seçici dikkat:</text>
+<text x="1150" y="383" font-size="14" fill="#475569" text-anchor="end">ne kadar bakılırsa o kadar bulunur</text>
+<line x1="978.4731565365591" y1="455.12712429686843" x2="1150" y2="495" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="978.4731565365591" cy="455.12712429686843" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="1144" y="500" font-size="14" fill="#475569" text-anchor="end">felaketleştirme: “baş ağrısı = tümör”</text>
+<line x1="787.5268434634409" y1="431.12712429686843" x2="640" y2="495" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="787.5268434634409" cy="431.12712429686843" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="646" y="500" font-size="14" fill="#475569" text-anchor="start">kaygı uyarılmayı artırır</text>
+<line x1="766.1179354631058" y1="247.37287570313157" x2="745" y2="150" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="766.1179354631058" cy="247.37287570313157" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="739" y="155" font-size="14" fill="#475569" text-anchor="end">santral duyarlılaşma:</text>
+<text x="745" y="170" font-size="14" fill="#475569" text-anchor="end">zararsız uyaran ağrılı algılanır</text>
+<text x="895" y="325" font-size="30" fill="#ea580c" text-anchor="middle">↺</text>
+<rect x="30" y="545" width="1140" height="170" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="577" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Örnek: babasını kalp krizinden kaybeden genç</text>
+<circle cx="130" cy="630" r="26" fill="#f1f5f9" stroke="#0f766e" stroke-width="2"/>
+<text x="130" y="636" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">1</text>
+<text x="130" y="680" font-size="14" fill="#1e293b" text-anchor="middle">merdiven çıkar</text>
+<line x1="162" y1="630" x2="282" y2="630" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<circle cx="315" cy="630" r="26" fill="#f1f5f9" stroke="#0f766e" stroke-width="2"/>
+<text x="315" y="636" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">2</text>
+<text x="315" y="680" font-size="14" fill="#1e293b" text-anchor="middle">olağan çarpıntı</text>
+<line x1="347" y1="630" x2="467" y2="630" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<circle cx="500" cy="630" r="26" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="500" y="636" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">3</text>
+<text x="500" y="680" font-size="14" fill="#1e293b" text-anchor="middle">“kalbimde sorun var”</text>
+<line x1="532" y1="630" x2="652" y2="630" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<circle cx="685" cy="630" r="26" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="685" y="636" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">4</text>
+<text x="685" y="680" font-size="14" fill="#1e293b" text-anchor="middle">göğüs ağrısı + tehlike</text>
+<line x1="717" y1="630" x2="837" y2="630" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<circle cx="870" cy="630" r="26" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="870" y="636" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">5</text>
+<text x="870" y="680" font-size="14" fill="#1e293b" text-anchor="middle">kaygı → çarpıntı ↑</text>
+<line x1="902" y1="630" x2="1022" y2="630" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<circle cx="1055" cy="630" r="26" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="1055" y="636" font-size="16" fill="#0f172a" text-anchor="middle" font-weight="bold">6</text>
+<text x="1055" y="680" font-size="14" fill="#1e293b" text-anchor="middle">korku doğrulanır</text>
+<text x="600" y="705" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">Beklenti sinyali tehlike diye okur; kaygı sinyali büyütür ve döngü kapanır.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 6 (öngörüsel işleme) ve slayt 7 (somatosensoriyel amplifikasyon, seçici dikkat, felaketleştirme, santral duyarlılaşma)</text>
+</svg>

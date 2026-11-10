@@ -124,7 +124,7 @@ def adaylar(s: T.Sayfa) -> list[str]:
     out: list[str] = []
     for w in s.metin_satir:
         for ham in re.split(r"[\s,;:()\[\]\"\uf000-\uf8ff•▪■□◆✓✔]+", w):  # H89: yapışık madde imi glifi (U+F06E…) ayırıcıdır
-            for parca in re.split(r"[/\-–+]", ham):  # "HT+DM" bitişik yazımı (2026-10-27)
+            for parca in re.split(r"[/\-–+'’]", ham):  # "HT+DM" bitişik yazımı (2026-10-27); "NADPH'yi" ek kesmesi (2026-11-10, k2-58)
                 parca = parca.strip(".,;:!?'\"’“”")
                 if kisaltma_mi(parca) and parca not in out:
                     out.append(parca)

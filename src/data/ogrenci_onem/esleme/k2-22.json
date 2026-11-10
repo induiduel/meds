@@ -1,0 +1,119 @@
+{
+ "ders": "k2-22",
+ "not": "Faz B1 anlatım yazarı, 2026-11-10; kural 28 kapısı için cümle eşlemesi (bge-m3 kısa not ↔ uzun cümle benzerliği düşük).",
+ "kayitlar": [
+  {
+   "birim": "psk-s13-b01",
+   "tur": "anlatim",
+   "bilgi": "Somatik Belirti Bozukluğu (madde başında daire içinde): 6+ ay",
+   "cumle": [
+    "C ölçütüne göre tek bir belirti sürekli olmasa da belirtili olma hali genellikle altı aydan uzundur."
+   ],
+   "anahtar": [
+    "ay"
+   ],
+   "gerekce": "Notun '6+ ay' işareti s13 C ölçütüdür; yayımlanan metin (C ölçütü cümlesi) sayıyı yazıyla verir: 'altı aydan uzundur'. Bedensel belirti bozukluğu = somatik belirti bozukluğunun DSM-5-TR adı."
+  },
+  {
+   "birim": "psk-s13-b01",
+   "tur": "anlatim",
+   "bilgi": "Somatik Belirti Bozukluğu: = belirti var ama yanlış yorumlanır. 6 ay+. Kişi ikincil kazancı önemsemez. (3. sınıf) tıp öğrencilerinde. İkna edilemezler. Ciddi hastalığı olduğuna inanır.",
+   "cumle": [
+    "Bilişsel kurama göre olağan bedensel duyumlar ciddi hastalık diye yanlış yorumlanır; kaygı ve dikkat belirtiyi büyütür.",
+    "Slaytta turuncu çerçeveyle öne çıkarılan ölçüt B'dir; çünkü tanıyı koyduran, belirtinin kendisi değil belirtiye verilen aşırı yanıttır.",
+    "C ölçütüne göre tek bir belirti sürekli olmasa da belirtili olma hali genellikle altı aydan uzundur.",
+    "Normal tetkik ve hekim güvencesi hastayı rahatlatmaz.",
+    "Dışarıdan bakınca ikincil kazanç var gibi görünür; oysa hasta yakınmayı tümüyle bedensel yaşar, bilinçli bir çıkar peşinde değildir."
+   ],
+   "anahtar": [
+    "yanlış yorumlanır",
+    "ikincil kazanç"
+   ],
+   "gerekce": "Metinde: yanlış yorumlama (bilişsel kuram), ölçüt = belirtiye aşırı yanıt (B), altı aydan uzun (C), normal tetkik rahatlatmaz (= ikna edilemez), ikincil kazanç bilinçli çıkar değil. 'Tıp öğrencilerinde' bu yılın slaytında yok, anlatıma girmedi."
+  },
+  {
+   "birim": "psk-s13-b01",
+   "tur": "anlatim",
+   "bilgi": "Hastalık Kaygısı Bozukluğu: = hipokondriasis. Belirti olmamasına rağmen hasta olduğuna / olacağına dair büyük korku duyar. İkna edilemez. İnternetten hastalık araştırır.",
+   "cumle": [
+    "belirti yoktur ya da hafiftir, ciddi hastalık korkusu vardır; eski adı hipokondriyazistir.",
+    "Ağrısı, kanaması, kilo kaybı yok; yine de her gün kendini kontrol ediyor ve gece forumlarda belirti okuyor."
+   ],
+   "anahtar": [
+    "hastalık kaygısı bozukluğu",
+    "hipokondriyazis"
+   ],
+   "gerekce": "s9 tanımı + s21 Mert vakası (belirti yok, forumlarda araştırma); eski ad hipokondriyazis (notta 'hipokondriasis') söylendi."
+  },
+  {
+   "birim": "psk-s13-b01",
+   "tur": "anlatim",
+   "bilgi": "Konversiyon Bozukluğu: = ego şalteri indirir. Altta fiziksel patoloji yok. İstemli değil. Madde kullanımına bağlı değil. Birincil kazanç = içsel çatışma son bulur. İkincil kazanç = hasta olarak görülür, ilgi destek alır. Güzel aldırmazlık görülür!! Bu hastalıkta nörolojik hastalıklar topluma oranla daha sık görülür.",
+   "cumle": [
+    "Belirti çatışmayı bilinç dışında tutar; slayt bunu egonun şalteri indirdiği an diye anlatır.",
+    "Hastanın belirtiyi bilerek üretmediğini, yani numara yapmadığını göstermek de gerekmez; tanıyı muayenedeki olumlu bulgular koydurur.",
+    "Birincil kazanç içsel çatışmanın bilinç dışında tutulmasıdır; belirti sembolik anlam taşır.",
+    "İkincil kazanç hasta rolünün getirdiği dış yararlardır",
+    "Güzel aldırmazlık, Fransızca adıyla la belle indifférence, ciddi belirtiye karşın uygunsuz kayıtsızlıktır.",
+    "Bu hastalarda nörolojik hastalık toplumdan daha sıktır; ikisi bir arada olabilir, yani işlevsel tanı organik hastalığı dışlamaz."
+   ],
+   "anahtar": [
+    "şalteri",
+    "birincil kazanç",
+    "ikincil kazanç",
+    "güzel aldırmazlık"
+   ],
+   "gerekce": "Metin: egonun şalteri (tarihçe paragrafı), numara yapmadığını göstermek gerekmez (= istemli değil), birincil/ikincil kazanç ve güzel aldırmazlık tanımları, nörolojik hastalık toplumdan sık. 'Madde kullanımına bağlı değil' bu yılın slaytında yok."
+  },
+  {
+   "birim": "psk-s13-b01",
+   "tur": "anlatim",
+   "bilgi": "Konversiyon Bozukluğu (epidemiyoloji/etiyoloji): Çatışmalara maruz kalan asker. Özdeşim sonucu görülebilir!",
+   "cumle": [
+    "Özdeşim, önemli bir kişinin belirtilerinin bilinçdışı örnek alınmasıdır ve yasta görülebilir; örneğin kalp krizinden ölen babanın göğüs ağrısı çocukta ortaya çıkabilir.",
+    "bastırılan ruhsal çatışmanın enerjisi bedensel belirtiye dönüştürülür."
+   ],
+   "anahtar": [
+    "özdeşim"
+   ],
+   "gerekce": "Özdeşim tanımı ve örneği metinde birebir; çatışma kökeni Freud-Breuer cümlesinde. 'Asker' örneği bu yılın slaytında yok, anlatıma girmedi."
+  },
+  {
+   "birim": "psk-s13-b01",
+   "tur": "anlatim",
+   "bilgi": "Konversiyon Bozukluğu – güzel aldırmazlık tanımı: ani başlangıçlı. → ciddi belirtilere rağmen buna uygunsuz davranır.",
+   "cumle": [
+    "Güzel aldırmazlık, Fransızca adıyla la belle indifférence, ciddi belirtiye karşın uygunsuz kayıtsızlıktır.",
+    "başlangıç çoğunlukla anidir ve akut olguların büyük kısmı kısa sürede geriler."
+   ],
+   "anahtar": [
+    "güzel aldırmazlık",
+    "uygunsuz"
+   ],
+   "gerekce": "Güzel aldırmazlık tanımı (ciddi belirtiye karşın uygunsuz kayıtsızlık) ve ani başlangıç (gidiş paragrafı) metinde birebir."
+  },
+  {
+   "birim": "psk-s13-b01",
+   "tur": "celiski",
+   "bilgi": "Konversiyon Bozukluğu (sol kenar, okla): ani başlangıçlı; akut olguların %95'i kendiliğinden geriler",
+   "sayfa": 39,
+   "slayt_alinti": "akut olguların büyük",
+   "gerekce": "2026-27 s39 '%95' sayısını vermiyor ('akut olguların büyük kısmı kısa sürede geriler'); sayı yazılmadı (A1a uyarısı, kural 28). Ani başlangıç anlatımda var."
+  },
+  {
+   "birim": "psk-s13-b01",
+   "tur": "anlatim",
+   "bilgi": "Yapay Bozukluk (Factitious Disorder): = tıbbi ilgi görmek için hastalığı taklit eder, başlatır, alevlendirir. Mortalite yaygın. Amaç hasta rolü yapmak. Birincil amaç görevlerden kaçma değil!",
+   "cumle": [
+    "yapay bozuklukta belirti bilinçli üretilir ama amaç bilinçdışıdır, hasta rolü.",
+    "A ölçütü bedensel ya da ruhsal belirtilerin aldatmaya dayalı uydurulması ya da hastalık ve yaralanma oluşturulmasıdır.",
+    "Gelişen iki taraflı böbrek yetmezliği sonucunda yaşamını yitirdi.",
+    "O soruda en güçlü çeldirici simülasyon, yani temaruzdu; ikisinde de belirti bilinçli üretilir ama yapay bozuklukta dış ödül yoktur, amaç hasta rolüdür."
+   ],
+   "anahtar": [
+    "hasta rol"
+   ],
+   "gerekce": "Metin: belirti bilinçli üretilir/amaç hasta rolü, A ölçütü (uydurma ya da hastalık oluşturma = taklit/başlatma), ölümle biten olgu, temaruzdan ayrım (dış ödül yok = görevden kaçma değil). 'Mortalite yaygın' oranı slaytta yok; yalnız olgu örneği var."
+  }
+ ]
+}

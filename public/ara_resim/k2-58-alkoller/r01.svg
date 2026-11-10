@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<linearGradient id="zar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#fef3c7"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oke" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Sıfır derece kinetiği: etanol saatte sabit miktarda yıkılır</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Doymuş enzim kapısı, doğrusal düşen kan düzeyi ve bir içki eşdeğeri · slayt 3–4</text>
+<rect x="30" y="95" width="540" height="330" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · Doymuş enzim = sabit kapasiteli çıkış kapısı</text>
+<path d="M300 170 C250 150 160 160 130 210 C105 255 140 320 210 335 C280 350 330 330 380 300 C430 270 450 220 420 185 C390 150 340 185 300 170 Z" stroke="#6d28d9" stroke-width="3" fill="#ede9fe" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="310" y="215" font-size="15" fill="#6d28d9" text-anchor="middle" font-weight="bold">KARACİĞER</text>
+<text x="310" y="233" font-size="13" fill="#6d28d9" text-anchor="middle" font-style="italic">ADH enzimleri (sitozol)</text>
+<circle cx="70" cy="190" r="11" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="95" cy="230" r="11" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="70" cy="270" r="11" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="95" cy="310" r="11" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="70" cy="350" r="11" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="120" cy="190" r="11" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<circle cx="120" cy="350" r="11" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="95" y="390" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">etanol molekülleri</text>
+<text x="95" y="408" font-size="13" fill="#2563eb" text-anchor="middle">kuyrukta (kan)</text>
+<line x1="135" y1="262" x2="190" y2="262" stroke="#2563eb" stroke-width="3" marker-end="url(#okb)"/>
+<rect x="190" y="235" width="26" height="54" rx="4" fill="#fff" stroke="#6d28d9" stroke-width="2.5"/>
+<text x="203" y="228" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="bold">kapı</text>
+<line x1="400" y1="262" x2="470" y2="262" stroke="#ea580c" stroke-width="3" marker-end="url(#okt)"/>
+<circle cx="490" cy="262" r="11" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="490" y="290" font-size="14" fill="#ea580c" text-anchor="middle" font-weight="bold">asetaldehid</text>
+<text x="175" y="395" font-size="13" fill="#1e293b" text-anchor="start">Kapıdan saatte hep aynı sayıda molekül geçer;</text>
+<text x="175" y="413" font-size="13" fill="#1e293b" text-anchor="start">kuyruk uzasa da hız değişmez.</text>
+<text x="60" y="445" font-size="14" fill="#1e293b" text-anchor="start">Çoğu ilaç: birinci derece → düzey yükseldikçe yıkım hızlanır.</text>
+<text x="60" y="464" font-size="14" fill="#1e293b" text-anchor="start">Etanol: sıfır derece → enzim doymuş, hız zaman ve</text>
+<text x="60" y="483" font-size="14" fill="#1e293b" text-anchor="start">konsantrasyondan bağımsız.</text>
+<text x="60" y="505" font-size="14" fill="#6d28d9" text-anchor="start" font-weight="bold">Bu yüzden ayılma süresi içilen içki sayısıyla doğru orantılı uzar.</text>
+<rect x="600" y="95" width="570" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="620" y="127" font-size="20" fill="#2563eb" text-anchor="start" font-weight="bold">B · Kan alkol düzeyi zamanla doğrusal düşer</text>
+<line x1="680" y1="480" x2="1120" y2="480" stroke="#0f172a" stroke-width="2" marker-end="url(#ok)"/>
+<line x1="680" y1="480" x2="680" y2="160" stroke="#0f172a" stroke-width="2" marker-end="url(#ok)"/>
+<text x="1125" y="500" font-size="14" fill="#0f172a" text-anchor="end">saat</text>
+<text x="670" y="155" font-size="14" fill="#0f172a" text-anchor="start">kan alkol düzeyi</text>
+<path d="M680 200 C740 390 860 450 1080 468" stroke="#64748b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<text x="910" y="410" font-size="13" fill="#64748b" text-anchor="start" font-style="italic">birinci derece (çoğu ilaç)</text>
+<path d="M680 200 L1040 470" stroke="#2563eb" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="255" font-size="15" fill="#2563eb" text-anchor="start" font-weight="bold">sıfır derece: doğrusal düşüş</text>
+<line x1="770" y1="480" x2="770" y2="486" stroke="#0f172a" stroke-width="2"/>
+<text x="770" y="502" font-size="13" fill="#0f172a" text-anchor="middle">1</text>
+<line x1="680" y1="267.5" x2="770" y2="267.5" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="860" y1="480" x2="860" y2="486" stroke="#0f172a" stroke-width="2"/>
+<text x="860" y="502" font-size="13" fill="#0f172a" text-anchor="middle">2</text>
+<line x1="680" y1="335.0" x2="860" y2="335.0" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="950" y1="480" x2="950" y2="486" stroke="#0f172a" stroke-width="2"/>
+<text x="950" y="502" font-size="13" fill="#0f172a" text-anchor="middle">3</text>
+<line x1="680" y1="402.5" x2="950" y2="402.5" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="1040" y1="480" x2="1040" y2="486" stroke="#0f172a" stroke-width="2"/>
+<text x="1040" y="502" font-size="13" fill="#0f172a" text-anchor="middle">4</text>
+<line x1="680" y1="470.0" x2="1040" y2="470.0" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="700" y="180" font-size="14" fill="#2563eb" text-anchor="start" font-weight="bold">her saat ≈ 7–10 g alkol (≈ bir içki) yıkılır</text>
+<rect x="640" y="545" width="160" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="720.0" y="579.6666666666666" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">300 mL bira</text>
+<rect x="815" y="545" width="160" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="895.0" y="579.6666666666666" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">105 mL şarap</text>
+<rect x="990" y="545" width="170" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="1075.0" y="579.6666666666666" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">30 mL 80° distile</text>
+<text x="885" y="630" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">= bir içki ≈ 7–10 g (150–220 mmol) etanol</text>
+<text x="885" y="652" font-size="13" fill="#475569" text-anchor="middle">Toplamın %90'ı karaciğerde oksitlenir; az ama sabit bir oran akciğerden atılır → nefes testi.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 3–4 · mavi = etanol, turuncu = asetaldehid, mor = ADH enzimi, gri = kıyas (birinci derece kinetik)</text>
+</svg>

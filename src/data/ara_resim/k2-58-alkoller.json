@@ -1,0 +1,207 @@
+{
+ "key": "k2-58-alkoller",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Sıfır derece kinetiği: etanol saatte sabit miktarda yıkılır",
+   "aciklama": "Etanolü yıkan enzimler doyduğu için yıkım hızı kan düzeyinden bağımsızdır; tipik erişkin saatte yedi ile on gram, yani yaklaşık bir içki yıkar ve kan düzeyi doğrusal düşer.",
+   "adimlar": [
+    "1. Etanol kanda kuyruk oluşturur; karaciğerdeki ADH kapısından saatte sabit sayıda molekül geçer.",
+    "2. Çoğu ilaçta düzey yükseldikçe yıkım hızlanır (birinci derece); etanolde hız sabittir (sıfır derece).",
+    "3. Saatte 7–10 g ≈ bir içki (300 mL bira, 105 mL şarap, 30 mL distile).",
+    "4. Alkolün %90'ı karaciğerde oksitlenir; akciğerden atılan sabit oran nefes testinin temelidir."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 1,
+   "bitis": 2,
+   "kaynak": [
+    3,
+    4
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Hepatosit içinde etanolün yıkımı: üç enzim, üç adres",
+   "aciklama": "Etanol sitozolde ADH ile, kronik içicide ayrıca mikrozomda indüklenmiş MEOS ile asetaldehide; asetaldehid mitokondride ALDH ile asetata çevrilir; fomepizol ADH'yi, disülfiram ALDH'yi bloke eder, NADH fazlası laktik asidoz ve hipoglisemi yapar.",
+   "adimlar": [
+    "1. Etanol hücreye girer; sitozolik ADH onu asetaldehide çevirirken NAD+ → NADH olur.",
+    "2. Kronik alkolde mikrozomal MEOS (CYP2E1, NADPH) indüklenir: diğer ilaçların klirensi ve serbest radikaller artar.",
+    "3. Asetaldehid mitokondriyal ALDH ile asetata oksitlenir; asetat CO2 + su ya da asetil-CoA olur.",
+    "4. Fomepizol ADH'yi, disülfiram ALDH'yi bloke eder; disülfiramla asetaldehid birikir.",
+    "5. Biriken NADH, NAD+/NADH oranını düşürür → laktik asidoz ve hipoglisemi."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 3,
+   "bitis": 7,
+   "kaynak": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Etanol sinapsta iki yönden baskılar: GABA-A güçlenir, NMDA susar",
+   "aciklama": "Akut etanol GABA'nın GABA-A reseptöründeki etkisini artırıp glutamatın NMDA kanalını açmasını engeller; sedasyon GABA'dan, bellek kaybı NMDA'dan gelir ve kan düzeyi yükseldikçe sedasyondan komaya basamaklanır.",
+   "adimlar": [
+    "1. GABA, GABA-A kanalını açar; etanol bu etkiyi güçlendirir → nöron daha çok susar (sedasyon, anksiyoliz).",
+    "2. Glutamatın NMDA katyon kanalını açması etanolle engellenir → bellek kaybı.",
+    "3. Kanıt: GABA-mimetikler etkiyi artırır, GABA-A antagonistleri azaltır.",
+    "4. Tablo 23-1: 50–100 sedasyon → 100–200 ataksi → 200–300 stupor → 300–400 koma → >400 solunum depresyonu."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 8,
+   "bitis": 10,
+   "kaynak": [
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Alkolik karaciğer hastalığı: üç mekanizma, üç basamak",
+   "aciklama": "Etanol yıkımının metabolik değişiklikleri, yağ asidi dengesinin bozulması ve bağırsaktan sızan endotoksinlerin Kupffer hücrelerini uyarması karaciğeri yağlanmadan hepatite, oradan siroz ve varis kanamasına götürür.",
+   "adimlar": [
+    "1. Etanol yıkımı NADH fazlası ve asetaldehid üretir (metabolik değişiklik).",
+    "2. Yağ asidi yıkımı azalır, sentezi artar → hepatositte yağ birikir (yağlanma, geri dönüşlü).",
+    "3. Alkol bağırsak duvarını bozar → endotoksinler portal venle karaciğere → Kupffer hücreleri aktive → inflamasyon (alkolik hepatit).",
+    "4. Süreç siroza ilerler; portal basınç artar, özofagus/mide varisleri yırtılabilir.",
+    "5. Risk günlük miktar + süreye bağlıdır; kadınlar ve hepatit B/C taşıyıcıları daha duyarlıdır."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 13,
+   "bitis": 14,
+   "kaynak": [
+    15,
+    16
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Tolerans ve yoksunluk: baskılanan reseptör çoğalır, etanol kalkınca aşırı uyarılır",
+   "aciklama": "Sürekli etanol NMDA ve kalsiyum kanallarını çoğaltıp GABA-A yanıtını azaltır (tolerans); etanol kesilince çoğalmış uyarıcı reseptörler baskısız kalır ve nöbete varan yoksunluk doğar; benzodiazepin aynı GABA-A sistemiyle etanolün yerine geçer.",
+   "adimlar": [
+    "1. Normalde uyarıcı NMDA ile baskılayıcı GABA-A dengededir.",
+    "2. Kronik etanol NMDA'yı baskılar, GABA-A'yı güçlendirir; hücre NMDA/Ca kanalını artırır, GABA-A yanıtını azaltır → tolerans.",
+    "3. Etanol kesilince çoğalmış NMDA/Ca kanalı baskısız kalır → hipereksitabilite, nöbet, deliryum tremens.",
+    "4. GABAerjik sedatif-hipnotik alkolün yerine geçer; doz yavaş azaltılarak reseptörler normale döndürülür."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 16,
+   "bitis": 18,
+   "kaynak": [
+    17,
+    18,
+    19
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Alkol–ilaç etkileşimi: akut yavaşlatır, kronik hızlandırır",
+   "aciklama": "Akut alkol karaciğer enzimlerini ve kan akımını azaltarak diğer ilaçların yıkımını yavaşlatır; kronik alkol P450'yi indükleyip yıkımı hızlandırır ve asetaminofeni hepatotoksik metabolite çevirir; aynı GABA-A sisteminde sedatif-hipnotiklerle aditif depresyon oluşur.",
+   "adimlar": [
+    "1. Akut alkol: enzim aktivitesi ve karaciğer kan akımı azalır → fenotiazin, trisiklik, sedatif-hipnotik düzeyleri yükselir.",
+    "2. Kronik alkol (günde ≥3 içki): P450 indüksiyonu → asetaminofenin reaktif hepatotoksik metaboliti artar.",
+    "3. Farmakodinamik: etanol + sedatif-hipnotik aynı GABA-A'da toplanır → aditif MSS depresyonu.",
+    "4. Vazodilatör ve oral hipoglisemiklerin etkisi de potansiyalize olur."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 34,
+   "bitis": 35,
+   "kaynak": [
+    31,
+    32
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Alkol yoksunluğu: saat saat ne olur, ne verilir?",
+   "aciklama": "Kesilmeden 6–8 saat sonra tremor ve otonom belirtiler, ilk 1–5 günde nöbet ve halüsinasyon, 48–72 saatte deliryum tremens gelir; tedavide elektrolit ve tiamin verilir, alkol yerine uzun etkili benzodiazepin konup yavaş azaltılır, karaciğer hastasında lorazepam/oksazepam seçilir.",
+   "adimlar": [
+    "1. 6–8 saat: nabız ve kan basıncı artar, tremor, anksiyete, uykusuzluk (1–2 günde azalır, hafif biçimde aylarca sürebilir).",
+    "2. İlk 1–5 gün: yoksunluk nöbetleri ve alkolik halüsinasyonlar.",
+    "3. 48–72 saat: deliryum tremens (deliryum, ajitasyon, otonom düzensizlik, hafif ateş, terleme).",
+    "4. Amaç nöbet, deliryum, aritmiyi önlemek: K/Mg/fosfat düzelt, tiamin herkese.",
+    "5. Uzun etkili sedatif-hipnotik koy, yavaş azalt; karaciğer hastasında lorazepam/oksazepam."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 38,
+   "bitis": 41,
+   "kaynak": [
+    35,
+    36,
+    37,
+    38
+   ]
+  },
+  {
+   "id": "r08",
+   "baslik": "Alkol bağımlılığında üç onaylı ilaç üç farklı yerden tutar",
+   "aciklama": "Naltrekson mü-opioid reseptörünü bloke ederek alkolün ödülünü keser, akamprosat zayıf NMDA antagonizması ve GABA-A aktivasyonuyla etanolsüz dengesizliği yumuşatır, disülfiram ALDH'yi bloke edip asetaldehidi biriktirerek içkiyi cezalandırır.",
+   "adimlar": [
+    "1. Naltrekson: mü-opioid antagonisti; özlem ve yeniden başlamayı azaltır; 50 mg/gün oral ya da 4 haftada bir im; hepatotoksisite.",
+    "2. Akamprosat: zayıf NMDA antagonisti + GABA-A aktivatörü; 3 × 333 mg; ciddi böbrek yetmezliğinde kullanılmaz.",
+    "3. Disülfiram: ALDH inhibisyonu → asetaldehid birikimi → flushing, baş ağrısı, bulantı, hipotansiyon; tam etki 12 saat.",
+    "4. Onaylı üçlü ↔ onaysızlar (nalmefen, topiramat, gabapentin, valproat, baklofen, SSRI, ondansetron).",
+    "5. Naltrekson + disülfiram ikisi de hepatotoksik: birlikte verilmez."
+   ],
+   "svg": "r08.svg",
+   "paragraf": 46,
+   "bitis": 47,
+   "kaynak": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+   ]
+  },
+  {
+   "id": "r09",
+   "baslik": "Metanol zehirlenmesi: zehir metabolitlerdir, tedavi ilk basamağı kapatır",
+   "aciklama": "Metanol ADH ile formaldehide, ALDH ile formata dönüşür; toksisite ve 6–30 saatlik gecikme bu metabolitlerden gelir, anyon açıklı asidoz ve kar fırtınası görme bozukluğu yapar; fomepizol ya da etanol ADH'yi kapatır, hemodiyaliz temizler, bikarbonat asidozu dengeler, folat formatı CO2'ye yıkar.",
+   "adimlar": [
+    "1. Metanol → (ADH) formaldehid → (ALDH) format → (folat-bağımlı) CO2 + H2O; zehir formaldehid ve formattır.",
+    "2. Dönüşüm yavaştır: ciddi belirtiler 6–30 saat gecikir; anyon açıklı asidoz ve görme bozukluğu gelişir.",
+    "3. Tedavi 1: fomepizol (ADH inhibitörü) ya da ADH'ye ilgisi daha yüksek iv etanol ilk basamağı kapatır.",
+    "4. Tedavi 2: hemodiyaliz metanol ve formatı uzaklaştırır (>50 mg/dL). Tedavi 3: bikarbonatla alkalinizasyon.",
+    "5. Folinik/folik asit formatın CO2'ye yıkımını hızlandırır; fomepizol kendi yıkımını indüklediği için 48 saatte doz artırılır."
+   ],
+   "svg": "r09.svg",
+   "paragraf": 51,
+   "bitis": 53,
+   "kaynak": [
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+   ]
+  },
+  {
+   "id": "r10",
+   "baslik": "Etilen glikol: üç evre ve metanolden ayıran bulgu",
+   "aciklama": "Etilen glikol kendisi görece zararsızken aldehid ve oksalata dönüşür: önce eksitasyon ve MSS depresyonu, 4–12 saatte şiddetli metabolik asidoz, sonra oksalatın tübüllerde birikmesiyle böbrek yetmezliği; görme belirtisi olmadan asidoz ve idrarda oksalat kristali tanıyı koydurur, tedavi fomepizol ya da etanoldür.",
+   "adimlar": [
+    "1. İlk saatler: geçici eksitasyon → MSS depresyonu.",
+    "2. 4–12 saat: laktat ve asit metabolitler → şiddetli anyon açıklı asidoz.",
+    "3. Sonra oksalat böbrek tübüllerinde birikir → böbrek yetmezliği.",
+    "4. Metanolde görme bozukluğu vardır; etilen glikolde görme belirtisi yoktur, idrarda oksalat kristali görülür.",
+    "5. Tedavi aynı: fomepizol iv (15 → 10 → 15 mg/kg), alternatif etanol; serum düzeyi 20–30 mg/dL altına inene dek."
+   ],
+   "svg": "r10.svg",
+   "paragraf": 54,
+   "bitis": 55,
+   "kaynak": [
+    51,
+    52
+   ]
+  }
+ ]
+}

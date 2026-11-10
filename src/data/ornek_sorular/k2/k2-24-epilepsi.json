@@ -1,0 +1,2506 @@
+{
+ "id": "k2-24-epilepsi",
+ "sira": 24,
+ "kurul": 2,
+ "ders": "Nöroloji",
+ "konu": "Epilepsi",
+ "ogretim_uyesi": "Dr. Dursun Ceylan",
+ "tarih": "2026-11-09",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Epilepsi nöbeti ile epilepsi hastalığını tanımlar; klinik pratik tanımın üç durumunu (24 saat arayla iki nöbet, tek nöbet + 10 yılda ≥%60 risk, sendrom) ve tetiklenmiş, refleks ve akut semptomatik nöbet ayrımını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-24-epilepsi-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Beyinde anormal, aşırı ya da senkron nöronal aktiviteye bağlı geçici semptom ve bulguların belirmesi aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "Epilepsi nöbeti",
+      "B": "Epilepsi hastalığı",
+      "C": "Paroksizmal atak",
+      "D": "Nöbet oluşturma yatkınlığı",
+      "E": "Epilepsi sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Anormal, aşırı ya da senkron nöronal aktiviteye bağlı geçici semptom ve bulgular epilepsi nöbetinin tanımıdır; hastalık ise nöbet üretmeye süregelen yatkınlıktır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Epilepsi nöbeti, beyinde anormal, aşırı ya da senkron nöronal aktiviteye bağlı geçici semptom ve bulguların ortaya çıkmasıdır. Kökteki tanım sözcüğü sözcüğüne bu kavrama ait olduğu için doğru cevaptır (s. 3).",
+      "B": "Epilepsi hastalığı, süregelen nöbet oluşturma yatkınlığı ile bunun nörobiyolojik, kognitif ve psikososyal sonuçlarıyla tanımlanan bir beyin hastalığıdır. Kökte anlatılan tek bir geçici olay olduğu için hastalığın tanımıyla örtüşmez (s. 3).",
+      "C": "Paroksizmal atak, belirtilerin aralıklı ataklar hâlinde aniden gelip geçmesini anlatan genel bir terimdir ve epilepsinin seyrini tanımlar. Atakların nöronal kaynağını tanımlamadığı için kökteki tanımla örtüşmez (s. 2).",
+      "D": "Nöbet oluşturma yatkınlığı, beynin süregelen biçimde nöbet üretmeye eğilimli olmasıdır ve epilepsi hastalığının temel özelliğidir. Kök tek bir geçici olayı anlattığı için süregelen bir eğilim olan bu kavram uymaz (s. 3).",
+      "E": "Epilepsi sendromu, klinik pratik tanımda tek başına epilepsi hastalığı koydurabilen durumlardan biridir ve belirli özelliklerin bir arada bulunduğu tabloyu anlatır. Tek bir geçici nöbet olayı sendrom değildir, bu nedenle kökle örtüşmez (s. 4)."
+     },
+     "bilgi": [
+      3,
+      4,
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Beyin içerisinde anormal, aşırı veya senkron"
+     },
+     "s": 3,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Tek bir tetiklenmemiş nöbet geçiren kişide epilepsi hastalığından söz edebilmek için 10 yıl içindeki nöbet tekrarlama riskinin en az ne kadar olması gerekir?",
+     "secenekler": {
+      "A": "%30",
+      "B": "%40",
+      "C": "%50",
+      "D": "%60",
+      "E": "%75"
+     },
+     "dogru": "D",
+     "aciklama": "Klinik pratik tanımda tek tetiklenmemiş ya da refleks nöbette, 10 yıllık tekrar riski iki tetiklenmemiş nöbetteki riske benzer olmalıdır; bu oran en az %60'tır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Yüzde otuz, slaytlarda başka bir bağlamda geçen yakın bir sayısal değerdir. Tek nöbetten sonra epilepsi demek için aranan eşik bunun iki katı olduğundan bu oran yetmez (s. 4).",
+      "B": "Yüzde kırk, tanım için gereken eşiğin altında kalan sayısal bir çeldiricidir. Bu düzeydeki bir risk iki tetiklenmemiş nöbetteki riske benzemediği için tanımı karşılamaz (s. 4).",
+      "C": "Yüzde elli, eşiğe yakın ama yine de altında kalan bir değerdir. Klinik pratik tanım iki nöbetteki riske benzerlik ister ve sınırı daha yüksek koyduğu için bu oran tanıyı koydurmaz (s. 4).",
+      "D": "Yüzde altmış, tek tetiklenmemiş nöbette 10 yıllık tekrar riskinin iki tetiklenmemiş nöbet varlığındaki riske benzediğini gösteren sınırdır. Bu eşiğe ulaşılınca tek nöbetle epilepsi hastalığı tanısı konabildiği için doğru cevaptır (s. 4).",
+      "E": "Yüzde yetmiş beş, eşikten yüksek bir değerdir ve tanım için şart koşulmaz. Tanım en az yüzde altmışı yeterli saydığı için daha yüksek bir oranı zorunlu tutmak yanlıştır (s. 4)."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "riske benzer olması (en az %60)"
+     },
+     "s": 4,
+     "dayanak": [
+      "profil"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q03",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Klinik pratik amaçlı tanımlamaya göre aşağıdakilerden hangileri epilepsi hastalığı tanısı koydurur?\nI. Yirmi dört saat arayla en az iki tetiklenmemiş nöbet\nII. Bir tetiklenmemiş nöbet ve 10 yılda en az %60 tekrarlama riski\nIII. Epilepsi sendromlarından birinin varlığı\nIV. Kafa travmasının akut döneminde geçirilen iki nöbet",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "I ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Klinik pratik tanımın üç durumu; 24 saat arayla iki tetiklenmemiş nöbet, tek nöbet ve 10 yılda en az %60 risk ile epilepsi sendromudur. Kafa travmasının akut dönemindeki nöbetler tetiklenmiş sayılır ve epilepsi kapsamına girmez (s. 4–5).",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci öncüller tanımın ilk iki durumudur ama eksiktir. Epilepsi sendromlarından birinin varlığı da tek başına tanı koydurduğu için üçüncü öncülün dışarıda kalması seçeneği yanlış yapar (s. 4).",
+      "B": "Yirmi dört saat arayla iki tetiklenmemiş nöbet, tek nöbetle birlikte en az yüzde altmış tekrar riski ve epilepsi sendromu klinik pratik tanımın üç durumudur. Travmanın akut dönemindeki nöbetler tetiklenmiş sayıldığı için dışarıda bırakan bu seçenek doğru cevaptır (s. 4–5).",
+      "C": "Birinci ve üçüncü öncüller doğrudur ama ikinci durum unutulmuştur. Tek tetiklenmemiş nöbette 10 yıllık tekrar riskinin en az yüzde altmış olması da tanı koydurduğu için seçenek eksiktir (s. 4).",
+      "D": "İkinci ve üçüncü öncüller doğru olsa da dördüncü öncül tetiklenmiş nöbeti anlatır. Kafa travmasının akut döneminde gelen nöbetler epilepsi hastalığı kapsamında değerlendirilmediği için seçenek yanlıştır (s. 5).",
+      "E": "Dört öncülü birden kabul etmek travmanın akut dönemindeki nöbetleri de epilepsi saymak olur. Bu nöbetler eşiği geçici olarak düşen beyinde geliştiği ve epilepsi tanısı koydurmadığı için seçenek yanlıştır (s. 5)."
+     },
+     "bilgi": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": [
+      "b3d289432ab3"
+     ],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Yirmi dört saat ara ile en az iki tetiklenmemiş"
+     },
+     "s": 4,
+     "dayanak": [
+      "profil",
+      "cikmis:b3d289432ab3"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aralıklı ışık uyaranıyla tetiklenen nöbetler aşağıdakilerden hangisi olarak nitelenir?",
+     "secenekler": {
+      "A": "Tetiklenmiş nöbet",
+      "B": "Akut semptomatik nöbet",
+      "C": "Refleks özellikli nöbet",
+      "D": "Spontan (tetiklenmemiş) nöbet",
+      "E": "Epilepsi sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Aralıklı ışık ya da sıcak su gibi uyaranlarla gelen nöbetlerde öncesinde bir tetikleyici olsa da bunlar tetiklenmiş nöbet sayılmaz, refleks özellikli olarak nitelenir ve epilepsi tanımına girer (s. 4–5).",
+     "sik_aciklamalari": {
+      "A": "Tetiklenmiş nöbet, metabolik, toksik, travmatik ya da serebrovasküler akut bir nedenle eşiği düşen beyinde gelişen nöbettir. Işık uyaranı bir tetikleyici gibi görünse de slayt bu nöbetleri bu grupta kabul etmediği için uymaz (s. 5).",
+      "B": "Akut semptomatik nöbet, tetiklenmiş nöbetin öteki adıdır ve sistemik ya da akut beyin olayıyla yakın zamanlı ortaya çıkar. Işıkla gelen nöbetin arkasında akut bir hastalık bulunmadığı için bu ad kullanılmaz (s. 5).",
+      "C": "Refleks özellikli nöbet, aralıklı ışık ya da sıcak su gibi belirli bir uyaranın düzenli olarak başlattığı nöbettir. Slayt bu nöbetleri tetiklenmiş nöbetten ayırıp refleks özellikli diye nitelediği için doğru cevaptır (s. 5).",
+      "D": "Spontan nöbet, hiçbir uyaran olmadan kendiliğinden gelen tetiklenmemiş nöbettir. Işık uyaranıyla başlayan nöbette belirli bir başlatıcı bulunduğu için bu ad uymaz (s. 4).",
+      "E": "Epilepsi sendromu, klinik pratik tanımın üçüncü durumudur ve tek bir nöbet türünü değil belirli özelliklerin bir araya geldiği tabloyu anlatır. Işıkla tetiklenen nöbetin niteliğini anlatan ad bu değildir (s. 4)."
+     },
+     "bilgi": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": [
+      "b3d289432ab3"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "refleks özellikli olarak nitelenirler"
+     },
+     "s": 5,
+     "dayanak": [
+      "ogrenci:B:noro-s02-b02",
+      "cikmis:b3d289432ab3"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangileri tetiklenmiş (akut semptomatik) nöbete yol açan nedenlerdendir?\nI. Metabolik ya da toksik bir neden\nII. Kafa travması\nIII. Serebrovasküler hastalık\nIV. Aralıklı ışık uyaranı",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Metabolik ya da toksik neden, kafa travması ve serebrovasküler hastalık öncesinde normal olan beynin nöbet eşiğini akut dönemde düşürür; aralıklı ışık uyaranıyla gelen nöbet ise tetiklenmiş sayılmaz, refleks özellikli nöbettir (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Yalnız birinci öncül, metabolik ve toksik nedenleri kapsar ama eksiktir. Slayt kafa travmasını ve serebrovasküler hastalığı da tetiklenmiş nöbet nedeni olarak saydığı için bu seçenek yetersiz kalır (s. 5).",
+      "B": "Birinci ve ikinci öncüller doğrudur ama serebrovasküler hastalık dışarıda kalmıştır. Serebrovasküler hastalık da akut dönemde nöbet eşiğini düşüren nedenlerden biri olduğu için seçenek eksiktir (s. 5).",
+      "C": "Metabolik ya da toksik neden, kafa travması ve serebrovasküler hastalık, öncesinde normal olan beynin nöbet eşiğini akut dönemde düşüren nedenlerdir. Aralıklı ışık uyaranı refleks nöbete yol açtığı ve bu grupta sayılmadığı için dışarıda bırakılan bu seçenek doğru cevaptır (s. 5).",
+      "D": "İkinci ve üçüncü öncüller doğru olsa da dördüncü öncül refleks nöbeti anlatır. Işıkla tetiklenen nöbet, öncesinde bir uyaran olmasına karşın tetiklenmiş nöbet grubunda kabul edilmediği için seçenek yanlıştır (s. 5).",
+      "E": "Dört öncülü birden kabul etmek ışık uyaranını da tetiklenmiş nöbet nedeni saymak olur. Slayt bu uyaranla gelen nöbetleri refleks özellikli diye ayırdığı için seçenek yanlıştır (s. 5)."
+     },
+     "bilgi": [
+      9,
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": [
+      "b3d289432ab3"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "metabolik veya toksik bir nedenle veya kafa"
+     },
+     "s": 5,
+     "dayanak": [
+      "cikmis:b3d289432ab3",
+      "ogrenci:B:noro-s02-b02"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q06",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Tek tetiklenmemiş nöbet geçiren hastada aşağıdakilerden hangileri 10 yıllık nöbet tekrarlama riskini yüksek kabul ettiren örneklerdendir?\nI. Son birkaç ay içinde geçirilmiş serebrovasküler hastalık\nII. Nöbete yol açma olasılığı yüksek yapısal lezyon\nIII. EEG'de interiktal epileptiform aktivite\nIV. Nöbetin hipoglisemi sırasında gelmesi",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Slayt son aylardaki serebrovasküler hastalığı, epileptojen yapısal lezyonu ve EEG'de interiktal epileptiform aktiviteyi örnek verir; hipoglisemi sırasında gelen nöbet ise metabolik nedenle tetiklenmiş nöbettir (s. 5–6).",
+     "sik_aciklamalari": {
+      "A": "Yalnız birinci öncül, son aylardaki serebrovasküler hastalığı kapsar ama eksiktir. Yapısal lezyon ve EEG'deki interiktal epileptiform aktivite de slaytta aynı amaçla sayıldığı için bu seçenek uymaz (s. 6).",
+      "B": "Birinci ve üçüncü öncüller doğrudur ama ikinci öncül dışarıda kalmıştır. Nöbete yol açma olasılığı yüksek yapısal lezyon da yüksek riskin örneği olduğu için seçenek eksiktir (s. 6).",
+      "C": "İkinci öncül doğru olsa da dördüncü öncül tetiklenmiş nöbeti anlatır. Hipoglisemi metabolik bir neden olduğundan bu nöbet epilepsi kapsamında değerlendirilmez ve seçenek yanlış olur (s. 5).",
+      "D": "Son aylardaki serebrovasküler hastalık, epileptojen yapısal lezyon ve interiktal epileptiform aktivite slaytta tek nöbette yüksek tekrar riskinin örnekleridir. Üçü bir arada ve hipoglisemi dışarıda bırakıldığı için doğru cevaptır (s. 6).",
+      "E": "Dört öncülü birden kabul etmek hipoglisemi sırasında gelen nöbeti de saymak demektir. Bu nöbet metabolik nedenle tetiklenmiş nöbettir ve epilepsi hastalığı kapsamında değerlendirilmediği için seçenek yanlıştır (s. 5)."
+     },
+     "bilgi": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": [
+      "b3d289432ab3"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "EEG’de interiktal epileptiform aktivitenin varlığı"
+     },
+     "s": 6,
+     "dayanak": [
+      "profil",
+      "cikmis:b3d289432ab3"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b3d289432ab3",
+     "soru": "Epilepsi nöbet tetikleyicileri için aşağıdakilerden hangisi ya da hangileri doğrudur?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Hipoglisemi",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "B",
+       "text": "Alkol kullanımı",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Kafa travması",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Merkezi sinir sistemi enfeksiyonları",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Hepsi",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      }
+     ],
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "İlk nöbette tekrar riskini artıran durumları ve kat sayılarını, nörogörüntüleme ve EEG'de tekrar riski yüksek bulguları sıralar.",
+   "sorular": [
+    {
+     "id": "k2-24-epilepsi-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "İlk nöbetle gelen erişkin hastada aşağıdaki durumlardan hangisi 1–5 yıl içinde nöbet tekrarlama riskini en fazla artırır?",
+     "secenekler": {
+      "A": "EEG'de epileptiform anomali varlığı",
+      "B": "Noktürnal nöbet varlığı",
+      "C": "Nöbetin uykudan uyanırken gelmesi",
+      "D": "Nörogörüntülemede epileptojenik lezyon",
+      "E": "Akut beyin hasarıyla gelen nöbet"
+     },
+     "dogru": "E",
+     "aciklama": "Sayılan dört durumdan akut beyin hasarıyla gelen nöbet riski 2,55 kat artırır; bu değer epileptojenik lezyon (2,44), EEG anomalisi (2,16) ve noktürnal nöbetten (2,1) yüksektir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "EEG'de epileptiform anomali, beyindeki anormal elektriksel boşalımın kayıtta görülmesidir ve 1–5 yılda riski 2,16 kat artırır. Bu artış akut beyin hasarındakinden düşük olduğu için en yüksek risk değildir (s. 7).",
+      "B": "Noktürnal nöbet, gece uykuda gelen nöbettir ve 1–4 yılda tekrar riskini 2,1 kat artırır. Sayılan dört durum içinde en düşük artış bu olduğundan doğru cevap olamaz (s. 7).",
+      "C": "Nöbetin uykudan uyanırken gelmesi slaytta ayrı bir risk durumu olarak sayılmaz; listede gece uykudaki noktürnal nöbet yer alır. Kat sayısı verilmiş bir risk durumu olmadığı için en fazla artıran seçenek olamaz (s. 7).",
+      "D": "Epileptojenik lezyon, nörogörüntülemede nöbet üretme olasılığı yüksek yapısal bir bozukluğun gösterilmesidir ve 1–4 yılda riski 2,44 kat artırır. Akut beyin hasarına yakın ama ondan düşük olduğu için en fazla artıran değildir (s. 7).",
+      "E": "Akut bir beyin hasarıyla gerçekleşen nöbet, beynin yeni bir hasarla nöbete yatkın hâle geldiği durumdur ve 1–5 yılda riski 2,55 kat artırır. Slayttaki en yüksek kat sayı bu olduğu için doğru cevaptır (s. 7)."
+     },
+     "bilgi": [
+      15,
+      16,
+      17,
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "1-5 yıl içerisinde nöbet tekrarlama riski 2,55 kat"
+     },
+     "s": 7,
+     "dayanak": [
+      "profil"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İlk nöbetle gelen erişkinde noktürnal nöbet varlığı 1–4 yıl içinde nöbet tekrarlama riskini yaklaşık kaç kat artırır?",
+     "secenekler": {
+      "A": "1,5",
+      "B": "2,1",
+      "C": "2,44",
+      "D": "2,55",
+      "E": "2,16"
+     },
+     "dogru": "B",
+     "aciklama": "Noktürnal nöbet varlığı 1–4 yılda tekrar riskini 2,1 kat artırır; 2,44 epileptojenik lezyona, 2,55 akut beyin hasarına aittir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Bir buçuk kat, slaytta hiçbir risk durumuna verilmeyen düşük bir değerdir. Noktürnal nöbetin artırdığı risk bundan yüksek olduğu için bu sayı uymaz (s. 7).",
+      "B": "İki virgül bir kat, gece uykuda gelen noktürnal nöbetin 1–4 yıl içinde tekrar riskini artırma oranıdır. Slayttaki dördüncü maddenin değeri bu olduğu için doğru cevaptır (s. 7).",
+      "C": "İki virgül kırk dört kat, nörogörüntülemede epileptojenik lezyon gösterilmesinin artırdığı risktir. Başka bir durumun değeri olduğu için noktürnal nöbet için yanlıştır (s. 7).",
+      "D": "İki virgül elli beş kat, akut bir beyin hasarıyla gerçekleşen nöbetin 1–5 yıldaki risk artışıdır. Listenin en yüksek değeri olsa da noktürnal nöbete ait olmadığı için yanlıştır (s. 7).",
+      "E": "İki virgül on altı kat, EEG'de epileptiform anomali varlığının 1–5 yıl içindeki risk artışıdır. Başka bir duruma ait olduğu için noktürnal nöbet için yanlıştır (s. 7)."
+     },
+     "bilgi": [
+      15,
+      16,
+      17,
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "nöbet tekrarlama riski 2,1 kat"
+     },
+     "s": 7,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q09",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "İlk nöbetle gelen erişkin hastada aşağıdakilerden hangileri nöbet tekrarlama riskini artırır?\nI. Akut bir beyin hasarıyla gerçekleşen nöbet\nII. EEG'de epileptiform anomali\nIII. Noktürnal nöbet\nIV. Nöbetin gündüz uyanıkken gelmesi",
+     "secenekler": {
+      "A": "Yalnız II",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Akut beyin hasarıyla gelen nöbet (2,55 kat), EEG'de epileptiform anomali (2,16 kat) ve noktürnal nöbet (2,1 kat) tekrar riskini artırır; gündüz uyanıkken gelmek slayttaki risk durumlarından biri değildir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Yalnız ikinci öncül, EEG'deki epileptiform anomaliyi kapsar ama eksiktir. Akut beyin hasarı ve noktürnal nöbet de tekrar riskini artırdığı için bu seçenek yetersiz kalır (s. 7).",
+      "B": "Birinci ve üçüncü öncüller doğrudur ama EEG'deki epileptiform anomali dışarıda kalmıştır. Bu bulgu riski 2,16 kat artırdığı için seçenek eksiktir (s. 7).",
+      "C": "İkinci öncül doğru olsa da dördüncü öncül slayttaki risk durumlarından biri değildir. Gündüz uyanıkken gelen nöbet noktürnal nöbetin tersidir ve tekrar riskini artıran bir durum olarak sayılmadığı için seçenek yanlıştır (s. 7).",
+      "D": "Üçüncü öncül doğru, dördüncü öncül yanlıştır. Riski artıran gece uykuda gelen noktürnal nöbettir; gündüz nöbeti için böyle bir artış verilmediği için seçenek yanlıştır (s. 7).",
+      "E": "Akut beyin hasarıyla gelen nöbet, EEG'de epileptiform anomali ve noktürnal nöbet ilk nöbetten sonra tekrar riskini iki kattan fazla artıran durumlardır. Gündüz uyanıkken gelme bu listede olmadığı için üçünü bir arada veren seçenek doğru cevaptır (s. 7)."
+     },
+     "bilgi": [
+      15,
+      16,
+      17,
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Akut bir beyin hasarı ile gerçekleşen nöbetler"
+     },
+     "s": 7,
+     "dayanak": [
+      "profil"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi nöbet tekrarlama riskinin yüksek olduğu bilinen kortikal gelişim anomalilerinden biri değildir?",
+     "secenekler": {
+      "A": "Fokal kortikal displazi",
+      "B": "Tuberoskleroz",
+      "C": "Lizensefali",
+      "D": "Gangliogliom",
+      "E": "Hipotalamik hamartom"
+     },
+     "dogru": "D",
+     "aciklama": "Gangliogliom slaytta kortikal gelişim anomalileri altında değil, tümörler başlığında (düşük dereceli glial tümör ve DNET ile birlikte) sayılır (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Fokal kortikal displazi, korteksin bir bölgesinin gelişim sırasında düzensiz katmanlanmasıdır. Slayttaki kortikal gelişim anomalileri listesinin ilk maddesi olduğu için bu grupta yer alır (s. 8).",
+      "B": "Tuberoskleroz, beyinde kortikal tuberlerin oluştuğu ve nöbete yatkınlık yaratan bir gelişim bozukluğudur. Slayt onu kortikal gelişim anomalileri arasında saydığı için bu grupta yer alır (s. 8).",
+      "C": "Lizensefali, beyin yüzeyindeki kıvrımların gelişmediği düz korteks görünümüdür. Kortikal gelişim anomalileri listesinde sayıldığı için bu grupta yer alır (s. 8).",
+      "D": "Gangliogliom, nöronal ve glial hücrelerden oluşan ve nöbete yol açabilen bir beyin tümörüdür. Slaytta tümörler başlığı altında sayıldığı için kortikal gelişim anomalileri grubunda yer almaz ve doğru cevaptır (s. 8).",
+      "E": "Hipotalamik hamartom, hipotalamusta gelişim sırasında oluşan iyi huylu doku kitlesidir. Slayt onu kortikal gelişim anomalileri listesinin son maddesi olarak verdiği için bu grupta yer alır (s. 8)."
+     },
+     "bilgi": [
+      19,
+      20,
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Düşük “grade”li glial tümörler"
+     },
+     "s": 8,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b06"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi nöbet tekrarlama riskinin yüksek olduğu bilinen nörogörüntüleme bulgularından biri değildir?",
+     "secenekler": {
+      "A": "Hipokampal skleroz",
+      "B": "TIRDA (temporal ritmik delta)",
+      "C": "Nörosistiserkozis",
+      "D": "Kavernom ve arteriovenöz malformasyon",
+      "E": "Porensefalik kist"
+     },
+     "dogru": "B",
+     "aciklama": "TIRDA bir nörogörüntüleme bulgusu değil, temporal lob epilepsisi varlığında görülen bir EEG bulgusudur (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Hipokampal skleroz, hipokampusun hücre kaybıyla büzüşüp sertleşmesidir. Slayttaki nörogörüntüleme bulgularının ilk maddesi olduğu için bu listede yer alır (s. 8).",
+      "B": "TIRDA, temporal bölgede aralıklı gelen ritmik delta dalgalarıdır ve temporal lob epilepsisi varlığında EEG'de görülür. Slayt onu nörogörüntüleme değil EEG bulguları başlığında verdiği için doğru cevaptır (s. 8).",
+      "C": "Nörosistiserkozis, domuz şeridinin larvalarının beyinde kist oluşturduğu bir enfeksiyondur. Nörogörüntülemede tekrar riski yüksek bulgu olarak sayıldığı için listede yer alır (s. 8).",
+      "D": "Kavernom, beyin dokusunda yavaş akımlı damar yumağından oluşan bir damarsal malformasyondur. Slaytta arteriovenöz malformasyonla birlikte nörogörüntüleme bulgusu olarak sayıldığı için listede yer alır (s. 8).",
+      "E": "Porensefalik kist, beyin dokusunda hasar sonrası kalan sıvı dolu boşluktur. Slaytta nörogörüntüleme bulguları arasında sayıldığı için listede yer alır (s. 8)."
+     },
+     "bilgi": [
+      19,
+      20,
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Temporal aralıklı ritmik delta aktivitesi (TIRDA)"
+     },
+     "s": 8,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b06"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q12",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Nöbet tekrarlama riskinin yüksek olduğu bilinen bulgulardan aşağıdakilerden hangisi tümörler başlığında yer alır?",
+     "secenekler": {
+      "A": "Heterotopi",
+      "B": "Polimikrogiri",
+      "C": "Şizensefali",
+      "D": "Disembriyoblastik nöroepitelyal tümör (DNET)",
+      "E": "Hemimegalensefali"
+     },
+     "dogru": "D",
+     "aciklama": "Tümörler başlığında düşük dereceli glial tümörler, DNET ve gangliogliomlar sayılır; öteki seçenekler kortikal gelişim anomalileridir (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Heterotopi, nöronların gelişim sırasında olması gereken korteks katına göç edemeyip başka yerde kalmasıdır. Slaytta kortikal gelişim anomalisi olarak sayıldığı için tümör grubunda yer almaz (s. 8).",
+      "B": "Polimikrogiri, korteksin çok sayıda küçük kıvrım oluşturduğu bir gelişim bozukluğudur. Kortikal gelişim anomalileri arasında sayıldığı için tümörler başlığında yer almaz (s. 8).",
+      "C": "Şizensefali, beyin yüzeyinden ventriküle uzanan ve korteksle döşeli bir yarıktır. Slaytta kortikal gelişim anomalisi olarak geçtiği için tümör grubuna girmez (s. 8).",
+      "D": "DNET, çocukluk ve genç erişkinlikte korteks yerleşimli, nöbete yol açan iyi huylu bir tümördür. Slayt onu düşük dereceli glial tümör ve gangliogliomla birlikte tümörler başlığında verdiği için doğru cevaptır (s. 8).",
+      "E": "Hemimegalensefali, bir beyin yarımküresinin gelişim bozukluğu nedeniyle anormal büyük olmasıdır. Kortikal gelişim anomalileri arasında sayıldığı için tümörler başlığında yer almaz (s. 8)."
+     },
+     "bilgi": [
+      19,
+      20,
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Disembriyoblastik nöroepitelyal tümörler (DNET)"
+     },
+     "s": 8,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b06"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "ILAE 2017 nöbet sınıflamasını (fokal, jeneralize, bilinmeyen başlangıç; farkındalık; motor/nonmotor tipler) uygular; frontal ve temporal lob nöbetlerinin semiyolojik özelliklerini ve lateralizasyon değerini ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-24-epilepsi-q13",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "ILAE 2017 nöbet sınıflamasında nöbetler öncelikle başlangıçlarına göre gruplandırılır. Aşağıdakilerden hangisi bu gruplardan biridir?",
+     "secenekler": {
+      "A": "Başlangıcı bilinmeyen nöbetler",
+      "B": "Refleks nöbetler",
+      "C": "Tetiklenmiş nöbetler",
+      "D": "Akut semptomatik nöbetler",
+      "E": "Spontan nöbetler"
+     },
+     "dogru": "A",
+     "aciklama": "ILAE 2017 sınıflaması nöbetleri başlangıca göre fokal, jeneralize ve başlangıcı bilinmeyen olarak üçe ayırır; öteki seçenekler nöbetin nedenini ya da tetiklenip tetiklenmediğini anlatan kavramlardır (s. 4–5, 9).",
+     "sik_aciklamalari": {
+      "A": "Başlangıcı bilinmeyen nöbetler, nereden başladığı saptanamayan nöbetlerdir ve ILAE 2017 sınıflamasının üçüncü grubunu oluşturur. Başlangıca göre yapılan üç gruptan biri olduğu için doğru cevaptır (s. 9).",
+      "B": "Refleks nöbet, aralıklı ışık ya da sıcak su gibi belirli bir uyaranla başlayan nöbettir. Başlatıcı uyarana göre yapılan bir niteleme olduğu için başlangıç yerine dayanan gruplardan biri sayılmaz (s. 5, 9).",
+      "C": "Tetiklenmiş nöbet, metabolik, toksik, travmatik ya da serebrovasküler akut bir nedenle eşiği düşen beyinde gelişen nöbettir. Nöbetin nedenini anlatır, başlangıç yerine göre yapılan ILAE 2017 gruplarından biri değildir (s. 5, 9).",
+      "D": "Akut semptomatik nöbet, tetiklenmiş nöbetin öteki adıdır ve sistemik ya da akut beyin olayıyla aynı dönemde gelişen nöbeti anlatır. Nedene dayalı bir kavram olduğu için başlangıç gruplarından biri değildir (s. 5, 9).",
+      "E": "Spontan nöbet, hiçbir uyaran ya da akut neden olmadan kendiliğinden gelen tetiklenmemiş nöbettir. Epilepsi tanımında kullanılan bir niteleme olduğu için ILAE 2017 başlangıç gruplarından biri sayılmaz (s. 4, 9)."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Bu sınıflamada, nöbetler öncelikle başlangıçlarına göre"
+     },
+     "s": 9,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Fokal başlangıçlı nöbetlerde pedal çevirme, ayağa kalkma ve koşma gibi hareketlerle giden motor semptom tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Otomatizma",
+      "B": "Tonik",
+      "C": "Miyoklonik",
+      "D": "Epileptik spazm",
+      "E": "Hiperkinetik"
+     },
+     "dogru": "E",
+     "aciklama": "Pedal çevirme, ayağa kalkma ve koşma gibi büyük ve hızlı hareketler fokal motor semptomlardan hiperkinetik tipi tanımlar (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Otomatizma, amaçlı ya da amaçsız tekrarlayan hareketlerdir; ağız şapırdatma ya da el ovuşturma bunun örnekleridir. Kökteki pedal çevirme ve koşma gibi geniş hareketler slaytta ayrı bir başlıkta sayıldığı için bu tip uymaz (s. 13).",
+      "B": "Tonik semptom, devamlı kas kasılması ve katılıktır. Bu tipte hasta kasılıp kalır, koşma ya da pedal çevirme gibi hareket etmediği için kökle örtüşmez (s. 13).",
+      "C": "Miyoklonik semptom, düzensiz ve ani fokal sıçramalardır. Sıçrama kısa ve tek tek olduğu için pedal çevirme gibi düzenli büyük hareketleri karşılamaz (s. 13).",
+      "D": "Epileptik spazm, gövdenin ekstansiyona gelip kolların fleksiyon ya da ekstansiyon postürü almasıdır. Kısa süreli bir postür değişikliği olduğu için koşma benzeri hareketleri anlatmaz (s. 13).",
+      "E": "Hiperkinetik semptom, pedal çevirme, ayağa kalkma, koşma gibi büyük ve şiddetli hareketlerle giden fokal motor nöbet tipidir. Kökte sayılan hareketler slayttaki tanımın aynısı olduğu için doğru cevaptır (s. 13)."
+     },
+     "bilgi": [
+      32,
+      33,
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Hiperkinetik (pedal çevirme, ayağa kalkma, koşma vb.)"
+     },
+     "s": 13,
+     "dayanak": [
+      "ozen:s13"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Fokal motor nöbet sırasında başparmakta başlayan ritmik sıçramanın sırasıyla ele, kola ve yüze ilerlemesine ne ad verilir?",
+     "secenekler": {
+      "A": "Todd paralizisi",
+      "B": "Eskrimci postürü",
+      "C": "Jaksonyen yayılım",
+      "D": "Figür 4 pozisyonu",
+      "E": "Fokal epileptik spazm"
+     },
+     "dogru": "C",
+     "aciklama": "Motor hareketin nöbet sırasında komşu vücut kısımlarına ilerleyici yayılması Jaksonyen yayılımdır; Todd paralizisi ise nöbet bittikten sonra kalan güçsüzlüktür (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Todd paralizisi, fokal motor nöbet bittikten sonra aynı ekstremitede kalan geçici güçsüzlüktür. Kökte anlatılan bulgu nöbet sırasında sıçramanın ilerlemesi olduğu için bu ad uymaz (s. 15).",
+      "B": "Eskrimci postürü, bir kol ekstansördeyken karşı kolun fleksiyonda tonik kasılmasıdır. Sabit bir duruş olduğu ve sıçramanın yayılmasını anlatmadığı için uymaz (s. 15).",
+      "C": "Jaksonyen yayılım, motor hareketlerin nöbet sırasında komşu vücut kısımlarına ilerleyici biçimde yayılmasıdır. Başparmaktan ele, kola ve yüze geçen sıçrama tam bu tanıma uyduğu için doğru cevaptır (s. 15).",
+      "D": "Figür 4 pozisyonu, bir kolun ekstansör, karşı kolun dirsekten fleksör tonik kasılmasıyla kolların dört rakamına benzemesidir. Tonik bir postür olduğu için ilerleyen ritmik sıçramayı tanımlamaz (s. 15).",
+      "E": "Epileptik spazm, gövdenin ekstansiyona gelip kolların fleksiyon ya da ekstansiyon postürü almasıdır. Kısa ve toplu bir postür değişikliği olduğu için bir bölgeden komşusuna ilerleyen sıçramayı anlatmaz (s. 13)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-11"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Jaksonyen yayılım: Motor hareketlerin komşu vücud"
+     },
+     "s": 15,
+     "dayanak": [
+      "cikmis:q-2__kurul_-11",
+      "ozen:s15"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q16",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Frontal lob nöbetinde figür 4 pozisyonu görülen hastada epileptojenik alan aşağıdakilerden hangisiyle ilişkilendirilir?",
+     "secenekler": {
+      "A": "Ekstansör kolla aynı taraftaki hemisfer",
+      "B": "Ekstansör kolun karşı tarafındaki hemisfer",
+      "C": "Fleksör kolun karşı tarafındaki hemisfer",
+      "D": "Başın döndüğü taraftaki hemisfer",
+      "E": "Her iki hemisfer eşit ölçüde ve aynı zamanda"
+     },
+     "dogru": "B",
+     "aciklama": "Figür 4 pozisyonunda bir kol ekstansör, karşı kol dirsekten fleksör tonik kasılır; ekstansör kolun kontralateral hemisferi epileptojenik alan olarak kabul edilir (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Ekstansör kolla aynı taraftaki hemisfer, kuralın tam tersidir. Motor yollar karşı tarafa geçtiği için ekstansiyondaki kolu oluşturan odak karşı hemisferdedir ve bu seçenek yanlıştır (s. 15).",
+      "B": "Ekstansör kolun karşı tarafındaki hemisfer, figür 4 pozisyonunda epileptojenik alanın bulunduğu taraftır. Slayt bu kuralı açıkça verdiği için doğru cevaptır (s. 15).",
+      "C": "Fleksör kolun karşı tarafındaki hemisfer, ekstansör kolla aynı taraf olur. Lateralizasyonda belirleyici olan fleksör değil ekstansör kol olduğu için bu seçenek yanlıştır (s. 15).",
+      "D": "Zorlu baş dönmesi, başın bir yana zorla dönmesidir ve odak başın döndüğü yönün karşı tarafındaki frontal lobdadır. Hem kural yanlış kurulmuştur hem de soru figür 4 postürünü sorduğu için seçenek uymaz (s. 15).",
+      "E": "Her iki hemisferin eşit tutulumu, jeneralize başlangıçlı nöbetlerin özelliğidir. Figür 4 bir yana lateralizasyon sağlayan fokal bir bulgu olduğu için bu seçenek yanlıştır (s. 15)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "ekstansör kolun kontralaterali epiletojenik alan"
+     },
+     "s": 15,
+     "dayanak": [
+      "ozen:s15"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q17",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Frontal lob kökenli fokal epilepsi nöbetleri için aşağıdakilerden hangileri doğrudur?\nI. Postiktal Todd paralizisi sık görülür.\nII. Sıklıkla uyku sırasında ve bazen küme hâlinde görülür.\nIII. Farkındalık korunmuşken tonik baş dönmesi tipiktir.\nIV. Başın dönmesinin lateralize edici değeri öteki fokal motor nöbetlerden yüksektir.",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Frontal lob nöbetlerinde Todd paralizisi sıktır, nöbetler uykuda ve kümeler hâlinde gelir, farkındalık korunmuşken tonik baş dönmesi tipiktir; ancak baş dönmesinin lateralize edici değeri öteki fokal motor tonik ya da klonik nöbetlere göre belirgin biçimde düşüktür (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Yalnız birinci öncül, Todd paralizisinin sıklığını kapsar ama eksiktir. Uykuda küme hâlinde gelme ve tonik baş dönmesi de frontal lob nöbetinin özellikleri olduğu için seçenek yetersiz kalır (s. 15).",
+      "B": "Birinci ve ikinci öncüller doğrudur ama tonik baş dönmesi dışarıda kalmıştır. Farkındalık korunmuşken tonik baş dönmesi frontal lob nöbeti için tipik kabul edildiği için seçenek eksiktir (s. 15).",
+      "C": "Todd paralizisi, uykuda küme hâlinde gelme ve farkındalık korunmuşken tonik baş dönmesi frontal lob nöbetlerinin slaytta sayılan özellikleridir. Baş dönmesinin lateralize edici değeri ise düşük olduğu için dördüncü öncülü dışarıda bırakan bu seçenek doğru cevaptır (s. 15).",
+      "D": "İkinci ve üçüncü öncüller doğru olsa da dördüncü öncül slaytın tersini söyler. Başın zorlu dönmesinin lateralize edici değeri öteki fokal motor tonik ya da klonik nöbetlere göre düşük olduğu için seçenek yanlıştır (s. 15).",
+      "E": "Dört öncülü birden kabul etmek baş dönmesine yüksek lateralize edici değer vermek olur. Slayt bu değerin belirgin biçimde düşük olduğunu söylediği için seçenek yanlıştır (s. 15)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h37",
+      "q-2__kurul_-11"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Postiktal Todd paralizisi sık görülür"
+     },
+     "s": 15,
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h37",
+      "cikmis:q-2__kurul_-11",
+      "ozen:s15"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q18",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Postiktal Todd paralizisi ile ilgili aşağıdakilerden hangileri doğrudur?\nI. Nöbet bittikten sonra ortaya çıkar.\nII. Fokal motor nöbetin tuttuğu ekstremitede görülür.\nIII. Dakikalar ile saatler içinde tümüyle düzelir.\nIV. Motor hareketin nöbet sırasında komşu vücut kısımlarına ilerlemesidir.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Todd paralizisi fokal motor nöbet bittikten sonra nöbetin tuttuğu ekstremitede görülen ve dakikalar ile saatler içinde düzelen geçici güçsüzlüktür; nöbet sırasında hareketin komşu bölgelere ilerlemesi Jaksonyen yayılımdır (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci öncüller doğrudur ama güçsüzlüğün geçici olduğu dışarıda kalmıştır. Todd paralizisi dakikalar ile saatler içinde tümüyle düzeldiği için üçüncü öncül de doğrudur ve seçenek eksiktir (s. 15).",
+      "B": "Birinci ve üçüncü öncüller doğrudur ama güçsüzlüğün yeri unutulmuştur. Güçsüzlük nöbetin tuttuğu ekstremitede ortaya çıktığı için ikinci öncülün dışarıda kalması seçeneği eksik yapar (s. 15).",
+      "C": "İkinci öncül doğru olsa da dördüncü öncül Jaksonyen yayılımı tanımlar. Jaksonyen yayılım nöbet sırasındaki bir hareket bulgusu olduğu için Todd paralizisine ait sayılamaz ve seçenek yanlıştır (s. 15).",
+      "D": "Todd paralizisi nöbet bittikten sonra, fokal motor nöbetin tuttuğu ekstremitede ortaya çıkan ve dakikalar ile saatler içinde tümüyle düzelen güçsüzlüktür. Dördüncü öncül Jaksonyen yayılıma ait olduğundan ilk üçünü veren seçenek doğru cevaptır (s. 15).",
+      "E": "Dört öncülü birden kabul etmek Todd paralizisini Jaksonyen yayılımla karıştırmak olur. Yayılım nöbet sırasında, Todd paralizisi nöbet sonrasında görüldüğü için seçenek yanlıştır (s. 15)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-11"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Postiktal Todd paralizisi sık görülür"
+     },
+     "s": 15,
+     "dayanak": [
+      "cikmis:q-2__kurul_-11",
+      "ozen:s15",
+      "hoca:hv-k2-24-07"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q19",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "40 yaşında kadın hastanın uykuda kümeler hâlinde gelen nöbetlerinden birinde sol kolda başlayıp komşu bölgelere ilerleyen kasılmalar görülüyor; nöbetten sonra sol kolundaki güçsüzlük dört saat içinde tümüyle düzeliyor. Nöbet sonrası bulgunun adı ve nöbetin en olası kökeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Todd paralizisi – temporal lob",
+      "B": "Jaksonyen yayılım – frontal lob",
+      "C": "Atonik nöbet – frontal lob",
+      "D": "Jaksonyen yayılım – temporal lob",
+      "E": "Todd paralizisi – frontal lob"
+     },
+     "dogru": "E",
+     "aciklama": "Nöbetten sonra kalan ve saatler içinde düzelen güçsüzlük Todd paralizisidir; uykuda küme hâlinde gelme, Jaksonyen yayılım ve sık Todd paralizisi frontal lob nöbetlerinin özellikleridir (s. 15–16).",
+     "sik_aciklamalari": {
+      "A": "Todd paralizisi adı doğrudur ama köken yanlıştır. Temporal lob nöbetleri daha çok duraklama, oroalimenter otomatizma, epigastrik his ve illüzyonlarla gider; uykuda küme ve Jaksonyen yayılım frontal loba işaret eder (s. 15–17).",
+      "B": "Jaksonyen yayılım, nöbet sırasında hareketin komşu bölgelere ilerlemesidir ve bu hastada nöbetin kendisinde vardır. Soru nöbet sonrası bulguyu sorduğu için ad yanlıştır, köken doğru olsa da seçenek uymaz (s. 15).",
+      "C": "Atonik nöbet, kas tonusunun nöbet sırasında kaybolmasıdır ve düşmeyle gider. Hastadaki güçsüzlük nöbet bittikten sonra ortaya çıktığı için bu ad uymaz (s. 13).",
+      "D": "Bu seçenekte hem ad hem köken yanlıştır. Jaksonyen yayılım nöbet sırasındaki bir bulgudur, temporal lob ise uykuda kümelenen motor nöbetlerle tanınmaz (s. 15–17).",
+      "E": "Todd paralizisi, fokal motor nöbetten sonra aynı ekstremitede kalan ve tümüyle düzelen geçici güçsüzlüktür; frontal lob nöbetlerinde sık görülür. Uykuda kümeler, Jaksonyen yayılım ve postiktal güçsüzlük frontal lob kökenini gösterdiği için doğru cevaptır (s. 15)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h37",
+      "q-2__kurul_-11"
+     ],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Temporal Lob Kökenli Fokal Epilepsi Nöbetleri"
+     },
+     "s": 16,
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h37",
+      "cikmis:q-2__kurul_-11",
+      "ozen:s15"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q20",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Fokal nöbetlerin yarısından fazlasını oluşturan ve özgeçmişte febril nöbet ile pozitif aile öyküsüne sık rastlanan nöbet grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Temporal lob nöbetleri",
+      "B": "Frontal lob nöbetleri",
+      "C": "Refleks nöbetler",
+      "D": "Tetiklenmiş nöbetler",
+      "E": "Epileptik spazmlar"
+     },
+     "dogru": "A",
+     "aciklama": "Temporal lob nöbetleri fokal nöbetlerin %50'den fazlasını oluşturur; özgeçmişte febril nöbet ve pozitif aile öyküsü sıktır (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Temporal lob nöbetleri fokal nöbetlerin yarısından fazlasını oluşturur ve en çok araştırılan fokal epilepsi türüdür. Özgeçmişte febril nöbet ve pozitif aile öyküsü sık olduğu için doğru cevaptır (s. 16).",
+      "B": "Frontal lob nöbetleri tonik-postüral belirtiler, uykuda kümeler ve Todd paralizisiyle tanınır. Febril nöbet öyküsü ve fokal nöbetlerin yarısından fazlasını oluşturma özelliği bu loba değil temporal loba ait olduğu için uymaz (s. 15–16).",
+      "C": "Refleks nöbetler, aralıklı ışık ya da sıcak su gibi belirli bir uyaranla tetiklenen nöbetlerdir. Tanımları uyarana dayanır; fokal nöbetlerin yarısından fazlasını oluşturan grup olarak tanımlanmadıkları için uymaz (s. 5).",
+      "D": "Tetiklenmiş nöbetler, metabolik ya da toksik neden, kafa travması veya serebrovasküler hastalıkla akut dönemde gelişen nöbetlerdir. Epilepsi hastalığı kapsamında sayılmadıkları için fokal epilepsinin en sık türü olamazlar (s. 5).",
+      "E": "Epileptik spazm, gövdenin ekstansiyon ve kolların fleksiyon ya da ekstansiyon postürü aldığı bir fokal motor semptom tipidir. Bir nöbet bulgusu olup lob kökenli bir nöbet grubunu anlatmadığı için uymaz (s. 13)."
+     },
+     "bilgi": [
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Özgeçmişte febril nöbet öyküsü"
+     },
+     "s": 16,
+     "dayanak": [
+      "ozen:s17"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q21",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Temporal lob kökenli fokal nöbetlerde viseral duyumsama şeklinde en sık görülen otonom bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nöbet sırasında istemsiz idrar kaçırma",
+      "B": "Terleme",
+      "C": "Çarpıntı",
+      "D": "Yükselen epigastrik duyumsama",
+      "E": "Yüzde kızarma"
+     },
+     "dogru": "D",
+     "aciklama": "Temporal lob nöbetlerinde otonom bulgular viseral duyumsama şeklinde olabilir ve en sık olanı midenin üst kısmından yukarı yükselen epigastrik duyumsamadır (s. 17).",
+     "sik_aciklamalari": {
+      "A": "İdrar kaçırma, nöbet sırasında mesane kontrolünün kaybıdır. Temporal lob nöbetinin viseral duyumsaması olarak tanımlanmadığı için kökteki en sık bulgu bu değildir (s. 17).",
+      "B": "Terleme, otonom sinir sisteminin bir bulgusudur ve slaytta senkopta sık, epilepside seyrek olarak verilir. Temporal lob nöbetinde en sık otonom bulgu olarak sayılmadığı için uymaz (s. 17).",
+      "C": "Çarpıntı, kalp atımının hissedilmesidir ve otonom bir yakınma olabilir. Slayt temporal lob nöbetlerinde en sık viseral duyumsamayı epigastrik his olarak verdiği için bu seçenek doğru değildir (s. 17).",
+      "D": "Yükselen epigastrik duyumsama, mide boşluğundan göğse doğru yükselen tuhaf bir histir ve temporal lob nöbetinin başlangıcında sık görülür. Slayt en sık otonom bulgu olarak bunu verdiği için doğru cevaptır (s. 17).",
+      "E": "Yüzde kızarma, damar genişlemesine bağlı bir otonom bulgudur. Slaytta temporal lob nöbetlerinin en sık otonom belirtisi olarak geçmediği için uymaz (s. 17)."
+     },
+     "bilgi": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "En sık olan yükselen epigastrik duyumsamadır"
+     },
+     "s": 17,
+     "dayanak": [
+      "ozen:s17"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Genç bir kadın, nöbetlerinin midesinden yükselen bir hisle başladığını, o anda yaşadığı yeri daha önce yaşamış gibi hissettiğini anlatıyor. Eşi nöbet sırasında hastanın durup baktığını, ardından ağzını şapırdattığını gözlemlemiş. En olası nöbet kökeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Frontal lob",
+      "B": "Jeneralize başlangıçlı absans",
+      "C": "Temporal lob",
+      "D": "Oksipital lob",
+      "E": "Jeneralize miyoklonik"
+     },
+     "dogru": "C",
+     "aciklama": "Yükselen epigastrik his, déjà vu, motor duraklama ile başlayıp oroalimenter otomatizmayla süren nöbet temporal lob kökenli fokal nöbetin tipik görünümüdür (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Frontal lob nöbetleri tonik-postüral belirtiler, pedal çevirme gibi hiperkinetik hareketler ve uykuda kümelerle gider. Epigastrik his ve déjà vu bu lobun özelliği olmadığı için uymaz (s. 15).",
+      "B": "Absans nöbeti jeneralize başlangıçlıdır ve ani başlayıp ani biten bilinç kaybıyla gider. Nöbetin bir aurayla, yani midede yükselen hisle başlaması fokal başlangıcı gösterdiği için uymaz (s. 17–18).",
+      "C": "Temporal lob nöbetleri sıklıkla motor duraklamayla başlayıp ağız şapırdatma gibi oroalimenter otomatizmalarla sürer; yükselen epigastrik his ve déjà vu gibi kognitif bulgular eşlik eder. Hastadaki bulguların tümü bu tabloya uyduğu için doğru cevaptır (s. 17).",
+      "D": "Oksipital lob kaynaklı nöbetler slaytta daha basit yapılı görsel halüsinasyonlarla anılır. Epigastrik his ve ağız şapırdatma bu loba ait olmadığı için uymaz (s. 17).",
+      "E": "Jeneralize miyoklonik nöbet, iki yanlı ritmik olmayan ani sıçramalardır. Hastada sıçrama değil duraklama ve oroalimenter otomatizma bulunduğu için uymaz (s. 17–18)."
+     },
+     "bilgi": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "devam eden ve sıklıkla diğer otomatizmaların eklendiği"
+     },
+     "s": 17,
+     "dayanak": [
+      "ozen:s17",
+      "hoca:hv-k2-24-09"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-2__kurul_-11",
+     "soru": "Fokal motor bir epileptik nöbetin hemen ardından, nöbetin görüldüğü ekstremitelerde dakikalar-saatler içinde tamamen düzelen geçici güçsüzlük tablosuna ne ad verilir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Jacksonian yürüyüş",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Todd paralizisi",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Status epileptikus",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Otomatizma",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Miyokloni",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2025-2026-h37",
+     "soru": "Postiktal Todd paralizisi aşağıdakilerden hangisinde sık görülür?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Temporal lob epilepsisi",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Frontal lob epilepsisi",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Absans epilepsi",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Basit febril nöbet",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Juvenil miyoklonik epilepsi",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Jeneralize nöbet tiplerini, tipik/atipik absans ayrımını, febril nöbetin basit/komplike ölçütlerini, tekrar ve epilepsi riski sayılarını ve tedavi ilkelerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-24-epilepsi-q23",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Tipik ve atipik absans nöbetlerinin birbirinden ayrılmasında belirleyici olan aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastanın yaşı",
+      "B": "Kas tonusu değişikliklerinin varlığı",
+      "C": "Nöbet sırasındaki otomatizmalar",
+      "D": "Nöbetin süresi",
+      "E": "EEG bulguları"
+     },
+     "dogru": "E",
+     "aciklama": "Tipik ve atipik absans ayrımı için EEG bulguları belirleyicidir; klinikte atipik absansta başlangıç ve bitiş sinsi, tonus değişiklikleri daha sıktır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Hastanın yaşı, absans nöbetlerinin hangi dönemde görüldüğünü anlatır ama iki tipi birbirinden ayırmaz. Slayt ayrımda yaşı değil başka bir bulguyu belirleyici saydığı için bu seçenek doğru değildir (s. 20).",
+      "B": "Kas tonusu değişiklikleri atipik absansta daha sık görülür ama tipik absansta da olabilir. Klinik bir ipucu olsa da slayt belirleyici ölçütü EEG olarak verdiği için bu seçenek ayrımı sağlamaz (s. 20).",
+      "C": "Hafif motor otomatizmalar tipik absansa eşlik edebilen bir bulgudur. Atipik absansta da hareket görülebildiği için iki tipi kesin ayıran ölçüt olarak kullanılmaz (s. 20).",
+      "D": "Nöbetin süresi absanslarda kısadır ve iki tipte de saniyeler düzeyindedir. Slayt ayrım ölçütü olarak süreyi değil EEG'yi verdiği için bu seçenek yanlıştır (s. 20).",
+      "E": "EEG bulguları, beyin elektriksel etkinliğinin kayıtla gösterilmesidir ve absans tiplerinin ayrımında belirleyicidir. Slayt bunu açıkça yazdığı için doğru cevaptır (s. 20)."
+     },
+     "bilgi": [
+      60,
+      61,
+      62,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Tipik ve atipik absans ayırımı için EEG bulguları"
+     },
+     "s": 20,
+     "dayanak": [
+      "ozen:s20",
+      "profil"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q24",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "7 yaşında kız çocuğunun öğretmeni, sınıfta birkaç saniyeliğine boş baktığını, seslenince yanıt vermediğini ve ardından hiçbir şey olmamış gibi yazmaya devam ettiğini bildiriyor. Nöbetler ani başlayıp ani bitiyor. En olası nöbet tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atipik absans nöbeti",
+      "B": "Tipik absans nöbeti",
+      "C": "Atonik nöbet",
+      "D": "Fokal nonmotor duraklama nöbeti",
+      "E": "Miyoklonik nöbet"
+     },
+     "dogru": "B",
+     "aciklama": "Ani başlayıp ani sonlanan kısa bilinç kaybı, yanıt vermeme ve ardından kaldığı yerden devam etme tipik absans nöbetini düşündürür (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Atipik absans nöbetinde bilinç kaybı tam olmayabilir, başlangıç ve bitiş sinsidir, tonus değişiklikleri sıktır. Bu çocukta nöbetler ani başlayıp ani bittiği için tablo atipik absansa uymaz (s. 20).",
+      "B": "Tipik absans nöbeti, bilinç kaybının ani başlayıp ani sonlandığı jeneralize nonmotor nöbettir. Çocuk boş bakıp seslenmeye yanıt vermediği ve ardından olağan işine döndüğü için tablo buna uyar ve doğru cevaptır (s. 20).",
+      "C": "Atonik nöbet, kas tonusunun kaybolmasıyla hastanın düşmesidir. Çocukta düşme ya da tonus kaybı tanımlanmadığı için bu nöbet tipi uymaz (s. 19).",
+      "D": "Fokal nonmotor duraklama nöbeti, tek hemisferden başlayan ve hastanın hareketsiz kaldığı nöbettir. Ani başlayıp ani biten, uyarısız kısa bilinç kaybı çocuklukta jeneralize absansı daha çok düşündürdüğü için en olası tip değildir (s. 13, 20).",
+      "E": "Miyoklonik nöbet, ritmik olmayan ani sıçramalarla gider. Bu çocukta sıçrama değil boş bakma ve yanıtsızlık bulunduğu için uymaz (s. 19)."
+     },
+     "bilgi": [
+      60,
+      61,
+      62,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Tipik absans nöbetlerinde bilinç kaybı ani başlar"
+     },
+     "s": 20,
+     "dayanak": [
+      "ozen:s20",
+      "hoca:hv-k2-24-12"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q25",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Tipik absans nöbetleri için aşağıdakilerden hangileri doğrudur?\nI. Bilinç kaybı ani başlar ve ani sonlanır.\nII. Hafif motor otomatizmalar eşlik edebilir.\nIII. Başlangıç ve bitişi genelde sinsidir.\nIV. Atipik absanstan ayrımında EEG bulguları belirleyicidir.",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Tipik absansta bilinç kaybı ani başlar ve ani sonlanır, hafif otomatizmalar eşlik edebilir ve atipik absanstan ayrımı EEG ile yapılır; sinsi başlangıç ve bitiş atipik absansa aittir (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Birinci öncül doğru, üçüncü öncül yanlıştır. Başlangıç ve bitişin sinsi olması atipik absansın özelliği olduğu için bu seçenek tipik absansı yanlış tanımlar (s. 20).",
+      "B": "Ani başlayıp biten bilinç kaybı, eşlik edebilen hafif otomatizmalar ve atipik absanstan EEG ile ayrılması tipik absansın slayttaki özellikleridir. Sinsi başlangıç ve bitiş atipik absansa ait olduğu için üçüncü öncülü dışarıda bırakan bu seçenek doğru cevaptır (s. 20).",
+      "C": "İkinci öncül doğru olsa da üçüncü öncül atipik absansı anlatır. Tipik absansta nöbet ani başlayıp ani bittiği için sinsi seyir bu tipe uymaz ve seçenek yanlıştır (s. 20).",
+      "D": "Birinci ve dördüncü öncüller doğrudur ama üçüncü öncül atipik absansa aittir. Ayrıca eşlik edebilen hafif otomatizmalar dışarıda kaldığı için seçenek iki yönden yanlıştır (s. 20).",
+      "E": "Dört öncülü birden kabul etmek tipik absansa sinsi başlangıç ve bitiş vermek olur. Bu özellik atipik absansı tanımladığı için seçenek yanlıştır (s. 20)."
+     },
+     "bilgi": [
+      60,
+      61,
+      62,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Tipik absans nöbetlerinde bilinç kaybı ani başlar"
+     },
+     "s": 20,
+     "dayanak": [
+      "ozen:s20"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q26",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Febril nöbet ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ateş nöbetten önce mutlaka bulunmalıdır.",
+      "B": "Çocukların %2–5'ini etkiler.",
+      "C": "Altı ay ile 5 yaş arasında görülür.",
+      "D": "Çocukluk çağında en sık izlenen nöbettir.",
+      "E": "Basit ve komplike olmak üzere ikiye ayrılır."
+     },
+     "dogru": "A",
+     "aciklama": "Febril nöbette ateş nöbet öncesinde bulunmayabilir, ancak nöbet sonrası erken dönemde mutlaka olmalıdır; ateşin nöbetten önce şart koşulması yanlıştır (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Ateşin zamanlaması febril nöbet tanısında önemlidir; slayta göre ateş nöbetten önce saptanmayabilir ama nöbet sonrası erken dönemde mutlaka bulunmalıdır. Ateşi nöbetten önce zorunlu tutan ifade bu koşulu yanlış verdiği için doğru cevaptır (s. 21).",
+      "B": "Toplum temelli çalışmalar febril nöbetin çocukların yüzde iki ile beşini etkilediğini bildirir. Slayttaki sıklık değeri bu olduğu için ifade doğrudur (s. 21).",
+      "C": "Febril nöbetin görüldüğü yaş aralığı altı ay ile beş yaş arasıdır. Bu aralık slaytta açıkça verildiği için ifade doğrudur (s. 21).",
+      "D": "Febril nöbet, ateşle ilişkili olarak ortaya çıkan nöbettir ve slaytta çocukluk çağında en sık izlenen nöbet olarak tanımlanır. Slayttaki tanımla aynı olduğu için ifade doğrudur (s. 21).",
+      "E": "Febril nöbet, süre, nöbet tipi, tekrarlama ve nörolojik bulgulara göre basit ve komplike olarak ikiye ayrılır. Slayttaki ayrımla aynı olduğu için ifade doğrudur (s. 21–22)."
+     },
+     "bilgi": [
+      64,
+      65,
+      66,
+      67
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "nöbet sonrası erken dönemde mutlaka olmalıdır"
+     },
+     "s": 21,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b09"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q27",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "2 yaşında erkek çocuk, ateşli bir hastalık sırasında sağ kolda başlayan ve 20 dakika süren bir nöbet geçiriyor; aynı gün ikinci bir nöbet daha oluyor. Bu tablo için en doğru tanım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Basit febril nöbet",
+      "B": "Refleks nöbet",
+      "C": "Komplike febril nöbet",
+      "D": "Tipik absans nöbeti",
+      "E": "Jeneralize atonik nöbet"
+     },
+     "dogru": "C",
+     "aciklama": "On beş dakikadan uzun süre, fokal başlangıç ve 24 saat içinde tekrar komplike febril nöbetin özellikleridir; bunlardan biri bile basit tanımını bozar (s. 21–22).",
+     "sik_aciklamalari": {
+      "A": "Basit febril nöbet, 15 dakikadan kısa, jeneralize başlayan, 24 saatte tekrarlamayan ve defisit bırakmayan nöbettir. Çocuğun nöbeti uzun, fokal ve aynı gün tekrarlayan olduğu için bu tanıma uymaz (s. 22).",
+      "B": "Refleks nöbet, aralıklı ışık ya da sıcak su gibi belirli bir uyaranla başlayan nöbettir. Bu çocukta nöbeti ateşli hastalık getirdiği için refleks nöbet tanımı uymaz (s. 5).",
+      "C": "Komplike febril nöbet, basit febril nöbetin özelliklerinden en az birinin bozulduğu nöbettir: 15 dakikadan uzun, fokal ya da 24 saatte tekrarlayan olabilir. Çocukta üç özellik birden bulunduğu için doğru cevaptır (s. 21–22).",
+      "D": "Tipik absans, ani başlayıp ani biten kısa bilinç kaybıyla giden jeneralize nonmotor nöbettir. Fokal başlayan ve 20 dakika süren kasılma nöbeti bu tanıma uymaz (s. 20).",
+      "E": "Atonik nöbet, kas tonusunun birkaç saniyeliğine kaybolmasıyla düşmeye yol açan jeneralize nöbettir. Çocukta 20 dakika süren ve kolda başlayan kasılma bulunduğu için bu tanım uymaz (s. 19)."
+     },
+     "bilgi": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "15 dakikadan uzun olabilir"
+     },
+     "s": 22,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b09"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q28",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangileri komplike febril nöbette görülebilir?\nI. On beş dakikadan uzun süre\nII. Fokal nöbet tipi\nIII. Yirmi dört saat içinde tekrarlama\nIV. Postiktal Todd parezisi",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Komplike febril nöbet 15 dakikadan uzun olabilir, fokal ya da jeneralize olabilir, 24 saatte tekrarlayabilir ve fokal defisit ya da Todd parezisi bırakabilir; dört öncül de doğrudur (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Yalnız birinci öncül uzun süreyi kapsar ama eksiktir. Tabloda fokal nöbet tipi, 24 saatte tekrarlama ve Todd parezisi de komplike febril nöbet için olabilir diye verildiği için seçenek yetersiz kalır (s. 22).",
+      "B": "Birinci ve ikinci öncüller doğrudur ama tekrarlama ve Todd parezisi dışarıda kalmıştır. Bu iki özellik de komplike febril nöbette görülebildiği için seçenek eksiktir (s. 22).",
+      "C": "İlk üç öncül doğrudur ama postiktal Todd parezisi unutulmuştur. Todd parezisi basit febril nöbette yoktur, komplike febril nöbette ise olabilir; bu yüzden seçenek eksiktir (s. 22).",
+      "D": "İkinci, üçüncü ve dördüncü öncüller doğrudur ama uzun süre dışarıda kalmıştır. On beş dakikayı aşan süre komplike febril nöbetin tablodaki ilk özelliği olduğu için seçenek eksiktir (s. 22).",
+      "E": "Uzun süre, fokal nöbet tipi, 24 saat içinde tekrar ve postiktal Todd parezisi tabloda komplike febril nöbet için olabilir diye verilen özelliklerdir. Basit febril nöbetin her ölçütünün tersi bu tabloda görülebildiği için dört öncülü veren seçenek doğru cevaptır (s. 22)."
+     },
+     "bilgi": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-11"
+     ],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Postiktal Todd parezisi Yok Olabilir"
+     },
+     "s": 22,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b09",
+      "cikmis:q-2__kurul_-11"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q29",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Febril nöbet geçiren çocuklarda ileride epilepsi gelişme riski aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "%0,5",
+      "B": "%1–1,5",
+      "C": "%4–15",
+      "D": "%30–40",
+      "E": "%49"
+     },
+     "dogru": "B",
+     "aciklama": "Febril nöbet geçiren çocuklarda epilepsi gelişme riski %1–1,5'tir; normal toplumda yaklaşık %0,5'tir (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Yüzde sıfır virgül beş, normal toplumda epilepsi gelişme oranıdır. Febril nöbet geçiren çocuklardaki risk bunun yaklaşık iki ile üç katı olduğu için bu seçenek yanlıştır (s. 23).",
+      "B": "Yüzde bir ile bir buçuk, febril nöbet geçiren çocuklarda ileride epilepsi gelişme riskidir. Slaytta tam bu değer verildiği için doğru cevaptır (s. 23).",
+      "C": "Yüzde dört ile on beş, komplike febril nöbet geçiren çocuklardaki epilepsi riskidir. Tüm febril nöbetler için değil komplike alt grup için geçerli olduğundan yanlıştır (s. 23).",
+      "D": "Yüzde otuz ile kırk, ilk febril nöbetten sonra febril nöbetin kendisinin tekrarlama riskidir. Epilepsi riskiyle karıştırılan bir değer olduğu için yanlıştır (s. 23).",
+      "E": "Yüzde kırk dokuz, uzun, tekrarlayan ve fokal olmak üzere üç komplike özelliği birlikte taşıyan febril nöbetten sonraki epilepsi riskidir. En ağır alt grubun değeri olduğu için genel febril nöbet riski değildir (s. 23)."
+     },
+     "bilgi": [
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "epilepsi gelişme riski %1-1,5"
+     },
+     "s": 23,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b09",
+      "hoca:hv-k2-24-14"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q30",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi ilk febril nöbetten sonra febril nöbetin tekrarlama riskini artıran faktörlerden biri değildir?",
+     "secenekler": {
+      "A": "On beş aydan küçükken başlaması",
+      "B": "Ailede epilepsi ya da febril nöbet öyküsü bulunması",
+      "C": "Sık ateşli hastalık öyküsü",
+      "D": "Febril nöbet başlangıcında ateşin yüksek olması",
+      "E": "Febril nöbet başlangıcında ateşin düşük olması"
+     },
+     "dogru": "D",
+     "aciklama": "Febril nöbetin tekrarlama riskini on beş ay altında başlangıç, ailede epilepsi ya da febril nöbet öyküsü, sık ateşli hastalık ve nöbet başlangıcında düşük ateş artırır; yüksek ateş bunlardan biri değildir (s. 23).",
+     "sik_aciklamalari": {
+      "A": "On beş ay altında başlangıç, febril nöbetin çok küçük yaşta ortaya çıkmasıdır. Slaytta tekrarlama riskini artıran ilk faktör olarak sayıldığı için riski artırır (s. 23).",
+      "B": "Ailede epilepsi ya da febril nöbet öyküsü, nöbete yatkınlığın kalıtsal bir göstergesidir. Tekrarlama riskini artıran faktörler arasında sayıldığı için riski artırır (s. 23).",
+      "C": "Sık ateşli hastalık öyküsü, çocuğun nöbeti tetikleyecek ateşle daha sık karşılaşması demektir. Slaytta riski artıran faktör olarak verildiği için riski artırır (s. 23).",
+      "D": "Nöbet başlangıcında yüksek ateş, slayttaki düşük ateş faktörünün tersidir. Nöbetin ancak yüksek ateşle ortaya çıkması eşiğin düşük olduğunu göstermediği için risk faktörü olarak sayılmaz ve doğru cevaptır (s. 23).",
+      "E": "Nöbet başlangıcında düşük ateş, beynin az bir ateşle bile nöbete geçebildiğini gösterir. Bu yüzden eşiğin düşük olduğunu düşündürür ve slaytta tekrarlama riskini artıran faktör olarak sayılır (s. 23)."
+     },
+     "bilgi": [
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "febril nöbet başlangıcında düşük ateş olması"
+     },
+     "s": 23,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b09"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q31",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Febril nöbetlerin tedavisi ile ilgili aşağıdakilerden hangileri doğrudur?\nI. Antiepileptik ilaç tedavisi epilepsi gelişme riskini azaltır.\nII. Basit febril nöbette sürekli antiepileptik ilaç önerilmez.\nIII. Rektal ya da oral diazepam ile profilaksi yapılabilir.\nIV. Komplike febril nöbette altta yatan akut nörolojik sendrom ya da epileptik ensefalopati araştırılır.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Febril nöbette antiepileptik ilacın epilepsi riskini azalttığına dair kanıt yoktur; basit febril nöbette sürekli ilaç önerilmez, diazepam profilaksisi yapılabilir ve komplike febril nöbette Dravet gibi bir neden araştırılır (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Birinci öncül yanlış olduğu için seçenek doğru olamaz. Antiepileptik ilacın febril nöbette epilepsi gelişme riskini azalttığına dair kanıt bulunmadığından bu öncül slayta ters düşer (s. 23).",
+      "B": "İkinci ve üçüncü öncüller doğrudur ama komplike febril nöbetteki araştırma dışarıda kalmıştır. Komplike febril nöbette akut nörolojik sendrom ya da Dravet sendromu gibi bir epileptik ensefalopati arandığı için seçenek eksiktir (s. 23).",
+      "C": "İkinci ve dördüncü öncüller doğru olsa da birinci öncül yanlıştır. Antiepileptik tedavinin epilepsi riskini azalttığı gösterilmediği için seçenek yanlıştır (s. 23).",
+      "D": "Basit febril nöbette sürekli ilacın önerilmemesi, rektal ya da oral diazepam profilaksisi ve komplike febril nöbette altta yatan nedenin aranması slayttaki tedavi ilkeleridir. Birinci öncül kanıtsız olduğu için onu dışarıda bırakan bu seçenek doğru cevaptır (s. 23).",
+      "E": "Dört öncülü birden kabul etmek antiepileptik ilacın epilepsi riskini azalttığını kabul etmek olur. Slayt buna dair kanıt bulunmadığını söylediği için seçenek yanlıştır (s. 23)."
+     },
+     "bilgi": [
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Rektal veya oral diazepam ile profilaksi yapılabilir"
+     },
+     "s": 23,
+     "dayanak": [
+      "ogrenci:A:noro-s02-b09",
+      "hoca:hv-k2-24-15"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q32",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Akut semptomatik nöbetler için aşağıdakilerden hangileri doğrudur?\nI. Sistemik bir olayla ya da akut beyin hastalığıyla yakın zamansal ilişki içinde gelişir.\nII. Tekrarlama olasılıkları epilepsi hastalığındaki gibi artmıştır.\nIII. Beyinle ilişkili hastalık yatıştıktan sonra epilepsi gelişme riski artmıştır.\nIV. Epilepsi hastalarında da gelişebilir.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Akut semptomatik nöbet sistemik ya da akut beyin olayıyla yakın zamanlı gelişir, tekrarlama olasılığı epilepsideki gibi artmamıştır; ancak hastalık yatıştıktan sonra epilepsi gelişme riski artar ve epilepsi hastalarında da görülebilir (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Birinci öncül doğru, ikinci öncül yanlıştır. Akut semptomatik nöbetin tekrarlama olasılığı epilepsideki gibi artmadığı için bu seçenek slayta ters düşer (s. 24).",
+      "B": "Yakın zamansal ilişki, hastalık yatıştıktan sonra artan epilepsi riski ve epilepsi hastalarında da görülebilmesi akut semptomatik nöbetin slayttaki özellikleridir. Tekrarlama olasılığı artmadığı için ikinci öncülü dışarıda bırakan bu seçenek doğru cevaptır (s. 24).",
+      "C": "Üçüncü öncül doğru olsa da ikinci öncül yanlıştır. Tetikleyici geçince eşik yerine döndüğü için akut semptomatik nöbetin tekrarlama olasılığı epilepsideki gibi artmaz (s. 24).",
+      "D": "Üçüncü ve dördüncü öncüller doğrudur ama ikinci öncül yanlıştır ve tanımı veren birinci öncül dışarıda kalmıştır. Bu iki nedenle seçenek slaytla uyuşmaz (s. 24).",
+      "E": "Dört öncülü birden kabul etmek tekrarlama olasılığının epilepsideki gibi arttığını kabul etmek olur. Slayt bunun tersini söylediği için seçenek yanlıştır (s. 24)."
+     },
+     "bilgi": [
+      77,
+      78,
+      79
+     ],
+     "benzer_cikmis": [
+      "b3d289432ab3"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "tekrarlama olasılıkları epilepsi hastalığında olduğu"
+     },
+     "s": 24,
+     "dayanak": [
+      "cikmis:b3d289432ab3",
+      "ogrenci:B:noro-s02-b02"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Epilepsi hastalığının beş aşamalı sınıflamasını, elektroklinik sendromları (West, Rolandik, progresif miyoklonik epilepsi), etyoloji gruplarını ve EEG/MR örneklerini yorumlar; epilepsiyi senkop ve nonepileptik psikojen ataktan ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-24-epilepsi-q33",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi yeni epilepsi hastalığı sınıflamasının beş aşamasından biri değildir?",
+     "secenekler": {
+      "A": "Epilepsi nöbeti tipi",
+      "B": "Epilepsi tipi",
+      "C": "Komorbiditelerin değerlendirilmesi",
+      "D": "Etyolojinin değerlendirilmesi",
+      "E": "Nöbet tekrarlama riskinin hesaplanması"
+     },
+     "dogru": "E",
+     "aciklama": "Yeni sınıflamanın beş aşaması nöbet tipi, epilepsi tipi, epilepsi sendromu, etyoloji ve komorbiditelerdir; tekrarlama riskinin hesaplanması tanı koyarken kullanılan ayrı bir kavramdır (s. 4, 28).",
+     "sik_aciklamalari": {
+      "A": "Epilepsi nöbeti tipi, nöbetin fokal, jeneralize ya da başlangıcı bilinmeyen olarak belirlenmesidir. Sınıflamanın birinci aşaması olduğu için beş aşamadan biridir (s. 28).",
+      "B": "Epilepsi tipi, hastalığın fokal, jeneralize, kombine ya da bilinmeyen olarak belirlenmesidir. Sınıflamanın ikinci aşaması olduğu için beş aşamadan biridir (s. 28–29).",
+      "C": "Komorbiditelerin değerlendirilmesi, epilepsiye eşlik eden psikiyatrik ve öteki hastalıkların ele alınmasıdır. Sınıflamanın beşinci ve son aşaması olduğu için beş aşamadan biridir (s. 28).",
+      "D": "Etyolojinin değerlendirilmesi, epilepsinin yapısal, genetik, enfeksiyöz, metabolik, immün ya da bilinmeyen nedeninin aranmasıdır. Sınıflamanın dördüncü aşaması olduğu için beş aşamadan biridir (s. 28).",
+      "E": "Nöbet tekrarlama riskinin hesaplanması, tek nöbet geçiren kişide 10 yıllık riskin en az yüzde altmış olup olmadığına bakılarak epilepsi tanısı koymak için kullanılır. Sınıflamanın beş aşamasında yer almadığı için doğru cevaptır (s. 4, 28)."
+     },
+     "bilgi": [
+      87,
+      88
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Yeni epilepsi hastalığı sınıflaması 5 aşamadan"
+     },
+     "s": 28,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q34",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi epilepsi hastalığı ile birlikte görülen kromozom anomalilerinden biri değildir?",
+     "secenekler": {
+      "A": "Tuberoskleroz",
+      "B": "Down sendromu (trizomi 21)",
+      "C": "Ring 14 sendromu",
+      "D": "Angelman sendromu",
+      "E": "Klinefelter sendromu (XXY)"
+     },
+     "dogru": "A",
+     "aciklama": "Angelman, Down, Ring 14 ve Klinefelter sendromları epilepsiyle birlikte görülen kromozom anomalileri listesindedir; tuberoskleroz ise tekrar riski yüksek kortikal gelişim anomalileri arasında sayılır (s. 8, 33).",
+     "sik_aciklamalari": {
+      "A": "Tuberoskleroz, beyinde kortikal tuberlerin oluştuğu ve nöbete yatkınlık yaratan bir gelişim bozukluğudur. Slaytta kromozom anomalileri listesinde değil, tekrar riski yüksek kortikal gelişim anomalileri arasında geçtiği için doğru cevaptır (s. 8).",
+      "B": "Down sendromu, yirmi birinci kromozomun üç kopya olduğu trizomidir. Epilepsiyle birlikte görülen kromozom anomalileri listesinde yer aldığı için bu seçenek listeye aittir (s. 33).",
+      "C": "Ring 14 sendromu, on dördüncü kromozomun uçlarının birleşip halka oluşturduğu kromozom anomalisidir. Slayttaki kromozom anomalileri listesinde açıkça sayıldığı için listede yer alır (s. 33).",
+      "D": "Angelman sendromu, on beşinci kromozomun bir bölgesindeki kayıpla ilişkili, gelişim geriliği ve nöbetlerle giden bir kromozom anomalisidir. Slaytta epilepsiyle birlikte görülen kromozom anomalileri arasında sayıldığı için listede yer alır (s. 33).",
+      "E": "Klinefelter sendromu, erkekte fazladan bir X kromozomunun bulunduğu XXY yapısıdır. Epilepsiyle birlikte görülen kromozom anomalileri arasında sayıldığı için listede yer alır (s. 33)."
+     },
+     "bilgi": [
+      98,
+      99
+     ],
+     "benzer_cikmis": [
+      "d3-k2-tbg-005"
+     ],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Epilepsi hastalığı ile birlikte görülen kromozom anomalileri"
+     },
+     "s": 33,
+     "dayanak": [
+      "cikmis:d3-k2-tbg-005"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q35",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "EEG'de yüksek amplitüdlü, multifokal ve kaotik özellikte hipsaritmi görülmesi aşağıdaki epilepsi sendromlarından hangisi için tipiktir?",
+     "secenekler": {
+      "A": "Ohtahara sendromu",
+      "B": "Progresif miyoklonik epilepsi",
+      "C": "West sendromu",
+      "D": "Juvenil miyoklonik epilepsi",
+      "E": "Lennox-Gastaut sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Hipsaritmi, yüksek amplitüdlü, multifokal ve kaotik EEG aktivitesidir ve West sendromunun tipik EEG bulgusudur (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Ohtahara sendromu, yenidoğan döneminde başlayan bir elektroklinik sendromdur. Hipsaritmi örneği infantil dönemde başlayan West sendromuna ait olduğu için bu sendrom uymaz (s. 31, 34).",
+      "B": "Progresif miyoklonik epilepside zemin aktivitesinde yaygın yavaşlama, ışığa duyarlılık ve jeneralize düzensiz çok dikenli dalgalar görülür. Bu bulgular hipsaritmiden farklı olduğu için uymaz (s. 36).",
+      "C": "West sendromu, infantil dönemde başlayan bir elektroklinik sendromdur ve EEG'de hipsaritmiyle tanınır. Yüksek amplitüdlü, multifokal ve kaotik EEG bu sendromun örneği olarak gösterildiği için doğru cevaptır (s. 34).",
+      "D": "Juvenil miyoklonik epilepsi, ergen-erişkin dönemde miyoklonik-tonik-klonik nöbetlerle tanınan sendromdur. Slaytta hipsaritmiyle ilişkilendirilmediği için uymaz (s. 19, 31).",
+      "E": "Lennox-Gastaut sendromu, çocukluk çağında miyoklonik-atonik nöbetlerle görülen gelişimsel ve epileptik ensefalopatidir. Slayttaki hipsaritmi örneği bu sendroma değil West sendromuna ait olduğu için uymaz (s. 19, 34)."
+     },
+     "bilgi": [
+      100,
+      101
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "West sendromlu bir olguda hipsaritmi örneği"
+     },
+     "s": 34,
+     "dayanak": [
+      "ogrenci:B:noro-s02-b12"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q36",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Uyanıklık EEG'sinde santrotemporal bölgede faz dönmesi gösteren keskin ve keskin-yavaş dalgalar görülen bir çocukta en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "West sendromu",
+      "B": "Panayiotopoulos sendromu",
+      "C": "Ohtahara sendromu",
+      "D": "Çocukluk çağı absans epilepsisi",
+      "E": "Rolandik epilepsi"
+     },
+     "dogru": "E",
+     "aciklama": "Santrotemporal bölgede faz dönmesi gösteren az sayıda keskin ve keskin-yavaş dalga Rolandik (santrotemporal dikenli çocukluk çağı) epilepsinin EEG örneğidir (s. 35).",
+     "sik_aciklamalari": {
+      "A": "West sendromunda EEG'de yüksek amplitüdlü, multifokal ve kaotik hipsaritmi görülür. Bölgesel santrotemporal dalgalar bu yaygın görünüme uymadığı için tanı West sendromu değildir (s. 34).",
+      "B": "Panayiotopoulos sendromu, çocukluk döneminde başlayan elektroklinik sendromlardan biridir. Santrotemporal faz dönmesi gösteren keskin dalga örneği Rolandik epilepsiye ait olduğu için bu sendrom uymaz (s. 31, 35).",
+      "C": "Ohtahara sendromu, yenidoğan döneminde başlayan bir elektroklinik sendromdur. Çocukluk çağında santrotemporal keskin dalgalarla giden tabloyla başlangıç yaşı da EEG örneği de örtüşmediği için uymaz (s. 31).",
+      "D": "Çocukluk çağı absans epilepsisinde tipik absans nöbetleri ve 3 Hz jeneralize diken-dalga beklenir. Bölgesel santrotemporal dalgalar jeneralize bir deşarj olmadığı için uymaz (s. 20, 31).",
+      "E": "Rolandik epilepsi, santrotemporal dikenli çocukluk çağı epilepsisidir ve EEG'de santrotemporal bölgede keskin ve keskin-yavaş dalgalarla tanınır. Kökteki bulgu slayttaki örnekle aynı olduğu için doğru cevaptır (s. 35)."
+     },
+     "bilgi": [
+      102,
+      103
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "sol santrotemporal bölgede faz dönmesi"
+     },
+     "s": 35,
+     "dayanak": [
+      "ogrenci:B:noro-s02-b12"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q37",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Progresif miyoklonik epilepsinin tipik EEG bulguları aşağıdakilerden hangileridir?\nI. Temel aktivitede yaygın yavaşlama\nII. Işığa duyarlılık\nIII. Jeneralize düzensiz çok dikenli dalga deşarjları\nIV. Yüksek amplitüdlü, multifokal ve kaotik hipsaritmi",
+     "secenekler": {
+      "A": "Yalnız III",
+      "B": "I ve II",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Progresif miyoklonik epilepside temel aktivitede yaygın yavaşlama, ışığa duyarlılık ve jeneralize düzensiz çok dikenli dalgalar görülür, Lafora'da ayrıca oksipital dikenler bulunur; hipsaritmi West sendromuna aittir (s. 34, 36).",
+     "sik_aciklamalari": {
+      "A": "Yalnız üçüncü öncül, çok dikenli dalgaları kapsar ama eksiktir. Yaygın yavaşlama ve ışığa duyarlılık da progresif miyoklonik epilepsinin tipik EEG bulguları olduğu için seçenek yetersiz kalır (s. 36).",
+      "B": "Birinci ve ikinci öncüller doğrudur ama jeneralize çok dikenli dalgalar dışarıda kalmıştır. Bu deşarjlar da tipik bulgular arasında sayıldığı için seçenek eksiktir (s. 36).",
+      "C": "İkinci öncül doğru olsa da dördüncü öncül West sendromunun bulgusudur. Hipsaritmi yüksek amplitüdlü, multifokal ve kaotik bir EEG olduğu ve progresif miyoklonik epilepsiye ait olmadığı için seçenek yanlıştır (s. 34).",
+      "D": "Yaygın yavaşlama, ışığa duyarlılık ve jeneralize düzensiz çok dikenli dalgalar slaytta progresif miyoklonik epilepsi için tipik EEG bulgusu olarak verilir. Hipsaritmi West sendromuna ait olduğu için onu dışarıda bırakan bu seçenek doğru cevaptır (s. 36).",
+      "E": "Dört öncülü birden kabul etmek hipsaritmiyi de progresif miyoklonik epilepsiye vermek olur. Hipsaritmi West sendromunun örneği olarak gösterildiği için seçenek yanlıştır (s. 34)."
+     },
+     "bilgi": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Progresif miyoklonik epilepsi için tipik EEG bulguları"
+     },
+     "s": 35,
+     "dayanak": [
+      "ogrenci:B:noro-s02-b12"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q38",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Nöbet tiplerine göre elektrofizyolojik paternlerde atipik absans nöbetinde EEG'de görülen bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "3 Hz jeneralize diken-dalga",
+      "B": "2,5 Hz'den yavaş jeneralize diken-dalga",
+      "C": "3 Hz'den hızlı jeneralize diken-dalga ve multidiken-dalga",
+      "D": "Elektrodekremental patern",
+      "E": "Ritmik teta ya da delta aktivitesi"
+     },
+     "dogru": "B",
+     "aciklama": "Atipik absansta <2,5 Hz jeneralize diken-dalga görülür; tipik absansta 3 Hz, miyoklonik nöbette >3 Hz diken-dalga ve multidiken-dalga vardır (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Üç Hz jeneralize diken-dalga, tipik absans nöbetinin EEG paternidir. Atipik absansta deşarj daha yavaş olduğu için bu seçenek yanlıştır (s. 39).",
+      "B": "İki virgül beş Hz'den yavaş jeneralize diken-dalga, atipik absans nöbetinin elektrofizyolojik paternidir. Tablodaki atipik absans satırı bu değeri verdiği için doğru cevaptır (s. 39).",
+      "C": "Üç Hz'den hızlı diken-dalga ve multidiken-dalga, miyoklonik nöbetin EEG paternidir. Sıçramalarla giden başka bir nöbet tipine ait olduğu için yanlıştır (s. 39).",
+      "D": "Elektrodekremental patern, EEG genliğinin aniden düşmesi ve ardından hızlı ritimlerin gelmesidir ve tonik nöbette görülür. Absansla ilgisi olmadığı için yanlıştır (s. 39).",
+      "E": "Ritmik teta ya da delta aktivitesi, mezyal temporal lob kaynaklı fokal nöbette sık görülen paterndir. Jeneralize bir absans nöbetine ait olmadığı için yanlıştır (s. 39)."
+     },
+     "bilgi": [
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "<2,5 Hz jeneralize diken-dalga"
+     },
+     "s": 39,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q39",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Erişkin dönemde epilepsinin ayırıcı tanısında yer alan kardiyak senkoplardan valvüler nedenlerin en sık olanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mitral stenozu",
+      "B": "Kalp bloğu",
+      "C": "Kardiyomiyopati",
+      "D": "Aort stenozu",
+      "E": "Şantlı hastalıklar"
+     },
+     "dogru": "D",
+     "aciklama": "Erişkin ayırıcı tanısında kardiyak senkop disritmi, valvüler hastalık, kardiyomiyopati ve şantlı hastalıklar olarak sayılır; valvüler nedenlerin en sık olanı aort stenozudur (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Mitral stenozu, mitral kapağın daralmasıdır ve bir kapak hastalığıdır. Slayt valvüler senkopun en sık nedeni olarak bu kapağı değil aort kapağını verdiği için uymaz (s. 44).",
+      "B": "Kalp bloğu, kalpte uyarı iletiminin kesilmesidir ve slaytta disritmi başlığı altında sayılır. Ritim bozukluğu olduğu ve kapak hastalığı olmadığı için uymaz (s. 44).",
+      "C": "Kardiyomiyopati, kalp kasının hastalığıdır ve kardiyak senkop nedenleri arasında ayrı bir madde olarak geçer. Kapak hastalığı olmadığı için valvüler nedenlerin en sık olanı değildir (s. 44).",
+      "D": "Aort stenozu, aort kapağının daralmasıyla kalbin beyne yeterli kan pompalayamamasıdır ve eforla senkop yapabilir. Slayt valvüler kardiyak senkopun en sık nedeni olarak bunu verdiği için doğru cevaptır (s. 44).",
+      "E": "Şantlı hastalıklar, kanın kalp içinde anormal bir yoldan geçtiği durumlardır ve kardiyak senkop nedenleri arasında ayrıca sayılır. Kapak hastalığı olmadığı için valvüler nedenlerin en sık olanı sayılamaz (s. 44)."
+     },
+     "bilgi": [
+      127,
+      128,
+      129
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "valvüler (en sık aort stenozu)"
+     },
+     "s": 44,
+     "dayanak": [
+      "ogrenci:B:noro-s02-b15"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q40",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Epileptik nöbet ile nonepileptik psikojen atak ayırıcı tanısında aşağıdakilerden hangisi psikojen atak lehine bir bulgudur?",
+     "secenekler": {
+      "A": "Dilin yan tarafının ısırılması",
+      "B": "Göz açmaya direnç",
+      "C": "Uykuda ortaya çıkması",
+      "D": "Postiktal konfüzyon",
+      "E": "İdrar inkontinansı"
+     },
+     "dogru": "B",
+     "aciklama": "Göz açmaya direnç, pelvik hareket, asenkron hareket ve indüklenebilme nonepileptik psikojen atakta sıktır; dilin yanını ısırma, postiktal konfüzyon, uykuda gelme ve idrar kaçırma epilepside sıktır (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Dilin yan tarafının ısırılması, epileptik nöbette tonik kasılma sırasında görülür. Tabloda epilepside sık (yan taraf), psikojen atakta ise seyrek ve dilin ucunda olduğu için epilepsi lehinedir (s. 45).",
+      "B": "Göz açmaya direnç, hastanın gözlerini açmaya çalışan muayeneciye karşı gözlerini sıkıca kapalı tutmasıdır. Tabloda psikojen atakta sık, epilepside seyrek olduğu için doğru cevaptır (s. 45).",
+      "C": "Uykuda ortaya çıkma, nöbetin hasta uyurken gelmesidir. Epilepside sıktır, psikojen atak ise uykuda olmaz ve ancak uyanınca görülür; bu yüzden epilepsi lehinedir (s. 45).",
+      "D": "Postiktal konfüzyon, nöbetten sonra kalan bilinç bulanıklığıdır. Epilepside sık, psikojen atakta yok ya da seyrek olduğu için epileptik nöbet lehine bir bulgudur (s. 45).",
+      "E": "İdrar inkontinansı, nöbet sırasında mesane kontrolünün kaybıdır. Epilepside sık, psikojen atakta çok seyrek olduğu için epileptik nöbet lehine bir bulgudur (s. 45)."
+     },
+     "bilgi": [
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-86"
+     ],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Epilepsi, senkop ve nonepileptik psikojen atak ayrımında ipuçları"
+     },
+     "s": 45,
+     "dayanak": [
+      "ogrenci:B:noro-s02-b16",
+      "cikmis:q-25-26_d_nem_3_kurul_2-86"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q41",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangileri nonepileptik psikojen ataktan çok epileptik nöbet lehine bulgulardır?\nI. Dilin yan tarafının ısırılması\nII. Postiktal konfüzyon\nIII. Bilinçsiz sürenin dakikalar sürmesi\nIV. Pelvik hareket",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Epilepside dil yan tarafının ısırılması, postiktal konfüzyon ve dakikalar süren bilinçsizlik sıktır; pelvik hareket ise psikojen atakta sık, epilepside seyrektir (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci öncüller doğrudur ama eksiktir. Bilinçsiz sürenin dakikalar sürmesi de tabloda epilepsiye ait olduğu için üçüncü öncülün dışarıda bırakılması seçeneği yanlış yapar (s. 45).",
+      "B": "İkinci öncül doğru olsa da dördüncü öncül psikojen ataka aittir. Pelvik hareket psikojen atakta sık, epilepside seyrek olduğu için bu seçenek yanlıştır (s. 45).",
+      "C": "Dil yanının ısırılması, postiktal konfüzyon ve dakikalar süren bilinçsizlik tabloda epileptik nöbetin sütununda yer alır. Pelvik hareket psikojen ataka ait olduğu için dışarıda kalır ve bu seçenek doğru cevaptır (s. 45).",
+      "D": "Birinci ve üçüncü öncüller doğru, dördüncü öncül yanlıştır. Pelvik hareket psikojen atakta sık görüldüğü için epilepsi lehine sayılamaz ve seçenek yanlıştır (s. 45).",
+      "E": "Dört öncülü birden kabul etmek pelvik hareketi de epilepsiye vermek olur. Pelvik hareket psikojen atağın sık bulgusu olduğu için bu seçenek yanlıştır (s. 45)."
+     },
+     "bilgi": [
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-86"
+     ],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Epilepsi, senkop ve nonepileptik psikojen atak ayrımında ipuçları"
+     },
+     "s": 45,
+     "dayanak": [
+      "cikmis:q-25-26_d_nem_3_kurul_2-86",
+      "ogrenci:B:noro-s02-b16"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q42",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "45 yaşında kadın, kalabalık bir sırada uzun süre ayakta beklerken terleyip benzi atıyor, gözleri kararıyor ve yere yığılıyor. Bilinç kaybı birkaç saniye sürüyor, hızla kendine geliyor ve konfüzyon kalmıyor. En olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Epileptik nöbet",
+      "B": "Nonepileptik psikojen atak",
+      "C": "Atonik nöbet",
+      "D": "Senkop",
+      "E": "Tipik absans nöbeti"
+     },
+     "dogru": "D",
+     "aciklama": "Ayakta olma, terleme, beyaz renk, presenkopla yavaş başlangıç, saniyeler süren bilinçsizlik, hızlı düzelme ve postiktal konfüzyon olmaması senkopu gösterir; ayakta uzun kalma senkopu artıran faktördür (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Epileptik nöbet her postürde olabilir, renk morarma yönünde değişir, bilinçsizlik dakikalar sürer ve postiktal konfüzyon sıktır. Hastada saniyeler süren bilinç kaybı ve hızlı düzelme bulunduğu için epileptik nöbet uymaz (s. 45).",
+      "B": "Nonepileptik psikojen atak stresli olay ya da kalabalıkla artabilir ama bilinçsiz süre genelde yoktur ya da çok uzundur, ağlama ve pelvik hareket sıktır. Terleme, beyazlama ve kısa bilinç kaybı bu tabloya değil senkopa uyduğu için yanlıştır (s. 45).",
+      "C": "Atonik nöbet, kas tonusunun nöbet sırasında birkaç saniye kaybolmasıyla olan jeneralize nöbettir. Terleme, benzin atması ve gözlerin kararması gibi bir uyarı dönemiyle başlamadığı için bu hastaya uymaz (s. 19).",
+      "D": "Senkop, beyne kan akımının geçici azalmasıyla olan kısa bilinç kaybıdır; hemen daima ayakta olur, terleme ve beyazlama sıktır, başlangıcı presenkopla yavaştır, bilinçsizlik saniyeler sürer ve hızla düzelir. Hastanın bütün bulguları bu tabloya uyduğu için doğru cevaptır (s. 45).",
+      "E": "Tipik absans, ani başlayıp ani biten kısa bilinç kaybıdır ama hasta yere yığılmaz ve öncesinde terleme ya da göz kararması olmaz. Bu nedenle tablo absansa uymaz (s. 20)."
+     },
+     "bilgi": [
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Epilepsi, senkop ve nonepileptik psikojen atak ayrımında ipuçları"
+     },
+     "s": 45,
+     "dayanak": [
+      "ogrenci:B:noro-s02-b16"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-tbg-005",
+     "soru": "Aşağıdaki kromozom anomalilerinden hangisi tedaviye dirençli epilepsi ile ilişkilidir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Ring kromozom 14",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Translokasyon 14;21",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "İnversiyon 5",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Ring kromozom 5",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Marker kromozom 15",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "A"
+    },
+    {
+     "id": "q-25-26_d_nem_3_kurul_2-86",
+     "soru": "Epileptik nöbet ile psödonöbet (psikojenik non-epileptik nöbet) ayrımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Psödonöbet sırasında gözler sıklıkla sıkıca kapalıdır, epileptik nöbette ise genellikle açıktır",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Psödonöbette senkron olmayan, dalgalanan hareketler ve pelvik itme hareketleri görülebilir",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Jeneralize tonik-klonik nöbetten sonraki 10–20 dakika içinde serum prolaktin düzeyi yükselir",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Epileptik nöbet genellikle 10 dakika kadar sürer",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Epileptik nöbetten sonra postiktal konfüzyon beklenir, psödonöbette genellikle görülmez",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Antiepileptik ilaçların farmakokinetik özelliklerini (enzim indüksiyonu/inhibisyonu, otoindüksiyon, protein bağlanması, atılım) karşılaştırır; status epileptikusun tanımını ve 5/30/60 dakika basamaklı tedavi algoritmasını ilaç ve dozlarıyla sıralar.",
+   "sorular": [
+    {
+     "id": "k2-24-epilepsi-q43",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Karbamazepinin farmakokinetik özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Enzim inhibisyonu yapar.",
+      "B": "Aktif metaboliti karbamazepin-10,11-epoksittir.",
+      "C": "Otoindüksiyon gösterir.",
+      "D": "Hepatik metabolizması yaklaşık %95'tir.",
+      "E": "Kronik kullanımda yarılanma süresi tek dozdakinden kısadır."
+     },
+     "dogru": "A",
+     "aciklama": "Karbamazepin enzim indüksiyonu ve otoindüksiyon yapar; bu nedenle yarılanma süresi tek dozda 24–45 saatken kronik kullanımda 8–24 saate iner. Enzim inhibisyonu valproata aittir (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Enzim inhibisyonu, ilacın öteki ilaçları yıkan karaciğer enzimlerini baskılamasıdır ve tabloda valproata ait bir özelliktir. Karbamazepin tersine enzim indüksiyonu yaptığı için ifade yanlıştır ve doğru cevaptır (s. 47).",
+      "B": "Karbamazepin-10,11-epoksit, karbamazepinin karaciğerde oluşan ve etkisini sürdüren aktif metabolitidir. Tabloda karbamazepinin aktif metaboliti olarak verildiği için ifade doğrudur (s. 47).",
+      "C": "Otoindüksiyon, ilacın kendi yıkımını yapan karaciğer enzimlerini zamanla artırmasıdır. Karbamazepin bu özelliği gösterdiği ve tabloda açıkça yazıldığı için ifade doğrudur (s. 47).",
+      "D": "Hepatik metabolizma, ilacın karaciğerde yıkılarak vücuttan uzaklaştırılmasıdır. Karbamazepinin yüzde doksan beşi karaciğerde metabolize edildiği için ifade doğrudur ve ilacın tablodaki atılım yolunu anlatır (s. 47).",
+      "E": "Yarılanma süresinin kronik kullanımda kısalması, otoindüksiyonla ilacın kendi yıkımını hızlandırmasının sonucudur. Tek dozda 24–45 saat, kronikte 8–24 saat olduğu için ifade doğrudur (s. 47)."
+     },
+     "bilgi": [
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144
+     ],
+     "benzer_cikmis": [
+      "past-1790877044641-643080"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Karbamazepin 6-12 (%75- %70-80 • 24-45 (tek"
+     },
+     "s": 47,
+     "dayanak": [
+      "cikmis:past-1790877044641-643080"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q44",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki antiepileptik ilaçlardan hangisi hem enzim indüksiyonu hem de otoindüksiyon gösterir?",
+     "secenekler": {
+      "A": "Na-valproat",
+      "B": "Okskarbazepin",
+      "C": "Fenitoin",
+      "D": "Fenobarbital",
+      "E": "Karbamazepin"
+     },
+     "dogru": "E",
+     "aciklama": "Tabloda enzim indüksiyonu ile otoindüksiyonu birlikte gösteren ilaç karbamazepindir; valproat inhibisyon ve otoindüksiyon, fenitoin ve fenobarbital yalnız indüksiyon, okskarbazepin zayıf indüksiyon yapar (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Na-valproat, karaciğer enzimlerini baskılayan bir antiepileptiktir ve otoindüksiyon da gösterir. Enzim indüksiyonu değil inhibisyonu yaptığı için kökteki iki özelliği birlikte taşımaz (s. 47).",
+      "B": "Okskarbazepin, p450 aktivitesini kullanmayan ve daha az ilaç etkileşimine yol açan bir antiepileptiktir. Yalnız zayıf enzim indüksiyonu yaptığı için kökteki özelliklere uymaz (s. 47).",
+      "C": "Fenitoin, doyurulabilen hepatik metabolizmaya ve konsantrasyona bağlı yarılanma süresine sahip bir antiepileptiktir. Enzim indüksiyonu yapar ama tabloda otoindüksiyon özelliği verilmediği için uymaz (s. 47).",
+      "D": "Fenobarbital, yarılanma süresi 72–144 saat olan ve bir kısmı değişmeden idrarla atılan bir antiepileptiktir. Enzim indüksiyonu yapar ama otoindüksiyon özelliği tabloda yer almadığı için uymaz (s. 47).",
+      "E": "Karbamazepin, karaciğerde %95 metabolize olan ve aktif epoksit metaboliti oluşturan bir antiepileptiktir. Hem enzim indüksiyonu hem otoindüksiyon gösterdiği için doğru cevaptır (s. 47)."
+     },
+     "bilgi": [
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144
+     ],
+     "benzer_cikmis": [
+      "past-1790877044641-643080",
+      "d3k2-2018-2019-k4-q30"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Hepatik metabolizma (%95) • Enzim indüksiyonu"
+     },
+     "s": 47,
+     "dayanak": [
+      "cikmis:past-1790877044641-643080",
+      "cikmis:d3k2-2018-2019-k4-q30"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q45",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Valproat ile birlikte kullanıldığında yarılanma süresi uzayan, enzim indükleyicilerle ise kısalan antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Levetirasetam",
+      "B": "Fenitoin",
+      "C": "Lamotrijin",
+      "D": "Okskarbazepin",
+      "E": "Eslikarbazepin"
+     },
+     "dogru": "C",
+     "aciklama": "Lamotrijinin yarılanma süresi valproat ile uzar, enzim indükleyicilerle kısalır; valproat enzim inhibitörü olduğu için onun yıkımını yavaşlatır (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Levetirasetam, idrarla değişmeden atılan ve ilaç etkileşimi olmayan bir antiepileptiktir. Valproat ya da enzim indükleyicilerden etkilenmediği için uymaz (s. 47).",
+      "B": "Fenitoin, doyurulabilen hepatik metabolizması olan ve enzim indüksiyonu yapan bir antiepileptiktir. Yarılanması konsantrasyona bağlıdır; valproatla uzayıp indükleyicilerle kısalan ilaç olarak tanımlanmadığı için uymaz (s. 47).",
+      "C": "Lamotrijin, glukuronidasyonla temizlenen ve idrarla atılan bir antiepileptiktir. Tabloda yarılanma süresinin valproat ile arttığı, enzim indükleyicilerle azaldığı yazıldığı için doğru cevaptır (s. 47).",
+      "D": "Okskarbazepin, p450 aktivitesini kullanmadan metabolize olan ve majör metaboliti 10-hidroksi karbazepin olan bir antiepileptiktir. Zayıf enzim indüksiyonu yapar ve daha az ilaç etkileşimi gösterdiği için kökteki iki özelliği taşımaz (s. 47).",
+      "E": "Eslikarbazepin, yarısı karaciğerde aktif metabolitine dönüşen, yarısı idrarla değişmeden atılan bir antiepileptiktir. Zayıf enzim indüksiyonu yapar; valproat ve indükleyicilerle yarılanma değişimi tanımlanmadığı için uymaz (s. 47)."
+     },
+     "bilgi": [
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q30"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "VPA ile yarılanma ömrü artar"
+     },
+     "s": 47,
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q30"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q46",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Levetirasetamın farmakokinetik özellikleri için aşağıdakilerden hangileri doğrudur?\nI. Yüzde altmış altısı idrarla değişmeden atılır.\nII. Proteine bağlanma oranı %10'un altındadır.\nIII. Yarılanma süresi 72–144 saattir.\nIV. İlaç etkileşimi yoktur.",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Levetirasetamın %66'sı idrarla değişmeden atılır, proteine bağlanması %10'un altındadır, yarılanma süresi 7–8 saattir ve ilaç etkileşimi yoktur; 72–144 saatlik yarılanma fenobarbitale aittir (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Birinci öncül doğru, üçüncü öncül yanlıştır. Yetmiş iki ile yüz kırk dört saatlik yarılanma süresi fenobarbitale ait olduğu ve levetirasetamın yarılanması 7–8 saat olduğu için seçenek yanlıştır (s. 47).",
+      "B": "İkinci öncül doğru olsa da üçüncü öncül fenobarbitalin yarılanma süresidir. Levetirasetam kısa yarılanma süreli bir ilaç olduğu için seçenek yanlıştır (s. 47).",
+      "C": "Yüzde altmış altısının idrarla değişmeden atılması, yüzde onun altında proteine bağlanma ve ilaç etkileşimi olmaması levetirasetamın tablodaki özellikleridir. Üçüncü öncüldeki uzun yarılanma fenobarbitale ait olduğu için onu dışarıda bırakan bu seçenek doğru cevaptır (s. 47).",
+      "D": "İkinci ve dördüncü öncüller doğrudur ama üçüncü öncül yanlıştır ve idrarla atılım dışarıda kalmıştır. Bu iki nedenle seçenek tabloyla uyuşmaz (s. 47).",
+      "E": "Dört öncülü birden kabul etmek levetirasetama fenobarbitalin uzun yarılanma süresini vermek olur. Levetirasetamın yarılanma süresi 7–8 saat olduğu için seçenek yanlıştır (s. 47)."
+     },
+     "bilgi": [
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144
+     ],
+     "benzer_cikmis": [
+      "527e4cca7613"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "%66 idrar ile değşmeden atılır"
+     },
+     "s": 47,
+     "dayanak": [
+      "cikmis:527e4cca7613"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q47",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki antiepileptik ilaçlardan hangisinin enzim indüksiyonu nedeniyle ilaç etkileşimi vardır?",
+     "secenekler": {
+      "A": "Levetirasetam",
+      "B": "Fenobarbital",
+      "C": "Gabapentin",
+      "D": "Pregabalin",
+      "E": "Zonisamid"
+     },
+     "dogru": "B",
+     "aciklama": "Fenobarbital enzim indüksiyonu yapar; levetirasetam, pregabalin, gabapentin ve zonisamid için tabloda ilaç etkileşimi yok yazılıdır (s. 47–48).",
+     "sik_aciklamalari": {
+      "A": "Levetirasetam, büyük kısmı idrarla değişmeden atılan bir antiepileptiktir. Tabloda ilaç etkileşimi yok diye verildiği için kökteki özelliğe uymaz (s. 47).",
+      "B": "Fenobarbital, karaciğerde %75 metabolize olan ve yarılanma süresi 72–144 saat olan bir antiepileptiktir. Enzim indüksiyonu yaparak öteki ilaçların düzeyini düşürdüğü için doğru cevaptır (s. 47).",
+      "C": "Gabapentin, emilimi doza bağımlı olan ve değişmeden idrarla atılan bir ilaçtır. Tabloda ilaç etkileşimi yok yazıldığı için uymaz (s. 48).",
+      "D": "Pregabalin, proteine bağlanmayan ve değişmeden idrarla atılan bir ilaçtır. Karaciğer enzimlerini etkilemediği ve tabloda ilaç etkileşimi yok diye yazıldığı için kökteki özelliğe uymaz (s. 48).",
+      "E": "Zonisamid, enzim inhibisyonu da indüksiyonu da yapmayan ve zayıf karbonik anhidraz inhibisyonu gösteren bir antiepileptiktir. Tabloda ilaç etkileşimi yok yazıldığı için uymaz (s. 48)."
+     },
+     "bilgi": [
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144
+     ],
+     "benzer_cikmis": [
+      "527e4cca7613",
+      "d3k2-2018-2019-k4-q30"
+     ],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Pregabalin 1 (iyi) 0 • 6 • Değişmeden idrarla atılır • İlaç etkileşimi yok"
+     },
+     "s": 48,
+     "dayanak": [
+      "cikmis:527e4cca7613",
+      "cikmis:d3k2-2018-2019-k4-q30"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q48",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Bir epileptik nöbetin alışılmıştan uzun sürmesi ya da hasta düzelip eski nörolojik durumuna dönmeden çok sayıda nöbetin arka arkaya tekrarlaması aşağıdakilerden hangisi olarak adlandırılır?",
+     "secenekler": {
+      "A": "Komplike febril nöbet",
+      "B": "Todd paralizisi",
+      "C": "Akut semptomatik nöbet",
+      "D": "Miyoklonik-tonik-klonik nöbet",
+      "E": "Status epileptikus"
+     },
+     "dogru": "E",
+     "aciklama": "Nöbetin alışılmıştan uzun sürmesi ya da hasta eski durumuna dönmeden nöbetlerin arka arkaya tekrarlaması status epileptikus (SE) olarak tanımlanır (s. 49).",
+     "sik_aciklamalari": {
+      "A": "Komplike febril nöbet, ateşle gelen ve 15 dakikadan uzun, fokal ya da 24 saatte tekrarlayan nöbettir. Ateşle sınırlı bir çocukluk tablosu olduğu için kökteki genel tanımı karşılamaz (s. 22).",
+      "B": "Todd paralizisi, fokal motor nöbet sonrası aynı ekstremitede kalan geçici güçsüzlüktür. Nöbetin süresiyle değil nöbet sonrası bulguyla ilgili olduğu için uymaz (s. 15).",
+      "C": "Akut semptomatik nöbet, sistemik bir olayla ya da akut beyin hastalığıyla aynı dönemde gelişen nöbettir. Nöbetin nedenini anlatır, süresini ya da art arda gelişini anlatmadığı için uymaz (s. 24).",
+      "D": "Miyoklonik-tonik-klonik nöbet, miyoklonik sıçramalarla başlayıp tonik-klonik nöbete dönen ve juvenil miyoklonik epilepside görülen nöbet tipidir. Bir nöbet biçimi olduğu için kökteki uzama tanımına uymaz (s. 19).",
+      "E": "Status epileptikus, nöbetin alışılmıştan uzun sürmesi ya da hasta düzelmeden nöbetlerin arka arkaya gelmesidir. Kökteki tanım slayttakiyle aynı olduğu için doğru cevaptır (s. 49)."
+     },
+     "bilgi": [
+      158
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Bir epileptik nöbetin alışılmıştan uzun sürmesi"
+     },
+     "s": 49,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-24-epilepsi-q49",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Status epileptikus nedeniyle izlenen hastanın nöbeti erken evre tedavisine karşın 30. dakikada sürüyor. Bu evrede intravenöz olarak uygulanabilecek ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Levetirasetam",
+      "B": "Gabapentin",
+      "C": "Pregabalin",
+      "D": "Rektal diazepam",
+      "E": "Ketamin infüzyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Otuzuncu dakikada süren nöbet dirençli status epileptikustur; IV fenitoin, valproat, levetirasetam, fenobarbital ya da lakozamid kullanılır. Pregabalin ve gabapentin algoritmada yoktur (s. 49–50).",
+     "sik_aciklamalari": {
+      "A": "Levetirasetam, kilogram başına 30–60 mg intravenöz verilebilen ve dirençli status epileptikus sütununda yer alan bir antiepileptiktir. Otuzuncu dakikada süren nöbette uygulanabildiği için doğru cevaptır (s. 50).",
+      "B": "Gabapentin, emilimi doza bağımlı olan ve değişmeden idrarla atılan bir antiepileptiktir. Status epileptikus algoritmasında yer almadığı için dirençli evrede kullanılan ilaçlardan değildir (s. 48, 50).",
+      "C": "Pregabalin, değişmeden idrarla atılan ve ilaç etkileşimi olmayan bir antiepileptiktir. Slaytta yalnız farmakokinetik tablosunda geçer, status epileptikus algoritmasının hiçbir evresinde yer almadığı için uygulanmaz (s. 48, 50).",
+      "D": "Rektal diazepam, damar yolu açılamayan hastada beşinci dakikadaki erken evrede kullanılan bir benzodiazepindir. Hem damar dışından verildiği hem de erken evreye ait olduğu için bu hastaya uymaz (s. 50).",
+      "E": "Ketamin infüzyonu, altmışıncı dakikadan sonra yoğun bakımda uygulanan süper dirençli evre tedavisidir. Otuzuncu dakikadaki dirençli evre için erken bir basamak olmadığından doğru değildir (s. 50)."
+     },
+     "bilgi": [
+      158,
+      159,
+      160,
+      161,
+      162,
+      163
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-58"
+     ],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Bir epileptik nöbetin alışılmıştan uzun sürmesi"
+     },
+     "s": 50,
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-58"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-24-epilepsi-q50",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Status epileptikusta nöbetin 60. dakikada sürmesi (süper dirençli status epileptikus) durumunda yapılacak yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Rektal diazepam verilip evde izlenir.",
+      "B": "Yalnız oral karbamazepin başlanır.",
+      "C": "Bukkal midazolam tek doz verilip hasta acilde gözlem altında tutulur.",
+      "D": "Yoğun bakımda anestezik infüzyon ve sürekli EEG izlemi",
+      "E": "Pregabalin intravenöz yüklenir."
+     },
+     "dogru": "D",
+     "aciklama": "Altmışıncı dakikada süren nöbet süper dirençli SE'dir; yoğun bakımda midazolam, propofol, tiyopental ya da ketamin infüzyonu başlanır ve nöbetin bitip bitmediği EEG monitorizasyonuyla izlenir (s. 50).",
+     "sik_aciklamalari": {
+      "A": "Rektal diazepam, damar yolu yokken beşinci dakikadaki erken evrede kullanılan bir benzodiazepindir. Altmışıncı dakikada süren nöbette hasta yoğun bakımda tedavi edilmesi gerektiği için bu yaklaşım yanlıştır (s. 50).",
+      "B": "Karbamazepin, enzim indüksiyonu ve otoindüksiyon gösteren ağızdan kullanılan bir antiepileptiktir. Status epileptikus algoritmasında yer almadığı için bu evrede tedavi seçeneği değildir (s. 47, 50).",
+      "C": "Bukkal midazolam, damar yolu açılamayan hastada erken evrede ağız içinden verilen bir benzodiazepindir. Altmışıncı dakikadaki süper dirençli evrede tek doz yeterli olmadığı için yanlıştır (s. 50).",
+      "D": "Anestezik ilaç infüzyonu, nöbeti durdurmak için hastanın derin sedasyona alınmasıdır; süper dirençli evrede midazolam, propofol, tiyopental ya da ketamin kullanılır. Hasta kasılmadığı için nöbet sürekli EEG ile izlenir ve bu nedenle doğru cevaptır (s. 50).",
+      "E": "Pregabalin, slaytta yalnız farmakokinetik tablosunda geçen ve algoritmada bulunmayan bir antiepileptiktir. Status epileptikusun hiçbir evresinde kullanılmadığı için yanlıştır (s. 48, 50)."
+     },
+     "bilgi": [
+      158,
+      159,
+      160,
+      161,
+      162,
+      163
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-58"
+     ],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Bir epileptik nöbetin alışılmıştan uzun sürmesi"
+     },
+     "s": 50,
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-58"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-24-epilepsi-q51",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Status epileptikusun erken evresinde (5. dakika) damar yolu açılamayan erişkin hastada aşağıdakilerden hangisi uygulanabilir?",
+     "secenekler": {
+      "A": "İntravenöz fenitoin yüklemesi",
+      "B": "Propofol infüzyonu",
+      "C": "İntramüsküler ya da bukkal midazolam",
+      "D": "İntravenöz lakozamid",
+      "E": "İntravenöz fenobarbital 10–20 mg/kg yükleme"
+     },
+     "dogru": "C",
+     "aciklama": "Erken evrede damar yolu yoksa intramüsküler midazolam, bukkal midazolam ya da rektal diazepam (10 mg) verilir; IV antiepileptikler ve anestezik infüzyonlar sonraki evrelere aittir (s. 50).",
+     "sik_aciklamalari": {
+      "A": "İntravenöz fenitoin yüklemesi, dirençli status epileptikusta otuzuncu dakikada kullanılan bir tedavidir. Hem damar yolu gerektirdiği hem de sonraki evreye ait olduğu için bu hastaya uymaz (s. 50).",
+      "B": "Propofol infüzyonu, altmışıncı dakikadan sonra yoğun bakımda kullanılan anestezik tedavidir. Süper dirençli evreye ait olduğu için erken evredeki bu hastaya uymaz (s. 50).",
+      "C": "Midazolam, kas içine ya da yanak içine verilebilen hızlı etkili bir benzodiazepindir. Erken evrede damar yolu yokken önerilen seçeneklerden biri olduğu için doğru cevaptır (s. 50).",
+      "D": "İntravenöz lakozamid, dirençli status epileptikusta otuzuncu dakikada kullanılan seçeneklerden biridir. Damar yolu gerektirdiği ve erken evreye ait olmadığı için bu hastaya uymaz (s. 50).",
+      "E": "İntravenöz fenobarbital, kilogram başına 10–20 mg yüklenen ve dirençli evrede kullanılan bir antiepileptiktir. Damar yolu açılamayan hastada ve erken evrede uygulanamayacağı için yanlıştır (s. 50)."
+     },
+     "bilgi": [
+      158,
+      159,
+      160,
+      161,
+      162,
+      163
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Bir epileptik nöbetin alışılmıştan uzun sürmesi"
+     },
+     "s": 50,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "gorsel": true
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877044641-643080",
+     "soru": "Karbamazepin farmakokinetiği için aşağıdaki ifadeler veriliyor:\nI. Karbamazepin emilimi bireysel farklılıklar gösterir.\nII. Tek dozdan sonra yarılanma ömrü 36 saat iken sürekli tedavide 10 saate kadar düşer; bu durum başlangıç dozunun iyi ayarlanmasını gerektirir.\nIII. Karbamazepinin oral formu hem çocuklarda hem yetişkinlerde etkindir; çocuklara 20 mg/kg/gün, erişkinlere 1-2 g/gün dozunda verilir ve uzatılmış salınımlı formları iyi terapötik yarar sağlar.\nIV. Mikrozomal enzimleri indüklemez.\nBu ifadelerden hangisi ya da hangileri doğrudur?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "I, II ve III",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "B",
+       "text": "I ve III",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "II ve IV",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Yalnız IV",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "I, II, III ve IV",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q30",
+     "soru": "Aşağıdaki ilaçlar veriliyor:\nI. Karbamazepin\nII. Pregabalin\nIII. Lamotrijin\nIV. Valproik asit\nBunlardan hangisi/hangileri epilepsi tedavisinde kullanılır?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "I, II ve III",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "I ve III",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "II ve IV",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Yalnız IV",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "I, II, III ve IV",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "E"
+    },
+    {
+     "id": "527e4cca7613",
+     "soru": "Sitokrom P450 izoformları ile metabolize edilmeyen ve diğer ilaçlarla etkileşimi minimal olan antiepileptik ilaç aşağıdakilerden hangisidir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Levetirasetam",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "B",
+       "text": "Fenobarbital",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Tiagabin",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Primidon",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Topiramat",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "A"
+    },
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-58",
+     "soru": "Aşağıdakilerden hangisi dirençli status epileptikus tedavisinde uygulanabilecek intravenöz antiepileptiklerden biri değildir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Fenitoin",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "B",
+       "text": "Levetirasetam",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Lakozamid",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Pregabalin",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "E",
+       "text": "Valproik asit",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "D"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 51
+}

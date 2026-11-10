@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Konversiyon: çatışmadan belirtiye, belirtiden kazanca</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Birincil ve ikincil kazanç, güzel aldırmazlık, özdeşim · slayt 3 ve 38</text>
+<rect x="30" y="95" width="400" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · Dönüşüm (konversiyon)</text>
+<path d="M120 300 C90 260 100 190 160 170 C200 150 260 165 275 215 C285 250 265 275 262 300 C268 320 262 345 245 350 C240 370 215 380 200 360 C180 385 140 375 135 345 C115 340 112 318 120 300 Z" stroke="#6d28d9" stroke-width="3" fill="#f5f3ff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M148 238 C172 204 224 204 248 238 C232 272 164 272 148 238 Z" stroke="#6d28d9" stroke-width="2" fill="#ddd6fe" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="198" y="245" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">bilinçdışı</text>
+<text x="198" y="262" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">çatışma</text>
+<text x="300" y="190" font-size="14" fill="#475569" text-anchor="start">bastırılmış duygu,</text>
+<text x="300" y="207" font-size="14" fill="#475569" text-anchor="start">travmatik anı</text>
+<path d="M198 275 C198 320 198 370 198 410" stroke="#6d28d9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<text x="215" y="350" font-size="14" fill="#6d28d9" text-anchor="start">psişik enerji</text>
+<text x="215" y="367" font-size="14" fill="#6d28d9" text-anchor="start">biçim değiştirir</text>
+<path d="M120 470 C150 440 250 440 280 470" stroke="#ea580c" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="285" cy="472" r="9" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<text x="198" y="505" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">bedensel belirti: felç, duyu kaybı</text>
+<text x="198" y="525" font-size="14" fill="#475569" text-anchor="middle">istemsiz; kaygı yerine belirti</text>
+<rect x="460" y="95" width="710" height="290" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="127" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · İki kazanç, ikisi de bilinçli hesap değil</text>
+<path d="M480 240 C560 200 640 200 700 240" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<path d="M740 240 C820 200 900 200 960 240" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<text x="590" y="185" font-size="15" fill="#6d28d9" text-anchor="middle" font-weight="bold">içeride</text>
+<text x="850" y="185" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">dışarıda</text>
+<rect x="480" y="250" width="320" height="120" rx="12" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2"/>
+<text x="640" y="278" font-size="17" fill="#6d28d9" text-anchor="middle" font-weight="bold">Birincil kazanç</text>
+<text x="640" y="302" font-size="14" fill="#1e293b" text-anchor="middle">içsel çatışma bilinç dışında tutulur;</text>
+<text x="640" y="320" font-size="14" fill="#1e293b" text-anchor="middle">kaygı azalır, belirti sembolik anlam taşır</text>
+<rect x="830" y="250" width="320" height="120" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="990" y="278" font-size="17" fill="#ea580c" text-anchor="middle" font-weight="bold">İkincil kazanç</text>
+<text x="990" y="302" font-size="14" fill="#1e293b" text-anchor="middle">hasta rolünün dış yararları:</text>
+<text x="990" y="320" font-size="14" fill="#1e293b" text-anchor="middle">destek, ilgi, sorumluluktan uzaklaşma</text>
+<circle cx="1020" cy="128" r="4.48" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M1014.24 150.4 C1012.96 137.6 1016.8 133.12 1020 133.12 C1023.2 133.12 1027.04 137.6 1025.76 150.4 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1017.12 150.4 L1016.48 165.76" stroke="#ea580c" stroke-width="2.24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1022.88 150.4 L1023.52 165.76" stroke="#ea580c" stroke-width="2.24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1060" cy="128" r="4.48" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M1054.24 150.4 C1052.96 137.6 1056.8 133.12 1060 133.12 C1063.2 133.12 1067.04 137.6 1065.76 150.4 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1057.12 150.4 L1056.48 165.76" stroke="#ea580c" stroke-width="2.24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1062.88 150.4 L1063.52 165.76" stroke="#ea580c" stroke-width="2.24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1100" cy="128" r="4.48" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M1094.24 150.4 C1092.96 137.6 1096.8 133.12 1100 133.12 C1103.2 133.12 1107.04 137.6 1105.76 150.4 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1097.12 150.4 L1096.48 165.76" stroke="#ea580c" stroke-width="2.24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1102.88 150.4 L1103.52 165.76" stroke="#ea580c" stroke-width="2.24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1060" y="182" font-size="14" fill="#475569" text-anchor="middle">aile, çevre</text>
+<rect x="460" y="405" width="345" height="140" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="437" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">C · Güzel aldırmazlık</text>
+<path d="M500 470 C515 455 535 455 550 470" stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M520 490 C525 500 535 500 540 490" stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="575" y="455" font-size="14" fill="#1e293b" text-anchor="start">ciddi belirtiye karşın</text>
+<text x="575" y="472" font-size="14" fill="#1e293b" text-anchor="start">uygunsuz kayıtsızlık</text>
+<text x="575" y="489" font-size="14" fill="#1e293b" text-anchor="start">(la belle indifférence)</text>
+<text x="480" y="520" font-size="14" fill="#b91c1c" text-anchor="start" font-weight="bold">tarihsel kavram; tanısal değeri yok,</text>
+<text x="480" y="537" font-size="14" fill="#b91c1c" text-anchor="start" font-weight="bold">güvenilir bulgu değil</text>
+<rect x="825" y="405" width="345" height="140" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="845" y="437" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">D · Özdeşim</text>
+<circle cx="860" cy="458" r="5.6000000000000005" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<path d="M852.8 486.0 C851.2 470.0 856.0 464.4 860 464.4 C864.0 464.4 868.8 470.0 867.2 486.0 Z" stroke="#64748b" stroke-width="2" fill="#64748b" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M856.4 486.0 L855.6 505.2" stroke="#64748b" stroke-width="2.8000000000000003" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M863.6 486.0 L864.4 505.2" stroke="#64748b" stroke-width="2.8000000000000003" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="920" cy="458" r="5.6000000000000005" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M912.8 486.0 C911.2 470.0 916.0 464.4 920 464.4 C924.0 464.4 928.8 470.0 927.2 486.0 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M916.4 486.0 L915.6 505.2" stroke="#0f766e" stroke-width="2.8000000000000003" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M923.6 486.0 L924.4 505.2" stroke="#0f766e" stroke-width="2.8000000000000003" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M875 488 C890 473 905 473 915 488" stroke="#0f766e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<text x="965" y="462" font-size="14" fill="#1e293b" text-anchor="start">önemli bir kişinin belirtisi</text>
+<text x="965" y="479" font-size="14" fill="#1e293b" text-anchor="start">bilinçdışı örnek alınır;</text>
+<text x="965" y="496" font-size="14" fill="#1e293b" text-anchor="start">yasta görülebilir</text>
+<rect x="30" y="565" width="1140" height="155" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="597" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">E · Sınavda nasıl sorulur?</text>
+<text x="50" y="625" font-size="14" fill="#1e293b" text-anchor="start">Güzel aldırmazlık hangi bozuklukta görülür? → konversiyon (işlevsel nörolojik belirti) bozukluğu; çeldiriciler somatizasyon, hipokondriyazis, dismorfik bozukluk.</text>
+<text x="50" y="649" font-size="14" fill="#1e293b" text-anchor="start">Birincil kazanç içeride kaygıyı azaltır, ikincil kazanç dışarıdan ilgi ve kolaylık getirir; ikisi de bilinçli bir çıkar hesabı değildir (bilinçli çıkar = temaruz).</text>
+<text x="600" y="700" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">Tanıyı bu kavramlar değil, muayenedeki olumlu bulgular koydurur.</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 3 (Freud: çatışma → belirti → birincil kazanç) ve slayt 38 (klasik kavramlar)</text>
+</svg>

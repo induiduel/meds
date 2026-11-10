@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="780" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">İşlevsel belirti nasıl oluşur? Dikkat, beklenti ve faillik</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Beyin–beden iletişiminde üç sorun ve ortak zemin · slayt 29</text>
+<rect x="30" y="95" width="520" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · Beyinde ne oluyor?</text>
+<path d="M110 330 C70 290 95 210 170 195 C190 150 290 140 330 185 C400 165 470 215 455 280 C490 320 455 385 405 385 C380 420 300 430 265 400 C215 425 150 400 140 360 C120 355 110 345 110 330 Z" stroke="#6d28d9" stroke-width="3" fill="#ede9fe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 345 C360 380 400 380 430 345" stroke="#6d28d9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 215 C330 260 380 270 420 230" stroke="#6d28d9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 330 C200 370 270 370 320 340" stroke="#6d28d9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 180 C275 165 320 165 345 185 C330 200 270 200 250 180 Z" stroke="#0f766e" stroke-width="2" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="298" y="160" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="bold">motor alanlar</text>
+<ellipse cx="250" cy="320" rx="22" ry="15" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<text x="250" y="360" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">amigdala (limbik)</text>
+<path d="M262 305 C290 270 290 230 298 198" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="118" y="236" font-size="14" fill="#b91c1c" text-anchor="start" font-weight="bold">artmış bağlantı:</text>
+<text x="118" y="254" font-size="14" fill="#b91c1c" text-anchor="start">duygu hareketi</text>
+<text x="118" y="272" font-size="14" fill="#b91c1c" text-anchor="start">doğrudan etkiler</text>
+<ellipse cx="415" cy="300" rx="26" ry="18" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+<line x1="440" y1="300" x2="530" y2="236" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="440" cy="300" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="524" y="241" font-size="14" fill="#ea580c" text-anchor="end">sağ temporoparietal</text>
+<text x="536" y="256" font-size="14" fill="#ea580c" text-anchor="end">bileşke: düşük etkinlik,</text>
+<text x="536" y="274" font-size="14" fill="#ea580c" text-anchor="end">faillik duygusu bozuk</text>
+<text x="50" y="468" font-size="15" fill="#1e293b" text-anchor="start">Sorun yapıda değil işleyiştedir: ağ yanlış</text>
+<text x="50" y="488" font-size="15" fill="#1e293b" text-anchor="start">çalışır, lezyon yoktur. Üç sorunun ortak</text>
+<text x="50" y="508" font-size="15" fill="#1e293b" text-anchor="start">zemini duygu ile hareket arasındaki artmış bağdır.</text>
+<rect x="580" y="95" width="590" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="600" y="127" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Üç sorun, üç örnek</text>
+<text x="600" y="160" font-size="18" fill="#ea580c" text-anchor="start" font-weight="bold">1 · Dikkat</text>
+<line x1="610" y1="250" x2="632" y2="250" stroke="#64748b" stroke-width="3"/>
+<line x1="632" y1="250" x2="632" y2="236" stroke="#64748b" stroke-width="3"/>
+<line x1="632" y1="236" x2="654" y2="236" stroke="#64748b" stroke-width="3"/>
+<line x1="654" y1="236" x2="654" y2="222" stroke="#64748b" stroke-width="3"/>
+<line x1="654" y1="222" x2="676" y2="222" stroke="#64748b" stroke-width="3"/>
+<line x1="676" y1="222" x2="676" y2="208" stroke="#64748b" stroke-width="3"/>
+<line x1="676" y1="208" x2="698" y2="208" stroke="#64748b" stroke-width="3"/>
+<line x1="698" y1="208" x2="698" y2="194" stroke="#64748b" stroke-width="3"/>
+<circle cx="705" cy="178" r="5.6000000000000005" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M697.8 206.0 C696.2 190.0 701.0 184.4 705 184.4 C709.0 184.4 713.8 190.0 712.2 206.0 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M701.4 206.0 L700.6 225.2" stroke="#ea580c" stroke-width="2.8000000000000003" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M708.6 206.0 L709.4 225.2" stroke="#ea580c" stroke-width="2.8000000000000003" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="740" y="185" font-size="14" fill="#1e293b" text-anchor="start">Yürümek, konuşmak otomatiktir; dikkat</text>
+<text x="740" y="202" font-size="14" fill="#1e293b" text-anchor="start">belirtiye yönelince otomatik hareket bozulur.</text>
+<text x="740" y="219" font-size="14" fill="#1e293b" text-anchor="start">Örnek: merdivende her adımı düşünmek → sendeleme.</text>
+<text x="600" y="290" font-size="18" fill="#ea580c" text-anchor="start" font-weight="bold">2 · Beklenti</text>
+<path d="M620 300 C640 330 640 360 622 395" stroke="#ea580c" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M655 300 C660 330 658 360 660 395" stroke="#0f766e" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M690 310 C705 300 720 300 735 312" stroke="#ea580c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<text x="740" y="310" font-size="14" fill="#1e293b" text-anchor="start">Beyin hareketi önceden tahmin eder; “bu bacak</text>
+<text x="740" y="327" font-size="14" fill="#1e293b" text-anchor="start">tutmuyor” beklentisi güçlüyse hareket programı</text>
+<text x="740" y="344" font-size="14" fill="#1e293b" text-anchor="start">baskılanır. Örnek: burkulma iyileşse de bacağı</text>
+<text x="740" y="361" font-size="14" fill="#1e293b" text-anchor="start">kullanamama.</text>
+<text x="600" y="420" font-size="18" fill="#ea580c" text-anchor="start" font-weight="bold">3 · Faillik</text>
+<path d="M605 470 C612 450 618 490 625 470 C632 450 638 490 645 470 C652 450 658 490 665 470 C672 450 678 490 685 470 C692 450 698 490 705 470" stroke="#ea580c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="740" y="445" font-size="14" fill="#1e293b" text-anchor="start">“Bu hareketi ben yapıyorum” duygusu kaybolur:</text>
+<text x="740" y="462" font-size="14" fill="#1e293b" text-anchor="start">hareket olur ama istemsiz yaşanır.</text>
+<text x="740" y="479" font-size="14" fill="#1e293b" text-anchor="start">Örnek: hasta titremeyi kendisinin başlatmadığını</text>
+<text x="740" y="496" font-size="14" fill="#1e293b" text-anchor="start">gerçekten hisseder; numara yapmaz.</text>
+<rect x="30" y="555" width="1140" height="160" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="587" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Sonuç</text>
+<text x="50" y="618" font-size="14" fill="#1e293b" text-anchor="start">Duygusal uyarılma (amigdala) motor alanları doğrudan etkiler; dikkat belirtiye kilitlenir, beklenti hareketi baskılar, faillik duygusu silinir.</text>
+<text x="50" y="642" font-size="14" fill="#1e293b" text-anchor="start">Bu yüzden belirti gerçektir ve istemsizdir; muayenede dikkat başka yöne çekilince hareket düzelir (olumlu bulguların temeli).</text>
+<text x="600" y="700" font-size="14" fill="#64748b" text-anchor="middle">Hallett ve ark., Lancet Neurol 2022 · slayt 29</text>
+<text x="600.0" y="764" font-size="14" fill="#64748b" text-anchor="middle">Kaynak: slayt 29 (dikkat, beklenti, faillik; amigdala–motor bağlantı; sağ temporoparietal bileşke)</text>
+</svg>

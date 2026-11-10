@@ -1,24 +1,22 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 689,
-  "baslik": "Oyunlar: bot gücü seçimi, geri al ve otomatik ıstaka",
+  "onem": 690,
+  "baslik": "Kurul 2: Psikosomatik, Cinsel Kimlik, Epilepsi ve Alkoller dersleri hoca kaydıyla güncellendi",
   "maddeler": [
-    "Go ve XOX: bot gücünü Kolay, Orta ya da Zor seçebilirsin; Kolay ve Orta bot artık hata yapıyor, yenilebilir.",
-    "Go ve XOX: bota karşı son hamleni geri alabilirsin.",
-    "Okey: çektiğin taş ıstakada kendiliğinden yerine dizilir (menüden kapatılabilir); Sırala ve Masayı diz Zorlu modda da var.",
-    "Okey: dar ekranda ıstakadaki per toplamı artık doğru hesaplanıyor."
+    "Sesli ders: hocanın ders kaydındaki örnekleri ve sınav vurguları Psikosomatik Bozukluklar, Cinsel Kimlik ve İşlev Bozuklukları, Epilepsi ve Alkoller derslerine eklendi.",
+    "Hocanın vurguladıkları: üç derste hocanın sınav için işaret ettiği yerler ayrı listede ve sesli derste rozet olarak görünür.",
+    "Psikosomatik, Cinsel Kimlik ve Epilepsi: En önemliler listesi, sesli soru çözücü, örnek sorular ve hocanın sorabileceği sorular eklendi.",
+    "Alkoller: hocanın sorabileceği sorular sesli olarak eklendi; Epilepsi ve Alkoller'de PDF üstünde canlı çizim var."
   ],
   "eklenen": [
-    "Go/XOX bot gücü",
-    "Go/XOX geri al",
-    "Istakayı otomatik sırala"
+    "Hoca kaydı katmanı (4 ders)",
+    "En önemliler + sesli çözücü (3 ders)",
+    "Ara sorular (4 ders)"
   ],
   "degisen": [
-    "Zorlu modda sıralama ve masayı dizme"
+    "Sesli ders anlatımları (hoca örnekleri)"
   ],
-  "duzeltilen": [
-    "Dar ıstakada per toplamı"
-  ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": []
 }
