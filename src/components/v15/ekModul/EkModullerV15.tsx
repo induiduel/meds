@@ -10,7 +10,7 @@ import {
   type EkModul, type SetSoru,
 } from './ekVeri';
 import { EkMd, Etkinlik, GECIS_KEY, OynatCubugu, dk, otoGecisAcik, useSira } from './ekOrtak';
-import { HocaSetCoz, HocaSetler } from './EkHoca';
+import { HocaSetCoz, HocaSetler, TUMU, tumSet } from './EkHoca';
 import { FoyKonu, FoyListe } from './EkFoy';
 import { EkPdfDers } from './EkPdfDers';
 import '../../../styles/v15/ekmodul.css';
@@ -102,7 +102,7 @@ const Modul: React.FC<{ id: string; a: Adres }> = ({ id, a }) => {
   if (a.b === 'sinav-oncesi' && m.sinavOncesi) return <SinavOncesi m={m} />;
   if (a.b === 'sorular' && (konu || a.konu === 'genel' || a.konu === 'deneme')) return <Sorular key={a.konu} m={m} set={a.konu as string} />;
   if (a.b === 'hoca' && m.hoca) {
-    const set = m.hoca.setler.find((s) => s.id === a.konu);
+    const set = a.konu === TUMU ? tumSet(m) : m.hoca.setler.find((s) => s.id === a.konu);
     return set ? <HocaSayfa key={set.id} m={m} setId={set.id} /> : <HocaSayfa m={m} setId={null} />;
   }
   if (a.b === 'foy' && m.foy) return <FoySayfa key={konu?.id || 'liste'} m={m} konuId={konu?.id || null} />;
@@ -249,7 +249,7 @@ const FoySayfa: React.FC<{ m: EkModul; konuId: string | null }> = ({ m, konuId }
 /* ——— hocanın çalışma soruları ——— */
 const HocaSayfa: React.FC<{ m: EkModul; setId: string | null }> = ({ m, setId }) => {
   const ana = adres(m.ozet.kurul, m.ozet.id);
-  const set = m.hoca!.setler.find((s) => s.id === setId) || null;
+  const set = (setId === TUMU ? tumSet(m) : m.hoca!.setler.find((s) => s.id === setId)) || null;
   useV15Baslik({ baslik: set ? set.ad : 'Hocanın çalışma soruları', alt: set ? 'Hocanın çalışma soruları' : m.ozet.ad, geri: set ? `${ana}/hoca` : ana });
   if (set) return <HocaSetCoz set={set} m={m} />;
   return (

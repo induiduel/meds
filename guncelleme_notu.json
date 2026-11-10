@@ -1,11 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 704,
-  "baslik": "Yürüyüş ve Kampçılık: hocanın sorularına sesli çözüm ve çözümlü PDF",
+  "onem": 705,
+  "baslik": "Yürüyüş ve Kampçılık: tüm çalışma soruları tek sayfada",
   "maddeler": [
-    "Sesli çözüm: hocanın 480 çalışma sorusu EMA sesiyle okunur, ardından cevap ve kısa çözüm anlatılır; soru ekranda sesle birlikte ilerler.",
-    "Oynatıcıda okuma hızı (0,75×–2×), 10 saniye atlama; ekran kilitliyken ve arka planda çalmaya devam eder.",
-    "Yeni PDF: Çözümlü çalışma soruları (61 sayfa, her sorunun altında cevap ve çözüm)."
+    "Hocanın 480 sorusu tek sayfada: boşluk doldurma, doğru–yanlış ve çoktan seçmeli sırayla; sesli çözümle baştan sona dinlenebilir (Hocanın çalışma soruları › Tüm sorular tek sayfada)."
   ],
   "eklenen": [
     "FTR: Sık Görülen Nörolojik Hastalıklarda Rehabilitasyon dersi"

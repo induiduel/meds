@@ -52,7 +52,7 @@ export interface EkBaslik { no: number; baslik: string; ozet: string; konular: E
 export interface EkPart { baslik: string; ekran: string; ses: string[] }
 /** Hocanın verdiği çalışma soruları (hoca_sorulari.json): boşluk doldurma, doğru–yanlış, çoktan seçmeli setleri */
 /** cozum: sesli çözüm metni (h-/hc- klipleri) · k: föyde yeniden numaralanan sorunun asıl kimliği "<set>-<no>" */
-export type HocaSoru = { cozum?: string; k?: string } & (
+export type HocaSoru = { cozum?: string; k?: string; tur?: 'bosluk' | 'dy' | 'cs' } & (
   | { no: number; metin: string; cevap: string }
   | { no: number; metin: string; dogru: boolean }
   | { no: number; kok: string; secenekler: Record<string, string>; dogru: string; belirsiz?: boolean });

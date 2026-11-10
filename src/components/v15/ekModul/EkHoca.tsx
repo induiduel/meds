@@ -9,8 +9,22 @@ import { OynatCubugu, useSira } from './ekOrtak';
  */
 const kar = <T,>(a: T[]): T[] => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
+/** Bütün setler tek sayfada (sesli çözüm dahil): her soru kendi türünü ve asıl kimliğini taşır */
+export const TUMU = 'tumu';
+export const tumSet = (m: EkModul): HocaSet => ({
+  id: TUMU, ad: 'Tüm sorular', tur: 'cs', aciklama: '',
+  sorular: (m.hoca?.setler || []).flatMap((s) => s.sorular.map((q) => ({ ...q, tur: s.tur, k: `${s.id}-${q.no}` }))) as HocaSoru[],
+});
+
 export const HocaSetler: React.FC<{ m: EkModul; ac: (id: string) => void }> = ({ m, ac }) => (
   <ul className="ekm-hoca-setler" role="list">
+    <li>
+      <button type="button" className="v15-card" onClick={() => ac(TUMU)}>
+        <i>{(m.hoca?.setler || []).reduce((t, s) => t + s.sorular.length, 0)}</i>
+        <span><b>Tüm sorular tek sayfada</b><small>Bütün setler sırayla; sesli çözümle baştan sona dinleyebilirsin</small></span>
+        <ChevronRight aria-hidden />
+      </button>
+    </li>
     {(m.hoca?.setler || []).map((s) => (
       <li key={s.id}>
         <button type="button" className="v15-card" onClick={() => ac(s.id)}>
@@ -36,7 +50,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
   const [acik, setAcik] = useState(false);
   const q = sorular[i] as HocaSoru & Record<string, any>;
   const n = sorular.length;
-  const dogruN = sorular.filter((s: any, k) => yanit[k] !== undefined && yanit[k] === (set.tur === 'bosluk' ? 'b' : String(s.dogru))).length;
+  const dogruN = sorular.filter((s: any, k) => yanit[k] !== undefined && yanit[k] === ((s.tur || set.tur) === 'bosluk' ? 'b' : String(s.dogru))).length;
   const cozulen = Object.keys(yanit).length;
   const bastan = (k = karisik) => { sira.durdur(); setKarisik(k); setTur((t) => t + 1); setI(0); setYanit({}); setAcik(false); };
   const ileri = () => { setAcik(false); setI((x) => Math.min(n - 1, x + 1)); };
@@ -44,9 +58,10 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
   const y = yanit[i];
   const bitti = cozulen === n;
   // boşluk doldurma: boşluk sayısı cevaptaki virgüllü parça sayısına eşitse her boşluğa kendi parçası yazılır
-  const parcalar = set.tur === 'bosluk' ? String(q.metin).split('____') : [];
+  const qt = (q.tur || set.tur) as HocaSet['tur']; // tüm sorular sayfasında tür soruya göre
+  const parcalar = qt === 'bosluk' ? String(q.metin).split('____') : [];
   const bosN = parcalar.length - 1;
-  const cevaplar = set.tur === 'bosluk' ? String(q.cevap).split(/\s*,\s*/) : [];
+  const cevaplar = qt === 'bosluk' ? String(q.cevap).split(/\s*,\s*/) : [];
   const gor = acik || y !== undefined;
   const dolgu = (k: number) => (bosN === 1 ? q.cevap : cevaplar.length === bosN ? cevaplar[k] : '…');
   const kim = (s: HocaSoru) => s.k || `${set.id}-${s.no}`;
@@ -59,7 +74,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
     setAcik(sira.i % 2 === 1);
   }, [sira.i]);
   const git = (x: number) => { setAcik(false); setI(x); if (sira.i >= 0) sira.cal(x * 2); };
-  const cozumGor = gor || (set.tur !== 'bosluk' && y !== undefined);
+  const cozumGor = gor || (qt !== 'bosluk' && y !== undefined);
 
   return (
     <div className="ekm ekm-soru ekm-hoca">
@@ -73,7 +88,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
       {set.anahtarsiz && <p className="ekm-not">Hocanın bu bölümde cevap anahtarı yok; doğru cevaplar hocanın diğer sorularındaki bilgilere göre işaretlendi.</p>}
 
       <article className="ekm-soru-kart v15-card">
-        {set.tur === 'bosluk' && (
+        {qt === 'bosluk' && (
           <>
             <p className="ekm-kok ekm-bosluk">{parcalar.map((p, k) => (
               <React.Fragment key={k}>{p}{k < bosN && <span className={gor ? 'is-acik' : ''}>{gor ? dolgu(k) : '?'}</span>}</React.Fragment>
@@ -93,7 +108,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
             )}
           </>
         )}
-        {set.tur === 'dy' && (
+        {qt === 'dy' && (
           <>
             <p className="ekm-kok">{q.metin}</p>
             {y === undefined ? (
@@ -108,7 +123,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
             )}
           </>
         )}
-        {set.tur === 'cs' && (
+        {qt === 'cs' && (
           <>
             <p className="ekm-kok">{q.kok}</p>
             <ul className="ekm-secenekler" role="list">
@@ -127,7 +142,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
             {acik && y === undefined && <p className="ekm-cozum">Doğru cevap: <b>{q.dogru}) {q.secenekler[q.dogru]}</b></p>}
           </>
         )}
-        {set.tur === 'dy' && acik && y === undefined && <p className="ekm-cozum">Hocanın cevabı: <b>{q.dogru ? 'Doğru' : 'Yanlış'}</b></p>}
+        {qt === 'dy' && acik && y === undefined && <p className="ekm-cozum">Hocanın cevabı: <b>{q.dogru ? 'Doğru' : 'Yanlış'}</b></p>}
         {q.cozum && cozumGor && <p className="ekm-cozum ekm-hoca-cozum">{q.cozum}</p>}
       </article>
 
