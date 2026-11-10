@@ -1,20 +1,21 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 697,
-  "baslik": "Çizgi Yarışı hızlandı",
-  "maddeler": [
-    "Çizgi Yarışı: zar atınca çizgin kendiliğinden ilerler; yalnız sola/sağa geçmen gerektiğinde durur (Otomatik ilerle kutusundan kapatılabilir).",
-    "Bot artık tek hamlede ilerliyor; oyun çok daha hızlı akıyor.",
-    "Yarış çubuğu iki çizginin nerede olduğunu gösterir; kapışma ve altı atışında kutlama yazısı çıkar."
-  ],
-  "eklenen": [
-    "Çizgi Yarışı otomatik ilerle",
-    "Yarış çubuğu"
-  ],
-  "degisen": [
-    "Çizgi Yarışı oyun hızı"
-  ],
-  "duzeltilen": [],
-  "silinen": [],
-  "yenilikler": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
+ "onem": 698,
+ "baslik": "Kurul 2: Nörolojik Hastalıklar Genetiği ve Periyodik Sağlık Muayeneleri dersleri eklendi",
+ "maddeler": [
+  "Yeni sesli dersler: Nörolojik Hastalıklar ve Genetiği (Tıbbi Genetik) ve Periyodik Sağlık Muayeneleri (Aile Hekimliği); PDF üstünde canlı çizim, ara resimler ve hocanın sorabileceği ara sorular.",
+  "Her iki derste örnek sorular, En önemliler listesi ve sesli soru çözücü; Aile Hekimliği branşı Sınav spotlarına eklendi.",
+  "Örnek sorular sayfasına on Kurul 2 dersinin daha soruları geldi (Şizofreni, Bipolar, OKB, TSSB, Sedatif-hipnotikler, Polinöropati, Bazal ganglionlar ve diğerleri).",
+  "Psikiyatri ve farmakoloji derslerinde EKT, TMS, OKB, TSSB gibi kısaltmalar artık harf harf doğru okunuyor."
+ ],
+ "eklenen": [
+  "Çizgi Yarışı otomatik ilerle",
+  "Yarış çubuğu"
+ ],
+ "degisen": [
+  "Çizgi Yarışı oyun hızı"
+ ],
+ "duzeltilen": [],
+ "silinen": [],
+ "yenilikler": []
 }
