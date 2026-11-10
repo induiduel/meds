@@ -1,3 +1,9 @@
+## 2026-11-10 — Taş Masası: düğmesiz masa düzenleme, per sıralaması, masa dizme kipleri (H534 eki)
+- **Düğmesiz:** `motor/odunc.ts` (yeni, saf) + `OkeyMasa.tsx`: seçili el taşları + Per aç ya da masadaki taşa dokunma → masadan 1–2 taş ödünç alınıp `duzenle` yollanır (Yedili/Takım/101, her renk). `PerAlani.tsx` `onTas`.
+- **Sıralama:** Sırala yedilide Per → Renk → Sayı; Masayı diz Renk → Sayı → Açılış sırası. Kural metni güncellendi.
+- **Sınama:** oduncBul motor sınamaları geçti; yerel tarayıcıda Yedili: Sırala (per), Masayı diz, taşa dokununca taslak açılıyor. Ödünç alma ekranda gerçek elde denenmedi (uygun el gelmedi). Sunucu kodu değişmedi.
+- **Durum:** yerelde; commit ve dağıtım yapılmadı.
+
 ## 2026-11-10 — Taş Masası: masadan taş alıp eldekilerle yeni per (H534)
 - **Kural:** Yedili / Takım / 101 Okey'de `duzenle` hamlesi elden taş da alır (masadaki sarı 10 + eldeki sarı 9 ve 11 → seri). `motor/yedili.ts`, `motor/yuzbir.ts` (yeni dal), `tipler.ts` açıklaması, `OkeyMasa.tsx` (taslağa ıstaka taşı, sürükleme, 101 düğmesi), `MasaKurallar.tsx`.
 - **Sınama:** `yedili.sinama.ts` ve `yuzbir.sinama.ts` düzenle bölümleri geçti, `tsc` 0 hata. Arayüz tarayıcıda elle oynanarak sınanmadı. Bot ve ipucu bu hamleyi önermez; zorunluluk/ceza hesabı değişmedi.

@@ -2,6 +2,7 @@
  * 101 Okey motor sınaması: `npx tsx src/services/masa/motor/yuzbir.sinama.ts` (hata → çıkış ≠ 0).
  * Birim sınamaları + tohumlu bot oyunları (taş korunumu, per geçerliliği, ceza, sonlanma) + bulanık sınama + açılış araması süresi.
  */
+import { oduncBul } from './odunc';
 import assert from 'node:assert/strict';
 import type { Ceza, ElSonuc, OkeyGorunum, Olay, Per, Renk, Tas } from '../tipler';
 import { yuzbirMotor as M, type YuzbirDurum, type YuzbirOyuncu } from './yuzbir';
@@ -620,4 +621,21 @@ console.log(`\nTAMAM: ${sayac} birim bölümü + rastgele oyunlar + bulanık sı
   assert.ok(rj.durum.perler.every((p) => perCoz(p.taslar, OK)));
   assert.ok(!rj.durum.hamleYapti);
   console.log('  ✓ duzenle: masadan taş alıp eldekilerle per, çift dokunulmaz, okey yeniden değer alır');
+}
+
+{
+  // oduncBul (101): dörtlü gruptan taş + eldeki iki taş; okeyli seriden uç taş; çözüm motorca kabul edilir
+  const grup = per(1, 'grup', [T(10, 0), T(10, 1), T(10, 2), T(10, 3)]);
+  const d = kur([[T(9, 2), T(11, 2), T(1, 0)], [T(1, 1)]], { perler: [grup] }, [{ acti: true }]);
+  const c = oduncBul([T(9, 2), T(11, 2)], d.perler, OK);
+  assert.ok(c);
+  assert.equal(oyna(d, 'a', { t: 'duzenle', perler: c }).durum.perler.length, 2);
+  const jl = per(2, 'seri', [T(1, 0), T(2, 0), { ...J(), yerine: { s: 3, r: 0 as Renk } }, T(4, 0)]);
+  const dj = kur([[T(4, 1), T(4, 2), T(1, 3)], [T(1, 1)]], { perler: [jl] }, [{ acti: true }]);
+  const cj = oduncBul([T(4, 1), T(4, 2)], dj.perler, OK);
+  assert.ok(cj);
+  const rj = oyna(dj, 'a', { t: 'duzenle', perler: cj });
+  assert.ok(rj.durum.perler.every((p) => perCoz(p.taslar, OK)));
+  assert.equal(oduncBul([T(9, 2), T(11, 2)], [per(3, 'grup', [T(10, 0), T(10, 1), T(10, 2)])], OK), null);
+  console.log('  ✓ oduncBul: masadan ödünç taşla per (101, okeyli seri dahil)');
 }

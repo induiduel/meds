@@ -95,6 +95,8 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
           <h3>Masayı düzenleme</h3>
           <p>Masadaki perler dokunulmaz değildir. Per açtıktan sonra sıran gelince <b>Masayı düzenle</b> ile perlerin yerini değiştirebilir, taşları perler arasında yeniden dizebilirsin: örneğin 3-4-5-6 kırmızı serinin 6’sını 6’lı gruba taşıyıp dörtlü grup yaparsın. Kurallar:</p>
           <ul>
+            <li><b>Düğmeye basmak şart değil:</b> elindeki taşları seçip <b>Per aç</b>’a basarsan (ya da masadaki taşa dokunursan) eksik taş masadan kendiliğinden alınır; hangi renk olursa olsun, taşı veren per geçerli kalıyorsa olur. Doğrudan olmuyorsa masadaki taşa dokunmak düzenlemeyi başlatır.</li>
+            <li><b>Sırala</b> ıstakanı perlere, renge ya da sayıya göre; <b>Masayı diz</b> masadaki perleri renge ya da sayıya göre dizer, aradığın taşı kolay bulursun.</li>
             <li>Masadaki taşların <b>hepsi masada kalır</b>; hiçbir taş ele geri alınamaz.</li>
             <li><b>Elinden taş katabilirsin:</b> masadaki bir taşı perinden alıp elindeki taşlarla yeni per kurarsın. Örneğin dörtlü 10 grubundaki sarı 10’u alır, elindeki sarı 9 ve 11 ile 9-10-11 serisi yaparsın; geride üçlü 10 grubu kalır.</li>
             <li>Onayladığında her per yine geçerli olmalıdır (en az 3 taşlık seri ya da grup).</li>

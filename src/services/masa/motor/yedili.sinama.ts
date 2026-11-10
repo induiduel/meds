@@ -1,4 +1,5 @@
 /** Yedili / Takım Yedili motor sınaması: `npx tsx src/services/masa/motor/yedili.sinama.ts` (hata varsa çıkış ≠ 0) */
+import { oduncBul } from './odunc';
 import assert from 'node:assert/strict';
 import type { Ceza, ElSonuc, OkeyGorunum, Olay, Per, Renk, Rng, Tas } from '../tipler';
 import { takimMotor, yediliMotor, type YediliDurum } from './yedili';
@@ -627,3 +628,42 @@ sina('duzenle: masadan alınan taş eldekilerle yeni per olur (dörtlü 10 grubu
   assert.ok((yediliMotor.uygula(uc, 'a', { t: 'duzenle', perler: [ucler, [t(10, 1).id, t(10, 2).id], seri] }, () => 0) as any).hata);
 });
 console.log('TAMAM: düzenle (elden taş) sınamaları geçti.');
+
+sina('oduncBul: seçili el taşları masadan ödünç taşla per olur ve motor kabul eder (her renk)', () => {
+  const t = (s: number, r: 0 | 1 | 2 | 3, k = 0) => ({ id: r * 13 + (s - 1) + k * 52, s, r });
+  const kur = (el: any[], perler: any[]) => {
+    const d = structuredClone(yediliMotor.elBaslat({ oyuncular: [{ id: 'a' }, { id: 'b' }], elNo: 1, baslayan: 0, rng: () => 0.3 }) as YediliDurum);
+    d.oyuncular[0].acti = true; d.oyuncular[0].el = el; d.perler = perler;
+    return d;
+  };
+  const uygula = (d: YediliDurum, perler: number[][] | null) => { assert.ok(perler, 'çözüm yok'); const r = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler }, () => 0) as any; assert.ok(!r.hata, r.hata); return r.durum as YediliDurum; };
+  for (const r of [0, 1, 2, 3] as const) {
+    // Dörtlü 10 grubundan r rengindeki 10 + eldeki 9 ve 11
+    const d = kur([t(9, r, 1), t(11, r, 1), t(1, 0)], [{ id: 0, tur: 'grup', taslar: [t(10, 0), t(10, 1), t(10, 2), t(10, 3)], sahip: 'b' }]);
+    const s = uygula(d, oduncBul(d.oyuncular[0].el.slice(0, 2), d.perler));
+    assert.equal(s.oyuncular[0].el.length, 1);
+    assert.equal(s.perler.length, 2);
+  }
+  // Üçlü gruptan taş alınamaz
+  const uc = kur([t(9, 3), t(11, 3), t(1, 0)], [{ id: 0, tur: 'grup', taslar: [t(10, 1), t(10, 2), t(10, 3)], sahip: 'b' }]);
+  assert.equal(oduncBul(uc.oyuncular[0].el.slice(0, 2), uc.perler), null);
+  // Serinin ucundan (4 taşlı) ve ortasından (bölerek, 7 taşlı) alma; eldeki iki 6 ile grup
+  const seri = kur([t(6, 1), t(6, 2), t(1, 0)], [{ id: 0, tur: 'seri', taslar: [3, 4, 5, 6].map((x) => t(x, 0)), sahip: 'b' }]);
+  assert.equal(uygula(seri, oduncBul(seri.oyuncular[0].el.slice(0, 2), seri.perler)).perler.length, 2);
+  const orta = kur([t(6, 1), t(6, 2), t(1, 0)], [{ id: 0, tur: 'seri', taslar: [3, 4, 5, 6, 7, 8, 9].map((x) => t(x, 0)), sahip: 'b' }]);
+  assert.equal(uygula(orta, oduncBul(orta.oyuncular[0].el.slice(0, 2), orta.perler)).perler.length, 3);
+  const kisa = kur([t(6, 1), t(6, 2), t(1, 0)], [{ id: 0, tur: 'seri', taslar: [5, 6, 7].map((x) => t(x, 0)), sahip: 'b' }]);
+  assert.equal(oduncBul(kisa.oyuncular[0].el.slice(0, 2), kisa.perler), null);
+  // Tek taşla: iki ayrı perden birer taş
+  const iki = kur([t(8, 3), t(1, 0)], [
+    { id: 0, tur: 'grup', taslar: [t(8, 0), t(8, 1), t(8, 2), t(8, 3, 1)], sahip: 'b' },
+    { id: 1, tur: 'seri', taslar: [4, 5, 6, 7].map((x) => t(x, 3)), sahip: 'b' },
+    { id: 2, tur: 'seri', taslar: [9, 10, 11, 12].map((x) => t(x, 3)), sahip: 'b' },
+  ]);
+  const c = uygula(iki, oduncBul([t(8, 3)], iki.perler));
+  assert.equal(c.perler.length, 4);
+  // zorunlu taş: yalnız o taşı içeren çözüm
+  const z = kur([t(9, 3, 1), t(11, 3, 1), t(1, 0)], [{ id: 0, tur: 'grup', taslar: [t(10, 0), t(10, 1), t(10, 2), t(10, 3)], sahip: 'b' }]);
+  assert.equal(oduncBul(z.oyuncular[0].el.slice(0, 2), z.perler, null, t(10, 0).id), null);
+  assert.ok(oduncBul(z.oyuncular[0].el.slice(0, 2), z.perler, null, t(10, 3).id));
+});

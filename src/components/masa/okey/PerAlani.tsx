@@ -36,6 +36,8 @@ export interface PerAlaniProps {
   onYeni(): void;
   /** Masayı düzenleme kipi: masadaki taşlara dokunulur (seçilir), geçersiz perler işaretlenir */
   duzen?: { secili: ReadonlySet<number>; gecersiz: ReadonlySet<number>; onTas(id: number): void };
+  /** Düzenleme kipi dışında masadaki taşa dokunma (taşı ödünç alma / düzenlemeyi başlatma) */
+  onTas?(per: number, id: number): void;
 }
 
 export default function PerAlani(p: PerAlaniProps) {
@@ -88,7 +90,7 @@ export default function PerAlani(p: PerAlaniProps) {
                 {per.taslar.map((t) => (
                   <span
                     key={t.id} className={`om-pertas${p.gizli.has(t.id) ? ' om-gizli' : ''}${p.hale.has(t.id) ? ' om-pertas--hale' : ''}${p.duzen?.secili.has(t.id) ? ' om-pertas--secili' : ''}`} data-om-pertas={t.id}
-                    {...(p.duzen ? { role: 'button', tabIndex: 0, 'aria-pressed': p.duzen.secili.has(t.id), onClick: (e: React.MouseEvent) => { e.stopPropagation(); p.duzen!.onTas(t.id); } } : null)}
+                    {...(p.duzen ? { role: 'button', tabIndex: 0, 'aria-pressed': p.duzen.secili.has(t.id), onClick: (e: React.MouseEvent) => { e.stopPropagation(); p.duzen!.onTas(t.id); } } : p.onTas ? { onClick: (e: React.MouseEvent) => { e.stopPropagation(); p.onTas!(per.id, t.id); } } : null)}
                   >
                     <TasGorsel tas={t} renkler={p.oda.ayar.renkler} tema={p.oda.ayar.tema} okey={p.okey} />
                     {p.bolSayi === t.s && p.uygun.has(`${per.id}:bol`) && (
