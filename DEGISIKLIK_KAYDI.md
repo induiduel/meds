@@ -1,3 +1,15 @@
+## 2026-11-10 — Profil ve arkadaşlık istekleri görünmüyordu (H551, kullanıcı bildirdi)
+- **Belirti:** giriş yapılmış olmasına rağmen kendi profil/arkadaş listesi ve istekler boş.
+- **Kök neden:** `src/services/adminFetchAuth.ts::ogrenciJetonu` GET'te jetonu yalnız basarim/olasi-sorular/topluluk yollarına ekliyordu; `/api/arkadas` ve `/api/kisi/*` jetonsuz → sunucu kişiyi tanımıyordu.
+- **Çözüm:** listeye `kisi/` + `arkadas` eklendi; öğrenci jetonu gereken istek açılışta oturum hazır olana dek (≤4 sn) bekler. Ayrıntı H551.
+
+## 2026-11-10 — Ek modüller sesli ders: arka planda çalma, konular arası otomatik geçiş, oynatıcı ayarı, PDF bölüm görünümü
+- **Oynatıcı (`ekOrtak.tsx::useSira`):** tek ortak `Audio` öğesi (konu değişince yeni öğe açılmaz → kilit ekranında/arka planda geçişte oynatma izni kaybolmaz), Media Session (başlık, oynat/duraklat, sonraki/önceki bölüm, ±10 sn; müzik susar). Çubuk: 10 sn geri/ileri, sonraki bölüm, klip anı, ayar paneli (hız 0,75–2×, "konu bitince sonraki konuya geç" `medsoru_ek_modul_oto_gecis`, başa dön).
+- **Otomatik geçiş (`EkModullerV15.tsx::Ders`):** konu bitince ayar açıksa `sessionStorage medsoru_ek_modul_oto_basla` + sonraki konuya gidilir, ses ilk bölümden sürer.
+- **PDF bölüm görünümü (`EkPdfBolum.tsx`, yeni):** kitapçık sayfası `pdf_esle.json` bölüm kutusuna (+%2 pay) kırpılıp kaba sığdırılır, okunan satır yanar; varsayılan kip, üst çubuktaki düğmeyle tam sayfa (eski PdfDocView, içerik değişmedi). Dar ekranda kap içeriğe göre uzar.
+- **Sınama:** yerel 3000'de 1a: bölüm kırpma masaüstü + 375 px, son bölümden sonra 1b'ye geçip çalmayı sürdürdü, `mediaSession` başlık/`playing`. Gerçek telefonda kilit ekranı denenmedi.
+- **Durum:** canlıda — başka oturumun f45d1c82 commit'i (onem 704, "ek modül PDF bölüm düzenlemeleri") bu değişiklikleri de aldı ve dağıttı; canlı `dagitim.json` aynı commit.
+
 ## 2026-11-10 — Çizgi Yarışı: Eğlenceli mod (onem 699, kullanıcı kararı)
 - **Kural (kullanıcı onayı 2026-11-10):** `OdaAyar.cizgiMod` 'klasik' (aynen) | 'eglence'. Eğlencelide pistte ayna simetrik özel kareler (`ozelKur`, ≈uzunluk/10 çift, kale ve ilk satırlar dışında): ileri +3 adım, yan +1 yan hakkı, zar (tur bitince yeniden zar, `tekrar`), tuzak (2 hücre geri, kale kalır, tur biter). Kapışmada basılan kare etkisiz; kare basılınca tükenir.
 - **Ekran:** kurulum/lobide "Mod" seçici, pistte kare simgeleri, kare etkisi kutlama yazısı; kurallar sayfası güncellendi. Düzeltme: "Yol kapalı, tur yandı" yazısı zar atılır atılmaz yanlışlıkla çıkıyordu, artık yalnız tur bitince.

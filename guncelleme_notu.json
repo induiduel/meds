@@ -1,15 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 705,
-  "baslik": "Yürüyüş ve Kampçılık: tüm çalışma soruları tek sayfada",
+  "onem": 706,
+  "baslik": "Arkadaşlar ve profil düzeltmesi",
   "maddeler": [
-    "Hocanın 480 sorusu tek sayfada: boşluk doldurma, doğru–yanlış ve çoktan seçmeli sırayla; sesli çözümle baştan sona dinlenebilir (Hocanın çalışma soruları › Tüm sorular tek sayfada)."
+    "Arkadaşlar: giriş yapmış olsan da arkadaş listesi, gelen/giden istekler ve profiller boş görünüyordu; artık doğru yükleniyor."
   ],
-  "eklenen": [
-    "FTR: Sık Görülen Nörolojik Hastalıklarda Rehabilitasyon dersi"
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Arkadaş listesi, arkadaşlık istekleri ve profil sayfası girişli kullanıcıda boş geliyordu"
+  ],
   "silinen": [],
   "yenilikler": []
 }

@@ -52,8 +52,9 @@ function ogrenciJetonu(input: RequestInfo | URL, init?: RequestInit): boolean {
   const m = String(init?.method || (typeof Request !== 'undefined' && input instanceof Request ? input.method : 'GET')).toUpperCase();
   if (m !== 'GET' && m !== 'HEAD') return true;
   const raw = typeof input === 'string' ? input : input instanceof URL ? input.href : (input as Request).url;
-  // Okuma isteklerinden yalnız jeton gerektirenler: başarım, ATP kilitli içerik (olası sorular), topluluk (kendi mesajın)
-  try { return /^\/api\/(basarim|olasi-sorular|topluluk)\//.test(new URL(raw, window.location.href).pathname); } catch { return false; }
+  // Okuma isteklerinden yalnız jeton gerektirenler: başarım, ATP kilitli içerik (olası sorular), topluluk (kendi mesajın),
+  // arkadaşlık + kişi/profil (2026-11-10: jetonsuz GET'te sunucu kişiyi tanımıyor, liste/profil boş geliyordu)
+  try { return /^\/api\/((basarim|olasi-sorular|topluluk|kisi)\/|arkadas(\/|$))/.test(new URL(raw, window.location.href).pathname); } catch { return false; }
 }
 
 let installed = false;
@@ -68,7 +69,7 @@ export function installAdminFetchAuth() {
         const panelSecret = getStoredPanelSecret();
         const { auth, getLocalAdminSession } = await import('./auth');
         // Açılışta oturum henüz geri yüklenmemişse yönetici istekleri jetonsuz gidip reddedilmesin
-        if (!auth?.currentUser && getLocalAdminSession() && typeof (auth as any)?.authStateReady === 'function') {
+        if (!auth?.currentUser && (getLocalAdminSession() || ogrenciJetonu(input, init)) && typeof (auth as any)?.authStateReady === 'function') {
           await Promise.race([(auth as any).authStateReady(), new Promise((r) => setTimeout(r, 4000))]).catch(() => {});
         }
         const user = auth?.currentUser;
