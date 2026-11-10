@@ -273,6 +273,12 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Aile Hekimliği /1)PERİYODİK MUAYENELER.pdf', name: '1)PERİYODİK MUAYENELER.pdf', pages: 135, fileId: '1ct_laG60bexcgGkR8L4ekjbdgkUWSvnM' } as SourceFile],
   },
+  // 2026-11-10 8. parti (k2-28): deste yok.
+  'k2p-k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo': {
+    title: 'Sık Görülen Nörolojik Hastalıklarda Rehabilitasyon',
+    decks: [],
+    files: [{ path: 'Kurul 2/FTR/2)NÖROLOJİK HASTALIKLARDA REHABİLİTASYON.pdf', name: '2)NÖROLOJİK HASTALIKLARDA REHABİLİTASYON.pdf', pages: 46, fileId: '1zGxWg8ORUzrkGZIECiMg6bV6u42op6W2' } as SourceFile],
+  },
   'k2p-k2-38-travma-ve-stres-baglantili-bozukluklar': {
     title: 'Travma ve Stres Bağlantılı Bozukluklar',
     decks: [],

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="680" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">İnmeden sonra iki ayrı iyileşme yolu</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Spontan nörolojik iyileşme ve nöroplastisite · slayt 9</text>
+<rect x="30" y="88" width="560" height="490" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Spontan iyileşme: penumbra kurtulur</text>
+<path d="M65 260 C60 200 110 170 160 172 C215 170 260 205 258 255 C256 290 220 302 190 300 C180 322 155 324 148 300 C110 305 68 295 65 260 Z" stroke="#9a6b55" stroke-width="2.5" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 230 C115 205 135 240 155 210" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180 195 C195 220 215 210 230 235" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 275 C125 260 145 285 170 270" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M345 260 C340 200 390 170 440 172 C495 170 540 205 538 255 C536 290 500 302 470 300 C460 322 435 324 428 300 C390 305 348 295 345 260 Z" stroke="#9a6b55" stroke-width="2.5" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370 230 C395 205 415 240 435 210" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M460 195 C475 220 495 210 510 235" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M380 275 C405 260 425 285 450 270" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="165" cy="245" rx="50" ry="40" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="6 5"/>
+<ellipse cx="165" cy="245" rx="37" ry="29" fill="#fdba74" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="165" cy="245" rx="18" ry="14" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<ellipse cx="445" cy="245" rx="37" ry="29" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+<ellipse cx="445" cy="245" rx="11" ry="9" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<line x1="275" y1="250" x2="325" y2="250" stroke="#15803d" stroke-width="4" marker-end="url(#oky)"/>
+<text x="300" y="232" font-size="17" fill="#15803d" text-anchor="middle" font-weight="bold">haftalar</text>
+<line x1="160" y1="243" x2="70" y2="150" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="160" cy="243" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="76" y="156" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">iskemik çekirdek</text>
+<line x1="195" y1="235" x2="250" y2="178" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="195" cy="235" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="256" y="184" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">penumbra</text>
+<line x1="205" y1="222" x2="262" y2="204" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="205" cy="222" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="268" y="210" font-size="17" fill="#ea580c" text-anchor="start">ödem</text>
+<line x1="470" y1="240" x2="385" y2="150" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="470" cy="240" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="391" y="156" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">kurtulan penumbra</text>
+<text x="160" y="345" font-size="17" fill="#475569" text-anchor="middle">inmeden hemen sonra</text>
+<text x="440" y="345" font-size="17" fill="#475569" text-anchor="middle">ilk haftalar – 3 ay</text>
+<text x="50" y="384" font-size="17" fill="#1e293b" text-anchor="start">Çekirdek kansız kalan bölgedir. Penumbra, çekirdeğin</text>
+<text x="50" y="407" font-size="17" fill="#1e293b" text-anchor="start">çevresindeki kurtarılabilir alandır.</text>
+<text x="50" y="436" font-size="17" fill="#1e293b" text-anchor="start">Ödem azalır, penumbra kurtulur, reperfüzyonla kan geri</text>
+<text x="50" y="459" font-size="17" fill="#1e293b" text-anchor="start">gelir: hasta kendiliğinden toparlanır.</text>
+<text x="50" y="488" font-size="17" fill="#15803d" text-anchor="start">Örnek: inmeden sonraki günlerde kol kuvvetinin</text>
+<text x="50" y="511" font-size="17" fill="#15803d" text-anchor="start">kendiliğinden kısmen artması.</text>
+<rect x="610" y="88" width="560" height="490" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="628" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Nöroplastisite: ağlar yeniden örgütlenir</text>
+<path d="M637 276 C630 192 700 150 770 153 C847 150 910 199 907 269 C904 318 854 335 812 332 C798 363 763 366 753 332 C700 339 641 325 637 276 Z" stroke="#9a6b55" stroke-width="2.5" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M672 234 C707 199 735 248 763 206" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M798 185 C819 220 847 206 868 241" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M686 297 C721 276 749 311 784 290" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="770" cy="255" rx="30" ry="24" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<line x1="680" y1="262" x2="862" y2="258" stroke="#64748b" stroke-width="3" stroke-dasharray="7 6"/>
+<path d="M760 245 L780 265 M780 245 L760 265" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="680" y1="262" x2="725" y2="195" stroke="#6d28d9" stroke-width="5"/>
+<line x1="725" y1="195" x2="815" y2="192" stroke="#6d28d9" stroke-width="5"/>
+<line x1="815" y1="192" x2="862" y2="258" stroke="#6d28d9" stroke-width="5"/>
+<line x1="680" y1="262" x2="722" y2="316" stroke="#6d28d9" stroke-width="2.5"/>
+<line x1="722" y1="316" x2="812" y2="318" stroke="#6d28d9" stroke-width="2.5"/>
+<line x1="812" y1="318" x2="862" y2="258" stroke="#6d28d9" stroke-width="2.5"/>
+<circle cx="680" cy="262" r="9" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2.5"/>
+<circle cx="725" cy="195" r="9" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2.5"/>
+<circle cx="815" cy="192" r="9" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2.5"/>
+<circle cx="862" cy="258" r="9" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2.5"/>
+<circle cx="812" cy="318" r="9" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2.5"/>
+<circle cx="722" cy="316" r="9" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2.5"/>
+<line x1="770" y1="262" x2="930" y2="140" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="770" cy="262" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="936" y="146" font-size="17" fill="#475569" text-anchor="start">kesilen eski bağlantı</text>
+<line x1="770" y1="190" x2="930" y2="180" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="770" cy="190" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="936" y="186" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">alternatif nöral ağ</text>
+<text x="936" y="206" font-size="17" fill="#6d28d9" text-anchor="start">(sinaptik güçlenme)</text>
+<line x1="768" y1="318" x2="930" y2="330" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="768" cy="318" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="936" y="336" font-size="17" fill="#6d28d9" text-anchor="start">yeni sinaptik bağlantılar</text>
+<line x1="790" y1="268" x2="930" y2="262" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="790" cy="268" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="936" y="268" font-size="17" fill="#b91c1c" text-anchor="start">hasar alanı</text>
+<text x="630" y="400" font-size="17" fill="#1e293b" text-anchor="start">Beyin, hasardan sonra kendini yeniden organize eder ve</text>
+<text x="630" y="423" font-size="17" fill="#1e293b" text-anchor="start">işlevi farklı ağlar üzerinden sürdürür.</text>
+<text x="630" y="452" font-size="17" fill="#1e293b" text-anchor="start">Deneyim, öğrenme ve tekrarlayan, göreve özgü</text>
+<text x="630" y="475" font-size="17" fill="#1e293b" text-anchor="start">rehabilitasyon bu ağları destekler; akut, subakut ve</text>
+<text x="630" y="498" font-size="17" fill="#1e293b" text-anchor="start">kronik dönemde sürer.</text>
+<text x="630" y="527" font-size="17" fill="#15803d" text-anchor="start">Örnek: tekrarlayan yürüme eğitimiyle yürüme ağları</text>
+<text x="630" y="550" font-size="17" fill="#15803d" text-anchor="start">yeniden örgütlenir.</text>
+<rect x="30" y="592" width="1140" height="50" rx="10" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
+<text x="600" y="623" font-size="19" fill="#15803d" text-anchor="middle" font-weight="bold">Spontan iyileşme kendiliğinden olur; nöroplastisite ise egzersizle desteklenir.</text>
+<text x="600.0" y="667" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 9; penumbra tanımı hocanın açıklamasıdır.</text>
+</svg>

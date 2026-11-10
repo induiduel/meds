@@ -1,0 +1,239 @@
+{
+ "ders": "k2-28",
+ "not": "Faz C, 2026-11-10; kural 28 kapısı için doğrulanmış eşleme. Anlatıma cümle eklenmedi (ses üretiliyor); slaytta karşılığı olmayan el notları gerekçesiyle işaretlendi.",
+ "kayitlar": [
+  {
+   "birim": "ftr-s02-b14",
+   "tur": "anlatim",
+   "bilgi": "Aşağıdakilerden hangi seviyelerin komplet lezyonu paraplejiye neden olur? I. Lomber 2 II. Torakal 2 III. Torakal 12 IV. Servikal 7 → Yalnız I, II ve III",
+   "cumle": [
+    "Çıkmış sınavda hangi seviyelerin komplet lezyonunun paraplejiye neden olduğu sorulmuştur",
+    "lomber iki, torakal iki ve torakal on iki parapleji yapar"
+   ],
+   "anahtar": [
+    "parapleji"
+   ],
+   "gerekce": "s18: T2 ve altı parapleji. Anlatım çıkmışı ve üç doğru seviyeyi sayıyı yazıyla (lomber iki, torakal iki, torakal on iki) verir; servikal yedinin tetrapleji yaptığı izleyen cümlededir."
+  },
+  {
+   "birim": "ftr-s02-b14",
+   "tur": "slayt_disi",
+   "bilgi": "T6 seviyesi üzerindeki akut transvers omurilik yaralanmalarında desendan sempatik tonusun aniden kaybolması sonucu gelişen vazodilatasyon, belirgin hipotansiyon ve paradoksal bradikardi kombinasyonuna ne ad verilir? → Nörojenik şok",
+   "yok_terimler": [
+    "nörojenik şok",
+    "bradikardi",
+    "vazodilatasyon"
+   ],
+   "gerekce": "2026-27 slaytında nörojenik şok yok (s19 yalnız spinal şok ve otonomik disrefleksiyi, s30 otonom disrefleksiyi verir); kural 28 gereği anlatıma girmez."
+  },
+  {
+   "birim": "ftr-s02-b10",
+   "tur": "anlatim",
+   "bilgi": "TBH tanımı; Taşıt kazaları ve düşmeler; Genç erkeklerde; serebral kontüzyonlar, parankimal ezilme, kraniyal çift yaralanmaları, diffüz aksonal hasar; ayrıntılı nörolojik muayene; en sık glaskow koma skalası",
+   "cumle": [
+    "Travmatik beyin hasarı, kısaca TBH, fiziksel, bilişsel ve psikososyal fonksiyonlarda bozulmayla sonuçlanan bir yaralanmadır",
+    "En sık nedenleri taşıt kazaları ve düşmelerdir",
+    "Travmatik beyin hasarı genç erkeklerde daha sık görülür"
+   ],
+   "anahtar": [
+    "genç erkeklerde"
+   ],
+   "gerekce": "s31 tanım, en sık neden ve genç erkek bilgisi anlatımda birebir; kontüzyon ve diffüz aksonal hasar s33 şemasından, ayrıntılı muayene ve Glasgow koma skalası s34 paragrafında anlatılır. \"Parankimal ezilme\" ve \"kraniyal çift yaralanmaları\" geçen yılın slayt cümlesidir, bu yılın slaytında yoktur ve anlatıma girmemiştir."
+  },
+  {
+   "birim": "ftr-s02-b10",
+   "tur": "anlatim",
+   "bilgi": "en sık glaskow koma skalası",
+   "cumle": [
+    "Hasarın yaygınlığını ve şiddetini belirlemek için öncelikle üç ölçüt kullanılır",
+    "Glasgow koma skalası, bilinç kaybı süresi ve amnezi süresi"
+   ],
+   "anahtar": [
+    "Glasgow koma skalası"
+   ],
+   "gerekce": "s34: \"öncelikle Glaskow koma skalası, bilinç kaybı süresi ve amnezi süresi kullanılmaktadır\". Not \"en sık\" der, slayt \"öncelikle\"; anlatım slaytın ifadesini ve yazım farkını (Glaskow/Glasgow) verir."
+  },
+  {
+   "birim": "ftr-s02-b19",
+   "tur": "anlatim",
+   "bilgi": "Ailede spina bifida varlığı; Annede folik asit eksikliği; ikinci çocukta 1/25, üçüncüde 1/8",
+   "cumle": [
+    "Birincisi ailede spina bifida bulunmasıdır",
+    "Üçüncüsü genetik faktörler, dördüncüsü annede folik asit eksikliği gibi beslenme bozukluklarıdır",
+    "Spina bifida ikinci çocukta yirmi beşte bir, üçüncü çocukta sekizde bir oranında görülebilir"
+   ],
+   "anahtar": [
+    "folik asit eksikliği",
+    "ikinci çocukta"
+   ],
+   "gerekce": "s41 risk faktörleri ve tekrarlama oranları anlatımda üç cümleye bölünmüş; oranlar yazıyla (yirmi beşte bir, sekizde bir) okunduğu için kapı eşleyemedi."
+  },
+  {
+   "birim": "ftr-s02-b19",
+   "tur": "anlatim",
+   "bilgi": "Spina bifida ile ilgili aşağıdakilerden hangisi/hangileri doğrudur? I. Nöral tüpte kapanma defektidir II. En sık görülen pediatrik nörolojik hastalıktır III. İlk çocukta spina bifida varsa risk diğer çocuklar için artmaktadır IV. En ağır tipi meningoseldir → Yalnız I ve III",
+   "cumle": [
+    "nöral tüp kapanma defekti olduğu ve ilk çocuk etkilenmişse riskin arttığı doğru öncüllerdir"
+   ],
+   "anahtar": [
+    "nöral tüp"
+   ],
+   "gerekce": "s41 + s37 + s44: anlatım doğru iki öncülü (nöral tüp defekti, risk artışı) bu cümlede, yanlış iki öncülü (en sık hastalık serebral palsi; en ağır tip meningomiyelosel) izleyen iki cümlede verir."
+  },
+  {
+   "birim": "ftr-s02-b19",
+   "tur": "anlatim",
+   "bilgi": "Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir: I. Nöral tüpün kapanma defektidir. II. En sık görülen konjenital anomalilerden/nörolojik bozukluklardandır. III. İlk çocukta spina bifida varsa sonraki çocuklar içi → I, II, III ve IV",
+   "cumle": [
+    "nöral tüp kapanma defekti olduğu ve ilk çocuk etkilenmişse riskin arttığı doğru öncüllerdir"
+   ],
+   "anahtar": [
+    "nöral tüp"
+   ],
+   "gerekce": "Aynı sorunun 2023-2024 biçimi (banka dea0348ff630; kök kayıtta kesik). I ve III öncülleri anlatımda birebir; II öncülü (\"en sık görülenlerden\") bu yılın slaytında sıklık bilgisi olarak yok (s37 en sık hastalığı serebral palsi verir), IV. öncül kayıtta okunmuyor: ikisi anlatıma eklenmedi."
+  },
+  {
+   "birim": "ftr-s02-b04",
+   "tur": "anlatim",
+   "bilgi": "Heterotopik ossifikasyon: daha çok kafa travmasında",
+   "cumle": [
+    "spastisite, kontraktür, bası yarası, kırıklar, periferik sinir hasarları, refleks sempatik distrofi ve heterotopik ossifikasyon"
+   ],
+   "anahtar": [
+    "heterotopik ossifikasyon"
+   ],
+   "gerekce": "Bu yılın s14 inme komplikasyonları görselinde heterotopik ossifikasyon yok; slayt onu travmatik beyin hasarının sorunları (s35) ve immobilizasyon komplikasyonları (s36) arasında sayar. Anlatım da kafa travması bölümünde verir; el notuyla aynı yön."
+  },
+  {
+   "birim": "ftr-s02-b04",
+   "tur": "celiski",
+   "bilgi": "Heterotopik ossifikasyon (okla): EHA hareketleri ne kadar hızlı başlarsa o kadar iyi olur.",
+   "sayfa": 36,
+   "slayt_alinti": "heterotopik ossifikasyon gibi komplikasyonların önlenmesi",
+   "gerekce": "Bu yılın slaytı EHA egzersizi ile heterotopik ossifikasyon arasında bağ kurmaz; s36 onu erken mobilizasyonla önlenmesi gereken immobilizasyon komplikasyonu olarak verir, s27 EHA egzersizini kontraktür ve atrofiyi önlemek için akut dönemde başlatır. El notundaki bağ slaytta olmadığından anlatıma girmedi."
+  },
+  {
+   "birim": "ftr-s02-b04",
+   "tur": "celiski",
+   "bilgi": "Heterotopik ossifikasyon: yumuşak dokuda (özellikle kalça, diz, omuz) kalsifikasyon, ısı oluşumu, ağrı.",
+   "sayfa": 30,
+   "slayt_alinti": "Heterotropik ossifikasyon",
+   "gerekce": "Bu yılın slaytı (s30, s35, s36) heterotopik ossifikasyonun yalnız adını verir; yerleşim (kalça, diz, omuz), ısı artışı ve ağrı slaytta yok. Anlatım yalnız kısa tanımı (\"yumuşak dokuda kemik oluşması\") verir; el notunun ayrıntısı kural 28 gereği eklenmedi."
+  },
+  {
+   "birim": "ftr-s02-b04",
+   "tur": "celiski",
+   "bilgi": "Brakial pleksus lezyonu: nadir.",
+   "sayfa": 3,
+   "slayt_alinti": "brakial pleksus yaralanmaları bunu takip eder",
+   "gerekce": "Bu yılın s14 inme komplikasyonları görselinde brakial pleksus lezyonu yok; brakial pleksus bu yıl yalnız çocukluk çağı başvuru nedenleri arasında geçer (s3, s37). İnme komplikasyonu olarak anlatıma girmedi."
+  },
+  {
+   "birim": "ftr-s02-b04",
+   "tur": "anlatim",
+   "bilgi": "İnme (serebrovasküler olay) geçiren yatağa bağımlı hemiplejik bir hastanın akut ve subakut rehabilitasyon sürecinde aşağıdakilerden hangisi YANLIŞTIR? → Mesane ve bağırsak disfonksiyonu inme sonrasında yalnızca eşlik eden omurilik yaralanması varsa ortaya çıkar",
+   "cumle": [
+    "inmede mesane ve bağırsak disfonksiyonunun görülmediğini söyleyen ifade yanlıştır"
+   ],
+   "anahtar": [
+    "mesane ve bağırsak disfonksiyonu"
+   ],
+   "gerekce": "s12 \"Mesane ve barsak programı\": çıkmış d3-k2-ftr-001 anlatımda akut dönem paragrafında bu cümleyle verilir."
+  },
+  {
+   "birim": "ftr-s02-b03",
+   "tur": "anlatim",
+   "bilgi": "Serebrovasküler olay rehabilitasyonu ile ilgili aşağıdaki ifadeler veriliyor: I. Komorbid hastalıklara yönelik tedavilerin planlanması ve yürütülmesi II. Sekonder komplikasyonları önlemek veya en aza indirmek III. Kaybed → I, II, III ve IV",
+   "cumle": [
+    "Çıkmış sınavda serebrovasküler olay rehabilitasyonunun ana ilkeleri dört öncülle sorulmuş ve dördü de doğru kabul edilmiştir",
+    "Çıkmış sorunun öncülleri komorbid hastalıkların tedavisi, sekonder komplikasyonların önlenmesi, kaybedilen motor fonksiyonların yerine konması ve bağımsızlığın sağlanmasıydı"
+   ],
+   "anahtar": [
+    "sekonder komplikasyonlar"
+   ],
+   "gerekce": "s8: çıkmış past-1790877045120-496840 anlatımda dört öncülüyle ve dördünün de doğru olduğu bilgisiyle verilir."
+  },
+  {
+   "birim": "ftr-s02-b02",
+   "tur": "anlatim",
+   "bilgi": "serebral emboli %20: AF (atrial fibrilasyon) riski.",
+   "cumle": [
+    "Hoca atriyal fibrilasyonun serebral emboli kaynaklı inmelerin önemli bir nedeni olduğunu söyledi"
+   ],
+   "anahtar": [
+    "serebral emboli"
+   ],
+   "gerekce": "s4 emboli yüzde yirmi + s5 atrial fibrilasyon; bağı hoca kurar (hv-k2-28-07) ve anlatım bu cümleyle verir. Yüzde yirmi aynı bölümün etiyoloji cümlesindedir."
+  },
+  {
+   "birim": "ftr-s02-b07",
+   "tur": "anlatim",
+   "bilgi": "inme sonrası kasların paraliziye uğramasıyla omuz çıkmış olabilir.",
+   "cumle": [
+    "Omuz ve ekstremite sorunları hemiplejik omuz ağrısı, omuz subluksasyonu ve kompleks bölgesel ağrı sendromudur",
+    "Subluksasyon eklemin kısmi çıkığıdır; hoca bunun kas güçsüzlüğüne bağlı geliştiğini söyledi"
+   ],
+   "anahtar": [
+    "omuz"
+   ],
+   "gerekce": "s14 görseli omuz subluksasyonunu kronik dönem komplikasyonu sayar; kas güçsüzlüğüne bağlı kısmi çıkık olduğu anlatımda komplikasyonlar paragrafında verilir (akut dönem sayfasında değil)."
+  },
+  {
+   "birim": "ftr-s02-b07",
+   "tur": "anlatim",
+   "bilgi": "Yutmanın değerlendirilmesi: → aspirasyon pnömonisi, malnütrisyon, hidrasyon problemi",
+   "cumle": [
+    "Yutma değerlendirilir; hocanın anlattığına göre kliniğe kabul edilen hastada yatak başı yutma testiyle aspirasyon aranır",
+    "Disfajinin sonucu malnütrisyon ve aspirasyon riskidir; aspirasyon, yutulan besinin soluk yoluna kaçmasıdır"
+   ],
+   "anahtar": [
+    "malnütrisyon",
+    "aspirasyon"
+   ],
+   "gerekce": "s12 yutmanın değerlendirilmesi + s7 \"Disfaji: malnutrisyon ve aspirasyon riski\"; hidrasyon aynı paragrafın \"Beslenme ve hidrasyon düzenlenir\" cümlesindedir, aspirasyon pnömonisi s14 paragrafında sayılır."
+  },
+  {
+   "birim": "ftr-s02-b08",
+   "tur": "anlatim",
+   "bilgi": "Fiziksel fonksiyonları artırmaya yönelik girişimler; Yatak içi; Oturma ve ayakta durma; Transfer, yürüme ve merdiven; Denge ve koordinasyon; İş-meşguliyet tedavisi (IMT)",
+   "cumle": [
+    "Üst ve alt ekstremitede kuvvetlendirme egzersizleri yapılır; ardından oturma dengesi ve ayakta durma eğitimi gelir",
+    "Transfer eğitimi verilir, sonra paralel barda ambulasyon eğitimine geçilir",
+    "Denge ve koordinasyon çalışmaları yapılır, üst ekstremite fonksiyonları geliştirilir",
+    "Son madde iş-uğraşı terapisidir"
+   ],
+   "anahtar": [
+    "denge ve koordinasyon",
+    "ayakta durma"
+   ],
+   "gerekce": "Geçen yılın listesi; bu yılın s13 sekiz maddesi anlatımda sırasıyla verilir. \"Merdiven\" ve \"iş-meşguliyet tedavisi (IMT)\" adı bu yılın slaytında yok (slayt \"İş-uğraşı terapisi\" der); \"yatak içi egzersiz\" bu yıl omurilik yaralanması (s28) ve travmatik beyin hasarı (s36) sayfalarındadır."
+  },
+  {
+   "birim": "ftr-s02-b12",
+   "tur": "anlatim",
+   "bilgi": "TBH öyküsü … ailesel problemler (sıralı liste)",
+   "cumle": [
+    "geçirilmiş travmatik beyin hasarı öyküsü, genç yaş ve erkek cinsiyet",
+    "Sıra düşük sosyoekonomik düzey, düşük eğitim seviyesi, davranış ve kişilik bozukluğu ile ailesel problemlerle tamamlanır"
+   ],
+   "anahtar": [
+    "ailesel problemler"
+   ],
+   "gerekce": "s32 sıralı risk faktörleri listesi anlatımda iki cümlede, slayttaki sırayla verilir."
+  },
+  {
+   "birim": "ftr-s02-b13",
+   "tur": "anlatim",
+   "bilgi": "akut dönem sorunlar listesi; Posttravmatik amnezi ve koma süresi…; Erken mobilizasyon asıl amaçtır…",
+   "cumle": [
+    "Travmatik beyin hasarında prognoz için posttravmatik amnezi süresi ve koma süresi oldukça önemlidir",
+    "Rehabilitasyonda asıl amaç erken mobilizasyondur"
+   ],
+   "anahtar": [
+    "koma süresi",
+    "erken mobilizasyon"
+   ],
+   "gerekce": "s35 sorun listesi beş kümede, s36 prognoz ve erken mobilizasyon cümleleri anlatımda birebir verilir."
+  }
+ ]
+}

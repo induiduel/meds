@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="680" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">İnme rehabilitasyonu: ne zaman, nerede, ne yapılır</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Zamanlama ve dönemler · slayt 10–13</text>
+<rect x="30" y="88" width="1140" height="215" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · İyileşmenin hızı zamanla azalır</text>
+<line x1="90" y1="270" x2="1130" y2="270" stroke="#0f172a" stroke-width="2.5" marker-end="url(#ok)"/>
+<line x1="90" y1="270" x2="90" y2="128" stroke="#0f172a" stroke-width="2.5" marker-end="url(#ok)"/>
+<text x="102" y="140" font-size="17" fill="#475569" text-anchor="start">iyileşme</text>
+<text x="1130" y="256" font-size="17" fill="#475569" text-anchor="end">zaman</text>
+<path d="M90 266 C180 250 330 170 520 152 C700 138 900 132 1100 128" stroke="#15803d" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="150" y1="264" x2="150" y2="276" stroke="#b91c1c" stroke-width="3"/>
+<text x="150" y="294" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">ilk 24 saat</text>
+<line x1="300" y1="264" x2="300" y2="276" stroke="#ea580c" stroke-width="3"/>
+<text x="300" y="294" font-size="17" fill="#ea580c" text-anchor="middle" font-weight="bold">24–48 saat</text>
+<line x1="520" y1="264" x2="520" y2="276" stroke="#15803d" stroke-width="3"/>
+<text x="520" y="294" font-size="17" fill="#15803d" text-anchor="middle" font-weight="bold">ilk 3 ay</text>
+<line x1="1060" y1="264" x2="1060" y2="276" stroke="#15803d" stroke-width="3"/>
+<text x="1060" y="294" font-size="17" fill="#15803d" text-anchor="middle" font-weight="bold">2 yıl</text>
+<text x="200" y="176" font-size="17" fill="#b91c1c" text-anchor="middle">yoğun mobilizasyondan</text>
+<text x="200" y="196" font-size="17" fill="#b91c1c" text-anchor="middle">kaçın</text>
+<line x1="150" y1="258" x2="185" y2="202" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="400" y="226" font-size="17" fill="#ea580c" text-anchor="start">kademeli hareket başlar</text>
+<line x1="300" y1="258" x2="394" y2="222" stroke="#ea580c" stroke-width="1.5"/>
+<text x="520" y="186" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">en hızlı iyileşme ilk 3 ayda</text>
+<text x="890" y="165" font-size="17" fill="#15803d" text-anchor="middle" font-weight="bold">iyileşme 2 yıla kadar sürer</text>
+<rect x="30" y="315" width="1140" height="285" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="346" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Tedavi sürecinin durakları ve yapılanlar</text>
+<rect x="50" y="360" width="350" height="64" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="225.0" y="386" font-size="19" fill="#ea580c" text-anchor="middle" font-weight="bold">Akut bakım</text>
+<text x="225.0" y="410" font-size="17" fill="#0f172a" text-anchor="middle">nöroloji ya da nöroşirürji · 1–2 hafta</text>
+<rect x="440" y="360" width="400" height="64" rx="10" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
+<text x="640.0" y="386" font-size="19" fill="#15803d" text-anchor="middle" font-weight="bold">Subakut bakım</text>
+<text x="640.0" y="410" font-size="17" fill="#0f172a" text-anchor="middle">FTR rehabilitasyon kliniği · 1–2 ay</text>
+<rect x="880" y="360" width="270" height="64" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="1015.0" y="386" font-size="19" fill="#1d4ed8" text-anchor="middle" font-weight="bold">Eve ve topluma dönüş</text>
+<text x="1015.0" y="410" font-size="17" fill="#0f172a" text-anchor="middle">eski iş, yeni iş · sosyal yaşam</text>
+<line x1="402" y1="392" x2="436" y2="392" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<line x1="842" y1="392" x2="876" y2="392" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<text x="60" y="452" font-size="17" fill="#0f172a" text-anchor="start">Erken mobilizasyon, EHA ve germe</text>
+<text x="60" y="474" font-size="17" fill="#0f172a" text-anchor="start">Pozisyonlama, sık pozisyon değişikliği</text>
+<text x="60" y="496" font-size="17" fill="#0f172a" text-anchor="start">Yutmanın değerlendirilmesi, beslenme</text>
+<text x="60" y="518" font-size="17" fill="#0f172a" text-anchor="start">Mesane ve bağırsak programı</text>
+<text x="60" y="540" font-size="17" fill="#0f172a" text-anchor="start">Hasta ve ailenin eğitimi, psikolojik destek</text>
+<text x="450" y="452" font-size="17" fill="#0f172a" text-anchor="start">Kuvvetlendirme egzersizleri</text>
+<text x="450" y="474" font-size="17" fill="#0f172a" text-anchor="start">Oturma dengesi ve ayakta durma eğitimi</text>
+<text x="450" y="496" font-size="17" fill="#0f172a" text-anchor="start">Transfer, paralel barda ambulasyon eğitimi</text>
+<text x="450" y="518" font-size="17" fill="#0f172a" text-anchor="start">Denge ve koordinasyon çalışmaları</text>
+<text x="450" y="540" font-size="17" fill="#0f172a" text-anchor="start">Ortez, yardımcı cihaz, iş-uğraşı terapisi</text>
+<text x="890" y="452" font-size="17" fill="#0f172a" text-anchor="start">Eski işe dönme</text>
+<text x="890" y="474" font-size="17" fill="#0f172a" text-anchor="start">Yeni iş bulma</text>
+<text x="890" y="496" font-size="17" fill="#0f172a" text-anchor="start">Sosyal birey olma</text>
+<text x="890" y="518" font-size="17" fill="#0f172a" text-anchor="start">Aralıklı kontrol (hoca)</text>
+<line x1="700" y1="246" x2="770" y2="246" stroke="#0f172a" stroke-width="3"/>
+<line x1="704" y1="246" x2="704" y2="258" stroke="#0f172a" stroke-width="3"/>
+<line x1="766" y1="246" x2="766" y2="258" stroke="#0f172a" stroke-width="3"/>
+<path d="M712 240 C725 228 750 232 762 240" stroke="#ea580c" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="708" cy="234" r="7" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<text x="735" y="222" font-size="17" fill="#475569" text-anchor="middle">yatak içi</text>
+<line x1="790" y1="240" x2="830" y2="240" stroke="#64748b" stroke-width="2" marker-end="url(#okg)"/>
+<circle cx="880" cy="196" r="5.6000000000000005" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<path d="M872.8 224.0 C871.2 208.0 876.0 202.4 880 202.4 C884.0 202.4 888.8 208.0 887.2 224.0 Z" stroke="#15803d" stroke-width="2" fill="#15803d" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M876.4 224.0 L875.6 244.8" stroke="#15803d" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M883.6 224.0 L884.4 244.8" stroke="#15803d" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="858" y1="222" x2="902" y2="222" stroke="#0f172a" stroke-width="3"/>
+<line x1="861" y1="222" x2="861" y2="246" stroke="#0f172a" stroke-width="3"/>
+<line x1="899" y1="222" x2="899" y2="246" stroke="#0f172a" stroke-width="3"/>
+<text x="955" y="232" font-size="17" fill="#475569" text-anchor="middle">paralel bar</text>
+<path d="M1108 586 L1108 558 L1128 540 L1148 558 L1148 586 Z" stroke="#1d4ed8" stroke-width="2.5" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1122 586 L1122 570 C1122 564 1134 564 1134 570 L1134 586" stroke="#1d4ed8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="50,613 1090,613 1090,603 1140,629 1090,655 1090,645 50,645" fill="#15803d"/>
+<text x="575" y="635" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">REHABİLİTASYON akut bakımdan topluma dönüşe kadar kesintisiz sürer</text>
+<text x="600.0" y="667" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 10, 11, 12 ve 13; kontroller hocanın anlatımıdır.</text>
+</svg>

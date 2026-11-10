@@ -1,0 +1,3334 @@
+{
+ "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
+ "sira": 28,
+ "kurul": 1,
+ "ders": "FTR",
+ "konu": "Sık Görülen Nörolojik Hastalıklarda Rehabilitasyon",
+ "ogretim_uyesi": "Dr. Yıldız Altıntaş",
+ "tarih": "2026-11-10",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Nörolojik rehabilitasyona başvuru nedenlerini sıralar; inmeyi tanımlar, etiyoloji paylarını ve risk faktörlerini (değiştirilemeyen, değiştirilebilen) sayar, inmede görülen motor, duyusal, konuşma ve kognitif bozuklukları fonksiyonel sonuçlarıyla eşler.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Erişkinlerde nörolojik rehabilitasyon kliniklerine en sık hangi hastalık nedeniyle gelinir?",
+     "secenekler": {
+      "A": "Omurilik yaralanması",
+      "B": "Multipl skleroz",
+      "C": "İnme",
+      "D": "Kafa travması",
+      "E": "Polinöropati"
+     },
+     "dogru": "C",
+     "aciklama": "Erişkinde nörolojik rehabilitasyon kliniklerine en sık başvuru nedeni inmedir; bunu omurilik yaralanması ve kafa travması izler (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Omurilik yaralanması, spinal kord ve liflerinin spinal kanal içinde yaralanmasıdır ve erişkinlerde inmeden hemen sonra gelen nedendir. Sıralamada ikinci olduğu için en sık neden sayılmaz (s. 3 ve 16).",
+      "B": "Multipl skleroz, erişkinde rehabilitasyon gerektiren nörolojik hastalıklardan biridir ve sıralamada inme, omurilik yaralanması ile kafa travmasının ardından gelir. Dördüncü sırada kaldığından en sık neden olamaz (s. 3).",
+      "C": "İnme, beyin parankimini besleyen arterlerin iskemisi ya da hemorajisinden kaynaklanan ani başlangıçlı nörolojik fonksiyon kaybıdır. Erişkinde nörolojik rehabilitasyon kliniklerine gelişin en sık nedeni olduğu için doğru seçenektir (s. 3 ve 4).",
+      "D": "Kafa travması, fiziksel, bilişsel ve psikososyal işlevlerde bozulmayla sonuçlanabilen bir yaralanmadır ve genç erkeklerde daha sık görülür. Erişkinde inme ile omurilik yaralanmasından sonra üçüncü sırada geldiği için en sık neden olmaz (s. 3 ve 31).",
+      "E": "Polinöropati, rehabilitasyon kliniklerinde izlenen nörolojik hastalıklardandır ve sıralamada miyopatinin ardından anılır. İnmeyi izleyen nedenler arasında sayıldığından en sık gelen hasta grubunu oluşturmaz (s. 3)."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Nörolojik rehabilitasyon kliniklere en sık başvuru nedeni inmedir"
+     },
+     "dayanak": [
+      "ogrenci:A:ftr-s02-b01"
+     ],
+     "s": 3
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q05",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "İnmenin kontrol altına alınabilen en önemli risk faktörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sigara kullanımı",
+      "B": "Diyabet",
+      "C": "Obezite",
+      "D": "Hiperlipidemi",
+      "E": "Hipertansiyon"
+     },
+     "dogru": "E",
+     "aciklama": "Hipertansiyon değiştirilebilen risk faktörlerinin ilk sırasındadır ve inmenin en kritik, kontrol altına alınabilen risk faktörüdür (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Sigara kullanımı, değiştirilebilen risk faktörlerindendir ve inme riskini iki katına çıkarır. Önemli bir etken olmakla birlikte en kritik faktör olarak hipertansiyon gösterilir (s. 5).",
+      "B": "Diyabet, değiştirilebilen risk faktörlerinden biridir ve varlığı inme riskini iki kat artırır. Riski artırsa da kontrol altına alınabilen etkenlerin başında kan basıncı yüksekliği gelir (s. 5).",
+      "C": "Obezite, sedanter yaşam ve diyetle birlikte sayılan yaşam tarzına bağlı bir risk faktörüdür. Değiştirilebilen gruptadır, ancak listenin sonlarında yer alır ve en önemli etken olarak öne çıkarılmaz (s. 5).",
+      "D": "Hiperlipidemi, kan yağlarının yüksekliğidir ve değiştirilebilen risk faktörleri arasında diyabetin ardından sayılır. Listede yer alır, fakat en kritik faktör olarak belirtilen durum bu olmaz (s. 5).",
+      "E": "Hipertansiyon, değiştirilebilen risk faktörleri listesinin ilk sırasındadır ve inme hastalarının yaklaşık yarısında bulunur. Kontrol altına alınabilen en kritik faktör olduğu için doğru seçenektir (s. 5)."
+     },
+     "bilgi": [
+      15,
+      17
+     ],
+     "benzer_cikmis": [
+      "dd36761bdf69"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "gorsel": "Bilgi görseli, 'Değiştirilebilir Risk Faktörleri' sütunu: 'Hipertansiyon (En Kritik Faktör)', %50; 'İnme hastalarının yaklaşık yarısında bulunur ve kontrol altına alınabilen en önemli risk faktörüdür'"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-06",
+      "cikmis:dd36761bdf69"
+     ],
+     "s": 5,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q10",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi inmede görülen kognitif fonksiyon bozukluklarından biridir?",
+     "secenekler": {
+      "A": "Parestezi",
+      "B": "Dizestezi",
+      "C": "Disfaji",
+      "D": "Apraksi",
+      "E": "Spastisite"
+     },
+     "dogru": "D",
+     "aciklama": "İnmede kognitif fonksiyon bozuklukları ihmal fenomeni, apraksi, algı problemleri ve duygudurum bozukluklarıdır (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Parestezi, inmede duyusal bozukluklar başlığında sayılan bir duyu yakınmasıdır. Motor bozukluklarla aynı dağılımda görülen duyusal gruba girdiği için kognitif bozukluk sayılmaz (s. 6).",
+      "B": "Dizestezi, propriosepsiyon ve hafif dokunma kaybıyla birlikte anılan duyusal bir bozukluktur. Duyusal grupta yer aldığından kognitif fonksiyon bozukluklarından biri olamaz (s. 6).",
+      "C": "Disfaji, larinks ve farinks kaslarının paralizisine bağlı gelişen yutma güçlüğüdür. Motor bozukluklar arasında anlatılır ve kognitif grupta yer almaz (s. 6).",
+      "D": "Apraksi, motor ve duyusal fonksiyonlar yeterli olduğu hâlde istemli aktiviteyi başlatamamadır. İhmal fenomeni, algı problemleri ve duygudurum bozukluklarıyla birlikte inmedeki kognitif fonksiyon bozukluklarını oluşturur (s. 6).",
+      "E": "Spastisite, inmeden sonra zamanla gelişebilen bir tonus bozukluğudur. Motor bozukluklar başlığında geçer ve kognitif bir bozukluk olarak sınıflanmaz (s. 6)."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h54"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Kognitif fonksiyon bozuklukları olarak, ihmal fenomeni, apraksi"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h54"
+     ],
+     "s": 6
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Nörolojik rehabilitasyon kliniklerine geliş nedenleriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Çocuklarda en sık neden serebral palsidir.\nII. Erişkinde inmeyi omurilik yaralanması izler.\nIII. Çocuklarda serebral palsiden sonra spina bifida gelir.\nIV. Erişkinde en sık neden multipl sklerozdur.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Erişkinde en sık neden inme, ardından omurilik yaralanması; çocuklarda en sık neden serebral palsi, ardından spina bifidadır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur: çocuklarda en sık neden serebral palsi, erişkinde inmeden sonraki neden omurilik yaralanmasıdır. Ancak çocuklarda serebral palsiyi spina bifidanın izlediğini söyleyen III de doğru olduğundan bu seçenek eksik kalır (s. 3).",
+      "B": "Erişkinde sıra inme, omurilik yaralanması ve kafa travması biçimindedir; çocuklarda ise serebral palsiyi spina bifida ve muskuler distrofiler izler. I, II ve III bu sıralamayla uyuştuğu, IV uyuşmadığı için doğru birleşim budur (s. 3).",
+      "C": "II doğrudur, çünkü erişkinde inmeden sonra omurilik yaralanması gelir. IV ise multipl sklerozu ilk sıraya koyar; oysa multipl skleroz inme, omurilik yaralanması ve kafa travmasından sonra anılır, bu yüzden birleşim hatalıdır (s. 3).",
+      "D": "Multipl skleroz erişkinde rehabilitasyon gerektiren hastalıklardan biridir, ancak sıralamada dördüncü sıradadır. Erişkinde en sık neden inme olduğundan IV tek başına da yanlıştır ve seçenek geçersiz kalır (s. 3).",
+      "E": "İlk üç ifade erişkin ve çocuk sıralamasını doğru verir: inme, ardından omurilik yaralanması; çocukta serebral palsi, ardından spina bifida. IV yanlış olduğu için dört ifadenin birlikte doğru sayılması mümkün olmaz (s. 3)."
+     },
+     "bilgi": [
+      1,
+      2,
+      3
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Çocuklar için ise en sık başvuru nedeni serebral palsi sonrasında spina bifida"
+     },
+     "dayanak": [
+      "ogrenci:A:ftr-s02-b01"
+     ],
+     "s": 3
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İnmelerin yaklaşık ne kadarı serebral tromboza bağlıdır?",
+     "secenekler": {
+      "A": "%10",
+      "B": "%20",
+      "C": "%40",
+      "D": "%60",
+      "E": "%80"
+     },
+     "dogru": "D",
+     "aciklama": "İnme etiyolojisinde serebral tromboz %60, serebral emboli %20, intraserebral hemoraji %10 pay alır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Yüzde on, intraserebral hemorajinin inme etiyolojisindeki payıdır. Kanamaya bağlı inmeye ait olan bu oran, iskemik nedenlerin başındaki tromboz için verilen değerin çok altındadır (s. 4).",
+      "B": "Yüzde yirmi, serebral embolinin payıdır ve emboli etiyolojide ikinci sırada gelir. Tromboz bunun üç katı sıklıkta olduğundan iki oran birbirine karıştırılmamalıdır (s. 4).",
+      "C": "Yüzde kırk, etiyoloji payları içinde verilen bir değer değildir ve trombozun payını olduğundan düşük gösterir. Serebral tromboz tek başına inmelerin yarıdan fazlasından sorumludur (s. 4).",
+      "D": "Serebral tromboz inmelerin %60'ının nedenidir ve etiyolojide en büyük payı oluşturur. Onu %20 ile serebral emboli, %10 ile intraserebral hemoraji izlediği için doğru seçenektir (s. 4).",
+      "E": "Yüzde seksen, tromboz ile embolinin paylarının toplamına karşılık gelir. Yalnız tromboza ait oran bundan düşüktür ve %60 olarak bildirilir (s. 4)."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Serebral tromboz %60 nedenidir, serebral emboli %20, intraserebral hemoraji %10"
+     },
+     "dayanak": [
+      "ogrenci:B:ftr-s02-b02"
+     ],
+     "s": 4
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi inmenin değiştirilebilen risk faktörlerinden biri değildir?",
+     "secenekler": {
+      "A": "Atrial fibrilasyon",
+      "B": "Karotis stenozu",
+      "C": "Hiperlipidemi",
+      "D": "Genetik",
+      "E": "Aşırı alkol tüketimi"
+     },
+     "dogru": "D",
+     "aciklama": "İnmenin değiştirilemeyen risk faktörleri yaş, cinsiyet ve genetiktir; öteki seçenekler değiştirilebilen listededir (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Atrial fibrilasyon, kalp kaynaklı bir ritim bozukluğudur ve değiştirilebilen risk faktörleri arasında hipertansiyon ile koroner arter hastalığının hemen ardından sayılır. Tedavi edilebilen bir durum olduğu için değiştirilebilen grupta kalır (s. 5).",
+      "B": "Karotis stenozu, beyne giden ana damarın daralmasıdır ve değiştirilebilen risk faktörleri listesinde kalp kapak hastalıklarından sonra gelir. Müdahale edilebilen bir damar sorunu olduğundan değiştirilebilen gruptadır (s. 5).",
+      "C": "Hiperlipidemi, kan yağlarının yüksekliğidir ve diyabetle birlikte değiştirilebilen risk faktörleri arasında sayılır. Tedaviyle düzeltilebildiği için değiştirilebilen bir risk faktörüdür (s. 5).",
+      "D": "Genetik, yaş ve cinsiyetle birlikte değiştirilemeyen risk faktörlerini oluşturur. Kişinin müdahale edemeyeceği bir özellik olduğu için değiştirilebilen listede bulunmaz ve doğru yanıt budur (s. 5).",
+      "E": "Aşırı alkol tüketimi, sigara kullanımıyla birlikte anılan yaşam tarzına bağlı bir risk faktörüdür. Alışkanlık değiştirilerek azaltılabildiği için değiştirilebilen risk faktörlerindendir (s. 5)."
+     },
+     "bilgi": [
+      11,
+      13,
+      14
+     ],
+     "benzer_cikmis": [
+      "dd36761bdf69"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Değiştirilemeyen: yaş, cinsiyet, genetik"
+     },
+     "dayanak": [
+      "cikmis:dd36761bdf69",
+      "hoca:hv-k2-28-07",
+      "ogrenci:B:ftr-s02-b02"
+     ],
+     "s": 5
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İnmenin risk faktörleriyle ilgili aşağıdaki durumlar veriliyor:\nI. Hipertansiyon\nII. Atrial fibrilasyon\nIII. Koroner arter hastalığı\nIV. Yaş\nBu durumlardan hangileri değiştirilebilen risk faktörüdür?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Hipertansiyon, koroner arter hastalığı ve atrial fibrilasyon değiştirilebilen; yaş, cinsiyet ve genetik değiştirilemeyen risk faktörleridir (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Hipertansiyon, atrial fibrilasyon ve koroner arter hastalığı tedavi edilebilen kalp ve damar sorunlarıdır ve değiştirilebilen listenin ilk üç sırasında sayılır. Yaş bu gruba girmediği için ilk üç durumun birleşimi doğrudur (s. 5).",
+      "B": "Hipertansiyon ve koroner arter hastalığı değiştirilebilen risk faktörlerinin başında gelir. Atrial fibrilasyon da aynı listede yer aldığından II'nin dışarıda bırakılması bu seçeneği eksik kılar (s. 5).",
+      "C": "Atrial fibrilasyon, tedavi edilebilen bir kalp ritim bozukluğudur ve değiştirilebilen risk faktörüdür. Yaş ise cinsiyet ve genetikle birlikte değiştirilemeyen grupta olduğundan IV'ün eklenmesi birleşimi yanlış yapar (s. 5).",
+      "D": "Yaş, inme riskini artıran ama müdahale edilemeyen bir özelliktir ve değiştirilemeyen risk faktörleri arasında ilk sırada sayılır. Değiştirilebilen bir etken olmadığı için tek başına seçilemez (s. 5).",
+      "E": "İlk üç durum değiştirilebilen risk faktörleridir ve listenin başında art arda sıralanır. Yaş değiştirilemeyen grupta olduğundan dört durumun birlikte seçilmesi hatalıdır (s. 5)."
+     },
+     "bilgi": [
+      11,
+      13,
+      15
+     ],
+     "benzer_cikmis": [
+      "dd36761bdf69"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Hipertansiyon, koroner arter hastalığı, atrial fibrilasyon, kalp kapak hastalıkları, karotis stenozu"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-06",
+      "hoca:hv-k2-28-07",
+      "cikmis:dd36761bdf69"
+     ],
+     "s": 5
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q09",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İnmeli bir hastada motor ve duyusal fonksiyonlar yeterli olduğu hâlde istemli aktiviteyi başlatamama biçiminde tanımlanan kognitif bozukluk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İhmal fenomeni",
+      "B": "Apraksi",
+      "C": "Broca afazisi",
+      "D": "Dizestezi",
+      "E": "Disfaji"
+     },
+     "dogru": "B",
+     "aciklama": "Apraksi, motor ve duyusal fonksiyonlar yeterli olduğu hâlde istemli aktiviteyi başlatamamadır ve inmedeki kognitif fonksiyon bozukluklarındandır (s. 6).",
+     "sik_aciklamalari": {
+      "A": "İhmal fenomeni, inmede görülen kognitif fonksiyon bozukluklarından biridir ve düşme riski ile transfer güçlüğüne yol açar. İstemli aktiviteyi başlatamama biçiminde tanımlanan bozukluk ise apraksidir (s. 6 ve 7).",
+      "B": "Apraksi, motor ve duyusal fonksiyonlar yeterli olduğu hâlde hastanın istemli aktiviteyi başlatamamasıdır ve inmedeki kognitif bozukluklar arasında sayılır. Sorudaki tanım bu bozukluğun tanımıyla örtüştüğü için doğru seçenektir (s. 6).",
+      "C": "Broca afazisi, konuşmanın akıcılığının bozulduğu bir konuşma ve lisan bozukluğudur. İletişimi etkiler, ancak istemli aktiviteyi başlatamama tanımını karşılamaz (s. 6).",
+      "D": "Dizestezi, parestezi ile birlikte anılan bir duyusal yakınmadır ve inmedeki duyusal bozukluklar arasında yer alır. Kognitif bir bozukluk olmadığı için istemli aktivitenin başlatılamamasını açıklamaz (s. 6).",
+      "E": "Disfaji, larinks ve farinks kaslarının paralizisine bağlı yutma güçlüğüdür ve malnutrisyon ile aspirasyon riski doğurur. Motor bir bozukluk olduğundan sorudaki kognitif tanıma uymaz (s. 6 ve 7)."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h54"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "duyusal fonksiyonlara rağmen istemli aktiviteyi başlatamama"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h54"
+     ],
+     "s": 6
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q07",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "İnmede görülen motor bozukluklarla ilgili aşağıdaki ifadeler veriliyor:\nI. Paralizi en sık görülen motor bulgudur.\nII. En sık görülen klinik tablo paraplejidir.\nIII. Larinks ve farinks kaslarının paralizisine bağlı disfaji görülebilir.\nIV. Zamanla spastisite gibi tonus bozuklukları gelişebilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, III ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "İnmede paralizi en sık görülen bulgu, hemipleji en sık görülen klinik tablodur; disfaji ve zamanla spastisite görülebilir (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Paralizinin en sık motor bulgu olduğunu söyleyen I doğrudur. II ise en sık klinik tabloyu parapleji olarak verir; oysa inmede en sık görülen klinik tablo hemiplejidir, bu yüzden birleşim hatalıdır (s. 6).",
+      "B": "Disfaji, larinks ve farinks kaslarının paralizisine bağlı yutma güçlüğüdür ve III'te doğru verilmiştir. II'deki parapleji bilgisi yanlıştır, çünkü inmede en sık klinik tablo hemiplejidir (s. 6).",
+      "C": "İnmede paralizi en sık motor bulgudur, yutma kaslarının paralizisi disfajiye yol açabilir ve zamanla spastisite gibi tonus bozuklukları eklenebilir. En sık klinik tablo parapleji değil hemipleji olduğundan yalnız II dışarıda kalır (s. 6).",
+      "D": "Spastisite, inmeden sonra zamanla gelişebilen bir tonus bozukluğudur ve IV doğrudur. Ancak I ve III de doğru olduğu için yalnız IV'ün seçilmesi eksik bir yanıttır (s. 6).",
+      "E": "I, III ve IV inmedeki motor bozuklukları doğru tanımlar. II'de anılan parapleji alt ekstremitelerin etkilendiği tablodur ve inmenin en sık tablosu olan hemiplejinin yerine yazılmıştır; bu nedenle dört ifade birlikte doğru olamaz (s. 6 ve 18)."
+     },
+     "bilgi": [
+      23,
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h55"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "paralizi en sık görülen bulgudur. Hemipleji en sık görülen klinik tablodur"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h55"
+     ],
+     "s": 6
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q08",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "İnmede sık görülen bozukluklarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Duyusal bozukluklar genellikle motor bozukluklarla aynı dağılımdadır.",
+      "B": "En sık görülen klinik tablo tetraplejidir.",
+      "C": "Broca afazisinde konuşmanın akıcılığı bozulmuştur.",
+      "D": "Wernicke afazisinde konuşma akıcıdır, anlama etkilenmiştir.",
+      "E": "Kognitif bozukluk olarak ihmal fenomeni görülebilir."
+     },
+     "dogru": "B",
+     "aciklama": "İnmede en sık görülen klinik tablo hemiplejidir; tetrapleji T1 ve üzeri omurilik hasarının tablosudur (s. 6 ve 18).",
+     "sik_aciklamalari": {
+      "A": "İnmede duyusal bozukluklar gerçekten de genellikle motor bozukluklarla aynı dağılımı gösterir. Propriosepsiyon ve hafif dokunma duyusunda kayıp, parestezi ve dizestezi bu tabloya eşlik edebilir (s. 6).",
+      "B": "Tetrapleji, dört ekstremitenin birlikte etkilendiği tablodur ve T1 ve üzeri omurilik hasarında görülür. İnmede en sık görülen klinik tablo hemipleji olduğundan bu ifade yanlıştır (s. 6 ve 18).",
+      "C": "Broca afazisi, seçenekte söylendiği gibi konuşmanın akıcılığının bozulduğu konuşma ve lisan bozukluğudur. Konuşma bozukluklarının türü inmede etkilenen alanın yerine göre değişir (s. 6).",
+      "D": "Wernicke afazisinde hasta akıcı konuşur, ancak söyleneni anlaması etkilenmiştir; seçenek bu tabloyu doğru verir. Bu özellik onu akıcılığın bozulduğu Broca afazisinden ayırır (s. 6).",
+      "E": "İhmal fenomeni, seçenekte belirtildiği üzere inmede görülen kognitif fonksiyon bozukluklarındandır. Aynı grupta apraksi, algı problemleri ve duygudurum bozuklukları da sayılır (s. 6)."
+     },
+     "bilgi": [
+      24,
+      27,
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h55"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Hemipleji en sık görülen klinik tablodur"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h55"
+     ],
+     "s": 6
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "dd36761bdf69",
+     "soru": "Serebrovasküler olaylarda tedavi edilebilir risk faktörlerinden biridir?",
+     "secenekler": {
+      "A": "Pozitif aile öyküsü",
+      "B": "Irk",
+      "C": "Hipertansiyon",
+      "D": "Eski serebrovasküler olay öyküsü",
+      "E": "Hiçbiri"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2023-2024-h54",
+     "soru": "Apraksi aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "Vücudun ya da çevrenin bir yarısından gelen uyaranları fark edememe ve o tarafa yönelememe",
+      "B": "Yeterli motor ve duyusal işleve karşın öğrenilmiş, amaçlı hareketleri gerçekleştirememe",
+      "C": "Konuşulanı anlama ya da konuşma üretme yeteneğinin kaybı",
+      "D": "Konuşma kaslarının güçsüzlüğü ya da koordinasyon bozukluğuna bağlı sesletim bozukluğu",
+      "E": "Kas gücü korunduğu hâlde hareketlerin koordinasyonunun ve dengenin bozulması"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2023-2024-h55",
+     "soru": "İnmede en sık görülen motor bozukluk tablosu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hemipleji",
+      "B": "Parapleji",
+      "C": "Monopleji",
+      "D": "Tripleji",
+      "E": "Tetrapleji (kuadripleji)"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "İnme rehabilitasyonunun amaçlarını, iyileşmenin üç kavramını (spontan nörolojik iyileşme, nöroplastisite, fonksiyonel iyileşme), tedavi sürecini, akut ve subakut-kronik dönem girişimlerini ve akut-kronik komplikasyonları açıklar.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q13",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Beynin hasar sonrası kendini yeniden organize etme ve işlevlerini farklı ağlar aracılığıyla sürdürme kapasitesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spontan nörolojik iyileşme",
+      "B": "Nöroplastisite",
+      "C": "Fonksiyonel iyileşme ve adaptasyon",
+      "D": "Reperfüzyon",
+      "E": "Kompansatuvar yaklaşım"
+     },
+     "dogru": "B",
+     "aciklama": "Nöroplastisite, beynin hasar sonrası kendini yeniden organize etme ve işlevlerini farklı ağlar aracılığıyla sürdürme kapasitesidir (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Spontan nörolojik iyileşme, inmeden sonraki ilk haftalar ve aylarda ek bir müdahale olmadan gelişen doğal düzelmedir. Ödemin azalması gibi mekanizmalarla ilerler ve beynin ağlarını yeniden düzenlemesini tanımlamaz (s. 9).",
+      "B": "Nöroplastisite, beynin hasardan sonra kendini yeniden organize ederek işlevlerini farklı ağlar üzerinden sürdürme kapasitesidir. Deneyim, öğrenme ve tekrarlayan, göreve özgü rehabilitasyonla desteklendiği için rehabilitasyonun temel kavramıdır (s. 9).",
+      "C": "Fonksiyonel iyileşme ve adaptasyon, hastanın mevcut nörolojik kapasitesini ya da kompansatuvar stratejileri kullanarak günlük yaşamda daha bağımsız olmasıdır. Beynin yeniden organize olmasını değil, işlevsel bağımsızlığı anlatır (s. 9).",
+      "D": "Reperfüzyon, ödemin azalması ve iskemik penumbranın kurtarılmasıyla birlikte spontan nörolojik iyileşmenin temel mekanizmaları arasında sayılır. Bir iyileşme mekanizması olup beynin yeniden organize olma kapasitesinin adı olarak kullanılmaz (s. 9).",
+      "E": "Kompansatuvar yaklaşım, kaybedilen işlev için alternatif stratejiler geliştirilmesidir ve fonksiyonel iyileşmenin yaklaşımlarından biridir. Restoratif yaklaşımla birlikte anılır; beynin kendini yeniden düzenleme kapasitesini karşılamaz (s. 9)."
+     },
+     "bilgi": [
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "gorsel": "2. sütun 'Nöroplastisite': 'Beynin, hasar sonrası kendini yeniden organize etme ve işlevlerini farklı ağlar aracılığıyla sürdürme kapasitesidir.'"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-15",
+      "ozen:s9"
+     ],
+     "s": 9,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q17",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi inmede subakut-kronik dönem rehabilitasyon programında sayılan bir uygulamadır?",
+     "secenekler": {
+      "A": "Yutmanın değerlendirilmesi",
+      "B": "Sık pozisyon değişikliği",
+      "C": "İş-uğraşı terapisi",
+      "D": "Mesane ve barsak programı",
+      "E": "Beslenme ve hidrasyonun düzenlenmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Subakut-kronik dönem rehabilitasyonunda kuvvetlendirme egzersizleri, transfer eğitimi, paralel barda ambulasyon eğitimi ve iş-uğraşı terapisi yer alır (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Yutmanın değerlendirilmesi, disfaji ve aspirasyon riskini erken saptamak için akut dönem rehabilitasyonunda yapılır. Akut dönem listesinde yer alır; subakut-kronik dönem programı ise kuvvetlendirme, transfer ve ambulasyon eğitimine dayanır (s. 12 ve 13).",
+      "B": "Sık pozisyon değişikliği, hareketsizliğe bağlı bası yarasını önlemeye yönelik bir akut dönem uygulamasıdır. Uygun pozisyonlamayla birlikte akut dönem listesinde geçer ve subakut-kronik dönem maddesi olarak verilmez (s. 12 ve 14).",
+      "C": "İş-uğraşı terapisi, subakut-kronik dönem programının son maddesidir ve üst ekstremite fonksiyonlarının geliştirilmesiyle birlikte sayılır. Bu dönemin temel hedefi olan fonksiyonel bağımsızlık ve topluma katılıma hizmet ettiği için doğrudur (s. 13).",
+      "D": "Mesane ve barsak programı, akut dönem rehabilitasyonunda başlanan bir uygulamadır. Kendine bakım eğitimi ve psikolojik destekle birlikte akut dönem listesinde yer aldığından sorulan dönemin maddesi sayılmaz (s. 12).",
+      "E": "Beslenme ve hidrasyonun düzenlenmesi, yutma değerlendirmesiyle birlikte yürütülen bir akut dönem uygulamasıdır. Akut dönem listesinde geçtiğinden subakut-kronik dönemin kuvvetlendirme, transfer ve ambulasyon ağırlıklı programında sayılmaz (s. 12 ve 13)."
+     },
+     "bilgi": [
+      86
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "yardımcı cihaz kullanımı İş-uğraşı terapisi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-23",
+      "ogrenci:B:ftr-s02-b08"
+     ],
+     "s": 13
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İnme rehabilitasyonuyla ilgili aşağıdaki hedefler veriliyor:\nI. Hastanın ve ailesinin eğitimi\nII. Özürlülüğü en aza indirmek\nIII. Hastanın ev, aile ve topluma entegrasyonunu sağlamak\nIV. İlk 24 saat içinde yüksek yoğunluklu ve uzun süreli mobilizasyon uygulamak\nBu hedeflerden hangileri inme rehabilitasyonunun başlıca amaçlarındandır?",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "İnme rehabilitasyonunun başlıca amaçları arasında hastanın ve ailelerin eğitimi, özürlülüğü en aza indirmek ve topluma entegrasyon vardır; ilk 24 saatte yoğun mobilizasyondan kaçınılır (s. 8 ve 10).",
+     "sik_aciklamalari": {
+      "A": "Hasta ve aile eğitimi ile topluma entegrasyon inme rehabilitasyonunun başlıca amaçlarındandır. Özürlülüğü en aza indirmek de aynı listede yer aldığından II'yi dışarıda bırakan bu seçenek eksiktir (s. 8).",
+      "B": "Özürlülüğü en aza indirmek başlıca amaçlardan biridir. İlk 24 saatte yüksek yoğunluklu ve uzun süreli mobilizasyon ise kaçınılması gereken bir uygulamadır; IV'ü içeren birleşim bu yüzden yanlıştır (s. 8 ve 10).",
+      "C": "Eğitim, özürlülüğün azaltılması ve hastanın ev, aile ve topluma entegrasyonu başlıca amaçlar arasında sayılır. İlk 24 saatte yoğun mobilizasyon amaç olmayıp kaçınılması gereken bir uygulama olduğundan doğru birleşim ilk üç hedeftir (s. 8 ve 10).",
+      "D": "Erken dönemde mobilizasyon hastanın toleransına göre bireyselleştirilerek planlanır. İlk 24 saatte yüksek yoğunluklu ve uzun süreli mobilizasyondan kaçınılması gerektiğinden IV bir amaç sayılamaz (s. 10).",
+      "E": "İlk üç hedef, fonksiyonel bağımsızlığı artırmak ve eşlik eden hastalıkları tedavi etmekle birlikte başlıca amaçları oluşturur. IV ise kaçınılması gereken bir uygulamayı anlattığı için dört hedef birlikte seçilemez (s. 8 ve 10)."
+     },
+     "bilgi": [
+      43,
+      46,
+      47,
+      60
+     ],
+     "benzer_cikmis": [
+      "past-1790877045120-496840"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Hastanın ev, aile ve topluma entegrasyonu sağlamak"
+     },
+     "dayanak": [
+      "cikmis:past-1790877045120-496840",
+      "ogrenci:A:ftr-s02-b03"
+     ],
+     "s": 8
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi inme rehabilitasyonunun başlıca amaçlarından biridir?",
+     "secenekler": {
+      "A": "İlk 24 saatte yüksek yoğunluklu, uzun süreli mobilizasyon sağlamak",
+      "B": "Klinik tablo stabil olmadan takibi sonlandırmak",
+      "C": "Hastayı rehabilitasyon kliniğinde 1-2 hafta izlemek",
+      "D": "Kontrolü olabildiğince uzun süre sağlık ekibinde tutmak",
+      "E": "Eşlik eden hastalıkları önlemek, tanımak ve tedavi etmek"
+     },
+     "dogru": "E",
+     "aciklama": "İnme rehabilitasyonunun başlıca amaçlarından biri eşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmektir (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Mobilizasyon, hastanın toleransına göre bireyselleştirilen bir rehabilitasyon etkinliğidir. İlk 24 saatte yüksek yoğunluklu ve uzun süreli mobilizasyondan kaçınılması gerektiği için bu bir amaç olamaz (s. 10).",
+      "B": "Uzun dönem takip, komplikasyonların izlenmesini sağlayan sürecin parçasıdır. Stabil bir klinik iyileşme sağlanana kadar takip kesilmemesi gerektiğinden erken sonlandırma amaç sayılmaz (s. 15).",
+      "C": "Tedavi sürecinde akut bakım nöroloji ya da nöroşirürjide 1-2 hafta, subakut bakım rehabilitasyon kliniğinde 1-2 ay sürer. Seçenek süreyi yanlış verir; ayrıca başlıca amaçlar eğitim, tedavi, bağımsızlık ve entegrasyon gibi hedeflerdir, yatış süresi bir amaç olarak tanımlanmaz (s. 8 ve 11).",
+      "D": "Uzun dönem takipte hedef, olabilen en kısa sürede kontrolü hastaya geri vermektir. Kontrolü sağlık ekibinde tutmak bu hedefin tersi olduğu için amaç olarak kabul edilemez (s. 15).",
+      "E": "Eşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmek başlıca amaçların ikincisidir. Hasta ve aile eğitimi, fonksiyonel bağımsızlık, özürlülüğün azaltılması ve topluma entegrasyonla birlikte sayıldığı için doğrudur (s. 8)."
+     },
+     "bilgi": [
+      44
+     ],
+     "benzer_cikmis": [
+      "past-1790877045120-496840"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Eşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmek"
+     },
+     "dayanak": [
+      "cikmis:past-1790877045120-496840",
+      "ogrenci:A:ftr-s02-b03"
+     ],
+     "s": 8
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İnmede akut dönem rehabilitasyonu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Uygun pozisyonlamaya bu dönemde başlanır.",
+      "B": "Sık pozisyon değişikliği yapılır.",
+      "C": "Beslenme ve hidrasyon düzenlenir.",
+      "D": "Mesane ve barsak programına gerek yoktur.",
+      "E": "Depresyonun tanısı ve tedavisi programın parçasıdır."
+     },
+     "dogru": "D",
+     "aciklama": "Akut dönem rehabilitasyonunda uygun pozisyonlama, sık pozisyon değişikliği, beslenme ve hidrasyonun düzenlenmesi, mesane ve barsak programı ile depresyonun tanısı ve tedavisi yer alır (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Uygun pozisyonlama gerçekten akut dönem rehabilitasyonunun maddelerindendir ve erken mobilizasyon ile germe egzersizlerinin ardından sayılır. Pozisyonlamaya geç dönemde değil, akut dönemde başlanır (s. 12).",
+      "B": "Sık pozisyon değişikliği, seçenekte söylendiği gibi uygun pozisyonlamayla birlikte akut dönemde uygulanır. Hareketsizliğe bağlı bası yarası akut dönem komplikasyonlarından olduğu için bu uygulama önem taşır (s. 12 ve 14).",
+      "C": "Beslenme ve hidrasyonun düzenlenmesi, yutmanın değerlendirilmesinin ardından gelen bir akut dönem maddesidir; seçenek doğru bir bilgi verir. Disfaji malnutrisyon ve aspirasyon riski doğurduğundan erken dönemde ele alınır (s. 7 ve 12).",
+      "D": "Mesane ve barsak programı, akut dönem rehabilitasyonunda sayılan uygulamalardan biridir. İnmede üriner inkontinans ve kabızlık görülebildiği için programa gerek olmadığını söyleyen bu ifade yanlıştır (s. 12 ve 14).",
+      "E": "Depresyonun tanısı ve tedavisi, bu seçeneğin bildirdiği gibi psikolojik destekle birlikte akut dönem maddeleri arasındadır. Depresyon inmenin kognitif ve psikososyal komplikasyonlarından biri olarak da sayılır (s. 12 ve 14)."
+     },
+     "bilgi": [
+      73,
+      74,
+      77,
+      79,
+      81
+     ],
+     "benzer_cikmis": [
+      "d3-k2-ftr-001",
+      "d3k2-2025-2026-h23"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Mesane ve barsak programı"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-ftr-001",
+      "cikmis:d3k2-2025-2026-h23",
+      "hoca:hv-k2-28-20",
+      "hoca:hv-k2-28-22",
+      "ogrenci:B:ftr-s02-b07",
+      "ogrenci:A:ftr-s02-b04"
+     ],
+     "s": 12
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q18",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İnme sonrası gelişebilen durumlarla ilgili aşağıdakiler veriliyor:\nI. Derin ven trombozu\nII. Bası yarası\nIII. Spastisite\nIV. Hemiplejik omuz ağrısı\nBunlardan hangileri inme komplikasyonlarındandır?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "Yalnız III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Derin ven trombozu ve bası yarası akut dönem, spastisite ve hemiplejik omuz ağrısı kronik dönem inme komplikasyonlarıdır (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Derin ven trombozu tromboembolik, bası yarası hareketsizliğe bağlı akut dönem komplikasyonudur. Spastisite ve hemiplejik omuz ağrısı da kronik dönemde görüldüğünden yalnız ilk ikisinin seçilmesi eksiktir (s. 14).",
+      "B": "Derin ven trombozu ve bası yarası akut, spastisite kronik dönemin motor komplikasyonudur. Hemiplejik omuz ağrısı da kronik dönemin omuz ve ekstremite sorunları arasında sayıldığından IV'ün dışarıda kalması yanlıştır (s. 14).",
+      "C": "Bası yarası hareketsizliğe bağlı gelişir, hemiplejik omuz ağrısı ise kronik dönemin omuz sorunlarındandır. Derin ven trombozu ve spastisite de komplikasyon olduğundan bu birleşim eksik kalır (s. 14).",
+      "D": "Spastisite, kontraktür ve patolojik sinerjilerle birlikte kronik dönemin motor komplikasyonlarındandır. Tek komplikasyon bu olmadığı, akut dönemde derin ven trombozu ve bası yarası da görüldüğü için yalnız III seçilemez (s. 14).",
+      "E": "İnme komplikasyonları akut ve kronik dönem olarak iki kümede toplanır: derin ven trombozu ve bası yarası akut, spastisite ve hemiplejik omuz ağrısı kronik dönemde görülür. Dört durum da komplikasyon olduğu için doğru birleşim budur (s. 14)."
+     },
+     "bilgi": [
+      90,
+      93,
+      96,
+      98
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q138"
+     ],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Derin ven trombozu (DVT), pulmoner emboli"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q138",
+      "hoca:hv-k2-28-25",
+      "hoca:hv-k2-28-26",
+      "ogrenci:A:ftr-s02-b04"
+     ],
+     "s": 14,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q19",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi inmenin haftalar-aylar sonra ortaya çıkan kronik dönem komplikasyonlarından biridir?",
+     "secenekler": {
+      "A": "Hemiplejik omuz ağrısı",
+      "B": "Serebral ödem",
+      "C": "Hemorajik dönüşüm",
+      "D": "Derin ven trombozu",
+      "E": "Aspirasyon pnömonisi"
+     },
+     "dogru": "A",
+     "aciklama": "Hemiplejik omuz ağrısı, omuz subluksasyonu ve kompleks bölgesel ağrı sendromu kronik dönemin omuz ve ekstremite sorunlarıdır (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Hemiplejik omuz ağrısı, omuz subluksasyonu ve kompleks bölgesel ağrı sendromuyla birlikte kronik dönemin omuz ve ekstremite sorunlarını oluşturur. Haftalar ve aylar içinde ortaya çıktığı için doğru seçenektir (s. 14).",
+      "B": "Serebral ödem, inmenin ilk saatler ve günlerinde görülen nörolojik bir komplikasyondur. Nöbet ve bilinç değişikliğiyle birlikte akut dönem kümesinde yer aldığından kronik dönem komplikasyonu sayılmaz (s. 14).",
+      "C": "Hemorajik dönüşüm, akut dönemin nörolojik komplikasyonlarından biridir ve ilk saatler ile günlerde beklenir. Kronik dönem kümesinde değil, serebral ödemle aynı satırda sayılır (s. 14).",
+      "D": "Derin ven trombozu, pulmoner emboliyle birlikte akut dönemin tromboembolik komplikasyonudur. İlk saatler ve günlerde ortaya çıkan komplikasyonlar arasında gösterildiği için geç dönem sorunu olarak kabul edilmez (s. 14).",
+      "E": "Aspirasyon pnömonisi, disfaji ve aspirasyonla birlikte akut dönemin solunumsal komplikasyonudur. Erken dönemde yutma bozukluğuna bağlı geliştiği için kronik dönem kümesine girmez (s. 14)."
+     },
+     "bilgi": [
+      95,
+      98
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q138"
+     ],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Hemiplejik omuz ağrısı, omuz subluksasyonu, kompleks bölgesel"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q138",
+      "hoca:hv-k2-28-26",
+      "ogrenci:A:ftr-s02-b04"
+     ],
+     "s": 14,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q20",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Oral kas gevşeticiler ve kas içi botulinum toksin, inmenin hangi komplikasyonunun tedavisinde değerlendirilir?",
+     "secenekler": {
+      "A": "Hemiplejik omuz ağrısı",
+      "B": "Spastisite",
+      "C": "Kompleks bölgesel ağrı sendromu",
+      "D": "Santral inme sonrası ağrı",
+      "E": "Omuz subluksasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Ciddi spastisite tedavisinde oral kas gevşeticiler ve kas içi botulinum toksin açısından değerlendirme yapılır (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Hemiplejik omuz ağrısı, kronik dönemin omuz ve ekstremite sorunlarından biridir. Uzun dönem takipte oral kas gevşetici ve botulinum toksini ağrı için değil, ciddi spastisite için değerlendirilir (s. 14 ve 15).",
+      "B": "Spastisite, kronik dönemin motor komplikasyonudur ve kontraktür ile patolojik sinerjilerle birlikte sayılır. Ciddi spastisitenin tedavisinde oral kas gevşeticiler ve kas içi botulinum toksin açısından değerlendirme yapıldığı için doğrudur (s. 14 ve 15).",
+      "C": "Kompleks bölgesel ağrı sendromu, hemiplejik omuz ağrısıyla aynı satırda sayılan bir ekstremite sorunudur. Botulinum toksini ve kas gevşeticiler bu sendrom için değil, tonus bozukluğu olan spastisite için anılır (s. 6, 14 ve 15).",
+      "D": "Santral inme sonrası ağrı, parestezi ve duyu kayıplarıyla birlikte kronik dönemin ağrı ve duyu bozuklukları arasındadır. Kas gevşetici ve botulinum toksini bu ağrı türünün değil, ciddi spastisitenin tedavisinde değerlendirilir (s. 14 ve 15).",
+      "E": "Omuz subluksasyonu, kronik dönemde görülen omuz ve ekstremite sorunlarından biridir. Uzun dönem takipte adı geçen ilaçlar subluksasyona değil, ciddi spastisiteye yöneliktir (s. 14 ve 15)."
+     },
+     "bilgi": [
+      96,
+      105
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Ciddi spastisite tedavisinde oral kas gevşeticiler ve kas içi botulinum"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-25",
+      "ozen:s14"
+     ],
+     "s": 15
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q14",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Tekrarlayan yürüme eğitimiyle yürümeden sorumlu beyin ağlarının yeniden organize olması, inme sonrası iyileşmenin hangi kavramına örnektir?",
+     "secenekler": {
+      "A": "Spontan nörolojik iyileşme",
+      "B": "Fonksiyonel iyileşme ve adaptasyon",
+      "C": "İskemik penumbranın kurtarılması",
+      "D": "Nöroplastisite",
+      "E": "Metabolik iyileşme"
+     },
+     "dogru": "D",
+     "aciklama": "Nöroplastisite tekrarlayan, göreve özgü rehabilitasyonla desteklenir; örneği tekrarlayan yürüme eğitimiyle beyin ağlarının yeniden organize olmasıdır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Spontan nörolojik iyileşme, rehabilitasyondan bağımsız, doğal bir süreçtir; örneği inmeden sonraki günlerde kol kuvvetinin kendiliğinden kısmen artmasıdır. Eğitimle sağlanan bir yeniden organizasyonu anlatmadığı için bu örneği karşılamaz (s. 9).",
+      "B": "Fonksiyonel iyileşme ve adaptasyon, hastanın kompansatuvar stratejilerle günlük yaşamda bağımsızlaşmasıdır; örneği düşük ayağı olan hastanın ayak orteziyle güvenli yürümesidir. Beyin ağlarının yeniden düzenlenmesi bu kavramın örneği olarak verilmez (s. 9).",
+      "C": "İskemik penumbranın kurtarılması, spontan nörolojik iyileşmenin temel mekanizmalarından biridir. Erken dönemdeki doğal düzelmeye katkı verir; eğitimle ağların yeniden organize olmasını tanımlamaz (s. 9).",
+      "D": "Nöroplastisite, beynin hasardan sonra işlevlerini farklı ağlar aracılığıyla sürdürme kapasitesidir ve tekrarlayan, göreve özgü rehabilitasyonla desteklenir. Tekrarlayan yürüme eğitimiyle ağların yeniden organize olması bu kavramın örneğidir (s. 9).",
+      "E": "Metabolik iyileşme, ödemin azalması ve reperfüzyonla birlikte spontan nörolojik iyileşmenin mekanizmaları arasında sayılır. Doğal sürecin bir parçasıdır ve tekrarlayan eğitime bağlı yeniden organizasyonu açıklamaz (s. 9)."
+     },
+     "bilgi": [
+      55
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "gorsel": "2. sütun örnek kutusu: 'Örnek: Tekrarlayan yürüme eğitimi ile yürümeden sorumlu beyin ağlarının yeniden organize olması.'"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-15",
+      "ozen:s9"
+     ],
+     "s": 9,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "İnme rehabilitasyonunun dönemleriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Uygun pozisyonlama ve sık pozisyon değişikliği akut dönemde uygulanır.\nII. Mesane ve barsak programı akut dönem rehabilitasyonunun parçasıdır.\nIII. İş-uğraşı terapisi subakut-kronik dönem programında yer alır.\nIV. Psikolojik destek yalnız kronik dönemde verilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Uygun pozisyonlama, sık pozisyon değişikliği, mesane ve barsak programı ile psikolojik destek akut dönem maddeleridir; iş-uğraşı terapisi subakut-kronik dönemdedir (s. 12 ve 13).",
+     "sik_aciklamalari": {
+      "A": "Pozisyonlama ile mesane ve barsak programı akut dönem maddeleridir; iş-uğraşı terapisi ise subakut-kronik dönem programında sayılır. Psikolojik destek de akut dönemde verildiğinden IV yanlıştır ve doğru birleşim ilk üç ifadedir (s. 12 ve 13).",
+      "B": "Uygun pozisyonlama ile sık pozisyon değişikliği akut dönemde uygulanır ve iş-uğraşı terapisi subakut-kronik dönemde yer alır. Mesane ve barsak programı da akut dönem maddesi olduğundan II'nin eksik bırakılması seçeneği yanlış yapar (s. 12 ve 13).",
+      "C": "Mesane ve barsak programı akut dönem rehabilitasyonunun parçasıdır. Psikolojik destek ise akut dönem listesinde depresyonun tanı ve tedavisiyle birlikte geçer; yalnız kronik döneme ait sayan IV yanlıştır (s. 12).",
+      "D": "Psikolojik destek, akut dönem rehabilitasyonunun maddelerinden biridir ve erken dönemden başlayarak verilir. Yalnız kronik döneme bırakıldığını söyleyen IV yanlış olduğu için tek başına seçilemez (s. 12).",
+      "E": "İlk üç ifade dönemlere göre uygulamaları doğru yerleştirir: pozisyonlama ve mesane-barsak programı akut, iş-uğraşı terapisi subakut-kronik dönemdedir. Psikolojik destek akut dönemde de verildiği için dört ifade birlikte doğru olmaz (s. 12 ve 13)."
+     },
+     "bilgi": [
+      73,
+      74,
+      79,
+      80,
+      86
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h23",
+      "d3-k2-ftr-001"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Uygun pozisyonlama Sık pozisyon değişikliği"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h23",
+      "cikmis:d3-k2-ftr-001",
+      "hoca:hv-k2-28-20",
+      "hoca:hv-k2-28-22",
+      "hoca:hv-k2-28-23",
+      "ogrenci:B:ftr-s02-b07",
+      "ogrenci:B:ftr-s02-b08"
+     ],
+     "s": 12
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877045120-496840",
+     "soru": "Serebrovasküler olay rehabilitasyonu ile ilgili aşağıdaki ifadeler veriliyor:\nI. Komorbid hastalıklara yönelik tedavilerin planlanması ve yürütülmesi\nII. Sekonder komplikasyonları önlemek veya en aza indirmek\nIII. Kaybedilen motor fonksiyonları mümkün olduğunca yerine koymak\nIV. Fonksiyonel ve ev yaşamında bağımsızlığı sağlamak\nBunlardan hangisi/hangileri serebrovasküler olay rehabilitasyonunun ana ilkelerindendir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3-k2-ftr-001",
+     "soru": "Aşağıda verilen inme komplikasyonları ve tedavileriyle ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Mesane ve bağırsak disfonksiyonu görülmez",
+      "B": "DVT'yi önlemek için eklem hareket açıklığı egzersizleri önerilir",
+      "C": "Bası yarasını önlemek için pozisyonlama yapılır",
+      "D": "İnme sonrası depresyon olabilir, gerektiğinde medikal tedavi başlanır",
+      "E": "Yutma bozukluğu nedeniyle aspirasyon pnömonisi gelişebilir"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2025-2026-h23",
+     "soru": "Kurgu Soru: İnme ile ilgili aşağıdaki ifadeler veriliyor:\nI. Hemipleji, inmede en sık görülen motor bozukluk tablosudur.\nII. Yutmanın değerlendirilmesi akut dönem rehabilitasyonunun bir parçasıdır.\nIII. Uygun pozisyonlamaya ilk kez geç (subakut-kronik) dönem rehabilitasyonunda başlanır.\nIV. İnmede en hızlı iyileşme ilk 3 ayda olur.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2020-2021-q138",
+     "soru": "Aşağıdakilerden hangisi/hangileri serebrovasküler olay sonrası gelişen komplikasyonlardandır?",
+     "secenekler": {
+      "A": "Üst ekstremite komplikasyonları",
+      "B": "Derin ven trombozu (DVT) ve pulmoner emboli",
+      "C": "Bağırsak disfonksiyonları",
+      "D": "Bası yaraları",
+      "E": "Hepsi"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Omurilik yaralanmasını tanımlar; etiyolojisini, tetrapleji-parapleji ayrımını, motor, duyu ve otonom bulgularını, ASIA bozukluk skalasını ve sakral korunmaya göre komplet-inkomplet ayrımını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q27",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Omurilik yaralanmasında lezyon yeri ve şiddetinin standardize biçimde değerlendirildiği uluslararası muayene aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ASIA bozukluk skalası",
+      "B": "Glasgow koma skalası",
+      "C": "Posttravmatik amnezi süresi",
+      "D": "Bilinç kaybı süresi",
+      "E": "Beyin MRG"
+     },
+     "dogru": "A",
+     "aciklama": "Omurilik yaralanması değerlendirmesi uluslararası ASIA bozukluk skalası muayenesi ile standardize edilir; lezyon yeri ve şiddeti değerlendirilir (s. 20).",
+     "sik_aciklamalari": {
+      "A": "ASIA bozukluk skalası, omurilik yaralanmasının değerlendirmesini standardize eden uluslararası muayenedir ve lezyon yeri ile şiddetini gösterir. Sınıflama prognoz ve takipte önem taşıdığı için doğru seçenektir (s. 20).",
+      "B": "Glasgow koma skalası, travmatik beyin hasarında hasarın yaygınlığını ve şiddetini belirlemek için kullanılan ölçektir. Omurilik yaralanmasının değerlendirilmesinde değil, beyin hasarında yer alır (s. 34).",
+      "C": "Posttravmatik amnezi süresi, travmatik beyin hasarında şiddeti ve prognozu gösteren ölçütlerden biridir. Omurilik lezyonunun yerini ya da şiddetini değerlendiren bir muayene olarak kullanılmaz (s. 34 ve 36).",
+      "D": "Bilinç kaybı süresi, Glasgow koma skalası ve amnezi süresiyle birlikte travmatik beyin hasarının şiddetini belirler. Beyin hasarına özgü bir ölçüt olduğundan omurilik yaralanmasını sınıflamaz (s. 34).",
+      "E": "Beyin MRG, serebral palsiden şüphelenildiğinde tanı için yol gösterici olan görüntüleme yöntemidir. Omurilik lezyonunun şiddetini standardize eden bir muayene skalası sayılmaz (s. 40)."
+     },
+     "bilgi": [
+      132,
+      133
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "bozukluk skalası (ABS) muayenesi ile standardize edilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-32",
+      "ozen:s20"
+     ],
+     "s": 20
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q28",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "ASIA bozukluk skalasına (ABS) göre komplet omurilik yaralanması aşağıdakilerden hangisiyle gösterilir?",
+     "secenekler": {
+      "A": "ABS A",
+      "B": "ABS B",
+      "C": "ABS C",
+      "D": "ABS D",
+      "E": "ABS E"
+     },
+     "dogru": "A",
+     "aciklama": "Omurilik yaralanması komplet ABS A ve inkomplet ABS B-C-D şeklinde sınıflandırılır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "ABS A, ASIA bozukluk skalasında komplet yaralanmayı gösteren sınıftır. Komplet yaralanmada en alt sakral köklerde ne duyu ne motor fonksiyon sağlam kaldığından doğru seçenektir (s. 20 ve 21).",
+      "B": "ABS B, ASIA bozukluk skalasında inkomplet yaralanma sınıflarının ilkidir. İnkomplet yaralanmada sakral korunma bulunduğu için komplet yaralanmayı göstermez (s. 20 ve 21).",
+      "C": "ABS C, inkomplet yaralanmayı gösteren üç sınıftan ortadakidir. İnkomplet grupta en alt sakral köklerde duyu ya da motor fonksiyon korunduğundan komplet tabloyla eşleşmez (s. 20 ve 21).",
+      "D": "ABS D, inkomplet yaralanma grubunda sayılan sınıflardandır. Sınıflama prognoz ve takipte kullanılır; komplet yaralanma bu harfle değil A harfiyle gösterilir (s. 20).",
+      "E": "ABS E, hocanın derste belirttiği gibi yaralanma geçirmiş ama muayenesi normal olan hastayı anlatan son sınıftır. Komplet yaralanma ise skalanın öbür ucundaki A sınıfıyla gösterilir (s. 20)."
+     },
+     "bilgi": [
+      134
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Komplet ABS A ve inkomplet ABS B-C-D şeklinde"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-32",
+      "ozen:s20"
+     ],
+     "s": 20
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q21",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Omurilik yaralanması seviyeleriyle ilgili aşağıdakiler veriliyor:\nI. Servikal 5\nII. Servikal 7\nIII. Torakal 4\nIV. Lomber 1\nBu seviyelerden hangilerindeki omurilik hasarı tetraplejiye neden olur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Tetrapleji T1 ve üzeri omurilik hasarında, parapleji T2 ve alt segmentlerindeki zedelenme sonucu olur (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Servikal 5 hasarı T1'in üzerinde olduğu için tetrapleji yapar. Ancak tetrapleji T1 ve üzeri hasarda görüldüğünden Servikal 7 de bu gruba girer ve yalnız I'in seçilmesi eksik kalır (s. 18).",
+      "B": "Tetrapleji, T1 ve üzeri omurilik hasarında ortaya çıkar ve dört ekstremiteyi, solunum sistemini ve pelvik organları etkiler. Servikal 5 ve Servikal 7 bu sınırın içinde, Torakal 4 ve Lomber 1 dışında olduğu için doğru birleşim budur (s. 18).",
+      "C": "Servikal 5 ve Servikal 7 hasarı tetraplejiye yol açar. Torakal 4 ise T2 ve altındaki segmentlerdendir ve bu düzeydeki zedelenme parapleji yapar; III'ün eklenmesi seçeneği yanlış kılar (s. 18).",
+      "D": "Torakal 4 ve Lomber 1, T2 ve altındaki segmentlerdir ve hasarları alt ekstremite ile pelvik organların etkilendiği paraplejiye neden olur. Tetrapleji yapan seviyeler olmadıkları için bu birleşim yanlıştır (s. 18).",
+      "E": "Tetrapleji ile parapleji arasındaki sınır T1 ile T2 arasındadır: T1 ve üzeri tetrapleji, T2 ve altı parapleji yapar. Dört seviyenin tamamı tetrapleji yapmadığından bu seçenek hatalıdır (s. 18)."
+     },
+     "bilgi": [
+      116,
+      119
+     ],
+     "benzer_cikmis": [
+      "q-KURUL_2_C_IKMIS__3-89"
+     ],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Tetrapleji; T1 ve üzeri omurilik hasarında"
+     },
+     "dayanak": [
+      "cikmis:q-KURUL_2_C_IKMIS__3-89",
+      "ogrenci:A:ftr-s02-b14"
+     ],
+     "s": 18
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "26 yaşındaki erkek hastada trafik kazası sonrası Torakal 8 seviyesinde omurilik yaralanması saptanıyor. Bu hastada etkilenmesi beklenen yapılar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnız alt ekstremiteler",
+      "B": "Dört ekstremite ve pelvik organlar",
+      "C": "Dört ekstremite, solunum sistemi ve pelvik organlar",
+      "D": "Üst ekstremiteler ve solunum sistemi",
+      "E": "Alt ekstremiteler ve pelvik organlar"
+     },
+     "dogru": "E",
+     "aciklama": "Parapleji T2 ve alt segmentlerindeki zedelenme sonucu olur; alt ekstremite ve pelvik organlar etkilenir (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Alt ekstremitelerin etkilenmesi paraplejinin bir bileşenidir. Ancak T2 ve altındaki zedelenmelerde pelvik organlar da etkilendiği için tablo yalnız alt ekstremitelerle sınırlı kalmaz (s. 18).",
+      "B": "Dört ekstremitenin birlikte etkilenmesi tetraplejinin özelliğidir ve T1 ve üzeri hasarda görülür. Torakal 8 yaralanmasında üst ekstremiteler korunduğu için bu tutulum beklenmez (s. 18).",
+      "C": "Dört ekstremite, solunum sistemi ve pelvik organların birlikte etkilenmesi tetraplejinin tam tanımıdır. Bu tablo T1 ve üzeri omurilik hasarında oluşur; Torakal 8 düzeyi için geçerli olmaz (s. 18).",
+      "D": "Üst ekstremite ve solunum sistemi tutulumu, T1 ve üzeri hasarda gelişen tetraplejinin parçalarıdır. Torakal 8 yaralanması T2'nin altında kaldığından etkilenen yapılar alt ekstremite ve pelvik organlarla sınırlıdır (s. 18).",
+      "E": "Parapleji, T2 ve altındaki segmentlerin zedelenmesiyle ortaya çıkar; alt ekstremiteler ve pelvik organlar etkilenir. Torakal 8 bu aralıkta olduğundan beklenen tutulum budur ve motor, duyu ile otonom bozukluklar eşlik eder (s. 18)."
+     },
+     "bilgi": [
+      119,
+      120
+     ],
+     "benzer_cikmis": [
+      "q-KURUL_2_C_IKMIS__3-89"
+     ],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Parapleji; T2 ve alt segmentlerindeki zedelenme sonucu olur"
+     },
+     "dayanak": [
+      "cikmis:q-KURUL_2_C_IKMIS__3-89",
+      "ogrenci:A:ftr-s02-b14"
+     ],
+     "s": 18
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q23",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Omurilik yaralanması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Erkeklerde daha sık görülür.",
+      "B": "En sık travmatik nedenlerle oluşur.",
+      "C": "Tetraplejide solunum sistemi de etkilenir.",
+      "D": "Paraplejide otonom sistem bozukluğu eşlik etmez.",
+      "E": "Transvers miyelit nontravmatik nedenlerdendir."
+     },
+     "dogru": "D",
+     "aciklama": "Tetraplejide de paraplejide de motor, duyu ve otonom sistem bozuklukları eşlik eder (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Omurilik yaralanmasının erkeklerde daha sık görüldüğü doğru bir bilgidir; ortalama yaş üçüncü ile dördüncü dekattadır. Genç erişkin erkekler en çok etkilenen gruptur (s. 17).",
+      "B": "Nedenler travmatik ve nontravmatik olarak ikiye ayrılır ve seçenekte söylendiği gibi en sık travmatik nedenler görülür. Trafik kazası ve düşme etiyoloji grafiğinin en büyük dilimleridir (s. 17).",
+      "C": "Tetrapleji T1 ve üzeri omurilik hasarında olur ve bu seçenek tabloyu doğru anlatır. Dört ekstremiteyle birlikte solunum sistemi ve pelvik organlar da etkilenir (s. 18).",
+      "D": "Parapleji, T2 ve altındaki segmentlerin zedelenmesiyle oluşur ve alt ekstremite ile pelvik organları etkiler. Tetraplejide olduğu gibi paraplejide de motor, duyu ve otonom sistem bozuklukları eşlik ettiğinden bu ifade yanlıştır (s. 18).",
+      "E": "Transvers miyelit, seçeneğin bildirdiği gibi enfeksiyon, tümör ve nörodejeneratif hastalıklarla birlikte nontravmatik nedenlerdendir. Bu nedenler travmatik olanlara göre daha az görülür (s. 17)."
+     },
+     "bilgi": [
+      110,
+      111,
+      114,
+      117,
+      118
+     ],
+     "benzer_cikmis": [
+      "d3-f-013"
+     ],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Motor, duyu ve otonom sistem bozuklukları eşlik eder"
+     },
+     "dayanak": [
+      "cikmis:d3-f-013",
+      "ogrenci:A:ftr-s02-b14"
+     ],
+     "s": 18
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q24",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Omurilik yaralanmasında kardiyovasküler disfonksiyon kapsamında görülen otonom etkilenim bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spastisite",
+      "B": "Hiperrefleksi",
+      "C": "Dizestezi",
+      "D": "Flask paralizi",
+      "E": "Otonomik disrefleksi"
+     },
+     "dogru": "E",
+     "aciklama": "Otonom etkilenimde kardiyovasküler disfonksiyon ortostatik hipotansiyon ve otonomik disrefleksi olarak görülür (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Spastisite, spinal şoku izleyen dönemde ortaya çıkan üst motor nöron bulgularındandır. Motor etkilenim başlığında yer alır ve kardiyovasküler bir otonom bulgu sayılmaz (s. 19).",
+      "B": "Hiperrefleksi, reflekslerin artmasıdır ve patolojik reflekslerle birlikte izleyen dönemin üst motor nöron bulgusudur. Motor etkilenimi gösterdiği için otonom etkilenim bulgusu olamaz (s. 19).",
+      "C": "Dizestezi, parestezi ile birlikte anılan duyusal bir semptomdur ve lezyon seviyesinin altındaki duyu kaybına eşlik eder. Duyusal etkilenim başlığına ait olduğundan otonom bulgu sayılmaz (s. 19).",
+      "D": "Flask paralizi, akut dönemde spinal şoka bağlı olarak arefleksiyle birlikte görülen gevşek felçtir. Motor etkilenimin erken dönem bulgusudur ve otonom sistemle ilgili bir bulgu olarak sınıflanmaz (s. 19).",
+      "E": "Otonomik disrefleksi, ortostatik hipotansiyonla birlikte omurilik yaralanmasındaki kardiyovasküler disfonksiyonu oluşturur. Otonom etkilenim başlığında, kardiyovasküler disfonksiyonun içinde sayıldığı için doğru seçenektir (s. 19)."
+     },
+     "bilgi": [
+      129,
+      130
+     ],
+     "benzer_cikmis": [
+      "d3-f-013"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Kardiyovasküler disfonksiyon (ortostatik hipotansiyon, otonomik"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-31",
+      "cikmis:d3-f-013",
+      "ozen:s19"
+     ],
+     "s": 19
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q26",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Omurilik yaralanmasında spinal şoku izleyen dönemde ortaya çıkan üst motor nöron bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Arefleksi",
+      "B": "Flask paralizi",
+      "C": "Hiperrefleksi",
+      "D": "Vibrasyon duyusu kaybı",
+      "E": "Ortostatik hipotansiyon"
+     },
+     "dogru": "C",
+     "aciklama": "İzleyen dönemde üst motor nöron bulguları spastisite, hiperrefleksi ve patolojik reflekslerdir (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Arefleksi, reflekslerin alınamamasıdır ve akut dönemde spinal şoka bağlı olarak görülür. Erken dönemin bulgusudur; izleyen dönemde refleksler alınamaz olmaktan çıkar ve tersine artar (s. 19).",
+      "B": "Flask paralizi, spinal şok sırasında arefleksiyle birlikte görülen gevşek felçtir. Akut dönemi tanımlar; izleyen dönemde yerini spastisiteye bıraktığı için üst motor nöron bulgusu olarak anılmaz (s. 19).",
+      "C": "Hiperrefleksi, reflekslerin artmasıdır ve spastisite ile patolojik reflekslerle birlikte izleyen dönemin üst motor nöron bulgularını oluşturur. Spinal şoktan sonra ortaya çıktığı için doğru seçenektir (s. 19).",
+      "D": "Vibrasyon duyusu kaybı, propriosepsiyon kaybıyla birlikte derin duyu kaybını oluşturur. Duyusal etkilenim başlığında yer aldığından motor bir bulgu olarak değerlendirilmez (s. 19).",
+      "E": "Ortostatik hipotansiyon, otonomik disrefleksiyle birlikte kardiyovasküler disfonksiyon içinde sayılır. Otonom etkilenimin bulgusudur ve üst motor nöron bulgusu olarak gösterilmez (s. 19)."
+     },
+     "bilgi": [
+      124
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q116"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "İzleyen dönemde üst motor nöron bulguları: spastisite, hiperrefleksi"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q116"
+     ],
+     "s": 19
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q29",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Omurilik yaralanmasında sakral korunma aşağıdakilerden hangisiyle değerlendirilir?",
+     "secenekler": {
+      "A": "Derin tendon refleksleri ve patolojik refleksler",
+      "B": "Alt ekstremitede propriosepsiyon ve vibrasyon duyusu",
+      "C": "Üst ekstremite kas kuvveti ve hafif dokunma duyusu",
+      "D": "Anal bölgenin duyusu ve istemli anal kontraksiyon",
+      "E": "Mesane distansiyonu ve barsak retansiyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Sakral korunma, en alt sakral köklerde (S4-5) duyu için anal bölgenin duyusu, motor için istemli anal kontraksiyonla değerlendirilir (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Hiperrefleksi ve patolojik refleksler, spinal şoku izleyen dönemin üst motor nöron bulgularıdır. Motor etkilenimi gösterirler; sakral korunmanın varlığı bu reflekslerle belirlenmez (s. 19 ve 21).",
+      "B": "Propriosepsiyon ve vibrasyon derin duyuyu oluşturur ve lezyon seviyesinin altında kaybolabilir. Derin duyu muayenesi duyusal etkilenimi gösterir, ancak sakral korunma en alt sakral köklere bakılarak değerlendirilir (s. 19 ve 21).",
+      "C": "Üst ekstremite kas kuvveti, tetrapleji ile parapleji ayrımında ve rehabilitasyon planında önem taşır. Sakral korunma ise S4-5 köklerinin işleviyle ilgilidir ve üst ekstremite muayenesiyle anlaşılmaz (s. 18 ve 21).",
+      "D": "Sakral korunma, en alt sakral köklerde (S4-5) duyu ya da motor fonksiyonun sağlam olmasıdır. Duyu anal bölgenin duyusuyla, motor fonksiyon istemli anal kontraksiyonla değerlendirildiği için doğru seçenektir (s. 21).",
+      "E": "Mesane distansiyonu ve barsak retansiyonu, otonom disrefleksiyi tetikleyen nosiseptif uyarılardır. Komplikasyonla ilgilidirler ve yaralanmanın komplet ya da inkomplet oluşunu belirlemezler (s. 21 ve 30)."
+     },
+     "bilgi": [
+      140
+     ],
+     "benzer_cikmis": [
+      "past-q-karma-38",
+      "d3-b-034"
+     ],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Duyu: Anal bölgenin duyusu Motor: İstemli anal kontraksiyon"
+     },
+     "dayanak": [
+      "cikmis:past-q-karma-38",
+      "cikmis:d3-b-034",
+      "hoca:hv-k2-28-34",
+      "ogrenci:A:ftr-s02-b09"
+     ],
+     "s": 21,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q25",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Omurilik yaralanmasında görülen bulgularla ilgili aşağıdaki ifadeler veriliyor:\nI. Akut dönemde spinal şoka bağlı flask paralizi ve arefleksi görülür.\nII. İzleyen dönemde spastisite ve hiperrefleksi ortaya çıkar.\nIII. Otonomik disrefleksi otonom etkilenim bulgusudur.\nIV. Lezyon seviyesinin altında derin duyu korunur.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "Yalnız III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Akut dönemde spinal şoka bağlı flask paralizi ve arefleksi, izleyen dönemde üst motor nöron bulguları görülür; derin duyu kaybı ve otonomik disrefleksi de bulgulardandır (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Spinal şokta flask paralizi ve arefleksi, ardından spastisite ve hiperrefleksi görülmesi motor etkilenimin iki evresidir. Otonomik disrefleksinin otonom bulgu olduğunu söyleyen III de doğru olduğundan bu seçenek eksiktir (s. 19).",
+      "B": "İzleyen dönemde üst motor nöron bulguları ortaya çıktığı için II doğrudur. IV yanlıştır, çünkü lezyon seviyesinin altında propriosepsiyon ve vibrasyon duyusunu içeren derin duyu kaybı da görülür (s. 19).",
+      "C": "Motor etkilenim akut dönemde flask paralizi ve arefleksiyle başlar, sonra spastisite, hiperrefleksi ve patolojik reflekslere döner; otonomik disrefleksi de otonom bulgudur. Derin duyu korunmadığı için IV dışarıda kalır (s. 19).",
+      "D": "Otonomik disrefleksi, ortostatik hipotansiyonla birlikte kardiyovasküler disfonksiyon içinde sayılan otonom bir bulgudur. III doğru olsa da I ve II de doğru olduğundan tek başına seçilmesi yetersizdir (s. 19).",
+      "E": "İlk üç ifade motor ve otonom etkilenimi doğru anlatır. Duyusal etkilenimde yüzeyel duyularla birlikte derin duyu da kaybolduğundan IV yanlıştır ve dört ifade birlikte seçilemez (s. 19)."
+     },
+     "bilgi": [
+      123,
+      124,
+      126,
+      129
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q116",
+      "d3-f-013"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Akut dönemde spinal şoka bağlı flask paralizi ve arefleksi"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q116",
+      "hoca:hv-k2-28-31",
+      "cikmis:d3-f-013",
+      "ozen:s19"
+     ],
+     "s": 19
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q30",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Torakal 10 seviyesinde omurilik yaralanması olan 30 yaşındaki hastanın muayenesinde anal bölge duyusunun korunduğu, istemli anal kontraksiyonun ise alınamadığı saptanıyor. Bu hastadaki yaralanma için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Komplet yaralanma; sakral korunma yok",
+      "B": "İnkomplet yaralanma; sakral korunma var",
+      "C": "Komplet yaralanma; sakral korunma var",
+      "D": "İnkomplet yaralanma; sakral korunma yok",
+      "E": "Tetrapleji; sakral korunma yok"
+     },
+     "dogru": "B",
+     "aciklama": "İnkomplet yaralanmada en alt sakral köklerde (S4-5) ya duyu ya motor ya da her ikisi sağlamdır, sakral korunma vardır; komplet yaralanmada sakral korunma yoktur (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Komplet yaralanma, en alt sakral köklerde ne duyunun ne de motor fonksiyonun sağlam olduğu tablodur. Bu hastada anal bölge duyusu korunduğundan sakral korunma vardır ve yaralanma komplet sayılamaz (s. 21).",
+      "B": "İnkomplet yaralanmada S4-5 köklerinde ya duyu ya motor ya da her ikisi birden sağlamdır. Yalnız anal duyunun korunması sakral korunma için yeterli olduğundan bu hastanın yaralanması inkomplettir (s. 21).",
+      "C": "Komplet yaralanma, sakral korunmanın kaybolduğu durumun adıdır; bu iki özellik aynı hastada bir arada bulunamaz. Sakral korunma varsa yaralanma inkomplet olarak adlandırılır (s. 21).",
+      "D": "İnkomplet yaralanma, en alt sakral köklerde işlevin en az birinin korunduğu tablodur. Sakral korunmanın olmaması komplet yaralanmayı tanımladığından bu eşleştirme kendi içinde çelişir (s. 21).",
+      "E": "Tetrapleji, T1 ve üzeri omurilik hasarında dört ekstremitenin etkilendiği tablodur. Torakal 10 yaralanması parapleji yapar ve anal duyunun korunması sakral korunmanın varlığını gösterir (s. 18 ve 21)."
+     },
+     "bilgi": [
+      138,
+      139,
+      141
+     ],
+     "benzer_cikmis": [
+      "past-q-karma-38",
+      "d3-b-034"
+     ],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Sakral korunma VAR Sakral korunma YOK"
+     },
+     "dayanak": [
+      "cikmis:past-q-karma-38",
+      "cikmis:d3-b-034",
+      "hoca:hv-k2-28-34",
+      "ogrenci:A:ftr-s02-b09"
+     ],
+     "s": 21,
+     "gorsel": true
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-KURUL_2_C_IKMIS__3-89",
+     "soru": "I. Lomber 2\nII. Torakal 2\nIII. Torakal 12\nIV. Servikal 7\nYukarıdaki omurilik seviyelerinden hangilerinin komplet lezyonu paraplejiye neden olur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3-f-013",
+     "soru": "Omurilik yaralanmaları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Omurilik yaralanmasında ölüm nedeni en sık solunum sistemi komplikasyonlarıdır.",
+      "B": "Her iki bacakta olan güçsüzlükle giden kliniğin genel adı paraplejidir.",
+      "C": "Kontraktürü ve kas atrofisini önlemek için eklem hareket açıklığı egzersizlerine akut dönemde başlanmalıdır.",
+      "D": "Omurilik yaralanmalarının en sık nedeni travmaya bağlı yaralanmalardır.",
+      "E": "Omurilik yaralanmasında motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenmez."
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3k2-2020-2021-q116",
+     "soru": "Üst motor nöron lezyonu ile ilgili aşağıdaki bulgular veriliyor:\nI. Derin tendon reflekslerinde artış\nII. Kas gücünde azalma\nIII. Patolojik refleks\nIV. Kas tonusunda azalma\nBu bulgulardan hangileri üst motor nöron lezyonu bulgusudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "past-q-karma-38",
+     "soru": "Omurilik yaralanması ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En sık görülen etiyoloji nontravmatik nedenlerdir.",
+      "B": "Omurilik yaralanmasında otonom bozukluklar görülmesi beklenmez.",
+      "C": "Komplet yaralanmanın prognozu inkomplet yaralanmaya göre daha iyidir.",
+      "D": "Sakral korunma yoksa yaralanmanın komplet olduğu söylenebilir.",
+      "E": "T1 ve üzeri yaralanmalarda parapleji gelişir."
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3-b-034",
+     "soru": "Omurilik yaralanması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hem motor hem duyu hem de otonom bozukluklar görülebilir",
+      "B": "ASIA bozukluk skalası prognoz tayininde oldukça önemlidir",
+      "C": "En sık etyoloji travmatik nedenlerdir",
+      "D": "T1 üzerinde yaralanma tetrapleji olarak adlandırılır",
+      "E": "Sakral korunma yoksa hastalar inkomplet olarak değerlendirilir"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "İnkomplet omurilik yaralanma sendromlarını (santral kord, Brown-Séquard, anterior kord, posterior kord, kauda ekina, konus medullaris) bulgularıyla ayırt eder; kauda ekina ile konus medullarisi karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q31",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Lezyon tarafında propriosepsiyon, motor ve vibrasyon kaybı, karşı tarafta ağrı ve ısı duyusu kaybı ile tanımlanan inkomplet omurilik yaralanma sendromu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Santral kord sendromu",
+      "B": "Anterior kord sendromu",
+      "C": "Brown-Séquard sendromu",
+      "D": "Posterior kord sendromu",
+      "E": "Konus medullaris sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Brown-Séquard sendromu lezyon tarafında propriosepsiyon, motor ve vibrasyon kaybı, kontralateral ağrı ve ısı kaybı ile tanımlanır (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Santral kord sendromu, çoğunlukla spondilozu olanlarda düşmeye bağlı hiperekstansiyonla oluşur ve üst ekstremitelerde motor kayıp alt ekstremitelerden fazladır. Ayırt edici özelliği üst ve alt ekstremite farkıdır; lezyon tarafı ile karşı taraf ayrımı bu sendromu tanımlamaz (s. 22).",
+      "B": "Anterior kord sendromunda omuriliğin ön kolonu hasarlanır; motor fonksiyon ile ağrı ve ısı duyusu kaybolur, propriosepsiyon korunur. Propriosepsiyon kaybı beklenmediğinden sorudaki tabloyla örtüşmez (s. 23).",
+      "C": "Brown-Séquard sendromunda lezyon tarafında propriosepsiyon, motor ve vibrasyon kaybı, kontralateral tarafta ağrı ve ısı kaybı görülür. Sorudaki bulgular bu sendromun saf formunu tanımladığı için doğru seçenektir (s. 22).",
+      "D": "Posterior kord sendromu, arka kolon yaralanmasıyla oluşan ve nadir görülen bir tablodur; propriosepsiyon kaybıyla seyreder. Motor kayıp ve karşı tarafta ağrı-ısı kaybı içermediğinden uygun düşmez (s. 23).",
+      "E": "Konus medullaris sendromu, spinal kordun sonlandığı bölgenin hasarıdır ve alt ekstremitelerde simetrik motor kayıp, hiperrefleksi ile nörojenik mesane yapar. Simetrik bir tablo olduğu için tek taraflı ayrışmayı açıklamaz (s. 24)."
+     },
+     "bilgi": [
+      146,
+      147
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Lezyon tarafında propriosepsiyon, motor ve vibrasyon kaybı, kontralateral ağrı ve ısı kaybı"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-36",
+      "ozen:s22"
+     ],
+     "s": 22
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q34",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Prognozu en kötü olan inkomplet omurilik yaralanması tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anterior kord sendromu",
+      "B": "Santral kord sendromu",
+      "C": "Posterior kord sendromu",
+      "D": "Brown-Séquard sendromu",
+      "E": "Kauda ekina sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Anterior kord sendromu, prognozu en kötü inkomplet omurilik yaralanması tipidir; santral kord sendromunda prognoz daha iyidir (s. 22 ve 23).",
+     "sik_aciklamalari": {
+      "A": "Anterior kord sendromu, omuriliğin ön kolonunun hasarlandığı; motor, ağrı ve ısı duyusunun kaybolduğu, propriosepsiyonun korunduğu tablodur. Prognozu en kötü inkomplet omurilik yaralanması tipi olarak bildirildiği için doğrudur (s. 23).",
+      "B": "Santral kord sendromu, hiperekstansiyon sonrası üst ekstremitelerin alt ekstremitelerden fazla etkilendiği tablodur. Prognozunun daha iyi olduğu belirtildiğinden en kötü prognozlu tip sayılmaz (s. 22).",
+      "C": "Posterior kord sendromu, arka kolon yaralanmasına bağlı propriosepsiyon kaybıyla giden nadir bir sendromdur. Motor kaybın eşlik etmediği bu tablo en kötü prognozlu tip olarak anılmaz (s. 23).",
+      "D": "Brown-Séquard sendromu, lezyon tarafında motor ve derin duyu kaybı, karşı tarafta ağrı ve ısı kaybıyla tanınır. Saf formu nadir olan bu sendrom için en kötü prognoz bilgisi verilmez; bu özellik anterior kord sendromuna aittir (s. 22 ve 23).",
+      "E": "Kauda ekina sendromu, L2 seviyesinden sonraki liflerin yaralanmasına bağlı, alt motor nöron bulgularıyla giden bir tablodur. En kötü prognozlu inkomplet tip olarak ön kolon hasarıyla seyreden sendrom gösterilir (s. 23 ve 24)."
+     },
+     "bilgi": [
+      155
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Prognozu en kötü inkomplet OY tipidir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 23
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q33",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Brown-Séquard sendromu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Saf formu nadirdir.",
+      "B": "Lezyon tarafında propriosepsiyon ve vibrasyon kaybı olur.",
+      "C": "Ağrı ve ısı duyusu kaybı kontralateral taraftadır.",
+      "D": "Motor kayıp az etkilenen tarafta daha çoktur.",
+      "E": "Vücudun bir yarısı diğer tarafa göre daha fazla etkilenir."
+     },
+     "dogru": "D",
+     "aciklama": "Brown-Séquard sendromunda vücudun bir yarısı diğer tarafa göre daha fazla etkilenir ve fazla etkilenen tarafta motor kayıp daha çoktur (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Lezyon tarafında propriosepsiyon, motor ve vibrasyon kaybı, karşı tarafta ağrı ve ısı kaybıyla tanımlanan saf form gerçekten nadirdir. Klinikte çoğunlukla bir yarının daha fazla etkilendiği tablo görülür (s. 22).",
+      "B": "Propriosepsiyon ve vibrasyon kaybı, seçenekte söylendiği gibi lezyonla aynı tarafta ortaya çıkar. Bu derin duyu kaybına aynı taraftaki motor kayıp eşlik eder (s. 22).",
+      "C": "Ağrı ve ısı duyusu kaybı lezyonun karşı tarafında, yani kontralateral yerleşimlidir; seçenek doğru bir bilgi verir. Daha az etkilenen tarafta iğne batırma duyusunun azalması da bu dağılımla uyumludur (s. 22).",
+      "D": "Brown-Séquard sendromunda vücudun bir yarısı daha fazla etkilenir ve motor kayıp bu fazla etkilenen tarafta daha çoktur. Motor kaybı az etkilenen tarafa yerleştiren bu ifade yanlıştır (s. 22).",
+      "E": "Klinik tabloda vücudun bir yarısının diğer tarafa göre daha fazla etkilendiği doğrudur. Fazla etkilenen tarafta motor kayıp, diğer tarafta ağrı ve ısı duyusu kaybı öne çıkar (s. 22)."
+     },
+     "bilgi": [
+      146,
+      148,
+      149,
+      150
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Fazla etkilenen tarafta motor kayıp daha çoktur"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-37",
+      "hoca:hv-k2-28-36",
+      "ozen:s22"
+     ],
+     "s": 22
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q35",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Servikal spondilozu olan 68 yaşındaki hasta düşme sonrası boynunun aşırı ekstansiyona gelmesiyle yaralanıyor. Muayenede kollardaki güçsüzlüğün bacaklardakinden belirgin olduğu görülüyor. Bu hastada en olası sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Brown-Séquard sendromu",
+      "B": "Santral kord sendromu",
+      "C": "Anterior kord sendromu",
+      "D": "Posterior kord sendromu",
+      "E": "Konus medullaris sendromu"
+     },
+     "dogru": "B",
+     "aciklama": "Santral kord sendromu çoğunlukla önceden spondilozisi olanlarda düşmeye bağlı hiperekstansiyon sonucunda olur; üst ekstremitelerdeki motor kayıp alt ekstremitelerden fazladır (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Brown-Séquard sendromunda bulgular sağ ve sol taraf arasında ayrışır: bir tarafta motor ve derin duyu kaybı, diğer tarafta ağrı ve ısı kaybı olur. Bu hastada fark kollarla bacaklar arasında olduğundan tanı uyuşmaz (s. 22).",
+      "B": "Santral kord sendromu çoğunlukla önceden spondilozu olanlarda düşmeye bağlı hiperekstansiyon sonucunda gelişir. Üst ekstremitelerdeki motor kaybın alt ekstremitelerden fazla olması tipik bulgusu olduğu için en olası tanıdır (s. 22).",
+      "C": "Anterior kord sendromu ön kolon hasarıyla motor, ağrı ve ısı duyusu kaybı yapar; propriosepsiyon korunur. Kolların bacaklardan belirgin etkilenmesi bu sendromun tanımlayıcı özelliği olarak verilmez (s. 23).",
+      "D": "Posterior kord sendromu arka kolon yaralanmasıdır ve propriosepsiyon kaybıyla seyreder. Güç kaybı bu sendromun parçası olmadığından hastadaki belirgin kol güçsüzlüğünü açıklayamaz (s. 23).",
+      "E": "Konus medullaris sendromu spinal kordun sonlandığı bölgenin hasarıdır ve alt ekstremitelerde simetrik motor kayıp ile nörojenik mesane yapar. Üst ekstremiteleri etkilemediğinden bu tabloyla bağdaşmaz (s. 24)."
+     },
+     "bilgi": [
+      142,
+      143
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Üst ekstremitelerdeki motor kayıp alt ekstremitelerden fazladır"
+     },
+     "dayanak": [
+      "ozen:s22"
+     ],
+     "s": 22
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q36",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Arka kolon yaralanmasına bağlı propriosepsiyon kaybının görüldüğü, motor kaybın eşlik etmediği inkomplet omurilik yaralanma sendromu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anterior kord sendromu",
+      "B": "Santral kord sendromu",
+      "C": "Brown-Séquard sendromu",
+      "D": "Kauda ekina sendromu",
+      "E": "Posterior kord sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Posterior kord sendromunda arka kolonda yaralanma sonucunda propriosepsiyon kaybı olur, motor kayıp yoktur ve sendrom nadir görülür (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Anterior kord sendromunda ön kolon hasarlanır ve motor fonksiyon ile ağrı-ısı duyusu kaybolur. Propriosepsiyon korunduğu için sorudaki tablonun tam tersidir (s. 23).",
+      "B": "Santral kord sendromunda üst ekstremitelerde alt ekstremitelerden fazla motor kayıp vardır ve nörojenik mesane eşlik edebilir. Motor kayıp belirgin olduğundan motor kaybın bulunmadığı bu tabloyla uyuşmaz (s. 22).",
+      "C": "Brown-Séquard sendromunda lezyon tarafında propriosepsiyon kaybına motor ve vibrasyon kaybı da eşlik eder. Motor kayıp içerdiği ve karşı tarafta ağrı-ısı kaybı yaptığı için sorudaki tanıma uymaz (s. 22).",
+      "D": "Kauda ekina sendromu, L2 sonrasındaki liflerin yaralanmasıdır; asimetrik kas gücü kaybı, arefleksi ve nörojenik mesane yapar. Kas gücü kaybı tablonun parçası olduğundan motor kaybın olmadığı sendrom bu olamaz (s. 24).",
+      "E": "Posterior kord sendromu, arka kolon yaralanması sonucunda propriosepsiyon kaybının görüldüğü, nadir bir sendromdur. Motor kayıp olmadığı için sorudaki tanımı tam olarak karşılar (s. 23)."
+     },
+     "bilgi": [
+      156,
+      157
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "propriosepsiyon kaybı olur. Motor kayıp yoktur"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 23
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q37",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi kauda ekina sendromunu konus medullaris sendromundan ayıran bir özelliktir?",
+     "secenekler": {
+      "A": "Simetrik motor kayıp ve hiperrefleksi",
+      "B": "Asimetrik motor kayıp ve arefleksi",
+      "C": "Erken mesane ve barsak disfonksiyonu",
+      "D": "Perineal bölgede eyer tarzı duyu kaybı",
+      "E": "Üst motor nöron bulgularının görülebilmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Kauda ekina sendromunda asimetrik kas gücü kaybı ve arefleksi görülür; izole kauda lezyonları alt motor nöron bulgularıyla gider (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Simetrik motor kayıp ve hiperrefleksi, spinal kordun sonlandığı bölgenin hasarı olan konus medullaris sendromunun özellikleridir. Kauda ekinayı değil konusu tanımladığı için ayırıcı özellik olarak kaudaya yazılamaz (s. 24).",
+      "B": "Kauda ekina sendromu L2'den sonraki liflerin yaralanmasıdır; asimetrik kas gücü kaybı ve arefleksiyle, yani alt motor nöron bulgularıyla gider. Konusta kayıp simetrik ve refleksler artmış olduğundan bu ikili kaudayı ayırır (s. 24).",
+      "C": "Erken mesane ve barsak disfonksiyonu konus medullaris sendromunun klinik özelliğidir. Kauda ekinada mesane-barsak tutulumu geç ve daha az olduğu için bu özellik kaudayı göstermez (s. 25).",
+      "D": "Eyer tarzı duyu kaybı, perineal bölgede duyunun azalmasıdır ve iki sendromun ikisinde de görülebilir. Ortak bir bulgu olduğundan ayırıcı özellik işlevi görmez (s. 25).",
+      "E": "Üst motor nöron bulguları, yani spastisite ve hiperrefleksi konus medullaris sendromunda görülebilir. Kauda ekinada alt motor nöron bulguları belirgin olduğundan bu özellik konusu işaret eder (s. 25)."
+     },
+     "bilgi": [
+      159,
+      160,
+      164,
+      169
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "İzole kauda lezyonları alt motor nöron bulgularıyla gider"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-39",
+      "ozen:s24",
+      "ozen:s25"
+     ],
+     "s": 24
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q39",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "45 yaşındaki hasta yüksekten düşme sonrası bel bölgesinden yaralanıyor. Muayenede bacaklarda asimetrik kas gücü kaybı, arefleksi ve sakral eyer tarzı hipoestezi saptanıyor; idrar yapmada güçlük eşlik ediyor. Bu hastada en olası sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Konus medullaris sendromu",
+      "B": "Anterior kord sendromu",
+      "C": "Kauda ekina sendromu",
+      "D": "Santral kord sendromu",
+      "E": "Posterior kord sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Kauda ekina sendromunda klinik tablo asimetrik kas gücü kaybı ve eşlik eden duyu kaybı, arefleksi, nörojenik mesane ve barsak, sakral eyer tarzı hipoestezidir (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Konus medullaris sendromu spinal kordun sonlandığı bölgenin hasarıdır; alt ekstremitelerde simetrik motor kayıp ve hiperrefleksi yapar. Bu hastada kayıp asimetrik ve refleksler kaybolmuş olduğundan konus yerine kök tutulumu düşünülür (s. 24).",
+      "B": "Anterior kord sendromu ön kolon hasarıdır; motor fonksiyon ile ağrı ve ısı duyusu kaybolur, propriosepsiyon korunur. Eyer tarzı hipoestezi ve arefleksiyle giden asimetrik tablo bu sendromun tanımında yer almaz (s. 23).",
+      "C": "Kauda ekina sendromu, L2 seviyesinden sonraki liflerin yaralanmasına bağlı gelişir. Asimetrik kas gücü kaybı, arefleksi, nörojenik mesane ve sakral eyer tarzı hipoestezi klinik tablosunu oluşturduğu için en olası tanıdır (s. 24).",
+      "D": "Santral kord sendromu hiperekstansiyon yaralanmasından sonra üst ekstremitelerde belirgin motor kayıpla tanınır. Bu hastada bulgular bacaklarda toplandığı ve kollarla ilgili yakınma tanımlanmadığı için uygun düşmez (s. 22).",
+      "E": "Posterior kord sendromu arka kolon yaralanmasına bağlı propriosepsiyon kaybıyla giden nadir bir sendromdur. Kas gücü korunduğundan bacaklardaki asimetrik güç kaybını açıklayamaz (s. 23)."
+     },
+     "bilgi": [
+      158,
+      159
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "asimetrik kas gücü kaybı ve eşlik eden duyu kaybı, arrefleksi, nörojenik mesane"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-39",
+      "ozen:s24"
+     ],
+     "s": 24
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q32",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "34 yaşındaki erkek hastada omurilik yaralanması sonrası sağ bacakta belirgin güçsüzlük ile propriosepsiyon ve vibrasyon duyusu kaybı, sol bacakta ise ağrı ve ısı duyusu kaybı saptanıyor. Bu hastada en olası sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anterior kord sendromu",
+      "B": "Posterior kord sendromu",
+      "C": "Santral kord sendromu",
+      "D": "Kauda ekina sendromu",
+      "E": "Brown-Séquard sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Brown-Séquard sendromunda fazla etkilenen tarafta motor kayıp daha çoktur; diğer tarafta ağrı ve ısı duyusu kaybı olur (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Anterior kord sendromu ön kolon hasarıdır; motor fonksiyon ile ağrı ve ısı duyusu birlikte kaybolurken propriosepsiyon korunur. Bu hastada propriosepsiyon bozuk ve duyu kaybı taraflara göre ayrışmış olduğundan tanıyla uyuşmaz (s. 23).",
+      "B": "Posterior kord sendromu, arka kolon yaralanmasına bağlı propriosepsiyon kaybıyla giden nadir bir tablodur. Motor kayıp beklenmediği için hastadaki belirgin güçsüzlük ve karşı taraftaki ağrı-ısı kaybı bu sendromla açıklanamaz (s. 23).",
+      "C": "Santral kord sendromu, hiperekstansiyon yaralanmasından sonra üst ekstremitelerde alt ekstremitelerden fazla motor kayıpla tanınır. Bu hastada bulgular kollarla bacaklar arasında değil, sağ ve sol taraf arasında ayrıştığı için uygun düşmez (s. 22).",
+      "D": "Kauda ekina sendromu, L2'den sonraki liflerin yaralanmasıyla gelişir; asimetrik kas gücü kaybı, arefleksi ve eyer tarzı hipoestezi yapar. Motor kayıp ile ağrı-ısı kaybının karşılıklı taraflarda olması bu sendromun özelliği sayılmaz (s. 24).",
+      "E": "Brown-Séquard sendromunda fazla etkilenen tarafta motor kayıp, propriosepsiyon ve vibrasyon kaybı olur; diğer tarafta ağrı ve ısı duyusu kaybolur. Hastanın sağ ve sol bacak bulguları bu dağılımı gösterdiği için en olası tanıdır (s. 22)."
+     },
+     "bilgi": [
+      146,
+      149,
+      150
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Fazla etkilenen tarafta motor kayıp daha çoktur. Diğer tarafta ise ağrı ve ısı duyusu kaybı olur"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-36",
+      "hoca:hv-k2-28-37",
+      "ozen:s22"
+     ],
+     "s": 22
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q38",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Konus medullaris sendromu ile ilgili aşağıdaki ifadeler veriliyor:\nI. Omuriliğin son kısmı tutulur.\nII. Alt ekstremitelerde simetrik motor ve duyu kaybı olur.\nIII. Mesane ve barsak disfonksiyonu erken ortaya çıkar.\nIV. Radiküler ağrı ve kök düzeyinde asimetrik kayıp tipiktir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve IV",
+      "C": "II ve III",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Konus medullaris sendromunda omuriliğin son kısmı tutulur; simetrik motor ve duyu kaybı ile erken mesane ve barsak disfonksiyonu görülür. Radiküler ağrı ve asimetrik kayıp kauda ekinaya aittir (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Konus medullaris sendromunda omuriliğin son kısmı tutulur; alt ekstremitelerde simetrik motor ve duyu kaybı ile erken mesane-barsak disfonksiyonu görülür. Radiküler ağrı ve asimetrik kayıp kauda ekinaya ait olduğundan doğru birleşim ilk üç ifadedir (s. 24 ve 25).",
+      "B": "Omuriliğin son kısmının tutulduğunu söyleyen I doğrudur. IV ise sinir köklerinin tutulduğu kauda ekina sendromunun özelliklerini anlatır; bu yüzden birleşim yanlıştır (s. 25).",
+      "C": "Simetrik motor ve duyu kaybı ile erken mesane-barsak disfonksiyonu konus medullarisin klinik özellikleridir. Tutulan yerin omuriliğin son kısmı olduğunu söyleyen I de doğru olduğundan bu seçenek eksik kalır (s. 25).",
+      "D": "Radiküler ağrı, sinir kökü tutulumuna bağlı ağrıdır ve asimetrik, kök düzeyindeki kayıplarla birlikte kauda ekina sendromunda görülür. Konus medullarisi tanımlamadığı için IV tek başına seçilemez (s. 25).",
+      "E": "İlk üç ifade konus medullaris sendromunu doğru tanımlar. IV kauda ekinanın klinik özelliklerini taşıdığı için dört ifadenin birlikte doğru kabul edilmesi iki sendromu birbirine karıştırmak olur (s. 25)."
+     },
+     "bilgi": [
+      166,
+      167,
+      168
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "gorsel": "Karşılaştırma şeması, Konus Medullaris Sendromu sütunu: 'Omuriliğin son kısmı (L1–L2)', 'Alt ekstremitelerde simetrik motor ve duyu kaybı', 'Erken mesane ve barsak disfonksiyonu'; Kauda Equina Sendromu sütunu: 'Asimetrik, kök düzeyinde motor ve duyu kayıpları', 'Radiküler ağrı'"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-39",
+      "ozen:s25"
+     ],
+     "s": 25,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q40",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Kauda ekina ve konus medullaris sendromları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İkisinde de eyer tarzı anestezi görülebilir.",
+      "B": "Kauda ekina sendromu L2 seviyesinden sonraki liflerin yaralanmasına bağlıdır.",
+      "C": "İzole kauda lezyonları üst motor nöron bulgularıyla gider.",
+      "D": "Konus medullaris sendromunda hiperrefleksi görülebilir.",
+      "E": "Klinik pratikte iki sendrom birlikte görülebilir."
+     },
+     "dogru": "C",
+     "aciklama": "İzole kauda lezyonları alt motor nöron bulgularıyla gider; konus medullaris sendromunda hiperrefleksi görülür ve iki sendrom birlikte bulunabilir (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Perineal bölgede duyu kaybı anlamına gelen eyer tarzı anestezi gerçekten iki sendromda da görülebilir. Mesane-barsak ve cinsel fonksiyon bozukluğu da ortak bulgulardır (s. 25).",
+      "B": "Kauda ekina sendromu, seçeneğin bildirdiği gibi L2 seviyesinden sonra yer alan kauda equina liflerinin yaralanmasına sekonder gelişir. Tutulan yapı omuriliğin kendisi değil, sinir kökleridir (s. 24 ve 25).",
+      "C": "İzole kauda ekina lezyonları sinir köklerini tuttuğundan arefleksi ve kas atrofisi gibi alt motor nöron bulgularıyla gider. Üst motor nöron bulguları konus medullarise ait olduğu için bu ifade yanlıştır (s. 24 ve 25).",
+      "D": "Konus medullaris sendromu genellikle simetrik motor kayıp, hiperrefleksi ve nörojenik mesane-bağırsak disfonksiyonuyla karakterizedir; hiperrefleksi bu yüzden beklenen bir bulgudur. Üst ve alt motor nöron bulguları birlikte de bulunabilir (s. 24).",
+      "E": "Klinik pratikte konus medullaris ve kauda ekina sendromlarının birlikte görülebildiği doğru bir bilgidir. Bu nedenle iki tablonun bulguları aynı hastada iç içe geçebilir (s. 24)."
+     },
+     "bilgi": [
+      160,
+      161,
+      164,
+      170
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "İzole kauda lezyonları alt motor nöron bulgularıyla gider"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-39",
+      "ozen:s24",
+      "ozen:s25"
+     ],
+     "s": 24
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Omurilik yaralanması rehabilitasyonunun hedeflerini ve basamaklarını, yaralanma seviyesine göre ambulasyon düzeylerini ve komplikasyonları sıralar; otonom disrefleksiyi tanır.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q42",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Otonom disrefleksi hangi seviyedeki omurilik yaralanmalarında görülür?",
+     "secenekler": {
+      "A": "T1 ve üzeri",
+      "B": "T6 ve üzeri",
+      "C": "T10 ve üzeri",
+      "D": "T11-L2 arası",
+      "E": "L2 seviyesinin altı"
+     },
+     "dogru": "B",
+     "aciklama": "Otonom disrefleksi T6 ve üzeri yaralanması olan hastalarda görülür (s. 30).",
+     "sik_aciklamalari": {
+      "A": "T1 ve üzeri, tetraplejinin ortaya çıktığı omurilik hasarı sınırıdır. Tetrapleji-parapleji ayrımında kullanılır; otonom disrefleksi için verilen sınır bundan daha aşağıdaki T6 düzeyidir (s. 18 ve 30).",
+      "B": "Otonom disrefleksi, T6 ve üzeri yaralanması olan hastalarda lezyon seviyesi altından gelen nosiseptif uyarılarla tetiklenir. Hipertansiyon, baş ağrısı ve flushing ile giden acil bir tablo olduğu için bu sınırın bilinmesi gerekir (s. 30).",
+      "C": "T10 ve üzeri, hastaların genellikle terapötik ambulasyon yapabildiği yaralanma düzeyidir. Ambulasyon beklentisini belirleyen bu sınır otonom disrefleksi için kullanılmaz (s. 29 ve 30).",
+      "D": "T11-L2 arası, ev içi ambulasyonun yapılabildiği yaralanma seviyesidir. Ambulasyon sınıflamasına ait olduğundan otonom disrefleksinin görüldüğü düzeyi göstermez (s. 29).",
+      "E": "L2 seviyesinin altı, toplumsal ambulasyonun mümkün olduğu yaralanma düzeyidir ve kauda ekina liflerinin bulunduğu bölgedir. Otonom disrefleksi ise T6 ve üzerindeki yaralanmalarda ortaya çıkar (s. 24, 29 ve 30)."
+     },
+     "bilgi": [
+      191
+     ],
+     "benzer_cikmis": [
+      "past-1790877045073-786870"
+     ],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "T6 ve üzeri yaralanması olan hastalarda"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-48",
+      "cikmis:past-1790877045073-786870",
+      "ozen:s30"
+     ],
+     "s": 30
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q45",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "L2 seviyesinin altında omurilik yaralanması olan bireylerde beklenen ambulasyon düzeyi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Terapötik ambulasyon",
+      "B": "Ev içi ambulasyon",
+      "C": "Toplumsal ambulasyon",
+      "D": "Yalnız yatak içi mobilite",
+      "E": "Yalnız tekerlekli sandalye ile mobilizasyon"
+     },
+     "dogru": "C",
+     "aciklama": "L2 seviyesinin altındaki bireyler toplumsal ambulasyonu yapabilirler; T10 ve üzeri terapötik, T11-L2 ev içi ambulasyon yapabilir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Terapötik ambulasyon, genellikle T10 ve üzeri yaralanması olan hastaların ulaşabildiği düzeydir. En yüksek seviyeli yaralanmalar için geçerli olduğundan L2 altındaki bir yaralanmada beklenen düzey bu olmaz (s. 29).",
+      "B": "Ev içi ambulasyon, T11-L2 seviyesindeki hastaların yapabildiği yürüme düzeyidir. L2'nin altındaki yaralanmalarda beklenti bunun bir üst basamağı olduğundan eksik kalır (s. 29).",
+      "C": "Toplumsal ambulasyon, hastanın toplum içinde yürüyebildiği en ileri ambulasyon düzeyidir ve L2 seviyesinin altındaki yaralanmalarda yapılabilir. Yaralanma düzeyi alçaldıkça ambulasyon beklentisi arttığı için doğru seçenektir (s. 29).",
+      "D": "Yatak içi mobilite, yatakta dönme ve supin pozisyondan oturmaya gelme gibi egzersizlerle rehabilitasyonun ilk basamağıdır. Bir başlangıç aşaması olup L2 altındaki yaralanmada ulaşılabilecek düzeyi tanımlamaz (s. 28 ve 29).",
+      "E": "Tekerlekli sandalye, uzun mesafe mobilizasyonda önemli bir araçtır ve sürme teknikleri hastaya öğretilir. L2 altındaki yaralanmalarda toplumsal ambulasyon yapılabildiğinden hasta yalnız tekerlekli sandalyeye bağlı kalmaz (s. 28 ve 29)."
+     },
+     "bilgi": [
+      186
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "L2 seviyesinin altındaki bireyler ise toplumsal ambulasyonu"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-46",
+      "ozen:s29"
+     ],
+     "s": 29
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q47",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Paraplejik hastalarda tekerlekli sandalye kullanımı, ağırlık aktarımı ve transferler için kuvvetlendirilmesi özellikle önemli olan kaslar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alt ekstremite kasları",
+      "B": "Üst ekstremite kasları",
+      "C": "Larinks ve farinks kasları",
+      "D": "Solunum kasları",
+      "E": "Anal sfinkter kasları"
+     },
+     "dogru": "B",
+     "aciklama": "Paraplejik hastalarda üst ekstremite kaslarını kuvvetlendirmek önemlidir; bu kaslar tekerlekli sandalye kullanımında, ağırlık aktarımında ve transferlerde hastaya yardımcı olur (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Alt ekstremite kasları paraplejide lezyon seviyesinin altında kaldığından kuvvet kaybına uğrayan kaslardır. Tekerlekli sandalyeyi sürmek ve transfer yapmak için hasta bu kaslara değil kollarına dayanır (s. 18 ve 27).",
+      "B": "Üst ekstremite kasları paraplejide korunan kaslardır ve tekerlekli sandalye kullanımında, ağırlık aktarımında, transferlerde ve temiz aralıklı kateterizasyonda hastaya yardımcı olur. Bu yüzden kuvvetlendirilmeleri özellikle önemlidir (s. 27).",
+      "C": "Larinks ve farinks kasları yutmada görev alır ve inmede paralizileri disfajiye yol açar. Paraplejik hastanın transferinde ya da tekerlekli sandalye kullanımında görev alan kaslar bunlar olmadığından seçilemez (s. 6 ve 27).",
+      "D": "Solunum sistemi, T1 ve üzeri hasarda gelişen tetraplejide etkilenen yapılardandır. Solunum kaslarının çalışması yaşamsal olsa da transfer ve ağırlık aktarımı için kuvvetlendirilmesi vurgulanan kaslar üst ekstremite kaslarıdır (s. 18 ve 27).",
+      "E": "İstemli anal kontraksiyon, sakral korunmanın motor bileşenini değerlendirmek için bakılan işlevdir. Yaralanmanın komplet ya da inkomplet oluşunu gösterir; tekerlekli sandalye kullanımında rol oynayan bir kas grubu olarak anılmaz (s. 21 ve 27)."
+     },
+     "bilgi": [
+      178,
+      179
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Paraplejik hastalarda üst ekstremite kaslarını kuvvetlendirmek önemlidir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-44"
+     ],
+     "s": 27
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q41",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Torakal 4 seviyesinde komplet omurilik yaralanması olan 35 yaşındaki hastada birkaç gündür süren kabızlığın ardından ani baş ağrısı ve yüzde kızarma gelişiyor; kan basıncı 200/110 mmHg ölçülüyor. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ortostatik hipotansiyon",
+      "B": "Spinal şok",
+      "C": "Üriner sistem enfeksiyonu",
+      "D": "Otonom disrefleksi",
+      "E": "Heterotopik ossifikasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Otonom disrefleksi T6 ve üzeri yaralanması olan hastalarda lezyon seviyesi altından gelen nosiseptif uyarıların (mesane distansiyonu, barsak retansiyonu) tetiklemesiyle oluşan hipertansiyon, baş ağrısı ve flushing ile giden acil bir tablodur (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Ortostatik hipotansiyon, omurilik yaralanmasının kardiyovasküler sorunlarından biridir ve kan basıncının düşmesiyle seyreder. Bu hastada kan basıncı belirgin yüksek olduğundan tablo bununla açıklanamaz (s. 19 ve 30).",
+      "B": "Spinal şok, yaralanmanın akut döneminde flask paralizi ve arefleksiyle giden tablodur. Motor tabloyu anlatır; hipertansiyon, baş ağrısı ve yüzde kızarma ise otonom bir yanıtın bulgularıdır (s. 19 ve 30).",
+      "C": "Üriner sistem enfeksiyonları omurilik yaralanmasının komplikasyonlarındandır. Ancak kabızlığın ardından gelişen ani hipertansiyon, baş ağrısı ve kızarma üçlüsü enfeksiyonu değil, otonom bir yanıtı düşündürür (s. 30).",
+      "D": "Otonom disrefleksi, T6 ve üzeri yaralanmalarda lezyon seviyesi altından gelen nosiseptif uyarıların tetiklediği acil tablodur. Barsak retansiyonu tetikleyicilerdendir; hipertansiyon, baş ağrısı ve flushing kliniği oluşturduğu için en olası tanıdır (s. 30).",
+      "E": "Heterotopik ossifikasyon, omurilik yaralanmasının komplikasyon listesinde bası yarası ve kontraktürle birlikte sayılır. Ani kan basıncı yükselmesi ve baş ağrısıyla giden acil bir tablo oluşturmaz (s. 30)."
+     },
+     "bilgi": [
+      191,
+      192
+     ],
+     "benzer_cikmis": [
+      "past-1790877045073-786870"
+     ],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "tetiklemesiyle oluşan hipertansiyon, baş ağrısı, flushing ile giden klinik"
+     },
+     "dayanak": [
+      "cikmis:past-1790877045073-786870",
+      "hoca:hv-k2-28-48",
+      "hoca:hv-k2-28-31",
+      "ogrenci:A:ftr-s02-b14",
+      "ozen:s30"
+     ],
+     "s": 30
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q43",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Otonom disrefleksi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Acil bir tablodur.",
+      "B": "Mesane distansiyonu tetikleyebilir.",
+      "C": "Kan basıncında düşme ile seyreder.",
+      "D": "Baş ağrısı ve flushing görülür.",
+      "E": "Lezyon seviyesi altından gelen nosiseptif uyarılarla tetiklenir."
+     },
+     "dogru": "C",
+     "aciklama": "Otonom disrefleksi lezyon seviyesi altından gelen nosiseptif uyarıların tetiklemesiyle oluşan hipertansiyon, baş ağrısı ve flushing ile giden acil bir tablodur (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Otonom disrefleksi gerçekten acil bir tablodur ve T6 ve üzeri yaralanması olan hastalarda görülür. Kardiyovasküler komplikasyonlar arasında aritmi ve ortostatik hipotansiyonla birlikte sayılır (s. 30).",
+      "B": "Mesane distansiyonu, seçenekte söylendiği gibi barsak retansiyonuyla birlikte tabloyu başlatan nosiseptif uyarıdır. Dolu mesane lezyon seviyesinin altından uyarı gönderir (s. 30).",
+      "C": "Otonom disrefleksinin temel bulgusu hipertansiyondur; baş ağrısı ve flushing buna eşlik eder. Kan basıncının düştüğü durum ortostatik hipotansiyon olduğundan bu ifade yanlıştır (s. 30).",
+      "D": "Baş ağrısı ve flushing, hipertansiyonla birlikte otonom disrefleksinin kliniğini oluşturur; seçenek doğru bir bilgi verir. Bu üç bulgu T6 ve üzeri yaralanmalı hastada birlikte görüldüğünde tablo akla gelir (s. 30).",
+      "E": "Tabloyu, seçeneğin bildirdiği gibi lezyon seviyesinin altından gelen nosiseptif uyarılar tetikler. Mesane distansiyonu ve barsak retansiyonu bu uyarıların başlıcalarıdır (s. 30)."
+     },
+     "bilgi": [
+      191,
+      192,
+      193
+     ],
+     "benzer_cikmis": [
+      "past-1790877045073-786870"
+     ],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "oluşan hipertansiyon, baş ağrısı, flushing ile giden klinik, acil bir tablodur"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-48",
+      "cikmis:past-1790877045073-786870",
+      "ozen:s30"
+     ],
+     "s": 30
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q48",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Paraplejik hastalarda üst ekstremite kaslarının kuvvetli olmasının yardımcı olduğu durumlarla ilgili aşağıdakiler veriliyor:\nI. Tekerlekli sandalye kullanımı\nII. Ağırlık aktarımı\nIII. Transferler\nIV. Temiz aralıklı kateterizasyon\nBunlardan hangileri bu durumlar arasındadır?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Paraplejik hastada üst ekstremite kasları tekerlekli sandalye kullanımında, ağırlık aktarımında, transferlerde ve temiz aralıklı kateterizasyon ihtiyacı olanlarda hastaya yardımcı olur (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Tekerlekli sandalyeyi sürmek ve ağırlık aktarmak üst ekstremite kuvvetine dayanır. Transferler ve temiz aralıklı kateterizasyon da aynı gerekçeyle sayıldığından yalnız ilk ikisinin seçilmesi eksik kalır (s. 27).",
+      "B": "Tekerlekli sandalye kullanımı ve transferler kolların gücüyle yapılır. Ağırlık aktarımı ile temiz aralıklı kateterizasyon da kuvvetli üst ekstremite gerektirdiği için bu birleşim yetersizdir (s. 27).",
+      "C": "Ağırlık aktarımı ve temiz aralıklı kateterizasyon, hastanın kollarını ve ellerini kullanarak yaptığı işlerdir. Tekerlekli sandalye kullanımı ve transferler dışarıda kaldığından seçenek eksiktir (s. 27).",
+      "D": "Tekerlekli sandalye kullanımı, ağırlık aktarımı ve transferler üst ekstremite kuvveti gerektirir. Temiz aralıklı kateterizasyon ihtiyacı olanlarda da bu kasların yardımcı olduğu belirtildiği için IV'ün dışarıda bırakılması yanlıştır (s. 27).",
+      "E": "Paraplejik hastada üst ekstremite kasları tekerlekli sandalye kullanımında, ağırlık aktarımında, transferlerde ve temiz aralıklı kateterizasyon ihtiyacı olanlarda hastaya yardımcı olur. Dört durum da sayıldığı için doğru birleşim budur (s. 27)."
+     },
+     "bilgi": [
+      179
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "bu kaslar TS kullanımında, ağırlık aktarımında, transferlerde ve temiz"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-44"
+     ],
+     "s": 27
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q49",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Omurilik yaralanması rehabilitasyonunda oturma dengesi kazanıldıktan sonra başlanan uygulama aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yatakta dönme egzersizleri",
+      "B": "Supin pozisyondan oturma pozisyonuna gelme",
+      "C": "Pozisyonlama",
+      "D": "Transfer eğitimi ve ayakta durma egzersizleri",
+      "E": "Eklem hareket açıklığı egzersizleri"
+     },
+     "dogru": "D",
+     "aciklama": "Oturma dengesi kazanıldıktan sonra transfer eğitimi ve ayakta durma egzersizlerine başlanır (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Yatakta dönme, mobilite egzersizlerinin ilk basamağı olan yatak içi egzersizlerdendir. Oturma dengesinden önce çalışıldığı için sonraki basamak olarak gösterilemez (s. 28).",
+      "B": "Supin pozisyondan oturma pozisyonuna gelme, yatak içi egzersizlerin bir parçasıdır ve oturma dengesine hazırlık sağlar. Sıralamada oturma dengesinin kazanılmasından önce yer alır (s. 28).",
+      "C": "Pozisyonlama, gelişebilecek komplikasyonları önlemek amacıyla rehabilitasyon sürecinin başladığı uygulamadır. En erken basamak olduğundan oturma dengesinden sonra başlanan uygulama olamaz (s. 27).",
+      "D": "Transfer eğitimi ve ayakta durma egzersizleri, yatak içi egzersizlerden sonra gelen basamaktır. Oturma dengesi kazanıldıktan sonra başlandıkları için doğru seçenektir; ardından uygun ortezle paralel barda ambulasyon çalışılır (s. 28).",
+      "E": "Eklem hareket açıklığı egzersizleri kontraktürü ve kas atrofisini önlemek için yapılır. Akut dönemde başlanması gerektiğinden oturma dengesinin kazanılmasını beklemez (s. 27)."
+     },
+     "bilgi": [
+      180,
+      181
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Oturma dengesi kazanıldıktan sonra transfer eğitimi ve ayakta durma"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 28
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q50",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki durumlar veriliyor:\nI. Heterotopik ossifikasyon\nII. Osteoporoz\nIII. Nöropatik ağrı\nIV. Hidrosefali\nBunlardan hangileri omurilik yaralanması komplikasyonları arasında sayılır?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Omurilik yaralanması komplikasyonları arasında heterotopik ossifikasyon, bası yarası, kontraktür, osteoporoz, spastisite ve nöropatik ağrı sayılır (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Heterotopik ossifikasyon ve osteoporoz omurilik yaralanmasının komplikasyon listesinde yer alır. Nöropatik ağrı da aynı listede sayıldığından III'ün dışarıda bırakılması bu seçeneği eksik kılar (s. 30).",
+      "B": "Osteoporoz omurilik yaralanmasının komplikasyonlarındandır. Hidrosefali ise travmatik beyin hasarının akut dönem sorunları ve meningomiyelosele eşlik eden durumlar arasında geçer; omurilik yaralanması listesinde bulunmaz (s. 30, 35 ve 44).",
+      "C": "Omurilik yaralanması komplikasyonları arasında heterotopik ossifikasyon, osteoporoz ve nöropatik ağrı; ayrıca bası yarası, kontraktür ve spastisite sayılır. Hidrosefali bu listede olmadığından doğru birleşim ilk üç durumdur (s. 30).",
+      "D": "Hidrosefali, travmatik beyin hasarından sonra görülebilen ve meningomiyelosele eşlik eden bir durumdur. Omurilik yaralanması komplikasyonları arasında sayılmadığı için tek başına seçilemez (s. 30, 35 ve 44).",
+      "E": "İlk üç durum omurilik yaralanması komplikasyon listesinde açıkça yer alır. Hidrosefali başka hastalıkların sorunları arasında anıldığından dört durumun birlikte seçilmesi yanlıştır (s. 30 ve 35)."
+     },
+     "bilgi": [
+      196,
+      198
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Heterotropik ossifikasyon Bası yarası Kontraktür Osteoporoz"
+     },
+     "dayanak": [
+      "ozen:s30"
+     ],
+     "s": 30
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q44",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Servikal 6 seviyesinde omurilik yaralanması olan 28 yaşındaki hastada ani baş ağrısı ve yüzde kızarma gelişiyor; kan basıncı 190/100 mmHg ölçülüyor ve üriner sondanın tıkalı olduğu görülüyor. Bu hastada ilk yaklaşım aşağıdakilerden hangisi olmalıdır?",
+     "secenekler": {
+      "A": "Mesane distansiyonuna yol açan tıkanıklığın giderilmesi",
+      "B": "Oral kas gevşetici başlanması",
+      "C": "Kas içi botulinum toksin uygulanması",
+      "D": "Eklem hareket açıklığı egzersizlerinin artırılması",
+      "E": "Paralel barda ambulasyon çalışılması"
+     },
+     "dogru": "A",
+     "aciklama": "Otonom disrefleksi lezyon seviyesi altından gelen nosiseptif uyarıların (mesane distansiyonu, barsak retansiyonu) tetiklemesiyle oluşur (s. 30). Hocanın derste belirttiği gibi önce tetikleyen uyaran ortadan kaldırılır, kan basıncı düşmezse hipertansiyona müdahale edilir.",
+     "sik_aciklamalari": {
+      "A": "Otonom disrefleksiyi lezyon seviyesi altından gelen nosiseptif uyarılar tetikler ve mesane distansiyonu bunların başında gelir (s. 30). Hocanın derste belirttiği gibi önce tetikleyen uyaran ortadan kaldırılır; tıkalı sondanın açılması bu yüzden ilk yapılması gerekendir.",
+      "B": "Oral kas gevşeticiler, ciddi spastisitenin tedavisinde değerlendirilen ilaçlardır. Tonus bozukluğunu hedefler; ani hipertansiyonla giden bu acil tablonun tetikleyicisini ortadan kaldırmaz (s. 15 ve 30).",
+      "C": "Kas içi botulinum toksin, ciddi spastisitede değerlendirilen bir tedavi seçeneğidir. Mesane distansiyonuna bağlı gelişen acil otonom yanıtta kullanılan bir uygulama olmadığından ilk yaklaşım sayılmaz (s. 15 ve 30).",
+      "D": "Eklem hareket açıklığı egzersizleri kontraktürü ve kas atrofisini önlemek için akut dönemde başlanan uygulamalardır. Uzun vadeli koruyucu bir girişim olup tıkalı sondaya bağlı acil tabloyu çözmez (s. 27 ve 30).",
+      "E": "Paralel barda ambulasyon, tolere edebilen hastalarda uygun ortezle çalışılan bir yürüme eğitimidir. Rehabilitasyonun ileri basamağıdır ve acil tabloda tetikleyici uyaran giderilmeden gündeme gelmez (s. 28 ve 30)."
+     },
+     "bilgi": [
+      192,
+      194
+     ],
+     "benzer_cikmis": [
+      "past-1790877045073-786870"
+     ],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "nosiseptif uyarıların (mesane distansiyonu-barsak retansiyonu)"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-48",
+      "cikmis:past-1790877045073-786870",
+      "ozen:s30"
+     ],
+     "s": 30
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q46",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Omurilik yaralanmasında seviyeye göre ambulasyonla ilgili aşağıdaki ifadeler veriliyor:\nI. T10 ve üzeri yaralanması olanlar genellikle terapötik ambule olabilir.\nII. T11-L2 seviyesindeki hastalar ev içi ambulasyon yapabilir.\nIII. L2 seviyesinin altındaki bireyler toplumsal ambulasyon yapabilir.\nIV. T6 ve üzeri yaralanması olanlar toplumsal ambulasyon yapabilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II ve IV",
+      "D": "Yalnız III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "T10 ve üzeri hastalar terapötik ambule olabilir, T11-L2 seviyesindeki hastalar ev içi, L2 seviyesinin altındaki bireyler toplumsal ambulasyon yapabilir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Ambulasyon beklentisi yaralanma seviyesi alçaldıkça artar: T10 ve üzeri terapötik, T11-L2 ev içi, L2'nin altı toplumsal ambulasyon yapabilir. T6 ve üzeri yaralanma terapötik grupta kaldığından IV yanlıştır (s. 29).",
+      "B": "T10 ve üzerinde terapötik, T11-L2 arasında ev içi ambulasyon yapılabildiği için I ve II doğrudur. L2 altındaki bireylerin toplumsal ambulasyon yapabildiğini söyleyen III de doğru olduğundan seçenek eksiktir (s. 29).",
+      "C": "T11-L2 seviyesinde ev içi ambulasyon yapılabildiği için II doğrudur. T6 ve üzeri yaralanma ise T10 ve üzeri grubun içindedir ve bu hastalar en fazla terapötik ambule olabilir; IV yanlıştır (s. 29).",
+      "D": "L2 seviyesinin altındaki bireylerin toplumsal ambulasyon yapabildiği doğrudur. Terapötik ve ev içi ambulasyona ilişkin I ve II de doğru olduğu için yalnız III'ün seçilmesi yetersizdir (s. 29).",
+      "E": "İlk üç ifade üç ambulasyon düzeyini seviyeleriyle doğru eşleştirir. T6 ve üzeri yaralanmada toplumsal ambulasyon beklenmediği, bu düzey otonom disrefleksinin görüldüğü sınır olarak anıldığı için IV yanlıştır (s. 29 ve 30)."
+     },
+     "bilgi": [
+      184,
+      185,
+      186,
+      187
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "T11-L2 seviyesindeki hastalar ev içi ambulasyonu yapabilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-46",
+      "ozen:s29"
+     ],
+     "s": 29
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877045073-786870",
+     "soru": "C5 seviyesinde tetraplejik, 4 aylık omurilik yaralanması olan ve hipertansiyon öyküsü olmayan hasta akşam saatlerinde acil servise zonklayıcı baş ağrısı, kızarıklık ve terleme ile başvuruyor. Acil serviste kan basıncı 190/100 mmHg olarak ölçülüyor. İlk değerlendirmede üriner sondasının tıkanmış olduğu görülüyor. Bu hastada akla gelmesi gereken ilk tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Piyelonefrit",
+      "B": "Spinal şok",
+      "C": "Otonomik disrefleksi",
+      "D": "Serebrovasküler olay",
+      "E": "Heterotopik ossifikasyon"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Travmatik beyin hasarını tanımlar; risk faktörlerini, primer ve sekonder hasarı, şiddet sınıflamasının üç ölçütünü, akut dönem sorunlarını, prognoz belirleyicilerini ve rehabilitasyonun amacını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q51",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Travmatik beyin hasarının en sık nedenleri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Şiddet ve spor yaralanmaları",
+      "B": "Enfeksiyon ve tümörler",
+      "C": "Serebral tromboz ve emboli",
+      "D": "Prematürite ve düşük doğum ağırlığı",
+      "E": "Taşıt kazaları ve düşmeler"
+     },
+     "dogru": "E",
+     "aciklama": "Travmatik beyin hasarında taşıt kazaları ve düşmeler en sık nedenleri oluşturur; genç erkeklerde daha sıklıkla görülür (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Şiddet ve spor yaralanmaları, omurilik yaralanması etiyolojisinde trafik kazası ve düşmenin ardından gelen nedenlerdir. Travmatik beyin hasarında en sık nedenler olarak taşıt kazaları ve düşmeler bildirilir (s. 17 ve 31).",
+      "B": "Enfeksiyon ve tümörler, omurilik yaralanmasının nontravmatik nedenleri arasında sayılır. Travmatik beyin hasarı adından da anlaşıldığı gibi travmayla oluşur ve bu nedenlerle açıklanmaz (s. 17 ve 31).",
+      "C": "Serebral tromboz ve emboli, inmenin iskemik nedenleridir ve inme etiyolojisinin büyük bölümünü oluşturur. Damar tıkanmasıyla ilgili oldukları için travmatik beyin hasarının nedeni sayılmazlar (s. 4 ve 31).",
+      "D": "Prematürite ve düşük doğum ağırlığı, serebral palsinin en sık nedenidir. Gelişmekte olan beyni doğum döneminde etkileyen bu durumlar travmayla ilgili olmadığından travmatik beyin hasarını açıklamaz (s. 31 ve 38).",
+      "E": "Taşıt kazaları ve düşmeler travmatik beyin hasarının en sık nedenlerini oluşturur. Hastalık genç erkeklerde daha sık görülür ve fiziksel, bilişsel ve psikososyal işlevlerde bozulmayla sonuçlanır (s. 31)."
+     },
+     "bilgi": [
+      201
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Taşıt kazaları ve düşmeler en sık nedenleri oluşturur"
+     },
+     "dayanak": [
+      "ogrenci:A:ftr-s02-b10"
+     ],
+     "s": 31
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q57",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Travmatik beyin hasarı, Glasgow koma skalası, bilinç kaybı süresi ve amnezi süresine göre aşağıdakilerden hangisi biçiminde sınıflandırılır?",
+     "secenekler": {
+      "A": "Hafif, orta ve ağır",
+      "B": "Komplet ve inkomplet",
+      "C": "Primer ve sekonder",
+      "D": "Akut, subakut ve kronik",
+      "E": "Spastik, diskinetik, ataksik ve mikst"
+     },
+     "dogru": "A",
+     "aciklama": "Hasarın yaygınlığını ve şiddetini belirlemek amacıyla Glasgow koma skalası, bilinç kaybı süresi ve amnezi süresi kullanılır; tabloda şiddet düzeyi hafif, orta ve ağır olarak verilir (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Hafif, orta ve ağır, travmatik beyin hasarının üç şiddet düzeyidir. Tabloda her düzey Glasgow koma skalası, bilinç kaybı süresi ve travma sonrası amnezi süresiyle tanımlandığı için doğru seçenektir (s. 34).",
+      "B": "Komplet ve inkomplet, omurilik yaralanmasının sakral korunmaya göre yapılan ayrımıdır ve ASIA bozukluk skalasıyla gösterilir. Omurilik hasarına ait olan bu ayrım beyin hasarının şiddet düzeylerini karşılamaz (s. 20 ve 21).",
+      "C": "Primer ve sekonder, travmatik beyin hasarında hasarın oluşma zamanına göre yapılan ayrımdır: primer hasar travma anında, sekonder hasar sonrasında gelişir. Şiddeti değil mekanizmayı anlattığından üç ölçütle yapılan sınıflama bu olmaz (s. 33).",
+      "D": "Akut, subakut ve kronik, inmeden sonraki süreci dönemlere ayıran adlandırmadır. Zamanı gösterir; Glasgow koma skalası ve sürelerle belirlenen şiddet düzeylerini ifade etmez (s. 9 ve 34).",
+      "E": "Spastik, diskinetik, ataksik ve mikst, serebral palsinin dört tipidir. Çocukluk çağı hastalığına ait bu tipler travmatik beyin hasarının şiddet sınıflamasıyla karıştırılmamalıdır (s. 34 ve 39)."
+     },
+     "bilgi": [
+      214,
+      215,
+      216,
+      217
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "koma skalası, bilinç kaybı süresi ve amnezi süresi kullanılmaktadır"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-55",
+      "ozen:s34",
+      "ogrenci:A:ftr-s02-b10"
+     ],
+     "s": 34,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q52",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Travmatik beyin hasarı için en önemli risk faktörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Geçirilmiş travmatik beyin hasarı öyküsü",
+      "B": "Genç yaş",
+      "C": "Erkek cinsiyet",
+      "D": "Düşük sosyoekonomik düzey",
+      "E": "Travma öncesi alkol alımı"
+     },
+     "dogru": "E",
+     "aciklama": "Travmatik beyin hasarında en önemli risk faktörü travma öncesi alkol alımıdır; geçirilmiş TBH öyküsü, genç yaş ve erkek cinsiyet bunu izler (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Geçirilmiş travmatik beyin hasarı öyküsü, alkolden hemen sonra sayılan risk faktörüdür. Sıralamada ikinci sırada yer aldığından en önemli risk faktörü olarak kabul edilmez (s. 32).",
+      "B": "Genç yaş, travmatik beyin hasarının risk faktörlerinden biridir ve hastalığın genç erkeklerde sık görülmesiyle uyumludur. Sıralamada alkol alımı ve geçirilmiş hasar öyküsünün ardından gelir (s. 31 ve 32).",
+      "C": "Erkek cinsiyet, risk faktörleri arasında genç yaştan sonra sayılır. Hastalık erkeklerde daha sık görülse de sıralamanın başında travma öncesi alkol alımı bulunur (s. 31 ve 32).",
+      "D": "Düşük sosyoekonomik düzey, düşük eğitim seviyesiyle birlikte anılan bir risk faktörüdür. Listenin alt sıralarında yer alır ve en önemli etken olarak gösterilmez (s. 32).",
+      "E": "Travma öncesi alkol alımı, travmatik beyin hasarı için en önemli risk faktörü olarak bildirilir. Öteki risk faktörleri sıralamada bundan sonra geldiği için doğru seçenektir (s. 32)."
+     },
+     "bilgi": [
+      203
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "En önemli risk faktörü travma öncesi alkol alımıdır"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-52",
+      "ogrenci:A:ftr-s02-b10"
+     ],
+     "s": 32
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q53",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi travmatik beyin hasarı için sayılan risk faktörleri arasında yer almaz?",
+     "secenekler": {
+      "A": "Geçirilmiş travmatik beyin hasarı öyküsü",
+      "B": "Düşük eğitim seviyesi",
+      "C": "Davranış ve kişilik bozukluğu",
+      "D": "İleri yaş",
+      "E": "Ailesel problemler"
+     },
+     "dogru": "D",
+     "aciklama": "Travmatik beyin hasarı risk faktörleri travma öncesi alkol alımı, geçirilmiş TBH öyküsü, genç yaş, erkek cinsiyet, düşük sosyoekonomik düzey, düşük eğitim seviyesi, davranış ve kişilik bozukluğu ile ailesel problemlerdir (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Geçirilmiş travmatik beyin hasarı öyküsü, travma öncesi alkol alımından sonra gelen ikinci risk faktörüdür. Risk sıralamasının başında bulunduğundan risk faktörü olmayan seçenek bu olamaz (s. 32).",
+      "B": "Düşük eğitim seviyesi, düşük sosyoekonomik düzeyle birlikte sayılan toplumsal bir risk faktörüdür. Risk faktörleri listesinde açıkça geçtiği için listede olmayan etken olarak seçilemez (s. 32).",
+      "C": "Davranış ve kişilik bozukluğu, risk faktörleri arasında düşük eğitim seviyesinden sonra sayılır. Ailesel problemlerle birlikte anılan bu durum listede yer alan bir etkendir (s. 32).",
+      "D": "Yaş, travmatik beyin hasarında risk faktörü olarak genç yaş biçiminde yer alır ve hastalık genç erkeklerde daha sık görülür. İleri yaş listede bulunmadığı için risk faktörü olmayan seçenek budur (s. 31 ve 32).",
+      "E": "Ailesel problemler, risk faktörleri sıralamasının son maddesidir. Davranış ve kişilik bozukluğuyla birlikte anılır ve listede yer alan bir risk faktörüdür (s. 32)."
+     },
+     "bilgi": [
+      204,
+      205
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Geçirilmiş TBH öyküsü, Genç yaş, Erkek cinsiyet"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-52"
+     ],
+     "s": 32
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q54",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Travmatik beyin hasarında travma anında oluşan primer hasar biçimlerinden biri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Serebral ödem",
+      "B": "Hipoksi",
+      "C": "Diffüz aksonal hasar",
+      "D": "Hipotansiyon",
+      "E": "Serebral hipoperfüzyon"
+     },
+     "dogru": "C",
+     "aciklama": "Primer hasar travma anında oluşur (kontüzyon, intrakraniyal kanama, diffüz aksonal hasar, laserasyon); sekonder hasar sonrasında gelişir ve önlenebilir (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Serebral ödem, intrakraniyal basınç artışıyla birlikte sekonder hasarın ilk maddesidir. Travmadan sonra geliştiği ve önlenebildiği için primer hasar biçimi sayılmaz (s. 33).",
+      "B": "Hipoksi, dokunun oksijensiz kalmasıdır ve sekonder hasar biçimleri arasında gösterilir. Travma anında değil sonrasında ortaya çıktığından primer hasara girmez (s. 33).",
+      "C": "Diffüz aksonal hasar; kontüzyon, intrakraniyal kanama ve laserasyonla birlikte primer hasarın dört biçimini oluşturur. Travma anında meydana geldiği için doğru seçenektir (s. 33).",
+      "D": "Hipotansiyon, travmadan sonra gelişen sekonder hasar biçimlerinden biridir. Önlenebilir olduğu için tedavide üzerinde durulur ve primer hasar olarak sınıflanmaz (s. 33).",
+      "E": "Serebral hipoperfüzyon, beynin yeterince kanlanamamasıdır ve sekonder hasar listesinde serebral ödemin ardından gelir. Sonradan gelişen bir süreç olduğundan primer hasar biçimi olamaz (s. 33)."
+     },
+     "bilgi": [
+      206
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "primer hasar travma anında oluşur; sekonder hasar ise sonrasında gelişir ve önlenebilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-53"
+     ],
+     "s": 33,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q56",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ölçütler veriliyor:\nI. Glasgow koma skalası\nII. Bilinç kaybı süresi\nIII. Amnezi süresi\nIV. ASIA bozukluk skalası\nBunlardan hangileri travmatik beyin hasarında hasarın yaygınlığını ve şiddetini belirlemek için öncelikle kullanılır?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II ve IV",
+      "D": "Yalnız I",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Travmatik beyin hasarında hasarın yaygınlığını ve şiddetini belirlemek amacıyla öncelikle Glasgow koma skalası, bilinç kaybı süresi ve amnezi süresi kullanılmaktadır (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Travmatik beyin hasarında hasarın yaygınlığı ve şiddeti öncelikle Glasgow koma skalası, bilinç kaybı süresi ve amnezi süresiyle belirlenir; hasta bu üç ölçüte göre hafif, orta ya da ağır olarak sınıflanır. ASIA bu ölçütlerden biri olmadığından doğru birleşim budur (s. 34).",
+      "B": "Glasgow koma skalası ve bilinç kaybı süresi şiddeti belirleyen ölçütlerdendir. Amnezi süresi de üçüncü ölçüt olarak kullanıldığından III'ün dışarıda bırakılması bu seçeneği eksik kılar (s. 34).",
+      "C": "Bilinç kaybı süresi şiddet ölçütlerinden biridir. ASIA bozukluk skalası ise omurilik yaralanmasında lezyon yeri ve şiddetini standardize eden muayenedir; beyin hasarının şiddetinde kullanılmaz (s. 20 ve 34).",
+      "D": "Glasgow koma skalası şiddeti belirlemede kullanılan ölçütlerin ilkidir. Tek başına değil, bilinç kaybı süresi ve amnezi süresiyle birlikte değerlendirildiği için yalnız I'in seçilmesi yetersizdir (s. 34).",
+      "E": "İlk üç ölçüt travmatik beyin hasarının şiddet sınıflamasını oluşturur. ASIA bozukluk skalası omurilik yaralanmasına özgü olduğundan dört ölçütün birlikte seçilmesi iki hastalığın değerlendirmesini karıştırır (s. 20 ve 34)."
+     },
+     "bilgi": [
+      213,
+      214
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "koma skalası, bilinç kaybı süresi ve amnezi süresi kullanılmaktadır"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-55",
+      "ozen:s34",
+      "ogrenci:A:ftr-s02-b10"
+     ],
+     "s": 34
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q58",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Travmatik beyin hasarında prognoz açısından oldukça önemli olan ölçütler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Travma öncesi alkol alımı ve geçirilmiş hasar öyküsü",
+      "B": "Genç yaş ve erkek cinsiyet",
+      "C": "Sakral korunma ve lezyon seviyesi",
+      "D": "Posttravmatik amnezi ve koma süresi",
+      "E": "Düşük sosyoekonomik düzey ve ailesel problemler"
+     },
+     "dogru": "D",
+     "aciklama": "Travmatik beyin hasarında posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Travma öncesi alkol alımı en önemli risk faktörüdür, geçirilmiş hasar öyküsü de onu izler. Bunlar hasarın oluşma riskini anlatır; prognoz için önem taşıyan ölçütler olarak sayılmaz (s. 32 ve 36).",
+      "B": "Genç yaş ve erkek cinsiyet, travmatik beyin hasarının daha sık görüldüğü grubu tanımlayan risk faktörleridir. Kimin risk altında olduğunu gösterirler; prognoz ölçütü olarak amnezi ve koma süresi verilir (s. 32 ve 36).",
+      "C": "Sakral korunma ve lezyon seviyesi, omurilik yaralanmasının sınıflanmasında ve prognozunda kullanılan bilgilerdir. Beyin hasarının değil omurilik hasarının değerlendirmesine aittir (s. 18 ve 21).",
+      "D": "Posttravmatik amnezi süresi, hasarın şiddetini belirlemede de kullanılan bir ölçüttür ve koma süresiyle birlikte prognoz için oldukça önemlidir. Bu iki süre iyileşme beklentisini gösterdiği için doğru seçenektir (s. 34 ve 36).",
+      "E": "Düşük sosyoekonomik düzey ve ailesel problemler, risk faktörleri sıralamasının alt basamaklarında yer alır. Hasarın ortaya çıkma riskiyle ilgilidirler ve prognoz ölçütü olarak gösterilmezler (s. 32 ve 36)."
+     },
+     "bilgi": [
+      224,
+      225
+     ],
+     "benzer_cikmis": [
+      "32ccb61bda53"
+     ],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-57",
+      "cikmis:32ccb61bda53",
+      "ogrenci:A:ftr-s02-b13"
+     ],
+     "s": 36
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q59",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Travmatik beyin hasarı rehabilitasyonuyla ilgili aşağıdaki ifadeler veriliyor:\nI. Erken mobilizasyon asıl amaçtır.\nII. İmmobilizasyona bağlı komplikasyonların önlenmesi rehabilitasyonun temel taşlarındandır.\nIII. Posttravmatik amnezi süresi prognoz için önemlidir.\nIV. Vertikalizasyondan kaçınılır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Posttravmatik amnezi ve koma süresi prognoz için önemlidir; erken mobilizasyon asıl amaçtır, vertikalizasyon hedeflenir ve immobilizasyon komplikasyonlarının önlenmesi temel taşlardandır (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Erken mobilizasyon asıl amaçtır, immobilizasyonun getirdiği komplikasyonların önlenmesi temel taşlardandır ve posttravmatik amnezi süresi prognozu gösterir. Vertikalizasyon kaçınılan değil hedeflenen bir basamak olduğundan IV yanlıştır (s. 36).",
+      "B": "Erken mobilizasyonun amaç olduğu ve amnezi süresinin prognozu gösterdiği doğrudur. Atrofi, basınç yarası ve kontraktür gibi immobilizasyon komplikasyonlarının önlenmesi de temel taşlardan sayıldığı için II'siz seçenek eksiktir (s. 36).",
+      "C": "İmmobilizasyon komplikasyonlarının önlenmesi rehabilitasyonun temel taşlarındandır. Vertikalizasyon, yani hastanın dik pozisyona getirilmesi ise yatak içi egzersizlerin ardından hedeflenir; IV bu nedenle yanlıştır (s. 36).",
+      "D": "Vertikalizasyon, hastanın yatak içi egzersizlerden sonra dik pozisyona getirilmesidir ve rehabilitasyonda hedeflenir. Kaçınıldığını söyleyen IV yanlış olduğu için tek başına seçilemez (s. 36).",
+      "E": "İlk üç ifade rehabilitasyonun amacını, temel taşlarını ve prognoz ölçütünü doğru verir. Vertikalizasyon hedeflenen bir basamak olduğundan IV yanlıştır ve dört ifade birlikte seçilemez (s. 36)."
+     },
+     "bilgi": [
+      224,
+      226,
+      227
+     ],
+     "benzer_cikmis": [
+      "32ccb61bda53"
+     ],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Erken mobilizasyon asıl amaçtır. Yatak içi egzersizlerle başlanır"
+     },
+     "dayanak": [
+      "cikmis:32ccb61bda53",
+      "hoca:hv-k2-28-57",
+      "ogrenci:A:ftr-s02-b13"
+     ],
+     "s": 36
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q55",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Travmatik beyin hasarındaki hasar mekanizmalarıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Primer hasar travma anında oluşur.\nII. Sekonder hasar sonrasında gelişir ve önlenebilir.\nIII. Kontüzyon sekonder hasar biçimidir.\nIV. Nöbetler sekonder hasar biçimidir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "Yalnız III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Primer hasar travma anında oluşur; sekonder hasar sonrasında gelişir ve önlenebilir. Kontüzyon primer, nöbetler sekonder hasar biçimidir (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Primer hasarın travma anında oluştuğu, sekonder hasarın sonradan gelişip önlenebildiği doğrudur. Nöbetler de sekonder hasar biçimleri arasında gösterildiğinden IV'ün dışarıda kalması seçeneği eksik bırakır (s. 33).",
+      "B": "Primer hasar travma anında, sekonder hasar sonrasında gelişir ve önlenebilir; nöbetler de hipoksi ve hipotansiyonla birlikte sekonder hasardır. Kontüzyon primer hasar olduğundan yalnız III yanlıştır (s. 33).",
+      "C": "Sekonder hasarın sonradan gelişip önlenebildiğini söyleyen II doğrudur. Kontüzyon ise intrakraniyal kanama, diffüz aksonal hasar ve laserasyonla birlikte primer hasar biçimidir; III bu yüzden yanlıştır (s. 33).",
+      "D": "Kontüzyon, travma anında oluşan hasar biçimlerinden biridir ve primer hasar kutusunda gösterilir. Sekonder hasar biçimi olmadığından III yanlıştır ve tek başına seçilemez (s. 33).",
+      "E": "I, II ve IV hasar mekanizmalarını doğru anlatır ve tedavide sekonder hasarın önlenmesinin neden kritik olduğunu açıklar. Kontüzyonun sekonder hasar sayılması yanlış olduğundan dört ifade birlikte doğru olmaz (s. 33)."
+     },
+     "bilgi": [
+      206,
+      207,
+      208
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "primer hasar travma anında oluşur; sekonder hasar ise sonrasında gelişir ve önlenebilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-53"
+     ],
+     "s": 33,
+     "gorsel": true
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q60",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi travmatik beyin hasarının akut rehabilitasyon döneminde karşılaşılan sorunlardan biri değildir?",
+     "secenekler": {
+      "A": "Posttravmatik epilepsi",
+      "B": "Hidrosefali",
+      "C": "Santral ateş",
+      "D": "Anterior hipopituitarizm",
+      "E": "Otonom disrefleksi"
+     },
+     "dogru": "E",
+     "aciklama": "Travmatik beyin hasarının akut rehabilitasyon döneminde posttravmatik nöbet/epilepsi, hidrosefali, santral ateş ve anterior hipopituitarizm gibi sorunlarla karşılaşılır; otonom disrefleksi omurilik yaralanması komplikasyonudur (s. 30 ve 35).",
+     "sik_aciklamalari": {
+      "A": "Posttravmatik nöbet ve epilepsi, akut rehabilitasyon döneminde karşılaşılan sorunların başında sayılır. Nöbetler sekonder hasar biçimlerinden de biri olduğundan listede yer alması beklenir (s. 33 ve 35).",
+      "B": "Hidrosefali, travmatik beyin hasarından sonra gelişebilen ve posttravmatik hidrosefali olarak adlandırılan sorundur. Akut dönem sorunları listesinde epilepsinin hemen ardından geçer (s. 35).",
+      "C": "Santral ateş, travmatik beyin hasarından sonra görülebilen ve listede hipo/hipernatremi ile birlikte anılan bir sorundur. Akut rehabilitasyon döneminde karşılaşıldığı için listenin dışında tutulamaz (s. 35).",
+      "D": "Anterior hipopituitarizm, travmatik beyin hasarının akut dönem sorunları arasında santral ateşin ardından sayılır. Listede açıkça yer alan bir sorun olduğundan karşılaşılmayan durum olarak seçilemez (s. 35).",
+      "E": "Otonom disrefleksi, T6 ve üzeri omurilik yaralanmalarında nosiseptif uyarılarla tetiklenen, hipertansiyon ve baş ağrısıyla giden acil tablodur. Omurilik yaralanmasının komplikasyonudur; travmatik beyin hasarının akut dönem sorunları içinde bu tablo bulunmadığından doğru yanıt budur (s. 30 ve 35)."
+     },
+     "bilgi": [
+      220,
+      222
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "santral ateş, anterior hipopituitarizm, spastisite, kontraktür"
+     },
+     "dayanak": [
+      "ogrenci:A:ftr-s02-b13"
+     ],
+     "s": 35
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "32ccb61bda53",
+     "soru": "FTR FTR TRAVMATİK BEYİN HASARI Travmatik beyin hasarı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bilişsel değerlendirme için Rancho Los amigos skalası kullanılır",
+      "B": "Erken dönem rehabilitasyon önemlidir",
+      "C": "Rehabilitasyonda amaçlardan birisi de komplikasyonların önüne geçmektir",
+      "D": "Post travmatik amnezi süresinin uzun olması kötü prognozdur",
+      "E": "Hepsi"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Pediatrik rehabilitasyonun kapsamını ve serebral palsinin tanımını, sıklığını, nedenlerini, tiplerini, başvuru nedenlerini, tanısını ve rehabilitasyon amacını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q61",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "En sık görülen çocukluk çağı nörolojik hastalığı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spina bifida",
+      "B": "Miyopatiler",
+      "C": "Brakial pleksus lezyonları",
+      "D": "Serebral palsi",
+      "E": "Polinöropatiler"
+     },
+     "dogru": "D",
+     "aciklama": "En sık görülen çocukluk çağı nörolojik hastalığı serebral palsidir; spina bifida, miyopatiler ve brakial pleksus lezyonları engelliliğe yol açan öteki hastalıklardır (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Spina bifida, vertebral ark ve nöral tüpün kapanma defektidir ve engelliliğe yol açan çocukluk çağı hastalıkları arasında sayılır. En sık görülen hastalık olarak değil, serebral palsiden sonra gelenler arasında anılır (s. 37 ve 41).",
+      "B": "Miyopatiler, kas hastalıklarıdır ve engelliliğe yol açan çocukluk çağı nörolojik hastalıkları listesinde yer alır. Sıklık bakımından serebral palsinin gerisinde kaldıkları için en sık hastalık sayılmazlar (s. 37).",
+      "C": "Brakial pleksus lezyonları, çocuklarda rehabilitasyon gerektiren ve engelliliğe yol açabilen durumlardandır. Listede öteki hastalıklar arasında geçer; ilk sırayı serebral palsi alır (s. 37).",
+      "D": "Serebral palsi, gelişmekte olan fetal veya infant beynindeki progresif olmayan hasara bağlı, hareket ve postür gelişimini etkileyen bir tablodur. En sık görülen çocukluk çağı nörolojik hastalığı olduğu için doğru seçenektir (s. 37 ve 38).",
+      "E": "Polinöropatiler, engelliliğe yol açan çocukluk çağı nörolojik hastalıkları listesinin son maddesidir. Listede yer alsa da en sık görülen hastalık olarak gösterilmez (s. 37)."
+     },
+     "bilgi": [
+      229
+     ],
+     "benzer_cikmis": [
+      "d3k2-2019-2020-q88",
+      "47c343375d15"
+     ],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "En sık görülen çocukluk çağı nörolojik hastalığı"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2019-2020-q88",
+      "cikmis:47c343375d15",
+      "ogrenci:A:ftr-s02-b18"
+     ],
+     "s": 37
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q66",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi spastik tip serebral palsinin alt tiplerinden biridir?",
+     "secenekler": {
+      "A": "Diskinetik",
+      "B": "Ataksik",
+      "C": "Mikst",
+      "D": "Atetoid",
+      "E": "Diplejik"
+     },
+     "dogru": "E",
+     "aciklama": "En sık spastik tip serebral palsi görülür; bu tip hemiplejik, diplejik ve tetraplejik olmak üzere 3 tiptir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Diskinetik tip, serebral palsinin dört ana tipinden biridir ve spastik tiple aynı düzeyde bir sınıftır. Spastik tipin alt tipi olmayıp ondan ayrı bir tip olarak sayılır (s. 39).",
+      "B": "Ataksik tip, serebral palsinin dört ana tipinden biridir ve şemada ekstrapiramidal grupta gösterilir. Ayrı bir ana tip olduğundan spastik tipin alt tipleri arasında bulunmaz (s. 39).",
+      "C": "Mikst tip, serebral palsinin spastik, diskinetik ve ataksik tiplerle birlikte sayılan dördüncü ana tipidir. Spastik tipin alt grubu değil, başlı başına bir tiptir (s. 39).",
+      "D": "Atetoid, şemada distonik ile birlikte atetoid ve diskinetik serebral palsi başlığının altında gösterilen biçimdir. Diskinetik gruba ait olduğundan spastik tipin alt tipi sayılmaz (s. 39).",
+      "E": "Diplejik, en sık görülen tip olan spastik serebral palsinin üç alt tipinden biridir; ötekiler hemiplejik ve tetraplejiktir. Şemada diplejide iki bacağın etkilendiği gösterilir (s. 39)."
+     },
+     "bilgi": [
+      238
+     ],
+     "benzer_cikmis": [
+      "past-q-KURUL_2_C_IKMIS__3-90",
+      "67bbbe4ac423"
+     ],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "En sık spastik tip serebral palsi görülür, bu da 3 tiptir; hemiplejik, diplejik"
+     },
+     "dayanak": [
+      "cikmis:past-q-KURUL_2_C_IKMIS__3-90",
+      "cikmis:67bbbe4ac423",
+      "ogrenci:A:ftr-s02-b18"
+     ],
+     "s": 39
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q62",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Serebral palsi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Statik bir ensefalopatidir.",
+      "B": "Beyindeki hasar progresiftir.",
+      "C": "Hareket ve postür gelişimini etkiler.",
+      "D": "Aktivite limitasyonuna neden olur.",
+      "E": "Gelişmekte olan fetal veya infant beyninde hasar vardır."
+     },
+     "dogru": "B",
+     "aciklama": "Serebral palsi, gelişmekte olan fetal veya infant beyninde progresif olmayan bir hasara bağlı gelişen, hareket ve postür gelişimini etkileyen statik bir ensefalopatidir (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Serebral palsi gerçekten statik bir ensefalopati olarak tanımlanır. Statik sözcüğü, beyindeki hasarın bir kez oluştuğunu ve zamanla ilerlemediğini anlatır (s. 38).",
+      "B": "Serebral palside beyindeki hasar progresif olmayan, yani ilerlemeyen bir hasardır ve tablo bu yüzden statik ensefalopati adını alır. Hasarı progresif sayan bu ifade tanımla çeliştiği için yanlıştır (s. 38).",
+      "C": "Serebral palsi, seçenekte söylendiği gibi hareket ve postür gelişimini etkileyen bir tablodur. Bu etkilenim yaşıtlarına göre motor gelişimde gerilik ve yürüme bozukluğu olarak kendini gösterir (s. 38 ve 40).",
+      "D": "Serebral palsinin aktivite limitasyonuna neden olduğu doğru bir bilgidir. Rehabilitasyonun amacı da fonksiyonel bozuklukları ve engellilikleri en aza indirmektir (s. 38 ve 40).",
+      "E": "Hasar, seçeneğin bildirdiği gibi gelişmekte olan fetal veya infant beyninde meydana gelir. Risk faktörleri prenatal, natal ve postnatal olarak ayrılır ve en sık prenatal nedenler görülür (s. 38)."
+     },
+     "bilgi": [
+      231,
+      232,
+      233
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "progresif olmayan bir hasara bağlı olarak gelişen"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-59",
+      "ozen:s38",
+      "ogrenci:B:ftr-s02-b16"
+     ],
+     "s": 38
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q63",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Serebral palsinin bildirilen insidansı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "3/100",
+      "B": "3/1000",
+      "C": "3/10.000",
+      "D": "103/100.000",
+      "E": "346/100.000"
+     },
+     "dogru": "B",
+     "aciklama": "Serebral palsinin insidansı 3/1000 olarak bildirilmiştir (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Yüzde üç, bildirilen değerin on katı bir sıklık anlamına gelir. Serebral palsi en sık görülen çocukluk çağı nörolojik hastalığı olsa da insidansı binde üç olarak bildirilmiştir (s. 37 ve 38).",
+      "B": "Serebral palsinin insidansı 3/1000 olarak bildirilmiştir. Bu sıklık onu en sık görülen çocukluk çağı nörolojik hastalığı yapar ve tanımıyla birlikte bilinmesi gereken bilgidir (s. 37 ve 38).",
+      "C": "On binde üç, bildirilen değerin onda biri kadar bir sıklıktır. Serebral palsi bundan daha sık görülür; insidans binde üç olarak verilir (s. 38).",
+      "D": "103/100.000, inmenin Türkiye için tahmin edilen insidansıdır. Erişkin hastalığı olan inmeye ait bu değer serebral palsinin sıklığını göstermez (s. 4 ve 38).",
+      "E": "346/100.000, travmatik beyin hasarının dünya genelindeki insidansıdır. Travmatik beyin hasarına ait olan bu sayı serebral palsi için bildirilen binde üçlük değerle karıştırılmamalıdır (s. 31 ve 38)."
+     },
+     "bilgi": [
+      234
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "İnsidans 3/1000 olarak bildirilmiştir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-59",
+      "ozen:s38"
+     ],
+     "s": 38
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q65",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Otuzuncu gebelik haftasında düşük doğum ağırlığıyla doğan 14 aylık çocuk, yaşıtlarına göre motor gelişiminin geri olması nedeniyle kliniğe getiriliyor ve serebral palsi düşünülüyor. Bu hastalığın en sık nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prematürite ve düşük doğum ağırlığı",
+      "B": "Annede folik asit eksikliği",
+      "C": "Annenin valproat kullanması",
+      "D": "Gestasyonel diyabet öyküsü",
+      "E": "Ailede spina bifida varlığı"
+     },
+     "dogru": "A",
+     "aciklama": "Serebral palsinin en sık nedeni prematürite ve düşük doğum ağırlığıdır (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Prematürite ve düşük doğum ağırlığı serebral palsinin en sık nedenidir. Bu çocuğun erken ve düşük ağırlıkla doğmuş olması tabloyu açıklayan öyküdür (s. 38).",
+      "B": "Annede folik asit eksikliği gibi beslenme bozuklukları, nöral tüpün kapanma defekti olan spina bifida için risk faktörüdür. Serebral palsinin en sık nedeni olarak değil, spina bifida başlığında anılır (s. 38 ve 41).",
+      "C": "Valproat, bir epilepsi ilacıdır ve gebelikte kullanımı spina bifida için risk faktörleri arasında sayılır. Serebral palsinin nedenleri arasında gösterilmediğinden bu hastadaki tabloyu açıklamaz (s. 38 ve 41).",
+      "D": "Gestasyonel diyabet öyküsü, valproat kullanımıyla birlikte spina bifidanın risk faktörleri arasında geçer. Serebral palside en sık neden olarak prematürite ve düşük doğum ağırlığı bildirilir (s. 38 ve 41).",
+      "E": "Ailede spina bifida varlığı, spina bifidanın ilk sayılan risk faktörüdür ve sonraki çocuklarda riski artırır. Kapanma defektiyle ilgili olduğundan serebral palsinin nedeni olarak düşünülmez (s. 38 ve 41)."
+     },
+     "bilgi": [
+      235
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q157"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "En sık nedeni prematürite ve düşük doğum ağırlığıdır"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q157",
+      "ozen:s38",
+      "ogrenci:B:ftr-s02-b16"
+     ],
+     "s": 38
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q67",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Serebral palsi tipleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dört tipi vardır.",
+      "B": "Spastik tipin üç alt tipi bulunur.",
+      "C": "Mikst tip, tiplerden biridir.",
+      "D": "En sık görülen tip diskinetik tiptir.",
+      "E": "Hemiplejik, spastik tipin alt tiplerindendir."
+     },
+     "dogru": "D",
+     "aciklama": "Serebral palsinin 4 tipi vardır (spastik, diskinetik, ataksik, mikst); en sık spastik tip görülür ve bu tip hemiplejik, diplejik, tetraplejik olarak 3 tiptir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Serebral palsinin gerçekten dört tipi vardır ve bunlar spastik, diskinetik, ataksik ve mikst tiplerdir. Dört tip içinde en sık görüleni spastik tiptir (s. 39).",
+      "B": "Spastik tip, seçenekte söylendiği gibi hemiplejik, diplejik ve tetraplejik olmak üzere üç alt tipe ayrılır. Şemada bu alt tipler etkilenen vücut bölgesine göre gösterilir (s. 39).",
+      "C": "Mikst tip, spastik, diskinetik ve ataksik tiplerle birlikte sayılan dördüncü tiptir; seçenek doğru bir bilgi verir. Tipler listesinin son maddesi olarak yer alır (s. 39).",
+      "D": "Diskinetik tip, serebral palsinin dört tipinden biridir ve şemada atetoid ve distonik biçimlerle birlikte gösterilir. En sık görülen tip spastik tip olduğundan bu ifade yanlıştır (s. 39).",
+      "E": "Hemiplejik, seçeneğin bildirdiği gibi spastik serebral palsinin alt tiplerinden biridir ve şemada vücudun bir yarısının etkilendiği gösterilir. Öteki iki alt tip diplejik ve tetraplejiktir (s. 39)."
+     },
+     "bilgi": [
+      237,
+      238
+     ],
+     "benzer_cikmis": [
+      "past-q-KURUL_2_C_IKMIS__3-90",
+      "67bbbe4ac423"
+     ],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "4 tipi vardır; spastik, diskinetik, ataksik ve mikst"
+     },
+     "dayanak": [
+      "cikmis:past-q-KURUL_2_C_IKMIS__3-90",
+      "cikmis:67bbbe4ac423",
+      "ogrenci:A:ftr-s02-b18"
+     ],
+     "s": 39
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q68",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi serebral palside en sık başvuru nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Yaşıtlarına göre motor gelişimde gerilik",
+      "B": "Nöbet geçirme",
+      "C": "Yürüme bozuklukları",
+      "D": "Konuşmada gecikme",
+      "E": "Lumbosakral bölgede kıllanma artışı"
+     },
+     "dogru": "E",
+     "aciklama": "Serebral palside en sık başvuru nedeni yaşıtlarına göre motor gelişimde gerilik, nöbet geçirme, yürüme bozuklukları, konuşmada gecikme ve davranış bozukluklarıdır (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Yaşıtlarına göre motor gelişimde gerilik, serebral palside en sık başvuru nedenlerinin ilkidir. Hareket ve postür gelişimi etkilendiğinden çocuk motor basamaklara yaşıtlarından geç ulaşır (s. 38 ve 40).",
+      "B": "Nöbet geçirme, serebral palside en sık başvuru nedenleri içinde motor gelişim geriliğinin hemen ardından sayılır. Aileyi hekime getiren yakınmalardan biri olduğundan listede bulunan bir nedendir (s. 40).",
+      "C": "Yürüme bozuklukları, hareket ve postür gelişimini etkileyen serebral palsinin beklenen sonucudur. En sık başvuru nedenleri listesinde yer aldığından sorulan seçenek bu olamaz (s. 38 ve 40).",
+      "D": "Konuşmada gecikme, davranış bozukluklarıyla birlikte serebral palsinin en sık başvuru nedenleri içinde bildirilir. Motor yakınmaların yanında aileyi hekime getiren bir gelişim sorunudur (s. 40).",
+      "E": "Lumbosakral bölgede kıllanma artışı, ben ya da gamzelerle birlikte spina bifida okkultaya eşlik edebilen cilt bulgusudur. Kapanma defektinin işareti olduğundan serebral palsinin başvuru nedenleri içinde bildirilmez (s. 40 ve 43)."
+     },
+     "bilgi": [
+      243
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "En sık başvuru nedeni yaşıtlarına göre motor gelişimde gerilik"
+     },
+     "dayanak": [
+      "ozen:s40"
+     ],
+     "s": 40
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q69",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Serebral palside tanı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tanı için beyin MRG zorunludur; klinik yeterli sayılmaz.",
+      "B": "Tanı ASIA muayenesiyle standardize edilir.",
+      "C": "Tanı klinikle konur; şüphede beyin MRG yol göstericidir.",
+      "D": "Tanı Glasgow koma skalasıyla konur.",
+      "E": "Tanı ilk 72 saat içindeki muayeneyle kesinleşir."
+     },
+     "dogru": "C",
+     "aciklama": "Serebral palside tanı klinikle konulur ve şüphelenildiğinde beyin MRG tanı için yol göstericidir (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Beyin MRG, serebral palsiden şüphelenildiğinde tanı için yol gösterici olan görüntüleme yöntemidir. Zorunlu bir koşul olarak değil yardımcı olarak anılır; tanı klinikle konur (s. 40).",
+      "B": "ASIA muayenesi, omurilik yaralanmasında lezyon yerini ve şiddetini standardize eden uluslararası değerlendirmedir. Omurilik hasarına özgü olduğundan serebral palsinin tanısında kullanılmaz (s. 20 ve 40).",
+      "C": "Serebral palside tanı klinikle konur; yaşıtlarına göre motor gelişimde gerilik gibi bulgular yol gösterir. Şüphelenildiğinde beyin MRG tanı için yol gösterici olduğundan doğru ifade budur (s. 40).",
+      "D": "Glasgow koma skalası, travmatik beyin hasarında hasarın yaygınlığını ve şiddetini belirleyen ölçektir. Travmaya bağlı beyin hasarını derecelendiren bu ölçek serebral palsinin tanı aracı sayılmaz (s. 34 ve 40).",
+      "E": "İlk 72 saat, omurilik yaralanmasında ASIA bozukluk skalası muayenesinin yapıldığı süredir. Serebral palsi tanısı için böyle bir süre sınırı verilmez; tanı klinikle konur (s. 20 ve 40)."
+     },
+     "bilgi": [
+      244
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Tanı klinikle konulur ve şüphelenildiğinde beyin MRG tanı için yol"
+     },
+     "dayanak": [
+      "ozen:s40"
+     ],
+     "s": 40
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q64",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Serebral palsi ile ilgili aşağıdaki ifadeler veriliyor:\nI. En sık nedeni prematürite ve düşük doğum ağırlığıdır.\nII. Risk faktörleri içinde en sık prenatal nedenler görülür.\nIII. Beyindeki hasar zamanla ilerler.\nIV. Statik bir ensefalopatidir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Serebral palsinin en sık nedeni prematürite ve düşük doğum ağırlığıdır; en sık prenatal nedenler görülür ve tablo progresif olmayan hasara bağlı statik bir ensefalopatidir (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Prematürite ve düşük doğum ağırlığının en sık neden olduğu, prenatal nedenlerin de en sık görüldüğü doğrudur. Serebral palsinin statik bir ensefalopati olduğunu söyleyen IV de doğru olduğundan seçenek eksik kalır (s. 38).",
+      "B": "Risk faktörleri prenatal, natal ve postnatal olarak ayrılır ve en sık prenatal nedenler görüldüğü için II doğrudur. Hasar progresif olmadığından ilerlediğini söyleyen III yanlıştır (s. 38).",
+      "C": "Serebral palsinin en sık nedeni prematürite ve düşük doğum ağırlığıdır, risk faktörlerinde prenatal nedenler öndedir ve tablo statik bir ensefalopatidir. Hasar progresif olmadığı için yalnız III dışarıda kalır (s. 38).",
+      "D": "Statik ensefalopati, beyindeki hasarın ilerlemediğini anlatan tanımdır ve IV doğrudur. Ancak nedenlere ilişkin I ve II de doğru olduğundan yalnız IV'ün seçilmesi yetersizdir (s. 38).",
+      "E": "I, II ve IV serebral palsinin nedenini, risk dönemini ve doğasını doğru verir. III hasarı ilerleyici saydığı ve bu, progresif olmayan hasar tanımıyla çeliştiği için dört ifade birlikte doğru olmaz (s. 38)."
+     },
+     "bilgi": [
+      233,
+      235,
+      236
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q157"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "En sık nedeni prematürite ve düşük doğum ağırlığıdır"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q157",
+      "hoca:hv-k2-28-59",
+      "ogrenci:B:ftr-s02-b16"
+     ],
+     "s": 38
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q70",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Serebral palsi tiplerinden hangisi piramidal grupta yer alır?",
+     "secenekler": {
+      "A": "Atetoid",
+      "B": "Spastik",
+      "C": "Distonik",
+      "D": "Ataksik",
+      "E": "Diskinetik"
+     },
+     "dogru": "B",
+     "aciklama": "Şemada spastik serebral palsi (hemipleji, dipleji, kuadripleji) piramidal; atetoid-diskinetik ve ataksik serebral palsi ekstrapiramidal grupta gösterilir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Atetoid biçim, şemada atetoid ve diskinetik serebral palsi başlığının altında tüm vücudun etkilendiği siluetle gösterilir. Bu başlık ekstrapiramidal bandın üzerinde yer aldığından piramidal gruba girmez (s. 39).",
+      "B": "Spastik tip, en sık görülen serebral palsi tipidir ve hemipleji, dipleji ile kuadripleji alt tipleri şemada piramidal bandın üzerinde gösterilir. Piramidal grupta yer alan tip bu olduğu için doğru seçenektir (s. 39).",
+      "C": "Distonik biçim, şemada atetoid ile yan yana, atetoid ve diskinetik serebral palsi başlığı altında çizilmiştir. Ekstrapiramidal grupta gösterildiği için piramidal gruba ait sayılmaz (s. 39).",
+      "D": "Ataksik tip, serebral palsinin dört ana tipinden biridir ve şemada ayrı bir başlıkla verilir. Atetoid ve diskinetik tiple birlikte ekstrapiramidal bandın üzerinde durduğundan piramidal grupta yer almaz (s. 39).",
+      "E": "Diskinetik tip, atetoid ve distonik biçimleri kapsayan ana tiptir. Şemada ekstrapiramidal grupta gösterilir ve piramidal grubu oluşturan spastik tipten ayrılır (s. 39)."
+     },
+     "bilgi": [
+      241
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "gorsel": "Şemanın alt bantları: 'SPASTİK SP' (HEMİPLEJİ, DİPLEJİ, KUADRİPLEJİ) sütununun altında 'PİRAMİDAL'; 'ATETOİD VE DİSKİNETİK SP' ile 'ATAKSİK SP' sütunlarının altında 'EKSTRAPİRAMİDAL' yazıyor"
+     },
+     "dayanak": [
+      "ogrenci:A:ftr-s02-b18"
+     ],
+     "s": 39,
+     "gorsel": true
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2019-2020-q88",
+     "soru": "Spina bifida ile ilgili aşağıdaki ifadeler veriliyor:\nI. Nöral tüpte kapanma defektidir.\nII. En sık görülen pediatrik nörolojik hastalıktır.\nIII. İlk çocukta spina bifida varsa diğer çocuklar için risk artmaktadır.\nIV. En ağır tipi meningoseldir.\nBu ifadelerden hangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "47c343375d15",
+     "soru": "FTR\nFTR\nPEDİATRİK\nREHABİLİTASYON\nSpina bifida ile ilgili\nşağıdakilerden\nhangisi/hangileri\ndir doğrudur? I. Nöral\ntüpte kapanma\ndefektidir. II. En sık\ngörülen pediatrik\nnörolojik hastalıktır\nIII. İlk çocukta spina\nbifida varsa risk\ngğer çocuklar için\nartmaktadır. IV. Gebelik dönemi\ntaramalarında",
+     "secenekler": {
+      "A": "I,II,III,IV",
+      "B": "I,III",
+      "C": "II, IV",
+      "D": "Yalnız IV",
+      "E": "I,II,III,IV"
+     },
+     "cevap": null
+    },
+    {
+     "id": "past-q-KURUL_2_C_IKMIS__3-90",
+     "soru": "En sık görülen serebral palsi tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spastik tip",
+      "B": "Distonik tip",
+      "C": "Ataksik tip",
+      "D": "Atetoid tip",
+      "E": "Mikst tip"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "67bbbe4ac423",
+     "soru": "FTR\nFTR\nPEDİATRİK\nREHABİLİTASYON\nEn sık görülen\nserebral palsi tipi\nhangisidir?",
+     "secenekler": {
+      "A": "Diskinetik",
+      "B": "Spastik",
+      "C": "Ataksik",
+      "D": "Distonik",
+      "E": "Atetoid"
+     },
+     "cevap": null
+    },
+    {
+     "id": "d3k2-2020-2021-q157",
+     "soru": "Serebral palsinin etiyolojisinde en çok suçlanan neden nedir?",
+     "secenekler": {
+      "A": "Fenilketonüri",
+      "B": "Annede serebral palsi olması",
+      "C": "Yüksek ateş",
+      "D": "Akraba evliliği",
+      "E": "Prematürite"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Spina bifidayı tanımlar; risk faktörlerini, tekrarlama riskini, tiplerini (okkulta, meningosel, meningomiyelosel), meningomiyeloselin bulgularını, eşlik eden durumları ve rehabilitasyon ilkelerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q74",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "En ağır klinikle seyreden spina bifida tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spina bifida okkulta",
+      "B": "Meningosel",
+      "C": "Meningomiyelosel",
+      "D": "Tip II Chiari malformasyonu",
+      "E": "Hidrosefali"
+     },
+     "dogru": "C",
+     "aciklama": "Meningomiyelosel, en ağır klinikle seyreden spina bifida tipidir (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Spina bifida okkulta, motor muayenenin normal olduğu ve genelde klinik anlam taşımayan tiptir. En hafif tablo olduğundan en ağır klinikle seyreden tip sayılamaz (s. 43).",
+      "B": "Meningosel, şekilde sırtta dışarı taşan bir keseyle gösterilen spina bifida tipidir ve omurilik kanal içinde kalır. En ağır klinik tablo, nöral dokunun da keseye girdiği tipte görülür (s. 42 ve 44).",
+      "C": "Meningomiyelosel, en ağır klinikle seyreden spina bifida tipidir. Lezyon seviyesi altında flask paralizi, duyu kaybı, barsak ve mesane inkontinansı ile seyrettiği için doğru seçenektir (s. 44).",
+      "D": "Tip II Chiari malformasyonu, meningomiyelosele eşlik eden bir malformasyondur. Spina bifidanın bir tipi değil, en ağır tiple birlikte görülen ek bir durumdur (s. 44).",
+      "E": "Hidrosefali, Tip II Chiari malformasyonuyla birlikte meningomiyelosele eşlik eden durumdur. Bir spina bifida tipi olmadığından en ağır tip olarak gösterilemez (s. 44)."
+     },
+     "bilgi": [
+      259
+     ],
+     "benzer_cikmis": [
+      "d3k2-2019-2020-q88"
+     ],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "En ağır klinikle seyreden spina bifida tipi"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2019-2020-q88",
+      "ogrenci:A:ftr-s02-b19",
+      "ozen:s44"
+     ],
+     "s": 44
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q75",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Meningomiyelosele eşlik eden durumlar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Santral ateş ve anterior hipopituitarizm",
+      "B": "Hidrosefali ve Tip II Chiari malformasyonu",
+      "C": "Hemiplejik omuz ağrısı ve omuz subluksasyonu",
+      "D": "Otonom disrefleksi ve ortostatik hipotansiyon",
+      "E": "Posttravmatik epilepsi ve subglottik stenoz"
+     },
+     "dogru": "B",
+     "aciklama": "Meningomiyeloselde hidrosefali ve Tip II Chiari malformasyonuyla birliktelik vardır (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Santral ateş ve anterior hipopituitarizm, travmatik beyin hasarının akut rehabilitasyon döneminde karşılaşılan sorunlardandır. Beyin hasarına bağlı gelişirler ve meningomiyelosele eşlik eden durumlar olarak sayılmazlar (s. 35 ve 44).",
+      "B": "Hidrosefali ve Tip II Chiari malformasyonu, en ağır spina bifida tipi olan meningomiyelosele eşlik eder. Bu birliktelik meningomiyeloselli çocukta akılda tutulması gereken iki durumu oluşturduğu için doğrudur (s. 44).",
+      "C": "Hemiplejik omuz ağrısı ve omuz subluksasyonu, inmenin kronik döneminde görülen omuz ve ekstremite sorunlarıdır. Erişkin inme hastasına ait olduklarından meningomiyeloselin eşlik eden durumları arasında gösterilmezler (s. 14 ve 44).",
+      "D": "Otonom disrefleksi ve ortostatik hipotansiyon, omurilik yaralanmasının kardiyovasküler sorunlarıdır. Travmatik omurilik hasarında görülen bu tablolar meningomiyelosele eşlik eden malformasyonlar arasında anılmaz (s. 30 ve 44).",
+      "E": "Posttravmatik epilepsi ve subglottik stenoz, travmatik beyin hasarının akut dönem sorunları listesinde yer alır. Travmaya bağlı sorunlar olduklarından doğuştan bir kapanma defektine eşlik eden durumlar sayılmazlar (s. 35 ve 44)."
+     },
+     "bilgi": [
+      263
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Hidrosefali ve Tip II Chiari malformasyonuyla birliktelik"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-66",
+      "ozen:s44"
+     ],
+     "s": 44
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q71",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Spina bifida ile ilgili aşağıdaki ifadeler veriliyor:\nI. Vertebral ark ve nöral tüpte kapanma defektidir.\nII. Annede folik asit eksikliği risk faktörüdür.\nIII. En ağır klinikle seyreden tipi meningomiyeloseldir.\nIV. İlk çocuk etkilenmişse sonraki çocuklarda risk azalır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Spina bifida vertebral ark ve nöral tüpte kapanma defektidir; annede folik asit eksikliği risk faktörüdür, ilk çocuk etkilenmişse risk artar ve en ağır tip meningomiyeloseldir (s. 41 ve 44).",
+     "sik_aciklamalari": {
+      "A": "Spina bifida vertebral ark ve nöral tüpün kapanma defektidir, annede folik asit eksikliği risk faktörüdür ve en ağır tip meningomiyeloseldir. İlk çocuk etkilenmişse risk azalmayıp arttığı için IV yanlıştır (s. 41 ve 44).",
+      "B": "Tanımı veren I ile en ağır tipi veren III doğrudur. Annede folik asit eksikliği gibi beslenme bozuklukları da risk faktörleri arasında sayıldığından II'nin dışarıda kalması seçeneği eksik bırakır (s. 41 ve 44).",
+      "C": "Annede folik asit eksikliği risk faktörü olduğu için II doğrudur. İlk çocuk spina bifidalı doğmuşsa risk artar ve ikinci çocukta 1/25, üçüncü çocukta 1/8 oranına çıkar; IV bu yüzden yanlıştır (s. 41).",
+      "D": "Tekrarlama riski, ilk çocuk spina bifidalı doğduğunda sonraki çocuklar için yükselir. Riskin azaldığını söyleyen IV bununla çeliştiği için tek başına seçilemez (s. 41).",
+      "E": "İlk üç ifade tanımı, bir risk faktörünü ve en ağır tipi doğru verir. Etkilenmiş bir çocuktan sonra risk arttığından IV yanlıştır ve dört ifade birlikte doğru olmaz (s. 41 ve 44)."
+     },
+     "bilgi": [
+      246,
+      249,
+      250,
+      259
+     ],
+     "benzer_cikmis": [
+      "d3k2-2019-2020-q88",
+      "47c343375d15"
+     ],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Spina bifida, genel olarak vertebral ark ve nöral tüpte kapanma defektidir"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2019-2020-q88",
+      "cikmis:47c343375d15",
+      "ogrenci:A:ftr-s02-b19"
+     ],
+     "s": 41
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q73",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi spina bifida için risk faktörlerinden biri değildir?",
+     "secenekler": {
+      "A": "Ailede spina bifida varlığı",
+      "B": "Valproat kullanımı",
+      "C": "Gestasyonel diyabet öyküsü",
+      "D": "Annede folik asit eksikliği",
+      "E": "Prematürite ve düşük doğum ağırlığı"
+     },
+     "dogru": "E",
+     "aciklama": "Spina bifida risk faktörleri ailede spina bifida varlığı, epileptik ilaç kullanımı (valproat), gestasyonel diyabet öyküsü, genetik faktörler ve annede folik asit eksikliğidir (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Ailede spina bifida varlığı, risk faktörleri listesinin ilk maddesidir. İlk çocuk etkilenmişse sonraki çocuklarda riskin artması da bu aile yükünü gösterir (s. 41).",
+      "B": "Valproat, bir epilepsi ilacıdır ve gebelikte kullanımı spina bifidanın risk faktörleri arasında açıkça sayılır. İlaç öyküsü bu nedenle sorgulanması gereken bir risk etkenidir (s. 41).",
+      "C": "Gestasyonel diyabet öyküsü, valproat kullanımıyla aynı satırda sayılan anneye ait bir risk faktörüdür. Listede yer alan etkenlerden biri olduğundan risk faktörü olmayan seçenek bu olamaz (s. 41).",
+      "D": "Annede folik asit eksikliği gibi beslenme bozuklukları spina bifidanın risk faktörlerindendir. Anneye ait bu beslenme sorunu listede genetik faktörlerin ardından yer alır (s. 41).",
+      "E": "Prematürite ve düşük doğum ağırlığı, serebral palsinin en sık nedenidir. Spina bifidanın risk faktörleri listesinde bulunmadığı için doğru yanıt budur (s. 38 ve 41)."
+     },
+     "bilgi": [
+      247,
+      248,
+      249
+     ],
+     "benzer_cikmis": [
+      "d3k2-2019-2020-q88"
+     ],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Epileptik ilaç kullanımı-valproat, gestasyonel diyabet öyküsü"
+     },
+     "dayanak": [
+      "ogrenci:A:ftr-s02-b19",
+      "cikmis:d3k2-2019-2020-q88"
+     ],
+     "s": 41
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q77",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Sekiz yaşındaki çocuk, bel bölgesindeki kıllanma artışı ve gamze nedeniyle kliniğe getiriliyor; motor muayenesi normal bulunuyor. Bu çocukta en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spina bifida okkulta",
+      "B": "Meningosel",
+      "C": "Meningomiyelosel",
+      "D": "Serebral palsi",
+      "E": "Kauda ekina sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Spina bifida okkultada motor muayene normaldir; lumbosakral bölgede kıllanma artışı, ben ya da gamzeler eşlik edebilir (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Spina bifida okkulta, genelde klinik anlam taşımayan ve motor muayenenin normal olduğu tiptir. Lumbosakral bölgede kıllanma artışı, ben ya da gamzeler eşlik edebildiği için bu çocuktaki bulgular bu tanıyı düşündürür (s. 43).",
+      "B": "Meningosel, şekilde sırtta dışarı taşan bir keseyle gösterilen spina bifida tipidir. Bu çocukta kese tarif edilmediği, yalnız cilt bulguları olduğu için tanıyla uyuşmaz (s. 42 ve 43).",
+      "C": "Meningomiyelosel en ağır klinikle seyreden tiptir; lezyon seviyesi altında flask paralizi ve inkontinans yapar. Motor muayenesi normal olan bir çocukta bu tanı beklenmez (s. 44).",
+      "D": "Serebral palsi, fetal ya da infant beynindeki progresif olmayan hasara bağlı hareket ve postür bozukluğudur ve motor gelişimde gerilikle kendini gösterir. Normal motor muayene ve bel bölgesindeki cilt bulguları bu tabloya uymaz (s. 38 ve 40).",
+      "E": "Kauda ekina sendromu, L2 sonrasındaki liflerin yaralanmasıyla asimetrik kas gücü kaybı, arefleksi ve eyer tarzı hipoestezi yapar. Motor muayenenin normal olması bu sendromu dışlar (s. 24)."
+     },
+     "bilgi": [
+      255,
+      256
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Lumbosakral bölgede kıllanma artışı, ben ya da gamzeler"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 43
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q79",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Meningomiyeloselde postnatal erken cerrahi için kritik süre aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İlk 24-48 saat",
+      "B": "İlk 72 saat",
+      "C": "İlk 1-2 hafta",
+      "D": "İlk 1-2 ay",
+      "E": "İlk 3 ay"
+     },
+     "dogru": "A",
+     "aciklama": "Meningomiyeloselde postnatal erken cerrahi kritiktir (ilk 24-48 saat içinde) (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Meningomiyeloselde postnatal erken cerrahi kritiktir ve ilk 24-48 saat içinde yapılır. En ağır spina bifida tipinde bu süre tedavinin temel adımı olduğu için doğru seçenektir (s. 44).",
+      "B": "İlk 72 saat, omurilik yaralanmasında ASIA bozukluk skalası muayenesiyle değerlendirmenin standardize edildiği süredir. Omurilik yaralanmasına ait olan bu süre meningomiyelosel cerrahisi için verilmez (s. 20 ve 44).",
+      "C": "Bir-iki hafta, inmenin tedavi sürecinde hastanın nöroloji ya da nöroşirürjide akut bakım gördüğü süredir. İnmeye ait bu süre meningomiyeloseldeki erken cerrahi penceresinden çok daha uzundur (s. 11 ve 44).",
+      "D": "Bir-iki ay, inmede subakut bakımın rehabilitasyon kliniğinde sürdüğü dönemdir. Meningomiyeloselde cerrahi doğumdan sonraki ilk günlerde yapıldığı için bu süre geçerli olmaz (s. 11 ve 44).",
+      "E": "İlk 3 ay, inmede iyileşmenin en hızlı olduğu dönemdir. İnmenin seyrini anlatan bu süre meningomiyeloselde kritik olan erken cerrahi zamanını karşılamaz (s. 10 ve 44)."
+     },
+     "bilgi": [
+      264
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Postnatal erken cerrahi kritik (ilk 24-48 saat içinde)"
+     },
+     "dayanak": [
+      "ozen:s44"
+     ],
+     "s": 44
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q80",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi spina bifida rehabilitasyonunda sayılan başlıklardan biridir?",
+     "secenekler": {
+      "A": "Yutmanın değerlendirilmesi",
+      "B": "Psikolojik destek",
+      "C": "Depresyonun tanısı ve tedavisi",
+      "D": "Nörojenik mesane ve bağırsak yönetimi",
+      "E": "İş-uğraşı terapisi"
+     },
+     "dogru": "D",
+     "aciklama": "Spina bifida rehabilitasyonunda eklem hareket açıklığının korunması, kontraktürlerin önlenmesi, uygun ortezleme, ambulasyon eğitimi ile nörojenik mesane ve bağırsak yönetimi yer alır (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Yutmanın değerlendirilmesi, inmenin akut dönem rehabilitasyonunda disfaji ve aspirasyon riskine karşı yapılan bir uygulamadır. Spina bifida için sayılan altı başlığın hiçbiri yutmayla ilgili olmadığından seçilemez (s. 12 ve 45).",
+      "B": "Psikolojik destek, inmenin akut dönem rehabilitasyonunda depresyonun tanı ve tedavisiyle birlikte sayılan maddedir. Spina bifida rehabilitasyonunun başlıkları ise eklem, kas, ortez, ambulasyon ve mesane-bağırsak yönetimi üzerinedir (s. 12 ve 45).",
+      "C": "Depresyonun tanısı ve tedavisi, inmenin akut dönem programının son maddesidir; depresyon inmenin psikososyal komplikasyonlarındandır. İnmeye ait bu madde spina bifida için sayılan altı başlığın içinde bulunmaz (s. 12, 14 ve 45).",
+      "D": "Nörojenik mesane ve bağırsak yönetimi, spina bifida rehabilitasyonunun başlıklarından biridir. Meningomiyeloselde barsak ve mesane inkontinansı görüldüğü için bu yönetim programın vazgeçilmez parçasıdır (s. 44 ve 45).",
+      "E": "İş-uğraşı terapisi, inmenin subakut-kronik dönem programında üst ekstremite fonksiyonlarının geliştirilmesiyle birlikte sayılır. Spina bifida için verilen başlıklarda bu terapi adıyla anılmaz; orada ortezleme ve ambulasyon eğitimi öne çıkar (s. 13 ve 45)."
+     },
+     "bilgi": [
+      269
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Nörojenik mesane ve bağırsak yönetimi"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 45
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q72",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "İlk çocuğu spina bifidalı doğan bir ailede ikinci çocukta spina bifida görülme oranı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1/2",
+      "B": "1/4",
+      "C": "1/8",
+      "D": "1/25",
+      "E": "3/1000"
+     },
+     "dogru": "D",
+     "aciklama": "İlk çocuk spina bifidalı doğmuş ise risk artar ve ikinci çocukta 1/25, üçüncü çocukta ise 1/8 oranında görülebilir (s. 41).",
+     "sik_aciklamalari": {
+      "A": "İki çocuktan biri anlamına gelen bu oran, bildirilen tekrarlama risklerinin çok üzerindedir. İlk çocuk etkilenmişse risk artar, ancak ikinci çocuk için verilen oran 1/25'tir (s. 41).",
+      "B": "Dörtte bir oranı tekrarlama riski için verilen değerlerden yüksektir. Etkilenmiş çocuk sayısı arttıkça risk yükselir; ikinci çocukta 1/25, üçüncü çocukta 1/8 olarak bildirilir (s. 41).",
+      "C": "1/8, ilk çocuk spina bifidalı doğduktan sonra üçüncü çocuk için bildirilen görülme oranıdır. İkinci çocuk için verilen değer bundan düşüktür ve 1/25'tir (s. 41).",
+      "D": "İlk çocuk spina bifidalı doğmuşsa risk artar ve ikinci çocukta 1/25 oranında görülebilir. Üçüncü çocukta bu oran 1/8'e yükseldiği için iki değerin karıştırılmaması gerekir (s. 41).",
+      "E": "3/1000, serebral palsi için bildirilen insidanstır. Başka bir hastalığın toplumdaki sıklığını gösterir ve spina bifidanın aile içi tekrarlama oranı olarak kullanılmaz (s. 38 ve 41)."
+     },
+     "bilgi": [
+      250
+     ],
+     "benzer_cikmis": [
+      "d3k2-2019-2020-q88",
+      "47c343375d15"
+     ],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "ikinci çocukta 1/25, üçüncü çocukta ise 1/8 oranında görülebilir"
+     },
+     "dayanak": [
+      "ogrenci:A:ftr-s02-b19"
+     ],
+     "s": 41
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q76",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Meningomiyelosel ile ilgili aşağıdaki ifadeler veriliyor:\nI. Lezyon seviyesi altında flask paralizi görülür.\nII. Tendon refleksleri artmıştır.\nIII. Barsak ve mesane inkontinansı görülür.\nIV. Hidrosefali ve Tip II Chiari malformasyonu eşlik eder.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Meningomiyeloselde lezyon seviyesi altında flask paralizi, tendon reflekslerinin azalması ya da kaybı, barsak ve mesane inkontinansı görülür; hidrosefali ve Tip II Chiari malformasyonu eşlik eder (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Lezyon seviyesinin altında flask paralizi görüldüğü için I doğrudur. Tendon refleksleri ise bu tabloda azalır ya da kaybolur; artış bildiren II'yi içeren birleşim yanlıştır (s. 44).",
+      "B": "Nörojenik mesane ve barsağa bağlı inkontinans meningomiyeloselin bulgusudur ve III doğrudur. Flask paralizili bu tabloda tendon refleksleri azaldığından II yanlıştır (s. 44).",
+      "C": "Flask paralizi ile hidrosefali ve Tip II Chiari birlikteliği meningomiyeloselde beklenir. Barsak ve mesane inkontinansı da tablonun parçası olduğundan III'ün dışarıda kalması seçeneği eksik bırakır (s. 44).",
+      "D": "Meningomiyeloselde lezyon seviyesi altında flask paralizi, barsak ve mesane inkontinansı görülür; hidrosefali ve Tip II Chiari malformasyonu eşlik eder. Tendon refleksleri artmayıp azaldığı için yalnız II dışarıda kalır (s. 44).",
+      "E": "I, III ve IV meningomiyeloselin bulgularını ve eşlik eden durumları doğru verir. Tendon reflekslerinin azalması ya da kaybı beklendiğinden II yanlıştır ve dört ifade birlikte seçilemez (s. 44)."
+     },
+     "bilgi": [
+      260,
+      261,
+      263
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Tendon reflekslerinin azalması ya da kaybı"
+     },
+     "dayanak": [
+      "hoca:hv-k2-28-66",
+      "ozen:s44"
+     ],
+     "s": 44
+    },
+    {
+     "id": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo-q78",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Vertebral arktaki açıklıktan kese biçiminde bir çıkıntının oluştuğu, omuriliğin ise kanal içinde kaldığı spina bifida tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spina bifida okkulta",
+      "B": "Meningomiyelosel",
+      "C": "Tip II Chiari malformasyonu",
+      "D": "Hidrosefali",
+      "E": "Meningosel"
+     },
+     "dogru": "E",
+     "aciklama": "Şekilde meningoselde sırtta dışarı taşan kese vardır ve omurilik kanal içinde kalır; meningomiyeloselde omurilik de keseye girer (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Spina bifida okkultada şekilde omurların arka kısmında açıklık görülür, ancak dışarı taşan bir kese oluşmaz ve cilt düzdür. Kese içermediği için sorudaki tanıma uymaz (s. 42 ve 43).",
+      "B": "Meningomiyeloselde şekildeki kesenin içine omurilik ve sinir lifleri de girmiştir ve bu en ağır klinikle seyreden tiptir. Omurilik kanal içinde kalmadığından sorudaki tiple karışmamalıdır (s. 42 ve 44).",
+      "C": "Tip II Chiari malformasyonu, meningomiyelosele eşlik eden bir malformasyondur. Spina bifidanın şekilde gösterilen üç tipinden biri olmadığından kese tanımını karşılamaz (s. 42 ve 44).",
+      "D": "Hidrosefali, meningomiyelosele Tip II Chiari malformasyonuyla birlikte eşlik eden durumdur. Bir spina bifida tipi olarak sınıflanmaz ve şekildeki kesitlerde yer almaz (s. 42 ve 44).",
+      "E": "Meningosel, şekilde sırtta dışarı taşan keseyle gösterilir ve omurilik kanalın içinde kalır. Kesede omuriliğin bulunmaması onu meningomiyeloselden ayırdığı için doğru seçenektir (s. 42)."
+     },
+     "bilgi": [
+      253
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "gorsel": "Dört kesitli çizim: 'Normal spine', 'Spina bifida occulta' (kese yok), 'Meningocele' (sırtta dışarı taşan kese, sarı omurilik kanal içinde), 'Myelomeningocele' (sarı omurilik ve sinir lifleri kesenin içinde)"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 42,
+     "gorsel": true
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2019-2020-q88",
+     "soru": "Spina bifida ile ilgili aşağıdaki ifadeler veriliyor:\nI. Nöral tüpte kapanma defektidir.\nII. En sık görülen pediatrik nörolojik hastalıktır.\nIII. İlk çocukta spina bifida varsa diğer çocuklar için risk artmaktadır.\nIV. En ağır tipi meningoseldir.\nBu ifadelerden hangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "47c343375d15",
+     "soru": "FTR\nFTR\nPEDİATRİK\nREHABİLİTASYON\nSpina bifida ile ilgili\nşağıdakilerden\nhangisi/hangileri\ndir doğrudur? I. Nöral\ntüpte kapanma\ndefektidir. II. En sık\ngörülen pediatrik\nnörolojik hastalıktır\nIII. İlk çocukta spina\nbifida varsa risk\ngğer çocuklar için\nartmaktadır. IV. Gebelik dönemi\ntaramalarında",
+     "secenekler": {
+      "A": "I,II,III,IV",
+      "B": "I,III",
+      "C": "II, IV",
+      "D": "Yalnız IV",
+      "E": "I,II,III,IV"
+     },
+     "cevap": null
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 80
+}

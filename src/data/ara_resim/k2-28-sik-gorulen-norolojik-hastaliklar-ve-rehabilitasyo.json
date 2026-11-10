@@ -1,0 +1,153 @@
+{
+  "key": "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "İnmeden sonra iki iyileşme yolu: penumbra ve nöroplastisite",
+      "aciklama": "Spontan iyileşmede ödem çekilir ve penumbra kurtulur; nöroplastisitede beyin işlevi yeni ağlarla sürdürür ve bu, göreve özgü egzersizle desteklenir.",
+      "adimlar": [
+        "1. İnmede kansız kalan çekirdeğin çevresinde kurtarılabilir bir alan vardır: penumbra.",
+        "2. Ödem azalıp penumbra kurtuldukça hasta kendiliğinden toparlanır; en belirgin dönem ilk haftalar ile üç ay arasıdır.",
+        "3. Nöroplastisitede kesilen bağlantının yerini alternatif ağlar ve yeni sinaptik bağlantılar alır.",
+        "4. Tekrarlayan, göreve özgü rehabilitasyon bu yeniden örgütlenmeyi destekler."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 8,
+      "bitis": 8,
+      "kaynak": [
+        9
+      ]
+    },
+    {
+      "id": "r02",
+      "baslik": "İnme rehabilitasyonunun zaman çizelgesi",
+      "aciklama": "İlk 24 saatte yoğun mobilizasyondan kaçınılır; en hızlı iyileşme ilk üç aydadır ve rehabilitasyon akut bakımdan topluma dönüşe kadar sürer. Üstteki eğri önceki iki sayfanın özetidir.",
+      "adimlar": [
+        "1. İlk 24 saatte yüksek yoğunluklu ve uzun süreli mobilizasyondan kaçınılır.",
+        "2. Akut bakım nöroloji ya da nöroşirürjide 1–2 hafta sürer: mobilizasyon, pozisyonlama, yutma ve boşaltım düzenlenir.",
+        "3. Subakut bakım FTR rehabilitasyon kliniğinde 1–2 ay sürer: kuvvetlendirme, denge, transfer, ambulasyon, iş-uğraşı terapisi.",
+        "4. En hızlı iyileşme ilk 3 ayda olur, iyileşme 2 yıla kadar devam eder.",
+        "5. Son durak eve ve topluma dönüştür; rehabilitasyon bütün durakları kapsar."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 12,
+      "bitis": 14,
+      "kaynak": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "id": "r03",
+      "baslik": "Omurilik yaralanması: spinal şoktan üst motor nöron bulgularına",
+      "aciklama": "Lezyonun altında önce spinal şoka bağlı flask paralizi ve arefleksi, izleyen dönemde spastisite, hiperrefleksi ve patolojik refleksler görülür.",
+      "adimlar": [
+        "1. Bulgular lezyon seviyesinin altında ortaya çıkar.",
+        "2. Akut dönemde spinal şok vardır: flask paralizi ve arefleksi.",
+        "3. İzleyen dönemde üst motor nöron bulguları çıkar: spastisite, hiperrefleksi, patolojik refleksler.",
+        "4. Aynı hastada refleks önce alınmaz, sonra artar."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 21,
+      "bitis": 21,
+      "kaynak": [
+        19
+      ]
+    },
+    {
+      "id": "r04",
+      "baslik": "Dört inkomplet sendromun kesit karşılaştırması",
+      "aciklama": "Santral kord, Brown-Séquard, anterior ve posterior kord sendromlarında kesitte hasarın yeri ile kaybolan ve korunan işlevler yan yana.",
+      "adimlar": [
+        "1. Santral kord: hasar ortada; kollarda motor kayıp bacaklardan fazla, prognoz daha iyi.",
+        "2. Brown-Séquard: hasar bir yarıda; lezyon tarafında motor, propriosepsiyon ve vibrasyon, karşı tarafta ağrı ve ısı kaybı.",
+        "3. Anterior kord: ön kolon hasarı; motor, ağrı ve ısı kaybı, propriosepsiyon korunur, prognoz en kötü.",
+        "4. Posterior kord: arka kolon hasarı; yalnız propriosepsiyon kaybı, motor kayıp yok, nadir."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 27,
+      "bitis": 27,
+      "kaynak": [
+        22,
+        23
+      ]
+    },
+    {
+      "id": "r05",
+      "baslik": "Omurilik yaralanması: mobilite basamakları ve ambulasyon düzeyi",
+      "aciklama": "Mobilite yatak içi egzersizden paralel bara basamak basamak ilerler; hastanın ulaşacağı yürüme düzeyini yaralanma seviyesi belirler.",
+      "adimlar": [
+        "1. Yatak içi egzersiz: yatakta dönme, oturmaya gelme.",
+        "2. Oturma dengesi, ardından transfer ve ayakta durma.",
+        "3. Tolere eden hastada ortezle paralel barda ambulasyon; uzun mesafede tekerlekli sandalye.",
+        "4. T10 ve üzeri: terapötik ambulasyon.",
+        "5. T11–L2: ev içi ambulasyon.",
+        "6. L2'nin altı: toplumsal ambulasyon."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 33,
+      "bitis": 33,
+      "kaynak": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "r06",
+      "baslik": "Otonom disrefleksi: tetikleyici, refleks, sonuç ve müdahale",
+      "aciklama": "T6 ve üzeri yaralanmada lezyonun altından gelen ağrı verici uyaran hipertansiyon, baş ağrısı ve flushing yapar; önce tetikleyici kaldırılır.",
+      "adimlar": [
+        "1. T6 ve üzeri yaralanmada lezyonun altından nosiseptif uyarı gelir: mesane distansiyonu, bağırsak retansiyonu.",
+        "2. Sempatik sistem aşırı etkinleşir.",
+        "3. Hipertansiyon, baş ağrısı ve flushing ortaya çıkar; tablo acildir.",
+        "4. Önce tetikleyen uyaran kaldırılır.",
+        "5. Kan basıncı düzelmezse hipertansiyona müdahale edilir."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 35,
+      "bitis": 35,
+      "kaynak": [
+        30
+      ]
+    },
+    {
+      "id": "r07",
+      "baslik": "Ağır travmatik beyin hasarında rehabilitasyonun basamakları",
+      "aciklama": "Hocanın anlattığı seyir: trakeostomili, PEG'li ve sondalı gelen hastada önce solunum, sonra yutma düzeltilir; trakeostomi ve PEG sırayla kapatılır.",
+      "adimlar": [
+        "1. Hasta yoğun bakımda dengeye kavuşunca kliniğe alınır; trakeostomili, PEG'li ve kalıcı sondalıdır.",
+        "2. Önce solunum: aralıklı trakeostomi kapama ve solunum egzersizleri.",
+        "3. Aynı sırada yutma terapisi.",
+        "4. Trakeostomi kapatılır.",
+        "5. PEG kapatılır, besinlerin kıvamı ayarlanır.",
+        "6. Hasta fiziksel olarak toparlanır; bilişsel bozukluk kalıcı olabilir."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 40,
+      "bitis": 40,
+      "kaynak": [
+        34
+      ]
+    },
+    {
+      "id": "r08",
+      "baslik": "Meningomiyelosel: bulgular, eşlik eden durumlar ve erken cerrahi",
+      "aciklama": "Lezyon seviyesinin altında flask paralizi, refleks ve duyu kaybı, inkontinans görülür; hidrosefali ve tip II Chiari eşlik eder; cerrahi ilk 24–48 saatte yapılır.",
+      "adimlar": [
+        "1. Kesede meninksler ve nöral doku vardır; bulgular lezyon seviyesinin altındadır.",
+        "2. Flask paralizi, tendon refleksi ve proprioseptif duyu kaybı, bağırsak ve mesane inkontinansı görülür.",
+        "3. Hidrosefali ve tip II Chiari malformasyonu eşlik eder.",
+        "4. Erken cerrahi ilk 24–48 saatte yapılır.",
+        "5. Kese aşağıdaysa yürüme şansı olur, torakale yakınsa çocuk genellikle paraplejiktir."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 51,
+      "bitis": 51,
+      "kaynak": [
+        44
+      ]
+    }
+  ]
+}

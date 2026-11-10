@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<clipPath id="pk"><ellipse cx="1030" cy="252" rx="96" ry="78"/></clipPath>
+<clipPath id="ak"><ellipse cx="740" cy="252" rx="96" ry="78"/></clipPath>
+<clipPath id="bs"><ellipse cx="450" cy="252" rx="96" ry="78"/></clipPath>
+<clipPath id="sc"><ellipse cx="160" cy="252" rx="96" ry="78"/></clipPath>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="700" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Dört inkomplet sendrom: kesitte hasarın yeri, hastada bulgu</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Santral kord, Brown-Séquard, anterior ve posterior kord sendromu · slayt 22–23</text>
+<text x="600" y="98" font-size="17" fill="#475569" text-anchor="middle">Kesitlerde üst taraf arka (dorsal), alt taraf ön (ventral) kolondur; kırmızı alan hasarı gösterir.</text>
+<rect x="25" y="112" width="270" height="490" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="160" y="142" font-size="21" fill="#0f766e" text-anchor="middle" font-weight="bold">Santral kord</text>
+<ellipse cx="160" cy="252" rx="96" ry="78" fill="#f8fafc" stroke="#0f172a" stroke-width="2.5"/>
+<g clip-path="url(#sc)"><ellipse cx="160" cy="256" rx="40" ry="34" fill="#b91c1c" opacity="0.75"/></g>
+<path d="M160 246 C146 238 130 200 116 202 C104 206 120 240 126 252 C130 268 98 282 108 298 C120 312 146 282 160 262 C174 282 200 312 212 298 C222 282 190 268 194 252 C200 240 216 206 204 202 C190 200 174 238 160 246 Z" stroke="#475569" stroke-width="2" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="160" cy="254" r="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+<ellipse cx="160" cy="252" rx="96" ry="78" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+<line x1="160" y1="330" x2="160" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="160" y="372" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">Hasar: kesitin ortası</text>
+<text x="160" y="397" font-size="17" fill="#0f172a" text-anchor="middle">Kollarda motor kayıp</text>
+<text x="160" y="422" font-size="17" fill="#0f172a" text-anchor="middle">bacaklardan fazla</text>
+<text x="160" y="447" font-size="17" fill="#0f172a" text-anchor="middle">Sakral duyu korunabilir</text>
+<rect x="42" y="470" width="236" height="44" rx="10" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="160" y="499" font-size="18" fill="#1d4ed8" text-anchor="middle" font-weight="bold">Prognoz daha iyi</text>
+<text x="160" y="546" font-size="17" fill="#475569" text-anchor="middle">Spondilozlu kişide düşme,</text>
+<text x="160" y="566" font-size="17" fill="#475569" text-anchor="middle">hiperekstansiyon</text>
+<rect x="315" y="112" width="270" height="490" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="450" y="142" font-size="21" fill="#0f766e" text-anchor="middle" font-weight="bold">Brown-Séquard</text>
+<ellipse cx="450" cy="252" rx="96" ry="78" fill="#f8fafc" stroke="#0f172a" stroke-width="2.5"/>
+<g clip-path="url(#bs)"><rect x="450" y="160" width="110" height="180" fill="#b91c1c" opacity="0.7"/></g>
+<path d="M450 246 C436 238 420 200 406 202 C394 206 410 240 416 252 C420 268 388 282 398 298 C410 312 436 282 450 262 C464 282 490 312 502 298 C512 282 480 268 484 252 C490 240 506 206 494 202 C480 200 464 238 450 246 Z" stroke="#475569" stroke-width="2" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="450" cy="254" r="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+<ellipse cx="450" cy="252" rx="96" ry="78" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+<line x1="450" y1="330" x2="450" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="450" y="372" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">Hasar: kesitin bir yarısı</text>
+<text x="450" y="397" font-size="17" fill="#0f172a" text-anchor="middle">Lezyon tarafı: motor,</text>
+<text x="450" y="422" font-size="17" fill="#0f172a" text-anchor="middle">propriosepsiyon, vibrasyon</text>
+<text x="450" y="447" font-size="17" fill="#0f172a" text-anchor="middle">Karşı taraf: ağrı ve ısı</text>
+<rect x="332" y="470" width="236" height="44" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<text x="450" y="499" font-size="18" fill="#ea580c" text-anchor="middle" font-weight="bold">Saf formu nadir</text>
+<text x="450" y="546" font-size="17" fill="#475569" text-anchor="middle">İki kayıp vücudun ayrı</text>
+<text x="450" y="566" font-size="17" fill="#475569" text-anchor="middle">yarılarında</text>
+<rect x="605" y="112" width="270" height="490" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="740" y="142" font-size="21" fill="#0f766e" text-anchor="middle" font-weight="bold">Anterior kord</text>
+<ellipse cx="740" cy="252" rx="96" ry="78" fill="#f8fafc" stroke="#0f172a" stroke-width="2.5"/>
+<g clip-path="url(#ak)"><rect x="630" y="150" width="220" height="200" fill="#b91c1c" opacity="0.7"/><path d="M740 246 L695 160 L785 160 Z" fill="#f8fafc"/></g>
+<path d="M740 246 C726 238 710 200 696 202 C684 206 700 240 706 252 C710 268 678 282 688 298 C700 312 726 282 740 262 C754 282 780 312 792 298 C802 282 770 268 774 252 C780 240 796 206 784 202 C770 200 754 238 740 246 Z" stroke="#475569" stroke-width="2" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="740" cy="254" r="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+<ellipse cx="740" cy="252" rx="96" ry="78" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+<line x1="740" y1="330" x2="740" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="740" y="372" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">Hasar: ön kolon</text>
+<text x="740" y="397" font-size="17" fill="#0f172a" text-anchor="middle">Motor, ağrı ve ısı kaybı</text>
+<text x="740" y="422" font-size="17" fill="#0f172a" text-anchor="middle">Propriosepsiyon</text>
+<text x="740" y="447" font-size="17" fill="#0f172a" text-anchor="middle">korunur (arka kolon)</text>
+<rect x="622" y="470" width="236" height="44" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="740" y="499" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="bold">Prognozu en kötü</text>
+<text x="740" y="546" font-size="17" fill="#475569" text-anchor="middle">Motor liflerin çoğu</text>
+<text x="740" y="566" font-size="17" fill="#475569" text-anchor="middle">etkilenir</text>
+<rect x="895" y="112" width="270" height="490" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1030" y="142" font-size="21" fill="#0f766e" text-anchor="middle" font-weight="bold">Posterior kord</text>
+<ellipse cx="1030" cy="252" rx="96" ry="78" fill="#f8fafc" stroke="#0f172a" stroke-width="2.5"/>
+<g clip-path="url(#pk)"><path d="M1030 246 L985 160 L1075 160 Z" fill="#b91c1c" opacity="0.75"/></g>
+<path d="M1030 246 C1016 238 1000 200 986 202 C974 206 990 240 996 252 C1000 268 968 282 978 298 C990 312 1016 282 1030 262 C1044 282 1070 312 1082 298 C1092 282 1060 268 1064 252 C1070 240 1086 206 1074 202 C1060 200 1044 238 1030 246 Z" stroke="#475569" stroke-width="2" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<circle cx="1030" cy="254" r="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+<ellipse cx="1030" cy="252" rx="96" ry="78" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+<line x1="1030" y1="330" x2="1030" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="1030" y="372" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">Hasar: arka kolon</text>
+<text x="1030" y="397" font-size="17" fill="#0f172a" text-anchor="middle">Propriosepsiyon kaybı</text>
+<text x="1030" y="422" font-size="17" fill="#0f172a" text-anchor="middle">Motor kayıp yok</text>
+<rect x="912" y="470" width="236" height="44" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+<text x="1030" y="499" font-size="18" fill="#64748b" text-anchor="middle" font-weight="bold">Nadir görülür</text>
+<text x="1030" y="546" font-size="17" fill="#475569" text-anchor="middle">Kas gücü yerinde</text>
+<text x="42" y="172" font-size="17" fill="#475569" text-anchor="start">arka</text>
+<text x="42" y="340" font-size="17" fill="#475569" text-anchor="start">ön</text>
+<line x1="180" y1="245" x2="232" y2="166" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="180" cy="245" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="238" y="172" font-size="17" fill="#b91c1c" text-anchor="start">hasar</text>
+<line x1="505" y1="240" x2="575" y2="166" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="505" cy="240" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="569" y="172" font-size="17" fill="#b91c1c" text-anchor="end">hasarlı yarı</text>
+<line x1="790" y1="305" x2="796" y2="336" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="790" cy="305" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="802" y="342" font-size="17" fill="#b91c1c" text-anchor="start">ön kolon</text>
+<line x1="1024" y1="200" x2="1004" y2="166" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="1024" cy="200" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="998" y="172" font-size="17" fill="#b91c1c" text-anchor="end">arka kolon</text>
+<rect x="30" y="616" width="1140" height="48" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="600" y="646" font-size="18" fill="#1d4ed8" text-anchor="middle" font-weight="bold">Anterior kordda propriosepsiyon korunur; posterior kordda yalnız propriosepsiyon kaybolur.</text>
+<text x="600.0" y="687" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 22–23; arka kolon ve motor lif açıklamaları hocanındır.</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="640" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Omurilik yaralanmasında motor tablo zamanla değişir</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Spinal şok döneminden üst motor nöron bulgularına · slayt 19</text>
+<rect x="30" y="88" width="330" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Lezyonun altı etkilenir</text>
+<path d="M120 140 C106 239.0 134 338.0 120 470" stroke="#ca8a04" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 140 C106 239.0 134 338.0 120 470" stroke="#fde68a" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 143.0 C164 140.0 164 164.0 138 161.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 181.25 C164 178.25 164 202.25 138 199.25 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 219.5 C164 216.5 164 240.5 138 237.5 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 257.75 C164 254.75 164 278.75 138 275.75 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 296.0 C164 293.0 164 317.0 138 314.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 334.25 C164 331.25 164 355.25 138 352.25 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 372.5 C164 369.5 164 393.5 138 390.5 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 410.75 C164 407.75 164 431.75 138 428.75 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 449.0 C164 446.0 164 470.0 138 467.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 282 L136 298 M136 282 L100 298" stroke="#b91c1c" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="60" y1="290" x2="330" y2="290" stroke="#b91c1c" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="132" y1="290" x2="180" y2="262" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="132" cy="290" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="186" y="268" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">lezyon seviyesi</text>
+<rect x="60" y="292" width="270" height="182" rx="8" fill="#b91c1c" opacity="0.08"/>
+<text x="190" y="180" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">lezyonun üstü:</text>
+<text x="190" y="202" font-size="17" fill="#1d4ed8" text-anchor="start">sağlam</text>
+<text x="180" y="335" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">lezyonun altı:</text>
+<text x="180" y="357" font-size="17" fill="#0f172a" text-anchor="start">kas kuvveti azalır</text>
+<text x="180" y="379" font-size="17" fill="#0f172a" text-anchor="start">ya da paralizi olur;</text>
+<text x="180" y="401" font-size="17" fill="#0f172a" text-anchor="start">duyu ve otonom</text>
+<text x="180" y="423" font-size="17" fill="#0f172a" text-anchor="start">işlev de bozulur</text>
+<text x="48" y="505" font-size="17" fill="#475569" text-anchor="start">Motor, duyusal ve otonom</text>
+<text x="48" y="528" font-size="17" fill="#475569" text-anchor="start">etkilenimin ortak kuralı budur.</text>
+<rect x="380" y="88" width="790" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="398" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Aynı hastada iki dönem</text>
+<rect x="400" y="132" width="350" height="300" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="575" y="162" font-size="20" fill="#ea580c" text-anchor="middle" font-weight="bold">Akut dönem: spinal şok</text>
+<text x="575" y="186" font-size="17" fill="#0f172a" text-anchor="middle">genellikle ilk haftalar</text>
+<text x="420" y="222" font-size="17" fill="#475569" text-anchor="start">kas</text>
+<path d="M470 232 C530 225 630 225 700 232 C630 239 530 239 470 232 Z" stroke="#ea580c" stroke-width="2.5" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="420" y="300" font-size="17" fill="#475569" text-anchor="start">refleks</text>
+<path d="M495 318 L530 318 C545 316 550 316 565 318 L720 318" stroke="#ea580c" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="495" y1="318" x2="720" y2="318" stroke="#64748b" stroke-width="1"/>
+<text x="575" y="356" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">flask paralizi</text>
+<text x="575" y="380" font-size="17" fill="#0f172a" text-anchor="middle">arefleksi</text>
+<text x="575" y="404" font-size="17" fill="#0f172a" text-anchor="middle">kas gevşek, refleks alınmaz</text>
+<rect x="800" y="132" width="350" height="300" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+<text x="975" y="162" font-size="20" fill="#b91c1c" text-anchor="middle" font-weight="bold">İzleyen dönem</text>
+<text x="975" y="186" font-size="17" fill="#0f172a" text-anchor="middle">üst motor nöron bulguları</text>
+<text x="820" y="222" font-size="17" fill="#475569" text-anchor="start">kas</text>
+<path d="M870 232 C930 210 1030 210 1100 232 C1030 254 930 254 870 232 Z" stroke="#b91c1c" stroke-width="2.5" fill="#fecdd3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="820" y="300" font-size="17" fill="#475569" text-anchor="start">refleks</text>
+<path d="M895 318 L930 318 C945 318 950 250 962 250 C974 250 978 330 990 318 C1000 310 1010 318 1120 318" stroke="#b91c1c" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="895" y1="318" x2="1120" y2="318" stroke="#64748b" stroke-width="1"/>
+<text x="975" y="356" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">spastisite</text>
+<text x="975" y="380" font-size="17" fill="#0f172a" text-anchor="middle">hiperrefleksi</text>
+<text x="975" y="404" font-size="17" fill="#0f172a" text-anchor="middle">patolojik refleksler</text>
+<line x1="754" y1="280" x2="796" y2="280" stroke="#0f172a" stroke-width="4" marker-end="url(#ok)"/>
+<text x="775" y="262" font-size="17" fill="#475569" text-anchor="middle">haftalar</text>
+<line x1="1000" y1="226" x2="960" y2="202" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="1000" cy="226" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="954" y="208" font-size="17" fill="#b91c1c" text-anchor="end">tonus artmış</text>
+<line x1="962" y1="255" x2="1010" y2="280" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="962" cy="255" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="1016" y="286" font-size="17" fill="#b91c1c" text-anchor="start">abartılı yanıt</text>
+<line x1="560" y1="317" x2="600" y2="290" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="560" cy="317" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="606" y="296" font-size="17" fill="#ea580c" text-anchor="start">yanıt yok</text>
+<text x="400" y="468" font-size="17" fill="#1e293b" text-anchor="start">Spinal şokta tablo alt motor nöron hasarına benzer; dönem geçince üst motor</text>
+<text x="400" y="491" font-size="17" fill="#1e293b" text-anchor="start">nöron bulguları ortaya çıkar.</text>
+<text x="400" y="520" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Aynı hastada önce refleks alınmaz, haftalar sonra refleksler artar:</text>
+<text x="400" y="543" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">ikisini karıştırmayın.</text>
+<text x="600.0" y="627" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 19; spinal şokun süresi ve alt motor nöron benzetmesi hocanın açıklamasıdır.</text>
+</svg>

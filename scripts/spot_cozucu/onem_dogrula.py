@@ -86,6 +86,9 @@ def check(path):
         for a in al:
             s, mt = a.get('sayfa'), norm(a.get('metin'))
             if words(a.get('metin')) < 3: e.append(f'{tt}: alıntı çok kısa'); continue
+            # Gövdesi yalnız görüntü olan sayfa (metin katmanında en çok bir kaynak satırı): alıntı görüntüden okunur, `gorsel: true`
+            # ile işaretlenir ve denetçi gözle doğrular (değerlendirme kapısındaki atom kuralının eşi). Kaynak satırını alıntı diye yazmak YASAK (H549).
+            if a.get('gorsel') and len(P.get(s, '')) < 120: continue
             if not any(mt in P.get(x, '') for x in (s, (s or 0) - 1, (s or 0) + 1)):
                 if mt in ALL: w.append(f"{tt}: alıntı PDF'te var ama sayfa {s} yanlış")
                 else: e.append(f"{tt}: alıntı PDF'te birebir yok: {str(a.get('metin'))[:70]!r}")

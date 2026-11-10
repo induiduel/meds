@@ -44,6 +44,14 @@
   "definition": "Anabilim dalı",
   "term": "ABD"
  },
+ "ABS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
+  ],
+  "definition": "ASIA bozukluk skalası. Omurilik yaralanmasında lezyonun yerini ve şiddetini değerlendirir; komplet yaralanma A, inkomplet yaralanma B, C ve D olarak sınıflanır.",
+  "term": "ABS"
+ },
  "ADH": {
   "category": "kisaltma",
   "decks": [
@@ -253,6 +261,14 @@
   ],
   "definition": "Otozomal resesif serebellar ataksi tip 2",
   "term": "ARCA2"
+ },
+ "ASIA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
+  ],
+  "definition": "American Spinal Injury Association. Omurilik yaralanmasının değerlendirildiği uluslararası bozukluk skalasına adını veren dernektir.",
+  "term": "ASIA"
  },
  "ASIC": {
   "category": "kisaltma",
@@ -1295,6 +1311,7 @@
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "k2-26-norolojik-hastaliklar",
    "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
@@ -1437,6 +1454,7 @@
  "DVT": {
   "category": "kisaltma",
   "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
    "y25-k2-28-norolojik-hastaliklarda-rehabilitasyon"
   ],
   "definition": "Derin ven trombozu",
@@ -1582,7 +1600,8 @@
   ],
   "category": "kisaltma",
   "decks": [
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler",
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
   ],
   "definition": "Eklem hareket açıklığı",
   "term": "EHA"
@@ -1960,7 +1979,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-14",
-   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular"
+   "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
   ],
   "definition": "Gastrointestinal sistem",
   "term": "GIS"
@@ -2176,6 +2196,14 @@
   ],
   "definition": "Yüksek hareketlilik grubu (HMG kutusu)",
   "term": "HMG"
+ },
+ "HO": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
+  ],
+  "definition": "Heterotopik ossifikasyon. Yumuşak dokuda kemik oluşmasıdır.",
+  "term": "HO"
  },
  "HOX": {
   "category": "kisaltma",
@@ -3065,6 +3093,7 @@
    "k2-12-kafa-ve-omurilik-yaralanmalari",
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "k2-24-epilepsi",
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-24-epilepsi"
@@ -3487,6 +3516,14 @@
   "definition": "Oreksin-2 reseptörü",
   "term": "OX2R"
  },
+ "OY": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
+  ],
+  "definition": "Omurilik yaralanması",
+  "term": "OY"
+ },
  "Oİ": {
   "category": "kisaltma",
   "decks": [
@@ -3786,10 +3823,19 @@
  "PTE": {
   "category": "kisaltma",
   "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
    "y25-k2-28-norolojik-hastaliklarda-rehabilitasyon"
   ],
   "definition": "Posttravmatik epilepsi",
   "term": "PTE"
+ },
+ "PTH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
+  ],
+  "definition": "Posttravmatik hidrosefali. Travmatik beyin hasarından sonra gelişen hidrosefalidir.",
+  "term": "PTH"
  },
  "QT": {
   "category": "kisaltma",
@@ -4479,6 +4525,7 @@
  "TBH": {
   "category": "kisaltma",
   "decks": [
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
    "y25-k2-28-norolojik-hastaliklarda-rehabilitasyon"
   ],
   "definition": "Travmatik beyin hasarı",
@@ -4667,7 +4714,8 @@
   ],
   "category": "kisaltma",
   "decks": [
-   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler"
+   "k2-16-norolojik-rehabilitasyona-giris-ve-genel-ilkeler",
+   "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"
   ],
   "definition": "Tekerlekli sandalye",
   "term": "TS"

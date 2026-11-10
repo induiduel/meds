@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="680" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Otonom disrefleksi: tetikleyiciden acil tabloya</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">T6 ve üzeri omurilik yaralanmasının acil komplikasyonu · slayt 30</text>
+<rect x="30" y="88" width="690" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Uyaran, sempatik aşırı etkinlik, acil tablo</text>
+<circle cx="190" cy="160" r="30" fill="#fecaca" stroke="#475569" stroke-width="2.5"/>
+<path d="M178 188 L178 204 C120 210 112 240 120 310 L128 450 L132 560 L178 560 L186 460 L194 460 L202 560 L248 560 L252 450 L260 310 C268 240 260 210 202 204 L202 188" stroke="#475569" stroke-width="2.5" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="190" y1="196" x2="190" y2="440" stroke="#ca8a04" stroke-width="7"/>
+<path d="M174 262 L206 282 M206 262 L174 282" stroke="#b91c1c" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="100" y1="272" x2="300" y2="272" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="206" y1="272" x2="300" y2="250" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="206" cy="272" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="306" y="256" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">T6 ve üzeri yaralanma</text>
+<path d="M168 420 C150 400 160 372 190 372 C220 372 230 400 212 420 C204 430 176 430 168 420 Z" stroke="#ea580c" stroke-width="2.5" fill="#fdba74" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 340 C170 326 182 352 194 338 C206 324 214 352 224 338" stroke="#ea580c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190 370 C178 352 178 320 186 296" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<circle cx="120" cy="396" r="15" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<text x="120" y="402" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<line x1="212" y1="408" x2="300" y2="420" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="212" cy="408" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="306" y="426" font-size="17" fill="#ea580c" text-anchor="start">mesane distansiyonu (dolu mesane)</text>
+<line x1="224" y1="338" x2="300" y2="384" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="224" cy="338" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="306" y="390" font-size="17" fill="#ea580c" text-anchor="start">bağırsak retansiyonu</text>
+<circle cx="232" cy="452" r="6" fill="#fdba74" stroke="#ea580c" stroke-width="2"/>
+<line x1="232" y1="452" x2="300" y2="458" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="232" cy="452" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="306" y="464" font-size="17" fill="#ea580c" text-anchor="start">bası yarası (hocanın eklediği tetikleyici)</text>
+<text x="306" y="352" font-size="17" fill="#475569" text-anchor="start">nosiseptif, yani ağrı verici uyarı</text>
+<circle cx="120" cy="310" r="15" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<text x="120" y="316" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<path d="M176 300 C160 290 160 310 146 300 M204 300 C220 290 220 310 234 300 M176 318 C160 308 160 328 146 318 M204 318 C220 308 220 328 234 318" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="234" y1="309" x2="300" y2="312" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="234" cy="309" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="306" y="318" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">sempatik sistemin aşırı etkinliği</text>
+<circle cx="120" cy="160" r="15" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="120" y="166" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<line x1="214" y1="150" x2="300" y2="132" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="214" cy="150" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="306" y="138" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">baş ağrısı</text>
+<line x1="206" y1="172" x2="300" y2="166" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="206" cy="172" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="306" y="172" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">flushing: yüzde kızarma</text>
+<text x="306" y="210" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">hipertansiyon</text>
+<line x1="296" y1="124" x2="296" y2="216" stroke="#b91c1c" stroke-width="3"/>
+<line x1="120" y1="292" x2="120" y2="180" stroke="#6d28d9" stroke-width="3" marker-end="url(#okm)"/>
+<text x="70" y="240" font-size="17" fill="#6d28d9" text-anchor="middle">sonuç</text>
+<text x="306" y="496" font-size="17" fill="#0f172a" text-anchor="start">Uyaran lezyonun altından gelir; sempatik</text>
+<text x="306" y="519" font-size="17" fill="#0f172a" text-anchor="start">sistem aşırı etkinleşir; hipertansiyon,</text>
+<text x="306" y="542" font-size="17" fill="#0f172a" text-anchor="start">baş ağrısı ve flushing ortaya çıkar.</text>
+<rect x="740" y="88" width="430" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="758" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Acil tablo: sıra önemli</text>
+<rect x="760" y="136" width="390" height="118" rx="10" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
+<circle cx="786" cy="164" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="786" y="170" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="810" y="170" font-size="18" fill="#15803d" text-anchor="start" font-weight="bold">Tetikleyen uyaranı kaldır</text>
+<text x="776" y="200" font-size="17" fill="#0f172a" text-anchor="start">Örnek: tıkalı sonda açılır, mesane</text>
+<text x="776" y="223" font-size="17" fill="#0f172a" text-anchor="start">boşaltılır.</text>
+<line x1="955" y1="258" x2="955" y2="292" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="760" y="296" width="390" height="118" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+<circle cx="786" cy="324" r="15" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="786" y="330" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="810" y="330" font-size="18" fill="#b91c1c" text-anchor="start" font-weight="bold">Hipertansiyona müdahale et</text>
+<text x="776" y="360" font-size="17" fill="#0f172a" text-anchor="start">Kan basıncı normale dönmezse yapılır.</text>
+<circle cx="1100" cy="470" r="34" fill="#ffffff" stroke="#b91c1c" stroke-width="3"/>
+<path d="M1076 486 C1070 460 1090 440 1112 444" stroke="#64748b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="1100" y1="470" x2="1122" y2="448" stroke="#b91c1c" stroke-width="4"/>
+<circle cx="1100" cy="470" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="760" y="446" font-size="17" fill="#0f172a" text-anchor="start">Ortostatik hipotansiyonda</text>
+<text x="760" y="469" font-size="17" fill="#0f172a" text-anchor="start">tansiyon düşer, otonom</text>
+<text x="760" y="492" font-size="17" fill="#0f172a" text-anchor="start">disreflekside yükselir.</text>
+<text x="760" y="523" font-size="17" fill="#475569" text-anchor="start">Yalnız omurilik yaralanmasında</text>
+<text x="760" y="546" font-size="17" fill="#475569" text-anchor="start">görülür.</text>
+<rect x="30" y="600" width="1140" height="46" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+<text x="600" y="630" font-size="19" fill="#b91c1c" text-anchor="middle" font-weight="bold">Omurilik yaralanmasının en önemli ve en acil komplikasyonu</text>
+<text x="600.0" y="667" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 30; sempatik etkinlik, bası yarası ve müdahale sırası hocanın anlatımıdır.</text>
+</svg>

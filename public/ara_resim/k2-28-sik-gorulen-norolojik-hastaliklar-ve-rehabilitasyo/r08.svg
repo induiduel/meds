@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="680" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Meningomiyelosel: lezyonun altı, eşlik edenler, erken cerrahi</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Spina bifidanın en ağır tipi · slayt 44</text>
+<rect x="30" y="88" width="700" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Bulgular lezyon seviyesinin altında</text>
+<circle cx="170" cy="165" r="42" fill="#e2e8f0" stroke="#475569" stroke-width="2.5"/>
+<path d="M154 159 C148 143 166 139 170 155 C174 139 192 143 186 159 C180 173 160 173 154 159 Z" stroke="#1d4ed8" stroke-width="2" fill="#bfdbfe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M163 199 C163 217 177 217 177 199" stroke="#6d28d9" stroke-width="2.5" fill="#ddd6fe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M158 209 L158 221 C110 227 104 255 112 315 L120 415 L124 515 L162 515 L167 427 L173 427 L178 515 L216 515 L220 415 L228 315 C236 255 230 227 182 221 L182 209" stroke="#475569" stroke-width="2.5" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 225 C160 275 180 315 170 365" stroke="#ca8a04" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="170" cy="370" r="17" fill="#fca5a5" stroke="#b91c1c" stroke-width="3"/>
+<line x1="70" y1="370" x2="330" y2="370" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="96" y="372" width="148" height="146" rx="8" fill="#b91c1c" opacity="0.08"/>
+<line x1="180" y1="155" x2="330" y2="138" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="180" cy="155" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="336" y="144" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">hidrosefali</text>
+<line x1="176" y1="209" x2="330" y2="186" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="176" cy="209" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="336" y="192" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">tip II Chiari malformasyonu:</text>
+<text x="336" y="213" font-size="17" fill="#475569" text-anchor="start">beyin sapının fıtıklaşması</text>
+<line x1="174" y1="285" x2="330" y2="256" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="174" cy="285" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="336" y="262" font-size="17" fill="#0f172a" text-anchor="start">skolyoz, kifoz</text>
+<line x1="187" y1="370" x2="330" y2="322" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="187" cy="370" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="336" y="328" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">kese: meninksler ve nöral doku</text>
+<text x="336" y="348" font-size="17" fill="#b91c1c" text-anchor="start">lezyon seviyesi</text>
+<circle cx="338" cy="390" r="5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="352" y="396" font-size="17" fill="#0f172a" text-anchor="start">Flask paralizi</text>
+<circle cx="338" cy="417" r="5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="352" y="423" font-size="17" fill="#0f172a" text-anchor="start">Tendon refleksleri azalır ya da kaybolur</text>
+<circle cx="338" cy="444" r="5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="352" y="450" font-size="17" fill="#0f172a" text-anchor="start">Proprioseptif duyu azalır ya da kaybolur</text>
+<circle cx="338" cy="471" r="5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="352" y="477" font-size="17" fill="#0f172a" text-anchor="start">Bağırsak ve mesane inkontinansı</text>
+<circle cx="338" cy="498" r="5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="352" y="504" font-size="17" fill="#0f172a" text-anchor="start">Ayak ve kalça deformiteleri</text>
+<path d="M200 465 C260 465 290 440 326 440" stroke="#b91c1c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="50" y="552" font-size="17" fill="#475569" text-anchor="start">Gövde arkadan görünüyor: üstte eşlik eden iki durum, altta kayıplar.</text>
+<rect x="750" y="88" width="420" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="768" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Doğumdan sonra</text>
+<circle cx="800" cy="168" r="28" fill="#ffffff" stroke="#15803d" stroke-width="3"/>
+<path d="M800 168 L800 150 M800 168 L813 176" stroke="#15803d" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M772 150 C768 140 776 132 786 136" stroke="#15803d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="842" y="162" font-size="18" fill="#15803d" text-anchor="start" font-weight="bold">Erken cerrahi kritik:</text>
+<text x="842" y="186" font-size="18" fill="#15803d" text-anchor="start" font-weight="bold">ilk 24–48 saat</text>
+<text x="770" y="232" font-size="17" fill="#0f172a" text-anchor="start">Amaç: menenjit gelişmesini ve dışarıdaki</text>
+<text x="770" y="255" font-size="17" fill="#0f172a" text-anchor="start">nöral dokunun zarar görmesini önlemek.</text>
+<text x="770" y="286" font-size="17" fill="#0f172a" text-anchor="start">Cerrahi felç tablosunu pek değiştirmez;</text>
+<text x="770" y="309" font-size="17" fill="#0f172a" text-anchor="start">inkontinans da cerrahiden bağımsız</text>
+<text x="770" y="332" font-size="17" fill="#0f172a" text-anchor="start">sürer.</text>
+<text x="770" y="389" font-size="17" fill="#0f766e" text-anchor="start" font-weight="bold">Gidişi kesenin seviyesi belirler</text>
+<path d="M776 412.0 C770 419.0 770 419.0 776 426.0 L824 426.0 C830 419.0 830 419.0 824 412.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 432.0 C770 439.0 770 439.0 776 446.0 L824 446.0 C830 439.0 830 439.0 824 432.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 452.0 C770 459.0 770 459.0 776 466.0 L824 466.0 C830 459.0 830 459.0 824 452.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 472.0 C770 479.0 770 479.0 776 486.0 L824 486.0 C830 479.0 830 479.0 824 472.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 492.0 C770 499.0 770 499.0 776 506.0 L824 506.0 C830 499.0 830 499.0 824 492.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 512.0 C770 519.0 770 519.0 776 526.0 L824 526.0 C830 519.0 830 519.0 824 512.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 532.0 C770 539.0 770 539.0 776 546.0 L824 546.0 C830 539.0 830 539.0 824 532.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="800" y1="403" x2="800" y2="553" stroke="#ca8a04" stroke-width="7"/>
+<circle cx="832" cy="433" r="10" fill="#fca5a5" stroke="#b91c1c" stroke-width="2.5"/>
+<circle cx="832" cy="527" r="10" fill="#bbf7d0" stroke="#15803d" stroke-width="2.5"/>
+<line x1="842" y1="433" x2="870" y2="433" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="842" cy="433" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="876" y="439" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">torakale yakın:</text>
+<text x="876" y="459" font-size="17" fill="#0f172a" text-anchor="start">genellikle parapleji</text>
+<line x1="842" y1="527" x2="870" y2="517" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="842" cy="527" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="876" y="523" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">daha aşağıda:</text>
+<text x="876" y="543" font-size="17" fill="#0f172a" text-anchor="start">yürüme şansı olur</text>
+<rect x="30" y="600" width="1140" height="46" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="600" y="630" font-size="18" fill="#1d4ed8" text-anchor="middle" font-weight="bold">Akılda tutulacak iki eşlik eden durum: hidrosefali ve tip II Chiari malformasyonu</text>
+<text x="600.0" y="667" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 44; cerrahinin amacı, seviye ile gidiş ilişkisi ve Chiari açıklaması hocanındır.</text>
+</svg>

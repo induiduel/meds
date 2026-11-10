@@ -1,0 +1,5020 @@
+{
+ "mdSha1": "f957c3f736b03a532c6133a148c142a12341bdc2",
+ "p": [
+  [
+   {
+    "ses": "Nörolojik rehabilitasyon, sinir sistemi hasar gördükten sonr",
+    "dosya": 0,
+    "sayfa": 2
+   },
+   {
+    "ses": "Bu derste beş hastalığın rehabilitasyonu sırayla işlenir: in",
+    "dosya": 0,
+    "sayfa": 2,
+    "madde": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "İlk üçü erişkin, son ikisi çocuk hastalığı olarak anlatılır;",
+    "dosya": 0,
+    "sayfa": 2
+   }
+  ],
+  [
+   {
+    "ses": "Nörolojik rehabilitasyon kliniklerine en sık başvuru nedeni ",
+    "dosya": 0,
+    "sayfa": 3,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "İnmeyi omurilik yaralanması, kafa travması, multipl skleroz,",
+    "dosya": 0,
+    "sayfa": 3,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Çocuklarda sıra farklıdır: en sık başvuru nedeni serebral pa",
+    "dosya": 0,
+    "sayfa": 3,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Serebral palsiyi spina bifida, müsküler distrofiler ve braki",
+    "dosya": 0,
+    "sayfa": 3,
+    "madde": [
+     3,
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnme, beyin parankimini besleyen arterlerin iskemisinden ya ",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "İskemi dokuya kan gitmemesi, hemoraji ise damarın yırtılıp k",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Slayttaki çizim iki türü yan yana gösterir: hemorajik inme p",
+    "dosya": 0,
+    "sayfa": 4,
+    "kutu": [
+     0.335,
+     0.02,
+     0.635,
+     0.585
+    ],
+    "sekil": "hemorajik inme paneli",
+    "yol": [
+     {
+      "k": "damar yırtılmış",
+      "x": 0.57,
+      "y": 0.4
+     },
+     {
+      "k": "kan beyin dokusunun",
+      "x": 0.41,
+      "y": 0.125
+     }
+    ]
+   },
+   {
+    "ses": "İskemik inme panelinde damarın içindeki pıhtı, yani trombüs,",
+    "dosya": 0,
+    "sayfa": 4,
+    "kutu": [
+     0.64,
+     0.02,
+     0.935,
+     0.585
+    ],
+    "sekil": "iskemik inme paneli",
+    "yol": [
+     {
+      "k": "trombüs",
+      "x": 0.87,
+      "y": 0.46
+     },
+     {
+      "k": "oksijensiz",
+      "x": 0.7,
+      "y": 0.125
+     }
+    ]
+   },
+   {
+    "ses": "Türkiye'de inme insidansının yüz binde yüz üç olduğu tahmin ",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Hoca insidans sayılarının ezberlenmek için değil, hangi hast",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "İnmelerin yüzde altmışı serebral tromboza, yüzde yirmisi ser",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Hocanın açıklamasıyla serebral tromboz, aterosklerotik damar",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Serebral embolide ise pıhtı başka bir yerden kopup beyin dam",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Tromboz da emboli de damarı tıkadığı için iskemik inme yapar",
+    "dosya": 0,
+    "sayfa": 4,
+    "madde": [
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmenin risk faktörleri iki gruba ayrılır: değiştirilemeyenl",
+    "dosya": 0,
+    "sayfa": 5,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Değiştirilemeyenler yaş, cinsiyet ve genetiktir; slayttaki ş",
+    "dosya": 0,
+    "sayfa": 5,
+    "kutu": [
+     0.82,
+     0.12,
+     0.975,
+     0.39
+    ],
+    "sekil": "ilerleyen yaş kartı",
+    "yol": [
+     {
+      "k": "elli beş",
+      "x": 0.905,
+      "y": 0.25
+     }
+    ]
+   },
+   {
+    "ses": "Cinsiyet için şema iki ayrı durumu verir: genç kadınlarda ge",
+    "dosya": 0,
+    "sayfa": 5,
+    "kutu": [
+     0.84,
+     0.4,
+     0.975,
+     0.63
+    ],
+    "sekil": "cinsiyet ve demografi kartı",
+    "yol": [
+     {
+      "k": "genç kadınlarda",
+      "x": 0.9,
+      "y": 0.465
+     },
+     {
+      "k": "erkek",
+      "x": 0.94,
+      "y": 0.47
+     }
+    ]
+   },
+   {
+    "ses": "Genetik yatkınlıkta inmeyle ilişkili otuz iki genetik bölge ",
+    "dosya": 0,
+    "sayfa": 5,
+    "kutu": [
+     0.84,
+     0.64,
+     0.975,
+     0.89
+    ],
+    "sekil": "genetik yatkınlık kartı",
+    "yol": [
+     {
+      "k": "otuz iki",
+      "x": 0.905,
+      "y": 0.82
+     }
+    ]
+   },
+   {
+    "ses": "Değiştirilebilen risk faktörleri uzun bir listedir: hipertan",
+    "dosya": 0,
+    "sayfa": 5,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Listenin devamında hiperlipidemi, sigara kullanımı, aşırı al",
+    "dosya": 0,
+    "sayfa": 5,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Bunların içinde en kritik olan hipertansiyondur: inme hastal",
+    "dosya": 0,
+    "sayfa": 5,
+    "kutu": [
+     0.66,
+     0.12,
+     0.8,
+     0.39
+    ],
+    "sekil": "hipertansiyon kartı",
+    "yol": [
+     {
+      "k": "yaklaşık yarısında",
+      "x": 0.72,
+      "y": 0.215
+     }
+    ]
+   },
+   {
+    "ses": "Hoca değiştirilebilen risk faktörlerinin en önemlisi olarak ",
+    "dosya": 0,
+    "sayfa": 5,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda serebrovasküler olayda tedavi edilebilir risk",
+    "dosya": 0,
+    "sayfa": 5,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Aile öyküsü, yani genetik yatkınlık ise değiştirilemeyen gru",
+    "dosya": 0,
+    "sayfa": 5,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Atriyal fibrilasyon bir kalp ritmi bozukluğudur; şemaya göre",
+    "dosya": 0,
+    "sayfa": 5,
+    "kutu": [
+     0.66,
+     0.39,
+     0.8,
+     0.64
+    ],
+    "sekil": "kalp hastalıkları ve atriyal fibrilasyon kartı",
+    "yol": [
+     {
+      "k": "yüzde yirmi",
+      "x": 0.695,
+      "y": 0.59
+     }
+    ]
+   },
+   {
+    "ses": "Hoca atriyal fibrilasyonun serebral emboli kaynaklı inmeleri",
+    "dosya": 0,
+    "sayfa": 5,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Sigara inme riskini iki katına çıkarır; diyabetin varlığı da",
+    "dosya": 0,
+    "sayfa": 5,
+    "kutu": [
+     0.66,
+     0.65,
+     0.8,
+     0.89
+    ],
+    "sekil": "sigara ve diyabet kartı",
+    "yol": [
+     {
+      "k": "Sigara",
+      "x": 0.7,
+      "y": 0.72
+     },
+     {
+      "k": "diyabetin",
+      "x": 0.75,
+      "y": 0.72
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmede sık görülen bozukluklar dört başlıkta toplanır: motor",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Motor bozukluklar içinde en sık görülen bulgu paralizidir, y",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "En sık görülen klinik tablo ise hemiplejidir; hocanın tanımı",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: inmede en sık görülen k",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Larinks ve farinks kaslarının paralizisine bağlı disfaji, ya",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Zamanla tonus bozuklukları, örneğin spastisite gelişebilir; ",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Duyusal bozukluklar genellikle motor bozukluklarla aynı dağı",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Propriosepsiyonda ve hafif dokunma duyusunda kayıp, parestez",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Propriosepsiyon eklemin konumunu hissetme duyusu, parestezi ",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmede konuşma ve lisan bozuklukları, beyinde etkilenen alan",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Broca afazisinde konuşmanın akıcılığı bozulmuştur.",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Hoca Broca afazisini motor afazi diye adlandırdı ve klinikte",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Wernicke afazisinde durum terstir: konuşma akıcıdır ama anla",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Kognitif fonksiyon bozuklukları olarak ihmal fenomeni, aprak",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     7,
+     8
+    ]
+   },
+   {
+    "ses": "İhmal fenomeni, hastanın etkilenen yanını fark etmemesi, yok",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Slayt apraksiyi şöyle tanımlar: motor ve duyusal fonksiyonla",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     7,
+     8
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda aynı tanım başka sözcüklerle sorulmuştur: doğ",
+    "dosya": 0,
+    "sayfa": 6,
+    "madde": [
+     7,
+     8
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnme sonrası nörolojik bozukluklar, hastanın günlük yaşam ak",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Hocanın anlattığı gibi rehabilitasyon hekimi bozukluğun adın",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Slayttaki tablo altı nörolojik bozukluğu işlevsel sonucuyla ",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Hemiparezinin sonucu yürüme ve transfer güçlüğüdür; transfer",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Üst ekstremite güçsüzlüğü giyinme ve yemek yeme güçlüğüne, d",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Neglect sendromu, yani ihmal sendromu, düşme riski ve transf",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Afazi iletişim güçlüğüne ve sosyal sorunlara yol açar.",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Disfajinin sonucu malnütrisyon ve aspirasyon riskidir; aspir",
+    "dosya": 0,
+    "sayfa": 7,
+    "madde": [
+     7
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnme rehabilitasyonunun beş başlıca amacı vardır.",
+    "dosya": 0,
+    "sayfa": 8,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Birincisi hastanın ve ailesinin eğitimidir; hoca hastalığın ",
+    "dosya": 0,
+    "sayfa": 8,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "İkincisi eşlik eden hastalıkları ve tıbbi durumları önlemek,",
+    "dosya": 0,
+    "sayfa": 8,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Üçüncüsü uygun egzersiz programıyla fonksiyonel bağımsızlığı",
+    "dosya": 0,
+    "sayfa": 8,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Dördüncüsü özürlülüğü en aza indirmek, beşincisi hastanın ev",
+    "dosya": 0,
+    "sayfa": 8,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda serebrovasküler olay rehabilitasyonunun ana i",
+    "dosya": 0,
+    "sayfa": 8,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Çıkmış sorunun öncülleri komorbid hastalıkların tedavisi, se",
+    "dosya": 0,
+    "sayfa": 8,
+    "madde": [
+     2,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnme sonrası iyileşme tek bir olay değildir; slayttaki şema ",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.13,
+     0.105,
+     0.885,
+     0.19
+    ],
+    "sekil": "üç kavramın başlık şeridi"
+   },
+   {
+    "ses": "Birincisi spontan nörolojik iyileşmedir: inmeden sonraki ilk",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.13,
+     0.105,
+     0.378,
+     0.28
+    ],
+    "sekil": "spontan nörolojik iyileşme paneli: tanım"
+   },
+   {
+    "ses": "Temel mekanizmaları ödemin azalması, iskemik penumbranın kur",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.135,
+     0.43,
+     0.378,
+     0.5
+    ],
+    "sekil": "spontan iyileşme paneli: temel mekanizmalar maddesi"
+   },
+   {
+    "ses": "Hocanın açıklamasıyla penumbra, kansız kalan çekirdek bölgen",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.135,
+     0.28,
+     0.378,
+     0.43
+    ],
+    "sekil": "spontan iyileşme paneli: küçülen hasar alanı çizimi",
+    "yol": [
+     {
+      "k": "penumbra",
+      "x": 0.185,
+      "y": 0.355
+     },
+     {
+      "k": "toparlanır",
+      "x": 0.315,
+      "y": 0.36
+     }
+    ]
+   },
+   {
+    "ses": "Spontan iyileşme en belirgin olarak ilk haftalar ile üç ay a",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.135,
+     0.505,
+     0.378,
+     0.565
+    ],
+    "sekil": "spontan iyileşme paneli: en belirgin dönem maddesi",
+    "yol": [
+     {
+      "k": "ilk haftalar",
+      "x": 0.24,
+      "y": 0.535
+     },
+     {
+      "k": "örneği",
+      "x": 0.25,
+      "y": 0.695
+     }
+    ]
+   },
+   {
+    "ses": "İkinci kavram nöroplastisitedir: beynin hasardan sonra kendi",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.382,
+     0.105,
+     0.63,
+     0.28
+    ],
+    "sekil": "nöroplastisite paneli: tanım"
+   },
+   {
+    "ses": "Mekanizmaları sinaptik güçlenme, yeni sinaptik bağlantılar, ",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.387,
+     0.43,
+     0.63,
+     0.525
+    ],
+    "sekil": "nöroplastisite paneli: mekanizmalar maddesi"
+   },
+   {
+    "ses": "Nöroplastisite deneyimle, öğrenmeyle ve tekrarlayan, göreve ",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.387,
+     0.525,
+     0.63,
+     0.58
+    ],
+    "sekil": "nöroplastisite paneli: destekleyenler maddesi",
+    "yol": [
+     {
+      "k": "deneyimle",
+      "x": 0.5,
+      "y": 0.55
+     },
+     {
+      "k": "örneğin",
+      "x": 0.5,
+      "y": 0.69
+     }
+    ]
+   },
+   {
+    "ses": "Nöroplastisite akut, subakut ve kronik dönemlerin hepsinde s",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.387,
+     0.58,
+     0.63,
+     0.63
+    ],
+    "sekil": "nöroplastisite paneli: dönemler maddesi"
+   },
+   {
+    "ses": "Hoca nöroplastisiteyi rehabilitasyon için en önemli kavram o",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.382,
+     0.105,
+     0.63,
+     0.19
+    ],
+    "sekil": "nöroplastisite paneli başlığı"
+   }
+  ],
+  [
+   {
+    "ses": "İnme sonrası iyileşmenin üçüncü kavramı fonksiyonel iyileşme",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.635,
+     0.105,
+     0.882,
+     0.28
+    ],
+    "sekil": "fonksiyonel iyileşme ve adaptasyon paneli: başlık ve tanım",
+    "yol": [
+     {
+      "k": "fonksiyonel iyileşme",
+      "x": 0.76,
+      "y": 0.15
+     }
+    ]
+   },
+   {
+    "ses": "Tanımı, hastanın mevcut nörolojik kapasitesini ya da kompans",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.635,
+     0.19,
+     0.882,
+     0.28
+    ],
+    "sekil": "fonksiyonel iyileşme paneli: tanım"
+   },
+   {
+    "ses": "Amaç yalnız nörolojik düzelme değildir; fonksiyonel bağımsız",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.64,
+     0.43,
+     0.882,
+     0.49
+    ],
+    "sekil": "fonksiyonel iyileşme paneli: amaç maddesi"
+   },
+   {
+    "ses": "İki yaklaşımı içerir: restoratif yaklaşım fonksiyonu geri ka",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.64,
+     0.49,
+     0.882,
+     0.565
+    ],
+    "sekil": "fonksiyonel iyileşme paneli: restoratif ve kompansatuvar maddesi"
+   },
+   {
+    "ses": "Rehabilitasyon, eğitim, yardımcı cihazlar ve çevresel düzenl",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.64,
+     0.565,
+     0.882,
+     0.63
+    ],
+    "sekil": "fonksiyonel iyileşme paneli: desteklenme maddesi",
+    "yol": [
+     {
+      "k": "Rehabilitasyon",
+      "x": 0.76,
+      "y": 0.6
+     },
+     {
+      "k": "AFO",
+      "x": 0.73,
+      "y": 0.695
+     }
+    ]
+   },
+   {
+    "ses": "Üç kavramı ayıran soru düzelmenin nasıl olduğudur: kendiliği",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.13,
+     0.105,
+     0.885,
+     0.19
+    ],
+    "sekil": "üç kavramın başlık şeridi",
+    "yol": [
+     {
+      "k": "kendiliğinden",
+      "x": 0.255,
+      "y": 0.15
+     },
+     {
+      "k": "yeniden örgütlenmesiyle",
+      "x": 0.505,
+      "y": 0.15
+     },
+     {
+      "k": "eldeki kapasitenin",
+      "x": 0.76,
+      "y": 0.15
+     }
+    ]
+   },
+   {
+    "ses": "Şemanın altındaki zaman şeridi dört dönemi sıralar: ilk günl",
+    "dosya": 0,
+    "sayfa": 9,
+    "kutu": [
+     0.04,
+     0.775,
+     0.965,
+     0.895
+    ],
+    "sekil": "dönemlerin zaman şeridi",
+    "yol": [
+     {
+      "k": "akut",
+      "x": 0.165,
+      "y": 0.835
+     },
+     {
+      "k": "erken subakut",
+      "x": 0.39,
+      "y": 0.835
+     },
+     {
+      "k": "geç subakut",
+      "x": 0.62,
+      "y": 0.835
+     },
+     {
+      "k": "kronik",
+      "x": 0.85,
+      "y": 0.835
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnme rehabilitasyonunda zamanlamanın ilk kuralı şudur: ilk y",
+    "dosya": 0,
+    "sayfa": 10,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Hoca gerekçeyi şöyle anlattı: ilk yirmi dört saatteki yoğun ",
+    "dosya": 0,
+    "sayfa": 10,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Rehabilitasyon, hastanın tıbbi durumu ve hemodinamik stabili",
+    "dosya": 0,
+    "sayfa": 10,
+    "kutu": [
+     0.075,
+     0.265,
+     0.24,
+     0.345
+    ]
+   },
+   {
+    "ses": "Mobilizasyon ve rehabilitasyon aktiviteleri hastanın toleran",
+    "dosya": 0,
+    "sayfa": 10,
+    "kutu": [
+     0.075,
+     0.36,
+     0.24,
+     0.405
+    ]
+   },
+   {
+    "ses": "Hocanın örneğinde bazı hastalar dengeye kavuşunca desteksiz ",
+    "dosya": 0,
+    "sayfa": 10
+   },
+   {
+    "ses": "En hızlı iyileşme ilk üç ayda olur, iyileşme iki yıla kadar ",
+    "dosya": 0,
+    "sayfa": 10,
+    "kutu": [
+     0.075,
+     0.42,
+     0.24,
+     0.465
+    ]
+   },
+   {
+    "ses": "Slayttaki kılavuz görseli inme sonrası iyileşmenin dört teme",
+    "dosya": 0,
+    "sayfa": 10,
+    "kutu": [
+     0.27,
+     0.26,
+     0.97,
+     0.39
+    ],
+    "sekil": "kılavuz görseli: dört temel adım başlığı"
+   },
+   {
+    "ses": "İlk iki adım erken hareket ve yoğun pratiktir: yirmi dört il",
+    "dosya": 0,
+    "sayfa": 10,
+    "kutu": [
+     0.27,
+     0.41,
+     0.617,
+     0.868
+    ],
+    "sekil": "kılavuz görseli: erken hareket ve yoğun pratik kartları",
+    "yol": [
+     {
+      "k": "erken hareket",
+      "x": 0.355,
+      "y": 0.455
+     },
+     {
+      "k": "yoğun pratik",
+      "x": 0.53,
+      "y": 0.455
+     },
+     {
+      "k": "yirmi dört",
+      "x": 0.355,
+      "y": 0.8
+     },
+     {
+      "k": "hedefe yönelik",
+      "x": 0.53,
+      "y": 0.8
+     }
+    ]
+   },
+   {
+    "ses": "Son iki adım denge ve güvenlik ile ruh sağlığıdır: denge egz",
+    "dosya": 0,
+    "sayfa": 10,
+    "kutu": [
+     0.62,
+     0.41,
+     0.968,
+     0.868
+    ],
+    "sekil": "kılavuz görseli: denge-güvenlik ve ruh sağlığı kartları",
+    "yol": [
+     {
+      "k": "denge ve güvenlik",
+      "x": 0.705,
+      "y": 0.455
+     },
+     {
+      "k": "ruh sağlığı",
+      "x": 0.88,
+      "y": 0.455
+     },
+     {
+      "k": "denge egzersizi",
+      "x": 0.705,
+      "y": 0.8
+     },
+     {
+      "k": "depresyon",
+      "x": 0.88,
+      "y": 0.8
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmenin tedavi süreci slaytta bir akış şeması olarak verilir",
+    "dosya": 0,
+    "sayfa": 11,
+    "resim": 0,
+    "sekil": "tedavi süreci akış şeması"
+   },
+   {
+    "ses": "İlk durak akut bakımdır: hasta bir ile iki hafta nöroşirürji",
+    "dosya": 0,
+    "sayfa": 11,
+    "kutu": [
+     0.32,
+     0.27,
+     0.44,
+     0.46
+    ],
+    "sekil": "akış şeması: akut bakım durağı",
+    "yol": [
+     {
+      "k": "akut bakım",
+      "x": 0.38,
+      "y": 0.295
+     },
+     {
+      "k": "bir ile iki hafta",
+      "x": 0.38,
+      "y": 0.435
+     }
+    ]
+   },
+   {
+    "ses": "Hocanın açıklamasıyla hemorajik inmeyi genellikle beyin cerr",
+    "dosya": 0,
+    "sayfa": 11,
+    "kutu": [
+     0.32,
+     0.27,
+     0.44,
+     0.46
+    ],
+    "sekil": "akış şeması: akut bakım durağı",
+    "yol": [
+     {
+      "k": "beyin cerrahisi",
+      "x": 0.38,
+      "y": 0.345
+     },
+     {
+      "k": "nöroloji",
+      "x": 0.38,
+      "y": 0.393
+     }
+    ]
+   },
+   {
+    "ses": "Akut bakımdan aşağı inen küçük ok ölümü gösterir; hoca olay ",
+    "dosya": 0,
+    "sayfa": 11,
+    "kutu": [
+     0.47,
+     0.325,
+     0.54,
+     0.495
+    ],
+    "sekil": "akış şeması: ölüm oku"
+   },
+   {
+    "ses": "İkinci durak subakut bakımdır: hasta fizik tedavi ve rehabil",
+    "dosya": 0,
+    "sayfa": 11,
+    "kutu": [
+     0.605,
+     0.26,
+     0.775,
+     0.405
+    ],
+    "sekil": "akış şeması: subakut bakım durağı",
+    "yol": [
+     {
+      "k": "subakut bakım",
+      "x": 0.69,
+      "y": 0.29
+     },
+     {
+      "k": "bir ile iki ay",
+      "x": 0.69,
+      "y": 0.38
+     }
+    ]
+   },
+   {
+    "ses": "Üçüncü durak eve dönüş, dördüncüsü topluma dönüştür: eski iş",
+    "dosya": 0,
+    "sayfa": 11,
+    "kutu": [
+     0.28,
+     0.565,
+     0.73,
+     0.765
+    ],
+    "sekil": "akış şeması: eve dönüş ve topluma dönüş durakları",
+    "yol": [
+     {
+      "k": "eve dönüş",
+      "x": 0.675,
+      "y": 0.62
+     },
+     {
+      "k": "topluma dönüş",
+      "x": 0.365,
+      "y": 0.59
+     },
+     {
+      "k": "eski işe",
+      "x": 0.365,
+      "y": 0.64
+     },
+     {
+      "k": "yeni iş",
+      "x": 0.365,
+      "y": 0.69
+     },
+     {
+      "k": "sosyal birey",
+      "x": 0.365,
+      "y": 0.74
+     }
+    ]
+   },
+   {
+    "ses": "Şemanın en altındaki kalın okun üzerinde rehabilitasyon yaza",
+    "dosya": 0,
+    "sayfa": 11,
+    "kutu": [
+     0.245,
+     0.745,
+     0.755,
+     0.9
+    ],
+    "sekil": "akış şeması: bütün durakları saran ayraç ve rehabilitasyon oku"
+   },
+   {
+    "ses": "Hoca taburculuktan sonra hastanın aralıklı kontrollere çağrı",
+    "dosya": 0,
+    "sayfa": 11
+   }
+  ],
+  [
+   {
+    "ses": "İnmede akut dönem rehabilitasyonu iki işi birlikte yapar: ha",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Slayttaki on iki maddeden dördü kalın yazılmıştır: erken mob",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     1,
+     2,
+     3,
+     6
+    ]
+   },
+   {
+    "ses": "Eklem hareket açıklığı, kısaca EHA, eklemin yapabildiği hare",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Pozisyonlama, hastanın yatakta ve otururken doğru konumda tu",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda pozisyonlamaya geç dönemde başlandığı öncülü ",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Sık pozisyon değişikliği de listededir, çünkü uzun süre hare",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Hoca sık pozisyon değişikliğini önemli saydı ve bunun hastay",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Ortostatik toleransı artırmak için oturma dengesi egzersizle",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Ortostatik hipotansiyon, kaldırılan hastanın tansiyonunun dü",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     5
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmede akut dönem rehabilitasyonunun kalan maddeleri yutma, ",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "ses": "Yutma değerlendirilir; hocanın anlattığına göre kliniğe kabu",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Beslenme ve hidrasyon, yani sıvı alımı düzenlenir; disfajili",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     8
+    ]
+   },
+   {
+    "ses": "Hoca beslenme ve hidrasyonun düzenlenmesini ve psikolojik de",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     8,
+     11
+    ]
+   },
+   {
+    "ses": "Kendine bakım, mobilite ve ambulasyon aktivitelerinin eğitim",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     9
+    ]
+   },
+   {
+    "ses": "Mesane ve bağırsak programı uygulanır, yani idrar ve dışkı b",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     10
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: inmede mesane ve bağırs",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     10
+    ]
+   },
+   {
+    "ses": "Son iki madde psikolojik destek ile depresyonun tanısı ve te",
+    "dosya": 0,
+    "sayfa": 12,
+    "madde": [
+     11,
+     12
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmenin subakut ve kronik dönem rehabilitasyonunda temel hed",
+    "dosya": 0,
+    "sayfa": 13,
+    "madde": [
+     0,
+     1
+    ]
+   },
+   {
+    "ses": "Üst ve alt ekstremitede kuvvetlendirme egzersizleri yapılır;",
+    "dosya": 0,
+    "sayfa": 13,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Transfer eğitimi verilir, sonra paralel barda ambulasyon eği",
+    "dosya": 0,
+    "sayfa": 13,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Denge ve koordinasyon çalışmaları yapılır, üst ekstremite fo",
+    "dosya": 0,
+    "sayfa": 13,
+    "madde": [
+     6,
+     7
+    ]
+   },
+   {
+    "ses": "Günlük yaşam aktivitelerinde ortez ve yardımcı cihaz kullanı",
+    "dosya": 0,
+    "sayfa": 13,
+    "madde": [
+     8
+    ]
+   },
+   {
+    "ses": "Son madde iş-uğraşı terapisidir.",
+    "dosya": 0,
+    "sayfa": 13,
+    "madde": [
+     9
+    ]
+   },
+   {
+    "ses": "Hoca iş-uğraşı terapisinin subakut ve kronik dönemde önem ka",
+    "dosya": 0,
+    "sayfa": 13,
+    "madde": [
+     9
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnme komplikasyonları slaytta iki kutuda verilir: ilk saatle",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.205,
+     0.935,
+     0.295
+    ],
+    "sekil": "iki komplikasyon kutusunun başlıkları",
+    "yol": [
+     {
+      "k": "akut dönem",
+      "x": 0.29,
+      "y": 0.235
+     },
+     {
+      "k": "kronik dönem",
+      "x": 0.73,
+      "y": 0.235
+     }
+    ]
+   },
+   {
+    "ses": "Akut dönem kutusunda altı grup vardır; hoca ilk haftasında a",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.205,
+     0.49,
+     0.295
+    ],
+    "sekil": "akut dönem komplikasyonları kutusunun başlığı"
+   },
+   {
+    "ses": "Nörolojik grupta serebral ödem, hemorajik dönüşüm, nöbet ve ",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.3,
+     0.49,
+     0.37
+    ],
+    "sekil": "akut kutu: nörolojik satırı"
+   },
+   {
+    "ses": "Hemorajik dönüşüm, iskemik alanın içine sonradan kanama olma",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.3,
+     0.49,
+     0.37
+    ],
+    "sekil": "akut kutu: nörolojik satırı",
+    "yol": [
+     {
+      "k": "Hemorajik dönüşüm",
+      "x": 0.285,
+      "y": 0.347
+     }
+    ]
+   },
+   {
+    "ses": "Solunumsal grupta disfaji, aspirasyon ve aspirasyon pnömonis",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.37,
+     0.49,
+     0.445
+    ],
+    "sekil": "akut kutu: solunumsal satırı"
+   },
+   {
+    "ses": "Tromboembolik grupta derin ven trombozu ve pulmoner emboli s",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.445,
+     0.49,
+     0.52
+    ],
+    "sekil": "akut kutu: tromboembolik satırı"
+   },
+   {
+    "ses": "Kardiyovasküler grupta aritmiler, kan basıncı dalgalanmaları",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.52,
+     0.49,
+     0.595
+    ],
+    "sekil": "akut kutu: kardiyovasküler satırı"
+   },
+   {
+    "ses": "Enfeksiyonlar üriner sistem enfeksiyonu ile pnömonidir; hast",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.595,
+     0.49,
+     0.67
+    ],
+    "sekil": "akut kutu: enfeksiyonlar satırı"
+   },
+   {
+    "ses": "Hareketsizliğe bağlı grupta bası yarası, eklem hareket açıkl",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.67,
+     0.49,
+     0.745
+    ],
+    "sekil": "akut kutu: hareketsizliğe bağlı satırı"
+   },
+   {
+    "ses": "Kontraktür, hareket ettirilmeyen eklemin kalıcı olarak kısıt",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.065,
+     0.67,
+     0.49,
+     0.745
+    ],
+    "sekil": "akut kutu: hareketsizliğe bağlı satırı",
+    "yol": [
+     {
+      "k": "Kontraktür",
+      "x": 0.43,
+      "y": 0.713
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmenin kronik dönem komplikasyonları da altı gruptur.",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.205,
+     0.935,
+     0.295
+    ],
+    "sekil": "kronik dönem komplikasyonları kutusunun başlığı"
+   },
+   {
+    "ses": "Motor grupta spastisite, kontraktür, kas kuvvetinde azalma v",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.3,
+     0.935,
+     0.365
+    ],
+    "sekil": "kronik kutu: motor satırı"
+   },
+   {
+    "ses": "Patolojik sinerji, bir eklemi oynatmak isterken kolun ya da ",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.3,
+     0.935,
+     0.365
+    ],
+    "sekil": "kronik kutu: motor satırı",
+    "yol": [
+     {
+      "k": "Patolojik sinerji",
+      "x": 0.865,
+      "y": 0.347
+     }
+    ]
+   },
+   {
+    "ses": "Hocanın tanımıyla spastisite hıza bağımlı artmış germe refle",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.3,
+     0.935,
+     0.365
+    ],
+    "sekil": "kronik kutu: motor satırı",
+    "yol": [
+     {
+      "k": "spastisite",
+      "x": 0.625,
+      "y": 0.347
+     }
+    ]
+   },
+   {
+    "ses": "Omuz ve ekstremite sorunları hemiplejik omuz ağrısı, omuz su",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.365,
+     0.935,
+     0.45
+    ],
+    "sekil": "kronik kutu: omuz ve ekstremite sorunları satırı"
+   },
+   {
+    "ses": "Kompleks bölgesel ağrı sendromu, ekstremitede ağrıya şişlik ",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.365,
+     0.935,
+     0.45
+    ],
+    "sekil": "kronik kutu: omuz ve ekstremite sorunları satırı",
+    "yol": [
+     {
+      "k": "Kompleks bölgesel ağrı sendromu",
+      "x": 0.87,
+      "y": 0.405
+     }
+    ]
+   },
+   {
+    "ses": "Subluksasyon eklemin kısmi çıkığıdır; hoca bunun kas güçsüzl",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.365,
+     0.935,
+     0.45
+    ],
+    "sekil": "kronik kutu: omuz ve ekstremite sorunları satırı",
+    "yol": [
+     {
+      "k": "Subluksasyon",
+      "x": 0.785,
+      "y": 0.405
+     }
+    ]
+   },
+   {
+    "ses": "Denge ve mobilite grubunda yürüme bozukluğu, postüral instab",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.45,
+     0.935,
+     0.52
+    ],
+    "sekil": "kronik kutu: denge ve mobilite satırı"
+   },
+   {
+    "ses": "Ağrı ve duyu bozuklukları inme sonrası santral ağrı, pareste",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.52,
+     0.935,
+     0.59
+    ],
+    "sekil": "kronik kutu: ağrı ve duyu bozuklukları satırı"
+   },
+   {
+    "ses": "Kognitif ve psikososyal grupta depresyon, anksiyete, bilişse",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.59,
+     0.935,
+     0.66
+    ],
+    "sekil": "kronik kutu: kognitif ve psikososyal satırı"
+   },
+   {
+    "ses": "Diğer başlığında üriner inkontinans, kabızlık, cinsel işlev ",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.66,
+     0.935,
+     0.745
+    ],
+    "sekil": "kronik kutu: diğer satırı"
+   },
+   {
+    "ses": "Hoca kronik dönemde iki komplikasyonu önemli saydı: rehabili",
+    "dosya": 0,
+    "sayfa": 14,
+    "kutu": [
+     0.5,
+     0.3,
+     0.935,
+     0.45
+    ],
+    "sekil": "kronik kutu: motor ile omuz satırları",
+    "yol": [
+     {
+      "k": "spastisite",
+      "x": 0.625,
+      "y": 0.347
+     },
+     {
+      "k": "hemiplejik omuz ağrısı",
+      "x": 0.665,
+      "y": 0.405
+     }
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda üst ekstremite komplikasyonları, derin ven tr",
+    "dosya": 0,
+    "sayfa": 14,
+    "resim": 0,
+    "sekil": "komplikasyon kutuları",
+    "yol": [
+     {
+      "k": "üst ekstremite",
+      "x": 0.675,
+      "y": 0.383
+     },
+     {
+      "k": "derin ven trombozu",
+      "x": 0.215,
+      "y": 0.49
+     },
+     {
+      "k": "bağırsak",
+      "x": 0.715,
+      "y": 0.703
+     },
+     {
+      "k": "bası yarası",
+      "x": 0.19,
+      "y": 0.713
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmede uzun dönem takibin dört ilkesi vardır.",
+    "dosya": 0,
+    "sayfa": 15,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Stabil bir klinik iyileşme sağlanana kadar takip kesilmez.",
+    "dosya": 0,
+    "sayfa": 15,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Hasta komplikasyonlar açısından izlenir.",
+    "dosya": 0,
+    "sayfa": 15,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Ciddi spastisitede hasta ağızdan kas gevşeticiler ve kas içi",
+    "dosya": 0,
+    "sayfa": 15,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Hedef, olabilen en kısa sürede kontrolü hastaya geri vermekt",
+    "dosya": 0,
+    "sayfa": 15,
+    "madde": [
+     5
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "İnmeden sonra ikinci hastalığa, omurilik yaralanmasına geçiy",
+    "dosya": 0,
+    "sayfa": 16,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Omurilik yaralanması, kişinin ve çevresinin yaşamını aniden ",
+    "dosya": 0,
+    "sayfa": 16,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Tanımı şöyledir: kafatası tabanındaki foramen magnumdan kaud",
+    "dosya": 0,
+    "sayfa": 16,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Slayttaki çizim omuriliği yukarıdan aşağıya bölümleriyle ver",
+    "dosya": 0,
+    "sayfa": 16,
+    "resim": 0,
+    "sekil": "omuriliğin bölümleri çizimi",
+    "yol": [
+     {
+      "k": "servikal",
+      "x": 0.815,
+      "y": 0.4
+     },
+     {
+      "k": "torakal",
+      "x": 0.815,
+      "y": 0.535
+     },
+     {
+      "k": "lomber",
+      "x": 0.81,
+      "y": 0.635
+     },
+     {
+      "k": "sakral-koksigeal",
+      "x": 0.845,
+      "y": 0.672
+     },
+     {
+      "k": "kauda ekina",
+      "x": 0.81,
+      "y": 0.765
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanmasında ortalama yaş üçüncü ve dördüncü deka",
+    "dosya": 0,
+    "sayfa": 17,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Nedenler travmatik ve nontravmatik olarak ikiye ayrılır; en ",
+    "dosya": 0,
+    "sayfa": 17,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Slayttaki pasta grafik travmatik nedenleri sıralar: trafik k",
+    "dosya": 0,
+    "sayfa": 17,
+    "resim": 0,
+    "sekil": "etiyoloji pasta grafiği",
+    "yol": [
+     {
+      "k": "trafik kazası",
+      "x": 0.26,
+      "y": 0.32
+     },
+     {
+      "k": "düşme",
+      "x": 0.325,
+      "y": 0.565
+     },
+     {
+      "k": "şiddet",
+      "x": 0.27,
+      "y": 0.675
+     },
+     {
+      "k": "spor",
+      "x": 0.2,
+      "y": 0.61
+     }
+    ]
+   },
+   {
+    "ses": "Kalan yüzde sekiz diğer nedenlerdir; grafikte trafik kazası ",
+    "dosya": 0,
+    "sayfa": 17,
+    "resim": 0,
+    "sekil": "etiyoloji pasta grafiği",
+    "yol": [
+     {
+      "k": "yüzde sekiz",
+      "x": 0.175,
+      "y": 0.52
+     },
+     {
+      "k": "kırmızı çerçeve",
+      "x": 0.48,
+      "y": 0.42
+     }
+    ]
+   },
+   {
+    "ses": "Hoca düşme denince yüksekten düşmeyi ve kontrolsüz balıklama",
+    "dosya": 0,
+    "sayfa": 17,
+    "resim": 0,
+    "sekil": "etiyoloji pasta grafiği",
+    "yol": [
+     {
+      "k": "düşme",
+      "x": 0.325,
+      "y": 0.565
+     },
+     {
+      "k": "şiddet",
+      "x": 0.27,
+      "y": 0.675
+     }
+    ]
+   },
+   {
+    "ses": "Nontravmatik nedenler enfeksiyon, transvers miyelit, tümör v",
+    "dosya": 0,
+    "sayfa": 17,
+    "madde": [
+     2
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanması kabaca iki türe ayrılır: tetrapleji ve ",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Tetrapleji, T1 ve üzerindeki omurilik hasarında olur.",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Tetraplejide dört ekstremite, solunum sistemi ve pelvik orga",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Parapleji, T2 ve altındaki segmentlerin zedelenmesiyle olur;",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "İki türde de motor, duyu ve otonom sistem bozuklukları eşlik",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     4,
+     6
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: omurilik yaralanmasında",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     4,
+     6
+    ]
+   },
+   {
+    "ses": "Slayttaki çizimde etkilenen bölge turkuaz boyanmıştır: C4 ya",
+    "dosya": 0,
+    "sayfa": 18,
+    "resim": 0,
+    "sekil": "yaralanma seviyesi figürleri",
+    "yol": [
+     {
+      "k": "C4",
+      "x": 0.822,
+      "y": 0.33
+     },
+     {
+      "k": "C6",
+      "x": 0.852,
+      "y": 0.46
+     }
+    ]
+   },
+   {
+    "ses": "T6 yaralanmasında göğüs ortasından aşağısı, L1 yaralanmasınd",
+    "dosya": 0,
+    "sayfa": 18,
+    "resim": 0,
+    "sekil": "yaralanma seviyesi figürleri",
+    "yol": [
+     {
+      "k": "T6",
+      "x": 0.885,
+      "y": 0.6
+     },
+     {
+      "k": "L1",
+      "x": 0.915,
+      "y": 0.72
+     }
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda hangi seviyelerin komplet lezyonunun paraplej",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Aynı çıkmış sorudaki servikal yedi ise tetrapleji yapar, çün",
+    "dosya": 0,
+    "sayfa": 18,
+    "madde": [
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanmasının bulguları üç başlıkta toplanır: moto",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     1,
+     6,
+     11
+    ]
+   },
+   {
+    "ses": "Üçünün ortak kuralı, bulguların lezyon seviyesinin altında o",
+    "dosya": 0,
+    "sayfa": 19,
+    "resim": 0,
+    "sekil": "lezyon seviyesinin altı boyalı insan figürü",
+    "yol": [
+     {
+      "k": "çizginin altı",
+      "x": 0.565,
+      "y": 0.6
+     }
+    ]
+   },
+   {
+    "ses": "Motor etkilenimde lezyon seviyesinin altında kas kuvvetinde ",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Omurilik yaralanmasında motor tablo zamanla değişir; bunu ik",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Akut dönemde spinal şoka bağlı flask paralizi ve arefleksi g",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Flask paralizi kasın gevşek, tonussuz felcidir; arefleksi re",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Hoca spinal şok döneminin genellikle ilk haftalar olduğunu v",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "İzleyen dönemde üst motor nöron bulguları ortaya çıkar: spas",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Yani aynı hastada önce refleks alınmaz, haftalar sonra refle",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda üst motor nöron lezyonunun bulguları sorulmuş",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Aynı çıkmış soruda kas tonusunda azalma yanlış öncüldü, çünk",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanmasında duyusal etkilenim de lezyon seviyesi",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Yüzeyel duyularda, yani ağrı, ısı ve dokunmada azalma ya da ",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     8
+    ]
+   },
+   {
+    "ses": "Derin duyu kaybı da görülür: propriosepsiyon ve vibrasyon, y",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     9
+    ]
+   },
+   {
+    "ses": "Parestezi ve dizestezi gibi duyusal belirtiler eklenebilir.",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     10
+    ]
+   },
+   {
+    "ses": "Otonom etkilenim dört maddedir; hoca bunun sempatik ve paras",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     11
+    ]
+   },
+   {
+    "ses": "Birincisi nörojenik mesane ve bağırsak disfonksiyonudur: mes",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "İkincisi cinsel fonksiyon bozukluğudur.",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     13
+    ]
+   },
+   {
+    "ses": "Üçüncüsü kardiyovasküler disfonksiyondur: ortostatik hipotan",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     14,
+     15
+    ]
+   },
+   {
+    "ses": "Dördüncüsü termoregülasyon ve terleme bozukluklarıdır; termo",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     16
+    ]
+   },
+   {
+    "ses": "Slayttaki çizimin üç şeridi bu başlıkları simgeler: çarpılı ",
+    "dosya": 0,
+    "sayfa": 19,
+    "resim": 0,
+    "sekil": "motor, duyu ve otonom şeritleri",
+    "yol": [
+     {
+      "k": "çarpılı kas",
+      "x": 0.83,
+      "y": 0.36
+     },
+     {
+      "k": "tekerlekli sandalye",
+      "x": 0.945,
+      "y": 0.375
+     },
+     {
+      "k": "sıcak",
+      "x": 0.915,
+      "y": 0.54
+     },
+     {
+      "k": "soğuk",
+      "x": 0.86,
+      "y": 0.54
+     },
+     {
+      "k": "iğne",
+      "x": 0.965,
+      "y": 0.54
+     },
+     {
+      "k": "mesane",
+      "x": 0.765,
+      "y": 0.745
+     },
+     {
+      "k": "bağırsak",
+      "x": 0.825,
+      "y": 0.745
+     }
+    ]
+   },
+   {
+    "ses": "Hoca otonom disrefleksiyi omurilik yaralanmasında görülen en",
+    "dosya": 0,
+    "sayfa": 19,
+    "madde": [
+     14,
+     15
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanması, olaydan sonraki ilk yetmiş iki saat iç",
+    "dosya": 0,
+    "sayfa": 20,
+    "madde": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "ASIA, Amerikan Omurilik Yaralanması Derneği'nin kısaltmasıdı",
+    "dosya": 0,
+    "sayfa": 20,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Skalaya göre komplet yaralanma A, inkomplet yaralanma B, C v",
+    "dosya": 0,
+    "sayfa": 20,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "ASIA sınıflaması hem prognoz hem de takip açısından önemlidi",
+    "dosya": 0,
+    "sayfa": 20,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Hocanın eklediğine göre skala A'dan E'ye beş gruptur: A en k",
+    "dosya": 0,
+    "sayfa": 20,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Örneği de şuydu: Türkiye'de bir hekim hastaya A dediğinde Am",
+    "dosya": 0,
+    "sayfa": 20,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Slayttaki küçük form bu muayenenin kâğıdıdır: sağ ve sol içi",
+    "dosya": 0,
+    "sayfa": 20,
+    "resim": 0,
+    "sekil": "ASIA muayene formu",
+    "yol": [
+     {
+      "k": "motor puanları",
+      "x": 0.648,
+      "y": 0.34
+     },
+     {
+      "k": "duyu noktalarının",
+      "x": 0.7,
+      "y": 0.45
+     }
+    ]
+   },
+   {
+    "ses": "Hoca muayeneyi ayrıntılı anlatmadı; skalanın adını ve omuril",
+    "dosya": 0,
+    "sayfa": 20,
+    "madde": [
+     3,
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Komplet ile inkomplet yaralanmayı ayıran ölçüt sakral korunm",
+    "dosya": 0,
+    "sayfa": 21,
+    "resim": 0,
+    "sekil": "komplet–inkomplet şeması",
+    "yol": [
+     {
+      "k": "S4 ve S5",
+      "x": 0.43,
+      "y": 0.365
+     }
+    ]
+   },
+   {
+    "ses": "İnkomplet yaralanmada S4 ve S5'te duyu ya da motor fonksiyon",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.17,
+     0.105,
+     0.47,
+     0.61
+    ],
+    "sekil": "inkomplet yaralanma sütunu",
+    "yol": [
+     {
+      "k": "S4 ve S5",
+      "x": 0.43,
+      "y": 0.365
+     },
+     {
+      "k": "sakral korunma vardır",
+      "x": 0.37,
+      "y": 0.575
+     }
+    ]
+   },
+   {
+    "ses": "Komplet yaralanmada S4 ve S5'te ne duyu ne de motor fonksiyo",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.525,
+     0.105,
+     0.83,
+     0.6
+    ],
+    "sekil": "komplet yaralanma sütunu",
+    "yol": [
+     {
+      "k": "S4 ve S5",
+      "x": 0.79,
+      "y": 0.365
+     },
+     {
+      "k": "sakral korunma yoktur",
+      "x": 0.725,
+      "y": 0.565
+     }
+    ]
+   },
+   {
+    "ses": "Neye bakıldığı da slaytta yazar: duyu için anal bölgenin duy",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.32,
+     0.715,
+     0.67,
+     0.835
+    ],
+    "sekil": "duyu ve motor için neye bakıldığı satırları",
+    "yol": [
+     {
+      "k": "duyu için",
+      "x": 0.36,
+      "y": 0.75
+     },
+     {
+      "k": "motor için",
+      "x": 0.365,
+      "y": 0.805
+     }
+    ]
+   },
+   {
+    "ses": "Hocanın açıklamasıyla sakral bölge omuriliğin en alt ucudur.",
+    "dosya": 0,
+    "sayfa": 21
+   },
+   {
+    "ses": "En alt uca ileti ulaşabiliyorsa yaralanma omuriliği tümüyle ",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.17,
+     0.105,
+     0.47,
+     0.61
+    ],
+    "sekil": "inkomplet yaralanma sütunu",
+    "yol": [
+     {
+      "k": "inkomplet sözcüğü",
+      "x": 0.275,
+      "y": 0.19
+     }
+    ]
+   },
+   {
+    "ses": "Örneğin bacaklarını hiç oynatamayan bir hasta anal bölgedeki",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.17,
+     0.105,
+     0.47,
+     0.61
+    ],
+    "sekil": "inkomplet yaralanma sütunu",
+    "yol": [
+     {
+      "k": "inkomplettir",
+      "x": 0.275,
+      "y": 0.19
+     }
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda iki kez sorulmuştur: sakral korunma ",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.525,
+     0.105,
+     0.83,
+     0.6
+    ],
+    "sekil": "komplet yaralanma sütunu",
+    "yol": [
+     {
+      "k": "sakral korunma yoksa",
+      "x": 0.725,
+      "y": 0.565
+     },
+     {
+      "k": "komplettir",
+      "x": 0.64,
+      "y": 0.19
+     }
+    ]
+   },
+   {
+    "ses": "Çıkmış sorulardan birinde, sakral korunma yokken hastanın in",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.525,
+     0.105,
+     0.83,
+     0.6
+    ],
+    "sekil": "komplet yaralanma sütunu"
+   },
+   {
+    "ses": "Hoca bu sayfadan akılda kalması gerekenin komplet ve inkompl",
+    "dosya": 0,
+    "sayfa": 21,
+    "kutu": [
+     0.18,
+     0.105,
+     0.735,
+     0.275
+    ],
+    "sekil": "inkomplet ve komplet başlık kutuları"
+   }
+  ],
+  [
+   {
+    "ses": "İnkomplet omurilik yaralanmaları, kesitte hangi bölgenin has",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Santral kord sendromu çoğunlukla önceden spondilozu olan kiş",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Spondiloz omurganın dejeneratif değişikliğidir; hiperekstans",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Hoca tipik hastanın ileri yaşta olduğunu söyledi.",
+    "dosya": 0,
+    "sayfa": 22
+   },
+   {
+    "ses": "Ayırt edici bulgu şudur: üst ekstremitelerdeki motor kayıp a",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Nörojenik mesane bozukluğu ve lezyon seviyesinin altında duy",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Santral kord sendromunun prognozu daha iyidir.",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Slayttaki çizimde omurilik kesitinin ortası taralıdır; insan",
+    "dosya": 0,
+    "sayfa": 22,
+    "resim": 1,
+    "sekil": "santral kord sendromu çizimi",
+    "yol": [
+     {
+      "k": "ortası",
+      "x": 0.745,
+      "y": 0.23
+     },
+     {
+      "k": "omuzlar",
+      "x": 0.872,
+      "y": 0.225
+     },
+     {
+      "k": "bacaklar",
+      "x": 0.872,
+      "y": 0.43
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Brown-Séquard sendromunda lezyon tarafında propriosepsiyon, ",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Lezyonla aynı taraf için ipsilateral, karşı taraf için kontr",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Slayttaki kesit çiziminde omuriliğin bir yarısı koyu boyanmı",
+    "dosya": 0,
+    "sayfa": 22,
+    "resim": 0,
+    "sekil": "Brown-Séquard kesit çizimi",
+    "yol": [
+     {
+      "k": "bir yarısı",
+      "x": 0.7,
+      "y": 0.69
+     }
+    ]
+   },
+   {
+    "ses": "Bu tanıma tam uyan saf formu nadirdir.",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Pratikte vücudun bir yarısı öbür yarısına göre daha fazla et",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Fazla etkilenen tarafta motor kayıp daha çoktur; öbür taraft",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Daha az etkilenen tarafta iğne batırma duyusu azalmıştır.",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "İnsan figüründe lezyon hizasında, lezyon tarafındaki dar şer",
+    "dosya": 0,
+    "sayfa": 22,
+    "resim": 0,
+    "sekil": "Brown-Séquard insan figürü",
+    "yol": [
+     {
+      "k": "dar şerit",
+      "x": 0.871,
+      "y": 0.688
+     }
+    ]
+   },
+   {
+    "ses": "Lezyon tarafındaki bacakta propriosepsiyon ve vibrasyon, kar",
+    "dosya": 0,
+    "sayfa": 22,
+    "resim": 0,
+    "sekil": "Brown-Séquard insan figürü",
+    "yol": [
+     {
+      "k": "Lezyon tarafındaki bacakta",
+      "x": 0.874,
+      "y": 0.8
+     },
+     {
+      "k": "karşı bacakta",
+      "x": 0.855,
+      "y": 0.8
+     }
+    ]
+   },
+   {
+    "ses": "Örneğin hasar omuriliğin sağ yarısındaysa sağ bacak güçsüzdü",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Hoca Brown-Séquard sendromunun sınavlarda sıklıkla sorulan, ",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Saf formu nadir olsa da hoca Brown-Séquard sendromunun klini",
+    "dosya": 0,
+    "sayfa": 22,
+    "madde": [
+     3,
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Anterior kord sendromunda omuriliğin ön kolonunda hasar vard",
+    "dosya": 0,
+    "sayfa": 23,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Motor fonksiyon ile ağrı ve ısı duyusu kaybolur, proprioseps",
+    "dosya": 0,
+    "sayfa": 23,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Hoca nedenini açıkladı: derin duyu arka kolonda taşınır ve a",
+    "dosya": 0,
+    "sayfa": 23,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Anterior kord sendromu, prognozu en kötü olan inkomplet omur",
+    "dosya": 0,
+    "sayfa": 23,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Hoca kötü prognozu motor liflerin çoğunun etkilenmesine bağl",
+    "dosya": 0,
+    "sayfa": 23,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Slayttaki kesitte ön taraftaki büyük bölüm kırmızıya boyanmı",
+    "dosya": 0,
+    "sayfa": 23,
+    "resim": 0,
+    "sekil": "anterior kord sendromu kesiti",
+    "yol": [
+     {
+      "k": "ön taraftaki",
+      "x": 0.21,
+      "y": 0.49
+     },
+     {
+      "k": "arkadaki",
+      "x": 0.21,
+      "y": 0.41
+     }
+    ]
+   },
+   {
+    "ses": "Posterior kord sendromunda arka kolon yaralanır ve propriose",
+    "dosya": 0,
+    "sayfa": 23,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Posterior kord sendromu nadir görülür; slayttaki kesitte bu ",
+    "dosya": 0,
+    "sayfa": 23,
+    "resim": 1,
+    "sekil": "posterior kord sendromu kesiti",
+    "yol": [
+     {
+      "k": "arka bölüm",
+      "x": 0.565,
+      "y": 0.775
+     }
+    ]
+   },
+   {
+    "ses": "Anterior ve posterior kord sendromu birbirinin tersidir: bir",
+    "dosya": 0,
+    "sayfa": 23,
+    "madde": [
+     2,
+     5
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Kauda ekina ve konus medullaris sendromları, omuriliğin en a",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     1,
+     3
+    ]
+   },
+   {
+    "ses": "Konus medullaris, spinal kordun sonlandığı bölgedir.",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Hocanın benzetmesiyle kauda ekina at kuyruğu demektir: konus",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Kauda ekina sendromu, L2 seviyesinden sonra kauda ekina lifl",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Klinik tabloda asimetrik kas gücü kaybı ve eşlik eden duyu k",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Sakral bölgede eyer tarzı hipoestezi, yani perine bölgesinde",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "İzole kauda ekina lezyonları alt motor nöron bulgularıyla se",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Konus medullaris sendromu genellikle alt ekstremitelerde sim",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Konus medullaris sendromunda üst ve alt motor nöron bulgular",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Klinik pratikte iki sendrom birlikte de görülebilir; hoca ki",
+    "dosya": 0,
+    "sayfa": 24,
+    "madde": [
+     2
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Konus medullaris ile kauda ekina sendromunun karşılaştırması",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.26,
+     0.285,
+     0.355,
+     0.695
+    ],
+    "tablo": true,
+    "sekil": "tablonun satır başlıkları: tutulum, klinik özellik, ayırıcı özellik"
+   },
+   {
+    "ses": "Soldaki çizimde omuriliğin sivrilen ucu konus medullaristir ",
+    "dosya": 0,
+    "sayfa": 25,
+    "kutu": [
+     0.085,
+     0.155,
+     0.255,
+     0.745
+    ],
+    "sekil": "omurilik ucu çizimi: konus ve kök demeti",
+    "yol": [
+     {
+      "k": "konus medullaristir",
+      "x": 0.133,
+      "y": 0.42
+     },
+     {
+      "k": "kauda ekinadır",
+      "x": 0.135,
+      "y": 0.58
+     }
+    ]
+   },
+   {
+    "ses": "Klinik özellik satırında konus medullaris için üç bulgu yaza",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.36,
+     0.39,
+     0.63,
+     0.565
+    ],
+    "tablo": true,
+    "sekil": "tablo: konus medullaris klinik özellik hücresi"
+   },
+   {
+    "ses": "Kauda ekina için de üç bulgu yazar: asimetrik, kök düzeyinde",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.638,
+     0.39,
+     0.915,
+     0.565
+    ],
+    "tablo": true,
+    "sekil": "tablo: kauda ekina klinik özellik hücresi"
+   },
+   {
+    "ses": "Radiküler ağrı, sinir kökünün yayıldığı hat boyunca hissedil",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.638,
+     0.47,
+     0.915,
+     0.51
+    ],
+    "tablo": true,
+    "sekil": "tablo: kauda ekina hücresinde radiküler ağrı satırı"
+   },
+   {
+    "ses": "Ayırıcı özellik satırı en belirleyici olanıdır: konus medull",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.36,
+     0.575,
+     0.63,
+     0.695
+    ],
+    "tablo": true,
+    "sekil": "tablo: konus medullaris ayırıcı özellik hücresi"
+   },
+   {
+    "ses": "Kauda ekinada ise arefleksi ve kas atrofisi gibi alt motor n",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.638,
+     0.575,
+     0.915,
+     0.695
+    ],
+    "tablo": true,
+    "sekil": "tablo: kauda ekina ayırıcı özellik hücresi"
+   },
+   {
+    "ses": "Hoca nedenini şöyle açıkladı: konus omuriliğin sonlandığı bö",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.36,
+     0.285,
+     0.63,
+     0.38
+    ],
+    "tablo": true,
+    "sekil": "tablo: konus medullaris tutulum hücresi"
+   },
+   {
+    "ses": "Özetle konus simetrik, erken mesane tutulumlu ve refleksleri",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.36,
+     0.39,
+     0.915,
+     0.695
+    ],
+    "tablo": true,
+    "sekil": "tablo: iki sendromun klinik ve ayırıcı özellik hücreleri"
+   },
+   {
+    "ses": "Tablonun altındaki ana mesaj ortak yanı verir: ikisinde de e",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.085,
+     0.765,
+     0.915,
+     0.87
+    ],
+    "tablo": true,
+    "sekil": "tablonun altındaki ana mesaj kutusu"
+   },
+   {
+    "ses": "Hoca kauda ekina ile konus medullaris ayrımının sınavlarda s",
+    "dosya": 0,
+    "sayfa": 25,
+    "resim": 0,
+    "kutu": [
+     0.36,
+     0.18,
+     0.915,
+     0.275
+    ],
+    "tablo": true,
+    "sekil": "tablonun iki sütun başlığı"
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanması rehabilitasyonu erken dönemde, yoğun ba",
+    "dosya": 0,
+    "sayfa": 26,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Erken dönemde hedef komplikasyonları önlemektir; sonra bu he",
+    "dosya": 0,
+    "sayfa": 26,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Hoca erken dönemde önlenmeye çalışılanları saydı: derin ven ",
+    "dosya": 0,
+    "sayfa": 26,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Ana hedef dört parçalıdır; ilk ikisi günlük yaşam aktivitele",
+    "dosya": 0,
+    "sayfa": 26,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Öteki ikisi yaşam kalitesini artırmak ve hastanın sosyal hay",
+    "dosya": 0,
+    "sayfa": 26,
+    "madde": [
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanmasında rehabilitasyon süreci, gelişebilecek",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Kontraktürü ve kas atrofisini önlemek için eklem hareket açı",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Bu cümle çıkmış sınavda doğru bir ifade olarak şıklarda ayne",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Kaslar aktif, aktif yardımlı ve progresif dirençli egzersizl",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Aktif yardımlı egzersizde hareketi terapist tamamlar, progre",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Paraplejik hastalarda üst ekstremite kaslarını kuvvetlendirm",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Çünkü bu kaslar tekerlekli sandalye kullanımında, ağırlık ak",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     8
+    ]
+   },
+   {
+    "ses": "Temiz aralıklı kateterizasyon, hastanın belirli aralıklarla ",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     8
+    ]
+   },
+   {
+    "ses": "Hoca paraplejik hastada üst ekstremite kaslarının kuvvetlend",
+    "dosya": 0,
+    "sayfa": 27,
+    "madde": [
+     7
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanmasında mobilite egzersizleri basamak basama",
+    "dosya": 0,
+    "sayfa": 28,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "İlk basamak yatak içi egzersizlerdir: yatakta dönme ve sırtü",
+    "dosya": 0,
+    "sayfa": 28,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Hoca oturma dengesinin önce destekli, sonra desteksiz çalışı",
+    "dosya": 0,
+    "sayfa": 28,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "Oturma dengesi kazanıldıktan sonra transfer eğitimine ve aya",
+    "dosya": 0,
+    "sayfa": 28,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Bunu tolere edebilen hastalarda uygun ortez seçilir ve paral",
+    "dosya": 0,
+    "sayfa": 28,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Uzun mesafede hareket için tekerlekli sandalye önemli bir ar",
+    "dosya": 0,
+    "sayfa": 28,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Sandalyede güvenle oturabilen hastaya sürme teknikleri, tran",
+    "dosya": 0,
+    "sayfa": 28,
+    "madde": [
+     8
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanmalı hastanın ne kadar yürüyebileceği yarala",
+    "dosya": 0,
+    "sayfa": 29,
+    "madde": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "T10 ve üzerindeki yaralanmalarda hasta genellikle terapötik ",
+    "dosya": 0,
+    "sayfa": 29,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Terapötik ambulasyon günlük yaşamda işe yarayan bir yürüme d",
+    "dosya": 0,
+    "sayfa": 29,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "T11 ile L2 arasındaki yaralanmalarda ev içi ambulasyon yapıl",
+    "dosya": 0,
+    "sayfa": 29,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "L2 seviyesinin altındaki yaralanmalarda birey toplumsal ambu",
+    "dosya": 0,
+    "sayfa": 29,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Kısaca, yaralanma seviyesi aşağı indikçe yürüme düzeyi yükse",
+    "dosya": 0,
+    "sayfa": 29,
+    "madde": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Hoca seviyeye göre bu üç ambulasyon düzeyinin bilgi olarak h",
+    "dosya": 0,
+    "sayfa": 29,
+    "madde": [
+     0,
+     1,
+     2
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Omurilik yaralanmasının komplikasyonları slaytta on madde ol",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "İlki solunum sistemi sorunlarıdır: solunum yetmezliği ve pnö",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Tetraplejide solunum sistemi de etkilendiği için solunum sor",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "İkincisi kardiyovasküler problemlerdir: aritmi, ortostatik h",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Ortostatik hipotansiyon, hastayı dik konuma getirmeye çalışı",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Üçüncüsü üriner sistem enfeksiyonlarıdır.",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Nedeni şudur: hasta erken dönemde kalıcı sondaya bağımlıdır,",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Dördüncüsü heterotopik ossifikasyondur, yani yumuşak dokuda ",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Beşincisi bası yarası, altıncısı kontraktürdür; ikisi de erk",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     6,
+     7
+    ]
+   },
+   {
+    "ses": "Kalan dört madde osteoporoz, cinsel işlev bozukluğu, spastis",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Otonom disrefleksi slaytta ayrı bir kutuyla açıklanır ve aci",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "T6 ve üzeri yaralanması olan hastalarda görülür.",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Tetikleyen, lezyon seviyesinin altından gelen nosiseptif, ya",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Slayt iki tetikleyici sayar: mesane distansiyonu, yani mesan",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Hoca tetikleyicilere bası yarasını da ekledi ve bu uyarıları",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Sonuç hipertansiyon, baş ağrısı ve flushing, yani yüzde kıza",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Hoca yönetimin sırasını da verdi: önce tetikleyen uyaran ort",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda vaka olarak sorulmuştur: C5 düzeyind",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Hoca otonom disrefleksiyi omurilik yaralanmasının en önemli ",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Ortostatik hipotansiyonla karıştırmayın: onda tansiyon düşer",
+    "dosya": 0,
+    "sayfa": 30,
+    "madde": [
+     12
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Dersin üçüncü hastalığı travmatik beyin hasarıdır; omurilik ",
+    "dosya": 0,
+    "sayfa": 31,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Travmatik beyin hasarı, kısaca TBH, fiziksel, bilişsel ve ps",
+    "dosya": 0,
+    "sayfa": 31,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Dünya genelinde insidansı yüz binde üç yüz kırk altıdır.",
+    "dosya": 0,
+    "sayfa": 31,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "En sık nedenleri taşıt kazaları ve düşmelerdir.",
+    "dosya": 0,
+    "sayfa": 31,
+    "madde": [
+     4,
+     5
+    ]
+   },
+   {
+    "ses": "Travmatik beyin hasarı genç erkeklerde daha sık görülür.",
+    "dosya": 0,
+    "sayfa": 31,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Slayttaki çizimde alın bölgesi düz bir yüzeye çarpmış, beyin",
+    "dosya": 0,
+    "sayfa": 31,
+    "resim": 0,
+    "sekil": "kafa travması çizimi",
+    "yol": [
+     {
+      "k": "alın bölgesi",
+      "x": 0.7,
+      "y": 0.44
+     },
+     {
+      "k": "hasar alanı",
+      "x": 0.715,
+      "y": 0.44
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Travmatik beyin hasarının en önemli risk faktörü travma önce",
+    "dosya": 0,
+    "sayfa": 32,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Slayt ardından gelenleri sırasıyla verir: geçirilmiş travmat",
+    "dosya": 0,
+    "sayfa": 32,
+    "madde": [
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Sıra düşük sosyoekonomik düzey, düşük eğitim seviyesi, davra",
+    "dosya": 0,
+    "sayfa": 32,
+    "madde": [
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "ses": "Hoca geçirilmiş hasar öyküsünden kişilik bozukluğuna uzanan ",
+    "dosya": 0,
+    "sayfa": 32,
+    "madde": [
+     2,
+     7
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Travmatik beyin hasarında hasar iki aşamada oluşur; slayttak",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.168,
+     0.285,
+     0.79,
+     0.36
+    ],
+    "sekil": "hasar mekanizmaları şeması: primer ve sekonder hasar başlıkları",
+    "yol": [
+     {
+      "k": "primer hasar",
+      "x": 0.285,
+      "y": 0.325
+     },
+     {
+      "k": "sekonder hasar",
+      "x": 0.66,
+      "y": 0.325
+     }
+    ]
+   },
+   {
+    "ses": "Primer, yani ilk hasar travma anında oluşur.",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.168,
+     0.285,
+     0.405,
+     0.75
+    ],
+    "sekil": "şema: primer (ilk) hasar kutusu",
+    "yol": [
+     {
+      "k": "Primer",
+      "x": 0.285,
+      "y": 0.325
+     }
+    ]
+   },
+   {
+    "ses": "Şema dört primer hasar tipi çizer: kontüzyon, yani beyin dok",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.168,
+     0.365,
+     0.405,
+     0.75
+    ],
+    "sekil": "şema: dört primer hasar tipi",
+    "yol": [
+     {
+      "k": "kontüzyon",
+      "x": 0.23,
+      "y": 0.49
+     },
+     {
+      "k": "intrakraniyal kanama",
+      "x": 0.345,
+      "y": 0.5
+     },
+     {
+      "k": "diffüz aksonal hasar",
+      "x": 0.23,
+      "y": 0.675
+     },
+     {
+      "k": "laserasyon",
+      "x": 0.345,
+      "y": 0.685
+     }
+    ]
+   },
+   {
+    "ses": "Diffüz aksonal hasarda sinir hücrelerinin uzantıları, yani a",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.172,
+     0.55,
+     0.288,
+     0.72
+    ],
+    "sekil": "şema: diffüz aksonal hasar hücresi",
+    "yol": [
+     {
+      "k": "kopan bir akson",
+      "x": 0.23,
+      "y": 0.61
+     }
+    ]
+   },
+   {
+    "ses": "Sekonder, yani ikincil hasar travmadan sonra gelişir ve önle",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.535,
+     0.285,
+     0.79,
+     0.75
+    ],
+    "sekil": "şema: sekonder (ikincil) hasar kutusu",
+    "yol": [
+     {
+      "k": "Sekonder",
+      "x": 0.66,
+      "y": 0.325
+     }
+    ]
+   },
+   {
+    "ses": "Şema altı sekonder hasar nedeni sayar: serebral ödem ve intr",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.55,
+     0.365,
+     0.785,
+     0.745
+    ],
+    "sekil": "şema: altı sekonder hasar nedeni",
+    "yol": [
+     {
+      "k": "serebral ödem",
+      "x": 0.69,
+      "y": 0.39
+     },
+     {
+      "k": "serebral hipoperfüzyon",
+      "x": 0.69,
+      "y": 0.455
+     },
+     {
+      "k": "hipoksi",
+      "x": 0.655,
+      "y": 0.515
+     },
+     {
+      "k": "hipotansiyon",
+      "x": 0.665,
+      "y": 0.575
+     },
+     {
+      "k": "nöbetler",
+      "x": 0.66,
+      "y": 0.635
+     },
+     {
+      "k": "metabolik",
+      "x": 0.69,
+      "y": 0.7
+     }
+    ]
+   },
+   {
+    "ses": "Şemanın ana mesajı şudur: tedavide sekonder hasarın önlenmes",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.168,
+     0.78,
+     0.79,
+     0.85
+    ],
+    "sekil": "şemanın altındaki ana mesaj kutusu"
+   },
+   {
+    "ses": "Yoğun bakımdaki tedavinin amacı da budur; hocanın örnekleri ",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.55,
+     0.365,
+     0.785,
+     0.61
+    ],
+    "sekil": "şema: sekonder hasar nedenleri (ödem ve hipotansiyon)",
+    "yol": [
+     {
+      "k": "serebral ödemi",
+      "x": 0.69,
+      "y": 0.39
+     },
+     {
+      "k": "hipotansiyondan",
+      "x": 0.665,
+      "y": 0.575
+     }
+    ]
+   },
+   {
+    "ses": "Hoca primer ve sekonder hasarın ad düzeyinde bilinmesini yet",
+    "dosya": 0,
+    "sayfa": 33,
+    "kutu": [
+     0.168,
+     0.285,
+     0.79,
+     0.36
+    ],
+    "sekil": "şema: primer ve sekonder hasar başlıkları"
+   }
+  ],
+  [
+   {
+    "ses": "Travmatik beyin hasarında değerlendirme ayrıntılı bir nörolo",
+    "dosya": 0,
+    "sayfa": 34,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Muayene anamnezi, bilişsel değerlendirmeyi, motor, duyu ve k",
+    "dosya": 0,
+    "sayfa": 34,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Hasarın yaygınlığını ve şiddetini belirlemek için öncelikle ",
+    "dosya": 0,
+    "sayfa": 34,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Glasgow koma skalası bilinç düzeyini puanlar; travma sonrası",
+    "dosya": 0,
+    "sayfa": 34,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Slayttaki tablo bu üç ölçüte göre hasarı hafif, orta ve ağır",
+    "dosya": 0,
+    "sayfa": 34,
+    "resim": 0,
+    "kutu": [
+     0.095,
+     0.66,
+     0.815,
+     0.71
+    ],
+    "tablo": true,
+    "sekil": "şiddet tablosu: başlık satırı"
+   },
+   {
+    "ses": "Hafif hasarda, yani sarsıntıda, Glasgow puanı on üç ile on b",
+    "dosya": 0,
+    "sayfa": 34,
+    "resim": 0,
+    "kutu": [
+     0.095,
+     0.715,
+     0.815,
+     0.77
+    ],
+    "tablo": true,
+    "sekil": "şiddet tablosu: hafif satırı"
+   },
+   {
+    "ses": "Orta hasarda Glasgow puanı dokuz ile on iki arasıdır; bilinç",
+    "dosya": 0,
+    "sayfa": 34,
+    "resim": 0,
+    "kutu": [
+     0.095,
+     0.775,
+     0.815,
+     0.828
+    ],
+    "tablo": true,
+    "sekil": "şiddet tablosu: orta satırı"
+   },
+   {
+    "ses": "Ağır hasarda Glasgow puanı üç ile sekiz arasıdır; bilinç kay",
+    "dosya": 0,
+    "sayfa": 34,
+    "resim": 0,
+    "kutu": [
+     0.095,
+     0.83,
+     0.815,
+     0.885
+    ],
+    "tablo": true,
+    "sekil": "şiddet tablosu: ağır satırı"
+   },
+   {
+    "ses": "Üç ölçütün yönü aynıdır: Glasgow puanı düştükçe, bilinç kayb",
+    "dosya": 0,
+    "sayfa": 34,
+    "resim": 0,
+    "kutu": [
+     0.235,
+     0.66,
+     0.815,
+     0.885
+    ],
+    "tablo": true,
+    "sekil": "şiddet tablosu: üç ölçüt sütunu"
+   },
+   {
+    "ses": "Hoca bu üç ölçütle hafif, orta ve ağır sınıflamasının yapıld",
+    "dosya": 0,
+    "sayfa": 34,
+    "madde": [
+     3,
+     4
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Hoca ağır travmatik beyin hasarının rehabilitasyonunu, klini",
+    "dosya": 0,
+    "sayfa": 34
+   },
+   {
+    "ses": "Hasta yoğun bakımda dengeye kavuşunca rehabilitasyon kliniği",
+    "dosya": 0,
+    "sayfa": 34
+   },
+   {
+    "ses": "Trakeostomi soluk borusuna boyundan açılan solunum deliği, P",
+    "dosya": 0,
+    "sayfa": 34
+   },
+   {
+    "ses": "Üç dört aylık süreçte önce solunum düzeltilir: trakeostomi a",
+    "dosya": 0,
+    "sayfa": 34
+   },
+   {
+    "ses": "Basamak basamak önce trakeostomi kapatılır, sonra PEG kapatı",
+    "dosya": 0,
+    "sayfa": 34
+   },
+   {
+    "ses": "Hasta genellikle fiziksel olarak toparlanmış çıkar; ama hoca",
+    "dosya": 0,
+    "sayfa": 34
+   }
+  ],
+  [
+   {
+    "ses": "Travmatik beyin hasarından sonra, etkilenen alanın yerine ve",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Akut rehabilitasyon döneminde travmatik beyin hasarlı hastay",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "İlk küme beyinle ilgilidir: posttravmatik nöbet ve epilepsi ",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Hoca büyük hasarda epilepsi görüldüğünü ve koruyucu tedavi v",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "İkinci küme yutma ve soluk yoludur: disfaji, aspirasyon pnöm",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Üçüncü küme dolaşım ve boşaltımdır: sindirim sistemi kanamas",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Dördüncü küme iç dengedir: hiponatremi ya da hipernatremi, s",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Santral ateş, enfeksiyon olmadan beyin hasarına bağlı gelişe",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Son küme kas-iskelet ve hareketsizlikle ilgilidir: spastisit",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     6
+    ]
+   },
+   {
+    "ses": "Refleks sempatik distrofi, kompleks bölgesel ağrı sendromunu",
+    "dosya": 0,
+    "sayfa": 35,
+    "madde": [
+     6
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Travmatik beyin hasarında prognoz için posttravmatik amnezi ",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Amnezi ve koma süresi ne kadar uzunsa beklenti o kadar kötüd",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Çıkmış sınavda travmatik beyin hasarı öncüllerle sorulmuş; e",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Hoca prognozda amnezi ve koma süresinin yanında Glasgow koma",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Rehabilitasyonda asıl amaç erken mobilizasyondur.",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Yatak içi egzersizlerle başlanır ve vertikalizasyon, yani ha",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "İmmobilizasyonun, yani hareketsiz kalmanın getirdiği komplik",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "İmmobilizasyonun komplikasyonları atrofi, basınç yarası, ost",
+    "dosya": 0,
+    "sayfa": 36,
+    "madde": [
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Buradan sonra konu çocuklara dönüyor: erişkin hastalıklarını",
+    "dosya": 0,
+    "sayfa": 37,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Pediatrik rehabilitasyon, çocuklarda doğuştan ya da sonradan",
+    "dosya": 0,
+    "sayfa": 37,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "En sık görülen çocukluk çağı nörolojik hastalığı serebral pa",
+    "dosya": 0,
+    "sayfa": 37,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Engelliliğe yol açan öteki hastalıklar spina bifida, miyopat",
+    "dosya": 0,
+    "sayfa": 37,
+    "madde": [
+     5,
+     6
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Serebral palsi, gelişmekte olan fetal ya da infant beyninde ",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Serebral palsi aktivite kısıtlanmasına neden olur ve hareket",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Ensefalopati beyin işlevinin bozulmasıdır; statik sözcüğü ha",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Hocanın açıklamasıyla hasar bir kez olur ve ilerlemez, ama ç",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Serebral palsinin insidansı binde üçtür.",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "En sık nedeni prematürite ve düşük doğum ağırlığıdır.",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda sorulmuştur: serebral palsi etiyoloj",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Risk faktörleri prenatal, natal ve postnatal olabilir, yani ",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "En sık görülenler prenatal nedenlerdir ve olguların yüzde se",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Hoca serebral palsinin tanımını ve sıklığını önemli saydı.",
+    "dosya": 0,
+    "sayfa": 38,
+    "madde": [
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Serebral palsinin dört tipi vardır: spastik, diskinetik, ata",
+    "dosya": 0,
+    "sayfa": 39,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "En sık görülen spastik tiptir.",
+    "dosya": 0,
+    "sayfa": 39,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda iki kez sorulmuştur: en sık görülen ",
+    "dosya": 0,
+    "sayfa": 39,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Spastik tip de üçe ayrılır: hemiplejik, diplejik ve tetraple",
+    "dosya": 0,
+    "sayfa": 39,
+    "madde": [
+     2,
+     3
+    ]
+   },
+   {
+    "ses": "Slayttaki şemada etkilenen bölge pembe boyanmıştır: hemiplej",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.07,
+     0.52,
+     0.47,
+     0.78
+    ],
+    "sekil": "spastik SP: hemipleji, dipleji, kuadripleji figürleri",
+    "yol": [
+     {
+      "k": "hemiplejide",
+      "x": 0.145,
+      "y": 0.64
+     },
+     {
+      "k": "diplejide",
+      "x": 0.277,
+      "y": 0.68
+     },
+     {
+      "k": "kuadriplejide",
+      "x": 0.41,
+      "y": 0.64
+     }
+    ]
+   },
+   {
+    "ses": "Şema spastik grubun altına piramidal yazar; piramidal sistem",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.07,
+     0.79,
+     0.47,
+     0.895
+    ],
+    "sekil": "spastik grubun altındaki piramidal şeridi ve açıklaması",
+    "yol": [
+     {
+      "k": "piramidal yazar",
+      "x": 0.27,
+      "y": 0.815
+     }
+    ]
+   },
+   {
+    "ses": "Piramidal grupta bozulanlar motor planlama, koordinasyon, ka",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.07,
+     0.835,
+     0.47,
+     0.895
+    ],
+    "sekil": "piramidal şeridinin açıklama yazısı"
+   },
+   {
+    "ses": "Atetoid ve distonik tipler diskinetik grubun altındadır, ata",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.48,
+     0.41,
+     0.88,
+     0.78
+    ],
+    "sekil": "atetoid, distonik ve ataksik figürleri",
+    "yol": [
+     {
+      "k": "Atetoid",
+      "x": 0.542,
+      "y": 0.64
+     },
+     {
+      "k": "distonik",
+      "x": 0.675,
+      "y": 0.64
+     },
+     {
+      "k": "ataksik",
+      "x": 0.81,
+      "y": 0.64
+     }
+    ]
+   },
+   {
+    "ses": "Diskinetik ve ataksik grupların altında ekstrapiramidal yaza",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.48,
+     0.79,
+     0.88,
+     0.905
+    ],
+    "sekil": "diskinetik ve ataksik grupların altındaki ekstrapiramidal şeridi ve açıklaması",
+    "yol": [
+     {
+      "k": "ekstrapiramidal yazar",
+      "x": 0.68,
+      "y": 0.815
+     }
+    ]
+   },
+   {
+    "ses": "Ekstrapiramidal grupta primitif refleksler, yani bebeklikte ",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.48,
+     0.835,
+     0.88,
+     0.905
+    ],
+    "sekil": "ekstrapiramidal şeridinin açıklama yazısı"
+   },
+   {
+    "ses": "Hoca diskinetik tipin kore ve atetoz hareketleriyle seyretti",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.48,
+     0.41,
+     0.88,
+     0.51
+    ],
+    "sekil": "atetoid-diskinetik ve ataksik SP başlıkları",
+    "yol": [
+     {
+      "k": "diskinetik",
+      "x": 0.605,
+      "y": 0.46
+     },
+     {
+      "k": "ataksik",
+      "x": 0.815,
+      "y": 0.46
+     }
+    ]
+   },
+   {
+    "ses": "Kore hızlı ve sıçrayıcı, atetoz yavaş ve kıvrılıcı istemsiz ",
+    "dosya": 0,
+    "sayfa": 39
+   },
+   {
+    "ses": "Distonik ve atetoid, diskinetik grubun alt tipleridir; en sı",
+    "dosya": 0,
+    "sayfa": 39,
+    "kutu": [
+     0.48,
+     0.52,
+     0.74,
+     0.78
+    ],
+    "sekil": "diskinetik grubun alt tipleri: atetoid ve distonik figürleri",
+    "yol": [
+     {
+      "k": "Distonik",
+      "x": 0.675,
+      "y": 0.64
+     },
+     {
+      "k": "atetoid",
+      "x": 0.542,
+      "y": 0.64
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Serebral palside en sık başvuru nedenleri yaşıtlarına göre m",
+    "dosya": 0,
+    "sayfa": 40,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Hoca prematüre doğan bebeklerin izlendiğini anlattı: örneğin",
+    "dosya": 0,
+    "sayfa": 40,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Serebral palsi tanısı klinikle konur; şüphelenildiğinde beyi",
+    "dosya": 0,
+    "sayfa": 40,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Rehabilitasyonun amacı fonksiyonel bozuklukları ve engellili",
+    "dosya": 0,
+    "sayfa": 40,
+    "madde": [
+     5,
+     6
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Dersin son hastalığı spina bifidadır; serebral palside sorun",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Spina bifida, genel olarak vertebral arkta ve nöral tüpte ka",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Vertebral ark omurun arka kemik yayıdır; nöral tüp ise embri",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Hoca nöral tüpün embriyogenezin üçüncü ve dördüncü haftaları",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Slayt spina bifida için beş risk faktörü sayar.",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Birincisi ailede spina bifida bulunmasıdır.",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     3
+    ]
+   },
+   {
+    "ses": "İkincisi gebelikte epilepsi ilacı kullanımıdır, özellikle va",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     4
+    ]
+   },
+   {
+    "ses": "Üçüncüsü genetik faktörler, dördüncüsü annede folik asit eks",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Beşincisi tekrarlama riskidir: ilk çocuk spina bifidalı doğm",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     7
+    ]
+   },
+   {
+    "ses": "Spina bifida ikinci çocukta yirmi beşte bir, üçüncü çocukta ",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     7,
+     8
+    ]
+   },
+   {
+    "ses": "Bu bilgi çıkmış sınavda iki kez öncüllerle sorulmuştur: nöra",
+    "dosya": 0,
+    "sayfa": 41,
+    "madde": [
+     1,
+     7
+    ]
+   },
+   {
+    "ses": "İki çıkmış soruda da en sık çocukluk çağı nörolojik hastalığ",
+    "dosya": 0,
+    "sayfa": 41
+   },
+   {
+    "ses": "Çıkmış sorulardan birinde en ağır tipin meningosel olduğu ön",
+    "dosya": 0,
+    "sayfa": 41
+   }
+  ],
+  [
+   {
+    "ses": "Spina bifidanın tipleri slayttaki çizimde, yandan görülen dö",
+    "dosya": 0,
+    "sayfa": 42,
+    "resim": 0,
+    "sekil": "dört omurga kesiti"
+   },
+   {
+    "ses": "İlk kesit normal omurgadır: omurlar sağlamdır ve omurilik ka",
+    "dosya": 0,
+    "sayfa": 42,
+    "kutu": [
+     0.015,
+     0.07,
+     0.21,
+     0.9
+    ],
+    "sekil": "normal omurga kesiti",
+    "yol": [
+     {
+      "k": "omurlar",
+      "x": 0.04,
+      "y": 0.4
+     },
+     {
+      "k": "omurilik",
+      "x": 0.08,
+      "y": 0.2
+     }
+    ]
+   },
+   {
+    "ses": "İkinci kesit spina bifida okkultadır: omurun arka kısmında a",
+    "dosya": 0,
+    "sayfa": 42,
+    "kutu": [
+     0.245,
+     0.1,
+     0.425,
+     0.88
+    ],
+    "sekil": "spina bifida okkulta kesiti"
+   },
+   {
+    "ses": "Üçüncü kesit meningoseldir: sırtta bir kese vardır; kesenin ",
+    "dosya": 0,
+    "sayfa": 42,
+    "kutu": [
+     0.475,
+     0.1,
+     0.715,
+     0.88
+    ],
+    "sekil": "meningosel kesiti",
+    "yol": [
+     {
+      "k": "kese vardır",
+      "x": 0.65,
+      "y": 0.48
+     },
+     {
+      "k": "omurilik kanalın",
+      "x": 0.555,
+      "y": 0.35
+     }
+    ]
+   },
+   {
+    "ses": "Dördüncü kesit miyelomeningoseldir: kese daha büyüktür ve om",
+    "dosya": 0,
+    "sayfa": 42,
+    "kutu": [
+     0.725,
+     0.1,
+     0.965,
+     0.88
+    ],
+    "sekil": "miyelomeningosel kesiti",
+    "yol": [
+     {
+      "k": "kese daha",
+      "x": 0.9,
+      "y": 0.48
+     },
+     {
+      "k": "omurilik ile sinir lifleri",
+      "x": 0.86,
+      "y": 0.37
+     }
+    ]
+   },
+   {
+    "ses": "Ayrım kesenin içeriğine göredir: okkultada kese yoktur, meni",
+    "dosya": 0,
+    "sayfa": 42,
+    "resim": 0,
+    "sekil": "dört omurga kesiti",
+    "yol": [
+     {
+      "k": "okkultada",
+      "x": 0.33,
+      "y": 0.4
+     },
+     {
+      "k": "meningoselde",
+      "x": 0.65,
+      "y": 0.48
+     },
+     {
+      "k": "miyelomeningoselde",
+      "x": 0.9,
+      "y": 0.48
+     }
+    ]
+   },
+   {
+    "ses": "Miyelomeningosel ile meningomiyelosel aynı hastalığın iki ay",
+    "dosya": 0,
+    "sayfa": 42,
+    "kutu": [
+     0.72,
+     0.795,
+     0.925,
+     0.85
+    ],
+    "sekil": "miyelomeningosel etiketi"
+   }
+  ],
+  [
+   {
+    "ses": "Spina bifida okkultanın genellikle klinik bir anlamı yoktur ",
+    "dosya": 0,
+    "sayfa": 43,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Lumbosakral bölgede kıllanma artışı, ben ya da gamzeler eşli",
+    "dosya": 0,
+    "sayfa": 43,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Slayttaki fotoğrafta bel bölgesinin orta hattında bir kıl kü",
+    "dosya": 0,
+    "sayfa": 43,
+    "resim": 0,
+    "sekil": "bel bölgesi fotoğrafı",
+    "yol": [
+     {
+      "k": "kıl kümesi",
+      "x": 0.835,
+      "y": 0.485
+     },
+     {
+      "k": "cilt lezyonu",
+      "x": 0.82,
+      "y": 0.615
+     }
+    ]
+   },
+   {
+    "ses": "Alt ekstremitede kas dengesizliğine bağlı pes kavus görülebi",
+    "dosya": 0,
+    "sayfa": 43,
+    "madde": [
+     5,
+     6
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Meningomiyelosel, spina bifidanın en ağır klinikle seyreden ",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     1
+    ]
+   },
+   {
+    "ses": "Meningomiyeloselde lezyon seviyesinin altında flask paralizi",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     2
+    ]
+   },
+   {
+    "ses": "Tendon refleksleri azalır ya da kaybolur; proprioseptif duyu",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Bağırsak ve mesane inkontinansı görülür; bunun adı nörojenik",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     5,
+     6
+    ]
+   },
+   {
+    "ses": "Hoca inkontinansın cerrahiden bağımsız olduğunu, çocukların ",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Paralitik ve konjenital deformiteler eklenir: ayak deformite",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     7,
+     8
+    ]
+   },
+   {
+    "ses": "Kas iskelet sistemi sorunları olarak skolyoz ve kifoz görülü",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     9
+    ]
+   },
+   {
+    "ses": "Slayttaki çizimde yüzüstü yatan bebeğin belinde kese vardır;",
+    "dosya": 0,
+    "sayfa": 44,
+    "resim": 0,
+    "sekil": "miyelomeningosel çizimi",
+    "yol": [
+     {
+      "k": "kese vardır",
+      "x": 0.875,
+      "y": 0.535
+     },
+     {
+      "k": "açık omurga kanalı",
+      "x": 0.775,
+      "y": 0.315
+     },
+     {
+      "k": "hasarlı sinirler",
+      "x": 0.72,
+      "y": 0.27
+     },
+     {
+      "k": "beyin omurilik sıvısı",
+      "x": 0.78,
+      "y": 0.345
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Meningomiyelosele iki durum eşlik eder: hidrosefali ve tip I",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     10,
+     11
+    ]
+   },
+   {
+    "ses": "Hoca meningomiyelosele eşlik eden bu iki durumun akılda tutu",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     10
+    ]
+   },
+   {
+    "ses": "Doğumdan sonra erken cerrahi kritiktir ve ilk yirmi dört ile",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Hoca bu sayfaya üç açıklama ekledi.",
+    "dosya": 0,
+    "sayfa": 44
+   },
+   {
+    "ses": "Tip II Chiari malformasyonu beyin sapının aşağı doğru fıtıkl",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     10
+    ]
+   },
+   {
+    "ses": "Erken cerrahinin amacı menenjiti ve nöral doku hasarını önle",
+    "dosya": 0,
+    "sayfa": 44,
+    "madde": [
+     12
+    ]
+   },
+   {
+    "ses": "Gidişi kesenin seviyesi belirler: kese daha aşağıdaysa çocuğ",
+    "dosya": 0,
+    "sayfa": 44
+   }
+  ],
+  [
+   {
+    "ses": "Spina bifida rehabilitasyonunun altı hedefi vardır.",
+    "dosya": 0,
+    "sayfa": 45,
+    "madde": [
+     0
+    ]
+   },
+   {
+    "ses": "Eklem hareket açıklığı korunur ve kontraktürler önlenir.",
+    "dosya": 0,
+    "sayfa": 45,
+    "madde": [
+     1,
+     2
+    ]
+   },
+   {
+    "ses": "Kas kuvveti ve motor gelişim desteklenir, uygun ortez verili",
+    "dosya": 0,
+    "sayfa": 45,
+    "madde": [
+     3,
+     4
+    ]
+   },
+   {
+    "ses": "Oturma, transfer ve ambulasyon eğitimi yapılır.",
+    "dosya": 0,
+    "sayfa": 45,
+    "madde": [
+     5
+    ]
+   },
+   {
+    "ses": "Nörojenik mesane ve bağırsak yönetilir; hoca bu konuda ürolo",
+    "dosya": 0,
+    "sayfa": 45,
+    "madde": [
+     6
+    ]
+   }
+  ],
+  [
+   {
+    "ses": "Beş hastalığın rehabilitasyonunda ilke ortaktır: erken başla",
+    "dosya": 0,
+    "sayfa": 45
+   },
+   {
+    "ses": "Hangi hastalık olursa olsun hedef aynıdır: komplikasyonları ",
+    "dosya": 0,
+    "sayfa": 45
+   }
+  ]
+ ]
+}

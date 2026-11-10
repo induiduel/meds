@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="660" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Ağır travmatik beyin hasarında rehabilitasyonun basamakları</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Hocanın anlattığı tipik hasta seyri · slayt 34</text>
+<rect x="30" y="88" width="380" height="480" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Kliniğe gelişte hasta</text>
+<circle cx="135" cy="152" r="30" fill="#e2e8f0" stroke="#475569" stroke-width="2.5"/>
+<path d="M123 180 L123 196 C65 202 57 232 65 302 L73 442 L77 552 L123 552 L131 452 L139 452 L147 552 L193 552 L197 442 L205 302 C213 232 205 202 147 196 L147 180" stroke="#475569" stroke-width="2.5" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M135 186 L135 196" stroke="#b91c1c" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M135 196 C149 198 157 204 165 214" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="121" cy="312" r="7" fill="#fdba74" stroke="#ea580c" stroke-width="3"/>
+<path d="M121 312 C95 316 85 332 75 354" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M135 450 C149 472 171 478 205 482" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M205 474 L237 474 L237 502 C237 510 205 510 205 502 Z" stroke="#1d4ed8" stroke-width="2.5" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="137" y1="191" x2="232" y2="140" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="137" cy="191" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="238" y="146" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">trakeostomi</text>
+<text x="238" y="166" font-size="17" fill="#475569" text-anchor="start">boyundan</text>
+<text x="238" y="185" font-size="17" fill="#475569" text-anchor="start">solunum deliği</text>
+<line x1="125" y1="312" x2="232" y2="262" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="125" cy="312" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="238" y="268" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">PEG</text>
+<text x="238" y="288" font-size="17" fill="#475569" text-anchor="start">mideye</text>
+<text x="238" y="307" font-size="17" fill="#475569" text-anchor="start">beslenme tüpü</text>
+<line x1="221" y1="474" x2="250" y2="430" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="221" cy="474" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="256" y="436" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">kalıcı sonda</text>
+<text x="228" y="362" font-size="17" fill="#0f172a" text-anchor="start">Konuşamaz,</text>
+<text x="228" y="383" font-size="17" fill="#0f172a" text-anchor="start">ağızdan</text>
+<text x="228" y="404" font-size="17" fill="#0f172a" text-anchor="start">beslenemez.</text>
+<rect x="430" y="88" width="740" height="480" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="448" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Üç dört ayda basamak basamak</text>
+<path d="M480 470 C540 470 560 400 615 400 C675 400 695 330 750 330 C810 330 830 260 885 260 C945 260 965 190 1020 190" stroke="#15803d" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="480" cy="470" r="15" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="480" y="476" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="484" y="510" font-size="17" fill="#64748b" text-anchor="start" font-weight="bold">Yoğun bakım</text>
+<text x="484" y="531" font-size="17" fill="#0f172a" text-anchor="start">denge sağlanır,</text>
+<text x="484" y="550" font-size="17" fill="#0f172a" text-anchor="start">kliniğe kabul edilir</text>
+<circle cx="615" cy="400" r="15" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+<text x="615" y="406" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="619" y="440" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">Solunum</text>
+<text x="619" y="461" font-size="17" fill="#0f172a" text-anchor="start">aralıklı trakeostomi kapama,</text>
+<text x="619" y="480" font-size="17" fill="#0f172a" text-anchor="start">solunum egzersizleri</text>
+<circle cx="750" cy="330" r="15" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<text x="750" y="336" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="754" y="370" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">Yutma</text>
+<text x="754" y="391" font-size="17" fill="#0f172a" text-anchor="start">yutma egzersizleri</text>
+<text x="754" y="410" font-size="17" fill="#0f172a" text-anchor="start">ve yutma terapisi</text>
+<circle cx="885" cy="260" r="15" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="885" y="266" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="889" y="300" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Trakeostomi kapatılır</text>
+<circle cx="1020" cy="190" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="1020" y="196" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<text x="975" y="230" font-size="17" fill="#15803d" text-anchor="start" font-weight="bold">PEG kapatılır</text>
+<text x="975" y="251" font-size="17" fill="#0f172a" text-anchor="start">besinlerin kıvamı</text>
+<text x="975" y="270" font-size="17" fill="#0f172a" text-anchor="start">ayarlanır</text>
+<text x="1020" y="150" font-size="17" fill="#15803d" text-anchor="middle" font-weight="bold">3–4 ay</text>
+<line x1="520" y1="150" x2="960" y2="150" stroke="#15803d" stroke-width="2.5" marker-end="url(#oky)" stroke-dasharray="7 6"/>
+<text x="520" y="138" font-size="17" fill="#475569" text-anchor="start">zaman</text>
+<rect x="30" y="582" width="560" height="46" rx="10" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
+<text x="310" y="612" font-size="18" fill="#15803d" text-anchor="middle" font-weight="bold">Fiziksel olarak genellikle toparlanır</text>
+<rect x="610" y="582" width="560" height="46" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+<text x="890" y="612" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="bold">Bilişsel bozukluk kalıcı olabilir</text>
+<text x="600.0" y="647" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: hocanın slayt 34'te anlattığı hasta seyri.</text>
+</svg>

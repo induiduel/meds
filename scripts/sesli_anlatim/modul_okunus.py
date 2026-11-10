@@ -19,6 +19,7 @@ MODUL_ANAHTARLAR |= {"k2-09-sss-ilaclari", "k2-10-bas-agrisina-yaklasim", "k2-06
 MODUL_ANAHTARLAR |= {"k2-17-periferik-noropati", "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem"}  # 2026-11-05, metin yazımla
 MODUL_ANAHTARLAR |= {"k2-19-bipolar-bozukluk", "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler", "k2-21-sedatif-ve-hipnotik-ilaclar", "k2-37-okb-ve-iliskili-bozukluklar", "k2-38-travma-ve-stres-baglantili-bozukluklar"}  # 2026-11-10 H538: 5. parti eksik kalmıştı
 MODUL_ANAHTARLAR |= {"k2-26-norolojik-hastaliklar", "k2-27-aile-hekimliginde-periyodik-muayeneler-1"}  # 2026-11-10 7. parti (H469)
+MODUL_ANAHTARLAR |= {"k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo"}  # 2026-11-10 8. parti (H469)
 MODUL_ANAHTARLAR |= {"k2-22-psikosomatik-bozukluklar", "k2-23-cinsel-kimlik-bozukluklari", "k2-24-epilepsi", "k2-58-alkoller"}  # 2026-11-09 6. parti, metin yazımla (H469)
 SON_PROVA = re.compile(r"^k\d+-\d+-(son-prova|blok-ozet)-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
 
@@ -57,6 +58,7 @@ KELIME.update({"IL": "interlökin", "IVIG": "ii vee ii gee", "KIR": "kaa ii ree"
 # MSS farmakolojisi (k2-09, 2026-11-02): hocanın kelime gibi okuduğu nörotransmitter/reseptör adları
 KELIME.update({"MERRF": "merf", "MELAS": "melas", "NARP": "narp", "MIDD": "mid", "NEMO": "nemo", "BOR": "bor"})  # 2026-11-10 k2-26
 KELIME.update({"WONCA": "vonka", "Td": "tee dee", "Tdap": "tee dap", "HEADSSS": "hedz", "PAP": "pap"})  # 2026-11-10 k2-27
+KELIME.update({"ASIA": "asya", "PEG": "peg"})  # 2026-11-10 k2-28
 KELIME.update({"REM": "rem", "NREM": "en rem", "COVID": "kovid", "EMDR": "ee mee dee ree"})  # 2026-11-10 H538 (5. parti)
 KELIME.update({"GABA": "gaba", "GABAA": "gaba aa", "GABAB": "gaba bee", "AMPA": "ampa", "DOPA": "dopa", "VMAT": "vi mat",
                "VGLUT": "vi glut", "mGluR": "em glu ar",

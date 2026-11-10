@@ -1,0 +1,1373 @@
+{
+ "surum": 1,
+ "key": "k2-28",
+ "kod": "2t02",
+ "kurul": 2,
+ "brans": "FTR",
+ "konu": "Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu",
+ "ogretim_uyesi": "Dr. Yıldız Altıntaş",
+ "profil": "FTR",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2t02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders nörolojik rehabilitasyonun beş büyük hasta grubunu işler: inme, omurilik yaralanması, travmatik beyin hasarı, serebral palsi ve spina bifida. Her hastalıkta tanım, sıklık ve nedenler, sık görülen bozukluklar, değerlendirme ölçekleri, dönemlere göre rehabilitasyon programı ve komplikasyonlar anlatılır. Omurilik yaralanmasında seviye, komplet-inkomplet ayrımı ve inkomplet sendromlar dersin en ayrıntılı bölümüdür.",
+   "maddeler": [
+    {
+     "metin": "Nörolojik rehabilitasyona en sık başvuru nedenleri"
+    },
+    {
+     "metin": "İnme: tanım, nedenler ve risk faktörleri"
+    },
+    {
+     "metin": "İnmede görülen bozukluklar ve işlevsel sonuçları"
+    },
+    {
+     "metin": "İnme rehabilitasyonunun amaçları ve iyileşmenin üç kavramı"
+    },
+    {
+     "metin": "İnme rehabilitasyonuna ne zaman başlanır ve süreç nasıl ilerler"
+    },
+    {
+     "metin": "Akut ve subakut-kronik dönem rehabilitasyonu"
+    },
+    {
+     "metin": "İnme komplikasyonları ve uzun dönem takip"
+    },
+    {
+     "metin": "Omurilik yaralanması: tanım, nedenler, tetrapleji ve parapleji"
+    },
+    {
+     "metin": "Omurilik yaralanmasının bulguları"
+    },
+    {
+     "metin": "ASIA bozukluk skalası ve komplet–inkomplet ayrımı"
+    },
+    {
+     "metin": "İnkomplet omurilik yaralanması sendromları"
+    },
+    {
+     "metin": "Kauda ekina ve konus medullaris sendromları"
+    },
+    {
+     "metin": "Omurilik yaralanmasında rehabilitasyon"
+    },
+    {
+     "metin": "Omurilik yaralanmasının komplikasyonları ve otonom disrefleksi"
+    },
+    {
+     "metin": "Travmatik beyin hasarı: tanım, risk faktörleri ve hasar mekanizmaları"
+    },
+    {
+     "metin": "Travmatik beyin hasarı: değerlendirme, şiddet, sorunlar ve prognoz"
+    },
+    {
+     "metin": "Pediatrik rehabilitasyon ve serebral palsi"
+    },
+    {
+     "metin": "Spina bifida"
+    },
+    {
+     "metin": "Ders sonu"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders nörolojik rehabilitasyonun beş büyük hasta grubunu işler: inme, omurilik yaralanması, travmatik beyin hasarı, serebral palsi ve spina bifida. Her hastalıkta tanım, sıklık ve nedenler, sık görülen bozukluklar, değerlendirme ölçekleri, dönemlere göre rehabilitasyon programı ve komplikasyonlar anlatılır. Omurilik yaralanmasında seviye, komplet-inkomplet ayrımı ve inkomplet sendromlar dersin en ayrıntılı bölümüdür.",
+    "Nörolojik rehabilitasyona en sık başvuru nedenleri.",
+    "İnme: tanım, nedenler ve risk faktörleri.",
+    "İnmede görülen bozukluklar ve işlevsel sonuçları.",
+    "İnme rehabilitasyonunun amaçları ve iyileşmenin üç kavramı.",
+    "İnme rehabilitasyonuna ne zaman başlanır ve süreç nasıl ilerler.",
+    "Akut ve subakut-kronik dönem rehabilitasyonu.",
+    "İnme komplikasyonları ve uzun dönem takip.",
+    "Omurilik yaralanması: tanım, nedenler, tetrapleji ve parapleji.",
+    "Omurilik yaralanmasının bulguları.",
+    "ASIA bozukluk skalası ve komplet–inkomplet ayrımı.",
+    "İnkomplet omurilik yaralanması sendromları.",
+    "Kauda ekina ve konus medullaris sendromları.",
+    "Omurilik yaralanmasında rehabilitasyon.",
+    "Omurilik yaralanmasının komplikasyonları ve otonom disrefleksi.",
+    "Travmatik beyin hasarı: tanım, risk faktörleri ve hasar mekanizmaları.",
+    "Travmatik beyin hasarı: değerlendirme, şiddet, sorunlar ve prognoz.",
+    "Pediatrik rehabilitasyon ve serebral palsi.",
+    "Spina bifida.",
+    "Ders sonu."
+   ],
+   "v": "5d5f12452d"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "İnme Risk Faktörleri",
+     "metin": "Çıkmış (dogrudan): Hipertansiyon, koroner arter hastalığı, atrial fibrilasyon, kalp kapak hastalıkları, karotis stenozu,",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "İnmede Sık Görülen Bozukluklar",
+     "metin": "Çıkmış (dogrudan): Hemipleji en sık görülen klinik tablodur.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "İnme rehabilitasyonunun başlıca amaçları",
+     "metin": "Çıkmış (dogrudan): Eşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmek",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Akut dönem rehabilitasyon",
+     "metin": "Çıkmış (dogrudan): Mesane ve barsak programı",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "İnme komplikasyonları",
+     "metin": "Çıkmış (dogrudan): İnme komplikasyonları",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Omurilik yaralanması",
+     "metin": "Çıkmış (dogrudan): Parapleji; T2 ve alt segmentlerindeki zedelenme sonucu olur.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Omurilik Yaralanması Sık Görülen Bulgular",
+     "metin": "Çıkmış (dogrudan): İzleyen dönemde üst motor nöron bulguları: spastisite, hiperrefleksi ve patolojik refleksler",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Sayfa 21",
+     "metin": "Çıkmış (dogrudan): Sakral korunma YOK",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "İnkomplet omurilik yaralanma sendromları",
+     "metin": "Çıkmış (ilgili): Santral kord sendromu: Çoğunlukla daha önceden spondilozisi olanlarda düşmeye bağlı hiperekstansiyon sonucunda olur.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Omurilik yaralanması komplikasyonları",
+     "metin": "Çıkmış (dogrudan): T6 ve üzeri yaralanması olan hastalarda, lezyon seviyesi altından gelen nosiseptif uyarıların (mesane distansiyonu-barsak retansiyonu) tetiklemesiyle oluşan hipertansiyon, baş ağrısı, flushing ile giden klinik, acil bir tablodur.",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Travmatik Beyin Hasarı Rehabilitasyonu",
+     "metin": "Çıkmış (dogrudan): Posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Serebral Palsi",
+     "metin": "Çıkmış (dogrudan): En sık nedeni prematürite ve düşük doğum ağırlığıdır.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Serebral Palsi-2",
+     "metin": "Çıkmış (dogrudan): En sık spastik tip serebral palsi görülür, bu da 3 tiptir; hemiplejik, diplejik, tetraplejik",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Spina Bifida",
+     "metin": "Çıkmış (dogrudan): Spina bifida, genel olarak vertebral ark ve nöral tüpte kapanma defektidir.",
+     "s": [
+      41
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "İnme Risk Faktörleri: Çıkmış (dogrudan): Hipertansiyon, koroner arter hastalığı, atrial fibrilasyon, kalp kapak hastalıkları, karotis stenozu,.",
+    "İnmede Sık Görülen Bozukluklar: Çıkmış (dogrudan): Hemipleji en sık görülen klinik tablodur.",
+    "İnme rehabilitasyonunun başlıca amaçları: Çıkmış (dogrudan): Eşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmek.",
+    "Akut dönem rehabilitasyon: Çıkmış (dogrudan): Mesane ve barsak programı.",
+    "İnme komplikasyonları: Çıkmış (dogrudan): İnme komplikasyonları.",
+    "Omurilik yaralanması: Çıkmış (dogrudan): Parapleji; T2 ve alt segmentlerindeki zedelenme sonucu olur.",
+    "Omurilik Yaralanması Sık Görülen Bulgular: Çıkmış (dogrudan): İzleyen dönemde üst motor nöron bulguları: spastisite, hiperrefleksi ve patolojik refleksler.",
+    "Sayfa 21: Çıkmış (dogrudan): Sakral korunma YOK.",
+    "İnkomplet omurilik yaralanma sendromları: Çıkmış (ilgili): Santral kord sendromu: Çoğunlukla daha önceden spondilozisi olanlarda düşmeye bağlı hiperekstansiyon sonucunda olur.",
+    "Omurilik yaralanması komplikasyonları: Çıkmış (dogrudan): T6 ve üzeri yaralanması olan hastalarda, lezyon seviyesi altından gelen nosiseptif uyarıların (mesane distansiyonu-barsak retansiyonu) tetiklemesiyle oluşan hipertansiyon, baş ağrısı, flushing ile giden klinik, acil bir tablodur.",
+    "Travmatik Beyin Hasarı Rehabilitasyonu: Çıkmış (dogrudan): Posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir.",
+    "Serebral Palsi: Çıkmış (dogrudan): En sık nedeni prematürite ve düşük doğum ağırlığıdır.",
+    "Serebral Palsi-2: Çıkmış (dogrudan): En sık spastik tip serebral palsi görülür, bu da 3 tiptir; hemiplejik, diplejik, tetraplejik.",
+    "Spina Bifida: Çıkmış (dogrudan): Spina bifida, genel olarak vertebral ark ve nöral tüpte kapanma defektidir."
+   ],
+   "v": "fbdfd9cb1a"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu konudan 2019-20 ile 2025-26 arasında on dokuz çıkmış soru doğrulandı; en çok omurilik yaralanması (seviye, sakral korunma, otonom disrefleksi), serebral palsinin en sık tipi ve nedeni, spina bifida öncüllüsü ile inmenin akut dönem rehabilitasyonu ve komplikasyonları soruldu. Hoca derste kauda ekina ile konus medullaris ayrımının sınavlarda sıkça sorulduğunu, Brown-Séquard sendromunun da TUS'ta sıklıkla sorulduğunu söyledi; otonom disrefleksiyi en önemli ve en acil komplikasyon olarak vurguladı.",
+   "maddeler": [
+    {
+     "baslik": "Komplet ve inkomplet yaralanma: sakral korunma",
+     "metin": "En alt sakral köklerde (S4-5) duyu ya da motor işlev sağlamsa yaralanma inkomplet, ikisi de yoksa komplettir.",
+     "neden": "2022-23 sınavında ve aynı yılın bütünlemesinde sakral korunma ile komplet yaralanma ilişkisi soruldu; hoca da akılda kalması gereken yer olarak bu ayrımı gösterdi.",
+     "s": [
+      21
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Tetrapleji ve parapleji: seviye sınırı",
+     "metin": "Tetrapleji T1 ve üzeri omurilik hasarında, parapleji T2 ve alt segmentlerin zedelenmesinde olur.",
+     "neden": "2019-20 sınavında hangi seviyelerin komplet lezyonunun parapleji yaptığı öncüllü soruldu; 2021-22 finalinde otonom tutulumun görülmediğini söyleyen yanlış ifade bulduruldu.",
+     "s": [
+      18
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Otonom disrefleksi",
+     "metin": "Otonom disrefleksi T6 ve üzeri yaralanmada, lezyon altından gelen nosiseptif uyarılarla tetiklenen hipertansiyon, baş ağrısı ve flushing ile giden acil tablodur.",
+     "neden": "2019-20 sınavında C5 tetraplejik, sondası tıkalı, kan basıncı yüksek hasta vakasıyla soruldu; hoca en önemli ve en acil komplikasyon diye iki ayrı yerde vurguladı.",
+     "s": [
+      30
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Serebral palsi tipleri: en sık spastik",
+     "metin": "Serebral palsinin 4 tipi vardır; en sık spastik tip görülür ve bunun 3 alt tipi hemiplejik, diplejik ve tetraplejiktir.",
+     "neden": "En sık görülen serebral palsi tipi 2019-20 ve 2020-21 sınavlarında art arda soruldu; iki soruda da cevap spastik tipti.",
+     "s": [
+      39
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Spina bifida: tanım ve risk faktörleri",
+     "metin": "Spina bifida vertebral ark ve nöral tüpte kapanma defektidir; ilk çocuk etkilenmişse ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir.",
+     "neden": "2019-20 ve 2020-21 sınavlarında aynı öncüllü soru geldi: nöral tüp kapanma defekti olması ve ilk çocukta varsa riskin artması doğru öncüllerdi.",
+     "s": [
+      41
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "İnmede akut dönem rehabilitasyonu",
+     "metin": "İnmenin akut döneminde erken mobilizasyon, uygun pozisyonlama, sık pozisyon değişikliği, yutmanın değerlendirilmesi ile mesane ve barsak programı uygulanır.",
+     "neden": "2025-26 sınavında iki soru geldi: mesane ve bağırsak disfonksiyonu görülmez diyen yanlış ifade ve pozisyonlamaya geç dönemde başlandığını söyleyen yanlış öncül.",
+     "s": [
+      12
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "İnme komplikasyonları: akut ve kronik dönem",
+     "metin": "İnme komplikasyonları akut dönem (ilk saatler-günler) ve kronik dönem (haftalar-aylar ve sonrası) olarak iki kümede gösterilir.",
+     "neden": "2020-21 sınavında üst ekstremite sorunları, derin ven trombozu, bağırsak disfonksiyonu ve bası yarasının hepsinin komplikasyon olduğu soruldu; hoca kronik dönemde spastisite ve hemiplejik omuz ağrısını öne çıkardı.",
+     "s": [
+      14
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Serebral palsinin en sık nedeni",
+     "metin": "Serebral palsinin en sık nedeni prematürite ve düşük doğum ağırlığıdır; risk faktörleri içinde %80 ile prenatal nedenler en sık görülür.",
+     "neden": "2020-21 sınavında serebral palsinin etiyolojisinde en çok suçlanan neden soruldu; cevap prematüriteydi.",
+     "s": [
+      38
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu konudan 2019-20 ile 2025-26 arasında on dokuz çıkmış soru doğrulandı; en çok omurilik yaralanması (seviye, sakral korunma, otonom disrefleksi), serebral palsinin en sık tipi ve nedeni, spina bifida öncüllüsü ile inmenin akut dönem rehabilitasyonu ve komplikasyonları soruldu. Hoca derste kauda ekina ile konus medullaris ayrımının sınavlarda sıkça sorulduğunu, Brown-Séquard sendromunun da TUS'ta sıklıkla sorulduğunu söyledi; otonom disrefleksiyi en önemli ve en acil komplikasyon olarak vurguladı.",
+    "Komplet ve inkomplet yaralanma: sakral korunma: En alt sakral köklerde (S4-5) duyu ya da motor işlev sağlamsa yaralanma inkomplet, ikisi de yoksa komplettir.",
+    "Tetrapleji ve parapleji: seviye sınırı: Tetrapleji T1 ve üzeri omurilik hasarında, parapleji T2 ve alt segmentlerin zedelenmesinde olur.",
+    "Otonom disrefleksi: Otonom disrefleksi T6 ve üzeri yaralanmada, lezyon altından gelen nosiseptif uyarılarla tetiklenen hipertansiyon, baş ağrısı ve flushing ile giden acil tablodur.",
+    "Serebral palsi tipleri: en sık spastik: Serebral palsinin 4 tipi vardır; en sık spastik tip görülür ve bunun 3 alt tipi hemiplejik, diplejik ve tetraplejiktir.",
+    "Spina bifida: tanım ve risk faktörleri: Spina bifida vertebral ark ve nöral tüpte kapanma defektidir; ilk çocuk etkilenmişse ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir.",
+    "İnmede akut dönem rehabilitasyonu: İnmenin akut döneminde erken mobilizasyon, uygun pozisyonlama, sık pozisyon değişikliği, yutmanın değerlendirilmesi ile mesane ve barsak programı uygulanır.",
+    "İnme komplikasyonları: akut ve kronik dönem: İnme komplikasyonları akut dönem (ilk saatler-günler) ve kronik dönem (haftalar-aylar ve sonrası) olarak iki kümede gösterilir.",
+    "Serebral palsinin en sık nedeni: Serebral palsinin en sık nedeni prematürite ve düşük doğum ağırlığıdır; risk faktörleri içinde %80 ile prenatal nedenler en sık görülür."
+   ],
+   "v": "bd149bba30"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış çıkmışları 24 tanedir: 19'u doğrudan bu dersin slaytından çözülür, 5'i ilgili düzeydedir (ikisi Nöroloji ile Beyin ve Sinir Cerrahisi derslerinin sorusudur, üçünün sorduğu sıklık bilgisi slaytta verilmez). Doğrudan soruların dağılımı: inme 7 (risk faktörü, hemipleji, apraksi, rehabilitasyon ilkeleri, akut dönem maddeleri ×2, komplikasyonlar), omurilik yaralanması 6 (seviye, otonom tutulum, üst motor nöron bulguları, sakral korunma ×2, otonomik disrefleksi vakası), serebral palsi 3 (neden, en sık tip ×2), spina bifida 2 ve travmatik beyin hasarı 1. Yinelenen sorular dersin en güvenilir sınav yerlerini gösterir: en sık serebral palsi tipi (2019-20 ve 2020-21), spina bifida öncüllüsü (2019-20 ve 2020-21), sakral korunma (2022-23 kurul ve bütünleme) ve travmatik beyin hasarı doğruları (2020-21 kurul ve final). Kök kalıbı üç türdür: öncüllü 'hangisi/hangileri doğrudur' (ilkeler, seviyeler, spina bifida), olumsuz kök 'hangisi yanlıştır' (yanlış şık her seferinde bir sistemin tutulmadığını söyler: 'otonom tutulum gözlenmez', 'mesane ve bağırsak disfonksiyonu görülmez') ve kısa 'en sık' sorusu (klinik tablo, tip, neden). Tek vaka sorusu otonomik disrefleksidir ve slayttaki açıklama kutusunun birebir uygulamasıdır.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi serebrovasküler olaylarda değiştirilebilir (tedavi edilebilir) risk faktörlerinden biridir?",
+     "cevap": "Hipertansiyon",
+     "s": [
+      5
+     ],
+     "aciklama": [
+      "Soru, inme risk faktörlerinin değiştirilebilen ve değiştirilemeyen diye ikiye ayrılmasını ölçüyor; kök 'tedavi edilebilir' risk faktörünü ister.",
+      "Doğru cevap hipertansiyondur: 5. slayt değiştirilebilen risk faktörlerini sayarken hipertansiyonu ilk sıraya koyar; yanındaki bilgi görseli de hipertansiyonu en kritik faktör olarak, inme hastalarının yaklaşık yarısında bulunan etken olarak gösterir.",
+      "En güçlü çeldirici pozitif aile öyküsüdür; aile öyküsü slayttaki 'genetik' etkenin karşılığıdır ve yaş ile cinsiyetle birlikte değiştirilemeyen gruptadır. Irk ve eski serebrovasküler olay öyküsü de tedaviyle değiştirilebilen etkenler değildir."
+     ],
+     "ornek": "Hoca derste değiştirilebilen risk faktörlerinin en önemlisinin hipertansiyon ve koroner arter hastalığı olduğunu söyledi; atrial fibrilasyonu da serebral emboliye bağlı inmelerin önemli bir nedeni olarak ayrıca andı. Üçü de 5. slaytın değiştirilebilen listesindedir.",
+     "tuzak": "Bir etkenin önemli olması onu değiştirilebilir yapmaz: yaş, cinsiyet ve genetik güçlü etkenlerdir ama değiştirilemeyen gruptadır. Listedeki on iki değiştirilebilen etkenin herhangi biri aynı kökle sorulabilir."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "İnmede en sık görülen motor bozukluk tablosu aşağıdakilerden hangisidir?",
+     "cevap": "Hemipleji",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru, inmede en sık görülen motor bozukluk tablosunu ölçüyor.",
+      "Doğru cevap hemiplejidir: 6. slayt 'Hemipleji en sık görülen klinik tablodur' der; aynı cümlenin başında paralizinin en sık görülen bulgu olduğu yazılıdır.",
+      "En güçlü çeldirici paraplejidir; parapleji iki bacağın tutulmasıdır ve bu derste omurilik yaralanmasının T2 ve altı hasarında görülen tablo olarak geçer (18. slayt). Tetrapleji de omurilik yaralanmasının T1 ve üzeri hasarının tablosudur."
+     ],
+     "ornek": "Hoca hemiplejiyi 'vücudun bir yarısında üst ve alt ekstremitedeki kas güçsüzlüğü' diye tanımladı. 7. slaytın tablosunda hemiparezinin fonksiyonel sonucu yürüme ve transfer güçlüğüdür.",
+     "tuzak": "Hemipleji ile parapleji karıştırılır: hemipleji bir vücut yarısıdır ve inmenin tablosudur; parapleji iki bacaktır ve omurilik yaralanmasının tablosudur. Ham kayıtta da yanlış seçenek olarak parapleji not edilmiştir."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Apraksi aşağıdakilerden hangisini tanımlar?",
+     "cevap": "Yeterli motor ve duyusal işleve karşın öğrenilmiş, amaçlı hareketleri gerçekleştirememe",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru apraksinin tanımını ölçüyor.",
+      "Doğru cevap 'yeterli motor ve duyusal işleve karşın amaçlı hareketi gerçekleştirememe'dir: 6. slayt apraksiyi kognitif fonksiyon bozuklukları arasında sayar ve parantez içinde 'duyusal fonksiyonlara rağmen istemli aktiviteyi başlatamama' diye tanımlar.",
+      "En güçlü çeldirici ihmal fenomeninin tanımıdır (vücudun ya da çevrenin bir yarısını fark edememe); ihmal fenomeni aynı cümlede apraksiyle yan yana sayılır. Konuşmayı anlama ya da üretme kaybı ise afazidir ve slaytta ayrı bir maddededir."
+     ],
+     "ornek": "6. slayttaki kognitif bozukluklar dört tanedir: ihmal fenomeni, apraksi, algı problemleri ve duygudurum bozuklukları. Apraksili hastanın kolu güçlüdür ve duyusu yerindedir, ama hasta istediği hareketi başlatamaz.",
+     "tuzak": "Apraksi paralizi değildir: paralizide güç yoktur, apraksi güç ve duyu yerindeyken hareketin başlatılamamasıdır. İhmal fenomeniyle de karıştırılır; ikisi aynı satırda sayıldığı için birbirinin çeldiricisidir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Serebrovasküler olay rehabilitasyonu ile ilgili aşağıdaki ifadeler veriliyor: I. Komorbid hastalıklara yönelik tedavilerin planlanması ve yürütülmesi II. Sekonder komplikasyonları önlemek veya en aza indirmek III. Kaybedilen motor fonksiyonları mümkün olduğunca yerine koymak IV. Fonksiyonel ve ev yaşamında bağımsızlığı sağlamak Bunlardan hangisi/hangileri serebrovasküler olay rehabilitasyonunun ana ilkelerindendir?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Soru, inme rehabilitasyonunun amaçlarını öncüllerle ölçüyor; dört öncülün hangilerinin ana ilke olduğu sorulur.",
+      "Doğru cevap dört öncülün tamamıdır: 8. slaytta 'eşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmek' (I. öncül) ve 'fonksiyonel bağımsızlığı en üst düzeye çıkarmak' (IV. öncül) amaç olarak sayılır; komplikasyon takibi 15. slaytta, motor fonksiyonun geliştirilmesi 13. slaytın kuvvetlendirme ve fonksiyon geliştirme maddelerindedir.",
+      "En güçlü çeldirici 'I, II ve III' şıkkıdır; bağımsızlık öncülünü dışarıda bırakır, oysa fonksiyonel bağımsızlık hem 8. slaytın amaçlarında hem 13. slaytın temel hedefinde yazılıdır."
+     ],
+     "ornek": "Hoca amaçları anlatırken eğitimin içeriğini verdi: hastaya ve aileye hastalığın doğası ve hastanın ulaşabileceği en yüksek fiziksel düzey anlatılır. 11. slaytın şemasında sürecin son durağı topluma dönüştür: eski işe dönme, yeni iş bulma, sosyal birey olma.",
+     "tuzak": "Rehabilitasyon yalnız egzersiz sanılır; oysa amaçların ikisi egzersizle ilgili değildir: eşlik eden hastalıkların tedavisi ve hasta-aile eğitimi. Öncüllü soruda bu iki amaç 'ilke değildir' diye elenirse cevap yanlış çıkar."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıda verilen inme komplikasyonları ve tedavileriyle ilgili ifadelerden hangisi yanlıştır?",
+     "cevap": "Mesane ve bağırsak disfonksiyonu görülmez",
+     "s": [
+      12
+     ],
+     "aciklama": [
+      "Soru, inmenin komplikasyonlarını ve bunlara yönelik önlemleri olumsuz kökle ölçüyor; yanlış ifade aranır.",
+      "Yanlış ifade 'mesane ve bağırsak disfonksiyonu görülmez'dir: 12. slayt akut dönem rehabilitasyonunda mesane ve barsak programını sayar; 14. slayttaki komplikasyon görselinde üriner inkontinans ve kabızlık kronik dönem komplikasyonlarıdır.",
+      "Öteki şıklar doğrudur ve slaytta karşılıkları vardır: eklem hareket açıklığı egzersizleri ve pozisyonlama akut dönem maddeleridir, depresyonun tanısı ve tedavisi aynı listededir, yutma bozukluğuna bağlı aspirasyon pnömonisi akut dönemin solunumsal komplikasyonudur. En güçlü çeldirici depresyon şıkkıdır; depresyon bir komplikasyon gibi görünmese de hem 12. hem 14. slaytta yer alır."
+     ],
+     "ornek": "Hoca akut dönemde alınan inme hastasının izlemini anlatırken sondanın çekilip hastanın kendiliğinden idrar yapıp yapmadığına bakıldığını söyledi; mesane işlevi inmede de izlenen bir başlıktır.",
+     "tuzak": "Mesane ve bağırsak bozukluğu yalnız omurilik yaralanmasına özgü sanılır. Omurilik yaralanmasında nörojenik mesane ve barsak belirgindir (19. slayt), ama inmede de üriner inkontinans ve kabızlık görülür (14. slayt)."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Kurgu Soru: İnme ile ilgili aşağıdaki ifadeler veriliyor: I. Hemipleji, inmede en sık görülen motor bozukluk tablosudur. II. Yutmanın değerlendirilmesi akut dönem rehabilitasyonunun bir parçasıdır. III. Uygun pozisyonlamaya ilk kez geç (subakut-kronik) dönem rehabilitasyonunda başlanır. IV. İnmede en hızlı iyileşme ilk 3 ayda olur. Bu ifadelerden hangileri doğrudur?",
+     "cevap": "I, II ve IV",
+     "s": [
+      12
+     ],
+     "aciklama": [
+      "Soru, inme rehabilitasyonunda hangi girişimin hangi dönemde yapıldığını ölçüyor; ham sınav kaydında yanlış öncül olarak 'pozisyonlama geç dönem rehabilitasyonda yapılır' ifadesi verilmiştir.",
+      "Uygun pozisyonlama akut dönem rehabilitasyonunun maddesidir: 12. slaytın listesinde üçüncü sırada ve kalın yazılıdır, hemen ardından sık pozisyon değişikliği gelir. Bu yüzden pozisyonlamaya geç dönemde başlandığını söyleyen öncül yanlıştır.",
+      "Bankadaki öteki öncüller de slayttan çözülür: hemipleji en sık klinik tablodur (6. slayt), yutmanın değerlendirilmesi akut dönem maddesidir (12. slayt), en hızlı iyileşme ilk 3 ayda olur (10. slayt). En güçlü çeldirici dört öncülün hepsini doğru sayan şıktır."
+     ],
+     "ornek": "Hoca pozisyonlamanın gerekçesini verdi: sık pozisyon değişikliği önemlidir, çünkü uzun süreli immobilizasyona bağlı bası yaraları gelişebilir. Bası yarası 14. slaytta akut dönemin hareketsizliğe bağlı komplikasyonudur.",
+     "tuzak": "Akut dönem maddeleri ile subakut-kronik dönem maddeleri karıştırılır. Pozisyonlama, eklem hareket açıklığı egzersizleri ve yutmanın değerlendirilmesi akut dönemdedir (12. slayt); paralel barda ambulasyon, transfer eğitimi ve iş-uğraşı terapisi subakut-kronik dönemdedir (13. slayt)."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi/hangileri serebrovasküler olay sonrası gelişen komplikasyonlardandır?",
+     "cevap": "Hepsi",
+     "s": [
+      14
+     ],
+     "aciklama": [
+      "Soru, serebrovasküler olay sonrası gelişen komplikasyonları tanımayı ölçüyor.",
+      "Doğru cevap 'hepsi'dir: 14. slayttaki komplikasyon görselinde derin ven trombozu ve pulmoner emboli akut dönemin tromboembolik satırında, bası yarası hareketsizliğe bağlı satırında; omuz ve ekstremite sorunları ile kabızlık kronik dönem kutusunda yer alır.",
+      "En güçlü çeldirici tek bir komplikasyonu seçmektir; örneğin bağırsak disfonksiyonu inmeye yakıştırılmayıp elenebilir. Oysa kabızlık kronik dönemin 'diğer' satırında üriner inkontinansla birlikte yazılıdır."
+     ],
+     "ornek": "Hoca önceki çalıştığı klinikte inme hastalarını ilk haftasında aldıklarında derin ven trombozuna karşı profilaksi başladıklarını, enfeksiyon açısından izlediklerini ve bası yarasını her gün kontrol ettiklerini anlattı; sorudaki komplikasyonların her biri klinikte izlenen bir başlıktır.",
+     "tuzak": "Komplikasyonlar yalnız nörolojik sanılır. 14. slaytın on iki satırından yalnız biri nörolojiktir; ötekiler solunum, damar, kalp, enfeksiyon, hareketsizlik, omuz, denge, ağrı, psikososyal ve boşaltım sorunlarıdır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Hemiplejik üst ekstremitenin en sık görülen sorunu aşağıdakilerden hangisidir?",
+     "cevap": "Omuz ağrısı",
+     "s": [
+      14
+     ],
+     "aciklama": [
+      "Soru, hemiplejik üst ekstremitenin en sık görülen sorununu ölçüyor; şıklarda omuz ağrısı, omuz subluksasyonu, kompleks bölgesel ağrı sendromu, brakiyal pleksus lezyonları ve eklem kontraktürü vardır.",
+      "Bu yılın 14. slaytı kronik dönem komplikasyonlarının 'omuz ve ekstremite sorunları' satırında hemiplejik omuz ağrısını, omuz subluksasyonunu ve kompleks bölgesel ağrı sendromunu birlikte sayar; hangisinin en sık olduğunu belirtmez. Sorunun anahtarı omuz ağrısıdır.",
+      "En güçlü çeldirici omuz subluksasyonudur, çünkü slaytta omuz ağrısıyla aynı satırda yer alır. Kontraktür aynı görselin motor satırındadır; brakiyal pleksus lezyonu bu yılın komplikasyon görselinde sayılmaz."
+     ],
+     "ornek": "Hoca hemiplejik omuzu önemli bir sorun olarak anlattı: yaygın omuz ağrısı olur, kas güçsüzlüğüne bağlı subluksasyon da gelişebilir; kronik dönemin iki önemli komplikasyonu spastisite ve hemiplejik omuz ağrısıdır. Hoca 'en sık' sözünü kullanmadı.",
+     "tuzak": "Omuz ağrısı ile omuz subluksasyonu karıştırılır: subluksasyon eklemin kısmi çıkığıdır ve ağrının nedenlerinden biridir, ama sorulan sorun ağrının kendisidir. Üçü slaytta yan yana sayıldığı için birbirinin çeldiricisidir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Hemiplejik üst ekstremitenin en sık sorunu aşağıdakilerden hangisidir?",
+     "cevap": "Omuz ağrısı",
+     "s": [
+      14
+     ],
+     "aciklama": [
+      "Soru bir önceki yılın sorusunun yinelenmesidir: hemiplejik üst ekstremitenin en sık sorunu sorulur; son şık 'hiçbiri' olarak değişmiştir.",
+      "14. slayt hemiplejik omuz ağrısını, omuz subluksasyonunu ve kompleks bölgesel ağrı sendromunu kronik dönemin omuz ve ekstremite sorunları olarak birlikte sayar; en sık olanı belirtmez. Sorunun anahtarı yine omuz ağrısıdır.",
+      "En güçlü çeldirici omuz subluksasyonudur; 'hiçbiri' şıkkı ise sayılan dört sorunun da gerçek komplikasyon olması nedeniyle elenir."
+     ],
+     "ornek": "Hoca hemiplejik omuzda tedaviyi de söyledi: egzersizlere fizik tedavi ajanları eklenir. Spastisiteyle birlikte hemiplejik omuz ağrısını kronik dönemin iki önemli komplikasyonu olarak saydı.",
+     "tuzak": "Aynı soru iki yıl üst üste sorulmuştur; şıkların sırası ve son şık değişir, anahtar değişmez. Kompleks bölgesel ağrı sendromu da ağrı içerdiği için omuz ağrısıyla karıştırılır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "I. Lomber 2 II. Torakal 2 III. Torakal 12 IV. Servikal 7 Yukarıdaki omurilik seviyelerinden hangilerinin komplet lezyonu paraplejiye neden olur?",
+     "cevap": "I, II ve III",
+     "s": [
+      18
+     ],
+     "aciklama": [
+      "Soru, omurilik yaralanmasında seviye ile tablo eşleşmesini ölçüyor: dört seviyeden hangilerinin komplet lezyonu parapleji yapar?",
+      "Doğru cevap Lomber 2, Torakal 2 ve Torakal 12'dir: 18. slayta göre parapleji T2 ve altındaki segmentlerin zedelenmesiyle, tetrapleji T1 ve üzeri hasarla olur; Servikal 7 T1'in üstünde olduğu için tetrapleji yapar.",
+      "En güçlü çeldirici Torakal 2'yi dışarıda bırakan 'I ve III' şıkkıdır; T2 sınırın hemen altındadır ve parapleji tarafındadır. Dört seviyeyi birden parapleji sayan şık Servikal 7'yi yanlış sınıflar."
+     ],
+     "ornek": "18. slaytın çiziminde dört örnek seviye vardır: C4 ve C6 yaralanması tetrapleji, T6 ve L1 yaralanması parapleji olarak gösterilir; siluetlerde etkilenen bölge seviye alçaldıkça küçülür. Hoca paraplejiyi tetraplejiye göre daha hafif ama yine engelliliğe yol açan bir tablo olarak anlattı.",
+     "tuzak": "Sınır T1 ile T2 arasındadır; 'torakal yaralanma her zaman paraplejidir' diye düşünülürse T1 yanlış sınıflanır. T1 ve üzeri tetrapleji, T2 ve altı paraplejidir."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Omurilik yaralanmaları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Omurilik yaralanmasında motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenmez.",
+     "s": [
+      18
+     ],
+     "aciklama": [
+      "Soru, omurilik yaralanmasının genel özelliklerini olumsuz kökle ölçüyor; yanlış ifade aranır.",
+      "Yanlış ifade 'motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenmez'dir: 18. slayt tetraplejide de paraplejide de 'motor, duyu ve otonom sistem bozuklukları eşlik eder' der; 19. slayt otonom etkilenimi ayrı bir başlıkta dört maddeyle sayar.",
+      "En güçlü çeldirici 'eklem hareket açıklığı egzersizlerine akut dönemde başlanmalıdır' şıkkıdır; cümle 27. slaytta aynen geçer ve doğrudur. 'En sık neden travmadır' ifadesi de 17. slaytla uyumludur."
+     ],
+     "ornek": "Hoca otonom etkilenimi anlatırken otonom disrefleksiyi omurilik yaralanmalı hastalarda görülen en önemli sorunlardan biri ve bu hasta grubuna özgü bir komplikasyon olarak vurguladı. 19. slaytın çiziminde otonom şeritte mesane, bağırsak, tansiyon aleti ve ter damlaları gösterilir.",
+     "tuzak": "Omurilik yaralanması yalnız felç ve duyu kaybı sanılır. Otonom tutulum (nörojenik mesane ve barsak, ortostatik hipotansiyon, otonomik disrefleksi, terleme bozukluğu) tablonun üçüncü ayağıdır; aynı yanlış ifade 2022-23 sorusunda da şık olarak yer almıştır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Üst motor nöron lezyonu ile ilgili aşağıdaki bulgular veriliyor: I. Derin tendon reflekslerinde artış II. Kas gücünde azalma III. Patolojik refleks IV. Kas tonusunda azalma Bu bulgulardan hangileri üst motor nöron lezyonu bulgusudur?",
+     "cevap": "I, II ve III",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Soru, üst motor nöron lezyonunun bulgularını öncüllerle ölçüyor; karnede Fiziksel Tıp ve Rehabilitasyon dersinin spinal kord yaralanması konusundan sorulmuştur.",
+      "Doğru cevap derin tendon reflekslerinde artış, kas gücünde azalma ve patolojik reflekstir: 19. slayt spinal şoku izleyen dönemde üst motor nöron bulgularını 'spastisite, hiperrefleksi ve patolojik refleksler' diye sayar; kas kuvvetinde azalma aynı başlığın ilk maddesidir.",
+      "Yanlış öncül 'kas tonusunda azalma'dır; üst motor nöron bulgusu spastisite, yani tonus artışıdır. En güçlü çeldirici kas gücünde azalmayı dışarıda bırakan 'I ve III' şıkkıdır."
+     ],
+     "ornek": "Hoca motor tablonun zaman içindeki değişimini anlattı: ilk haftalarda flask paralizi ve arefleksi görülür, yani tablo alt motor nöron tipine benzer; spinal şok dönemi geçince spastisite, derin tendon reflekslerinde artış ve patolojik refleksler ortaya çıkar.",
+     "tuzak": "Akut dönemdeki spinal şok bulguları (flask paralizi, arefleksi) üst motor nöron bulgusu sanılabilir. Tonus azalması ve refleks kaybı spinal şokun, tonus artışı ve refleks artışı sonraki dönemin bulgusudur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Medulla spinalisin tam ya da tama yakın hasarında aşağıdakilerden hangisi görülmez?",
+     "cevap": "Spinal şok döneminde refleksler artmıştır",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Soru, medulla spinalisin tam ya da tama yakın hasarında görülen bulguları olumsuz kökle ölçüyor; Nöroloji dersinin sorusudur.",
+      "Görülmeyen bulgu 'spinal şok döneminde reflekslerin artması'dır: 19. slayt akut dönemde spinal şoka bağlı flask paralizi ve arefleksi olduğunu yazar; refleks artışı izleyen dönemin bulgusudur.",
+      "Öteki şıklar aynı slaytla uyumludur: lezyon seviyesinin altında duyu kaybı, derin duyu kaybı ve otonom etkilenim vardır. En güçlü çeldirici 'flask tipte güç kaybı' şıkkıdır; omurilik hasarında flask paralizi beklenmez sanılır, oysa akut dönemin tablosu budur."
+     ],
+     "ornek": "Hoca spinal şoku 'genellikle ilk haftalarda görülen, alt motor nöron tipine benzeyen tablo' diye anlattı; bu dönem geçince üst motor nöron bulguları ortaya çıkar.",
+     "tuzak": "Hiperrefleksi omurilik yaralanmasının bulgusudur, ama spinal şok döneminin değil. Sorunun yanlışı bulgunun kendisinde değil, zamanındadır."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Omurilik yaralanması ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Sakral korunma yoksa yaralanmanın komplet olduğu söylenebilir.",
+     "s": [
+      21
+     ],
+     "aciklama": [
+      "Soru, omurilik yaralanmasının temel bilgilerini 'hangisi doğrudur' köküyle ölçüyor; doğru şık komplet-inkomplet ayrımıdır.",
+      "Doğru cevap 'sakral korunma yoksa yaralanmanın komplet olduğu söylenebilir'dir: 21. slaytın sağ kutusunda komplet yaralanma için en alt sakral köklerde (S4-S5) ne duyu ne de motor fonksiyonun sağlam olduğu ve sakral korunmanın bulunmadığı yazılıdır.",
+      "Öteki şıklar slaytla çürür: en sık neden travmatiktir (17. slayt), otonom bozukluk eşlik eder (18. slayt), T1 ve üzeri yaralanma tetrapleji yapar (18. slayt). En güçlü çeldirici 'T1 ve üzeri yaralanmalarda parapleji gelişir' şıkkıdır; seviye doğru, tablo yanlıştır."
+     ],
+     "ornek": "Hoca bu slaytta akılda kalacak şeyin komplet ve inkomplet yaralanmanın ne olduğu olduğunu söyledi: medulla spinalisin en kaudal kısmı olan sakral bölgede duyu ya da motor işlevden biri sağlamsa yaralanma inkomplettir; duyu anal bölgenin duyusuyla, motor istemli anal kontraksiyonla değerlendirilir.",
+     "tuzak": "Komplet yaralanma 'bacaklar hiç oynamıyor' diye tanımlanmaz; ölçüt S4-S5 segmentlerindeki işlevdir. Bacakları tümüyle felçli bir hasta, anal duyusu korunmuşsa inkomplettir."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Omurilik yaralanması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Sakral korunma yoksa hastalar inkomplet olarak değerlendirilir",
+     "s": [
+      21
+     ],
+     "aciklama": [
+      "Soru aynı bilgiyi olumsuz kökle ölçüyor: omurilik yaralanmasıyla ilgili yanlış ifade aranır.",
+      "Yanlış ifade 'sakral korunma yoksa hastalar inkomplet olarak değerlendirilir'dir: 21. slayta göre sakral korunma yoksa yaralanma komplettir; inkomplet yaralanmada sakral korunma vardır.",
+      "Öteki şıklar doğrudur: motor, duyu ve otonom bozukluklar birlikte görülür (18. slayt), ASIA sınıflaması prognozda önemlidir (20. slayt), en sık neden travmatiktir (17. slayt), T1 ve üzeri yaralanma tetraplejidir (18. slayt). En güçlü çeldirici ASIA şıkkıdır; 20. slayt sınıflamanın hem prognoz hem takipte önemli olduğunu yazar."
+     ],
+     "ornek": "20. slayta göre komplet yaralanma ASIA bozukluk skalasında A, inkomplet yaralanma B, C ve D'dir. Hoca skalanın beş gruba ayrıldığını, en kötü prognozlu grubun komplet yaralanma olan A olduğunu söyledi.",
+     "tuzak": "Aynı bilgi aynı yıl iki sınavda iki yönden sorulmuştur: kurulda doğru ifade, bütünlemede yanlış ifade olarak. 'Var' ve 'yok' yer değiştirince anlam tersine döner: korunma var inkomplet, korunma yok komplet."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "En sık görülen inkomplet omurilik (spinal kord) yaralanma sendromu hangisidir?",
+     "cevap": "Santral kord sendromu",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Soru, inkomplet omurilik yaralanma sendromlarının sıklığını ölçüyor; şıklarda santral kord, Brown-Séquard, anterior kord, posterior kord ve konus medullaris sendromları vardır. Anahtar santral kord sendromudur.",
+      "22. slayt santral kord sendromunu tanımlar: çoğunlukla spondilozu olanlarda düşmeye bağlı hiperekstansiyonla olur, üst ekstremitelerdeki motor kayıp alt ekstremitelerdekinden fazladır ve prognozu daha iyidir. Sendromun sıklığı slaytta yazılı değildir.",
+      "Şıkların hepsi bu derste işlenen sendromlardır ve birbirinin çeldiricisidir: slayt posterior kord sendromu için 'nadir görülür', Brown-Séquard için 'saf formu nadirdir' der; bu iki şık slayt bilgisiyle elenebilir."
+     ],
+     "ornek": "Hoca santral kord sendromunu ileri yaştaki, spondilozu olan hastada düşme sonucu gelişen hiperekstansiyon tipi yaralanma olarak anlattı; medulla spinalisin merkezine yakın alan zedelenir ve üst ekstremite alt ekstremiteden daha çok etkilenir.",
+     "tuzak": "Sıklık, prognoz ve mekanizma ayrı bilgilerdir: slaytta santral kord için 'prognoz daha iyi', anterior kord için 'prognozu en kötü', posterior kord için 'nadir' yazılıdır. Bu üç niteleme birbirinin yerine konmamalıdır."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Brown-Séquard sendromu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Lezyon tarafında motor kayıp ile pozisyon ve titreşim duyusu kaybı, karşı tarafta ağrı ve ısı duyusu kaybı görülür.",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Soru Brown-Séquard sendromunun bulgularını ölçüyor; Beyin ve Sinir Cerrahisi dersinin sorusudur.",
+      "Doğru ifade 'lezyon tarafında motor kayıp ile pozisyon ve titreşim duyusu kaybı, karşı tarafta ağrı ve ısı duyusu kaybı'dır: 22. slayt sendromu 'lezyon tarafında propriosepsiyon, motor ve vibrasyon kaybı, kontralateral ağrı ve ısı kaybı' diye tanımlar.",
+      "En güçlü çeldirici tarafları ters çeviren şıktır (karşı tarafta motor kayıp, aynı tarafta ağrı ve ısı kaybı). Öteki şıklar başka sendromların tanımıdır: iki taraflı motor ve ağrı-ısı kaybıyla propriosepsiyonun korunması anterior kord, üst ekstremitede belirgin motor kayıp santral kord, yalnız arka kordon tutulumu posterior kord sendromudur (22. ve 23. slayt)."
+     ],
+     "ornek": "Hoca sendromu sık sorulan bir sendrom olarak anlattı: lezyon tarafında derin duyu ve motor fonksiyon bozukluğu, karşı tarafta ağrı ve ısı kaybı olur; saf formu nadirdir ama kliniği bilinmelidir. 22. slaytın çiziminde bir bacak derin duyu kaybıyla, öteki bacak ağrı ve ısı kaybıyla etiketlenmiştir.",
+     "tuzak": "Taraflar karıştırılır: motor kayıp ve derin duyu (propriosepsiyon, vibrasyon) lezyonla aynı tarafta, ağrı ve ısı karşı taraftadır. Dört inkomplet sendromun tanımı aynı soruda birbirinin çeldiricisi olarak kullanılır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "C5 seviyesinde tetraplejik, 4 aylık omurilik yaralanması olan ve hipertansiyon öyküsü olmayan hasta akşam saatlerinde acil servise zonklayıcı baş ağrısı, kızarıklık ve terleme ile başvuruyor. Acil serviste kan basıncı 190/100 mmHg olarak ölçülüyor. İlk değerlendirmede üriner sondasının tıkanmış olduğu görülüyor. Bu hastada akla gelmesi gereken ilk tanı aşağıdakilerden hangisidir?",
+     "cevap": "Otonomik disrefleksi",
+     "s": [
+      30
+     ],
+     "aciklama": [
+      "Soru bir vakadır ve omurilik yaralanmasının acil komplikasyonunu tanımayı ölçüyor: C5 tetraplejik hasta, zonklayıcı baş ağrısı, kızarıklık, terleme, 190/100 mmHg kan basıncı ve tıkanmış üriner sonda.",
+      "Doğru cevap otonomik disrefleksidir: 30. slayttaki açıklama kutusuna göre T6 ve üzeri yaralanması olan hastada lezyon seviyesinin altından gelen nosiseptif uyarılar (mesane distansiyonu, barsak retansiyonu) hipertansiyon, baş ağrısı ve flushing ile giden acil bir tablo oluşturur. Vakada seviye C5'tir, tetikleyici tıkalı sondanın yol açtığı mesane distansiyonudur.",
+      "En güçlü çeldirici spinal şoktur; spinal şok akut dönemin flask paralizi ve arefleksi tablosudur (19. slayt), oysa hasta yaralanmanın dördüncü ayındadır ve kan basıncı yüksektir. Heterotopik ossifikasyon aynı slaytın komplikasyon listesindedir ama bu tabloyu yapmaz."
+     ],
+     "ornek": "Hoca otonom disrefleksiyi omurilik yaralanmasının en önemli ve en acil komplikasyonu olarak anlattı: tetikleyici genellikle mesane distansiyonu, bağırsak retansiyonu ya da bası yarasıdır; önce tetikleyen uyaran ortadan kaldırılır, kan basıncı normale dönmezse hipertansiyona müdahale edilir. Vakada ilk adım tıkalı sondanın açılmasıdır.",
+     "tuzak": "Otonomik disrefleksi ile ortostatik hipotansiyon karıştırılır: ikisi de 19. ve 30. slaytta kardiyovasküler otonom bozukluk olarak yan yana sayılır, ama birinde kan basıncı düşer, ötekinde tehlikeli biçimde yükselir. Yaralanma T6'nın altındaysa otonom disrefleksi beklenmez."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Travmatik beyin hasarı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Hepsi",
+     "s": [
+      36
+     ],
+     "aciklama": [
+      "Soru, travmatik beyin hasarının rehabilitasyon ilkelerini 'hangisi doğrudur' köküyle ölçüyor; dört ifadenin hepsi doğrudur.",
+      "Üç ifadenin dayanağı 36. slayttadır: posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir; erken mobilizasyon asıl amaçtır; immobilizasyonun getirdiği komplikasyonların önlenmesi rehabilitasyonun temel taşlarındandır. 34. slayttaki şiddet tablosunda da amnezinin 7 günden uzun sürmesi ağır hasarı gösterir.",
+      "En güçlü çeldirici tek bir ifadeyi seçmektir. Bilişsel değerlendirme 34. slaytta değerlendirmenin bir başlığı olarak geçer; şıkta adı verilen skala bu derste anlatılmaz, soru öteki üç ifadenin doğruluğu üzerinden 'hepsi' şıkkına götürür."
+     ],
+     "ornek": "Hoca yoğun bakımdan trakeostomili, PEG'li ve sondalı çıkan bir hastanın üç-dört aylık rehabilitasyonunu anlattı: önce solunum düzeltilir, yutma terapisi verilir, trakeostomi ve PEG sırayla kapatılır; hasta fiziksel olarak toparlanır ama bilişsel bozukluk kalıcı olabilir. Prognozda posttravmatik amnezi süresi, koma süresi ve Glasgow koma skalasının önemli olduğunu söyledi.",
+     "tuzak": "Şiddet ölçütleri ile prognoz ölçütleri karıştırılır: şiddet Glasgow koma skalası, bilinç kaybı süresi ve amnezi süresiyle belirlenir (34. slayt); prognoz için slaytta posttravmatik amnezi ve koma süresi sayılır (36. slayt). Aynı soru kurul ve final sınavında iki kez çıkmıştır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Serebral palsinin etiyolojisinde en çok suçlanan neden nedir?",
+     "cevap": "Prematürite",
+     "s": [
+      38
+     ],
+     "aciklama": [
+      "Soru serebral palsinin etiyolojisinde en çok suçlanan nedeni ölçüyor.",
+      "Doğru cevap prematüritedir: 38. slayt 'En sık nedeni prematürite ve düşük doğum ağırlığıdır' der; aynı slayta göre prenatal, natal ve postnatal risk faktörleri vardır ve %80 prenatal nedenler en sık görülür.",
+      "Çeldiriciler (fenilketonüri, annede serebral palsi olması, yüksek ateş, akraba evliliği) slaytta sayılan nedenler değildir. En güçlü çeldirici 'annede serebral palsi olması'dır; serebral palsi kalıtsal bir hastalık gibi düşünülürse seçilir, oysa slayt serebral palsiyi gelişmekte olan beyinde progresif olmayan bir hasara bağlar."
+     ],
+     "ornek": "Hoca bu çocukların çoğunlukla prematüre doğdukları için rehabilitasyon hekimine yönlendirildiğini ve motor gelişim basamaklarının izlendiğini anlattı: iki aylık bebekte baş tutma, altı aylık bebekte desteksiz oturma beklenir.",
+     "tuzak": "'En sık neden' ile 'nedenlerin en sık dönemi' karıştırılır: en sık neden prematürite ve düşük doğum ağırlığıdır; nedenlerin dönemi sorulursa cevap prenataldir (%80)."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "En sık görülen serebral palsi tipi aşağıdakilerden hangisidir?",
+     "cevap": "Spastik tip",
+     "s": [
+      39
+     ],
+     "aciklama": [
+      "Soru en sık görülen serebral palsi tipini ölçüyor.",
+      "Doğru cevap spastik tiptir: 39. slayt 'En sık spastik tip serebral palsi görülür' der ve üç alt tipini sayar: hemiplejik, diplejik, tetraplejik.",
+      "Çeldiricilerden ataksik ve mikst slayttaki dört tip arasındadır; distonik ve atetoid şemada 'atetoid ve diskinetik' başlığının altındaki iki figürdür. En güçlü çeldirici mikst tiptir; adı gereği en kapsayıcı tip gibi görünür ama en sık görülen tip değildir."
+     ],
+     "ornek": "39. slaytın şemasında spastik grubun altında üç siluet vardır: hemiplejide vücudun bir yarısı, diplejide iki bacak, kuadriplejide tüm vücut boyalıdır. Hoca ataksik serebral palsinin çok nadir görüldüğünü söyledi.",
+     "tuzak": "Tip ile alt tip karıştırılır: hemiplejik, diplejik ve tetraplejik birer tip değil, spastik tipin alt tipleridir. Şıklarda 'hemiplejik' verilirse 'en sık tip' sorusunun cevabı yine spastiktir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "En sık görülen serebral palsi tipi hangisidir?",
+     "cevap": "Spastik",
+     "s": [
+      39
+     ],
+     "aciklama": [
+      "Soru bir önceki yılın sorusunun yinelenmesidir: en sık görülen serebral palsi tipi sorulur; şıklar diskinetik, spastik, ataksik, distonik ve atetoid olarak değişmiştir.",
+      "Doğru cevap yine spastik tiptir: 39. slaytın ikinci maddesi en sık spastik tipin görüldüğünü yazar.",
+      "En güçlü çeldirici diskinetik tiptir, çünkü slayttaki dört tipten biridir; distonik ve atetoid şemada diskinetik grubun figürleridir ve aynı gruptan üç şık birden verilmiştir."
+     ],
+     "ornek": "39. slaytın alt bandında spastik grup piramidal, atetoid-diskinetik ve ataksik gruplar ekstrapiramidal olarak gösterilir. Hoca diskinetik tipin ekstrapiramidal sistem etkilenimiyle, kore ve atetoz hareketleriyle gittiğini söyledi.",
+     "tuzak": "Aynı soru iki yıl üst üste sorulmuştur; şıklar değişir, anahtar değişmez. Diskinetik, distonik ve atetoid aynı grubun adlarıdır; üçü birden şıkta olunca birinin doğru olduğu sanılır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Spina bifida ile ilgili aşağıdaki ifadeler veriliyor: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa diğer çocuklar için risk artmaktadır. IV. En ağır tipi meningoseldir. Bu ifadelerden hangisi/hangileri doğrudur?",
+     "cevap": "I ve III",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Soru spina bifidayı dört öncülle ölçüyor: tanım, sıklık, tekrarlama riski ve en ağır tip.",
+      "Doğru cevap I ve III'tür: 41. slayta göre spina bifida vertebral ark ve nöral tüpte kapanma defektidir (I doğru) ve ilk çocuk spina bifidalı doğmuşsa risk artar, ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir (III doğru).",
+      "II. öncül yanlıştır: en sık görülen çocukluk çağı nörolojik hastalığı serebral palsidir (37. slayt). IV. öncül yanlıştır: en ağır klinikle seyreden tip meningomiyeloseldir (44. slayt), meningosel değil. En güçlü çeldirici II. öncülü de doğru sayan 'I, II ve III' şıkkıdır."
+     ],
+     "ornek": "42. slaytın çizimi tipleri hafiften ağıra dizer: okkultada yalnız kemik açıklığı vardır, meningoselde kesede yalnız zarlar bulunur, meningomiyeloselde omurilik ve sinir lifleri de kesenin içindedir. Hoca spina bifidanın serebral palsiye göre çok daha nadir görüldüğünü söyledi.",
+     "tuzak": "Meningosel ile meningomiyelosel adları benzediği için karıştırılır; en ağır tip, kesede sinir dokusu da bulunan meningomiyeloseldir. Spina bifida çocuklarda başvuru nedenleri sıralamasında serebral palsiden sonra gelir (3. slayt)."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa risk diğer çocuklar için artmaktadır. IV. Gebelik dönemi taramalarında saptanması mümkün değildir. Bu ifadelerden hangisi/hangileri doğrudur?",
+     "cevap": "I ve III",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Soru bir önceki yılın öncüllü sorusunun yinelenmesidir; ilk üç öncül aynıdır, dördüncü öncül 'gebelik dönemi taramalarında saptanması mümkün değildir' olarak değişmiştir.",
+      "Doğru cevap yine I ve III'tür: nöral tüpte kapanma defekti tanımı ve ilk çocuk etkilenmişse sonraki çocuklarda riskin artması (ikinci çocukta 1/25, üçüncü çocukta 1/8) 41. slayttadır.",
+      "II. öncül yanlıştır, çünkü en sık görülen çocukluk çağı nörolojik hastalığı serebral palsidir (37. slayt). Anahtara göre IV. öncül de yanlıştır; bu öncülün konusu bu derste işlenmez. En güçlü çeldirici 'I, II ve III' şıkkıdır."
+     ],
+     "ornek": "41. slayt risk faktörlerini beş maddede sayar: ailede spina bifida varlığı, epileptik ilaç kullanımı (valproat) ile gestasyonel diyabet öyküsü, genetik faktörler, annede folik asit eksikliği ve ilk çocuğun spina bifidalı doğması. Hoca nöral tüpün embriyogenezin üçüncü ve dördüncü haftalarında kapandığını ekledi.",
+     "tuzak": "Tekrarlama riskinin iki oranı karıştırılır: ikinci çocukta 1/25, üçüncü çocukta 1/8. Risk her etkilenen çocukla artar; oranların sırası ters yazılırsa yanlış olur."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış çıkmışları 24 tanedir: 19'u doğrudan bu dersin slaytından çözülür, 5'i ilgili düzeydedir (ikisi Nöroloji ile Beyin ve Sinir Cerrahisi derslerinin sorusudur, üçünün sorduğu sıklık bilgisi slaytta verilmez). Doğrudan soruların dağılımı: inme 7 (risk faktörü, hemipleji, apraksi, rehabilitasyon ilkeleri, akut dönem maddeleri ×2, komplikasyonlar), omurilik yaralanması 6 (seviye, otonom tutulum, üst motor nöron bulguları, sakral korunma ×2, otonomik disrefleksi vakası), serebral palsi 3 (neden, en sık tip ×2), spina bifida 2 ve travmatik beyin hasarı 1. Yinelenen sorular dersin en güvenilir sınav yerlerini gösterir: en sık serebral palsi tipi (2019-20 ve 2020-21), spina bifida öncüllüsü (2019-20 ve 2020-21), sakral korunma (2022-23 kurul ve bütünleme) ve travmatik beyin hasarı doğruları (2020-21 kurul ve final). Kök kalıbı üç türdür: öncüllü 'hangisi/hangileri doğrudur' (ilkeler, seviyeler, spina bifida), olumsuz kök 'hangisi yanlıştır' (yanlış şık her seferinde bir sistemin tutulmadığını söyler: 'otonom tutulum gözlenmez', 'mesane ve bağırsak disfonksiyonu görülmez') ve kısa 'en sık' sorusu (klinik tablo, tip, neden). Tek vaka sorusu otonomik disrefleksidir ve slayttaki açıklama kutusunun birebir uygulamasıdır.",
+    "2020-2021: Aşağıdakilerden hangisi serebrovasküler olaylarda değiştirilebilir (tedavi edilebilir) risk faktörlerinden biridir?",
+    "Cevap: Hipertansiyon.",
+    "Soru, inme risk faktörlerinin değiştirilebilen ve değiştirilemeyen diye ikiye ayrılmasını ölçüyor; kök 'tedavi edilebilir' risk faktörünü ister.",
+    "Doğru cevap hipertansiyondur: 5. slayt değiştirilebilen risk faktörlerini sayarken hipertansiyonu ilk sıraya koyar; yanındaki bilgi görseli de hipertansiyonu en kritik faktör olarak, inme hastalarının yaklaşık yarısında bulunan etken olarak gösterir.",
+    "En güçlü çeldirici pozitif aile öyküsüdür; aile öyküsü slayttaki 'genetik' etkenin karşılığıdır ve yaş ile cinsiyetle birlikte değiştirilemeyen gruptadır. Irk ve eski serebrovasküler olay öyküsü de tedaviyle değiştirilebilen etkenler değildir.",
+    "Örnek: Hoca derste değiştirilebilen risk faktörlerinin en önemlisinin hipertansiyon ve koroner arter hastalığı olduğunu söyledi; atrial fibrilasyonu da serebral emboliye bağlı inmelerin önemli bir nedeni olarak ayrıca andı. Üçü de 5. slaytın değiştirilebilen listesindedir.",
+    "Tuzak: Bir etkenin önemli olması onu değiştirilebilir yapmaz: yaş, cinsiyet ve genetik güçlü etkenlerdir ama değiştirilemeyen gruptadır. Listedeki on iki değiştirilebilen etkenin herhangi biri aynı kökle sorulabilir.",
+    "2023-2024: İnmede en sık görülen motor bozukluk tablosu aşağıdakilerden hangisidir?",
+    "Cevap: Hemipleji.",
+    "Soru, inmede en sık görülen motor bozukluk tablosunu ölçüyor.",
+    "Doğru cevap hemiplejidir: 6. slayt 'Hemipleji en sık görülen klinik tablodur' der; aynı cümlenin başında paralizinin en sık görülen bulgu olduğu yazılıdır.",
+    "En güçlü çeldirici paraplejidir; parapleji iki bacağın tutulmasıdır ve bu derste omurilik yaralanmasının T2 ve altı hasarında görülen tablo olarak geçer (18. slayt). Tetrapleji de omurilik yaralanmasının T1 ve üzeri hasarının tablosudur.",
+    "Örnek: Hoca hemiplejiyi 'vücudun bir yarısında üst ve alt ekstremitedeki kas güçsüzlüğü' diye tanımladı. 7. slaytın tablosunda hemiparezinin fonksiyonel sonucu yürüme ve transfer güçlüğüdür.",
+    "Tuzak: Hemipleji ile parapleji karıştırılır: hemipleji bir vücut yarısıdır ve inmenin tablosudur; parapleji iki bacaktır ve omurilik yaralanmasının tablosudur. Ham kayıtta da yanlış seçenek olarak parapleji not edilmiştir.",
+    "2023-2024: Apraksi aşağıdakilerden hangisini tanımlar?",
+    "Cevap: Yeterli motor ve duyusal işleve karşın öğrenilmiş, amaçlı hareketleri gerçekleştirememe.",
+    "Soru apraksinin tanımını ölçüyor.",
+    "Doğru cevap 'yeterli motor ve duyusal işleve karşın amaçlı hareketi gerçekleştirememe'dir: 6. slayt apraksiyi kognitif fonksiyon bozuklukları arasında sayar ve parantez içinde 'duyusal fonksiyonlara rağmen istemli aktiviteyi başlatamama' diye tanımlar.",
+    "En güçlü çeldirici ihmal fenomeninin tanımıdır (vücudun ya da çevrenin bir yarısını fark edememe); ihmal fenomeni aynı cümlede apraksiyle yan yana sayılır. Konuşmayı anlama ya da üretme kaybı ise afazidir ve slaytta ayrı bir maddededir.",
+    "Örnek: 6. slayttaki kognitif bozukluklar dört tanedir: ihmal fenomeni, apraksi, algı problemleri ve duygudurum bozuklukları. Apraksili hastanın kolu güçlüdür ve duyusu yerindedir, ama hasta istediği hareketi başlatamaz.",
+    "Tuzak: Apraksi paralizi değildir: paralizide güç yoktur, apraksi güç ve duyu yerindeyken hareketin başlatılamamasıdır. İhmal fenomeniyle de karıştırılır; ikisi aynı satırda sayıldığı için birbirinin çeldiricisidir.",
+    "2019-2020: Serebrovasküler olay rehabilitasyonu ile ilgili aşağıdaki ifadeler veriliyor: I. Komorbid hastalıklara yönelik tedavilerin planlanması ve yürütülmesi II. Sekonder komplikasyonları önlemek veya en aza indirmek III. Kaybedilen motor fonksiyonları mümkün olduğunca yerine koymak IV. Fonksiyonel ve ev yaşamında bağımsızlığı sağlamak Bunlardan hangisi/hangileri serebrovasküler olay rehabilitasyonunun ana ilkelerindendir?",
+    "Cevap: I, II, III ve IV.",
+    "Soru, inme rehabilitasyonunun amaçlarını öncüllerle ölçüyor; dört öncülün hangilerinin ana ilke olduğu sorulur.",
+    "Doğru cevap dört öncülün tamamıdır: 8. slaytta 'eşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmek' (I. öncül) ve 'fonksiyonel bağımsızlığı en üst düzeye çıkarmak' (IV. öncül) amaç olarak sayılır; komplikasyon takibi 15. slaytta, motor fonksiyonun geliştirilmesi 13. slaytın kuvvetlendirme ve fonksiyon geliştirme maddelerindedir.",
+    "En güçlü çeldirici 'I, II ve III' şıkkıdır; bağımsızlık öncülünü dışarıda bırakır, oysa fonksiyonel bağımsızlık hem 8. slaytın amaçlarında hem 13. slaytın temel hedefinde yazılıdır.",
+    "Örnek: Hoca amaçları anlatırken eğitimin içeriğini verdi: hastaya ve aileye hastalığın doğası ve hastanın ulaşabileceği en yüksek fiziksel düzey anlatılır. 11. slaytın şemasında sürecin son durağı topluma dönüştür: eski işe dönme, yeni iş bulma, sosyal birey olma.",
+    "Tuzak: Rehabilitasyon yalnız egzersiz sanılır; oysa amaçların ikisi egzersizle ilgili değildir: eşlik eden hastalıkların tedavisi ve hasta-aile eğitimi. Öncüllü soruda bu iki amaç 'ilke değildir' diye elenirse cevap yanlış çıkar.",
+    "2025-2026: Aşağıda verilen inme komplikasyonları ve tedavileriyle ilgili ifadelerden hangisi yanlıştır?",
+    "Cevap: Mesane ve bağırsak disfonksiyonu görülmez.",
+    "Soru, inmenin komplikasyonlarını ve bunlara yönelik önlemleri olumsuz kökle ölçüyor; yanlış ifade aranır.",
+    "Yanlış ifade 'mesane ve bağırsak disfonksiyonu görülmez'dir: 12. slayt akut dönem rehabilitasyonunda mesane ve barsak programını sayar; 14. slayttaki komplikasyon görselinde üriner inkontinans ve kabızlık kronik dönem komplikasyonlarıdır.",
+    "Öteki şıklar doğrudur ve slaytta karşılıkları vardır: eklem hareket açıklığı egzersizleri ve pozisyonlama akut dönem maddeleridir, depresyonun tanısı ve tedavisi aynı listededir, yutma bozukluğuna bağlı aspirasyon pnömonisi akut dönemin solunumsal komplikasyonudur. En güçlü çeldirici depresyon şıkkıdır; depresyon bir komplikasyon gibi görünmese de hem 12. hem 14. slaytta yer alır.",
+    "Örnek: Hoca akut dönemde alınan inme hastasının izlemini anlatırken sondanın çekilip hastanın kendiliğinden idrar yapıp yapmadığına bakıldığını söyledi; mesane işlevi inmede de izlenen bir başlıktır.",
+    "Tuzak: Mesane ve bağırsak bozukluğu yalnız omurilik yaralanmasına özgü sanılır. Omurilik yaralanmasında nörojenik mesane ve barsak belirgindir (19. slayt), ama inmede de üriner inkontinans ve kabızlık görülür (14. slayt).",
+    "2025-2026: Kurgu Soru: İnme ile ilgili aşağıdaki ifadeler veriliyor: I. Hemipleji, inmede en sık görülen motor bozukluk tablosudur. II. Yutmanın değerlendirilmesi akut dönem rehabilitasyonunun bir parçasıdır. III. Uygun pozisyonlamaya ilk kez geç (subakut-kronik) dönem rehabilitasyonunda başlanır. IV. İnmede en hızlı iyileşme ilk 3 ayda olur. Bu ifadelerden hangileri doğrudur?",
+    "Cevap: I, II ve IV.",
+    "Soru, inme rehabilitasyonunda hangi girişimin hangi dönemde yapıldığını ölçüyor; ham sınav kaydında yanlış öncül olarak 'pozisyonlama geç dönem rehabilitasyonda yapılır' ifadesi verilmiştir.",
+    "Uygun pozisyonlama akut dönem rehabilitasyonunun maddesidir: 12. slaytın listesinde üçüncü sırada ve kalın yazılıdır, hemen ardından sık pozisyon değişikliği gelir. Bu yüzden pozisyonlamaya geç dönemde başlandığını söyleyen öncül yanlıştır.",
+    "Bankadaki öteki öncüller de slayttan çözülür: hemipleji en sık klinik tablodur (6. slayt), yutmanın değerlendirilmesi akut dönem maddesidir (12. slayt), en hızlı iyileşme ilk 3 ayda olur (10. slayt). En güçlü çeldirici dört öncülün hepsini doğru sayan şıktır.",
+    "Örnek: Hoca pozisyonlamanın gerekçesini verdi: sık pozisyon değişikliği önemlidir, çünkü uzun süreli immobilizasyona bağlı bası yaraları gelişebilir. Bası yarası 14. slaytta akut dönemin hareketsizliğe bağlı komplikasyonudur.",
+    "Tuzak: Akut dönem maddeleri ile subakut-kronik dönem maddeleri karıştırılır. Pozisyonlama, eklem hareket açıklığı egzersizleri ve yutmanın değerlendirilmesi akut dönemdedir (12. slayt); paralel barda ambulasyon, transfer eğitimi ve iş-uğraşı terapisi subakut-kronik dönemdedir (13. slayt).",
+    "2020-2021: Aşağıdakilerden hangisi/hangileri serebrovasküler olay sonrası gelişen komplikasyonlardandır?",
+    "Cevap: Hepsi.",
+    "Soru, serebrovasküler olay sonrası gelişen komplikasyonları tanımayı ölçüyor.",
+    "Doğru cevap 'hepsi'dir: 14. slayttaki komplikasyon görselinde derin ven trombozu ve pulmoner emboli akut dönemin tromboembolik satırında, bası yarası hareketsizliğe bağlı satırında; omuz ve ekstremite sorunları ile kabızlık kronik dönem kutusunda yer alır.",
+    "En güçlü çeldirici tek bir komplikasyonu seçmektir; örneğin bağırsak disfonksiyonu inmeye yakıştırılmayıp elenebilir. Oysa kabızlık kronik dönemin 'diğer' satırında üriner inkontinansla birlikte yazılıdır.",
+    "Örnek: Hoca önceki çalıştığı klinikte inme hastalarını ilk haftasında aldıklarında derin ven trombozuna karşı profilaksi başladıklarını, enfeksiyon açısından izlediklerini ve bası yarasını her gün kontrol ettiklerini anlattı; sorudaki komplikasyonların her biri klinikte izlenen bir başlıktır.",
+    "Tuzak: Komplikasyonlar yalnız nörolojik sanılır. 14. slaytın on iki satırından yalnız biri nörolojiktir; ötekiler solunum, damar, kalp, enfeksiyon, hareketsizlik, omuz, denge, ağrı, psikososyal ve boşaltım sorunlarıdır.",
+    "2019-2020: Hemiplejik üst ekstremitenin en sık görülen sorunu aşağıdakilerden hangisidir?",
+    "Cevap: Omuz ağrısı.",
+    "Soru, hemiplejik üst ekstremitenin en sık görülen sorununu ölçüyor; şıklarda omuz ağrısı, omuz subluksasyonu, kompleks bölgesel ağrı sendromu, brakiyal pleksus lezyonları ve eklem kontraktürü vardır.",
+    "Bu yılın 14. slaytı kronik dönem komplikasyonlarının 'omuz ve ekstremite sorunları' satırında hemiplejik omuz ağrısını, omuz subluksasyonunu ve kompleks bölgesel ağrı sendromunu birlikte sayar; hangisinin en sık olduğunu belirtmez. Sorunun anahtarı omuz ağrısıdır.",
+    "En güçlü çeldirici omuz subluksasyonudur, çünkü slaytta omuz ağrısıyla aynı satırda yer alır. Kontraktür aynı görselin motor satırındadır; brakiyal pleksus lezyonu bu yılın komplikasyon görselinde sayılmaz.",
+    "Örnek: Hoca hemiplejik omuzu önemli bir sorun olarak anlattı: yaygın omuz ağrısı olur, kas güçsüzlüğüne bağlı subluksasyon da gelişebilir; kronik dönemin iki önemli komplikasyonu spastisite ve hemiplejik omuz ağrısıdır. Hoca 'en sık' sözünü kullanmadı.",
+    "Tuzak: Omuz ağrısı ile omuz subluksasyonu karıştırılır: subluksasyon eklemin kısmi çıkığıdır ve ağrının nedenlerinden biridir, ama sorulan sorun ağrının kendisidir. Üçü slaytta yan yana sayıldığı için birbirinin çeldiricisidir.",
+    "2020-2021: Hemiplejik üst ekstremitenin en sık sorunu aşağıdakilerden hangisidir?",
+    "Cevap: Omuz ağrısı.",
+    "Soru bir önceki yılın sorusunun yinelenmesidir: hemiplejik üst ekstremitenin en sık sorunu sorulur; son şık 'hiçbiri' olarak değişmiştir.",
+    "14. slayt hemiplejik omuz ağrısını, omuz subluksasyonunu ve kompleks bölgesel ağrı sendromunu kronik dönemin omuz ve ekstremite sorunları olarak birlikte sayar; en sık olanı belirtmez. Sorunun anahtarı yine omuz ağrısıdır.",
+    "En güçlü çeldirici omuz subluksasyonudur; 'hiçbiri' şıkkı ise sayılan dört sorunun da gerçek komplikasyon olması nedeniyle elenir.",
+    "Örnek: Hoca hemiplejik omuzda tedaviyi de söyledi: egzersizlere fizik tedavi ajanları eklenir. Spastisiteyle birlikte hemiplejik omuz ağrısını kronik dönemin iki önemli komplikasyonu olarak saydı.",
+    "Tuzak: Aynı soru iki yıl üst üste sorulmuştur; şıkların sırası ve son şık değişir, anahtar değişmez. Kompleks bölgesel ağrı sendromu da ağrı içerdiği için omuz ağrısıyla karıştırılır.",
+    "2019-2020: I. Lomber 2 II. Torakal 2 III. Torakal 12 IV. Servikal 7 Yukarıdaki omurilik seviyelerinden hangilerinin komplet lezyonu paraplejiye neden olur?",
+    "Cevap: I, II ve III.",
+    "Soru, omurilik yaralanmasında seviye ile tablo eşleşmesini ölçüyor: dört seviyeden hangilerinin komplet lezyonu parapleji yapar?",
+    "Doğru cevap Lomber 2, Torakal 2 ve Torakal 12'dir: 18. slayta göre parapleji T2 ve altındaki segmentlerin zedelenmesiyle, tetrapleji T1 ve üzeri hasarla olur; Servikal 7 T1'in üstünde olduğu için tetrapleji yapar.",
+    "En güçlü çeldirici Torakal 2'yi dışarıda bırakan 'I ve III' şıkkıdır; T2 sınırın hemen altındadır ve parapleji tarafındadır. Dört seviyeyi birden parapleji sayan şık Servikal 7'yi yanlış sınıflar.",
+    "Örnek: 18. slaytın çiziminde dört örnek seviye vardır: C4 ve C6 yaralanması tetrapleji, T6 ve L1 yaralanması parapleji olarak gösterilir; siluetlerde etkilenen bölge seviye alçaldıkça küçülür. Hoca paraplejiyi tetraplejiye göre daha hafif ama yine engelliliğe yol açan bir tablo olarak anlattı.",
+    "Tuzak: Sınır T1 ile T2 arasındadır; 'torakal yaralanma her zaman paraplejidir' diye düşünülürse T1 yanlış sınıflanır. T1 ve üzeri tetrapleji, T2 ve altı paraplejidir.",
+    "2021-2022: Omurilik yaralanmaları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Omurilik yaralanmasında motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenmez.",
+    "Soru, omurilik yaralanmasının genel özelliklerini olumsuz kökle ölçüyor; yanlış ifade aranır.",
+    "Yanlış ifade 'motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenmez'dir: 18. slayt tetraplejide de paraplejide de 'motor, duyu ve otonom sistem bozuklukları eşlik eder' der; 19. slayt otonom etkilenimi ayrı bir başlıkta dört maddeyle sayar.",
+    "En güçlü çeldirici 'eklem hareket açıklığı egzersizlerine akut dönemde başlanmalıdır' şıkkıdır; cümle 27. slaytta aynen geçer ve doğrudur. 'En sık neden travmadır' ifadesi de 17. slaytla uyumludur.",
+    "Örnek: Hoca otonom etkilenimi anlatırken otonom disrefleksiyi omurilik yaralanmalı hastalarda görülen en önemli sorunlardan biri ve bu hasta grubuna özgü bir komplikasyon olarak vurguladı. 19. slaytın çiziminde otonom şeritte mesane, bağırsak, tansiyon aleti ve ter damlaları gösterilir.",
+    "Tuzak: Omurilik yaralanması yalnız felç ve duyu kaybı sanılır. Otonom tutulum (nörojenik mesane ve barsak, ortostatik hipotansiyon, otonomik disrefleksi, terleme bozukluğu) tablonun üçüncü ayağıdır; aynı yanlış ifade 2022-23 sorusunda da şık olarak yer almıştır.",
+    "2020-2021: Üst motor nöron lezyonu ile ilgili aşağıdaki bulgular veriliyor: I. Derin tendon reflekslerinde artış II. Kas gücünde azalma III. Patolojik refleks IV. Kas tonusunda azalma Bu bulgulardan hangileri üst motor nöron lezyonu bulgusudur?",
+    "Cevap: I, II ve III.",
+    "Soru, üst motor nöron lezyonunun bulgularını öncüllerle ölçüyor; karnede Fiziksel Tıp ve Rehabilitasyon dersinin spinal kord yaralanması konusundan sorulmuştur.",
+    "Doğru cevap derin tendon reflekslerinde artış, kas gücünde azalma ve patolojik reflekstir: 19. slayt spinal şoku izleyen dönemde üst motor nöron bulgularını 'spastisite, hiperrefleksi ve patolojik refleksler' diye sayar; kas kuvvetinde azalma aynı başlığın ilk maddesidir.",
+    "Yanlış öncül 'kas tonusunda azalma'dır; üst motor nöron bulgusu spastisite, yani tonus artışıdır. En güçlü çeldirici kas gücünde azalmayı dışarıda bırakan 'I ve III' şıkkıdır.",
+    "Örnek: Hoca motor tablonun zaman içindeki değişimini anlattı: ilk haftalarda flask paralizi ve arefleksi görülür, yani tablo alt motor nöron tipine benzer; spinal şok dönemi geçince spastisite, derin tendon reflekslerinde artış ve patolojik refleksler ortaya çıkar.",
+    "Tuzak: Akut dönemdeki spinal şok bulguları (flask paralizi, arefleksi) üst motor nöron bulgusu sanılabilir. Tonus azalması ve refleks kaybı spinal şokun, tonus artışı ve refleks artışı sonraki dönemin bulgusudur.",
+    "2020-2021: Medulla spinalisin tam ya da tama yakın hasarında aşağıdakilerden hangisi görülmez?",
+    "Cevap: Spinal şok döneminde refleksler artmıştır.",
+    "Soru, medulla spinalisin tam ya da tama yakın hasarında görülen bulguları olumsuz kökle ölçüyor; Nöroloji dersinin sorusudur.",
+    "Görülmeyen bulgu 'spinal şok döneminde reflekslerin artması'dır: 19. slayt akut dönemde spinal şoka bağlı flask paralizi ve arefleksi olduğunu yazar; refleks artışı izleyen dönemin bulgusudur.",
+    "Öteki şıklar aynı slaytla uyumludur: lezyon seviyesinin altında duyu kaybı, derin duyu kaybı ve otonom etkilenim vardır. En güçlü çeldirici 'flask tipte güç kaybı' şıkkıdır; omurilik hasarında flask paralizi beklenmez sanılır, oysa akut dönemin tablosu budur.",
+    "Örnek: Hoca spinal şoku 'genellikle ilk haftalarda görülen, alt motor nöron tipine benzeyen tablo' diye anlattı; bu dönem geçince üst motor nöron bulguları ortaya çıkar.",
+    "Tuzak: Hiperrefleksi omurilik yaralanmasının bulgusudur, ama spinal şok döneminin değil. Sorunun yanlışı bulgunun kendisinde değil, zamanındadır.",
+    "2022-2023: Omurilik yaralanması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Sakral korunma yoksa yaralanmanın komplet olduğu söylenebilir.",
+    "Soru, omurilik yaralanmasının temel bilgilerini 'hangisi doğrudur' köküyle ölçüyor; doğru şık komplet-inkomplet ayrımıdır.",
+    "Doğru cevap 'sakral korunma yoksa yaralanmanın komplet olduğu söylenebilir'dir: 21. slaytın sağ kutusunda komplet yaralanma için en alt sakral köklerde (S4-S5) ne duyu ne de motor fonksiyonun sağlam olduğu ve sakral korunmanın bulunmadığı yazılıdır.",
+    "Öteki şıklar slaytla çürür: en sık neden travmatiktir (17. slayt), otonom bozukluk eşlik eder (18. slayt), T1 ve üzeri yaralanma tetrapleji yapar (18. slayt). En güçlü çeldirici 'T1 ve üzeri yaralanmalarda parapleji gelişir' şıkkıdır; seviye doğru, tablo yanlıştır.",
+    "Örnek: Hoca bu slaytta akılda kalacak şeyin komplet ve inkomplet yaralanmanın ne olduğu olduğunu söyledi: medulla spinalisin en kaudal kısmı olan sakral bölgede duyu ya da motor işlevden biri sağlamsa yaralanma inkomplettir; duyu anal bölgenin duyusuyla, motor istemli anal kontraksiyonla değerlendirilir.",
+    "Tuzak: Komplet yaralanma 'bacaklar hiç oynamıyor' diye tanımlanmaz; ölçüt S4-S5 segmentlerindeki işlevdir. Bacakları tümüyle felçli bir hasta, anal duyusu korunmuşsa inkomplettir.",
+    "2022-2023: Omurilik yaralanması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Sakral korunma yoksa hastalar inkomplet olarak değerlendirilir.",
+    "Soru aynı bilgiyi olumsuz kökle ölçüyor: omurilik yaralanmasıyla ilgili yanlış ifade aranır.",
+    "Yanlış ifade 'sakral korunma yoksa hastalar inkomplet olarak değerlendirilir'dir: 21. slayta göre sakral korunma yoksa yaralanma komplettir; inkomplet yaralanmada sakral korunma vardır.",
+    "Öteki şıklar doğrudur: motor, duyu ve otonom bozukluklar birlikte görülür (18. slayt), ASIA sınıflaması prognozda önemlidir (20. slayt), en sık neden travmatiktir (17. slayt), T1 ve üzeri yaralanma tetraplejidir (18. slayt). En güçlü çeldirici ASIA şıkkıdır; 20. slayt sınıflamanın hem prognoz hem takipte önemli olduğunu yazar.",
+    "Örnek: 20. slayta göre komplet yaralanma ASIA bozukluk skalasında A, inkomplet yaralanma B, C ve D'dir. Hoca skalanın beş gruba ayrıldığını, en kötü prognozlu grubun komplet yaralanma olan A olduğunu söyledi.",
+    "Tuzak: Aynı bilgi aynı yıl iki sınavda iki yönden sorulmuştur: kurulda doğru ifade, bütünlemede yanlış ifade olarak. 'Var' ve 'yok' yer değiştirince anlam tersine döner: korunma var inkomplet, korunma yok komplet.",
+    "2023-2024: En sık görülen inkomplet omurilik (spinal kord) yaralanma sendromu hangisidir?",
+    "Cevap: Santral kord sendromu.",
+    "Soru, inkomplet omurilik yaralanma sendromlarının sıklığını ölçüyor; şıklarda santral kord, Brown-Séquard, anterior kord, posterior kord ve konus medullaris sendromları vardır. Anahtar santral kord sendromudur.",
+    "22. slayt santral kord sendromunu tanımlar: çoğunlukla spondilozu olanlarda düşmeye bağlı hiperekstansiyonla olur, üst ekstremitelerdeki motor kayıp alt ekstremitelerdekinden fazladır ve prognozu daha iyidir. Sendromun sıklığı slaytta yazılı değildir.",
+    "Şıkların hepsi bu derste işlenen sendromlardır ve birbirinin çeldiricisidir: slayt posterior kord sendromu için 'nadir görülür', Brown-Séquard için 'saf formu nadirdir' der; bu iki şık slayt bilgisiyle elenebilir.",
+    "Örnek: Hoca santral kord sendromunu ileri yaştaki, spondilozu olan hastada düşme sonucu gelişen hiperekstansiyon tipi yaralanma olarak anlattı; medulla spinalisin merkezine yakın alan zedelenir ve üst ekstremite alt ekstremiteden daha çok etkilenir.",
+    "Tuzak: Sıklık, prognoz ve mekanizma ayrı bilgilerdir: slaytta santral kord için 'prognoz daha iyi', anterior kord için 'prognozu en kötü', posterior kord için 'nadir' yazılıdır. Bu üç niteleme birbirinin yerine konmamalıdır.",
+    "2024-2025: Brown-Séquard sendromu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Lezyon tarafında motor kayıp ile pozisyon ve titreşim duyusu kaybı, karşı tarafta ağrı ve ısı duyusu kaybı görülür.",
+    "Soru Brown-Séquard sendromunun bulgularını ölçüyor; Beyin ve Sinir Cerrahisi dersinin sorusudur.",
+    "Doğru ifade 'lezyon tarafında motor kayıp ile pozisyon ve titreşim duyusu kaybı, karşı tarafta ağrı ve ısı duyusu kaybı'dır: 22. slayt sendromu 'lezyon tarafında propriosepsiyon, motor ve vibrasyon kaybı, kontralateral ağrı ve ısı kaybı' diye tanımlar.",
+    "En güçlü çeldirici tarafları ters çeviren şıktır (karşı tarafta motor kayıp, aynı tarafta ağrı ve ısı kaybı). Öteki şıklar başka sendromların tanımıdır: iki taraflı motor ve ağrı-ısı kaybıyla propriosepsiyonun korunması anterior kord, üst ekstremitede belirgin motor kayıp santral kord, yalnız arka kordon tutulumu posterior kord sendromudur (22. ve 23. slayt).",
+    "Örnek: Hoca sendromu sık sorulan bir sendrom olarak anlattı: lezyon tarafında derin duyu ve motor fonksiyon bozukluğu, karşı tarafta ağrı ve ısı kaybı olur; saf formu nadirdir ama kliniği bilinmelidir. 22. slaytın çiziminde bir bacak derin duyu kaybıyla, öteki bacak ağrı ve ısı kaybıyla etiketlenmiştir.",
+    "Tuzak: Taraflar karıştırılır: motor kayıp ve derin duyu (propriosepsiyon, vibrasyon) lezyonla aynı tarafta, ağrı ve ısı karşı taraftadır. Dört inkomplet sendromun tanımı aynı soruda birbirinin çeldiricisi olarak kullanılır.",
+    "2019-2020: C5 seviyesinde tetraplejik, 4 aylık omurilik yaralanması olan ve hipertansiyon öyküsü olmayan hasta akşam saatlerinde acil servise zonklayıcı baş ağrısı, kızarıklık ve terleme ile başvuruyor. Acil serviste kan basıncı 190/100 mmHg olarak ölçülüyor. İlk değerlendirmede üriner sondasının tıkanmış olduğu görülüyor. Bu hastada akla gelmesi gereken ilk tanı aşağıdakilerden hangisidir?",
+    "Cevap: Otonomik disrefleksi.",
+    "Soru bir vakadır ve omurilik yaralanmasının acil komplikasyonunu tanımayı ölçüyor: C5 tetraplejik hasta, zonklayıcı baş ağrısı, kızarıklık, terleme, 190/100 mmHg kan basıncı ve tıkanmış üriner sonda.",
+    "Doğru cevap otonomik disrefleksidir: 30. slayttaki açıklama kutusuna göre T6 ve üzeri yaralanması olan hastada lezyon seviyesinin altından gelen nosiseptif uyarılar (mesane distansiyonu, barsak retansiyonu) hipertansiyon, baş ağrısı ve flushing ile giden acil bir tablo oluşturur. Vakada seviye C5'tir, tetikleyici tıkalı sondanın yol açtığı mesane distansiyonudur.",
+    "En güçlü çeldirici spinal şoktur; spinal şok akut dönemin flask paralizi ve arefleksi tablosudur (19. slayt), oysa hasta yaralanmanın dördüncü ayındadır ve kan basıncı yüksektir. Heterotopik ossifikasyon aynı slaytın komplikasyon listesindedir ama bu tabloyu yapmaz.",
+    "Örnek: Hoca otonom disrefleksiyi omurilik yaralanmasının en önemli ve en acil komplikasyonu olarak anlattı: tetikleyici genellikle mesane distansiyonu, bağırsak retansiyonu ya da bası yarasıdır; önce tetikleyen uyaran ortadan kaldırılır, kan basıncı normale dönmezse hipertansiyona müdahale edilir. Vakada ilk adım tıkalı sondanın açılmasıdır.",
+    "Tuzak: Otonomik disrefleksi ile ortostatik hipotansiyon karıştırılır: ikisi de 19. ve 30. slaytta kardiyovasküler otonom bozukluk olarak yan yana sayılır, ama birinde kan basıncı düşer, ötekinde tehlikeli biçimde yükselir. Yaralanma T6'nın altındaysa otonom disrefleksi beklenmez.",
+    "2020-2021: Travmatik beyin hasarı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Hepsi.",
+    "Soru, travmatik beyin hasarının rehabilitasyon ilkelerini 'hangisi doğrudur' köküyle ölçüyor; dört ifadenin hepsi doğrudur.",
+    "Üç ifadenin dayanağı 36. slayttadır: posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir; erken mobilizasyon asıl amaçtır; immobilizasyonun getirdiği komplikasyonların önlenmesi rehabilitasyonun temel taşlarındandır. 34. slayttaki şiddet tablosunda da amnezinin 7 günden uzun sürmesi ağır hasarı gösterir.",
+    "En güçlü çeldirici tek bir ifadeyi seçmektir. Bilişsel değerlendirme 34. slaytta değerlendirmenin bir başlığı olarak geçer; şıkta adı verilen skala bu derste anlatılmaz, soru öteki üç ifadenin doğruluğu üzerinden 'hepsi' şıkkına götürür.",
+    "Örnek: Hoca yoğun bakımdan trakeostomili, PEG'li ve sondalı çıkan bir hastanın üç-dört aylık rehabilitasyonunu anlattı: önce solunum düzeltilir, yutma terapisi verilir, trakeostomi ve PEG sırayla kapatılır; hasta fiziksel olarak toparlanır ama bilişsel bozukluk kalıcı olabilir. Prognozda posttravmatik amnezi süresi, koma süresi ve Glasgow koma skalasının önemli olduğunu söyledi.",
+    "Tuzak: Şiddet ölçütleri ile prognoz ölçütleri karıştırılır: şiddet Glasgow koma skalası, bilinç kaybı süresi ve amnezi süresiyle belirlenir (34. slayt); prognoz için slaytta posttravmatik amnezi ve koma süresi sayılır (36. slayt). Aynı soru kurul ve final sınavında iki kez çıkmıştır.",
+    "2020-2021: Serebral palsinin etiyolojisinde en çok suçlanan neden nedir?",
+    "Cevap: Prematürite.",
+    "Soru serebral palsinin etiyolojisinde en çok suçlanan nedeni ölçüyor.",
+    "Doğru cevap prematüritedir: 38. slayt 'En sık nedeni prematürite ve düşük doğum ağırlığıdır' der; aynı slayta göre prenatal, natal ve postnatal risk faktörleri vardır ve %80 prenatal nedenler en sık görülür.",
+    "Çeldiriciler (fenilketonüri, annede serebral palsi olması, yüksek ateş, akraba evliliği) slaytta sayılan nedenler değildir. En güçlü çeldirici 'annede serebral palsi olması'dır; serebral palsi kalıtsal bir hastalık gibi düşünülürse seçilir, oysa slayt serebral palsiyi gelişmekte olan beyinde progresif olmayan bir hasara bağlar.",
+    "Örnek: Hoca bu çocukların çoğunlukla prematüre doğdukları için rehabilitasyon hekimine yönlendirildiğini ve motor gelişim basamaklarının izlendiğini anlattı: iki aylık bebekte baş tutma, altı aylık bebekte desteksiz oturma beklenir.",
+    "Tuzak: 'En sık neden' ile 'nedenlerin en sık dönemi' karıştırılır: en sık neden prematürite ve düşük doğum ağırlığıdır; nedenlerin dönemi sorulursa cevap prenataldir (%80).",
+    "2019-2020: En sık görülen serebral palsi tipi aşağıdakilerden hangisidir?",
+    "Cevap: Spastik tip.",
+    "Soru en sık görülen serebral palsi tipini ölçüyor.",
+    "Doğru cevap spastik tiptir: 39. slayt 'En sık spastik tip serebral palsi görülür' der ve üç alt tipini sayar: hemiplejik, diplejik, tetraplejik.",
+    "Çeldiricilerden ataksik ve mikst slayttaki dört tip arasındadır; distonik ve atetoid şemada 'atetoid ve diskinetik' başlığının altındaki iki figürdür. En güçlü çeldirici mikst tiptir; adı gereği en kapsayıcı tip gibi görünür ama en sık görülen tip değildir.",
+    "Örnek: 39. slaytın şemasında spastik grubun altında üç siluet vardır: hemiplejide vücudun bir yarısı, diplejide iki bacak, kuadriplejide tüm vücut boyalıdır. Hoca ataksik serebral palsinin çok nadir görüldüğünü söyledi.",
+    "Tuzak: Tip ile alt tip karıştırılır: hemiplejik, diplejik ve tetraplejik birer tip değil, spastik tipin alt tipleridir. Şıklarda 'hemiplejik' verilirse 'en sık tip' sorusunun cevabı yine spastiktir.",
+    "2020-2021: En sık görülen serebral palsi tipi hangisidir?",
+    "Cevap: Spastik.",
+    "Soru bir önceki yılın sorusunun yinelenmesidir: en sık görülen serebral palsi tipi sorulur; şıklar diskinetik, spastik, ataksik, distonik ve atetoid olarak değişmiştir.",
+    "Doğru cevap yine spastik tiptir: 39. slaytın ikinci maddesi en sık spastik tipin görüldüğünü yazar.",
+    "En güçlü çeldirici diskinetik tiptir, çünkü slayttaki dört tipten biridir; distonik ve atetoid şemada diskinetik grubun figürleridir ve aynı gruptan üç şık birden verilmiştir.",
+    "Örnek: 39. slaytın alt bandında spastik grup piramidal, atetoid-diskinetik ve ataksik gruplar ekstrapiramidal olarak gösterilir. Hoca diskinetik tipin ekstrapiramidal sistem etkilenimiyle, kore ve atetoz hareketleriyle gittiğini söyledi.",
+    "Tuzak: Aynı soru iki yıl üst üste sorulmuştur; şıklar değişir, anahtar değişmez. Diskinetik, distonik ve atetoid aynı grubun adlarıdır; üçü birden şıkta olunca birinin doğru olduğu sanılır.",
+    "2019-2020: Spina bifida ile ilgili aşağıdaki ifadeler veriliyor: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa diğer çocuklar için risk artmaktadır. IV. En ağır tipi meningoseldir. Bu ifadelerden hangisi/hangileri doğrudur?",
+    "Cevap: I ve III.",
+    "Soru spina bifidayı dört öncülle ölçüyor: tanım, sıklık, tekrarlama riski ve en ağır tip.",
+    "Doğru cevap I ve III'tür: 41. slayta göre spina bifida vertebral ark ve nöral tüpte kapanma defektidir (I doğru) ve ilk çocuk spina bifidalı doğmuşsa risk artar, ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir (III doğru).",
+    "II. öncül yanlıştır: en sık görülen çocukluk çağı nörolojik hastalığı serebral palsidir (37. slayt). IV. öncül yanlıştır: en ağır klinikle seyreden tip meningomiyeloseldir (44. slayt), meningosel değil. En güçlü çeldirici II. öncülü de doğru sayan 'I, II ve III' şıkkıdır.",
+    "Örnek: 42. slaytın çizimi tipleri hafiften ağıra dizer: okkultada yalnız kemik açıklığı vardır, meningoselde kesede yalnız zarlar bulunur, meningomiyeloselde omurilik ve sinir lifleri de kesenin içindedir. Hoca spina bifidanın serebral palsiye göre çok daha nadir görüldüğünü söyledi.",
+    "Tuzak: Meningosel ile meningomiyelosel adları benzediği için karıştırılır; en ağır tip, kesede sinir dokusu da bulunan meningomiyeloseldir. Spina bifida çocuklarda başvuru nedenleri sıralamasında serebral palsiden sonra gelir (3. slayt).",
+    "2020-2021: Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa risk diğer çocuklar için artmaktadır. IV. Gebelik dönemi taramalarında saptanması mümkün değildir. Bu ifadelerden hangisi/hangileri doğrudur?",
+    "Cevap: I ve III.",
+    "Soru bir önceki yılın öncüllü sorusunun yinelenmesidir; ilk üç öncül aynıdır, dördüncü öncül 'gebelik dönemi taramalarında saptanması mümkün değildir' olarak değişmiştir.",
+    "Doğru cevap yine I ve III'tür: nöral tüpte kapanma defekti tanımı ve ilk çocuk etkilenmişse sonraki çocuklarda riskin artması (ikinci çocukta 1/25, üçüncü çocukta 1/8) 41. slayttadır.",
+    "II. öncül yanlıştır, çünkü en sık görülen çocukluk çağı nörolojik hastalığı serebral palsidir (37. slayt). Anahtara göre IV. öncül de yanlıştır; bu öncülün konusu bu derste işlenmez. En güçlü çeldirici 'I, II ve III' şıkkıdır.",
+    "Örnek: 41. slayt risk faktörlerini beş maddede sayar: ailede spina bifida varlığı, epileptik ilaç kullanımı (valproat) ile gestasyonel diyabet öyküsü, genetik faktörler, annede folik asit eksikliği ve ilk çocuğun spina bifidalı doğması. Hoca nöral tüpün embriyogenezin üçüncü ve dördüncü haftalarında kapandığını ekledi.",
+    "Tuzak: Tekrarlama riskinin iki oranı karıştırılır: ikinci çocukta 1/25, üçüncü çocukta 1/8. Risk her etkilenen çocukla artar; oranların sırası ters yazılırsa yanlış olur."
+   ],
+   "v": "ff4f331a57"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%44) ve doğru ifadeyi bulma (%14) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok sınıflama ve adlandırma (%32) ve tanım ve kavram (%21) sorulur."
+    },
+    {
+     "baslik": "Sınıflama ve adlandırma",
+     "metin": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%47) ve hatırlama (%42) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%44) ve doğru ifadeyi bulma (%14) biçimindedir.",
+    "Sorulan bilgi: En çok sınıflama ve adlandırma (%32) ve tanım ve kavram (%21) sorulur.",
+    "Sınıflama ve adlandırma: Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%47) ve hatırlama (%42) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "e31fb6b17d"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "I ve III",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa risk diğer çocuklar i."
+    },
+    {
+     "baslik": "Spastik",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Pediatrik rehabilitasyon kapsamında, çocuklarda en sık görülen serebral palsi tipi hangisidir?"
+    },
+    {
+     "baslik": "Omurilik yaralanmasında motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenm",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Omurilik yaralanmaları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?"
+    },
+    {
+     "baslik": "Komplet ve inkomplet yaralanma: sakral korunma",
+     "metin": "2022-23 sınavında ve aynı yılın bütünlemesinde sakral korunma ile komplet yaralanma ilişkisi soruldu; hoca da akılda kalması gereken yer olarak bu ayrımı gösterdi."
+    },
+    {
+     "baslik": "Tetrapleji ve parapleji: seviye sınırı",
+     "metin": "2019-20 sınavında hangi seviyelerin komplet lezyonunun parapleji yaptığı öncüllü soruldu; 2021-22 finalinde otonom tutulumun görülmediğini söyleyen yanlış ifade bulduruldu."
+    },
+    {
+     "baslik": "Otonom disrefleksi",
+     "metin": "2019-20 sınavında C5 tetraplejik, sondası tıkalı, kan basıncı yüksek hasta vakasıyla soruldu; hoca en önemli ve en acil komplikasyon diye iki ayrı yerde vurguladı."
+    },
+    {
+     "baslik": "Serebral palsi tipleri: en sık spastik",
+     "metin": "En sık görülen serebral palsi tipi 2019-20 ve 2020-21 sınavlarında art arda soruldu; iki soruda da cevap spastik tipti."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "I ve III: Çıkmışlarda 2 kez soruldu. Örnek kök: Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa risk diğer çocuklar i.",
+    "Spastik: Çıkmışlarda 2 kez soruldu. Örnek kök: Pediatrik rehabilitasyon kapsamında, çocuklarda en sık görülen serebral palsi tipi hangisidir?",
+    "Omurilik yaralanmasında motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenm: Çıkmışlarda 2 kez soruldu. Örnek kök: Omurilik yaralanmaları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+    "Komplet ve inkomplet yaralanma: sakral korunma: 2022-23 sınavında ve aynı yılın bütünlemesinde sakral korunma ile komplet yaralanma ilişkisi soruldu; hoca da akılda kalması gereken yer olarak bu ayrımı gösterdi.",
+    "Tetrapleji ve parapleji: seviye sınırı: 2019-20 sınavında hangi seviyelerin komplet lezyonunun parapleji yaptığı öncüllü soruldu; 2021-22 finalinde otonom tutulumun görülmediğini söyleyen yanlış ifade bulduruldu.",
+    "Otonom disrefleksi: 2019-20 sınavında C5 tetraplejik, sondası tıkalı, kan basıncı yüksek hasta vakasıyla soruldu; hoca en önemli ve en acil komplikasyon diye iki ayrı yerde vurguladı.",
+    "Serebral palsi tipleri: en sık spastik: En sık görülen serebral palsi tipi 2019-20 ve 2020-21 sınavlarında art arda soruldu; iki soruda da cevap spastik tipti.",
+    "Çalışma yolu: Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "97a9fcaefc"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders nörolojik rehabilitasyonun beş büyük hasta grubunu işler: inme, omurilik yaralanması, travmatik beyin hasarı, serebral palsi ve spina bifida. Her hastalıkta tanım, sıklık ve nedenler, sık görülen bozukluklar, değerlendirme ölçekleri, dönemlere göre rehabilitasyon programı ve komplikasyonlar anlatılır. Omurilik yaralanmasında seviye, komplet-inkomplet ayrımı ve inkomplet sendromlar dersin en ayrıntılı bölümüdür.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders nörolojik rehabilitasyonun beş büyük hasta grubunu işler: inme, omurilik yaralanması, travmatik beyin hasarı, serebral palsi ve spina bifida. Her hastalıkta tanım, sıklık ve nedenler, sık görülen bozukluklar, değerlendirme ölçekleri, dönemlere göre rehabilitasyon programı ve komplikasyonlar anlatılır. Omurilik yaralanmasında seviye, komplet-inkomplet ayrımı ve inkomplet sendromlar dersin en ayrıntılı bölümüdür."
+   ],
+   "v": "485014e499"
+  },
+  {
+   "id": "2t02-10",
+   "baslik": "İnmede motor ve duyusal bozukluklar",
+   "giris": "İnmede motor bozukluklardan paralizi en sık görülen bulgu, hemipleji en sık görülen klinik tablodur.",
+   "s": [
+    6
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "motor bozukluklardan paralizidir."
+    },
+    {
+     "metin": "hemiplejidir; vücudun bir yarısının tutulmasıdır."
+    },
+    {
+     "metin": "larinks ve farinks kaslarının paralizisine bağlı görülebilir."
+    },
+    {
+     "metin": "zamanla tonus bozuklukları gelişebilir; örneği spastisitedir."
+    },
+    {
+     "metin": "genelde motor bozukluklarla aynı dağılımda olur. Propriosepsiyon ve hafif dokunma duyusunda kayıp, parestezi ve dizestezi görülebilir."
+    },
+    {
+     "metin": "parapleji T2 ve altındaki omurilik zedelenmesinin, tetrapleji T1 ve üzeri omurilik hasarının tablosudur; inmenin en sık tablosu bunlar değildir. Monopleji tek ekstremitenin, tripleji üç ekstremitenin tutulmasıdır; inmenin en sık tablosu vücudun bir yarısını tutan hemiplejidir."
+    }
+   ],
+   "klip": "o-2t02-10",
+   "ses": [
+    "İnmede motor ve duyusal bozukluklar.",
+    "İnmede motor bozukluklardan paralizi en sık görülen bulgu, hemipleji en sık görülen klinik tablodur.",
+    "motor bozukluklardan paralizidir.",
+    "hemiplejidir; vücudun bir yarısının tutulmasıdır.",
+    "larinks ve farinks kaslarının paralizisine bağlı görülebilir.",
+    "zamanla tonus bozuklukları gelişebilir; örneği spastisitedir.",
+    "genelde motor bozukluklarla aynı dağılımda olur. Propriosepsiyon ve hafif dokunma duyusunda kayıp, parestezi ve dizestezi görülebilir.",
+    "parapleji T2 ve altındaki omurilik zedelenmesinin, tetrapleji T1 ve üzeri omurilik hasarının tablosudur; inmenin en sık tablosu bunlar değildir. Monopleji tek ekstremitenin, tripleji üç ekstremitenin tutulmasıdır; inmenin en sık tablosu vücudun bir yarısını tutan hemiplejidir."
+   ],
+   "v": "b1ba8fb7bf"
+  },
+  {
+   "id": "2t02-06",
+   "baslik": "İnmede akut dönem rehabilitasyonu",
+   "giris": "İnmenin akut döneminde erken mobilizasyon, uygun pozisyonlama, sık pozisyon değişikliği, yutmanın değerlendirilmesi ile mesane ve barsak programı uygulanır.",
+   "s": [
+    12
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "erken mobilizasyon; EHA ve germe egzersizleri; uygun pozisyonlama; sık pozisyon değişikliği; ortostatik toleransı artırmak için oturma dengesi egzersizleri; hasta ve ailenin eğitimi; yutmanın değerlendirilmesi; beslenme ve hidrasyonun düzenlenmesi; kendine bakım, mobilite ve ambulasyon aktivitelerinin eğitimi; mesane ve barsak programı; psikolojik destek; depresyonun tanısı ve tedavisi."
+    },
+    {
+     "metin": "akut dönemin maddesidir; geç döneme bırakılmaz. Hoca sık pozisyon değişikliğinin, uzun süreli hareketsizliğe bağlı bası yaralarını önlemek için önemli olduğunu söyledi."
+    },
+    {
+     "metin": "akut dönemde program gerektirir; inmede mesane ve bağırsak sorunu görülmez demek yanlıştır."
+    },
+    {
+     "metin": "disfaji aspirasyon ve malnutrisyon riski taşıdığı için yutma erken değerlendirilir."
+    },
+    {
+     "metin": "inme sonrası görülebilir; tanısı ve tedavisi programın parçasıdır."
+    },
+    {
+     "metin": "eklem hareket açıklığı egzersizleri hareketsizliğe bağlı sorunları önlemek için erken başlanır."
+    }
+   ],
+   "klip": "o-2t02-06",
+   "ses": [
+    "İnmede akut dönem rehabilitasyonu.",
+    "İnmenin akut döneminde erken mobilizasyon, uygun pozisyonlama, sık pozisyon değişikliği, yutmanın değerlendirilmesi ile mesane ve barsak programı uygulanır.",
+    "erken mobilizasyon; EHA ve germe egzersizleri; uygun pozisyonlama; sık pozisyon değişikliği; ortostatik toleransı artırmak için oturma dengesi egzersizleri; hasta ve ailenin eğitimi; yutmanın değerlendirilmesi; beslenme ve hidrasyonun düzenlenmesi; kendine bakım, mobilite ve ambulasyon aktivitelerinin eğitimi; mesane ve barsak programı; psikolojik destek; depresyonun tanısı ve tedavisi.",
+    "akut dönemin maddesidir; geç döneme bırakılmaz. Hoca sık pozisyon değişikliğinin, uzun süreli hareketsizliğe bağlı bası yaralarını önlemek için önemli olduğunu söyledi.",
+    "akut dönemde program gerektirir; inmede mesane ve bağırsak sorunu görülmez demek yanlıştır.",
+    "disfaji aspirasyon ve malnutrisyon riski taşıdığı için yutma erken değerlendirilir.",
+    "inme sonrası görülebilir; tanısı ve tedavisi programın parçasıdır.",
+    "eklem hareket açıklığı egzersizleri hareketsizliğe bağlı sorunları önlemek için erken başlanır."
+   ],
+   "v": "62e71d8b25"
+  },
+  {
+   "id": "2t02-07",
+   "baslik": "İnme komplikasyonları: akut ve kronik dönem",
+   "giris": "İnme komplikasyonları akut dönem (ilk saatler-günler) ve kronik dönem (haftalar-aylar ve sonrası) olarak iki kümede gösterilir.",
+   "s": [
+    14
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "nörolojik: serebral ödem, hemorajik dönüşüm, nöbet, bilinç değişikliği. Solunumsal: disfaji, aspirasyon ve aspirasyon pnömonisi. Tromboembolik: derin ven trombozu, pulmoner emboli. Kardiyovasküler: aritmiler, kan basıncı dalgalanmaları. Enfeksiyonlar: üriner sistem enfeksiyonu, pnömoni. Hareketsizliğe bağlı: bası yarası, eklem hareket açıklığında azalma, erken kontraktür."
+    },
+    {
+     "metin": "motor: spastisite, kontraktür, kas kuvvetinde azalma, patolojik sinerjiler. Omuz ve ekstremite: hemiplejik omuz ağrısı, omuz subluksasyonu, kompleks bölgesel ağrı sendromu. Denge ve mobilite: yürüme bozukluğu, düşmeler. Ağrı ve duyu: santral inme sonrası ağrı, parestezi. Kognitif ve psikososyal: depresyon, anksiyete, demans. Diğer: üriner inkontinans, kabızlık, cinsel işlev bozukluğu, yorgunluk, uyku bozuklukları."
+    },
+    {
+     "metin": "üst ekstremite sorunları, derin ven trombozu ve pulmoner emboli, bağırsak sorunları ve bası yarası birlikte verilir; hepsi komplikasyondur."
+    },
+    {
+     "metin": "derin ven trombozu ve aspirasyon pnömonisi akut, hemiplejik omuz ağrısı ve spastisite kronik dönemdedir."
+    }
+   ],
+   "klip": "o-2t02-07",
+   "ses": [
+    "İnme komplikasyonları: akut ve kronik dönem.",
+    "İnme komplikasyonları akut dönem (ilk saatler-günler) ve kronik dönem (haftalar-aylar ve sonrası) olarak iki kümede gösterilir.",
+    "nörolojik: serebral ödem, hemorajik dönüşüm, nöbet, bilinç değişikliği. Solunumsal: disfaji, aspirasyon ve aspirasyon pnömonisi. Tromboembolik: derin ven trombozu, pulmoner emboli. Kardiyovasküler: aritmiler, kan basıncı dalgalanmaları. Enfeksiyonlar: üriner sistem enfeksiyonu, pnömoni. Hareketsizliğe bağlı: bası yarası, eklem hareket açıklığında azalma, erken kontraktür.",
+    "motor: spastisite, kontraktür, kas kuvvetinde azalma, patolojik sinerjiler. Omuz ve ekstremite: hemiplejik omuz ağrısı, omuz subluksasyonu, kompleks bölgesel ağrı sendromu. Denge ve mobilite: yürüme bozukluğu, düşmeler. Ağrı ve duyu: santral inme sonrası ağrı, parestezi. Kognitif ve psikososyal: depresyon, anksiyete, demans. Diğer: üriner inkontinans, kabızlık, cinsel işlev bozukluğu, yorgunluk, uyku bozuklukları.",
+    "üst ekstremite sorunları, derin ven trombozu ve pulmoner emboli, bağırsak sorunları ve bası yarası birlikte verilir; hepsi komplikasyondur.",
+    "derin ven trombozu ve aspirasyon pnömonisi akut, hemiplejik omuz ağrısı ve spastisite kronik dönemdedir."
+   ],
+   "v": "7003f13657"
+  },
+  {
+   "id": "2t02-02",
+   "baslik": "Tetrapleji ve parapleji: seviye sınırı",
+   "giris": "Tetrapleji T1 ve üzeri omurilik hasarında, parapleji T2 ve alt segmentlerin zedelenmesinde olur.",
+   "s": [
+    18
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "omurilik yaralanması kabaca iki türdür: parapleji ve tetrapleji."
+    },
+    {
+     "metin": "T1 ve üzeri omurilik hasarında olur; dört ekstremite, solunum sistemi ve pelvik organlar etkilenir."
+    },
+    {
+     "metin": "T2 ve alt segmentlerdeki zedelenme sonucu olur; alt ekstremite ve pelvik organlar etkilenir. İki bacakta güçsüzlükle giden tablonun adıdır."
+    },
+    {
+     "metin": "iki tabloda da motor, duyu ve otonom sistem bozuklukları eşlik eder; otonom tutulum olmaz demek yanlıştır."
+    },
+    {
+     "metin": "servikal seviyeler ve T1 tetrapleji yapar; T2, T12 ve lomber seviyeler parapleji yapar. Öncüllü soruda servikal 7 parapleji seviyeleri arasına konarak tuzak kurulur."
+    },
+    {
+     "metin": "omurilik yaralanmasının en sık nedeni travmadır; kontraktürü ve kas atrofisini önlemek için eklem hareket açıklığı egzersizlerine akut dönemde başlanır."
+    }
+   ],
+   "klip": "o-2t02-02",
+   "ses": [
+    "Tetrapleji ve parapleji: seviye sınırı.",
+    "Tetrapleji T1 ve üzeri omurilik hasarında, parapleji T2 ve alt segmentlerin zedelenmesinde olur.",
+    "omurilik yaralanması kabaca iki türdür: parapleji ve tetrapleji.",
+    "T1 ve üzeri omurilik hasarında olur; dört ekstremite, solunum sistemi ve pelvik organlar etkilenir.",
+    "T2 ve alt segmentlerdeki zedelenme sonucu olur; alt ekstremite ve pelvik organlar etkilenir. İki bacakta güçsüzlükle giden tablonun adıdır.",
+    "iki tabloda da motor, duyu ve otonom sistem bozuklukları eşlik eder; otonom tutulum olmaz demek yanlıştır.",
+    "servikal seviyeler ve T1 tetrapleji yapar; T2, T12 ve lomber seviyeler parapleji yapar. Öncüllü soruda servikal 7 parapleji seviyeleri arasına konarak tuzak kurulur.",
+    "omurilik yaralanmasının en sık nedeni travmadır; kontraktürü ve kas atrofisini önlemek için eklem hareket açıklığı egzersizlerine akut dönemde başlanır."
+   ],
+   "v": "09b6a9d37e"
+  },
+  {
+   "id": "2t02-01",
+   "baslik": "Komplet ve inkomplet yaralanma: sakral korunma",
+   "giris": "En alt sakral köklerde (S4-5) duyu ya da motor işlev sağlamsa yaralanma inkomplet, ikisi de yoksa komplettir.",
+   "s": [
+    21
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "omuriliğin en alt sakral kökleri, yani S4-5 segmentleridir."
+    },
+    {
+     "metin": "bu köklerde ya duyu ya motor ya da her ikisi birden sağlamdır; sakral korunma vardır."
+    },
+    {
+     "metin": "bu köklerde ne duyu ne de motor fonksiyon sağlamdır; sakral korunma yoktur."
+    },
+    {
+     "metin": "duyu için anal bölgenin duyusu, motor için istemli anal kontraksiyon değerlendirilir. İkisinden birinin korunması bile yaralanmayı inkomplet yapar."
+    },
+    {
+     "metin": "sakral korunma yoksa hasta inkomplet sayılır denirse yanlıştır; sakral korunma yoksa yaralanma komplettir."
+    },
+    {
+     "metin": "komplet yaralanma en ağır gruptur; hoca en kötü prognozun bu grupta olduğunu belirtti. İnkomplet tipler içinde en kötü prognoz anterior kord sendromundadır."
+    },
+    {
+     "metin": "omurilik yaralanmasının en sık nedeni travmadır; motor, duyu ve otonom bozukluklar birlikte görülür; T1 ve üzeri hasar tetrapleji yapar; ASIA bozukluk skalası prognozda önemlidir."
+    }
+   ],
+   "klip": "o-2t02-01",
+   "ses": [
+    "Komplet ve inkomplet yaralanma: sakral korunma.",
+    "En alt sakral köklerde (S4-5) duyu ya da motor işlev sağlamsa yaralanma inkomplet, ikisi de yoksa komplettir.",
+    "omuriliğin en alt sakral kökleri, yani S4-5 segmentleridir.",
+    "bu köklerde ya duyu ya motor ya da her ikisi birden sağlamdır; sakral korunma vardır.",
+    "bu köklerde ne duyu ne de motor fonksiyon sağlamdır; sakral korunma yoktur.",
+    "duyu için anal bölgenin duyusu, motor için istemli anal kontraksiyon değerlendirilir. İkisinden birinin korunması bile yaralanmayı inkomplet yapar.",
+    "sakral korunma yoksa hasta inkomplet sayılır denirse yanlıştır; sakral korunma yoksa yaralanma komplettir.",
+    "komplet yaralanma en ağır gruptur; hoca en kötü prognozun bu grupta olduğunu belirtti. İnkomplet tipler içinde en kötü prognoz anterior kord sendromundadır.",
+    "omurilik yaralanmasının en sık nedeni travmadır; motor, duyu ve otonom bozukluklar birlikte görülür; T1 ve üzeri hasar tetrapleji yapar; ASIA bozukluk skalası prognozda önemlidir."
+   ],
+   "v": "9ae63e128b"
+  },
+  {
+   "id": "2t02-03",
+   "baslik": "Otonom disrefleksi",
+   "giris": "Otonom disrefleksi T6 ve üzeri yaralanmada, lezyon altından gelen nosiseptif uyarılarla tetiklenen hipertansiyon, baş ağrısı ve flushing ile giden acil tablodur.",
+   "s": [
+    30
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "T6 ve üzeri yaralanması olan hastalarda ortaya çıkar; omurilik yaralanmasının kardiyovasküler sorunlarındandır."
+    },
+    {
+     "metin": "lezyon seviyesinin altından gelen nosiseptif uyarılardır; başlıcaları mesane distansiyonu ve barsak retansiyonudur. Tıkalı üriner sonda ya da günlerdir süren kabızlık tipik öyküdür."
+    },
+    {
+     "metin": "hipertansiyon, baş ağrısı ve flushing, yani yüzde kızarma ile gider; acil bir tablodur."
+    },
+    {
+     "metin": "ortostatik hipotansiyonda kan basıncı düşer, burada yükselir. Spinal şok akut dönemde flask paralizi ve arefleksi ile gider. Heterotopik ossifikasyon ve üriner sistem enfeksiyonu aynı komplikasyon listesindedir ama bu tabloyu yapmaz."
+    },
+    {
+     "metin": "servikal ya da üst torakal yaralanmalı hastada ani baş ağrısı, kızarma ve yüksek kan basıncı verilir; ilk akla gelecek tanı otonom disrefleksidir."
+    },
+    {
+     "metin": "önce tetikleyen uyaran ortadan kaldırılır."
+    }
+   ],
+   "klip": "o-2t02-03",
+   "ses": [
+    "Otonom disrefleksi.",
+    "Otonom disrefleksi T6 ve üzeri yaralanmada, lezyon altından gelen nosiseptif uyarılarla tetiklenen hipertansiyon, baş ağrısı ve flushing ile giden acil tablodur.",
+    "T6 ve üzeri yaralanması olan hastalarda ortaya çıkar; omurilik yaralanmasının kardiyovasküler sorunlarındandır.",
+    "lezyon seviyesinin altından gelen nosiseptif uyarılardır; başlıcaları mesane distansiyonu ve barsak retansiyonudur. Tıkalı üriner sonda ya da günlerdir süren kabızlık tipik öyküdür.",
+    "hipertansiyon, baş ağrısı ve flushing, yani yüzde kızarma ile gider; acil bir tablodur.",
+    "ortostatik hipotansiyonda kan basıncı düşer, burada yükselir. Spinal şok akut dönemde flask paralizi ve arefleksi ile gider. Heterotopik ossifikasyon ve üriner sistem enfeksiyonu aynı komplikasyon listesindedir ama bu tabloyu yapmaz.",
+    "servikal ya da üst torakal yaralanmalı hastada ani baş ağrısı, kızarma ve yüksek kan basıncı verilir; ilk akla gelecek tanı otonom disrefleksidir.",
+    "önce tetikleyen uyaran ortadan kaldırılır."
+   ],
+   "v": "98e5b88235"
+  },
+  {
+   "id": "2t02-09",
+   "baslik": "Travmatik beyin hasarında prognoz ve rehabilitasyon",
+   "giris": "Travmatik beyin hasarında posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir; rehabilitasyonda asıl amaç erken mobilizasyondur.",
+   "s": [
+    36
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir; süre uzadıkça prognoz kötüleşir. Hoca Glasgow koma skalasını da prognoz belirleyicisi olarak ekledi."
+    },
+    {
+     "metin": "erken mobilizasyondur. Yatak içi egzersizlerle başlanır, vertikalizasyon yani hastayı dik konuma getirmek hedeflenir."
+    },
+    {
+     "metin": "immobilizasyonun getirdiği atrofi, basınç yarası, osteoporoz, eklem kontraktürü ve heterotopik ossifikasyon gibi komplikasyonların önlenmesi rehabilitasyon sürecinin temel taşlarındandır."
+    },
+    {
+     "metin": "ayrıntılı nörolojik muayeneyle yapılır; anamnez, bilişsel değerlendirme, motor ve duyu muayenesi, kraniyal sinirler, solunum, konuşma ve yutma ile gaita ve idrar inkontinansı gözden geçirilir."
+    },
+    {
+     "metin": "erken dönem rehabilitasyon önemlidir, amaçlardan biri komplikasyonların önüne geçmektir ve uzun posttravmatik amnezi kötü prognoz göstergesidir ifadeleri birlikte verilir; hepsi doğrudur. Aynı soruda bilişsel değerlendirme için Rancho Los Amigos skalasının kullanıldığı da doğru ifade olarak yer almıştır; bu skala travmatik beyin hasarından sonra bilişsel işlev düzeyini basamaklandıran bir ölçektir."
+    }
+   ],
+   "klip": "o-2t02-09",
+   "ses": [
+    "Travmatik beyin hasarında prognoz ve rehabilitasyon.",
+    "Travmatik beyin hasarında posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir; rehabilitasyonda asıl amaç erken mobilizasyondur.",
+    "posttravmatik amnezi ve koma süresi prognoz için oldukça önemlidir; süre uzadıkça prognoz kötüleşir. Hoca Glasgow koma skalasını da prognoz belirleyicisi olarak ekledi.",
+    "erken mobilizasyondur. Yatak içi egzersizlerle başlanır, vertikalizasyon yani hastayı dik konuma getirmek hedeflenir.",
+    "immobilizasyonun getirdiği atrofi, basınç yarası, osteoporoz, eklem kontraktürü ve heterotopik ossifikasyon gibi komplikasyonların önlenmesi rehabilitasyon sürecinin temel taşlarındandır.",
+    "ayrıntılı nörolojik muayeneyle yapılır; anamnez, bilişsel değerlendirme, motor ve duyu muayenesi, kraniyal sinirler, solunum, konuşma ve yutma ile gaita ve idrar inkontinansı gözden geçirilir.",
+    "erken dönem rehabilitasyon önemlidir, amaçlardan biri komplikasyonların önüne geçmektir ve uzun posttravmatik amnezi kötü prognoz göstergesidir ifadeleri birlikte verilir; hepsi doğrudur. Aynı soruda bilişsel değerlendirme için Rancho Los Amigos skalasının kullanıldığı da doğru ifade olarak yer almıştır; bu skala travmatik beyin hasarından sonra bilişsel işlev düzeyini basamaklandıran bir ölçektir."
+   ],
+   "v": "fbb8ade2dc"
+  },
+  {
+   "id": "2t02-08",
+   "baslik": "Serebral palsinin en sık nedeni",
+   "giris": "Serebral palsinin en sık nedeni prematürite ve düşük doğum ağırlığıdır; risk faktörleri içinde %80 ile prenatal nedenler en sık görülür.",
+   "s": [
+    38
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "prematürite ve düşük doğum ağırlığıdır."
+    },
+    {
+     "metin": "prenatal, natal ve postnatal risk faktörleri vardır; %80 ile prenatal nedenler en sık görülür."
+    },
+    {
+     "metin": "etiyolojide en çok suçlanan neden sorulur. Çıkmış soruda fenilketonüri, annede serebral palsi olması, yüksek ateş ve akraba evliliği çeldirici olarak verilmiştir; bunların hiçbiri en sık neden olarak geçmez."
+    },
+    {
+     "metin": "annede folik asit eksikliği, valproat kullanımı, gestasyonel diyabet öyküsü ve ailede spina bifida varlığı serebral palsinin değil, spina bifidanın risk faktörleridir."
+    },
+    {
+     "metin": "erken haftada ve düşük doğum ağırlığıyla doğmuş, motor gelişimi yaşıtlarından geri bir çocuk serebral palsiyi düşündürür."
+    }
+   ],
+   "klip": "o-2t02-08",
+   "ses": [
+    "Serebral palsinin en sık nedeni.",
+    "Serebral palsinin en sık nedeni prematürite ve düşük doğum ağırlığıdır; risk faktörleri içinde %80 ile prenatal nedenler en sık görülür.",
+    "prematürite ve düşük doğum ağırlığıdır.",
+    "prenatal, natal ve postnatal risk faktörleri vardır; %80 ile prenatal nedenler en sık görülür.",
+    "etiyolojide en çok suçlanan neden sorulur. Çıkmış soruda fenilketonüri, annede serebral palsi olması, yüksek ateş ve akraba evliliği çeldirici olarak verilmiştir; bunların hiçbiri en sık neden olarak geçmez.",
+    "annede folik asit eksikliği, valproat kullanımı, gestasyonel diyabet öyküsü ve ailede spina bifida varlığı serebral palsinin değil, spina bifidanın risk faktörleridir.",
+    "erken haftada ve düşük doğum ağırlığıyla doğmuş, motor gelişimi yaşıtlarından geri bir çocuk serebral palsiyi düşündürür."
+   ],
+   "v": "cf1061732b"
+  },
+  {
+   "id": "2t02-04",
+   "baslik": "Serebral palsi tipleri: en sık spastik",
+   "giris": "Serebral palsinin 4 tipi vardır; en sık spastik tip görülür ve bunun 3 alt tipi hemiplejik, diplejik ve tetraplejiktir.",
+   "s": [
+    39
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "spastik, diskinetik, ataksik ve mikst."
+    },
+    {
+     "metin": "spastik tip serebral palsidir."
+    },
+    {
+     "metin": "hemiplejik, diplejik ve tetraplejik. Şemada tetraplejik yerine kuadripleji yazılıdır; ikisi aynı anlamdadır."
+    },
+    {
+     "metin": "spastik serebral palsi piramidal grupta gösterilir. Atetoid ve diskinetik serebral palsinin altında atetoid ve distonik biçimler yer alır; bu grup ve ataksik tip ekstrapiramidal başlığı altındadır."
+    },
+    {
+     "metin": "en sık tip sorulur; çeldiriciler diskinetik, ataksik, distonik, atetoid ve mikst tiptir. Hepsi serebral palsi tipidir ama en sık görülen spastik tiptir."
+    },
+    {
+     "metin": "hemiplejik, diplejik ve tetraplejik birer ana tip değil, spastik tipin alt tipleridir."
+    }
+   ],
+   "klip": "o-2t02-04",
+   "ses": [
+    "Serebral palsi tipleri: en sık spastik.",
+    "Serebral palsinin 4 tipi vardır; en sık spastik tip görülür ve bunun 3 alt tipi hemiplejik, diplejik ve tetraplejiktir.",
+    "spastik, diskinetik, ataksik ve mikst.",
+    "spastik tip serebral palsidir.",
+    "hemiplejik, diplejik ve tetraplejik. Şemada tetraplejik yerine kuadripleji yazılıdır; ikisi aynı anlamdadır.",
+    "spastik serebral palsi piramidal grupta gösterilir. Atetoid ve diskinetik serebral palsinin altında atetoid ve distonik biçimler yer alır; bu grup ve ataksik tip ekstrapiramidal başlığı altındadır.",
+    "en sık tip sorulur; çeldiriciler diskinetik, ataksik, distonik, atetoid ve mikst tiptir. Hepsi serebral palsi tipidir ama en sık görülen spastik tiptir.",
+    "hemiplejik, diplejik ve tetraplejik birer ana tip değil, spastik tipin alt tipleridir."
+   ],
+   "v": "a3b06803d4"
+  },
+  {
+   "id": "2t02-05",
+   "baslik": "Spina bifida: tanım ve risk faktörleri",
+   "giris": "Spina bifida vertebral ark ve nöral tüpte kapanma defektidir; ilk çocuk etkilenmişse ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir.",
+   "s": [
+    41
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "genel olarak vertebral ark ve nöral tüpte kapanma defektidir."
+    },
+    {
+     "metin": "ailede spina bifida varlığı; epileptik ilaç kullanımı, özellikle valproat; gestasyonel diyabet öyküsü; genetik faktörler; annede folik asit eksikliği gibi beslenme bozuklukları."
+    },
+    {
+     "metin": "ilk çocuk spina bifidalı doğmuşsa risk artar; ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir."
+    },
+    {
+     "metin": "en sık görülen çocukluk çağı nörolojik hastalığı spina bifida değil serebral palsidir. En ağır tip meningosel değil meningomiyeloseldir."
+    },
+    {
+     "metin": "prematürite ve düşük doğum ağırlığı spina bifidanın değil, serebral palsinin en sık nedenidir."
+    }
+   ],
+   "klip": "o-2t02-05",
+   "ses": [
+    "Spina bifida: tanım ve risk faktörleri.",
+    "Spina bifida vertebral ark ve nöral tüpte kapanma defektidir; ilk çocuk etkilenmişse ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir.",
+    "genel olarak vertebral ark ve nöral tüpte kapanma defektidir.",
+    "ailede spina bifida varlığı; epileptik ilaç kullanımı, özellikle valproat; gestasyonel diyabet öyküsü; genetik faktörler; annede folik asit eksikliği gibi beslenme bozuklukları.",
+    "ilk çocuk spina bifidalı doğmuşsa risk artar; ikinci çocukta 1/25, üçüncü çocukta 1/8 oranında görülebilir.",
+    "en sık görülen çocukluk çağı nörolojik hastalığı spina bifida değil serebral palsidir. En ağır tip meningosel değil meningomiyeloseldir.",
+    "prematürite ve düşük doğum ağırlığı spina bifidanın değil, serebral palsinin en sık nedenidir."
+   ],
+   "v": "f1bf734d2c"
+  }
+ ]
+}

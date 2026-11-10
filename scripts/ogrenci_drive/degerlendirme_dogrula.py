@@ -70,6 +70,8 @@ def main() -> int:
             hata.append(f"çıkmış {q['id']}: ham sınav belgesindeki yeri (kaynak) yazılmamış (H83)")
         if not q.get("dogrulandi") or not q.get("s"):
             hata.append(f"çıkmış {q['id']}: elle doğrulanmamış / slayt yok")
+        elif q.get("kanit_goruntu") and len(sayfa.get(q["s"], "")) < 60:
+            continue  # metni olmayan görsel sayfa (atom kuralının eşi, H547): kanıt görüntüden okunmuş, kanit_goruntu'da yazılı
         elif not slaytta(q["s"], q["kanit"].split(" (")[0].split(" → ")[0]):
             hata.append(f"çıkmış {q['id']}: kanıt s{q['s']}'de yok")
     for at in paket["atomik_bilgi_envanteri"]["atomlar"]:
@@ -93,6 +95,8 @@ def main() -> int:
         metin_k = re.sub(r"\b\d{2},\s*[XY]{1,4}\b", " ", metin_k)
         # Atıf satırındaki yazar baş harfleri ("Yates GP, Feldman MD.") kısaltma değildir (H510 ile aynı kök).
         metin_k = re.sub(r"\b[A-ZÇĞİÖŞÜ][a-zçğıöşü]+(?:-[A-ZÇĞİÖŞÜ][a-zçğıöşü]+)? [A-ZÇĞİÖŞÜ]{1,3}(?=[,.;])", " ", metin_k)
+        # Slayt altındaki kaynak satırı ("Guan B, et al. BMJ Open. 2023;13:e075049.") dergi adı taşır, ders kısaltması değildir (H548).
+        metin_k = "\n".join(l for l in metin_k.split("\n") if not (re.search(r"\bet al\b", l) and re.search(r"\b(?:19|20)\d{2}\s*;\s*\d+", l)))
         for k in set(re.findall(r"(?<![\wçğıöşü])([A-ZÇĞİÖŞÜ]{2,5})(?![\wçğıöşü])", metin_k)):
             if k not in kis and KS.kisaltma_mi(k):
                 hata.append(f"s{s}: kısaltma '{k}' sözlükte yok")

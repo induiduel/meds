@@ -2489,3 +2489,27 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Tuzak 1 (PDF metin sırası):** PyMuPDF blokları okuma sırasıyla vermez; madde listeleri bloğun sonuna düşer, başlıktan sonraki satır bir sonraki bölümün başlığı olur. Satırlar sayfa içinde konuma (y, x) göre sıralanmadan başlık/madde aranmaz.
 - **Tuzak 2 (duraklama eşiği):** `cumle_zaman.py` eşiği (konuşma düzeyinin %2,5'i) EMA kliplerinde paragraf içi cümle sonlarını (0,2–0,3 sn, taban tam sessiz değil) görmüyor; sınırların %20'si tahminde kalıyor, klip sonundaki nefes payı son sınırı kapıyordu (son cümle 0,3 sn). Eşik %6'ya çıkarıldı, baş/son sessizlik aday dışı, tahmin konuşulan süre üzerinden, bütün sınırlar birlikte (sıra korunarak) yerleştirildi: 631/667 sınır duraklamada; üç klipte Whisper kelime zamanıyla ortalama sapma 0,06 sn, en çok 0,56 sn.
 - **Önleme:** ek modülde ses ya da ders kitapçığı yeniden üretilince `pdf_esle.py` yeniden çalıştırılır; `dogrula.py --modul` eşleme eskimişse (klip özeti ya da PDF boyutu tutmuyorsa) HATA verir, ekran da özeti tutmayan klibin eşlemesini kullanmaz. Karşılığı bulunamayan cümleye madde uydurulmaz (yalnız bölüm çerçevesi; kural 17'deki "çapa uydurma" yasağıyla aynı ilke).
+
+### H547 — Gövdesi yalnız resim olan slayda dayanan doğrudan çıkmış, değerlendirme kapısından geçemiyordu (2026-11-10, k2-28 s.21)
+- **Belirti:** `degerlendirme_dogrula.py k2-28` iki doğrudan çıkmış için "kanıt s21'de yok" HATA'sı verdi (`past-q-karma-38`, `d3-b-034`: sakral korunma yoksa yaralanma komplettir).
+- **Kök neden:** s.21 (komplet/inkomplet şeması) tümüyle görüntü, metin katmanı boş. Kapı çıkmış kanıtını pymupdf metninde birebir arıyor; metinsiz görsel sayfa istisnası yalnız atomlar için yazılmıştı (`gorsel` + sayfa metni < 60 karakter), çıkmış kanıtı için yoktu. Tek çıkış yolu kanıtı ilgisiz bir satıra kaydırmak gibi görünüyordu (H543'teki kaçış).
+- **Kalıcı çözüm:** kapıya atom kuralının eşi eklendi: çıkmış kaydı `kanit_goruntu` (görüntüden okunan cümle) taşıyorsa ve sayfa metni 60 karakterden kısaysa birebir arama atlanır; `cikmis_konum_yaz.py` bu alanı yayın dosyasına taşır. k2-16/24/26'da sonuç değişmedi (0 HATA).
+- **Önleme:** görüntü sayfasına dayanan çıkmış eşlemesi `kanit` + `kanit_goruntu` ile yazılır ve denetçi sayfa görüntüsüne bakar; kanıt metni olan başka satıra kaydırılmaz, eşik gevşetilmez.
+
+### H548 — Slayt altındaki kaynak satırının dergi adı "sözlükte olmayan kısaltma" sayıldı (2026-11-10, k2-28 s.31)
+- **Belirti:** `s31: kısaltma 'BMJ' sözlükte yok` HATA'sı; satır "Guan B, et al. BMJ Open. 2023;13:e075049." (şeklin kaynak künyesi).
+- **Kök neden:** H510/H536 yalnız kaynakça SAYFALARINI ve "Soyad GP," atıf baş harflerini eliyordu; içerik slaydının altındaki tek satırlık künye taranıyordu.
+- **Kalıcı çözüm:** "et al" ve "yıl;cilt" kalıbını birlikte taşıyan satır kısaltma taramasından çıkarıldı.
+- **Önleme:** kapıyı geçmek için sözlüğe dergi adı ya da anlamsız kısaltma yazılmaz (H510); yeni biçim tuzağı kapının kendisinde düzeltilir.
+
+### H549 — Önem maddesinin alıntısı olarak slayttaki kaynak künyesi yazıldı (2026-11-10, k2-28 2t02-23)
+- **Belirti:** "Nöroplastisite ve iyileşmenin üç kavramı" maddesinin `alinti` alanı "Langhorne P, Bernhardt J, Kwakkel G. Lancet" idi; asıl tanım cümlesi doğrulayıcının okumadığı `alinti_gorsel` alanına konmuştu. Öğrenciye alıntı diye künye gösterilecekti.
+- **Kök neden:** s.9 tümüyle görüntü; metin katmanında yalnız künye satırı var. `onem_dogrula.py` alıntıyı PDF metninde birebir arıyor, görsel sayfa için yol yoktu; yazar kapıdan geçen tek satırı alıntı yaptı (H543 ile aynı kaçış).
+- **Kalıcı çözüm:** `onem_dogrula.py`: alıntı `gorsel: true` taşıyorsa ve sayfa metni 120 karakterden kısaysa birebir arama atlanır. Madde, şemadaki tanım cümlesiyle (`gorsel: true`) yeniden yazıldı.
+- **Önleme:** görüntü sayfasından alıntı `{"sayfa", "metin", "gorsel": true}` ile yazılır, denetçi görüntüden doğrular. Kapıdan geçsin diye bilgi taşımayan satır (künye, başlık, sayfa numarası) alıntı/kanıt yapılmaz.
+
+### H550 — Canlı çizimde kontur doğru, etiketi yanlış figüre düşüyor ya da slayt yazısını kapatıyordu (2026-11-10, k2-28)
+- **Belirti:** bağımsız anlam denetçisi 80 konturun 11'ini etiket yüzünden geri çevirdi: s.39'da "hemipleji" etiketi dipleji figürünün üstünde, "dipleji" etiketi hemipleji figürünün yanında; s.14/s.21/s.33'te yazı parçasını boyayan konturun etiketi komşu yazıyı kapatıyor; s.25'te konus ve kauda konturları kesişiyor (H61). Betik kapıları (`panel_sinama`, `cizim_kapisi`) 0 HATA veriyordu.
+- **Kök neden:** `cizim_uret.py` etiketi boş bulduğu yere koyar, konumu elle verilemez; kalabalık şekil sayfasında boş yer başka figürün yanıdır. Yazar konturlara bindirmede baktı ama etiketleri çizmeden baktı; kapılar etiketin hangi figüre yakın düştüğünü ölçmüyor.
+- **Çözüm:** yanlış yere düşen ve yazı kapatan etiketler kaldırıldı (etiketli kontur 72 → 20), konus/kauda konturları ayrıldı, eksik okkulta konturu eklendi; denetçi kararları `denetim_<hash>.json` ile uygulandı.
+- **Önleme:** (1) yazı parçasını boyayan konturda etiket yazılmaz (boyanan yazı zaten etikettir); (2) kendi yazısını taşıyan figür/kutu konturunda etiket yalnız slaytta olmayan bilgiyi ekliyorsa yazılır; (3) yazar yayından önce bindirmeyi ETİKETLERİYLE üretip bakar (`etiket_konum` + `pdfDoc.css` yazı boyutu; k2-28 `cizim/bindir2.py`); (4) yanlış yerde etiket, etiketsizlikten kötüdür — güvenle oturmayan etiket kaldırılır.

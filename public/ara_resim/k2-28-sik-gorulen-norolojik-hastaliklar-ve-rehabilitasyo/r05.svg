@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="680" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Omurilik yaralanmasında harekete dönüş</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Mobilite basamakları ve seviyeye göre ambulasyon · slayt 28–29</text>
+<rect x="30" y="88" width="530" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Mobilite basamakları</text>
+<polygon points="45,520 45,470 95,470 95,412 145,412 145,354 195,354 195,296 245,296 245,520" fill="#ecfdf5" stroke="#15803d" stroke-width="3"/>
+<circle cx="70" cy="448" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="70" y="454" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<circle cx="120" cy="390" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="120" y="396" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<circle cx="170" cy="332" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="170" y="338" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<circle cx="220" cy="274" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="220" y="280" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<path d="M55 400 C90 330 150 250 215 205" stroke="#15803d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)" stroke-dasharray="7 6"/>
+<circle cx="276" cy="150" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="276" y="156" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<text x="300" y="149" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Yatak içi egzersiz</text>
+<text x="300" y="171" font-size="17" fill="#475569" text-anchor="start">dönme, oturmaya gelme</text>
+<circle cx="276" cy="212" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="276" y="218" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<text x="300" y="211" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Oturma dengesi</text>
+<text x="300" y="233" font-size="17" fill="#475569" text-anchor="start">destekli, sonra desteksiz</text>
+<circle cx="276" cy="274" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="276" y="280" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<text x="300" y="273" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Transfer ve ayakta durma</text>
+<text x="300" y="295" font-size="17" fill="#475569" text-anchor="start">oturma dengesi kazanılınca</text>
+<circle cx="276" cy="336" r="15" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<text x="276" y="342" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<text x="300" y="335" font-size="17" fill="#0f172a" text-anchor="start" font-weight="bold">Paralel barda ambulasyon</text>
+<text x="300" y="357" font-size="17" fill="#475569" text-anchor="start">uygun ortezle</text>
+<circle cx="305" cy="452" r="26" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+<circle cx="343" cy="472" r="8" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+<path d="M300 452 L300 410 M300 430 L338 430 L344 464 M288 410 C292 400 308 400 312 410" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366" y="432" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">Uzun mesafe:</text>
+<text x="366" y="454" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">tekerlekli sandalye</text>
+<text x="50" y="548" font-size="17" fill="#0f172a" text-anchor="start">Sandalyede sürme, transfer, rampa ve dönüşler</text>
+<text x="50" y="571" font-size="17" fill="#0f172a" text-anchor="start">çalıştırılır.</text>
+<rect x="580" y="88" width="590" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="598" y="119" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · Yaralanma seviyesi ve yürüme düzeyi</text>
+<rect x="596" y="132" width="558" height="180" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="708" y="162" font-size="19" fill="#b91c1c" text-anchor="start" font-weight="bold">T10 ve üzeri</text>
+<text x="860" y="162" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Terapötik ambulasyon</text>
+<text x="708" y="188" font-size="17" fill="#0f172a" text-anchor="start">Ortez ve cihazla, egzersiz salonunda,</text>
+<text x="708" y="209" font-size="17" fill="#0f172a" text-anchor="start">fizyoterapist desteğiyle yürür; toplum içinde</text>
+<text x="708" y="230" font-size="17" fill="#0f172a" text-anchor="start">yürüme genellikle yoktur.</text>
+<rect x="596" y="318" width="558" height="112" rx="10" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+<text x="708" y="348" font-size="19" fill="#ea580c" text-anchor="start" font-weight="bold">T11 – L2</text>
+<text x="860" y="348" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Ev içi ambulasyon</text>
+<text x="708" y="374" font-size="17" fill="#0f172a" text-anchor="start">Cihazını ya da yürütecini alıp evin içinde</text>
+<text x="708" y="395" font-size="17" fill="#0f172a" text-anchor="start">bağımsız hareket eder.</text>
+<rect x="596" y="436" width="558" height="106" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+<text x="708" y="466" font-size="19" fill="#15803d" text-anchor="start" font-weight="bold">L2'nin altı</text>
+<text x="860" y="466" font-size="19" fill="#0f172a" text-anchor="start" font-weight="bold">Toplumsal ambulasyon</text>
+<text x="708" y="492" font-size="17" fill="#0f172a" text-anchor="start">Toplum içinde yürüyebilir.</text>
+<path d="M624 143.0 C618 154.28571428571428 618 154.28571428571428 624 165.57142857142858 L672 165.57142857142858 C678 154.28571428571428 678 154.28571428571428 672 143.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 171.57142857142858 C618 182.85714285714286 618 182.85714285714286 624 194.14285714285717 L672 194.14285714285717 C678 182.85714285714286 678 182.85714285714286 672 171.57142857142858 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 200.14285714285714 C618 211.42857142857142 618 211.42857142857142 624 222.71428571428572 L672 222.71428571428572 C678 211.42857142857142 678 211.42857142857142 672 200.14285714285714 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 228.71428571428572 C618 240.0 618 240.0 624 251.2857142857143 L672 251.2857142857143 C678 240.0 678 240.0 672 228.71428571428572 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 257.2857142857143 C618 268.57142857142856 618 268.57142857142856 624 279.85714285714283 L672 279.85714285714283 C678 268.57142857142856 678 268.57142857142856 672 257.2857142857143 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 285.8571428571429 C618 297.14285714285717 618 297.14285714285717 624 308.42857142857144 L672 308.42857142857144 C678 297.14285714285717 678 297.14285714285717 672 285.8571428571429 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 314.42857142857144 C618 325.7142857142857 618 325.7142857142857 624 337.0 L672 337.0 C678 325.7142857142857 678 325.7142857142857 672 314.42857142857144 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 343.0 C618 354.2857142857143 618 354.2857142857143 624 365.57142857142856 L672 365.57142857142856 C678 354.2857142857143 678 354.2857142857143 672 343.0 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 371.57142857142856 C618 382.85714285714283 618 382.85714285714283 624 394.1428571428571 L672 394.1428571428571 C678 382.85714285714283 678 382.85714285714283 672 371.57142857142856 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 400.14285714285717 C618 411.42857142857144 618 411.42857142857144 624 422.7142857142857 L672 422.7142857142857 C678 411.42857142857144 678 411.42857142857144 672 400.14285714285717 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 428.7142857142857 C618 440.0 618 440.0 624 451.2857142857143 L672 451.2857142857143 C678 440.0 678 440.0 672 428.7142857142857 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 457.2857142857143 C618 468.57142857142856 618 468.57142857142856 624 479.85714285714283 L672 479.85714285714283 C678 468.57142857142856 678 468.57142857142856 672 457.2857142857143 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 485.8571428571429 C618 497.14285714285717 618 497.14285714285717 624 508.42857142857144 L672 508.42857142857144 C678 497.14285714285717 678 497.14285714285717 672 485.8571428571429 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M624 514.4285714285714 C618 525.7142857142858 618 525.7142857142858 624 537.0 L672 537.0 C678 525.7142857142858 678 525.7142857142858 672 514.4285714285714 Z" stroke="#9a6b55" stroke-width="1.5" fill="#f5e6d8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="648" y1="134" x2="648" y2="544" stroke="#ca8a04" stroke-width="7"/>
+<line x1="612" y1="150" x2="612" y2="530" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="30" y="600" width="1140" height="46" rx="10" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
+<text x="600" y="630" font-size="19" fill="#15803d" text-anchor="middle" font-weight="bold">Yaralanma seviyesi aşağı indikçe yürüme düzeyi yükselir.</text>
+<text x="600.0" y="667" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 28–29; düzeylerin açıklamaları ve destekli-desteksiz oturma hocanın anlatımıdır.</text>
+</svg>
