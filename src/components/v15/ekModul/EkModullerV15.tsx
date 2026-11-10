@@ -9,7 +9,7 @@ import {
   EK_MODULLER, denemeKur, ekDenemeYaz, ekDinlendi, ekKurullar, ekModulYukle, ekSoruYaz, genelSorular, gorselUrl, konuSorulari, konulariAl, pdfKlip, useEkIlerleme,
   type EkModul, type SetSoru,
 } from './ekVeri';
-import { EkMd, Etkinlik, OynatCubugu, dk, useSira } from './ekOrtak';
+import { EkMd, Etkinlik, GECIS_KEY, OynatCubugu, dk, otoGecisAcik, useSira } from './ekOrtak';
 import { HocaSetCoz, HocaSetler } from './EkHoca';
 import { FoyKonu, FoyListe } from './EkFoy';
 import { EkPdfDers } from './EkPdfDers';
@@ -251,7 +251,7 @@ const HocaSayfa: React.FC<{ m: EkModul; setId: string | null }> = ({ m, setId })
   const ana = adres(m.ozet.kurul, m.ozet.id);
   const set = m.hoca!.setler.find((s) => s.id === setId) || null;
   useV15Baslik({ baslik: set ? set.ad : 'Hocanın çalışma soruları', alt: set ? 'Hocanın çalışma soruları' : m.ozet.ad, geri: set ? `${ana}/hoca` : ana });
-  if (set) return <HocaSetCoz set={set} />;
+  if (set) return <HocaSetCoz set={set} m={m} />;
   return (
     <div className="ekm">
       <p className="ekm-giris v15-card"><BookOpenCheck aria-hidden />
@@ -265,6 +265,7 @@ const HocaSayfa: React.FC<{ m: EkModul; setId: string | null }> = ({ m, setId })
 /* ——— sesli ders ——— */
 // Notlar: bölüm kartları (ilk biçim) · PDF ile: ders kitapçığı sesle birlikte ilerler (klasik sesli ders gibi). Seçim cihazda kalır.
 const KIP_KEY = 'medsoru_ek_modul_ders_kip';
+const OTO_BASLA = 'medsoru_ek_modul_oto_basla';
 type DersKip = 'not' | 'pdf';
 
 const Ders: React.FC<{ m: EkModul; konuId: string }> = ({ m, konuId }) => {
@@ -274,7 +275,23 @@ const Ders: React.FC<{ m: EkModul; konuId: string }> = ({ m, konuId }) => {
   const ana = adres(m.ozet.kurul, m.ozet.id);
   useV15Baslik({ baslik: konu.baslik, alt: `${konu.baslikNo}. ${konu.baslikAd}`, geri: ana });
   const klipler = useMemo(() => konu.bolumler.map((_, i) => `d-${konu.id}-${i + 1}`), [konu]);
-  const sira = useSira(m, klipler, () => ekDinlendi(m.ozet.id, `d-${konu.id}`));
+  const sonraki = konular[sira0 + 1];
+  const [gecis, setGecis] = useState(otoGecisAcik);
+  const gecisDegis = (v: boolean) => { setGecis(v); try { localStorage.setItem(GECIS_KEY, v ? '1' : '0'); } catch { /* yok */ } };
+  // konu bitince (ayar açıksa) sonraki konuya geçilir ve ses aynı ortak öğeden sürer — arka planda da
+  const sira = useSira(m, klipler, () => {
+    ekDinlendi(m.ozet.id, `d-${konu.id}`);
+    if (!sonraki || !otoGecisAcik()) return;
+    try { sessionStorage.setItem(OTO_BASLA, sonraki.id); } catch { /* yok */ }
+    navigateTo(`${ana}/ders/${sonraki.id}`);
+  }, (i) => `${konu.baslik} · ${konu.bolumler[i]?.baslik || ''}`);
+  useEffect(() => {
+    let bekleyen: string | null = null;
+    try { bekleyen = sessionStorage.getItem(OTO_BASLA); } catch { /* yok */ }
+    if (bekleyen !== konu.id) return;
+    try { sessionStorage.removeItem(OTO_BASLA); } catch { /* yok */ }
+    sira.cal(0);
+  }, [konu.id]); // eslint-disable-line react-hooks/exhaustive-deps
   const pdfVar = useMemo(() => klipler.some((k) => pdfKlip(m, k)), [m, klipler]);
   const [kipSec, setKipSec] = useState<DersKip>(() => { try { return localStorage.getItem(KIP_KEY) === 'not' ? 'not' : 'pdf'; } catch { return 'pdf'; } });
   const kip: DersKip = pdfVar ? kipSec : 'not';
@@ -283,10 +300,9 @@ const Ders: React.FC<{ m: EkModul; konuId: string }> = ({ m, konuId }) => {
     if (sira.i < 0 || kip === 'pdf') return;
     document.getElementById(`ekm-b-${sira.i}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, [sira.i, kip]);
-  const sonraki = konular[sira0 + 1];
   return (
     <div className={`ekm ekm-ders${kip === 'pdf' ? ' ekm-pdfkip' : ''}`}>
-      <OynatCubugu sira={sira} n={klipler.length} etiket="Dersi dinle" birim="Bölüm" />
+      <OynatCubugu sira={sira} n={klipler.length} etiket="Dersi dinle" birim="Bölüm" gecis={sonraki ? { acik: gecis, degis: gecisDegis } : undefined} />
       {pdfVar && (
         <div className="ekm-kip" role="group" aria-label="Ders görünümü">
           <button type="button" className={kip === 'pdf' ? 'is-on' : ''} aria-pressed={kip === 'pdf'} onClick={() => kipDegis('pdf')}><FileText aria-hidden /> PDF ile</button>

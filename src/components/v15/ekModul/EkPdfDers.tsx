@@ -1,10 +1,12 @@
 import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ExternalLink, Minus, Plus, Volume2 } from 'lucide-react';
+import { ExternalLink, Maximize2, Minus, Plus, Scan, Volume2 } from 'lucide-react';
 import type { PdfMarks } from '../../learn/pdf/PdfDocView';
 import { gorselUrl, pdfKlip, type EkKonu, type EkModul } from './ekVeri';
 import { EkMd, type Sira } from './ekOrtak';
 
 const PdfDocView = lazy(() => import('../../learn/pdf/PdfDocView'));
+const EkPdfBolum = lazy(() => import('./EkPdfBolum').then((x) => ({ default: x.EkPdfBolum })));
+const GORUNUM_KEY = 'medsoru_ek_modul_pdf_gorunum';
 
 /**
  * Sesli ders · "PDF ile" kipi: ders kitapçığı sesle birlikte ilerler (klasik sesli dersteki gibi).
@@ -22,6 +24,9 @@ export const EkPdfDers: React.FC<{ m: EkModul; konu: EkKonu; klipler: string[]; 
   const [hata, setHata] = useState('');
   const [gorunen, setGorunen] = useState(0);
   const [cumle, setCumle] = useState(0);
+  // "bolum": yalnız anlatılan bölüm ekrana sığar (varsayılan) · "sayfa": tam kitapçık
+  const [gorunum, setGorunum] = useState<'bolum' | 'sayfa'>(() => { try { return localStorage.getItem(GORUNUM_KEY) === 'sayfa' ? 'sayfa' : 'bolum'; } catch { return 'bolum'; } });
+  const gorunumDegis = () => { const y = gorunum === 'bolum' ? 'sayfa' : 'bolum'; setGorunum(y); try { localStorage.setItem(GORUNUM_KEY, y); } catch { /* yok */ } };
   const yan = useRef<HTMLOListElement>(null);
 
   // çalan klibin eşlemesi; ses durmuşken konunun ilk bölümünün sayfası açık durur
@@ -59,19 +64,29 @@ export const EkPdfDers: React.FC<{ m: EkModul; konu: EkKonu; klipler: string[]; 
   }, [sira.i]);
 
   const sayfa = e?.s ?? ilk?.s ?? 1;
+  const bolumE = e || ilk;
+  const bolumKip = gorunum === 'bolum' && !!bolumE;
   return (
     <div className="ekm-pdf-bolme">
-      <section className="ekm-pdf-kutu v15-card" aria-label="Ders kitapçığı">
+      <section className={`ekm-pdf-kutu v15-card${bolumKip ? ' is-bolum' : ''}`} aria-label="Ders kitapçığı">
         <div className="ekm-pdf-ust">
-          <b>{e ? `Sayfa ${e.s} · şu an anlatılan` : `Sayfa ${gorunen || sayfa}`}</b>
+          <b>{bolumKip ? `Sayfa ${bolumE!.s} · ${e ? 'şu an anlatılan bölüm' : 'ilk bölüm'}` : e ? `Sayfa ${e.s} · şu an anlatılan` : `Sayfa ${gorunen || sayfa}`}</b>
+          <button type="button" className="ekm-kucuk" onClick={gorunumDegis} aria-label={bolumKip ? 'Tam sayfayı göster' : 'Yalnız bölümü ekrana sığdır'} title={bolumKip ? 'Tam sayfa' : 'Bölümü sığdır'}>
+            {bolumKip ? <Maximize2 aria-hidden /> : <Scan aria-hidden />}
+          </button>
+          {!bolumKip && <>
           <button type="button" className="ekm-kucuk" onClick={() => setZoom((z) => Math.max(Z_MIN, +(z - 0.2).toFixed(2)))} aria-label="Uzaklaştır"><Minus aria-hidden /></button>
           <button type="button" className="ekm-kucuk" onClick={() => setZoom((z) => Math.min(Z_MAX, +(z + 0.2).toFixed(2)))} aria-label="Yakınlaştır"><Plus aria-hidden /></button>
+          </>}
           <a className="ekm-kucuk" href={src} target="_blank" rel="noreferrer" aria-label="Kitapçığı yeni sekmede aç"><ExternalLink aria-hidden /></a>
         </div>
         {hata ? (
           <p className="ekm-bos">{hata} <a href={src} target="_blank" rel="noreferrer">Kitapçığı yeni sekmede aç</a></p>
         ) : (
           <Suspense fallback={<span className="v15-skel ekm-pdf-skel" aria-hidden />}>
+            {bolumKip ? (
+              <EkPdfBolum src={src} sayfa={bolumE!.s} kutu={bolumE!.k} satirlar={e && madde >= 0 ? e.l[madde] || [] : []} onError={setHata} />
+            ) : (
             <PdfDocView
               key={src}
               src={src}
@@ -87,6 +102,7 @@ export const EkPdfDers: React.FC<{ m: EkModul; konu: EkKonu; klipler: string[]; 
               onError={setHata}
               pageOverlay={pageOverlay}
             />
+            )}
           </Suspense>
         )}
       </section>

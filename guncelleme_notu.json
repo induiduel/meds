@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 703,
-  "baslik": "Kurul 2: Sık Görülen Nörolojik Hastalıklarda Rehabilitasyon dersi eklendi",
+  "onem": 704,
+  "baslik": "Yürüyüş ve Kampçılık: hocanın sorularına sesli çözüm ve çözümlü PDF",
   "maddeler": [
-    "Yeni sesli ders: Sık Görülen Nörolojik Hastalıklarda Rehabilitasyon (FTR) — inme, omurilik yaralanması, travmatik beyin hasarı, serebral palsi ve spina bifida; hocanın dersteki örnekleri ve vurgularıyla, 44 dakika.",
-    "PDF üstünde canlı çizim, 8 ara resim ve hocanın sorabileceği 14 sesli ara soru.",
-    "Derste 80 örnek soru, 40 maddelik En önemliler listesi, 38 soruluk sesli soru çözücü ve çıkmış 24 sorunun ayrıntılı analizi."
+    "Sesli çözüm: hocanın 480 çalışma sorusu EMA sesiyle okunur, ardından cevap ve kısa çözüm anlatılır; soru ekranda sesle birlikte ilerler.",
+    "Oynatıcıda okuma hızı (0,75×–2×), 10 saniye atlama; ekran kilitliyken ve arka planda çalmaya devam eder.",
+    "Yeni PDF: Çözümlü çalışma soruları (61 sayfa, her sorunun altında cevap ve çözüm)."
   ],
   "eklenen": [
     "FTR: Sık Görülen Nörolojik Hastalıklarda Rehabilitasyon dersi"

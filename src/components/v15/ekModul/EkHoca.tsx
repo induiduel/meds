@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Check, ChevronRight, Eye, RotateCcw, Shuffle, X } from 'lucide-react';
 import type { EkModul, HocaSet, HocaSoru } from './ekVeri';
+import { OynatCubugu, useSira } from './ekOrtak';
 
 /**
  * Hocanın çalışma soruları (hoca_sorulari.json): boşluk doldurma (kart çevir + bildim/bilemedim), doğru–yanlış, çoktan seçmeli.
@@ -22,7 +23,11 @@ export const HocaSetler: React.FC<{ m: EkModul; ac: (id: string) => void }> = ({
   </ul>
 );
 
-export const HocaSetCoz: React.FC<{ set: HocaSet }> = ({ set }) => {
+const BOS = { klip: {}, ozet: { id: '', ad: '' } } as unknown as EkModul;
+
+/** Sesli çözüm: her soru iki klip — h-<set>-<no> (soru okunur) + hc-<set>-<no> (cevap ve açıklama); sıra = [h1, hc1, h2, hc2 …].
+ *  Ortak ses öğesi (ekOrtak) sayesinde hız ayarı, kilit ekranı ve arka planda çalma ders oynatıcısıyla aynıdır. */
+export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) => {
   const [karisik, setKarisik] = useState(false);
   const [tur, setTur] = useState(0);
   const sorular = useMemo(() => (karisik ? kar(set.sorular) : set.sorular), [set, karisik, tur]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -33,7 +38,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet }> = ({ set }) => {
   const n = sorular.length;
   const dogruN = sorular.filter((s: any, k) => yanit[k] !== undefined && yanit[k] === (set.tur === 'bosluk' ? 'b' : String(s.dogru))).length;
   const cozulen = Object.keys(yanit).length;
-  const bastan = (k = karisik) => { setKarisik(k); setTur((t) => t + 1); setI(0); setYanit({}); setAcik(false); };
+  const bastan = (k = karisik) => { sira.durdur(); setKarisik(k); setTur((t) => t + 1); setI(0); setYanit({}); setAcik(false); };
   const ileri = () => { setAcik(false); setI((x) => Math.min(n - 1, x + 1)); };
   const isaretle = (v: string) => setYanit({ ...yanit, [i]: v });
   const y = yanit[i];
@@ -44,6 +49,17 @@ export const HocaSetCoz: React.FC<{ set: HocaSet }> = ({ set }) => {
   const cevaplar = set.tur === 'bosluk' ? String(q.cevap).split(/\s*,\s*/) : [];
   const gor = acik || y !== undefined;
   const dolgu = (k: number) => (bosN === 1 ? q.cevap : cevaplar.length === bosN ? cevaplar[k] : '…');
+  const kim = (s: HocaSoru) => s.k || `${set.id}-${s.no}`;
+  const klipler = useMemo(() => sorular.flatMap((s) => [`h-${kim(s)}`, `hc-${kim(s)}`]), [sorular]); // eslint-disable-line react-hooks/exhaustive-deps
+  const sira = useSira(m || BOS, klipler, undefined, (k) => `${set.ad} · Soru ${Math.floor(k / 2) + 1}`);
+  // çalan klip soruyu sürükler: soru okunurken soru açılır, çözüm klibinde cevap gösterilir
+  useEffect(() => {
+    if (sira.i < 0) return;
+    setI(Math.floor(sira.i / 2));
+    setAcik(sira.i % 2 === 1);
+  }, [sira.i]);
+  const git = (x: number) => { setAcik(false); setI(x); if (sira.i >= 0) sira.cal(x * 2); };
+  const cozumGor = gor || (set.tur !== 'bosluk' && y !== undefined);
 
   return (
     <div className="ekm ekm-soru ekm-hoca">
@@ -53,6 +69,7 @@ export const HocaSetCoz: React.FC<{ set: HocaSet }> = ({ set }) => {
         <span className="ekm-zorluk">{dogruN} doğru</span>
         <button type="button" className={`ekm-kucuk is-oto${karisik ? ' is-on' : ''}`} onClick={() => bastan(!karisik)} aria-pressed={karisik}><Shuffle aria-hidden /> Karışık</button>
       </div>
+      {m && sira.sesVar && <OynatCubugu sira={sira} n={n} etiket="Sesli çözümü başlat" birim="Soru" ikili />}
       {set.anahtarsiz && <p className="ekm-not">Hocanın bu bölümde cevap anahtarı yok; doğru cevaplar hocanın diğer sorularındaki bilgilere göre işaretlendi.</p>}
 
       <article className="ekm-soru-kart v15-card">
@@ -107,14 +124,17 @@ export const HocaSetCoz: React.FC<{ set: HocaSet }> = ({ set }) => {
               })}
             </ul>
             {y !== undefined && q.belirsiz && <p className="ekm-not">Bu sorunun cevabı tartışmaya açık; hocaya sormakta yarar var.</p>}
+            {acik && y === undefined && <p className="ekm-cozum">Doğru cevap: <b>{q.dogru}) {q.secenekler[q.dogru]}</b></p>}
           </>
         )}
+        {set.tur === 'dy' && acik && y === undefined && <p className="ekm-cozum">Hocanın cevabı: <b>{q.dogru ? 'Doğru' : 'Yanlış'}</b></p>}
+        {q.cozum && cozumGor && <p className="ekm-cozum ekm-hoca-cozum">{q.cozum}</p>}
       </article>
 
       <nav className="ekm-soru-alt">
-        <button type="button" className="v15-btn is-ghost" onClick={() => { setAcik(false); setI(Math.max(0, i - 1)); }} disabled={i === 0}>Önceki</button>
+        <button type="button" className="v15-btn is-ghost" onClick={() => git(Math.max(0, i - 1))} disabled={i === 0}>Önceki</button>
         {i < n - 1
-          ? <button type="button" className="v15-btn" onClick={ileri}>Sonraki <ChevronRight aria-hidden /></button>
+          ? <button type="button" className="v15-btn" onClick={() => (sira.i >= 0 ? git(i + 1) : ileri())}>Sonraki <ChevronRight aria-hidden /></button>
           : <button type="button" className="v15-btn" onClick={() => bastan()}><RotateCcw aria-hidden /> Baştan</button>}
       </nav>
       {bitti && <p className="ekm-puan v15-card"><b>{dogruN} / {n}</b><span>Set tamamlandı. Bilemediklerin için ilgili konunun dersine dön.</span></p>}

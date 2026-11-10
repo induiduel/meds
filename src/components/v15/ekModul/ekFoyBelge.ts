@@ -21,7 +21,7 @@ export function foySorulari(m: EkModul, konuId: string): Record<Tur, HocaSoru[]>
       const anahtar = `${s.tur}|${q.metin || q.kok}|${q.secenekler ? Object.values(q.secenekler).join('|') : ''}`;
       if (gorulen.has(anahtar)) return;
       gorulen.add(anahtar);
-      out[s.tur].push(q);
+      out[s.tur].push({ ...q, k: `${s.id}-${q.no}` });
     });
   });
   (Object.keys(out) as Tur[]).forEach((t) => { out[t] = out[t].map((q, i) => ({ ...q, no: i + 1 })); });
@@ -94,3 +94,43 @@ export function foyBelge(m: EkModul, konuIdleri: string[], anahtarli: boolean, g
   return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>${e(m.ozet.ad)} — Çalışma föyü</title><style>${FOY_CSS}</style></head><body>${govde.join('')}</body></html>`;
 }
 
+
+/* ——— çözümlü soru kitapçığı: hocanın setleri kendi sırasıyla, her sorunun altında cevap ve sesli çözümün metni ——— */
+const COZ_CSS = `
+.set { break-before: page; } .set h2 { font: 900 17pt/1.15 Lato, sans-serif; margin-bottom: 1mm; } .set > p { color: #55615e; margin-bottom: 4mm; }
+.q { break-inside: avoid; padding: 2.6mm 0 2.8mm; border-bottom: .3mm solid #E4D8C3; }
+.q > p { display: flex; gap: 2.5mm; } .q > p > b { flex: none; min-width: 7mm; color: #2F5D50; }
+.q ol { list-style: none; padding-left: 9.5mm; margin-top: .8mm; display: grid; grid-template-columns: 1fr 1fr; gap: .4mm 6mm; font-size: 9.6pt; }
+.q ol li b { color: #55615e; margin-right: 1.2mm; } .q ol li.d { font-weight: 800; color: #2F5D50; } .q ol li.d b { color: #2F5D50; }
+.q .c { margin: 1.4mm 0 0 9.5mm; padding: 2mm 3mm; border-radius: 2.5mm; background: #EEF3EE; font-size: 9.2pt; line-height: 1.45; }
+.q .c b { color: #D9865B; } .bos u { text-decoration: none; border-bottom: .35mm solid #1E2A2E; padding: 0 1mm; font-weight: 800; color: #2F5D50; }
+`;
+export function cozumluBelge(m: EkModul, gorseller: Record<string, string>): string {
+  const setler = m.hoca?.setler || [];
+  const toplam = setler.reduce((t, s) => t + s.sorular.length, 0);
+  const govde = [`<section class="kapak"><div class="u">${e(m.ozet.tur)} · Kurul ${m.ozet.kurul}</div>${gorseller[m.ozet.kapak] ? `<img src="${gorseller[m.ozet.kapak]}" alt="">` : ''}
+    <h1>${e(m.ozet.ad)}</h1><div class="a">Çözümlü çalışma soruları</div><p>Hocanın ${toplam} çalışma sorusu kendi sırasıyla: ${setler.map((s) => `${e(s.ad)} (${s.sorular.length})`).join(', ')}. Her sorunun altında cevabı ve kısa çözümü var; aynı çözümleri sitede sesli dinleyebilirsin.</p><div class="d">MeDSor</div></section>`];
+  setler.forEach((s) => {
+    const q = s.sorular.map((x: any) => {
+      let kok: string;
+      let alt = '';
+      let cevap: string;
+      if (s.tur === 'bosluk') {
+        const p = String(x.metin).split('____');
+        const c = String(x.cevap).split(/\s*,\s*/);
+        kok = p.map((t, k) => e(t) + (k < p.length - 1 ? `<u>${e(p.length - 1 === 1 ? x.cevap : c.length === p.length - 1 ? c[k] : '…')}</u>` : '')).join('');
+        cevap = `<b>Cevap:</b> ${e(x.cevap)}`;
+      } else if (s.tur === 'dy') {
+        kok = e(x.metin);
+        cevap = `<b>${x.dogru ? 'Doğru' : 'Yanlış'}.</b>`;
+      } else {
+        kok = e(x.kok);
+        alt = `<ol>${Object.entries(x.secenekler as Record<string, string>).map(([h, v]) => `<li${h === x.dogru ? ' class="d"' : ''}><b>${h})</b>${e(v)}</li>`).join('')}</ol>`;
+        cevap = `<b>Cevap ${x.dogru}.</b>`;
+      }
+      return `<div class="q"><p><b>${x.no}.</b><span class="${s.tur === 'bosluk' ? 'bos' : ''}">${kok}</span></p>${alt}<div class="c">${cevap} ${e(x.cozum || '')}</div></div>`;
+    }).join('');
+    govde.push(`<section class="set"><h2>${e(s.ad)}</h2><p>${e(s.aciklama)} · ${s.sorular.length} soru</p>${q}</section>`);
+  });
+  return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>${e(m.ozet.ad)} — Çözümlü çalışma soruları</title><style>${FOY_CSS}${COZ_CSS}</style></head><body>${govde.join('')}</body></html>`;
+}

@@ -10,502 +10,602 @@
     {
      "no": 1,
      "metin": "Kamp alanı ____ bir arazide ve yangın tehlikesinden uzak olmalıdır.",
-     "cevap": "düz ve açık"
+     "cevap": "düz ve açık",
+     "cozum": "Kamp alanı düz ve açık bir arazide, yangın tehlikesinden uzak olmalıdır. Düz zemin çadırın güvenle kurulmasını ve rahat uyunmasını sağlar, açık alan ise yangın ve çevre risklerini azaltır."
     },
     {
      "no": 2,
      "metin": "Çadır, kampçıyı ____, ____, ____ ve güneşten korur.",
-     "cevap": "rüzgâr, yağmur, soğuk"
+     "cevap": "rüzgâr, yağmur, soğuk",
+     "cozum": "Çadır, kampçıyı rüzgâr, yağmur, soğuk ve güneşten korur. Bu sayede vücut ısısı korunur ve kötü hava koşullarında kampçı güvende kalır."
     },
     {
      "no": 3,
      "metin": "Kamp alanı sel, çığ ve ____ riski olan yerlerde kurulmamalıdır.",
-     "cevap": "kaya düşmesi"
+     "cevap": "kaya düşmesi",
+     "cozum": "Kamp alanı sel, çığ ve kaya düşmesi riski olan yerlerde kurulmamalıdır. Çünkü bu tehlikeler uyku sırasında bile can kaybına yol açabilir."
     },
     {
      "no": 4,
      "metin": "Uyku tulumu, vücudun ____ kaybını önlemek için kullanılır.",
-     "cevap": "ısı"
+     "cevap": "ısı",
+     "cozum": "Uyku tulumu, vücudun ısı kaybını önlemek için kullanılır. Tulum kendisi ısıtmaz, vücudun ürettiği ısıyı çevrede kaybolmadan korur."
     },
     {
      "no": 5,
      "metin": "Kamp sırasında tuvalet alanı sudan en az ____ metre uzak olmalıdır.",
-     "cevap": "150"
+     "cevap": "150",
+     "cozum": "Tuvalet alanı sudan en az yüz elli metre uzak olmalıdır. Böylece atıkların su kaynağına karışması ve su kirliliği önlenir."
     },
     {
      "no": 6,
      "metin": "Çadırın dikiş yerlerinde ____ kullanmak su sızmasını engeller.",
-     "cevap": "dikiş mühürleyici"
+     "cevap": "dikiş mühürleyici",
+     "cozum": "Çadırın dikiş yerlerinde dikiş mühürleyici kullanmak su sızmasını engeller. Dikiş delikleri yağmurda su alabilecek en zayıf noktalardır, mühürleyici bu açıkları kapatır."
     },
     {
      "no": 7,
      "metin": "Kış kampında ____ tulumları sıcak tutar fakat ıslandığında zor kurur.",
-     "cevap": "kaz tüyü"
+     "cevap": "kaz tüyü",
+     "cozum": "Kış kampında kaz tüyü tulumlar sıcak tutar ama ıslandığında zor kurur. Islanınca yalıtımını kaybettiği için nemli ortamlarda bu özellik önemli bir risktir."
     },
     {
      "no": 8,
      "metin": "Doğada giyimde en önemli kural, kalın tek kat yerine ____ ince kat giyinmektir.",
-     "cevap": "birden fazla"
+     "cevap": "birden fazla",
+     "cozum": "Doğada giyimde en önemli kural, kalın tek kat yerine birden fazla ince kat giyinmektir. Katmanlar arasında hava birikir, hava ve sıcaklığa göre kat çıkarıp giyerek vücut ısısı dengelenir."
     },
     {
      "no": 9,
      "metin": "Kamp ateşi ____ ve ____ amaçlı kullanılabilir.",
-     "cevap": "ısınma, yemek pişirme"
+     "cevap": "ısınma, yemek pişirme",
+     "cozum": "Kamp ateşi ısınma ve yemek pişirme amacıyla kullanılabilir. Ateş yakılırken güvenlik kurallarına uymak gerekir, çünkü kontrolsüz ateş yangına yol açar."
     },
     {
      "no": 10,
      "metin": "Sırt çantasında ağır eşyalar sırta ____, hafif eşyalar ise ____ yerleştirilmelidir.",
-     "cevap": "yakın, dışa doğru"
+     "cevap": "yakın, dışa doğru",
+     "cozum": "Sırt çantasında ağır eşyalar sırta yakın, hafif eşyalar ise dışa doğru yerleştirilmelidir. Ağır yükün sırta yakın durması dengeyi korur ve yürürken omurgayı yormaz."
     },
     {
      "no": 11,
      "metin": "Çadır kurmadan önce zemin ____ ve ____ olmalıdır.",
-     "cevap": "düz, taşsız"
+     "cevap": "düz, taşsız",
+     "cozum": "Çadır kurmadan önce zemin düz ve taşsız olmalıdır. Taşlar ve eğim hem uykuyu bozar hem de çadır tabanını yırtabilir."
     },
     {
      "no": 12,
      "metin": "Çadırın dış tentesi ____, iç tentesi ise ____ olmalıdır.",
-     "cevap": "su geçirmez, hava geçirir"
+     "cevap": "su geçirmez, hava geçirir",
+     "cozum": "Çadırın dış tentesi su geçirmez, iç tentesi ise hava geçirir olmalıdır. Dış tente yağmuru dışarıda tutar, iç tente nemin ve buharın dışarı çıkmasına izin verir."
     },
     {
      "no": 13,
      "metin": "Çadırın altına serilen koruyucu örtüye ____ denir.",
-     "cevap": "tabanlık"
+     "cevap": "tabanlık",
+     "cozum": "Çadırın altına serilen koruyucu örtüye tabanlık denir. Tabanlık zeminden gelen suyu geçirmez ve çadır tabanını aşınmaya karşı korur."
     },
     {
      "no": 14,
      "metin": "Çadırın içine girerken ____ kapatılmalıdır.",
-     "cevap": "kapı"
+     "cevap": "kapı",
+     "cozum": "Çadırın içine girerken kapı kapatılmalıdır. Açık kapı soğuğun, böceklerin ve rüzgârın içeri girmesine neden olur."
     },
     {
      "no": 15,
      "metin": "Uyku tulumu ____ tutulmalı, ıslandığında mutlaka ____ edilmelidir.",
-     "cevap": "kuru, kurutulmalı"
+     "cevap": "kuru, kurutulmalı",
+     "cozum": "Uyku tulumu kuru tutulmalı, ıslandığında mutlaka kurutulmalıdır. Islak tulum yalıtım özelliğini yitirir ve hipotermi riskini artırır."
     },
     {
      "no": 16,
      "metin": "Uyku tulumu içine girmeden önce ____ giysiler giyilmelidir.",
-     "cevap": "kuru"
+     "cevap": "kuru",
+     "cozum": "Uyku tulumuna girmeden önce kuru giysiler giyilmelidir. Nemli giysi vücuttan ısı çeker ve kişiyi üşütür."
     },
     {
      "no": 17,
      "metin": "Uyku tulumunun altına serilen yalıtım malzemesine ____ denir.",
-     "cevap": "mat"
+     "cevap": "mat",
+     "cozum": "Uyku tulumunun altına serilen yalıtım malzemesine mat denir. Mat, vücut ile zemin arasındaki ısı kaybını önler."
     },
     {
      "no": 18,
      "metin": "Sıcak havalarda başı korumak için ____ kullanılmalıdır.",
-     "cevap": "şapka"
+     "cevap": "şapka",
+     "cozum": "Sıcak havalarda başı korumak için şapka kullanılmalıdır. Şapka güneş çarpması ve aşırı ısınma riskini azaltır."
     },
     {
      "no": 19,
      "metin": "Soğuk havalarda ısı kaybını önlemek için ____ ve ____ takılmalıdır.",
-     "cevap": "bere, eldiven"
+     "cevap": "bere, eldiven",
+     "cozum": "Soğuk havalarda ısı kaybını önlemek için bere ve eldiven takılmalıdır. Baş ve eller ısının kolayca kaybedildiği bölgelerdir."
     },
     {
      "no": 20,
      "metin": "Kamp alanında yiyecekler ____ kaplarda saklanmalıdır.",
-     "cevap": "kapalı"
+     "cevap": "kapalı",
+     "cozum": "Kamp alanında yiyecekler kapalı kaplarda saklanmalıdır. Kapalı ve hava geçirmez kap hem kokuyu tutar hem de yabani hayvanları çekmeyi önler."
     },
     {
      "no": 21,
      "metin": "Kamp alanı hayvan geçiş yollarına ____ olmalıdır.",
-     "cevap": "uzak"
+     "cevap": "uzak",
+     "cozum": "Kamp alanı hayvan geçiş yollarına uzak olmalıdır. Böylece hayvanlarla karşılaşma riski azalır ve doğal yaşam rahatsız edilmez."
     },
     {
      "no": 22,
      "metin": "Uyku tulumu faaliyet sonrasında ____ yerlerinden asılmalıdır.",
-     "cevap": "asma"
+     "cevap": "asma",
+     "cozum": "Uyku tulumu faaliyet sonrasında asma yerlerinden asılmalıdır. Asılarak saklanan tulumun dolgusu ezilmez ve havalanarak kurur."
     },
     {
      "no": 23,
      "metin": "Çadırın içindeki eşyalar ____ bir şekilde yerleştirilmelidir.",
-     "cevap": "düzenli"
+     "cevap": "düzenli",
+     "cozum": "Çadırın içindeki eşyalar düzenli bir şekilde yerleştirilmelidir. Düzen, karanlıkta eşyaya kolay ulaşmayı sağlar ve takılıp düşmeyi önler."
     },
     {
      "no": 24,
      "metin": "Kamp sırasında kullanılan bıçak, çakı gibi aletler ____ kullanılmalıdır.",
-     "cevap": "dikkatli"
+     "cevap": "dikkatli",
+     "cozum": "Bıçak ve çakı gibi aletler dikkatli kullanılmalıdır. Kamp alanında bir kesik, ilk yardım ve sağlık hizmetine uzak olunduğu için ciddi bir sorun olabilir."
     },
     {
      "no": 25,
      "metin": "Kamp sırasında enerji sağlamak için ____ bir akşam yemeği önemlidir.",
-     "cevap": "iyi / dengeli"
+     "cevap": "iyi / dengeli",
+     "cozum": "Enerji sağlamak için iyi ve dengeli bir akşam yemeği önemlidir. Karbonhidrat ve proteinli yemek, gece ısınmaya ve ertesi günün yürüyüşüne güç verir."
     },
     {
      "no": 26,
      "metin": "Çadırın iç ve dış tentesi birbirine ____ etmemelidir.",
-     "cevap": "değmemelidir"
+     "cevap": "değmemelidir",
+     "cozum": "Çadırın iç ve dış tentesi birbirine değmemelidir. Değerse dış tentedeki nem içeri geçer ve çadırın içi ıslanır."
     },
     {
      "no": 27,
      "metin": "Kamp çantasındaki sıvı maddeler (örneğin benzin) ____ yerleştirilmelidir.",
-     "cevap": "en alt kısma"
+     "cevap": "en alt kısma",
+     "cozum": "Çantadaki sıvı maddeler, örneğin benzin, en alt kısma yerleştirilmelidir. Sızıntı olursa diğer eşyaları ve yiyecekleri bozmaz."
     },
     {
      "no": 28,
      "metin": "Çadır ____ riski olan mağara duvarlarına yakın kurulmamalıdır.",
-     "cevap": "çökme"
+     "cevap": "çökme",
+     "cozum": "Çadır çökme riski olan mağara duvarlarına yakın kurulmamalıdır. Duvardan kopan parçalar uyuyan kişiler için büyük tehlike oluşturur."
     },
     {
      "no": 29,
      "metin": "Uyku tulumunda fazla boşluk kalırsa ____ giysilerle doldurulabilir.",
-     "cevap": "polar"
+     "cevap": "polar",
+     "cozum": "Uyku tulumunda fazla boşluk kalırsa polar giysilerle doldurulabilir. Boşluk kalan yerde hava ısınmak zorunda kalır, doldurmak ısı kaybını azaltır."
     },
     {
      "no": 30,
      "metin": "Çadırın içerisi ____ bırakılmamalı, çıkarken kapı ____ kapatılmalıdır.",
-     "cevap": "açık, mutlaka"
+     "cevap": "açık, mutlaka",
+     "cozum": "Çadırın içi açık bırakılmamalı, çıkarken kapı mutlaka kapatılmalıdır. Açık çadıra hayvanlar girebilir ve rüzgâr eşyaları ıslatabilir."
     },
     {
      "no": 31,
      "metin": "Uyku tulumu temizlenirken ____ kullanılmamalıdır.",
-     "cevap": "deterjan"
+     "cevap": "deterjan",
+     "cozum": "Uyku tulumu temizlenirken deterjan kullanılmamalıdır. Deterjan dolgunun yalıtım özelliğine zarar verir."
     },
     {
      "no": 32,
      "metin": "Doğada teri dışarı atabilen ____ karışımlı giysiler tercih edilmelidir.",
-     "cevap": "sentetik / yün"
+     "cevap": "sentetik / yün",
+     "cozum": "Doğada teri dışarı atabilen sentetik ya da yün karışımlı giysiler tercih edilmelidir. Bu kumaşlar teri vücuttan uzaklaştırır, pamuk ise ıslanınca üşütür."
     },
     {
      "no": 33,
      "metin": "Kamp sırasında çöpler mutlaka ____ toplanmalıdır.",
-     "cevap": "ayrıştırılarak / poşetlerde"
+     "cevap": "ayrıştırılarak / poşetlerde",
+     "cozum": "Kamp sırasında çöpler mutlaka ayrıştırılarak toplanmalıdır. Çöp gömülmez ve yakılmaz, geri taşınarak doğanın temiz kalması sağlanır."
     },
     {
      "no": 34,
      "metin": "Kamp çantasındaki ağır eşyalar ____ olmalıdır.",
-     "cevap": "sırta yakın"
+     "cevap": "sırta yakın",
+     "cozum": "Kamp çantasındaki ağır eşyalar sırta yakın olmalıdır. Böylece ağırlık merkezi vücuda yakın kalır ve denge bozulmaz."
     },
     {
      "no": 35,
      "metin": "Uyku tulumu içine girmeden önce hafif bir ____ yapmak vücudu ısıtır.",
-     "cevap": "yürüyüş"
+     "cevap": "yürüyüş",
+     "cozum": "Uyku tulumuna girmeden önce hafif bir yürüyüş yapmak vücudu ısıtır. Önceden ısınmış vücut tulumu daha çabuk ısıtır."
     },
     {
      "no": 36,
      "metin": "Kış kamplarında sıcak su dolu şişe ____ içine konabilir.",
-     "cevap": "uyku tulumu"
+     "cevap": "uyku tulumu",
+     "cozum": "Kış kamplarında sıcak su dolu şişe uyku tulumunun içine konabilir. Sıcak şişe vücut ısısını hızla yükseltir ve geceyi daha rahat geçirmeyi sağlar."
     },
     {
      "no": 37,
      "metin": "Kamp ateşi yakmadan önce ____ kontrol edilmelidir.",
-     "cevap": "rüzgâr yönü"
+     "cevap": "rüzgâr yönü",
+     "cozum": "Kamp ateşi yakmadan önce rüzgâr yönü kontrol edilmelidir. Rüzgâr kıvılcımı taşıyıp yangın çıkarabilir."
     },
     {
      "no": 38,
      "metin": "Çadır kazıkları ____ açıyla toprağa çakılmalıdır.",
-     "cevap": "90 derecelik"
+     "cevap": "90 derecelik",
+     "cozum": "Çadır kazıkları toprağa doksan derecelik açıyla çakılmalıdır. Kazığın toprağa sağlam tutunması çadırın rüzgârda yerinden oynamasını engeller."
     },
     {
      "no": 39,
      "metin": "Çadırın bakımında en önemli kural ____ ve ____ saklamaktır.",
-     "cevap": "kuru, havalandırılmış"
+     "cevap": "kuru, havalandırılmış",
+     "cozum": "Çadırın bakımında en önemli kural, onu kuru ve havalandırılmış saklamaktır. Nemli saklanan çadır küflenir ve su geçirmezlik özelliğini yitirir."
     },
     {
      "no": 40,
      "metin": "Kamp alanı seçerken bölgenin ____ kısmına hâkim olunmalıdır.",
-     "cevap": "üçte ikilik / yüksek"
+     "cevap": "üçte ikilik / yüksek",
+     "cozum": "Kamp alanı seçerken bölgenin yüksek kısmına hâkim olunmalıdır. Hâkim konum çevreyi görmeyi ve sel gibi risklerden uzak durmayı sağlar."
     },
     {
      "no": 41,
      "metin": "Çadır kurarken rüzgârın yönü dikkate alınmalı, çadırın ____ kısmı rüzgâr yönüne gelecek şekilde konumlandırılmalıdır.",
-     "cevap": "arka"
+     "cevap": "arka",
+     "cozum": "Çadırın arka kısmı rüzgâr yönüne gelecek şekilde konumlandırılmalıdır. Böylece kapı hâkim rüzgâra bakmaz ve içeri rüzgâr dolmaz."
     },
     {
      "no": 42,
      "metin": "İyi bir kamp alanı, doğaya zarar vermemek için ____ kamp alanı ilkesine uygun seçilmelidir.",
-     "cevap": "“iz bırakma” / Leave No Trace"
+     "cevap": "“iz bırakma” / Leave No Trace",
+     "cozum": "İyi bir kamp alanı, doğaya zarar vermemek için iz bırakma ilkesine uygun seçilmelidir. Amaç, ayrılırken ekolojik dengeyi bozmayacak şekilde alanı eski hâline getirmektir."
     },
     {
      "no": 43,
      "metin": "Uyku tulumunun ısı yalıtımı, içindeki ____ miktarına ve ____ kalitesine bağlıdır.",
-     "cevap": "hava, dolgu malzemesi"
+     "cevap": "hava, dolgu malzemesi",
+     "cozum": "Uyku tulumunun ısı yalıtımı, içindeki hava miktarına ve dolgu malzemesinin kalitesine bağlıdır. Hava hapsedildikçe ısı kaybı azalır."
     },
     {
      "no": 44,
      "metin": "Kış kamplarında çadır altına konan kar tabakası ____ amacıyla kullanılır.",
-     "cevap": "yalıtım / izolasyon"
+     "cevap": "yalıtım / izolasyon",
+     "cozum": "Kış kamplarında çadır altına konan kar tabakası yalıtım amacıyla kullanılır. Kar hava hapsettiği için zeminin soğuğunu kesmeye yardımcı olur."
     },
     {
      "no": 45,
      "metin": "Çadırın içindeki nemin dışarı çıkabilmesi için ____ sistemi bulunmalıdır.",
-     "cevap": "havalandırma"
+     "cevap": "havalandırma",
+     "cozum": "Çadırın içindeki nemin dışarı çıkabilmesi için havalandırma sistemi bulunmalıdır. Havalandırma olmazsa solunum nemi yoğuşur ve eşyalar ıslanır."
     },
     {
      "no": 46,
      "metin": "Kamp ocaklarında yakıt olarak genellikle ____ veya ____ türü gazlar kullanılır.",
-     "cevap": "propan, bütan"
+     "cevap": "propan, bütan",
+     "cozum": "Kamp ocaklarında yakıt olarak genellikle propan veya bütan türü gazlar kullanılır. Bu gazlar kartuşlarda taşınır ve çadırdan uzakta, açık alanda yakılır."
     },
     {
      "no": 47,
      "metin": "Ağaç altına çadır kurmak tehlikelidir, çünkü ____ riski her zaman vardır.",
-     "cevap": "dal kırılması / düşen dal"
+     "cevap": "dal kırılması / düşen dal",
+     "cozum": "Ağaç altına çadır kurmak tehlikelidir, çünkü dal kırılması riski her zaman vardır. Ayrıca ağaç, yıldırım çarpması riskini de artırır."
     },
     {
      "no": 48,
      "metin": "Kamp sırasında enerji kaybını önlemek için karbonhidrat ve ____ açısından zengin yiyecekler tüketilmelidir.",
-     "cevap": "protein"
+     "cevap": "protein",
+     "cozum": "Kamp sırasında enerji kaybını önlemek için karbonhidrat ve protein açısından zengin yiyecekler tüketilmelidir. Karbonhidrat hızlı enerji, protein ise kas onarımı sağlar."
     },
     {
      "no": 49,
      "metin": "Kar mağarası veya iglo inşa ederken, içeride ____ deliği bırakmak karbonmonoksit zehirlenmesini önler.",
-     "cevap": "havalandırma"
+     "cevap": "havalandırma",
+     "cozum": "Kar mağarası veya iglo yaparken içeride havalandırma deliği bırakmak karbonmonoksit zehirlenmesini önler. Kapalı alanda yanma ve solunum havayı bozar, delik temiz hava girmesini sağlar."
     },
     {
      "no": 50,
      "metin": "Uzun süreli kamp faaliyetlerinde çadır ve tulumların küflenmesini önlemek için ____ ve ____ yapılması gerekir.",
-     "cevap": "kurutma, havalandırma"
+     "cevap": "kurutma, havalandırma",
+     "cozum": "Uzun süreli kamplarda çadır ve tulumların küflenmesini önlemek için kurutma ve havalandırma yapılması gerekir. Nem küf oluşturur ve malzemeye zarar verir."
     },
     {
      "no": 51,
      "metin": "Pusula, ____ özelliğine dayanarak yön belirlemeye yarayan bir alettir.",
-     "cevap": "yerkürenin manyetik"
+     "cevap": "yerkürenin manyetik",
+     "cozum": "Pusula, yerkürenin manyetik özelliğine dayanarak yön belirlemeye yarayan bir alettir. İbre bu alanla hizalanarak kuzeyi gösterir."
     },
     {
      "no": 52,
      "metin": "Pusulada ağırlıklı uç genellikle ____ yönünü gösterir.",
-     "cevap": "güney"
+     "cevap": "güney",
+     "cozum": "Pusulada ağırlıklı uç genellikle güney yönünü gösterir. Kırmızı uç ise kuzeyi gösterir."
     },
     {
      "no": 53,
      "metin": "Pusulada N, S, E, W harfleri sırasıyla ____, ____, ____, ____ yönlerini gösterir.",
-     "cevap": "kuzey, güney, doğu, batı"
+     "cevap": "kuzey, güney, doğu, batı",
+     "cozum": "Pusulada N, S, E ve W harfleri sırasıyla kuzey, güney, doğu ve batı yönlerini gösterir. Bu harfler İngilizce yön adlarının baş harfleridir."
     },
     {
      "no": 54,
      "metin": "Jeolog pusulası, ____ (eğim ölçer) ve ____ (düzey ölçer) kısımlarından oluşur.",
-     "cevap": "klinometre, el düzeçi"
+     "cevap": "klinometre, el düzeçi",
+     "cozum": "Jeolog pusulası klinometre ve el düzeci kısımlarından oluşur. Klinometre eğimi ölçer, el düzeci ise aletin yatay tutulmasını sağlar."
     },
     {
      "no": 55,
      "metin": "Pusula tabanı üzerinde E-W harfleri ____ olarak yazılır.",
-     "cevap": "yer değiştirmiş"
+     "cevap": "yer değiştirmiş",
+     "cozum": "Pusula tabanı üzerinde E ve W harfleri yer değiştirmiş olarak yazılır. Bunun nedeni, ibrenin saat ibresinin tersi yönünde dönmesidir."
     },
     {
      "no": 56,
      "metin": "Doğrultu açısı, pusula ibresinin ____ ile yaptığı ____ açıdır.",
-     "cevap": "kuzey, dar"
+     "cevap": "kuzey, dar",
+     "cozum": "Doğrultu açısı, pusula ibresinin kuzey ile yaptığı dar açıdır. Bu açı E, N ve W aralığında okunur."
     },
     {
      "no": 57,
      "metin": "Eğim yönünü bulmak için pusulanın ____ veya ____ kenarı ölçülecek düzleme yaslanır.",
-     "cevap": "N, S"
+     "cevap": "N, S",
+     "cozum": "Eğim yönünü bulmak için pusulanın N veya S kenarı ölçülecek düzleme yaslanır. Hangi kenar yaslanırsa, ibrenin karşıt ucu eğim yönünü gösterir."
     },
     {
      "no": 58,
      "metin": "Eğim açısı ____ yardımıyla okunur.",
-     "cevap": "klinometre düzeci"
+     "cevap": "klinometre düzeci",
+     "cozum": "Eğim açısı klinometre düzeci yardımıyla okunur. Düzecin kabarcığı ortalandığında açı değeri güvenle okunabilir."
     },
     {
      "no": 59,
      "metin": "Pusula ile yer belirleme yöntemlerinden biri ____ kestirme, diğeri ____ kestirme yöntemidir.",
-     "cevap": "geriden, ileriden"
+     "cevap": "geriden, ileriden",
+     "cozum": "Pusula ile yer belirleme yöntemlerinden biri geriden kestirme, diğeri ileriden kestirme yöntemidir. Geriden kestirmede bulunduğumuz yer, ileriden kestirmede ulaşılamayan bir nokta belirlenir."
     },
     {
      "no": 60,
      "metin": "Pusula–altimetre yöntemiyle yer belirlemede, ____ ölçülür ve haritadaki ____ eğrisi üzerinden konum belirlenir.",
-     "cevap": "yükseklik, eşyükseklik"
+     "cevap": "yükseklik, eşyükseklik",
+     "cozum": "Pusula ve altimetre yönteminde yükseklik ölçülür ve haritadaki eşyükselti eğrisi üzerinden konum belirlenir. Altimetre yükseklik bilgisini verir, pusula doğrultuyu ekler."
     },
     {
      "no": 61,
      "metin": "Jeolog pusulası, hem ____ ölçümü hem de ____ tayini için kullanılır.",
-     "cevap": "düzlemsel yapıların, çizgisel yapıların"
+     "cevap": "düzlemsel yapıların, çizgisel yapıların",
+     "cozum": "Jeolog pusulası hem düzlemsel yapıların ölçümü hem de çizgisel yapıların yön tayini için kullanılır. Bu sayede tabaka ve çizgisel yapıların konumu sahada kaydedilir."
     },
     {
      "no": 62,
      "metin": "Pusula ibresi, ____ alanı sayesinde yön tayini yapar.",
-     "cevap": "Dünya’nın manyetik"
+     "cevap": "Dünya’nın manyetik",
+     "cozum": "Pusula ibresi, Dünya'nın manyetik alanı sayesinde yön tayini yapar. İbre bu alanın çizgileriyle hizalanarak kuzeyi gösterir."
     },
     {
      "no": 63,
      "metin": "Eğer pusula ibresinin ağırlıklı ucu yoksa, ____ işaretli uç kuzeyi gösterir.",
-     "cevap": "N harfiyle"
+     "cevap": "N harfiyle",
+     "cozum": "Pusula ibresinin ağırlıklı ucu yoksa, N harfiyle işaretli uç kuzeyi gösterir. Doğru uç bilinmezse yön yanlış okunur."
     },
     {
      "no": 64,
      "metin": "Pusula tabanı üzerinde E-W harflerinin yer değiştirmesi, ibrenin ____ yönünde dönmesinden kaynaklanır.",
-     "cevap": "saat ibresinin tersi"
+     "cevap": "saat ibresinin tersi",
+     "cozum": "E ve W harflerinin yer değiştirmesi, ibrenin saat ibresinin tersi yönünde dönmesinden kaynaklanır. Böylece okuma doğrudan doğru yönü verir."
     },
     {
      "no": 65,
      "metin": "Doğrultu açısı, ____ aralığında ibrenin kuzeyle yaptığı dar açıdır.",
-     "cevap": "E–N–W"
+     "cevap": "E–N–W",
+     "cozum": "Doğrultu açısı, E, N ve W aralığında ibrenin kuzeyle yaptığı dar açıdır. Ölçümden önce pusula tabanı yatay hâle getirilir."
     },
     {
      "no": 66,
      "metin": "Eğim ölçümü sırasında pusulanın klinometreli kenarı ölçülen düzleme ____ konumda tutulur.",
-     "cevap": "dik"
+     "cevap": "dik",
+     "cozum": "Eğim ölçümü sırasında pusulanın klinometreli kenarı ölçülen düzleme dik konumda tutulur. Böylece klinometre eğimi doğru okur."
     },
     {
      "no": 67,
      "metin": "Brunton pusulasında, eğim açısı ____ kabarcıklı düzeci yataylanarak ölçülür.",
-     "cevap": "silindirik"
+     "cevap": "silindirik",
+     "cozum": "Brunton pusulasında eğim açısı, silindirik kabarcıklı düzeç yataylanarak ölçülür. Düzecin ortalanması ölçüm doğruluğunu sağlar."
     },
     {
      "no": 68,
      "metin": "Breithaupt pusulasında, eğim açısı pusula içindeki ____ yardımıyla okunur.",
-     "cevap": "oynar sarkaç"
+     "cevap": "oynar sarkaç",
+     "cozum": "Breithaupt pusulasında eğim açısı, pusula içindeki oynar sarkaç yardımıyla okunur. Sarkaç yerçekimiyle düşey kalır ve açıyı gösterir."
     },
     {
      "no": 69,
      "metin": "Çizgisel elemanların yönü belirlenirken dalım yönü, çizgisel yapının ____ yönüdür.",
-     "cevap": "eğildiği / daldığı"
+     "cevap": "eğildiği / daldığı",
+     "cozum": "Çizgisel yapılarda dalım yönü, yapının eğildiği veya daldığı yöndür. Bu yön çizgisel elemanın konumunu tarif etmek için ölçülür."
     },
     {
      "no": 70,
      "metin": "Pusula ile yapılan geriden kestirme yönteminde, haritada iki farklı noktadan çizilen doğruların ____ bulunduğumuz konumu verir.",
-     "cevap": "kesişim noktası"
+     "cevap": "kesişim noktası",
+     "cozum": "Geriden kestirmede haritada iki farklı noktadan çizilen doğruların kesişim noktası bulunduğumuz konumu verir. Bu nedenle çizilen iki doğrultu mümkün olduğunca farklı açıda olmalıdır."
     },
     {
      "no": 71,
      "metin": "Pusula ile yapılan ileriden kestirme yönteminde, ölçüm yapılan noktalar ____ bölgeye doğrudan ulaşılamadığı durumlarda kullanılır.",
-     "cevap": "ulaşılamayan / girilemeyen"
+     "cevap": "ulaşılamayan / girilemeyen",
+     "cozum": "İleriden kestirme yönteminde ölçüm noktaları, ulaşılamayan bölgeye doğrudan gidilemediği durumlarda kullanılır. Uzaktaki noktanın yeri iki ölçümün kesişmesiyle bulunur."
     },
     {
      "no": 72,
      "metin": "Pusula–altimetre yönteminde, pusula ____ yönünü verirken, altimetre ____ bilgisini sağlar.",
-     "cevap": "doğrultu, yükseklik"
+     "cevap": "doğrultu, yükseklik",
+     "cozum": "Pusula ve altimetre yönteminde pusula doğrultuyu, altimetre yükseklik bilgisini verir. İkisi birlikte haritada konumu daraltır."
     },
     {
      "no": 73,
      "metin": "Eğim yönü, pusulanın N kenarı yaslanırsa ibrenin ____ ucu, S kenarı yaslanırsa ibrenin ____ ucu tarafından gösterilir.",
-     "cevap": "S, N"
+     "cevap": "S, N",
+     "cozum": "Eğim yönü, pusulanın N kenarı yaslanırsa ibrenin S ucu, S kenarı yaslanırsa ibrenin N ucu tarafından gösterilir. Eğim yönü her zaman doğrultuya diktir."
     },
     {
      "no": 74,
      "metin": "Doğrultu ölçümü sırasında pusula tabanı ____ hale getirilmeden ölçüm yapılmamalıdır.",
-     "cevap": "yatay"
+     "cevap": "yatay",
+     "cozum": "Doğrultu ölçümü sırasında pusula tabanı yatay hâle getirilmeden ölçüm yapılmamalıdır. Yatay olmayan taban ibrenin serbest dönmesini engeller ve hatalı sonuç verir."
     },
     {
      "no": 75,
      "metin": "Düzlemsel yapılarla çizgisel yapıların farkı, düzlemsel yapıların ____, çizgisel yapıların ise ____ özelliğe sahip olmasıdır.",
-     "cevap": "yüzeysel, doğrusal"
+     "cevap": "yüzeysel, doğrusal",
+     "cozum": "Düzlemsel yapıların yüzeysel, çizgisel yapıların ise doğrusal özelliğe sahip olması aradaki farktır. Bu yüzden düzlemsel yapılar eğim, çizgisel yapılar dalım yönüyle tarif edilir."
     },
     {
      "no": 76,
      "metin": "Harita üzerinde yer belirleme sırasında yapılan ölçümlerde hata payını azaltmak için ____ fazla noktadan atış yapılmalıdır.",
-     "cevap": "iki’den"
+     "cevap": "iki’den",
+     "cozum": "Hata payını azaltmak için ikiden fazla noktadan atış yapılmalıdır. Daha fazla doğrultu, kesişim noktasını daha güvenilir yapar."
     },
     {
      "no": 77,
      "metin": "Arazide yüksekliği belirlemek için altimetre, ____ değişimine bağlı olarak ölçüm yapar.",
-     "cevap": "hava basıncı"
+     "cevap": "hava basıncı",
+     "cozum": "Altimetre, hava basıncı değişimine bağlı olarak yüksekliği ölçer. Yükseldikçe hava basıncı azaldığı için bu azalma yükseklik bilgisine çevrilir."
     },
     {
      "no": 78,
      "metin": "Jeolog pusulasında ayna parçası, ölçüm sırasında hem ____ hem de ____ doğruluğunu sağlamaya yarar.",
-     "cevap": "göz hizası, düzlem konumu"
+     "cevap": "göz hizası, düzlem konumu",
+     "cozum": "Jeolog pusulasındaki ayna parçası ölçüm sırasında göz hizası ve düzlem konumu doğruluğunu sağlar. Böylece alet doğru konumda tutulur."
     },
     {
      "no": 79,
      "metin": "Pusula ibresinin sapması, yakın çevrede bulunan ____ veya ____ maddelerden etkilenebilir.",
-     "cevap": "manyetik, metalik"
+     "cevap": "manyetik, metalik",
+     "cozum": "Pusula ibresinin sapması, yakın çevredeki manyetik veya metalik maddelerden etkilenebilir. Bu yüzden metal saat, telefon ve araç gövdesi ölçümden uzak tutulur."
     },
     {
      "no": 80,
      "metin": "Arazide eğim ölçümü yaparken tabaka yüzeyi düzgün değilse, ölçüm yüzeyi ____ veya ____ ile düzleştirilir.",
-     "cevap": "jeolog çekici, defter"
+     "cevap": "jeolog çekici, defter",
+     "cozum": "Tabaka yüzeyi düzgün değilse ölçüm yüzeyi jeolog çekici veya defter ile düzleştirilir. Düz yüzey, pusulanın tabaka düzlemine tam oturmasını sağlar."
     },
     {
      "no": 81,
      "metin": "Pusula ibresinin kuzeyi göstermediği durumlarda, ölçüm hatasının nedeni genellikle ____ sapmasıdır.",
-     "cevap": "manyetik / deklinasyon"
+     "cevap": "manyetik / deklinasyon",
+     "cozum": "Pusula ibresi kuzeyi göstermiyorsa, ölçüm hatasının nedeni genellikle manyetik sapmadır. Bu sapma manyetik deklinasyon olarak adlandırılır."
     },
     {
      "no": 82,
      "metin": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkına ____ denir.",
-     "cevap": "manyetik deklinasyon"
+     "cevap": "manyetik deklinasyon",
+     "cozum": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkına manyetik deklinasyon denir. Haritadaki gerçek kuzeye göre okuma yaparken bu farkın düzeltilmesi gerekir."
     },
     {
      "no": 83,
      "metin": "Manyetik deklinasyon, her yıl ____ gösterdiği için arazide ölçüm yapılmadan önce mutlaka güncel harita ile düzeltilmelidir.",
-     "cevap": "değişim"
+     "cevap": "değişim",
+     "cozum": "Manyetik deklinasyon her yıl değişim gösterdiği için ölçüm yapılmadan önce güncel haritayla düzeltilmelidir. Eski değerle yapılan okuma yön hatası doğurur."
     },
     {
      "no": 84,
      "metin": "Jeomanyetik eğim (inclination), manyetik alan çizgilerinin yatay düzlemle yaptığı ____ açısıdır.",
-     "cevap": "daldığı / eğim"
+     "cevap": "daldığı / eğim",
+     "cozum": "Jeomanyetik eğim, manyetik alan çizgilerinin yatay düzlemle yaptığı eğim açısıdır. Bu açı kutuplara yaklaştıkça artar."
     },
     {
      "no": 85,
      "metin": "Doğrultu-eğim ölçümlerinde, eğim yönü daima doğrultuya ____ olmalıdır.",
-     "cevap": "dik"
+     "cevap": "dik",
+     "cozum": "Doğrultu ve eğim ölçümlerinde eğim yönü daima doğrultuya dik olmalıdır. Eğim, tabakanın en dik düştüğü yönü gösterdiği için doğrultuyla dik açı yapar."
     },
     {
      "no": 86,
      "metin": "Pusula ile yapılan ölçümlerde kabarcıklı düzeç ortalanmamışsa, sonuçlar ____ hatası içerir.",
-     "cevap": "horizontallik / seviye"
+     "cevap": "horizontallik / seviye",
+     "cozum": "Kabarcıklı düzeç ortalanmamışsa sonuçlar seviye hatası içerir. Düzeç, aletin yatay olduğunu doğrular."
     },
     {
      "no": 87,
      "metin": "Jeolog pusulası üzerindeki dereceli daire ____ sistemine göre 0°–360° olarak kalibre edilmiştir.",
-     "cevap": "azimut / yatay açı"
+     "cevap": "azimut / yatay açı",
+     "cozum": "Jeolog pusulasındaki dereceli daire azimut sistemine göre sıfırdan üç yüz altmışa kadar kalibre edilmiştir. Bu sistemde açılar kuzeyden saat yönünde ölçülür."
     },
     {
      "no": 88,
      "metin": "Dip direction-dip amount (DDD) ifadesinde, ilk sayı ____, ikinci sayı ____ anlamına gelir.",
-     "cevap": "eğim yönü, eğim açısı"
+     "cevap": "eğim yönü, eğim açısı",
+     "cozum": "Dip direction dip amount yazımında ilk sayı eğim yönü, ikinci sayı eğim açısı anlamına gelir. Yani önce tabakanın hangi yöne düştüğü, sonra ne kadar düştüğü yazılır."
     },
     {
      "no": 89,
      "metin": "Strike-dip ölçümünde, doğrultu genellikle ____ yönü referans alınarak verilir.",
-     "cevap": "kuzey"
+     "cevap": "kuzey",
+     "cozum": "Strike dip ölçümünde doğrultu genellikle kuzey yönü referans alınarak verilir. Doğrultu, kuzeyle yapılan açı olarak ifade edilir."
     },
     {
      "no": 90,
      "metin": "Ölçülen bir tabakanın eğim yönü kuzeydoğu ise, doğrultu genellikle ____ – ____ şeklinde ifade edilir.",
-     "cevap": "kuzeybatı, güneydoğu"
+     "cevap": "kuzeybatı, güneydoğu",
+     "cozum": "Eğim yönü kuzeydoğu ise doğrultu kuzeybatı, güneydoğu şeklinde ifade edilir. Doğrultu, eğim yönüne dik olduğu için bu iki yön birbirine dik düşer."
     },
     {
      "no": 91,
      "metin": "İzohips (eş-yükseklik) eğrileri üzerinde yapılan pusula-altimetre kestirmelerinde konum, aynı anda ____ ve ____ verileriyle belirlenir.",
-     "cevap": "doğrultu, yükseklik"
+     "cevap": "doğrultu, yükseklik",
+     "cozum": "Pusula ve altimetre ile yapılan kestirmelerde konum, doğrultu ve yükseklik verileriyle belirlenir. Eş yükselti eğrisi ile doğrultu çizgisinin kesiştiği yer konumu verir."
     },
     {
      "no": 92,
      "metin": "Geriden kestirme yönteminde kullanılan iki noktanın arasındaki açı dar ise, kesişim noktası ____ hatası verir.",
-     "cevap": "belirsizlik / büyük"
+     "cevap": "belirsizlik / büyük",
+     "cozum": "Geriden kestirmede kullanılan iki nokta arasındaki açı dar ise kesişim noktası büyük bir belirsizlik hatası verir. Doğrular birbirine çok yakın olduğu için kesişim yeri kesin belirlenemez."
     },
     {
      "no": 93,
      "metin": "İleriden kestirme yöntemi, doğrudan ulaşılamayan bir noktanın ____ harita üzerinde belirlenmesini sağlar.",
-     "cevap": "konumunun / yerinin"
+     "cevap": "konumunun / yerinin",
+     "cozum": "İleriden kestirme yöntemi, doğrudan ulaşılamayan bir noktanın yerini harita üzerinde belirlemeyi sağlar. Uzaktaki nokta iki ayrı yerden alınan doğrultuların kesişimiyle bulunur."
     },
     {
      "no": 94,
      "metin": "Manyetik kuzeyin yıllık sapma miktarı ____ birimiyle ifade edilir.",
-     "cevap": "derece / yıl"
+     "cevap": "derece / yıl",
+     "cozum": "Manyetik kuzeyin yıllık sapma miktarı derece bölü yıl birimiyle ifade edilir. Bu değer her yıl değiştiği için güncel bilgi gerekir."
     },
     {
      "no": 95,
      "metin": "Azimut ölçümü, bir doğrultunun ____ ile yaptığı açının saat yönünde ölçülmesidir.",
-     "cevap": "coğrafi kuzey"
+     "cevap": "coğrafi kuzey",
+     "cozum": "Azimut ölçümü, bir doğrultunun coğrafi kuzey ile yaptığı açının saat yönünde ölçülmesidir. Sonuç sıfır ile üç yüz altmış derece arasında bir sayıdır."
     },
     {
      "no": 96,
      "metin": "Pusula ile yapılan ölçümlerde metal saat, telefon veya araç gövdesi gibi nesneler ____ etkisi yaratarak ölçüm doğruluğunu bozar.",
-     "cevap": "manyetik alan / sapma"
+     "cevap": "manyetik alan / sapma",
+     "cozum": "Metal saat, telefon veya araç gövdesi gibi nesneler manyetik alan etkisi yaratarak ölçüm doğruluğunu bozar. Bu yüzden pusula bu nesnelerden uzak tutulur."
     },
     {
      "no": 97,
      "metin": "Eğim yönü ölçülürken pusula kenarı tabaka yüzeyine tam oturmuyorsa, yüzey ____ hale getirilmelidir.",
-     "cevap": "pürüzsüz / düz"
+     "cevap": "pürüzsüz / düz",
+     "cozum": "Pusula kenarı tabaka yüzeyine tam oturmuyorsa yüzey düz hâle getirilmelidir. Düz temas olmadan eğim yönü ve açısı doğru ölçülmez."
     },
     {
      "no": 98,
      "metin": "Klinometre kullanılarak ölçülen eğim açısının doğruluğu, pusula tabanının ____ konumda tutulmasına bağlıdır.",
-     "cevap": "düşey"
+     "cevap": "düşey",
+     "cozum": "Klinometre ile ölçülen eğim açısının doğruluğu, pusula tabanının düşey konumda tutulmasına bağlıdır. Taban düşey durmazsa okunan açı yanlış olur."
     },
     {
      "no": 99,
      "metin": "Dalım yönü, çizgisel yapıların yer altında ____ yöneldiğini gösteren vektörel bir büyüklüktür.",
-     "cevap": "daldığı / eğildiği"
+     "cevap": "daldığı / eğildiği",
+     "cozum": "Dalım yönü, çizgisel yapıların yer altında daldığı veya eğildiği yönü gösterir. Çizgisel yapının hangi yöne daldığı bu yönle tarif edilir."
     },
     {
      "no": 100,
      "metin": "Arazide yapılan tüm pusula ölçümleri, sahada ____ numaralı notlarla saha defterine kaydedilmelidir.",
-     "cevap": "lokasyon / koordinat"
+     "cevap": "lokasyon / koordinat",
+     "cozum": "Arazide yapılan tüm pusula ölçümleri, lokasyon numaralı notlarla saha defterine kaydedilmelidir. Numaralandırma, ölçümün hangi yerde alındığının sonradan karıştırılmamasını sağlar."
     }
    ]
   },
@@ -518,502 +618,602 @@
     {
      "no": 1,
      "metin": "Dağcılık yalnızca fiziksel dayanıklılık gerektirir, ruhsal hazırlığın önemi yoktur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Dağcılıkta fiziksel dayanıklılık kadar ruhsal hazırlık ve denge de başarıyı belirler."
     },
     {
      "no": 2,
      "metin": "21 Mart – 21 Aralık tarihleri arasındaki etkinlikler yaz dağcılığı olarak tanımlanır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Yirmi bir Mart ile yirmi bir Aralık arasındaki etkinlikler yaz dağcılığı, yirmi bir Aralık ile yirmi bir Mart arası ise kış dağcılığı sayılır."
     },
     {
      "no": 3,
      "metin": "Alpinizm, yalnızca kaya tırmanışını kapsayan bir dağcılık türüdür.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Alpinizm yalnız kaya tırmanışı değildir, kaya, kar ve buzulu birlikte barındıran karma bir disiplindir."
     },
     {
      "no": 4,
      "metin": "Ferrata, kayaya sabitlenmiş metal aksamlar kullanılarak yapılan tırmanıştır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ferrata, kayaya sabitlenmiş metal aksamlar kullanılarak yapılan tırmanıştır ve bu aksamlar tırmanıcıya güvenli tutunma sağlar."
     },
     {
      "no": 5,
      "metin": "Türkiye’nin en yüksek dağı Cilo Dağı’dır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Türkiye'nin en yüksek dağı Cilo değil Ağrı Dağı'dır."
     },
     {
      "no": 6,
      "metin": "Everest Dağı, Himalayalar’da yer alır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Everest Dağı, Himalayalar'da yer alır."
     },
     {
      "no": 7,
      "metin": "Mont Blanc tırmanışı dağcılığın başlangıcı olarak kabul edilir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bin yedi yüz seksen altıdaki Mont Blanc çıkışı, dünyada ilk modern dağcılık tırmanışı ve dağcılığın başlangıcı kabul edilir."
     },
     {
      "no": 8,
      "metin": "Türkiye’de ilk dağcılık etkinliği bilimsel amaçla yapılmıştır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Türkiye'de ilk dağcılık etkinliği spor veya macera amacıyla değil, bilimsel amaçla yapılmıştır."
     },
     {
      "no": 9,
      "metin": "1924’te Cemil Cahit Toydemir, Erciyes Dağı’na tırmanarak Türk dağcılığının başlangıcını yapmıştır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bin dokuz yüz yirmi dörtte Miralay Cemil Cahit Toydemir'in Erciyes tırmanışı Türk dağcılığının başlangıcı sayılır."
     },
     {
      "no": 10,
      "metin": "Türkiye Dağcılık Federasyonu 1966’da resmen kurulmuştur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Türkiye Dağcılık Federasyonu bin dokuz yüz altmış altıda resmen kurulmuştur, kökeni ise bin dokuz yüz otuz dokuzda kurulan Dağcılık ve Kış Sporları Federasyonu'na dayanır."
     },
     {
      "no": 11,
      "metin": "Ağrı Dağı 3916 metredir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Ağrı Dağı'nın yüksekliği üç bin dokuz yüz on altı metre değildir, bu sayı dersteki doğru değerle uyuşmaz."
     },
     {
      "no": 12,
      "metin": "Reinhold Messner tüm 8000’lik dağlara tırmanan ilk kişidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Reinhold Messner, sekiz bin metrelik dağların tümüne tırmanan ilk kişidir, ancak Everest'e ilk çıkan insan değildir."
     },
     {
      "no": 13,
      "metin": "Dağlar yalnızca yüksekliklerine göre sınıflandırılır, ekosistem özellikleri dikkate alınmaz.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Dağlar yalnız yüksekliğe göre sınıflandırılmaz, ekosistem özellikleri de dikkate alınır."
     },
     {
      "no": 14,
      "metin": "Kireçtaşı, çökelti kökenli bir kayaçtır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Kireçtaşı çökelti kökenli, yani tortul bir kayaçtır."
     },
     {
      "no": 15,
      "metin": "Granit, tortul kayaç sınıfındadır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Granit tortul değildir, yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur."
     },
     {
      "no": 16,
      "metin": "Gnays, yüksek basınç ve sıcaklık altında oluşmuş başkalaşım kayasıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Gnays, yüksek basınç ve sıcaklık altında oluşmuş bir başkalaşım kayasıdır."
     },
     {
      "no": 17,
      "metin": "Şist, katlanma sırasında basınç altında oluşur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Şist, yer kabuğunun katlanması sırasında yüksek basınç altında oluşur."
     },
     {
      "no": 18,
      "metin": "Buzulların ilerleme hızı tüm dünyada sabittir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Buzullar eğim yönünde akar, ancak ilerleme hızları dünyanın her yerinde aynı değildir."
     },
     {
      "no": 19,
      "metin": "Serak, buzul yüzeyinde oluşan dev buz kuleleridir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Serak, buzul yüzeyinde oluşan dev buz kulelerine denir."
     },
     {
      "no": 20,
      "metin": "Moren, buzulun taşıdığı döküntülerin birikmesiyle oluşur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Moren, buzulun taşıdığı döküntülerin birikmesiyle oluşur."
     },
     {
      "no": 21,
      "metin": "Buzullar, iklim değişikliğinin doğrudan göstergeleridir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Buzullar sıcaklık değişimine hızla tepki verdiği için iklim değişikliğinin doğrudan göstergesidir."
     },
     {
      "no": 22,
      "metin": "Dağlarda yükseklik arttıkça oksijen oranı artar.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yükseklik arttıkça oksijen azalır, bu yüzden yüksek irtifada nefes almak zorlaşır."
     },
     {
      "no": 23,
      "metin": "Bitki örtüsünün yüksekliğe göre değişmesi “yüksekliğe dayalı zonlaşma” olarak adlandırılır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bitki örtüsünün yüksekliğe göre değişmesine yüksekliğe dayalı zonlaşma denir."
     },
     {
      "no": 24,
      "metin": "Dağlarda gece–gündüz sıcaklık farkı genellikle küçüktür.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Dağlarda gece ile gündüz arasındaki sıcaklık farkı büyüktür, bu yüzden uygun giyim gerekir."
     },
     {
      "no": 25,
      "metin": "Bitkiler yüksek rakımlarda kalın ve tüylü yapraklara sahiptir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Yüksek rakımdaki bitkilerin yaprakları kalın ve tüylüdür, tüyler su kaybını azaltır."
     },
     {
      "no": 26,
      "metin": "Kış uykusu, dağ hayvanlarının sert iklime uyum sağlama yöntemidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Kış uykusu, hayvanların sert iklime uyum yöntemidir, aktivitelerini düşürerek enerji kaybını azaltırlar."
     },
     {
      "no": 27,
      "metin": "Plastik poşet doğada en fazla 10 yıl kalır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Plastik poşet doğada on yıl içinde yok olmaz, yüzlerce yıl kalır."
     },
     {
      "no": 28,
      "metin": "Dağlarda çöpü gömmek yerine yakmak en doğru yöntemdir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Dağda çöp ne gömülür ne yakılır, ayrıştırılarak toplanır ve geri taşınır."
     },
     {
      "no": 29,
      "metin": "“İz bırakma” ilkesi dağ etiğinin temelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. İz bırakmama ilkesi dağ etiğinin temelidir, amaç ekolojik dengeyi korumaktır."
     },
     {
      "no": 30,
      "metin": "UIAA’nın Troll Deklarasyonu tırmanış etiğini belirler.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tirol Deklarasyonu, UIAA'nın tırmanış etiğini belirleyen bildirgesidir."
     },
     {
      "no": 31,
      "metin": "Katmandu Bildirgesi, dağ ortamlarının korunması ve yerel halkın haklarına saygı ilkelerini içerir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Katmandu Bildirgesi dağ ortamlarının ve kültürel mirasın korunmasını, yerel halkın haklarına saygıyı öngörür."
     },
     {
      "no": 32,
      "metin": "UIAA Dağ Etikleri Bildirgesi, dağ rehberlerinin sorumluluklarına da değinir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. UIAA'nın Dağ Etikleri Bildirgesi dağ rehberlerinin etik yükümlülüklerine de değinir."
     },
     {
      "no": 33,
      "metin": "Dağcılıkta kaza riski yoktur, çünkü her etkinlik önceden planlanır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Her etkinlik önceden planlansa bile dağcılıkta kaza riski vardır."
     },
     {
      "no": 34,
      "metin": "Ekip çalışması ve denge, dağcılığın önemli etik ilkelerindendir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Takım ruhu fedakârlık ve denge ister, kendi performansı için gruptan kopmak bu ilkeye aykırıdır."
     },
     {
      "no": 35,
      "metin": "Yabancı ülkelerde tırmanış yaparken yerel kültüre uymak gerekmez.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yabancı bir ülkede yerel kültüre, kutsal dağlarda ise yerel geleneklere uymak gerekir."
     },
     {
      "no": 36,
      "metin": "Sponsorluk ilişkilerinde dağcının etik kurallara uyması beklenir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Sponsorluk ilişkilerinde de etik kurallara uyulması beklenir."
     },
     {
      "no": 37,
      "metin": "Yüksek irtifa tırmanışlarında oksijen desteği kullanımı etik değildir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yüksek irtifada oksijen desteği kullanmak etik dışı değildir, etik olmayan şey boş tüpleri dağda bırakmaktır."
     },
     {
      "no": 38,
      "metin": "Dağcılıkta tarz, sonuca ulaşmaktan daha önemlidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tarz yani kullanılan ekipman, rota ve destek yöntemleri, sonuca ulaşmaktan daha önemlidir ve şeffafça belirtilir."
     },
     {
      "no": 39,
      "metin": "İlk çıkışlarda kullanılan teknikler ayrıntılı olarak belirtilmelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. İlk çıkışlarda kullanılan teknikler ayrıntılı olarak bildirilir, böylece tırmanışın nasıl yapıldığı açıkça bilinir."
     },
     {
      "no": 40,
      "metin": "Ticari tırmanışlarda müşterilerin kurtarma riskleri konusunda bilgilendirilmesine gerek yoktur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Ticari tırmanışlarda müşteriler kurtarma riskleri konusunda bilgilendirilmelidir."
     },
     {
      "no": 41,
      "metin": "Pamuklu giysiler dağcılık için en uygun malzemedir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Pamuk ıslanınca geç kurur ve üşütür, bu yüzden dağcılık için uygun değildir."
     },
     {
      "no": 42,
      "metin": "Katmanlı giyim sistemi, dağcılıkta ısı dengesini korumak için kullanılır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Katmanlı giyimde kalın tek kat yerine birden fazla ince kat giyilir ve amaç vücut ısısını dengelemektir."
     },
     {
      "no": 43,
      "metin": "Yün kumaşlar ıslandığında yalıtım özelliklerini tamamen kaybeder.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yün ıslanınca yalıtım özelliğini tamamen kaybetmez, bu yüzden ıslak havada bile işe yarar."
     },
     {
      "no": 44,
      "metin": "Polipropilen, iç katman için uygun bir sentetik kumaştır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Polipropilen gibi sentetik kumaşlar teri vücuttan uzaklaştırdığı için iç katmanda uygundur."
     },
     {
      "no": 45,
      "metin": "Kaz tüyü, ıslandığında bile yalıtım özelliğini korur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kaz tüyü ıslanınca yalıtmaz ve geç kurur."
     },
     {
      "no": 46,
      "metin": "Sentetik dolgu malzemeleri nemli ortamlarda kaz tüyünden daha avantajlıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Nemli ortamda sentetik dolgu, ıslansa da yalıtımını koruduğu için kaz tüyünden daha avantajlıdır."
     },
     {
      "no": 47,
      "metin": "Dağcılar için şapka kullanımı vücut ısısının korunmasında önemlidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Vücut ısısının yarısından fazlası baştan kaybedilebildiği için sıcakta şapka, soğukta bere kullanılır."
     },
     {
      "no": 48,
      "metin": "Pamuklu çoraplar ayağın su toplamasını engeller.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Pamuklu çorap ıslanınca ayağın su toplamasını önlemez, tam tersine ıslak kalarak sorun çıkarır."
     },
     {
      "no": 49,
      "metin": "Tozluklar, pantolon paçası ile bot arasındaki boşluğu kapatarak su girişini önler.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tozluk, pantolon paçası ile bot arasındaki boşluğu kapatarak içeri su ve kar girişini önler."
     },
     {
      "no": 50,
      "metin": "Plastik dağcılık botları genellikle sıcak ve kuru iklimler için uygundur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Plastik botlar kar ve buzlu zeminler içindir, sıcak ve kuru iklime uygun değildir."
     },
     {
      "no": 51,
      "metin": "Dağcılığın başarısı yalnızca fiziksel hazırlığa değil, ruhsal dengeye de bağlıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Dağcılıkta başarı yalnız fiziksel hazırlığa değil, ruhsal hazırlığa ve dengeye de bağlıdır."
     },
     {
      "no": 52,
      "metin": "21 Aralık–21 Mart tarihleri arasındaki etkinlikler yaz dağcılığı sayılır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yirmi bir Aralık ile yirmi bir Mart arası kış dağcılığı sayılır, yaz dağcılığı yirmi bir Mart ile yirmi bir Aralık arasındadır."
     },
     {
      "no": 53,
      "metin": "Ekspedisyon, kısa süreli günübirlik tırmanışları ifade eder.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Ekspedisyon kısa süreli günübirlik tırmanış demek değildir, uzun süreli ve organizasyon gerektiren sefer anlamına gelir."
     },
     {
      "no": 54,
      "metin": "Ferrata rotaları, doğal tırmanışlarda bolt kullanılmadan oluşturulur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Ferrata rotaları, kayaya sabitlenmiş metal aksamlarla oluşturulur ve bolt kullanılmadan kurulmuş rotalar olarak tanımlanmaz."
     },
     {
      "no": 55,
      "metin": "Alpinizm, kaya, kar ve buzul unsurlarını birlikte barındıran karma bir disiplindir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Alpinizm kaya, kar ve buzulu birlikte barındıran karma bir disiplindir."
     },
     {
      "no": 56,
      "metin": "Dünyada ilk modern dağcılık tırmanışı 1786’da Mont Blanc’a yapılmıştır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bin yedi yüz seksen altıdaki Mont Blanc tırmanışı dünyadaki ilk modern dağcılık tırmanışıdır."
     },
     {
      "no": 57,
      "metin": "Reinhold Messner, Everest’e ilk çıkan insandır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Messner sekiz bin metrelik dağların tümüne tırmanan ilk kişidir, Everest'e ilk çıkan insan değildir."
     },
     {
      "no": 58,
      "metin": "1924’te Miralay Cemil Cahit Toydemir’in Erciyes tırmanışı Türkiye’de dağcılığın başlangıcı sayılır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bin dokuz yüz yirmi dörtte Miralay Cemil Cahit Toydemir'in Erciyes tırmanışı Türkiye'de dağcılığın başlangıcı sayılır."
     },
     {
      "no": 59,
      "metin": "Türkiye Dağcılık Federasyonu’nun kökeni 1939’da kurulmuş “Dağcılık ve Kış Sporları Federasyonu”na dayanır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Türkiye Dağcılık Federasyonu'nun kökeni, bin dokuz yüz otuz dokuzda kurulan Dağcılık ve Kış Sporları Federasyonu'na dayanır."
     },
     {
      "no": 60,
      "metin": "TDF 2016 Rio Olimpiyatları’nda spor tırmanışı olimpik branş olarak tanıtmıştır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Türkiye Dağcılık Federasyonu, iki bin on altı Rio Olimpiyatları'nda spor tırmanışı olimpik branş olarak tanıtmıştır."
     },
     {
      "no": 61,
      "metin": "UIAA’ya Türkiye’nin üyeliği 1936’da gerçekleşmiştir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Türkiye'nin UIAA üyeliği bin dokuz yüz otuz altıda gerçekleşmemiştir."
     },
     {
      "no": 62,
      "metin": "Kireçtaşı magmatik kökenli bir kayadır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kireçtaşı magmatik değil, çökelti kökenli bir kayaçtır."
     },
     {
      "no": 63,
      "metin": "Granit, yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Granit, yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur."
     },
     {
      "no": 64,
      "metin": "Gnays kristalleri çıplak gözle görülebilir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Gnaysın kristalleri çıplak gözle görülmez."
     },
     {
      "no": 65,
      "metin": "Şist, yer kabuğu katlanması sırasında yüksek basınç altında oluşur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Şist, yer kabuğunun katlanması sırasında yüksek basınç altında oluşur."
     },
     {
      "no": 66,
      "metin": "Buzulların akış yönü genellikle eğimin tersine doğrudur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Buzullar eğimin tersine değil, eğim yönünde akar."
     },
     {
      "no": 67,
      "metin": "Buz çatlakları (bergschrund) buzul ile kaya duvarı arasındaki sınırı belirler.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bergschrund, buzul ile kaya duvarı arasındaki sınırı belirleyen buz çatlağıdır."
     },
     {
      "no": 68,
      "metin": "Serak, buzulun yatay ilerlediği yerlerde oluşur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Serak buzulun yatay ilerlediği yerlerde oluşmaz, buzul yüzeyinde oluşan dev buz kulelerine denir."
     },
     {
      "no": 69,
      "metin": "Morenler buzulun taşıdığı döküntülerin birikmesiyle meydana gelir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Morenler buzulun taşıdığı döküntülerin birikmesiyle oluşur."
     },
     {
      "no": 70,
      "metin": "Buzulların inceldiği ve sonlandığı nokta buzul burnu olarak adlandırılır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Buzulun inceldiği ve sonlandığı noktaya buzul burnu denir."
     },
     {
      "no": 71,
      "metin": "Dağ ekosistemlerinde sıcaklık genellikle her 100 metrede ortalama 0,6 °C artar.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Dağlarda her yüz metrede sıcaklık ortalama sıfır virgül altı derece azalır, artmaz."
     },
     {
      "no": 72,
      "metin": "Yüksek irtifada bitkilerin su kaybını azaltmak için yaprakları tüylü olur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Yüksek irtifada bitkilerin yaprakları tüylüdür ve tüyler su kaybını azaltır."
     },
     {
      "no": 73,
      "metin": "Dağlarda oksijen azaldıkça bitkilerin fotosentez oranı artar.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Oksijen azaldıkça bitkilerin fotosentez oranı artmaz."
     },
     {
      "no": 74,
      "metin": "Hayvanlar kışın enerji kaybını azaltmak için aktivitelerini düşürür.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Hayvanlar kışın aktivitelerini düşürerek enerji kaybını azaltır, kış uykusu bunun bir örneğidir."
     },
     {
      "no": 75,
      "metin": "Plastik poşet doğada yaklaşık 100 yıl içinde tamamen çözünür.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Plastik poşet yüz yıl içinde de yok olmaz, doğada yüzlerce yıl kalır."
     },
     {
      "no": 76,
      "metin": "Katmandu Bildirgesi, dağlık alanların kültürel mirasının korunmasını öngörür.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Katmandu Bildirgesi dağlık alanların kültürel mirasının korunmasını öngörür."
     },
     {
      "no": 77,
      "metin": "UIAA’nın “Dağ Etikleri Bildirgesi” dağ rehberlerinin etik yükümlülüklerini içermez.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. UIAA'nın Dağ Etikleri Bildirgesi dağ rehberlerinin etik yükümlülüklerine de değinir."
     },
     {
      "no": 78,
      "metin": "Tırmanışta tarz, sonuca ulaşmaktan daha önemli görülür.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tarz, yani kullanılan ekipman ve yöntemlerin şeffafça belirtilmesi, sonuca ulaşmaktan daha önemlidir."
     },
     {
      "no": 79,
      "metin": "Sponsorluk ilişkilerinde dağcının etik ilkelere uyması beklenmez.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Sponsorluk ilişkilerinde de dağcının etik ilkelere uyması beklenir."
     },
     {
      "no": 80,
      "metin": "Oksijen tüplerinin dağda bırakılması, UIAA’ya göre etik değildir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Boş oksijen tüplerini dağda bırakmak etik değildir, çünkü dağ ortamına zarar verir."
     },
     {
      "no": 81,
      "metin": "Dağcılıkta “takım ruhu”, grubun üyeleri arasında fedakârlığı ve dengeyi gerektirir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Takım ruhu, grup üyeleri arasında fedakârlık ve denge gerektirir."
     },
     {
      "no": 82,
      "metin": "Kutsal dağlara tırmanış yapılırken yerel geleneklerin dikkate alınması UIAA tarafından önerilmez.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kutsal dağlara tırmanırken yerel geleneklere uyulması gerekir."
     },
     {
      "no": 83,
      "metin": "Pamuklu giysiler, teri dışarı atma özelliği nedeniyle dağcılık için idealdir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Pamuk teri dışarı atmaz, ıslanınca geç kurur ve üşütür, bu yüzden ideal değildir."
     },
     {
      "no": 84,
      "metin": "Polipropilen, iç katmanda kullanılan sentetik bir kumaştır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Polipropilen, teri vücuttan uzaklaştırdığı için iç katmanda kullanılan sentetik bir kumaştır."
     },
     {
      "no": 85,
      "metin": "Yünlü kumaşlar ıslanınca yalıtım özelliğini tamamen kaybeder.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yün ıslanınca yalıtım özelliğini tamamen kaybetmez."
     },
     {
      "no": 86,
      "metin": "Sentetik yalıtım malzemeleri, nemli ortamlarda kaz tüyüne göre daha avantajlıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Sentetik dolgu ıslanınca da yalıtımını sürdürdüğü için nemli ortamlarda kaz tüyünden daha avantajlıdır."
     },
     {
      "no": 87,
      "metin": "Kaz tüyü ıslandığında bile sıcak tutma özelliğini korur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kaz tüyü ıslanınca yalıtmaz ve geç kurur."
     },
     {
      "no": 88,
      "metin": "Üç katmanlı giyim sisteminde dış katman, rüzgâr ve yağıştan korur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Üç katmanlı sistemde iç katman teri uzaklaştırır, orta katman ısıyı yalıtır, dış katman ise rüzgâr ve yağıştan korur."
     },
     {
      "no": 89,
      "metin": "Vücut ısısının %50’sinden fazlası baş bölgesinden kaybedilebilir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Vücut ısısının yarısından fazlası baştan kaybedilebilir, bu yüzden başı korumak önemlidir."
     },
     {
      "no": 90,
      "metin": "Eldivenlerde katman sistemi uygulanmaz, tek katman yeterlidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Soğukta eller çabuk üşüdüğü için eldivenlerde de katman sistemi uygulanır ve tek kat yeterli sayılmaz."
     },
     {
      "no": 91,
      "metin": "Plastik botlar, kar–buz karışık zeminlerde tırmanış için uygundur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Plastik botlar kar ve buzlu zeminler içindir, bu zeminlerde ayağı soğuktan korur."
     },
     {
      "no": 92,
      "metin": "Pamuklu çoraplar ayağın su toplamasını engeller.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Pamuklu çorap ayağın su toplamasını önlemez, ıslak kalarak sorun çıkarır."
     },
     {
      "no": 93,
      "metin": "Tozluk, pantolon ile bot arasındaki boşluğu kapatarak su geçişini önler.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tozluk, pantolon ile bot arasındaki boşluğu kapatarak su ve kar girişini önler."
     },
     {
      "no": 94,
      "metin": "Batonların alt uçlarındaki tungsten pimler değiştirilebilir özelliktedir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Batonların alt uçlarındaki tungsten pimler aşındığında değiştirilebilir."
     },
     {
      "no": 95,
      "metin": "Çantanın ağır eşyaları sırt bölgesine uzak yerleştirilmelidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Ağır eşyalar sırta yakın yerleştirilir, böylece ağırlık merkezi vücuda yakın kalır ve denge korunur."
     },
     {
      "no": 96,
      "metin": "Ayarlanabilir sırt sistemli çantalar, farklı boylarda kullanıcılara göre uyarlanabilir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ayarlanabilir sırt sistemi, çantanın farklı boylardaki kullanıcıların sırtına oturmasını sağlar."
     },
     {
      "no": 97,
      "metin": "Çadır, ocak ve mat teknik malzeme grubuna girer.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Uyku tulumu kişisel malzemedir, çadır, ocak ve mat ise teknik malzeme sayılmaz."
     },
     {
      "no": 98,
      "metin": "Yarım ip, dağ yürüyüşlerinde güvenlik amacıyla tercih edilir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Dağ yürüyüşlerinde güvenlik için yarım ip tercih edilir."
     },
     {
      "no": 99,
      "metin": "Klasik kazmalar, dik buz duvarlarında teknik tırmanış için kullanılır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Klasik kazma kar emniyeti ve kayışı durdurma içindir, dik buz duvarında teknik tırmanışta kullanılmaz."
     },
     {
      "no": 100,
      "metin": "Full body emniyet kemeri, ağırlığın tüm vücuda dengeli dağılmasını sağlar.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tam vücut emniyet kemeri ağırlığı tüm vücuda dengeli dağıtır ve düşme anında yükü tek noktada toplamaz."
     }
    ]
   },
@@ -1026,502 +1226,602 @@
     {
      "no": 1,
      "metin": "Kamp alanı seçilirken ilk dikkat edilmesi gereken unsur manzaranın güzelliğidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kamp alanı seçerken ilk ölçüt güvenli ve düz zemindir; manzara en son bakılacak unsurdur."
     },
     {
      "no": 2,
      "metin": "Kamp alanı, su kaynaklarına yakın ama taşkın riskinden uzak olmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Su ihtiyacı için kaynağa yakın olmak gerekir, ama taşkın riski çadırı ve kampçıları tehlikeye atar; bu yüzden yakın ama güvenli mesafede kurulur."
     },
     {
      "no": 3,
      "metin": "Rüzgâr yönü dikkate alınmadan çadır kurmak güvenli değildir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Çadırın arka kısmı rüzgâr yönüne gelecek şekilde kurulmazsa çadır zorlanır ve hem sağlam durmaz hem de içeri soğuk hava girer."
     },
     {
      "no": 4,
      "metin": "Çadır, güneşin en yoğun vurduğu açık alanlara kurulmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Çadır, açık ve güneşin en yoğun vurduğu yere değil, güvenli ve düz bir zemine kurulur; aşırı sıcak çadır içini bunaltır."
     },
     {
      "no": 5,
      "metin": "Ağaç altına çadır kurmak, yıldırım riski nedeniyle sakıncalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ağaç altında düşen dal ve yıldırım riski bulunur, bu yüzden çadır ağaç altına kurulmaz."
     },
     {
      "no": 6,
      "metin": "Taşlık ve kök dolu zeminler çadır için en uygun alanlardır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Taşlık ve köklü zemin hem uyumayı zorlaştırır hem de çadır tabanına zarar verir; zemin düz ve taşsız olmalıdır."
     },
     {
      "no": 7,
      "metin": "Çadırın altına naylon örtü serilmesi, taban suyu geçişini önler.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Çadırın altına serilen koruyucu örtü, yani tabanlık, zeminden gelen suyun geçişini önler."
     },
     {
      "no": 8,
      "metin": "Çadırın kapısı hâkim rüzgâr yönüne bakmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Çadırın arka kısmı hâkim rüzgâra gelir, kapı ise rüzgâra bakmaz; böylece rüzgâr çadıra dolmaz."
     },
     {
      "no": 9,
      "metin": "Çadır kazıkları zemine 45 derece açıyla çakılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Kazıklar kırk beş derecelik açıyla çakılınca çadır ipleri gergin kalır ve kazıklar kolay sökülmez."
     },
     {
      "no": 10,
      "metin": "Çadır kurarken taban gergin, dış tente gevşek olmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Taban gergin olmalı, ama dış tente de gergin kurulmalıdır; dış tente gevşek kalırsa su birikir."
     },
     {
      "no": 11,
      "metin": "Yağışlı havalarda çadırın havalandırma pencereleri kapatılmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yağışta da üst pencereler açık tutulur; havalandırma kapatılırsa çadır içinde nem birikir ve yoğuşma oluşur."
     },
     {
      "no": 12,
      "metin": "Uyku tulumu içinde kalın giysilerle uyumak ısı yalıtımını artırır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Uyku tulumuna ince ve kuru giysiyle girilir; kalın giysi terletir ve ısı yalıtımını artırmaz."
     },
     {
      "no": 13,
      "metin": "Uyku tulumu vücut sıcaklığıyla ısınır; içine fazla kıyafetle girilmemelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tulum kendisi ısıtmaz, vücut ısısını korur; fazla kıyafet hem terletir hem de tulumdaki hava yalıtımını bozar."
     },
     {
      "no": 14,
      "metin": "Uyku tulumunun altına mat serilmesi ısı kaybını azaltır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Mat, vücutla zemin arasındaki ısı kaybını önler; soğuk zemin vücut ısısını çok hızlı çeker."
     },
     {
      "no": 15,
      "metin": "Kaz tüyü tulumlar nemli ortamlarda sentetik olanlardan daha dayanıklıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kaz tüyü ıslanınca yalıtmaz ve zor kurur; nemli ortamda sentetik dolgulu tulum daha avantajlıdır."
     },
     {
      "no": 16,
      "metin": "Uyku tulumları kullanılmadıkları zaman sıkıştırılmış olarak saklanmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Tulum sıkıştırılmış olarak saklanırsa dolgusu zarar görür ve yalıtımı azalır; asma yerlerinden asılarak saklanması gerekir."
     },
     {
      "no": 17,
      "metin": "Mat, vücut ile zemin arasındaki ısı kaybını önlemek için kullanılır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Mat, vücut ile zemin arasına girerek soğuk zemine giden ısı kaybını engeller."
     },
     {
      "no": 18,
      "metin": "Şişme matlar genellikle köpük matlara göre daha ağırdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Şişme matlar yalıtım ve konfor sağlar, ama genellikle köpük matlardan daha ağırdır."
     },
     {
      "no": 19,
      "metin": "Kamp çantası hazırlanırken en ağır eşyalar sırta yakın yerleştirilir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ağır eşyalar sırta yakın konunca ağırlık bedene yakın taşınır, denge bozulmaz ve omuzlar daha az yorulur."
     },
     {
      "no": 20,
      "metin": "Hafif eşyalar çantanın alt kısmına konmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Hafif eşyalar alta değil, dışa doğru yerleştirilir; ağır olanlar sırta yakın durmalıdır."
     },
     {
      "no": 21,
      "metin": "Kamp çantasının bel kemeri ağırlığın büyük kısmını kalçaya aktarır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bel kemeri ağırlığın büyük kısmını omuzlardan alıp kalçaya aktarır."
     },
     {
      "no": 22,
      "metin": "Yağmurluk çantanın içinde taşınmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yağmurluk ve ilk yardım malzemesi kolay ulaşılan üst kısımda durur; çantanın derinine konursa ihtiyaç anında bulunamaz."
     },
     {
      "no": 23,
      "metin": "Kamp ocağı açık alanda, çadırdan uzak bir yerde yakılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ocak açık ve havadar alanda, çadırdan uzakta yakılır; böylece yangın ve zehirlenme riski azalır."
     },
     {
      "no": 24,
      "metin": "Likit yakıtlı ocaklarda ateşleme öncesi sızdırmazlık kontrolü yapılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Sıvı yakıt sızdırırsa yangın çıkabilir; bu yüzden ateşlemeden önce sızdırmazlık kontrolü yapılır."
     },
     {
      "no": 25,
      "metin": "Ocak üzerinde yemek pişirirken çadır içinde kullanmak güvenlidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Ocak çadır içinde kullanılmaz; yangın ve karbonmonoksit zehirlenmesi riski vardır."
     },
     {
      "no": 26,
      "metin": "Rüzgâr yönü ocak kullanımı sırasında dikkate alınmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Rüzgâr alevi yönlendirir ve kıvılcım taşır; bu yüzden ocak kurulurken rüzgâr yönü hesaba katılır."
     },
     {
      "no": 27,
      "metin": "Yemek artıklarını doğaya bırakmak vahşi hayvanları bölgeye çeker.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Yemek artığı vahşi hayvanları kampa çeker, bu da hem hayvanlar hem kampçılar için tehlike yaratır."
     },
     {
      "no": 28,
      "metin": "Bulaşıklar nehir veya göl içinde yıkanmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kaplar nehirde ya da gölde yıkanmaz; sudan uzakta yıkanır ve su toprakta süzdürülür."
     },
     {
      "no": 29,
      "metin": "Kamp alanında sabun olarak biyolojik olarak çözünebilen ürünler tercih edilmelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Biyolojik olarak çözünen sabun doğaya ve suya zarar vermeden ayrışır."
     },
     {
      "no": 30,
      "metin": "Katı atıklar kamp alanında yakılarak imha edilmelidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Atıklar kamp alanında yakılmaz; ayrıştırılarak toplanır ve geri taşınır."
     },
     {
      "no": 31,
      "metin": "Kamp ateşi, toprak zemin üzerinde önceden açılmış çukurda yakılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ateş toprak zeminde, önceden açılmış çukurda ve taşlarla çevrili yakılırsa yayılması engellenir."
     },
     {
      "no": 32,
      "metin": "Ateşin söndüğünden emin olmak için üzerine toprak atmak yeterlidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yalnız toprak atmak yetmez; üzerine su dökülür ve karıştırılarak ateşin tamamen söndüğünden emin olunur."
     },
     {
      "no": 33,
      "metin": "Ateş yakmadan önce etraftaki kuru yapraklar temizlenmelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Çevredeki kuru yapraklar tutuşup ateşi yayabilir, bu yüzden yakmadan önce temizlenir."
     },
     {
      "no": 34,
      "metin": "Rüzgârlı havalarda ateş yakmak tehlikelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Rüzgârlı havada kıvılcım sıçrar ve alev yayılır."
     },
     {
      "no": 35,
      "metin": "Kamp ateşi sonrası kül ve yanık kalıntıları tamamen uzaklaştırılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Kül ve yanık kalıntıları uzaklaştırılır, ateş yerinin üstü de doğal malzemeyle kapatılır."
     },
     {
      "no": 36,
      "metin": "Ateş yeri çadırdan en az 3 metre uzakta olmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ateş yeri çadırdan en az üç metre uzakta olmalıdır; yoksa kıvılcım çadırı tutuşturabilir."
     },
     {
      "no": 37,
      "metin": "Ateş çevresine taş dizmek ısı yalıtımını artırır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Taşlar ateşi sınırlayıp yayılmasını önlemek için dizilir; amaç ısı yalıtımı değildir."
     },
     {
      "no": 38,
      "metin": "Kamp ateşi yalnızca ısınmak için kullanılabilir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Kamp ateşi yalnız ısınmak için değil, yemek pişirmek için de kullanılır."
     },
     {
      "no": 39,
      "metin": "Ateş yakmak yasak bölgelerde taşınabilir ocak kullanılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ateş yasağı olan bölgelerde taşınabilir, kapalı sistem kamp ocağı kullanılır."
     },
     {
      "no": 40,
      "metin": "Kamp alanını terk ederken ateş yerinin üstü doğal malzeme ile kapatılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Ayrılırken ateş yerinin üstü doğal malzemeyle kapatılır ve alan eski hâline getirilir."
     },
     {
      "no": 41,
      "metin": "Kamp sırasında kişisel hijyen ihmal edilmemelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Kişisel hijyen ihmal edilmez; su yoksa eller dezenfektanla temizlenir."
     },
     {
      "no": 42,
      "metin": "El temizliği yalnızca sabunla yapılmalıdır; dezenfektanlar etkisizdir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Su yoksa eller dezenfektanla temizlenir; dezenfektan etkisiz değildir."
     },
     {
      "no": 43,
      "metin": "Tuvalet çukuru su kaynağından en az 50 metre uzak olmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Tuvalet çukuru su kaynağından en az elli metre uzakta, küçük ve kişisel açılır; böylece su kirlenmez."
     },
     {
      "no": 44,
      "metin": "Kamp alanında çöp gömme yöntemi doğrudur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Çöp gömülmez; ayrıştırılarak toplanır ve geri taşınır."
     },
     {
      "no": 45,
      "metin": "Diş fırçalama suları doğrudan dereye dökülebilir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Diş fırçalama suyu dahil hiçbir temizlik suyu akarsuya dökülmez."
     },
     {
      "no": 46,
      "metin": "Kamp alanında yemek hazırlama alanı rüzgâr altına kurulmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yemek hazırlama alanı rüzgâr altına kurulmaz; koku ve duman çadıra, hayvanlara ve kampçılara doğru taşınır."
     },
     {
      "no": 47,
      "metin": "Gıda maddeleri hava geçirmez kaplarda saklanmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Gıdalar kapalı, hava geçirmez kaplarda saklanır; böylece koku yayılmaz ve bozulma azalır."
     },
     {
      "no": 48,
      "metin": "Kamp alanında yiyecekleri çadır dışında bırakmak hayvan saldırılarını önler.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yiyeceği çadır dışında bırakmak hayvan saldırısını önlemez; aksine hayvanları kampa çeker."
     },
     {
      "no": 49,
      "metin": "Kamp sonrası alan eski haline getirilmelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Kamp sonrası alan eski hâline getirilir; küçük atıklar da toplanır, taş ve dallar yerine konur."
     },
     {
      "no": 50,
      "metin": "“İz bırakma” ilkesi kamp etiğinin temelini oluşturur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. İz bırakmama dağ ve kamp etiğinin temelidir; amaç ekolojik dengeyi korumaktır."
     },
     {
      "no": 51,
      "metin": "Rüzgâr yönünü belirlemenin en kolay yolu pusula kullanmaktır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Pusula yerkürenin manyetik alanına dayanarak yönü gösterir ve yön bulmanın en pratik yoludur."
     },
     {
      "no": 52,
      "metin": "Güneşin doğduğu yön her zaman tam doğudur.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Güneş her zaman tam doğudan doğmaz; doğduğu nokta mevsime göre değişir."
     },
     {
      "no": 53,
      "metin": "Geceleri kuzey yıldızı yön tayininde kullanılabilir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Geceleri Kutup Yıldızı kuzeyi gösterir ve yön bulmada kullanılır."
     },
     {
      "no": 54,
      "metin": "Yön tayininde saat yöntemi yalnızca güney yarımkürede geçerlidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Saat yöntemi yalnız güney yarımkürede geçerli değildir; ders bilgisinde böyle bir sınırlama yoktur."
     },
     {
      "no": 55,
      "metin": "Gölge yönü, güneşin konumuna bağlı olarak öğlen vakti kuzeyi gösterir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Öğle vakti gölge kuzeyi gösterir."
     },
     {
      "no": 56,
      "metin": "Pusula, manyetik alanlardan etkilenmez.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Pusula manyetik alana dayandığı için metal cisimlerden ve elektrikli aletlerden etkilenir."
     },
     {
      "no": 57,
      "metin": "Harita üzerinde yön bulurken harita kuzeye çevrilmelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Harita kuzeye çevrilince haritadaki yönler gerçek yönlerle örtüşür."
     },
     {
      "no": 58,
      "metin": "Pusula ibresi kırmızı ucu ile kuzeyi gösterir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Pusulada kırmızı uç kuzeyi gösterir."
     },
     {
      "no": 59,
      "metin": "Metal cisimler pusula okumalarında hata oluşturabilir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Metal saat, telefon ve araç gövdesi gibi cisimler ibreyi saptırır ve ölçümü bozar."
     },
     {
      "no": 60,
      "metin": "Pusula ile yön bulurken cep telefonu kullanımı ölçümü etkilemez.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Cep telefonu ibreyi saptırır ve ölçümü bozar; pusula bu cisimlerden uzak tutulur."
     },
     {
      "no": 61,
      "metin": "Kamp yürüyüşlerinde öncünün temposu grubun tamamına göre ayarlanmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Öncü tempoyu grubun en yavaş üyesine göre ayarlar; böylece grup dağılmaz."
     },
     {
      "no": 62,
      "metin": "Dağ yürüyüşlerinde çıkış hızı iniş hızından genellikle daha fazladır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. İniş hızı çıkış hızından fazladır; çıkış genellikle daha yavaştır."
     },
     {
      "no": 63,
      "metin": "Grup düzeninde en tecrübeli kişi genellikle arkada yer alır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Rehber önde yürür, en deneyimli ikinci kişi ise en arkada kalır."
     },
     {
      "no": 64,
      "metin": "Yürüyüş sırasında sık molalar verilmesi enerji kaybını artırır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Sık mola enerji kaybını artırmaz; aksine gücü toplamaya yardım eder."
     },
     {
      "no": 65,
      "metin": "Sıvı kaybı önlemek için sık sık az miktarda su içilmelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Su az ama sık aralıklarla içilir; yürüyüş öncesinde de sıvı dengesi sağlanır."
     },
     {
      "no": 66,
      "metin": "Güneş çarpması durumunda hasta sıcak bir yere alınmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Güneş çarpmasında kişi gölge ve serin bir yere alınır; sıcak ortam durumu ağırlaştırır."
     },
     {
      "no": 67,
      "metin": "Sıcak çarpması, terleme mekanizmasının bozulmasıyla oluşur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Sıcak çarpması vücudun terleme mekanizmasının bozulmasıyla oluşur."
     },
     {
      "no": 68,
      "metin": "Hipotermi vücut ısısının 35°C’nin altına düşmesiyle başlar.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Hipotermi, vücut ısısının otuz beş derecenin altına düşmesidir."
     },
     {
      "no": 69,
      "metin": "Donma durumunda etkilenen bölge hemen sıcak suya sokulmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Donan bölge ovulmaz ve hemen sıcak suya sokulmaz; doku daha fazla zarar görebilir."
     },
     {
      "no": 70,
      "metin": "Burkulmalarda soğuk uygulama ve dinlenme en uygun ilk yardımdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Burkulmada soğuk uygulama ve dinlenme en uygun ilk yardımdır."
     },
     {
      "no": 71,
      "metin": "Zehirli yılan ısırığında yaraya turnike uygulanmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yılan ısırığında turnike uygulanmaz; yara kalp hizasında tutulur ve tıbbi yardım çağrılır."
     },
     {
      "no": 72,
      "metin": "Arı sokmalarında bölgeye soğuk uygulama yapılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Arı sokan bölgeye soğuk uygulama yapılır."
     },
     {
      "no": 73,
      "metin": "Kamp alanında böcek kovucu kullanmak ısırık riskini azaltır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Böcek kovucu böceklerin ısırma riskini azaltır."
     },
     {
      "no": 74,
      "metin": "Çadır içinde mum yakmak güvenlidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Çadır içinde mum yakmak yangın riskini en çok artıran uygulamadır."
     },
     {
      "no": 75,
      "metin": "Kamp alanında gece feneri, yangın riskini azaltmak için el altında olmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Gece feneri el altında olursa mum ya da açık alev gerekmez, böylece yangın riski azalır."
     },
     {
      "no": 76,
      "metin": "Su ihtiyacı yalnızca dere ve göllerden karşılanmalıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Su ihtiyacı yalnız dere ve göllerden karşılanmak zorunda değildir; her doğal su da kaynatılmadan içilmez."
     },
     {
      "no": 77,
      "metin": "Doğal su kaynakları kaynatılmadan içilebilir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Doğal su kaynatılmadan içilmez; kaynatma mikroorganizmaları öldürür."
     },
     {
      "no": 78,
      "metin": "Su arıtma tabletleri, mikroorganizmaları öldürmek için kullanılır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Arıtma tabletleri mikroorganizmaları öldürmek için kullanılır."
     },
     {
      "no": 79,
      "metin": "Su arıtıcı filtreler, kimyasal kirleticileri tamamen yok eder.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Filtre kimyasal kirleticileri tamamen yok etmez."
     },
     {
      "no": 80,
      "metin": "Susuz kalmamak için yürüyüş öncesi vücut sıvı dengesi sağlanmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Yürüyüşe başlamadan önce vücudun sıvı dengesi sağlanır; susuz kalmanın önüne geçmenin yolu budur."
     },
     {
      "no": 81,
      "metin": "Güneş kremi yüksek irtifada UV ışınlarına karşı etkisizdir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Güneş kremi yüksekte de etkilidir ve ultraviyole ışınlardan korur."
     },
     {
      "no": 82,
      "metin": "Gözlük, karda oluşan yansımayı azaltmak için kullanılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Gözlük, ultraviyole ışından ve kardaki yansımadan gözü korur."
     },
     {
      "no": 83,
      "metin": "Kamp planlamasında hava durumu önemsizdir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Hava durumu kamp güvenliğini etkilediği için planlamada mutlaka kontrol edilir."
     },
     {
      "no": 84,
      "metin": "Şiddetli rüzgârda çadırın ipleri gevşetilmelidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Rüzgârlı havalarda çadır iplerini gevşetmek değil, çadırın sağlam ve gergin durmasını sağlamak gerekir; gevşek tente zaten su biriktirir."
     },
     {
      "no": 85,
      "metin": "Fırtına anında açık alanda durmak tehlikelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Fırtınada açık alan yıldırım nedeniyle tehlikelidir."
     },
     {
      "no": 86,
      "metin": "Yıldırım tehlikesinde metal eşyalar uzaklaştırılmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Yıldırım tehlikesinde metal eşyalar uzaklaştırılır."
     },
     {
      "no": 87,
      "metin": "Grup içinde haberleşme yalnızca telsizle sağlanabilir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Haberleşme yalnız telsizle olmaz; el işaretleri ve düdük de kullanılır."
     },
     {
      "no": 88,
      "metin": "El işaretleri sessiz iletişim yöntemlerinden biridir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. El işaretleri ses çıkarmadan haberleşmeye yarar."
     },
     {
      "no": 89,
      "metin": "Yardım çağrısı olarak üç kısa düdük sesi uluslararası sinyaldir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Üç kısa düdük sesi uluslararası yardım çağrısıdır."
     },
     {
      "no": 90,
      "metin": "Yönlendirme işaretleri rastgele yerlere bırakılabilir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Yönlendirme işaretleri rastgele yerlere bırakılmaz; doğaya zarar verir ve yanlış yönlendirir."
     },
     {
      "no": 91,
      "metin": "Kampçılıkta etik davranış, doğal çevreye ve diğer kişilere saygıyı içerir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Etik davranış doğal çevreye, yaban hayatına ve diğer insanlara saygıyı kapsar."
     },
     {
      "no": 92,
      "metin": "Gürültü yapmak doğa deneyiminin bir parçasıdır.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Gürültü yaban hayatını ve öteki kampçıları rahatsız eder."
     },
     {
      "no": 93,
      "metin": "Diğer kampların mahremiyetine saygı göstermek kamp etiğinin bir gereğidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Başka çadırların mahremiyetine saygı kamp etiğinin gereğidir; izinsiz fotoğraf çekmek buna aykırıdır."
     },
     {
      "no": 94,
      "metin": "Yaban hayatını beslemek doğa sevgisinin göstergesidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Hayvanı beslemek onları insana alıştırır ve doğal dengeyi bozar; bu en ağır müdahalelerden biridir."
     },
     {
      "no": 95,
      "metin": "Bitki koparmak veya taş toplamak doğal dengeye zarar verir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Bitki koparmak ya da taş toplamak doğal dengeye zarar verir."
     },
     {
      "no": 96,
      "metin": "İz bırakmadan kamp yapmak çevre korumanın temelidir.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. İz bırakmamanın amacı ekolojik dengeyi korumaktır."
     },
     {
      "no": 97,
      "metin": "Geri dönüştürülebilir atıklar ayrı toplanmalıdır.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Atıklar ayrıştırılarak toplanır ve geri taşınır."
     },
     {
      "no": 98,
      "metin": "Su kaynaklarını kirletmemek doğa kampçılığının sorumluluğudur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Temizlik suyunu akarsuya dökmemek ve kapları sudan uzakta yıkamak, suyu kirletmemenin yoludur."
     },
     {
      "no": 99,
      "metin": "Kampta sessizlik, yalnızca gece saatlerinde önemlidir.",
-     "dogru": false
+     "dogru": false,
+     "cozum": "Bu ifade yanlış. Sessizlik yalnız gece değil her zaman önemlidir."
     },
     {
      "no": 100,
      "metin": "Kampçı, doğada bulunduğu sürece hem misafir hem de koruyucudur.",
-     "dogru": true
+     "dogru": true,
+     "cozum": "Bu ifade doğru. Kampçı doğada hem misafirdir hem de koruyucudur."
     }
    ]
   },
@@ -1539,7 +1839,8 @@
       "B": "Güvenli ve düz zemin",
       "C": "Suya en yakın yer"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Zeminin güvenli ve düz olması ilk ölçüttür, çünkü çadır ve uyku düzeni buna bağlıdır. A şıkkındaki manzara en son bakılacak unsurdur."
     },
     {
      "no": 2,
@@ -1549,7 +1850,8 @@
       "B": "Sabah güneşine",
       "C": "Düz bir yamaca"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Kapı rüzgâra bakarsa rüzgâr çadıra dolar; arka kısım hâkim rüzgâra verilir. B şıkkı ve C şıkkı kapı yönü için bir sakınca taşımaz."
     },
     {
      "no": 3,
@@ -1559,7 +1861,8 @@
       "B": "Vücut ısısının korunmasına",
       "C": "Tulumu ısıtan dış katmana"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tulum kendisi ısıtmaz, vücut ısısını korur ve ısı kaybını önler. A şıkkı yanlıştır, çünkü tulum dışarıdan ısı üreten bir şey değildir."
     },
     {
      "no": 4,
@@ -1569,7 +1872,8 @@
       "B": "Dallardan düşme veya yıldırım riski vardır",
       "C": "Toprak su tutmaz"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Ağaç altında dal düşmesi ve yıldırım riski vardır. A şıkkındaki gölge sorunu asıl sakınca değildir."
     },
     {
      "no": 5,
@@ -1579,7 +1883,8 @@
       "B": "Taşlarla çevrilmiş, toprak zeminde yakmak",
       "C": "Çadırın girişinde yakmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Ateş toprak zeminde, taşlarla çevrili ve önceden açılmış çukurda yakılırsa yayılmaz. A şıkkı rüzgârla alevi ve kıvılcımı taşıdığı için, C şıkkı ise çadırı tutuşturabileceği için tehlikelidir."
     },
     {
      "no": 6,
@@ -1589,7 +1894,8 @@
       "B": "İnce, kuru giysilerle girildiğinde",
       "C": "Üstü açık bırakıldığında"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tulum, ince ve kuru giysiyle girildiğinde vücut ısısını en iyi korur. A şıkkı yanlıştır, çünkü kalın giysi terletir ve yalıtımı bozar."
     },
     {
      "no": 7,
@@ -1599,7 +1905,8 @@
       "B": "Alta ve uzağa",
       "C": "Sırta yakın kısma"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Ağır eşyalar sırta yakın durunca ağırlık bedene yakın taşınır ve denge korunur. A şıkkı yanlıştır, çünkü üstte ve dışta ağırlık çantayı geriye çeker."
     },
     {
      "no": 8,
@@ -1609,7 +1916,8 @@
       "B": "Isı yalıtımı ve su geçişini engeller",
       "C": "Zemin kayganlığını artırır"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tabanlık su geçişini engeller ve zeminden gelen ıslaklığa karşı koruma sağlar. C şıkkı yanlıştır, çünkü amacı kaygan yapmak değil korumaktır."
     },
     {
      "no": 9,
@@ -1619,7 +1927,8 @@
       "B": "Kapalı ortamda",
       "C": "Açık ve havadar alanda"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Ocak açık ve havadar alanda kullanılır; böylece yangın ve zehirli gaz riski azalır. A şıkkı yanlıştır, çünkü çadır içinde ocak yangın ve karbonmonoksit tehlikesi yaratır."
     },
     {
      "no": 10,
@@ -1629,7 +1938,8 @@
       "B": "Gömülerek",
       "C": "Ayrıştırılarak geri taşınmalıdır"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çöp ayrıştırılır ve geri taşınır; böylece doğada iz kalmaz. B şıkkı yanlıştır, çünkü gömülen çöp doğada uzun yıllar kalır."
     },
     {
      "no": 11,
@@ -1639,7 +1949,8 @@
       "B": "Üzerine sadece toprak atılmalıdır",
       "C": "Rüzgârla soğuması beklenmelidir"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Ateşe su dökülüp karıştırılırsa ateşin tamamen söndüğünden emin olunur. B şıkkı yeterli değildir, çünkü yalnız toprak atmak altında kor bırakabilir."
     },
     {
      "no": 12,
@@ -1649,7 +1960,8 @@
       "B": "Kıvılcımlar çevreye sıçrayabilir",
       "C": "Yeterli oksijen bulunmaz"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Rüzgârlı havada kıvılcımlar çevreye sıçrayıp yangın başlatabilir. A şıkkı yanlıştır, çünkü asıl tehlike ateşin yayılmasıdır."
     },
     {
      "no": 13,
@@ -1659,7 +1971,8 @@
       "B": "Gölden uzakta, toprakta filtrelenerek",
       "C": "Akarsu içinde"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Bulaşık sudan uzakta yıkanır ve su toprakta süzdürülür; böylece su kaynağı kirlenmez. A şıkkı ve C şıkkı yanlıştır, çünkü derede ya da akarsuda yıkamak suyu kirletir."
     },
     {
      "no": 14,
@@ -1669,7 +1982,8 @@
       "B": "Ekolojik dengeyi korumak",
       "C": "Görsel estetik sağlamak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "İz bırakmamanın amacı ekolojik dengeyi korumaktır. A şıkkı yanlıştır, çünkü mesele alanın düzenli görünmesi değil, doğaya zarar vermemektir."
     },
     {
      "no": 15,
@@ -1679,7 +1993,8 @@
       "B": "Güney",
       "C": "Batı"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Öğle vakti güneş en yüksekte olduğundan gölge kuzeyi gösterir. B şıkkı yanlıştır, çünkü gölge güneşin ters yönüne düşer."
     },
     {
      "no": 16,
@@ -1689,7 +2004,8 @@
       "B": "Kutup Yıldızı",
       "C": "Orion"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Gece kuzeyi Kutup Yıldızı gösterir. A şıkkındaki Sirius ve C şıkkındaki Orion yön bulmak için kullanılmaz."
     },
     {
      "no": 17,
@@ -1699,7 +2015,8 @@
       "B": "Metal nesneler",
       "C": "Toprak türü"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Pusula manyetik alana dayandığı için metal nesneler ibreyi saptırır. A şıkkı yanlıştır, çünkü rüzgâr ibreyi bozmaz."
     },
     {
      "no": 18,
@@ -1709,7 +2026,8 @@
       "B": "En yavaş kişiler ortada",
       "C": "En deneyimli kişi genelde arkada"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Rehber önde yürür, en deneyimli kişi grubu toparlamak için genellikle arkada yer alır. A şıkkı yanlıştır, çünkü en deneyimli kişinin arkada olması gerekir."
     },
     {
      "no": 19,
@@ -1719,7 +2037,8 @@
       "B": "Çok ve seyrek",
       "C": "Yalnızca mola verildiğinde"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Su az ama sık aralıklarla içilir; böylece vücut sıvı dengesini korur. C şıkkı yanlıştır, çünkü yalnız molada içmek susuz kalma riskini artırır."
     },
     {
      "no": 20,
@@ -1729,7 +2048,8 @@
       "B": "Kalp atışı yavaşladığında",
       "C": "Kas krampları başladığında"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Hipotermi, vücut ısısının otuz beş derecenin altına düşmesidir. B şıkkı yanlıştır, çünkü kalp atışının yavaşlaması tanımın ölçütü değildir."
     },
     {
      "no": 21,
@@ -1739,7 +2059,8 @@
       "B": "Hafif ısıtmak",
       "C": "Kuru bezle korumak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Donan bölgeye ovma uygulanmaz, çünkü doku daha fazla zarar görür. B şıkkı yanlıştır, çünkü hafif ısıtma ve kuru bezle koruma zararsızdır."
     },
     {
      "no": 22,
@@ -1749,7 +2070,8 @@
       "B": "Yara emilmeli",
       "C": "Yara kalp hizasında tutulmalı ve tıbbi yardım çağrılmalı"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Yılan ısırığında yara kalp hizasında tutulur ve tıbbi yardım çağrılır. A şıkkı yanlıştır, çünkü turnike uygulanmaz."
     },
     {
      "no": 23,
@@ -1759,7 +2081,8 @@
       "B": "Gölge ve serin ortama",
       "C": "Ateşin yanına"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Güneş çarpmasında kişi gölge ve serin bir yere alınır. A şıkkı yanlıştır, çünkü sıcak ortam vücut ısısını daha da yükseltir."
     },
     {
      "no": 24,
@@ -1769,7 +2092,8 @@
       "B": "Mikroorganizmaları öldürmek için",
       "C": "Buharlaşmayı azaltmak için"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Kaynatma mikroorganizmaları öldürür ve suyu içilebilir yapar. A şıkkı yanlıştır, çünkü amaç tat vermek değildir."
     },
     {
      "no": 25,
@@ -1779,7 +2103,8 @@
       "B": "Metal eşyaları uzaklaştırmak",
       "C": "Yere uzanmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Yıldırım riskinde metal eşyalar uzaklaştırılır, çünkü yıldırımı çekebilirler. A şıkkı yanlıştır, çünkü ağaç altı yıldırım ve dal düşmesi nedeniyle tehlikelidir."
     },
     {
      "no": 26,
@@ -1789,7 +2114,8 @@
       "B": "Mola zamanı",
       "C": "Kamp sonu sinyali"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Üç kısa düdük uluslararası yardım çağrısıdır, yani tehlike bildirir. B şıkkı yanlıştır, çünkü mola için bu sinyal kullanılmaz."
     },
     {
      "no": 27,
@@ -1799,7 +2125,8 @@
       "B": "Kolay ulaşılabilecek üst kısımda",
       "C": "Yan ceplerde"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Yağmurluk ve ilk yardım malzemesi ihtiyaç anında hemen alınabilmesi için üst kısımda durur. A şıkkı yanlıştır, çünkü en altta olursa çantayı boşaltmak gerekir."
     },
     {
      "no": 28,
@@ -1809,7 +2136,8 @@
       "B": "Kapalı kutulara",
       "C": "Soğuk gölge alana"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Yiyecekler güneş altına konmaz, çünkü ısı bozulmayı hızlandırır. B şıkkı doğru saklama yöntemidir, bu yüzden sorunun aradığı cevap değildir."
     },
     {
      "no": 29,
@@ -1819,7 +2147,8 @@
       "B": "Vücut ısısını dengelemek",
       "C": "Ağırlığı artırmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Katmanlı giyimde amaç, ince katlarla vücut ısısını sıcağa ve soğuğa göre dengelemektir. C şıkkı yanlıştır, çünkü hedef ağırlığı artırmak değildir."
     },
     {
      "no": 30,
@@ -1829,7 +2158,8 @@
       "B": "İz bırakmadan gezmek ama çöp gömmek",
       "C": "Fotoğraf çekerken bitki koparmak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Kampçı gürültü yapmaz ve çevreye saygı gösterir. B şıkkı yanlıştır, çünkü çöp gömmek iz bırakmama ilkesine aykırıdır."
     },
     {
      "no": 31,
@@ -1839,7 +2169,8 @@
       "B": "Gökyüzünün açık görünmesi",
       "C": "En yüksek noktada olmak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Çadır ve uyku düzeni için zemin düz olmalıdır. C şıkkı yanlıştır, çünkü en yüksek nokta rüzgâr ve yıldırım açısından riskli olabilir."
     },
     {
      "no": 32,
@@ -1849,7 +2180,8 @@
       "B": "Gölge miktarı",
       "C": "Çadır rengi"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Zemin eğimi, çadırın duruşunu ve uyku konforunu belirler; eğimli yerde çadır sağlam kurulamaz. B şıkkı yanlıştır, çünkü gölge asıl güvenlik ölçütü değildir."
     },
     {
      "no": 33,
@@ -1859,7 +2191,8 @@
       "B": "90 derece",
       "C": "60 derece"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Kazıklar kırk beş derecelik açıyla çakılınca çadır gergin ve sağlam durur. B şıkkı yanlıştır, çünkü doksan derece ip gerginliğine karşı daha kolay sökülür."
     },
     {
      "no": 34,
@@ -1869,7 +2202,8 @@
       "B": "Su birikir",
       "C": "Isı artar"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Dış tente gevşek kalırsa su birikir ve içeri sızabilir. A şıkkı yanlıştır, çünkü sorun hava akımı değil su birikmesidir."
     },
     {
      "no": 35,
@@ -1879,7 +2213,8 @@
       "B": "Vücut ısısını düşürür",
       "C": "Hava geçirmezliği azaltır"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Kalın giysi terletir ve ıslanan vücut daha çabuk üşür. B şıkkı yanlıştır, çünkü sorun ısı düşmesinden önce terlemedir."
     },
     {
      "no": 36,
@@ -1889,7 +2224,8 @@
       "B": "Sıcaklığı artırmak",
       "C": "Su geçişini önlemek"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Tabanlık zeminden gelen suyun geçişini önler. B şıkkı yanlıştır, çünkü sıcaklığı artırmak amacı değildir."
     },
     {
      "no": 37,
@@ -1899,7 +2235,8 @@
       "B": "Zemini temizlemek",
       "C": "Kibrit yakmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Önce zemin ve çevredeki kuru yapraklar temizlenir, böylece ateş yayılmaz. C şıkkı yanlıştır, çünkü temizlenmeden ateş yakmak yangın riskidir."
     },
     {
      "no": 38,
@@ -1909,7 +2246,8 @@
       "B": "3 metre",
       "C": "5 metre"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Ateş yeri çadırdan en az üç metre uzakta olmalıdır. A şıkkı çok yakındır, kıvılcım çadıra ulaşabilir."
     },
     {
      "no": 39,
@@ -1919,7 +2257,8 @@
       "B": "Üzeri yaprakla kapatılır",
       "C": "Toprakla örtülür"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Ateşe su dökülünce tamamen söndüğünden emin olunur. C şıkkı yanlıştır, çünkü toprak örtmek kor bırakabilir."
     },
     {
      "no": 40,
@@ -1929,7 +2268,8 @@
       "B": "Sırta yakın kısma",
       "C": "Üste"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Ağır eşyalar sırta yakın konur, böylece denge bozulmaz. C şıkkı yanlıştır, çünkü üstteki ağırlık çantayı geriye çeker."
     },
     {
      "no": 41,
@@ -1939,7 +2279,8 @@
       "B": "Isı kaybını azaltmak",
       "C": "Yumuşak zemin oluşturmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Mat, vücutla zemin arasındaki ısı kaybını azaltır. A şıkkı yanlıştır, çünkü asıl amaç konfor değil yalıtımdır."
     },
     {
      "no": 42,
@@ -1949,7 +2290,8 @@
       "B": "Çok ama seyrek",
       "C": "Sadece molalarda"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Su az ama sık içilir. C şıkkı yanlıştır, çünkü yalnız molada içmek susuz kalma riskini artırır."
     },
     {
      "no": 43,
@@ -1959,7 +2301,8 @@
       "B": "Mikroorganizmaları öldürmek için",
       "C": "Daha hızlı soğusun diye"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Kaynatma mikroorganizmaları öldürür. A şıkkı yanlıştır, çünkü amaç tat değildir."
     },
     {
      "no": 44,
@@ -1969,7 +2312,8 @@
       "B": "Kutup Yıldızı",
       "C": "Vega"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Geceleri kuzeyi gösteren Kutup Yıldızı kullanılır. A şıkkındaki Sirius ve C şıkkındaki Vega bu iş için kullanılmaz."
     },
     {
      "no": 45,
@@ -1979,7 +2323,8 @@
       "B": "Herhangi bir sabun kullanılabilir",
       "C": "Sabun kullanılmamalıdır"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Biyolojik olarak çözünen sabun doğaya zarar vermeden ayrışır. B şıkkı yanlıştır, çünkü her sabun suyu ve toprağı kirletebilir."
     },
     {
      "no": 46,
@@ -1989,7 +2334,8 @@
       "B": "Ağza sıkı kapanan kaplarda saklanır",
       "C": "Ateş yakınında tutulur"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Yiyecekler ağzı sıkı kapanan kaplarda saklanır, böylece koku yayılmaz. A şıkkı yanlıştır, çünkü açıktaki yiyecek hayvanları çeker."
     },
     {
      "no": 47,
@@ -1999,7 +2345,8 @@
       "B": "Dumanın yönünü belirler",
       "C": "Çadırın yıpranmasını önler"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Rüzgâr çadırı zorlar ve çadırın yıpranmasına yol açar; bu yüzden arka kısım rüzgâra verilir. B şıkkı ders bilgisinde yer almaz, asıl neden çadırın korunmasıdır."
     },
     {
      "no": 48,
@@ -2009,7 +2356,8 @@
       "B": "Çakıllı ve köklü",
       "C": "Düz ve toprak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Çakıllı ve köklü zemine çadır kurulmaz; hem rahatsız eder hem de tabana zarar verir. C şıkkındaki düz ve toprak zemin uygundur."
     },
     {
      "no": 49,
@@ -2019,7 +2367,8 @@
       "B": "Yoğuşma oluşur",
       "C": "Rüzgâr girer"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Havalandırılmayan çadırda nem birikir ve yoğuşma oluşur. A şıkkı yanlıştır, çünkü sorun sıcaklıktan çok nemdir."
     },
     {
      "no": 50,
@@ -2029,7 +2378,8 @@
       "B": "Elleri su yoksa dezenfektanla temizlemek",
       "C": "Elleri yalnızca sabunla yıkamak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Su yoksa eller dezenfektanla temizlenir. A şıkkı yanlıştır, çünkü hijyen ihmal edilmez."
     },
     {
      "no": 51,
@@ -2039,7 +2389,8 @@
       "B": "Gömerek yok etmek",
       "C": "Yakmak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Çöp ayrıştırılır ve geri taşınır. B şıkkı yanlıştır, çünkü gömülen çöp doğada kalır; C şıkkı da yanlıştır, çünkü yakmak da doğru yöntem değildir."
     },
     {
      "no": 52,
@@ -2049,7 +2400,8 @@
       "B": "Vücut ısısının 35°C altına düşmesi",
       "C": "Kas krampları"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Hipotermi, vücut ısısının otuz beş derecenin altına düşmesidir. A şıkkı yanlıştır, çünkü güneş çarpması sıcaktan oluşur, hipotermi soğuktan."
     },
     {
      "no": 53,
@@ -2059,7 +2411,8 @@
       "B": "Kuru bezle korumak",
       "C": "Ilık suyla ısıtmak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Donan bölge ovulursa doku daha fazla zarar görür, bu yüzden ovmak yanlış davranıştır. C şıkkındaki ılık su ve B şıkkındaki kuru bezle koruma ise zararsız yöntemlerdir."
     },
     {
      "no": 54,
@@ -2069,7 +2422,8 @@
       "B": "Yarayı kalp hizasında tutmak",
       "C": "Hemen tıbbi yardım istemek"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Yılan ısırığında turnike uygulanmaz. B şıkkı ve C şıkkı doğru uygulamalardır, bu yüzden aranan yanlış davranış A şıkkıdır."
     },
     {
      "no": 55,
@@ -2079,7 +2433,8 @@
       "B": "Üzeri örtülür",
       "C": "Yürütülür"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Güneş çarpmasında kişi serin ve gölgeli yere alınır. C şıkkı yanlıştır, çünkü yürütmek vücudu daha çok ısıtır."
     },
     {
      "no": 56,
@@ -2089,7 +2444,8 @@
       "B": "Toprak zemin",
       "C": "Çimen zemin"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Ateş toprak zeminde yakılır. A şıkkı yanlıştır, çünkü tahta zemin tutuşur; C şıkkı yanlıştır, çünkü çimen de yangını yayar."
     },
     {
      "no": 57,
@@ -2099,7 +2455,8 @@
       "B": "Duman azalır",
       "C": "Isı yetersiz olur"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Rüzgârlı havada alev ve kıvılcım yayılabilir. B şıkkı yanlıştır, çünkü asıl sorun yangının yayılmasıdır."
     },
     {
      "no": 58,
@@ -2109,7 +2466,8 @@
       "B": "Güneşe doğru çevrilmeli",
       "C": "Düz tutulmamalı"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Metal eşyalar ibreyi saptırır, bu yüzden pusula uzak tutulur. C şıkkı yanlıştır, çünkü pusula düz tutulur."
     },
     {
      "no": 59,
@@ -2119,7 +2477,8 @@
       "B": "Kamp güvenliğini etkiler",
       "C": "Manzara kalitesini artırır"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Hava durumu kamp güvenliğini etkiler. C şıkkı yanlıştır, çünkü asıl amaç güvenliktir."
     },
     {
      "no": 60,
@@ -2129,7 +2488,8 @@
       "B": "Akarsuya",
       "C": "Çukura"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Temizlik suyu akarsuya dökülmez, çünkü su kirlenir. A şıkkı yanlıştır, çünkü toprağa dökmek su kaynağını kirletmez."
     },
     {
      "no": 61,
@@ -2139,7 +2499,8 @@
       "B": "Kuru ve gölgede saklanmalı",
       "C": "Su içinde bekletilmeli"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "İp kuru ve gölgede saklanır, çünkü nem ve güneş ipin dayanımını bozar. C şıkkı yanlıştır, çünkü su içinde bekletmek ipi çürütür."
     },
     {
      "no": 62,
@@ -2149,7 +2510,8 @@
       "B": "Pilli veya şarjlı",
       "C": "Gazyağı"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Pilli ya da şarjlı fener açık alev çıkarmadığı için güvenlidir. A şıkkındaki benzin ve C şıkkındaki gazyağı yangın riski taşır."
     },
     {
      "no": 63,
@@ -2159,7 +2521,8 @@
       "B": "Isıyı yalıtmak",
       "C": "Görünürlük sağlamak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Orta katman ısıyı yalıtır. A şıkkı yanlıştır, çünkü suyu geçirmemek dış katmanın görevidir."
     },
     {
      "no": 64,
@@ -2169,7 +2532,8 @@
       "B": "Çadır içinde düzenli bir yerde",
       "C": "Ateşin yakınında"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Fazla eşyalar çadır içinde düzenli bir yerde durur. C şıkkı yanlıştır, çünkü ateş yakınındaki eşya tutuşabilir."
     },
     {
      "no": 65,
@@ -2179,7 +2543,8 @@
       "B": "50 metre",
       "C": "100 metre"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tuvalet çukuru su kaynağından en az elli metre uzakta olmalıdır. A şıkkı yanlıştır, çünkü on metre suyun kirlenmesini önlemez."
     },
     {
      "no": 66,
@@ -2189,7 +2554,8 @@
       "B": "Sıcak suyla yıkamak",
       "C": "Böceği ezmek"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Arı sokmasında soğuk uygulama yapılır. B şıkkı yanlıştır, çünkü sıcak su yardımcı olmaz."
     },
     {
      "no": 67,
@@ -2199,7 +2565,8 @@
       "B": "Ağaç altına çadır kurmak",
       "C": "Mumla aydınlatma"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Ateşin çevresi temizlenirse yangın yayılmaz. B şıkkı yanlıştır, çünkü ağaç altı yıldırım ve dal düşmesi riski taşır."
     },
     {
      "no": 68,
@@ -2209,7 +2576,8 @@
       "B": "Öğle",
       "C": "Akşam"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Öğle vakti güneş en yüksektedir ve gölge kuzeyi gösterir. A şıkkı yanlıştır, çünkü sabah gölge uzundur ve yön güvenilir olmaz."
     },
     {
      "no": 69,
@@ -2219,7 +2587,8 @@
       "B": "Güneş kremi sürmek",
       "C": "Güneş altında oturmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Güneş kremi cildi güneş yanığından korur. A şıkkı yanlıştır, çünkü kalın kıyafet sıcağı artırır."
     },
     {
      "no": 70,
@@ -2229,7 +2598,8 @@
       "B": "Orta kısma",
       "C": "Kolay ulaşılabilecek üst kısma"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "İlk yardım malzemesi hemen ulaşılabilmesi için üst kısımda durur. A şıkkı yanlıştır, çünkü altta kalırsa ihtiyaç anında bulunamaz."
     },
     {
      "no": 71,
@@ -2239,7 +2609,8 @@
       "B": "Gürültüden kaçınmak için",
       "C": "Enerji tasarrufu yapmak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Sessizlik yaban hayatını rahatsız etmemek içindir. B şıkkı bunun yalnız insan yönüdür, asıl amaç hayvanları korumaktır."
     },
     {
      "no": 72,
@@ -2249,7 +2620,8 @@
       "B": "Çadırı bırakmak",
       "C": "Atıkları gömmek"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Ayrılmadan önce ateşin tamamen söndüğünden emin olunur, çünkü yangın en büyük tehlikedir. C şıkkı yanlıştır, çünkü atık gömülmez."
     },
     {
      "no": 73,
@@ -2259,7 +2631,8 @@
       "B": "Plastik",
       "C": "Tahta"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Alüminyum direk hafif ve dayanıklıdır. B şıkkındaki plastik kırılgandır, C şıkkındaki tahta ağırdır."
     },
     {
      "no": 74,
@@ -2269,7 +2642,8 @@
       "B": "Tuluma girmek",
       "C": "Koşmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tulum vücut ısısını korur, bu yüzden soğukta en etkili ısınma yolu tuluma girmektir. A şıkkı yangın riski taşır, C şıkkı ise terleterek sonradan üşütebilir."
     },
     {
      "no": 75,
@@ -2279,7 +2653,8 @@
       "B": "S, N, W, E",
       "C": "W, E, N, S"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Pusula üzerindeki sıra kuzey, doğu, güney, batı yani N, E, S, W şeklindedir. B şıkkı ve C şıkkı bu sırayı bozar."
     },
     {
      "no": 76,
@@ -2289,7 +2664,8 @@
       "B": "Temponun dengesini korumak",
       "C": "En arkada kalmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Lider temponun dengesini korur ve grubun dağılmasını önler. A şıkkı yanlıştır, çünkü hızlı yürümek grubu dağıtır."
     },
     {
      "no": 77,
@@ -2299,7 +2675,8 @@
       "B": "Uyku tulumu",
       "C": "Kamp ocağı"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Uyku tulumu kişisel malzemedir. A şıkkındaki çadır ve C şıkkındaki ocak ortak teknik malzemedir."
     },
     {
      "no": 78,
@@ -2309,7 +2686,8 @@
       "B": "Atıkları geri taşımak",
       "C": "Ateşi tamamen söndürmek"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Bitki koparmak iz bırakmama ilkesine aykırıdır. B şıkkı ve C şıkkı ilkenin gereğidir."
     },
     {
      "no": 79,
@@ -2319,7 +2697,8 @@
       "B": "Yere, adım önüne",
       "C": "Arkadaki kişiye"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Fener yere, adım önüne tutulur; böylece yol görülür ve göz kamaşmaz. C şıkkı yanlıştır, çünkü arkadakinin gözünü rahatsız eder."
     },
     {
      "no": 80,
@@ -2329,7 +2708,8 @@
       "B": "Hızlı hareket etmek",
       "C": "Kampı kolay toplamak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Doğa ile uyumlu davranışın amacı çevreyi korumaktır. B şıkkı yanlıştır, çünkü amaç hız değildir."
     }
    ]
   },
@@ -2349,7 +2729,8 @@
       "D": "Toprakta açılan tuvalet çukurunu tamamen kapatmak",
       "E": "Çevredeki doğal taş ve bitkileri yerlerinden oynatmamak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "İz bırakmama ilkesinde kamp alanından ayrılırken çöp gömülmez, organik olanı da gömülmez. Bu soruda doğrudan ilişkili olmayan seçenek budur; a şıkkı ise ateş yerini doğal malzemeyle kapatarak alanı eski hâline getirdiği için ilkeye uygundur."
     },
     {
      "no": 2,
@@ -2361,7 +2742,8 @@
       "D": "Katmanlı giyim + sıcak içecek + rüzgârlık",
       "E": "Şapka + eldiven + boyunluk kullanımı"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Pamuklu içlik, ıslak çorap ve dar tulum hipotermi riskini en çok artıran üçlüdür. Pamuk ıslanınca geç kurur, dar tulum içindeki yalıtım havasını azaltır; be şıkkı ise tam tersine doğru ve güvenli uygulamadır."
     },
     {
      "no": 3,
@@ -2373,7 +2755,8 @@
       "D": "Kapalı ortamda oksijenin azalması",
       "E": "Sıcak yüzeye temasla yanık riski"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çadır içinde ocak karbonmonoksit zehirlenmesi, yangın, oksijen azalması ve yanık riski taşır. Kumaşın morötesi dayanımının azalması ise çadır içinde ocak kullanımından kaynaklanan bir tehlike değildir; bu yüzden ce şıkkı tehlikeler arasında sayılmaz."
     },
     {
      "no": 4,
@@ -2385,7 +2768,8 @@
       "D": "Alüminyum trekking batonuna 30–40 cm mesafede ölçmek",
       "E": "Harita çantasında plastik dosyayla birlikte ölçüm yapmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çelik iskeletli çanta ve metal saat, telefon gibi eşyalar pusulanın manyetik ölçümünü bozar. Hocanın cevabı ce şıkkıdır, çünkü çelik iskelet büyük bir metal kütlesidir ve ibreyi en çok saptırır; a şıkkı da metal saat nedeniyle çok güçlü bir çeldiricidir."
     },
     {
      "no": 5,
@@ -2397,7 +2781,8 @@
       "D": "Yamaçta eski dere yatağından uzak, hafif yükselti üzerinde alan",
       "E": "Göl kenarında rüzgâra tamamen açık düzlük"
      },
-     "dogru": "D"
+     "dogru": "D",
+     "cozum": "Sel ve kaya düşmesi riskinden uzak, hafif yükselti üzerinde ve eski dere yatağından uzak bir alan seçmek iki tehlikeyi birden azaltır. Be şıkkındaki dik kaya eteği kaya düşmesi riskini artırır, a şıkkındaki suya yakın vadi tabanı ise sel riskini artırır."
     },
     {
      "no": 6,
@@ -2409,7 +2794,8 @@
       "D": "Tulum içinde ince sentetik içlik kullanmak",
       "E": "Tulumu geniş bir saklama torbasında tutmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tulumun konfor sıcaklığı için altına mat serilir; matsız zemine sermek vücut ısısının zemine kaçmasına yol açar. Ce şıkkındaki havalandırma ise tulumun yalıtımını korumaya yardım eder, bu yüzden aykırılık sayılmaz."
     },
     {
      "no": 7,
@@ -2421,7 +2807,8 @@
       "D": "En yavaş yürüyen ortada, rehber ortanın gerisinde",
       "E": "Herkes istediği sıraya göre dağınık düzende"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Grup düzeninde rehber önde, en deneyimli ikinci kişi en arkada yürür. A şıkkındaki en zayıfı arkaya koymak ise geri kalan kişiyi grup görüş alanı dışında bırakır; arka yürüyen kişi deneyimli olmalıdır."
     },
     {
      "no": 8,
@@ -2433,7 +2820,8 @@
       "D": "Mekanik filtre (0,1–0,2 mikron) kullanmak",
       "E": "Suyu sadece kaynağa en yakın noktadan almak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Suyu en yukarı noktadan almak tek başına yeterli değildir; yukarıda da hayvan ve mikroorganizma bulunabilir. Be şıkkındaki kaynatma ise mikroorganizmaları öldürdüğü için etkili bir yöntemdir."
     },
     {
      "no": 9,
@@ -2445,7 +2833,8 @@
       "D": "Gece geç saatte yüksek sesle konuşmak",
       "E": "Tüm plastikleri geri taşımak fakat organikleri gömmek"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Başka çadırların fotoğrafını izinsiz çekmek mahremiyet ihlalidir ve kamp etiğine en aykırı davranıştır. Gürültü de sorundur, ama hocanın vurguladığı en ağır ihlal mahremiyettir; e şıkkındaki organikleri gömmek de iz bırakmama ilkesine aykırıdır."
     },
     {
      "no": 10,
@@ -2457,7 +2846,8 @@
       "D": "Matın izolasyon değerini artırması",
       "E": "Çadır içindeki hava basıncını dengelemesi"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Sıcak su şişesi tuluma konunca vücut ısısını hızla yükseltir. D şıkkındaki matın izolasyon değerini artırması ise şişenin görevi değildir; mat zeminden ısı kaybını önler, şişe doğrudan vücudu ısıtır."
     },
     {
      "no": 11,
@@ -2469,7 +2859,8 @@
       "D": "Haritada izohips aralıklarının geniş olması",
       "E": "Pusulanın dereceli dairesinin solak kullanımda ters tutulması"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Pusula tabanı yataylanmazsa ibre tam serbest dönmez ve her ölçüm aynı yönde hatalı çıkar; bu sistematik hatayı en çok artırır. Be şıkkındaki kabarcığın hafif sapması daha küçük bir hata kaynağıdır ve doğrudan tabanın yataylığıyla ilgilidir."
     },
     {
      "no": 12,
@@ -2481,7 +2872,8 @@
       "D": "Sıcaklık tahmini hatası",
       "E": "Zaman planlama hatası"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Manyetik deklinasyon manyetik kuzey ile gerçek kuzey arasındaki açıdır. Düzeltilmezse azimuta, yani yönün açısına bağlı yön hatası doğar; a şıkkındaki yükseklik hatası ise altimetreyle ilgilidir, pusulayla değil."
     },
     {
      "no": 13,
@@ -2493,7 +2885,8 @@
       "D": "İki hedefi de aynı pusula ile ölçmek",
       "E": "Aynı haritayı kullanmak"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Geriden kestirmede iki doğrunun kesişimi konumu verir ve aradaki açı darsa hata büyür. B şıkkındaki yüksekliklerin yakın olması ise hata payını büyütmez, çünkü yön kesişiminde yükseklik belirleyici değildir."
     },
     {
      "no": 14,
@@ -2505,7 +2898,8 @@
       "D": "Basınç – sıcaklık",
       "E": "Basınç – azimut"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Pusula doğrultuyu, altimetre ise hava basıncı değişimiyle yüksekliği verir; konum eşyükselti eğrisi üzerinde bulunur. Ce şıkkı bu iki ölçümü birlikte kullanır; e şıkkındaki basınç ve azimut ikilisi ise bu yöntemin temel verisi olarak sayılmaz."
     },
     {
      "no": 15,
@@ -2517,7 +2911,8 @@
       "D": "Sentetik içlik + şapka + eldiven",
       "E": "Yün çorap + su geçirmez bot"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Pamuklu içlik terlenince ıslak kalır, rüzgârlık yoksa ıslak kumaş soğuk havayla temas eder ve vücut ısısı hızla düşer. Be şıkkındaki sentetik içlik teri vücuttan uzaklaştırdığı için tam tersine korur."
     },
     {
      "no": 16,
@@ -2529,7 +2924,8 @@
       "D": "Kapalı sistem kamp ocağı kullanmak",
       "E": "Ateşi su kenarına taşımak"
      },
-     "dogru": "D"
+     "dogru": "D",
+     "cozum": "Ateş yasağı olan bölgede taşınabilir, kapalı sistem kamp ocağı kullanılır. A şıkkındaki küçük ateş de yasağın kapsamındadır ve izin vermez; yasak kuru dal ya da saat farkı gözetmez."
     },
     {
      "no": 17,
@@ -2541,7 +2937,8 @@
       "D": "Nefes alışverişini azaltmak için ağız-burun örtmek",
       "E": "Üst havalandırma pencerelerini açık tutmak"
      },
-     "dogru": "E"
+     "dogru": "E",
+     "cozum": "Üst havalandırma pencerelerini açık tutmak nemi dışarı atar ve yoğuşmayı azaltır; yağışta da açık kalmalıdır. Ce şıkkındaki çadır içinde yemek pişirmek ise ortama buhar katar ve yoğuşmayı artırır."
     },
     {
      "no": 18,
@@ -2553,7 +2950,8 @@
       "D": "Çadır renginin koyu olması",
       "E": "Sırt çantasının ağır olması"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Bir günde çok fazla irtifa kazanmak uyku kalitesini ve yükseklik adaptasyonunu en çok bozar; yükseklik hastalığına karşı yavaş yükselmek gerekir. Ce şıkkındaki mat kalınlığı ise ısı konforunu etkiler, kamp planlama hatası değildir."
     },
     {
      "no": 19,
@@ -2565,7 +2963,8 @@
       "D": "Isıyı çabuk dışarı vermesi",
       "E": "Dikiş yerlerinden sızması"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Kaz tüyü tulum sıcak tutar ama ıslanınca zor kurur; bu nemli ortamlarda dezavantajdır. A şıkkındaki ıslakken daha fazla hava hapsetmesi ise doğru değildir, çünkü ıslanınca yalıtım kaybolur."
     },
     {
      "no": 20,
@@ -2577,7 +2976,8 @@
       "D": "Odunla yanan katlanır ocak",
       "E": "Alkol ocağı"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kartuşlu propan bütan ocaklar soğukta ve yüksekte en çok güç kaybeder. Benzinli ve çok yakıtlı ocaklar ise soğukta ve yükseklikte daha dayanıklı kabul edilir, bu yüzden a şıkkı bu soruda doğru değildir."
     },
     {
      "no": 21,
@@ -2589,7 +2989,8 @@
       "D": "Plastikler yakılır, metal atıklar gömülür",
       "E": "Doğal materyaller (kağıt, karton) kamp alanında bırakılır"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çöp ayrıştırılır ve geri taşınır; gömülmez, yakılmaz. A şıkkındaki organikleri gömmek ve plastikleri yakmak ise iz bırakmama ilkesine aykırıdır, hem çevreye zarar verir hem zehirli duman çıkarır."
     },
     {
      "no": 22,
@@ -2601,7 +3002,8 @@
       "D": "Sadece en kısa rotayı kullanmak",
       "E": "Kayıt altına alınmayan tırmanış yapmamak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tarz, sonuca ulaşmaktan önemlidir; kullanılan ekipman, rota ve destek yöntemleri şeffafça belirtilir. A şıkkındaki ne pahasına olursa olsun zirve ise tarzı önemsemeyen bir yaklaşımdır ve etiğe aykırıdır."
     },
     {
      "no": 23,
@@ -2613,7 +3015,8 @@
       "D": "Yeni başlayanlara teknik yardımda bulunmak",
       "E": "Zor kararlarda çoğunluğun fikrine uymak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Takım ruhu fedakârlık ve denge ister; kendi performansı için gruptan kopmak buna en aykırı davranıştır. A şıkkındaki en yavaş üyeye göre yürümek ise tam tersine takım ruhunu gösteren doğru uygulamadır."
     },
     {
      "no": 24,
@@ -2625,7 +3028,8 @@
       "D": "Kazma",
       "E": "Tencere"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Uyku tulumu kişisel malzeme sayılır. Çadır, ocak ve tencere ise grup tarafından birlikte kullanılan ortak malzemedir; d şıkkındaki kazma ise teknik malzemedir."
     },
     {
      "no": 25,
@@ -2637,7 +3041,8 @@
       "D": "Yüksek irtifada daha az su içmek uygundur",
       "E": "Sadece sıcak havalarda su dengesine dikkat etmek gerekir"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Yüksek irtifada nefes verirken su buharı kaybı artar ve sıvı kaybı oluşur. A şıkkı yanlıştır, çünkü soğuk havada terleme azalsa da solunumla su kaybı vardır ve bu yüzden bol sıvı gerekir."
     },
     {
      "no": 26,
@@ -2649,7 +3054,8 @@
       "D": "Bulutlu havada sabah yürüyüşü",
       "E": "Akşam üzeri kanyon yürüyüşü"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Güneş çarpması riski açık sırtta, öğle güneşinde, ağır çantayla hızlı çıkışta en yüksektir. D şıkkındaki bulutlu sabah yürüyüşü ise güneş maruziyetini azaltır ve riski düşürür."
     },
     {
      "no": 27,
@@ -2661,7 +3067,8 @@
       "D": "Yiyecek çantalarını ağaç dalına asmak",
       "E": "Yemek hazırlama alanını çadırdan uzak tutmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Yiyecek kokulu atıkları açıkta bırakmak böcek ve yaban hayvanlarını çeker. Ağaç dalına asmak ise yiyeceği hayvanlardan uzak tutmaya çalışan bir yöntemdir, bu yüzden d şıkkı riski artırmaz."
     },
     {
      "no": 28,
@@ -2673,7 +3080,8 @@
       "D": "Manyetik fırtına etkisi",
       "E": "Pusula camının çatlaması"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Deklinasyon değerinin yanlış uygulanması kullanıcıdan kaynaklanan sistematik bir hatadır. Pusula ibresinin takılması ya da camının çatlaması ise araç arızasıdır; manyetik fırtına da dış etkendir ve kullanıcıya bağlı değildir."
     },
     {
      "no": 29,
@@ -2685,7 +3093,8 @@
       "D": "Eğim yönü + eğim açısı",
       "E": "Doğrultu yönü + yükseklik"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Strike dip gösteriminde doğrultu yönü, eğim yönü ve eğim açısı birlikte verilir. D şıkkındaki yalnız eğim yönü ve eğim açısı ise DDD gösterimidir; doğrultuyu içermez."
     },
     {
      "no": 30,
@@ -2697,7 +3106,8 @@
       "D": "İç: sentetik – Orta: yün – Dış: hardshell",
       "E": "İç: sentetik – Orta: kaz tüyü – Dış: rüzgârlık"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "İç katmanda pamuk kullanmak yanlıştır, çünkü pamuk ıslanınca geç kurur ve üşütür. İç katman teri vücuttan uzaklaştırmalıdır; e şıkkındaki sentetik iç katman ise doğru bir uygulamadır."
     },
     {
      "no": 31,
@@ -2709,7 +3119,8 @@
       "D": "İnce bakır boru",
       "E": "Sıradan çelik boru"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Hafif ve dayanıklı olduğu için yüksek dağ koşullarında çadır direği olarak alüminyum alaşım avantajlıdır. E şıkkındaki sıradan çelik boru ise ağır ve paslanmaya yatkındır, hafiflik gereken çadır için uygun değildir."
     },
     {
      "no": 32,
@@ -2721,7 +3132,8 @@
       "D": "Vadi tabanının tam ortası",
       "E": "Ağaçlıklı hafif yamaç"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Sırt hattına çok yakın açıklık rüzgâra, yıldırıma ve ani hava değişimine açıktır; mikro iklimi en değişken ve riskli olandır. D şıkkındaki vadi tabanı da riskli olsa da sırt hattının maruziyeti çok daha fazladır."
     },
     {
      "no": 33,
@@ -2733,7 +3145,8 @@
       "D": "Organik olduğu için açıkta bırakmak",
       "E": "Tüm atıkları aynı çukura toplamak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Tuvalet çukuru su kaynağından en az elli metre uzakta, küçük ve kişisel açılır. A şıkkındaki su kenarına on on beş metre yakınlık kirliliği suya geçirebilir; derin ortak çukur ise çevre etkisini artırır."
     },
     {
      "no": 34,
@@ -2745,7 +3158,8 @@
       "D": "Nabızda hafif yavaşlama",
       "E": "Ani yüksek ateş"
      },
-     "dogru": "E"
+     "dogru": "E",
+     "cozum": "Hipotermi vücut ısısının otuz beş derecenin altına düşmesidir ve ani yüksek ateş tipik bulgusu değildir. Titreme, konuşma bozulması ve bilinç bulanıklığı ise hipotermide görülen tipik bulgulardır."
     },
     {
      "no": 35,
@@ -2757,7 +3171,8 @@
       "D": "Buz kazması daima batonlardan daha uzundur",
       "E": "Kazmanın teknikliği sadece ağırlığına bağlıdır"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Klasik kazma kar emniyeti ve kayışı durdurma içindir. A şıkkı yanlıştır, çünkü dik buz duvarı tırmanışı teknik buz kazmasının işidir; klasik kazma bu iş için optimize edilmemiştir."
     },
     {
      "no": 36,
@@ -2769,7 +3184,8 @@
       "D": "Boyun askılı su matarası",
       "E": "Eldivenler"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Aşırı yüklenmiş ana sırt çantası ağırlığı bacaklara ve dizlere bindirir. Kafa lambası ve eldiven çok hafif olduğundan diz eklemine yük bindirmez; b şıkkındaki bel çantası da genellikle hafif bir ek çantadır."
     },
     {
      "no": 37,
@@ -2781,7 +3197,8 @@
       "D": "Alt bölümünde tulum gözü bulunması",
       "E": "Üst kapakta harita cebi olması"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Bel kemeri leğen kemiğine oturmuyorsa çanta bedene uymuyordur. B şıkkındaki göğüs kayışının ayarlanabilir olması ise iyi bir özelliktir, uyumsuzluk işareti değildir."
     },
     {
      "no": 38,
@@ -2793,7 +3210,8 @@
       "D": "Uzak mesafeden dürbünle gözlem yapmak",
       "E": "Hayvan izlerini takip etmek"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Hayvanları yiyecekle insana alıştırmak yaban hayatına müdahalenin en ağır örneğidir, çünkü doğal davranışı bozar. Uzaktan fotoğraf ya da dürbünle gözlem ise hayvana dokunmadığı için müdahale sayılmaz."
     },
     {
      "no": 39,
@@ -2805,7 +3223,8 @@
       "D": "Kamp ateşi hariç hiçbir ışık kullanmamak",
       "E": "Çadırın içine sabit gaz lambası asmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kafa lambası ile yedek pilli el feneri birlikte taşınır. B şıkkındaki yalnız telefon feneri ise pil bitince tüm aydınlatmayı kaybettirir; mum da çadır içinde yangın riski taşır."
     },
     {
      "no": 40,
@@ -2817,7 +3236,8 @@
       "D": "Sadece gündüz yürüyüş planlamak",
       "E": "Hafif olduğu için tek küçük fener almak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Aydınlatma için yedek pil ya da powerbank bulundurmak en kritik yedek stratejidir. B şıkkındaki tüm ışık kaynaklarını tek pile bağlamak ise pil biter bitmez hepsinin kararmasına yol açar."
     },
     {
      "no": 41,
@@ -2829,7 +3249,8 @@
       "D": "Haritayı pusuladan ayrı kullanmak",
       "E": "Pusulayı haritanın altına koymak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Harita yön bulurken kuzeye çevrilir; böylece haritadaki yönler arazideki yönlerle örtüşür. D şıkkındaki haritayı pusuladan ayrı kullanmak ise yön eşlemesini yapmanı engeller."
     },
     {
      "no": 42,
@@ -2841,7 +3262,8 @@
       "D": "Manzara",
       "E": "Yıldırım tehlikesi"
      },
-     "dogru": "D"
+     "dogru": "D",
+     "cozum": "Kamp yerinde ilk ölçüt güvenli ve düz zemindir; manzara en son bakılacak unsurdur. A şıkkındaki sel riski ise güvenlikle ilgili olduğu için çok daha önce değerlendirilir."
     },
     {
      "no": 43,
@@ -2853,7 +3275,8 @@
       "D": "Sadece gündüz olduğunda sorun yaratır",
       "E": "Sadece rüzgâr yoksa hissedilir"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Gürültü yaban hayatını ve öteki kampçıları rahatsız eder; yani hem hayvanların hem insanların deneyimini bozar. A şıkkı eksiktir, çünkü gürültünün etkisi yalnız hayvanlarla sınırlı değildir."
     },
     {
      "no": 44,
@@ -2865,7 +3288,8 @@
       "D": "Matın ince olması",
       "E": "Çadır renginin koyu olması"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Çadır içinde mum yakmak yangın riskini en çok artıran uygulamadır, çünkü çadır kumaşı kolay alev alır. C şıkkındaki tulumun çadıra değmesi ise yoğuşma ve ıslanma sorunudur, alev riski değildir."
     },
     {
      "no": 45,
@@ -2877,7 +3301,8 @@
       "D": "İki elde ayrı şişe taşımak",
       "E": "Belde gevşek asılı küçük mataralar"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Sırt çantasına entegre su torbası dengeli taşınır, eller serbest kalır ve sık sık az su içmeyi kolaylaştırır. B şıkkındaki boyunda asılı metal matara ise yürürken sallanır ve boyun ile dengeyi zorlar."
     },
     {
      "no": 46,
@@ -2889,7 +3314,8 @@
       "D": "Yoğun egzersizle hızlı aklimatizasyon sağlamak",
       "E": "İlk geceyi en yüksek noktada geçirmek"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Yükseklik hastalığına karşı en önemli korunma yavaş yükselmek ve uyku irtifasını kontrollü artırmaktır. A şıkkındaki ilk gün mümkün olan en fazla irtifayı kazanmak ise tam tersine riski büyütür."
     },
     {
      "no": 47,
@@ -2901,7 +3327,8 @@
       "D": "Solo tırmanışlar",
       "E": "Aile ile günübirlik yürüyüşler"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanışlar etik tartışmalarına en çok konu olan modeldir. A şıkkındaki küçük kulüp tırmanışları ise bu tartışmaların odağı değildir."
     },
     {
      "no": 48,
@@ -2913,7 +3340,8 @@
       "D": "Sentetik içlik + sentetik mont",
       "E": "Yün içlik + softshell"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Pamuk ıslanınca yalıtımını kaybeder, kaz tüyü de ıslanınca yalıtmaz ve geç kurur; bu ikili ıslanma sonrası en çok yalıtım kaybeden kombinasyondur. Yün ise ıslanınca yalıtımını tamamen kaybetmez, bu yüzden b şıkkı daha az risklidir."
     },
     {
      "no": 49,
@@ -2925,7 +3353,8 @@
       "D": "Yağ içeren gıdaları da dahil etmek",
       "E": "Atıştırmalık kuruyemiş planlamak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Hacmi büyük ama kalorisi düşük gıda taşımak enerji ihtiyacını karşılamaz ve çantayı gereksiz doldurur; en kritik hata budur. B şıkkındaki hafif ama kalorili yiyecek seçmek ise doğru bir plandır."
     },
     {
      "no": 50,
@@ -2937,7 +3366,8 @@
       "D": "Kamp alanının tamamını, küçük atıklar açısından da taramak",
       "E": "Yalnızca fotoğraf çekip ayrılmak"
      },
-     "dogru": "D"
+     "dogru": "D",
+     "cozum": "Kamp sonrası alanın tamamı, küçük atıklar için de taranır. C şıkkındaki yalnız görünür çöpleri toplamak ise küçük atıkları bırakır ve iz bırakmama ilkesini zedeler."
     }
    ]
   },
@@ -2958,7 +3388,8 @@
       "D": "Taş miktarı",
       "E": "Yol uzaklığı"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Kamp yerinde ilk ölçüt güvenli ve düz zemindir, çünkü uyku ve çadır güvenliği buna bağlıdır. A şıkkındaki manzara tatlı bir ayrıntıdır ama en son bakılacak unsurdur; güvenliği sağlamaz."
     },
     {
      "no": 2,
@@ -2970,7 +3401,8 @@
       "D": "Kaya dibi",
       "E": "Bataklık alan"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çadır düz ve taşsız zemine kurulur; böylece sırt ağrısı olmaz, çadır kumaşı delinmez. De şıkkındaki kaya dibi kaya düşmesi riski taşıdığı için uygun değildir."
     },
     {
      "no": 3,
@@ -2982,7 +3414,8 @@
       "D": "Çadırı süslemek",
       "E": "Isıyı dışarı vermek"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Dış tente su geçirmez katmandır ve yağmuru içeri sızdırmamak için vardır. E şıkkı ters yöndedir; çadırın işi ısıyı dışarı vermek değil, içeriyi kuru ve korunaklı tutmaktır."
     },
     {
      "no": 4,
@@ -2994,7 +3427,8 @@
       "D": "Yumuşak yatak olmak",
       "E": "Ayakkabı saklamak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Uyku tulumu kendisi ısıtmaz; vücudun ürettiği ısıyı içinde tutarak ısı kaybını önler. D şıkkındaki yumuşak yatak olmak tulumun görevi değildir; asıl görev ısıyı korumaktır."
     },
     {
      "no": 5,
@@ -3006,7 +3440,8 @@
       "D": "Çantanın ön cebine",
       "E": "Çantanın kapağına"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Ağır eşyalar sırta yakın yerleştirilir ki ağırlık merkezi bedene yakın kalsın ve denge bozulmasın. Be şıkkındaki en dışa koymak yükü sırttan uzaklaştırır, omuzları zorlar ve yürürken dengeyi bozar."
     },
     {
      "no": 6,
@@ -3018,7 +3453,8 @@
       "D": "Masa örtüsü olmak",
       "E": "Yağmurluk yerine kullanmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Mat, vücutla zemin arasındaki ısı kaybını önleyen yalıtım katmanıdır. Ce şıkkı doğru değildir; matın görevi çantayı doldurmak değil, soğuk zeminin vücut ısısını çekmesini engellemektir."
     },
     {
      "no": 7,
@@ -3030,7 +3466,8 @@
       "D": "Atkı",
       "E": "Tozluk"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Sıcakta güneşten korumak için şapka kullanılır. Be şıkkındaki bere ise soğukta kullanılır; sıcakta başı fazla ısıtır, bu yüzden güneşli havada şapka tercih edilir."
     },
     {
      "no": 8,
@@ -3042,7 +3479,8 @@
       "D": "Islak çorap",
       "E": "İnce şort"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Vücut ısısının yarısından fazlası baştan kaybedilebildiği için soğukta şapka ve eldiven çok önemlidir. De şıkkındaki ıslak çorap tam tersine ısı kaybını artırır ve üşütür."
     },
     {
      "no": 9,
@@ -3054,7 +3492,8 @@
       "D": "Sadece fotoğraf çekmek için",
       "E": "Yalnızca duman çıkarmak için"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Kamp ateşi ısınma ve yemek pişirme amacıyla kullanılır. A şıkkı eksiktir; ateş ışık da verir ama kamp ateşinin asıl işlevleri ısınmak ve yemek pişirmektir, yalnız ışık demek yetmez."
     },
     {
      "no": 10,
@@ -3066,7 +3505,8 @@
       "D": "Toprak zemine",
       "E": "Su kenarına"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Ateş, düşen kıvılcımlar ve yayılan alev nedeniyle ağaç gövdelerine yakın kurulmaz. Ateşin güvenli yeri toprak zemindeki taşlarla çevrili çukurdur; de şıkkındaki toprak zemin bu yüzden uygun bir yerdir."
     },
     {
      "no": 11,
@@ -3078,7 +3518,8 @@
       "D": "Düz zemine",
       "E": "Patikaya"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çadırın kapısı hâkim rüzgâra bakmaz, arka kısım rüzgâra verilir; yoksa rüzgâr çadırı doldurur. A şıkkındaki sabah güneşi böyle bir yasak değildir, rüzgâr kapıyı etkileyen asıl etkendir."
     },
     {
      "no": 12,
@@ -3090,7 +3531,8 @@
       "D": "Yoldan",
       "E": "Ağaçlardan"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Tuvalet çukuru su kaynağından en az elli metre uzakta açılır ki kirlilik suya karışmasın. Be şıkkındaki ateşten uzaklık da mantıklı görünür ama asıl kural su kaynağının korunmasıdır."
     },
     {
      "no": 13,
@@ -3102,7 +3544,8 @@
       "D": "Dereye atılmalıdır",
       "E": "Çadıra gömülmelidir"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çöpler toplanıp geri taşınır; gömülmez, yakılmaz, doğaya bırakılmaz. Be şıkkındaki ateşe atmak da yanlıştır, çünkü atıkların yakılması iz bırakmama ilkesine uymaz ve zehirli duman çıkarır."
     },
     {
      "no": 14,
@@ -3114,7 +3557,8 @@
       "D": "Sadece akşamları",
       "E": "Sadece acıkınca"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Su az ama sık aralıklarla içilir ve yürüyüşten önce de vücudun sıvı dengesi sağlanır. De şıkkında sayılan yalnız akşam içmek yetersizdir; susuzluk beklemeden düzenli içmek gerekir."
     },
     {
      "no": 15,
@@ -3126,7 +3570,8 @@
       "D": "Güneş altında oturmak",
       "E": "Uzun süre koşmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Güneş çarpmasına karşı güneş kremi ve şapka kullanılır, bol su içilir. A şıkkındaki koyu renk kalın mont ısıyı artırır ve korunma değil, aşırı ısınma sağlar."
     },
     {
      "no": 16,
@@ -3138,7 +3583,8 @@
       "D": "Kokusu artsın diye",
       "E": "Köpürsün diye"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Doğal su içilmeden önce arıtılır, çünkü içinde hastalık yapan mikroorganizmalar bulunabilir. Arıtmanın amacı sağlıktır; b şıkkındaki rengin değişmesi gibi amaçlar arıtmayla ilgili değildir."
     },
     {
      "no": 17,
@@ -3150,7 +3596,8 @@
       "D": "Batı",
       "E": "Güneybatı"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Pusula yerkürenin manyetik alanına dayanır ve kırmızı uç genellikle kuzeyi gösterir. A şıkkındaki güney ise ağırlıklı ucun gösterdiği yöndür, bu yüzden karışabilir."
     },
     {
      "no": 18,
@@ -3162,7 +3609,8 @@
       "D": "Açık alanda kullanmak",
       "E": "Çantanın üstünde taşımak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Metal eşyalar manyetik alanı bozduğu için pusulayı etkiler ve ölçüm hatalı olur. Be şıkkı bu yüzden sakıncalıdır; a şıkkındaki düz tutmak ise doğru kullanımdır."
     },
     {
      "no": 19,
@@ -3174,7 +3622,8 @@
       "D": "Ateşi büyütür",
       "E": "Haritayı bozar"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Gürültü yaban hayatını ve öteki kampçıları rahatsız eder, bu yüzden sessizlik yalnız gece değil her zaman önemlidir. Be şıkkındaki yıldırım çekmek gürültüyle ilgili bir gerekçe değildir."
     },
     {
      "no": 20,
@@ -3186,7 +3635,8 @@
       "D": "Pencere perdesi",
       "E": "Beton kolon"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Kamp çadırının temel parçaları direk, kazık, iç ve dış tente ile tabanlıktır. B şıkkındaki fırın ve buzdolabı çadır parçası değildir, mutfak ve ev eşyasıdır."
     },
     {
      "no": 21,
@@ -3198,7 +3648,8 @@
       "D": "Çantayı doldurmak",
       "E": "Renk uyumu sağlamak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "İç katman teri vücuttan uzaklaştırır ve cildi kuru tutar. A şıkkındaki rüzgârı kesmek dış katmanın görevidir; iç katman bu işi yapmaz."
     },
     {
      "no": 22,
@@ -3210,7 +3661,8 @@
       "D": "Kamp ocağı",
       "E": "Masa"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Uyku tulumu kişisel malzeme sayılır. Çadır, ocak ve masa ise grup tarafından ortak kullanılan malzemelerdir; de şıkkındaki kamp ocağı da bunlardandır."
     },
     {
      "no": 23,
@@ -3222,7 +3674,8 @@
       "D": "Çorapsız yürümek",
       "E": "Plastik poşetle yürümek"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Yün ya da sentetik çorap teri uzaklaştırır, ıslanınca yalıtımını korur ve ayak sağlığını korur. A şıkkındaki pamuklu çorap ıslanınca geç kurur, üşütür ve su toplamayı önlemez."
     },
     {
      "no": 24,
@@ -3234,7 +3687,8 @@
       "D": "Çantayı ağırlaştırmak",
       "E": "Pusulayı çalıştırmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kamp fenerinin temel amacı gece görüş sağlamaktır. Isıtma ve pişirme işini fener değil, ateş ve ocak yapar; bu yüzden a şıkkı doğru değildir."
     },
     {
      "no": 25,
@@ -3246,7 +3700,8 @@
       "D": "Telefonu kapatmak",
       "E": "Pusulayı suya atmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kamp güvenliği için su ve yiyecek planlı kullanılır ki yolda tükenmesin. Ce şıkkının dışındakiler tehlikelidir; özellikle a şıkkındaki mum çadır içinde yangın riskini en çok artırır."
     },
     {
      "no": 26,
@@ -3258,7 +3713,8 @@
       "D": "Lideri yormamak için",
       "E": "Haritayı korumak için"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Tempo en yavaş üyeye göre ayarlanır ki grup dağılmasın ve kimse geride kalmasın. De şıkkı da lideri yormamak gibi görünür ama temponun asıl amacı grubun bütünlüğünü korumaktır."
     },
     {
      "no": 27,
@@ -3270,7 +3726,8 @@
       "D": "Sadece plastikleri almak",
       "E": "Sadece organikleri bırakmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "İz bırakmama ilkesinde çöpler toplanıp geri taşınır. D şıkkındaki yalnız plastikleri almak eksiktir, çünkü çöp ayrıştırılarak tamamı toplanır; organik olanı da gömülmez."
     },
     {
      "no": 28,
@@ -3282,7 +3739,8 @@
       "D": "Çekiç",
       "E": "Boya kalemi"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Temel ilk yardım çantasında tıbbi dikiş seti bulunur. C şıkkındaki büyük tencere ve çekiç gibi mutfak ya da alet eşyaları bu çantaya ait değildir."
     },
     {
      "no": 29,
@@ -3294,7 +3752,8 @@
       "D": "Sinyal panosu",
       "E": "Asansör"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Doğada yıldızlar yön bulmak için görsel ipucudur; gece Kutup Yıldızı kuzeyi gösterir. Öteki şıklar şehre ait yapay nesnelerdir ve doğada yön vermez."
     },
     {
      "no": 30,
@@ -3306,7 +3765,8 @@
       "D": "Telefon ekranı",
       "E": "Feneri arkaya tutmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Gece yürüyüşünde kafa lambası eller serbest kalacak şekilde yolu aydınlatır. E şıkkında feneri arkaya tutmak ise adım önünü karanlıkta bırakır; fener yere, adım önüne tutulmalıdır."
     },
     {
      "no": 31,
@@ -3318,7 +3778,8 @@
       "D": "Pusula çalışmaz",
       "E": "Harita silinir"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Çadırın içi dağınık olursa eşyalar kaybolur ve aradığın malzemeyi bulmak zorlaşır. A şıkkındaki rüzgâr artışı çadır içi düzenle ilgili değildir."
     },
     {
      "no": 32,
@@ -3330,7 +3791,8 @@
       "D": "Rüzgârdan korunaklı alanda",
       "E": "Ateş yeri yakınına kurulmuş düz zeminde"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kamp ocağı çadırın içinde kullanılmaz; karbonmonoksit zehirlenmesi ve yangın riski vardır. Açık ve havadar alanda, çadırdan uzakta yakılması gerekir, bu yüzden a şıkkı doğru bir kullanımdır."
     },
     {
      "no": 33,
@@ -3342,7 +3804,8 @@
       "D": "Ayakkabısız dolaşmak",
       "E": "Ayakları sürekli sudan geçirmek"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kış kampında ayakları üşütmemek için kuru ve yalıtımlı çorap kullanılır. A şıkkındaki ıslak çorap ısı kaybını artırır ve donma riskini yükseltir."
     },
     {
      "no": 34,
@@ -3354,7 +3817,8 @@
       "D": "Suya dayanıklı dağ botu",
       "E": "Hafif yürüyüş ayakkabısı"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Deniz terliği ayağı korumaz, bileği desteklemez ve dağ zemininde kayma ile yaralanma riski taşır. Be şıkkındaki yumuşak tabanlı spor ayakkabı uygun olmasa da terliğe göre yürüyüş için kullanılabilir bir ayakkabıdır."
     },
     {
      "no": 35,
@@ -3366,7 +3830,8 @@
       "D": "Haritayı daha parlak görmek",
       "E": "Pusulayı korumak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Güneş gözlüğü gözleri morötesi ışınlardan ve kardaki yansımadan korur. Görünüş ya da harita parlaklığı gözlüğün amacı değildir, bu yüzden a şıkkı yanlıştır."
     },
     {
      "no": 36,
@@ -3378,7 +3843,8 @@
       "D": "Şehir merkezi uzaklığı",
       "E": "AVM sayısı"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Hava durumu kamp planlamasında mutlaka kontrol edilir, çünkü kamp güvenliğini doğrudan etkiler. Be şıkkındaki internet hızı ise güvenlikle ilgisi olmayan bir ayrıntıdır."
     },
     {
      "no": 37,
@@ -3390,7 +3856,8 @@
       "D": "Yalnızca telefonla konuşmak",
       "E": "Hiç konuşmamak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "İletişim yalnız telsizle sağlanmaz; el işaretleri ve düdük de kullanılır. D şıkkındaki yalnız telefonla konuşmak yeterli değildir, çünkü dağda telefon her yerde çekmeyebilir."
     },
     {
      "no": 38,
@@ -3402,7 +3869,8 @@
       "D": "Ateşi toprakla kapatmak",
       "E": "Ateşi küçük alanda tutmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Ateşi tam söndürmeden ayrılmak kıvılcımların yayılmasına ve yangına yol açar. Ce şıkkındaki su dökmek ise tersine, ateşi güvenle söndürmenin doğru yoludur."
     },
     {
      "no": 39,
@@ -3414,7 +3882,8 @@
       "D": "Rengi çabuk solar",
       "E": "Kolay yırtılmaz"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Pamuk ıslanınca geç kurur ve vücudu üşütür; bu yüzden dağda uygun değildir. D şıkkındaki renk solması ise gerçek sorun değildir, asıl mesele ıslakken ısı kaybıdır."
     },
     {
      "no": 40,
@@ -3426,7 +3895,8 @@
       "D": "Pusulayı cebin içinde tutmak",
       "E": "Pusulayı kapalı kutuda kullanmak"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Pusula okurken düz ve sabit tutulmalıdır ki ibre serbestçe dönsün. Cebin içinde tutmak ise metal eşyalara yaklaşma ve eğik kalma riski taşır; bu yüzden gerekli koşul değildir."
     },
     {
      "no": 41,
@@ -3438,7 +3908,8 @@
       "D": "Elleri çadıra silmek",
       "E": "Elleri toprakla ovmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Su yoksa eller dezenfektanla temizlenir ve kişisel hijyen ihmal edilmez. B şıkkındaki sadece suyla ıslatmak mikropları gidermez, bu yüzden yeterli değildir."
     },
     {
      "no": 42,
@@ -3450,7 +3921,8 @@
       "D": "Çöpleri ormanda bırakmak",
       "E": "Yemek kokusunu yaymak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Yiyecekler kapalı, hava geçirmez kaplarda saklanarak yaban hayvanlarının çekilmesi önlenir. A şıkkındaki yiyecekleri açıkta bırakmak ise hayvanları çağıran en büyük hatadır."
     },
     {
      "no": 43,
@@ -3462,7 +3934,8 @@
       "D": "Hiç cebi olmaması",
       "E": "Çok ağır olması"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Bel kemeri ağırlığın büyük kısmını kalçaya aktarır, omuzlar yorulmaz. Be şıkkındaki bel kemerinin olmaması ağırlığı omuzlara bindirir ve çantayı yanlış kılar."
     },
     {
      "no": 44,
@@ -3474,7 +3947,8 @@
       "D": "Çamura bulayıp yıkamamak",
       "E": "Ateş yanında kurutmak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "İp ve emniyet malzemesi kuru ve gölgede saklanır; güneş ve nem lifleri zayıflatır. A şıkkındaki güneşte bırakmak morötesi ışınla ipi aşındırır."
     },
     {
      "no": 45,
@@ -3486,7 +3960,8 @@
       "D": "Ağaç kabuğunu soymak",
       "E": "Çöp gömmek"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Bitki koparmamak doğa etiğinin parçasıdır, çünkü bitki koparmak doğal dengeye zarar verir. E şıkkındaki çöp gömmek ise iz bırakmama ilkesine aykırıdır, çöp gömülmez."
     },
     {
      "no": 46,
@@ -3498,7 +3973,8 @@
       "D": "Temiz gazlı bez",
       "E": "Mutfak tencere kapağı"
      },
-     "dogru": "E"
+     "dogru": "E",
+     "cozum": "Mutfak tencere kapağı ilk yardım çantasına ait değildir. Bandaj, yara bandı, antiseptik ve gazlı bez ise yara bakımında kullanılan temel ilk yardım malzemeleridir."
     },
     {
      "no": 47,
@@ -3510,7 +3986,8 @@
       "D": "Ağaç kabuklarına zarar vermek",
       "E": "Çöp yığınlarını takip etmek"
      },
-     "dogru": "B"
+     "dogru": "B",
+     "cozum": "Doğada yön bulmak için güneş ve gölge kullanılır; öğle vakti gölge kuzeyi gösterir. C şıkkındaki mağara duvarına yazı yazmak ise yön yöntemi değil, doğaya zarar vermektir."
     },
     {
      "no": 48,
@@ -3522,7 +3999,8 @@
       "D": "Kaya düşmesi riskinden uzak olması",
       "E": "Su kaynağına yürünebilir mesafede olması"
      },
-     "dogru": "A"
+     "dogru": "A",
+     "cozum": "Taşkın riski olan su kenarı kampa uygun değildir; kamp suya yakın olmalı ama taşkın riskinden uzak durmalıdır. E şıkkındaki yürünebilir mesafe ise doğru dengedir."
     },
     {
      "no": 49,
@@ -3534,7 +4012,8 @@
       "D": "Kül ve kömürleri yaymak",
       "E": "Çöpü çalı altına saklamak"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kamp sonrası alan eski hâline getirilir ve küçük çöpler de toplanır. A şıkkı eksiktir; yalnız çadırı toplamak yetmez, ateş, çöp ve alan kontrolü de gerekir."
     },
     {
      "no": 50,
@@ -3546,7 +4025,8 @@
       "D": "Sadece gözlemcidir",
       "E": "Sadece yürüyüşçüdür"
      },
-     "dogru": "C"
+     "dogru": "C",
+     "cozum": "Kampçı doğada hem misafir hem koruyucudur; iz bırakmamanın amacı ekolojik dengeyi korumaktır. A şıkkındaki sadece misafir demek ise doğayı koruma sorumluluğunu yok sayar."
     }
    ]
   }

@@ -51,10 +51,11 @@ export interface EkKonu {
 export interface EkBaslik { no: number; baslik: string; ozet: string; konular: EkKonu[] }
 export interface EkPart { baslik: string; ekran: string; ses: string[] }
 /** Hocanın verdiği çalışma soruları (hoca_sorulari.json): boşluk doldurma, doğru–yanlış, çoktan seçmeli setleri */
-export type HocaSoru =
+/** cozum: sesli çözüm metni (h-/hc- klipleri) · k: föyde yeniden numaralanan sorunun asıl kimliği "<set>-<no>" */
+export type HocaSoru = { cozum?: string; k?: string } & (
   | { no: number; metin: string; cevap: string }
   | { no: number; metin: string; dogru: boolean }
-  | { no: number; kok: string; secenekler: Record<string, string>; dogru: string; belirsiz?: boolean };
+  | { no: number; kok: string; secenekler: Record<string, string>; dogru: string; belirsiz?: boolean });
 export interface HocaSet { id: string; ad: string; tur: 'bosluk' | 'dy' | 'cs'; aciklama: string; anahtarsiz?: boolean; sorular: HocaSoru[] }
 export interface EkKlip { v: string; sure: number }
 /** "PDF ile dinle" kipi (pdf_esle.json; scripts/ek_modul/pdf_esle.py yazar): ders klibinin kitapçıktaki yeri ve cümle zamanları.

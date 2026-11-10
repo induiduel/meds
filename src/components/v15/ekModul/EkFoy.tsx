@@ -104,7 +104,7 @@ export const FoyKonu: React.FC<{ m: EkModul; konuId: string }> = ({ m, konuId })
     return (
       <div className="ekm">
         <button type="button" className="v15-btn is-ghost ekm-goster" onClick={() => setTur(null)}>← {konu.baslik}</button>
-        <HocaSetCoz key={tur} set={sanalSet(konuId, tur, s[tur])} />
+        <HocaSetCoz key={tur} set={sanalSet(konuId, tur, s[tur])} m={m} />
       </div>
     );
   }

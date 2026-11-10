@@ -268,3 +268,30 @@
   .ekm-pdf-yan { overflow: auto; overscroll-behavior: contain; padding: 2px; }
 }
 @media (prefers-reduced-motion: reduce) { .ekm-md .is-okunan { transition: none; } }
+
+/* oynatıcı: 10 sn atlama, ayar paneli */
+.ekm-cubuk { flex-direction: column; align-items: stretch; gap: 0; }
+.ekm-cubuk-ana { position: relative; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.ekm-cubuk-ana > .ekm-ilerle { position: absolute; left: 0; right: 0; bottom: -10px; }
+.ekm-cubuk .ekm-kucuk { position: relative; }
+.ekm-cubuk .ekm-kucuk > small { position: absolute; font-size: .52rem; font-weight: 800; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.ekm-cubuk .ekm-kucuk.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+.ekm-ayar { display: grid; gap: 12px; margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--color-line); }
+.ekm-ayar-satir { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .88rem; font-weight: 600; color: var(--color-ink); }
+.ekm-ayar-satir small { display: block; font-weight: 400; font-size: .78rem; color: var(--color-ink-3); }
+.ekm-ayar-satir input[type='checkbox'] { width: 20px; height: 20px; accent-color: var(--color-accent); flex: none; }
+.ekm-hizlar { display: flex; flex-wrap: wrap; gap: 4px; }
+.ekm-hizlar > button { min-width: 44px; min-height: 32px; border: 0; border-radius: 8px; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: .8rem; font-weight: 700; cursor: pointer; }
+.ekm-hizlar > button.is-on { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+
+/* PDF bölüm görünümü: anlatılan bölüm kabın içine sığar */
+.ekm-pdfb { position: relative; flex: 1; min-height: 0; display: grid; place-items: center; padding: 12px; overflow: hidden; background: var(--color-field); }
+.ekm-pdfb-sayfa { position: relative; background: #fff; box-shadow: 0 1px 6px rgb(0 0 0 / .14); border-radius: 4px; overflow: hidden; }
+.ekm-pdfb-sayfa > canvas { display: block; }
+.ekm-pdfb-satir { position: absolute; margin: -2px -4px; padding: 2px 4px; box-sizing: content-box; border-radius: 3px; background: rgb(250 204 21 / .35); mix-blend-mode: multiply; pointer-events: none; transition: top .2s, left .2s; }
+.ekm-pdfb > .ekm-pdf-skel { position: absolute; inset: 12px; }
+.ekm-hoca-cozum { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--color-ok-soft); color: var(--color-ink); }
+@container (max-width: 899px) {
+  .ekm-pdf-kutu.is-bolum { height: auto; min-height: 0; }
+  .ekm-pdf-kutu.is-bolum .ekm-pdfb { flex: none; min-height: 160px; }
+}

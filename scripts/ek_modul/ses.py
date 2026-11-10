@@ -4,6 +4,7 @@
 Klipler:  d-<konu>-<n>  sesli ders bölümü (başlık + `ses` cümleleri)        s-<konu>-<n>  spot (`ses`)
           o-<n>         sınav öncesi bölümü                                 q-<set>-<n>   soru: kök + seçenekler (ekran metninden okunuşa çevrilir)
           c-<set>-<n>   çözüm: "Doğru cevap …" + `ses_cozum`               (<set> = konu id'si ya da genel sorularda "g")
+          h-<set>-<n>   hocanın çalışma sorusu (okunur)                    hc-<set>-<n>  cevabı + `cozum` (hoca_sorulari.json)
 Ekran metni ile okuma metni ayrıdır: `ses` alanları yazarın konuşma metnidir; soru kökü/seçenekleri için okunuş `oku()` ile
 üretilir (sayı, birim, kısaltma → yazıyla). Metni değişmeyen klip atlanır (özet klip.json'da `v`).
 
@@ -123,6 +124,22 @@ def klipler(modul: str) -> dict[str, list[str]]:
     if (kok / "genel_sorular.json").exists():
         for q in json.loads((kok / "genel_sorular.json").read_text())["sorular"]:
             soru("g", q)
+    if (kok / "hoca_sorulari.json").exists():
+        for st in json.loads((kok / "hoca_sorulari.json").read_text())["setler"]:
+            for q in st["sorular"]:
+                if not q.get("cozum"):
+                    continue
+                k = f"{st['id']}-{q['no']}"
+                if st["tur"] == "bosluk":
+                    K[f"h-{k}"] = [nokta(oku(re.sub(r"_{2,}", " boşluk ", q["metin"])))]
+                    K[f"hc-{k}"] = [nokta(f"Cevap: {oku(q['cevap'])}")] + parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip()))
+                elif st["tur"] == "dy":
+                    K[f"h-{k}"] = [nokta(oku(q["metin"])), "Doğru mu, yanlış mı?"]
+                    K[f"hc-{k}"] = parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip()))
+                else:
+                    sec = q["secenekler"]
+                    K[f"h-{k}"] = [nokta(oku(q["kok"]))] + [nokta(f"{SIK[h]} şıkkı: {oku(sec[h])}") for h in sec]
+                    K[f"hc-{k}"] = [nokta(f"Doğru cevap {SIK[q['dogru']]} şıkkı: {oku(sec[q['dogru']])}")] + parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip()))
     return K
 
 
