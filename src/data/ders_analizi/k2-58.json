@@ -15,7 +15,7 @@
   {
    "id": "anlatim",
    "baslik": "Bu derste ne anlatılacak",
-   "giris": "",
+   "giris": "Ders etanolün farmakokinetiğini ve yıkımını (alkol dehidrogenaz, MEOS, aldehid dehidrogenaz), akut ve kronik tüketimin organ etkilerini, fetal alkol sendromunu, alkol-ilaç etkileşimlerini, akut zehirlenme ve yoksunluk sendromunun tedavisini, alkolizmde FDA onaylı üç ilacı (disülfiram, naltrekson, akamprosat) ve toksik alkollerin (metanol, etilen glikol) zehirlenme tablosu ile fomepizol tedavisini anlatır.",
    "maddeler": [
     {
      "metin": "Alkol neden bir farmakoloji konusu"
@@ -78,6 +78,7 @@
    "klip": "a-anlatim",
    "ses": [
     "Bu derste ne anlatılacak.",
+    "Ders etanolün farmakokinetiğini ve yıkımını (alkol dehidrogenaz, MEOS, aldehid dehidrogenaz), akut ve kronik tüketimin organ etkilerini, fetal alkol sendromunu, alkol-ilaç etkileşimlerini, akut zehirlenme ve yoksunluk sendromunun tedavisini, alkolizmde FDA onaylı üç ilacı (disülfiram, naltrekson, akamprosat) ve toksik alkollerin (metanol, etilen glikol) zehirlenme tablosu ile fomepizol tedavisini anlatır.",
     "Alkol neden bir farmakoloji konusu.",
     "Etanolün farmakokinetiği: emilim, dağılım ve sıfır derece yıkım.",
     "Etanol nasıl yıkılır: ADH, MEOS ve ALDH.",
@@ -98,7 +99,7 @@
     "Etilen glikol zehirlenmesi.",
     "Dersin bütünü."
    ],
-   "v": "97a0f6a29b"
+   "v": "8aca3f0775"
   },
   {
    "id": "kazanim",
@@ -176,6 +177,101 @@
     "✓Bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen: Çıkmış (dogrudan): Bir alkol dehidrogenaz inhibitörü olan fomepizol metanol ve etilen glikol zehirlenmeleri için onay almıştır (s49, slayt cümlesi soru köküyle birebir). s52: etilen glikol zehirlenmesinin standart ilacı da fomepizol'dür."
    ],
    "v": "4d7dadadbd"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse bağlı dokuz ayrı çıkmış soru vardır ve çoğu aynı birkaç bilgiyi yineler: fomepizolün alkol dehidrogenaz inhibisyonu üç ayrı yılda (2020-21, 2023-24, 2025-26), metanolün toksik metaboliti iki yılda (2019-20, 2021-22), akamprosat iki yılda (2020-21, 2024-25) soruldu; disülfiramın mekanizması ve mitokondriyal aldehid dehidrogenaz bu dersin diğer sorularıdır; MEOS'un yeri, NADH ve Wernicke-Korsakoff ise başka bir dersin (Tıbbi Patoloji) sınavında sorulmuş, bu slaytlarla çözülebilen ilgili sorulardır. Hoca derste on sekiz noktayı sınav vurgusuyla işaretledi; sorular kısa, doğrudan ve enzim-ilaç-metabolit eşleşmesine dayanır.",
+   "maddeler": [
+    {
+     "baslik": "Fomepizol: alkol dehidrogenaz inhibitörü",
+     "metin": "Fomepizol alkol dehidrogenazı inhibe eder; metanol ve etilen glikol zehirlenmeleri için onaylı standart ilaçtır.",
+     "neden": "2020-21, 2023-24 ve 2025-26 sınavlarında soruldu: bir yıl ilacın adı, bir yıl etki mekanizması istendi; dersin en çok yinelenen sorusudur.",
+     "s": [
+      49,
+      52
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Metanolün toksik metabolitleri: formaldehid ve format",
+     "metin": "Metanol toksisitesi metanolün kendisine değil, formaldehid ve formata metabolize edilmesine bağlıdır.",
+     "neden": "2019-20 Kurul 2 ve 2021-22 finalde aynı soruyla soruldu: metanol zehirlenmesinde rol oynayan toksik metabolit; çeldirici asetaldehit ve etilen glikoldür.",
+     "s": [
+      45
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Disülfiramın mekanizması: aldehid dehidrogenaz inhibisyonu",
+     "metin": "Disülfiram aldehid dehidrogenazı inhibe eder; alkol alınırsa asetaldehid birikir ve caydırıcı reaksiyon oluşur.",
+     "neden": "2019-20 Kurul 2'de disülfiramın etki mekanizması soruldu; hoca derste bu ilacın sınavlarda çıktığını açıkça söyledi; çeldirici alkol dehidrogenaz aktivasyonu/inhibisyonudur.",
+     "s": [
+      8,
+      43
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Akamprosat: FDA onaylı, zayıf NMDA antagonisti",
+     "metin": "Akamprosat alkol bağımlılığı tedavisinde FDA onaylıdır; zayıf NMDA-reseptör antagonisti ve GABAA-reseptör aktivatörüdür.",
+     "neden": "2020-21 final ve 2024-25 Kurul 2'de 'alkol bağımlılığı tedavisinde kullanılan ilaç' olarak soruldu; hoca derste akamprosatı önemli diye vurguladı.",
+     "s": [
+      41
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Asetaldehid metabolizması: mitokondriyal aldehid dehidrogenaz",
+     "metin": "Asetaldehidin çoğu karaciğerde mitokondriyal NAD-bağımlı aldehid dehidrogenaz (ALDH) ile asetata okside edilir.",
+     "neden": "Slaytın bu cümlesi boşluk doldurma biçiminde birebir çıkmış soru olarak soruldu (yılı belirsiz derleme); hoca üç enzimi önemli diye saydı.",
+     "s": [
+      8
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Wernicke-Korsakoff sendromu ve tiamin",
+     "metin": "Wernicke-Korsakoff sendromu eksternal göz kası paralizisi, ataksi ve konfüzyonla seyreder; tiamin (B1) eksikliğiyle ilişkilidir.",
+     "neden": "2020-21'de başka bir dersin (Tıbbi Patoloji) sınavında üçlü (göz hareketi bozukluğu, konfüzyon, ataksi) ile sendromun adı soruldu; hoca tiamin bağını önemli diye vurguladı.",
+     "s": [
+      20
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "NAD+/NADH dengesi: laktik asidoz ve hipoglisemi",
+     "metin": "Etanol oksidasyonunda hidrojen NAD+'ya aktarılır, fazla NADH oluşur; bu laktik asidoz ve hipoglisemiye katkıda bulunur.",
+     "neden": "2021-22'de başka bir dersin (Tıbbi Patoloji) sınavında etanol metabolizmasının toksik etkileri arasında yer almayan seçenek olarak 'NAD+/NADH oranında artış' soruldu; hoca akut zehirlenmenin iki sorununu soru-cevapla yineledi.",
+     "s": [
+      6
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Fetal alkol sendromunun beş anomalisi",
+     "metin": "Fetal alkol sendromu: intrauterin gelişme geriliği, mikrosefali, zayıf koordinasyon, midfasiyal bölgenin tam gelişmemesi, minör eklem anomalileri.",
+     "neden": "Hoca derste fetal alkol sendromunun sınavda çıktığını söyledi; beş anomali 'hangisi değildir' kalıbıyla sorulmaya çok uygundur.",
+     "s": [
+      27
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse bağlı dokuz ayrı çıkmış soru vardır ve çoğu aynı birkaç bilgiyi yineler: fomepizolün alkol dehidrogenaz inhibisyonu üç ayrı yılda (2020-21, 2023-24, 2025-26), metanolün toksik metaboliti iki yılda (2019-20, 2021-22), akamprosat iki yılda (2020-21, 2024-25) soruldu; disülfiramın mekanizması ve mitokondriyal aldehid dehidrogenaz bu dersin diğer sorularıdır; MEOS'un yeri, NADH ve Wernicke-Korsakoff ise başka bir dersin (Tıbbi Patoloji) sınavında sorulmuş, bu slaytlarla çözülebilen ilgili sorulardır. Hoca derste on sekiz noktayı sınav vurgusuyla işaretledi; sorular kısa, doğrudan ve enzim-ilaç-metabolit eşleşmesine dayanır.",
+    "Fomepizol: alkol dehidrogenaz inhibitörü: Fomepizol alkol dehidrogenazı inhibe eder; metanol ve etilen glikol zehirlenmeleri için onaylı standart ilaçtır.",
+    "Metanolün toksik metabolitleri: formaldehid ve format: Metanol toksisitesi metanolün kendisine değil, formaldehid ve formata metabolize edilmesine bağlıdır.",
+    "Disülfiramın mekanizması: aldehid dehidrogenaz inhibisyonu: Disülfiram aldehid dehidrogenazı inhibe eder; alkol alınırsa asetaldehid birikir ve caydırıcı reaksiyon oluşur.",
+    "Akamprosat: FDA onaylı, zayıf NMDA antagonisti: Akamprosat alkol bağımlılığı tedavisinde FDA onaylıdır; zayıf NMDA-reseptör antagonisti ve GABAA-reseptör aktivatörüdür.",
+    "Asetaldehid metabolizması: mitokondriyal aldehid dehidrogenaz: Asetaldehidin çoğu karaciğerde mitokondriyal NAD-bağımlı aldehid dehidrogenaz (ALDH) ile asetata okside edilir.",
+    "Wernicke-Korsakoff sendromu ve tiamin: Wernicke-Korsakoff sendromu eksternal göz kası paralizisi, ataksi ve konfüzyonla seyreder; tiamin (B1) eksikliğiyle ilişkilidir.",
+    "NAD+/NADH dengesi: laktik asidoz ve hipoglisemi: Etanol oksidasyonunda hidrojen NAD+'ya aktarılır, fazla NADH oluşur; bu laktik asidoz ve hipoglisemiye katkıda bulunur.",
+    "Fetal alkol sendromunun beş anomalisi: Fetal alkol sendromu: intrauterin gelişme geriliği, mikrosefali, zayıf koordinasyon, midfasiyal bölgenin tam gelişmemesi, minör eklem anomalileri."
+   ],
+   "v": "a28538cae8"
   },
   {
    "id": "cikmis",
@@ -509,6 +605,22 @@
    "giris": "",
    "maddeler": [
     {
+     "baslik": "Fomepizol: alkol dehidrogenaz inhibitörü",
+     "metin": "2020-21, 2023-24 ve 2025-26 sınavlarında soruldu: bir yıl ilacın adı, bir yıl etki mekanizması istendi; dersin en çok yinelenen sorusudur."
+    },
+    {
+     "baslik": "Metanolün toksik metabolitleri: formaldehid ve format",
+     "metin": "2019-20 Kurul 2 ve 2021-22 finalde aynı soruyla soruldu: metanol zehirlenmesinde rol oynayan toksik metabolit; çeldirici asetaldehit ve etilen glikoldür."
+    },
+    {
+     "baslik": "Disülfiramın mekanizması: aldehid dehidrogenaz inhibisyonu",
+     "metin": "2019-20 Kurul 2'de disülfiramın etki mekanizması soruldu; hoca derste bu ilacın sınavlarda çıktığını açıkça söyledi; çeldirici alkol dehidrogenaz aktivasyonu/inhibisyonudur."
+    },
+    {
+     "baslik": "Akamprosat: FDA onaylı, zayıf NMDA antagonisti",
+     "metin": "2020-21 final ve 2024-25 Kurul 2'de 'alkol bağımlılığı tedavisinde kullanılan ilaç' olarak soruldu; hoca derste akamprosatı önemli diye vurguladı."
+    },
+    {
      "baslik": "Çalışma yolu",
      "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
     }
@@ -516,14 +628,415 @@
    "klip": "a-odak",
    "ses": [
     "Nelere odaklanmalısın.",
+    "Fomepizol: alkol dehidrogenaz inhibitörü: 2020-21, 2023-24 ve 2025-26 sınavlarında soruldu: bir yıl ilacın adı, bir yıl etki mekanizması istendi; dersin en çok yinelenen sorusudur.",
+    "Metanolün toksik metabolitleri: formaldehid ve format: 2019-20 Kurul 2 ve 2021-22 finalde aynı soruyla soruldu: metanol zehirlenmesinde rol oynayan toksik metabolit; çeldirici asetaldehit ve etilen glikoldür.",
+    "Disülfiramın mekanizması: aldehid dehidrogenaz inhibisyonu: 2019-20 Kurul 2'de disülfiramın etki mekanizması soruldu; hoca derste bu ilacın sınavlarda çıktığını açıkça söyledi; çeldirici alkol dehidrogenaz aktivasyonu/inhibisyonudur.",
+    "Akamprosat: FDA onaylı, zayıf NMDA antagonisti: 2020-21 final ve 2024-25 Kurul 2'de 'alkol bağımlılığı tedavisinde kullanılan ilaç' olarak soruldu; hoca derste akamprosatı önemli diye vurguladı.",
     "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
    ],
-   "v": "55d56db90f"
+   "v": "b2c73532f9"
   }
  ],
- "ozet": null,
- "ozetEksik": [
-  "önem listesi",
-  "sesli örnek soru çözücü"
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders etanolün farmakokinetiğini ve yıkımını (alkol dehidrogenaz, MEOS, aldehid dehidrogenaz), akut ve kronik tüketimin organ etkilerini, fetal alkol sendromunu, alkol-ilaç etkileşimlerini, akut zehirlenme ve yoksunluk sendromunun tedavisini, alkolizmde FDA onaylı üç ilacı (disülfiram, naltrekson, akamprosat) ve toksik alkollerin (metanol, etilen glikol) zehirlenme tablosu ile fomepizol tedavisini anlatır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders etanolün farmakokinetiğini ve yıkımını (alkol dehidrogenaz, MEOS, aldehid dehidrogenaz), akut ve kronik tüketimin organ etkilerini, fetal alkol sendromunu, alkol-ilaç etkileşimlerini, akut zehirlenme ve yoksunluk sendromunun tedavisini, alkolizmde FDA onaylı üç ilacı (disülfiram, naltrekson, akamprosat) ve toksik alkollerin (metanol, etilen glikol) zehirlenme tablosu ile fomepizol tedavisini anlatır."
+   ],
+   "v": "a27f2666bf"
+  },
+  {
+   "id": "2f12-07",
+   "baslik": "NAD+/NADH dengesi: laktik asidoz ve hipoglisemi",
+   "giris": "Etanol oksidasyonunda hidrojen NAD+'ya aktarılır, fazla NADH oluşur; bu laktik asidoz ve hipoglisemiye katkıda bulunur.",
+   "s": [
+    6
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Etanolün ADH ile asetaldehide dönüşümü sırasında hidrojen iyonu etanolden kofaktör NAD+'ya aktarılır ve NADH oluşur."
+    },
+    {
+     "metin": "Alkol oksidasyonu karaciğerde fazla miktarda, çoğunluğu NADH olmak üzere indirgeyici ajan salgılanmasına neden olur; NAD+/NADH oranı düşer."
+    },
+    {
+     "metin": "Aşırı NADH üretimi, kronik alkolizme eşlik eden metabolik bozukluklara ve akut alkol zehirlenmesine sıklıkla eşlik eden laktik asidoz ile hipoglisemiye katkıda bulunur."
+    },
+    {
+     "metin": "Etanol metabolizmasının öteki toksik etkileri: Asetaldehid üretimi; sitokrom P450 reaksiyonlarından serbest radikal ve H2O2 gibi toksik ara ürünler; bağırsak kaynaklı endotoksinlerin karaciğere ulaşması; yağ asidi yıkımının azalıp sentezinin artmasıyla karaciğer yağlanması."
+    },
+    {
+     "metin": "'NAD+/NADH oranında artış' etanol metabolizmasının sonucu değildir; etanol NADH'ı artırır."
+    }
+   ],
+   "klip": "o-2f12-07",
+   "ses": [
+    "NAD+/NADH dengesi: laktik asidoz ve hipoglisemi.",
+    "Etanol oksidasyonunda hidrojen NAD+'ya aktarılır, fazla NADH oluşur; bu laktik asidoz ve hipoglisemiye katkıda bulunur.",
+    "Etanolün ADH ile asetaldehide dönüşümü sırasında hidrojen iyonu etanolden kofaktör NAD+'ya aktarılır ve NADH oluşur.",
+    "Alkol oksidasyonu karaciğerde fazla miktarda, çoğunluğu NADH olmak üzere indirgeyici ajan salgılanmasına neden olur; NAD+/NADH oranı düşer.",
+    "Aşırı NADH üretimi, kronik alkolizme eşlik eden metabolik bozukluklara ve akut alkol zehirlenmesine sıklıkla eşlik eden laktik asidoz ile hipoglisemiye katkıda bulunur.",
+    "Etanol metabolizmasının öteki toksik etkileri: Asetaldehid üretimi; sitokrom P450 reaksiyonlarından serbest radikal ve H2O2 gibi toksik ara ürünler; bağırsak kaynaklı endotoksinlerin karaciğere ulaşması; yağ asidi yıkımının azalıp sentezinin artmasıyla karaciğer yağlanması.",
+    "'NAD+/NADH oranında artış' etanol metabolizmasının sonucu değildir; etanol NADH'ı artırır."
+   ],
+   "v": "e12a69dca5"
+  },
+  {
+   "id": "2f12-10",
+   "baslik": "MEOS: mikrozomal, NADPH kullanan sitokrom P450 sistemi",
+   "giris": "MEOS (mikrozomal etanol-oksidleyici sistem) NADPH kullanır; başlıca sitokrom P450 2E1, 1A2 ve 3A4'ten oluşur.",
+   "s": [
+    7
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Etanolü asetaldehide çeviren ikinci yolak; karma fonksiyonlu oksidaz sistemi olarak da bilinir."
+    },
+    {
+     "metin": "Kofaktör olarak NADPH kullanır (ADH ve ALDH NAD+ kullanır); başlıca sitokrom P450 2E1, 1A2 ve 3A4'ten oluşur."
+    },
+    {
+     "metin": "Mikrozomal sistemdir; sitokrom P450 ve CYP2E1 mikrozomdadır. ADH sitozolde, ALDH mitokondride bulunur."
+    },
+    {
+     "metin": "MEOS aktivitesi indüklenmiş durumdadır. Sonuçta kronik alkol tüketimi yalnız etanol metabolizmasını değil, MEOS'u oluşturan sitokrom P450'lerle elimine olan diğer ilaçların klirensini de artırır."
+    },
+    {
+     "metin": "Sitokrom P450 reaksiyonlarından toksinler, serbest radikaller ve H2O2 oluşumu belirgin derecede artar."
+    },
+    {
+     "metin": "İndüksiyon ALDH'yi durdurmaz; asetaldehid oksidasyonu sürer."
+    }
+   ],
+   "klip": "o-2f12-10",
+   "ses": [
+    "MEOS: mikrozomal, NADPH kullanan sitokrom P450 sistemi.",
+    "MEOS (mikrozomal etanol-oksidleyici sistem) NADPH kullanır; başlıca sitokrom P450 2E1, 1A2 ve 3A4'ten oluşur.",
+    "Etanolü asetaldehide çeviren ikinci yolak; karma fonksiyonlu oksidaz sistemi olarak da bilinir.",
+    "Kofaktör olarak NADPH kullanır (ADH ve ALDH NAD+ kullanır); başlıca sitokrom P450 2E1, 1A2 ve 3A4'ten oluşur.",
+    "Mikrozomal sistemdir; sitokrom P450 ve CYP2E1 mikrozomdadır. ADH sitozolde, ALDH mitokondride bulunur.",
+    "MEOS aktivitesi indüklenmiş durumdadır. Sonuçta kronik alkol tüketimi yalnız etanol metabolizmasını değil, MEOS'u oluşturan sitokrom P450'lerle elimine olan diğer ilaçların klirensini de artırır.",
+    "Sitokrom P450 reaksiyonlarından toksinler, serbest radikaller ve H2O2 oluşumu belirgin derecede artar.",
+    "İndüksiyon ALDH'yi durdurmaz; asetaldehid oksidasyonu sürer."
+   ],
+   "v": "ac3442d970"
+  },
+  {
+   "id": "2f12-03",
+   "baslik": "Disülfiramın mekanizması: aldehid dehidrogenaz inhibisyonu",
+   "giris": "Disülfiram aldehid dehidrogenazı inhibe eder; alkol alınırsa asetaldehid birikir ve caydırıcı reaksiyon oluşur.",
+   "s": [
+    8,
+    43
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Disülfiram mitokondriyal aldehid dehidrogenazı (ALDH) inhibe eder; etanolün asetaldehide dönüşümü sürer, asetaldehidin asetata yıkımı durur."
+    },
+    {
+     "metin": "Disülfiram varlığında etanol tüketilince asetaldehid birikir; yüzde flushing, bulantı, kusma, baş dönmesi ve baş ağrısı gibi hoş olmayan reaksiyonlar ortaya çıkar."
+    },
+    {
+     "metin": "Disülfiram alanlar alkol kullandıklarında birkaç dakika içinde flushing, zonklayıcı baş ağrısı, bulantı, kusma, terleme, hipotansiyon ve konfüzyon gelişir; hafif olgularda 30 dakika, şiddetli durumlarda saatlerce sürer."
+    },
+    {
+     "metin": "Rahatsızlığı yapan disülfiramın kendisi değil, biriken asetaldehiddir; içki içmeyenlere verildiğinde çok az etkisi vardır."
+    },
+    {
+     "metin": "Alkol dehidrogenaz inhibisyonu fomepizolün, GABA-A reseptör agonizması benzodiazepinlerin, µ-opioid blokajı naltreksonun mekanizmasıdır."
+    }
+   ],
+   "klip": "o-2f12-03",
+   "ses": [
+    "Disülfiramın mekanizması: aldehid dehidrogenaz inhibisyonu.",
+    "Disülfiram aldehid dehidrogenazı inhibe eder; alkol alınırsa asetaldehid birikir ve caydırıcı reaksiyon oluşur.",
+    "Disülfiram mitokondriyal aldehid dehidrogenazı (ALDH) inhibe eder; etanolün asetaldehide dönüşümü sürer, asetaldehidin asetata yıkımı durur.",
+    "Disülfiram varlığında etanol tüketilince asetaldehid birikir; yüzde flushing, bulantı, kusma, baş dönmesi ve baş ağrısı gibi hoş olmayan reaksiyonlar ortaya çıkar.",
+    "Disülfiram alanlar alkol kullandıklarında birkaç dakika içinde flushing, zonklayıcı baş ağrısı, bulantı, kusma, terleme, hipotansiyon ve konfüzyon gelişir; hafif olgularda 30 dakika, şiddetli durumlarda saatlerce sürer.",
+    "Rahatsızlığı yapan disülfiramın kendisi değil, biriken asetaldehiddir; içki içmeyenlere verildiğinde çok az etkisi vardır.",
+    "Alkol dehidrogenaz inhibisyonu fomepizolün, GABA-A reseptör agonizması benzodiazepinlerin, µ-opioid blokajı naltreksonun mekanizmasıdır."
+   ],
+   "v": "6d6c396d07"
+  },
+  {
+   "id": "2f12-05",
+   "baslik": "Asetaldehid metabolizması: mitokondriyal aldehid dehidrogenaz",
+   "giris": "Asetaldehidin çoğu karaciğerde mitokondriyal NAD-bağımlı aldehid dehidrogenaz (ALDH) ile asetata okside edilir.",
+   "s": [
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Alkolden oluşan asetaldehidin çoğu karaciğerde, mitokondriyal NAD-bağımlı aldehid dehidrogenaz (ALDH) tarafından katalize edilen bir reaksiyonla okside edilir."
+    },
+    {
+     "metin": "Asetat; daha sonra CO2 ve suya metabolize edilir veya asetil-CoA oluşturmak için kullanılır."
+    },
+    {
+     "metin": "ALDH mitokondride, alkol dehidrogenaz sitozolde, MEOS (sitokrom P450 2E1) mikrozomda bulunur; sorularda bu üç yer birbirinin çeldiricisidir."
+    },
+    {
+     "metin": "ALDH ve ADH NAD+ kullanır (NADH oluşur); MEOS ise NADPH kullanır."
+    },
+    {
+     "metin": "Bu basamağı disülfiram inhibe eder; alkol dehidrogenaz basamağını fomepizol inhibe eder."
+    },
+    {
+     "metin": "Etanol → asetaldehid (ADH ya da MEOS) → asetat (ALDH) → CO2 ve su."
+    }
+   ],
+   "klip": "o-2f12-05",
+   "ses": [
+    "Asetaldehid metabolizması: mitokondriyal aldehid dehidrogenaz.",
+    "Asetaldehidin çoğu karaciğerde mitokondriyal NAD-bağımlı aldehid dehidrogenaz (ALDH) ile asetata okside edilir.",
+    "Alkolden oluşan asetaldehidin çoğu karaciğerde, mitokondriyal NAD-bağımlı aldehid dehidrogenaz (ALDH) tarafından katalize edilen bir reaksiyonla okside edilir.",
+    "Asetat; daha sonra CO2 ve suya metabolize edilir veya asetil-CoA oluşturmak için kullanılır.",
+    "ALDH mitokondride, alkol dehidrogenaz sitozolde, MEOS (sitokrom P450 2E1) mikrozomda bulunur; sorularda bu üç yer birbirinin çeldiricisidir.",
+    "ALDH ve ADH NAD+ kullanır (NADH oluşur); MEOS ise NADPH kullanır.",
+    "Bu basamağı disülfiram inhibe eder; alkol dehidrogenaz basamağını fomepizol inhibe eder.",
+    "Etanol → asetaldehid (ADH ya da MEOS) → asetat (ALDH) → CO2 ve su."
+   ],
+   "v": "99e911b7a7"
+  },
+  {
+   "id": "2f12-06",
+   "baslik": "Wernicke-Korsakoff sendromu ve tiamin",
+   "giris": "Wernicke-Korsakoff sendromu eksternal göz kası paralizisi, ataksi ve konfüzyonla seyreder; tiamin (B1) eksikliğiyle ilişkilidir.",
+   "s": [
+    20
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Öğrenme ve hafıza defektinin beraber olduğu semptom kompleksi; eksternal göz kaslarının paralizi, ataksi ve konfüzyonla karakterize; koma ve ölüme kadar ilerleyebilir. Sık görülmez ama önemlidir."
+    },
+    {
+     "metin": "Tiamin (B1 vitamini) eksikliğiyle ilişkilidir; alkolizm olmadan nadiren görülür."
+    },
+    {
+     "metin": "Tiaminin bu tabloda önemi ve uygulandığında toksisite oluşturmaması nedeniyle, şüphelenilen bütün hastalar (acile bilinç bozukluğu, nöbetler veya her ikisiyle gelenler dahil) tiamin tedavisi almalıdır."
+    },
+    {
+     "metin": "Akut alkol zehirlenmesinde Wernicke-Korsakoff'tan korunmak için tiamin verilir; yoksunluk sendromunda tiamin tedavisine bütün olgularda başlanır."
+    },
+    {
+     "metin": "Multipl skleroz ve nöromiyelitis optika demiyelinizan hastalıklardır; tüberoz skleroz ve von Hippel-Lindau kalıtsal tümör sendromlarıdır; hiçbiri tiamin eksikliğine bağlı değildir."
+    }
+   ],
+   "klip": "o-2f12-06",
+   "ses": [
+    "Wernicke-Korsakoff sendromu ve tiamin.",
+    "Wernicke-Korsakoff sendromu eksternal göz kası paralizisi, ataksi ve konfüzyonla seyreder; tiamin (B1) eksikliğiyle ilişkilidir.",
+    "Öğrenme ve hafıza defektinin beraber olduğu semptom kompleksi; eksternal göz kaslarının paralizi, ataksi ve konfüzyonla karakterize; koma ve ölüme kadar ilerleyebilir. Sık görülmez ama önemlidir.",
+    "Tiamin (B1 vitamini) eksikliğiyle ilişkilidir; alkolizm olmadan nadiren görülür.",
+    "Tiaminin bu tabloda önemi ve uygulandığında toksisite oluşturmaması nedeniyle, şüphelenilen bütün hastalar (acile bilinç bozukluğu, nöbetler veya her ikisiyle gelenler dahil) tiamin tedavisi almalıdır.",
+    "Akut alkol zehirlenmesinde Wernicke-Korsakoff'tan korunmak için tiamin verilir; yoksunluk sendromunda tiamin tedavisine bütün olgularda başlanır.",
+    "Multipl skleroz ve nöromiyelitis optika demiyelinizan hastalıklardır; tüberoz skleroz ve von Hippel-Lindau kalıtsal tümör sendromlarıdır; hiçbiri tiamin eksikliğine bağlı değildir."
+   ],
+   "v": "b3aa135e76"
+  },
+  {
+   "id": "2f12-08",
+   "baslik": "Fetal alkol sendromunun beş anomalisi",
+   "giris": "Fetal alkol sendromu: intrauterin gelişme geriliği, mikrosefali, zayıf koordinasyon, midfasiyal bölgenin tam gelişmemesi, minör eklem anomalileri.",
+   "s": [
+    27
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Gebelikte annenin kronik alkol kullanımına bağlı teratojenik anomaliler bütünüdür."
+    },
+    {
+     "metin": "(1) intrauterin gelişme geriliği, (2) mikrosefali, (3) zayıf koordinasyon, (4) midfasiyal bölgenin tam gelişmemesi (düz surat görünümü), (5) minör eklem anomalileri."
+    },
+    {
+     "metin": "Konjenital kalp defektleri ve mental retardasyon da görülebilir."
+    },
+    {
+     "metin": "Etanolün teratojenik etkilerinin altında yatan mekanizmalar bilinmemektedir."
+    },
+    {
+     "metin": "Büyüme geriliği vardır, makrozomi yoktur; mikrosefali vardır, makrosefali yoktur. Yüz bulgusu midfasiyal hipoplazidir (düz surat)."
+    }
+   ],
+   "klip": "o-2f12-08",
+   "ses": [
+    "Fetal alkol sendromunun beş anomalisi.",
+    "Fetal alkol sendromu: intrauterin gelişme geriliği, mikrosefali, zayıf koordinasyon, midfasiyal bölgenin tam gelişmemesi, minör eklem anomalileri.",
+    "Gebelikte annenin kronik alkol kullanımına bağlı teratojenik anomaliler bütünüdür.",
+    "(1) intrauterin gelişme geriliği, (2) mikrosefali, (3) zayıf koordinasyon, (4) midfasiyal bölgenin tam gelişmemesi (düz surat görünümü), (5) minör eklem anomalileri.",
+    "Konjenital kalp defektleri ve mental retardasyon da görülebilir.",
+    "Etanolün teratojenik etkilerinin altında yatan mekanizmalar bilinmemektedir.",
+    "Büyüme geriliği vardır, makrozomi yoktur; mikrosefali vardır, makrosefali yoktur. Yüz bulgusu midfasiyal hipoplazidir (düz surat)."
+   ],
+   "v": "8963fa30df"
+  },
+  {
+   "id": "2f12-09",
+   "baslik": "Alkolizm tedavisinde FDA onaylı üç ilaç",
+   "giris": "Alkol bağımlılığında yardımcı tedavi için FDA onaylı üç ilaç: disülfiram, naltrekson ve akamprosat.",
+   "s": [
+    39
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Detoksifikasyondan sonra hem yatan hasta hem de ayaktan rehabilitasyon programlarıyla yoğun psikososyal tedavi alkol bağımlılığının temel tedavisidir."
+    },
+    {
+     "metin": "En sık depresif ve anksiyete bozuklukları olmak üzere başka psikiyatrik problemler de görülebilir."
+    },
+    {
+     "metin": "Disülfiram (aldehid dehidrogenaz inhibitörü, caydırıcı), naltrekson (µ-opioid antagonisti, özlemi azaltır) ve akamprosat (zayıf NMDA antagonisti, GABAA aktivatörü)."
+    },
+    {
+     "metin": "Nalmefen (başka bir opioid antagonisti, benzer etkili ama onaysız); nöbet önleyiciler topiramat, gabapentin, valproat; SSRI'lar ve 5-HT3 antagonisti ondansetron (klinik denemeler genel olarak olumsuz, belirli alt gruplarda yarar olabilir)."
+    },
+    {
+     "metin": "Benzodiazepinler (klordiazepoksid, diazepam, lorazepam, oksazepam) bağımlılığın sürdürüm tedavisi değil, yoksunluk sendromunun tedavisidir."
+    }
+   ],
+   "klip": "o-2f12-09",
+   "ses": [
+    "Alkolizm tedavisinde FDA onaylı üç ilaç.",
+    "Alkol bağımlılığında yardımcı tedavi için FDA onaylı üç ilaç: disülfiram, naltrekson ve akamprosat.",
+    "Detoksifikasyondan sonra hem yatan hasta hem de ayaktan rehabilitasyon programlarıyla yoğun psikososyal tedavi alkol bağımlılığının temel tedavisidir.",
+    "En sık depresif ve anksiyete bozuklukları olmak üzere başka psikiyatrik problemler de görülebilir.",
+    "Disülfiram (aldehid dehidrogenaz inhibitörü, caydırıcı), naltrekson (µ-opioid antagonisti, özlemi azaltır) ve akamprosat (zayıf NMDA antagonisti, GABAA aktivatörü).",
+    "Nalmefen (başka bir opioid antagonisti, benzer etkili ama onaysız); nöbet önleyiciler topiramat, gabapentin, valproat; SSRI'lar ve 5-HT3 antagonisti ondansetron (klinik denemeler genel olarak olumsuz, belirli alt gruplarda yarar olabilir).",
+    "Benzodiazepinler (klordiazepoksid, diazepam, lorazepam, oksazepam) bağımlılığın sürdürüm tedavisi değil, yoksunluk sendromunun tedavisidir."
+   ],
+   "v": "858092a8c7"
+  },
+  {
+   "id": "2f12-04",
+   "baslik": "Akamprosat: FDA onaylı, zayıf NMDA antagonisti",
+   "giris": "Akamprosat alkol bağımlılığı tedavisinde FDA onaylıdır; zayıf NMDA-reseptör antagonisti ve GABAA-reseptör aktivatörüdür.",
+   "s": [
+    41
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Akamprosat, disülfiram ve naltrekson gibi, alkol bağımlılığında yardımcı tedavi için FDA onayı almıştır."
+    },
+    {
+     "metin": "Etanol gibi birçok molekül üzerinde etkilidir: GABAerjik, glutamaterjik, serotonerjik, noradrenerjik ve dopaminerjik reseptörler. En iyi tanımlanmış etkileri zayıf NMDA-reseptör antagonisti ve GABAA-reseptör aktivatörü olmasıdır."
+    },
+    {
+     "metin": "Tek başına kullanıldığında veya naltrekson ile kombine edildiğinde istatistiksel olarak anlamlı bir etki ortaya çıkartmamıştır."
+    },
+    {
+     "metin": "Günde üç kez 333 mg'lık barsak-kaplamalı 1-2 tablet."
+    },
+    {
+     "metin": "İlaç etkileşimine neden olmadığı sanılır; en sık advers etkileri gastrointestinal (bulantı, kusma, diyare) ve döküntülerdir; ciddi böbrek yetmezliğinde kullanılmaz."
+    },
+    {
+     "metin": "Fenitoin ve izoniazid disülfiramın metabolizmasını inhibe ettiği ilaçlardır; etilen glikol toksik bir alkoldür; glisin bu derste ilaç olarak geçmez."
+    }
+   ],
+   "klip": "o-2f12-04",
+   "ses": [
+    "Akamprosat: FDA onaylı, zayıf NMDA antagonisti.",
+    "Akamprosat alkol bağımlılığı tedavisinde FDA onaylıdır; zayıf NMDA-reseptör antagonisti ve GABAA-reseptör aktivatörüdür.",
+    "Akamprosat, disülfiram ve naltrekson gibi, alkol bağımlılığında yardımcı tedavi için FDA onayı almıştır.",
+    "Etanol gibi birçok molekül üzerinde etkilidir: GABAerjik, glutamaterjik, serotonerjik, noradrenerjik ve dopaminerjik reseptörler. En iyi tanımlanmış etkileri zayıf NMDA-reseptör antagonisti ve GABAA-reseptör aktivatörü olmasıdır.",
+    "Tek başına kullanıldığında veya naltrekson ile kombine edildiğinde istatistiksel olarak anlamlı bir etki ortaya çıkartmamıştır.",
+    "Günde üç kez 333 mg'lık barsak-kaplamalı 1-2 tablet.",
+    "İlaç etkileşimine neden olmadığı sanılır; en sık advers etkileri gastrointestinal (bulantı, kusma, diyare) ve döküntülerdir; ciddi böbrek yetmezliğinde kullanılmaz.",
+    "Fenitoin ve izoniazid disülfiramın metabolizmasını inhibe ettiği ilaçlardır; etilen glikol toksik bir alkoldür; glisin bu derste ilaç olarak geçmez."
+   ],
+   "v": "e7fcfc2061"
+  },
+  {
+   "id": "2f12-02",
+   "baslik": "Metanolün toksik metabolitleri: formaldehid ve format",
+   "giris": "Metanol toksisitesi metanolün kendisine değil, formaldehid ve formata metabolize edilmesine bağlıdır.",
+   "s": [
+    45
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Sentetik organik bileşiklerin endüstriyel üretiminde ve ticari solventlerde bulunur; evlerde en sık kutulanmış yakıt ve araba camı yıkama sıvısı şeklindedir."
+    },
+    {
+     "metin": "Deriden, solunum yollarından veya gastrointestinal kanaldan absorbe edilir, vücut sıvılarına dağılır."
+    },
+    {
+     "metin": "Alkol dehidrogenaz metanolü formaldehide, aldehid dehidrogenaz formaldehidi formata çevirir; format folat-bağımlı yolakla CO2 ve suya yıkılır."
+    },
+    {
+     "metin": "İnsanların metanole özgü duyarlılığı metanolün kendisinden değil, format ve formaldehide metabolize edilmesinden kaynaklanır."
+    },
+    {
+     "metin": "Toksik metabolitlere dönüşüm görece yavaş olduğundan ciddi toksisite belirtileri için 6-30 saat geçmesi gerekir."
+    },
+    {
+     "metin": "Asetaldehid etanolün ara metaboliti, asetik asit (asetat) etanol yıkımının son ürünüdür; etilen glikol metabolit değil ayrı bir toksik alkoldür ve aldehid ile oksalata yıkılır."
+    }
+   ],
+   "klip": "o-2f12-02",
+   "ses": [
+    "Metanolün toksik metabolitleri: formaldehid ve format.",
+    "Metanol toksisitesi metanolün kendisine değil, formaldehid ve formata metabolize edilmesine bağlıdır.",
+    "Sentetik organik bileşiklerin endüstriyel üretiminde ve ticari solventlerde bulunur; evlerde en sık kutulanmış yakıt ve araba camı yıkama sıvısı şeklindedir.",
+    "Deriden, solunum yollarından veya gastrointestinal kanaldan absorbe edilir, vücut sıvılarına dağılır.",
+    "Alkol dehidrogenaz metanolü formaldehide, aldehid dehidrogenaz formaldehidi formata çevirir; format folat-bağımlı yolakla CO2 ve suya yıkılır.",
+    "İnsanların metanole özgü duyarlılığı metanolün kendisinden değil, format ve formaldehide metabolize edilmesinden kaynaklanır.",
+    "Toksik metabolitlere dönüşüm görece yavaş olduğundan ciddi toksisite belirtileri için 6-30 saat geçmesi gerekir.",
+    "Asetaldehid etanolün ara metaboliti, asetik asit (asetat) etanol yıkımının son ürünüdür; etilen glikol metabolit değil ayrı bir toksik alkoldür ve aldehid ile oksalata yıkılır."
+   ],
+   "v": "717e2308fd"
+  },
+  {
+   "id": "2f12-01",
+   "baslik": "Fomepizol: alkol dehidrogenaz inhibitörü",
+   "giris": "Fomepizol alkol dehidrogenazı inhibe eder; metanol ve etilen glikol zehirlenmeleri için onaylı standart ilaçtır.",
+   "s": [
+    49,
+    52
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Fomepizol alkol dehidrogenaz enzimini inhibe eder; böylece metanolün formaldehid ve formata, etilen glikolün aldehid ve oksalata dönüşmesi engellenir (Şekil 23-3)."
+    },
+    {
+     "metin": "Metanol ve etilen glikol zehirlenmeleri için onay almıştır; etilen glikol zehirlenmesinin de standart ilacıdır ve intravenöz tedaviye hızla başlanır."
+    },
+    {
+     "metin": "İntravenöz etanol; alkol dehidrogenaza ilgisi metanolden fazla olduğu için enzimi yarışmalı biçimde meşgul eder."
+    },
+    {
+     "metin": "Disülfiram aldehid dehidrogenazı inhibe eder ve alkol bağımlılığında caydırıcı olarak kullanılır; naltrekson µ-opioid reseptörünü bloke eder; akamprosat zayıf NMDA antagonistidir. Bunların hiçbiri alkol dehidrogenazı etkilemez."
+    },
+    {
+     "metin": "Formatın CO2'ye yıkımı folat-bağımlı sistemlerle olur; bu yüzden folinik/folik asit destek olarak verilir, ama fomepizol bu basamakta değil ilk enzim basamağında etki eder."
+    }
+   ],
+   "klip": "o-2f12-01",
+   "ses": [
+    "Fomepizol: alkol dehidrogenaz inhibitörü.",
+    "Fomepizol alkol dehidrogenazı inhibe eder; metanol ve etilen glikol zehirlenmeleri için onaylı standart ilaçtır.",
+    "Fomepizol alkol dehidrogenaz enzimini inhibe eder; böylece metanolün formaldehid ve formata, etilen glikolün aldehid ve oksalata dönüşmesi engellenir (Şekil 23-3).",
+    "Metanol ve etilen glikol zehirlenmeleri için onay almıştır; etilen glikol zehirlenmesinin de standart ilacıdır ve intravenöz tedaviye hızla başlanır.",
+    "İntravenöz etanol; alkol dehidrogenaza ilgisi metanolden fazla olduğu için enzimi yarışmalı biçimde meşgul eder.",
+    "Disülfiram aldehid dehidrogenazı inhibe eder ve alkol bağımlılığında caydırıcı olarak kullanılır; naltrekson µ-opioid reseptörünü bloke eder; akamprosat zayıf NMDA antagonistidir. Bunların hiçbiri alkol dehidrogenazı etkilemez.",
+    "Formatın CO2'ye yıkımı folat-bağımlı sistemlerle olur; bu yüzden folinik/folik asit destek olarak verilir, ama fomepizol bu basamakta değil ilk enzim basamağında etki eder."
+   ],
+   "v": "33f1aa0487"
+  }
  ]
 }

@@ -15,7 +15,7 @@
   {
    "id": "anlatim",
    "baslik": "Bu derste ne anlatılacak",
-   "giris": "",
+   "giris": "Epilepsi nöbeti ve hastalığının tanımı, klinik pratik tanı ölçütleri, tetiklenmiş ve refleks nöbetler, ILAE 2017 sınıflamasına göre fokal ve jeneralize nöbetler anlatılır. Febril nöbet, epilepsi sendromları ve EEG bulguları, ayırıcı tanı, antiepileptik ilaçların farmakokinetiği ve status epileptikus tedavisi dersin diğer başlıklarıdır.",
    "maddeler": [
     {
      "metin": "Epilepsi nedir: nöbet ile hastalık ayrımı"
@@ -81,6 +81,7 @@
    "klip": "a-anlatim",
    "ses": [
     "Bu derste ne anlatılacak.",
+    "Epilepsi nöbeti ve hastalığının tanımı, klinik pratik tanı ölçütleri, tetiklenmiş ve refleks nöbetler, ILAE 2017 sınıflamasına göre fokal ve jeneralize nöbetler anlatılır. Febril nöbet, epilepsi sendromları ve EEG bulguları, ayırıcı tanı, antiepileptik ilaçların farmakokinetiği ve status epileptikus tedavisi dersin diğer başlıklarıdır.",
     "Epilepsi nedir: nöbet ile hastalık ayrımı.",
     "Klinik pratik tanım: üç durum, tetiklenmiş ve refleks nöbetler.",
     "İlk nöbetten sonra tekrar riskini artıran durumlar ve bulgular.",
@@ -102,7 +103,7 @@
     "Antiepileptik ilaçların farmakokinetiği.",
     "Status epileptikus ve tedavisi."
    ],
-   "v": "c1f8d84bb1"
+   "v": "1fe05f4558"
   },
   {
    "id": "kazanim",
@@ -164,6 +165,101 @@
     "STATUS EPİLEPTİKUS VE TEDAVİSİ: Çıkmış (dogrudan): Bir epileptik nöbetin alışılmıştan uzun sürmesi."
    ],
    "v": "2e6ff7af1c"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersten dokuz çıkmış soru vardır: Todd paralizisi üç ayrı sınavda soruldu, nöbet tetikleyicileri, psödonöbet ayrımı ve dirençli status epileptikus tedavisi de gelmiştir. Farmakoloji tarafında karbamazepin ve levetirasetamın farmakokinetiği, genetik tarafında epilepsiyle ilişkili kromozom anomalisi sorulmuştur.",
+   "maddeler": [
+    {
+     "baslik": "Postiktal Todd paralizisi",
+     "metin": "Postiktal Todd paralizisi, fokal motor nöbet bittikten sonra nöbetin tuttuğu ekstremitede kalan geçici güçsüzlüktür; frontal lob nöbetlerinde sık görülür.",
+     "neden": "Tanımdan adını soran soru 2024-25 ve 2025-26 sınavlarında geldi; nöbet sırasındaki bulgularla karıştırılır.",
+     "s": [
+      15,
+      22
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Tetiklenmiş nöbetler ve tetikleyiciler",
+     "metin": "Tetiklenmiş (akut semptomatik) nöbetler metabolik ya da toksik neden, kafa travması veya serebrovasküler hastalıkla akut dönemde gelişir ve epilepsi sayılmaz.",
+     "neden": "2020-21'de nöbet tetikleyicileri 'hangisi ya da hangileri' kalıbıyla soruldu ve yanıt tüm seçeneklerdi.",
+     "s": [
+      5
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Frontal lob kökenli fokal nöbetler",
+     "metin": "Frontal lob nöbetlerinde tonik ve postüral motor belirtiler, Jaksonyen yayılım, eskrimci ve figür 4 postürü ile postiktal Todd paralizisi sıktır.",
+     "neden": "2025-26'da Todd paralizisinin hangi epilepside sık görüldüğü soruldu; doğru yanıt frontal lob epilepsisiydi.",
+     "s": [
+      15
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Epilepsi, senkop ve psikojen atak ayrımı",
+     "metin": "Nonepileptik psikojen atakta pelvik hareket, asenkron hareket, göz açmaya direnç ve ağlama sıktır; epilepside dilin yanı ısırılır ve postiktal konfüzyon sıktır.",
+     "neden": "2025-26'da epileptik nöbet ile psödonöbet ayrımında yanlış ifade soruldu; tablo her yıl ayırıcı tanı sorusu kaynağıdır.",
+     "s": [
+      45
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Status epileptikus ve tedavi basamakları",
+     "metin": "Status epileptikus, nöbetin alışılmıştan uzun sürmesi ya da hasta eski nörolojik durumuna dönmeden nöbetlerin arka arkaya tekrarlamasıdır.",
+     "neden": "2022-23'te dirençli status epileptikusta kullanılmayan intravenöz ilaç soruldu; yanıt pregabalindi.",
+     "s": [
+      49
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "İlaç etkileşimi olmayan antiepileptikler",
+     "metin": "Levetirasetamın çoğu idrarla değişmeden atılır ve ilaç etkileşimi yoktur; pregabalin, gabapentin ve zonisamidde de ilaç etkileşimi yoktur.",
+     "neden": "2020-21'de enzimlerle metabolize olmayan, etkileşimi en az antiepileptik soruldu; 2018-19'da epilepsi tedavisinde kullanılan ilaçlar öncüllü soruldu.",
+     "s": [
+      47,
+      48
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Karbamazepinin farmakokinetiği",
+     "metin": "Karbamazepin enzim indüksiyonu ve otoindüksiyon yapar; yarılanma süresi tek dozda 24-45 saatken kronik kullanımda 8-24 saate iner.",
+     "neden": "2019-20'de karbamazepin farmakokinetiği öncüllü soruldu; enzim indüklemediği öncülü yanlıştı.",
+     "s": [
+      47
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Epilepsi hastalığının klinik pratik tanımı",
+     "metin": "Klinik pratik tanımda epilepsi hastalığı için üç durumdan biri gerekir: 24 saat arayla iki tetiklenmemiş nöbet, tek nöbet ve yüksek tekrar riski ya da epilepsi sendromu.",
+     "neden": "Profilde tanım soruları ilk sıradadır; 24 saat ve %60 eşiği sayı sorusu olarak sorulmaya en açık yerdir.",
+     "s": [
+      4
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu dersten dokuz çıkmış soru vardır: Todd paralizisi üç ayrı sınavda soruldu, nöbet tetikleyicileri, psödonöbet ayrımı ve dirençli status epileptikus tedavisi de gelmiştir. Farmakoloji tarafında karbamazepin ve levetirasetamın farmakokinetiği, genetik tarafında epilepsiyle ilişkili kromozom anomalisi sorulmuştur.",
+    "Postiktal Todd paralizisi: Postiktal Todd paralizisi, fokal motor nöbet bittikten sonra nöbetin tuttuğu ekstremitede kalan geçici güçsüzlüktür; frontal lob nöbetlerinde sık görülür.",
+    "Tetiklenmiş nöbetler ve tetikleyiciler: Tetiklenmiş (akut semptomatik) nöbetler metabolik ya da toksik neden, kafa travması veya serebrovasküler hastalıkla akut dönemde gelişir ve epilepsi sayılmaz.",
+    "Frontal lob kökenli fokal nöbetler: Frontal lob nöbetlerinde tonik ve postüral motor belirtiler, Jaksonyen yayılım, eskrimci ve figür 4 postürü ile postiktal Todd paralizisi sıktır.",
+    "Epilepsi, senkop ve psikojen atak ayrımı: Nonepileptik psikojen atakta pelvik hareket, asenkron hareket, göz açmaya direnç ve ağlama sıktır; epilepside dilin yanı ısırılır ve postiktal konfüzyon sıktır.",
+    "Status epileptikus ve tedavi basamakları: Status epileptikus, nöbetin alışılmıştan uzun sürmesi ya da hasta eski nörolojik durumuna dönmeden nöbetlerin arka arkaya tekrarlamasıdır.",
+    "İlaç etkileşimi olmayan antiepileptikler: Levetirasetamın çoğu idrarla değişmeden atılır ve ilaç etkileşimi yoktur; pregabalin, gabapentin ve zonisamidde de ilaç etkileşimi yoktur.",
+    "Karbamazepinin farmakokinetiği: Karbamazepin enzim indüksiyonu ve otoindüksiyon yapar; yarılanma süresi tek dozda 24-45 saatken kronik kullanımda 8-24 saate iner.",
+    "Epilepsi hastalığının klinik pratik tanımı: Klinik pratik tanımda epilepsi hastalığı için üç durumdan biri gerekir: 24 saat arayla iki tetiklenmemiş nöbet, tek nöbet ve yüksek tekrar riski ya da epilepsi sendromu."
+   ],
+   "v": "997471ef11"
   },
   {
    "id": "cikmis",
@@ -431,6 +527,22 @@
    "giris": "",
    "maddeler": [
     {
+     "baslik": "Postiktal Todd paralizisi",
+     "metin": "Tanımdan adını soran soru 2024-25 ve 2025-26 sınavlarında geldi; nöbet sırasındaki bulgularla karıştırılır."
+    },
+    {
+     "baslik": "Tetiklenmiş nöbetler ve tetikleyiciler",
+     "metin": "2020-21'de nöbet tetikleyicileri 'hangisi ya da hangileri' kalıbıyla soruldu ve yanıt tüm seçeneklerdi."
+    },
+    {
+     "baslik": "Frontal lob kökenli fokal nöbetler",
+     "metin": "2025-26'da Todd paralizisinin hangi epilepside sık görüldüğü soruldu; doğru yanıt frontal lob epilepsisiydi."
+    },
+    {
+     "baslik": "Epilepsi, senkop ve psikojen atak ayrımı",
+     "metin": "2025-26'da epileptik nöbet ile psödonöbet ayrımında yanlış ifade soruldu; tablo her yıl ayırıcı tanı sorusu kaynağıdır."
+    },
+    {
      "baslik": "Çalışma yolu",
      "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
     }
@@ -438,14 +550,439 @@
    "klip": "a-odak",
    "ses": [
     "Nelere odaklanmalısın.",
+    "Postiktal Todd paralizisi: Tanımdan adını soran soru 2024-25 ve 2025-26 sınavlarında geldi; nöbet sırasındaki bulgularla karıştırılır.",
+    "Tetiklenmiş nöbetler ve tetikleyiciler: 2020-21'de nöbet tetikleyicileri 'hangisi ya da hangileri' kalıbıyla soruldu ve yanıt tüm seçeneklerdi.",
+    "Frontal lob kökenli fokal nöbetler: 2025-26'da Todd paralizisinin hangi epilepside sık görüldüğü soruldu; doğru yanıt frontal lob epilepsisiydi.",
+    "Epilepsi, senkop ve psikojen atak ayrımı: 2025-26'da epileptik nöbet ile psödonöbet ayrımında yanlış ifade soruldu; tablo her yıl ayırıcı tanı sorusu kaynağıdır.",
     "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
    ],
-   "v": "55d56db90f"
+   "v": "d870d23de9"
   }
  ],
- "ozet": null,
- "ozetEksik": [
-  "önem listesi",
-  "sesli örnek soru çözücü"
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Epilepsi nöbeti ve hastalığının tanımı, klinik pratik tanı ölçütleri, tetiklenmiş ve refleks nöbetler, ILAE 2017 sınıflamasına göre fokal ve jeneralize nöbetler anlatılır. Febril nöbet, epilepsi sendromları ve EEG bulguları, ayırıcı tanı, antiepileptik ilaçların farmakokinetiği ve status epileptikus tedavisi dersin diğer başlıklarıdır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Epilepsi nöbeti ve hastalığının tanımı, klinik pratik tanı ölçütleri, tetiklenmiş ve refleks nöbetler, ILAE 2017 sınıflamasına göre fokal ve jeneralize nöbetler anlatılır. Febril nöbet, epilepsi sendromları ve EEG bulguları, ayırıcı tanı, antiepileptik ilaçların farmakokinetiği ve status epileptikus tedavisi dersin diğer başlıklarıdır."
+   ],
+   "v": "a7555fe9d8"
+  },
+  {
+   "id": "2n07-10",
+   "baslik": "Epilepsi hastalığının klinik pratik tanımı",
+   "giris": "Klinik pratik tanımda epilepsi hastalığı için üç durumdan biri gerekir: 24 saat arayla iki tetiklenmemiş nöbet, tek nöbet ve yüksek tekrar riski ya da epilepsi sendromu.",
+   "s": [
+    4
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yirmi dört saat arayla en az iki tetiklenmemiş (spontan) ya da refleks özellikli nöbet."
+    },
+    {
+     "metin": "En az bir tetiklenmemiş ya da refleks özellikli nöbet ve 10 yıl içindeki tekrar riskinin, iki tetiklenmemiş nöbetteki riske benzer olması; bu risk en az %60'tır."
+    },
+    {
+     "metin": "Epilepsi sendromlarından birinin varlığı."
+    },
+    {
+     "metin": "Metabolik ya da toksik neden, kafa travması ya da serebrovasküler hastalığın akut döneminde gelişen tetiklenmiş nöbetler epilepsi hastalığı sayılmaz."
+    },
+    {
+     "metin": "Epilepsi hastalığından söz etmek için en az bir epileptik nöbet geçirmiş olmak gerekir."
+    }
+   ],
+   "klip": "o-2n07-10",
+   "ses": [
+    "Epilepsi hastalığının klinik pratik tanımı.",
+    "Klinik pratik tanımda epilepsi hastalığı için üç durumdan biri gerekir: 24 saat arayla iki tetiklenmemiş nöbet, tek nöbet ve yüksek tekrar riski ya da epilepsi sendromu.",
+    "Yirmi dört saat arayla en az iki tetiklenmemiş (spontan) ya da refleks özellikli nöbet.",
+    "En az bir tetiklenmemiş ya da refleks özellikli nöbet ve 10 yıl içindeki tekrar riskinin, iki tetiklenmemiş nöbetteki riske benzer olması; bu risk en az %60'tır.",
+    "Epilepsi sendromlarından birinin varlığı.",
+    "Metabolik ya da toksik neden, kafa travması ya da serebrovasküler hastalığın akut döneminde gelişen tetiklenmiş nöbetler epilepsi hastalığı sayılmaz.",
+    "Epilepsi hastalığından söz etmek için en az bir epileptik nöbet geçirmiş olmak gerekir."
+   ],
+   "v": "e0628fa9f5"
+  },
+  {
+   "id": "2n07-03",
+   "baslik": "Tetiklenmiş nöbetler ve tetikleyiciler",
+   "giris": "Tetiklenmiş (akut semptomatik) nöbetler metabolik ya da toksik neden, kafa travması veya serebrovasküler hastalıkla akut dönemde gelişir ve epilepsi sayılmaz.",
+   "s": [
+    5
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Tetiklenmiş nöbetlerin diğer adı akut semptomatik nöbettir."
+    },
+    {
+     "metin": "Metabolik ya da toksik bir neden, kafa travması, serebrovasküler hastalık gibi nedenler öncesinde normal olan beynin nöbet eşiğini düşürür."
+    },
+    {
+     "metin": "Hipoglisemi, metabolik nedenlerin başında gelir."
+    },
+    {
+     "metin": "Alkol gibi toksik etkili maddeler toksik nedenler grubundadır."
+    },
+    {
+     "metin": "Epilepsinin etyolojik alt grupları arasında enfeksiyonlar da yer alır; merkezi sinir sistemi enfeksiyonu akut dönemde nöbeti tetikleyebilir."
+    },
+    {
+     "metin": "Akut dönemde gelişen bu nöbetler epilepsi hastalığı kapsamında değerlendirilmez."
+    },
+    {
+     "metin": "Bazı epilepsi hastalarında tekrarlayan nöbetler başlamadan önce kafa travması gibi bir tetikleyici bulunabilir."
+    }
+   ],
+   "klip": "o-2n07-03",
+   "ses": [
+    "Tetiklenmiş nöbetler ve tetikleyiciler.",
+    "Tetiklenmiş (akut semptomatik) nöbetler metabolik ya da toksik neden, kafa travması veya serebrovasküler hastalıkla akut dönemde gelişir ve epilepsi sayılmaz.",
+    "Tetiklenmiş nöbetlerin diğer adı akut semptomatik nöbettir.",
+    "Metabolik ya da toksik bir neden, kafa travması, serebrovasküler hastalık gibi nedenler öncesinde normal olan beynin nöbet eşiğini düşürür.",
+    "Hipoglisemi, metabolik nedenlerin başında gelir.",
+    "Alkol gibi toksik etkili maddeler toksik nedenler grubundadır.",
+    "Epilepsinin etyolojik alt grupları arasında enfeksiyonlar da yer alır; merkezi sinir sistemi enfeksiyonu akut dönemde nöbeti tetikleyebilir.",
+    "Akut dönemde gelişen bu nöbetler epilepsi hastalığı kapsamında değerlendirilmez.",
+    "Bazı epilepsi hastalarında tekrarlayan nöbetler başlamadan önce kafa travması gibi bir tetikleyici bulunabilir."
+   ],
+   "v": "956c48bf3c"
+  },
+  {
+   "id": "2n07-13",
+   "baslik": "Tekrar riski yüksek görüntüleme ve EEG bulguları",
+   "giris": "Tekrar riski yüksek nörogörüntüleme bulguları hipokampal skleroz, kortikal gelişim anomalileri, tümörler ve kortikal damar hastalıklarıdır; EEG'de epileptiform deşarj ve TIRDA aranır.",
+   "s": [
+    8
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Nörogörüntülemede tekrar riskini artıran ilk bulgudur."
+    },
+    {
+     "metin": "Fokal kortikal displazi, tuberoskleroz, lizensefali, heterotopi, polimikrogiri, hemimegalensefali, şizensefali ve hipotalamik hamartom."
+    },
+    {
+     "metin": "Düşük dereceli glial tümörler, disembriyoblastik nöroepitelyal tümörler (DNET) ve gangliogliomlar; gangliogliom gelişim anomalisi değil tümördür."
+    },
+    {
+     "metin": "Kortikal yerleşimli serebrovasküler hastalıklar, kavernom ve arteriovenöz malformasyonlar, nörosistiserkozis, porensefalik kist ve travmatik beyin hasarı."
+    },
+    {
+     "metin": "Jeneralize ya da fokal diken ve keskin-yavaş dalga kompleksleri şeklinde epileptiform deşarjlar; temporal lob epilepsisi varlığında temporal aralıklı ritmik delta aktivitesi (TIRDA). TIRDA bir görüntüleme bulgusu değil, EEG bulgusudur."
+    }
+   ],
+   "klip": "o-2n07-13",
+   "ses": [
+    "Tekrar riski yüksek görüntüleme ve EEG bulguları.",
+    "Tekrar riski yüksek nörogörüntüleme bulguları hipokampal skleroz, kortikal gelişim anomalileri, tümörler ve kortikal damar hastalıklarıdır; EEG'de epileptiform deşarj ve TIRDA aranır.",
+    "Nörogörüntülemede tekrar riskini artıran ilk bulgudur.",
+    "Fokal kortikal displazi, tuberoskleroz, lizensefali, heterotopi, polimikrogiri, hemimegalensefali, şizensefali ve hipotalamik hamartom.",
+    "Düşük dereceli glial tümörler, disembriyoblastik nöroepitelyal tümörler (DNET) ve gangliogliomlar; gangliogliom gelişim anomalisi değil tümördür.",
+    "Kortikal yerleşimli serebrovasküler hastalıklar, kavernom ve arteriovenöz malformasyonlar, nörosistiserkozis, porensefalik kist ve travmatik beyin hasarı.",
+    "Jeneralize ya da fokal diken ve keskin-yavaş dalga kompleksleri şeklinde epileptiform deşarjlar; temporal lob epilepsisi varlığında temporal aralıklı ritmik delta aktivitesi (TIRDA). TIRDA bir görüntüleme bulgusu değil, EEG bulgusudur."
+   ],
+   "v": "facaa6b934"
+  },
+  {
+   "id": "2n07-01",
+   "baslik": "Postiktal Todd paralizisi",
+   "giris": "Postiktal Todd paralizisi, fokal motor nöbet bittikten sonra nöbetin tuttuğu ekstremitede kalan geçici güçsüzlüktür; frontal lob nöbetlerinde sık görülür.",
+   "s": [
+    15,
+    22
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Postiktal, nöbet sonrası demektir; Todd paralizisi fokal motor nöbetin ardından nöbetin görüldüğü ekstremitede ortaya çıkan ve sonra düzelen geçici güçsüzlüktür."
+    },
+    {
+     "metin": "Frontal lob kökenli fokal nöbetlerde postiktal Todd paralizisi sık görülür."
+    },
+    {
+     "metin": "Basit febril nöbet denebilmesi için postiktal Todd parezisinin olmaması gerekir; komplike febril nöbette Todd parezisi olabilir."
+    },
+    {
+     "metin": "Motor hareketlerin nöbet sırasında komşu vücut kısımlarına ilerleyici şekilde yayılmasıdır; nöbet sonrası güçsüzlük değildir."
+    },
+    {
+     "metin": "Amaçlı ya da amaçsız tekrarlayan hareketlerdir, nöbet sırasında görülür."
+    },
+    {
+     "metin": "Düzensiz, ani sıçramalardır."
+    },
+    {
+     "metin": "Nöbetin alışılmıştan uzun sürmesi ya da hasta düzelmeden nöbetlerin arka arkaya tekrarlamasıdır."
+    }
+   ],
+   "klip": "o-2n07-01",
+   "ses": [
+    "Postiktal Todd paralizisi.",
+    "Postiktal Todd paralizisi, fokal motor nöbet bittikten sonra nöbetin tuttuğu ekstremitede kalan geçici güçsüzlüktür; frontal lob nöbetlerinde sık görülür.",
+    "Postiktal, nöbet sonrası demektir; Todd paralizisi fokal motor nöbetin ardından nöbetin görüldüğü ekstremitede ortaya çıkan ve sonra düzelen geçici güçsüzlüktür.",
+    "Frontal lob kökenli fokal nöbetlerde postiktal Todd paralizisi sık görülür.",
+    "Basit febril nöbet denebilmesi için postiktal Todd parezisinin olmaması gerekir; komplike febril nöbette Todd parezisi olabilir.",
+    "Motor hareketlerin nöbet sırasında komşu vücut kısımlarına ilerleyici şekilde yayılmasıdır; nöbet sonrası güçsüzlük değildir.",
+    "Amaçlı ya da amaçsız tekrarlayan hareketlerdir, nöbet sırasında görülür.",
+    "Düzensiz, ani sıçramalardır.",
+    "Nöbetin alışılmıştan uzun sürmesi ya da hasta düzelmeden nöbetlerin arka arkaya tekrarlamasıdır."
+   ],
+   "v": "4cf61d3459"
+  },
+  {
+   "id": "2n07-02",
+   "baslik": "Frontal lob kökenli fokal nöbetler",
+   "giris": "Frontal lob nöbetlerinde tonik ve postüral motor belirtiler, Jaksonyen yayılım, eskrimci ve figür 4 postürü ile postiktal Todd paralizisi sıktır.",
+   "s": [
+    15
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Tonik ve postüral olabilen motor belirtiler sıktır (%50-60). Farkındalık korunmuşken tonik baş dönmesi tipiktir; zorlu baş dönmesi karşı taraftaki frontal loba lateralizasyon sağlar, ancak lateralize edici değeri düşüktür."
+    },
+    {
+     "metin": "Motor hareketler komşu vücut kısımlarına ilerleyici şekilde yayılır."
+    },
+    {
+     "metin": "Bir kol ekstansör, karşı kol dirsek ve bilekten fleksör postürdedir; ekstansör kolun karşı tarafına lateralize eder."
+    },
+    {
+     "metin": "Bir kolda ekstansör, karşı kolda dirsekten fleksör tonik kasılma; epileptojenik alan ekstansör kolun karşı tarafıdır."
+    },
+    {
+     "metin": "Başlangıçta pedal çevirme, koşma, tekme atma gibi kompleks hareketler sıktır."
+    },
+    {
+     "metin": "Boşalım bilateral olunca düşme, postiktal Todd paralizisi, konuşmanın durması ve vokalizasyon görülür; nöbetler sıklıkla uykuda ve kümeler hâlinde gelir, histeriyle karışabilir."
+    },
+    {
+     "metin": "Temporal lob nöbetlerinde ise otonom, kognitif ve duysal belirtiler ile oroalimenter otomatizmalar öndedir."
+    }
+   ],
+   "klip": "o-2n07-02",
+   "ses": [
+    "Frontal lob kökenli fokal nöbetler.",
+    "Frontal lob nöbetlerinde tonik ve postüral motor belirtiler, Jaksonyen yayılım, eskrimci ve figür 4 postürü ile postiktal Todd paralizisi sıktır.",
+    "Tonik ve postüral olabilen motor belirtiler sıktır (%50-60). Farkındalık korunmuşken tonik baş dönmesi tipiktir; zorlu baş dönmesi karşı taraftaki frontal loba lateralizasyon sağlar, ancak lateralize edici değeri düşüktür.",
+    "Motor hareketler komşu vücut kısımlarına ilerleyici şekilde yayılır.",
+    "Bir kol ekstansör, karşı kol dirsek ve bilekten fleksör postürdedir; ekstansör kolun karşı tarafına lateralize eder.",
+    "Bir kolda ekstansör, karşı kolda dirsekten fleksör tonik kasılma; epileptojenik alan ekstansör kolun karşı tarafıdır.",
+    "Başlangıçta pedal çevirme, koşma, tekme atma gibi kompleks hareketler sıktır.",
+    "Boşalım bilateral olunca düşme, postiktal Todd paralizisi, konuşmanın durması ve vokalizasyon görülür; nöbetler sıklıkla uykuda ve kümeler hâlinde gelir, histeriyle karışabilir.",
+    "Temporal lob nöbetlerinde ise otonom, kognitif ve duysal belirtiler ile oroalimenter otomatizmalar öndedir."
+   ],
+   "v": "cc9f7c0d20"
+  },
+  {
+   "id": "2n07-22",
+   "baslik": "Basit ve komplike febril nöbet ayrımı",
+   "giris": "Komplike febril nöbet 15 dakikadan uzun sürebilir, fokal olabilir, 24 saatte tekrarlayabilir, fokal defisit ve Todd parezisi bırakabilir.",
+   "s": [
+    22
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Basit febril nöbet 15 dakikadan kısadır; komplike febril nöbet 15 dakikadan uzun olabilir."
+    },
+    {
+     "metin": "Basit febril nöbet jeneralizedir, bilateral tonik-klonik başlar; komplike febril nöbet fokal ya da jeneralize olabilir."
+    },
+    {
+     "metin": "Basitte yoktur, komplikede olabilir."
+    },
+    {
+     "metin": "Basitte yoktur, komplikede olabilir."
+    },
+    {
+     "metin": "Basitte yoktur, komplikede olabilir."
+    },
+    {
+     "metin": "Bu özelliklerden yalnız biri bile varsa nöbet komplike sayılır."
+    },
+    {
+     "metin": "Komplike febril nöbette ileride epilepsi gelişme riski daha yüksektir."
+    }
+   ],
+   "klip": "o-2n07-22",
+   "ses": [
+    "Basit ve komplike febril nöbet ayrımı.",
+    "Komplike febril nöbet 15 dakikadan uzun sürebilir, fokal olabilir, 24 saatte tekrarlayabilir, fokal defisit ve Todd parezisi bırakabilir.",
+    "Basit febril nöbet 15 dakikadan kısadır; komplike febril nöbet 15 dakikadan uzun olabilir.",
+    "Basit febril nöbet jeneralizedir, bilateral tonik-klonik başlar; komplike febril nöbet fokal ya da jeneralize olabilir.",
+    "Basitte yoktur, komplikede olabilir.",
+    "Basitte yoktur, komplikede olabilir.",
+    "Basitte yoktur, komplikede olabilir.",
+    "Bu özelliklerden yalnız biri bile varsa nöbet komplike sayılır.",
+    "Komplike febril nöbette ileride epilepsi gelişme riski daha yüksektir."
+   ],
+   "v": "b97e616d01"
+  },
+  {
+   "id": "2n07-05",
+   "baslik": "Epilepsi, senkop ve psikojen atak ayrımı",
+   "giris": "Nonepileptik psikojen atakta pelvik hareket, asenkron hareket, göz açmaya direnç ve ağlama sıktır; epilepside dilin yanı ısırılır ve postiktal konfüzyon sıktır.",
+   "s": [
+    45
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Hemen daima ayakta olur; terleme sık, renk beyaz, başlangıç yavaş, bilinçsiz süre saniyeler, düzelme hızlıdır; uykuda çok seyrektir."
+    },
+    {
+     "metin": "Her postürde olur; renk morarma, başlangıç ani ya da aura ile, uykuda olma sık, kasılma tipik, idrar kaçırma sıktır. Bilinçsiz süre dakikalardır, düzelme yavaştır, postiktal konfüzyon sıktır; dilin yan tarafı ısırılır, EEG'de iktal bulgu çoğunlukla vardır."
+    },
+    {
+     "metin": "Uykuda olmaz, uyanınca gelir; yalnızken çok nadirdir. Pelvik hareket, asenkron hareket, yuvarlanma, göz açmaya direnç, ağlama ve indüklenebilme sıktır. Dil ısırılırsa ucu ısırılır; postiktal konfüzyon yok ya da seyrektir; EEG'de iktal bulgu yoktur. Bilinçsiz süre genelde yok ya da tersine çok uzundur."
+    },
+    {
+     "metin": "Epilepside uykusuzluk ve stres, psikojen atakta stresli olay ve kalabalık, senkopta açlık, sıcak ve ayakta uzun kalmadır."
+    },
+    {
+     "metin": "Alışılmıştan uzun süren nöbet status epileptikus olarak adlandırılır; tipik epileptik nöbet dakikalar sürer."
+    }
+   ],
+   "klip": "o-2n07-05",
+   "ses": [
+    "Epilepsi, senkop ve psikojen atak ayrımı.",
+    "Nonepileptik psikojen atakta pelvik hareket, asenkron hareket, göz açmaya direnç ve ağlama sıktır; epilepside dilin yanı ısırılır ve postiktal konfüzyon sıktır.",
+    "Hemen daima ayakta olur; terleme sık, renk beyaz, başlangıç yavaş, bilinçsiz süre saniyeler, düzelme hızlıdır; uykuda çok seyrektir.",
+    "Her postürde olur; renk morarma, başlangıç ani ya da aura ile, uykuda olma sık, kasılma tipik, idrar kaçırma sıktır. Bilinçsiz süre dakikalardır, düzelme yavaştır, postiktal konfüzyon sıktır; dilin yan tarafı ısırılır, EEG'de iktal bulgu çoğunlukla vardır.",
+    "Uykuda olmaz, uyanınca gelir; yalnızken çok nadirdir. Pelvik hareket, asenkron hareket, yuvarlanma, göz açmaya direnç, ağlama ve indüklenebilme sıktır. Dil ısırılırsa ucu ısırılır; postiktal konfüzyon yok ya da seyrektir; EEG'de iktal bulgu yoktur. Bilinçsiz süre genelde yok ya da tersine çok uzundur.",
+    "Epilepside uykusuzluk ve stres, psikojen atakta stresli olay ve kalabalık, senkopta açlık, sıcak ve ayakta uzun kalmadır.",
+    "Alışılmıştan uzun süren nöbet status epileptikus olarak adlandırılır; tipik epileptik nöbet dakikalar sürer."
+   ],
+   "v": "39b531801c"
+  },
+  {
+   "id": "2n07-07",
+   "baslik": "İlaç etkileşimi olmayan antiepileptikler",
+   "giris": "Levetirasetamın çoğu idrarla değişmeden atılır ve ilaç etkileşimi yoktur; pregabalin, gabapentin ve zonisamidde de ilaç etkileşimi yoktur.",
+   "s": [
+    47,
+    48
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "%66'sı idrarla değişmeden atılır, %34'ü inaktif bileşenlerine hidroliz olur; ilaç etkileşimi yoktur, proteine bağlanması %10'dan azdır."
+    },
+    {
+     "metin": "Proteine bağlanmaz, değişmeden idrarla atılır, ilaç etkileşimi yoktur; gabapentinin emilimi doza bağımlıdır."
+    },
+    {
+     "metin": "Enzim inhibisyonu ve indüksiyonu yapmaz, ilaç etkileşimi yoktur."
+    },
+    {
+     "metin": "Fenobarbital, karbamazepin ve fenitoin enzim indüksiyonu yapar; valproat enzim inhibisyonu yapar. Tiagabin hepatik yolla (%90) yıkılır, enzim indükleyicilerle yarılanma ömrü azalır; topiramatın yarılanma ömrü enzim indükleyicilerle değişir."
+    },
+    {
+     "metin": "Karbamazepin, Na-valproat, fenitoin, fenobarbital, lamotrijin, levetirasetam, topiramat, pregabalin, gabapentin, lakozamid ve diğerleri antiepileptik ilaç tablosunda yer alır."
+    }
+   ],
+   "klip": "o-2n07-07",
+   "ses": [
+    "İlaç etkileşimi olmayan antiepileptikler.",
+    "Levetirasetamın çoğu idrarla değişmeden atılır ve ilaç etkileşimi yoktur; pregabalin, gabapentin ve zonisamidde de ilaç etkileşimi yoktur.",
+    "%66'sı idrarla değişmeden atılır, %34'ü inaktif bileşenlerine hidroliz olur; ilaç etkileşimi yoktur, proteine bağlanması %10'dan azdır.",
+    "Proteine bağlanmaz, değişmeden idrarla atılır, ilaç etkileşimi yoktur; gabapentinin emilimi doza bağımlıdır.",
+    "Enzim inhibisyonu ve indüksiyonu yapmaz, ilaç etkileşimi yoktur.",
+    "Fenobarbital, karbamazepin ve fenitoin enzim indüksiyonu yapar; valproat enzim inhibisyonu yapar. Tiagabin hepatik yolla (%90) yıkılır, enzim indükleyicilerle yarılanma ömrü azalır; topiramatın yarılanma ömrü enzim indükleyicilerle değişir.",
+    "Karbamazepin, Na-valproat, fenitoin, fenobarbital, lamotrijin, levetirasetam, topiramat, pregabalin, gabapentin, lakozamid ve diğerleri antiepileptik ilaç tablosunda yer alır."
+   ],
+   "v": "95b51a2235"
+  },
+  {
+   "id": "2n07-08",
+   "baslik": "Karbamazepinin farmakokinetiği",
+   "giris": "Karbamazepin enzim indüksiyonu ve otoindüksiyon yapar; yarılanma süresi tek dozda 24-45 saatken kronik kullanımda 8-24 saate iner.",
+   "s": [
+    47
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "6-12 saatte emilir, biyoyararlanımı %75-85'tir."
+    },
+    {
+     "metin": "%70-80'dir."
+    },
+    {
+     "metin": "Tek dozda 24-45 saat, kronik kullanımda 8-24 saattir; bu kısalma otoindüksiyona bağlıdır."
+    },
+    {
+     "metin": "Hepatik metabolizma %95'tir; aktif metaboliti karbamazepin-10,11-epoksittir."
+    },
+    {
+     "metin": "Hem enzim indüksiyonu hem otoindüksiyon yapar; mikrozomal enzimleri indüklemediği ifadesi yanlıştır."
+    },
+    {
+     "metin": "Na-valproat enzim inhibisyonu ve otoindüksiyon, fenitoin ve fenobarbital enzim indüksiyonu, okskarbazepin zayıf enzim indüksiyonu yapar."
+    }
+   ],
+   "klip": "o-2n07-08",
+   "ses": [
+    "Karbamazepinin farmakokinetiği.",
+    "Karbamazepin enzim indüksiyonu ve otoindüksiyon yapar; yarılanma süresi tek dozda 24-45 saatken kronik kullanımda 8-24 saate iner.",
+    "6-12 saatte emilir, biyoyararlanımı %75-85'tir.",
+    "%70-80'dir.",
+    "Tek dozda 24-45 saat, kronik kullanımda 8-24 saattir; bu kısalma otoindüksiyona bağlıdır.",
+    "Hepatik metabolizma %95'tir; aktif metaboliti karbamazepin-10,11-epoksittir.",
+    "Hem enzim indüksiyonu hem otoindüksiyon yapar; mikrozomal enzimleri indüklemediği ifadesi yanlıştır.",
+    "Na-valproat enzim inhibisyonu ve otoindüksiyon, fenitoin ve fenobarbital enzim indüksiyonu, okskarbazepin zayıf enzim indüksiyonu yapar."
+   ],
+   "v": "861096d61f"
+  },
+  {
+   "id": "2n07-06",
+   "baslik": "Status epileptikus ve tedavi basamakları",
+   "giris": "Status epileptikus, nöbetin alışılmıştan uzun sürmesi ya da hasta eski nörolojik durumuna dönmeden nöbetlerin arka arkaya tekrarlamasıdır.",
+   "s": [
+    49
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Nöbetin alışılmıştan uzun sürmesi ya da hasta düzelip eski nörolojik durumuna dönmeden çok sayıda nöbetin arka arkaya tekrarlamasıdır."
+    },
+    {
+     "metin": "Hastane öncesi ve acilde damar yolu açıksa IV diazepam; damar yolu yoksa IM midazolam, bukkal midazolam ya da rektal diazepam verilir."
+    },
+    {
+     "metin": "Hastanede IV fenitoin yüklemesi ya da IV valproat; levetirasetam, fenobarbital ya da lakozamid IV seçeneklerdir."
+    },
+    {
+     "metin": "Yoğun bakımda midazolam, propofol ya da pentotal infüzyonu, ketamin; EEG monitorizasyonu yapılır."
+    },
+    {
+     "metin": "Hava yolu, kan basıncı, damar yolu, EKG, kan sayımı, şeker, elektrolit, antiepileptik düzeyi, arter kan gazı ve toksin taraması tüm basamaklarda izlenir."
+    },
+    {
+     "metin": "Pregabalin antiepileptik ilaç tablosunda yer alır ama status epileptikus algoritmasında intravenöz seçenek olarak bulunmaz."
+    }
+   ],
+   "klip": "o-2n07-06",
+   "ses": [
+    "Status epileptikus ve tedavi basamakları.",
+    "Status epileptikus, nöbetin alışılmıştan uzun sürmesi ya da hasta eski nörolojik durumuna dönmeden nöbetlerin arka arkaya tekrarlamasıdır.",
+    "Nöbetin alışılmıştan uzun sürmesi ya da hasta düzelip eski nörolojik durumuna dönmeden çok sayıda nöbetin arka arkaya tekrarlamasıdır.",
+    "Hastane öncesi ve acilde damar yolu açıksa IV diazepam; damar yolu yoksa IM midazolam, bukkal midazolam ya da rektal diazepam verilir.",
+    "Hastanede IV fenitoin yüklemesi ya da IV valproat; levetirasetam, fenobarbital ya da lakozamid IV seçeneklerdir.",
+    "Yoğun bakımda midazolam, propofol ya da pentotal infüzyonu, ketamin; EEG monitorizasyonu yapılır.",
+    "Hava yolu, kan basıncı, damar yolu, EKG, kan sayımı, şeker, elektrolit, antiepileptik düzeyi, arter kan gazı ve toksin taraması tüm basamaklarda izlenir.",
+    "Pregabalin antiepileptik ilaç tablosunda yer alır ama status epileptikus algoritmasında intravenöz seçenek olarak bulunmaz."
+   ],
+   "v": "36c8080148"
+  }
  ]
 }

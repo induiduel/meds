@@ -2426,3 +2426,40 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** (1) `oyna` dalı biriken ceza denetiminden (`yiginUyar`) geçen karta ayrıca renk/değer eşleşmesi (`duzUyar`) uyguluyordu. (2) UNO durumu yalnız "kart oynayıp 2→1" anında işaretleniyordu; el sayısını değiştiren öteki yollar (toplu atma, takas, devir, verme) hesaba katılmıyordu. (3) Zorunluluk bayrağı (`takimOyun`) kurulduktan sonra aynı hamlede "eli biten oyuncuya yarı verme" araya girip ortağın uyan tek kartını elinden alabiliyordu. (4) `al()` desteyi yenilerken atıkta yalnız en üstteki kartı bırakıyordu; karar bekleyen kapalı kart geri alınınca altındaki gerçek üst kart desteye gitmiş oluyordu.
 - **Çözüm:** (1) Biriken ceza varken yalnız `yiginUyar` geçerli. (2) `sonIslem` her hamlenin sonunda eli 1'e düşen herkesi (oynarken UNO diyen hariç) `yakalanabilir` yapar. (3) Uyan kart kalmadıysa çekme serbest: jokeri oynayan 2 kart çeker, sıra geçer. (4) `bekle.tur === 'yalan'` iken atıkta iki kart bırakılır.
 - **Önleme:** Uno'ya kural/kart ekleyen her değişiklikte `npx tsx src/services/masa/motor/uno.sinama.ts` ve `unoMod.sinama.ts` 0 hata vermeli: her mod için birim senaryolar + bütün oyuncu sayılarında hepsi-bot rastgele eller (kart korunumu, tıkanmama, gizlilik, puan toplamı) + bulanık hamle. Yeni bir "bekleyen karar" ya da el sayısını değiştiren etki eklenince korunum denetimine (`korunum`) ve `sonIslem` UNO taramasına dahil edilir. Arayüz: `meds_temp/uno_ui/uno_ui.mjs` (başsız Chrome, `?masatest`, 12 mod × telefon dikey/yatay, tablet, masaüstü; taşma, dokunma hedefi, konsol hatası). Başsız sınama çıktısı `/tmp/claude-1000` kotasına yazılmaz (EDQUOT ile yarıda kesildi), `meds_temp` altına yazılır.
+
+
+### H536 — Değerlendirme kapısı tasarım PDF'inin harf aralıklı başlıklarını ("Y A N I TL A R", "KAYN AKLAR") kısaltma sanıyordu (2026-11-09, k2-22)
+- **Belirti:** `degerlendirme_dogrula.py k2-22` 24 "kısaltma sözlükte yok" HATA'sı verdi: ITLAR, ÜRÜLE, ŞLEME, FREUD, GP…; hiçbiri kısaltma değildi.
+- **Kök neden:** Psikiyatri slaytları tasarım şablonunda büyük harfli, harf aralığı açılmış başlık kullanıyor; pymupdf metni harf gruplarını ayrı jeton veriyor; kaynakça sayfası da "KAYN AKLAR" diye başladığı için H510 istisnası tutmuyordu; atıf satırındaki yazar baş harfleri (Yates GP) de aday sayılıyordu.
+- **Kalıcı çözüm:** kapı tamamı büyük harf olan satırları (başlık/üst yazı) kısaltma taramasından çıkarır, ilk satırı boşluksuz birleştirip KAYNAK/REFERENCES ile başlayan sayfayı kaynakça sayar, "Soyad GP," atıf baş harflerini eler. Eski derslerde (k2-20/21/38) sonuç değişmedi (0 HATA).
+- **Önleme:** Kapıyı geçmek için sözlüğe anlamsız kısaltma yazılmaz (H510); yeni biçim tuzağı kapının kendisinde düzeltilir.
+
+### H537 — A1a/A2 "kanıt" alanları birden çok satırı birleştiren özetler olduğundan değerlendirme kapısından geçmiyordu (2026-11-09/10, dört derste)
+- **Belirti:** k2-22 5 çıkmış + 3 atom, k2-23 5 + 10, k2-58 4 + 1, k2-24 1 + 34 kayıt "kanıt sN'de yok" HATA'sı verdi.
+- **Kök neden:** yazarlar `kanit`'i birden çok slayt satırını " · " ile birleştirerek ya da tablo hücrelerini yan yana koyarak yazdı; kapı `kanit`'i (" (" ve " → " öncesi) sayfa metninde BİREBİR arar. Yönerge "birebir alıntı" diyor ama "tek satır/tek hücre" demiyordu.
+- **Kalıcı çözüm:** her kayıt tek satır/tek hücrelik birebir alıntıya indirildi; açıklama `neden`'e taşındı.
+- **Önleme:** A1a/A2 yönergesine kural: `kanit` = TEK birebir satır ya da tablo hücresi; yazar üretim sırasında pymupdf normuyla doğrular (`kaynak_kapisi.py` + `degerlendirme_dogrula.py` paket kurulmadan önce koşulur).
+
+### H538 — 5. parti derslerinin anahtarları `MODUL_ANAHTARLAR`'da yoktu: yazımla tutulan kısaltmalar (DSM, EEG, SSRI) harf harf okunmamış olabilir (2026-11-09)
+- **Belirti:** `ema_isci.tts_metni("DSM beş TR …")` k2-21 anahtarıyla metni değiştirmeden döndürdü; k2-22 anahtarı (eklendikten sonra) "dee see mee beş tee ree" verdi.
+- **Kök neden:** H469 önlemi ("yeni ders anahtarı seslendirmeden ÖNCE `MODUL_ANAHTARLAR`'a eklenir") 5. partide (k2-19, 20, 21, 37, 38) uygulanmadı; kontrol listesinde yoktu.
+- **Çözüm:** 6. parti anahtarları eklendi (k2-22, 23, 24, 58). **Açık:** k2-19/20/21/37/38 sesleri bu yolla üretildiği için kısaltma okunuşu dinlenip gerekiyorsa anahtar eklenip yalnız ilgili klipler yeniden üretilmeli (kullanıcı kararı).
+- **Önleme:** `sesli_yayinla.py` yeni anahtarı `modul_okunus.modul_mu` ile denetleyip değilse uyarır (yapılacak); el kitabı §19 adım 8'e madde.
+
+### H539 — EMA tam MP3 yüklemesi Oracle'daki başka bir dağıtımın sunucu yeniden başlatmasına denk gelince iş "hata"ya düştü (2026-11-09, k2-22)
+- **Belirti:** 50 klip üretildi, `PUT …/tam` 23:33:24'te bağlantı hatası aldı; Oracle kuyruğunda iş `durum: hata`, ders sessiz kaldı; işçi günlüğü systemd scope'ta olduğundan `journalctl -u meds-ema` boştu.
+- **Kök neden:** aynı dakikada başka oturum `dagit.sh` ile konteyneri yeniden başlattı; işçi tek denemeyle bırakıyor.
+- **Çözüm:** `POST /api/sesli-anlatim/uret {key, saglayici: ema-yerel, ses: Ema}` ile yeniden kuyruklandı; klipler yeniden kullanıldı (0 yeni klip).
+- **Önleme:** dağıtım öncesi `dagit.sh` kuyrukta `calisiyor` EMA işi varsa beklemeli ya da işçi `tam/bitir` adımını 3 kez yinelemeli (yapılacak). İşçi günlüğü: `journalctl --user -o cat | grep <key>` (birim değil, scope).
+
+### H540 — `kelime_zaman.py --gpu` elle çağrıda `libcublas.so.12` bulamayıp sessizce CPU'ya düştü (2026-11-10)
+- **Belirti:** k2-22/23 kelime zamanı 1179 sn (CPU); günlükte tek satır "CUDA hatası … bu oturum CPU".
+- **Kök neden:** CUDA kitaplıkları `.venv-hizala` pip `nvidia-*` paketlerinde; `LD_LIBRARY_PATH` yalnız `meds-kelime-zaman-hat.service` biriminde tanımlı, betik kendisi eklemiyor.
+- **Çözüm:** elle koşuda birimdeki `LD_LIBRARY_PATH` dışa aktarıldı (k2-24/58 GPU'da 345–351 sn).
+- **Önleme:** `kelime_zaman.py` başında `nvidia/*/lib` yollarını `LD_LIBRARY_PATH`'e kendisi ekler (yapılacak); CPU'ya düşüş UYARI değil, belirgin HATA satırı olmalı.
+
+### H541 — Destesiz derslerin örnek soruları k2-12'den beri siteye yayınlanmıyordu (2026-11-10)
+- **Belirti:** `src/data/ornek_sorular/k2/index.json` yalnız k2-01…k2-11; k2-12…k2-21, k2-37, k2-38 örnek soruları yalnız `taslak/ornek_sorular.json`'da ve çözücüdeki 20 örnekte kaldı; "Örnek sorular" kartı bu derslerde boş.
+- **Kök neden:** `yayinla.py` örnek soruları deste doğrulayıcısından sonra s16 ile yayınlıyor; destesiz akış (`yayin_hazirla_destesiz.sh`) `yayinla.py`'yi atlıyor, s16 adımı başka yerde yoktu.
+- **Çözüm:** `meds_temp/ogrenci_ders/arac/ornek_yayinla.py <kimlik> <anahtar>` (ders paketi → `kurul2_ders_paketleri`, sorular → s16 build (kurul 2) → `disa_aktar`); 6. partide 4 ders yayınlandı. **Açık:** k2-12…k2-21, k2-37, k2-38 için koşulmalı (kullanıcı kararı; s16 denetimi yazarların bıraktığı eksikleri gösterebilir). s16 K2 index'inde k2-01/02/05/08 yazım dosyaları boş olduğu için sorunlu görünüyor (site dosyaları korunuyor).
+- **Önleme:** destesiz yayın betiğine s16 adımı eklenir; `ders_icerik_dogrula.py` sitede örnek soru dosyası yoksa HATA versin (yapılacak).

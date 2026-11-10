@@ -15,7 +15,7 @@
   {
    "id": "anlatim",
    "baslik": "Bu derste ne anlatılacak",
-   "giris": "",
+   "giris": "Ders cinselliğin beş boyutunu (biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi, cinsel yönelim) ve cinsiyet kimliğinin gelişimini tanımladıktan sonra cinsiyet hoşnutsuzluğunu (DSM-5-TR ölçütleri, epidemiyoloji, etiyoloji, ayırıcı tanı, gidiş, güncel yaklaşım, Türk Medeni Kanunu md. 40 süreci), cinsel işlev bozukluklarını (cinsel yanıt döngüsü modelleri, fizyoloji ve nörokimya, ortak ölçütler, etiyoloji, tıbbi nedenler ve ilaçlar, her tanının ölçütleri, tedavi ilkeleri) ve parafilik bozuklukları (parafili–bozukluk ayrımı, türler, klinik, tedavi) işler.",
    "maddeler": [
     {
      "metin": "Cinsellik nedir ve bu ders neyi öğretir"
@@ -93,6 +93,7 @@
    "klip": "a-anlatim",
    "ses": [
     "Bu derste ne anlatılacak.",
+    "Ders cinselliğin beş boyutunu (biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi, cinsel yönelim) ve cinsiyet kimliğinin gelişimini tanımladıktan sonra cinsiyet hoşnutsuzluğunu (DSM-5-TR ölçütleri, epidemiyoloji, etiyoloji, ayırıcı tanı, gidiş, güncel yaklaşım, Türk Medeni Kanunu md. 40 süreci), cinsel işlev bozukluklarını (cinsel yanıt döngüsü modelleri, fizyoloji ve nörokimya, ortak ölçütler, etiyoloji, tıbbi nedenler ve ilaçlar, her tanının ölçütleri, tedavi ilkeleri) ve parafilik bozuklukları (parafili–bozukluk ayrımı, türler, klinik, tedavi) işler.",
     "Cinsellik nedir ve bu ders neyi öğretir.",
     "Beş ayrı boyut: cinsiyet, kimlik, rol, ifade, yönelim.",
     "Cinsiyet kimliği nasıl gelişir.",
@@ -118,7 +119,7 @@
     "Dört hasta, dört tanı.",
     "Beş cümlede ders."
    ],
-   "v": "9f84824215"
+   "v": "e9780fcbc3"
   },
   {
    "id": "kazanim",
@@ -172,6 +173,104 @@
     "GI DIŞ: Çıkmış (ilgili): Belirtiler 2–4 yaş gibi erken başlayabilir. (s5: 2–3 yaşında büyük ölçüde oluşan cinsiyet kimliği; s13: Doğumda atanan cinsiyetin beden özelliklerinden yoğun rahatsızlık, bu cinsiyete ait giysilere karşı tiksintiye varabilen duygular)."
    ],
    "v": "e474927019"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmışlar neredeyse yalnız ilk bölümden gelir: 2022-23, 2024-25 ve 2025-26'da aynı yanlış önerme ('transseksüellik kişinin kendi cinsiyetinden kişilere cinsel ilgi duymasıdır') 'hangisi yanlıştır' kalıbıyla soruldu; 2020-21'de biyolojik özelliklerin tanımı 'cinsel kimlik'e verilerek, 2018-19'da kimlik uyumsuzluğunun adı (transseksüalite) istenerek soruldu. Hoca profili bu konuda tanım-kavram sınırını ve komşu terim çeldiricisini ölçer; cinsel işlev bozukluğu ve parafili bölümlerinde ise ölçüt sayıları (6 ay, %75–100), SSRI yan etkisi ve parafili–bozukluk ayrımı öne çıkar. Hoca derste psikotik bozuklukta cinsiyet sanrısını, hormon ve cerrahi öncesi onamı, ortak ölçütleri, mahremiyetli öyküyü, eşler arası istek farkını, sertleşme bozukluğunun kalp-damar habercisi olmasını, gecikmiş boşalmada durumsal ipucunu, eğitimi ve çocuk istismarı bildirimini sınav için vurguladı.",
+   "maddeler": [
+    {
+     "baslik": "Transseksüellik yönelim değil, kimlik uyumsuzluğudur",
+     "metin": "Kendi cinsiyetinden kişilere cinsel ilgi homoseksüel yönelimdir; transseksüellik (bugünkü adıyla cinsiyet hoşnutsuzluğu) doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki uyumsuzluktur.",
+     "neden": "2022-23, 2024-25 ve 2025-26'da aynı yanlış önerme soruldu: 'transseksüellik kişinin kendi cinsiyetinden kişilere cinsel ilgi duymasıdır'; dersin en çok tekrar eden tuzağıdır.",
+     "s": [
+      4,
+      6,
+      8
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Beş ayrı boyut: biyolojik özellikler 'biyolojik cinsiyet'tir",
+     "metin": "Cinselliğin beş boyutu biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi ve cinsel yönelimdir; kişiyi kadın ya da erkek yapan kromozom, gonad, üreme organı ve hormonlar biyolojik cinsiyettir, kimlik değil.",
+     "neden": "2020-21'de 'cinsellikte temel kavramlarla ilgili hangisi yanlıştır' kalıbıyla soruldu; yanlış önerme biyolojik özelliklerin tanımını 'cinsel kimlik'e vermekti.",
+     "s": [
+      4
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Cinsiyet hoşnutsuzluğu: tanım ve DSM ad değişimi",
+     "metin": "Cinsiyet hoşnutsuzluğu doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki belirgin uyumsuzluk ve buna bağlı klinik olarak belirgin sıkıntıdır; DSM-III'te transseksüalizm, DSM-IV'te cinsel kimlik bozukluğu adını taşıdı.",
+     "neden": "2018-19'da 'biyolojik cinsel kimlik ile ruhsal cinsel kimlik farklılığına ne ad verilir' diye soruldu (cevap transseksüalite); eve götürülecek beş mesajdan biridir.",
+     "s": [
+      8,
+      43
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Çocuk istismarı şüphesinde yasal bildirim yükümlülüğü",
+     "metin": "Hekim çocuğun istismara uğradığından şüphelendiğinde yasal bildirim yükümlülüğü taşır; bildirim için istismarın kesinleşmesi beklenmez.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. Hekimin sorumluluğu başlığı 'hangisi yanlıştır' kalıbında kesinleşmeyi bekleme çeldiricisiyle sorulmaya uygundur.",
+     "s": [
+      39
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Sertleşme bozukluğu kalp-damar hastalığının erken habercisidir",
+     "metin": "Penil arterler koronerlerden daha ince olduğu için aterosklerozdan daha erken etkilenir; sertleşme bozukluğu koroner hastalıktan birkaç yıl önce ortaya çıkabilir, bu yüzden kalp-damar risk değerlendirmesi yapılmalıdır.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. Eve götürülecek beş mesajdan biridir; mekanizma sorusu olarak (neden haberci?) ve vaka sorusu olarak (sigara içen hipertansif hastada ne yapılmalı?) gelir.",
+     "s": [
+      29,
+      43
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Ortak ölçütler: 6 ay, %75–100, sıkıntı, dışla",
+     "metin": "Tüm cinsel işlev bozukluğu tanılarında yakınma en az yaklaşık 6 ay sürer, etkinliklerin %75–100'ünde görülür, belirgin sıkıntı yaratır ve başka nedenle açıklanamaz.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. Eve götürülecek beş mesajdan biridir; sayı değiştirme (%25) ve belirleyici eksenlerinin karıştırılması (organik/psikojenik ekseni yoktur) klasik tuzaklardır.",
+     "s": [
+      22,
+      43
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Ayırıcı tanı: beş komşu durum",
+     "metin": "Cinsiyet hoşnutsuzluğu cinsiyet rollerine uymama, transvestik bozukluk, beden algısı bozukluğu, psikotik bozukluk ve cinsel gelişim farklılıklarından ayrılır; cinsel gelişim farklılığı tanıyı dışlamaz, belirleyici olarak kodlanır.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. 2018-19 çıkmışının çeldiricileri (transvestisizm, teşhircilik, homoseksüalite) bu tablodan gelir; hoca profili tanı–ayırıcı tanı sorularını ikinci sırada sorar.",
+     "s": [
+      14
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Cinsel öykü: mahremiyet, açık uçlu soru, sorgulanacak başlıklar",
+     "metin": "Cinsel öyküde mahremiyet sağlanır, gizlilik belirtilir, yargılamadan açık uçlu sorular sorulur; ilişki, eşin bakışı, cinsel bilgi, hastalık, ilaç ve ruh hali sorgulanır.",
+     "neden": "Hoca derste bu noktanın sınavda bilinmesi gerektiğini vurguladı. Öykü alma ilkeleri 'hangisi önerilen yaklaşıma uymaz' kalıbına uygundur; kapalı uçlu soru en sık kullanılan çeldiricidir.",
+     "s": [
+      23
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmışlar neredeyse yalnız ilk bölümden gelir: 2022-23, 2024-25 ve 2025-26'da aynı yanlış önerme ('transseksüellik kişinin kendi cinsiyetinden kişilere cinsel ilgi duymasıdır') 'hangisi yanlıştır' kalıbıyla soruldu; 2020-21'de biyolojik özelliklerin tanımı 'cinsel kimlik'e verilerek, 2018-19'da kimlik uyumsuzluğunun adı (transseksüalite) istenerek soruldu. Hoca profili bu konuda tanım-kavram sınırını ve komşu terim çeldiricisini ölçer; cinsel işlev bozukluğu ve parafili bölümlerinde ise ölçüt sayıları (6 ay, %75–100), SSRI yan etkisi ve parafili–bozukluk ayrımı öne çıkar. Hoca derste psikotik bozuklukta cinsiyet sanrısını, hormon ve cerrahi öncesi onamı, ortak ölçütleri, mahremiyetli öyküyü, eşler arası istek farkını, sertleşme bozukluğunun kalp-damar habercisi olmasını, gecikmiş boşalmada durumsal ipucunu, eğitimi ve çocuk istismarı bildirimini sınav için vurguladı.",
+    "Transseksüellik yönelim değil, kimlik uyumsuzluğudur: Kendi cinsiyetinden kişilere cinsel ilgi homoseksüel yönelimdir; transseksüellik (bugünkü adıyla cinsiyet hoşnutsuzluğu) doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki uyumsuzluktur.",
+    "Beş ayrı boyut: biyolojik özellikler 'biyolojik cinsiyet'tir: Cinselliğin beş boyutu biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi ve cinsel yönelimdir; kişiyi kadın ya da erkek yapan kromozom, gonad, üreme organı ve hormonlar biyolojik cinsiyettir, kimlik değil.",
+    "Cinsiyet hoşnutsuzluğu: tanım ve DSM ad değişimi: Cinsiyet hoşnutsuzluğu doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki belirgin uyumsuzluk ve buna bağlı klinik olarak belirgin sıkıntıdır; DSM-III'te transseksüalizm, DSM-IV'te cinsel kimlik bozukluğu adını taşıdı.",
+    "Çocuk istismarı şüphesinde yasal bildirim yükümlülüğü: Hekim çocuğun istismara uğradığından şüphelendiğinde yasal bildirim yükümlülüğü taşır; bildirim için istismarın kesinleşmesi beklenmez.",
+    "Sertleşme bozukluğu kalp-damar hastalığının erken habercisidir: Penil arterler koronerlerden daha ince olduğu için aterosklerozdan daha erken etkilenir; sertleşme bozukluğu koroner hastalıktan birkaç yıl önce ortaya çıkabilir, bu yüzden kalp-damar risk değerlendirmesi yapılmalıdır.",
+    "Ortak ölçütler: 6 ay, %75–100, sıkıntı, dışla: Tüm cinsel işlev bozukluğu tanılarında yakınma en az yaklaşık 6 ay sürer, etkinliklerin %75–100'ünde görülür, belirgin sıkıntı yaratır ve başka nedenle açıklanamaz.",
+    "Ayırıcı tanı: beş komşu durum: Cinsiyet hoşnutsuzluğu cinsiyet rollerine uymama, transvestik bozukluk, beden algısı bozukluğu, psikotik bozukluk ve cinsel gelişim farklılıklarından ayrılır; cinsel gelişim farklılığı tanıyı dışlamaz, belirleyici olarak kodlanır.",
+    "Cinsel öykü: mahremiyet, açık uçlu soru, sorgulanacak başlıklar: Cinsel öyküde mahremiyet sağlanır, gizlilik belirtilir, yargılamadan açık uçlu sorular sorulur; ilişki, eşin bakışı, cinsel bilgi, hastalık, ilaç ve ruh hali sorgulanır."
+   ],
+   "v": "a35d003234"
   },
   {
    "id": "cikmis",
@@ -403,6 +502,18 @@
      "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi LGBT (lezbiyen, gey, biseksüel, transseksüel) bireylerde sağlıkla ilgili risk faktörlerindendir?"
     },
     {
+     "baslik": "Transseksüellik yönelim değil, kimlik uyumsuzluğudur",
+     "metin": "2022-23, 2024-25 ve 2025-26'da aynı yanlış önerme soruldu: 'transseksüellik kişinin kendi cinsiyetinden kişilere cinsel ilgi duymasıdır'; dersin en çok tekrar eden tuzağıdır."
+    },
+    {
+     "baslik": "Beş ayrı boyut: biyolojik özellikler 'biyolojik cinsiyet'tir",
+     "metin": "2020-21'de 'cinsellikte temel kavramlarla ilgili hangisi yanlıştır' kalıbıyla soruldu; yanlış önerme biyolojik özelliklerin tanımını 'cinsel kimlik'e vermekti."
+    },
+    {
+     "baslik": "Cinsiyet hoşnutsuzluğu: tanım ve DSM ad değişimi",
+     "metin": "2018-19'da 'biyolojik cinsel kimlik ile ruhsal cinsel kimlik farklılığına ne ad verilir' diye soruldu (cevap transseksüalite); eve götürülecek beş mesajdan biridir."
+    },
+    {
      "baslik": "Çalışma yolu",
      "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
     }
@@ -411,14 +522,394 @@
    "ses": [
     "Nelere odaklanmalısın.",
     "Alkol-madde kötüye kullanımı: Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi LGBT (lezbiyen, gey, biseksüel, transseksüel) bireylerde sağlıkla ilgili risk faktörlerindendir?",
+    "Transseksüellik yönelim değil, kimlik uyumsuzluğudur: 2022-23, 2024-25 ve 2025-26'da aynı yanlış önerme soruldu: 'transseksüellik kişinin kendi cinsiyetinden kişilere cinsel ilgi duymasıdır'; dersin en çok tekrar eden tuzağıdır.",
+    "Beş ayrı boyut: biyolojik özellikler 'biyolojik cinsiyet'tir: 2020-21'de 'cinsellikte temel kavramlarla ilgili hangisi yanlıştır' kalıbıyla soruldu; yanlış önerme biyolojik özelliklerin tanımını 'cinsel kimlik'e vermekti.",
+    "Cinsiyet hoşnutsuzluğu: tanım ve DSM ad değişimi: 2018-19'da 'biyolojik cinsel kimlik ile ruhsal cinsel kimlik farklılığına ne ad verilir' diye soruldu (cevap transseksüalite); eve götürülecek beş mesajdan biridir.",
     "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
    ],
-   "v": "1b1a0e89c4"
+   "v": "6ddd7023e2"
   }
  ],
- "ozet": null,
- "ozetEksik": [
-  "önem listesi",
-  "sesli örnek soru çözücü"
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders cinselliğin beş boyutunu (biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi, cinsel yönelim) ve cinsiyet kimliğinin gelişimini tanımladıktan sonra cinsiyet hoşnutsuzluğunu (DSM-5-TR ölçütleri, epidemiyoloji, etiyoloji, ayırıcı tanı, gidiş, güncel yaklaşım, Türk Medeni Kanunu md. 40 süreci), cinsel işlev bozukluklarını (cinsel yanıt döngüsü modelleri, fizyoloji ve nörokimya, ortak ölçütler, etiyoloji, tıbbi nedenler ve ilaçlar, her tanının ölçütleri, tedavi ilkeleri) ve parafilik bozuklukları (parafili–bozukluk ayrımı, türler, klinik, tedavi) işler.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders cinselliğin beş boyutunu (biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi, cinsel yönelim) ve cinsiyet kimliğinin gelişimini tanımladıktan sonra cinsiyet hoşnutsuzluğunu (DSM-5-TR ölçütleri, epidemiyoloji, etiyoloji, ayırıcı tanı, gidiş, güncel yaklaşım, Türk Medeni Kanunu md. 40 süreci), cinsel işlev bozukluklarını (cinsel yanıt döngüsü modelleri, fizyoloji ve nörokimya, ortak ölçütler, etiyoloji, tıbbi nedenler ve ilaçlar, her tanının ölçütleri, tedavi ilkeleri) ve parafilik bozuklukları (parafili–bozukluk ayrımı, türler, klinik, tedavi) işler."
+   ],
+   "v": "70daddb94c"
+  },
+  {
+   "id": "2s06-01",
+   "baslik": "Transseksüellik yönelim değil, kimlik uyumsuzluğudur",
+   "giris": "Kendi cinsiyetinden kişilere cinsel ilgi homoseksüel yönelimdir; transseksüellik (bugünkü adıyla cinsiyet hoşnutsuzluğu) doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki uyumsuzluktur.",
+   "s": [
+    4,
+    6,
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "kişinin düşünce, duygu ve davranış olarak cinsel çekim duyduğu cinsiyettir. Üç biçimi vardır: heteroseksüel (karşı cinsiyetten kişilere cinsel ilgi), homoseksüel (kendi cinsiyetinden kişilere cinsel ilgi, eşcinsellik) ve biseksüel (her iki cinsiyetten kişilere cinsel ilgi)."
+    },
+    {
+     "metin": "kişinin kendi bedenini ve benliğini belirli bir cinsiyet içinde algılayışıdır; kendini kadın, erkek ya da başka bir cinsiyette hissetmesidir."
+    },
+    {
+     "metin": "doğumda atanan cinsiyet ile deneyimlenen ya da ifade edilen cinsiyet arasındaki belirgin uyumsuzluk ve bunun yol açtığı klinik olarak belirgin sıkıntıdır. DSM-III'te transseksüalizm, DSM-IV'te cinsel kimlik bozukluğu, DSM-5'te cinsiyet hoşnutsuzluğu adını almıştır."
+    },
+    {
+     "metin": "sınavda transseksüelliğe homoseksüel yönelimin tanımı ('kendi cinsinden bireylere cinsel ilgi') verilir ve 'hangisi yanlıştır' diye sorulur. Yönelim kime çekim duyulduğunu, kimlik kişinin kendini hangi cinsiyette hissettiğini anlatır; boyutlar birbirinden bağımsızdır, birini bilmek diğeri hakkında bilgi vermez."
+    },
+    {
+     "metin": "cinsiyet kimliği 2–3 yaşında büyük ölçüde oluşur ve çoğu kişide doğumda atanan cinsiyetle uyumludur; cinsel yönelim cinsel çekim duyulan cinsiyete göre tanımlanır; toplumsal cinsiyet (cinsiyet rolü) toplumun kadından ve erkekten beklediği tutum ve davranışlardır; hormon ve cerrahi girişimlerin bazı etkileri geri döndürülemez, bu yüzden bilgilendirilmiş onam ve multidisipliner ekip gerekir."
+    }
+   ],
+   "klip": "o-2s06-01",
+   "ses": [
+    "Transseksüellik yönelim değil, kimlik uyumsuzluğudur.",
+    "Kendi cinsiyetinden kişilere cinsel ilgi homoseksüel yönelimdir; transseksüellik (bugünkü adıyla cinsiyet hoşnutsuzluğu) doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki uyumsuzluktur.",
+    "kişinin düşünce, duygu ve davranış olarak cinsel çekim duyduğu cinsiyettir. Üç biçimi vardır: heteroseksüel (karşı cinsiyetten kişilere cinsel ilgi), homoseksüel (kendi cinsiyetinden kişilere cinsel ilgi, eşcinsellik) ve biseksüel (her iki cinsiyetten kişilere cinsel ilgi).",
+    "kişinin kendi bedenini ve benliğini belirli bir cinsiyet içinde algılayışıdır; kendini kadın, erkek ya da başka bir cinsiyette hissetmesidir.",
+    "doğumda atanan cinsiyet ile deneyimlenen ya da ifade edilen cinsiyet arasındaki belirgin uyumsuzluk ve bunun yol açtığı klinik olarak belirgin sıkıntıdır. DSM-III'te transseksüalizm, DSM-IV'te cinsel kimlik bozukluğu, DSM-5'te cinsiyet hoşnutsuzluğu adını almıştır.",
+    "sınavda transseksüelliğe homoseksüel yönelimin tanımı ('kendi cinsinden bireylere cinsel ilgi') verilir ve 'hangisi yanlıştır' diye sorulur. Yönelim kime çekim duyulduğunu, kimlik kişinin kendini hangi cinsiyette hissettiğini anlatır; boyutlar birbirinden bağımsızdır, birini bilmek diğeri hakkında bilgi vermez.",
+    "cinsiyet kimliği 2–3 yaşında büyük ölçüde oluşur ve çoğu kişide doğumda atanan cinsiyetle uyumludur; cinsel yönelim cinsel çekim duyulan cinsiyete göre tanımlanır; toplumsal cinsiyet (cinsiyet rolü) toplumun kadından ve erkekten beklediği tutum ve davranışlardır; hormon ve cerrahi girişimlerin bazı etkileri geri döndürülemez, bu yüzden bilgilendirilmiş onam ve multidisipliner ekip gerekir."
+   ],
+   "v": "c1a3994e3d"
+  },
+  {
+   "id": "2s06-02",
+   "baslik": "Beş ayrı boyut: biyolojik özellikler 'biyolojik cinsiyet'tir",
+   "giris": "Cinselliğin beş boyutu biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi ve cinsel yönelimdir; kişiyi kadın ya da erkek yapan kromozom, gonad, üreme organı ve hormonlar biyolojik cinsiyettir, kimlik değil.",
+   "s": [
+    4
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "kişiyi kadın ya da erkek yapan biyolojik özellikler: kromozomlar, gonadlar, üreme organları, hormonlar."
+    },
+    {
+     "metin": "kişinin kendi bedenini ve benliğini belirli bir cinsiyet içinde algılayışı; kendini kadın, erkek ya da başka bir cinsiyette hissetmesi. 2–3 yaşında büyük ölçüde oluşur."
+    },
+    {
+     "metin": "toplumsal cinsiyet; bir toplumun kadından ve erkekten beklediği, onayladığı tutum, davranış ve sorumluluklar."
+    },
+    {
+     "metin": "cinsiyet kimliğinin giyim, saç, davranış ve ses gibi yollarla dışa yansıması."
+    },
+    {
+     "metin": "kişinin düşünce, duygu ve davranış olarak cinsel çekim duyduğu cinsiyet; heteroseksüel, homoseksüel ya da biseksüel."
+    },
+    {
+     "metin": "bu boyutlar birbirinden bağımsızdır; birini bilmek diğerleri hakkında bilgi vermez. Rol biyolojik cinsiyetten doğrudan türemez, ifade yönelimi göstermez, yönelim atanan cinsiyete göre tanımlanmaz."
+    },
+    {
+     "metin": "'cinsel kimlik (ya da cinsiyet kimliği) kişiyi kadın ya da erkek yapan biyolojik özellikleri ifade eder' önermesi yanlıştır; biyolojik özellikler biyolojik cinsiyetin tanımıdır. Eski slaytlardaki 'cinsel kimlik' sözü bugünkü slaytta 'cinsiyet kimliği'dir."
+    }
+   ],
+   "klip": "o-2s06-02",
+   "ses": [
+    "Beş ayrı boyut: biyolojik özellikler 'biyolojik cinsiyet'tir.",
+    "Cinselliğin beş boyutu biyolojik cinsiyet, cinsiyet kimliği, cinsiyet rolü, cinsiyet ifadesi ve cinsel yönelimdir; kişiyi kadın ya da erkek yapan kromozom, gonad, üreme organı ve hormonlar biyolojik cinsiyettir, kimlik değil.",
+    "kişiyi kadın ya da erkek yapan biyolojik özellikler: kromozomlar, gonadlar, üreme organları, hormonlar.",
+    "kişinin kendi bedenini ve benliğini belirli bir cinsiyet içinde algılayışı; kendini kadın, erkek ya da başka bir cinsiyette hissetmesi. 2–3 yaşında büyük ölçüde oluşur.",
+    "toplumsal cinsiyet; bir toplumun kadından ve erkekten beklediği, onayladığı tutum, davranış ve sorumluluklar.",
+    "cinsiyet kimliğinin giyim, saç, davranış ve ses gibi yollarla dışa yansıması.",
+    "kişinin düşünce, duygu ve davranış olarak cinsel çekim duyduğu cinsiyet; heteroseksüel, homoseksüel ya da biseksüel.",
+    "bu boyutlar birbirinden bağımsızdır; birini bilmek diğerleri hakkında bilgi vermez. Rol biyolojik cinsiyetten doğrudan türemez, ifade yönelimi göstermez, yönelim atanan cinsiyete göre tanımlanmaz.",
+    "'cinsel kimlik (ya da cinsiyet kimliği) kişiyi kadın ya da erkek yapan biyolojik özellikleri ifade eder' önermesi yanlıştır; biyolojik özellikler biyolojik cinsiyetin tanımıdır. Eski slaytlardaki 'cinsel kimlik' sözü bugünkü slaytta 'cinsiyet kimliği'dir."
+   ],
+   "v": "8eaef295f7"
+  },
+  {
+   "id": "2s06-03",
+   "baslik": "Cinsiyet hoşnutsuzluğu: tanım ve DSM ad değişimi",
+   "giris": "Cinsiyet hoşnutsuzluğu doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki belirgin uyumsuzluk ve buna bağlı klinik olarak belirgin sıkıntıdır; DSM-III'te transseksüalizm, DSM-IV'te cinsel kimlik bozukluğu adını taşıdı.",
+   "s": [
+    8,
+    43
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "kişinin doğumda atanan cinsiyeti ile deneyimlediği ya da ifade ettiği cinsiyet arasındaki belirgin uyumsuzluk ve bu uyumsuzluğun yol açtığı klinik olarak belirgin sıkıntı ya da işlevsellikte bozulma."
+    },
+    {
+     "metin": "DSM-III (1980) transseksüalizm; DSM-IV (1994) cinsel kimlik bozukluğu; DSM-5 (2013) cinsiyet hoşnutsuzluğu. Eski sorularda 'biyolojik cinsel kimlik ile ruhsal cinsel kimlik farklılığı' denen durumun adı transseksüalitedir."
+    },
+    {
+     "metin": "tanının odağı kimliğin kendisi değil, uyumsuzluğun yarattığı sıkıntıdır. Bu nedenle uyumsuzluk yaşayan herkes bu tanıyı karşılamaz; 'ad değişikliğiyle odak sıkıntıdan kimliğe kaydı' önermesi yanlıştır."
+    },
+    {
+     "metin": "transvestik bozuklukta diğer cinsiyetin giysisi cinsel uyarılma sağlar, kimlik genellikle değişmemiştir; teşhircilik cinsel organları bunu beklemeyen bir yabancıya göstermedir; homoseksüalite kendi cinsiyetine cinsel ilgi, yani yönelimdir; mastürbasyon (özdoyurum) cinsel öyküde sorulan olağan bir davranıştır, tanı adı değildir."
+    }
+   ],
+   "klip": "o-2s06-03",
+   "ses": [
+    "Cinsiyet hoşnutsuzluğu: tanım ve DSM ad değişimi.",
+    "Cinsiyet hoşnutsuzluğu doğumda atanan cinsiyet ile deneyimlenen cinsiyet arasındaki belirgin uyumsuzluk ve buna bağlı klinik olarak belirgin sıkıntıdır; DSM-III'te transseksüalizm, DSM-IV'te cinsel kimlik bozukluğu adını taşıdı.",
+    "kişinin doğumda atanan cinsiyeti ile deneyimlediği ya da ifade ettiği cinsiyet arasındaki belirgin uyumsuzluk ve bu uyumsuzluğun yol açtığı klinik olarak belirgin sıkıntı ya da işlevsellikte bozulma.",
+    "DSM-III (1980) transseksüalizm; DSM-IV (1994) cinsel kimlik bozukluğu; DSM-5 (2013) cinsiyet hoşnutsuzluğu. Eski sorularda 'biyolojik cinsel kimlik ile ruhsal cinsel kimlik farklılığı' denen durumun adı transseksüalitedir.",
+    "tanının odağı kimliğin kendisi değil, uyumsuzluğun yarattığı sıkıntıdır. Bu nedenle uyumsuzluk yaşayan herkes bu tanıyı karşılamaz; 'ad değişikliğiyle odak sıkıntıdan kimliğe kaydı' önermesi yanlıştır.",
+    "transvestik bozuklukta diğer cinsiyetin giysisi cinsel uyarılma sağlar, kimlik genellikle değişmemiştir; teşhircilik cinsel organları bunu beklemeyen bir yabancıya göstermedir; homoseksüalite kendi cinsiyetine cinsel ilgi, yani yönelimdir; mastürbasyon (özdoyurum) cinsel öyküde sorulan olağan bir davranıştır, tanı adı değildir."
+   ],
+   "v": "e0b7d7e844"
+  },
+  {
+   "id": "2s06-08",
+   "baslik": "Ayırıcı tanı: beş komşu durum",
+   "giris": "Cinsiyet hoşnutsuzluğu cinsiyet rollerine uymama, transvestik bozukluk, beden algısı bozukluğu, psikotik bozukluk ve cinsel gelişim farklılıklarından ayrılır; cinsel gelişim farklılığı tanıyı dışlamaz, belirleyici olarak kodlanır.",
+   "s": [
+    14
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "davranış ve ilgi alışılmadık olabilir, ama deneyimlenen cinsiyet ile uyumsuzluk ve sıkıntı yoktur; çocukta yalnız rol dışı oyun tanı koydurmaz."
+    },
+    {
+     "metin": "diğer cinsiyetin giysilerini giymek cinsel uyarılma sağlar; cinsiyet kimliği genellikle değişmemiştir. Cinsiyet hoşnutsuzluğunda giysi deneyimlenen kimliğin ifadesidir, uyarılma amacı yoktur."
+    },
+    {
+     "metin": "belirli bir beden bölümünü kusurlu görüp değiştirmek ister; amaç diğer cinsiyete geçmek değildir."
+    },
+    {
+     "metin": "diğer cinsiyetten olduğuna dair sanrı vardır ve diğer psikotik bulgularla (sesler, düşünce okunması) birliktedir; nadirdir. Cinsiyet hoşnutsuzluğunda deneyimlenen kimlik sanrı değildir."
+    },
+    {
+     "metin": "tanıyı dışlamaz; belirleyici olarak kodlanır."
+    }
+   ],
+   "klip": "o-2s06-08",
+   "ses": [
+    "Ayırıcı tanı: beş komşu durum.",
+    "Cinsiyet hoşnutsuzluğu cinsiyet rollerine uymama, transvestik bozukluk, beden algısı bozukluğu, psikotik bozukluk ve cinsel gelişim farklılıklarından ayrılır; cinsel gelişim farklılığı tanıyı dışlamaz, belirleyici olarak kodlanır.",
+    "davranış ve ilgi alışılmadık olabilir, ama deneyimlenen cinsiyet ile uyumsuzluk ve sıkıntı yoktur; çocukta yalnız rol dışı oyun tanı koydurmaz.",
+    "diğer cinsiyetin giysilerini giymek cinsel uyarılma sağlar; cinsiyet kimliği genellikle değişmemiştir. Cinsiyet hoşnutsuzluğunda giysi deneyimlenen kimliğin ifadesidir, uyarılma amacı yoktur.",
+    "belirli bir beden bölümünü kusurlu görüp değiştirmek ister; amaç diğer cinsiyete geçmek değildir.",
+    "diğer cinsiyetten olduğuna dair sanrı vardır ve diğer psikotik bulgularla (sesler, düşünce okunması) birliktedir; nadirdir. Cinsiyet hoşnutsuzluğunda deneyimlenen kimlik sanrı değildir.",
+    "tanıyı dışlamaz; belirleyici olarak kodlanır."
+   ],
+   "v": "7028c29b39"
+  },
+  {
+   "id": "2s06-11",
+   "baslik": "Güncel yaklaşım: bireysel değerlendirme, onam, ekip",
+   "giris": "Yaklaşımda kapsamlı psikiyatrik değerlendirme, eşlik eden bozuklukların öncelikle tedavisi, multidisipliner ekip ve bilgilendirilmiş onam esastır; eski kılavuzlardaki sabit süre şartları kaldırılmıştır, ergenlik baskılayıcılar Cass Raporu (2024) sonrası rutin uygulamadan çıkarıldı.",
+   "s": [
+    16
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "kapsamlı psikiyatrik değerlendirme; gelişim öyküsü, kimliğin sürekliliği, eşlik eden bozukluklar, karar verme yeterliliği."
+    },
+    {
+     "metin": "eşlik eden ruhsal bozukluklar öncelikle uygun yöntemlerle tedavi edilir."
+    },
+    {
+     "metin": "psikiyatri, endokrinoloji, cerrahi; destekleyici psikoterapi ve aile desteği."
+    },
+    {
+     "metin": "hormon ve cerrahi girişimlerin bazı etkileri geri döndürülemez; bilgilendirilmiş onam zorunludur."
+    },
+    {
+     "metin": "güncel kılavuzda (WPATH 8. sürüm) bireysel değerlendirme esastır; eski kılavuzlardaki diğer cinsiyet rolünde yaşama gibi sabit süre şartları kaldırılmıştır."
+    },
+    {
+     "metin": "tıbbi müdahalelerin kanıt düzeyi tartışmalıdır; İngiltere'de Cass Raporu (2024) sonrası ergenlik baskılayıcılar rutin uygulamadan çıkarıldı. 'Ergenlerde ergenlik baskılayıcıların rutin kullanımı' güncel yaklaşımın bileşeni değildir."
+    }
+   ],
+   "klip": "o-2s06-11",
+   "ses": [
+    "Güncel yaklaşım: bireysel değerlendirme, onam, ekip.",
+    "Yaklaşımda kapsamlı psikiyatrik değerlendirme, eşlik eden bozuklukların öncelikle tedavisi, multidisipliner ekip ve bilgilendirilmiş onam esastır; eski kılavuzlardaki sabit süre şartları kaldırılmıştır, ergenlik baskılayıcılar Cass Raporu (2024) sonrası rutin uygulamadan çıkarıldı.",
+    "kapsamlı psikiyatrik değerlendirme; gelişim öyküsü, kimliğin sürekliliği, eşlik eden bozukluklar, karar verme yeterliliği.",
+    "eşlik eden ruhsal bozukluklar öncelikle uygun yöntemlerle tedavi edilir.",
+    "psikiyatri, endokrinoloji, cerrahi; destekleyici psikoterapi ve aile desteği.",
+    "hormon ve cerrahi girişimlerin bazı etkileri geri döndürülemez; bilgilendirilmiş onam zorunludur.",
+    "güncel kılavuzda (WPATH 8. sürüm) bireysel değerlendirme esastır; eski kılavuzlardaki diğer cinsiyet rolünde yaşama gibi sabit süre şartları kaldırılmıştır.",
+    "tıbbi müdahalelerin kanıt düzeyi tartışmalıdır; İngiltere'de Cass Raporu (2024) sonrası ergenlik baskılayıcılar rutin uygulamadan çıkarıldı. 'Ergenlerde ergenlik baskılayıcıların rutin kullanımı' güncel yaklaşımın bileşeni değildir."
+   ],
+   "v": "bbb862c163"
+  },
+  {
+   "id": "2s06-15",
+   "baslik": "Ortak ölçütler: 6 ay, %75–100, sıkıntı, dışla",
+   "giris": "Tüm cinsel işlev bozukluğu tanılarında yakınma en az yaklaşık 6 ay sürer, etkinliklerin %75–100'ünde görülür, belirgin sıkıntı yaratır ve başka nedenle açıklanamaz.",
+   "s": [
+    22,
+    43
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "en az yaklaşık 6 ay süren yakınma."
+    },
+    {
+     "metin": "yakınma cinsel etkinliklerin %75–100'ünde görülür; %25 gibi düşük bir eşik tanı için yeterli değildir."
+    },
+    {
+     "metin": "kişide klinik olarak belirgin sıkıntı yaratır."
+    },
+    {
+     "metin": "başka bir nedenle daha iyi açıklanamaz. Dışlanacaklar: cinsel olmayan bir ruhsal bozukluk (ör. depresyon), ağır ilişki sorunu (ör. eş şiddeti) ya da başka stres etkenleri, madde/ilaç etkisi ve başka bir sağlık durumu."
+    },
+    {
+     "metin": "yaşam boyu / sonradan başlayan; genel / durumsal; hafif / orta / ağır. Organik–psikojenik ayrımı bir belirleyici değil, sertleşme bozukluğunda klinik ayrım aracıdır; 'kontrollü ortamda' ve 'tam iyileşmede' parafilik bozuklukların belirleyicileridir."
+    }
+   ],
+   "klip": "o-2s06-15",
+   "ses": [
+    "Ortak ölçütler: 6 ay, %75–100, sıkıntı, dışla.",
+    "Tüm cinsel işlev bozukluğu tanılarında yakınma en az yaklaşık 6 ay sürer, etkinliklerin %75–100'ünde görülür, belirgin sıkıntı yaratır ve başka nedenle açıklanamaz.",
+    "en az yaklaşık 6 ay süren yakınma.",
+    "yakınma cinsel etkinliklerin %75–100'ünde görülür; %25 gibi düşük bir eşik tanı için yeterli değildir.",
+    "kişide klinik olarak belirgin sıkıntı yaratır.",
+    "başka bir nedenle daha iyi açıklanamaz. Dışlanacaklar: cinsel olmayan bir ruhsal bozukluk (ör. depresyon), ağır ilişki sorunu (ör. eş şiddeti) ya da başka stres etkenleri, madde/ilaç etkisi ve başka bir sağlık durumu.",
+    "yaşam boyu / sonradan başlayan; genel / durumsal; hafif / orta / ağır. Organik–psikojenik ayrımı bir belirleyici değil, sertleşme bozukluğunda klinik ayrım aracıdır; 'kontrollü ortamda' ve 'tam iyileşmede' parafilik bozuklukların belirleyicileridir."
+   ],
+   "v": "ab6f928d1a"
+  },
+  {
+   "id": "2s06-35",
+   "baslik": "Cinsel öykü: mahremiyet, açık uçlu soru, sorgulanacak başlıklar",
+   "giris": "Cinsel öyküde mahremiyet sağlanır, gizlilik belirtilir, yargılamadan açık uçlu sorular sorulur; ilişki, eşin bakışı, cinsel bilgi, hastalık, ilaç ve ruh hali sorgulanır.",
+   "s": [
+    23
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "mahremiyet sağlanır ve görüşmenin hekim ile hasta arasında kalacağı belirtilir; tutum yargılamayan ve sakindir. Normalleştirerek başlanır, açık uçlu sorular ve anlaşılır bir dil kullanılır; hasta yakınmasını kendi sözleriyle anlatır."
+    },
+    {
+     "metin": "'Erken boşalmanız mı var?' gibi yalnız evet ya da hayır ile yanıtlanan sorular hastanın anlatımını keser."
+    },
+    {
+     "metin": "yakınma ne zaman başladı, hep mi vardı yoksa sonradan mı çıktı; her durumda mı, belirli bir eş ya da ortamda mı oluyor; sabah ereksiyonları ve mastürbasyondaki durum."
+    },
+    {
+     "metin": "ilişki, eşin soruna bakışı ve cinsel bilgi düzeyi; tıbbi hastalıklar, ilaçlar, alkol ve madde kullanımı; depresyon ve kaygı gibi ruh hali sorunları."
+    }
+   ],
+   "klip": "o-2s06-35",
+   "ses": [
+    "Cinsel öykü: mahremiyet, açık uçlu soru, sorgulanacak başlıklar.",
+    "Cinsel öyküde mahremiyet sağlanır, gizlilik belirtilir, yargılamadan açık uçlu sorular sorulur; ilişki, eşin bakışı, cinsel bilgi, hastalık, ilaç ve ruh hali sorgulanır.",
+    "mahremiyet sağlanır ve görüşmenin hekim ile hasta arasında kalacağı belirtilir; tutum yargılamayan ve sakindir. Normalleştirerek başlanır, açık uçlu sorular ve anlaşılır bir dil kullanılır; hasta yakınmasını kendi sözleriyle anlatır.",
+    "'Erken boşalmanız mı var?' gibi yalnız evet ya da hayır ile yanıtlanan sorular hastanın anlatımını keser.",
+    "yakınma ne zaman başladı, hep mi vardı yoksa sonradan mı çıktı; her durumda mı, belirli bir eş ya da ortamda mı oluyor; sabah ereksiyonları ve mastürbasyondaki durum.",
+    "ilişki, eşin soruna bakışı ve cinsel bilgi düzeyi; tıbbi hastalıklar, ilaçlar, alkol ve madde kullanımı; depresyon ve kaygı gibi ruh hali sorunları."
+   ],
+   "v": "8705519048"
+  },
+  {
+   "id": "2s06-34",
+   "baslik": "İstek bozuklukları: erkekte düşük istek, kadında ilgi/uyarılma",
+   "giris": "Erkeğin düşük cinsel istek bozukluğu sürekli istek ve fantezi azlığıdır; kadının cinsel ilgi/uyarılma bozukluğu altı alandan en az üçünde azalmadır; eşler arası istek farkı tek başına bozukluk değildir.",
+   "s": [
+    27,
+    28
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "cinsel düşünce ve fantezilerin ve cinsel etkinlik isteğinin sürekli ya da yineleyen biçimde azalmış ya da hiç olmaması; değerlendirmeyi hekim yapar, yaş ve sosyokültürel bağlam dikkate alınır; en az 6 ay sürer, belirgin sıkıntı yaratır. İstek sorunu bildiren erkekler 18–24 yaştan 66–74 yaşa %6'dan %41'e çıkar; 6 aydan uzun belirgin kayıp 16–44 yaşta yaklaşık %2."
+    },
+    {
+     "metin": "eşler arasındaki istek farkı tek başına bozukluk değildir."
+    },
+    {
+     "metin": "altı alandan (ilgi, düşünce/fantezi, başlatma ya da açık olma, etkinlik sırasında heyecan ve haz %75–100'ünde, uyaranlara yanıt, genital/genital olmayan duyumlar) en az üçünde belirgin azalma; en az 6 ay. Tek tanı olmasının nedeni kadınlarda istek ve uyarılmanın kolayca ayrılamamasıdır (Basson modeli)."
+    },
+    {
+     "metin": "ilişki sorunları, depresyon, ilaçlar, doğum sonrası dönem ve emzirme, menopoz; düşük istek yaşla artar."
+    }
+   ],
+   "klip": "o-2s06-34",
+   "ses": [
+    "İstek bozuklukları: erkekte düşük istek, kadında ilgi/uyarılma.",
+    "Erkeğin düşük cinsel istek bozukluğu sürekli istek ve fantezi azlığıdır; kadının cinsel ilgi/uyarılma bozukluğu altı alandan en az üçünde azalmadır; eşler arası istek farkı tek başına bozukluk değildir.",
+    "cinsel düşünce ve fantezilerin ve cinsel etkinlik isteğinin sürekli ya da yineleyen biçimde azalmış ya da hiç olmaması; değerlendirmeyi hekim yapar, yaş ve sosyokültürel bağlam dikkate alınır; en az 6 ay sürer, belirgin sıkıntı yaratır. İstek sorunu bildiren erkekler 18–24 yaştan 66–74 yaşa %6'dan %41'e çıkar; 6 aydan uzun belirgin kayıp 16–44 yaşta yaklaşık %2.",
+    "eşler arasındaki istek farkı tek başına bozukluk değildir.",
+    "altı alandan (ilgi, düşünce/fantezi, başlatma ya da açık olma, etkinlik sırasında heyecan ve haz %75–100'ünde, uyaranlara yanıt, genital/genital olmayan duyumlar) en az üçünde belirgin azalma; en az 6 ay. Tek tanı olmasının nedeni kadınlarda istek ve uyarılmanın kolayca ayrılamamasıdır (Basson modeli).",
+    "ilişki sorunları, depresyon, ilaçlar, doğum sonrası dönem ve emzirme, menopoz; düşük istek yaşla artar."
+   ],
+   "v": "e5a7ae85ba"
+  },
+  {
+   "id": "2s06-20",
+   "baslik": "Sertleşme bozukluğu kalp-damar hastalığının erken habercisidir",
+   "giris": "Penil arterler koronerlerden daha ince olduğu için aterosklerozdan daha erken etkilenir; sertleşme bozukluğu koroner hastalıktan birkaç yıl önce ortaya çıkabilir, bu yüzden kalp-damar risk değerlendirmesi yapılmalıdır.",
+   "s": [
+    29,
+    43
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "penil arterler koronerlerden daha ince olduğu için aterosklerozdan daha erken etkilenir. Sertleşme bozukluğu koroner hastalıktan birkaç yıl önce ortaya çıkabilir; bu yüzden kalp-damar risk değerlendirmesi yapılmalıdır."
+    },
+    {
+     "metin": "cinsel etkinliklerin %75–100'ünde en az biri: ereksiyonu sağlamada belirgin güçlük, ereksiyonu etkinlik sonuna dek sürdürmede belirgin güçlük, ereksiyon sertliğinde belirgin azalma; en az 6 ay sürer, belirgin sıkıntı yaratır."
+    },
+    {
+     "metin": "yaşla artar; belirgin sorun 40–50 yaş altında yaklaşık %2, 60–70 yaş üstünde %40–50."
+    },
+    {
+     "metin": "performans kaygısının koroner spazmı, prolaktinin miyokardı baskılaması, serotoninin damar genişlemesini engellemesi ya da testosteronun aterosklerozu hızlandırması haberci olmayı açıklayan mekanizmalar değildir; neden damar inceliğidir."
+    }
+   ],
+   "klip": "o-2s06-20",
+   "ses": [
+    "Sertleşme bozukluğu kalp-damar hastalığının erken habercisidir.",
+    "Penil arterler koronerlerden daha ince olduğu için aterosklerozdan daha erken etkilenir; sertleşme bozukluğu koroner hastalıktan birkaç yıl önce ortaya çıkabilir, bu yüzden kalp-damar risk değerlendirmesi yapılmalıdır.",
+    "penil arterler koronerlerden daha ince olduğu için aterosklerozdan daha erken etkilenir. Sertleşme bozukluğu koroner hastalıktan birkaç yıl önce ortaya çıkabilir; bu yüzden kalp-damar risk değerlendirmesi yapılmalıdır.",
+    "cinsel etkinliklerin %75–100'ünde en az biri: ereksiyonu sağlamada belirgin güçlük, ereksiyonu etkinlik sonuna dek sürdürmede belirgin güçlük, ereksiyon sertliğinde belirgin azalma; en az 6 ay sürer, belirgin sıkıntı yaratır.",
+    "yaşla artar; belirgin sorun 40–50 yaş altında yaklaşık %2, 60–70 yaş üstünde %40–50.",
+    "performans kaygısının koroner spazmı, prolaktinin miyokardı baskılaması, serotoninin damar genişlemesini engellemesi ya da testosteronun aterosklerozu hızlandırması haberci olmayı açıklayan mekanizmalar değildir; neden damar inceliğidir."
+   ],
+   "v": "1898166408"
+  },
+  {
+   "id": "2s06-36",
+   "baslik": "Çocuk istismarı şüphesinde yasal bildirim yükümlülüğü",
+   "giris": "Hekim çocuğun istismara uğradığından şüphelendiğinde yasal bildirim yükümlülüğü taşır; bildirim için istismarın kesinleşmesi beklenmez.",
+   "s": [
+    39
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "çocuğun istismara uğradığından şüphelenildiğinde hekimin yasal bildirim yükümlülüğü vardır. Bildirim için istismarın kanıtlanması beklenmez; şüphe yeterlidir ve çocuğun korunması bu erken bildirime bağlıdır."
+    },
+    {
+     "metin": "bildirim bir yükümlülüktür, hastanın isteğine bırakılmaz."
+    },
+    {
+     "metin": "parafilik bozukluklarda utanç ve gizlilik nedeniyle kendiliğinden başvuru azdır; hastalar çoğu kez yasal süreç ya da eşin baskısıyla gelir. Pedofilik bozuklukla başvuru çok nadirdir, ama böyle bir başvuruda bildirim yükümlülüğü akılda tutulur."
+    },
+    {
+     "metin": "büyük çoğunluğu erkektir ve genellikle ergenlik ya da erken erişkinlikte başlar."
+    }
+   ],
+   "klip": "o-2s06-36",
+   "ses": [
+    "Çocuk istismarı şüphesinde yasal bildirim yükümlülüğü.",
+    "Hekim çocuğun istismara uğradığından şüphelendiğinde yasal bildirim yükümlülüğü taşır; bildirim için istismarın kesinleşmesi beklenmez.",
+    "çocuğun istismara uğradığından şüphelenildiğinde hekimin yasal bildirim yükümlülüğü vardır. Bildirim için istismarın kanıtlanması beklenmez; şüphe yeterlidir ve çocuğun korunması bu erken bildirime bağlıdır.",
+    "bildirim bir yükümlülüktür, hastanın isteğine bırakılmaz.",
+    "parafilik bozukluklarda utanç ve gizlilik nedeniyle kendiliğinden başvuru azdır; hastalar çoğu kez yasal süreç ya da eşin baskısıyla gelir. Pedofilik bozuklukla başvuru çok nadirdir, ama böyle bir başvuruda bildirim yükümlülüğü akılda tutulur.",
+    "büyük çoğunluğu erkektir ve genellikle ergenlik ya da erken erişkinlikte başlar."
+   ],
+   "v": "af1104fc4b"
+  }
  ]
 }
