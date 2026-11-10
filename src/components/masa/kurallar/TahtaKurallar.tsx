@@ -91,10 +91,18 @@ export function CizgiKurallar() {
       <ul>
         <li><b>32</b> kare (3 sütun, 2 yan hakkı) · <b>64</b> (5 sütun, 3 hak) · <b>96</b> (5 sütun, 4 hak) · <b>128</b> (7 sütun, 5 hak).</li>
         <li>İki çizgi de orta sütundan başlar.</li>
+        <li><b>Klasik</b>: yukarıdaki kurallar. <b>Eğlenceli</b>: aynı kurallar + pistte özel kareler (aşağıda).</li>
+      </ul>
+      <h3>Eğlenceli mod: özel kareler</h3>
+      <ul>
+        <li>Kareler iki oyuncu için ayna simetrik dağıtılır; çizginin başı bir kareye basınca kare etkisini gösterip kaybolur.</li>
+        <li><b>⏩ İleri</b>: bu tura 3 adım eklenir. <b>↔ Yan</b>: 1 yan hakkı kazanırsın. <b>🎲 Zar</b>: tur bitince yeniden zar atarsın.</li>
+        <li><b>💥 Tuzak</b>: çizgin 2 kare geri çekilir (kale kalır) ve turun biter.</li>
+        <li>Önündeki tuzağı görüp yana geçmek mümkün değil (yan geçiş yalnız önün rakiple kapalıyken); ama hangi sütunda olduğun önemlidir. Kapışmada basılan kareler etkisizdir.</li>
       </ul>
       <h3>Sıran gelince</h3>
       <ul>
-        <li><b>Zar at</b> (1–6). Sonra adımlarını tek tek harcarsın: her adım çizgini bir kare öne uzatır. “Hepsi” düğmesi düz yol açıkken bütün adımları atar.</li>
+        <li><b>Zar at</b> (1–6). Çizgin zar kadar kare öne uzar. “Otomatik ilerle” açıkken bu kendiliğinden olur ve yalnız yana geçmen gerektiğinde durur; kapalıyken adımları tek tek ya da “Hepsi” ile atarsın.</li>
         <li>Yan sütuna yalnız <b>önün rakip çizgisiyle kapalıyken</b> geçebilirsin; her yan geçiş bir adım ve bir yan hakkı yer.</li>
         <li>Yolun yoksa kalan adımlar yanar.</li>
       </ul>

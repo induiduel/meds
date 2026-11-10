@@ -381,6 +381,7 @@ class MasaSunucu {
       goSure: kilit ? kilit.goSure : GO_SURELER.find((x) => x.id === a.goSure)?.id ?? 'yok',
       komi: kilit ? kilit.komi : Number.isFinite(Number(a.komi)) && Number(a.komi) >= 0 && Number(a.komi) <= 15 ? Math.round(Number(a.komi) * 2) / 2 : 6.5,
       cizgiKare: kilit ? kilit.cizgiKare : ([32, 64, 96, 128] as const).find((n) => n === Number(a.cizgiKare)) ?? 64,
+      cizgiMod: kilit ? (kilit.cizgiMod ?? 'klasik') : a.cizgiMod === 'eglence' ? 'eglence' : 'klasik',
       xoxBoyut: kilit ? kilit.xoxBoyut : ([3, 4, 5, 6] as const).find((n) => n === Number(a.xoxBoyut)) ?? 3,
       botZorluk: kilit ? (kilit.botZorluk ?? 'orta') : (['kolay', 'orta', 'zor'] as const).find((z) => z === a.botZorluk) ?? 'orta',
     };

@@ -10,9 +10,12 @@
  *     kaldıysa ve yine kaybederse galip kaleyi alır, el biter. Mağlup geri çekilirken çizgisi yan geçiş köşesini geçerse
  *     galibin önü açılır, kapışma kendiliğinden biter.
  *   - Yüz yüze gelme tam orta çizgide olursa (ikisi de kendi yarısında) kapışma yoktur; önü kapalı olan yana geçmelidir.
+ * Eğlenceli mod (`cizgiMod: 'eglence'`, kullanıcı kararı 2026-11-10): pistte iki oyuncuya ayna simetrik özel kareler. Başın
+ *   düz ya da yan adımla bastığı kare tüketilir: ileri (+3 adım), yan (+1 yan hakkı), zar (tur bitince yeniden zar),
+ *   tuzak (2 hücre geri, kale kalır, tur biter). Kapışmada basılan kareler etkisizdir. Klasik mod aynen kalır.
  * Durum düz JSON; `uygula` girdiyi değiştirmez.
  */
-import type { CizgiAdim, CizgiGorunum, CizgiKare, ElSonuc, Hucre, Motor, Olay, Rng } from '../tipler';
+import type { CizgiAdim, CizgiGorunum, CizgiOzel, CizgiOzelTur, CizgiKare, ElSonuc, Hucre, Motor, Olay, Rng } from '../tipler';
 
 export interface CizgiDurum {
   tur: 'cizgi';
@@ -32,6 +35,9 @@ export interface CizgiDurum {
   adim: CizgiAdim | null;
   gecmis: CizgiAdim[];
   sonuc: ElSonuc | null;
+  ozel?: CizgiOzel[];
+  /** zar karesine basıldı: tur bitince sıra geçmez */
+  tekrar?: boolean;
 }
 
 const KARELER: CizgiKare[] = [32, 64, 96, 128];
@@ -86,19 +92,57 @@ function turBitir(d: CizgiDurum, olaylar: Olay[]) {
   if (d.adim) { d.gecmis = [...d.gecmis, d.adim].slice(-GECMIS); d.adim = null; }
   d.zar = null; d.kalan = 0;
   if (d.sonuc) { olaylar.push({ t: 'elBitti' }); return; }
+  if (d.tekrar) { d.tekrar = false; d.turNo += 1; olaylar.push({ t: 'sira', o: d.oyuncular[d.kim] }); return; }
   d.kim = rakipK(d.kim); d.turNo += 1;
   olaylar.push({ t: 'sira', o: d.oyuncular[d.kim] });
 }
 
+/** Özel kareleri yerleştir: alt yarıya rastgele, üst yarıya aynası (iki oyuncu için eşit) */
+function ozelKur(uzunluk: number, genislik: number, rng: Rng): CizgiOzel[] {
+  const turler: CizgiOzelTur[] = ['ileri', 'ileri', 'yan', 'zar', 'tuzak', 'tuzak'];
+  const adet = Math.max(3, Math.round(uzunluk / 10)), r: CizgiOzel[] = [], orta = (genislik - 1) / 2;
+  const alinan = new Set<string>();
+  for (let n = 0, dene = 0; n < adet && dene < 200; dene++) {
+    const sat = 3 + Math.floor(rng() * (uzunluk / 2 - 4)), sut = Math.floor(rng() * genislik);
+    if (alinan.has(`${sut},${sat}`) || alinan.has(`${sut},${sat - 1}`) || alinan.has(`${sut},${sat + 1}`)) continue;
+    // Başlangıç sütununda ilk tuzak çok erken gelmesin
+    const t = turler[Math.floor(rng() * turler.length)];
+    if (t === 'tuzak' && sut === orta && sat < 6) continue;
+    alinan.add(`${sut},${sat}`);
+    r.push({ s: sut, r: sat, t }, { s: genislik - 1 - sut, r: uzunluk - 1 - sat, t });
+    n++;
+  }
+  return r;
+}
+
+/** Baş özel kareye bastıysa uygula; true: tur hemen bitti (tuzak) */
+function ozelBas(d: CizgiDurum, k: 0 | 1, h: Hucre, olaylar: Olay[]): boolean {
+  const i = d.ozel?.findIndex((x) => x.s === h.s && x.r === h.r) ?? -1;
+  if (!d.ozel || i < 0) return false;
+  const o = d.oyuncular[k], t = d.ozel[i].t;
+  d.ozel = d.ozel.filter((_, j) => j !== i);
+  if (d.adim) d.adim.ozel = [...(d.adim.ozel || []), t];
+  olaylar.push({ t: 'ozel', o, tur: t });
+  if (t === 'ileri') d.kalan += 3;
+  else if (t === 'yan') d.yanHak[o] += 1;
+  else if (t === 'zar') d.tekrar = true;
+  else {
+    const c = d.cizgiler[o];
+    for (let n = 0; n < 2 && c.length > 1; n++) { const x = c.pop()!; d.adim?.silinen.push(x); if (d.adim) d.adim.fark -= 1; }
+    return true;
+  }
+  return false;
+}
+
 const kopya = (d: CizgiDurum): CizgiDurum => ({
-  ...d, cizgiler: Object.fromEntries(Object.entries(d.cizgiler).map(([k, v]) => [k, v.slice()])), yanHak: { ...d.yanHak },
+  ...d, ozel: d.ozel?.slice(), cizgiler: Object.fromEntries(Object.entries(d.cizgiler).map(([k, v]) => [k, v.slice()])), yanHak: { ...d.yanHak },
   adim: d.adim ? { ...d.adim, eklenen: d.adim.eklenen.slice(), silinen: d.adim.silinen.slice() } : null,
 });
 
 export const cizgiMotor: Motor = {
   tur: 'cizgi', min: 2, max: 2,
 
-  elBaslat({ oyuncular, elNo, baslayan, ayar }) {
+  elBaslat({ oyuncular, elNo, baslayan, ayar, rng }) {
     const kare = KARELER.includes(ayar?.cizgiKare as CizgiKare) ? (ayar!.cizgiKare as CizgiKare) : 64;
     const genislik = CIZGI_GENISLIK[kare], orta = (genislik - 1) / 2;
     const ids: [string, string] = [oyuncular[0].id, oyuncular[1].id];
@@ -108,6 +152,7 @@ export const cizgiMotor: Motor = {
       yanHak: { [ids[0]]: CIZGI_YAN_HAK[kare], [ids[1]]: CIZGI_YAN_HAK[kare] },
       kim: (baslayan % 2) as 0 | 1, zar: null, kalan: 0, turNo: 1, adim: null, gecmis: [], sonuc: null,
     };
+    if (ayar?.cizgiMod === 'eglence') d.ozel = ozelKur(kare, genislik, rng);
     return d;
   },
 
@@ -181,6 +226,7 @@ export const cizgiMotor: Motor = {
     d.kalan -= 1;
     olaylar.push({ t: 'ilerledi', o, h: yeni, yon });
     if (yeni.r === hedefSatir(d, k)) { d.sonuc = sonuclandir(d, o, 'Rakip kaleye ulaştı'); turBitir(d, olaylar); return { durum: d, olaylar }; }
+    if (ozelBas(d, k, yeni, olaylar)) { d.kalan = 0; turBitir(d, olaylar); return { durum: d, olaylar }; }
     if (kapismaMi(d)) { olaylar.push({ t: 'karsilasti', o, rakip: ro }); turBitir(d, olaylar); return { durum: d, olaylar }; }
     if (d.kalan <= 0 || !yonler(d).length) { if (d.kalan > 0) olaylar.push({ t: 'bekledi', o, adet: d.kalan }); turBitir(d, olaylar); }
     return { durum: d, olaylar };
@@ -192,6 +238,7 @@ export const cizgiMotor: Motor = {
       tur: 'cizgi', elNo: d.elNo, kare: d.kare, uzunluk: d.uzunluk, genislik: d.genislik, sira: d.oyuncular[d.kim],
       cizgiler: d.cizgiler, yanHak: d.yanHak, zar: d.zar, kalan: d.kalan, kapisma: kapismaMi(d),
       gecmis: d.adim ? [...d.gecmis, d.adim].slice(-GECMIS) : d.gecmis, yonler: yonler(d), bitti: !!d.sonuc,
+      ozel: d.ozel,
     };
     return g;
   },

@@ -1,3 +1,8 @@
+## 2026-11-10 — Çizgi Yarışı: Eğlenceli mod (onem 699, kullanıcı kararı)
+- **Kural (kullanıcı onayı 2026-11-10):** `OdaAyar.cizgiMod` 'klasik' (aynen) | 'eglence'. Eğlencelide pistte ayna simetrik özel kareler (`ozelKur`, ≈uzunluk/10 çift, kale ve ilk satırlar dışında): ileri +3 adım, yan +1 yan hakkı, zar (tur bitince yeniden zar, `tekrar`), tuzak (2 hücre geri, kale kalır, tur biter). Kapışmada basılan kare etkisiz; kare basılınca tükenir.
+- **Ekran:** kurulum/lobide "Mod" seçici, pistte kare simgeleri, kare etkisi kutlama yazısı; kurallar sayfası güncellendi. Düzeltme: "Yol kapalı, tur yandı" yazısı zar atılır atılmaz yanlışlıkla çıkıyordu, artık yalnız tur bitince.
+- **Sınama:** `tahta.sinama.ts` 63 (simetri, üç etki, 6 bot-bot eğlence oyunu). Tarayıcıda elle oynanmadı.
+
 ## 2026-11-10 — Çizgi Yarışı: hızlı oyun, otomatik ilerle, yarış çubuğu (onem 697)
 - **Belirti:** kullanıcı "işlevler, oyun hızı kötü" dedi: her adım ayrı dokunuş + ayrı sunucu gidiş-dönüşü; bot her adımda 0,75–1,4 sn bekliyordu (6 atınca ~8 sn).
 - **Çözüm (kural değişmedi):** motor `{t:'kos'}` düz yol açık oldukça adımları tek hamlede harcar (bot da kullanır: tur ≈ 2 tik); `tahmin.ts` koşu tahmini. Ekran: "Otomatik ilerle" (varsayılan açık, yan seçimi gerekince durur), "Hepsi" tek hamle, önü kapalıyken yön uyarısı, yarış çubuğu, kapışma/altı/sıkışma kutlama yazısı.

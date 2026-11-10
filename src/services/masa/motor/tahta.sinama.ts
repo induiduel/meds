@@ -235,6 +235,30 @@ dene('çizgi: koş tek hamlede düz adımların hepsini harcar, sıra geçer', (
   assert.equal(d.kim, 1);
   assert.equal(d.gecmis[d.gecmis.length - 1].fark, z);
 });
+dene('çizgi eğlence: özel kareler ayna simetrik, kale satırlarında yok', () => {
+  for (const k of [32, 64, 128]) {
+    const d = cizgiMotor.elBaslat({ oyuncular: OY, elNo: 1, baslayan: 0, rng: tohumlu(k), ayar: { cizgiKare: k as 32, cizgiMod: 'eglence' } }) as CizgiDurum;
+    assert.ok(d.ozel!.length >= 6);
+    for (const x of d.ozel!) {
+      assert.ok(x.r > 0 && x.r < k - 1);
+      assert.ok(d.ozel!.some((y) => y.t === x.t && y.s === d.genislik - 1 - x.s && y.r === k - 1 - x.r));
+    }
+  }
+});
+dene('çizgi eğlence: ileri +3, tuzak 2 geri ve tur biter, zar tekrar', () => {
+  const temel = (t: 'ileri' | 'tuzak' | 'zar') => ({ ...cz(64), ozel: [{ s: 2, r: 1, t }] });
+  let d = ok(cizgiMotor.uygula(temel('ileri'), 'a', { t: 'zar' }, tohumlu(3))) as CizgiDurum;
+  const z = d.zar!;
+  d = ok(cizgiMotor.uygula(d, 'a', { t: 'kos' }, tohumlu(0))) as CizgiDurum;
+  assert.equal(d.cizgiler.a.length, 1 + z + 3); assert.equal(d.ozel!.length, 0);
+  d = ok(cizgiMotor.uygula(temel('tuzak'), 'a', { t: 'zar' }, tohumlu(3))) as CizgiDurum;
+  d = ok(cizgiMotor.uygula(d, 'a', { t: 'kos' }, tohumlu(0))) as CizgiDurum;
+  assert.equal(d.cizgiler.a.length, 1); assert.equal(d.kim, 1);
+  d = ok(cizgiMotor.uygula(temel('zar'), 'a', { t: 'zar' }, tohumlu(3))) as CizgiDurum;
+  d = ok(cizgiMotor.uygula(d, 'a', { t: 'kos' }, tohumlu(0))) as CizgiDurum;
+  assert.equal(d.kim, 0); assert.equal(d.zar, null);
+});
+for (let t = 1; t <= 6; t++) dene(`çizgi eğlence: bot-bot 64 kare tohum ${t}`, () => { botOyun(cizgiMotor, { cizgiKare: 64, cizgiMod: 'eglence' }, t); });
 const xo = (n: number) => xoxMotor.elBaslat({ oyuncular: OY, elNo: 1, baslayan: 0, rng: tohumlu(1), ayar: { xoxBoyut: n as 3 } }) as XoxDurum;
 const xoyna = (d: XoxDurum, h: number[]) => h.reduce((s, i, k) => ok(xoxMotor.uygula(s, k % 2 ? 'b' : 'a', { t: 'koy', i }, tohumlu(0))) as XoxDurum, d);
 dene('xox: yatay kazanma', () => { const d = xoyna(xo(3), [0, 3, 1, 4, 2]); assert.deepEqual(d.cizgi, [0, 1, 2]); assert.equal(d.sonuc!.kazananlar[0], 'a'); });

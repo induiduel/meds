@@ -1,21 +1,18 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 698,
- "baslik": "Kurul 2: Nörolojik Hastalıklar Genetiği ve Periyodik Sağlık Muayeneleri dersleri eklendi",
- "maddeler": [
-  "Yeni sesli dersler: Nörolojik Hastalıklar ve Genetiği (Tıbbi Genetik) ve Periyodik Sağlık Muayeneleri (Aile Hekimliği); PDF üstünde canlı çizim, ara resimler ve hocanın sorabileceği ara sorular.",
-  "Her iki derste örnek sorular, En önemliler listesi ve sesli soru çözücü; Aile Hekimliği branşı Sınav spotlarına eklendi.",
-  "Örnek sorular sayfasına on Kurul 2 dersinin daha soruları geldi (Şizofreni, Bipolar, OKB, TSSB, Sedatif-hipnotikler, Polinöropati, Bazal ganglionlar ve diğerleri).",
-  "Psikiyatri ve farmakoloji derslerinde EKT, TMS, OKB, TSSB gibi kısaltmalar artık harf harf doğru okunuyor."
- ],
- "eklenen": [
-  "Çizgi Yarışı otomatik ilerle",
-  "Yarış çubuğu"
- ],
- "degisen": [
-  "Çizgi Yarışı oyun hızı"
- ],
- "duzeltilen": [],
- "silinen": [],
- "yenilikler": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
+  "onem": 699,
+  "baslik": "Çizgi Yarışı: Eğlenceli mod",
+  "maddeler": [
+    "Çizgi Yarışı Eğlenceli mod: pistte bonus kareler (+3 adım, yan hakkı, yeniden zar) ve tuzaklar (2 kare geri). Kareler iki oyuncu için eşit dağıtılır.",
+    "Klasik mod aynen duruyor; modu masayı kurarken seçersin."
+  ],
+  "eklenen": [
+    "Çizgi Yarışı Eğlenceli mod"
+  ],
+  "degisen": [],
+  "duzeltilen": [
+    "Çizgi Yarışı yanlış \"tur yandı\" yazısı"
+  ],
+  "silinen": [],
+  "yenilikler": []
 }

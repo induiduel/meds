@@ -46,8 +46,9 @@ export function TahtaAyar({ tur, ayar, degistir, kilitli }: { tur: OyunTur; ayar
   }
   if (tur === 'cizgi') {
     const k = ayar.cizgiKare ?? 64;
-    return dilim('Yol uzunluğu', CIZGI_MOD.map((m) => ({ v: m.kare, ad: <>{m.kare}<small> {m.ad}</small></> })), k, (v) => degistir({ cizgiKare: v }),
-      `${k} satır, ${({ 32: 3, 64: 5, 96: 5, 128: 7 } as const)[k]} sütun; elde ${({ 32: 2, 64: 3, 96: 4, 128: 5 } as const)[k]} yan geçiş hakkı.`);
+    return <>{dilim<'klasik' | 'eglence'>('Mod', [{ v: 'klasik', ad: 'Klasik' }, { v: 'eglence', ad: 'Eğlenceli' }], ayar.cizgiMod ?? 'klasik', (v) => degistir({ cizgiMod: v }),
+      (ayar.cizgiMod ?? 'klasik') === 'eglence' ? 'Pistte bonus kareler (+3 adım, yan hakkı, yeniden zar) ve tuzaklar (2 geri).' : 'Yalnız zar ve kapışma.')}{dilim('Yol uzunluğu', CIZGI_MOD.map((m) => ({ v: m.kare, ad: <>{m.kare}<small> {m.ad}</small></> })), k, (v) => degistir({ cizgiKare: v }),
+      `${k} satır, ${({ 32: 3, 64: 5, 96: 5, 128: 7 } as const)[k]} sütun; elde ${({ 32: 2, 64: 3, 96: 4, 128: 5 } as const)[k]} yan geçiş hakkı.`)}</>;
   }
   if (tur === 'xox') {
     return <>{zorluk}{dilim('Tahta', ([3, 4, 5, 6] as const).map((n) => ({ v: n, ad: <>{n}×{n}<small> · {XOX_HEDEF[n]}'lü</small></> })), ayar.xoxBoyut ?? 3, (v) => degistir({ xoxBoyut: v }),

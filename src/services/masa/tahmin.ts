@@ -137,6 +137,8 @@ function cizgi(g0: CizgiGorunum, yon: 'duz' | 'sol' | 'sag', ben: string): Cizgi
   const g = kopya(g0);
   const b = cz[cz.length - 1], ileri = k === 0 ? 1 : -1;
   const yeni = yon === 'duz' ? { s: b.s, r: b.r + ileri } : { s: b.s + (yon === 'sol' ? -1 : 1), r: b.r };
+  // Özel kare etkisini sunucu uygular: oraya basan adım tahmin edilmez
+  if (g0.ozel?.some((x) => x.s === yeni.s && x.r === yeni.r)) return null;
   g.cizgiler[ben].push(yeni);
   if (yon !== 'duz') g.yanHak[ben] -= 1;
   g.kalan -= 1;

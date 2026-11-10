@@ -427,7 +427,13 @@ export interface CizgiAdim {
   eklenen: Hucre[];
   silinen: Hucre[];
   kapisma?: { rakipZar: number; kazanan: string | null };
+  /** Eğlenceli mod: bu turda basılan özel kareler */
+  ozel?: CizgiOzelTur[];
 }
+
+/** Eğlenceli mod özel kareleri: ileri (+3 adım), yan (+1 yan hakkı), zar (tur sonunda yeniden zar), tuzak (2 geri, tur biter) */
+export type CizgiOzelTur = 'ileri' | 'yan' | 'zar' | 'tuzak';
+export interface CizgiOzel { s: number; r: number; t: CizgiOzelTur }
 
 export interface CizgiGorunum {
   tur: 'cizgi';
@@ -451,6 +457,8 @@ export interface CizgiGorunum {
   /** Sıradakinin şu an yapabileceği ilerle yönleri */
   yonler: ('duz' | 'sol' | 'sag')[];
   bitti: boolean;
+  /** Eğlenceli mod: pistte henüz basılmamış özel kareler (klasikte boş) */
+  ozel?: CizgiOzel[];
 }
 
 /* ------------------------------------------------------------------ xox ------------------------------------------------------------------ */
@@ -589,6 +597,8 @@ export interface OdaAyar {
   cizgiKare?: CizgiKare;
   /** xox: tahta boyutu (varsayılan 3) */
   xoxBoyut?: XoxBoyut;
+  /** cizgi: 'klasik' (varsayılan) ya da 'eglence' (bonus ve tuzak kareler) */
+  cizgiMod?: 'klasik' | 'eglence';
   /** go/xox: bot gücü (varsayılan 'orta'; 'zor' eski kusursuz bot) */
   botZorluk?: BotZorluk;
 }

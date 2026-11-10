@@ -60,20 +60,28 @@ function Pist({ oda, c }: { oda: OdaGorunum; c: CizgiGorunum }) {
 
   const son = c.gecmis[c.gecmis.length - 1];
   const sonK = useRef(c.gecmis.length + ':' + (son?.tur ?? 0));
+  const sonOzel = useRef(`${son?.tur ?? 0}:${son?.ozel?.length ?? 0}`);
   useEffect(() => {
-    const k = c.gecmis.length + ':' + (son?.tur ?? 0) + ':' + (son?.zar ?? 0);
+    const k = c.gecmis.length + ':' + (son?.tur ?? 0) + ':' + (son?.zar ?? 0) + ':' + (son?.ozel?.length ?? 0) + (c.zar == null ? 'b' : 'a');
     if (k !== sonK.current && son) {
       sesCal(son.kapisma ? (son.kapisma.kazanan === ben ? 'kazan' : 'ceza') : 'tas');
       const benim = son.o === ben;
-      if (son.kapisma) {
+      const OZEL_AD = { ileri: '+3 adım!', yan: '+1 yan hakkı', zar: 'Yeniden zar!', tuzak: 'Tuzak! 2 geri' } as const;
+      const ozelK = `${son.tur}:${son.ozel?.length ?? 0}`, ozelYeni = !!son.ozel?.length && ozelK !== sonOzel.current;
+      sonOzel.current = ozelK;
+      if (son.ozel?.length && !ozelYeni) { /* bu kare zaten duyuruldu */ } else if (ozelYeni && son.ozel) {
+        const t = son.ozel[son.ozel.length - 1], iyi = t !== 'tuzak';
+        setFlas({ k: Date.now(), metin: `${benim ? '' : 'Rakip: '}${OZEL_AD[t]}`, iyi: benim ? iyi : !iyi });
+        sesCal(t === 'tuzak' ? 'ceza' : 'kazan');
+      } else if (son.kapisma) {
         const kaz = son.kapisma.kazanan;
         setFlas({ k: Date.now(), metin: kaz == null ? 'Kapışma: eşit!' : kaz === ben ? `Kapışmayı kazandın +${Math.abs(son.fark)}` : `Kapışmayı kaybettin −${Math.abs(son.fark)}`, iyi: kaz === ben });
         if (kaz && kaz !== ben) titret(40);
-      } else if (son.zar === 6 && son.fark >= 6) setFlas({ k: Date.now(), metin: benim ? 'Altı! Tam yol' : 'Rakip altı attı', iyi: benim });
+      } else if (c.zar != null) { /* tur sürüyor */ } else if (son.zar === 6 && son.fark >= 6) setFlas({ k: Date.now(), metin: benim ? 'Altı! Tam yol' : 'Rakip altı attı', iyi: benim });
       else if (son.fark === 0 && son.eklenen.length === 0) setFlas({ k: Date.now(), metin: benim ? 'Yol kapalı, tur yandı' : 'Rakip sıkıştı', iyi: !benim });
     }
     sonK.current = k;
-  }, [son]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [son, c.zar]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (c.zar != null && c.sira === ben) { sesCal('cek'); titret(10); } }, [c.zar]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Hücre boyu: genişliğe sığdır; uzun pistte kaydırılır, kendi başıma odaklanır
@@ -143,6 +151,13 @@ function Pist({ oda, c }: { oda: OdaGorunum; c: CizgiGorunum }) {
           {Array.from({ length: Math.floor(L / 8) }, (_, k) => (k + 1) * 8).filter((r) => r < L).map((r) => (
             <text key={r} x="3" y={(L - r) * H - 3} className="tm-cz-satir">{alttan ? r : L - r}</text>
           ))}
+          {/* eğlenceli mod özel kareleri */}
+          {(c.ozel || []).map((x) => { const p = ekran(x); return (
+            <g key={`o${x.s},${x.r}`} className={`tm-cz-ozel is-${x.t}`}>
+              <rect x={p.x * H + 2} y={p.y * H + 2} width={H - 4} height={H - 4} rx={H * 0.2} />
+              <text x={(p.x + 0.5) * H} y={(p.y + 0.5) * H} fontSize={H * 0.55} textAnchor="middle" dominantBaseline="central">{({ ileri: '⏩', yan: '↔', zar: '🎲', tuzak: '💥' } as const)[x.t]}</text>
+            </g>
+          ); })}
           {/* gerileme izi: silinen kısım kesik çizgi, 1–2 tur görünür */}
           {silinen.map(({ a, eski }) => (
             <path key={`s${a.tur}`} d={yol(a.silinen)} stroke={a.o === ben ? RENK.ben : RENK.rakip} strokeWidth={H * 0.22} strokeDasharray={`${H * 0.25} ${H * 0.3}`} strokeLinecap="round" fill="none" opacity={eski ? 0.25 : 0.55} />

@@ -89,3 +89,6 @@
 .tm-cz-flas.is-kotu { background: #b91c1c; }
 .tm-cz-oto { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: .85rem; opacity: .85; padding: 2px 0 6px; }
 .tm-cz-oto small { opacity: .7; }
+.tm-cz-ozel rect { stroke-width: 2; }
+.tm-cz-ozel.is-ileri rect, .tm-cz-ozel.is-yan rect, .tm-cz-ozel.is-zar rect { fill: #dcfce7; stroke: #16a34a; }
+.tm-cz-ozel.is-tuzak rect { fill: #fee2e2; stroke: #dc2626; }
