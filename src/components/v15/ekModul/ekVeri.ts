@@ -74,6 +74,9 @@ export interface EkModul {
   pdfEsle: EkPdfEsle | null;
 }
 
+  /** Hoca soruları · "PDF ile" sesli çözüm (hoca_pdf_esle.json; scripts/ek_modul/pdf_esle_hoca.py): h-/hc- klibinin çözümlü
+   *  kitapçıktaki soru bloğu, l cümle başına satırlar, c [cümlenin başladığı saniye, l sırası] */
+  hocaPdf: EkPdfEsle | null;
 export const EK_MODULLER = (dizinHam as { moduller: EkModulOzet[] }).moduller;
 export const ekKurullar = () => [...new Set(EK_MODULLER.map((m) => m.kurul))].sort();
 
@@ -95,11 +98,11 @@ export function ekModulYukle(id: string): Promise<EkModul | null> {
       const adlar = Object.keys(DOSYA).map((k) => new RegExp(`/${id}/(b\\d+)\\.json$`).exec(k)?.[1]).filter(Boolean) as string[];
       const basliklar = (await Promise.all(adlar.map((a) => al<EkBaslik>(a)))).filter(Boolean) as EkBaslik[];
       basliklar.sort((a, b) => a.no - b.no);
-      const [so, g, klip, hoca, foy, pdfEsle] = await Promise.all([
+      const [so, g, klip, hoca, foy, pdfEsle, hocaPdf] = await Promise.all([
         al<EkModul['sinavOncesi']>('sinav_oncesi'), al<{ sorular: EkSoru[] }>('genel_sorular'), al<Record<string, EkKlip>>('klip'),
-        al<EkModul['hoca']>('hoca_sorulari'), al<EkModul['foy']>('foy'), al<EkPdfEsle>('pdf_esle'),
+        al<EkModul['hoca']>('hoca_sorulari'), al<EkModul['foy']>('foy'), al<EkPdfEsle>('pdf_esle'), al<EkPdfEsle>('hoca_pdf_esle'),
       ]);
-      return { ozet, basliklar, sinavOncesi: so, genel: g?.sorular || [], klip: klip || {}, hoca, foy: hoca ? foy : null, pdfEsle };
+      return { ozet, basliklar, sinavOncesi: so, genel: g?.sorular || [], klip: klip || {}, hoca, foy: hoca ? foy : null, pdfEsle, hocaPdf: hoca ? hocaPdf : null };
     })();
     bellek.set(id, p);
   }
@@ -122,6 +125,11 @@ export function pdfKlip(m: EkModul, klip: string): EkPdfKlip | null {
 
 /* ——— soru setleri ——— */
 export interface SetSoru extends EkSoru { anahtar: string; qKlip: string; cKlip: string; konuId: string }
+export function hocaPdfKlip(m: EkModul, klip: string): EkPdfKlip | null {
+  const e = m.hocaPdf?.klip[klip];
+  return e && m.klip[klip]?.v === e.v ? e : null;
+}
+
 
 const setle = (sorular: EkSoru[], konuId: string, onek: string): SetSoru[] =>
   sorular.map((q) => ({ ...q, anahtar: `${onek}-${q.no}`, qKlip: `q-${onek}-${q.no}`, cKlip: `c-${onek}-${q.no}`, konuId: q.konu || konuId }));

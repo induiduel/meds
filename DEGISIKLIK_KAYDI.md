@@ -1,3 +1,9 @@
+## 2026-11-10 — Ek modül hoca soruları: "PDF ile" eş zamanlı sesli çözüm + sesli ders tarzı oynatıcı (onem 708)
+- **Eşleme (`scripts/ek_modul/pdf_esle_hoca.py`, yeni):** çözümlü kitapçıkta her soru bloğu (sol kenarda "N.", çözüm kutusu zemini #EEF3EE) bulunur; h-/hc- klibinin cümleleri satırlara bağlanır (kök, şık şık; çözümde doğru şık + kutu satırları karakter oranıyla), cümle zamanı `pdf_esle.py::cumle_zamanlari`. Yuruyus-kampcilik: 480 soru, 960 klip, 1220/1220 cümle sınırı duraklamaya oturdu → `src/data/ek_moduller/<modül>/hoca_pdf_esle.json`. Tuzak: "100." numarası metinle aynı satıra birleşiyordu (yalnız `^\d+\.` başı aranır).
+- **Ekran:** `EkPdfHoca.tsx` (soru bloğu kırpılır, okunan satır yanar), `EkHoca.tsx` "PDF ile / Yalnız soru" kipi, `EkSesliOynatici.tsx` (canlı ders v15 alt oynatıcı düzeni: soru parçalı çubuk + sürükle/atla, ±10, önceki/sonraki soru, hız hapı, ⋯). `useSira` `konum(i, t)` ve `cal(n, bas)` kazandı.
+- **Kapı:** `dogrula.py --modul` artık `hoca_pdf_esle.json` eskimişse HATA verir. TALIMAT.md'ye adım eklendi.
+- **Sınama:** yerel 3000, 1400 px ve 375 px: oynat → kök/şık A yanıyor, çözüm klibinde çözüm satırları; çubukta 13:42'ye atlama → Soru 36, PDF s. 36. Gerçek telefonda denenmedi.
+
 ## 2026-11-10 — Profil ve arkadaşlık istekleri görünmüyordu (H551, kullanıcı bildirdi)
 - **Belirti:** giriş yapılmış olmasına rağmen kendi profil/arkadaş listesi ve istekler boş.
 - **Kök neden:** `src/services/adminFetchAuth.ts::ogrenciJetonu` GET'te jetonu yalnız basarim/olasi-sorular/topluluk yollarına ekliyordu; `/api/arkadas` ve `/api/kisi/*` jetonsuz → sunucu kişiyi tanımıyordu.

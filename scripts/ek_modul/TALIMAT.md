@@ -104,3 +104,11 @@ Ses (`ses.py`) ve ders kitapçığı (`pdf.py`) üretildikten SONRA: `.venv-ocr/
 → `pdf_esle.json` (klip başına sayfa, bölüm kutusu, satır kutuları, cümle zamanı, cümle → not maddesi). İkisinden biri yeniden
 üretilirse betik yeniden çalıştırılır; `dogrula.py --modul` eskimiş eşlemede HATA verir. Eşlemenin tutması için `ses` cümleleri
 ekran notundaki maddelerin sözcüklerini kullanmalıdır (zaten kural: hocanın sözcükleri anlatımda aynen geçer).
+
+## Hoca soruları · "PDF ile" sesli çözüm (2026-11-10)
+Hoca sesleri (`h-`/`hc-`) ve çözümlü kitapçık (`npx tsx scripts/ek_modul/foy_pdf.mts <modül> --cozumlu`) üretildikten SONRA:
+`.venv-ocr/bin/python scripts/ek_modul/pdf_esle_hoca.py --modul <modül>` → `hoca_pdf_esle.json` (klip başına sayfa, soru bloğu,
+cümle başına satırlar, cümle zamanı). Ekran: hoca soruları sayfasında "PDF ile" kipi (`EkPdfHoca.tsx`) + sesli ders düzeninde
+oynatıcı (`EkSesliOynatici.tsx`: soru parçalı çubuk, atlama, hız). Kitapçık ya da ses değişirse betik yeniden çalıştırılır;
+`dogrula.py --modul` eskimiş eşlemede HATA verir. Betik soru bloğunu sol kenardaki "N." satırından ve çözüm kutusunun zemin
+renginden (#EEF3EE) bulur: `cozumluBelge` biçimi değişirse betik de güncellenir.

@@ -1,16 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 707,
-  "baslik": "Yürüyüş ve Kampçılık: kolay erişim",
+  "onem": 708,
+  "baslik": "Hocanın çalışma soruları: PDF ile sesli çözüm",
   "maddeler": [
-    "Ek modül: çalışma soruları, föy ve PDF indirmeleri sayfanın üstüne taşındı",
-    "Girişte Yürüyüş ve Kampçılık dersine yönlendirme sorusu"
+    "Hoca soruları: çözümlü kitapçık sesle eş zamanlı ilerler, okunan satır yanar",
+    "Sesli çözüm oynatıcısı sesli derslerdeki gibi: soru soru çubuk, atlama, hız"
   ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Arkadaş listesi, arkadaşlık istekleri ve profil sayfası girişli kullanıcıda boş geliyordu"
+  "eklenen": [
+    "Hocanın çalışma sorularında “PDF ile” kipi: soru okunurken kök ve şıklar, çözümde doğru şık ve çözüm satırları kitapçıkta yanar"
   ],
+  "degisen": [
+    "Hoca soruları sesli çözüm oynatıcısı sesli ders düzenine geçti (soru parçalı çubukta istediğin yere atla, ±10 sn, önceki/sonraki soru, hız)"
+  ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": []
 }

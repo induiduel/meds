@@ -295,3 +295,37 @@
   .ekm-pdf-kutu.is-bolum { height: auto; min-height: 0; }
   .ekm-pdf-kutu.is-bolum .ekm-pdfb { flex: none; min-height: 160px; }
 }
+
+/* ——— sesli ders tarzı oynatıcı (EkSesliOynatici; canlı ders v15 alt oynatıcısıyla aynı düzen) ——— */
+.ekm-oyn { position: sticky; top: calc(var(--sh-top-h, 52px) + 28px); z-index: 3; display: flex; flex-direction: column; gap: 4px; padding: 8px 12px; }
+.ekm-oyn-zaman { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; column-gap: 8px; }
+.ekm-oyn-zaman > span { font-size: .72rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.ekm-oyn-cubuk { position: relative; height: 18px; display: flex; align-items: center; cursor: pointer; touch-action: none; }
+.ekm-oyn-parcalar { flex: 1; display: flex; gap: 2px; }
+.ekm-oyn-parcalar > span { height: 4px; min-width: 0; border-radius: 2px; background: var(--color-field); overflow: hidden; transition: height .12s; }
+.ekm-oyn-parcalar > span > i { display: block; height: 100%; background: var(--color-accent); transform-origin: left; }
+.ekm-oyn-cubuk:hover .ekm-oyn-parcalar > span, .ekm-oyn-cubuk.is-surukle .ekm-oyn-parcalar > span { height: 6px; }
+.ekm-oyn-tutamac { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: var(--color-accent); border: 2px solid var(--color-white); box-shadow: 0 1px 3px rgb(0 0 0 / .25); pointer-events: none; }
+.ekm-oyn-ipucu { position: absolute; bottom: 20px; left: calc(var(--x) * 100%); transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; padding: 4px 8px; border-radius: 8px; background: var(--color-ink); color: var(--color-canvas); font-size: .72rem; white-space: nowrap; pointer-events: none; }
+.ekm-oyn-den { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.ekm-oyn-orta { flex: none; display: flex; align-items: center; gap: 2px; }
+.ekm-oyn-orta > button, .ekm-oyn-daha { width: 34px; height: 34px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--color-ink-2); cursor: pointer; }
+.ekm-oyn-orta > button:disabled { opacity: .4; cursor: default; }
+.ekm-oyn-orta > button svg, .ekm-oyn-daha svg { width: 18px; height: 18px; }
+.ekm-oyn-orta > button.is-oynat { width: 40px; height: 40px; background: var(--color-ink); color: var(--color-canvas); }
+.ekm-oyn-orta > button.is-oynat svg { fill: currentColor; }
+.ekm-oyn-orta > button:not(.is-oynat):hover, .ekm-oyn-daha:hover, .ekm-oyn-hiz:hover, .ekm-oyn-daha.is-on { background: var(--color-field); }
+.ekm-oyn-ad { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .8rem; font-weight: 600; color: var(--color-ink-2); }
+.ekm-oyn-hiz { flex: none; height: 28px; padding: 0 8px; border: 0; border-radius: 999px; background: transparent; color: var(--color-ink-2); font: 600 .8rem var(--font-sans); font-variant-numeric: tabular-nums; cursor: pointer; }
+.ekm-oyn .ekm-ayar { margin-top: 6px; }
+@media (max-width: 520px) { .ekm-oyn-ad { display: none; } .ekm-oyn-den { justify-content: space-between; } }
+
+/* hoca soruları · PDF ile: kitapçıktaki soru bloğu + yanında soru kartı */
+.ekm-hoca-yan, .ekm-hoca-tek { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.ekm-hoca-pdf { height: auto; min-height: 0; }
+.ekm-hoca-pdf .ekm-pdfb { flex: none; min-height: 140px; height: min(28vh, 210px); padding: 6px; }
+@container (min-width: 900px) {
+  .ekm-hoca-bolme { grid-template-columns: minmax(0, 1.8fr) minmax(320px, 1fr); }
+  .ekm-hoca-bolme .ekm-hoca-pdf { height: auto; min-height: 0; }
+  .ekm-hoca-bolme .ekm-hoca-pdf .ekm-pdfb { height: min(40vh, 340px); }
+}

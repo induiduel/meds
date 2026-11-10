@@ -60,7 +60,7 @@ export function useSira(m: EkModul, klipler: string[], bitti?: () => void, basli
     setCaliyor(false);
     setI(-1);
   }, [kimlik]);
-  const cal = useCallback((n: number) => {
+  const cal = useCallback((n: number, bas = 0) => {
     const d = durum.current;
     // klibi olmayan parça atlanır (ses henüz üretilmemiş olabilir)
     while (n < d.klipler.length && !klipUrl(d.m, d.klipler[n])) n++;
@@ -74,6 +74,8 @@ export function useSira(m: EkModul, klipler: string[], bitti?: () => void, basli
     a.onerror = () => cal(n + 1);
     a.ontimeupdate = () => setAn2({ t: a.currentTime, d: a.duration || 0 });
     a.src = klipUrl(d.m, d.klipler[n]) as string;
+    // çubukta bir ana atlama: klibin içindeki konum, süre bilgisi gelince verilir
+    if (bas > 0) a.addEventListener('loadedmetadata', () => { a.currentTime = Math.min(bas, Math.max(0, (a.duration || bas) - 0.2)); }, { once: true });
     a.playbackRate = d.hiz;
     setI(n);
     const s = ms();
@@ -100,6 +102,12 @@ export function useSira(m: EkModul, klipler: string[], bitti?: () => void, basli
     if (a.duration && t >= a.duration) { cal(iRef.current + 1); return; }
     a.currentTime = Math.max(0, t);
   }, [cal, kimlik]);
+  /** n. klibin t. saniyesine git (sesli ders çubuğu); aynı klipteyse yalnız konum değişir */
+  const konum = useCallback((n: number, t: number) => {
+    const a = ortak;
+    if (a && sahip === kimlik && iRef.current === n && a.src) { a.currentTime = Math.max(0, t); if (a.paused) a.play().catch(() => undefined); return; }
+    cal(n, t);
+  }, [cal, kimlik]);
   const ileri = useCallback(() => { if (iRef.current >= 0) cal(iRef.current + 1); }, [cal]);
   const geri = useCallback(() => { if (iRef.current > 0) cal(iRef.current - 1); else atla(-999); }, [cal, atla]);
 
@@ -125,7 +133,7 @@ export function useSira(m: EkModul, klipler: string[], bitti?: () => void, basli
   const sure = useMemo(() => klipler.reduce((t, k) => t + (m.klip[k]?.sure || 0), 0), [imza, m]); // eslint-disable-line react-hooks/exhaustive-deps
   /** çalan klibin içindeki an (sn); cümle takibi bununla yapılır */
   const an = useCallback(() => (sahip === kimlik ? ortak?.currentTime || 0 : 0), [kimlik]);
-  return { i, caliyor, hiz, sesVar, sure, cal, dugme, durdur, hizDegis, hizAyarla, an, atla, ileri, geri, klipAn: an2 };
+  return { i, caliyor, hiz, sesVar, sure, cal, dugme, durdur, hizDegis, hizAyarla, an, atla, ileri, geri, konum, klipAn: an2 };
 }
 export type Sira = ReturnType<typeof useSira>;
 

@@ -1,7 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Check, ChevronRight, Eye, RotateCcw, Shuffle, X } from 'lucide-react';
-import type { EkModul, HocaSet, HocaSoru } from './ekVeri';
-import { OynatCubugu, useSira } from './ekOrtak';
+import { Check, ChevronRight, Eye, FileText, LayoutList, RotateCcw, Shuffle, X } from 'lucide-react';
+import { hocaPdfKlip, type EkModul, type HocaSet, type HocaSoru } from './ekVeri';
+import { useSira } from './ekOrtak';
+import { EkSesliOynatici } from './EkSesliOynatici';
+import { EkPdfHoca } from './EkPdfHoca';
+
+const KIP_KEY = 'medsoru_ek_modul_hoca_kip';
 
 /**
  * Hocanın çalışma soruları (hoca_sorulari.json): boşluk doldurma (kart çevir + bildim/bilemedim), doğru–yanlış, çoktan seçmeli.
@@ -75,18 +79,32 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
   }, [sira.i]);
   const git = (x: number) => { setAcik(false); setI(x); if (sira.i >= 0) sira.cal(x * 2); };
   const cozumGor = gor || (qt !== 'bosluk' && y !== undefined);
+  // "PDF ile": çözümlü kitapçık sesle eş zamanlı (sesli dersteki gibi), yanında etkileşimli soru kartı
+  const pdfVar = useMemo(() => !!m && klipler.some((k) => hocaPdfKlip(m, k)), [m, klipler]);
+  const [kipSec, setKipSec] = useState<'pdf' | 'kart'>(() => { try { return localStorage.getItem(KIP_KEY) === 'kart' ? 'kart' : 'pdf'; } catch { return 'pdf'; } });
+  const kip = pdfVar ? kipSec : 'kart';
+  const kipDegis = (k: 'pdf' | 'kart') => { setKipSec(k); try { localStorage.setItem(KIP_KEY, k); } catch { /* yok */ } };
 
   return (
-    <div className="ekm ekm-soru ekm-hoca">
+    <div className={`ekm ekm-soru ekm-hoca${kip === 'pdf' ? ' ekm-pdfkip' : ''}`}>
       <div className="ekm-soru-ust">
         <span><b>{i + 1}</b> / {n}</span>
         <div className="ekm-ilerle" aria-hidden><i style={{ width: `${(cozulen / n) * 100}%` }} /></div>
         <span className="ekm-zorluk">{dogruN} doğru</span>
         <button type="button" className={`ekm-kucuk is-oto${karisik ? ' is-on' : ''}`} onClick={() => bastan(!karisik)} aria-pressed={karisik}><Shuffle aria-hidden /> Karışık</button>
       </div>
-      {m && sira.sesVar && <OynatCubugu sira={sira} n={n} etiket="Sesli çözümü başlat" birim="Soru" ikili />}
+      {m && <EkSesliOynatici m={m} sira={sira} klipler={klipler} grup={2} birim="Soru" ad={(p, k) => `Soru ${p + 1} · ${k % 2 ? 'çözüm' : 'soru okunuyor'}`} />}
+      {pdfVar && (
+        <div className="ekm-kip" role="group" aria-label="Çözüm görünümü">
+          <button type="button" className={kip === 'pdf' ? 'is-on' : ''} aria-pressed={kip === 'pdf'} onClick={() => kipDegis('pdf')}><FileText aria-hidden /> PDF ile</button>
+          <button type="button" className={kip === 'kart' ? 'is-on' : ''} aria-pressed={kip === 'kart'} onClick={() => kipDegis('kart')}><LayoutList aria-hidden /> Yalnız soru</button>
+        </div>
+      )}
       {set.anahtarsiz && <p className="ekm-not">Hocanın bu bölümde cevap anahtarı yok; doğru cevaplar hocanın diğer sorularındaki bilgilere göre işaretlendi.</p>}
 
+      <div className={kip === 'pdf' ? 'ekm-pdf-bolme ekm-hoca-bolme' : 'ekm-hoca-tek'}>
+      {kip === 'pdf' && m && <EkPdfHoca m={m} klipler={klipler} soru={i} sira={sira} />}
+      <div className="ekm-hoca-yan">
       <article className="ekm-soru-kart v15-card">
         {qt === 'bosluk' && (
           <>
@@ -156,3 +174,5 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
     </div>
   );
 };
+      </div>
+      </div>
