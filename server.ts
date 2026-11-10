@@ -172,7 +172,6 @@ import {
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
-import { registerAsistanRoutes } from './src/services/asistan/routes.ts';
 import { registerBakimHataRoutes } from './src/services/bakimHataRoutes.ts';
 import { denetimAraKatmani, registerDenetimRoutes } from './src/services/yonetim16/denetim.ts';
 import { registerSiteAyarRoutes, bayrakKapisi, icerikKapisi } from './src/services/yonetim16/siteAyar.ts';
@@ -10629,7 +10628,6 @@ app.post('/api/rag/ask', async (req, res) => {
 // 3. RAG Stats: Current indexing and database state
 // Saklanan vektörlerden ilgili/benzer/kopya içerik (embed servisi gerekmez)
 registerRagRelatedRoutes(app);
-registerAsistanRoutes(app);
 
 app.get('/api/rag/stats', async (req, res) => {
   try {
