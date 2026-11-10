@@ -38,6 +38,8 @@ export interface PerAlaniProps {
   duzen?: { secili: ReadonlySet<number>; gecersiz: ReadonlySet<number>; onTas(id: number): void };
   /** Düzenleme kipi dışında masadaki taşa dokunma (taşı ödünç alma / düzenlemeyi başlatma) */
   onTas?(per: number, id: number): void;
+  /** Düzenleme kipi: perin en az kaplayacağı genişlik, px (taş çıkınca / per boşalınca komşu perler yer değiştirmesin) */
+  enAz?: ReadonlyMap<number, number>;
 }
 
 export default function PerAlani(p: PerAlaniProps) {
@@ -51,7 +53,7 @@ export default function PerAlani(p: PerAlaniProps) {
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
-  const bilgi = useMemo(() => p.perler.map((per) => ({ per, uc: uclar(per, p.okey) })), [p.perler, p.okey]);
+  const bilgi = useMemo(() => p.perler.map((per) => ({ per, uc: per.taslar.length ? uclar(per, p.okey) : { bas: false, son: false, grup: false } })), [p.perler, p.okey]);
   // En büyük sığan taş boyu: satırlara açgözlü paketleme benzetimi
   const b = useMemo(() => {
     const W = kap.w - 16, H = kap.h - 12;
@@ -83,9 +85,9 @@ export default function PerAlani(p: PerAlaniProps) {
           );
           const perUygun = [...p.uygun].some((k) => k.startsWith(`${per.id}:`));
           return (
-            <div key={per.id} className={`om-per om-per--${per.tur}${p.duzen?.gecersiz.has(per.id) ? ' om-per--gecersiz' : ''}${perUygun ? ' om-per--uygun' : ''}${p.aktif && !perUygun ? ' om-per--sonuk' : ''}${p.ipucuPer === per.id ? ' om-per--ipucu' : ''}${p.bolunen.has(per.id) ? ' om-per--bolundu' : ''}`} data-om-hedef="per" data-per={per.id} onClick={(e) => { e.stopPropagation(); p.onPer(per.id); }}>
+            <div key={per.id} className={`om-per om-per--${per.tur}${p.duzen?.gecersiz.has(per.id) ? ' om-per--gecersiz' : ''}${perUygun ? ' om-per--uygun' : ''}${p.aktif && !perUygun ? ' om-per--sonuk' : ''}${p.ipucuPer === per.id ? ' om-per--ipucu' : ''}${p.bolunen.has(per.id) ? ' om-per--bolundu' : ''}${per.taslar.length ? '' : ' om-per--bos'}`} data-om-hedef="per" data-per={per.id} onClick={(e) => { e.stopPropagation(); p.onPer(per.id); }}>
               <span className="om-per-sahip">{per.sahip === p.oda.ben ? 'Sen' : oyuncuAdi(p.oda, per.sahip)}</span>
-              <div className="om-per-taslar">
+              <div className="om-per-taslar" style={p.enAz?.get(per.id) ? { minWidth: p.enAz.get(per.id), minHeight: `calc(var(--om-b) * ${TAS_ORAN})` } : undefined}>
                 {uc.bas && ucYuva('bas')}
                 {per.taslar.map((t) => (
                   <span

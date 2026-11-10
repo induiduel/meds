@@ -1,3 +1,7 @@
+## 2026-11-10 — Taş Masası: düzenlemede perler yerinde kalır (H535, onem 694)
+- `OkeyMasa.tsx` (`taslakBasla`, `kirp`, boş grup yer tutucu), `PerAlani.tsx` (`enAz` px, `om-per--bos`), `okey.css`. H534 eki (düğmesiz düzenleme, per sıralaması) onem 693 ile canlıda.
+- **Sınama:** yerel tarayıcıda Yedili: taş alınca ve per boşalınca komşu perin konumu aynı (229,112), Vazgeç eski hâle döndürüyor. Çok satırlı kalabalık masada ve telefonda denenmedi; taslak büyüyüp taş boyu küçülürse tüm masa birlikte ölçeklenir.
+
 ## 2026-11-10 — Taş Masası: düğmesiz masa düzenleme, per sıralaması, masa dizme kipleri (H534 eki)
 - **Düğmesiz:** `motor/odunc.ts` (yeni, saf) + `OkeyMasa.tsx`: seçili el taşları + Per aç ya da masadaki taşa dokunma → masadan 1–2 taş ödünç alınıp `duzenle` yollanır (Yedili/Takım/101, her renk). `PerAlani.tsx` `onTas`.
 - **Sıralama:** Sırala yedilide Per → Renk → Sayı; Masayı diz Renk → Sayı → Açılış sırası. Kural metni güncellendi.

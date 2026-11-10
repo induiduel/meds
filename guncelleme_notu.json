@@ -1,19 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 693,
-  "baslik": "Okey oyunları: düğmeye basmadan masadan taş al, perlere göre sırala",
+  "onem": 694,
+  "baslik": "Okey oyunları: masayı düzenlerken perler yerinde kalır",
   "maddeler": [
-    "Düğmesiz düzenleme: Yedili, Takım Yedili ve 101 Okey'de elindeki taşları seçip Per aç'a bas ya da masadaki taşa dokun; eksik taş masadan kendiliğinden alınır (her renkte, taşı veren per geçerli kalıyorsa).",
-    "Sırala: Yedili ve Takım'da ıstaka artık perlere göre de dizilir (Per, Renk, Sayı).",
-    "Masayı diz: masadaki perler renge ya da sayıya göre dizilir."
+    "Masayı düzenle: taş aldığın ya da boşalttığın perin yeri korunur, öteki perler satır ya da sütun değiştirmez; boşalan perin yeri kesikli çerçeveyle görünür.",
+    "Düzenleme, masa ekranda nasıl diziliyse o sırayla başlar; yeni kurduğun per sona eklenir."
   ],
-  "eklenen": [
-    "Düğmesiz masa düzenleme",
-    "Perlere göre sıralama (Yedili)",
-    "Masayı sayıya göre dizme"
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Masayı düzenlerken perler boşalan yere kayıyordu"
+  ],
   "silinen": [],
   "yenilikler": []
 }
