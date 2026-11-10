@@ -1,3 +1,8 @@
+## 2026-11-10 — Çizgi Yarışı: hızlı oyun, otomatik ilerle, yarış çubuğu (onem 697)
+- **Belirti:** kullanıcı "işlevler, oyun hızı kötü" dedi: her adım ayrı dokunuş + ayrı sunucu gidiş-dönüşü; bot her adımda 0,75–1,4 sn bekliyordu (6 atınca ~8 sn).
+- **Çözüm (kural değişmedi):** motor `{t:'kos'}` düz yol açık oldukça adımları tek hamlede harcar (bot da kullanır: tur ≈ 2 tik); `tahmin.ts` koşu tahmini. Ekran: "Otomatik ilerle" (varsayılan açık, yan seçimi gerekince durur), "Hepsi" tek hamle, önü kapalıyken yön uyarısı, yarış çubuğu, kapışma/altı/sıkışma kutlama yazısı.
+- **Sınama:** `tahta.sinama.ts` 55 (koş). Tarayıcıda elle oynanmadı.
+
 ## 2026-11-10 — Uno: 10 yeni mod, yeniden çizilen kartlar, Sevimli Dostlar teması, mod kataloğu (H542)
 - **Modlar (16):** kutu oyunları Klasik, Deluxe, Express, Flip, Hepsi Joker (All Wild), No Mercy, Extreme, Flex, Takım (Teams), Yalancı (Liar's); ev kuralları Yığma, 7-0 (artık hedef seçilir), Atlama, Hızlı, Çek-çek; MeDSor özel **Sevimli Dostlar** (Kedicik hediye, Yarasa siper, Yaramaz Tavşan şaka, Gökkuşağı Tayı). Tanımlar tek kaynak `tipler.ts UNO_MODLAR` (grup, deste, kişi başı kart, oyuncu sınırı, puan hedefi); desteler ve puanlar `motor/unoKartlar.ts`.
 - **Motor:** `motor/uno.ts` baştan yazıldı: `bekle` (renk / itiraz / rulet / yalan / meydan), `ver` (kart verme), `yigin` (biriken ceza, Extreme'de basış), Flip `arka` yüzü + `cevir`, No Mercy elenme (25 kart), Extreme fırlatıcı (`gerilim`), Flex `guc`, Takım (karşılıklı ortak, yarı verme), Yalancı (kapalı kart `by`, Meydan Okuma). `sunucu.ts`: mod oyuncu sınırı (`unoOyuncuUygun`), puan hedefinde maç sonu. `tahmin.ts`: iyimser tahmin yalnız sonucu kesin kartlarda.

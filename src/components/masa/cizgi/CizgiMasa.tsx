@@ -43,21 +43,35 @@ function Pist({ oda, c }: { oda: OdaGorunum; c: CizgiGorunum }) {
   const ekran = (h: Hucre) => ({ x: alttan ? h.s : G - 1 - h.s, y: alttan ? L - 1 - h.r : h.r });
   const etkin = oyuncu && oda.asama === 'oyun' && !oda.durdu && !c.bitti;
   const siraBende = etkin && c.sira === ben;
-  const [oto, setOto] = useState(false);
+  const [otoKos, setOtoKos] = useState(() => { try { return localStorage.getItem('medsoru_cizgi_otokos') !== '0'; } catch { return true; } });
+  const otoYaz = (v: boolean) => { setOtoKos(v); try { localStorage.setItem('medsoru_cizgi_otokos', v ? '1' : '0'); } catch { /* yok */ } };
 
-  // Hepsini ilerle: her yeni durumda düz yol açıksa bir adım daha
+  // Otomatik koş: zar gelince tek seçenek düz ilerlemekse adımların hepsi tek hamlede harcanır (zar görünsün diye kısa bekleme)
   useEffect(() => {
-    if (!oto) return;
-    if (!siraBende || c.zar == null || c.kalan <= 0 || !c.yonler.includes('duz')) { setOto(false); return; }
-    const t = setTimeout(() => masa.hamle({ t: 'ilerle', yon: 'duz' }), 110);
+    if (!otoKos || !siraBende || c.zar == null || c.kalan <= 0) return;
+    if (c.yonler.length !== 1 || c.yonler[0] !== 'duz') return;
+    const t = setTimeout(() => masa.hamle({ t: 'kos' }), 380);
     return () => clearTimeout(t);
-  }, [oto, c, siraBende]);
+  }, [otoKos, c, siraBende]);
+
+  // Kısa kutlama yazısı: büyük zar, kapışma sonucu, yan geçiş
+  const [flas, setFlas] = useState<{ k: number; metin: string; iyi: boolean } | null>(null);
+  useEffect(() => { if (!flas) return; const t = setTimeout(() => setFlas(null), 1300); return () => clearTimeout(t); }, [flas]);
 
   const son = c.gecmis[c.gecmis.length - 1];
   const sonK = useRef(c.gecmis.length + ':' + (son?.tur ?? 0));
   useEffect(() => {
     const k = c.gecmis.length + ':' + (son?.tur ?? 0) + ':' + (son?.zar ?? 0);
-    if (k !== sonK.current && son) { sesCal(son.kapisma ? (son.kapisma.kazanan === ben ? 'kazan' : 'ceza') : 'tas'); }
+    if (k !== sonK.current && son) {
+      sesCal(son.kapisma ? (son.kapisma.kazanan === ben ? 'kazan' : 'ceza') : 'tas');
+      const benim = son.o === ben;
+      if (son.kapisma) {
+        const kaz = son.kapisma.kazanan;
+        setFlas({ k: Date.now(), metin: kaz == null ? 'Kapışma: eşit!' : kaz === ben ? `Kapışmayı kazandın +${Math.abs(son.fark)}` : `Kapışmayı kaybettin −${Math.abs(son.fark)}`, iyi: kaz === ben });
+        if (kaz && kaz !== ben) titret(40);
+      } else if (son.zar === 6 && son.fark >= 6) setFlas({ k: Date.now(), metin: benim ? 'Altı! Tam yol' : 'Rakip altı attı', iyi: benim });
+      else if (son.fark === 0 && son.eklenen.length === 0) setFlas({ k: Date.now(), metin: benim ? 'Yol kapalı, tur yandı' : 'Rakip sıkıştı', iyi: !benim });
+    }
     sonK.current = k;
   }, [son]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (c.zar != null && c.sira === ben) { sesCal('cek'); titret(10); } }, [c.zar]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -104,6 +118,17 @@ function Pist({ oda, c }: { oda: OdaGorunum; c: CizgiGorunum }) {
       <OyuncuSerit oda={oda} id={rakip} isaret={<><i className="tm-cz-renk" style={{ background: RENK.rakip }} />Yan hakkı {rakipYan}</>}
         sag={<small className="tm-cz-ilerleme">{ilerleme(rakipC) + 1}/{L}</small>} />
 
+      <div className="tm-cz-yaris" aria-hidden="true">
+        <span className="tm-cz-yaris-iz" />
+        <span className="tm-cz-yaris-orta" />
+        <motion.i className="tm-cz-yaris-ben" style={{ background: RENK.ben }} animate={{ left: `${(ilerleme(benimC) / Math.max(1, L - 1)) * 100}%` }} transition={{ type: 'spring', stiffness: 160, damping: 20 }} />
+        <motion.i className="tm-cz-yaris-rakip" style={{ background: RENK.rakip }} animate={{ left: `${(1 - ilerleme(rakipC) / Math.max(1, L - 1)) * 100}%` }} transition={{ type: 'spring', stiffness: 160, damping: 20 }} />
+      </div>
+
+      <AnimatePresence>{flas && (
+          <motion.div key={flas.k} className={`tm-cz-flas${flas.iyi ? ' is-iyi' : ' is-kotu'}`} role="status"
+            initial={{ opacity: 0, x: '-50%', y: 16, scale: 0.8 }} animate={{ opacity: 1, x: '-50%', y: 0, scale: 1 }} exit={{ opacity: 0, x: '-50%', y: -18 }} transition={{ duration: 0.25 }}>{flas.metin}</motion.div>
+      )}</AnimatePresence>
       <div className="tm-cz-pist" ref={kapRef}>
         <svg width={G * H} height={L * H} viewBox={`0 0 ${G * H} ${L * H}`} className="tm-cz-svg" role="img" aria-label={`Çizgi Yarışı pisti, ${L} satır ${G} sütun`}>
           <defs>
@@ -164,13 +189,17 @@ function Pist({ oda, c }: { oda: OdaGorunum; c: CizgiGorunum }) {
               <button type="button" className="mk-dugme is-acik" disabled={!siraBende || !c.yonler.includes(solYon)} onClick={() => masa.hamle({ t: 'ilerle', yon: solYon })} aria-label="Sola geç"><ArrowLeft size={20} /></button>
               <button type="button" className="mk-dugme is-ana" disabled={!siraBende || !c.yonler.includes('duz')} onClick={() => masa.hamle({ t: 'ilerle', yon: 'duz' })}><ArrowUp size={20} /> İlerle</button>
               <button type="button" className="mk-dugme is-acik" disabled={!siraBende || !c.yonler.includes(sagYon)} onClick={() => masa.hamle({ t: 'ilerle', yon: sagYon })} aria-label="Sağa geç"><ArrowRight size={20} /></button>
-              <button type="button" className="mk-dugme is-acik" disabled={!siraBende || !c.yonler.includes('duz') || c.kalan < 2} onClick={() => setOto(true)}><ChevronsUp size={18} /> Hepsi</button>
+              <button type="button" className="mk-dugme is-acik" disabled={!siraBende || !c.yonler.includes('duz') || c.kalan < 2} onClick={() => masa.hamle({ t: 'kos' })}><ChevronsUp size={18} /> Hepsi</button>
               <button type="button" className="mk-dugme is-soluk" disabled={!siraBende} onClick={() => masa.hamle({ t: 'bekle' })} aria-label="Kalan adımları yak"><Hourglass size={18} /></button>
             </>
           )}
         </div>
       )}
       {siraBende && c.zar != null && !c.yonler.length && <p className="tm-not">Yolun kapalı ve yana geçemiyorsun: kalan adımlar yanar.</p>}
+      {siraBende && c.zar != null && c.yonler.some((y) => y !== 'duz') && <p className="tm-not is-uyari" role="status">Önün kapalı: sola ya da sağa geç (yan hakkın {benimYan}).</p>}
+      {oyuncu && (
+        <label className="tm-cz-oto"><input type="checkbox" checked={otoKos} onChange={(e) => otoYaz(e.target.checked)} /> Otomatik ilerle <small>(seçim gerekince durur)</small></label>
+      )}
     </div>
   );
 }

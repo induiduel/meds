@@ -1,38 +1,20 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 696,
- "baslik": "Kurul 2: Alkoller dersine En önemliler + sesli çözücü, ders özetleri",
- "maddeler": [
-  "Alkoller (Farmakoloji) dersine 42 maddelik En önemliler listesi ve 29 soruluk sesli örnek soru çözücü eklendi (EMA sesli).",
-  "Cinsel Kimlik, Epilepsi ve Alkoller derslerinin Ders analizi penceresine ders özeti geldi; özetler seslendirildi.",
-  "Alkoller ders içerik paketi (terimler, bilgi spotları, kartlar) güncellendi."
- ],
- "eklenen": [
-  "Uno: 10 yeni mod",
-  "Sevimli Dostlar teması",
-  "Uno mod kataloğu ve kart rehberi"
- ],
- "degisen": [
-  "Uno kart çizimleri",
-  "7-0 modunda hedef seçimi"
- ],
- "duzeltilen": [],
- "silinen": [],
- "yenilikler": [
-  {
-   "ad": "Uno modları",
-   "nerede": {
-    "ad": "Oyunlar › Uno",
-    "yol": "/sorular/oyunlar"
-   },
-   "amac": "Uno artık 16 ayrı modla oynanır: raflardaki kutu oyunlarının kendi desteleri ve kuralları, ev kuralları ve MeDSor’a özel karakter kartlı deste.",
-   "islevler": [
-    "Flip, Hepsi Joker, No Mercy, Extreme, Flex, Takım, Yalancı, Deluxe, Express",
-    "Sevimli Dostlar: dört karakter kartı ve yeni tema",
-    "Her mod için kurallar ve kart kart tanıtım",
-    "Telefon ve tablette dokunmatik seçim pencereleri"
-   ],
-   "ipucu": "Lobide bir mod seçip “Kartları ve kuralları gör” düğmesine bas; oyun içinde özel bir karta dokununca etkisi gösterilir."
-  }
- ]
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
+  "onem": 697,
+  "baslik": "Çizgi Yarışı hızlandı",
+  "maddeler": [
+    "Çizgi Yarışı: zar atınca çizgin kendiliğinden ilerler; yalnız sola/sağa geçmen gerektiğinde durur (Otomatik ilerle kutusundan kapatılabilir).",
+    "Bot artık tek hamlede ilerliyor; oyun çok daha hızlı akıyor.",
+    "Yarış çubuğu iki çizginin nerede olduğunu gösterir; kapışma ve altı atışında kutlama yazısı çıkar."
+  ],
+  "eklenen": [
+    "Çizgi Yarışı otomatik ilerle",
+    "Yarış çubuğu"
+  ],
+  "degisen": [
+    "Çizgi Yarışı oyun hızı"
+  ],
+  "duzeltilen": [],
+  "silinen": [],
+  "yenilikler": []
 }

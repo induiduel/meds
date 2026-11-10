@@ -227,6 +227,14 @@ for (const k of [32, 64, 96, 128]) for (let t = 1; t <= 5; t++) dene(`çizgi: bo
 });
 
 /* ------------------------------------------------------------------ xox ------------------------------------------------------------------ */
+dene('çizgi: koş tek hamlede düz adımların hepsini harcar, sıra geçer', () => {
+  let d = ok(cizgiMotor.uygula(cz(64), 'a', { t: 'zar' }, tohumlu(3))) as CizgiDurum;
+  const z = d.zar!;
+  d = ok(cizgiMotor.uygula(d, 'a', { t: 'kos' }, tohumlu(0))) as CizgiDurum;
+  assert.equal(d.cizgiler.a.length, 1 + z);
+  assert.equal(d.kim, 1);
+  assert.equal(d.gecmis[d.gecmis.length - 1].fark, z);
+});
 const xo = (n: number) => xoxMotor.elBaslat({ oyuncular: OY, elNo: 1, baslayan: 0, rng: tohumlu(1), ayar: { xoxBoyut: n as 3 } }) as XoxDurum;
 const xoyna = (d: XoxDurum, h: number[]) => h.reduce((s, i, k) => ok(xoxMotor.uygula(s, k % 2 ? 'b' : 'a', { t: 'koy', i }, tohumlu(0))) as XoxDurum, d);
 dene('xox: yatay kazanma', () => { const d = xoyna(xo(3), [0, 3, 1, 4, 2]); assert.deepEqual(d.cizgi, [0, 1, 2]); assert.equal(d.sonuc!.kazananlar[0], 'a'); });

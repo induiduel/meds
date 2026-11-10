@@ -411,6 +411,8 @@ export type CizgiHamle =
   | { t: 'zar' }
   /** Zar atıldıktan sonra adımları harca. yan: önündeki hücre rakip çizgisiyle doluysa yandaki sütuna geç (1 adım, yan hakkı düşer). */
   | { t: 'ilerle'; yon: 'duz' | 'sol' | 'sag' }
+  /** Düz yol açık oldukça kalan adımların hepsini tek hamlede harca */
+  | { t: 'kos' }
   /** Kalan adımları yak (ilerleyemiyorsan ya da beklemek istiyorsan) */
   | { t: 'bekle' };
 

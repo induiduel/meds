@@ -31,7 +31,7 @@ function tahmin(g: any, h: any, ben: string) {
     case 'uno': return h.t === 'oyna' ? uno(g, h, ben) : null;
     case 'pisti': return h.t === 'oyna' ? pisti(g, h.kart, ben) : null;
     case 'domino': return h.t === 'koy' ? domino(g, h, ben) : null;
-    case 'cizgi': return h.t === 'ilerle' ? cizgi(g, h.yon, ben) : null;
+    case 'cizgi': return h.t === 'ilerle' ? cizgi(g, h.yon, ben) : h.t === 'kos' ? cizgiKos(g, ben) : null;
     case 'yuzbir': return h.t === 'at' ? okeyAt(g, h.tas, ben) : null;
     default: return null;
   }
@@ -146,6 +146,15 @@ function cizgi(g0: CizgiGorunum, yon: 'duz' | 'sol' | 'sag', ben: string): Cizgi
   const kaleye = yeni.r === (k === 0 ? g.uzunluk - 1 : 0);
   g.yonler = g.kalan > 0 && !kaleye && on.r >= 0 && on.r < g.uzunluk && !dolu ? ['duz'] : [];
   if (!g.yonler.length) g.sira = '';
+  return g;
+}
+
+/** Koş: tahmini düz adımları zincirle (kalan biter ya da yol kapanınca durur) */
+function cizgiKos(g0: CizgiGorunum, ben: string): CizgiGorunum | null {
+  let g = cizgi(g0, 'duz', ben);
+  if (!g) return null;
+  for (let n = 0; n < 6 && g.kalan > 0 && g.yonler.includes('duz'); n++) { const y = cizgi(g, 'duz', ben); if (!y) break; g = y; }
+  g.sira = '';
   return g;
 }
 

@@ -157,6 +157,18 @@ export const cizgiMotor: Motor = {
     }
 
     if (d.zar == null) return { hata: 'Önce zar at.' };
+    // Koş: düz yol açık oldukça adımları tek hamlede harca; yan seçimi gerekince ya da tur bitince durur
+    if (h?.t === 'kos') {
+      if (!yonler(d).includes('duz')) return { hata: 'Önün kapalı.' };
+      let cur: CizgiDurum = d0;
+      const tum: Olay[] = [];
+      while (!cur.sonuc && cur.oyuncular[cur.kim] === oyuncu && cur.zar != null && yonler(cur).includes('duz')) {
+        const r = cizgiMotor.uygula(cur, oyuncu, { t: 'ilerle', yon: 'duz' }, rng);
+        if ('hata' in r) break;
+        cur = r.durum as CizgiDurum; tum.push(...r.olaylar);
+      }
+      return { durum: cur, olaylar: tum };
+    }
     if (h?.t === 'bekle') { olaylar.push({ t: 'bekledi', o, adet: d.kalan }); turBitir(d, olaylar); return { durum: d, olaylar }; }
     if (h?.t !== 'ilerle') return { hata: 'Geçersiz hamle.' };
     const yon = h.yon as 'duz' | 'sol' | 'sag';
@@ -190,7 +202,7 @@ export const cizgiMotor: Motor = {
     if (d.zar == null) return { t: 'zar' };
     const y = yonler(d);
     if (!y.length) return { t: 'bekle' };
-    if (y.includes('duz')) return { t: 'ilerle', yon: 'duz' };
+    if (y.includes('duz')) return { t: 'kos' };
     // Yan: orta sütuna yakın olanı seç (kenara sıkışmasın)
     const b = bas(d.cizgiler[bot]), orta = (d.genislik - 1) / 2;
     const sec = y.slice().sort((p, q) => Math.abs(b.s + (p === 'sol' ? -1 : 1) - orta) - Math.abs(b.s + (q === 'sol' ? -1 : 1) - orta))[0];
