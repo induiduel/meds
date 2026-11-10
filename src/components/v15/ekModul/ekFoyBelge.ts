@@ -103,6 +103,7 @@ const COZ_CSS = `
 .q ol { list-style: none; padding-left: 9.5mm; margin-top: .8mm; display: grid; grid-template-columns: 1fr 1fr; gap: .4mm 6mm; font-size: 9.6pt; }
 .q ol li b { color: #55615e; margin-right: 1.2mm; } .q ol li.d { font-weight: 800; color: #2F5D50; } .q ol li.d b { color: #2F5D50; }
 .q .c { margin: 1.4mm 0 0 9.5mm; padding: 2mm 3mm; border-radius: 2.5mm; background: #EEF3EE; font-size: 9.2pt; line-height: 1.45; }
+.q .c.h { background: #FBEFE3; border-left: .8mm solid #D9865B; }
 .q .c b { color: #D9865B; } .bos u { text-decoration: none; border-bottom: .35mm solid #1E2A2E; padding: 0 1mm; font-weight: 800; color: #2F5D50; }
 `;
 export function cozumluBelge(m: EkModul, gorseller: Record<string, string>): string {
@@ -128,7 +129,7 @@ export function cozumluBelge(m: EkModul, gorseller: Record<string, string>): str
         alt = `<ol>${Object.entries(x.secenekler as Record<string, string>).map(([h, v]) => `<li${h === x.dogru ? ' class="d"' : ''}><b>${h})</b>${e(v)}</li>`).join('')}</ol>`;
         cevap = `<b>Cevap ${x.dogru}.</b>`;
       }
-      return `<div class="q"><p><b>${x.no}.</b><span class="${s.tur === 'bosluk' ? 'bos' : ''}">${kok}</span></p>${alt}<div class="c">${cevap} ${e(x.cozum || '')}</div></div>`;
+      return `<div class="q"><p><b>${x.no}.</b><span class="${s.tur === 'bosluk' ? 'bos' : ''}">${kok}</span></p>${alt}<div class="c">${cevap} ${e(x.cozum || '')}</div>${x.hata ? `<div class="c h"><b>Bu soruda hata var.</b> ${e(x.hata.hata)} <b>Doğrusu:</b> ${e(x.hata.dogrusu)} <b>Neden hatalı:</b> ${e(x.hata.neden)} <b>Neden yine de böyle yazıldı:</b> ${e(x.hata.yazilma)}</div>` : ''}</div>`;
     }).join('');
     govde.push(`<section class="set"><h2>${e(s.ad)}</h2><p>${e(s.aciklama)} · ${s.sorular.length} soru</p>${q}</section>`);
   });

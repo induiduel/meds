@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 708,
-  "baslik": "Hocanın çalışma soruları: PDF ile sesli çözüm",
+  "onem": 709,
+  "baslik": "Kampçılık hoca sorularında hata notları",
   "maddeler": [
-    "Hoca soruları: çözümlü kitapçık sesle eş zamanlı ilerler, okunan satır yanar",
-    "Sesli çözüm oynatıcısı sesli derslerdeki gibi: soru soru çubuk, atlama, hız"
+    "Hocanın çalışma sorularında tespit edilen 14 hatalı ya da tartışmalı sorunun altına hata, doğrusu, neden hatalı olduğu ve neden yine de böyle yazıldığı eklendi.",
+    "Sesli çözümde bu sorular için hata açıklaması da okunuyor; çözümlü soru PDF'i güncellendi."
   ],
   "eklenen": [
     "Hocanın çalışma sorularında “PDF ile” kipi: soru okunurken kök ve şıklar, çözümde doğru şık ve çözüm satırları kitapçıkta yanar"

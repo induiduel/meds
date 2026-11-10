@@ -446,3 +446,8 @@
 - **Belirti:** canlıda Taş Domino masası `Cannot read properties of undefined (reading 'length')` ile çöküyordu.
 - **Kök neden:** `MasaUstCubuk.tsx:49` Uno dışındaki her oyunu okey görünümü sayıp domino oyuncularında olmayan `cezalar` alanını okuyordu.
 - **Çözüm:** `o.cezalar?.length`. Yalnız bu satır işlendi; dosyadaki öteki işlenmemiş değişiklikler (tahta oyunları çalışması) çalışma ağacında duruyor.
+
+## 2026-11-10 — Ek modül hoca sorularına hata notları (onem 709)
+- **İstek:** kampçılık hoca çalışma sorularında tespit edilen hatalı yerlerin altına hata + doğrusu + neden hatalı + neden yine de yazıldığı; EMA sesi buna göre.
+- **Veri:** üç alt ajan 480 soruyu taradı; 14 soruya `hata: {hata, dogrusu, neden, yazilma}` (bosluk 5/38, dy-dagcilik 30/47/60/64/89/97, dy-kamp 9/20/43/51, cs5-zor 8/9). Hocanın anahtarı değiştirilmedi. Önceki şüphelilerden bosluk-40, cs3-47/53, dy-kamp-84, cs5-zor-4 hata değil diye elendi.
+- **Ekran/ses/PDF:** `EkHoca` cevaptan sonra `.ekm-hata` kutusu; `ses.py hata_ses()` hc- klibinin sonuna okur (14 klip GPU'da yeniden); `ekFoyBelge.cozumluBelge` hata kutusu, çözümlü PDF yeniden.

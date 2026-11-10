@@ -132,15 +132,23 @@ def klipler(modul: str) -> dict[str, list[str]]:
                 k = f"{st['id']}-{q['no']}"
                 if st["tur"] == "bosluk":
                     K[f"h-{k}"] = [nokta(oku(re.sub(r"_{2,}", " boşluk ", q["metin"])))]
-                    K[f"hc-{k}"] = [nokta(f"Cevap: {oku(q['cevap'])}")] + parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip()))
+                    K[f"hc-{k}"] = [nokta(f"Cevap: {oku(q['cevap'])}")] + parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip())) + hata_ses(q)
                 elif st["tur"] == "dy":
                     K[f"h-{k}"] = [nokta(oku(q["metin"])), "Doğru mu, yanlış mı?"]
-                    K[f"hc-{k}"] = parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip()))
+                    K[f"hc-{k}"] = parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip())) + hata_ses(q)
                 else:
                     sec = q["secenekler"]
                     K[f"h-{k}"] = [nokta(oku(q["kok"]))] + [nokta(f"{SIK[h]} şıkkı: {oku(sec[h])}") for h in sec]
-                    K[f"hc-{k}"] = [nokta(f"Doğru cevap {SIK[q['dogru']]} şıkkı: {oku(sec[q['dogru']])}")] + parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip()))
+                    K[f"hc-{k}"] = [nokta(f"Doğru cevap {SIK[q['dogru']]} şıkkı: {oku(sec[q['dogru']])}")] + parcala(re.split(r"(?<=[.!?])\s+", q["cozum"].strip())) + hata_ses(q)
     return K
+
+
+def hata_ses(q: dict) -> list[str]:
+    """Hocanın sorusundaki hata notu: çözümün sonuna okunur (anahtar değiştirilmez)."""
+    h = q.get("hata")
+    if not h:
+        return []
+    return parcala(re.split(r"(?<=[.!?])\s+", oku(f"Dikkat, bu soruda bir hata var. {h['hata']} Doğrusu şu: {h['dogrusu']} {h['neden']} Peki neden böyle yazıldı? {h['yazilma']}").strip()))
 
 
 def main() -> int:

@@ -52,7 +52,9 @@ export interface EkBaslik { no: number; baslik: string; ozet: string; konular: E
 export interface EkPart { baslik: string; ekran: string; ses: string[] }
 /** Hocanın verdiği çalışma soruları (hoca_sorulari.json): boşluk doldurma, doğru–yanlış, çoktan seçmeli setleri */
 /** cozum: sesli çözüm metni (h-/hc- klipleri) · k: föyde yeniden numaralanan sorunun asıl kimliği "<set>-<no>" */
-export type HocaSoru = { cozum?: string; k?: string; tur?: 'bosluk' | 'dy' | 'cs' } & (
+/** hata: hocanın sorusunda tespit edilen hata (cevap anahtarı değiştirilmez, altına not düşülür) */
+export type HocaHata = { hata: string; dogrusu: string; neden: string; yazilma: string };
+export type HocaSoru = { cozum?: string; hata?: HocaHata; k?: string; tur?: 'bosluk' | 'dy' | 'cs' } & (
   | { no: number; metin: string; cevap: string }
   | { no: number; metin: string; dogru: boolean }
   | { no: number; kok: string; secenekler: Record<string, string>; dogru: string; belirsiz?: boolean });
@@ -72,11 +74,11 @@ export interface EkModul {
   /** Çalışma föyü: hoca sorularının konuya göre düzeni (set id → soru no listesi) + konu bilgi özeti */
   foy: { konular: { id: string; bilgiler: string[]; sorular: Record<string, number[]> }[] } | null;
   pdfEsle: EkPdfEsle | null;
-}
-
   /** Hoca soruları · "PDF ile" sesli çözüm (hoca_pdf_esle.json; scripts/ek_modul/pdf_esle_hoca.py): h-/hc- klibinin çözümlü
    *  kitapçıktaki soru bloğu, l cümle başına satırlar, c [cümlenin başladığı saniye, l sırası] */
   hocaPdf: EkPdfEsle | null;
+}
+
 export const EK_MODULLER = (dizinHam as { moduller: EkModulOzet[] }).moduller;
 export const ekKurullar = () => [...new Set(EK_MODULLER.map((m) => m.kurul))].sort();
 
@@ -123,13 +125,13 @@ export function pdfKlip(m: EkModul, klip: string): EkPdfKlip | null {
   return e && m.klip[klip]?.v === e.v ? e : null;
 }
 
-/* ——— soru setleri ——— */
-export interface SetSoru extends EkSoru { anahtar: string; qKlip: string; cKlip: string; konuId: string }
 export function hocaPdfKlip(m: EkModul, klip: string): EkPdfKlip | null {
   const e = m.hocaPdf?.klip[klip];
   return e && m.klip[klip]?.v === e.v ? e : null;
 }
 
+/* ——— soru setleri ——— */
+export interface SetSoru extends EkSoru { anahtar: string; qKlip: string; cKlip: string; konuId: string }
 
 const setle = (sorular: EkSoru[], konuId: string, onek: string): SetSoru[] =>
   sorular.map((q) => ({ ...q, anahtar: `${onek}-${q.no}`, qKlip: `q-${onek}-${q.no}`, cKlip: `c-${onek}-${q.no}`, konuId: q.konu || konuId }));

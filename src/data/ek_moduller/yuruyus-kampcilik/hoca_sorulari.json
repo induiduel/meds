@@ -35,7 +35,13 @@
      "no": 5,
      "metin": "Kamp sırasında tuvalet alanı sudan en az ____ metre uzak olmalıdır.",
      "cevap": "150",
-     "cozum": "Tuvalet alanı sudan en az yüz elli metre uzak olmalıdır. Böylece atıkların su kaynağına karışması ve su kirliliği önlenir."
+     "cozum": "Tuvalet alanı sudan en az yüz elli metre uzak olmalıdır. Böylece atıkların su kaynağına karışması ve su kirliliği önlenir.",
+     "hata": {
+      "hata": "Tuvalet alanının sudan uzaklığı 150 metre olarak verilmiş.",
+      "dogrusu": "Tuvalet alanı sudan en az 50 metre uzak olmalıdır.",
+      "neden": "Hoca üç seçenekli sorularda aynı uzaklığı 50 metre diye işaretliyor, ders anlatımı da 50 metreyi esas alıyor; iz bırakmama ilkesinde yaygın değer de yaklaşık 50–70 metredir.",
+      "yazilma": "Hocanın boşluk doldurma anahtarı 150 metre dediği için soru anahtarıyla birlikte korundu; hoca farklı sorularda 50, 150 ve 50–70 metre gibi farklı değerler veriyor."
+     }
     },
     {
      "no": 6,
@@ -233,7 +239,13 @@
      "no": 38,
      "metin": "Çadır kazıkları ____ açıyla toprağa çakılmalıdır.",
      "cevap": "90 derecelik",
-     "cozum": "Çadır kazıkları toprağa doksan derecelik açıyla çakılmalıdır. Kazığın toprağa sağlam tutunması çadırın rüzgârda yerinden oynamasını engeller."
+     "cozum": "Çadır kazıkları toprağa doksan derecelik açıyla çakılmalıdır. Kazığın toprağa sağlam tutunması çadırın rüzgârda yerinden oynamasını engeller.",
+     "hata": {
+      "hata": "Çadır kazıklarının toprağa 90 derecelik açıyla çakılacağı söylenmiş.",
+      "dogrusu": "Çadır kazıkları toprağa 45 derece açıyla çakılmalıdır.",
+      "neden": "Hoca üç seçenekli sorularda doğru cevap olarak 45 dereceyi işaretliyor, ders anlatımı da 45 dereceyi esas alıyor; eğik çakılan kazık gergi ipinin çekişine daha iyi direnir.",
+      "yazilma": "Hocanın boşluk doldurma anahtarında 90 derece yazdığı için soru olduğu gibi tutuldu; hoca bu konuda kendi içinde çelişiyor."
+     }
     },
     {
      "no": 39,
@@ -793,7 +805,13 @@
      "no": 30,
      "metin": "UIAA’nın Troll Deklarasyonu tırmanış etiğini belirler.",
      "dogru": true,
-     "cozum": "Bu ifade doğru. Tirol Deklarasyonu, UIAA'nın tırmanış etiğini belirleyen bildirgesidir."
+     "cozum": "Bu ifade doğru. Tirol Deklarasyonu, UIAA'nın tırmanış etiğini belirleyen bildirgesidir.",
+     "hata": {
+      "hata": "Önermede bildirgenin adı \"Troll Deklarasyonu\" diye yanlış yazılmış.",
+      "dogrusu": "Doğru ad Tirol Deklarasyonu'dur; 2002'de Tirol'de hazırlanan bu bildirgeyi UIAA da benimsemiştir.",
+      "neden": "Troll diye bir bildirge yoktur, çözüm metni de doğru adı (Tirol) kullanıyor; önerme yazım hatasıyla kusurlu kurulmuş.",
+      "yazilma": "Hocanın soru metni böyle yazıldığı için önerme olduğu gibi korundu, cevap anahtarı değişmiyor."
+     }
     },
     {
      "no": 31,
@@ -895,7 +913,13 @@
      "no": 47,
      "metin": "Dağcılar için şapka kullanımı vücut ısısının korunmasında önemlidir.",
      "dogru": true,
-     "cozum": "Bu ifade doğru. Vücut ısısının yarısından fazlası baştan kaybedilebildiği için sıcakta şapka, soğukta bere kullanılır."
+     "cozum": "Bu ifade doğru. Vücut ısısının yarısından fazlası baştan kaybedilebildiği için sıcakta şapka, soğukta bere kullanılır.",
+     "hata": {
+      "hata": "Şapka gerekçesi olarak vücut ısısının yarısından fazlasının baştan kaybedildiği söyleniyor.",
+      "dogrusu": "Baş, vücut yüzeyindeki payı kadar, yani toplam ısının yaklaşık yüzde 7–10'u kadar ısı kaybeder; şapka yine de önemlidir.",
+      "neden": "Baştan yüzde 50 ısı kaybı eski bir askerî deneyden yayılmış bir efsanedir, ölçümler bunu desteklemez.",
+      "yazilma": "Önermenin kendisi (şapka önemlidir) doğru olduğu ve hoca bu bilgiyi derste verdiği için anahtar korundu."
+     }
     },
     {
      "no": 48,
@@ -973,7 +997,13 @@
      "no": 60,
      "metin": "TDF 2016 Rio Olimpiyatları’nda spor tırmanışı olimpik branş olarak tanıtmıştır.",
      "dogru": true,
-     "cozum": "Bu ifade doğru. Türkiye Dağcılık Federasyonu, iki bin on altı Rio Olimpiyatları'nda spor tırmanışı olimpik branş olarak tanıtmıştır."
+     "cozum": "Bu ifade doğru. Türkiye Dağcılık Federasyonu, iki bin on altı Rio Olimpiyatları'nda spor tırmanışı olimpik branş olarak tanıtmıştır.",
+     "hata": {
+      "hata": "Spor tırmanışın 2016 Rio Olimpiyatları'nda olimpik branş olarak yer aldığı söyleniyor.",
+      "dogrusu": "Spor tırmanışın olimpik branş olmasına 2016'da karar verildi, ilk kez 2020 Tokyo Olimpiyatları'nda (2021'de) yapıldı; bunu tanıtan Türkiye Dağcılık Federasyonu değil, Uluslararası Olimpiyat Komitesi ile Uluslararası Spor Tırmanışı Federasyonu'dur.",
+      "neden": "Rio 2016 programında spor tırmanışı yoktu; önerme hem tarih hem de kurum bakımından yanlıştır.",
+      "yazilma": "Hocanın anahtarı doğru dediği için sınava yönelik olarak korundu."
+     }
     },
     {
      "no": 61,
@@ -997,7 +1027,13 @@
      "no": 64,
      "metin": "Gnays kristalleri çıplak gözle görülebilir.",
      "dogru": false,
-     "cozum": "Bu ifade yanlış. Gnaysın kristalleri çıplak gözle görülmez."
+     "cozum": "Bu ifade yanlış. Gnaysın kristalleri çıplak gözle görülmez.",
+     "hata": {
+      "hata": "Gnays kristallerinin çıplak gözle görülmediği kabul edilmiş.",
+      "dogrusu": "Gnays iri taneli bir başkalaşım kayacıdır; kuvars, feldspat ve mika kristalleri ile açık–koyu bantları çıplak gözle görülür.",
+      "neden": "Gnaysı şistten ve ince taneli kayaçlardan ayıran özellik tam olarak gözle görülen iri kristalli bantlanmadır.",
+      "yazilma": "Hocanın anahtarı yanlış dediği için değiştirilmedi; sınavda hocanın cevabı esas alınır."
+     }
     },
     {
      "no": 65,
@@ -1147,7 +1183,13 @@
      "no": 89,
      "metin": "Vücut ısısının %50’sinden fazlası baş bölgesinden kaybedilebilir.",
      "dogru": true,
-     "cozum": "Bu ifade doğru. Vücut ısısının yarısından fazlası baştan kaybedilebilir, bu yüzden başı korumak önemlidir."
+     "cozum": "Bu ifade doğru. Vücut ısısının yarısından fazlası baştan kaybedilebilir, bu yüzden başı korumak önemlidir.",
+     "hata": {
+      "hata": "Vücut ısısının yüzde 50'sinden fazlasının baştan kaybedilebileceği doğru kabul edilmiş.",
+      "dogrusu": "Baştan kaybedilen ısı, başın vücut yüzeyindeki payı kadardır, yaklaşık yüzde 7–10.",
+      "neden": "Bu bilgi yaygın ama bilimsel olarak çürütülmüş bir efsanedir; başın ısı kaybı diğer açık bölgelerden belirgin fazla değildir.",
+      "yazilma": "Hocanın anahtarı doğru dediği ve sınavda hocanın cevabı esas alınacağı için değiştirilmedi."
+     }
     },
     {
      "no": 90,
@@ -1195,7 +1237,13 @@
      "no": 97,
      "metin": "Çadır, ocak ve mat teknik malzeme grubuna girer.",
      "dogru": false,
-     "cozum": "Bu ifade yanlış. Uyku tulumu kişisel malzemedir, çadır, ocak ve mat ise teknik malzeme sayılmaz."
+     "cozum": "Bu ifade yanlış. Uyku tulumu kişisel malzemedir, çadır, ocak ve mat ise teknik malzeme sayılmaz.",
+     "hata": {
+      "hata": "Anahtar önermeyi yanlış kabul ediyor, ama çözüm metni çadır, ocak ve matın teknik malzeme olduğunu söylüyor.",
+      "dogrusu": "Ders içeriğine göre çadır, ocak ve mat teknik malzeme grubundadır, önerme doğrudur.",
+      "neden": "Cevap anahtarı ile kendi çözümü ve ders içeriği birbiriyle çelişiyor; önerme bu hâliyle doğru bir bilgiyi yanlış saydırıyor.",
+      "yazilma": "Hocanın anahtarı böyle verildiği için korundu; anahtar büyük olasılıkla yanlış işaretlenmiştir."
+     }
     },
     {
      "no": 98,
@@ -1275,7 +1323,13 @@
      "no": 9,
      "metin": "Çadır kazıkları zemine 45 derece açıyla çakılmalıdır.",
      "dogru": true,
-     "cozum": "Bu ifade doğru. Kazıklar kırk beş derecelik açıyla çakılınca çadır ipleri gergin kalır ve kazıklar kolay sökülmez."
+     "cozum": "Bu ifade doğru. Kazıklar kırk beş derecelik açıyla çakılınca çadır ipleri gergin kalır ve kazıklar kolay sökülmez.",
+     "hata": {
+      "hata": "Kazık açısı 45 derece diye kesin verilmiş, ama hoca başka yerde 90 derece de söylüyor.",
+      "dogrusu": "Kazık, çadırdan uzağa doğru eğik (yaklaşık 45 derece) çakılır; dik çakılan kazık ip yükünde kolay çıkar.",
+      "neden": "Hocanın materyali kendi içinde 45 ve 90 derece arasında çelişiyor, bu yüzden önerme hangi kaynağa göre okunduğuna bağlı belirsiz kalıyor.",
+      "yazilma": "Ders içeriğinde 45 derece esas alındığı ve bu soruda hocanın anahtarı da bunu doğru saydığı için korundu."
+     }
     },
     {
      "no": 10,
@@ -1341,7 +1395,13 @@
      "no": 20,
      "metin": "Hafif eşyalar çantanın alt kısmına konmalıdır.",
      "dogru": false,
-     "cozum": "Bu ifade yanlış. Hafif eşyalar alta değil, dışa doğru yerleştirilir; ağır olanlar sırta yakın durmalıdır."
+     "cozum": "Bu ifade yanlış. Hafif eşyalar alta değil, dışa doğru yerleştirilir; ağır olanlar sırta yakın durmalıdır.",
+     "hata": {
+      "hata": "Hafif eşyaların çantanın alt kısmına konmaması gerektiği kabul edilmiş.",
+      "dogrusu": "Çanta yerleştirmede uyku tulumu gibi hafif ve hacimli eşyalar en alta, ağırlar sırta yakın ortaya, sık gerekenler üste konur.",
+      "neden": "Standart çanta yerleşiminde alt bölme tam da hafif ve hacimli eşya içindir; önerme doğru bir uygulamayı yanlış saydırıyor.",
+      "yazilma": "Hocanın anahtarı yanlış dediği için sınava yönelik olarak değiştirilmedi."
+     }
     },
     {
      "no": 21,
@@ -1479,7 +1539,13 @@
      "no": 43,
      "metin": "Tuvalet çukuru su kaynağından en az 50 metre uzak olmalıdır.",
      "dogru": true,
-     "cozum": "Bu ifade doğru. Tuvalet çukuru su kaynağından en az elli metre uzakta, küçük ve kişisel açılır; böylece su kirlenmez."
+     "cozum": "Bu ifade doğru. Tuvalet çukuru su kaynağından en az elli metre uzakta, küçük ve kişisel açılır; böylece su kirlenmez.",
+     "hata": {
+      "hata": "Tuvalet çukurunun sudan uzaklığı 50 metre verilmiş, hoca başka yerlerde 150 m ve 50–70 m de söylüyor.",
+      "dogrusu": "Derste esas alınan değer 50 metredir ve önerme bu değere göre doğrudur; doğa ilkelerinde yaygın olarak verilen değer ise yaklaşık 60–70 metredir (200 adım).",
+      "neden": "Hocanın verdiği değerler birbiriyle çelişiyor; önerme hangi değere göre okunduğuna göre doğru ya da yanlış olabilir.",
+      "yazilma": "Ders içeriğinde 50 m esas alındığı ve hocanın bu soruda anahtarı doğru verdiği için korundu."
+     }
     },
     {
      "no": 44,
@@ -1527,7 +1593,13 @@
      "no": 51,
      "metin": "Rüzgâr yönünü belirlemenin en kolay yolu pusula kullanmaktır.",
      "dogru": true,
-     "cozum": "Bu ifade doğru. Pusula yerkürenin manyetik alanına dayanarak yönü gösterir ve yön bulmanın en pratik yoludur."
+     "cozum": "Bu ifade doğru. Pusula yerkürenin manyetik alanına dayanarak yönü gösterir ve yön bulmanın en pratik yoludur.",
+     "hata": {
+      "hata": "Rüzgâr yönünü belirlemenin en kolay yolunun pusula olduğu doğru kabul edilmiş.",
+      "dogrusu": "Pusula yalnız manyetik kuzeyi gösterir, rüzgârı ölçmez; rüzgâr yönü kuru ot ya da toz bırakmak, ıslak parmak, bayrak ve ağaç dallarının hareketiyle anlaşılır.",
+      "neden": "Pusula rüzgârın nereden estiğini hiçbir şekilde algılamaz, yalnız rüzgâr yönünü bilinen bir gözlemle adlandırmaya yardım eder; çözüm de soruyu değil pusulanın işlevini anlatıyor.",
+      "yazilma": "Hocanın anahtarı doğru dediği için korundu; sınavda hocanın cevabı esas alınacaktır."
+     }
     },
     {
      "no": 52,
@@ -2821,7 +2893,13 @@
       "E": "Suyu sadece kaynağa en yakın noktadan almak"
      },
      "dogru": "A",
-     "cozum": "Suyu en yukarı noktadan almak tek başına yeterli değildir; yukarıda da hayvan ve mikroorganizma bulunabilir. Be şıkkındaki kaynatma ise mikroorganizmaları öldürdüğü için etkili bir yöntemdir."
+     "cozum": "Suyu en yukarı noktadan almak tek başına yeterli değildir; yukarıda da hayvan ve mikroorganizma bulunabilir. Be şıkkındaki kaynatma ise mikroorganizmaları öldürdüğü için etkili bir yöntemdir.",
+     "hata": {
+      "hata": "Soruda tek başına yeterli olmayan birden çok yöntem var.",
+      "dogrusu": "A doğru kabul edilir; ancak E (suyu kaynağa en yakın noktadan almak) ve D (mekanik filtre) da tek başına yeterli değildir.",
+      "neden": "E şıkkı da A gibi yalnız suyun alındığı yeri seçer ve arıtma sağlamaz; ders içeriğine göre mekanik filtre de kimyasal kirleticileri tamamen gidermez.",
+      "yazilma": "Hocanın anahtarında A işaretli olduğu için soru hocanın materyaline sadık kalmak amacıyla korundu."
+     }
     },
     {
      "no": 9,
@@ -2834,7 +2912,13 @@
       "E": "Tüm plastikleri geri taşımak fakat organikleri gömmek"
      },
      "dogru": "B",
-     "cozum": "Başka çadırların fotoğrafını izinsiz çekmek mahremiyet ihlalidir ve kamp etiğine en aykırı davranıştır. Gürültü de sorundur, ama hocanın vurguladığı en ağır ihlal mahremiyettir; e şıkkındaki organikleri gömmek de iz bırakmama ilkesine aykırıdır."
+     "cozum": "Başka çadırların fotoğrafını izinsiz çekmek mahremiyet ihlalidir ve kamp etiğine en aykırı davranıştır. Gürültü de sorundur, ama hocanın vurguladığı en ağır ihlal mahremiyettir; e şıkkındaki organikleri gömmek de iz bırakmama ilkesine aykırıdır.",
+     "hata": {
+      "hata": "Anahtardaki B dışında E de en az onun kadar ağır bir kamp etiği ihlalidir.",
+      "dogrusu": "Anahtar B'dir; E (organikleri gömmek) da savunulabilir bir doğru cevaptır.",
+      "neden": "Ders içeriği organik atığın da gömülmediğini açıkça söyler; bu davranış doğaya kalıcı iz bırakır, bu yüzden en problemli davranışın yalnız B olduğu kesin değildir.",
+      "yazilma": "Hocanın anahtarı B olduğu için soru değiştirilmeden korundu."
+     }
     },
     {
      "no": 10,

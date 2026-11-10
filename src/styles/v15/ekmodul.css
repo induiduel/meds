@@ -329,3 +329,6 @@
   .ekm-hoca-bolme .ekm-hoca-pdf { height: auto; min-height: 0; }
   .ekm-hoca-bolme .ekm-hoca-pdf .ekm-pdfb { height: min(40vh, 340px); }
 }
+
+.ekm-hata { margin-top: .75rem; padding: .7rem .85rem; border-radius: 10px; border-left: 3px solid var(--color-warning, #c77700); background: color-mix(in srgb, var(--color-warning, #c77700) 10%, transparent); font-size: .9rem; line-height: 1.5; }
+.ekm-hata p { margin: .2rem 0; }

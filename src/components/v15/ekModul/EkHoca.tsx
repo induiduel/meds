@@ -162,6 +162,14 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
         )}
         {qt === 'dy' && acik && y === undefined && <p className="ekm-cozum">Hocanın cevabı: <b>{q.dogru ? 'Doğru' : 'Yanlış'}</b></p>}
         {q.cozum && cozumGor && <p className="ekm-cozum ekm-hoca-cozum">{q.cozum}</p>}
+        {q.hata && cozumGor && (
+          <div className="ekm-hata" role="note">
+            <p><b>Bu soruda hata var.</b> {q.hata.hata}</p>
+            <p><b>Doğrusu:</b> {q.hata.dogrusu}</p>
+            <p><b>Neden hatalı:</b> {q.hata.neden}</p>
+            <p><b>Neden yine de böyle yazıldı:</b> {q.hata.yazilma}</p>
+          </div>
+        )}
       </article>
 
       <nav className="ekm-soru-alt">
