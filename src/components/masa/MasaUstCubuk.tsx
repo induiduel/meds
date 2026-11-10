@@ -1,7 +1,7 @@
 /** Oyun içi üst çubuk (48 px): menü, oyun adı + kod, el, sıra, skor tablosu, tepki, 2B/3B, ses, bağlantı. */
 import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { BookOpen, Bot, Box, DoorOpen, Flag, Home, Menu, Pause, Play, Smile, Square, Trophy, UserPlus, Vibrate, Volume2, VolumeX } from 'lucide-react';
+import { ArrowDownUp, BookOpen, Bot, Box, DoorOpen, Flag, Home, Menu, Pause, Play, Smile, Square, Trophy, UserPlus, Vibrate, Volume2, VolumeX } from 'lucide-react';
 import { masa } from '../../services/masa/istemci';
 import { OYUN_ADI, TEPKILER, type OdaGorunum, type OkeyGorunum } from '../../services/masa/tipler';
 import { oyuncuAdi, sesCal, tercihYaz, titret, useTercih } from './ortak';
@@ -107,6 +107,12 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
             <label className="mk-anahtar-satir is-menu"><span><b><Vibrate size={18} /> Titreşim</b></span>
               <input type="checkbox" className="mk-anahtar" checked={tercih.titresim} onChange={(e) => tercihYaz({ titresim: e.target.checked })} /></label>
           </li>
+          {oda.tur !== 'uno' && oda.tur !== 'pisti' && oda.tur !== 'domino' && !['go', 'cizgi', 'xox'].includes(oda.tur) && (
+            <li>
+              <label className="mk-anahtar-satir is-menu"><span><b><ArrowDownUp size={18} /> Istakayı otomatik sırala</b><small>Çektiğin taş sırasına yerleşir</small></span>
+                <input type="checkbox" className="mk-anahtar" checked={tercih.otoSira} onChange={(e) => tercihYaz({ otoSira: e.target.checked })} /></label>
+            </li>
+          )}
           {kurucu && oda.asama !== 'bitti' && (
             <>
               <li className="mk-menu-ayrac">Kurucu</li>

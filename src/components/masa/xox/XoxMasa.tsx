@@ -4,7 +4,7 @@
  */
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimationControls } from 'motion/react';
-import { Flag } from 'lucide-react';
+import { Flag, RotateCcw } from 'lucide-react';
 import type { OdaGorunum, XoxGorunum } from '../../../services/masa/tipler';
 import { masa } from '../../../services/masa/istemci';
 import { azHareket, sesCal, titret } from '../ortak';
@@ -91,6 +91,7 @@ function Tahta({ oda, x }: { oda: OdaGorunum; x: XoxGorunum }) {
       {oyuncu && (
         <div className="tm-eylem">
           <p className="tm-not">{x.bitti ? (x.cizgi ? 'Dizi tamamlandı.' : 'Tahta doldu: berabere.') : siraBende ? 'Boş bir kareye dokun.' : 'Rakip düşünüyor…'}</p>
+          {(oda.geriAl ?? 0) > 0 && <button type="button" className="mk-dugme is-soluk" disabled={!siraBende} onClick={() => masa.geriAl()} aria-label="Son hamleni geri al" title="Son hamleni (ve botun yanıtını) geri al"><RotateCcw size={18} /></button>}
           <button type="button" className="mk-dugme is-soluk" disabled={!etkin} onClick={() => masa.hamle({ t: 'teslim' })} aria-label="Teslim ol"><Flag size={18} /></button>
         </div>
       )}

@@ -5,9 +5,10 @@
 import { useSyncExternalStore } from 'react';
 import type { OdaGorunum } from '../../services/masa/tipler';
 
-export interface MasaTercih { boyut: '2b' | '3b'; ses: boolean; titresim: boolean; ipucu: boolean }
+/** otoSira: taş çekilince ıstaka son dizme biçimine göre kendiliğinden yeniden dizilir */
+export interface MasaTercih { boyut: '2b' | '3b'; ses: boolean; titresim: boolean; ipucu: boolean; otoSira: boolean }
 const KEY = 'medsoru_masa_tercih_v1';
-const VARSAYILAN: MasaTercih = { boyut: '2b', ses: true, titresim: true, ipucu: true };
+const VARSAYILAN: MasaTercih = { boyut: '2b', ses: true, titresim: true, ipucu: true, otoSira: true };
 let tercih: MasaTercih = (() => { try { return { ...VARSAYILAN, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; } catch { return VARSAYILAN; } })();
 const aboneler = new Set<() => void>();
 export function tercihYaz(p: Partial<MasaTercih>) {

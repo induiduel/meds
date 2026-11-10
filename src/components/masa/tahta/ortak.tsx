@@ -3,7 +3,7 @@
  * Kurallar ve tasarım planı: meds/docs/TAHTA_OYUNLARI.md
  */
 import React from 'react';
-import { GO_SURELER, XOX_HEDEF, type OdaAyar, type OdaGorunum, type OyunTur } from '../../../services/masa/tipler';
+import { GO_SURELER, XOX_HEDEF, type BotZorluk, type OdaAyar, type OdaGorunum, type OyunTur } from '../../../services/masa/tipler';
 import { Avatar, sadeAd } from '../kabukOrtak';
 
 export const TAHTA: readonly OyunTur[] = ['go', 'cizgi', 'xox'];
@@ -27,10 +27,13 @@ export function TahtaAyar({ tur, ayar, degistir, kilitli }: { tur: OyunTur; ayar
       {not && <small className="mk-alan-not">{not}</small>}
     </div>
   );
+  const zorluk = dilim<BotZorluk>('Bot gücü', [{ v: 'kolay', ad: 'Kolay' }, { v: 'orta', ad: 'Orta' }, { v: 'zor', ad: 'Zor' }], ayar.botZorluk ?? 'orta', (v) => degistir({ botZorluk: v }),
+    (ayar.botZorluk ?? 'orta') === 'kolay' ? 'Bot sık hata yapar; öğrenmek için.' : (ayar.botZorluk ?? 'orta') === 'orta' ? 'Bot ara sıra tehlikeyi kaçırır; yenilebilir.' : 'Bot hata yapmaz (XOX 3×3\'te yenilmez).');
   if (tur === 'go') {
     const h = ayar.goHandikap ?? 0;
     return (
       <>
+        {zorluk}
         {dilim('Tahta', [9, 13, 19].map((n) => ({ v: n, ad: `${n}×${n}` })), ayar.goBoyut ?? 9, (v) => degistir({ goBoyut: v as 9 }),
           (ayar.goBoyut ?? 9) === 9 ? 'Hızlı oyun, yeni başlayanlar için.' : (ayar.goBoyut ?? 9) === 13 ? 'Orta uzunlukta oyun.' : 'Tam boy tahta; uzun oyun.')}
         {dilim('Handikap', [0, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => ({ v: n, ad: n === 0 ? 'Yok' : n })), h, (v) => degistir({ goHandikap: v }),
@@ -47,8 +50,8 @@ export function TahtaAyar({ tur, ayar, degistir, kilitli }: { tur: OyunTur; ayar
       `${k} satır, ${({ 32: 3, 64: 5, 96: 5, 128: 7 } as const)[k]} sütun; elde ${({ 32: 2, 64: 3, 96: 4, 128: 5 } as const)[k]} yan geçiş hakkı.`);
   }
   if (tur === 'xox') {
-    return dilim('Tahta', ([3, 4, 5, 6] as const).map((n) => ({ v: n, ad: <>{n}×{n}<small> · {XOX_HEDEF[n]}'lü</small></> })), ayar.xoxBoyut ?? 3, (v) => degistir({ xoxBoyut: v }),
-      `Yan yana ${XOX_HEDEF[ayar.xoxBoyut ?? 3]} işaret dizen kazanır (yatay, dikey ya da çapraz).`);
+    return <>{zorluk}{dilim('Tahta', ([3, 4, 5, 6] as const).map((n) => ({ v: n, ad: <>{n}×{n}<small> · {XOX_HEDEF[n]}'lü</small></> })), ayar.xoxBoyut ?? 3, (v) => degistir({ xoxBoyut: v }),
+      `Yan yana ${XOX_HEDEF[ayar.xoxBoyut ?? 3]} işaret dizen kazanır (yatay, dikey ya da çapraz).`)}</>;
   }
   return null;
 }

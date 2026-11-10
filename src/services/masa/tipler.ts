@@ -424,7 +424,11 @@ export interface OdaAyar {
   cizgiKare?: CizgiKare;
   /** xox: tahta boyutu (varsayılan 3) */
   xoxBoyut?: XoxBoyut;
+  /** go/xox: bot gücü (varsayılan 'orta'; 'zor' eski kusursuz bot) */
+  botZorluk?: BotZorluk;
 }
+
+export type BotZorluk = 'kolay' | 'orta' | 'zor';
 
 export interface OyuncuBilgi {
   id: string;

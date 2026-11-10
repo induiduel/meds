@@ -104,7 +104,8 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
           <h3>Normal ve zorlu mod</h3>
           <ul>
             <li><b>Normal mod:</b> ipucu, otomatik işleme, en iyi hamle, ıstakayı sıralama ve masayı dizme yardımcıları açıktır.</li>
-            <li><b>Zorlu mod:</b> yardımcıların hiçbiri yoktur; ıstakayı ve masayı otomatik dizemezsin, taşlarını elle yerleştirirsin. Masadaki perler yalnız <b>el bitince</b> kendiliğinden dizilir. Masayı düzenleme ve geri al her iki modda da vardır.</li>
+            <li><b>Zorlu mod:</b> ipucu, otomatik işle ve en iyi hamle yoktur. Istakayı sıralama, masayı dizme, masayı düzenleme ve geri al her iki modda da vardır.</li>
+            <li><b>Otomatik sıralama:</b> menüdeki “Istakayı otomatik sırala” açıkken çektiğin taş son seçtiğin sıralamaya (renk ya da sayı) göre yerine girer; kapatırsan taşlar elle dizdiğin gibi kalır.</li>
           </ul>
           <h3>Seriyi bölerek işleme</h3>
           <p>Masadaki bir serinin <b>ortasındaki</b> bir sayının eş taşı (aynı renk, aynı sayı) elindeyse onu da o seriye işleyebilirsin: seri o taştan <b>ikiye bölünür</b>. Bölünen iki parçanın ikisi de en az 3 taş olmalıdır; bu yüzden en az 5 taşlık serilerde ve uçlardan en az üçüncü sıradaki sayılarda olur.</p>

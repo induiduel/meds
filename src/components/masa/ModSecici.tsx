@@ -38,7 +38,7 @@ export function OyunModu({ tur, asistan, sec, kilitli }: { tur: OyunTur; asistan
       ad="Zorluk" deger={asistan} sec={sec} kilitli={kilitli} dar
       secenek={[
         { v: true, ad: 'Normal', kisa: tahta ? 'Konulabilecek noktalar gösterilir' : 'İpucu ve otomatik dizme açık', ikon: <GraduationCap size={18} aria-hidden="true" /> },
-        { v: false, ad: 'Zorlu', kisa: tahta ? 'Yardımcı işaret yok' : 'Yardımcı yok, her şey elle', ikon: <Swords size={18} aria-hidden="true" /> },
+        { v: false, ad: 'Zorlu', kisa: tahta ? 'Yardımcı işaret yok' : 'İpucu ve otomatik hamle yok', ikon: <Swords size={18} aria-hidden="true" /> },
       ]}
       not={asistan
         ? (tahta ? 'Tahtada konulabilecek noktalar hafifçe gösterilir (9×9).' : 'İpucu, otomatik işleme, en iyi hamle, ıstakayı ve masayı otomatik dizme açık.')

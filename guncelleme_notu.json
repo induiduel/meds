@@ -1,17 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 688,
-  "baslik": "Oyunlar: hamleler artık anında görünüyor",
+  "onem": 689,
+  "baslik": "Oyunlar: bot gücü seçimi, geri al ve otomatik ıstaka",
   "maddeler": [
-    "Gecikme: taş, kart ve işaret hamleleri sunucu yanıtı beklenmeden anında masaya yansır; yavaş internette de oyun akıcı.",
-    "Hata olursa: sunucu hamleyi reddederse masa kendiliğinden doğru duruma döner."
+    "Go ve XOX: bot gücünü Kolay, Orta ya da Zor seçebilirsin; Kolay ve Orta bot artık hata yapıyor, yenilebilir.",
+    "Go ve XOX: bota karşı son hamleni geri alabilirsin.",
+    "Okey: çektiğin taş ıstakada kendiliğinden yerine dizilir (menüden kapatılabilir); Sırala ve Masayı diz Zorlu modda da var.",
+    "Okey: dar ekranda ıstakadaki per toplamı artık doğru hesaplanıyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Go/XOX bot gücü",
+    "Go/XOX geri al",
+    "Istakayı otomatik sırala"
+  ],
   "degisen": [
-    "Tüm oyunlarda hamle hızı"
+    "Zorlu modda sıralama ve masayı dizme"
   ],
   "duzeltilen": [
-    "Oyunlarda internet gecikmesi"
+    "Dar ıstakada per toplamı"
   ],
   "silinen": [],
   "yenilikler": []

@@ -21,14 +21,9 @@ export function uzlas(y: YuvaDurum | null, el: number[], sutun: number, kat: num
   let degisti = false;
   if (!y) { d = new Array(sutun * kat).fill(null); degisti = true; }
   else if (y.sutun !== sutun || y.kat !== kat) {
-    d = new Array(sutun * kat).fill(null);
-    const tasan: number[] = [];
-    y.d.forEach((id, i) => {
-      if (id === null) return;
-      const r = Math.floor(i / y.sutun), c = i % y.sutun;
-      if (r < kat && c < sutun) d[r * sutun + c] = id; else tasan.push(id);
-    });
-    for (const id of tasan) { const b = ilkBos(d); if (b >= 0) d[b] = id; }
+    // Boyut değişti (dar ekran, döndürme): taşlar konumla değil gruplarıyla taşınır; yoksa satır sonundan
+    // taşan taşlar komşu gruba yapışıp per toplamını bozuyordu (H529)
+    d = diz({ sutun, kat, d: new Array(sutun * kat).fill(null) }, gruplar(y)).d;
     degisti = true;
   } else d = y.d;
   const elde = new Set(el);
@@ -86,8 +81,20 @@ export function diz(y: YuvaDurum, gruplar: number[][]): YuvaDurum {
     }
     return d;
   };
+  // Boşluklar sığmıyorsa gruplar satır sonunda bölünür ama birbirine yapışmaz (yapışırsa toplam yanlış hesaplanır)
+  const bolerek = (): (number | null)[] | null => {
+    const d: (number | null)[] = new Array(y.d.length).fill(null);
+    let i = 0;
+    for (const g of gruplar) {
+      if (!g.length) continue;
+      if (i + g.length > d.length) return null;
+      for (const id of g) d[i++] = id;
+      if (i % y.sutun) i++;
+    }
+    return d;
+  };
   const duz = () => { const d: (number | null)[] = new Array(y.d.length).fill(null); gruplar.flat().forEach((id, i) => { if (i < d.length) d[i] = id; }); return d; };
-  return { ...y, d: dene(1) ?? dene(0) ?? duz() };
+  return { ...y, d: dene(1) ?? bolerek() ?? dene(0) ?? duz() };
 }
 
 /** Bitişik (arada boş yuva olmayan, aynı kattaki) taş grupları */

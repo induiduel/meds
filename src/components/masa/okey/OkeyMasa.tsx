@@ -71,7 +71,8 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     const kullan = W - 16 - (kisa ? 160 : 0) - 44;
     const hesap = (kat: number) => {
       const enAz = Math.ceil((yuzbir ? 30 : genis ? 20 : 16) / kat);
-      const sutun = Math.max(enAz, Math.ceil((n + 4) / kat));
+      // Gruplar arası boşluklar ve satır sonu artığı için pay: dar ıstakada gruplar birbirine yapışmasın (H529)
+      const sutun = Math.max(enAz, Math.ceil((n + Math.max(4, Math.ceil(n * 0.35)) + kat) / kat));
       const yuk = (H * (kisa ? 0.41 : kat === 3 ? 0.4 : 0.34) - kat * 10 - 10) / kat / 1.38;
       return { kat, sutun, b: Math.max(18, Math.floor(Math.min((kullan - (sutun - 1) * 2) / sutun, yuk, 62))) };
     };
@@ -418,6 +419,18 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [oto, oda.surum, siraBende]);
 
+  // Otomatik sıralama: ele yeni taş girince (çekme, yandan alma) ıstaka son dizme biçimine göre yeniden dizilir.
+  // Taş çıkınca (atma, açma) yerler korunur; oyuncunun elle kurduğu boşluklar ancak yeni taşta yenilenir.
+  const oncekiEl = useRef<{ a: string; ids: Set<number> } | null>(null);
+  useEffect(() => {
+    const ids = new Set(g.elim.map((t) => t.id)), o = oncekiEl.current;
+    oncekiEl.current = { a: anahtar, ids };
+    if (!tercih.otoSira || !o || o.a !== anahtar || kilit) return;
+    if (![...ids].some((id) => !o.ids.has(id))) return;
+    yuvaKoy(diz(yuva, siraGruplari(kip.current)), false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [g.elim, anahtar]);
+
   const sirala = () => {
     const sira: Kip[] = yuzbir ? ['per', 'seri', 'grup'] : ['seri', 'grup'];
     kip.current = sira[(sira.indexOf(kip.current) + 1) % sira.length];
@@ -430,10 +443,10 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
   const zorlu = !asistan;
   const perSirala = (l: Per[]) => l.slice().sort((a, b) => (a.tur === b.tur ? 0 : a.tur === 'seri' ? -1 : 1)
     || (a.tur === 'seri' ? a.taslar[0].r - b.taslar[0].r || a.taslar[0].s - b.taslar[0].s : a.taslar[0].s - b.taslar[0].s));
-  // Normal modda "Masayı diz" açılınca masa hep dizili görünür; zorlu modda masa yalnız el bitince dizilir
+  // "Masayı diz" açılınca masa hep dizili görünür (iki modda da); zorlu modda el bitince de dizilir
   const [masaDizili, setMasaDizili] = useState(false);
   const elBitti = g.bitti || oda.asama !== 'oyun';
-  const gorunenPerler = useMemo(() => ((zorlu ? elBitti : masaDizili) ? perSirala(g.perler) : g.perler), [g.perler, zorlu, elBitti, masaDizili]);
+  const gorunenPerler = useMemo(() => ((masaDizili || (zorlu && elBitti)) ? perSirala(g.perler) : g.perler), [g.perler, zorlu, elBitti, masaDizili]);
   const [duzen2, setDuzen2] = useState<{ gruplar: number[][]; secili: number[] } | null>(null);
   const masaTas = useMemo(() => new Map(masaPerler.flatMap((p) => p.taslar.map((t) => [t.id, t] as const))), [masaPerler]);
   /** Açık masa: taslağa elden konan taşlar (ıstakada gizlenir) */
@@ -509,7 +522,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
       { ad: 'pas', etiket: kastet && !g.elim.length ? 'Bitir' : 'Pas', ikon: <SkipForward {...ik} />, etkin: pasVar && !duzen2, birincil: g.tur_.hamleYapti || !cekebilir, calis: () => gonder({ t: 'pas' } as unknown as OkeyHamle) },
       { ad: 'duzenle', etiket: 'Masayı düzenle', ikon: <Pencil {...ik} />, etkin: siraBende && !duzen2 && masaPerler.length > 0 && (!remi || !!benO?.acti), calis: duzenleBasla },
     );
-    if (!zorlu) eylemler.push({ ad: 'sirala', etiket: 'Diz', ikon: <ArrowDownUp {...ik} />, etkin: !kilit && g.elim.length > 1, calis: sirala });
+    eylemler.push({ ad: 'sirala', etiket: 'Diz', ikon: <ArrowDownUp {...ik} />, etkin: !kilit && g.elim.length > 1, calis: sirala });
     if (asistan) eylemler.push({ ad: 'plan', etiket: 'En iyi hamle', ikon: <Sparkles {...ik} />, etkin: siraBende && !!acikIp && !duzen2, asistan: true, calis: () => { if (acikIp) acikGonder((acikIp.hamle as { perler: number[][] }).perler, acikIp.taslar, (acikIp.hamle as { ciftler?: number[][] }).ciftler); } });
   } else if (yedili) {
     const isleVar = ipuclari.some((x) => x.hamle.t === 'isle');
@@ -518,9 +531,9 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
       { ad: 'cek', etiket: 'Taş çek', ikon: <ArrowDownToLine {...ik} />, etkin: cekebilir, birincil: !zorunlu.per && !zorunlu.islek, calis: () => cek('deste') },
       { ad: 'devret', etiket: 'Eli devret', ikon: <SkipForward {...ik} />, etkin: siraBende && (g.tur_.cekti || g.tur_.hamleYapti || zorunlu.per || zorunlu.islek), birincil: !cekebilir && !zorunlu.per && !zorunlu.islek, calis: devret },
     );
-    if (!zorlu) eylemler.push(
+    eylemler.push(
       { ad: 'sirala', etiket: 'Sırala', ikon: <ArrowDownUp {...ik} />, etkin: !kilit && g.elim.length > 1, calis: sirala },
-      { ad: 'masadiz', etiket: masaDizili ? 'Açılış sırası' : 'Masayı diz', ikon: <LayoutGrid {...ik} />, etkin: g.perler.length > 1, asistan: true, calis: () => setMasaDizili((x) => !x) },
+      { ad: 'masadiz', etiket: masaDizili ? 'Açılış sırası' : 'Masayı diz', ikon: <LayoutGrid {...ik} />, etkin: g.perler.length > 1, calis: () => setMasaDizili((x) => !x) },
     );
     eylemler.push({ ad: 'duzenle', etiket: 'Masayı düzenle', ikon: <Pencil {...ik} />, etkin: siraBende && hak && g.perler.length > 0 && !duzen2, calis: duzenleBasla });
     if (asistan) eylemler.push(
@@ -546,7 +559,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
       if (g.yandanAlinan != null) eylemler.push({ ad: 'geri', etiket: 'Geri koy', ikon: <Undo2 {...ik} />, etkin: true, calis: () => gonder({ t: 'geriKoy' }) });
     }
     if (gosterVar) eylemler.push({ ad: 'goster', etiket: 'Gösterge göster', ikon: <Sparkles {...ik} />, etkin: true, ipucu: 'İlk turunda göstergenin aynısını göster: rakiplere −1', calis: () => gonder({ t: 'goster' } as unknown as OkeyHamle) });
-    if (!zorlu) eylemler.push({ ad: 'sirala', etiket: 'Diz', ikon: <ArrowDownUp {...ik} />, etkin: !kilit && g.elim.length > 1, calis: sirala });
+    eylemler.push({ ad: 'sirala', etiket: 'Diz', ikon: <ArrowDownUp {...ik} />, etkin: !kilit && g.elim.length > 1, calis: sirala });
   }
   eylemler.push({ ad: 'geriAl', etiket: 'Geri al', ikon: <RotateCcw {...ik} />, etkin: !kilit && (geriAlVar || !!duzen2 || yuvaGecmis.current.l.length > 0), calis: geriAl, ipucu: 'Son per açma / işleme ya da ıstaka hareketini geri al' });
   if (asistan && tercih.ipucu !== false) eylemler.push({ ad: 'ipucu', etiket: 'İpucu', ikon: <Lightbulb {...ik} />, etkin: !kilit, asistan: true, calis: ipucuGoster });

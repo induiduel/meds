@@ -381,6 +381,7 @@ class MasaSunucu {
       komi: kilit ? kilit.komi : Number.isFinite(Number(a.komi)) && Number(a.komi) >= 0 && Number(a.komi) <= 15 ? Math.round(Number(a.komi) * 2) / 2 : 6.5,
       cizgiKare: kilit ? kilit.cizgiKare : ([32, 64, 96, 128] as const).find((n) => n === Number(a.cizgiKare)) ?? 64,
       xoxBoyut: kilit ? kilit.xoxBoyut : ([3, 4, 5, 6] as const).find((n) => n === Number(a.xoxBoyut)) ?? 3,
+      botZorluk: kilit ? (kilit.botZorluk ?? 'orta') : (['kolay', 'orta', 'zor'] as const).find((z) => z === a.botZorluk) ?? 'orta',
     };
   }
 
@@ -521,11 +522,15 @@ class MasaSunucu {
     const hm = (h as any)?.t;
     const geriAlinir = oda.tur !== 'uno' && (hm === 'ac' || hm === 'ac101' || hm === 'isle' || hm === 'duzenle')
       && !olaylar.some((o) => o.t === 'hediye' || o.t === 'elBitti' || o.t === 'sira' || o.t === 'cektim');
-    if (geriAlinir) {
+    // Go / XOX bota karşı: insanın taş koyması (bot yanıtıyla birlikte) geri alınabilir; botun hamlesi yığını silmez
+    const ben = oda.oyuncular.find((k) => k.id === oyuncu);
+    const botaKarsi = (oda.tur === 'go' || oda.tur === 'xox') && oda.oyuncular.every((k) => k.id === oyuncu || k.bot);
+    const tahtaGeri = botaKarsi && !ben?.bot && hm === 'koy' && !(onceki as { saat?: unknown })?.saat && !olaylar.some((o) => o.t === 'elBitti');
+    if (geriAlinir || tahtaGeri) {
       if (oda.geri?.kim !== oyuncu) oda.geri = { kim: oyuncu, durumlar: [] };
       oda.geri.durumlar.push(onceki);
       if (oda.geri.durumlar.length > 30) oda.geri.durumlar.shift();
-    } else oda.geri = undefined;
+    } else if (!((oda.tur === 'go' || oda.tur === 'xox') && ben?.bot)) oda.geri = undefined;
     const s = motor.sonuc(oda.durum);
     if (s) {
       oda.asama = 'elSonu'; oda.elSonuc = s;

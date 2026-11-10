@@ -2,9 +2,10 @@
  * XOX — saf kural motoru (2 oyuncu, 3×3 … 6×6). Kurallar (docs/TAHTA_OYUNLARI.md §3):
  *   - X başlar (her elde başlayan değişir, X hep başlayanındır). Sırayla boş kareye işaret konur.
  *   - Yatay, dikey ya da çapraz `XOX_HEDEF[boyut]` işaret yan yana gelen kazanır; tahta dolarsa berabere.
- * Bot: 3×3'te kusursuz (minimax), büyüklerde kazan → engelle → en iyi açık dizi.
+ * Bot: zor = 3×3'te kusursuz (minimax), büyüklerde kazan → engelle → en iyi açık dizi;
+ *   orta/kolay aynı aklı kullanır ama belli olasılıkla hata yapar (rastgele kare, engeli kaçırma).
  */
-import { XOX_HEDEF, type ElSonuc, type Motor, type Olay, type XoxBoyut, type XoxGorunum } from '../tipler';
+import { XOX_HEDEF, type BotZorluk, type ElSonuc, type Rng, type Motor, type Olay, type XoxBoyut, type XoxGorunum } from '../tipler';
 
 type Isaret = 'X' | 'O';
 export interface XoxDurum {
@@ -19,6 +20,7 @@ export interface XoxDurum {
   son: number | null;
   cizgi: number[] | null;
   sonuc: ElSonuc | null;
+  zorluk?: BotZorluk;
 }
 
 const BOYUTLAR: XoxBoyut[] = [3, 4, 5, 6];
@@ -62,17 +64,22 @@ function minimax(t: XoxDurum['tahta'], sira: Isaret, ben: Isaret, derinlik: numb
   return en;
 }
 
-export function xoxBotSec(d: XoxDurum): number {
+/** Zorluğa göre hata olasılıkları: [rastgele kare, kazancı kaçır, engeli kaçır] */
+const HATA: Record<BotZorluk, [number, number, number]> = { kolay: [0.35, 0.3, 0.45], orta: [0.12, 0.05, 0.2], zor: [0, 0, 0] };
+
+export function xoxBotSec(d: XoxDurum, rng: Rng = Math.random): number {
   const bos = d.tahta.map((v, i) => (v ? -1 : i)).filter((i) => i >= 0);
   const ben = d.sira, o: Isaret = ben === 'X' ? 'O' : 'X';
-  if (d.boyut === 3) {
+  const [rastgele, kazanKacir, engelKacir] = HATA[d.zorluk ?? 'zor'];
+  if (rng() < rastgele) return bos[Math.floor(rng() * bos.length)];
+  if (d.boyut === 3 && (d.zorluk ?? 'zor') === 'zor') {
     let en = -Infinity, sec = bos[0];
     for (const i of bos) { const t = d.tahta.slice(); t[i] = ben; const p = minimax(t, o, ben, 1); if (p > en) { en = p; sec = i; } }
     return sec;
   }
   const dene = (isaret: Isaret) => bos.find((i) => { const t = d.tahta.slice(); t[i] = isaret; return !!kazananYol(t, d.boyut, d.hedef); });
-  const kazan = dene(ben); if (kazan != null) return kazan;
-  const engel = dene(o); if (engel != null) return engel;
+  const kazan = dene(ben); if (kazan != null && rng() >= kazanKacir) return kazan;
+  const engel = dene(o); if (engel != null && rng() >= engelKacir) return engel;
   const ys = yollar(d.boyut, d.hedef), orta = (d.boyut - 1) / 2;
   let en = -Infinity, sec = bos[0];
   for (const i of bos) {
@@ -84,6 +91,7 @@ export function xoxBotSec(d: XoxDurum): number {
       if (!benim) p += onun * onun * 2; // rakibin açık dizisini kes
     }
     p -= (Math.abs((i % d.boyut) - orta) + Math.abs(Math.floor(i / d.boyut) - orta)) * 0.1;
+    if (d.zorluk !== 'zor') p += rng() * (d.zorluk === 'kolay' ? 6 : 2); // küçük farklar her oyunda aynı hamleyi seçtirmesin
     if (p > en) { en = p; sec = i; }
   }
   return sec;
@@ -104,6 +112,7 @@ export const xoxMotor: Motor = {
     const d: XoxDurum = {
       tur: 'xox', elNo, boyut, hedef: XOX_HEDEF[boyut], oyuncular: [oyuncular[baslayan % 2].id, oyuncular[(baslayan + 1) % 2].id],
       tahta: Array(boyut * boyut).fill(''), sira: 'X', son: null, cizgi: null, sonuc: null,
+      zorluk: ayar?.botZorluk ?? 'orta',
     };
     return d;
   },
@@ -142,10 +151,10 @@ export const xoxMotor: Motor = {
     return g;
   },
 
-  botHamle(durum, bot) {
+  botHamle(durum, bot, rng) {
     const d = durum as XoxDurum;
     if (d.sonuc || ad(d, d.sira) !== bot) return null;
-    return { t: 'koy', i: xoxBotSec(d) };
+    return { t: 'koy', i: xoxBotSec(d, rng) };
   },
 
   sonuc(durum) { return (durum as XoxDurum).sonuc; },

@@ -1,3 +1,8 @@
+## 2026-11-10 — Taş Masası: bot zorluğu, geri al, otomatik ıstaka sıralama, dar ıstaka toplamı (H533, onem 689)
+- **Go/XOX:** `OdaAyar.botZorluk` kolay/orta/zor (varsayılan orta; zor = eski kusursuz bot), merkez + lobide "Bot gücü"; bota karşı "Geri al" (insan hamlesi + bot yanıtı, süreli Go hariç; `sunucu.ts hamle`).
+- **Okey:** "Istakayı otomatik sırala" (`MasaTercih.otoSira`, menüde), Sırala ve Masayı diz Zorlu modda da; dar ıstakada gruplar korunur (`yuva.ts uzlas/diz`, sütun payı). Ayrıntı H533.
+- **Sınama:** `tahta.sinama.ts` 54, yedili/duzOkey/acikMasa/yuzbir geçti, ıstaka dar boyut betiği. Gerçek telefonda elle oynanmadı.
+
 ## 2026-11-10 — Taş Masası: hamleler anında görünür, ağ gecikmesi gizlendi (H529, onem 688)
 - **Belirti:** tüm oyun modlarında hamle gecikmesi.
 - **Kök neden:** istemci her hamlede tünel üstünden sunucu yanıtını bekleyip masayı kilitliyordu (medyan 94 ms, p99 673 ms, en kötü 2,4 sn); sunucu içi ≤18 ms.

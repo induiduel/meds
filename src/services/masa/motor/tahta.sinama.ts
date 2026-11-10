@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import type { CizgiGorunum, Motor, Rng } from '../tipler';
 import { goMotor, say, ozet, diriMi, goSureSonu, handikapNoktalari, type GoDurum } from './go';
 import { cizgiMotor, kapismaMi, type CizgiDurum } from './cizgi';
-import { xoxMotor, type XoxDurum } from './xox';
+import { xoxBotSec, xoxMotor, type XoxDurum } from './xox';
 
 const tohumlu = (t: number): Rng => () => {
   t = (t + 0x6d2b79f5) | 0;
@@ -240,7 +240,22 @@ dene('xox: dolu kare ve sıra', () => {
   assert.ok('hata' in xoxMotor.uygula(d, 'b', { t: 'koy', i: 4 }, tohumlu(0)));
   assert.ok('hata' in xoxMotor.uygula(d, 'a', { t: 'koy', i: 0 }, tohumlu(0)));
 });
-dene('xox: 3×3 bot-bot hep berabere (kusursuz)', () => { for (let t = 0; t < 4; t++) assert.equal((botOyun(xoxMotor, { xoxBoyut: 3 }, t) as XoxDurum).sonuc!.neden, 'berabere'); });
+dene('xox: 3×3 bot-bot hep berabere (kusursuz)', () => { for (let t = 0; t < 4; t++) assert.equal((botOyun(xoxMotor, { xoxBoyut: 3, botZorluk: 'zor' }, t) as XoxDurum).sonuc!.neden, 'berabere'); });
+dene('xox: kolay/orta bot hata yapar (kazanılabilir)', () => {
+  // Zor X'e karşı kolay O: 40 elde en az bir kez kaybetmeli; kolay O 'zor' kadar sağlam değil
+  let kayip = 0;
+  for (let t = 0; t < 40; t++) {
+    let d = xo(3); d = { ...d, zorluk: 'kolay' };
+    const rng = tohumlu(100 + t);
+    while (!d.sonuc) {
+      const z = d.sira === 'X' ? 'zor' : 'kolay';
+      const i = xoxBotSec({ ...d, zorluk: z }, rng);
+      d = (xoxMotor.uygula(d, d.oyuncular[d.sira === 'X' ? 0 : 1], { t: 'koy', i }, rng) as { durum: XoxDurum }).durum;
+    }
+    if (d.sonuc.kazananlar[0] === d.oyuncular[0]) kayip++;
+  }
+  assert.ok(kayip >= 5, `kolay bot yalnız ${kayip} kez kaybetti`);
+});
 for (const n of [4, 5, 6]) dene(`xox: ${n}×${n} bot-bot biter`, () => { botOyun(xoxMotor, { xoxBoyut: n }, n); });
 
 console.log(`\n${say_} sınama geçti.`);

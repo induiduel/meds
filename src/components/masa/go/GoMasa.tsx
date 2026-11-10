@@ -4,7 +4,7 @@
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { Check, Flag, Play, SkipForward, X } from 'lucide-react';
+import { Check, Flag, Play, RotateCcw, SkipForward, X } from 'lucide-react';
 import type { GoGorunum, GoTas, OdaGorunum } from '../../../services/masa/tipler';
 import { masa } from '../../../services/masa/istemci';
 import { azHareket, sesCal, titret } from '../ortak';
@@ -194,6 +194,7 @@ function Tahta({ oda, g }: { oda: OdaGorunum; g: GoGorunum }) {
             </>
           ) : (
             <>
+              {(oda.geriAl ?? 0) > 0 && <button type="button" className="mk-dugme is-soluk" onClick={() => { masa.geriAl(); setSecim(null); }} disabled={!siraBende} aria-label="Son hamleni geri al" title="Son hamleni (ve botun yanıtını) geri al"><RotateCcw size={18} /></button>}
               <button type="button" className="mk-dugme is-acik" onClick={() => { masa.hamle({ t: 'pas' }); setSecim(null); }} disabled={!siraBende}><SkipForward size={18} /> Pas</button>
               {secim != null && <button type="button" className="mk-dugme is-soluk" onClick={() => setSecim(null)} aria-label="Seçimi bırak"><X size={18} /></button>}
               <button type="button" className="mk-dugme is-ana" onClick={koy} disabled={secim == null}><Check size={18} /> Onayla</button>

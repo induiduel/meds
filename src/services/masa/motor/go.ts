@@ -11,7 +11,7 @@
  *   - Puan alan usulü (Çin): diri taş + yalnız kendi taşlarınca çevrili boş nokta (ölü taşların yeri rakibe) + beyaza komi.
  * Durum düz JSON; `uygula` girdiyi değiştirmez.
  */
-import type { ElSonuc, GoBoyut, GoGorunum, GoTas, Motor, Olay, Rng } from '../tipler';
+import type { BotZorluk, ElSonuc, GoBoyut, GoGorunum, GoTas, Motor, Olay, Rng } from '../tipler';
 import { GO_SURELER } from '../tipler';
 
 export interface GoDurum {
@@ -37,6 +37,8 @@ export interface GoDurum {
   handikap: number;
   /** Süre sınırı: kalan ana süre (ms) ve byo-yomi hakkı renge göre; sonZ = saatin son başladığı an */
   saat: { ana: Record<GoTas, number>; periyot: Record<GoTas, number>; byo: number; sonZ: number } | null;
+  /** Bot gücü; eski kayıtlarda yok = zor */
+  zorluk?: BotZorluk;
 }
 
 const karsi = (r: GoTas): GoTas => (r === 'S' ? 'B' : 'S');
@@ -192,7 +194,7 @@ export const goMotor: Motor = {
     const d: GoDurum = {
       tur: 'go', elNo, boyut, oyuncular: [s, b], tahta, sira: hn.length ? 'B' : 'S',
       esir: { S: 0, B: 0 }, komi, ko: null, son: null, paslar: 0, asama: 'oyun', olu: [], onay: [], hamleSayisi: 0, sonuc: null,
-      gecmis: [ozet(tahta)], handikap,
+      gecmis: [ozet(tahta)], handikap, zorluk: ayar?.botZorluk ?? 'orta',
       saat: sure ? { ana: { S: sure.ana * 1000, B: sure.ana * 1000 }, periyot: { S: sure.periyot, B: sure.periyot }, byo: sure.byo * 1000, sonZ: Date.now() } : null,
     };
     return d;
@@ -335,17 +337,22 @@ export function diriMi(d: GoDurum, i: number): boolean {
 /** Basit bot: alır, atarideki grubunu kurtarır, kendi gözünü doldurmaz, kendini atariye sokmaz; iyi hamle yoksa pas */
 export function goBotSec(d: GoDurum, rng: Rng): { t: 'koy'; i: number } | { t: 'pas' } {
   const n = d.boyut, renk = d.sira, rakip = karsi(renk);
+  const z = d.zorluk ?? 'zor';
+  // Kolay/orta: puana gürültü + ara sıra tahmini hamle + tehlikeyi görmeme; insan gibi hata yapsın
+  const gurultu = z === 'kolay' ? 9 : z === 'orta' ? 3.5 : 1, kor = z === 'kolay' ? 0.45 : z === 'orta' ? 0.15 : 0;
+  const adaylar = yasallar(d).filter((i) => !komsular(i, n).every((j) => d.tahta[j] === renk));
+  if (z !== 'zor' && adaylar.length && rng() < (z === 'kolay' ? 0.2 : 0.06)) return { t: 'koy', i: adaylar[Math.floor(rng() * adaylar.length)] };
   let en: { i: number; p: number } | null = null;
   for (const i of yasallar(d)) {
     const k = komsular(i, n);
     if (k.every((j) => d.tahta[j] === renk)) continue; // kendi gözü
     const r = koy(d, i);
     if ('hata' in r) continue;
-    let p = r.alinan.length * 10 + rng();
-    const yeni = grup(r.tahta, i, n);
-    if (yeni.ozgurluk.size === 1) p -= 8;
+    let p = r.alinan.length * 10 + rng() * gurultu;
+    const yeni = grup(r.tahta, i, n), gor = rng() >= kor;
+    if (yeni.ozgurluk.size === 1 && gor) p -= 8;
     for (const j of k) {
-      if (d.tahta[j] === renk && grup(d.tahta, j, n).ozgurluk.size === 1 && yeni.ozgurluk.size > 1) p += 8;
+      if (gor && d.tahta[j] === renk && grup(d.tahta, j, n).ozgurluk.size === 1 && yeni.ozgurluk.size > 1) p += 8;
       if (d.tahta[j] === rakip && grup(r.tahta, j, n).ozgurluk.size === 1) p += 3;
     }
     const x = i % n, y = (i - x) / n, kenar = Math.min(x, y, n - 1 - x, n - 1 - y);
