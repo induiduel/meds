@@ -593,3 +593,31 @@ console.log('Açılış araması');
 }
 
 console.log(`\nTAMAM: ${sayac} birim bölümü + rastgele oyunlar + bulanık sınama + arama geçti.`);
+
+{
+  // duzenle: dörtlü 10 grubundan sarı 10 alınır, eldeki sarı 9 ve 11 ile seri kurulur
+  const grup = per(1, 'grup', [T(10, 0), T(10, 1), T(10, 2), T(10, 3)]);
+  const cift = per(2, 'cift', [T(7, 0), T(7, 0, 1)], 'b');
+  const d = kur([[T(9, 3), T(11, 3), T(1, 0), T(2, 1)], [T(1, 1)]], { perler: [grup, cift] }, [{ acti: true }]);
+  const uclu = [T(10, 0).id, T(10, 1).id, T(10, 2).id], seri = [T(9, 3).id, T(10, 3).id, T(11, 3).id];
+  const r = oyna(d, 'a', { t: 'duzenle', perler: [uclu, seri] });
+  assert.deepEqual(r.durum.oyuncular[0].el.map((t) => t.id), [T(1, 0).id, T(2, 1).id]);
+  assert.equal(r.durum.perler.length, 3);
+  assert.ok(r.durum.perler.some((p) => p.tur === 'cift' && p.id === 2));
+  assert.ok(r.durum.perler.every((p) => p.tur === 'cift' || perCoz(p.taslar, OK)));
+  assert.equal(new Set(r.durum.perler.map((p) => p.id)).size, 3);
+  assert.ok(r.durum.hamleYapti);
+  hata(d, 'a', { t: 'duzenle', perler: [seri] }, 'ele geri alınamaz');
+  hata(d, 'a', { t: 'duzenle', perler: [uclu, seri, [T(7, 0).id, T(7, 0, 1).id, T(1, 0).id]] });
+  hata(d, 'a', { t: 'duzenle', perler: [[T(10, 0).id, T(10, 1).id], [T(10, 2).id, ...seri]] }, 'geçerli');
+  hata(kur([[T(9, 3), T(11, 3)], [T(1, 1)]], { perler: [grup] }, [{ acti: true }]), 'a', { t: 'duzenle', perler: [uclu, seri] }, 'Atacak');
+  hata(kur([[T(9, 3), T(11, 3), T(1, 0)], [T(1, 1)]], { perler: [grup] }), 'a', { t: 'duzenle', perler: [uclu, seri] }, 'açmalısın');
+  hata(kur([[T(9, 3), T(11, 3), T(1, 0)], [T(1, 1)]], { perler: [grup], cekti: false }, [{ acti: true }]), 'a', { t: 'duzenle', perler: [uclu, seri] }, 'çekmelisin');
+  // Masadaki okey yeni perinde yeniden değer alır
+  const jokerli = per(3, 'seri', [T(1, 0), T(2, 0), { ...J(), yerine: { s: 3, r: 0 as Renk } }, T(4, 0)]);
+  const dj = kur([[T(6, 0), T(1, 1), T(2, 1)], [T(1, 2)]], { perler: [jokerli, per(4, 'grup', [T(4, 1), T(4, 2), T(4, 3)])] }, [{ acti: true }]);
+  const rj = oyna(dj, 'a', { t: 'duzenle', perler: [[T(4, 0).id, T(4, 1).id, T(4, 2).id, T(4, 3).id], [T(1, 0).id, T(2, 0).id, J().id]] });
+  assert.ok(rj.durum.perler.every((p) => perCoz(p.taslar, OK)));
+  assert.ok(!rj.durum.hamleYapti);
+  console.log('  ✓ duzenle: masadan taş alıp eldekilerle per, çift dokunulmaz, okey yeniden değer alır');
+}

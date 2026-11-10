@@ -1,3 +1,8 @@
+## 2026-11-10 — Taş Masası: masadan taş alıp eldekilerle yeni per (H534)
+- **Kural:** Yedili / Takım / 101 Okey'de `duzenle` hamlesi elden taş da alır (masadaki sarı 10 + eldeki sarı 9 ve 11 → seri). `motor/yedili.ts`, `motor/yuzbir.ts` (yeni dal), `tipler.ts` açıklaması, `OkeyMasa.tsx` (taslağa ıstaka taşı, sürükleme, 101 düğmesi), `MasaKurallar.tsx`.
+- **Sınama:** `yedili.sinama.ts` ve `yuzbir.sinama.ts` düzenle bölümleri geçti, `tsc` 0 hata. Arayüz tarayıcıda elle oynanarak sınanmadı. Bot ve ipucu bu hamleyi önermez; zorunluluk/ceza hesabı değişmedi.
+- **Durum:** yerelde; commit ve dağıtım yapılmadı.
+
 ## 2026-11-10 — Taş Masası: bot zorluğu, geri al, otomatik ıstaka sıralama, dar ıstaka toplamı (H533, onem 689)
 - **Go/XOX:** `OdaAyar.botZorluk` kolay/orta/zor (varsayılan orta; zor = eski kusursuz bot), merkez + lobide "Bot gücü"; bota karşı "Geri al" (insan hamlesi + bot yanıtı, süreli Go hariç; `sunucu.ts hamle`).
 - **Okey:** "Istakayı otomatik sırala" (`MasaTercih.otoSira`, menüde), Sırala ve Masayı diz Zorlu modda da; dar ıstakada gruplar korunur (`yuva.ts uzlas/diz`, sütun payı). Ayrıntı H533.

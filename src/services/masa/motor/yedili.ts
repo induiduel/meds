@@ -174,13 +174,16 @@ function motorYap(tur: 'yedili' | 'takim'): Motor {
         const masada = new Map(d.perler.flatMap((p) => p.taslar.map((t) => [t.id, t] as const)));
         const ids = gr.flat();
         if (new Set(ids).size !== ids.length) return { hata: 'Aynı taş iki pere konamaz.' };
-        if (ids.some((id) => !masada.has(id))) return { hata: 'Masayı düzenlerken elden taş eklenemez.' };
-        if (ids.length !== masada.size) return { hata: 'Masadaki taşlar ele geri alınamaz; her taş bir perde kalmalı.' };
+        // Elden taş da katılabilir: masadaki sarı 10 gruptan alınır, eldeki sarı 9 ve 11 ile yeni seri kurulur
+        const elden = ids.filter((id) => !masada.has(id));
+        const elTas = new Map(ben.el.map((t) => [t.id, t] as const));
+        if (elden.some((id) => !elTas.has(id))) return { hata: 'Bu taş ne masada ne elinde.' };
+        if (ids.length - elden.length !== masada.size) return { hata: 'Masadaki taşlar ele geri alınamaz; her taş bir perde kalmalı.' };
         const yeni: Per[] = [];
         // Taşlarının çoğu aynı kalan per kimliğini ve sahibini korur (işleme/animasyon sürekliliği)
         const kullanilan = new Set<number>();
         for (const grup of gr) {
-          const taslar = grup.map((id) => masada.get(id)!);
+          const taslar = grup.map((id) => masada.get(id) ?? elTas.get(id)!);
           const pt = perTuru(taslar);
           if (!pt) return { hata: `${taslar.map((t) => t.s).join('-')} geçerli bir per değil: her per aynı renk ardışık ya da aynı sayı farklı renk, en az 3 taş.` };
           const eski = d.perler.filter((p) => !kullanilan.has(p.id)).map((p) => ({ p, ortak: p.taslar.filter((t) => grup.includes(t.id)).length })).sort((x, y) => y.ortak - x.ortak)[0];
@@ -190,7 +193,18 @@ function motorYap(tur: 'yedili' | 'takim'): Motor {
         }
         for (const p of yeni) if (p.id < 0) { p.id = Math.max(sonrakiPerId(d.perler), sonrakiPerId(yeni)); }
         d.perler = yeni;
-        olaylar.push({ t: 'duzenledi', o: ben.id });
+        if (!elden.length) {
+          olaylar.push({ t: 'duzenledi', o: ben.id });
+          return { durum: d, olaylar };
+        }
+        ben.el = ben.el.filter((t) => !elden.includes(t.id));
+        ben.acti = true;
+        olaylar.push({ t: 'duzenledi', o: ben.id, adet: elden.length });
+        d.hamleYapti = true;
+        d.kuru = 0;
+        if (!ben.el.length) bitir(d, olaylar, i);
+        // Takım: elden taşla 4'lenen her grup hediye verdirir (işlemedeki kuralın aynısı)
+        else if (tur === 'takim') for (const p of yeni) if (p.tur === 'grup' && p.taslar.length === 4 && p.taslar.some((t) => elden.includes(t.id))) hediye(d, i, olaylar);
         return { durum: d, olaylar };
       }
 

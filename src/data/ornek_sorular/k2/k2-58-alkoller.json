@@ -1,0 +1,2361 @@
+{
+ "id": "k2-58-alkoller",
+ "sira": 58,
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Alkoller",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "tarih": "2026-11-25",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Etanolün farmakokinetiğini (emilim, dağılım hacmi, cinsiyet farkı, sıfır derece kinetiği) ve ADH, MEOS, ALDH yolaklarını kofaktörleri ve hücre içi yerleşimleriyle açıklar; fomepizol ve disülfiramın inhibisyon noktalarını ayırt eder (s. 2–9).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Alkolden oluşan asetaldehidin çoğunu karaciğerde asetata okside eden, mitokondride yerleşik NAD-bağımlı enzim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alkol dehidrogenaz",
+      "B": "Mikrozomal etanol oksitleyici sistem",
+      "C": "Aldehid dehidrogenaz",
+      "D": "Sitokrom P450 2E1",
+      "E": "Katalaz"
+     },
+     "dogru": "C",
+     "aciklama": "Asetaldehid, mitokondriyal NAD-bağımlı aldehid dehidrogenaz (ALDH) ile asetata okside edilir; asetat sonra CO2 ve suya çevrilir ya da asetil-CoA yapımında kullanılır (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Alkol dehidrogenaz etanolü asetaldehide çeviren sitozolik enzim ailesidir ve alkol metabolizmasının ana yolağını oluşturur. Mitokondride yerleşik olmadığı ve asetaldehidi değil etanolü substrat aldığı için aranan enzim o olmaz (s. 5).",
+      "B": "MEOS, kofaktör olarak NADPH kullanan ve sitokrom P450 2E1, 1A2 ve 3A4'ten oluşan mikrozomal sistemdir. Etanolü asetaldehide çeviren ikinci yolaktır; asetaldehidi asetata okside etmez (s. 7).",
+      "C": "Aldehid dehidrogenaz, karaciğer mitokondrisinde NAD kullanarak asetaldehidi asetata okside eden enzimdir. Soruda verilen hücre içi yer, kofaktör ve substrat bu enzimi tanımlar (s. 8).",
+      "D": "CYP2E1, MEOS'un ana bileşeni olan mikrozomal bir sitokrom P450 izoformudur ve kronik alkolde indüklenir. Etanol oksidasyonunda rol alır, asetaldehid–asetat basamağını yürütmez (s. 7).",
+      "E": "Katalaz peroksit yıkımından sorumlu bir enzimdir; alkolün iki ana oksidasyon yolağından biri olarak tanımlanmaz. Asetaldehid oksidasyonunu üstlenen enzim mitokondriyal aldehid dehidrogenazdır (s. 4, 8)."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": [
+      "past-q-3_Kurul_C__km_s__Birles_tr_-100"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "mitokondriyal NAD- bağımlı aldehid dehidrogenaz (ALDH) tarafından katalize edilen"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-58-05",
+      "cikmis:past-q-3_Kurul_C__km_s__Birles_tr_-100"
+     ],
+     "id": "k2-58-alkoller-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Etanol metabolizmasında kofaktör olarak NADPH kullanan ve başlıca sitokrom P450 2E1, 1A2 ve 3A4'ten oluşan enzim sistemi hücrenin hangi bölümünde yer alır?",
+     "secenekler": {
+      "A": "Mikrozom",
+      "B": "Peroksizom",
+      "C": "Çekirdek",
+      "D": "Sitozol",
+      "E": "Mitokondri"
+     },
+     "dogru": "A",
+     "aciklama": "Tanımlanan sistem mikrozomal etanol oksitleyici sistemdir (MEOS); ADH sitozolde, ALDH mitokondride çalışır (s. 5, 7, 8).",
+     "sik_aciklamalari": {
+      "A": "Mikrozomlar sitokrom P450 enzimlerini barındırır; MEOS adını buradan alır ve NADPH ile etanolü asetaldehide okside eder. Soruda sayılan izoformlar ve kofaktör bu sistemi tanımlar (s. 7).",
+      "B": "Peroksizomlar hidrojen peroksit yıkımıyla ilgili organellerdir; etanolün iki ana yolağından biri olarak anılmaz. NADPH-bağımlı sitokrom P450 sistemi mikrozomal bölmede bulunur (s. 7).",
+      "C": "Çekirdek genetik materyali taşır, ilaç metabolize eden sitokrom P450 enzimleri burada çalışmaz. Etanolün P450 2E1 ile oksidasyonu mikrozomal MEOS sistemine aittir (s. 7).",
+      "D": "Sitozol, etanolü asetaldehide çeviren alkol dehidrogenaz ailesinin bulunduğu bölmedir. NADPH ve sitokrom P450 kullanan sistem orada değil, mikrozomlarda yerleşiktir (s. 5).",
+      "E": "Mitokondri, asetaldehidi asetata okside eden NAD-bağımlı aldehid dehidrogenazın bulunduğu bölmedir. Sitokrom P450 2E1 temelli etanol oksidasyonu mitokondride yürümez (s. 8)."
+     },
+     "bilgi": [
+      22,
+      14,
+      26
+     ],
+     "benzer_cikmis": [
+      "k1-2018-2019-q092"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "etanol metabolizmasında kofaktör olarak NADPH'yi kullanır"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-58-05",
+      "cikmis:k1-2018-2019-q092"
+     ],
+     "id": "k2-58-alkoller-q02"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Etanolün alkol dehidrogenaz ile oksidasyonu sırasında hidrojen iyonunun aktarıldığı kofaktör ve bu reaksiyonun karaciğerde yol açtığı metabolik sonuç aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "NADPH – serbest radikal oluşumu",
+      "B": "NAD+ – NADH birikimiyle laktik asidoz ve hipoglisemi",
+      "C": "FAD – ketoasidoz",
+      "D": "NADH – NAD+ fazlalığıyla karaciğerde glukoneogenez artışı",
+      "E": "Asetil-CoA – yağ asidi yıkımında artış"
+     },
+     "dogru": "B",
+     "aciklama": "ADH hidrojeni etanolden NAD+'ya aktarır ve NADH oluşur; aşırı NADH laktik asidoz ve hipoglisemiye katkıda bulunur (s. 6).",
+     "sik_aciklamalari": {
+      "A": "NADPH, MEOS yolağının kofaktörüdür ve bu yolak serbest radikal ile H2O2 gibi toksik ara ürünler oluşturur. Alkol dehidrogenaz reaksiyonu ise NAD+ kullanır, bu yüzden eşleştirme ADH için uymaz (s. 7).",
+      "B": "Alkol dehidrogenaz hidrojen iyonunu etanolden NAD+'ya aktararak NADH oluşturur; karaciğerde biriken NADH kronik alkolizmdeki metabolik bozukluklara, laktik asidoz ve hipoglisemiye katkıda bulunur. Kofaktör ve sonuç birlikte doğru verilmiştir (s. 6).",
+      "C": "FAD flavin bağımlı dehidrogenazların kofaktörüdür, etanol oksidasyonunda rol almaz. Ketoz alkolde kortizol ve büyüme hormonu artışıyla açıklanır; FAD'ın bu süreçte rolü yoktur (s. 6, 26).",
+      "D": "Reaksiyonda NADH kofaktör değil üründür; NAD+ azalır, NADH artar. Ayrıca aşırı etanol metabolizması glukoneogenezi bozar, artırmaz; bu yüzden hem yön hem sonuç terstir (s. 6, 26).",
+      "E": "Asetil-CoA, asetatın kullanımıyla oluşan bir üründür, ADH reaksiyonunun kofaktörü değildir. Alkolik karaciğerde yağ asidi yıkımı azalır ve sentezi artar; yıkım artışı ifadesi de terstir (s. 8, 16)."
+     },
+     "bilgi": [
+      19,
+      20,
+      21
+     ],
+     "benzer_cikmis": [
+      "k1-2021-2022-q042"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "hidrojen iyonu etanolden, kofaktör nikotinamid adenin dinükleotid"
+     },
+     "s": 6,
+     "dayanak": [
+      "hoca:hv-k2-58-04",
+      "hoca:hv-k2-58-02",
+      "cikmis:k1-2021-2022-q042"
+     ],
+     "id": "k2-58-alkoller-q03"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Etanol metabolizmasıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Alkol dehidrogenaz yolağı sitozolik enzimlerden oluşur ve ana yolaktır.\nII. MEOS kronik alkol tüketiminde indüklenir ve P450 ile elimine edilen ilaçların klirensini artırır.\nIII. Aldehid dehidrogenaz NADPH kullanan mikrozomal bir enzimdir.\nIV. Asetaldehidin oksidasyonu disülfiram tarafından inhibe edilir.",
+     "secenekler": {
+      "A": "II ve III",
+      "B": "I, III ve IV",
+      "C": "Yalnız IV",
+      "D": "I, II ve IV",
+      "E": "I ve III"
+     },
+     "dogru": "D",
+     "aciklama": "ADH sitozolik ana yolaktır; MEOS kronik alkolde indüklenir ve ilaç klirensini artırır; ALDH mitokondriyal ve NAD-bağımlıdır, NADPH kullanan mikrozomal sistem MEOS'tur; disülfiram ALDH'yi inhibe eder (s. 5, 7, 8).",
+     "sik_aciklamalari": {
+      "A": "II doğrudur, kronik alkolde MEOS indüksiyonu ilaç klirensini artırır. III yanlıştır, NADPH kullanan sistem ALDH değil MEOS'tur; ayrıca I ve IV gibi doğru öncüller bu kümede yoktur (s. 5, 7, 8).",
+      "B": "I ve IV doğru öncüllerdir, ancak III aldehid dehidrogenazın kofaktörünü ve hücre içi yerini yanlış verir. Doğru öncül olan II'nin dışlanması da bu seçeneği uygunsuz kılar (s. 7, 8).",
+      "C": "IV doğrudur, disülfiram asetaldehid oksidasyonunu inhibe eder. Ancak I ve II de doğru ifadelerdir; yalnız IV demek ADH yolağının sitozolik ana yolak olduğunu ve MEOS indüksiyonunu göz ardı eder (s. 5, 7, 8).",
+      "D": "I doğrudur çünkü ADH sitozolik enzim ailesidir ve ana yolağı oluşturur; II doğrudur çünkü indüklenen MEOS başka ilaçların klirensini artırır; IV doğrudur çünkü disülfiram asetaldehid oksidasyonunu inhibe eder. III ise ALDH'nin kofaktörünü ve yerini MEOS ile karıştırır (s. 5, 7, 8).",
+      "E": "I doğru bir ifadedir, ancak III aldehid dehidrogenazı NADPH kullanan mikrozomal enzim diye tanımlar; ALDH mitokondriyal ve NAD-bağımlıdır. Bu küme yanlış öncülü içerdiği ve II ile IV'ü dışladığı için eksiktir (s. 7, 8)."
+     },
+     "bilgi": [
+      14,
+      23,
+      24,
+      26,
+      28
+     ],
+     "benzer_cikmis": [
+      "k1-2018-2019-q092",
+      "past-q-3_Kurul_C__km_s__Birles_tr_-100"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Kronik alkol tüketimi sırasında, MEOS aktivitesi indüklenmiş durumdadır"
+     },
+     "s": 8,
+     "dayanak": [
+      "hoca:hv-k2-58-09",
+      "hoca:hv-k2-58-02",
+      "cikmis:k1-2018-2019-q092",
+      "cikmis:past-q-3_Kurul_C__km_s__Birles_tr_-100"
+     ],
+     "id": "k2-58-alkoller-q04"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Kanda sık ulaşılan düzeylerde etanolün oksidasyon hızının zamandan ve konsantrasyondan bağımsız olması hangi kinetik modeli tanımlar?",
+     "secenekler": {
+      "A": "Michaelis-Menten doyma öncesi kinetik",
+      "B": "İkinci derece kinetik",
+      "C": "Flip-flop kinetik",
+      "D": "Birinci derece kinetik",
+      "E": "Sıfır derece kinetik"
+     },
+     "dogru": "E",
+     "aciklama": "Etanolün sık ulaşılan kan düzeylerinde oksidasyon hızı sıfır derece kinetiğine uyar; birim zamanda sabit miktar (saatte 7–10 g, yaklaşık bir içki) yıkılır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Michaelis-Menten eğrisinin doyma öncesi bölümünde hız konsantrasyonla artar ve birinci dereceye yaklaşır. Etanolün sık ulaşılan düzeylerinde enzim doymuş olduğundan hız sabittir, bu bölüm geçerli olmaz (s. 4).",
+      "B": "İkinci derece kinetik iki reaktanın konsantrasyonuna bağlı hızı anlatır ve ilaç eliminasyonunda etanol için kullanılan bir model değildir. Etanol oksidasyonu sabit hızlı sıfır derece modeline uyar (s. 4).",
+      "C": "Flip-flop kinetik, emilimin eliminasyondan yavaş olduğu depo preparatlarda görülen bir farmakokinetik durumdur. Etanolün hızlı emilimi ve sabit hızlı oksidasyonuyla ilgisi yoktur (s. 3, 4).",
+      "D": "Birinci derece kinetikte birim zamanda yıkılan miktar ilaç konsantrasyonuyla orantılıdır, konsantrasyon yükseldikçe eliminasyon hızlanır. Etanolde hız konsantrasyondan bağımsız olduğu için bu model uymaz (s. 4).",
+      "E": "Sıfır derece kinetikte enzim doymuştur ve birim zamanda sabit miktar ilaç yıkılır; etanol için bu saatte 7–10 gramdır. Soru tam olarak bu konsantrasyondan bağımsız sabit hızı tanımlar (s. 4)."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "oksidasyon hızı sıfır- derece kinetiğine uyar"
+     },
+     "s": 4,
+     "dayanak": [
+      "hoca:hv-k2-58-01",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q05"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Eşdeğer miktarda alkol alan kadınlarda doruk kan alkol konsantrasyonunun erkeklerden yüksek olmasını açıklayan mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kadınlarda dağılım hacminin daha büyük olması",
+      "B": "Kadında vücut suyunun ve mide ADH'sinin az olması",
+      "C": "Kadınlarda midede ADH ile yıkımın daha fazla olması",
+      "D": "Kadınlarda etanolün böbrekten daha yavaş atılması",
+      "E": "Kadınlarda gastrointestinal emilimin daha yavaş olması"
+     },
+     "dogru": "B",
+     "aciklama": "Kadınlarda doruk konsantrasyon yüksektir; nedeni kısmen toplam vücut suyunun az olması, kısmen de mide ADH'sinin düşük olmasına bağlı ilk geçiş metabolizması farkıdır (s. 3, 5).",
+     "sik_aciklamalari": {
+      "A": "Etanolün dağılım hacmi toplam vücut suyuna yakındır (0,5–0,7 L/kg). Kadınlarda toplam vücut suyu daha az olduğundan dağılım hacmi büyük değil küçüktür; büyük hacim doruk düzeyi yükseltmez, düşürürdü (s. 3).",
+      "B": "Kadınlarda toplam vücut suyu daha azdır, bu yüzden aynı miktar alkol daha küçük hacme dağılır; ayrıca mide ADH'si düşük olduğu için ilk geçiş metabolizması azdır. İki etken birlikte doruk kan düzeyini yükseltir (s. 3, 5).",
+      "C": "ADH midede de bulunur ve erkeklerde etanolün bir kısmını daha mideyken yıkar. Kadınlarda mide ADH'si daha düşük olduğundan midedeki yıkım fazla değil azdır; ifade yönü ters çevirir (s. 5).",
+      "D": "Etanolün yüzde doksandan fazlası karaciğerde okside edilir; idrarla atılan pay küçüktür. Böbrek atılımındaki bir fark doruk kan düzeyini belirleyen etken değildir (s. 4).",
+      "E": "Etanol küçük ve suda çözünen bir moleküldür, gastrointestinal kanaldan her iki cinsiyette hızla emilir. Daha yavaş emilim doruk düzeyi yükseltmez, tersine düşürürdü (s. 3)."
+     },
+     "bilgi": [
+      7,
+      17,
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "kadınlardaki doruk konsantrasyon erkeklerdekinden daha yüksek olur"
+     },
+     "s": 5,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q06"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Etanolün dağılım hacmi ve bu değerin dayandığı farmakokinetik özellik aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "0,5–0,7 L/kg; toplam vücut suyuna yakın dağılım",
+      "B": "0,05–0,07 L/kg; plazma proteinlerine yüksek bağlanma",
+      "C": "1,5–2 L/kg; kemiğe bağlanma",
+      "D": "0,2–0,3 L/kg; yalnız damar içinde kalma",
+      "E": "5–7 L/kg; yağ dokusunda yoğun birikim"
+     },
+     "dogru": "A",
+     "aciklama": "Etanol küçük, suda çözünen bir moleküldür; hızla dağılır ve dağılım hacmi toplam vücut suyuna yakındır, 0,5–0,7 L/kg (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Etanol küçük ve suda çözünür olduğundan doku düzeyleri kan düzeyine yaklaşır; dağılım hacmi toplam vücut suyuna yakındır ve 0,5–0,7 L/kg olarak verilir. Değer ve gerekçe birlikte doğrudur (s. 3).",
+      "B": "Plazma hacmine yakın çok küçük dağılım hacmi, proteine yüksek oranda bağlanan ilaçlarda görülür. Etanol plazma proteinlerine bağlanmaz, tüm vücut suyuna dağılır; bu rakam uymaz (s. 3).",
+      "C": "Kemiğe bağlanma tetrasiklin ya da bifosfonat gibi maddelerin özelliğidir; etanol için böyle bir depo tanımlanmaz. Dağılım hacmi de 1,5–2 L/kg değil, vücut suyuna eşdeğer 0,5–0,7 L/kg'dır (s. 3).",
+      "D": "Damar içinde kalan bir madde için dağılım hacmi plazma hacmine yakın olurdu. Etanol biyolojik membranları hızla geçer, santral sinir sistemine ve bütün dokulara dağılır; yalnız damar içi kalmaz (s. 3).",
+      "E": "Litre/kg düzeyinde çok yüksek dağılım hacmi lipofilik, dokuda birikim yapan ilaçlara özgüdür. Etanol suda çözünen bir molekül olduğu için yağ dokusunda yoğun birikmez ve hacmi bu kadar büyük olmaz (s. 3)."
+     },
+     "bilgi": [
+      5,
+      6,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Etanolün dağılım hacmi total vücut suyuna yakındır"
+     },
+     "s": 3,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q07"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Kronik alkol tüketiminde MEOS indüksiyonunun klinik sonuçlarıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Etanolün kendi metabolizması hızlanır.\nII. Sitokrom P450 ile elimine edilen öteki ilaçların klirensi artar.\nIII. Serbest radikaller ve H2O2 gibi toksik ara ürünlerin oluşumu artar.\nIV. Asetaldehid oksidasyonu tamamen durur.",
+     "secenekler": {
+      "A": "I, III ve IV",
+      "B": "Yalnız III",
+      "C": "I, II ve III",
+      "D": "I ve II",
+      "E": "II ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "İndüklenen MEOS etanol metabolizmasını ve P450 ile elimine edilen ilaçların klirensini artırır, sitokrom P450 reaksiyonlarından toksik ara ürün oluşumunu belirgin derecede çoğaltır; ALDH basamağı etkilenmez (s. 7).",
+     "sik_aciklamalari": {
+      "A": "I ve III doğru olsa da IV yanlıştır; ALDH ile asetaldehid oksidasyonu sürer, onu durduran etken MEOS değil disülfiramdır. II'nin dışlanması da kümeyi uygunsuz yapar (s. 7, 8).",
+      "B": "III doğrudur, fakat indüksiyonun tek sonucu toksik ara ürün değildir; etanolün ve P450 ile atılan öteki ilaçların klirensi de artar. I ve II bu nedenle kümeye girmelidir (s. 7).",
+      "C": "Kronik alkolde indüklenen MEOS etanol klirensini, P450 ile elimine edilen ilaçların klirensini ve toksik ara ürün oluşumunu birlikte artırır. Üç öncül de bu indüksiyonun doğrudan sonuçlarıdır; IV ise ALDH basamağını ilgilendirir ve indüksiyonla durmaz (s. 7, 8).",
+      "D": "I ve II doğru sonuçlardır; ancak sitokrom P450 reaksiyonlarının artması serbest radikal ve H2O2 oluşumunu da belirgin derecede çoğaltır. III'ü dışlayan bu küme indüksiyonun toksik yönünü eksik bırakır (s. 7).",
+      "E": "II doğrudur, ama IV yanlıştır: asetaldehid oksidasyonunu yürüten ALDH mitokondriyal ve ayrı bir basamaktır, MEOS indüksiyonuyla durmaz. Ayrıca I ve III'ün dışlanması kümeyi eksik kılar (s. 7, 8)."
+     },
+     "bilgi": [
+      23,
+      24,
+      25
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "MEOS sistemini oluşturan sitokrom P450'lerle elimine olan diğer ilaçların klirensini"
+     },
+     "s": 8,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q08"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Etanolün yaklaşık yüzde doksanından fazlasının elimine edildiği organ ve kalanının atıldığı yollar aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Mide; karaciğer ve safra",
+      "B": "Deri; akciğerler ve dışkı",
+      "C": "Böbrek; ter bezleri ve safra yolları",
+      "D": "Karaciğer; akciğerler ve idrar",
+      "E": "Akciğer; idrar ve ter"
+     },
+     "dogru": "D",
+     "aciklama": "Alkolün yüzde doksanından fazlası karaciğerde okside edilir; kalanı akciğerlerden ve idrarla değişmeden atılır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Midede erkeklerde ADH ile bir miktar ilk geçiş metabolizması olur, ancak bu ana eliminasyon yolu değildir. Yüzde doksandan fazlası karaciğerde okside edilir (s. 4, 5).",
+      "B": "Deri etanol için anılan bir eliminasyon yolu değildir ve atılımda rol oynamaz. Etanolün %90'dan fazlası karaciğerde okside edilir, kalan küçük kısım akciğer ve idrarla atılır (s. 4).",
+      "C": "Böbrek etanolün ana eliminasyon organı değildir; idrarla yalnız küçük bir pay değişmeden atılır. Ter ve safra da etanol için tanımlanan atılım yolları olmayıp kalan pay akciğer ve idrarla atılır (s. 4).",
+      "D": "Karaciğer, alkolün yüzde doksanından fazlasını ADH ve MEOS ile okside eder; kalan küçük bölüm akciğerlerden nefesle ve idrarla değişmeden atılır. Nefesle atılan sabit pay alkol testlerinin temelidir (s. 4).",
+      "E": "Akciğer alkolün yalnız küçük ve sabit bir bölümünü atar; bu pay nefes testiyle ölçülür. Ana eliminasyon oksidasyonla karaciğerde gerçekleşir, akciğer ana organ değildir (s. 4)."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Alkolün %90'dan fazlası karaciğerde okside olur"
+     },
+     "s": 4,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q09"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Tipik bir erişkinin bir saatte metabolize edebildiği alkol miktarı ve bunun karşılığı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "20–30 g; yaklaşık üç içki",
+      "B": "50 g; yaklaşık beş içki",
+      "C": "100 g; yaklaşık on içki",
+      "D": "1–2 g; yaklaşık bir yudum içki",
+      "E": "7–10 g; yaklaşık bir içki"
+     },
+     "dogru": "E",
+     "aciklama": "Tipik bir erişkin saatte 7–10 g (150–220 mmol) alkolü metabolize edebilir; bu yaklaşık bir içkiye, yani 300 mL bira, 105 mL şarap ya da 30 mL 80 derece distile içkiye eşdeğerdir (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Saatte 20–30 g, yaklaşık üç içkiye karşılık gelir ve erişkinin saatlik yıkım kapasitesini aşar. Yıkım hızı sabit olduğundan bu miktar bir saatte metabolize edilemez ve fazlası kanda birikir (s. 4).",
+      "B": "Saatte 50 g yaklaşık beş içkidir ve tanımlanan saatlik kapasitenin birkaç katıdır. Sıfır derece kinetiğinde hız artmadığı için bu kadar alkol bir saatte yıkılamaz (s. 4).",
+      "C": "Saatte 100 g, yaklaşık on içkiye karşılık gelir ve erişkinin saatlik metabolizma kapasitesiyle bağdaşmaz. Karaciğerin yıkım hızı içilen miktarla artmaz, bu nedenle değer yanlıştır (s. 4).",
+      "D": "Saatte 1–2 g, karaciğerin sıfır derece kinetiğiyle sabit hızda yıktığı miktarın çok altındadır. Erişkinin saatlik yıkım kapasitesi yaklaşık bir içkiye karşılık geldiğinden bu değer uymaz (s. 4).",
+      "E": "Tipik bir erişkin saatte 7–10 g alkolü metabolize eder; bu miktar bir içki olarak tanımlanır ve 300 mL bira, 105 mL şarap ya da 30 mL distile içkiye eşdeğerdir. Sıfır derece kinetiği nedeniyle bu hız kan düzeyinden bağımsız sabit kalır (s. 4)."
+     },
+     "bilgi": [],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Tipik bir erişkin saatte 7-10 g"
+     },
+     "s": 4,
+     "dayanak": [
+      "hoca:hv-k2-58-01",
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q10"
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-3_Kurul_C__km_s__Birles_tr_-100",
+     "soru": "Alkolden oluşan asetaldehitin çoğu karaciğerde, mitokondriyal NAD-bağımlı ………… tarafından katalize edilen bir reaksiyon ile okside edilir. Cümledeki boşluk aşağıdaki terimlerden hangisinde doğru olarak verilmiştir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Aldehit dehidrogenaz",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "B",
+       "text": "Mikrozomal etanol oksitleyici sistem",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Asetaldehit",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Alkol dehidrogenaz",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Disülfiram",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "A"
+    },
+    {
+     "id": "k1-2018-2019-q092",
+     "soru": "Etanol metabolizmasında rol alan sitokrom P450 ve onun CYP2E1 izoformu hangi organeldedir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Mikrozom",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "B",
+       "text": "Sitozol",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "C",
+       "text": "Peroksizom",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Mitokondri",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Lizozom",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "A"
+    },
+    {
+     "id": "k1-2021-2022-q042",
+     "soru": "Aşağıdakilerden hangisi etanol metabolizmasından kaynaklanan toksik etkiler arasında yer almaz?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Asetaldehit üretimi",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "B",
+       "text": "NAD⁺/NADH oranında artış",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "C",
+       "text": "Endotoksin üretimi",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "Serbest oksijen türevleri üretimi",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Karaciğerde yağ birikimi",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Akut etanol tüketiminin MSS, kalp ve düz kas üzerindeki etkilerini, kan alkol düzeyi–klinik etki ilişkisini (Tablo 23-1) ve GABA-A/NMDA reseptör mekanizmalarını değerlendirir (s. 10–13).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Akut etanol alımının merkezi sinir sistemindeki sedatif etkisinden sorumlu tutulan reseptör düzeyindeki değişiklikler aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "GABA-A etkisinde artış, NMDA inhibisyonu",
+      "B": "GABA-A etkisinde azalma ve NMDA aktivasyonunda artış",
+      "C": "Dopamin D2 blokajı ve serotonin geri alım inhibisyonu",
+      "D": "µ-opioid reseptör blokajı ve glisin reseptör aktivasyonu",
+      "E": "Nikotinik reseptör aktivasyonu ve kalsiyum kanal açılması"
+     },
+     "dogru": "A",
+     "aciklama": "Akut etanol GABA'nın GABA-A reseptörleri üzerindeki etkisini artırır ve glutamatın NMDA reseptörünün katyon kanalını açma özelliğini inhibe eder (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Akut etanol GABA'nın GABA-A reseptöründeki etkisini güçlendirir; GABA-mimetiklerin alkol etkisini şiddetlendirmesi bunu destekler. Aynı anda glutamatın NMDA kanalını açmasını inhibe eder; iki değişiklik birlikte sedasyonu açıklar (s. 12).",
+      "B": "GABA-A yanıtlarının down-regülasyonu akut etkide değil kronik maruziyette görülür; akut etanol GABA-A etkisini artırır. NMDA aktivasyonu da akut dönemde inhibe edilir, artmaz; yön ikisinde de terstir (s. 12, 19).",
+      "C": "Dopamin D2 blokajı antipsikotiklerin, serotonin geri alım inhibisyonu SSRI'ların mekanizmasıdır. Etanol ödül sistemindeki dopamin ve serotonin düzeylerini etkiler, ancak akut sedasyon GABA-A ve NMDA üzerinden açıklanır (s. 12, 19).",
+      "D": "µ-opioid reseptör blokajı alkol bağımlılığı tedavisinde kullanılan naltreksonun etkisidir. Etanolün akut sedasyonu opioid blokajıyla değil GABA-A güçlenmesi ve NMDA inhibisyonuyla ilgilidir (s. 12, 39).",
+      "E": "Nikotinik reseptör aktivasyonu nikotin ve kolinerjik agonistlere özgüdür. Voltaj bağımlı kalsiyum kanallarının up-regülasyonu akut etki değil, kronik alkolde yoksunluk nöbetlerinin temelidir (s. 12, 18)."
+     },
+     "bilgi": [
+      40,
+      41,
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "GABA'nın GABAA reseptörleri üzerine etkisini artırır"
+     },
+     "s": 12,
+     "dayanak": [
+      "hoca:hv-k2-58-11",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q11"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Tolerans gelişmemiş bir bireyde kan alkol konsantrasyonunun 300–400 mg/dL olması durumunda beklenen klinik tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hafif sedasyon ve öfori",
+      "B": "Ayık ya da hafif sarhoş görünüm",
+      "C": "Belirgin zehirlenme, hatta koma",
+      "D": "Yalnız reaksiyon süresinde yavaşlama",
+      "E": "Anksiyete giderici etki"
+     },
+     "dogru": "C",
+     "aciklama": "300–400 mg/dL kronik alkolikte ayıklık ya da hafif sarhoşlukla uyumlu olabilirken tolerans gelişmemiş bireyde belirgin zehirlenmeye hatta komaya yol açar (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Hafif sedasyon ve öfori düşük kan alkol düzeylerinde, az ve orta miktar alımda görülen etkidir. 300–400 mg/dL tolerans gelişmemiş kişide çok yüksek bir düzeydir ve bu hafif tabloyla uyuşmaz (s. 2, 10).",
+      "B": "Ayık ya da hafif sarhoş görünüm, bu düzeyde yalnız tolerans gelişmiş kronik alkolikte beklenir; kronik içicide aynı etkiler için daha yüksek konsantrasyon gerekir. Tolerans yoksa tablo çok daha ağırdır (s. 11).",
+      "C": "Tolerans gelişmemiş bireyde 300–400 mg/dL belirgin zehirlenme ve komaya yol açabilir; alkol MSS depresanıdır ve yüksek düzeylerde solunum depresyonu ile ölüm görülür. Bu karşıtlık toleransın klinik önemini gösterir (s. 11).",
+      "D": "Reaksiyon süresinde yavaşlama 50–100 mg/dL gibi düşük düzeylerde ortaya çıkan erken etkidir. Çok yüksek konsantrasyonda tablo yalnız yavaşlamayla sınırlı kalmaz, bilinç baskılanır (s. 10, 11).",
+      "E": "Anksiyete giderici etki az ve orta miktar alkolde görülen sedatif-hipnotik benzeri etkidir. 300–400 mg/dL tolerans gelişmemiş kişide anksiyolizle değil ağır zehirlenmeyle sonuçlanır (s. 2, 11)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "tolerans gelişmemiş bir bireyde bu konsantrasyon belirgin zehirlenmeye hatta komaya"
+     },
+     "s": 11,
+     "dayanak": [
+      "hoca:hv-k2-58-10",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q12"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Yüksek miktarda alkol alımıyla ortaya çıkan bellek kaybının bağlandığı mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "GABA-A reseptör antagonizması",
+      "B": "NMDA reseptör inhibisyonu",
+      "C": "Adenilil siklaz aktivasyonu",
+      "D": "Na+/K+-ATPaz uyarılması",
+      "E": "Opioid reseptör blokajı"
+     },
+     "dogru": "B",
+     "aciklama": "Yüksek miktarda alkolle oluşan bellek kaybı NMDA reseptör aktivasyonunun inhibisyonuna bağlı olabilir (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Etanol GABA-A reseptörünü antagonize etmez, tersine GABA'nın etkisini artırır; GABA-A antagonistleri etanolün bazı etkilerini azaltır. Bellek kaybı bu reseptörün antagonizmasıyla açıklanmaz (s. 12).",
+      "B": "Etanol glutamatın NMDA alt tipi reseptörün katyon kanalını açmasını inhibe eder; NMDA aktivasyonu öğrenme ve bellekte temel rol oynadığından yüksek dozda bellek kaybı bu inhibisyona bağlanır (s. 12).",
+      "C": "Adenilil siklaz, etanolün etkilediği membran enzimleri arasında sayılır; ancak bellek kaybı özel olarak bu enzime bağlanmaz. Bellekle ilişkilendirilen mekanizma NMDA inhibisyonudur (s. 12).",
+      "D": "Na+/K+-ATPaz etanolün etkilediği membran proteinlerinden biridir ve iyon dengesini sürdürür. Bellek kaybı bu pompanın uyarılmasıyla değil glutamat NMDA iletisinin baskılanmasıyla açıklanır (s. 12).",
+      "E": "Opioid reseptör blokajı alkol bağımlılığında naltreksonun mekanizmasıdır ve alkol alımını azaltır. Akut alkolün bellek üzerindeki etkisi opioid blokajıyla ilgili değildir (s. 12, 39)."
+     },
+     "bilgi": [
+      41,
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "bellek kaybı, NMDA reseptör aktivasyonunun inhibisyonuna bağlı olabilir"
+     },
+     "s": 12,
+     "dayanak": [
+      "hoca:hv-k2-58-11",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q13"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Etanolün vazodilatör etkisine katkıda bulunan iki mekanizma aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Kalsiyum kanal blokajı ve histamin salınımı",
+      "B": "Sempatik ganglionların blokajı ve alkol dehidrogenaz enziminin inhibisyonu",
+      "C": "Prostaglandin sentezi ve endotelin blokajı",
+      "D": "Vazomotor merkezin depresyonu ve asetaldehidin doğrudan düz kas gevşetmesi",
+      "E": "Nitrik oksit salınımı ve beta-2 reseptör aktivasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Etanolün vazodilatasyonuna hem MSS üzerindeki etkisi (vazomotor merkezin depresyonu) hem de metaboliti asetaldehidin doğrudan düz kas gevşemesi yapmasının katkıda bulunduğu düşünülür (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Kalsiyum kanal blokajı etanolün değil, uterus gevşetici olarak etanolün yerini alan kalsiyum kanal antagonistlerinin mekanizmasıdır. Histamin salınımı da etanol vazodilatasyonunda anılmaz (s. 13).",
+      "B": "Sempatik ganglion blokajı ganglion blokerlerine özgüdür. ADH inhibisyonu ise Şekil 23-1'de fomepizolün etanol metabolizmasındaki etki noktasıdır; damar düz kasıyla ilgisi yoktur (s. 9, 13).",
+      "C": "Prostaglandin sentezi ve endotelin blokajı damar tonusunu etkileyen başka ilaç gruplarının mekanizmalarıdır. Etanolün vazodilatasyonu merkezî vazomotor depresyon ve asetaldehid ile açıklanır (s. 13).",
+      "D": "Etanolün vazodilatasyonu iki yoldan açıklanır: MSS'de vazomotor merkezin baskılanması ve metaboliti asetaldehidin düz kası doğrudan gevşetmesi. Aşırı dozda bu vazodilatasyon hipotermiye yol açar (s. 13).",
+      "E": "Nitrik oksit salınımı nitratların, beta-2 aktivasyonu beta agonistlerinin vazodilatasyon mekanizmasıdır. Etanol için tanımlanan katkılar merkezî depresyon ve asetaldehidin doğrudan etkisidir (s. 13)."
+     },
+     "bilgi": [
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "hem MSS üzerine olan etkisi (vazomotor merkezin depresyonu)"
+     },
+     "s": 13,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q14"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Akut etanol tüketiminin kalp ve düz kas üzerindeki etkileriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Kan alkol düzeyi 100 mg/dL'yi aştığında miyokard kontraktilitesi belirgin derecede baskılanır.\nII. Aşırı dozda vazodilatasyona bağlı hipotermi soğuk ortamda belirginleşir.\nIII. Etanol uterusu kasar ve doğumu hızlandırmak için kullanılmıştır.\nIV. Etanol vazokonstriksiyonla kan basıncını akut olarak yükseltir.",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "II ve IV",
+      "C": "III ve IV",
+      "D": "Yalnız I",
+      "E": "I ve II"
+     },
+     "dogru": "E",
+     "aciklama": "100 mg/dL üzerinde kontraktilite baskılanır; aşırı dozda vazodilatasyonla hipotermi gelişir. Etanol uterusu gevşetir ve erken doğumu engellemek için kullanılmıştır; akut etkisi vazodilatasyondur (s. 13).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğru olsa da III yanlıştır; etanol uterusu kasmaz, gevşetir ve kalsiyum kanal antagonistleri bulunmadan önce erken doğumu engellemek için intravenöz kullanılmıştır. Bu küme ters bir öncül içerir (s. 13).",
+      "B": "II doğrudur, ancak IV yanlıştır: etanol akut dönemde vazokonstriksiyon değil vazodilatasyon yapar. Kontraktilite baskılanmasını anlatan I'in dışlanması da kümeyi eksik bırakır (s. 13).",
+      "C": "III ve IV her ikisi de yanlış yönlü ifadelerdir; etanol uterusu gevşetir ve damarları genişletir. Akut etkilerle ilgili doğru ifadeler I ve II'dir (s. 13).",
+      "D": "I doğrudur, fakat II de doğrudur; aşırı doz etanolde vazodilatasyona bağlı hipotermi soğuk ortamda belirginleşir. Yalnız I demek bu önemli etkiyi göz ardı eder (s. 13).",
+      "E": "I ve II akut etanolün belgelenmiş etkileridir: 100 mg/dL üzerinde miyokard kontraktilitesi baskılanır, aşırı dozda vazodilatasyon soğukta hipotermiye yol açar. III ve IV ise uterus ve damar etkilerinin yönünü ters çevirir (s. 13)."
+     },
+     "bilgi": [
+      43,
+      44,
+      45,
+      46
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "miyokard kontraktilitesi belirgin derecede deprese edilir"
+     },
+     "s": 13,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q15"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Alkolün yüksek kan düzeylerinde ölüme yol açan temel etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hipertansif kriz",
+      "B": "Solunum depresyonu ile koma",
+      "C": "Akut böbrek yetmezliği",
+      "D": "Hepatik ensefalopati",
+      "E": "Ventriküler fibrilasyonla ani ölüm"
+     },
+     "dogru": "B",
+     "aciklama": "Öteki sedatif-hipnotikler gibi alkol bir MSS depresanıdır; yüksek kan konsantrasyonlarında koma, solunum depresyonu ve ölüme yol açar (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Hipertansif kriz akut alkol etkisi değildir; akut etanol vazodilatasyon yapar. Hipertansiyon kronik yoğun tüketimle ilişkilendirilen bir sonuçtur, akut ölüm mekanizması değildir (s. 13, 23).",
+      "B": "Alkol sedatif-hipnotik ailesinden bir MSS depresanıdır; yüksek kan düzeylerinde koma ve solunum depresyonu gelişir, ölüm bu yolla olur. Akut zehirlenme tedavisinin ilk hedefi de bu yüzden solunumu korumaktır (s. 11, 34).",
+      "C": "Akut böbrek yetmezliği, akut etanol tüketiminin MSS etkileri arasında sayılan bir ölüm nedeni değildir. Yüksek kan düzeylerinde etanolün akut ölüm nedeni solunum merkezinin depresyonudur (s. 10, 11).",
+      "D": "Hepatik ensefalopati kronik alkolik karaciğer hastalığı ve sirozun geç bir komplikasyonudur. Akut yüksek kan alkol düzeyinde ölüm bu yolla değil MSS depresyonuyla gerçekleşir (s. 11, 15).",
+      "E": "Aritmiler ağır içicilerde ve yoksunlukta katekolamin fazlalığı ile elektrolit bozukluğuyla görülebilir; ancak akut yüksek kan alkol düzeyinde ölümün ana mekanizması solunum depresyonu ve komadır (s. 11, 23)."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "koma, solunum depresyonu ve ölüme yol açabilir"
+     },
+     "s": 11,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q16"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Alkolün etkilerine birkaç saat içinde gelişen akut toleransın klinik yansıması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "MSS etkileri kan düzeyi yükselirken daha belirgindir",
+      "B": "Kan düzeyi ne olursa olsun etkiler sabittir",
+      "C": "Tolerans yalnız kronik içicilerde görülür",
+      "D": "Akut tolerans yalnız kalp üzerindeki etkilere sınırlıdır",
+      "E": "MSS etkileri kan düzeyi düşerken yükselirkenkinden daha belirgindir"
+     },
+     "dogru": "A",
+     "aciklama": "MSS etkileri kan düzeyi yükselirken daha belirgindir, çünkü birkaç saat içmeden sonra alkolün etkilerine akut tolerans gelişmeye başlar (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Birkaç saat içmeden sonra akut tolerans geliştiği için aynı kan düzeyinin MSS etkileri yükseliş evresinde daha belirgin, iniş evresinde daha hafiftir. Akut toleransın klinik yansıması budur (s. 11).",
+      "B": "Etkilerin kan düzeyinden bağımsız sabit olması toleransın varlığıyla çelişir; akut tolerans aynı düzeyde zamanla azalan etki demektir. Etkiler kan düzeyine ve eğrinin evresine göre değişir (s. 11).",
+      "C": "Kronik içicilerde gelişen tolerans ayrı bir olgudur ve aynı etki için daha yüksek konsantrasyon gerektirir. Akut tolerans ise tek içme seansı içinde birkaç saatte gelişir, kroniklik gerektirmez (s. 11).",
+      "D": "Akut tolerans sedasyon, koordinasyon kaybı gibi MSS etkileri için tanımlanmıştır; kalp kontraktilitesi için böyle bir sınırlama yapılmaz. Kalbe sınırlı ifade mekanizmayı yanlış yere taşır (s. 11, 13).",
+      "E": "Akut tolerans tam tersini yapar: aynı kan düzeyinde etkiler düşüş evresinde yükseliş evresinden daha hafiftir. Düşerken daha belirgin etki ifadesi toleransın yönünü ters çevirir (s. 11)."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "alkolün etkilerine akut tolerans gelişmeye başlar"
+     },
+     "s": 11,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q17"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Erken doğumu engellemek için intravenöz etanol kullanımının terk edilmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etanolün damarları daraltması",
+      "B": "Etanolün uterusu kasıcı etkisinin anlaşılması",
+      "C": "Daha güvenilir kalsiyum kanal blokerleri",
+      "D": "Etanolün damar düz kasını kasması",
+      "E": "Etanolün miyokard kontraktilitesini artırması"
+     },
+     "dogru": "C",
+     "aciklama": "Etanol uterusu gevşetir; daha etkin ve güvenilir uterus gevşeticileri (kalsiyum kanal antagonistleri) bulunmadan önce erken doğumu engellemek için intravenöz kullanılmıştır (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Etanol damarları daraltmaz, tersine genişletir; vazodilatasyon vazomotor merkezin baskılanması ve asetaldehidin düz kası gevşetmesiyle oluşur. Bu nedenle damar daraltıcı bir etki erken doğum kullanımının terk edilme gerekçesi olamaz (s. 13).",
+      "B": "Etanol uterusu kasmaz, gevşetir; bu gevşetici etki yüzünden geçmişte erken doğumu engellemek için kullanılmıştır. Kasıcı etki ifadesi farmakodinamik yönü ters çevirir (s. 13).",
+      "C": "Etanolün uterus gevşetici etkisi gerçektir, ancak kalsiyum kanal antagonistleri hem daha etkin hem daha güvenilir bulunduğundan etanol bu amaçla terk edilmiştir. Terk edilme gerekçesi tam olarak budur (s. 13).",
+      "D": "Etanol düz kası kasmaz, gevşetir; damarlarda vazodilatasyon, uterusta gevşeme yapar. Düz kası kastığını söyleyen ifade etkinin yönünü ters çevirdiği için terk edilme nedeni olarak kabul edilemez (s. 13).",
+      "E": "Etanol miyokard kontraktilitesini artırmaz; 100 mg/dL üzerinde belirgin derecede baskılar. Kardiyak etkisi uterus endikasyonunun terk edilmesinin anılan nedeni değildir (s. 13)."
+     },
+     "bilgi": [
+      46,
+      100,
+      101
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "daha etkin ve güvenilir uterus gevşeticileri (kalsiyum kanal antagonistleri) bulunmadan"
+     },
+     "s": 13,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q18"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kan alkol düzeyi ile klinik etki ilişkisi açısından aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tolerans gelişmemiş bireyde 50–100 mg/dL düzeyde sedasyon ve reaksiyon süresinde yavaşlama görülür.",
+      "B": "Tolerans gelişmiş kronik içicide aynı MSS etkileri için daha yüksek konsantrasyon gerekir.",
+      "C": "Düşük miktarlarda sedatif ve anksiyete giderici etki görülür.",
+      "D": "Yüksek miktarlarda konuşma bozukluğu, ataksi ve muhakeme bozukluğu ortaya çıkar.",
+      "E": "Alkolün etkilerine akut tolerans ancak haftalarca içmeden sonra gelişir."
+     },
+     "dogru": "E",
+     "aciklama": "Alkolün etkilerine akut tolerans birkaç saat içmeden sonra gelişmeye başlar; haftalar gerekmez. Öteki ifadeler düzey ile etki arasındaki ilişkiyi doğru yansıtır (s. 10, 11).",
+     "sik_aciklamalari": {
+      "A": "Tolerans gelişmemiş bireyde 50–100 mg/dL düzeyde sedasyon, kendini yüksek hissetme ve reaksiyon süresinde yavaşlama görülür; bu Tablo 23-1'in ilk basamağıdır. Doğru bir ifade olduğundan yanlış aranan soruda seçilmez (s. 10).",
+      "B": "Tolerans gelişmiş kronik içicilerde aynı MSS etkileri için daha yüksek konsantrasyon gerekir; 300–400 mg/dL düzeyde ayık görünebilirler. Bu ifade doğrudur (s. 11).",
+      "C": "Alkol MSS'yi akut olarak etkiler ve düşük miktarlarda sedatif ve anksiyete giderici etki gösterir. Bu, düşük kan düzeylerindeki tabloyu doğru anlattığı için ifade doğrudur (s. 10).",
+      "D": "Yüksek miktarlarda konuşma bozukluğu, denge ve koordinasyon kaybı (ataksi) ve muhakeme bozukluğu görülür; bu tablo halk arasında sarhoşluk diye bilinir. İfade doğrudur (s. 10).",
+      "E": "Akut tolerans, alkolün etkilerine birkaç saat içmeden sonra gelişmeye başlayan duyarlılık azalmasıdır; bu yüzden MSS etkileri kan düzeyi yükseldikçe belirginleşir. Gelişmesi için haftalar gerektiğini söyleyen ifade yanlıştır ve aranan cevaptır (s. 11)."
+     },
+     "bilgi": [
+      33,
+      36
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "birkaç saat içmeden sonra alkolün etkilerine akut tolerans"
+     },
+     "s": 11,
+     "dayanak": [
+      "hoca:hv-k2-58-10",
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q19"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Kronik alkol tüketiminin karaciğer, pankreas, sinir, kardiyovasküler, hematolojik, endokrin, immün sistem ve fetüs üzerindeki sonuçlarını, tolerans–bağımlılık mekanizmalarını ve Wernicke-Korsakoff sendromunu açıklar (s. 14–30).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Eksternal göz kaslarının paralizi, ataksi ve konfüzyonla seyreden, öğrenme ve hafıza defektinin eşlik ettiği alkole bağlı sendromda eksikliği sorumlu tutulan vitamin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kobalamin",
+      "B": "Niasin",
+      "C": "Folik asit",
+      "D": "Tiamin",
+      "E": "Piridoksin"
+     },
+     "dogru": "D",
+     "aciklama": "Wernicke-Korsakoff sendromu tiamin (B1 vitamini) eksikliğiyle ilişkilidir; şüphelenilen bütün hastalar tiamin almalıdır (s. 20, 21).",
+     "sik_aciklamalari": {
+      "A": "Kobalamin (B12) eksikliği megaloblastik anemi ve miyelopatiyle anılır. Alkolikte oftalmopleji–ataksi–konfüzyon üçlüsü B12 ile değil tiamin eksikliğiyle açıklanır (s. 20).",
+      "B": "Niasin eksikliği pellagra tablosuna yol açar. Alkole bağlı suda çözünen vitamin malabsorbsiyonu çoklu eksiklik yapabilir, ancak Wernicke-Korsakoff'un özgül eksikliği tiamindir (s. 17, 20).",
+      "C": "Folik asit eksikliği kronik içicide en yaygın hematolojik bozukluk olan hafif anemiye yol açar. Göz kası paralizi, ataksi ve konfüzyon üçlüsü folat değil tiamin eksikliğinin tablosudur (s. 20, 25).",
+      "D": "Tiamin (B1 vitamini) eksikliği, öğrenme ve hafıza defektiyle birlikte oftalmopleji, ataksi ve konfüzyonla giden Wernicke-Korsakoff sendromuna yol açar. Toksisitesi olmadığından şüpheli her hastaya verilir (s. 20, 21).",
+      "E": "Piridoksin (B6) eksikliği periferik nöropati ve anemiyle ilişkilendirilen bir vitamin eksikliğidir. Wernicke-Korsakoff sendromunun temelindeki eksiklik ise tiamindir; oftalmopleji ve ataksi B6 ile açıklanmaz (s. 20)."
+     },
+     "bilgi": [
+      76,
+      77,
+      78
+     ],
+     "benzer_cikmis": [
+      "558be25ec117"
+     ],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Tiamin (B1 vitamini) eksikliği ile ilişkilidir"
+     },
+     "s": 20,
+     "dayanak": [
+      "hoca:hv-k2-58-13",
+      "cikmis:558be25ec117"
+     ],
+     "id": "k2-58-alkoller-q20"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Wernicke-Korsakoff sendromundan şüphelenilen bütün hastalara, acile bilinç bozukluğu ya da nöbetle gelenler dahil, tiamin verilmesinin gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tiaminin alkol yoksunluk nöbetlerini doğrudan baskılaması",
+      "B": "Tiaminin önemli ve toksisitesiz olması",
+      "C": "Tiaminin asetaldehid birikimini engellemesi",
+      "D": "Tiaminin alkol dehidrogenazı inhibe etmesi",
+      "E": "Tiaminin hipoglisemiyi düzeltmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Bu patolojik durumda tiaminin önemi ve uygulandığında toksisite oluşmaması nedeniyle şüphelenilen bütün hastalar tiamin tedavisi almalıdır (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Tiamin bir vitamindir ve nöbet önleyici ilaç olarak tanımlanmaz; nöbet eşiğini doğrudan düzenlemez. Şüphelenilen her hastaya verilmesinin gerekçesi tablonun önemi ve tiaminin uygulandığında toksisite yapmamasıdır (s. 21).",
+      "B": "Tiamin bu tabloda hastalığın temel nedeni olan eksikliği giderir ve uygulandığında toksisite oluşturmaz; yarar–zarar dengesi o kadar lehtedir ki şüphe bile yeterli görülür. Gerekçe bu ikilidir (s. 21).",
+      "C": "Asetaldehid birikimi disülfiram varlığında etanol alındığında oluşur; tiaminin asetaldehid metabolizmasında rolü yoktur. Wernicke-Korsakoff'ta sorun vitamin eksikliğidir (s. 8, 21).",
+      "D": "Alkol dehidrogenaz inhibisyonu Şekil 23-1'de fomepizolün etki noktasıdır. Tiamin bir vitamin olarak enzim inhibisyonu yapmaz; Wernicke-Korsakoff'ta eksikliği gidermek için verilir (s. 9, 21).",
+      "E": "Alkolde hipoglisemi, aşırı NADH'ın karaciğerde glukoneogenezi bozmasıyla ilişkilidir. Tiamin kan şekerini yükseltmez; görevi tiamin eksikliğine bağlı nörolojik tabloyu önlemektir (s. 6, 21)."
+     },
+     "bilgi": [
+      78,
+      123
+     ],
+     "benzer_cikmis": [
+      "558be25ec117"
+     ],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "tiamin uygulandığında toksisitenin oluşmaması nedeniyle"
+     },
+     "s": 21,
+     "dayanak": [
+      "cikmis:558be25ec117"
+     ],
+     "id": "k2-58-alkoller-q21"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kronik alkoliklerde en yaygın görülen nörolojik bozukluk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Simetrik periferik nöropati",
+      "B": "Wernicke-Korsakoff sendromu",
+      "C": "Demans",
+      "D": "Optik sinir dejenerasyonu",
+      "E": "Demiyelinizan hastalık"
+     },
+     "dogru": "A",
+     "aciklama": "Kronik alkolizmde en yaygın nörolojik bozukluk, el ve ayakların distal parestezileriyle başlayan jeneralize simetrik periferik sinir zedelenmesidir (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Kronik alkolizmde en yaygın nörolojik bozukluk, ellerin ve ayakların distal parestezileriyle başlayan jeneralize simetrik periferik nöropatidir. Soru doğrudan bu sıklık bilgisini sorar (s. 20).",
+      "B": "Wernicke-Korsakoff sendromu oftalmopleji, ataksi ve konfüzyonla giden önemli bir tablodur, ancak sık görülmeyen bir hastalık olarak tanımlanır. Yaygınlık açısından periferik nöropatinin gerisindedir (s. 20).",
+      "C": "Demans alkolizme eşlik eden nörolojik bozukluklardan biridir; ancak en yaygın olan periferik sinir zedelenmesidir. Demans ikinci sırada anılan tablolardandır (s. 20).",
+      "D": "Optik sinir dejenerasyonu birkaç hafta fazla alkol sonrası ağrısız görme bulanıklığını izleyebilen bir durumdur; en yaygın nörolojik bozukluk olarak tanımlanmaz. En yaygın nörolojik bozukluk periferik sinirlerin simetrik hasarıdır (s. 21).",
+      "E": "Demiyelinizan hastalık alkolizme eşlik eden nörolojik bozukluklar arasında nadiren görülür. Sıklık açısından ilk sırada periferik sinir zedelenmesi yer alır (s. 20)."
+     },
+     "bilgi": [
+      74,
+      75
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "ellerin ve ayakların distal parestezileri ile başlayan jeneralize simetrik periferik sinir"
+     },
+     "s": 20,
+     "dayanak": [
+      "hoca:hv-k2-58-13",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q22"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Alkolik karaciğer hastalığının gelişimiyle ilgili aşağıdaki mekanizmalardan hangileri doğrudur?\nI. Yağ asidi yıkımının azalması ve sentezinin artması\nII. Bağırsak kaynaklı endotoksinlerin doğal bağışıklığı aktive edip inflamasyon başlatması\nIII. NAD+/NADH oranında artış\nIV. Alkolün bağırsak yapısını ve işlevini bozması",
+     "secenekler": {
+      "A": "III ve IV",
+      "B": "Yalnız II",
+      "C": "I, II ve IV",
+      "D": "I ve III",
+      "E": "II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Yağ asidi yıkımının azalıp sentezinin artması, bağırsak endotoksinleriyle inflamasyon ve alkolün bağırsak yapısını bozması s16'da sayılan mekanizmalardır; etanol oksidasyonu NADH'ı artırır, NAD+/NADH oranı düşer (s. 6, 16).",
+     "sik_aciklamalari": {
+      "A": "IV doğrudur, alkol bağırsak yapısını ve işlevini bozar; ancak III yanlıştır, aşırı NADH üretildiği için NAD+/NADH oranı artmaz, düşer. Doğru öncüller I ve II de bu kümede yoktur (s. 6, 16).",
+      "B": "II doğrudur, fakat tek mekanizma değildir; yağ asidi dengesindeki bozulma ve alkolün bağırsak yapısını bozması da hasara katkıda bulunur. Yalnız II demek I ve IV'ü dışlar (s. 16).",
+      "C": "I, II ve IV alkolik karaciğer hastalığının tanımlanan mekanizmalarıdır: yağ asidi yıkımı azalıp sentezi artar, bağırsak endotoksinleri doğal bağışıklığı aktive eder ve alkol bağırsak yapısını ve işlevini bozar. III ise NAD+/NADH yönünü ters çevirir (s. 6, 16).",
+      "D": "I doğru bir mekanizmadır; ancak III yanlıştır, çünkü etanol oksidasyonunda NAD+ NADH'a indirgenir ve oran artmaz, düşer. Ayrıca II ve IV gibi doğru öncüller bu kümede yoktur (s. 6, 16).",
+      "E": "II doğrudur, endotoksinler karaciğerde inflamasyon başlatır; III ise NADH birikimini göz ardı eder, oran düşer. Doğru olan I ve IV'ün dışlanması kümeyi eksik kılar (s. 6, 16)."
+     },
+     "bilgi": [
+      21,
+      25,
+      56,
+      57,
+      107
+     ],
+     "benzer_cikmis": [
+      "k1-2021-2022-q042"
+     ],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "yağ asitlerinin yıkımının azalması ve sentezinin artması"
+     },
+     "s": 16,
+     "dayanak": [
+      "cikmis:k1-2021-2022-q042"
+     ],
+     "id": "k2-58-alkoller-q23"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi fetal alkol sendromunu tanımlayan beş anomaliden biri değildir?",
+     "secenekler": {
+      "A": "İntrauterin gelişme geriliği",
+      "B": "Mikrosefali",
+      "C": "Midfasiyal bölgenin tam gelişmemesi",
+      "D": "Makrozomi",
+      "E": "Minör eklem anomalileri"
+     },
+     "dogru": "D",
+     "aciklama": "Fetal alkol sendromu intrauterin gelişme geriliği, mikrosefali, zayıf koordinasyon, midfasiyal hipoplazi ve minör eklem anomalileriyle tanımlanır; makrozomi değil büyüme geriliği görülür (s. 27).",
+     "sik_aciklamalari": {
+      "A": "İntrauterin gelişme geriliği fetal alkol sendromunun ilk sırada sayılan anomalisidir; etanol plasentayı geçip fetüste anne kanına yakın düzeylere ulaşır ve büyümeyi kısıtlar. Sendromun parçası olduğundan dışarıda kalan bu değildir (s. 27, 28).",
+      "B": "Mikrosefali fetal alkol sendromunun ikinci tanımlayıcı anomalisidir ve beyin gelişiminin etkilenmesini yansıtır. Beş anomali içinde yer aldığından aranan seçenek olmaz (s. 27).",
+      "C": "Midfasiyal bölgenin tam gelişmemesi düz surat görünümüyle fetal alkol sendromunun dördüncü anomalisidir; epikantal kıvrım ve kısa palpebral fissür bu yüz görünümünün parçasıdır. Listede bulunur (s. 27).",
+      "D": "Makrozomi, yani iri bebek, fetal alkol sendromunun özelliği olmaz; sendromda tam tersi intrauterin gelişme geriliği görülür. Beş anomali arasında olmadığı için aranan cevaptır (s. 27).",
+      "E": "Minör eklem anomalileri fetal alkol sendromunun beşinci tanımlayıcı özelliğidir ve zayıf koordinasyonla birlikte sayılır. Listenin parçası olduğundan dışarıda kalan seçenek değildir (s. 27)."
+     },
+     "bilgi": [
+      96,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Fetal alkol sendromu olarak tanımlanan anomaliler şunlardır"
+     },
+     "s": 27,
+     "dayanak": [
+      "hoca:hv-k2-58-17",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q24"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Kronik alkoliklerde hipogliseminin gelişmesinde rol oynayan metabolik bozukluk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İnsülin salgısının artması",
+      "B": "Glikojen depolarının genişlemesi",
+      "C": "Kortizol düzeyinin azalması",
+      "D": "Periferik glukoz kullanımının azalması",
+      "E": "Hepatik glukoneogenezin bozulması"
+     },
+     "dogru": "E",
+     "aciklama": "Yüksek miktarda etanolün metabolize edilmesi hepatik glukoneogenezi bozarak hipoglisemiye yol açar; kortizol ve büyüme hormonu artışı ise ketoza neden olur (s. 26).",
+     "sik_aciklamalari": {
+      "A": "İnsülin salgısının artması alkolde hipogliseminin tanımlanan mekanizması değildir; sorun glukoz üretiminin azalmasıdır. Pankreas üzerinde alkolün etkisi asiner hücre toksisitesi ve pankreatittir (s. 16, 26).",
+      "B": "Glikojen depolarının genişlemesi hipoglisemiye değil glukoz rezervine katkıda bulunurdu. Alkolde karaciğerin glukoz üretimi glukoneogenez düzeyinde aksar, depo genişlemesi söz konusu olmaz (s. 26).",
+      "C": "Alkolde kortizol azalmaz; tersine kortizol ve büyüme hormonu gibi lipolitik faktörler artar ve ketoza yol açar. Hipoglisemi ise glukoneogenez bozukluğuna bağlıdır (s. 26).",
+      "D": "Periferik glukoz kullanımının azalması hiperglisemiye eğilim yaratırdı, hipoglisemiye değil. Alkolde hipogliseminin kaynağı periferik kullanım değil, karaciğerin glukoz yapımındaki aksamadır (s. 26).",
+      "E": "Etanol oksidasyonuyla biriken NADH hepatik glukoneogenezi bozar; karaciğer glukoz üretemediğinde hipoglisemi gelişir. Akut zehirlenmede glukoz verilmesinin gerekçesi budur (s. 6, 26, 34)."
+     },
+     "bilgi": [
+      94,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "hepatik glukoneogenezin bozulması sonucu hipoglisemiye"
+     },
+     "s": 26,
+     "dayanak": [
+      "hoca:hv-k2-58-04",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q25"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Uzun süre yüksek miktarda alkol kullanan bir kişide gelişen kalp tutulumu için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ventriküler hipertrofi ve fibrozisin eşlik ettiği dilate kardiyomiyopati gelişir.",
+      "B": "Hipertrofik obstrüktif kardiyomiyopati gelişir ve alkol bırakılsa da kalp küçülmez.",
+      "C": "Restriktif kardiyomiyopati gelişir ve voltaj bağımlı kalsiyum kanalları azalır.",
+      "D": "Kalp tutulumu yalnız akut zehirlenmede görülür, kronik kullanımda görülmez.",
+      "E": "Alkole bağlı tablo idiyopatik dilate kardiyomiyopatiden daha iyi seyirlidir."
+     },
+     "dogru": "A",
+     "aciklama": "Uzun süre yüksek miktarda alkol kullanımında ventriküler hipertrofi ve fibrozisin olduğu dilate kardiyomiyopati ve kalp yetmezliği görülür (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Dilate kardiyomiyopati, kalp boşluklarının genişleyip kasılmanın zayıfladığı tablodur; alkolde buna ventriküler hipertrofi ve fibrozis eşlik eder. Uzun süreli yüksek miktarda alkol kullanımının kalpteki sonucu olarak tanımlandığı için doğru seçenek budur (s. 22).",
+      "B": "Hipertrofik obstrüktif kardiyomiyopati alkolün kalp tutulumu için tanımlanan tip değildir; alkolde dilate tip görülür. Üstelik alkol bırakıldığında kalp büyüklüğü azalır ve işlev düzelir, bu nedenle seçeneğin iki yarısı da yanlıştır (s. 22).",
+      "C": "Restriktif tip alkol için tanımlanmaz; alkolde dilate kardiyomiyopati görülür. Hücre düzeyindeki değişiklikler arasında voltaj bağımlı kalsiyum kanallarının azalması değil artması (up-regülasyon) sayılır (s. 22).",
+      "D": "Kardiyomiyopati ve kalp yetmezliği uzun süre yüksek miktarda alkol kullanımının sonucudur, yani kronik tüketimin tablosudur. Akut alımda kalpte görülen etki miyokard kontraktilitesinin baskılanmasıdır, bu ayrımı tersine çeviren ifade yanlıştır (s. 13, 22).",
+      "E": "Alkole bağlı dilate kardiyomiyopatisi olan hastaların idiyopatik dilate kardiyomiyopatisi olanlara göre daha kötü durumda olduğuna ilişkin kanıtlar vardır. Seyri daha iyi gösteren ifade bu bilgiyi tersine çevirir (s. 22)."
+     },
+     "bilgi": [],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "ventriküler hipertrofi ve fibrozisin"
+     },
+     "s": 22,
+     "dayanak": [
+      "hoca:hv-k2-58-14",
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q26"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Alkole bağlı kardiyomiyopatide kalp kası hücresinde görülen değişikliklerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Membran zedelenmesi oluşur.\nII. Mitokondri ve sarkoplazmik retikulumun işlevi baskılanır.\nIII. Hücre içinde fosfolipid ve yağ asidi birikir.\nIV. Voltaj bağımlı kalsiyum kanallarının sayısı azalır (down-regülasyon).",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve IV",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Alkol kalp kasında membran zedelenmesi, mitokondri ve sarkoplazmik retikulum işlevinin baskılanması, hücre içi fosfolipid ve yağ asidi birikimi ile voltaj bağımlı kalsiyum kanallarının up-regülasyonuna neden olur; IV yönü tersine çevirdiği için yanlıştır (s. 22).",
+     "sik_aciklamalari": {
+      "A": "I doğrudur, membran zedelenmesi alkolün kalp kasında yaptığı değişikliklerdendir. Ancak II ve III de slaytta sayılan doğru değişikliklerdir; yalnız I demek onları dışarıda bırakır (s. 22).",
+      "B": "I doğrudur; IV ise kalsiyum kanallarındaki değişikliğin yönünü tersine çevirir. Alkol voltaj bağımlı kalsiyum kanallarını azaltmaz, up-regüle eder; bu nedenle IV'ü içeren seçenek yanlıştır (s. 22).",
+      "C": "II doğrudur, mitokondri ve sarkoplazmik retikulum işlevi baskılanır. IV ise kanal sayısının arttığı bilgisini tersine çevirdiği için bu ikili doğru olamaz (s. 22).",
+      "D": "Membran zedelenmesi, mitokondri ve sarkoplazmik retikulum işlevinin baskılanması ve hücre içi fosfolipid ile yağ asidi birikimi alkole bağlı kardiyomiyopatide sayılan değişikliklerdir. IV yönü ters verdiği için dışarıda kalır ve doğru seçenek I, II ve III'tür (s. 22).",
+      "E": "III doğrudur, hücre içinde fosfolipid ve yağ asidi birikir. IV ise yanlıştır; kalsiyum kanallarında azalma değil up-regülasyon olur, bu nedenle seçenek kabul edilemez (s. 22)."
+     },
+     "bilgi": [],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "voltaj-bağımlı kalsiyum kanallarının"
+     },
+     "s": 22,
+     "dayanak": [
+      "hoca:hv-k2-58-14",
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q27"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Gebelikte alkol kullanımına bağlı fetal alkol sendromu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Etanolün teratojenik etkilerinin altında yatan mekanizma asetaldehid birikimi olarak kesin biçimde gösterilmiştir.",
+      "B": "Ciddi olgularda konjenital kalp defektleri ve mental retardasyon da görülebilir.",
+      "C": "Sendrom yalnız mikrosefali ve konjenital kalp defektinden oluşur.",
+      "D": "Etanol plasentayı geçemediği için fetüs yalnız annenin metabolik bozukluklarından etkilenir.",
+      "E": "Fetüs karaciğerinde alkol dehidrogenaz aktivitesi yüksek olduğundan alkol fetüste hızla yıkılır."
+     },
+     "dogru": "B",
+     "aciklama": "Fetal alkol sendromunun beş anomalisine ek olarak daha ciddi olgularda konjenital kalp defektleri ve mental retardasyon da görülebilir (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Etanolün teratojenik etkilerinin altında yatan mekanizmalar bilinmemektedir. Belirli bir mekanizmanın kesin olarak gösterildiğini söyleyen ifade mutlak bir yargı kurduğu için yanlıştır (s. 27).",
+      "B": "Fetal alkol sendromunda intrauterin gelişme geriliği, mikrosefali, zayıf koordinasyon, orta yüz bölgesinin az gelişmesi ve minör eklem anomalileri görülür. Daha ciddi olgularda bunlara konjenital kalp defektleri ve mental retardasyon eklenebildiği için ifade doğrudur (s. 27).",
+      "C": "Sendrom beş anomaliyle tanımlanır: intrauterin gelişme geriliği, mikrosefali, zayıf koordinasyon, orta yüz bölgesinin az gelişmesi ve minör eklem anomalileri. Konjenital kalp defekti yalnız ciddi olgularda eklenir, tanımı iki bulguya indirgeyen ifade yanlıştır (s. 27).",
+      "D": "Etanol plasentaya hızla geçer ve fetüste anne kanına yakın konsantrasyonlara ulaşır. Plasentayı geçmediğini söyleyen ifade bu temel bilgiyle çelişir, bu nedenle yanlıştır (s. 28).",
+      "E": "Fetüs karaciğerinde alkol dehidrogenaz aktivitesi yoktur ya da çok azdır; fetüs alkolün eliminasyonu için anne ve plasentanın enzimlerine bağımlıdır. Yüksek aktivite ve hızlı yıkım ifadesi tersini söylediği için yanlıştır (s. 28)."
+     },
+     "bilgi": [],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Daha ciddi olgularda konjenital kalp defektleri"
+     },
+     "s": 28,
+     "dayanak": [
+      "hoca:hv-k2-58-17",
+      "hoca:hv-k2-58-19",
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q28"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Gebelik sırasında alkol tüketiminin fetüs için özellikle tehlikeli olmasının nedenleriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Etanol hızla plasentaya geçer.\nII. Fetüste anne kanına yakın alkol konsantrasyonlarına ulaşılır.\nIII. Fetüs karaciğerinde alkol dehidrogenaz aktivitesi yoktur ya da minimaldir.\nIV. Fetüs alkolü kendi mikrozomal MEOS sistemiyle hızla yıkar.",
+     "secenekler": {
+      "A": "Yalnız III",
+      "B": "III ve IV",
+      "C": "I, II ve III",
+      "D": "I ve IV",
+      "E": "II ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Etanol plasentaya hızla geçer ve fetüste anne kanına yakın düzeylere ulaşır; fetüs karaciğerinde ADH aktivitesi yok ya da minimal olduğundan fetüs eliminasyon için anne ve plasenta enzimlerine bağımlıdır. IV bu bağımlılıkla çelişir (s. 28).",
+     "sik_aciklamalari": {
+      "A": "III doğrudur, fetüs karaciğerinde ADH aktivitesi yok ya da minimaldir. Ancak I ve II de doğrudur; yalnız III demek plasental geçiş ve yüksek fetal düzey bilgilerini dışarıda bırakır (s. 28).",
+      "B": "III doğrudur; IV ise yanlıştır. MEOS, kronik içicide karaciğerde indüklenen bir yolaktır ve fetüsün alkolü bu yolla hızla yıktığına ilişkin bilgi yoktur; fetüs anne ve plasenta enzimlerine bağımlıdır (s. 7, 28).",
+      "C": "I, II ve III, gebelikte alkolün fetüse ulaşmasını ve fetüste uzun kalmasını açıklayan üç bilgidir. Fetüs alkolü yıkmak için anne ve plasentanın enzimlerine gereksinim duyduğundan IV dışarıda kalır ve doğru seçenek budur (s. 28).",
+      "D": "I doğrudur, etanol plasentaya hızla geçer. IV ise fetüsün alkolü kendi sistemiyle hızla yıkabildiğini söyler; oysa fetüs eliminasyon için anne ve plasenta enzimlerine bağımlıdır, bu nedenle seçenek yanlıştır (s. 28).",
+      "E": "II doğrudur, fetüste anne kanına yakın konsantrasyonlara ulaşılır. IV ise fetüsün alkolü kendi başına yıkabildiğini ileri sürdüğü için yanlıştır ve bu ikili kabul edilemez (s. 28)."
+     },
+     "bilgi": [],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Etanol hızla plasentaya geçer"
+     },
+     "s": 28,
+     "dayanak": [
+      "hoca:hv-k2-58-19",
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q29"
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "558be25ec117",
+     "soru": "Tiamin eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom hangisidir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Von Hippel-Lindau hastalığı",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Tüberoz skleroz",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "Wernicke ensefalopatisi",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Multipl skleroz",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Nöromiyelitis optika",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Alkol–ilaç etkileşimlerinin farmakokinetik (akut inhibisyon, kronik indüksiyon, asetaminofen) ve farmakodinamik (aditif MSS depresyonu) türlerini ve akut alkol zehirlenmesinin tedavi ilkelerini sıralar (s. 30–34).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kronik olarak günde üç ya da daha fazla içki tüketen bir kişide asetaminofen hepatotoksisitesi insidansının artmasının mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetaminofen glukuronidasyonunun hızlanması",
+      "B": "Asetaminofenin böbrekten atılımının azalması",
+      "C": "Aldehid dehidrogenazın alkolle inhibisyonu",
+      "D": "Asetaminofenin bağırsaktan emiliminin artması",
+      "E": "P450 indüksiyonuyla toksik metabolit artışı"
+     },
+     "dogru": "E",
+     "aciklama": "Kronik günde üç ya da daha fazla içki, artmış P450 aracılığıyla asetaminofenin reaktif hepatotoksik metabolitlerine dönüşümünü artırır ve hepatotoksisite insidansını yükseltir (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Glukuronidasyon asetaminofenin zararsız konjugasyon yoludur; hızlanması toksik metaboliti azaltırdı. Kronik alkolün etkisi oksidatif P450 yolunun indüksiyonudur, konjugasyonun hızlanması değil (s. 31).",
+      "B": "Böbrek atılımının azalması asetaminofen hepatotoksisitesinin tanımlanan mekanizması değildir. Kronik alkolde sorun, karaciğerde indüklenmiş P450 ile reaktif metabolit üretiminin artmasıdır (s. 31).",
+      "C": "Aldehid dehidrogenaz inhibisyonu disülfiramın mekanizmasıdır ve asetaldehid birikimine yol açar. Asetaminofen toksisitesinde rol oynayan enzim sistemi sitokrom P450'dir (s. 31, 43).",
+      "D": "Etkileşim emilim düzeyinde değil karaciğer metabolizması düzeyindedir. Kronik alkol asetaminofenin bağırsaktan emilimini artırmaz; P450 ile reaktif metabolite dönüşümünü artırır (s. 31).",
+      "E": "Kronik alkol karaciğer sitokrom P450 enzimlerini indükler; indüklenen P450 asetaminofeni reaktif hepatotoksik metabolitlerine daha çok çevirir. Bu yüzden günde üç ve üzeri içki asetaminofen hepatotoksisitesini artırır (s. 31)."
+     },
+     "bilgi": [
+      110,
+      111
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "artmış P450 aracılığıyla asetaminofenin reaktif hepatotoksik metabolitlerine dönüşümünün"
+     },
+     "s": 31,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q30"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Alkol–ilaç etkileşimleriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Akut alkol alımı enzim aktivitesini ya da karaciğer kan akımını azaltarak öteki ilaçların metabolizmasını inhibe eder.\nII. Kronik alkol alımı karaciğer hasarı olmaksızın öteki ilaçların biyotransformasyonunu artırabilir.\nIII. Fenotiazinler, trisiklik antidepresanlar ve sedatif-hipnotikler akut inhibisyon mekanizmasıyla etkileşen en önemli ilaçlardır.\nIV. En önemli farmakodinamik etkileşim alkolün oral hipoglisemiklerle yaptığı hipertansiyondur.",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve IV",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "Yalnız II"
+     },
+     "dogru": "A",
+     "aciklama": "Akut alkol metabolizmayı inhibe eder, kronik alkol indükler; fenotiazin, TSA ve sedatif-hipnotikler akut mekanizmayla etkileşir. En önemli farmakodinamik etkileşim sedatif-hipnotiklerle aditif MSS depresyonudur (s. 31, 32).",
+     "sik_aciklamalari": {
+      "A": "I, II ve III akut inhibisyon ile kronik indüksiyon karşıtlığını ve etkileşen ilaçları doğru anlatır. IV ise en önemli farmakodinamik etkileşimi yanlış tanımlar; o, sedatif-hipnotiklerle aditif MSS depresyonudur (s. 31, 32).",
+      "B": "I doğrudur, akut alkol öteki ilaçların metabolizmasını inhibe eder; ancak IV yanlıştır, çünkü en önemli farmakodinamik etkileşim MSS depresanlarıyla aditif depresyondur. II ve III de doğru öncüllerdir (s. 32).",
+      "C": "II doğru bir ifadedir, kronik alkol indüksiyonla biyotransformasyonu artırır; IV ise oral hipoglisemiklerle hipertansiyon diye gerçek olmayan bir etkileşim tanımlar, oysa alkol onların etkisini potansiyalize eder. I ve III dışlanmıştır (s. 31, 32).",
+      "D": "III doğrudur, fenotiazin, TSA ve sedatif-hipnotikler akut mekanizmayla etkileşir; IV yanlıştır, çünkü farmakodinamik etkileşimlerin en önemlisi aditif MSS depresyonudur. I ve II de doğrudur (s. 32).",
+      "E": "II doğrudur fakat tek doğru değildir; akut inhibisyon mekanizması ve bu mekanizmayla etkileşen ilaç grupları da doğru anlatılmıştır. Yalnız II demek I ve III'ü dışlar (s. 31, 32)."
+     },
+     "bilgi": [
+      110,
+      112,
+      113,
+      114,
+      115
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Fenotiazinler, trisiklik antidepresanlar ve sedatif-hipnotik ilaçlar"
+     },
+     "s": 32,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q31"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Akut alkol zehirlenmesinin tedavisinde en önemli hedef aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kan alkol düzeyini hemodiyalizle hızla düşürmek",
+      "B": "Solunum depresyonu ve aspirasyonu önlemek",
+      "C": "Disülfiramla asetaldehid birikimini sağlamak",
+      "D": "Benzodiazepinle sedasyonu derinleştirmek",
+      "E": "Tiaminle Wernicke ensefalopatisini tedavi etmek"
+     },
+     "dogru": "B",
+     "aciklama": "Akut alkol zehirlenmesi tedavisinde en önemli hedef solunum depresyonunun ve kusmuğun aspirasyonunun önlenmesidir; solunum ve dolaşım desteklendiği sürece yaşam mümkündür (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Hemodiyaliz kandan maddeleri uzaklaştıran bir yöntemdir, ancak akut etanol zehirlenmesinin tedavi ilkeleri arasında ana hedef olarak sayılmaz. Etanol zehirlenmesinde ana hedef solunum yolunu ve solunumu korumaktır (s. 34).",
+      "B": "Alkol bir MSS depresanıdır ve yüksek düzeylerde solunum depresyonuyla öldürür; kusmuğun aspirasyonu da yaşamı tehdit eder. Bu yüzden akut zehirlenmede birincil hedef solunumun ve havayolunun korunmasıdır (s. 11, 34).",
+      "C": "Disülfiram alkol bağımlılığında caydırıcı olarak kullanılır ve asetaldehid biriktirerek hoş olmayan reaksiyon oluşturur. Akut zehirlenmede asetaldehid biriktirmek tabloyu ağırlaştırır, hedef olamaz (s. 8, 43).",
+      "D": "Benzodiazepinler yoksunluk sendromunda nöbet ve deliryumu önlemek için kullanılır. Akut zehirlenmede ek bir MSS depresanı aditif depresyonla solunumu daha da baskılar (s. 32, 37).",
+      "E": "Tiamin, alkol kullanan hastada Wernicke-Korsakoff sendromunu önlemek ve tedavi etmek için verilen vitamindir ve şüphelenilen her hastaya önerilir. Akut zehirlenmede yararlı bir ek olsa da en önemli hedef solunum depresyonunu ve aspirasyonu önlemektir (s. 21, 34)."
+     },
+     "bilgi": [
+      120,
+      121
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "solunum depresyonunun ve kusmuğun aspirasyonunun önlenmesidir"
+     },
+     "s": 34,
+     "dayanak": [
+      "hoca:hv-k2-58-21",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q32"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Akut alkol zehirlenmesinde glukoz uygulanmasını gerektiren metabolik değişiklikler aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Hiperürisemi ve gut",
+      "B": "Hiperglisemi ve laktik alkaloz",
+      "C": "Hipoglisemi ve ketoasidoz",
+      "D": "Hipernatremi ve hipokalemi",
+      "E": "Hiperkalsemi ve metabolik alkaloz"
+     },
+     "dogru": "C",
+     "aciklama": "Akut alkol zehirlenmesinde elektrolit dengesi düzeltilir; metabolik değişiklikler hipoglisemi ve ketoasidoz tedavisi için glukoz uygulanmasını gerektirebilir (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Hiperürisemi ve gut akut alkol zehirlenmesinde glukoz tedavisini gerektiren değişiklikler olarak tanımlanmaz. Glukozun hedefi glukoneogenez bozukluğuna bağlı hipoglisemi ve ketoasidozdur (s. 26, 34).",
+      "B": "Alkol glukoneogenezi bozarak hiperglisemi değil hipoglisemi yapar; NADH birikimi laktik asidoz oluşturur, alkaloz değil. Glukoz vermeyi gerektiren tablo bu ikilinin tersidir (s. 6, 26, 34).",
+      "C": "Etanol metabolizması hepatik glukoneogenezi bozar ve hipoglisemiye, kortizol ile büyüme hormonu artışı ketoza yol açar. Akut zehirlenmede bu iki değişiklik glukoz uygulanmasını gerektirir (s. 26, 34).",
+      "D": "Elektrolit dengesinin düzeltilmesi gerekse de glukoz tedavisinin gerekçesi sodyum ya da potasyum bozukluğu değildir. Glukoz hipoglisemi ve ketoasidoz için verilir (s. 34).",
+      "E": "Hiperkalsemi ve metabolik alkaloz akut alkol zehirlenmesinde beklenen değişiklikler olmayıp etanol tersine asidoz yönünde etki yapar. Alkolde görülen metabolik bozukluklar laktik asidoz, hipoglisemi ve ketoasidozdur (s. 6, 34)."
+     },
+     "bilgi": [
+      122,
+      94
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "hipoglisemi ve ketoasidoz tedavisi için glukoz uygulanmasını gerektirebilir"
+     },
+     "s": 34,
+     "dayanak": [
+      "hoca:hv-k2-58-21",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q33"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Alkolün öteki ilaçlarla farmakodinamik etkileşimleri açısından en önemli olan aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetaminofen glukuronidasyonunun inhibisyonu",
+      "B": "Akut alkolün öteki ilaçların metabolizmasını inhibe etmesi",
+      "C": "Oral hipoglisemiklerin etkisinin zayıflaması",
+      "D": "Sedatif-hipnotiklerle aditif MSS depresyonu",
+      "E": "Vazodilatörlerin etkisinin azalması"
+     },
+     "dogru": "D",
+     "aciklama": "Farmakodinamik etkileşimlerin en önemlisi alkolün öteki MSS depresanlarıyla, özellikle sedatif-hipnotiklerle birleştiğinde oluşan aditif MSS depresyonudur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Asetaminofenle etkileşim farmakokinetiktir: kronik alkol P450'yi indükleyip reaktif metabolit üretimini artırır, glukuronidasyonu inhibe etmez. Farmakodinamik etkileşim sayılmaz (s. 31).",
+      "B": "Akut alkol alımının öteki ilaçların karaciğerde metabolizmasını inhibe etmesi bir farmakokinetik etkileşimdir; ilacın kan düzeyini değiştirir. Soru etkilerin reseptör ve organ düzeyinde toplandığı farmakodinamik etkileşimi sorduğu için bu seçenek uymaz (s. 30, 32).",
+      "C": "Alkol oral hipoglisemiklerin etkisini zayıflatmaz, potansiyalize eder. Yön tersine verilmiştir ve bu etkileşim en önemli farmakodinamik etkileşim olarak anılmaz (s. 32).",
+      "D": "Alkol bir MSS depresanıdır; sedatif-hipnotiklerle birleştiğinde etkiler toplanır ve solunum depresyonu riski artar. Bu aditif MSS depresyonu farmakodinamik etkileşimlerin en önemlisidir (s. 32).",
+      "E": "Alkol vazodilatörlerin etkisini azaltmaz, tersine potansiyalize eder; kendisi de vazodilatördür. Ancak bu, en önemli farmakodinamik etkileşim olarak sıralanmaz (s. 13, 32)."
+     },
+     "bilgi": [
+      114,
+      115
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "aditif MSS depresyonu bunların en önemlisidir"
+     },
+     "s": 32,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q34"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Alkol kötüye kullanımının epidemiyolojik önemiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Alkolizmin gelişiminde genetiğin katkısına ilişkin kanıt yoktur.",
+      "B": "Alkol toksisitesi için gereken konsantrasyon kokaininkinden daha düşüktür.",
+      "C": "Alkole bağlı ölüm nedenleri yalnız karaciğer hastalığıyla sınırlıdır.",
+      "D": "Tolerans sınırsızdır, kronik alkolikte zehirlenme görülmez.",
+      "E": "Tütün dışındaki ilaçların toplamından çok önlenebilir ölüme yol açar."
+     },
+     "dogru": "E",
+     "aciklama": "Alkol, tütün dışında öteki bütün ilaçların toplamından daha fazla önlenebilir morbidite ve mortalite nedenidir; genetik katkıya ilişkin kanıtlar vardır; etanolün etki gücü düşüktür (s. 14, 33, 34).",
+     "sik_aciklamalari": {
+      "A": "Çevresel etkenlerin rolü önemli olsa da alkolizm oluşmasında genetiğin katkısına ilişkin kanıtlar vardır; ADH enzimlerindeki genetik varyasyon da bunu destekler. Kanıt yoktur ifadesi terstir (s. 5, 33).",
+      "B": "Etanolün etki gücü düşüktür; zehirlenme belirtileri için gereken konsantrasyon kokain, opiatlar ve amfetaminlere göre binlerce kez yüksektir. Daha düşük ifadesi gerçeğe aykırıdır (s. 14).",
+      "C": "Alkole bağlı ölüm nedenleri karaciğer hastalığının yanında kanser, kazalar ve intiharı kapsar. Yalnız karaciğerle sınırlı ifade bu dört nedeni tek nedene indirdiği için eksiktir (s. 14).",
+      "D": "Tolerans sınırsız değildir; yeterli miktar alındığında kronik alkoliklerde bile zehirlenme ortaya çıkar. Sınırsız tolerans ifadesi bu yüzden gerçeğe aykırıdır (s. 34).",
+      "E": "Alkol, tütün dışında bütün ilaçların toplamından daha fazla önlenebilir morbidite ve mortaliteye yol açar; halk sağlığı açısından yükü bu kadar büyüktür. İfade doğrudur (s. 33)."
+     },
+     "bilgi": [
+      116,
+      117,
+      48,
+      50,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "diğer bütün ilaçların toplamından daha fazla önlenebilir morbidite ve mortalite nedenidir"
+     },
+     "s": 33,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q35"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Alkol ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Alkol, tütün dışındaki bütün ilaçların toplamından daha fazla önlenebilir ölüm nedenidir.",
+      "B": "Kronik alkol alımı karaciğer hasarı olmaksızın öteki ilaçların biyotransformasyonunu artırabilir.",
+      "C": "Akut alkol alımı öteki ilaçların metabolizmasını hızlandırır.",
+      "D": "Alkol vazodilatörlerin ve oral hipoglisemiklerin etkisini potansiyalize eder.",
+      "E": "Alkolizmin gelişiminde genetiğin katkısına ilişkin kanıtlar vardır."
+     },
+     "dogru": "C",
+     "aciklama": "Akut alkol alımı enzim aktivitesinin ya da karaciğer kan akımının azalması nedeniyle öteki ilaçların metabolizmasını inhibe eder; indüksiyon kronik alımın özelliğidir (s. 31, 32).",
+     "sik_aciklamalari": {
+      "A": "Alkol, tütün dışında öteki bütün ilaçların toplamından daha fazla önlenebilir morbidite ve mortalite nedenidir. Bu epidemiyolojik bilgi alkolün klinik önemini gösterir ve ifade doğrudur (s. 33).",
+      "B": "Kronik alkol P450 enzimlerini indükler ve karaciğer hasarı olmaksızın öteki ilaçların biyotransformasyonunu artırabilir; en sık farmakokinetik etkileşim budur. İfade doğrudur (s. 31).",
+      "C": "Akut alkol alımı metabolizmayı hızlandırmaz; enzim aktivitesinin ya da karaciğer kan akımının azalması nedeniyle inhibe eder. Hızlandırma kronik alımın indüksiyon etkisidir; bu yüzden ifade yanlıştır ve aranan cevaptır (s. 32).",
+      "D": "Alkol, vazodilatörler ve oral hipoglisemik ajanlar dahil sedatif olmayan birçok ilacın farmakolojik etkisini potansiyalize eder. Bu potansiyalizasyon farmakodinamik etkileşimin bir örneğidir ve ifade doğrudur (s. 32).",
+      "E": "Çevresel etkenlerin önemli rolüne karşın alkolizmin gelişiminde genetiğin katkısına ilişkin kanıtlar bulunmaktadır. ADH enzimlerindeki genetik farklılık da alkol kullanımını etkileyebilir; ifade doğrudur (s. 5, 33)."
+     },
+     "bilgi": [
+      112,
+      110,
+      115,
+      121,
+      123
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "diğer ilaçların metabolizmasını inhibe edebilir"
+     },
+     "s": 33,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q36"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Alkol yoksunluk sendromunun zaman seyrini (Şekil 23-2), deliryum tremensi ve detoksifikasyonda benzodiazepin seçimini (uzun etkili / kısa etkili) açıklar (s. 35–38).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Alkol yoksunluk sendromunun en hafif biçiminde, alkol kesildikten 6–8 saat sonra ortaya çıkan belirtiler aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Anksiyetenin aylarca tam şiddette sürmesi",
+      "B": "Taşikardi, hipertansiyon, tremor, uykusuzluk",
+      "C": "Yoksunluk nöbetleri ve alkol halüsinasyonları",
+      "D": "Oftalmopleji, ataksi ve konfüzyon",
+      "E": "Bradikardi, hipotermi ve solunum depresyonu"
+     },
+     "dogru": "B",
+     "aciklama": "En hafif biçimde alkol kesildikten 6–8 saat sonra nabız ve kan basıncında artış, tremor, anksiyete ve uykusuzluk oluşur; bunlar genellikle 1–2 günde azalır (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Anksiyete ve uyku bozuklukları gibi belirtiler aylarca sürebilir, ancak düşük şiddette kalır ve çoğu 1–2 günde azalır. Bu nedenle aylarca tam şiddette süren anksiyete, kesilmeden birkaç saat sonra başlayan hafif tablonun belirtisi sayılmaz (s. 35).",
+      "B": "Alkol yoksunluğunun en hafif biçiminde kesilmeden 6–8 saat sonra nabız ve kan basıncı artar, tremor, anksiyete ve uykusuzluk görülür. Bu erken otonom ve anksiyete belirtileri Şekil 23-2'nin ilk bandıdır (s. 35, 36).",
+      "C": "Yoksunluk nöbetleri ve alkol halüsinasyonları kesilmeden sonraki ilk 1–5 gün içinde ortaya çıkan daha şiddetli akut reaksiyonlardır. 6–8 saatlik hafif tablonun belirtileri değildir (s. 35).",
+      "D": "Oftalmopleji, ataksi ve konfüzyon üçlüsü tiamin eksikliğine bağlı Wernicke-Korsakoff sendromunun bulgularıdır. Yoksunluğun erken evresini tanımlamaz; tiamin eksikliğinin kronik nörolojik sonucudur (s. 20).",
+      "E": "Yoksunlukta sempatik aşırı etkinlik vardır; nabız ve kan basıncı artar. Bradikardi ve hipotermi tersine etanolün akut yüksek dozunda görülen depresyon tablosuyla ilgilidir; yoksunluk bunun aynası olan uyarılma hâlidir (s. 13, 35)."
+     },
+     "bilgi": [
+      124,
+      125,
+      126
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "nabız ve kan basıncında artış, tremor, anksiyete ve uykusuzluk oluşur"
+     },
+     "s": 36,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q37"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Alkol kesilmesinden birkaç gün sonra deliryum, ajitasyon, otonom sinir sistemi düzensizliği, hafif ateş ve terlemeyle karakterize tabloya ne ad verilir?",
+     "secenekler": {
+      "A": "Deliryum tremens",
+      "B": "Korsakoff psikozu",
+      "C": "Akut alkol zehirlenmesi",
+      "D": "Wernicke ensefalopatisi",
+      "E": "Alkol halüsinozu"
+     },
+     "dogru": "A",
+     "aciklama": "Birkaç gün sonra deliryum, ajitasyon, otonom düzensizlik, hafif ateş ve terlemeyle karakterize deliryum tremens (alkol yoksunluğu deliryumu) gelişebilir (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Deliryum tremens, alkol yoksunluğu deliryumudur; kesilmeden birkaç gün sonra deliryum, ajitasyon, otonom düzensizlik, hafif ateş ve terlemeyle gelişir. Soru bu tanımı birebir verir (s. 37).",
+      "B": "Korsakoff psikozu öğrenme ve hafıza defektiyle giden kronik tablodur ve Wernicke-Korsakoff sendromunun parçasıdır. Günler içinde gelişen ateşli deliryum tablosu değildir (s. 20).",
+      "C": "Akut alkol zehirlenmesi alkol alımı sırasında MSS depresyonu, solunum depresyonu ve koma ile seyreder. Kesilmeden günler sonra ortaya çıkan ajitasyonlu deliryum yoksunluk tablosudur (s. 11, 37).",
+      "D": "Wernicke ensefalopatisi tiamin eksikliğine bağlıdır ve oftalmopleji, ataksi, konfüzyonla seyreder; yoksunluk zamanlamasına bağlı değildir. Tanımdaki ateş, terleme ve otonom düzensizlik deliryum tremensi işaret eder (s. 20, 37).",
+      "E": "Alkol halüsinasyonları kesilmeden sonraki ilk 1–5 günde görülebilen akut reaksiyondur, ancak yalnız halüsinasyonla sınırlıdır. Deliryum, otonom düzensizlik ve ateş eklenince tablo deliryum tremens adını alır (s. 35, 37)."
+     },
+     "bilgi": [
+      130,
+      64
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "deliryum tremens (alkol yoksunluğu deliryumu) sendromu gelişebilir"
+     },
+     "s": 37,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q38"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Alkol yoksunluk sendromunda ilaç tedavisinin temel amacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karaciğer yağlanmasını geriletmek",
+      "B": "Toleransı hızla ortadan kaldırmak",
+      "C": "Alkol özlemini ve içme isteğini azaltmak",
+      "D": "Nöbet, deliryum ve aritmi önlenmesi",
+      "E": "Asetaldehid birikimini engellemek"
+     },
+     "dogru": "D",
+     "aciklama": "Alkol yoksunluğunda ilaç tedavisinin temel amacı nöbetlerin, deliryumun ve aritmilerin önlenmesidir; elektrolitler düzeltilir ve tiamin başlanır (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Karaciğer yağlanması kronik alkolün geri dönüşlü bir komplikasyonudur ve alkolün kesilmesiyle düzelir; yoksunluk ilaç tedavisinin akut amacı bu değildir (s. 15, 37).",
+      "B": "Tolerans zamanla kendiliğinden geriler; ilaçla hızla ortadan kaldırılması diye bir hedef tanımlanmaz. Detoksifikasyonda ilke uzun etkili sedatif-hipnotik verip yavaş azaltmaktır (s. 37).",
+      "C": "Alkol özlemini azaltmak detoksifikasyon sonrası bağımlılık tedavisinin hedefidir; naltrekson ve akamprosat bu amaçla kullanılır. Yoksunluk döneminin akut hedefi yaşamı tehdit eden komplikasyonları önlemektir (s. 37, 39).",
+      "D": "Yoksunlukta nöbet eşiği düşer, deliryum tremens ve katekolamin fazlalığına bağlı ciddi aritmiler gelişebilir. İlaç tedavisi bu üç yaşamı tehdit eden komplikasyonu önlemeyi amaçlar (s. 23, 37).",
+      "E": "Asetaldehid birikimi disülfiramla alkol alınınca oluşan caydırıcı reaksiyondur; yoksunluk tedavisinde hedef değildir. Yoksunlukta sorun MSS hipereksitabilitesidir ve ilaç tedavisi bunun komplikasyonlarını önler (s. 8, 37)."
+     },
+     "bilgi": [
+      131,
+      132,
+      133
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "ilaç tedavisinin temel amacı nöbetlerin, deliryumun ve aritmilerin önlenmesidir"
+     },
+     "s": 37,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q39"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Karaciğer işlevi bozuk bir alkol bağımlısında yoksunluk tedavisi için benzodiazepin seçilirken lorazepam ya da oksazepamın tercih edilmesinin gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aktif metabolitlerinin karaciğerde birikerek etkiyi uzatması",
+      "B": "Aldehid dehidrogenazı inhibe etmeleri",
+      "C": "Yalnız parenteral yolla uygulanabilmeleri",
+      "D": "Daha uzun yarı ömürleri sayesinde seyrek uygulanmaları",
+      "E": "Suda çözünen inaktif metabolitlere dönüşmeleri"
+     },
+     "dogru": "E",
+     "aciklama": "Lorazepam ve oksazepam gibi kısa etkili ilaçlar hızla suda çözünen, birikmeyen inaktif metabolitlere dönüşür; bu yüzden karaciğer hastalığı olan alkoliklerde yararlıdır (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Aktif metabolitlerin birikmesi uzun etkili benzodiazepinlerin dezavantajıdır ve karaciğer hastasında sakınca yaratır. Lorazepam ve oksazepamın metabolitleri inaktiftir, birikmez (s. 38).",
+      "B": "Aldehid dehidrogenaz inhibisyonu disülfiramın mekanizmasıdır; benzodiazepinler GABAerjik iletiyi artırarak alkolün yerine geçer. Enzim inhibisyonu seçim gerekçesi değildir (s. 19, 43).",
+      "C": "Benzodiazepinler hafif ve orta olgularda oral, şiddetli olgularda parenteral verilebilir; yol ilaç seçimine özgü bir kısıt değildir. Tercih nedeni metabolit özelliğidir (s. 38).",
+      "D": "Seyrek uygulanma avantajı klordiazepoksid ve diazepam gibi uzun etkili benzodiazepinlere aittir. Lorazepam ve oksazepam kısa etkilidir; tercih nedenleri yarı ömür uzunluğu değildir (s. 38).",
+      "E": "Lorazepam ve oksazepam hızla suda çözünen, birikmeyen inaktif metabolitlere dönüşür; karaciğer işlevi bozuk hastada birikim riski olmadığından güvenlidir. Uzun etkililerin aktif metabolitleri ise bu hastalarda birikir (s. 38)."
+     },
+     "bilgi": [
+      136,
+      137,
+      138
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "hızla suda çözünen ve birikmeyen inaktif metabolitlerine dönüşürler"
+     },
+     "s": 38,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q40"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Şiddetli alkol yoksunluğunda detoksifikasyon tedavisiyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Alkolün yerine uzun etkili bir sedatif-hipnotik verilir, sonra dozu yavaşça azaltılır.\nII. Klordiazepoksid ve diazepam daha az sıklıkta uygulanma avantajına sahiptir.\nIII. Tiamin tedavisine yalnız Wernicke bulgusu olan olgularda başlanır.\nIV. Potasyum, magnezyum ve fosfat dengesi böbrek işleviyle uyumlu biçimde hızla düzeltilir.",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "I ve III",
+      "C": "II ve III",
+      "D": "III ve IV",
+      "E": "Yalnız I"
+     },
+     "dogru": "A",
+     "aciklama": "İki ana ilke uzun etkili sedatif-hipnotik verip yavaş azaltmaktır; klordiazepoksid ve diazepam seyrek uygulanır; elektrolitler hızla düzeltilir. Tiamin bütün olgularda başlanır, yalnız bulgusu olanlarda değil (s. 37, 38).",
+     "sik_aciklamalari": {
+      "A": "I, II ve IV detoksifikasyonun ilkelerini doğru anlatır: uzun etkili sedatif-hipnotik verip yavaş azaltma, klordiazepoksid ve diazepamın seyrek uygulanma avantajı, elektrolitlerin hızla düzeltilmesi. III ise tiamini sınırlar; oysa bütün olgularda başlanır (s. 37, 38).",
+      "B": "I doğrudur; ancak III yanlıştır, çünkü tiamin tedavisine Wernicke bulgusu beklenmeden bütün olgularda başlanır. II ve IV de doğru ifadelerdir ve bu kümede yoktur (s. 37).",
+      "C": "II doğrudur, uzun etkili benzodiazepinler daha az sıklıkta verilir; III ise tiamini yalnız bulgulu olgulara ayırır, oysa tiamin toksisite yapmadığı için herkese başlanır. I ve IV dışlanmıştır (s. 21, 37, 38).",
+      "D": "IV doğrudur, elektrolitler böbrek işleviyle uyumlu hızla düzeltilir; III ise yanlıştır, çünkü tiamin bütün yoksunluk olgularına verilir. Ayrıca I ve II doğru ilkelerdir (s. 37, 38).",
+      "E": "I doğru bir ilkedir fakat tek doğru değildir; klordiazepoksid ve diazepamın avantajı ve elektrolit düzeltmesi de tedavinin parçasıdır. Yalnız I demek II ve IV'ü dışlar (s. 37, 38)."
+     },
+     "bilgi": [
+      132,
+      133,
+      134,
+      135
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "alkol yerine uzun-etkili bir sedatif-hipnotik ilaç vermek ve daha sonra yavaşça"
+     },
+     "s": 38,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q41"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Alkol yoksunluğunda GABAerjik iletiyi artıran sedatif-hipnotiklerin alkolün yerine geçebilmesini açıklayan temel kavram aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sitokrom P450 farmakokinetik indüksiyonu",
+      "B": "GABA-A iletimindeki ortak değişiklikler",
+      "C": "µ-opioid reseptör blokajı",
+      "D": "NMDA reseptör agonizması",
+      "E": "Asetaldehid birikiminin artması"
+     },
+     "dogru": "B",
+     "aciklama": "GABAerjik iletiyi artıran sedatif-hipnotiklerin yoksunlukta alkolün yerine geçmesi ve kronik alkolde GABA-A yanıtlarının down-regülasyonu, GABA iletimindeki değişikliklerin tolerans ve yoksunlukta rol oynadığını gösterir (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Farmakokinetik indüksiyon kronik alkolde MEOS'un öteki ilaçların klirensini artırmasıdır. Sedatif-hipnotiklerin alkolün yerine geçmesi reseptör düzeyinde ortak GABAerjik mekanizmayla açıklanır (s. 7, 19).",
+      "B": "Etanol ve sedatif-hipnotikler GABA-A aracılı iletiyi aynı yönde etkiler; kronik alkolde bu sistem down-regüle olduğu için GABAerjik bir ilaç alkolün yerini doldurup yoksunluğu baskılar. Ortak sistem çapraz toleransın temelidir (s. 12, 19).",
+      "C": "Opioid reseptör blokajı naltreksonun alkol alımını azaltma mekanizmasıdır; yoksunlukta alkolün yerine geçmeyi açıklamaz. Benzodiazepinler GABAerjik yoldan etki eder (s. 19, 39).",
+      "D": "Etanol NMDA reseptörünü inhibe eder, agonize etmez; yoksunlukta NMDA up-regülasyonu nöbet eşiğini düşürür. Sedatif-hipnotikler NMDA agonizmasıyla değil GABA-A güçlendirmesiyle alkolün yerini alır (s. 12, 18, 19).",
+      "E": "Asetaldehid birikimi disülfiramla etanol alınınca ortaya çıkan caydırıcı reaksiyondur ve yoksunluk tedavisinde yer almaz. Sedatif-hipnotiklerin yerini alma özelliği GABA iletimine dayanır (s. 8, 19)."
+     },
+     "bilgi": [
+      70,
+      71
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "GABA iletimindeki değişikliklerin tolerans ve yoksunlukta önemli bir rol oynadığına"
+     },
+     "s": 19,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q42"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Alkol yoksunluk sendromunun zaman seyrinde yoksunluk nöbetleri ve alkol halüsinasyonları gibi şiddetli akut reaksiyonların görüldüğü dönem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnız alkol alımı sırasında",
+      "B": "Kesilmeden sonraki ilk 1–2 saat",
+      "C": "Kesilmeden sonraki ilk 1–5 gün",
+      "D": "Kesilmeden sonraki 30–90. günler",
+      "E": "Kesilmeden 2–3 hafta sonra"
+     },
+     "dogru": "C",
+     "aciklama": "Bazı hastalarda kesilmeden sonraki ilk 1–5 gün içinde yoksunluk nöbetleri ya da alkol halüsinasyonları gibi daha şiddetli akut reaksiyonlar ortaya çıkabilir (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Yoksunluk belirtileri alkol alımı sırasında değil, alkol kesildikten sonra ortaya çıkar; nöbet eşiğinin düşmesi kesilmeyle ilgilidir. Alım sırasındaki tablo zehirlenmedir (s. 35).",
+      "B": "İlk 1–2 saat yoksunluk belirtilerinin henüz başlamadığı dönemdir; en hafif belirtiler bile 6–8 saat sonra ortaya çıkar. Nöbet ve halüsinasyon için bu süre çok erkendir (s. 35).",
+      "C": "Yoksunluk nöbetleri ve alkol halüsinasyonları gibi şiddetli akut reaksiyonlar kesilmeden sonraki ilk 1–5 gün içinde görülür; deliryum tremens de birkaç gün sonra bu pencerede gelişir. Şekil 23-2'nin orta bantlarıdır (s. 35, 36).",
+      "D": "Otuz ile doksanıncı günler Şekil 23-2'de anksiyete ve uyku bozukluğu gibi düşük şiddetli belirtilerin aylarca sürebildiği geç dönemi gösterir. Nöbet ve halüsinasyon bu kadar geç beklenmez (s. 35, 36).",
+      "E": "İki–üç hafta sonra akut yoksunluk tablosu çoğunlukla geçmiştir; kalan belirtiler hafif anksiyete ve uyku bozukluğudur. Şiddetli akut reaksiyonlar ilk günlerde görülür (s. 35)."
+     },
+     "bilgi": [
+      127,
+      128
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "ilk 1-5 gün içinde yoksunluk nöbetleri veya alkol halüsinasyonları"
+     },
+     "s": 36,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q43"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Alkol yoksunluk sendromunun tedavisiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Elektrolit düzeltmesi yoksunluk tedavisinde ertelenir.",
+      "B": "Tiamin yalnız alkol halüsinasyonu gelişen olgulara verilir.",
+      "C": "Hafif yoksunluğu olan herkese parenteral benzodiazepin gerekir.",
+      "D": "Uzun etkililerin aktif metabolitleri karaciğerde birikebilir.",
+      "E": "Benzodiazepinler yalnız oral yolla uygulanabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Uzun etkili ilaçların dezavantajı kendilerinin ve aktif metabolitlerinin karaciğer işlevi riskli hastada birikebilmesidir; hafif olgular ilaçsız izlenebilir, elektrolitler hızla düzeltilir, tiamin herkese verilir (s. 37, 38).",
+     "sik_aciklamalari": {
+      "A": "Yoksunlukta potasyum, magnezyum ve fosfat dengesi böbrek işleviyle uyumlu biçimde hızla düzeltilir; aritmiler bu bozukluklarla ilişkilidir. Erteleme ifadesi yanlıştır (s. 23, 37).",
+      "B": "Tiamin tedavisine bütün yoksunluk olgularında başlanır; toksisitesi olmadığından şüphe bile yeterlidir. Yalnız halüsinasyonu olanlara verme kısıtı gerçeğe aykırıdır (s. 21, 37).",
+      "C": "Hafif alkol yoksunluğu olan kişilere herhangi bir farmakolojik destek gerekmeyebilir; parenteral yol şiddetli reaksiyonlara ayrılır. Herkese parenteral benzodiazepin ifadesi gerçeğe aykırıdır (s. 37, 38).",
+      "D": "Klordiazepoksid ve diazepam gibi uzun etkili benzodiazepinlerin kendileri ve aktif metabolitleri karaciğer işlevi riskli hastada birikebilir; bu yüzden karaciğer hastasında lorazepam ya da oksazepam tercih edilir. İfade doğrudur (s. 38).",
+      "E": "Benzodiazepinler hafif ve orta olgularda oral, daha şiddetli yoksunlukta parenteral uygulanabilir. Yalnız oral ifadesi uygulama yollarını daraltır ve şiddetli olgudaki parenteral seçeneği gözden kaçırır (s. 38)."
+     },
+     "bilgi": [
+      133,
+      136,
+      138,
+      132
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "kendilerinin ve aktif metabolitlerinin, özellikle karaciğer fonksiyonu riskli hastalarda birikebilmesidir"
+     },
+     "s": 38,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q44"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Alkol bağımlılığında FDA onaylı ilaçların (naltrekson, akamprosat, disülfiram) mekanizma, doz, yan etki ve etkileşimlerini onaysız ilaçlardan ayırt eder (s. 39–44).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Alkol bağımlılığının yardımcı tedavisinde FDA onayı bulunan ve zayıf NMDA reseptör antagonisti ile GABA-A reseptör aktivatörü olduğu söylenen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nalmefen",
+      "B": "Topiramat",
+      "C": "Naltrekson",
+      "D": "Disülfiram",
+      "E": "Akamprosat"
+     },
+     "dogru": "E",
+     "aciklama": "Alkol bağımlılığında kullanılan akamprosat FDA onaylıdır; en iyi tanımlanmış etkileri zayıf NMDA reseptör antagonisti ve GABA-A reseptör aktivatörü olmasıdır (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Nalmefen de bir opioid antagonistidir ve alkol kullanım bozukluğunda benzer etkiler gösterir; ancak bu endikasyon için henüz FDA onayı yoktur ve mekanizması NMDA ya da GABA-A ile ilgili değildir (s. 40).",
+      "B": "Topiramat nöbet önleyici bir ilaçtır; alkol özlemini azalttığı gösterilmiş olsa da bu endikasyonda FDA onayı yoktur. Zayıf NMDA antagonisti ve GABA-A aktivatörü olarak tanımlanan ilaç akamprosattır (s. 41, 44).",
+      "C": "Naltrekson görece uzun etkili bir opioid antagonistidir ve µ-opioid reseptörlerini bloke ederek alkol özlemini azaltır; FDA onaylıdır ancak NMDA ya da GABA-A üzerinden etki etmez (s. 39).",
+      "D": "Disülfiram aldehid dehidrogenazı inhibe ederek asetaldehid biriktirir ve caydırıcı reaksiyon oluşturur; FDA onaylı üçlüdendir ancak reseptör düzeyinde NMDA ya da GABA-A etkisi yoktur (s. 43).",
+      "E": "Akamprosat alkol bağımlılığı için FDA onayı almış ilaçtır; birçok moleküler etkisi içinde en iyi tanımlananlar zayıf NMDA antagonizması ve GABA-A aktivasyonudur. Soru bu profili tarif eder (s. 41)."
+     },
+     "bilgi": [
+      148,
+      150
+     ],
+     "benzer_cikmis": [
+      "d3k2-2024-2025-hg3",
+      "q-2021final_230619_142600-3-r35"
+     ],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "zayıf NMDA-reseptör antagonisti ve bir GABAA-reseptör aktivatörü olması"
+     },
+     "s": 44,
+     "dayanak": [
+      "hoca:hv-k2-58-24",
+      "hoca:hv-k2-58-23",
+      "cikmis:d3k2-2024-2025-hg3",
+      "cikmis:q-2021final_230619_142600-3-r35"
+     ],
+     "id": "k2-58-alkoller-q45"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ilaçlardan hangileri alkol bağımlılığında yardımcı tedavi için FDA'den onay almıştır?\nI. Disülfiram\nII. Naltrekson\nIII. Akamprosat\nIV. Nalmefen",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve IV",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "Yalnız II"
+     },
+     "dogru": "A",
+     "aciklama": "Üç ilaç, disülfiram, naltrekson ve akamprosat, alkol bağımlılığında yardımcı tedavi için FDA'den onay almıştır; nalmefen benzer etkili bir opioid antagonisti olsa da bu endikasyon için henüz onay almamıştır (s. 39, 40).",
+     "sik_aciklamalari": {
+      "A": "Disülfiram, naltrekson ve akamprosat FDA onaylı üçlüdür; sırasıyla ALDH inhibisyonu, µ-opioid blokajı ve zayıf NMDA antagonizmasıyla etki eder. Nalmefen ise henüz onay almadığı için dışarıda kalır (s. 39, 40).",
+      "B": "Disülfiram onaylıdır; ancak nalmefen alkol kullanım bozukluğunda benzer etkili olmasına karşın FDA onayı almamış bir opioid antagonistidir. Naltrekson ve akamprosatın dışlanması da kümeyi eksik kılar (s. 39, 40).",
+      "C": "Naltrekson onaylı bir opioid antagonistidir; nalmefen ise aynı sınıftan olsa da bu endikasyonda onaysızdır. Onaylı disülfiram ve akamprosat bu kümede yoktur (s. 39, 40).",
+      "D": "Akamprosat onaylıdır; nalmefen ise benzer etkili olmasına karşın FDA onayı almamış bir opioid antagonistidir. Disülfiram ve naltreksonun dışlanması listeyi eksik bırakır; onaylı ilaçlar üç tanedir (s. 39, 40).",
+      "E": "Naltrekson onaylıdır fakat tek onaylı ilaç değildir; disülfiram ve akamprosat da aynı endikasyonda FDA onayı taşır. Yalnız II demek iki onaylı ilacı dışlar (s. 39)."
+     },
+     "bilgi": [
+      141,
+      144
+     ],
+     "benzer_cikmis": [
+      "q-2021final_230619_142600-3-r35"
+     ],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "disulfiram, naltrekson ve akamprosat - alkol bağımlılığında yardımcı tedavi için FDA'den onay almıştır"
+     },
+     "s": 40,
+     "dayanak": [
+      "hoca:hv-k2-58-22",
+      "cikmis:q-2021final_230619_142600-3-r35"
+     ],
+     "id": "k2-58-alkoller-q46"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Disülfiram alan bir hastanın alkol aldığında yüzde flushing, zonklayıcı baş ağrısı, bulantı, kusma ve hipotansiyon geliştirmesinin mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alkol dehidrogenaz inhibisyonuyla etanol birikimi",
+      "B": "ALDH inhibisyonuyla asetaldehid birikimi",
+      "C": "MEOS indüksiyonuyla serbest radikal artışı",
+      "D": "µ-opioid reseptör blokajı",
+      "E": "GABA-A reseptör aktivasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Disülfiram aldehid dehidrogenazı inhibe eder; alkol her zamanki gibi metabolize edilir ama asetaldehid birikir ve flushing, baş ağrısı, bulantı, kusma, hipotansiyon ve konfüzyon oluşur (s. 42, 43).",
+     "sik_aciklamalari": {
+      "A": "Alkol dehidrogenaz, etanolü asetaldehide çeviren ilk ve hız kısıtlayıcı enzimdir; Şekil 23-1'de bu basamağı fomepizol inhibe eder. Disülfiram ADH'yi etkilemez, etanol her zamanki gibi asetaldehide çevrilir; bu yüzden tabloyu etanol değil biriken asetaldehid yapar (s. 9, 43).",
+      "B": "Disülfiram aldehid dehidrogenazı inhibe eder; etanol asetaldehide dönüşmeye devam ettiği için asetaldehid birikir. Biriken asetaldehid flushing, zonklayıcı baş ağrısı, bulantı, kusma, terleme ve hipotansiyon yapar (s. 42, 43).",
+      "C": "MEOS indüksiyonu kronik alkol tüketiminin kendisiyle gelişir ve P450 kaynaklı toksik ara ürünleri artırır; disülfiram reaksiyonuyla ilgisi yoktur. Disülfiram tersine bazı ilaçların metabolizmasını inhibe eder (s. 7, 43).",
+      "D": "µ-opioid reseptör blokajı naltreksonun mekanizmasıdır ve alkol özlemini azaltır; alkolle birlikte alındığında flushing ve kusma reaksiyonu oluşturmaz. Reaksiyon ALDH blokajına özgüdür (s. 39, 43).",
+      "E": "GABA-A aktivasyonu akamprosatın ve benzodiazepinlerin etkilerinden biridir, sedasyon yönünde çalışır. Alkolle birlikte flushing ve hipotansiyon reaksiyonu üretmez (s. 38, 41)."
+     },
+     "bilgi": [
+      157,
+      155,
+      29
+     ],
+     "benzer_cikmis": [
+      "past-1790877044797-912513"
+     ],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Disulfiram etkisini aldehid dehidrogenaz enzimini inhibe ederek gösterir"
+     },
+     "s": 43,
+     "dayanak": [
+      "hoca:hv-k2-58-09",
+      "hoca:hv-k2-58-06",
+      "cikmis:past-1790877044797-912513"
+     ],
+     "id": "k2-58-alkoller-q47"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Disülfiram ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Etkisinin tam ortaya çıkması için 12 saat gerekir.\nII. Eliminasyonu yavaştır, etkisi son dozdan sonra günlerce sürer.\nIII. Fenitoin, oral antikoagülanlar ve izoniazidin metabolizmasını inhibe eder.\nIV. Gebelikte güvenilirliği kanıtlanmıştır.",
+     "secenekler": {
+      "A": "III ve IV",
+      "B": "Yalnız I",
+      "C": "I, II ve III",
+      "D": "I ve IV",
+      "E": "II ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Disülfiram hızla ve tamamen emilir ama tam etki 12 saat alır; eliminasyonu yavaş, etkisi günlerce sürer; fenitoin, oral antikoagülan ve izoniazid metabolizmasını inhibe eder; gebelikte güvenilirliği gösterilmemiştir (s. 43).",
+     "sik_aciklamalari": {
+      "A": "III doğrudur, disülfiram birçok terapötik ajanın metabolizmasını inhibe eder. IV yanlıştır, gebelikte güvenilirliği gösterilmemiştir; I ve II de doğrudur (s. 43).",
+      "B": "I doğru bir ifadedir fakat tek doğru değildir; yavaş eliminasyon ve ilaç metabolizması inhibisyonu da disülfiramın belgelenmiş özellikleridir. Yalnız I demek II ve III'ü dışlar (s. 43).",
+      "C": "I, II ve III disülfiramın farmakokinetik özelliklerini doğru anlatır: 12 saatlik etki başlangıcı, yavaş eliminasyonla günler süren etki, fenitoin, oral antikoagülan ve izoniazid metabolizmasının inhibisyonu. IV ise gebelik güvenliğini yanlış iddia eder (s. 43).",
+      "D": "I doğrudur; ancak IV yanlıştır, disülfiramın gebelikte güvenilirliği gösterilmemiştir. II ve III de doğru ifadeler olduğu için bu küme eksiktir (s. 43).",
+      "E": "II doğrudur, etki günlerce sürer; IV ise gebelikte güvenilirliğin gösterilmediğini göz ardı eder. I ve III'ün dışlanması da kümeyi uygunsuz kılar (s. 43)."
+     },
+     "bilgi": [
+      158,
+      159,
+      160
+     ],
+     "benzer_cikmis": [
+      "past-1790877044797-912513"
+     ],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "etkisinin tam olarak ortaya çıkması için 12 saatlik bir süreye gereksinim vardır"
+     },
+     "s": 43,
+     "dayanak": [
+      "hoca:hv-k2-58-06",
+      "cikmis:past-1790877044797-912513"
+     ],
+     "id": "k2-58-alkoller-q48"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Görece uzun etkili bir opioid antagonisti olarak µ-opioid reseptörlerini bloke eden ve alkol bağımlılığında içmeye yeniden başlama hızını ve alkol özlemini azaltan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ondansetron",
+      "B": "Baklofen",
+      "C": "Akamprosat",
+      "D": "Naltrekson",
+      "E": "Disülfiram"
+     },
+     "dogru": "D",
+     "aciklama": "Naltrekson görece uzun etkili opioid antagonistidir, µ-opioid reseptörlerini bloke eder; plasebo kontrollü çalışmalar içmeye yeniden başlama hızını ve alkol özlemini azalttığını göstermiştir (s. 39, 40).",
+     "sik_aciklamalari": {
+      "A": "Ondansetron 5-HT3 antagonistidir; alkol bağımlılığında klinik denemeleri genel olarak olumsuz sonuç vermiş ve FDA onayı almamıştır. Opioid antagonisti değildir (s. 44).",
+      "B": "Baklofen spazmolitik olarak kullanılan bir ilaçtır; alkol bağımlılığında denenmiş ama onay almamıştır. Opioid reseptörleriyle ilgisi bulunmaz; soruda tarif edilen antagonist naltreksondur (s. 44).",
+      "C": "Akamprosat zayıf NMDA antagonisti ve GABA-A aktivatörüdür; opioid reseptörleriyle ilgisi yoktur. FDA onaylı olsa da µ-opioid blokajı tanımına uymaz (s. 41).",
+      "D": "Naltrekson µ-opioid reseptörlerini bloke eden görece uzun etkili antagonisttir; opioid antagonistleri alkolün kendi kendine uygulanmasını inhibe eder, bu yüzden alkol özlemi ve yeniden başlama azalır. Günde 50 mg oral ya da 4 haftada bir im verilir (s. 39, 40).",
+      "E": "Disülfiram aldehid dehidrogenazı inhibe ederek alkol alındığında caydırıcı reaksiyon oluşturur; opioid sistemine etkisi yoktur. Özlemi azaltmak yerine içmeyi cezalandırır (s. 43)."
+     },
+     "bilgi": [
+      142,
+      143
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Görece uzun-etkili bir opioid antagonisti olan naltrekson, µ-opioid reseptörlerini bloke eder"
+     },
+     "s": 44,
+     "dayanak": [
+      "hoca:hv-k2-58-22",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q49"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Naltrekson ile disülfiram kombinasyonundan kaçınılmasının gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Disülfiramın naltreksonun emilimini engellemesi",
+      "B": "Naltreksonun asetaldehid birikimini artırması",
+      "C": "İkisinin birlikte böbrek yetmezliği yapması",
+      "D": "Her ikisinin de GABA-A reseptörünü aktive etmesi",
+      "E": "Her ikisinin de potansiyel hepatotoksik olması"
+     },
+     "dogru": "E",
+     "aciklama": "Her ikisi de potansiyel hepatotoksik ilaç olduğu için naltrekson ile disülfiram kombinasyonundan kaçınmak gerekir; naltrekson doz bağımlı hepatotoksisite yapar, disülfiram karaciğer işlev testlerini değiştirir (s. 40, 41, 43).",
+     "sik_aciklamalari": {
+      "A": "Disülfiram fenitoin, oral antikoagülan ve izoniazid gibi ilaçların metabolizmasını inhibe eder; naltreksonun emilimini engellediği tanımlanmaz. Kombinasyon sakıncası karaciğer toksisitesidir (s. 41, 43).",
+      "B": "Asetaldehid birikimi disülfiramın alkolle verdiği reaksiyondur; naltrekson bu birikimi artırmaz, opioid reseptörlerini bloke eder. Kaçınma gerekçesi bu değildir (s. 39, 43).",
+      "C": "Böbrek yetmezliği uyarısı akamprosat için geçerlidir; ciddi böbrek yetmezliğinde kullanılmaz. Naltrekson ve disülfiramın ortak sorunu böbrek değil karaciğerdir (s. 41, 42).",
+      "D": "GABA-A aktivasyonu akamprosatın etkisidir; naltrekson opioid antagonisti, disülfiram ALDH inhibitörüdür. İkisinde de GABA-A aktivasyonu yoktur, kombinasyon sakıncası buradan doğmaz (s. 39, 41, 43).",
+      "E": "Naltrekson doz bağımlı hepatotoksisite yapar ve aminotransferaz bozukluğunda dikkat gerektirir; disülfiram da karaciğer işlev testlerini değiştirir. Her ikisi potansiyel hepatotoksik olduğundan birlikte kullanılmaz (s. 40, 41, 43)."
+     },
+     "bilgi": [
+      147,
+      146,
+      160
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Her ikisi de potansiyel hepatotoksik ilaçlar oldukları için"
+     },
+     "s": 43,
+     "dayanak": [
+      "hoca:hv-k2-58-23",
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q50"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Akamprosat ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Günde üç kez 333 mg'lık bağırsak kaplamalı 1–2 tablet biçiminde kullanılır.",
+      "B": "İlaç etkileşimine neden olmadığı düşünülür.",
+      "C": "En sık yan etkileri bulantı, kusma, diyare ve döküntüdür.",
+      "D": "Ciddi böbrek yetmezliği olan hastalarda kullanılmamalıdır.",
+      "E": "Doz bağımlı hepatotoksisite nedeniyle karaciğer hastasında dikkat gerekir."
+     },
+     "dogru": "E",
+     "aciklama": "Doz bağımlı hepatotoksisite ve aminotransferaz uyarısı naltreksona aittir; akamprosatın kısıtı ciddi böbrek yetmezliğidir, yan etkileri gastrointestinaldir ve etkileşim yapmaz (s. 40, 42).",
+     "sik_aciklamalari": {
+      "A": "Akamprosat günde üç kez 333 mg'lık bağırsak kaplamalı 1–2 tablet biçiminde kullanılır; bu doz şeması ilacın standart uygulamasıdır. İfade doğru olduğundan yanlış aranan soruda seçilmez (s. 42).",
+      "B": "Akamprosatın ilaç etkileşimine neden olmadığı sanılır; bu özellik onu çoklu ilaç kullanan hastada avantajlı kılar. Etkileşimsizlik ilacın belgelenmiş bir özelliği olduğundan ifade doğrudur (s. 42).",
+      "C": "Akamprosatın en sık advers etkileri gastrointestinal (bulantı, kusma, diyare) yakınmalar ve döküntüdür. Yan etki profili doğru verildiği için bu ifade yanlış aranan soruda seçilmez (s. 42).",
+      "D": "Akamprosat ciddi böbrek yetmezliği olan hastalarda kullanılmamalıdır; ilacın özgül kısıtı böbrektir. Bu kısıt ilacın belgelenmiş uyarısı olduğundan ifade doğrudur (s. 42).",
+      "E": "Doz bağımlı hepatotoksisite ve serum aminotransferaz bozukluğunda dikkat uyarısı naltreksonun özelliğidir; akamprosat için karaciğer değil böbrek kısıtı anılır. Bu yüzden ifade yanlıştır ve aranan cevaptır (s. 40, 42)."
+     },
+     "bilgi": [
+      152,
+      153,
+      154,
+      146
+     ],
+     "benzer_cikmis": [
+      "d3k2-2024-2025-hg3"
+     ],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Ciddi böbrek yetmezliği olan hastalarda kullanılmamalıdır"
+     },
+     "s": 42,
+     "dayanak": [
+      "hoca:hv-k2-58-24",
+      "cikmis:d3k2-2024-2025-hg3"
+     ],
+     "id": "k2-58-alkoller-q51"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Alkol bağımlılığında denenmiş ancak bu endikasyon için FDA onayı almamış ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Opioid antagonistleri (naltrekson)",
+      "B": "Nöbet önleyiciler (topiramat, valproat)",
+      "C": "Aldehid dehidrogenaz inhibitörleri (disülfiram)",
+      "D": "NMDA antagonistleri (akamprosat)",
+      "E": "Uzun etkili benzodiazepinler (klordiazepoksid)"
+     },
+     "dogru": "B",
+     "aciklama": "Alkol özlemini azaltan ve yoksunluğa etkili birçok ilaç gösterilmiş olsa da hiçbiri onay almamıştır; bunlar arasında topiramat, gabapentin ve valproat gibi nöbet önleyiciler, baklofen, SSRI'lar ve ondansetron vardır (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Naltrekson alkol bağımlılığının tedavisinde kullanılmak üzere FDA tarafından onaylanmış opioid antagonistidir. Onaysız grup aranırken onaylı bir ilaç olan naltrekson uygun olmaz (s. 40).",
+      "B": "Topiramat, gabapentin ve valproat alkol özlemini azaltan nöbet önleyici ilaçlardır; etkinlikleri gösterilmiş olsa da bu endikasyon için henüz FDA onayı almamışlardır. Soru onaysız grubu sorar (s. 44).",
+      "C": "Disülfiram aldehid dehidrogenazı inhibe eder ve alkol bağımlılığında yardımcı tedavi için FDA onaylı üç ilaçtan biridir. Onaysız grup o değildir (s. 39, 43).",
+      "D": "Akamprosat zayıf NMDA antagonistidir ve alkol bağımlılığı için FDA onayı almıştır. Onaylı ilaç olduğundan onaysız grup aranan soruda seçilmez (s. 41).",
+      "E": "Klordiazepoksid gibi uzun etkili benzodiazepinler alkol yoksunluğunun detoksifikasyonunda kullanılan ilaçlardır; bağımlılığın idame tedavisinde değil yoksunlukta yer alır ve özlem azaltıcı olarak denenmemiştir (s. 38)."
+     },
+     "bilgi": [
+      161,
+      162,
+      163
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "nöbet önleyici maddeler (topiramat, gabapentin ve valproat)"
+     },
+     "s": 44,
+     "dayanak": [
+      "profil"
+     ],
+     "id": "k2-58-alkoller-q52"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Naltreksonun alkol bağımlılığında standart oral dozu ve alternatif uygulama biçimi aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "50 mg/gün oral; 4 haftada bir im depo form",
+      "B": "Günde iki kez 250 mg; subkutan implant",
+      "C": "Günde tek doz 50 mg oral; subkutan implant",
+      "D": "Haftada bir 100 mg oral; nazal sprey",
+      "E": "Günde üç kez 333 mg; bağırsak kaplamalı tablet"
+     },
+     "dogru": "A",
+     "aciklama": "Naltrekson alkolizm tedavisinde genellikle oral yolla günde tek doz 50 mg kullanılır; her 4 haftada bir im uygulanan uzatılmış salımlı formülasyonu da etkilidir (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Naltrekson oral yolla günde tek doz 50 mg kullanılır; uyum sorununda her 4 haftada bir im uzatılmış salımlı formülasyon da etkilidir. Doz ve alternatif yol birlikte doğrudur (s. 40).",
+      "B": "Günde iki kez 250 mg ve subkutan implant naltrekson için tanımlanmış uygulama biçimleri olmayıp bu rakamlar hiçbir alkol ilacının şemasına uymaz. Naltreksonun standart dozu günde tek doz 50 mg oraldır (s. 40).",
+      "C": "Günde tek doz 50 mg, naltreksonun alkolizmde doğru oral dozudur; ancak seçeneğin ikinci yarısı yanlıştır. Naltreksonun alternatif formu subkutan implant değil, 4 haftada bir kas içine uygulanan uzatılmış salımlı formdur; bileşik şıkkın bir yarısı hatalı olduğu için seçenek uymaz (s. 40).",
+      "D": "Haftada bir 100 mg oral ya da nazal sprey naltrekson için tanımlanan bir uygulama değildir. Oral günlük 50 mg ve aylık im form kullanılır (s. 40).",
+      "E": "Günde üç kez 333 mg bağırsak kaplamalı tablet akamprosatın doz şemasıdır. Naltrekson farklı dozda ve günde tek doz verilir (s. 40, 42)."
+     },
+     "bilgi": [
+      145
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "genellikle oral yolla günde tek doz 50 mg kullanılır"
+     },
+     "s": 42,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q53"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Alkol bağımlılığı tedavisiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Akamprosat naltreksonla kombine edildiğinde belirgin ek yarar sağlamıştır.",
+      "B": "Nalmefen alkol kullanım bozukluğu için FDA onaylıdır.",
+      "C": "Detoksifikasyon sonrası yoğun psikososyal tedavi alkol bağımlılığının temel tedavisidir.",
+      "D": "Disülfiram içki içmeyenlerde de belirgin rahatsızlık yapar.",
+      "E": "SSRI'ların klinik denemeleri alkol bağımlılığında genel olarak tutarlı biçimde olumlu sonuç vermiştir."
+     },
+     "dogru": "C",
+     "aciklama": "Detoksifikasyondan sonra yatan hasta ve ayaktan rehabilitasyonla yoğun psikososyal tedavi alkol bağımlılığının temel tedavisidir; ilaçlar yardımcıdır (s. 39, 40, 41, 42, 44).",
+     "sik_aciklamalari": {
+      "A": "Akamprosat tek başına ya da naltreksonla kombine edildiğinde istatistiksel olarak anlamlı bir etki ortaya çıkarmamıştır. Belirgin ek yarar ifadesi gerçeğe aykırıdır (s. 41).",
+      "B": "Nalmefen bir opioid antagonistidir ve alkol kullanım bozukluğunda benzer etkiler gösterir, ancak bu endikasyon için henüz FDA onayı almamıştır. Onaylı ifadesi yanlıştır (s. 40).",
+      "C": "Alkol bağımlılığının temel tedavisi detoksifikasyon sonrasında yatan hasta ve ayaktan rehabilitasyon programlarıyla yürütülen yoğun psikososyal tedavidir; ilaçlar yardımcı tedavidir. İfade doğrudur (s. 39).",
+      "D": "Disülfiram içki içmeyenlere verildiğinde çok az etki yapar; rahatsızlık yalnız alkol alındığında asetaldehid birikimiyle ortaya çıkar. İçmeyende belirgin rahatsızlık ifadesi yanlıştır (s. 42).",
+      "E": "SSRI'ların ve ondansetronun klinik denemeleri alkol bağımlılığında genel olarak olumsuz sonuç vermiştir; yalnız belirli alt gruplarda yarar olasılığı öne sürülür. Olumlu ifadesi terstir (s. 44)."
+     },
+     "bilgi": [
+      139,
+      144,
+      151,
+      155,
+      163
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "yoğun bir psikososyal tedavi yapılması, alkol bağımlılığının temel tedavisini oluşturur"
+     },
+     "s": 44,
+     "dayanak": [
+      "hoca:hv-k2-58-22",
+      "ayrinti"
+     ],
+     "id": "k2-58-alkoller-q54"
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2024-2025-hg3",
+     "soru": "Alkol bağımlılığının tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Akamprosat",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Fenitoin",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "İzoniazid",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Etilen glikol",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Glisin",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "A"
+    },
+    {
+     "id": "q-2021final_230619_142600-3-r35",
+     "soru": "Alkol bağımlılığının tedavisinde kullanım için onay alan madde aşağıdakilerden hangisidir?",
+     "secenekler": [
+      {
+       "key": "A",
+       "label": "A",
+       "text": "Akamprosat",
+       "isCorrect": true,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "B",
+       "label": "B",
+       "text": "Fenitoin",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "C",
+       "label": "C",
+       "text": "İzoniazid",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "D",
+       "label": "D",
+       "text": "Etilen glikol",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      },
+      {
+       "key": "E",
+       "label": "E",
+       "text": "Glisin",
+       "isCorrect": false,
+       "upvotes": 0,
+       "likedBy": []
+      }
+     ],
+     "cevap": "A"
+    },
+    {
+     "id": "past-1790877044797-912513",
+     "soru": "Aşağıdakilerden hangisi alkolizm tedavisinde kullanılan disülfiramın etki mekanizmasını açıklar?",
+     "secenekler": [
+      {
+       "key": "A",
+       "text": "Dopamin reseptör antagonizması",
+       "label": "A",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "B",
+       "text": "Aldehit dehidrogenaz inhibisyonu",
+       "label": "B",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": true
+      },
+      {
+       "key": "C",
+       "text": "Alkol dehidrogenaz aktivasyonu",
+       "label": "C",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "D",
+       "text": "GABA reseptör agonizması",
+       "label": "D",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      },
+      {
+       "key": "E",
+       "text": "Muskarinik reseptör parsiyel agonizması",
+       "label": "E",
+       "likedBy": [],
+       "upvotes": 0,
+       "isCorrect": false
+      }
+     ],
+     "cevap": "B"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 54
+}

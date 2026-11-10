@@ -67,8 +67,9 @@ export type OkeyHamle =
   | { t: 'geriKoy' }
   /** yuzbir: taş at (turu bitirir) */
   | { t: 'at'; tas: number }
-  /** yedili/takim: masadaki perleri yeniden kur (yer değiştir, taşları perler arasında yeniden diz). Masadaki taşların TAMAMI
-   *  kullanılır, ele taş alınmaz, elden taş eklenmez; her yeni per geçerli olmalıdır. Sıra sendeyken ve açmışken (takımda takım açmışken). */
+  /** yedili/takim/yuzbir: masadaki perleri yeniden kur (yer değiştir, taşları perler arasında yeniden diz). Masadaki taşların TAMAMI
+   *  kullanılır, ele taş alınmaz; elden taş katılabilir (masadan alınan taşla yeni per). Her yeni per geçerli olmalıdır.
+   *  Sıra sendeyken ve açmışken (takımda takım açmışken; yuzbir'de taş çektikten sonra, çiftlere dokunulmaz). */
   | { t: 'duzenle'; perler: number[][]; ciftler?: number[][] }
   /** kastet/remi: sırayı geçir (Kastet'te el boşken el biter) */
   | { t: 'pas' }

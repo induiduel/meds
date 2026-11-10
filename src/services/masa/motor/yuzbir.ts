@@ -260,6 +260,43 @@ export const yuzbirMotor: Motor = {
         return bitti();
       }
 
+      case 'duzenle': {
+        // Masadaki seri/gruplar (çiftler hariç) yeniden kurulur; elden taş da katılabilir (masadan taş alıp eldekilerle yeni per)
+        if (!d.cekti) return { hata: 'Önce taş çekmelisin.' };
+        if (!o.acti) return { hata: 'Masayı düzenlemek için önce açmalısın.' };
+        const gr = h.perler;
+        if (!Array.isArray(gr) || !gr.length || !gr.every((x) => Array.isArray(x) && x.every(tam))) return { hata: 'Geçersiz hamle.' };
+        const ids = (gr as number[][]).flat();
+        if (new Set(ids).size !== ids.length) return { hata: 'Aynı taş iki pere konamaz.' };
+        const eskiler = d.perler.filter((p) => p.tur !== 'cift');
+        const masada = new Map(eskiler.flatMap((p) => p.taslar.map((t) => [t.id, t] as const)));
+        const elden = ids.filter((id) => !masada.has(id));
+        const elTas = new Map(o.el.map((t) => [t.id, t] as const));
+        if (elden.some((id) => !elTas.has(id))) return { hata: 'Bu taş düzenlenemez: çiftlere dokunulmaz, taş masada ya da elinde olmalı.' };
+        if (ids.length - elden.length !== masada.size) return { hata: 'Masadaki taşlar ele geri alınamaz; her taş bir perde kalmalı.' };
+        if (elden.length >= o.el.length) return { hata: 'Atacak bir taş bırakmalısın.' };
+        if (elden.length && o.ciftActi) return { hata: 'Çiftle açtın; seri ve gruplara elinden taş koyamazsın.' };
+        const yeni: Per[] = [];
+        const kullanilan = new Set<number>();
+        for (const grup of gr as number[][]) {
+          const c = grup.length >= 3 ? perCoz(grup.map((id) => masada.get(id) ?? elTas.get(id)!), okey) : null;
+          if (!c || c.tur === 'cift') return { hata: 'Düzenlenen her per geçerli olmalı: aynı renk ardışık ya da aynı sayı farklı renk, en az 3 taş, en az 2 gerçek taş.' };
+          // Taşlarının çoğu aynı kalan per kimliğini ve sahibini korur
+          const eski = eskiler.filter((p) => !kullanilan.has(p.id)).map((p) => ({ p, ortak: p.taslar.filter((t) => grup.includes(t.id)).length })).sort((x, y) => y.ortak - x.ortak)[0];
+          const koru = eski && eski.ortak > 0 ? eski.p : null;
+          if (koru) kullanilan.add(koru.id);
+          yeni.push({ id: koru ? koru.id : d.perNo++, tur: c.tur, taslar: c.taslar, sahip: koru ? koru.sahip : o.id });
+        }
+        d.perler = [...yeni, ...d.perler.filter((p) => p.tur === 'cift')];
+        if (elden.length) {
+          eldenAl(o, elden);
+          d.hamleYapti = true;
+          yandanKullan(elden);
+        }
+        olaylar.push({ t: 'duzenledi', o: o.id, ...(elden.length ? { adet: elden.length } : null) });
+        return bitti();
+      }
+
       case 'at': {
         if (!d.cekti) return { hata: 'Önce taş çekmelisin.' };
         if (!tam(h.tas)) return { hata: 'Atılacak taşı seçmelisin.' };

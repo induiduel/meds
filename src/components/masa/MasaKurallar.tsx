@@ -95,9 +95,10 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
           <h3>Masayı düzenleme</h3>
           <p>Masadaki perler dokunulmaz değildir. Per açtıktan sonra sıran gelince <b>Masayı düzenle</b> ile perlerin yerini değiştirebilir, taşları perler arasında yeniden dizebilirsin: örneğin 3-4-5-6 kırmızı serinin 6’sını 6’lı gruba taşıyıp dörtlü grup yaparsın. Kurallar:</p>
           <ul>
-            <li>Masadaki taşların <b>hepsi masada kalır</b>; hiçbir taş ele geri alınamaz, düzenleme sırasında elden taş eklenmez.</li>
+            <li>Masadaki taşların <b>hepsi masada kalır</b>; hiçbir taş ele geri alınamaz.</li>
+            <li><b>Elinden taş katabilirsin:</b> masadaki bir taşı perinden alıp elindeki taşlarla yeni per kurarsın. Örneğin dörtlü 10 grubundaki sarı 10’u alır, elindeki sarı 9 ve 11 ile 9-10-11 serisi yaparsın; geride üçlü 10 grubu kalır.</li>
             <li>Onayladığında her per yine geçerli olmalıdır (en az 3 taşlık seri ya da grup).</li>
-            <li>Düzenleme taş eritmez: ardından elindeki taşları yeni duruma göre işleyebilir ya da per açabilirsin.</li>
+            <li>Elinden taş kattıysan bu bir hamledir (o turda artık taş çekilmez); yalnız yer değiştirdiysen ardından işleyebilir, per açabilir ya da taş çekebilirsin.</li>
           </ul>
           <h3>Geri al</h3>
           <p>Kendi sırandaki per açma, taş işleme ve masa düzenleme hamlelerini <b>Geri al</b> ile tek tek geri alabilirsin; ıstakadaki taş yer değiştirmelerin de geri alınır. Taş çekme, eli devretme ve hediye taş verdiren hamle geri alınmaz (gizli taş açılmıştır).</p>
@@ -202,6 +203,7 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
             <Taslar t={[[8, 2], [8, 2]]} ad="Çift: özdeş iki taş" iyi />
           </div>
           <ul>
+            <li><b>Masayı düzenle:</b> açtıktan sonra, taşını çekince masadaki seri ve grupları yeniden dizebilir, bir taşı perinden alıp elindeki taşlarla yeni per kurabilirsin (dörtlü 10 grubundan sarı 10 + elindeki sarı 9 ve 11). Her per yine geçerli kalmalı, hiçbir taş ele dönmez, çiftlere dokunulmaz, atacak bir taşın kalmalıdır.</li>
             <li>Seri aynı renk ardışıktır (1 yalnız başta; 12-13-1 olmaz), grup aynı sayının farklı renkleridir (3–4 taş). Her perde en az 2 gerçek taş bulunur.</li>
             <li>Seri/grupla açan sonradan yalnız seri/grup, çiftle açan yalnız yeni çift açabilir.</li>
             <li><b>İşleme:</b> açtıktan sonra masadaki serilerin uçlarına ve üçlü gruplara taş işleyebilirsin. Çifte taş işlenmez. Okeyi serinin iki ucuna da koyabiliyorsan hangi uca koyacağını seçersin.</li>

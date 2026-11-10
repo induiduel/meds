@@ -1,21 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 690,
-  "baslik": "Kurul 2: Psikosomatik, Cinsel Kimlik, Epilepsi ve Alkoller dersleri hoca kaydıyla güncellendi",
+  "onem": 692,
+  "baslik": "Kurul 2 · Alkoller: örnek sorular eklendi",
   "maddeler": [
-    "Sesli ders: hocanın ders kaydındaki örnekleri ve sınav vurguları Psikosomatik Bozukluklar, Cinsel Kimlik ve İşlev Bozuklukları, Epilepsi ve Alkoller derslerine eklendi.",
-    "Hocanın vurguladıkları: üç derste hocanın sınav için işaret ettiği yerler ayrı listede ve sesli derste rozet olarak görünür.",
-    "Psikosomatik, Cinsel Kimlik ve Epilepsi: En önemliler listesi, sesli soru çözücü, örnek sorular ve hocanın sorabileceği sorular eklendi.",
-    "Alkoller: hocanın sorabileceği sorular sesli olarak eklendi; Epilepsi ve Alkoller'de PDF üstünde canlı çizim var."
+    "Alkoller: hocanın sınav vurgularına dayanan 54 örnek soru eklendi (metanol ve etilen glikol dışında kalan konular)."
   ],
   "eklenen": [
-    "Hoca kaydı katmanı (4 ders)",
-    "En önemliler + sesli çözücü (3 ders)",
-    "Ara sorular (4 ders)"
+    "Alkoller örnek soruları"
   ],
-  "degisen": [
-    "Sesli ders anlatımları (hoca örnekleri)"
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": []

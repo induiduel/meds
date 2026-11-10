@@ -560,7 +560,7 @@ for (const m of [yediliMotor, takimMotor]) for (let n = 2; n <= 6; n++) {
 
 console.log(`\nTAMAM: ${adet} sınama geçti.`);
 
-sina('duzenle: masadaki perler yeniden kurulur, taş ele dönmez, elden taş eklenmez', () => {
+sina('duzenle: masadaki perler yeniden kurulur, taş ele dönmez', () => {
   const t = (s: number, r: 0 | 1 | 2 | 3, k = 0) => ({ id: r * 13 + (s - 1) + k * 52, s, r });
   const d0 = yediliMotor.elBaslat({ oyuncular: [{ id: 'a' }, { id: 'b' }], elNo: 1, baslayan: 0, rng: () => 0.3 }) as YediliDurum;
   const d = structuredClone(d0);
@@ -578,7 +578,9 @@ sina('duzenle: masadaki perler yeniden kurulur, taş ele dönmez, elden taş ekl
   const eksik = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id, t(5, 0).id], [t(6, 1).id, t(6, 2).id, t(6, 3).id]] }, () => 0) as any;
   assert.ok(eksik.hata);
   const elden = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id, t(5, 0).id, t(6, 0).id], [t(6, 1).id, t(6, 2).id, t(6, 3).id, t(9, 3, 1).id]] }, () => 0) as any;
-  assert.ok(elden.hata);
+  assert.ok(elden.hata, 'elden taş geçersiz per kuramaz');
+  const yabanci = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id, t(5, 0).id, t(6, 0).id], [t(6, 1).id, t(6, 2).id, t(6, 3).id], [t(1, 2).id, t(2, 2).id, t(3, 2).id]] }, () => 0) as any;
+  assert.ok(yabanci.hata, 'elde olmayan taş eklenemez');
   const gecersiz = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [[t(3, 0).id, t(4, 0).id], [t(5, 0).id, t(6, 0).id, t(6, 1).id, t(6, 2).id, t(6, 3).id]] }, () => 0) as any;
   assert.ok(gecersiz.hata);
 });
@@ -592,3 +594,36 @@ sina('takim: 5–6 oyuncuda 4 taş, 2–4 oyuncuda kurucu seçimi 7/14', () => {
   assert.deepEqual(say(2, 14), [14, 14]);
   assert.equal((takimMotor.elBaslat({ oyuncular: oy(4), elNo: 1, baslayan: 0, rng: () => 0.5, ayar: { tasSayisi: 14 } }) as YediliDurum).deste.length, 104 - 56);
 });
+
+sina('duzenle: masadan alınan taş eldekilerle yeni per olur (dörtlü 10 grubundan sarı 10 + eldeki sarı 9 ve 11)', () => {
+  const t = (s: number, r: 0 | 1 | 2 | 3, k = 0) => ({ id: r * 13 + (s - 1) + k * 52, s, r });
+  const d = structuredClone(yediliMotor.elBaslat({ oyuncular: [{ id: 'a' }, { id: 'b' }], elNo: 1, baslayan: 0, rng: () => 0.3 }) as YediliDurum);
+  d.oyuncular[0].acti = true;
+  d.oyuncular[0].el = [t(9, 3), t(11, 3), t(2, 1)];
+  d.perler = [
+    { id: 0, tur: 'grup', taslar: [t(3, 0), t(3, 1), t(3, 2), t(3, 3)], sahip: 'a' },
+    { id: 1, tur: 'grup', taslar: [t(10, 0), t(10, 1), t(10, 2), t(10, 3)], sahip: 'a' },
+  ];
+  const uclu = [t(10, 0).id, t(10, 1).id, t(10, 2).id], seri = [t(9, 3).id, t(10, 3).id, t(11, 3).id], ucler = d.perler[0].taslar.map((x) => x.id);
+  const r = yediliMotor.uygula(d, 'a', { t: 'duzenle', perler: [ucler, uclu, seri] }, () => 0) as any;
+  assert.ok(!r.hata, r.hata);
+  assert.deepEqual(r.durum.oyuncular[0].el.map((x: any) => x.id), [t(2, 1).id]);
+  assert.equal(r.durum.perler.length, 3);
+  assert.equal(r.durum.perler.flatMap((p: any) => p.taslar).length, 10);
+  assert.equal(new Set(r.durum.perler.map((p: any) => p.id)).size, 3);
+  assert.ok(r.durum.hamleYapti);
+  assert.ok(r.olaylar.some((o: any) => o.t === 'duzenledi' && o.adet === 2));
+  // Hamle yapıldı: artık taş çekilmez
+  assert.ok((yediliMotor.uygula(r.durum, 'a', { t: 'cek' }, () => 0) as any).hata);
+  // Son taşlar düzenlemeyle eriyince el biter
+  const son = structuredClone(d);
+  son.oyuncular[0].el = [t(9, 3), t(11, 3)];
+  const b = yediliMotor.uygula(son, 'a', { t: 'duzenle', perler: [ucler, uclu, seri] }, () => 0) as any;
+  assert.ok(!b.hata && b.durum.bitti && b.durum.sonuc.kazananlar[0] === 'a');
+  // Açmamış oyuncu masaya dokunamaz; grup 2 taşa düşemez
+  const kapali = structuredClone(d); kapali.oyuncular[0].acti = false;
+  assert.ok((yediliMotor.uygula(kapali, 'a', { t: 'duzenle', perler: [ucler, uclu, seri] }, () => 0) as any).hata);
+  const uc = structuredClone(d); uc.perler[1].taslar = [t(10, 1), t(10, 2), t(10, 3)];
+  assert.ok((yediliMotor.uygula(uc, 'a', { t: 'duzenle', perler: [ucler, [t(10, 1).id, t(10, 2).id], seri] }, () => 0) as any).hata);
+});
+console.log('TAMAM: düzenle (elden taş) sınamaları geçti.');
