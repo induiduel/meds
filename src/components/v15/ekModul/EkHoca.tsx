@@ -170,9 +170,9 @@ export const HocaSetCoz: React.FC<{ set: HocaSet; m?: EkModul }> = ({ set, m }) 
           ? <button type="button" className="v15-btn" onClick={() => (sira.i >= 0 ? git(i + 1) : ileri())}>Sonraki <ChevronRight aria-hidden /></button>
           : <button type="button" className="v15-btn" onClick={() => bastan()}><RotateCcw aria-hidden /> Baştan</button>}
       </nav>
+      </div>
+      </div>
       {bitti && <p className="ekm-puan v15-card"><b>{dogruN} / {n}</b><span>Set tamamlandı. Bilemediklerin için ilgili konunun dersine dön.</span></p>}
     </div>
   );
 };
-      </div>
-      </div>
