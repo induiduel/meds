@@ -1,0 +1,3102 @@
+{
+ "id": "k2-15-sizofrenik-bozukluklar",
+ "sira": 15,
+ "kurul": 1,
+ "ders": "Psikiyatri",
+ "konu": "Şizofreni ve Diğer Psikotik Bozukluklar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Nefise Demir",
+ "tarih": "2026-11-04",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Şizofreninin tanımını, tarihçesini, epidemiyolojisini ve mortalite-intihar riskini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Hastalığı ilk kez adlandıran ve kullandığı terimin erken bunama anlamına geldiği hekim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Emil Kraepelin",
+      "B": "Kurt Schneider",
+      "C": "Byrne",
+      "D": "Gregory",
+      "E": "Eugen Bleuler"
+     },
+     "dogru": "A",
+     "aciklama": "Kraepelin (1856-1926), hastalığı dementia praecox, yani erken bunama adıyla ilk kez adlandıran hekimdir. Sorudaki ilk adlandırma ve erken bunama ifadeleri onu gösterir; bu nedenle doğru yanıt budur (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Kraepelin (1856-1926), hastalığı dementia praecox, yani erken bunama adıyla ilk kez adlandıran hekimdir. Sorudaki ilk adlandırma ve erken bunama ifadeleri onu gösterir; bu nedenle doğru yanıt budur (s. 3).",
+      "B": "Schneider, hastalık belirtilerini ilk sıra ve ikinci sıra belirtiler diye ayıran araştırmacıdır. Adlandırmayı yapan kişi olmadığı için burada doğru değildir; doğru yanıt ise “Emil Kraepelin” şıkkıdır (s. 3).",
+      "C": "Byrne ve arkadaşları (2003), ileri baba yaşının şizofreni riskini kadınlarda artırdığına dair bulgular bildirmiştir. Hastalığı adlandırmayla bir bağı olmadığından bu soruda yanlıştır; doğru yanıt ise “Emil Kraepelin” şıkkıdır (s. 9).",
+      "D": "Gregory (1959), ileri ebeveyn yaşının risk etkeni olarak ilk kez Kanada'daki Ontario Hastanesi'nde sözünü eden araştırmacıdır. Hastalığın adlandırılmasıyla ilgisi olmadığından yanlıştır; doğru yanıt ise “Emil Kraepelin” şıkkıdır (s. 9).",
+      "E": "Bleuler (1857-1939), hastalığa schizo-phrenia, yani zihin yarılması adını veren hekimdir. Soru erken bunama terimini sorduğundan Bleuler doğru yanıt değildir; doğru yanıt ise “Emil Kraepelin” şıkkıdır (s. 3)."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Emil Kraepelin (1856-1926) dementia praecox"
+     },
+     "dayanak": [
+      "not:s3"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q04",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Şizofreninin yaşam boyu yaygınlığı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "%0,02-0,03",
+      "B": "%5-6",
+      "C": "%17",
+      "D": "%1-1,5",
+      "E": "%46"
+     },
+     "dogru": "D",
+     "aciklama": "Şizofreninin hayat boyu prevalansı %1-1,5'tur ve ırk ya da etnik köken farkı yoktur. Bu oran hastalığın epidemiyolojisindeki temel sayıdır ve soru bunu sorar; bu nedenle doğru yanıt budur (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Bu oran sanrılı bozukluğun toplum genelindeki görülme sıklığıdır ve muhtemelen gerçekte daha yüksektir. Şizofreninin yaygınlığı bu kadar düşük değildir; doğru yanıt ise “%1-1,5” şıkkıdır (s. 36).",
+      "B": "Yüzde beş ile altı, bir ebeveyni şizofreni hastası olan kişide verilen risk düzeyidir. Toplumdaki yaygınlık için verilen sayı değildir; doğru yanıt ise “%1-1,5” şıkkıdır (s. 12).",
+      "C": "Yüzde on yedi, bir çocuk ve bir ebeveyn hasta olduğunda risk düzeyidir. Bu sayı toplum yaygınlığını göstermez; doğru yanıt ise “%1-1,5” şıkkıdır (s. 12).",
+      "D": "Şizofreninin hayat boyu prevalansı %1-1,5'tur ve ırk ya da etnik köken farkı yoktur. Bu oran hastalığın epidemiyolojisindeki temel sayıdır ve soru bunu sorar; bu nedenle doğru yanıt budur (s. 4).",
+      "E": "Yüzde kırk altı, monozigot ikizlerde şizofreni uyum oranıdır. Toplumun geneli için verilen yaygınlık bu değildir; doğru yanıt ise “%1-1,5” şıkkıdır (s. 12)."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Hayat boyu prevalansı; %1-1.5"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Şizofreni sözcüğünün kökeni olan ve Bleuler'in önerdiği schizo-phrenia teriminin anlamı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Heterojen etiyolojili bozukluk grubu",
+      "B": "Zihin yarılması",
+      "C": "Çoklu vuruş hastalığı",
+      "D": "Erken bunama",
+      "E": "İlk ve ikinci sıra belirtiler"
+     },
+     "dogru": "B",
+     "aciklama": "Schizo-phrenia sözcüğü zihin yarılması anlamına gelir ve hastalığa Bleuler tarafından verilmiştir. Soru terimin anlamını sorduğundan doğru yanıt budur (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Heterojen etiyolojili grup ifadesi, şizofreninin tek bir hastalık değil, nedenleri farklı bozuklukların toplamı olabileceğini anlatır. Sözcüğün anlamı olmadığından yanlıştır; doğru yanıt ise “Zihin yarılması” şıkkıdır (s. 2).",
+      "B": "Schizo-phrenia sözcüğü zihin yarılması anlamına gelir ve hastalığa Bleuler tarafından verilmiştir. Soru terimin anlamını sorduğundan doğru yanıt budur (s. 3).",
+      "C": "Çoklu vuruş, genetik yatkınlığı olan kişide hastalığın başka etmenler eklenince ortaya çıktığını anlatan stres-diyatez modelinin benzetmesidir. Bu yüzden yanıt olamaz; doğru yanıt ise “Zihin yarılması” şıkkıdır (s. 6).",
+      "D": "Hastalığın genç yaşta başlayıp bilişsel çöküşe gittiği düşüncesini yansıtır. Bleuler'in terimi bu değil, zihin yarılmasıdır; doğru yanıt ise “Zihin yarılması” şıkkıdır (s. 3).",
+      "E": "Bu ayrım tanı koymada kullanılan bir sınıflamadır, bir sözcüğün anlamı değildir. Bu nedenle schizo-phrenia teriminin karşılığı olamaz; doğru yanıt ise “Zihin yarılması” şıkkıdır (s. 3)."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Eugen Bleuler (1857-1939) schizo-phrenia"
+     },
+     "dayanak": [
+      "not:s3"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Şizofreninin tarihçesi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bleuler hastalığa schizo-phrenia adını vermiştir",
+      "B": "Dementia praecox terimi erken bunama anlamına gelir",
+      "C": "Kraepelin hastalık için dementia praecox terimini kullanmıştır",
+      "D": "Kraepelin hastalığı schizo-phrenia, yani zihin yarılması olarak adlandırmıştır",
+      "E": "Schneider belirtileri ilk sıra ve ikinci sıra belirtiler olarak ayırmıştır"
+     },
+     "dogru": "D",
+     "aciklama": "Bu ifade yanlıştır: schizo-phrenia adı Bleuler'e aittir, Kraepelin ise dementia praecox terimini kullanmıştır. Doğru ayrım Kraepelin için erken bunama, Bleuler için zihin yarılmasıdır; bu nedenle doğru yanıt budur (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: schizo-phrenia sözcüğünü hastalığa Bleuler vermiştir ve anlamı zihin yarılmasıdır. Yanlış ifade arandığından bu şık doğru yanıt değildir; yanlış olan ifade ise “Kraepelin hastalığı schizo-phrenia, yani zihin yarılması olarak adlandırmıştır” şıkkıdır (s. 3).",
+      "B": "Bu ifade doğrudur: dementia praecox sözcüğü erken bunama anlamına gelir ve Kraepelin'in kullandığı terimdir. Yanlış ifade arandığından bu şık doğru yanıt değildir; yanlış olan ifade ise “Kraepelin hastalığı schizo-phrenia, yani zihin yarılması olarak adlandırmıştır” şıkkıdır (s. 3).",
+      "C": "Bu ifade doğrudur: Kraepelin hastalığı dementia praecox, yani erken bunama diye adlandırmıştır. Soru yanlış ifadeyi aradığından bu şık elenir; yanlış olan ifade ise “Kraepelin hastalığı schizo-phrenia, yani zihin yarılması olarak adlandırmıştır” şıkkıdır (s. 3).",
+      "D": "Bu ifade yanlıştır: schizo-phrenia adı Bleuler'e aittir, Kraepelin ise dementia praecox terimini kullanmıştır. Doğru ayrım Kraepelin için erken bunama, Bleuler için zihin yarılmasıdır; bu nedenle doğru yanıt budur (s. 3).",
+      "E": "Bu ifade doğrudur: Schneider belirtileri ilk sıra ve ikinci sıra diye ikiye ayırmıştır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Kraepelin hastalığı schizo-phrenia, yani zihin yarılması olarak adlandırmıştır” şıkkıdır (s. 3)."
+     },
+     "bilgi": [
+      5,
+      6,
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Emil Kraepelin (1856-1926) dementia praecox"
+     },
+     "dayanak": [
+      "not:s3"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Şizofreninin epidemiyolojisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Irk ve etnik köken farkı yoktur",
+      "B": "Başlangıç için pik yaşlar erkeklerde 25-35, kadınlarda 15-25'tir",
+      "C": "Evlilik oranı düşüktür ve bu durum erkeklerde daha belirgindir",
+      "D": "Kadın ve erkekte sıklık eşittir",
+      "E": "Hastaların daha çok kış ve ilkbaharın ilk yarısında doğduğu görülür"
+     },
+     "dogru": "B",
+     "aciklama": "Bu ifade yanlıştır: pik başlangıç yaşı kadınlarda 25-35, erkeklerde 15-25'tir; yani erkeklerde başlangıç daha erkendir. Cinsiyetlere ait aralıkların yer değiştirmesi sık kurulan bir tuzaktır; bu nedenle doğru yanıt budur (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: şizofreni sıklığı ırk ve etnik kökene göre değişmez. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Başlangıç için pik yaşlar erkeklerde 25-35, kadınlarda 15-25'tir” şıkkıdır (s. 4).",
+      "B": "Bu ifade yanlıştır: pik başlangıç yaşı kadınlarda 25-35, erkeklerde 15-25'tir; yani erkeklerde başlangıç daha erkendir. Cinsiyetlere ait aralıkların yer değiştirmesi sık kurulan bir tuzaktır; bu nedenle doğru yanıt budur (s. 4).",
+      "C": "Bu ifade doğrudur: hastalarda evlilik oranı düşüktür ve erkeklerde daha belirgindir. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Başlangıç için pik yaşlar erkeklerde 25-35, kadınlarda 15-25'tir” şıkkıdır (s. 4).",
+      "D": "Bu ifade doğrudur: sıklık kadınlarda ve erkeklerde eşittir, farklı olan başlangıç yaşı ve gidiştir. Yanlış ifade arandığı için bu şık doğru yanıt olmaz; yanlış olan ifade ise “Başlangıç için pik yaşlar erkeklerde 25-35, kadınlarda 15-25'tir” şıkkıdır (s. 4).",
+      "E": "Bu ifade doğrudur: hastalar kış ve ilkbaharın ilk yarısında doğanlar arasında daha sık bulunur. Yanlış ifade arandığı için bu şık doğru yanıt değildir; yanlış olan ifade ise “Başlangıç için pik yaşlar erkeklerde 25-35, kadınlarda 15-25'tir” şıkkıdır (s. 4)."
+     },
+     "bilgi": [
+      10,
+      11,
+      9,
+      12,
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Pik yaşları k:25-35, e:15-25"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q58",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Şizofrenide intihar ve ölüm riski ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Şiddet davranışı yaklaşık 5 kat artmıştır",
+      "B": "Hastaların %30-35'i intihar girişiminde bulunur",
+      "C": "İntiharla ölenlerin çoğunluğunu şizofreni hastaları oluşturur",
+      "D": "Ölüm hızı yaklaşık 3 kat artmıştır",
+      "E": "Yaşam beklentisi 10-20 yıl kısalmıştır"
+     },
+     "dogru": "C",
+     "aciklama": "Bu ifade yanlıştır: intiharla ölenlerin yalnızca yüzde ikisi ile üçü şizofreni hastasıdır. Hastalar arasındaki intihar riski yüksek olsa da toplam intihar ölümlerinin içindeki payları azdır; bu nedenle doğru yanıt budur (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: şiddet yaklaşık beş kat artar, ancak şiddet gösterenlerin yarısı alkol ve madde kullananlardır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “İntiharla ölenlerin çoğunluğunu şizofreni hastaları oluşturur” şıkkıdır (s. 5).",
+      "B": "Bu ifade doğrudur: hastaların yüzde otuz ile otuz beşi intihar girişiminde bulunur ve yaklaşık yüzde on ölür. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “İntiharla ölenlerin çoğunluğunu şizofreni hastaları oluşturur” şıkkıdır (s. 5).",
+      "C": "Bu ifade yanlıştır: intiharla ölenlerin yalnızca yüzde ikisi ile üçü şizofreni hastasıdır. Hastalar arasındaki intihar riski yüksek olsa da toplam intihar ölümlerinin içindeki payları azdır; bu nedenle doğru yanıt budur (s. 5).",
+      "D": "Bu ifade doğrudur: şizofrenide mortalite hızı yaklaşık üç kat artmıştır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “İntiharla ölenlerin çoğunluğunu şizofreni hastaları oluşturur” şıkkıdır (s. 5).",
+      "E": "Bu ifade doğrudur: yaşam beklentisi 10-20 yıl kısadır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “İntiharla ölenlerin çoğunluğunu şizofreni hastaları oluşturur” şıkkıdır (s. 5)."
+     },
+     "bilgi": [
+      16,
+      17,
+      19,
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "İntiharla ölenlerin %2-3’ü şizofreni hastası"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-01"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q66",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Şizofreni hastalarında şiddet davranışı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yaklaşık 5 kat artar, ancak şiddet gösterenlerin yarısı alkol ya da madde kullanıcısıdır",
+      "B": "Sağlıklı topluma göre farklı değildir, yani artış göstermez",
+      "C": "Yaklaşık 3 kat artar ve tamamı tedavi almayan hastalardır",
+      "D": "Şiddet gösterenlerin tamamı alkol ya da madde kullanmaktadır",
+      "E": "Yalnızca yaşam beklentisi kısalmış hastalarda görülür"
+     },
+     "dogru": "A",
+     "aciklama": "Şizofrenide şiddet davranışı yaklaşık 5 kat artar, fakat şiddet gösterenlerin yarısı alkol ya da madde kullananlardır. Bu bilgi, hastaya doğrudan saldırgan etiketi yapıştırmak yerine madde kullanımını sorgulamayı öğretir; bu nedenle doğru yanıt budur (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Şizofrenide şiddet davranışı yaklaşık 5 kat artar, fakat şiddet gösterenlerin yarısı alkol ya da madde kullananlardır. Bu bilgi, hastaya doğrudan saldırgan etiketi yapıştırmak yerine madde kullanımını sorgulamayı öğretir; bu nedenle doğru yanıt budur (s. 5).",
+      "B": "Sağlıklı topluma göre karşılaştırma, hastalığın toplumsal sonuçlarını ölçmeye yarar. Şizofrenide şiddet davranışı değişmeden kalmaz, yaklaşık 5 kat artmıştır; bu yüzden bu şık yanlıştır (s. 5).",
+      "C": "Mortalite hızı şizofrenide yaklaşık 3 kat artar ve ölüm riskini anlatan bir göstergedir. Şiddet için verilen kat sayısı 5'tir ve tedavi almama koşulu belirtilmemiştir; bu nedenle şık yanlıştır (s. 5).",
+      "D": "Alkol ve madde kullanımı, şiddet davranışını artıran önemli bir ortak etkendir. Ancak şiddet gösterenlerin yalnızca yarısı kullanıcıdır, tamamı değildir; bu yüzden şık yanlıştır (s. 5).",
+      "E": "Yaşam beklentisinin 10-20 yıl kısalması, hastalığın ölüm riskiyle ilgili bir göstergesidir. Şiddet davranışı bu koşula bağlanmamıştır; bu nedenle şık yanlıştır (s. 5)."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Şiddet= ×5, ancak alkol madde kullananların yarısı"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-02"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q59",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Şizofrenide intihar riskini artıran durumlar için aşağıdaki öncüllerden hangileri doğrudur?\nI. Erkek cinsiyet\nII. Yalnız yaşama\nIII. Son nöbette depresyon\nIV. Kadın cinsiyet",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve IV",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Erkek cinsiyet, yalnız yaşama ve son nöbette depresyon intihar riskini artırır. Risk artıran cinsiyet kadın değil, erkektir; bu nedenle doğru yanıt budur (s. 5).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur ama son nöbette depresyon da riski artırır. Bu seçenek eksiktir; doğru yanıt ise “I, II ve III” şıkkıdır (s. 5).",
+      "B": "Kadın cinsiyet riski artıran bir etken olarak sayılmaz; erkek cinsiyet artırır. Bu seçenek IV'ü içerdiği için yanlıştır; doğru yanıt ise “I, II ve III” şıkkıdır (s. 5).",
+      "C": "Erkek cinsiyet, yalnız yaşama ve son nöbette depresyon intihar riskini artırır. Risk artıran cinsiyet kadın değil, erkektir; bu nedenle doğru yanıt budur (s. 5).",
+      "D": "Kadın cinsiyet risk etkeni değildir ve erkek cinsiyet dışarıda bırakılmıştır. Bu seçenek yanlıştır; doğru yanıt ise “I, II ve III” şıkkıdır (s. 5).",
+      "E": "IV numaralı öncül yanlıştır: kadın cinsiyet değil, erkek cinsiyet risk etkenidir. Bu yüzden seçenek yanlıştır; doğru yanıt ise “I, II ve III” şıkkıdır (s. 5)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "erkek, 30 y küçük, işsiz, yalnız yaşayan"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-01"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q67",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Şizofreni hastalarında şiddet ve ölüm riski ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Şiddet davranışı yaklaşık 5 kat artar",
+      "B": "Şiddet gösterenlerin yaklaşık yarısı alkol ya da madde kullanır",
+      "C": "Ölüm hızı yaklaşık 3 kat artar",
+      "D": "Şiddet davranışındaki artış, ölüm hızındaki artışla aynı büyüklüktedir",
+      "E": "Yaşam beklentisi 10-20 yıl kısalmıştır"
+     },
+     "dogru": "D",
+     "aciklama": "Şiddet davranışı 5 kat, ölüm hızı ise 3 kat artmıştır; iki oran birbirinden farklıdır. Bu nedenle ifade yanlıştır ve sorunun yanıtıdır (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Şiddet davranışı sağlıklı topluma göre yaklaşık 5 kat artmıştır ve bu artış hekimin dikkat etmesi gereken bir bilgidir. İfade doğru olduğundan yanlış seçenek değildir (s. 5).",
+      "B": "Şiddet gösterenlerin yarısı alkol ya da madde kullanıcısıdır; bu, şiddetin tek başına hastalıktan kaynaklanmadığını gösterir. İfade doğru olduğundan yanlış seçenek değildir (s. 5).",
+      "C": "Mortalite hızı şizofrenide yaklaşık 3 kat artar ve bu, hastalığın ölüm riskini anlatan bir göstergedir. İfade doğru olduğundan yanlış seçenek değildir (s. 5).",
+      "D": "Şiddet davranışı 5 kat, ölüm hızı ise 3 kat artmıştır; iki oran birbirinden farklıdır. Bu nedenle ifade yanlıştır ve sorunun yanıtıdır (s. 5).",
+      "E": "Yaşam beklentisinin 10-20 yıl kısalması, hastalığın uzun dönem sonuçlarından biridir ve ölüm riskinin artmasıyla birlikte düşünülür. İfade doğru olduğundan yanlış seçenek değildir (s. 5)."
+     },
+     "bilgi": [
+      20,
+      16
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Şiddet= ×5, ancak alkol madde kullananların yarısı"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-02"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Şizofreninin psikososyal etiyolojisini (stres-diyatez modeli, gebelik ve doğum komplikasyonları, doğum mevsimi, ebeveyn yaşı, madde kullanımı, kentsel yaşam) açıklar.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q70",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Şizofreninin psikososyal etkenlerinden olan gebelik ve doğum komplikasyonları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Prenatal ve perinatal komplikasyonlar şizofreniyle ilişkilendirilmemiştir",
+      "B": "Hipoksi-iskemi risk etkenleri arasında sayılır",
+      "C": "Fötal gelişme geriliği risk etkenleri arasında sayılır",
+      "D": "Erken doğum risk etkenleri arasında sayılır",
+      "E": "Preeklampsi ve hipertansiyon risk etkenleri arasında sayılır"
+     },
+     "dogru": "A",
+     "aciklama": "Prenatal ve perinatal komplikasyonlar şizofreninin psikososyal risk etkenleri arasında ayrı bir başlık olarak sayılır. Bunların ilişkilendirilmediğini söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Prenatal ve perinatal komplikasyonlar şizofreninin psikososyal risk etkenleri arasında ayrı bir başlık olarak sayılır. Bunların ilişkilendirilmediğini söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 7).",
+      "B": "Hipoksi-iskemi, doğum öncesi ve doğum sırasında beynin yeterli oksijen almamasıdır ve beyin gelişimini bozabilir. Prenatal-perinatal komplikasyonlar arasında sayıldığı için bu ifade doğrudur (s. 7).",
+      "C": "Fötal gelişme geriliği, bebeğin rahim içinde beklenen hızda büyüyememesidir. Psikososyal risk etkenleri içindeki komplikasyonlar listesinde yer aldığı için bu ifade doğrudur (s. 7).",
+      "D": "Erken doğum, gebeliğin tamamlanmadan sonlanmasıdır ve beyin olgunlaşmasını etkileyebilir. Gebelik komplikasyonları listesinde yer aldığı için bu ifade doğrudur ve yanlış seçenek değildir (s. 7).",
+      "E": "Preeklampsi ve hipertansiyon, gebelikte anne ve plasenta dolaşımını bozan durumlardır. Risk etkenleri listesinde bulundukları için bu ifade doğrudur (s. 7)."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Prenatal ve Perinatal Komplikasyonlar Hipoksi-İskemi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-07"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Genetik yatkınlığı olan bireylerde hastalığın ancak diğer etmenler devreye girdiğinde ortaya çıktığını, şizofreninin kanser gibi çoklu vuruş hastalığı olduğunu öne süren model aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Stres-diyatez modeli",
+      "B": "Dopamin hipotezi",
+      "C": "Nörogelişimsel kusur kuramı",
+      "D": "Şizofreni devresi",
+      "E": "Antisipasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Stres-diyatez modeli, genetik yatkınlığın (diyatez) başka etmenlerle birleşince hastalığa yol açtığını söyler. Soru bu tanımı verdiğinden doğru yanıt budur (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Stres-diyatez modeli, genetik yatkınlığın (diyatez) başka etmenlerle birleşince hastalığa yol açtığını söyler. Soru bu tanımı verdiğinden doğru yanıt budur (s. 6).",
+      "B": "Dopamin hipotezi, dopamin sisteminin hiperaktivitesini, D2 blokajı yapan ilaçları ve amfetamin etkisini temel alır. Bu şık yanlıştır; doğru yanıt ise “Stres-diyatez modeli” şıkkıdır (s. 16).",
+      "C": "Nörogelişimsel kusur kuramı, doğum ve gebelik komplikasyonlarını, minör fiziksel anomalileri ve nörogörüntüleme bulgularını gelişimsel bir kusurun belirtisi sayar. Bu şık yanlıştır; doğru yanıt ise “Stres-diyatez modeli” şıkkıdır (s. 15).",
+      "D": "Şizofreni devresi, frontal korteks, anterior singulat, talamus, temporal lob alt bölgeleri ve serebellumdan oluşan işlevsel bir ağdır. Bu şık yanlıştır; doğru yanıt ise “Stres-diyatez modeli” şıkkıdır (s. 14).",
+      "E": "Genetik bir seyir özelliğini anlatır, bir etiyoloji modeli değildir. Bu şık yanlıştır; doğru yanıt ise “Stres-diyatez modeli” şıkkıdır (s. 12)."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Şizofreni birçok araştırmacı için kanser gibi ‘çoklu vuruş hastalığıdır"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b03",
+      "not:s6",
+      "hoca:hv-k2-15-03",
+      "hoca:hv-k2-15-06"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Şizofreni ve madde kullanımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Madde kullanımının nedenleri arasında negatif belirtiler vardır",
+      "B": "Madde kullanımının nedenleri arasında antipsikotik yan etkileri vardır",
+      "C": "Psikoz başlamadan önce esrar kötüye kullanımı normal topluma göre iki kat fazladır",
+      "D": "Uzunlamasına çalışmalarda risk 2-25 kat fazla bulunmuştur",
+      "E": "Hastalarda madde kullanma hızı sağlıklılardan düşüktür"
+     },
+     "dogru": "E",
+     "aciklama": "Bu ifade yanlıştır: şizofreni hastalarında madde kullanma hızı bir hayli yüksektir (OR=4). Yönün ters verilmesi tuzaktır; bu nedenle doğru yanıt budur (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: madde kullanımının nedenleri arasında anksiyete veya negatif belirtiler sayılır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Hastalarda madde kullanma hızı sağlıklılardan düşüktür” şıkkıdır (s. 10).",
+      "B": "Bu ifade doğrudur: antipsikotik ilaçların yan etkileri de madde kullanımının nedenleri arasındadır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Hastalarda madde kullanma hızı sağlıklılardan düşüktür” şıkkıdır (s. 10).",
+      "C": "Bu ifade doğrudur: psikoz başlamadan önce esrar kötüye kullanımı iki kat fazladır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Hastalarda madde kullanma hızı sağlıklılardan düşüktür” şıkkıdır (s. 10).",
+      "D": "Bu ifade doğrudur: İsveç, Hollanda, Yeni Zelanda ve İsrail'deki uzunlamasına çalışmalar riskin 2-25 kat fazla olduğunu göstermiştir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Hastalarda madde kullanma hızı sağlıklılardan düşüktür” şıkkıdır (s. 10).",
+      "E": "Bu ifade yanlıştır: şizofreni hastalarında madde kullanma hızı bir hayli yüksektir (OR=4). Yönün ters verilmesi tuzaktır; bu nedenle doğru yanıt budur (s. 10)."
+     },
+     "bilgi": [
+      32,
+      33,
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Şizofreni hastalarında madde kullanma hızı bir hayli yüksektir"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b03"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q19",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Şizofreninin doğum mevsimi ve doğum öncesi etkenleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kış mevsiminde doğanlarda görece daha yüksek sıklıkla görülür",
+      "B": "Yaz doğumlarında risk belirgin biçimde artar",
+      "C": "Hipoksi-iskemi ve erken doğum gebelik komplikasyonları arasındadır",
+      "D": "Görece risk artışı yaklaşık %10 düzeyinde küçük bir farktır",
+      "E": "İkinci trimesterde influenza gibi enfeksiyonlar etkili olabilir"
+     },
+     "dogru": "B",
+     "aciklama": "Bu ifade yanlıştır: risk artışı kış mevsiminde doğanlarda görülür. Doğum mevsimi etkisi yönü ters verilerek sık sorulan bir tuzaktır; bu nedenle doğru yanıt budur (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: kış mevsiminde doğanlarda şizofreni görece daha sık görülür. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Yaz doğumlarında risk belirgin biçimde artar” şıkkıdır (s. 8).",
+      "B": "Bu ifade yanlıştır: risk artışı kış mevsiminde doğanlarda görülür. Doğum mevsimi etkisi yönü ters verilerek sık sorulan bir tuzaktır; bu nedenle doğru yanıt budur (s. 8).",
+      "C": "Bu ifade doğrudur: hipoksi-iskemi, fötal gelişme geriliği ve erken doğum gebelik ve doğum komplikasyonları arasında sayılır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Yaz doğumlarında risk belirgin biçimde artar” şıkkıdır (s. 7).",
+      "D": "Bu ifade doğrudur: kış doğumunun oluşturduğu fark yaklaşık yüzde ondur ve küçüktür. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Yaz doğumlarında risk belirgin biçimde artar” şıkkıdır (s. 8).",
+      "E": "Bu ifade doğrudur: kış doğumunun açıklamalarından biri ikinci trimesterde influenza gibi enfeksiyonların etkisidir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Yaz doğumlarında risk belirgin biçimde artar” şıkkıdır (s. 8)."
+     },
+     "bilgi": [
+      25,
+      26,
+      27,
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Kış mevsiminde doğanlarda görece daha yüksek sıklıkla görülmektedir"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b03",
+      "hoca:hv-k2-15-07"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q20",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Şizofreni için ileri ebeveyn yaşı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İleri baba yaşının kadınlarda riski artırdığına dair bulgular vardır",
+      "B": "İleri ebeveyn yaşından ilk kez Kanada'daki Ontario Hastanesi'nde söz edilmiştir",
+      "C": "İleri baba yaşı toplum tabanlı araştırmalarda risk etkeni olarak bildirilmiştir",
+      "D": "Genç ebeveyn yaşı risk etkeni olarak tanımlanmıştır",
+      "E": "Ebeveyn yaşı psikososyal etkenler başlığında ele alınır"
+     },
+     "dogru": "D",
+     "aciklama": "Bu ifade yanlıştır: risk etkeni olarak tanımlanan durum ileri ebeveyn yaşıdır. Yaş yönünün ters verilmesi sık yapılan bir hatadır; bu nedenle doğru yanıt budur (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: ileri baba yaşının şizofreni riskini kadınlarda artırdığına dair bulgular sunulmuştur. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Genç ebeveyn yaşı risk etkeni olarak tanımlanmıştır” şıkkıdır (s. 9).",
+      "B": "Bu ifade doğrudur: ileri ebeveyn yaşından ilk kez Kanada'daki Ontario Hastanesi'nde (Gregory 1959) söz edilmiştir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Genç ebeveyn yaşı risk etkeni olarak tanımlanmıştır” şıkkıdır (s. 9).",
+      "C": "Bu ifade doğrudur: Danimarka, İsrail, İsveç ve ABD'deki toplum tabanlı araştırmalarda ileri baba yaşı risk etkeni olarak verilmiştir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Genç ebeveyn yaşı risk etkeni olarak tanımlanmıştır” şıkkıdır (s. 9).",
+      "D": "Bu ifade yanlıştır: risk etkeni olarak tanımlanan durum ileri ebeveyn yaşıdır. Yaş yönünün ters verilmesi sık yapılan bir hatadır; bu nedenle doğru yanıt budur (s. 9).",
+      "E": "Bu ifade doğrudur: ebeveyn yaşı, psikososyal etkenler başlığı altında incelenir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Genç ebeveyn yaşı risk etkeni olarak tanımlanmıştır” şıkkıdır (s. 9)."
+     },
+     "bilgi": [
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "İleri baba yaşı risk faktörü olarak verilmiştir"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b03"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q68",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Stres-diyatez modeli ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Aile öyküsü, hastalıktan şüphelenmeyi kolaylaştıran bir bilgidir",
+      "B": "Genetik yatkınlığı olan her bireyde hastalık, diğer etmenlerden bağımsız olarak kendiliğinden gelişir",
+      "C": "Genetik yatkınlık, hastalık için gerekli zemini oluşturur",
+      "D": "Hastalık, yatkın bireyde diğer etmenler devreye girince ortaya çıkar",
+      "E": "Stres, yatkın bireyde hastalığı başlatan etmenlerden biri olabilir"
+     },
+     "dogru": "B",
+     "aciklama": "Genetik yatkınlığı olan her bireyde hastalık kendiliğinden gelişmez; hastalık ancak diğer etmenler devreye girince ortaya çıkar. Bu ifade modelin tam tersini söylediği için yanlıştır ve sorunun yanıtıdır (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Aile öyküsü genetik yatkınlığın klinikteki işaretidir ve genç yaşta başlayan davranış değişikliğinde tanıyı düşündürür. Bu ifade modelle uyumlu olduğundan doğrudur (s. 6).",
+      "B": "Genetik yatkınlığı olan her bireyde hastalık kendiliğinden gelişmez; hastalık ancak diğer etmenler devreye girince ortaya çıkar. Bu ifade modelin tam tersini söylediği için yanlıştır ve sorunun yanıtıdır (s. 6).",
+      "C": "Diyatez, bireyin genetik olarak hastalığa yatkın olmasıdır ve modelin ilk basamağıdır. Yatkınlığın zemin hazırlaması modelle uyumludur; bu nedenle şık doğrudur (s. 6).",
+      "D": "Modelde yatkınlık tek başına yeterli değildir, hastalık diğer etmenlerin katılmasıyla ortaya çıkar. Bu ifade modelin özünü verdiği için doğrudur (s. 6).",
+      "E": "Stres, yatkın bireyi hastalığa iten çevresel etmenlerden biridir ve modele adını verir. Bu ifade modelle uyumlu olduğundan doğrudur (s. 6)."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Genetik yatkınlığı olan bireylerde hastalık ancak diğer etmenler devreye girdiğinde ortaya çıkar"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-03"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q69",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Şizofreninin birçok araştırmacı tarafından kanser gibi 'çoklu vuruş hastalığı' olarak tanımlanması neyi ifade eder?",
+     "secenekler": {
+      "A": "Hastalığın nedeninin belirlendikten sonra tek bir etmene bağlanabildiğini",
+      "B": "Hastalığın yalnızca tek bir kalıtsal nedene bağlı olduğunu",
+      "C": "Hastalığın tedaviyle tamamen ortadan kalktığını",
+      "D": "Hastalığın birden çok etmenin birbirine eklenmesiyle ortaya çıktığını",
+      "E": "Hastalığın yalnızca çocuklukta başladığını"
+     },
+     "dogru": "D",
+     "aciklama": "Kanserde olduğu gibi şizofrenide de tek bir etmen yetmez, genetik yatkınlık ile çevresel etmenler art arda eklenir. Bu nedenle hastalık çok etmenli kabul edilir ve doğru yanıt budur (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Hastalık ortaya çıktıktan sonra tek bir nedene bağlanamaz, çünkü birden çok etmen rol oynar. Bu şık çoklu vuruş fikrinin tam tersini söylediği için yanlıştır (s. 6).",
+      "B": "Tek bir kalıtsal neden, yalnızca tek gen hastalıklarında geçerli olan bir yaklaşımdır. Şizofrenide kalıtım yüzdeleri yüksek olsa da tek başına yeterli değildir; bu nedenle şık yanlıştır (s. 6).",
+      "C": "Tedaviyle tam iyileşme, hastalığın gidişiyle ilgili bir kavramdır ve etiyolojiyi anlatmaz. Çoklu vuruş ifadesi nedenlerle ilgilidir; bu yüzden şık yanlıştır (s. 6).",
+      "D": "Kanserde olduğu gibi şizofrenide de tek bir etmen yetmez, genetik yatkınlık ile çevresel etmenler art arda eklenir. Bu nedenle hastalık çok etmenli kabul edilir ve doğru yanıt budur (s. 6).",
+      "E": "Başlangıç yaşı epidemiyolojiyle ilgilidir ve şizofreni genellikle 25 yaşından önce başlar. Çoklu vuruş ifadesi başlangıç yaşını değil nedenleri anlatır; bu yüzden şık yanlıştır (s. 6)."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Şizofreni birçok araştırmacı için kanser gibi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-06"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q18",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kentsel yaşam ve göçün şizofreni riski üzerindeki etkisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kentsel bölgelerde doğanlarda risk değişmemiştir",
+      "B": "Hastalıktan önce kentsel yaşamı seçmek riski 1,5 kat artırır",
+      "C": "Göçle ilişkili etkenler arasında vitamin yetmezlikleri vardır",
+      "D": "Göçle ilişkili etkenler arasında ayrımcılık vardır",
+      "E": "Göç topluluklarında risk 2,7 kat artmıştır"
+     },
+     "dogru": "A",
+     "aciklama": "Bu ifade yanlıştır: kentsel bölgelerde doğanlarda riskin 2-4 kat yüksek olduğu gösterilmiştir. Etkiyi yok sayan ifade bilgiyle çelişir; bu nedenle doğru yanıt budur (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade yanlıştır: kentsel bölgelerde doğanlarda riskin 2-4 kat yüksek olduğu gösterilmiştir. Etkiyi yok sayan ifade bilgiyle çelişir; bu nedenle doğru yanıt budur (s. 11).",
+      "B": "Bu ifade doğrudur: hastalık ortaya çıkmadan önce seçilen kentsel yaşamın riski 1,5 kat artırdığı gösterilmiştir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Kentsel bölgelerde doğanlarda risk değişmemiştir” şıkkıdır (s. 11).",
+      "C": "Bu ifade doğrudur: vitamin yetmezlikleri göç riskiyle ilişkili etkenler arasında sayılır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Kentsel bölgelerde doğanlarda risk değişmemiştir” şıkkıdır (s. 11).",
+      "D": "Bu ifade doğrudur: ayrımcılık, göç riskiyle ilişkili etkenler arasında sayılır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Kentsel bölgelerde doğanlarda risk değişmemiştir” şıkkıdır (s. 11).",
+      "E": "Bu ifade doğrudur: birçok çalışmada göç topluluklarında riskin 2,7 kat arttığı gösterilmiştir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Kentsel bölgelerde doğanlarda risk değişmemiştir” şıkkıdır (s. 11)."
+     },
+     "bilgi": [
+      35,
+      36,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Kentsel bölgelerde doğanlarda riskin 2-4 kat yüksek olduğu gösterilmiştir"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b03"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q71",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Şizofrenin psikososyal risk etkenleri için aşağıdaki öncüllerden hangileri doğrudur?\nI. Fötal gelişme geriliği\nII. Çocukluk çağı örselenme yaşantıları\nIII. Kış mevsiminde doğum\nIV. Yaz mevsiminde doğumda belirgin risk artışı",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Fötal gelişme geriliği, çocukluk çağı örselenmesi ve kış doğumu birer psikososyal risk etkenidir. Yaz doğumunda ise belirgin bir risk artışı bildirilmemiştir; bu nedenle doğru yanıt budur (s. 7, 8, 10).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I, gebelik komplikasyonlarını doğru verir ama diğer iki etkeni dışarıda bırakır. Çocukluk çağı örselenmesi ve kış doğumu da risk etkenidir; bu nedenle şık eksiktir (s. 7, 8, 10).",
+      "B": "I ve II doğrudur, fakat kış mevsiminde doğum da görece yüksek sıklıkla ilişkilidir. Bu nedenle III dışarıda kalmıştır ve şık eksiktir (s. 8).",
+      "C": "Fötal gelişme geriliği, çocukluk çağı örselenmesi ve kış doğumu birer psikososyal risk etkenidir. Yaz doğumunda ise belirgin bir risk artışı bildirilmemiştir; bu nedenle doğru yanıt budur (s. 7, 8, 10).",
+      "D": "Kış doğumu ve çocukluk çağı örselenmesi doğrudur, ancak IV yanlıştır. Risk artışı yaz değil kış doğumlarında görülür; bu nedenle şık yanlıştır (s. 8).",
+      "E": "IV numaralı öncül doğum mevsimi bilgisini tersine çevirir. Risk yaz doğumlarında değil kış doğumlarında artmıştır ve fark yaklaşık %10 gibi küçük düzeydedir; bu nedenle şık yanlıştır (s. 8)."
+     },
+     "bilgi": [
+      24,
+      25,
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Kış mevsiminde doğanlarda görece daha yüksek"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-07"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Şizofreninin kalıtımsal ve biyolojik etiyolojisini (kalıtım yüzdeleri, beyin yapısı, işlevsel devreler, nöropatoloji, dopamin ve glutamat) açıklar.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "İki ebeveyni de şizofreni hastası olan çocuklarda yaşam boyu risk en çok hangi düzeye kadar yükselir?",
+     "secenekler": {
+      "A": "%5-6",
+      "B": "%10",
+      "C": "%17",
+      "D": "%14",
+      "E": "%47"
+     },
+     "dogru": "E",
+     "aciklama": "İki ebeveyn hastaysa yaşam boyu risk yüzde kırk yediye kadar yükselir. Sorudaki iki ebeveyn koşulu bu sayıyı verir; bu nedenle doğru yanıt budur (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Yüzde beş ile altı, yalnızca bir ebeveyn hasta olduğunda verilen risk düzeyidir. Bu nedenle bu şık yanlıştır; doğru yanıt ise “%47” şıkkıdır (s. 12).",
+      "B": "İki ebeveynin birlikte hasta olması ortalamanın çok üzerine çıkarır. Bu şık yanlıştır; doğru yanıt ise sorulan bilgiyi veren “%47” şıkkıdır (s. 12).",
+      "C": "Yüzde on yedi, bir çocuk ve bir ebeveyn hasta olduğunda ve evlat edinme çalışmalarında bildirilen orandır. Bu şık yanlıştır; doğru yanıt ise “%47” şıkkıdır (s. 12).",
+      "D": "Ebeveyn hastalığına bağlı risk değil, ikiz çalışmasının bir sonucudur. Bu nedenle yanlıştır; doğru yanıt ise sorulan bilgiyi veren “%47” şıkkıdır (s. 12).",
+      "E": "İki ebeveyn hastaysa yaşam boyu risk yüzde kırk yediye kadar yükselir. Sorudaki iki ebeveyn koşulu bu sayıyı verir; bu nedenle doğru yanıt budur (s. 12)."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "iki ebeveyn varsa %47'e kadar yükselmektedir"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b04"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q13",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Hipofrontalite şizofrenide aşağıdaki belirti gruplarından hangisi ile ilişkilidir?",
+     "secenekler": {
+      "A": "Acayip davranışlar",
+      "B": "Negatif belirtiler",
+      "C": "Sanrılar",
+      "D": "Enkoherans",
+      "E": "Varsanılar"
+     },
+     "dogru": "B",
+     "aciklama": "Hipofrontalite, frontal korteks işlevinin azalmasıdır ve negatif belirtilerle ilişkilidir. Bu şık ilişkiyi doğru verir; bu nedenle doğru yanıt budur (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Acayip veya dezorganize davranışlar pozitif belirtiler arasında sayılır. Hipofrontalite ile eşleşen grup negatif belirtilerdir ve bu şık yanlıştır; doğru yanıt ise “Negatif belirtiler” şıkkıdır (s. 23).",
+      "B": "Hipofrontalite, frontal korteks işlevinin azalmasıdır ve negatif belirtilerle ilişkilidir. Bu şık ilişkiyi doğru verir; bu nedenle doğru yanıt budur (s. 14).",
+      "C": "Sanrılar, gerçeği değerlendirmenin bozulmasını gösteren pozitif belirtilerdir ve hiperdopaminerjik durumla ilişkilendirilir. Hipofrontalitenin eşleştiği grup negatif belirtiler olduğundan bu şık yanlıştır; doğru yanıt ise “Negatif belirtiler” şıkkıdır (s. 16).",
+      "D": "Enkoherans, pozitif formel düşünce bozukluğu içinde yer alan bir pozitif belirtidir. Hipofrontalite negatif belirtilerle eşleştiği için bu şık yanlıştır; doğru yanıt ise “Negatif belirtiler” şıkkıdır (s. 23).",
+      "E": "Varsanılar pozitif belirtiler arasındadır ve hiperdopaminerjik durumla birlikte anılır. Bu şık yanlıştır; doğru yanıt ise “Negatif belirtiler” şıkkıdır (s. 23)."
+     },
+     "bilgi": [
+      48
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Hipofrontalite – negatif belirtilerle ilişkilidir."
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b07",
+      "hoca:hv-k2-15-15"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kuşaklar boyunca hastalığın daha erken ve daha şiddetli başlaması aşağıdakilerden hangisi ile adlandırılır?",
+     "secenekler": {
+      "A": "Hipofrontalite",
+      "B": "Antisipasyon",
+      "C": "Nörogelişimsel kusur",
+      "D": "Çoklu vuruş",
+      "E": "Epigenetik mekanizma"
+     },
+     "dogru": "B",
+     "aciklama": "Antisipasyon, bir hastalığın kuşaktan kuşağa daha erken yaşta ve daha şiddetli başlamasıdır. Soru bu tanımı verdiğinden doğru yanıt budur (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Hipofrontalite, frontal korteks işlevinin azalmasıdır ve negatif belirtilerle ilişkilidir. Bu yüzden yanlıştır; doğru yanıt ise sorulan bilgiyi veren “Antisipasyon” şıkkıdır (s. 14).",
+      "B": "Antisipasyon, bir hastalığın kuşaktan kuşağa daha erken yaşta ve daha şiddetli başlamasıdır. Soru bu tanımı verdiğinden doğru yanıt budur (s. 12).",
+      "C": "Nörogelişimsel kusur kuramı, gebelik ve doğum komplikasyonlarının, minör fiziksel anomalilerin ve görüntüleme bulgularının gelişimsel bir bozukluğa işaret ettiğini söyler. Bu şık yanlıştır; doğru yanıt ise “Antisipasyon” şıkkıdır (s. 15).",
+      "D": "Çoklu vuruş, genetik yatkınlık üzerine başka etmenlerin eklenmesiyle hastalığın ortaya çıkmasını anlatan stres-diyatez benzetmesidir. Bu şık yanlıştır; doğru yanıt ise “Antisipasyon” şıkkıdır (s. 6).",
+      "E": "Epigenetik mekanizmalar, göç riskiyle ilişkili etkenler arasında sayılır ve genin ifadesini çevre etkileriyle değiştirir. Bu şık yanlıştır; doğru yanıt ise “Antisipasyon” şıkkıdır (s. 11)."
+     },
+     "bilgi": [
+      43
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Antisipasyon: kuşaklar boyunca daha erken ve şiddetli başlangıç"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b04",
+      "not:s12"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Şizofreninin beyindeki yapısal bulguları ile ilgili aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Ventriküler genişleme",
+      "B": "Sulkuslarda genişleme",
+      "C": "Talamus ve temporal loblarda yapısal bozukluk",
+      "D": "Frontal kortekste incelme",
+      "E": "Frontal kortekste kalınlaşma"
+     },
+     "dogru": "E",
+     "aciklama": "Şizofrenide frontal kortekste incelme ve beyin ile kafa içi hacminde küçüklük görülür. Soru beklenmeyen bulguyu sorduğundan doğru yanıt budur (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Kötü hastalık öncesi uyum, negatif belirtiler, tedaviye kötü yanıt ve bilişsel kayıplarla birlikte anılır. Beklenen bir bulgu olduğundan bu şık yanlıştır; yanlış olan ifade ise “Frontal kortekste kalınlaşma” şıkkıdır (s. 13).",
+      "B": "Sulkuslarda genişleme şizofrenide görülen yapısal bir bulgudur ve beyin dokusunun azaldığını gösterir. Beklenen bir bulgu olduğundan bu şık yanlıştır; yanlış olan ifade ise “Frontal kortekste kalınlaşma” şıkkıdır (s. 13).",
+      "C": "Alt bölgeler olarak talamus, amigdala ve hipokampus, temporal loblar ile bazal ganglionlarda yapısal bozukluk bildirilir. Beklenen bir bulgu olduğundan bu şık yanlıştır; yanlış olan ifade ise “Frontal kortekste kalınlaşma” şıkkıdır (s. 13).",
+      "D": "Frontal kortekste incelme şizofreninin yapısal bulgularındandır ve işlevsel olarak hipofrontalite ile uyumludur. Beklenen bir bulgu olduğundan bu şık yanlıştır; yanlış olan ifade ise “Frontal kortekste kalınlaşma” şıkkıdır (s. 13).",
+      "E": "Şizofrenide frontal kortekste incelme ve beyin ile kafa içi hacminde küçüklük görülür. Soru beklenmeyen bulguyu sorduğundan doğru yanıt budur (s. 13)."
+     },
+     "bilgi": [
+      44,
+      45,
+      46,
+      47
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Frontal kortekste incelme, beyin ve kafaiçi hacminin küçüklüğü"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b05",
+      "hoca:hv-k2-15-15"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Fonksiyonel nörogörüntülemede şizofreni için bozukluk bildirilen ve prefrontal korteksin alt bölgesi olan yapı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Serebellum",
+      "B": "Hipokampus",
+      "C": "Talamus",
+      "D": "Dorsolateral prefrontal korteks",
+      "E": "Anterior singulat"
+     },
+     "dogru": "D",
+     "aciklama": "Dorsolateral prefrontal korteks, prefrontal korteksin bir alt bölgesidir ve işlevsel nörogörüntülemede şizofrenide bozukluk bildirilen bölgedir. Soru bu alt bölgeyi sorar; bu nedenle doğru yanıt budur (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Serebellum, şizofreni devresinde sayılan yapılardan biridir. Prefrontal korteksin bir alt bölgesi olmadığı için bu şık yanlıştır; doğru yanıt ise “Dorsolateral prefrontal korteks” şıkkıdır (s. 14).",
+      "B": "Hipokampus, yapısal bozukluk bildirilen alt bölgeler ve nöropatoloji bulgularında anılır; azalmış sinaps ve dendritler içerir. Prefrontal korteksin alt bölgesi değildir ve bu şık yanlıştır; doğru yanıt ise “Dorsolateral prefrontal korteks” şıkkıdır (s. 15).",
+      "C": "Talamus, şizofreni devresinde yer alan ve duyuların işlenmesinde rol oynayan bir yapıdır. Frontal bir yapı olmadığı için soruya uymaz ve yanlıştır; doğru yanıt ise “Dorsolateral prefrontal korteks” şıkkıdır (s. 14).",
+      "D": "Dorsolateral prefrontal korteks, prefrontal korteksin bir alt bölgesidir ve işlevsel nörogörüntülemede şizofrenide bozukluk bildirilen bölgedir. Soru bu alt bölgeyi sorar; bu nedenle doğru yanıt budur (s. 14).",
+      "E": "Anterior singulat, şizofreni devresinin parçalarından biridir ama prefrontal korteksin alt bölgesi olarak anılmaz. Soru prefrontal korteksin alt bölgesini sorduğundan bu şık yanlıştır; doğru yanıt ise “Dorsolateral prefrontal korteks” şıkkıdır (s. 14)."
+     },
+     "bilgi": [
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Prefrontal korteks ve onun bir alt bölgesi olan dorsolateral prefrontal korteks"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b07"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q14",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Şizofreninin nöropatolojik bulguları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gliozisin olmaması nörogelişimsel kusur kuramıyla uyumludur",
+      "B": "Hipokampusta sinaps ve dendritler azalmıştır",
+      "C": "Dorsal talamusta nöron sayısı azalmıştır",
+      "D": "Küçük kortikal ve hipokampal nöronlar bulunur",
+      "E": "Beyin dokusunda belirgin gliozis saptanır"
+     },
+     "dogru": "E",
+     "aciklama": "Bu ifade yanlıştır: şizofrenide gliozis yoktur. Gliozisin olmaması hasarın doğum sonrası bir süreçten çok gelişimsel bir kusura bağlı olduğunu düşündürür ve nörogelişimsel kusur kuramıyla uyumludur; bu nedenle doğru yanıt budur (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: gliozisin olmaması nörogelişimsel kusur kuramıyla uyumludur. Yanlış ifade arandığı için bu şık doğru yanıt değildir; yanlış olan ifade ise “Beyin dokusunda belirgin gliozis saptanır” şıkkıdır (s. 15).",
+      "B": "Bu ifade doğrudur: hipokampusta azalmış sinaps ve dendritler vardır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Beyin dokusunda belirgin gliozis saptanır” şıkkıdır (s. 15).",
+      "C": "Bu ifade doğrudur: dorsal talamusta daha az sayıda nöron bulunur. Yanlış ifade arandığı için bu şık doğru yanıt değildir; yanlış olan ifade ise “Beyin dokusunda belirgin gliozis saptanır” şıkkıdır (s. 15).",
+      "D": "Bu ifade doğrudur: nöropatolojide küçük kortikal ve hipokampal nöronlar saptanır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Beyin dokusunda belirgin gliozis saptanır” şıkkıdır (s. 15).",
+      "E": "Bu ifade yanlıştır: şizofrenide gliozis yoktur. Gliozisin olmaması hasarın doğum sonrası bir süreçten çok gelişimsel bir kusura bağlı olduğunu düşündürür ve nörogelişimsel kusur kuramıyla uyumludur; bu nedenle doğru yanıt budur (s. 15)."
+     },
+     "bilgi": [
+      51,
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Hipokampusta azalmış sinaps ve dendritler Gliozisin olmaması"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b08"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "D2 reseptör blokajı yapan ilaçların etkisini ve amfetaminin psikoz benzeri etkisini açıklamak için öne sürülen hipotez aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Dopamin hipotezi",
+      "B": "Stres-diyatez modeli",
+      "C": "Nörogelişimsel kusur kuramı",
+      "D": "Şizofreni devresi",
+      "E": "Glutamat hipotezi"
+     },
+     "dogru": "A",
+     "aciklama": "Dopamin hipotezi, dopamin sisteminin hiperaktivitesini temel alır ve D2 blokajı yapan ilaçlar ile amfetamin etkisini açıklar. Soru bu bilgiyi sorduğundan fensiklidin örneğinde doğru yanıt budur (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Dopamin hipotezi, dopamin sisteminin hiperaktivitesini temel alır ve D2 blokajı yapan ilaçlar ile amfetamin etkisini açıklar. Soru bu bilgiyi sorduğundan fensiklidin örneğinde doğru yanıt budur (s. 16).",
+      "B": "Stres-diyatez modeli, genetik yatkınlıkla çevresel etmenlerin birleşmesine odaklanır. İlaç etkilerini açıklamaya çalışmadığı için bu şık yanlıştır; doğru yanıt ise “Dopamin hipotezi” şıkkıdır (s. 6).",
+      "C": "Nörogelişimsel kusur kuramı, gebelik ve doğum komplikasyonları ile minör fiziksel anomalilere dayanır. İlaç etkilerine dayalı bir hipotez olmadığından bu şık yanlıştır; doğru yanıt ise “Dopamin hipotezi” şıkkıdır (s. 15).",
+      "D": "Şizofreni devresi, frontal korteks, anterior singulat, talamus, temporal lob ve serebellumdan oluşan bir görüntüleme kavramıdır. İlaç etkisini açıklayan bir hipotez olmadığı için bu şık yanlıştır; doğru yanıt ise “Dopamin hipotezi” şıkkıdır (s. 14).",
+      "E": "Glutamat hipotezi, fensiklidinin glutamat sistemi üzerinden şizofreni benzeri belirtiler oluşturmasına dayanır. Bu şık yanlıştır; doğru yanıt ise “Dopamin hipotezi” şıkkıdır (s. 16)."
+     },
+     "bilgi": [
+      54
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Dopamin Hipotezi; Dopamin sistemi hiperaktivitesi – D2 blokajı yapan ilaçlar, amfetamin etkisi"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b08"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q06",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Şizofreninin kalıtım çalışmaları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dizigot ikizlerde uyum oranı monozigot ikizlerden yüksektir",
+      "B": "İki ebeveyni hasta olan çocukta risk %47'ye kadar yükselir",
+      "C": "Hasta ebeveynin çocuklarında yaşam boyu risk ortalama %10'dur",
+      "D": "Ailede hasta birey sayısı arttıkça risk artar",
+      "E": "Evlat edinme çalışmalarında oran %17 bulunmuştur"
+     },
+     "dogru": "A",
+     "aciklama": "Bu ifade yanlıştır: monozigot ikizlerde uyum yüzde kırk altı, dizigot ikizlerde yüzde ondört bulunmuştur. Yönün tersine çevrilmesi tuzaktır; bu nedenle doğru yanıt budur (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade yanlıştır: monozigot ikizlerde uyum yüzde kırk altı, dizigot ikizlerde yüzde ondört bulunmuştur. Yönün tersine çevrilmesi tuzaktır; bu nedenle doğru yanıt budur (s. 12).",
+      "B": "Bu ifade doğrudur: iki ebeveyn hastaysa risk yüzde kırk yediye kadar yükselir. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Dizigot ikizlerde uyum oranı monozigot ikizlerden yüksektir” şıkkıdır (s. 12).",
+      "C": "Bu ifade doğrudur: aile çalışmalarında şizofreni hastalarının çocuklarında yaşam boyu risk ortalama yüzde ondur. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Dizigot ikizlerde uyum oranı monozigot ikizlerden yüksektir” şıkkıdır (s. 12).",
+      "D": "Bu ifade doğrudur: ailede hasta birey sayısı arttıkça risk de artar. Yanlış ifade arandığı için bu şık doğru yanıt değildir; yanlış olan ifade ise “Dizigot ikizlerde uyum oranı monozigot ikizlerden yüksektir” şıkkıdır (s. 12).",
+      "E": "Bu ifade doğrudur: evlat edinme çalışmalarında oran yüzde on yedidir. Yanlış ifade arandığı için bu şık doğru yanıt değildir; yanlış olan ifade ise “Dizigot ikizlerde uyum oranı monozigot ikizlerden yüksektir” şıkkıdır (s. 12)."
+     },
+     "bilgi": [
+      39,
+      40,
+      41,
+      42
+     ],
+     "benzer_cikmis": [
+      "past-1790877040101-810624"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "İkiz çalışmaları: Monozigotlarda %46, Dizigotlarda %14"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b04"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q11",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Şizofrenide ventriküler genişleme ile birlikte bildirilen durumlar için aşağıdaki öncüllerden hangileri doğrudur?\nI. Kötü hastalık öncesi uyum\nII. Negatif belirtiler\nIII. Tedaviye iyi yanıt\nIV. Bilişsel kayıplar",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Ventriküler genişleme kötü hastalık öncesi uyum, negatif belirtiler, tedaviye kötü yanıt ve bilişsel kayıplarla birlikte görülür. Tedaviye iyi yanıt öncülü ise ters olduğu için dışarıda kalır; bu nedenle doğru yanıt budur (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I seçeneği eksiktir: kötü hastalık öncesi uyum ventriküler genişlemeyle birlikte görülür ama negatif belirtiler ve bilişsel kayıplar da bu gruptadır. Eksik kalan öncüller olduğundan yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 13).",
+      "B": "I ve II doğrudur ama eksiktir: bilişsel kayıplar da ventriküler genişlemeyle birlikte anılır. Eksik öncül bulunduğundan bu seçenek yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 13).",
+      "C": "Ventriküler genişleme kötü hastalık öncesi uyum, negatif belirtiler, tedaviye kötü yanıt ve bilişsel kayıplarla birlikte görülür. Tedaviye iyi yanıt öncülü ise ters olduğu için dışarıda kalır; bu nedenle doğru yanıt budur (s. 13).",
+      "D": "Bu seçenek tedaviye iyi yanıtı içerdiğinden yanlıştır: ventriküler genişlemede tedaviye yanıt kötüdür. Kötü hastalık öncesi uyum öncülü de eksik bırakılmıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 13).",
+      "E": "Bu seçenek yanlıştır, çünkü III numaralı öncül ters verilmiştir. Ventriküler genişleme tedaviye iyi değil, kötü yanıtla birlikte görülür; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 13)."
+     },
+     "bilgi": [
+      44
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Ventriküler genişleme; kötü hastalık öncesi uyum, negatif belirtiler, tedaviye kötü yanıt, bilişsel kayıplar"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b05"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q16",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Fensiklidinin şizofreni benzeri belirtiler oluşturmasında etkili olan nörotransmitter sistemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "GABA",
+      "B": "Noradrenalin",
+      "C": "Serotonin",
+      "D": "Glutamat",
+      "E": "Dopamin"
+     },
+     "dogru": "D",
+     "aciklama": "Bu gözlem glutamat iletimindeki işlev bozukluğunun şizofrenide rol oynayabileceğini düşündürür. Soru bu bilgiyi sorduğundan fensiklidin örneğinde doğru yanıt budur (s. 16).",
+     "sik_aciklamalari": {
+      "A": "GABA, serotonin ve noradrenalin gibi araştırılan diğer biyokimyasal etkenler arasında anılır. Fensiklidinin eşleştirildiği sistem glutamattır ve bu şık yanlıştır; doğru yanıt ise “Glutamat” şıkkıdır (s. 16).",
+      "B": "Noradrenalin, araştırılan diğer biyokimyasal etkenler arasındadır ama fensiklidinle ilişkilendirilen aktarıcı değildir. Bu şık yanlıştır; doğru yanıt ise “Glutamat” şıkkıdır (s. 16).",
+      "C": "Serotonin, araştırılan diğer biyokimyasal etkenler arasında sayılır ama fensiklidin ile eşleştirilmez. Fensiklidinin yolu glutamattır ve bu şık yanlıştır; doğru yanıt ise “Glutamat” şıkkıdır (s. 16).",
+      "D": "Bu gözlem glutamat iletimindeki işlev bozukluğunun şizofrenide rol oynayabileceğini düşündürür. Soru bu bilgiyi sorduğundan fensiklidin örneğinde doğru yanıt budur (s. 16).",
+      "E": "Dopamin, amfetamin etkisi ve D2 blokajı yapan ilaçlarla açıklanan hipotezin ana aktarıcısıdır. Bu şık yanlıştır; doğru yanıt ise “Glutamat” şıkkıdır (s. 16)."
+     },
+     "bilgi": [
+      57,
+      58
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Fensiklidin → GLUTAMAT → Şizofreni benzeri belirtiler."
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b08"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877040101-810624",
+     "soru": "Şizofrenide kalıtımın rolü için ne söylenebilir?",
+     "secenekler": {
+      "A": "Kalıtımın rolü olmayıp yalnızca dopamin teorisi geçerlidir.",
+      "B": "Aile öyküsü şizofrenide önemli değildir.",
+      "C": "Kalıtımın katkısı %1 düzeyindedir.",
+      "D": "Kalıtımın katkısı %1'den azdır.",
+      "E": "Aile öyküsü olanlarda hastalık riski %20'ye kadar çıkabilir."
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Şizofreni tanı ölçütlerini (A, B, C) uygular.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q30",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Şizofreni tanısı için gereken A ölçütündeki belirti sayısı ve süre aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Dört belirtiden en az üçü; bir aylık süre",
+      "B": "Beş belirtiden en az üçü; iki haftalık süre",
+      "C": "Beş belirtiden en az ikisi; altı aylık süre",
+      "D": "Beş belirtiden en az ikisi; bir aylık sürenin önemli bir kesimi",
+      "E": "Beş belirtiden en az biri; bir aylık süre"
+     },
+     "dogru": "D",
+     "aciklama": "A ölçütü beş belirtiden en az ikisini ve bunların bir aylık sürenin önemli bir kesiminde bulunmasını ister. Altı ay süre ise C ölçütüne aittir; bu nedenle doğru yanıt budur (s. 17).",
+     "sik_aciklamalari": {
+      "A": "A ölçütü beş belirtiden oluşur ve en az ikisi aranır. Dört belirti ve üçlü şart yanlış bir kurgudur; doğru yanıt ise “Beş belirtiden en az ikisi; bir aylık sürenin önemli bir kesimi” şıkkıdır (s. 17).",
+      "B": "A ölçütü en az iki belirtiyi ve bir aylık süreyi ister. İki hafta, şizoaffektif bozuklukta duygudurum belirtisi olmadan aranan psikoz süresidir; doğru yanıt ise “Beş belirtiden en az ikisi; bir aylık sürenin önemli bir kesimi” şıkkıdır (s. 43).",
+      "C": "Altı ay C ölçütünün süresidir ve süregiden bulgular için aranır. A ölçütündeki süre bir aydır, bu yüzden bu seçenek yanlıştır; doğru yanıt ise “Beş belirtiden en az ikisi; bir aylık sürenin önemli bir kesimi” şıkkıdır (s. 17).",
+      "D": "A ölçütü beş belirtiden en az ikisini ve bunların bir aylık sürenin önemli bir kesiminde bulunmasını ister. Altı ay süre ise C ölçütüne aittir; bu nedenle doğru yanıt budur (s. 17).",
+      "E": "Bu seçenekte gerekli belirti sayısı eksik verilmiştir: en az iki belirti gerekir. Tek belirti ile A ölçütü karşılanmaz; doğru yanıt ise “Beş belirtiden en az ikisi; bir aylık sürenin önemli bir kesimi” şıkkıdır (s. 17)."
+     },
+     "bilgi": [
+      59,
+      61
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "ikisinden (ya da daha çoğundan) her biri, bir aylık"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b10"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q28",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Şizofreni tanı ölçütlerinin A ölçütü ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Katatonik davranış belirtilerden biri olarak sayılır",
+      "B": "Belirtilerden en az biri darmadağın konuşma olabilir",
+      "C": "Belirtiler bir aylık sürenin önemli bir kesiminde bulunur",
+      "D": "Tanı için negatif belirtilerden en az birinin bulunması zorunludur",
+      "E": "Beş belirtiden en az ikisi bulunmalıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Bu ifade yanlıştır: A ölçütünde en az bir belirtinin sanrı, varsanı ya da darmadağın konuşma olması gerekir. Negatif belirti zorunlu değildir ve tek başına yetmez; bu nedenle doğru yanıt budur (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: ileri derecede dağınık davranış ya da katatonik davranış dördüncü belirtidir. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Tanı için negatif belirtilerden en az birinin bulunması zorunludur” şıkkıdır (s. 17).",
+      "B": "Bu ifade doğrudur: sanrı, varsanı ve darmadağın konuşmadan en az biri bulunmalıdır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Tanı için negatif belirtilerden en az birinin bulunması zorunludur” şıkkıdır (s. 17).",
+      "C": "Bu ifade doğrudur: belirtiler bir aylık (başarıyla tedavi edilmişse daha kısa) sürenin önemli bir kesiminde bulunur. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Tanı için negatif belirtilerden en az birinin bulunması zorunludur” şıkkıdır (s. 17).",
+      "D": "Bu ifade yanlıştır: A ölçütünde en az bir belirtinin sanrı, varsanı ya da darmadağın konuşma olması gerekir. Negatif belirti zorunlu değildir ve tek başına yetmez; bu nedenle doğru yanıt budur (s. 17).",
+      "E": "Bu ifade doğrudur: A ölçütü sanrı, varsanı, darmadağın konuşma, ileri derecede dağınık ya da katatonik davranış ve silik belirtilerden en az ikisini ister. Yanlış ifade arandığı için bu şık elenir (s. 17)."
+     },
+     "bilgi": [
+      59,
+      60,
+      61
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Bunlardan en az birinin (1), (2) ya da (3) olması gerekir."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b10"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q29",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Şizofreni tanısında A ölçütünün zorunlu kıldığı en az bir belirti aşağıdakilerden hangisinin arasından olmalıdır?",
+     "secenekler": {
+      "A": "Katatonik davranış",
+      "B": "Silik (negatif) belirtiler",
+      "C": "İleri derecede dağınık davranış",
+      "D": "Duygusal katılımda azalma",
+      "E": "Sanrı, varsanı ya da darmadağın konuşma"
+     },
+     "dogru": "E",
+     "aciklama": "A ölçütü, belirtilerden en az birinin (1), (2) ya da (3) olmasını ister: sanrılar, varsanılar ya da darmadağın konuşma. Bu şart, ağırlıkla silik belirtilerle tanı konmasını önler; bu nedenle doğru yanıt budur (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Katatonik davranış, dördüncü maddenin parçasıdır. Zorunlu belirti ilk üç maddeden olmalıdır, bu yüzden bu şık yanlıştır; doğru yanıt ise “Sanrı, varsanı ya da darmadağın konuşma” şıkkıdır (s. 17).",
+      "B": "Silik belirtiler A ölçütünün beşinci maddesidir ama zorunlu olan belirti değildir. Bu şık yanlıştır; doğru yanıt ise “Sanrı, varsanı ya da darmadağın konuşma” şıkkıdır (s. 17).",
+      "C": "İleri derecede dağınık davranış ya da katatonik davranış dördüncü maddedir. Zorunlu en az bir belirti ilk üç maddeden gelmelidir, bu yüzden yanlıştır; doğru yanıt ise “Sanrı, varsanı ya da darmadağın konuşma” şıkkıdır (s. 17).",
+      "D": "Duygusal katılımda azalma silik (negatif) belirtinin örneğidir ve beşinci maddede yer alır. Zorunlu en az bir belirti olarak sayılmadığından bu şık yanlıştır; doğru yanıt ise “Sanrı, varsanı ya da darmadağın konuşma” şıkkıdır (s. 17).",
+      "E": "A ölçütü, belirtilerden en az birinin (1), (2) ya da (3) olmasını ister: sanrılar, varsanılar ya da darmadağın konuşma. Bu şart, ağırlıkla silik belirtilerle tanı konmasını önler; bu nedenle doğru yanıt budur (s. 17)."
+     },
+     "bilgi": [
+      60
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Bunlardan en az birinin (1), (2) ya da (3) olması gerekir."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b10"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q31",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Şizofreni tanı ölçütlerinin B ve C ölçütleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "B ölçütü hastalık süresini, C ölçütü işlevselliği tanımlar",
+      "B": "B ölçütü işlevsellikte belirgin düşmeyi, C ölçütü süregiden bulguların en az altı ay sürmesini ister",
+      "C": "C ölçütü yalnızca tedavi görmemiş olgular için geçerlidir",
+      "D": "B ölçütü işlev kaybının hiçbir alanda aranmadığını belirtir",
+      "E": "C ölçütü süregiden bulguların en az üç ay sürmesini ister"
+     },
+     "dogru": "B",
+     "aciklama": "B ölçütü bir ya da birden çok ana alanda işlevselliğin hastalık öncesinin belirgin altında olmasıdır. Bu şık ikisini doğru birleştirir; bu nedenle doğru yanıt budur (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Ölçütler karıştırılmıştır: süre C ölçütünde, işlevsellik B ölçütünde yer alır. Bu şık yanlıştır; doğru yanıt ise “B ölçütü işlevsellikte belirgin düşmeyi, C ölçütü süregiden bulguların en az altı ay sürmesini” şıkkıdır (s. 17).",
+      "B": "B ölçütü bir ya da birden çok ana alanda işlevselliğin hastalık öncesinin belirgin altında olmasıdır. Bu şık ikisini doğru birleştirir; bu nedenle doğru yanıt budur (s. 17).",
+      "C": "C ölçütü, süregiden bulguların en az altı ay sürmesini ister ve tedavi öyküsüne göre değişmez. Bu şık yanlıştır; doğru yanıt ise “B ölçütü işlevsellikte belirgin düşmeyi, C ölçütü süregiden bulguların en az altı ay sürmesini” şıkkıdır (s. 17).",
+      "D": "B ölçütü, bir ya da birden çok ana alanda işlev düzeyinin belirgin düşmesini ister. Bu şık yanlıştır; doğru yanıt ise “B ölçütü işlevsellikte belirgin düşmeyi, C ölçütü süregiden bulguların en az altı ay sürmesini” şıkkıdır (s. 17).",
+      "E": "Üç ay şizofreniform bozukluk aralığındadır ve ölçüt değildir. Bu şık yanlıştır; doğru yanıt ise “B ölçütü işlevsellikte belirgin düşmeyi, C ölçütü süregiden bulguların en az altı ay sürmesini” şıkkıdır (s. 17)."
+     },
+     "bilgi": [
+      62,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "B. Bir ya da birden çok ana alanda işlevsellik düzeyi"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b10"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q23",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Otuz yaşında erkek hasta, sekiz aydır devam eden işitsel varsanı ve kendisini izlendiğine ilişkin yaygın, dağınık sanrılarla getiriliyor. Aynı dönemde işinden ayrılmış, sosyal ilişkilerini bırakmış ve kendi bakımını ihmal etmeye başlamıştır. En olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Şizofreni",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Şizofreniform bozukluk",
+      "D": "Kısa psikotik bozukluk",
+      "E": "Sanrılı bozukluk"
+     },
+     "dogru": "A",
+     "aciklama": "Şizofreni, A ölçütünde en az iki belirti, B ölçütünde belirgin işlev düşüşü ve C ölçütünde en az altı ay süre ister. Hasta üçünü de karşılar: varsanı ve sanrı, işlev kaybı, sekiz aylık süre (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Şizofreni, A ölçütünde en az iki belirti, B ölçütünde belirgin işlev düşüşü ve C ölçütünde en az altı ay süre ister. Hasta üçünü de karşılar: varsanı ve sanrı, işlev kaybı, sekiz aylık süre (s. 17).",
+      "B": "Şizoaffektif bozukluk için duygudurum belirtileri de tabloda bulunmalıdır. Hastada duygudurum belirtisi tarif edilmediği için bu tanı düşünülmez; doğru yanıt ise “Şizofreni” şıkkıdır (s. 43).",
+      "C": "Şizofreniform bozukluk, belirtilerin altı aydan kısa sürdüğü durumda konur. Hastada süre sekiz ay olduğundan bu tanı yanlıştır; doğru yanıt ise “Şizofreni” şıkkıdır (s. 47).",
+      "D": "Kısa psikotik bozukluk en çok bir aya kadar süren tablodur ve sonunda tam iyileşme beklenir. Sekiz aylık süre ve işlev kaybı bu tanıyla uyuşmaz; doğru yanıt ise “Şizofreni” şıkkıdır (s. 46).",
+      "E": "Sanrılı bozuklukta işlevsellik korunur, sanrı tek alana odaklıdır ve sistematizedir. Bu hastada yaygın sanrı, varsanı ve belirgin işlev kaybı bulunduğundan yanlıştır; doğru yanıt ise “Şizofreni” şıkkıdır (s. 40)."
+     },
+     "bilgi": [
+      59,
+      62,
+      63
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-77"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "C. Bu bozukluğun süregiden bulguları en az altı ay sürer."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b10"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q32",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Şizofreni tanı ölçütü A'daki belirtilerden hangileri, tek başına yer aldığında zorunlu en az bir belirtiyi karşılar?\nI. Sanrılar\nII. Darmadağın konuşma\nIII. Silik (negatif) belirtiler\nIV. Katatonik davranış",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Zorunlu en az bir belirti ilk üç maddeden gelir: sanrılar, varsanılar ve darmadağın konuşma. I ve II bunlardandır, silik belirtiler ve katatonik davranış ise bu grupta yoktur; bu nedenle doğru yanıt budur (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Sanrılar zorunlu belirti grubundadır ama darmadağın konuşma da aynı gruptadır. Yalnız I seçeneği eksiktir; doğru yanıt ise “I ve II” şıkkıdır (s. 17).",
+      "B": "Zorunlu en az bir belirti ilk üç maddeden gelir: sanrılar, varsanılar ve darmadağın konuşma. I ve II bunlardandır, silik belirtiler ve katatonik davranış ise bu grupta yoktur; bu nedenle doğru yanıt budur (s. 17).",
+      "C": "Silik belirtiler zorunlu belirti grubunda değildir. Bu seçenek III'ü içerdiği ve II'yi dışarıda bıraktığı için yanlıştır; doğru yanıt ise “I ve II” şıkkıdır (s. 17).",
+      "D": "Katatonik davranış dördüncü maddedir ve zorunlu grupta değildir. Bu seçenek IV'ü içerdiği ve sanrıyı dışarıda bıraktığı için yanlıştır; doğru yanıt ise “I ve II” şıkkıdır (s. 17).",
+      "E": "Bu seçenek silik belirtileri ve katatonik davranışı da zorunlu gruba katar. Zorunlu grup yalnızca ilk üç maddedir, bu yüzden seçenek yanlıştır; doğru yanıt ise “I ve II” şıkkıdır (s. 17)."
+     },
+     "bilgi": [
+      60,
+      61
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Bunlardan en az birinin (1), (2) ya da (3) olması gerekir."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b10"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-77",
+     "soru": "Şizofreni hastalığı hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Şizofreni etyolojisinde dopamin sistem hiperaktivitesi görülmüştür.",
+      "B": "Pozitif formel düşünce bozukluğu pozitif belirti bulgularındandır.",
+      "C": "Şizofreni hastalarının nörogörüntülemesinde dorsolateral prefrontal kortekste işlev bozukluğuna rastlanmıştır.",
+      "D": "Şizofreni tanısında süregiden bulgular en az üç ay sürer.",
+      "E": "Ayırıcı tanıda stimülan madde kullanımı benzer bulgular oluşturur."
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Süreye göre şizofreni, şizofreniform ve kısa psikotik bozukluğu ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q27",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Psikotik belirtilerin süresi 1 günden uzun ve 4 haftadan kısa ise aşağıdakilerden hangisi düşünülür?",
+     "secenekler": {
+      "A": "Kısa psikotik bozukluk",
+      "B": "Şizofreniform bozukluk",
+      "C": "Şizoaffektif bozukluk",
+      "D": "Şizofreni",
+      "E": "Sanrılı bozukluk"
+     },
+     "dogru": "A",
+     "aciklama": "Hastalığın süresi 1 günden fazla ve 4 haftadan kısaysa kısa psikotik bozukluk (ya da başka türlü sınıflandırılmayan psikotik bozukluk) düşünülür. Süre ölçütü tanıyı belirler; bu nedenle doğru yanıt budur (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Hastalığın süresi 1 günden fazla ve 4 haftadan kısaysa kısa psikotik bozukluk (ya da başka türlü sınıflandırılmayan psikotik bozukluk) düşünülür. Süre ölçütü tanıyı belirler; bu nedenle doğru yanıt budur (s. 18).",
+      "B": "Şizofreniform bozukluk, süresi altı aydan kısa olan ama bir aydan uzun süren tablodur. Dört haftadan kısa süre bu aralığa uymaz; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 47).",
+      "C": "Şizoaffektif bozukluk, duygudurum belirtisi olmadan en az iki hafta süren psikotik belirtileri ve duygudurum belirtilerini birlikte içerir. Tanıyı belirleyen süre bu değildir; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 43).",
+      "D": "Şizofreni, belirtilerin altı ay ve daha uzun sürdüğü durumda konur. Dört haftadan kısa süre bu tanıyı dışlar; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 18).",
+      "E": "Sanrılı bozukluk, bir ay ya da daha uzun süren sanrıyla tanınır. Dört haftadan kısa bir tablo bu ölçütü karşılamaz; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 37)."
+     },
+     "bilgi": [
+      66
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Hastalığın süresi 1 günden fazla 4 haftadan kısa ise"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b12"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q21",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Daha önce ruhsal bir yakınması olmayan 27 yaşında kadın hasta, yaklaşık üç aydır giderek içine kapandığını, kendi kendine konuştuğunu ve kendisini yargılayan sesler duyduğunu belirtiyor. İşlevselliğinde belirgin düşme yok, duygudurum belirtisi saptanmıyor. Bu hastanın en olası tanısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Şizofreni",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Şizofreniform bozukluk",
+      "D": "Kısa psikotik bozukluk",
+      "E": "Sanrılı bozukluk"
+     },
+     "dogru": "C",
+     "aciklama": "Şizofreniform bozuklukta 1-6 ay süren psikotik belirtiler vardır, belirtiler şizofreniden daha hafiftir ve işlevsellikte bozulma azdır. Hastadaki üç aylık tablo bu aralığa uyar ve çoğu olgu takipte şizofreniye dönüşür (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Şizofreni, psikotik belirtilerin altı ay veya daha uzun sürdüğü durumda konan tanıdır ve belirgin işlev düşüşü ister. Bu hastada süre üç aydır, bu yüzden ölçüt karşılanmaz; doğru yanıt ise “Şizofreniform bozukluk” şıkkıdır (s. 18).",
+      "B": "Şizoaffektif bozuklukta hem psikotik hem duygudurum belirtileri bulunur ve duygudurum belirtisi olmadan en az iki hafta psikoz gerekir. Hastada duygudurum belirtisi yoktur, bu yüzden uymaz; doğru yanıt ise “Şizofreniform bozukluk” şıkkıdır (s. 43).",
+      "C": "Şizofreniform bozuklukta 1-6 ay süren psikotik belirtiler vardır, belirtiler şizofreniden daha hafiftir ve işlevsellikte bozulma azdır. Hastadaki üç aylık tablo bu aralığa uyar ve çoğu olgu takipte şizofreniye dönüşür (s. 47).",
+      "D": "Kısa psikotik bozukluk, 1 günden uzun ama 1 aydan kısa süren psikotik belirtilerle seyreder. Üç aylık süre bu aralığın dışındadır, bu yüzden yanlıştır; doğru yanıt ise “Şizofreniform bozukluk” şıkkıdır (s. 45).",
+      "E": "Sanrılı bozuklukta tek alana odaklı sanrı ön plandadır ve şizofreninin A ölçütü hiç karşılanmaz. Hastada varsanı ve içe çekilme vardır, bu yüzden yanlıştır; doğru yanıt ise “Şizofreniform bozukluk” şıkkıdır (s. 37)."
+     },
+     "bilgi": [
+      130,
+      131,
+      65
+     ],
+     "benzer_cikmis": [
+      "365430593b97",
+      "d3k2-2018-2019-k4-q58"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "1-6 ay süren psikotik belirtiler mevcuttur."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b11",
+      "ogrenci:A:psk-s04-b12",
+      "hoca:hv-k2-15-50"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q25",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kısa psikotik bozukluğun tanı ölçütleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sonunda hastalık öncesi işlevsellik düzeyine tam dönülür",
+      "B": "Belirtilerden en az birinin sanrı, varsanı ya da darmadağın konuşma olması gerekir",
+      "C": "Bir dönem en az bir gün sürer",
+      "D": "Dönem bir aydan kısa sürer",
+      "E": "Silik (negatif) belirtiler tanı ölçütü listesinde yer alır"
+     },
+     "dogru": "E",
+     "aciklama": "Bu ifade yanlıştır: kısa psikotik bozukluğun ölçütü sanrı, varsanı, darmadağın konuşma ve ileri derecede dağınık ya da katatonik davranıştan oluşur. Silik belirtiler şizofreni ve şizofreniform bozukluktaki beşinci belirtidir (s. 46).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: kısa psikotik bozuklukta atak sonunda hastalık öncesi işlevselliğe tam dönülür. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Silik (negatif) belirtiler tanı ölçütü listesinde yer alır” şıkkıdır (s. 46).",
+      "B": "Bu ifade doğrudur: ölçüt belirtilerden en az birinin sanrı, varsanı ya da darmadağın konuşma olmasını ister. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Silik (negatif) belirtiler tanı ölçütü listesinde yer alır” şıkkıdır (s. 46).",
+      "C": "Bu alt sınır kısa psikotik bozukluğu çok kısa süren geçici tablolardan ayırır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Silik (negatif) belirtiler tanı ölçütü listesinde yer alır” şıkkıdır (s. 46).",
+      "D": "Bir ay ve üzeri sürerse şizofreniform bozukluğa doğru süre ayrımı yapılır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Silik (negatif) belirtiler tanı ölçütü listesinde yer alır” şıkkıdır (s. 46).",
+      "E": "Bu ifade yanlıştır: kısa psikotik bozukluğun ölçütü sanrı, varsanı, darmadağın konuşma ve ileri derecede dağınık ya da katatonik davranıştan oluşur. Silik belirtiler şizofreni ve şizofreniform bozukluktaki beşinci belirtidir (s. 46)."
+     },
+     "bilgi": [
+      128,
+      129
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-85"
+     ],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Aşağıdaki belirtilerden birinin (ya da daha çoğunun) varlığı"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b09"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q26",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Şizofreniform bozukluk ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hastalık öncesi işlevselliğe her zaman tam dönülür",
+      "B": "Olguların çoğu takipte şizofreniye dönüşür",
+      "C": "Belirtiler şizofreniden daha ağırdır ve işlev kaybı fazladır",
+      "D": "Psikotik belirtiler 1 günden uzun, 1 aydan kısa sürer",
+      "E": "Silik belirtiler tanı ölçütünde yer almaz"
+     },
+     "dogru": "B",
+     "aciklama": "Şizofreniform bozuklukta psikotik belirtiler 1-6 ay sürer ve olguların çoğu takipte şizofreniye dönüşür. Bu yüzden izlem ve tedavi bu olasılık göz önünde tutularak yürütülür; bu nedenle doğru yanıt budur (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Şizofreniformda ise çoğu olgu şizofreniye dönüşür. Bu şık yanlıştır; doğru yanıt ise “Olguların çoğu takipte şizofreniye dönüşür” şıkkıdır (s. 46).",
+      "B": "Şizofreniform bozuklukta psikotik belirtiler 1-6 ay sürer ve olguların çoğu takipte şizofreniye dönüşür. Bu yüzden izlem ve tedavi bu olasılık göz önünde tutularak yürütülür; bu nedenle doğru yanıt budur (s. 47).",
+      "C": "Şizofreniform bozuklukta belirtiler şizofreniden daha hafiftir ve işlevsellikte bozulma azdır. Bu şık ters söylediği için yanlıştır; doğru yanıt ise “Olguların çoğu takipte şizofreniye dönüşür” şıkkıdır (s. 47).",
+      "D": "Bu süre kısa psikotik bozukluğa aittir. Bu şık sürelerin yer değiştirmesiyle kurulmuş yanlış bir ifadedir; doğru yanıt ise “Olguların çoğu takipte şizofreniye dönüşür” şıkkıdır (s. 45).",
+      "E": "Şizofreniform bozukluk A ölçütünde beşinci belirti olarak silik (negatif) belirtiler (duygusal katılımda azalma) bulunur. Bu şık yanlıştır; doğru yanıt ise “Olguların çoğu takipte şizofreniye dönüşür” şıkkıdır (s. 48)."
+     },
+     "bilgi": [
+      130,
+      131,
+      132,
+      134,
+      135
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Çoğu takipte sch’e dönüşür."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b11",
+      "hoca:hv-k2-15-50"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q83",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Şizofreniform bozukluk ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Psikotik belirtiler 1-6 ay sürer",
+      "B": "Belirtiler şizofreniden daha hafiftir",
+      "C": "İşlevsellikte bozulma azdır",
+      "D": "Olguların çoğu takipte şizofreniye dönüşür",
+      "E": "Belirtiler şizofreniden daha ağırdır"
+     },
+     "dogru": "E",
+     "aciklama": "Şizofreniform bozuklukta belirtiler şizofreniden daha hafiftir ve işlevsellikte bozulma azdır. Tersini söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Şizofreniform bozuklukta psikotik belirtiler 1 aydan uzun, 6 aydan kısa sürer. Bu süre ölçütü doğru olduğundan ifade yanlış değildir (s. 47).",
+      "B": "Şizofreniform bozuklukta belirtiler şizofreniden daha hafiftir. Bu ifade doğru olduğundan ve yanlış seçenek olmadığından bu şık sorulan ifade olarak seçilmez (s. 47).",
+      "C": "Şizofreniform bozuklukta işlevsellikteki bozulma şizofreniye göre azdır. Bu ifade doğru olduğundan ve yanlış seçenek olmadığından bu şık sorulan ifade olarak seçilmez (s. 47).",
+      "D": "Şizofreniform bozukluk olgularının çoğu takipte şizofreniye dönüşür; bu nedenle tanıdan sonra izlem önemlidir. Bu ifade doğru olduğundan yanlış değildir (s. 47).",
+      "E": "Şizofreniform bozuklukta belirtiler şizofreniden daha hafiftir ve işlevsellikte bozulma azdır. Tersini söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 47)."
+     },
+     "bilgi": [
+      130,
+      131,
+      132
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Belirtiler sch’den daha hafif ve işlevsellikte"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-50"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q22",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Daha önce psikiyatrik yakınması olmayan 19 yaşında kadın hasta, yakın arkadaşının ölümünden sonra on gündür dağınık konuşuyor, çevresindekilerin kendisini öldüreceğine inanıyor ve sesler duyuyor. Kliniğe getirildikten sonraki izleminde belirtilerin tamamen geçtiği ve önceki işlevselliğine döndüğü görülüyor. En olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Şizofreni",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Şizofreniform bozukluk",
+      "D": "Kısa psikotik bozukluk",
+      "E": "Sanrılı bozukluk"
+     },
+     "dogru": "D",
+     "aciklama": "Kısa psikotik bozuklukta psikotik belirtiler 1 günden uzun, 1 aydan kısa sürer, psikolojik nedenler ön plandadır ve sonunda hastalık öncesi işlevselliğe tam dönülür. Bu hastada hepsi vardır; bu nedenle doğru yanıt budur (s. 46).",
+     "sik_aciklamalari": {
+      "A": "Şizofreni, belirtilerin en az altı ay sürmesini ve işlevsellikte belirgin düşmeyi gerektirir. Bu hastada belirtiler on gün sürmüş ve tam düzelmiştir, bu yüzden yanlıştır; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 17).",
+      "B": "Şizoaffektif bozuklukta duygudurum belirtileri ve psikotik belirtiler birlikte vardır ve ataklar arasında tam iyilik hali olmaz. Bu hastada tam iyileşme olduğundan yanlıştır; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 43).",
+      "C": "Şizofreniform bozuklukta psikotik belirtiler 1-6 ay sürer ve olguların çoğu takipte şizofreniye dönüşür. On günlük süre bu aralıktan kısadır, bu yüzden yanlıştır; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 47).",
+      "D": "Kısa psikotik bozuklukta psikotik belirtiler 1 günden uzun, 1 aydan kısa sürer, psikolojik nedenler ön plandadır ve sonunda hastalık öncesi işlevselliğe tam dönülür. Bu hastada hepsi vardır; bu nedenle doğru yanıt budur (s. 46).",
+      "E": "Sanrılı bozuklukta bir ay veya daha uzun süren tek konulu, sistematize sanrı vardır. Bu hastada dağınık konuşma ve varsanı da bulunduğundan ve süre kısa olduğundan yanlıştır; doğru yanıt ise “Kısa psikotik bozukluk” şıkkıdır (s. 37)."
+     },
+     "bilgi": [
+      124,
+      125,
+      129
+     ],
+     "benzer_cikmis": [
+      "past-1790877044882-168910",
+      "q-25-26_d_nem_3_kurul_2-85"
+     ],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "en az bir gün, ancak bir aydan daha kısa sürer ve en sonunda hastalık öncesi işlevsellik düzeyine tam geri dönülür"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b09",
+      "ogrenci:A:psk-s05-b08"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "365430593b97",
+     "soru": "Anksiyöz olarak değerlendirilmiştir. Ön tanı için aşağıdakilerden hangisi uygundur?",
+     "secenekler": {
+      "A": "Şizofreniform bozukluk",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Kısa psikotik bozukluk",
+      "D": "Şizofreni",
+      "E": "Sanrılı bozukluk"
+     },
+     "cevap": null
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q58",
+     "soru": "Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta 5 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını ve çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+     "secenekler": {
+      "A": "Şizofreni",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Şizofreniform bozukluk",
+      "D": "Kısa psikotik bozukluk",
+      "E": "Sanrılı bozukluk"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "q-25-26_d_nem_3_kurul_2-85",
+     "soru": "Aşağıdakilerden hangisi kısa psikotik bozukluğun özelliklerinden değildir?",
+     "secenekler": {
+      "A": "Bir hastalık dönemi en az 1 gün, ancak 1 aydan kısa sürer",
+      "B": "Sıklıkla belirgin bir stres etkeninin ardından ani başlangıç gösterir",
+      "C": "Atak sonrasında hastalık öncesi işlevsellik düzeyine tam dönüş beklenir",
+      "D": "Yoğun duygusal dalgalanma ve konfüzyon tabloya eşlik edebilir",
+      "E": "İleri derecede dağınık davranış ve silik (negatif) belirtiler görülür"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "past-1790877044882-168910",
+     "soru": "Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta, 2 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını ve çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+     "secenekler": {
+      "A": "Şizofreni",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Şizofreniform bozukluk",
+      "D": "Kısa psikotik bozukluk",
+      "E": "Sanrılı bozukluk"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Pozitif, negatif ve dezorganizasyon belirtilerini, bilişsel kayıpları ve silik nörolojik bulguları sınıflar.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q33",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi şizofrenide negatif belirtilerden biridir?",
+     "secenekler": {
+      "A": "Apati",
+      "B": "Varsanılar",
+      "C": "Acayip veya dezorganize davranış",
+      "D": "Enkoherans",
+      "E": "Sanrılar"
+     },
+     "dogru": "A",
+     "aciklama": "Apati, normalde var olan ilgi ve isteğin kaybıdır ve negatif belirtiler arasında sayılır. Aloji, anhedoni, avolüsyon ve içe çekilme ile aynı gruptadır; bu nedenle doğru yanıt budur (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Apati, normalde var olan ilgi ve isteğin kaybıdır ve negatif belirtiler arasında sayılır. Aloji, anhedoni, avolüsyon ve içe çekilme ile aynı gruptadır; bu nedenle doğru yanıt budur (s. 24).",
+      "B": "Varsanılar, olmayan bir uyaranı algılamak biçiminde pozitif belirtilerdir ve psikotik boyutta yer alır. Negatif grupta değil, pozitif grupta sayıldıkları için bu şık yanlıştır; doğru yanıt ise “Apati” şıkkıdır (s. 23).",
+      "C": "Acayip veya dezorganize davranışlar, işlevin bozulmuş görünümü olarak pozitif belirtiler arasında sayılır. Negatif belirti olmadığı için bu şık yanlıştır; doğru yanıt ise “Apati” şıkkıdır (s. 23).",
+      "D": "Enkoherans, düşünce akışının anlaşılmaz biçimde dağılmasıdır ve pozitif formel düşünce bozukluğu içinde yer alan bir pozitif belirtidir. Negatif grupta yer almadığı için bu şık yanlıştır; doğru yanıt ise “Apati” şıkkıdır (s. 23).",
+      "E": "Sanrılar, beyin işlevlerinin abartılı ve bozulmuş görünümü olarak pozitif belirtilerdendir. Negatif grupta sayılmaz; doğru yanıt ise “Apati” şıkkıdır (s. 23)."
+     },
+     "bilgi": [
+      78
+     ],
+     "benzer_cikmis": [
+      "c116fba1f3d0"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Aloji (konuşma miktarı veya içeriğinin fakirleşmesi) Duygusal Küntleşme Anhedoni Toplumsal İçe Çekilme"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b15",
+      "cikmis:c116fba1f3d0"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q50",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi şizofrenide negatif belirtilerden biri değildir?",
+     "secenekler": {
+      "A": "Duygusal küntleşme",
+      "B": "Teğetsellik",
+      "C": "Anhedoni",
+      "D": "Avolüsyon",
+      "E": "Aloji"
+     },
+     "dogru": "B",
+     "aciklama": "Teğetsellik, konudan sapma biçiminde pozitif formel düşünce bozukluğu içinde yer alan bir pozitif belirtidir. Negatif belirtiler listesinde bulunmaz, bu yüzden soruda aranan şık budur; bu nedenle doğru yanıt budur (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Duygusal küntleşme, duygu ifadesinin soluklaşmasıdır ve negatif belirtilerdendir. Hastanın yüzünde ve sesinde duygu tonu azalır, bu yüzden bu şık negatif gruba girer; yanlış olan ifade ise “Teğetsellik” şıkkıdır (s. 24).",
+      "B": "Teğetsellik, konudan sapma biçiminde pozitif formel düşünce bozukluğu içinde yer alan bir pozitif belirtidir. Negatif belirtiler listesinde bulunmaz, bu yüzden soruda aranan şık budur; bu nedenle doğru yanıt budur (s. 23).",
+      "C": "Anhedoni, zevk alma yetisinin kaybıdır ve negatif belirtilerdendir. Hastanın eskiden hoşlandığı etkinliklerden artık keyif almaması bu belirtiyle anlatılır; yanlış olan ifade ise “Teğetsellik” şıkkıdır (s. 24).",
+      "D": "Avolüsyon, istenç ve iradenin zayıflamasıdır ve negatif belirtilerdendir. Hastanın amaçlı eylemleri başlatamaması bu belirtiye bağlanır, bu yüzden bu şık negatif gruba girer; yanlış olan ifade ise “Teğetsellik” şıkkıdır (s. 24).",
+      "E": "Aloji, konuşma miktarının veya içeriğinin fakirleşmesidir ve negatif belirtilerdendir. Konuşmadaki bu yoksullaşma, hastanın iletişimini ve işlevselliğini azaltır; yanlış olan ifade ise “Teğetsellik” şıkkıdır (s. 24)."
+     },
+     "bilgi": [
+      78,
+      79,
+      77
+     ],
+     "benzer_cikmis": [
+      "past-1790877044886-58159",
+      "d3k2-2018-2019-k4-q59"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Aloji (konuşma miktarı veya içeriğinin fakirleşmesi) Duygusal Küntleşme Anhedoni Toplumsal İçe Çekilme"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b15",
+      "cikmis:past-1790877044886-58159"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q34",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi pozitif formel düşünce bozukluğu kapsamında yer alır?",
+     "secenekler": {
+      "A": "Enkoherans",
+      "B": "Aloji",
+      "C": "Apati",
+      "D": "Avolüsyon",
+      "E": "Anhedoni"
+     },
+     "dogru": "A",
+     "aciklama": "Pozitif formel düşünce bozukluğu enkoherans, raydan çıkma, çevresellik ve teğetselliği kapsar. Enkoherans düşünce akışının anlaşılmaz biçimde dağılmasıdır ve pozitif belirtidir; bu nedenle doğru yanıt budur (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Pozitif formel düşünce bozukluğu enkoherans, raydan çıkma, çevresellik ve teğetselliği kapsar. Enkoherans düşünce akışının anlaşılmaz biçimde dağılmasıdır ve pozitif belirtidir; bu nedenle doğru yanıt budur (s. 23).",
+      "B": "Aloji, konuşma miktarının veya içeriğinin fakirleşmesidir ve negatif belirtidir. Pozitif formel düşünce bozukluğu konuşmanın fazlalığı ve bozulmasıdır, bu yüzden yanlıştır; doğru yanıt ise “Enkoherans” şıkkıdır (s. 24).",
+      "C": "Apati, ilgi ve isteğin kaybıdır ve negatif belirtiler arasındadır. Pozitif formel düşünce bozukluğuna girmez; doğru yanıt ise “Enkoherans” şıkkıdır (s. 24).",
+      "D": "Avolüsyon, istenç ve iradenin zayıflamasıdır ve negatif belirtidir. Pozitif formel düşünce bozukluğu kapsamında olmadığı için yanlıştır; doğru yanıt ise “Enkoherans” şıkkıdır (s. 24).",
+      "E": "Anhedoni, zevk alamama olarak negatif belirtilerdendir. Düşünce biçimi bozukluğu olmadığı için yanlıştır; doğru yanıt ise sorulan bilgiyi veren “Enkoherans” şıkkıdır (s. 24)."
+     },
+     "bilgi": [
+      76,
+      77
+     ],
+     "benzer_cikmis": [
+      "past-q-25-26_d_nem_3_kurul_2-84"
+     ],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Pozitif Formel Düşünce Bozukluğu (enkoherans, raydan çıkma, çevresellik, teğetsellik…)"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b15",
+      "cikmis:past-q-25-26_d_nem_3_kurul_2-84"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q35",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Şizofrenide pozitif ve negatif belirtilerin tanımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sanrılar ve varsanılar pozitif belirtiler arasındadır",
+      "B": "Negatif belirtiler normal zihinsel işlevlerin kaybı sonucu ortaya çıkar",
+      "C": "Pozitif belirtiler beyin işlevlerinin abartılı ve bozulmuş görünümleridir",
+      "D": "Pozitif ve negatif belirti kavramı ilk olarak nöroloji alanında tanımlanmıştır",
+      "E": "Negatif belirtiler beyin işlevlerinin abartılı ve bozulmuş görünümleridir"
+     },
+     "dogru": "E",
+     "aciklama": "Bu ifade yanlıştır: abartılmış ve bozulmuş işlev pozitif belirtilerin tanımıdır. Negatif belirtiler normalde var olan zihinsel işlevlerin eksikliği, zayıflaması ya da kaybıdır; bu nedenle doğru yanıt budur (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: sanrılar ve varsanılar pozitif belirtilerin başında gelir. Yanlış ifade arandığı için bu şık doğru yanıt değildir; yanlış olan ifade ise “Negatif belirtiler beyin işlevlerinin abartılı ve bozulmuş görünümleridir” şıkkıdır (s. 23).",
+      "B": "Bu ifade doğrudur: negatif belirtiler normalde var olan işlevlerin eksikliği veya kaybıdır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Negatif belirtiler beyin işlevlerinin abartılı ve bozulmuş görünümleridir” şıkkıdır (s. 22).",
+      "C": "Bu ifade doğrudur: pozitif belirtiler işlevlerin abartılmış ve bozulmuş görünümüdür. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Negatif belirtiler beyin işlevlerinin abartılı ve bozulmuş görünümleridir” şıkkıdır (s. 22).",
+      "D": "Bu ifade doğrudur: kavram ilk olarak 1931 yılında nöroloji alanında tanımlanmıştır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Negatif belirtiler beyin işlevlerinin abartılı ve bozulmuş görünümleridir” şıkkıdır (s. 22).",
+      "E": "Bu ifade yanlıştır: abartılmış ve bozulmuş işlev pozitif belirtilerin tanımıdır. Negatif belirtiler normalde var olan zihinsel işlevlerin eksikliği, zayıflaması ya da kaybıdır; bu nedenle doğru yanıt budur (s. 22)."
+     },
+     "bilgi": [
+      73,
+      74,
+      75
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Negatif belirtiler; normalde var olan zihinsel işlevlerin eksikliğinin"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b15"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q37",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Şizofrenide pozitif belirtiler için aşağıdaki öncüllerden hangileri doğrudur?\nI. Sanrılar\nII. Varsanılar\nIII. Aloji\nIV. Acayip veya dezorganize davranışlar",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Pozitif belirtiler sanrılar, varsanılar, pozitif formel düşünce bozukluğu ve acayip ya da dezorganize davranışlardan oluşur. Aloji ise konuşmanın fakirleşmesidir ve negatif belirtiler arasındadır; bu nedenle doğru yanıt budur (s. 23, 24).",
+     "sik_aciklamalari": {
+      "A": "I ve II pozitif belirtilerdir ama acayip veya dezorganize davranışlar da bu gruptadır. Bu seçenek eksiktir; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 23).",
+      "B": "Aloji negatif belirtidir ve pozitif gruba girmez. Bu seçenek III'ü içerdiği ve IV'ü dışarıda bıraktığı için yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 24).",
+      "C": "Pozitif belirtiler sanrılar, varsanılar, pozitif formel düşünce bozukluğu ve acayip ya da dezorganize davranışlardan oluşur. Aloji ise konuşmanın fakirleşmesidir ve negatif belirtiler arasındadır; bu nedenle doğru yanıt budur (s. 23, 24).",
+      "D": "Sanrılar pozitif grubun başında yer alır ama bu seçenekte yoktur, aloji ise negatif olduğu halde içerilmiştir. Bu seçenek yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 23).",
+      "E": "Aloji negatif belirtidir. Bu seçenek onu pozitif gruba kattığı için yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 24)."
+     },
+     "bilgi": [
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Sanrılar Varsanılar Pozitif Formel Düşünce Bozukluğu"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b15"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q38",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Dezorganizasyon boyutunda yer alan belirti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Avolüsyon",
+      "B": "Varsanılar",
+      "C": "Aloji",
+      "D": "Uygunsuz duygulanım",
+      "E": "Anhedoni"
+     },
+     "dogru": "D",
+     "aciklama": "Dezorganizasyon boyutu dezorganize konuşma, dezorganize veya garip davranışlar ve uygunsuz duygulanımı kapsar. Uygunsuz duygulanım bu boyutun üçüncü belirtisidir; bu nedenle doğru yanıt budur (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Avolüsyon, aloji ve duygulanımda küntleşme ile birlikte negatif boyutta yer alır. Dezorganizasyon boyutuna ait değildir; doğru yanıt ise “Uygunsuz duygulanım” şıkkıdır (s. 25).",
+      "B": "Varsanılar ve sanrılar psikotik boyutta yer alır. Dezorganizasyon boyutuna ait değildir; doğru yanıt ise sorulan bilgiyi veren “Uygunsuz duygulanım” şıkkıdır (s. 25).",
+      "C": "Aloji, konuşmanın fakirleşmesidir ve duygulanımda küntleşme ile avolüsyon gibi negatif boyutta yer alır. Dezorganizasyon boyutuna ait olmadığı için bu şık yanlıştır; doğru yanıt ise “Uygunsuz duygulanım” şıkkıdır (s. 25).",
+      "D": "Dezorganizasyon boyutu dezorganize konuşma, dezorganize veya garip davranışlar ve uygunsuz duygulanımı kapsar. Uygunsuz duygulanım bu boyutun üçüncü belirtisidir; bu nedenle doğru yanıt budur (s. 25).",
+      "E": "Anhedoni ve dikkat bozukluğu negatif boyutta sık görülen diğer belirtilerdir. Dezorganizasyon boyutuna ait değildir; doğru yanıt ise “Uygunsuz duygulanım” şıkkıdır (s. 25)."
+     },
+     "bilgi": [
+      80,
+      81,
+      82
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Dezorganizasyon Boyutu; Dezorganize konuşma, dezorganize veya garip davranışlar, uygunsuz duygulanım"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b15",
+      "ogrenci:B:psk-s04-b18"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q39",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Varsanılar şizofrenide hangi belirti boyutu içinde yer alır?",
+     "secenekler": {
+      "A": "Bilişsel boyut",
+      "B": "Negatif boyut",
+      "C": "Psikotik boyut",
+      "D": "Dezorganizasyon boyutu",
+      "E": "Hiçbir boyut içinde yer almaz"
+     },
+     "dogru": "C",
+     "aciklama": "Psikotik boyut varsanıları ve sanrıları kapsar. Algı bozukluğu olan varsanı bu boyutun başlıca belirtilerindendir; bu nedenle doğru yanıt budur (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Slaytta belirti boyutları psikotik, dezorganizasyon ve negatif olmak üzere üçe ayrılır. Bilişsel kayıplar ise temel eksiklik olarak ayrıca ele alınır; doğru yanıt ise “Psikotik boyut” şıkkıdır (s. 26).",
+      "B": "Negatif boyut aloji, duygulanımda küntleşme, avolüsyon, anhedoni ve dikkat bozukluğunu kapsar. Varsanı negatif belirti değildir; doğru yanıt ise “Psikotik boyut” şıkkıdır (s. 25).",
+      "C": "Psikotik boyut varsanıları ve sanrıları kapsar. Algı bozukluğu olan varsanı bu boyutun başlıca belirtilerindendir; bu nedenle doğru yanıt budur (s. 25).",
+      "D": "Dezorganizasyon boyutu dezorganize konuşma, garip davranış ve uygunsuz duygulanımı içerir. Varsanı bu boyutta yer almaz; doğru yanıt ise “Psikotik boyut” şıkkıdır (s. 25).",
+      "E": "Varsanılar psikotik boyutun içindedir. Boyutların dışında bırakılan belirti yoktur, bu yüzden bu şık yanlıştır; doğru yanıt ise “Psikotik boyut” şıkkıdır (s. 25)."
+     },
+     "bilgi": [
+      80
+     ],
+     "benzer_cikmis": [
+      "past-1790877044886-58159",
+      "d3k2-2018-2019-k4-q59"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Psikotik Boyut; Varsanılar ve Sanrılar"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b15",
+      "cikmis:past-1790877044886-58159"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q53",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi şizofrenide görülen silik nörolojik belirtilerden biri değildir?",
+     "secenekler": {
+      "A": "Yumuşak göz takibi hareketlerinde bozulma",
+      "B": "Grafestezi bozukluğu",
+      "C": "Denge bozukluğu",
+      "D": "Stereognozi bozukluğu",
+      "E": "Ekolali"
+     },
+     "dogru": "E",
+     "aciklama": "Ekolali katatoninin belirtilerindendir; silik nörolojik belirtiler ise stereognozi, grafestezi, denge, propriyosepsiyon ve yumuşak göz takibi hareketlerindeki bozulmalardır. Ekolali bu listede bulunmadığı için soruda aranan şık budur; bu nedenle doğru yanıt budur (s. 27, 33).",
+     "sik_aciklamalari": {
+      "A": "Yumuşak göz takibi hareketlerindeki bozulma, silik nörolojik belirtiler listesinde yer alır. Hareketli bir hedefi gözle düzgün izleyememek bunun örneğidir; yanlış olan ifade ise “Ekolali” şıkkıdır (s. 27).",
+      "B": "Grafestezi, deriye çizilen şekli tanıma yetisidir ve şizofrenide bozulabilir. Silik nörolojik belirtiler arasında sayılır ve bu şık listeye girer; yanlış olan ifade ise “Ekolali” şıkkıdır (s. 27).",
+      "C": "Denge bozukluğu, şizofrenideki silik nörolojik belirtilerden biridir. Hastanın hareketlerinde hafif beceriksizlik olarak kendini gösterir; yanlış olan ifade ise “Ekolali” şıkkıdır (s. 27).",
+      "D": "Stereognozi, nesneyi dokunarak tanıma yetisidir ve şizofrenide bozulabilir. Silik nörolojik belirtilerin başında anılır, bu yüzden bu şık listeye girer; yanlış olan ifade ise “Ekolali” şıkkıdır (s. 27).",
+      "E": "Ekolali katatoninin belirtilerindendir; silik nörolojik belirtiler ise stereognozi, grafestezi, denge, propriyosepsiyon ve yumuşak göz takibi hareketlerindeki bozulmalardır. Ekolali bu listede bulunmadığı için soruda aranan şık budur; bu nedenle doğru yanıt budur (s. 27, 33)."
+     },
+     "bilgi": [
+      87
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Silik nörolojik belirtiler; stereognozi, grafestezi, denge, propriyosepsiyon, yumuşak göz takibi"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b18"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q54",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Şizofrenide temel eksiklik olarak ele alınan bilişsel kayıplar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hastalarda etkin karar verme yetersizdir",
+      "B": "Bilişsel kayıplar yalnızca tedavi sonrasında ortaya çıkar",
+      "C": "Şizofreni nörokognitif bozukluk olarak ele alınır",
+      "D": "Hastalar günlük yaşamla ilgili plan yapmada güçlük çeker",
+      "E": "Bilginin zamansal ve uzaysal ilişkilendirilmesinde kayıp vardır"
+     },
+     "dogru": "B",
+     "aciklama": "Bu ifade yanlıştır: bilişsel kayıplar şizofreninin temel eksikliğidir ve hastalığın doğasına aittir. Tedaviden bağımsız olarak vardır ve yalnız tedavi sonrası ortaya çıkmaz; bu nedenle doğru yanıt budur (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: hastalar etkin karar vermede yetersizlik yaşar. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Bilişsel kayıplar yalnızca tedavi sonrasında ortaya çıkar” şıkkıdır (s. 26).",
+      "B": "Bu ifade yanlıştır: bilişsel kayıplar şizofreninin temel eksikliğidir ve hastalığın doğasına aittir. Tedaviden bağımsız olarak vardır ve yalnız tedavi sonrası ortaya çıkmaz; bu nedenle doğru yanıt budur (s. 26).",
+      "C": "Bu ifade doğrudur: şizofreni bir nörokognitif bozukluk olarak ele alınır ve bilişsel kayıplar temel eksiklik sayılır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Bilişsel kayıplar yalnızca tedavi sonrasında ortaya çıkar” şıkkıdır (s. 26).",
+      "D": "Bu ifade doğrudur: günlük yaşamla ilgili plan yapmada, örneğin iş ararken ya da cümle kurarken yetersizlik vardır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Bilişsel kayıplar yalnızca tedavi sonrasında ortaya çıkar” şıkkıdır (s. 26).",
+      "E": "Bu ifade doğrudur: hasta kendisi ile kendisi olmayan arasındaki sınırları belirlemeye çalışırken bilginin zamansal ve uzaysal ilişkilendirilmesinde kayıp yaşar. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Bilişsel kayıplar yalnızca tedavi sonrasında ortaya çıkar” şıkkıdır (s. 26)."
+     },
+     "bilgi": [
+      83,
+      84,
+      85
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Etkin karar vermede ve günlük yaşamla ilgili plan yapmada"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b18"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q36",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Dopamin hipotezi ve belirti grupları ile ilgili aşağıdaki öncüllerden hangileri doğrudur?\nI. Hiperdopaminerjik durum pozitif belirtilerle ilişkilidir.\nII. Hipodopaminerjik durum negatif belirtilerle ilişkilidir.\nIII. Hipofrontalite pozitif belirtilerle ilişkilidir.\nIV. Fensiklidin glutamat üzerinden şizofreni benzeri belirtiler oluşturur.",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Hiperdopaminerjik durum pozitif, hipodopaminerjik durum negatif belirtilerle ilişkilidir ve fensiklidin glutamat üzerinden etki eder. III yanlıştır çünkü hipofrontalite negatif belirtilerle ilişkilidir; bu nedenle doğru yanıt budur (s. 14, 16).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I eksik bir seçenektir: hipodopaminerjik durum ile negatif belirti ilişkisi ve fensiklidin–glutamat ilişkisi de doğrudur; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 16).",
+      "B": "I ve II doğrudur ama eksiktir: fensiklidinin glutamat üzerinden şizofreni benzeri belirtiler yapması da doğrudur. Bu yüzden seçenek yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 16).",
+      "C": "Hiperdopaminerjik durum pozitif, hipodopaminerjik durum negatif belirtilerle ilişkilidir ve fensiklidin glutamat üzerinden etki eder. III yanlıştır çünkü hipofrontalite negatif belirtilerle ilişkilidir; bu nedenle doğru yanıt budur (s. 14, 16).",
+      "D": "III numaralı öncül yanlıştır, çünkü hipofrontalite negatif belirtilerle ilişkilidir. Ayrıca I doğru olduğu halde dışarıda bırakılmıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 14).",
+      "E": "III numaralı öncül yanlış olduğundan bu seçenek yanlıştır: hipofrontalite pozitif değil, negatif belirtilerle ilişkilidir; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 14)."
+     },
+     "bilgi": [
+      56,
+      58,
+      48
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Hiperdopaminerjik durum → pozitif belirtilerle"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b08",
+      "ogrenci:B:psk-s04-b07"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "c116fba1f3d0",
+     "soru": "Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+     "secenekler": {
+      "A": "Varsanı",
+      "B": "Dağınık Davranış",
+      "C": "Enkohere konuşma",
+      "D": "Sanrı",
+      "E": "Apati"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "past-1790877044886-58159",
+     "soru": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+     "secenekler": {
+      "A": "Algı bozukluğu",
+      "B": "Duygusal küntleşme",
+      "C": "Anhedoni",
+      "D": "Aloji",
+      "E": "Toplumsal içe çekilme"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q59",
+     "soru": "Şizofreni; sanrılar, varsanılar, ilgi ve haz azalması ile karakterize bir bozukluktur. Kişi kendi içine kapalı özgün bir dünyada yaşar. Genç yaşlarda kişileri etkilemekte olup, normal başlangıç yaşı 18-25 yaşları arasıdır.\nAşağıdakilerden hangisi şizofreninin negatif belirtilerinden birisi değildir?",
+     "secenekler": {
+      "A": "Aloji",
+      "B": "Duygusal küntleşme",
+      "C": "Anhedoni",
+      "D": "Algı bozuklukları",
+      "E": "Toplumsal içe çekilme"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "past-q-25-26_d_nem_3_kurul_2-84",
+     "soru": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+     "secenekler": {
+      "A": "Avolisyon (istekte azalma, amaçlı eylem başlatamama)",
+      "B": "Aloji (konuşma miktarı ve içeriğinde fakirleşme)",
+      "C": "Enkoherans (söz salatası biçiminde dezorganize konuşma)",
+      "D": "Anhedoni (zevk alamama)",
+      "E": "Affektif küntlük (duygusal dışavurumda kısıtlılık)"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Şizofreninin psikiyatrik ve genel tıbbi ayırıcı tanısını sıralar.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q41",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Amfetamin ve kokain, şizofrenide ayırıcı tanı açısından aşağıdaki gruplardan hangisinde yer alır?",
+     "secenekler": {
+      "A": "Alkol kesilmesi deliryumu",
+      "B": "Stimülanlar",
+      "C": "Antikolinerjikler",
+      "D": "Endokrin ve metabolik bozukluklar",
+      "E": "Halusinojenler"
+     },
+     "dogru": "B",
+     "aciklama": "Amfetamin ve kokain, kötüye kullanılan ilaçlar içinde stimülanlar grubundadır. Dopamin etkilerini artırarak psikoz benzeri tablo oluşturabilir; bu nedenle doğru yanıt budur (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Alkol kesilmesi deliryumu ilaç grubu değil, kesilme tablosudur. Amfetamin ve kokain bu başlığa girmez; doğru yanıt ise “Stimülanlar” şıkkıdır (s. 20).",
+      "B": "Amfetamin ve kokain, kötüye kullanılan ilaçlar içinde stimülanlar grubundadır. Dopamin etkilerini artırarak psikoz benzeri tablo oluşturabilir; bu nedenle doğru yanıt budur (s. 20).",
+      "C": "Antikolinerjiklere örnek olarak belladonna alkaloidleri verilir. Amfetamin ve kokain bu grupta değildir; doğru yanıt ise sorulan bilgiyi veren “Stimülanlar” şıkkıdır (s. 20).",
+      "D": "Endokrin ve metabolik bozukluklar, porfiri gibi genel tıbbi hastalıklardır. Amfetamin ve kokain kötüye kullanılan ilaç grubundadır; doğru yanıt ise “Stimülanlar” şıkkıdır (s. 20).",
+      "E": "Halusinojenlere örnek olarak fensiklidin verilir. Amfetamin ve kokain halusinojen değil, stimülan grubundadır; doğru yanıt ise sorulan bilgiyi veren “Stimülanlar” şıkkıdır (s. 20)."
+     },
+     "bilgi": [
+      70
+     ],
+     "benzer_cikmis": [
+      "past-1790877044394-242744"
+     ],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Kötüye kullanılan ilaçlar; Stimulanlar (amfetamin, kokain) Halusinojenler"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b14"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q42",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Şizofrenide ayırıcı tanıda düşünülecek psikiyatrik hastalıklardan hangisi, hem duygudurum bozukluğu hem şizofreni belirtilerini birlikte taşıyan tabloyu anlatır?",
+     "secenekler": {
+      "A": "Sanrılı bozukluk",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Temaruz",
+      "D": "Depersonalizasyon bozukluğu",
+      "E": "Obsesif kompulsif bozukluk"
+     },
+     "dogru": "B",
+     "aciklama": "Şizoaffektif bozuklukta hem şizofreni hem duygudurum bozukluğu belirtileri bulunur. Duygudurum belirtileri olmadan da en az iki hafta psikotik belirti görülmesi gerekir; bu nedenle doğru yanıt budur (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Sanrılı bozuklukta tek alana odaklı sistematize sanrı vardır ve şizofreninin A ölçütü karşılanmaz. Duygudurum belirtisi tabloya eşlik etmez; doğru yanıt ise “Şizoaffektif bozukluk” şıkkıdır (s. 37).",
+      "B": "Şizoaffektif bozuklukta hem şizofreni hem duygudurum bozukluğu belirtileri bulunur. Duygudurum belirtileri olmadan da en az iki hafta psikotik belirti görülmesi gerekir; bu nedenle doğru yanıt budur (s. 43).",
+      "C": "Temaruz, belirtilerin dış kazanç için taklit edilmesidir. İki belirti kümesini birlikte taşıyan bir bozukluk değildir; doğru yanıt ise “Şizoaffektif bozukluk” şıkkıdır (s. 19).",
+      "D": "Depersonalizasyon bozukluğu, kişinin kendine yabancılaşma duygusuyla seyreder. Psikoz ve duygudurum belirtilerini birleştirmez; doğru yanıt ise “Şizoaffektif bozukluk” şıkkıdır (s. 19).",
+      "E": "Obsesif kompulsif bozuklukta obsesyon ve kompulsiyonlar bulunur ve kişi takıntının farkındadır. İki belirti kümesini birlikte taşımaz; doğru yanıt ise “Şizoaffektif bozukluk” şıkkıdır (s. 19)."
+     },
+     "bilgi": [
+      67,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Hem şizofreni, hem duygudurum bozukluğu belirtileri bulunur."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s04-b13",
+      "ogrenci:B:psk-s05-b07",
+      "hoca:hv-k2-15-49"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q72",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi şizofreninin ayırıcı tanısında düşünülecek psikiyatrik hastalıklardan biri değildir?",
+     "secenekler": {
+      "A": "Yapay bozukluk",
+      "B": "Panik bozukluğu",
+      "C": "Obsesif kompulsif bozukluk",
+      "D": "Antisosyal kişilik bozukluğu",
+      "E": "Temaruz"
+     },
+     "dogru": "D",
+     "aciklama": "Listede yalnızca A kümesi kişilik bozuklukları yer alır; antisosyal kişilik bozukluğu ise B kümesine girer. Bu nedenle ayırıcı tanı listesinde bulunmayan seçenek budur (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Yapay bozukluk, hasta rolünü kazanmak için belirtilerin bilerek oluşturulmasıdır. Psikotik belirti sunabildiği için ayırıcı tanı listesindedir; bu nedenle şık yanlış seçenek değildir (s. 19).",
+      "B": "Panik bozukluğu, ani başlayan yoğun korku ve bedensel belirtilerle seyreder. Psikotik görünümlü ataklarla karışabildiği için listede yer alır; bu nedenle şık yanlış seçenek değildir (s. 19).",
+      "C": "Obsesif kompulsif bozuklukta takıntılar bazen sanrı düzeyine yaklaşabilir. Bu yüzden ayırıcı tanı listesinde bulunur ve şık, sorulan yanlış seçenek değildir (s. 19).",
+      "D": "Listede yalnızca A kümesi kişilik bozuklukları yer alır; antisosyal kişilik bozukluğu ise B kümesine girer. Bu nedenle ayırıcı tanı listesinde bulunmayan seçenek budur (s. 19).",
+      "E": "Temaruz, hastalığın dış bir kazanç için bilerek taklit edilmesidir. Psikoz taklidiyle gelenleri gerçek psikozdan ayırmak gerektiğinden listede yer alır; bu nedenle şık yanlış seçenek değildir (s. 19)."
+     },
+     "bilgi": [
+      67,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Şizofreniform bozukluk Kişilik bozuklukları(A"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-24"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q73",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Askerlikten muaf tutulmak için işitsel varsanı yakınmasıyla başvuran 22 yaşındaki erkek hastanın muayene dışında belirti göstermediği ve yakınmalarını bilerek abarttığı anlaşılmıştır. Ayırıcı tanıda ilk düşünülecek durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Paylaşılmış psikoz",
+      "B": "Temaruz",
+      "C": "Şizofreniform bozukluk",
+      "D": "Kısa psikotik bozukluk",
+      "E": "Sanrılı bozukluk"
+     },
+     "dogru": "B",
+     "aciklama": "Temaruz, belirtilerin dış bir kazanç için bilerek taklit edilmesidir ve ayırıcı tanı listesinde yer alır. Gerçek psikozdan ayrılması gerektiği için doğru yanıt budur (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Paylaşılmış psikozda sanrı sistemini bağımlı bir ilişki içindeki kişiler paylaşır; amaç dışarıdan bir kazanç sağlamak değildir. Bu soruda hasta belirtileri bilerek abarttığı için tablo gerçek bir sanrı paylaşımı değildir ve şık yanlıştır (s. 41).",
+      "B": "Temaruz, belirtilerin dış bir kazanç için bilerek taklit edilmesidir ve ayırıcı tanı listesinde yer alır. Gerçek psikozdan ayrılması gerektiği için doğru yanıt budur (s. 19).",
+      "C": "Şizofreniform bozukluk, gerçek psikotik belirtilerin 1-6 ay sürdüğü tanıdır ve belirtiler hastanın bilinçli çabasıyla oluşmaz. Bu vakada belirtiler dışarıdaki kazanç için bilerek abartıldığından şık yanlıştır (s. 47).",
+      "D": "Kısa psikotik bozukluk, gerçek psikotik belirtilerin 1 günden uzun 1 aydan kısa sürdüğü tanıdır ve belirtiler hastanın isteğiyle oluşmaz. Vakadaki bilinçli abartma bu tanıyı değil taklidi gösterdiği için şık yanlıştır (s. 18).",
+      "E": "Sanrılı bozuklukta sistematize bir sanrı vardır ve hasta bunu gerçekten yaşar; belirti sunumu bir kazanca yönelik değildir. Vakada belirtiler yalnızca muayenede ve bilerek sunulduğundan şık yanlıştır (s. 36)."
+     },
+     "bilgi": [
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Sanrılı bozukluk Kümesi Temaruz Yapay bozukluk"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-24"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q82",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Şizofreninin ayırıcı tanısında düşünülecek psikotik özellikli duygudurum bozuklukları aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Panik bozukluğu ve depersonalizasyon bozukluğu",
+      "B": "Obsesif kompulsif bozukluk ve yapay bozukluk",
+      "C": "Temaruz ve indüklenmiş psikotik bozukluk",
+      "D": "Kısa psikotik bozukluk ve şizofreniform bozukluk",
+      "E": "Psikotik özellikli bipolar bozukluk ve psikotik özellikli major depresyon"
+     },
+     "dogru": "E",
+     "aciklama": "Psikotik özellikli bipolar bozuklukta mani üzerine psikoz eklenebilir, majör depresyonda ise sanrı ve varsanı görülebilir. Her psikoz şizofreni olmadığından ayırıcı tanıda iki bozukluk da düşünülür ve doğru yanıt budur (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Panik bozukluğu ve depersonalizasyon bozukluğu anksiyete ve ayrışma bozukluklarıdır. Duygudurum bozukluğu olmadıklarından ve psikotik özellikli duygudurum bozukluklarını içermediğinden şık yanlıştır (s. 19).",
+      "B": "Obsesif kompulsif bozukluk bir anksiyete bozukluğu, yapay bozukluk ise bilerek belirti oluşturmadır. İkisi de duygudurum bozukluğu olmadığından şık yanlıştır (s. 19).",
+      "C": "Temaruz bilinçli taklit, indüklenmiş psikotik bozukluk ise sanrının başkasından alınmasıdır. İkisi de duygudurum bozukluğu değildir; bu nedenle şık yanlıştır (s. 19).",
+      "D": "Kısa psikotik bozukluk ve şizofreniform bozukluk psikotik bozukluklardır ve süreye göre ayrılır. Duygudurum bozukluğu olmadıklarından şık yanlıştır (s. 18, 19).",
+      "E": "Psikotik özellikli bipolar bozuklukta mani üzerine psikoz eklenebilir, majör depresyonda ise sanrı ve varsanı görülebilir. Her psikoz şizofreni olmadığından ayırıcı tanıda iki bozukluk da düşünülür ve doğru yanıt budur (s. 19)."
+     },
+     "bilgi": [
+      67
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Psikotik özellikli bipolar bozukluk"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-49"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q40",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Şizofreni ayırıcı tanısında düşünülecek genel tıbbi hastalıklar için aşağıdaki öncüllerden hangileri doğrudur?\nI. Temporal lob epilepsisi\nII. Panik bozukluğu\nIII. Nörosifiliz\nIV. Sistemik lupus eritematozus",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve III",
+      "C": "I, III ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Temporal lob epilepsisi, nörosifiliz ve SLE genel tıbbi ayırıcı tanı listesindedir. Panik bozukluğu ise psikiyatrik ayırıcı tanı listesinde yer alır; bu nedenle doğru yanıt budur (s. 19, 20).",
+     "sik_aciklamalari": {
+      "A": "Yalnız I eksiktir: nörosifiliz enfeksiyon, SLE ise otoimmun örnek olarak genel tıbbi ayırıcı tanı listesindedir; doğru yanıt ise “I, III ve IV” şıkkıdır (s. 20).",
+      "B": "I ve III doğrudur ama SLE de otoimmun örnek olarak listededir. Bu seçenek eksiktir; doğru yanıt ise “I, III ve IV” şıkkıdır (s. 20).",
+      "C": "Temporal lob epilepsisi, nörosifiliz ve SLE genel tıbbi ayırıcı tanı listesindedir. Panik bozukluğu ise psikiyatrik ayırıcı tanı listesinde yer alır; bu nedenle doğru yanıt budur (s. 19, 20).",
+      "D": "Panik bozukluğu psikiyatrik hastalıklar listesindedir, genel tıbbi hastalık değildir. Bu seçenek II'yi içerdiği için yanlıştır; doğru yanıt ise “I, III ve IV” şıkkıdır (s. 19).",
+      "E": "Panik bozukluğu genel tıbbi bir hastalık değil, psikiyatrik bir ayırıcı tanıdır. Bu yüzden seçenek yanlıştır; doğru yanıt ise “I, III ve IV” şıkkıdır (s. 19)."
+     },
+     "bilgi": [
+      69,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Temporal lob epilepsisi Tümör, inme, travma Endokrin, metabolik bozukluklar"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b14",
+      "ogrenci:A:psk-s04-b13"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877044394-242744",
+     "soru": "Aşağıdaki ilaçlar verilmiştir:\nI. Amfetaminler\nII. LSD\nIII. İzoniazid\nIV. MAO inhibitörleri\nBunlardan hangisi/hangileri şizofreni benzeri paranoid reaksiyonlar ile deliryum ve konfüzyona neden olabilir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Sanrılı bozukluğun özelliklerini, alt tiplerini ve şizofreniden farkını; paylaşılmış psikozu açıklar.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q45",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Paranoid sanrılı bozuklukta \"ben güvensiz değilim, dünya güvensiz\" düşüncesi hangi savunma mekanizmasını yansıtır?",
+     "secenekler": {
+      "A": "Yüceltme",
+      "B": "Karşıt tepki kurma",
+      "C": "Yansıtma",
+      "D": "Yadsıma",
+      "E": "Bastırma"
+     },
+     "dogru": "C",
+     "aciklama": "Yansıtma, kişinin kendi içindeki güvensizlik duygusunu dışarıya, dünyaya atmasıdır. Paranoid sanrılı bozuklukta temel savunmadır ve ifade bunu birebir anlatır; bu nedenle doğru yanıt budur (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Yüceltme, dürtünün toplumca kabul gören bir etkinliğe çevrilmesidir. Sanrılı bozuklukta savunma olarak yadsıma, yansıtma ve karşıt tepki kurma işlenir, bu mekanizma ise işlenmez; doğru yanıt ise “Yansıtma” şıkkıdır (s. 39).",
+      "B": "Karşıt tepki kurma, düşük benlik saygısına karşıt bir grandiyöz benlik oluşturmaktır. Paranoid değil, büyüklük tipi sanrılarla ilişkilidir; doğru yanıt ise “Yansıtma” şıkkıdır (s. 39).",
+      "C": "Yansıtma, kişinin kendi içindeki güvensizlik duygusunu dışarıya, dünyaya atmasıdır. Paranoid sanrılı bozuklukta temel savunmadır ve ifade bunu birebir anlatır; bu nedenle doğru yanıt budur (s. 39).",
+      "D": "Yadsıma, bir gerçeğin varlığını kabul etmemektir ve sanrılı bozuklukta işlenen savunmalardan biridir. Güvensizliğin dünyaya atılmasını değil, gerçeğin kabul edilmemesini anlattığı için bu şık yanlıştır; doğru yanıt ise “Yansıtma” şıkkıdır (s. 39).",
+      "E": "Bastırma, rahatsız edici içeriğin bilinçdışına itilmesidir. Sanrılı bozuklukta savunma olarak yadsıma, yansıtma ve karşıt tepki kurma işlenir, bu mekanizma ise işlenmez; doğru yanıt ise “Yansıtma” şıkkıdır (s. 39)."
+     },
+     "bilgi": [
+      112
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Yansıtma (paranoid): “ben güvensiz değilim, dünya güvensiz”"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b02"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Kırk iki yaşında kadın hasta, yaklaşık iki yıldır komşusunun kendisini sürekli izlediği ve evine girdiği inancındadır. Bu inancı dışında düzenli çalışmakta ve ev işlerini sürdürmektedir. Belirgin varsanı ve dağınık konuşma saptanmamıştır, hasta hekime başvurmayı gerekli görmemektedir. En olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Şizofreni",
+      "B": "Şizoaffektif bozukluk",
+      "C": "Şizofreniform bozukluk",
+      "D": "Kısa psikotik bozukluk",
+      "E": "Sanrılı bozukluk"
+     },
+     "dogru": "E",
+     "aciklama": "Sanrılı bozuklukta bir ay veya daha uzun süren, tek alana odaklı ve sistematize sanrı vardır, işlev korunur ve iç görü yoktur. Tanı budur; bu nedenle doğru yanıt budur (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Şizofreni, belirgin işlev kaybı ve çoğunlukla dağınık, yaygın sanrılarla seyreder. Bu hastada işlev korunmuş ve sanrı tek konuya odaklı olduğundan tanıya uymaz; doğru yanıt ise “Sanrılı bozukluk” şıkkıdır (s. 40).",
+      "B": "Şizoaffektif bozuklukta duygudurum belirtileri psikotik belirtilere eşlik eder. Bu hastada duygudurum bozukluğu belirtisi tarif edilmediği için yanlıştır; doğru yanıt ise “Sanrılı bozukluk” şıkkıdır (s. 43).",
+      "C": "Şizofreniform bozuklukta şizofreninin A ölçütü karşılanır ve süre altı aydan kısadır. Bu hastada süre iki yıldır ve A ölçütü karşılanmamaktadır, bu yüzden yanlıştır; doğru yanıt ise “Sanrılı bozukluk” şıkkıdır (s. 47).",
+      "D": "Kısa psikotik bozukluk bir aydan kısa sürer ve tam iyileşmeyle sonlanır. İki yıllık tablo bu tanıyı dışlar; doğru yanıt ise “Sanrılı bozukluk” şıkkıdır (s. 45).",
+      "E": "Sanrılı bozuklukta bir ay veya daha uzun süren, tek alana odaklı ve sistematize sanrı vardır, işlev korunur ve iç görü yoktur. Tanı budur; bu nedenle doğru yanıt budur (s. 36)."
+     },
+     "bilgi": [
+      104,
+      105,
+      106,
+      109
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Şizofrenideki gibi ağır yeti kaybı yok"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b02",
+      "ogrenci:B:psk-s05-b05"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q51",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi sanrılı bozuklukta sanrıların özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Bir ay ya da daha uzun sürmesi",
+      "B": "Tek alana odaklı olması",
+      "C": "Çoğunlukla bizar olmaması",
+      "D": "Yaygın ve dağınık olması",
+      "E": "Sistematize olması"
+     },
+     "dogru": "D",
+     "aciklama": "Yaygın ve dağınık sanrılar şizofreniye özgüdür; sanrılı bozuklukta sanrılar daha odaklıdır ve sistematizedir. Bu şık şizofrenideki sanrıyı anlattığı için soruda aranan şıktır; bu nedenle doğru yanıt budur (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Sanrılı bozukluk tanısı bir ay ya da daha uzun süren bir ya da daha çok sanrıyı ister. Süre, tanımın bir parçasıdır ve sanrıyı tanımlar; yanlış olan ifade ise “Yaygın ve dağınık olması” şıkkıdır (s. 37).",
+      "B": "Sanrılı bozuklukta sanrılar tek bir konuya odaklanır. Bu özellik hastanın diğer alanlarda işlevini sürdürmesini sağlar ve sanrının tanımına girer; yanlış olan ifade ise “Yaygın ve dağınık olması” şıkkıdır (s. 37).",
+      "C": "Sanrılı bozuklukta sanrılar çoğunlukla bizar değildir, yani gerçek yaşamda olabilecek konulardır. Bu özellik tanımın bir parçasıdır; yanlış olan ifade ise “Yaygın ve dağınık olması” şıkkıdır (s. 37).",
+      "D": "Yaygın ve dağınık sanrılar şizofreniye özgüdür; sanrılı bozuklukta sanrılar daha odaklıdır ve sistematizedir. Bu şık şizofrenideki sanrıyı anlattığı için soruda aranan şıktır; bu nedenle doğru yanıt budur (s. 40).",
+      "E": "Sanrılı bozuklukta sanrılar sistematizedir, yani kendi içinde tutarlı bir düzen taşır. Bu özellik şizofrenideki dağınık sanrılardan ayırt ettirir; yanlış olan ifade ise “Yaygın ve dağınık olması” şıkkıdır (s. 37)."
+     },
+     "bilgi": [
+      109,
+      113,
+      106
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Sanrılar sistematize değil, yaygın"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b02",
+      "ogrenci:B:psk-s05-b05"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q52",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi sanrılı bozukluğu şizofreniden ayıran özelliklerden biri değildir?",
+     "secenekler": {
+      "A": "Sanrıların sistematize olmaması",
+      "B": "Şizofreninin diğer belirtilerinin bulunmaması",
+      "C": "İşlevselliğin iyi olması",
+      "D": "Yeti kaybının bulunmaması",
+      "E": "Sanrıların daha odaklı olması"
+     },
+     "dogru": "A",
+     "aciklama": "Sanrıların sistematize olmaması ve yaygın olması şizofreninin özelliğidir. Sanrılı bozuklukta sanrılar sistematizedir, bu yüzden bu şık ayırt edici özellik değildir; bu nedenle doğru yanıt budur (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Sanrıların sistematize olmaması ve yaygın olması şizofreninin özelliğidir. Sanrılı bozuklukta sanrılar sistematizedir, bu yüzden bu şık ayırt edici özellik değildir; bu nedenle doğru yanıt budur (s. 40).",
+      "B": "Sanrılı bozuklukta şizofreninin diğer belirtileri yoktur ve A tanı ölçütü hiçbir zaman karşılanmaz. Bu özellik iki bozukluğu ayırır; yanlış olan ifade ise “Sanrıların sistematize olmaması” şıkkıdır (s. 37).",
+      "C": "Sanrılı bozuklukta işlevsellik iyidir, şizofrenide kötüdür. Bu fark iki tanıyı ayırmada en çok kullanılan noktadır; yanlış olan ifade ise “Sanrıların sistematize olmaması” şıkkıdır (s. 40).",
+      "D": "Sanrılı bozuklukta şizofrenideki gibi ağır yeti kaybı yoktur. Bu özellik hastaların uzun süre fark edilmeden toplumda yaşamasını açıklar; yanlış olan ifade ise “Sanrıların sistematize olmaması” şıkkıdır (s. 36).",
+      "E": "Sanrılı bozuklukta sanrılar tek bir alana odaklanmıştır, şizofrenide ise yaygındır. Bu fark ayırıcı tanıda belirleyicidir; yanlış olan ifade ise “Sanrıların sistematize olmaması” şıkkıdır (s. 40)."
+     },
+     "bilgi": [
+      113,
+      104,
+      107
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Yeti kaybı var Yeti kaybı yok"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s05-b05"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q80",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Elli yaşındaki erkek hasta, karnında hekimlerin bir türlü bulamadığı bir hastalık olduğuna kesin olarak inanmakta ve bu nedenle birçok hekime başvurmaktadır. Başka psikotik belirtisi yoktur. Bu hastanın tanısı aşağıdakilerden hangisinin alt tipidir?",
+     "secenekler": {
+      "A": "Büyüklük tipi",
+      "B": "Kıskançlık tipi",
+      "C": "Somatik tip",
+      "D": "Paranoid tip",
+      "E": "Erotomanik tip"
+     },
+     "dogru": "C",
+     "aciklama": "Somatik tipte hasta bedeninde bir hastalık olduğuna kesin olarak inanır ve doktor dolaşır. Vakadaki karında hastalık inancı ve hekim arayışı buna uyar; bu nedenle doğru yanıt budur (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Büyüklük tipinde hasta kendisinde olağanüstü yetenek ya da önem bulunduğuna inanır. Vakada böyle bir inanç yoktur; bu nedenle şık yanlıştır (s. 38).",
+      "B": "Kıskançlık tipinde (Othello sendromu) hasta eşinin kendisini aldattığına inanır. Vakadaki inanç eşle değil bedenle ilgilidir; bu nedenle şık yanlıştır (s. 38).",
+      "C": "Somatik tipte hasta bedeninde bir hastalık olduğuna kesin olarak inanır ve doktor dolaşır. Vakadaki karında hastalık inancı ve hekim arayışı buna uyar; bu nedenle doğru yanıt budur (s. 38).",
+      "D": "Paranoid tipte hasta kendisine zarar verildiğine ya da izlendiğine inanır. Vakada bedensel hastalık inancı öne çıktığından şık yanlıştır (s. 38).",
+      "E": "Erotomanik tipte hasta, önemli bir kişinin kendisine aşık olduğuna inanır. Bu vakada böyle bir inanç yoktur; bu nedenle şık yanlıştır (s. 38)."
+     },
+     "bilgi": [
+      110
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Paranoid tip paranoya Somatik tip Karma tip"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-40"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q81",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Paylaşılmış psikoz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sanrıyı paylaşan kişiler eşit baskındır ve ayrılmaları gerekmez",
+      "B": "İki ya da daha fazla kişi aynı sanrı sistemini paylaşır",
+      "C": "Kişiler arasında bağımlı bir ilişki bulunur",
+      "D": "Sanrılar çoğunlukla persekütif ya da hipokondriak içeriklidir",
+      "E": "Tedavide baskın eşe antipsikotik verilir"
+     },
+     "dogru": "A",
+     "aciklama": "İlişkide biri dominant, diğeri pasiftir ve pasif olanın diğerinden ayrılması tedavinin parçasıdır. Kişilerin eşit baskın olduğunu söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 41).",
+     "sik_aciklamalari": {
+      "A": "İlişkide biri dominant, diğeri pasiftir ve pasif olanın diğerinden ayrılması tedavinin parçasıdır. Kişilerin eşit baskın olduğunu söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 41).",
+      "B": "Paylaşılmış psikozun tanımı, aynı sanrı sistemini birden fazla kişinin paylaşmasıdır. Bu ifade tanıma uyduğu için doğrudur ve yanlış seçenek değildir (s. 41).",
+      "C": "Bu hastalıkta kişiler arasında bağımlı bir ilişki vardır; biri baskın, diğeri pasiftir. Bu ifade doğru olduğu için yanlış değildir (s. 41).",
+      "D": "Paylaşılan sanrılar çoğunlukla persekütif ya da hipokondriak içeriklidir. Bu ifade bilgiyle uyumlu olduğu için doğrudur ve yanlış seçenek değildir (s. 41).",
+      "E": "Tedavide baskın eşe antipsikotik verilir; pasif olan ise diğerinden ayrılır. Bu ifade doğru olduğu için yanlış değil, tedavi ilkesine uygundur (s. 41)."
+     },
+     "bilgi": [
+      114,
+      115,
+      116
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Bağımlı bir ilişki, biri dominant, diğeri"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-43"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q43",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Sanrılı bozukluk ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kadınlarda daha sık görülür",
+      "B": "Varsanılar varsa bile belirgin değildir ve sanrısal konuyla ilişkilidir",
+      "C": "Tanı için bir ay ya da daha uzun süren sanrı gerekir",
+      "D": "Hastalar çoğunlukla iç görüye sahiptir ve hekime sık başvurur",
+      "E": "Ortalama başlangıç yaşı 40 civarındadır"
+     },
+     "dogru": "D",
+     "aciklama": "Bu ifade yanlıştır: sanrılı bozuklukta hastalık iç görüsü yoktur, bu nedenle hekime başvuru nadirdir. Bu nedenle doğru yanıt budur (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: sanrılı bozukluk kadınlarda daha sıktır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Hastalar çoğunlukla iç görüye sahiptir ve hekime sık başvurur” şıkkıdır (s. 36).",
+      "B": "Bu ifade doğrudur: varsanı varsa bile belirgin değildir. Örneğin böceklerce sarıldığı sanrısına, böceklerin sardığı duyumu eşlik edebilir; yanlış olan ifade ise “Hastalar çoğunlukla iç görüye sahiptir ve hekime sık başvurur” şıkkıdır (s. 37).",
+      "C": "Bu ifade doğrudur: tanı için bir ay ya da daha uzun süren bir (ya da daha çok) sanrı aranır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Hastalar çoğunlukla iç görüye sahiptir ve hekime sık başvurur” şıkkıdır (s. 37).",
+      "D": "Bu ifade yanlıştır: sanrılı bozuklukta hastalık iç görüsü yoktur, bu nedenle hekime başvuru nadirdir. Bu nedenle doğru yanıt budur (s. 36).",
+      "E": "Bu ifade doğrudur: ortalama başlangıç yaşı 40'tır. Yanlış ifade arandığı için bu şık elenir; yanlış olan ifade ise “Hastalar çoğunlukla iç görüye sahiptir ve hekime sık başvurur” şıkkıdır (s. 36)."
+     },
+     "bilgi": [
+      104,
+      105,
+      106,
+      108
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Hastalık iç görüsü yok"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b02"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q44",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Sanrılı bozukluk alt tipleri ve adlandırmaları ile ilgili aşağıdaki öncüllerden hangileri doğru eşleştirilmiştir?\nI. Erotomanik tip - Clérambault sendromu\nII. Kıskançlık tipi - Othello sendromu\nIII. Büyüklük tipi - Capgras sendromu\nIV. Belirlenmemiş tip - Fregoli sendromu",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Erotomanik tip Clérambault, kıskançlık tipi Othello sendromu ile anılır; Capgras ve Fregoli belirlenmemiş tip örnekleridir. Büyüklük tipi ise grandiyöz tiptir; bu nedenle doğru yanıt budur (s. 38).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur ama Fregoli sendromu da belirlenmemiş tipe örnektir. Bu seçenek eksiktir; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 38).",
+      "B": "Büyüklük tipi Capgras sendromu ile eşleşmez: Capgras belirlenmemiş tipe örnektir. Bu seçenek III'ü içerdiği için yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 38).",
+      "C": "Erotomanik tip Clérambault, kıskançlık tipi Othello sendromu ile anılır; Capgras ve Fregoli belirlenmemiş tip örnekleridir. Büyüklük tipi ise grandiyöz tiptir; bu nedenle doğru yanıt budur (s. 38).",
+      "D": "III yanlıştır: büyüklük tipi Capgras ile eşleşmez. Erotomanik tip - Clérambault eşleşmesi de dışarıda bırakılmıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 38).",
+      "E": "III numaralı eşleşme yanlıştır: Capgras belirlenmemiş tipe örnektir, büyüklük tipine değil. Bu yüzden seçenek yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 38)."
+     },
+     "bilgi": [
+      110,
+      111
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Erotomanik tip (Clerambault sendromu)"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b02",
+      "hoca:hv-k2-15-40"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q61",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Bağımlı bir ilişki içinde yaşayan anne ve kızdan anne, komşularının kendilerini zehirlemeye çalıştığına inanmaktadır. Kızı da aynı inancı paylaşmakta, annesinin söylediklerini sorgulamamaktadır. Bu olguda en uygun yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnız güven ilişkisi kurulup izlem yapılır",
+      "B": "İkisine de kısa psikotik bozukluk tedavisi uygulanır",
+      "C": "Pasif olan kıza antipsikotik verilir ve anne izlenir",
+      "D": "İkisine de birlikte yaşamaya devam edecek biçimde yalnız psikoterapi uygulanır",
+      "E": "Baskın olan anneye antipsikotik verilir ve kız anneden ayrılır"
+     },
+     "dogru": "E",
+     "aciklama": "Paylaşılmış psikozda iki kişi aynı sanrı sistemini paylaşır; biri baskın, diğeri pasiftir. Bu olguda baskın olan annedir; bu nedenle doğru yanıt budur (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Güven ilişkisi sanrılı bozukluğun tedavisinde öncelikli adımdır. Paylaşılmış psikozda ise baskın eşe antipsikotik ve ayırma esastır; doğru yanıt ise “Baskın olan anneye antipsikotik verilir ve kız anneden ayrılır” şıkkıdır (s. 41).",
+      "B": "Kısa psikotik bozukluk bir aydan kısa süren, stres ardından ortaya çıkan tablodur. Olgudaki bağımlı ilişki ve ortak sanrı paylaşılmış psikozu gösterir; doğru yanıt ise “Baskın olan anneye antipsikotik verilir ve kız anneden ayrılır” şıkkıdır (s. 41).",
+      "C": "Antipsikotik pasif olana değil, baskın eşe verilir. Pasif olan çoğunlukla ayrılmakla düzelir; doğru yanıt ise “Baskın olan anneye antipsikotik verilir ve kız anneden ayrılır” şıkkıdır (s. 41).",
+      "D": "Paylaşılmış psikozda pasif olan baskın olandan ayrılır. Birlikte yaşamayı sürdürmek sanrı sistemini besler ve bu şık yanlıştır; doğru yanıt ise “Baskın olan anneye antipsikotik verilir ve kız anneden ayrılır” şıkkıdır (s. 41).",
+      "E": "Paylaşılmış psikozda iki kişi aynı sanrı sistemini paylaşır; biri baskın, diğeri pasiftir. Bu olguda baskın olan annedir; bu nedenle doğru yanıt budur (s. 41)."
+     },
+     "bilgi": [
+      114,
+      115,
+      116
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Tedavide baskın eşe antipsikotik ver, pasif olanı diğerinden ayır"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s05-b06",
+      "hoca:hv-k2-15-43"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Şizoaffektif bozukluğun özelliklerini ve katatoninin tanı ölçütlerini ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q46",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Şizoaffektif bozuklukta, duygudurum belirtileri olmadan en az ne kadar süren psikotik belirtiler bulunmalıdır?",
+     "secenekler": {
+      "A": "2 hafta",
+      "B": "1 ay",
+      "C": "1 yıl",
+      "D": "1 gün",
+      "E": "6 ay"
+     },
+     "dogru": "A",
+     "aciklama": "Şizoaffektif bozuklukta duygudurum belirtileri olmadan en az iki hafta süren psikotik belirtiler bulunmalıdır. Bu şart tablonun yalnızca duygudurum bozukluğuna bağlı psikozdan ayrılmasını sağlar; bu nedenle doğru yanıt budur (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Şizoaffektif bozuklukta duygudurum belirtileri olmadan en az iki hafta süren psikotik belirtiler bulunmalıdır. Bu şart tablonun yalnızca duygudurum bozukluğuna bağlı psikozdan ayrılmasını sağlar; bu nedenle doğru yanıt budur (s. 43).",
+      "B": "Bir ay, şizofreninin A ölçütünde ve sanrılı bozuklukta aranan süredir. Şizoaffektif bozuklukta ise duygudurum belirtisiz psikoz için iki hafta aranır; doğru yanıt ise “2 hafta” şıkkıdır (s. 43).",
+      "C": "Slaytta şizoaffektif bozukluk için bir yıllık bir süre ölçütü yoktur. Gereken süre duygudurum belirtisiz iki haftalık psikozdur; doğru yanıt ise “2 hafta” şıkkıdır (s. 43).",
+      "D": "Bir gün kısa psikotik bozukluğun alt süre sınırıdır. Şizoaffektif bozuklukta aranan psikoz süresi iki haftadır; doğru yanıt ise “2 hafta” şıkkıdır (s. 46).",
+      "E": "Altı ay, şizofreninin C ölçütündeki süredir. Şizoaffektif bozuklukta aranan duygudurum belirtisiz psikoz süresi iki haftadır; doğru yanıt ise “2 hafta” şıkkıdır (s. 17)."
+     },
+     "bilgi": [
+      120
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Duygudurum belirtileri olmadan, en az 2 hafta süren psikotik belirtiler olmalıdır."
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s05-b07"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q78",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi katatoni tanı ölçütündeki belirtilerden biri değildir?",
+     "secenekler": {
+      "A": "Ajitasyon",
+      "B": "Yüzünü buruşturma (grimas)",
+      "C": "Ekolali",
+      "D": "Mutizm",
+      "E": "Apati"
+     },
+     "dogru": "E",
+     "aciklama": "Apati, ilgisizlik ve duygusal soğukluk olarak ortaya çıkan negatif belirtidir ve katatoni ölçütündeki 12 belirtiye dahil değildir. Bu nedenle sorulan seçenek budur (s. 24, 33).",
+     "sik_aciklamalari": {
+      "A": "Ajitasyon, katatoninin 12 belirtisinden biridir ve hasta bazen ne yaptığını bilmeden ajitasyona geçebilir. İfade ölçütte yer aldığından yanlış seçenek değildir (s. 33).",
+      "B": "Yüzünü buruşturma (grimas), katatoni ölçütündeki belirtilerden biridir ve hastanın yüz kaslarındaki amaçsız, abartılı hareketlerini anlatır. Ölçütte yer aldığından yanlış seçenek değildir (s. 33).",
+      "C": "Ekolali, başkasının konuşmasını aynen yineleme olarak katatoni ölçütündeki belirtilerden biridir ve yankı belirtileri arasındadır. Ölçütte yer aldığından yanlış seçenek değildir (s. 33).",
+      "D": "Mutizm, sözel tepki göstermeme ya da çok az gösterme olarak katatoni ölçütündeki belirtilerden biridir. Ölçütte yer aldığından yanlış seçenek değildir (s. 32).",
+      "E": "Apati, ilgisizlik ve duygusal soğukluk olarak ortaya çıkan negatif belirtidir ve katatoni ölçütündeki 12 belirtiye dahil değildir. Bu nedenle sorulan seçenek budur (s. 24, 33)."
+     },
+     "bilgi": [
+      100,
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "9. Ajitasyon, 10. Yüzünü buruşturma (grimas)"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-36"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q48",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Katatoni tanısı için 12 belirtiden en az kaçının klinik görünümde baskın olması gerekir?",
+     "secenekler": {
+      "A": "Yedi",
+      "B": "Beş",
+      "C": "Üç",
+      "D": "İki",
+      "E": "Bir"
+     },
+     "dogru": "C",
+     "aciklama": "Katatonide 12 belirtiden üçü ya da daha çoğu baskın olmalıdır. Stupor, katalepsi, balmumu esnekliği, mutizm ve negativizm bu listenin ilk maddeleridir; bu nedenle doğru yanıt budur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Yedi belirti, istenen sayının çok üzerindedir. Katatonide en az üç belirti aranır; doğru yanıt ise sorulan bilgiyi veren “Üç” şıkkıdır (s. 32).",
+      "B": "Beş belirti, katatoni ölçütünde istenen sayıdan fazladır. Gereken sayı en az üçtür; doğru yanıt ise sorulan bilgiyi veren “Üç” şıkkıdır (s. 32).",
+      "C": "Katatonide 12 belirtiden üçü ya da daha çoğu baskın olmalıdır. Stupor, katalepsi, balmumu esnekliği, mutizm ve negativizm bu listenin ilk maddeleridir; bu nedenle doğru yanıt budur (s. 32).",
+      "D": "İki belirti eksiktir. Ölçüt, 12 belirtiden en az üçünün baskın olmasını ister; doğru yanıt ise sorulan bilgiyi veren “Üç” şıkkıdır (s. 32).",
+      "E": "Tek belirti yeterli sayılmaz. Katatoni için 12 belirtiden üçü ya da daha çoğu aranır; doğru yanıt ise “Üç” şıkkıdır (s. 32)."
+     },
+     "bilgi": [
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Klinik görünümde aşağıdaki belirtilerden üçü (ya da daha çoğu) baskındır"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b22"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q49",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Muayene edenin hastaya verdiği konuma çok az direnç gösterilmesi aşağıdaki katatoni belirtilerinden hangisi ile adlandırılır?",
+     "secenekler": {
+      "A": "Negativizm",
+      "B": "Katalepsi",
+      "C": "Mutizm",
+      "D": "Ekopraksi",
+      "E": "Balmumu esnekliği"
+     },
+     "dogru": "E",
+     "aciklama": "Balmumu esnekliği, muayene edenin hastaya verdiği konuma çok az direnç gösterilmesidir. Hastanın uzuvları balmum gibi şekillenir; bu nedenle doğru yanıt budur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Negativizm, yönergelere ya da dış uyaranlara karşı gelme ya da hiç tepki göstermemedir. Verilen konumu kabul etmenin tersidir; doğru yanıt ise “Balmumu esnekliği” şıkkıdır (s. 32).",
+      "B": "Katalepsi, yer çekimine karşı edilgin bir konum almaktır. Muayene edenin verdiği konuma direnç göstermemeyi anlatmaz; doğru yanıt ise “Balmumu esnekliği” şıkkıdır (s. 32).",
+      "C": "Mutizm, sözel tepki göstermeme ya da çok az göstermedir. Konum verme direnciyle ilgili değildir; doğru yanıt ise “Balmumu esnekliği” şıkkıdır (s. 32).",
+      "D": "Ekopraksi, başkasının davranışlarının aynısını yapmadır ve katatoninin belirtilerindendir. Muayene edenin verdiği konuma direnç göstermemeyi anlatmadığı için bu şık yanlıştır; doğru yanıt ise “Balmumu esnekliği” şıkkıdır (s. 33).",
+      "E": "Balmumu esnekliği, muayene edenin hastaya verdiği konuma çok az direnç gösterilmesidir. Hastanın uzuvları balmum gibi şekillenir; bu nedenle doğru yanıt budur (s. 32)."
+     },
+     "bilgi": [
+      99
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Balmumu esnekliği (muayene edenin konum vermesine çok az bir direnç gösterme)"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b22"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q63",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Şizoaffektif bozukluk ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Prognozu şizofreniden daha kötüdür",
+      "B": "Şizofreni ve duygudurum bozukluğu açısından aile öyküsü pozitiftir",
+      "C": "Kadınlarda daha fazla görülür",
+      "D": "Duygudurum belirtileri olmadan en az 2 hafta süren psikotik belirtiler bulunmalıdır",
+      "E": "Olguların %20-30'unda giderek artan yıkım gözlenir"
+     },
+     "dogru": "A",
+     "aciklama": "Bu ifade yanlıştır: şizoaffektif bozukluğun prognozu genel olarak şizofreniden iyi, duygudurum bozukluklarından kötüdür. Yönün ters verilmesi sık yapılan bir hatadır; bu nedenle doğru yanıt budur (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade yanlıştır: şizoaffektif bozukluğun prognozu genel olarak şizofreniden iyi, duygudurum bozukluklarından kötüdür. Yönün ters verilmesi sık yapılan bir hatadır; bu nedenle doğru yanıt budur (s. 44).",
+      "B": "Bu ifade doğrudur: ailede şizofreni ve duygudurum bozukluğu öyküsü bulunur. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Prognozu şizofreniden daha kötüdür” şıkkıdır (s. 44).",
+      "C": "Bu ifade doğrudur: şizoaffektif bozukluk kadınlarda daha fazladır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Prognozu şizofreniden daha kötüdür” şıkkıdır (s. 44).",
+      "D": "Bu ifade doğrudur: tanı için duygudurum belirtisi olmadan en az iki hafta süren psikotik belirti aranır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Prognozu şizofreniden daha kötüdür” şıkkıdır (s. 43).",
+      "E": "Bu ifade doğrudur: olguların yüzde yirmi ile otuzunda giderek artan yıkım gözlenir. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Prognozu şizofreniden daha kötüdür” şıkkıdır (s. 44)."
+     },
+     "bilgi": [
+      123,
+      120,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Prognozu genel olarak şizofreniden iyi, duygudurum bozukluklarından kötüdür"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s05-b07"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q76",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Katatoni belirtilerinden stupor aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikodevinsel etkinliğin olmaması ve çevreyle etkin ilgilenmeme",
+      "B": "Sözel tepki göstermeme ya da çok az gösterme",
+      "C": "Yönergelere ya da dış uyaranlara karşı gelme ya da hiç tepki göstermeme",
+      "D": "Yer çekimine karşı edilgin bir konum alma",
+      "E": "Muayene edenin verdiği konuma çok az direnç gösterme"
+     },
+     "dogru": "A",
+     "aciklama": "Stupor, psikodevinsel etkinliğin olmaması ve çevreyle etkin ilgilenmemedir. Katatoni ölçütündeki 12 belirtinin ilki olduğu için doğru yanıt budur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Stupor, psikodevinsel etkinliğin olmaması ve çevreyle etkin ilgilenmemedir. Katatoni ölçütündeki 12 belirtinin ilki olduğu için doğru yanıt budur (s. 32).",
+      "B": "Bu tanım mutizmi anlatır; sözel tepki yoktur ya da çok azdır. Stupor etkinliğin tümünü kapsadığı için bu şık yanlıştır (s. 32).",
+      "C": "Bu tanım negativizmi anlatır; hasta yönergelere karşı gelir ya da hiç tepki vermez. Stupor ile aynı olmadığından şık yanlıştır (s. 32).",
+      "D": "Bu tanım katalepsiyi anlatır; hasta yer çekimine karşı edilgin bir konum alır. Stupor ise etkinliğin hiç olmamasıdır, bu nedenle şık yanlıştır (s. 32).",
+      "E": "Bu tanım balmumu esnekliğini anlatır; muayene eden hastaya konum verir ve hasta çok az direnir. Stupor ile aynı şey olmadığından şık yanlıştır (s. 32)."
+     },
+     "bilgi": [
+      98
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Stupor (psikodevinsel etkinliğin olmaması"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-34"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q79",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Katatoni belirtileri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ajitasyon katatoni belirtilerinden biridir",
+      "B": "Yüzünü buruşturma katatoni belirtilerinden biridir",
+      "C": "Ekolali katatoni belirtilerinden biridir",
+      "D": "Tanı için 12 belirtiden üçü ya da daha fazlası baskın olmalıdır",
+      "E": "Teğetsellik katatoni belirtilerinden biridir"
+     },
+     "dogru": "E",
+     "aciklama": "Teğetsellik düşünce sürecinin konudan sapmasıdır ve formel düşünce bozuklukları arasında yer alır. Katatoni belirtisi olmadığından ifade yanlıştır ve sorunun yanıtıdır (s. 33, 23).",
+     "sik_aciklamalari": {
+      "A": "Ajitasyon, katatoninin 12 belirtisi arasında sayılır ve bazen hastanın ne yaptığını bilmeden ajitasyona geçmesiyle görülür. İfade doğru olduğundan yanlış seçenek değildir (s. 33).",
+      "B": "Yüzünü buruşturma (grimas) katatoninin belirtilerinden biridir ve yüz kaslarında amaçsız hareketle ortaya çıkar. İfade doğru olduğundan yanlış seçenek değildir (s. 33).",
+      "C": "Ekolali, başkasının konuşmasını aynen yineleme olarak katatoni ölçütünde yer alır ve yankı belirtileri arasındadır. İfade doğru olduğundan yanlış seçenek değildir (s. 33).",
+      "D": "Katatoni tanısı için ölçütteki 12 belirtiden en az üçünün klinik görünümde baskın olması gerekir. İfade doğru olduğundan yanlış seçenek değildir (s. 32).",
+      "E": "Teğetsellik düşünce sürecinin konudan sapmasıdır ve formel düşünce bozuklukları arasında yer alır. Katatoni belirtisi olmadığından ifade yanlıştır ve sorunun yanıtıdır (s. 33, 23)."
+     },
+     "bilgi": [
+      97,
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "9. Ajitasyon, 10. Yüzünü buruşturma (grimas)"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-36"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q47",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Şizoaffektif bozukluğun duygudurum bozukluklarından ayrılmasını sağlayan özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sanrının tek alana odaklı olması",
+      "B": "Psikotik belirtilerin üstüne ataklar halinde affektif belirtilerin eklenmesi",
+      "C": "Belirtilerin bir günden uzun, bir aydan kısa sürmesi",
+      "D": "İşlevselliğin tam korunması",
+      "E": "Ataklar arasında tam iyilik halinin olmaması"
+     },
+     "dogru": "E",
+     "aciklama": "Şizoaffektif bozukluk, ataklar arasında tam iyilik halinin olmamasıyla duygudurum bozukluklarından ayrılır. Duygudurum bozukluklarında atak aralarında genellikle tam düzelme vardır; bu nedenle doğru yanıt budur (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Tek alana odaklı sanrı sanrılı bozukluğun özelliğidir. Şizoaffektif bozukluk ayrımına katkısı yoktur; doğru yanıt ise “Ataklar arasında tam iyilik halinin olmaması” şıkkıdır (s. 37).",
+      "B": "Bu özellik şizoaffektif bozukluğu şizofreniden ayırır, duygudurum bozukluklarından değil. Şizofrenide psikotik belirtilerin üstüne affektif belirti eklenmez; doğru yanıt ise “Ataklar arasında tam iyilik halinin olmaması” şıkkıdır (s. 43).",
+      "C": "Bu süre kısa psikotik bozukluğa aittir. Şizoaffektif bozukluk ile duygudurum bozukluğu ayrımında kullanılmaz; doğru yanıt ise “Ataklar arasında tam iyilik halinin olmaması” şıkkıdır (s. 45).",
+      "D": "İşlevselliğin korunması sanrılı bozukluğun özelliğidir. Şizoaffektif bozukluk ile duygudurum bozukluğunu ayırmaz; doğru yanıt ise “Ataklar arasında tam iyilik halinin olmaması” şıkkıdır (s. 40).",
+      "E": "Şizoaffektif bozukluk, ataklar arasında tam iyilik halinin olmamasıyla duygudurum bozukluklarından ayrılır. Duygudurum bozukluklarında atak aralarında genellikle tam düzelme vardır; bu nedenle doğru yanıt budur (s. 43)."
+     },
+     "bilgi": [
+      121
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Ataklar arasında tam iyilik hali olmamasıyla DDB’larından"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s05-b07"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q77",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Katatonik stuporu, bilinç bozukluğuyla giden stuporlu hastadan ayıran temel özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Konuşmanın tamamen akıcı ve düzenli olması",
+      "B": "Çevreye tepkisizliğin yalnızca uykuda görülmesi",
+      "C": "Sanrıların tek başına belirleyici olması",
+      "D": "Bilincin açık olmasına rağmen motor etkinliğin bulunmaması",
+      "E": "Hareket ve çevreyle ilgilenme olmasına rağmen bilincin kapalı olması"
+     },
+     "dogru": "D",
+     "aciklama": "Katatonik hastada bilinç açıktır, ancak hiçbir motor etkinlik yoktur. Bilinç bozukluğuyla giden stuporda ise bilinç kapalıdır; bu nedenle doğru yanıt budur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Konuşmanın akıcı olması stuporun tanımıyla çelişir, çünkü stuporda etkinlik ve sözel tepki en aza iner. Ayırıcı özellik bu değildir; bu nedenle şık yanlıştır (s. 32).",
+      "B": "Uykuda görülen tepkisizlik normal bir fizyolojik durumdur. Katatonik stupor uyanıklık sırasında görülen bir etkinlik kaybıdır; bu nedenle ayırt edici özellik bu şık değildir ve şık yanlıştır (s. 32).",
+      "C": "Sanrılar şizofreninin pozitif belirtileridir ve stuporu tanımlamaz. Stuporu ayırmada belirleyici olan hastanın bilinç durumudur, sanrı değil; bu nedenle şık yanlıştır (s. 32).",
+      "D": "Katatonik hastada bilinç açıktır, ancak hiçbir motor etkinlik yoktur. Bilinç bozukluğuyla giden stuporda ise bilinç kapalıdır; bu nedenle doğru yanıt budur (s. 32).",
+      "E": "Bu ifade bilinç bozukluğuyla giden stuporu anlatır, katatonik stuporu değil. Katatonide bilinç kapalı değil açıktır; bu nedenle şık yanlıştır (s. 32)."
+     },
+     "bilgi": [
+      98
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Stupor (psikodevinsel etkinliğin olmaması"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-34"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Şizofreninin gidişini, prognoz belirleyicilerini ve psikotik bozuklukların tedavi ilkelerini sıralar.",
+   "sorular": [
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q55",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Şizofreninin tipik klinik devrelerinin sırası aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Prodromal dönem, aktif dönem, rezidüel dönem",
+      "B": "Aktif dönem, rezidüel dönem, prodromal dönem",
+      "C": "Aktif dönem, prodromal dönem, rezidüel dönem",
+      "D": "Rezidüel dönem, aktif dönem, prodromal dönem",
+      "E": "Prodromal dönem, rezidüel dönem, aktif dönem"
+     },
+     "dogru": "A",
+     "aciklama": "Şizofreninin tipik klinik devreleri sırayla prodromal dönem, aktif dönem ve rezidüel dönemdir. Aktif dönem yirmili yaşlarda dramatik biçimde başlar ve remisyon ile relapslarla sürer; bu nedenle doğru yanıt budur (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Şizofreninin tipik klinik devreleri sırayla prodromal dönem, aktif dönem ve rezidüel dönemdir. Aktif dönem yirmili yaşlarda dramatik biçimde başlar ve remisyon ile relapslarla sürer; bu nedenle doğru yanıt budur (s. 28).",
+      "B": "Prodromal dönem aktif dönemden önce yaşanır. Sonda yer alması sırayı bozar; doğru yanıt ise “Prodromal dönem, aktif dönem, rezidüel dönem” şıkkıdır (s. 28).",
+      "C": "Aktif dönem prodromal dönemden önce gelmez; önce silik belirtilerin başladığı prodromal dönem yaşanır; doğru yanıt ise “Prodromal dönem, aktif dönem, rezidüel dönem” şıkkıdır (s. 28).",
+      "D": "Rezidüel dönem aktif dönemden sonra gelir ve belirtilerin silikleştiği son evredir. Başa alınması sırayı bozar; doğru yanıt ise “Prodromal dönem, aktif dönem, rezidüel dönem” şıkkıdır (s. 28).",
+      "E": "Rezidüel dönem aktif dönemi izler. Aktif dönemden önce gelmesi sırayı bozar; doğru yanıt ise “Prodromal dönem, aktif dönem, rezidüel dönem” şıkkıdır (s. 28)."
+     },
+     "bilgi": [
+      89,
+      91,
+      92
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Prodromal dönem Aktif dönem Rezidüel dönem"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q62",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Şizofrenide ele alma ile ilgili aşağıdaki öncüllerden hangileri doğrudur?\nI. Hastaneye yatırma\nII. İlaç tedavisi\nIII. Elektrokonvülsif tedavi\nIV. Psikososyal tedaviler",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Hastaneye yatırma, ilaç, EKT ve psikososyal tedaviler şizofreninin ele alınmasının tüm parçalarıdır. Dördü de doğru olduğundan bu seçenek doğru yanıttır (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Hastaneye yatırma ele almanın bir parçasıdır ama ilaç, EKT ve psikososyal tedaviler de bu kapsamdadır. Bu seçenek eksiktir; doğru yanıt ise “I, II, III ve IV” şıkkıdır (s. 31).",
+      "B": "I ve II doğrudur ama EKT ve psikososyal tedaviler de ele almaya dahildir. Bu seçenek eksiktir; doğru yanıt ise “I, II, III ve IV” şıkkıdır (s. 31).",
+      "C": "Ele alma hastaneye yatırmayı, somatik tedavileri (ilaç ve EKT) ve psikososyal tedavileri kapsar. EKT somatik tedavilerden biridir, bu yüzden eksik bırakılması hatadır; doğru yanıt ise “I, II, III ve IV” şıkkıdır (s. 31).",
+      "D": "İlaç, EKT ve psikososyal tedaviler doğrudur ama hastaneye yatırma da ele almaya dahildir. Bu seçenek eksiktir; doğru yanıt ise “I, II, III ve IV” şıkkıdır (s. 31).",
+      "E": "Hastaneye yatırma, ilaç, EKT ve psikososyal tedaviler şizofreninin ele alınmasının tüm parçalarıdır. Dördü de doğru olduğundan bu seçenek doğru yanıttır (s. 31)."
+     },
+     "bilgi": [
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Hastaneye yatırma, Somatik tedaviler İlaç EKT Psikososyal tedaviler"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-32"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q56",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi şizofrenide iyi prognoz göstergesi değildir?",
+     "secenekler": {
+      "A": "İleri yaşta başlangıç",
+      "B": "Duygudurum belirtilerinin bulunması",
+      "C": "Başlangıcın akut olması",
+      "D": "Obsesyon ve kompulsiyonların bulunması",
+      "E": "Kadın cinsiyet"
+     },
+     "dogru": "D",
+     "aciklama": "Obsesyon ve kompulsiyonların varlığı kötü prognoz göstergesidir; iyi prognozda bunlar yoktur. Bu yüzden soruda aranan şık budur; bu nedenle doğru yanıt budur (s. 29).",
+     "sik_aciklamalari": {
+      "A": "İleri yaş iyi, genç yaş kötü prognoz göstergesidir. Bu şık iyi prognoza girdiği için yanlıştır; yanlış olan ifade ise “Obsesyon ve kompulsiyonların bulunması” şıkkıdır (s. 29).",
+      "B": "Duygudurum belirtilerinin varlığı iyi prognoz göstergesidir, yokluğu kötüdür. Bu şık iyi prognoza girdiği için yanlıştır; yanlış olan ifade ise “Obsesyon ve kompulsiyonların bulunması” şıkkıdır (s. 29).",
+      "C": "Akut başlangıç iyi prognoz göstergesidir; sinsi başlangıç ise kötüdür. Bu şık iyi prognoza girdiği için yanlıştır; yanlış olan ifade ise “Obsesyon ve kompulsiyonların bulunması” şıkkıdır (s. 29).",
+      "D": "Obsesyon ve kompulsiyonların varlığı kötü prognoz göstergesidir; iyi prognozda bunlar yoktur. Bu yüzden soruda aranan şık budur; bu nedenle doğru yanıt budur (s. 29).",
+      "E": "Kadın cinsiyet iyi, erkek cinsiyet kötü prognoz göstergesidir. Bu şık iyi prognoza girdiği için yanlıştır; yanlış olan ifade ise “Obsesyon ve kompulsiyonların bulunması” şıkkıdır (s. 29)."
+     },
+     "bilgi": [
+      93,
+      94
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Duygudurum blrt var yok Obses/kompuls yok var Saldırganlık"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b21",
+      "hoca:hv-k2-15-29"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q60",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Şizofreniform bozuklukta akut dönemde antipsikotik başlandıktan sonra tedavi ne kadar süre sürdürülür?",
+     "secenekler": {
+      "A": "Hiçbir olguda ilaç verilmez",
+      "B": "1-2 hafta",
+      "C": "3-6 ay",
+      "D": "Her zaman ömür boyu",
+      "E": "Yalnız akut dönem boyunca"
+     },
+     "dogru": "C",
+     "aciklama": "Şizofreniform bozuklukta akut dönemde antipsikotik verilir ve tedavi 3-6 ay devam ettirilir. Sosyal desteği iyi ve belirtileri az olanlarda ilaçsız izlem de seçilebilir; bu nedenle doğru yanıt budur (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Akut dönemde antipsikotik verilir. İlaçsız izlem yalnızca sosyal desteği iyi ve belirtileri az olgular için bir seçenektir; doğru yanıt ise “3-6 ay” şıkkıdır (s. 47).",
+      "B": "Bir ile iki hafta, 3-6 aylık tedavi süresinden çok kısadır. Şizofreniformda tedavi daha uzun sürdürülür; doğru yanıt ise “3-6 ay” şıkkıdır (s. 47).",
+      "C": "Şizofreniform bozuklukta akut dönemde antipsikotik verilir ve tedavi 3-6 ay devam ettirilir. Sosyal desteği iyi ve belirtileri az olanlarda ilaçsız izlem de seçilebilir; bu nedenle doğru yanıt budur (s. 47).",
+      "D": "Şizofreniformda ömür boyu tedavi önerilmez. Süre 3-6 aydır; yalnız yineleyen ve rezidüel belirtili olgularda uzatılır; doğru yanıt ise “3-6 ay” şıkkıdır (s. 47).",
+      "E": "Tedavi akut dönemle sınırlı kalmaz; 3-6 ay devam edilir. Yineleyen ve rezidüel belirtili olgularda daha uzun sürdürülür; doğru yanıt ise “3-6 ay” şıkkıdır (s. 47)."
+     },
+     "bilgi": [
+      133
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Akut dönemde antipsikotik (sosyal desteği iyiyse ve belirtiler azsa ilaçsız izlem), 3-6 ay devam et"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b11"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q64",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kısa psikotik bozukluğun tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hasta stres etkeninden uzaklaştırılır",
+      "B": "Antipsikotik yüksek dozda ve uzun süre verilir",
+      "C": "Antipsikotik gerekliyse düşük dozda ve kısa süre verilir",
+      "D": "Başa çıkma mekanizmalarına yönelik psikoterapi uygulanır",
+      "E": "Psikolojik nedenler ön plandadır"
+     },
+     "dogru": "B",
+     "aciklama": "Bu ifade yanlıştır: antipsikotik mutlaka gerekliyse düşük dozda ve kısa süre kullanılır. Psikolojik nedenler ön planda olduğundan tedavinin ağırlığı ilaçta değildir; bu nedenle doğru yanıt budur (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: tedavide stres etkeninden uzaklaştırma önemlidir, çünkü bozuklukta psikolojik nedenler ön plandadır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Antipsikotik yüksek dozda ve uzun süre verilir” şıkkıdır (s. 45).",
+      "B": "Bu ifade yanlıştır: antipsikotik mutlaka gerekliyse düşük dozda ve kısa süre kullanılır. Psikolojik nedenler ön planda olduğundan tedavinin ağırlığı ilaçta değildir; bu nedenle doğru yanıt budur (s. 45).",
+      "C": "Bu ifade doğrudur: antipsikotik mutlaka gerekliyse düşük dozda ve kısa süre kullanılır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Antipsikotik yüksek dozda ve uzun süre verilir” şıkkıdır (s. 45).",
+      "D": "Bu ifade doğrudur: başa çıkma mekanizmalarına yönelik psikoterapi tedavinin parçasıdır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Antipsikotik yüksek dozda ve uzun süre verilir” şıkkıdır (s. 45).",
+      "E": "Bu ifade doğrudur: kısa psikotik bozuklukta psikolojik nedenler ön plandadır ve çoğunda kişilik bozukluğu vardır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Antipsikotik yüksek dozda ve uzun süre verilir” şıkkıdır (s. 45)."
+     },
+     "bilgi": [
+      125,
+      126,
+      127
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Tedavide mutlaka antipsikotik başlamak gerekliyse düşük doz ve kısa süre verilmelidir."
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s05-b08"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q65",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Sanrılı bozukluğun tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Psikoterapi faydalı olabilir",
+      "B": "Tedaviye kendiliğinden başvuru azdır",
+      "C": "Antipsikotik başlanır ama etkinliği sınırlıdır",
+      "D": "Sanrının yanlışlığını doğrudan kanıtlamak",
+      "E": "Hastanın işbirliği zayıftır"
+     },
+     "dogru": "D",
+     "aciklama": "Bu ifade yanlıştır: tedavide öncelikle güven ilişkisi kurmak önemlidir. Sanrıyla doğrudan yüzleşmek işbirliğini bozar ve hasta zaten hastalık iç görüsüne sahip değildir; bu nedenle doğru yanıt budur (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur: psikoterapi faydalı olabilir ve ilaç tedavisinin sınırlı etkisini tamamlar. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Sanrının yanlışlığını doğrudan kanıtlamak” şıkkıdır (s. 42).",
+      "B": "Bu ifade doğrudur: hasta iç görüsü olmadığından tedaviye kendiliğinden az başvurur. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Sanrının yanlışlığını doğrudan kanıtlamak” şıkkıdır (s. 42).",
+      "C": "Bu ifade doğrudur: antipsikotik başlanır ama etkinliği sınırlıdır. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Sanrının yanlışlığını doğrudan kanıtlamak” şıkkıdır (s. 42).",
+      "D": "Bu ifade yanlıştır: tedavide öncelikle güven ilişkisi kurmak önemlidir. Sanrıyla doğrudan yüzleşmek işbirliğini bozar ve hasta zaten hastalık iç görüsüne sahip değildir; bu nedenle doğru yanıt budur (s. 42).",
+      "E": "Bu ifade doğrudur: tedaviye işbirliği zayıftır ve bu, tedavide güven ilişkisini önemli kılar. Yanlış ifade arandığından bu şık elenir; yanlış olan ifade ise “Sanrının yanlışlığını doğrudan kanıtlamak” şıkkıdır (s. 42)."
+     },
+     "bilgi": [
+      117,
+      118
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Öncelikle güven ilişkisi kurmak önemlidir."
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s05-b06"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q74",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi şizofrenide kötü prognoz göstergesidir?",
+     "secenekler": {
+      "A": "Yüksek sosyal sınıf",
+      "B": "Ailede şizofreni öyküsünün bulunmaması",
+      "C": "Hiç evlenmemiş olma",
+      "D": "Evli olma",
+      "E": "İyi psikoseksüel uyum"
+     },
+     "dogru": "C",
+     "aciklama": "Hiç evlenmemiş olma, sosyal desteğin zayıf olduğunu gösterir ve hasta ilaçlarını bile takip edemeyebilir. Bu yüzden kötü prognoza işaret eder ve doğru yanıt budur (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Yüksek sosyal sınıf, tedaviye ve desteğe ulaşmayı kolaylaştırır. Bu nedenle kötü değil iyi prognozla ilişkilidir ve şık yanlıştır (s. 30).",
+      "B": "Ailede şizofreni öyküsünün olmaması genetik yükün az olduğunu gösterir. Öykü varsa prognoz kötüdür, yoksa iyidir; bu nedenle şık yanlıştır (s. 30).",
+      "C": "Hiç evlenmemiş olma, sosyal desteğin zayıf olduğunu gösterir ve hasta ilaçlarını bile takip edemeyebilir. Bu yüzden kötü prognoza işaret eder ve doğru yanıt budur (s. 30).",
+      "D": "Evli olma, hastanın yanında sürekli bir destek kişisi bulunduğunu gösterir. Bu durum iyi prognoza işaret eder; bu nedenle şık yanlıştır (s. 30).",
+      "E": "Psikoseksüel uyum, kişiler arası ilişkilerin sağlıklı kurulabilmesidir. Uyumun iyi olması kötü değil, iyi prognoz göstergesi olduğundan bu şık yanlıştır (s. 30)."
+     },
+     "bilgi": [
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Evlilik hikayesi evli hiç evlenmemiş"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-30"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q75",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Şizofrenide ele alma ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İlaç tedavisi somatik tedaviler içinde yer alır",
+      "B": "EKT somatik tedaviler içinde yer alır",
+      "C": "Psikososyal tedaviler, ele almanın bileşenlerinden biridir",
+      "D": "İlaç tedavisi başlandıktan sonra psikososyal tedavilere gerek kalmaz",
+      "E": "Gerektiğinde hastaneye yatırma ele almanın bir parçasıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Psikososyal tedaviler ilaç tedavisiyle birlikte sürdürülen, vazgeçilmez bir bileşendir. İlaçtan sonra gereksiz olduklarını söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 31).",
+     "sik_aciklamalari": {
+      "A": "İlaç tedavisi, antipsikotiklerle psikotik belirtileri baskılamayı amaçlayan somatik tedavidir. Ele almada somatik tedaviler başlığında yer aldığı için ifade doğrudur (s. 31).",
+      "B": "EKT, bedensel bir yöntemle uygulanan somatik tedavidir. İlaçla birlikte ele almadaki somatik tedaviler başlığında sayıldığı için ifade doğrudur ve yanlış değildir (s. 31).",
+      "C": "Psikososyal tedaviler hastanın işlevselliğini ve ilişkilerini desteklemeyi amaçlar. Ele almanın üçüncü bileşeni olarak listede bulunduğu için ifade doğrudur ve yanlış değildir (s. 31).",
+      "D": "Psikososyal tedaviler ilaç tedavisiyle birlikte sürdürülen, vazgeçilmez bir bileşendir. İlaçtan sonra gereksiz olduklarını söylemek bu yüzden yanlıştır ve sorunun yanıtıdır (s. 31).",
+      "E": "Hastaneye yatırma, akut ataktaki ya da kendine ve çevresine zarar verme riski olan hasta için başvurulan bir basamaktır. Ele alma listesinin ilk maddesi olduğundan bu ifade doğrudur (s. 31)."
+     },
+     "bilgi": [
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Hastaneye yatırma Somatik tedaviler İlaç EKT Psikososyal tedaviler"
+     },
+     "dayanak": [
+      "hoca:hv-k2-15-32"
+     ]
+    },
+    {
+     "id": "k2-15-sizofrenik-bozukluklar-q57",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Şizofreni prognozunu belirleyen özelliklerle ilgili aşağıdaki öncüllerden hangileri iyi prognozu gösterir?\nI. Duygudurum belirtilerinin bulunması\nII. Gelişmekte olan ülkede yaşama\nIII. Hiç evlenmemiş olma\nIV. Normal nörolojik işlevler",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Duygudurum belirtilerinin varlığı, gelişmekte olan ülkede yaşama ve normal nörolojik işlevler iyi prognozu gösterir. Hiç evlenmemiş olma ise kötü prognoz göstergesidir; bu nedenle doğru yanıt budur (s. 29, 30).",
+     "sik_aciklamalari": {
+      "A": "I iyi prognozu gösterir ama II ve IV de iyi prognozdadır. Bu seçenek eksiktir; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 29, 30).",
+      "B": "I ve II iyi prognozdur ama normal nörolojik işlevler de iyi prognoza girer. Bu seçenek eksiktir; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 30).",
+      "C": "Duygudurum belirtilerinin varlığı, gelişmekte olan ülkede yaşama ve normal nörolojik işlevler iyi prognozu gösterir. Hiç evlenmemiş olma ise kötü prognoz göstergesidir; bu nedenle doğru yanıt budur (s. 29, 30).",
+      "D": "Hiç evlenmemiş olma kötü prognozdur ve bu seçeneğe girmemelidir. I'in iyi prognoz olduğu göz ardı edilmiştir; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 30).",
+      "E": "III numaralı öncül kötü prognozu gösterir; evli olmak iyi prognozdur. Bu yüzden seçenek yanlıştır; doğru yanıt ise “I, II ve IV” şıkkıdır (s. 30)."
+     },
+     "bilgi": [
+      93,
+      94,
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Transkültürel özellikler Gelişmekte Gelişmiş ülke"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s04-b21",
+      "hoca:hv-k2-15-29",
+      "hoca:hv-k2-15-30"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 83
+}

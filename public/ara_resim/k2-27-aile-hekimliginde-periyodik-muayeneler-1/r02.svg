@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">SMA taraması neden erkek eşten başlar?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Otozomal resesif kalıtım ve evlilik öncesi karar akışı · slayt 22–24</text>
+<rect x="30" y="95" width="560" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="127" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · İki taşıyıcı ebeveynin çocukları</text>
+<circle cx="170" cy="150" r="8.4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<path d="M159.2 192.0 C156.8 168.0 164.0 159.6 170 159.6 C176.0 159.6 183.2 168.0 180.8 192.0 Z" stroke="#6d28d9" stroke-width="2" fill="#6d28d9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M164.6 192.0 L163.4 220.8" stroke="#6d28d9" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M175.4 192.0 L176.6 220.8" stroke="#6d28d9" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="170" y="245" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">Baba: taşıyıcı (N / s)</text>
+<circle cx="450" cy="150" r="8.4" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<path d="M439.2 192.0 C436.8 168.0 444.0 159.6 450 159.6 C456.0 159.6 463.2 168.0 460.8 192.0 Z" stroke="#6d28d9" stroke-width="2" fill="#6d28d9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M444.6 192.0 L443.4 220.8" stroke="#6d28d9" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M455.4 192.0 L456.6 220.8" stroke="#6d28d9" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450" y="245" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">Anne: taşıyıcı (N / s)</text>
+<path d="M170 255 C170 285 310 280 310 300" stroke="#64748b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 255 C450 285 310 280 310 300" stroke="#64748b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M310 300 C310 320 90 315 90 340" stroke="#64748b" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="90" cy="350" r="6.3" fill="#15803d" stroke="#15803d" stroke-width="1"/>
+<path d="M81.9 381.5 C80.1 363.5 85.5 357.2 90 357.2 C94.5 357.2 99.9 363.5 98.1 381.5 Z" stroke="#15803d" stroke-width="2" fill="#15803d" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M85.95 381.5 L85.05 403.1" stroke="#15803d" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M94.05 381.5 L94.95 403.1" stroke="#15803d" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="425" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">N / N</text>
+<text x="90" y="445" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">sağlam</text>
+<text x="90" y="465" font-size="14" fill="#475569" text-anchor="middle">%25</text>
+<path d="M310 300 C310 320 220 315 220 340" stroke="#64748b" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220" cy="350" r="6.3" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<path d="M211.9 381.5 C210.1 363.5 215.5 357.2 220 357.2 C224.5 357.2 229.9 363.5 228.1 381.5 Z" stroke="#6d28d9" stroke-width="2" fill="#6d28d9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M215.95 381.5 L215.05 403.1" stroke="#6d28d9" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M224.05 381.5 L224.95 403.1" stroke="#6d28d9" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="220" y="425" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">N / s</text>
+<text x="220" y="445" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">taşıyıcı</text>
+<text x="220" y="465" font-size="14" fill="#475569" text-anchor="middle">%25</text>
+<path d="M310 300 C310 320 350 315 350 340" stroke="#64748b" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="350" cy="350" r="6.3" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+<path d="M341.9 381.5 C340.1 363.5 345.5 357.2 350 357.2 C354.5 357.2 359.9 363.5 358.1 381.5 Z" stroke="#6d28d9" stroke-width="2" fill="#6d28d9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M345.95 381.5 L345.05 403.1" stroke="#6d28d9" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.05 381.5 L354.95 403.1" stroke="#6d28d9" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="350" y="425" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">s / N</text>
+<text x="350" y="445" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="bold">taşıyıcı</text>
+<text x="350" y="465" font-size="14" fill="#475569" text-anchor="middle">%25</text>
+<path d="M310 300 C310 320 480 315 480 340" stroke="#64748b" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="480" cy="350" r="6.3" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<path d="M471.9 381.5 C470.1 363.5 475.5 357.2 480 357.2 C484.5 357.2 489.9 363.5 488.1 381.5 Z" stroke="#b91c1c" stroke-width="2" fill="#b91c1c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M475.95 381.5 L475.05 403.1" stroke="#b91c1c" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M484.05 381.5 L484.95 403.1" stroke="#b91c1c" stroke-width="3.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="480" y="425" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">s / s</text>
+<text x="480" y="445" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">SMA hasta</text>
+<text x="480" y="465" font-size="14" fill="#475569" text-anchor="middle">%25</text>
+<text x="50" y="492" font-size="13" fill="#0f172a" text-anchor="start">Her gebelikte hasta bebek olasılığı yaklaşık %25, belirtisiz taşıyıcı %50.</text>
+<text x="50" y="510" font-size="13" fill="#0f172a" text-anchor="start">s = SMN1 (5q13) bozuk tek kopya; hasta s/s: iki kopya da bozuk (homozigot).</text>
+<rect x="610" y="95" width="560" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="127" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Evlilik öncesi tarama sırası</text>
+<circle cx="680" cy="150" r="7.700000000000001" fill="#0f766e" stroke="#0f766e" stroke-width="1"/>
+<path d="M670.1 188.5 C667.9 166.5 674.5 158.8 680 158.8 C685.5 158.8 692.1 166.5 689.9 188.5 Z" stroke="#0f766e" stroke-width="2" fill="#0f766e" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M675.05 188.5 L673.95 214.9" stroke="#0f766e" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M684.95 188.5 L686.05 214.9" stroke="#0f766e" stroke-width="3.8500000000000005" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="730" y="175" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">1. Önce erkek eş adayından</text>
+<text x="730" y="195" font-size="14" fill="#0f172a" text-anchor="start">onamla kan örneği alınır</text>
+<line x1="700" y1="240" x2="700" y2="280" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<text x="730" y="270" font-size="14" fill="#475569" text-anchor="start" font-style="italic">DNA izolasyonu, moleküler genetik analiz</text>
+<path d="M690 300 C660 330 650 360 650 390" stroke="#15803d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oky)"/>
+<path d="M720 300 C800 330 880 350 900 380" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<text x="630" y="410" font-size="14" fill="#15803d" text-anchor="start" font-weight="bold">Erkek negatif:</text>
+<text x="630" y="428" font-size="14" fill="#15803d" text-anchor="start">takipten çıkarılır</text>
+<text x="630" y="446" font-size="14" fill="#15803d" text-anchor="start">(resesifte iki</text>
+<text x="630" y="464" font-size="14" fill="#15803d" text-anchor="start">taşıyıcı gerekir)</text>
+<text x="850" y="400" font-size="14" fill="#ea580c" text-anchor="start" font-weight="bold">Şüpheli pozitif:</text>
+<text x="850" y="418" font-size="14" fill="#ea580c" text-anchor="start">kadın eş adayına da</text>
+<text x="850" y="436" font-size="14" fill="#ea580c" text-anchor="start">MUTLAKA test</text>
+<path d="M900 470 C920 490 940 495 960 495" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="970" y="490" font-size="13" fill="#b91c1c" text-anchor="start" font-weight="bold">İkisi de (+):</text>
+<text x="970" y="508" font-size="13" fill="#b91c1c" text-anchor="start">tıbbi genetik, danışmanlık</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 22 (SMN1, otozomal resesif), 23 (%25 hasta, %50 taşıyıcı, akrabalık), 24 (önce erkek eş) · mor taşıyıcı, kırmızı hasta, yeşil sağlam</text>
+</svg>

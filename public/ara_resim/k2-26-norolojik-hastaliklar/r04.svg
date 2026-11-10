@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<symbol id="mito" viewBox="-40 -22 80 44"><ellipse cx="0" cy="0" rx="38" ry="20" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/><path d="M-28 0 C-22 -14 -16 14 -10 0 C-4 -14 2 14 8 0 C14 -14 20 14 26 0" stroke="#6d28d9" stroke-width="2.5" fill="none"/></symbol>
+<g id="lip"><circle cx="0" cy="0" r="7" fill="#93c5fd" stroke="#1e3a8a" stroke-width="1"/><path d="M-3 6 C-4 14 -2 20 -3 28 M3 6 C4 14 2 20 3 28" stroke="#64748b" stroke-width="1.6" fill="none"/></g>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="640" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Mitokondriyal kalıtım ve heteroplazmi: NARP'tan Leigh sendromuna</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Mutant mitokondri oranı tabloyu belirler · slayt 53–55</text>
+<rect x="30" y="92" width="560" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="124" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · Mitokondriyal genom anneden gelir</text>
+<circle cx="310" cy="180" r="50" fill="#f5f3ff" stroke="#6d28d9" stroke-width="3"/>
+<text x="372" y="170" font-size="15" fill="#6d28d9" text-anchor="start" font-weight="bold">anne hücresi</text>
+<text x="372" y="190" font-size="14" fill="#6d28d9" text-anchor="start">mtDNA anneden</text>
+<use href="#mito" x="268" y="155" width="28" height="16"/>
+<use href="#mito" x="304" y="145" width="28" height="16"/>
+<circle cx="318" cy="153" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="324" y="175" width="28" height="16"/>
+<circle cx="338" cy="183" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="286" y="185" width="28" height="16"/>
+<use href="#mito" x="266" y="181" width="28" height="16"/>
+<circle cx="280" cy="189" r="4" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<path d="M310 228 C310 260 120 250 120 290" stroke="#6d28d9" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<circle cx="120" cy="320" r="34" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2"/>
+<use href="#mito" x="89" y="303" width="18" height="10"/>
+<circle cx="98" cy="308" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="109" y="303" width="18" height="10"/>
+<use href="#mito" x="129" y="303" width="18" height="10"/>
+<use href="#mito" x="89" y="325" width="18" height="10"/>
+<use href="#mito" x="109" y="325" width="18" height="10"/>
+<path d="M310 228 C310 260 310 250 310 290" stroke="#6d28d9" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<circle cx="310" cy="320" r="34" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2"/>
+<use href="#mito" x="279" y="303" width="18" height="10"/>
+<circle cx="288" cy="308" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="299" y="303" width="18" height="10"/>
+<circle cx="308" cy="308" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="319" y="303" width="18" height="10"/>
+<circle cx="328" cy="308" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="279" y="325" width="18" height="10"/>
+<use href="#mito" x="299" y="325" width="18" height="10"/>
+<path d="M310 228 C310 260 500 250 500 290" stroke="#6d28d9" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<circle cx="500" cy="320" r="34" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2"/>
+<use href="#mito" x="469" y="303" width="18" height="10"/>
+<circle cx="478" cy="308" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="489" y="303" width="18" height="10"/>
+<circle cx="498" cy="308" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="509" y="303" width="18" height="10"/>
+<circle cx="518" cy="308" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="469" y="325" width="18" height="10"/>
+<circle cx="478" cy="330" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<use href="#mito" x="489" y="325" width="18" height="10"/>
+<circle cx="498" cy="330" r="3.5" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="120" y="372" font-size="14" fill="#1d4ed8" text-anchor="middle">az mutant</text>
+<text x="310" y="372" font-size="14" fill="#ea580c" text-anchor="middle">orta</text>
+<text x="500" y="372" font-size="14" fill="#b91c1c" text-anchor="middle">çok mutant</text>
+<rect x="610" y="92" width="560" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="124" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">B · Mutant oran ↑ → tablo ağırlaşır</text>
+<defs><linearGradient id="hp" x1="0" x2="1"><stop offset="0" stop-color="#dbeafe"/><stop offset="1" stop-color="#b91c1c"/></linearGradient></defs>
+<rect x="640" y="190" width="500" height="40" rx="8" fill="url(#hp)" stroke="#0f172a" stroke-width="1.5"/>
+<text x="640" y="254" font-size="15" fill="#0f172a" text-anchor="start">%0</text>
+<text x="1140" y="254" font-size="15" fill="#0f172a" text-anchor="end">%100</text>
+<path d="M990.0 180 C990.0 165 1090.0 165 1090.0 180" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1040.0" y="156" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">NARP: %70–90</text>
+<path d="M1100.0 240 C1120.0 280 1110.0 300 1080.0 320" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="1070.0" y="340" font-size="16" fill="#b91c1c" text-anchor="end" font-weight="bold">oran daha da artarsa → Leigh sendromu</text>
+<text x="640" y="290" font-size="15" fill="#6d28d9" text-anchor="start">Hücrede sağlam ve mutant mtDNA</text>
+<text x="640" y="310" font-size="15" fill="#6d28d9" text-anchor="start">birlikte = heteroplazmi</text>
+<text x="640" y="372" font-size="15" fill="#0f172a" text-anchor="start">Aynı ailede NARP ve Leigh birlikte görülebilir.</text>
+<rect x="30" y="408" width="1140" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="440" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">C · İki örnek mutasyon</text>
+<use href="#mito" x="60" y="450" width="190" height="104"/>
+<circle cx="150" cy="502" r="6" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<line x1="150" y1="502" x2="120" y2="575" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="150" cy="502" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="126" y="580" font-size="14" fill="#b91c1c" text-anchor="start">mutant mtDNA (8993 / 8344)</text>
+<text x="280" y="456" font-size="15" fill="#0f172a" text-anchor="start">NARP: MT-ATP6 8993 T&gt;G → ATP sentaz bozulur → ATP üretimi düşer</text>
+<text x="280" y="486" font-size="15" fill="#0f172a" text-anchor="start">nöropati, ataksi, retinitis pigmentoza, proksimal güçsüzlük, epilepsi, gelişme geriliği</text>
+<text x="280" y="516" font-size="15" fill="#0f172a" text-anchor="start">MERRF: %80'de anneden gelen mt genomda 8344. pozisyon mutasyonu</text>
+<text x="280" y="546" font-size="15" fill="#0f172a" text-anchor="start">miyoklonus, nöbet, demans; optik atrofi, sağırlık, kardiyomiyopati, kısa boy</text>
+<text x="600.0" y="626" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 53 (OXPHOS genleri), 54 (MERRF, heteroplazmi, 8344, anneden gelen mt genom), 55 (NARP, 8993 T&gt;G, %70–90, Leigh) · mor = mitokondri, kırmızı = mutant</text>
+</svg>

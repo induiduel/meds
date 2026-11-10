@@ -1,0 +1,2274 @@
+{
+ "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
+ "sira": 20,
+ "kurul": 1,
+ "ders": "Psikiyatri",
+ "konu": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Nefise Demir",
+ "tarih": "2026-11-06",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "EKT'yi tanımlar, tarihçesindeki temel gözlem ve tarihleri sayar, biyokimyasal ve nörofizyolojik etki mekanizması hipotezlerini (nöroplastisite dahil) ayırt eder (s. 2–4).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Beyin dokusunun elektrik akımıyla uyarılarak jeneralize konvülziyon oluşturulması esasına dayanan psikiyatrik tedavi yöntemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Elektrokonvülzif tedavi",
+      "B": "Transkraniyal manyetik stimülasyon",
+      "C": "Transkraniyal doğru akım stimülasyonu",
+      "D": "Derin beyin uyarımı",
+      "E": "Psikoşirürji"
+     },
+     "dogru": "A",
+     "aciklama": "EKT, beyin dokusunun elektrik akımıyla uyarılarak jeneralize konvülziyon oluşturulması esasına dayanan psikiyatrik tedavidir (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Elektrokonvülzif tedavi (EKT), beyin dokusunu elektrik akımıyla uyararak jeneralize konvülziyon oluşturan psikiyatrik tedavidir. Kökteki tanımın tamamı EKT'yi anlatır (s. 3).",
+      "B": "Transkraniyal manyetik stimülasyon, kafa derisinden geçen manyetik uyaranlarla uygulandığı bölgede depolarizasyon dalgası oluşturan non-invaziv yöntemdir. Jeneralize konvülziyon amaçlanmaz; tersine en ciddi endişe istenmeden nöbet tetiklemesidir (s. 15, 18).",
+      "C": "Transkraniyal doğru akım stimülasyonu, kafa derisine 0,5–2 mA düşük genlikli doğru akım vererek kortikal uyarılabilirliği eşik altında değiştirir. Nöbet oluşturmaz, etkisi yalnız yüzeysel kortekse ulaşır (s. 20, 22).",
+      "D": "Derin beyin uyarımı, ilgili beyin bölgesine yerleştirilen ince bir kablonun pacemakera bağlanmasıyla sürekli uyarı veren cerrahi bir yöntemdir. Amacı bölgeyi işlevsel olarak devre dışı bırakmaktır, konvülziyon oluşturmak değildir (s. 24).",
+      "E": "Psikoşirürji, belirli beyin alanlarında lezyon oluşturan ya da bağlantı yollarını kesen operasyonlardır. Tedaviye çok dirençli hastalarda uygulanır ve elektrik akımıyla nöbet oluşturma esasına dayanmaz (s. 30)."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Beyin dokusunun elektrik akımıyla uyarılarak jeneralize konvulziyon oluşturma esasına dayalı psikiyatrik tedavidir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "EKT'nin etki mekanizmasını açıklayan hipotezlerle ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "BDNF düzeyini artırır.",
+      "B": "HPA aksını uyarır.",
+      "C": "β-adrenerjik reseptörlerde yukarı regülasyon oluşturur.",
+      "D": "Kan-beyin bariyerinin geçirgenliğini artırır.",
+      "E": "Hipokampusta nörogenezi artırır."
+     },
+     "dogru": "C",
+     "aciklama": "EKT β-adrenerjik reseptörlerde down regülasyon yapar; yukarı regülasyon yanlıştır. BDNF artışı, HPA uyarımı, kan-beyin bariyeri geçirgenliğinde artış ve hipokampusta nörogenez artışı doğru mekanizmalardır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "BDNF, nöronların yaşamasını ve bağlantı kurmasını destekleyen beyin kaynaklı nörotrofik faktördür. EKT'nin BDNF düzeyini artırdığı biyokimyasal hipotezler arasında sayılır, bu yüzden önerme doğrudur (s. 4).",
+      "B": "HPA aksı, stres yanıtını düzenleyen hipotalamus-hipofiz-adrenal eksenidir. Nöroendokrin hipoteze göre EKT bu aksı uyarır; önerme doğru bir mekanizmayı anlatır (s. 4).",
+      "C": "Biyokimyasal hipotezlere göre EKT β-adrenerjik reseptörlerde aşağı regülasyon (down regülasyon) yapar. Yukarı regülasyon ifadesi yönü ters çevirdiği için yanlış olan önermedir (s. 4).",
+      "D": "Kan-beyin bariyeri, beyni dolaşımdaki maddelerden koruyan seçici geçirgen yapıdır. Nörofizyolojik hipoteze göre EKT bu bariyerin geçirgenliğini artırır; önerme doğrudur (s. 4).",
+      "E": "Nöroplastisite, sinir dokusunun yeni bağlantılarla şekil alabilmesidir. EKT'nin hipokampusta sinaptik plastisiteyi ve nörogenezi artırdığı, apoptozu baskıladığı kabul edilir; önerme doğrudur (s. 4)."
+     },
+     "bilgi": [
+      7,
+      9,
+      10,
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "β-adrenerjik reseptör down regülasyonu"
+     },
+     "dayanak": [
+      "ozen:s4",
+      "ogrenci:B:psk-s06-b03",
+      "hoca:hv-k2-20-68"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "EKT fikrinin gelişmesine zemin hazırlayan klinik gözlem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Şizofreni hastalarında epileptik nöbetlerin daha sık görülmesi",
+      "B": "Depresyonlu hastalarda epilepsinin daha sık görülmesi",
+      "C": "Menenjit sonrası hastalarda nöbetlerin psikozu ağırlaştırması",
+      "D": "Epileptik hastalarda psikozun daha az oranda görülmesi",
+      "E": "Nöbet geçiren hastalarda manik belirtilerin ortaya çıkması"
+     },
+     "dogru": "D",
+     "aciklama": "EKT fikri, epileptik hastalarda psikozun daha az görüldüğü ve nöbet sonrası psikotik belirtilerin düzeldiği gözlemlerinden doğmuştur (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Gözlem, şizofrenide nöbetin sık olduğu yönünde değil, epilepside psikozun az olduğu yönündedir. Bu seçenek ilişkinin yönünü ters çevirdiği için EKT'nin çıkış noktasını yanlış anlatır (s. 3).",
+      "B": "Depresyon ile epilepsi sıklığı arasında böyle bir gözlem EKT'nin tarihçesinde anlatılmaz. EKT'nin çıkış noktası epilepsili hastalarda psikozun daha az görülmesidir (s. 3).",
+      "C": "Menenjit ya da kafa travmasına bağlı epilepsisi olan hastalarda nöbet sonrası psikotik belirtiler ağırlaşmamış, tersine düzelmiştir. Bu düzelme gözlemi nöbetin tedavi edici olabileceği fikrini doğurmuştur (s. 3).",
+      "D": "EKT fikri, epileptik hastalarda psikozun daha az görüldüğü gözlemine dayanır. Kafa travması ya da menenjit nedeniyle epilepsisi olan hastalarda nöbet sonrası psikotik belirtilerin düzelmesi de bu düşünceyi desteklemiştir (s. 3).",
+      "E": "Nöbetten sonra mani ortaya çıkması tarihçede yer alan bir gözlem değildir. Tarihçedeki gözlem, nöbet geçiren epilepsili hastalarda psikotik belirtilerin düzelmesidir (s. 3)."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Epileptik hastalarda psikozun daha az oranda görüldüğüne dair gözlemler"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Cerletti ve Luciano ilk kez bir şizofreni hastasına EKT'yi kaç yılında uygulamıştır?",
+     "secenekler": {
+      "A": "1934",
+      "B": "1938",
+      "C": "1971",
+      "D": "1973",
+      "E": "1984"
+     },
+     "dogru": "B",
+     "aciklama": "Nöbet indükleyen yöntemler 1934'te, elektrik akımıyla ilk EKT 1938'de Cerletti ve Luciano tarafından bir şizofreni hastasına uygulanmıştır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "1934, nöbet indükleyen yöntemlerle tedavinin ilk kez uygulandığı yıldır. Elektrik akımı kullanılarak yapılan ilk EKT ise dört yıl sonra, 1938'de gerçekleşmiştir (s. 3).",
+      "B": "Cerletti ve Luciano 1938'de ilk kez bir şizofreni hastasına EKT uygulamıştır. Bu tarih elektrik akımıyla nöbet oluşturmanın başlangıcı olarak kabul edilir (s. 3).",
+      "C": "1971, uyku yoksunluğu tedavisinin uygulanmaya başladığı yıldır. Depresyonda kullanılan bu yöntem EKT'nin tarihçesine değil, uyku yoksunluğu başlığına aittir (s. 28).",
+      "D": "1973, derin beyin uyarımının ilk kez ağrı tedavisinde kullanıldığı yıldır. Yöntem daha sonra dirençli tremoru olan Parkinson hastalarında denenmiştir (s. 23).",
+      "E": "1984, fototerapinin mevsimsel affektif bozuklukta uygulanmaya başladığı yıldır. Işık tedavisine ait bu tarih EKT'nin ilk uygulamasıyla ilgili değildir (s. 27)."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Cerletti ve Luciano 1938 yılında ilk defa bir sch hastasına EKT uyguladı"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "EKT'nin nöroplastisite hipotezi kapsamında hipokampusta oluşturduğu kabul edilen değişikliklerle ilgili aşağıdaki öncüllerden hangileri doğrudur?\nI. Sinaptik plastisitede artış\nII. Nörogenezde artış\nIII. Apoptozisin baskılanması\nIV. Kan-beyin bariyeri geçirgenliğinde azalma",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "Yalnız III",
+      "C": "II, III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Nöroplastisite hipotezi: hipokampusta sinaptik plastisite ve nörogenez artışı, apoptozisin baskılanması. Kan-beyin bariyeri geçirgenliğinde ARTIŞ ise nörofizyolojik hipotezdir (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Sinaptik plastisite ve nörogenez artışı nöroplastisite hipotezinin iki doğru öğesidir. Ancak apoptozisin baskılanması da aynı başlıkta yer aldığından bu seçenek eksik kalır (s. 4).",
+      "B": "Apoptozisin, yani programlı hücre ölümünün baskılanması nöroplastisite hipotezinde geçer. Sinaptik plastisite ve nörogenez artışı da aynı listede bulunduğundan tek başına bu öncül yetersizdir (s. 4).",
+      "C": "Nörogenez artışı ve apoptozisin baskılanması doğru öncüllerdir. Kan-beyin bariyeri ise nörofizyolojik hipotezde yer alır ve EKT geçirgenliği artırır; IV yanlış olduğu için bu küme hatalıdır (s. 4).",
+      "D": "Dört öncülün hepsini kapsayan bu seçenek IV'ü de doğru sayar. EKT kan-beyin bariyerinin geçirgenliğini azaltmaz, artırır ve bu bilgi nöroplastisite değil nörofizyolojik hipotez başlığındadır (s. 4).",
+      "E": "Nöroplastisite hipotezi hipokampusta sinaptik plastisitenin ve nörogenezin arttığını, apoptozisin baskılandığını söyler. Kan-beyin bariyeri ise ayrı bir nörofizyolojik hipotezdir ve geçirgenlik azalmaz, artar; bu nedenle doğru küme I, II ve III'tür (s. 4)."
+     },
+     "bilgi": [
+      10,
+      11,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "hipokampusta sinaptik plastisite, nörogeneziste artış, apopitozisin baskılanması"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-68",
+      "ozen:s4",
+      "ogrenci:B:psk-s06-b03"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi EKT'nin etki mekanizmasını açıklayan biyokimyasal hipotezlerden biri değildir?",
+     "secenekler": {
+      "A": "Dopamin artışı",
+      "B": "Kan-beyin bariyeri geçirgenliğinde artış",
+      "C": "BDNF artışı",
+      "D": "HPA aksının uyarılması",
+      "E": "β-adrenerjik reseptör down regülasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Kan-beyin bariyeri geçirgenliğinde artış nörofizyolojik hipotezdir; DA artışı, BDNF artışı, HPA uyarımı ve β-reseptör down regülasyonu biyokimyasal hipotezlerdir (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Dopamin (DA) artışı biyokimyasal hipotezlerden biridir. EKT'nin dopamin düzeyini artırması, depresyon ve Parkinson belirtilerindeki yararını açıklamaya yardım eder (s. 4).",
+      "B": "Kan-beyin bariyeri geçirgenliğindeki artış EKT'nin etkisini açıklayan nörofizyolojik hipotezdir. Biyokimyasal hipotezler başlığında değil, ayrı başlıkta sayıldığı için aranan seçenek budur (s. 4).",
+      "C": "BDNF, nöronların yaşamını ve bağlantılarını destekleyen nörotrofik faktördür. EKT'nin BDNF düzeyini artırması biyokimyasal hipotezler listesinde yer alır (s. 4).",
+      "D": "HPA aksı stres yanıtını yöneten hipotalamus-hipofiz-adrenal eksenidir. Bu aksın uyarılması nöroendokrin, yani biyokimyasal hipotezler başlığında sayılır (s. 4).",
+      "E": "β-adrenerjik reseptör down regülasyonu, reseptör sayısının azalmasıdır ve biyokimyasal hipotezlerin ilk maddesidir. Antidepresan etkiyle ilişkilendirilen bir mekanizmadır (s. 4)."
+     },
+     "bilgi": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Nörofizyolojik hipotezler: Kan –beyin bariyerinin geçirgenliğinde artış"
+     },
+     "dayanak": [
+      "ozen:s4",
+      "ogrenci:B:psk-s06-b03"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "EKT öncesi değerlendirme ve uygulama tekniğini açıklar; majör depresyon, mani, şizofreni ve diğer endikasyonları hangi durumda tercih edildiğiyle değerlendirir (s. 5–9).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q08",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "EKT uygulamasında elektrotların gazlı bezle sarılıp tuzlu suyla ıslatılmasının ya da jel kullanılmasının amacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yanık oluşumunu engellemek",
+      "B": "Diş kırılmasını önlemek",
+      "C": "Nöbet eşiğini düşürmek",
+      "D": "Kardiyak riski azaltmak",
+      "E": "Amnezi gelişimini önlemek"
+     },
+     "dogru": "A",
+     "aciklama": "Elektrotlar gazlı bezle sarılır, tuzlu suyla ıslatılır ya da jel kullanılarak yanık oluşumu engellenir (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Elektrotların gazlı bezle sarılması, tuzlu suyla ıslatılması ya da jel kullanılması akımın deriye geçtiği yerde yanık oluşmasını engeller. Uygulama aşamasındaki bu önlem doğrudan yanığa yöneliktir (s. 5).",
+      "B": "Diş kırılmasını önlemek için kullanılan önlem, hastanın ağzına konan yumuşak tampondur. Kasılmalara bağlı diş hasarına yönelik bu önlem elektrot hazırlığından ayrıdır (s. 5).",
+      "C": "Nöbet eşiği, nöbetin başlayabilmesi için gereken uyarı düzeyidir ve ilaç düzenlemesiyle ilgilidir. Örneğin benzodiazepinler eşiği yükselttiği için kesilir; elektrot ıslatmanın bununla bağı yoktur (s. 14).",
+      "D": "Kardiyak risk, örneğin trisiklik antidepresanlarla birlikte uygulamada artan kalp riskidir. Bu risk ilaç seçimiyle yönetilir, elektrotların ıslatılması bu amaçla yapılmaz (s. 14).",
+      "E": "Amnezi, EKT'nin santral sinir sistemi yan etkilerinden biridir ve bilişsel etki doza bağlıdır. Elektrotların ıslatılması bu yan etkiyi değil, deri yanığını önlemeye yöneliktir (s. 11, 13)."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Elektrotlar gazlı bezle sarılır, tuzlu suyla ıslatılır, veya jel kullanılarak yanıkların oluşması engellenir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q09",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Günümüzde EKT uygulanan hastaların yüzde kaçında tanı majör depresyondur?",
+     "secenekler": {
+      "A": "%40",
+      "B": "%60",
+      "C": "%15",
+      "D": "%10",
+      "E": "%85"
+     },
+     "dogru": "E",
+     "aciklama": "EKT uygulanan hastaların %85'inde tanı majör depresyondur (s. 7).",
+     "sik_aciklamalari": {
+      "A": "%40, tam uyku yoksunluğunun depresyon hastalarında ertesi gün düzelme sağladığı oran aralığının alt sınırıdır. EKT uygulanan hastalardaki depresyon oranı ise %85'tir (s. 28, 7).",
+      "B": "%60, tam uyku yoksunluğuyla ertesi gün düzelen depresyon hastalarının üst sınırıdır. EKT hastalarında majör depresyon tanısının oranı bundan yüksektir, %85'tir (s. 28, 7).",
+      "C": "%15, uyku yoksunluğuyla elde edilen etkinliğin bir sonraki gün düştüğü %10–15 aralığının üst sınırıdır. EKT uygulanan hastaların çoğunluğunda, %85'inde tanı majör depresyondur (s. 28, 7).",
+      "D": "%10, uyku yoksunluğu sonrası etkinliğin ikinci gün gerilediği aralığın alt sınırıdır. EKT hastalarının büyük çoğunluğu, yani %85'i majör depresyon tanısı taşır (s. 28, 7).",
+      "E": "Günümüzde EKT uygulanan hastaların %85'inde tanı majör depresyondur. Bu oran, EKT'nin en sık kullanıldığı hastalığın depresyon olduğunu gösterir (s. 7)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [
+      "d3-b-072",
+      "d3k2-2024-2025-h38"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Günümüzde EKT uygulanan hastaların %85’inde tanı MD’dur"
+     },
+     "dayanak": [
+      "cikmis:d3-b-072",
+      "cikmis:d3k2-2024-2025-h38",
+      "ozen:s7",
+      "ogrenci:B:psk-s06-b03"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "EKT öncesi değerlendirme ve uygulama tekniğiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Uygulama öncesinde fizik muayene ve EKG yapılır.",
+      "B": "Bilgisayarlı tomografi ya da MRG ile beyin görüntülenir.",
+      "C": "Diş kırılmasını önlemek için ağza yumuşak tampon konur.",
+      "D": "Uygulama öncesinde EEG çekilmesi zorunludur.",
+      "E": "Elektrotlar tuzlu suyla ıslatılarak yanık oluşumu engellenir."
+     },
+     "dogru": "D",
+     "aciklama": "EKT öncesi fizik muayene, BT ya da MRG, akciğer görüntülemesi, rutin biyokimya ve EKG yapılır; EEG şart değildir (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Fizik muayene ve EKG, hastanın genel ve kardiyak durumunu değerlendirmek için EKT öncesinde yapılır. Önerme doğrudur ve rutin hazırlığın parçasıdır (s. 5).",
+      "B": "Bilgisayarlı tomografi ya da MRG, kafa içinde yer kaplayan lezyon gibi riski artıran durumları görmek için EKT öncesi listede bulunur. Önerme doğrudur (s. 5).",
+      "C": "Yumuşak tampon, kasılmalar sırasında dişlerin kırılmasını önlemek için hastanın ağzına konur. Kasılmalara bağlı ağız içi hasarı önleyen bu adım uygulama tekniğinin doğru bir parçasıdır (s. 5).",
+      "D": "EEG, beynin elektriksel etkinliğini kaydeden incelemedir. EKT öncesi değerlendirme listesinde yer alır ama şart değildir; zorunlu denmesi bu önermeyi yanlış yapar (s. 5).",
+      "E": "Elektrotların gazlı bezle sarılıp tuzlu suyla ıslatılması ya da jel kullanılması, akım verilirken yanık oluşmasını engeller. Önerme doğrudur (s. 5)."
+     },
+     "bilgi": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "rutin BK, EKG, EEG (Şart değil)"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Majör depresyonda EKT kullanımıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Katatonik ve psikotik belirtiler gösteren hastalarda uygulanır.",
+      "B": "Daha önce EKT'ye iyi yanıt vermiş hastalarda tercih edilir.",
+      "C": "Stuporda olan depresyon hastalarında uygulanır.",
+      "D": "EKT'ye yanıt alındıktan sonra ilaç tedavisine gerek kalmaz.",
+      "E": "İlaca yanıt vermeyen depresyonda uygulanır."
+     },
+     "dogru": "D",
+     "aciklama": "EKT kesildikten sonra ilaç tedavisine devam edilmelidir. Katatonik/psikotik, stuporda, daha önce EKT'ye iyi yanıt vermiş ve ilaca dirençli hastalar endikasyondur (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Katatonik ve psikotik belirtiler gösteren, işlevselliği ileri derecede bozulmuş depresyon hastaları EKT'nin başlıca adaylarıdır. Bu hastalarda EKT hızlı ve güçlü yanıt sağladığı için önerme doğrudur (s. 7).",
+      "B": "Daha önce EKT'ye iyi yanıt vermiş olmak depresyonda EKT seçimini destekleyen bir durumdur. Önerme doğru bir endikasyonu anlatır (s. 7).",
+      "C": "Stupor, hastanın çevreye yanıtının belirgin azaldığı ağır bir tablodur. Stuporda ya da ajitasyonda olan depresyon hastalarında EKT uygulanır; önerme doğrudur (s. 7).",
+      "D": "EKT kesildikten sonra ilaç tedavisine devam edilmelidir; aksi hâlde elde edilen düzelme korunamaz. İlaca gerek kalmadığını söyleyen bu önerme yanlıştır (s. 7).",
+      "E": "İlaca yanıt vermeyen, yani dirençli depresyon EKT endikasyonları arasında açıkça sayılır. Birden fazla ilaç denenmiş ve yanıt alınamamış hastada EKT güçlü bir seçenektir (s. 7)."
+     },
+     "bilgi": [
+      19,
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "EKT kesildikten sonra ilaç tedavisine devam edilmeli"
+     },
+     "dayanak": [
+      "ozen:s7",
+      "ogrenci:B:psk-s06-b03"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi şizofrenide EKT endikasyonlarından biri değildir?",
+     "secenekler": {
+      "A": "Antipsikotiklere bağlı ekstrapiramidal belirtiler",
+      "B": "Tedaviye dirençli şizofreni",
+      "C": "Duygudurum belirtileri gösteren şizofreni",
+      "D": "Gebelikte şizofreni",
+      "E": "Kronik şizofreni"
+     },
+     "dogru": "E",
+     "aciklama": "Kronik şizofrenide EKT etkin değildir; EPS, dirençli hasta, duygudurum belirtisi ve gebelik endikasyondur (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Ekstrapiramidal belirtiler antipsikotiklerin yol açtığı distoni, parkinsonizm gibi hareket bozukluklarıdır. EKT bu belirtileri düzeltebildiği için şizofrenide endikasyon kabul edilir (s. 8).",
+      "B": "Tedaviye dirençli şizofreni, yeterli ilaç tedavisine yanıt vermeyen hastaları kapsar. Bu hastalar şizofrenide EKT endikasyonları arasında yer alır (s. 8).",
+      "C": "Duygudurum belirtileri gösteren şizofreni hastaları, katatonik hastalar gibi EKT'ye iyi yanıt veren gruptadır. Bu durum şizofrenide EKT endikasyonudur (s. 8).",
+      "D": "Gebelikte yüksek doz ilaç kullanımı güvenli olmadığından EKT ilaçlardan daha güvenli bir seçenek olabilir. Gebelik şizofrenide de EKT endikasyonları arasında sayılır (s. 8).",
+      "E": "Kronik şizofrenide EKT etkin değildir; negatif belirtilerin baskın olduğu bu tabloda beklenen düzelme sağlanmaz. Bu nedenle endikasyon dışı kalan seçenek budur (s. 8)."
+     },
+     "bilgi": [
+      27,
+      28,
+      30,
+      123
+     ],
+     "benzer_cikmis": [
+      "d3-b-072"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Kronik şizofrenide etkin değildir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-84",
+      "cikmis:d3-b-072",
+      "ozen:s8"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q14",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Manide EKT kullanımıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gebelikte ortaya çıkan manide EKT'den kaçınılmalıdır.",
+      "B": "Tedaviye yanıt alınamaması bir endikasyondur.",
+      "C": "Hasta için risk oluşturan şiddette eksitasyonda uygulanır.",
+      "D": "Fiziksel olarak ağırlaşan seyirde uygulanır.",
+      "E": "Mani, EKT'nin ana endikasyonlarından biridir."
+     },
+     "dogru": "A",
+     "aciklama": "Manide EKT: tedaviye yanıtsızlık, risk oluşturan eksitasyon, fiziksel olarak ağırlaşan seyir ve gebelik (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Gebelik manide EKT endikasyonları arasında sayılır; gebelikte yüksek doz ilaca çıkılamadığı için EKT daha güvenli bir seçenek olabilir. Kaçınılmalı diyen önerme yanlıştır (s. 8).",
+      "B": "Tedaviye yanıt alınamaması, ilaçla yatışmayan manide EKT'ye geçmeyi gerektiren durumdur. İlaçla haftalar içinde yatışmayan hastada EKT bu nedenle doğru bir endikasyondur (s. 8).",
+      "C": "Eksitasyon, aşırı hareketlilik ve taşkınlık hâlidir; hastayı bitkin düşürüp tehlikeye sokabilir. Hasta için risk oluşturacak şiddette eksitasyon varlığı manide EKT endikasyonudur (s. 8).",
+      "D": "Tablonun fiziksel olarak da ağırlaşan bir seyir izlemesi, örneğin uyuyamayan ve yıpranan hasta, manide EKT gerekçesidir. Önerme doğrudur (s. 8).",
+      "E": "EKT'nin ana endikasyonları majör depresyon, mani ve şizofreni-şizoaffektif bozukluktur. Mani bu temel listede yer alır; önerme doğrudur (s. 6)."
+     },
+     "bilgi": [
+      16,
+      25,
+      26
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Mani: Tedaviye yanıt alınamaması, Hasta için risk oluşturabilecek şiddette eksitasyonun varlığı"
+     },
+     "dayanak": [
+      "ozen:s8",
+      "ogrenci:B:psk-s06-b03"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q16",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Parkinson hastalığında EKT kullanımıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca hastalığa eşlik eden depresyonda uygulanır.",
+      "B": "Tremor tedavisinde FDA onayı almış ilk yöntemdir.",
+      "C": "On-off fenomeni EKT'nin kontrendikasyonudur.",
+      "D": "Dopamin düzeyini azaltarak etki eder.",
+      "E": "Özellikle rijidite ve bradikinezi gibi motor belirtilerde yararlıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Parkinson hastalığında EKT özellikle rijidite, bradikinezi ve on-off fenomeninde kullanılır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "EKT Parkinson hastalığında yalnız depresyon için değil, rijidite ve bradikinezi gibi motor belirtiler için de kullanılır. Yalnızca ifadesi bu mutlak sınırlama nedeniyle hatalıdır (s. 9).",
+      "B": "Parkinson tremorunda 1997'de FDA onayı alan yöntem derin beyin uyarımıdır. Kablo ve pacemakerla sürekli uyarı veren bu cerrahi yöntem EKT ile karıştırılmamalıdır (s. 25).",
+      "C": "On-off fenomeni, Parkinson'da ilaç etkisinin gün içinde dalgalanmasıdır. EKT için kontrendikasyon değil, tersine Parkinson'daki endikasyonlardan biridir (s. 9).",
+      "D": "Biyokimyasal hipotezlere göre EKT dopamin düzeyini azaltmaz, artırır. Dopamin artışı EKT'nin Parkinson motor belirtilerindeki yararıyla da uyumludur (s. 4).",
+      "E": "Parkinson hastalığında EKT özellikle rijidite ve bradikinezi gibi motor belirtilerde ve on-off fenomeninde kullanılır. Bu nedenle diğer endikasyonlar arasında sayılır (s. 9)."
+     },
+     "bilgi": [
+      8,
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Özellikle rijidite ve bradikinezi gibi motor belirtiler, on-off fenomeni"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q10",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Gebeliğinin 20. haftasındaki 28 yaşında kadın; ağır depresyon, ağızdan beslenmeyi reddetme ve yüksek intihar riskiyle acile getiriliyor. Hızlı yanıt istenen bu hasta için en uygun tedavi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Transkraniyal doğru akım stimülasyonu",
+      "B": "Derin beyin uyarımı",
+      "C": "Elektrokonvülzif tedavi",
+      "D": "Psikoşirürji",
+      "E": "Fototerapi"
+     },
+     "dogru": "C",
+     "aciklama": "Hızla yanıt istenen, intihar riski yüksek, oral alımı reddeden ve gebelik nedeniyle antidepresan kullanamayan depresyon hastasında EKT endikedir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "tDCS, kafa derisine düşük genlikli doğru akım veren yüzeysel bir nöromodülasyon yöntemidir. Şu anda hiçbir endikasyon için onaylı değildir; acil ve hızlı yanıt gereken ağır depresyonda yeri yoktur (s. 21).",
+      "B": "Derin beyin uyarımı, en az 5 yıldır hasta olan ve en az 3 antidepresana yanıtsız olgularda araştırılan cerrahi bir yöntemdir. Acil, hızlı yanıt isteyen gebe hastaya uygun seçenek olamaz (s. 23, 24).",
+      "C": "EKT; hızla yanıt istenen, intihar riski yüksek, ağızdan alımı reddeden ve gebelik gibi nedenlerle antidepresan kullanamayan depresyon hastalarında endikedir. Bu hastanın tüm özellikleri EKT endikasyonuna uyar (s. 7).",
+      "D": "Psikoşirürji, 5 yıl boyunca tüm tedavilerin etkisiz olduğu belgelenmiş hastalarda uygulanan lezyon cerrahisidir. Yeni başvuran, hızlı yanıt gereken hastada son çare olan bu yöntem seçilmez (s. 30).",
+      "E": "Fototerapi, kış aylarında başlayan mevsimsel depresyonda kullanılan ışık tedavisidir. İntihar riski yüksek, beslenmeyi reddeden ağır depresyonda tek başına hızlı ve yeterli bir seçenek değildir (s. 27)."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": [
+      "d3-b-072"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Hızla yanıt istenen, intihar riski yüksek, oral alım reddi olan, antidepresan kullanamayan (gebe, GTD)"
+     },
+     "dayanak": [
+      "ozen:s7",
+      "ogrenci:B:psk-s06-b03",
+      "cikmis:d3-b-072"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Şizofrenide EKT kullanımıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Belirgin pozitif bulguları olan hastalarda uygulanabilir.",
+      "B": "Kronik şizofrenide etkili bir tedavi seçeneğidir.",
+      "C": "Antipsikotiklerin neden olduğu EPS belirtilerinde uygulanabilir.",
+      "D": "Homisid ya da suisid riski olan hastalarda uygulanabilir.",
+      "E": "Katatonik belirtiler gösteren hastalarda uygulanabilir."
+     },
+     "dogru": "B",
+     "aciklama": "EKT kronik şizofrenide etkin değildir. Pozitif bulgu, katatoni, duygudurum belirtisi, dirençli hasta, homisid/suisid riski, antipsikotiğe bağlı EPS ve gebelik şizofrenide EKT endikasyonudur (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Belirgin pozitif bulgular, yani hezeyan ve halüsinasyon gibi belirtiler EKT'ye iyi yanıt verir. Bu hastalar şizofrenide EKT endikasyonları arasındadır (s. 8).",
+      "B": "EKT kronik şizofrenide etkin değildir; kronik tabloda öne çıkan negatif belirtileri düzeltmez. Etkili olduğunu söyleyen bu önerme yanlıştır (s. 8).",
+      "C": "EPS, antipsikotiklerin yol açtığı ekstrapiramidal hareket bozukluklarıdır. EKT bu belirtileri artırmaz, tersine antipsikotiğe bağlı EPS belirtileri bir EKT endikasyonudur (s. 8).",
+      "D": "Başkasına ya da kendine zarar verme riski olan şizofreni hastalarında hızlı yanıt gerektiği için EKT uygulanır. Önerme doğrudur (s. 8).",
+      "E": "Katatoni, motor donma ve tepkisizlikle giden ağır bir tablodur. Katatonik ya da duygudurum belirtileri gösteren şizofreni hastaları EKT'den yarar görür (s. 8)."
+     },
+     "bilgi": [
+      27,
+      28,
+      29,
+      30,
+      123
+     ],
+     "benzer_cikmis": [
+      "d3-b-072"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Kronik şizofrenide etkin değildir"
+     },
+     "dayanak": [
+      "cikmis:d3-b-072",
+      "hoca:hv-k2-20-84",
+      "ozen:s8"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q15",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi EKT endikasyonlarından biri değildir?",
+     "secenekler": {
+      "A": "Nöroleptik malign sendrom",
+      "B": "İnatçı epilepsi",
+      "C": "Retina dekolmanı",
+      "D": "Hipopituitarizm",
+      "E": "Parkinson hastalığında on-off fenomeni"
+     },
+     "dogru": "C",
+     "aciklama": "NMS, inatçı epilepsi, hipopituitarizm ve Parkinson (on-off) EKT'nin diğer endikasyonlarıdır; retina dekolmanı riskin arttığı durumdur (s. 9, 10).",
+     "sik_aciklamalari": {
+      "A": "Nöroleptik malign sendrom, antipsikotiklere bağlı ateş, kas sertliği ve bilinç değişikliğiyle giden ağır bir tablodur. EKT'nin diğer endikasyonları arasında sayılır (s. 6, 9).",
+      "B": "İnatçı epilepsi, ilaçla kontrol edilemeyen nöbetlerin sürdüğü tablodur. EKT'nin nadir kullanılan diğer endikasyonları listesinde açıkça gösterilir, bu yüzden endikasyondur (s. 9).",
+      "C": "Retina dekolmanı, EKT sırasında artan basınç nedeniyle riskin arttığı durumlardan biridir. Endikasyon değil, dikkatle değerlendirilmesi gereken risk durumudur (s. 10).",
+      "D": "Hipopituitarizm, hipofiz bezinin hormon salgısının yetersiz kaldığı durumdur. EKT'nin nadir kullanılan diğer endikasyonları listesinde gösterildiği için endikasyon kabul edilir (s. 9).",
+      "E": "On-off fenomeni, Parkinson hastasında ilaç etkisinin gün içinde dalgalanmasıdır. Rijidite ve bradikinezi gibi motor belirtilerle birlikte EKT'nin Parkinson endikasyonları arasında yer alır (s. 9)."
+     },
+     "bilgi": [
+      17,
+      31,
+      32,
+      33,
+      36
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Hipopituitarizm İnatçı epilepsi Depresif çocuk ve ergenler"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-09",
+      "ogrenci:B:psk-s06-b03"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-072",
+     "soru": "Elektrokonvülsif Tedavi (EKT) hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Antipsikotiklerin neden olduğu ekstrapiramidal sistem yan etkilerinde artmaya neden olur.",
+      "B": "EKT yapılan hastalarda en sık koyulan endikasyon, majör depresyondur.",
+      "C": "Kronik şizofrenide etkin değildir.",
+      "D": "Gebe hastalarda en güvenilir tedavilerden biridir.",
+      "E": "EKT'de oluşan bilişsel fonksiyonlarda bozulmanın derecesi kişiden kişiye değişmekle birlikte dozaja bağlıdır."
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2024-2025-h38",
+     "soru": "Psikiyatrik bozukluklarda uygulanan tedavilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Günümüzde EKT uygulanan hastaların çoğunda tanı major depresyondur.",
+      "B": "EKT yan etkilerinden en sık görüleni ataksidir.",
+      "C": "Benzodiazepinler nöbet eşiğini yükselttiği için EKT öncesinde kesilmelidir.",
+      "D": "Transkraniyal manyetik stimülasyon, EKT'ye göre daha az bilişsel bozulmaya yol açar.",
+      "E": "Işık tedavisi en çok mevsimsel özellikli depresyonda kullanılır."
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "EKT'de riskin arttığı durumları mekanizmasıyla tanır; mortaliteyi, sistemlere göre yan etkileri ve bilişsel etkileri açıklar, mutlak kontrendikasyon olmadığını bilir (s. 10–13).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q26",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "EKT'de görülen kırık ve çıkıkların en olası nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nöbet sırasında oluşan miyoklonik-tonik kasılmalar",
+      "B": "Elektrot yerleşimine bağlı yanıklar",
+      "C": "Hipertansiyona bağlı damar hasarı",
+      "D": "Retrograd amneziye bağlı düşmeler",
+      "E": "Bradikardiye bağlı bayılmalar"
+     },
+     "dogru": "A",
+     "aciklama": "Kas-iskelet yan etkileri miyoklonik-tonik kasılma, kırık-çıkık ve kas-eklem ağrısıdır; kırıklar kasılmaya bağlıdır (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Kırık ve çıkıklar, nöbet sırasındaki miyoklonik-tonik kasılmalara bağlı kas-iskelet sistemi yan etkileridir. Kas ve eklem ağrıları da aynı kasılmalardan kaynaklanır (s. 12).",
+      "B": "Elektrot yerleşimiyle ilgili sorun deri yanığıdır ve elektrotların tuzlu suyla ıslatılmasıyla önlenir. Yanıklar kemik kırığına ya da eklem çıkığına yol açan bir mekanizma sunmaz (s. 5).",
+      "C": "Hipertansiyon EKT'nin kardiyovasküler yan etkisidir ve anevrizma gibi durumlarda riski artırır. Kemik ve eklem hasarının nedeni ise kasılmalardır (s. 12, 10).",
+      "D": "Retrograd amnezi, uygulama öncesi olayları hatırlayamama biçiminde bir santral sinir sistemi yan etkisidir. Kırık ve çıkıkların nedeni bellek sorunu değil, nöbetteki kasılmalardır (s. 11, 12).",
+      "E": "Bradikardi kalp hızının yavaşlamasıdır ve kardiyovasküler yan etkiler arasında sayılır. Kas-iskelet başlığındaki kırık ve çıkıklar ise kasılmalara bağlıdır (s. 12)."
+     },
+     "bilgi": [
+      44
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Myoklonik-tonik kasılma Kırık ve çıkıklar"
+     },
+     "dayanak": [
+      "ozen:s12",
+      "ogrenci:A:psk-s06-b04"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q17",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi EKT'nin santral sinir sistemine ait yan etkilerinden biridir?",
+     "secenekler": {
+      "A": "Retrograd amnezi",
+      "B": "Ataksi",
+      "C": "Hipertansiyon",
+      "D": "Kırık ve çıkıklar",
+      "E": "Bradikardi"
+     },
+     "dogru": "A",
+     "aciklama": "EKT'nin SSS yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve anterograd/retrograd amnezidir; ataksi listede yoktur (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Retrograd amnezi, uygulamadan önceki olayları hatırlayamamaktır. Konfüzyon, sersemlik, baş ağrısı, ajitasyon ve anterograd amneziyle birlikte EKT'nin santral sinir sistemi yan etkilerindendir (s. 11).",
+      "B": "Ataksi, beyincik kaynaklı denge ve koordinasyon bozukluğudur. EKT'nin santral sinir sistemi yan etkileri listesinde bulunmaz; sınavlarda tam da bu yüzden çeldirici olarak kullanılmıştır (s. 11).",
+      "C": "Hipertansiyon EKT sırasında görülebilen bir yan etkidir, ancak kardiyovasküler sisteme aittir. Taşikardi, aritmi ve bradikardiyle aynı başlıkta yer alır (s. 12).",
+      "D": "Kırık ve çıkıklar, nöbetteki kasılmalara bağlı kas-iskelet sistemi yan etkileridir. Santral sinir sistemi başlığında değil, kas-iskelet başlığında sayılır (s. 12).",
+      "E": "Bradikardi, kalp hızının yavaşlamasıdır ve EKT'nin kardiyovasküler yan etkilerindendir. Santral sinir sistemi yan etkileri arasında değil, hipertansiyon ve aritmiyle birlikte geçer (s. 12)."
+     },
+     "bilgi": [
+      41,
+      42,
+      43,
+      44
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q77"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Ajitasyon Amnezi (Anterograd/Retrograd Amnezi)"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q77",
+      "cikmis:d3k2-2024-2025-h38",
+      "ogrenci:A:psk-s06-b04",
+      "hoca:hv-k2-20-12"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q18",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "EKT'nin yan etkileriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Konfüzyon ve sersemlik görülebilir.",
+      "B": "Anterograd ve retrograd amnezi görülebilir.",
+      "C": "Taşikardi ve aritmi görülebilir.",
+      "D": "Ataksi, santral sinir sistemi yan etkilerinden biridir.",
+      "E": "Kas ve eklem ağrıları görülebilir."
+     },
+     "dogru": "D",
+     "aciklama": "Ataksi EKT yan etkisi değildir. SSS: konfüzyon, sersemlik, baş ağrısı, ajitasyon, amnezi; KVS: HT, taşikardi, aritmi, bradikardi; kas-iskelet: kasılma, kırık-çıkık, kas-eklem ağrısı (s. 11–12).",
+     "sik_aciklamalari": {
+      "A": "Konfüzyon ve sersemlik, hastanın EKT'den uyandığı gün görülen geçici santral sinir sistemi yan etkileridir. Listede açıkça bulundukları için önerme doğrudur (s. 11).",
+      "B": "Anterograd amnezi yeni bilgiyi kaydedememe, retrograd amnezi önceki olayları hatırlayamamadır. İkisi de EKT'nin santral sinir sistemi yan etkileridir (s. 11).",
+      "C": "Taşikardi ve aritmi, nöbet sırasındaki sempatik deşarja bağlı kardiyovasküler yan etkilerdir. Hipertansiyon ve bradikardiyle aynı başlıkta yer aldıkları için önerme doğrudur (s. 12).",
+      "D": "Ataksi, beyincik kaynaklı denge ve koordinasyon bozukluğudur ve EKT'nin hiçbir yan etki listesinde bulunmaz. Santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezidir (s. 11).",
+      "E": "Kas ve eklem ağrıları, nöbetteki miyoklonik-tonik kasılmalara bağlı kas-iskelet yan etkileridir. Kırık ve çıkıklarla aynı başlıkta yer aldıkları için önerme doğrudur (s. 12)."
+     },
+     "bilgi": [
+      41,
+      42,
+      43,
+      44
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q77",
+      "d3k2-2024-2025-h38"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Konfüzyon Sersemlik Baş ağrısı Ajitasyon"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q77",
+      "cikmis:d3k2-2024-2025-h38",
+      "ogrenci:A:psk-s06-b04",
+      "hoca:hv-k2-20-12"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q20",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "EKT sırasında sempatik deşarjın ve kafa içi basıncın artması nedeniyle riskin arttığı durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gebelik",
+      "B": "Nöroleptik malign sendrom",
+      "C": "Yer kaplayan serebral lezyon",
+      "D": "Katatonik depresyon",
+      "E": "Parkinson hastalığı"
+     },
+     "dogru": "C",
+     "aciklama": "Nöbette sempatik deşarj ve kafa içi basınç artar; yer kaplayan lezyon, KİBAS, yakın MI/SVO, anevrizma, retina dekolmanı ve feokromositoma riski artırır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Gebelik EKT için risk durumu değil, tersine endikasyondur. Gebelikte yüksek doz ilaç kullanılamadığından EKT depresyon, mani ve şizofrenide güvenli bir seçenek olabilir (s. 7, 8).",
+      "B": "Nöroleptik malign sendrom, antipsikotiklere bağlı ateş ve kas sertliğiyle giden ağır bir tablodur. EKT'nin diğer endikasyonları arasında sayılır, riskin arttığı durum değildir (s. 9).",
+      "C": "Yer kaplayan serebral lezyonda nöbetle artan kafa içi basınç lezyonun kaymasına ve tablonun ağırlaşmasına yol açabilir. Bu nedenle EKT'de riskin arttığı durumlar listesinin ilk maddesidir (s. 10).",
+      "D": "Katatonik belirtiler gösteren depresyon hastaları EKT'nin en iyi yanıt veren gruplarındandır. Bu tablo risk değil, majör depresyonda EKT endikasyonudur (s. 7).",
+      "E": "Parkinson hastalığı, özellikle rijidite ve bradikinezi gibi motor belirtilerde EKT'nin kullanıldığı bir hastalıktır. Riskin arttığı durumlar arasında değil, endikasyonlar arasında yer alır (s. 9)."
+     },
+     "bilgi": [
+      34,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Yer kaplayan serebral lezyon"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-09",
+      "hoca:hv-k2-20-05",
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q21",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi EKT'de riskin arttığı durumlardan biri değildir?",
+     "secenekler": {
+      "A": "Retina dekolmanı",
+      "B": "Gebelik",
+      "C": "Feokromositoma",
+      "D": "Anevrizma",
+      "E": "Yakın geçmişte miyokard enfarktüsü"
+     },
+     "dogru": "B",
+     "aciklama": "Riskin arttığı durumlar: yer kaplayan lezyon, KİBAS, yakın MI, yakın SVO, anevrizma, retina dekolmanı, feokromositoma. Gebelik endikasyondur (s. 7, 10).",
+     "sik_aciklamalari": {
+      "A": "Retina dekolmanı, retinanın alttaki dokudan ayrılmasıdır ve görme kaybına yol açabilir. Nöbetle artan basınç dekolmanı ağırlaştırabileceği için EKT'de riskin arttığı durumlardandır (s. 10).",
+      "B": "Gebelik bir risk durumu olarak değil, endikasyon olarak anılır; antidepresan kullanamayan gebe hasta EKT adayıdır. Gebelikte EKT ilaçlardan daha güvenli bir seçenek olabilir (s. 7, 10).",
+      "C": "Feokromositoma, katekolamin salgılayan ve tansiyon atakları yapan böbreküstü tümörüdür. Nöbetteki sempatik deşarj hipertansif krizi tetikleyebileceği için riskin arttığı durumlar listesindedir (s. 10).",
+      "D": "Anevrizma, damar duvarındaki kesesel genişlemedir. Nöbette yükselen kan basıncı yırtılma riskini artırdığı için EKT'de dikkat gerektiren durumlardandır (s. 10).",
+      "E": "Yakın geçmişte geçirilmiş miyokard enfarktüsü, nöbetin getirdiği taşikardi ve tansiyon yükü nedeniyle EKT'de riski artırır. Liste içinde açıkça yer alır (s. 10)."
+     },
+     "bilgi": [
+      21,
+      35,
+      36
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Yakın geçmişte miyokard infaktüsü"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-05",
+      "hoca:hv-k2-20-09",
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q23",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "EKT'de hasta başına mortalite oranı yaklaşık yüzde kaçtır?",
+     "secenekler": {
+      "A": "%0,002",
+      "B": "%1",
+      "C": "%0,1",
+      "D": "%0,01",
+      "E": "%10"
+     },
+     "dogru": "D",
+     "aciklama": "EKT'de mortalite seans başına %0,002, hasta başına %0,01'dir (s. 11).",
+     "sik_aciklamalari": {
+      "A": "%0,002, EKT'de seans başına mortalite oranıdır. Hasta birden fazla seans aldığı için hasta başına oran daha yüksektir ve %0,01 olarak verilir (s. 11).",
+      "B": "%1, derin beyin uyarımı cerrahisinin yaklaşık kalıcı cerrahi morbidite oranıdır. EKT'deki hasta başına mortaliteyle ilgisi bulunmayan, DBS'ye ait bir veridir (s. 24).",
+      "C": "%0,1, verilen mortalite değerlerinin hiçbirine uymayan bir orandır. Seans başına oran %0,002, hasta başına oran %0,01'dir; bu seçenek gerçek değerin on katıdır (s. 11).",
+      "D": "EKT'de hasta başına mortalite %0,01'dir ve bu oran evde kendiliğinden ölüm oranından bile düşüktür. Yöntemin güvenli kabul edilmesinin dayanaklarından biridir (s. 11).",
+      "E": "%10, uyku yoksunluğu sonrası etkinliğin ikinci gün düştüğü %10–15 aralığının alt sınırıdır. EKT mortalitesi ise binde birin de altında, hasta başına %0,01'dir (s. 28, 11)."
+     },
+     "bilgi": [
+      39,
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Hasta başına : %0.01"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q25",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "EKT'nin güvenliğiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Seans başına mortalite yaklaşık %0,002'dir.",
+      "B": "Kas ve eklem ağrıları görülebilir.",
+      "C": "Retina dekolmanı EKT'nin mutlak kontrendikasyonudur.",
+      "D": "Çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+      "E": "Hipertansiyon ve taşikardi görülebilir."
+     },
+     "dogru": "C",
+     "aciklama": "EKT için mutlak kontrendikasyon yoktur; retina dekolmanı riskin arttığı durumdur (s. 10, 13).",
+     "sik_aciklamalari": {
+      "A": "Seans başına mortalite %0,002, hasta başına %0,01'dir. Bu düşük oranlar EKT'nin güvenli bir yöntem olduğunu gösterir; önerme doğrudur (s. 11).",
+      "B": "Kas ve eklem ağrıları, nöbetteki kasılmalara bağlı kas-iskelet sistemi yan etkileridir. Kırık ve çıkıklarla aynı başlıkta sayıldıkları için önerme doğrudur (s. 12).",
+      "C": "EKT için mutlak kontrendikasyon yoktur; retina dekolmanı yalnız riskin arttığı durumlar arasında sayılır. Mutlak kontrendikasyon diyen bu önerme yanlıştır (s. 10, 13).",
+      "D": "Çalışmalar EKT'nin beyne zarar vermediğini göstermiştir; bilişsel etkiler kişiye ve doza bağlıdır. EKT'nin güvenli kabul edilmesinin dayanaklarından biri olan bu önerme doğrudur (s. 13).",
+      "E": "Hipertansiyon ve taşikardi, nöbet sırasındaki sempatik deşarjla ortaya çıkan kardiyovasküler yan etkilerdir. Aritmi ve bradikardiyle aynı başlıkta yer aldıkları için önerme doğrudur (s. 12)."
+     },
+     "bilgi": [
+      36,
+      39,
+      43,
+      44,
+      45,
+      49
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "EKT için mutlak kontrendikasyon yoktur"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s06-b06",
+      "ozen:s13",
+      "hoca:hv-k2-20-09"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q19",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "EKT yan etkileri ve ait oldukları sistemlerle ilgili aşağıdaki öncüllerden hangileri doğrudur?\nI. Kardiyovasküler sistem – bradikardi\nII. Santral sinir sistemi – ajitasyon\nIII. Kas-iskelet sistemi – miyoklonik-tonik kasılma\nIV. Santral sinir sistemi – ataksi",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Bradikardi KVS, ajitasyon SSS, miyoklonik-tonik kasılma kas-iskelet yan etkisidir; ataksi EKT yan etkisi değildir (s. 11–12).",
+     "sik_aciklamalari": {
+      "A": "Bradikardi ve ajitasyon doğru sistemle eşleşmiştir. Ancak miyoklonik-tonik kasılmanın kas-iskelet yan etkisi olması da doğrudur; III dışarıda kaldığı için seçenek eksiktir (s. 12).",
+      "B": "Bradikardi kardiyovasküler, ajitasyon santral sinir sistemi, miyoklonik-tonik kasılma kas-iskelet yan etkisidir. Ataksi ise EKT yan etkileri arasında yer almadığından doğru küme I, II ve III'tür (s. 11, 12).",
+      "C": "Ajitasyon gerçekten santral sinir sistemi yan etkisidir. Ataksi ise EKT'nin hiçbir yan etki listesinde bulunmaz; IV'ü içeren bu küme yanlıştır (s. 11).",
+      "D": "Bradikardi ve miyoklonik-tonik kasılma doğru eşleşmelerdir. Ataksi eklendiği ve ajitasyon dışarıda bırakıldığı için bu küme yanlıştır (s. 11, 12).",
+      "E": "Bu seçenek dört öncülü de doğru sayar. EKT'nin santral sinir sistemi yan etkileri konfüzyon, sersemlik, baş ağrısı, ajitasyon ve amnezidir; ataksi bu listede yoktur (s. 11)."
+     },
+     "bilgi": [
+      41,
+      43,
+      44
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q77"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Myoklonik-tonik kasılma Kırık ve çıkıklar Kas ve eklem ağrıları"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s06-b04",
+      "cikmis:d3k2-2020-2021-q77",
+      "hoca:hv-k2-20-12"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q22",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Üç hafta önce miyokard enfarktüsü geçiren 62 yaşındaki erkek hasta, ilaca yanıt vermeyen ağır depresyon nedeniyle psikiyatri kliniğine başvuruyor. EKT planlanan bu hasta için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Miyokard enfarktüsü EKT'nin mutlak kontrendikasyonu olduğundan EKT hiçbir koşulda uygulanamaz.",
+      "B": "Kardiyak riski azaltmak için tedaviye trisiklik antidepresan eklenmelidir.",
+      "C": "Nöbet süresini kısaltmak için EKT öncesinde teofilin verilmelidir.",
+      "D": "EKT'de kardiyovasküler yan etki beklenmediği için ek önlem gerekmez.",
+      "E": "Yakın geçmişteki enfarktüs riski artırdığı için tablo dikkatle değerlendirilmelidir."
+     },
+     "dogru": "E",
+     "aciklama": "Yakın geçmişte MI riskin arttığı durumdur; EKT için mutlak kontrendikasyon yoktur, tablo dikkatle değerlendirilir. TSA kardiyak riski artırır, teofilin status yapabilir (s. 10, 13, 14).",
+     "sik_aciklamalari": {
+      "A": "EKT için mutlak kontrendikasyon yoktur; yakın geçmişteki enfarktüs yalnız riskin arttığı durumlar arasında sayılır. Hiçbir koşulda uygulanamaz demek bu temel bilgiyle çelişir (s. 10, 13).",
+      "B": "Trisiklik antidepresanlar EKT ile birlikte kullanıldığında kardiyak riski azaltmaz, artırır. Enfarktüslü hastada bu kombinasyon riski daha da yükseltir (s. 14).",
+      "C": "Teofilin terapötik dozlarda bile EKT ile birlikte hastanın status epileptikusa girmesine yol açabilir. Nöbeti kısaltmak için verilmez, tersine kaçınılması gereken bir ilaçtır (s. 14).",
+      "D": "EKT'nin hipertansiyon, taşikardi, aritmi ve bradikardi gibi kardiyovasküler yan etkileri vardır. Bu nedenle enfarktüslü hastada ek önlem gerekmez demek yanlıştır (s. 12).",
+      "E": "Yakın geçmişte miyokard enfarktüsü EKT'de riskin arttığı durumlardandır; EKT için mutlak kontrendikasyon olmadığından tablo dikkatle tartılarak karar verilir. İlaca dirençli depresyon da EKT endikasyonudur (s. 7, 10, 13)."
+     },
+     "bilgi": [
+      35,
+      37,
+      43,
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Yakın geçmişte miyokard infaktüsü"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-05",
+      "ozen:s10",
+      "ogrenci:A:psk-s06-b06"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q24",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "EKT'nin bilişsel etkileriyle ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bilişsel etkilenmenin derecesi tanıya göre belirgin biçimde değişir.",
+      "B": "Çalışmalar EKT'nin beyne zarar vermediğini göstermiştir.",
+      "C": "Bilişsel bozukluklar uygulamadan hemen sonra görülebilir.",
+      "D": "Bilişsel etkilenmenin derecesi kişiden kişiye değişir.",
+      "E": "Bilişsel etkilenme verilen dozla ilişkilidir."
+     },
+     "dogru": "A",
+     "aciklama": "EKT beyne zarar vermez; bilişsel bozukluk hemen sonra ve tedavi bitiminde görülür, kişiye ve doza bağlıdır, tanıdan tanıya değişmez (s. 13).",
+     "sik_aciklamalari": {
+      "A": "EKT'nin bilişsel işlevlere etkisi teşhisten teşhise değişmez; etkilenme tanıdan bağımsızdır. Tanıya göre belirgin değiştiğini söyleyen bu önerme yanlıştır (s. 13).",
+      "B": "Çalışmalar EKT'nin beyne zarar vermediğini göstermiştir. Bu bilgi, EKT'ye karşı duyulan korkunun bilimsel karşılığı olmadığını gösterir; önerme doğrudur (s. 13).",
+      "C": "EKT uygulandıktan hemen sonra ve tedavi bitiminde bilişsel bozukluklar ortaya çıkabilir. Bu bozukluklar uygulamayla zamansal ilişkilidir ve önerme doğru bir bilgiyi aktarır (s. 13).",
+      "D": "Bilişsel etkilenmenin derecesi kişiden kişiye değişir; aynı uygulama farklı hastalarda farklı düzeyde etki yapabilir. Bireysel farklılığı vurgulayan bu önerme doğrudur (s. 13).",
+      "E": "Bilişsel etkilenmenin derecesi kişiden kişiye değişmekle birlikte verilen dozla da ilişkilidir. Doz ile bilişsel etki arasındaki bu ilişki doğru anlatılmıştır (s. 13)."
+     },
+     "bilgi": [
+      45,
+      46,
+      47,
+      48
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "EKT’nin bilişsel fonksiyonlara olan etkisi teşhisten teşhise değişmemektedir"
+     },
+     "dayanak": [
+      "ozen:s13",
+      "ogrenci:A:psk-s06-b04"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2020-2021-q77",
+     "soru": "Elektrokonvülsif tedavide aşağıda verilen yan etkilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Konfüzyon",
+      "B": "Ataksi",
+      "C": "Baş ağrısı",
+      "D": "Ajitasyon",
+      "E": "Amnezi"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2024-2025-h38",
+     "soru": "Psikiyatrik bozukluklarda uygulanan tedavilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Günümüzde EKT uygulanan hastaların çoğunda tanı major depresyondur.",
+      "B": "EKT yan etkilerinden en sık görüleni ataksidir.",
+      "C": "Benzodiazepinler nöbet eşiğini yükselttiği için EKT öncesinde kesilmelidir.",
+      "D": "Transkraniyal manyetik stimülasyon, EKT'ye göre daha az bilişsel bozulmaya yol açar.",
+      "E": "Işık tedavisi en çok mevsimsel özellikli depresyonda kullanılır."
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "EKT öncesi kesilmesi ya da gözden geçirilmesi gereken ilaçları ve nöbet eşiği/kardiyak risk/status etkileşimlerini açıklar (s. 14).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q27",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Nöbet eşiğini artırdığı için EKT'ye başlamadan önce kesilmesi gereken ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trisiklik antidepresanlar",
+      "B": "Lityum",
+      "C": "Benzodiazepinler",
+      "D": "Kafein",
+      "E": "Teofilin"
+     },
+     "dogru": "C",
+     "aciklama": "Benzodiazepinler ve antiepileptikler nöbet eşiğini artırdığı için EKT öncesi kesilir (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Trisiklik antidepresanlar EKT ile birlikte kullanıldığında kardiyak riski artırır. Bu ilaçlarla ilgili sorun nöbet eşiği değil kalp üzerindeki ek yüktür; nöbet eşiğini artıran grup benzodiazepinlerdir (s. 14).",
+      "B": "Lityum, uyku yoksunluğuyla birlikte kullanıldığında düzelmenin kalıcılığını artıran bir duygudurum düzenleyicidir. Nöbet eşiğini artırdığı için EKT öncesi kesilen ilaçlar arasında sayılmamıştır (s. 28, 14).",
+      "C": "Benzodiazepinler ve antiepileptikler nöbet eşiğini artırarak EKT ile yeterli nöbet oluşmasını zorlaştırır. Bu nedenle uygulamaya başlamadan önce kesilmeleri gerekir (s. 14).",
+      "D": "Kafein nöbet eşiğini artırmaz; tersine nöbet süresini uzatmak için EKT'de kullanılmasını önerenler vardır. Kesilmesi gereken değil, bazen eklenen bir maddedir (s. 14).",
+      "E": "Teofilin terapötik dozlarda bile EKT ile birlikte status epileptikusa yol açabilir. Sorun nöbet eşiğini artırması değil, uzamış nöbet riskidir (s. 14)."
+     },
+     "bilgi": [
+      51,
+      55
+     ],
+     "benzer_cikmis": [
+      "d3k2-2024-2025-h38"
+     ],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Benzodiazepinler ve antiepileptikler nöbet eşiğini arttırdığından uygulamaya başlamadan önce kesilmelidir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-22",
+      "ogrenci:A:psk-s06-b06",
+      "cikmis:d3k2-2024-2025-h38"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q28",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "EKT ile ilaç etkileşimlerine ilişkin ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Trisiklik antidepresanlarla birlikte uygulama kardiyak riski artırır.",
+      "B": "Antiepileptikler uygulamaya başlamadan önce kesilmelidir.",
+      "C": "Nöbet süresini uzatmak için kafein önerenler vardır.",
+      "D": "Benzodiazepinler nöbet eşiğini artırır.",
+      "E": "Teofilin nöbet eşiğini yükselttiği için nöbet süresini kısaltır."
+     },
+     "dogru": "E",
+     "aciklama": "TSA kardiyak riski artırır; BZD ve antiepileptikler nöbet eşiğini artırdığı için kesilir; teofilin status yapabilir; kafein nöbet süresini uzatmak için önerilebilir (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Trisiklik antidepresanlar EKT ile birlikte kullanıldığında kardiyak riski artırır. Önerme doğrudur ve EKT öncesi ilaç düzenlemesinin gerekçelerinden biridir (s. 14).",
+      "B": "Antiepileptikler nöbet eşiğini artırarak EKT nöbetini zorlaştırır; bu yüzden uygulama öncesi kesilir. Benzodiazepinlerle aynı gerekçeyle anılan bu önerme doğrudur (s. 14).",
+      "C": "Kafein, nöbet uzunluğunu artırmak amacıyla EKT'de kullanılabileceği öne sürülen bir maddedir. Bu öneri teofilindeki status riskinden farklı olarak nöbetin yeterli sürmesini amaçlar (s. 14).",
+      "D": "Benzodiazepinler nöbet eşiğini artırır ve yeterli nöbet oluşmasını zorlaştırır. Bu nedenle EKT'ye başlamadan önce kesilirler; önerme doğrudur (s. 14).",
+      "E": "Teofilin nöbet süresini kısaltmaz; terapötik dozlarda bile EKT ile birlikte hastanın status epileptikusa girmesine yol açabilir. Önerme etkiyi ters yönde anlattığı için yanlıştır (s. 14)."
+     },
+     "bilgi": [
+      50,
+      51,
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Teofilin terapötik dozlarda bile EKT uygulaması ile hastanın statusa girmesine neden olabilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-18",
+      "hoca:hv-k2-20-22",
+      "ogrenci:A:psk-s06-b06"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q30",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "EKT ile birlikte kullanılan maddeler ve etkileriyle ilgili aşağıdaki öncüllerden hangileri doğrudur?\nI. Trisiklik antidepresan – kardiyak riskte artış\nII. Teofilin – status epileptikus gelişebilmesi\nIII. Kafein – nöbet uzunluğunu artırma amacıyla kullanım\nIV. Benzodiazepin – nöbet eşiğinde düşme",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, III ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "TSA kardiyak risk, teofilin status, kafein nöbet uzatma; benzodiazepin nöbet eşiğini ARTIRIR (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Trisiklik antidepresan ve teofilin eşleşmeleri doğrudur. Kafeinin nöbet süresini uzatmak amacıyla kullanılabilmesi de doğru olduğundan III dışarıda kalınca seçenek eksik kalır (s. 14).",
+      "B": "Teofilinin status epileptikusa yol açabilmesi doğrudur. Benzodiazepinler ise nöbet eşiğini artırır, düşürmez; IV'ü içeren bu küme yanlıştır (s. 14).",
+      "C": "TSA ve kafein eşleşmeleri doğrudur, ancak benzodiazepin nöbet eşiğini yükselttiği için IV yanlıştır. Teofilin eşleşmesinin dışarıda bırakılması da kümeyi hatalı yapar (s. 14).",
+      "D": "TSA kardiyak riski artırır, teofilin status epileptikusa yol açabilir, kafein nöbet uzunluğunu artırmak için önerilebilir. Benzodiazepin ise nöbet eşiğini düşürmez, artırır; doğru küme I, II ve III'tür (s. 14).",
+      "E": "Dört öncülü birden doğru kabul eden bu seçenek benzodiazepinin etkisini ters anlatır. Benzodiazepinler nöbet eşiğini artırdığı için EKT öncesi kesilir (s. 14)."
+     },
+     "bilgi": [
+      50,
+      51,
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Ancak nöbet uzunluğunu arttırmak için kafein kullanılmasını önerenler de vardır"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-18",
+      "ogrenci:A:psk-s06-b06"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q31",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Terapötik dozlarda bile EKT ile birlikte kullanıldığında hastanın status epileptikusa girmesine yol açabilen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kafein",
+      "B": "Teofilin",
+      "C": "Benzodiazepin",
+      "D": "Lityum",
+      "E": "Antiepileptik"
+     },
+     "dogru": "B",
+     "aciklama": "Teofilin terapötik dozlarda bile EKT ile birlikte status epileptikusa yol açabilir (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Kafein de bir metilksantindir, ancak EKT'de nöbet uzunluğunu artırmak amacıyla kullanılmasını önerenler vardır. Status riskiyle anılan madde kafein değil teofilindir (s. 14).",
+      "B": "Teofilin, bronş genişletici bir metilksantindir ve terapötik dozlarda bile EKT ile birlikte status epileptikusa yol açabilir. Bu nedenle EKT öncesinde kullanımı mutlaka gözden geçirilir (s. 14).",
+      "C": "Benzodiazepinler anksiyete ve uyku sorunlarında kullanılan, nöbet eşiğini artıran ilaçlardır. EKT öncesi kesilmelerinin nedeni status riski değil, yeterli nöbetin oluşmamasıdır (s. 14).",
+      "D": "Lityum, uyku yoksunluğuyla birlikte düzelmenin kalıcılığını artıran duygudurum düzenleyicidir. EKT ile status epileptikus riskiyle anılan ilaç ise teofilindir (s. 28, 14).",
+      "E": "Antiepileptikler epilepside kullanılan, nöbet eşiğini artırarak nöbeti önleyen ilaçlardır. EKT öncesi kesilmelerinin nedeni status değil, yeterli nöbetin oluşmamasıdır (s. 14)."
+     },
+     "bilgi": [
+      52,
+      55
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Teofilin terapötik dozlarda bile EKT uygulaması ile hastanın statusa girmesine neden olabilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-22",
+      "hoca:hv-k2-20-18"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q29",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Anksiyete nedeniyle uzun süredir benzodiazepin kullanan 45 yaşındaki kadın, ilaca dirençli depresyon nedeniyle EKT planlanarak kliniğe yatırılıyor. Bu hastada EKT öncesi en uygun yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzodiazepin dozunun artırılması",
+      "B": "Benzodiazepinin EKT başlamadan önce kesilmesi",
+      "C": "Benzodiazepine teofilin eklenmesi",
+      "D": "Benzodiazepine trisiklik antidepresan eklenmesi",
+      "E": "Benzodiazepinin değiştirilmeden sürdürülmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Benzodiazepinler nöbet eşiğini artırdığından EKT öncesi kesilmelidir (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepin dozunu artırmak nöbet eşiğini daha da yükseltir. EKT'nin etkisi için gereken jeneralize nöbetin oluşmasını güçleştireceğinden bu yaklaşım hatalıdır (s. 14).",
+      "B": "Benzodiazepinler nöbet eşiğini artırdığı için EKT ile yeterli nöbet oluşmasını zorlaştırır. Bu nedenle uygulama başlamadan önce kesilir, seanslar bitince ilaç düzenlemesi yeniden yapılır (s. 14).",
+      "C": "Teofilin terapötik dozda bile EKT ile birlikte status epileptikusa yol açabilir. Benzodiazepinin etkisini dengelemek için eklenmesi hastayı tehlikeli uzamış nöbet riskine sokar (s. 14).",
+      "D": "Trisiklik antidepresanlar depresyonda kullanılan ilaçlardır ve EKT ile birlikte kardiyak riski artırır. Benzodiazepinin nöbet eşiği sorununu çözmez, üstüne kalp riskini ekler (s. 14).",
+      "E": "Benzodiazepini değiştirmeden sürdürmek, nöbet eşiği yüksek kaldığı için EKT'nin yeterli nöbet oluşturmasını engeller. Nöbet eşiğini etkileyen ilaçlar EKT kararından sonra mutlaka düzenlenir (s. 14)."
+     },
+     "bilgi": [
+      51,
+      54,
+      55
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Benzodiazepinler ve antiepileptikler nöbet eşiğini arttırdığından"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-22",
+      "hoca:hv-k2-20-18",
+      "ogrenci:A:psk-s06-b06"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2024-2025-h38",
+     "soru": "Psikiyatrik bozukluklarda uygulanan tedavilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Günümüzde EKT uygulanan hastaların çoğunda tanı major depresyondur.",
+      "B": "EKT yan etkilerinden en sık görüleni ataksidir.",
+      "C": "Benzodiazepinler nöbet eşiğini yükselttiği için EKT öncesinde kesilmelidir.",
+      "D": "Transkraniyal manyetik stimülasyon, EKT'ye göre daha az bilişsel bozulmaya yol açar.",
+      "E": "Işık tedavisi en çok mevsimsel özellikli depresyonda kullanılır."
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "TMS, rTMS ve derin TMS'nin ilkesini, endikasyon–etkinlik profilini, FDA onaylarını ve yan etkilerini (nöbet riski) karşılaştırır (s. 15–19).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q32",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Transkraniyal manyetik stimülasyonun etki ilkesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Elektrik akımıyla jeneralize konvülziyon oluşturması",
+      "B": "Doğru akımla eşik altı membran modülasyonu yapması",
+      "C": "Pacemakera bağlı kabloyla sürekli derin uyarı vermesi",
+      "D": "Manyetik uyaranla bölgesel depolarizasyon dalgası oluşturması",
+      "E": "Belirli beyin alanlarında lezyon oluşturması"
+     },
+     "dogru": "D",
+     "aciklama": "TMS'de manyetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşturur (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Elektrik akımıyla jeneralize konvülziyon oluşturmak EKT'nin etki ilkesidir. TMS'de nöbet amaçlanmaz, tersine nöbet tetiklenmesi en ciddi yan etki endişesidir (s. 3, 18).",
+      "B": "Doğru akımla nöronal membran potansiyellerinde eşik altı değişiklik yapmak tDCS'nin ilkesidir. tDCS tamamen nöromodülatördür, TMS ise depolarizasyon oluşturduğu için nörostimülatördür de (s. 20, 21).",
+      "C": "Pacemakera bağlı ince bir kabloyla sürekli uyarı vermek derin beyin uyarımının ilkesidir. Bu invaziv yöntem kafatasında delik açılmasını gerektirir (s. 24).",
+      "D": "TMS'de güçlü ve hızla dalgalanan mıknatıs manyetik alan oluşturur; bu uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası yaratır. Yöntem bu yüzden non-invazivdir (s. 15).",
+      "E": "Belirli beyin alanlarında lezyon oluşturmak psikoşirürjinin ilkesidir; singulotomi bunun örneğidir. TMS doku hasarı oluşturmayan non-invaziv bir uyarı yöntemidir (s. 30)."
+     },
+     "bilgi": [
+      56,
+      57
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-78"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "magnetik uyaranlar kafa derisinden geçerek uygulandığı bölgede depolarizasyon dalgası oluşur"
+     },
+     "dayanak": [
+      "cikmis:q-25-26_d_nem_3_kurul_2-78",
+      "ogrenci:A:psk-s06-b07",
+      "ozen:s15"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q39",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi transkraniyal manyetik stimülasyonun özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Etki için jeneralize konvülziyon oluşturur.",
+      "B": "Non-invaziv bir yöntemdir.",
+      "C": "Manyetik alanla depolarizasyon dalgası oluşturur.",
+      "D": "EKT'den daha az bilişsel bozulma yapar.",
+      "E": "Yaşlılarda etki gücü daha sınırlıdır."
+     },
+     "dogru": "A",
+     "aciklama": "TMS non-invazivdir, manyetik alanla depolarizasyon yapar, EKT'den az bilişsel bozulma yapar, yaşlıda etkisi sınırlıdır; jeneralize konvülziyon EKT'nin ilkesidir (s. 3, 15, 17).",
+     "sik_aciklamalari": {
+      "A": "Jeneralize konvülziyon oluşturmak EKT'nin etki ilkesidir. TMS'de nöbet amaçlanmaz; tersine nöbet tetiklenmesi kaçınılması gereken en ciddi yan etkidir (s. 3, 18).",
+      "B": "TMS'de manyetik uyaranlar kafa derisinden geçer ve cerrahi girişim gerekmez. Non-invaziv olması TMS'nin temel özelliğidir (s. 15).",
+      "C": "TMS'de hızla dalgalanan mıknatıs elektrik akımı üreten bir manyetik alan oluşturur ve uygulandığı bölgede depolarizasyon dalgası yaratır. Bu, yöntemin etki ilkesidir (s. 15).",
+      "D": "TMS, EKT'ye göre daha az bilişsel bozulmaya neden olur. Bu özellik, yöntemin EKT ile karşılaştırılmasında öne çıkan avantajıdır (s. 15).",
+      "E": "Yaşlı hastalarda beyin dokusu kafatasından daha uzakta olduğundan TMS'nin etki gücü daha da sınırlıdır. Bu, yöntemin bilinen bir kısıtlılığıdır (s. 17)."
+     },
+     "bilgi": [
+      56,
+      57,
+      59,
+      63
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Yan etki olarak EKT’den daha az bilişsel bozulmaya neden olur"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s06-b07",
+      "ozen:s15"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q33",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Transkraniyal manyetik stimülasyonla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Psikozda etkili bir tedavi seçeneğidir.",
+      "B": "Non-invaziv bir yöntemdir.",
+      "C": "EKT'ye göre daha az bilişsel bozulmaya neden olur.",
+      "D": "Yaşlı hastalarda etki gücü daha da sınırlıdır.",
+      "E": "En az bir ilaca yanıtsız depresyonda FDA izni vardır."
+     },
+     "dogru": "A",
+     "aciklama": "TMS non-invazivdir, EKT'den az bilişsel bozulma yapar, yaşlıda etkisi sınırlıdır, en az bir ilaca yanıtsız depresyonda FDA izni vardır; psikozda etkisizdir (s. 15, 17).",
+     "sik_aciklamalari": {
+      "A": "TMS psikoz için etkisizdir; depresyonda da etkisi sınırlıdır ve bu bilgi yöntemin sınırları arasında ayrıca vurgulanır. Psikozda etkili diyen önerme bu nedenle yanlıştır (s. 17).",
+      "B": "TMS'de manyetik uyaranlar kafa derisinden geçerek etki eder; cerrahi ya da anestezi gerekmez. Bu nedenle non-invaziv bir yöntemdir ve önerme doğrudur (s. 15).",
+      "C": "TMS, yan etki olarak EKT'den daha az bilişsel bozulmaya neden olur. Bu özellik onu bilişsel yan etkiden kaçınılan hastalarda seçenek yapar (s. 15).",
+      "D": "Yaşlı hastalarda beyin dokusu kafatasından daha uzakta olduğu için manyetik alanın etkisi azalır. Bu yüzden TMS'nin etki gücü yaşlılarda daha da sınırlıdır (s. 17).",
+      "E": "TMS, en az bir ilaç tedavisinden fayda görmemiş depresyon için FDA izni almıştır. Non-invaziv yöntemler içinde depresyonda bu izni olan yöntem olduğu için önerme doğrudur (s. 17)."
+     },
+     "bilgi": [
+      56,
+      59,
+      62,
+      63,
+      64
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-78"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "orta düzeyde etkili olduğu bildiriliyor Psikoz için etkisiz"
+     },
+     "dayanak": [
+      "cikmis:q-25-26_d_nem_3_kurul_2-78",
+      "ogrenci:A:psk-s06-b07",
+      "ozen:s17"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q34",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İki farklı antidepresana yeterli doz ve sürede yanıt vermeyen 40 yaşındaki kadın, nöbet oluşturmayan ve bilişsel yan etkisi az bir biyolojik tedavi isteğiyle başvuruyor. Bu hasta için FDA izni bulunan non-invaziv yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Elektrokonvülzif tedavi",
+      "B": "Transkraniyal doğru akım stimülasyonu",
+      "C": "Derin beyin uyarımı",
+      "D": "Anterior singulotomi",
+      "E": "Transkraniyal manyetik stimülasyon"
+     },
+     "dogru": "E",
+     "aciklama": "En az bir ilaca yanıtsız depresyonda FDA izni olan non-invaziv yöntem TMS'dir; EKT'den daha az bilişsel bozulma yapar (s. 15, 17).",
+     "sik_aciklamalari": {
+      "A": "EKT etkili bir depresyon tedavisidir, ancak etkisini jeneralize konvülziyon oluşturarak gösterir ve bilişsel yan etkileri daha belirgindir. Hastanın istediği nöbet oluşturmayan yöntem tanımına uymaz (s. 3, 13).",
+      "B": "tDCS kafa derisine düşük genlikli doğru akım veren non-invaziv bir yöntemdir. Ancak şu anda hiçbir endikasyon için onaylanmamıştır (s. 20, 21).",
+      "C": "Derin beyin uyarımı, kafatasına delik açılarak kablo yerleştirilen invaziv bir yöntemdir ve FDA onayı dirençli OKB içindir. Depresyonda yalnız araştırma aşamasındadır (s. 23, 24).",
+      "D": "Anterior singulotomi, OKB'de uygulanan ve beyin dokusunda lezyon oluşturan bir psikoşirürji operasyonudur. İnvaziv ve geri dönüşsüz olduğundan bu hastaya uygun değildir (s. 31).",
+      "E": "Transkraniyal manyetik stimülasyon (TMS) non-invaziv, nöbet oluşturmayan ve EKT'den daha az bilişsel bozulma yapan bir yöntemdir. En az bir ilaca yanıt vermemiş depresyon için FDA izni bulunur (s. 15, 17)."
+     },
+     "bilgi": [
+      58,
+      59,
+      64
+     ],
+     "benzer_cikmis": [
+      "q-25-26_d_nem_3_kurul_2-78"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "FDA tarafından en az bir ilaç tedavisinden fayda görmemiş depresyon için izin alabilmiş durumda"
+     },
+     "dayanak": [
+      "cikmis:q-25-26_d_nem_3_kurul_2-78",
+      "ogrenci:A:psk-s06-b07",
+      "ozen:s17"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q35",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tekrarlı TMS'nin yan etkileri ve güvenliğiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kafa derisi ağrısı ve baş ağrısı görülebilir.",
+      "B": "Yüksek frekanslı uyarım sonrası geçici işitme kaybı görülebilir.",
+      "C": "En ciddi endişe kalıcı bilişsel bozulma gelişmesidir.",
+      "D": "Nöbet riski önceden tarama yapılarak azaltılabilir.",
+      "E": "Yan etkiler çoğunlukla hafif ila orta şiddettedir."
+     },
+     "dogru": "C",
+     "aciklama": "rTMS'de kafa derisi ağrısı, baş ağrısı, geçici işitme kaybı görülür; en ciddi endişe nöbet tetiklemedir ve risk taramasıyla azaltılır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Kafa derisi ağrısı ve baş ağrısı, rTMS'nin hafif ila orta şiddetteki yan etkilerindendir. Uyarının kafa derisine yakın verilmesiyle ilişkili bu etkiler beklenen bulgulardır (s. 18).",
+      "B": "Geçici işitme kaybı, çoğunlukla yüksek frekanslı uyarımı izleyen bir rTMS yan etkisidir. Kalıcı değil geçici olduğu vurgulandığı için önerme doğrudur (s. 18).",
+      "C": "rTMS'de en ciddi endişe kalıcı bilişsel bozulma değil, epileptik nöbet tetiklenmesidir. TMS zaten EKT'den daha az bilişsel bozulmaya neden olur; önerme yanlıştır (s. 15, 18).",
+      "D": "Nöbet riski, risk faktörleri için önceden tarama yapılarak ve TMS kılavuzları uygulanarak en aza indirilebilir. Bu yüzden TMS öncesinde nöbet risk faktörleri mutlaka sorgulanır; önerme doğrudur (s. 18).",
+      "E": "rTMS kafa derisi ağrısı, baş ağrısı ve geçici işitme kaybı gibi hafif ila orta şiddette yan etkilerle ilişkilidir. Önerme doğrudur (s. 18)."
+     },
+     "bilgi": [
+      59,
+      66,
+      67,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "En ciddi endişe, epileptik nöbetleri tetikleme riskidir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-31",
+      "ozen:s18",
+      "ogrenci:A:psk-s06-b07"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q40",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Derin TMS'nin 2020 yılında FDA onayı aldığı kullanım alanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Dirençli obsesif kompulsif bozukluk",
+      "B": "Mevsimsel affektif bozukluk",
+      "C": "Kısa süreli sigara bırakma",
+      "D": "Epilepsi",
+      "E": "Psikoz"
+     },
+     "dogru": "C",
+     "aciklama": "Derin TMS 2020'de kısa süreli sigara bırakmada FDA onayı almıştır (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Dirençli obsesif kompulsif bozuklukta FDA onayı alan yöntem derin beyin uyarımıdır; onay 2009'da verilmiştir. Kablo ve pacemakerla uygulanan bu invaziv yöntem derin TMS'den farklıdır (s. 24, 25).",
+      "B": "Mevsimsel affektif bozukluk, 1984'ten beri fototerapiyle tedavi edilen, kış başında başlayan depresyondur. Bu alan ışık tedavisine aittir (s. 27).",
+      "C": "Derin TMS 2020'de kısa süreli sigara bırakmada FDA onayı almış, minimal yan etkiyle ilaç tedavileriyle karşılaştırılabilir etkinlik göstermiştir. Bağımlılıktaki derin yapılara ulaşabilmesi bu kullanımın temelidir (s. 17, 19).",
+      "D": "Epilepsi tedavisi için 2018'de onay alan yöntem derin beyin uyarımıdır. TMS'de ise nöbet tetikleme riski en ciddi endişedir (s. 25, 18).",
+      "E": "Psikoz, TMS'nin etkisiz olduğu bildirilen durumdur. Bu nedenle derin TMS'nin onay aldığı bir kullanım alanı olamaz (s. 17)."
+     },
+     "bilgi": [
+      65
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "kısa süreli sigarayı bırakmada FDA onayı almış"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s06-b07",
+      "ozen:s17"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q36",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "TMS uygulamasından önce hastada mutlaka sorgulanması gereken risk faktörleri, aşağıdaki istenmeyen etkilerden hangisini önlemeye yöneliktir?",
+     "secenekler": {
+      "A": "Geçici işitme kaybı",
+      "B": "Retrograd amnezi",
+      "C": "Cilt tahrişi ve yanma hissi",
+      "D": "Epileptik nöbet tetiklenmesi",
+      "E": "Kırık ve çıkıklar"
+     },
+     "dogru": "D",
+     "aciklama": "TMS'de en ciddi endişe epileptik nöbettir; risk faktörleri önceden taranır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Geçici işitme kaybı, çoğunlukla yüksek frekanslı uyarımı izleyen hafif bir rTMS yan etkisidir. Önceden yapılan risk faktörü taraması bu etkiye değil nöbete yöneliktir (s. 18).",
+      "B": "Retrograd amnezi, uygulama öncesi olayları hatırlayamamaktır ve EKT'nin santral sinir sistemi yan etkisidir. TMS EKT'den daha az bilişsel bozulma yapar (s. 11, 15).",
+      "C": "Cilt tahrişi ve yanma hissi tDCS'de görülen hafif yan etkilerdir. TMS öncesindeki risk taraması bu etkiler için değil, nöbet riski için yapılır (s. 22).",
+      "D": "Epileptik nöbet tetiklenmesi TMS'nin en ciddi endişesidir. Bu risk, risk faktörleri için önceden tarama yapılarak ve kılavuzlar uygulanarak en aza indirilir (s. 18).",
+      "E": "Kırık ve çıkıklar, EKT'de nöbetteki miyoklonik-tonik kasılmalara bağlı kas-iskelet yan etkileridir. TMS'de jeneralize kasılma amaçlanmadığı için bu bir TMS sorunu olarak anılmaz (s. 12)."
+     },
+     "bilgi": [
+      67,
+      68,
+      69
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "bu risk, risk faktörleri için önceden tarama yapılarak ve TMS kılavuzları uygulanarak en aza indirilebilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-31",
+      "ozen:s18"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q37",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Standart rTMS'de kullanılan sekiz rakamı şeklindeki bobinler yaklaşık kaç santimetre derinliğe ulaşabilir?",
+     "secenekler": {
+      "A": "4 cm",
+      "B": "2 cm",
+      "C": "0,5 cm",
+      "D": "6 cm",
+      "E": "8 cm"
+     },
+     "dogru": "B",
+     "aciklama": "Sekiz biçimli bobin yaklaşık 2 cm, H-bobin yaklaşık 4 cm derinliğe ulaşır (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Yaklaşık 4 cm, derin TMS'de kullanılan H-bobinin kafatasının altında ulaştığı derinliktir. H-bobin çoklu sargılarla standart bobinin iki katı derinliğe iner (s. 19).",
+      "B": "Standart rTMS'deki sekiz rakamı şeklindeki bobinler yalnız yüzeysel beyin bölgelerini tek taraflı uyarır ve yaklaşık 2 cm derinliğe ulaşır. Bu sınır derin TMS'nin geliştirilme nedenidir (s. 19).",
+      "C": "0,5 değeri, tDCS'de kullanılan 0,5–2 mA akım aralığının alt sınırıdır. Bir derinlik ölçüsü değil, doğru akım şiddetini gösteren bir değerdir (s. 20).",
+      "D": "6 cm, ne standart bobinin ne de H-bobinin ulaştığı derinlik olarak verilir. Standart bobin yaklaşık 2 cm, H-bobin yaklaşık 4 cm derinliğe ulaşır (s. 19).",
+      "E": "8 cm değeri TMS bobinleri için tanımlanmış bir derinlik değildir. Yüzeysel standart bobin yaklaşık 2 cm ile sınırlı kaldığı için daha derin yapılar için H-bobin geliştirilmiştir (s. 19)."
+     },
+     "bilgi": [
+      71,
+      73
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "yalnızca yüzeysel beyin bölgelerini tek taraflı olarak uyarması ve yaklaşık 2 cm derinliğe ulaşmasıdır"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q38",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Derin transkraniyal manyetik stimülasyonla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "H-bobinle kafatasının yaklaşık 4 cm altına ulaşır.",
+      "B": "Her iki yarımküreyi aynı anda modüle edebilir.",
+      "C": "Kısa süreli sigara bırakmada FDA onayı almıştır.",
+      "D": "Bağımlılıkta rol oynayan derin yapıları hedefleyebilir.",
+      "E": "Sekiz rakamı şeklindeki bobinle tek taraflı uyarım yapar."
+     },
+     "dogru": "E",
+     "aciklama": "dTMS H-bobinle yaklaşık 4 cm derine, çift taraflı ulaşır; bağımlılıktaki derin yapıları hedefler; 2020'de sigara bırakmada FDA onayı. Sekiz biçimli bobin standart rTMS'dir (s. 17, 19).",
+     "sik_aciklamalari": {
+      "A": "Derin TMS, kaskın çeşitli düzlemlerindeki çoklu sargılara sahip H-bobinle kafatasının yaklaşık 4 cm altına ulaşır. Önerme doğrudur (s. 19).",
+      "B": "H-bobinin ayırt edici özelliği eş zamanlı çift taraflı uyarım sağlayarak her iki yarımküreyi aynı anda modüle etmesidir. Önerme doğrudur (s. 19).",
+      "C": "Derin TMS 2020'de kısa süreli sigara bırakmada FDA onayı almış ve ilaç tedavileriyle karşılaştırılabilir etkinlik göstermiştir. Önerme doğrudur (s. 17).",
+      "D": "Bağımlılık bozukluklarında kritik rol oynayan yapılar standart bobinin ulaşamadığı derinliktedir. Derin TMS bu yapıları hedefleyebilmek için geliştirilmiştir; önerme doğrudur (s. 19).",
+      "E": "Sekiz rakamı şeklindeki bobinle tek taraflı ve yüzeysel uyarım standart rTMS'nin özelliğidir. Derin TMS ise H-bobinle çift taraflı uyarım yapar; önerme yanlıştır (s. 19)."
+     },
+     "bilgi": [
+      65,
+      70,
+      71,
+      72,
+      73,
+      74
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "eş zamanlı çift taraflı uyarım sağlama ve böylece her iki yarımküreyi aynı anda modüle etme"
+     },
+     "dayanak": [
+      "ogrenci:A:psk-s06-b07",
+      "ozen:s17"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-25-26_d_nem_3_kurul_2-78",
+     "soru": "Non-invaziv yolla depolarizasyon dalgası oluşturarak depresyon tedavisinde FDA onayı almış yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Transkraniyal manyetik stimülasyon",
+      "B": "EKT",
+      "C": "DC stimülasyonu",
+      "D": "Derin beyin uyarımı",
+      "E": "Vagus siniri stimülasyonu"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "tDCS'nin uygulamasını, anodal/katodal etkisini, nöromodülatör niteliğini ve sınırlılıklarını TMS ile karşılaştırarak açıklar (s. 20–22).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q41",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Pil benzeri bir cihaza bağlı, tuzlu suyla ıslatılmış bir çift elektrot pedi aracılığıyla kafa derisine 0,5–2 mA doğru akım uygulayan yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Transkraniyal manyetik stimülasyon",
+      "B": "Elektrokonvülzif tedavi",
+      "C": "Derin beyin uyarımı",
+      "D": "Derin transkraniyal manyetik stimülasyon",
+      "E": "Transkraniyal doğru akım stimülasyonu"
+     },
+     "dogru": "E",
+     "aciklama": "tDCS, pil benzeri cihaza bağlı tuzlu suyla ıslatılmış iki elektrot pediyle 0,5–2 mA doğru akım verir (s. 20).",
+     "sik_aciklamalari": {
+      "A": "TMS elektrot pedi ve doğru akım kullanmaz; hızla dalgalanan bir mıknatısla manyetik alan oluşturur. Depolarizasyon dalgası manyetik uyaranla oluşur (s. 15).",
+      "B": "EKT'de de elektrotlar tuzlu suyla ıslatılır, ancak amaç jeneralize konvülziyon oluşturmaktır. Düşük genlikli ve eşik altı etki yapan doğru akım tDCS'nin özelliğidir (s. 3, 5).",
+      "C": "Derin beyin uyarımında akım kafa derisinden değil, beyne yerleştirilen ince bir kablodan verilir. Kablo göğüs duvarındaki pacemakera bağlıdır (s. 24).",
+      "D": "Derin TMS, H-bobinle kafatasının yaklaşık 4 cm altına ulaşan bir manyetik uyarı yöntemidir. Doğru akım ve elektrot pedi kullanılmaz (s. 19).",
+      "E": "Transkraniyal doğru akım stimülasyonu (tDCS), 0,5–2 mA aralığında düşük genlikli doğru akımı tuzlu suyla ıslatılmış elektrot pedleriyle kafa derisine verir. Kökteki tanım bu yönteme aittir (s. 20)."
+     },
+     "bilgi": [
+      75
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "pil benzeri bir cihaza bağlı bir çift tuzlu suyla ıslatılmış elektrot pedi aracılığıyla"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-37"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q42",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Transkraniyal doğru akım stimülasyonuyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Depresyon tedavisinde FDA onayı almıştır.",
+      "B": "Elektrik akımı yalnız en yüzeysel kortikal tabakaya ulaşır.",
+      "C": "Cilt tahrişi ve yanma hissi gibi hafif yan etkileri vardır.",
+      "D": "Membran potansiyellerinde eşik altı modülasyon yapar.",
+      "E": "Odaksallığının düşük olması bir dezavantajıdır."
+     },
+     "dogru": "A",
+     "aciklama": "tDCS hiçbir endikasyon için onaylı değildir; akım yalnız yüzeysel kortekse ulaşır, odaksallığı düşüktür, yan etkileri hafiftir (s. 20–22).",
+     "sik_aciklamalari": {
+      "A": "tDCS şu anda herhangi bir endikasyon için onaylanmamıştır. Depresyonda FDA izni olan non-invaziv yöntem TMS'dir; önerme yanlıştır (s. 21, 17).",
+      "B": "tDCS'de elektrik akımı yalnız en yüzeysel kortikal tabakaya ulaşabilir. Bu, yöntemin derin yapıları etkileyememe sınırlılığıdır ve derin TMS'den temel farkıdır; önerme doğrudur (s. 22).",
+      "C": "tDCS'nin yan etkileri cilt tahrişi ve yanma hissi gibi hafif etkilerdir. Bu bilgi çoğunlukla sağlıklı, ilaçsız deneklerdeki tek uyarım çalışmalarından gelir (s. 22).",
+      "D": "tDCS'nin nöronal membran potansiyellerinde eşik altı modülasyon yaparak kortikal uyarılabilirliği değiştirdiği öne sürülmüştür. Nöbet oluşturmayan bu eşik altı etki, tDCS'nin temel çalışma biçimidir (s. 20).",
+      "E": "Düşük odaksallık, akımın belirli bir hedefe yoğunlaşamamasıdır ve tDCS'nin dezavantajlarındandır. Akımın yalnız yüzeysel kortekse ulaşmasıyla birlikte anılan bu önerme doğrudur (s. 22)."
+     },
+     "bilgi": [
+      76,
+      81,
+      82,
+      83
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "tDCS şu anda herhangi bir endikasyon için onaylanmamıştır"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-37"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q44",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "tDCS ile TMS arasındaki temel fark aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "tDCS invaziv, TMS non-invaziv bir yöntemdir.",
+      "B": "tDCS yalnız nöromodülatör, TMS hem nörostimülatör hem nöromodülatördür.",
+      "C": "tDCS derin yapılara, TMS yalnız kortekse ulaşır.",
+      "D": "tDCS jeneralize nöbet oluşturur, TMS oluşturmaz.",
+      "E": "tDCS depresyonda FDA onaylıdır, TMS onaysızdır."
+     },
+     "dogru": "B",
+     "aciklama": "tDCS tamamen nöromodülatördür, TMS hem nörostimülatör hem nöromodülatördür (s. 21).",
+     "sik_aciklamalari": {
+      "A": "tDCS de kafa derisine elektrot pediyle uygulanan non-invaziv bir yöntemdir. İnvaziv yöntemler arasında kablo yerleştirilen derin beyin uyarımı sayılır (s. 20, 24).",
+      "B": "tDCS kafa derisine düşük genlikli doğru akım verir ve eşik altı modülasyon yaptığı için tamamen nöromodülatördür. TMS ise depolarizasyon dalgası oluşturduğundan hem nörostimülatör hem nöromodülatördür (s. 21).",
+      "C": "tDCS'de akım yalnız en yüzeysel kortikal tabakaya ulaşır; derin yapılara ulaşmak için H-bobinli derin TMS geliştirilmiştir. Bu seçenek ilişkiyi ters kurar (s. 22, 19).",
+      "D": "Jeneralize nöbet oluşturmak EKT'nin ilkesidir. tDCS eşik altı akım verir ve nöbet oluşturmaz; yan etkileri cilt tahrişi gibi hafiftir (s. 3, 22).",
+      "E": "tDCS hiçbir endikasyon için onaylı değildir. Depresyonda FDA izni olan yöntem, en az bir ilaca yanıtsız hastalarda TMS'dir (s. 21, 17)."
+     },
+     "bilgi": [
+      80,
+      81
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "tDCS tamamen nöromodülatör iken, TMS hem nörostimülatör hem de nöromodülatördür"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-37"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q43",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "tDCS ile ilgili aşağıdaki öncüllerden hangileri doğrudur?\nI. Anodal tDCS nöronları depolarize ederek kortikal uyarılabilirliği artırır.\nII. Katodal tDCS nöronları hiperpolarize ederek kortikal uyarılabilirliği azaltır.\nIII. tDCS hem nörostimülatör hem nöromodülatördür.\nIV. Nöral modülasyonun niteliği uyarının polaritesine bağlıdır.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Anodal tDCS depolarize eder ve uyarılabilirliği artırır, katodal hiperpolarize eder ve azaltır; etki süre, yoğunluk ve polariteye bağlıdır. tDCS tamamen nöromodülatördür (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Anodal ve katodal tDCS'nin etkileri doğru verilmiştir. Ancak nöral modülasyonun polariteye bağlı olması da doğru olduğundan IV dışarıda kalınca seçenek eksik kalır (s. 21).",
+      "B": "I ve II doğrudur, ancak III yanlıştır: tDCS tamamen nöromodülatördür. Hem nörostimülatör hem nöromodülatör olma özelliği TMS'ye aittir (s. 21).",
+      "C": "Katodal tDCS'nin hiperpolarizasyonla uyarılabilirliği azaltması ve polarite bağımlılığı doğrudur. Anodal tDCS'nin depolarizasyonla uyarılabilirliği artırması da doğru olduğundan küme eksiktir (s. 21).",
+      "D": "Anodal tDCS depolarizasyonla uyarılabilirliği artırır, katodal tDCS hiperpolarizasyonla azaltır ve etki polariteye bağlıdır. tDCS ise tamamen nöromodülatördür; hem nörostimülatör hem nöromodülatör olan TMS'dir (s. 21).",
+      "E": "Bu seçenek dört öncülün hepsini, dolayısıyla III'ü de doğru sayar. tDCS ise tamamen nöromodülatördür; nörostimülatör özelliği de taşıyan yöntem TMS'dir (s. 21)."
+     },
+     "bilgi": [
+      77,
+      78,
+      79,
+      80
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "anodal tDCS nöronları depolarize ederek kortikal uyarılabilirliği artırırken"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-37"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Derin beyin uyarımının uygulamasını, depresyondaki araştırma ölçütlerini, FDA onaylı ve onaysız kullanım alanlarını sayar (s. 23–25).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q45",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Kafatasında açılan küçük bir delikten ilgili beyin bölgesine ince bir kablo yerleştirilerek göğüs duvarına deri altına konan bir pacemakera bağlanmasıyla uygulanan yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikoşirürji",
+      "B": "Derin transkraniyal manyetik stimülasyon",
+      "C": "Derin beyin uyarımı",
+      "D": "Transkraniyal doğru akım stimülasyonu",
+      "E": "Elektrokonvülzif tedavi"
+     },
+     "dogru": "C",
+     "aciklama": "DBS'de kafatasındaki küçük delikten ince kablo yerleştirilir ve göğüs duvarına deri altına konan pacemakera bağlanır (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Psikoşirürji de cerrahi bir yöntemdir, ancak beyinde kalıcı lezyon oluşturur ya da bağlantı yollarını keser. Pacemakera bağlı kabloyla sürekli uyarı vermez (s. 30).",
+      "B": "Derin TMS, kafa üstündeki H-bobinli kaskla kafatasının yaklaşık 4 cm altına manyetik uyarı ulaştırır. Kafatasına delik açılmaz, non-invaziv bir yöntemdir (s. 19).",
+      "C": "Derin beyin uyarımında ince bir kablo ilgili beyin bölgesine yerleştirilir ve göğüs duvarına deri altına konan pacemakera bağlanır. Hastaların bu cihaza beyin pili demesi de bu yapıdan gelir (s. 24).",
+      "D": "tDCS, kafa derisine tuzlu suyla ıslatılmış pedlerle düşük genlikli doğru akım verir. Non-invaziv bir yöntem olduğu için cerrahi girişim, kablo ya da pacemaker gerektirmez (s. 20).",
+      "E": "EKT, kafa derisine konan elektrotlarla akım verip jeneralize konvülziyon oluşturan bir yöntemdir. Elektrotlar kafa derisinde kalır ve beyne kablo ya da pacemaker yerleştirilmez (s. 3, 5)."
+     },
+     "bilgi": [
+      88,
+      89,
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Bu kablo genellikle göğüs duvarına subdermal olarak yerleştirilen bir pacemakera bağlıdır"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-39",
+      "ogrenci:B:psk-s06-b09",
+      "ozen:s24"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q46",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Derin beyin uyarımıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İlk olarak 1973'te ağrı tedavisinde kullanılmıştır.",
+      "B": "Majör depresif bozukluk tedavisinde FDA onayı almıştır.",
+      "C": "Dirençli OKB tedavisinde FDA onayı almıştır.",
+      "D": "Kalıcı cerrahi morbidite oranı yaklaşık %1'dir.",
+      "E": "İstenmeyen bölgeyi cerrahiye benzer biçimde işlevsel olarak çıkarır."
+     },
+     "dogru": "B",
+     "aciklama": "DBS 1973'te ağrıda başladı; dirençli OKB'de FDA onaylı, kalıcı morbidite yaklaşık %1; MDB'de onaysız kullanılır (s. 23–25).",
+     "sik_aciklamalari": {
+      "A": "Derin beyin uyarımı ilk olarak 1973'te ağrı tedavisinde kullanılmış, sonra dirençli tremoru olan Parkinson hastalarında denenmiştir. Önerme doğrudur (s. 23).",
+      "B": "Derin beyin uyarımı majör depresif bozuklukta FDA onayı olmadan kullanılır; depresyondaki etkinliği hâlâ araştırılmaktadır. FDA onayı dirençli OKB içindir, önerme yanlıştır (s. 23, 25).",
+      "C": "Dirençli OKB, derin beyin uyarımının FDA onayı aldığı psikiyatrik endikasyondur; onay 2009'da verilmiştir. Depresyondan farklı olarak OKB'de onay bulunduğu için önerme doğrudur (s. 24, 25).",
+      "D": "DBS cerrahisi genellikle düşük riskli kabul edilir ve kalıcı cerrahi morbidite oranı yaklaşık %1'dir. İnvaziv olmasına karşın riskin düşük olduğunu gösteren bu önerme doğrudur (s. 24).",
+      "E": "Sürekli uyarı, istenmeyen beyin bölgesini cerrahiye benzer biçimde işlevsel olarak devre dışı bırakır. Önerme yöntemin etki mantığını doğru anlatır (s. 24)."
+     },
+     "bilgi": [
+      85,
+      91,
+      92,
+      93,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "FDA tarafından dirençli OKB tedavisinde onay almıştır"
+     },
+     "dayanak": [
+      "ogrenci:B:psk-s06-b09",
+      "ozen:s24",
+      "hoca:hv-k2-20-39"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q47",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Dirençli depresyonda derin beyin uyarımının araştırıldığı olgularda hastalığın en az kaç yıldır sürüyor olması gerekir?",
+     "secenekler": {
+      "A": "1 yıl",
+      "B": "2 yıl",
+      "C": "3 yıl",
+      "D": "10 yıl",
+      "E": "5 yıl"
+     },
+     "dogru": "E",
+     "aciklama": "Depresyonda DBS: en az 5 yıldır hasta, en az 3 antidepresan ve yeterli psikoterapi etkisiz (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Bir yıllık hastalık süresi derin beyin uyarımı için tanımlanan ölçüt değildir. Bu invaziv yöntem ancak en az 5 yıldır süren dirençli depresyonda gündeme gelir (s. 23).",
+      "B": "İki yıl, ölçütlerde yer alan bir süre değildir. Derin beyin uyarımı araştırmalarında hastalığın en az 5 yıldır sürmesi beklenir (s. 23).",
+      "C": "Üç sayısı süre değil, etkisiz kalmış olması gereken en az farklı antidepresan sayısıdır. Hastalık süresi ölçütü ise en az 5 yıldır (s. 23).",
+      "D": "On yıl ölçütlerde verilen bir süre değildir. Hem derin beyin uyarımı hem psikoşirürji için öne çıkan süre 5 yıldır (s. 23, 30).",
+      "E": "Depresyonda derin beyin uyarımı en az 5 yıldır hasta olan, en az 3 farklı antidepresan ve yeterli psikoterapinin etkisiz kaldığı olgularda araştırılmaktadır. Süre ölçütü 5 yıldır (s. 23)."
+     },
+     "bilgi": [
+      86
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "En az 5 yıldır hasta, en az 3 değişik antidepresan etkisiz"
+     },
+     "dayanak": [
+      "ozen:s23",
+      "ogrenci:B:psk-s06-b09"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q48",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "On yılı aşkın süredir günün büyük bölümünü obsesyon ve kompulsiyonlarla geçiren 35 yaşındaki erkek hasta, yeterli doz ve sürede uygulanan ilaç ve psikoterapilere yanıt vermemiştir. Bu hasta için FDA onayı bulunan nöromodülasyon yöntemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Transkraniyal doğru akım stimülasyonu",
+      "B": "Fototerapi",
+      "C": "Subkaudat traktotomi",
+      "D": "Derin beyin uyarımı",
+      "E": "Uyku yoksunluğu"
+     },
+     "dogru": "D",
+     "aciklama": "Dirençli OKB'de FDA onaylı nöromodülasyon yöntemi derin beyin uyarımıdır (2009) (s. 24, 25).",
+     "sik_aciklamalari": {
+      "A": "tDCS kafa derisine düşük genlikli doğru akım veren bir yöntemdir. Şu anda hiçbir endikasyon için onaylı olmadığından bu hasta için FDA onaylı seçenek değildir (s. 21).",
+      "B": "Fototerapi, kış aylarında başlayan atipik özellikli mevsimsel depresyonda kullanılan ışık tedavisidir. Dirençli OKB için tanımlanmış bir yöntem değildir (s. 27).",
+      "C": "Subkaudat traktotomi, bağlantı yollarını kesen bir psikoşirürji operasyonudur ve depresyonda uygulanır. OKB'de kullanılan psikoşirürji yöntemleri anterior singulotomi ve kapsülotomidir (s. 31).",
+      "D": "Derin beyin uyarımı, dirençli OKB tedavisinde FDA onayı almış bir nöromodülasyon yöntemidir; onay 2009'da verilmiştir. Uyarı istenmeyen bölgeyi işlevsel olarak devre dışı bırakır (s. 24, 25).",
+      "E": "Uyku yoksunluğu, depresyonda ertesi gün belirtileri düzelten ama etkisi kısa süren bir yöntemdir. OKB'de kullanılan ya da onay almış bir tedavi değildir (s. 28)."
+     },
+     "bilgi": [
+      92,
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "FDA tarafından dirençli OKB tedavisinde onay almıştır"
+     },
+     "dayanak": [
+      "ozen:s24",
+      "ogrenci:B:psk-s06-b09"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q49",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi FDA'nın derin beyin uyarımı için onay verdiği endikasyonlardan biri değildir?",
+     "secenekler": {
+      "A": "Tourette sendromu",
+      "B": "Distoni",
+      "C": "Epilepsi",
+      "D": "Obsesif kompulsif bozukluk",
+      "E": "İleri Parkinson hastalığında motor belirtiler"
+     },
+     "dogru": "A",
+     "aciklama": "FDA onayları: 1997 tremor, 2002 ileri Parkinson motor belirtiler, 2003 distoni, 2009 OKB, 2018 epilepsi; Tourette onaysız kullanımdır (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Tourette sendromu, motor ve vokal tiklerle giden bir bozukluktur ve DBS bu hastalıkta kullanılır. Ancak kullanım FDA onayına dayanmaz; onaysız kullanım alanları arasında sayılır (s. 25).",
+      "B": "Distoni, istemsiz kas kasılmaları ve anormal duruşlarla giden bir hareket bozukluğudur. DBS 2003'te distoni tedavisi için FDA onayı almıştır (s. 25).",
+      "C": "Epilepsi, DBS'nin 2018'de FDA onayı aldığı endikasyondur. İnatçı epilepsi aynı zamanda EKT'nin nadir endikasyonları arasında da geçer (s. 25, 9).",
+      "D": "Obsesif kompulsif bozukluk, DBS'nin 2009'da FDA onayı aldığı psikiyatrik endikasyondur. Dirençli OKB'de onaylı yöntem olması sık sorulan bir bilgidir (s. 25).",
+      "E": "İleri Parkinson hastalığındaki motor belirtiler için DBS 2002'de FDA onayı almıştır. Daha önce, 1997'de Parkinson tremoru için de onay verilmişti (s. 25)."
+     },
+     "bilgi": [
+      94,
+      95,
+      96,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "FDA tarafından onaylanmamış olmasına rağmen DBS, Tourette sendromu, kronik ağrı"
+     },
+     "dayanak": [
+      "ozen:s25"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Fototerapi ve uyku yoksunluğu tedavisinin endikasyonunu, uygulamasını, etki mekanizmasını ve etkinliğin sınırlarını açıklar (s. 27–29).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q50",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Kış aylarının başında başlayan ve çoğunlukla atipik özellikler gösteren mevsimsel depresyonda ilk olarak 1984'te kullanılmaya başlanan tedavi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Uyku yoksunluğu",
+      "B": "Transkraniyal manyetik stimülasyon",
+      "C": "Fototerapi",
+      "D": "Transkraniyal doğru akım stimülasyonu",
+      "E": "Elektrokonvülzif tedavi"
+     },
+     "dogru": "C",
+     "aciklama": "Fototerapi 1984'te mevsimsel affektif bozuklukta başlamıştır; mevsimsel depresyon çoğunlukla atipik özelliklidir ve kış başında başlar (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Uyku yoksunluğu 1971'den bu yana depresyonda uygulanan bir yöntemdir. Mevsimsel depresyona özgü değildir ve etkisi kısa bir kestirmeyle bile kaybolabilir (s. 28).",
+      "B": "TMS, en az bir ilaca yanıtsız depresyonda FDA izni bulunan manyetik uyarı yöntemidir. Mevsimsel depresyonla ve 1984 tarihiyle ilişkili tedavi ışık tedavisidir (s. 17).",
+      "C": "Fototerapi, yani ışık tedavisi, 1984'te mevsimsel affektif bozuklukta uygulanmaya başlanmıştır. Işığın azaldığı kış aylarında başlayan atipik özellikli depresyonda kullanılır (s. 27).",
+      "D": "tDCS kafa derisine düşük genlikli doğru akım veren bir yöntemdir ve şu anda hiçbir endikasyon için onaylı değildir. Mevsimsel depresyonun özgül tedavisi değildir (s. 21).",
+      "E": "EKT, ağır, dirençli ya da hızlı yanıt gereken depresyonda kullanılan konvülziyon tedavisidir. İlk uygulaması 1938'dedir; mevsimsel depresyona özgü yöntem fototerapidir (s. 3, 7)."
+     },
+     "bilgi": [
+      100,
+      101
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "1984’te mevsimsel affektif bozukluk tedavisinde uygulanmaya başlanmış"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-51",
+      "ozen:s27"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q51",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Işık tedavisiyle ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Melatonin salınımını artırarak etki ettiği düşünülür.",
+      "B": "Hastalar 2.500–10.000 lüks ışık veren cihazın karşısında oturur.",
+      "C": "Tedaviye yanıt 2–4 gün içinde hızlı biçimde alınır.",
+      "D": "Sirkadiyen ritmi ve duygudurumu etkilediği bildirilmektedir.",
+      "E": "Mevsimsel affektif bozuklukta kullanılmaya başlanmıştır."
+     },
+     "dogru": "A",
+     "aciklama": "Işık tedavisi melatonin salınımını AZALTIR; 2.500–10.000 lüks, 30 dk–2 saat, yanıt 2–4 günde (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Işık tedavisinin melatonin sistemi üzerinden, melatonin salınımını azaltarak etki ettiği düşünülür. Artırarak diyen önerme etkinin yönünü ters çevirdiği için yanlıştır (s. 27).",
+      "B": "Hastalar 2.500–10.000 lüks parlak gündüz ışığı veren cihazın karşısında 30 dakika, 1 saat ya da 2 saat oturur. Önerme uygulamayı doğru anlatır (s. 27).",
+      "C": "Işık tedavisine yanıt hızlıdır ve 2–4 gün içinde alınır. Antidepresanlara göre çabuk ortaya çıkan bu yanıt, yöntemin önemli özelliğidir (s. 27).",
+      "D": "Işık tedavisinin sirkadiyen ritmi ve duygudurumu etkilediği bildirilmektedir. Melatonin sistemi üzerinden kurulan bu etki doğru bir mekanizmayı anlatır (s. 27).",
+      "E": "Fototerapi ilk olarak 1984'te mevsimsel affektif bozukluk tedavisinde uygulanmaya başlanmıştır. Kış aylarında başlayan atipik özellikli depresyon bu yöntemin ana kullanım alanıdır (s. 27)."
+     },
+     "bilgi": [
+      100,
+      102,
+      103,
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Işık tedavisinin melatonin (salınımı azaltır) sistemi üzerinden etkisi olabileceği"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-51",
+      "ozen:s27"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q53",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Uyku yoksunluğu tedavisi uygulanan 50 yaşındaki depresyon hastası tedavi gecesinden sonraki sabah belirgin düzelme gösteriyor, ancak öğleden sonra yarım saatlik bir kestirmenin ardından belirtileri yeniden ağırlaşıyor. Bu tablonun en olası açıklaması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Uyku yoksunluğunun T3 ve T4 düzeyini düşürmesi",
+      "B": "Uyku yoksunluğunun dopamin düzeyini azaltması",
+      "C": "Tedaviye ışık tedavisi eklenmemiş olması",
+      "D": "Uyku yoksunluğuna bağlı melatonin salınımının artması",
+      "E": "Kısa bir kestirmenin bile şiddetli tekrarlamaya yol açması"
+     },
+     "dogru": "E",
+     "aciklama": "Uyku yoksunluğu ile elde edilen düzelme kısa bir kestirmeyle bile şiddetli tekrarlamaya dönüşür (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Uyku yoksunluğu T3 ve T4 düzeyini düşürmez, artırır. Bu seçenek etkinin yönünü ters çevirir ve kestirme sonrası kötüleşmeyi açıklamaz (s. 29).",
+      "B": "Dopamin, uyanıklık ve harekete geçme ile ilişkili bir nörotransmitterdir; uyku yoksunluğu onu azaltmaz, artırarak psikostimülan etki yapar. Düzelmenin kestirmeyle kaybolması dopamin azalmasıyla açıklanmaz (s. 29).",
+      "C": "Işık tedavisi melatonin salınımını azaltarak etki eden ve mevsimsel depresyonda kullanılan ayrı bir yöntemdir. Eklenmemiş olması kestirme sonrası ani kötüleşmenin açıklaması değildir (s. 27).",
+      "D": "Melatonin salınımındaki değişiklik ışık tedavisinin etki mekanizmasında anılır ve ışık salınımı azaltır. Uyku yoksunluğundaki tekrarlamanın nedeni olarak kestirme gösterilir (s. 27, 28).",
+      "E": "Uyku yoksunluğuyla elde edilen düzelme kısa bir kestirmeyle bile şiddetli tekrarlamaya dönüşebilir. Bu nedenle tedavi sırasında hastanın kestirmeden kaçınması gerekir (s. 28)."
+     },
+     "bilgi": [
+      110,
+      112
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Elde etkinlik kısa bir kestirme ile bile şiddetli tekrarlamaya neden olur"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-55",
+      "ozen:s28"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q52",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Depresyonda uyku yoksunluğu tedavisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tam uyku yoksunluğu hastaların %40–60'ında ertesi gün düzelme sağlar.",
+      "B": "Ertesi gün elde edilen etkinlik bir sonraki gün %10–15'e düşer.",
+      "C": "Elde edilen düzelme kısa bir kestirmeden etkilenmez.",
+      "D": "Antidepresan ve lityumla birlikte düzelmenin kalıcılığını artırır.",
+      "E": "Arada normal uyku dönemleri olan aralıklı uygulama yapılır."
+     },
+     "dogru": "C",
+     "aciklama": "Tam uyku yoksunluğu %40–60'ta ertesi gün düzelme sağlar, etkinlik ertesi gün %10–15'e düşer, kısa kestirme bile şiddetli tekrarlama yapar; AD ve lityumla kalıcılık artar (s. 28–29).",
+     "sik_aciklamalari": {
+      "A": "Tam uyku yoksunluğu depresyon hastalarının %40–60'ında ertesi gün belirtilerin düzelmesini sağlar. Yanıt hızlı olsa da kalıcı değildir; önerme doğrudur (s. 28).",
+      "B": "Ertesi gün elde edilen etkinlik bir sonraki gün %10–15'e düşer; etki kısa ömürlüdür. Bu düşüş, yöntemin tek başına değil destekleyici olarak kullanılmasının nedenidir (s. 28).",
+      "C": "Uyku yoksunluğuyla elde edilen düzelme kısa bir kestirmeyle bile şiddetli tekrarlamaya dönüşebilir. Kestirmeden etkilenmez diyen önerme bu önemli uyarıyla çelişir (s. 28).",
+      "D": "Uyku yoksunluğu antidepresan ve lityumla birlikte kullanıldığında düzelmenin kalıcılığını ve antidepresan etkinliğini artırır. Bu nedenle depresyonda güçlendirici olarak kullanılabilir (s. 28).",
+      "E": "Etkinin sürmesi için haftalarca süren aralıklı uygulama yapılır ve arada 1–2 gün süren normal uyku dönemi bulunur. Önerme doğrudur (s. 29)."
+     },
+     "bilgi": [
+      107,
+      109,
+      110,
+      111,
+      114
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Elde etkinlik kısa bir kestirme ile bile şiddetli tekrarlamaya neden olur"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-55",
+      "hoca:hv-k2-20-56",
+      "ozen:s28"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q54",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Uyku yoksunluğunun etkileriyle ilgili aşağıdaki öncüllerden hangileri doğrudur?\nI. Serotonin dönüşümünü artırır.\nII. Dopamini artırarak psikostimülan etki yapar.\nIII. T3 ve T4 düzeyini azaltır.\nIV. Frontal ve limbik kan akımını değiştirir.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "I, II ve III",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Uyku yoksunluğu 5HT dönüşümünü artırır, DA'yı artırır (psikostimülan), T3/T4'ü artırır, frontal ve limbik kan akımını değiştirir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Serotonin dönüşümünün ve dopaminin artması doğru öncüllerdir. Frontal ve limbik kan akımının değişmesi de doğru olduğundan IV dışarıda kalınca seçenek eksik kalır (s. 29).",
+      "B": "Uyku yoksunluğu serotonin dönüşümünü artırır, dopamini artırarak psikostimülan etki yapar ve frontal-limbik kan akımını değiştirir. T3 ve T4 ise azalmaz, artar; doğru küme I, II ve IV'tür (s. 29).",
+      "C": "Serotonin dönüşümünün ve dopaminin artması doğrudur, ancak III yanlıştır. Uyku yoksunluğu tiroid hormonları T3 ve T4'ü azaltmaz, artırır; IV de dışarıda kalmıştır (s. 29).",
+      "D": "Frontal ve limbik kan akımının değişmesi doğrudur. Ancak T3 ve T4 artar, azalmaz; ayrıca doğru olan I ve II dışarıda bırakılmıştır (s. 29).",
+      "E": "Dört öncülü birden doğru sayan bu seçenek T3 ve T4'ün azaldığını kabul eder. Uyku yoksunluğu bu hormonları artırdığı için küme hatalıdır (s. 29)."
+     },
+     "bilgi": [
+      115,
+      116
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "DA artar (psikostimülan etki)"
+     },
+     "dayanak": [
+      "hoca:hv-k2-20-56",
+      "ozen:s28"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Psikoşirürjinin ilkesini, uygulama ölçütünü, en çok yarar gören hasta gruplarını ve yöntem–endikasyon eşleşmelerini sayar (s. 30–31).",
+   "sorular": [
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q55",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Tüm tedavilerin 5 yıl süreyle etkisiz olduğu belgelenen hastalarda belirli beyin alanlarında lezyon oluşturma ya da bağlantı yollarını kesme esasına dayanan tedavi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Derin beyin uyarımı",
+      "B": "Derin transkraniyal manyetik stimülasyon",
+      "C": "Elektrokonvülzif tedavi",
+      "D": "Psikoşirürji",
+      "E": "Transkraniyal doğru akım stimülasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Psikoşirürji lezyon oluşturma (singulotomi) ya da bağlantı yollarını kesme (traktotomi, lökotomi) operasyonlarıdır; 5 yıl tüm tedavilerin etkisizliği belgelenmelidir (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Derin beyin uyarımı da cerrahi bir yöntemdir, ancak lezyon oluşturmaz; kabloyla sürekli uyarı vererek bölgeyi işlevsel olarak devre dışı bırakır. Uyarı kesildiğinde etkisi geri döner (s. 24).",
+      "B": "Derin TMS, H-bobinle kafatasının yaklaşık 4 cm altına manyetik uyarı ulaştıran non-invaziv bir yöntemdir. Doku hasarı ya da lezyon oluşturmaz (s. 19).",
+      "C": "EKT, elektrik akımıyla jeneralize konvülziyon oluşturan bir tedavidir ve çalışmalar beyne zarar vermediğini göstermiştir. Lezyon oluşturmak EKT'nin ilkesi değildir (s. 3, 13).",
+      "D": "Psikoşirürji, belirli beyin alanlarında lezyon oluşturma (singulotomi) ya da bağlantı yollarını kesme (traktotomi, lökotomi) operasyonlarıdır. Uygulanabilmesi için 5 yıl boyunca tüm tedavilerin etkisiz olduğu belgelenmelidir (s. 30).",
+      "E": "tDCS, düşük genlikli doğru akımla kortikal uyarılabilirliği eşik altında değiştiren bir yöntemdir. Yan etkileri hafiftir ve beyinde lezyon oluşturmaz (s. 20, 22)."
+     },
+     "bilgi": [
+      117,
+      118
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Spesifik beyin alanlarında lezyon oluşturma (singulotomi) ya da bağlantı yollarını kesme"
+     },
+     "dayanak": [
+      "ozen:s30"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q56",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Psikoşirürji uygulamalarıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Anterior singulotomi OKB'de uygulanır.",
+      "B": "Subkaudat traktotomi obsesif kompulsif bozuklukta uygulanır.",
+      "C": "Anterior kapsülotomi OKB'de uygulanır.",
+      "D": "Limbik lökotomi hem OKB hem depresyonda uygulanır.",
+      "E": "Öncesinde 5 yıl süreyle tüm tedavilerin etkisizliği belgelenmelidir."
+     },
+     "dogru": "B",
+     "aciklama": "Anterior singulotomi ve kapsülotomi OKB'de, subkaudat traktotomi depresyonda, limbik lökotomi OKB ve depresyonda uygulanır (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Anterior singulotomi, singulat bölgede lezyon oluşturan bir psikoşirürji operasyonudur. OKB'de uygulanan iki operasyondan biri olduğu için önerme doğrudur (s. 30, 31).",
+      "B": "Subkaudat traktotomi, bağlantı yollarını kesen bir psikoşirürji operasyonudur ve depresyonda uygulanır. OKB'de uygulandığını söyleyen önerme bu nedenle yanlıştır (s. 30, 31).",
+      "C": "Anterior kapsülotomi, tedaviye dirençli hastalarda uygulanan bir psikoşirürji operasyonudur. Anterior singulotomi gibi OKB'de uygulandığı için önerme doğrudur (s. 31).",
+      "D": "Limbik lökotomi, bağlantı yollarını kesme esasına dayanan bir lökotomi operasyonudur. Hem OKB hem depresyonda uygulanan tek yöntem olduğu için önerme doğrudur (s. 30, 31).",
+      "E": "Psikoşirürji uygulanabilmesi için hastaya 5 yıl süreyle uygulanan tüm tedavilerin etkisiz olduğu belgelenmelidir. Geri dönüşsüz bir cerrahi olduğu için bu katı ölçüt doğru anlatılmıştır (s. 30)."
+     },
+     "bilgi": [
+      118,
+      120,
+      121
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Anterior kapsülotomi: OKB Subkaudat traktotomi: Depresyon"
+     },
+     "dayanak": [
+      "ozen:s30"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q57",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Psikoşirürjiden en çok yarar gören hasta grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kronik şizofreni ve psikoz hastaları",
+      "B": "Mevsimsel ve atipik depresyon hastaları",
+      "C": "Parkinson hastalığı ve distoni hastaları",
+      "D": "Tedaviye dirençli ağır majör depresyon ve OKB hastaları",
+      "E": "İnatçı epilepsi ve hipopituitarizm hastaları"
+     },
+     "dogru": "D",
+     "aciklama": "Psikoşirürjiden en çok kronik, tedaviye dirençli ağır majör depresyon ve OKB hastaları yarar görür (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Kronik şizofreni, EKT'nin bile etkin olmadığı ve negatif belirtilerin öne çıktığı bir tablodur. Bu yöntemin hedef grupları depresyon ve OKB'dir (s. 8, 30).",
+      "B": "Mevsimsel ve atipik özellikli depresyon, ışık tedavisine hızla, 2–4 günde yanıt veren bir gruptur. Bu hastalarda geri dönüşsüz cerrahiye gerek duyulmaz (s. 27).",
+      "C": "Parkinson hastalığı ve distoni, derin beyin uyarımının FDA onayı aldığı nörolojik endikasyonlardır. Psikoşirürjiden en çok yarar gören psikiyatrik gruplar değildir (s. 25).",
+      "D": "Kronik, tedaviye dirençli ağır majör depresif bozukluğu ve obsesif kompulsif bozukluğu olan hastalar psikoşirürjiden en çok yarar görenlerdir. Bu iki hastalık için ayrı operasyonlar tanımlanmıştır (s. 30, 31).",
+      "E": "İnatçı epilepsi ve hipopituitarizm, EKT'nin nadir kullanılan diğer endikasyonları arasında geçer. Psikoşirürjinin hedef grubu dirençli depresyon ve OKB'dir (s. 9, 30)."
+     },
+     "bilgi": [
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Kronik tedaviye dirençli ağır major depresif bozukluğu ve obsesif kompulsif bozukluğu olan hastalar tedaviden en çok yarar görenlerdir"
+     },
+     "dayanak": [
+      "ozen:s30"
+     ]
+    },
+    {
+     "id": "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler-q58",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki psikoşirürji yöntemlerinden hangisi bağlantı yollarını kesme esasına dayanan bir operasyon değildir?",
+     "secenekler": {
+      "A": "Singulotomi",
+      "B": "Traktotomi",
+      "C": "Lökotomi",
+      "D": "Subkaudat traktotomi",
+      "E": "Limbik lökotomi"
+     },
+     "dogru": "A",
+     "aciklama": "Singulotomi lezyon oluşturur; traktotomi ve lökotomi bağlantı yollarını keser (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Singulotomi, belirli bir beyin alanında lezyon oluşturma esasına dayanan operasyondur. Bağlantı yollarını kesen operasyonlar ise traktotomi ve lökotomi grubudur (s. 30).",
+      "B": "Traktotomi, beyin bölgeleri arasındaki bağlantı yollarını kesen bir psikoşirürji operasyonudur. Lökotomiyle birlikte bağlantı kesme grubundadır; lezyon oluşturan singulotomiden bu yönüyle ayrılır (s. 30).",
+      "C": "Lökotomi, beyin bölgeleri arasındaki bağlantı yollarını kesme esasına dayanan bir psikoşirürji operasyonudur. Traktotomiyle aynı gruptadır, lezyon oluşturan singulotomiden ayrılır (s. 30).",
+      "D": "Subkaudat traktotomi bir traktotomi türüdür, yani bağlantı yollarını keserek etki eder. Depresyon tedavisinde uygulanan ve bağlantı kesme grubunda yer alan bir psikoşirürji operasyonudur (s. 30, 31).",
+      "E": "Limbik lökotomi bir lökotomi türüdür ve bağlantı yollarını keserek etki eder. Hem OKB hem depresyonda uygulanan bir psikoşirürji operasyonudur (s. 30, 31)."
+     },
+     "bilgi": [
+      117,
+      121
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "ya da bağlantı yollarını kesme (traktotomi, lökotomi) operasyonları şeklinde"
+     },
+     "dayanak": [
+      "ozen:s30"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 58
+}

@@ -1,0 +1,40 @@
+{
+ "ders": "k2-24",
+ "not": "Koordinatör, 2026-11-10; kural 28 kapısı için eşleme (B birimi b16).",
+ "kayitlar": [
+  {
+   "birim": "noro-s02-b16",
+   "tur": "anlatim",
+   "bilgi": "Nonepileptik Psikojen Atak sütun başlığı: → psödo nöbet (tipik = pelvik hareket)",
+   "cumle": [
+    "pelvik hareket, asenkron hareket ve yuvarlanma senkopta yok"
+   ],
+   "anahtar": [
+    "pelvik"
+   ],
+   "gerekce": "s45 tablosunda nonepileptik psikojen atak sütunu; pelvik hareket satırı 'Sık'. Anlatım satırı birebir verir (psödonöbet = nonepileptik psikojen atak)."
+  },
+  {
+   "birim": "noro-s02-b16",
+   "tur": "anlatim",
+   "bilgi": "Pelvik hareket",
+   "cumle": [
+    "pelvik hareket, asenkron hareket ve yuvarlanma senkopta yok"
+   ],
+   "anahtar": [
+    "pelvik"
+   ],
+   "gerekce": "s45 'Pelvik hareket Yok / Seyrek / Sık' satırı anlatımda birebir."
+  },
+  {
+   "birim": "noro-s02-b16",
+   "tur": "slayt_disi",
+   "bilgi": "Eşlik eden öykü, durum (Nonepileptik psikojen atak): → çocuk - ergenlik döneminde cinsel istismar yaşamış olabilir.",
+   "yok_terimler": [
+    "istismar",
+    "ergenlik döneminde"
+   ],
+   "gerekce": "2026-27 slaytında istismar öyküsü yok; geçen yılın el notu kural 28 gereği anlatıma girmez."
+  }
+ ]
+}

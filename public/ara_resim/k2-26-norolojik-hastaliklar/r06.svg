@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<symbol id="mito" viewBox="-40 -22 80 44"><ellipse cx="0" cy="0" rx="38" ry="20" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/><path d="M-28 0 C-22 -14 -16 14 -10 0 C-4 -14 2 14 8 0 C14 -14 20 14 26 0" stroke="#6d28d9" stroke-width="2.5" fill="none"/></symbol>
+<g id="lip"><circle cx="0" cy="0" r="7" fill="#93c5fd" stroke="#1e3a8a" stroke-width="1"/><path d="M-3 6 C-4 14 -2 20 -3 28 M3 6 C4 14 2 20 3 28" stroke="#64748b" stroke-width="1.6" fill="none"/></g>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="640" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Fakomatozlar: gen, protein, yolak ve kalıtım</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">SSS, göz ve deri lezyonlu sekiz hastalık bir arada · slayt 57–70</text>
+<rect x="30" y="92" width="640" height="506" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="124" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · Tümör baskılayıcı genler ve mTOR yolağı</text>
+<circle cx="350" cy="330" r="52" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+<text x="350" y="326" font-size="20" fill="#b91c1c" text-anchor="middle" font-weight="bold">mTOR</text>
+<text x="350" y="348" font-size="14" fill="#b91c1c" text-anchor="middle">yolağı</text>
+<circle cx="560" cy="330" r="44" fill="#e0f2fe" stroke="#1d4ed8" stroke-width="3"/>
+<text x="560" y="334" font-size="17" fill="#1d4ed8" text-anchor="middle" font-weight="bold">Hippo</text>
+<path d="M70 200 C70 170 190 170 190 200 C190 230 70 230 70 200 Z" stroke="#0f766e" stroke-width="2.5" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="130" y="198" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">TSC1</text>
+<text x="130" y="217" font-size="13.5" fill="#0f172a" text-anchor="middle">hamartin</text>
+<path d="M70 300 C70 270 190 270 190 300 C190 330 70 330 70 300 Z" stroke="#0f766e" stroke-width="2.5" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="130" y="298" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">TSC2</text>
+<text x="130" y="317" font-size="13.5" fill="#0f172a" text-anchor="middle">tuberin</text>
+<path d="M395 190 C395 160 515 160 515 190 C515 220 395 220 395 190 Z" stroke="#0f766e" stroke-width="2.5" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="455" y="188" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">NF2</text>
+<text x="455" y="207" font-size="13.5" fill="#0f172a" text-anchor="middle">merlin · 22q12</text>
+<path d="M190 205 C250 220 290 260 305 300" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<path d="M190 300 C240 305 270 315 297 325" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<path d="M420 214 C405 245 395 270 385 288" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<path d="M495 214 C520 245 540 265 550 286" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<text x="60" y="412" font-size="14.5" fill="#0f172a" text-anchor="start">TSC: mutasyon mTOR aktivitesini bozar → SSS;</text>
+<text x="60" y="432" font-size="14.5" fill="#0f172a" text-anchor="start">TSC2 olgusu daha ağır, çoğu sporadik.</text>
+<text x="60" y="474" font-size="16" fill="#b91c1c" text-anchor="start" font-weight="bold">Tümör baskılayıcı gen (TSG):</text>
+<rect x="60" y="488" width="78" height="30" rx="15" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="99" y="509" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">NF1</text>
+<text x="148" y="509" font-size="14" fill="#0f172a" text-anchor="start">nörofibromin · 17q11.2</text>
+<rect x="360" y="488" width="78" height="30" rx="15" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="399" y="509" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">VHL</text>
+<text x="448" y="509" font-size="14" fill="#0f172a" text-anchor="start">3p25-26 · hemanjiyoblastom</text>
+<rect x="60" y="536" width="78" height="30" rx="15" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="99" y="557" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">STK11</text>
+<text x="148" y="557" font-size="14" fill="#0f172a" text-anchor="start">Peutz-Jeghers</text>
+<rect x="360" y="536" width="78" height="30" rx="15" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="399" y="557" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">PTCH1</text>
+<text x="448" y="557" font-size="14" fill="#0f172a" text-anchor="start">Gorlin · %50 de novo</text>
+<rect x="690" y="92" width="480" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="710" y="124" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Kalıtım ve mekanizma</text>
+<circle cx="735" cy="168" r="24" fill="#b91c1c22" stroke="#b91c1c" stroke-width="2.5"/>
+<text x="735" y="174" font-size="15" fill="#b91c1c" text-anchor="middle" font-weight="bold">OD</text>
+<text x="772" y="174" font-size="15" fill="#0f172a" text-anchor="start">NF1, NF2, TSC, Peutz-Jeghers, Gorlin</text>
+<circle cx="735" cy="228" r="24" fill="#ea580c22" stroke="#ea580c" stroke-width="2.5"/>
+<text x="735" y="234" font-size="15" fill="#ea580c" text-anchor="middle" font-weight="bold">OR</text>
+<text x="772" y="234" font-size="15" fill="#0f172a" text-anchor="start">ataksi telenjiektazi (ATM)</text>
+<circle cx="735" cy="290" r="24" fill="#1d4ed822" stroke="#1d4ed8" stroke-width="2.5"/>
+<text x="735" y="296" font-size="15" fill="#1d4ed8" text-anchor="middle" font-weight="bold">XD</text>
+<text x="772" y="296" font-size="15" fill="#0f172a" text-anchor="start">inkontinensia pigmenti (NEMO);</text>
+<circle cx="735" cy="356" r="24" fill="#6d28d922" stroke="#6d28d9" stroke-width="2.5"/>
+<text x="735" y="362" font-size="15" fill="#6d28d9" text-anchor="middle" font-weight="bold">GOF</text>
+<text x="772" y="362" font-size="15" fill="#0f172a" text-anchor="start">Sturge-Weber: GNAQ işlev kazanımı</text>
+<text x="772" y="316" font-size="14" fill="#475569" text-anchor="start">erkekte letal (Klinefelter, mozaik hariç)</text>
+<rect x="690" y="408" width="480" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="710" y="440" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">C · Deri, göz, SSS (doğum lekesi)</text>
+<path d="M760 590 C760 535 780 510 820 510 C860 510 880 535 880 590 Z" stroke="#0f766e" stroke-width="2" fill="#ccfbf1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="820" cy="485" r="24" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="810" cy="482" r="3" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<circle cx="830" cy="482" r="3" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<ellipse cx="800" cy="535" rx="9" ry="6" fill="#d6b38a" stroke="#92400e" stroke-width="1.2"/>
+<ellipse cx="845" cy="552" rx="9" ry="6" fill="#d6b38a" stroke="#92400e" stroke-width="1.2"/>
+<ellipse cx="815" cy="572" rx="9" ry="6" fill="#d6b38a" stroke="#92400e" stroke-width="1.2"/>
+<line x1="820" y1="463" x2="905" y2="470" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="820" cy="463" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="911" y="475" font-size="14" fill="#0f172a" text-anchor="start">SSS: nöbet, tümör</text>
+<line x1="830" y1="482" x2="905" y2="515" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="830" cy="482" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="911" y="520" font-size="14" fill="#0f172a" text-anchor="start">göz: Lisch nodülü, retina</text>
+<line x1="845" y1="552" x2="905" y2="560" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="845" cy="552" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="911" y="565" font-size="14" fill="#0f172a" text-anchor="start">deri: cafe-au-lait</text>
+<text x="600.0" y="626" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 57 (tanım, 8 hastalık), 58–62 (NF1, NF2, merlin), 63–64 (TSC, mTOR), 65 (AT), 66 (GNAQ), 67 (VHL), 68 (IP), 69 (STK11), 70 (PTCH1)</text>
+</svg>

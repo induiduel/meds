@@ -262,6 +262,17 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /4)Alkoller.pdf', name: '4)Alkoller.pdf', pages: 53, fileId: '1MZQ1Xlesc_NQbQJZFwYtKbDsf7d16_LQ' } as SourceFile],
   },
+  // 2026-11-10 7. parti (k2-26, k2-27): deste yok.
+  'k2p-k2-26-norolojik-hastaliklar': {
+    title: 'Nörolojik Hastalıklar ve Genetiği',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Genetik/2)Nörolojik Hastalıklar ve Genetiği.pdf', name: '2)Nörolojik Hastalıklar ve Genetiği.pdf', pages: 98, fileId: '1cpBFefnLEa1Y4gouNh_1nMscR-5EuaAH' } as SourceFile],
+  },
+  'k2p-k2-27-aile-hekimliginde-periyodik-muayeneler-1': {
+    title: 'Periyodik Sağlık Muayeneleri',
+    decks: [],
+    files: [{ path: 'Kurul 2/Aile Hekimliği /1)PERİYODİK MUAYENELER.pdf', name: '1)PERİYODİK MUAYENELER.pdf', pages: 135, fileId: '1ct_laG60bexcgGkR8L4ekjbdgkUWSvnM' } as SourceFile],
+  },
   'k2p-k2-38-travma-ve-stres-baglantili-bozukluklar': {
     title: 'Travma ve Stres Bağlantılı Bozukluklar',
     decks: [],

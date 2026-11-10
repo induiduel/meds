@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Topuk kanı sonucunu okumak: normal · tekrar örnek · sevk</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Beş hastalığın eşikleri aynı mantıkla · slayt 58–66</text>
+<text x="345" y="120" font-size="18" fill="#15803d" text-anchor="middle" font-weight="bold">NORMAL</text>
+<text x="655" y="120" font-size="18" fill="#ea580c" text-anchor="middle" font-weight="bold">SINIRDA → TEKRAR ÖRNEK</text>
+<text x="960" y="120" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="bold">YÜKSEK → SEVK</text>
+<text x="30" y="178" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">Fenilketonüri</text>
+<text x="30" y="196" font-size="13" fill="#475569" text-anchor="start">(fenilalanin)</text>
+<path d="M220 160 L470 160 L470 202 L220 202 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 160 L800 160 L800 202 L510 202 Z" stroke="#ea580c" stroke-width="2" fill="#ffedd5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M850 160 L1170 160 L1170 202 L850 202 Z" stroke="#b91c1c" stroke-width="2" fill="#fee2e2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="345" y="187" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">≤2 mg/dl</text>
+<text x="655" y="187" font-size="14" fill="#9a3412" text-anchor="middle">2,1–3,9; tekrarda ≥2,1 sevk</text>
+<text x="1010" y="187" font-size="14" fill="#b91c1c" text-anchor="middle">≥4 → beslenme-metabolizma</text>
+<path d="M472 181 C484 170 494 170 508 181" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<path d="M802 181 C820 170 832 170 848 181" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="30" y="250" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">Hipotiroidi</text>
+<text x="30" y="268" font-size="13" fill="#475569" text-anchor="start">(TSH)</text>
+<path d="M220 232 L470 232 L470 274 L220 274 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 232 L800 232 L800 274 L510 274 Z" stroke="#ea580c" stroke-width="2" fill="#ffedd5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M850 232 L1170 232 L1170 274 L850 274 Z" stroke="#b91c1c" stroke-width="2" fill="#fee2e2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="345" y="259" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">&lt;5,5 mIU/L</text>
+<text x="655" y="259" font-size="14" fill="#9a3412" text-anchor="middle">5,5–20; tekrarda ≥5,5 serum T4</text>
+<text x="1010" y="259" font-size="14" fill="#b91c1c" text-anchor="middle">&gt;20 → serum T4-TSH, endokrin</text>
+<path d="M472 253 C484 242 494 242 508 253" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<path d="M802 253 C820 242 832 242 848 253" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="30" y="322" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">Biyotinidaz</text>
+<text x="30" y="340" font-size="13" fill="#475569" text-anchor="start">(enzim)</text>
+<path d="M220 304 L470 304 L470 346 L220 346 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 304 L800 304 L800 346 L510 346 Z" stroke="#ea580c" stroke-width="2" fill="#ffedd5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M850 304 L1170 304 L1170 346 L850 346 Z" stroke="#b91c1c" stroke-width="2" fill="#fee2e2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="345" y="331" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">&gt;65 U</text>
+<text x="655" y="331" font-size="14" fill="#9a3412" text-anchor="middle">≤65 U → tekrar örnek</text>
+<text x="1010" y="331" font-size="14" fill="#b91c1c" text-anchor="middle">tekrarda düşük → metabolizma</text>
+<path d="M472 325 C484 314 494 314 508 325" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<path d="M802 325 C820 314 832 314 848 325" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="30" y="394" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">KAH</text>
+<text x="30" y="412" font-size="13" fill="#475569" text-anchor="start">(17-OHP)</text>
+<path d="M220 376 L470 376 L470 418 L220 418 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 376 L800 376 L800 418 L510 418 Z" stroke="#ea580c" stroke-width="2" fill="#ffedd5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M850 376 L1170 376 L1170 418 L850 418 Z" stroke="#b91c1c" stroke-width="2" fill="#fee2e2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="345" y="403" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">term &lt;10 · prematüre &lt;15</text>
+<text x="655" y="403" font-size="14" fill="#9a3412" text-anchor="middle">aynı örnekten 2. basamak</text>
+<text x="1010" y="403" font-size="14" fill="#b91c1c" text-anchor="middle">profil pozitif → endokrin</text>
+<path d="M472 397 C484 386 494 386 508 397" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<path d="M802 397 C820 386 832 386 848 397" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="30" y="466" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">Kistik fibrozis</text>
+<path d="M220 448 L470 448 L470 490 L220 490 Z" stroke="#15803d" stroke-width="2" fill="#dcfce7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 448 L800 448 L800 490 L510 490 Z" stroke="#ea580c" stroke-width="2" fill="#ffedd5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M850 448 L1170 448 L1170 490 L850 490 Z" stroke="#b91c1c" stroke-width="2" fill="#fee2e2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="345" y="475" font-size="14" fill="#15803d" text-anchor="middle" font-weight="bold">&lt;90 µg/l</text>
+<text x="655" y="475" font-size="14" fill="#9a3412" text-anchor="middle">≥90 → 7–14. gün tekrar</text>
+<text x="1010" y="475" font-size="14" fill="#b91c1c" text-anchor="middle">tekrarda ≥70 → ter testi</text>
+<path d="M472 469 C484 458 494 458 508 469" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<path d="M802 469 C820 458 832 458 848 469" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="600" y="528" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="bold">Ter testi tanı testidir, tarama değildir · Bebek 1 aydan büyükse topuk kanı yerine doğrudan serum T4-TSH</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 58 (PKU), 60 (TSH), 62 (biyotinidaz), 64 (KAH), 66 (kistik fibrozis) · yeşil normal, turuncu tekrar, kırmızı sevk</text>
+</svg>

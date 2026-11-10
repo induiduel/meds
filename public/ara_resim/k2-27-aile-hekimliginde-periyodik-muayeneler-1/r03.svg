@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Gebelik boyunca dört nitelikli izlem ve haftalık testler</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Doğum öncesi bakım zaman çizelgesi · slayt 27–38</text>
+<path d="M60 300 C615.0 294 615.0 306 1170 300" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<line x1="309.2307692307692" y1="292" x2="309.2307692307692" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="309.2307692307692" y="326" font-size="13" fill="#475569" text-anchor="middle">0</text>
+<line x1="392.3076923076923" y1="292" x2="392.3076923076923" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="392.3076923076923" y="326" font-size="13" fill="#475569" text-anchor="middle">4</text>
+<line x1="475.38461538461536" y1="292" x2="475.38461538461536" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="475.38461538461536" y="326" font-size="13" fill="#475569" text-anchor="middle">8</text>
+<line x1="558.4615384615385" y1="292" x2="558.4615384615385" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="558.4615384615385" y="326" font-size="13" fill="#475569" text-anchor="middle">12</text>
+<line x1="641.5384615384615" y1="292" x2="641.5384615384615" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="641.5384615384615" y="326" font-size="13" fill="#475569" text-anchor="middle">16</text>
+<line x1="724.6153846153846" y1="292" x2="724.6153846153846" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="724.6153846153846" y="326" font-size="13" fill="#475569" text-anchor="middle">20</text>
+<line x1="807.6923076923077" y1="292" x2="807.6923076923077" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="807.6923076923077" y="326" font-size="13" fill="#475569" text-anchor="middle">24</text>
+<line x1="890.7692307692307" y1="292" x2="890.7692307692307" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="890.7692307692307" y="326" font-size="13" fill="#475569" text-anchor="middle">28</text>
+<line x1="973.8461538461538" y1="292" x2="973.8461538461538" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="973.8461538461538" y="326" font-size="13" fill="#475569" text-anchor="middle">32</text>
+<line x1="1056.923076923077" y1="292" x2="1056.923076923077" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="1056.923076923077" y="326" font-size="13" fill="#475569" text-anchor="middle">36</text>
+<line x1="1140.0" y1="292" x2="1140.0" y2="308" stroke="#0f172a" stroke-width="2"/>
+<text x="1140.0" y="326" font-size="13" fill="#475569" text-anchor="middle">40</text>
+<text x="184.6153846153846" y="326" font-size="13" fill="#475569" text-anchor="middle" font-style="italic">gebelik öncesi</text>
+<text x="1160" y="344" font-size="13" fill="#475569" text-anchor="end" font-style="italic">gebelik haftası</text>
+<path d="M60.0 125 L600.0 125" stroke="#15803d" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<text x="60.0" y="112" font-size="14" fill="#15803d" text-anchor="start" font-weight="bold">Folik asit 400–800 µg/gün: gebelikten 3 ay önce + ilk trimester (nöral tüp defekti)</text>
+<path d="M558.4615384615385 165 L1140.0 165" stroke="#15803d" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+<text x="558.4615384615385" y="155" font-size="13" fill="#15803d" text-anchor="start">D vitamini 1200 IU (9 damla)/gün, 12. haftadan itibaren</text>
+<path d="M309.2307692307692 252 L600.0 252 L600.0 282 L309.2307692307692 282 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+<text x="454.61538461538464" y="215" font-size="14" fill="#1d4ed8" text-anchor="middle" font-weight="bold">1. izlem: ilk 14 hafta · 30 dk</text>
+<path d="M683.0769230769231 252 L807.6923076923077 252 L807.6923076923077 282 L683.0769230769231 282 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+<text x="745.3846153846155" y="240" font-size="14" fill="#1d4ed8" text-anchor="middle" font-weight="bold">2. izlem: 18–24 · 20 dk</text>
+<path d="M890.7692307692307 252 L973.8461538461538 252 L973.8461538461538 282 L890.7692307692307 282 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+<text x="932.3076923076923" y="215" font-size="14" fill="#1d4ed8" text-anchor="middle" font-weight="bold">3. izlem: 28–32 · 20 dk</text>
+<path d="M1056.923076923077 252 L1098.4615384615386 252 L1098.4615384615386 282 L1056.923076923077 282 Z" stroke="#1d4ed8" stroke-width="2" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+<text x="1128.4615384615386" y="240" font-size="14" fill="#1d4ed8" text-anchor="end" font-weight="bold">4. izlem: 36–38 · 20 dk</text>
+<path d="M537.6923076923076 354 L600.0 354 L600.0 372 L537.6923076923076 372 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M568.8461538461538 354 C568.8461538461538 338 568.8461538461538 330 568.8461538461538 312" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="610.0" y="368" font-size="13" fill="#0f172a" text-anchor="start">İkili test 11–14: ense kalınlığı + PAPP-A + beta hCG</text>
+<path d="M641.5384615384615 379 L724.6153846153846 379 L724.6153846153846 397 L641.5384615384615 397 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M683.0769230769231 379 C683.0769230769231 363 683.0769230769231 330 683.0769230769231 312" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="631.5384615384615" y="393" font-size="13" fill="#0f172a" text-anchor="end">Üçlü test 16–20: AFP, estriol, hCG → trizomi 21, 18, nöral tüp defekti</text>
+<path d="M683.0769230769231 404 L766.1538461538462 404 L766.1538461538462 422 L683.0769230769231 422 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M724.6153846153846 404 C724.6153846153846 388 724.6153846153846 330 724.6153846153846 312" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="673.0769230769231" y="418" font-size="13" fill="#0f172a" text-anchor="end">Ayrıntılı USG 18–22: fetal anomali taraması</text>
+<path d="M807.6923076923077 429 L890.7692307692307 429 L890.7692307692307 447 L807.6923076923077 447 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M849.2307692307693 429 C849.2307692307693 413 849.2307692307693 330 849.2307692307693 312" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+<text x="797.6923076923077" y="443" font-size="13" fill="#0f172a" text-anchor="end">75 g glukoz 24–28: gestasyonel diyabet</text>
+<text x="60" y="482" font-size="13" fill="#0f172a" text-anchor="start">1. izlemde: kan basıncı, Rh için kan grubu, demir eksikliği, hepatit B, idrar (bakteriüri, proteinüri), TSH, TORCH; tütün danışmanlığı</text>
+<text x="60" y="502" font-size="13" fill="#b91c1c" text-anchor="start">2. izlemde: 1 ay arayla 2 doz Td · 3. izlemde: Rh uygunsuzluğunda indirekt Coombs, negatifse anti-D immünglobulin</text>
+<text x="60" y="522" font-size="13" fill="#0f172a" text-anchor="start">4. izlemde: gebelik haftası ile uterus büyüklüğü uyumu, prezente kısım, emzirmeye yönelik meme muayenesi</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 27–37 · mavi = izlem penceresi, turuncu = tarama testi, yeşil = profilaksi, kırmızı = Rh uygunsuzluğu</text>
+</svg>

@@ -1,11 +1,23 @@
 {
  "A3243G": {
+  "baska": [
+   "Mitokondriyal DNA'da 3243. pozisyonda adeninden guanine nokta mutasyonu"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Mitokondriyal DNA A3243G nokta mutasyonu",
   "term": "A3243G"
+ },
+ "A8344G": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Mitokondriyal DNA'da 8344. pozisyonda adeninden guanine nokta mutasyonu",
+  "term": "A8344G"
  },
  "ABC": {
   "category": "kisaltma",
@@ -15,6 +27,14 @@
   ],
   "definition": "Hava yolu, solunum ve dolaşım",
   "term": "ABC"
+ },
+ "ABCB7": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "ATP bağlayıcı kaset alt ailesi B üyesi 7 geni",
+  "term": "ABCB7"
  },
  "ABD": {
   "category": "kisaltma",
@@ -73,6 +93,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "k2-26-norolojik-hastaliklar",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-27-periyodik-muayeneler"
   ],
@@ -90,12 +112,14 @@
  },
  "AIDS": {
   "baska": [
-   "Edinilmiş bağışıklık yetmezliği sendromu; primer beyin lenfoması bu hastalarda sık görülür."
+   "Edinilmiş bağışıklık yetmezliği sendromu; primer beyin lenfoması bu hastalarda sık görülür.",
+   "Edinilmiş bağışıklık yetmezliği sendromu. HIV enfeksiyonunun bağışıklık sisteminin ağır çöktüğü ileri evresidir."
   ],
   "category": "kisaltma",
   "decks": [
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "k2-22-psikosomatik-bozukluklar",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-14-beyin-tumorleri",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -134,8 +158,12 @@
   "term": "ALS"
  },
  "ALT": {
+  "baska": [
+   "Alanin aminotransferaz. Karaciğer hücrelerinde bulunan bir enzimdir; obez çocuklarda tanı anında bakılır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "Alanin aminotransferaz",
@@ -156,16 +184,24 @@
   "term": "AMPA"
  },
  "AOA1": {
+  "baska": [
+   "Ataksi okülomotor apraksi tip 1"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Ataksi okülomotor apraksi 1",
   "term": "AOA1"
  },
  "AOA2": {
+  "baska": [
+   "Ataksi okülomotor apraksi tip 2"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Ataksi okülomotor apraksi 2",
@@ -180,6 +216,14 @@
   "definition": "Amiloid öncü protein geni",
   "term": "APP"
  },
+ "APTX": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Aprataksin geni",
+  "term": "APTX"
+ },
  "ARAS": {
   "category": "kisaltma",
   "decks": [
@@ -191,12 +235,24 @@
   "term": "ARAS"
  },
  "ARCA1": {
+  "baska": [
+   "Otozomal resesif serebellar ataksi tip 1"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Otozomal resesif serebellar ataksi 1",
   "term": "ARCA1"
+ },
+ "ARCA2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Otozomal resesif serebellar ataksi tip 2",
+  "term": "ARCA2"
  },
  "ASIC": {
   "category": "kisaltma",
@@ -219,6 +275,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-27-periyodik-muayeneler"
   ],
@@ -230,6 +287,7 @@
   "decks": [
    "k2-06-agri-yollari-ve-mekanizmalari",
    "k2-09-sss-ilaclari",
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-09-sss-ilaclari",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
@@ -244,9 +302,18 @@
   "definition": "ATPaz 13A2 geni",
   "term": "ATP13A2"
  },
+ "ATP6": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "ATP sentaz 6 alt birimi (MT-ATP6) geni",
+  "term": "ATP6"
+ },
  "ATXN1": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -256,6 +323,7 @@
  "ATXN10": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Ataksin 10 geni",
@@ -264,6 +332,7 @@
  "ATXN2": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -273,6 +342,7 @@
  "ATXN3": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -282,6 +352,7 @@
  "ATXN7": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Ataksin 7 geni",
@@ -290,6 +361,7 @@
  "ATXN8": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Ataksin 8 geni",
@@ -331,6 +403,17 @@
   "definition": "B12 vitamini",
   "term": "B12"
  },
+ "B7": {
+  "baska": [
+   "B7 vitamini. Biyotinidaz eksikliğinde bebeğe her gün verilerek tedavi sağlayan vitamindir."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "B7 vitamini (biotin)",
+  "term": "B7"
+ },
  "BBT": {
   "category": "kisaltma",
   "decks": [
@@ -343,6 +426,14 @@
   ],
   "definition": "Bilgisayarlı beyin tomografisi",
   "term": "BBT"
+ },
+ "BCC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Bazal hücreli karsinom",
+  "term": "BCC"
  },
  "BD": {
   "category": "kisaltma",
@@ -374,6 +465,14 @@
   ],
   "definition": "Becker müsküler distrofisi",
   "term": "BECKER"
+ },
+ "BFNN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Benign familyal neonatal nöbetler",
+  "term": "BFNN"
  },
  "BG": {
   "baska": [
@@ -416,6 +515,28 @@
   "definition": "Biyokimya (rutin kan biyokimyası)",
   "term": "BK"
  },
+ "BKI": {
+  "baska": [
+   "Beden kitle indeksi. Ağırlığın boyun karesine bölünmesiyle hesaplanan ölçüdür; obezite taramasında kullanılır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Beden kitle indeksi",
+  "term": "BKI"
+ },
+ "BKİ": {
+  "baska": [
+   "Beden kitle indeksi. Ağırlığın boyun karesine bölünmesiyle hesaplanan ölçüdür; yetişkinlerde yılda bir obezite taramasında ölçülür."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Beden kitle indeksi",
+  "term": "BKİ"
+ },
  "BMD": {
   "baska": [
    "Becker müsküler distrofi"
@@ -439,6 +560,30 @@
   ],
   "definition": "Kemik morfogenetik proteini",
   "term": "BMP"
+ },
+ "BOR1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Brankio-oto-renal sendrom tip 1",
+  "term": "BOR1"
+ },
+ "BOR2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Brankio-oto-renal sendrom tip 2",
+  "term": "BOR2"
+ },
+ "BOR3": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Brankio-oto-renal sendrom tip 3",
+  "term": "BOR3"
  },
  "BOS": {
   "category": "kisaltma",
@@ -571,6 +716,22 @@
   "definition": "Serebral amiloid anjiyopati",
   "term": "CAA"
  },
+ "CABC1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "bc1 kompleksi şaperon aktivitesi benzeri gen (COQ8A)",
+  "term": "CABC1"
+ },
+ "CACNA1A": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Voltaj bağımlı kalsiyum kanalı alfa 1A alt birimi geni",
+  "term": "CACNA1A"
+ },
  "CACNA1C": {
   "category": "kisaltma",
   "decks": [
@@ -587,6 +748,30 @@
   "definition": "Kanabinoid 1 reseptörü",
   "term": "CB1"
  },
+ "CDH23": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Kaderin 23 geni",
+  "term": "CDH23"
+ },
+ "CGG": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Sitozin-guanin-guanin üçlü tekrarı",
+  "term": "CGG"
+ },
+ "CGH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Karşılaştırmalı genomik hibridizasyon",
+  "term": "CGH"
+ },
  "CGRP": {
   "category": "kisaltma",
   "decks": [
@@ -594,6 +779,14 @@
   ],
   "definition": "Kalsitonin geniyle ilişkili peptit",
   "term": "CGRP"
+ },
+ "CHARGE": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Kolobom, kalp anomalisi, koana atrezisi, gelişme geriliği, genital ve kulak anomalisi",
+  "term": "CHARGE"
  },
  "CHD": {
   "category": "kisaltma",
@@ -603,13 +796,33 @@
   "definition": "Coronary heart disease (koroner kalp hastalığı)",
   "term": "CHD"
  },
- "CHRNA4": {
+ "CHD7": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Kromodomain helikaz DNA bağlayıcı protein 7 geni",
+  "term": "CHD7"
+ },
+ "CHRNA4": {
+  "baska": [
+   "Nöronal nikotinik asetilkolin reseptörü alfa 4 alt birimi geni"
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Nikotinik asetilkolin reseptörü alfa 4 alt birimi geni",
   "term": "CHRNA4"
+ },
+ "CIB2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Kalsiyum ve integrin bağlayıcı protein 2 geni",
+  "term": "CIB2"
  },
  "CIDP": {
   "category": "kisaltma",
@@ -626,6 +839,22 @@
   ],
   "definition": "Creutzfeldt-Jakob hastalığı",
   "term": "CJD"
+ },
+ "CLPP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Kazeinolitik mitokondriyal matriks peptidaz proteolitik alt birimi geni",
+  "term": "CLPP"
+ },
+ "CLRN1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Klarin 1 geni",
+  "term": "CLRN1"
  },
  "CM": {
   "category": "kisaltma",
@@ -670,13 +899,33 @@
   "term": "CNS"
  },
  "CNV": {
+  "baska": [
+   "Kopya sayısı değişikliği"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
   ],
   "definition": "Kopya sayısı değişimi",
   "term": "CNV"
+ },
+ "COL11A1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip XI kollajen alfa 1 zinciri geni",
+  "term": "COL11A1"
+ },
+ "COL11A2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip XI kollajen alfa 2 zinciri geni",
+  "term": "COL11A2"
  },
  "COL1A1": {
   "category": "kisaltma",
@@ -695,6 +944,54 @@
   ],
   "definition": "Kollajen tip I alfa 2 zinciri geni",
   "term": "COL1A2"
+ },
+ "COL2A1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip II kollajen alfa 1 zinciri geni",
+  "term": "COL2A1"
+ },
+ "COL4A3": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip IV kollajen alfa 3 zinciri geni",
+  "term": "COL4A3"
+ },
+ "COL4A4": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip IV kollajen alfa 4 zinciri geni",
+  "term": "COL4A4"
+ },
+ "COL4A5": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip IV kollajen alfa 5 zinciri geni",
+  "term": "COL4A5"
+ },
+ "COL9A1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip IX kollajen alfa 1 zinciri geni",
+  "term": "COL9A1"
+ },
+ "COL9A2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tip IX kollajen alfa 2 zinciri geni",
+  "term": "COL9A2"
  },
  "COMT": {
   "category": "kisaltma",
@@ -743,6 +1040,14 @@
   "definition": "Beyin omurilik sıvısı (cerebrospinal fluid)",
   "term": "CSF"
  },
+ "CSTB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Sistatin B geni",
+  "term": "CSTB"
+ },
  "CSWS": {
   "category": "kisaltma",
   "decks": [
@@ -755,6 +1060,7 @@
  "CTG": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Sitozin-timin-guanin üçlü tekrarı",
@@ -840,6 +1146,17 @@
   "definition": "Dopamin D2 reseptörü",
   "term": "D2"
  },
+ "D3": {
+  "baska": [
+   "D3 vitamini. D vitamininin bir biçimidir; kemik sağlığı değerlendirilirken kanda 25-hidroksivitamin D3 düzeyi ölçülür."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "D3 vitamini (kolekalsiferol)",
+  "term": "D3"
+ },
  "DBS": {
   "baska": [
    "Derin beyin uyarımı; FDA tarafından dirençli OKB tedavisinde onaylanmıştır."
@@ -892,6 +1209,49 @@
   "definition": "Dikkat eksikliği ve hiperaktivite bozukluğu",
   "term": "DEHB"
  },
+ "DEXA": {
+  "baska": [
+   "Dual enerji X-ışını absorpsiyometrisi. Kemik mineral dansitesini düşük dozlu X-ışınıyla ölçen yöntemdir; osteoporoz taramasında kullanılır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Dual enerji X-ışını absorpsiyometrisi",
+  "term": "DEXA"
+ },
+ "DFN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Sağırlık (deafness) lokusu; X'e bağlı lokuslar",
+  "term": "DFN"
+ },
+ "DFN3": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "X'e bağlı sağırlık lokusu 3",
+  "term": "DFN3"
+ },
+ "DFNA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Otozomal dominant sağırlık lokusu",
+  "term": "DFNA"
+ },
+ "DFNB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Otozomal resesif sağırlık lokusu",
+  "term": "DFNB"
+ },
  "DIC": {
   "baska": [
    "Dissemine intravasküler koagülasyon; damar içinde yaygın pıhtılaşma ve pıhtı faktörlerinin tükenmesidir. Varlığında akut kanama BT'de hiperdens olmayabilir."
@@ -933,6 +1293,8 @@
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-26-norolojik-hastaliklar",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
@@ -1038,12 +1400,14 @@
  },
  "DSÖ": {
   "baska": [
-   "Dünya Sağlık Örgütü; şizofreninin 15-44 yaş grubunda yeti yitimine yol açan hastalıklar arasında 9. sırada olduğunu bildirir."
+   "Dünya Sağlık Örgütü; şizofreninin 15-44 yaş grubunda yeti yitimine yol açan hastalıklar arasında 9. sırada olduğunu bildirir.",
+   "Dünya Sağlık Örgütü. Birleşmiş Milletlere bağlı uluslararası sağlık kuruluşudur; sağlık tanımını 1948’de yapmıştır."
   ],
   "category": "kisaltma",
   "decks": [
    "k2-15-sizofrenik-bozukluklar",
    "k2-23-cinsel-kimlik-bozukluklari",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-45-intihar-ve-kendine-zarar-verme"
   ],
@@ -1090,12 +1454,38 @@
   "term": "DWI"
  },
  "DZ": {
+  "baska": [
+   "Dizigot"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
   ],
   "definition": "Dizigot ikiz",
   "term": "DZ"
+ },
+ "DaBT": {
+  "baska": [
+   "Difteri, aselüler boğmaca, tetanoz aşısı. Difteri, aselüler boğmaca ve tetanoza karşı birleşik aşıdır; bebeklik aşı takviminde yer alır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Difteri, aselüler boğmaca, tetanoz aşısı",
+  "term": "DaBT"
+ },
+ "E3": {
+  "baska": [
+   "Estriol. Gebelikte plasentanın ürettiği bir östrojendir; üçlü testte ölçülür."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Estriol",
+  "term": "E3"
  },
  "EAH": {
   "category": "kisaltma",
@@ -1132,6 +1522,22 @@
   ],
   "definition": "Epidural hematom",
   "term": "EDH"
+ },
+ "EDN3": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Endotelin 3 geni",
+  "term": "EDN3"
+ },
+ "EDNRB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Endotelin reseptörü tip B geni",
+  "term": "EDNRB"
  },
  "EDRF": {
   "category": "kisaltma",
@@ -1243,6 +1649,14 @@
   "definition": "Eksitatör postsinaptik potansiyel",
   "term": "EPSP"
  },
+ "EYA1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "EYA transkripsiyon koaktivatörü ve fosfataz 1 geni",
+  "term": "EYA1"
+ },
  "F1": {
   "category": "kisaltma",
   "decks": [
@@ -1339,6 +1753,14 @@
   "definition": "Sıvı atenüasyonlu inversion recovery sekansı",
   "term": "FLAIR"
  },
+ "FMR1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Frajil X mental retardasyon 1 geni",
+  "term": "FMR1"
+ },
  "FN": {
   "category": "kisaltma",
   "decks": [
@@ -1354,6 +1776,14 @@
   ],
   "definition": "Frontonazal displazi",
   "term": "FND"
+ },
+ "FOXI1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Forkhead kutu I1 geni",
+  "term": "FOXI1"
  },
  "FTLD": {
   "category": "kisaltma",
@@ -1372,13 +1802,30 @@
   "definition": "FUS geni",
   "term": "FUS"
  },
+ "FXN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Frataksin geni",
+  "term": "FXN"
+ },
  "FXTAS": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Frajil X tremor ataksi sendromu",
   "term": "FXTAS"
+ },
+ "G8363A": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Mitokondriyal DNA'da 8363. pozisyonda guaninden adenine nokta mutasyonu",
+  "term": "G8363A"
  },
  "GA": {
   "category": "kisaltma",
@@ -1392,6 +1839,7 @@
  "GAA": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Guanin-adenin-adenin üçlü tekrarı",
@@ -1461,6 +1909,22 @@
   "definition": "GABA A alfa 6 alt birimi geni",
   "term": "GABRA6"
  },
+ "GABRB3": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "GABA-A reseptörü beta 3 alt birimi geni",
+  "term": "GABRB3"
+ },
+ "GABRG2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "GABA-A reseptörü gama 2 alt birimi geni",
+  "term": "GABRG2"
+ },
  "GAD": {
   "category": "kisaltma",
   "decks": [
@@ -1502,16 +1966,32 @@
   "term": "GIS"
  },
  "GJB2": {
+  "baska": [
+   "Gap junction beta 2 proteini (konneksin 26) geni"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Konneksin 26 geni",
   "term": "GJB2"
  },
- "GKD": {
+ "GJB6": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Gap junction beta 6 proteini (konneksin 30) geni",
+  "term": "GJB6"
+ },
+ "GKD": {
+  "baska": [
+   "Gelişimsel kalça displazisi. Kalça ekleminin yanlış gelişmesidir; 41. gün izleminde muayene ve ultrasonla taranır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "Gelişimsel kalça displazisi",
@@ -1526,6 +2006,30 @@
   ],
   "definition": "Glasgow koma skalası",
   "term": "GKS"
+ },
+ "GNAQ": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "G proteini alfa q alt birimi geni",
+  "term": "GNAQ"
+ },
+ "GOF": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "İşlev kazanımı (gain of function)",
+  "term": "GOF"
+ },
+ "GPR98": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "G proteinine bağlı reseptör 98 geni",
+  "term": "GPR98"
  },
  "GSS": {
   "category": "kisaltma",
@@ -1581,6 +2085,41 @@
   "definition": "Günlük yaşam aktiviteleri",
   "term": "GYA"
  },
+ "GİS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Gastrointestinal sistem",
+  "term": "GİS"
+ },
+ "HARS2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Mitokondriyal histidil-tRNA sentetaz 2 geni",
+  "term": "HARS2"
+ },
+ "HCN1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Hiperpolarizasyonla aktive olan siklik nükleotid kapılı kanal 1 geni",
+  "term": "HCN1"
+ },
+ "HCV": {
+  "baska": [
+   "Hepatit C virüsü. Hepatit C enfeksiyonuna yol açan virüstür; taramada anti HCV testi kullanılır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Hepatit C virüsü",
+  "term": "HCV"
+ },
  "HD": {
   "category": "kisaltma",
   "decks": [
@@ -1617,6 +2156,7 @@
    "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
    "k2-17-periferik-noropati",
    "k2-22-psikosomatik-bozukluklar",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-17-periferik-noropati",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -1682,6 +2222,17 @@
   "definition": "Holoprozensefali",
   "term": "HPE"
  },
+ "HPV": {
+  "baska": [
+   "Human Papilloma Virüs. Serviks kanserinin başlıca nedeni olan virüstür; 30–65 yaş kadınlarda taramada HPV testi kullanılabilir."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Human Papilloma Virüs (insan papilloma virüsü)",
+  "term": "HPV"
+ },
  "HS": {
   "category": "kisaltma",
   "decks": [
@@ -1690,10 +2241,19 @@
   "definition": "Refleks çekicinin ürün model kodu (HS-401G3)",
   "term": "HS"
  },
+ "HSD17B4": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "17-beta hidroksisteroid dehidrogenaz 4 geni",
+  "term": "HSD17B4"
+ },
  "HT": {
   "category": "kisaltma",
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-01-norolojik-hastaya-yaklasim"
   ],
   "definition": "Hipertansiyon",
@@ -1731,6 +2291,28 @@
   ],
   "definition": "Serotonin taşıyıcı genin promoter polimorfizmi",
   "term": "HTTLPR"
+ },
+ "HbA1c": {
+  "baska": [
+   "Glikozillenmiş hemoglobin A1c. Son iki-üç ayın ortalama kan şekerini yansıtan hemoglobin ölçümüdür; diyabet taramasında kullanılabilir."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Glikozillenmiş hemoglobin A1c",
+  "term": "HbA1c"
+ },
+ "HbsAg": {
+  "baska": [
+   "Hepatit B yüzey antijeni. Hepatit B virüsünün yüzey antijenidir; kanda bulunması hepatit B enfeksiyonunu gösterir."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Hepatit B yüzey antijeni",
+  "term": "HbsAg"
  },
  "IASP": {
   "category": "kisaltma",
@@ -1801,6 +2383,14 @@
   "definition": "Uluslararası Baş Ağrısı Derneği",
   "term": "IHS"
  },
+ "IKBKG": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Kappa B kinaz inhibitörü gama alt birimi geni (NEMO)",
+  "term": "IKBKG"
+ },
  "IM": {
   "category": "kisaltma",
   "decks": [
@@ -1848,8 +2438,12 @@
   "term": "IQ"
  },
  "IU": {
+  "baska": [
+   "Uluslararası ünite. Vitamin gibi maddelerin etkinliğe göre dozlandığı birimdir; D vitamini dozu IU ile verilir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "Uluslararası ünite",
@@ -1862,6 +2456,25 @@
   ],
   "definition": "JC virüsü (John Cunningham virüsü)",
   "term": "JC"
+ },
+ "JLNS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Jervell ve Lange-Nielsen sendromu",
+  "term": "JLNS"
+ },
+ "KAH": {
+  "baska": [
+   "Konjenital adrenal hiperplazi. Kortizol yapımının doğuştan bozulduğu genetik hastalıktır; topuk kanıyla taranır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Konjenital adrenal hiperplazi",
+  "term": "KAH"
  },
  "KB": {
   "category": "kisaltma",
@@ -1888,17 +2501,49 @@
   "definition": "Kan-beyin bariyeri",
   "term": "KBB"
  },
- "KCNQ2": {
+ "KCNE1": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Voltaj kapılı potasyum kanalı E alt ailesi düzenleyici alt birim 1 geni",
+  "term": "KCNE1"
+ },
+ "KCNJ10": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "İçe doğru düzeltici potasyum kanalı J10 geni",
+  "term": "KCNJ10"
+ },
+ "KCNQ1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Voltaj kapılı potasyum kanalı KQT alt ailesi üye 1 geni",
+  "term": "KCNQ1"
+ },
+ "KCNQ2": {
+  "baska": [
+   "Voltaj kapılı potasyum kanalı KQT alt ailesi üye 2 geni"
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Potasyum kanalı KCNQ2 alt birimi geni",
   "term": "KCNQ2"
  },
  "KCNQ3": {
+  "baska": [
+   "Voltaj kapılı potasyum kanalı KQT alt ailesi üye 3 geni"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Potasyum kanalı KCNQ3 alt birimi geni",
@@ -1930,8 +2575,12 @@
   "term": "KKH"
  },
  "KKK": {
+  "baska": [
+   "Kızamık, kızamıkçık ve kabakulak aşısı. Kızamık, kızamıkçık ve kabakulağa karşı birleşik canlı aşıdır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "Kızamık, kızamıkçık ve kabakulak aşısı",
@@ -1948,6 +2597,7 @@
  "KMP": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Kardiyomiyopati",
@@ -1975,8 +2625,12 @@
   "term": "KOMT"
  },
  "KPA": {
+  "baska": [
+   "Konjuge pnömokok aşısı. Pnömokok bakterisine karşı bebeklikte uygulanan konjuge aşıdır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "Konjuge pnömokok aşısı",
@@ -2010,6 +2664,7 @@
  "KSS": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Kearns-Sayre sendromu",
@@ -2034,6 +2689,17 @@
   ],
   "definition": "Kronik travmatik ensefalopati",
   "term": "KTE"
+ },
+ "KV": {
+  "baska": [
+   "Kardiyovasküler. Kalp ve damarlarla ilgili demektir; KV olaylar kalp krizi ve inme gibi durumlardır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Kardiyovasküler",
+  "term": "KV"
  },
  "KVS": {
   "category": "kisaltma",
@@ -2062,6 +2728,14 @@
   ],
   "definition": "Birinci lomber vertebra",
   "term": "L1"
+ },
+ "LARS2": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Mitokondriyal lösil-tRNA sentetaz 2 geni",
+  "term": "LARS2"
  },
  "LBD": {
   "category": "kisaltma",
@@ -2260,6 +2934,14 @@
   "definition": "Majör depresif bozukluk",
   "term": "MDB"
  },
+ "MELAS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Miyopati, epilepsi, laktik asidoz, inme",
+  "term": "MELAS"
+ },
  "MEOS": {
   "baska": [
    "Mikrozomal etanol-oksidleyici sistem"
@@ -2284,33 +2966,49 @@
   "term": "MEPP"
  },
  "MERFF": {
+  "baska": [
+   "Düzensiz kırmızı lifli miyoklonik epilepsi (MERRF)"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Miyoklonik epilepsi ve kırmızı lifli hastalık",
   "term": "MERFF"
  },
  "MERRF": {
+  "baska": [
+   "Düzensiz kırmızı lifli miyoklonik epilepsi"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Miyoklonik epilepsi ile ilişkili kırmızı lifli hastalık",
   "term": "MERRF"
  },
  "MIDD": {
+  "baska": [
+   "Maternal kalıtılmış diyabet ve sağırlık"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Maternal kalıtılan diyabet ve sağırlık",
   "term": "MIDD"
  },
  "MITF": {
+  "baska": [
+   "Mikroftalmi ile ilişkili transkripsiyon faktörü geni"
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-26-norolojik-hastaliklar"
   ],
   "definition": "Mikroftalmi ile ilişkili transkripsiyon faktörü",
   "term": "MITF"
@@ -2331,6 +3029,7 @@
    "k2-10-bas-agrisina-yaklasim",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "k2-22-psikosomatik-bozukluklar",
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-10-bas-agrisina-yaklasim",
@@ -2392,6 +3091,7 @@
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
    "k2-22-psikosomatik-bozukluklar",
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -2442,9 +3142,29 @@
   "definition": "Muscle segment homeobox gen ailesi (MSX1)",
   "term": "MSX"
  },
- "MZ": {
+ "MT": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Mitokondriyal",
+  "term": "MT"
+ },
+ "MYO7A": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Miyozin VIIA geni",
+  "term": "MYO7A"
+ },
+ "MZ": {
+  "baska": [
+   "Monozigot"
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
   ],
   "definition": "Monozigot ikiz",
@@ -2477,10 +3197,19 @@
  "NARP": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Nöropati, ataksi ve retinitis pigmentoza",
   "term": "NARP"
+ },
+ "NDP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Norrie hastalığı proteini (norin) geni",
+  "term": "NDP"
  },
  "NEADL": {
   "category": "kisaltma",
@@ -2490,17 +3219,41 @@
   "definition": "Ulusal temel anestezi ilaçları listesi (National Essential Anaesthesia Drugs List)",
   "term": "NEADL"
  },
- "NF1": {
+ "NEMO": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "NF-kappa B temel düzenleyicisi (IKBKG geni)",
+  "term": "NEMO"
+ },
+ "NF": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Nörofibromatozis",
+  "term": "NF"
+ },
+ "NF1": {
+  "baska": [
+   "Nörofibromatozis tip 1 (ve geni)"
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Nörofibromatozis tip 1",
   "term": "NF1"
  },
  "NF2": {
+  "baska": [
+   "Nörofibromatozis tip 2 (ve geni)"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-40-santral-sinir-sistemi-tumorleri"
   ],
@@ -2514,6 +3267,14 @@
   ],
   "definition": "Sinir büyüme faktörü (nerve growth factor)",
   "term": "NGF"
+ },
+ "NGS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Yeni nesil dizileme",
+  "term": "NGS"
  },
  "NH3": {
   "category": "kisaltma",
@@ -2612,10 +3373,22 @@
  "OD": {
   "category": "kisaltma",
   "decks": [
-   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-26-norolojik-hastaliklar"
   ],
   "definition": "Otozomal dominant",
   "term": "OD"
+ },
+ "OGTT": {
+  "baska": [
+   "Oral glukoz tolerans testi. Ağızdan şekerli sıvı içirilip kan şekerinin ölçüldüğü testtir; diyabet ve gestasyonel diyabet öyküsünde kullanılır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Oral glukoz tolerans testi",
+  "term": "OGTT"
  },
  "OKB": {
   "baska": [
@@ -2635,10 +3408,30 @@
   "definition": "Takıntı-zorlantı bozukluğu",
   "term": "OKB"
  },
+ "OMIM": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "İnsanda çevrim içi Mendel kalıtımı kataloğu (Online Mendelian Inheritance in Man)",
+  "term": "OMIM"
+ },
+ "OPA": {
+  "baska": [
+   "Oral polio aşısı. Ağızdan damla olarak verilen çocuk felci aşısıdır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Oral polio aşısı",
+  "term": "OPA"
+ },
  "OR": {
   "category": "kisaltma",
   "decks": [
-   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-26-norolojik-hastaliklar"
   ],
   "definition": "Otozomal resesif",
   "term": "OR"
@@ -2724,6 +3517,17 @@
   "definition": "Çocuklarda streptokok enfeksiyonlarının yol açtığı bağışıklık tepkisine bağlı tablodur; OKB ayırıcı tanısında yer alır.",
   "term": "PANDAS"
  },
+ "PAPP": {
+  "baska": [
+   "Gebeliğe bağlı plazma proteini. Gebelikte plasentanın ürettiği proteindir; 11–14. haftalarda ikili testte PAPP-A olarak ölçülür."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Gebeliğe bağlı plazma proteini (PAPP-A: gebeliğe bağlı plazma protein A)",
+  "term": "PAPP"
+ },
  "PARK2": {
   "category": "kisaltma",
   "decks": [
@@ -2752,6 +3556,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
   ],
   "definition": "Eşleştirici kutu 3 geni",
@@ -2774,6 +3579,38 @@
   ],
   "definition": "Panik bozukluk",
   "term": "PB"
+ },
+ "PCDH15": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Protokaderin 15 geni",
+  "term": "PCDH15"
+ },
+ "PCDH19": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Protokaderin 19 geni",
+  "term": "PCDH19"
+ },
+ "PDZD7": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "PDZ alanı içeren 7 geni",
+  "term": "PDZD7"
+ },
+ "PEO": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Progresif eksternal oftalmopleji",
+  "term": "PEO"
  },
  "PFK": {
   "category": "kisaltma",
@@ -2844,6 +3681,22 @@
   "definition": "Periferik sinir sistemi",
   "term": "PNS"
  },
+ "POLR1C": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "RNA polimeraz I ve III alt birimi C geni",
+  "term": "POLR1C"
+ },
+ "POLR1D": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "RNA polimeraz I ve III alt birimi D geni",
+  "term": "POLR1D"
+ },
  "PPMS": {
   "category": "kisaltma",
   "decks": [
@@ -2851,6 +3704,14 @@
   ],
   "definition": "Primer ilerleyici multipl skleroz",
   "term": "PPMS"
+ },
+ "PPP2R2B": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Protein fosfataz 2 düzenleyici alt birim B beta geni",
+  "term": "PPP2R2B"
  },
  "PRIS": {
   "baska": [
@@ -2871,6 +3732,14 @@
   "definition": "Prion protein geni",
   "term": "PRNP"
  },
+ "PRPS1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Fosforibozil pirofosfat sentetaz 1 geni",
+  "term": "PRPS1"
+ },
  "PSEN1": {
   "category": "kisaltma",
   "decks": [
@@ -2887,6 +3756,17 @@
   "definition": "Presenilin 2 geni",
   "term": "PSEN2"
  },
+ "PSM": {
+  "baska": [
+   "Periyodik sağlık muayenesi. Yaşa, cinsiyete ve risk faktörlerine göre biçimlendirilmiş, kişiye özgü koruyucu izlem programıdır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Periyodik sağlık muayenesi",
+  "term": "PSM"
+ },
  "PTC": {
   "category": "kisaltma",
   "decks": [
@@ -2894,6 +3774,14 @@
   ],
   "definition": "Tetanik sonrası sayım (post-tetanic count)",
   "term": "PTC"
+ },
+ "PTCH1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Patched 1 geni",
+  "term": "PTCH1"
  },
  "PTE": {
   "category": "kisaltma",
@@ -2908,6 +3796,7 @@
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-47-adrenoseptor-antagonist-ilaclar"
@@ -3005,6 +3894,14 @@
   "definition": "Riyanodin reseptörü 2",
   "term": "RyR2"
  },
+ "SACS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Saksin geni",
+  "term": "SACS"
+ },
  "SAK": {
   "category": "kisaltma",
   "decks": [
@@ -3029,6 +3926,7 @@
  "SCA": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -3068,16 +3966,24 @@
   "term": "SCA6"
  },
  "SCAR8": {
+  "baska": [
+   "Otozomal resesif spinoserebellar ataksi tip 8"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Otozomal resesif spinoserebellar ataksi 8",
   "term": "SCAR8"
  },
  "SCAR9": {
+  "baska": [
+   "Otozomal resesif spinoserebellar ataksi tip 9"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Otozomal resesif spinoserebellar ataksi 9",
@@ -3108,11 +4014,20 @@
   "category": "kisaltma",
   "decks": [
    "k2-10-bas-agrisina-yaklasim",
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Sodyum kanalı alfa 1 alt birim geni",
   "term": "SCN1A"
+ },
+ "SCN1B": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Voltaj kapılı sodyum kanalı beta 1 alt birimi geni",
+  "term": "SCN1B"
  },
  "SDH": {
   "baska": [
@@ -3143,6 +4058,22 @@
   "definition": "Spondiloepifizyal displazi konjenita",
   "term": "SEDC"
  },
+ "SEMA3E": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Semaforin 3E geni",
+  "term": "SEMA3E"
+ },
+ "SETX": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Senataksin geni",
+  "term": "SETX"
+ },
  "SHH": {
   "baska": [
    "Sonic hedgehog"
@@ -3155,6 +4086,57 @@
   "definition": "Sonic hedgehog geni",
   "term": "SHH"
  },
+ "SHM": {
+  "baska": [
+   "Sağlıklı Hayat Merkezi. Birinci basamakta koruyucu sağlık hizmeti ve danışmanlık veren merkezdir; evlilik öncesi tarama da yapılır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Sağlıklı Hayat Merkezi",
+  "term": "SHM"
+ },
+ "SIL1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "SIL1 nükleotid değişim faktörü geni",
+  "term": "SIL1"
+ },
+ "SIX1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "SIX homeobox 1 geni",
+  "term": "SIX1"
+ },
+ "SIX5": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "SIX homeobox 5 geni",
+  "term": "SIX5"
+ },
+ "SLC26A4": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Çözünen taşıyıcı ailesi 26 üye 4 (pendrin) geni",
+  "term": "SLC26A4"
+ },
+ "SLC2A1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Çözünen taşıyıcı ailesi 2 üye 1 (GLUT1) geni",
+  "term": "SLC2A1"
+ },
  "SLC6A4": {
   "category": "kisaltma",
   "decks": [
@@ -3162,6 +4144,14 @@
   ],
   "definition": "Serotonin taşıyıcı geni",
   "term": "SLC6A4"
+ },
+ "SLC9A6": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Çözünen taşıyıcı ailesi 9 üye A6 (sodyum-hidrojen değiştirici 6) geni",
+  "term": "SLC9A6"
  },
  "SLE": {
   "baska": [
@@ -3183,8 +4173,12 @@
   "term": "SMN"
  },
  "SMN1": {
+  "baska": [
+   "Hayatta kalma motor nöron 1 geni. Motor nöronların yaşaması için gereken gendir; homozigot delesyonu SMA’ya yol açar."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -3198,6 +4192,14 @@
   ],
   "definition": "Hayatta kalma motor nöron 2 geni",
   "term": "SMN2"
+ },
+ "SNA12": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "SNAI2 (Slug) geni; slaytta SNA12 diye yazılmış",
+  "term": "SNA12"
  },
  "SNCA": {
   "category": "kisaltma",
@@ -3250,6 +4252,14 @@
   ],
   "definition": "Süperoksit dismutaz 1 geni",
   "term": "SOD1"
+ },
+ "SOX10": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "SRY ilişkili HMG kutu 10 geni",
+  "term": "SOX10"
  },
  "SPMS": {
   "category": "kisaltma",
@@ -3312,6 +4322,7 @@
    "k2-10-bas-agrisina-yaklasim",
    "k2-12-kafa-ve-omurilik-yaralanmalari",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-04-serebrovaskuler-hastaliklar",
    "y25-k2-07-genel-anestezik-ilaclar",
@@ -3330,6 +4341,14 @@
   ],
   "definition": "Santral sinir sistemi",
   "term": "SSS"
+ },
+ "STK11": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Serin/treonin kinaz 11 geni",
+  "term": "STK11"
  },
  "STN": {
   "category": "kisaltma",
@@ -3384,6 +4403,22 @@
   "definition": "Duyarlılık ağırlıklı görüntüleme",
   "term": "SWI"
  },
+ "SWS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Sturge-Weber sendromu",
+  "term": "SWS"
+ },
+ "SYNE1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Spektrin tekrarlı nükleer zarf proteini 1 geni",
+  "term": "SYNE1"
+ },
  "T12": {
   "category": "kisaltma",
   "decks": [
@@ -3425,6 +4460,14 @@
   "definition": "Tiroksin; tiroit hormonudur, uyku yoksunluğuyla artar.",
   "term": "T4"
  },
+ "T8356C": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Mitokondriyal DNA'da 8356. pozisyonda timinden sitozine nokta mutasyonu",
+  "term": "T8356C"
+ },
  "TARDBP": {
   "category": "kisaltma",
   "decks": [
@@ -3440,6 +4483,14 @@
   ],
   "definition": "Travmatik beyin hasarı",
   "term": "TBH"
+ },
+ "TBP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "TATA kutusu bağlayıcı protein geni",
+  "term": "TBP"
  },
  "TCA": {
   "category": "kisaltma",
@@ -3468,6 +4519,14 @@
   ],
   "definition": "TCOF1 geni",
   "term": "TCOF"
+ },
+ "TCOF1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Treacle ribozom biyogenez faktörü 1 geni",
+  "term": "TCOF1"
  },
  "TDCS": {
   "category": "kisaltma",
@@ -3583,6 +4642,17 @@
   "definition": "Dörtlü uyarı (train-of-four)",
   "term": "TOF"
  },
+ "TORCH": {
+  "baska": [
+   "Toksoplazmozis, Rubella, Cytomegalovirüs, Herpes simpleks virüs. Gebelikte bebeğe geçebilen enfeksiyonların taramasıdır: toksoplazmozis, rubella, sitomegalovirüs ve herpes simpleks virüs."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Toksoplazmozis, Rubella, Cytomegalovirüs, Herpes simpleks virüs",
+  "term": "TORCH"
+ },
  "TPH": {
   "category": "kisaltma",
   "decks": [
@@ -3614,8 +4684,12 @@
   "term": "TSA"
  },
  "TSC": {
+  "baska": [
+   "Tüberoz skleroz kompleksi"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
@@ -3623,16 +4697,24 @@
   "term": "TSC"
  },
  "TSC1": {
+  "baska": [
+   "Tüberoz skleroz kompleksi 1 geni (hamartin)"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Tuberoz skleroz kompleksi 1 geni",
   "term": "TSC1"
  },
  "TSC2": {
+  "baska": [
+   "Tüberoz skleroz kompleksi 2 geni (tuberin)"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Tuberoz skleroz kompleksi 2 geni",
@@ -3641,18 +4723,34 @@
  "TSG": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Tümör süpresör gen",
   "term": "TSG"
  },
  "TSH": {
+  "baska": [
+   "Tiroid uyarıcı hormon. Hipofizden salgılanan ve tiroid bezini uyaran hormondur; tiroid işlev taramasında ölçülür."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "Tiroid uyarıcı hormon",
   "term": "TSH"
+ },
+ "TSM": {
+  "baska": [
+   "Toplum Sağlığı Merkezi. Birinci basamakta toplum sağlığı hizmetlerini yürüten merkezdir; evlilik öncesi tarama burada da yapılır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Toplum Sağlığı Merkezi",
+  "term": "TSM"
  },
  "TSSB": {
   "category": "kisaltma",
@@ -3663,6 +4761,14 @@
   "definition": "Travma sonrası stres bozukluğu",
   "term": "TSSB"
  },
+ "TTPA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Alfa-tokoferol transfer proteini geni",
+  "term": "TTPA"
+ },
  "TWIST": {
   "category": "kisaltma",
   "decks": [
@@ -3670,6 +4776,17 @@
   ],
   "definition": "TWIST1 transkripsiyon faktörü geni",
   "term": "TWIST"
+ },
+ "Td": {
+  "baska": [
+   "Tetanoz difteri aşısı. Tetanoz ve difteriye karşı erişkin aşısıdır; gebelere bir ay arayla iki doz yapılır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Tetanoz difteri aşısı",
+  "term": "Td"
  },
  "TİA": {
   "baska": [
@@ -3693,12 +4810,51 @@
   "term": "TİTCK"
  },
  "USG": {
+  "baska": [
+   "Ultrasonografi. Ses dalgalarıyla görüntü oluşturan, radyasyonsuz görüntüleme yöntemidir."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "Ultrasonografi",
   "term": "USG"
+ },
+ "USH1C": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Usher sendromu tip 1C geni",
+  "term": "USH1C"
+ },
+ "USH1G": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Usher sendromu tip 1G geni",
+  "term": "USH1G"
+ },
+ "USH2A": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Usher sendromu tip 2A geni",
+  "term": "USH2A"
+ },
+ "VDRL": {
+  "baska": [
+   "Venereal Disease Research Laboratory testi. Sifilis yani frengi taramasında kullanılan kan testidir."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Venereal Disease Research Laboratory testi (sifilis tarama testi)",
+  "term": "VDRL"
  },
  "VGLUT": {
   "category": "kisaltma",
@@ -3707,6 +4863,22 @@
   ],
   "definition": "Veziküler glutamat taşıyıcısı",
   "term": "VGLUT"
+ },
+ "VHL": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Von Hippel-Lindau (hastalığı ve geni)",
+  "term": "VHL"
+ },
+ "VHRN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Whirlin geni",
+  "term": "VHRN"
  },
  "VIP": {
   "category": "kisaltma",
@@ -3773,9 +4945,22 @@
   "definition": "Geniş dinamik aralıklı nöron (wide dynamic range)",
   "term": "WDR"
  },
- "WONCA": {
+ "WES": {
   "category": "kisaltma",
   "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Tüm ekzom dizileme",
+  "term": "WES"
+ },
+ "WONCA": {
+  "baska": [
+   "Dünya Aile Hekimleri Örgütü (World Organization of Family Doctors)",
+   "Dünya Aile Hekimleri Örgütü. Aile hekimlerinin uluslararası örgütüdür; dördüncül korumanın tanımını yapmıştır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-36-aile-hekimligine-yaklasim-wonca"
   ],
   "definition": "Dünya Aile Hekimleri Birliği",
@@ -3789,6 +4974,14 @@
   "definition": "World Professional Association for Transgender Health (Dünya Trans Sağlığı Birliği)",
   "term": "WPATH"
  },
+ "WS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "Waardenburg sendromu",
+  "term": "WS"
+ },
  "WTI": {
   "category": "kisaltma",
   "decks": [
@@ -3796,6 +4989,22 @@
   ],
   "definition": "WT1 geni (slayttaki yazım WTI); Wilms tümörü 1 geni",
   "term": "WTI"
+ },
+ "XD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "X'e bağlı dominant",
+  "term": "XD"
+ },
+ "XR": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-26-norolojik-hastaliklar"
+  ],
+  "definition": "X'e bağlı resesif",
+  "term": "XR"
  },
  "XXY": {
   "category": "kisaltma",
@@ -3805,6 +5014,17 @@
   ],
   "definition": "Klinefelter sendromu",
   "term": "XXY"
+ },
+ "YD": {
+  "baska": [
+   "Yenidoğan. Doğumdan sonraki ilk 28 günlük bebektir; genişletilmiş YD tarama programı yenidoğan taramasını kapsar."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Yenidoğan",
+  "term": "YD"
  },
  "YDL": {
   "category": "kisaltma",
@@ -3848,6 +5068,17 @@
   "definition": "Siklik adenozin monofosfat",
   "term": "cAMP"
  },
+ "ÇPGD": {
+  "baska": [
+   "Çocuğun Psikososyal Gelişiminin Desteklenmesi Programı. 0–6 yaş çocukların bilişsel, dil, sosyal ve motor gelişimini izleyip destekleyen programdır."
+  ],
+  "category": "kisaltma",
+  "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1"
+  ],
+  "definition": "Çocuğun Psikososyal Gelişiminin Desteklenmesi Programı",
+  "term": "ÇPGD"
+ },
  "ÖÖB": {
   "category": "kisaltma",
   "decks": [
@@ -3865,8 +5096,12 @@
   "term": "İM"
  },
  "İPA": {
+  "baska": [
+   "İnaktif polio aşısı. İğneyle yapılan, inaktif virüs içeren çocuk felci aşısıdır."
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "y25-k2-27-periyodik-muayeneler"
   ],
   "definition": "İnaktif polio aşısı",

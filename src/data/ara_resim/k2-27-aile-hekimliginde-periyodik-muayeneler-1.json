@@ -1,0 +1,153 @@
+{
+ "key": "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Hastalığın doğal seyri: her koruma düzeyi bir sonraki geçişi keser",
+   "aciklama": "Hastalık öncesinden komplikasyona giden yolda primordiyal koruma risk faktörünü, birincil koruma hastalığı, ikincil koruma sessiz hastalığın ilerlemesini, üçüncül koruma komplikasyonu önler; dördüncül koruma tıbbın kendi zararından korur.",
+   "adimlar": [
+    "1. Primordiyal: sağlıklı kişide risk faktörü oluşmasın.",
+    "2. Birincil: hedef sağlıklı kişi; aşılama, davranış değişikliği.",
+    "3. İkincil: hedef asemptomatik hasta; tarama, mamografi, smear.",
+    "4. Üçüncül: hedef semptomatik hasta; komplikasyon önleme, rehabilitasyon.",
+    "5. Dördüncül: önce zarar verme; aşırı medikalizasyondan koruma."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 9,
+   "bitis": 9,
+   "kaynak": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "SMA taraması neden erkek eşten başlar?",
+   "aciklama": "SMA otozomal resesif kalıtıldığı için çocuk ancak iki ebeveyn de taşıyıcıysa hasta olur; bu yüzden önce erkek eş adayı taranır, negatifse çift takipten çıkar, şüpheliyse kadın eşe de mutlaka test yapılır.",
+   "adimlar": [
+    "1. SMA: SMN1 (5q13) geninin iki kopyasında da delesyon ya da patojenik varyant (homozigot), otozomal resesif.",
+    "2. İki taşıyıcının her gebeliğinde %25 hasta, %50 taşıyıcı çocuk.",
+    "3. Önce erkek eş adayından onamla kan alınır.",
+    "4. Erkek negatif → takipten çıkar; şüpheli → kadına da mutlaka test.",
+    "5. İkisi de pozitif → tıbbi genetik doğrulama ve danışmanlık."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 22,
+   "bitis": 23,
+   "kaynak": [
+    22,
+    23,
+    24,
+    25
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Gebelik boyunca dört nitelikli izlem ve haftalık testler",
+   "aciklama": "Folik asit gebelikten önce başlar; dört izlem ilk on dört hafta, on sekiz–yirmi dört, yirmi sekiz–otuz iki ve otuz altı–otuz sekizinci haftalardadır ve tarama testleri bu pencerelere göre sıralanır.",
+   "adimlar": [
+    "1. Folik asit 400–800 µg: gebelikten 3 ay önce + ilk trimester.",
+    "2. 1. izlem (≤14. hafta, 30 dk): kan basıncı, Rh, demir, hepatit B, idrar, TSH, TORCH; 11–14 ikili test.",
+    "3. 2. izlem (18–24): üçlü test 16–20, ayrıntılı USG 18–22, 75 g glukoz 24–28, Td 2 doz.",
+    "4. 3. izlem (28–32): indirekt Coombs, negatifse anti-D.",
+    "5. 4. izlem (36–38): uterus büyüklüğü, prezente kısım, meme muayenesi."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 34,
+   "bitis": 35,
+   "kaynak": [
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Doğumdan sonraki 42 gün: altı lohusa izlemi",
+   "aciklama": "Lohusa ilk üç izlemi hastanede, dördüncüyü ikinci–beşinci günde, beşinciyi on üçüncü–on yedinci günde, altıncıyı otuzuncu–kırk ikinci günde alır; her izlem dört basamaklıdır.",
+   "adimlar": [
+    "1. Hastanede kalış: normal doğum 24, sezaryen 48 saat; 1.–3. izlem.",
+    "2. 4. izlem 2–5. gün, 5. izlem 13–17. gün, 6. izlem 30–42. gün.",
+    "3. Her izlemde genel durum, fizik muayene, gerekirse laboratuvar, danışmanlık.",
+    "4. Gestasyonel diyabet öyküsünde postpartum 6–12. hafta OGTT."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 47,
+   "bitis": 48,
+   "kaynak": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Topuk kanı sonucunu okumak: normal, tekrar örnek, sevk",
+   "aciklama": "Beş topuk kanı taramasında sonuç üç bölgeye düşer: eşiğin altı normaldir, sınır bölgesi tekrar örnek ister, açık yüksek ya da tekrarda süren düşüklük sevk ettirir; kistik fibroziste son adım ter testidir.",
+   "adimlar": [
+    "1. PKU: ≤2 normal, 2,1–3,9 tekrar, ≥4 doğrudan sevk.",
+    "2. TSH: <5,5 normal, 5,5–20 tekrar, >20 doğrudan serum T4-TSH.",
+    "3. Biyotinidaz: >65 U normal, ≤65 tekrar, yine düşükse sevk.",
+    "4. KAH: 17-OHP term <10, prematüre <15; üstünde aynı örnekten steroid profili.",
+    "5. Kistik fibrozis: <90 normal, ≥90 tekrar, tekrarda ≥70 ter testi."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 64,
+   "bitis": 64,
+   "kaynak": [
+    58,
+    60,
+    62,
+    64,
+    66
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Erişkinde hangi tarama kaç yaşında, ne sıklıkta?",
+   "aciklama": "Tansiyon on sekiz yaştan itibaren her yıl, lipid ve TSH otuz beş yaştan sonra beş yılda bir, diyabet kırk beş yaştan sonra üç yılda bir; smear otuz–altmış beş, mamografi kırk–altmış dokuz, gizli kan elli–yetmiş yaş aralığındadır.",
+   "adimlar": [
+    "1. 18 yaş: tansiyon yılda bir, obezite yılda bir (bel çevresi dahil).",
+    "2. 35 yaş: lipid ve TSH 5 yılda bir; 40 yaş üstü herkese bir kez KV risk.",
+    "3. 45 yaş: diyabet, normalse 3 yılda bir; aspirin erkek 45–65, kadın 55–65.",
+    "4. Kanser: smear/HPV 30–65 (5 yılda bir), mamografi 40–69 (2 yılda bir), gizli kan 50–70, kolonoskopi 51 ve 61 yaş."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 119,
+   "bitis": 120,
+   "kaynak": [
+    109,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    118,
+    119,
+    120,
+    121,
+    122
+   ]
+  }
+ ]
+}

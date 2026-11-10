@@ -1,0 +1,2159 @@
+{
+ "id": "k2-26-norolojik-hastaliklar",
+ "sira": 26,
+ "kurul": 1,
+ "ders": "Tıbbi Genetik",
+ "konu": "Nörolojik Hastalıklar ve Genetiği",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-11-10",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Nörolojik hastalıklarda genetiğin yerini açıklar; epilepsinin tanımını, nöbet gruplarını, genetik epilepsilerin sınıflamasını, risk oranlarını ve epilepsiyle ilişkili kromozom yeniden düzenlemelerini (ring 20, ring 14, 6q del, 22q dup) sayar.",
+   "sorular": [
+    {
+     "id": "k2-26-norolojik-hastaliklar-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "EEG'de uzamış yüksek voltajlı yavaş dalga ile birlikte tedaviye dirençli epilepsiye yol açan kromozom anomalisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "6q delesyonu",
+      "B": "22q duplikasyonu",
+      "C": "Halka (ring) kromozom 20",
+      "D": "Frajil X tam mutasyonu",
+      "E": "Klinefelter sendromu (47,XXY)"
+     },
+     "dogru": "C",
+     "aciklama": "Bazı kromozom yeniden düzenlemelerinin kendine özgü bulguları vardır: halka kromozom 20 taşıyıcılarında EEG'de uzamış yüksek voltajlı yavaş dalga ve tedaviye dirençli epilepsi görülür; halka kromozom 14'te de dirençli epilepsi vardır (s.11).",
+     "sik_aciklamalari": {
+      "A": "6q delesyonu bir kromozom parçasının kaybıdır ve dismorfik yüz, zihinsel yetersizlik ve epilepsiyle giden bir tablo oluşturur. Bu tabloya EEG'de uzamış yavaş dalga özgü bulgu olarak bağlanmaz (s.11).",
+      "B": "22q duplikasyonu bir kromozom bölgesinin fazladan kopyasıdır ve 6q delesyonu gibi dismorfik yüz, zihinsel yetersizlik ve epilepsiyle seyreder. Özgül EEG bulgusu tanımlanan anomali halka kromozom 20'dir (s.11).",
+      "C": "Halka kromozom 20, kromozom uçlarının birleşip halka oluşturduğu bir yeniden düzenlemedir. Taşıyıcılarında EEG'de uzamış yüksek voltajlı yavaş dalga ve tedaviye dirençli epilepsi görüldüğü için doğru cevaptır (s.11).",
+      "D": "Frajil X tam mutasyonu FMR1 genindeki CGG tekrarının 200'ü aşmasıyla genin metillenmesidir. Doğuştan gelişim geriliği ve otizmle giden frajil X sendromuna yol açar; tanımlanan EEG bulgusu bununla ilgili değildir (s.49).",
+      "E": "Klinefelter sendromu 47,XXY karyotipiyle tanımlanan bir sayı anomalisidir. İnkontinensia pigmentide yaşayabilen erkek olgularda görülür; uzamış yavaş dalga ve dirençli epilepsi ise halka kromozom 20'ye özgüdür (s.68)."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": [
+      "d3-k2-tbg-005"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Ring 20 krom taşıyıcılarında, uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi görülür"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-tbg-005",
+      "ogrenci:A:tbg-s02-b01"
+     ],
+     "s": 11
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q05",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Belirlenmiş bir nedeni olmayan ve genetik varyasyonlarla ilişkili olabilen epilepsi olgularına ne ad verilir?",
+     "secenekler": {
+      "A": "Semptomatik epilepsi",
+      "B": "İdiyopatik epilepsi",
+      "C": "Fokal nöbet",
+      "D": "Sınıflandırılamayan nöbet",
+      "E": "Epileptik ensefalopati"
+     },
+     "dogru": "B",
+     "aciklama": "Epilepsi olgularının %60'ında belirlenmiş bir neden yoktur; genetik varyasyonlarla ilişkili olabilen bu olgulara idiyopatik epilepsi denir. Nedeni bilinen olgular semptomatik epilepsidir (s.6).",
+     "sik_aciklamalari": {
+      "A": "Semptomatik epilepsi doğumsal anomali, genetik sendrom, kafa travması ya da beyin enfeksiyonu gibi belirli bir nedene bağlı gelişir. Nedeni belli olduğu için tarif edilen gruba uymaz (s.6).",
+      "B": "İdiyopatik epilepsi belirlenmiş bir nedeni olmayan ve genetik varyasyonlarla ilişkili olabilen olguları kapsar. Olguların %60'ı bu gruptadır; doğru cevaptır (s.6).",
+      "C": "Fokal nöbet beynin yalnız sınırlı bir bölgesinde başlayan nöbettir ve belirtiler etkilenen bölgeye göre değişir. Bu bir nöbet tipidir, epilepsinin nedenine göre yapılan adlandırma değildir (s.5).",
+      "D": "Sınıflandırılamayan nöbet, yetersiz bilgi nedeniyle fokal ya da jeneralize diye ayrılamayan nöbettir. Nöbetin biçimini tanımlar, nedenin bilinmemesini anlatmaz (s.5).",
+      "E": "Epileptik ensefalopati sodyum, potasyum ve kalsiyum kanal genlerindeki mutasyonlarla gelişen tek gen epilepsi sendromlarındandır. Nedeni tanımlanmış bir gen olduğu için idiyopatik gruba girmez (s.7)."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Epilepsi vakalarının %60’ının belirlenmiş herhangi bir sebebi bilinmese de genetik varyasyonlar ile ilişkili olabilirler"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 6
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q06",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Beynin her iki yarım küresini birden etkileyen, genellikle bilinç kaybı ve tüm vücutta kramplarla giden nöbet tipi hangisidir?",
+     "secenekler": {
+      "A": "Fokal nöbet",
+      "B": "Sınıflandırılamayan nöbet",
+      "C": "Jeneralize nöbet",
+      "D": "Ateşli nöbet",
+      "E": "Benign ailesel neonatal nöbet"
+     },
+     "dogru": "C",
+     "aciklama": "Nöbet beynin her iki yarım küresini etkiliyorsa jeneralize nöbettir ve genellikle bilinç kaybı ile tüm vücutta kramplar eşlik eder; yalnız sınırlı bir bölgede oluşan nöbet fokaldir (s.5).",
+     "sik_aciklamalari": {
+      "A": "Fokal nöbet beynin yalnız sınırlı bir bölgesinde oluşur ve belirtileri o bölgenin işlevine göre değişir. Her iki yarım küreyi birden tutmadığı için tarif edilen nöbet değildir (s.5).",
+      "B": "Sınıflandırılamayan nöbet yetersiz bilgi nedeniyle kesin gruplandırılamayan nöbettir ve şemada soru işaretiyle gösterilir. Kökte yayılımı açıkça tanımlanmış bir nöbet anlatıldığı için uymaz (s.5).",
+      "C": "Jeneralize nöbet beynin iki yarım küresini birden etkiler; bilinç kaybı ve tüm vücutta kramplar tipik eşlikçidir. Tanımla birebir örtüştüğü için doğru cevaptır (s.5).",
+      "D": "Ateşli nöbet SCN1A bozukluklarının hafif ucunda yer alan, ateşle tetiklenen nöbettir. Nöbetin beyindeki yayılımına göre yapılan bir adlandırma olmadığı için seçilmez (s.16).",
+      "E": "Benign ailesel neonatal nöbet KCNQ2 ve KCNQ3 potasyum kanal genlerinin mutasyonlarıyla yenidoğanda görülen bir tek gen sendromudur. Yayılımı tanımlayan bir nöbet tipi değildir (s.13)."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "küresini de etkiler ise jeneralize"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 5
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Halka (ring) kromozom 14 taşıyıcılığının yol açtığı klinik tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tedaviye dirençli epilepsi",
+      "B": "Telenjiektazi ve immün yetmezlikle giden ataksi",
+      "C": "Konjenital işitme kaybı ve guatr",
+      "D": "Elli yaşından sonra başlayan intansiyonel tremor ve ataksi",
+      "E": "Düzensiz kırmızı liflerle giden miyoklonik epilepsi"
+     },
+     "dogru": "A",
+     "aciklama": "Kromozom yeniden düzenlemeleriyle giden epilepsilerde halka kromozom 20'de uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi, halka kromozom 14'te de dirençli epilepsi görülür (s.11).",
+     "sik_aciklamalari": {
+      "A": "Tedaviye dirençli epilepsi ilaçlara rağmen nöbetlerin sürmesidir. Halka kromozom 14'te bu tablo gözlendiği için doğru cevaptır; aynı bulgu halka kromozom 20'de uzamış yavaş dalgayla birlikte görülür (s.11).",
+      "B": "Telenjiektazi, immün yetmezlik ve kansere yatkınlıkla giden ataksi, ataksi telenjiektazinin tablosudur. Bu hastalık ATM genindeki mutasyonlardan kaynaklanır, bir halka kromozom anomalisinden kaynaklanmaz (s.40).",
+      "C": "Konjenital işitme kaybı ile guatrın birlikteliği Pendred sendromunu tanımlar. Bu OR geçişli sendrom pendrin proteinini kodlayan SLC26A4 gen mutasyonlarıyla oluşur, halka kromozomla ilişkisi tanımlanmaz (s.80).",
+      "D": "Elli yaşından sonra başlayan intansiyonel tremor ve ataksi frajil X tremor ataksi sendromunun (FXTAS) tablosudur. Bu tablo FMR1 genindeki CGG premutasyonundan kaynaklanır (s.49).",
+      "E": "Düzensiz kırmızı liflerle giden miyoklonik epilepsi (MERRF) mitokondriyal kalıtılan bir hastalıktır. Olguların çoğunda mitokondriyal genomun 8344. Pozisyonunda mutasyon bulunur, kromozom halkası söz konusu değildir (s.54)."
+     },
+     "bilgi": [
+      31,
+      30
+     ],
+     "benzer_cikmis": [
+      "d3-k2-tbg-005"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Ring 14’te de dirençli epilepsi gözlenir"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-tbg-005",
+      "ogrenci:A:tbg-s02-b01"
+     ],
+     "s": 11
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Genetik epilepsilerin sınıflandırıldığı gruplar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Mendel kalıtımı gösteren epilepsiler",
+      "B": "Mendel kalıtımlı genetik sendromlar",
+      "C": "Multifaktöriyel kalıtımlı epilepsiler",
+      "D": "Sitogenetik anomali sonucu oluşan epilepsiler",
+      "E": "Kafa travmasına bağlı semptomatik epilepsiler"
+     },
+     "dogru": "E",
+     "aciklama": "Genetik epilepsiler Mendel kalıtımı gösteren epilepsiler ve Mendel kalıtımlı sendromlar, multifaktöriyel kalıtımlı epilepsiler ve sitogenetik anomali sonucu oluşan epilepsiler olarak üç grupta toplanır; kafa travması semptomatik epilepsinin nedenidir (s.6, 9).",
+     "sik_aciklamalari": {
+      "A": "Mendel kalıtımı gösteren epilepsiler tek gen mutasyonunun dominant ya da resesif aktarımıyla oluşur. Genetik epilepsilerin birinci grubunu oluşturduğu için sınıflamada yer alır (s.9).",
+      "B": "Mendel kalıtımlı genetik sendromlar epilepsinin bir tek gen sendromunun parçası olduğu tablolardır. Mendel kalıtımlı epilepsilerle aynı grupta sayıldığı için sınıflamaya girer (s.9).",
+      "C": "Multifaktöriyel kalıtımlı epilepsiler birden çok gen ile çevresel etkenlerin birlikte rol oynadığı formlardır. Tüm epilepsilerin yarısını oluşturan bu grup genetik sınıflamanın ikinci basamağıdır (s.9–10).",
+      "D": "Sitogenetik anomali sonucu oluşan epilepsiler delesyon, duplikasyon ve dengesiz translokasyon gibi kromozom değişiklikleriyle gelişir. Halka kromozom 20 bu grubun örneği olduğu için sınıflamada yer alır (s.9–10).",
+      "E": "Kafa travmasına bağlı epilepsi, doğumsal anomaliler ve beyin enfeksiyonları gibi edinsel bir nedene dayanan semptomatik epilepsidir. Genetik bir kalıtım grubu tanımlamadığı için genetik sınıflamada yer almaz ve doğru cevaptır (s.6)."
+     },
+     "bilgi": [
+      25,
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Mendelyen kalıtım gösteren genetik epilepsiler ve mendelyen genetik sendromlar"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 9
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Multifaktöriyel kalıtımlı epilepsiler tüm epilepsilerin yaklaşık ne kadarını oluşturur?",
+     "secenekler": {
+      "A": "%10",
+      "B": "%18",
+      "C": "%50",
+      "D": "%62",
+      "E": "%70"
+     },
+     "dogru": "C",
+     "aciklama": "Multifaktöriyel epilepsiler tüm epilepsilerin %50'sini oluşturur; birden çok gen ile çevresel etkenlerin birlikte rol oynadığı bu grupta SLC2A1 ve GABRB3 gibi genlerdeki varyasyonlar etkili olabilir (s.10, 20).",
+     "sik_aciklamalari": {
+      "A": "%10, bir ebeveyninde işitme kaybı olan ailede çocuk için verilen tekrarlama riskidir. Multifaktöriyel epilepsilerin payını göstermez; bu grup çok daha büyüktür (s.98).",
+      "B": "%18, dizigot ikizlerde epilepsi konkordansıdır ve genetik etkinin ikiz çalışmalarıyla ölçülmesini gösterir. Multifaktöriyel epilepsilerin tüm epilepsiler içindeki payı ise yarıya yakındır (s.8).",
+      "C": "Multifaktöriyel kalıtımlı epilepsiler birden çok gen ve çevresel etkenle oluşur ve tüm epilepsilerin %50'sini oluşturur. Doğru cevap budur (s.10).",
+      "D": "%62, monozigot ikizlerde epilepsi konkordansıdır ve genetik etkinin güçlü olduğunu gösterir. Bir epilepsi grubunun toplam içindeki payı olarak kullanılmaz (s.8).",
+      "E": "%70, nörolojik hastalıkların genetik temelli olan bölümünü anlatır. Tüm nörolojik hastalıklara ait bu oran epilepsi alt gruplarının payıyla karıştırılmamalıdır (s.2)."
+     },
+     "bilgi": [
+      27,
+      60
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Multifaktöriyel epilepsiler tüm epilepsilerin %50 oluşturur"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 10
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Kromozom anomalisiyle seyreden epilepsilerle ilgili aşağıdaki ifadeler veriliyor:\nI. Halka kromozom 20'de uzamış yüksek voltajlı yavaş dalga görülür.\nII. Halka kromozom 14'te tedaviye dirençli epilepsi gözlenir.\nIII. 6q delesyonu ve 22q duplikasyonunda dismorfik yüz, zihinsel yetersizlik ve epilepsi birliktedir.\nIV. Bu epilepsilerde ek nörolojik bulgu ve fasiyal dismorfizm beklenmez.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve IV",
+      "C": "II ve III",
+      "D": "I, II ve III",
+      "E": "II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Kromozom anomalisiyle seyreden epilepsilerde ilave nörolojik bulgular ve fasiyal dismorfizm beklenir; halka 20 ve halka 14 dirençli epilepsiyle, 6q delesyonu ve 22q duplikasyonu dismorfik yüz, zihinsel yetersizlik ve epilepsiyle ilişkilidir (s.10–11).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğru öncüllerdir, ancak 6q delesyonu ve 22q duplikasyonundaki dismorfik yüz, zihinsel yetersizlik ve epilepsi birlikteliği de doğrudur. III dışarıda bırakıldığı için kombinasyon eksiktir (s.11).",
+      "B": "I doğru olsa da IV yanlıştır; kromozom anomalisiyle seyreden epilepsilerde ek nörolojik bulgular ve fasiyal dismorfizm beklenir. Bu yüzden bu kombinasyon kabul edilemez (s.10).",
+      "C": "II ve III doğrudur, fakat halka kromozom 20'de EEG'de uzamış yüksek voltajlı yavaş dalga görüldüğünü söyleyen I de doğrudur. Eksik kombinasyon olduğu için seçilmez (s.11).",
+      "D": "I, II ve III kromozom yeniden düzenlemelerinin özgül bulgularıyla örtüşür. IV ise bu epilepsilerde beklenen ek nörolojik bulgu ve fasiyal dismorfizmi yok saydığı için yanlıştır; doğru kombinasyon budur (s.10–11).",
+      "E": "II ve III doğru olmakla birlikte IV yanlıştır, çünkü kromozom anomalili epilepside fasiyal dismorfizm beklenir. Ayrıca doğru olan I bu kombinasyona alınmamıştır (s.10)."
+     },
+     "bilgi": [
+      28,
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": [
+      "d3-k2-tbg-005"
+     ],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "hastalarda ilave nörolojik bulgular ve fasiyal dismorfizm bulguları beklenir"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-tbg-005",
+      "ogrenci:A:tbg-s02-b01"
+     ],
+     "s": 10
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q07",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Genetik epilepsilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bulgular olguların çoğunda çocukluk ve adölesan döneminde ortaya çıkar.",
+      "B": "Generalize ve parsiyel olmak üzere iki alt gruba ayrılır.",
+      "C": "Monozigot ikizlerdeki konkordans dizigot ikizlerdekinden düşüktür.",
+      "D": "Ailede bir çocukta epilepsi varsa sonraki çocuk için risk %4-6'dır.",
+      "E": "Genel popülasyondaki sıklığı %0,3-0,5'tir."
+     },
+     "dogru": "C",
+     "aciklama": "Genetik epilepsilerde ikiz konkordansı monozigotlarda %62, dizigotlarda %18'dir; genetik payın yüksek olduğunu gösterir. Bulgular çoğunlukla çocukluk ve adölesanda başlar, sonraki çocuk için risk %4-6'dır (s.8).",
+     "sik_aciklamalari": {
+      "A": "Genetik epilepsilerde bulguların olguların çoğunda çocukluk ve adölesan döneminde başladığı bilinir. İfade doğru olduğu için yanlış aranan soruda seçilmez (s.8).",
+      "B": "Genetik epilepsiler nöbetin yayılımına göre generalize ve parsiyel olmak üzere iki alt gruba ayrılır. Bu sınıflama doğru verildiği için aranan seçenek değildir (s.8).",
+      "C": "İkiz konkordansı aynı genetik yapıyı taşıyan monozigot ikizlerde %62, dizigotlarda %18'dir. Monozigotlarda daha yüksek olduğu için ifade yanlıştır ve doğru cevaptır (s.8).",
+      "D": "Tekrarlama riski genetik danışmanın temelidir; ailede epilepsili bir çocuk varsa sonraki çocuk için risk %4-6 olarak verilir. Değer doğru olduğu için seçilmez (s.8).",
+      "E": "Genetik epilepsinin genel popülasyondaki sıklığı %0,3-0,5'tir. Bu sayı doğru verildiği için yanlış ifade arayan soruda aranan seçenek değildir (s.8)."
+     },
+     "bilgi": [
+      22,
+      19,
+      21,
+      23,
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "İkizlerde epilepsi konkordansı; MZ %62 DZ %18"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 8
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-tbg-005",
+     "soru": "Aşağıdaki kromozom anomalilerinden hangisi tedaviye dirençli epilepsi ile ilişkilidir?",
+     "secenekler": {
+      "A": "Ring kromozom 14",
+      "B": "Translokasyon 14;21",
+      "C": "İnversiyon 5",
+      "D": "Ring kromozom 5",
+      "E": "Marker kromozom 15"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Tek gen epilepsi sendromlarının gen–hastalık eşleşmelerini (CHRNA4, KCNQ2/3, SCN1A, PCDH19, CSTB) ve sendromik epilepside genetik test sırasını (a-CGH, karyotip, WES) açıklar.",
+   "sorular": [
+    {
+     "id": "k2-26-norolojik-hastaliklar-q09",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Voltaj kapılı potasyum kanallarını kodlayan KCNQ2 ve KCNQ3 genlerinin mutasyonları aşağıdaki tablolardan hangisine yol açar?",
+     "secenekler": {
+      "A": "Dravet sendromu",
+      "B": "Benign ailesel neonatal nöbetler",
+      "C": "Unverricht-Lundborg hastalığı",
+      "D": "Lafora hastalığı",
+      "E": "Nöronal seroid lipofuksinoz"
+     },
+     "dogru": "B",
+     "aciklama": "KCNQ2 ve KCNQ3 genleri voltaj kapılı potasyum kanallarını kodlar ve benign ailesel neonatal nöbetlerle ilişkilidir; bu genlerde mutasyon saptanması ayırıcı tanıyı kolaylaştırır (s.13, 20).",
+     "sik_aciklamalari": {
+      "A": "Dravet sendromu infant döneminde başlayan şiddetli miyoklonik epilepsidir. Olguların %90'ından fazlasında voltaj kapılı sodyum kanalını kodlayan SCN1A geninde mutasyon vardır, potasyum kanal genleri sorumlu değildir (s.14–16).",
+      "B": "Benign ailesel neonatal nöbetler yenidoğan döneminde görülen tek gen epilepsi sendromudur. KCNQ2 ve KCNQ3 potasyum kanal genlerinin mutasyonlarıyla ilişkili olduğu için doğru cevaptır (s.13).",
+      "C": "Unverricht-Lundborg hastalığı ilerleyici miyoklonusla giden, OR kalıtılan bir hastalıktır. Sorumlu genlerden CSTB katepsin enzim aktivitesini azaltır; potasyum kanal geniyle tanımlanmaz (s.17).",
+      "D": "Lafora hastalığı epilepsinin bulgulardan yalnız biri olduğu, OR kalıtılan bir hastalıktır. Potasyum kanal geni mutasyonuyla tanımlanan neonatal tabloyla ilgisi yoktur (s.18).",
+      "E": "Nöronal seroid lipofuksinoz da OR kalıtılan ve epilepsinin birçok bulgudan biri olduğu bir hastalıktır. Yenidoğandaki selim ailesel nöbetlerle ilişkili genler KCNQ2 ve KCNQ3'tür (s.18)."
+     },
+     "bilgi": [
+      37,
+      56
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "KCNQ2 ve KCNQ3 genleri voltaj kapılı K+ kanallarını kodlar"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 13
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Dravet sendromu olgularının %90'ından fazlasında mutasyon saptanan gen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "PCDH19",
+      "B": "KCNQ2",
+      "C": "SCN1A",
+      "D": "CSTB",
+      "E": "GABRB3"
+     },
+     "dogru": "C",
+     "aciklama": "Dravet sendromu olgularının %90'ından fazlasında voltaj kapılı sodyum kanalını kodlayan SCN1A geninde mutasyon vardır; nadiren SCN1B, GABRG2 ya da HCN1 mutasyonlarıyla ilişkili olabilir. PCDH19 ilişkili ikinci gendir (s.14, 16).",
+     "sik_aciklamalari": {
+      "A": "PCDH19 kalsiyuma bağımlı hücre adezyonundan sorumlu bir gendir ve Dravet sendromuyla ilişkili ikinci gen olarak bilinir. Olguların büyük çoğunluğundan sorumlu gen ise SCN1A'dır (s.14).",
+      "B": "KCNQ2 voltaj kapılı potasyum kanalını kodlar ve benign ailesel neonatal nöbetlerle ilişkilidir. Dravet sendromunun moleküler nedeni olarak tanımlanmaz (s.13).",
+      "C": "SCN1A voltaj kapılı sodyum kanalını kodlayan gendir ve Dravet sendromu olgularının %90'ından fazlasında mutasyonu saptanır. Mutasyon analizi hastaların %70'ine kesin tanı koydurduğu için doğru cevaptır (s.16, 20).",
+      "D": "CSTB katepsin enzim aktivitesini azaltan ve Unverricht-Lundborg hastalığından sorumlu tutulan gendir. Bu hastalık ilerleyici miyoklonusla giden ayrı bir OR epilepsidir (s.17).",
+      "E": "GABRB3, jeneralize ve absans epilepsi gibi multifaktöriyel bozukluklarda varyasyonları rol oynayan bir gendir. Dravet sendromunun asıl geni olarak geçen SCN1A ile karıştırılmamalıdır (s.20)."
+     },
+     "bilgi": [
+      47,
+      41
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Dravet sendromu vakalarının %90’ından fazlasında SCN1A geninde mutasyon"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 16
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Dravet sendromu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nöbetler genellikle bir yaşından önce başlar.",
+      "B": "İlk nöbetler uzun sürer ve vücudun yarısını etkiler.",
+      "C": "Tedaviye dirençli ve kötü prognozlu bir epilepsidir.",
+      "D": "Çocuklar doğumdan itibaren belirgin gelişim geriliğiyle izlenir.",
+      "E": "Hastaların bir bölümünde genetik tanı konulamaz."
+     },
+     "dogru": "D",
+     "aciklama": "Dravet sendromu infant döneminde başlayan, tedaviye dirençli ve kötü prognozlu şiddetli miyoklonik epilepsidir; çocuklar ilk birkaç yılda normal gelişir, nöbetler arttıkça yaşıtlarının gerisinde kalır. Hastaların %12'sinde genetik tanı konulamaz (s.14–15).",
+     "sik_aciklamalari": {
+      "A": "Dravet sendromunda nöbetler genellikle bir yaşından önce, yani infant döneminde başlar. Bu ifade doğru olduğu için yanlış aranan soruda seçilmez (s.15).",
+      "B": "Dravet sendromunda ilk nöbetler uzun sürer ve vücudun yarısını tutar; sonraki nöbetler diğer tarafa geçebilir. Klinik seyir doğru anlatıldığı için ifade doğrudur (s.15).",
+      "C": "Dravet sendromu şiddetli miyoklonik epilepsidir; tedaviye dirençli ve kötü prognozlu olduğu bilinir. Doğru bir özellik olduğu için aranan seçenek değildir (s.14).",
+      "D": "Dravet sendromlu çocuklar ilk birkaç yılda normal gelişim gösterir; gelişim nöbetler arttıkça ve yaş ilerledikçe geriler. Doğumdan itibaren gerilik söylendiği için ifade yanlıştır ve doğru cevaptır (s.15).",
+      "E": "Dravet sendromunda hastaların %12'sinde genetik tanı konulamamaktadır. Bu bilgi doğru olduğu için yanlış ifade arayan soruda seçilmez (s.14)."
+     },
+     "bilgi": [
+      46,
+      40,
+      43,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "gelişimde yaşıtlarının gerisinde kalmaya başlar"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 15
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İlerleyici miyoklonusla karakterize, otozomal resesif kalıtılan ve CSTB geni aracılığıyla katepsin enzim aktivitesinin azaldığı hastalık hangisidir?",
+     "secenekler": {
+      "A": "Dravet sendromu",
+      "B": "Lafora hastalığı",
+      "C": "Unverricht-Lundborg hastalığı",
+      "D": "MERRF",
+      "E": "Benign ailesel neonatal nöbetler"
+     },
+     "dogru": "C",
+     "aciklama": "Unverricht-Lundborg hastalığı ilerleyici miyoklonusla karakterize, OR kalıtılan bir hastalıktır; etyolojide yer alan CSTB katepsin enzim aktivitesini azaltır (s.17).",
+     "sik_aciklamalari": {
+      "A": "Dravet sendromu infantta başlayan şiddetli miyoklonik epilepsidir ve en sık SCN1A sodyum kanal geni mutasyonuyla oluşur. Katepsin aktivitesini azaltan CSTB ile tanımlanmaz (s.14).",
+      "B": "Lafora hastalığı da OR kalıtılan ve epilepsinin bulgulardan biri olduğu bir hastalıktır. Ancak CSTB üzerinden katepsin aktivitesinin azalması bu hastalık için tanımlanmamıştır (s.18).",
+      "C": "Unverricht-Lundborg hastalığı ilerleyici miyoklonusla giden, OR kalıtılan bir epilepsidir ve CSTB katepsin aktivitesini azaltır. Tarifle örtüştüğü için doğru cevaptır (s.17).",
+      "D": "MERRF düzensiz kırmızı liflerle giden miyoklonik epilepsidir ve mitokondriyal kalıtılır. OR kalıtım ve CSTB geni bu hastalığa ait değildir (s.18).",
+      "E": "Benign ailesel neonatal nöbetler KCNQ2 ve KCNQ3 potasyum kanal genleriyle ilişkili, yenidoğanda görülen bir tablodur. İlerleyici miyoklonus ve katepsin bozukluğu içermez (s.13)."
+     },
+     "bilgi": [
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "progrese myoklonus ile karakterize bir hastalıktır"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 17
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q14",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Dismorfik yüz, zihinsel yetersizlik ve otizmin eşlik ettiği sendromik epilepsi olgusunda yapılacak ilk genetik test hangisidir?",
+     "secenekler": {
+      "A": "Karyotip analizi",
+      "B": "Tüm ekzom dizileme (WES)",
+      "C": "A-CGH",
+      "D": "SCN1A dizi analizi",
+      "E": "FMR1 CGG tekrar analizi"
+     },
+     "dogru": "C",
+     "aciklama": "Dismorfik yüz, zihinsel yetersizlik ve otizm gibi eşlik eden durumların olduğu sendromik epilepside ilk genetik test a-CGH'dir; yapılamıyorsa karyotip yapılır, aday genler tüm ekzom dizilemeyle tanımlanabilir (s.19).",
+     "sik_aciklamalari": {
+      "A": "Karyotip analizi kromozomların sayı ve yapısını mikroskopta değerlendirir. Sendromik epilepside a-CGH yapılamıyorsa başvurulan ikinci seçenektir, ilk test değildir (s.19).",
+      "B": "Tüm ekzom dizileme bütün genlerin kodlayan bölgelerini okuyarak aday genleri tanımlar. Özellikle ensefalopatik epilepsilerin mekanizmasını aydınlatmada kullanılır; ilk basamak test olarak önerilmez (s.19).",
+      "C": "A-CGH genom boyunca mikrodelesyon, mikroduplikasyon ve kopya sayısı değişikliklerini tarayan testtir. Sendromik epilepside yapılacak ilk genetik test olduğu için doğru cevaptır (s.19).",
+      "D": "SCN1A dizi analizi Dravet sendromundan şüphelenildiğinde yapılan tek gen testidir ve olguların %70'ine kesin tanı koydurur. Dismorfik bulgulu sendromik epilepside ilk test değildir (s.20).",
+      "E": "FMR1 CGG tekrar analizi frajil X sendromu ve FXTAS gibi FMR1 tekrar hastalıklarında kullanılır. Sendromik epilepsi için önerilen ilk genetik test bu değildir (s.49)."
+     },
+     "bilgi": [
+      53,
+      54
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Yapılacak ilk genetik test; a-CGH olmalıdır"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b01"
+     ],
+     "s": 19
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q11",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kalsiyuma bağımlı hücre adezyonundan sorumlu olan ve Dravet sendromuyla ilişkili ikinci gen olarak bilinen gen hangisidir?",
+     "secenekler": {
+      "A": "SCN1A",
+      "B": "PCDH19",
+      "C": "KCNQ3",
+      "D": "SLC2A1",
+      "E": "CSTB"
+     },
+     "dogru": "B",
+     "aciklama": "PCDH19 geni kalsiyuma bağımlı hücre adezyonundan sorumludur ve Dravet sendromuyla ilişkili ikinci gendir; birinci ve en sık gen voltaj kapılı sodyum kanalını kodlayan SCN1A'dır (s.14).",
+     "sik_aciklamalari": {
+      "A": "SCN1A voltaj kapılı sodyum kanalını kodlayan ve Dravet sendromunun en sık nedeni olan gendir. Hücre adezyonu değil iyon kanalı işlevi gördüğü için tarif edilen ikinci gen değildir (s.14).",
+      "B": "PCDH19 kalsiyuma bağımlı hücre adezyonunu sağlayan bir protein kodlar. Dravet sendromuyla ilişkilendirilen ikinci gen olduğu için doğru cevaptır (s.14).",
+      "C": "KCNQ3 voltaj kapılı potasyum kanalını kodlar ve KCNQ2 ile birlikte benign ailesel neonatal nöbetlerle ilişkilidir. Hücre adezyonu işleviyle tanımlanmaz (s.13).",
+      "D": "SLC2A1, jeneralize ve absans epilepsi gibi multifaktöriyel bozukluklarda varyasyonları etkili olan genlerden biridir. Dravet sendromunun ikinci geni olarak anılmaz (s.20).",
+      "E": "CSTB katepsin enzim aktivitesini azaltan ve Unverricht-Lundborg hastalığından sorumlu gendir. İlerleyici miyoklonusla giden bu OR hastalık Dravet sendromundan farklıdır (s.17)."
+     },
+     "bilgi": [
+      42,
+      41
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "PCDH19 geni, Ca +2 bağımlı hücre adezyonundan sorumlu"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 14
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q15",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Sendromik epilepside a-CGH yapılamadığında mikrodelesyon, duplikasyon ve kopya sayısı değişikliklerini araştırmak için hangi test yapılmalıdır?",
+     "secenekler": {
+      "A": "Tüm ekzom dizileme",
+      "B": "Karyotip analizi",
+      "C": "SCN1A mutasyon analizi",
+      "D": "KCNQ2 ve KCNQ3 dizi analizi",
+      "E": "Mitokondriyal 8344 mutasyon analizi"
+     },
+     "dogru": "B",
+     "aciklama": "Sendromik epilepside ilk genetik test a-CGH'dir; a-CGH yapılamıyorsa karyotip analizi yapılmalıdır. Bu testlerle mikrodelesyon, duplikasyon ve kopya sayısı değişiklikleri saptanabilir (s.19).",
+     "sik_aciklamalari": {
+      "A": "Tüm ekzom dizileme genlerin kodlayan bölgelerindeki nokta değişikliklerini okuyarak aday genleri tanımlar. Kopya sayısı araştırmasında a-CGH'nin yerine kullanılan test ise karyotiptir (s.19).",
+      "B": "Karyotip analizi kromozomların sayı ve yapısını değerlendiren klasik sitogenetik testtir. A-CGH yapılamadığında sendromik epilepside önerilen test olduğu için doğru cevaptır (s.19).",
+      "C": "SCN1A mutasyon analizi Dravet sendromunda kullanılan ve hastaların %70'ine kesin tanı koyduran tek gen testidir. Kromozom düzeyindeki kopya sayısı değişikliklerini araştırmaz (s.20).",
+      "D": "KCNQ2 ve KCNQ3 dizi analizi benign ailesel neonatal nöbetlerin ayırıcı tanısını kolaylaştıran tek gen testidir. Sendromik epilepside kromozom düzeyinde araştırma yapmaz (s.20).",
+      "E": "Mitokondriyal 8344 mutasyon analizi MERRF olgularının çoğunda saptanan değişikliği arar. Mitokondriyal hastalıkta kullanılan bu test kromozomal kopya sayısını göstermez (s.54)."
+     },
+     "bilgi": [
+      54,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Bu yapılamıyorsa karyotip analizi yapılmalı"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b01"
+     ],
+     "s": 19
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi beyin anomalisi ya da metabolik hastalık yapan ve birincil semptomu epilepsi olan tek gen bozukluklarındandır?",
+     "secenekler": {
+      "A": "Galaktozemi",
+      "B": "Tay-Sachs hastalığı",
+      "C": "Peroksizomal bozukluklar",
+      "D": "Tüberoz skleroz",
+      "E": "Pendred sendromu"
+     },
+     "dogru": "D",
+     "aciklama": "Beyin anomalisi ya da metabolik hastalık yapan bazı tek gen bozukluklarında birincil semptom epilepsidir: tüberoz skleroz, mukopolisakkaridoz ve lökodistrofiler. Galaktozemi, Tay-Sachs ve peroksizomal bozukluklarda nöbetler başka semptomlarla birlikte görülür (s.20).",
+     "sik_aciklamalari": {
+      "A": "Galaktozemi bir metabolik hastalıktır ve nöbetler bu tabloda başka semptomlarla birlikte görülür. Epilepsinin birincil semptom olduğu grupta sayılmaz (s.20).",
+      "B": "Tay-Sachs hastalığı nöbetlerin diğer nörolojik bulgularla birlikte görüldüğü bir depo hastalığıdır. Nöbet burada eşlik eden bir semptom olduğu için birincil semptomu epilepsi olan grupta yer almaz (s.20).",
+      "C": "Peroksizomal bozukluklar nöbetlere başka semptomların eşlik ettiği metabolik hastalıklardır. Bu nedenle epilepsinin birincil semptom olduğu grupta yer almaz (s.20).",
+      "D": "Tüberoz skleroz beyin, böbrek, deri ve kalpte hamartomlarla giden OD bir tek gen bozukluğudur. Birincil semptomunun epilepsi olduğu bozukluklar arasında sayıldığı için doğru cevaptır (s.20, 63).",
+      "E": "Pendred sendromu konjenital işitme kaybı ve guatrla seyreden OR geçişli bir sendromdur. Ana bulgusu işitme kaybı olduğu için birincil semptomu epilepsi olan gruba girmez (s.80)."
+     },
+     "bilgi": [
+      58,
+      59
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Bunların arasında tüberoz skleroz, mukopolisakkaridoz ve lökodistrofiler sayılabilir"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b01"
+     ],
+     "s": 20
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q17",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Jeneralize ve absans epilepsi gibi multifaktöriyel bozukluklarda varyasyonları etkili olabilen genler aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "SCN1A ve PCDH19",
+      "B": "KCNQ2 ve KCNQ3",
+      "C": "SLC2A1 ve GABRB3",
+      "D": "CSTB ve SCN1B",
+      "E": "TSC1 ve TSC2"
+     },
+     "dogru": "C",
+     "aciklama": "Jeneralize ve absans epilepsi gibi multifaktöriyel bozuklukların nedenleri tam bilinmese de SLC2A1 ve GABRB3 gibi genlerdeki varyasyonlar bu hastalıklarda etkili olabilir (s.20).",
+     "sik_aciklamalari": {
+      "A": "SCN1A ve PCDH19 Dravet sendromuyla ilişkili birinci ve ikinci genlerdir. Tek gen kökenli şiddetli miyoklonik epilepsiyi açıklar, multifaktöriyel bozuklukları değil (s.14).",
+      "B": "KCNQ2 ve KCNQ3 voltaj kapılı potasyum kanallarını kodlar ve benign ailesel neonatal nöbetlerin genleridir. Mendel kalıtımlı bir tabloya ait oldukları için seçilmez (s.13).",
+      "C": "SLC2A1 ve GABRB3 jeneralize ve absans epilepsi gibi multifaktöriyel bozukluklarda varyasyonları rol oynayan genlerdir. Tarif edilen grupla örtüştüğü için doğru cevaptır (s.20).",
+      "D": "CSTB Unverricht-Lundborg hastalığıyla, SCN1B ise Dravet sendromunun nadir nedenleriyle ilişkilidir. Bu genler tek gen hastalıklarına ait olduğu için seçilmez (s.16–17).",
+      "E": "TSC1 ve TSC2 hamartin ve tuberin proteinlerini kodlar ve tüberoz sklerozun genleridir. Bu hastalıkta epilepsi birincil semptomdur ama kalıtım tek genlidir (s.64)."
+     },
+     "bilgi": [
+      60,
+      27
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "SLC2A1 ve GABRB3 gibi genlerdeki varyasyonların bu hastalıklara yatkınlığa neden olduğunu"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 20
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Ataksiyi tanımlar, herediter ataksileri kalıtıma göre sınıflar; SCA tiplerini gen, lokus, tekrar türü, tekrar aralığı, başlangıç yaşı ve ayırıcı bulgusuyla karşılaştırır ve tekrarın gendeki yerinin mekanizmadaki önemini yorumlar.",
+   "sorular": [
+    {
+     "id": "k2-26-norolojik-hastaliklar-q18",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Ataksilerin sınıflandırıldığı dört ana grup arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Herediter ataksiler",
+      "B": "Non-herediter ataksiler",
+      "C": "Konjenital ataksiler",
+      "D": "Sporadik ataksiler",
+      "E": "Fakomatoz ataksiler"
+     },
+     "dogru": "E",
+     "aciklama": "Ataksiler herediter, non-herediter, konjenital ve sporadik olmak üzere dört grupta sınıflanır; herediter ataksiler de kalıtım kalıbına göre OD, OR, X'e bağlı ve mitokondriyal olarak ayrılır (s.22–23).",
+     "sik_aciklamalari": {
+      "A": "Herediter ataksiler yavaş ilerleyen, serebellar atrofinin eşlik ettiği kalıtsal tablolardır. Ataksi sınıflamasının dört grubundan biri olduğu için seçilmez (s.22–23).",
+      "B": "Non-herediter ataksiler kalıtsal olmayan, edinsel nedenlerle gelişen ataksilerdir. Dört ana gruptan biri olarak ataksi sınıflamasında yer alır (s.22).",
+      "C": "Konjenital ataksiler doğuştan var olan ataksilerdir ve sınıflamanın dört grubundan birini oluşturur. Listede yer aldığı için aranan seçenek değildir (s.22).",
+      "D": "Sporadik ataksiler ailede başka bir olgu bulunmadan ortaya çıkan ataksilerdir. Ataksi sınıflamasının dördüncü grubunu oluşturduğu için aranan seçenek değildir (s.22).",
+      "E": "Fakomatozlar santral sinir sistemi, göz ve deri lezyonlarıyla giden ayrı bir multisistemik hastalık grubudur. Ataksi sınıflamasında bir grup adı olarak kullanılmadığı için doğru cevaptır (s.22, 57)."
+     },
+     "bilgi": [
+      63,
+      65
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Ataksi Sınıflandırma o1. Herediter"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 22
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q19",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Spinoserebellar ataksi tip 8'de (SCA8) artış gösteren trinükleotid tekrar türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "CAG",
+      "B": "CTG",
+      "C": "GAA",
+      "D": "CGG",
+      "E": "ATTCT"
+     },
+     "dogru": "B",
+     "aciklama": "SCA'ların çoğunda ataksin genindeki CAG tekrarı artar ve poliglutamin hastalığı oluşur; SCA tip 8'de ise CTG tekrar artışı vardır ve tekrar 3' UTR bölgesindedir (s.25, 31).",
+     "sik_aciklamalari": {
+      "A": "CAG tekrarı glutamini kodlar; SCA tip 1, 2, 3, 6, 7, 12 ve 17'de bu tekrarın artışı poliglutamin birikimine yol açar. SCA8 bu gruptan farklı bir tekrar taşıdığı için seçilmez (s.25).",
+      "B": "CTG tekrarı SCA8'de ATXN8 geninde artan trinükleotid dizisidir ve 80-800 tekrar patojeniktir. SCA tipleri arasında bu tekrarla tanımlanan tip SCA8 olduğu için doğru cevaptır (s.25, 31).",
+      "C": "GAA tekrarı Friedreich ataksisinde frataksin geninin birinci intronunda artan dizidir. OR kalıtılan bu ataksiye aittir, SCA8'in tekrar türü değildir (s.37).",
+      "D": "CGG tekrarı FMR1 geninin 5' UTR bölgesinde bulunur; premutasyon FXTAS'a, tam mutasyon frajil X sendromuna yol açar. SCA8 ile ilişkili değildir (s.49).",
+      "E": "ATTCT pentanükleotid tekrarıdır ve SCA10'da ATXN10 geninin intronunda artar. Beşli bir tekrar olduğu için SCA8'deki trinükleotid artışıyla karıştırılmamalıdır (s.25, 32)."
+     },
+     "bilgi": [
+      71,
+      87
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "SCA tip 8’de CTG tekrar artışı söz konusu"
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13",
+      "ogrenci:A:tbg-s02-b05"
+     ],
+     "s": 25
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q20",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Horizontal nistagmus, spastisite ve azalmış vibrasyon duyusuyla dördüncü dekatta başlayan, 13q21'deki ataksin 8 geninde tekrar artışıyla oluşan ataksi hangisidir?",
+     "secenekler": {
+      "A": "SCA1",
+      "B": "SCA3 (Machado-Joseph hastalığı)",
+      "C": "SCA6",
+      "D": "SCA8",
+      "E": "SCA17"
+     },
+     "dogru": "D",
+     "aciklama": "SCA tip 8, 13q21'de yerleşik ATXN8 geninde CTG tekrar artışıyla oluşur; bulgular dördüncü dekatta başlar, horizontal nistagmus, spastisite ve azalmış vibrasyon duyusu tipiktir ve seyir yavaş ilerleyicidir (s.31).",
+     "sik_aciklamalari": {
+      "A": "SCA1, 6q23'teki ATXN1 geninde CAG tekrar artışıyla oluşur; serebellar bulgular, yürüme zorluğu ve okülomotor apraksi öne çıkar. Ataksin 8 geni ve CTG tekrarı bu tipe ait değildir (s.26).",
+      "B": "SCA3 ya da Machado-Joseph hastalığı 14q32'deki ATXN3 geninde CAG artışıyla oluşur; spastisite ve miks polinöropati tipiktir. Spastisite ortak olsa da gen ve lokus farklıdır (s.28).",
+      "C": "SCA6, 19p13'teki CACNA1A geninde CAG artışıyla oluşur ve 5-6 dekatta en geç başlayan tiptir. Nistagmus görülebilse de gen ve başlangıç yaşı tarifle uyuşmaz (s.29).",
+      "D": "SCA8 ataksin 8 geninde CTG tekrar artışıyla oluşan, dördüncü dekatta başlayan tiptir. Horizontal nistagmus, spastisite ve azalmış vibrasyon duyusu bu tipin tipik bulguları olduğu için doğru cevaptır (s.31).",
+      "E": "SCA17, 6q27'deki TBP geninde CAG artışıyla oluşan ve Huntington koresine benzeyen tek SCA tipidir. Demans ve ekstrapiramidal bulgular öne çıkar; tarif edilen tablo bu değildir (s.34)."
+     },
+     "bilgi": [
+      87,
+      88
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13"
+     ],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Ataksin 8(ATXN8) geni"
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13",
+      "ogrenci:A:tbg-s02-b05"
+     ],
+     "s": 31
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q21",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki spinoserebellar ataksi tiplerinden hangisinde CAG tekrar artışına bağlı poliglutamin artışı görülmez?",
+     "secenekler": {
+      "A": "SCA1",
+      "B": "SCA2",
+      "C": "SCA6",
+      "D": "SCA7",
+      "E": "SCA8"
+     },
+     "dogru": "E",
+     "aciklama": "SCA tip 1, 2, 3, 6, 7, 12 ve 17'de CAG tekrar artışına bağlı glutamin tekrar artışı vardır ve bunlar poliglutamin hastalık grubunda yer alır; SCA tip 8'de ise CTG tekrar artışı söz konusudur (s.24–25).",
+     "sik_aciklamalari": {
+      "A": "SCA1, ATXN1 geninde CAG trinükleotid tekrar artışıyla oluşur; 41'in üzerindeki tekrar patojeniktir. Poliglutamin grubunda yer aldığı için aranan seçenek değildir (s.25–26).",
+      "B": "SCA2, ATXN2 geninde CAG tekrar artışıyla oluşur ve tremor, miyoklonus, sakkadik yavaşlama görülür. CAG artışı taşıdığı için poliglutamin hastalıklarındandır (s.25, 27).",
+      "C": "SCA6, CACNA1A geninde CAG tekrar artışıyla oluşan ve en geç başlayan SCA tipidir. Kodlayan ekzondaki CAG artışı nedeniyle poliglutamin grubundadır (s.25, 29).",
+      "D": "SCA7, ATXN7 geninde CAG tekrar artışıyla oluşur; optik atrofi ve pigmenter retinopati gibi göz bulgularıyla ayrılır. CAG artışı taşıdığı için seçilmez (s.25, 30).",
+      "E": "SCA8 ataksin 8 geninde CTG tekrar artışıyla oluşur ve tekrar genin 3' UTR bölgesindedir. CAG'ye bağlı poliglutamin artışı göstermediği için doğru cevaptır (s.25)."
+     },
+     "bilgi": [
+      70,
+      71,
+      73
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "SCA tip 1,2,3,6,7,12,17’de CAG tekrar sayısı artışına bağlı"
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13",
+      "ogrenci:A:tbg-s02-b05"
+     ],
+     "s": 25
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Ataksin 10 geninin dokuzuncu intronunda pentanükleotid tekrar artışıyla oluşan ve serebellar bulgulara nöbetlerin eşlik edebildiği spinoserebellar ataksi tipi hangisidir?",
+     "secenekler": {
+      "A": "SCA2",
+      "B": "SCA7",
+      "C": "SCA10",
+      "D": "SCA12",
+      "E": "SCA17"
+     },
+     "dogru": "C",
+     "aciklama": "SCA tip 10, 22q13'te yerleşik ATXN10 geninin dokuzuncu intronunda pentanükleotid (ATTCT) tekrar artışıyla oluşur; bulgular dördüncü dekatta başlar ve serebellar bulgulara ek olarak nöbetler görülebilir (s.32).",
+     "sik_aciklamalari": {
+      "A": "SCA2 ataksin 2 geninin kodlayan bölgesinde CAG tekrar artışıyla oluşur; tremor, miyoklonus ve sakkadik göz hareketlerinde yavaşlama sık görülür. İntronik beşli tekrar bu tipe ait değildir (s.27).",
+      "B": "SCA7 ataksin 7 geninde CAG tekrar artışıyla oluşan ve göz bulgularıyla ayrılan tiptir. Optik atrofi ve pigmenter retinopati görülür; nöbetle tanımlanmaz (s.30).",
+      "C": "SCA10 ataksin 10 geninin dokuzuncu intronundaki pentanükleotid tekrar artışıyla oluşur. Serebellar bulgulara nöbetlerin eşlik edebilmesi bu tipin özelliği olduğu için doğru cevaptır (s.32).",
+      "D": "SCA12, PPP2R2B geninin 5' UTR bölgesinde CAG tekrar artışıyla oluşur; baş ve ellerde tremor, akinezi ve demans görülür. İntronik beşli tekrar taşımaz (s.33).",
+      "E": "SCA17, TBP geninde CAG tekrar artışıyla oluşan ve Huntington koresine benzeyen tiptir. Tekrar kodlayan bölgededir; intronik pentanükleotid tekrarı söz konusu değildir (s.34)."
+     },
+     "bilgi": [
+      89,
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "İntron 9’da pentanükleotid tekrar artışı"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b05"
+     ],
+     "s": 32
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q23",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "En sık gözlenen spinoserebellar ataksi tipleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "SCA1",
+      "B": "SCA3",
+      "C": "SCA6",
+      "D": "SCA10",
+      "E": "SCA17"
+     },
+     "dogru": "E",
+     "aciklama": "En sık gözlenen SCA tipleri SCA 1, 2, 3, 6, 7 ve 10'dur; SCA17 TBP geninde CAG artışıyla oluşan ve Huntington koresine benzeyen tip olarak ayrı tanımlanır (s.25, 34).",
+     "sik_aciklamalari": {
+      "A": "SCA1 ataksin 1 geninde CAG artışıyla oluşur ve en sık görülen SCA tiplerinden biridir. Listede yer aldığı için aranan seçenek değildir (s.25).",
+      "B": "SCA3 Machado-Joseph hastalığı olarak da bilinir ve en sık gözlenen SCA tipleri arasında sayılır. Bu nedenle seçilmez (s.25, 28).",
+      "C": "SCA6 kalsiyum kanalı geni CACNA1A'daki CAG artışıyla oluşur ve sık görülen tiplerdendir. Listede yer aldığı için aranan seçenek değildir (s.25, 29).",
+      "D": "SCA10 ataksin 10 genindeki intronik beşli tekrar artışıyla oluşur. CAG grubunun dışında olsa da en sık gözlenen tipler arasında sayıldığı için seçilmez (s.25).",
+      "E": "SCA17 TBP geninde CAG tekrar artışıyla oluşan, demans ve ekstrapiramidal bulgularla Huntington koresine benzeyen tiptir. En sık gözlenen tipler listesinde yer almadığı için doğru cevaptır (s.25, 34)."
+     },
+     "bilgi": [
+      72,
+      94
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "SCA tip 1,2,3,6,7 ve 10"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b05",
+      "profil"
+     ],
+     "s": 25
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q25",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "19p13'teki CACNA1A geninde CAG tekrar artışıyla oluşan ve bulguları SCA tipleri arasında en geç başlayan tip hangisidir?",
+     "secenekler": {
+      "A": "SCA6",
+      "B": "SCA1",
+      "C": "SCA2",
+      "D": "SCA7",
+      "E": "SCA10"
+     },
+     "dogru": "A",
+     "aciklama": "SCA tip 6, 19p13'te yerleşik CACNA1A geninde CAG tekrar artışıyla oluşur; bulgular 5-6 dekatta, yani SCA tipleri arasında en geç başlar ve dizartri, göz hareketlerinde kısıtlılık ve nistagmus sık görülür (s.29).",
+     "sik_aciklamalari": {
+      "A": "SCA6 bir kalsiyum kanalı geni olan CACNA1A'daki CAG tekrar artışıyla oluşur. Bulguları beşinci ve altıncı dekatta, diğer tiplerden daha geç başladığı için doğru cevaptır (s.29).",
+      "B": "SCA1 ataksin 1 geninde CAG artışıyla oluşur ve bulgular genellikle dördüncü dekatta ortaya çıkar. Tekrar sayısı arttıkça daha erken başlar; en geç başlayan tip değildir (s.26).",
+      "C": "SCA2 ataksin 2 geninde CAG artışıyla oluşur; tremor, miyoklonus, titübasyon ve sakkadik göz hareketlerinde yavaşlama görülür. Kalsiyum kanalı geni CACNA1A ile ilişkili değildir (s.27).",
+      "D": "SCA7 ataksin 7 genindeki CAG artışıyla oluşur ve optik atrofi ile pigmenter retinopati gibi göz bulgularıyla ayrılır. Gen ve başlangıç özelliği tarifle uyuşmaz (s.30).",
+      "E": "SCA10 ataksin 10 geninin intronundaki beşli tekrar artışıyla oluşur ve dördüncü dekatta nöbetlerle başlayabilir. CAG artışı taşımadığı için seçilmez (s.32)."
+     },
+     "bilgi": [
+      82,
+      83
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Tekrar sayısı; 18-20 normal"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 29
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q24",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "CAG tekrarının genin kodlayan bölgesinde değil 5' UTR bölgesinde bulunduğu spinoserebellar ataksi tipi hangisidir?",
+     "secenekler": {
+      "A": "SCA1",
+      "B": "SCA3",
+      "C": "SCA6",
+      "D": "SCA12",
+      "E": "SCA17"
+     },
+     "dogru": "D",
+     "aciklama": "SCA tip 12, 5q31'de yerleşik PPP2R2B geninde CAG tekrar artışıyla oluşur ve tekrar genin 5' UTR bölgesindedir; SCA1, 2, 3, 6, 7 ve 17'de CAG tekrarı kodlayan ekzonda yer alır ve poliglutamin üretir (s.25, 33).",
+     "sik_aciklamalari": {
+      "A": "SCA1'de CAG tekrarı ataksin 1 geninin kodlayan ekzonundadır ve poliglutamin dizisine çevrilir. Tekrar 5' UTR'de bulunmadığı için seçilmez (s.25).",
+      "B": "SCA3'te CAG tekrarı ataksin 3 geninin kodlayan bölgesindedir; bu nedenle Machado-Joseph hastalığı poliglutamin grubunda yer alır. 5' UTR'deki tekrar başka bir tipe aittir (s.25).",
+      "C": "SCA6'da CAG tekrarı CACNA1A geninin kodlayan ekzonundadır. Bu tekrar proteinde glutamin dizisi oluşturduğu için 5' UTR'deki tekrardan ayrılır (s.25).",
+      "D": "SCA12, PPP2R2B geninin 5' UTR bölgesindeki CAG tekrar artışıyla oluşur; tekrar proteine çevrilmez. Baş ve ellerde tremor, akinezi ve demansla seyreden bu tip doğru cevaptır (s.33).",
+      "E": "SCA17'de CAG tekrarı TBP geninin kodlayan ekzonundadır ve poliglutamin oluşturur. Huntington koresine benzeyen bu tipte tekrar 5' UTR'de yer almaz (s.25)."
+     },
+     "bilgi": [
+      91,
+      73
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "PPP2R2B geni, CAG tekrar artışı"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 33
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q26",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "SCA1'de ataksin 1 genindeki CAG tekrar sayısı ile klinik tablo arasındaki ilişki için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tekrar sayısı arttıkça hastalık daha erken başlar ve daha ağır seyreder.",
+      "B": "Tekrar sayısı arttıkça hastalık daha geç ve daha hafif başlar.",
+      "C": "Tekrar sayısı başlangıç yaşını etkilemez, yalnız seyri belirler.",
+      "D": "Altı ile otuz dokuz arasındaki tekrar sayısı patojeniktir.",
+      "E": "Tekrar genin 5' UTR bölgesinde olduğu için protein yapısı değişmez."
+     },
+     "dogru": "A",
+     "aciklama": "SCA tip 1, 6q23'teki ATXN1 geninde CAG trinükleotid tekrar artışıyla oluşur; 6-39 tekrar normal, 41'in üzeri patojeniktir. Tekrar sayısı ne kadar yüksekse hastalık o kadar erken başlar ve klinik tablo o kadar ağır olur (s.26).",
+     "sik_aciklamalari": {
+      "A": "SCA1'de tekrar sayısı yükseldikçe hastalık daha erken başlar ve klinik tablo ağırlaşır. Tekrar genişlemesi hastalıklarında görülen bu ilişki doğru verildiği için doğru cevaptır (s.26).",
+      "B": "Bu seçenek ilişkinin yönünü ters çevirir. SCA1'de tekrar sayısının artışı başlangıcı öne çeker ve tabloyu ağırlaştırır; gecikme ve hafifleme beklenmez (s.26).",
+      "C": "Tekrar sayısı SCA1'de hem başlangıç yaşını hem de ağırlığı belirler. Başlangıç yaşını etkilemediğini söyleyen ifade bu ilişkiyle çelişir (s.26).",
+      "D": "Altı ile otuz dokuz arasındaki tekrar sayısı SCA1'de normal aralıktır. Patojenik eşik 41'in üzeridir; bu nedenle ifade sayıları karıştırır (s.26).",
+      "E": "SCA1'de CAG tekrarı genin kodlayan ekzonunda bulunur ve proteinde poliglutamin dizisi oluşturur. Tekrarın 5' UTR'de bulunduğu tip SCA12'dir (s.25)."
+     },
+     "bilgi": [
+      75,
+      74
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Tekrar sayısı ne kadar yüksekse hastalık başlama yaşı o kadar erkendir ve klinik tablo ağırdır"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 26
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q27",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Spinoserebellar ataksi tipi ile sorumlu gen eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "SCA1 – ATXN1",
+      "B": "SCA2 – ATXN2",
+      "C": "SCA6 – CACNA1A",
+      "D": "SCA12 – PPP2R2B",
+      "E": "SCA17 – ATXN7"
+     },
+     "dogru": "E",
+     "aciklama": "SCA1 ATXN1 (6q23), SCA2 ATXN2 (12q24), SCA6 CACNA1A (19p13), SCA12 PPP2R2B (5q31) ve SCA17 TBP (6q27) genindeki tekrar artışıyla oluşur; ATXN7 ise SCA7'nin genidir (s.26–34).",
+     "sik_aciklamalari": {
+      "A": "SCA1, 6q23'te yerleşik ataksin 1 (ATXN1) genindeki CAG tekrar artışıyla oluşur. Eşleştirme doğru olduğu için aranan seçenek değildir (s.26).",
+      "B": "SCA2, 12q24'te yerleşik ataksin 2 (ATXN2) genindeki CAG tekrar artışıyla oluşur. Tip ile gen doğru eşleştirildiği için aranan seçenek değildir (s.27).",
+      "C": "SCA6, 19p13'te yerleşik CACNA1A genindeki CAG tekrar artışıyla oluşur ve en geç başlayan tiptir. Eşleştirme doğru olduğu için seçilmez (s.29).",
+      "D": "SCA12, 5q31'de yerleşik PPP2R2B geninde 5' UTR'deki CAG tekrar artışıyla oluşur. Eşleştirme doğru verildiği için aranan seçenek değildir (s.33).",
+      "E": "SCA17, 6q27'de yerleşik TBP genindeki CAG tekrar artışıyla oluşur ve Huntington koresine benzer. ATXN7 SCA7'nin geni olduğu için eşleştirme yanlıştır ve doğru cevaptır (s.30, 34)."
+     },
+     "bilgi": [
+      70,
+      95,
+      74,
+      77,
+      82,
+      91,
+      85
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "SCA tip 1,2,3,6,7,12,17’de CAG tekrar sayısı artışına bağlı"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 25
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13",
+     "soru": "CTG üçlü tekrar artışının görüldüğü spinoserebellar ataksi (SCA) tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "SCA2",
+      "B": "SCA6",
+      "C": "SCA8",
+      "D": "SCA1",
+      "E": "SCA7"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "OR, X'e bağlı ve mitokondriyal ataksileri (Friedreich, ataksi telenjiektazi, AOA1/2, FXTAS, MERRF, NARP ve diğerleri) gen, mekanizma ve ayırıcı laboratuvar bulgularıyla açıklar; ataksi öyküsünde sorgulanacakları sıralar.",
+   "sorular": [
+    {
+     "id": "k2-26-norolojik-hastaliklar-q28",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Otozomal resesif ataksilerin en sık görülen tipi olan ve genellikle 20 yaşından önce bulgu veren hastalık hangisidir?",
+     "secenekler": {
+      "A": "Ataksi telenjiektazi",
+      "B": "Friedreich ataksisi",
+      "C": "Marinesco-Sjögren sendromu",
+      "D": "Ataksi okülomotor apraksi 1",
+      "E": "Charlevoix-Saguenay spastik ataksisi"
+     },
+     "dogru": "B",
+     "aciklama": "Friedreich ataksisi OR ataksilerin en sık görülen tipidir ve genellikle 20 yaşından önce bulgu verir; temel patolojisi dorsal kök gangliyonlarındaki defekte bağlı duyusal sinir kaybı ve arka kordon dejenerasyonudur (s.37).",
+     "sik_aciklamalari": {
+      "A": "Ataksi telenjiektazi ATM genindeki mutasyonlarla gelişen ve ataksiye immün yetmezlik ile kanser riskinin eklendiği OR bir sendromdur. OR ataksiler arasında yer alsa da en sık tip olarak tanımlanmaz (s.40).",
+      "B": "Friedreich ataksisi frataksin genindeki GAA tekrar artışıyla oluşan OR ataksidir. OR ataksilerin en sık tipi olduğu ve genellikle 20 yaşından önce başladığı için doğru cevaptır (s.37).",
+      "C": "Marinesco-Sjögren sendromu SIL1 geni mutasyonlarıyla oluşan, ataksi, katarakt ve zihinsel yetersizlikle giden OR bir hastalıktır. İnfantil dönemde başlar ama en sık tip değildir (s.47).",
+      "D": "Ataksi okülomotor apraksi 1 APTX geni mutasyonlarıyla oluşan, 2-16 yaşta başlayan OR ataksidir. Oküler apraksi ve arefleksiyle ayrılır, ancak OR ataksilerin en sık tipi Friedreich ataksisidir (s.44).",
+      "E": "Charlevoix-Saguenay spastik ataksisi SACS geni mutasyonlarıyla oluşur ve alt ekstremite spastisitesiyle seyreder. OR ataksiler arasında yer alsa da en sık görülen tip değildir (s.46)."
+     },
+     "bilgi": [
+      100,
+      98
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "OR ataksiler içerisinde en sık gözlenen tipi"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 37
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q29",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Friedreich ataksisinde frataksin (FXN) geninin hangi bölgesinde hangi tekrar artışı görülür?",
+     "secenekler": {
+      "A": "Birinci intronda GAA tekrarı",
+      "B": "Kodlayan ekzonda CAG tekrarı",
+      "C": "5' UTR bölgesinde CGG tekrarı",
+      "D": "Dokuzuncu intronda ATTCT tekrarı",
+      "E": "3' UTR bölgesinde CTG tekrarı"
+     },
+     "dogru": "A",
+     "aciklama": "Friedreich ataksisinde frataksin (FXN) geninin birinci intronunda GAA tekrar artışı vardır; azalan frataksin proteini serbest radikal birikimine, nörodejenerasyona ve kardiyopatiye yol açar ve hastalıkta antisipasyon görülür (s.37).",
+     "sik_aciklamalari": {
+      "A": "GAA tekrarı Friedreich ataksisinde frataksin geninin birinci intronunda artar ve protein yapımını azaltır. Resesif ataksilerde tekrarın intronda bulunduğu örnek budur; doğru cevaptır (s.37, 35).",
+      "B": "Kodlayan ekzondaki CAG tekrarı SCA1, 2, 3, 6, 7 ve 17'de poliglutamin dizisi oluşturur. Bu dominant ataksilerin tekrar türüdür, Friedreich ataksisinin değildir (s.25).",
+      "C": "5' UTR bölgesindeki CGG tekrarı FMR1 geninde bulunur; premutasyon FXTAS'a, tam mutasyon frajil X sendromuna yol açar. Frataksin geniyle ilgisi yoktur (s.49).",
+      "D": "Dokuzuncu introndaki ATTCT beşli tekrarı SCA10'da ataksin 10 geninde artar. Dominant kalıtılan bu tip, resesif Friedreich ataksisinden farklıdır (s.32).",
+      "E": "3' UTR bölgesindeki CTG tekrarı SCA8'de ataksin 8 geninde bulunur. Dominant bir SCA tipine ait olduğu için Friedreich ataksisiyle eşleşmez (s.25)."
+     },
+     "bilgi": [
+      103,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "İntron 1’de GAA tekrar artışı"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 37
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q37",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Herediter ataksi öyküsü alınan bir ailede akraba evliliği varsa ilk olarak hangi kalıtım kalıbındaki ataksiler düşünülmelidir?",
+     "secenekler": {
+      "A": "Otozomal dominant ataksiler",
+      "B": "Otozomal resesif ataksiler",
+      "C": "X'e bağlı ataksiler",
+      "D": "Mitokondriyal ataksiler",
+      "E": "Sporadik ataksiler"
+     },
+     "dogru": "B",
+     "aciklama": "Herediter ataksilerde öykü alınırken 3 kuşaklık pedigri çizilmeli, ailede benzer olgular ve etnik köken sorgulanmalı; akrabalık varsa ilk olarak OR ataksiler düşünülmelidir. OR ataksilerde hastanın anne ve babası genellikle sağlıklıdır (s.36, 56).",
+     "sik_aciklamalari": {
+      "A": "Otozomal dominant ataksilerde hastalık genellikle her kuşakta görülür ve tek mutant kopya yeterlidir. Akraba evliliği bu kalıtımda riski belirgin artırmadığı için ilk düşünülen grup değildir (s.23, 56).",
+      "B": "Otozomal resesif ataksilerde iki taşıyıcı ebeveynden gelen mutant kopyalar hastalığa yol açar. Akraba evliliği aynı mutasyonu taşıma olasılığını artırdığı için ilk düşünülecek grup budur (s.56).",
+      "C": "X'e bağlı ataksiler mutant genin X kromozomunda bulunduğu, çok daha nadir görülen ataksilerdir. Akrabalık öyküsü ilk olarak bu grubu düşündürmez (s.48).",
+      "D": "Mitokondriyal ataksiler oksidatif fosforilasyon genlerindeki mutasyonlarla oluşur ve anne yoluyla aktarılır. Akraba evliliğiyle ilişkili bir kalıtım kalıbı değildir (s.53).",
+      "E": "Sporadik ataksiler ailede başka bir olgu bulunmadan ortaya çıkan ataksilerdir. Kalıtsal bir grup olmadığı için akrabalık öyküsünde öncelikle düşünülen grup değildir (s.22)."
+     },
+     "bilgi": [
+      156,
+      98
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "Akrabalık varsa ilk olarak OR ataksi tipleri akla gelmeli"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 56
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q31",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ataksi, immün yetmezlik ve artmış kanser riskinin birlikte bulunduğu, ATM genindeki mutasyonlar sonucu gelişen sendrom hangisidir?",
+     "secenekler": {
+      "A": "Friedreich ataksisi",
+      "B": "Ataksi telenjiektazi",
+      "C": "Ataksi okülomotor apraksi 2",
+      "D": "Marinesco-Sjögren sendromu",
+      "E": "Sideroblastik anemi ve ataksi"
+     },
+     "dogru": "B",
+     "aciklama": "Ataksi telenjiektazi ATM genindeki mutasyonlar sonucu gelişir; ataksi, immün yetmezlik ve artmış kanser riski birliktedir. Telenjiektaziler göz ve yüz çevresinde başlayıp yayılır ve hematolojik malignite riski artar (s.40).",
+     "sik_aciklamalari": {
+      "A": "Friedreich ataksisi frataksin genindeki GAA tekrar artışıyla oluşur; kardiyopati ve derin duyu kaybıyla seyreder. İmmün yetmezlik ve kanser riski bu tablonun parçası değildir (s.37).",
+      "B": "Ataksi telenjiektazi ATM geni mutasyonlarıyla oluşan, ataksi, immün yetmezlik ve kansere yatkınlığı birleştiren bir sendromdur. Fakomatozlar arasında da sayılan bu tablo doğru cevaptır (s.40, 65).",
+      "C": "Ataksi okülomotor apraksi 2 SETX geni mutasyonlarıyla oluşur; serum AFP yüksektir ve koreatetoz ile distoni eşlik eder. ATM geni ve immün yetmezlik bu tabloya ait değildir (s.45).",
+      "D": "Marinesco-Sjögren sendromu SIL1 geni mutasyonlarıyla oluşur; ataksiye katarakt, hipotoni ve kemik deformiteleri eşlik eder. Kanser yatkınlığıyla tanımlanmaz (s.47).",
+      "E": "Sideroblastik anemi ve ataksi X'e bağlı ABCB7 geni mutasyonlarıyla oluşur ve transfüzyon gerektirmeyen anemiyle seyreder. ATM geniyle ilişkili değildir (s.51)."
+     },
+     "bilgi": [
+      114,
+      113
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Ataksi, immün yetmezlik ve artmış kanser riskinin bulunduğu bir sendromdur"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 40
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q32",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Serum albümin düzeyinin normal, alfa-fetoprotein (AFP) düzeyinin yüksek olduğu ve SETX (sentaksin) geni mutasyonları sonucu oluşan ataksi hangisidir?",
+     "secenekler": {
+      "A": "Ataksi okülomotor apraksi 1",
+      "B": "Ataksi okülomotor apraksi 2",
+      "C": "Vitamin E eksikliğiyle giden ataksi",
+      "D": "Friedreich ataksisi",
+      "E": "Charlevoix-Saguenay spastik ataksisi"
+     },
+     "dogru": "B",
+     "aciklama": "AOA2 SETX geninin (sentaksin proteini) mutasyonlarıyla oluşur; serum albümin normal, AFP yüksektir. Bulgular 10-22 yaşta, AOA1'e göre daha geç başlar ve koreatetoz ile distoni eşlik eder (s.45).",
+     "sik_aciklamalari": {
+      "A": "Ataksi okülomotor apraksi 1 APTX geninin kodladığı aprataksin proteinindeki mutasyonlarla oluşur ve 2-16 yaşta başlar. Gen ve başlangıç yaşı bakımından AOA2'den ayrılır (s.44).",
+      "B": "Ataksi okülomotor apraksi 2 sentaksin proteinini kodlayan SETX geninin mutasyonlarıyla oluşur. Serum albüminin normal, AFP'nin yüksek olması bu tipin laboratuvar bulgusu olduğu için doğru cevaptır (s.45).",
+      "C": "Vitamin E eksikliğiyle giden ataksi TTPA geni mutasyonlarıyla oluşur ve serum vitamin E düzeyi düşüktür. Ayırıcı laboratuvar bulgusu AFP değil vitamin E düzeyidir (s.43).",
+      "D": "Friedreich ataksisi frataksin genindeki GAA tekrar artışıyla oluşan en sık OR ataksidir. Kardiyopatiyle seyreder; AFP yüksekliği bu hastalığın bulgusu olarak tanımlanmaz (s.37).",
+      "E": "Charlevoix-Saguenay spastik ataksisi saksin proteinini kodlayan SACS geni mutasyonlarıyla oluşur. Alt ekstremite spastisitesiyle ayrılır, SETX geniyle ilişkisi yoktur (s.46)."
+     },
+     "bilgi": [
+      128,
+      129
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Serum albümin düzeyi normal, AFP düzeyi artmıştır"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 45
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q33",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Bulguları Friedreich ataksisine benzeyen, serum vitamin E düzeyinin düşük olduğu kalıtsal ataksi hangi gendeki mutasyon sonucu gelişir?",
+     "secenekler": {
+      "A": "FXN",
+      "B": "APTX",
+      "C": "TTPA",
+      "D": "SIL1",
+      "E": "SACS"
+     },
+     "dogru": "C",
+     "aciklama": "Vitamin E eksikliğinin kalıtsal formu 8q13'teki TTPA genindeki mutasyonlarla gelişir; TTPA vitamin E'nin lipoproteinlere bağlanarak taşınmasında görevlidir. Bulgular ikinci dekatta başlar ve Friedreich ataksisine benzer (s.43).",
+     "sik_aciklamalari": {
+      "A": "FXN frataksin proteinini kodlayan ve Friedreich ataksisinden sorumlu gendir. Klinik benzerlik olsa da serum vitamin E düşüklüğü bu gendeki bozuklukla tanımlanmaz (s.37).",
+      "B": "APTX aprataksin proteinini kodlar ve DNA kırıklarının onarımında görev alır; mutasyonu AOA1'e yol açar. Vitamin E taşınmasıyla ilişkisi yoktur (s.44).",
+      "C": "TTPA vitamin E'nin lipoproteinlere bağlanarak taşınmasını sağlayan gendir. Mutasyonunda bağlanma bozulur, serum vitamin E düşer ve Friedreich ataksisine benzeyen tablo oluştuğu için doğru cevaptır (s.43).",
+      "D": "SIL1 geni Marinesco-Sjögren sendromundan sorumludur; ataksiye katarakt, hipotoni ve zihinsel yetersizlik eşlik eder. Vitamin E düzeyini etkileyen bir gen olarak tanımlanmaz (s.47).",
+      "E": "SACS geni saksin proteinini kodlar ve Charlevoix-Saguenay spastik ataksisine yol açar. Nörofilament iskeletini ve mitokondri işlevini bozar; vitamin E taşınmasıyla ilgili değildir (s.46)."
+     },
+     "bilgi": [
+      122,
+      123,
+      124
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Vitamin E eksikliği sonucu ataksi gelişebilir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 43
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q34",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Genellikle 50 yaşından sonra ilerleyici intansiyonel tremor, ataksi ve kognitif kayıpla ortaya çıkan X'e bağlı ataksi hangisidir?",
+     "secenekler": {
+      "A": "Arts sendromu",
+      "B": "Sideroblastik anemi ve ataksi",
+      "C": "FXTAS",
+      "D": "SCA12",
+      "E": "Friedreich ataksisi"
+     },
+     "dogru": "C",
+     "aciklama": "FXTAS Xq27.3'teki FMR1 geninde CGG tekrar artışıyla (premutasyon) oluşur; genellikle 50 yaşından sonra ilerleyici intansiyonel tremor, ataksi, dizartri, otonomik disfonksiyon ve kognitif kayıpla karakterizedir (s.49).",
+     "sik_aciklamalari": {
+      "A": "Arts sendromu X'e bağlı PRPS1 geni mutasyonlarıyla oluşan bir pürin sentez bozukluğudur. Çocuklukta hipotoni, tetrapleji ve arefleksiyle başlar; ileri yaşta tremorla tanımlanmaz (s.50).",
+      "B": "Sideroblastik anemi ve ataksi X'e bağlı ABCB7 geni mutasyonlarıyla oluşur ve 1 yaş civarında anemi ile ataksiyle başlar. Elli yaş sonrası tremor bu tabloya ait değildir (s.51).",
+      "C": "FXTAS, FMR1 genindeki CGG premutasyonunun yol açtığı X'e bağlı ataksidir. Elli yaşından sonra intansiyonel tremor, ataksi ve kognitif kayıpla başladığı için doğru cevaptır (s.49).",
+      "D": "SCA12 de baş ve ellerde tremorla seyreder, ancak PPP2R2B genindeki CAG artışıyla oluşan dominant bir SCA tipidir. X'e bağlı kalıtım göstermediği için seçilmez (s.33).",
+      "E": "Friedreich ataksisi tremorla seyredebilir ama OR kalıtılır ve genellikle 20 yaşından önce başlar. X'e bağlı ve ileri yaşta başlayan tabloyla uyuşmaz (s.37, 39)."
+     },
+     "bilgi": [
+      139,
+      138
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Genellikle 50 yaşından sonra bulgu verir"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 49
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q30",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Friedreich ataksisinde frataksin proteininin azalmasının sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Mitokondride serbest radikal birikimi",
+      "B": "Duyusal nöronlarda ilerleyici nörodejenerasyon",
+      "C": "Kalp kasında hastalık (kardiyopati)",
+      "D": "Demir-kükürt kümesi yapımının bozulması",
+      "E": "İmmün yetmezlik ve malignite riski"
+     },
+     "dogru": "E",
+     "aciklama": "Yıkılan frataksin proteini serbest radikal birikimine, nörodejenerasyona ve kardiyopatiye neden olur; normalde demir-kükürt kümesi yapımını sağlar. İmmün yetmezlik ve hematolojik malignite riski ataksi telenjiektaziye aittir (s.37, 39, 40).",
+     "sik_aciklamalari": {
+      "A": "Frataksin azaldığında mitokondride serbest radikaller birikir ve oksidatif hasar artar. Friedreich ataksisinin mekanizmasında yer aldığı için aranan seçenek değildir (s.37).",
+      "B": "Nörodejenerasyon sinir hücrelerinin ilerleyici kaybıdır ve frataksin eksikliğinin doğrudan sonucudur. Dorsal kök gangliyonu ve arka kordon kaybını açıkladığı için seçilmez (s.37).",
+      "C": "Kardiyopati kalp kasının hastalığıdır ve frataksin azalmasının sonuçları arasında sayılır. Friedreich ataksisinde kardiyak bulgular bu nedenle görülür (s.37, 39).",
+      "D": "Frataksin normalde mitokondride demir-kükürt kümesi yapımını sağlar ve akonitaz ile oksidatif fosforilasyon komplekslerini destekler. Eksikliğinde bu yapım bozulduğu için ifade frataksin azalmasının sonucudur (s.39).",
+      "E": "İmmün yetmezlik ve hematolojik malignite riski ATM genindeki mutasyonlarla gelişen ataksi telenjiektazinin özellikleridir. Frataksin eksikliğiyle tanımlanmadığı için doğru cevaptır (s.40)."
+     },
+     "bilgi": [
+      104,
+      112,
+      114
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "Degrede frataksin proteini, serbest radikallerin birikimine ve nörodejenerasyon ve kardiyopatiye neden olur"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 37
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q35",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "NARP olgularında mutasyonlu mitokondri oranı arttığında ortaya çıkan daha ağır klinik tablo hangisidir?",
+     "secenekler": {
+      "A": "MERRF",
+      "B": "MELAS",
+      "C": "Leigh sendromu",
+      "D": "Kearns-Sayre sendromu",
+      "E": "Maternal kalıtılmış diyabet ve sağırlık"
+     },
+     "dogru": "C",
+     "aciklama": "NARP, ATP sentazı kodlayan MT-ATP6 genindeki 8993 T>G mutasyonuyla gelişir ve mutasyonlu mitokondri oranı %70-90'dır; oran arttığında klinik tablo ağırlaşır ve Leigh sendromu görülür, bir ailede ikisi birlikte bulunabilir (s.55).",
+     "sik_aciklamalari": {
+      "A": "MERRF miyoklonus, nöbetler ve düzensiz kırmızı liflerle giden mitokondriyal hastalıktır ve çoğunlukla 8344. Pozisyondaki mutasyonla oluşur. NARP mutasyon yükünün artmasıyla gelişen tablo değildir (s.54).",
+      "B": "MELAS miyopati, laktik asidoz ve inme benzeri ataklarla giden mitokondriyal hastalıktır ve en sık A3243G mutasyonuyla oluşur. MT-ATP6 mutasyonuyla ilişkilendirilmez (s.93).",
+      "C": "Leigh sendromu, NARP'a yol açan MT-ATP6 mutasyonunun heteroplazmi oranı yükseldiğinde ortaya çıkan ağır tablodur. Aynı ailede NARP ile birlikte görülebildiği için doğru cevaptır (s.55).",
+      "D": "Kearns-Sayre sendromu 20 yaşından önce başlayan pigmenter retinopati, serebellar sendrom ve işitme kaybıyla giden mitokondriyal hastalıktır. NARP mutasyonunun ağır ucu olarak tanımlanmaz (s.91).",
+      "E": "Maternal kalıtılmış diyabet ve sağırlık, diabetes mellitus ile sensörinöral işitme kaybını birleştiren mitokondriyal tablodur. En sık A3243G mutasyonuyla oluşur, MT-ATP6 ile ilişkili değildir (s.94)."
+     },
+     "bilgi": [
+      155,
+      154
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 55,
+      "alinti": "Mutasyon oranı arttığında klinik tablo daha ağırdır"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 55
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q36",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Düzensiz kırmızı lifli miyoklonik epilepsi (MERRF) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Miyoklonus, nöbetler ve demansla karakterizedir.",
+      "B": "Olguların çoğunda mitokondriyal genomun 8344. pozisyonunda mutasyon vardır.",
+      "C": "Heteroplazmi nedeniyle klinik çeşitlilik gösterir.",
+      "D": "Optik atrofi, sağırlık ve kardiyomiyopati eşlik edebilir.",
+      "E": "Mutasyonlu mitokondriyal genom babadan çocuğa aktarılır."
+     },
+     "dogru": "E",
+     "aciklama": "MERRF miyoklonus, nöbetler ve demansla karakterize, mitokondriyal kalıtılan bir hastalıktır; olguların %80'inde anneden gelen mitokondriyal genomda 8344. Pozisyonda mutasyon vardır ve heteroplazmi klinik çeşitliliği açıklar (s.54).",
+     "sik_aciklamalari": {
+      "A": "MERRF'in temel bulguları miyoklonus, nöbetler ve demanstır; başlangıç yaşı değişken ve seyri yavaştır. İfade doğru olduğu için yanlış aranan soruda seçilmez (s.54).",
+      "B": "MERRF olgularının %80'inde mitokondriyal genomun 8344. Pozisyonunda, lizin tRNA'sını etkileyen mutasyon bulunur. Bu bilgi doğru olduğu için aranan seçenek değildir (s.54, 92).",
+      "C": "Heteroplazmi aynı hücrede normal ve mutasyonlu mitokondriyal genomun birlikte bulunmasıdır; mutasyon yükü değiştikçe klinik farklılaşır. MERRF'teki klinik çeşitliliği açıkladığı için ifade doğrudur (s.54).",
+      "D": "MERRF'e optik atrofi, sağırlık, kardiyomiyopati ve kısa boy eşlik edebilir. Bu ek bulgular doğru verildiği için seçilmez (s.54).",
+      "E": "Mitokondriyal genom çocuğa anneden geçer; MERRF'teki mutasyon da anneden gelen mitokondriyal genomda bulunur. Babadan aktarım söylendiği için ifade yanlıştır ve doğru cevaptır (s.54)."
+     },
+     "bilgi": [
+      152,
+      150,
+      151
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "anneden gelen mt genomda 8344. pozisyonda mutasyon söz konusudur"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 54
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Fakomatozları (NF1, NF2, tüberoz skleroz, ataksi telenjiektazi, Sturge-Weber, VHL, inkontinensia pigmenti, Peutz-Jeghers, Gorlin) gen, kalıtım, tümör ve deri bulgularıyla ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-26-norolojik-hastaliklar-q38",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "17q11.2'de yerleşik, nörofibromin proteinini kodlayan tümör baskılayıcı genin mutasyonu sonucu oluşan fakomatoz hangisidir?",
+     "secenekler": {
+      "A": "Nörofibromatozis tip 1",
+      "B": "Nörofibromatozis tip 2",
+      "C": "Tüberoz skleroz",
+      "D": "Von Hippel-Lindau sendromu",
+      "E": "Gorlin sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "NF1 otozomal dominant tek gen hastalığıdır; NF1 geni 17q11.2'de yerleşik bir tümör baskılayıcı gendir ve nörofibromin proteinini kodlar. Penetrans tamdır, ekspresivite değişkendir (s.60).",
+     "sik_aciklamalari": {
+      "A": "Nörofibromatozis tip 1, 17q11.2'deki NF1 geninin kodladığı nörofibromin eksikliğiyle oluşur. Cafe-au-lait lekeleri, deri nörofibromları ve Lisch nodülleriyle seyreden bu hastalık doğru cevaptır (s.59–60).",
+      "B": "Nörofibromatozis tip 2 merlin proteinini kodlayan NF2 geninin mutasyonuyla oluşur. Multiple schwannom ve meningiomlarla seyreder; nörofibromin bu hastalıkla ilişkili değildir (s.61–62).",
+      "C": "Tüberoz skleroz hamartin kodlayan TSC1 ve tuberin kodlayan TSC2 genlerinin mutasyonlarıyla oluşur. MTOR aktivitesini bozan bu genler nörofibrominle karıştırılmamalıdır (s.64).",
+      "D": "Von Hippel-Lindau sendromu 3p25-26'daki VHL tümör baskılayıcı geninin mutasyonuyla oluşur. Hemanjiyoblastomlar, feokromositoma ve böbrek kanseriyle seyreder; nörofibrominle ilişkisi yoktur (s.67).",
+      "E": "Gorlin sendromu PTCH1 tümör baskılayıcı genindeki mutasyonlarla oluşur ve multipl bazal hücreli kanserlerle seyreder. Nörofibromin geniyle ilişkili değildir (s.70)."
+     },
+     "bilgi": [
+      165,
+      164
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 60,
+      "alinti": "NF1 geni, 17q11.2 lokalize,TSG"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 60
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q46",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Gastrointestinal hamartomatöz polipler ve mukokutanöz pigmentasyonla karakterize, STK11 mutasyonlarıyla oluşan sendrom hangisidir?",
+     "secenekler": {
+      "A": "Gorlin sendromu",
+      "B": "Peutz-Jeghers sendromu",
+      "C": "Tüberoz skleroz",
+      "D": "İnkontinensia pigmenti",
+      "E": "Von Hippel-Lindau sendromu"
+     },
+     "dogru": "B",
+     "aciklama": "Peutz-Jeghers sendromu gastrointestinal hamartomatöz polipler ve mukokutanöz pigmentasyonla karakterize, otozomal dominant bir sendromdur; olguların %90'ından fazlasında germline STK11 tümör baskılayıcı gen mutasyonu vardır (s.69).",
+     "sik_aciklamalari": {
+      "A": "Gorlin sendromu PTCH1 mutasyonlarıyla oluşan ve multipl bazal hücreli kanserlerle seyreden bir sendromdur. Gastrointestinal polipler bu tablonun tanımlayıcı bulgusu değildir (s.70).",
+      "B": "Peutz-Jeghers sendromu STK11 tümör baskılayıcı genindeki germline mutasyonlarla oluşur. Hamartomatöz polipler ve mukokutanöz pigmentasyon tipik olduğu için doğru cevaptır (s.69).",
+      "C": "Tüberoz skleroz TSC1 ve TSC2 mutasyonlarıyla oluşur; beyin, böbrek, deri, göz ve kalpte hamartomatöz lezyonlar görülür. STK11 geniyle ilişkili değildir (s.63–64).",
+      "D": "İnkontinensia pigmenti NEMO geni mutasyonlarıyla oluşan X'e bağlı dominant bir hastalıktır. Deri tutulumu olsa da gastrointestinal polip ve STK11 ile tanımlanmaz (s.68).",
+      "E": "Von Hippel-Lindau sendromu VHL geninin mutasyonuyla oluşan ve hemanjiyoblastomlarla seyreden bir fakomatozdur. Polip ve mukokutanöz pigmentasyon bu tabloya ait değildir (s.67)."
+     },
+     "bilgi": [
+      195,
+      196
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 69,
+      "alinti": "GİS hamartomatöz polipler ve mukokutanöz pigmentasyon"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 69
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q47",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Multipl bazal hücreli kanserlere nörolojik, genitoüriner ve dental bulguların eşlik ettiği, PTCH1 mutasyonlarıyla oluşan sendrom hangisidir?",
+     "secenekler": {
+      "A": "Ataksi telenjiektazi",
+      "B": "Peutz-Jeghers sendromu",
+      "C": "Sturge-Weber sendromu",
+      "D": "Gorlin sendromu",
+      "E": "Nörofibromatozis tip 2"
+     },
+     "dogru": "D",
+     "aciklama": "Gorlin sendromu multipl bazal hücreli kanserlere nörolojik, genitoüriner ve dental bulguların eşlik ettiği OD kalıtılan multisistemik bir hastalıktır; olguların %50'sinden PTCH1 tümör baskılayıcı geninin heterozigot germline de novo mutasyonları sorumludur (s.70).",
+     "sik_aciklamalari": {
+      "A": "Ataksi telenjiektazi ATM geni mutasyonlarıyla oluşan ve hematolojik malignite riskini artıran bir sendromdur. Multipl bazal hücreli kanserle tanımlanmaz (s.40, 65).",
+      "B": "Peutz-Jeghers sendromu STK11 mutasyonlarıyla oluşur ve gastrointestinal hamartomatöz poliplerle seyreder. Bazal hücreli kanser bu sendromun tanımlayıcı bulgusu değildir (s.69).",
+      "C": "Sturge-Weber sendromu GNAQ işlev kazanımı mutasyonuyla oluşur; yüzde şarap lekesi ve glokomla seyreder. PTCH1 ile ilişkili değildir (s.66).",
+      "D": "Gorlin sendromu PTCH1 tümör baskılayıcı genindeki mutasyonlarla oluşan ve multipl bazal hücreli kanserlerle seyreden bir sendromdur. Nörolojik, genitoüriner ve dental bulgular da eşlik ettiği için doğru cevaptır (s.70).",
+      "E": "Nörofibromatozis tip 2 merlin kodlayan NF2 geninin mutasyonuyla oluşur ve schwannom ile meningiomlarla seyreder. Deri kanserleri bu hastalığın temel bulgusu değildir (s.61–62)."
+     },
+     "bilgi": [
+      197,
+      198
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 70,
+      "alinti": "multiple bazal hücreli kanserlere"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 70
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q39",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Multiple schwannom ve meningiomlarla karakterize olan ve merlin proteinini kodlayan genin mutasyonu sonucu oluşan fakomatoz hangisidir?",
+     "secenekler": {
+      "A": "Nörofibromatozis tip 2",
+      "B": "Sturge-Weber sendromu",
+      "C": "Ataksi telenjiektazi",
+      "D": "Nörofibromatozis tip 1",
+      "E": "Tüberoz skleroz"
+     },
+     "dogru": "A",
+     "aciklama": "NF2 bilateral akustik ya da santral nörofibromatozis olarak da bilinir; multiple schwannomlar ve meningiomlarla karakterize, nadir bir multiple neoplazi sendromudur. NF2 geni merlin proteinini kodlar ve Schwann hücrelerinin aşırı üretimi schwannomlara yol açar (s.61–62).",
+     "sik_aciklamalari": {
+      "A": "Nörofibromatozis tip 2 merlin proteinini kodlayan NF2 geninin mutasyonuyla oluşur. Schwann hücrelerinin aşırı çoğalmasıyla multiple schwannomlar ve meningiomlar geliştiği için doğru cevaptır (s.61–62).",
+      "B": "Sturge-Weber sendromu GNAQ genindeki işlev kazanımı mutasyonuyla oluşur. Yüzde şarap lekesi, glokom ve beyinde vasküler malformasyonla seyreder (s.66).",
+      "C": "Ataksi telenjiektazi ATM geni mutasyonlarıyla oluşan, ilerleyici nörolojik bozukluk ve kansere yatkınlıkla giden bir fakomatozdur. Merlin ile ilişkili değildir (s.65).",
+      "D": "Nörofibromatozis tip 1 nörofibromin kodlayan NF1 geninin mutasyonuyla oluşur. Cafe-au-lait lekeleri, deri nörofibromları ve Lisch nodülleri tipiktir; merlin bu hastalıkla ilişkili değildir (s.59–60).",
+      "E": "Tüberoz skleroz TSC1 ve TSC2 mutasyonlarıyla oluşan ve birçok organda hamartomlarla seyreden bir sendromdur. Multiple schwannom ve meningiom bu hastalığın tanımlayıcı tümörleri değildir (s.63–64)."
+     },
+     "bilgi": [
+      168,
+      171
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 61,
+      "alinti": "Multiple schwannomlar ve meningiomalar ile karakterize"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 61
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q41",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tüberoz sklerozda hamartin proteinini kodlayan gen hangisidir?",
+     "secenekler": {
+      "A": "TSC1",
+      "B": "TSC2",
+      "C": "NF1",
+      "D": "STK11",
+      "E": "PTCH1"
+     },
+     "dogru": "A",
+     "aciklama": "Tüberoz skleroz olgularının %85-90'ında TSC1 ve TSC2 gen mutasyonları görülür; TSC1 hamartin, TSC2 tuberin proteinini kodlar ve mutasyonlar mTOR aktivitesini bozar (s.64).",
+     "sik_aciklamalari": {
+      "A": "TSC1 hamartin proteinini kodlayan gendir ve tüberoz skleroz olgularının %15-30'unda mutasyonu bulunur. Hamartin ile doğrudan eşleştiği için doğru cevaptır (s.64).",
+      "B": "TSC2 tuberin proteinini kodlar ve sporadik olgularda daha sık görülür; mutasyonlu olgularda tablo daha ağırdır. Hamartini kodlayan gen değildir (s.64).",
+      "C": "NF1 nörofibromin kodlayan tümör baskılayıcı gendir ve nörofibromatozis tip 1'den sorumludur. Tüberoz sklerozun genleri ise hamartin ve tuberini kodlayan TSC1 ile TSC2'dir (s.60).",
+      "D": "STK11 Peutz-Jeghers sendromundan sorumlu tümör baskılayıcı gendir. Gastrointestinal hamartomatöz polipler ve mukokutanöz pigmentasyonla ilişkilidir; tüberoz sklerozdaki hamartin proteinini kodlamaz (s.69).",
+      "E": "PTCH1 Gorlin sendromundan sorumlu tümör baskılayıcı gendir ve multipl bazal hücreli kanserlerle ilişkilidir. Tüberoz sklerozdaki hamartin proteinini kodlayan gen değildir (s.70)."
+     },
+     "bilgi": [
+      176,
+      177
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 64,
+      "alinti": "TSC1 ve TSC2 gen mutasyonları görülür"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 64
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q43",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Trigeminal sinirin oftalmik dalı alanında şarap lekesi, glokom ve beyinde vasküler malformasyonla seyreden ve GNAQ geninde işlev kazanımı mutasyonu sonucu oluşan sendrom hangisidir?",
+     "secenekler": {
+      "A": "Von Hippel-Lindau sendromu",
+      "B": "Sturge-Weber sendromu",
+      "C": "İnkontinensia pigmenti",
+      "D": "Peutz-Jeghers sendromu",
+      "E": "Nörofibromatozis tip 1"
+     },
+     "dogru": "B",
+     "aciklama": "Sturge-Weber sendromu trigeminal sinirin oftalmik dalının alanında şarap lekesi şeklinde kapiller malformasyon, glokom ve göz ile beyinde vasküler malformasyonla seyreder; GNAQ geninde işlev kazanımı mutasyonuyla oluşur, nöbetler olguların %70'inde görülür (s.66).",
+     "sik_aciklamalari": {
+      "A": "Von Hippel-Lindau sendromu VHL tümör baskılayıcı geninin mutasyonuyla oluşur; retinal ve santral sinir sistemi hemanjiyoblastomları, feokromositoma ve böbrek kanseriyle seyreder. Şarap lekesi bu tabloya ait değildir (s.67).",
+      "B": "Sturge-Weber sendromu GNAQ genindeki işlev kazanımı mutasyonuyla oluşan bir fakomatozdur. Oftalmik dal alanında şarap lekesi, glokom ve beyinde vasküler malformasyon tipik olduğu için doğru cevaptır (s.66).",
+      "C": "İnkontinensia pigmenti NEMO genindeki mutasyonlarla oluşan X'e bağlı dominant bir hastalıktır. Tüm hastalarda deri tutulumu vardır ama şarap lekesi ve glokom birlikteliği tanımlanmaz (s.68).",
+      "D": "Peutz-Jeghers sendromu STK11 mutasyonlarıyla oluşur; gastrointestinal hamartomatöz polipler ve mukokutanöz pigmentasyon görülür. Yüzdeki kapiller malformasyonla ilişkili değildir (s.69).",
+      "E": "Nörofibromatozis tip 1 nörofibromin geninin mutasyonuyla oluşur ve cafe-au-lait lekeleriyle seyreder. Bu lekeler kapiller malformasyon olan şarap lekesinden farklıdır (s.58, 60)."
+     },
+     "bilgi": [
+      183,
+      185
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 66,
+      "alinti": "trigeminal sinirin oftalmik dağılım bölgesinde şarap lekesi şeklinde kapiller malformasyon"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 66
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q44",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Von Hippel-Lindau sendromunda en sık görülen bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Retinal hemanjiyoblastom",
+      "B": "Feokromositoma",
+      "C": "Berrak hücreli böbrek kanseri",
+      "D": "Epididimal kist",
+      "E": "Santral sinir sistemi meningiomu"
+     },
+     "dogru": "A",
+     "aciklama": "VHL'de retinal hemanjiyoblastomlar olguların %85'inde görülen en sık bulgudur; santral sinir sistemi hemanjiyoblastomları %60-80 ile majör bulgudur. Feokromositoma ve berrak hücreli böbrek kanseri de tabloya girer (s.67).",
+     "sik_aciklamalari": {
+      "A": "Retinal hemanjiyoblastom retinadaki damarsal bir tümördür ve VHL olgularının %85'inde görülür. Sendromun en sık bulgusu olduğu için doğru cevaptır (s.67).",
+      "B": "Feokromositoma adrenal bezin katekolamin salgılayan tümörüdür ve VHL'de görülebilir. Sendromun bir parçası olsa da en sık bulgu değildir (s.67).",
+      "C": "Berrak hücreli böbrek kanseri VHL'de böbrekte gelişen önemli tümörlerdendir. Retinal hemanjiyoblastom kadar sık bildirilmediği için en sık bulgu olarak seçilmez (s.67).",
+      "D": "Epididimal kist VHL tümörlerinin kısaltma listesinde yer alan bir lezyondur. Olguların çoğunda görülen en sık bulgu olarak tanımlanmaz (s.67).",
+      "E": "Meningiom zarlardan kaynaklanan tümördür ve NF2'de multiple schwannomlarla birlikte görülür. VHL'nin santral sinir sistemi tümörü ise hemanjiyoblastomdur (s.61, 67)."
+     },
+     "bilgi": [
+      188,
+      187
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "Retinal hemanjioblastomlar olguların %85 görülen en sık bulgu"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 67
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q40",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Nörofibromatozis tip 1 ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Otozomal dominant kalıtılır.",
+      "B": "Penetransı tam, ekspresivitesi değişkendir.",
+      "C": "Olguların yaklaşık yarısında aile öyküsü vardır.",
+      "D": "Aynı ailenin bireyleri arasında klinik bulgular aynıdır.",
+      "E": "De novo mutasyon oranı %30-50'dir."
+     },
+     "dogru": "D",
+     "aciklama": "NF1 otozomal dominant tek gen hastalığıdır; olguların %50'sinde aile öyküsü vardır, penetrans tam ama ekspresivite değişkendir ve de novo mutasyon oranı %30-50'dir. Aynı aile bireylerinde klinik değişkendir (s.59–60).",
+     "sik_aciklamalari": {
+      "A": "NF1 otozomal dominant tek gen hastalığıdır; tek mutant kopya hastalığa yol açar. İfade doğru olduğu için yanlış aranan soruda seçilmez (s.60).",
+      "B": "Penetransın tam olması mutasyonu taşıyan herkesin hastalanması, ekspresivitenin değişken olması bulguların şiddetinin kişiden kişiye değişmesidir. NF1 için ikisi de doğrudur (s.60).",
+      "C": "NF1 olgularının %50'sinde aile öyküsü bulunur; kalan olgular yeni mutasyonla ortaya çıkar. İfade doğru olduğu için aranan seçenek değildir (s.60).",
+      "D": "NF1'de değişken ekspresivite nedeniyle aynı ailenin bireylerinde bile klinik farklıdır. Bulguların aynı olduğunu söylediği için ifade yanlıştır ve doğru cevaptır (s.59).",
+      "E": "De novo mutasyon ebeveynlerde bulunmayan, çocukta yeni oluşan mutasyondur. NF1'de bu oran %30-50 olarak verildiği için ifade doğrudur (s.60)."
+     },
+     "bilgi": [
+      164,
+      166,
+      169
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "Aynı aile bireylerinde değişken klinik söz konusu"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 59
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q42",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Tüberoz sklerozda TSC2 mutasyonu taşıyan olgular için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Daha sık sporadik olgularda görülür ve tablo daha ağırdır.",
+      "B": "Ailesel olgularda görülür ve tablo daha hafiftir.",
+      "C": "Hamartin proteinini kodlayan gendeki mutasyondur.",
+      "D": "mTOR aktivitesini etkilemez.",
+      "E": "Olguların ancak %15-30'unda görülür."
+     },
+     "dogru": "A",
+     "aciklama": "TSC2 mutasyonları sıklıkla sporadik olgularda görülür; bu olgularda hipomelanotik maküller, öğrenme güçlüğü, daha sık göz ve nörolojik bulgular, renal kistler ve ungual fibromlarla daha ağır bir tablo vardır (s.64).",
+     "sik_aciklamalari": {
+      "A": "TSC2 mutasyonları sporadik olgularda daha sık görülür ve hipomelanotik maküller, öğrenme güçlüğü, renal kistlerle daha ağır bir tabloya yol açar. Bu nedenle doğru cevaptır (s.64).",
+      "B": "Bu seçenek TSC2'yi ailesel ve hafif tabloyla eşleştirir. Oysa TSC2 sporadik olgularda daha sık görülür ve daha ağır klinikle ilişkilidir (s.64).",
+      "C": "Hamartin proteinini TSC1 geni kodlar; TSC2 ise tuberin proteinini kodlar. İki gen karıştırıldığı için bu ifade TSC2 için doğru değildir (s.64).",
+      "D": "TSC1 ve TSC2 mutasyonları mTOR aktivitesini bozarak santral sinir sistemini etkiler. TSC2 mutasyonu da bu yolu bozduğu için ifade yanlıştır (s.64).",
+      "E": "Olguların %15-30'unda görülen mutasyon TSC1 mutasyonudur. TSC2 ise sporadik olgularda daha sık saptanır; sayı yanlış gene bağlanmıştır (s.64)."
+     },
+     "bilgi": [
+      179,
+      178,
+      176
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 64,
+      "alinti": "daha ağır klinik tablo ortaya çıkar"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 64
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q45",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Genellikle erkeklerde letal seyreden, X'e bağlı dominant kalıtılan ve NEMO (IKBKG) genindeki mutasyonlarla gelişen fakomatoz için hangisi doğrudur?",
+     "secenekler": {
+      "A": "Klinefelter sendromu ya da somatik mozaiklik durumunda yaşayan erkek olgular bildirilmiştir.",
+      "B": "Deri tutulumu olguların yalnız küçük bir bölümünde görülür.",
+      "C": "Olguların çoğu ailesel olup de novo mutasyon nadirdir.",
+      "D": "Otozomal resesif kalıtılır ve iki cinsiyette eşit görülür.",
+      "E": "Göz ve diş bulguları bu hastalıkta beklenmez."
+     },
+     "dogru": "A",
+     "aciklama": "İnkontinensia pigmenti X'e bağlı dominant kalıtılan, erkeklerde genellikle letal seyreden multisistemik bir hastalıktır; tüm hastalarda deri tutulumu vardır. Xq28'deki NEMO (IKBKG) mutasyonları olguların %70'inde, de novo mutasyon %65'inde görülür; Klinefelter (47,XXY) ya da somatik mozaiklikte yaşayan erkekler bildirilmiştir (s.68).",
+     "sik_aciklamalari": {
+      "A": "İnkontinensia pigmenti erkeklerde letal seyreder; fazladan X taşıyan Klinefelter sendromunda ya da somatik mozaiklikte yaşayan erkek olgular bildirilmiştir. Bu bilgi doğru olduğu için doğru cevaptır (s.68).",
+      "B": "İnkontinensia pigmentide tüm hastalarda deri tutulumu vardır. Deri bulgusunun yalnız küçük bir bölümde görüldüğünü söyleyen ifade bu bilgiyle çelişir (s.68).",
+      "C": "İnkontinensia pigmenti olgularının %65'inde de novo mutasyon görülür, yani yeni mutasyon sıktır. Olguların çoğunun ailesel olduğunu söyleyen ifade doğru değildir (s.68).",
+      "D": "İnkontinensia pigmenti X'e bağlı dominant kalıtılır ve erkeklerde letal olduğu için hastaların çoğu kadındır. Otozomal resesif kalıtım ve eşit dağılım bu hastalığa uymaz (s.68).",
+      "E": "İnkontinensia pigmentide alopesi, anormal diş yapısı, retina ayrılması, şaşılık, katarakt ve optik sinir atrofisi görülür. Göz ve diş bulgularının beklenmediğini söyleyen ifade yanlıştır (s.68)."
+     },
+     "bilgi": [
+      194,
+      191,
+      193
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 68,
+      "alinti": "Klinifelter sendromu veya somatik mozaiklik"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 68
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Herediter işitme kayıplarını sınıflar; sendromik (OD, OR, X'e bağlı, mitokondriyal) ve nonsendromik formları gen ve bulgularıyla eşler, GJB2'nin yerini açıklar, tanı algoritmasını ve danışmada tekrarlama risklerini uygular.",
+   "sorular": [
+    {
+     "id": "k2-26-norolojik-hastaliklar-q48",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "En sık görülen sendromik işitme kayıpları aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Waardenburg, Usher, Pendred ve Alport sendromları",
+      "B": "BOR, Stickler, CHARGE ve Norrie sendromları",
+      "C": "Treacher-Collins, Perrault, Jervell ve Lange-Nielsen ve Norrie sendromları",
+      "D": "Kearns-Sayre, MERRF, MELAS ve NARP",
+      "E": "Usher, Stickler, Perrault ve CHARGE sendromları"
+     },
+     "dogru": "A",
+     "aciklama": "Sendromik işitme kayıpları işitme kaybına multisistemik bozuklukların eşlik ettiği gruptur ve büyük kısmı Mendel kalıtımına uyar; en sık görülenleri Waardenburg, Usher, Pendred ve Alport sendromlarıdır (s.73).",
+     "sik_aciklamalari": {
+      "A": "Waardenburg, Usher, Pendred ve Alport sendromları sendromik işitme kayıplarının en sık görülen dört formudur. Kalıtımları farklı olsa da sıklık listesi budur ve doğru cevaptır (s.73).",
+      "B": "BOR, Stickler, CHARGE ve Norrie sendromları işitme kaybıyla seyreden sendromlardır. Kalıtım gruplarında yer alırlar ama en sık görülen dört sendrom olarak sayılmazlar (s.74–86).",
+      "C": "Treacher-Collins, Perrault, Jervell ve Lange-Nielsen ve Norrie sendromları farklı kalıtım gruplarındaki sendromik işitme kayıplarıdır. Görece nadir oldukları için en sık görülenler listesine girmez (s.76–86).",
+      "D": "Kearns-Sayre, MERRF ve MELAS sendromik mitokondriyal işitme kayıplarıdır; NARP ise mitokondriyal bir ataksidir. Bu seçenek en sık görülen Mendel kalıtımlı sendromları vermez (s.55, 90).",
+      "E": "Usher sendromu en sık görülen dört sendromdan biridir. Stickler, Perrault ve CHARGE ise sırasıyla OD, OR ve OD geçişli daha az görülen sendromlar olduğu için liste karışıktır (s.73)."
+     },
+     "bilgi": [
+      204,
+      203
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18"
+     ],
+     "kanit": {
+      "sayfa": 73,
+      "alinti": "Wardenburg, Usher, Pendred ve Alport sendromları en sık görülenler"
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18",
+      "ogrenci:A:tbg-s02-b10"
+     ],
+     "s": 73
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q54",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Konjenital işitme kaybı ve guatrla karakterize, OR geçişli ve olguların yarısında pendrin proteinini kodlayan SLC26A4 mutasyonunun bulunduğu sendrom hangisidir?",
+     "secenekler": {
+      "A": "Pendred sendromu",
+      "B": "Waardenburg sendromu",
+      "C": "Jervell ve Lange-Nielsen sendromu",
+      "D": "Usher sendromu",
+      "E": "Alport sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Pendred sendromu konjenital işitme kaybı ve guatrla karakterize, OR geçişli bir sendromdur ve herediter sağırlıkların %10'unu oluşturur; olguların %50'si SLC26A4, diğer %50'si FOXI1 ve KCNJ10 mutasyonlarından kaynaklanır (s.80).",
+     "sik_aciklamalari": {
+      "A": "Pendred sendromu pendrin proteinini kodlayan SLC26A4 mutasyonlarıyla oluşan, işitme kaybı ve guatrla seyreden OR bir sendromdur. Tarifle örtüştüğü için doğru cevaptır (s.80).",
+      "B": "Waardenburg sendromu saçta beyaz perçem, heterokromi ve konjenital işitme kaybıyla seyreden OD bir sendromdur. Guatr bu tablonun bulgusu değildir (s.75).",
+      "C": "Jervell ve Lange-Nielsen sendromu uzun QT ile derin konjenital işitme kaybını birleştiren OR bir sendromdur. KCNQ1 ve KCNE1 mutasyonlarıyla oluşur, guatr içermez (s.81).",
+      "D": "Usher sendromu konjenital işitme kaybıyla retinitis pigmentozayı birleştiren OR bir sendromdur ve işitme ile görme kaybı birlikteliğinin en sık nedenidir. Tiroit bulgusu taşımaz (s.82).",
+      "E": "Alport sendromu kalıtsal nefrit, işitme bozukluğu ve göz değişiklikleriyle seyreden tip IV kollajen hastalığıdır. Guatr ve pendrin bu sendromla ilişkili değildir (s.85)."
+     },
+     "bilgi": [
+      221,
+      222
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 80,
+      "alinti": "Konjenital işitme kaybı ve guatr ile karakterize, OR geçişli"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b10"
+     ],
+     "s": 80
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q49",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi sendromik bir işitme kaybı nedenidir?",
+     "secenekler": {
+      "A": "GJB2 (konneksin 26) mutasyonu",
+      "B": "DFN3 lokusundaki mutasyon",
+      "C": "DFNA lokuslarındaki otozomal dominant mutasyonlar",
+      "D": "DFNB lokuslarındaki otozomal resesif mutasyonlar",
+      "E": "Pendred sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Sendromik işitme kayıplarında işitme kaybına başka sistem bulguları eşlik eder; Pendred sendromu konjenital işitme kaybı ve guatrla seyreden OR bir sendromdur. GJB2 ve DFN lokusları başka bulgu eşlik etmeyen nonsendromik işitme kayıplarına aittir (s.73, 80, 87–89).",
+     "sik_aciklamalari": {
+      "A": "GJB2 konneksin 26'yı kodlar ve OR nonsendromik işitme kayıplarının %50'sinden sorumludur. Başka bulgu eşlik etmediği için sendromik işitme kaybı nedeni değildir (s.88).",
+      "B": "DFN3 X'e bağlı nonsendromik işitme bozukluklarında en sık mutasyonun görüldüğü lokustur. Nonsendromik gruba ait olduğu için seçilmez (s.89).",
+      "C": "DFNA lokusları otozomal dominant nonsendromik işitme kayıplarının adlandırılmasında kullanılır. İşitme kaybına başka bulgu eşlik etmediği için sendromik değildir (s.87).",
+      "D": "DFNB lokusları otozomal resesif nonsendromik işitme kayıplarını gösterir; GJB2 de bu grubun en sık nedenidir. Nonsendromik olduğu için seçilmez (s.87–88).",
+      "E": "Pendred sendromu işitme kaybına guatrın eşlik ettiği, OR geçişli sendromik bir tablodur. Başka bir sistem bulgusu taşıdığı için doğru cevaptır (s.80)."
+     },
+     "bilgi": [
+      221,
+      241,
+      242
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18"
+     ],
+     "kanit": {
+      "sayfa": 80,
+      "alinti": "Konjenital işitme kaybı ve guatr ile karakterize, OR geçişli"
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18",
+      "ogrenci:A:tbg-s02-b10",
+      "ogrenci:A:tbg-s02-b14"
+     ],
+     "s": 80
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q50",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gap junction kanallarının oluşumunda görevli konneksin 26 proteinini kodlayan ve 13q11-12'de yerleşen gen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "SLC26A4",
+      "B": "KCNQ1",
+      "C": "COL4A5",
+      "D": "PAX3",
+      "E": "GJB2"
+     },
+     "dogru": "E",
+     "aciklama": "OR nonsendromik işitme bozuklukları 13q11-12'de yerleşik GJB2 (Cx26) geni mutasyonlarıyla oluşur; GJB2 gap junction kanallarının oluşumunda görevli konneksin 26'yı kodlar ve OR nonsendromik kayıpların %50'sinden sorumludur (s.88).",
+     "sik_aciklamalari": {
+      "A": "SLC26A4 pendrin proteinini kodlar ve Pendred sendromu olgularının %50'sinden sorumludur. Guatrla seyreden sendromik bir tabloya aittir, konneksin kodlamaz (s.80).",
+      "B": "KCNQ1 potasyum kanalı genidir ve Jervell ve Lange-Nielsen sendromu olgularının %90'ında mutasyonu bulunur. Uzun QT ile seyreden sendromik bir tabloya aittir (s.81).",
+      "C": "COL4A5 tip IV kollajen genidir ve Alport sendromu olgularının %80'inde mutasyonu vardır. Böbrek, kulak ve göz bulgularıyla giden sendromik bir hastalıktan sorumludur (s.85).",
+      "D": "PAX3 Waardenburg sendromu tip I ve III'ün genidir; saçta beyaz perçem ve heterokromiyle seyreden sendromik işitme kaybına yol açar. Konneksin kodlamaz (s.75).",
+      "E": "GJB2 gap junction kanallarının yapı taşı olan konneksin 26'yı kodlayan, 13q11-12'de yerleşik gendir. OR nonsendromik işitme kaybının en sık nedeni olduğu için doğru cevaptır (s.88)."
+     },
+     "bilgi": [
+      245,
+      247
+     ],
+     "benzer_cikmis": [
+      "d3-k2-tbg-003"
+     ],
+     "kanit": {
+      "sayfa": 88,
+      "alinti": "13q11-12 lokalize, GJB2/Cx26 geni mutasyonları"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-tbg-003",
+      "ogrenci:A:tbg-s02-b14"
+     ],
+     "s": 88
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q52",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kalıtsal işitme kayıplarının çoğunluğunu oluşturan grup ve bu grubun en sık alt tipi aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Nonsendromik – mitokondriyal",
+      "B": "Sendromik – otozomal dominant",
+      "C": "Nonsendromik – otozomal dominant",
+      "D": "Nonsendromik – otozomal resesif",
+      "E": "Sendromik – X'e bağlı"
+     },
+     "dogru": "D",
+     "aciklama": "Kalıtsal işitme kayıplarının %70'i nonsendromiktir; nonsendromik grubun en sık alt tipi %80 ile OR formdur, OD form %15-18, X'e bağlı ve mitokondriyal formlar %2'dir (s.71, 87).",
+     "sik_aciklamalari": {
+      "A": "Mitokondriyal form nonsendromik işitme kayıplarının yalnız %2'sini oluşturur. Nonsendromik grup doğru seçilse de alt tip en az görülenlerdendir (s.87).",
+      "B": "Sendromik işitme kayıpları kalıtsal kayıpların yalnız %30'unu oluşturur ve işitme kaybına başka sistem bulguları eşlik eder. Çoğunluğu oluşturan grup bu değildir (s.71).",
+      "C": "Nonsendromik grup çoğunluğu oluşturur, ancak otozomal dominant form bu grubun %15-18'idir. En sık alt tip olarak verilemez (s.87).",
+      "D": "Nonsendromik işitme kayıpları kalıtsal kayıpların %70'idir ve bu grubun %80'i otozomal resesif formdadır. Her iki bilgi doğru eşleştiği için doğru cevaptır (s.87).",
+      "E": "X'e bağlı kalıtılan Alport ve Norrie sendromları sendromik grupta yer alır. Sendromik grup azınlıkta olduğu gibi X'e bağlı form da en sık alt tip değildir (s.71, 85–86)."
+     },
+     "bilgi": [
+      243,
+      201
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 87,
+      "alinti": "Kalıtsal işitme kayıplarının %70 nonsendromik"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b14"
+     ],
+     "s": 87
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q53",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Nonsendromik işitme kaybı lokuslarının adlandırılmasında aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "DFNA – otozomal resesif",
+      "B": "DFNB – otozomal resesif",
+      "C": "DFN – otozomal dominant",
+      "D": "DFNB – X'e bağlı",
+      "E": "DFNA – mitokondriyal"
+     },
+     "dogru": "B",
+     "aciklama": "Nonsendromik işitme kaybı lokusları DFN (DeaFNess) olarak adlandırılır: OD lokuslar DFNA, OR lokuslar DFNB, X'e bağlı lokuslar DFN olarak gösterilir; X'e bağlı grupta en sık DFN3 lokusunda mutasyon görülür (s.87, 89).",
+     "sik_aciklamalari": {
+      "A": "DFNA otozomal dominant nonsendromik işitme kaybı lokuslarını gösterir ve bu form nonsendromik kayıpların %15-18'idir. Otozomal resesif kalıtımla eşleştirildiği için doğru değildir (s.87).",
+      "B": "DFNB otozomal resesif nonsendromik işitme kaybı lokuslarının adıdır; GJB2 de bu grubun en sık nedenidir. Eşleştirme doğru olduğu için doğru cevaptır (s.87–88).",
+      "C": "Ek harf almayan DFN, X'e bağlı nonsendromik lokusları gösterir; en sık örneği DFN3'tür. Otozomal dominant kalıtımla eşleştirilemez (s.87, 89).",
+      "D": "DFNB otozomal resesif lokusları gösterir; X'e bağlı lokuslar ek harf almadan DFN olarak yazılır. Bu nedenle eşleştirme yanlıştır (s.87).",
+      "E": "DFNA otozomal dominant nonsendromik lokusları gösteren addır. Mitokondriyal işitme kayıpları bu adlandırmayla değil, A3243G gibi mitokondriyal mutasyonlarıyla tanımlanır (s.87, 90)."
+     },
+     "bilgi": [
+      242,
+      248
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 87,
+      "alinti": "Bu lokuslara DFN(DeaFNess) adlandırılır"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b14"
+     ],
+     "s": 87
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q55",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kalıtsal nefrit, işitme bozukluğu ve göz değişiklikleriyle seyreden tip IV kollajen hastalığına yol açan ve olguların çoğunda mutasyonu saptanan gen hangisidir?",
+     "secenekler": {
+      "A": "NDP",
+      "B": "COL4A3",
+      "C": "COL4A4",
+      "D": "COL4A5",
+      "E": "COL2A1"
+     },
+     "dogru": "D",
+     "aciklama": "Alport sendromu kalıtsal nefrit, işitme bozukluğu ve göz değişiklikleriyle karakterize bir tip IV kollajen hastalığıdır; olguların %80'inde COL4A5, %2'sinde COL4A3 ve COL4A4 mutasyonları vardır ve X'e bağlı sendromik işitme kayıpları arasında yer alır (s.85).",
+     "sik_aciklamalari": {
+      "A": "NDP Norrie sendromundan sorumlu gendir; X'e bağlı resesif retinal displazi ve koklear işitme kaybına yol açar. Tip IV kollajenle ilişkili değildir (s.86).",
+      "B": "COL4A3 tip IV kollajen genlerinden biridir ve Alport sendromu olgularının yalnız %2'sinde mutasyonu bulunur. Olguların çoğundan sorumlu gen değildir (s.85).",
+      "C": "COL4A4 de tip IV kollajeni kodlar ve COL4A3 gibi Alport olgularının küçük bir bölümünde mutasyonludur. Çoğunluğu açıklayan gen bu değildir (s.85).",
+      "D": "COL4A5 tip IV kollajen zincirini kodlayan gendir ve Alport sendromu olgularının %80'inde mutasyonu saptanır. Bu nedenle doğru cevaptır (s.85).",
+      "E": "COL2A1 tip II kollajen genidir ve Stickler sendromundan sorumlu genler arasındadır. Eklem hipermobilitesi ve yüz ortası hipoplazisiyle giden bu OD sendrom Alport'tan farklıdır (s.78)."
+     },
+     "bilgi": [
+      237,
+      236
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 85,
+      "alinti": "COL4A3, COL4A4 ve COL4A5 gen mutasyonları"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b10"
+     ],
+     "s": 85
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q57",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Miyopati, epilepsi, laktik asidoz ve inme benzeri ataklarla karakterize, en sık lösin tRNA'sında A3243G mutasyonu saptanan mitokondriyal hastalık hangisidir?",
+     "secenekler": {
+      "A": "Leigh sendromu",
+      "B": "MERRF",
+      "C": "Kearns-Sayre sendromu",
+      "D": "MELAS",
+      "E": "NARP"
+     },
+     "dogru": "D",
+     "aciklama": "MELAS miyopati, epilepsi, laktik asidoz ve inme benzeri ataklarla karakterize, ilerleyici bir mitokondriyal hastalıktır; en sık lösin tRNA'sında A3243G mutasyonu saptanır ve sendromik mitokondriyal işitme kayıpları arasında sayılır (s.90, 93).",
+     "sik_aciklamalari": {
+      "A": "Leigh sendromu NARP'a yol açan MT-ATP6 mutasyonunun yükü arttığında ortaya çıkan ağır tablodur. İnme benzeri ataklar ve A3243G ile tanımlanmaz (s.55).",
+      "B": "MERRF miyoklonik epilepsi, mitokondriyal miyopati ve ataksiyle seyreder; lizin tRNA'sındaki A8344G, T8356C ve G8363A mutasyonlarıyla oluşur. İnme benzeri ataklar ve lösin tRNA'sı bu tabloya ait değildir (s.92).",
+      "C": "Kearns-Sayre sendromu 20 yaşından önce başlayan pigmenter retinopati, serebellar sendrom, işitme kaybı ve kalp bloğuyla seyreder. İnme benzeri ataklarla tanımlanmaz (s.91).",
+      "D": "MELAS mitokondriyal miyopati, laktik asidoz ve inme benzeri atakların birlikte görüldüğü hastalıktır ve en sık lösin tRNA'sındaki A3243G mutasyonuyla oluşur. Doğru cevaptır (s.93).",
+      "E": "NARP nöropati, ataksi ve retinitis pigmentozayla seyreder; ATP sentaz genindeki 8993 T>G mutasyonuyla oluşur. Lösin tRNA'sı mutasyonu bu tabloya ait değildir (s.55)."
+     },
+     "bilgi": [
+      258,
+      259,
+      251
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 93,
+      "alinti": "Miyopati, epilepsi, laktik asidoz ve inme benzeri ataklarla karakterize"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 93
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q51",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "GJB2 geni ve ilişkili işitme kaybı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "13q11-12 bölgesinde yerleşiktir.",
+      "B": "Konneksin 26 proteinini kodlar.",
+      "C": "OR nonsendromik işitme kayıplarının yaklaşık yarısından sorumludur.",
+      "D": "Mutasyonların çoğunluğunu 35delG oluşturur.",
+      "E": "Otozomal dominant sendromik işitme kayıplarının en sık nedenidir."
+     },
+     "dogru": "E",
+     "aciklama": "GJB2 13q11-12'de yerleşiktir ve konneksin 26'yı kodlar; OR nonsendromik işitme kayıplarının %50'si GJB2 mutasyonlarından kaynaklanır, 400'den fazla mutasyonun %60-70'ini 35delG oluşturur. GJB2 sendromik listede yer almaz (s.88).",
+     "sik_aciklamalari": {
+      "A": "GJB2 geni 13q11-12 bölgesinde yerleşiktir ve OR nonsendromik işitme kaybından sorumludur. Lokus doğru verildiği için yanlış ifade arayan soruda seçilmez (s.88).",
+      "B": "GJB2 gap junction kanallarının oluşumunda görevli konneksin 26 proteinini kodlar; iç kulakta hücreler arası iletişim bu kanallarla sağlanır. İfade doğru olduğu için aranan seçenek değildir (s.88).",
+      "C": "OR nonsendromik işitme kayıplarının %50'si GJB2 mutasyonlarından kaynaklanır ve bu gen grubun en sık nedenidir. Bu oran doğru verildiği için seçilmez (s.88, 96).",
+      "D": "GJB2'de 400'den fazla mutasyon tanımlıdır ve bunların %60-70'inde 35delG saptanır. İfade doğru olduğu için aranan seçenek değildir (s.88).",
+      "E": "GJB2 mutasyonları otozomal resesif ve nonsendromik işitme kaybına yol açar; işitme kaybına başka bulgu eşlik etmez. Otozomal dominant sendromik kaybın en sık nedeni olarak verildiği için ifade yanlıştır ve doğru cevaptır (s.88)."
+     },
+     "bilgi": [
+      246,
+      245,
+      267
+     ],
+     "benzer_cikmis": [
+      "d3-k2-tbg-003",
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18"
+     ],
+     "kanit": {
+      "sayfa": 88,
+      "alinti": "OR nonsend. işitme kayıplarının %50 GJB2 mutasyonları"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-tbg-003",
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18",
+      "ogrenci:A:tbg-s02-b14"
+     ],
+     "s": 88
+    },
+    {
+     "id": "k2-26-norolojik-hastaliklar-q56",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Herediter işitme kaybında genetik danışma ve tekrarlama riskleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Akraba evliliği söz konusuysa tekrarlama riski %25'tir.",
+      "B": "İşitme kayıplı çocukta GJB2 ve GJB6 mutasyonları negatifse risk %14'tür.",
+      "C": "Ebeveynlerden birinde işitme kaybı varsa risk %10'dur.",
+      "D": "Her iki ebeveynde GJB2 homozigot hastalık varsa çocukta risk %100'dür.",
+      "E": "Aile öyküsü negatif ve işitme kayıplı bir çocuğu olan ailede sonraki çocuk için risk %50'dir."
+     },
+     "dogru": "E",
+     "aciklama": "Spesifik tanı konamayan ve kalıtım kalıbı belirsiz işitme kaybında aile öyküsü negatif, işitme kayıplı bir çocuğu olan ailede sonraki çocuk için risk %18'dir; GJB2/GJB6 negatifse %14, akraba evliliğinde %25, bir ebeveyn etkilenmişse %10, iki ebeveynde GJB2 homozigotluğunda %100'dür (s.97–98).",
+     "sik_aciklamalari": {
+      "A": "Akraba evliliğinde iki ebeveynin aynı resesif mutasyonu taşıma olasılığı artar; tekrarlama riski %25 olarak verilir. İfade doğru olduğu için yanlış aranan soruda seçilmez (s.97).",
+      "B": "İşitme kayıplı çocukta en sık iki gen olan GJB2 ve GJB6 negatif bulunursa tekrarlama riski %14'e düşer. Bu değer doğru olduğu için seçilmez (s.97).",
+      "C": "Ebeveynlerden birinde işitme kaybı varsa risk %10'dur ve riskin çoğu OD sendromik işitme kaybıyla ilişkilidir. İfade doğru olduğu için aranan seçenek değildir (s.98).",
+      "D": "İki ebeveynin de GJB2 homozigot hastası olması, her çocuğa mutant alel geçeceği anlamına gelir; risk %100'dür. İfade doğrudur (s.98).",
+      "E": "Aile öyküsü negatif ve işitme kayıplı bir çocuğu olan ailede sonraki çocuk için ampirik risk %18'dir. %50 değeri bu durum için verilmediğinden ifade yanlıştır ve doğru cevaptır (s.97)."
+     },
+     "bilgi": [
+      268,
+      269,
+      270,
+      271,
+      273
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 97,
+      "alinti": "sonraki çocukta risk %18"
+     },
+     "dayanak": [
+      "ogrenci:A:tbg-s02-b14"
+     ],
+     "s": 97
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18",
+     "soru": "Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?",
+     "secenekler": {
+      "A": "Waardenburg sendromu",
+      "B": "Usher sendromu",
+      "C": "Pendred sendromu",
+      "D": "Alport sendromu",
+      "E": "GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3-k2-tbg-003",
+     "soru": "Otozomal resesif kalıtılan herediter işitme kayıplarında en sık hangi gen mutasyonu saptanır?",
+     "secenekler": {
+      "A": "GJB2 (Gap junction beta-2 / Konneksin 26)",
+      "B": "COL4A5 (Tip IV kollajen)",
+      "C": "KCNQ2 (Potasyum kanal geni)",
+      "D": "NF2 (Merlin)",
+      "E": "PAX3 geni"
+     },
+     "cevap": "A"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 57
+}

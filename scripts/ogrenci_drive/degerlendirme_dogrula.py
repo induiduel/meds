@@ -39,11 +39,15 @@ def main() -> int:
     ap.add_argument("--pdf", required=True)
     a = ap.parse_args()
     paket = json.loads((DEPO / a.ders / "degerlendirme" / "paket.json").read_text(encoding="utf-8"))
-    sayfa = {i + 1: norm(p.get_text()) for i, p in enumerate(pymupdf.open(a.pdf))}
+    # H543: bazı PDF'lerde içi boş madde imi (Wingdings "o") pymupdf metninde satır başında "o" harfi olarak gelir
+    # ("oMZ %62", "oPPP2R2B geni"); pdftotext'te yok. Satır başındaki bu imi büyük harf/rakam/% öncesinde siler.
+    # Kanıt da aynı temizlikten geçer (simetrik): eski kanıtlar imi "oLIS1" diye taşıyabilir (k2-08).
+    _imsiz = lambda t: re.sub(r"(?:(?<=\s)|^)o(?=[A-ZÇĞİÖŞÜ0-9%])", "", t)  # noqa: E731
+    sayfa = {i + 1: norm(_imsiz(p.get_text())) for i, p in enumerate(pymupdf.open(a.pdf))}
     hata, uyari = [], []
 
     def slaytta(s: int, metin: str) -> bool:
-        return norm(metin) in sayfa.get(s, "")
+        return norm(_imsiz(metin)) in sayfa.get(s, "")
 
     for n in paket["ogrenci_notlari"]:
         if n.get("resim") and not n["hedef"]:
@@ -85,6 +89,8 @@ def main() -> int:
         # Aynı neden: harf aralığı düzensiz de olabilir ("YAN ITLAR", "ALEKS IT IMI") → TAMAMI büyük harf olan satırlar
         # (başlık/üst yazı) aday taramasından çıkarılır; kısaltma satır içinde küçük harfli metinle birlikte aranır.
         metin_k = "\n".join(l for l in metin_k.split("\n") if re.search(r"[a-zçğıöşü]", l))
+        # Karyotip yazımı ("46,XX", "47,XXY") kısaltma değildir (H543 eki, k2-26 s84).
+        metin_k = re.sub(r"\b\d{2},\s*[XY]{1,4}\b", " ", metin_k)
         # Atıf satırındaki yazar baş harfleri ("Yates GP, Feldman MD.") kısaltma değildir (H510 ile aynı kök).
         metin_k = re.sub(r"\b[A-ZÇĞİÖŞÜ][a-zçğıöşü]+(?:-[A-ZÇĞİÖŞÜ][a-zçğıöşü]+)? [A-ZÇĞİÖŞÜ]{1,3}(?=[,.;])", " ", metin_k)
         for k in set(re.findall(r"(?<![\wçğıöşü])([A-ZÇĞİÖŞÜ]{2,5})(?![\wçğıöşü])", metin_k)):

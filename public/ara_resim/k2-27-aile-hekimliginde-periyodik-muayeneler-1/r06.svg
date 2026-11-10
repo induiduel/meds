@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Erişkinde hangi tarama kaç yaşında, ne sıklıkta?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Kardiyometabolik ve kanser taramaları yaş şeridi · slayt 109–122</text>
+<path d="M290 495 C730.0 489 730.0 501 1170 495" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<line x1="300.0" y1="487" x2="300.0" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="300.0" y="520" font-size="13" fill="#475569" text-anchor="middle">18</text>
+<line x1="478.9473684210526" y1="487" x2="478.9473684210526" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="478.9473684210526" y="520" font-size="13" fill="#475569" text-anchor="middle">30</text>
+<line x1="553.5087719298245" y1="487" x2="553.5087719298245" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="553.5087719298245" y="520" font-size="13" fill="#475569" text-anchor="middle">35</text>
+<line x1="628.0701754385965" y1="487" x2="628.0701754385965" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="628.0701754385965" y="520" font-size="13" fill="#475569" text-anchor="middle">40</text>
+<line x1="702.6315789473684" y1="487" x2="702.6315789473684" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="702.6315789473684" y="520" font-size="13" fill="#475569" text-anchor="middle">45</text>
+<line x1="777.1929824561403" y1="487" x2="777.1929824561403" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="777.1929824561403" y="520" font-size="13" fill="#475569" text-anchor="middle">50</text>
+<line x1="926.3157894736842" y1="487" x2="926.3157894736842" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="926.3157894736842" y="520" font-size="13" fill="#475569" text-anchor="middle">60</text>
+<line x1="1000.8771929824561" y1="487" x2="1000.8771929824561" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="1000.8771929824561" y="520" font-size="13" fill="#475569" text-anchor="middle">65</text>
+<line x1="1075.438596491228" y1="487" x2="1075.438596491228" y2="503" stroke="#0f172a" stroke-width="2"/>
+<text x="1075.438596491228" y="520" font-size="13" fill="#475569" text-anchor="middle">70</text>
+<text x="1160" y="520" font-size="13" fill="#475569" text-anchor="end" font-style="italic">yaş</text>
+<text x="285" y="103" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Tansiyon</text>
+<path d="M300.0 98 C305.0 90 1145.0 90 1150.0 98 C1145.0 106 305.0 106 300.0 98 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="308.0" y="103" font-size="13" fill="#0f172a" text-anchor="start">yılda en az bir</text>
+<text x="285" y="134" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Obezite + bel çevresi</text>
+<path d="M300.0 129 C305.0 121 995.8771929824561 121 1000.8771929824561 129 C995.8771929824561 137 305.0 137 300.0 129 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="308.0" y="134" font-size="13" fill="#0f172a" text-anchor="start">yılda bir</text>
+<text x="285" y="165" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">KV risk (herkese)</text>
+<path d="M628.0701754385965 160 C633.0701754385965 152 1145.0 152 1150.0 160 C1145.0 168 633.0701754385965 168 628.0701754385965 160 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="636.0701754385965" y="165" font-size="13" fill="#0f172a" text-anchor="start">bir kez</text>
+<text x="285" y="196" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Lipid profili</text>
+<path d="M553.5087719298245 191 C558.5087719298245 183 1145.0 183 1150.0 191 C1145.0 199 558.5087719298245 199 553.5087719298245 191 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="561.5087719298245" y="196" font-size="13" fill="#0f172a" text-anchor="start">5 yılda bir</text>
+<text x="285" y="227" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">TSH</text>
+<path d="M553.5087719298245 222 C558.5087719298245 214 1145.0 214 1150.0 222 C1145.0 230 558.5087719298245 230 553.5087719298245 222 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="561.5087719298245" y="227" font-size="13" fill="#0f172a" text-anchor="start">5 yılda bir</text>
+<text x="285" y="258" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Diyabet</text>
+<path d="M702.6315789473684 253 C707.6315789473684 245 1145.0 245 1150.0 253 C1145.0 261 707.6315789473684 261 702.6315789473684 253 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#1d4ed8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="710.6315789473684" y="258" font-size="13" fill="#0f172a" text-anchor="start">normalse 3 yılda bir</text>
+<text x="285" y="289" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Aspirin erkek</text>
+<path d="M702.6315789473684 284 C707.6315789473684 276 995.8771929824561 276 1000.8771929824561 284 C995.8771929824561 292 707.6315789473684 292 702.6315789473684 284 Z" stroke="#6d28d9" stroke-width="1.5" fill="#6d28d9" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="710.6315789473684" y="289" font-size="13" fill="#0f172a" text-anchor="start">81 mg/gün</text>
+<text x="285" y="320" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Aspirin kadın</text>
+<path d="M851.7543859649123 315 C856.7543859649123 307 995.8771929824561 307 1000.8771929824561 315 C995.8771929824561 323 856.7543859649123 323 851.7543859649123 315 Z" stroke="#6d28d9" stroke-width="1.5" fill="#6d28d9" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="859.7543859649123" y="320" font-size="13" fill="#0f172a" text-anchor="start">81 mg/gün</text>
+<text x="285" y="351" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Smear ya da HPV</text>
+<path d="M478.9473684210526 346 C483.9473684210526 338 995.8771929824561 338 1000.8771929824561 346 C995.8771929824561 354 483.9473684210526 354 478.9473684210526 346 Z" stroke="#ea580c" stroke-width="1.5" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="486.9473684210526" y="351" font-size="13" fill="#0f172a" text-anchor="start">5 yılda bir</text>
+<text x="285" y="382" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Mamografi</text>
+<path d="M628.0701754385965 377 C633.0701754385965 369 1055.5263157894738 369 1060.5263157894738 377 C1055.5263157894738 385 633.0701754385965 385 628.0701754385965 377 Z" stroke="#ea580c" stroke-width="1.5" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="636.0701754385965" y="382" font-size="13" fill="#0f172a" text-anchor="start">2 yılda bir</text>
+<text x="285" y="413" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Gizli kan</text>
+<path d="M777.1929824561403 408 C782.1929824561403 400 1070.438596491228 400 1075.438596491228 408 C1070.438596491228 416 782.1929824561403 416 777.1929824561403 408 Z" stroke="#ea580c" stroke-width="1.5" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="785.1929824561403" y="413" font-size="13" fill="#0f172a" text-anchor="start">kart 2 yılda bir · s120 yılda bir</text>
+<text x="285" y="444" font-size="14" fill="#0f172a" text-anchor="end" font-weight="bold">Prostat yönlendirme</text>
+<path d="M777.1929824561403 439 C782.1929824561403 431 1145.0 431 1150.0 439 C1145.0 447 782.1929824561403 447 777.1929824561403 439 Z" stroke="#ea580c" stroke-width="1.5" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<text x="785.1929824561403" y="444" font-size="13" fill="#0f172a" text-anchor="start">üroloji</text>
+<circle cx="792.1052631578948" cy="470" r="7" fill="#ea580c" stroke="#b91c1c" stroke-width="2"/>
+<circle cx="941.2280701754386" cy="470" r="7" fill="#ea580c" stroke="#b91c1c" stroke-width="2"/>
+<text x="955.2280701754386" y="475" font-size="13" fill="#b91c1c" text-anchor="start">kolonoskopi 51 ve 61 yaş</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 109–122 · mavi kardiyometabolik, mor aspirin, turuncu kanser taraması · çubuk = önerilen yaş aralığı</text>
+</svg>

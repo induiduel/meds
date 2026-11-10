@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<symbol id="mito" viewBox="-40 -22 80 44"><ellipse cx="0" cy="0" rx="38" ry="20" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/><path d="M-28 0 C-22 -14 -16 14 -10 0 C-4 -14 2 14 8 0 C14 -14 20 14 26 0" stroke="#6d28d9" stroke-width="2.5" fill="none"/></symbol>
+<g id="lip"><circle cx="0" cy="0" r="7" fill="#93c5fd" stroke="#1e3a8a" stroke-width="1"/><path d="M-3 6 C-4 14 -2 20 -3 28 M3 6 C4 14 2 20 3 28" stroke="#64748b" stroke-width="1.6" fill="none"/></g>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="640" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Kalıtsal işitme kaybı ağacı ve GJB2</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Sendromik %30 · nonsendromik %70; OR nonsendromiğin yarısı GJB2 · slayt 71–88</text>
+<rect x="30" y="92" width="760" height="506" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="124" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Sınıflama ağacı</text>
+<rect x="270" y="112" width="280" height="56" rx="10" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+<text x="410" y="136" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">Herediter işitme kaybı</text>
+<text x="410" y="158" font-size="14" fill="#475569" text-anchor="middle">1/1000 · %50 genetik</text>
+<path d="M380 168 C330 200 230 200 200 228" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<path d="M440 168 C500 200 590 200 610 228" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<rect x="60" y="232" width="290" height="50" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="205" y="264" font-size="18" fill="#ea580c" text-anchor="middle" font-weight="bold">Sendromik %30</text>
+<rect x="470" y="232" width="290" height="50" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+<text x="615" y="264" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="bold">Nonsendromik %70</text>
+<line x1="80" y1="312" x2="93" y2="312" stroke="#ea580c" stroke-width="2" marker-end="url(#oko)"/>
+<text x="98" y="317" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">OD</text>
+<text x="98" y="337" font-size="14" fill="#0f172a" text-anchor="start">BOR, Waardenburg, Treacher-Collins,</text>
+<text x="98" y="355" font-size="14" fill="#0f172a" text-anchor="start">NF2, Stickler, CHARGE</text>
+<line x1="80" y1="392" x2="93" y2="392" stroke="#ea580c" stroke-width="2" marker-end="url(#oko)"/>
+<text x="98" y="397" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">OR</text>
+<text x="98" y="417" font-size="14" fill="#0f172a" text-anchor="start">Pendred, JLNS, Usher, Perrault</text>
+<text x="98" y="435" font-size="14" fill="#0f172a" text-anchor="start">(ülkemizde sık: akrabalık)</text>
+<line x1="80" y1="462" x2="93" y2="462" stroke="#ea580c" stroke-width="2" marker-end="url(#oko)"/>
+<text x="98" y="467" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">X'e bağlı</text>
+<text x="98" y="487" font-size="14" fill="#0f172a" text-anchor="start">Alport, Norrie</text>
+<line x1="80" y1="282" x2="80" y2="462" stroke="#ea580c" stroke-width="2.5"/>
+<line x1="495" y1="282" x2="495" y2="500" stroke="#b91c1c" stroke-width="2.5"/>
+<rect x="60" y="522" width="290" height="58" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+<text x="72" y="546" font-size="14.5" fill="#854d0e" text-anchor="start">En sık 4 sendrom: Waardenburg,</text>
+<text x="72" y="566" font-size="14.5" fill="#854d0e" text-anchor="start">Usher, Pendred, Alport</text>
+<path d="M495 315 C498 315 502 315 506 315" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="512" y="320" font-size="16" fill="#b91c1c" text-anchor="start" font-weight="bold">OR (DFNB) %80</text>
+<path d="M495 425 C498 425 502 425 506 425" stroke="#ea580c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="512" y="430" font-size="16" fill="#ea580c" text-anchor="start" font-weight="bold">OD (DFNA) %15–18</text>
+<path d="M495 495 C498 495 502 495 506 495" stroke="#1d4ed8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="512" y="500" font-size="16" fill="#1d4ed8" text-anchor="start" font-weight="bold">X'e bağlı + mt %2</text>
+<rect x="512" y="336" width="250" height="64" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="524" y="360" font-size="15" fill="#b91c1c" text-anchor="start">%50 GJB2 (konneksin 26)</text>
+<text x="524" y="382" font-size="15" fill="#b91c1c" text-anchor="start">13q11-12 · 35delG %60–70</text>
+<text x="512" y="455" font-size="14" fill="#475569" text-anchor="start">genetik heterojenite, çok gen</text>
+<text x="512" y="525" font-size="14" fill="#475569" text-anchor="start">X'e bağlı lokus: DFN</text>
+<rect x="810" y="92" width="360" height="506" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="830" y="124" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">B · GJB2 ne yapar?</text>
+<rect x="850" y="170" width="90" height="300" rx="20" fill="#e0f2fe" stroke="#1d4ed8" stroke-width="2"/>
+<rect x="1040" y="170" width="90" height="300" rx="20" fill="#e0f2fe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="895" y="160" font-size="14" fill="#1d4ed8" text-anchor="middle" font-weight="bold">hücre 1</text>
+<text x="1085" y="160" font-size="14" fill="#1d4ed8" text-anchor="middle" font-weight="bold">hücre 2</text>
+<rect x="938" y="206" width="104" height="28" rx="6" fill="#99f6e4" stroke="#0f766e" stroke-width="2"/>
+<line x1="948" y1="220" x2="1032" y2="220" stroke="#0f766e" stroke-width="2" stroke-dasharray="4 3"/>
+<path d="M960 212 C975 200 1005 200 1020 212" stroke="#0f766e" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<rect x="938" y="306" width="104" height="28" rx="6" fill="#99f6e4" stroke="#0f766e" stroke-width="2"/>
+<line x1="948" y1="320" x2="1032" y2="320" stroke="#0f766e" stroke-width="2" stroke-dasharray="4 3"/>
+<path d="M960 312 C975 300 1005 300 1020 312" stroke="#0f766e" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<rect x="938" y="406" width="104" height="28" rx="6" fill="#99f6e4" stroke="#0f766e" stroke-width="2"/>
+<line x1="948" y1="420" x2="1032" y2="420" stroke="#0f766e" stroke-width="2" stroke-dasharray="4 3"/>
+<path d="M960 412 C975 400 1005 400 1020 412" stroke="#0f766e" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okt)"/>
+<line x1="990" y1="334" x2="1000" y2="380" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="990" cy="334" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="1006" y="385" font-size="14" fill="#0f766e" text-anchor="start">gap junction</text>
+<text x="830" y="500" font-size="14.5" fill="#0f172a" text-anchor="start">GJB2 → konneksin 26 proteini;</text>
+<text x="830" y="521" font-size="14.5" fill="#0f172a" text-anchor="start">hücreler arası gap junction</text>
+<text x="830" y="542" font-size="14.5" fill="#0f172a" text-anchor="start">kanallarının yapı taşı.</text>
+<text x="830" y="563" font-size="14.5" fill="#0f172a" text-anchor="start">&gt;400 mutasyon tanımlı.</text>
+<text x="600.0" y="626" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 71 (1/1000, %50 genetik, %30/%70), 73–86 (sendromik gruplar, en sık dört sendrom), 87 (DFN, %80 / %15–18 / %2), 88 (GJB2, 13q11-12, %50, 35delG)</text>
+</svg>

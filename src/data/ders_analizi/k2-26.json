@@ -1,0 +1,928 @@
+{
+ "surum": 1,
+ "key": "k2-26",
+ "kod": "2g02",
+ "kurul": 2,
+ "brans": "Genetik",
+ "konu": "Nörolojik Hastalıklar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "profil": "Tıbbi Genetik",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2g02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders dört nörogenetik başlığı işler: epilepsiler (sınıflama, kromozom yeniden düzenlemeleri, iyon kanalı genleri, Dravet sendromu, genetik test yaklaşımı), herediter ataksiler (OD spinoserebellar ataksiler ve tekrar türleri, OR, X'e bağlı ve mitokondriyal ataksiler), fakomatozlar (nörofibromatozlar, tüberoz skleroz, ataksi telenjiektazi, Sturge-Weber, von Hippel-Lindau ve diğerleri) ve herediter işitme kayıpları (sendromik ve nonsendromik gruplar, GJB2, mitokondriyal formlar, genetik danışma riskleri). Her hastalıkta gen, lokus, kalıtım, tekrar türü ve ayırt edici klinik bulgu verilir.",
+   "maddeler": [
+    {
+     "metin": "Nörolojik hastalıklar ve epilepsinin tanımı"
+    },
+    {
+     "metin": "Genetik epilepsiler ve kromozom yeniden düzenlenmeleri"
+    },
+    {
+     "metin": "Tek gen epilepsileri: kanal genleri ve Dravet sendromu"
+    },
+    {
+     "metin": "Epilepside genetik yaklaşım"
+    },
+    {
+     "metin": "Ataksiler: tanım, sınıflama ve spinoserebellar ataksiler"
+    },
+    {
+     "metin": "CAG tekrarlı tipler: SCA1, SCA2 ve SCA3"
+    },
+    {
+     "metin": "SCA6, SCA7, SCA8, SCA10, SCA12 ve SCA17"
+    },
+    {
+     "metin": "Otozomal resesif ataksiler ve Friedreich ataksisi"
+    },
+    {
+     "metin": "Ataksi telenjiektazi ve diğer resesif ataksiler"
+    },
+    {
+     "metin": "X'e bağlı ataksiler"
+    },
+    {
+     "metin": "Mitokondriyal ataksiler ve ataksilerde genetik tanı"
+    },
+    {
+     "metin": "Fakomatozlar ve nörofibromatozlar"
+    },
+    {
+     "metin": "Diğer fakomatozlar"
+    },
+    {
+     "metin": "Herediter işitme kayıpları: giriş ve sınıflama"
+    },
+    {
+     "metin": "Otozomal dominant sendromik işitme kayıpları"
+    },
+    {
+     "metin": "Otozomal resesif ve X'e bağlı sendromik işitme kayıpları"
+    },
+    {
+     "metin": "Nonsendromik işitme kayıpları ve GJB2"
+    },
+    {
+     "metin": "Mitokondriyal işitme kayıpları"
+    },
+    {
+     "metin": "Tanı algoritması ve genetik danışma"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders dört nörogenetik başlığı işler: epilepsiler (sınıflama, kromozom yeniden düzenlemeleri, iyon kanalı genleri, Dravet sendromu, genetik test yaklaşımı), herediter ataksiler (OD spinoserebellar ataksiler ve tekrar türleri, OR, X'e bağlı ve mitokondriyal ataksiler), fakomatozlar (nörofibromatozlar, tüberoz skleroz, ataksi telenjiektazi, Sturge-Weber, von Hippel-Lindau ve diğerleri) ve herediter işitme kayıpları (sendromik ve nonsendromik gruplar, GJB2, mitokondriyal formlar, genetik danışma riskleri). Her hastalıkta gen, lokus, kalıtım, tekrar türü ve ayırt edici klinik bulgu verilir.",
+    "Nörolojik hastalıklar ve epilepsinin tanımı.",
+    "Genetik epilepsiler ve kromozom yeniden düzenlenmeleri.",
+    "Tek gen epilepsileri: kanal genleri ve Dravet sendromu.",
+    "Epilepside genetik yaklaşım.",
+    "Ataksiler: tanım, sınıflama ve spinoserebellar ataksiler.",
+    "CAG tekrarlı tipler: SCA1, SCA2 ve SCA3.",
+    "SCA6, SCA7, SCA8, SCA10, SCA12 ve SCA17.",
+    "Otozomal resesif ataksiler ve Friedreich ataksisi.",
+    "Ataksi telenjiektazi ve diğer resesif ataksiler.",
+    "X'e bağlı ataksiler.",
+    "Mitokondriyal ataksiler ve ataksilerde genetik tanı.",
+    "Fakomatozlar ve nörofibromatozlar.",
+    "Diğer fakomatozlar.",
+    "Herediter işitme kayıpları: giriş ve sınıflama.",
+    "Otozomal dominant sendromik işitme kayıpları.",
+    "Otozomal resesif ve X'e bağlı sendromik işitme kayıpları.",
+    "Nonsendromik işitme kayıpları ve GJB2.",
+    "Mitokondriyal işitme kayıpları.",
+    "Tanı algoritması ve genetik danışma."
+   ],
+   "v": "0352760c97"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "oBazı yeniden düzenlemelerin spesifik semptomları vardır;",
+     "metin": "Çıkmış (dogrudan): Ring 14’te de dirençli epilepsi gözlenir,",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "oSCA tip 1,2,3,6,7,12,17’de CAG tekrar sayısı artışına bağlı",
+     "metin": "Çıkmış (dogrudan): SCA tip 8’de CTG tekrar artışı söz konusu,",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "SCA Tip 8",
+     "metin": "Çıkmış (dogrudan): CTG tekrar artışı,",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Nörofibromatozis Tip 2(NF2)",
+     "metin": "Çıkmış (ilgili): Multiple schwannomlar ve meningiomalar ile karakterize,",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "Sendromik İşitme Kayıpları",
+     "metin": "Çıkmış (dogrudan): Wardenburg, Usher, Pendred ve Alport sendromları en sık görülenler,",
+     "s": [
+      73
+     ]
+    },
+    {
+     "baslik": "X’e Bağlı Sendromik İşitme Kayıpları",
+     "metin": "Çıkmış (ilgili): Tip IV kollajen hastalığı,",
+     "s": [
+      85
+     ]
+    },
+    {
+     "baslik": "Nonsendromik İşitme Kayıpları",
+     "metin": "Çıkmış (dogrudan): 13q11-12 lokalize, GJB2/Cx26 geni mutasyonları,",
+     "s": [
+      88
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "oBazı yeniden düzenlemelerin spesifik semptomları vardır;: Çıkmış (dogrudan): Ring 14’te de dirençli epilepsi gözlenir,.",
+    "oSCA tip 1,2,3,6,7,12,17’de CAG tekrar sayısı artışına bağlı: Çıkmış (dogrudan): SCA tip 8’de CTG tekrar artışı söz konusu,.",
+    "SCA Tip 8: Çıkmış (dogrudan): CTG tekrar artışı,.",
+    "Nörofibromatozis Tip 2(NF2): Çıkmış (ilgili): Multiple schwannomlar ve meningiomalar ile karakterize,.",
+    "Sendromik İşitme Kayıpları: Çıkmış (dogrudan): Wardenburg, Usher, Pendred ve Alport sendromları en sık görülenler,.",
+    "X’e Bağlı Sendromik İşitme Kayıpları: Çıkmış (ilgili): Tip IV kollajen hastalığı,.",
+    "Nonsendromik İşitme Kayıpları: Çıkmış (dogrudan): 13q11-12 lokalize, GJB2/Cx26 geni mutasyonları,."
+   ],
+   "v": "bcc6a88482"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Son yılların çıkmışları dört noktada toplanır: CTG tekrarlı SCA tipi olarak SCA8 (2023-24 ve 2024-25), sendromik olmayan işitme kaybı nedeni olarak GJB2 (2023-24), OR herediter işitme kaybının en sık geni GJB2 (2025-26) ve dirençli epilepsiyle ilişkili halka kromozom (2025-26). Kökler çoğunlukla doğrudan tanımdan ada gider; çeldiriciler aynı türden ayrı kavramlardır (başka SCA tipleri, başka işitme sendromları), bu yüzden gen–tip–tekrar türü eşleşmeleri ve kalıtım grupları öncelikli bilgidir.",
+   "maddeler": [
+    {
+     "baslik": "SCA8: CTG tekrar artışı",
+     "metin": "SCA tip 8, poliglutamin grubundaki CAG tekrarlı tiplerden farklı olarak CTG tekrar artışıyla oluşan spinoserebellar ataksidir.",
+     "neden": "2023-24'te CTG tekrar artışının görüldüğü SCA tipi soruldu ve çeldiricilerin hepsi CAG tekrarlı tiplerdi (SCA1, 2, 6, 7); 2024-25 hatırlama kaydında da cevap SCA8 olarak geçer.",
+     "s": [
+      25,
+      31
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "GJB2: OR nonsendromik işitme kaybının en sık nedeni",
+     "metin": "OR nonsendromik işitme kayıplarının %50'sinden 13q11-12'deki GJB2 (konneksin 26) geni mutasyonları sorumludur.",
+     "neden": "2025-26'da OR herediter işitme kaybının en sık geni olarak, 2023-24'te sendromik listeye karışan çeldirici olarak soruldu.",
+     "s": [
+      88,
+      96
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "En sık dört sendromik işitme kaybı",
+     "metin": "En sık görülen sendromik işitme kayıpları Waardenburg, Usher, Pendred ve Alport sendromlarıdır; GJB2 ise nonsendromik gruptadır.",
+     "neden": "2023-24'te olumsuz kökle soruldu: dört sendromun yanına konneksin 26 mutasyonu çeldirici olarak eklendi.",
+     "s": [
+      73
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Halka kromozom 20 ve 14: dirençli epilepsi",
+     "metin": "Halka (ring) kromozom 20 taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi, ring 14'te de dirençli epilepsi görülür.",
+     "neden": "2025-26'da tedaviye dirençli epilepsiyle ilişkili kromozom anomalisi olarak ring 14 soruldu; çeldiriciler bu derste anlatılmayan yapısal anomalilerdi.",
+     "s": [
+      11
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "SCA: poliglutamin grubu ve en sık tipler",
+     "metin": "Spinoserebellar ataksiler ataksin proteininde CAG tekrar artışıyla poliglutamin (polyQ) grubundadır; en sık tipler SCA 1, 2, 3, 6, 7 ve 10'dur.",
+     "neden": "2023-24'te tekrar türü üzerinden soru geldi, 2024-25 hatırlama kaydında da cevap SCA8'dir; en sık tipler listesi ve CAG/CTG ayrımı aynı slaytta, birbirinin çeldiricisi olarak kullanılır.",
+     "s": [
+      24,
+      25
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Sendromik epilepside genetik test sırası",
+     "metin": "Dismorfik yüz, MR ve otizm gibi komorbiditeli sendromik epilepside ilk genetik test a-CGH'dir; yapılamıyorsa karyotip yapılır.",
+     "neden": "Genetik test seçimi klasik sıra sorusudur; ilk test, yedek test ve aday gen testinin yeri birbirinin çeldiricisi olur.",
+     "s": [
+      19
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Nonsendromik işitme kaybı: sıklık ve DFN lokusları",
+     "metin": "Kalıtsal işitme kayıplarının %70'i nonsendromiktir; en sık alt tipi OR form (%80), lokusları OD'de DFNA, OR'de DFNB, X'e bağlıda DFN'dir.",
+     "neden": "GJB2 sorularının arka planıdır: grubun oranı, en sık kalıtım biçimi ve lokus adları sayı ve harf çeldiricisi olarak sorulabilir.",
+     "s": [
+      87,
+      89
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "SCA10: intronik pentanükleotid tekrarı",
+     "metin": "SCA tip 10, ataksin 10 (ATXN10) geninin intron 9'unda pentanükleotid tekrar artışıyla oluşur; serebellar bulgulara nöbetler eklenebilir.",
+     "neden": "SCA tekrar türü sorularının üçüncü seçeneğidir: CAG ve CTG dışındaki tek tekrar türü budur; geçmiş yıl öğrencileri ATXN10'u ayrıca not almış.",
+     "s": [
+      32
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Son yılların çıkmışları dört noktada toplanır: CTG tekrarlı SCA tipi olarak SCA8 (2023-24 ve 2024-25), sendromik olmayan işitme kaybı nedeni olarak GJB2 (2023-24), OR herediter işitme kaybının en sık geni GJB2 (2025-26) ve dirençli epilepsiyle ilişkili halka kromozom (2025-26). Kökler çoğunlukla doğrudan tanımdan ada gider; çeldiriciler aynı türden ayrı kavramlardır (başka SCA tipleri, başka işitme sendromları), bu yüzden gen–tip–tekrar türü eşleşmeleri ve kalıtım grupları öncelikli bilgidir.",
+    "SCA8: CTG tekrar artışı: SCA tip 8, poliglutamin grubundaki CAG tekrarlı tiplerden farklı olarak CTG tekrar artışıyla oluşan spinoserebellar ataksidir.",
+    "GJB2: OR nonsendromik işitme kaybının en sık nedeni: OR nonsendromik işitme kayıplarının %50'sinden 13q11-12'deki GJB2 (konneksin 26) geni mutasyonları sorumludur.",
+    "En sık dört sendromik işitme kaybı: En sık görülen sendromik işitme kayıpları Waardenburg, Usher, Pendred ve Alport sendromlarıdır; GJB2 ise nonsendromik gruptadır.",
+    "Halka kromozom 20 ve 14: dirençli epilepsi: Halka (ring) kromozom 20 taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi, ring 14'te de dirençli epilepsi görülür.",
+    "SCA: poliglutamin grubu ve en sık tipler: Spinoserebellar ataksiler ataksin proteininde CAG tekrar artışıyla poliglutamin (polyQ) grubundadır; en sık tipler SCA 1, 2, 3, 6, 7 ve 10'dur.",
+    "Sendromik epilepside genetik test sırası: Dismorfik yüz, MR ve otizm gibi komorbiditeli sendromik epilepside ilk genetik test a-CGH'dir; yapılamıyorsa karyotip yapılır.",
+    "Nonsendromik işitme kaybı: sıklık ve DFN lokusları: Kalıtsal işitme kayıplarının %70'i nonsendromiktir; en sık alt tipi OR form (%80), lokusları OD'de DFNA, OR'de DFNB, X'e bağlıda DFN'dir.",
+    "SCA10: intronik pentanükleotid tekrarı: SCA tip 10, ataksin 10 (ATXN10) geninin intron 9'unda pentanükleotid tekrar artışıyla oluşur; serebellar bulgulara nöbetler eklenebilir."
+   ],
+   "v": "ed4bf4ceb5"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış çıkmışları beş tanedir ve üç alt başlıkta toplanır: spinoserebellar ataksilerde tekrar türü (SCA8 ve CTG; 2023-24 'tekrar türünden tipe' ve 2024-25 'bulgulardan tipe'), herediter işitme kayıpları (2023-24 'sendromik işitme kayıplarından değildir' olumsuz kökü ve 2025-26 'OR herediter işitme kaybında en sık gen', ikisinin de cevabı GJB2) ve epilepside kromozom anomalisi (2025-26 'tedaviye dirençli epilepsiyle ilişkili kromozom anomalisi' → ring 14). Kök kalıbı kısa bilgi sorusudur: gen ya da hastalık adı şıklarda, çeldiriciler aynı dersin komşu kavramlarından (CAG tekrarlı SCA tipleri, en sık dört sendromik işitme kaybı, başka bölümlerin genleri) seçilir. SCA8 iki yıl üst üste, GJB2 iki ayrı kalıpla sorulmuştur; bu iki konu ders içinde en yüksek tekrar eğilimini gösterir. Ayrıca iki ilgili çıkmış (Alport ve NF2–schwannom) başka derslerin (patoloji) sorusudur ve yalnız bilgi örtüşmesi olarak listelenir.",
+   "maddeler": [
+    {
+     "baslik": "2023-2024",
+     "metin": "CTG üçlü tekrar artışının görüldüğü spinoserebellar ataksi (SCA) tipi aşağıdakilerden hangisidir?",
+     "cevap": "SCA8",
+     "s": [
+      25
+     ],
+     "aciklama": [
+      "Soru, spinoserebellar ataksilerde tekrar türü ile tip eşleşmesini, yani CAG dışı tekrar taşıyan SCA tipini ölçüyor.",
+      "Doğru cevap SCA8'dir: s25'e göre SCA tip 1, 2, 3, 6, 7, 12 ve 17'de CAG tekrar artışına bağlı glutamin artışı vardır, SCA tip 8'de ise CTG tekrar artışı söz konusudur; s31'de ATXN8 geninde 80-800 CTG tekrarının patojenik olduğu yazılıdır.",
+      "Şıklardaki SCA1, SCA2, SCA6 ve SCA7 güçlü çeldiricilerdir çünkü hepsi en sık görülen tipler arasındadır, ama dördü de CAG (poliglutamin) grubundadır; s25 şemasında da bu tiplerin tekrarı kodlayan ekzonda, SCA8'inki ise 3' UTR'de gösterilir."
+     ],
+     "ornek": "s25'teki gen şeması tekrarların yerini gösterir: kodlayan ekzonda (CAG)n taşıyan SCA1, 2, 3, 6, 7, 17 bir grupta, stop kodonundan sonra 3' UTR'de (CTG)n taşıyan SCA8 tek başına durur. s33 şemasında aynı 3' UTR (CTG)n grubunda miyotonik distrofi tip 1 de vardır.",
+     "tuzak": "SCA10'u CTG ya da CAG grubuna koymak: SCA10 en sık tiplerden biridir ama ATXN10'un 9. intronunda pentanükleotid tekrarı taşır (s32). Ayrıca SCA12'nin CAG tekrarı 5' UTR'dedir, poliglutamin oluşturmaz."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Kurgu Soru: Horizontal nistagmus, spastisite ve azalmış vibrasyon duyusuyla seyreden, poliglutamin grubundaki tiplerden farklı olarak CAG yerine CTG tekrar artışıyla oluşan spinoserebellar ataksi tipi aşağıdakilerden hangisidir?",
+     "cevap": "SCA8",
+     "s": [
+      31
+     ],
+     "aciklama": [
+      "Soru, SCA tiplerini klinik bulgudan tanımayı ölçüyor; kökte horizontal nistagmus, spastisite ve azalmış vibrasyon duyusu verilir.",
+      "Doğru cevap SCA8'dir: s31'de bu üç bulgu SCA tip 8'in tipik bulguları olarak sayılır; SCA8 ataksin 8 geninde CTG tekrar artışıyla oluşur, 4. dekatta başlar ve yavaş ilerler.",
+      "En güçlü çeldirici SCA3'tür çünkü o da spastisiteyle gider; ancak SCA3'te spastisiteye miks polinöropati, uyku bozukluğu ve huzursuz bacak eşlik eder (s28). SCA6'da ise dizartri ve nistagmus vardır ama spastisite ve vibrasyon kaybı yoktur ve bulgular 5-6. dekatta başlar (s29)."
+     ],
+     "ornek": "s29-s31'deki sagittal beyin çizimlerinde SCA8 yalnız serebellum tutulumuyla gösterilir; bu, SCA8'in saf serebellar ve yavaş seyirli bir tip olduğunu görsel olarak destekler.",
+     "tuzak": "Kökte 'poliglutamin grubundaki' gibi bir ifade varsa dikkat: SCA8 CTG tekrarı taşır ve s25'e göre CAG/poliglutamin listesinde değildir. Ham kayıt yalnız cevabı (SCA8) içerdiği için kökteki ifadeler sonradan kurulmuştur."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?",
+     "cevap": "GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı",
+     "s": [
+      73
+     ],
+     "aciklama": [
+      "Soru, sendromik ve nonsendromik işitme kaybı ayrımını olumsuz kökle ölçüyor: şıklardan hangisi sendromik değildir.",
+      "Doğru cevap GJB2'dir (konneksin 26): s73 en sık sendromik işitme kayıplarını Waardenburg, Usher, Pendred ve Alport olarak sayar; GJB2 ise s88'de OR nonsendromik işitme bozukluklarının geni olarak geçer ve nonsendromik işitme kaybında başka klinik bulgu eşlik etmez (s87).",
+      "Çeldiricilerin dördü de doğru ifadedir: Waardenburg OD sendromiktir (beyaz perçem, heterokromi), Usher ve Pendred OR sendromiktir (retinitis pigmentoza, guatr), Alport X'e bağlı sendromiktir (nefrit, göz bulgusu)."
+     ],
+     "ornek": "Slayttaki sınıflama tablosu (s72) fenotipe göre sendromik/nonsendromik ayrımını verir; Usher slaytındaki tablo (s83) işitme kaybına görme ve denge bulgusunun eşlik ettiğini, GJB2 slaytı (s88) ise yalnız iç kulak proteini olduğunu gösterir.",
+     "tuzak": "Olumsuz kökte 'en sık' sözcüğüne takılmak: GJB2 en sık genetik işitme kaybı nedenidir ama sendromik değildir. Alport'un X'e bağlı olması onu sendromik gruptan çıkarmaz."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Otozomal resesif kalıtılan herediter işitme kayıplarında en sık hangi gen mutasyonu saptanır?",
+     "cevap": "GJB2 (Gap junction beta-2 / Konneksin 26)",
+     "s": [
+      88
+     ],
+     "aciklama": [
+      "Soru, OR kalıtılan herediter işitme kaybının en sık moleküler nedenini ölçüyor.",
+      "Doğru cevap GJB2'dir: s88'e göre 13q11-12'deki GJB2 geni gap junction kanallarının yapı taşı konneksin 26'yı kodlar ve OR nonsendromik işitme kayıplarının %50'si GJB2 mutasyonlarındandır; s96 danışma slaytı da OR herediter işitme kayıplarının %50'sinin GJB2 olduğunu yineler.",
+      "En güçlü çeldirici COL4A5'tir; bu gen de işitme kaybı yapar ama Alport sendromunun genidir ve X'e bağlı sendromik gruptadır (s85). KCNQ2 epilepsi (BFNN) geni, NF2 ise schwannomla giden OD fakomatoz genidir (s13, s62)."
+     ],
+     "ornek": "s97-s98 danışma riskleri GJB2'nin önemini sayıyla gösterir: işitme kayıplı çocukta GJB2 ve GJB6 negatifse tekrarlama riski %14'e düşer, ebeveynlerin ikisinde GJB2 mutasyonu varsa risk %100'dür.",
+     "tuzak": "OR sendromik grubu (Pendred, JLNS, Usher, Perrault) ile OR nonsendromik grubu karıştırmak; 'OR işitme kaybı' denince en sık neden nonsendromik GJB2'dir. Bankadaki şıklar ham kayıttan biraz farklıdır (ham: COL4A4, banka: PAX3)."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdaki kromozom anomalilerinden hangisi tedaviye dirençli epilepsi ile ilişkilidir?",
+     "cevap": "Ring kromozom 14",
+     "s": [
+      11
+     ],
+     "aciklama": [
+      "Soru, epilepsiyle ilişkili kromozom yeniden düzenlemelerinden tedaviye dirençli epilepsi yapanı ölçüyor.",
+      "Doğru cevap ring kromozom 14'tür: s11'e göre ring 20 taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi görülür, ring 14'te de dirençli epilepsi gözlenir; şıklarda ring 20 olmadığından doğru tek seçenek ring 14'tür.",
+      "Çeldiriciler (marker 15, ring 5, inversiyon 5, t(14;21)) bu derste dirençli epilepsiyle ilişkilendirilmez; ring kromozom adının sayısı değiştirilerek kurulan 'ring 5' en yanıltıcı olanıdır, 14 ve 21 sayılarını içeren translokasyon da ring 14 ile karıştırılmak üzere seçilmiştir."
+     ],
+     "ornek": "s10-s11'de kromozom anomalisiyle giden epilepsilerde ek nörolojik bulgu ve dismorfizm beklendiği yazılır; 6q delesyonu ve 22q duplikasyonunda dismorfik yüz, MR ve epilepsi birlikteyken ring 20 ve 14'ün öne çıkan özelliği tedaviye direnç ve EEG bulgusudur.",
+     "tuzak": "Ring 20'yi bilip ring 14'ü unutmak; ya da dengeli translokasyonu epilepsi nedeni saymak. s10'a göre epilepsi yapan düzenlemeler delesyon, duplikasyon ve dengesiz translokasyondur."
+    },
+    {
+     "baslik": "2020-2021 (banka)",
+     "metin": "Hematüri ve proteinüri ile seyreden böbrek tutulumuna, yüksek frekanslı bilateral sensörinöral işitme kaybı ve gözde anterior lentikonus bulgularının eşlik ettiği, tip 4 kollajen alfa zincir genlerindeki mutasyonlar sonucu gelişen herediter glomerül hastalığı hangisidir?",
+     "cevap": "Alport sendromu",
+     "s": [
+      85
+     ],
+     "aciklama": [
+      "Kurul 1 patoloji sorusu nefritik sendromla giden kalıtsal bir glomerül hastalığını, Alport sendromunu soruyor.",
+      "Bu dersin s85 slaytı Alport sendromunu kalıtsal nefrit, işitme bozukluğu ve oküler değişikliklerle karakterize bir tip IV kollajen hastalığı olarak tanımlar; olguların %80'inde COL4A5 mutasyonu vardır.",
+      "Soru patoloji dersine ait olduğu için bu derste vurgulanmaz; ancak genetik açıdan Alport'u diğer işitme kaybı yapan kollajen hastalığı Stickler'dan (tip II, IX, XI kollajen; s78) ayırmak önemlidir."
+     ],
+     "ornek": "s85'teki ALPORT kısaltma kutusu hematüri, anterior lentikonus ve işitme kaybını birlikte verir; çizimde işitme kaybının doğumda olmayıp çocuklukta başladığı belirtilir.",
+     "tuzak": "Alport'u OR sendromik grupta saymak: slaytta X'e bağlı sendromik işitme kayıpları başlığı altındadır; en sık gen X kromozomundaki COL4A5'tir."
+    },
+    {
+     "baslik": "2020-2021 (banka)",
+     "metin": "Ailesel nörofibromatozis tip 2 ile ilişkili olabilen, mikroskopik incelemede Antoni A ve Antoni B alanları ile karakterize olan ve Verocay cisimcikleri adı verilen palizatlanma yapıları içeren periferik sinir kılıf tümörü aşağıdakilerden hangisidir?",
+     "cevap": "Schwannom",
+     "s": [
+      61
+     ],
+     "aciklama": [
+      "Patoloji sorusu ailesel nörofibromatozis tip 2 ile ilişkili SSS tümörünü, schwannomu soruyor.",
+      "Bu dersin s61-s62 slaytları NF2'yi multiple schwannomlar ve meningiomlarla karakterize, bilateral akustik nörofibromatozis olarak da bilinen bir sendrom olarak anlatır; merlin kaybında Schwann hücreleri aşırı çoğalır ve schwannom gelişir.",
+      "Soru patoloji dersine ait olduğu için vurgulanmaz; genetik açıdan NF1'in nörofibromla, NF2'nin schwannom ve meningiomla gittiği ayrımı esastır."
+     ],
+     "ornek": "s61'deki tümör çizimi bilateral vestibüler schwannom, multipl menenjiom, ependimom ve spinal schwannomu gösterir; s77'de NF2 aynı tümörlerle OD sendromik işitme kaybı olarak da yer alır.",
+     "tuzak": "Nörofibromu NF2'ye bağlamak: nörofibrom NF1'in tümörüdür (s59), NF2'nin tümörü schwannomdur."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış çıkmışları beş tanedir ve üç alt başlıkta toplanır: spinoserebellar ataksilerde tekrar türü (SCA8 ve CTG; 2023-24 'tekrar türünden tipe' ve 2024-25 'bulgulardan tipe'), herediter işitme kayıpları (2023-24 'sendromik işitme kayıplarından değildir' olumsuz kökü ve 2025-26 'OR herediter işitme kaybında en sık gen', ikisinin de cevabı GJB2) ve epilepside kromozom anomalisi (2025-26 'tedaviye dirençli epilepsiyle ilişkili kromozom anomalisi' → ring 14). Kök kalıbı kısa bilgi sorusudur: gen ya da hastalık adı şıklarda, çeldiriciler aynı dersin komşu kavramlarından (CAG tekrarlı SCA tipleri, en sık dört sendromik işitme kaybı, başka bölümlerin genleri) seçilir. SCA8 iki yıl üst üste, GJB2 iki ayrı kalıpla sorulmuştur; bu iki konu ders içinde en yüksek tekrar eğilimini gösterir. Ayrıca iki ilgili çıkmış (Alport ve NF2–schwannom) başka derslerin (patoloji) sorusudur ve yalnız bilgi örtüşmesi olarak listelenir.",
+    "2023-2024: CTG üçlü tekrar artışının görüldüğü spinoserebellar ataksi (SCA) tipi aşağıdakilerden hangisidir?",
+    "Cevap: SCA8.",
+    "Soru, spinoserebellar ataksilerde tekrar türü ile tip eşleşmesini, yani CAG dışı tekrar taşıyan SCA tipini ölçüyor.",
+    "Doğru cevap SCA8'dir: s25'e göre SCA tip 1, 2, 3, 6, 7, 12 ve 17'de CAG tekrar artışına bağlı glutamin artışı vardır, SCA tip 8'de ise CTG tekrar artışı söz konusudur; s31'de ATXN8 geninde 80-800 CTG tekrarının patojenik olduğu yazılıdır.",
+    "Şıklardaki SCA1, SCA2, SCA6 ve SCA7 güçlü çeldiricilerdir çünkü hepsi en sık görülen tipler arasındadır, ama dördü de CAG (poliglutamin) grubundadır; s25 şemasında da bu tiplerin tekrarı kodlayan ekzonda, SCA8'inki ise 3' UTR'de gösterilir.",
+    "Örnek: s25'teki gen şeması tekrarların yerini gösterir: kodlayan ekzonda (CAG)n taşıyan SCA1, 2, 3, 6, 7, 17 bir grupta, stop kodonundan sonra 3' UTR'de (CTG)n taşıyan SCA8 tek başına durur. s33 şemasında aynı 3' UTR (CTG)n grubunda miyotonik distrofi tip 1 de vardır.",
+    "Tuzak: SCA10'u CTG ya da CAG grubuna koymak: SCA10 en sık tiplerden biridir ama ATXN10'un 9. intronunda pentanükleotid tekrarı taşır (s32). Ayrıca SCA12'nin CAG tekrarı 5' UTR'dedir, poliglutamin oluşturmaz.",
+    "2024-2025: Kurgu Soru: Horizontal nistagmus, spastisite ve azalmış vibrasyon duyusuyla seyreden, poliglutamin grubundaki tiplerden farklı olarak CAG yerine CTG tekrar artışıyla oluşan spinoserebellar ataksi tipi aşağıdakilerden hangisidir?",
+    "Cevap: SCA8.",
+    "Soru, SCA tiplerini klinik bulgudan tanımayı ölçüyor; kökte horizontal nistagmus, spastisite ve azalmış vibrasyon duyusu verilir.",
+    "Doğru cevap SCA8'dir: s31'de bu üç bulgu SCA tip 8'in tipik bulguları olarak sayılır; SCA8 ataksin 8 geninde CTG tekrar artışıyla oluşur, 4. dekatta başlar ve yavaş ilerler.",
+    "En güçlü çeldirici SCA3'tür çünkü o da spastisiteyle gider; ancak SCA3'te spastisiteye miks polinöropati, uyku bozukluğu ve huzursuz bacak eşlik eder (s28). SCA6'da ise dizartri ve nistagmus vardır ama spastisite ve vibrasyon kaybı yoktur ve bulgular 5-6. dekatta başlar (s29).",
+    "Örnek: s29-s31'deki sagittal beyin çizimlerinde SCA8 yalnız serebellum tutulumuyla gösterilir; bu, SCA8'in saf serebellar ve yavaş seyirli bir tip olduğunu görsel olarak destekler.",
+    "Tuzak: Kökte 'poliglutamin grubundaki' gibi bir ifade varsa dikkat: SCA8 CTG tekrarı taşır ve s25'e göre CAG/poliglutamin listesinde değildir. Ham kayıt yalnız cevabı (SCA8) içerdiği için kökteki ifadeler sonradan kurulmuştur.",
+    "2023-2024: Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?",
+    "Cevap: GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı.",
+    "Soru, sendromik ve nonsendromik işitme kaybı ayrımını olumsuz kökle ölçüyor: şıklardan hangisi sendromik değildir.",
+    "Doğru cevap GJB2'dir (konneksin 26): s73 en sık sendromik işitme kayıplarını Waardenburg, Usher, Pendred ve Alport olarak sayar; GJB2 ise s88'de OR nonsendromik işitme bozukluklarının geni olarak geçer ve nonsendromik işitme kaybında başka klinik bulgu eşlik etmez (s87).",
+    "Çeldiricilerin dördü de doğru ifadedir: Waardenburg OD sendromiktir (beyaz perçem, heterokromi), Usher ve Pendred OR sendromiktir (retinitis pigmentoza, guatr), Alport X'e bağlı sendromiktir (nefrit, göz bulgusu).",
+    "Örnek: Slayttaki sınıflama tablosu (s72) fenotipe göre sendromik/nonsendromik ayrımını verir; Usher slaytındaki tablo (s83) işitme kaybına görme ve denge bulgusunun eşlik ettiğini, GJB2 slaytı (s88) ise yalnız iç kulak proteini olduğunu gösterir.",
+    "Tuzak: Olumsuz kökte 'en sık' sözcüğüne takılmak: GJB2 en sık genetik işitme kaybı nedenidir ama sendromik değildir. Alport'un X'e bağlı olması onu sendromik gruptan çıkarmaz.",
+    "2025-2026: Otozomal resesif kalıtılan herediter işitme kayıplarında en sık hangi gen mutasyonu saptanır?",
+    "Cevap: GJB2 (Gap junction beta-2 / Konneksin 26).",
+    "Soru, OR kalıtılan herediter işitme kaybının en sık moleküler nedenini ölçüyor.",
+    "Doğru cevap GJB2'dir: s88'e göre 13q11-12'deki GJB2 geni gap junction kanallarının yapı taşı konneksin 26'yı kodlar ve OR nonsendromik işitme kayıplarının %50'si GJB2 mutasyonlarındandır; s96 danışma slaytı da OR herediter işitme kayıplarının %50'sinin GJB2 olduğunu yineler.",
+    "En güçlü çeldirici COL4A5'tir; bu gen de işitme kaybı yapar ama Alport sendromunun genidir ve X'e bağlı sendromik gruptadır (s85). KCNQ2 epilepsi (BFNN) geni, NF2 ise schwannomla giden OD fakomatoz genidir (s13, s62).",
+    "Örnek: s97-s98 danışma riskleri GJB2'nin önemini sayıyla gösterir: işitme kayıplı çocukta GJB2 ve GJB6 negatifse tekrarlama riski %14'e düşer, ebeveynlerin ikisinde GJB2 mutasyonu varsa risk %100'dür.",
+    "Tuzak: OR sendromik grubu (Pendred, JLNS, Usher, Perrault) ile OR nonsendromik grubu karıştırmak; 'OR işitme kaybı' denince en sık neden nonsendromik GJB2'dir. Bankadaki şıklar ham kayıttan biraz farklıdır (ham: COL4A4, banka: PAX3).",
+    "2025-2026: Aşağıdaki kromozom anomalilerinden hangisi tedaviye dirençli epilepsi ile ilişkilidir?",
+    "Cevap: Ring kromozom 14.",
+    "Soru, epilepsiyle ilişkili kromozom yeniden düzenlemelerinden tedaviye dirençli epilepsi yapanı ölçüyor.",
+    "Doğru cevap ring kromozom 14'tür: s11'e göre ring 20 taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi görülür, ring 14'te de dirençli epilepsi gözlenir; şıklarda ring 20 olmadığından doğru tek seçenek ring 14'tür.",
+    "Çeldiriciler (marker 15, ring 5, inversiyon 5, t(14;21)) bu derste dirençli epilepsiyle ilişkilendirilmez; ring kromozom adının sayısı değiştirilerek kurulan 'ring 5' en yanıltıcı olanıdır, 14 ve 21 sayılarını içeren translokasyon da ring 14 ile karıştırılmak üzere seçilmiştir.",
+    "Örnek: s10-s11'de kromozom anomalisiyle giden epilepsilerde ek nörolojik bulgu ve dismorfizm beklendiği yazılır; 6q delesyonu ve 22q duplikasyonunda dismorfik yüz, MR ve epilepsi birlikteyken ring 20 ve 14'ün öne çıkan özelliği tedaviye direnç ve EEG bulgusudur.",
+    "Tuzak: Ring 20'yi bilip ring 14'ü unutmak; ya da dengeli translokasyonu epilepsi nedeni saymak. s10'a göre epilepsi yapan düzenlemeler delesyon, duplikasyon ve dengesiz translokasyondur.",
+    "2020-2021 (banka): Hematüri ve proteinüri ile seyreden böbrek tutulumuna, yüksek frekanslı bilateral sensörinöral işitme kaybı ve gözde anterior lentikonus bulgularının eşlik ettiği, tip 4 kollajen alfa zincir genlerindeki mutasyonlar sonucu gelişen herediter glomerül hastalığı hangisidir?",
+    "Cevap: Alport sendromu.",
+    "Kurul 1 patoloji sorusu nefritik sendromla giden kalıtsal bir glomerül hastalığını, Alport sendromunu soruyor.",
+    "Bu dersin s85 slaytı Alport sendromunu kalıtsal nefrit, işitme bozukluğu ve oküler değişikliklerle karakterize bir tip IV kollajen hastalığı olarak tanımlar; olguların %80'inde COL4A5 mutasyonu vardır.",
+    "Soru patoloji dersine ait olduğu için bu derste vurgulanmaz; ancak genetik açıdan Alport'u diğer işitme kaybı yapan kollajen hastalığı Stickler'dan (tip II, IX, XI kollajen; s78) ayırmak önemlidir.",
+    "Örnek: s85'teki ALPORT kısaltma kutusu hematüri, anterior lentikonus ve işitme kaybını birlikte verir; çizimde işitme kaybının doğumda olmayıp çocuklukta başladığı belirtilir.",
+    "Tuzak: Alport'u OR sendromik grupta saymak: slaytta X'e bağlı sendromik işitme kayıpları başlığı altındadır; en sık gen X kromozomundaki COL4A5'tir.",
+    "2020-2021 (banka): Ailesel nörofibromatozis tip 2 ile ilişkili olabilen, mikroskopik incelemede Antoni A ve Antoni B alanları ile karakterize olan ve Verocay cisimcikleri adı verilen palizatlanma yapıları içeren periferik sinir kılıf tümörü aşağıdakilerden hangisidir?",
+    "Cevap: Schwannom.",
+    "Patoloji sorusu ailesel nörofibromatozis tip 2 ile ilişkili SSS tümörünü, schwannomu soruyor.",
+    "Bu dersin s61-s62 slaytları NF2'yi multiple schwannomlar ve meningiomlarla karakterize, bilateral akustik nörofibromatozis olarak da bilinen bir sendrom olarak anlatır; merlin kaybında Schwann hücreleri aşırı çoğalır ve schwannom gelişir.",
+    "Soru patoloji dersine ait olduğu için vurgulanmaz; genetik açıdan NF1'in nörofibromla, NF2'nin schwannom ve meningiomla gittiği ayrımı esastır.",
+    "Örnek: s61'deki tümör çizimi bilateral vestibüler schwannom, multipl menenjiom, ependimom ve spinal schwannomu gösterir; s77'de NF2 aynı tümörlerle OD sendromik işitme kaybı olarak da yer alır.",
+    "Tuzak: Nörofibromu NF2'ye bağlamak: nörofibrom NF1'in tümörüdür (s59), NF2'nin tümörü schwannomdur."
+   ],
+   "v": "d24aaa69a0"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%60) ve yanlış ifadeyi bulma (%9) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok sınıflama ve adlandırma (%40) ve mekanizma (%20) sorulur."
+    },
+    {
+     "baslik": "Sınıflama ve adlandırma",
+     "metin": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "baslik": "Mekanizma",
+     "metin": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%67) ve anlama ve ilişki kurma (%33) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da birbirine yakın sayısal değer olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%60) ve yanlış ifadeyi bulma (%9) biçimindedir.",
+    "Sorulan bilgi: En çok sınıflama ve adlandırma (%40) ve mekanizma (%20) sorulur.",
+    "Sınıflama ve adlandırma: Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir.",
+    "Mekanizma: Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%67) ve anlama ve ilişki kurma (%33) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da birbirine yakın sayısal değer olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "f686a6e068"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Duchenne ve Becker musküler distro-",
+     "metin": "Çıkmışlarda 5 kez soruldu. Örnek kök: Distro-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyo-bril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?"
+    },
+    {
+     "baslik": "SCA8: CTG tekrar artışı",
+     "metin": "2023-24'te CTG tekrar artışının görüldüğü SCA tipi soruldu ve çeldiricilerin hepsi CAG tekrarlı tiplerdi (SCA1, 2, 6, 7); 2024-25 hatırlama kaydında da cevap SCA8 olarak geçer."
+    },
+    {
+     "baslik": "GJB2: OR nonsendromik işitme kaybının en sık nedeni",
+     "metin": "2025-26'da OR herediter işitme kaybının en sık geni olarak, 2023-24'te sendromik listeye karışan çeldirici olarak soruldu."
+    },
+    {
+     "baslik": "En sık dört sendromik işitme kaybı",
+     "metin": "2023-24'te olumsuz kökle soruldu: dört sendromun yanına konneksin 26 mutasyonu çeldirici olarak eklendi."
+    },
+    {
+     "baslik": "Halka kromozom 20 ve 14: dirençli epilepsi",
+     "metin": "2025-26'da tedaviye dirençli epilepsiyle ilişkili kromozom anomalisi olarak ring 14 soruldu; çeldiriciler bu derste anlatılmayan yapısal anomalilerdi."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Duchenne ve Becker musküler distro-: Çıkmışlarda 5 kez soruldu. Örnek kök: Distro-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyo-bril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?",
+    "SCA8: CTG tekrar artışı: 2023-24'te CTG tekrar artışının görüldüğü SCA tipi soruldu ve çeldiricilerin hepsi CAG tekrarlı tiplerdi (SCA1, 2, 6, 7); 2024-25 hatırlama kaydında da cevap SCA8 olarak geçer.",
+    "GJB2: OR nonsendromik işitme kaybının en sık nedeni: 2025-26'da OR herediter işitme kaybının en sık geni olarak, 2023-24'te sendromik listeye karışan çeldirici olarak soruldu.",
+    "En sık dört sendromik işitme kaybı: 2023-24'te olumsuz kökle soruldu: dört sendromun yanına konneksin 26 mutasyonu çeldirici olarak eklendi.",
+    "Halka kromozom 20 ve 14: dirençli epilepsi: 2025-26'da tedaviye dirençli epilepsiyle ilişkili kromozom anomalisi olarak ring 14 soruldu; çeldiriciler bu derste anlatılmayan yapısal anomalilerdi.",
+    "Çalışma yolu: Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "8ae911b483"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders dört nörogenetik başlığı işler: epilepsiler (sınıflama, kromozom yeniden düzenlemeleri, iyon kanalı genleri, Dravet sendromu, genetik test yaklaşımı), herediter ataksiler (OD spinoserebellar ataksiler ve tekrar türleri, OR, X'e bağlı ve mitokondriyal ataksiler), fakomatozlar (nörofibromatozlar, tüberoz skleroz, ataksi telenjiektazi, Sturge-Weber, von Hippel-Lindau ve diğerleri) ve herediter işitme kayıpları (sendromik ve nonsendromik gruplar, GJB2, mitokondriyal formlar, genetik danışma riskleri). Her hastalıkta gen, lokus, kalıtım, tekrar türü ve ayırt edici klinik bulgu verilir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders dört nörogenetik başlığı işler: epilepsiler (sınıflama, kromozom yeniden düzenlemeleri, iyon kanalı genleri, Dravet sendromu, genetik test yaklaşımı), herediter ataksiler (OD spinoserebellar ataksiler ve tekrar türleri, OR, X'e bağlı ve mitokondriyal ataksiler), fakomatozlar (nörofibromatozlar, tüberoz skleroz, ataksi telenjiektazi, Sturge-Weber, von Hippel-Lindau ve diğerleri) ve herediter işitme kayıpları (sendromik ve nonsendromik gruplar, GJB2, mitokondriyal formlar, genetik danışma riskleri). Her hastalıkta gen, lokus, kalıtım, tekrar türü ve ayırt edici klinik bulgu verilir."
+   ],
+   "v": "9503b9a91a"
+  },
+  {
+   "id": "2g02-04",
+   "baslik": "Halka kromozom 20 ve 14: dirençli epilepsi",
+   "giris": "Halka (ring) kromozom 20 taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi, ring 14'te de dirençli epilepsi görülür.",
+   "s": [
+    11
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "kromozomal anomalilerle seyreden epilepsilerde hastalarda ilave nörolojik bulgular ve fasiyal dismorfizm beklenir; kromozomal yeniden düzenlemelerde epilepsiye dismorfik yüz bulguları ve MR (zihinsel yetersizlik) eşlik eder."
+    },
+    {
+     "metin": "delesyon, duplikasyon ve dengesiz translokasyon."
+    },
+    {
+     "metin": "taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi görülür; özgül EEG bulgusu bu anomaliye bağlanır."
+    },
+    {
+     "metin": "dirençli epilepsi gözlenir."
+    },
+    {
+     "metin": "dismorfik fasiyal anomaliler, MR ve epilepsiyle ilişkili bir klinik tablo oluşturur; dirençli epilepsi bu ikisine özgü olarak verilmez."
+    }
+   ],
+   "klip": "o-2g02-04",
+   "ses": [
+    "Halka kromozom 20 ve 14: dirençli epilepsi.",
+    "Halka (ring) kromozom 20 taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi, ring 14'te de dirençli epilepsi görülür.",
+    "kromozomal anomalilerle seyreden epilepsilerde hastalarda ilave nörolojik bulgular ve fasiyal dismorfizm beklenir; kromozomal yeniden düzenlemelerde epilepsiye dismorfik yüz bulguları ve MR (zihinsel yetersizlik) eşlik eder.",
+    "delesyon, duplikasyon ve dengesiz translokasyon.",
+    "taşıyıcılarında uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi görülür; özgül EEG bulgusu bu anomaliye bağlanır.",
+    "dirençli epilepsi gözlenir.",
+    "dismorfik fasiyal anomaliler, MR ve epilepsiyle ilişkili bir klinik tablo oluşturur; dirençli epilepsi bu ikisine özgü olarak verilmez."
+   ],
+   "v": "9d7a9518d9"
+  },
+  {
+   "id": "2g02-10",
+   "baslik": "Dravet sendromu ve SCN1A",
+   "giris": "Dravet sendromu infant dönemde tedaviye dirençli, kötü prognozlu şiddetli miyoklonik epilepsidir; olguların %90'ından fazlasında SCN1A mutasyonu vardır.",
+   "s": [
+    14,
+    15,
+    16
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "şiddetli miyoklonik epilepsi; infant dönemde tedaviye dirençli ve kötü prognozludur. Nöbetler genellikle 1 yaşından önce başlar; ilk nöbetler uzun sürelidir ve vücudun yarısını etkiler, sonraki nöbetler diğer tarafa geçebilir."
+    },
+    {
+     "metin": "çocuklar ilk birkaç yılda normal gelişim gösterir; nöbetler arttıkça ve yaş ilerledikçe yaşıtlarının gerisinde kalırlar."
+    },
+    {
+     "metin": "toplumda yaklaşık 1:15.700."
+    },
+    {
+     "metin": "SCN1A voltaj kapılı Na+ kanalını kodlar ve vakaların %90'ından fazlasında mutasyonludur; PCDH19 Ca+2 bağımlı hücre adezyonundan sorumludur; nadiren SCN1B, GABRG2 ya da HCN1. Hastaların %12'sinde genetik tanı konulamaz."
+    },
+    {
+     "metin": "SCN1A mutasyonlarının incelenmesi hastaların %70'ine kesin tanı koydurmuştur."
+    },
+    {
+     "metin": "KCNQ2/KCNQ3 voltaj kapılı K+ kanalı (BFNN), CSTB Unverricht-Lundborg, GABRB3 ve SLC2A1 multifaktöriyel jeneralize ve absans epilepsi yatkınlığı."
+    }
+   ],
+   "klip": "o-2g02-10",
+   "ses": [
+    "Dravet sendromu ve SCN1A.",
+    "Dravet sendromu infant dönemde tedaviye dirençli, kötü prognozlu şiddetli miyoklonik epilepsidir; olguların %90'ından fazlasında SCN1A mutasyonu vardır.",
+    "şiddetli miyoklonik epilepsi; infant dönemde tedaviye dirençli ve kötü prognozludur. Nöbetler genellikle 1 yaşından önce başlar; ilk nöbetler uzun sürelidir ve vücudun yarısını etkiler, sonraki nöbetler diğer tarafa geçebilir.",
+    "çocuklar ilk birkaç yılda normal gelişim gösterir; nöbetler arttıkça ve yaş ilerledikçe yaşıtlarının gerisinde kalırlar.",
+    "toplumda yaklaşık 1:15.700.",
+    "SCN1A voltaj kapılı Na+ kanalını kodlar ve vakaların %90'ından fazlasında mutasyonludur; PCDH19 Ca+2 bağımlı hücre adezyonundan sorumludur; nadiren SCN1B, GABRG2 ya da HCN1. Hastaların %12'sinde genetik tanı konulamaz.",
+    "SCN1A mutasyonlarının incelenmesi hastaların %70'ine kesin tanı koydurmuştur.",
+    "KCNQ2/KCNQ3 voltaj kapılı K+ kanalı (BFNN), CSTB Unverricht-Lundborg, GABRB3 ve SLC2A1 multifaktöriyel jeneralize ve absans epilepsi yatkınlığı."
+   ],
+   "v": "4680340802"
+  },
+  {
+   "id": "2g02-06",
+   "baslik": "Sendromik epilepside genetik test sırası",
+   "giris": "Dismorfik yüz, MR ve otizm gibi komorbiditeli sendromik epilepside ilk genetik test a-CGH'dir; yapılamıyorsa karyotip yapılır.",
+   "s": [
+    19
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "özellikle dismorfik yüz ya da somatik dismorfizm, MR (zihinsel yetersizlik) ve otizm gibi komorbiditelerin olduğu sendromik epilepsi vakalarında."
+    },
+    {
+     "metin": "a-CGH; bu yapılamıyorsa karyotip analizi yapılır."
+    },
+    {
+     "metin": "bu sayede mikro delesyon ve duplikasyonlar ile CNV (kopya sayısı değişiklikleri) saptanabilir."
+    },
+    {
+     "metin": "tüm ekzom analiziyle aday genler tanımlanabilir; bu analizler sayesinde ensefalopatik epilepsilerin moleküler mekanizmaları büyük ölçüde aydınlatılmış, spesifik yolaklar ve genler tanımlanmıştır."
+    },
+    {
+     "metin": "KCNQ2 ve KCNQ3 mutasyonlarının saptanması BFNN ayırıcı tanısını kolaylaştırır; Dravet sendromunda SCN1A mutasyonlarının incelenmesi hastaların %70'ine kesin tanı koydurur."
+    }
+   ],
+   "klip": "o-2g02-06",
+   "ses": [
+    "Sendromik epilepside genetik test sırası.",
+    "Dismorfik yüz, MR ve otizm gibi komorbiditeli sendromik epilepside ilk genetik test a-CGH'dir; yapılamıyorsa karyotip yapılır.",
+    "özellikle dismorfik yüz ya da somatik dismorfizm, MR (zihinsel yetersizlik) ve otizm gibi komorbiditelerin olduğu sendromik epilepsi vakalarında.",
+    "a-CGH; bu yapılamıyorsa karyotip analizi yapılır.",
+    "bu sayede mikro delesyon ve duplikasyonlar ile CNV (kopya sayısı değişiklikleri) saptanabilir.",
+    "tüm ekzom analiziyle aday genler tanımlanabilir; bu analizler sayesinde ensefalopatik epilepsilerin moleküler mekanizmaları büyük ölçüde aydınlatılmış, spesifik yolaklar ve genler tanımlanmıştır.",
+    "KCNQ2 ve KCNQ3 mutasyonlarının saptanması BFNN ayırıcı tanısını kolaylaştırır; Dravet sendromunda SCN1A mutasyonlarının incelenmesi hastaların %70'ine kesin tanı koydurur."
+   ],
+   "v": "33fdae7280"
+  },
+  {
+   "id": "2g02-05",
+   "baslik": "SCA: poliglutamin grubu ve en sık tipler",
+   "giris": "Spinoserebellar ataksiler ataksin proteininde CAG tekrar artışıyla poliglutamin (polyQ) grubundadır; en sık tipler SCA 1, 2, 3, 6, 7 ve 10'dur.",
+   "s": [
+    24,
+    25
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "serebellum ve omurilik tutulumu yapan, sinsi, ilerleyici, dejeneratif ve genetik bir hastalık grubudur; spinoserebellar atrofi ya da dejenerasyon olarak da bilinir."
+    },
+    {
+     "metin": "kalıtsal nörodejeneratif hastalıklar içinde en sık görülen gruptur; 60'tan fazla OD ataksi tipi içinde en büyük grubu SCA oluşturur."
+    },
+    {
+     "metin": "el, konuşma ve göz koordinasyonunda bozukluk ve duruş inkoordinasyonu tipiktir."
+    },
+    {
+     "metin": "SCA tip 1, 2, 3, 6, 7, 12 ve 17'de CAG tekrar sayısı artışına bağlı glutamin artışı vardır; SCA8'de CTG tekrarı, SCA10'da intron 9'da pentanükleotid tekrarı bulunur."
+    },
+    {
+     "metin": "SCA tip 1, 2, 3, 6, 7 ve 10. SCA12 ve SCA17 CAG tekrarlı olsa da bu listede yoktur."
+    }
+   ],
+   "klip": "o-2g02-05",
+   "ses": [
+    "SCA: poliglutamin grubu ve en sık tipler.",
+    "Spinoserebellar ataksiler ataksin proteininde CAG tekrar artışıyla poliglutamin (polyQ) grubundadır; en sık tipler SCA 1, 2, 3, 6, 7 ve 10'dur.",
+    "serebellum ve omurilik tutulumu yapan, sinsi, ilerleyici, dejeneratif ve genetik bir hastalık grubudur; spinoserebellar atrofi ya da dejenerasyon olarak da bilinir.",
+    "kalıtsal nörodejeneratif hastalıklar içinde en sık görülen gruptur; 60'tan fazla OD ataksi tipi içinde en büyük grubu SCA oluşturur.",
+    "el, konuşma ve göz koordinasyonunda bozukluk ve duruş inkoordinasyonu tipiktir.",
+    "SCA tip 1, 2, 3, 6, 7, 12 ve 17'de CAG tekrar sayısı artışına bağlı glutamin artışı vardır; SCA8'de CTG tekrarı, SCA10'da intron 9'da pentanükleotid tekrarı bulunur.",
+    "SCA tip 1, 2, 3, 6, 7 ve 10. SCA12 ve SCA17 CAG tekrarlı olsa da bu listede yoktur."
+   ],
+   "v": "36425d04ee"
+  },
+  {
+   "id": "2g02-01",
+   "baslik": "SCA8: CTG tekrar artışı",
+   "giris": "SCA tip 8, poliglutamin grubundaki CAG tekrarlı tiplerden farklı olarak CTG tekrar artışıyla oluşan spinoserebellar ataksidir.",
+   "s": [
+    25,
+    31
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "SCA tip 1, 2, 3, 6, 7, 12 ve 17'de CAG tekrar sayısı artışına bağlı glutamin tekrar artışı vardır; SCA tip 8'de ise tekrar CTG'dir. Bu yüzden SCA8 poliglutamin grubunun dışında kalır."
+    },
+    {
+     "metin": "ataksin 8 (ATXN8) geni, 13q21'e lokalizedir."
+    },
+    {
+     "metin": "80-800 arası patojeniktir."
+    },
+    {
+     "metin": "bulgular 4. dekatta ortaya çıkar; horizontal nistagmus, spastisite ve azalmış vibrasyon duyusu tipik bulgulardır; hastalık genellikle yavaş ilerler."
+    },
+    {
+     "metin": "SCA1 (ATXN1, 6q23), SCA2 (ATXN2, 12q24), SCA3 (Machado-Joseph hastalığı, ATXN3), SCA6 (CACNA1A, 19p13), SCA7 (ATXN7, göz bulguları) ve SCA17 (TBP) CAG tekrarlıdır; SCA10 ise intron 9'da pentanükleotid tekrarı taşır."
+    }
+   ],
+   "klip": "o-2g02-01",
+   "ses": [
+    "SCA8: CTG tekrar artışı.",
+    "SCA tip 8, poliglutamin grubundaki CAG tekrarlı tiplerden farklı olarak CTG tekrar artışıyla oluşan spinoserebellar ataksidir.",
+    "SCA tip 1, 2, 3, 6, 7, 12 ve 17'de CAG tekrar sayısı artışına bağlı glutamin tekrar artışı vardır; SCA tip 8'de ise tekrar CTG'dir. Bu yüzden SCA8 poliglutamin grubunun dışında kalır.",
+    "ataksin 8 (ATXN8) geni, 13q21'e lokalizedir.",
+    "80-800 arası patojeniktir.",
+    "bulgular 4. dekatta ortaya çıkar; horizontal nistagmus, spastisite ve azalmış vibrasyon duyusu tipik bulgulardır; hastalık genellikle yavaş ilerler.",
+    "SCA1 (ATXN1, 6q23), SCA2 (ATXN2, 12q24), SCA3 (Machado-Joseph hastalığı, ATXN3), SCA6 (CACNA1A, 19p13), SCA7 (ATXN7, göz bulguları) ve SCA17 (TBP) CAG tekrarlıdır; SCA10 ise intron 9'da pentanükleotid tekrarı taşır."
+   ],
+   "v": "f0e749aa5e"
+  },
+  {
+   "id": "2g02-08",
+   "baslik": "SCA10: intronik pentanükleotid tekrarı",
+   "giris": "SCA tip 10, ataksin 10 (ATXN10) geninin intron 9'unda pentanükleotid tekrar artışıyla oluşur; serebellar bulgulara nöbetler eklenebilir.",
+   "s": [
+    32
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "ataksin 10 (ATXN10), 22q13'e lokalizedir."
+    },
+    {
+     "metin": "intron 9'da pentanükleotid (beşli) tekrar artışı; kodlayan bölgede CAG tekrarı yoktur, bu yüzden poliglutamin grubuna girmez."
+    },
+    {
+     "metin": "bulgular 4. dekatta ortaya çıkar; serebellar bulgulara ek olarak nöbetler görülebilir."
+    },
+    {
+     "metin": "SCA tip 1, 2, 3, 6, 7 ile birlikte en sık gözlenen tiplerdendir."
+    },
+    {
+     "metin": "SCA8 CTG tekrarlıdır; SCA2 tremor, miyoklonus ve sakkadik yavaşlama; SCA7 optik atrofi ve pigmenter retinopati; SCA12 baş ve ellerde tremor, akinezi ve demans; SCA17 ise Huntington koresine benzeyen tek SCA tipidir."
+    }
+   ],
+   "klip": "o-2g02-08",
+   "ses": [
+    "SCA10: intronik pentanükleotid tekrarı.",
+    "SCA tip 10, ataksin 10 (ATXN10) geninin intron 9'unda pentanükleotid tekrar artışıyla oluşur; serebellar bulgulara nöbetler eklenebilir.",
+    "ataksin 10 (ATXN10), 22q13'e lokalizedir.",
+    "intron 9'da pentanükleotid (beşli) tekrar artışı; kodlayan bölgede CAG tekrarı yoktur, bu yüzden poliglutamin grubuna girmez.",
+    "bulgular 4. dekatta ortaya çıkar; serebellar bulgulara ek olarak nöbetler görülebilir.",
+    "SCA tip 1, 2, 3, 6, 7 ile birlikte en sık gözlenen tiplerdendir.",
+    "SCA8 CTG tekrarlıdır; SCA2 tremor, miyoklonus ve sakkadik yavaşlama; SCA7 optik atrofi ve pigmenter retinopati; SCA12 baş ve ellerde tremor, akinezi ve demans; SCA17 ise Huntington koresine benzeyen tek SCA tipidir."
+   ],
+   "v": "a5939f92af"
+  },
+  {
+   "id": "2g02-09",
+   "baslik": "Friedreich ataksisi",
+   "giris": "Friedreich ataksisi OR ataksilerin en sık tipidir; frataksin (FXN) geninin intron 1'inde GAA tekrar artışıyla oluşur ve genellikle 20 yaş öncesi başlar.",
+   "s": [
+    37,
+    39
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "OR ataksiler içinde en sık gözlenen tiptir; genellikle 20 yaş öncesi bulgu verir."
+    },
+    {
+     "metin": "dorsal kök ganglionlarındaki defekte bağlı periferik duyusal sinir kaybı ve arka kordon dejenerasyonu."
+    },
+    {
+     "metin": "frataksin (FXN) geni 9q13'e lokalize; intron 1'de GAA tekrar artışı vardır. Tekrar sayısı 6-34 normal, 67-1700 patojeniktir. Olguların %95'inde GAA tekrarı homozigot, %5'inde compound heterozigottur; diğer lokus 9p23."
+    },
+    {
+     "metin": "degrede frataksin proteini serbest radikallerin birikimine, nörodejenerasyona ve kardiyopatiye yol açar; antisipasyon gözlenir. Aynı bölümdeki şemada lokus 9q21.1 olarak, eşikler de farklı aralıklarla gösterilir; metindeki değerler yukarıdakilerdir."
+    },
+    {
+     "metin": "yürümede dengesizlik, ilerleyici ataksi, tremor, derin duyu kaybı, nistagmus ve kardiyak bulgular; kognitif fonksiyonlar normaldir."
+    },
+    {
+     "metin": "erken başlangıçlı, geç başlangıçlı, spastik, acadian tip ve FA tip 2."
+    }
+   ],
+   "klip": "o-2g02-09",
+   "ses": [
+    "Friedreich ataksisi.",
+    "Friedreich ataksisi OR ataksilerin en sık tipidir; frataksin (FXN) geninin intron 1'inde GAA tekrar artışıyla oluşur ve genellikle 20 yaş öncesi başlar.",
+    "OR ataksiler içinde en sık gözlenen tiptir; genellikle 20 yaş öncesi bulgu verir.",
+    "dorsal kök ganglionlarındaki defekte bağlı periferik duyusal sinir kaybı ve arka kordon dejenerasyonu.",
+    "frataksin (FXN) geni 9q13'e lokalize; intron 1'de GAA tekrar artışı vardır. Tekrar sayısı 6-34 normal, 67-1700 patojeniktir. Olguların %95'inde GAA tekrarı homozigot, %5'inde compound heterozigottur; diğer lokus 9p23.",
+    "degrede frataksin proteini serbest radikallerin birikimine, nörodejenerasyona ve kardiyopatiye yol açar; antisipasyon gözlenir. Aynı bölümdeki şemada lokus 9q21.1 olarak, eşikler de farklı aralıklarla gösterilir; metindeki değerler yukarıdakilerdir.",
+    "yürümede dengesizlik, ilerleyici ataksi, tremor, derin duyu kaybı, nistagmus ve kardiyak bulgular; kognitif fonksiyonlar normaldir.",
+    "erken başlangıçlı, geç başlangıçlı, spastik, acadian tip ve FA tip 2."
+   ],
+   "v": "158a77e782"
+  },
+  {
+   "id": "2g02-03",
+   "baslik": "En sık dört sendromik işitme kaybı",
+   "giris": "En sık görülen sendromik işitme kayıpları Waardenburg, Usher, Pendred ve Alport sendromlarıdır; GJB2 ise nonsendromik gruptadır.",
+   "s": [
+    73
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "sendromik işitme kayıplarında işitme kaybına multisistemik bozukluklar eşlik eder; kalıtsal işitme kayıplarının %30'u sendromik, %70'i nonsendromiktir."
+    },
+    {
+     "metin": "Waardenburg (beyaz perçem, heterokromi, OD), Usher (işitme kaybı + retinitis pigmentoza, OR), Pendred (konjenital işitme kaybı + guatr, OR) ve Alport (kalıtsal nefrit + göz değişiklikleri, X'e bağlı)."
+    },
+    {
+     "metin": "sendromik işitme kayıplarının büyük kısmı Mendel kalıtımına uyar; ülkemizde akraba evliliği nedeniyle OR sendromik formlar sık görülür."
+    },
+    {
+     "metin": "işitme kaybına başka klinik ya da laboratuvar bulgusu eşlik etmez; OR formun %50'sinden GJB2 (konneksin 26) sorumludur. Bu yüzden GJB2'ye bağlı işitme kaybı sendromik değildir."
+    }
+   ],
+   "klip": "o-2g02-03",
+   "ses": [
+    "En sık dört sendromik işitme kaybı.",
+    "En sık görülen sendromik işitme kayıpları Waardenburg, Usher, Pendred ve Alport sendromlarıdır; GJB2 ise nonsendromik gruptadır.",
+    "sendromik işitme kayıplarında işitme kaybına multisistemik bozukluklar eşlik eder; kalıtsal işitme kayıplarının %30'u sendromik, %70'i nonsendromiktir.",
+    "Waardenburg (beyaz perçem, heterokromi, OD), Usher (işitme kaybı + retinitis pigmentoza, OR), Pendred (konjenital işitme kaybı + guatr, OR) ve Alport (kalıtsal nefrit + göz değişiklikleri, X'e bağlı).",
+    "sendromik işitme kayıplarının büyük kısmı Mendel kalıtımına uyar; ülkemizde akraba evliliği nedeniyle OR sendromik formlar sık görülür.",
+    "işitme kaybına başka klinik ya da laboratuvar bulgusu eşlik etmez; OR formun %50'sinden GJB2 (konneksin 26) sorumludur. Bu yüzden GJB2'ye bağlı işitme kaybı sendromik değildir."
+   ],
+   "v": "ebe884ba14"
+  },
+  {
+   "id": "2g02-07",
+   "baslik": "Nonsendromik işitme kaybı: sıklık ve DFN lokusları",
+   "giris": "Kalıtsal işitme kayıplarının %70'i nonsendromiktir; en sık alt tipi OR form (%80), lokusları OD'de DFNA, OR'de DFNB, X'e bağlıda DFN'dir.",
+   "s": [
+    87,
+    89
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "nonsendromik işitme kaybına başka bir klinik ya da laboratuvar bulgusu eşlik etmez; çok sayıda gen lokusu ilişkilidir."
+    },
+    {
+     "metin": "bu lokuslara DFN (DeaFNess) denir; OD lokuslar DFNA, OR lokuslar DFNB, X'e bağlı lokuslar DFN olarak gösterilir."
+    },
+    {
+     "metin": "kalıtsal işitme kayıplarının %70'i nonsendromiktir; en sık alt tipi OR formdur (%80). OD form %15-18, X'e bağlı ve mt geçişli form %2'dir."
+    },
+    {
+     "metin": "genetik heterojenite vardır, birden fazla gen sorumludur."
+    },
+    {
+     "metin": "13q11-12'deki GJB2/Cx26 mutasyonları OR nonsendromik kayıpların %50'sidir."
+    },
+    {
+     "metin": "nonsendromik işitme kayıplarının %2'sinden sorumludur; en sık DFN3 lokusunda mutasyon görülür; internal işitme kanallarında genişleme ve vestibulumda dilatasyon eşlik edebilir."
+    }
+   ],
+   "klip": "o-2g02-07",
+   "ses": [
+    "Nonsendromik işitme kaybı: sıklık ve DFN lokusları.",
+    "Kalıtsal işitme kayıplarının %70'i nonsendromiktir; en sık alt tipi OR form (%80), lokusları OD'de DFNA, OR'de DFNB, X'e bağlıda DFN'dir.",
+    "nonsendromik işitme kaybına başka bir klinik ya da laboratuvar bulgusu eşlik etmez; çok sayıda gen lokusu ilişkilidir.",
+    "bu lokuslara DFN (DeaFNess) denir; OD lokuslar DFNA, OR lokuslar DFNB, X'e bağlı lokuslar DFN olarak gösterilir.",
+    "kalıtsal işitme kayıplarının %70'i nonsendromiktir; en sık alt tipi OR formdur (%80). OD form %15-18, X'e bağlı ve mt geçişli form %2'dir.",
+    "genetik heterojenite vardır, birden fazla gen sorumludur.",
+    "13q11-12'deki GJB2/Cx26 mutasyonları OR nonsendromik kayıpların %50'sidir.",
+    "nonsendromik işitme kayıplarının %2'sinden sorumludur; en sık DFN3 lokusunda mutasyon görülür; internal işitme kanallarında genişleme ve vestibulumda dilatasyon eşlik edebilir."
+   ],
+   "v": "bb9c603d27"
+  },
+  {
+   "id": "2g02-02",
+   "baslik": "GJB2: OR nonsendromik işitme kaybının en sık nedeni",
+   "giris": "OR nonsendromik işitme kayıplarının %50'sinden 13q11-12'deki GJB2 (konneksin 26) geni mutasyonları sorumludur.",
+   "s": [
+    88,
+    96
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "GJB2/Cx26 geni 13q11-12'ye lokalizedir; gap junction kanalların oluşumunda görevli Connexin 26 proteinini kodlar."
+    },
+    {
+     "metin": "OR nonsendromik işitme kayıplarının %50'si GJB2 mutasyonlarıdır; genetik danışma bölümünde de OR herediter işitme kayıplarının %50'sinin GJB2 mutasyonu olduğu vurgulanır."
+    },
+    {
+     "metin": "400'den fazla mutasyon tanımlanmıştır; olguların %60-70'inde 35delG mutasyonu saptanır."
+    },
+    {
+     "metin": "GJB2 işitme kaybına başka bulgu eklemeyen nonsendromik grubun genidir; Waardenburg, Usher, Pendred ve Alport gibi sendromik tablolarla karıştırılmamalıdır."
+    },
+    {
+     "metin": "COL4A5 Alport sendromunun (tip IV kollajen), KCNQ2 benign ailesel neonatal nöbetlerin (voltaj kapılı K+ kanalı), NF2 merlin proteinini kodlayan nörofibromatozis tip 2'nin, PAX3 ise Waardenburg tip I ve III'ün genidir."
+    }
+   ],
+   "klip": "o-2g02-02",
+   "ses": [
+    "GJB2: OR nonsendromik işitme kaybının en sık nedeni.",
+    "OR nonsendromik işitme kayıplarının %50'sinden 13q11-12'deki GJB2 (konneksin 26) geni mutasyonları sorumludur.",
+    "GJB2/Cx26 geni 13q11-12'ye lokalizedir; gap junction kanalların oluşumunda görevli Connexin 26 proteinini kodlar.",
+    "OR nonsendromik işitme kayıplarının %50'si GJB2 mutasyonlarıdır; genetik danışma bölümünde de OR herediter işitme kayıplarının %50'sinin GJB2 mutasyonu olduğu vurgulanır.",
+    "400'den fazla mutasyon tanımlanmıştır; olguların %60-70'inde 35delG mutasyonu saptanır.",
+    "GJB2 işitme kaybına başka bulgu eklemeyen nonsendromik grubun genidir; Waardenburg, Usher, Pendred ve Alport gibi sendromik tablolarla karıştırılmamalıdır.",
+    "COL4A5 Alport sendromunun (tip IV kollajen), KCNQ2 benign ailesel neonatal nöbetlerin (voltaj kapılı K+ kanalı), NF2 merlin proteinini kodlayan nörofibromatozis tip 2'nin, PAX3 ise Waardenburg tip I ve III'ün genidir."
+   ],
+   "v": "132a29655d"
+  }
+ ]
+}

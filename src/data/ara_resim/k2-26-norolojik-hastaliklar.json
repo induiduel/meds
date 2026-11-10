@@ -1,0 +1,176 @@
+{
+ "key": "k2-26-norolojik-hastaliklar",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Epilepside genetik: hangi kanal, hangi test?",
+   "aciklama": "Tek gen epilepsilerinin çoğu iyon kanalı genlerinden çıkar: sodyum kanalında SCN1A Dravet, potasyum kanalında KCNQ2 ve KCNQ3 benign ailesel neonatal nöbet, nöral asetilkolin reseptöründe CHRNA4 nokturnal frontal lob epilepsisi yapar. Sendromik epilepside ilk test a-CGH, yapılamazsa karyotip, ardından WES istenir.",
+   "adimlar": [
+    "1. SCN1A (Na⁺ kanalı) → Dravet; vakaların %90'ından fazlası.",
+    "2. KCNQ2/KCNQ3 (K⁺ kanalı) → BFNN.",
+    "3. CHRNA4 (nöral ACh reseptörü) → OD nokturnal frontal lob epilepsisi.",
+    "4. Sendromik epilepsi (dismorfik yüz, MR, otizm) → ilk a-CGH; yapılamazsa karyotip.",
+    "5. WES aday genleri bulur; BFNN'de KCNQ2/3, Dravet'te SCN1A testi tanıyı kesinleştirir."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 16,
+   "bitis": 17,
+   "kaynak": [
+    12,
+    13,
+    14,
+    16,
+    19,
+    20
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "CAG tekrarı uzadıkça: poliglutamin, eşik ve erken başlangıç",
+   "aciklama": "Ataksin genindeki her CAG üçlüsü proteine bir glutamin ekler; tekrar normal aralığı aşınca uzun poliglutamin zinciri hastalık yapar. SCA1'de altı ile otuz dokuz normal, kırk birin üstü patojeniktir ve tekrar sayısı arttıkça hastalık daha erken başlar, daha ağır seyreder.",
+   "adimlar": [
+    "1. CAG = glutamin; genişleyen alel uzun polyQ zinciri üretir.",
+    "2. SCA1: 6–39 normal, >41 patojenik.",
+    "3. Tekrar sayısı arttıkça başlangıç yaşı düşer.",
+    "4. Aynı artış kliniği ağırlaştırır."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 23,
+   "bitis": 23,
+   "kaynak": [
+    24,
+    25,
+    26
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Friedreich ataksisi: intron 1'deki GAA tekrarından sinire ve kalbe",
+   "aciklama": "Frataksin geninin birinci intronundaki GAA tekrarı uzayınca frataksin proteini bozulur; serbest radikaller birikir, dorsal kök gangliyonlarında duyusal sinirler ve arka kordon dejenere olur, kalpte kardiyopati gelişir. Slayt metninde altı ile otuz dört normal, altmış yedi ile bin yedi yüz patojeniktir.",
+   "adimlar": [
+    "1. FXN intron 1'de GAA tekrarı uzar (iki alelde; OR).",
+    "2. Frataksin proteini bozulur.",
+    "3. Serbest radikaller birikir.",
+    "4. Dorsal kök gangliyonu → duyusal sinir kaybı, arka kordon dejenerasyonu.",
+    "5. Kardiyopati; antisipasyon görülür."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 35,
+   "bitis": 35,
+   "kaynak": [
+    37
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "Mitokondriyal kalıtım ve heteroplazmi: NARP'tan Leigh sendromuna",
+   "aciklama": "Mitokondriyal genom anneden gelir ve hücrede sağlam ile mutant mitokondriyal DNA birlikte bulunur; buna heteroplazmi denir. NARP'ta mutant oran yüzde yetmiş ile doksan arasındadır, oran daha da artınca Leigh sendromu görülür.",
+   "adimlar": [
+    "1. Mitokondriyal genom anneden gelir.",
+    "2. Çocuklara farklı oranlarda mutant mitokondri geçer (heteroplazmi).",
+    "3. NARP: MT-ATP6 8993 T>G, ATP sentaz bozulur, mutant oran %70–90.",
+    "4. Oran daha da artarsa Leigh sendromu; aynı ailede ikisi birlikte olabilir."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 53,
+   "bitis": 53,
+   "kaynak": [
+    53,
+    54,
+    55
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Ataksilerde pedigri: dört kalıtım kalıbı nasıl okunur?",
+   "aciklama": "Herediter ataksilerde en az üç kuşaklı pedigri çizilir. Otozomal dominantta, örneğin SCA'larda, tek bozuk kopya yeter; otozomal resesifte anne-baba sağlıklı taşıyıcıdır ve akrabalıkta önce bu grup düşünülür; X'e bağlı tiplerde gen X'tedir; mitokondriyal tiplerde genom anneden gelir.",
+   "adimlar": [
+    "1. OD (SCA): hasta ebeveynden çocuğa, her kuşakta hasta.",
+    "2. OR (Friedreich): taşıyıcı anne-baba, hasta çocuk iki kopya alır; akrabalıkta önce OR.",
+    "3. X'e bağlı (FXTAS, Arts, ABCB7, SLC9A6): gen X kromozomunda.",
+    "4. Mitokondriyal (MERRF, NARP): genom anneden; heteroplazmi.",
+    "5. Öyküde 3 kuşak, başlangıç yaşı, perinatal öykü, işitme-görme, kognisyon."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 54,
+   "bitis": 54,
+   "kaynak": [
+    23,
+    36,
+    48,
+    54,
+    55,
+    56
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Fakomatozlar: gen, protein, yolak ve kalıtım",
+   "aciklama": "Fakomatozların çoğunda tümör baskılayıcı gen bozulur: NF1, VHL, STK11 ve PTCH1. TSC1-hamartin ve TSC2-tuberin mTOR yolunu, NF2'nin ürünü merlin mTOR ve Hippo yollarını düzenler. Çoğu otozomal dominanttır; ataksi telenjiektazi otozomal resesif, inkontinensia pigmenti X'e bağlı dominant, Sturge-Weber'de GNAQ işlev kazanır.",
+   "adimlar": [
+    "1. TSG: NF1 (nörofibromin), VHL, STK11, PTCH1.",
+    "2. TSC1/TSC2 → mTOR; merlin → mTOR ve Hippo.",
+    "3. OD: NF1, NF2, TSC, Peutz-Jeghers, Gorlin.",
+    "4. OR: ataksi telenjiektazi; XD: inkontinensia pigmenti (erkekte letal).",
+    "5. Sturge-Weber: GNAQ işlev kazandıran mutasyon."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 68,
+   "bitis": 68,
+   "kaynak": [
+    57,
+    60,
+    62,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Kalıtsal işitme kaybı ağacı ve GJB2",
+   "aciklama": "Kalıtsal işitme kaybının yüzde otuzu sendromik, yüzde yetmişi nonsendromiktir. Nonsendromik grubun yüzde sekseni otozomal resesiftir ve bunun yarısı, on üç q on bir ile on iki bölgesindeki, konneksin yirmi altıyı kodlayan GJB2 genindendir; konneksin hücreler arası gap junction kanallarını kurar.",
+   "adimlar": [
+    "1. Herediter işitme kaybı: 1/1000, %50 genetik.",
+    "2. Sendromik %30: OD, OR, X'e bağlı gruplar; en sık dört: Waardenburg, Usher, Pendred, Alport.",
+    "3. Nonsendromik %70: OR (DFNB) %80, OD (DFNA) %15–18, X'e bağlı + mt %2.",
+    "4. OR nonsendromiğin %50'si GJB2 (konneksin 26, 13q11-12); 35delG %60–70.",
+    "5. Konneksin 26 gap junction kanalının yapı taşıdır."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 86,
+   "bitis": 86,
+   "kaynak": [
+    71,
+    73,
+    87,
+    88
+   ]
+  },
+  {
+   "id": "r08",
+   "baslik": "Herediter işitme kaybında genetik danışma: sonraki çocukta risk",
+   "aciklama": "Kalıtım belirsizse risk ailenin durumuna göre verilir: öykü negatif ve bir çocuk işitme kayıplıysa yüzde on sekiz, çocukta GJB2 ve GJB6 negatifse yüzde on dört, akraba evliliğinde yüzde yirmi beş; bir ebeveyn etkilenmişse yüzde on, iki ebeveyn etkilenmiş ve OD dışlanmışsa yüzde on beş, ebeveynlerde GJB2 pozitifse yüzde yüzdür.",
+   "adimlar": [
+    "1. Öykü negatif + işitme kayıplı çocuk: %18.",
+    "2. Çocukta GJB2/GJB6 negatif: %14.",
+    "3. Akraba evliliği: %25.",
+    "4. Bir ebeveyn etkilenmiş: %10 (çoğu OD sendromik).",
+    "5. İki ebeveyn etkilenmiş, OD dışlanmış: %15.",
+    "6. Ebeveynlerde GJB2 pozitif: %100."
+   ],
+   "svg": "r08.svg",
+   "paragraf": 95,
+   "bitis": 95,
+   "kaynak": [
+    96,
+    97,
+    98
+   ]
+  }
+ ]
+}

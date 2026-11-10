@@ -1,0 +1,2837 @@
+{
+ "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+ "sira": 7,
+ "kurul": 1,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Genel Anestezik İlaçların Farmakolojisi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "tarih": "2026-10-28",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Genel anestezinin hedeflerini (analjezi, narkoz, miyorelaksasyon), evrelerini ve dengeli anestezi yaklaşımını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Genel anestezinin hedeflerinden miyorelaksasyon aşağıdakilerden hangisini ifade eder?",
+     "secenekler": {
+      "A": "Çizgili kasların gevşemesi",
+      "B": "Cerrahi ağrının tamamen ortadan kalkması",
+      "C": "Farkındalığın ve belleğin silinmesi",
+      "D": "İntraoperatif uyanma riskinin artması",
+      "E": "Spontan solunumun korunması"
+     },
+     "dogru": "A",
+     "aciklama": "Miyorelaksasyon, çizgili kasların gevşemesidir ve cerrahi manevrayı kolaylaştırıp mekanik ventilasyona uyum sağlamak için gerekir. Soru bu hedefi tanımladığı için doğru yanıt budur (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Miyorelaksasyon, çizgili kasların gevşemesidir ve cerrahi manevrayı kolaylaştırıp mekanik ventilasyona uyum sağlamak için gerekir. Soru bu hedefi tanımladığı için doğru yanıt budur (s. 2).",
+      "B": "Cerrahi ağrının tamamen kaldırılması analjezi hedefidir ve hastanın hem bilinçsiz hem ağrısız olmasını amaçlar. Miyorelaksasyon ise kas gevşemesini anlattığı için bu seçenek yanlıştır (s. 2).",
+      "C": "Farkındalığın ve belleğin silinmesi narkoz, yani bilinç kaybı hedefidir ve ameliyat sırasında uyanma riskini sıfıra indirmeyi amaçlar. Kas gevşemesiyle ilgisi bulunmadığından bu seçenek yanlıştır (s. 2).",
+      "D": "İntraoperatif uyanma riski, narkozun hedefi gereği sıfıra indirilmeye çalışılan istenmeyen bir durumdur. Miyorelaksasyonun tanımı bu olmadığı için seçenek yanlıştır (s. 2).",
+      "E": "Kas gevşetici verildiğinde solunum kasları da gevşediği için mekanik ventilasyona uyum gerekir ve spontan solunum korunmaz. Miyorelaksasyon bu durumun tersini değil, kas gevşemesini ifade ettiğinden seçenek yanlıştır (s. 2)."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Çizgili kasların gevşemesi; cerrahi manevra kolaylığı ve mekanik ventilasyon"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q04",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Analjezi döneminde koruyucu reflekslerin (öksürük, yutma) korunabilmesinin klinik anlamı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aspirasyon açısından göreceli bir güvence sağlaması",
+      "B": "Hastanın tamamen bilinçsiz olması",
+      "C": "Cerrahi ağrının tamamen ortadan kalkması",
+      "D": "Çizgili kasların tam gevşemesi",
+      "E": "Belleğin silinmesinin sağlanması"
+     },
+     "dogru": "A",
+     "aciklama": "Analjezi döneminde öksürük ve yutma refleksleri korunabilir ve bu durum aspirasyona karşı göreceli bir güvence verir; yine de derin anesteziye geçişte dikkat gerekir. Soru bu klinik anlamı sorduğu için doğru yanıt budur (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Analjezi döneminde öksürük ve yutma refleksleri korunabilir ve bu durum aspirasyona karşı göreceli bir güvence verir; yine de derin anesteziye geçişte dikkat gerekir. Soru bu klinik anlamı sorduğu için doğru yanıt budur (s. 4).",
+      "B": "Bu evrede hasta ağrıyı hissetmez ancak bilinci henüz kapalı değildir ve konuşma sürebilir. Reflekslerin korunmasının anlamı bilinçsizlik olmadığı için seçenek yanlıştır (s. 4).",
+      "C": "Analjezi döneminde ağrı hissedilmez fakat cerrahi ağrının tamamen kalkması bilinç kaybıyla birlikte genel anestezi hedefidir. Reflekslerin korunması bu anlama gelmediğinden seçenek yanlıştır (s. 4).",
+      "D": "Çizgili kasların gevşemesi miyorelaksasyon hedefidir ve kas gevşeticilerle sağlanır. Öksürük ve yutma reflekslerinin korunması kas gevşemesiyle ilgili olmadığından seçenek yanlıştır (s. 4).",
+      "E": "Belleğin silinmesi narkozun hedeflerinden biridir ve reflekslerle ilgili değildir. Analjezi döneminde bilinç henüz tam kapanmadığı için bu seçenek yanlıştır (s. 4)."
+     },
+     "bilgi": [
+      8,
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Koruyucu refleksler (öksürük, yutma) korunabilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-07"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q08",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Uzun süreli ve majör cerrahilerde standart yaklaşım olan, intravenöz hipnotik, inhaler ajan, kas gevşetici ve opioidin birlikte kullanıldığı anestezi türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Total intravenöz anestezi",
+      "B": "Propofol infüzyonuyla monoterapi",
+      "C": "Yalnız inhaler ajanla anestezi",
+      "D": "Dengeli anestezi",
+      "E": "Yalnız opioidle anestezi"
+     },
+     "dogru": "D",
+     "aciklama": "Dengeli anestezi, analjezi, hipnoz, amnezi ve kas gevşemesini tek ajan karşılayamadığı için ilaçların birlikte kullanıldığı yaklaşımdır ve uzun, majör cerrahilerde standarttır. Tanımdaki dört bileşen bu yaklaşıma uyduğundan doğru yanıt budur (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Total intravenöz anestezide propofol ve remifentanil infüzyonu kullanılır, inhalasyon ajanı kullanılmaz. Soruda inhaler ajan da sayıldığı için seçenek yanlıştır (s. 16).",
+      "B": "Propofol infüzyonuyla monoterapi, kısa ambulatuar girişimler için yeterli, basit ve titre edilebilir bir yöntemdir. Dört ilacın birlikte kullanıldığı majör cerrahi yaklaşımını tanımlamadığından seçenek yanlıştır (s. 16).",
+      "C": "Hiçbir tek ajan analjezi, hipnoz, amnezi ve kas gevşemesini aynı anda güvenli dozlarda sağlayamaz. Yalnız inhaler ajanla anestezi bu yüzden yetersiz kalır ve seçenek yanlıştır (s. 8).",
+      "D": "Dengeli anestezi, analjezi, hipnoz, amnezi ve kas gevşemesini tek ajan karşılayamadığı için ilaçların birlikte kullanıldığı yaklaşımdır ve uzun, majör cerrahilerde standarttır. Tanımdaki dört bileşen bu yaklaşıma uyduğundan doğru yanıt budur (s. 16).",
+      "E": "Opioidler analjezi sağlar ancak hipnoz ve kas gevşemesi sağlamaz. Yalnız opioidle anestezi, dört hedefi karşılamadığı için seçenek yanlıştır (s. 8)."
+     },
+     "bilgi": [
+      22,
+      56,
+      59
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q133"
+     ],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "IV hipnotik + inhaler ajan + kas gevşetici"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q133",
+      "ozen:s16",
+      "ozen:s8",
+      "ozen:s1"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Genel anestezinin idame döneminde temel hedef aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İlaç dozunu cerrahi boyunca sürekli artırmak",
+      "B": "Derinliği belirli bir aralıkta kararlı tutmak",
+      "C": "Dozu dönem dönem artırıp azaltarak derinliği değiştirmek",
+      "D": "Hızlı etkili bir ajanla bilinci kapatmak",
+      "E": "İlaçları keserek hastanın uyanmasını sağlamak"
+     },
+     "dogru": "B",
+     "aciklama": "İdame, cerrahi boyunca anestezinin sürdürüldüğü evredir ve derinlik doz ne artıp ne azalarak belirli bir aralıkta kararlı kalmalıdır. Soru bu hedefi sorduğu için doğru yanıt budur (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Dozu sürekli artırmak derinliği kontrolsüz biçimde yükseltir ve idame hedefi olan kararlı derinliği bozar. İdamede amaç doz ve derinliği sabit bir aralıkta tutmak olduğundan seçenek yanlıştır (s. 3).",
+      "B": "İdame, cerrahi boyunca anestezinin sürdürüldüğü evredir ve derinlik doz ne artıp ne azalarak belirli bir aralıkta kararlı kalmalıdır. Soru bu hedefi sorduğu için doğru yanıt budur (s. 3).",
+      "C": "Dozu dönem dönem artırıp azaltmak anestezi derinliğinin dalgalanmasına yol açar. İdamede derinlik stabil ve sürdürülebilir tutulması gerektiğinden bu seçenek yanlıştır (s. 3).",
+      "D": "Bilinci kapatmak anestezik verildiğinde gerçekleşen indüksiyon aşamasının işidir. İdame ise kapanmış bilincin cerrahi boyunca stabil sürdürülmesini hedeflediği için seçenek yanlıştır (s. 3).",
+      "E": "İlaçların kesilmesi hastanın uyandığı derlenme aşamasını başlatır. İdamede ise anestezi cerrahi bitene kadar kesintisiz sürdürülmesi gerektiğinden bu seçenek yanlıştır (s. 3)."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Cerrahi boyunca anestezi sürdürülür"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-05",
+      "ozen:s3"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Anestezi evreleriyle ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Analjezi döneminde hasta ağrıyı hissetmez, ancak bilinç henüz kapalı değildir",
+      "B": "Analjezi döneminde konuşma ve hafif hareketler sürebilir",
+      "C": "Analjezi döneminde medulla oblongatadaki solunum ve vazomotor merkezler felç olur",
+      "D": "Analjezi döneminde öksürük ve yutma refleksleri korunabilir",
+      "E": "Analjezi döneminde opioidlerin tamamlayıcı rolü kritiktir"
+     },
+     "dogru": "C",
+     "aciklama": "Solunum ve vazomotor merkezlerin medullada felç olması bulbar paralizi evresinin bulgusudur ve anestezik aşırı dozunu gösterir. Analjezi döneminde bu bulgu görülmediği için ifade yanlıştır, soru da yanlış ifadeyi istemektedir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Analjezi döneminde ağrı duyusu kaybolur fakat bilinç henüz tam kapanmamıştır. Bu ifade evreyi doğru tanımladığı için doğrudur ve aranan yanlış ifade değildir (s. 4).",
+      "B": "Bu evrede bilinç kapanmadığı için konuşma ve hafif hareketler sürebilir. İfade analjezi dönemini doğru anlattığı için doğrudur ve aranan yanlış seçenek değildir (s. 4).",
+      "C": "Solunum ve vazomotor merkezlerin medullada felç olması bulbar paralizi evresinin bulgusudur ve anestezik aşırı dozunu gösterir. Analjezi döneminde bu bulgu görülmediği için ifade yanlıştır, soru da yanlış ifadeyi istemektedir (s. 7).",
+      "D": "Öksürük ve yutma gibi koruyucu refleksler analjezi döneminde korunabilir ve aspirasyona karşı göreceli güvence verir. İfade doğru olduğu için aranan yanlış ifade değildir (s. 4).",
+      "E": "İnhalasyon ajanları bu evrede henüz yeterli analjezik konsantrasyona ulaşmadığından opioidler geçiş döneminde tamamlayıcı ve kritik rol oynar. İfade doğru olduğu için aranan yanlış ifade değildir (s. 4)."
+     },
+     "bilgi": [
+      8,
+      19,
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Bu dönemde medulla oblongatadaki solunum ve vazomotor merkezler felç olur"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-07"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Eksitasyon döneminin mümkün olan en kısa sürede geçilmesi için indüksiyonda aşağıdakilerden hangisi tercih edilir?",
+     "secenekler": {
+      "A": "Yavaş başlangıçlı bir indüksiyon ajanı",
+      "B": "Hızlı etkili intravenöz indüksiyon ajanı",
+      "C": "İndüksiyonda ilaç dozunu çok düşük tutmak",
+      "D": "Hasta uyanık kalacak şekilde sedasyon uygulamak",
+      "E": "Önce kas gevşetici vermek ve anesteziği geciktirmek"
+     },
+     "dogru": "B",
+     "aciklama": "Eksitasyon dönemi aspirasyon, laringospazm ve ajitasyon riski taşıyan tehlikeli bir geçiş evresidir; bu yüzden hızlı etkili intravenöz ajanlar bu evreyi çabuk atlatır. Soru bu amacı sorduğu için doğru yanıt budur (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Yavaş başlangıçlı bir ajan hastayı eksitasyon döneminde daha uzun tutar ve riskli evreyi uzatır. Evre mümkün olan en kısa sürede geçilmesi gerektiğinden seçenek yanlıştır (s. 5).",
+      "B": "Eksitasyon dönemi aspirasyon, laringospazm ve ajitasyon riski taşıyan tehlikeli bir geçiş evresidir; bu yüzden hızlı etkili intravenöz ajanlar bu evreyi çabuk atlatır. Soru bu amacı sorduğu için doğru yanıt budur (s. 5).",
+      "C": "Çok düşük doz anestezi derinliğine ulaşmayı geciktirir ve hastayı tehlikeli geçiş evresinde bekletir. Amaç bu evreyi hızla geçmek olduğundan seçenek yanlıştır (s. 5).",
+      "D": "Hastayı uyanık bırakan sedasyon cerrahi anestezi derinliğine ulaşılmasını sağlamaz ve eksitasyon riskini ortadan kaldırmaz. Evreyi hızla geçmek için indüksiyonun hızlı olması gerektiğinden seçenek yanlıştır (s. 5).",
+      "E": "Kas gevşetici tek başına bilinci kapatmaz ve anestezinin geciktirilmesi hastayı riskli evrede bekletir. Eksitasyonu hızla atlatmak için hızlı etkili bir indüksiyon ajanı gerektiğinden seçenek yanlıştır (s. 5)."
+     },
+     "bilgi": [
+      11,
+      14
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "bu nedenle hızlı etkili IV indüksiyon"
+     },
+     "dayanak": [
+      "ozen:s5"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Genel anestezide kullanılan aşağıdaki ilaçlar veriliyor:\nI. Tiyopental\nII. Fentanil\nIII. Desfluran\nIV. Midazolam\nBunlardan hangileri intravenöz yolla uygulanır?",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "I, II ve IV",
+      "C": "Yalnız III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Tiyopental intravenöz bir barbitürat, fentanil intravenöz bir opioid ve midazolam intravenöz bir benzodiazepindir; desfluran ise inhaler ajandır. Bu nedenle intravenöz olanlar I, II ve IV'tür (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Tiyopental intravenöz bir barbitürattır; desfluran ise inhaler bir ajandır. Bu seçim III'ü dahil ettiği ve II ile IV'ü dışarıda bıraktığı için yanlıştır (s. 28).",
+      "B": "Tiyopental intravenöz bir barbitürat, fentanil intravenöz bir opioid ve midazolam intravenöz bir benzodiazepindir; desfluran ise inhaler ajandır. Bu nedenle intravenöz olanlar I, II ve IV'tür (s. 33).",
+      "C": "Desfluran, kan-gaz katsayısı en düşük olan inhaler ajandır ve vaporizatörle solunum yoluyla verilir. İntravenöz ajanları dışarıda bıraktığı için bu seçim yanlıştır (s. 28).",
+      "D": "Fentanil ve midazolam intravenöz ajanlardır; ancak desfluran inhaler yolla verildiği için III bu gruba girmez. Ayrıca tiyopental seçimde yer almadığından eksiktir (s. 28).",
+      "E": "Dört ilacın tümünü intravenöz sayan bu seçim, inhaler bir ajan olan desflurani da içerir. Desfluran solunum yoluyla verildiği için seçim yanlıştır (s. 28)."
+     },
+     "bilgi": [
+      127,
+      131,
+      161
+     ],
+     "benzer_cikmis": [
+      "past-1790877044485-534121",
+      "d3k2-2018-2019-k4-q28"
+     ],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Kan-gaz katsayısı 0.42 ile en hızlı derlenen inhaler ajandır"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044485-534121",
+      "cikmis:d3k2-2018-2019-k4-q28",
+      "cikmis:d3k2-2018-2019-k4-q48",
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Genel anestezinin aşamalarıyla ilgili aşağıdaki ifadeler veriliyor:\nI. İndüksiyonda anestezik verilir ve bilinç kapanır.\nII. İdamede anestezik doz sürekli artırılarak derinlik giderek artırılır.\nIII. İdamede derinlik stabil ve sürdürülebilir olacak biçimde tutulur.\nIV. Derlenmede ilaçlar kesilir ve hasta uyanır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız IV",
+      "B": "I, III ve IV",
+      "C": "I ve III",
+      "D": "II ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "İndüksiyonda anestezik verilip bilinç kapanır, idamede derinlik stabil tutulur ve derlenmede ilaçlar kesilerek hasta uyandırılır. II yanlıştır; çünkü idamede doz ne artırılır ne azaltılır, derinlik kararlı kalır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Yalnız derlenme ifadesi (IV) doğru kabul ediliyor; oysa indüksiyonda anestezikle bilincin kapanması ve idamede derinliğin kararlı tutulması da doğrudur. Bu yüzden doğru öncüller dışarıda kalır (s. 3).",
+      "B": "İndüksiyonda anestezik verilip bilinç kapanır, idamede derinlik stabil tutulur ve derlenmede ilaçlar kesilerek hasta uyandırılır. II yanlıştır; çünkü idamede doz ne artırılır ne azaltılır, derinlik kararlı kalır (s. 3).",
+      "C": "İndüksiyon ve idame ifadeleri (I ve III) doğrudur, ancak derlenmede ilaçların kesilip hastanın uyanması da doğru bir ifadedir. Seçim IV'ü dışarıda bıraktığı için eksiktir (s. 3).",
+      "D": "II ve IV seçimi, idamede dozun sürekli artırıldığı yanlış ifadeyi içerir. Oysa idamede derinlik kararlı tutulur; ayrıca doğru olan I ve III bu seçimde yer almaz (s. 3).",
+      "E": "Bu seçim II'yi de doğru sayar; oysa idamede anestezik doz sürekli artırılmaz, derinlik belirli bir aralıkta kararlı tutulur. Doğru olan IV de seçimde bulunmaz (s. 3)."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Anestezi: 3 Aşamalı Klinik Zaman Çizgisi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-05",
+      "ozen:s3"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q06",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "34 yaşında erkek hastada anestezi indüksiyonu sırasında taşikardi, hipertansiyon ve düzensiz solunum gelişiyor; ajitasyon, laringospazm ve aspirasyon riski en yüksek düzeydedir. Hasta anestezinin hangi döneminde olabilir?",
+     "secenekler": {
+      "A": "Analjezi dönemi",
+      "B": "Cerrahi anestezi dönemi, plan 3",
+      "C": "Eksitasyon dönemi",
+      "D": "Cerrahi anestezi dönemi, plan 1–2",
+      "E": "Bulbar paralizi dönemi"
+     },
+     "dogru": "C",
+     "aciklama": "Eksitasyon dönemi, analjezinin bitiminden göz kapağı refleksinin kaybolmasına kadar süren kısa ama tehlikeli geçiş evresidir; sempatik sistemin baskıdan kurtulmasıyla taşikardi, hipertansiyon ve düzensiz solunum görülür. Aspirasyon, laringospazm ve ajitasyon riski bu evrede en yüksektir, bu yüzden doğru yanıt budur (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Analjezi döneminde hasta ağrıyı hissetmez, bilinç kapalı değildir ve koruyucu refleksler sürebilir. Taşikardi, hipertansiyon ve düzensiz solunumla giden paradoksal uyarılma bu evrenin tablosu olmadığından seçenek yanlıştır (s. 4).",
+      "B": "Plan 3, interkostal kasların baskılandığı optimal cerrahi alan düzeyidir. Bu evrede paradoksal uyarılma değil, derin bir anestezi tablosu bulunduğundan seçenek yanlıştır (s. 6).",
+      "C": "Eksitasyon dönemi, analjezinin bitiminden göz kapağı refleksinin kaybolmasına kadar süren kısa ama tehlikeli geçiş evresidir; sempatik sistemin baskıdan kurtulmasıyla taşikardi, hipertansiyon ve düzensiz solunum görülür. Aspirasyon, laringospazm ve ajitasyon riski bu evrede en yüksektir, bu yüzden doğru yanıt budur (s. 5).",
+      "D": "Plan 1–2, düzenli solunumun sürdüğü yüzeyel cerrahi anestezi düzeyidir ve göz kapağı refleksinin kaybıyla başlayan cerrahi evrede yer alır. Ajitasyon ve düzensiz solunumla giden uyarılma bu evreye uymadığından seçenek yanlıştır (s. 6).",
+      "E": "Bulbar paralizi, medulladaki solunum ve vazomotor merkezlerin felç olduğu evredir ve apne ile şiddetli hipotansiyonla seyreder. Hastada hipertansiyon ve taşikardi bulunduğu için bu seçenek yanlıştır (s. 7)."
+     },
+     "bilgi": [
+      8,
+      12,
+      13,
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Aspirasyon, laringospazm ve ajitasyon riski en yüksektir"
+     },
+     "dayanak": [
+      "ozen:s5",
+      "not:s5"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q09",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Anestezi yöntemleriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Kısa ambulatuar girişimlerde propofol infüzyonu tek başına yeterli olabilir.\nII. Total intravenöz anestezide inhalasyon ajanı kullanılmaz ve bulantı riski azalır.\nIII. Dengeli anestezide intravenöz hipnotik, inhaler ajan, kas gevşetici ve opioid birlikte kullanılır.\nIV. Total intravenöz anestezide Bispektral İndeks monitörizasyonu ile titrasyon yapılamaz.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Kısa girişimlerde propofol infüzyonu yeterlidir, TIVA'da inhalasyon ajanı kullanılmaz ve bulantı riski azalır, dengeli anestezi de dört ilacın birlikte kullanımına dayanır. IV yanlıştır; çünkü TIVA Bispektral İndeks monitörizasyonuyla titre edilir (s. 16).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak dengeli anestezide dört ilacın birlikte kullanıldığını söyleyen III de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 16).",
+      "B": "Bu seçim IV'ü doğru sayar; oysa total intravenöz anestezi BIS monitörizasyonuyla titre edilir. Ayrıca doğru olan I seçimde yer almaz (s. 16).",
+      "C": "Kısa girişimlerde propofol infüzyonu yeterlidir, TIVA'da inhalasyon ajanı kullanılmaz ve bulantı riski azalır, dengeli anestezi de dört ilacın birlikte kullanımına dayanır. IV yanlıştır; çünkü TIVA Bispektral İndeks monitörizasyonuyla titre edilir (s. 16).",
+      "D": "IV yanlış olduğu için bu seçim hatalıdır: TIVA'da titrasyon BIS ile yapılır. Doğru olan II de seçimde bulunmaz (s. 16).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; çünkü total intravenöz anestezi Bispektral İndeks ile izlenerek titre edilir (s. 16)."
+     },
+     "bilgi": [
+      56,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Propofol + remifentanil infüzyonu; inhalasyon ajan"
+     },
+     "dayanak": [
+      "ozen:s16"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2020-2021-q133",
+     "soru": "Aşağıdakilerden hangisi dengeli anestezidir?",
+     "secenekler": {
+      "A": "İV + inhaler",
+      "B": "İnhaler + inhaler",
+      "C": "İM + sıvı anestezikler",
+      "D": "Atropin + benzodiazepinler",
+      "E": "Ketamin + propofol + atropin"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "past-1790877044485-534121",
+     "soru": "I. Tiyopental\nII. Midazolam\nIII. Fentanil\nIV. Propofol\nYukarıda verilen intravenöz (İV) uygulanabilen ilaçlardan hangisi/hangileri genel anestezide kullanılabilir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q28",
+     "soru": "Genel anestezide kullanılan aşağıdaki ilaçlar veriliyor:\nI. İzofluran\nII. Alfentanil\nIII. Sevofluran\nIV. Propofol\nBunlardan hangisi/hangileri intravenöz olarak verilebilir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Genel anestezik ilaçların hedef reseptörlerini (GABA-A, NMDA, opioid, nikotinik asetilkolin reseptörleri ve inhaler ajanların kanal etkileri) ve ilaç etkileşiminin farmakodinamik temelini ilişkilendirir.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q13",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Anestezikler ile hastanın kronik olarak kullandığı ilaçlar arasındaki etkileşim çoğunlukla hangi yapı üzerinden ortaya çıkar?",
+     "secenekler": {
+      "A": "Böbrek tübüler sekresyonu",
+      "B": "Mide asit salgısı",
+      "C": "Bağırsak motilitesi",
+      "D": "Tiroid hormon sentezi",
+      "E": "Karaciğer sitokrom (CYP) enzimleri"
+     },
+     "dogru": "E",
+     "aciklama": "Karaciğer sitokrom (CYP) enzimleri ilaçların büyük bölümünü metabolize eder; bir ilaç bu enzimleri inhibe ettiğinde anestezikler birikebilir. Etkileşim çoğunlukla bu yolla ortaya çıktığı için hastanın kronik ilaçları sorgulanır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Böbrek tübüler sekresyonu bazı ilaçların atılımında rol oynar. Kronik ilaçlarla anestezikler arasındaki etkileşim ise çoğunlukla karaciğer sitokrom enzimleri üzerinden olduğundan seçenek yanlıştır (s. 10).",
+      "B": "Mide asit salgısı oral ilaçların emilimini etkileyebilen bir sindirim işlevidir. Anestezik etkileşimlerinin çoğu karaciğer sitokrom enzimleri üzerinden geliştiğinden seçenek yanlıştır (s. 10).",
+      "C": "Bağırsak motilitesi besin ve ilaçların sindirim yolunda ilerlemesini belirler. Anestezik etkileşimleri çoğunlukla karaciğer sitokrom enzimlerinde oluştuğundan seçenek yanlıştır (s. 10).",
+      "D": "Tiroid hormon sentezi metabolizma hızını etkileyen bir endokrin işlevdir. Kronik ilaç öyküsü sorgulanırken asıl dikkat edilen yol karaciğer sitokrom enzimleri olduğundan seçenek yanlıştır (s. 10).",
+      "E": "Karaciğer sitokrom (CYP) enzimleri ilaçların büyük bölümünü metabolize eder; bir ilaç bu enzimleri inhibe ettiğinde anestezikler birikebilir. Etkileşim çoğunlukla bu yolla ortaya çıktığı için hastanın kronik ilaçları sorgulanır (s. 10)."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Hangi ilaçlar anesteziklerle etkileşime girer? QT uzatıcı, CYP inhibitörü,"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-19",
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q15",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Barbitüratların GABA-A reseptörü üzerindeki etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klorür kanalının açılma sıklığını artırır",
+      "B": "Klorür kanalının açık kalma süresini uzatır",
+      "C": "Klorür kanalını kalıcı olarak kapatır",
+      "D": "Sodyum kanalının açık kalma süresini uzatır",
+      "E": "GABA'nın sinaptik aralığa salınımını artırır"
+     },
+     "dogru": "B",
+     "aciklama": "Barbitüratlar GABA-A reseptörünün barbitürat bağlanma bölgesine bağlanır ve klorür kanalının açık kalma süresini uzatarak nöronal hiperpolarizasyona yol açar. Soru bu mekanizmayı sorduğu için doğru yanıt budur (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Kanalın açılma sıklığını artırmak benzodiazepinlerin mekanizmasıdır. Barbitüratlar sıklığı değil, kanalın açık kalma süresini uzattığı için bu seçenek yanlıştır (s. 17).",
+      "B": "Barbitüratlar GABA-A reseptörünün barbitürat bağlanma bölgesine bağlanır ve klorür kanalının açık kalma süresini uzatarak nöronal hiperpolarizasyona yol açar. Soru bu mekanizmayı sorduğu için doğru yanıt budur (s. 17).",
+      "C": "Klorür kanalının kapanması klorür girişini azaltır ve nöronal baskılanmayı ortadan kaldırır. Barbitüratlar ise kanalın açık kalma süresini uzatarak retiküler aktivasyonu baskıladığından seçenek yanlıştır (s. 17).",
+      "D": "Barbitüratların hedefi GABA-A reseptörüne bağlı klorür kanalıdır; sodyum kanalı bu mekanizmada yer almaz. Bu nedenle seçenek yanlıştır (s. 17).",
+      "E": "Barbitüratlar GABA'nın salınımını artırmaz; reseptör üzerindeki kendi bağlanma bölgesine bağlanarak kanal davranışını değiştirir. Yüksek dozda GABA'dan bağımsız da kanalı açabildikleri için seçenek yanlıştır (s. 17)."
+     },
+     "bilgi": [
+      61,
+      62
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "klorür kanalının açık kalma süresini"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-33"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q19",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Opioid ile benzodiazepinin aynı anda kullanılmasında en önemli risk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Solunum hızında belirgin artış",
+      "B": "Solunum depresyonunun katlanarak artması",
+      "C": "Kan basıncında kalıcı yükselme",
+      "D": "Karaciğer enzimlerinde yükselme",
+      "E": "Anestezi derinliğinin azalması"
+     },
+     "dogru": "B",
+     "aciklama": "Opioidler ve benzodiazepinler solunum merkezini baskılar; birlikte kullanıldıklarında solunum depresyonu orantısız, katlanarak artar. Bu nedenle pulse oksimetri ve kapnografi zorunludur (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Solunum hızında artış bu iki grubun etkisi değildir; ikisi de solunum merkezini baskılar ve birlikte kullanımda baskı katlanır. Bu yüzden seçenek yanlıştır (s. 23).",
+      "B": "Opioidler ve benzodiazepinler solunum merkezini baskılar; birlikte kullanıldıklarında solunum depresyonu orantısız, katlanarak artar. Bu nedenle pulse oksimetri ve kapnografi zorunludur (s. 23).",
+      "C": "Opioid ve benzodiazepin kombinasyonunda öne çıkan sorun kalıcı bir kan basıncı yükselmesi değildir; asıl risk solunum merkezinin baskılanmasıdır. Seçenek bu nedenle yanlıştır (s. 23).",
+      "D": "Karaciğer yetmezliği ilaçların metabolizmasını yavaşlatır, ancak bu kombinasyonun öne çıkan riski enzim yükselmesi değildir. Asıl risk solunum depresyonunun katlanmasıdır (s. 23).",
+      "E": "Sinerjik baskılanma anestezi derinliğini azaltmaz, aksine merkezi sinir sistemi baskısını artırır. Asıl risk solunum depresyonunun katlanması olduğundan seçenek yanlıştır (s. 23)."
+     },
+     "bilgi": [
+      28,
+      31,
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "solunum depresyonunu iki katına çıkarabilir."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Genel anestezi öncesinde hastadan ayrıntılı bir ilaç anamnezi alınmasının temel gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastanın bilinç kaybı süresini önceden kesin olarak hesaplamak",
+      "B": "Eksitasyon dönemini tamamen ortadan kaldırmaya çalışmak",
+      "C": "Birden çok ajanın birlikte verilmesiyle etkileşim riskinin artması",
+      "D": "Analjezi dönemini atlayarak doğrudan cerrahi evreye geçmek",
+      "E": "Kas gevşetici gereksinimini tamamen ortadan kaldırmak"
+     },
+     "dogru": "C",
+     "aciklama": "Aynı hasta anestezi sırasında 4–7 farklı ajan alabilir ve sinerjistik baskılanma dozları öngörülemez biçimde düşürebilir. Ayrıntılı ilaç öyküsü bu etkileşim riskini önceden görmeyi sağladığı için doğru yanıt budur (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Bilinç kaybının süresi ilaç dozu ve hasta özelliklerine göre değişir. Ayrıntılı anamnezin asıl amacı bu süreyi hesaplamak değil, ilaç etkileşimlerini önceden öngörmektir (s. 9).",
+      "B": "Eksitasyon dönemi, analjezinin bitiminden göz kapağı refleksinin kaybına kadar süren geçiş evresidir ve anestezi derinleşirken geçilir. Anamnez bu evreyi ortadan kaldırmaz, etkileşim risklerini öngörmeye yarar (s. 5).",
+      "C": "Aynı hasta anestezi sırasında 4–7 farklı ajan alabilir ve sinerjistik baskılanma dozları öngörülemez biçimde düşürebilir. Ayrıntılı ilaç öyküsü bu etkileşim riskini önceden görmeyi sağladığı için doğru yanıt budur (s. 9).",
+      "D": "Analjezi dönemi anestezinin ilk perdesidir ve derinleşme sırasında geçilen bir evredir. Anamnez evreleri atlatmaz; amacı ilaç etkileşimlerini öngörmektir (s. 4).",
+      "E": "Miyorelaksasyon, cerrahi manevra kolaylığı ve mekanik ventilasyona uyum için gereken ayrı bir anestezi hedefidir. Anamnez bu gereksinimi ortadan kaldırmaz, etkileşim risklerini öngörmeye yarar (s. 2)."
+     },
+     "bilgi": [
+      4,
+      14,
+      27,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Aynı hasta aynı anda 4–7 farklı ajan alabilir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-09",
+      "not:s9"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q16",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Benzodiazepinler için aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "GABA-A reseptörünün benzodiazepin bölgesine bağlanıp klorür kanalının açılma sıklığını artırırlar",
+      "B": "Midazolam güçlü bir anterograd amnezi oluşturur",
+      "C": "Spesifik antagonisti flumazenildir",
+      "D": "GABA-A reseptöründe klorür kanalının açık kalma süresini uzatarak etki ederler",
+      "E": "Opioidlerle birlikte kullanıldığında solunum depresyonu orantısız artar"
+     },
+     "dogru": "D",
+     "aciklama": "Klorür kanalının açık kalma süresini uzatmak benzodiazepinlerin değil barbitüratların mekanizmasıdır; benzodiazepinler kanalın açılma sıklığını artırır. İfade bu nedenle yanlıştır ve soru yanlış ifadeyi aradığı için yanıt budur (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepinler GABA-A reseptörünün benzodiazepin bölgesine bağlanır ve klorür kanalının açılma sıklığını artırır; barbitüratlar ise süreyi uzatır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 33).",
+      "B": "Midazolam kısa etkili bir benzodiazepindir ve güçlü anterograd amnezi oluşturur; hasta işlem sırasındaki olayları hatırlayamaz. İfade doğru olduğundan aranan yanlış ifade değildir (s. 33).",
+      "C": "Flumazenil benzodiazepinlerin spesifik antagonistidir; 0.2 mg IV bolus olarak titre edilir ve aşırı doz etkisini geri çevirir. İfade doğru olduğundan aranan yanlış ifade değildir (s. 33).",
+      "D": "Klorür kanalının açık kalma süresini uzatmak benzodiazepinlerin değil barbitüratların mekanizmasıdır; benzodiazepinler kanalın açılma sıklığını artırır. İfade bu nedenle yanlıştır ve soru yanlış ifadeyi aradığı için yanıt budur (s. 33).",
+      "E": "Opioid ile benzodiazepin birlikte kullanıldığında solunum depresyonu orantısız artar; bu yüzden monitörizasyon ve antagonist hazırlığı zorunludur. İfade doğru olduğundan aranan yanlış ifade değildir (s. 33)."
+     },
+     "bilgi": [
+      159,
+      160
+     ],
+     "benzer_cikmis": [
+      "d3-k2-far-013",
+      "d3k2-2018-2019-k4-q12"
+     ],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "klorür kanalının açılma frekansını artırır (barbitüratlar süreyi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-33",
+      "cikmis:d3-k2-far-013",
+      "cikmis:d3k2-2018-2019-k4-q12",
+      "ozen:s33"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bir intravenöz anestezik orta dozda verildiğinde beklenen klinik etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sedasyon ve anksiyoliz",
+      "B": "Genel anestezi",
+      "C": "Solunum ve kardiyovasküler baskılanma",
+      "D": "Ağrı duyusunun seçici olarak kesilmesi",
+      "E": "Hipnoz ve amnezi"
+     },
+     "dogru": "E",
+     "aciklama": "İntravenöz anestezikler beyin sapı retiküler aktive edici sistemini ve kortikal nöronal aktiviteyi doza bağımlı baskılar; orta dozda hipnoz ve amnezi ortaya çıkar. Soru orta dozu sorduğu için doğru yanıt budur (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Sedasyon ve anksiyoliz, sedasyon-hipnoz-anestezi sürekliliğinin düşük doz basamağıdır. Orta dozda ise tablo hipnoz ve amneziye ilerlediği için seçenek yanlıştır (s. 13).",
+      "B": "Genel anestezi yüksek dozda ortaya çıkan basamaktır ve süreklilikte hipnoz ile amneziden sonra gelir. Soru orta dozu sorduğundan seçenek yanlıştır (s. 13).",
+      "C": "Solunum ve kardiyovasküler baskılanma toksik doz düzeyinin tablosudur. Orta dozda hedeflenen etki hipnoz ve amnezi olduğundan seçenek yanlıştır (s. 13).",
+      "D": "Ağrı duyusunun seçici kesilmesi analjezi hedefidir ve opioidlerle sağlanır. İntravenöz hipnotiklerin orta doz etkisi ise hipnoz ve amnezi olduğundan seçenek yanlıştır (s. 8).",
+      "E": "İntravenöz anestezikler beyin sapı retiküler aktive edici sistemini ve kortikal nöronal aktiviteyi doza bağımlı baskılar; orta dozda hipnoz ve amnezi ortaya çıkar. Soru orta dozu sorduğu için doğru yanıt budur (s. 13)."
+     },
+     "bilgi": [
+      22,
+      47,
+      48
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Orta doz → hipnoz, amnezi"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q18",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İntravenöz anesteziklerin merkezi sinir sistemi etkileriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Beyin sapı retiküler aktive edici sistemini ve kortikal nöronal aktiviteyi baskılarlar.\nII. Baskılanma doza bağlı değildir; küçük bir dozda bile genel anestezi oluşur.\nIII. GABA-A reseptörünün potansiyelize edilmesi en yaygın mekanizmadır.\nIV. Klorür kanalının açık kalma süresini uzatarak nöronal hiperpolarizasyona yol açabilirler.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız III",
+      "B": "I ve III",
+      "C": "II, III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "İntravenöz anestezikler retiküler aktive edici sistemi baskılar, en yaygın olarak GABA-A reseptörünü potansiyelize eder ve klorür kanalının açık kalma süresini uzatarak hiperpolarizasyon yapar. II yanlıştır; çünkü baskılanma sedasyondan anesteziye doz bağımlı ilerler (s. 13).",
+     "sik_aciklamalari": {
+      "A": "III doğrudur; ancak retiküler sistemin baskılanması (I) ve klorür kanalı süresinin uzaması (IV) da doğrudur. Seçim bunları dışarıda bıraktığı için eksiktir (s. 13).",
+      "B": "I ve III doğrudur, fakat nöronal hiperpolarizasyonu klorür kanalının açık kalma süresinin uzamasıyla açıklayan IV de doğrudur. Bu seçim IV'ü dışarıda bıraktığı için eksiktir (s. 13).",
+      "C": "Bu seçim II'yi doğru sayar; oysa baskılanma sedasyon, hipnoz ve anestezi sürekliliğinde doz bağımlı gelişir. Doğru olan I de seçimde yer almaz (s. 13).",
+      "D": "Dört ifadenin tümünü doğru sayan seçimde II yanlıştır; çünkü baskılanma doza bağlı olarak sedasyondan hipnoza ve anesteziye ilerler (s. 13).",
+      "E": "İntravenöz anestezikler retiküler aktive edici sistemi baskılar, en yaygın olarak GABA-A reseptörünü potansiyelize eder ve klorür kanalının açık kalma süresini uzatarak hiperpolarizasyon yapar. II yanlıştır; çünkü baskılanma sedasyondan anesteziye doz bağımlı ilerler (s. 13)."
+     },
+     "bilgi": [
+      46,
+      49
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "GABA-A reseptörünün potansiyelize edilmesi en yaygın mekanizmadır"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q20",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Propofol veya barbitüratla indüksiyonda sistemik vasküler dirençteki düşüşe bağlı hipotansiyonu önlemek için aşağıdakilerden hangisi uygulanır?",
+     "secenekler": {
+      "A": "Bolusu hızlandırıp dozu kısa sürede vermek",
+      "B": "Sistemik vasküler direnci düşüren ikinci bir ajan eklemek",
+      "C": "Sıvı kısıtlaması yaparak volümü azaltmak",
+      "D": "Tek ilaçla indüksiyonu olabildiğince hızlandırmak",
+      "E": "Yükleme hızını yavaşlatmak ve volüm önyüklemesi yapmak"
+     },
+     "dogru": "E",
+     "aciklama": "Propofol ve barbitüratlar sistemik vasküler direnci düşürerek hipotansiyon yapar; yükleme hızını yavaşlatmak ve volüm önyüklemesi bu düşüşü önler. Bu iki önlem birlikte uygulandığı için doğru yanıt budur (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Bolusu hızlı vermek ilacın vazodilatör etkisini belirginleştirir ve sistemik vasküler direncin daha fazla düşmesiyle hipotansiyonu artırır. Önlem yükleme hızının yavaşlatılması olduğundan seçenek yanlıştır (s. 23).",
+      "B": "Vazodilatör bir ajan eklemek zaten düşen sistemik vasküler direnci daha da azaltır. Hipotansiyonu önlemek için yavaş yükleme ve volüm önyüklemesi gerektiğinden seçenek yanlıştır (s. 23).",
+      "C": "Sıvı kısıtlaması intravasküler volümü azaltır ve vazodilatasyonun etkisini daha belirgin hale getirerek hipotansiyonu kötüleştirir. Volüm önyüklemesi gerektiğinden seçenek yanlıştır (s. 23).",
+      "D": "İndüksiyonu tek ilaçla hızlandırmak ilaç yükünü kısa sürede artırır ve vazodilatasyonu güçlendirir. Önlem yükleme hızını yavaşlatmak olduğundan seçenek yanlıştır (s. 23).",
+      "E": "Propofol ve barbitüratlar sistemik vasküler direnci düşürerek hipotansiyon yapar; yükleme hızını yavaşlatmak ve volüm önyüklemesi bu düşüşü önler. Bu iki önlem birlikte uygulandığı için doğru yanıt budur (s. 23)."
+     },
+     "bilgi": [
+      95,
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "direnci düşürür. Yükleme hızı yavaşlatılarak"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Anestezide ilaç etkileşimleriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Opioid ile benzodiazepinin birlikte kullanımı solunum depresyonunu belirgin biçimde artırabilir.\nII. İnhaler ajanlar kas gevşeticilerin etkisini kısaltır.\nIII. Yaş, kilo ve organ fonksiyonu gibi farmakokinetik değişkenler etkileşimi güçlendirebilir.\nIV. Merkezi sinir, solunum ve kardiyovasküler sistemin ortak hedef olması etkileşim riskini artırır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Opioid ile benzodiazepin solunum depresyonunu iki katına çıkarabilir, farmakokinetik değişkenler etkileşimi güçlendirir ve ortak hedef sistemler riski artırır. II yanlıştır; çünkü inhaler ajanlar kas gevşeticilerin etkisini uzatır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "I doğrudur; ancak inhaler ajanlar kas gevşeticilerin etkisini kısaltmaz, uzatır. Ayrıca doğru olan III ve IV seçimde yer almaz (s. 9).",
+      "B": "III ve IV doğrudur, ancak II yanlış kabul edilmiştir: inhaler ajanlar kas gevşeticilerin etkisini uzatır. Ayrıca doğru olan I seçimde yer almaz (s. 9).",
+      "C": "I ve III doğrudur fakat II yanlıştır; inhaler ajanlar kas gevşeticilerin etkisini kısaltmaz, uzatır. Doğru olan IV de seçimde bulunmaz (s. 9).",
+      "D": "Opioid ile benzodiazepin solunum depresyonunu iki katına çıkarabilir, farmakokinetik değişkenler etkileşimi güçlendirir ve ortak hedef sistemler riski artırır. II yanlıştır; çünkü inhaler ajanlar kas gevşeticilerin etkisini uzatır (s. 9).",
+      "E": "Dört ifadenin tamamını doğru sayan bu seçimde II yanlıştır; çünkü inhaler ajanlar kas gevşeticilerin etkisini kısaltmaz, tersine uzatır ve ilaç etkileşiminin bir örneğidir (s. 9)."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "İnhaler ajanlar kas gevşeticilerin etkisini uzatır"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-09",
+      "not:s9"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q14",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "58 yaşında erkek hasta elektif cerrahi için hazırlanıyor. Hipertansiyon nedeniyle beta bloker, depresyon nedeniyle monoamin oksidaz (MAO) inhibitörü kullanan hastada ameliyat öncesi ilaç kararı için aşağıdakilerden hangisi uygundur?",
+     "secenekler": {
+      "A": "Beta bloker sürdürülür, MAO inhibitörü kesilir",
+      "B": "Beta bloker kesilir, MAO inhibitörü sürdürülür",
+      "C": "İkisi de ameliyat sabahına kadar sürdürülür",
+      "D": "İkisi de ameliyattan önce kesilir",
+      "E": "İkisi de yarı dozda sürdürülür"
+     },
+     "dogru": "A",
+     "aciklama": "Beta blokörler genellikle sürdürülür, MAO inhibitörleri ise cerrahi öncesi kesilir; karar risk-yarar dengesiyle verilir. Seçenek bu iki kuralı doğru birleştirdiği için yanıttır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Beta blokörler genellikle sürdürülür, MAO inhibitörleri ise cerrahi öncesi kesilir; karar risk-yarar dengesiyle verilir. Seçenek bu iki kuralı doğru birleştirdiği için yanıttır (s. 10).",
+      "B": "Bu seçenek kuralı tersine çevirir; beta blokörler genellikle sürdürülür, MAO inhibitörleri ise cerrahi öncesi kesilir. Dolayısıyla seçenek yanlıştır (s. 10).",
+      "C": "Beta blokörün sürdürülmesi doğrudur; ancak MAO inhibitörü cerrahi öncesi kesilen gruptadır. Bu yüzden ikisinin birlikte sürdürülmesi yanlış ve riskli bir karardır (s. 10).",
+      "D": "MAO inhibitörünün cerrahi öncesi kesilmesi doğrudur; ancak beta blokörler genellikle sürdürülür. İkisini birden kesmek, risk-yarar dengesine uymayan yanlış bir karardır (s. 10).",
+      "E": "Karar, ilacın türüne göre kes, değiştir ya da devam et seçimine dayanır; ikisine de aynı yarı doz uygulanmaz. Beta bloker sürdürülür, MAO inhibitörü kesilir (s. 10)."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Beta blokörler genellikle sürdürülür; MAO inhibitörleri cerrahi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-19",
+      "ozen:s10"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-far-013",
+     "soru": "Sedatif-hipnotik ilaç seçiminde benzodiazepinlerin barbitüratlara tercih edilmesinde aşağıdakilerden hangisi bir faktör değildir?",
+     "secenekler": {
+      "A": "Terapötik indekslerinin barbitüratlara göre çok daha geniş (güvenli) olması",
+      "B": "Benzodiazepinlerin belirgin analjezik özelliklerinin bulunması",
+      "C": "Spesifik bir reseptör antagonistinin (flumazenil) bulunması",
+      "D": "Doz artışında bir tavan (plato) etkisine sahip olmaları ve tek başlarına solunumu daha az baskılamaları",
+      "E": "Karaciğer mikrozomal enzimlerini barbitüratlar kadar indüklememeleri"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q12",
+     "soru": "Aşağıdaki ilaç gruplarından hangisi anterograd amnezi yapar?",
+     "secenekler": {
+      "A": "Ketamin",
+      "B": "Teofilin",
+      "C": "Midazolam",
+      "D": "Fenitoin",
+      "E": "Fentanil"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Barbitüratların, tiyopental, propofol, etomidat, ketamin ve benzodiazepinlerin mekanizma, farmakokinetik, klinik kullanım ve yan etkilerini karşılaştırır; redistribüsyonu ve TIVA'yı açıklar.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q21",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Propofol ve tiyopental gibi intravenöz anesteziklerin saniyeler içinde bilinç kaybı oluşturmasını sağlayan özellikler aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Yüksek lipit çözünürlüğü ve beyne giden yüksek perfüzyon",
+      "B": "Düşük lipit çözünürlüğü ve yüksek protein bağlanması",
+      "C": "Yüksek lipit çözünürlüğü ve ilacın tamamının albümine bağlanması",
+      "D": "Düşük kalp debisi ve yavaş kan-beyin bariyeri geçişi",
+      "E": "Yüksek protein bağlanması ve hızlı karaciğer metabolizması"
+     },
+     "dogru": "A",
+     "aciklama": "Yüksek lipofilite ilacın kan-beyin bariyerini saniyeler içinde geçmesini sağlar; kalp debisinin %15–20'si de beyne gittiği için serebral konsantrasyon hızla yükselir. Bu iki özellik birlikte hızlı başlangıcı açıkladığı için doğru yanıt budur (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Yüksek lipofilite ilacın kan-beyin bariyerini saniyeler içinde geçmesini sağlar; kalp debisinin %15–20'si de beyne gittiği için serebral konsantrasyon hızla yükselir. Bu iki özellik birlikte hızlı başlangıcı açıkladığı için doğru yanıt budur (s. 14).",
+      "B": "Düşük lipit çözünürlüğü ilacın kan-beyin bariyerini yavaş geçmesine yol açar ve yüksek protein bağlanması serbest fraksiyonu azaltır. Bu özellikler hızlı değil, yavaş bir başlangıcı açıklar (s. 14).",
+      "C": "Lipit çözünürlüğü doğru bir etkendir, ancak yalnız serbest fraksiyon biyolojik aktiviteyi belirler. İlacın tamamının albümine bağlanması etkiyi geciktireceğinden ikili yanlıştır (s. 14).",
+      "D": "Düşük kalp debisi beyne giden kan miktarını azaltır ve serebral konsantrasyonun yükselmesini geciktirir. Hızlı başlangıç yüksek serebral perfüzyonla açıklandığından seçenek yanlıştır (s. 14).",
+      "E": "Yüksek protein bağlanması serbest fraksiyonu azaltır ve etkiyi hafifletir; hızlı karaciğer metabolizması ise etkinin sonlanmasıyla ilgilidir. Başlangıç hızını belirleyen etkenler lipit çözünürlüğü ve perfüzyon olduğundan seçenek yanlıştır (s. 14)."
+     },
+     "bilgi": [
+      50,
+      51
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Kalp debisinin %15–20'si beyne gider;"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-23",
+      "hoca:hv-k2-07-25",
+      "ozen:s14"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q23",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Açılmış propofol flakonunun uzun süre bekletilmemesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lipid emülsiyonunda enfeksiyon bulaşma riski",
+      "B": "Etkin maddenin oksijenle temasta kimyasal olarak bozulması",
+      "C": "Emülsiyondaki yumurta lesitininin çökmesi",
+      "D": "Soya alerjisi riskinin zamanla artması",
+      "E": "Propofol infüzyon sendromunun gelişmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Propofol yumurta lesitiniyle hazırlanan bir lipid emülsiyonudur ve bu yapı bakteriyel kontaminasyona elverişlidir. Açılmış flakonun bekletilmemesinin nedeni ilacın bozulması değil, enfeksiyon bulaşma riskidir (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Propofol yumurta lesitiniyle hazırlanan bir lipid emülsiyonudur ve bu yapı bakteriyel kontaminasyona elverişlidir. Açılmış flakonun bekletilmemesinin nedeni ilacın bozulması değil, enfeksiyon bulaşma riskidir (s. 32).",
+      "B": "Açılmış flakonun bekletilmemesi, etkin maddenin kimyasal olarak bozulmasına değil, lipid emülsiyonuna bulaşabilecek enfeksiyon riskine bağlıdır. Bu yüzden bozulma gerekçesi yanlıştır (s. 32).",
+      "C": "Yumurta lesitini emülsiyonun yapısını oluşturan ve ilaca süt görünümü veren bileşendir. Bekletmenin asıl sakıncası çökme değil enfeksiyon bulaşma riski olduğundan seçenek yanlıştır (s. 32).",
+      "D": "Soya alerjisi formülasyondaki içeriğe karşı hasta duyarlılığıyla ilgilidir ve flakonun açık kalma süresine göre artmaz. Bekletme sakıncası enfeksiyon riski olduğundan seçenek yanlıştır (s. 32).",
+      "E": "Propofol infüzyon sendromu, yüksek dozda ve 48 saatten uzun infüzyonda metabolik asidoz, kardiyomiyopati ve rabdomiyoliz yapan nadir ama ölümcül bir tablodur. Flakonun bekletilmesiyle ilgili olmadığından seçenek yanlıştır (s. 32)."
+     },
+     "bilgi": [
+      151,
+      152
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Lipid emülsiyonu formülasyonu (yumurta lesitin); soya alerjisinde dikkat."
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-27",
+      "ozen:s16"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q27",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Etomidatın tek doz uygulaması sonrasında bile görülebilen önemli yan etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Porfiri atağı",
+      "B": "Çocuklarda laringospazm",
+      "C": "Belirgin hipotansiyon",
+      "D": "Kafa içi basınç artışı",
+      "E": "Adrenokortikal baskılanma"
+     },
+     "dogru": "E",
+     "aciklama": "Etomidat tek doz sonrası bile kortizol sentezini 6–24 saat inhibe eder; uzun infüzyondan bu yüzden kaçınılır. Adrenokortikal baskılanma etomidatın tanınan önemli yan etkisi olduğu için doğru yanıt budur (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Porfiri atağı, tiyopental gibi barbitüratların kontrendikasyonuyla ilişkilidir. Etomidatın tek doz sonrası belirgin yan etkisi kortizol sentezinin baskılanması olduğundan seçenek yanlıştır (s. 18).",
+      "B": "Çocuklarda laringospazm tiyopentalin yan etkileri arasında sayılır. Etomidatta ise öne çıkan sorun kortizol sentezinin baskılanması olduğundan seçenek yanlıştır (s. 18).",
+      "C": "Etomidat kardiyovasküler sistemi minimal etkiler ve hemodinamik instabil hastalarda güvenli indüksiyon sağlar. Belirgin hipotansiyon etomidatın özelliği olmadığından seçenek yanlıştır (s. 19).",
+      "D": "Etomidat intrakraniyal basıncı ve göz içi basıncını düşürür. Basınç artışı bu ilaçta beklenen bir sonuç olmadığından seçenek yanlıştır (s. 19).",
+      "E": "Etomidat tek doz sonrası bile kortizol sentezini 6–24 saat inhibe eder; uzun infüzyondan bu yüzden kaçınılır. Adrenokortikal baskılanma etomidatın tanınan önemli yan etkisi olduğu için doğru yanıt budur (s. 19)."
+     },
+     "bilgi": [
+      74,
+      78
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Adrenokortikal baskılanma: Tek doz sonrası bile kortizol sentezi 6–24 saat"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-37",
+      "ozen:s19"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İntravenöz anesteziklerde etkinin hızlı başlamasına katkıda bulunan etkenlerden biri aşağıdakilerden hangisi değildir?",
+     "secenekler": {
+      "A": "Yüksek lipit çözünürlüğü",
+      "B": "Kan-beyin bariyerinin saniyeler içinde geçilmesi",
+      "C": "Kalp debisinin beyne giden yüksek payı",
+      "D": "Bağlanmamış (serbest) ilaç fraksiyonunun yüksek olması",
+      "E": "İlacın kas ve yağ dokusuna yeniden dağılması"
+     },
+     "dogru": "E",
+     "aciklama": "Redistribüsyon, ilacın beyinden daha az perfüze olan kas ve yağ dokusuna yeniden dağılmasıdır ve etkinin sona ermesini sağlar. Başlangıç hızına katkı vermediği için aranan seçenek budur (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Yüksek lipit çözünürlüğü ilacın kan-beyin bariyerini saniyeler içinde geçmesini sağlar. Hızlı başlangıca katkı verdiği için aranan seçenek değildir (s. 14).",
+      "B": "Kan-beyin bariyerinin saniyeler içinde geçilmesi propofol ve tiyopental gibi lipofilik ajanlarda görülür ve serebral konsantrasyonu hızla yükseltir. Hızlı başlangıcı açıkladığı için aranan seçenek değildir (s. 14).",
+      "C": "Kalp debisinin %15–20'si beyne gittiği için ilaç verilir verilmez serebral konsantrasyon hızla yükselir. Bu etken başlangıcı hızlandırdığından aranan seçenek değildir (s. 14).",
+      "D": "Serbest fraksiyon biyolojik aktiviteyi belirler; bağlanmamış ilaç oranı yüksekse etki hızla ve belirgin ortaya çıkar. Bu etken başlangıca katkı verdiğinden aranan seçenek değildir (s. 14).",
+      "E": "Redistribüsyon, ilacın beyinden daha az perfüze olan kas ve yağ dokusuna yeniden dağılmasıdır ve etkinin sona ermesini sağlar. Başlangıç hızına katkı vermediği için aranan seçenek budur (s. 15)."
+     },
+     "bilgi": [
+      54,
+      55
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Çoğu IV anestezik metabolizma tamamlanmadan önce etkisini yitirir"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-23",
+      "hoca:hv-k2-07-25",
+      "ozen:s15"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q25",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tiyopentalle indüksiyon yapılan ve ağrılı bir girişim geçirecek hastada anestezi planına aşağıdakilerden hangisi eklenmelidir?",
+     "secenekler": {
+      "A": "Ek bir barbitürat dozu",
+      "B": "Opioid analjezik",
+      "C": "Kas gevşetici",
+      "D": "Solunan oksijen konsantrasyonunu artırmak",
+      "E": "Vazopressör ajan"
+     },
+     "dogru": "B",
+     "aciklama": "Tiyopentalin analjezik etkisi yoktur; düşük dozda hiperaljezi yapıcı (antianaljezik) etki bile gösterilmiştir. Bu yüzden ağrılı girişimlerde opioid eklenmesi zorunludur (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Ek barbitürat dozu sedasyonu ve hipnozu derinleştirir ancak ağrıyı gidermez; tiyopentalde antianaljezik etki bile bildirilmiştir. Bu nedenle seçenek yanlıştır (s. 18).",
+      "B": "Tiyopentalin analjezik etkisi yoktur; düşük dozda hiperaljezi yapıcı (antianaljezik) etki bile gösterilmiştir. Bu yüzden ağrılı girişimlerde opioid eklenmesi zorunludur (s. 18).",
+      "C": "Kas gevşetici çizgili kasları gevşeterek cerrahi alanı kolaylaştırır ancak ağrı iletimini bloke etmez. Tiyopentalin analjezi eksikliğini tamamlamadığı için seçenek yanlıştır (s. 8).",
+      "D": "Solunan oksijen konsantrasyonunu artırmak hipoksiyi önler ancak ağrı iletimini kesmez. Tiyopentalin analjezi eksikliği ancak opioid eklenerek tamamlandığından seçenek yanlıştır (s. 18).",
+      "E": "Vazopressör ajan hipotansiyonu düzeltir ve ağrı iletimini etkilemez. Tiyopental hipotansiyon yapabilse de analjezi eksikliğini gideren ek ilaç opioid olduğundan seçenek yanlıştır (s. 18)."
+     },
+     "bilgi": [
+      24,
+      69,
+      71
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Analjezik etkisi yoktur; düşük dozda antianaljetik (hiperaljezi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-35",
+      "ozen:s18"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q26",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tiyopental için aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Güçlü bir analjezik etkisi vardır",
+      "B": "İntrakraniyal basıncı ve serebral oksijen tüketimini azaltır",
+      "C": "Etki başlangıcı 30–60 saniye, etki süresi 5–10 dakikadır",
+      "D": "Porfiri hastalarında kontrendikedir",
+      "E": "Hipotansiyon, laringospazm ve bronkospazm yapabilir"
+     },
+     "dogru": "A",
+     "aciklama": "Tiyopentalin analjezik etkisi yoktur, düşük dozda hiperaljezi yapıcı etki bile gösterilmiştir; bu yüzden opioid eklenir. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Tiyopentalin analjezik etkisi yoktur, düşük dozda hiperaljezi yapıcı etki bile gösterilmiştir; bu yüzden opioid eklenir. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 18).",
+      "B": "Tiyopental intrakraniyal basıncı azaltır ve serebral metabolizma ile oksijen tüketimini düşürür; rutin nöroprotektif etkisi ise kesin kanıtlanmamıştır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 18).",
+      "C": "Tiyopentalin etkisi 30–60 saniyede başlar ve 5–10 dakika sürer; etki redistribüsyonla sonlanır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 18).",
+      "D": "Porfiri hastalarında tiyopental kontrendikedir ve bu bilgi ilacın klinik kullanımını sınırlayan önemli bir uyarıdır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 18).",
+      "E": "Tiyopentalin yan etkileri arasında hipotansiyon, özellikle çocuklarda laringospazm ve bronkospazm yer alır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 18)."
+     },
+     "bilgi": [
+      70,
+      73
+     ],
+     "benzer_cikmis": [
+      "d3-k2-far-001"
+     ],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Analjezik etkisi yoktur; düşük dozda antianaljetik (hiperaljezi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-35",
+      "cikmis:d3-k2-far-001",
+      "cikmis:d3k2-2023-2024-h65",
+      "ozen:s18"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q29",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "62 yaşında kadın hasta septik şok tablosunda acil laparotomiye alınıyor. Sistemik vasküler direnci düşürerek hipotansiyonu artırmayan, noradrenalin geri alımını inhibe ederek kan basıncı ve kalp hızını artıran indüksiyon ajanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ketamin",
+      "B": "Propofol",
+      "C": "Tiyopental",
+      "D": "Midazolam",
+      "E": "Diazepam"
+     },
+     "dogru": "A",
+     "aciklama": "Ketamin NMDA reseptör antagonisti bir disosiyatif anesteziktir; noradrenalin geri alımını inhibe ederek kalp hızını ve kan basıncını artırır. Septik şok ve travma hastalarında hemodinamiyi koruduğu için doğru yanıt budur (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Ketamin NMDA reseptör antagonisti bir disosiyatif anesteziktir; noradrenalin geri alımını inhibe ederek kalp hızını ve kan basıncını artırır. Septik şok ve travma hastalarında hemodinamiyi koruduğu için doğru yanıt budur (s. 35).",
+      "B": "Propofol sistemik vasküler direnci düşürür ve negatif inotropi yaparak hipotansiyon oluşturur. Septik şoktaki hastada bu etki istenmediğinden seçenek yanlıştır (s. 32).",
+      "C": "Tiyopental barbitüratlar gibi sistemik vasküler direnci düşürür ve hipotansiyon yapar. Septik şokta hemodinamiyi koruyan bir özelliği olmadığından seçenek yanlıştır (s. 18).",
+      "D": "Midazolam kısa etkili, suda çözünür bir benzodiazepindir ve GABA-A reseptörüne etki eder. Noradrenalin geri alımını inhibe edip kan basıncını artırmadığından seçenek yanlıştır (s. 33).",
+      "E": "Diazepam, benzodiazepin grubunda GABA-A reseptörüne etki eden bir sedatiftir. Sempatomimetik etkisi ve kan basıncını koruyucu özelliği bulunmadığından seçenek yanlıştır (s. 33)."
+     },
+     "bilgi": [
+      180,
+      181
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Sempatomimetik etki: Noradrenalin geri alımını inhibe ederek"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-58",
+      "ozen:s35"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q24",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Propofolle ilgili aşağıdaki ifadeler veriliyor:\nI. Yumurta lesitiniyle hazırlanan bir lipid emülsiyonudur.\nII. Soya alerjisi olan hastalarda dikkatli kullanılmalıdır.\nIII. Açılmış flakon bekletildiğinde ilaç kimyasal olarak bozulur; bu nedenle uzun süre saklanmaz.\nIV. Hızlı bolus sonrası geçici apne görülebilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "II, III ve IV",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Propofol lipid emülsiyonu olarak hazırlanır, soya alerjisinde dikkat gerektirir ve bolus sonrası geçici apneye yol açabilir. III yanlıştır; çünkü açılmış flakonun bekletilmemesinin nedeni ilacın bozulması değil, enfeksiyon bulaşma riskidir (s. 32).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak bolus sonrası geçici apne görülmesi de doğrudur ve bu seçim IV'ü dışarıda bırakır. Bu nedenle eksiktir (s. 32).",
+      "B": "Bu seçim III'ü doğru sayar; oysa flakonun bekletilmemesinin nedeni enfeksiyon bulaşma riskidir, kimyasal bozulma değildir. Doğru olan II de seçimde yer almaz (s. 32).",
+      "C": "II ve IV doğrudur ancak III yanlıştır, çünkü bekletme sakıncası enfeksiyon riskidir. Doğru olan I de seçimde bulunmaz (s. 32).",
+      "D": "Propofol lipid emülsiyonu olarak hazırlanır, soya alerjisinde dikkat gerektirir ve bolus sonrası geçici apneye yol açabilir. III yanlıştır; çünkü açılmış flakonun bekletilmemesinin nedeni ilacın bozulması değil, enfeksiyon bulaşma riskidir (s. 32).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde III yanlıştır; açılmış flakon enfeksiyon riski nedeniyle bekletilmez, ilaç kimyasal olarak bozulduğu için değil (s. 32)."
+     },
+     "bilgi": [
+      152,
+      156
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Apne: Bolus sonrası geçici; ventilasyon hazırlığı şart"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-27",
+      "ozen:s16"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q28",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Etomidatla ilgili aşağıdaki ifadeler veriliyor:\nI. Kardiyovasküler sistemi minimal etkiler.\nII. İntrakraniyal ve göz içi basıncını düşürür.\nIII. Miyoklonus görülebilir ve opioid premedikasyonuyla azaltılabilir.\nIV. Adrenokortikal baskılanma yalnızca uzun süreli infüzyonda ortaya çıkar.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Etomidat kardiyovasküler sistemi minimal etkiler, intrakraniyal ve göz içi basıncını düşürür ve %30–80 hastada görülen miyoklonus opioid premedikasyonuyla azaltılabilir. IV yanlıştır; çünkü kortizol sentezi tek doz sonrası bile baskılanır (s. 19).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak miyoklonusun görülmesi ve opioid premedikasyonuyla azaltılabilmesi (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 19).",
+      "B": "Bu seçim IV'ü doğru sayar; oysa adrenokortikal baskılanma tek doz sonrası bile görülür, uzun infüzyonda ise belirginleşir. Doğru olan I de seçimde yer almaz (s. 19).",
+      "C": "I ve III doğrudur ancak IV yanlıştır, çünkü kortizol sentezi tek dozdan sonra bile baskılanır. Doğru olan II de seçimde bulunmaz (s. 19).",
+      "D": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; adrenokortikal baskılanma yalnız uzun infüzyona özgü değildir, tek doz sonrası bile ortaya çıkar (s. 19).",
+      "E": "Etomidat kardiyovasküler sistemi minimal etkiler, intrakraniyal ve göz içi basıncını düşürür ve %30–80 hastada görülen miyoklonus opioid premedikasyonuyla azaltılabilir. IV yanlıştır; çünkü kortizol sentezi tek doz sonrası bile baskılanır (s. 19)."
+     },
+     "bilgi": [
+      75,
+      78
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Miyoklonus: İnjeksiyon sonrası %30–80 hastada görülür"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-37",
+      "ozen:s19"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q30",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Ketaminle ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "NMDA reseptörünü bloke ederek disosiyatif bir durum oluşturur",
+      "B": "Kan basıncını ve kalp hızını artırarak hemodinamiyi korur",
+      "C": "Bronkodilatasyon yaparak astımlı hastalarda avantaj sağlar",
+      "D": "Kafa içi basıncı düşürdüğü için kafa travmasında tercih edilir",
+      "E": "Sekresyonları artırdığı için antisiyalogog gerektirir"
+     },
+     "dogru": "D",
+     "aciklama": "Ketamin NMDA antagonisti bir disosiyatif anestezik olup kafa içi basıncı artırır ve bu nedenle kafa travmasında kontrendikedir. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Ketamin glutamat NMDA reseptörünü bloke ederek bilinç ile çevreden kopmanın eş zamanlı geliştiği disosiyatif durumu oluşturur. İfade doğru olduğundan aranan yanlış ifade değildir (s. 20).",
+      "B": "Ketamin noradrenalin geri alımını inhibe ederek kalp hızını ve kan basıncını artırır; bu nedenle septik şok ve travmada hemodinamiyi korur. İfade doğru olduğundan aranan yanlış ifade değildir (s. 35).",
+      "C": "Ketamin bronkodilatasyon yapar; bu özellik astımlı hastalarda bir avantajdır ancak her durumda tercih nedeni sayılmaz. İfade doğru olduğundan aranan yanlış ifade değildir (s. 35).",
+      "D": "Ketamin NMDA antagonisti bir disosiyatif anestezik olup kafa içi basıncı artırır ve bu nedenle kafa travmasında kontrendikedir. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 35).",
+      "E": "Ketamin hipersekresyona yol açar; sekresyon artışına bağlı laringospazm riski atropin veya glikopirolat gibi antisiyalogoglarla önlenir. İfade doğru olduğundan aranan yanlış ifade değildir (s. 35)."
+     },
+     "bilgi": [
+      83,
+      177,
+      184
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q13"
+     ],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "ICP artışı: Kafa içi basınç yükselmesi riski; kafa travmasında kontrendike"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-58",
+      "hoca:hv-k2-07-60",
+      "cikmis:d3k2-2018-2019-k4-q13",
+      "ozen:s35"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-far-001",
+     "soru": "Tiyopental sodyumdan vazgeçilmemesinin nedeni nedir?",
+     "secenekler": {
+      "A": "Saniyeler içinde indüksiyon",
+      "B": "Redistribüsyonu",
+      "C": "Volatil anesteziklerin dozunu düşürmez",
+      "D": "Derin sedasyon yapar",
+      "E": "SSS oksijen gereksinimini azaltır"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q13",
+     "soru": "Aşağıdaki anesteziklerden hangisi dissosiyasyon oluşturur?",
+     "secenekler": {
+      "A": "Fentanil",
+      "B": "Tiyopental",
+      "C": "Propofol",
+      "D": "Ketamin",
+      "E": "Sevofluran"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Halotan, izofluran, sevofluran, desfluran ve azot protoksitin MAC, kan-gaz katsayısı, yan etki ve etkileşim özelliklerini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q31",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Minimum alveoler konsantrasyon (MAC), hastaların yüzde kaçında cilt insizyonuna motor yanıtı önleyen alveoler konsantrasyondur ve inhaler ajanın hangi özelliğinin ölçütüdür?",
+     "secenekler": {
+      "A": "%50; indüksiyon hızı",
+      "B": "%50; potens",
+      "C": "%95; potens",
+      "D": "%100; indüksiyon hızı",
+      "E": "%95; kan-gaz çözünürlüğü"
+     },
+     "dogru": "B",
+     "aciklama": "MAC, hastaların %50'sinde cilt insizyonuna motor yanıtı önleyen alveoler konsantrasyondur ve inhaler ajanın potensini gösterir. Potens Meyer-Overton kuralına göre lipofilite ile doğru orantılı olduğundan doğru yanıt budur (s. 24).",
+     "sik_aciklamalari": {
+      "A": "%50 oranı doğrudur; ancak indüksiyon ve uyanma hızını MAC değil kan-gaz katsayısı (λ) belirler. Bu nedenle ölçüt olarak indüksiyon hızı yazan seçenek yanlıştır (s. 24).",
+      "B": "MAC, hastaların %50'sinde cilt insizyonuna motor yanıtı önleyen alveoler konsantrasyondur ve inhaler ajanın potensini gösterir. Potens Meyer-Overton kuralına göre lipofilite ile doğru orantılı olduğundan doğru yanıt budur (s. 24).",
+      "C": "MAC bir potens ölçütüdür ve bu yönüyle seçenek doğru bir bileşen içerir; ancak tanımındaki oran %95 değil %50'dir. Bu nedenle seçenek yanlıştır (s. 24).",
+      "D": "MAC tanımındaki oran %100 değil %50'dir ve indüksiyon hızının ölçütü kan-gaz katsayısıdır. İki bileşeni de yanlış olduğundan seçenek yanlıştır (s. 24).",
+      "E": "MAC tanımındaki oran %95 değildir; ayrıca kan-gaz çözünürlüğünü MAC değil λ katsayısı gösterir. Bu nedenle seçenek yanlıştır (s. 24)."
+     },
+     "bilgi": [
+      98,
+      101
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q151"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Hastaların %50'sinde cilt insizyonuna motor yanıtı önleyen alveoler"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q151"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q33",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "İzofluranla ilişkili koroner çalma fenomeninin mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Koroner vazodilatasyonla sağlıklı damarların kritik stenozlu bölgeden kanı çalması",
+      "B": "Katekolaminlere duyarlılaşma sonucu koroner vazospazm gelişmesi",
+      "C": "Negatif inotropi nedeniyle koroner perfüzyonun azalması",
+      "D": "Hepatik metabolizma ürünlerinin koroner damarı tıkaması",
+      "E": "Kan-gaz katsayısının yüksek olması nedeniyle alveoler birikim"
+     },
+     "dogru": "A",
+     "aciklama": "İzofluran koroner vazodilatasyon yapar; kritik stenozu olan hastalarda genişleyen sağlıklı damarlar kanı stenozlu bölgeden çalabilir ve iskemi tetiklenebilir. Soru bu mekanizmayı sorduğu için doğru yanıt budur (s. 26).",
+     "sik_aciklamalari": {
+      "A": "İzofluran koroner vazodilatasyon yapar; kritik stenozu olan hastalarda genişleyen sağlıklı damarlar kanı stenozlu bölgeden çalabilir ve iskemi tetiklenebilir. Soru bu mekanizmayı sorduğu için doğru yanıt budur (s. 26).",
+      "B": "Katekolaminlere duyarlılaşma ve aritmi eğilimi miyokardı etkileyen halotanın özelliğidir. İzofluranda çalma ise damarların genişlemesiyle kanın yeniden dağılmasından kaynaklandığından seçenek yanlıştır (s. 25).",
+      "C": "Negatif inotropik etki ve hipotansiyon halotanda sık görülen bir kardiyovasküler baskılanmadır. Koroner çalma ise damar genişlemesiyle kan dağılımının bozulmasıdır ve seçenek yanlıştır (s. 25).",
+      "D": "İzofluranın hepatik metabolizması yalnızca %0.2 düzeyindedir ve florür yükü ihmal edilebilir. Koroner çalma bir metabolit tıkacına bağlı olmadığından seçenek yanlıştır (s. 26).",
+      "E": "Kan-gaz katsayısı alveoler dengenin ne kadar hızlı kurulduğunu belirler. Koroner çalma ise koroner damarlardaki kan dağılımıyla ilgili olduğundan seçenek yanlıştır (s. 24)."
+     },
+     "bilgi": [
+      102,
+      114,
+      115
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "İzofluran koroner vazodilatasyona yol açar; kritik stenozu olan"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-43",
+      "ozen:s26"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q40",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Halotanın tekrarlanan maruziyetten sonra karaciğer hasarı yapmasına yol açan mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Miyokardın katekolaminlere duyarlılaşması",
+      "B": "Reaktif trifloroasetil ürünlerinin oluşması",
+      "C": "Negatif inotropiye bağlı karaciğer hipoperfüzyonu",
+      "D": "Işığa duyarlılığa bağlı ürünlerin birikmesi",
+      "E": "Timol stabilizatörünün toksik etkisi"
+     },
+     "dogru": "B",
+     "aciklama": "Halotanın yaklaşık %20'si karaciğerde metabolize olur ve tekrarlanan maruziyette reaktif trifloroasetil halojen ürünleri karaciğer hasarı yapar. Ağır formda mortalite yüksektir; soru bu mekanizmayı sorduğu için doğru yanıt budur (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Miyokardın katekolaminlere duyarlılaşması aritmojenik etkiyi artırır ve epinefrinle dikkatli olmayı gerektirir. Karaciğer hasarı ise reaktif metabolitlerle oluştuğundan seçenek yanlıştır (s. 25).",
+      "B": "Halotanın yaklaşık %20'si karaciğerde metabolize olur ve tekrarlanan maruziyette reaktif trifloroasetil halojen ürünleri karaciğer hasarı yapar. Ağır formda mortalite yüksektir; soru bu mekanizmayı sorduğu için doğru yanıt budur (s. 25).",
+      "C": "Negatif inotropik etki hipotansiyona ve kardiyovasküler baskılanmaya yol açar. Halotan hepatiti ise reaktif metabolitlerin oluşumuyla ilişkili olduğundan seçenek yanlıştır (s. 25).",
+      "D": "Halotan ışığa duyarlıdır ve bu yüzden timol ile stabilize edilerek özel koşullarda saklanır. Bu özellik karaciğer hasarının mekanizması olmadığından seçenek yanlıştır (s. 25).",
+      "E": "Timol, halotanın saklanırken stabilize edilmesini sağlayan koruyucu maddedir. Karaciğer hasarı stabilizatörün değil halotanın reaktif metabolitlerinin sonucu olduğundan seçenek yanlıştır (s. 25)."
+     },
+     "bilgi": [
+      108,
+      109
+     ],
+     "benzer_cikmis": [
+      "past-1790877044523-915244"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Tekrarlanan maruziyette reaktif trifloroasetil halojen ürünleri"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044523-915244"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q32",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İnhalasyon anestezisinde alveoler konsantrasyonun (FA) solunan havadaki konsantrasyona (FI) oranının zamanla en yavaş yükseldiği ajan aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Desfluran",
+      "B": "Sevofluran",
+      "C": "Halotan",
+      "D": "İzofluran",
+      "E": "Azot protoksit"
+     },
+     "dogru": "C",
+     "aciklama": "Kan-gaz katsayısı yüksek olan ajan kanda fazla çözünür; alveoler konsantrasyon yavaş yükselir ve denge geç kurulur. Halotanın katsayısı 2.4 ile kan-gaz katsayısı verilen ajanlar arasında en yüksek olduğundan FA/FI en yavaş artar (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Desfluranın kan-gaz katsayısı 0.42 ile en düşüktür; kanda az çözündüğü için alveoler konsantrasyon çok hızlı yükselir. Bu yüzden FA/FI en yavaş artan ajan değildir (s. 24).",
+      "B": "Sevofluranın kan-gaz katsayısı 0.65'tir ve indüksiyon ile uyanma hızlıdır. Alveoler konsantrasyonu halotandan hızlı yükseldiğinden seçenek yanlıştır (s. 24).",
+      "C": "Kan-gaz katsayısı yüksek olan ajan kanda fazla çözünür; alveoler konsantrasyon yavaş yükselir ve denge geç kurulur. Halotanın katsayısı 2.4 ile kan-gaz katsayısı verilen ajanlar arasında en yüksek olduğundan FA/FI en yavaş artar (s. 25).",
+      "D": "İzofluranın kan-gaz katsayısı 1.4'tür ve halotanın 2.4 değerinden düşüktür. Denge halotandan daha hızlı kurulduğundan seçenek yanlıştır (s. 24).",
+      "E": "Azot protoksit, hızlı etki başlangıcı olan renksiz ve tatlı kokulu bir gazdır. Alveoler konsantrasyonu halotana göre hızlı yükseldiğinden seçenek yanlıştır (s. 29)."
+     },
+     "bilgi": [
+      102,
+      103,
+      104
+     ],
+     "benzer_cikmis": [
+      "bbb23be71d55"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Kan-gaz katsayısı: 2.4 (yavaş indüksiyon)"
+     },
+     "dayanak": [
+      "cikmis:bbb23be71d55"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q35",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Volatil anesteziklerin kafa içi basıncını artırmasının temel mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Beyin omurilik sıvısı emiliminin tamamen durması",
+      "B": "Serebral metabolizmanın ve oksijen tüketiminin artması",
+      "C": "Serebral venlerin mekanik olarak sıkışması",
+      "D": "Serebral vazodilatasyonla serebral kan akımının artması",
+      "E": "Kan-beyin bariyerinin yıkılması"
+     },
+     "dogru": "D",
+     "aciklama": "Volatil ajanlar serebral vazodilatasyon yapar; serebral kan akımı arttığı için kafa içi basınç yükselir. Nörocerrahi hastalarında bu nedenle dikkat gerekir ve hiperventilasyonla vazokonstriksiyon sağlanarak etki kompanse edilebilir (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Beyin omurilik sıvısı emiliminin durması hidrosefali gibi başka durumlarla ilişkilidir. Volatil ajanlarda artış serebral kan akımının yükselmesinden kaynaklandığından seçenek yanlıştır (s. 30).",
+      "B": "Volatil ajanların kafa içi basıncı artırması serebral vazodilatasyona dayanır. Tiyopental gibi bazı ajanlar ise serebral metabolizmayı ve oksijen tüketimini düşürdüğünden bu seçenek yanlıştır (s. 18).",
+      "C": "Serebral venlerin mekanik sıkışması dışarıdan bası ile oluşan bir durumdur. Volatil ajanlarda basınç artışı damar genişlemesinin kan akımını yükseltmesinden geldiğinden seçenek yanlıştır (s. 30).",
+      "D": "Volatil ajanlar serebral vazodilatasyon yapar; serebral kan akımı arttığı için kafa içi basınç yükselir. Nörocerrahi hastalarında bu nedenle dikkat gerekir ve hiperventilasyonla vazokonstriksiyon sağlanarak etki kompanse edilebilir (s. 30).",
+      "E": "Volatil ajanların kafa içi basınç etkisi kan-beyin bariyerinin bütünlüğüyle değil, damar genişlemesiyle ilgilidir. Serebral kan akımı arttığı için basınç yükseldiğinden seçenek yanlıştır (s. 30)."
+     },
+     "bilgi": [
+      70,
+      146,
+      147
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Volatil ajanlar serebral vazodilatasyona"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-52",
+      "ozen:s30"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q37",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ryanodin reseptör mutasyonu bilinen 19 yaşında hastada volatil bir anestezik ve süksinilkolin uygulanmasından kısa süre sonra vücut sıcaklığı hızla yükselmiş, malign hipertermi düşünülmüştür. Bu tabloda tedavide kullanılacak ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Neostigmin",
+      "B": "Flumazenil",
+      "C": "Nalokson",
+      "D": "Sugammadex",
+      "E": "Dantrolen"
+     },
+     "dogru": "E",
+     "aciklama": "Dantrolen, kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyen ve malign hipertermide 2.5 mg/kg IV yükleme dozuyla verilen ilaçtır. Halojenli volatil ajan ve süksinilkolin genetik yatkınlığı olanlarda bu tabloyu tetiklediği için doğru yanıt budur (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Neostigmin asetilkolinesterazı inhibe ederek non-depolarizan bloğu geri çevirir ve nöromüsküler iletimi geri kazandırır. Malign hipertermi tedavisinde kullanılmadığından seçenek yanlıştır (s. 47).",
+      "B": "Flumazenil benzodiazepinlerin spesifik antagonistidir ve aşırı doz etkisini geri çevirir; kısa etkilidir. Malign hipertermi tablosunu tedavi etmediğinden seçenek yanlıştır (s. 33).",
+      "C": "Nalokson opioid reseptörlerinde kompetitif antagonizma yapan ve opioid kaynaklı solunum depresyonunda kullanılan bir ilaçtır. Malign hipertermi tedavisinde yeri olmadığından seçenek yanlıştır (s. 49).",
+      "D": "Sugammadex rokuronyum ve vekuronyum gibi aminosteroid blokörleri kapsülleyerek inaktif kompleks oluşturur ve bloğu tersler. Malign hipertermi tedavisinde kullanılmadığından seçenek yanlıştır (s. 48).",
+      "E": "Dantrolen, kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyen ve malign hipertermide 2.5 mg/kg IV yükleme dozuyla verilen ilaçtır. Halojenli volatil ajan ve süksinilkolin genetik yatkınlığı olanlarda bu tabloyu tetiklediği için doğru yanıt budur (s. 30)."
+     },
+     "bilgi": [
+      144,
+      145,
+      250
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q17"
+     ],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Dantrolene ile tedavi; 2.5"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q17",
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-22",
+      "cikmis:past-1790877044812-375943",
+      "ozen:s30"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q38",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kan-gaz katsayısı 0.65 olan, hava yolunu irrite etmemesi nedeniyle çocuklarda maske indüksiyonunda altın standart sayılan inhaler ajan aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sevofluran",
+      "B": "Desfluran",
+      "C": "İzofluran",
+      "D": "Halotan",
+      "E": "Azot protoksit"
+     },
+     "dogru": "A",
+     "aciklama": "Sevofluranın kan-gaz katsayısı 0.65'tir; hızlı indüksiyon ve uyanma sağlar, hoş kokulu olup hava yolunu irrite etmediği için çocuklarda maske indüksiyonunun altın standardıdır. Bu özellikleri taşıyan ajan olduğundan doğru yanıt budur (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Sevofluranın kan-gaz katsayısı 0.65'tir; hızlı indüksiyon ve uyanma sağlar, hoş kokulu olup hava yolunu irrite etmediği için çocuklarda maske indüksiyonunun altın standardıdır. Bu özellikleri taşıyan ajan olduğundan doğru yanıt budur (s. 27).",
+      "B": "Desfluranın kan-gaz katsayısı 0.42'dir ve en hızlı derlenen ajandır; ancak keskin, boğucu kokusu nedeniyle maske indüksiyonuna uygun değildir. Bu nedenle seçenek yanlıştır (s. 28).",
+      "C": "İzofluranın kan-gaz katsayısı 1.4'tür ve keskin, boğucu kokusu maske indüksiyonunda bronkospazm ve öksürük riskini artırır. Bu yüzden indüksiyonda intravenöz ajan tercih edilir ve seçenek yanlıştır (s. 26).",
+      "D": "Halotanın kan-gaz katsayısı 2.4'tür ve indüksiyonu yavaştır. Katsayısı 0.65 olan ajan tanımına uymadığından seçenek yanlıştır (s. 25).",
+      "E": "Azot protoksit güçlü analjezik ve zayıf hipnotik bir gazdır; MAC değeri 105 olduğundan tek başına anestezi sağlayamaz. Çocuklarda maske indüksiyonunun altın standardı olarak tanımlanmadığından seçenek yanlıştır (s. 29)."
+     },
+     "bilgi": [
+      104,
+      116,
+      119,
+      120,
+      132
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Kan-gaz katsayısı 0.65 ile son derece hızlı indüksiyon ve uyanma sağlar."
+     },
+     "dayanak": [
+      "ozen:s27"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q34",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Kritik koroner arter stenozu olan 64 yaşında hipertansif hasta uzun süreli bir cerrahi için izofluranla idame anestezisi alacaktır. Bu hastada en çok dikkat edilmesi gereken olası sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Katekolaminlere duyarlılaşmaya bağlı aritmi",
+      "B": "Trifloroasetil ürünlerine bağlı hepatit",
+      "C": "Negatif inotropiye bağlı ağır miyokard depresyonu",
+      "D": "Koroner vazodilatasyona bağlı miyokard iskemisi",
+      "E": "Işığa duyarlılığa bağlı ilaç inaktivasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "İzofluran koroner vazodilatasyon yapar; kritik stenozu olan hastada sağlıklı damarlar kanı çalar ve iskemi tetiklenebilir. Hipertansif hastalarda da dikkat gerektiren bu risk vakadaki en önemli sonuç olduğundan doğru yanıt budur (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Katekolaminlere duyarlılaşma ve aritmi eğilimi halotanın özelliğidir ve epinefrinle dikkatli olmayı gerektirir. İzofluranda öne çıkan risk koroner çalma olduğundan seçenek yanlıştır (s. 25).",
+      "B": "Trifloroasetil ürünlerine bağlı hepatit, halotanın %20 hepatik metabolizmasıyla ilişkilidir. İzofluranın hepatik metabolizması minimal olduğundan (%0.2) seçenek yanlıştır (s. 26).",
+      "C": "Ağır miyokard depresyonu, negatif inotropik etkisiyle hipotansiyon yapan halotanın özelliğidir. Vakadaki izofluran için öne çıkan risk koroner çalma olduğundan seçenek yanlıştır (s. 25).",
+      "D": "İzofluran koroner vazodilatasyon yapar; kritik stenozu olan hastada sağlıklı damarlar kanı çalar ve iskemi tetiklenebilir. Hipertansif hastalarda da dikkat gerektiren bu risk vakadaki en önemli sonuç olduğundan doğru yanıt budur (s. 26).",
+      "E": "Işığa duyarlılık halotanın saklanma özelliğidir ve ilaç timol ile stabilize edilir. İzofluranlı idamede hastayı tehdit eden risk koroner çalma olduğundan seçenek yanlıştır (s. 25)."
+     },
+     "bilgi": [
+      114,
+      115
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "İzofluran koroner vazodilatasyona yol açar; kritik stenozu olan"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-43",
+      "cikmis:d3k2-2019-2020-q11",
+      "ozen:s26"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q36",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Kafa içi basıncıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Volatil anestezikler serebral vazodilatasyon yaparak kafa içi basıncını artırabilir.\nII. Ketamin kafa içi basıncını artırdığı için kafa travmasında kontrendikedir.\nIII. Tiyopental kafa içi basıncını artırır.\nIV. Nörocerrahi hastalarında volatil ajanların etkisi hiperventilasyonla sağlanan serebral vazokonstriksiyonla kompanse edilebilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, II ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Volatil ajanlar serebral vazodilatasyonla kafa içi basıncını artırır, ketamin kafa travmasında kontrendikedir ve hiperventilasyon bu artışı kompanse edebilir. III yanlıştır; çünkü tiyopental kafa içi basıncını azaltır (s. 30).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak hiperventilasyonla sağlanan serebral vazokonstriksiyonun volatil ajanların etkisini kompanse etmesi (IV) de doğrudur. Bu seçim IV'ü dışarıda bıraktığı için eksiktir (s. 30).",
+      "B": "II ve IV doğrudur; ancak III yanlıştır, çünkü tiyopental kafa içi basıncını azaltır. Ayrıca doğru olan I seçimde yer almaz (s. 18).",
+      "C": "Volatil ajanlar serebral vazodilatasyonla kafa içi basıncını artırır, ketamin kafa travmasında kontrendikedir ve hiperventilasyon bu artışı kompanse edebilir. III yanlıştır; çünkü tiyopental kafa içi basıncını azaltır (s. 30).",
+      "D": "I ve IV doğrudur fakat III yanlıştır; tiyopental kafa içi basıncını azaltır. Ketamin ICP artışı nedeniyle kontrendike olduğundan II de doğrudur ve seçimde bulunmaz (s. 18).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde III yanlıştır; çünkü tiyopental kafa içi basıncını artırmaz, serebral metabolizmayı baskılayarak azaltır (s. 18)."
+     },
+     "bilgi": [
+      70,
+      143,
+      146
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "yol açar; ICP artar. Nörocerrahi hastalarda"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-52",
+      "hoca:hv-k2-07-60",
+      "ozen:s30"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q39",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Azot protoksitle ilgili aşağıdaki ifadeler veriliyor:\nI. Yüksek konsantrasyonlarda eş zamanlı verilen diğer anesteziklerin alımını hızlandırır.\nII. Kesildiğinde difüzyon hipoksisi yapabilir; bu nedenle 5–10 dakika %100 oksijenle ventile edilmelidir.\nIII. Pnömotoraks ve bağırsak ileusu gibi hava içeren kapalı boşlukların genişlemesine yol açabilir.\nIV. MAC değeri 105 olduğu için tek başına yeterli anestezi sağlar.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "Yalnız IV",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Azot protoksit yüksek konsantrasyonda ikinci gaz etkisi yapar, kesildiğinde difüzyon hipoksisine yol açar ve kapalı boşlukları genişletebilir. IV yanlıştır; çünkü MAC değeri 105 olan bu gaz güçlü analjezik ama zayıf hipnotik olup tek başına anestezi için yetersizdir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Azot protoksit yüksek konsantrasyonda ikinci gaz etkisi yapar, kesildiğinde difüzyon hipoksisine yol açar ve kapalı boşlukları genişletebilir. IV yanlıştır; çünkü MAC değeri 105 olan bu gaz güçlü analjezik ama zayıf hipnotik olup tek başına anestezi için yetersizdir (s. 29).",
+      "B": "I ve II doğrudur; ancak kapalı boşluklarda genişleme riski (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 29).",
+      "C": "IV, azot protoksitin MAC değerinin 105 olması nedeniyle tek başına anestezi için yetersiz olduğu gerçeğiyle çelişir. Ayrıca doğru olan I, II ve III seçimde yer almaz (s. 29).",
+      "D": "II ve III doğrudur, ancak IV yanlıştır; azot protoksit tek başına yeterli anestezi sağlayamaz. Ayrıca doğru olan I seçimde yer almaz (s. 29).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; MAC değeri 105 olan azot protoksit tek başına anestezi için yetersizdir (s. 29)."
+     },
+     "bilgi": [
+      138,
+      139
+     ],
+     "benzer_cikmis": [
+      "d3k2-2019-2020-q10",
+      "d3k2-2018-2019-k4-q45",
+      "past-q-21_22-9"
+     ],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "MAC: 105 → tek başına anestezi yetersiz"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2019-2020-q10",
+      "cikmis:d3k2-2018-2019-k4-q45",
+      "cikmis:past-q-21_22-9"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2020-2021-q151",
+     "soru": "Minimum alveolar konsantrasyon (MAK) için hangisi doğrudur?",
+     "secenekler": {
+      "A": "İnsizyona karşı yanıtı ortadan kaldıran gaz miktarı (L)",
+      "B": "İnsizyona karşı yanıtı ortadan kaldıran gaz-cihaz verimi",
+      "C": "İnsizyona karşı yanıtı ortadan kaldıran en düşük alveolar konsantrasyon",
+      "D": "İnsizyona karşı yanıtı ortadan kaldıran en yüksek alveolar konsantrasyon",
+      "E": "İnsizyona karşı yanıtı %50 denekte ortadan kaldıran gaz karışımlarının tamamı"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "past-1790877044523-915244",
+     "soru": "Genel anestezik ajanlar için aşağıdaki ifadeler veriliyor:\nI. Genel anestezikler glomerüler filtrasyon hızını ve idrar akışını artırma eğilimindedirler; böbrek kan akımında da artış yaparlar.\nII. Halotan dışında karaciğer üzerine ciddi bir etkileri yoktur; halotan 12 yaşından küçüklerde hepatotoksik değildir ve nedeni bilinmemektedir.\nIII. Halojenli anesteziklerden propofol-ketamin ikilisi uterus kaslarını güçlü bir şekilde kasar.\nIV. Halojenli anestezikler doğum esnasında veya plasenta retansiyonunda manuel müdahale için gerekli gevşemeyi sağlarlar; ancak bu gevşemenin uterusta kanamayı da beraberinde getireceği unutulmamalıdır.\nBu ifadelerden hangisi ya da hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "bbb23be71d55",
+     "soru": "FA/Fi konsantrasyonu (Yekseninde) zamana (X- Ekseni) karşı en yüksek olan hangisi olur?",
+     "secenekler": {
+      "A": "Halotan",
+      "B": "Nitröz oksit",
+      "C": "İzofluran",
+      "D": "Sevofluran",
+      "E": "Desfluran"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q17",
+     "soru": "Kurgu Soru: Süksinilkolin ile uçucu anesteziklerin birlikte kullanımında gelişebilen malign hipertermi tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Baklofen",
+      "B": "Tizanidin",
+      "C": "Neostigmin",
+      "D": "Dantrolen",
+      "E": "Sugammadeks"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2019-2020-q10",
+     "soru": "Aşağıdaki inhaler anesteziklerden hangisi anestezi vermeden analjezi verir?",
+     "secenekler": {
+      "A": "Azot protoksit",
+      "B": "Desfluran",
+      "C": "Halotan",
+      "D": "İzofluran",
+      "E": "Ksenon"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q45",
+     "soru": "I. Desfluran\nII. Enfluran\nIII. Metoksifluran\nIV. Nitröz oksit (azot protoksit)\n\nGenel anestezide kullanılan yukarıdaki gazlardan hangisi/hangileri anestezi vermez?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "past-q-21_22-9",
+     "soru": "İnhaler anesteziklerden nitröz oksit (N2O) için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Güçlü analjezik etki verir, halotan kullanım hacmini değiştirmez.",
+      "B": "Anestezi etkisi hemen başlar.",
+      "C": "Oksijenle %85-95 oranında kombine verilir.",
+      "D": "Sevofluran ile kombine edilecekse preanestezik olarak propofol verilmelidir.",
+      "E": "Yan etkisi difüzyon hipoksisidir, B12 metabolizmasını bozar."
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Opioidlerin (morfin, fentanil, sufentanil, remifentanil) ve non-opioid analjeziklerin etkilerini, yan etkilerini ve multimodal analjezi ilkesini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q41",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Fentanilin yüksek lipofilitesinin klinik sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etkisi yavaş başlar ve uzun sürer",
+      "B": "Etkisi infüzyon kesilince 3–5 dakikada sona erer",
+      "C": "Histamin salınımına bağlı hipotansiyon gelişir",
+      "D": "Etkisi 1–2 dakikada başlar ve 30–60 dakika sürer",
+      "E": "Böbrek yetmezliğinde aktif metabolit birikir"
+     },
+     "dogru": "D",
+     "aciklama": "Fentanil morfinden yaklaşık 100 kat güçlüdür; yüksek lipofilitesi sayesinde kan-beyin bariyerini hızla geçer, etkisi 1–2 dakikada başlar ve 30–60 dakika sürer. Soru lipofilitenin sonucunu sorduğu için doğru yanıt budur (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Yavaş başlangıç ve uzun etki, referans opioid olan morfinin özelliğidir. Fentanilin yüksek lipofilitesi ise hızlı başlangıç sağladığından seçenek yanlıştır (s. 21).",
+      "B": "İnfüzyon kesilince etkinin 3–5 dakikada sona ermesi remifentanilin özelliğidir. Fentanilde ise etki 30–60 dakika sürdüğünden seçenek yanlıştır (s. 34).",
+      "C": "Histamin salınımına bağlı hipotansiyon morfinin yan etkisidir. Fentanilin yüksek lipofilitesiyle açıklanan klinik sonuç ise hızlı başlangıç olduğundan seçenek yanlıştır (s. 21).",
+      "D": "Fentanil morfinden yaklaşık 100 kat güçlüdür; yüksek lipofilitesi sayesinde kan-beyin bariyerini hızla geçer, etkisi 1–2 dakikada başlar ve 30–60 dakika sürer. Soru lipofilitenin sonucunu sorduğu için doğru yanıt budur (s. 34).",
+      "E": "Aktif metabolit birikimi morfinde böbrek yetersizliği olan hastalarda ortaya çıkar. Lipofilite bu sonucu değil hızlı başlangıcı açıkladığından seçenek yanlıştır (s. 21)."
+     },
+     "bilgi": [
+      86,
+      169,
+      170
+     ],
+     "benzer_cikmis": [
+      "d3-k2-far-007"
+     ],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Yüksek lipofilite → hızlı başlangıç (1–2 dk), 30–"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-far-007"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q45",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Ester hidrolizi ile saniyeler içinde yıkılan, infüzyon kesilince analjezisi anında kaybolan ve bu nedenle total intravenöz anestezide infüzyonla titre edilen opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Morfin",
+      "B": "Fentanil",
+      "C": "Remifentanil",
+      "D": "Sufentanil",
+      "E": "Nalokson"
+     },
+     "dogru": "C",
+     "aciklama": "Remifentanil kısa etkilidir; kandan saniyeler içinde yıkıldığı için infüzyon kesilince analjezi hemen kaybolur ve titrasyon kolaydır. TIVA'da propofolle birlikte infüzyonla verilmesinin nedeni budur (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Morfin referans opioiddir; başlangıcı yavaş, etkisi uzundur. İnfüzyon kesilince etkinin anında kaybolması morfine ait bir özellik olmadığından seçenek yanlıştır (s. 21).",
+      "B": "Fentanil morfinden yaklaşık 100 kat güçlüdür ve 30–60 dakika etki eder. Etkisinin infüzyon kesilince saniyeler içinde sonlanması fentanile ait olmadığından seçenek yanlıştır (s. 34).",
+      "C": "Remifentanil kısa etkilidir; kandan saniyeler içinde yıkıldığı için infüzyon kesilince analjezi hemen kaybolur ve titrasyon kolaydır. TIVA'da propofolle birlikte infüzyonla verilmesinin nedeni budur (s. 21).",
+      "D": "Sufentanil fentanilden 5–10 kat güçlüdür ve kardiyak cerrahide hemodinamik stabilite sağlar. Etkisi ester hidrolizi ile anında sonlanan bir ilaç olarak tanımlanmadığından seçenek yanlıştır (s. 34).",
+      "E": "Nalokson bir opioid agonisti değil, tüm opioid reseptörlerinde kompetitif antagonizma yapan bir ilaçtır. Analjezi sağlamadığı için seçenek yanlıştır (s. 49)."
+     },
+     "bilgi": [
+      84,
+      88,
+      175
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Ester hidrolizi ile kandan saniyeler içinde yıkılır;"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q47",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Postoperatif analjezide klasik NSAİİ yerine tercih edilebilecek COX-2 seçici ajanlar aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Parasetamol ve ketamin",
+      "B": "Selekoksib ve etorikoksib",
+      "C": "Morfin ve fentanil",
+      "D": "Gentamisin ve tobramisin",
+      "E": "Propofol ve etomidat"
+     },
+     "dogru": "B",
+     "aciklama": "Selekoksib ve etorikoksib COX-2 seçici ajanlardır; prostaglandin sentezini baskılayarak enflamasyonu ve periferik sensitizasyonu azaltır ve klasik NSAİİ yerine kullanılabilir. Soru bu ajanları sorduğu için doğru yanıt budur (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Parasetamol COX-3 inhibisyonu ve santral mekanizmalarla, düşük doz ketamin ise NMDA antagonizmasıyla etki eder. İkisi de COX-2 seçici ajan olmadığından seçenek yanlıştır (s. 44).",
+      "B": "Selekoksib ve etorikoksib COX-2 seçici ajanlardır; prostaglandin sentezini baskılayarak enflamasyonu ve periferik sensitizasyonu azaltır ve klasik NSAİİ yerine kullanılabilir. Soru bu ajanları sorduğu için doğru yanıt budur (s. 44).",
+      "C": "Morfin ve fentanil μ opioid reseptörlerine etki eden opioidlerdir ve prostaglandin sentezini engellemez. COX-2 seçici ajan olmadıklarından seçenek yanlıştır (s. 21).",
+      "D": "Gentamisin ve tobramisin aminoglikozit antibiyotikleridir ve presinaptik asetilkolin salınımını azaltarak non-depolarizan nöromüsküler bloğu güçlendirir. Analjezik ajan olmadıklarından seçenek yanlıştır (s. 42).",
+      "E": "Propofol ve etomidat GABA-A aracılı etki gösteren intravenöz hipnotiklerdir ve analjezik değildir. COX-2 seçici ajan tanımına uymadıkları için seçenek yanlıştır (s. 19)."
+     },
+     "bilgi": [
+      232,
+      236
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Prostaglandin sentezini inhibe eder; enflamasyon ve periferik"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-70"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q43",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Opioidlerin μ reseptörü üzerinden ağrı iletimini baskılamasının hücresel sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klorür kanalının açık kalma süresinin uzaması",
+      "B": "Nikotinik reseptör aktivasyonuyla depolarizasyon",
+      "C": "cAMP azalması ve K⁺ kanalı açılmasıyla hiperpolarizasyon",
+      "D": "NMDA reseptörünün bloke edilmesi",
+      "E": "Asetilkolinesterazın inhibisyonu"
+     },
+     "dogru": "C",
+     "aciklama": "μ opioid reseptörü G protein bağımlıdır; aktivasyonu cAMP'yi azaltır ve K⁺ kanallarını açarak hücreyi hiperpolarize eder. Spinal kord dorsal boynuzunda ve beyin sapında ağrı iletimi böylece baskılandığı için doğru yanıt budur (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Klorür kanalının açık kalma süresinin uzaması barbitüratların GABA-A reseptöründeki etkisidir. Opioidlerin μ reseptör mekanizması G protein aracılı cAMP azalması ve K⁺ kanalı açılması olduğundan seçenek yanlıştır (s. 17).",
+      "B": "Nikotinik reseptör aktivasyonu nöromüsküler kavşakta asetilkolinin etkisidir ve kas kasılmasını başlatır. Opioidlerin ağrı baskılayıcı etkisiyle ilgisi bulunmadığından seçenek yanlıştır (s. 38).",
+      "C": "μ opioid reseptörü G protein bağımlıdır; aktivasyonu cAMP'yi azaltır ve K⁺ kanallarını açarak hücreyi hiperpolarize eder. Spinal kord dorsal boynuzunda ve beyin sapında ağrı iletimi böylece baskılandığı için doğru yanıt budur (s. 43).",
+      "D": "NMDA reseptörünü bloke etmek ketaminin mekanizmasıdır ve disosiyatif durum oluşturur. Opioidlerin ağrı iletimini baskılaması μ reseptörü üzerinden olduğundan seçenek yanlıştır (s. 20).",
+      "E": "Asetilkolinesterazın inhibisyonu neostigminin mekanizmasıdır ve asetilkolinin yıkımını engelleyerek biriktirir. Opioidlerin ağrı baskılayıcı hücresel etkisi bu enzimle ilgili olmadığından seçenek yanlıştır (s. 47)."
+     },
+     "bilgi": [
+      61,
+      81,
+      190,
+      224,
+      225
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "G protein bağımlı; cAMP azalması ve K⁺ kanalı açılmasıyla"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q44",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Opioidlere bağlı solunum depresyonuyla ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Uyku apnesi olan hastalarda risk artar",
+      "B": "Benzodiazepinlerle kombinasyon riski artırır",
+      "C": "Obezite ve kürarizan rezidü riski artıran faktörlerdendir",
+      "D": "μ reseptör aktivasyonu dakika ventilasyonunu artırır ve PaCO₂'yi düşürür",
+      "E": "Yaşlılık ve böbrek yetmezliği riski artırır"
+     },
+     "dogru": "D",
+     "aciklama": "Beyin sapı solunum merkezindeki μ reseptör aktivasyonu dakika ventilasyonunu azaltır ve PaCO₂'yi artırır; ifadedeki yön tersine çevrilmiştir. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Obstrüktif uyku apnesi üst hava yolunda tekrarlayan tıkanıklıkla giden bir durumdur ve opioidlerin solunum merkezi baskısını daha tehlikeli hale getirir. İfade doğru olduğundan aranan yanlış ifade değildir (s. 43).",
+      "B": "Benzodiazepinlerle birlikte kullanım solunum merkezi baskısını katlar; iki ilaç grubu sinerjik etki gösterir. İfade doğru olduğundan aranan yanlış ifade değildir (s. 43).",
+      "C": "Obezite ve kürarizan rezidüsü opioidlere bağlı solunum depresyonu riskini artıran faktörlerdir; rezidüel kas gevşemesi solunum yetersizliğini ağırlaştırır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 43).",
+      "D": "Beyin sapı solunum merkezindeki μ reseptör aktivasyonu dakika ventilasyonunu azaltır ve PaCO₂'yi artırır; ifadedeki yön tersine çevrilmiştir. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 43).",
+      "E": "Yaşlılık ve böbrek yetmezliği opioidlere bağlı solunum depresyonu riskini artırır; yaşlıda serebral hassasiyet yükselir. İfade doğru olduğundan aranan yanlış ifade değildir (s. 43)."
+     },
+     "bilgi": [
+      229,
+      230
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Beyin sapı solunum merkezindeki μ reseptör aktivasyonu"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q46",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Fentanilden 5–10 kat güçlü olan ve hemodinamiyi son derece stabil bırakması nedeniyle kardiyak cerrahide ideal sayılan opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Remifentanil",
+      "B": "Morfin",
+      "C": "Sufentanil",
+      "D": "Fentanil",
+      "E": "Nalokson"
+     },
+     "dogru": "C",
+     "aciklama": "Sufentanil fentanilden 5–10 kat güçlüdür, protein bağlanması yüksektir ve karaciğerde metabolize olur; hemodinamisi son derece stabil kaldığı için kardiyak cerrahide ideal sayılır. Soru bu özellikleri sorduğu için doğru yanıt budur (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Remifentanil kısa etkili bir opioiddir ve infüzyon kesilince 3–5 dakikada etkisi sona erer. Fentanilden 5–10 kat güçlü olma özelliği ona ait olmadığından seçenek yanlıştır (s. 34).",
+      "B": "Morfin referans opioiddir; yavaş başlar, uzun etki gösterir ve histamin salınımıyla hipotansiyon yapabilir. Hemodinamisi stabil bir ilaç olarak tanımlanmadığından seçenek yanlıştır (s. 21).",
+      "C": "Sufentanil fentanilden 5–10 kat güçlüdür, protein bağlanması yüksektir ve karaciğerde metabolize olur; hemodinamisi son derece stabil kaldığı için kardiyak cerrahide ideal sayılır. Soru bu özellikleri sorduğu için doğru yanıt budur (s. 34).",
+      "D": "Fentanil morfinden 100 kat güçlüdür ve kardiyak cerrahide standart kullanılır. Güç karşılaştırmasında kendisi referans alındığı için sufentanilin 5–10 kat gücüyle örtüşmez ve seçenek yanlıştır (s. 34).",
+      "E": "Nalokson bir opioid agonisti değil, tüm opioid reseptörlerinde kompetitif antagonizma yapan antagonisttir ve analjezi sağlamaz. Kardiyak cerrahide analjezik olarak kullanılmadığından seçenek yanlıştır (s. 49)."
+     },
+     "bilgi": [
+      87,
+      172,
+      173
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Kardiyak cerrahi için ideal;"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q49",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Mide ülseri geçmişi olan ve böbrek fonksiyonları bozulmuş hastada postoperatif multimodal analjezide opioid ihtiyacını azaltmak için, trombosit ve böbrek üzerine etkisi bulunmayan hangi ajan tercih edilir?",
+     "secenekler": {
+      "A": "Selekoksib",
+      "B": "Nimesulid",
+      "C": "İntravenöz parasetamol",
+      "D": "Meloksikam",
+      "E": "Etorikoksib"
+     },
+     "dogru": "C",
+     "aciklama": "Parasetamol IV, COX-3 inhibisyonu ve santral mekanizmalarla etki eder; NSAİİ'lerin aksine trombosit ve böbrek üzerinde etkisi yoktur. Multimodal analjezinin güvenli temel taşıdır ve opioid ihtiyacını %20–30 azalttığı için doğru yanıt budur (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Selekoksib COX-2 seçici bir ajandır ve prostaglandin sentezini engeller; ancak trombosit, GI ve renal etkilere dikkat gerektiren grupta yer alır. Bu hastada ilk tercih olmadığından seçenek yanlıştır (s. 44).",
+      "B": "Nimesulid prostaglandin sentezini inhibe eden bir NSAİİ/COX-2 inhibitörüdür ve enflamasyonu azaltır. Renal etki ve GI kanama riski taşıdığından bu hastada uygun olmayan seçenektir (s. 44).",
+      "C": "Parasetamol IV, COX-3 inhibisyonu ve santral mekanizmalarla etki eder; NSAİİ'lerin aksine trombosit ve böbrek üzerinde etkisi yoktur. Multimodal analjezinin güvenli temel taşıdır ve opioid ihtiyacını %20–30 azalttığı için doğru yanıt budur (s. 44).",
+      "D": "Meloksikam diğer NSAİİ/COX-2 inhibitörleriyle aynı grupta olup periferik sensitizasyonu azaltır. Trombosit, GI ve renal etkilere dikkat gerektirdiğinden bu hastada ilk seçenek olmaz ve yanlıştır (s. 44).",
+      "E": "Etorikoksib COX-2 seçici bir ajandır ve klasik NSAİİ'ye alternatif olarak kullanılır. Böbrek etkileri açısından dikkat gerektirdiğinden trombosit ve böbrekten etkilenmeyen parasetamolden sonra gelir ve yanlıştır (s. 44)."
+     },
+     "bilgi": [
+      232,
+      233
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "COX-3 inhibisyonu ve santral mekanizmalar; NSAİİ gibi"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-70"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q50",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Multimodal analjezi yaklaşımının temel amacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tek bir güçlü opioidi en yüksek dozda vermek",
+      "B": "Farklı mekanizmalı ajanlarla opioid ihtiyacını azaltmak",
+      "C": "Yalnız inhaler ajanlarla analjezi sağlamak",
+      "D": "Nöromüsküler bloğu derinleştirmek",
+      "E": "BIS değerini sıfıra yaklaştırmak"
+     },
+     "dogru": "B",
+     "aciklama": "Multimodal analjezi, farklı mekanizmaları hedefleyen ajanların kombinasyonudur; opioid miktarını en aza indirir, yan etki profilini iyileştirir ve hasta konforunu artırır. Soru yaklaşımın amacını sorduğu için doğru yanıt budur (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Tek bir opioidi en yüksek dozda kullanmak solunum depresyonu gibi yan etkileri artırır. Multimodal yaklaşım tersine opioid miktarını en aza indirmeyi hedeflediğinden seçenek yanlıştır (s. 43).",
+      "B": "Multimodal analjezi, farklı mekanizmaları hedefleyen ajanların kombinasyonudur; opioid miktarını en aza indirir, yan etki profilini iyileştirir ve hasta konforunu artırır. Soru yaklaşımın amacını sorduğu için doğru yanıt budur (s. 44).",
+      "C": "İnhaler ajanların analjezisi sınırlıdır; örneğin halotanın analjezik etkisi zayıftır ve opioid eklenmesi gerekir. Multimodal analjezi farklı mekanizmaların birleşimine dayandığından seçenek yanlıştır (s. 25).",
+      "D": "Nöromüsküler bloğu derinleştirmek kas gevşemesini artırır ancak ağrı iletimine etki etmez. Multimodal analjezi ağrı yolaklarını farklı noktalardan hedeflediğinden seçenek yanlıştır (s. 8).",
+      "E": "BIS anestezi derinliğini izleyen bir monitörizasyon yöntemidir ve genel anestezi için 40–60 hedeflenir. Değeri sıfıra yaklaştırmak amaç olmadığından ve analjezi stratejisini tanımlamadığından seçenek yanlıştır (s. 10)."
+     },
+     "bilgi": [
+      24,
+      105,
+      224,
+      233,
+      238
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Farklı mekanizmaları hedefleyen ajanların kombinasyonu;"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q42",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Opioidlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Morfin histamin salınımına bağlı hipotansiyon yapabilir.\nII. Fentanil yüksek dozda göğüs duvarı rijiditesine yol açabilir.\nIII. Remifentanilin etkisi infüzyon kesildikten sonra dakikalar içinde sona erer.\nIV. Morfin, fentanilden daha lipofiliktir ve etkisi daha hızlı başlar.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Morfin histamin salınımıyla hipotansiyon yapar, fentanil yüksek dozda göğüs duvarı rijiditesi oluşturur ve remifentanilin etkisi infüzyon kesilince 3–5 dakikada sonlanır. IV yanlıştır; çünkü yavaş başlangıçlı olan morfindir, hızlı başlayan fentanildir (s. 21).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak remifentanilin etkisinin infüzyon kesilince dakikalar içinde bitmesi (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 34).",
+      "B": "II ve III doğrudur; ancak IV yanlıştır, çünkü morfin yavaş başlangıçlı ve uzun etkilidir. Doğru olan I de seçimde bulunmaz (s. 21).",
+      "C": "Morfin histamin salınımıyla hipotansiyon yapar, fentanil yüksek dozda göğüs duvarı rijiditesi oluşturur ve remifentanilin etkisi infüzyon kesilince 3–5 dakikada sonlanır. IV yanlıştır; çünkü yavaş başlangıçlı olan morfindir, hızlı başlayan fentanildir (s. 21).",
+      "D": "I ve III doğrudur fakat IV yanlıştır; fentanil morfinden daha lipofiliktir ve daha hızlı başlar. Doğru olan II de seçimde yer almaz (s. 34).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; yüksek lipofilite morfine değil fentanile aittir ve hızlı başlangıç sağlar (s. 34)."
+     },
+     "bilgi": [
+      85,
+      87,
+      176
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Prototipin referansı; yavaş başlangıç, uzun etki."
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q48",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Non-opioid analjezik ajanlarla ilgili aşağıdaki ifadeler veriliyor:\nI. Selekoksib ve etorikoksib COX-2 seçici ajanlardır.\nII. Meloksikam ve nimesulid de NSAİİ/COX-2 inhibitörleri grubunda sayılır.\nIII. Düşük doz ketamin NMDA antagonizmasıyla santral sensitizasyonu önler.\nIV. NSAİİ'ler trombosit fonksiyonunu ve böbrek akımını koruyarak GI kanama riskini azaltır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Selekoksib, etorikoksib, meloksikam ve nimesulid COX-2 inhibitörleri ve NSAİİ grubundadır; düşük doz ketamin de NMDA antagonizmasıyla santral sensitizasyonu önler. IV yanlıştır; çünkü NSAİİ'ler trombosit disfonksiyonu, GI kanama ve renal etki riski taşır (s. 44).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak düşük doz ketaminin NMDA antagonizmasıyla santral sensitizasyonu önlemesi (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 44).",
+      "B": "II ve III doğrudur, ancak IV yanlıştır; NSAİİ'ler trombosit disfonksiyonu ve GI kanama riski taşır. Doğru olan I de seçimde yer almaz (s. 44).",
+      "C": "I ve III doğrudur fakat IV yanlıştır; NSAİİ'ler böbrek ve trombosit üzerinde olumsuz etkiler yapabilir. Doğru olan II de seçimde bulunmaz (s. 44).",
+      "D": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; NSAİİ'ler trombosit fonksiyonunu ve böbrek akımını korumaz, GI kanama riskini artırır (s. 44).",
+      "E": "Selekoksib, etorikoksib, meloksikam ve nimesulid COX-2 inhibitörleri ve NSAİİ grubundadır; düşük doz ketamin de NMDA antagonizmasıyla santral sensitizasyonu önler. IV yanlıştır; çünkü NSAİİ'ler trombosit disfonksiyonu, GI kanama ve renal etki riski taşır (s. 44)."
+     },
+     "bilgi": [
+      234,
+      237
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Trombosit disfonksiyonu, GI kanama ve renal"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-70"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-far-007",
+     "soru": "Genel anestezide intravenöz indüksiyon veya analjezi amacıyla kullanılan, yüksek lipofilitesi sayesinde kan-beyin bariyerini hızla geçen ve en hızlı etki başlangıcına sahip sentetik opioid hangisidir?",
+     "secenekler": {
+      "A": "Morfin",
+      "B": "Fentanil",
+      "C": "Kodein",
+      "D": "Metadon",
+      "E": "Buprenorfin"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Nöromüsküler iletim zincirini ve depolarizan ile non-depolarizan blokörlerin mekanizma, yan etki ve etkileşimlerini ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q51",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Asetilkolini taklit edip nikotinik reseptörü uyararak kalıcı depolarizasyon oluşturan tek nöromüsküler blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Rokuronyum",
+      "B": "Vekuronyum",
+      "C": "Süksinilkolin",
+      "D": "Pankuronyum",
+      "E": "Mivakuryum"
+     },
+     "dogru": "C",
+     "aciklama": "Süksinilkolin asetilkolini taklit ederek nikotinik reseptörü uyarır ancak asetilkolinesteraz tarafından yıkılmaz; kalıcı depolarizasyon oluşur ve kas elektriksel yorgunluğa girerek gevşer. Depolarizan blokör olan tek ajan olduğundan doğru yanıt budur (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Rokuronyum non-depolarizan, orta etkili bir blokördür ve nikotinik reseptörü aktive etmeden bloke eder. Kalıcı depolarizasyon yapmadığından seçenek yanlıştır (s. 40).",
+      "B": "Vekuronyum karaciğerde metabolize olan orta etkili non-depolarizan bir blokördür ve asetilkolinle yarışır. Reseptörü aktive etmediğinden seçenek yanlıştır (s. 40).",
+      "C": "Süksinilkolin asetilkolini taklit ederek nikotinik reseptörü uyarır ancak asetilkolinesteraz tarafından yıkılmaz; kalıcı depolarizasyon oluşur ve kas elektriksel yorgunluğa girerek gevşer. Depolarizan blokör olan tek ajan olduğundan doğru yanıt budur (s. 39).",
+      "D": "Pankuronyum uzun etkili, vagolitik etkisiyle taşikardi yapan non-depolarizan bir blokördür. Asetilkolinle yarışarak kompetitif antagonizma yaptığı ve kalıcı depolarizasyon oluşturmadığı için seçenek yanlıştır (s. 40).",
+      "E": "Mivakuryum kısa etkili bir non-depolarizan blokördür ve etki süresi 15–20 dakikadır. Reseptörü aktive etmeden bloke ettiği için seçenek yanlıştır (s. 40)."
+     },
+     "bilgi": [
+      194,
+      198,
+      202
+     ],
+     "benzer_cikmis": [
+      "d3-k2-far-008"
+     ],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "asetilkolini taklit ederek nikotinik reseptörü uyarır ancak asetilkolinesteraz"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-far-008"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q53",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Depolarizan ve non-depolarizan nöromüsküler blokörler arasındaki temel mekanizma farkı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Depolarizanlar reseptörü aktive eder, non-depolarizanlar asetilkolinle yarışarak aktive etmeden bloke eder",
+      "B": "Depolarizanlar reseptörü bloke eder, non-depolarizanlar reseptörü kalıcı olarak aktive eder",
+      "C": "Depolarizanlar asetilkolin salınımını artırır, non-depolarizanlar asetilkolinesterazı inhibe eder",
+      "D": "Depolarizanlar presinaptik veziküle etki eder, non-depolarizanlar sarkoplazmik retikuluma etki eder",
+      "E": "İkisi de reseptörü aktive eder, yalnızca etki süreleri farklıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Depolarizan blokörler reseptörü aktive ederek kalıcı depolarizasyon oluşturur; non-depolarizan blokörler ise asetilkolinle yarışarak reseptörü aktive etmeden bloke eder. Bu fark iki blok tipini ayıran temel mekanizma olduğundan doğru yanıt budur (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Depolarizan blokörler reseptörü aktive ederek kalıcı depolarizasyon oluşturur; non-depolarizan blokörler ise asetilkolinle yarışarak reseptörü aktive etmeden bloke eder. Bu fark iki blok tipini ayıran temel mekanizma olduğundan doğru yanıt budur (s. 37).",
+      "B": "Bu seçenek iki grubun mekanizmasını ters çevirmiştir; reseptörü aktive edip kalıcı depolarizasyon yapan depolarizanlardır. Non-depolarizanlar aktive etmeden bloke ettiğinden seçenek yanlıştır (s. 37).",
+      "C": "Nöromüsküler blokörler asetilkolin salınımını artırmaz ve asetilkolinesterazı inhibe etmez; kolinesteraz inhibisyonu bloğu geri çeviren ilaçların işidir. Bu yüzden seçenek yanlıştır (s. 47).",
+      "D": "Blokörlerin ikisi de postsinaptik nikotinik reseptör düzeyinde etki eder; sinir terminalindeki vezikül salınımı ya da sarkoplazmik retikulum kalsiyumu hedefleri değildir. Bu yüzden seçenek yanlıştır (s. 38).",
+      "E": "Yalnız depolarizanlar reseptörü aktive eder; non-depolarizanlar aktive etmeden bloke eder. Farkın yalnızca etki süresi olduğunu söylemek mekanizmayı yanlış anlatır ve seçenek yanlıştır (s. 37)."
+     },
+     "bilgi": [
+      187,
+      188,
+      192,
+      246
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "depolarizan blokörler reseptörü aktive ederek kalıcı depolarizasyon"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-61"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q58",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Vagolitik etkisiyle taşikardi yapan, renal eliminasyona bağlı olarak böbrek yetmezliğinde birikim gösteren uzun etkili non-depolarizan blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pankuronyum",
+      "B": "Rokuronyum",
+      "C": "Vekuronyum",
+      "D": "Mivakuryum",
+      "E": "Süksinilkolin"
+     },
+     "dogru": "A",
+     "aciklama": "Pankuronyum uzun etkili bir non-depolarizan blokördür; vagolitik etkisi taşikardi yapar ve renal eliminasyona bağlı olarak böbrek yetmezliğinde birikir. Kardiyak cerrahide hâlâ kullanılan bu ajan tanıma uyduğu için doğru yanıt budur (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Pankuronyum uzun etkili bir non-depolarizan blokördür; vagolitik etkisi taşikardi yapar ve renal eliminasyona bağlı olarak böbrek yetmezliğinde birikir. Kardiyak cerrahide hâlâ kullanılan bu ajan tanıma uyduğu için doğru yanıt budur (s. 40).",
+      "B": "Rokuronyum orta etkili bir blokördür ve hızlı dizi entübasyonunda alternatif olarak 1.2 mg/kg dozda kullanılır. Vagolitik etki ve renal birikim özellikleri ona ait olmadığından seçenek yanlıştır (s. 40).",
+      "C": "Vekuronyum orta etkilidir ve karaciğer metabolizmasına uğradığı için hepatik yetmezlikte dikkat gerektirir. Böbrek yetmezliğinde birikim ve taşikardiyle tanımlanan ajan olmadığından seçenek yanlıştır (s. 40).",
+      "D": "Mivakuryum kısa etkili bir blokördür, plazma kolinesterazıyla metabolize olur ve 15–20 dakika sürer. Uzun etkili olmadığından seçenek yanlıştır (s. 40).",
+      "E": "Süksinilkolin depolarizan blokördür, etkisi 10–15 dakika sürer ve hiperkalemi riski taşır. Soru non-depolarizan bir ajanı sorduğundan ve süksinilkolin bu gruba girmediğinden seçenek yanlıştır (s. 39)."
+     },
+     "bilgi": [
+      199,
+      204,
+      209
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Pankuronyum: Vagolitik etki → taşikardi; renal"
+     },
+     "dayanak": [
+      "ozen:s40"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q55",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kolinesteraz inhibitörüyle sinaptik aralıktaki asetilkolin düzeyi artırıldığında nöromüsküler blok nasıl etkilenir?",
+     "secenekler": {
+      "A": "İki blok tipi de geri çevrilir",
+      "B": "İki blok tipi de derinleşir",
+      "C": "Non-depolarizan blok derinleşir, depolarizan blok geri çevrilir",
+      "D": "İki blok tipinde de değişiklik olmaz",
+      "E": "Non-depolarizan blok geri çevrilir, depolarizan blok düzelmez"
+     },
+     "dogru": "E",
+     "aciklama": "Asetilkolin artışı non-depolarizan blokörlerle yürüttüğü reseptör rekabetini kazanır ve yarışmalı bloğu geri çevirir. Depolarizan blokta kalıcı depolarizasyon sürdüğü için asetilkolin artışı bloğu düzeltmez (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Kolinesteraz inhibitörleri yalnız yarışmalı bloğu geri çevirir; kalıcı depolarizasyonla oluşan blok bundan etkilenmez. İki bloğun birden düzeldiğini söyleyen seçenek bu yüzden yanlıştır (s. 55).",
+      "B": "Asetilkolin artışı non-depolarizan bloğu derinleştirmez, tersine reseptör rekabetini kazanarak geri çevirir. İki bloğun birden derinleştiğini söyleyen seçenek bu yüzden yanlıştır (s. 47).",
+      "C": "Non-depolarizan blokta asetilkolin artışı derinleşme değil iyileşme sağlar; depolarizan blok ise geri çevrilmez. Seçenek iki tipin yönünü ters kurduğundan yanlıştır (s. 47).",
+      "D": "Asetilkolin artışı non-depolarizan blokta belirgin bir değişiklik, yani geri dönüş yapar. İki tipin de değişmediğini söylemek bu ilişkiyi yok saydığından seçenek yanlıştır (s. 47).",
+      "E": "Asetilkolin artışı non-depolarizan blokörlerle yürüttüğü reseptör rekabetini kazanır ve yarışmalı bloğu geri çevirir. Depolarizan blokta kalıcı depolarizasyon sürdüğü için asetilkolin artışı bloğu düzeltmez (s. 47)."
+     },
+     "bilgi": [
+      246,
+      249,
+      296
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Sinaptik aralıkta ACh birikerek non-depolarizan blokörlerle"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-63",
+      "hoca:hv-k2-07-64",
+      "ozen:s38"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q57",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yanık yaralanması sonrası uzun süre yatağa bağımlı kalan bir hastada hızlı dizi entübasyonu planlanırken süksinilkolin kullanımını sakıncalı kılan risk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Muskarinik reseptör uyarısına bağlı bronkospazm",
+      "B": "Vagolitik etkiye bağlı taşikardi",
+      "C": "Kümülasyona bağlı uzamış blok",
+      "D": "Hiperkalemiye bağlı kardiyak arrest",
+      "E": "Aminoglikozit etkileşimine bağlı blok güçlenmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Süksinilkolin yanık, crush injury ve uzun süreli yatak istirahatinde K⁺ salınımını artırarak kardiyak arreste neden olabilir. Hastanın yanık ve yatağa bağımlılık durumu bu riski öne çıkardığı için doğru yanıt budur (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Muskarinik uyarıya bağlı bronkospazm kolinesteraz inhibitörlerinin yan etkisidir. Süksinilkolinin yanık hastasındaki asıl riski kardiyak arrest ile giden hiperkalemi olduğundan seçenek yanlıştır (s. 47).",
+      "B": "Vagolitik etkiyle taşikardi pankuronyumun özelliğidir. Süksinilkolinin yanık ve uzun yatak istirahatindeki riski ise K⁺ salınımına bağlı hiperkalemi olduğundan seçenek yanlıştır (s. 40).",
+      "C": "Tekrarlanan dozlarda kümülasyon, redistribüsyonla etkisi biten lipofilik ilaçların sorunudur. Süksinilkolinin bu hastadaki asıl riski hiperkalemi olduğundan seçenek yanlıştır (s. 15).",
+      "D": "Süksinilkolin yanık, crush injury ve uzun süreli yatak istirahatinde K⁺ salınımını artırarak kardiyak arreste neden olabilir. Hastanın yanık ve yatağa bağımlılık durumu bu riski öne çıkardığı için doğru yanıt budur (s. 39).",
+      "E": "Aminoglikozitler presinaptik asetilkolin salınımını azaltarak non-depolarizan bloğu güçlendirir. Süksinilkolinin yanık hastasındaki sakıncasının nedeni hiperkalemi olduğundan seçenek yanlıştır (s. 42)."
+     },
+     "bilgi": [
+      199,
+      200,
+      206,
+      250
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Hiperkalemi: Yanık, crush injury, uzun süreli yatak istirahatinde"
+     },
+     "dayanak": [
+      "ozen:s38"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q59",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Süksinilkolinin kullanılamadığı hastada hızlı dizi entübasyonu için alternatif olan ve sugammadex ile hızla geri çevrilebilen non-depolarizan blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mivakuryum",
+      "B": "Pankuronyum",
+      "C": "Atrakuryum",
+      "D": "Süksinilkolin",
+      "E": "Rokuronyum"
+     },
+     "dogru": "E",
+     "aciklama": "Rokuronyum orta etkili bir non-depolarizan blokördür; 1.2 mg/kg dozda hızlı dizi entübasyonunda süksinilkolinin alternatifidir ve sugammadex ile hızla geri çevrilir. Soru bu özellikleri sorduğu için doğru yanıt budur (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Mivakuryum kısa etkili bir blokördür ve plazma kolinesterazıyla metabolize olur. Hızlı dizi entübasyon alternatifi olarak tanımlanmadığından seçenek yanlıştır (s. 40).",
+      "B": "Pankuronyum uzun etkilidir; vagolitik etkisiyle taşikardi yapar ve kardiyak cerrahide kullanılır. Hızlı dizi entübasyon alternatifi olmadığından seçenek yanlıştır (s. 40).",
+      "C": "Atrakuryum benzilizokinolin türevi bir blokördür ve sugammadex yalnızca aminosteroid blokörlere etkilidir. Bu nedenle sugammadexle geri çevrilemediği için seçenek yanlıştır (s. 56).",
+      "D": "Süksinilkolin depolarizan bir blokördür ve hızlı dizi entübasyon altın standardıdır; soru ise süksinilkolinin kullanılamadığı durumu sormaktadır. Non-depolarizan olmadığından seçenek yanlıştır (s. 39).",
+      "E": "Rokuronyum orta etkili bir non-depolarizan blokördür; 1.2 mg/kg dozda hızlı dizi entübasyonunda süksinilkolinin alternatifidir ve sugammadex ile hızla geri çevrilir. Soru bu özellikleri sorduğu için doğru yanıt budur (s. 40)."
+     },
+     "bilgi": [
+      197,
+      206,
+      207,
+      302
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Rokuronyum: RSI (hızlı dizi entübasyonu) alternatifi (1.2"
+     },
+     "dayanak": [
+      "ozen:s40"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q60",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gentamisin, tobramisin ve neomisin gibi aminoglikozitlerin non-depolarizan nöromüsküler bloğu güçlendirmesinin mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetilkolinesterazı doğrudan inhibe etmesi",
+      "B": "Postsinaptik nikotinik reseptörü duyarlılaştırması",
+      "C": "Presinaptik kalsiyum bağımlı asetilkolin salınımını azaltması",
+      "D": "Plazma kolinesteraz aktivitesini azaltması",
+      "E": "Hepatik ve renal klirensi yavaşlatması"
+     },
+     "dogru": "C",
+     "aciklama": "Aminoglikozitler presinaptik kalsiyum bağımlı asetilkolin salınımını azaltarak non-depolarizan bloğu güçlendirir. İntraoperatif irrigasyon bile sorun yaratabildiğinden bu mekanizma doğru yanıttır (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Asetilkolinesterazın inhibisyonu asetilkolini artırır ve non-depolarizan bloğu geri çevirir. Aminoglikozitler ise presinaptik asetilkolin salınımını azaltarak bloğu güçlendirdiğinden seçenek yanlıştır (s. 47).",
+      "B": "Postsinaptik nikotinik reseptörün duyarlılaştırılması volatil anesteziklerin non-depolarizan bloğun gücünü ve süresini artırma mekanizmasıdır. Aminoglikozitlerin mekanizması presinaptik olduğundan seçenek yanlıştır (s. 42).",
+      "C": "Aminoglikozitler presinaptik kalsiyum bağımlı asetilkolin salınımını azaltarak non-depolarizan bloğu güçlendirir. İntraoperatif irrigasyon bile sorun yaratabildiğinden bu mekanizma doğru yanıttır (s. 42).",
+      "D": "Plazma kolinesteraz aktivitesinin azalması hipotermide görülür ve plazma kolinesterazıyla yıkılan ilaçların etkisini uzatır. Aminoglikozitlerin etkisi bu mekanizmayla açıklanmadığından seçenek yanlıştır (s. 42).",
+      "E": "Hepatik ve renal klirensin yavaşlaması hipotermiye özgü bir mekanizmadır ve her 1°C düşüşte blok süresini %10–15 uzatabilir. Aminoglikozitler ise presinaptik asetilkolin salınımını azalttığından seçenek yanlıştır (s. 42)."
+     },
+     "bilgi": [
+      218,
+      219,
+      245
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Presinaptik kalsiyum bağımlı ACh salınımını azaltır"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q52",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Süksinilkolinle ilgili aşağıdaki ifadeler veriliyor:\nI. Fasikülasyonlara bağlı kas ağrısı yapabilir.\nII. Yanık ve crush injury gibi durumlarda hiperkalemiyle kardiyak arreste neden olabilir.\nIII. Malign hipertermi tetikleyicisidir.\nIV. Etkisi kolinesteraz inhibitörleriyle yarışmalı olarak geri çevrilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Süksinilkolin fasikülasyon ve kas ağrısı yapar, yanık ve crush injury gibi durumlarda hiperkalemiyle kardiyak arreste yol açabilir ve malign hipertermiyi tetikler. IV yanlıştır; çünkü kalıcı depolarizasyonla oluşan blok, kolinesteraz inhibitörleriyle geri çevrilen yarışmalı bir blok değildir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Süksinilkolin fasikülasyon ve kas ağrısı yapar, yanık ve crush injury gibi durumlarda hiperkalemiyle kardiyak arreste yol açabilir ve malign hipertermiyi tetikler. IV yanlıştır; çünkü kalıcı depolarizasyonla oluşan blok, kolinesteraz inhibitörleriyle geri çevrilen yarışmalı bir blok değildir (s. 39).",
+      "B": "I ve II doğrudur; ancak süksinilkolin genetik yatkınlığı olan hastalarda malign hipertermi tetikleyicisidir (III) ve bu seçim III'ü dışarıda bırakır. Bu nedenle eksiktir (s. 39).",
+      "C": "II ve III doğrudur, ancak IV yanlıştır; süksinilkolin yarışmalı bir blok oluşturmaz. Doğru olan I de seçimde yer almaz (s. 39).",
+      "D": "I ve III doğrudur fakat IV yanlıştır; süksinilkolinin yaptığı blok kalıcı depolarizasyondur ve antikolinesterazlarla geri çevrilen yarışmalı bir blok değildir. Doğru olan II de seçimde bulunmaz (s. 39).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; süksinilkolin ACh'yi taklit ederek kalıcı depolarizasyon yapar ve yarışmalı blok oluşturmaz (s. 39)."
+     },
+     "bilgi": [
+      198,
+      200
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q24"
+     ],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Hiperkalemi: Yanık, crush injury, uzun süreli yatak istirahatinde"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q24",
+      "ozen:s38"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q54",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Nöromüsküler blokörlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Süksinilkolin asetilkolini taklit ederek nikotinik reseptörü uyarır.\nII. Rokuronyum asetilkolinle nikotinik reseptör için kompetitif antagonizma yapar.\nIII. Non-depolarizan blokörler reseptörü önce aktive ederek depolarizasyon oluşturur.\nIV. Depolarizan blokta kas elektriksel yorgunluğa girer ve gevşer.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II, III ve IV",
+      "C": "I, III ve IV",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Süksinilkolin asetilkolini taklit ederek nikotinik reseptörü uyarır, rokuronyum asetilkolinle yarışarak reseptörü bloke eder ve depolarizan blokta kas elektriksel yorgunlukla gevşer. III yanlıştır; çünkü non-depolarizanlar reseptörü aktive etmeden bloke eder (s. 40).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak depolarizan blokta kasın elektriksel yorgunluğa girip gevşemesi (IV) de doğrudur. Bu seçim IV'ü dışarıda bıraktığı için eksiktir (s. 39).",
+      "B": "II ve IV doğrudur, ancak III yanlıştır; non-depolarizan blokörler depolarizasyon oluşturmaz. Doğru olan I de seçimde yer almaz (s. 40).",
+      "C": "I ve IV doğrudur fakat III yanlıştır; non-depolarizanlar reseptörü aktive etmeden kompetitif olarak bloke eder. Doğru olan II de seçimde bulunmaz (s. 40).",
+      "D": "Süksinilkolin asetilkolini taklit ederek nikotinik reseptörü uyarır, rokuronyum asetilkolinle yarışarak reseptörü bloke eder ve depolarizan blokta kas elektriksel yorgunlukla gevşer. III yanlıştır; çünkü non-depolarizanlar reseptörü aktive etmeden bloke eder (s. 40).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde III yanlıştır; depolarizasyon oluşturan non-depolarizan değil, süksinilkolin gibi depolarizan blokördür (s. 40)."
+     },
+     "bilgi": [
+      194,
+      202,
+      206
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "ACh ile nikotinik reseptör için kompetitif antagonizma;"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-61",
+      "ozen:s40"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q56",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Asetilkolinesteraz inhibisyonuyla ilgili aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Sinaptik aralıkta asetilkolin birikmesi",
+      "B": "Süksinilkolinle oluşan depolarizan bloğun hızla ortadan kalkması",
+      "C": "Hem nikotinik hem muskarinik reseptörlerin uyarılması",
+      "D": "Non-depolarizan bloğun geri çevrilmesi",
+      "E": "Bradikardi ve artmış sekresyon görülmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Asetilkolinesteraz inhibisyonu asetilkolini biriktirir; depolarizan blokta ise zaten kalıcı depolarizasyon vardır ve ACh artışı bu bloğu ortadan kaldırmaz. Bu nedenle süksinilkolin bloğunun hızla geçmesi beklenmez ve yanıt budur (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Asetilkolinesteraz enzimi asetilkolini kolin ve asetata yıkar; inhibisyonunda asetilkolin sinaptik aralıkta birikir. Bu sonuç beklendiğinden aranan seçenek değildir (s. 38).",
+      "B": "Asetilkolinesteraz inhibisyonu asetilkolini biriktirir; depolarizan blokta ise zaten kalıcı depolarizasyon vardır ve ACh artışı bu bloğu ortadan kaldırmaz. Bu nedenle süksinilkolin bloğunun hızla geçmesi beklenmez ve yanıt budur (s. 47).",
+      "C": "Biriken asetilkolin hem nikotinik (motor) hem muskarinik (otonom) reseptörleri uyarır ve istenmeyen otonom etkilere yol açar. Bu sonuç beklendiğinden aranan seçenek değildir (s. 47).",
+      "D": "Neostigmin gibi inhibitörler asetilkolini artırarak non-depolarizan blokla reseptör rekabetini kazanır ve nöromüsküler iletimi geri kazandırır. Bu sonuç beklendiğinden aranan seçenek değildir (s. 47).",
+      "E": "Muskarinik uyarıya bağlı bradikardi, bronkospazm ve artmış tükürük ile bronş sekresyonu görülür; bu yüzden atropin veya glikopirolat eşlik eder. Bu sonuç beklendiğinden aranan seçenek değildir (s. 47)."
+     },
+     "bilgi": [
+      190,
+      246,
+      249
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "ACh birikimi hem nikotinik (motor → istenen etki) hem"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-63",
+      "hoca:hv-k2-07-64"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-far-008",
+     "soru": "Aşağıdaki nöromüsküler blokör kas gevşeticilerden hangisi nondepolarizan değildir?",
+     "secenekler": {
+      "A": "Rokuronyum",
+      "B": "Veküronyum",
+      "C": "Süksinilkolin",
+      "D": "Sisatrakuryum",
+      "E": "Pankuronyum"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q24",
+     "soru": "I. Atrakuryum\nII. Pankuronyum\nIII. Mivakuryum\nIV. Süksametonyum\nYukarıdaki ajanlardan hangisi/hangileri depolarizan kas gevşeticidir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Anesteziden çıkışı sağlayan reversal ajanlarını (neostigmin, sugammadex, nalokson, flumazenil), idamenin bireyselleştirilmesini (TCI, BIS, TOF) ve premedikasyonu açıklar.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q61",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Postoperatif opioid kaynaklı solunum depresyonunda kullanılan ve μ, κ ve δ opioid reseptörlerinde kompetitif antagonizma yapan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flumazenil",
+      "B": "Neostigmin",
+      "C": "Sugammadex",
+      "D": "Dantrolen",
+      "E": "Nalokson"
+     },
+     "dogru": "E",
+     "aciklama": "Nalokson tüm opioid reseptörlerinde (μ, κ, δ) kompetitif antagonizma yapar ve opioid agonistini yerinden eder; etkisi 1–2 dakikada başlar. Postoperatif opioid kaynaklı solunum depresyonu temel endikasyonu olduğundan doğru yanıt budur (s. 49).",
+     "sik_aciklamalari": {
+      "A": "Flumazenil benzodiazepin bölgesine etki eden spesifik antagonisttir ve opioid reseptörlerine bağlanmaz. Opioid kaynaklı solunum depresyonunu geri çevirmediği için seçenek yanlıştır (s. 33).",
+      "B": "Neostigmin asetilkolinesterazı inhibe ederek non-depolarizan bloğu geri çevirir ve nöromüsküler iletimi kademeli döndürür. Opioid reseptörlerinde antagonizma yapmadığından seçenek yanlıştır (s. 47).",
+      "C": "Sugammadex rokuronyum ve vekuronyumu kapsülleyerek inaktif kompleks oluşturur ve nöromüsküler bloğu tersler. Opioid reseptörleriyle ilgisi bulunmadığından seçenek yanlıştır (s. 48).",
+      "D": "Dantrolen malign hipertermide kullanılan ve kas liflerinde etki eden bir ilaçtır. Opioid reseptör antagonisti olmadığından ve solunum depresyonunu geri çevirmediğinden seçenek yanlıştır (s. 30).",
+      "E": "Nalokson tüm opioid reseptörlerinde (μ, κ, δ) kompetitif antagonizma yapar ve opioid agonistini yerinden eder; etkisi 1–2 dakikada başlar. Postoperatif opioid kaynaklı solunum depresyonu temel endikasyonu olduğundan doğru yanıt budur (s. 49)."
+     },
+     "bilgi": [
+      144,
+      168,
+      246,
+      259,
+      261
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q16"
+     ],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Tüm opioid reseptörlerinde (μ, κ, δ) kompetitif antagonizma;"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-73",
+      "cikmis:d3k2-2018-2019-k4-q16"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q63",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Bispektral İndeks (BIS) monitörizasyonunda genel anestezi için ideal cerrahi derinliği gösteren değer aralığı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "0–20",
+      "B": "40–60",
+      "C": "20–40",
+      "D": "60–70",
+      "E": "80–100"
+     },
+     "dogru": "B",
+     "aciklama": "BIS, beynin elektriksel aktivitesini ölçerek anestezi derinliğini sayısal bir değerle izleyen yöntemdir; genel anestezi için ideal cerrahi derinlik 40–60 aralığıdır. Bu nedenle doğru yanıt budur (s. 10).",
+     "sik_aciklamalari": {
+      "A": "BIS değeri 0 koma anlamına gelir ve 0–20 aralığı ideal derinlikten çok daha derin bir baskılanmayı ifade eder. Hedef aralık 40–60 olduğundan seçenek yanlıştır (s. 10).",
+      "B": "BIS, beynin elektriksel aktivitesini ölçerek anestezi derinliğini sayısal bir değerle izleyen yöntemdir; genel anestezi için ideal cerrahi derinlik 40–60 aralığıdır. Bu nedenle doğru yanıt budur (s. 10).",
+      "C": "20–40 aralığı hedefin altında kalan, ideal 40–60 derinliğinden daha derin bir anestezi düzeyidir ve aşırı anestezi riskini düşündürür. BIS izlemi aşırı anesteziyi önlemek için yapıldığından seçenek yanlıştır (s. 50).",
+      "D": "BIS 60–70 aralığı sedasyona karşılık gelir ve farkındalık (awareness) riskini artırır. Genel anestezi için ideal derinlik 40–60 olduğundan seçenek yanlıştır (s. 50).",
+      "E": "BIS değeri 100 tam uyanıklığı gösterir ve 80–100 aralığı uyanıklığa yakın düzeylerdir; cerrahi için gereken derinliğin çok altındadır. Hedef 40–60 olduğundan seçenek yanlıştır (s. 10)."
+     },
+     "bilgi": [
+      33,
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "40 - 60 : Genel anestezi için ideal cerrahi derinlik"
+     },
+     "dayanak": [
+      "ozen:s10"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q70",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Güvenli ekstübasyon kriterlerinden biri olarak TOF (dörtlü uyarı) oranının hangi değerin üzerinde olması beklenir?",
+     "secenekler": {
+      "A": ">0.2",
+      "B": ">0.4",
+      "C": ">0.5",
+      "D": ">0.9",
+      "E": ">0.7"
+     },
+     "dogru": "D",
+     "aciklama": "TOF oranı kas gevşeticinin etkisini ve kas gücünün geri dönüşünü gösteren dörtlü uyarı yöntemidir; ekstübasyon için oranın 0.9'un üzerinde olması gerekir. Bilinç açıklığı, yeterli tidal volüm ve gag refleksiyle birlikte sağlanmalıdır (s. 46).",
+     "sik_aciklamalari": {
+      "A": "TOF >0.2 değeri neostigminin etkili olabildiği ve verilmesi önerilen eşiktir. Güvenli ekstübasyon eşiği ise 0.9'un üzerinde olduğundan seçenek yanlıştır (s. 47).",
+      "B": "TOF oranı 0.4 düzeyinde kas gücü yeterli değildir ve aspirasyon riski sürer. Ekstübasyon eşiği 0.9 olduğundan seçenek yanlıştır (s. 54).",
+      "C": "TOF oranının 0.5 olması hâlâ belirgin nöromüsküler blok rezidüsü anlamına gelir. Güvenli ekstübasyon için oranın 0.9'un üzerine çıkması gerektiğinden seçenek yanlıştır (s. 54).",
+      "D": "TOF oranı kas gevşeticinin etkisini ve kas gücünün geri dönüşünü gösteren dörtlü uyarı yöntemidir; ekstübasyon için oranın 0.9'un üzerinde olması gerekir. Bilinç açıklığı, yeterli tidal volüm ve gag refleksiyle birlikte sağlanmalıdır (s. 46).",
+      "E": "TOF oranı 0.7 düzeyinde yutma ve üst hava yolu koruyucu refleksleri güvence altında olmayabilir; 0.9'un altındaki değerler rezidüel blok sayılır. Bu nedenle seçenek yanlıştır (s. 54)."
+     },
+     "bilgi": [
+      241,
+      243,
+      292
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Uyarı) oranı >0.9 ve gag (öğürme) refleksi;"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q64",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Flumazenil için aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Benzodiazepinlerin spesifik antagonistidir",
+      "B": "0.2 mg IV bolus olarak uygulanır ve titre edilir",
+      "C": "Etki süresi benzodiazepinden kısadır, bu nedenle resedasyon görülebilir",
+      "D": "Benzodiazepine bağımlı hastalarda yoksunluk krizini tetikleyebilir",
+      "E": "Opioid kaynaklı solunum depresyonunu geri çevirir"
+     },
+     "dogru": "E",
+     "aciklama": "Opioid kaynaklı solunum depresyonunu geri çeviren ilaç nalokson iken flumazenil yalnız benzodiazepin etkisini antagonize eder. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 49).",
+     "sik_aciklamalari": {
+      "A": "Flumazenil benzodiazepin aşırı dozunun merkezi sinir sistemi baskısını geri döndüren spesifik antagonisttir. İfade doğru olduğundan aranan yanlış ifade değildir (s. 33).",
+      "B": "Flumazenil 0.2 mg IV bolus olarak başlanır ve hastanın yanıtına göre titre edilir; böylece reversal kademeli olarak sağlanır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 33).",
+      "C": "Flumazenilin etki süresi benzodiazepinden kısadır; bu yüzden ilaç etkisini kaybettikten sonra hasta yeniden sedasyona girebilir (resedasyon). İfade doğru olduğundan aranan yanlış ifade değildir (s. 33).",
+      "D": "Benzodiazepine bağımlı hastalarda flumazenil yoksunluk krizi tetikleyebilir; bu nedenle bu hastalarda dikkatli kullanılır. İfade doğru olduğundan aranan yanlış ifade değildir (s. 33).",
+      "E": "Opioid kaynaklı solunum depresyonunu geri çeviren ilaç nalokson iken flumazenil yalnız benzodiazepin etkisini antagonize eder. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 49)."
+     },
+     "bilgi": [
+      165,
+      166,
+      259
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q131",
+      "d3k2-2018-2019-k4-q18",
+      "d3k2-2024-2025-hg2"
+     ],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Spesifik antagonist; 0.2 mg IV bolus, titre edilir."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q131",
+      "cikmis:d3k2-2018-2019-k4-q18",
+      "cikmis:d3k2-2024-2025-hg2",
+      "ozen:s33"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q66",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Sugammadex aşağıdaki nöromüsküler blokör çiftlerinden hangisinin bloğunu tersleyebilir?",
+     "secenekler": {
+      "A": "Atrakuryum ve mivakuryum",
+      "B": "Süksinilkolin ve rokuronyum",
+      "C": "Süksinilkolin ve vekuronyum",
+      "D": "Rokuronyum ve vekuronyum",
+      "E": "Atrakuryum ve süksinilkolin"
+     },
+     "dogru": "D",
+     "aciklama": "Sugammadex modifiye γ-siklodekstrindir ve yalnızca aminosteroid non-depolarizan blokörleri, yani rokuronyum ve vekuronyumu kapsüller; oluşan inaktif kompleks idrarla atılır. Bu iki ajanı birlikte içeren seçenek doğru olduğu için yanıt budur (s. 56).",
+     "sik_aciklamalari": {
+      "A": "Atrakuryum benzilizokinolin türevidir ve sugammadex bu grup için etkisizdir; mivakuryum da aynı yapı grubundadır. Aminosteroid olmadıkları için seçenek yanlıştır (s. 56).",
+      "B": "Rokuronyum sugammadexle tersleniyor olsa da süksinilkolin depolarizan bir blokördür ve sugammadex bunun için uygun değildir. Çiftin yarısı yanlış olduğundan seçenek yanlıştır (s. 56).",
+      "C": "Vekuronyum aminosteroid yapıdadır ve sugammadexle tersleniyor olsa da süksinilkolin için sugammadex uygun değildir. Çiftin yarısı yanlış olduğundan seçenek yanlıştır (s. 56).",
+      "D": "Sugammadex modifiye γ-siklodekstrindir ve yalnızca aminosteroid non-depolarizan blokörleri, yani rokuronyum ve vekuronyumu kapsüller; oluşan inaktif kompleks idrarla atılır. Bu iki ajanı birlikte içeren seçenek doğru olduğu için yanıt budur (s. 56).",
+      "E": "Atrakuryum benzilizokinolin türevidir ve süksinilkolin depolarizan bir blokördür; sugammadex bu iki ajanın bloğunu tersleyemez. Aminosteroid olmadıkları için seçenek yanlıştır (s. 56)."
+     },
+     "bilgi": [
+      302,
+      306
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "Sugammadex yalnızca aminosteroid non-depolarizan blokörler"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q67",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Sugammadexle ilgili aşağıdaki ifadeler veriliyor:\nI. Modifiye γ-siklodekstrin yapısındadır ve rokuronyumu 1:1 oranında sararak inaktif kompleks oluşturur.\nII. Oluşan kompleks böbrekten atılır ve böbrek yetmezliğinde birikebilir.\nIII. Muskarinik yan etkisi olmadığı için atropin eklenmesi gerekmez.\nIV. Benzilizokinolin türevi blokörlerin bloğunu da etkili biçimde tersler.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Sugammadex rokuronyumu 1:1 oranında kapsüller, kompleks idrarla atılır ve renal yetmezlikte birikebilir; muskarinik etkisi olmadığı için atropine gerek yoktur. IV yanlıştır; çünkü benzilizokinolin türevleri için etkisizdir (s. 56).",
+     "sik_aciklamalari": {
+      "A": "Sugammadex rokuronyumu 1:1 oranında kapsüller, kompleks idrarla atılır ve renal yetmezlikte birikebilir; muskarinik etkisi olmadığı için atropine gerek yoktur. IV yanlıştır; çünkü benzilizokinolin türevleri için etkisizdir (s. 56).",
+      "B": "I ve II doğrudur; ancak muskarinik yan etkisinin olmaması ve atropine gerek duyulmaması (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 48).",
+      "C": "II ve III doğrudur, ancak IV yanlıştır; sugammadex benzilizokinolin türevlerinde etkisizdir. Doğru olan I de seçimde yer almaz (s. 56).",
+      "D": "I ve III doğrudur fakat IV yanlıştır; sugammadex yalnız aminosteroid blokörlere etkilidir. Doğru olan II de seçimde bulunmaz (s. 56).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; sugammadex yalnızca aminosteroid blokörlere etkilidir, benzilizokinolin türevi blokörlerin bloğunu tersleyemez (s. 56)."
+     },
+     "bilgi": [
+      252,
+      302,
+      303
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "Siklodekstrin molekülü rokuronyumu 1:1 oranında sarar;"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q68",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Nöromüsküler blok rezidüsü nedeniyle TOF değeri 0.9'un altında olan ve uyanık görünen hastada en önemli risk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etomidata bağlı kortizol sentezinin baskılanması",
+      "B": "Süksinilkolin sonrası hiperkalemiye bağlı kardiyak arrest",
+      "C": "Kritik stenozda koroner çalma ile miyokard iskemisi",
+      "D": "Genetik yatkın hastada ortaya çıkan malign hipertermi",
+      "E": "Hava yolu koruyucu reflekslerinin bozulmasıyla aspirasyon"
+     },
+     "dogru": "E",
+     "aciklama": "TOF 0.9'un altında hasta uyanık görünse de kas gücü yetersizdir; yutma ve üst hava yolu koruyucu refleksleri bozulduğundan aspirasyon riski artar. Bu yüzden TOF monitörizasyonu zorunludur ve doğru yanıt budur (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Kortizol sentezinin baskılanması etomidatın yan etkisidir ve nöromüsküler blok rezidüsüyle ilgisi yoktur. Rezidüel blokta asıl risk aspirasyon olduğundan seçenek yanlıştır (s. 19).",
+      "B": "Hiperkalemi ve kardiyak arrest süksinilkolinin yanık ve uzun yatak istirahati gibi durumlardaki riskidir. Rezidüel blokta öne çıkan sorun yetersiz kas gücü ve aspirasyon olduğundan seçenek yanlıştır (s. 39).",
+      "C": "Koroner çalma izofluranın kritik koroner stenozu olan hastalardaki riskidir. Rezidüel nöromüsküler blokta asıl tehlike hava yolu reflekslerinin bozulması olduğundan seçenek yanlıştır (s. 26).",
+      "D": "Malign hipertermi halojenli volatil ajanlar ve süksinilkolinin genetik yatkın hastada tetiklediği bir tablodur. Rezidüel blokta asıl risk aspirasyon olduğundan seçenek yanlıştır (s. 30).",
+      "E": "TOF 0.9'un altında hasta uyanık görünse de kas gücü yetersizdir; yutma ve üst hava yolu koruyucu refleksleri bozulduğundan aspirasyon riski artar. Bu yüzden TOF monitörizasyonu zorunludur ve doğru yanıt budur (s. 54)."
+     },
+     "bilgi": [
+      293,
+      294
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "TOF* (Train of Four / Dörtlü Uyarı) <0.9 ile hasta uyanık"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-75"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q62",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Postoperatif derlenme odasında opioid kaynaklı solunum depresyonu nedeniyle nalokson uygulanan 46 yaşında hastada başlangıçta solunum düzeliyor, ancak yaklaşık bir saat sonra solunum hızı yeniden düşüyor ve bilinç bulanıklaşıyor. Bu tablonun en olası nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Naloksonun opioid reseptörüne geri dönüşümsüz bağlanması",
+      "B": "Tam antagonizmaya bağlı sempatik fırtına",
+      "C": "Flumazenil etkisinin sona ermesi",
+      "D": "Naloksonun yarı ömrünün opioidden kısa olması",
+      "E": "Nöromüsküler blok rezidüsünün ortaya çıkması"
+     },
+     "dogru": "D",
+     "aciklama": "Nalokson kompetitif antagonisttir ve yarı ömrü (30–80 dakika) opioidlerden kısa olduğu için etkisi geçince opioid yeniden reseptörlere bağlanıp baskı yapabilir. Bu duruma renarkotizasyon denir ve vakadaki tablonun nedenidir (s. 49).",
+     "sik_aciklamalari": {
+      "A": "Nalokson reseptöre kompetitif ve geri dönüşlü bağlanır; geri dönüşümsüz bağlanma söz konusu değildir. Tablo etkisi geçince opioid etkisinin geri dönmesiyle açıklandığından seçenek yanlıştır (s. 49).",
+      "B": "Tam antagonizma akut ağrı krizine ve hipertansiyon, taşikardiyle giden sempatik fırtınaya yol açar. Solunum hızının yeniden düşmesi ise bu tabloyla değil renarkotizasyonla açıklandığından seçenek yanlıştır (s. 57).",
+      "C": "Flumazenil benzodiazepinlerin antagonistidir ve bu hastaya uygulanan ilaç nalokson olduğundan ilgisi yoktur. Solunum depresyonunun geri dönmesi naloksonun kısa etkisine bağlı olduğundan seçenek yanlıştır (s. 33).",
+      "D": "Nalokson kompetitif antagonisttir ve yarı ömrü (30–80 dakika) opioidlerden kısa olduğu için etkisi geçince opioid yeniden reseptörlere bağlanıp baskı yapabilir. Bu duruma renarkotizasyon denir ve vakadaki tablonun nedenidir (s. 49).",
+      "E": "Nöromüsküler blok rezidüsü TOF değeri 0.9'un altında kas gücü yetersizliği ve aspirasyon riskiyle seyreder. Opioid solunum depresyonunun nalokson sonrası yeniden ortaya çıkması bu mekanizmayla açıklanmadığından seçenek yanlıştır (s. 54)."
+     },
+     "bilgi": [
+      259,
+      261,
+      314
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Yarı ömrü opioidlerden kısa (30–80 dk) → renarkoizasyon riski kritik önem taşır."
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-73"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q65",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Rokuronyum ile miyorelaksasyon sağlanan hastada ameliyat sonunda TOF değeri 0.3 ölçülüyor ve maliyet avantajı nedeniyle kolinesteraz inhibitörüyle antagonizma planlanıyor. Ortaya çıkabilecek muskarinik yan etkileri önlemek için aşağıdakilerden hangisi eşlik etmelidir?",
+     "secenekler": {
+      "A": "Flumazenil",
+      "B": "Nalokson",
+      "C": "Atropin veya glikopirolat",
+      "D": "Dantrolen",
+      "E": "Lidokain"
+     },
+     "dogru": "C",
+     "aciklama": "Neostigmin asetilkolinesterazı reversibl inhibe eder; biriken ACh muskarinik reseptörleri de uyararak bradikardi, bronkospazm ve artmış sekresyon yapar. Bu etkiler eş zamanlı atropin (0.02 mg/kg) veya kalp hızına daha az etkili glikopirolatla önlenir (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Flumazenil benzodiazepinleri antagonize eder ve muskarinik etkileri önlemez. Neostigminin otonom yan etkileri ancak atropin veya glikopirolat gibi antikolinerjikle engellendiğinden seçenek yanlıştır (s. 33).",
+      "B": "Nalokson opioid reseptör antagonistidir ve ACh birikimine bağlı bradikardi, bronkospazm ve sekresyon artışını önlemez. Gereken ilaç antikolinerjik olduğundan seçenek yanlıştır (s. 49).",
+      "C": "Neostigmin asetilkolinesterazı reversibl inhibe eder; biriken ACh muskarinik reseptörleri de uyararak bradikardi, bronkospazm ve artmış sekresyon yapar. Bu etkiler eş zamanlı atropin (0.02 mg/kg) veya kalp hızına daha az etkili glikopirolatla önlenir (s. 47).",
+      "D": "Dantrolen malign hipertermide kas liflerinde etki eden bir ilaçtır ve muskarinik etkileri engellemez. Bu nedenle neostigminle ortaya çıkan otonom yan etkilere karşı kullanılmaz ve seçenek yanlıştır (s. 30).",
+      "E": "Lidokain, süksinilkolinin fasikülasyonlarını önlemek ve enjeksiyon ağrısını azaltmak için anılan bir ajandır. Muskarinik yan etkileri antagonize etmediğinden seçenek yanlıştır (s. 39)."
+     },
+     "bilgi": [
+      249,
+      251
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Çözüm: Eş zamanlı atropin (0.02 mg/kg) veya glikopirolat (daha"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclarin-farmakolojisi-q69",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Anesteziden uyanmayı gölgeleyen etkenlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Yetersiz analjezi sempatik aktivasyonla hipertansiyon, taşikardi ve ajitasyon döngüsüne yol açabilir.\nII. Aşırı doz veya birikim uzamış sedasyona ve gecikmiş bilince neden olabilir.\nIII. Nöromüsküler blok rezidüsü yutma ve üst hava yolu koruyucu reflekslerini bozabilir.\nIV. Preoperatif anksiyolizin uygulanması uyanmada ajitasyon ve ağrı yükünü artırır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Yetersiz analjezi, uzamış sedasyon ve nöromüsküler blok rezidüsü uyanmayı gölgeleyen üç etkendir. IV yanlıştır; çünkü iyi bir premedikasyon preoperatif anksiyolizle uyanmada ajitasyon ve ağrı yükünü azaltır (s. 52).",
+     "sik_aciklamalari": {
+      "A": "I ve II doğrudur; ancak nöromüsküler blok rezidüsünün koruyucu refleksleri bozması (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 54).",
+      "B": "Yetersiz analjezi, uzamış sedasyon ve nöromüsküler blok rezidüsü uyanmayı gölgeleyen üç etkendir. IV yanlıştır; çünkü iyi bir premedikasyon preoperatif anksiyolizle uyanmada ajitasyon ve ağrı yükünü azaltır (s. 52).",
+      "C": "II ve III doğrudur, ancak IV yanlıştır; preoperatif anksiyoliz uyanma sürecinde ajitasyon ve ağrı yükünü azaltır. Doğru olan I de seçimde yer almaz (s. 52).",
+      "D": "I ve III doğrudur fakat IV yanlıştır; iyi premedikasyon preoperatif anksiyolizle uyanmayı kolaylaştırır. Doğru olan II de seçimde bulunmaz (s. 52).",
+      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; preoperatif anksiyoliz sempatomimetik stres yanıtını küçük başlatarak uyanmadaki ajitasyonu azaltır (s. 52)."
+     },
+     "bilgi": [
+      280,
+      291,
+      292
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Uyanmayı Gölgeleyen 3 Düşman"
+     },
+     "dayanak": [
+      "hoca:hv-k2-07-75"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q16",
+     "soru": "Akut opiyat intoksikasyonunda aşağıdaki ajanlardan hangisi kullanılır?",
+     "secenekler": {
+      "A": "Tramadol",
+      "B": "Pentazosin",
+      "C": "Nalokson",
+      "D": "Difenoksilat",
+      "E": "Kodein"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2020-2021-q131",
+     "soru": "Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmede ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak için kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flumazenil",
+      "B": "Triazolam",
+      "C": "Eszopiklon",
+      "D": "Zaleplon",
+      "E": "Zolpidem"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q18",
+     "soru": "Kurgu Soru: Flumazenil aşağıdaki ilaçlardan hangisinin etkisini ortadan kaldırmak için kullanılır?",
+     "secenekler": {
+      "A": "Fenobarbital",
+      "B": "Morfin",
+      "C": "Diazepam",
+      "D": "Meprobamat",
+      "E": "Propofol"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2024-2025-hg2",
+     "soru": "Flumazenilin etkisini antagonize ettiği ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Diazepam",
+      "B": "Fenobarbital",
+      "C": "Meprobamat",
+      "D": "Morfin",
+      "E": "Propofol"
+     },
+     "cevap": "A"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 70
+}

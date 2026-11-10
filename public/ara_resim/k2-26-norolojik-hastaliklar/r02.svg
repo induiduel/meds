@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<symbol id="mito" viewBox="-40 -22 80 44"><ellipse cx="0" cy="0" rx="38" ry="20" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/><path d="M-28 0 C-22 -14 -16 14 -10 0 C-4 -14 2 14 8 0 C14 -14 20 14 26 0" stroke="#6d28d9" stroke-width="2.5" fill="none"/></symbol>
+<g id="lip"><circle cx="0" cy="0" r="7" fill="#93c5fd" stroke="#1e3a8a" stroke-width="1"/><path d="M-3 6 C-4 14 -2 20 -3 28 M3 6 C4 14 2 20 3 28" stroke="#64748b" stroke-width="1.6" fill="none"/></g>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="640" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">CAG tekrarı uzadıkça: poliglutamin, eşik ve erken başlangıç</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Spinoserebellar ataksilerde tekrar genişlemesi · slayt 24–26</text>
+<rect x="30" y="92" width="1140" height="216" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="124" font-size="20" fill="#0f766e" text-anchor="start" font-weight="bold">A · Gendeki CAG üçlüleri proteinde glutamin dizisine dönüşür</text>
+<line x1="60" y1="172" x2="428" y2="172" stroke="#0f172a" stroke-width="3"/>
+<rect x="68" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="87" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="112" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="131" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="156" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="175" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="200" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="219" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="244" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="263" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="288" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="307" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="332" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="351" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="376" y="157" width="38" height="30" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="395" y="177" font-size="12.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CAG</text>
+<text x="60" y="150" font-size="15" fill="#1d4ed8" text-anchor="start" font-weight="bold">sağlam alel: kısa CAG dizisi</text>
+<line x1="60" y1="250" x2="868" y2="250" stroke="#0f172a" stroke-width="3"/>
+<rect x="68" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="87" y="255" font-size="12.5" fill="#b91c1c" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="112" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="131" y="255" font-size="12.5" fill="#b91c1c" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="156" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="175" y="255" font-size="12.5" fill="#b91c1c" text-anchor="middle" font-weight="bold">CAG</text>
+<rect x="200" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="244" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="288" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="332" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="376" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="420" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="464" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="508" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="552" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="596" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="640" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="684" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="728" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="772" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<rect x="816" y="235" width="38" height="30" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="60" y="228" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">genişlemiş alel: uzun CAG dizisi</text>
+<path d="M880 180 C930 190 940 230 900 262" stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="880" y="150" font-size="15" fill="#0f172a" text-anchor="start">her CAG = 1 glutamin (Q)</text>
+<circle cx="930" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="952" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="974" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="996" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="1018" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="1040" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="1062" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="1084" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="1106" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="1128" cy="270" r="9" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="930" y="296" font-size="14" fill="#b91c1c" text-anchor="start">ataksinde uzun polyQ zinciri</text>
+<rect x="30" y="318" width="540" height="280" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="350" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · SCA1 cetveli: tekrar sayısı</text>
+<rect x="101.14285714285714" y="400" width="226.2857142857143" height="36" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<rect x="327.42857142857144" y="400" width="13.714285714285722" height="36" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+<rect x="341.14285714285717" y="400" width="198.85714285714283" height="36" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<line x1="101.14285714285714" y1="392" x2="101.14285714285714" y2="446" stroke="#0f172a" stroke-width="2"/>
+<text x="101.14285714285714" y="466" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">6</text>
+<line x1="327.42857142857144" y1="392" x2="327.42857142857144" y2="446" stroke="#0f172a" stroke-width="2"/>
+<text x="327.42857142857144" y="466" font-size="15" fill="#0f172a" text-anchor="end" font-weight="bold">39</text>
+<line x1="341.14285714285717" y1="392" x2="341.14285714285717" y2="446" stroke="#0f172a" stroke-width="2"/>
+<text x="341.14285714285717" y="466" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">41</text>
+<text x="214.28571428571428" y="424" font-size="16" fill="#1d4ed8" text-anchor="middle" font-weight="bold">6–39 normal</text>
+<text x="440.57142857142856" y="424" font-size="16" fill="#b91c1c" text-anchor="middle" font-weight="bold">&gt;41 patojenik</text>
+<path d="M334.2857142857143 392 C334.2857142857143 375 314.2857142857143 368 294.2857142857143 366" stroke="#64748b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="290.2857142857143" y="370" font-size="14" fill="#64748b" text-anchor="end">40 slaytta tanımsız</text>
+<text x="60" y="500" font-size="15" fill="#0f172a" text-anchor="start">Diğer tiplerde de aynı mantık vardır: tekrar</text>
+<text x="60" y="522" font-size="15" fill="#0f172a" text-anchor="start">normal aralığı aşınca hastalık başlar.</text>
+<text x="60" y="544" font-size="15" fill="#0f172a" text-anchor="start">Gen: ATXN1, 6q23 · başlangıç 4. dekat</text>
+<rect x="590" y="318" width="580" height="280" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="610" y="350" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">C · Tekrar arttıkça hastalık erken ve ağır</text>
+<line x1="650" y1="560" x2="1130" y2="560" stroke="#0f172a" stroke-width="2.5" marker-end="url(#ok)"/>
+<line x1="650" y1="560" x2="650" y2="380" stroke="#0f172a" stroke-width="2.5" marker-end="url(#ok)"/>
+<text x="1130" y="584" font-size="15" fill="#0f172a" text-anchor="end">tekrar sayısı →</text>
+<text x="660" y="372" font-size="15" fill="#0f172a" text-anchor="start">başlangıç yaşı</text>
+<path d="M670 400 C800 420 900 470 1110 540" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="700" y="392" font-size="16" fill="#1d4ed8" text-anchor="start" font-weight="bold">başlangıç yaşı düşer</text>
+<path d="M670 545 C800 535 950 470 1110 410" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 5"/>
+<text x="1100" y="395" font-size="16" fill="#b91c1c" text-anchor="end" font-weight="bold">klinik ağırlaşır (kesikli)</text>
+<text x="600.0" y="626" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 24 (ataksin, CAG, polyQ), 25 (CAG tipleri, SCA8 CTG), 26 (SCA1: 6–39 normal, &gt;41 patojenik; tekrar ↑ → erken, ağır) · mavi = sağlam, kırmızı = hastalık</text>
+</svg>

@@ -1,0 +1,1415 @@
+{
+ "surum": 1,
+ "key": "k2-27",
+ "kod": "2a01",
+ "kurul": 2,
+ "brans": "Aile Hekimliği",
+ "konu": "Aile Hekimliğinde Periyodik Muayeneler 1",
+ "ogretim_uyesi": "Doç. Dr. Habibe İnci",
+ "profil": "Aile Hekimliği",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2a01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Koruyucu tıp ve beş koruma düzeyiyle başlayan ders, aile hekiminin periyodik sağlık muayenesini yaşam boyu anlatır. Evlilik öncesi tarama, gebelik ve lohusa izlemleri, yenidoğan topuk kanı taraması, bebek ve çocuk izlemleri, aşı takvimi, okul çağı taramaları, erişkin kardiyometabolik ve kanser taramaları, erişkin aşıları ve geriatrik değerlendirme yaş ve aralıklarıyla verilir.",
+   "maddeler": [
+    {
+     "metin": "Sağlık, koruyucu tıp ve beş koruma düzeyi"
+    },
+    {
+     "metin": "Aile hekiminin rolü ve periyodik sağlık muayenesi"
+    },
+    {
+     "metin": "Evlilik öncesi tarama ve spinal müsküler atrofi"
+    },
+    {
+     "metin": "Doğum öncesi bakım: folik asit ve dört nitelikli izlem"
+    },
+    {
+     "metin": "Doğum sonu bakım: altı lohusa izlemi"
+    },
+    {
+     "metin": "Bebek, çocuk ve ergen izlem takvimi ve yenidoğan tarama programı"
+    },
+    {
+     "metin": "Topuk kanıyla taranan hastalıklar ve sonuç akışları"
+    },
+    {
+     "metin": "Yenidoğan işitme taraması ve ilk iki ayın izlemleri"
+    },
+    {
+     "metin": "Görme, kalça, D vitamini, demir ve çocukluk aşı takvimi"
+    },
+    {
+     "metin": "Çocukluk dönemi izlemleri: bir ile altı yaş"
+    },
+    {
+     "metin": "Okul çağı ve ergenlik izlemleri"
+    },
+    {
+     "metin": "Erişkinlik: kardiyovasküler ve metabolik taramalar"
+    },
+    {
+     "metin": "Erişkinde kanser taramaları"
+    },
+    {
+     "metin": "Erişkin bağışıklama, bulaşıcı hastalıklar ve kemik sağlığı"
+    },
+    {
+     "metin": "Geriatrik dönem"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Koruyucu tıp ve beş koruma düzeyiyle başlayan ders, aile hekiminin periyodik sağlık muayenesini yaşam boyu anlatır. Evlilik öncesi tarama, gebelik ve lohusa izlemleri, yenidoğan topuk kanı taraması, bebek ve çocuk izlemleri, aşı takvimi, okul çağı taramaları, erişkin kardiyometabolik ve kanser taramaları, erişkin aşıları ve geriatrik değerlendirme yaş ve aralıklarıyla verilir.",
+    "Sağlık, koruyucu tıp ve beş koruma düzeyi.",
+    "Aile hekiminin rolü ve periyodik sağlık muayenesi.",
+    "Evlilik öncesi tarama ve spinal müsküler atrofi.",
+    "Doğum öncesi bakım: folik asit ve dört nitelikli izlem.",
+    "Doğum sonu bakım: altı lohusa izlemi.",
+    "Bebek, çocuk ve ergen izlem takvimi ve yenidoğan tarama programı.",
+    "Topuk kanıyla taranan hastalıklar ve sonuç akışları.",
+    "Yenidoğan işitme taraması ve ilk iki ayın izlemleri.",
+    "Görme, kalça, D vitamini, demir ve çocukluk aşı takvimi.",
+    "Çocukluk dönemi izlemleri: bir ile altı yaş.",
+    "Okul çağı ve ergenlik izlemleri.",
+    "Erişkinlik: kardiyovasküler ve metabolik taramalar.",
+    "Erişkinde kanser taramaları.",
+    "Erişkin bağışıklama, bulaşıcı hastalıklar ve kemik sağlığı.",
+    "Geriatrik dönem."
+   ],
+   "v": "feeadf0899"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "KORUYUCU TIP",
+     "metin": "Çıkmış (dogrudan): Hastalıklardan korunma, sağlık ve iyilik",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "BİRİNCİL KORUMA",
+     "metin": "Çıkmış (dogrudan): davranış değişiklikleri, aşılama vb",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "DÖRDÜNCÜL KORUMA",
+     "metin": "Çıkmış (dogrudan): Aşırı medikalizasyon riskindeki hastayı ve toplumu",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "AİLE HEKİMİNİN ROLÜ",
+     "metin": "Çıkmış (ilgili): 2. Birinci basamak teşhis, tedavi, rehabilitasyon ve",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "EVLİLİK ÖNCESİ TARAMA TESTLERİ",
+     "metin": "Çıkmış (dogrudan): EVLİLİK ÖNCESİ TARAMA TESTLERİ",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "SPİNAL MUSKÜLER ATROFİ (SMA)",
+     "metin": "Çıkmış (dogrudan): Tarama için öncelikle erkek eş/eş adayından",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Tüm gebelerde, anne ve bebeğin sağlığını",
+     "metin": "Çıkmış (dogrudan): Her gebenin en az 4 kez nitelikli izlenmesi",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Yenidoğan Tarama Programı",
+     "metin": "Çıkmış (dogrudan): -SMA",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "TOPUK KANI İLE YAPILAN TESTLER",
+     "metin": "Çıkmış (dogrudan): 3 ila 5 günlük yeni doğanda topuk kanı alınarak;",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "BİOTİNİDAZ EKSİKLİĞİ TARAMASI",
+     "metin": "Çıkmış (dogrudan): Geç dönemde ise görme ve işitme kaybına,",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "KİSTİK FİBROZİS",
+     "metin": "Çıkmış (dogrudan): Kistik Fibrozis hastalığı tanısı Ter Testi ile",
+     "s": [
+      65
+     ]
+    },
+    {
+     "baslik": "3.–4. AY İZLEMLERİ",
+     "metin": "Çıkmış (dogrudan): Aşılar:4. ay DaBT-İPA-Hib 2.doz, KPA 2. doz",
+     "s": [
+      77
+     ]
+    },
+    {
+     "baslik": "DEMİR PROFİLAKSİSİ",
+     "metin": "Çıkmış (dogrudan): 4-12 ay arası çocuklarda demir",
+     "s": [
+      79
+     ]
+    },
+    {
+     "baslik": "OBEZİTE TARAMASI",
+     "metin": "Çıkmış (dogrudan): çocukların 3 ile 6 ayda bir izlenmesi",
+     "s": [
+      102
+     ]
+    },
+    {
+     "baslik": "7.TİROİD FONKSİYON ANOMALİLERİ",
+     "metin": "Çıkmış (dogrudan): 35 yaşın üzerindeki tüm erişkinlere beş yılda",
+     "s": [
+      115
+     ]
+    },
+    {
+     "baslik": "10. MEME KANSERİ TARAMASI",
+     "metin": "Çıkmış (dogrudan): yılda bir mamografi yapılması gereklidir.",
+     "s": [
+      119
+     ]
+    },
+    {
+     "baslik": "11. KOLOREKTAL KANSER TARAMASI",
+     "metin": "Çıkmış (dogrudan): 50-70 yaş grubundaki yetişkinlere yılda bir",
+     "s": [
+      120
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "KORUYUCU TIP: Çıkmış (dogrudan): Hastalıklardan korunma, sağlık ve iyilik.",
+    "BİRİNCİL KORUMA: Çıkmış (dogrudan): davranış değişiklikleri, aşılama vb.",
+    "DÖRDÜNCÜL KORUMA: Çıkmış (dogrudan): Aşırı medikalizasyon riskindeki hastayı ve toplumu.",
+    "AİLE HEKİMİNİN ROLÜ: Çıkmış (ilgili): 2. Birinci basamak teşhis, tedavi, rehabilitasyon ve.",
+    "EVLİLİK ÖNCESİ TARAMA TESTLERİ: Çıkmış (dogrudan): EVLİLİK ÖNCESİ TARAMA TESTLERİ.",
+    "SPİNAL MUSKÜLER ATROFİ (SMA): Çıkmış (dogrudan): Tarama için öncelikle erkek eş/eş adayından.",
+    "Tüm gebelerde, anne ve bebeğin sağlığını: Çıkmış (dogrudan): Her gebenin en az 4 kez nitelikli izlenmesi.",
+    "Yenidoğan Tarama Programı: Çıkmış (dogrudan): -SMA.",
+    "TOPUK KANI İLE YAPILAN TESTLER: Çıkmış (dogrudan): 3 ila 5 günlük yeni doğanda topuk kanı alınarak;.",
+    "BİOTİNİDAZ EKSİKLİĞİ TARAMASI: Çıkmış (dogrudan): Geç dönemde ise görme ve işitme kaybına,.",
+    "KİSTİK FİBROZİS: Çıkmış (dogrudan): Kistik Fibrozis hastalığı tanısı Ter Testi ile.",
+    "3.–4. AY İZLEMLERİ: Çıkmış (dogrudan): Aşılar:4. ay DaBT-İPA-Hib 2.doz, KPA 2. doz.",
+    "DEMİR PROFİLAKSİSİ: Çıkmış (dogrudan): 4-12 ay arası çocuklarda demir.",
+    "OBEZİTE TARAMASI: Çıkmış (dogrudan): çocukların 3 ile 6 ayda bir izlenmesi.",
+    "7.TİROİD FONKSİYON ANOMALİLERİ: Çıkmış (dogrudan): 35 yaşın üzerindeki tüm erişkinlere beş yılda.",
+    "10. MEME KANSERİ TARAMASI: Çıkmış (dogrudan): yılda bir mamografi yapılması gereklidir.",
+    "11. KOLOREKTAL KANSER TARAMASI: Çıkmış (dogrudan): 50-70 yaş grubundaki yetişkinlere yılda bir."
+   ],
+   "v": "07b6f1c2e8"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu konudan on sekiz farklı çıkmış soru var; en çok yenidoğan topuk kanı listesi, evlilik öncesi testler ve SMA, koruma düzeyleri ve erişkin taramaları soruluyor. Sorular çoğunlukla listede olmayanı bulma, yaş ve aralık sayısı ile öncüllü kalıpta geliyor.",
+   "maddeler": [
+    {
+     "baslik": "Yenidoğan topuk kanı taraması",
+     "metin": "3-5 günlük yenidoğanda topuk kanıyla fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, KAH, kistik fibrozis ve SMA taranır.",
+     "neden": "Dersin en çok sorulan konusu: 2020-21, 2023-24 ve 2025-26'da listede olan ya da olmayan hastalık soruldu.",
+     "s": [
+      54,
+      56
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Ulusal toplum tabanlı kanser taramaları",
+     "metin": "Mamografi 40-69 yaş kadınlarda iki yılda bir, smear 30-65 yaşta 5 yılda bir, dışkıda gizli kan 50-70 yaşta yapılır.",
+     "neden": "2020-21'de mamografi toplum tabanlı tarama olarak, 2025-26'da kanser taramalarında yanlış ifade olarak soruldu; dışkıda gizli kan sıklığı iki slaytta farklıdır.",
+     "s": [
+      119,
+      120,
+      121
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Evlilik öncesi tarama testleri",
+     "metin": "Evlilik öncesinde Anti HIV, HBsAg, Anti HCV, VDRL, kan grubu ile hemogram, hemoglobin elektroforezi ve SMA taraması yapılır.",
+     "neden": "2022-23, 2023-24 ve 2025-26'da soruldu; hepatit A testi ve selenyum listede olmayan şık olarak geldi.",
+     "s": [
+      20
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Koruma düzeyleri ve hedef kitleleri",
+     "metin": "Birincil koruma hastalığın ortaya çıkmasını önler; davranış değişikliği ve aşılama örnektir, hedef kitle sağlıklı kişilerdir.",
+     "neden": "2020-21'de koruma düzeyleri doğru ifade sorusu olarak geldi; hedef kitleler yer değiştirilerek çeldirici kuruldu.",
+     "s": [
+      6,
+      7,
+      8
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kistik fibrozis ve ter testi",
+     "metin": "Kistik fibrozis tanısı ter testi ile konur; ter testi toplum tabanlı bir tarama testi değildir.",
+     "neden": "2024-25 ve 2025-26'da üst üste ulusal tarama testlerinden olmayan seçenek olarak ter testi soruldu.",
+     "s": [
+      65
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Koruyucu tıbbın tanımı ve özellikleri",
+     "metin": "Koruyucu tıp, hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemidir.",
+     "neden": "2020-21'de tanım cümlesi birebir soruldu; periyodik muayene ve halk sağlığı en güçlü çeldiricilerdir.",
+     "s": [
+      3,
+      4
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "SMA taşıyıcı taramasının amacı ve sırası",
+     "metin": "SMA taşıyıcı taramasına önce erkek eş adayından başlanır; şüpheli pozitif sonuç yoksa çift takipten çıkarılır.",
+     "neden": "2020-21'de doğru ifade olarak erkek eşten başlama kuralı soruldu; amaç evlilik sonrası diye bozularak çeldirici yapıldı.",
+     "s": [
+      23,
+      24
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Erişkinde lipid, diyabet ve tiroid taraması",
+     "metin": "35 yaş üstü herkese beş yılda bir lipid profili ve TSH bakılır; 45 yaş üstünde diyabet taranır, test normalse üç yılda bir tekrarlanır.",
+     "neden": "2020-21'de öncüllü soru olarak TSH ve diyabet taraması doğru öncüller olarak soruldu.",
+     "s": [
+      114,
+      115
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu konudan on sekiz farklı çıkmış soru var; en çok yenidoğan topuk kanı listesi, evlilik öncesi testler ve SMA, koruma düzeyleri ve erişkin taramaları soruluyor. Sorular çoğunlukla listede olmayanı bulma, yaş ve aralık sayısı ile öncüllü kalıpta geliyor.",
+    "Yenidoğan topuk kanı taraması: 3-5 günlük yenidoğanda topuk kanıyla fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, KAH, kistik fibrozis ve SMA taranır.",
+    "Ulusal toplum tabanlı kanser taramaları: Mamografi 40-69 yaş kadınlarda iki yılda bir, smear 30-65 yaşta 5 yılda bir, dışkıda gizli kan 50-70 yaşta yapılır.",
+    "Evlilik öncesi tarama testleri: Evlilik öncesinde Anti HIV, HBsAg, Anti HCV, VDRL, kan grubu ile hemogram, hemoglobin elektroforezi ve SMA taraması yapılır.",
+    "Koruma düzeyleri ve hedef kitleleri: Birincil koruma hastalığın ortaya çıkmasını önler; davranış değişikliği ve aşılama örnektir, hedef kitle sağlıklı kişilerdir.",
+    "Kistik fibrozis ve ter testi: Kistik fibrozis tanısı ter testi ile konur; ter testi toplum tabanlı bir tarama testi değildir.",
+    "Koruyucu tıbbın tanımı ve özellikleri: Koruyucu tıp, hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemidir.",
+    "SMA taşıyıcı taramasının amacı ve sırası: SMA taşıyıcı taramasına önce erkek eş adayından başlanır; şüpheli pozitif sonuç yoksa çift takipten çıkarılır.",
+    "Erişkinde lipid, diyabet ve tiroid taraması: 35 yaş üstü herkese beş yılda bir lipid profili ve TSH bakılır; 45 yaş üstünde diyabet taranır, test normalse üç yılda bir tekrarlanır."
+   ],
+   "v": "1c47590a43"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış 24 çıkmış sorusu var (21 doğrudan, 3 ilgili) ve altı alt başlıkta toplanır: koruma düzeyleri ve koruyucu tıp tanımı (2020-21, 2022-23), aile hekiminin görevleri (2018-19, 2025-26), evlilik öncesi tarama testleri ve SMA (2020-21, 2022-23, 2023-24, 2025-26), doğum öncesi izlem sayısı (2020-21), yenidoğan topuk kanı taraması ve ter testi (2020-21'den 2025-26'ya her yıl), bebek aşı ve demir takvimi (2020-21, 2021-22) ile erişkin tarama yaş ve aralıkları (2020-21, 2025-26). En sık kök kalıbı bir listeden 'hangisi değildir / yanlıştır' sorusudur: evlilik öncesi test listesi, topuk kanı listesi ve toplum tabanlı tarama standartları her yıl bu kalıpla gelir. İkinci kalıp sayı sorusudur (en az 4 izlem, 4–12 ay demir, 2-4-6-18. ay karma aşı) ve üçüncüsü öncüllü I–IV sorularıdır (erişkin taramaları, okul çağı obezitesi). Çeldiriciler hep dersin komşu listesinden seçilir: evlilik öncesi testlerde yenidoğan testleri, topuk kanında gebelik testleri (indirekt Coombs), toplum taramalarında riskli gruba yapılan testler (Mantoux, DEXA, ter testi). Ter testi sorusu 2024-25 ve 2025-26'da üst üste sorulmuştur.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemi aşağıdakilerden hangisidir?",
+     "cevap": "Koruyucu tıp",
+     "s": [
+      3
+     ],
+     "aciklama": [
+      "Soru, koruyucu tıbbın tanımını boşluk doldurma biçiminde ölçüyor.",
+      "Doğru cevap koruyucu tıptır: s3'teki tanım 'hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemi' cümlesinin birebir kendisidir.",
+      "En güçlü çeldirici periyodik sağlık muayenesidir; PSM koruyucu tıbbın bir uygulamasıdır ama tanımı risklerin hastalık oluşmadan aranması ve yaşa-cinsiyete göre biçimlendirilmiş izlem programıdır (s14–16), bakım yönteminin kendisi değildir."
+     ],
+     "ornek": "s4'te koruyucu tıbbın dört özelliği sıralanır: insan hakkıdır, sağlıklı yaşam için özendiricidir, sağlığın devamını sağlar ve maliyet etkindir; tanımdaki 'iyilik hâlinin devamlılığı' ifadesi üçüncü özelliğin karşılığıdır.",
+     "tuzak": "Koruyucu tıbbı periyodik muayene ya da check-up ile karıştırmak: koruyucu tıp genel yaklaşım, PSM onun kişiye özgü uygulaması, check-up ise standart formdur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Koruma düzeyleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "cevap": "Davranış değişiklikleri hastalığın ortaya çıkmasını önleyen koruyuculuk olup hedef kitlesi sağlıklı kişilerdir.",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru, koruma düzeylerinin tanımını, örneğini ve hedef kitlesini birlikte ölçüyor.",
+      "Doğru şık 'davranış değişiklikleri hastalığın ortaya çıkmasını önleyen koruyuculuktur, hedef kitle sağlıklı kişilerdir' ifadesidir; s6'da birincil koruma tam bu üç satırla tanımlanır.",
+      "Yanlış şıklar komşu düzeylerin özelliklerini karıştırır: ikincil korumanın hedefi asemptomatik hastadır (s7), üçüncülün semptomatik hastadır (s8), 'önce zarar verme' dördüncül korumaya aittir (s9) ve rehabilitasyon yalnız üçüncül korumada yer alır (s10)."
+     ],
+     "ornek": "s10'daki 2x2 tabloda birincil koruma 'hekim hastalık yok, hasta hastalıksız' hücresindedir ve örnek olarak aşılama verilir; bebeğe aşı yapılan fotoğraf da s6'da birincil korumayı gösterir.",
+     "tuzak": "Hedef kitleleri karıştırmak: sağlıklı kişi birincil, asemptomatik hasta ikincil, semptomatik hasta üçüncül korumanın hedefidir."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşırı medikalizasyon riskindeki hastayı ve toplumu medikal istilalardan korumak ve onlara bilimsel ve etik olarak kabul edilebilir bakım prosedürlerini sağlamak için yapılan eylem olarak tanımlanan aile hekimliği koruma yöntemi aşağıdakilerden hangisidir?",
+     "cevap": "Dördüncül koruma",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Soru, WONCA'nın dördüncül koruma tanımını aile hekimliğinin koruyucu yöntemi olarak soruyor.",
+      "Doğru cevap dördüncül korumadır: s9'a göre aşırı medikalizasyon riskindeki hastayı ve toplumu medikal istilalardan korumak ve etik olarak kabul edilebilir bakım sağlamak dördüncül korumanın tanımıdır ve kavram aile hekimlerinin hastayı tıbbi girişimlerin zararından koruma sorumluluğundan doğmuştur.",
+      "En güçlü çeldirici birincil korumadır; o da 'korumak' fiiliyle anlatılır ama hastalığın ortaya çıkmasını önler, gereksiz tıbbi girişimden korumayı değil."
+     ],
+     "ornek": "s10 tablosunda dördüncül koruma 'hekim hastalık yok, hasta hastalıklı' hücresindedir: kendini hasta hisseden ama hekimin hastalık bulmadığı kişiyi invaziv girişimlerden korumak.",
+     "tuzak": "'Önce zarar verme' ilkesini birincil korumaya bağlamak; bu ilke yalnız dördüncül korumanındır."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi aile hekiminin görev ve sorumlulukları arasında yer almaz?",
+     "cevap": "İkinci basamak tedavi vermek",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru, aile hekiminin görev ve sorumluluklarında olmayan maddeyi soruyor.",
+      "Doğru cevap ikinci basamak tedavidir: s13'teki görev listesi birinci basamak teşhis, tedavi, rehabilitasyon ve danışmanlık hizmetini sayar, ikinci basamak tedavi aile hekiminin görevi değildir.",
+      "Öteki şıklar (koruyucu hizmet, periyodik muayene, kayıtlı kişileri değerlendirme) görev listesindedir; listede olmayan tek ifade basamağı değiştirilmiş olandır."
+     ],
+     "ornek": "s13'ün beşinci maddesi kayıtlı kişileri yılda en az bir kez değerlendirip sağlık kayıtlarını güncellemektir; görevlerin hepsi birinci basamak ve kayıtlı nüfus üzerinedir.",
+     "tuzak": "'Birinci basamak' ile 'ikinci basamak' kelimesini gözden kaçırmak; şıkta yalnız basamak değişir."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Birinci basamakta görev yapan hekimin görevleri arasında olmayan aşağıdakilerden hangisidir?",
+     "cevap": "Tedavi gerektiren hastaların yatışını yaparak tedavi etmek",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru, birinci basamakta görev yapan hekimin görevleri arasında olmayan işi soruyor.",
+      "Doğru cevap hastanın yatışını yaparak tedavi etmektir; s13'e göre birinci basamak hekimi teşhis, tedavi, rehabilitasyon ve danışmanlık hizmetini ayakta verir, periyodik muayene ve tarama yapar.",
+      "En güçlü çeldirici periyodik sağlık muayenesi ve taramadır; bu, s13'ün dördüncü maddesiyle açıkça görev olarak tanımlanmıştır."
+     ],
+     "ornek": "Aile hekimi riskli kişiyi tarar ve gerektiğinde sevk eder: SMA ve hemoglobinopati akışlarında taşıyıcı çift ileri merkeze, PKU şüphesi pediatrik metabolizma kliniğine yönlendirilir; yatırarak tedavi bu akışlarda hep ileri basamaktadır.",
+     "tuzak": "Tedavi kelimesini gördüğü için birinci basamak görevi saymak; yatışlı tedavi ikinci-üçüncü basamağın işidir."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi evlilik öncesi yapılan tarama testlerinden değildir?",
+     "cevap": "Serum selenyum düzeyi",
+     "s": [
+      20
+     ],
+     "aciklama": [
+      "Soru, evlilik öncesi tarama testlerinden olmayanı soruyor.",
+      "Doğru cevap serum selenyum düzeyidir: s20'deki yedi test Anti HIV, HBsAg, Anti HCV, VDRL, kan grubu ve hemogram, hemoglobin elektroforezi ve SMA'dır; selenyum listede yoktur.",
+      "Öteki şıklar listenin birebir üyeleridir; bu yüzden soruyu çözmenin yolu yedi testin tamamını bilmektir."
+     ],
+     "ornek": "s21 akış şemasında hemoglobinopati taraması önce kayıtlı erkek eş adayından kan örneğiyle başlar; testin evlilik raporu için başvuran çifte yapıldığı bu akışta görülür.",
+     "tuzak": "Eser element ya da vitamin düzeylerini tarama testi sanmak; evlilik öncesi testler enfeksiyon, kan grubu ve kalıtsal hastalık taşıyıcılığına yöneliktir."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdakilerden hangisi evlilik öncesi tarama testleri arasında yer almaz?",
+     "cevap": "Anti-HAV testi",
+     "s": [
+      20
+     ],
+     "aciklama": [
+      "Soru, evlilik öncesi tarama testi olmayanı soruyor.",
+      "Doğru cevap Anti-HAV testidir: s20'de hepatit B (HBsAg) ve hepatit C (Anti HCV) taranır, hepatit A taranmaz.",
+      "En güçlü çeldiriciler HBsAg ve Anti HCV'dir; hepatit harflerinin benzerliği şıkları karıştırır, oysa listede yalnız kan ve cinsel yolla bulaşan hepatitler vardır."
+     ],
+     "ornek": "Aynı mantık erişkin başlığında sürer: s126'da cinsel aktif 18 yaş üstü kişide onayla hepatit B, hepatit C ve HIV taranır; hepatit A burada da yoktur.",
+     "tuzak": "Hepatit A'yı da evlilik öncesi testlere katmak; hepatit A fekal-oral bulaşır ve listede yer almaz."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Ülkemizde evlilik öncesi tarama programında yer alan test hangisidir?",
+     "cevap": "Hemoglobin elektroforezi",
+     "s": [
+      20
+     ],
+     "aciklama": [
+      "Soru, evlilik öncesi taramada yer alan testi soruyor.",
+      "Doğru cevap hemoglobin elektroforezidir: s20'de Akdeniz anemisi (talasemi) için hemoglobin elektroforezi testi listededir.",
+      "Çeldiriciler yenidoğan topuk kanı testleridir (fenilalanin s57, biyotinidaz s61, TSH s59) ve ter testidir (s65); bunlar yenidoğanda yapılır, evlilik öncesinde değil."
+     ],
+     "ornek": "s128'de erişkin bölümünde de çocuk sahibi olmak isteyen tüm çiftlere orak hücreli anemi ve talasemi sorgulaması yapılır ve iki taşıyıcı çift prenatal tanıya yönlendirilir; elektroforez bu taşıyıcılığı gösteren testtir.",
+     "tuzak": "Evlilik öncesi taramayla yenidoğan topuk kanı taramasını karıştırmak; ikisinde ortak olan tek hastalık SMA'dır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Spinal müsküler atrofi (SMA) hastalığı için aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Tarama için öncelikle erkek eşten/eş adayından örnek alınır; erkek eşin/eş adayının sonucunda şüpheli pozitiflik yoksa çift takipten çıkarılır.",
+     "s": [
+      24
+     ],
+     "aciklama": [
+      "Soru, SMA hakkında doğru olan ifadeyi soruyor.",
+      "Doğru şık 'tarama için önce erkek eş adayından örnek alınır, şüpheli pozitif yoksa takipten çıkarılır' ifadesidir; s24 bu sırayı birebir verir.",
+      "Yanlış şıklar s22–23'ü tersine çevirir: kayıp geri dönüşümsüzdür (geri dönüşümlü değil), kalıtım otozomal resesiftir (dominant değil), iki taşıyıcı çiftte hasta çocuk olasılığı %25'tir (%50 taşıyıcıdır) ve tarama evlilik öncesinde yapılır."
+     ],
+     "ornek": "s25 akış şemasında erkekten onamla kan alınır, taşıyıcılık negatifse çift takipten çıkarılır; pozitif ya da şüpheliyse kadın eş adayından örnek alınır ve iki taşıyıcı eşe tıbbi genetik uzmanı danışmanlık verir.",
+     "tuzak": "%25 ile %50'yi yer değiştirmek: %25 hasta, %50 belirti göstermeyen taşıyıcı çocuk olasılığıdır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Tüm gebelerde anne ve bebeğin sağlığını korumaya yönelik olarak uygulanan “Doğum Öncesi Bakım İzlem Protokolü”ne göre her gebeye en az kaç kez nitelikli izlem yapılmalıdır?",
+     "cevap": "En az 4 kez",
+     "s": [
+      28
+     ],
+     "aciklama": [
+      "Soru, Doğum Öncesi Bakım İzlem Protokolüne göre gebeye yapılması gereken en az nitelikli izlem sayısını soruyor.",
+      "Doğru cevap en az 4 kezdir; s28'de 'her gebenin en az 4 kez nitelikli izlenmesi gereklidir' yazar.",
+      "En güçlü çeldirici 6'dır; 6 sayısı doğum sonu lohusa izlemlerinin sayısıdır (hastanede 3 + evde 3, s40)."
+     ],
+     "ornek": "Dört izlemin zamanı: ilk 14 hafta (30 dakika, s29), 18–24. hafta (s32), 28–32. hafta (s34) ve 36–38. hafta (s36); son üçüne 20 dakika ayrılır.",
+     "tuzak": "Doğum öncesi 4 izlemi doğum sonu 6 izlemle karıştırmak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Türkiye'de aşağıdaki taramalardan hangisi hem ebeveyn adaylarında (evlilik öncesi taşıyıcılık taraması) hem de yenidoğanda yapılır?",
+     "cevap": "Spinal müsküler atrofi",
+     "s": [
+      54
+     ],
+     "aciklama": [
+      "Soru, hem ebeveyn adaylarında (evlilik öncesi) hem yenidoğanda yapılan taramayı soruyor.",
+      "Doğru cevap spinal müsküler atrofidir: SMA hem s20 evlilik öncesi test listesinde hem s54 ve s56 yenidoğan tarama listesinde yer alır.",
+      "Çeldiriciler yalnız birinde yer alır: biyotinidaz eksikliği, fenilketonüri ve kistik fibrozis yalnız yenidoğanda taranır; prematüre retinopatisi (s73) ise ayrı bir göz muayenesidir."
+     ],
+     "ornek": "Evlilik öncesinde SMA taşıyıcılığı erkek eşten başlayarak moleküler genetik analizle aranır (s24–25), yenidoğanda ise 3–5. gün topuk kanında taranır (s56).",
+     "tuzak": "Talasemiyi de iki programda sanmak; talasemi evlilik öncesi elektroforezle taranır, topuk kanı listesinde yoktur."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Türkiye'de Sağlık Bakanlığı Ulusal Yenidoğan Tarama Programı kapsamında doğum sonrası 3-5. günlerde topuk kanından taranan hastalıklar arasında aşağıdakilerden hangisi yer almaz?",
+     "cevap": "İndirekt Coombs testi",
+     "s": [
+      56
+     ],
+     "aciklama": [
+      "Soru, 3–5 günlük yenidoğanda topuk kanından bakılmayan testi soruyor.",
+      "Doğru cevap indirekt Coombs testidir; s35'e göre bu test gebelikte Rh uygunsuzluğunda anneye yapılır, topuk kanı testi değildir.",
+      "Öteki şıklar s56 topuk kanı listesindedir: fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, KAH, kistik fibrozis ve SMA."
+     ],
+     "ornek": "Üçüncü gebe izleminde (28–32. hafta) Rh uygunsuzluğu varsa indirekt Coombs bakılır ve negatifse anti-D immünglobulin yapılır (s35); test anneye aittir, bebeğe değil.",
+     "tuzak": "Coombs testini yenidoğan sarılığıyla ilişkilendirip topuk kanı testi sanmak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi yenidoğanda topuk kanı ile yapılan ve Ulusal Yenidoğan Tarama Programında yer alan hastalıklardandır?",
+     "cevap": "Biyotinidaz eksikliği",
+     "s": [
+      56
+     ],
+     "aciklama": [
+      "Soru, yenidoğanda topuk kanıyla taranan hastalığı soruyor.",
+      "Doğru cevap biyotinidaz eksikliğidir; s56 topuk kanı listesinde yer alır ve s61'de ayrıntılandırılır.",
+      "Çeldiriciler dersin başka taramalarıdır: prematüre retinopatisi göz muayenesiyle (s73), D vitamini profilaksiyle (s76), talasemi evlilik öncesi elektroforezle (s20) ilgilidir."
+     ],
+     "ornek": "s62 akış şemasında biyotinidaz enzim aktivitesi 65 U'nun üzerindeyse normal, altındaysa tekrar örnek alınır ve yine düşükse pediatrik beslenme ve metabolizma kliniğine sevk edilir; tedavi günlük biotindir (s61).",
+     "tuzak": "G6PD eksikliğini topuk kanı listesinde sanmak; ulusal liste altı hastalıktır ve G6PD yoktur."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Ülkemizde yenidoğan döneminde topuk kanından yapılan tarama testleri kapsamında taranan hastalık hangisidir?",
+     "cevap": "Konjenital hipotiroidi",
+     "s": [
+      56
+     ],
+     "aciklama": [
+      "Soru, topuk kanından yapılan tarama kapsamındaki hastalığı soruyor.",
+      "Doğru cevap konjenital hipotiroididir; s56 listesinde yer alır ve s59'a göre önlenebilir zekâ geriliğinin en önemli nedenidir.",
+      "Çeldiriciler aynı derste ayrı programla taranan durumlardır: gelişimsel kalça displazisi 41. gün muayene ve USG ile (s75), işitme kaybı ilk 72 saatte işitme testiyle (s67), katarakt kırmızı refle testiyle (s74), talasemi evlilik öncesi (s20)."
+     ],
+     "ornek": "s60 akışında topuk kanı TSH'si 5,5 mIU/L'nin altındaysa normal, 5,5–20 arasında tekrar örnek, 20'nin üzerindeyse doğrudan serum T4 ve TSH bakılır ve pediatrik endokrinolojiye sevk edilir.",
+     "tuzak": "Yenidoğanda yapılan her taramayı topuk kanı sanmak; işitme ve kalça taramaları ayrı yöntemlerle yapılır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Yenidoğan taraması ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Bebeklerde biyotinidaz eksikliğinin erken belirtileri; görme ve işitme kaybı, güçsüzlük, zihinsel gerilik, koma ve ölüm şeklinde olabilir.",
+     "s": [
+      61
+     ],
+     "aciklama": [
+      "Soru, yenidoğan taramasıyla ilgili yanlış ifadeyi soruyor.",
+      "Yanlış öncül 'biyotinidaz eksikliğinin erken belirtileri görme ve işitme kaybıdır' ifadesidir; s61'e göre erken belirtiler nöbetler, enfeksiyonlar ve saç kaybıdır, görme-işitme kaybı geç dönemde görülür.",
+      "Öteki öncüller derste doğrudur: KAH'ın %90'ından fazlası 21-hidroksilaz eksikliğidir (s63), taranan hastalıkların çoğu ilk iki haftada ortaya çıkar (s55) ve işitme taraması ilk 72 saatte yapılır (s67)."
+     ],
+     "ornek": "s61'de geç dönem tablosu görme ve işitme kaybı, güçsüzlük, zihinsel gerilik, koma ve ölümdür; günlük biotin bu tablonun gelişmesini önler.",
+     "tuzak": "Erken ve geç belirtileri yer değiştirmek; soru tam bu değişiklikle kurulmuştur."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Hangisi ulusal toplum tabanlı tarama testlerinden değildir?",
+     "cevap": "Ter testi",
+     "s": [
+      65
+     ],
+     "aciklama": [
+      "Soru, ulusal toplum tabanlı tarama testlerinden olmayanı soruyor.",
+      "Doğru cevap ter testidir; s65'e göre ter testi kistik fibrozisin tanı testidir ve s66 akışında topuk kanı taraması pozitif çıkan bebek ter testine gönderilir.",
+      "Öteki şıklar tarama testidir: mamografi, smear/HPV ve gaitada gizli kan s118 ulusal tarama standartlarında, topuk kanı ise yenidoğan taramasındadır."
+     ],
+     "ornek": "s66 akışında topuk kanı değeri 90 µg/l ve üzerindeyse 7–14. günde tekrar örnek alınır, 70 µg/l ve üzerindeyse ter testi için sevk edilir: tarama topuk kanı, doğrulama ter testidir.",
+     "tuzak": "Tarama testiyle tanı testini karıştırmak."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi ülkemizde standart olarak yapılan tarama testlerinden değildir?",
+     "cevap": "Ter testi",
+     "s": [
+      65
+     ],
+     "aciklama": [
+      "Soru, ülkemizde standart olarak yapılan tarama testlerinden olmayanı soruyor; 2024-25 sorusunun bir yıl sonra tekrarıdır.",
+      "Doğru cevap yine ter testidir; s65'te kistik fibrozis tanısının ter testiyle konduğu yazılıdır.",
+      "Çeldiriciler s118 kartındaki toplum tabanlı taramalar ve s56 yenidoğan topuk kanı taramasıdır."
+     ],
+     "ornek": "Kistik fibrozisin ülkemizdeki sıklığı 3000 doğumda 1'dir (s65); bu yüzden yenidoğanda topuk kanıyla taranır, ama tanıyı ter testi koyar.",
+     "tuzak": "Kistik fibrozis topuk kanında taranıyor diye ter testini de tarama saymak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Ulusal aşı takvimimize göre 5'li karma aşı (Difteri-Aselüler Boğmaca-Tetanoz-İnaktif Polio-Haemophilus influenzae tip b) hangi aylarda yapılır?",
+     "cevap": "2., 4., 6. ve 18. ayın sonunda",
+     "s": [
+      77
+     ],
+     "aciklama": [
+      "Soru, karma aşının hangi aylarda yapıldığını soruyor.",
+      "Doğru cevap 2., 4., 6. ve 18. ay sonudur; s78 aşı takviminde DaBT-İPA-Hib-HepB satırı 2. ay I, 4. ay II, 6. ay III ve 18. ay RAPEL gösterir.",
+      "En güçlü çeldirici '4., 6. ve 12. ay'dır; 12. ay KPA rapelinin, KKK ve suçiçeği 1. dozunun ayıdır (s81), karma aşının değil."
+     ],
+     "ornek": "s77'de 4. ay izleminde 'DaBT-İPA-Hib 2. doz, KPA 2. doz', s81'de 6. ayda 'DaBT-İPA-Hib 3. doz' yazılıdır; 18. ay rapeli ise tablodadır.",
+     "tuzak": "KPA'nın 12. ay rapelini karma aşıya yazmak; KPA 2, 4, 12. ay, karma aşı 2, 4, 6, 18. aydır."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Bebeklik döneminde demir profilaksisine kaçıncı aylarda başlanır?",
+     "cevap": "4-12 ay arası",
+     "s": [
+      79
+     ],
+     "aciklama": [
+      "Soru, bebeklik döneminde demir profilaksisinin hangi aylarda yapıldığını soruyor.",
+      "Doğru cevap 4–12 aydır; s79'da '4–12 ay arası çocuklarda demir profilaksisinin yapılması' yazılıdır.",
+      "En güçlü çeldirici 2. aydan başlayan aralıktır; 2. ay başlangıcı yalnız prematüre ya da düşük doğum ağırlıklı bebekler içindir (s70–71)."
+     ],
+     "ornek": "s77'de anemisi olmayan bebeğe 4. aydan itibaren profilaktik dozda (1 damla/kg) ücretsiz demir verilir; 9. ayda Hb bakılarak profilaksinin sonucu denetlenir (s79).",
+     "tuzak": "Term ve prematüre bebeğin başlangıç ayını karıştırmak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Okul çağı çocuklarında birinci basamakta obezite taraması ile ilgili aşağıdaki ifadeler veriliyor: I. 6-18 yaş arası okul döneminde yılda bir kez ağırlık, boy, beden kütle indeksi (BKİ) ölçümlerinin yapılması II. Obez ya da fazla kilolu olduğu belirlenen çocukların 3 ile 6 ayda bir izlenmesi gerekir. III. Fazla tartılı ve obez tanısı alan her çocuğa tanı anında açlık kan şekeri, kan lipid profili, ALT, AST değerleri bakılmalı, değerleri yüksek olan çocuklar bir üst merkeze sevk edilmelidir. IV. Fazla tartılı ve obez tanısı alan her çocuğa diyet ve ilaç tedavisi başlanmalıdır. Bu ifadelerden hangisi ya da hangileri doğrudur?",
+     "cevap": "I, II ve III",
+     "s": [
+      102
+     ],
+     "aciklama": [
+      "Soru, okul çağı (6–18 yaş) obezite taramasıyla ilgili öncüllerden doğru olanları soruyor.",
+      "Doğru cevap I, II ve III'tür: yılda bir ağırlık, boy ve BKİ ölçümü, fazla kilolu ve obez çocuğun 3–6 ayda bir izlenmesi ve tanı anında açlık kan şekeri, lipid, ALT, AST bakılması s102'nin üç maddesidir.",
+      "IV. öncül (her çocuğa diyet ve ilaç) derste yoktur; s102'ye göre değerleri yüksek olan çocuk ilaçla tedavi edilmez, bir üst merkeze sevk edilir."
+     ],
+     "ornek": "Erişkinde de yılda bir ölçüm kuralı sürer ama bel çevresi eklenir: 18–65 yaşta ağırlık, boy, BKİ ve bel çevresi yılda bir ölçülür (s116).",
+     "tuzak": "Birinci basamakta obez çocuğa ilaç başlanacağını sanmak; birinci basamağın görevi ölçüm, izlem ve sevktir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Erişkinlik dönemi taramaları ile ilgili; I. 35 yaşın üzerindeki tüm erişkinlere beş yılda bir TSH bakılması önerilir. II. 40–69 yaş arası bütün kadınlarda yılda bir mamografi yapılması gereklidir. III. 45 yaşın üzerinde herkeste ve risk faktörü olan kişilerde diabetes mellitus taraması önerilir. IV. 40–70 yaş grubundaki yetişkinlere yılda bir gaitada gizli kan testi yapılmalıdır. ifadelerinden hangisi/hangileri doğrudur?",
+     "cevap": "I ve III",
+     "s": [
+      115
+     ],
+     "aciklama": [
+      "Soru, erişkin taramalarıyla ilgili dört öncülden doğru olanları soruyor.",
+      "Doğru cevap I ve III'tür: 35 yaş üstü tüm erişkinlere beş yılda bir TSH (s115) ve 45 yaş üstü herkese ve risk faktörü olanlara DM taraması (s114) derste birebir geçer.",
+      "II yanlıştır çünkü 40–69 yaş kadınlarda yılda bir yapılan hekim muayenesidir, mamografi iki yılda birdir (s119); IV yanlıştır çünkü gaitada gizli kan 50–70 yaşta başlar, 40 yaş yalnız birinci derece akrabada kolorektal kanser ya da adenomatöz polip öyküsü varsa geçerlidir (s120)."
+     ],
+     "ornek": "Aynı 35 yaş ve beş yıl kuralı lipid profilinde de geçerlidir (s113); DM taramasında ise normal sonuç üç yılda bir tekrarlanır (s114).",
+     "tuzak": "Sayıların bir kısmını değiştirerek kurulan öncüller: yılda bir ↔ iki yılda bir, 40 ↔ 50 yaş."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi erişkin dönemde yapılan toplum tabanlı tarama standartları arasında yer alır?",
+     "cevap": "Mamografi",
+     "s": [
+      119
+     ],
+     "aciklama": [
+      "Soru, erişkin dönemde toplum tabanlı tarama standartlarında yer alan testi soruyor.",
+      "Doğru cevap mamografidir; s118 ulusal tarama kartında mamografi 40–69 yaş kadınlarda 2 yılda bir yer alır.",
+      "Çeldiriciler derste geçer ama toplum tabanlı değildir: Mantoux yalnız riskli gruplara verem savaş dispanserinde (s117), DEXA 65 yaş üstü kadın ve 70 yaş üstü erkeğe (s131), PSA yerine prostatta yalnız bilgilendirme ve üroloji yönlendirmesi (s122), OGTT ise DM taramasında seçeneklerden biridir (s114)."
+     ],
+     "ornek": "s119'da 40–69 yaş arası bütün kadınlarda yılda bir hekim klinik muayenesi ve iki yılda bir mamografi önerilir; toplum tabanlı taramanın ölçütü yaş grubundaki herkese uygulanmasıdır.",
+     "tuzak": "Riskli gruplara yapılan testleri (Mantoux, DEXA) toplum taraması saymak."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Meme, serviks ve kolon kanseri tarama testleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "18–35 yaş arası erkeklere her yıl kolonoskopi yapılmalıdır",
+     "s": [
+      120
+     ],
+     "aciklama": [
+      "Soru, meme, serviks ve kolon kanseri taramalarıyla ilgili yanlış ifadeyi soruyor.",
+      "Yanlış ifade '18–35 yaş arası erkeklere her yıl kolonoskopi'dir; s118'de kolonoskopi 51 ve 61 yaşta, 10 yılda bir yapılır.",
+      "Öteki şıklar s118 kartının satırlarıdır: kendi meme muayenesi 20 yaş üzeri ayda bir, doktor muayenesi 40 yaş üzeri yılda bir, mamografi 40–69 yaşta 2 yılda bir ve dışkıda gizli kan 50–70 yaşta 2 yılda bir; sınav gizli kan için kartın '2 yılda bir' değerini doğru saymıştır."
+     ],
+     "ornek": "s120'deki erişkin tarama maddesi gizli kan testi için 'yılda bir' yazar; s118 kartı ise '2 yılda bir' der. Bu soruda doğru kabul edilen değer kartınkidir.",
+     "tuzak": "Gizli kan sıklığında iki değeri karıştırmak ve kolonoskopiyi genç yaşa taşımak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Yenidoğanlarda topuk kanı alınarak yapılan tarama testi programında bulunmayan hastalık hangisidir?",
+     "cevap": "Turner sendromu",
+     "s": [
+      56
+     ],
+     "aciklama": [
+      "Soru, topuk kanı programında taranmayan hastalığı soruyor (Çocuk Sağlığı sınavından).",
+      "Doğru cevap Turner sendromudur; s56'daki altı hastalığın hiçbiri kromozom anomalisi değildir.",
+      "Çeldiriciler listenin üyeleridir (kistik fibrozis, fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği); listeyi bilen öğrenci dışarıda kalanı kolayca bulur."
+     ],
+     "ornek": "Kromozom anomalileri bu derste yenidoğanda değil gebelikte taranır: 11–14. haftada ikili test (s31) ve 16–20. haftada üçlü test trizomi 21 ve 18'i tarar (s33).",
+     "tuzak": "Kromozom taramasını yenidoğan topuk kanına taşımak; kromozom taraması gebelik izleminin işidir."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış 24 çıkmış sorusu var (21 doğrudan, 3 ilgili) ve altı alt başlıkta toplanır: koruma düzeyleri ve koruyucu tıp tanımı (2020-21, 2022-23), aile hekiminin görevleri (2018-19, 2025-26), evlilik öncesi tarama testleri ve SMA (2020-21, 2022-23, 2023-24, 2025-26), doğum öncesi izlem sayısı (2020-21), yenidoğan topuk kanı taraması ve ter testi (2020-21'den 2025-26'ya her yıl), bebek aşı ve demir takvimi (2020-21, 2021-22) ile erişkin tarama yaş ve aralıkları (2020-21, 2025-26). En sık kök kalıbı bir listeden 'hangisi değildir / yanlıştır' sorusudur: evlilik öncesi test listesi, topuk kanı listesi ve toplum tabanlı tarama standartları her yıl bu kalıpla gelir. İkinci kalıp sayı sorusudur (en az 4 izlem, 4–12 ay demir, 2-4-6-18. ay karma aşı) ve üçüncüsü öncüllü I–IV sorularıdır (erişkin taramaları, okul çağı obezitesi). Çeldiriciler hep dersin komşu listesinden seçilir: evlilik öncesi testlerde yenidoğan testleri, topuk kanında gebelik testleri (indirekt Coombs), toplum taramalarında riskli gruba yapılan testler (Mantoux, DEXA, ter testi). Ter testi sorusu 2024-25 ve 2025-26'da üst üste sorulmuştur.",
+    "2020-2021: Hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemi aşağıdakilerden hangisidir?",
+    "Cevap: Koruyucu tıp.",
+    "Soru, koruyucu tıbbın tanımını boşluk doldurma biçiminde ölçüyor.",
+    "Doğru cevap koruyucu tıptır: s3'teki tanım 'hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemi' cümlesinin birebir kendisidir.",
+    "En güçlü çeldirici periyodik sağlık muayenesidir; PSM koruyucu tıbbın bir uygulamasıdır ama tanımı risklerin hastalık oluşmadan aranması ve yaşa-cinsiyete göre biçimlendirilmiş izlem programıdır (s14–16), bakım yönteminin kendisi değildir.",
+    "Örnek: s4'te koruyucu tıbbın dört özelliği sıralanır: insan hakkıdır, sağlıklı yaşam için özendiricidir, sağlığın devamını sağlar ve maliyet etkindir; tanımdaki 'iyilik hâlinin devamlılığı' ifadesi üçüncü özelliğin karşılığıdır.",
+    "Tuzak: Koruyucu tıbbı periyodik muayene ya da check-up ile karıştırmak: koruyucu tıp genel yaklaşım, PSM onun kişiye özgü uygulaması, check-up ise standart formdur.",
+    "2020-2021: Koruma düzeyleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "Cevap: Davranış değişiklikleri hastalığın ortaya çıkmasını önleyen koruyuculuk olup hedef kitlesi sağlıklı kişilerdir.",
+    "Soru, koruma düzeylerinin tanımını, örneğini ve hedef kitlesini birlikte ölçüyor.",
+    "Doğru şık 'davranış değişiklikleri hastalığın ortaya çıkmasını önleyen koruyuculuktur, hedef kitle sağlıklı kişilerdir' ifadesidir; s6'da birincil koruma tam bu üç satırla tanımlanır.",
+    "Yanlış şıklar komşu düzeylerin özelliklerini karıştırır: ikincil korumanın hedefi asemptomatik hastadır (s7), üçüncülün semptomatik hastadır (s8), 'önce zarar verme' dördüncül korumaya aittir (s9) ve rehabilitasyon yalnız üçüncül korumada yer alır (s10).",
+    "Örnek: s10'daki 2x2 tabloda birincil koruma 'hekim hastalık yok, hasta hastalıksız' hücresindedir ve örnek olarak aşılama verilir; bebeğe aşı yapılan fotoğraf da s6'da birincil korumayı gösterir.",
+    "Tuzak: Hedef kitleleri karıştırmak: sağlıklı kişi birincil, asemptomatik hasta ikincil, semptomatik hasta üçüncül korumanın hedefidir.",
+    "2022-2023: Aşırı medikalizasyon riskindeki hastayı ve toplumu medikal istilalardan korumak ve onlara bilimsel ve etik olarak kabul edilebilir bakım prosedürlerini sağlamak için yapılan eylem olarak tanımlanan aile hekimliği koruma yöntemi aşağıdakilerden hangisidir?",
+    "Cevap: Dördüncül koruma.",
+    "Soru, WONCA'nın dördüncül koruma tanımını aile hekimliğinin koruyucu yöntemi olarak soruyor.",
+    "Doğru cevap dördüncül korumadır: s9'a göre aşırı medikalizasyon riskindeki hastayı ve toplumu medikal istilalardan korumak ve etik olarak kabul edilebilir bakım sağlamak dördüncül korumanın tanımıdır ve kavram aile hekimlerinin hastayı tıbbi girişimlerin zararından koruma sorumluluğundan doğmuştur.",
+    "En güçlü çeldirici birincil korumadır; o da 'korumak' fiiliyle anlatılır ama hastalığın ortaya çıkmasını önler, gereksiz tıbbi girişimden korumayı değil.",
+    "Örnek: s10 tablosunda dördüncül koruma 'hekim hastalık yok, hasta hastalıklı' hücresindedir: kendini hasta hisseden ama hekimin hastalık bulmadığı kişiyi invaziv girişimlerden korumak.",
+    "Tuzak: 'Önce zarar verme' ilkesini birincil korumaya bağlamak; bu ilke yalnız dördüncül korumanındır.",
+    "2025-2026: Aşağıdakilerden hangisi aile hekiminin görev ve sorumlulukları arasında yer almaz?",
+    "Cevap: İkinci basamak tedavi vermek.",
+    "Soru, aile hekiminin görev ve sorumluluklarında olmayan maddeyi soruyor.",
+    "Doğru cevap ikinci basamak tedavidir: s13'teki görev listesi birinci basamak teşhis, tedavi, rehabilitasyon ve danışmanlık hizmetini sayar, ikinci basamak tedavi aile hekiminin görevi değildir.",
+    "Öteki şıklar (koruyucu hizmet, periyodik muayene, kayıtlı kişileri değerlendirme) görev listesindedir; listede olmayan tek ifade basamağı değiştirilmiş olandır.",
+    "Örnek: s13'ün beşinci maddesi kayıtlı kişileri yılda en az bir kez değerlendirip sağlık kayıtlarını güncellemektir; görevlerin hepsi birinci basamak ve kayıtlı nüfus üzerinedir.",
+    "Tuzak: 'Birinci basamak' ile 'ikinci basamak' kelimesini gözden kaçırmak; şıkta yalnız basamak değişir.",
+    "2018-2019: Birinci basamakta görev yapan hekimin görevleri arasında olmayan aşağıdakilerden hangisidir?",
+    "Cevap: Tedavi gerektiren hastaların yatışını yaparak tedavi etmek.",
+    "Soru, birinci basamakta görev yapan hekimin görevleri arasında olmayan işi soruyor.",
+    "Doğru cevap hastanın yatışını yaparak tedavi etmektir; s13'e göre birinci basamak hekimi teşhis, tedavi, rehabilitasyon ve danışmanlık hizmetini ayakta verir, periyodik muayene ve tarama yapar.",
+    "En güçlü çeldirici periyodik sağlık muayenesi ve taramadır; bu, s13'ün dördüncü maddesiyle açıkça görev olarak tanımlanmıştır.",
+    "Örnek: Aile hekimi riskli kişiyi tarar ve gerektiğinde sevk eder: SMA ve hemoglobinopati akışlarında taşıyıcı çift ileri merkeze, PKU şüphesi pediatrik metabolizma kliniğine yönlendirilir; yatırarak tedavi bu akışlarda hep ileri basamaktadır.",
+    "Tuzak: Tedavi kelimesini gördüğü için birinci basamak görevi saymak; yatışlı tedavi ikinci-üçüncü basamağın işidir.",
+    "2025-2026: Aşağıdakilerden hangisi evlilik öncesi yapılan tarama testlerinden değildir?",
+    "Cevap: Serum selenyum düzeyi.",
+    "Soru, evlilik öncesi tarama testlerinden olmayanı soruyor.",
+    "Doğru cevap serum selenyum düzeyidir: s20'deki yedi test Anti HIV, HBsAg, Anti HCV, VDRL, kan grubu ve hemogram, hemoglobin elektroforezi ve SMA'dır; selenyum listede yoktur.",
+    "Öteki şıklar listenin birebir üyeleridir; bu yüzden soruyu çözmenin yolu yedi testin tamamını bilmektir.",
+    "Örnek: s21 akış şemasında hemoglobinopati taraması önce kayıtlı erkek eş adayından kan örneğiyle başlar; testin evlilik raporu için başvuran çifte yapıldığı bu akışta görülür.",
+    "Tuzak: Eser element ya da vitamin düzeylerini tarama testi sanmak; evlilik öncesi testler enfeksiyon, kan grubu ve kalıtsal hastalık taşıyıcılığına yöneliktir.",
+    "2022-2023: Aşağıdakilerden hangisi evlilik öncesi tarama testleri arasında yer almaz?",
+    "Cevap: Anti-HAV testi.",
+    "Soru, evlilik öncesi tarama testi olmayanı soruyor.",
+    "Doğru cevap Anti-HAV testidir: s20'de hepatit B (HBsAg) ve hepatit C (Anti HCV) taranır, hepatit A taranmaz.",
+    "En güçlü çeldiriciler HBsAg ve Anti HCV'dir; hepatit harflerinin benzerliği şıkları karıştırır, oysa listede yalnız kan ve cinsel yolla bulaşan hepatitler vardır.",
+    "Örnek: Aynı mantık erişkin başlığında sürer: s126'da cinsel aktif 18 yaş üstü kişide onayla hepatit B, hepatit C ve HIV taranır; hepatit A burada da yoktur.",
+    "Tuzak: Hepatit A'yı da evlilik öncesi testlere katmak; hepatit A fekal-oral bulaşır ve listede yer almaz.",
+    "2023-2024: Ülkemizde evlilik öncesi tarama programında yer alan test hangisidir?",
+    "Cevap: Hemoglobin elektroforezi.",
+    "Soru, evlilik öncesi taramada yer alan testi soruyor.",
+    "Doğru cevap hemoglobin elektroforezidir: s20'de Akdeniz anemisi (talasemi) için hemoglobin elektroforezi testi listededir.",
+    "Çeldiriciler yenidoğan topuk kanı testleridir (fenilalanin s57, biyotinidaz s61, TSH s59) ve ter testidir (s65); bunlar yenidoğanda yapılır, evlilik öncesinde değil.",
+    "Örnek: s128'de erişkin bölümünde de çocuk sahibi olmak isteyen tüm çiftlere orak hücreli anemi ve talasemi sorgulaması yapılır ve iki taşıyıcı çift prenatal tanıya yönlendirilir; elektroforez bu taşıyıcılığı gösteren testtir.",
+    "Tuzak: Evlilik öncesi taramayla yenidoğan topuk kanı taramasını karıştırmak; ikisinde ortak olan tek hastalık SMA'dır.",
+    "2020-2021: Spinal müsküler atrofi (SMA) hastalığı için aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Tarama için öncelikle erkek eşten/eş adayından örnek alınır; erkek eşin/eş adayının sonucunda şüpheli pozitiflik yoksa çift takipten çıkarılır.",
+    "Soru, SMA hakkında doğru olan ifadeyi soruyor.",
+    "Doğru şık 'tarama için önce erkek eş adayından örnek alınır, şüpheli pozitif yoksa takipten çıkarılır' ifadesidir; s24 bu sırayı birebir verir.",
+    "Yanlış şıklar s22–23'ü tersine çevirir: kayıp geri dönüşümsüzdür (geri dönüşümlü değil), kalıtım otozomal resesiftir (dominant değil), iki taşıyıcı çiftte hasta çocuk olasılığı %25'tir (%50 taşıyıcıdır) ve tarama evlilik öncesinde yapılır.",
+    "Örnek: s25 akış şemasında erkekten onamla kan alınır, taşıyıcılık negatifse çift takipten çıkarılır; pozitif ya da şüpheliyse kadın eş adayından örnek alınır ve iki taşıyıcı eşe tıbbi genetik uzmanı danışmanlık verir.",
+    "Tuzak: %25 ile %50'yi yer değiştirmek: %25 hasta, %50 belirti göstermeyen taşıyıcı çocuk olasılığıdır.",
+    "2020-2021: Tüm gebelerde anne ve bebeğin sağlığını korumaya yönelik olarak uygulanan “Doğum Öncesi Bakım İzlem Protokolü”ne göre her gebeye en az kaç kez nitelikli izlem yapılmalıdır?",
+    "Cevap: En az 4 kez.",
+    "Soru, Doğum Öncesi Bakım İzlem Protokolüne göre gebeye yapılması gereken en az nitelikli izlem sayısını soruyor.",
+    "Doğru cevap en az 4 kezdir; s28'de 'her gebenin en az 4 kez nitelikli izlenmesi gereklidir' yazar.",
+    "En güçlü çeldirici 6'dır; 6 sayısı doğum sonu lohusa izlemlerinin sayısıdır (hastanede 3 + evde 3, s40).",
+    "Örnek: Dört izlemin zamanı: ilk 14 hafta (30 dakika, s29), 18–24. hafta (s32), 28–32. hafta (s34) ve 36–38. hafta (s36); son üçüne 20 dakika ayrılır.",
+    "Tuzak: Doğum öncesi 4 izlemi doğum sonu 6 izlemle karıştırmak.",
+    "2020-2021: Türkiye'de aşağıdaki taramalardan hangisi hem ebeveyn adaylarında (evlilik öncesi taşıyıcılık taraması) hem de yenidoğanda yapılır?",
+    "Cevap: Spinal müsküler atrofi.",
+    "Soru, hem ebeveyn adaylarında (evlilik öncesi) hem yenidoğanda yapılan taramayı soruyor.",
+    "Doğru cevap spinal müsküler atrofidir: SMA hem s20 evlilik öncesi test listesinde hem s54 ve s56 yenidoğan tarama listesinde yer alır.",
+    "Çeldiriciler yalnız birinde yer alır: biyotinidaz eksikliği, fenilketonüri ve kistik fibrozis yalnız yenidoğanda taranır; prematüre retinopatisi (s73) ise ayrı bir göz muayenesidir.",
+    "Örnek: Evlilik öncesinde SMA taşıyıcılığı erkek eşten başlayarak moleküler genetik analizle aranır (s24–25), yenidoğanda ise 3–5. gün topuk kanında taranır (s56).",
+    "Tuzak: Talasemiyi de iki programda sanmak; talasemi evlilik öncesi elektroforezle taranır, topuk kanı listesinde yoktur.",
+    "2025-2026: Türkiye'de Sağlık Bakanlığı Ulusal Yenidoğan Tarama Programı kapsamında doğum sonrası 3-5. günlerde topuk kanından taranan hastalıklar arasında aşağıdakilerden hangisi yer almaz?",
+    "Cevap: İndirekt Coombs testi.",
+    "Soru, 3–5 günlük yenidoğanda topuk kanından bakılmayan testi soruyor.",
+    "Doğru cevap indirekt Coombs testidir; s35'e göre bu test gebelikte Rh uygunsuzluğunda anneye yapılır, topuk kanı testi değildir.",
+    "Öteki şıklar s56 topuk kanı listesindedir: fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, KAH, kistik fibrozis ve SMA.",
+    "Örnek: Üçüncü gebe izleminde (28–32. hafta) Rh uygunsuzluğu varsa indirekt Coombs bakılır ve negatifse anti-D immünglobulin yapılır (s35); test anneye aittir, bebeğe değil.",
+    "Tuzak: Coombs testini yenidoğan sarılığıyla ilişkilendirip topuk kanı testi sanmak.",
+    "2020-2021: Aşağıdakilerden hangisi yenidoğanda topuk kanı ile yapılan ve Ulusal Yenidoğan Tarama Programında yer alan hastalıklardandır?",
+    "Cevap: Biyotinidaz eksikliği.",
+    "Soru, yenidoğanda topuk kanıyla taranan hastalığı soruyor.",
+    "Doğru cevap biyotinidaz eksikliğidir; s56 topuk kanı listesinde yer alır ve s61'de ayrıntılandırılır.",
+    "Çeldiriciler dersin başka taramalarıdır: prematüre retinopatisi göz muayenesiyle (s73), D vitamini profilaksiyle (s76), talasemi evlilik öncesi elektroforezle (s20) ilgilidir.",
+    "Örnek: s62 akış şemasında biyotinidaz enzim aktivitesi 65 U'nun üzerindeyse normal, altındaysa tekrar örnek alınır ve yine düşükse pediatrik beslenme ve metabolizma kliniğine sevk edilir; tedavi günlük biotindir (s61).",
+    "Tuzak: G6PD eksikliğini topuk kanı listesinde sanmak; ulusal liste altı hastalıktır ve G6PD yoktur.",
+    "2023-2024: Ülkemizde yenidoğan döneminde topuk kanından yapılan tarama testleri kapsamında taranan hastalık hangisidir?",
+    "Cevap: Konjenital hipotiroidi.",
+    "Soru, topuk kanından yapılan tarama kapsamındaki hastalığı soruyor.",
+    "Doğru cevap konjenital hipotiroididir; s56 listesinde yer alır ve s59'a göre önlenebilir zekâ geriliğinin en önemli nedenidir.",
+    "Çeldiriciler aynı derste ayrı programla taranan durumlardır: gelişimsel kalça displazisi 41. gün muayene ve USG ile (s75), işitme kaybı ilk 72 saatte işitme testiyle (s67), katarakt kırmızı refle testiyle (s74), talasemi evlilik öncesi (s20).",
+    "Örnek: s60 akışında topuk kanı TSH'si 5,5 mIU/L'nin altındaysa normal, 5,5–20 arasında tekrar örnek, 20'nin üzerindeyse doğrudan serum T4 ve TSH bakılır ve pediatrik endokrinolojiye sevk edilir.",
+    "Tuzak: Yenidoğanda yapılan her taramayı topuk kanı sanmak; işitme ve kalça taramaları ayrı yöntemlerle yapılır.",
+    "2020-2021: Yenidoğan taraması ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Bebeklerde biyotinidaz eksikliğinin erken belirtileri; görme ve işitme kaybı, güçsüzlük, zihinsel gerilik, koma ve ölüm şeklinde olabilir.",
+    "Soru, yenidoğan taramasıyla ilgili yanlış ifadeyi soruyor.",
+    "Yanlış öncül 'biyotinidaz eksikliğinin erken belirtileri görme ve işitme kaybıdır' ifadesidir; s61'e göre erken belirtiler nöbetler, enfeksiyonlar ve saç kaybıdır, görme-işitme kaybı geç dönemde görülür.",
+    "Öteki öncüller derste doğrudur: KAH'ın %90'ından fazlası 21-hidroksilaz eksikliğidir (s63), taranan hastalıkların çoğu ilk iki haftada ortaya çıkar (s55) ve işitme taraması ilk 72 saatte yapılır (s67).",
+    "Örnek: s61'de geç dönem tablosu görme ve işitme kaybı, güçsüzlük, zihinsel gerilik, koma ve ölümdür; günlük biotin bu tablonun gelişmesini önler.",
+    "Tuzak: Erken ve geç belirtileri yer değiştirmek; soru tam bu değişiklikle kurulmuştur.",
+    "2024-2025: Hangisi ulusal toplum tabanlı tarama testlerinden değildir?",
+    "Cevap: Ter testi.",
+    "Soru, ulusal toplum tabanlı tarama testlerinden olmayanı soruyor.",
+    "Doğru cevap ter testidir; s65'e göre ter testi kistik fibrozisin tanı testidir ve s66 akışında topuk kanı taraması pozitif çıkan bebek ter testine gönderilir.",
+    "Öteki şıklar tarama testidir: mamografi, smear/HPV ve gaitada gizli kan s118 ulusal tarama standartlarında, topuk kanı ise yenidoğan taramasındadır.",
+    "Örnek: s66 akışında topuk kanı değeri 90 µg/l ve üzerindeyse 7–14. günde tekrar örnek alınır, 70 µg/l ve üzerindeyse ter testi için sevk edilir: tarama topuk kanı, doğrulama ter testidir.",
+    "Tuzak: Tarama testiyle tanı testini karıştırmak.",
+    "2025-2026: Aşağıdakilerden hangisi ülkemizde standart olarak yapılan tarama testlerinden değildir?",
+    "Cevap: Ter testi.",
+    "Soru, ülkemizde standart olarak yapılan tarama testlerinden olmayanı soruyor; 2024-25 sorusunun bir yıl sonra tekrarıdır.",
+    "Doğru cevap yine ter testidir; s65'te kistik fibrozis tanısının ter testiyle konduğu yazılıdır.",
+    "Çeldiriciler s118 kartındaki toplum tabanlı taramalar ve s56 yenidoğan topuk kanı taramasıdır.",
+    "Örnek: Kistik fibrozisin ülkemizdeki sıklığı 3000 doğumda 1'dir (s65); bu yüzden yenidoğanda topuk kanıyla taranır, ama tanıyı ter testi koyar.",
+    "Tuzak: Kistik fibrozis topuk kanında taranıyor diye ter testini de tarama saymak.",
+    "2020-2021: Ulusal aşı takvimimize göre 5'li karma aşı (Difteri-Aselüler Boğmaca-Tetanoz-İnaktif Polio-Haemophilus influenzae tip b) hangi aylarda yapılır?",
+    "Cevap: 2., 4., 6. ve 18. ayın sonunda.",
+    "Soru, karma aşının hangi aylarda yapıldığını soruyor.",
+    "Doğru cevap 2., 4., 6. ve 18. ay sonudur; s78 aşı takviminde DaBT-İPA-Hib-HepB satırı 2. ay I, 4. ay II, 6. ay III ve 18. ay RAPEL gösterir.",
+    "En güçlü çeldirici '4., 6. ve 12. ay'dır; 12. ay KPA rapelinin, KKK ve suçiçeği 1. dozunun ayıdır (s81), karma aşının değil.",
+    "Örnek: s77'de 4. ay izleminde 'DaBT-İPA-Hib 2. doz, KPA 2. doz', s81'de 6. ayda 'DaBT-İPA-Hib 3. doz' yazılıdır; 18. ay rapeli ise tablodadır.",
+    "Tuzak: KPA'nın 12. ay rapelini karma aşıya yazmak; KPA 2, 4, 12. ay, karma aşı 2, 4, 6, 18. aydır.",
+    "2021-2022: Bebeklik döneminde demir profilaksisine kaçıncı aylarda başlanır?",
+    "Cevap: 4-12 ay arası.",
+    "Soru, bebeklik döneminde demir profilaksisinin hangi aylarda yapıldığını soruyor.",
+    "Doğru cevap 4–12 aydır; s79'da '4–12 ay arası çocuklarda demir profilaksisinin yapılması' yazılıdır.",
+    "En güçlü çeldirici 2. aydan başlayan aralıktır; 2. ay başlangıcı yalnız prematüre ya da düşük doğum ağırlıklı bebekler içindir (s70–71).",
+    "Örnek: s77'de anemisi olmayan bebeğe 4. aydan itibaren profilaktik dozda (1 damla/kg) ücretsiz demir verilir; 9. ayda Hb bakılarak profilaksinin sonucu denetlenir (s79).",
+    "Tuzak: Term ve prematüre bebeğin başlangıç ayını karıştırmak.",
+    "2020-2021: Okul çağı çocuklarında birinci basamakta obezite taraması ile ilgili aşağıdaki ifadeler veriliyor: I. 6-18 yaş arası okul döneminde yılda bir kez ağırlık, boy, beden kütle indeksi (BKİ) ölçümlerinin yapılması II. Obez ya da fazla kilolu olduğu belirlenen çocukların 3 ile 6 ayda bir izlenmesi gerekir. III. Fazla tartılı ve obez tanısı alan her çocuğa tanı anında açlık kan şekeri, kan lipid profili, ALT, AST değerleri bakılmalı, değerleri yüksek olan çocuklar bir üst merkeze sevk edilmelidir. IV. Fazla tartılı ve obez tanısı alan her çocuğa diyet ve ilaç tedavisi başlanmalıdır. Bu ifadelerden hangisi ya da hangileri doğrudur?",
+    "Cevap: I, II ve III.",
+    "Soru, okul çağı (6–18 yaş) obezite taramasıyla ilgili öncüllerden doğru olanları soruyor.",
+    "Doğru cevap I, II ve III'tür: yılda bir ağırlık, boy ve BKİ ölçümü, fazla kilolu ve obez çocuğun 3–6 ayda bir izlenmesi ve tanı anında açlık kan şekeri, lipid, ALT, AST bakılması s102'nin üç maddesidir.",
+    "IV. öncül (her çocuğa diyet ve ilaç) derste yoktur; s102'ye göre değerleri yüksek olan çocuk ilaçla tedavi edilmez, bir üst merkeze sevk edilir.",
+    "Örnek: Erişkinde de yılda bir ölçüm kuralı sürer ama bel çevresi eklenir: 18–65 yaşta ağırlık, boy, BKİ ve bel çevresi yılda bir ölçülür (s116).",
+    "Tuzak: Birinci basamakta obez çocuğa ilaç başlanacağını sanmak; birinci basamağın görevi ölçüm, izlem ve sevktir.",
+    "2020-2021: Erişkinlik dönemi taramaları ile ilgili; I. 35 yaşın üzerindeki tüm erişkinlere beş yılda bir TSH bakılması önerilir. II. 40–69 yaş arası bütün kadınlarda yılda bir mamografi yapılması gereklidir. III. 45 yaşın üzerinde herkeste ve risk faktörü olan kişilerde diabetes mellitus taraması önerilir. IV. 40–70 yaş grubundaki yetişkinlere yılda bir gaitada gizli kan testi yapılmalıdır. ifadelerinden hangisi/hangileri doğrudur?",
+    "Cevap: I ve III.",
+    "Soru, erişkin taramalarıyla ilgili dört öncülden doğru olanları soruyor.",
+    "Doğru cevap I ve III'tür: 35 yaş üstü tüm erişkinlere beş yılda bir TSH (s115) ve 45 yaş üstü herkese ve risk faktörü olanlara DM taraması (s114) derste birebir geçer.",
+    "II yanlıştır çünkü 40–69 yaş kadınlarda yılda bir yapılan hekim muayenesidir, mamografi iki yılda birdir (s119); IV yanlıştır çünkü gaitada gizli kan 50–70 yaşta başlar, 40 yaş yalnız birinci derece akrabada kolorektal kanser ya da adenomatöz polip öyküsü varsa geçerlidir (s120).",
+    "Örnek: Aynı 35 yaş ve beş yıl kuralı lipid profilinde de geçerlidir (s113); DM taramasında ise normal sonuç üç yılda bir tekrarlanır (s114).",
+    "Tuzak: Sayıların bir kısmını değiştirerek kurulan öncüller: yılda bir ↔ iki yılda bir, 40 ↔ 50 yaş.",
+    "2020-2021: Aşağıdakilerden hangisi erişkin dönemde yapılan toplum tabanlı tarama standartları arasında yer alır?",
+    "Cevap: Mamografi.",
+    "Soru, erişkin dönemde toplum tabanlı tarama standartlarında yer alan testi soruyor.",
+    "Doğru cevap mamografidir; s118 ulusal tarama kartında mamografi 40–69 yaş kadınlarda 2 yılda bir yer alır.",
+    "Çeldiriciler derste geçer ama toplum tabanlı değildir: Mantoux yalnız riskli gruplara verem savaş dispanserinde (s117), DEXA 65 yaş üstü kadın ve 70 yaş üstü erkeğe (s131), PSA yerine prostatta yalnız bilgilendirme ve üroloji yönlendirmesi (s122), OGTT ise DM taramasında seçeneklerden biridir (s114).",
+    "Örnek: s119'da 40–69 yaş arası bütün kadınlarda yılda bir hekim klinik muayenesi ve iki yılda bir mamografi önerilir; toplum tabanlı taramanın ölçütü yaş grubundaki herkese uygulanmasıdır.",
+    "Tuzak: Riskli gruplara yapılan testleri (Mantoux, DEXA) toplum taraması saymak.",
+    "2025-2026: Meme, serviks ve kolon kanseri tarama testleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: 18–35 yaş arası erkeklere her yıl kolonoskopi yapılmalıdır.",
+    "Soru, meme, serviks ve kolon kanseri taramalarıyla ilgili yanlış ifadeyi soruyor.",
+    "Yanlış ifade '18–35 yaş arası erkeklere her yıl kolonoskopi'dir; s118'de kolonoskopi 51 ve 61 yaşta, 10 yılda bir yapılır.",
+    "Öteki şıklar s118 kartının satırlarıdır: kendi meme muayenesi 20 yaş üzeri ayda bir, doktor muayenesi 40 yaş üzeri yılda bir, mamografi 40–69 yaşta 2 yılda bir ve dışkıda gizli kan 50–70 yaşta 2 yılda bir; sınav gizli kan için kartın '2 yılda bir' değerini doğru saymıştır.",
+    "Örnek: s120'deki erişkin tarama maddesi gizli kan testi için 'yılda bir' yazar; s118 kartı ise '2 yılda bir' der. Bu soruda doğru kabul edilen değer kartınkidir.",
+    "Tuzak: Gizli kan sıklığında iki değeri karıştırmak ve kolonoskopiyi genç yaşa taşımak.",
+    "2020-2021: Yenidoğanlarda topuk kanı alınarak yapılan tarama testi programında bulunmayan hastalık hangisidir?",
+    "Cevap: Turner sendromu.",
+    "Soru, topuk kanı programında taranmayan hastalığı soruyor (Çocuk Sağlığı sınavından).",
+    "Doğru cevap Turner sendromudur; s56'daki altı hastalığın hiçbiri kromozom anomalisi değildir.",
+    "Çeldiriciler listenin üyeleridir (kistik fibrozis, fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği); listeyi bilen öğrenci dışarıda kalanı kolayca bulur.",
+    "Örnek: Kromozom anomalileri bu derste yenidoğanda değil gebelikte taranır: 11–14. haftada ikili test (s31) ve 16–20. haftada üçlü test trizomi 21 ve 18'i tarar (s33).",
+    "Tuzak: Kromozom taramasını yenidoğan topuk kanına taşımak; kromozom taraması gebelik izleminin işidir."
+   ],
+   "v": "60b4b6255b"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%47) ve olumsuz kök (hangisi değildir) (%15) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok korunma ve halk sağlığı (%64) ve tanı ve ayırıcı tanı (%21) sorulur."
+    },
+    {
+     "baslik": "Korunma ve halk sağlığı",
+     "metin": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%64) ve anlama ve ilişki kurma (%36) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%47) ve olumsuz kök (hangisi değildir) (%15) biçimindedir.",
+    "Sorulan bilgi: En çok korunma ve halk sağlığı (%64) ve tanı ve ayırıcı tanı (%21) sorulur.",
+    "Korunma ve halk sağlığı: Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%64) ve anlama ve ilişki kurma (%36) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "1f00c40fcf"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Eklem bozuklukları",
+     "metin": "Çıkmışlarda 5 kez soruldu. Örnek kök: Aşağıdakilerden hangisi adölesan dönemde sık karşılaşılan sağlık problemlerinden değildir?"
+    },
+    {
+     "baslik": "Anti-HAV testi",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi evlilik öncesi tarama testleri arasında yer almaz?"
+    },
+    {
+     "baslik": "4-12 ay arası",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Bebeklik döneminde demir profilaksisine hangi aylarda başlanır?"
+    },
+    {
+     "baslik": "Yenidoğan topuk kanı taraması",
+     "metin": "Dersin en çok sorulan konusu: 2020-21, 2023-24 ve 2025-26'da listede olan ya da olmayan hastalık soruldu."
+    },
+    {
+     "baslik": "Ulusal toplum tabanlı kanser taramaları",
+     "metin": "2020-21'de mamografi toplum tabanlı tarama olarak, 2025-26'da kanser taramalarında yanlış ifade olarak soruldu; dışkıda gizli kan sıklığı iki slaytta farklıdır."
+    },
+    {
+     "baslik": "Evlilik öncesi tarama testleri",
+     "metin": "2022-23, 2023-24 ve 2025-26'da soruldu; hepatit A testi ve selenyum listede olmayan şık olarak geldi."
+    },
+    {
+     "baslik": "Koruma düzeyleri ve hedef kitleleri",
+     "metin": "2020-21'de koruma düzeyleri doğru ifade sorusu olarak geldi; hedef kitleler yer değiştirilerek çeldirici kuruldu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta korunma ve halk sağlığı bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Eklem bozuklukları: Çıkmışlarda 5 kez soruldu. Örnek kök: Aşağıdakilerden hangisi adölesan dönemde sık karşılaşılan sağlık problemlerinden değildir?",
+    "Anti-HAV testi: Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi evlilik öncesi tarama testleri arasında yer almaz?",
+    "4-12 ay arası: Çıkmışlarda 2 kez soruldu. Örnek kök: Bebeklik döneminde demir profilaksisine hangi aylarda başlanır?",
+    "Yenidoğan topuk kanı taraması: Dersin en çok sorulan konusu: 2020-21, 2023-24 ve 2025-26'da listede olan ya da olmayan hastalık soruldu.",
+    "Ulusal toplum tabanlı kanser taramaları: 2020-21'de mamografi toplum tabanlı tarama olarak, 2025-26'da kanser taramalarında yanlış ifade olarak soruldu; dışkıda gizli kan sıklığı iki slaytta farklıdır.",
+    "Evlilik öncesi tarama testleri: 2022-23, 2023-24 ve 2025-26'da soruldu; hepatit A testi ve selenyum listede olmayan şık olarak geldi.",
+    "Koruma düzeyleri ve hedef kitleleri: 2020-21'de koruma düzeyleri doğru ifade sorusu olarak geldi; hedef kitleler yer değiştirilerek çeldirici kuruldu.",
+    "Çalışma yolu: Okurken her başlıkta korunma ve halk sağlığı bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "501a1e1e2c"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Koruyucu tıp ve beş koruma düzeyiyle başlayan ders, aile hekiminin periyodik sağlık muayenesini yaşam boyu anlatır. Evlilik öncesi tarama, gebelik ve lohusa izlemleri, yenidoğan topuk kanı taraması, bebek ve çocuk izlemleri, aşı takvimi, okul çağı taramaları, erişkin kardiyometabolik ve kanser taramaları, erişkin aşıları ve geriatrik değerlendirme yaş ve aralıklarıyla verilir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Koruyucu tıp ve beş koruma düzeyiyle başlayan ders, aile hekiminin periyodik sağlık muayenesini yaşam boyu anlatır. Evlilik öncesi tarama, gebelik ve lohusa izlemleri, yenidoğan topuk kanı taraması, bebek ve çocuk izlemleri, aşı takvimi, okul çağı taramaları, erişkin kardiyometabolik ve kanser taramaları, erişkin aşıları ve geriatrik değerlendirme yaş ve aralıklarıyla verilir."
+   ],
+   "v": "2b653d7a62"
+  },
+  {
+   "id": "2a01-01",
+   "baslik": "Koruyucu tıbbın tanımı ve özellikleri",
+   "giris": "Koruyucu tıp, hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemidir.",
+   "s": [
+    3,
+    4
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Koruyucu tıp hastalıklardan korunmaya, sağlık ve iyilik hâlinin devamlılığına odaklanan tıbbi bakım yöntemidir."
+    },
+    {
+     "metin": "insan hakkıdır, sağlıklı yaşam için özendiricidir, sağlığın devamını sağlar ve maliyet etkindir."
+    },
+    {
+     "metin": "Dünya Sağlık Örgütü 1948 tanımına göre sağlık yalnız hastalık ya da sakatlığın olmaması değil, fiziksel, ruhsal ve sosyal açıdan tam iyilik hâlidir; koruyucu tıp bu iyilik hâlini korumayı hedefler."
+    },
+    {
+     "metin": "Periyodik sağlık muayenesi kişideki risklerin hastalık oluşmadan aranmasına dayanan bir uygulamadır; koruyucu tıbbın kendisi değil, onun bir aracıdır."
+    },
+    {
+     "metin": "Koruyucu bakım birçok nedenden dolayı aile hekimliğinin merkezindedir."
+    }
+   ],
+   "klip": "o-2a01-01",
+   "ses": [
+    "Koruyucu tıbbın tanımı ve özellikleri.",
+    "Koruyucu tıp, hastalıklardan korunma, sağlık ve iyilik hâlinin devamlılığına odaklı tıbbi bakım yöntemidir.",
+    "Koruyucu tıp hastalıklardan korunmaya, sağlık ve iyilik hâlinin devamlılığına odaklanan tıbbi bakım yöntemidir.",
+    "insan hakkıdır, sağlıklı yaşam için özendiricidir, sağlığın devamını sağlar ve maliyet etkindir.",
+    "Dünya Sağlık Örgütü 1948 tanımına göre sağlık yalnız hastalık ya da sakatlığın olmaması değil, fiziksel, ruhsal ve sosyal açıdan tam iyilik hâlidir; koruyucu tıp bu iyilik hâlini korumayı hedefler.",
+    "Periyodik sağlık muayenesi kişideki risklerin hastalık oluşmadan aranmasına dayanan bir uygulamadır; koruyucu tıbbın kendisi değil, onun bir aracıdır.",
+    "Koruyucu bakım birçok nedenden dolayı aile hekimliğinin merkezindedir."
+   ],
+   "v": "3e929a99cb"
+  },
+  {
+   "id": "2a01-02",
+   "baslik": "Koruma düzeyleri ve hedef kitleleri",
+   "giris": "Birincil koruma hastalığın ortaya çıkmasını önler; davranış değişikliği ve aşılama örnektir, hedef kitle sağlıklı kişilerdir.",
+   "s": [
+    6,
+    7,
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "sağlıklı kişilerde risk faktörlerinin ortaya çıkmasını önler; sosyal ve çevresel koşulların değiştirilmesi, yüksek riskli çocuk, ergen ve genç erişkinlere danışmanlık ve sağlıklı yaşam biçimi geliştirme."
+    },
+    {
+     "metin": "hastalığın ortaya çıkmasını önler; davranış değişiklikleri ve aşılama örnektir. Hedef kitle sağlıklı kişilerdir."
+    },
+    {
+     "metin": "belirti ve işlev bozukluğu yapmamış ama vücutta oluşmuş hastalığa yöneliktir; genelde taramalarla saptanır, erken tanıyla tedavi ve ciddi sonuçları önleme hedeflenir. Mamografi ve smear örnektir; hedef kitle asemptomatik hastalardır."
+    },
+    {
+     "metin": "hastalık gelişmiş bireyde komplikasyonları önlemek ve yaşam kalitesini artırmaktır; hedef kitle semptomatik hastalardır, rehabilitasyonu da içerir."
+    },
+    {
+     "metin": "\"Önce zarar verme\" dördüncül korumanın ilkesidir; rehabilitasyon yalnız üçüncül korumada sayılır."
+    }
+   ],
+   "klip": "o-2a01-02",
+   "ses": [
+    "Koruma düzeyleri ve hedef kitleleri.",
+    "Birincil koruma hastalığın ortaya çıkmasını önler; davranış değişikliği ve aşılama örnektir, hedef kitle sağlıklı kişilerdir.",
+    "sağlıklı kişilerde risk faktörlerinin ortaya çıkmasını önler; sosyal ve çevresel koşulların değiştirilmesi, yüksek riskli çocuk, ergen ve genç erişkinlere danışmanlık ve sağlıklı yaşam biçimi geliştirme.",
+    "hastalığın ortaya çıkmasını önler; davranış değişiklikleri ve aşılama örnektir. Hedef kitle sağlıklı kişilerdir.",
+    "belirti ve işlev bozukluğu yapmamış ama vücutta oluşmuş hastalığa yöneliktir; genelde taramalarla saptanır, erken tanıyla tedavi ve ciddi sonuçları önleme hedeflenir. Mamografi ve smear örnektir; hedef kitle asemptomatik hastalardır.",
+    "hastalık gelişmiş bireyde komplikasyonları önlemek ve yaşam kalitesini artırmaktır; hedef kitle semptomatik hastalardır, rehabilitasyonu da içerir.",
+    "\"Önce zarar verme\" dördüncül korumanın ilkesidir; rehabilitasyon yalnız üçüncül korumada sayılır."
+   ],
+   "v": "d921815043"
+  },
+  {
+   "id": "2a01-08",
+   "baslik": "Evlilik öncesi tarama testleri",
+   "giris": "Evlilik öncesinde Anti HIV, HBsAg, Anti HCV, VDRL, kan grubu ile hemogram, hemoglobin elektroforezi ve SMA taraması yapılır.",
+   "s": [
+    20
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Anti HIV testi."
+    },
+    {
+     "metin": "HBsAg testi."
+    },
+    {
+     "metin": "Anti HCV testi."
+    },
+    {
+     "metin": "VDRL testi."
+    },
+    {
+     "metin": "kan grubu analizi ve hemogram."
+    },
+    {
+     "metin": "talasemi için hemoglobin elektroforezi."
+    },
+    {
+     "metin": "SMA taşıyıcılık taraması."
+    },
+    {
+     "metin": "aile hekimleri ile toplum sağlığı ve sağlıklı hayat merkezleri evlilik öncesi tarama, eğitim ve danışmanlık verir; şüpheli ya da taşıyıcı durumda sevk eder."
+    },
+    {
+     "metin": "hepatit A testi listede yoktur; fenilalanin, TSH, biyotinidaz ve ter testi yenidoğan dönemine aittir."
+    }
+   ],
+   "klip": "o-2a01-08",
+   "ses": [
+    "Evlilik öncesi tarama testleri.",
+    "Evlilik öncesinde Anti HIV, HBsAg, Anti HCV, VDRL, kan grubu ile hemogram, hemoglobin elektroforezi ve SMA taraması yapılır.",
+    "Anti HIV testi.",
+    "HBsAg testi.",
+    "Anti HCV testi.",
+    "VDRL testi.",
+    "kan grubu analizi ve hemogram.",
+    "talasemi için hemoglobin elektroforezi.",
+    "SMA taşıyıcılık taraması.",
+    "aile hekimleri ile toplum sağlığı ve sağlıklı hayat merkezleri evlilik öncesi tarama, eğitim ve danışmanlık verir; şüpheli ya da taşıyıcı durumda sevk eder.",
+    "hepatit A testi listede yoktur; fenilalanin, TSH, biyotinidaz ve ter testi yenidoğan dönemine aittir."
+   ],
+   "v": "4dcc95fd12"
+  },
+  {
+   "id": "2a01-11",
+   "baslik": "SMA taşıyıcı taramasının amacı ve sırası",
+   "giris": "SMA taşıyıcı taramasına önce erkek eş adayından başlanır; şüpheli pozitif sonuç yoksa çift takipten çıkarılır.",
+   "s": [
+    23,
+    24
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "evlilik öncesi dönemde iki eşin de taşıyıcı olduğu çiftleri belirlemek, ailelere genetik danışma vermek, SMA'nın uzun dönem morbidite ve mortalitesini azaltmak."
+    },
+    {
+     "metin": "tarama için öncelikle erkek eş ya da eş adayından örnek alınır."
+    },
+    {
+     "metin": "çift takipten çıkarılır."
+    },
+    {
+     "metin": "kadın eş adayına da mutlaka tarama testi uygulanır."
+    },
+    {
+     "metin": "onam ve kan örneği, barkodlama, İl Sağlık Müdürlüğünde kontrol, kargo ile laboratuvara gönderim."
+    },
+    {
+     "metin": "çiftlerin bilgilendirilmesi, taşıyıcıların kayıt altına alınması, gebelik ve hasta çocuk doğumunun takibi."
+    },
+    {
+     "metin": "taramanın zamanı evlilik sonrası değil evlilik öncesidir; SMA yenidoğan topuk kanı listesinde de yer alır."
+    }
+   ],
+   "klip": "o-2a01-11",
+   "ses": [
+    "SMA taşıyıcı taramasının amacı ve sırası.",
+    "SMA taşıyıcı taramasına önce erkek eş adayından başlanır; şüpheli pozitif sonuç yoksa çift takipten çıkarılır.",
+    "evlilik öncesi dönemde iki eşin de taşıyıcı olduğu çiftleri belirlemek, ailelere genetik danışma vermek, SMA'nın uzun dönem morbidite ve mortalitesini azaltmak.",
+    "tarama için öncelikle erkek eş ya da eş adayından örnek alınır.",
+    "çift takipten çıkarılır.",
+    "kadın eş adayına da mutlaka tarama testi uygulanır.",
+    "onam ve kan örneği, barkodlama, İl Sağlık Müdürlüğünde kontrol, kargo ile laboratuvara gönderim.",
+    "çiftlerin bilgilendirilmesi, taşıyıcıların kayıt altına alınması, gebelik ve hasta çocuk doğumunun takibi.",
+    "taramanın zamanı evlilik sonrası değil evlilik öncesidir; SMA yenidoğan topuk kanı listesinde de yer alır."
+   ],
+   "v": "79f0ea65e2"
+  },
+  {
+   "id": "2a01-13",
+   "baslik": "Doğum öncesi en az dört nitelikli izlem",
+   "giris": "Her gebe Doğum Öncesi Bakım İzlem Protokolüyle en az 4 kez nitelikli izlenir; ilk izlem gebeliğin ilk 14 haftasındadır.",
+   "s": [
+    28,
+    29
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "her gebe en az 4 kez nitelikli izlenir."
+    },
+    {
+     "metin": "gebeliğin ilk 14 haftasında, 30 dakika ayrılır."
+    },
+    {
+     "metin": "18-24. haftalar, 20 dakika."
+    },
+    {
+     "metin": "14. haftadan sonra saptanan gebelikte ilk karşılaşma gebelik haftasına bakılmaksızın ilk izlem sayılır; ilk izlemin tüm işlemleri ve o haftaya uygun işlemler birlikte yapılır."
+    },
+    {
+     "metin": "kan basıncı, Rh için kan grubu, demir eksikliği, hepatit B, idrarda bakteriüri ve proteinüri, TSH ve TORCH taraması."
+    },
+    {
+     "metin": "doğum sonu lohusa izlemi 6 kezdir."
+    }
+   ],
+   "klip": "o-2a01-13",
+   "ses": [
+    "Doğum öncesi en az dört nitelikli izlem.",
+    "Her gebe Doğum Öncesi Bakım İzlem Protokolüyle en az 4 kez nitelikli izlenir; ilk izlem gebeliğin ilk 14 haftasındadır.",
+    "her gebe en az 4 kez nitelikli izlenir.",
+    "gebeliğin ilk 14 haftasında, 30 dakika ayrılır.",
+    "18-24. haftalar, 20 dakika.",
+    "14. haftadan sonra saptanan gebelikte ilk karşılaşma gebelik haftasına bakılmaksızın ilk izlem sayılır; ilk izlemin tüm işlemleri ve o haftaya uygun işlemler birlikte yapılır.",
+    "kan basıncı, Rh için kan grubu, demir eksikliği, hepatit B, idrarda bakteriüri ve proteinüri, TSH ve TORCH taraması.",
+    "doğum sonu lohusa izlemi 6 kezdir."
+   ],
+   "v": "9ade1a85ee"
+  },
+  {
+   "id": "2a01-19",
+   "baslik": "Yenidoğan topuk kanı taraması",
+   "giris": "3-5 günlük yenidoğanda topuk kanıyla fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, KAH, kistik fibrozis ve SMA taranır.",
+   "s": [
+    54,
+    56
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, konjenital adrenal hiperplazi, kistik fibrozis ve SMA."
+    },
+    {
+     "metin": "3-5 günlük yenidoğanın topuğundan kan alınır."
+    },
+    {
+     "metin": "yenidoğan işitme taraması, gelişimsel kalça displazisi taraması ve genişletilmiş yenidoğan tarama programı topuk kanıyla yapılmaz."
+    },
+    {
+     "metin": "taranan hastalıkların çoğu yaşamın ilk iki haftasında ortaya çıkar, metabolik asidoz, koma, nörolojik sorunlar ve ölümle sonuçlanabilir; erken tanı diyet, hormon replasmanı ve diğer tedavilerin başlanmasını sağlar."
+    },
+    {
+     "metin": "hem evlilik öncesi taşıyıcılık taramasında hem yenidoğan topuk kanında yer alan hastalıktır."
+    },
+    {
+     "metin": "indirekt Coombs gebelik testidir; prematüre retinopatisi göz muayenesiyle, kalça displazisi muayene ve USG ile değerlendirilir."
+    }
+   ],
+   "klip": "o-2a01-19",
+   "ses": [
+    "Yenidoğan topuk kanı taraması.",
+    "3-5 günlük yenidoğanda topuk kanıyla fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, KAH, kistik fibrozis ve SMA taranır.",
+    "fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, konjenital adrenal hiperplazi, kistik fibrozis ve SMA.",
+    "3-5 günlük yenidoğanın topuğundan kan alınır.",
+    "yenidoğan işitme taraması, gelişimsel kalça displazisi taraması ve genişletilmiş yenidoğan tarama programı topuk kanıyla yapılmaz.",
+    "taranan hastalıkların çoğu yaşamın ilk iki haftasında ortaya çıkar, metabolik asidoz, koma, nörolojik sorunlar ve ölümle sonuçlanabilir; erken tanı diyet, hormon replasmanı ve diğer tedavilerin başlanmasını sağlar.",
+    "hem evlilik öncesi taşıyıcılık taramasında hem yenidoğan topuk kanında yer alan hastalıktır.",
+    "indirekt Coombs gebelik testidir; prematüre retinopatisi göz muayenesiyle, kalça displazisi muayene ve USG ile değerlendirilir."
+   ],
+   "v": "f6257cd82b"
+  },
+  {
+   "id": "2a01-22",
+   "baslik": "Kistik fibrozis ve ter testi",
+   "giris": "Kistik fibrozis tanısı ter testi ile konur; ter testi toplum tabanlı bir tarama testi değildir.",
+   "s": [
+    65
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "salgı bezlerini etkileyerek başta akciğerler olmak üzere birçok organın işlevini bozan kalıtsal hastalık."
+    },
+    {
+     "metin": "ülkemizde 3000 doğumda 1."
+    },
+    {
+     "metin": "ter testi ile konur."
+    },
+    {
+     "metin": "90 µg/l altı normaldir; 90 ve üzerindeyse 7-14. günde tekrar kan örneği alınır."
+    },
+    {
+     "metin": "70 µg/l ve üzerindeyse ter testi için sevk edilir; ter testi şüpheliyse ilgili kliniğe sevk edilir."
+    },
+    {
+     "metin": "ulusal toplum tabanlı taramalar mamografi, smear ve HPV testi, dışkıda gizli kan ve topuk kanı taramalarıdır; ter testi tanı testidir."
+    }
+   ],
+   "klip": "o-2a01-22",
+   "ses": [
+    "Kistik fibrozis ve ter testi.",
+    "Kistik fibrozis tanısı ter testi ile konur; ter testi toplum tabanlı bir tarama testi değildir.",
+    "salgı bezlerini etkileyerek başta akciğerler olmak üzere birçok organın işlevini bozan kalıtsal hastalık.",
+    "ülkemizde 3000 doğumda 1.",
+    "ter testi ile konur.",
+    "90 µg/l altı normaldir; 90 ve üzerindeyse 7-14. günde tekrar kan örneği alınır.",
+    "70 µg/l ve üzerindeyse ter testi için sevk edilir; ter testi şüpheliyse ilgili kliniğe sevk edilir.",
+    "ulusal toplum tabanlı taramalar mamografi, smear ve HPV testi, dışkıda gizli kan ve topuk kanı taramalarıdır; ter testi tanı testidir."
+   ],
+   "v": "da09619c86"
+  },
+  {
+   "id": "2a01-27",
+   "baslik": "D vitamini ve demir profilaksisi",
+   "giris": "Tüm bebeklere doğumdan 1 yaşına kadar günde 400 IU D vitamini verilir; demir profilaksisi 4-12. aylarda yapılır.",
+   "s": [
+    76,
+    79
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "doğumdan itibaren 1 yaşına kadar tüm bebeklere günde 400 IU."
+    },
+    {
+     "metin": "4-12 ay arası çocuklarda profilaksi; anemi varsa tedavi dozunda, yoksa 4. aydan itibaren profilaktik dozda, 1 damla/kg, ücretsiz demir damlası."
+    },
+    {
+     "metin": "9 aylık olduklarında Hb değerine bakılır."
+    },
+    {
+     "metin": "Prematüre ya da düşük doğum ağırlıklı bebek: daha önce başlanmamışsa profilaktik demir tedavisi daha erken başlanır."
+    },
+    {
+     "metin": "Hb 7 gr/dl ya da Htc %21 altındaki her bebek acilen hastaneye sevk edilir."
+    },
+    {
+     "metin": "12-24 ayda palmar solukluk muayenesi; 5 yaşta ve adolesan dönemlerde birer kez Hb."
+    }
+   ],
+   "klip": "o-2a01-27",
+   "ses": [
+    "D vitamini ve demir profilaksisi.",
+    "Tüm bebeklere doğumdan 1 yaşına kadar günde 400 IU D vitamini verilir; demir profilaksisi 4-12. aylarda yapılır.",
+    "doğumdan itibaren 1 yaşına kadar tüm bebeklere günde 400 IU.",
+    "4-12 ay arası çocuklarda profilaksi; anemi varsa tedavi dozunda, yoksa 4. aydan itibaren profilaktik dozda, 1 damla/kg, ücretsiz demir damlası.",
+    "9 aylık olduklarında Hb değerine bakılır.",
+    "Prematüre ya da düşük doğum ağırlıklı bebek: daha önce başlanmamışsa profilaktik demir tedavisi daha erken başlanır.",
+    "Hb 7 gr/dl ya da Htc %21 altındaki her bebek acilen hastaneye sevk edilir.",
+    "12-24 ayda palmar solukluk muayenesi; 5 yaşta ve adolesan dönemlerde birer kez Hb."
+   ],
+   "v": "7d71b85a58"
+  },
+  {
+   "id": "2a01-32",
+   "baslik": "Erişkinde lipid, diyabet ve tiroid taraması",
+   "giris": "35 yaş üstü herkese beş yılda bir lipid profili ve TSH bakılır; 45 yaş üstünde diyabet taranır, test normalse üç yılda bir tekrarlanır.",
+   "s": [
+    114,
+    115
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "18 yaşından büyük ve en az bir risk faktörü taşıyanlarda ve 35 yaşından büyük herkeste beş yılda bir."
+    },
+    {
+     "metin": "45 yaşın üzerinde herkeste ve risk faktörü olanlarda; açlık plazma glukozu, HbA1c ya da OGTT kullanılabilir; test normalse üç yılda bir tekrarlanır."
+    },
+    {
+     "metin": "ailesinde tiroid hastalığı öyküsü olanlarda ilk muayenede, 35 yaşın üzerindeki tüm erişkinlerde beş yılda bir TSH."
+    },
+    {
+     "metin": "18-65 yaşta yılda bir kez ağırlık, boy, BKİ ve bel çevresi."
+    },
+    {
+     "metin": "mamografi yılda bir değil iki yılda bir çekilir."
+    }
+   ],
+   "klip": "o-2a01-32",
+   "ses": [
+    "Erişkinde lipid, diyabet ve tiroid taraması.",
+    "35 yaş üstü herkese beş yılda bir lipid profili ve TSH bakılır; 45 yaş üstünde diyabet taranır, test normalse üç yılda bir tekrarlanır.",
+    "18 yaşından büyük ve en az bir risk faktörü taşıyanlarda ve 35 yaşından büyük herkeste beş yılda bir.",
+    "45 yaşın üzerinde herkeste ve risk faktörü olanlarda; açlık plazma glukozu, HbA1c ya da OGTT kullanılabilir; test normalse üç yılda bir tekrarlanır.",
+    "ailesinde tiroid hastalığı öyküsü olanlarda ilk muayenede, 35 yaşın üzerindeki tüm erişkinlerde beş yılda bir TSH.",
+    "18-65 yaşta yılda bir kez ağırlık, boy, BKİ ve bel çevresi.",
+    "mamografi yılda bir değil iki yılda bir çekilir."
+   ],
+   "v": "03e3c4e36c"
+  },
+  {
+   "id": "2a01-34",
+   "baslik": "Ulusal toplum tabanlı kanser taramaları",
+   "giris": "Mamografi 40-69 yaş kadınlarda iki yılda bir, smear 30-65 yaşta 5 yılda bir, dışkıda gizli kan 50-70 yaşta yapılır.",
+   "s": [
+    119,
+    120,
+    121
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "20-40 yaş kadınlarda kendi kendine meme muayenesi, ulusal kartta 20 yaş üzeri ayda bir; birinci derece akrabasında meme kanseri olanlarda hekim muayenesi yılda bir, olmayanlarda iki yılda bir; 40-69 yaşta yılda bir hekim muayenesi ve iki yılda bir mamografi."
+    },
+    {
+     "metin": "30-65 yaş kadınlarda beş yılda bir PAP smear ya da HPV testi."
+    },
+    {
+     "metin": "50-70 yaş kadın ve erkekte dışkıda gizli kan; ulusal tarama kartında 2 yılda bir, kolorektal kanser sayfasında yılda bir yazılıdır. Kolonoskopi 51 ve 61 yaşta, 10 yılda bir. Birinci derece akrabada kolorektal kanser ya da adenomatöz polip varsa taramaya 40 yaşında başlanır."
+    },
+    {
+     "metin": "ailesinde prostat kanseri olan 40 yaş üstü ve 50 yaş üstü erkekte bilgilendirme ve üroloji uzmanına yönlendirme."
+    },
+    {
+     "metin": "Mantoux, DEXA, PSA ve TORCH toplum tabanlı tarama standartlarında yer almaz."
+    }
+   ],
+   "klip": "o-2a01-34",
+   "ses": [
+    "Ulusal toplum tabanlı kanser taramaları.",
+    "Mamografi 40-69 yaş kadınlarda iki yılda bir, smear 30-65 yaşta 5 yılda bir, dışkıda gizli kan 50-70 yaşta yapılır.",
+    "20-40 yaş kadınlarda kendi kendine meme muayenesi, ulusal kartta 20 yaş üzeri ayda bir; birinci derece akrabasında meme kanseri olanlarda hekim muayenesi yılda bir, olmayanlarda iki yılda bir; 40-69 yaşta yılda bir hekim muayenesi ve iki yılda bir mamografi.",
+    "30-65 yaş kadınlarda beş yılda bir PAP smear ya da HPV testi.",
+    "50-70 yaş kadın ve erkekte dışkıda gizli kan; ulusal tarama kartında 2 yılda bir, kolorektal kanser sayfasında yılda bir yazılıdır. Kolonoskopi 51 ve 61 yaşta, 10 yılda bir. Birinci derece akrabada kolorektal kanser ya da adenomatöz polip varsa taramaya 40 yaşında başlanır.",
+    "ailesinde prostat kanseri olan 40 yaş üstü ve 50 yaş üstü erkekte bilgilendirme ve üroloji uzmanına yönlendirme.",
+    "Mantoux, DEXA, PSA ve TORCH toplum tabanlı tarama standartlarında yer almaz."
+   ],
+   "v": "689ae6278a"
+  }
+ ]
+}

@@ -619,6 +619,20 @@
         "kaynak": "k2-18-bazal-gangliyonlar-ve-ekstrapiramidal-sistem",
         "zaman": "2026-11-05"
       }
+    },
+    "hedef_kitle_duzey": {
+      "ad": "Hedef kitle → koruma düzeyi",
+      "duzen": "tablo",
+      "basliklar": [
+        "Hedef kitle",
+        "Koruma düzeyi"
+      ],
+      "ne_zaman": "koruma düzeylerinin hedef kitleye göre ayrılması",
+      "ornek": "Sağlıklı kişiler → birincil koruma",
+      "eklenme": {
+        "kaynak": "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
+        "zaman": "2026-11-10"
+      }
     }
   }
 }

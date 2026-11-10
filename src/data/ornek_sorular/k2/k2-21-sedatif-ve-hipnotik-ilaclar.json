@@ -1,0 +1,2905 @@
+{
+ "id": "k2-21-sedatif-ve-hipnotik-ilaclar",
+ "sira": 21,
+ "kurul": 1,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Sedatif ve Hipnotik İlaçlar",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "tarih": "2026-11-06",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Sedasyon ve hipnozu tanımlar, doz-yanıt eğrisi tiplerini ayırt eder; benzodiazepinleri, barbitüratları, atipik benzodiazepinleri, melatonin/oreksin ilaçlarını, buspironu ve sedatif antihistaminikleri sınıflandırır (s. 2–8).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q04",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Yapısal olarak benzodiazepinlerle ilişkili olmadığı hâlde benzer etki mekanizmasıyla uyku bozukluklarında kullanılan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flurazepam",
+      "B": "Zaleplon",
+      "C": "Klordiazepoksit",
+      "D": "Glutetimid",
+      "E": "Ramelteon"
+     },
+     "dogru": "B",
+     "aciklama": "Zolpidem, zaleplon ve eszopiklon yapıca benzodiazepin değildir ama benzer mekanizmayla etki eden atipik benzodiazepinlerdir (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Flurazepam 1,4-benzodiazepin yapılı bir hipnotiktir ve uzun yarılanma ömürlü aktif metabolitleri vardır. Yapıca gerçek benzodiazepin olduğu için kökteki yapısal ilişkisizlik tanımına uymaz (s. 5, 13).",
+      "B": "Zaleplon zolpidem ve eszopiklonla birlikte atipik benzodiazepin olarak bilinir. Kimyasal yapısı farklıdır ama benzodiazepinlere benzer mekanizmayla uyku bozukluğunda etki eder (s. 6).",
+      "C": "Klordiazepoksit klasik benzodiazepinlerdendir ve aktif metaboliti nordiazepam uzun etkilidir. Yapısı tipik 1,4-benzodiazepin iskeletidir, bu yüzden atipik grupta sayılmaz (s. 5, 11).",
+      "D": "Glutetimid kimyasal yapısı farklı, etkileri pratik olarak barbitüratlara eşdeğer eski bir sedatif-hipnotiktir. Benzodiazepin benzeri mekanizması bulunmaz ve nadiren kullanılır (s. 4).",
+      "E": "Ramelteon melatonin reseptör agonisti olan bir hipnotiktir. Yeni yapılı olsa da benzodiazepinlerle benzer mekanizmaya sahip değildir, melatonin reseptörü üzerinden etki eder (s. 7)."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-81"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "zolpidem, zaleplon ve eszopiklon"
+     },
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-81"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q06",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Melatonin reseptör agonisti olarak etki gösteren hipnotik ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Suvoreksant",
+      "B": "Buspiron",
+      "C": "Zolpidem",
+      "D": "Hidroksizin",
+      "E": "Ramelteon"
+     },
+     "dogru": "E",
+     "aciklama": "Ramelteon ve tasimelteon melatonin reseptör agonisti hipnotiklerdir; suvoreksant ve lemboreksant oreksin antagonistidir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Suvoreksant uyanıklığı destekleyen oreksin sistemini engelleyen bir oreksin antagonistidir. Uyku süresini iyileştirir ancak melatonin reseptörüne değil oreksin reseptörlerine etki eder (s. 7).",
+      "B": "Buspiron seçici bir anksiyolitiktir ve 5-HT1A reseptörlerinde parsiyel agonist olarak etki eder. Hipnotik olarak kullanılmaz ve melatonin reseptörüyle ilişkisi bulunmaz (s. 7).",
+      "C": "Zolpidem alfa1 alt birimi içeren GABA-A reseptörlerinde seçici agonist olan atipik bir benzodiazepindir. Hipnotiktir ama etkisi GABA-A reseptörü üzerindendir, melatonin reseptörü üzerinden olmaz (s. 20, 23).",
+      "D": "Hidroksizin sedasyon yapan antihistaminik bir ilaçtır. Sedatif antihistaminikler grubunda yer alır ve yatıştırıcı etkisi melatonin reseptör agonizmasına dayanmaz (s. 8).",
+      "E": "Ramelteon ve tasimelteon melatonin reseptörlerini uyararak etki eden hipnotiklerdir. Uyku-uyanıklık düzeni üzerinden uyku sağlarlar ve kökteki tanıma tam uyarlar (s. 7)."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-39"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Bir melatonin reseptör agonisti olan ramelteon ve tasimelteon"
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-39"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q10",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki ilaçlardan hangisi sedasyona neden olan antihistaminik bir ajandır?",
+     "secenekler": {
+      "A": "Hidroksizin",
+      "B": "Buspiron",
+      "C": "Ramelteon",
+      "D": "Klorazepat",
+      "E": "Meprobamat"
+     },
+     "dogru": "A",
+     "aciklama": "Hidroksizin ve prometazin sedasyon yapan antihistaminiklerdir; difenhidramin ve doksilamin uykuya yardımcıdır (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Hidroksizin ve prometazin sedasyon yapan antihistaminik ajanlardır. Antipsikotikler ve antidepresanlar gibi sedatif etki gösteren diğer ilaç sınıfları arasında sayılırlar (s. 8).",
+      "B": "Buspiron 5-HT1A parsiyel agonisti, etkisi yavaş başlayan seçici bir anksiyolitiktir. Antihistaminik değildir ve konvansiyonel sedatif-hipnotiklerden farklı etki gösterir (s. 7).",
+      "C": "Ramelteon melatonin reseptörünü uyaran bir hipnotiktir. Uyku sağlama yolu melatonin reseptörüdür ve sedasyon yapan antihistaminikler grubunda yer almaz (s. 7).",
+      "D": "Klorazepat midede asit hidroliziyle nordiazepama dönüşen ön ilaç biçiminde bir benzodiazepindir. Sedatif etkisi benzodiazepin mekanizmasına dayanır, antihistaminik ilaç grubunda yer almaz (s. 8).",
+      "E": "Meprobamat barbitüratlara eşdeğer etkili, farklı kimyasal yapılı karbamat grubu bir sedatiftir. Santral kas gevşetici olarak da kullanılır ancak antihistaminik değildir (s. 4, 45)."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [
+      "4ad14de03d24"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Hidroksizin ve prometazin dahil bazı antihistaminik ajanlar"
+     },
+     "dayanak": [
+      "cikmis:4ad14de03d24",
+      "cikmis:d3k2-2023-2024-h8",
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-39"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Doz-yanıt eğrisi doğrusal olan ve hipnoz dozunun üzerine çıkıldığında genel anesteziye, daha yüksek dozlarda medüller merkezlerin baskılanmasıyla komaya yol açabilen ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzodiazepinler",
+      "B": "Buspiron",
+      "C": "Melatonin reseptör agonistleri",
+      "D": "Oreksin antagonistleri",
+      "E": "Barbitüratlar"
+     },
+     "dogru": "E",
+     "aciklama": "Doğrusal eğri (A ilacı) barbitürat ve alkol gibi eski ilaçlara özgüdür; hipnoz dozunun üstü anesteziye, daha yükseği medüller baskıyla koma ve ölüme gider (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepinler hipnozdan sonra yataylaşan eğriye sahip ilaçlardır ve daha derin depresyon için orantısız doz artışı gerekir. Aşırı dozda görece güvenli sayılmaları bu yatay eğriden kaynaklanır (s. 3, 48).",
+      "B": "Buspiron etkisi yavaş başlayan, 5-HT1A reseptöründe parsiyel agonist olan seçici bir anksiyolitiktir. GABAerjik sistemle doğrudan etkileşmediği için doz artışıyla anestezi ve koma tablosu bu ilacın özelliği sayılmaz (s. 7).",
+      "C": "Ramelteon ve tasimelteon melatonin reseptörünü uyararak uyku sağlayan hipnotiklerdir. Etkileri uyku-uyanıklık düzenine yöneliktir ve doğrusal eğriyle genel anesteziye uzanan santral depresyon yapmazlar (s. 7).",
+      "D": "Suvoreksant ve lemboreksant uyanıklığı sağlayan oreksin sistemini engelleyerek uyku süresini iyileştirir. Doğrusal doz-yanıt eğrisi ve anesteziye ilerleme eski sedatif-hipnotiklere özgüdür, bu ilaçlara değil (s. 7).",
+      "E": "Barbitüratlar ve alkol gibi eski sedatif-hipnotikler doğrusal doz-yanıt eğrisi gösterir. Doz arttıkça hipnozdan anesteziye, sonra medüller solunum ve vazomotor merkez baskısıyla koma ve ölüme ilerlenebilir (s. 3)."
+     },
+     "bilgi": [
+      5,
+      6,
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "birçok eski sedatif-hipnotik ilaç için tipik bir özelliktir"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q038"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ilaçlardan hangisi atipik benzodiazepin olarak anılsa da 1,4-benzodiazepin yapısında değildir?",
+     "secenekler": {
+      "A": "Lorazepam",
+      "B": "Triazolam",
+      "C": "Alprazolam",
+      "D": "Oksazepam",
+      "E": "Eszopiklon"
+     },
+     "dogru": "E",
+     "aciklama": "Eszopiklon atipik benzodiazepindir ama yapıca benzodiazepin değildir; lorazepam, triazolam, alprazolam ve oksazepam 1,4-benzodiazepin iskeleti taşır (s. 5, 6).",
+     "sik_aciklamalari": {
+      "A": "Lorazepam Şekil 22-2'de gösterilen 1,4-benzodiazepin iskeletli ilaçlardandır. Aktif metaboliti olmayan, doğrudan inaktif glukuronide dönüşen bir benzodiazepin olarak yapı ölçütünü karşılar (s. 4, 5).",
+      "B": "Triazolam 1,4-benzodiazepin yapısında, hızlı emilen ve kısa etkili bir benzodiazepindir. Yapı şekilde diğer benzodiazepinlerle aynı iskeleti taşır, bu nedenle aranan ilaç olamaz (s. 5, 8).",
+      "C": "Alprazolam panik bozuklukta kullanılan ve Şekil 22-2'de yapısı verilen bir benzodiazepindir. Alfa-hidroksilasyonla kısa etkili metabolitlere dönüşür ve 1,4-benzodiazepin iskeleti taşır (s. 5, 11).",
+      "D": "Oksazepam görece kısa yarılanma ömürlü, aktif metaboliti olmayan bir benzodiazepindir. Şekil 22-2'deki dokuz 1,4-benzodiazepinden biridir, yani yapısı tipik benzodiazepindir (s. 5, 13).",
+      "E": "Eszopiklon zolpidem ve zaleplonla birlikte atipik benzodiazepin diye anılır, benzer mekanizmayla etki eder. Yapıca benzodiazepinlerle ilişkisi olmayan yeni kimyasal yapılı bir hipnotiktir (s. 6)."
+     },
+     "bilgi": [
+      9,
+      12,
+      15
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q32"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "atipik benzodiazepinler olarak bilinen zolpidem, zaleplon ve eszopiklon"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q32",
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-81"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Buspiron ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "GABA-A reseptöründeki benzodiazepin yerine bağlanır.",
+      "B": "Beyindeki 5-HT1A reseptörlerinde parsiyel agonist etki gösterir.",
+      "C": "Belirgin antikonvülsan etkisi vardır.",
+      "D": "Kas gevşetici etkisi benzodiazepinlerden güçlüdür.",
+      "E": "Etkisi hızlı başlar ve panik atağı hemen keser."
+     },
+     "dogru": "B",
+     "aciklama": "Buspiron 5-HT1A parsiyel agonistidir; yavaş başlar, GABA ile doğrudan etkileşmez, antikonvülsan ve kas gevşetici değildir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepin bağlanma yeri GABA-A reseptöründe alfa1 ile gama2 alt birimleri arasındadır ve benzodiazepinler burada etki eder. Buspiron GABAerjik sistemle doğrudan etkileşmediği için bu yere bağlanmaz (s. 7, 20).",
+      "B": "Buspiron anksiyolitik etkisini 5-HT1A reseptörlerinde parsiyel agonist olarak gösterir, dopamin D2 reseptörüne de ilgisi vardır. GABAerjik sistemle doğrudan etkileşmeyen seçici bir anksiyolitiktir (s. 7).",
+      "C": "Antikonvülsan etki klonazepam, diazepam gibi benzodiazepinlerin ve fenobarbitalin özelliğidir. Buspiron ise benzodiazepinlerin aksine antikonvülsan özellik taşımayan, yalnız anksiyolitik etkili bir ilaçtır (s. 7, 27).",
+      "D": "Kas gevşetici etki benzodiazepin ve meprobamatın polisinaptik refleksleri baskılamasıyla oluşur. Buspironun kas gevşetici özelliği yoktur, bu yönüyle benzodiazepinlerden ayrılır (s. 7, 28).",
+      "E": "Akut anksiyete ve panik atağın hızlı denetiminde benzodiazepinler kullanılır. Buspiron ise etkisi yavaş başlayan bir anksiyolitiktir, hızlı etki bu ilacın özelliği sayılmaz (s. 7, 37)."
+     },
+     "bilgi": [
+      19,
+      20,
+      21
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q33"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "olarak etkiyerek gösterebilir, ancak beyin dopamin D2 reseptörleri"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q33"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kimyasal yapısı farklı olmasına karşın farmakolojik etkileri pratik olarak barbitüratlara eşdeğer olan ve nadiren kullanılan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Buspiron",
+      "B": "Kloral hidrat",
+      "C": "Zolpidem",
+      "D": "Meprobamat",
+      "E": "Ramelteon"
+     },
+     "dogru": "D",
+     "aciklama": "Glutetimid ve meprobamat farklı yapıdadır ama etkileri barbitüratlara eşdeğerdir; nadiren kullanılırlar (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Buspiron etkisi yavaş başlayan seçici bir anksiyolitiktir ve etkileri klasik sedatif-hipnotiklerden oldukça farklıdır. Barbitürat benzeri santral depresyon profili göstermez (s. 7).",
+      "B": "Kloral hidrat etanol gibi basit kimyasal yapılı sedatif-hipnotiklere örnektir. Basit yapısıyla ayrı anılır ve barbitüratlara eşdeğer farmakolojiyle tanımlanan ilaç olarak verilmez (s. 6).",
+      "C": "Zolpidem yapıca benzodiazepinlerle ilişkisiz, benzodiazepinlere benzer mekanizmayla etki eden atipik benzodiazepindir. Alfa1 seçiciliği nedeniyle barbitürattan çok farklı bir profili vardır (s. 6, 20).",
+      "D": "Meprobamat ve glutetimid barbitüratlardan farklı kimyasal yapıdadır, ancak etkileri pratik olarak barbitüratlara eşdeğerdir. Günümüzde nadiren kullanılırlar ve meprobamat güçlü enzim indükleyicidir (s. 4, 18).",
+      "E": "Ramelteon melatonin reseptör agonisti bir hipnotiktir. Uyku-uyanıklık düzenine etki eder ve barbitürata eşdeğer derin santral depresyon oluşturmaz (s. 7)."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Glutetimid ve meprobamat diğerlerinden farklı kimyasal yapıya"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q09",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Difenhidramin ve doksilaminin uykuya yardımcı ilaç olarak kullanılmasını sağlayan özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hipnotik etkili antihistaminik olmaları",
+      "B": "Melatonin reseptör agonisti olmaları",
+      "C": "Oreksin reseptör antagonisti olmaları",
+      "D": "5-HT1A reseptörlerinde parsiyel agonist olmaları",
+      "E": "Alfa1 içeren GABA-A reseptörlerinde seçici agonist olmaları"
+     },
+     "dogru": "A",
+     "aciklama": "Difenhidramin ve doksilamin hipnotik etkili antihistaminiklerdir, uykuya yardımcı ilaç olarak kullanılır (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Difenhidramin ve doksilamin hipnotik etkisi olan antihistaminik ilaçlardır. Bu hipnotik etki sayesinde uykuya yardımcı ilaç olarak kullanılırlar ve kökteki iki ilacın ortak özelliği budur (s. 8).",
+      "B": "Melatonin reseptör agonizmi ramelteon ve tasimelteonun etki biçimidir. Bu ilaçlar ayrı bir hipnotik grubudur, difenhidramin ise antihistaminik etkili bir ilaçtır (s. 7, 8).",
+      "C": "Oreksin reseptör antagonizmi suvoreksant ve lemboreksantın uyku süresini iyileştirme yoludur. Difenhidramin ve doksilamin oreksin sistemine değil histamin reseptörüne etki eden antihistaminiklerdir (s. 7, 8).",
+      "D": "5-HT1A reseptöründe parsiyel agonizm buspironun anksiyolitik etki mekanizmasıdır. Buspiron hipnotik değildir, difenhidramin ise uyku yapan bir antihistaminiktir (s. 7, 8).",
+      "E": "Alfa1 içeren GABA-A izoformlarına seçici bağlanma zolpidem, zaleplon ve eszopiklonun özelliğidir. Antihistaminik uyku ilaçlarının etkisi bu reseptör seçiciliğine dayanmaz (s. 8, 20)."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [
+      "4ad14de03d24",
+      "d3k2-2023-2024-h8"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "örn. difenhidramin ve doksilamin uykuya yardımcı ilaçlardır"
+     },
+     "dayanak": [
+      "cikmis:4ad14de03d24",
+      "cikmis:d3k2-2023-2024-h8"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q01",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Sedatif ve hipnotik ilaçlarla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Etkili bir sedatif ilaç anksiyeteyi azaltır ve sakinleştirici etki oluşturur.\nII. Hipnotik ilaç uykunun başlatılmasını ve sürdürülmesini destekler.\nIII. Hipnotik etki, sedasyondan daha hafif bir santral sinir sistemi depresyonu içerir.\nIV. Santral sinir sistemi işlevinin doza bağlı kademeli depresyonu çoğu sedatif-hipnotiğin özelliğidir.",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "I ve II",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "Yalnız IV"
+     },
+     "dogru": "A",
+     "aciklama": "Sedatif anksiyeteyi azaltıp sakinleştirir, hipnotik uykuyu başlatıp sürdürür; hipnotik etki sedasyondan daha belirgin depresyondur ve depresyon doza bağlı kademelidir (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Sedatif ilaç kaygıyı yatıştırır, hipnotik ilaç uykuyu başlatıp sürdürür ve santral depresyon doza bağlı kademeli artar. III ise ters çevrilmiştir, çünkü hipnotik etki sedasyondan daha belirgin bir depresyondur (s. 2).",
+      "B": "I ve II sedatif ile hipnotik ilacın doğru tanımlarıdır ve ikisi de seçenekte yer alır. Ancak doza bağlı kademeli depresyonu anlatan IV de doğru olduğundan bu küme eksik kalır (s. 2).",
+      "C": "II hipnotik ilacın uykuyu başlatma ve sürdürme işlevini doğru anlatır. III ise hipnotik etkiyi sedasyondan hafif sayar, oysa hipnoz daha belirgin bir santral sinir sistemi depresyonudur (s. 2).",
+      "D": "I ve IV doğru önermelerdir, sedatifin tanımını ve doza bağlı kademeli baskılanmayı anlatırlar. Kümeye giren III yanlış olduğu ve doğru olan II dışarıda kaldığı için seçenek hatalıdır (s. 2).",
+      "E": "IV, çoğu sedatif-hipnotikte santral işlevin doza bağlı kademeli baskılandığını doğru söyler. Sedatif ve hipnotik ilacın tanımları olan I ve II de doğru olduğundan tek başına yetersizdir (s. 2)."
+     },
+     "bilgi": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "benzer_cikmis": [
+      "final-2018-2019-q038"
+     ],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Hipnotik etkiler, sedasyondan daha belirgin bir santral sinir sistemi"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q038"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q07",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki ilaçlardan hangileri sedatif ya da hipnotik etkisini GABA-A reseptörü dışındaki bir hedef üzerinden gösterir?\nI. Buspiron\nII. Ramelteon\nIII. Suvoreksant\nIV. Eszopiklon",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "II ve III",
+      "C": "Yalnız I",
+      "D": "I, II ve III",
+      "E": "II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Buspiron (5-HT1A), ramelteon (melatonin) ve suvoreksant (oreksin) GABA-A dışı hedefle etki eder; eszopiklon alfa1 içeren GABA-A reseptöründe agonisttir (s. 7, 23).",
+     "sik_aciklamalari": {
+      "A": "Buspiron GABA dışı hedefle, 5-HT1A reseptörüyle etki eder ve doğru öncüldür. Eszopiklon ise GABA-A reseptörünün alfa1 içeren izoformlarına bağlanan bir hipnotiktir, kümeye girmesi hatalıdır (s. 7, 20).",
+      "B": "Ramelteon melatonin reseptörü, suvoreksant oreksin reseptörü üzerinden uyku sağlar ve ikisi de doğrudur. Buspiron da GABAerjik sistemle doğrudan etkileşmediği için bu küme eksik kalır (s. 7).",
+      "C": "Buspiron GABAerjik sistemle doğrudan etkileşmeyen, 5-HT1A parsiyel agonisti bir anksiyolitiktir. Melatonin agonisti ramelteon ve oreksin antagonisti suvoreksant da GABA dışı hedefle etki ettiği için tek başına yetersizdir (s. 7).",
+      "D": "Buspiron 5-HT1A reseptörü, ramelteon melatonin reseptörü, suvoreksant oreksin reseptörü üzerinden etki eder. Eszopiklon ise alfa1 içeren GABA-A reseptörlerinde seçici agonisttir, bu yüzden doğru küme I, II ve III'tür (s. 7, 23).",
+      "E": "Ramelteon ve suvoreksant GABA dışı reseptörlerle etki eden doğru öncüllerdir. Eszopiklon ise benzodiazepin bağlanma yerinde seçici agonist olduğundan kümeye yanlış girer, buspiron da dışarıda kalmıştır (s. 7, 23)."
+     },
+     "bilgi": [
+      17,
+      18,
+      21,
+      72
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q33"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Buspiron GABAerjik sistemlerle doğrudan etkileşmez"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q33",
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-39"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-81",
+     "soru": "“Yapısal olarak benzodiazepinlerle ilişkili olmamalarına karşın (atipik benzodiazepinler) uyku bozukluklarında kullanılmak üzere benzer etki mekanizmasına ve yeni kimyasal yapıya sahip bazı ilaçlar tedaviye sokulmuştur.”\nI. Zolpidem, Diazepam\nII. Klordiazepoksit, Flurazepam\nIII. Eszopiklon, Zaleplon\nIV. Glutetimid, Ramelteon\nV. Zaleplon, Zolpidem\nBu açıklamaya uygun olan ilaçlar yukarıdaki gruplardan hangilerinde doğru olarak verilmiştir?",
+     "secenekler": {
+      "A": "III ve V",
+      "B": "II ve IV",
+      "C": "I ve V",
+      "D": "Yalnız I",
+      "E": "II ve III"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-39",
+     "soru": "İnsomnia tedavisinde kullanılmayan ilaç hangisidir?",
+     "secenekler": {
+      "A": "Ramelteon",
+      "B": "Zopiklon",
+      "C": "Modafinil",
+      "D": "Melatonin",
+      "E": "Hidroksizin"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "4ad14de03d24",
+     "soru": "Farmakoloji\nFarmakoloji\nSedatif ve Hipnotik\nİlaçlar\n\nşağıdaki\nmaddelerden\nhangisi uykuya\nyardımcı sedatif\netkili antihistaminik\nbir ilaçtır?\n\nDifenhidramin\nDiazepam\nEtanol\nGlutetimid\nDesmetildiazepam",
+     "secenekler": {
+      "A": "Difenhidramin",
+      "B": "Diazepam",
+      "C": "Etanol",
+      "D": "Glutetimid",
+      "E": "Desmetildiazepam"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q32",
+     "soru": "Aşağıdaki ilaçlar veriliyor:\nI. Metoheksital\nII. Lorazepam\nIII. Eszopiklon\nIV. Triazolam\nBunlardan hangisi/hangileri bir benzodiazepin ajandır?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q33",
+     "soru": "Aşağıdaki ilaçlar veriliyor:\nI. Zolpidem\nII. Buspiron\nIII. Zaleplon\nIV. Lorazepam\nBunlardan hangisi/hangileri bir hipno-sedatif ajandır?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3k2-2023-2024-h8",
+     "soru": "Aşağıdaki maddelerden hangisi uykuya yardımcı, sedatif etkili antihistaminik bir ilaçtır?",
+     "secenekler": {
+      "A": "Difenhidramin",
+      "B": "Diazepam",
+      "C": "Etanol",
+      "D": "Glutetimid",
+      "E": "Desmetildiazepam"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "final-2018-2019-q038",
+     "soru": "Aşağıdaki ifadelerden;\nI. Sedatif kavramı; az veya çok uyku oluşturabilen, anksiyetede düzelmeye neden olabilen ve hafif sedasyon hâli oluşturan ilaçlar sınıfıdır.\nII. SSS fonksiyonlarının kademeli ve doz bağımlı depresyonu çoğu sedatif-hipnotiğin bir özelliğidir.\nIII. Etkili bir sedatif ajan anksiyeteyi azaltmalı ve sakinleştirici bir etki ortaya koymalıdır; sedatifler ile oluşturulan SSS depresyonu minimum düzeyde olmalıdır.\nIV. Hipno-sedatif ilaçlarda hipnotik dozun üzerine çıkılması sırasıyla genel anestezi, koma ve ölüme neden olur.\nhangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Emilim, SSS'ye geçiş, plasenta/süt geçişi, faz I–II biyotransformasyon, aktif metabolitler, yarılanma ömrü, enzim indüksiyonu ve atılım özelliklerini ilaç bazında karşılaştırır (s. 8–18).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q12",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Triazolam, tiyopental ve zolpidemin santral sinir sistemi etkilerinin hızlı başlamasından sorumlu temel özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aktif metabolitlerinin bulunması",
+      "B": "Böbrekle değişmeden atılmaları",
+      "C": "Karaciğer enzimlerini indüklemeleri",
+      "D": "Lipitte çözünürlüklerinin yüksek olması",
+      "E": "Midede aktif biçime dönüşmeleri"
+     },
+     "dogru": "D",
+     "aciklama": "Santral sinir sistemine giriş hızını lipitte çözünürlük belirler; triazolam, tiyopental ve yeni hipnotiklerin hızlı etkisi bundandır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Aktif metabolit, ana ilacın faz I biyotransformasyonla dönüştüğü ve etki gösteren ürünüdür. Bu durum etki süresini ve birikimi uzatır, etkinin hızlı başlamasını açıklamaz (s. 10, 11).",
+      "B": "Böbrekle değişmeden atılım ilacın vücuttan uzaklaştırılma yoludur ve fenobarbitalde belirgindir. Atılım yolu ilacın vücuttan ne hızla uzaklaşacağını belirler, santral sinir sistemine giriş hızını açıklamaz (s. 17).",
+      "C": "Enzim indüksiyonu uzun süreli kullanımda karaciğer mikrozomal enzim etkinliğinin artmasıdır ve fenobarbitalde belirgindir. Kronik kullanımda metabolizmayı etkiler, hızlı etki başlangıcıyla ilişkisi kurulmaz (s. 18).",
+      "D": "Bir sedatif-hipnotiğin santral sinir sistemine giriş hızını lipitte çözünürlük belirler. Triazolam, tiyopental ve yeni hipnotiklerdeki hızlı etki başlangıcı bu özellikten kaynaklanır (s. 9).",
+      "E": "Midede asit hidroliziyle aktif biçime dönüşme klorazepat gibi ön ilaçların özelliğidir. Bu süreç emilim öncesi bir dönüşümdür ve triazolam ile zolpidemin hızlı etkisini açıklayan neden sayılmaz (s. 8)."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q34"
+     ],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "lipitte çözünürlük önemli bir rol oynar"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q34",
+      "cikmis:past-1790877044726-188434"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q14",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Midede asit hidroliziyle aktif biçimi olan desmetildiazepama dönüştürülen ön ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klorazepat",
+      "B": "Diazepam",
+      "C": "Oksazepam",
+      "D": "Triazolam",
+      "E": "Alprazolam"
+     },
+     "dogru": "A",
+     "aciklama": "Klorazepat midede asit hidroliziyle nordiazepama dönüşen ön ilaçtır (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Klorazepat bir ön ilaçtır ve midede asit hidroliziyle desmetildiazepama (nordiazepam) dönüştürülür. Bu aktif metabolitin yarılanma ömrü çok uzun olduğu için etkisi uzun sürer (s. 8, 13).",
+      "B": "Diazepam kendisi etkin bir benzodiazepindir ve hızlı emilir. Aktif metabolitleri karaciğerde faz I metabolizmayla oluşur, midede hidrolizle aktifleşen bir ön ilaç sayılmaz (s. 8, 10).",
+      "C": "Oksazepam doğrudan inaktif glukuronidlere metabolize edilen, aktif metaboliti olmayan bir benzodiazepindir. Ön ilaç değildir ve artık etkisi azdır (s. 13).",
+      "D": "Triazolam emilimi oldukça hızlı olan, kısa etkili bir benzodiazepindir. Alfa-hidroksilasyonla inaktif metabolitlere dönüşür, midede aktifleşme gerektirmez (s. 8, 11).",
+      "E": "Alprazolam oral yoldan hızlı emilen bir benzodiazepindir. Alfa-hidroksilasyonla hızla inaktif glukuronidlere dönüşür, ön ilaç özelliği taşımaz (s. 11, 13)."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": [
+      "past-1790877044773-259930"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Bir ön ilaç olan klorazepat midede asit hidroliz ile aktif şekli olan"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044773-259930",
+      "cikmis:d3k2-2020-2021-q113",
+      "cikmis:past-1790877044733-833144"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q20",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Fenobarbitalin atılımı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İdrarda değişmemiş biçimde hiç görülmez.",
+      "B": "Eliminasyon yarılanma ömrü birkaç saattir.",
+      "C": "Eliminasyon hızı idrarın alkalileştirilmesiyle belirgin artar.",
+      "D": "Atılımı idrarın asitleştirilmesiyle hızlanır.",
+      "E": "Böbrek işlevinden bağımsız olarak safrayla atılır."
+     },
+     "dogru": "C",
+     "aciklama": "Fenobarbital %20-30 oranında idrarla değişmeden atılır; idrarın alkalileştirilmesi eliminasyonu belirgin artırır (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Fenobarbital dışındaki barbitüratlar çok az değişmeden atılır, fenobarbital ise bu kuralın istisnasıdır. İnsanda önemli bir kısmı idrarda değişmeden çıktığı için önerme hatalıdır (s. 14, 17).",
+      "B": "Fenobarbitalin insandaki eliminasyon yarılanma ömrü 4-5 gündür. Sekobarbital ve pentobarbitalin bile saatlerce süren yarı ömrü vardır, birkaç saat ifadesi uymaz (s. 14).",
+      "C": "Fenobarbital insanda bir ölçüde (%20-30) idrarla değişmeden atılır. İdrarın alkalileştirilmesi bu atılımı ve eliminasyon hızını önemli ölçüde artırır (s. 17).",
+      "D": "Asidik bir ilaç olan fenobarbitalin atılımını artıran işlem idrarın alkalileştirilmesidir. Asitleştirme bu etkiyi sağlamaz, önerme mekanizmayı ters çevirir (s. 17).",
+      "E": "Sedatif-hipnotiklerin suda çözünür metabolitleri esas olarak böbrek yoluyla atılır. Fenobarbital de idrarla değişmeden atılan bir ilaçtır, safra atılımı vurgulanmaz (s. 17)."
+     },
+     "bilgi": [
+      45,
+      47,
+      59
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h65"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "eliminasyon hızı idrarın alkalileştirilmesi ile önemli"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h65",
+      "cikmis:final-2018-2019-q041"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Sedatif-hipnotiklerin gebelik ve emzirme dönemindeki farmakokinetiği ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Tümü gebelik sırasında plasenta engelini aşar.\nII. Doğum öncesi verilirse yenidoğanın yaşamsal işlevlerinin depresyonuna katkıda bulunabilir.\nIII. Anne sütünde saptanmazlar.\nIV. Anne sütüyle beslenen bebekte depresan etki oluşturabilirler.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, III ve IV",
+      "D": "Yalnız III",
+      "E": "I, II ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Tüm sedatif-hipnotikler plasentayı aşar, yenidoğanda depresyona katkıda bulunabilir; sütte de saptanır ve bebekte depresan etki yapabilir (s. 9).",
+     "sik_aciklamalari": {
+      "A": "I ve II plasenta geçişini ve yenidoğanda depresyon riskini doğru anlatır. Sütle beslenen bebekte depresan etkiyi anlatan IV de doğru olduğundan küme eksiktir (s. 9).",
+      "B": "II yenidoğanda yaşamsal işlev depresyonunu doğru anlatır. III ise yanlıştır, çünkü sedatif-hipnotikler anne sütünde saptanır ve bebekte depresan etki yapabilir (s. 9).",
+      "C": "I ve IV doğru öncüllerdir, plasenta ve süt geçişini anlatırlar. Ancak III'ün eklenmesi kümeyi bozar, çünkü ilaçlar anne sütünde saptanabilir (s. 9).",
+      "D": "III sedatif-hipnotiklerin anne sütüne geçmediğini söyleyen yanlış bir öncüldür. Bu ilaçlar sütte saptanır ve emzirilen bebekte depresan etki oluşturabilir (s. 9).",
+      "E": "Bütün sedatif-hipnotikler plasentayı aşar, doğum öncesi verilirse yenidoğanın yaşamsal işlevlerini baskılayabilir ve sütle bebeğe geçebilir. III ters çevrilmiştir, çünkü bu ilaçlar anne sütünde de saptanır (s. 9)."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": [
+      "past-1790877044726-188434"
+     ],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Sedatif-hipnotikler sütte de saptanabilirler"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044726-188434",
+      "cikmis:d3k2-2018-2019-k4-q34"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Desmetildiazepam (nordiazepam) aşağıdaki ilaçlardan hangisinin aktif metaboliti değildir?",
+     "secenekler": {
+      "A": "Klordiazepoksit",
+      "B": "Diazepam",
+      "C": "Prazepam",
+      "D": "Lorazepam",
+      "E": "Klorazepat"
+     },
+     "dogru": "D",
+     "aciklama": "Nordiazepam klordiazepoksit, diazepam, prazepam ve klorazepatın aktif metabolitidir; lorazepamın aktif metaboliti yoktur (s. 11, 13).",
+     "sik_aciklamalari": {
+      "A": "Klordiazepoksit faz I metabolizmayla nordiazepama dönüşen benzodiazepinlerdendir. Nordiazepamın 40 saati aşan yarılanma ömrü bu ilacın uzun etkisine katkıda bulunur (s. 11).",
+      "B": "Diazepam aktif metabolitleri olan bir benzodiazepindir ve nordiazepam bunlardan biridir. Uzun yarılanma ömürlü metabolit tekrarlanan dozlarda birikime yol açabilir (s. 11, 13).",
+      "C": "Prazepam nordiazepamın ana ilaçlarından biri olarak sayılır. Faz I metabolizmayla oluşan bu uzun ömürlü aktif metabolit prazepamın etkisini sürdürür (s. 11).",
+      "D": "Lorazepam doğrudan inaktif glukuronide dönüşen ve aktif metaboliti olmayan bir benzodiazepindir. Bu yüzden nordiazepam oluşturmaz ve birikici artık etkisi azdır (s. 13).",
+      "E": "Klorazepat ön ilaçtır ve midede asit hidroliziyle aktif biçimi olan nordiazepama dönüşür. Nordiazepam bu ilacın etki gösteren asıl biçimidir (s. 8, 11)."
+     },
+     "bilgi": [
+      27,
+      37,
+      42
+     ],
+     "benzer_cikmis": [
+      "past-1790877044733-833144"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "klordiazepoksit, diazepam, prazepam ve"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044733-833144"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tekrarlanan dozlarda birikici etki ve ertesi gün aşırı uyuşukluk gibi artık etkilerin daha az görüldüğü benzodiazepin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flurazepam",
+      "B": "Oksazepam",
+      "C": "Klorazepat",
+      "D": "Diazepam",
+      "E": "Klordiazepoksit"
+     },
+     "dogru": "B",
+     "aciklama": "Doğrudan inaktif glukuronide dönüşen, görece kısa ömürlü estazolam, oksazepam ve lorazepamda birikim ve artık etki azdır (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Flurazepamın uzun yarılanma ömürlü aktif metabolitleri vardır. Tekrarlanan dozlarda birikir ve hipnotik kullanımda gündüz sedasyonu sık görülür (s. 13, 41).",
+      "B": "Oksazepam görece kısa yarılanma ömürlüdür ve doğrudan inaktif glukuronidlere metabolize edilir. Estazolam ve lorazepamla birlikte artık etkinin daha az sorun olduğu ilaçlardandır (s. 13).",
+      "C": "Klorazepat yarılanma ömrü çok uzun olan nordiazepama dönüşen bir ön ilaçtır. Uzun ömürlü aktif metabolit nedeniyle çoklu dozlarda birikim beklenir (s. 11, 13).",
+      "D": "Diazepamın nordiazepam gibi uzun ömürlü aktif metabolitleri vardır. Bu nedenle tekrarlanan dozlarda birikici etki oluşturması öngörülebilir biçimde daha olasıdır (s. 11, 13).",
+      "E": "Klordiazepoksit nordiazepama dönüşen uzun etkili bir benzodiazepindir. Aktif metabolitinin uzun yarılanma ömrü birikim ve artık etki riskini artırır (s. 11, 45)."
+     },
+     "bilgi": [
+      40,
+      42
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q113"
+     ],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "oksazepam ve lorazepam gibi görece kısa yarılanma ömrüne sahip olan"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q113",
+      "cikmis:past-1790877044773-259930"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Benzodiazepinlerin biyotransformasyonu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çoğu CYP3A4 ile mikrozomal oksidasyona uğrar.",
+      "B": "Faz I metabolitleri glukuronid konjugatlarına dönüştürülür.",
+      "C": "Klirenslerinden esas olarak böbrekle değişmeden atılım sorumludur.",
+      "D": "Birçok faz I metaboliti farmakolojik olarak aktiftir.",
+      "E": "Alprazolam ve triazolam alfa-hidroksilasyona uğrar."
+     },
+     "dogru": "C",
+     "aciklama": "Benzodiazepin klirensi karaciğer metabolizmasına bağlıdır: CYP3A4 ile faz I, ardından glukuronid konjugasyonu (faz II); birçok faz I metaboliti aktiftir (s. 10–11).",
+     "sik_aciklamalari": {
+      "A": "Sitokrom P450 izozimleri, özellikle CYP3A4, benzodiazepinlerin N-dealkilasyon ve alifatik hidroksilasyonunu katalize eder. Bu faz I mikrozomal oksidasyonu anlatan önerme doğrudur (s. 10).",
+      "B": "Faz II tepkimesinde faz I metaboliti glukuronid konjugatına dönüştürülür ve idrarla atılır. Önerme benzodiazepin metabolizmasının ikinci basamağını doğru anlatır (s. 10).",
+      "C": "Bütün benzodiazepinlerin klirensinden karaciğer metabolizması sorumludur, böbrek yalnız suda çözünür metabolitleri atar. Klirensi böbrekle değişmeden atılıma bağlayan önerme bu yüzden yanlıştır (s. 10, 17).",
+      "D": "Benzodiazepinlerin birçok faz I metaboliti etkindir ve bazılarının yarılanma ömrü uzundur. Nordiazepam bunun en bilinen örneğidir, önerme doğrudur (s. 10, 11).",
+      "E": "Alprazolam ve triazolam alfa-hidroksilasyona uğrar, metabolitleri hızla inaktif glukuronidlere bağlanır. Bu nedenle etkileri kısa sürer ve önerme doğrudur (s. 11)."
+     },
+     "bilgi": [
+      33,
+      34,
+      35,
+      36,
+      38
+     ],
+     "benzer_cikmis": [
+      "past-q-1_Kurul-2022-29"
+     ],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Tüm benzodiazepinlerin klirensinden karaciğer metabolizması"
+     },
+     "dayanak": [
+      "cikmis:past-q-1_Kurul-2022-29"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q18",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Uzun süreli kullanımda karaciğer mikrozomal enzimlerini indükleyerek hem kendi hem başka ilaçların metabolizmasını artırma olasılığı yüksek olan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lorazepam",
+      "B": "Zolpidem",
+      "C": "Eszopiklon",
+      "D": "Meprobamat",
+      "E": "Alprazolam"
+     },
+     "dogru": "D",
+     "aciklama": "Enzim indüksiyonu olasılığı en yüksek ilaçlar fenobarbital başta barbitüratlar ve meprobamattır; benzodiazepinler ve yeni hipnotikler enzim etkinliğini değiştirmez (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Lorazepam aktif metaboliti olmayan, doğrudan glukuronide dönüşen bir benzodiazepindir. Benzodiazepinler sürekli kullanımda karaciğerin ilaç metabolize edici enzim etkinliğini değiştirmez (s. 13, 18).",
+      "B": "Zolpidem CYP3A4 ile hızla inaktif metabolitlere yıkılan yeni bir hipnotiktir. Yeni hipnotikler sürekli kullanımda enzim indüksiyonu oluşturmaz (s. 15, 18).",
+      "C": "Eszopiklon CYP3A4 substratıdır ve indükleyici rifampin onun metabolizmasını artırır. Kendisi ise yeni hipnotikler gibi karaciğer enzim etkinliğini değiştirmez (s. 16, 18).",
+      "D": "Barbitüratlar, özellikle fenobarbital, ve meprobamat enzim indüksiyonu yapma olasılığı en yüksek ilaçlardır. Başka ilaçların yanında kendi karaciğer metabolizmalarını da artırabilirler (s. 18).",
+      "E": "Alprazolam alfa-hidroksilasyona uğrayan bir benzodiazepindir. Benzodiazepinler sürekli kullanımla karaciğer enzimlerini indüklemez, bu yüzden etkileşim riski düşüktür (s. 11, 18)."
+     },
+     "bilgi": [
+      62,
+      63,
+      64
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h60"
+     ],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Barbitüratlar, özellikle fenobarbital ve meprobamatın bu etkiye yol"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h60"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Benzodiazepinlerin ve yeni kuşak hipnotiklerin farmakokinetiği ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Lorazepam ve oksazepamın aktif metaboliti yoktur.\nII. Zaleplon başlıca aldehit oksidaz ile metabolize edilir.\nIII. Flurazepam kısa ömürlü inaktif metabolitlere dönüşür.\nIV. Midazolamın etki başlangıcı hızlı, etki süresi kısadır.",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Lorazepam ve oksazepam aktif metabolitsiz; zaleplon aldehit oksidazla yıkılır; midazolam hızlı başlar kısa sürer; flurazepamın uzun ömürlü aktif metabolitleri vardır (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Lorazepam ile oksazepamın aktif metaboliti yoktur, zaleplon aldehit oksidazla yıkılır ve midazolam hızlı başlayıp kısa sürer. Flurazepam ise uzun ömürlü aktif metabolitlere dönüştüğü için III yanlıştır (s. 13, 15).",
+      "B": "I doğrudur, lorazepam ve oksazepam aktif metabolit oluşturmaz. III ise yanlıştır, çünkü flurazepamın uzun yarılanma ömürlü aktif metabolitleri vardır (s. 13).",
+      "C": "II ve IV zaleplonun aldehit oksidaz metabolizmasını ve midazolamın kısa etkisini doğru anlatır. Lorazepam ile oksazepamın aktif metabolitsiz olduğunu anlatan I de doğru olduğundan küme eksiktir (s. 13, 15).",
+      "D": "I ve II doğru öncüllerdir ve aktif metabolit yokluğunu ile zaleplon metabolizmasını anlatır. III ise flurazepamın uzun ömürlü aktif metabolitlerini yok saydığı için kümeyi bozar (s. 13, 15).",
+      "E": "IV midazolamın hızlı başlangıçlı kısa etkisini doğru anlatır. III ise flurazepamın uzun yarılanma ömürlü aktif metabolitleri olduğu bilgisine ters düşen yanlış bir öncüldür (s. 13)."
+     },
+     "bilgi": [
+      42,
+      43,
+      51
+     ],
+     "benzer_cikmis": [
+      "past-1790877044773-259930"
+     ],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Uzun yarılanma ömrüne sahip aktif metabolitleri vardır"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044773-259930"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q19",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Sürekli kullanımda karaciğerin ilaç metabolize edici enzim etkinliğini değiştirmeyen ilaçlar aşağıdakilerden hangileridir?\nI. Diazepam\nII. Fenobarbital\nIII. Zolpidem\nIV. Meprobamat",
+     "secenekler": {
+      "A": "II ve IV",
+      "B": "I, II ve III",
+      "C": "I ve III",
+      "D": "Yalnız II",
+      "E": "III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Benzodiazepinler ve yeni hipnotikler enzim etkinliğini değiştirmez; fenobarbital ve meprobamat indükler (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Fenobarbital ve meprobamat uzun süreli kullanımda karaciğer mikrozomal enzimlerini indükleyen ilaçlardır. Sorulanın tam tersi olan grubu oluşturdukları için bu küme yanlıştır (s. 18).",
+      "B": "Diazepam ve zolpidem enzim etkinliğini değiştirmeyen doğru öncüllerdir. Fenobarbital ise en güçlü enzim indükleyicilerden olduğu için kümeye yanlış girmiştir (s. 18).",
+      "C": "Diazepam bir benzodiazepin, zolpidem ise yeni bir hipnotiktir ve bu iki grup sürekli kullanımda enzim etkinliğini değiştirmez. Fenobarbital ve meprobamat ise indüksiyon olasılığı en yüksek ilaçlardır (s. 18).",
+      "D": "Fenobarbital barbitüratlar içinde enzim indüksiyonu yapma olasılığı en yüksek ilaçtır. Hem kendi hem başka ilaçların metabolizmasını artırdığı için sorulan özelliğe ters düşer (s. 18).",
+      "E": "Zolpidem enzim etkinliğini değiştirmeyen yeni hipnotiklerdendir ve doğrudur. Meprobamat ise fenobarbital gibi enzim indüksiyonu yapan bir ilaçtır, kümeyi bozar (s. 18)."
+     },
+     "bilgi": [
+      63,
+      64
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h60"
+     ],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "benzodiazepinler ve yeni hipnotikler sürekli kullanım"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h60"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q34",
+     "soru": "Sedatif-hipnotik ilaçlar için aşağıdaki ifadeler veriliyor:\nI. Bütün sedatif-hipnotik ilaçlar gebelik sırasında plasenta engelini aşar.\nII. Difenhidramin, hidroksizin, prometazin gibi antihistaminik ajanlar kısmi sedasyona neden olmalarından dolayı bu amaçla kullanılırlar.\nIII. Uyku bozukluklarında kullanılmak üzere SSRİ, SSNİ gibi ilaçlardan yararlanılabilir.\nIV. SSS fonksiyonlarının kademeli ve doz bağımlı depresyonu çoğu sedatif-hipnotiğin bir özelliğidir.\nBu ifadelerden hangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "past-1790877044773-259930",
+     "soru": "Sedatif-hipnotiklere ilişkin aşağıdaki ifadeler veriliyor:\nI. Zaleplon ve zolpidem ortalama 200 saatlik bir yarı ömre sahiptirler.\nII. Diazepam değişken biyoyararlanımla ortalama 50 saatlik bir yarılanma ömrüne sahiptir.\nIII. Kan düzeyleri düştüğünde uykusuzluk hâli (ribaund etki) oluşturmazlar; etkileri en az 12 haftalık bir kullanım süresinden sonra ortaya çıkar.\nIV. Klorazepat bir ön ilaç olup midede aktif hâle (nordiazepam) döner; yarılanma ömrü ortalama 80 saattir.\nBu ifadelerden hangisi ya da hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2023-2024-h65",
+     "soru": "Barbitüratlarla ilgili aşağıdaki ifadeler veriliyor:\nI. Beyin oksijen tüketimini, beyin kan akımını ve kafa içi basıncını azaltırlar.\nII. Büyük ölçüde karaciğerde metabolize edilirler; ağır karaciğer hastalığında etkileri uzar.\nIII. Fenobarbital zehirlenmesinde idrarın alkalileştirilmesi ilacın atılımını artırır.\nIV. Porfiri öyküsü olan hastalarda güvenle kullanılabilirler.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "past-1790877044726-188434",
+     "soru": "Sedatif-hipnotik ilaçların farmakokinetiğine ilişkin aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Sedatif-hipnotik ilaçların oral solüsyonlarının kinetikleri lipofilite dahil çeşitli faktörlerden etkilenir.",
+      "B": "Sedatif-hipnotikler anne sütüne geçmediklerinden bebekte depresyon görülme ihtimali olmaz.",
+      "C": "Lipofilik olan triazolam, eszopiklon, zaleplon ve zolpidem SSS'ye hızla geçerler.",
+      "D": "Sedatif-hipnotiklerin SSS'ye geçişi lipofilitelerine bağlıdır.",
+      "E": "Benzodiazepinlerin çoğu karaciğerde metabolize edilir ve bazılarının uzun etkili aktif metabolitleri vardır."
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "past-1790877044733-833144",
+     "soru": "\"Desmetildiazepam, etki süresi 40 saatten fazla olan bir Faz I metabolitidir.\"\nI. Klordiazepoksit\nII. Diazepam\nIII. Prazepam\nIV. Klorazepat\nBu cümleye göre desmetildiazepam yukarıdaki ana moleküllerden hangisinin ya da hangilerinin metabolitidir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3k2-2020-2021-q113",
+     "soru": "Sedatif olarak kullanıldığında birikici etki ve aşırı uyuşukluk gibi artık etkiler meydana getiren benzodiazepin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klorazepat",
+      "B": "Triazolam",
+      "C": "Eszopiklon",
+      "D": "Zaleplon",
+      "E": "Zolpidem"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "past-q-1_Kurul-2022-29",
+     "soru": "Benzodiazepinlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Benzodiazepinlerin karaciğerdeki metabolizması sitokrom P450 enzim inhibitör ve indükleyicilerinden etkilenir.\nII. Toksik dozları tedavi dozuna çok yakındır.\nIII. Bütün benzodiazepinler anksiyolitik ve sedatif etkilidir; hipnotik etkileri ise yüksek dozlarda ortaya çıkar.\nIV. Uzun süreli ve yüksek dozlarda kullanıldıklarında psikolojik bağımlılık gelişir; bu nedenle kırmızı reçete ile satılırlar.\nBu ifadelerden hangisi/hangileri benzodiazepinler için söylenebilir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2025-2026-h60",
+     "soru": "Aşağıdaki sedatif-hipnotik ilaçlardan hangisi karaciğer mikrozomal enzimlerini indükler?",
+     "secenekler": {
+      "A": "Diazepam",
+      "B": "Eszopiklon",
+      "C": "Fenobarbital",
+      "D": "Lorazepam",
+      "E": "Zolpidem"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "GABA-A reseptörünün yapısını ve bağlanma yerlerini, benzodiazepin ile barbitürat etki biçimi farkını ve üç ligand tipini açıklar (s. 19–23).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q26",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Benzodiazepinlerin GABA-A reseptörü üzerindeki etki biçimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kanalı doğrudan açmadan GABA etkisini allosterik artırırlar.",
+      "B": "GABA'nın yerini tutarak reseptörü doğrudan etkinleştirirler.",
+      "C": "Klorür kanalının açık kalma süresini uzatırlar.",
+      "D": "Yüksek derişimde kanalı doğrudan açan GABA-mimetiklerdir.",
+      "E": "Reseptör işlevini negatif allosterik yönde düzenlerler."
+     },
+     "dogru": "A",
+     "aciklama": "Benzodiazepinler GABA'nın yerini tutmaz, kanalı doğrudan açmaz; GABA etkisini allosterik olarak artırır (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepinler GABA'nın yerini tutmaz, reseptörü ve klorür kanalını doğrudan açmaz. GABA'nın etkisini allosterik olarak artırarak sinaptik inhibisyonun etkinliğini yükseltirler (s. 21).",
+      "B": "GABA'nın yerini tutup reseptörü doğrudan etkinleştirmek bir agonistin tanımıdır. Benzodiazepinler bunu yapmaz, yalnız GABA varken onun etkisini güçlendirir (s. 21).",
+      "C": "Klorür kanalının açılma süresini uzatmak barbitüratların GABA'yı kolaylaştırma biçimidir. Benzodiazepinler ise bu yolla değil allosterik güçlendirmeyle etki eder (s. 22).",
+      "D": "Yüksek derişimde klorür kanallarını doğrudan açan GABA-mimetik etki barbitüratlara aittir. Benzodiazepinler ise klorür kanalını doğrudan açmaz, yalnız GABA varken onun etkisini güçlendirir (s. 21, 22).",
+      "E": "Negatif allosterik düzenleme benzodiazepin yerine bağlanan ters agonistlerin etkisidir ve anksiyete ile nöbet oluşturabilir. Benzodiazepinler ise pozitif yönde, GABA'yı kolaylaştırarak etki eder (s. 23)."
+     },
+     "bilgi": [
+      74,
+      75
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Benzodiazepinler GABA'nın yerini tutmazlar"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q27",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Benzodiazepin bağlanma yeriyle etkileşerek anksiyete ve epileptik nöbet oluşturabilen ligand tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Agonistler",
+      "B": "Antagonistler",
+      "C": "Melatonin reseptör agonistleri",
+      "D": "Ters agonistler",
+      "E": "Oreksin reseptör antagonistleri"
+     },
+     "dogru": "D",
+     "aciklama": "Benzodiazepin yerinde üç ligand: agonist (GABA'yı kolaylaştırır), antagonist (flumazenil), ters agonist (negatif allosterik; anksiyete ve nöbet) (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Agonistler benzodiazepin yerinde GABA etkilerini kolaylaştırır; benzodiazepinler ve Z-ilaçları bu gruptadır. Anksiyeteyi azaltır ve nöbeti baskılarlar, oluşturmazlar (s. 23).",
+      "B": "Antagonistlerin tipik örneği flumazenildir ve benzodiazepin ile Z-ilaçlarının etkisini bloke eder. Kendileri GABA işlevini değiştirmez, anksiyete ve nöbet oluşturucu ligand bu grup sayılmaz (s. 23).",
+      "C": "Melatonin reseptör agonistleri ramelteon ve tasimelteon gibi hipnotiklerdir. Benzodiazepin bağlanma yeriyle etkileşmez, uyku-uyanıklık düzeni üzerinden etki ederler (s. 7).",
+      "D": "Ters agonistler GABA-A reseptör işlevinin negatif allosterik düzenleyicileridir. Benzodiazepin yerleriyle etkileşimleri anksiyete ve epileptik nöbet oluşturabilir, benzodiazepin etkisini de bloke edebilirler (s. 23).",
+      "E": "Oreksin reseptör antagonistleri suvoreksant ve lemboreksant gibi uyku süresini iyileştiren ilaçlardır. Etkileri oreksin sistemine yöneliktir, benzodiazepin yerinde ligand değildir (s. 7, 43)."
+     },
+     "bilgi": [
+      80,
+      83,
+      84
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "anksiyete ve epileptik nöbetler oluşturabilir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q21",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi GABA-A reseptörünün moleküler bileşenlerine bağlanarak etki gösteren ilaçlardan biri değildir?",
+     "secenekler": {
+      "A": "Buspiron",
+      "B": "Eszopiklon",
+      "C": "Fenobarbital",
+      "D": "Zaleplon",
+      "E": "Lorazepam"
+     },
+     "dogru": "A",
+     "aciklama": "Benzodiazepinler, barbitüratlar ve Z-ilaçları GABA-A reseptörüne bağlanır; buspiron GABAerjik sistemle doğrudan etkileşmez (s. 7, 19).",
+     "sik_aciklamalari": {
+      "A": "Buspiron GABAerjik sistemlerle doğrudan etkileşmeyen bir anksiyolitiktir. Etkisini 5-HT1A reseptörlerinde parsiyel agonist olarak gösterir, GABA-A reseptörüne bağlanmaz (s. 7).",
+      "B": "Eszopiklon alfa1 alt birimi içeren GABA-A izoformlarına seçici bağlanan yeni bir hipnotiktir. Benzodiazepin bağlanma yerinde agonist olarak GABA etkisini kolaylaştırır (s. 19, 23).",
+      "C": "Fenobarbital bir barbitürattır ve GABA-A reseptör izoformlarına benzodiazepinlerden farklı bir yerden bağlanır. Klorür kanalının açık kalma süresini uzatarak etki eder (s. 20, 22).",
+      "D": "Zaleplon yalnız alfa1 içeren GABA-A izoformlarıyla etkileşen atipik bir benzodiazepindir. Nöronal membrandaki reseptör bileşenlerine bağlanan ilaçlardandır (s. 19, 20).",
+      "E": "Lorazepam bir benzodiazepindir ve alfa1 ile gama2 alt birimleri arasındaki bağlanma yerinde etki eder. GABA'nın etkisini allosterik olarak artırır (s. 20, 21)."
+     },
+     "bilgi": [
+      21,
+      65
+     ],
+     "benzer_cikmis": [
+      "final-2018-2019-q039"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "GABAA reseptörünün moleküler bileşenlerine bağlanırlar"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q039"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Beynin birçok bölgesinde bulunan ana GABA-A reseptör izoformunda benzodiazepin bağlanma yeri hangi alt birimler arasında yer alır?",
+     "secenekler": {
+      "A": "Alfa1 ile beta2",
+      "B": "İki beta2 alt birimi",
+      "C": "Alfa1 ile gama2",
+      "D": "Beta2 ile gama2",
+      "E": "Delta ile epsilon"
+     },
+     "dogru": "C",
+     "aciklama": "Ana izoform iki alfa1, iki beta2, bir gama2'dir; alfa1–beta2 arasında iki GABA yeri, alfa1–gama2 arasında benzodiazepin yeri vardır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Komşu alfa1 ve beta2 alt birimleri arasında iki GABA bağlanma yeri bulunur. Bu yerler doğal ligand GABA'ya aittir, benzodiazepinler başka bir arayüze bağlanır (s. 20).",
+      "B": "Beta2 alt birimleri ana izoformda ikişer adet bulunur ve alfa1 ile komşuluk kurarak GABA yerlerini oluşturur. İki beta2 arasında tanımlanmış bir benzodiazepin yeri yoktur (s. 20).",
+      "C": "Ana izoform iki alfa1, iki beta2 ve bir gama2 alt biriminden oluşur. Benzodiazepin bağlanma yeri bir alfa1 ile gama2 alt birimi arasında bulunur (s. 20).",
+      "D": "Gama2 alt birimi benzodiazepin yerinin bir parçasıdır, ancak eşi beta2 değil alfa1 alt birimidir. Beta2 ise alfa1 ile birlikte GABA bağlanma yerlerini oluşturur (s. 20).",
+      "E": "Delta ve epsilon GABA-A reseptörünü kurabilen polipeptit sınıflarındandır. Beynin ana izoformu bu alt birimleri değil alfa1, beta2 ve gama2 alt birimlerini içerir (s. 19, 20)."
+     },
+     "bilgi": [
+      67,
+      68,
+      69
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "alt-birim arasında benzodiazepinler için bağlanma yeri mevcuttur"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q23",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Eszopiklon, zaleplon ve zolpidemin GABA-A reseptörüne benzodiazepinlerden daha seçici bağlanmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnız alfa1 içeren izoformlarla etkileşmeleri",
+      "B": "Klorür kanallarını doğrudan açmaları",
+      "C": "AMPA reseptörüne de bağlanmaları",
+      "D": "5-HT1A reseptöründe parsiyel agonist olmaları",
+      "E": "Ters agonist olarak etki etmeleri"
+     },
+     "dogru": "A",
+     "aciklama": "Z-ilaçları yalnız alfa1 içeren GABA-A izoformlarına bağlandığından seçicidir; bu yüzden antikonvülsan etkileri yoktur (s. 20, 27).",
+     "sik_aciklamalari": {
+      "A": "Bu üç ilaç yalnız alfa1 alt birimi içeren GABA-A izoformlarıyla etkileşir ve bu nedenle daha seçicidir. Aynı seçicilik antikonvülsan etkilerinin olmamasını da açıklar (s. 20, 27).",
+      "B": "Klorür kanallarını doğrudan etkinleştirme yüksek derişimdeki barbitüratların GABA benzeri etkisidir. Z-ilaçları ise kanalı doğrudan açmaz, benzodiazepin yerinde agonisttir (s. 22, 23).",
+      "C": "AMPA reseptörüne bağlanıp glutamatı baskılamak barbitüratların özelliğidir ve onları daha az seçici yapar. Bu özellik seçiciliği artırmaz, tersine azaltır (s. 22).",
+      "D": "5-HT1A reseptöründe parsiyel agonizm buspironun anksiyolitik etki biçimidir. Z-ilaçları serotonin reseptörü üzerinden değil GABA-A reseptörü üzerinden etki eder (s. 7, 20).",
+      "E": "Ters agonistler GABA-A reseptör işlevini negatif yönde düzenler ve anksiyete ile nöbet oluşturabilir. Z-ilaçları ise alfa1 içeren yerlerde seçici agonisttir, ters agonist değildir (s. 23)."
+     },
+     "bilgi": [
+      72,
+      81,
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "benzodiazepinlerin aksine daha selektif olarak bağlanırlar"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q039",
+      "cikmis:d3k2-2020-2021-q149",
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-81"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q25",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Barbitüratların etkilerinin benzodiazepinlere göre daha az seçici olmasını açıklayan özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzodiazepin yerine yüksek ilgiyle bağlanmaları",
+      "B": "Yalnız alfa1 içeren izoformlara bağlanmaları",
+      "C": "GABA etkisini yalnız allosterik yoldan artırmaları",
+      "D": "Ters agonist olarak etki etmeleri",
+      "E": "AMPA reseptörü üzerinden glutamatı da baskılamaları"
+     },
+     "dogru": "E",
+     "aciklama": "Barbitüratlar AMPA reseptörüne bağlanıp glutamatı da baskıladığı için benzodiazepinlerden daha az seçicidir (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepin yerine yüksek ilgiyle kompetitif bağlanma flumazenilin özelliğidir. Barbitüratlar ise GABA-A reseptörüne benzodiazepin yerinden farklı yerlerden bağlanır (s. 20, 33).",
+      "B": "Yalnız alfa1 içeren izoformlara bağlanma zolpidem, zaleplon ve eszopiklonun seçiciliğini açıklar. Bu özellik seçiciliği artırır, barbitüratlara ait değildir (s. 20).",
+      "C": "GABA etkisini kanalı doğrudan açmadan allosterik yoldan artırmak benzodiazepinlerin etki biçimidir. Barbitüratlar ise yüksek derişimde kanalı doğrudan açabildiğinden bu tanıma uymaz (s. 21, 22).",
+      "D": "Ters agonistler benzodiazepin yerinde negatif allosterik düzenleyici olarak anksiyete ve nöbet oluşturur. Barbitüratlar GABA etkisini kolaylaştırır, ters agonist değildir (s. 22, 23).",
+      "E": "Barbitüratlar AMPA reseptörüne bağlanarak uyarıcı nörotransmiter glutamatın etkilerini de baskılar. GABA dışındaki bu ek hedef etkilerini benzodiazepinlerden daha az seçici yapar (s. 22)."
+     },
+     "bilgi": [
+      78
+     ],
+     "benzer_cikmis": [
+      "final-2018-2019-q041"
+     ],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "benzodiazepinlerinkinden daha az selektiftir"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q041"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q24",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Barbitüratların GABA-A reseptörü üzerindeki etkileri ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. GABA'ya bağımlı klorür kanallarının açılma süresini artırırlar.\nII. Yüksek derişimlerde klorür kanallarını doğrudan etkinleştirebilirler.\nIII. Benzodiazepinlerle aynı bağlanma yerine bağlanırlar.\nIV. AMPA reseptörüne bağlanarak glutamatın etkilerini baskılarlar.",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Barbitüratlar farklı yerden bağlanır, kanal açılma süresini uzatır, yüksek derişimde kanalı doğrudan açar ve AMPA üzerinden glutamatı baskılar (s. 20, 22).",
+     "sik_aciklamalari": {
+      "A": "I barbitüratların kanal açılma süresini uzatma etkisini doğru anlatır. III ise yanlıştır, çünkü barbitüratlar GABA-A reseptörüne benzodiazepinlerden farklı yerlerden bağlanır (s. 20, 22).",
+      "B": "II yüksek derişimde barbitüratların GABA benzeri davranıp kanalı doğrudan açtığını doğru söyler. III'ün eklenmesi ise bağlanma yerlerinin farklı olduğu bilgisiyle çeliştiği için kümeyi bozar (s. 20, 22).",
+      "C": "Barbitüratlar klorür kanalının açık kalma süresini uzatır, yüksek derişimde kanalı doğrudan açar ve AMPA reseptörü üzerinden glutamatı baskılar. Bağlandıkları yer benzodiazepin yerinden farklı olduğu için III yanlıştır (s. 20, 22).",
+      "D": "IV barbitüratların AMPA reseptörüne bağlanarak glutamatı baskıladığını doğru anlatır. Kanal açılma süresini uzatma ve yüksek derişimde doğrudan açma da doğru olduğundan tek başına yetersizdir (s. 22).",
+      "E": "I ve IV barbitüratların doğru özellikleridir ve seçenek ikisini de içerir. III ise benzodiazepinlerle aynı yere bağlanma iddiasıyla yanlış olduğu için küme hatalıdır (s. 20, 22)."
+     },
+     "bilgi": [
+      71,
+      76,
+      77,
+      78
+     ],
+     "benzer_cikmis": [
+      "final-2018-2019-q041"
+     ],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "GABA- bağımlı klorür kanallarının açılma süresini artırıyor"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q041"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "final-2018-2019-q039",
+     "soru": "Aşağıdaki ilaçlardan;\nI. Diazepam\nII. Zolpidem\nIII. Zaleplon\nIV. Bromokriptin\nhangisi/hangileri GABA-A reseptörüne bağlanarak etki eder?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "final-2018-2019-q041",
+     "soru": "Barbitüratlarla ilgili;\nI. Barbitüratların çoklu doz uygulamaları akümülasyona neden olmaz.\nII. İdrarın alkalizasyonu fenobarbital çıkışını dramatik şekilde azaltır.\nIII. Triazolam, lorazepam ve eszopiklon tipik barbitürat molekülleridir.\nIV. Barbitüratlar GABA etkilerini kolaylaştırırlar ve etkileri benzodiazepinlerden daha az selektiftir.\nifadelerinden hangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Sedasyon, hipnoz ve uyku evreleri, anestezi, antikonvülsan, kas gevşetici, solunum ve kardiyovasküler etkileri ile tolerans mekanizmasını açıklar (s. 24–30).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q30",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki ilaçlardan hangisi nöbet tedavisinde klinik olarak yararlı olacak ölçüde seçici antikonvülsan etkiye sahiptir?",
+     "secenekler": {
+      "A": "Zolpidem",
+      "B": "Zaleplon",
+      "C": "Eszopiklon",
+      "D": "Buspiron",
+      "E": "Klonazepam"
+     },
+     "dogru": "E",
+     "aciklama": "Klonazepam, nitrazepam, lorazepam ve diazepam antikonvülsandır; zolpidem, zaleplon ve eszopiklonun antikonvülsan aktivitesi yoktur (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Zolpidem alfa1 içeren GABA-A izoformlarına benzodiazepinlerden daha seçici bağlanan bir hipnotiktir. Bu seçicilik nedeniyle antikonvülsan aktivitesi yoktur (s. 27).",
+      "B": "Zaleplon hızlı etkili, kısa ömürlü yeni bir hipnotiktir. Reseptör izoform seçiciliği nedeniyle zolpidem ve eszopiklon gibi antikonvülsan etki göstermez (s. 27).",
+      "C": "Eszopiklon başlıca evre 2 NREM uykusunu artıran yeni bir hipnotiktir. GABA-A izoformlarına alfa1 seçiciliğiyle bağlandığı için antikonvülsan aktivitesi bulunmaz (s. 25, 27).",
+      "D": "Buspiron 5-HT1A parsiyel agonisti, etkisi yavaş başlayan seçici bir anksiyolitiktir. Benzodiazepinlerin aksine antikonvülsan veya kas gevşetici özellik taşımadığı için nöbet tedavisinde yeri yoktur (s. 7).",
+      "E": "Klonazepam, nitrazepam, lorazepam ve diazepam nöbet tedavisinde yararlı olacak ölçüde seçici benzodiazepinlerdir. Epileptiform elektriksel etkinliğin gelişmesini ve yayılmasını baskılarlar (s. 27)."
+     },
+     "bilgi": [
+      100,
+      102
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q149"
+     ],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "nöbetlerin tedavisinde klinik olarak faydalı olacak"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q149"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q34",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Tedavi dozlarında bile sedatif-hipnotiklerin önemli solunum depresyonu oluşturabileceği hasta grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pulmoner sistemi sağlıklı olanlar",
+      "B": "Böbrek işlevi hafif bozuk olanlar",
+      "C": "Akciğer hastalığı olanlar",
+      "D": "Tolerans gelişmiş olanlar",
+      "E": "Anksiyetesi ikincil olanlar"
+     },
+     "dogru": "C",
+     "aciklama": "Sağlıklı akciğerde hipnotik dozun solunum etkisi doğal uykuya yakındır; akciğer hastalığında tedavi dozu bile önemli solunum depresyonu yapabilir (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Pulmoner sistemi sağlıklı hastalarda hipnotik dozların solunuma etkisi doğal uykudaki değişikliklerle karşılaştırılabilir düzeydedir. Bu grupta tedavi dozunda önemli depresyon beklenmez (s. 28).",
+      "B": "Böbrek işlevindeki değişiklikler çoğu sedatif-hipnotiğin ana ilaç eliminasyonunu belirgin etkilemez. Bu nedenle hafif böbrek bozukluğu solunum depresyonu için öne çıkan risk sayılmaz (s. 17).",
+      "C": "Pulmoner hastalığı olanlarda sedatif-hipnotikler terapötik dozlarda bile önemli solunum depresyonu oluşturabilir. Kronik akciğer hastalığı ve uyku apnesinde solunum sorunlarını şiddetlendirebilirler (s. 28, 47).",
+      "D": "Tolerans, aynı dozun etkisinin tekrarlayan kullanımla azalmasıdır. Tolerans gelişen hastada etkiler zayıflar, tedavi dozunda ağır solunum depresyonu bu duruma özgü değildir (s. 29).",
+      "E": "Anksiyete sıklıkla miyokard enfarktüsü gibi başka hastalıklara ikincil gelişir ve o hastalığın tedavisi gerekir. İkincil anksiyete kendi başına solunum depresyonu riskini artıran durum değildir (s. 35)."
+     },
+     "bilgi": [
+      104,
+      105,
+      181
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Pulmoner hastalığı olan hastalarda sedatif hipnotikler terapötik"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q28",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Benzodiazepinlerin normal uyku örüntüsü üzerindeki etkileri ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Uykuya dalma süresini kısaltırlar.\nII. Evre 2 NREM uyku süresini artırırlar.\nIII. REM uyku süresini uzatırlar.\nIV. Evre 4 NREM yavaş dalga uyku süresini azaltırlar.",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "I, II ve III",
+      "E": "Yalnız IV"
+     },
+     "dogru": "C",
+     "aciklama": "Benzodiazepinler: uykuya dalma kısalır, evre 2 NREM artar, REM kısalır, evre 4 yavaş dalga azalır (s. 25).",
+     "sik_aciklamalari": {
+      "A": "I uykuya dalmanın kısaldığını doğru söyler. III ise yanlıştır, çünkü benzodiazepinler ve eski sedatif-hipnotikler REM uyku süresini uzatmaz, kısaltır (s. 25).",
+      "B": "II evre 2 NREM uykusunun arttığını doğru anlatır. III'ün eklenmesi kümeyi bozar, çünkü REM uyku süresi bu ilaçlarla kısalır (s. 25).",
+      "C": "Benzodiazepinler uykuya dalma süresini kısaltır, evre 2 NREM'i artırır, REM'i kısaltır ve evre 4 yavaş dalga uykusunu azaltır. III REM üzerindeki etkiyi ters çevirdiği için kümeye girmez (s. 25).",
+      "D": "I ve II doğru etkilerdir. III ise REM uykusunun uzadığını söyleyen yanlış bir öncüldür ve yavaş dalga uykusundaki azalmayı anlatan IV dışarıda kalmıştır (s. 25).",
+      "E": "IV evre 4 NREM yavaş dalga uykusunun azaldığını doğru anlatır. Uykuya dalmanın kısalması ve evre 2'nin artması da doğru olduğundan tek başına eksiktir (s. 25)."
+     },
+     "bilgi": [
+      89
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q104"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "evre 2 NREM (hızlı olmayan göz hareketi) uyku süresi artar"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q104"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q31",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ilaçlardan hangilerinin antikonvülsan aktivitesi yoktur?\nI. Zolpidem\nII. Diazepam\nIII. Eszopiklon\nIV. Fenobarbital",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "Yalnız IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Zolpidem, zaleplon ve eszopiklonun antikonvülsan aktivitesi yoktur; diazepam, klonazepam ve fenobarbital antikonvülsandır (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Zolpidem ve eszopiklon GABA-A izoformlarına seçici bağlandıkları için antikonvülsan etki göstermez. Diazepam nöbet tedavisinde yararlı bir benzodiazepindir, fenobarbital de jeneralize tonik-klonik nöbette etkilidir (s. 27).",
+      "B": "Diazepam nöbet tedavisinde seçici bir benzodiazepin, fenobarbital ise jeneralize tonik-klonik nöbette etkili bir barbitürattır. Sorulanın tersi olan grubu oluşturdukları için bu küme yanlıştır (s. 27).",
+      "C": "Zolpidem ve eszopiklon antikonvülsan aktivitesi olmayan doğru öncüllerdir. Diazepam ise nöbet tedavisinde kullanılan seçici bir benzodiazepin olduğundan kümeye yanlış girer (s. 27).",
+      "D": "Fenobarbital birinci sıra ilaç olmasa da jeneralize tonik-klonik nöbetlerde etkili bir barbitürattır. Antikonvülsan aktivitesi olduğu için sorulan özelliğe uymaz (s. 27).",
+      "E": "Eszopiklon alfa1 seçiciliği nedeniyle antikonvülsan aktivitesi olmayan doğru öncüldür. Diazepam ve fenobarbital ise antikonvülsan ilaçlar olduğundan küme hatalıdır (s. 27)."
+     },
+     "bilgi": [
+      100,
+      101,
+      102
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q149"
+     ],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "eszopiklonun antikonvülsan aktivitesi yoktur"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q149"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q32",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Benzodiazepinlerin oluşturduğu amnezi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Önceden öğrenilenleri silen retrograd amnezidir.",
+      "B": "İlacın etkisi sürerken yaşananların hatırlanmadığı anterograd amnezidir.",
+      "C": "Dozdan bağımsız olarak hep aynı şiddettedir.",
+      "D": "Flumazenil verildiğinde belirginleşir.",
+      "E": "Hipnotik dozlarda hiç oluşmaz."
+     },
+     "dogru": "B",
+     "aciklama": "Benzodiazepinler doza bağlı anterograd amnezi yapar: eski bilgi korunur, etki süresinde yeni bilgi öğrenme bozulur (s. 24, 46).",
+     "sik_aciklamalari": {
+      "A": "Retrograd amnezi ilaçtan önce öğrenilenlerin unutulmasıdır. Benzodiazepinlerde önceden öğrenilmiş bilginin geri çağrılması sağlam kalır, bozulan yeni bilgi öğrenmedir (s. 46).",
+      "B": "Benzodiazepinler ilacın etki süresi içinde yaşanan olayların hatırlanamadığı, doza bağlı anterograd amnezi oluşturur. Bu etki endoskopi gibi girişimlerde yararlı biçimde kullanılır (s. 24, 47).",
+      "C": "Benzodiazepin amnezisi doza bağlı bir etkidir ve doz arttıkça belirginleşir. Şiddetinin dozdan bağımsız sabit kaldığını söyleyen ifade bu bilgiye ters düşer (s. 24, 46).",
+      "D": "Flumazenil benzodiazepin bağlanma yerinde kompetitif antagonisttir ve benzodiazepin etkilerini geri çevirir. Bu nedenle amneziyi belirginleştirmez, tersine benzodiazepinin santral etkilerini azaltır (s. 33).",
+      "E": "Hipnotik amaçla kullanılan bütün benzodiazepinlerle bir ölçüde anterograd amnezi oluşur. Hipnotik dozlarda amnezinin hiç görülmediği ifadesi bu bilgiyle çelişir (s. 41)."
+     },
+     "bilgi": [
+      87,
+      157,
+      177
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q12"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "ilacın etki süresi sırasında oluşan olayları hatırlayamama"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q12",
+      "cikmis:final-2018-2019-q045"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q33",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Benzodiazepinlerde tolerans gelişimiyle ilişkili gösterilen mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karaciğer mikrozomal enzimlerinin indüksiyonu",
+      "B": "Aktif metabolitlerin plazmada birikmesi",
+      "C": "GABA-A reseptöründe ters agonist oluşumu",
+      "D": "Beyindeki benzodiazepin reseptör sayısının azalması",
+      "E": "Böbrekten atılımın belirgin artması"
+     },
+     "dogru": "D",
+     "aciklama": "Benzodiazepin toleransı reseptör sayısındaki azalmayla (down-regulation) ilişkilidir; barbitüratlarda enzim indüksiyonu kısmen katkıda bulunur (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Karaciğer enzim indüksiyonu barbitüratların kronik kullanımındaki toleransı kısmen açıklar. Benzodiazepinler ise enzim etkinliğini değiştirmediği için bu mekanizma onlara uymaz (s. 18, 30).",
+      "B": "Aktif metabolit birikimi uzun ömürlü benzodiazepinlerde birikici etki ve gündüz sedasyonuna yol açar. Bu durum etkiyi artırır, tolerans gibi etki azalmasını açıklamaz (s. 11, 41).",
+      "C": "Ters agonistler dışarıdan verilen ve benzodiazepin yerinde negatif allosterik etki gösteren ligandlardır. Toleransın mekanizması olarak ters agonist oluşumu tanımlanmamıştır (s. 23, 30).",
+      "D": "Hayvanlarda benzodiazepin toleransı beyindeki benzodiazepin reseptörlerinin sayısının azalmasıyla, yani aşağı regülasyonla ilişkilidir. Çoğu sedatif-hipnotikte toleransın asıl nedeni santral yanıtın değişmesidir (s. 30).",
+      "E": "Sedatif-hipnotiklerde böbrek işlevindeki değişiklikler çoğu durumda ana ilacın eliminasyonunu belirgin etkilemez. Böbrek atılımının artması tolerans mekanizması olarak sayılmaz (s. 17, 30)."
+     },
+     "bilgi": [
+      111,
+      112
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "benzodiazepin reseptörlerinin sayısının azalması (down-regulation)"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q35",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yağda çözünürlüğü çok yüksek olduğu için damar yoluyla verildikten sonra beyin dokusuna hızla girerek anestezi oluşturan barbitürat aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fenobarbital",
+      "B": "Tiyopental",
+      "C": "Sekobarbital",
+      "D": "Meprobamat",
+      "E": "Glutetimid"
+     },
+     "dogru": "B",
+     "aciklama": "Tiyopental ve metoheksital yağda çok çözünür, intravenöz verilince beyne hızla girerek anestezi yapar (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Fenobarbital 4-5 gün yarılanma ömrüyle uzun etkili bir barbitürattır ve jeneralize tonik-klonik nöbetlerde kullanılır. Hızlı beyin girişiyle anestezi indüksiyonu yapan ilaç olarak anılmaz (s. 14, 27).",
+      "B": "Barbitüratlar arasında tiyopental ve metoheksitalin yağda çözünürlüğü çok yüksektir. Damar yoluyla verildiklerinde beyin dokusuna hızla girerek anestezi oluştururlar (s. 26).",
+      "C": "Sekobarbital yatmadan önce hipnoz amacıyla kullanılan bir barbitürattır. Yarılanma ömrü 18-48 saattir ve intravenöz anestezi ilacı olarak verilmez (s. 14, 44).",
+      "D": "Meprobamat barbitüratlardan farklı yapıda, karbamat grubu bir sedatiftir. Etkileri barbitüratlara eşdeğer olsa da intravenöz anestezik değildir, santral kas gevşetici olarak kullanılır (s. 4, 45).",
+      "E": "Glutetimid barbitürata eşdeğer etkili, farklı yapıda eski bir sedatif-hipnotiktir. Nadiren kullanılır ve damar yoluyla anestezi oluşturan ilaç olarak anılmaz (s. 4)."
+     },
+     "bilgi": [
+      95,
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "tiopental ve metoheksitalin yağda"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q32"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q29",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Uykuya dalma süresini kısaltırken toplam uyku süresi, NREM ve REM uykusu üzerine minimal etki gösteren hipnotik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Zolpidem",
+      "B": "Eszopiklon",
+      "C": "Triazolam",
+      "D": "Flurazepam",
+      "E": "Zaleplon"
+     },
+     "dogru": "E",
+     "aciklama": "Zaleplon uyku başlangıcını kısaltır, toplam uyku, NREM ve REM'e minimal etki eder; zolpidem REM'i azaltır, eszopiklon evre 2'yi artırıp toplam uykuyu uzatır (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Zolpidem de uykuya dalmayı kısaltan yeni bir hipnotiktir. Ancak REM uykusunu azaltır, yalnız yavaş dalga uykusuna etkisi minimaldir (s. 25).",
+      "B": "Eszopiklon başlıca evre 2 NREM uykusunu artırarak toplam uyku süresini uzatır. Toplam uyku süresine etkisiz olma özelliği bu ilaca uymaz (s. 25).",
+      "C": "Triazolam kısa etkili bir benzodiazepindir ve benzodiazepinler gibi REM ile yavaş dalga uykusunu azaltır. Uyku evrelerine minimal etki profili göstermez (s. 11, 25).",
+      "D": "Flurazepam uzun ömürlü aktif metabolitleri olan bir benzodiazepin hipnotiktir. Benzodiazepinlerin tipik etkisiyle evre 2'yi artırır, REM ve yavaş dalga uykusunu azaltır (s. 13, 25).",
+      "E": "Zaleplon uykunun başlama süresini kısaltır, toplam uyku süresi ile NREM ve REM uykusuna ise minimal etki yapar. Kısa yarılanma ömürlü, hızlı etkili yeni bir hipnotiktir (s. 25)."
+     },
+     "bilgi": [
+      90,
+      91,
+      92
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q104"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Zaleplon total uyku süresi, NREM veya REM uyku üzerine minimal"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q104"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2020-2021-q149",
+     "soru": "GABA-A reseptör izoformlarına benzodiazepinlerden daha selektif bir şekilde bağlandığından antikonvülsan etkisi olmayan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Eszopiklon",
+      "B": "Klonazepam",
+      "C": "Nitrazepam",
+      "D": "Lorazepam",
+      "E": "Diazepam"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2020-2021-q104",
+     "soru": "Benzodiazepinlerin ve eski sedatif-hipnotiklerin normal uyku kalıpları üzerine genel etkileri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Uyku kalıplarını etkilemez",
+      "B": "Uykunun başlangıç süresi kısalır",
+      "C": "Evre 2 NREM (hızlı olmayan göz hareketi) uyku süresi artar",
+      "D": "REM (hızlı göz hareketi) uyku süresi kısalır",
+      "E": "Evre 4 NREM yavaş dalga uyku süresi azalır"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q12",
+     "soru": "Aşağıdaki ilaç gruplarından hangisi anterograd amnezi yapar?",
+     "secenekler": {
+      "A": "Ketamin",
+      "B": "Teofilin",
+      "C": "Midazolam",
+      "D": "Fenitoin",
+      "E": "Fentanil"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Bağımlılık ve yoksunluk sendromunu tanımlar; flumazenilin mekanizmasını, endikasyonunu, antagonize ettiği ve etmediği ilaçları ve advers etkilerini sayar (s. 31–34).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q39",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Flumazenilin etki mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzodiazepin bağlanma yerinde ters agonizma",
+      "B": "Opioid reseptörlerinde antagonizma",
+      "C": "Benzodiazepin metabolizmasını hızlandırma",
+      "D": "Benzodiazepin bağlanma yerinde kompetitif antagonizma",
+      "E": "Alfa1 içeren izoformlarda seçici agonizma"
+     },
+     "dogru": "D",
+     "aciklama": "Flumazenil GABA-A reseptöründeki benzodiazepin yerinde yüksek ilgili kompetitif antagonisttir (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Ters agonistler benzodiazepin yerinde negatif allosterik etki göstererek anksiyete ve nöbet oluşturabilir. Flumazenil ise kendi başına GABA işlevini düşürmeyen bir antagonisttir (s. 23, 33).",
+      "B": "Opioid reseptörü üzerinden etki flumazenilin özelliği değildir; flumazenil opioidlerin santral etkilerini antagonize etmez. Etkisi yalnız benzodiazepin bağlanma yerine yöneliktir (s. 33).",
+      "C": "Flumazenilin kendisi hızlı karaciğer klirensiyle yıkılır ve yarı ömrü kısadır. Benzodiazepinlerin metabolizmasını artırmaz, reseptör düzeyinde yarışarak etki eder (s. 33).",
+      "D": "Flumazenil GABA-A reseptöründeki benzodiazepin bağlanma yerine yüksek ilgiyle bağlanan kompetitif bir antagonisttir. Bu yolla benzodiazepin ve Z-ilaçlarının etkilerini bloke eder (s. 33).",
+      "E": "Alfa1 içeren izoformlarda seçici agonizma zolpidem, zaleplon ve eszopiklonun etki biçimidir. Flumazenil agonist değil antagonisttir ve bu ilaçların etkisini bloke eder (s. 23)."
+     },
+     "bilgi": [
+      82,
+      124
+     ],
+     "benzer_cikmis": [
+      "d3-f-128"
+     ],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "yerine yüksek afiniteli, kompetitif antagonist olarak etkir"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q131",
+      "cikmis:d3-f-128"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q40",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Sedatif-hipnotik yoksunluk sendromunu en iyi tanımlayan tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Solunum depresyonu ve komayla giden santral baskılanma",
+      "B": "Anksiyete, uykusuzluk ve konvülsiyona dek artan eksitabilite",
+      "C": "Anterograd amnezi ve psikomotor yavaşlama",
+      "D": "Ertesi gün uyuşukluk, disfori ve motor yavaşlama",
+      "E": "Ajitasyon, baş dönmesi ve bulantı"
+     },
+     "dogru": "B",
+     "aciklama": "Yoksunluk sendromu artmış anksiyete, uykusuzluk ve konvülsiyona dek ilerleyen santral eksitabiliteyle karakterizedir (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Solunum depresyonu ve koma aşırı dozda medüller merkezlerin baskılanmasıyla oluşur. Bu tablo ilacın fazlalığını gösterir, yoksunluğun eksitasyon tablosuyla zıttır (s. 3, 28).",
+      "B": "Sedatif-hipnotik yoksunluk sendromu artmış anksiyete, uykusuzluk ve konvülsiyona dek ilerleyebilen santral sinir sistemi eksitabilitesiyle belirlenir. İlaç kesilince vücudun uyumunun bozulmasını yansıtır (s. 31).",
+      "C": "Anterograd amnezi ve psikomotor baskılanma benzodiazepinlerin ilaç etkisi sürerken görülen etkileridir. Yoksunlukta ise santral baskılanma değil aşırı uyarılabilirlik vardır (s. 24).",
+      "D": "Ertesi gün uyuşukluk, disfori ve motor yavaşlama hipnotiklerin artık etkileridir ve yavaş elimine edilen ilaçlarda sıktır. Yoksunluk tablosunu değil ilaç etkisinin uzamasını anlatır (s. 41).",
+      "E": "Ajitasyon, konfüzyon, baş dönmesi ve bulantı flumazenilin advers etkileridir. Antagonist ilacın yan etkisi olarak bilinir, sedatif kesilmesinin tanımlayıcı tablosu sayılmaz (s. 34)."
+     },
+     "bilgi": [
+      116,
+      117
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "konvülsiyonlara kadar ilerleyebilen santral sinir sistemi eksitabilitesi"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q045"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q36",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Benzodiazepin bağlanma yerinde kompetitif antagonist olan flumazenilin santral sinir sistemi etkilerini geri çeviremediği ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Diazepam",
+      "B": "Zolpidem",
+      "C": "Zaleplon",
+      "D": "Eszopiklon",
+      "E": "Fenobarbital"
+     },
+     "dogru": "E",
+     "aciklama": "Flumazenil benzodiazepinleri, zolpidemi, zaleplonu ve eszopiklonu bloke eder; barbitüratları, etanolü, opioidleri ve genel anestezikleri antagonize etmez (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Diazepam benzodiazepin bağlanma yerinde agonist olan, uzun etkili bir benzodiazepindir. Flumazenil aynı yere kompetitif bağlanarak diazepamın etkilerini bloke eder (s. 33).",
+      "B": "Zolpidem alfa1 içeren benzodiazepin yerinde seçici agonisttir. Flumazenil zolpidemin birçok etkisini bloke eder, bu yüzden geri çevrilemeyen ilaç bu değildir (s. 23, 33).",
+      "C": "Zaleplon benzodiazepin yerinde etki eden atipik bir benzodiazepindir. Benzodiazepin yerinde etki ettiği için flumazenil zaleplonun etkilerini bloke edebilir (s. 33).",
+      "D": "Eszopiklon alfa1 içeren GABA-A izoformlarında benzodiazepin yerine bağlanan hipnotiktir. Flumazenil eszopiklonun sedatif etkisini de antagonize eder (s. 33, 49).",
+      "E": "Fenobarbital bir barbitürattır ve GABA-A reseptörüne benzodiazepin yerinden farklı bir yerden bağlanır. Flumazenil barbitüratların, etanolün, opioidlerin ve genel anesteziklerin santral etkilerini antagonize etmez (s. 23, 33)."
+     },
+     "bilgi": [
+      82,
+      124,
+      125
+     ],
+     "benzer_cikmis": [
+      "d3k2-2024-2025-hg2"
+     ],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "veya genel anesteziklerin MSS etkilerini antagonize etmez"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q131",
+      "cikmis:d3-f-128",
+      "cikmis:d3k2-2024-2025-hg2",
+      "cikmis:d3k2-2018-2019-k4-q18"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q37",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Flumazenil aşağıdaki ilaçlardan hangilerinin santral sinir sistemi etkilerini antagonize eder?\nI. Midazolam\nII. Zolpidem\nIII. Etanol\nIV. Morfin",
+     "secenekler": {
+      "A": "III ve IV",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "Yalnız I",
+      "E": "II ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Flumazenil benzodiazepinleri ve Z-ilaçlarını antagonize eder; etanol, opioidler, barbitüratlar ve genel anestezikler etkilenmez (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Etanol ve morfin benzodiazepin bağlanma yeri dışından etki eden santral depresanlardır. Flumazenilin geri çeviremediği ilaçlar olduğu için bu küme sorulanın tersidir (s. 33).",
+      "B": "Midazolam bir benzodiazepin, zolpidem benzodiazepin yerinde etki eden bir Z-ilacıdır ve ikisi de flumazenille bloke edilir. Etanol ve morfin gibi opioidlerin santral etkilerini flumazenil antagonize etmez (s. 26, 33).",
+      "C": "Midazolam ve zolpidem benzodiazepin yerinde etki ettikleri için doğru öncüllerdir. Etanol ise flumazenille antagonize edilmeyen bir sedatiftir, kümeye girmesi hatalıdır (s. 33).",
+      "D": "Midazolam anestezide damar yoluyla kullanılan bir benzodiazepindir ve flumazenil etkisini geri çevirir. Ancak zolpidemin etkileri de bloke edildiği için tek başına eksiktir (s. 26, 33).",
+      "E": "Zolpidem flumazenille bloke edilen doğru öncüldür. Morfin ise bir opioiddir ve flumazenil opioidlerin santral etkilerini antagonize etmez, bu yüzden küme yanlıştır (s. 33)."
+     },
+     "bilgi": [
+      125
+     ],
+     "benzer_cikmis": [
+      "d3k2-2024-2025-hg2"
+     ],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Benzodiazepinler, zolpidem, zaleplon ve eszopiklonun birçok etkisini"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2024-2025-hg2",
+      "cikmis:d3k2-2018-2019-k4-q18"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q41",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Uyku bozukluğunda kullanıldığında kısa yarılanma ömrü nedeniyle dozlar arasında yoksunluk belirtisi olarak gündüz anksiyetesine yol açtığı bildirilen benzodiazepin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flurazepam",
+      "B": "Triazolam",
+      "C": "Klordiazepoksit",
+      "D": "Diazepam",
+      "E": "Klorazepat"
+     },
+     "dogru": "B",
+     "aciklama": "Triazolam kısa ömürlüdür; uyku bozukluğunda kullanılınca dozlar arası yoksunluk olarak gündüz anksiyetesi bildirilmiştir (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Flurazepam uzun yarılanma ömürlü aktif metabolitleri olan bir hipnotiktir. Yavaş elimine edildiği için kendiliğinden kademeli azalır, dozlar arası yoksunluk değil gündüz sedasyonu beklenir (s. 13, 41).",
+      "B": "Triazolam kısa yarılanma ömürlü bir benzodiazepindir ve uyku bozukluğunda kullanıldığında gündüz anksiyetesi bildirilmiştir. Çok kısa ömürlü ilaçlar dozlar arasında bile yoksunluk belirtisi yapabilir (s. 32).",
+      "C": "Klordiazepoksit nordiazepama dönüşen uzun etkili bir benzodiazepindir. Uzun etkisi nedeniyle yoksunlukta azalan dozlarda kullanılır, dozlar arası yoksunluk yapmaz (s. 11, 45).",
+      "D": "Diazepam uzun ömürlü aktif metabolitleri olan bir benzodiazepindir. Uzun etkili ilaçlarda yavaş eliminasyon kesilmeyi kademeli kıldığı için yoksunluk belirtileri daha az belirgindir (s. 13, 53).",
+      "E": "Klorazepat yarılanma ömrü çok uzun olan nordiazepama dönüşen bir ön ilaçtır. Uzun etkisi dozlar arasında yoksunluk belirtisi oluşmasını beklenmedik kılar (s. 8, 13)."
+     },
+     "bilgi": [
+      121,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "gündüz saatlerinde anksiyeteye neden olduğu bildirilmiştir"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q38",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Flumazenil kullanımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fizyolojik bağımlılığı olanlarda şiddetli yoksunluk yapabilir.",
+      "B": "Etki süresi benzodiazepinlerden uzun olduğundan sedasyon yinelemez.",
+      "C": "Trisiklik antidepresan alanlarda nöbet ve aritmiye yol açabilir.",
+      "D": "Anestezi sonrası uyanmayı hızlandırmak için kullanılır.",
+      "E": "Ajitasyon, konfüzyon, baş dönmesi ve bulantı yapabilir."
+     },
+     "dogru": "B",
+     "aciklama": "Flumazenil kısa etkilidir, sedasyon yineleyebilir; bağımlılıkta şiddetli yoksunluk, trisiklik kullananda nöbet ve aritmi yapabilir (s. 33–34).",
+     "sik_aciklamalari": {
+      "A": "Flumazenil, fizyolojik benzodiazepin bağımlılığı gelişmiş hastada benzodiazepin etkisini aniden kaldırır. Bu nedenle şiddetli yoksunluk sendromu oluşabilir ve önerme doğrudur (s. 34).",
+      "B": "Flumazenilin yarılanma ömrü kısadır ve bütün benzodiazepinlerin etki süresi ondan uzundur. Bu yüzden sedasyon genellikle yeniden ortaya çıkar, önerme bu bilgiyi ters çevirdiği için yanlıştır (s. 33, 34).",
+      "C": "Benzodiazepini trisiklik antidepresanla birlikte alan hastalarda flumazenil verilmesinden sonra nöbet ve kardiyak aritmi bildirilmiştir. Önerme doğru bir uyarıdır (s. 34).",
+      "D": "Flumazenil benzodiazepin aşırı dozunda santral depresyonu geri döndürmek ve anestezi sonrası uyanmayı hızlandırmak için kullanılır. Önerme ilacın doğru bir kullanım alanını anlatır (s. 33).",
+      "E": "Ajitasyon, konfüzyon, baş dönmesi ve bulantı flumazenilin bildirilen advers etkileridir. Bu yan etkiler antagonistin kendisine aittir ve önerme bunları doğru sıralar (s. 34)."
+     },
+     "bilgi": [
+      126,
+      128,
+      129,
+      130,
+      131
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q131"
+     ],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "sedasyon genellikle tekrar ortaya çıkar"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q131",
+      "cikmis:d3-f-128"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-128",
+     "soru": "Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmek ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak için onaylanan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Zaleplon",
+      "B": "Triazolam",
+      "C": "Zolpidem",
+      "D": "Eszopiklon",
+      "E": "Flumazenil"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3k2-2024-2025-hg2",
+     "soru": "Flumazenilin etkisini antagonize ettiği ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Diazepam",
+      "B": "Fenobarbital",
+      "C": "Meprobamat",
+      "D": "Morfin",
+      "E": "Propofol"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2020-2021-q131",
+     "soru": "Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmede ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak için kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flumazenil",
+      "B": "Triazolam",
+      "C": "Eszopiklon",
+      "D": "Zaleplon",
+      "E": "Zolpidem"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Anksiyete tedavisinde benzodiazepin seçim ilkelerini, sakıncalarını, hasta uyarılarını ve SSRI/SNRI ile alprazolamın yerini değerlendirir (s. 35–39).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q43",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Benzodiazepinlerin anksiyete tedavisindeki sakıncaları aşağıdakilerden hangileridir?\nI. Bağımlılık riski\nII. Santral sinir sistemi işlevlerinin baskılanması\nIII. Amnezik etkiler\nIV. Etkinin yavaş başlaması",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "II ve IV",
+      "C": "Yalnız III",
+      "D": "I, II ve III",
+      "E": "I, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Benzodiazepinlerin dezavantajları: bağımlılık riski, santral depresyon ve amnezik etkiler (s. 38).",
+     "sik_aciklamalari": {
+      "A": "I bağımlılık riski olarak doğru bir sakıncadır. IV ise benzodiazepinlere değil SSRI ve SNRI grubuna ait yavaş başlangıcı anlatır (s. 38, 39).",
+      "B": "II santral baskılanma olarak doğru bir sakıncadır. Yavaş etki başlangıcı ise yeni antidepresanların akut anksiyetedeki sınırlılığıdır, benzodiazepinler hızlı etkilidir (s. 38, 39).",
+      "C": "III, yani amnezik etkiler, benzodiazepinlerin anksiyete tedavisindeki sakıncalarındandır. Bağımlılık ve santral baskılanma da aynı listede yer aldığından tek başına eksiktir (s. 38).",
+      "D": "Benzodiazepinlerin sakıncaları bağımlılık riski, santral sinir sistemi işlevlerinin baskılanması ve amnezik etkilerdir. Etkileri hızlı başladığı için IV sakınca olarak sayılmaz (s. 38).",
+      "E": "I ve III doğru sakıncalardır. IV ise hızlı başlangıç ilkesine ters düşen yanlış öncüldür ve santral baskılanma (II) dışarıda kalmıştır (s. 38)."
+     },
+     "bilgi": [
+      143
+     ],
+     "benzer_cikmis": [
+      "d3-k2-far-013"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Benzodiazepinlerin dezavantajları bağımlılık riski"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-far-013"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q46",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Panik bozukluk ve agorafobi tedavisinde kullanılan ve bu durumlarda öteki benzodiazepinlerden daha seçici görünen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flurazepam",
+      "B": "Triazolam",
+      "C": "Klonazepam",
+      "D": "Oksazepam",
+      "E": "Alprazolam"
+     },
+     "dogru": "E",
+     "aciklama": "Alprazolam panik bozukluk ve agorafobide kullanılır, bu durumlarda diğer benzodiazepinlerden daha seçicidir (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Flurazepam uzun ömürlü aktif metabolitleri olan bir hipnotik benzodiazepindir. Gündüz sedasyonu sık görülür ve panik bozukluğa seçici ilaç olarak anılmaz (s. 13, 41).",
+      "B": "Triazolam kısa yarılanma ömrü nedeniyle sedatiften çok hipnotik olarak kullanılmaya elverişlidir. Panik bozukluk ve agorafobide seçici ilaç olarak tanımlanmaz (s. 11).",
+      "C": "Klonazepam nöbet tedavisinde yararlı olacak ölçüde seçici antikonvülsan bir benzodiazepindir. Panik bozuklukta seçicilik vurgusu bu ilaç için yapılmaz (s. 27).",
+      "D": "Oksazepam aktif metaboliti olmayan, artık etkisi az bir benzodiazepindir. Artık etkinin az olması önemlidir, ancak panik bozukluk ve agorafobide seçicilik bu ilaç için vurgulanmaz (s. 13).",
+      "E": "Alprazolam panik bozukluk ve agorafobi tedavisinde kullanılan bir benzodiazepindir. Bu iki durumda diğer benzodiazepinlerden daha seçici görünmesi onu kökteki tanıma uyan ilaç yapar (s. 37)."
+     },
+     "bilgi": [
+      141
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "Alprazolam panik bozukluklar ve agorafobi tedavisinde"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q42",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Anksiyete tedavisinde benzodiazepin seçimini destekleyen farmakolojik ilkeler aşağıdakilerden hangileridir?\nI. Hızlı etki başlangıcı\nII. Yüksek terapötik indeks ve aşırı dozda flumazenilin kullanılabilmesi\nIII. Karaciğer enzim indüksiyonuna bağlı etkileşim riskinin düşük olması\nIV. Belirgin kardiyovasküler ve otonom etkiler",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "Yalnız I",
+      "E": "II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Seçim ilkeleri: hızlı başlangıç, yüksek terapötik indeks + flumazenil, düşük enzim indüksiyonu riski, minimal kardiyovasküler/otonom etki (s. 38).",
+     "sik_aciklamalari": {
+      "A": "I hızlı etki başlangıcı olarak doğru bir seçim ilkesidir. IV ise yanlıştır, çünkü benzodiazepinlerin kardiyovasküler ve otonom işlevlere etkisi minimaldir (s. 38).",
+      "B": "II yüksek terapötik indeksi ve flumazenil olanağını doğru anlatır. IV'ün eklenmesi kümeyi bozar, çünkü avantaj belirgin değil minimal otonom etkidir (s. 38).",
+      "C": "Benzodiazepin seçimi hızlı başlangıç, yüksek terapötik indeks ile flumazenil olanağı, düşük enzim indüksiyonu riski ve minimal kardiyovasküler etkiye dayanır. IV etkileri belirgin saydığı için ters çevrilmiştir (s. 38).",
+      "D": "I doğru bir ilkedir, ancak yüksek terapötik indeks ve düşük etkileşim riski de seçim ilkeleri arasındadır. Bu nedenle tek başına eksik bir kümedir (s. 38).",
+      "E": "II ve III doğru ilkelerdir. IV ise benzodiazepinlere belirgin kardiyovasküler etki yükleyen yanlış bir öncüldür ve doğru olan I dışarıda kalmıştır (s. 38)."
+     },
+     "bilgi": [
+      142
+     ],
+     "benzer_cikmis": [
+      "d3-k2-far-013"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "yüksek bir terapötik indeks ve aşırı doz tedavisinde flumazenilin"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-far-013",
+      "cikmis:past-q-1_Kurul-2022-29"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q44",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sedatif-hipnotik kullanan hastaya yapılacak uyarılarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Alkol tüketmemesi konusunda uyarılır.",
+      "B": "Antihistaminik içeren reçetesiz ilaçlardan kaçınması söylenir.",
+      "C": "Uyanıklık gerektiren işlerde dikkatli olması istenir.",
+      "D": "Günlük dozun çoğunu yatarken alması yararlı olabilir.",
+      "E": "Etkiyi artırmak için anksiyete ilaçlarını birlikte kullanması önerilir."
+     },
+     "dogru": "E",
+     "aciklama": "Antianksiyete ilaç kombinasyonundan kaçınılır; hasta alkol ve antihistaminik/antikolinerjik reçetesiz ilaçlar konusunda uyarılır (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Sedatif alan kişi alkol tüketimi konusunda uyarılmalıdır. Alkol de santral depresan olduğundan aditif etkileşim yapar, önerme doğrudur (s. 39, 54).",
+      "B": "Antihistaminik ya da antikolinerjik içeren reçetesiz ilaçlarla birlikte kullanım konusunda uyarı yapılır. Bu ilaçlar sedasyonu artırabilir ve önerme doğrudur (s. 39).",
+      "C": "Mental uyanıklık veya motor koordinasyon gerektiren işlerde performans kaybından korunmak için hasta uyarılmalıdır. Önerme doğru bir hasta eğitimidir (s. 38).",
+      "D": "Bazı hastalar günlük dozun çoğunu yatarken, kalanını gündüz aldıklarında ilacı daha iyi tolere eder. Advers etkileri azaltmaya yönelik bu uygulama doğrudur (s. 39).",
+      "E": "Antianksiyete ilaçlarının kombinasyonlarından sakınılması gerekir, çünkü santral depresan etkiler toplanır. Birlikte kullanımı öneren ifade bu kuralı ters çevirdiği için yanlıştır (s. 39, 54)."
+     },
+     "bilgi": [
+      144,
+      145,
+      146
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q31"
+     ],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Antianksiyete ajanlarının kombinasyonlarından sakınılmalıdır"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q31",
+      "cikmis:d3k2-2018-2019-k4-q34"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q45",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunda birçok otorite tarafından ilk tercih kabul edilen, ancak etkisi yavaş başladığı için akut anksiyetede etkinliği sınırlı olan ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzodiazepinler",
+      "B": "Barbitüratlar",
+      "C": "Oreksin antagonistleri",
+      "D": "Melatonin reseptör agonistleri",
+      "E": "SSRI ve SNRI grubu antidepresanlar"
+     },
+     "dogru": "E",
+     "aciklama": "Yaygın anksiyete bozukluğunda SSRI ve SNRI ilk tercihtir ama yavaş başladıkları için akut anksiyetede sınırlıdır (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepinler akut anksiyete ve panik atakların hızlı denetiminde kullanılmaya devam eder. Etkileri hızlı başlar, yavaş başlangıç sınırlılığı onlara ait değildir (s. 37, 38).",
+      "B": "Barbitüratlar doğrusal doz-yanıt eğrili, enzim indükleyici eski sedatif-hipnotiklerdir. Doz arttıkça anesteziye ve komaya ilerleyebildikleri için anksiyetede ilk tercih olarak önerilmezler (s. 3, 18).",
+      "C": "Oreksin antagonistleri suvoreksant ve lemboreksant uykusuzluk tedavisinde kullanılır. Hem uyku başlangıcı hem sürdürülmesi için kullanılırlar, anksiyete bozukluğunda ilk tercih değildirler (s. 42, 43).",
+      "D": "Melatonin reseptör agonistleri ramelteon ve tasimelteon hipnotik ilaçlardır. Etkileri uyku sorunlarına yöneliktir, bu yüzden yaygın anksiyete bozukluğunun ilk tercihi olarak kabul edilmezler (s. 7).",
+      "E": "Seçici serotonin geri alım inhibitörleri ve serotonin-noradrenalin geri alım inhibitörleri yaygın anksiyete bozukluğunda ilk tercih sayılır. Etkileri yavaş başladığı için akut anksiyetede sınırlıdırlar (s. 39)."
+     },
+     "bilgi": [
+      147,
+      148
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "artık birçok otorite tarafından ilk tercih"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q34"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q47",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Anksiyete durumları ve tedavisi ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Psişik anksiyete farkındalığına artmış dikkat, motor gerilim ve otonomik hiperaktivite eşlik eder.\nII. Anksiyete sıklıkla akut miyokard enfarktüsü ya da angina pektoris gibi hastalıklara ikincildir.\nIII. Cerrahi girişim öncesinde premedikasyon olarak sedatif-hipnotik kullanımı uygun değildir.\nIV. Akut anksiyete ve panik atakların hızlı denetiminde benzodiazepin kullanımı sürmektedir.",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Anksiyeteye dikkat artışı, motor gerilim, otonomik hiperaktivite eşlik eder; sıklıkla ikincildir; premedikasyon uygundur; akut anksiyetede benzodiazepin sürer (s. 35–37).",
+     "sik_aciklamalari": {
+      "A": "I anksiyetenin fizyolojik bileşenlerini doğru anlatır. III ise yanlıştır, çünkü cerrahi ya da rahatsızlık verici girişim öncesinde premedikasyon mantıklı ve uygundur (s. 35, 36).",
+      "B": "II anksiyetenin miyokard enfarktüsü ve angina gibi hastalıklara ikincil olabileceğini doğru söyler. III'ün eklenmesi kümeyi bozar, çünkü premedikasyon uygun bir kullanımdır (s. 35, 36).",
+      "C": "Anksiyeteye dikkat artışı, motor gerilim ve otonomik hiperaktivite eşlik eder, sıklıkla başka hastalıklara ikincildir ve akut tabloda benzodiazepin kullanılır. Premedikasyonu uygunsuz sayan III ise yanlıştır (s. 35–37).",
+      "D": "IV benzodiazepinlerin akut anksiyete ve panik ataktaki yerini doğru anlatır. I ve II de doğru olduğundan bu seçenek eksik kalır (s. 35, 37).",
+      "E": "Dört öncülü birlikte kabul eden bu seçenek III'ü de doğru sayar. Oysa girişim öncesinde sedatif-hipnotik premedikasyonu mantıklı ve uygun bir kullanımdır (s. 36)."
+     },
+     "bilgi": [
+      133,
+      134,
+      136,
+      139
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "premedikasyon olarak bir sedatif-hipnotiğin kullanımı mantıklı"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-far-013",
+     "soru": "Sedatif-hipnotik ilaç seçiminde benzodiazepinlerin barbitüratlara tercih edilmesinde aşağıdakilerden hangisi bir faktör değildir?",
+     "secenekler": {
+      "A": "Terapötik indekslerinin barbitüratlara göre çok daha geniş (güvenli) olması",
+      "B": "Benzodiazepinlerin belirgin analjezik özelliklerinin bulunması",
+      "C": "Spesifik bir reseptör antagonistinin (flumazenil) bulunması",
+      "D": "Doz artışında bir tavan (plato) etkisine sahip olmaları ve tek başlarına solunumu daha az baskılamaları",
+      "E": "Karaciğer mikrozomal enzimlerini barbitüratlar kadar indüklememeleri"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q31",
+     "soru": "Anksiyete giderici ilaçlar için aşağıdaki ifadeler veriliyor:\nI. Anksiyete ilaçları kombine edilmez.\nII. Antihistaminikler ile birlikte verilmez.\nIII. Antikolinerjik ilaç kullanan, benzer etkili bitki kullanan ya da reçetesiz madde kullananlara verilmez.\nIV. Endoskopi ve bronkoskopide ketamin ile kombine edilirler.\nBunlardan hangisi/hangileri söylenebilir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Uyku sorunlarının tedavisinde ilaç seçimini, artık etki ve rebound uykusuzluğu, yeni hipnotikleri, oreksin antagonistlerini ve diğer terapötik kullanımları açıklar (s. 40–45).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q50",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Hızlı etki etmesi ve kısa yarılanma ömrü nedeniyle uykudan erken uyanan hastaların tedavisinde değeri olan hipnotik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flurazepam",
+      "B": "Lorazepam",
+      "C": "Zaleplon",
+      "D": "Kuazepam",
+      "E": "Fenobarbital"
+     },
+     "dogru": "C",
+     "aciklama": "Zaleplon hızlı etkili ve kısa ömürlüdür; uykudan erken uyanan hastaların tedavisinde değerlidir (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Flurazepam aktif metabolitlerine dönüşen, uzun etkili bir benzodiazepin hipnotiktir. Gündüz sedasyonu sık görüldüğünden erken uyanma tedavisinde kısa etki avantajı sağlamaz (s. 41).",
+      "B": "Lorazepam eliminasyonu görece yavaş bir benzodiazepindir ve hipnotik kullanımda gündüz sedasyonu daha sıktır. Kısa ömürlü, gece yarısı alınabilen ilaç profili göstermez (s. 41).",
+      "C": "Zaleplon hızlı etki eden ve yarılanma ömrü kısa olan yeni bir hipnotiktir. Bu özellikler sayesinde uykudan erken uyanan hastaların tedavisinde değer taşır (s. 42).",
+      "D": "Kuazepam flurazepam gibi aktif metabolitlerine dönüşen bir benzodiazepin hipnotiktir. Uzun etkili metabolitleri nedeniyle hipnotik kullanımda ertesi gün sedasyonu sık görülür (s. 41).",
+      "E": "Fenobarbital 4-5 günlük yarılanma ömrüyle çok uzun etkili bir barbitürattır. Gündüz sedasyonu amacıyla kullanılır, erken uyanma tedavisinde yeri yoktur (s. 14, 44)."
+     },
+     "bilgi": [
+      160
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "uykudan erken uyanan hastaların tedavisinde"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q53",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Delirium tremens belirtilerini bastırmak için kullanılan benzodiazepin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lorazepam",
+      "B": "Triazolam",
+      "C": "Alprazolam",
+      "D": "Midazolam",
+      "E": "Oksazepam"
+     },
+     "dogru": "A",
+     "aciklama": "Lorazepam delirium tremens belirtilerini bastırmak için kullanılır (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Lorazepam delirium tremens belirtilerini bastırmak için kullanılır. Ayrıca nöbet tedavisinde klinik olarak yararlı seçicilikteki benzodiazepinler arasında da sayılır (s. 27, 45).",
+      "B": "Triazolam kısa yarılanma ömrü nedeniyle hipnotik olarak kullanılan bir benzodiazepindir. Kısa etkisi nedeniyle delirium tremensin bastırılması için önerilen ilaç olarak verilmez (s. 11).",
+      "C": "Alprazolam panik bozukluk ve agorafobide seçici görünen bir benzodiazepindir. Kullanım alanı anksiyete bozukluklarıdır ve delirium tremensin bastırılması için verilen ilaç olarak anılmaz (s. 37).",
+      "D": "Midazolam hızlı başlangıçlı, kısa etkili bir benzodiazepindir ve anestezide damar yoluyla kullanılır. Delirium tremensin bastırılmasıyla ilişkilendirilen ilaç lorazepamdır (s. 13, 26).",
+      "E": "Oksazepam aktif metaboliti olmayan, artık etkisi az bir benzodiazepindir. Delirium tremens tedavisi için öne çıkarılan ilaç olarak verilmez (s. 13)."
+     },
+     "bilgi": [
+      173
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Lorazepam, delirium tremens semptomlarını bastırmak"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q57",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki barbitüratlardan hangisi hipnoz için değil, sedasyon amacıyla kullanılır?",
+     "secenekler": {
+      "A": "Sekobarbital",
+      "B": "Tiyopental",
+      "C": "Fenobarbital",
+      "D": "Metoheksital",
+      "E": "Pentobarbital"
+     },
+     "dogru": "C",
+     "aciklama": "Fenobarbital sedasyon için kullanılır; sekobarbital hipnoz, tiyopental ve metoheksital anestezi içindir (s. 26, 44).",
+     "sik_aciklamalari": {
+      "A": "Sekobarbital yatmadan önce alınan, hipnoz amacıyla kullanılan bir barbitürattır. Yarılanma ömrü kişiden kişiye 18-48 saat arasında değişir (s. 14, 44).",
+      "B": "Tiyopental yağda çözünürlüğü çok yüksek, damar yoluyla verildiğinde beyne hızla giren bir barbitürattır. Anestezide kullanılır, gündüz sedasyonu ilacı değildir (s. 26).",
+      "C": "Fenobarbital sedasyon amacıyla günde birkaç kez kullanılan barbitürattır. Uzun yarılanma ömrü ve jeneralize tonik-klonik nöbetteki antikonvülsan etkisiyle de bilinir (s. 27, 44).",
+      "D": "Metoheksital tiyopental gibi yağda çok çözünen ve intravenöz anestezide kullanılan bir barbitürattır. Etkisi hızlı başlayıp anestezi sağlamaya yöneliktir, gündüz sedasyonu ilacı olarak kullanılmaz (s. 26).",
+      "E": "Pentobarbital sekobarbitalle birlikte anılan, yarılanma ömrü 18-48 saat olan bir barbitürattır. Gündüz sedasyonu ilacı olarak verilen barbitürat fenobarbitaldir (s. 14, 44)."
+     },
+     "bilgi": [
+      167
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-88"
+     ],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Sedasyon ve Hipnoz İçin Kullanılan İlaçların Dozları"
+     },
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-88"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q48",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Uykusuzluk tedavisinde sedatif-hipnotik kullanımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gerçek primer uykusuzluk seyrektir.",
+      "B": "İlaç gerektiğinde sınırlı bir süre için verilmelidir.",
+      "C": "Bu sınıftaki ilaçların ani kesilmesi rebound uykusuzluğa yol açmaz.",
+      "D": "Yedi ile on günde yanıt yoksa altta yatan hastalık araştırılır.",
+      "E": "Z-ilaçlarının uyku örüntüsünü değiştirme olasılığı daha azdır."
+     },
+     "dogru": "C",
+     "aciklama": "Uykusuzlukta ilaç sınırlı süre verilir; ani kesilme rebound uykusuzluk yapabilir; 7–10 günde yanıt yoksa altta yatan hastalık aranır (s. 40–42).",
+     "sik_aciklamalari": {
+      "A": "Uyku sorunları çoğu kez altta yatan tıbbi ya da psikiyatrik hastalığın yetersiz tedavisinden kaynaklanır ve gerçek primer uykusuzluk seyrektir. Önerme doğrudur (s. 40).",
+      "B": "Bazı olgularda sedatif-hipnotik gerekir ve ilaç sınırlı bir süre için verilmelidir. Uzun kullanımın tolerans ve bağımlılık riskleri bu kuralın gerekçesidir (s. 40).",
+      "C": "Bu sınıftan birçok ilacın aniden kesilmesi rebound uykusuzluğa yol açabilir ve bu duruma dikkat edilmelidir. Rebound uykusuzluğu yok sayan önerme bu yüzden yanlıştır (s. 40).",
+      "D": "Yedi ile on günlük tedaviden sonra uykusuzluk azalmazsa değerlendirilmesi gereken primer psikiyatrik ya da tıbbi hastalık düşünülür. Önerme doğru bir klinik yaklaşımdır (s. 42).",
+      "E": "Eszopiklon, zaleplon ve zolpidemin uyku örüntüsünü değiştirme olasılığı benzodiazepinlere göre daha azdır. Bu özellik yeni hipnotikleri uzun süreli uyku düzeni açısından avantajlı kılar ve önerme doğrudur (s. 41)."
+     },
+     "bilgi": [
+      149,
+      150,
+      151,
+      153,
+      162
+     ],
+     "benzer_cikmis": [
+      "final-2018-2019-q045"
+     ],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "birçok ilacın aniden kesilmesinin rebound uykusuzluğa yol"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q045",
+      "cikmis:past-1790877044773-259930"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q51",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Hipnotik olarak kullanıldığında gündüz sedasyonunun en sık görüldüğü ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flurazepam",
+      "B": "Zaleplon",
+      "C": "Zolpidem",
+      "D": "Triazolam",
+      "E": "Eszopiklon"
+     },
+     "dogru": "A",
+     "aciklama": "Yavaş elimine edilen (lorazepam) ya da aktif metabolite dönüşen (flurazepam, kuazepam) benzodiazepinlerde gündüz sedasyonu daha sıktır (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Flurazepam aktif metabolitlerine dönüşen bir benzodiazepindir ve metabolitlerinin yarılanma ömrü uzundur. Bu tür ilaçlarla gündüz vakti sedasyon daha sıktır (s. 13, 41).",
+      "B": "Zaleplon yarılanma ömrü 1-2 saat olan, hızlı ve kısa etkili bir hipnotiktir. Kısa etkisi nedeniyle ertesi gün artık etkisi azdır (s. 13, 42).",
+      "C": "Zolpidem karaciğerde hızla inaktif metabolitlere yıkılan kısa ömürlü bir hipnotiktir. Aktif metaboliti olmadığından gündüz sedasyonu flurazepam kadar sık değildir (s. 13, 15).",
+      "D": "Triazolam hızlı başlangıçlı, kısa etkili bir benzodiazepindir ve metabolitleri hızla inaktive olur. Artık etki yerine dozlar arası gündüz anksiyetesiyle anılır (s. 11, 32).",
+      "E": "Eszopiklon az miktarda aktif metaboliti olan, görece kısa ömürlü yeni bir hipnotiktir. Uyku örüntüsünü az değiştirir ve gündüz sedasyonu flurazepama göre seyrektir (s. 13, 41)."
+     },
+     "bilgi": [
+      155
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q113"
+     ],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "gündüz vakti sedasyon daha sıktır"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q113"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q52",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Hem uykuya dalma hem uykuyu sürdürme tedavisi için onaylanan ve en yaygın yan etkisi ertesi gün uyku hâli olan oreksin antagonisti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ramelteon",
+      "B": "Zaleplon",
+      "C": "Buspiron",
+      "D": "Tasimelteon",
+      "E": "Suvoreksant"
+     },
+     "dogru": "E",
+     "aciklama": "Suvoreksant uyku başlangıcı ve sürdürülmesi için onaylı oreksin antagonistidir; en yaygın yan etkisi ertesi gün uyku hâlidir (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Ramelteon melatonin reseptör agonisti olan bir hipnotiktir. Oreksin sistemine değil melatonin reseptörüne etki ettiği için kökteki ilaç sınıfına uymaz (s. 7).",
+      "B": "Zaleplon benzodiazepin yerinde etki eden, kısa ömürlü yeni bir hipnotiktir. Erken uyanan hastalarda değerlidir, oreksin antagonisti değildir (s. 23, 42).",
+      "C": "Buspiron 5-HT1A parsiyel agonisti, yavaş etkili bir anksiyolitiktir. Hipnotik olarak onaylı değildir ve oreksin sistemine etki etmez (s. 7).",
+      "D": "Tasimelteon ramelteon gibi melatonin reseptör agonisti olan bir hipnotiktir. Oreksin reseptörünü engellemez, bu yüzden aranan ilaç sınıfında yer almaz (s. 7).",
+      "E": "Suvoreksant oreksin reseptör antagonistidir ve FDA tarafından hem uyku başlangıcı hem uykuyu sürdürme tedavisi için onaylanmıştır. En yaygın yan etkisi ertesi gün uyku hâlidir (s. 42)."
+     },
+     "bilgi": [
+      18,
+      161
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Suvoreksant'ın en yaygın yan"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q54",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Santral kaynaklı iskelet kası spastisitesinde yararlı gevşetici etkisi olan ve sedatif-hipnotik yoksunluğunda azalan dozlarda verilen uzun etkili ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Meprobamat",
+      "B": "Triazolam",
+      "C": "Zolpidem",
+      "D": "Diazepam",
+      "E": "Midazolam"
+     },
+     "dogru": "D",
+     "aciklama": "Diazepam santral spastisitede yararlıdır; klordiazepoksit ve diazepam gibi uzun etkili ilaçlar yoksunlukta azalan dozda verilir (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Meprobamat sıklıkla santral kas gevşetici olarak kullanılır, ancak sedasyondan bağımsız etkinliğine ilişkin kanıt yoktur. Yoksunlukta azalan dozda verilen uzun etkili ilaç olarak anılmaz (s. 45).",
+      "B": "Triazolam kısa yarılanma ömürlü bir hipnotiktir ve dozlar arasında bile yoksunluk yapabilir. Yoksunluk tedavisinde uzun etkili ilaçlar tercih edildiği için uygun değildir (s. 32, 45).",
+      "C": "Zolpidem alfa1 seçici, kısa etkili yeni bir hipnotiktir. Kas gevşetici ya da spastisite tedavisinde kullanılan bir ilaç olarak tanımlanmaz (s. 20, 42).",
+      "D": "Diazepam santral kaynaklı spastisitede yararlı gevşetici etkisi olan bir benzodiazepindir. Uzun etkili olduğu için etanol ve diğer sedatif-hipnotik bağımlılığından çekilmede azalan dozlarda verilir (s. 45).",
+      "E": "Midazolam hızlı başlangıçlı, kısa etkili bir benzodiazepindir ve anestezide damar yoluyla kullanılır. Kısa etkisi nedeniyle yoksunlukta azalan doz tedavisi için uygun değildir (s. 13, 26)."
+     },
+     "bilgi": [
+      171,
+      172
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "santral kaynaklı iskelet kas spastisitesinde yararlı gevşetici"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q55",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Endoskopi ve bronkoskopi gibi girişimlerde sedasyon ve amnezi sağlamak ya da anestezi öncesi premedikasyon için tercih edilen formülasyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Uzun etkili, aktif metabolitli formülasyonlar",
+      "B": "Kısa etkili oral formülasyonlar",
+      "C": "Bifazik uzatılmış salımlı formülasyonlar",
+      "D": "Midede aktifleşen ön ilaç formülasyonları",
+      "E": "Enzim indükleyici barbitürat formülasyonları"
+     },
+     "dogru": "B",
+     "aciklama": "Endoskopi, bronkoskopi ve premedikasyonda sedasyon ve amnezi için kısa etkili oral formülasyonlar tercih edilir (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Uzun etkili ve aktif metabolitli formülasyonlar birikici etki ve ertesi gün uyuşukluk yapar. Kısa süreli girişim sedasyonunda bu uzun etki istenmez (s. 11, 13).",
+      "B": "Endoskopi ve bronkoskopi gibi girişimlerde sedatif ve amnezik etki ile premedikasyon için kısa etkili oral formülasyonlar tercih edilir. Hasta girişim sırasında işbirliği yapar, sonrasında hatırlamaz (s. 45, 47).",
+      "C": "Bifazik uzatılmış salımlı formülasyon zolpidemde uykunun sürdürülmesi için sürekli ilaç düzeyi sağlar. Gece boyu etki amaçlanır, kısa girişim sedasyonu için seçilmez (s. 15, 42).",
+      "D": "Midede asit hidroliziyle aktifleşen ön ilaçlara klorazepat örnektir ve aktif metaboliti çok uzun etkilidir. Kısa girişimlerde istenen hızlı ve kısa etki profilini vermez (s. 8, 13).",
+      "E": "Enzim indükleyici barbitüratlar, özellikle fenobarbital, uzun etkilidir ve ilaç etkileşimi riski taşır. Girişim sedasyonunda tercih edilen formülasyon olarak gösterilmez (s. 14, 18)."
+     },
+     "bilgi": [
+      169,
+      178
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q12"
+     ],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "kısa etkili oral formülasyonlar"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q12"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q56",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ilaçlardan hangileri hipnoz değil, gündüz sedasyonu amacıyla günde birkaç kez kullanılan ilaçlardandır?\nI. Fenobarbital\nII. Buspiron\nIII. Triazolam\nIV. Zaleplon",
+     "secenekler": {
+      "A": "III ve IV",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "Yalnız II",
+      "E": "II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Sedasyon için gündüz kullanılan ilaçlara fenobarbital ve buspiron, hipnoz için yatmadan önce kullanılanlara triazolam ve zaleplon örnektir (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Triazolam ve zaleplon kısa etkili hipnotiklerdir ve yatmadan önce tek doz kullanılırlar. Sedasyon amaçlı gündüz kullanımın tersi olduğundan bu küme yanlıştır (s. 11, 42, 44).",
+      "B": "Fenobarbital ve buspiron sedasyon amacıyla günde iki-üç kez verilen ilaçlar arasında yer alır. Triazolam ve zaleplon ise yatmadan önce alınan hipnotiklerdir (s. 44).",
+      "C": "Fenobarbital sedasyon amacıyla kullanılan doğru öncüldür. Triazolam ise kısa yarılanma ömrü nedeniyle sedatiften çok hipnotik olarak kullanılır, kümeye yanlış girer (s. 11, 44).",
+      "D": "Buspiron etkisi yavaş başlayan, gündüz kullanılan seçici bir anksiyolitiktir ve doğrudur. Fenobarbital de sedasyon sütununda yer aldığı için tek başına eksiktir (s. 7, 44).",
+      "E": "Buspiron sedasyon amaçlı doğru öncüldür. Triazolam ve zaleplon ise yatmadan önce uyku için kullanılan hipnotikler olduğundan küme hatalıdır (s. 42, 44)."
+     },
+     "bilgi": [
+      167,
+      168
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Sedasyon ve Hipnoz İçin Kullanılan İlaçların"
+     },
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-88"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q49",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Sedatif-hipnotiklerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Görece düşük dozlarda anksiyetede azalmanın eşlik ettiği yatıştırıcı etki oluştururlar.\nII. Uzun süreli kullanımda benzodiazepinler bağımlılık yapmaz.\nIII. Birçoğunun ani kesilmesi rebound uykusuzluğa yol açabilir.\nIV. 1–2 haftadan uzun kullanımda uyku düzeni üzerindeki etkilerine bir miktar tolerans gelişir.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "Yalnız IV",
+      "D": "I, III ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Düşük doz anksiyolitik sedasyon yapar; benzodiazepinler uzun kullanımda bağımlılık yapar; ani kesme rebound uykusuzluk; 1–2 haftadan sonra uyku etkilerine tolerans (s. 24–40).",
+     "sik_aciklamalari": {
+      "A": "I düşük dozdaki yatıştırıcı ve anksiyolitik etkiyi doğru anlatır. II ise yanlıştır, çünkü uzun süre kullanılan benzodiazepinler bağımlılığa yol açabilir (s. 24, 31).",
+      "B": "III rebound uykusuzluğu doğru anlatır. II'nin eklenmesi kümeyi bozar, çünkü benzodiazepinlerin uzun kullanımda bağımlılık yaptığı bilinir (s. 31, 40).",
+      "C": "IV uyku düzeni etkilerine karşı gelişen toleransı doğru anlatır. Düşük doz anksiyolizi ve rebound uykusuzluğu da doğru olduğundan tek başına eksiktir (s. 24, 26, 40).",
+      "D": "Düşük dozda anksiyolizle birlikte sedasyon, ani kesilmede rebound uykusuzluk ve 1–2 haftayı aşan kullanımda tolerans doğru bilgilerdir. II yanlıştır, çünkü benzodiazepinler dahil çoğu sedatif-hipnotik bağımlılık yapabilir (s. 24, 26, 31, 40).",
+      "E": "III ve IV doğru öncüllerdir. II ise benzodiazepinlerin bağımlılık yapmadığını söyleyen yanlış bir ifadedir ve doğru olan I dışarıda kalmıştır (s. 24, 31)."
+     },
+     "bilgi": [
+      85,
+      94,
+      118,
+      151
+     ],
+     "benzer_cikmis": [
+      "final-2018-2019-q045"
+     ],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "benzodiazepinler dahil çoğu sedatif"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q045"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-88",
+     "soru": "120 mg parasetamol + 15 mg fenobarbital kombinasyonu çocuk ve bebeklerde antipiretik etkinliğin ötesinde bir amaçla kullanılır. Parasetamol analjezik-antipiretik bir ilaçtır. Fenobarbital hangi nedenle parasetamole ilave edilir?",
+     "secenekler": {
+      "A": "İlaç etki süresini uzatmak için ilave edilir.",
+      "B": "Analjezik-antipiretik etkinliğe sedasyon eklemek için kullanılır.",
+      "C": "Ağrı kesici etkisini arttırmak için ilave edilir.",
+      "D": "İlacın ateş düşürücü etkisini uzatmak için ilave edilir.",
+      "E": "SSS oksijen gereksinimini azaltmak için ilave edilir."
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "final-2018-2019-q045",
+     "soru": "Benzodiazepinlerle ilgili;\nI. Bütün benzodiazepinler anksiyolitik, sedatif etkili değildir; ancak hipnotik etkileri çok düşük dozlarda oluşur.\nII. Benzodiazepinlerin anksiyolitik etkisi çok düşük dozlarda oluşur ve anksiyolitik doz aralığı geniştir.\nIII. Uzun süreli ve yüksek dozlarda kullanıldıklarında psişik bağımlılık gelişmediğinden normal reçetelendirilirler.\nIV. Kan düzeyleri düştüğünde uykusuzluk hâli oluşturabilirler (rebound etki).\nifadelerinden hangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2020-2021-q113",
+     "soru": "Sedatif olarak kullanıldığında birikici etki ve aşırı uyuşukluk gibi artık etkiler meydana getiren benzodiazepin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klorazepat",
+      "B": "Triazolam",
+      "C": "Eszopiklon",
+      "D": "Zaleplon",
+      "E": "Zolpidem"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q12",
+     "soru": "Aşağıdaki ilaç gruplarından hangisi anterograd amnezi yapar?",
+     "secenekler": {
+      "A": "Ketamin",
+      "B": "Teofilin",
+      "C": "Midazolam",
+      "D": "Fenitoin",
+      "E": "Fentanil"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Doza bağlı santral advers etkileri, anterograd amneziyi, yaşlı ve risk gruplarında güvenli kullanımı, aşırı dozda yatay doz-yanıt eğrisi ve flumazenil yaklaşımını, porfiri ve gebelik kategorilerini açıklar (s. 46–51).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q58",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Benzodiazepinlerin kasıtlı aşırı doz durumlarında görece güvenli kabul edilmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Doz-yanıt eğrilerinin doğrusal olması",
+      "B": "Doz-yanıt eğrilerinin daha yatay olması",
+      "C": "Karaciğer enzimlerini indüklemeleri",
+      "D": "Plasenta engelini aşmamaları",
+      "E": "Aktif metabolit oluşturmamaları"
+     },
+     "dogru": "B",
+     "aciklama": "Benzodiazepinlerin doz-yanıt eğrisi daha yatay olduğundan aşırı dozda güvenli kabul edilirler (s. 48).",
+     "sik_aciklamalari": {
+      "A": "Doğrusal doz-yanıt eğrisi barbitürat ve alkol gibi eski sedatif-hipnotiklerin özelliğidir. Doz arttıkça anestezi, koma ve ölüme ilerlenebildiği için güvenlik nedeni değil riskin kaynağıdır (s. 3).",
+      "B": "Benzodiazepinlerin doz-yanıt eğrisi hipnozdan sonra yataylaşır ve daha derin depresyon için orantısız doz artışı gerekir. Bu nedenle aşırı doz durumlarında güvenli ilaçlar kabul edilir (s. 3, 48).",
+      "C": "Karaciğer enzim indüksiyonu fenobarbital ve meprobamatta belirgindir, benzodiazepinler enzim etkinliğini değiştirmez. Aşırı doz güvenliğiyle bağlantılı bir özellik sayılmaz (s. 18).",
+      "D": "Bütün sedatif-hipnotikler gebelikte plasenta engelini aşar ve yenidoğanda depresyona katkıda bulunabilir. Benzodiazepinlerin plasentayı geçmediği ifadesi doğru değildir (s. 9).",
+      "E": "Benzodiazepinlerin birçok faz I metaboliti aktiftir ve bazıları uzun ömürlüdür. Aktif metabolit oluşmadığı genellemesi yanlıştır ve aşırı doz güvenliğini açıklamaz (s. 10)."
+     },
+     "bilgi": [
+      7,
+      183
+     ],
+     "benzer_cikmis": [
+      "past-q-1_Kurul-2022-29"
+     ],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Doz-yanıt eğrilerinin daha yatay olması nedeniyle benzodiazepinler"
+     },
+     "dayanak": [
+      "cikmis:past-q-1_Kurul-2022-29"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q60",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Porfirin sentezini artırdıkları için porfiri öyküsü olan hastalarda kullanımı kesinlikle kontrendike olan ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Barbitüratlar",
+      "B": "Benzodiazepinler",
+      "C": "Oreksin antagonistleri",
+      "D": "Melatonin reseptör agonistleri",
+      "E": "Sedatif antihistaminikler"
+     },
+     "dogru": "A",
+     "aciklama": "Barbitüratlar porfirin sentezini artırdığı için porfiri öyküsünde kesinlikle kontrendikedir (s. 50).",
+     "sik_aciklamalari": {
+      "A": "Barbitüratlar karaciğerde porfirin sentezini artıran sedatif-hipnotiklerdir. Bu nedenle porfiri öyküsü olan hastalarda kullanımları kesinlikle kontrendikedir ve başka sedatif seçilmelidir (s. 50).",
+      "B": "Benzodiazepinler yaygın kullanılan, aşırı dozda görece güvenli sedatif-hipnotiklerdir. Gebelikte bireysel olarak D ya da X kategorisinde olabilirler, porfiri kontrendikasyonu barbitüratlara aittir (s. 48, 50).",
+      "C": "Oreksin antagonistleri suvoreksant ve lemboreksant uykusuzluk tedavisinde kullanılır. Oreksin sistemini engelleyerek etki ederler ve porfirin sentezini artıran ilaç grubu olarak tanımlanmazlar (s. 42, 43).",
+      "D": "Melatonin reseptör agonistleri ramelteon ve tasimelteon hipnotiklerdir; ramelteon gebelik kategorisi C'dir. Porfiri öyküsünde kesin kontrendikasyon bu grup için verilmez (s. 7, 50).",
+      "E": "Hidroksizin, prometazin, difenhidramin ve doksilamin sedasyon ya da uyku yapan antihistaminiklerdir. Porfirin sentezini artırma özelliği bu ilaçlara yüklenmez (s. 8)."
+     },
+     "bilgi": [
+      194
+     ],
+     "benzer_cikmis": [
+      "d3k2-2023-2024-h65"
+     ],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Barbitüratlar porfirin sentezini artırdıkları için porfiria öyküsü olan"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2023-2024-h65"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q59",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Yaşlı hastada sedatif-hipnotik kullanımı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Duyarlılık azaldığından genç erişkin dozunun iki katı gerekir.",
+      "B": "Eliminasyon yarılanma ömürleri kısalır.",
+      "C": "Genç erişkin dozunun yaklaşık yarısı genellikle güvenli ve etkilidir.",
+      "D": "Zolpidemin yarı ömrü yaşla değişmez.",
+      "E": "Doz ayarına gerek yoktur, yalnız süre kısaltılır."
+     },
+     "dogru": "C",
+     "aciklama": "Yaşlı hastalar daha duyarlıdır; genç erişkin dozunun yaklaşık yarısı güvenli ve genellikle etkilidir; yarı ömürler uzar (s. 18, 47).",
+     "sik_aciklamalari": {
+      "A": "Yaşlılarda duyarlılık azalmaz, tersine artar ve yarılanma ömürleri uzar. Doz artırma önerisi aşırı santral sinir sistemi etkisi riskini büyüttüğü için yanlıştır (s. 18, 47).",
+      "B": "Çok yaşlı hastalarda bu ilaçların eliminasyon yarılanma ömrü sıklıkla önemli ölçüde uzar. Kısalma ifadesi bu bilgiye ters düşer (s. 18).",
+      "C": "Yaşlı hastalar sedatif-hipnotiklerin etkilerine daha duyarlıdır. Bu yüzden genç erişkinlerde kullanılan dozun yaklaşık yarısı güvenilir ve genellikle etkilidir (s. 47).",
+      "D": "Zolpidemin eliminasyon yarı ömrü kadınlarda daha uzundur ve yaşlılarda önemli ölçüde artar. Yaşla değişmediği ifadesi bu nedenle yanlıştır (s. 15).",
+      "E": "Yaşlılarda artan duyarlılık nedeniyle doz azaltılır, zaleplon gibi ilaçlarda da yaşlıda dozun düşürülmesi önerilir. Doz ayarını gereksiz sayan ifade yanlıştır (s. 15, 47)."
+     },
+     "bilgi": [
+      52,
+      61,
+      179
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "kullanılan dozun yaklaşık yarısının"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q63",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Benzodiazepinlerin endoskopi gibi rahatsızlık veren girişimlerde kullanılmasını sağlayan etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yeni bilgi öğrenmeyi bozan doza bağlı anterograd amnezi",
+      "B": "Önceki bilgileri silen retrograd amnezi",
+      "C": "Belirgin analjezik etki",
+      "D": "Nöromüsküler kavşakta tam blok",
+      "E": "Doz-yanıt eğrisinin doğrusal olması"
+     },
+     "dogru": "A",
+     "aciklama": "Benzodiazepinlerin doza bağlı anterograd amnezisi endoskopide kullanılır: hasta işbirliği yapar ama sonrasını hatırlamaz (s. 46–47).",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepinler önceden öğrenilenlerin geri çağrılmasını korurken yeni bilgi öğrenmeyi bozan doza bağlı anterograd amnezi yapar. Hasta girişim sırasında işbirliği kurar, sonrasında girişimi hatırlamaz (s. 46, 47).",
+      "B": "Retrograd amnezi ilaç öncesi öğrenilenlerin kaybıdır. Benzodiazepinlerde önceden öğrenilmiş bilginin geri çağrılması sağlam kalır, bu yüzden bu etki tanımlanmaz (s. 46).",
+      "C": "Analjezi ağrının giderilmesidir ve benzodiazepinlerin belirgin bir özelliği olarak sayılmaz. Girişimdeki yararları ağrı kesici etkiye değil sedasyon ve amneziye dayanır (s. 45, 47).",
+      "D": "Meprobamat ve benzodiazepinler yüksek dozlarda nöromüsküler kavşakta iletimi baskılayabilir. Ancak tam blok oluşturmak girişim sedasyonunda aranan etki değildir (s. 28).",
+      "E": "Doğrusal doz-yanıt eğrisi barbitürat ve alkol gibi eski ilaçlara özgüdür. Benzodiazepinlerin eğrisi yataydır ve girişimde kullanılmalarının nedeni amnezik etkidir (s. 3, 48)."
+     },
+     "bilgi": [
+      177,
+      178
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q12"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "hasta girişim sırasında kooperasyon kurabilmekte"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q12"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q61",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Sedatif-hipnotiklerin gebelik kategorileri ile ilgili aşağıdaki eşleştirmelerden hangileri doğrudur?\nI. Barbitüratların çoğu – D\nII. Buspiron – B\nIII. Zolpidem – C\nIV. Ramelteon – X",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "II ve IV",
+      "C": "Yalnız III",
+      "D": "I, II ve III",
+      "E": "II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Barbitüratların çoğu D; eszopiklon, ramelteon, suvoreksant, zaleplon, zolpidem C; buspiron B; benzodiazepinler bireysel olarak D ya da X (s. 50).",
+     "sik_aciklamalari": {
+      "A": "I barbitüratların çoğunun D kategorisinde olduğunu doğru söyler. IV ise yanlıştır, çünkü ramelteon kategori C ilaçtır, X kategorisi fetal riskin yarardan çok fazla olduğu ilaçlardır (s. 50, 51).",
+      "B": "II buspironu doğru biçimde B kategorisine koyar. IV ise ramelteonu X kategorisine yerleştirdiği için hatalıdır, ramelteon kategori C'dir (s. 50).",
+      "C": "III zolpidemin kategori C olduğunu doğru söyler. Barbitüratların D, buspironun B kategorisinde olduğu da doğru olduğundan tek başına eksiktir (s. 50).",
+      "D": "Barbitüratların çoğu kategori D, buspiron kategori B, zolpidem kategori C ilaçtır. Ramelteon da eszopiklon, suvoreksant ve zaleplonla birlikte kategori C olduğundan IV yanlıştır (s. 50).",
+      "E": "II ve III doğru eşleştirmelerdir. IV'teki ramelteon–X eşleştirmesi yanlış olduğu ve doğru olan I dışarıda kaldığı için küme hatalıdır (s. 50)."
+     },
+     "bilgi": [
+      192,
+      193,
+      195,
+      196
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Barbitüratların çoğu FDA gebelik kategorisi D olarak sınıflandırılır"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q62",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Benzodiazepin aşırı dozunda flumazenil verilse bile solunum işlevinin desteklenmesi ve izlenmesi gerekmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Barbitüratların etkisini de geri çevirmesi",
+      "B": "Etkisinin benzodiazepinlerden uzun sürmesi",
+      "C": "Ters agonist olarak solunumu baskılaması",
+      "D": "Opioid reseptörlerini de bloke etmesi",
+      "E": "Solunum depresyonunu geri çevirmesinin öngörülemez olması"
+     },
+     "dogru": "E",
+     "aciklama": "Flumazenilin etkisi kısa, solunum depresyonunu geri çevirmesi öngörülemezdir; bu yüzden solunum desteklenip izlenir (s. 49).",
+     "sik_aciklamalari": {
+      "A": "Flumazenil barbitüratların santral etkilerini antagonize etmez, etkisi benzodiazepin bağlanma yerine sınırlıdır. Bu ifade hem yanlıştır hem de solunum izleminin gerekçesini açıklamaz (s. 33).",
+      "B": "Flumazenilin yarılanma ömrü kısadır ve benzodiazepinlerin etki süresi ondan uzundur. Etkisinin uzun sürdüğü ifadesi ters çevrilmiştir, sedasyon bu yüzden yineleyebilir (s. 33, 34).",
+      "C": "Ters agonistler benzodiazepin yerinde negatif allosterik etki gösterip anksiyete ve nöbet yapabilen ligandlardır. Flumazenil ise kompetitif antagonisttir ve solunumu baskılayarak etki etmez (s. 23, 33).",
+      "D": "Flumazenil benzodiazepin yerinde kompetitif antagonisttir ve opioidlerin santral sinir sistemi etkilerini antagonize etmez. Etkisi yalnız GABA-A reseptöründeki benzodiazepin bağlanma yerine yöneliktir (s. 33).",
+      "E": "Flumazenil benzodiazepinlerin ve Z-ilaçlarının sedatif etkisini antagonize eder, ancak solunum depresyonunu geri çevirmesi öngörülemez. Etki süresi de kısa olduğundan solunum desteklenip izlenmelidir (s. 49)."
+     },
+     "bilgi": [
+      187,
+      188
+     ],
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q131"
+     ],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "solunum depresyonunu antagonize edişi öngörülemez"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2020-2021-q131",
+      "cikmis:d3-f-128",
+      "cikmis:d3k2-2024-2025-hg2"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-1_Kurul-2022-29",
+     "soru": "Benzodiazepinlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Benzodiazepinlerin karaciğerdeki metabolizması sitokrom P450 enzim inhibitör ve indükleyicilerinden etkilenir.\nII. Toksik dozları tedavi dozuna çok yakındır.\nIII. Bütün benzodiazepinler anksiyolitik ve sedatif etkilidir; hipnotik etkileri ise yüksek dozlarda ortaya çıkar.\nIV. Uzun süreli ve yüksek dozlarda kullanıldıklarında psikolojik bağımlılık gelişir; bu nedenle kırmızı reçete ile satılırlar.\nBu ifadelerden hangisi/hangileri benzodiazepinler için söylenebilir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3k2-2023-2024-h65",
+     "soru": "Barbitüratlarla ilgili aşağıdaki ifadeler veriliyor:\nI. Beyin oksijen tüketimini, beyin kan akımını ve kafa içi basıncını azaltırlar.\nII. Büyük ölçüde karaciğerde metabolize edilirler; ağır karaciğer hastalığında etkileri uzar.\nIII. Fenobarbital zehirlenmesinde idrarın alkalileştirilmesi ilacın atılımını artırır.\nIV. Porfiri öyküsü olan hastalarda güvenle kullanılabilirler.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q12",
+     "soru": "Aşağıdaki ilaç gruplarından hangisi anterograd amnezi yapar?",
+     "secenekler": {
+      "A": "Ketamin",
+      "B": "Teofilin",
+      "C": "Midazolam",
+      "D": "Fenitoin",
+      "E": "Fentanil"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3k2-2020-2021-q131",
+     "soru": "Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmede ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak için kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Flumazenil",
+      "B": "Triazolam",
+      "C": "Eszopiklon",
+      "D": "Zaleplon",
+      "E": "Zolpidem"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Tolerans, çapraz tolerans, bağımlılık/yoksunluk şiddetini belirleyen etkenleri ve SSS depresanlarıyla aditif etkileşimleri açıklar (s. 52–54).",
+   "sorular": [
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q64",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Sedatif-hipnotiklerin en sık neden olduğu ilaç etkileşimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karaciğer enzim inhibisyonu",
+      "B": "Başka santral depresanlarla aditif etkileşim",
+      "C": "İdrar pH'sını değiştirme",
+      "D": "Flumazenille sinerjik etkileşim",
+      "E": "Oreksin reseptörlerinde yarışma"
+     },
+     "dogru": "B",
+     "aciklama": "Sedatif-hipnotiklerin en sık etkileşimi diğer santral depresanlarla aditif etkidir (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Enzim inhibisyonu simetidin gibi ilaçların zaleplon düzeyini artırmasında görülen bir etkileşimdir. Sedatif-hipnotiklerin en sık neden olduğu etkileşim türü olarak tanımlanmaz (s. 15, 54).",
+      "B": "Sedatif-hipnotiklerin en sık etkileşimi diğer santral sinir sistemi depresanlarıyla aditif etki oluşturmalarıdır. Alkol, opioidler, antikonvülsanlar ve fenotiazinlerle birlikte kullanımda bu etki öngörülebilir (s. 54).",
+      "C": "İdrarın alkalileştirilmesi fenobarbitalin atılımını artıran bir uygulamadır. Zehirlenmede atılımı hızlandıran bir müdahaledir ve sedatif-hipnotiklerin en sık etkileşim türünü anlatmaz (s. 17).",
+      "D": "Flumazenil benzodiazepin yerinde kompetitif antagonisttir ve benzodiazepin etkisini geri çevirir. İki ilaç arasındaki ilişki sinerji değil, aynı bağlanma yerinde yarışmaya dayanan antagonizmadır (s. 33).",
+      "E": "Oreksin reseptörleri suvoreksant ve lemboreksantın hedefidir. Bu ilaçlar uyku süresini iyileştirir, ancak sedatif-hipnotiklerin genel etkileşim profili bu reseptörler üzerinden kurulmaz (s. 7, 43)."
+     },
+     "bilgi": [
+      206,
+      209
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "diğer santral sinir sistemi depresan ilaçlarla, aditif etkilere yol"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q31"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q65",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Sedatif-hipnotiklerle birlikte kullanıldığında aşağıdakilerden hangileriyle aditif santral depresan etki öngörülebilir?\nI. Alkollü içecekler\nII. Opioid analjezikler\nIII. Fenotiazinler\nIV. Flumazenil",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve IV",
+      "C": "II ve IV",
+      "D": "Yalnız I",
+      "E": "II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Alkol, opioid analjezikler, antikonvülsanlar ve fenotiazinlerle aditif etki öngörülür; flumazenil antagonisttir (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Alkollü içecekler, opioid analjezikler, antikonvülsanlar ve fenotiazinlerle birlikte kullanımda aditif etki öngörülebilir. Flumazenil ise benzodiazepin etkisini geri çeviren antagonist olduğundan IV yanlıştır (s. 33, 54).",
+      "B": "Alkol aditif depresan etki yapan doğru öncüldür. Flumazenil ise benzodiazepin yerinde kompetitif antagonisttir ve santral depresyonu artırmaz, geri çevirir (s. 33, 54).",
+      "C": "Opioid analjezikler aditif etkiyle depresyonu artıran doğru öncüldür. Flumazenilin eklenmesi kümeyi bozar, çünkü bu ilaç benzodiazepin etkilerini bloke eden bir antagonisttir (s. 33, 54).",
+      "D": "Alkollü içecekler aditif etki yapan ilaçların başında gelir. Ancak opioid analjezikler ve fenotiazinler de aynı etkiyi gösterdiğinden tek başına eksiktir (s. 54).",
+      "E": "Opioidler ve fenotiazinler doğru öncüllerdir. Flumazenil ise antagonist olduğundan kümeye yanlış girer ve alkollü içecekler dışarıda kalmıştır (s. 33, 54)."
+     },
+     "bilgi": [
+      209
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q31"
+     ],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Alkollü içecekler, opioid analjezikler, antikonvülsanlar ve"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q31"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q67",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Sedatif-hipnotiklerde ilaç yanıtındaki değişikliklerle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Farmakolojik etkilerin çoğuna değişen derecede tolerans gelişir.\nII. Etanolle çapraz tolerans, standart dozun etkisini artırır.\nIII. Yakın zamanda fazla kullanım öyküsünde standart dozla yanıt yetersiz kalabilir.\nIV. Eszopiklon, zolpidem ya da zaleplonun dört haftadan kısa kullanımında tolerans çok az bildirilmiştir.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "II ve III",
+      "D": "Yalnız IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Etkilerin çoğuna tolerans gelişir; etanol dahil çapraz tolerans standart dozla yanıtı yetersiz bırakabilir; Z-ilaçlarının 4 haftadan kısa kullanımında tolerans azdır (s. 52).",
+     "sik_aciklamalari": {
+      "A": "I toleransın doza ve süreye bağlı geliştiğini doğru anlatır. II ise yanlıştır, çünkü etanol dahil ilaçlar arası çapraz tolerans standart dozun etkisini azaltır (s. 52).",
+      "B": "Doza ve süreye bağlı olarak etkilerin çoğuna tolerans gelişir, çapraz tolerans standart dozla yanıtı yetersiz bırakabilir ve Z-ilaçlarının kısa kullanımında tolerans azdır. II ters çevrilmiştir, çapraz tolerans yanıtı artırmaz, azaltır (s. 52).",
+      "C": "III çapraz toleransa bağlı yetersiz yanıtı doğru anlatır. II'nin eklenmesi kümeyi bozar, çünkü çapraz tolerans etkiyi artırmaz (s. 52).",
+      "D": "IV kısa süreli Z-ilacı kullanımında toleransın az bildirildiğini doğru söyler. I ve III de doğru olduğundan bu seçenek eksik kalır (s. 52).",
+      "E": "III ve IV doğru öncüllerdir. II ise çapraz toleransın etkiyi artırdığını söyleyen yanlış bir ifadedir ve doğru olan I dışarıda kalmıştır (s. 52)."
+     },
+     "bilgi": [
+      197,
+      199,
+      200
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "Etanol dahil farklı sedatif-hipnotikler arasındaki çapraz tolerans"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-21-sedatif-ve-hipnotik-ilaclar-q66",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Kısa yarılanma ömürlü sedatif-hipnotiklerin kesilmesinden sonra yoksunluk belirtileri genellikle daha şiddetli iken bu kurala istisna oluşturan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Triazolam",
+      "B": "Alprazolam",
+      "C": "Sekobarbital",
+      "D": "Zolpidem",
+      "E": "Midazolam"
+     },
+     "dogru": "D",
+     "aciklama": "Kısa ömürlü sedatif-hipnotiklerde yoksunluk daha şiddetlidir; eszopiklon, zolpidem ve zaleplon istisnadır, kesilme belirtileri minimaldir (s. 53).",
+     "sik_aciklamalari": {
+      "A": "Triazolam kısa yarılanma ömürlü bir benzodiazepindir ve dozlar arasında bile gündüz anksiyetesi şeklinde yoksunluk bildirilmiştir. Kuralı doğrulayan bir örnektir (s. 32, 53).",
+      "B": "Alprazolam alfa-hidroksilasyonla hızla inaktive olan, kısa etkili bir benzodiazepindir. Kısa ömürlü benzodiazepinler yoksunluğun daha şiddetli olduğu kurala uyar (s. 11, 53).",
+      "C": "Sekobarbital bir barbitürattır ve sedatif-hipnotiklerin uzun süreli yüksek doz kullanımından sonra kesilmesi ciddi yoksunluk yapabilir. Bu kuralın istisnası olarak sayılmaz (s. 32, 53).",
+      "D": "Eszopiklon, zolpidem ve zaleplon kısa etkili olmalarına karşın aniden kesildiklerinde yoksunluk belirtileri minimaldir. Bu nedenle kısa ömürlü ilaçlarda yoksunluğun daha şiddetli olduğu kuralının istisnasıdırlar (s. 53).",
+      "E": "Midazolam hızlı başlangıçlı, kısa etkili bir benzodiazepindir. Kısa ömürlü benzodiazepin olarak yoksunluk şiddeti kuralının istisnasında yer almaz (s. 13, 53)."
+     },
+     "bilgi": [
+      203,
+      204
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "kısa etki süreli bu yeni ajanların aniden kesilmesini takiben"
+     },
+     "dayanak": [
+      "ayrinti"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q31",
+     "soru": "Anksiyete giderici ilaçlar için aşağıdaki ifadeler veriliyor:\nI. Anksiyete ilaçları kombine edilmez.\nII. Antihistaminikler ile birlikte verilmez.\nIII. Antikolinerjik ilaç kullanan, benzer etkili bitki kullanan ya da reçetesiz madde kullananlara verilmez.\nIV. Endoskopi ve bronkoskopide ketamin ile kombine edilirler.\nBunlardan hangisi/hangileri söylenebilir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "A"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 67
+}
