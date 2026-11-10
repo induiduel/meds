@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowDownUp, BookOpen, Bot, Box, DoorOpen, Flag, Home, Menu, Pause, Play, Smile, Square, Trophy, UserPlus, Vibrate, Volume2, VolumeX } from 'lucide-react';
 import { masa } from '../../services/masa/istemci';
-import { OYUN_ADI, TEPKILER, type OdaGorunum, type OkeyGorunum } from '../../services/masa/tipler';
+import { OYUN_ADI, TEPKILER, unoModTanim, type OdaGorunum, type OkeyGorunum } from '../../services/masa/tipler';
 import { oyuncuAdi, sesCal, tercihYaz, titret, useTercih } from './ortak';
 import { DavetYapragi } from './MasaLobi';
 import { Avatar, Onay, SkorTablo, Yaprak, cezaBilgi, puanYaz, sadeAd, tasMi } from './kabukOrtak';
@@ -59,7 +59,7 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
     <header className="mk-cubuk">
       <button type="button" className="mk-cubuk-dugme" onClick={() => setMenu(true)} aria-label="Oyun menüsü"><Menu size={22} /></button>
       <div className="mk-cubuk-ad">
-        <b>{OYUN_ADI[oda.tur]}</b>
+        <b>{OYUN_ADI[oda.tur]}{oda.tur === 'uno' && oda.ayar.unoMod && oda.ayar.unoMod !== 'klasik' ? ` · ${unoModTanim(oda.ayar.unoMod).ad}` : ''}</b>
         <code aria-label={`Masa kodu ${oda.kod}`}>{oda.kod}</code>
       </div>
       <span className="mk-cubuk-el">{elMetni}</span>

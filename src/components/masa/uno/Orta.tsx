@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import type { UnoKart, UnoRenk } from '../../../services/masa/tipler';
+import type { UnoKart, UnoRenk, UnoYuz } from '../../../services/masa/tipler';
 import { azHareket } from '../ortak';
 import { KartGorsel, RenkBicimi } from './Kart';
 import { yiginAci } from './canlandir';
-import { temaAl, UNO_SIRA } from './temalar';
+import { renkAl, UNO_SIRA } from './temalar';
 import type { Nokta, Yerlesim } from './yerlesim';
 
 export interface YiginKart { kart: UnoKart; vurgu: boolean }
@@ -23,12 +23,17 @@ interface Props {
   oneriCek: boolean;
   onCek: (kaynak?: Nokta) => void;
   onReddet: () => void;
+  /** Flip koyu yüz · Hepsi Joker: renk yok · Extreme: deste fırlatıcıda · Flip: destenin üstünde görünen öbür yüz */
+  koyu?: boolean;
+  renksiz?: boolean;
+  firlatici?: boolean;
+  desteUst?: UnoYuz;
 }
 
 /** Masanın ortası: atık yığını, renk + yön halkası, çekme destesi */
-export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cekilebilir, hedef, oneriCek, onCek, onReddet }: Props) {
-  const t = temaAl(tema);
-  const ton = t.renk[renk];
+export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cekilebilir, hedef, oneriCek, onCek, onReddet, koyu, renksiz, firlatici, desteUst }: Props) {
+  const palet = renkAl(tema, !!koyu);
+  const ton = renksiz ? { ad: 'Renk yok', ana: '#f4f4f6', koyu: '#8c8c96', acik: '#ffffff', ikincil: '#fff' } : palet[renk];
   const donRef = useRef<HTMLDivElement>(null);
   const donAn = useRef<Animation | null>(null);
 
@@ -65,7 +70,7 @@ export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cek
     if (!d || d.pid !== e.pointerId) return;
     d.dx = e.clientX - d.sx; d.dy = e.clientY - d.sy;
     if (!d.oynadi) {
-      if (Math.hypot(d.dx, d.dy) < 8 || !cekilebilir) return;
+      if (Math.hypot(d.dx, d.dy) < 8 || !cekilebilir || firlatici) return;
       d.oynadi = true;
       ustRef.current?.classList.add('um-havada');
     }
@@ -91,7 +96,7 @@ export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cek
     <div className="um-orta">
       <div className="um-isik-yer" style={{ transform: `translate3d(${yer.atik.x}px, ${yer.atik.y}px, 0)` }} aria-hidden="true">
         <div className="um-isik-kap" style={{ width: ISIK, height: ISIK }}>
-          {UNO_SIRA.map((r) => <div key={r} className={`um-isik${r === renk ? ' um-acik' : ''}`} style={{ background: `radial-gradient(closest-side, ${t.renk[r].ana}, transparent)` }} />)}
+          {UNO_SIRA.map((r) => <div key={r} className={`um-isik${r === renk && !renksiz ? ' um-acik' : ''}`} style={{ background: `radial-gradient(closest-side, ${palet[r].ana}, transparent)` }} />)}
         </div>
       </div>
 
@@ -113,7 +118,7 @@ export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cek
         </div>
       </div>
 
-      <div className="um-yigin" style={{ transform: `translate3d(${yer.atik.x}px, ${yer.atik.y}px, 0)` }} aria-label={`Atık yığını. Geçerli renk: ${ton.ad}`} role="group">
+      <div className="um-yigin" style={{ transform: `translate3d(${yer.atik.x}px, ${yer.atik.y}px, 0)` }} aria-label={renksiz ? 'Atık yığını' : `Atık yığını. Geçerli renk: ${ton.ad}`} role="group">
         {yigin.map((y, i) => {
           const ust = i === yigin.length - 1;
           const id = y.kart.id;
@@ -127,6 +132,7 @@ export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cek
         })}
       </div>
 
+      {!renksiz && (<>
       <div className="um-renk-rozet" style={{ transform: `translate3d(${yer.atik.x + yer.halka * 0.36}px, ${yer.atik.y + yer.halka * 0.36}px, 0)` }} title={`Geçerli renk: ${ton.ad}`}>
         <span className="um-renk-rozet-ic" style={{ background: ton.ana }}>
           <svg viewBox="-10 -10 20 20" aria-hidden="true"><RenkBicimi renk={renk} b={5} /></svg>
@@ -138,12 +144,14 @@ export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cek
         </div>
       )}
 
+      </>)}
+
       <div className="um-deste-yer" style={{ transform: `translate3d(${yer.deste.x}px, ${yer.deste.y}px, 0)` }}>
         <div
-          className={`um-deste${cekilebilir ? ' um-cekilebilir' : ''}${oneriCek ? ' um-oneri' : ''}${deste ? '' : ' um-bos'}`}
+          className={`um-deste${cekilebilir ? ' um-cekilebilir' : ''}${oneriCek ? ' um-oneri' : ''}${deste ? '' : ' um-bos'}${firlatici ? ' um-firlatici' : ''}`}
           style={{ width: yer.pk, height: yer.pk * 1.5 }}
           role="button" tabIndex={0}
-          aria-label={`Desteden kart çek (kalan ${deste})`}
+          aria-label={firlatici ? `Fırlatıcıya bas (içinde ${deste} kart)` : `Desteden kart çek (kalan ${deste})`}
           aria-disabled={!cekilebilir}
           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (cekilebilir) onCek(); else onReddet(); } }}
           onPointerDown={asagi} onPointerMove={hareket} onPointerUp={yukari} onPointerCancel={iptal}
@@ -152,9 +160,15 @@ export default function Orta({ yer, tema, yigin, deste, renk, yon, yonVurus, cek
           {Array.from({ length: kat }, (_, i) => (
             <div key={i} className="um-deste-kat" style={{ transform: `translate3d(${-(kat - i) * 1.5}px, ${(kat - i) * 2}px, 0)` }}><KartGorsel tema={tema} boy={yer.pk} kapali /></div>
           ))}
-          {deste > 0 && <div ref={ustRef} className="um-deste-ust"><KartGorsel tema={tema} boy={yer.pk} kapali /></div>}
+          {deste > 0 && <div ref={ustRef} className="um-deste-ust">{desteUst ? <KartGorsel kart={desteUst} tema={tema} boy={yer.pk} /> : <KartGorsel tema={tema} boy={yer.pk} kapali />}</div>}
+          {firlatici && (
+            <span className="um-firlat" aria-hidden="true">
+              <span className="um-firlat-agiz" />
+              <span className="um-firlat-dugme">BAS</span>
+            </span>
+          )}
           <span className="um-deste-sayi">{deste}</span>
-          {cekilebilir && <span className="um-deste-yazi">Çek</span>}
+          {cekilebilir && <span className="um-deste-yazi">{firlatici ? 'Bas' : 'Çek'}</span>}
         </div>
       </div>
     </div>

@@ -72,6 +72,10 @@ class MasaIstemci {
     if (this.testAd && typeof window !== 'undefined') (window as any).__masaTest = {
       gecikme: (ms: number) => { this.testGecikme = Math.max(0, ms | 0); },
       kopar: (sn: number) => { this.testEngel = Date.now() + sn * 1000; try { this.ws?.close(); } catch { /* yok */ } },
+      // Başsız tarayıcı sınaması: mesaj gönder, durumu oku, Uno asistan önerisini al
+      gonder: (m: IstemciMesaj) => this.gonder(m),
+      oku: () => this.durum,
+      unoOneri: async () => { const o = this.durum.oda; return o?.oyun?.tur === 'uno' ? (await import('./motor/unoAsistan')).oneri(o.oyun, o.ben) : null; },
     };
   }
 

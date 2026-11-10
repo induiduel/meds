@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, BarChart3, BookOpen, Bot, Check, LogIn, Pause, Pencil, RefreshCw, Users, WifiOff } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { masa, masaAdi } from '../../services/masa/istemci';
-import { EL_SECENEK, OYUNCU_SINIR, OYUN_ADI, type OdaAyar, type OdaOzet, type OyunTur, type UnoMod } from '../../services/masa/tipler';
+import { EL_SECENEK, OYUNCU_SINIR, OYUN_ADI, unoModTanim, unoOyuncuUygun, type OdaAyar, type OdaOzet, type OyunTur, type UnoMod } from '../../services/masa/tipler';
 import { OyunResmi, Yaprak, sadeAd } from './kabukOrtak';
 import '../../styles/masa/lobi.css';
 import MasaIstatistik from './MasaIstatistik';
@@ -47,6 +47,14 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
   useEffect(() => { if (kalici) setBekle(false); }, [kalici]);
 
   const ac = (tur: OyunTur) => { setSecili(tur); setSonTur(tur); setKip(tahtaMi(tur) ? 'bot' : 'arkadas'); setBotN(BOT_VARSAYILAN[tur]); setElN(3); setAsistan(true); setUnoMod('klasik'); setTasN(7); };
+  // Uno: bot sayısı seçenekleri moda göre süzülür (Takım: toplam 4/6/8; Express: en çok 6); geçersiz kalan seçim en yakın geçerliye çekilir
+  const botSecenekBul = (t: OyunTur, m: UnoMod) => (t === 'uno' ? BOT_SECENEK.uno.filter((b) => !unoOyuncuUygun(m, b + 1)) : BOT_SECENEK[t]);
+  useEffect(() => {
+    if (secili !== 'uno') return;
+    const s = botSecenekBul('uno', unoMod);
+    if (s.length && !s.includes(botN)) setBotN(s.reduce((en, b) => (Math.abs(b - botN) < Math.abs(en - botN) ? b : en)));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [unoMod, secili]);
   const baslat = () => {
     if (!secili) return;
     setBekle(true);
@@ -73,6 +81,7 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
     setAdDuzen(false);
   };
   const tur = secili || sonTur;
+  const botSecenek = botSecenekBul(tur, unoMod);
 
   return (
     <div className="mk mk-merkez">
@@ -215,11 +224,12 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
           </div>
           {kip === 'bot' ? (
             <>
-              {BOT_SECENEK[tur].length > 1 && <div className="mk-alan">
+              {botSecenek.length > 1 && <div className="mk-alan">
                 <span className="mk-alan-ad">Bot sayısı</span>
                 <div className="mk-dilim" role="radiogroup" aria-label="Bot sayısı">
-                  {BOT_SECENEK[tur].map((n) => <button key={n} type="button" role="radio" aria-checked={botN === n} className={botN === n ? 'is-on' : ''} onClick={() => setBotN(n)}>{n}</button>)}
+                  {botSecenek.map((n) => <button key={n} type="button" role="radio" aria-checked={botN === n} className={botN === n ? 'is-on' : ''} onClick={() => setBotN(n)}>{n}</button>)}
                 </div>
+                {tur === 'uno' && botSecenek.length < BOT_SECENEK.uno.length && <small className="mk-alan-not">{unoModTanim(unoMod).cift ? `${unoModTanim(unoMod).ad} modu ikişerli takımlarla oynanır: sen ve ${botN} bot, ${(botN + 1) / 2} takım; karşındaki bot ortağın olur.` : `${unoModTanim(unoMod).ad} modu en çok ${unoModTanim(unoMod).enCok} oyuncuyla oynanır.`}</small>}
                 {tur === 'takim' && <small className="mk-alan-not">Takımlar eşit olsun diye bot sayısı tektir: {botN === 1 ? 'bire bir' : `${(botN + 1) / 2} kişilik takımlar`}; ortağın da bot olur.</small>}
               </div>}
               <div className="mk-alan">
@@ -228,7 +238,7 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
                   {EL_SECENEK.map((n) => <button key={n} type="button" role="radio" aria-checked={elN === n} className={elN === n ? 'is-on' : ''} onClick={() => setElN(n)}>{n === 0 ? 'Bitirene dek' : n}</button>)}
                 </div>
               </div>
-              {tur === 'uno' && <UnoModu mod={unoMod} sec={setUnoMod} />}
+              {tur === 'uno' && <UnoModu mod={unoMod} sec={setUnoMod} kurallarAc={(m) => { setSecili(null); kurallarAc(`uno:${m}`); }} />}
               {tur === 'takim' && botN <= 3 && <div className="mk-alan">
                 <span className="mk-alan-ad">Kişi başı taş</span>
                 <div className="mk-dilim" role="radiogroup" aria-label="Kişi başı taş">
@@ -241,7 +251,7 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
             <p className="mk-alan-not">{tahtaMi(tur) ? 'Arkadaşın kodla katılır; ayarları lobide de değiştirebilirsin.' : <>El sayısını, {tur === 'uno' ? 'Uno modunu, ' : ''}zorluğu ve temayı lobide ayarlarsın.</>}</p>
           )}
           {tahtaMi(tur) && <TahtaAyar tur={tur} ayar={tahtaAyar} degistir={(a) => setTahtaAyar((x) => ({ ...x, ...a }))} />}
-          <button type="button" className="mk-baglanti" onClick={() => { setSecili(null); kurallarAc(tur); }}><BookOpen size={16} /> {OYUN_ADI[tur]} kuralları</button>
+          <button type="button" className="mk-baglanti" onClick={() => { setSecili(null); kurallarAc(tur === 'uno' && kip === 'bot' ? `uno:${unoMod}` : tur); }}><BookOpen size={16} /> {OYUN_ADI[tur]} kuralları</button>
         </div>
       </Yaprak>
     </div>

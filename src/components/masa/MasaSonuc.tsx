@@ -48,6 +48,9 @@ export function ElSonu({ oda, sonuc, macBitti, macaGec }: { oda: OdaGorunum; son
   const uno = oda.tur === 'uno', takim = oda.tur === 'takim';
   const ad = (id: string) => sadeAd(oda.oyuncular.find((o) => o.id === id)?.ad || 'Oyuncu');
   const bitiren = sonuc.satirlar.find((s) => s.kazandi && s.kalan === 0)?.id || sonuc.kazananlar[0];
+  // Uno modları: birden çok kazanan (takım, meydan okuma) ya da eli bitirmeden kazanma (son kalan, zorunlu takas)
+  const unoCok = uno && sonuc.kazananlar.length > 1;
+  const unoBitiren = sonuc.satirlar.find((s) => s.id === bitiren);
   const sayac = useSayac(benim?.puan || 0, 950, 350);
 
   useEffect(() => {
@@ -57,9 +60,9 @@ export function ElSonu({ oda, sonuc, macBitti, macaGec }: { oda: OdaGorunum; son
 
   const tahta = oda.tur === 'go' || oda.tur === 'cizgi' || oda.tur === 'xox';
   const baslik = tahta && hal !== 'notr' ? (hal === 'kazandi' ? 'Eli kazandın!' : `${ad(bitiren)} kazandı`) : hal === 'kazandi'
-    ? (takim && bitiren !== oda.ben ? 'Takımın kazandı!' : uno ? 'Kartlarını bitirdin!' : 'Elini bitirdin!')
+    ? (takim && bitiren !== oda.ben ? 'Takımın kazandı!' : uno ? (unoCok ? 'Takımın kazandı!' : benim?.kalan === 0 ? 'Kartlarını bitirdin!' : 'Eli kazandın!') : 'Elini bitirdin!')
     : hal === 'kaybetti'
-      ? (takim ? `${sonuc.kazananTakim || ''} takımı kazandı` : `${ad(bitiren)} ${uno ? 'kartlarını' : 'elini'} bitirdi`)
+      ? (takim ? `${sonuc.kazananTakim || ''} takımı kazandı` : uno && unoCok ? `${sonuc.kazananlar.map(ad).join(' ve ')} kazandı` : uno && unoBitiren?.kalan ? `${ad(bitiren)} eli kazandı` : `${ad(bitiren)} ${uno ? 'kartlarını' : 'elini'} bitirdi`)
       : sonuc.neden === 'berabere' ? 'Berabere' : 'Deste bitti';
   const altMetin = tahta ? (hal === 'kaybetti' ? `${benim?.aciklama || ''}. ${TESELLI[oda.elNo % TESELLI.length]}` : hal === 'kazandi' ? (benim?.aciklama || '') : 'Tahta doldu, dizi çıkmadı: bu elin kazananı yok.')
     : hal === 'kazandi'

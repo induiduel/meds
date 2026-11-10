@@ -7,6 +7,7 @@
  * - Sunucu her zaman son sözü söyler: gelen `durum` tahmini ezer, `hata` gelirse son onaylı görünüme dönülür.
  * - Tahmin edilemeyen hamle için null döner (eski davranış: "Hamlen gönderiliyor" beklemesi).
  */
+import { UNO_TAKAS_MODLAR } from './motor/unoAsistan';
 import type { CizgiGorunum, GoGorunum, GoTas, Hamle, OdaGorunum, OkeyGorunum, UnoGorunum, XoxGorunum } from './tipler';
 import type { PistiGorunum } from './motor/pisti';
 import type { DominoGorunum } from './motor/domino';
@@ -81,9 +82,13 @@ function go(g0: GoGorunum, i: number, ben: string): GoGorunum | null {
 }
 
 function uno(g0: UnoGorunum, h: { kart: number; renk?: any }, ben: string): UnoGorunum | null {
-  if (!g0.oynanabilir.includes(h.kart) || g0.dortBekle || g0.renkSec) return null;
+  if (!g0.oynanabilir.includes(h.kart) || g0.bekle || g0.ver || g0.yigin) return null;
   const kart = g0.elim.find((k) => k.id === h.kart);
   if (!kart || (!kart.renk && !h.renk)) return null;
+  // Yalnız sonucu kesin kartlar tahmin edilir: düz sayı kartı (takas/devir, paslaşma, güç çevirme ve kapalı oynama hariç) ve klasik ailede beş temel kart
+  const sayi = kart.deger.length === 1 && !kart.ps && !kart.cv && !kart.yl && !kart.fx && !((kart.deger === '7' || kart.deger === '0') && UNO_TAKAS_MODLAR.includes(g0.mod));
+  const temel = ['pas', 'yon', '+2', 'joker', '+4'].includes(kart.deger) && ['klasik', 'yigma', 'yediSifir', 'cekCek', 'atlama', 'hizli', 'deluxe'].includes(g0.mod);
+  if (g0.mod === 'yalanci' || g0.mod === 'takim' || !(sayi || temel)) return null;
   const g = kopya(g0);
   g.elim = g.elim.filter((k) => k.id !== h.kart);
   g.ust = kart;

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { AlertTriangle, ArrowLeftRight, BookOpen, Bot, Check, Copy, Crown, LogOut, Play, Share2, UserPlus, WifiOff, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { masa } from '../../services/masa/istemci';
-import { EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, UNO_TEMALAR, VARSAYILAN_RENKLER, type OdaGorunum, type OyuncuBilgi, type Takim } from '../../services/masa/tipler';
+import { EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, UNO_TEMALAR, VARSAYILAN_RENKLER, unoModTanim, type OdaGorunum, type OyuncuBilgi, type Takim } from '../../services/masa/tipler';
 import { Avatar, KartOrnek, Onay, OyunResmi, TEMA_BILGI, TasOrnek, Yaprak, bildir, sadeAd, tasMi } from './kabukOrtak';
 import { TahtaAyar, tahtaMi } from './tahta/ortak';
 import { OyunModu, UnoModu } from './ModSecici';
@@ -38,7 +38,7 @@ const OZET: Record<string, string[]> = {
   remi: ['14 taş, 2 joker (sahte okey); taş atılmaz.', 'İlk açılış elinden en az 30 sayı olmalı.', 'Açtıktan sonra masadaki perleri serbestçe yeniden dizersin.', 'İlk bitiren rakiplerin kalanını toplar.'],
   pisti: ['2 ya da 4 oyuncu, 52 kart; dört kişide karşılıklı oturanlar ortak.', 'Yerdeki üst kartla aynı değerde kart ya da Vale atarsan yerdeki bütün kartları alırsın.', 'Yerde tek kart varken aynısıyla alırsan Pişti: 10 puan (Vale’ye Vale 20).', 'As, Vale 1; ♣2 2; ♦10 3; en çok kart +3. En çok puanı toplayan eli alır.'],
   domino: ['Zincirin bir ucuna rengi ya da sayısı tutan taşı koy.', 'Aynı renkten ardışık koyarsan ya da iki uç aynı sayı olursa bir taş daha koyarsın.', 'Koyamıyorsan uyan taş gelene dek çek; geleni hemen koyabilirsin.', 'Eli ilk bitiren rakiplerin el toplamını kazanır.'],
-  uno: ['7 kartla başlarsın. Rengi, sayıyı ya da simgeyi tutturan kartı atarsın; joker her zaman, +4 yalnız elinde o renkten kart yokken oynanır.', 'Oynayamıyorsan 1 kart çekersin; çektiğin kart uyuyorsa hemen oynayabilirsin.', '+4 sana gelince kabul edersin ya da itiraz edersin. Tek kartın kalınca UNO de; yakalanırsan 2 kart çekersin.', 'Kartlarını bitiren, rakiplerin elindeki kartların puanını alır. Modlar: Klasik, Yığma, 7-0, Çek-çek.'],
+  uno: ['Rengi, sayıyı ya da simgeyi tutturan kartı atarsın; joker her zaman oynanır. Atamıyorsan kart çekersin.', 'Tek kartın kalınca UNO de; unutup yakalanırsan ceza çekersin. Kartlarını ilk bitiren, rakiplerin elindeki kartların puanını alır.', 'Kurucu 16 moddan birini seçer: Klasik, Deluxe, Express, Flip, Hepsi Joker, No Mercy, Extreme, Flex, Takım, Yalancı; ev kuralları (Yığma, 7-0, Atlama, Hızlı, Çek-çek) ve Sevimli Dostlar.', 'Her modun destesi ve kuralları farklıdır: ayarlardaki “Kartları ve kuralları gör” seçili modun bütün kartlarını tek tek tanıtır.'],
   go: ['Siyah başlar; sırayla boş kesişime taş koyarsınız. Özgürlüğü kalmayan grup tahtadan alınır.', 'İntihar yasak; ko ve süperko: tahtayı eski bir dizilişe döndüren hamle yapılamaz.', 'Art arda iki pas → sayım: ölü grupları işaretleyip ikiniz de onaylarsınız.', 'Puan: diri taşlar + çevrili boş noktalar; beyaza komi eklenir. Çok puanlı kazanır.'],
   cizgi: ['Zar atar, çizgini attığın kadar kare kare ilerletirsin; amaç rakibin kale satırına ilk ulaşmak.', 'Önün rakip çizgisiyle kapalıysa yan sütuna geçebilirsin; yan geçiş hakkın sınırlıdır.', 'Yüz yüze gelince (biriniz rakip sahadaysa) iki zar atılır: büyük atan farkı kadar ilerler, küçük atan geriler.', 'Kalesinden başka hücresi kalmayan kapışmayı yine kaybederse kalesi alınır.'],
   xox: ['X başlar; sırayla boş kareye işaret koyarsınız. Her elde başlayan değişir.', '3×3 ve 4×4’te tahta boyu, 5×5’te 4, 6×6’da 5 işaret yan yana dizilince kazanırsın.', 'Yatay, dikey ve çapraz diziler sayılır.', 'Tahta dolar da dizi çıkmazsa el berabere biter.'],
@@ -186,11 +186,12 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
               ))}
             </div>
             {oda.ayar.elSayisi === 0 && <small className="mk-alan-not">Maç, kurucu menüden “Oyunu bitir” diyene dek sürer.</small>}
+            {oda.tur === 'uno' && unoModTanim(oda.ayar.unoMod).hedef > 0 && <small className="mk-alan-not">Bu modda maç <b>{unoModTanim(oda.ayar.unoMod).hedef} puana</b> ulaşılınca da biter.</small>}
           </div>
 
           {tahta && <TahtaAyar tur={oda.tur} ayar={oda.ayar} degistir={(a) => masa.ayar(a)} kilitli={!kurucu} />}
 
-          {oda.tur === 'uno' && <UnoModu mod={oda.ayar.unoMod ?? 'klasik'} sec={(m) => masa.ayar({ unoMod: m })} kilitli={!kurucu} />}
+          {oda.tur === 'uno' && <UnoModu mod={oda.ayar.unoMod ?? 'klasik'} sec={(m) => masa.ayar({ unoMod: m })} kilitli={!kurucu} oyuncuSayisi={oda.oyuncular.length} kurallarAc={(m) => kurallarAc(`uno:${m}`)} tema={oda.ayar.tema} />}
 
           {(!tahta || oda.tur === 'go') && <OyunModu tur={oda.tur} asistan={oda.ayar.asistan} sec={(a) => masa.ayar({ asistan: a })} kilitli={!kurucu} />}
 
@@ -271,7 +272,7 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
       <section className="mk-pano mk-ozet">
         <div className="mk-pano-bas">
           <h2><BookOpen size={18} /> Kısaca {OYUN_ADI[oda.tur]}</h2>
-          <button type="button" className="mk-cip" onClick={() => kurallarAc(oda.tur)}>Tüm kurallar</button>
+          <button type="button" className="mk-cip" onClick={() => kurallarAc(oda.tur === 'uno' ? `uno:${oda.ayar.unoMod ?? 'klasik'}` : oda.tur)}>Tüm kurallar</button>
         </div>
         <ol className="mk-adimlar">{OZET[oda.tur].map((s) => <li key={s}>{s}</li>)}</ol>
       </section>

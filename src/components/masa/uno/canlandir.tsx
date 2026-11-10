@@ -119,6 +119,9 @@ export interface Baglam {
   yiginEkle: (kart: UnoKart, vurgu: boolean) => void;
   yiginSifirla: () => void;
   yiginKirp: () => void;
+  /** Geri alınan (yalanı yakalanan) kartı yığından çıkar · Flip: masa dönüş vurgusu */
+  yiginCikar: (id: number) => void;
+  flipVur: () => void;
   gizle: (idler: number[]) => void;
   goster: (idler: number[]) => void;
   sars: (id: string) => void;
@@ -195,7 +198,7 @@ export function useOlayCanlandir(bRef: React.MutableRefObject<Baglam>, depo: Sah
               b.kaynak.delete(kart.id);
               const p = benMi ? (k ?? oyuncuNokta(yer, ben, ben)) : oyuncuNokta(yer, kim, ben);
               depo.ucur({
-                kart, cevir: !benMi, w: yer.pk,
+                kart, cevir: !benMi && !kart.kp, w: yer.pk,
                 x0: p.x, y0: p.y, a0: benMi ? (k?.a ?? 0) : -30, s0: benMi ? (yer.kw / yer.pk) * (k?.s ?? 1) : Math.max(14, yer.mk) / yer.pk,
                 x1: yer.atik.x, y1: yer.atik.y, a1: yiginAci(kart.id) * 0.3, s1: 1,
                 sure: benMi ? 260 : 430, gecikme: 0,
@@ -203,6 +206,7 @@ export function useOlayCanlandir(bRef: React.MutableRefObject<Baglam>, depo: Sah
               });
             }, (b) => b.yiginEkle(kart, false));
             t += benMi ? 240 : 420;
+            if (o.flex) { at((_b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'bilgi', metin: 'FLEX!', alt: benMi ? 'Güç kartın kırmızıya döndü' : undefined, x: d.x, y: d.y }); sesCal('isle'); }); t += 200; }
             break;
           }
           case 'renk': {
@@ -223,16 +227,17 @@ export function useOlayCanlandir(bRef: React.MutableRefObject<Baglam>, depo: Sah
             const idler = kartlar.map((k) => k.id);
             if (!adet) break;
             at((b, yer) => {
-              if (neden === '+2' || neden === '+4') {
+              if (!['cek', 'yakalandi', 'firlat', 'yalan', 'takim', 'itiraz'].includes(neden)) {
                 const d = damgaNokta(yer, kim, ben);
-                depo.damga({ tur: 'arti', metin: neden, x: d.x, y: d.y });
+                depo.damga({ tur: 'arti', metin: `+${adet}`, x: d.x, y: d.y });
                 if (benMi) titret([20, 40, 20]);
               }
               const ck = b.cekKaynak;
               b.cekKaynak = null;
               const bas = benMi && neden === 'cek' && ck && performance.now() - ck.t < 1500 ? ck : yer.deste;
+              const aralik = adet > 8 ? 55 : 95;
               for (let j = 0; j < adet; j++) {
-                const gecikme = j * 95;
+                const gecikme = j * aralik;
                 if (benMi) {
                   const kart = kartlar[j];
                   const h = (kart && b.elPoz.get(kart.id)) || { ...oyuncuNokta(yer, ben, ben), a: 0 };
@@ -243,7 +248,7 @@ export function useOlayCanlandir(bRef: React.MutableRefObject<Baglam>, depo: Sah
                 }
               }
             }, (b) => b.goster(idler));
-            t += adet * 95 + 280;
+            t += adet * (adet > 8 ? 55 : 95) + 280;
             if (idler.length) sonra(t - simdi + 900, () => bRef.current.goster(idler));
             break;
           }
@@ -262,7 +267,7 @@ export function useOlayCanlandir(bRef: React.MutableRefObject<Baglam>, depo: Sah
           case 'yakalandi':
             at((b, yer) => {
               const d = damgaNokta(yer, kim, ben);
-              depo.damga({ tur: 'yakala', metin: 'Yakalandı! +2', alt: benMi ? 'UNO demeyi unuttun' : undefined, x: d.x, y: d.y });
+              depo.damga({ tur: 'yakala', metin: oyun.firlatici ? 'Yakalandı! 2 basış' : 'Yakalandı! +2', alt: benMi ? 'UNO demeyi unuttun' : undefined, x: d.x, y: d.y });
               b.sars(kim);
               sesCal('ceza');
               if (benMi) titret([40, 50, 40]);
@@ -277,13 +282,139 @@ export function useOlayCanlandir(bRef: React.MutableRefObject<Baglam>, depo: Sah
             at((b, yer) => {
               const hakli = !!o.hakli, ceken = hakli ? (o.hedef as string) : kim;
               const d = damgaNokta(yer, ceken, ben);
-              depo.damga({ tur: 'yakala', metin: hakli ? 'İtiraz haklı! +4' : 'İtiraz boşa! +6', alt: hakli ? '+4 kuralsız oynanmıştı' : '+4 kurala uygundu', x: d.x, y: d.y });
+              const n = Number(o.adet) || 0;
+              depo.damga({ tur: 'yakala', metin: `${hakli ? 'İtiraz haklı!' : 'İtiraz boşa!'}${n ? ` +${n}` : ''}`, alt: hakli ? 'Kart kuralsız oynanmıştı' : 'Kart kurala uygundu', x: d.x, y: d.y });
               b.sars(ceken); sesCal('ceza');
             });
             t += 520;
             break;
+          case 'firlat': {
+            const adet = Number(o.adet) || 0;
+            at((b, yer) => {
+              const d = damgaNokta(yer, kim, ben);
+              if (adet) { depo.damga({ tur: 'yakala', metin: `Fırladı! +${adet}`, alt: benMi ? 'Fırlayan kart bu tur oynanmaz' : ad(kim), x: d.x, y: d.y }); b.sars(kim); sesCal('ceza'); if (benMi) titret([30, 40, 30]); }
+              else { depo.damga({ tur: 'bilgi', metin: 'Boş çıktı!', alt: benMi ? 'Kart fırlamadı' : ad(kim), x: d.x, y: d.y }); sesCal('tas'); }
+            });
+            t += adet ? 420 : 300;
+            break;
+          }
+          case 'flip': {
+            const ustKart = o.ust as UnoKart | undefined;
+            at((b, yer) => {
+              depo.damga({ tur: 'uno', metin: 'FLIP!', alt: o.taraf === 'k' ? 'Koyu yüz' : 'Açık yüz', x: yer.W / 2, y: Math.min(yer.atik.y, yer.elUst * 0.5) });
+              b.flipVur(); b.yiginSifirla();
+              if (ustKart) b.yiginEkle(ustKart, true);
+              sesCal('dagit'); titret(30);
+            }, (b) => { b.yiginSifirla(); if (ustKart) b.yiginEkle(ustKart, false); });
+            t += 620;
+            break;
+          }
+          case 'elendi':
+            at((b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'yakala', metin: 'Elendi!', alt: benMi ? '25 karta ulaştın' : `${ad(kim)} 25 karta ulaştı`, x: d.x, y: d.y }); b.sars(kim); sesCal('kaybet'); if (benMi) titret([60, 60, 60]); });
+            t += 700;
+            break;
+          case 'attiHepsi': {
+            const kartlar = Array.isArray(o.kartlar) ? (o.kartlar as UnoKart[]) : [];
+            at((b, yer) => {
+              const p = oyuncuNokta(yer, kim, ben);
+              kartlar.slice(0, 10).forEach((kart, j) => depo.ucur({ kart, cevir: !benMi, w: yer.pk, x0: p.x, y0: p.y, a0: -20 + j * 6, s0: benMi ? yer.kw / yer.pk : Math.max(14, yer.mk) / yer.pk, x1: yer.atik.x, y1: yer.atik.y, a1: yiginAci(kart.id), s1: 0.94, sure: 340, gecikme: j * 70 }));
+              const d = damgaNokta(yer, kim, ben);
+              depo.damga({ tur: 'bilgi', metin: `${kartlar.length} kart birden attı`, alt: benMi ? undefined : ad(kim), x: d.x, y: d.y });
+              sesCal('ac');
+              void b;
+            });
+            t += Math.min(10, kartlar.length) * 70 + 300;
+            break;
+          }
+          case 'verdi': {
+            const hedef = String(o.hedef || '');
+            if (benMi && bRef.current.kaynak.size) bRef.current.kaynak.clear();
+            at((_b, yer) => {
+              const p0 = oyuncuNokta(yer, kim, ben), p1 = oyuncuNokta(yer, hedef, ben);
+              depo.ucur({ kapali: true, w: yer.pk, x0: p0.x, y0: p0.y, a0: 0, s0: 0.8, x1: p1.x, y1: p1.y, a1: 180, s1: 0.6, sure: 420, gecikme: 0 });
+              sesCal('cek');
+            });
+            t += 260;
+            break;
+          }
+          case 'aldim': {
+            const kartlar = Array.isArray(o.kartlar) ? (o.kartlar as UnoKart[]) : [];
+            if (o.kime === ben && kartlar.length) {
+              at((_b, yer) => depo.damga({ tur: 'bilgi', metin: `${kartlar.length} kart aldın`, x: yer.W / 2, y: yer.elUst - 8 }));
+              t += 200;
+            }
+            break;
+          }
+          case 'guc':
+            at((_b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'bilgi', metin: o.acik ? 'Güç yeşil ✓' : 'Güç kırmızı ✗', x: d.x, y: d.y - 26 }); });
+            t += 140;
+            break;
+          case 'gucHepsi':
+            at((_b, yer) => { depo.damga({ tur: 'bilgi', metin: o.cevir ? 'Bütün güç kartları çevrildi' : 'Herkesin gücü kırmızıydı: hepsi yeşile döndü', x: yer.W / 2, y: yer.atik.y - yer.pk }); sesCal('isle'); });
+            t += 320;
+            break;
+          case 'inandi':
+            at((_b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'bilgi', metin: 'İnandı', x: d.x, y: d.y }); });
+            t += 160;
+            break;
+          case 'yalan': {
+            const hedef = String(o.hedef || ''), hakli = !!o.hakli;
+            const kart = o.kart as UnoKart | undefined;
+            at((b, yer) => {
+              const kaybeden = hakli ? hedef : kim;
+              const d = damgaNokta(yer, kaybeden, ben);
+              depo.damga({ tur: 'yakala', metin: hakli ? (o.duz ? 'Kural dışı! +6' : 'Yalan yakalandı!') : 'Doğru söylemiş!', alt: hakli ? `${ad(hedef)} kartı geri aldı` : `${ad(kim)} 1 kart çeker`, x: d.x, y: d.y });
+              b.sars(kaybeden); sesCal('ceza');
+              if (kart) { if (hakli) b.yiginCikar(kart.id); else b.yiginEkle(kart, true); }
+              if (kaybeden === ben) titret([40, 50, 40]);
+            }, (b) => { if (kart && hakli) b.yiginCikar(kart.id); });
+            t += 620;
+            break;
+          }
+          case 'meydan':
+            at((_b, yer) => { depo.damga({ tur: 'uno', metin: 'MEYDAN!', alt: benMi ? 'Herkes kapalı kart koyar' : `${ad(kim)} meydan okudu`, x: yer.W / 2, y: Math.min(yer.atik.y, yer.elUst * 0.5) }); sesCal('uno'); });
+            t += 420;
+            break;
+          case 'koydu':
+            at((_b, yer) => { const p = oyuncuNokta(yer, kim, ben); depo.ucur({ kapali: true, w: yer.pk, x0: p.x, y0: p.y, a0: 0, s0: 0.7, x1: yer.atik.x, y1: yer.atik.y + yer.pk * 0.9, a1: yiginAci(kim.length * 7), s1: 0.55, sure: 380, gecikme: 0 }); sesCal('birak'); });
+            t += 200;
+            break;
+          case 'sorgu': {
+            const hedef = String(o.hedef || ''), dogru = !!o.dogru;
+            at((b, yer) => {
+              const d = damgaNokta(yer, hedef, ben);
+              depo.damga({ tur: dogru ? 'bilgi' : 'yakala', metin: dogru ? 'Doğru renk!' : 'Yalancı! +1', alt: dogru ? `${ad(hedef)} doğru renk koymuş: sorgu bitti` : `${ad(hedef)} kartını geri aldı`, x: d.x, y: d.y });
+              if (!dogru) { b.sars(hedef); sesCal('ceza'); } else sesCal('isle');
+            });
+            t += 560;
+            break;
+          }
+          case 'siper':
+            at((_b, yer) => { depo.damga({ tur: 'uno', metin: 'SİPER!', alt: 'Biriken ceza silindi', x: yer.W / 2, y: Math.min(yer.atik.y, yer.elUst * 0.5) }); sesCal('uno'); });
+            t += 420;
+            break;
+          case 'rulet':
+            at((_b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'bilgi', metin: `Renk Ruleti: ${Number(o.adet) || 0} kart`, x: d.x, y: d.y + 30 }); });
+            t += 200;
+            break;
+          case 'takimOyun':
+            at((_b, yer) => { depo.damga({ tur: 'bilgi', metin: 'Takım oyunu', alt: `Sıra ${ad(String(o.hedef || ''))} oyuncusuna atladı`, x: yer.W / 2, y: yer.atik.y - yer.pk }); sesCal('isle'); });
+            t += 360;
+            break;
+          case 'cikti':
+            at((_b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'bilgi', metin: benMi ? 'Elini bitirdin!' : 'Elini bitirdi', alt: 'Ortağını bekliyor', x: d.x, y: d.y }); sesCal('kazan'); });
+            t += 360;
+            break;
+          case 'dondu':
+            at((_b, yer) => { const d = damgaNokta(yer, kim, ben); depo.damga({ tur: 'bilgi', metin: benMi ? 'Elin bitti: ortağın yarısını veriyor' : `${ad(kim)} elini bitirdi`, alt: benMi ? undefined : 'Ortağı kartlarının yarısını verir', x: d.x, y: d.y }); });
+            t += 320;
+            break;
+          case 'herkesAtlandi':
+            at((_b, yer) => { depo.damga({ tur: 'atla', metin: 'Herkes atlandı', x: yer.W / 2, y: yer.atik.y - yer.pk }); sesCal('tas'); });
+            t += 320;
+            break;
           case 'yigin':
-            at((_b, yer) => { depo.damga({ tur: 'arti', metin: `Biriken +${o.adet}`, x: yer.atik.x, y: yer.atik.y }); sesCal('isle'); });
+            at((_b, yer) => { depo.damga({ tur: 'arti', metin: o.vur ? `Vuruş ×${o.adet}` : `Biriken +${o.adet}`, x: yer.atik.x, y: yer.atik.y }); sesCal('isle'); });
             t += 300;
             break;
           case 'takas':

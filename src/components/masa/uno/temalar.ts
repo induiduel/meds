@@ -13,7 +13,17 @@ export interface UnoTemaTanim {
   yazi: string;
   /** Aksiyon kartlarının alt yazısı (yalnız büyücü temasında görünür) */
   altYazi?: Partial<Record<UnoDeger, string>>;
+  /** Flip koyu yüz paleti (yoksa ortak UNO_KOYU_RENK) */
+  koyuRenk?: Record<UnoRenk, UnoRenkTon>;
 }
+
+/** Flip koyu yüz: pembe, turuncu, turkuaz, mor (bütün temalarda ortak) */
+export const UNO_KOYU_RENK: Record<UnoRenk, UnoRenkTon> = {
+  k: { ad: 'Pembe', ana: '#e91e8c', koyu: '#a30f5f', acik: '#ff7cc0', ikincil: '#ffffff' },
+  s: { ad: 'Turuncu', ana: '#f57c1f', koyu: '#b34f06', acik: '#ffb072', ikincil: '#ffffff' },
+  y: { ad: 'Turkuaz', ana: '#12b5a6', koyu: '#0a7a70', acik: '#6fe3d8', ikincil: '#ffffff' },
+  m: { ad: 'Mor', ana: '#7b3fc4', koyu: '#4f2389', acik: '#b68cf0', ikincil: '#ffffff' },
+};
 
 export const UNO_TEMA: Record<string, UnoTemaTanim> = {
   klasik: {
@@ -26,6 +36,17 @@ export const UNO_TEMA: Record<string, UnoTemaTanim> = {
     },
     joker: '#17171b', kenar: '#ffffff', amblem: '#ffffff',
     yazi: '"Arial Black", "Helvetica Neue", Impact, system-ui, sans-serif',
+  },
+  dostlar: {
+    ad: 'Sevimli Dostlar',
+    renk: {
+      k: { ad: 'Fiyonk kırmızısı', ana: '#ef3b5d', koyu: '#b21f3f', acik: '#ff8fa3', ikincil: '#ffffff' },
+      s: { ad: 'Yarasa sarısı', ana: '#ffc928', koyu: '#b98600', acik: '#ffe58a', ikincil: '#ffffff' },
+      y: { ad: 'Tay yeşili', ana: '#2fc59b', koyu: '#178a6a', acik: '#8fe6cb', ikincil: '#ffffff' },
+      m: { ad: 'Tavşan moru', ana: '#8d5be8', koyu: '#5e35b1', acik: '#c3a6ff', ikincil: '#ffffff' },
+    },
+    joker: '#1d1730', kenar: '#ffffff', amblem: '#fff7fb',
+    yazi: 'ui-rounded, "Nunito", "Baloo 2", "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif',
   },
   stitch: {
     ad: 'Tropik',
@@ -55,3 +76,9 @@ export const UNO_TEMA: Record<string, UnoTemaTanim> = {
 export const temaAl = (tema: string | undefined): UnoTemaTanim => UNO_TEMA[tema || ''] || UNO_TEMA.klasik;
 export const temaKod = (tema: string | undefined): string => (tema && UNO_TEMA[tema] ? tema : 'klasik');
 export const UNO_SIRA: readonly UnoRenk[] = ['k', 's', 'y', 'm'];
+/** Yüzün renk paleti: Flip koyu yüzünde (t: 'k' ya da koyu = true) koyu palet, yoksa temanın kendi renkleri */
+export function renkAl(tema: string | undefined, yuz?: { t?: 'k' } | boolean | null): Record<UnoRenk, UnoRenkTon> {
+  const t = temaAl(tema);
+  const koyu = yuz === true || (typeof yuz === 'object' && yuz !== null && yuz.t === 'k');
+  return koyu ? t.koyuRenk ?? UNO_KOYU_RENK : t.renk;
+}

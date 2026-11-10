@@ -3,10 +3,11 @@
  * Kural değişirse önce motor, sonra bu sayfa güncellenir.
  */
 import React, { useState } from 'react';
-import { ArrowDown, Check, Layers, Megaphone, Plus, SkipForward, Upload, X } from 'lucide-react';
-import { OYUN_ADI, VARSAYILAN_RENKLER, type OyunTur, type UnoDeger, type UnoRenk } from '../../services/masa/tipler';
-import { CEZA_BILGI, KartOrnek, TasOrnek } from './kabukOrtak';
+import { ArrowDown, Check, Layers, Plus, SkipForward, Upload, X } from 'lucide-react';
+import { OYUN_ADI, VARSAYILAN_RENKLER, type OyunTur, type UnoMod } from '../../services/masa/tipler';
+import { CEZA_BILGI, TasOrnek } from './kabukOrtak';
 import DuzKurallar from './kurallar/DuzKurallar';
+import UnoKurallar from './kurallar/UnoKurallar';
 import KastetKurallar from './kurallar/KastetKurallar';
 import RemiKurallar from './kurallar/RemiKurallar';
 import PistiKurallar from './kurallar/PistiKurallar';
@@ -15,29 +16,25 @@ import { CizgiKurallar, GoKurallar, XoxKurallar } from './kurallar/TahtaKurallar
 import { Akis, Kunye, TanitSatir, TasTanitim } from './kurallar/gorsel';
 import { KATEGORILER } from './oyunKatalog';
 
-export type KuralSekme = OyunTur | 'ceza' | 'ipucu';
+/** `uno:<mod>`: Uno sekmesini o modun sayfasıyla açar (lobi ve merkezdeki "Kartları ve kuralları gör") */
+export type KuralSekme = OyunTur | 'ceza' | 'ipucu' | `uno:${UnoMod}`;
+type Sekme = OyunTur | 'ceza' | 'ipucu';
 /** Sekmeler merkezdeki kategori sırasıyla gruplanır; sonda oyunlardan bağımsız genel bölümler */
-const SEKME_GRUPLAR: { ad: string; sekmeler: [KuralSekme, string][] }[] = [
-  ...KATEGORILER.map((k) => ({ ad: k.ad, sekmeler: k.turler.map((t): [KuralSekme, string] => [t, OYUN_ADI[t]]) })),
+const SEKME_GRUPLAR: { ad: string; sekmeler: [Sekme, string][] }[] = [
+  ...KATEGORILER.map((k) => ({ ad: k.ad, sekmeler: k.turler.map((t): [Sekme, string] => [t, OYUN_ADI[t]]) })),
   { ad: 'Genel', sekmeler: [['ceza', 'Cezalar ve puan'], ['ipucu', 'Masa ve ipuçları']] },
 ];
 
 type T = [number, 0 | 1 | 2 | 3];
-type K = [UnoRenk | null, UnoDeger];
 
 export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralSekme; renkler?: string[] }) {
-  const [sekme, setSekme] = useState<KuralSekme>(ilk);
+  const unoMod = typeof ilk === 'string' && ilk.startsWith('uno:') ? (ilk.slice(4) as UnoMod) : undefined;
+  const [sekme, setSekme] = useState<Sekme>(unoMod ? 'uno' : (ilk as Sekme));
   const rk = renkler && renkler.length === 4 ? renkler : [...VARSAYILAN_RENKLER];
 
   const Taslar = ({ t, ad, iyi, okey }: { t: T[]; ad: string; iyi?: boolean; okey?: { s: number; r: 0 | 1 | 2 | 3 } }) => (
     <figure className={`mk-ornek${iyi === false ? ' is-kotu' : iyi ? ' is-iyi' : ''}`}>
       <div className="mk-ornek-sira">{t.map(([s, r], i) => <TasOrnek key={i} s={s} r={r} renkler={rk} boy={30} okey={okey} />)}</div>
-      <figcaption>{iyi !== undefined && (iyi ? <Check size={15} /> : <X size={15} />)} {ad}</figcaption>
-    </figure>
-  );
-  const Kartlar = ({ k, ad, iyi }: { k: K[]; ad: string; iyi?: boolean }) => (
-    <figure className={`mk-ornek${iyi === false ? ' is-kotu' : iyi ? ' is-iyi' : ''}`}>
-      <div className="mk-ornek-sira is-kart">{k.map(([renk, deger], i) => <KartOrnek key={i} renk={renk} deger={deger} boy={40} />)}</div>
       <figcaption>{iyi !== undefined && (iyi ? <Check size={15} /> : <X size={15} />)} {ad}</figcaption>
     </figure>
   );
@@ -95,11 +92,11 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
           <h3>Masayı düzenleme</h3>
           <p>Masadaki perler dokunulmaz değildir. Per açtıktan sonra sıran gelince <b>Masayı düzenle</b> ile perlerin yerini değiştirebilir, taşları perler arasında yeniden dizebilirsin: örneğin 3-4-5-6 kırmızı serinin 6’sını 6’lı gruba taşıyıp dörtlü grup yaparsın. Kurallar:</p>
           <ul>
-            <li><b>Düğmeye basmak şart değil:</b> elindeki taşları seçip <b>Per aç</b>’a basarsan (ya da masadaki taşa dokunursan) eksik taş masadan kendiliğinden alınır; hangi renk olursa olsun, taşı veren per geçerli kalıyorsa olur. Doğrudan olmuyorsa masadaki taşa dokunmak düzenlemeyi başlatır.</li>
-            <li><b>Sırala</b> ıstakanı perlere, renge ya da sayıya göre; <b>Masayı diz</b> masadaki perleri renge ya da sayıya göre dizer, aradığın taşı kolay bulursun.</li>
             <li>Masadaki taşların <b>hepsi masada kalır</b>; hiçbir taş ele geri alınamaz.</li>
             <li><b>Elinden taş katabilirsin:</b> masadaki bir taşı perinden alıp elindeki taşlarla yeni per kurarsın. Örneğin dörtlü 10 grubundaki sarı 10’u alır, elindeki sarı 9 ve 11 ile 9-10-11 serisi yaparsın; geride üçlü 10 grubu kalır.</li>
             <li>Onayladığında her per yine geçerli olmalıdır (en az 3 taşlık seri ya da grup).</li>
+            <li><b>Düğmeye basmak şart değil:</b> elindeki taşları seçip <b>Per aç</b>’a basarsan (ya da masadaki taşa dokunursan) eksik taş masadan kendiliğinden alınır; hangi renk olursa olsun, taşı veren per geçerli kalıyorsa olur. Doğrudan olmuyorsa masadaki taşa dokunmak düzenlemeyi başlatır.</li>
+            <li><b>Sırala</b> ıstakanı perlere, renge ya da sayıya göre; <b>Masayı diz</b> masadaki perleri renge ya da sayıya göre dizer, aradığın taşı kolay bulursun.</li>
             <li>Elinden taş kattıysan bu bir hamledir (o turda artık taş çekilmez); yalnız yer değiştirdiysen ardından işleyebilir, per açabilir ya da taş çekebilirsin.</li>
           </ul>
           <h3>Geri al</h3>
@@ -205,10 +202,10 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
             <Taslar t={[[8, 2], [8, 2]]} ad="Çift: özdeş iki taş" iyi />
           </div>
           <ul>
-            <li><b>Masayı düzenle:</b> açtıktan sonra, taşını çekince masadaki seri ve grupları yeniden dizebilir, bir taşı perinden alıp elindeki taşlarla yeni per kurabilirsin (dörtlü 10 grubundan sarı 10 + elindeki sarı 9 ve 11). Her per yine geçerli kalmalı, hiçbir taş ele dönmez, çiftlere dokunulmaz, atacak bir taşın kalmalıdır.</li>
             <li>Seri aynı renk ardışıktır (1 yalnız başta; 12-13-1 olmaz), grup aynı sayının farklı renkleridir (3–4 taş). Her perde en az 2 gerçek taş bulunur.</li>
             <li>Seri/grupla açan sonradan yalnız seri/grup, çiftle açan yalnız yeni çift açabilir.</li>
             <li><b>İşleme:</b> açtıktan sonra masadaki serilerin uçlarına ve üçlü gruplara taş işleyebilirsin. Çifte taş işlenmez. Okeyi serinin iki ucuna da koyabiliyorsan hangi uca koyacağını seçersin.</li>
+            <li><b>Masayı düzenle:</b> açtıktan sonra, taşını çekince masadaki seri ve grupları yeniden dizebilir, bir taşı perinden alıp elindeki taşlarla yeni per kurabilirsin (dörtlü 10 grubundan sarı 10 + elindeki sarı 9 ve 11). Her per yine geçerli kalmalı, hiçbir taş ele dönmez, çiftlere dokunulmaz, atacak bir taşın kalmalıdır.</li>
           </ul>
           <h3>Bitiş ve puan</h3>
           <table className="mk-kural-tablo">
@@ -229,74 +226,7 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
         </article>
       )}
 
-      {sekme === 'uno' && (
-        <article className="mk-kural" role="tabpanel">
-          <Kunye tur="uno" malzeme="108 kart" amac="elindeki kartları ilk bitiren olmak" />
-          <p className="mk-kural-giris">2–8 oyuncu, 108 kart: dört renkte (kırmızı, sarı, yeşil, mavi) birer 0, ikişer 1–9, ikişer Atlat, Yön ve +2; ayrıca 4 Joker ve 4 +4. Herkese <b>7 kart</b> dağıtılır. Amaç elindeki kartları <b>ilk bitiren</b> olmak. Masada resmî Uno kuralları geçerlidir; kurucu lobide başka bir mod seçebilir.</p>
-          <h3>Kartları tanı</h3>
-          <div className="mk-ornekler">
-            <Kartlar k={[['k', '0'], ['s', '3'], ['y', '6'], ['m', '9']]} ad="Sayı kartları: dört renk, 0–9 (76 kart). Puanı üstündeki sayı" />
-            <Kartlar k={[['k', 'pas'], ['s', 'yon'], ['y', '+2']]} ad="Aksiyon kartları: Atlat, Yön, +2; her renkte ikişer (24 kart). 20 puan" />
-            <Kartlar k={[[null, 'joker'], [null, '+4']]} ad="Jokerler: renksiz, dörder tane (8 kart). 50 puan" />
-          </div>
-          <Akis adimlar={[
-            { ikon: <Upload size={18} />, ad: 'Kart at', metin: 'Ortadaki kartla rengi, sayısı ya da simgesi tutan kartı at.' },
-            { ikon: <ArrowDown size={18} />, ad: 'Kart çek', metin: 'Oynayamıyorsan 1 kart çek; uyuyorsa hemen atabilirsin.', bag: 'yada' },
-            { ikon: <Megaphone size={18} />, ad: 'UNO de', metin: 'Tek kartın kalınca UNO de; unutup yakalanırsan 2 kart çekersin.' },
-          ]} />
-          <h3>Dağıtım ve ilk kart</h3>
-          <ul>
-            <li>Deste tamamen rastgele karılır. <b>Dengeli dağıtım:</b> bir ele 2’den çok Joker/+4 (en çok bir +4) ya da 3’ten çok aksiyon kartı (Atlat, Yön, +2) düşerse fazlası destedeki rastgele bir sayı kartıyla değiştirilir. Elinde zaten 3 Joker/+4 olan oyuncu desteden dördüncüsünü çekmez. Böylece bir oyuncu jokerlerle eli birkaç turda bitiremez.</li>
-            <li>Ortaya bir kart açılır. <b>+4</b> açılırsa desteye geri konur, yeni kart açılır.</li>
-            <li><b>Joker</b> açılırsa ilk oyuncu rengi seçer, sonra oynar.</li>
-            <li><b>Atlat</b> açılırsa ilk oyuncunun sırası geçer; <b>Yön</b> açılırsa sıra ters döner ve ilk oyuncunun sağındaki başlar; <b>+2</b> açılırsa ilk oyuncu 2 kart çeker, sırası geçer.</li>
-          </ul>
-          <h3>Kart oynama</h3>
-          <p>Ortadaki kartla <b>rengi</b>, <b>sayısı</b> ya da <b>simgesi</b> aynı olan kartı atarsın. Joker her zaman oynanır.</p>
-          <div className="mk-ornekler">
-            <Kartlar k={[['k', '7'], ['k', '2']]} ad="Aynı renk" iyi />
-            <Kartlar k={[['k', '7'], ['m', '7']]} ad="Aynı sayı" iyi />
-            <Kartlar k={[['y', 'pas'], ['m', 'pas']]} ad="Aynı simge" iyi />
-            <Kartlar k={[['k', '7'], ['y', '3']]} ad="Renk de sayı da tutmuyor" iyi={false} />
-          </div>
-          <p>Oynayacak kartın yoksa (ya da oynamak istemiyorsan) desteden <b>1 kart çekersin</b>. Çektiğin kart uyuyorsa hemen oynayabilirsin; o tur başka kart oynayamazsın. Uymuyorsa sırayı geçersin. Deste biterse ortadaki kartlar (en üstteki hariç) karılıp yeni deste olur.</p>
-          <h3>Özel kartlar</h3>
-          <div className="mk-ornekler">
-            <Kartlar k={[['y', 'pas']]} ad="Atlat: sıradaki oyuncu oynayamaz" />
-            <Kartlar k={[['s', 'yon']]} ad="Yön: sıra tersine döner; 2 kişide atlat sayılır" />
-            <Kartlar k={[['m', '+2']]} ad="+2: sıradaki 2 kart çeker, sırası geçer" />
-            <Kartlar k={[[null, 'joker']]} ad="Joker: rengi sen seçersin" />
-            <Kartlar k={[[null, '+4']]} ad="+4: rengi seçersin; sıradaki 4 kart çeker, sırası geçer" />
-          </div>
-          <h3>+4 ve itiraz</h3>
-          <p>+4’ü yalnız elinde <b>ortadaki renkten kart yokken</b> oynayabilirsin (aynı sayı ya da başka joker olması sorun değildir). Yine de oynanabilir; ama sıradaki oyuncu iki seçenekten birini seçer:</p>
-          <ul>
-            <li><b>Kabul et:</b> 4 kart çeker, sırası geçer.</li>
-            <li><b>İtiraz et:</b> oynayanın eli kontrol edilir. Elinde o renkten kart vardıysa +4 kuralsızdır: <b>oynayan 4 kart çeker</b>, itiraz eden normal oynar. Kart yoktuysa itiraz boşa çıkar: <b>itiraz eden 6 kart çeker</b>, sırası geçer.</li>
-          </ul>
-          <p>Klasik kuralda +2 ve +4 <b>üst üste eklenmez</b>: kart çeken oyuncu karşılık veremez.</p>
-          <h3>UNO demek</h3>
-          <p>Sondan bir önceki kartını oynarken <b>UNO</b> dersin. Demeyi unutursan, sıradaki oyuncu hamle yapana dek herhangi bir rakip seni <b>yakalayabilir</b>: 2 kart çekersin. Yakalanmadan önce fark edip UNO dersen kurtulursun.</p>
-          <h3>Oyun modları</h3>
-          <ul>
-            <li><b>Klasik:</b> yukarıdaki resmî kurallar.</li>
-            <li><b>Yığma:</b> +2’nin üstüne +2 ya da +4, +4’ün üstüne +4 eklenebilir; ceza birikir (ör. +2, +2, +4 = 8 kart). Ekleyecek kartı olmayan biriken kartların hepsini çeker ve sırası geçer. Bu modda +4’e itiraz yoktur.</li>
-            <li><b>7-0:</b> 7 oynayan, elini en az kartı olan rakibiyle değiştirir. 0 oynanınca herkes elini oyun yönündeki komşusuna verir. Takastan sonra UNO durumu yeniden sayılır.</li>
-            <li><b>Atlama:</b> ortadaki kartın <b>tıpkısı</b> (aynı renk ve aynı sayı ya da simge) elindeyse sıranı beklemeden atarsın; sıra senden devam eder, atlanan oyuncular sırasını kaybeder. Joker ve +4 ile atlanmaz. En hızlı davranan kazanır.</li>
-            <li><b>Hızlı:</b> herkese 7 yerine 5 kart dağıtılır; kurallar klasikle aynıdır, eller kısa sürer.</li>
-            <li><b>Çek-çek:</b> oynayamıyorsan uyan bir kart gelene dek çekmeye devam edersin; gelen kartı hemen oynayabilir ya da geçebilirsin.</li>
-          </ul>
-          <h3>Puan</h3>
-          <table className="mk-kural-tablo">
-            <tbody>
-              <tr><th scope="row">Sayı kartı (0–9)</th><td>Üstündeki sayı</td></tr>
-              <tr><th scope="row">Atlat, Yön, +2</th><td>20</td></tr>
-              <tr><th scope="row">Joker, +4</th><td>50</td></tr>
-            </tbody>
-          </table>
-          <p>El bitince kaybedenler <b>ellerindeki kartların değeri kadar eksi</b> alır; kazanan bu değerlerin <b>toplamını artı</b> olarak alır. Son kart +2 ya da +4 ise sıradaki oyuncu yine çeker ve o kartlar da sayılır.</p>
-        </article>
-      )}
+      {sekme === 'uno' && <UnoKurallar mod={unoMod} />}
 
       {sekme === 'duz' && <DuzKurallar renkler={rk} />}
       {sekme === 'kastet' && <KastetKurallar renkler={rk} />}

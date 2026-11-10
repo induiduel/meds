@@ -1,5 +1,5 @@
 /** Oyun kataloğu: kategoriler ve sıra. Merkez kartları, kural sekmeleri ve "Nasıl oynanır" kısayolları buradan dizilir. */
-import { type OyunTur, type UnoMod } from '../../services/masa/tipler';
+import { type OyunTur } from '../../services/masa/tipler';
 
 export interface Kategori { id: string; ad: string; alt: string; turler: OyunTur[] }
 
@@ -21,7 +21,7 @@ export const OYUN_CUMLE: Record<OyunTur, string> = {
   kastet: 'Taş atmadan açtıkça aç; masadaki taşları elindekilerle yeniden dizdiğin ortak masa okeyi.',
   remi: 'Elinden 30 ile aç, sonra masadaki bütün perleri yeniden kur; ilk bitiren kazanır.',
   domino: 'Okey taşlarıyla domino: rengi ya da sayısı tutan taşı zincire ekle, ardışık koyup ek hamle kazan.',
-  uno: 'Rengi ya da sayıyı tuttur, kartlarını bitir. Resmî kurallar ya da Yığma, 7-0, Atlama gibi modlar.',
+  uno: 'Rengi ya da sayıyı tuttur, kartlarını bitir. Klasik, Flip, No Mercy, Extreme, Yalancı, Takım ve daha fazlası: 16 mod.',
   pisti: 'Yerdeki kartı eşle, Vale ile topla, tek karta pişti yap: klasik Pişti 2 ya da 4 kişiyle.',
   go: 'Ahşap tahtada alan kapma: taşlarla çevir, grupları al. 9×9, 13×13, 19×19; handikap ve süre.',
   cizgi: 'Zar at, çizgini kare kare rakibin kalesine sür. Yüz yüze gelince iki zarla kapışma.',
@@ -29,13 +29,3 @@ export const OYUN_CUMLE: Record<OyunTur, string> = {
 };
 
 export const oyuncuYazi = ([enAz, enCok]: readonly [number, number]) => (enAz === enCok ? `${enAz} oyuncu` : `${enAz}–${enCok} oyuncu`);
-
-/** Uno mod kartlarındaki kısa tanıtım (uzun açıklama: tipler.ts UNO_MODLAR) */
-export const UNO_MOD_KISA: Record<UnoMod, string> = {
-  klasik: 'Resmî kurallar',
-  yigma: '+2 ve +4 birikir',
-  yediSifir: '7 ve 0 el değiştirir',
-  atlama: 'Tıpkısıyla araya gir',
-  hizli: '5 kartla kısa el',
-  cekCek: 'Uyan gelene dek çek',
-};

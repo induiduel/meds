@@ -18,7 +18,7 @@ import { erisimJetonuDogrula } from '../kimlikDogrulama';
 import { bayrakAcik } from '../yonetim16/siteAyar';
 import { MOTORLAR } from './motorlar';
 import {
-  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER, UNO_MODLAR, GO_SURELER,
+  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER, UNO_MODLAR, GO_SURELER, unoModTanim, unoOyuncuUygun,
   type ElOzet, type ElSonuc, type Istatistik, type IstemciMesaj, type OdaAsama, type OdaAyar, type OdaGorunum, type OdaOzet,
   type Olay, type OyunTur, type Rng, type SunucuMesaj, type Takim,
 } from './tipler';
@@ -257,6 +257,7 @@ class MasaSunucu {
         const [enAz] = OYUNCU_SINIR[oda.tur];
         if (oda.oyuncular.length < enAz) return this.hata(b, `En az ${enAz} oyuncu gerekir. Arkadaşını çağır ya da bot ekle.`);
         if (oda.oyuncular.length > enCok) return this.hata(b, `En çok ${enCok} oyuncu oynayabilir.`);
+        if (oda.tur === 'uno') { const uymaz = unoOyuncuUygun(oda.ayar.unoMod, oda.oyuncular.length); if (uymaz) return this.hata(b, uymaz); }
         if (oda.tur === 'takim') {
           const A = oda.oyuncular.filter((k) => k.takim === 'A'), B = oda.oyuncular.filter((k) => k.takim !== 'A');
           if (!A.length || A.length !== B.length) return this.hata(b, 'Takımlar eşit sayıda olmalı (1–1, 2–2 ya da 3–3).');
@@ -539,7 +540,10 @@ class MasaSunucu {
       oda.eller.push({ no: oda.elNo, neden: s.neden, kazananlar: s.kazananlar, puanlar });
       if (oda.eller.length > 200) oda.eller.shift();
       void this.elYaz(oda, s);
-      if (oda.ayar.elSayisi > 0 && oda.elNo >= oda.ayar.elSayisi) { oda.asama = 'bitti'; olaylar.push({ t: 'macBitti' }); }
+      // Uno kutu modları: resmî puan hedefine (500 / 250 / 1000) ulaşılınca da maç biter
+      const hedef = oda.tur === 'uno' ? unoModTanim(oda.ayar.unoMod).hedef : 0;
+      const hedefte = hedef > 0 && Object.values(oda.skor).some((p) => p >= hedef);
+      if ((oda.ayar.elSayisi > 0 && oda.elNo >= oda.ayar.elSayisi) || hedefte) { oda.asama = 'bitti'; olaylar.push({ t: 'macBitti', ...(hedefte ? { hedef } : {}) }); }
     }
     this.yayin(oda, olaylar);
     return true;

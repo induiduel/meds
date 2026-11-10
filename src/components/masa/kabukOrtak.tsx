@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Bot, Crown, X } from 'lucide-react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
-import { VARSAYILAN_RENKLER, type Ceza, type OdaGorunum, type OyunTur, type Tas, type UnoKart } from '../../services/masa/tipler';
+import { VARSAYILAN_RENKLER, type Ceza, type OdaGorunum, type OyunTur, type Tas, type UnoKart, type UnoYuz } from '../../services/masa/tipler';
 import { azHareket } from './ortak';
 import { TasGorsel } from './okey/Tas';
 import { KartGorsel } from './uno/Kart';
@@ -25,6 +25,7 @@ export const sadeAd = (ad: string) => ad.replace(/\s*\(bot\)$/i, '');
 export const TEMA_BILGI: Record<string, { ad: string; aciklama: string }> = {
   klasik: { ad: 'Klasik', aciklama: 'Yeşil keçe, ahşap ıstaka' },
   kitty: { ad: 'Hello Kitty', aciklama: 'Pembe, fiyonklu, şeker tonları' },
+  dostlar: { ad: 'Sevimli Dostlar', aciklama: 'Kedicik, Yarasa, Tay ve Tavşan; pastel renkler' },
   stitch: { ad: 'Stitch', aciklama: 'Okyanus mavisi, tropik yapraklar' },
   buyucu: { ad: 'Harry Potter', aciklama: 'Parşömen, altın yaldız, gece mavisi' },
 };
@@ -64,8 +65,9 @@ export function TasOrnek({ s, r, renkler, tema = 'klasik', boy = 34, okey, kapal
   );
 }
 
-export function KartOrnek({ renk, deger, tema = 'klasik', boy = 46, kapali }: { renk?: UnoKart['renk']; deger?: UnoKart['deger']; tema?: string; boy?: number; kapali?: boolean }) {
-  const kart: UnoKart | undefined = deger ? { id: -1, renk: renk ?? null, deger } : undefined;
+/** `yuz`: bayraklı kart (Flip koyu yüz, Flex, yalancı…) çizmek için; verilirse renk/deger yok sayılır */
+export function KartOrnek({ renk, deger, tema = 'klasik', boy = 46, kapali, yuz }: { renk?: UnoKart['renk']; deger?: UnoKart['deger']; tema?: string; boy?: number; kapali?: boolean; yuz?: UnoYuz }) {
+  const kart: UnoKart | undefined = yuz ? { id: -1, ...yuz } : deger ? { id: -1, renk: renk ?? null, deger } : undefined;
   return (
     <HataSiniri yedek={<span className="mk-kart-yedek" style={{ width: boy, height: boy * 1.5 }}>{deger || ''}</span>}>
       <KartGorsel kart={kart} tema={tema} boy={boy} kapali={kapali} />

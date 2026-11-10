@@ -120,32 +120,112 @@ export interface OkeyGorunum {
 
 /* ------------------------------------------------------------------ uno ------------------------------------------------------------------ */
 
-export type UnoRenk = 'k' | 's' | 'y' | 'm'; // kırmızı, sarı, yeşil, mavi
-export type UnoDeger = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | 'pas' | 'yon' | '+2' | 'joker' | '+4';
-export interface UnoKart { id: number; renk: UnoRenk | null; deger: UnoDeger }
+export type UnoRenk = 'k' | 's' | 'y' | 'm'; // kırmızı, sarı, yeşil, mavi (Flip koyu yüz: pembe, turuncu, turkuaz, mor)
+/**
+ * Kart değerleri. Klasik: 0–9, pas, yon, +2, joker, +4 (joker +4).
+ * Flip/Express: +1, flip, joker+2, +5, pasHerkes, jokerRenk · Hepsi Joker: jokerYon, jokerPas, jokerPas2, jokerHedef2, jokerTakas
+ * No Mercy: hepsiAt, r+4 (renkli +4), jokerYon4, +6, +10, rulet · Extreme: vur1, vur2, jokerVur · Takım: jokerTakim, jokerTakim4
+ * Flex: jokerCevir, fxHerkes, fxHedef2, fx+4 · Yalancı: jokerMeydan · Sevimli Dostlar: kitty, batman, kuromi, pony
+ */
+export type UnoDeger =
+  | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | 'pas' | 'yon' | '+2' | 'joker' | '+4'
+  | '+1' | 'flip' | 'joker+2' | '+5' | 'pasHerkes' | 'jokerRenk'
+  | 'jokerYon' | 'jokerPas' | 'jokerPas2' | 'jokerHedef2' | 'jokerTakas'
+  | 'hepsiAt' | 'r+4' | 'jokerYon4' | '+6' | '+10' | 'rulet'
+  | 'vur1' | 'vur2' | 'jokerVur'
+  | 'jokerTakim' | 'jokerTakim4'
+  | 'jokerCevir' | 'fxHerkes' | 'fxHedef2' | 'fx+4'
+  | 'jokerMeydan'
+  | 'kitty' | 'batman' | 'kuromi' | 'pony';
+
+/** Kartın bir yüzü */
+export interface UnoYuz {
+  renk: UnoRenk | null;
+  deger: UnoDeger;
+  /** Flip: koyu yüz */
+  t?: 'k';
+  /** Flex kartı: ikinci (flex) rengi; flex jokerlerde 'j' */
+  fx?: UnoRenk | 'j';
+  /** Flex: güç kartını çeviren sayı kartı */
+  cv?: 1;
+  /** Takım: paslaşma simgeli sayı kartı */
+  ps?: 1;
+  /** Yalancı: kapalı oynanan "yalancı" kartı */
+  yl?: 1;
+  /** Yalancı: kapalı oynandı; renk/deger söylenen (beyan) kimliktir, gerçek kart gizlidir */
+  kp?: 1;
+}
+export interface UnoKart extends UnoYuz {
+  id: number;
+  /** Flip: kartın öbür yüzü (yalnız motor durumunda; kendi elinde gönderilmez) */
+  arka?: UnoYuz;
+}
+export interface UnoBeyan { renk: UnoRenk; deger: UnoDeger }
 
 export type UnoHamle =
-  /** renk: joker / +4 için zorunlu. uno: son ikinci kartı oynarken "UNO" dediğini bildirir. */
-  | { t: 'oyna'; kart: number; renk?: UnoRenk; uno?: boolean }
+  /**
+   * renk: joker için zorunlu. uno: son ikinci kartı oynarken "UNO" dediğini bildirir. hedef: hedefli kartlar (7 takası, hedefli çekme, saldırı).
+   * flex: Flex kartının flex yüzüyle oyna. kapali + beyan: Yalancı modunda kapalı oyna ve ne olduğunu söyle.
+   */
+  | { t: 'oyna'; kart: number; renk?: UnoRenk; uno?: boolean; hedef?: string; flex?: boolean; kapali?: boolean; beyan?: UnoBeyan }
+  /** Desteden çek (Extreme: fırlatıcıya bas; birikmiş ceza varsa cezayı üstlen) */
   | { t: 'cek' }
   /** Çektikten sonra oynamadan geç */
   | { t: 'pas' }
-  /** Tek kartı kalan ve UNO demeyi unutan oyuncu, yakalanmadan önce söyler */
+  /** Tek kartı kalan ve UNO demeyi unutan oyuncu (Takım modunda ortağı da) yakalanmadan önce söyler */
   | { t: 'uno' }
-  /** UNO demeyen oyuncuyu yakala (2 kart çeker) */
+  /** UNO demeyen oyuncuyu yakala */
   | { t: 'yakala'; hedef: string }
-  /** El ilk kartı joker açıldıysa ilk oyuncu rengi seçer */
+  /** Renk seçimi bekleniyorsa (ilk kart joker, Flip sonrası joker, Renk Ruleti) */
   | { t: 'renk'; renk: UnoRenk }
-  /** +4 sana oynandı: kabul et (4 çek, sıra geçer) ya da itiraz et (resmî kural) */
+  /** Joker çekme kartı sana oynandı: kabul et ya da itiraz et */
   | { t: 'kabul' }
-  | { t: 'itiraz' };
+  | { t: 'itiraz' }
+  /** Kart ver (Takım: ortağa; Sevimli Dostlar: hediye) */
+  | { t: 'ver'; kart: number }
+  /** Yalancı: kapalı karta inan / yalan de */
+  | { t: 'inan' }
+  | { t: 'yalan' }
+  /** Yalancı Meydan Okuması: kapalı kart koy · koyanı sorgula · sorgulamayı bitir */
+  | { t: 'koy'; kart: number }
+  | { t: 'sorgula'; hedef: string }
+  | { t: 'yeter' };
+
+/** Bekleyen karar (sıra akışını durdurur) */
+export type UnoBekle =
+  | { tur: 'renk'; kim: string }
+  /** Joker çekme kartına itiraz: kart = oynanan değer */
+  | { tur: 'itiraz'; oynayan: string; hedef: string; kart: UnoDeger }
+  /** Renk Ruleti: `kim` rengi seçer, o renk gelene dek çeker */
+  | { tur: 'rulet'; kim: string }
+  /** Kart verme: bekleyenler ve kime kaç kart verecekleri */
+  | { tur: 'ver'; neden: 'takim' | 'sembol' | 'yari' | 'hediye'; kalan: { kim: string; kime: string; adet: number }[] }
+  /** Yalancı: kapalı kart oynandı; `karar` (sıradaki) inanır ya da yalan der, öbürleri de yalan diyebilir */
+  | { tur: 'yalan'; oynayan: string; beyan: UnoBeyan; karar: string }
+  /** Yalancı Meydan Okuması */
+  | { tur: 'meydan'; oynayan: string; renk: UnoRenk; asama: 'koy' | 'sorgu'; koymayan: string[]; konan: string[] };
+
+export interface UnoOyuncuGorunum {
+  id: string;
+  kartSayisi: number;
+  unoDedi: boolean;
+  /** No Mercy: 25 karta ulaşıp elendi */
+  elendi?: boolean;
+  /** Takım: takım numarası (0…); cikti: elini bitirdi, ortağını bekliyor */
+  takim?: number;
+  cikti?: boolean;
+  /** Flex: güç kartı yeşil (kullanılabilir) mi */
+  guc?: boolean;
+  /** Flip: elindeki kartların bana görünen öbür yüzleri */
+  arka?: UnoYuz[];
+}
 
 export interface UnoGorunum {
   tur: 'uno';
   elNo: number;
   sira: string;
   yon: 1 | -1;
-  oyuncular: { id: string; kartSayisi: number; unoDedi: boolean }[];
+  oyuncular: UnoOyuncuGorunum[];
   elim: UnoKart[];
   /** Atık destesinin üstü */
   ust: UnoKart;
@@ -163,24 +243,103 @@ export interface UnoGorunum {
   bitti: boolean;
   /** Oyun modu (UNO_MODLAR) */
   mod: UnoMod;
-  /** Yığma modunda biriken çekme cezası (0 = yok) */
+  /** Biriken çekme cezası (yığma, No Mercy, Sevimli Dostlar; Extreme'de biriken basış) (0 = yok) */
   yigin: number;
   /** +4 itirazı bekleniyor: hedef kabul ya da itiraz eder */
   dortBekle?: { oynayan: string; hedef: string };
   /** İlk açılan kart joker: sıradaki oyuncu renk seçer */
   renkSec?: boolean;
+  /** Bekleyen karar (dortBekle / renkSec bunun eski kısa yollarıdır) */
+  bekle?: UnoBekle;
+  /** Bakanın şimdi vermesi gereken kart: kime, kaç tane */
+  ver?: { kime: string; adet: number; neden: 'takim' | 'sembol' | 'yari' | 'hediye' };
+  /** Flip: etkin yüz (a = açık, k = koyu); desteUst = çekme destesinin üstünde görünen öbür yüz */
+  taraf?: 'a' | 'k';
+  desteUst?: UnoYuz;
+  /** Hepsi Joker: renk yok */
+  renksiz?: boolean;
+  /** Extreme: deste fırlatıcıda (çekmek = düğmeye basmak) */
+  firlatici?: boolean;
+  /** Flex: flex yüzüyle oynanabilecek kartlar; yalnizFlex = yalnız flex yüzüyle uyanlar */
+  flex?: number[];
+  yalnizFlex?: number[];
+  /** Çekmek serbest mi (sıra bendeyken) */
+  cekOlur?: boolean;
+  /** Çekilen kart oynanmak zorunda (No Mercy) */
+  zorunlu?: boolean;
+  /** Takım Oyunu jokeri: ortak oynamak zorunda */
+  takimOyun?: boolean;
+  /** Maçın puan hedefi (0 = yok) */
+  hedefPuan?: number;
 }
 
 /** Uno modları: klasik = resmî kurallar (+4 itirazı, üst üste ekleme yok) */
-export type UnoMod = 'klasik' | 'yigma' | 'yediSifir' | 'cekCek' | 'atlama' | 'hizli';
-export const UNO_MODLAR: { id: UnoMod; ad: string; aciklama: string }[] = [
-  { id: 'klasik', ad: 'Klasik', aciklama: 'Resmî kurallar: +2 ve +4 üst üste eklenmez, +4’e itiraz edilebilir.' },
-  { id: 'yigma', ad: 'Yığma', aciklama: '+2 üstüne +2 ya da +4, +4 üstüne +4 eklenir; ceza birikir, ekleyemeyen hepsini çeker.' },
-  { id: 'yediSifir', ad: '7-0', aciklama: '7 oynayan en az kartı olan rakiple elini değiştirir; 0 oynanınca herkes elini yöndeki oyuncuya verir.' },
-  { id: 'atlama', ad: 'Atlama', aciklama: 'Ortadaki kartın tıpkısı (aynı renk, aynı sayı ya da simge) elindeyse sıranı beklemeden atarsın; sıra senden devam eder.' },
-  { id: 'hizli', ad: 'Hızlı', aciklama: 'Herkese 5 kart dağıtılır; eller kısa sürer. Kurallar klasikle aynıdır.' },
-  { id: 'cekCek', ad: 'Çek-çek', aciklama: 'Oynayacak kartın yoksa uyan kart gelene dek çekersin; gelen kartı oynayabilirsin.' },
+export type UnoMod =
+  | 'klasik' | 'yigma' | 'yediSifir' | 'cekCek' | 'atlama' | 'hizli'
+  | 'deluxe' | 'express' | 'flip' | 'hepsiJoker' | 'noMercy' | 'extreme' | 'flex' | 'takim' | 'yalanci' | 'dostlar';
+export type UnoModGrup = 'resmi' | 'ev' | 'ozel';
+export interface UnoModTanim {
+  id: UnoMod; ad: string; grup: UnoModGrup;
+  /** Kart üstü kısa tanıtım */
+  kisa: string;
+  aciklama: string;
+  /** Deste, dağıtılan kart, oyuncu sınırı (ciftOyuncu: yalnız 4, 6, 8) */
+  deste: number; elKart: number; enAz: number; enCok: number; cift?: boolean;
+  /** Resmî puan hedefi (0 = yok): maç bu puana ulaşılınca da biter */
+  hedef: number;
+  /** 1 kolay … 3 zor */
+  zorluk: 1 | 2 | 3;
+  /** Tanıtım rozetindeki örnek kartlar */
+  ornek: [UnoRenk | null, UnoDeger][];
+}
+export const UNO_MOD_GRUPLAR: { id: UnoModGrup; ad: string; alt: string }[] = [
+  { id: 'resmi', ad: 'Kutu oyunları', alt: 'Raflardaki Uno kutularının kendi desteleri ve kendi kuralları.' },
+  { id: 'ev', ad: 'Ev kuralları', alt: 'Klasik 108 kartla, masada en çok oynanan ek kurallar.' },
+  { id: 'ozel', ad: 'MeDSor özel', alt: 'Yalnız bu masada: karakter kartlı özel deste.' },
 ];
+export const UNO_MODLAR: UnoModTanim[] = [
+  { id: 'klasik', ad: 'Klasik', grup: 'resmi', kisa: 'Resmî kurallar', deste: 108, elKart: 7, enAz: 2, enCok: 8, hedef: 0, zorluk: 1, ornek: [['k', '7'], ['y', '+2'], [null, '+4']],
+    aciklama: 'Resmî kurallar: +2 ve +4 üst üste eklenmez, +4’e itiraz edilebilir.' },
+  { id: 'deluxe', ad: 'Deluxe', grup: 'resmi', kisa: '112 kart, 500 puan', deste: 112, elKart: 7, enAz: 2, enCok: 8, hedef: 500, zorluk: 1, ornek: [['m', '0'], ['s', 'yon'], [null, 'joker']],
+    aciklama: 'Deluxe kutunun 112’lik destesi (8 Joker) ve puan defteri: klasik kurallar, maç 500 puana ulaşılınca da biter.' },
+  { id: 'express', ad: 'Express', grup: 'resmi', kisa: '56 kart, 5’er kart', deste: 56, elKart: 5, enAz: 2, enCok: 6, hedef: 250, zorluk: 1, ornek: [['k', '4'], ['m', '+1'], [null, 'joker+2']],
+    aciklama: 'Cep boyu Uno: 56 kart, herkese 5 kart. +2 yerine +1, +4 yerine Joker +2 vardır; hedef 250 puan.' },
+  { id: 'flip', ad: 'Flip', grup: 'resmi', kisa: 'Çift yüzlü deste', deste: 112, elKart: 7, enAz: 2, enCok: 8, hedef: 500, zorluk: 2, ornek: [['y', 'flip'], ['k', '+5'], [null, 'jokerRenk']],
+    aciklama: 'Her kartın açık ve koyu yüzü var. Flip kartı oynanınca deste, atık ve bütün eller ters döner; koyu yüzde +5, Herkesi Atlat ve Renk Gelene Dek Çek bekler.' },
+  { id: 'hepsiJoker', ad: 'Hepsi Joker', grup: 'resmi', kisa: 'Renk yok, her kart oynanır', deste: 112, elKart: 7, enAz: 2, enCok: 8, hedef: 500, zorluk: 1, ornek: [[null, 'jokerPas2'], [null, 'jokerHedef2'], [null, 'jokerTakas']],
+    aciklama: 'All Wild: destedeki her kart jokerdir, renk ve sayı tutturmak yoktur. Hedefli +2, Zorunlu Takas ve İkili Atlat ile sırayı sen yönetirsin.' },
+  { id: 'noMercy', ad: 'No Mercy', grup: 'resmi', kisa: 'Acımasız: +10, 25 kartta elenme', deste: 168, elKart: 7, enAz: 2, enCok: 8, hedef: 1000, zorluk: 3, ornek: [[null, '+10'], ['k', 'hepsiAt'], [null, 'rulet']],
+    aciklama: '168 kart: +6, +10, Renk Ruleti, Hepsini At. Çekme kartları birikir, uyan kart gelene dek çekilir, 7 takas 0 devir yapar; eli 25 karta ulaşan elenir.' },
+  { id: 'extreme', ad: 'Extreme', grup: 'resmi', kisa: 'Kart fırlatıcı', deste: 112, elKart: 7, enAz: 2, enCok: 8, hedef: 500, zorluk: 2, ornek: [['m', 'vur2'], ['s', 'hepsiAt'], [null, 'jokerVur']],
+    aciklama: 'Attack/Extreme: deste fırlatıcıdadır. Kart çekmek yerine düğmeye basarsın; bazen hiç, bazen bir avuç kart fırlar. Vur kartları üst üste eklenir.' },
+  { id: 'flex', ad: 'Flex', grup: 'resmi', kisa: 'Güç kartıyla esnet', deste: 104, elKart: 7, enAz: 2, enCok: 8, hedef: 500, zorluk: 3, ornek: [['k', '5'], ['m', 'pas'], [null, 'fxHerkes']],
+    aciklama: 'Flex kartlarının ikinci bir rengi ve güçlü bir ikinci etkisi var. Güç kartın yeşilken flex yüzünü kullanırsın; kullanınca kırmızıya döner.' },
+  { id: 'takim', ad: 'Takım', grup: 'resmi', kisa: 'İkişerli takımlar', deste: 112, elKart: 7, enAz: 4, enCok: 8, cift: true, hedef: 500, zorluk: 2, ornek: [['y', '3'], [null, 'jokerTakim'], [null, 'jokerTakim4']],
+    aciklama: 'Teams: karşındaki oyuncu ortağın. Kart paslaşır, Takım Oyunu jokeriyle sırayı ortağına atlatırsın; takım, iki ortak da elini bitirince kazanır. 4, 6 ya da 8 oyuncu.' },
+  { id: 'yalanci', ad: 'Yalancı', grup: 'resmi', kisa: 'Kapalı oyna, blöf yap', deste: 112, elKart: 7, enAz: 2, enCok: 8, hedef: 500, zorluk: 3, ornek: [['k', '7'], ['m', '+2'], [null, 'jokerMeydan']],
+    aciklama: 'Liar’s: yalancı kartları kapalı oynanır ve ne olduğu söylenir. İnanmayan “Yalan!” der: yalancı kartı geri alır, haksız çıkan 1 kart çeker. 7 takas, 0 devir yapar.' },
+  { id: 'yigma', ad: 'Yığma', grup: 'ev', kisa: '+2 ve +4 birikir', deste: 108, elKart: 7, enAz: 2, enCok: 8, hedef: 0, zorluk: 2, ornek: [['k', '+2'], ['m', '+2'], [null, '+4']],
+    aciklama: '+2 üstüne +2 ya da +4, +4 üstüne +4 eklenir; ceza birikir, ekleyemeyen hepsini çeker.' },
+  { id: 'yediSifir', ad: '7-0', grup: 'ev', kisa: '7 ve 0 el değiştirir', deste: 108, elKart: 7, enAz: 2, enCok: 8, hedef: 0, zorluk: 2, ornek: [['s', '7'], ['y', '0']],
+    aciklama: '7 oynayan seçtiği rakiple elini değiştirir; 0 oynanınca herkes elini yöndeki oyuncuya verir.' },
+  { id: 'atlama', ad: 'Atlama', grup: 'ev', kisa: 'Tıpkısıyla araya gir', deste: 108, elKart: 7, enAz: 2, enCok: 8, hedef: 0, zorluk: 2, ornek: [['m', '5'], ['m', '5']],
+    aciklama: 'Ortadaki kartın tıpkısı (aynı renk, aynı sayı ya da simge) elindeyse sıranı beklemeden atarsın; sıra senden devam eder.' },
+  { id: 'hizli', ad: 'Hızlı', grup: 'ev', kisa: '5 kartla kısa el', deste: 108, elKart: 5, enAz: 2, enCok: 8, hedef: 0, zorluk: 1, ornek: [['y', '2'], ['k', 'pas']],
+    aciklama: 'Herkese 5 kart dağıtılır; eller kısa sürer. Kurallar klasikle aynıdır.' },
+  { id: 'cekCek', ad: 'Çek-çek', grup: 'ev', kisa: 'Uyan gelene dek çek', deste: 108, elKart: 7, enAz: 2, enCok: 8, hedef: 0, zorluk: 1, ornek: [['s', '9'], ['m', '1']],
+    aciklama: 'Oynayacak kartın yoksa uyan kart gelene dek çekersin; gelen kartı oynayabilirsin.' },
+  { id: 'dostlar', ad: 'Sevimli Dostlar', grup: 'ozel', kisa: 'Karakter kartları', deste: 116, elKart: 7, enAz: 2, enCok: 8, hedef: 0, zorluk: 2, ornek: [[null, 'kitty'], [null, 'batman'], [null, 'kuromi'], [null, 'pony']],
+    aciklama: 'Klasik deste + 8 karakter kartı: Kedicik hediye verir, Yarasa cezayı siper eder, Yaramaz Tavşan herkese kart çektirir, Gökkuşağı Tayı bir rengin tamamını attırır. +2 ve +4 birikir.' },
+];
+export const unoModTanim = (mod: UnoMod | undefined): UnoModTanim => UNO_MODLAR.find((m) => m.id === mod) ?? UNO_MODLAR[0];
+/** Oyuncu sayısı bu moda uyuyor mu; uymuyorsa Türkçe neden */
+export function unoOyuncuUygun(mod: UnoMod | undefined, n: number): string | null {
+  const m = unoModTanim(mod);
+  if (m.cift && (n < 4 || n % 2)) return `${m.ad} modu 4, 6 ya da 8 oyuncuyla oynanır (ikişerli takımlar). Bot ekle ya da çıkar.`;
+  if (n < m.enAz) return `${m.ad} modu için en az ${m.enAz} oyuncu gerekir.`;
+  if (n > m.enCok) return `${m.ad} modu en çok ${m.enCok} oyuncuyla oynanır.`;
+  return null;
+}
 
 /* ------------------------------------------------------------------ go ------------------------------------------------------------------ */
 
@@ -326,8 +485,11 @@ export type Hamle = OkeyHamle | UnoHamle | GoHamle | CizgiHamle | XoxHamle | Pis
  *        (uc 'bol' = yedili/takim "seriyi bölerek işleme": kopya taş serinin ortasına işlenir, seri ikiye bölünür; alt parça eski kimliği
  *        korur ve işlenen taşla biter, üst parça `yeniPer` kimliğiyle eski taşla başlar) · cekti{o, kaynak?, tas? (yalnız açık kaynak: atık), cezaTasi?}
  *        cektim{kime, tas} · devretti{o} · atti{o, tas} · ceza{o, ceza: Ceza} · hediye{o, kimler: string[]} · sira{o} · elBitti
- * Uno:   dagit · oynadi{o, kart, renk?} · cekti{o, adet, neden?: '+2'|'+4'|'yakalandi'|'cek'} · cektim{kime, kartlar}
+ * Uno:   dagit · oynadi{o, kart, renk?, flex?} · cekti{o, adet, neden?: '+2'|'+4'|…|'yakalandi'|'cek'|'firlat'} · cektim{kime, kartlar}
  *        pas{o} · atlandi{o} · yon{yon} · uno{o} · yakalandi{o, yakalayan} · renk{renk} · karildi · sira{o} · elBitti
+ *        flip{taraf} · elendi{o} · attiHepsi{o, adet} · firlat{o, adet} · verdi{o, hedef, adet} · aldim{kime, kartlar} · guc{o, acik} · gucHepsi
+ *        yalan{o, hedef, hakli, kart?} · inandi{o} · geriAldi2{o} · meydan{o, renk} · koydu{o} · sorgu{o, hedef, dogru} · siper{o} · rulet{o, renk, adet}
+ *        takimOyun{o, hedef} · cikti{o} · dondu{o}
  * Oda:   tepki{o, e} · katildi{o} · ayrildi{o} · botDevraldi{o} · durdu · devam
  */
 export interface Olay {
@@ -395,7 +557,7 @@ export interface Motor {
 /* ------------------------------------------------------------------ oda ------------------------------------------------------------------ */
 
 export const OKEY_TEMALAR = ['klasik', 'kitty'] as const;
-export const UNO_TEMALAR = ['klasik', 'stitch', 'buyucu'] as const;
+export const UNO_TEMALAR = ['klasik', 'dostlar', 'stitch', 'buyucu'] as const;
 export type OkeyTema = (typeof OKEY_TEMALAR)[number];
 export type UnoTema = (typeof UNO_TEMALAR)[number];
 /** Varsayılan taş renkleri: kırmızı, siyah, mavi, sarı */
@@ -411,7 +573,7 @@ export interface OdaAyar {
   unoMod?: UnoMod;
   /** Takım Yedili, 2–4 oyuncu: kişi başı 7 ya da 14 taş (kurucu seçer). 5–6 oyuncuda her zaman 4 taş. */
   tasSayisi: 7 | 14;
-  /** okey: 'klasik' | 'kitty' · uno: 'klasik' | 'stitch' | 'buyucu' */
+  /** okey: 'klasik' | 'kitty' · uno: 'klasik' | 'dostlar' | 'stitch' | 'buyucu' */
   tema: string;
   /** Okey taş renkleri (4 adet #rrggbb) */
   renkler: string[];
