@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 706,
-  "baslik": "Arkadaşlar ve profil düzeltmesi",
+  "onem": 707,
+  "baslik": "Yürüyüş ve Kampçılık: kolay erişim",
   "maddeler": [
-    "Arkadaşlar: giriş yapmış olsan da arkadaş listesi, gelen/giden istekler ve profiller boş görünüyordu; artık doğru yükleniyor."
+    "Ek modül: çalışma soruları, föy ve PDF indirmeleri sayfanın üstüne taşındı",
+    "Girişte Yürüyüş ve Kampçılık dersine yönlendirme sorusu"
   ],
   "eklenen": [],
   "degisen": [],

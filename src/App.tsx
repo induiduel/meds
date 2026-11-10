@@ -1,4 +1,5 @@
 import { fetchMyAccess, setModeratorMode } from './services/moderatorSession';
+import KampYonlendir from './components/v15/ekModul/KampYonlendir';
 import { getAppearance } from './utils/appearance';
 import React, { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect, Suspense } from 'react';
 import { startLiveDataSync } from './services/liveDataSync';
@@ -2182,6 +2183,8 @@ export default function App() {
             <VideoDersV15 />
           </Suspense>
         )}
+
+        <KampYonlendir />
 
         {/* TAB: /ek-moduller (görünen /dersler/ek-moduller/kurul<N>/<modül>/…) — seçmeli/geçici ders modülleri */}
         {gorunenTab === 'ek_moduller' && (

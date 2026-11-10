@@ -136,6 +136,45 @@ const ModulAna: React.FC<{ m: EkModul; ana: string }> = ({ m, ana }) => {
         </div>
       </header>
 
+      <section aria-label="Çalışma soruları">
+        <h2 className="ekm-h2">Çalışma soruları ve föy</h2>
+      {m.foy && (
+        <Bag to={`${ana}/foy`} className="ekm-genel v15-card is-foy">
+          <FileDown aria-hidden />
+          <span><b>Çalışma föyü</b><small>Hocanın çalışma soruları konu konu: bilgi özeti, boşluk doldurma, doğru–yanlış, çoktan seçmeli. Seçtiğin konuların föyü PDF olur.</small></span>
+          <ChevronRight aria-hidden />
+        </Bag>
+      )}
+      {m.hoca && (
+        <Bag to={`${ana}/hoca`} className="ekm-genel v15-card is-hoca">
+          <BookOpenCheck aria-hidden />
+          <span><b>Hocanın çalışma soruları</b><small>{m.hoca.setler.reduce((t, s) => t + s.sorular.length, 0)} soru: boşluk doldurma, doğru–yanlış, çoktan seçmeli. İçerik bu sorulara göre hazırlandı.</small></span>
+          <ChevronRight aria-hidden />
+        </Bag>
+      )}
+      {m.genel.length > 0 && (
+        <Bag to={`${ana}/sorular/genel`} className="ekm-genel v15-card">
+          <BookOpenCheck aria-hidden />
+          <span><b>Genel tekrar soruları</b><small>Bütün konuları birlikte yoklayan {m.genel.length} soru; sınavdan önce çöz.</small></span>
+          <ChevronRight aria-hidden />
+        </Bag>
+      )}
+
+      </section>
+
+      <section aria-label="PDF indir">
+        <h2 className="ekm-h2">PDF olarak indir <small>· tek dokunuşla cihazına kaydet</small></h2>
+        <ul className="ekm-pdfler" role="list">
+          {ozet.pdf.map((p) => (
+            <li key={p.id}>
+              <a className="ekm-pdf v15-card" href={gorselUrl(ozet.id, p.dosya)} download target="_blank" rel="noreferrer">
+                <FileDown aria-hidden /><span><b>{p.ad}</b><small>{p.aciklama}</small></span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="ekm-modlar" aria-label="Çalışma biçimleri">
         {ilkKonu && (
           <Bag to={`${ana}/ders/${ilkKonu.id}`} className="ekm-mod v15-card is-ders">
@@ -164,7 +203,7 @@ const ModulAna: React.FC<{ m: EkModul; ana: string }> = ({ m, ana }) => {
       </section>
 
       <section aria-label="Konular">
-        <h2 className="ekm-h2">Konular</h2>
+        <h2 className="ekm-h2">Konu konu çalış</h2>
         <ol className="ekm-basliklar" role="list">
           {m.basliklar.map((b) => (
             <li key={b.no} className="v15-card">
@@ -191,40 +230,6 @@ const ModulAna: React.FC<{ m: EkModul; ana: string }> = ({ m, ana }) => {
         </ol>
       </section>
 
-      {m.foy && (
-        <Bag to={`${ana}/foy`} className="ekm-genel v15-card is-foy">
-          <FileDown aria-hidden />
-          <span><b>Çalışma föyü</b><small>Hocanın çalışma soruları konu konu: bilgi özeti, boşluk doldurma, doğru–yanlış, çoktan seçmeli. Seçtiğin konuların föyü PDF olur.</small></span>
-          <ChevronRight aria-hidden />
-        </Bag>
-      )}
-      {m.hoca && (
-        <Bag to={`${ana}/hoca`} className="ekm-genel v15-card is-hoca">
-          <BookOpenCheck aria-hidden />
-          <span><b>Hocanın çalışma soruları</b><small>{m.hoca.setler.reduce((t, s) => t + s.sorular.length, 0)} soru: boşluk doldurma, doğru–yanlış, çoktan seçmeli. İçerik bu sorulara göre hazırlandı.</small></span>
-          <ChevronRight aria-hidden />
-        </Bag>
-      )}
-      {m.genel.length > 0 && (
-        <Bag to={`${ana}/sorular/genel`} className="ekm-genel v15-card">
-          <BookOpenCheck aria-hidden />
-          <span><b>Genel tekrar soruları</b><small>Bütün konuları birlikte yoklayan {m.genel.length} soru; sınavdan önce çöz.</small></span>
-          <ChevronRight aria-hidden />
-        </Bag>
-      )}
-
-      <section aria-label="PDF indir">
-        <h2 className="ekm-h2">PDF olarak indir</h2>
-        <ul className="ekm-pdfler" role="list">
-          {ozet.pdf.map((p) => (
-            <li key={p.id}>
-              <a className="ekm-pdf v15-card" href={gorselUrl(ozet.id, p.dosya)} download target="_blank" rel="noreferrer">
-                <FileDown aria-hidden /><span><b>{p.ad}</b><small>{p.aciklama}</small></span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
     </div>
   );
 };
