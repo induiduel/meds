@@ -1,13 +1,25 @@
 /** Düz Okey kuralları. Metin motorla birebir: services/masa/motor/duzOkey.ts. */
 import React from 'react';
+import { ArrowDown, Flag, Upload } from 'lucide-react';
+import { TasOrnek } from '../kabukOrtak';
 import { Taslar, renkSec } from './ortak';
+import { Akis, Kunye, TanitSatir, TasTanitim } from './gorsel';
 
 export default function DuzKurallar({ renkler }: { renkler?: string[] }) {
   const rk = renkSec(renkler);
   const ok = { s: 7, r: 0 as const };
   return (
     <article className="mk-kural" role="tabpanel">
+      <Kunye tur="duz" malzeme="106 taş: 104 + 2 sahte okey" amac="14 taşı perlere ayırıp son taşı atarak bitirmek" />
       <p className="mk-kural-giris">Klasik okey. 2–4 oyuncu, 106 taş: 104 sayı taşı + 2 sahte okey. Herkese <b>14 taş</b>, eli başlatana 15 taş verilir. Amaç 14 taşının hepsini perlere ayırıp son taşını atarak <b>bitirmek</b>.</p>
+      <h3>Taşları tanı</h3>
+      <TasTanitim rk={rk} ek={
+        <TanitSatir ad="Okey ve sahte okey" alt="gösterge 6 ise okey 7">
+          <TasOrnek s={6} r={0} renkler={rk} boy={30} /><span className="mk-tanit-ok" aria-hidden="true">→</span>
+          <TasOrnek s={7} r={0} renkler={rk} boy={30} okey={ok} /><TasOrnek s={0} r={0} renkler={rk} boy={30} okey={ok} />
+          <span className="mk-tanit-esit">= 106 taş</span>
+        </TanitSatir>
+      } />
       <h3>Gösterge, okey ve sahte okey</h3>
       <p>Göstergenin aynı renkteki bir üstü <b>okeydir</b> (13’ün üstü 1); okey jokerdir. <b>Sahte okey</b> okeyin sayısını ve rengini taşıyan sıradan taştır.</p>
       <div className="mk-ornekler">
@@ -15,6 +27,11 @@ export default function DuzKurallar({ renkler }: { renkler?: string[] }) {
         <Taslar rk={rk} t={[[7, 0]]} ad="…okey kırmızı 7" okey={ok} />
       </div>
       <h3>Sıran gelince</h3>
+      <Akis adimlar={[
+        { ikon: <ArrowDown size={18} />, ad: 'Taş çek', metin: 'Desteden ya da yandan (önceki oyuncunun attığı taş).' },
+        { ikon: <Upload size={18} />, ad: 'Bir taş at', metin: 'İşine yaramayan taşı at; tur biter.' },
+        { ikon: <Flag size={18} />, ad: 'Bitir', metin: '14 taşın perlere ya da 7 çifte ayrılınca son taşı atıp bitir.' },
+      ]} />
       <ol>
         <li><b>Taş çek:</b> desteden ya da <b>yandan</b> (senden önceki oyuncunun son attığı taş). Eli başlatan ilk turda çekmez.</li>
         <li><b>Bir taş at.</b> Tur taş atınca biter. Yere per açılmaz, taş işlenmez.</li>

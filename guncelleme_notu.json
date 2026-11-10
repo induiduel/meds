@@ -1,22 +1,24 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 686,
-  "baslik": "Taş Masası: arkadaşla kolay katılım ve bağlantı göstergeleri",
+  "onem": 687,
+  "baslik": "Oyunlar: düzenli merkez, yeni lobi ve resimli kurallar",
   "maddeler": [
-    "İzleyici: oyun başlamış masaya bağlantıyla ya da kodla gelen arkadaşın izleyici olarak girer; bot oynayan koltuğu ister, kurucu “Onayla” deyince o koltuktan oynar.",
-    "Kolay katılım: davet bağlantısıyla gelip önce giriş yapan kişi girişten sonra masaya kendiliğinden oturur; kodda O/0, I/1 karışıklığı ve küçük harf sorun olmaz; oyun sırasında menüden de arkadaş davet edilir.",
-    "Bağlantı: üst çubukta yavaş (sarı) / çok yavaş (kırmızı) ağ göstergesi ve açıklaması; kopunca “Bağlantı koptu, n. deneme” katmanı, geri sayım ve “Şimdi dene”; hamle yanıtı gecikince “Hamlen gönderiliyor”.",
-    "Rakip koptuğunda süresiyle “bağlantı bekleniyor” rozeti; sıra ondaysa herkese bekleme kartı, kurucuya “Bot devralsın” düğmesi.",
-    "Düzeltmeler: Remi/Kastet düzenlemede elden konan taş dokununca ıstakaya döner; dar ekranda eylem düğmeleri tek satır ve durum yazısı kesilmez; Pişti lobisinde anlamsız tema kaldırıldı, koltuk adları ve “Topladığı n kart” düzeldi; oyun sırasında sitenin sorun hapı üst çubuğu örtmez."
+    "Kategoriler: oyunlar Okey, Açık masa, Kart oyunları ve Tahta oyunları başlıkları altında sıralandı; “Kodla katıl” ve yarım kalan oyunlar en üstte.",
+    "Lobi: başlıkta oyunun adı ve çizimi; Uno modu ve zorluk artık açıklamalı kartlardan seçilir (bitişik yazı hatası giderildi); “Kısaca” adımları numaralı.",
+    "Bota karşı oyun: kurulum ekranında Uno modu, Normal/Zorlu ve Takım Yedili’de taş sayısı seçilebilir.",
+    "Nasıl oynanır: her oyunda künye, “Taşları / Kartları tanı” panosu ve bir turun akış şeması; Pişti sahneleri, Go, Çizgi Yarışı ve XOX tahta şemaları eklendi.",
+    "Düzeltmeler: Taş Domino çiziminde üst üste binen taşlar, “2–2 oyuncu” yazısı, kural metinlerinde kaybolan numara ve madde imleri."
   ],
   "eklenen": [
-    "Taş Masası izleyici ve koltuk devri",
-    "Bağlantı/gecikme göstergeleri"
+    "Resimli oyun kuralları",
+    "Bot oyununda mod ve zorluk seçimi"
   ],
-  "degisen": [],
+  "degisen": [
+    "Oyunlar merkezi kategorileri",
+    "Lobi düzeni"
+  ],
   "duzeltilen": [
-    "Remi/Kastet taslak taşı ele dönmüyordu",
-    "Dar ekranda eylem çubuğu kalabalığı"
+    "Lobide bitişik görünen mod seçenekleri"
   ],
   "silinen": [],
   "yenilikler": []

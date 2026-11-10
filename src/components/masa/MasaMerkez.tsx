@@ -3,33 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, BarChart3, BookOpen, Bot, Check, LogIn, Pause, Pencil, RefreshCw, Users, WifiOff } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { masa, masaAdi } from '../../services/masa/istemci';
-import { EL_SECENEK, OYUNCU_SINIR, OYUN_ADI, type OdaAyar, type OdaOzet, type OyunTur } from '../../services/masa/tipler';
+import { EL_SECENEK, OYUNCU_SINIR, OYUN_ADI, type OdaAyar, type OdaOzet, type OyunTur, type UnoMod } from '../../services/masa/tipler';
 import { OyunResmi, Yaprak, sadeAd } from './kabukOrtak';
+import '../../styles/masa/lobi.css';
 import MasaIstatistik from './MasaIstatistik';
 import { TahtaAyar, tahtaMi } from './tahta/ortak';
+import { OyunModu, UnoModu } from './ModSecici';
+import { KATEGORILER, OYUN_CUMLE, oyuncuYazi } from './oyunKatalog';
 import type { KuralSekme } from './MasaKurallar';
 
-const OYUNLAR: { tur: OyunTur; cumle: string; etiket?: string }[] = [
-  { tur: 'yedili', cumle: 'Yedi taşla başla, per aç, masadaki perlere işle; elini ilk bitiren kazanır.', etiket: 'Ana oyun' },
-  { tur: 'takim', cumle: 'Yedili’nin eşli hâli: karşındaki ortağınla aynı perlere işle, birlikte bitir.' },
-  { tur: 'yuzbir', cumle: 'Okeyli klasik: 101 sayıyla ya da beş çiftle aç, taşlarını erit, son taşını at.' },
-  { tur: 'duz', cumle: 'Çek, at, elini perlere ya da yedi çifte ayırıp son taşla bitir: herkesin bildiği okey.' },
-  { tur: 'kastet', cumle: 'Taş atmadan açtıkça aç; masadaki taşları elindekilerle yeniden dizdiğin ortak masa okeyi.' },
-  { tur: 'remi', cumle: 'Elinden 30 ile aç, sonra masadaki bütün perleri yeniden kur; ilk bitiren kazanır.' },
-  { tur: 'domino', cumle: 'Okey taşlarıyla domino: rengi ya da sayısı tutan taşı zincire ekle, ardışık koyup ek hamle kazan.' },
-  { tur: 'pisti', cumle: 'Yerdeki kartı eşle, Vale ile topla, tek karta pişti yap: klasik Pişti 2 ya da 4 kişiyle.' },
-  { tur: 'uno', cumle: 'Rengi ya da sayıyı tuttur, kartlarını bitir. Resmî kurallar ya da Yığma, 7-0, Çek-çek modları.' },
-  { tur: 'go', cumle: 'Ahşap tahtada alan kapma: taşlarla çevir, grupları al. 9×9, 13×13, 19×19; handikap ve süre.' },
-  { tur: 'cizgi', cumle: 'Zar at, çizgini kare kare rakibin kalesine sür. Yüz yüze gelince iki zarla kapışma.' },
-  { tur: 'xox', cumle: 'Klasik üçlü dizi; 4×4’ten 6×6’ya büyük tahtalarda dörtlü, beşli dizi.' },
-];
-/** Eğlence bölgesindeki kategoriler: okey taşlı modlar ve kart oyunları */
-const KATEGORILER: { ad: string; alt: string; turler: OyunTur[] }[] = [
-  { ad: 'Okey modları', alt: 'Taşlı oyunlar', turler: ['yedili', 'takim', 'yuzbir', 'duz', 'kastet', 'remi'] },
-  { ad: 'Akıl oyunları', alt: 'Okey taşıyla', turler: ['domino'] },
-  { ad: 'Kart oyunları', alt: 'Uno ve Pişti', turler: ['uno', 'pisti'] },
-  { ad: 'Tahta oyunları', alt: 'İki kişilik', turler: ['go', 'cizgi', 'xox'] },
-];
 const BOT_SECENEK: Record<OyunTur, number[]> = { yedili: [1, 2, 3, 4, 5], takim: [1, 3, 5], yuzbir: [1, 2, 3], uno: [1, 2, 3, 4, 5, 6, 7], go: [1], cizgi: [1], xox: [1], remi: [1, 2, 3], kastet: [1, 2, 3], duz: [1, 2, 3], pisti: [1, 3], domino: [1, 2, 3] };
 const BOT_VARSAYILAN: Record<OyunTur, number> = { yedili: 2, takim: 3, yuzbir: 3, uno: 3, go: 1, cizgi: 1, xox: 1, remi: 1, kastet: 3, duz: 3, pisti: 1, domino: 1 };
 export const elAdi = (n: number) => (n === 0 ? 'Bitirene dek' : `${n} el`);
@@ -45,6 +27,9 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
   const [botN, setBotN] = useState(2);
   const [elN, setElN] = useState(3);
   const [tahtaAyar, setTahtaAyar] = useState<Partial<OdaAyar>>({});
+  const [asistan, setAsistan] = useState(true);
+  const [unoMod, setUnoMod] = useState<UnoMod>('klasik');
+  const [tasN, setTasN] = useState<7 | 14>(7);
   const [kod, setKod] = useState('');
   const [bekle, setBekle] = useState(false);
   const [odalar, setOdalar] = useState<OdaOzet[] | null>(null);
@@ -61,12 +46,13 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
   useEffect(() => { if (!bekle) return; const t = setTimeout(() => setBekle(false), 5000); return () => clearTimeout(t); }, [bekle]);
   useEffect(() => { if (kalici) setBekle(false); }, [kalici]);
 
-  const ac = (tur: OyunTur) => { setSecili(tur); setSonTur(tur); setKip(tahtaMi(tur) ? 'bot' : 'arkadas'); setBotN(BOT_VARSAYILAN[tur]); setElN(3); };
+  const ac = (tur: OyunTur) => { setSecili(tur); setSonTur(tur); setKip(tahtaMi(tur) ? 'bot' : 'arkadas'); setBotN(BOT_VARSAYILAN[tur]); setElN(3); setAsistan(true); setUnoMod('klasik'); setTasN(7); };
   const baslat = () => {
     if (!secili) return;
     setBekle(true);
     const t = tahtaMi(secili) ? tahtaAyar : {};
-    kur(secili, kip === 'bot' ? botN : 0, kip === 'bot' ? { ...t, elSayisi: elN } : tahtaMi(secili) ? t : undefined);
+    // Bota karşı oyunda lobi atlanır: mod, zorluk ve taş sayısı burada seçilir
+    kur(secili, kip === 'bot' ? botN : 0, kip === 'bot' ? { ...t, elSayisi: elN, asistan, unoMod, tasSayisi: tasN } : tahtaMi(secili) ? t : undefined);
     setSecili(null);
   };
   const kodGonder = (e: React.FormEvent) => {
@@ -87,7 +73,6 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
     setAdDuzen(false);
   };
   const tur = secili || sonTur;
-  const [enAz, enCok] = OYUNCU_SINIR[tur];
 
   return (
     <div className="mk mk-merkez">
@@ -95,7 +80,7 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
         <div className="mk-merkez-baslik">
           <span className="mk-ust-etiket">Oyunlar</span>
           <h1>Taş Masası</h1>
-          <p>Arkadaşlarınla aynı masaya otur ya da botlara karşı oyna. Okey taşlı üç oyun ve Uno; oyun yarım kalırsa kaldığın yerden sürer.</p>
+          <p>Arkadaşlarınla aynı masaya otur ya da botlara karşı oyna. Okey, kart ve tahta oyunları tek masada; oyun yarım kalırsa kaldığın yerden sürer.</p>
         </div>
         <div className="mk-ad">
           {adDuzen ? (
@@ -123,52 +108,24 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
       )}
       {!kalici && baglanti === 'koptu' && <div className="mk-uyari" role="status"><p><WifiOff size={16} /> Oyun sunucusuna bağlanılıyor…</p></div>}
 
-      <section className="mk-oyunlar" aria-label="Oyunlar">
-        {KATEGORILER.flatMap((k) => [
-          <h2 key={`k-${k.ad}`} className="mk-kategori">{k.ad}<small>{k.alt}</small></h2>,
-          ...OYUNLAR.filter((o) => k.turler.includes(o.tur)).map((o) => (
-          <button key={o.tur} type="button" className={`mk-oyun-kart${o.tur === 'yedili' ? ' is-ana' : ''}`} onClick={() => ac(o.tur)} disabled={bekle}>
-            <span className="mk-oyun-kece"><OyunResmi tur={o.tur} /></span>
-            <span className="mk-oyun-metin">
-              {o.etiket && <em>{o.etiket}</em>}
-              <b>{OYUN_ADI[o.tur]}</b>
-              <span>{o.cumle}</span>
-              <small><Users size={14} /> {OYUNCU_SINIR[o.tur][0]}–{OYUNCU_SINIR[o.tur][1]} oyuncu</small>
-            </span>
-            <ArrowRight className="mk-oyun-ok" size={20} />
-          </button>
-        ))])}
-      </section>
+      <form className="mk-hizli" onSubmit={kodGonder}>
+        <span className="mk-hizli-metin">
+          <LogIn size={20} />
+          <span><b>Kodla katıl</b><small>Arkadaşının paylaştığı 5 karakterli masa kodunu yaz.</small></span>
+        </span>
+        <span className="mk-kod-form">
+          <input
+            className="mk-giris mk-kod-giris" value={kod} inputMode="text" autoCapitalize="characters" autoComplete="off" spellCheck={false}
+            placeholder="KOD" aria-label="Masa kodu" maxLength={5}
+            onChange={(e) => setKod(e.target.value.toLocaleUpperCase('en-US').replace(/[^A-Z0-9]/g, '').slice(0, 5))}
+          />
+          <button type="submit" className="mk-dugme is-ana" disabled={kod.length !== 5 || bekle}>Katıl</button>
+        </span>
+      </form>
 
-      <div className="mk-merkez-ikili">
+      {!!odalar?.length && (
         <section className="mk-pano">
-          <h2><LogIn size={18} /> Kodla katıl</h2>
-          <p className="mk-pano-not">Arkadaşının paylaştığı 5 karakterli masa kodunu yaz.</p>
-          <form className="mk-kod-form" onSubmit={kodGonder}>
-            <input
-              className="mk-giris mk-kod-giris" value={kod} inputMode="text" autoCapitalize="characters" autoComplete="off" spellCheck={false}
-              placeholder="KOD" aria-label="Masa kodu" maxLength={5}
-              onChange={(e) => setKod(e.target.value.toLocaleUpperCase('en-US').replace(/[^A-Z0-9]/g, '').slice(0, 5))}
-            />
-            <button type="submit" className="mk-dugme is-ana" disabled={kod.length !== 5 || bekle}>Katıl</button>
-          </form>
-        </section>
-
-        <section className="mk-pano">
-          <h2><BookOpen size={18} /> Nasıl oynanır</h2>
-          <p className="mk-pano-not">Oyunların kuralları, cezalar ve puanlama; örnek taş ve kartlarla.</p>
-          <div className="mk-kural-kisayol">
-            {OYUNLAR.map((o) => <button key={o.tur} type="button" className="mk-cip" onClick={() => kurallarAc(o.tur)}>{OYUN_ADI[o.tur]}</button>)}
-            <button type="button" className="mk-cip" onClick={() => kurallarAc('ceza')}>Cezalar ve puan</button>
-          </div>
-        </section>
-      </div>
-
-      <section className="mk-pano">
-        <h2><Pause size={18} /> Yarım kalan oyunların</h2>
-        {odalar === null ? <p className="mk-bos">Yükleniyor…</p> : !odalar.length ? (
-          <p className="mk-bos">Yarım kalan oyunun yok. Masadan çıksan da oyun saklanır; buradan geri dönersin.</p>
-        ) : (
+          <h2><Pause size={18} /> Yarım kalan oyunların <small>{odalar.length}</small></h2>
           <ul className="mk-yarim">
             {odalar.map((o) => (
               <li key={o.kod}>
@@ -186,7 +143,49 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
               </li>
             ))}
           </ul>
-        )}
+        </section>
+      )}
+
+      {KATEGORILER.map((k) => (
+        <section key={k.id} className="mk-kat" aria-labelledby={`mk-kat-${k.id}`}>
+          <header className="mk-kat-bas">
+            <h2 id={`mk-kat-${k.id}`}>{k.ad}</h2>
+            <p>{k.alt}</p>
+            <span>{k.turler.length} oyun</span>
+          </header>
+          <div className="mk-oyunlar" data-n={k.turler.length}>
+            {k.turler.map((t) => (
+              <button key={t} type="button" className={`mk-oyun-kart${t === 'yedili' ? ' is-ana' : ''}`} onClick={() => ac(t)} disabled={bekle}>
+                <span className="mk-oyun-kece"><OyunResmi tur={t} /></span>
+                <span className="mk-oyun-metin">
+                  {t === 'yedili' && <em>Ana oyun</em>}
+                  <b>{OYUN_ADI[t]}</b>
+                  <span>{OYUN_CUMLE[t]}</span>
+                  <small><Users size={14} /> {oyuncuYazi(OYUNCU_SINIR[t])}</small>
+                </span>
+                <ArrowRight className="mk-oyun-ok" size={20} />
+              </button>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <section className="mk-pano">
+        <h2><BookOpen size={18} /> Nasıl oynanır</h2>
+        <p className="mk-pano-not">Her oyunun taşları ve kartları, bir turun akışı, cezalar ve puanlama; şemalı ve örnekli.</p>
+        <div className="mk-kural-gruplar">
+          {KATEGORILER.map((k) => (
+            <div key={k.id} className="mk-kural-grup">
+              <span>{k.ad}</span>
+              {k.turler.map((t) => <button key={t} type="button" className="mk-cip" onClick={() => kurallarAc(t)}>{OYUN_ADI[t]}</button>)}
+            </div>
+          ))}
+          <div className="mk-kural-grup">
+            <span>Genel</span>
+            <button type="button" className="mk-cip" onClick={() => kurallarAc('ceza')}>Cezalar ve puan</button>
+            <button type="button" className="mk-cip" onClick={() => kurallarAc('ipucu')}>Masa ve ipuçları</button>
+          </div>
+        </div>
       </section>
 
       <section className="mk-pano">
@@ -202,6 +201,10 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
       }>
         <div className="mk-kurulum">
           <div className="mk-kurulum-resim"><OyunResmi tur={tur} /></div>
+          <div className="mk-kurulum-tanit">
+            <p>{OYUN_CUMLE[tur]}</p>
+            <small><Users size={14} /> {oyuncuYazi(OYUNCU_SINIR[tur])}</small>
+          </div>
           <div className="mk-secim" role="radiogroup" aria-label="Oyun biçimi">
             <button type="button" role="radio" aria-checked={kip === 'arkadas'} className={kip === 'arkadas' ? 'is-on' : ''} onClick={() => setKip('arkadas')}>
               <Users size={22} /><b>Arkadaşlarla oyna</b><span>Masa kurulur, kodu paylaşırsın. Eksik koltuğa bot ekleyebilirsin.</span>
@@ -225,9 +228,17 @@ export default function MasaMerkez({ baglanti, ayrik, kalici, kur, katil, kurall
                   {EL_SECENEK.map((n) => <button key={n} type="button" role="radio" aria-checked={elN === n} className={elN === n ? 'is-on' : ''} onClick={() => setElN(n)}>{n === 0 ? 'Bitirene dek' : n}</button>)}
                 </div>
               </div>
+              {tur === 'uno' && <UnoModu mod={unoMod} sec={setUnoMod} />}
+              {tur === 'takim' && botN <= 3 && <div className="mk-alan">
+                <span className="mk-alan-ad">Kişi başı taş</span>
+                <div className="mk-dilim" role="radiogroup" aria-label="Kişi başı taş">
+                  {([7, 14] as const).map((n) => <button key={n} type="button" role="radio" aria-checked={tasN === n} className={tasN === n ? 'is-on' : ''} onClick={() => setTasN(n)}>{n} taş</button>)}
+                </div>
+              </div>}
+              {(!tahtaMi(tur) || tur === 'go') && <OyunModu tur={tur} asistan={asistan} sec={setAsistan} />}
             </>
           ) : (
-            <p className="mk-alan-not">{enAz}–{enCok} oyuncu. {tahtaMi(tur) ? 'Arkadaşın kodla katılır; ayarları lobide de değiştirebilirsin.' : <>El sayısını, temayı{tur === 'uno' ? '' : ', taş renklerini'} ve yardımcı asistanı lobide ayarlarsın.</>}</p>
+            <p className="mk-alan-not">{tahtaMi(tur) ? 'Arkadaşın kodla katılır; ayarları lobide de değiştirebilirsin.' : <>El sayısını, {tur === 'uno' ? 'Uno modunu, ' : ''}zorluğu ve temayı lobide ayarlarsın.</>}</p>
           )}
           {tahtaMi(tur) && <TahtaAyar tur={tur} ayar={tahtaAyar} degistir={(a) => setTahtaAyar((x) => ({ ...x, ...a }))} />}
           <button type="button" className="mk-baglanti" onClick={() => { setSecili(null); kurallarAc(tur); }}><BookOpen size={16} /> {OYUN_ADI[tur]} kuralları</button>

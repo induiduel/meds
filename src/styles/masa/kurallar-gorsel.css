@@ -1,0 +1,91 @@
+/* Kural sayfalarının görsel anlatımı: sekme grupları, taş tanıtımı, tur akışı, Pişti sahnesi, tahta şemaları.
+   Renkler .mk kökünden; bileşenden içe aktarılır (sıra güvencesi yok: ezen kurallar `.mk` ile bir kat özgül). */
+
+/* liste imleri: site sıfırlaması kural metninde numarayı ve noktayı siliyordu */
+.mk .mk-kural ol { list-style: decimal; }
+.mk .mk-kural ul { list-style: disc; }
+.mk .mk-kural ul.mk-kural-cezalar, .mk .mk-kural ul.mk-lejant, .mk .mk-kural ol.mk-akis { list-style: none; }
+
+/* ---------- sekmeler: kategori etiketli ---------- */
+.mk-kural-sekme-grup { flex: none; display: flex; align-items: center; gap: 6px; }
+.mk-kural-sekme-grup + .mk-kural-sekme-grup { padding-left: 10px; border-left: 1.5px solid var(--mk-cizgi); margin-left: 4px; }
+.mk-kural-sekme-grup > span { font-size: .7rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--mk-murekkep-2); white-space: nowrap; }
+
+/* ---------- oyun künyesi ---------- */
+.mk-kunye { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+.mk-kunye-resim { flex: none; display: grid; place-items: center; width: 132px; padding: 8px; border-radius: 14px; background: radial-gradient(circle at 50% 40%, #1b7572, #0d4243); box-shadow: inset 0 0 0 3px var(--mk-ahsap); }
+.mk-kunye-metin { flex: 1 1 240px; min-width: 0; }
+.mk-kunye-metin h2 { margin: 0 0 6px; font-size: 1.4rem; font-weight: 800; letter-spacing: -.01em; }
+.mk-kunye-cipler { display: flex; flex-wrap: wrap; gap: 6px; }
+.mk-kunye-cipler span { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; background: rgba(29, 43, 42, .09); font-size: .8rem; font-weight: 700; white-space: nowrap; }
+.mk-kunye-cipler span.is-amac { background: #fbe7ad; color: #5a3f00; white-space: normal; }
+
+/* ---------- taşları tanı ---------- */
+.mk-tanit { display: flex; flex-direction: column; gap: 10px; margin: 10px 0 14px; padding: 12px; border-radius: 14px; background: radial-gradient(circle at 50% 0%, #1b7572, #0d4243); color: #f6efdf; }
+.mk-tanit-satir { display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap; min-width: 0; }
+.mk-tanit-ad { flex: 0 0 150px; display: flex; flex-direction: column; font-size: .78rem; line-height: 1.3; color: rgba(246, 239, 223, .82); }
+.mk-tanit-ad b { font-size: .9rem; color: #f6efdf; }
+.mk-tanit-taslar { flex: 1 1 200px; min-width: 0; display: flex; align-items: center; gap: 4px; }
+.mk-tanit-taslar.is-kaydir { overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.mk-tanit-taslar.is-kaydir::-webkit-scrollbar { display: none; }
+.mk-tanit-taslar.is-kaydir > * { flex: none; }
+.mk-tanit-tas { display: flex; flex-direction: column; align-items: center; gap: 3px; margin-right: 6px; }
+.mk-tanit-tas small, .mk-tanit-not { font-size: .72rem; font-weight: 600; color: rgba(246, 239, 223, .85); }
+.mk-tanit-esit { margin-left: 8px; font-size: .95rem; font-weight: 800; white-space: nowrap; }
+.mk-tanit-ok { margin: 0 4px; font-size: 1.1rem; font-weight: 800; }
+
+/* ---------- etiketli taş dizisi ---------- */
+.mk-dizi { display: flex; justify-content: center; gap: 4px; }
+.mk-dizi-tas { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.mk-dizi-tas small { min-height: 1.2em; padding: 0 6px; border-radius: 999px; font-size: .68rem; font-weight: 800; color: #f6efdf; white-space: nowrap; }
+.mk-dizi-tas.is-etiketli small { background: var(--mk-vurgu); color: var(--mk-vurgu-yazi); }
+
+/* ---------- tur akışı ---------- */
+.mk-akis-kutu { margin: 10px 0 14px; padding: 12px; border-radius: 14px; background: var(--mk-fildisi); }
+.mk-akis-baslik { display: block; margin-bottom: 8px; font-size: .76rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--mk-murekkep-2); }
+.mk .mk-kural ol.mk-akis { margin: 0; padding: 0; display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch; gap: 8px; }
+.mk-akis li { flex: 1 1 150px; min-width: 0; display: flex; align-items: stretch; gap: 8px; }
+.mk-akis-bag { flex: none; align-self: center; font-style: normal; font-size: 1.05rem; font-weight: 800; color: var(--mk-murekkep-2); }
+.mk-akis li.is-yada .mk-akis-bag { padding: 2px 7px; border-radius: 999px; background: rgba(29, 43, 42, .1); font-size: .7rem; letter-spacing: .03em; text-transform: uppercase; }
+.mk-akis-adim { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; padding: 10px; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px var(--mk-cizgi); }
+.mk-akis-ikon { display: grid; place-items: center; width: 34px; height: 34px; margin-bottom: 2px; border-radius: 10px; background: var(--mk-kece); color: #fff; }
+.mk-akis-adim b { font-size: .92rem; }
+.mk-akis-adim > span:last-child { font-size: .82rem; line-height: 1.35; color: var(--mk-murekkep-2); }
+@media (max-width: 560px) {
+  .mk .mk-kural ol.mk-akis { flex-direction: column; }
+  .mk-akis li { flex: none; flex-direction: column; gap: 4px; }
+  .mk-akis-bag { align-self: flex-start; margin-left: 18px; }
+  .mk-akis li.is-sonra .mk-akis-bag { transform: rotate(90deg); }
+  .mk-akis-adim { display: grid; grid-template-columns: 34px minmax(0, 1fr); column-gap: 10px; align-items: center; }
+  .mk-akis-ikon { grid-row: span 2; margin: 0; }
+}
+
+/* ---------- şema kutusu (mk-ornek görünümünün üstüne) ---------- */
+.mk-sema { align-items: center; }
+.mk-sema svg { display: block; max-width: 100%; height: auto; }
+.mk-sema figcaption { align-self: stretch; }
+.mk-lejant { margin: 0 0 10px; padding: 0; display: flex; flex-direction: row; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; font-weight: 600; color: var(--mk-murekkep-2); }
+.mk .mk-kural ul.mk-lejant { flex-direction: row; padding: 0; }
+.mk-lejant li { display: inline-flex; align-items: center; gap: 6px; }
+.mk-lj { flex: none; display: inline-block; width: 14px; height: 14px; border-radius: 50%; box-sizing: border-box; }
+.mk-lj.is-o { width: 10px; height: 10px; background: #2bd17e; border: 1.5px solid #0b5c34; }
+.mk-lj.is-h { background: rgba(255, 216, 74, .45); border: 1.5px dashed #8a5a00; }
+.mk-lj.is-x { border-radius: 0; background: linear-gradient(45deg, transparent 42%, #c0392b 42% 58%, transparent 58%), linear-gradient(-45deg, transparent 42%, #c0392b 42% 58%, transparent 58%); }
+.mk-lj.is-soluk { background: rgba(20, 20, 20, .4); border: 1.5px dashed #c0392b; }
+.mk-lj.is-alan { width: 10px; height: 10px; border-radius: 2px; background: #111; }
+
+/* ---------- Pişti ---------- */
+.mk-pisti { --pk-w: 44px; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 76px; }
+.mk-pisti-grup { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.mk-pisti-grup small { font-size: .7rem; font-weight: 700; color: rgba(246, 239, 223, .85); }
+.mk-pisti-yer { display: flex; }
+.mk-pisti-bos { width: var(--pk-w); aspect-ratio: 5 / 7; border-radius: 5px; border: 2px dashed rgba(246, 239, 223, .45); box-sizing: border-box; }
+.mk-pisti-arti { font-size: 1.1rem; color: rgba(246, 239, 223, .8); }
+.mk-pisti-sonuc { padding: 4px 10px; border-radius: 999px; background: var(--mk-vurgu); color: var(--mk-vurgu-yazi); font-size: .82rem; font-weight: 800; white-space: nowrap; }
+.mk-ornek.is-kotu .mk-pisti-sonuc { background: #f6efdf; color: #4a1e19; }
+
+/* ---------- Çizgi Yarışı ---------- */
+.mk-cizgi { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.mk-cizgi-yan { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: .78rem; font-weight: 800; color: #f6efdf; text-align: center; }
+.mk-cizgi-yan .mk-zar { display: block; }
+.mk-cizgi-zarlar { display: flex; align-items: center; gap: 6px; }

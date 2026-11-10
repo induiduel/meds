@@ -210,7 +210,12 @@ export function OyunResmi({ tur }: { tur: OyunTur }) {
       {tur === 'duz' && [tasCiz(38, 44, -12, '3', '#d62839', 0), tasCiz(66, 40, 0, '3', '#1f6feb', 1), tasCiz(94, 44, 12, '3', '#1d1d1f', 2)]}
       {tur === 'kastet' && [tasCiz(30, 46, -8, '5', '#1d1d1f', 0), tasCiz(54, 40, -2, '6', '#1d1d1f', 1), tasCiz(78, 40, 2, '7', '#1d1d1f', 2), tasCiz(102, 46, 8, '8', '#1d1d1f', 3)]}
       {tur === 'remi' && [tasCiz(38, 44, -12, '10', '#e8a400', 0), tasCiz(66, 40, 0, '11', '#e8a400', 1), tasCiz(94, 44, 12, '12', '#e8a400', 2)]}
-      {tur === 'domino' && [tasCiz(30, 50, -90, '4', '#d62839', 0), tasCiz(58, 42, 0, '4', '#1f6feb', 1), tasCiz(86, 42, 0, '5', '#1f6feb', 2), tasCiz(110, 50, 90, '6', '#1f6feb', 3)]}
+      {/* zincir: sayısı tutan, rengi tutan, sayısı tutan (taşlar üst üste binmesin diye küçültülür) */}
+      {tur === 'domino' && (
+        <g transform="translate(66 42) scale(.8) translate(-66 -42)">
+          {[tasCiz(9, 42, 0, '4', '#d62839', 0), tasCiz(47, 42, 0, '4', '#1f6feb', 1), tasCiz(85, 42, 0, '9', '#1f6feb', 2), tasCiz(123, 42, 0, '9', '#e8a400', 3)]}
+        </g>
+      )}
       {tur === 'pisti' && [kartCiz(48, 44, -10, '#1d1d1f', 'J', 0), kartCiz(84, 44, 10, '#d62839', 'J', 1)]}
       {tur === 'uno' && [kartCiz(38, 44, -16, '#d8323c', '7', 0), kartCiz(66, 40, 0, '#f2b417', '2', 1), kartCiz(94, 44, 16, '#2a6fdb', '9', 2)]}
       {tur === 'go' && (

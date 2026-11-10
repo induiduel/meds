@@ -1,8 +1,9 @@
 /** Taş Domino kuralları. Metin motorla birebir: services/masa/motor/domino.ts. Kural değişirse önce motor, sonra bu sayfa. */
 import React from 'react';
-import { Check, X } from 'lucide-react';
+import { ArrowDown, Check, Link2, Plus, X } from 'lucide-react';
 import { VARSAYILAN_RENKLER } from '../../../services/masa/tipler';
 import { TasOrnek } from '../kabukOrtak';
+import { Akis, Kunye, TasDizi, TasTanitim } from './gorsel';
 
 type T = [number, 0 | 1 | 2 | 3];
 
@@ -17,7 +18,17 @@ export default function DominoKurallar({ renkler }: { renkler?: string[] }) {
 
   return (
     <article className="mk-kural" role="tabpanel">
+      <Kunye tur="domino" malzeme="104 okey taşı, joker yok" amac="taşlarını zincire ekleyip ilk bitiren olmak" />
       <p className="mk-kural-giris">2–4 oyuncu, 104 okey taşı (1’den 13’e, dört renk, her taştan iki tane). Joker yok. Herkese <b>7 taş</b> dağıtılır, desteden bir taş açılıp masanın ortasına konur: zincir bu taşla başlar. Amaç elindeki taşları zincire ekleyip <b>elini ilk bitiren</b> olmak.</p>
+
+      <h3>Taşları tanı</h3>
+      <TasTanitim rk={rk} />
+
+      <h3>Zincir</h3>
+      <p>Taşlar yan yana dizilerek bir zincir oluşturur. Yalnız <b>iki uçtaki</b> taşlara ekleme yapılır; ortadaki taşlar artık oyuna karışmaz.</p>
+      <div className="mk-ornekler">
+        <TasDizi rk={rk} t={[[4, 0], [4, 2], [9, 2], [9, 3], [2, 3]]} etiket={{ 0: 'uç', 4: 'uç' }} ad="Bu zincire kırmızı taş, 4, sarı taş ya da 2 eklenebilir" />
+      </div>
 
       <h3>Hangi taş uyar</h3>
       <p>Zincirin iki açık ucu vardır: baştaki ve sondaki taş. Bir uca, o uçtaki taşla <b>rengi ya da sayısı aynı</b> olan her taş eklenebilir:</p>
@@ -28,6 +39,11 @@ export default function DominoKurallar({ renkler }: { renkler?: string[] }) {
       </div>
 
       <h3>Sıran gelince</h3>
+      <Akis adimlar={[
+        { ikon: <Link2 size={18} />, ad: 'Taş koy', metin: 'Rengi ya da sayısı tutan taşı iki uçtan birine ekle.' },
+        { ikon: <ArrowDown size={18} />, ad: 'Taş çek', metin: 'Koyamıyorsan uyan taş gelene dek desteden çek.', bag: 'yada' },
+        { ikon: <Plus size={18} />, ad: 'Ek hamle', metin: 'Ardışık koyduysan ya da uçlar eşitlendiyse bir taş daha koy.' },
+      ]} />
       <ol>
         <li><b>Koy:</b> uyan bir taşını iki uçtan birine koy. Koymak zorunlu değildir.</li>
         <li><b>Ya da çek:</b> desteden bir taş çek. Koyabileceğin bir taş varken çekersen sıra hemen geçer.</li>

@@ -1,13 +1,18 @@
 /** Kastet kuralları. Metin motorla birebir: services/masa/motor/acikMasa.ts (kastetMotor). */
 import React from 'react';
+import { ArrowDown, Layers, SkipForward } from 'lucide-react';
 import { Taslar, renkSec } from './ortak';
+import { Akis, Kunye, TasDizi, TasTanitim } from './gorsel';
 
 export default function KastetKurallar({ renkler }: { renkler?: string[] }) {
   const rk = renkSec(renkler);
   const ok = { s: 7, r: 0 as const };
   return (
     <article className="mk-kural" role="tabpanel">
+      <Kunye tur="kastet" malzeme="106 taş: 104 + 2 sahte okey" amac="bütün taşlarını yere açıp ilk bitiren olmak" />
       <p className="mk-kural-giris">2–4 oyuncu, 106 taş: 104 sayı taşı + 2 sahte okey. Herkese <b>14 taş</b> dağıtılır. Taş atılmaz; amaç bütün taşlarını yere açıp elini <b>ilk bitiren</b> olmak.</p>
+      <h3>Taşları tanı</h3>
+      <TasTanitim rk={rk} />
       <h3>Gösterge, okey ve sahte okey</h3>
       <p>Dağıtımda bir taş açılır: <b>gösterge</b>. Göstergenin aynı renkteki bir üstü <b>okeydir</b> (13’ün üstü 1). Okey jokerdir, her taşın yerine geçer. <b>Sahte okey</b> joker değildir; okeyin sayısını ve rengini taşıyan sıradan bir taştır.</p>
       <div className="mk-ornekler">
@@ -16,6 +21,11 @@ export default function KastetKurallar({ renkler }: { renkler?: string[] }) {
         <Taslar rk={rk} t={[[0, 0]]} ad="Sahte okey: kırmızı 7" okey={ok} />
       </div>
       <h3>Sıran gelince</h3>
+      <Akis adimlar={[
+        { ikon: <Layers size={18} />, ad: 'Yere aç', metin: 'İstediğin kadar per aç, masadaki taşlarla yeniden diz.' },
+        { ikon: <ArrowDown size={18} />, ad: 'Taş çek', metin: 'Açmıyorsan 1 taş çek; sıra kendiliğinden geçer.', bag: 'yada' },
+        { ikon: <SkipForward size={18} />, ad: 'Pas', metin: 'Açtıysan Pas ile sırayı geçir; elin boşsa el biter.' },
+      ]} />
       <ul>
         <li><b>Ya yere açarsın ya taş çekersin.</b> Taş çeken o tur açamaz; çekince sıra kendiliğinden geçer. Açan o tur taş çekemez; istediği kadar açtıktan sonra <b>Pas</b> ile sırayı geçirir.</li>
         <li>Elinde en çok <b>22 taş</b> tutabilirsin. 22 taştaysan çekemezsin: aç ya da pas geç.</li>
@@ -26,8 +36,9 @@ export default function KastetKurallar({ renkler }: { renkler?: string[] }) {
       <h3>Masa herkesin</h3>
       <p>Yere açılan taşlar ortak maldır. Masadaki taşları elindekilerle birleştirip yeni perler kurabilir, serileri bozmadan taşların yerini değiştirebilirsin. Her hamlede elinden en az bir taş koymalısın; masadaki hiçbir taş ele dönmez ve hamle bitince masadaki her per geçerli olmalıdır.</p>
       <div className="mk-ornekler">
-        <Taslar rk={rk} t={[[5, 1], [6, 1], [7, 1], [8, 1]]} ad="Yerde siyah 5-6-7-8…" />
-        <Taslar rk={rk} t={[[5, 1], [5, 0], [5, 2]]} ad="…elindeki kırmızı ve mavi 5’le siyah 5’i alıp grup kur; yerde 6-7-8 kalır" iyi />
+        <TasDizi rk={rk} t={[[5, 1], [6, 1], [7, 1], [8, 1], [5, 0], [5, 2]]} etiket={{ 0: 'yerde', 1: 'yerde', 2: 'yerde', 3: 'yerde', 4: 'elinde', 5: 'elinde' }} ad="Önce: yerde siyah 5-6-7-8, elinde kırmızı ve mavi 5" />
+        <Taslar rk={rk} t={[[5, 1], [5, 0], [5, 2]]} ad="Sonra: siyah 5’i alıp elindekilerle grup kurarsın…" iyi />
+        <Taslar rk={rk} t={[[6, 1], [7, 1], [8, 1]]} ad="…yerde 6-7-8 geçerli seri olarak kalır" iyi />
         <Taslar rk={rk} t={[[7, 1], [8, 1], [9, 1]]} ad="Yerde 5-6-7-8-9, elinde siyah 7: 5-6-7 ve 7-8-9 olur" iyi />
       </div>
       <h3>Seri alanı ve çift alanı</h3>

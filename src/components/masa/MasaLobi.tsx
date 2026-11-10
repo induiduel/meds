@@ -1,11 +1,14 @@
 /** Lobi: masa kodu + paylaşım, oyuncular, takımlar, ayarlar (yalnız kurucu değiştirir), arkadaş daveti, başlat. */
 import React, { useEffect, useRef, useState } from 'react';
-import { AlertTriangle, ArrowLeftRight, BookOpen, Bot, Check, Copy, Crown, LogOut, Play, Share2, Sparkles, UserPlus, WifiOff, X } from 'lucide-react';
+import { AlertTriangle, ArrowLeftRight, BookOpen, Bot, Check, Copy, Crown, LogOut, Play, Share2, UserPlus, WifiOff, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { masa } from '../../services/masa/istemci';
-import { EL_SECENEK, OKEY_TEMALAR, UNO_MODLAR, OYUNCU_SINIR, OYUN_ADI, UNO_TEMALAR, VARSAYILAN_RENKLER, type OdaGorunum, type OyuncuBilgi, type Takim } from '../../services/masa/tipler';
-import { Avatar, KartOrnek, Onay, TEMA_BILGI, TasOrnek, Yaprak, bildir, sadeAd, tasMi } from './kabukOrtak';
+import { EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, UNO_TEMALAR, VARSAYILAN_RENKLER, type OdaGorunum, type OyuncuBilgi, type Takim } from '../../services/masa/tipler';
+import { Avatar, KartOrnek, Onay, OyunResmi, TEMA_BILGI, TasOrnek, Yaprak, bildir, sadeAd, tasMi } from './kabukOrtak';
 import { TahtaAyar, tahtaMi } from './tahta/ortak';
+import { OyunModu, UnoModu } from './ModSecici';
+import { kategoriAdi, oyuncuYazi } from './oyunKatalog';
+import '../../styles/masa/lobi.css';
 import type { KuralSekme } from './MasaKurallar';
 
 const PALETLER: { ad: string; renkler: string[] }[] = [
@@ -120,9 +123,12 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
   return (
     <div className="mk mk-lobi" data-tema={oda.ayar.tema}>
       <header className="mk-lobi-bas">
-        <div>
-          <span className="mk-ust-etiket">{OYUN_ADI[oda.tur]} · Lobi</span>
-          <h1>Masa kodu</h1>
+        <div className="mk-lobi-kimlik">
+          <span className="mk-lobi-resim"><OyunResmi tur={oda.tur} /></span>
+          <div>
+            <span className="mk-ust-etiket">Lobi · {kategoriAdi(oda.tur)} · {oyuncuYazi(OYUNCU_SINIR[oda.tur])}</span>
+            <h1>{OYUN_ADI[oda.tur]}</h1>
+          </div>
         </div>
         <button type="button" className="mk-dugme is-soluk" onClick={() => setCikis(true)}><LogOut size={18} /> Masadan ayrıl</button>
       </header>
@@ -130,6 +136,7 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
       {baglanti !== 'hazir' && <div className="mk-uyari" role="status"><p><WifiOff size={16} /> Yeniden bağlanılıyor…</p></div>}
 
       <section className="mk-kod-pano">
+        <span className="mk-kod-etiket">Masa kodu</span>
         <div className="mk-kod" aria-label={`Masa kodu ${oda.kod.split('').join(' ')}`}>{oda.kod.split('').map((h, i) => <span key={i}>{h}</span>)}</div>
         <div className="mk-kod-dugmeler">
           <button type="button" className="mk-dugme is-ana" onClick={() => void kopyala(oda.kod)}>{kopyalandi ? <Check size={18} /> : <Copy size={18} />} {kopyalandi ? 'Kopyalandı' : 'Kodu kopyala'}</button>
@@ -183,28 +190,9 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
 
           {tahta && <TahtaAyar tur={oda.tur} ayar={oda.ayar} degistir={(a) => masa.ayar(a)} kilitli={!kurucu} />}
 
-          {(!tahta || oda.tur === 'go') && <div className="mk-alan">
-            <span className="mk-alan-ad"><Sparkles size={16} /> Oyun modu</span>
-            <div className="mk-secenek" role="radiogroup" aria-label="Oyun modu">
-              <button type="button" role="radio" aria-checked={oda.ayar.asistan} disabled={!kurucu} className={oda.ayar.asistan ? 'is-on' : ''} onClick={() => masa.ayar({ asistan: true })}>Normal</button>
-              <button type="button" role="radio" aria-checked={!oda.ayar.asistan} disabled={!kurucu} className={!oda.ayar.asistan ? 'is-on' : ''} onClick={() => masa.ayar({ asistan: false })}>Zorlu</button>
-            </div>
-            <small className="mk-alan-not">{oda.ayar.asistan
-              ? (tahta ? 'Tahtada konulabilecek noktalar hafifçe gösterilir (9×9).' : 'İpucu, otomatik işleme, en iyi hamle, ıstakayı ve masayı otomatik dizme açık.')
-              : tahta ? 'Yardımcı yok: yasal nokta gösterilmez.' : 'Yardımcı yok: ipucu, otomatik işleme ve otomatik dizme kapalı. Masadaki perler yalnız el bitince kendiliğinden dizilir.'}</small>
-          </div>}
+          {oda.tur === 'uno' && <UnoModu mod={oda.ayar.unoMod ?? 'klasik'} sec={(m) => masa.ayar({ unoMod: m })} kilitli={!kurucu} />}
 
-          {oda.tur === 'uno' && (
-            <div className="mk-alan">
-              <span className="mk-alan-ad">Uno modu</span>
-              <div className="mk-secenek" role="radiogroup" aria-label="Uno modu">
-                {UNO_MODLAR.map((m) => (
-                  <button key={m.id} type="button" role="radio" aria-checked={(oda.ayar.unoMod ?? 'klasik') === m.id} disabled={!kurucu} className={(oda.ayar.unoMod ?? 'klasik') === m.id ? 'is-on' : ''} onClick={() => masa.ayar({ unoMod: m.id })}>{m.ad}</button>
-                ))}
-              </div>
-              <small className="mk-alan-not">{UNO_MODLAR.find((m) => m.id === (oda.ayar.unoMod ?? 'klasik'))?.aciklama}</small>
-            </div>
-          )}
+          {(!tahta || oda.tur === 'go') && <OyunModu tur={oda.tur} asistan={oda.ayar.asistan} sec={(a) => masa.ayar({ asistan: a })} kilitli={!kurucu} />}
 
           {oda.tur === 'takim' && (
             <div className="mk-alan">
@@ -213,7 +201,7 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
                 <small className="mk-alan-not">5–6 oyunculu masada herkese <b>4 taş</b> dağıtılır.</small>
               ) : (
                 <>
-                  <div className="mk-secenek" role="radiogroup" aria-label="Kişi başı taş">
+                  <div className="mk-dilim" role="radiogroup" aria-label="Kişi başı taş">
                     {([7, 14] as const).map((n) => (
                       <button key={n} type="button" role="radio" aria-checked={oda.ayar.tasSayisi === n} disabled={!kurucu} className={oda.ayar.tasSayisi === n ? 'is-on' : ''} onClick={() => masa.ayar({ tasSayisi: n })}>{n} taş</button>
                     ))}
@@ -285,7 +273,7 @@ export default function MasaLobi({ oda, baglanti, kurallarAc }: { oda: OdaGorunu
           <h2><BookOpen size={18} /> Kısaca {OYUN_ADI[oda.tur]}</h2>
           <button type="button" className="mk-cip" onClick={() => kurallarAc(oda.tur)}>Tüm kurallar</button>
         </div>
-        <ol>{OZET[oda.tur].map((s) => <li key={s}>{s}</li>)}</ol>
+        <ol className="mk-adimlar">{OZET[oda.tur].map((s) => <li key={s}>{s}</li>)}</ol>
       </section>
 
       <footer className="mk-lobi-alt">

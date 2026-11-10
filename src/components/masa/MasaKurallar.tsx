@@ -3,7 +3,7 @@
  * Kural değişirse önce motor, sonra bu sayfa güncellenir.
  */
 import React, { useState } from 'react';
-import { Check, X } from 'lucide-react';
+import { ArrowDown, Check, Layers, Megaphone, Plus, SkipForward, Upload, X } from 'lucide-react';
 import { OYUN_ADI, VARSAYILAN_RENKLER, type OyunTur, type UnoDeger, type UnoRenk } from '../../services/masa/tipler';
 import { CEZA_BILGI, KartOrnek, TasOrnek } from './kabukOrtak';
 import DuzKurallar from './kurallar/DuzKurallar';
@@ -12,9 +12,15 @@ import RemiKurallar from './kurallar/RemiKurallar';
 import PistiKurallar from './kurallar/PistiKurallar';
 import DominoKurallar from './kurallar/DominoKurallar';
 import { CizgiKurallar, GoKurallar, XoxKurallar } from './kurallar/TahtaKurallar';
+import { Akis, Kunye, TanitSatir, TasTanitim } from './kurallar/gorsel';
+import { KATEGORILER } from './oyunKatalog';
 
 export type KuralSekme = OyunTur | 'ceza' | 'ipucu';
-const SEKMELER: [KuralSekme, string][] = [['yedili', OYUN_ADI.yedili], ['takim', OYUN_ADI.takim], ['yuzbir', OYUN_ADI.yuzbir], ['duz', OYUN_ADI.duz], ['kastet', OYUN_ADI.kastet], ['remi', OYUN_ADI.remi], ['domino', OYUN_ADI.domino], ['uno', OYUN_ADI.uno], ['pisti', OYUN_ADI.pisti], ['go', OYUN_ADI.go], ['cizgi', OYUN_ADI.cizgi], ['xox', OYUN_ADI.xox], ['ceza', 'Cezalar ve puan'], ['ipucu', 'Masa ve ipuçları']];
+/** Sekmeler merkezdeki kategori sırasıyla gruplanır; sonda oyunlardan bağımsız genel bölümler */
+const SEKME_GRUPLAR: { ad: string; sekmeler: [KuralSekme, string][] }[] = [
+  ...KATEGORILER.map((k) => ({ ad: k.ad, sekmeler: k.turler.map((t): [KuralSekme, string] => [t, OYUN_ADI[t]]) })),
+  { ad: 'Genel', sekmeler: [['ceza', 'Cezalar ve puan'], ['ipucu', 'Masa ve ipuçları']] },
+];
 
 type T = [number, 0 | 1 | 2 | 3];
 type K = [UnoRenk | null, UnoDeger];
@@ -48,12 +54,20 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
   return (
     <div className="mk-kurallar">
       <div className="mk-kural-sekmeler" role="tablist" aria-label="Kural bölümleri">
-        {SEKMELER.map(([k, ad]) => <button key={k} type="button" role="tab" aria-selected={sekme === k} className={sekme === k ? 'is-on' : ''} onClick={() => setSekme(k)}>{ad}</button>)}
+        {SEKME_GRUPLAR.map((g) => (
+          <div key={g.ad} className="mk-kural-sekme-grup" role="presentation">
+            <span aria-hidden="true">{g.ad}</span>
+            {g.sekmeler.map(([k, ad]) => <button key={k} type="button" role="tab" aria-selected={sekme === k} className={sekme === k ? 'is-on' : ''} onClick={() => setSekme(k)}>{ad}</button>)}
+          </div>
+        ))}
       </div>
 
       {sekme === 'yedili' && (
         <article className="mk-kural" role="tabpanel">
+          <Kunye tur="yedili" malzeme="104 taş, joker yok" amac="elindeki taşları masaya eritip ilk bitiren olmak" />
           <p className="mk-kural-giris">Ana oyun. 2–6 oyuncu, 104 taş (1’den 13’e, dört renk, her taştan iki tane). Joker yok. Herkese <b>7 taş</b> dağıtılır; amaç elindeki taşları masaya eritip <b>elini ilk bitiren</b> olmak.</p>
+          <h3>Taşları tanı</h3>
+          <TasTanitim rk={rk} />
           <h3>Per nedir</h3>
           <p>Per, en az 3 taşlık geçerli dizidir. İki türü var:</p>
           <PerOrnekleri />
@@ -62,6 +76,12 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
             <li><b>Grup:</b> aynı sayının farklı renkleri; 3 ya da 4 taş.</li>
           </ul>
           <h3>Sıran gelince</h3>
+          <Akis adimlar={[
+            { ikon: <Layers size={18} />, ad: 'Per aç', metin: 'Elinde en az 3 taşlık seri ya da grup varsa masaya aç.' },
+            { ikon: <Plus size={18} />, ad: 'Taş işle', metin: 'Per açtıysan masadaki her pere uyan taşını ekle.' },
+            { ikon: <ArrowDown size={18} />, ad: 'Taş çek', metin: 'Yapacak hamlen yoksa desteden 1 taş çek.', bag: 'yada' },
+            { ikon: <SkipForward size={18} />, ad: 'Eli devret', metin: 'Hamle kalmayınca sıra sonraki oyuncuya geçer.' },
+          ]} />
           <ol>
             <li><b>Per aç:</b> elinde per varsa masaya açarsın. Bir turda birden çok per açabilirsin.</li>
             <li><b>Taş işle:</b> per açtıktan sonra masadaki <em>her</em> pere (senin ya da rakibin) taş ekleyebilirsin: serinin iki ucuna sıradaki sayı, üçlü gruba eksik dördüncü renk.</li>
@@ -115,6 +135,7 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
 
       {sekme === 'takim' && (
         <article className="mk-kural" role="tabpanel">
+          <Kunye tur="takim" malzeme="104 taş, joker yok" amac="takımdan birinin elini bitirmesi" />
           <p className="mk-kural-giris">Yedili Okey’in eşli hâli. Takımlar eşit sayıda olur (1–1, 2–2 ya da 3–3); A ve B oyuncuları masada <b>sırayla, ortaklar karşılıklı</b> oturur. Taşlar, perler, seriyi bölerek işleme, masayı düzenleme, geri al, zorunluluk ve −5’lik cezalar Yedili Okey ile aynıdır. Farklar:</p>
           <h3>Kişi başı taş</h3>
           <ul>
@@ -139,7 +160,16 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
 
       {sekme === 'yuzbir' && (
         <article className="mk-kural" role="tabpanel">
+          <Kunye tur="yuzbir" malzeme="106 taş: 104 + 2 sahte okey" amac="perlerini açıp son taşını atarak bitirmek" />
           <p className="mk-kural-giris">2–4 oyuncu, 106 taş: 104 sayı taşı + 2 sahte okey. Herkese <b>21 taş</b>, eli başlatana 22 taş verilir. Amaç perlerini açıp taşlarını eritmek ve <b>son taşını yere atarak</b> bitirmek.</p>
+          <h3>Taşları tanı</h3>
+          <TasTanitim rk={rk} ek={
+            <TanitSatir ad="Okey ve sahte okey" alt="gösterge 6 ise okey 7">
+              <TasOrnek s={6} r={0} renkler={rk} boy={30} /><span className="mk-tanit-ok" aria-hidden="true">→</span>
+              <TasOrnek s={7} r={0} renkler={rk} boy={30} okey={{ s: 7, r: 0 }} /><TasOrnek s={0} r={0} renkler={rk} boy={30} okey={{ s: 7, r: 0 }} />
+              <span className="mk-tanit-esit">= 106 taş</span>
+            </TanitSatir>
+          } />
           <h3>Gösterge, okey ve sahte okey</h3>
           <p>Dağıtımda bir taş açılır: <b>gösterge</b>. Göstergenin aynı renkteki bir üstü o elin <b>okeyidir</b> (13’ün üstü 1). Okey jokerdir: her taşın yerine geçer. <b>Sahte okey</b> joker değildir; okey taşının kendi sayısını ve rengini taşır.</p>
           <div className="mk-ornekler">
@@ -148,6 +178,11 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
             <Taslar t={[[0, 0]]} ad="Sahte okey: kırmızı 7 sayılır" okey={{ s: 7, r: 0 }} />
           </div>
           <h3>Sıran gelince</h3>
+          <Akis adimlar={[
+            { ikon: <ArrowDown size={18} />, ad: 'Taş çek', metin: 'Desteden ya da yandan (önceki oyuncunun attığı taş).' },
+            { ikon: <Layers size={18} />, ad: 'Aç ve işle', metin: 'İstersen 101 ile ya da 5 çiftle aç; açtıysan taş işle.' },
+            { ikon: <Upload size={18} />, ad: 'Bir taş at', metin: 'Tur taş atınca biter; son taşını atan eli bitirir.' },
+          ]} />
           <ol>
             <li><b>Taş çek:</b> desteden ya da <b>yandan</b> (senden önceki oyuncunun son attığı taş). Eli başlatan ilk turda çekmez.</li>
             <li>Yandan aldığın taşı <b>o tur kullanmak zorundasın</b> (açtığın bir perde ya da işleyerek). Kullanamıyorsan taşı geri koyar, desteden çekersin; cezası yoktur. Geri koymadan taş atamazsın.</li>
@@ -191,7 +226,19 @@ export default function MasaKurallar({ ilk = 'yedili', renkler }: { ilk?: KuralS
 
       {sekme === 'uno' && (
         <article className="mk-kural" role="tabpanel">
+          <Kunye tur="uno" malzeme="108 kart" amac="elindeki kartları ilk bitiren olmak" />
           <p className="mk-kural-giris">2–8 oyuncu, 108 kart: dört renkte (kırmızı, sarı, yeşil, mavi) birer 0, ikişer 1–9, ikişer Atlat, Yön ve +2; ayrıca 4 Joker ve 4 +4. Herkese <b>7 kart</b> dağıtılır. Amaç elindeki kartları <b>ilk bitiren</b> olmak. Masada resmî Uno kuralları geçerlidir; kurucu lobide başka bir mod seçebilir.</p>
+          <h3>Kartları tanı</h3>
+          <div className="mk-ornekler">
+            <Kartlar k={[['k', '0'], ['s', '3'], ['y', '6'], ['m', '9']]} ad="Sayı kartları: dört renk, 0–9 (76 kart). Puanı üstündeki sayı" />
+            <Kartlar k={[['k', 'pas'], ['s', 'yon'], ['y', '+2']]} ad="Aksiyon kartları: Atlat, Yön, +2; her renkte ikişer (24 kart). 20 puan" />
+            <Kartlar k={[[null, 'joker'], [null, '+4']]} ad="Jokerler: renksiz, dörder tane (8 kart). 50 puan" />
+          </div>
+          <Akis adimlar={[
+            { ikon: <Upload size={18} />, ad: 'Kart at', metin: 'Ortadaki kartla rengi, sayısı ya da simgesi tutan kartı at.' },
+            { ikon: <ArrowDown size={18} />, ad: 'Kart çek', metin: 'Oynayamıyorsan 1 kart çek; uyuyorsa hemen atabilirsin.', bag: 'yada' },
+            { ikon: <Megaphone size={18} />, ad: 'UNO de', metin: 'Tek kartın kalınca UNO de; unutup yakalanırsan 2 kart çekersin.' },
+          ]} />
           <h3>Dağıtım ve ilk kart</h3>
           <ul>
             <li>Deste tamamen rastgele karılır. <b>Dengeli dağıtım:</b> bir ele 2’den çok Joker/+4 (en çok bir +4) ya da 3’ten çok aksiyon kartı (Atlat, Yön, +2) düşerse fazlası destedeki rastgele bir sayı kartıyla değiştirilir. Elinde zaten 3 Joker/+4 olan oyuncu desteden dördüncüsünü çekmez. Böylece bir oyuncu jokerlerle eli birkaç turda bitiremez.</li>
