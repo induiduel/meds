@@ -2,6 +2,7 @@
 - **Eşleme (`scripts/ek_modul/pdf_esle_hoca.py`, yeni):** çözümlü kitapçıkta her soru bloğu (sol kenarda "N.", çözüm kutusu zemini #EEF3EE) bulunur; h-/hc- klibinin cümleleri satırlara bağlanır (kök, şık şık; çözümde doğru şık + kutu satırları karakter oranıyla), cümle zamanı `pdf_esle.py::cumle_zamanlari`. Yuruyus-kampcilik: 480 soru, 960 klip, 1220/1220 cümle sınırı duraklamaya oturdu → `src/data/ek_moduller/<modül>/hoca_pdf_esle.json`. Tuzak: "100." numarası metinle aynı satıra birleşiyordu (yalnız `^\d+\.` başı aranır).
 - **Ekran:** `EkPdfHoca.tsx` (soru bloğu kırpılır, okunan satır yanar), `EkHoca.tsx` "PDF ile / Yalnız soru" kipi, `EkSesliOynatici.tsx` (canlı ders v15 alt oynatıcı düzeni: soru parçalı çubuk + sürükle/atla, ±10, önceki/sonraki soru, hız hapı, ⋯). `useSira` `konum(i, t)` ve `cal(n, bas)` kazandı.
 - **Kapı:** `dogrula.py --modul` artık `hoca_pdf_esle.json` eskimişse HATA verir. TALIMAT.md'ye adım eklendi.
+- **Yeniden eşleme (onem 710):** öteki oturumun hata notlu kitapçığı (e1b3d6e0) ve yeni hc- sesleriyle eşleme yeniden üretildi; hata kutusu zemini #FBEFE3 de çözüm kutusu sayılır (1262/1262 sınır). Ders: kitapçık ya da hoca sesi değişen her commit'ten sonra `pdf_esle_hoca.py` koşulur, `dogrula.py --modul` bunu yakalar.
 - **Sınama:** yerel 3000, 1400 px ve 375 px: oynat → kök/şık A yanıyor, çözüm klibinde çözüm satırları; çubukta 13:42'ye atlama → Soru 36, PDF s. 36. Gerçek telefonda denenmedi.
 
 ## 2026-11-10 — Profil ve arkadaşlık istekleri görünmüyordu (H551, kullanıcı bildirdi)

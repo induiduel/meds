@@ -25,7 +25,7 @@ sys.path.insert(0, str(KOK / "scripts/sesli_anlatim"))
 import ses as S  # noqa: E402
 from pdf_esle import cumle_zamanlari  # noqa: E402
 
-KUTU_RENK = (0.933, 0.953, 0.933)  # .q .c zemini #EEF3EE
+KUTU_RENK = [(0.933, 0.953, 0.933), (0.984, 0.937, 0.89)]  # .q .c zemini #EEF3EE; hata notlu soruda .c.h #FBEFE3
 
 
 def kutu_birlesik(kutular: list[list[float]]) -> list[float]:
@@ -38,7 +38,7 @@ def bloklar(yol: Path):
     out = []
     for sn, sayfa in enumerate(pymupdf.open(yol), 1):
         w, h = sayfa.rect.width, sayfa.rect.height
-        zemin = [d["rect"] for d in sayfa.get_drawings() if d.get("fill") and all(abs(a - b) < 0.01 for a, b in zip(d["fill"], KUTU_RENK))]
+        zemin = [d["rect"] for d in sayfa.get_drawings() if d.get("fill") and any(all(abs(a - b) < 0.01 for a, b in zip(d["fill"], r)) for r in KUTU_RENK)]
         satir = []
         for b in sayfa.get_text("dict")["blocks"]:
             for l in b.get("lines", []):
