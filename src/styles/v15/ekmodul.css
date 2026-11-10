@@ -246,3 +246,25 @@
 .ekm-don { animation: ekm-don 1s linear infinite; }
 @keyframes ekm-don { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .ekm-don { animation: none; } }
+
+/* ——— sesli ders · "PDF ile" kipi (EkPdfDers): kitapçık sesle birlikte ilerler; geniş ekranda PDF + notlar yan yana ——— */
+.ekm.ekm-pdfkip { max-width: 1320px; }
+.ekm-kip { align-self: flex-start; display: inline-flex; gap: 2px; padding: 3px; border-radius: 12px; background: var(--color-field); }
+.ekm-kip > button { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 14px; border: 0; border-radius: 9px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: .88rem; font-weight: 700; cursor: pointer; }
+.ekm-kip > button > svg { width: 16px; height: 16px; }
+.ekm-kip > button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+.ekm-pdf-bolme { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.ekm-pdf-kutu { display: flex; flex-direction: column; min-width: 0; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) * .62); min-height: 340px; padding: 0; overflow: hidden; }
+.ekm-pdf-ust { flex: none; display: flex; align-items: center; gap: 4px; padding: 6px 8px 6px 14px; border-bottom: 1px solid var(--color-line); }
+.ekm-pdf-ust > b { flex: 1; min-width: 0; font-size: .84rem; color: var(--color-ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ekm-pdf-skel { flex: 1; display: block; }
+.ekm-pdf-kutu > .ekm-bos { margin: auto; }
+.ekm-pdf-cerceve { position: absolute; z-index: 1; margin: -6px -8px; padding: 6px 8px; box-sizing: content-box; border-radius: 8px; outline: 2px solid rgb(37 99 235 / .55); pointer-events: none; }
+.ekm-pdf-yan .ekm-bolum-ust > small { flex: none; font-size: .76rem; font-weight: 700; color: var(--color-ink-3); }
+.ekm-md .is-okunan, .ekm-bolum-ust > h3.is-okunan { background: var(--color-accent-soft); box-shadow: 0 0 0 4px var(--color-accent-soft); border-radius: 4px; }
+@container (min-width: 900px) {
+  .ekm-pdf-bolme { grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr); }
+  .ekm-pdf-kutu, .ekm-pdf-yan { height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--sh-top-h, 52px) - 190px); min-height: 420px; }
+  .ekm-pdf-yan { overflow: auto; overscroll-behavior: contain; padding: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { .ekm-md .is-okunan { transition: none; } }

@@ -57,6 +57,10 @@ export type HocaSoru =
   | { no: number; kok: string; secenekler: Record<string, string>; dogru: string; belirsiz?: boolean };
 export interface HocaSet { id: string; ad: string; tur: 'bosluk' | 'dy' | 'cs'; aciklama: string; anahtarsiz?: boolean; sorular: HocaSoru[] }
 export interface EkKlip { v: string; sure: number }
+/** "PDF ile dinle" kipi (pdf_esle.json; scripts/ek_modul/pdf_esle.py yazar): ders klibinin kitapçıktaki yeri ve cümle zamanları.
+ *  s: sayfa · k: bölüm kutusu · l: satır kutuları (0 başlık, 1… not maddeleri; sayfa oranı) · c: [cümlenin başladığı saniye, madde | -1] */
+export interface EkPdfKlip { v: string; s: number; k: number[]; l: number[][][]; c: [number, number][] }
+export interface EkPdfEsle { pdf: string; bayt: number; klip: Record<string, EkPdfKlip> }
 export interface EkModul {
   ozet: EkModulOzet;
   basliklar: EkBaslik[];
@@ -66,6 +70,7 @@ export interface EkModul {
   hoca: { kaynak: string; setler: HocaSet[] } | null;
   /** Çalışma föyü: hoca sorularının konuya göre düzeni (set id → soru no listesi) + konu bilgi özeti */
   foy: { konular: { id: string; bilgiler: string[]; sorular: Record<string, number[]> }[] } | null;
+  pdfEsle: EkPdfEsle | null;
 }
 
 export const EK_MODULLER = (dizinHam as { moduller: EkModulOzet[] }).moduller;
@@ -89,11 +94,11 @@ export function ekModulYukle(id: string): Promise<EkModul | null> {
       const adlar = Object.keys(DOSYA).map((k) => new RegExp(`/${id}/(b\\d+)\\.json$`).exec(k)?.[1]).filter(Boolean) as string[];
       const basliklar = (await Promise.all(adlar.map((a) => al<EkBaslik>(a)))).filter(Boolean) as EkBaslik[];
       basliklar.sort((a, b) => a.no - b.no);
-      const [so, g, klip, hoca, foy] = await Promise.all([
+      const [so, g, klip, hoca, foy, pdfEsle] = await Promise.all([
         al<EkModul['sinavOncesi']>('sinav_oncesi'), al<{ sorular: EkSoru[] }>('genel_sorular'), al<Record<string, EkKlip>>('klip'),
-        al<EkModul['hoca']>('hoca_sorulari'), al<EkModul['foy']>('foy'),
+        al<EkModul['hoca']>('hoca_sorulari'), al<EkModul['foy']>('foy'), al<EkPdfEsle>('pdf_esle'),
       ]);
-      return { ozet, basliklar, sinavOncesi: so, genel: g?.sorular || [], klip: klip || {}, hoca, foy: hoca ? foy : null };
+      return { ozet, basliklar, sinavOncesi: so, genel: g?.sorular || [], klip: klip || {}, hoca, foy: hoca ? foy : null, pdfEsle };
     })();
     bellek.set(id, p);
   }
@@ -108,6 +113,11 @@ export function klipUrl(m: EkModul, klip: string): string | null {
   return k ? `/api/ek-modul/ses/${m.ozet.id}/${klip}.mp3?v=${k.v}` : null;
 }
 export const gorselUrl = (modul: string, dosya: string) => `/ek_moduller/${modul}/${dosya}`;
+/** Klibin PDF eşlemesi; ses eşlemeden sonra yeniden üretildiyse (özet tutmuyor) cümle zamanları geçersizdir → null */
+export function pdfKlip(m: EkModul, klip: string): EkPdfKlip | null {
+  const e = m.pdfEsle?.klip[klip];
+  return e && m.klip[klip]?.v === e.v ? e : null;
+}
 
 /* ——— soru setleri ——— */
 export interface SetSoru extends EkSoru { anahtar: string; qKlip: string; cKlip: string; konuId: string }

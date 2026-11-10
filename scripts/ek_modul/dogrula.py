@@ -214,6 +214,41 @@ def dosya_denet(yol: Path) -> Rapor:
     return r
 
 
+def pdf_esle_denet(kok: Path) -> list[str]:
+    """"PDF ile dinle" eşlemesi (pdf_esle.py) güncel mi: kitapçık ve klipler eşlemeden sonra değişmemiş, her bölüm eşlenmiş,
+    kutular sayfanın içinde, cümle sayısı ve zaman sırası doğru olmalı. Eskimişse betik yeniden çalıştırılır."""
+    out: list[str] = []
+    e = json.loads((kok / "pdf_esle.json").read_text())
+    klip = json.loads((kok / "klip.json").read_text()) if (kok / "klip.json").exists() else {}
+    pdf = KOK / "public/ek_moduller" / kok.name / e.get("pdf", "")
+    yeniden = f"scripts/ek_modul/pdf_esle.py --modul {kok.name} yeniden çalıştırılmalı"
+    if not pdf.is_file():
+        return [f"HATA  pdf_esle: kitapçık yok ({e.get('pdf')})"]
+    if pdf.stat().st_size != e.get("bayt"):
+        out.append(f"HATA  pdf_esle: ders kitapçığı eşlemeden sonra yeniden üretilmiş; {yeniden}")
+    for f in sorted(kok.glob("b*.json")):
+        for k in json.loads(f.read_text())["konular"]:
+            for i, b in enumerate(k["bolumler"], 1):
+                ad = f"d-{k['id']}-{i}"
+                x = e["klip"].get(ad)
+                if ad not in klip:
+                    continue  # sesi üretilmemiş bölüm eşlenmez
+                if not x:
+                    out.append(f"HATA  pdf_esle {ad}: eşleme yok; {yeniden}"); continue
+                if x["v"] != klip[ad]["v"]:
+                    out.append(f"HATA  pdf_esle {ad}: ses eşlemeden sonra yeniden üretilmiş; {yeniden}"); continue
+                c = x["c"]
+                if len(c) != len(b["ses"]) + 1:
+                    out.append(f"HATA  pdf_esle {ad}: {len(c)} cümle zamanı, beklenen {len(b['ses']) + 1} (başlık + ses)")
+                if any(c[j][0] >= c[j + 1][0] for j in range(len(c) - 1)) or c[0][0] != 0 or c[-1][0] >= klip[ad]["sure"]:
+                    out.append(f"HATA  pdf_esle {ad}: cümle zamanları sıralı değil ya da klip süresini aşıyor")
+                if any(not -1 <= m < len(x["l"]) for _t, m in c):
+                    out.append(f"HATA  pdf_esle {ad}: cümle olmayan bir maddeye bağlı")
+                if any(not (0 <= q[0] < q[2] <= 1 and 0 <= q[1] < q[3] <= 1) for q in [x["k"], *[q for l in x["l"] for q in l]]):
+                    out.append(f"HATA  pdf_esle {ad}: kutu sayfanın dışında")
+    return out
+
+
 def main() -> int:
     arg = sys.argv[1:]
     if arg[:1] == ["--modul"]:
@@ -228,6 +263,9 @@ def main() -> int:
         r = dosya_denet(d)
         for s in r.uyari + r.hata: print(s)
         hata += len(r.hata)
+    if arg[:1] == ["--modul"] and (kok / "pdf_esle.json").exists():
+        for satir in pdf_esle_denet(kok):
+            print(satir); hata += satir.startswith("HATA")
     if uslup is None:
         print("HATA  turkce_uslup kapısı yüklenemedi"); hata += 1
     print(f"— {len(dosyalar)} dosya, {hata} HATA")

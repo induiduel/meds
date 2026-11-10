@@ -98,3 +98,9 @@ Modülün çalışma klasöründe (`/home/indu/medsor/meds_temp/ek_modul/<modul>
 1. Dosyayı yaz. 2. `python3 scripts/ek_modul/dogrula.py <dosya>` çalıştır (çalışma dizini `meds/`). 3. HATA satırlarını düzelt,
 0 HATA olana dek yinele. UYARI'ları da gözden geçir. 4. Son mesajında yalnız: dosya yolu, soru sayısı, doğrulayıcı sonucu ve
 emin olamadığın/bilgi çerçevesinden saptığın yerler (varsa).
+
+## "PDF ile" kipi (sesli ders kitapçıkla birlikte ilerler)
+Ses (`ses.py`) ve ders kitapçığı (`pdf.py`) üretildikten SONRA: `.venv-ocr/bin/python scripts/ek_modul/pdf_esle.py --modul <modül>`
+→ `pdf_esle.json` (klip başına sayfa, bölüm kutusu, satır kutuları, cümle zamanı, cümle → not maddesi). İkisinden biri yeniden
+üretilirse betik yeniden çalıştırılır; `dogrula.py --modul` eskimiş eşlemede HATA verir. Eşlemenin tutması için `ses` cümleleri
+ekran notundaki maddelerin sözcüklerini kullanmalıdır (zaten kural: hocanın sözcükleri anlatımda aynen geçer).

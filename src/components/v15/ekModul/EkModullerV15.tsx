@@ -1,17 +1,18 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, BookOpenCheck, Check, ChevronRight, FileDown, GraduationCap, Headphones, Lightbulb, ListChecks, Tent, ThumbsDown, ThumbsUp, Timer, Volume2, X, Zap } from 'lucide-react';
+import { ArrowRight, BookOpenCheck, Check, ChevronRight, FileDown, FileText, GraduationCap, Headphones, Lightbulb, ListChecks, NotebookText, Tent, ThumbsDown, ThumbsUp, Timer, Volume2, X, Zap } from 'lucide-react';
 import { icKonum } from '../../../siteHaritasi';
 import { linkClick, navigateTo } from '../../../router';
 import { useV15Baslik } from '../baslik';
 import { KurulSecici, useSeciliKurul } from '../../kurul/KurulSecici';
 import { KurulBos } from '../../kurul/KurulSuzgec';
 import {
-  EK_MODULLER, denemeKur, ekDenemeYaz, ekDinlendi, ekKurullar, ekModulYukle, ekSoruYaz, genelSorular, gorselUrl, konuSorulari, konulariAl, useEkIlerleme,
+  EK_MODULLER, denemeKur, ekDenemeYaz, ekDinlendi, ekKurullar, ekModulYukle, ekSoruYaz, genelSorular, gorselUrl, konuSorulari, konulariAl, pdfKlip, useEkIlerleme,
   type EkModul, type SetSoru,
 } from './ekVeri';
 import { EkMd, Etkinlik, OynatCubugu, dk, useSira } from './ekOrtak';
 import { HocaSetCoz, HocaSetler } from './EkHoca';
 import { FoyKonu, FoyListe } from './EkFoy';
+import { EkPdfDers } from './EkPdfDers';
 import '../../../styles/v15/ekmodul.css';
 
 /**
@@ -139,7 +140,7 @@ const ModulAna: React.FC<{ m: EkModul; ana: string }> = ({ m, ana }) => {
         {ilkKonu && (
           <Bag to={`${ana}/ders/${ilkKonu.id}`} className="ekm-mod v15-card is-ders">
             <Headphones aria-hidden /><b>Sesli ders</b>
-            <span>Konuyu baştan sona dinle; ekranda kısa notlar, görseller ve küçük etkinlikler eşlik eder.</span>
+            <span>Konuyu baştan sona dinle; ders kitapçığı sesle birlikte ilerler, anlatılan satır PDF'te işaretlenir.</span>
             <i>{Object.keys(il.dinlenen).filter((k) => k.startsWith('d-')).length} / {konular.length} konu dinlendi</i>
           </Bag>
         )}
@@ -262,6 +263,10 @@ const HocaSayfa: React.FC<{ m: EkModul; setId: string | null }> = ({ m, setId })
 };
 
 /* ——— sesli ders ——— */
+// Notlar: bölüm kartları (ilk biçim) · PDF ile: ders kitapçığı sesle birlikte ilerler (klasik sesli ders gibi). Seçim cihazda kalır.
+const KIP_KEY = 'medsoru_ek_modul_ders_kip';
+type DersKip = 'not' | 'pdf';
+
 const Ders: React.FC<{ m: EkModul; konuId: string }> = ({ m, konuId }) => {
   const konular = konulariAl(m);
   const sira0 = konular.findIndex((k) => k.id === konuId);
@@ -270,14 +275,25 @@ const Ders: React.FC<{ m: EkModul; konuId: string }> = ({ m, konuId }) => {
   useV15Baslik({ baslik: konu.baslik, alt: `${konu.baslikNo}. ${konu.baslikAd}`, geri: ana });
   const klipler = useMemo(() => konu.bolumler.map((_, i) => `d-${konu.id}-${i + 1}`), [konu]);
   const sira = useSira(m, klipler, () => ekDinlendi(m.ozet.id, `d-${konu.id}`));
+  const pdfVar = useMemo(() => klipler.some((k) => pdfKlip(m, k)), [m, klipler]);
+  const [kipSec, setKipSec] = useState<DersKip>(() => { try { return localStorage.getItem(KIP_KEY) === 'not' ? 'not' : 'pdf'; } catch { return 'pdf'; } });
+  const kip: DersKip = pdfVar ? kipSec : 'not';
+  const kipDegis = (k: DersKip) => { setKipSec(k); try { localStorage.setItem(KIP_KEY, k); } catch { /* yok */ } };
   useEffect(() => {
-    if (sira.i < 0) return;
+    if (sira.i < 0 || kip === 'pdf') return;
     document.getElementById(`ekm-b-${sira.i}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, [sira.i]);
+  }, [sira.i, kip]);
   const sonraki = konular[sira0 + 1];
   return (
-    <div className="ekm ekm-ders">
+    <div className={`ekm ekm-ders${kip === 'pdf' ? ' ekm-pdfkip' : ''}`}>
       <OynatCubugu sira={sira} n={klipler.length} etiket="Dersi dinle" birim="Bölüm" />
+      {pdfVar && (
+        <div className="ekm-kip" role="group" aria-label="Ders görünümü">
+          <button type="button" className={kip === 'pdf' ? 'is-on' : ''} aria-pressed={kip === 'pdf'} onClick={() => kipDegis('pdf')}><FileText aria-hidden /> PDF ile</button>
+          <button type="button" className={kip === 'not' ? 'is-on' : ''} aria-pressed={kip === 'not'} onClick={() => kipDegis('not')}><NotebookText aria-hidden /> Notlar</button>
+        </div>
+      )}
+      {kip === 'pdf' ? <EkPdfDers m={m} konu={konu} klipler={klipler} sira={sira} /> : (<>
       <figure className="ekm-gorsel v15-card">
         <img src={gorselUrl(m.ozet.id, konu.gorsel)} alt={konu.gorsel_alt} />
         <figcaption>{konu.ozet}</figcaption>
@@ -309,6 +325,7 @@ const Ders: React.FC<{ m: EkModul; konuId: string }> = ({ m, konuId }) => {
         <div className="v15-card is-yap"><h3><ThumbsUp aria-hidden /> Yap</h3><ul>{konu.yap.map((x) => <li key={x}>{x}</li>)}</ul></div>
         <div className="v15-card is-yapma"><h3><ThumbsDown aria-hidden /> Yapma</h3><ul>{konu.yapma.map((x) => <li key={x}>{x}</li>)}</ul></div>
       </section>
+      </>)}
 
       <h2 className="ekm-h2">Pekiştir</h2>
       {konu.etkinlikler.map((e, i) => <Etkinlik key={i} e={e} />)}

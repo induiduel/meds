@@ -6,19 +6,21 @@ import { klipUrl, type EkEtkinlik, type EkModul } from './ekVeri';
 const kalin = (s: string): React.ReactNode[] =>
   s.split(/(\*\*[^*]+\*\*)/g).filter(Boolean).map((p, i) => (p.startsWith('**') ? <b key={i}>{p.slice(2, -2)}</b> : <React.Fragment key={i}>{p}</React.Fragment>));
 
-export const EkMd: React.FC<{ md: string }> = ({ md }) => {
+/** `okunan`: o an anlatılan satırın sırası (1 tabanlı, boş olmayan satırlar; pdf_esle.py::ekran_maddeleri ile aynı sayım) */
+export const EkMd: React.FC<{ md: string; okunan?: number }> = ({ md, okunan }) => {
   const out: React.ReactNode[] = [];
-  let liste: string[] = [];
+  let liste: [string, number][] = [];
   const bosalt = () => {
-    if (liste.length) out.push(<ul key={`l${out.length}`}>{liste.map((x, i) => <li key={i}>{kalin(x)}</li>)}</ul>);
+    if (liste.length) out.push(<ul key={`l${out.length}`}>{liste.map(([x, n], i) => <li key={i} className={n === okunan ? 'is-okunan' : undefined}>{kalin(x)}</li>)}</ul>);
     liste = [];
   };
-  md.split('\n').map((s) => s.trim()).filter(Boolean).forEach((s) => {
-    if (s.startsWith('- ')) { liste.push(s.slice(2)); return; }
+  md.split('\n').map((s) => s.trim()).filter(Boolean).forEach((s, i) => {
+    const sinif = i + 1 === okunan ? ' is-okunan' : '';
+    if (s.startsWith('- ')) { liste.push([s.slice(2), i + 1]); return; }
     bosalt();
     const v = /^>\s*\[!(IMPORTANT|NOTE)\]\s*(.*)$/.exec(s);
-    if (v) out.push(<p key={`v${out.length}`} className={`ekm-vurgu is-${v[1].toLowerCase()}`}>{kalin(v[2])}</p>);
-    else out.push(<p key={`p${out.length}`}>{kalin(s.replace(/^>\s*/, ''))}</p>);
+    if (v) out.push(<p key={`v${out.length}`} className={`ekm-vurgu is-${v[1].toLowerCase()}${sinif}`}>{kalin(v[2])}</p>);
+    else out.push(<p key={`p${out.length}`} className={sinif.trim() || undefined}>{kalin(s.replace(/^>\s*/, ''))}</p>);
   });
   bosalt();
   return <div className="ekm-md">{out}</div>;
@@ -78,7 +80,9 @@ export function useSira(m: EkModul, klipler: string[], bitti?: () => void) {
   useEffect(() => () => { ses.current?.pause(); setCaliyor(false); setI(-1); }, [imza]);
   const sesVar = useMemo(() => klipler.some((k) => klipUrl(m, k)), [imza, m]); // eslint-disable-line react-hooks/exhaustive-deps
   const sure = useMemo(() => klipler.reduce((t, k) => t + (m.klip[k]?.sure || 0), 0), [imza, m]); // eslint-disable-line react-hooks/exhaustive-deps
-  return { i, caliyor, hiz, sesVar, sure, cal, dugme, durdur, hizDegis };
+  /** çalan klibin içindeki an (sn); cümle takibi bununla yapılır */
+  const an = useCallback(() => ses.current?.currentTime || 0, []);
+  return { i, caliyor, hiz, sesVar, sure, cal, dugme, durdur, hizDegis, an };
 }
 export type Sira = ReturnType<typeof useSira>;
 

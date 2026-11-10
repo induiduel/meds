@@ -1,32 +1,31 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 701,
-  "baslik": "Ek modüller: çalışma föyü ve PDF oluşturma",
+  "onem": 702,
+  "baslik": "Ek modüller: sesli ders artık PDF ile birlikte ilerliyor",
   "maddeler": [
-    "Çalışma föyü: Yürüyüş ve Kampçılık'ta hocanın çalışma soruları konu konu düzenlendi; her konuda görsel, bilgi özeti, boşluk doldurma, doğru–yanlış ve çoktan seçmeli alıştırmalar.",
-    "PDF oluştur: istediğin konuları seç, cevap anahtarlı ya da anahtarsız föyünü indir. Bütün konuların hazır föyü de PDF listesinde.",
-    "Ek modüller: sesli ders, spot bilgiler, sınav öncesi tekrar ve sesli çözümlü 160 soru Ders çalış › Ek modüller'de."
+    "PDF ile dinle: Yürüyüş ve Kampçılık'ta sesli ders çalarken ders kitapçığı kendiliğinden doğru sayfaya gider; anlatılan bölüm çerçevelenir, okunan satır işaretlenir.",
+    "Notlar görünümü duruyor: sesli ders sayfasındaki \"PDF ile / Notlar\" düğmesiyle istediğin görünüme geç; seçimin hatırlanır."
   ],
   "eklenen": [
-    "Çalışma föyü",
-    "Föy PDF oluşturma"
+    "Ek modül sesli dersinde PDF ile dinleme"
   ],
   "degisen": [],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Çalışma föyü",
+      "ad": "PDF ile dinle",
       "nerede": {
-        "ad": "Ders çalış › Ek modüller › Yürüyüş ve Kampçılık",
-        "yol": "/dersler/ek-moduller/kurul2/yuruyus-kampcilik/foy"
+        "ad": "Ders çalış › Ek modüller › Yürüyüş ve Kampçılık › Sesli ders",
+        "yol": "/dersler/ek-moduller/kurul2/yuruyus-kampcilik/ders/1a"
       },
-      "amac": "Hocanın çalışma sorularını konu konu, bilgi özetiyle birlikte çalışmak ve kâğıda basmak.",
+      "amac": "Sesli dersi dinlerken ders kitapçığını aynı anda izlemek.",
       "islevler": [
-        "Konu başına görsel ve bilgi özeti",
-        "Boşluk doldurma, doğru–yanlış, çoktan seçmeli alıştırmalar",
-        "Seçtiğin konuların föyünü PDF olarak oluşturma"
-      ]
+        "Kitapçık çalan bölümün sayfasına kendiliğinden gider",
+        "Anlatılan cümlenin satırı PDF'te ve yandaki notta işaretlenir",
+        "Bölüme dokunarak oradan dinleme, yakınlaştırma"
+      ],
+      "ipucu": "Eski görünümü istersen \"Notlar\"a dokun."
     }
   ]
 }
