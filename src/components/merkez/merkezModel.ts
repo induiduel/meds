@@ -25,6 +25,7 @@ const MERKEZ_HAM: Record<KategoriId, MerkezArac[]> = {
     { id: 'flashcards', ne: 'Öğrendiklerini aralıklı tekrarla ezberlemek istiyorsan' },
     { id: 'ders_programi', ne: 'Bugün ve bu hafta hangi derslerin olduğunu görmek istiyorsan' },
     { id: 'kmb_asistan', ne: 'Klinik mesleki beceriyi (KMB) sesli videolarla aşama aşama öğrenip pratik sınava hazırlanmak istiyorsan' },
+    { id: 'ek_moduller', ne: 'Seçmeli ve geçici derslere (ör. Yürüyüş ve Kampçılık) sesli anlatım, spot bilgi ve sorularla çalışmak istiyorsan' },
     // H147: ders seçme yardımcıları Ders çalış'ta (Başvuru'dayken alt sekmede "Menü" yanıyordu); Güncelleme günlüğü Kişisel'de
     { id: 'oncelikli_dersler', ne: 'Az ezberli, mantıkla çözülen ve kolay puan getiren sesli derslerden başlamak istiyorsan' },
     // H400: Geçmiş kurullar ayrı sayfası kalktı (/gecmis-kurullar → /dersler); sınavı biten kurul kurul seçicide "geçmiş" işaretli

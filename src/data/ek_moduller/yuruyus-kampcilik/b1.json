@@ -1,0 +1,656 @@
+{
+  "no": 1,
+  "baslik": "Dağcılığa Giriş",
+  "ozet": "Dağcılığın ne olduğu, türleri, mevsimleri ve dünyada ile Türkiye'de nasıl başladığı.",
+  "konular": [
+    {
+      "id": "1a",
+      "baslik": "Dağcılık nedir? Türleri ve mevsimleri",
+      "ozet": "Dağcılığın üç ayağı, yaz ve kış dönemi, başlıca dağcılık türleri.",
+      "gorsel": "dagcilik-turleri.svg",
+      "gorsel_alt": "Bir dağ kesiti üzerinde patikada yürüyüş, kaya tırmanışı, buz tırmanışı, alpinizm, ferrata ve ekspedisyon kampı yan yana gösteriliyor.",
+      "bolumler": [
+        {
+          "baslik": "Dağcılık neye dayanır?",
+          "ekran": "Dağcılık, dağa yalnız bacak gücüyle çıkılan bir spor değildir.\n\n- **Fiziksel dayanıklılık:** uzun saatler yük taşıyıp yürüyebilmek\n- **Teknik:** malzemeyi ve tırmanış yöntemlerini doğru kullanmak\n- **Ruhsal hazırlık:** korkuyu, yorgunluğu ve sabrı yönetmek; başarı ruhsal dengeye de bağlıdır\n- **Risk:** iyi plan riski azaltır, sıfırlamaz\n\n> [!IMPORTANT] Dağcılıkta kaza riski hiçbir zaman sıfır değildir; her etkinlik önceden planlansa bile.",
+          "ses": [
+            "Dağcılık deyince aklına yalnız güçlü bacaklar gelmesin.",
+            "Evet, fiziksel dayanıklılık gerekir, çünkü saatlerce yük taşıyıp yokuş çıkarsın.",
+            "Ama teknik bilgi olmadan o güç seni güvenle yukarı taşımaz.",
+            "Üçüncü ayak ruhsal hazırlıktır: korkunu, yorgunluğunu ve sabrını yönetebilmelisin.",
+            "Dağcılığın başarısı fiziksel hazırlık kadar ruhsal dengeye de bağlıdır.",
+            "Bir de dürüst olalım: en iyi plan bile kaza riskini sıfıra indirmez.",
+            "Plan riski küçültür, sen de gerektiğinde geri dönmeyi bilirsin."
+          ]
+        },
+        {
+          "baslik": "Yaz dağcılığı, kış dağcılığı",
+          "ekran": "Dağcılıkta mevsimi hava değil takvim belirler.\n\n- **Yaz dağcılığı:** 21 Mart – 21 Aralık arasındaki etkinlikler\n- **Kış dağcılığı:** 21 Aralık – 21 Mart arasındaki etkinlikler\n- **Süre:** yaz dönemi 9 ay, kış dönemi 3 ay\n- **Fark:** kışın kar, buz, kısa gün ve soğuk; malzeme ve hazırlık ağırlaşır\n\n> [!NOTE] Kasım ayında karlı bir tırmanış da takvime göre yaz dağcılığıdır.",
+          "ses": [
+            "Dağcılar yılı ikiye böler ve sınırı takvim çizer.",
+            "Yirmi bir Mart ile yirmi bir Aralık arasındaki etkinlikler yaz dağcılığı sayılır.",
+            "Yirmi bir Aralık ile yirmi bir Mart arası ise kış dağcılığıdır.",
+            "Yani yaz dönemi dokuz ay, kış dönemi yalnızca üç ay sürer.",
+            "Bu yüzden kasımda karlı bir zirveye çıksan bile takvime göre yaz dağcılığı yapmış olursun.",
+            "Kış döneminde kar, buz, kısa gün ve soğuk işi zorlaştırır.",
+            "Malzeme ağırlaşır, hazırlık uzar, hata payı daralır."
+          ]
+        },
+        {
+          "baslik": "Zemine göre türler",
+          "ekran": "Dağda yapılan her etkinlik aynı şey değildir; zemine göre adı değişir.\n\n- **Dağ yürüyüşü (trekking):** patikada, yürüyerek yapılan etkinlik\n- **Kaya tırmanışı:** kaya yüzeyinde el ve ayakla yükselme\n- **Buz tırmanışı:** donmuş şelalede ve buz duvarında tırmanış\n- **Alpinizm:** kaya, kar ve buzul unsurlarını birlikte barındıran karma disiplin\n\n> [!IMPORTANT] Alpinizm yalnız kaya tırmanışı değildir; kaya + kar + buzul birliktedir.",
+          "ses": [
+            "Zemin değiştikçe dağcılığın adı da değişir.",
+            "Patikada yürüyerek yol alıyorsan bunun adı dağ yürüyüşü, yabancı adıyla trekingdir.",
+            "Kaya yüzeyinde ellerinle ve ayaklarınla yükseliyorsan kaya tırmanışı yapıyorsun.",
+            "Donmuş şelalede ya da buz duvarında aynı işi yaparsan buz tırmanışı olur.",
+            "Alpinizm ise bunların hepsini tek rotada karşına çıkarır.",
+            "Kaya, kar ve buzul unsurlarını birlikte barındıran karma bir disiplindir.",
+            "Bu yüzden alpinizmi yalnız kaya tırmanışı sanmak yanlıştır."
+          ]
+        },
+        {
+          "baslik": "Ferrata, ekspedisyon, spor ve ticari tırmanış",
+          "ekran": "Bazı türleri rotadaki düzenek, süre ya da katılım biçimi belirler.\n\n- **Ferrata:** kayaya sabitlenmiş çelik halat, basamak, bolt gibi metal aksamla ilerlenen rota\n- **Ekspedisyon:** uzun süreli, çok günlü büyük dağ seferi\n- **Spor tırmanış:** emniyet noktaları hazır rotada ya da yapay duvarda tırmanış\n- **Ticari tırmanış:** ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanış\n\n> [!NOTE] Ferrata bolt kullanılmadan kurulmaz; ekspedisyon günübirlik çıkış değildir.",
+          "ses": [
+            "Ferrata, kayaya sabitlenmiş metal aksamlarla ilerlenen rotadır.",
+            "Çelik halata bağlanır, demir basamaklara basar, boltlardan destek alırsın.",
+            "Yani ferrata rotası bolt kullanılmadan kurulmaz.",
+            "Ekspedisyon, günlerce hatta haftalarca süren büyük dağ seferidir; günübirlik çıkışa bu ad verilmez.",
+            "Spor tırmanışta emniyet noktaları önceden hazırdır, yapay duvarda da yapılır.",
+            "Ticari tırmanışta ise para ödersin; ücretli rehber ve taşıyıcılar sana paket hizmet verir.",
+            "Etik tartışmalara en çok konu olan katılım biçimi de budur."
+          ]
+        },
+        {
+          "baslik": "Dağlar nasıl sınıflandırılır?",
+          "ekran": "Bir dağı tanımak için yalnız metresine bakmak yetmez.\n\n- **Yükseklik:** sınıflamanın ilk ölçütü, ama tek ölçütü değil\n- **Ekosistem özellikleri:** iklim, bitki örtüsü ve yaban hayatı da dikkate alınır\n- **Hazırlık:** aynı yükseklikteki iki dağ farklı malzeme ve plan isteyebilir\n\n> [!IMPORTANT] Dağlar yalnız yüksekliğe göre değil, ekosistem özelliklerine göre de sınıflandırılır.",
+          "ses": [
+            "Dağları sıraya dizerken ilk bakılan şey yüksekliktir, ama iş orada bitmez.",
+            "Dağlar ekosistem özelliklerine göre de sınıflandırılır.",
+            "İklimi, bitki örtüsü ve yaban hayatı bir dağın kimliğini belirler.",
+            "Aynı yükseklikteki iki dağdan biri ormanlık ve yağışlı, öteki çıplak ve buzullu olabilir.",
+            "Birinde yağmurluk işini görür, ötekinde buzul malzemesi gerekir.",
+            "Bu yüzden çıkacağın dağın yalnız metresini değil, doğasını da öğren.",
+            "Hazırlığını ona göre yaparsan tatsız sürprizler azalır."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "9 – 3",
+        "acilim": "Yaz dağcılığı 9 ay (21 Mart – 21 Aralık) · Kış dağcılığı 3 ay (21 Aralık – 21 Mart)",
+        "not": "İki dönemin sınırı hep ayın 21'idir; uzun olan yaz, kısa olan kıştır."
+      },
+      "yap": [
+        "Beden, teknik ve ruh hazırlığını birlikte yap",
+        "Etkinliğin türünü ve dönemini önceden belirle",
+        "Çıkacağın dağın ekosistem özelliklerini araştır",
+        "Riski kabul et, gerektiğinde geri dön"
+      ],
+      "yapma": [
+        "Planım var diye kaza riskini yok sayma",
+        "Alpinizmi yalnız kaya tırmanışı sanma",
+        "Günübirlik çıkışa ekspedisyon deme",
+        "Dağı yalnız yüksekliğiyle değerlendirme"
+      ],
+      "spotlar": [
+        {
+          "metin": "Dağcılık **fiziksel dayanıklılık, teknik ve ruhsal hazırlık** ister; yalnız güç yetmez.",
+          "ses": "Dağcılık fiziksel dayanıklılığın yanında teknik bilgi ve ruhsal hazırlık da ister."
+        },
+        {
+          "metin": "**Kaza riski** hiçbir zaman sıfır değildir; plan onu yalnız azaltır.",
+          "ses": "Her şeyi planlasan bile dağcılıkta kaza riski hiçbir zaman sıfır olmaz."
+        },
+        {
+          "metin": "**Yaz dağcılığı:** 21 Mart – 21 Aralık. **Kış dağcılığı:** 21 Aralık – 21 Mart.",
+          "ses": "Yirmi bir Mart ile yirmi bir Aralık arası yaz, kalan üç ay kış dağcılığıdır."
+        },
+        {
+          "metin": "**Alpinizm**, kaya, kar ve buzul unsurlarını birlikte barındıran karma disiplindir.",
+          "ses": "Alpinizm yalnız kaya tırmanışı değildir; kaya, kar ve buzulu birleştiren karma disiplindir."
+        },
+        {
+          "metin": "**Ferrata**, kayaya sabitlenmiş metal aksamlarla yapılan tırmanıştır; rota bolt ile kurulur.",
+          "ses": "Ferrata, kayaya sabitlenmiş çelik halat, basamak ve bolt gibi metal aksamlarla yapılan tırmanıştır."
+        },
+        {
+          "metin": "**Ekspedisyon** uzun süreli, çok günlü büyük dağ seferidir; günübirlik çıkış değildir.",
+          "ses": "Ekspedisyon günübirlik çıkış değil, günlerce süren büyük dağ seferidir."
+        },
+        {
+          "metin": "Dağlar yalnız yüksekliğe göre değil, **ekosistem özelliklerine** göre de sınıflandırılır.",
+          "ses": "Dağlar sınıflandırılırken yükseklikle birlikte ekosistem özellikleri de dikkate alınır."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "esle",
+          "baslik": "Hangi tür, hangi tanım?",
+          "ciftler": [
+            { "sol": "Alpinizm", "sag": "Kaya, kar ve buzul birlikte" },
+            { "sol": "Ferrata", "sag": "Kayaya sabitlenmiş metal aksam" },
+            { "sol": "Ekspedisyon", "sag": "Çok günlü büyük dağ seferi" },
+            { "sol": "Ticari tırmanış", "sag": "Ücretli rehber ve taşıyıcı" },
+            { "sol": "Trekking", "sag": "Patikada dağ yürüyüşü" }
+          ]
+        },
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            { "metin": "Dağcılıkta ruhsal hazırlığın önemi yoktur; dayanıklı olmak yeter.", "dogru": false, "aciklama": "Başarı fiziksel hazırlık kadar ruhsal dengeye de bağlıdır." },
+            { "metin": "21 Aralık – 21 Mart arasındaki etkinlikler kış dağcılığıdır.", "dogru": true, "aciklama": "Kalan dokuz ay, 21 Mart – 21 Aralık, yaz dağcılığı dönemidir." },
+            { "metin": "Her etkinlik önceden planlandığı için dağcılıkta kaza riski yoktur.", "dogru": false, "aciklama": "Plan riski azaltır, ama kaza riski hiçbir zaman sıfır olmaz." },
+            { "metin": "Ferrata rotaları bolt kullanılmadan oluşturulur.", "dogru": false, "aciklama": "Ferrata kayaya sabitlenmiş bolt, çelik halat ve basamaklarla kurulur." },
+            { "metin": "Dağlar sınıflandırılırken ekosistem özellikleri de dikkate alınır.", "dogru": true, "aciklama": "Yükseklik tek ölçüt değildir; iklim, bitki örtüsü ve yaban hayatı da hesaba katılır." }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Aşağıdaki tarih aralıklarından hangisinde yapılan etkinlikler yaz dağcılığı sayılır?",
+          "secenekler": {
+            "A": "21 Aralık – 21 Mart",
+            "B": "21 Haziran – 21 Eylül",
+            "C": "21 Mart – 21 Aralık",
+            "D": "1 Mayıs – 1 Ekim",
+            "E": "21 Eylül – 21 Mart"
+          },
+          "dogru": "C",
+          "cozum": "Yaz dağcılığı 21 Mart – 21 Aralık arasındaki etkinlikleri kapsar. Kalan üç ay, 21 Aralık – 21 Mart, kış dağcılığıdır.",
+          "siklar": {
+            "A": "21 Aralık – 21 Mart arası kış dağcılığı dönemidir; kar, buz ve kısa günlerin belirlediği üç aylık dilimdir, yaz dağcılığı sayılmaz.",
+            "B": "21 Haziran – 21 Eylül takvimdeki yaz mevsimidir; dağcılıkta yaz dönemi bundan çok daha uzundur ve dokuz ay sürer.",
+            "C": "21 Mart – 21 Aralık arasındaki etkinlikler yaz dağcılığı olarak tanımlanır; bu dönem dokuz ay sürer ve sonbaharı da içine alır.",
+            "D": "1 Mayıs – 1 Ekim yürüyüş için sevilen ılık aylardır, ancak dağcılık takviminde böyle bir sınır yoktur; sınırlar ayın yirmi birine denk gelir.",
+            "E": "21 Eylül – 21 Mart aralığı sonbaharı ve kışı birleştirir; oysa sonbahar ayları 21 Aralık'a kadar yaz dağcılığı döneminde kalır."
+          },
+          "ses_cozum": "Yaz dağcılığı yirmi bir Mart ile yirmi bir Aralık arasındaki etkinlikleri kapsar ve dokuz ay sürer. Yirmi bir Aralık ile yirmi bir Mart arası ise kış dağcılığıdır, bu ikisini ters çevirme."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Kaya, kar ve buzul unsurlarını birlikte barındıran karma dağcılık disiplini aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Alpinizm",
+            "B": "Ferrata",
+            "C": "Spor tırmanış",
+            "D": "Dağ yürüyüşü",
+            "E": "Kaya tırmanışı"
+          },
+          "dogru": "A",
+          "cozum": "Kaya, kar ve buzulu birlikte barındıran karma disiplin alpinizmdir; yalnız kaya tırmanışından ibaret değildir.",
+          "siklar": {
+            "A": "Alpinizm kaya, kar ve buzul unsurlarını aynı rotada birleştiren karma disiplindir; tanımdaki üç zeminin hepsi yalnız bu türde bir arada bulunur.",
+            "B": "Ferrata, kayaya sabitlenmiş çelik halat ve basamak gibi metal aksamlarla ilerlenen rotadır; kar ve buzul içermesi beklenmez, karma disiplin sayılmaz.",
+            "C": "Spor tırmanış, emniyet noktaları önceden hazırlanmış rotalarda ya da yapay duvarda yapılır; kar ve buzul bu türün parçası değildir.",
+            "D": "Dağ yürüyüşü, yani trekking, patikada yürüyerek yapılan etkinliktir; tırmanış tekniği gerektiren kaya ve buzul geçişlerini kapsamaz.",
+            "E": "Kaya tırmanışı yalnız kaya yüzeyinde el ve ayakla yükselmeyi anlatır; alpinizm bunun üstüne karı ve buzulu da ekler."
+          },
+          "ses_cozum": "Kaya, kar ve buzul aynı rotada karşına çıkıyorsa bunun adı alpinizmdir. Kaya tırmanışı bunun yalnız bir parçasıdır; alpinizm ise üç zemini de birleştiren karma bir disiplindir."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Ferrata rotasını öteki tırmanış türlerinden ayıran özellik aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Yalnız kış dağcılığı döneminde yapılması",
+            "B": "Bolt kullanılmadan oluşturulması",
+            "C": "Çok günlü büyük bir dağ seferi olması",
+            "D": "Yalnız buz duvarında uygulanması",
+            "E": "Kayaya sabitlenmiş metal aksamla ilerlenmesi"
+          },
+          "dogru": "E",
+          "cozum": "Ferrata, kayaya sabitlenmiş metal aksamlarla yapılan tırmanıştır; rota bolt, çelik halat ve basamaklarla kurulur.",
+          "siklar": {
+            "A": "Ferrata için kış şartı yoktur; dönem ayrımı takvime göre yapılır ve bir rotanın türünü belirlemez, türü belirleyen kayadaki sabit düzenektir.",
+            "B": "Tam tersine ferrata rotası bolt, çelik halat ve basamak kullanılarak kurulur; bolt kullanılmadan oluşturulduğu söylenirse bu ifade yanlış olur.",
+            "C": "Çok günlü büyük sefer ekspedisyonun tanımıdır; ferrata ise süresiyle değil, kayaya sabitlenmiş metal düzeneğiyle tanınan bir rotadır.",
+            "D": "Buz duvarında yükselme buz tırmanışıdır; ferrata kaya üzerine kurulur ve tırmanıcı sabit metal parçalardan destek alarak ilerler.",
+            "E": "Ferrata, kayaya sabitlenmiş çelik halat, basamak ve bolt gibi metal aksamlar kullanılarak yapılan tırmanıştır; onu ayıran özellik budur."
+          },
+          "ses_cozum": "Ferratayı ayıran şey kayaya sabitlenmiş metal aksamlardır: çelik halat, basamak ve boltlar. Bolt kullanılmadan kurulduğunu söyleyen ifade bu yüzden yanlıştır, çünkü rota zaten o parçalarla oluşturulur."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Dağcılıkla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Yalnızca fiziksel dayanıklılık gerektirir",
+            "B": "Başarısı ruhsal dengeye de bağlıdır",
+            "C": "İyi planlanan etkinlikte kaza riski kalmaz",
+            "D": "Teknik bilgi yalnız kış döneminde gerekir",
+            "E": "Ruhsal hazırlığın önemi yoktur"
+          },
+          "dogru": "B",
+          "cozum": "Dağcılık fiziksel dayanıklılık, teknik ve ruhsal hazırlığı birlikte ister; başarı ruhsal dengeye de bağlıdır ve kaza riski hiç sıfırlanmaz.",
+          "siklar": {
+            "A": "Fiziksel dayanıklılık gereklidir ama tek başına yetmez; dağcılık teknik bilgi ve ruhsal hazırlık da ister, bu yüzden ifade eksik ve yanlıştır.",
+            "B": "Dağcılığın başarısı yalnız fiziksel hazırlığa değil ruhsal dengeye de bağlıdır; korkuyu, yorgunluğu ve sabrı yönetmek zirve kadar dönüşü de belirler.",
+            "C": "Plan kaza riskini azaltır ama sıfırlamaz; hava, zemin ve insan hatası her zaman payını korur, bu yüzden dağcılıkta risk hiç bitmez.",
+            "D": "Teknik bilgi her dönemde gerekir; malzemeyi ve tırmanış yöntemlerini doğru kullanmak yaz dağcılığında da güvenliğin temel koşullarından biridir.",
+            "E": "Ruhsal hazırlık dağcılığın üç ayağından biridir; önemsiz saymak, zor anlarda doğru karar verme gücünü hesaba katmamak anlamına gelir."
+          },
+          "ses_cozum": "Dağcılıkta başarı fiziksel hazırlık kadar ruhsal dengeye de bağlıdır. Her şey planlandı diye kaza riskinin kalmadığını söyleyen ifade en inandırıcı yanlıştır, çünkü plan riski yalnız azaltır."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Dağlar sınıflandırılırken yükseklikle birlikte aşağıdakilerden hangisi de dikkate alınır?",
+          "secenekler": {
+            "A": "Zirveye ilk çıkışın tarihi",
+            "B": "Dağın bulunduğu ülke",
+            "C": "Rotadaki metal aksam sayısı",
+            "D": "Ekosistem özellikleri",
+            "E": "Tırmanışın yapıldığı dönem"
+          },
+          "dogru": "D",
+          "cozum": "Dağlar yalnız yüksekliklerine göre sınıflandırılmaz; iklim, bitki örtüsü ve yaban hayatı gibi ekosistem özellikleri de dikkate alınır.",
+          "siklar": {
+            "A": "İlk çıkış tarihi dağcılık tarihinin konusudur; bir dağın hangi sınıfa gireceğini değil, o dağda sporun ne zaman başladığını anlatır.",
+            "B": "Ülke sınırı siyasi bir bilgidir; dağın iklimini, bitki örtüsünü ve tırmanış koşullarını tanımlamaz, sınıflamada ölçüt olarak kullanılmaz.",
+            "C": "Metal aksam ferrata rotalarının özelliğidir; insan eliyle eklenen bu parçalar dağın doğasını göstermez ve dağları sınıflamaya yaramaz.",
+            "D": "Dağlar yalnız yüksekliğe göre değil ekosistem özelliklerine göre de sınıflandırılır; iklim, bitki örtüsü ve yaban hayatı dağın kimliğini belirler.",
+            "E": "Dönem, etkinliği yaz ya da kış dağcılığı diye ayırır; aynı dağ iki dönemde de aynı dağdır, sınıfı takvime göre değişmez."
+          },
+          "ses_cozum": "Dağları sınıflarken yüksekliğin yanına ekosistem özellikleri de konur. Dönem bilgisi akla yatkın gelir, ama takvim dağı değil, yapılan etkinliği yaz ya da kış dağcılığı diye ayırır."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanış hangi adla anılır?",
+          "secenekler": {
+            "A": "Ticari tırmanış",
+            "B": "Ekspedisyon",
+            "C": "Alpinizm",
+            "D": "Spor tırmanış",
+            "E": "Ferrata"
+          },
+          "dogru": "A",
+          "cozum": "Ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanışlara ticari tırmanış denir; etik tartışmalara en çok konu olan model de budur.",
+          "siklar": {
+            "A": "Ticari tırmanışta katılımcı ücret öder, rehber ve taşıyıcılar paket hizmet verir; etik tartışmalara en çok konu olan katılım biçimi budur.",
+            "B": "Ekspedisyon uzun süreli, çok günlü büyük dağ seferidir; ücretli olup olmamasıyla değil, süresi ve büyüklüğüyle tanımlanır.",
+            "C": "Alpinizm kaya, kar ve buzulu birleştiren karma disiplindir; bir zemin tanımıdır, hizmetin parayla satın alınmasını anlatmaz.",
+            "D": "Spor tırmanış emniyet noktaları hazır rotalarda ya da yapay duvarda yapılır; taşıyıcı desteği ve paket hizmet bu türün tanımında yer almaz.",
+            "E": "Ferrata kayaya sabitlenmiş metal aksamlarla ilerlenen rotadır; adını rotadaki düzenekten alır, rehberlik ücretiyle bir ilgisi bulunmaz."
+          },
+          "ses_cozum": "Para ödeyip ücretli rehber ve taşıyıcı desteği alıyorsan bunun adı ticari tırmanıştır. Ekspedisyonla karıştırma, çünkü ekspedisyonu belirleyen ücret değil, seferin uzun ve çok günlü olmasıdır."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "15 Kasım'da bir ekip; kaya, kar ve buzul geçişlerini birlikte içeren bir rotaya çıkıyor. Bu etkinlik aşağıdakilerden hangisiyle en doğru adlandırılır?",
+          "secenekler": {
+            "A": "Kış dağcılığı döneminde alpinizm",
+            "B": "Kış dağcılığı döneminde ferrata",
+            "C": "Yaz dağcılığı döneminde alpinizm",
+            "D": "Yaz dağcılığı döneminde kaya tırmanışı",
+            "E": "Kış dağcılığı döneminde buz tırmanışı"
+          },
+          "dogru": "C",
+          "cozum": "15 Kasım, 21 Mart – 21 Aralık aralığında olduğundan yaz dağcılığıdır. Kaya, kar ve buzulu birlikte içeren rota alpinizmdir.",
+          "siklar": {
+            "A": "Tür doğru, dönem yanlış: kış dağcılığı 21 Aralık'ta başlar, 15 Kasım henüz yaz dağcılığı döneminin içindedir.",
+            "B": "Ferrata kayaya sabitlenmiş metal aksamlı rotadır; hem dönem yanlış seçilmiş hem de kar ve buzul geçişleri bu türü anlatmaz.",
+            "C": "15 Kasım, 21 Mart – 21 Aralık aralığında kaldığı için yaz dağcılığıdır; kaya, kar ve buzulun birlikte olması da alpinizmi gösterir.",
+            "D": "Dönem doğru, tür eksik: rotada kar ve buzul da bulunduğu için etkinlik yalnız kaya tırmanışı sayılamaz, karma disiplin olur.",
+            "E": "Buz tırmanışı yalnız buz duvarını anlatır; bu rotada kaya ve kar da var, üstelik 15 Kasım kış dönemine girmez."
+          },
+          "ses_cozum": "Kasımın ortası, yirmi bir Aralık'tan önce olduğu için takvime göre yaz dağcılığıdır. Rotada kaya, kar ve buzul birlikte bulunduğundan tür alpinizmdir. Karı görüp kış dağcılığı demek en sık yapılan hatadır."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki tür – tanım eşleştirmelerinden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Ferrata – kayaya sabitlenmiş metal aksam",
+            "B": "Alpinizm – kaya, kar ve buzul birlikte",
+            "C": "Ticari tırmanış – ücretli rehber ve taşıyıcı",
+            "D": "Dağ yürüyüşü – trekking",
+            "E": "Ekspedisyon – kısa süreli günübirlik tırmanış"
+          },
+          "dogru": "E",
+          "cozum": "Ekspedisyon kısa süreli günübirlik tırmanışları ifade etmez; uzun süreli, çok günlü büyük dağ seferidir. Öteki eşleştirmeler doğrudur.",
+          "siklar": {
+            "A": "Eşleştirme doğrudur: ferrata, kayaya sabitlenmiş çelik halat, basamak ve bolt gibi metal aksamlar kullanılarak yapılan tırmanıştır.",
+            "B": "Eşleştirme doğrudur: alpinizm yalnız kaya tırmanışı değildir, kaya, kar ve buzul unsurlarını birlikte barındıran karma disiplindir.",
+            "C": "Eşleştirme doğrudur: ticari tırmanışta katılımcı ücret öder, rehber ve taşıyıcılar paket hâlinde destek verir.",
+            "D": "Eşleştirme doğrudur: trekking, patikada yürüyerek yapılan dağ yürüyüşünün yabancı dildeki adıdır; ikisi aynı etkinliği anlatır.",
+            "E": "Ekspedisyon günübirlik çıkış değil, uzun süreli ve çok günlü büyük dağ seferidir; bu nedenle yanlış kurulan eşleştirme budur."
+          },
+          "ses_cozum": "Ekspedisyon günübirlik bir çıkış değildir; günlerce, hatta haftalarca süren büyük dağ seferidir. Öteki dört eşleştirme tanımlarla uyuşur, bu yüzden yanlış olan ekspedisyonun kısa süreli diye verilmesidir."
+        }
+      ]
+    },
+    {
+      "id": "1b",
+      "baslik": "Dünyada ve Türkiye'de dağcılık tarihi",
+      "ozet": "Mont Blanc'dan Everest'e, Erciyes'ten federasyona dağcılığın kilometre taşları.",
+      "gorsel": "dagcilik-tarihi.svg",
+      "gorsel_alt": "Zaman çizgisi üzerinde 1786 Mont Blanc, 1924 Erciyes, 1939 ilk federasyon, 1953 Everest, 1966 TDF ve 2016 spor tırmanış işaretleri yer alıyor.",
+      "bolumler": [
+        {
+          "baslik": "Modern dağcılığın doğuşu: Mont Blanc",
+          "ekran": "İnsanlar dağlara hep çıktı; spor olarak dağcılığın başlangıcı ise bellidir.\n\n- **1786:** Mont Blanc'a yapılan çıkış, dünyadaki ilk modern dağcılık tırmanışı\n- **Mont Blanc:** Alpler'in en yüksek zirvesi; tırmanışı dağcılığın başlangıcı kabul edilir\n- **Alpinizm:** adını Alpler'den alır\n- **Yenilik:** amaç artık zirvenin kendisiydi\n\n> [!IMPORTANT] Modern dağcılığın başlangıcı: 1786, Mont Blanc.",
+          "ses": [
+            "İnsanlar binlerce yıldır dağlara çıkıyor, ama spor olarak dağcılığın bir doğum günü var.",
+            "Bin yedi yüz seksen altıda Mon Blan zirvesine ulaşıldı.",
+            "Dünyadaki ilk modern dağcılık tırmanışı budur ve dağcılığın başlangıcı kabul edilir.",
+            "Mon Blan, Alpler'in en yüksek zirvesidir.",
+            "Alpinizm sözcüğü de adını bu dağlardan alır.",
+            "O günden sonra zirveye çıkmak başlı başına bir amaç oldu.",
+            "Tarihi tek sayıyla aklında tut: bin yedi yüz seksen altı."
+          ]
+        },
+        {
+          "baslik": "Everest ve Messner: iki ayrı ilk",
+          "ekran": "Dünyanın en yüksek dağı Everest'in hikâyesinde iki ad sık karıştırılır.\n\n- **Everest:** Himalayalar'da yer alır\n- **İlk çıkış:** 1953, Edmund Hillary ve Tenzing Norgay\n- **Reinhold Messner:** 8000 metrenin üstündeki 14 dağın tümüne çıkan ilk kişi\n- **Karıştırma:** Messner Everest'e ilk çıkan insan değildir\n\n> [!IMPORTANT] Everest'e ilk çıkan: Hillary ve Tenzing. Tüm 8000'liklere ilk çıkan: Messner.",
+          "ses": [
+            "Everest, Himalayalar'da yükselen ve dünyanın en yüksek dağı olan zirvedir.",
+            "Zirvesine ilk kez bin dokuz yüz elli üçte ulaşıldı.",
+            "O gün tepede iki kişi vardı: Edmund Hilari ve Tenzing Norgay.",
+            "Raynhold Mesner adını da sık duyarsın, ama o Everest'e ilk çıkan insan değildir.",
+            "Mesner'in rekoru başka: sekiz bin metrenin üstündeki on dört dağın tümüne çıkan ilk kişidir.",
+            "Kısacası Everest'in ilki Hilari ile Tenzing, sekiz binliklerin ilki Mesner'dir."
+          ]
+        },
+        {
+          "baslik": "Türkiye'de ilk adımlar: Erciyes, 1924",
+          "ekran": "Türkiye'de dağlara ilk çıkışların amacı spor değil, bilimdi.\n\n- **İlk etkinlikler:** bilimsel amaçla yapıldı\n- **1924:** Miralay Cemil Cahit Toydemir Erciyes Dağı'na tırmandı\n- **Anlamı:** bu tırmanış Türk dağcılığının başlangıcı sayılır\n- **Erciyes:** Kayseri'de, 3917 m\n\n> [!IMPORTANT] Türk dağcılığının başlangıcı: 1924, Erciyes, Cemil Cahit Toydemir.",
+          "ses": [
+            "Türkiye'de ilk dağcılık etkinlikleri spor için değil, bilimsel amaçla yapıldı.",
+            "Araştırmacılar ölçüm ve inceleme için dağlara çıktı.",
+            "Spor olarak dağcılığın başlangıcı ise bin dokuz yüz yirmi dörttür.",
+            "O yıl Miralay Cemil Cahit Toydemir Erciyes Dağı'na tırmandı.",
+            "Miralay, bugünkü albay rütbesinin eski adıdır.",
+            "Bu tırmanış Türk dağcılığının başlangıcı sayılır.",
+            "Erciyes Kayseri'dedir ve üç bin dokuz yüz on yedi metre yüksekliğindedir.",
+            "Yılı, dağı ve adı birlikte ezberle: yirmi dört, Erciyes, Toydemir."
+          ]
+        },
+        {
+          "baslik": "Federasyon, UIAA ve olimpiyat",
+          "ekran": "Dağcılık Türkiye'de adım adım kurumlaştı.\n\n- **1939:** Dağcılık ve Kış Sporları Federasyonu kuruldu; bugünkü federasyonun kökeni\n- **1966:** Türkiye Dağcılık Federasyonu (TDF) resmen kuruldu\n- **UIAA:** Uluslararası Dağcılık ve Tırmanış Federasyonu\n- **2016:** TDF, Rio Olimpiyatları'nda spor tırmanışı olimpik branş olarak tanıttı\n\n> [!NOTE] Türkiye'nin UIAA üyeliği 1936'da gerçekleşmedi; bu yılı doğru sanma.",
+          "ses": [
+            "Kulüp ve federasyon olmadan bir spor büyümez.",
+            "Bin dokuz yüz otuz dokuzda Dağcılık ve Kış Sporları Federasyonu kuruldu.",
+            "Bugünkü federasyonun kökeni bu kuruma dayanır.",
+            "Türkiye Dağcılık Federasyonu ise bin dokuz yüz altmış altıda resmen kuruldu.",
+            "Dünyadaki çatı kuruluş Uluslararası Dağcılık ve Tırmanış Federasyonu'dur.",
+            "Türkiye'nin bu kuruma üyeliği bin dokuz yüz otuz altıda gerçekleşmedi, o yıla aldanma.",
+            "İki bin on altıda, Rio Olimpiyatları döneminde spor tırmanış olimpik branş olarak tanıtıldı."
+          ]
+        },
+        {
+          "baslik": "Türkiye'nin en yüksek dağı",
+          "ekran": "Türkiye'nin en yüksek noktası doğudadır ve sayısı sık karıştırılır.\n\n- **Ağrı Dağı:** Türkiye'nin en yüksek dağı, 5137 m\n- **3916 m değil:** bu sayı Erciyes'e yakındır (3917 m)\n- **Cilo Dağı:** yüksektir ama en yüksek dağ değildir\n- **Erciyes:** Türk dağcılığının başladığı dağ\n\n> [!IMPORTANT] En yüksek: Ağrı Dağı, 5137 m. Cilo da değil, 3916 da değil.",
+          "ses": [
+            "Türkiye'nin en yüksek dağı, ülkenin doğusundaki Ağrı Dağı'dır.",
+            "Yüksekliği beş bin yüz otuz yedi metredir.",
+            "Karşına üç bin dokuz yüz on altı metre diye bir sayı çıkarsa kanma.",
+            "O sayı Ağrı'ya değil, Erciyes'in yüksekliğine yakındır.",
+            "Cilo Dağı için de aynı tuzak kurulur.",
+            "Cilo yüksek bir dağdır, ama Türkiye'nin en yüksek dağı değildir.",
+            "Erciyes ise yükseklikle değil, Türk dağcılığının başladığı dağ olmasıyla ünlüdür."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "86 · 24 · 39 · 53 · 66",
+        "acilim": "1786 Mont Blanc · 1924 Erciyes · 1939 ilk federasyon · 1953 Everest · 1966 TDF",
+        "not": "Beş tarihi sırayla söyle; her yılın yanına bir dağ ya da kurum koy."
+      },
+      "yap": [
+        "Tarihleri kronolojik sırayla ezberle",
+        "Her yılı bir dağ ya da kurumla eşleştir",
+        "Ağrı Dağı'nı 5137 metreyle birlikte hatırla",
+        "Messner'i 8000'liklerle, Hillary'yi Everest'le eşleştir"
+      ],
+      "yapma": [
+        "Messner'i Everest'e ilk çıkan kişi sanma",
+        "Ağrı Dağı'na 3916 metre deme",
+        "1939 ile 1966'yı birbirine karıştırma",
+        "UIAA üyeliği için 1936 yılını kabul etme"
+      ],
+      "spotlar": [
+        {
+          "metin": "**1786 Mont Blanc** tırmanışı modern dağcılığın başlangıcı kabul edilir.",
+          "ses": "Bin yedi yüz seksen altıdaki Mon Blan tırmanışı modern dağcılığın başlangıcı kabul edilir."
+        },
+        {
+          "metin": "**Everest** Himalayalar'dadır; ilk çıkış **1953**, Edmund Hillary ve Tenzing Norgay.",
+          "ses": "Himalayalar'daki Everest'e ilk kez bin dokuz yüz elli üçte Hilari ve Tenzing Norgay çıktı."
+        },
+        {
+          "metin": "**Reinhold Messner** tüm 8000'lik dağlara tırmanan ilk kişidir; Everest'e ilk çıkan değildir.",
+          "ses": "Mesner Everest'e ilk çıkan değil, sekiz bin metrelik on dört dağın tümüne çıkan ilk kişidir."
+        },
+        {
+          "metin": "Türkiye'de ilk dağcılık etkinliği **bilimsel amaçla** yapılmıştır.",
+          "ses": "Türkiye'de dağlara ilk çıkışlar spor için değil, bilimsel amaçla yapıldı."
+        },
+        {
+          "metin": "**1924:** Cemil Cahit Toydemir'in Erciyes tırmanışı Türk dağcılığının başlangıcıdır.",
+          "ses": "Bin dokuz yüz yirmi dörtte Toydemir'in Erciyes tırmanışı Türk dağcılığını başlattı."
+        },
+        {
+          "metin": "Federasyonun kökeni **1939**; Türkiye Dağcılık Federasyonu'nun resmen kuruluşu **1966**.",
+          "ses": "Federasyonun kökeni bin dokuz yüz otuz dokuza dayanır, resmen kuruluş bin dokuz yüz altmış altıdadır."
+        },
+        {
+          "metin": "Türkiye'nin en yüksek dağı **Ağrı Dağı, 5137 m**; Cilo değil, 3916 m de değil.",
+          "ses": "Türkiye'nin en yüksek dağı beş bin yüz otuz yedi metreyle Ağrı Dağı'dır, Cilo değildir."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "sirala",
+          "baslik": "Zaman çizgisini kur",
+          "soru": "Olayları eskiden yeniye doğru sırala",
+          "adimlar": [
+            "Mont Blanc'a ilk modern tırmanış",
+            "Toydemir'in Erciyes tırmanışı",
+            "Dağcılık ve Kış Sporları Federasyonu'nun kuruluşu",
+            "Everest'e ilk çıkış",
+            "Türkiye Dağcılık Federasyonu'nun resmen kuruluşu",
+            "Spor tırmanışın olimpik branş olarak tanıtılması"
+          ],
+          "aciklama": "Sıra: 1786, 1924, 1939, 1953, 1966, 2016."
+        },
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            { "metin": "Everest'e ilk çıkan insan Reinhold Messner'dir.", "dogru": false, "aciklama": "İlk çıkış 1953'te Hillary ve Tenzing Norgay'ındır; Messner tüm 8000'liklere çıkan ilk kişidir." },
+            { "metin": "Türkiye'nin en yüksek dağı Cilo Dağı'dır.", "dogru": false, "aciklama": "En yüksek dağ 5137 metreyle Ağrı Dağı'dır." },
+            { "metin": "Türkiye'de ilk dağcılık etkinliği bilimsel amaçla yapılmıştır.", "dogru": true, "aciklama": "Spor olarak başlangıç ise 1924'teki Erciyes tırmanışıdır." },
+            { "metin": "Türkiye'nin UIAA üyeliği 1936'da gerçekleşmiştir.", "dogru": false, "aciklama": "Üyelik 1936'da gerçekleşmemiştir; 1939 ise ilk federasyonun kuruluş yılıdır." },
+            { "metin": "Everest Dağı Himalayalar'da yer alır.", "dogru": true, "aciklama": "Mont Blanc ise Alpler'dedir; iki dağ farklı sıradağlardadır." }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Dünyadaki ilk modern dağcılık tırmanışı sayılan Mont Blanc çıkışı hangi yıl yapılmıştır?",
+          "secenekler": {
+            "A": "1924",
+            "B": "1786",
+            "C": "1953",
+            "D": "1939",
+            "E": "1966"
+          },
+          "dogru": "B",
+          "cozum": "Dünyadaki ilk modern dağcılık tırmanışı 1786'da Mont Blanc'a yapılmıştır; bu çıkış dağcılığın başlangıcı kabul edilir.",
+          "siklar": {
+            "A": "1924, Miralay Cemil Cahit Toydemir'in Erciyes'e tırmandığı yıldır; dünyada değil, Türkiye'de dağcılığın başlangıcı sayılır.",
+            "B": "1786'da Mont Blanc'a yapılan çıkış dünyadaki ilk modern dağcılık tırmanışıdır ve dağcılığın başlangıcı olarak kabul edilir.",
+            "C": "1953, Edmund Hillary ile Tenzing Norgay'ın Everest zirvesine ilk kez ulaştığı yıldır; modern dağcılık bundan çok önce başlamıştı.",
+            "D": "1939, Dağcılık ve Kış Sporları Federasyonu'nun kurulduğu yıldır; bir tırmanışı değil, Türkiye'deki kurumlaşmanın ilk adımını gösterir.",
+            "E": "1966, Türkiye Dağcılık Federasyonu'nun resmen kurulduğu yıldır; dünya dağcılık tarihinin başlangıcıyla bir ilgisi bulunmaz."
+          },
+          "ses_cozum": "Modern dağcılık bin yedi yüz seksen altıda Mon Blan tırmanışıyla başlar. Bin dokuz yüz yirmi dört ise dünyanın değil, Türk dağcılığının başlangıcıdır; ikisini birbirine karıştırma."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Türkiye'nin en yüksek dağı ve yüksekliği aşağıdakilerden hangisinde doğru verilmiştir?",
+          "secenekler": {
+            "A": "Erciyes, 3917 m",
+            "B": "Cilo Dağı, 5137 m",
+            "C": "Ağrı Dağı, 3916 m",
+            "D": "Ağrı Dağı, 5137 m",
+            "E": "Erciyes, 5137 m"
+          },
+          "dogru": "D",
+          "cozum": "Türkiye'nin en yüksek dağı Ağrı Dağı'dır, 5137 m. 3916 m sayısı Erciyes'e yakındır; Cilo da en yüksek dağ değildir.",
+          "siklar": {
+            "A": "Erciyes'in yüksekliği gerçekten 3917 metredir, ancak Erciyes Türkiye'nin en yüksek dağı değil, Türk dağcılığının başladığı dağdır.",
+            "B": "5137 metre doğru sayıdır ama Cilo'ya ait değildir; Cilo yüksek bir dağ olsa da Türkiye'nin en yüksek dağı sayılmaz.",
+            "C": "Dağ doğru, sayı yanlış: 3916 metre Ağrı'nın değil, Erciyes'in yüksekliğine yakın bir değerdir ve sık kurulan bir tuzaktır.",
+            "D": "Türkiye'nin en yüksek dağı Ağrı Dağı'dır ve yüksekliği 5137 metredir; ad ile sayının birlikte doğru verildiği tek seçenek budur.",
+            "E": "Bu seçenekte Ağrı'nın yüksekliği Erciyes'e yazılmıştır; Erciyes 3917 metredir ve Ağrı Dağı'ndan belirgin biçimde alçaktır."
+          },
+          "ses_cozum": "Türkiye'nin en yüksek dağı beş bin yüz otuz yedi metreyle Ağrı Dağı'dır. Üç bin dokuz yüz on altı sayısı Ağrı'ya yakıştırılırsa yanlış olur, çünkü o değer Erciyes'e yakındır."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Miralay Cemil Cahit Toydemir'in 1924'te tırmandığı ve Türk dağcılığının başlangıcı sayılan dağ hangisidir?",
+          "secenekler": {
+            "A": "Erciyes",
+            "B": "Ağrı Dağı",
+            "C": "Cilo Dağı",
+            "D": "Mont Blanc",
+            "E": "Everest"
+          },
+          "dogru": "A",
+          "cozum": "1924'te Miralay Cemil Cahit Toydemir Erciyes Dağı'na tırmanmış, bu çıkış Türk dağcılığının başlangıcı sayılmıştır.",
+          "siklar": {
+            "A": "Toydemir 1924'te Erciyes Dağı'na tırmanmıştır; Kayseri'deki bu 3917 metrelik dağa yapılan çıkış Türk dağcılığının başlangıcı sayılır.",
+            "B": "Ağrı Dağı 5137 metreyle Türkiye'nin en yüksek dağıdır; ancak Türk dağcılığını başlatan 1924 tırmanışı bu dağa yapılmamıştır.",
+            "C": "Cilo Dağı yüksek bir dağdır ama ne Türkiye'nin en yüksek dağıdır ne de 1924'teki başlangıç tırmanışının yapıldığı yerdir.",
+            "D": "Mont Blanc Alpler'dedir; 1786'daki tırmanışı dünyada modern dağcılığın başlangıcıdır, Türkiye'deki başlangıçla bir ilgisi yoktur.",
+            "E": "Everest Himalayalar'dadır ve ilk kez 1953'te Hillary ile Tenzing Norgay tarafından çıkılmıştır; Toydemir'in tırmanışıyla bağlantısı bulunmaz."
+          },
+          "ses_cozum": "Türk dağcılığı bin dokuz yüz yirmi dörtte Toydemir'in Erciyes tırmanışıyla başlar. En yüksek dağ olduğu için Ağrı akla gelir, ama başlangıç tırmanışı Ağrı'ya değil Erciyes'e yapılmıştır."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Reinhold Messner ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Everest'e ilk çıkan insandır",
+            "B": "Mont Blanc'a 1786'da çıkan kişidir",
+            "C": "Erciyes'e 1924'te tırmanmıştır",
+            "D": "Hillary ile 1953'te zirveye ulaşmıştır",
+            "E": "Tüm 8000'lik dağlara tırmanan ilk kişidir"
+          },
+          "dogru": "E",
+          "cozum": "Reinhold Messner tüm 8000'lik dağlara tırmanan ilk kişidir. Everest'e ilk çıkanlar ise 1953'te Hillary ve Tenzing Norgay'dır.",
+          "siklar": {
+            "A": "Everest'e ilk çıkanlar 1953'te Edmund Hillary ve Tenzing Norgay'dır; bu başarıyı Messner'e vermek en sık yapılan karıştırmadır.",
+            "B": "Mont Blanc'a 1786'da çıkılmış ve modern dağcılık böyle başlamıştır; bu tırmanış Messner'in adıyla anılan bir başarı değildir.",
+            "C": "1924'te Erciyes'e tırmanarak Türk dağcılığını başlatan kişi Miralay Cemil Cahit Toydemir'dir; Messner'in bu tırmanışla ilgisi yoktur.",
+            "D": "1953'te Everest zirvesinde Hillary'nin yanındaki kişi Tenzing Norgay'dır; Messner o ilk çıkışın ekibinde yer almamıştır.",
+            "E": "Messner, 8000 metrenin üstündeki 14 dağın tümüne tırmanan ilk kişidir; adını tek bir zirveyle değil bu diziyle duyurmuştur."
+          },
+          "ses_cozum": "Mesner sekiz bin metrenin üstündeki on dört dağın tümüne çıkan ilk kişidir. Everest'e ilk çıkan insan o değildir, o zirveye ilk ulaşanlar Hilari ile Tenzing Norgay'dır."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Türkiye Dağcılık Federasyonu'nun kökeni sayılan Dağcılık ve Kış Sporları Federasyonu hangi yıl kurulmuştur?",
+          "secenekler": {
+            "A": "1924",
+            "B": "1936",
+            "C": "1939",
+            "D": "1953",
+            "E": "1966"
+          },
+          "dogru": "C",
+          "cozum": "Federasyonun kökeni 1939'da kurulan Dağcılık ve Kış Sporları Federasyonu'dur; TDF ise 1966'da resmen kurulmuştur.",
+          "siklar": {
+            "A": "1924 bir kuruluş yılı değil, Toydemir'in Erciyes'e tırmandığı ve Türk dağcılığının başladığı yıldır; federasyon daha sonra kurulmuştur.",
+            "B": "1936, Türkiye'nin UIAA üyeliği için öne sürülen ama doğru olmayan yıldır; herhangi bir federasyonun kuruluşunu da göstermez.",
+            "C": "Dağcılık ve Kış Sporları Federasyonu 1939'da kurulmuştur; Türkiye Dağcılık Federasyonu'nun kökeni bu kuruma dayanır.",
+            "D": "1953, Everest'e ilk çıkışın yılıdır; Hillary ve Tenzing Norgay'ın başarısını anlatır, Türkiye'deki kurumlaşmayla bir bağlantısı yoktur.",
+            "E": "1966, Türkiye Dağcılık Federasyonu'nun bugünkü adıyla resmen kurulduğu yıldır; köken sayılan ilk federasyon bundan önce kurulmuştu."
+          },
+          "ses_cozum": "Kökeni soruyorsa cevap bin dokuz yüz otuz dokuzdur, çünkü Dağcılık ve Kış Sporları Federasyonu o yıl kuruldu. Bin dokuz yüz altmış altı ise Türkiye Dağcılık Federasyonu'nun resmen kurulduğu yıldır."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Türkiye'de yapılan ilk dağcılık etkinliğinin amacı aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Sportif",
+            "B": "Bilimsel",
+            "C": "Ticari",
+            "D": "Askerî",
+            "E": "Olimpik"
+          },
+          "dogru": "B",
+          "cozum": "Türkiye'de ilk dağcılık etkinliği bilimsel amaçla yapılmıştır; spor olarak başlangıç 1924 Erciyes tırmanışıdır.",
+          "siklar": {
+            "A": "Sportif amaç sonradan öne çıkmıştır; spor olarak Türk dağcılığının başlangıcı 1924'teki Erciyes tırmanışıdır, ilk etkinlikler ondan öncedir.",
+            "B": "Türkiye'de ilk dağcılık etkinliği bilimsel amaçla yapılmıştır; dağlara önce inceleme ve ölçüm için çıkılmış, spor sonra gelmiştir.",
+            "C": "Ticari amaç, ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanışları anlatır; ilk etkinliklerin amacı para kazanmak değildi.",
+            "D": "Türk dağcılığını başlatan Toydemir bir subaydı, ancak ondan önceki ilk dağcılık etkinliklerinin amacı askerî değil bilimseldi.",
+            "E": "Olimpik amaç çok yenidir; spor tırmanış ancak 2016'da olimpik branş olarak tanıtılmıştır, ilk etkinliklerle arasında uzun yıllar vardır."
+          },
+          "ses_cozum": "Türkiye'de dağlara ilk çıkışların amacı spor değil, bilimdi; ilk etkinlikler bilimsel amaçla yapıldı. Sportif amaç akla ilk gelen yanlıştır, çünkü spor olarak başlangıç daha sonra, Toydemir'in Erciyes tırmanışıyla olmuştur."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki yıl – olay eşleştirmelerinden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "1786 – Mont Blanc tırmanışı",
+            "B": "1924 – Toydemir'in Erciyes tırmanışı",
+            "C": "1953 – Everest'e ilk çıkış",
+            "D": "1936 – Türkiye'nin UIAA üyeliği",
+            "E": "1966 – TDF'nin resmen kuruluşu"
+          },
+          "dogru": "D",
+          "cozum": "Türkiye'nin UIAA üyeliği 1936'da gerçekleşmemiştir. Öteki dört yıl doğru olaylarla eşleşmiştir: 1786, 1924, 1953, 1966.",
+          "siklar": {
+            "A": "Eşleştirme doğrudur: 1786'da Mont Blanc'a yapılan çıkış dünyadaki ilk modern dağcılık tırmanışı ve dağcılığın başlangıcıdır.",
+            "B": "Eşleştirme doğrudur: Miralay Cemil Cahit Toydemir 1924'te Erciyes'e tırmanmış, Türk dağcılığı bu çıkışla başlamıştır.",
+            "C": "Eşleştirme doğrudur: Himalayalar'daki Everest'in zirvesine ilk kez 1953'te Edmund Hillary ve Tenzing Norgay birlikte çıkmıştır.",
+            "D": "Türkiye'nin UIAA'ya üyeliği 1936'da gerçekleşmemiştir; bu yıl öteki tarihlerin arasına yerleştirilmiş, doğru olmayan bir eşleştirmedir.",
+            "E": "Eşleştirme doğrudur: Türkiye Dağcılık Federasyonu 1966'da resmen kurulmuştur; kökeni ise 1939'da kurulan ilk federasyona dayanır."
+          },
+          "ses_cozum": "Yanlış olan, Türkiye'nin uluslararası federasyona üyeliğinin bin dokuz yüz otuz altıya bağlanmasıdır. Bu yıl, bin dokuz yüz otuz dokuzdaki federasyon kuruluşuna benzediği için kolayca doğru sanılır."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Dağcılık tarihiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Spor tırmanış 2016'da olimpik branş olarak tanıtılmıştır",
+            "B": "Everest Dağı Alpler'de yer alır",
+            "C": "Ağrı Dağı 3916 metre yüksekliğindedir",
+            "D": "Türkiye Dağcılık Federasyonu 1939'da resmen kurulmuştur",
+            "E": "Cilo Dağı Türkiye'nin en yüksek dağıdır"
+          },
+          "dogru": "A",
+          "cozum": "Spor tırmanış 2016'da Rio Olimpiyatları'nda olimpik branş olarak tanıtılmıştır. Öteki ifadelerde dağ, sayı ya da yıl yanlış verilmiştir.",
+          "siklar": {
+            "A": "Türkiye Dağcılık Federasyonu 2016 Rio Olimpiyatları'nda spor tırmanışı olimpik branş olarak tanıtmıştır; beş ifade içinde doğru olan budur.",
+            "B": "Everest Himalayalar'da yer alır; Alpler'in en yüksek zirvesi ise modern dağcılığın 1786'da başladığı Mont Blanc'dır, ikisi farklı sıradağlardadır.",
+            "C": "Ağrı Dağı 5137 metredir; 3916 metre Erciyes'in 3917 metrelik yüksekliğine yakın bir sayıdır ve Ağrı için yanlıştır.",
+            "D": "Federasyon 1966'da resmen kurulmuştur; 1939 ise kökeni sayılan Dağcılık ve Kış Sporları Federasyonu'nun kuruluş yılıdır.",
+            "E": "Türkiye'nin en yüksek dağı Ağrı Dağı'dır; Cilo yüksek bir dağ olmakla birlikte bu unvanı taşımaz."
+          },
+          "ses_cozum": "Doğru ifade, spor tırmanışın iki bin on altıda olimpik branş olarak tanıtılmasıdır. Federasyonun bin dokuz yüz otuz dokuzda resmen kurulduğunu söyleyen ifade yanıltır, çünkü resmî kuruluş bin dokuz yüz altmış altıdadır."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "moduller": [
+    {
+      "id": "yuruyus-kampcilik",
+      "kurul": 2,
+      "ad": "Yürüyüş ve Kampçılık",
+      "tur": "Seçmeli ders",
+      "aciklama": "Dağcılığın tanımı ve tarihi, dağ ortamı, etik ve iz bırakmama, giyim ve malzeme, kamp yeri ve barınak, ateş, su ve yemek, pusulayla yön bulma, yürüyüş düzeni ve doğada sağlık. Hocanın çalışma sorularına göre hazırlandı.",
+      "kapak": "kapak.svg",
+      "sinavSoru": 20,
+      "pdf": [
+        {
+          "id": "ders",
+          "ad": "Ders kitapçığı",
+          "aciklama": "16 konunun resimli ders notu, akılda tutma kodları, yap–yapma listeleri, spot bilgiler",
+          "dosya": "pdf/yuruyus-kampcilik-ders-kitapcigi.pdf"
+        },
+        {
+          "id": "spot",
+          "ad": "Spot bilgiler",
+          "aciklama": "112 tek cümlelik bilgi ve 16 akılda tutma kodu, konu konu",
+          "dosya": "pdf/yuruyus-kampcilik-spot-bilgiler.pdf"
+        },
+        {
+          "id": "sinav",
+          "ad": "Sınav öncesi özet",
+          "aciklama": "Sekiz başlıkta son tekrar sayfaları",
+          "dosya": "pdf/yuruyus-kampcilik-sinav-oncesi.pdf"
+        },
+        {
+          "id": "soru",
+          "ad": "Soru kitapçığı",
+          "aciklama": "160 soru, cevap anahtarı ve açıklamalı çözümler",
+          "dosya": "pdf/yuruyus-kampcilik-sorular.pdf"
+        }
+      ]
+    }
+  ]
+}

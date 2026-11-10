@@ -168,6 +168,13 @@ export function disYol(adres: string): string {
       return birlestir('/dersler/zihin-haritasi', sp, hash);
     case 'kartlar':
       return birlestir(`/dersler/kartlar${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
+    case 'ek-moduller': {
+      // /ek-moduller[/<modül>]?kurul=N&b=<bölüm>&konu=<konu> → /dersler/ek-moduller/kurulN/<modül>/<bölüm>/<konu>
+      const k = sorguKurul(sp), b = s[1] ? sp.get('b') : null, konu = b ? sp.get('konu') : null;
+      sp.delete('kurul');
+      if (s[1]) { sp.delete('b'); sp.delete('konu'); }
+      return birlestir(`/dersler/ek-moduller${k ? `/kurul${k}` : ''}${s[1] ? `/${enc(s[1])}` : ''}${b ? `/${enc(b)}` : ''}${konu ? `/${enc(konu)}` : ''}`, sp, hash);
+    }
     case 'ders':
       if (s[1]) return birlestir(`/dersler/ders/kurul${anahtarKurul(s[1])}/${enc(s[1])}`, sp, hash);
       return birlestir('/dersler', sp, hash);
@@ -331,6 +338,12 @@ export function icYol(adres: string): string {
     if (arac === 'ozetler') return birlestir(`/ozetler${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'program') return birlestir(s[2] === 'ekle' ? '/program-ekle' : '/program', sp, hash);
     if (arac === 'zihin-haritasi') return birlestir('/zihin-haritasi', sp, hash);
+    if (arac === 'ek-moduller') {
+      const k = kurulSeg(s[2]);
+      const r = s.slice(k ? 3 : 2);
+      koy('kurul', k); koy('b', r[1]); koy('konu', r[2]);
+      return birlestir(`/ek-moduller${r[0] ? `/${enc(r[0])}` : ''}`, sp, hash);
+    }
     if (arac === 'kartlar') return birlestir(`/kartlar${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'kmb') {
       if (s[2]) koy('beceri', s[2]);

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Ateşi söndürme: bir, su dök; iki, karıştır; üç, dokun, soğuk mu diye bak. Yalnız toprakla örtme, köz içten yanar. Ateş çadırdan en az 3 metre uzakta olur">
+  <rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+  <g font-family="Inter, 'Liberation Sans', Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+
+    <g fill="#FFFFFF">
+      <circle cx="150" cy="150" r="92"/><circle cx="400" cy="150" r="92"/><circle cx="650" cy="150" r="92"/>
+    </g>
+
+    <!-- 1 Su dök -->
+    <g transform="translate(150,150)">
+      <g transform="translate(-14,34) scale(0.8)">
+        <path d="M0,-30 C10,-16 22,-8 22,8 C22,22 12,30 0,30 C-12,30 -22,22 -22,8 C-22,-2 -16,-8 -12,-14 C-10,-6 -6,-4 -4,-6 C-6,-16 -4,-24 0,-30 Z" fill="#C8553D"/>
+        <path d="M0,4 C6,10 10,13 10,19 C10,26 5,30 0,30 C-5,30 -10,26 -10,19 C-10,13 -4,10 0,4 Z" fill="#F2C14E"/>
+      </g>
+      <path d="M-44,66 L18,54" stroke="#1E2A2E" stroke-width="14"/><path d="M-44,66 L18,54" stroke="#E4D8C3" stroke-width="8"/>
+      <path d="M-44,54 L18,66" stroke="#1E2A2E" stroke-width="14"/><path d="M-44,54 L18,66" stroke="#E4D8C3" stroke-width="8"/>
+      <!-- su -->
+      <path d="M30,-44 Q4,-28 -16,6 L4,12 Q10,-14 26,-28 Z" fill="#CDE3EA" stroke="#24384F" stroke-width="3"/>
+      <g fill="#CDE3EA" stroke="#24384F" stroke-width="3">
+        <path d="M22,10 q7,10 0,15 q-7,-5 0,-15 Z"/>
+        <path d="M36,30 q7,10 0,15 q-7,-5 0,-15 Z"/>
+      </g>
+      <!-- kova -->
+      <g transform="translate(44,-42) rotate(-120)">
+        <path d="M-22,-22 Q0,-54 22,-22" fill="none" stroke="#1E2A2E" stroke-width="3"/>
+        <polygon points="-22,-22 22,-22 16,24 -16,24" fill="#24384F" stroke="#24384F" stroke-width="4"/>
+        <path d="M-20,-10 H20" stroke="#CDE3EA" stroke-width="3"/>
+      </g>
+    </g>
+
+    <!-- 2 Karıştır -->
+    <g transform="translate(400,150)">
+      <path d="M-56,64 Q-34,24 0,32 Q36,22 56,64 Z" fill="#E4D8C3" stroke="#1E2A2E" stroke-width="3"/>
+      <g fill="#24384F">
+        <circle cx="-26" cy="52" r="4"/><circle cx="-6" cy="46" r="4"/><circle cx="22" cy="52" r="4"/><circle cx="34" cy="44" r="3"/><circle cx="-38" cy="44" r="3"/>
+      </g>
+      <path d="M46,-62 L2,44" stroke="#1E2A2E" stroke-width="13"/><path d="M46,-62 L2,44" stroke="#D9865B" stroke-width="7"/>
+      <g fill="none" stroke="#1E2A2E" stroke-width="3">
+        <path d="M-52,22 Q-46,-6 -14,-6 M-24,-15 L-13,-6 L-24,3"/>
+        <path d="M60,26 Q62,6 46,-4"/>
+      </g>
+      <path d="M-34,-40 q-8,-10 0,-20 q8,-10 0,-20" fill="none" stroke="#7FA387" stroke-width="4"/>
+    </g>
+
+    <!-- 3 Dokun -->
+    <g transform="translate(650,150)">
+      <path d="M-56,66 Q-34,30 0,36 Q36,28 56,66 Z" fill="#E4D8C3" stroke="#1E2A2E" stroke-width="3"/>
+      <g fill="#24384F">
+        <circle cx="-26" cy="55" r="4"/><circle cx="-4" cy="50" r="4"/><circle cx="24" cy="55" r="4"/>
+      </g>
+      <g transform="translate(4,-18)">
+        <rect x="-19" y="-66" width="38" height="34" rx="7" fill="#2F5D50"/>
+        <g fill="#E4D8C3" stroke="#1E2A2E" stroke-width="3">
+          <rect x="-33" y="-26" width="11" height="30" rx="5.5" transform="rotate(-24 -27 -11)"/>
+          <rect x="-21" y="-6" width="10" height="38" rx="5"/>
+          <rect x="-10" y="-6" width="10" height="46" rx="5"/>
+          <rect x="1" y="-6" width="10" height="43" rx="5"/>
+          <rect x="12" y="-6" width="10" height="33" rx="5"/>
+          <rect x="-22" y="-38" width="45" height="40" rx="12"/>
+        </g>
+        <rect x="-19" y="-36.5" width="39" height="38" rx="10" fill="#E4D8C3"/>
+      </g>
+    </g>
+
+    <!-- adım numaraları -->
+    <g fill="#2F5D50">
+      <circle cx="78" cy="78" r="27"/><circle cx="328" cy="78" r="27"/><circle cx="578" cy="78" r="27"/>
+    </g>
+    <g fill="#FFFFFF" font-size="34" font-weight="700" text-anchor="middle">
+      <text x="78" y="90">1</text><text x="328" y="90">2</text><text x="578" y="90">3</text>
+    </g>
+
+    <!-- oklar -->
+    <g fill="none" stroke="#1E2A2E" stroke-width="3">
+      <path d="M258,150 H292 M282,141 L292,150 L282,159"/>
+      <path d="M508,150 H542 M532,141 L542,150 L532,159"/>
+    </g>
+
+    <!-- adım etiketleri -->
+    <g fill="#1E2A2E" font-size="22" font-weight="700" text-anchor="middle">
+      <text x="150" y="286">Su dök</text>
+      <text x="400" y="286">Karıştır</text>
+      <text x="650" y="286">Dokun: soğuk mu?</text>
+    </g>
+
+    <!-- uyarı -->
+    <rect x="32" y="346" width="424" height="64" rx="32" fill="#FFFFFF"/>
+    <circle cx="68" cy="378" r="20" fill="#C8553D"/>
+    <path d="M60,370 l16,16 M76,370 l-16,16" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="100" y="384" font-size="18" fill="#1E2A2E">Yalnız toprakla örtme: köz içten yanar</text>
+
+    <!-- mesafe -->
+    <rect x="476" y="346" width="292" height="64" rx="32" fill="#CFE0CF"/>
+    <polygon points="494,392 514,364 534,392" fill="#D9865B" stroke="#D9865B" stroke-width="3"/>
+    <polygon points="509,392 514,379 519,392" fill="#1E2A2E"/>
+    <text x="548" y="386" font-size="18" fill="#1E2A2E">Çadırdan en az <tspan font-size="26" font-weight="700" fill="#2F5D50">3 m</tspan></text>
+  </g>
+</svg>

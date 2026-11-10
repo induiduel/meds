@@ -1,0 +1,658 @@
+{
+  "no": 6,
+  "baslik": "Ateş, Ocak, Su ve Yemek",
+  "ozet": "Ateşi güvenle yakıp söndürmek, ocağı doğru kullanmak, suyu içilir kılmak, yiyeceği seçip saklamak.",
+  "konular": [
+    {
+      "id": "6a",
+      "baslik": "Kamp ateşi ve kamp ocağı",
+      "ozet": "Ateş nerede yakılır, nasıl söndürülür; ocak, mum ve fener nerede kullanılır.",
+      "gorsel": "ates.svg",
+      "gorsel_alt": "Toprak zeminde, çukurda, taş çemberle çevrili kamp ateşi; çadır en az üç metre uzakta, yanında kav, çıra ve odun yığınları.",
+      "ek_gorseller": [
+        { "dosya": "ates-sondurme.svg", "alt": "Ateş söndürmenin adımları: su dök, karıştır, elle dokunarak sına, külü uzaklaştır, ateş yerinin üstünü kapat." }
+      ],
+      "bolumler": [
+        {
+          "baslik": "Ateş nerede yakılır?",
+          "ekran": "Kamp ateşi **ısınma** ve **yemek pişirme** için yakılır; önce yeri seçilir.\n\n- **Zemin:** toprak zemin; tahta ya da çimen değil\n- **Çukur:** önceden açılmış çukurda yakılır\n- **Taş çember:** ateşi sınırlar; ısı yalıtımını artırmaz\n- **Uzaklık:** çadırdan en az 3 m\n- **Ağaç:** ağaç gövdelerine yakın kurulmaz\n\n> [!IMPORTANT] En güvenli ateş: toprak zeminde, taşlarla çevrili.",
+          "ses": [
+            "Kamp ateşinin iki işi vardır, seni ısıtır ve yemeğini pişirir.",
+            "Yani ateş yalnız ısınmak için yakılmaz, akşam çorbası da onun üstünde kaynar.",
+            "Ateşi toprak zeminde, önceden açılmış bir çukurda yak.",
+            "Tahta ya da çimen zemin kendisi de yanar, oraya ateş kurulmaz.",
+            "Çukurun çevresine taş diz, çünkü taşlar ateşi sınırlar.",
+            "Taş dizmek ısı yalıtımını artırmaz, bunu karıştırma.",
+            "Ateş yeri çadırdan en az üç metre uzakta olsun, ağaç gövdelerine de yaklaşmasın."
+          ]
+        },
+        {
+          "baslik": "Yakmadan önce: rüzgâr ve zemin",
+          "ekran": "Kibriti çakmadan önce iki şeye bakılır: rüzgâr ve zemin.\n\n- **Rüzgâr yönü:** ateş yakmadan önce kontrol edilir\n- **İlk iş:** zemini temizlemek; etraftaki kuru yapraklar uzaklaştırılır\n- **Rüzgârlı hava:** ateş yakılmaz; kıvılcımlar çevreye sıçrar, alev yayılır\n- **Ateş başında:** ateş küçük tutulur, başı boş bırakılmaz\n\n> [!IMPORTANT] Ateşin etrafını temizlemek yangın riskini azaltır.",
+          "ses": [
+            "Ateş yakmadan önce rüzgâr yönünü kontrol et.",
+            "Duman ve kıvılcım rüzgârın gittiği yöne gider, çadırın o yönde kalmasın.",
+            "Sonra ilk iş olarak zemini temizle, etraftaki kuru yaprakları topla.",
+            "Temiz bir çevre, kaçan kıvılcımın tutunacak yer bulamaması demektir.",
+            "Hava rüzgârlıysa ateşten vazgeç.",
+            "Rüzgâr kıvılcımları çevreye sıçratır ve alevi kısa sürede yayar.",
+            "Ateş yanarken onu küçük tut ve başından ayrılma.",
+            "Yanan ateşin sorumlusu, onu yakan kişidir."
+          ]
+        },
+        {
+          "baslik": "Ateşi kurmak: kav, çıra, odun",
+          "ekran": "Ateş üç şeyle yaşar: ısı, yakıt ve oksijen; yakıt küçükten büyüğe eklenir.\n\n- **Kav (tutuşturucu):** kuru ot, çam çırası talaşı, vazelinli pamuk\n- **Çıra:** kibrit çöpü ile kalem kalınlığı arasında kuru ince dallar\n- **Odun:** bilek kalınlığı ve üstü; aralarında hava boşluğu bırakılır\n- **Başlatıcı:** çakmak ve yedeği olarak su geçirmez kibrit\n- **Islak havada:** ölü dalın içi kurudur; dal yarılıp içinden talaş yontulur",
+          "ses": [
+            "Ateşi üç ayaklı bir tabure gibi düşün; ayakları ısı, yakıt ve oksijendir.",
+            "Biri çekilirse tabure devrilir, yani ateş söner.",
+            "Yakıtı merdiven gibi küçükten büyüğe diz.",
+            "İlk basamak kavdır; kuru ot ya da vazelinli pamuk küçücük alevle tutuşur.",
+            "İkinci basamak çıra, yani kalem kalınlığına kadar kuru ince dallardır.",
+            "Son basamak bilek kalınlığındaki odundur; aralarında boşluk bırak ki ateş nefes alsın.",
+            "Üç yığını da kibriti çakmadan önce hazırla.",
+            "Yağmurda umudu kesme, ölü dalı yar; içi kupkurudur."
+          ]
+        },
+        {
+          "baslik": "Söndürme: dök, karıştır, dokun",
+          "ekran": "Kamp alanı terk edilirken en önemli işlem ateşi söndürmektir.\n\n- **Dök:** közlerin üzerine su dökülür\n- **Karıştır:** kül ve közler karıştırılır\n- **Dokun:** küller elle dokunulacak kadar soğuyunca ateş sönmüştür\n- **Kül:** kül ve yanık kalıntıları tamamen uzaklaştırılır\n- **Ateş yeri:** üstü doğal malzeme ile kapatılır\n\n> [!IMPORTANT] Üzerine yalnız toprak atmak yetmez; köz toprağın altında için için yanar.",
+          "ses": [
+            "Kamptan ayrılırken yapacağın en önemli iş ateşi söndürmektir.",
+            "Önce közlerin üzerine bol su dök, sonra bir dalla külleri karıştır.",
+            "Su altta kalan közlere ancak karıştırınca ulaşır.",
+            "Küllere elinle dokunabiliyorsan ateş gerçekten sönmüştür.",
+            "Üzerine yalnız toprak atmak yetmez; köz toprağın altında uzun süre için için yanabilir.",
+            "Ateşi tam söndürmeden ayrılmak yangın riskini artırır.",
+            "Soğuyan külü ve yanık kalıntılarını oradan tamamen uzaklaştır.",
+            "Son olarak ateş yerinin üstünü doğal malzemeyle kapat, izin kalmasın."
+          ]
+        },
+        {
+          "baslik": "Kamp ocağı",
+          "ekran": "Kamp ocağı taşınabilir, kapalı sistemli bir ateştir; odun aratmaz.\n\n- **Yakıt:** genellikle propan ve bütan gazları\n- **Yer:** açık ve havadar alan; çadırdan uzak\n- **Rüzgâr yönü:** ocak kullanırken de dikkate alınır\n- **Likit (sıvı) yakıtlı ocak:** ateşleme öncesi sızdırmazlık kontrolü yapılır\n- **Ateş yasak bölge:** taşınabilir, kapalı sistem kamp ocağı kullanılır\n\n> [!NOTE] Soğukta ve yüksek irtifada en çok güç kaybeden: kartuşlu propan–bütan ocak.",
+          "ses": [
+            "Kamp ocaklarında yakıt olarak genellikle propan ve bütan gazları kullanılır.",
+            "Ocağını açık ve havadar bir alanda, çadırdan uzakta yak.",
+            "Rüzgâr yönüne ocakta da bak; alev yana yatarsa hem yakıt hem zaman boşa gider.",
+            "Likit yakıtlı ocağın varsa ateşlemeden önce sızdırmazlık kontrolü yap.",
+            "Sızan yakıt, kibritle buluştuğunda sana sormadan tutuşur.",
+            "Ateş yakmanın yasak olduğu bölgede çözüm bellidir, taşınabilir kapalı sistem ocak kullanırsın.",
+            "Soğukta ve yüksek irtifada kartuşlu propan bütan ocak, gücünü en çok kaybeden ocaktır."
+          ]
+        },
+        {
+          "baslik": "Çadırda alev olmaz: ocak, mum, fener",
+          "ekran": "Çadırın içinde alev yanmaz; ışık fenerden gelir.\n\n- **Çadırda ocak:** karbonmonoksit zehirlenmesi, yangın, oksijenin azalması, yanık\n- **Mum:** çadır içinde yakılmaz; çadır içi yangın riskini en çok o artırır\n- **Fener:** pilli ya da şarjlı olan en güvenlisidir; amacı gece görüşüdür\n- **Gece:** fener el altında durur; kafa lambası + yedek pilli el feneri\n- **Yanıkta:** 10–20 dk serin akan su; buz ve diş macunu yok\n\n> [!IMPORTANT] Karbonmonoksit renksiz ve kokusuzdur; baş ağrısı ve bulantıda temiz havaya çık, 112'yi ara.",
+          "ses": [
+            "Ocağı çadırın içinde yakmanın dört tehlikesi vardır.",
+            "Karbonmonoksit zehirler, alev çadırı tutuşturur, kapalı ortamda oksijen azalır ve sıcak yüzey yakar.",
+            "Karbonmonoksit renksiz ve kokusuzdur, geldiğini baş ağrısı ve bulantıyla anlarsın.",
+            "Mum da çadıra girmez; çadır içi yangın riskini en çok artıran şey odur.",
+            "Aydınlatman pilli ya da şarjlı olsun, benzinli ve gazyağlı lambayı unut.",
+            "Gece fenerini el altında tut; ışık için aleve muhtaç kalmazsın ve yangın riski azalır.",
+            "En dengeli ikili, kafa lambası ile yedek pilli el feneridir.",
+            "Elin yanarsa yanığı serin akan suyun altında tut, buz ya da diş macunu sürme."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "D-K-D",
+        "acilim": "Dök · Karıştır · Dokun",
+        "not": "Ateşi söndürmenin üç adımı; ardından kül uzaklaştırılır ve ateş yerinin üstü doğal malzemeyle kapatılır."
+      },
+      "yap": [
+        "Ateşten önce rüzgâr yönünü kontrol et",
+        "Zemini temizle, kuru yaprakları uzaklaştır",
+        "Ateşi toprak zeminde, çukurda, taş çember içinde yak",
+        "Közlere su dök ve karıştır",
+        "Ocağı açık ve havadar alanda kullan"
+      ],
+      "yapma": [
+        "Rüzgârlı havada ateş yakma",
+        "Ateşi yalnız toprakla örtüp ayrılma",
+        "Çadır içinde ocak ya da mum yakma",
+        "Ateşi ağaç gövdesine ya da çadıra yakın kurma"
+      ],
+      "spotlar": [
+        { "metin": "Kamp ateşi **ısınma ve yemek pişirme** için kullanılır; yalnız ısınmak için değil.", "ses": "Kamp ateşi hem ısınmak hem de yemek pişirmek için kullanılır." },
+        { "metin": "Ateş **toprak zeminde**, önceden açılmış **çukurda** yakılır; çadırdan en az **3 m** uzakta durur.", "ses": "Ateşi toprak zeminde, önceden açılmış çukurda ve çadırdan en az üç metre uzakta yak." },
+        { "metin": "Ateşin çevresine dizilen taşlar ateşi **sınırlar**; ısı yalıtımını artırmaz.", "ses": "Ateşin çevresine dizdiğin taşlar ateşi sınırlar, ısı yalıtımını artırmaz." },
+        { "metin": "Ateş yakmadan önce **rüzgâr yönü** kontrol edilir; rüzgârlı havada kıvılcımlar sıçrar, alev yayılır.", "ses": "Ateş yakmadan önce rüzgâr yönünü kontrol et; rüzgârlı havada kıvılcım sıçrar ve alev yayılır." },
+        { "metin": "Söndürmek için **su dök ve karıştır**; üzerine yalnız toprak atmak yetmez.", "ses": "Ateşi söndürmek için üzerine su dök ve karıştır; yalnız toprak atmak yetmez." },
+        { "metin": "Kamp ocağının yakıtı genellikle **propan ve bütan** gazlarıdır; ocak açık ve havadar alanda kullanılır.", "ses": "Kamp ocağının yakıtı genellikle propan ve bütandır; ocağı açık ve havadar alanda kullan." },
+        { "metin": "Çadır içinde **ocak ve mum yakılmaz**; fener **pilli ya da şarjlı** olur.", "ses": "Çadırın içinde ocak ve mum yakma; ışığın pilli ya da şarjlı fenerden gelsin." }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "sirala",
+          "baslik": "Ateşi söndür, izini sil",
+          "soru": "Doğru sıraya diz",
+          "adimlar": [
+            "Közlerin üzerine su dök",
+            "Kül ve közleri karıştır",
+            "Küllere elle dokunarak soğuduğunu sına",
+            "Kül ve yanık kalıntılarını uzaklaştır",
+            "Ateş yerinin üstünü doğal malzemeyle kapat"
+          ],
+          "aciklama": "Önce ateş su ve karıştırmayla tam söndürülür; soğuyan kalıntılar uzaklaştırılır, en son ateş yerinin üstü kapatılır."
+        },
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            { "metin": "Ateşin çevresine dizilen taşlar ısı yalıtımını artırmak içindir.", "dogru": false, "aciklama": "Taşlar ateşi sınırlar; ısı yalıtımını artırmaz." },
+            { "metin": "Ateş yakmanın yasak olduğu bölgede taşınabilir ocak kullanılır.", "dogru": true, "aciklama": "Yasak bölgede uygun çözüm taşınabilir, kapalı sistem kamp ocağıdır." },
+            { "metin": "Ateş sönsün diye üzerine toprak atmak yeterlidir.", "dogru": false, "aciklama": "Köz toprağın altında yanmayı sürdürür; su dökülür ve karıştırılır." },
+            { "metin": "Likit yakıtlı ocak ateşlenmeden önce sızdırmazlık kontrolü yapılır.", "dogru": true, "aciklama": "Sızan yakıt tutuşabileceği için ateşlemeden önce kontrol edilir." },
+            { "metin": "Yemek pişirirken ocağı çadırın içinde kullanmak güvenlidir.", "dogru": false, "aciklama": "Çadırda ocak karbonmonoksit zehirlenmesi, yangın, oksijen azalması ve yanık tehlikesi taşır." }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Kamp ateşi için en güvenli yer aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Çimen zeminde, taş dizilmemiş açık alan",
+            "B": "Toprak zeminde, önceden açılmış çukur",
+            "C": "Çadırın girişindeki düzlük",
+            "D": "Ağaç gövdesinin dibindeki kuytu",
+            "E": "Tahta zeminli seyir platformu"
+          },
+          "dogru": "B",
+          "cozum": "Kamp ateşi toprak zeminde, önceden açılmış çukurda ve taşlarla çevrili olarak yakılır; çadırdan en az 3 m uzakta durur.",
+          "siklar": {
+            "A": "Çimen zemin kuruyunca kendisi yakıta dönüşür ve taş çember olmadığı için ateşi sınırlayan bir şey kalmaz; ateş çimen üstünde yakılmaz.",
+            "B": "Toprak tutuşmaz, önceden açılmış çukur da közü bir arada tutar; çevresine taş dizilince ateş sınırlanmış olur ve en güvenli düzen kurulur.",
+            "C": "Çadırın girişi ateşe en yakın yerdir; oysa ateş çadırdan en az 3 m uzakta olmalıdır, yoksa kıvılcım kumaşı tutuşturabilir.",
+            "D": "Ağaç gövdesinin dibi kuytu ve korunaklı görünür ama gövdenin kendisi yakıttır; kamp ateşi ağaç gövdelerine yakın kurulmaz.",
+            "E": "Tahta zemin ısınınca tutuşabilen bir yakıttır; ateş tahta üzerinde değil, yanmayan toprak zeminde ve çukurun içinde yakılır."
+          },
+          "ses_cozum": "Ateş toprak zeminde, önceden açılmış çukurda yakılır ve çevresi taşlarla sınırlanır. Çimen, tahta ve ağaç gövdesi yakıttır; çadırın girişi ise üç metre kuralını çiğner. Güvenli ateş, yanmayan zeminde başlar."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Kamp ocaklarında yakıt olarak genellikle hangi gazlar kullanılır?",
+          "secenekler": {
+            "A": "Propan ve bütan",
+            "B": "Karbonmonoksit ve oksijen",
+            "C": "Metan ve hidrojen",
+            "D": "Azot ve karbondioksit",
+            "E": "Helyum ve oksijen"
+          },
+          "dogru": "A",
+          "cozum": "Kamp ocaklarında yakıt olarak genellikle propan ve bütan gazları kullanılır; karbonmonoksit yakıt değil, yanma sırasında çıkan zehirli gazdır.",
+          "siklar": {
+            "A": "Propan ve bütan, kartuşlarda sıkıştırılarak taşınan yanıcı gazlardır; kamp ocaklarında yakıt olarak genellikle bu ikisi kullanılır.",
+            "B": "Karbonmonoksit ocağın yakıtı değil, kapalı yerde yanma sırasında oluşan renksiz ve kokusuz zehirli gazdır; oksijen ise yanmayı sağlar ama yakıt sayılmaz.",
+            "C": "Metan ve hidrojen yanıcı gazlardır ama kamp ocağı kartuşlarında kullanılmaz; kartuşların alışılmış dolgusu propan ve bütandır.",
+            "D": "Azot ve karbondioksit yanmayan gazlardır; karbondioksit alevi boğar, bu yüzden ikisi de ocakta yakıt olarak kullanılamaz.",
+            "E": "Helyum yanmayan bir gazdır, oksijen de tek başına yakıt değildir; bu ikili ocağı çalıştırmaz, helyum ancak balon şişirmeye yarar."
+          },
+          "ses_cozum": "Kamp ocaklarının yakıtı genellikle propan ve bütan gazlarıdır. Karbonmonoksit ise yakıt değildir, ocağı çadırda yakarsan seni zehirleyen gazdır. Azot, helyum ve karbondioksit ise hiç yanmaz."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Kamp ateşi yakmadan önce güvenlik için öncelikle aşağıdakilerden hangisi kontrol edilmelidir?",
+          "secenekler": {
+            "A": "Kartuşun sızdırmazlığı",
+            "B": "Fenerin pil düzeyi",
+            "C": "Rüzgâr yönü",
+            "D": "Taşların ısı yalıtımı",
+            "E": "Çadır kapısının açıklığı"
+          },
+          "dogru": "C",
+          "cozum": "Kamp ateşi yakmadan önce rüzgâr yönü kontrol edilir; rüzgâr kıvılcımları sıçratır ve alevi yayar, rüzgârlı havada ateş yakılmaz.",
+          "siklar": {
+            "A": "Sızdırmazlık kontrolü likit yakıtlı ocak ateşlenmeden önce yapılır; odunla yakılan kamp ateşinde kartuş ya da yakıt deposu bulunmaz.",
+            "B": "Fener gece görüşü sağlar ve el altında durmalıdır; ancak pil düzeyi ateşin nereye ve ne zaman yakılacağını belirlemez.",
+            "C": "Rüzgâr yönü kıvılcımın ve dumanın nereye gideceğini gösterir; ateş yakmadan önce kontrol edilir, hava rüzgârlıysa ateş yakılmaz.",
+            "D": "Ateşin çevresine dizilen taşlar ateşi sınırlar, ısı yalıtımını artırmaz; bu yüzden ölçülecek ya da kontrol edilecek bir yalıtım değeri yoktur.",
+            "E": "Çadır ateşten en az 3 m uzakta durur; kapısının açık ya da kapalı olması ateşi yakıp yakmama kararını değiştirmez."
+          },
+          "ses_cozum": "Ateş yakmadan önce rüzgâr yönüne bakılır. Rüzgâr kıvılcımları çevreye sıçratır ve alevi yayar; hava rüzgârlıysa ateş hiç yakılmaz. Sızdırmazlık kontrolü ise ateşin değil, likit yakıtlı ocağın işidir."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Ateşin çevresine taş dizilmesinin amacı aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Isı yalıtımını artırmak",
+            "B": "Kıvılcım çıkışını tümüyle önlemek",
+            "C": "Odunun daha hızlı kurumasını sağlamak",
+            "D": "Ateşin oksijenini kesmek",
+            "E": "Ateşi sınırlamak"
+          },
+          "dogru": "E",
+          "cozum": "Taş çember ateşi sınırlar ve közün yayılmasını önler; ısı yalıtımını artırdığı düşüncesi yaygın ama yanlış bir inanıştır.",
+          "siklar": {
+            "A": "Isı yalıtımı ısının kaçmasını azaltmak demektir; taş çember böyle bir iş görmez, bu yaygın inanış doğru değildir.",
+            "B": "Taşlar közü bir arada tutar ama rüzgârda kıvılcımların çevreye sıçramasını tümüyle önleyemez; bu yüzden rüzgârlı havada ateş yakılmaz.",
+            "C": "Odun kuru seçilir ve ateş yakılmadan önce hazırlanır; taş çemberin görevi odun kurutmak değil, ateşin alanını belirlemektir.",
+            "D": "Oksijen ateşin üç gereksiniminden biridir; kesilirse ateş söner. Taş çember havayı kesmez, ateş taşların arasında yanmayı sürdürür.",
+            "E": "Taş çember ateşin yayılabileceği alanı belirler ve közü içeride tutar; toprak zeminde, taşlarla çevrili ateş en güvenli düzendir."
+          },
+          "ses_cozum": "Taşlar ateşi sınırlar, yani közün ve alevin çevreye yayılmasını zorlaştırır. Taş dizmenin ısı yalıtımını artırdığı düşüncesi yaygındır ama doğru değildir. Taş bir battaniye değil, bir sınır çizgisidir."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Kamp ateşinin söndürülmesi ve alanın terk edilmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Közlerin üzerine su dökülür ve karıştırılır",
+            "B": "Kül ve yanık kalıntıları tamamen uzaklaştırılır",
+            "C": "Ateş yerinin üstü doğal malzemeyle kapatılır",
+            "D": "Üzerine toprak atmak sönme için yeterlidir",
+            "E": "Ayrılırken en önemli işlem ateşi söndürmektir"
+          },
+          "dogru": "D",
+          "cozum": "Yalnız toprak atmak yetmez; köz toprağın altında yanmayı sürdürür. Su dökülür, karıştırılır, kalıntılar uzaklaştırılır ve ateş yerinin üstü kapatılır.",
+          "siklar": {
+            "A": "Su közün ısısını alır, karıştırmak da suyun altta kalan közlere ulaşmasını sağlar; ateşin söndüğünden emin olmanın doğru yolu budur.",
+            "B": "Soğuyan kül ve yanık kalıntıları kamp alanında bırakılmaz, tamamen uzaklaştırılır; böylece alanda ateşten geriye iz kalmaz.",
+            "C": "Ateş söndürülüp kalıntılar uzaklaştırıldıktan sonra ateş yerinin üstü doğal malzemeyle kapatılır; alanı eski görünümüne yaklaştıran doğru bir adımdır.",
+            "D": "Toprak alevi örter ama közü soğutmaz; köz toprağın altında için için yanmayı sürdürebilir, bu yüzden toprak atmak tek başına yeterli sayılmaz.",
+            "E": "Sönmemiş ateşi bırakıp gitmek yangın riskini artırır; bu nedenle kamp alanı terk edilirken yapılacak en önemli işlem ateşi söndürmektir."
+          },
+          "ses_cozum": "Yanlış olan, toprak atmanın yeterli sayılmasıdır. Köz toprağın altında için için yanmayı sürdürür. Doğrusu su dökmek, karıştırmak, kalıntıları uzaklaştırmak ve ateş yerinin üstünü doğal malzemeyle kapatmaktır."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Aşağıdakilerden hangisi kamp ocağını çadır içinde kullanmanın tehlikelerinden biridir?",
+          "secenekler": {
+            "A": "Kapalı ortamda oksijenin azalması",
+            "B": "Çadır kumaşının UV dayanımının azalması",
+            "C": "Kartuşun soğukta güç kaybetmesi",
+            "D": "Kıvılcımların rüzgârla çevreye sıçraması",
+            "E": "Taş çemberin ateşi sınırlayamaması"
+          },
+          "dogru": "A",
+          "cozum": "Çadır içinde ocak dört tehlike taşır: karbonmonoksit zehirlenmesi, yangın, kapalı ortamda oksijenin azalması ve sıcak yüzeyle yanık.",
+          "siklar": {
+            "A": "Alev yanarken oksijen tüketir; çadır gibi kapalı bir ortamda oksijen azalır ve karbonmonoksit birikir, bu da çadırda ocak kullanmanın gerçek tehlikelerindendir.",
+            "B": "UV dayanımı kumaşın güneş ışığına karşı direncidir; ocak alevi çadırı tutuşturabilir ama kumaşın UV dayanımını azaltmak bu tehlikeler arasında sayılmaz.",
+            "C": "Kartuşlu propan–bütan ocak soğukta ve yüksek irtifada güç kaybeder; bu bir verim sorunudur, çadırın içinde kullanmaya özgü bir tehlike değildir.",
+            "D": "Rüzgârın kıvılcımları sıçratması açık havadaki kamp ateşinin tehlikesidir; çadırın içinde sorun rüzgâr değil, kapalı ortamın kendisidir.",
+            "E": "Taş çember açık havada yakılan kamp ateşini sınırlamak için kurulur; ocakla ya da çadırın içiyle bir ilgisi yoktur."
+          },
+          "ses_cozum": "Ocak çadırın içinde yanarken oksijeni tüketir ve karbonmonoksit biriktirir. Buna yangın ve sıcak yüzey yanığı da eklenir. Kumaşın güneşe dayanımının azalması ise bu tehlikelerden biri değildir."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki kombinasyonlardan hangisi kamp alanında yangın riskini en çok artıran yanlış uygulamadır?",
+          "secenekler": {
+            "A": "Pilli fener + temizlenmiş zemin + taş çember",
+            "B": "Kapalı sistem ocak + havadar alan + sızdırmazlık kontrolü",
+            "C": "Çadır içinde mum + rüzgârlı havada ateş + toprakla örtüp ayrılmak",
+            "D": "Kafa lambası + çadırdan 3 m uzakta ateş + su dökmek",
+            "E": "Şarjlı fener + toprak zeminde çukur + közleri karıştırmak"
+          },
+          "dogru": "C",
+          "cozum": "Çadır içinde mum çadır içi yangın riskini en çok artırır; rüzgâr alevi yayar, yalnız toprakla örtülen köz de yanmayı sürdürür.",
+          "siklar": {
+            "A": "Pilli fener alevsiz ışık verir, temizlenmiş zemin kıvılcıma tutunacak yer bırakmaz, taş çember ateşi sınırlar; üçü de riski azaltan uygulamalardır.",
+            "B": "Kapalı sistem ocak ateşin yasak olduğu yerde bile uygun çözümdür; havadar alanda ve sızdırmazlık kontrolü yapılarak kullanılması doğru uygulamadır.",
+            "C": "Mum çadır içi yangın riskini en çok artıran şeydir, rüzgâr kıvılcımı sıçratıp alevi yayar, toprakla örtülen köz yanmayı sürdürür; üç hata üst üste biner.",
+            "D": "Kafa lambası güvenli aydınlatmadır, 3 m çadır için en az güvenli uzaklıktır, su dökmek de söndürmenin doğru ilk adımıdır.",
+            "E": "Şarjlı fener alev içermez, toprak zemindeki çukur ateş için doğru yerdir, közleri karıştırmak da söndürmenin gerekli bir adımıdır."
+          },
+          "ses_cozum": "En riskli üçlü, çadır içinde mum, rüzgârlı havada ateş ve közü yalnız toprakla örtüp ayrılmaktır. Üçü de tek tek yanlıştır, birlikte yangına çağrıdır. Öteki üçlülerdeki her uygulama riski azaltır."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Kartuşlu propan–bütan karışımlı kamp ocağıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Çadır içinde kapı açıkken güvenle kullanılabilir",
+            "B": "Soğuk ve yüksek irtifada performans kaybına en açık ocaktır",
+            "C": "Ateşin yasak olduğu bölgelerde kullanılamaz",
+            "D": "Rüzgâr yönü kullanımı sırasında dikkate alınmaz",
+            "E": "Karbonmonoksit oluşturmadığı için kapalı alana uygundur"
+          },
+          "dogru": "B",
+          "cozum": "Kartuşlu propan–bütan ocak soğukta ve yüksek irtifada en çok güç kaybeden ocaktır; yine de ateş yasak bölgede uygun çözümdür, çadırda kullanılmaz.",
+          "siklar": {
+            "A": "Kapının açık olması çadırı açık ve havadar bir alan yapmaz; karbonmonoksit, yangın ve yanık tehlikesi sürer, ocak çadır içinde kullanılmaz.",
+            "B": "Kartuştaki gaz soğukta ve yüksek irtifada gücünü yitirir; bu koşullarda performans kaybına en açık ocak kartuşlu propan–bütan ocaktır.",
+            "C": "Ateş yakmanın yasak olduğu bölgede önerilen çözüm tam da taşınabilir, kapalı sistem kamp ocağıdır; kartuşlu ocak bu tanıma uyar.",
+            "D": "Rüzgâr alevi yatırır ve savurur; bu yüzden rüzgâr yönü yalnız kamp ateşinde değil, ocak kullanımı sırasında da dikkate alınır.",
+            "E": "Her alevli ocak kapalı alanda karbonmonoksit oluşturabilir ve oksijeni azaltır; kartuşlu ocak da bunun dışında kalmaz, kapalı alana uygun olmaz."
+          },
+          "ses_cozum": "Kartuşlu propan bütan ocak, soğukta ve yüksek irtifada gücünü en çok kaybeden ocaktır. Yine de ateşin yasak olduğu bölgede kullanılır. Çadırın içinde ise kapı açık olsa bile yakılmaz."
+        }
+      ]
+    },
+    {
+      "id": "6b",
+      "baslik": "Su, yemek ve hijyen",
+      "ozet": "Suyu az ama sık içmek, arıtmak; hafif ama kalorili yemek; yiyeceği kapalı saklamak, eli temiz tutmak.",
+      "gorsel": "su-aritma.svg",
+      "gorsel_alt": "Doğal suyu içilir kılan üç yöntem yan yana: kaynatma, su arıtma tableti ve mekanik filtre.",
+      "ek_gorseller": [
+        { "dosya": "su-bulma.svg", "alt": "Arazide su ipuçları: aşağı inen vadi, yeşil ve gür bitki örtüsü, birleşen hayvan izleri, kuşların uçuş yönü." },
+        { "dosya": "kamp-ucgeni.svg", "alt": "Kamp üçgeni: uyuma, pişirme ve yiyecek saklama noktaları üç ayrı köşede." }
+      ],
+      "bolumler": [
+        {
+          "baslik": "Su: az ama sık",
+          "ekran": "Su susayınca değil, düzenle içilir.\n\n- **İçme düzeni:** az ama sık aralıklarla; yalnız molada değil\n- **Yürüyüş öncesi:** vücudun sıvı dengesi sağlanır\n- **İdrar rengi:** açık saman sarısı iyi; koyu sarı ve az idrar susuzluk\n- **Yüksek irtifa:** nefes verirken su buharı kaybı artar\n- **Taşıma:** sırt çantasına entegre su torbası (hydration pack) en dengelisi\n\n> [!IMPORTANT] Su ve yiyeceği planlı kullanmak kamp güvenliğinin gereğidir.",
+          "ses": [
+            "Yürüyüşte suyu az ama sık aralıklarla iç.",
+            "Çok ve seyrek içmek ya da yalnız molayı beklemek sıvı kaybını karşılamaz.",
+            "Yola çıkmadan önce de su iç; yürüyüş öncesi vücudun sıvı dengesi sağlanmış olmalı.",
+            "Durumunu idrarının renginden okursun; açık saman sarısı iyidir, koyu sarı ise susuzluğu gösterir.",
+            "Soğukta terlemiyorum diye aldanma.",
+            "Yüksek irtifada nefes verirken su buharı kaybın artar, yani farkında olmadan su kaybedersin.",
+            "Suyu sırt çantasına entegre su torbasında taşırsan dengen bozulmaz, yürürken de yudumlarsın.",
+            "Suyunu ve yiyeceğini planlı kullan; ikisi de yolun sonuna kadar yetmeli."
+          ]
+        },
+        {
+          "baslik": "Suyu nerede bulursun?",
+          "ekran": "Su ihtiyacı yalnız dere ve göllerden karşılanmaz.\n\n- **Yanında taşıdığın su:** ilk ve en güvenli seçenek\n- **Yağmur ve çiy:** yağmur brandayla toplanır; çiy temiz bezle otlardan silinir\n- **Kar ve buz:** eritilerek içilir\n- **Arazi ipuçları:** aşağı in, yeşil ve gür bitkiye bak\n- **Canlı ipuçları:** hayvan izlerinin birleştiği yön, sabah akşam kuşların uçuşu\n\n> [!NOTE] Deniz suyu ve idrar içilmez.",
+          "ses": [
+            "Su ihtiyacını yalnız dere ve gölden karşılamak zorunda değilsin.",
+            "En güvenli su, evden çıkarken yanına aldığın sudur.",
+            "Yağmuru brandayla toplayabilir, sabah çiyini temiz bir bezle otlardan silip sıkabilirsin.",
+            "Kar ve buz da sudur, ama önce eritirsin.",
+            "Su ararken araziyi oku; su aşağıya akar, sen de aşağı in.",
+            "Yeşil ve gür bitki örtüsü suyun yakın olduğunu söyler.",
+            "Hayvan izlerinin birleştiği yön ve kuşların sabah akşam uçtuğu taraf çoğu zaman suya çıkar.",
+            "Deniz suyu ve idrar ise susuzluğu gidermez, sakın içme."
+          ]
+        },
+        {
+          "baslik": "Suyu içilir kılmak: kaynat, tablet, filtre",
+          "ekran": "Doğal su kaynakları kaynatılmadan içilmez; berrak su da mikroorganizma taşır.\n\n- **Kaynatma:** en az 1 dakika; mikroorganizmaları öldürür\n- **Su arıtma tableti:** mikroorganizmaları öldürmek için kullanılır\n- **Mekanik filtre:** 0,1–0,2 mikron gözenekli\n- **Filtrenin sınırı:** kimyasal kirleticileri tamamen yok etmez\n- **En yukarı nokta:** suyu oradan almak tek başına yeterli değildir\n\n> [!IMPORTANT] Kimyasal kirlilik kuşkusu varsa su başka yerden alınır.",
+          "ses": [
+            "Dere ne kadar berrak akarsa aksın, doğal su kaynatılmadan içilmez.",
+            "Çünkü gözle görülmeyen mikroorganizmalar ishal yapar ve yürüyüşü orada bitirir.",
+            "Kaynatmak onları öldürür; su fokurdadıktan sonra en az bir dakika bekle.",
+            "Ocağın yoksa su arıtma tableti de mikroorganizmaları öldürür; kutusunda yazan süre kadar beklersin.",
+            "Mekanik filtre üçüncü yoldur; gözenekleri mikronun onda biri ile onda ikisi arasındadır.",
+            "Ama filtre kimyasal kirleticileri tamamen yok etmez.",
+            "Suyu derenin en yukarı noktasından almak iyi bir alışkanlıktır, fakat tek başına yeterli değildir.",
+            "Yukarıdan da alsan kaynat, tablet at ya da filtreden geçir."
+          ]
+        },
+        {
+          "baslik": "Kamp yemeği: hafif ama kalorili",
+          "ekran": "Çantadaki yiyecek hafif olmalı, enerjisi yüksek olmalı.\n\n- **Akşam yemeği:** iyi ve dengeli bir akşam yemeği enerji sağlar\n- **Besin:** karbonhidrat ve protein açısından zengin yiyecekler enerji kaybını önler\n- **Seçim:** hafif ama kalorili yiyecek\n- **Plana girenler:** yağ içeren gıdalar ve atıştırmalık kuruyemiş\n- **Enerji:** karbonhidrat 4, protein 4, yağ 9 kcal/g\n\n> [!IMPORTANT] En kritik hata: yalnızca hacmi büyük ama kalorisi düşük gıda taşımak.",
+          "ses": [
+            "Kampta enerjini akşam yemeği toplar; bu yüzden iyi ve dengeli bir akşam yemeği önemlidir.",
+            "Enerji kaybını önlemek için karbonhidrat ve protein açısından zengin yiyecekler ye.",
+            "Karbonhidrat hızlı yakıttır, protein ise yorulan kasını onarır.",
+            "Çantaya girecek yiyeceğin ölçütü basittir, hafif ama kalorili olacak.",
+            "Yağ içeren gıdalar ve kuruyemiş bu yüzden plana girer.",
+            "Bir gram yağ dokuz kilokalori taşır, karbonhidrat ve protein ise dörder kilokalori.",
+            "Planlamadaki en kritik hata, yalnızca hacmi büyük ama kalorisi düşük gıda taşımaktır.",
+            "Bir kucak marul ve salatalık çantayı doldurur ama seni yokuşun yarısında bırakır."
+          ]
+        },
+        {
+          "baslik": "Yiyeceği saklamak ve mutfağın yeri",
+          "ekran": "Yiyecek kokusu böceği de yaban hayvanını da çağırır.\n\n- **Kap:** yiyecekler kapalı, hava geçirmez, ağzı sıkı kapanan kaplarda saklanır\n- **Güneş:** yemekler güneş altına konmaz; ateş yakınında da tutulmaz\n- **Artık:** yemek artığını ve kokulu atığı açıkta bırakmak vahşi hayvanları çeker\n- **Açıkta bırakmak:** yiyeceği çadır dışında bırakmak hayvan saldırılarını önlemez\n- **Yemek hazırlama alanı:** çadırdan uzak tutulur; rüzgâr altına kurulmaz\n\n> [!NOTE] Kamp üçgeni: uyuma, pişirme ve saklama noktaları birbirinden ayrıdır.",
+          "ses": [
+            "Yiyeceklerini kapalı ve hava geçirmez kaplarda sakla; ağzı sıkı kapanan kap kokuyu içeride tutar.",
+            "Yemeği güneş altına koyma, sıcakta çabuk bozulur.",
+            "Ateşin yakını da kiler değildir.",
+            "Yemek artıklarını doğaya bırakırsan vahşi hayvanları kampına çağırmış olursun.",
+            "Böcek ve yaban hayvanı çekme riskini en çok artıran şey, yiyecek kokulu atıkları açıkta bırakmaktır.",
+            "Yiyeceği çadırın dışına bırakmak da hayvan saldırılarını önlemez.",
+            "Yemek hazırlama alanını çadırdan uzak tut ve rüzgâr altına kurma.",
+            "Kamp üçgenini hatırla; uyuduğun, pişirdiğin ve yiyecek sakladığın yerler ayrı köşelerdir."
+          ]
+        },
+        {
+          "baslik": "Hijyen: temiz el, sağlam mide",
+          "ekran": "Kampta kişisel hijyen ihmal edilmez; ishalin sık nedenlerinden biri kirli ellerdir.\n\n- **El temizliği:** yemekten önce ve tuvaletten sonra\n- **Su yoksa:** eller el dezenfektanıyla temizlenir; dezenfektan etkisiz değildir\n- **Sabun:** biyolojik olarak çözünebilen sabun; sabunlu su dereye dökülmez\n- **Kap ayrımı:** kirli su kabı ile temiz su kabı ayrı tutulur\n- **İshalde:** 1 L temiz suya 6 çay kaşığı şeker + yarım çay kaşığı tuz\n\n> [!NOTE] Bu karışım ağızdan sıvı tedavisidir; kaybedilen sıvıyı ve tuzu yerine koyar.",
+          "ses": [
+            "Doğadasın diye kişisel hijyeni ihmal edemezsin.",
+            "Kampta ishalin sık nedenlerinden biri kirli ellerdir.",
+            "Ellerini yemekten önce ve tuvaletten sonra temizle.",
+            "Su yoksa el dezenfektanı kullan; dezenfektan etkisiz değildir, cebinde taşıdığın bir lavabo gibidir.",
+            "Sabun kullanacaksan biyolojik olarak çözünebilen sabun seç ve sabunlu suyu dereye dökme.",
+            "Kirli su kabınla temiz su kabını da ayır, yoksa arıttığın suyu kendin kirletirsin.",
+            "İshal olursan kaybettiğin sıvıyı yerine koy.",
+            "Bir litre temiz suya altı çay kaşığı şeker ve yarım çay kaşığı tuz karıştırıp yudum yudum iç."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "K-T-F",
+        "acilim": "Kaynat · Tablet · Filtre",
+        "not": "Doğal suyu içilir kılan üç yöntem; suyu en yukarıdan almak bunların yerini tutmaz."
+      },
+      "yap": [
+        "Suyu az ama sık iç",
+        "Doğal suyu en az 1 dakika kaynat",
+        "Yiyeceği hava geçirmez kapalı kapta sakla",
+        "Su yoksa ellerini dezenfektanla temizle",
+        "Hafif ama kalorili yiyecek seç"
+      ],
+      "yapma": [
+        "Berrak diye dere suyunu kaynatmadan içme",
+        "Yemek artığını ve kokulu atığı açıkta bırakma",
+        "Yemeği güneş altına koyma",
+        "Yemek hazırlama alanını rüzgâr altına kurma"
+      ],
+      "spotlar": [
+        { "metin": "Su **az ama sık** içilir; yürüyüş öncesi vücudun sıvı dengesi sağlanır.", "ses": "Suyu az ama sık iç, yürüyüşe çıkmadan önce de vücudunun sıvı dengesini sağla." },
+        { "metin": "Doğal su **kaynatılmadan içilmez**; kaynatma mikroorganizmaları öldürür, süre en az **1 dakika**.", "ses": "Doğal su kaynatılmadan içilmez; mikroorganizmaları öldürmek için en az bir dakika kaynat." },
+        { "metin": "**Su arıtma tableti** mikroorganizmaları öldürür; mekanik filtre **0,1–0,2 mikron** gözeneklidir.", "ses": "Su arıtma tableti mikroorganizmaları öldürür; mekanik filtrenin gözenekleri mikronun onda biri ile onda ikisi arasındadır." },
+        { "metin": "Filtre **kimyasal kirleticileri** tamamen yok etmez; suyu en yukarıdan almak tek başına yeterli değildir.", "ses": "Filtre kimyasal kirleticileri tamamen yok etmez; suyu en yukarıdan almak da tek başına yeterli değildir." },
+        { "metin": "Enerji için **karbonhidrat ve protein** açısından zengin, **hafif ama kalorili** yiyecek seçilir.", "ses": "Kampta karbonhidrat ve protein açısından zengin, hafif ama kalorili yiyecek seç." },
+        { "metin": "Yiyecekler **kapalı, hava geçirmez** kaplarda saklanır; artığı açıkta bırakmak vahşi hayvanları çeker.", "ses": "Yiyeceğini kapalı ve hava geçirmez kapta sakla; açıkta bıraktığın artık vahşi hayvanları çeker." },
+        { "metin": "Su yoksa eller **el dezenfektanı** ile temizlenir; kişisel hijyen ihmal edilmez.", "ses": "Su yoksa ellerini dezenfektanla temizle; kampta kişisel hijyen ihmal edilmez." }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "esle",
+          "baslik": "Su ve hijyen eşleştirmesi",
+          "ciftler": [
+            { "sol": "Kaynatma", "sag": "En az 1 dakika sürdürülür" },
+            { "sol": "Mekanik filtre", "sag": "0,1–0,2 mikron gözenek" },
+            { "sol": "Su arıtma tableti", "sag": "Suda çözünüp mikroorganizmaları öldürür" },
+            { "sol": "El dezenfektanı", "sag": "Su yokken el temizliği" },
+            { "sol": "Su torbası", "sag": "Dengeli su taşıma" }
+          ]
+        },
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            { "metin": "Su ihtiyacı yalnızca dere ve göllerden karşılanır.", "dogru": false, "aciklama": "Taşınan su, yağmur, çiy, eritilmiş kar ve buz da su sağlar." },
+            { "metin": "Su arıtıcı filtreler kimyasal kirleticileri tamamen yok eder.", "dogru": false, "aciklama": "Filtre mikroorganizmalara karşı kullanılır; kimyasal kirleticileri tamamen yok etmez." },
+            { "metin": "Yürüyüşe çıkmadan önce vücudun sıvı dengesi sağlanmalıdır.", "dogru": true, "aciklama": "Susuz kalmamak için sıvı dengesi yürüyüşten önce sağlanır." },
+            { "metin": "Yiyeceği çadırın dışında bırakmak hayvan saldırılarını önler.", "dogru": false, "aciklama": "Açıkta bırakılan yiyeceğin kokusu hayvanları kampa çeker; yiyecek kapalı kapta saklanır." },
+            { "metin": "Yemek artıklarını doğaya bırakmak vahşi hayvanları bölgeye çeker.", "dogru": true, "aciklama": "Artık ve kokulu atık açıkta bırakılmaz." }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Su arıtma tabletleri hangi amaçla kullanılır?",
+          "secenekler": {
+            "A": "Kimyasal kirleticileri tamamen yok etmek",
+            "B": "Bulanık suyu süzerek berraklaştırmak",
+            "C": "Mikroorganizmaları öldürmek",
+            "D": "Suyun kaynama süresini kısaltmak",
+            "E": "Suya tuz ve şeker eklemek"
+          },
+          "dogru": "C",
+          "cozum": "Su arıtma tabletleri sudaki mikroorganizmaları öldürmek için kullanılır; kimyasal kirliliği gidermez, bulanık suyu da süzmez.",
+          "siklar": {
+            "A": "Kimyasal kirleticiler suya karışmış zararlı maddelerdir; tablet bunları yok etmez, mekanik filtre bile tamamen yok edemez.",
+            "B": "Bulanıklığı gidermek süzme işidir; tablet suda çözünür ve mikroorganizmalara etki eder, suyun içindeki parçacıkları tutup ayıramaz.",
+            "C": "Tablet suda çözünerek hastalık yapan mikroorganizmaları öldürür; ocak ya da yakıt olmadığında kaynatmanın yerini tutan hafif bir yöntemdir.",
+            "D": "Kaynatma ayrı bir arıtma yöntemidir ve en az 1 dakika sürer; tablet bu süreyi kısaltmaz, kaynatma yapılamadığında onun yerine kullanılır.",
+            "E": "Suya şeker ve tuz eklemek ishalde kaybedilen sıvıyı yerine koymak için yapılır; bu bir arıtma değil, ağızdan sıvı tedavisidir."
+          },
+          "ses_cozum": "Su arıtma tableti, doğal sudaki mikroorganizmaları öldürmek için kullanılır. Kimyasal kirleticileri yok etmez, bulanık suyu da süzüp berraklaştırmaz. Ocağın ya da yakıtın olmadığında kaynatmanın yerini tutar."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Kamp sırasında enerji kaybını önlemek için hangi besin ögeleri açısından zengin yiyecekler tüketilmelidir?",
+          "secenekler": {
+            "A": "Yalnız lif ve su",
+            "B": "Tuz ve baharat",
+            "C": "Yalnız vitamin ve mineral",
+            "D": "Kafein ve şeker",
+            "E": "Karbonhidrat ve protein"
+          },
+          "dogru": "E",
+          "cozum": "Enerji kaybını önlemek için karbonhidrat ve protein açısından zengin yiyecekler tüketilir; yağlı gıdalar ve kuruyemiş de plana girer.",
+          "siklar": {
+            "A": "Lif ve su sindirim ve sıvı dengesi için değerlidir ama enerji taşımaz; lifli, sulu yiyecekler hacmi büyük, kalorisi düşük gıdalardır.",
+            "B": "Tuz terle kaybedilir ve baharat tat verir; ancak ikisi de vücuda enerji sağlamaz, enerji kaybını önleyecek besin ögeleri değildir.",
+            "C": "Vitamin ve mineraller vücudun işleyişi için gereklidir ama kalori taşımaz; yalnız bunlarla yürüyüşün enerji gideri karşılanamaz.",
+            "D": "Kafein enerji vermez, yalnız uyarır; şeker bir karbonhidrattır ama tek başına dengeli bir kamp beslenmesi sağlamaz, protein eksik kalır.",
+            "E": "Karbonhidrat hızlı kullanılan yakıttır, protein yorulan kasları onarır; kampta enerji kaybını önlemek için bu ikisi açısından zengin yiyecekler tüketilir."
+          },
+          "ses_cozum": "Kampta enerji kaybını önleyen ikili karbonhidrat ve proteindir. Karbonhidrat hızlı yakıt verir, protein yorulan kası onarır. Vitamin, tuz ya da lif gereklidir ama enerji taşımaz."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Kamp alanında yiyecekler nasıl saklanmalıdır?",
+          "secenekler": {
+            "A": "Kapalı, hava geçirmez kaplarda",
+            "B": "Güneş altında, açık tabaklarda",
+            "C": "Ateşin yakınında, sıcak tutularak",
+            "D": "Çadırın dışında, açıkta bırakılarak",
+            "E": "Yemek hazırlama alanında, üstü açık"
+          },
+          "dogru": "A",
+          "cozum": "Yiyecekler kapalı, hava geçirmez kaplarda saklanır; koku yayılmaz, böcek ve yaban hayvanı kampa çekilmez.",
+          "siklar": {
+            "A": "Ağzı sıkı kapanan, hava geçirmez kap kokuyu içeride tutar ve yiyeceği korur; böylece böcekler ve yaban hayvanları kampa çekilmez.",
+            "B": "Güneş yiyeceği ısıtır ve çabuk bozar; açık tabak kokuyu da yayar. Yemekler güneş altına konmaz, kapalı kapta gölgede tutulur.",
+            "C": "Ateşin yakını yiyecek saklama yeri değildir; ısı yiyeceği bozar, ambalajı eritebilir ve ateş başındaki düzeni tehlikeye sokar.",
+            "D": "Yiyeceği çadırın dışında açıkta bırakmak hayvan saldırılarını önlemez; tersine yayılan koku vahşi hayvanları kamp alanına çeker.",
+            "E": "Üstü açık bırakılan yiyecek koku yayar, böcek toplar ve kirlenir; hazırlama alanında bile yiyecek kapalı kapta durmalıdır."
+          },
+          "ses_cozum": "Yiyecekler kapalı ve hava geçirmez kaplarda saklanır. Böylece koku yayılmaz, böcek ve yaban hayvanı kampa gelmez. Yiyeceği çadırın dışında açıkta bırakmak ise saldırıyı önlemez, tersine davet eder."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Kampta su ve hijyenle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Su ihtiyacı yalnızca dere ve göllerden karşılanır",
+            "B": "El dezenfektanları etkisizdir, yalnız sabun kullanılır",
+            "C": "Su filtreleri kimyasal kirleticileri tamamen yok eder",
+            "D": "Yürüyüş öncesi vücudun sıvı dengesi sağlanmalıdır",
+            "E": "Berrak akan doğal su kaynatılmadan içilebilir"
+          },
+          "dogru": "D",
+          "cozum": "Susuz kalmamak için yürüyüş öncesinde vücudun sıvı dengesi sağlanır; öteki ifadelerin her biri yaygın bir yanlış inanıştır.",
+          "siklar": {
+            "A": "Dere ve göl tek seçenek değildir; yanında taşıdığın su, yağmur, çiy, eritilmiş kar ve buz da su ihtiyacını karşılar.",
+            "B": "El dezenfektanı etkisiz değildir; su bulunmadığında eller dezenfektanla temizlenir ve kişisel hijyen bu sayede sürdürülür.",
+            "C": "Mekanik filtre 0,1–0,2 mikron gözenekleriyle mikroorganizmalara karşı kullanılır; kimyasal kirleticileri ise tamamen yok etmez.",
+            "D": "Yola susuz çıkan kişi açığı yürürken kapatamaz; bu yüzden yürüyüş öncesi sıvı dengesi sağlanır, yolda da az ama sık su içilir.",
+            "E": "Berraklık temizlik demek değildir; doğal su gözle görülmeyen mikroorganizmalar taşır ve kaynatılmadan ya da arıtılmadan içilmez."
+          },
+          "ses_cozum": "Doğru ifade, yürüyüş öncesinde vücudun sıvı dengesinin sağlanmasıdır. Dezenfektan etkisiz değildir, filtre kimyasalları tamamen yok etmez. Berrak görünen doğal su da kaynatılmadan içilmez, çünkü mikroorganizmalar gözle görülmez."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Sırt çantasına konacak kamp yiyeceğinin seçiminde en doğru ölçüt aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Hacminin büyük, kalorisinin düşük olması",
+            "B": "Hafif ama kalorili olması",
+            "C": "Hiç yağ içermemesi",
+            "D": "Yalnız proteinden oluşması",
+            "E": "Sulu ve ağır olması"
+          },
+          "dogru": "B",
+          "cozum": "Kamp yiyeceği hafif ama kalorili seçilir; en kritik planlama hatası yalnızca hacmi büyük ama kalorisi düşük gıda taşımaktır.",
+          "siklar": {
+            "A": "Hacmi büyük, kalorisi düşük gıda çantayı doldurur ama enerji vermez; bunu taşımak kamp yemeği planlamasındaki en kritik hatadır.",
+            "B": "Her gram sırtta taşındığı için yiyecek hafif olmalı, yürüyüşün enerji giderini karşılamak için de kalorisi yüksek olmalıdır.",
+            "C": "Yağ gram başına en çok enerjiyi taşıyan besindir; yağ içeren gıdalar ve kuruyemiş kamp yemeği planına bilerek katılır.",
+            "D": "Protein kasları onarır ama tek başına yetmez; kampta karbonhidrat ve protein birlikte, dengeli bir öğün içinde tüketilir.",
+            "E": "Sulu ve ağır yiyecek taşınan yükü artırır, karşılığında az enerji verir; kamp yiyeceğinde aranan özelliklerin tam tersidir."
+          },
+          "ses_cozum": "Kamp yiyeceğinde ölçüt hafif ama kalorili olmasıdır. Hacmi büyük ama kalorisi düşük gıda taşımak planlamanın en kritik hatasıdır. Yağlı gıdalar ve kuruyemiş ise az yer kaplayıp çok enerji verir."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Kamp alanında yemek hazırlama alanıyla ilgili aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Çadırdan uzak tutulur, rüzgâr altına kurulmaz",
+            "B": "Çadırın girişine, rüzgâr altına kurulur",
+            "C": "Yiyecek artıkları alanın kenarında açıkta bırakılır",
+            "D": "Yemekler güneş altında bekletilerek sıcak tutulur",
+            "E": "Bulaşığın sabunlu suyu en yakın dereye dökülür"
+          },
+          "dogru": "A",
+          "cozum": "Yemek hazırlama alanı çadırdan uzak tutulur ve rüzgâr altına kurulmaz; artık açıkta bırakılmaz, yemek güneşe konmaz.",
+          "siklar": {
+            "A": "Yemek kokusu hayvanları çeker; bu yüzden hazırlama alanı uyunan çadırdan uzak tutulur ve derste öğretilen kurala göre rüzgâr altına kurulmaz.",
+            "B": "Çadırın girişi uyuma noktasıdır; yemek alanı oraya kurulursa koku ve alev çadıra taşınır, rüzgâr altına kurmak da kurala aykırıdır.",
+            "C": "Yiyecek kokulu artıkları açıkta bırakmak böcek ve yaban hayvanı çekme riskini en çok artıran uygulamadır; artık açıkta bırakılmaz.",
+            "D": "Güneş yemeği sıcak tutmaz, bozar; yemekler güneş altına konmaz, kapalı ve hava geçirmez kaplarda gölgede bekletilir.",
+            "E": "Sabunlu su dereye dökülmez, su kaynağını kirletir; kampta biyolojik olarak çözünebilen sabun kullanılır ve su dereden uzakta dökülür."
+          },
+          "ses_cozum": "Yemek hazırlama alanı çadırdan uzak tutulur ve rüzgâr altına kurulmaz. Artıkları açıkta bırakmak yaban hayvanını çağırır. Yemeği güneşe koymak ve sabunlu suyu dereye dökmek de yanlıştır."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki kombinasyonlardan hangisi kampta sağlık riskini en çok artıran yanlış uygulamadır?",
+          "secenekler": {
+            "A": "Kaynatılmış su + kapalı kap + el dezenfektanı",
+            "B": "Arıtma tableti + az ama sık su + kuruyemiş",
+            "C": "Mekanik filtre + gölgede yemek + temiz eller",
+            "D": "1 dakika kaynatma + hava geçirmez kap + dengeli akşam yemeği",
+            "E": "Kaynatılmamış dere suyu + güneşte bekleyen yemek + kirli eller"
+          },
+          "dogru": "E",
+          "cozum": "Kaynatılmamış doğal su mikroorganizma taşır, güneşte bekleyen yemek bozulur, kirli eller ishale yol açar; üçü birlikte en riskli kombinasyondur.",
+          "siklar": {
+            "A": "Kaynatma mikroorganizmaları öldürür, kapalı kap yiyeceği korur, dezenfektan su yokken elleri temizler; üçü de doğru uygulamadır.",
+            "B": "Tablet mikroorganizmaları öldürür, az ama sık içmek sıvı kaybını önler, kuruyemiş hafif ve kalorili bir atıştırmalıktır; hata içermez.",
+            "C": "Mekanik filtre mikroorganizmalara karşı kullanılır, yemek güneş yerine gölgede tutulur, temiz eller ishal riskini azaltır; üçü de yerindedir.",
+            "D": "En az 1 dakika kaynatma yeterli süredir, hava geçirmez kap doğru saklama biçimidir, dengeli akşam yemeği enerji sağlar; riski azaltır.",
+            "E": "Doğal su kaynatılmadan içilmez, yemek güneş altına konmaz, kişisel hijyen ihmal edilmez; bu kombinasyon üç kuralı birden çiğner ve ishale zemin hazırlar."
+          },
+          "ses_cozum": "En riskli üçlü, kaynatılmamış dere suyu, güneşte bekleyen yemek ve kirli ellerdir. Üçü de mikroorganizmalara kapı açar ve ishalle sonuçlanabilir. Öteki kombinasyonlardaki her uygulama doğrudur."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Soğuk bir günde yüksek irtifada yürüyen ve hiç terlemediğini söyleyen kampçının su tüketimiyle ilgili aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Terlemediği için sıvı kaybı olmaz, su içmesi gerekmez",
+            "B": "Nefesle su buharı kaybı artar; az ama sık içmelidir",
+            "C": "Yüksekte daha az su içmek uygundur",
+            "D": "Suyu yalnız kamp yerine varınca içmelidir",
+            "E": "Su dengesine yalnız sıcak havada dikkat edilir"
+          },
+          "dogru": "B",
+          "cozum": "Yüksek irtifada nefes verirken su buharı kaybı artar; terleme olmasa da sıvı kaybedilir, su az ama sık içilir.",
+          "siklar": {
+            "A": "Ter sıvı kaybının tek yolu değildir; yüksek irtifada nefes verirken su buharı kaybı artar, terlemeyen kişi de su kaybeder.",
+            "B": "Yüksekte her nefeste dışarı verilen su buharı artar; bu gizli kaybı karşılamanın yolu suyu az ama sık aralıklarla içmektir.",
+            "C": "Yüksek irtifada sıvı kaybı azalmaz, artar; daha az su içmek susuzluğu derinleştirir ve yürüyüş güvenliğini bozar.",
+            "D": "Suyu yalnız varışta içmek çok ve seyrek içmek demektir; gün boyu biriken kaybı karşılamaz, doğrusu yol boyunca az ama sık içmektir.",
+            "E": "Su dengesi her mevsim önemlidir; soğuk havada ve yüksekte nefesle kayıp sürdüğü için yalnız sıcakta dikkat etmek yetmez."
+          },
+          "ses_cozum": "Soğukta terlememek su kaybetmediğin anlamına gelmez. Yüksek irtifada nefes verirken su buharı kaybı artar. Bu yüzden su yine az ama sık içilir, varışı beklemek açığı kapatmaz."
+        }
+      ]
+    }
+  ]
+}

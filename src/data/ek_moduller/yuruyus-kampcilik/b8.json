@@ -1,0 +1,538 @@
+{
+  "no": 8,
+  "baslik": "Yürüyüş, Sağlık ve Güvenlik",
+  "ozet": "Grup düzeni, hava ve iletişimden soğuk, sıcak, yükseklik ve ilk yardıma: yolda sağ salim kalmanın kuralları.",
+  "konular": [
+    {
+      "id": "8a",
+      "baslik": "Yürüyüş düzeni, hava ve iletişim",
+      "ozet": "Kim önde, kim arkada yürür; tempo, mola, su, fırtına, yıldırım ve yardım çağrısı.",
+      "gorsel": "yuruyus-duzeni.svg",
+      "gorsel_alt": "Tek sıra yürüyen grup: en önde rehber, ortada üyeler, en arkada deneyimli artçı.",
+      "ek_gorseller": [
+        { "dosya": "imdat.svg", "alt": "İmdat işaretleri: üç kısa düdük, üç kısa ışık, ayna yansıması ve yere yazılmış büyük SOS." }
+      ],
+      "bolumler": [
+        {
+          "baslik": "Plan: rota, dönüş saati, hava",
+          "ekran": "Güvenli yürüyüş masada başlar: rotayı, saati ve havayı yola çıkmadan netleştir.\n\n- **Rota:** mesafe, tırmanış, süre ve gün batımı saati önceden bilinir\n- **Dönüş saati:** yola çıkmadan belirlenir; zirveye varmasan da dönersin\n- **Hava durumu:** mutlaka kontrol edilir; bir gün önce ve sabah bakılır\n- **Haber bırak:** nereye, hangi rotadan, kiminle gittiğini, ne zaman döneceğini söyle\n\n> [!IMPORTANT] Hava durumu önemsiz değildir; kamp güvenliğini doğrudan etkiler.",
+          "ses": [
+            "İyi bir yürüyüş, botlarını bağlamadan çok önce, masada başlar.",
+            "Kaç kilometre yürüyeceğini, ne kadar tırmanacağını ve güneşin kaçta battığını önceden öğren.",
+            "Yola çıkmadan bir dönüş saati belirle; zirveye az kalsa bile o saatte geri dön.",
+            "Dağ yerinde duruyor, başka bir gün yine gelirsin.",
+            "Kamp ve yürüyüş planında hava durumu mutlaka kontrol edilir, çünkü kamp güvenliğini doğrudan etkiler.",
+            "Tahmine bir gün önce bak, sabah çıkarken bir kez daha bak.",
+            "Evden çıkmadan bir yakınına nereye, hangi rotadan, kiminle gittiğini ve ne zaman döneceğini söyle."
+          ]
+        },
+        {
+          "baslik": "Grup düzeni: kim önde, kim arkada?",
+          "ekran": "Grup tek sıra yürür; yerler rastgele değil, güvenliğe göre dağıtılır.\n\n- **Önde:** rehber yürür ve yolu seçer\n- **En arkada:** rehberden sonraki en deneyimli kişi (artçı); kısaca en tecrübeli kişi arkada yürür\n- **Tempo:** öncünün temposu grubun tamamına, en yavaş üyeye göre ayarlanır\n- **Lider:** hızlı yürümez; temponun dengesini korur\n\n> [!IMPORTANT] Tempo en yavaş üyeye göre ayarlanır, çünkü amaç grubun dağılmasını önlemektir.",
+          "ses": [
+            "Yürüyüş kolunda herkesin yeri bellidir.",
+            "Rehber en önde yürür ve yolu seçer.",
+            "Gruptaki en deneyimli ikinci kişi ise en arkada kalır; ona artçı denir.",
+            "Kısaca en tecrübeli kişi genellikle arkada yürür denir; artçı yorulanı ve aksayanı ilk görendir.",
+            "Öncünün temposu kendi keyfine göre değil, grubun tamamına göre ayarlanır.",
+            "Ölçü en yavaş yürüyen üyedir, çünkü hızlananlar koparsa grup dağılır.",
+            "Grup liderinin görevi hızlı yürümek değil, temponun dengesini korumaktır.",
+            "Öndekiler ara ara durup arkayı bekler, kimse gözden kaybolmaz."
+          ]
+        },
+        {
+          "baslik": "Tempo, mola ve su",
+          "ekran": "Enerjini idareli harca: dengeli tempo, sık mola, az ama sık su.\n\n- **İniş ve çıkış:** iniş hızı çıkış hızından genellikle fazladır\n- **Mola:** sık mola enerji kaybını artırmaz; kısa ve sık dinlen\n- **Su:** sıvı kaybını önlemek için az ama sık içilir\n- **Öğle güneşi:** açık sırtta ağır çantayla hızlı çıkış güneş çarpması riskini en çok artırır\n- **Gece:** kafa lambası tak; feneri yere, adım önüne tut",
+          "ses": [
+            "Yokuş yukarı ağır, yokuş aşağı hızlı gidersin; iniş hızı çıkış hızından genellikle fazladır.",
+            "Sık mola vermek enerji kaybını artırmaz, tersine gücünü toplamanı sağlar.",
+            "Suyu susayınca kana kana değil, az ama sık aralıklarla iç.",
+            "Böylece sıvı kaybını yürürken yerine koyarsın.",
+            "Güneş çarpması riski en çok açık sırtta, öğle güneşinde, ağır çantayla hızlı çıkarken yükselir.",
+            "Öğle sıcağında tempoyu düşür, gölgede mola ver.",
+            "Karanlığa kaldıysan kafa lambanı tak ve ışığı yere, adımının önüne tut.",
+            "Işığı arkadaşının yüzüne ya da gökyüzüne tutmak kimsenin işine yaramaz."
+          ]
+        },
+        {
+          "baslik": "Fırtına ve yıldırım",
+          "ekran": "Dağda hava hızlı değişir; fırtına ve yıldırımda yapılacaklar bellidir.\n\n- **Fırtına:** açık alanda durmak tehlikelidir; korunaklı yere geç\n- **Şiddetli rüzgâr:** çadırın ipleri gevşetilmez, gergin tutulur\n- **Yıldırım:** metal eşyalar uzaklaştırılır; ağaç altına sığınılmaz, yere uzanılmaz\n- **Duruş:** zirve ve sırttan uzaklaş, çömel, ayaklarını bitiştir\n- **30-30:** şimşek ile gürültü arası 30 saniyeden kısaysa sığın; son gürültüden sonra 30 dakika bekle",
+          "ses": [
+            "Fırtına anında açık alanda durmak tehlikelidir, hemen korunaklı bir yere geç.",
+            "Şiddetli rüzgârda çadırın iplerini gevşetme, tersine gergin tut.",
+            "Yıldırım tehlikesinde baton ve kazma gibi metal eşyaları kendinden uzaklaştır.",
+            "Ağaç altına sığınma, yere de uzanma; akım zeminden de yayılır.",
+            "Zirveden ve sırttan uzaklaş, çömel ve ayaklarını bitiştir.",
+            "Şimşeği görünce say: gök gürültüsü otuz saniyeden önce geliyorsa fırtına yakındır.",
+            "Son gürültüden sonra otuz dakika bekle; buna otuz otuz kuralı denir."
+          ]
+        },
+        {
+          "baslik": "Grup içi iletişim",
+          "ekran": "Dağda haberleşme yalnız telsizle olmaz; elin ve düdüğün her zaman yanındadır.\n\n- **El işaretleri:** sessiz iletişim yöntemidir; dur, gel, yavaşla gibi\n- **Düdük:** sesi uzağa gider, pil istemez\n- **Üç kısa düdük:** uluslararası yardım çağrısıdır, tehlike demektir\n- **Yönlendirme işaretleri:** rastgele yerlere bırakılmaz; görünür ve anlaşılır noktaya konur\n\n> [!IMPORTANT] Üç kısa düdük sesi duyarsan biri yardım istiyor demektir.",
+          "ses": [
+            "Grup içinde haberleşme yalnız telsizle sağlanmaz.",
+            "El işaretleri sessiz iletişim yöntemidir; rüzgârda ve uzak mesafede sesin yetmediği yerde işe yarar.",
+            "Dur, gel, yavaşla gibi işaretleri yola çıkmadan grupça kararlaştırın.",
+            "Düdük küçücük bir alettir ama sesi bağırmaktan çok daha uzağa gider.",
+            "Üç kısa düdük sesi uluslararası yardım çağrısıdır, yani tehlike var demektir.",
+            "Mola ya da kamp bitti anlamına gelmez; duyunca sesin geldiği yöne dikkat kesil.",
+            "Arkadan gelenler için bırakılan yönlendirme işaretleri rastgele yerlere konmaz.",
+            "İşareti herkesin göreceği, yanlış anlaşılmayacak bir noktaya bırak."
+          ]
+        },
+        {
+          "baslik": "Yardım çağırma ve imdat işaretleri",
+          "ekran": "Bir aksilikte önce kendi güvenliğini sağla, sonra yardım çağır.\n\n- **112'ye söyle:** kim, ne oldu, kaç kişi, nerede\n- **Sinyal yoksa:** yüksek ve açık bir noktaya çık; kısa mesaj dene\n- **Düdük ya da ışık:** üç kısa işaret ver, ara, yinele\n- **Ayna:** güneşi yansıtarak uzaktakilere işaret ver\n- **Yerde SOS:** açık alanda parlak renkli eşyalarla büyük yaz\n\n> [!NOTE] Gece feneri kampta hep el altında durur; mum yerine fener yangın riskini azaltır.",
+          "ses": [
+            "Bir kaza olduğunda önce kendi güvenliğini sağla, yoksa yardım bekleyen iki kişi olursunuz.",
+            "Sonra yüz on iki acil çağrı hattını ara.",
+            "Kim olduğunu, ne olduğunu, kaç kişi olduğunuzu ve nerede bulunduğunuzu söyle.",
+            "Telefon çekmiyorsa yüksek ve açık bir noktaya çık, kısa mesaj göndermeyi dene.",
+            "Düdükle ya da fenerle üç kısa işaret ver, ara verip yinele.",
+            "Güneşli havada aynayla ışık yansıt, açık alanda parlak eşyalarla yere büyük bir imdat işareti yaz.",
+            "Gece fenerin kampta hep el altında dursun; mum yerine fener kullanmak yangın riskini de azaltır."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "Önde rehber, arkada usta",
+        "acilim": "Rehber önde · en deneyimli ikinci kişi en arkada · tempo en yavaş üyeye göre",
+        "not": "Grup düzenini tek solukta hatırlatır; yardım gerekirse üç kısa düdük çalarsın."
+      },
+      "yap": [
+        "Hava durumunu bir gün önce ve sabah kontrol et",
+        "Tempoyu grubun en yavaş üyesine göre ayarla",
+        "Suyu az ama sık iç, sık mola ver",
+        "Yıldırımda metal eşyaları kendinden uzaklaştır",
+        "Düdüğünü yanında taşı; yardım için üç kısa çal"
+      ],
+      "yapma": [
+        "Zirveye az kaldı diye dönüş saatini erteleme",
+        "Fırtınada açık alanda durma",
+        "Yıldırımda ağaç altına sığınma, yere uzanma",
+        "Yönlendirme işaretlerini rastgele yerlere bırakma",
+        "Feneri arkadaşının yüzüne ya da gökyüzüne tutma"
+      ],
+      "spotlar": [
+        { "metin": "**Rehber önde**, en deneyimli ikinci kişi **en arkada** yürür.", "ses": "Rehber önde yürür, en deneyimli ikinci kişi ise artçı olarak en arkada kalır." },
+        { "metin": "Öncünün temposu **grubun tamamına**, en yavaş üyeye göre ayarlanır; amaç grubun dağılmasını önlemektir.", "ses": "Öncü temposunu en yavaş üyeye göre ayarlar, çünkü amaç grubun dağılmasını önlemektir." },
+        { "metin": "**İniş hızı** çıkış hızından genellikle fazladır; **sık mola** enerji kaybını artırmaz.", "ses": "İniş hızı çıkış hızından genellikle fazladır ve sık mola vermek enerji kaybını artırmaz." },
+        { "metin": "Su **az ama sık** içilir; grup liderinin görevi **temponun dengesini** korumaktır.", "ses": "Suyu az ama sık iç; grup liderinin görevi de temponun dengesini korumaktır." },
+        { "metin": "Yıldırımda **metal eşyalar uzaklaştırılır**; ağaç altına sığınılmaz, yere uzanılmaz.", "ses": "Yıldırım tehlikesinde metal eşyalar uzaklaştırılır, ağaç altına sığınılmaz ve yere uzanılmaz." },
+        { "metin": "**Üç kısa düdük** sesi uluslararası yardım çağrısıdır; **el işaretleri** sessiz iletişim yöntemidir.", "ses": "Üç kısa düdük sesi uluslararası yardım çağrısıdır, el işaretleri ise sessiz iletişim yöntemidir." },
+        { "metin": "Güneş çarpması riski en çok **açık sırtta, öğle güneşinde, ağır çantayla hızlı çıkışta** yükselir.", "ses": "Güneş çarpması riski en çok açık sırtta, öğle güneşinde, ağır çantayla hızlı çıkarken yükselir." }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            { "metin": "Dağ yürüyüşünde çıkış, inişten genellikle daha hızlıdır.", "dogru": false, "aciklama": "İniş hızı çıkış hızından genellikle fazladır." },
+            { "metin": "Sık sık mola vermek enerjiyi boşa harcatır.", "dogru": false, "aciklama": "Sık mola enerji kaybını artırmaz; kısa ve sık dinlenmek gücü toplar." },
+            { "metin": "Şiddetli rüzgâr çıkınca çadırın ipleri gevşetilir.", "dogru": false, "aciklama": "Şiddetli rüzgârda ipler gevşetilmez, gergin tutulur." },
+            { "metin": "El işaretleri sessiz iletişim yöntemlerinden biridir.", "dogru": true, "aciklama": "Haberleşme yalnız telsizle yapılmaz; el işaretleri ve düdük de kullanılır." },
+            { "metin": "Yönlendirme işaretleri gelişigüzel yerlere bırakılabilir.", "dogru": false, "aciklama": "İşaretler rastgele yerlere bırakılmaz; görünür ve anlaşılır bir noktaya konur." }
+          ]
+        },
+        {
+          "tur": "esle",
+          "baslik": "Kim, ne yapar?",
+          "ciftler": [
+            { "sol": "Rehber", "sag": "En önde yürür" },
+            { "sol": "En deneyimli ikinci kişi", "sag": "En arkada yürür" },
+            { "sol": "Grup lideri", "sag": "Temponun dengesini korur" },
+            { "sol": "Üç kısa düdük", "sag": "Yardım çağrısı" },
+            { "sol": "El işaretleri", "sag": "Sessiz iletişim" }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1, "zorluk": "kolay",
+          "kok": "Yürüyüş kolunda öncü, temposunu aşağıdakilerden hangisine göre ayarlamalıdır?",
+          "secenekler": { "A": "Gruptaki en hızlı yürüyene", "B": "Kendi kondisyonuna", "C": "Grubun tamamına, en yavaş üyeye", "D": "Artçının isteğine", "E": "Zirveye kalan mesafeye" },
+          "dogru": "C",
+          "cozum": "Öncünün temposu grubun tamamına, yani en yavaş üyeye göre ayarlanır; böylece grup dağılmaz.",
+          "siklar": {
+            "A": "En hızlı yürüyen ölçü alınırsa yavaş olanlar geride kalır ve grup kopar; tempo güçlüye göre değil, grubun bütününe göre belirlenir.",
+            "B": "Öncünün kendi kondisyonu çoğu kez gruptan iyidir; kendi rahatına göre yürürse arkadakiler yetişemez ve kol dağılır.",
+            "C": "Öncünün temposu grubun tamamına göre ayarlanır; ölçü en yavaş üyedir, çünkü amaç grubun dağılmasını önlemektir.",
+            "D": "Artçı en arkada yürüyen deneyimli kişidir ve geride kalanı kollar; tempoyu onun isteği değil, en yavaş üyenin gücü belirler.",
+            "E": "Zirveye kalan mesafe plan ve dönüş saatiyle ilgilidir; tempoyu buna göre artırmak yavaş yürüyenleri geride bırakır."
+          },
+          "ses_cozum": "Öncü temposunu grubun tamamına göre ayarlar ve ölçü en yavaş yürüyen üyedir. En hızlıya göre yürünürse yavaşlar kopar, grup dağılır ve kimin nerede kaldığı bilinmez."
+        },
+        {
+          "no": 2, "zorluk": "kolay",
+          "kok": "Aşağıdakilerden hangisi uluslararası yardım çağrısı olarak kabul edilen sinyaldir?",
+          "secenekler": { "A": "Tek uzun düdük sesi", "B": "Üç kısa düdük sesi", "C": "Feneri gökyüzüne tutmak", "D": "İki kez el çırpmak", "E": "Telsizi kapatıp beklemek" },
+          "dogru": "B",
+          "cozum": "Üç kısa düdük sesi uluslararası yardım çağrısıdır ve tehlike bildirir; ara verilip yinelenir.",
+          "siklar": {
+            "A": "Tek uzun düdük sesi anlaşılmış bir yardım çağrısı değildir; uluslararası sinyal sayıca bellidir ve üç kısa sesten oluşur.",
+            "B": "Üç kısa düdük sesi uluslararası yardım çağrısıdır; tehlike olduğunu bildirir, mola ya da kamp sonu anlamına gelmez.",
+            "C": "Fener gece yürüyüşünde yere, adım önüne tutulur; gökyüzüne tutulan ışık ne yolu aydınlatır ne de bilinen bir çağrıdır.",
+            "D": "El çırpmanın sesi uzağa gitmez ve kararlaştırılmış bir anlamı yoktur; düdük sesi bağırmaktan da el sesinden de uzağa ulaşır.",
+            "E": "Haberleşme yalnız telsizle yapılmaz ama telsizi kapatıp beklemek çağrı değildir; yardım için düdükle üç kısa işaret verilir."
+          },
+          "ses_cozum": "Yardım çağrısının uluslararası sinyali üç kısa düdük sesidir. Tek uzun düdük ya da el çırpmak kararlaştırılmış bir anlam taşımaz, bu yüzden kimse yardım istediğini anlamaz."
+        },
+        {
+          "no": 3, "zorluk": "kolay",
+          "kok": "Gece yürüyüşüyle ilgili aşağıdakilerden hangisi doğrudur?",
+          "secenekler": { "A": "Fener gökyüzüne doğru tutulur", "B": "Işık arkadaki kişinin yüzüne tutulur", "C": "Çakmak alevi yolu görmeye yeter", "D": "Kafa lambasının ışığı adım önüne tutulur", "E": "Telefon ekranının ışığı yeterlidir" },
+          "dogru": "D",
+          "cozum": "Gece yürüyüşünde en uygun aydınlatma kafa lambasıdır; ışık yere, adım önüne tutulur.",
+          "siklar": {
+            "A": "Gökyüzüne tutulan fener bastığın yeri göstermez; gece yürürken ışığın görevi taşı, kökü ve çukuru önceden fark ettirmektir.",
+            "B": "Arkadaki kişinin yüzüne tutulan ışık gözünü kamaştırır ve yolu görmesini engeller; ışık kişiye değil zemine yöneltilir.",
+            "C": "Çakmak alevi zayıftır, rüzgârda söner ve bir eli meşgul eder; gece yürüyüşünün uygun aydınlatması kafa lambasıdır.",
+            "D": "Kafa lambası elleri serbest bırakır; ışığı yere, adımın önüne tutulunca basacağın yeri görür, tökezlemeden ilerlersin.",
+            "E": "Telefon ekranının ışığı birkaç adım ötesini aydınlatmaz ve pili çabuk tüketir; telefon yardım çağırmak için saklanır."
+          },
+          "ses_cozum": "Gece yürürken kafa lambası takılır ve ışık yere, adımın önüne tutulur. Işığı gökyüzüne ya da arkadaşının yüzüne tutmak yolu göstermez, üstelik göz kamaştırır. Çakmak ve telefon ışığı da yetersiz kalır."
+        },
+        {
+          "no": 4, "zorluk": "orta",
+          "kok": "Yürüyüş kolunun en arkasında yürüyen artçı için aşağıdakilerden hangisi doğrudur?",
+          "secenekler": { "A": "Gruptaki en yavaş yürüyendir", "B": "Rehberden sonraki en deneyimli kişidir", "C": "Gruptaki en hızlı yürüyendir", "D": "Gruba en son katılan yeni üyedir", "E": "En ağır çantayı taşıyan kişidir" },
+          "dogru": "B",
+          "cozum": "Grup güvenliği için rehber önde, en deneyimli ikinci kişi en arkada yürür; artçı kimseyi geride bırakmaz.",
+          "siklar": {
+            "A": "En yavaş yürüyen arkaya bırakılırsa gözden kaybolabilir; o, temponun ölçüsüdür, en arkadaki yer ise deneyimli birine aittir.",
+            "B": "Rehber önde yürürken en deneyimli ikinci kişi en arkada kalır; böylece geride kalan, yorulan ya da sakatlanan hemen fark edilir.",
+            "C": "En hızlı yürüyen arkada sıkılır, öne geçerse de grubu koparır; yerleşim hıza göre değil deneyime göre yapılır.",
+            "D": "Gruba yeni katılan kişi rotayı ve grubu tanımaz; en arkada tek başına kalması güvenlik açığı yaratır, ortada yürümesi uygundur.",
+            "E": "Çanta ağırlığı yerleşimi belirlemez; en arkadaki yerin görevi grubu toplamak ve kollamaktır, bu da deneyim ister."
+          },
+          "ses_cozum": "Rehber önde yürür, en deneyimli ikinci kişi ise en arkada kalır. En yavaş ya da en yeni üyeyi arkaya koymak yanlıştır, çünkü geride kalırsa kimse fark etmez."
+        },
+        {
+          "no": 5, "zorluk": "orta",
+          "kok": "Açık arazide yürürken yıldırım başladı. Aşağıdakilerden hangisi yapılmaz?",
+          "secenekler": { "A": "Metal eşyaları uzaklaştırmak", "B": "Çömelip ayakları bitiştirmek", "C": "Sırttan ve zirveden uzaklaşmak", "D": "Tek ağacın altından çıkmak", "E": "Yere boylu boyunca uzanmak" },
+          "dogru": "E",
+          "cozum": "Yıldırımda yere uzanılmaz ve ağaç altına sığınılmaz; metal eşyalar uzaklaştırılır, çömelip ayaklar bitiştirilir.",
+          "siklar": {
+            "A": "Baton ve kazma gibi metal eşyalar yıldırım tehlikesinde kişiden uzaklaştırılır; bu doğru ve gerekli bir önlemdir.",
+            "B": "Çömelip ayakları bitiştirmek zeminle teması küçültür ve boyunu alçaltır; açıkta kalan kişi için önerilen duruş budur.",
+            "C": "Zirve ve sırt çevrenin en yüksek noktalarıdır; fırtınada açık ve yüksek yerde durmak tehlikeli olduğundan buralardan uzaklaşılır.",
+            "D": "Yıldırımda ağaç altına sığınılmaz; tek ağaç çevresinin en yüksek noktasıdır, altından çıkmak doğru davranıştır.",
+            "E": "Yere uzanmak, akımın zeminden yayıldığı durumda vücudun geniş bir yüzeyle temasına yol açar; bu yüzden uzanılmaz, çömelinir."
+          },
+          "ses_cozum": "Yıldırım tehlikesinde yere uzanılmaz, çünkü akım zeminden de yayılır. Metal eşyaları uzaklaştırmak, sırttan inmek ve çömelip ayakları bitiştirmek ise doğru davranışlardır. Ağaç altı da sığınak değildir."
+        },
+        {
+          "no": 6, "zorluk": "orta",
+          "kok": "Yürüyüş düzeniyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+          "secenekler": { "A": "Sık mola vermek enerji kaybını artırır", "B": "İniş hızı çıkış hızından genellikle fazladır", "C": "Su az ama sık aralıklarla içilir", "D": "Lider temponun dengesini korur", "E": "Fırtınada açık alanda durmak tehlikelidir" },
+          "dogru": "A",
+          "cozum": "Sık mola enerji kaybını artırmaz, tersine gücü toplar; öteki dört ifade yürüyüş düzeninin doğru kurallarıdır.",
+          "siklar": {
+            "A": "Sık mola enerji kaybını artırmaz; kısa ve sık dinlenmek kasları toparlar, bu nedenle ifade yürüyüş düzenine aykırıdır.",
+            "B": "Yokuş aşağı yürümek daha az güç ister; bu yüzden iniş hızı çıkış hızından genellikle fazladır ve ifade doğrudur.",
+            "C": "Sıvı kaybını önlemek için su az miktarda ve sık aralıklarla içilir; çok ve seyrek içmek ya da yalnız molada içmek uygun olmaz.",
+            "D": "Grup liderinin görevi hızlı yürümek ya da arkada kalmak değil, temponun dengesini korumaktır; ifade doğrudur.",
+            "E": "Fırtına anında açık alan rüzgâra ve yıldırıma karşı korumasızdır; korunaklı bir yere geçmek gerekir, ifade doğrudur."
+          },
+          "ses_cozum": "Sık mola vermek yürüyüşte enerji kaybını artırmaz, tersine gücünü toplamanı sağlar. İnişin çıkıştan hızlı olması, suyun az ama sık içilmesi ve liderin tempoyu dengelemesi ise doğrudur."
+        },
+        {
+          "no": 7, "zorluk": "zor",
+          "kok": "Aşağıdaki kombinasyonlardan hangisi güneş çarpması riskini en çok artırır?",
+          "secenekler": { "A": "Orman içi gölgelik + hafif tempo + sık mola", "B": "Bulutlu sabah + hafif çanta + yavaş çıkış", "C": "Açık sırt + öğle güneşi + ağır çanta + hızlı çıkış", "D": "Serin hava + kısa rota + az ama sık su", "E": "Akşamüstü + kanyon içi + dengeli tempo" },
+          "dogru": "C",
+          "cozum": "Güneş çarpması riski en çok açık sırtta, öğle güneşinde, ağır çantayla hızlı çıkışta yükselir.",
+          "siklar": {
+            "A": "Orman gölgesi güneşi keser, hafif tempo ve sık mola vücudun ısı üretimini düşürür; bu üçlü riski azaltan bir düzendir.",
+            "B": "Bulutlu sabah saatlerinde güneş zayıftır; hafif çanta ve yavaş çıkış da vücudu az ısıtır, risk düşük kalır.",
+            "C": "Açık sırtta gölge yoktur, öğle güneşi en diktir; ağır çanta ve hızlı çıkış vücudun ürettiği ısıyı artırır, risk en yükseğe çıkar.",
+            "D": "Serin hava ve kısa rota ısı yükünü azaltır; suyu az ama sık içmek de sıvı kaybını önleyen doğru uygulamadır.",
+            "E": "Akşamüstü güneş alçalmıştır, kanyon içi gölgelidir; dengeli tempoyla birlikte güneş çarpması için elverişsiz bir ortamdır."
+          },
+          "ses_cozum": "Güneş çarpması riski açık sırtta, öğle güneşinde, ağır çantayla hızlı çıkarken en yüksektir. Gölge, serin saat, hafif yük ve yavaş tempo ise riski düşürür. Öğle sıcağında tempoyu düşürmek gerekir."
+        },
+        {
+          "no": 8, "zorluk": "zor",
+          "kok": "Aşağıdaki davranışlardan hangisi grup içi haberleşme açısından en sorunludur?",
+          "secenekler": { "A": "Yönlendirme işaretlerini rastgele yerlere bırakmak", "B": "El işaretlerini yola çıkmadan kararlaştırmak", "C": "Telsizin yanında düdük de taşımak", "D": "Yardım için üç kısa düdük çalmak", "E": "Öndekilerin durup arkayı beklemesi" },
+          "dogru": "A",
+          "cozum": "Yönlendirme işaretleri rastgele yerlere bırakılmaz; yanlış konan işaret arkadan gelenleri şaşırtır ve grubu böler.",
+          "siklar": {
+            "A": "Rastgele bırakılan yönlendirme işareti arkadan geleni yanlış yöne götürür ya da hiç görülmez; işaret görünür ve anlaşılır noktaya konur.",
+            "B": "El işaretleri sessiz iletişim yöntemidir; anlamlarını yola çıkmadan grupça kararlaştırmak rüzgârda ve uzakta anlaşmayı kolaylaştırır.",
+            "C": "Haberleşme yalnız telsizle sağlanmaz; pili biten ya da çekmeyen telsizin yerini düdük tutar, ikisini taşımak doğrudur.",
+            "D": "Üç kısa düdük uluslararası yardım çağrısıdır ve herkesçe anlaşılır; tehlike anında çalmak haberleşmenin en doğru kullanımıdır.",
+            "E": "Öndekilerin ara ara durup arkayı beklemesi grubun kopmasını önler; kimse gözden kaybolmaz, bu doğru bir alışkanlıktır."
+          },
+          "ses_cozum": "Yönlendirme işaretleri rastgele yerlere bırakılmaz, çünkü arkadan gelen yanlış yöne sapabilir. El işaretlerini kararlaştırmak, düdük taşımak ve arkayı beklemek ise haberleşmeyi güçlendirir. Üç kısa düdük de doğru yardım çağrısıdır."
+        }
+      ]
+    },
+    {
+      "id": "8b",
+      "baslik": "Sağlık: soğuk, sıcak, yükseklik ve ilk yardım",
+      "ozet": "Hipotermi, donma, güneş ve sıcak çarpması, yükseklik hastalığı, ısırık ve sokmalarda doğru ilk yardım.",
+      "gorsel": "vucut-sinirlari.svg",
+      "gorsel_alt": "İnsan vücudu çevresinde soğuk, sıcak ve yükseklik tehlikeleri ile üçler kuralının süreleri.",
+      "bolumler": [
+        {
+          "baslik": "Üçler kuralı: önce ne gelir?",
+          "ekran": "Vücudun dayanma süreleri kabaca üçlerle özetlenir; öncelik sırası da buradan çıkar.\n\n- **3 dakika:** havasız kalma sınırı\n- **3 saat:** sert havada barınaksız kalma sınırı\n- **3 gün:** susuz kalma sınırı\n- **3 hafta:** aç kalma sınırı\n\n> [!IMPORTANT] Sıra: güvenlik ve ilk yardım → barınak ve ısınma → su → yiyecek.",
+          "ses": [
+            "Vücudun doğadaki sınırlarını üçler kuralıyla aklında tutabilirsin.",
+            "İnsan yaklaşık üç dakika havasız, sert havada üç saat barınaksız dayanır.",
+            "Susuzluğa yaklaşık üç gün, açlığa ise yaklaşık üç hafta dayanılır.",
+            "Bu süreler kesin değil, kabaca birer ölçüdür ama sana neyin önce geldiğini söyler.",
+            "Önce güvenliğini sağlar ve ilk yardımı yaparsın, ardından barınak ve ısınma gelir.",
+            "Su üçüncü sırada, yiyecek ise en sondadır.",
+            "Yani kaybolduğunda ilk işin böğürtlen aramak değil, rüzgârdan korunacak bir yer bulmaktır."
+          ]
+        },
+        {
+          "baslik": "Hipotermi: vücut soğuyunca",
+          "ekran": "**Hipotermi**, vücut ısısının 35 °C'nin altına düşmesidir; başlangıcını sahada dört bulgu haber verir.\n\n- **Saha bulguları:** titreme, konuşma bozulması, bilinç bulanıklığı, nabızda hafif yavaşlama\n- **Tipik değil:** ani yüksek ateş hipotermide beklenmez\n- **Riski en çok artıran:** pamuklu içlik + ıslak çorap + dar uyku tulumu\n- **Kötüleşme:** titremenin durması iyileşme değil, ağırlaşma işaretidir\n- **Yapılacak:** rüzgârdan koru, kuru giydir, zeminden yalıt; bilinci açıksa ılık şekerli içecek ver\n\n> [!IMPORTANT] Alkol verilmez, kol ve bacaklar ovulmaz; 112 aranır.",
+          "ses": [
+            "Vücut ısısı otuz beş derecenin altına düştüğünde hipotermi başlar.",
+            "İlk haberci titremedir; ardından konuşma bozulur, bilinç bulanır, nabız hafifçe yavaşlar.",
+            "Ani yüksek ateş ise bu tabloya uymaz; hipotermide vücut ısınmaz, soğur.",
+            "Islaklık, rüzgâr ve yorgunluk birleşirse hipotermi sıfırın üstündeki havada da gelişir.",
+            "Pamuklu içlik, ıslak çorap ve dar uyku tulumu üçlüsü riski en çok artıran hatadır.",
+            "Titremesi kesilen arkadaşın ısınmış değildir, durumu ağırlaşmıştır.",
+            "Onu rüzgârdan koru, ıslak giysisini kuruyla değiştir, altına mat ser.",
+            "Bilinci açıksa ılık şekerli içecek ver; alkol verme, kollarını bacaklarını ovma."
+          ]
+        },
+        {
+          "baslik": "Donma: ovma, yavaş ısıt",
+          "ekran": "Donma en çok parmak, burun, kulak ve yanağı tutar; cilt soluk, sert ve hissizdir.\n\n- **Ovulmaz:** donan bölgeyi ovmak, karla ovmak dokuya zarar verir\n- **Hemen sıcak suya sokulmaz:** kızgın su ve ateş hissiz cildi yakar\n- **Kuru bezle korunur:** bölge temiz, kuru bezle sarılır\n- **Ilık suyla ısıtılır:** yavaş ve hafif ısıtma, 37–39 °C suyla\n- **Korunma:** bere, eldiven, kuru ve yalıtımlı çorap\n\n> [!NOTE] Yeniden donma riski varsa bölge yolda çözülmez.",
+          "ses": [
+            "Donma en çok parmakları, burnu, kulakları ve yanakları tutar.",
+            "Donan cilt soluk görünür, dokununca sert ve hissizdir.",
+            "Bu bölgeyi ovma, karla hiç ovma; hissiz doku kolayca zarar görür.",
+            "Hemen sıcak suya da sokma, ateşe de tutma, çünkü hissetmeyen cilt fark etmeden yanar.",
+            "Doğrusu bölgeyi kuru bir bezle korumak ve ılık suyla yavaş yavaş ısıtmaktır.",
+            "Suyun sıcaklığı vücut sıcaklığına yakın, otuz yedi ile otuz dokuz derece arası olmalı.",
+            "Yolda yeniden donma ihtimali varsa bölgeyi çözmeden güvenli yere ulaş.",
+            "Kış kampında ayaklarını kuru ve yalıtımlı çorapla, başını bereyle, ellerini eldivenle koru."
+          ]
+        },
+        {
+          "baslik": "Güneş ve sıcak çarpması",
+          "ekran": "Sıcak da soğuk kadar tehlikelidir; en ağır tablo sıcak çarpmasıdır.\n\n- **Sıcak çarpması:** terleme mekanizmasının bozulmasıyla oluşur; vücut ısısını atamaz\n- **Güneş çarpması:** hasta gölge ve serin bir yere alınır\n- **Yapılmaz:** sıcak yere almak, üzerini örtmek, yürütmek\n- **Serinlet:** giysiyi gevşet, suyla ıslat, yelpazele; bilinç bulanıksa 112\n- **Korunma:** şapka + güneş kremi + su\n\n> [!NOTE] Güneş çarpması, sıcak çarpmasının güneş altında gelişen biçimidir; ikisinde de ilk iş serinletmektir.",
+          "ses": [
+            "Vücut fazla ısıyı terleyerek atar.",
+            "Sıcak çarpması, bu terleme mekanizmasının bozulmasıyla oluşur; vücut artık kendini soğutamaz.",
+            "Güneş altında uzun süre kalınca gelişen biçimine güneş çarpması denir.",
+            "Güneş çarpması geçiren kişiyi hemen gölge ve serin bir yere al.",
+            "Sıcak yere almak, üzerini örtmek ya da yürütmek durumu ağırlaştırır.",
+            "Giysilerini gevşet, suyla ıslatıp yelpazele; bilinci bulanıksa yüz on ikiyi ara ve ağızdan sıvı verme.",
+            "Korunmak kolaydır: şapka tak, güneş kremi sür, suyunu az ama sık iç.",
+            "Güneş kremi yüksekte de yanıktan, gözlük ise gözlerini mor ötesi ışınlardan korur."
+          ]
+        },
+        {
+          "baslik": "Yükseklik hastalığı",
+          "ekran": "Yükseldikçe oksijen azalır; vücut uyum için zaman ister.\n\n- **En önemli korunma:** yavaş yükselmek ve uyku irtifasını kontrollü artırmak\n- **Planlama hatası:** bir günde çok irtifa kazanmak uykuyu ve uyumu bozar\n- **Sıvı kaybı:** yüksekte nefes verirken su buharı kaybı artar; soğukta da su iç\n- **Belirtiler:** 2500 m üstünde baş ağrısı, bulantı, halsizlik, uykusuzluk\n\n> [!IMPORTANT] Belirti varken daha yükseğe çıkma; düzelmiyor ya da kötüleşiyorsa aşağı in.",
+          "ses": [
+            "Yükseldikçe havadaki oksijen azalır ve vücudun buna alışması zaman alır.",
+            "Yükseklik hastalığından korunmanın en önemli yolu yavaş yükselmektir.",
+            "Uyuduğun irtifayı da kontrollü artır; ilk geceyi en yüksek noktada geçirme.",
+            "Bir günde çok fazla irtifa kazanmak, gece uykunu en çok bozan planlama hatasıdır.",
+            "Yüksekte nefes verirken su buharı kaybın artar, bu yüzden hava soğuk olsa da su içmeyi sürdür.",
+            "İki bin beş yüz metrenin üstünde baş ağrısı, bulantı, halsizlik ve uykusuzluk uyarı işaretidir.",
+            "Bu belirtiler varken daha yükseğe çıkma; geçmiyor ya da kötüleşiyorsa çare aşağı inmektir."
+          ]
+        },
+        {
+          "baslik": "Isırık, sokma, burkulma, kanama",
+          "ekran": "Küçük kazalarda kurallar kısa ve nettir; ilk yardım çantası el altında durur.\n\n- **Yılan ısırığı:** turnike ve emme yok; yara kalp hizasında tutulur, tıbbi yardım çağrılır\n- **Arı sokması:** bölgeye soğuk uygulama yapılır\n- **Kene:** cımbızla, döndürmeden dik çekilir; böcek kovucu ısırık riskini azaltır\n- **Burkulma:** soğuk uygulama ve dinlenme en uygun ilk yardımdır\n- **Kanama:** temiz bezle doğrudan bası uygulanır\n\n> [!NOTE] İlk yardım çantası: bandaj, yara bandı, antiseptik solüsyon, temiz gazlı bez, tıbbi dikiş seti.",
+          "ses": [
+            "Yılan ısırığında turnike uygulanmaz, yara emilmez ve kesilmez.",
+            "Kişiyi sakinleştir, yarayı kalp hizasında tut ve hemen tıbbi yardım çağır.",
+            "Arı sokmasında bölgeye soğuk uygulama yap; böcek kovucu sürmek ısırık riskini baştan azaltır.",
+            "Keneyi ince uçlu cımbızla deriye en yakın yerden tut, döndürmeden dik çek.",
+            "Burkulmada en uygun ilk yardım soğuk uygulama ve dinlenmedir.",
+            "Kanayan yaraya temiz bezle doğrudan bası uygula.",
+            "İlk yardım çantanda bandaj, yara bandı, antiseptik solüsyon, temiz gazlı bez ve tıbbi dikiş seti bulunsun.",
+            "Çantayı sırt çantanın kolay ulaşılır üst kısmında taşı."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "3-3-3-3",
+        "acilim": "3 dakika hava · 3 saat barınak · 3 gün su · 3 hafta yiyecek",
+        "not": "Zor durumda neye önce bakacağını söyler: güvenlik, barınak, su, yiyecek."
+      },
+      "yap": [
+        "Islak giysiyi hemen kuru olanla değiştir",
+        "Güneş çarpmasında hastayı gölge ve serin yere al",
+        "Donan bölgeyi kuru bezle koru, ılık suyla ısıt",
+        "Yılan ısırığında yarayı kalp hizasında tut",
+        "Yüksekte yavaş yüksel, uyku irtifasını kontrollü artır"
+      ],
+      "yapma": [
+        "Donan bölgeyi ovma, hemen sıcak suya sokma",
+        "Yılan ısırığına turnike uygulama, yarayı emme",
+        "Hipotermide alkol verme, kol ve bacak ovma",
+        "Bir günde çok fazla irtifa kazanma"
+      ],
+      "spotlar": [
+        { "metin": "**Hipotermi**, vücut ısısının **35 °C** altına düşmesidir.", "ses": "Hipotermi, vücut ısısının otuz beş derecenin altına düşmesidir." },
+        { "metin": "Hipotermi başlangıcında **titreme, konuşma bozulması, bilinç bulanıklığı, nabızda yavaşlama** görülür; ani yüksek ateş görülmez.", "ses": "Hipotermi başlangıcında titreme, konuşma bozulması, bilinç bulanıklığı ve nabızda yavaşlama görülür; ani yüksek ateş görülmez." },
+        { "metin": "Donan bölge **ovulmaz**, hemen sıcak suya sokulmaz; kuru bezle korunur, **ılık suyla** yavaş ısıtılır.", "ses": "Donan bölge ovulmaz ve hemen sıcak suya sokulmaz; kuru bezle korunur, ılık suyla yavaş ısıtılır." },
+        { "metin": "**Sıcak çarpması**, terleme mekanizmasının bozulmasıyla oluşur; güneş çarpmasında hasta **gölge ve serin** yere alınır.", "ses": "Sıcak çarpması terleme mekanizmasının bozulmasıyla oluşur; güneş çarpmasında hasta gölge ve serin bir yere alınır." },
+        { "metin": "Yılan ısırığında **turnike ve emme yok**; yara kalp hizasında tutulur, tıbbi yardım çağrılır.", "ses": "Yılan ısırığında turnike uygulanmaz ve yara emilmez; yara kalp hizasında tutulur, tıbbi yardım çağrılır." },
+        { "metin": "**Burkulmada** soğuk uygulama ve dinlenme, **arı sokmasında** soğuk uygulama yapılır.", "ses": "Burkulmada soğuk uygulama ve dinlenme, arı sokmasında ise bölgeye soğuk uygulama yapılır." },
+        { "metin": "Yükseklik hastalığından korunmanın yolu **yavaş yükselmek** ve uyku irtifasını kontrollü artırmaktır.", "ses": "Yükseklik hastalığından korunmak için yavaş yüksel ve uyku irtifanı kontrollü artır." }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            { "metin": "Güneş çarpması geçiren kişi sıcak bir yere alınıp üzeri örtülür.", "dogru": false, "aciklama": "Hasta gölge ve serin bir yere alınır; örtmek ve yürütmek durumu ağırlaştırır." },
+            { "metin": "Donan parmaklar karla ovularak açılır.", "dogru": false, "aciklama": "Donan bölge ovulmaz; kuru bezle korunur ve ılık suyla yavaş ısıtılır." },
+            { "metin": "Üşüyen kişinin titremesinin durması kötüye gidiş işaretidir.", "dogru": true, "aciklama": "Titremenin durması iyileşme değil, hipoterminin ağırlaştığının işaretidir." },
+            { "metin": "Soğuk havada terlemediğin için yüksekte sıvı kaybetmezsin.", "dogru": false, "aciklama": "Yüksekte nefes verirken su buharı kaybı artar; soğukta da su içilir." },
+            { "metin": "Kamp alanında böcek kovucu kullanmak ısırık riskini azaltır.", "dogru": true, "aciklama": "Böcek kovucu, böcek ısırıklarından korunmanın basit ve etkili yoludur." }
+          ]
+        },
+        {
+          "tur": "esle",
+          "baslik": "Hangi duruma hangi ilk yardım?",
+          "ciftler": [
+            { "sol": "Yılan ısırığı", "sag": "Kalp hizasında tut" },
+            { "sol": "Burkulma", "sag": "Soğuk uygulama ve dinlenme" },
+            { "sol": "Güneş çarpması", "sag": "Gölge ve serin yer" },
+            { "sol": "Donma", "sag": "Ilık suyla yavaş ısıt" },
+            { "sol": "Kanama", "sag": "Doğrudan bası" }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1, "zorluk": "kolay",
+          "kok": "Vücut ısısının 35 °C'nin altına düşmesine ne ad verilir?",
+          "secenekler": { "A": "Donma", "B": "Hipotermi", "C": "Sıcak çarpması", "D": "Yükseklik hastalığı", "E": "Güneş yanığı" },
+          "dogru": "B",
+          "cozum": "Vücut ısısının 35 °C'nin altına düşmesine hipotermi denir; donma ise uç bölgelerin soğuk hasarıdır.",
+          "siklar": {
+            "A": "Donma, parmak, burun, kulak gibi uç bölgelerin soğuktan zarar görmesidir; bütün vücudun ısısının düşmesini anlatmaz.",
+            "B": "Hipotermi, vücut ısısının 35 °C'nin altına düşmesidir; titreme, konuşma bozulması ve bilinç bulanıklığıyla kendini gösterir.",
+            "C": "Sıcak çarpması terleme mekanizmasının bozulmasıyla oluşur; bu tabloda vücut ısısı düşmez, tersine tehlikeli biçimde yükselir.",
+            "D": "Yükseklik hastalığı hızlı irtifa kazanınca baş ağrısı ve bulantıyla ortaya çıkar; tanımı vücut ısısına dayanmaz.",
+            "E": "Güneş yanığı cildin güneş ışınlarından zarar görmesidir ve güneş kremiyle önlenir; vücut ısısının düşmesiyle ilgisi yoktur."
+          },
+          "ses_cozum": "Vücut ısısı otuz beş derecenin altına düştüğünde buna hipotermi denir. Donma ile karıştırma; donma yalnız parmak, burun, kulak gibi uç bölgeleri tutar. Sıcak çarpmasında ise ısı yükselir."
+        },
+        {
+          "no": 2, "zorluk": "kolay",
+          "kok": "Burkulma ve arı sokmasının ilk yardımında ortak olan uygulama hangisidir?",
+          "secenekler": { "A": "Sıcak suyla yıkamak", "B": "Turnike uygulamak", "C": "Soğuk uygulama yapmak", "D": "Bölgeyi ovmak", "E": "Yarayı emmek" },
+          "dogru": "C",
+          "cozum": "Burkulmada soğuk uygulama ve dinlenme, arı sokmasında soğuk uygulama yapılır; ortak nokta soğuk uygulamadır.",
+          "siklar": {
+            "A": "Sıcak su şişliği ve ağrıyı artırır; ne burkulan eklemde ne de arının soktuğu yerde ilk yardım olarak kullanılır.",
+            "B": "Turnike dolaşımı keser ve dokuya zarar verir; burkulmada da sokmada da yeri yoktur, yılan ısırığında bile uygulanmaz.",
+            "C": "Soğuk uygulama şişliği ve ağrıyı azaltır; burkulmada dinlenmeyle birlikte, arı sokmasında ise bölgeye doğrudan yapılır.",
+            "D": "Ovmak şişmiş dokuyu daha çok örseler; donmada olduğu gibi burkulma ve sokmada da yapılmaması gereken bir harekettir.",
+            "E": "Emmek ne arı zehrini ne de başka bir zehri çıkarır; yılan ısırığında da yapılmayan, yararsız ve sakıncalı bir uygulamadır."
+          },
+          "ses_cozum": "Burkulmada soğuk uygulama ve dinlenme, arı sokmasında da soğuk uygulama yapılır. Sıcak su, ovmak ya da turnike şişliği ve zararı artırır. Soğuk ise ağrıyı ve şişliği azaltır."
+        },
+        {
+          "no": 3, "zorluk": "kolay",
+          "kok": "Güneş çarpmasından korunmak için aşağıdaki üçlülerden hangisi uygundur?",
+          "secenekler": { "A": "Şapka + güneş kremi + su", "B": "Koyu kalın mont + bere + az su", "C": "Öğle güneşi + hızlı tempo + ağır çanta", "D": "Şapkasız baş + açık sırt + susuzluk", "E": "Kalın örtü + sıcak ortam + dinlenme" },
+          "dogru": "A",
+          "cozum": "Güneş çarpmasından şapka, güneş kremi ve suyla korunulur; su az ama sık içilir.",
+          "siklar": {
+            "A": "Şapka başı güneşten korur, güneş kremi cildi yanıktan korur, az ama sık içilen su terle giden sıvıyı yerine koyar.",
+            "B": "Koyu ve kalın mont ısıyı içeride tutar, bere başı ısıtır, az su da terlemeyi zorlaştırır; üçü birlikte riski büyütür.",
+            "C": "Öğle güneşinde ağır çantayla hızlı yürümek güneş çarpması riskinin en yüksek olduğu durumdur; korunma değil, tehlike tarifidir.",
+            "D": "Şapkasız baş güneşi doğrudan alır, açık sırtta gölge yoktur, susuz vücut yeterince terleyemez; üçü de çarpmaya zemin hazırlar.",
+            "E": "Kalın örtü ve sıcak ortam vücudun ısı atmasını engeller; güneş çarpmasında kişi sıcağa değil, gölge ve serin yere alınır."
+          },
+          "ses_cozum": "Güneş çarpmasından korunmanın üçlüsü şapka, güneş kremi ve sudur. Kalın koyu giysi, öğle güneşinde hızlı tempo ve susuzluk ise riski artırır. Suyu az ama sık iç."
+        },
+        {
+          "no": 4, "zorluk": "orta",
+          "kok": "Kış kampında arkadaşının parmakları dondu. Aşağıdakilerden hangisi yapılır?",
+          "secenekler": { "A": "Bölgeyi karla iyice ovmak", "B": "Hemen sıcak suya sokmak", "C": "Parmakları ateşe yakın tutmak", "D": "Kuru bezle koruyup ılık suyla ısıtmak", "E": "Parmak köküne turnike uygulamak" },
+          "dogru": "D",
+          "cozum": "Donmada bölge ovulmaz, hemen sıcak suya sokulmaz; kuru bezle korunur ve ılık suyla yavaş ısıtılır.",
+          "siklar": {
+            "A": "Donan bölge ovulmaz; karla ovmak hem soğutmayı sürdürür hem de hissiz dokuyu örseleyerek zararı büyütür.",
+            "B": "Donan bölge hemen sıcak suya sokulmaz; hissiz cilt sıcaklığı algılayamaz ve yanar, ısıtma ılık suyla yavaş yapılır.",
+            "C": "Ateşe tutulan hissiz parmak yandığını fark etmez; doğrudan ateş ısısı donmuş dokuda yanık oluşturur, bu yüzden yapılmaz.",
+            "D": "Donan bölge kuru bezle korunur ve ılık suyla yavaş yavaş ısıtılır; ovmadan ve yakmadan yapılan doğru uygulama budur.",
+            "E": "Turnike dolaşımı keser; zaten kanlanması azalmış donuk parmakta doku hasarını büyütür, bu nedenle donmada uygulanmaz."
+          },
+          "ses_cozum": "Donan parmaklar kuru bezle korunur ve ılık suyla yavaş yavaş ısıtılır. Ovmak, karla ovmak, hemen sıcak suya sokmak ya da ateşe tutmak hissiz dokuya zarar verir."
+        },
+        {
+          "no": 5, "zorluk": "orta",
+          "kok": "Yılan ısırığında aşağıdaki uygulama ikililerinden hangisi doğrudur?",
+          "secenekler": { "A": "Yarayı kalp hizasında tutmak + tıbbi yardım çağırmak", "B": "Turnike uygulamak + yarayı emmek", "C": "Yarayı kesmek + zehri sıkarak akıtmak", "D": "Turnike uygulamak + kişiyi hızla yürüterek indirmek", "E": "Yarayı emmek + sıcak suya sokmak" },
+          "dogru": "A",
+          "cozum": "Yılan ısırığında turnike uygulanmaz, yara emilmez; yara kalp hizasında tutulur ve tıbbi yardım çağrılır.",
+          "siklar": {
+            "A": "Yara kalp hizasında tutulur, kişi sakinleştirilir ve hemen tıbbi yardım çağrılır; asıl tedavi sağlık kuruluşunda yapılır.",
+            "B": "Turnike dokuyu kansız bırakır, emmek ise zehri çıkarmaz ve emen kişiyi de riske atar; ikisi de yapılmaz.",
+            "C": "Yarayı kesmek ve sıkmak zehri çıkarmaz, kanamayı ve doku hasarını artırır; yılan ısırığında yapılmayan uygulamalardır.",
+            "D": "Turnike uygulanmaz; kişiyi hızla yürütmek de kalbi hızlandırıp zehrin yayılmasını kolaylaştırır, kişi sakin tutulur.",
+            "E": "Emmek yararsızdır, sıcak su da zehre etki etmez; yapılacak şey yarayı kalp hizasında tutup tıbbi yardım çağırmaktır."
+          },
+          "ses_cozum": "Yılan ısırığında yara kalp hizasında tutulur ve hemen tıbbi yardım çağrılır. Turnike, emme ve kesme filmlerde kalmış yanlışlardır; bunlar zehri çıkarmaz, üstelik dokuya zarar verir."
+        },
+        {
+          "no": 6, "zorluk": "orta",
+          "kok": "Sıcağa bağlı durumlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": { "A": "Güneş çarpmasında hasta sıcak bir yere alınır", "B": "Sıcak çarpması terleme mekanizması bozulunca oluşur", "C": "Güneş çarpmasında hastanın üzeri kalın örtülür", "D": "Güneş kremi yüksek irtifada etkisizdir", "E": "Güneş çarpmasında hasta yürütülerek açılır" },
+          "dogru": "B",
+          "cozum": "Sıcak çarpması terleme mekanizmasının bozulmasıyla oluşur; güneş çarpmasında hasta gölge ve serin yere alınır.",
+          "siklar": {
+            "A": "Güneş çarpmasında amaç vücudu soğutmaktır; hasta sıcak yere değil, gölge ve serin bir yere alınır.",
+            "B": "Vücut fazla ısıyı terleyerek atar; sıcak çarpması bu terleme mekanizmasının bozulmasıyla oluşur ve vücut kendini soğutamaz.",
+            "C": "Kalın örtü ısıyı içeride tutar; güneş çarpmasında giysiler gevşetilir, kişi suyla ıslatılıp yelpazelenerek serinletilir.",
+            "D": "Güneş kremi yüksekte de cildi yanıktan korur; yüksek irtifada etkisiz olduğu görüşü yaygın bir yanılgıdır.",
+            "E": "Yürütmek kasları çalıştırıp ısı üretimini artırır; güneş çarpmasında hasta dinlendirilir ve serin yere alınır."
+          },
+          "ses_cozum": "Sıcak çarpması, terleme mekanizmasının bozulmasıyla oluşur. Güneş çarpmasında hastayı sıcak yere almak, örtmek ya da yürütmek yanlıştır; kişi hemen gölge ve serin bir yere alınır."
+        },
+        {
+          "no": 7, "zorluk": "zor",
+          "kok": "Aşağıdaki bulgu ve tablo eşleştirmelerinden hangisi yanlıştır?",
+          "secenekler": { "A": "Titreme – hipotermi başlangıcı", "B": "Konuşma bozulması – hipotermi başlangıcı", "C": "Ani yüksek ateş – hipotermi başlangıcı", "D": "Nabızda hafif yavaşlama – hipotermi başlangıcı", "E": "Soluk, sert, hissiz cilt – donma" },
+          "dogru": "C",
+          "cozum": "Hipotermide vücut ısısı düşer; ani yüksek ateş tipik bulgu değildir. Titreme, konuşma bozulması, bilinç bulanıklığı ve nabızda yavaşlama tipiktir.",
+          "siklar": {
+            "A": "Titreme hipoterminin ilk habercisidir; soğuyan vücutta kaslar kasılarak ısı üretmeye çalışır, bu nedenle eşleştirme yerindedir.",
+            "B": "Soğuyan vücutta konuşma bozulur, kişi peltek ve yavaş konuşur; hipotermi başlangıcının tipik saha bulgularındandır.",
+            "C": "Hipotermide vücut ısısı 35 °C'nin altına düşer; ani yüksek ateş bu tabloyla bağdaşmaz ve en az tipik bulgudur.",
+            "D": "Vücut soğudukça nabız hafifçe yavaşlar; titreme, konuşma bozulması ve bilinç bulanıklığıyla birlikte görülen bir bulgudur.",
+            "E": "Donan bölgede cilt soluk görünür, dokununca sert ve hissizdir; en çok parmak, burun, kulak ve yanakta görülür."
+          },
+          "ses_cozum": "Hipotermide vücut soğur, bu yüzden ani yüksek ateş bu tabloya uymaz. Titreme, konuşma bozulması, bilinç bulanıklığı ve nabızda hafif yavaşlama ise hipotermi başlangıcının tipik saha bulgularıdır."
+        },
+        {
+          "no": 8, "zorluk": "zor",
+          "kok": "Yüksek irtifayla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+          "secenekler": { "A": "Nefes verirken su buharı kaybı artar", "B": "En önemli korunma yavaş yükselmektir", "C": "Uyku irtifası kontrollü artırılır", "D": "Bir günde çok irtifa kazanmak uykuyu bozar", "E": "Soğukta terleme olmadığından sıvı kaybı olmaz" },
+          "dogru": "E",
+          "cozum": "Yüksekte nefesle su buharı kaybı artar; soğuk havada sıvı kaybı olmadığı düşüncesi yanlıştır, su içmek sürdürülür.",
+          "siklar": {
+            "A": "Yüksek irtifada nefes verirken su buharı kaybı artar; fark edilmeyen bu kayıp nedeniyle ifade doğru bir bilgidir.",
+            "B": "Yükseklik hastalığından korunmanın en önemli yolu yavaş yükselmektir; vücut azalan oksijene ancak zamanla uyum sağlar.",
+            "C": "Uyunan irtifa kontrollü artırılır; ilk geceyi en yüksek noktada geçirmek uyumu bozar, bu nedenle ifade doğrudur.",
+            "D": "Bir günde çok fazla irtifa kazanmak yüksek irtifada uyku kalitesini en çok bozan planlama hatasıdır; ifade doğrudur.",
+            "E": "Soğukta da sıvı kaybedilir; yüksekte nefesle su buharı kaybı artar, bu yüzden su içmeyi azaltmak değil sürdürmek gerekir."
+          },
+          "ses_cozum": "Soğuk havada terlemesen de sıvı kaybedersin, çünkü yüksekte nefes verirken su buharı kaybı artar. Yavaş yükselmek ve uyku irtifasını kontrollü artırmak ise doğru korunma yollarıdır."
+        }
+      ]
+    }
+  ]
+}

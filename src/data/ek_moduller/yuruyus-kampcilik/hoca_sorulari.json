@@ -1,0 +1,3554 @@
+{
+ "kaynak": "Dersin hocasının verdiği çalışma soruları",
+ "setler": [
+  {
+   "id": "bosluk",
+   "ad": "Boşluk doldurma",
+   "tur": "bosluk",
+   "aciklama": "Kamp ve pusula: 100 cümle",
+   "sorular": [
+    {
+     "no": 1,
+     "metin": "Kamp alanı ____ bir arazide ve yangın tehlikesinden uzak olmalıdır.",
+     "cevap": "düz ve açık"
+    },
+    {
+     "no": 2,
+     "metin": "Çadır, kampçıyı ____, ____, ____ ve güneşten korur.",
+     "cevap": "rüzgâr, yağmur, soğuk"
+    },
+    {
+     "no": 3,
+     "metin": "Kamp alanı sel, çığ ve ____ riski olan yerlerde kurulmamalıdır.",
+     "cevap": "kaya düşmesi"
+    },
+    {
+     "no": 4,
+     "metin": "Uyku tulumu, vücudun ____ kaybını önlemek için kullanılır.",
+     "cevap": "ısı"
+    },
+    {
+     "no": 5,
+     "metin": "Kamp sırasında tuvalet alanı sudan en az ____ metre uzak olmalıdır.",
+     "cevap": "150"
+    },
+    {
+     "no": 6,
+     "metin": "Çadırın dikiş yerlerinde ____ kullanmak su sızmasını engeller.",
+     "cevap": "dikiş mühürleyici"
+    },
+    {
+     "no": 7,
+     "metin": "Kış kampında ____ tulumları sıcak tutar fakat ıslandığında zor kurur.",
+     "cevap": "kaz tüyü"
+    },
+    {
+     "no": 8,
+     "metin": "Doğada giyimde en önemli kural, kalın tek kat yerine ____ ince kat giyinmektir.",
+     "cevap": "birden fazla"
+    },
+    {
+     "no": 9,
+     "metin": "Kamp ateşi ____ ve ____ amaçlı kullanılabilir.",
+     "cevap": "ısınma, yemek pişirme"
+    },
+    {
+     "no": 10,
+     "metin": "Sırt çantasında ağır eşyalar sırta ____, hafif eşyalar ise ____ yerleştirilmelidir.",
+     "cevap": "yakın, dışa doğru"
+    },
+    {
+     "no": 11,
+     "metin": "Çadır kurmadan önce zemin ____ ve ____ olmalıdır.",
+     "cevap": "düz, taşsız"
+    },
+    {
+     "no": 12,
+     "metin": "Çadırın dış tentesi ____, iç tentesi ise ____ olmalıdır.",
+     "cevap": "su geçirmez, hava geçirir"
+    },
+    {
+     "no": 13,
+     "metin": "Çadırın altına serilen koruyucu örtüye ____ denir.",
+     "cevap": "tabanlık"
+    },
+    {
+     "no": 14,
+     "metin": "Çadırın içine girerken ____ kapatılmalıdır.",
+     "cevap": "kapı"
+    },
+    {
+     "no": 15,
+     "metin": "Uyku tulumu ____ tutulmalı, ıslandığında mutlaka ____ edilmelidir.",
+     "cevap": "kuru, kurutulmalı"
+    },
+    {
+     "no": 16,
+     "metin": "Uyku tulumu içine girmeden önce ____ giysiler giyilmelidir.",
+     "cevap": "kuru"
+    },
+    {
+     "no": 17,
+     "metin": "Uyku tulumunun altına serilen yalıtım malzemesine ____ denir.",
+     "cevap": "mat"
+    },
+    {
+     "no": 18,
+     "metin": "Sıcak havalarda başı korumak için ____ kullanılmalıdır.",
+     "cevap": "şapka"
+    },
+    {
+     "no": 19,
+     "metin": "Soğuk havalarda ısı kaybını önlemek için ____ ve ____ takılmalıdır.",
+     "cevap": "bere, eldiven"
+    },
+    {
+     "no": 20,
+     "metin": "Kamp alanında yiyecekler ____ kaplarda saklanmalıdır.",
+     "cevap": "kapalı"
+    },
+    {
+     "no": 21,
+     "metin": "Kamp alanı hayvan geçiş yollarına ____ olmalıdır.",
+     "cevap": "uzak"
+    },
+    {
+     "no": 22,
+     "metin": "Uyku tulumu faaliyet sonrasında ____ yerlerinden asılmalıdır.",
+     "cevap": "asma"
+    },
+    {
+     "no": 23,
+     "metin": "Çadırın içindeki eşyalar ____ bir şekilde yerleştirilmelidir.",
+     "cevap": "düzenli"
+    },
+    {
+     "no": 24,
+     "metin": "Kamp sırasında kullanılan bıçak, çakı gibi aletler ____ kullanılmalıdır.",
+     "cevap": "dikkatli"
+    },
+    {
+     "no": 25,
+     "metin": "Kamp sırasında enerji sağlamak için ____ bir akşam yemeği önemlidir.",
+     "cevap": "iyi / dengeli"
+    },
+    {
+     "no": 26,
+     "metin": "Çadırın iç ve dış tentesi birbirine ____ etmemelidir.",
+     "cevap": "değmemelidir"
+    },
+    {
+     "no": 27,
+     "metin": "Kamp çantasındaki sıvı maddeler (örneğin benzin) ____ yerleştirilmelidir.",
+     "cevap": "en alt kısma"
+    },
+    {
+     "no": 28,
+     "metin": "Çadır ____ riski olan mağara duvarlarına yakın kurulmamalıdır.",
+     "cevap": "çökme"
+    },
+    {
+     "no": 29,
+     "metin": "Uyku tulumunda fazla boşluk kalırsa ____ giysilerle doldurulabilir.",
+     "cevap": "polar"
+    },
+    {
+     "no": 30,
+     "metin": "Çadırın içerisi ____ bırakılmamalı, çıkarken kapı ____ kapatılmalıdır.",
+     "cevap": "açık, mutlaka"
+    },
+    {
+     "no": 31,
+     "metin": "Uyku tulumu temizlenirken ____ kullanılmamalıdır.",
+     "cevap": "deterjan"
+    },
+    {
+     "no": 32,
+     "metin": "Doğada teri dışarı atabilen ____ karışımlı giysiler tercih edilmelidir.",
+     "cevap": "sentetik / yün"
+    },
+    {
+     "no": 33,
+     "metin": "Kamp sırasında çöpler mutlaka ____ toplanmalıdır.",
+     "cevap": "ayrıştırılarak / poşetlerde"
+    },
+    {
+     "no": 34,
+     "metin": "Kamp çantasındaki ağır eşyalar ____ olmalıdır.",
+     "cevap": "sırta yakın"
+    },
+    {
+     "no": 35,
+     "metin": "Uyku tulumu içine girmeden önce hafif bir ____ yapmak vücudu ısıtır.",
+     "cevap": "yürüyüş"
+    },
+    {
+     "no": 36,
+     "metin": "Kış kamplarında sıcak su dolu şişe ____ içine konabilir.",
+     "cevap": "uyku tulumu"
+    },
+    {
+     "no": 37,
+     "metin": "Kamp ateşi yakmadan önce ____ kontrol edilmelidir.",
+     "cevap": "rüzgâr yönü"
+    },
+    {
+     "no": 38,
+     "metin": "Çadır kazıkları ____ açıyla toprağa çakılmalıdır.",
+     "cevap": "90 derecelik"
+    },
+    {
+     "no": 39,
+     "metin": "Çadırın bakımında en önemli kural ____ ve ____ saklamaktır.",
+     "cevap": "kuru, havalandırılmış"
+    },
+    {
+     "no": 40,
+     "metin": "Kamp alanı seçerken bölgenin ____ kısmına hâkim olunmalıdır.",
+     "cevap": "üçte ikilik / yüksek"
+    },
+    {
+     "no": 41,
+     "metin": "Çadır kurarken rüzgârın yönü dikkate alınmalı, çadırın ____ kısmı rüzgâr yönüne gelecek şekilde konumlandırılmalıdır.",
+     "cevap": "arka"
+    },
+    {
+     "no": 42,
+     "metin": "İyi bir kamp alanı, doğaya zarar vermemek için ____ kamp alanı ilkesine uygun seçilmelidir.",
+     "cevap": "“iz bırakma” / Leave No Trace"
+    },
+    {
+     "no": 43,
+     "metin": "Uyku tulumunun ısı yalıtımı, içindeki ____ miktarına ve ____ kalitesine bağlıdır.",
+     "cevap": "hava, dolgu malzemesi"
+    },
+    {
+     "no": 44,
+     "metin": "Kış kamplarında çadır altına konan kar tabakası ____ amacıyla kullanılır.",
+     "cevap": "yalıtım / izolasyon"
+    },
+    {
+     "no": 45,
+     "metin": "Çadırın içindeki nemin dışarı çıkabilmesi için ____ sistemi bulunmalıdır.",
+     "cevap": "havalandırma"
+    },
+    {
+     "no": 46,
+     "metin": "Kamp ocaklarında yakıt olarak genellikle ____ veya ____ türü gazlar kullanılır.",
+     "cevap": "propan, bütan"
+    },
+    {
+     "no": 47,
+     "metin": "Ağaç altına çadır kurmak tehlikelidir, çünkü ____ riski her zaman vardır.",
+     "cevap": "dal kırılması / düşen dal"
+    },
+    {
+     "no": 48,
+     "metin": "Kamp sırasında enerji kaybını önlemek için karbonhidrat ve ____ açısından zengin yiyecekler tüketilmelidir.",
+     "cevap": "protein"
+    },
+    {
+     "no": 49,
+     "metin": "Kar mağarası veya iglo inşa ederken, içeride ____ deliği bırakmak karbonmonoksit zehirlenmesini önler.",
+     "cevap": "havalandırma"
+    },
+    {
+     "no": 50,
+     "metin": "Uzun süreli kamp faaliyetlerinde çadır ve tulumların küflenmesini önlemek için ____ ve ____ yapılması gerekir.",
+     "cevap": "kurutma, havalandırma"
+    },
+    {
+     "no": 51,
+     "metin": "Pusula, ____ özelliğine dayanarak yön belirlemeye yarayan bir alettir.",
+     "cevap": "yerkürenin manyetik"
+    },
+    {
+     "no": 52,
+     "metin": "Pusulada ağırlıklı uç genellikle ____ yönünü gösterir.",
+     "cevap": "güney"
+    },
+    {
+     "no": 53,
+     "metin": "Pusulada N, S, E, W harfleri sırasıyla ____, ____, ____, ____ yönlerini gösterir.",
+     "cevap": "kuzey, güney, doğu, batı"
+    },
+    {
+     "no": 54,
+     "metin": "Jeolog pusulası, ____ (eğim ölçer) ve ____ (düzey ölçer) kısımlarından oluşur.",
+     "cevap": "klinometre, el düzeçi"
+    },
+    {
+     "no": 55,
+     "metin": "Pusula tabanı üzerinde E-W harfleri ____ olarak yazılır.",
+     "cevap": "yer değiştirmiş"
+    },
+    {
+     "no": 56,
+     "metin": "Doğrultu açısı, pusula ibresinin ____ ile yaptığı ____ açıdır.",
+     "cevap": "kuzey, dar"
+    },
+    {
+     "no": 57,
+     "metin": "Eğim yönünü bulmak için pusulanın ____ veya ____ kenarı ölçülecek düzleme yaslanır.",
+     "cevap": "N, S"
+    },
+    {
+     "no": 58,
+     "metin": "Eğim açısı ____ yardımıyla okunur.",
+     "cevap": "klinometre düzeci"
+    },
+    {
+     "no": 59,
+     "metin": "Pusula ile yer belirleme yöntemlerinden biri ____ kestirme, diğeri ____ kestirme yöntemidir.",
+     "cevap": "geriden, ileriden"
+    },
+    {
+     "no": 60,
+     "metin": "Pusula–altimetre yöntemiyle yer belirlemede, ____ ölçülür ve haritadaki ____ eğrisi üzerinden konum belirlenir.",
+     "cevap": "yükseklik, eşyükseklik"
+    },
+    {
+     "no": 61,
+     "metin": "Jeolog pusulası, hem ____ ölçümü hem de ____ tayini için kullanılır.",
+     "cevap": "düzlemsel yapıların, çizgisel yapıların"
+    },
+    {
+     "no": 62,
+     "metin": "Pusula ibresi, ____ alanı sayesinde yön tayini yapar.",
+     "cevap": "Dünya’nın manyetik"
+    },
+    {
+     "no": 63,
+     "metin": "Eğer pusula ibresinin ağırlıklı ucu yoksa, ____ işaretli uç kuzeyi gösterir.",
+     "cevap": "N harfiyle"
+    },
+    {
+     "no": 64,
+     "metin": "Pusula tabanı üzerinde E-W harflerinin yer değiştirmesi, ibrenin ____ yönünde dönmesinden kaynaklanır.",
+     "cevap": "saat ibresinin tersi"
+    },
+    {
+     "no": 65,
+     "metin": "Doğrultu açısı, ____ aralığında ibrenin kuzeyle yaptığı dar açıdır.",
+     "cevap": "E–N–W"
+    },
+    {
+     "no": 66,
+     "metin": "Eğim ölçümü sırasında pusulanın klinometreli kenarı ölçülen düzleme ____ konumda tutulur.",
+     "cevap": "dik"
+    },
+    {
+     "no": 67,
+     "metin": "Brunton pusulasında, eğim açısı ____ kabarcıklı düzeci yataylanarak ölçülür.",
+     "cevap": "silindirik"
+    },
+    {
+     "no": 68,
+     "metin": "Breithaupt pusulasında, eğim açısı pusula içindeki ____ yardımıyla okunur.",
+     "cevap": "oynar sarkaç"
+    },
+    {
+     "no": 69,
+     "metin": "Çizgisel elemanların yönü belirlenirken dalım yönü, çizgisel yapının ____ yönüdür.",
+     "cevap": "eğildiği / daldığı"
+    },
+    {
+     "no": 70,
+     "metin": "Pusula ile yapılan geriden kestirme yönteminde, haritada iki farklı noktadan çizilen doğruların ____ bulunduğumuz konumu verir.",
+     "cevap": "kesişim noktası"
+    },
+    {
+     "no": 71,
+     "metin": "Pusula ile yapılan ileriden kestirme yönteminde, ölçüm yapılan noktalar ____ bölgeye doğrudan ulaşılamadığı durumlarda kullanılır.",
+     "cevap": "ulaşılamayan / girilemeyen"
+    },
+    {
+     "no": 72,
+     "metin": "Pusula–altimetre yönteminde, pusula ____ yönünü verirken, altimetre ____ bilgisini sağlar.",
+     "cevap": "doğrultu, yükseklik"
+    },
+    {
+     "no": 73,
+     "metin": "Eğim yönü, pusulanın N kenarı yaslanırsa ibrenin ____ ucu, S kenarı yaslanırsa ibrenin ____ ucu tarafından gösterilir.",
+     "cevap": "S, N"
+    },
+    {
+     "no": 74,
+     "metin": "Doğrultu ölçümü sırasında pusula tabanı ____ hale getirilmeden ölçüm yapılmamalıdır.",
+     "cevap": "yatay"
+    },
+    {
+     "no": 75,
+     "metin": "Düzlemsel yapılarla çizgisel yapıların farkı, düzlemsel yapıların ____, çizgisel yapıların ise ____ özelliğe sahip olmasıdır.",
+     "cevap": "yüzeysel, doğrusal"
+    },
+    {
+     "no": 76,
+     "metin": "Harita üzerinde yer belirleme sırasında yapılan ölçümlerde hata payını azaltmak için ____ fazla noktadan atış yapılmalıdır.",
+     "cevap": "iki’den"
+    },
+    {
+     "no": 77,
+     "metin": "Arazide yüksekliği belirlemek için altimetre, ____ değişimine bağlı olarak ölçüm yapar.",
+     "cevap": "hava basıncı"
+    },
+    {
+     "no": 78,
+     "metin": "Jeolog pusulasında ayna parçası, ölçüm sırasında hem ____ hem de ____ doğruluğunu sağlamaya yarar.",
+     "cevap": "göz hizası, düzlem konumu"
+    },
+    {
+     "no": 79,
+     "metin": "Pusula ibresinin sapması, yakın çevrede bulunan ____ veya ____ maddelerden etkilenebilir.",
+     "cevap": "manyetik, metalik"
+    },
+    {
+     "no": 80,
+     "metin": "Arazide eğim ölçümü yaparken tabaka yüzeyi düzgün değilse, ölçüm yüzeyi ____ veya ____ ile düzleştirilir.",
+     "cevap": "jeolog çekici, defter"
+    },
+    {
+     "no": 81,
+     "metin": "Pusula ibresinin kuzeyi göstermediği durumlarda, ölçüm hatasının nedeni genellikle ____ sapmasıdır.",
+     "cevap": "manyetik / deklinasyon"
+    },
+    {
+     "no": 82,
+     "metin": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkına ____ denir.",
+     "cevap": "manyetik deklinasyon"
+    },
+    {
+     "no": 83,
+     "metin": "Manyetik deklinasyon, her yıl ____ gösterdiği için arazide ölçüm yapılmadan önce mutlaka güncel harita ile düzeltilmelidir.",
+     "cevap": "değişim"
+    },
+    {
+     "no": 84,
+     "metin": "Jeomanyetik eğim (inclination), manyetik alan çizgilerinin yatay düzlemle yaptığı ____ açısıdır.",
+     "cevap": "daldığı / eğim"
+    },
+    {
+     "no": 85,
+     "metin": "Doğrultu-eğim ölçümlerinde, eğim yönü daima doğrultuya ____ olmalıdır.",
+     "cevap": "dik"
+    },
+    {
+     "no": 86,
+     "metin": "Pusula ile yapılan ölçümlerde kabarcıklı düzeç ortalanmamışsa, sonuçlar ____ hatası içerir.",
+     "cevap": "horizontallik / seviye"
+    },
+    {
+     "no": 87,
+     "metin": "Jeolog pusulası üzerindeki dereceli daire ____ sistemine göre 0°–360° olarak kalibre edilmiştir.",
+     "cevap": "azimut / yatay açı"
+    },
+    {
+     "no": 88,
+     "metin": "Dip direction-dip amount (DDD) ifadesinde, ilk sayı ____, ikinci sayı ____ anlamına gelir.",
+     "cevap": "eğim yönü, eğim açısı"
+    },
+    {
+     "no": 89,
+     "metin": "Strike-dip ölçümünde, doğrultu genellikle ____ yönü referans alınarak verilir.",
+     "cevap": "kuzey"
+    },
+    {
+     "no": 90,
+     "metin": "Ölçülen bir tabakanın eğim yönü kuzeydoğu ise, doğrultu genellikle ____ – ____ şeklinde ifade edilir.",
+     "cevap": "kuzeybatı, güneydoğu"
+    },
+    {
+     "no": 91,
+     "metin": "İzohips (eş-yükseklik) eğrileri üzerinde yapılan pusula-altimetre kestirmelerinde konum, aynı anda ____ ve ____ verileriyle belirlenir.",
+     "cevap": "doğrultu, yükseklik"
+    },
+    {
+     "no": 92,
+     "metin": "Geriden kestirme yönteminde kullanılan iki noktanın arasındaki açı dar ise, kesişim noktası ____ hatası verir.",
+     "cevap": "belirsizlik / büyük"
+    },
+    {
+     "no": 93,
+     "metin": "İleriden kestirme yöntemi, doğrudan ulaşılamayan bir noktanın ____ harita üzerinde belirlenmesini sağlar.",
+     "cevap": "konumunun / yerinin"
+    },
+    {
+     "no": 94,
+     "metin": "Manyetik kuzeyin yıllık sapma miktarı ____ birimiyle ifade edilir.",
+     "cevap": "derece / yıl"
+    },
+    {
+     "no": 95,
+     "metin": "Azimut ölçümü, bir doğrultunun ____ ile yaptığı açının saat yönünde ölçülmesidir.",
+     "cevap": "coğrafi kuzey"
+    },
+    {
+     "no": 96,
+     "metin": "Pusula ile yapılan ölçümlerde metal saat, telefon veya araç gövdesi gibi nesneler ____ etkisi yaratarak ölçüm doğruluğunu bozar.",
+     "cevap": "manyetik alan / sapma"
+    },
+    {
+     "no": 97,
+     "metin": "Eğim yönü ölçülürken pusula kenarı tabaka yüzeyine tam oturmuyorsa, yüzey ____ hale getirilmelidir.",
+     "cevap": "pürüzsüz / düz"
+    },
+    {
+     "no": 98,
+     "metin": "Klinometre kullanılarak ölçülen eğim açısının doğruluğu, pusula tabanının ____ konumda tutulmasına bağlıdır.",
+     "cevap": "düşey"
+    },
+    {
+     "no": 99,
+     "metin": "Dalım yönü, çizgisel yapıların yer altında ____ yöneldiğini gösteren vektörel bir büyüklüktür.",
+     "cevap": "daldığı / eğildiği"
+    },
+    {
+     "no": 100,
+     "metin": "Arazide yapılan tüm pusula ölçümleri, sahada ____ numaralı notlarla saha defterine kaydedilmelidir.",
+     "cevap": "lokasyon / koordinat"
+    }
+   ]
+  },
+  {
+   "id": "dy-dagcilik",
+   "ad": "Doğru – yanlış: dağcılık",
+   "tur": "dy",
+   "aciklama": "Dağcılık tarihi, dağ ortamı, etik ve malzeme: 100 önerme",
+   "sorular": [
+    {
+     "no": 1,
+     "metin": "Dağcılık yalnızca fiziksel dayanıklılık gerektirir, ruhsal hazırlığın önemi yoktur.",
+     "dogru": false
+    },
+    {
+     "no": 2,
+     "metin": "21 Mart – 21 Aralık tarihleri arasındaki etkinlikler yaz dağcılığı olarak tanımlanır.",
+     "dogru": true
+    },
+    {
+     "no": 3,
+     "metin": "Alpinizm, yalnızca kaya tırmanışını kapsayan bir dağcılık türüdür.",
+     "dogru": false
+    },
+    {
+     "no": 4,
+     "metin": "Ferrata, kayaya sabitlenmiş metal aksamlar kullanılarak yapılan tırmanıştır.",
+     "dogru": true
+    },
+    {
+     "no": 5,
+     "metin": "Türkiye’nin en yüksek dağı Cilo Dağı’dır.",
+     "dogru": false
+    },
+    {
+     "no": 6,
+     "metin": "Everest Dağı, Himalayalar’da yer alır.",
+     "dogru": true
+    },
+    {
+     "no": 7,
+     "metin": "Mont Blanc tırmanışı dağcılığın başlangıcı olarak kabul edilir.",
+     "dogru": true
+    },
+    {
+     "no": 8,
+     "metin": "Türkiye’de ilk dağcılık etkinliği bilimsel amaçla yapılmıştır.",
+     "dogru": true
+    },
+    {
+     "no": 9,
+     "metin": "1924’te Cemil Cahit Toydemir, Erciyes Dağı’na tırmanarak Türk dağcılığının başlangıcını yapmıştır.",
+     "dogru": true
+    },
+    {
+     "no": 10,
+     "metin": "Türkiye Dağcılık Federasyonu 1966’da resmen kurulmuştur.",
+     "dogru": true
+    },
+    {
+     "no": 11,
+     "metin": "Ağrı Dağı 3916 metredir.",
+     "dogru": false
+    },
+    {
+     "no": 12,
+     "metin": "Reinhold Messner tüm 8000’lik dağlara tırmanan ilk kişidir.",
+     "dogru": true
+    },
+    {
+     "no": 13,
+     "metin": "Dağlar yalnızca yüksekliklerine göre sınıflandırılır, ekosistem özellikleri dikkate alınmaz.",
+     "dogru": false
+    },
+    {
+     "no": 14,
+     "metin": "Kireçtaşı, çökelti kökenli bir kayaçtır.",
+     "dogru": true
+    },
+    {
+     "no": 15,
+     "metin": "Granit, tortul kayaç sınıfındadır.",
+     "dogru": false
+    },
+    {
+     "no": 16,
+     "metin": "Gnays, yüksek basınç ve sıcaklık altında oluşmuş başkalaşım kayasıdır.",
+     "dogru": true
+    },
+    {
+     "no": 17,
+     "metin": "Şist, katlanma sırasında basınç altında oluşur.",
+     "dogru": true
+    },
+    {
+     "no": 18,
+     "metin": "Buzulların ilerleme hızı tüm dünyada sabittir.",
+     "dogru": false
+    },
+    {
+     "no": 19,
+     "metin": "Serak, buzul yüzeyinde oluşan dev buz kuleleridir.",
+     "dogru": true
+    },
+    {
+     "no": 20,
+     "metin": "Moren, buzulun taşıdığı döküntülerin birikmesiyle oluşur.",
+     "dogru": true
+    },
+    {
+     "no": 21,
+     "metin": "Buzullar, iklim değişikliğinin doğrudan göstergeleridir.",
+     "dogru": true
+    },
+    {
+     "no": 22,
+     "metin": "Dağlarda yükseklik arttıkça oksijen oranı artar.",
+     "dogru": false
+    },
+    {
+     "no": 23,
+     "metin": "Bitki örtüsünün yüksekliğe göre değişmesi “yüksekliğe dayalı zonlaşma” olarak adlandırılır.",
+     "dogru": true
+    },
+    {
+     "no": 24,
+     "metin": "Dağlarda gece–gündüz sıcaklık farkı genellikle küçüktür.",
+     "dogru": false
+    },
+    {
+     "no": 25,
+     "metin": "Bitkiler yüksek rakımlarda kalın ve tüylü yapraklara sahiptir.",
+     "dogru": true
+    },
+    {
+     "no": 26,
+     "metin": "Kış uykusu, dağ hayvanlarının sert iklime uyum sağlama yöntemidir.",
+     "dogru": true
+    },
+    {
+     "no": 27,
+     "metin": "Plastik poşet doğada en fazla 10 yıl kalır.",
+     "dogru": false
+    },
+    {
+     "no": 28,
+     "metin": "Dağlarda çöpü gömmek yerine yakmak en doğru yöntemdir.",
+     "dogru": false
+    },
+    {
+     "no": 29,
+     "metin": "“İz bırakma” ilkesi dağ etiğinin temelidir.",
+     "dogru": true
+    },
+    {
+     "no": 30,
+     "metin": "UIAA’nın Troll Deklarasyonu tırmanış etiğini belirler.",
+     "dogru": true
+    },
+    {
+     "no": 31,
+     "metin": "Katmandu Bildirgesi, dağ ortamlarının korunması ve yerel halkın haklarına saygı ilkelerini içerir.",
+     "dogru": true
+    },
+    {
+     "no": 32,
+     "metin": "UIAA Dağ Etikleri Bildirgesi, dağ rehberlerinin sorumluluklarına da değinir.",
+     "dogru": true
+    },
+    {
+     "no": 33,
+     "metin": "Dağcılıkta kaza riski yoktur, çünkü her etkinlik önceden planlanır.",
+     "dogru": false
+    },
+    {
+     "no": 34,
+     "metin": "Ekip çalışması ve denge, dağcılığın önemli etik ilkelerindendir.",
+     "dogru": true
+    },
+    {
+     "no": 35,
+     "metin": "Yabancı ülkelerde tırmanış yaparken yerel kültüre uymak gerekmez.",
+     "dogru": false
+    },
+    {
+     "no": 36,
+     "metin": "Sponsorluk ilişkilerinde dağcının etik kurallara uyması beklenir.",
+     "dogru": true
+    },
+    {
+     "no": 37,
+     "metin": "Yüksek irtifa tırmanışlarında oksijen desteği kullanımı etik değildir.",
+     "dogru": false
+    },
+    {
+     "no": 38,
+     "metin": "Dağcılıkta tarz, sonuca ulaşmaktan daha önemlidir.",
+     "dogru": true
+    },
+    {
+     "no": 39,
+     "metin": "İlk çıkışlarda kullanılan teknikler ayrıntılı olarak belirtilmelidir.",
+     "dogru": true
+    },
+    {
+     "no": 40,
+     "metin": "Ticari tırmanışlarda müşterilerin kurtarma riskleri konusunda bilgilendirilmesine gerek yoktur.",
+     "dogru": false
+    },
+    {
+     "no": 41,
+     "metin": "Pamuklu giysiler dağcılık için en uygun malzemedir.",
+     "dogru": false
+    },
+    {
+     "no": 42,
+     "metin": "Katmanlı giyim sistemi, dağcılıkta ısı dengesini korumak için kullanılır.",
+     "dogru": true
+    },
+    {
+     "no": 43,
+     "metin": "Yün kumaşlar ıslandığında yalıtım özelliklerini tamamen kaybeder.",
+     "dogru": false
+    },
+    {
+     "no": 44,
+     "metin": "Polipropilen, iç katman için uygun bir sentetik kumaştır.",
+     "dogru": true
+    },
+    {
+     "no": 45,
+     "metin": "Kaz tüyü, ıslandığında bile yalıtım özelliğini korur.",
+     "dogru": false
+    },
+    {
+     "no": 46,
+     "metin": "Sentetik dolgu malzemeleri nemli ortamlarda kaz tüyünden daha avantajlıdır.",
+     "dogru": true
+    },
+    {
+     "no": 47,
+     "metin": "Dağcılar için şapka kullanımı vücut ısısının korunmasında önemlidir.",
+     "dogru": true
+    },
+    {
+     "no": 48,
+     "metin": "Pamuklu çoraplar ayağın su toplamasını engeller.",
+     "dogru": false
+    },
+    {
+     "no": 49,
+     "metin": "Tozluklar, pantolon paçası ile bot arasındaki boşluğu kapatarak su girişini önler.",
+     "dogru": true
+    },
+    {
+     "no": 50,
+     "metin": "Plastik dağcılık botları genellikle sıcak ve kuru iklimler için uygundur.",
+     "dogru": false
+    },
+    {
+     "no": 51,
+     "metin": "Dağcılığın başarısı yalnızca fiziksel hazırlığa değil, ruhsal dengeye de bağlıdır.",
+     "dogru": true
+    },
+    {
+     "no": 52,
+     "metin": "21 Aralık–21 Mart tarihleri arasındaki etkinlikler yaz dağcılığı sayılır.",
+     "dogru": false
+    },
+    {
+     "no": 53,
+     "metin": "Ekspedisyon, kısa süreli günübirlik tırmanışları ifade eder.",
+     "dogru": false
+    },
+    {
+     "no": 54,
+     "metin": "Ferrata rotaları, doğal tırmanışlarda bolt kullanılmadan oluşturulur.",
+     "dogru": false
+    },
+    {
+     "no": 55,
+     "metin": "Alpinizm, kaya, kar ve buzul unsurlarını birlikte barındıran karma bir disiplindir.",
+     "dogru": true
+    },
+    {
+     "no": 56,
+     "metin": "Dünyada ilk modern dağcılık tırmanışı 1786’da Mont Blanc’a yapılmıştır.",
+     "dogru": true
+    },
+    {
+     "no": 57,
+     "metin": "Reinhold Messner, Everest’e ilk çıkan insandır.",
+     "dogru": false
+    },
+    {
+     "no": 58,
+     "metin": "1924’te Miralay Cemil Cahit Toydemir’in Erciyes tırmanışı Türkiye’de dağcılığın başlangıcı sayılır.",
+     "dogru": true
+    },
+    {
+     "no": 59,
+     "metin": "Türkiye Dağcılık Federasyonu’nun kökeni 1939’da kurulmuş “Dağcılık ve Kış Sporları Federasyonu”na dayanır.",
+     "dogru": true
+    },
+    {
+     "no": 60,
+     "metin": "TDF 2016 Rio Olimpiyatları’nda spor tırmanışı olimpik branş olarak tanıtmıştır.",
+     "dogru": true
+    },
+    {
+     "no": 61,
+     "metin": "UIAA’ya Türkiye’nin üyeliği 1936’da gerçekleşmiştir.",
+     "dogru": false
+    },
+    {
+     "no": 62,
+     "metin": "Kireçtaşı magmatik kökenli bir kayadır.",
+     "dogru": false
+    },
+    {
+     "no": 63,
+     "metin": "Granit, yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur.",
+     "dogru": true
+    },
+    {
+     "no": 64,
+     "metin": "Gnays kristalleri çıplak gözle görülebilir.",
+     "dogru": false
+    },
+    {
+     "no": 65,
+     "metin": "Şist, yer kabuğu katlanması sırasında yüksek basınç altında oluşur.",
+     "dogru": true
+    },
+    {
+     "no": 66,
+     "metin": "Buzulların akış yönü genellikle eğimin tersine doğrudur.",
+     "dogru": false
+    },
+    {
+     "no": 67,
+     "metin": "Buz çatlakları (bergschrund) buzul ile kaya duvarı arasındaki sınırı belirler.",
+     "dogru": true
+    },
+    {
+     "no": 68,
+     "metin": "Serak, buzulun yatay ilerlediği yerlerde oluşur.",
+     "dogru": false
+    },
+    {
+     "no": 69,
+     "metin": "Morenler buzulun taşıdığı döküntülerin birikmesiyle meydana gelir.",
+     "dogru": true
+    },
+    {
+     "no": 70,
+     "metin": "Buzulların inceldiği ve sonlandığı nokta buzul burnu olarak adlandırılır.",
+     "dogru": true
+    },
+    {
+     "no": 71,
+     "metin": "Dağ ekosistemlerinde sıcaklık genellikle her 100 metrede ortalama 0,6 °C artar.",
+     "dogru": false
+    },
+    {
+     "no": 72,
+     "metin": "Yüksek irtifada bitkilerin su kaybını azaltmak için yaprakları tüylü olur.",
+     "dogru": true
+    },
+    {
+     "no": 73,
+     "metin": "Dağlarda oksijen azaldıkça bitkilerin fotosentez oranı artar.",
+     "dogru": false
+    },
+    {
+     "no": 74,
+     "metin": "Hayvanlar kışın enerji kaybını azaltmak için aktivitelerini düşürür.",
+     "dogru": true
+    },
+    {
+     "no": 75,
+     "metin": "Plastik poşet doğada yaklaşık 100 yıl içinde tamamen çözünür.",
+     "dogru": false
+    },
+    {
+     "no": 76,
+     "metin": "Katmandu Bildirgesi, dağlık alanların kültürel mirasının korunmasını öngörür.",
+     "dogru": true
+    },
+    {
+     "no": 77,
+     "metin": "UIAA’nın “Dağ Etikleri Bildirgesi” dağ rehberlerinin etik yükümlülüklerini içermez.",
+     "dogru": false
+    },
+    {
+     "no": 78,
+     "metin": "Tırmanışta tarz, sonuca ulaşmaktan daha önemli görülür.",
+     "dogru": true
+    },
+    {
+     "no": 79,
+     "metin": "Sponsorluk ilişkilerinde dağcının etik ilkelere uyması beklenmez.",
+     "dogru": false
+    },
+    {
+     "no": 80,
+     "metin": "Oksijen tüplerinin dağda bırakılması, UIAA’ya göre etik değildir.",
+     "dogru": true
+    },
+    {
+     "no": 81,
+     "metin": "Dağcılıkta “takım ruhu”, grubun üyeleri arasında fedakârlığı ve dengeyi gerektirir.",
+     "dogru": true
+    },
+    {
+     "no": 82,
+     "metin": "Kutsal dağlara tırmanış yapılırken yerel geleneklerin dikkate alınması UIAA tarafından önerilmez.",
+     "dogru": false
+    },
+    {
+     "no": 83,
+     "metin": "Pamuklu giysiler, teri dışarı atma özelliği nedeniyle dağcılık için idealdir.",
+     "dogru": false
+    },
+    {
+     "no": 84,
+     "metin": "Polipropilen, iç katmanda kullanılan sentetik bir kumaştır.",
+     "dogru": true
+    },
+    {
+     "no": 85,
+     "metin": "Yünlü kumaşlar ıslanınca yalıtım özelliğini tamamen kaybeder.",
+     "dogru": false
+    },
+    {
+     "no": 86,
+     "metin": "Sentetik yalıtım malzemeleri, nemli ortamlarda kaz tüyüne göre daha avantajlıdır.",
+     "dogru": true
+    },
+    {
+     "no": 87,
+     "metin": "Kaz tüyü ıslandığında bile sıcak tutma özelliğini korur.",
+     "dogru": false
+    },
+    {
+     "no": 88,
+     "metin": "Üç katmanlı giyim sisteminde dış katman, rüzgâr ve yağıştan korur.",
+     "dogru": true
+    },
+    {
+     "no": 89,
+     "metin": "Vücut ısısının %50’sinden fazlası baş bölgesinden kaybedilebilir.",
+     "dogru": true
+    },
+    {
+     "no": 90,
+     "metin": "Eldivenlerde katman sistemi uygulanmaz, tek katman yeterlidir.",
+     "dogru": false
+    },
+    {
+     "no": 91,
+     "metin": "Plastik botlar, kar–buz karışık zeminlerde tırmanış için uygundur.",
+     "dogru": true
+    },
+    {
+     "no": 92,
+     "metin": "Pamuklu çoraplar ayağın su toplamasını engeller.",
+     "dogru": false
+    },
+    {
+     "no": 93,
+     "metin": "Tozluk, pantolon ile bot arasındaki boşluğu kapatarak su geçişini önler.",
+     "dogru": true
+    },
+    {
+     "no": 94,
+     "metin": "Batonların alt uçlarındaki tungsten pimler değiştirilebilir özelliktedir.",
+     "dogru": true
+    },
+    {
+     "no": 95,
+     "metin": "Çantanın ağır eşyaları sırt bölgesine uzak yerleştirilmelidir.",
+     "dogru": false
+    },
+    {
+     "no": 96,
+     "metin": "Ayarlanabilir sırt sistemli çantalar, farklı boylarda kullanıcılara göre uyarlanabilir.",
+     "dogru": true
+    },
+    {
+     "no": 97,
+     "metin": "Çadır, ocak ve mat teknik malzeme grubuna girer.",
+     "dogru": false
+    },
+    {
+     "no": 98,
+     "metin": "Yarım ip, dağ yürüyüşlerinde güvenlik amacıyla tercih edilir.",
+     "dogru": true
+    },
+    {
+     "no": 99,
+     "metin": "Klasik kazmalar, dik buz duvarlarında teknik tırmanış için kullanılır.",
+     "dogru": false
+    },
+    {
+     "no": 100,
+     "metin": "Full body emniyet kemeri, ağırlığın tüm vücuda dengeli dağılmasını sağlar.",
+     "dogru": true
+    }
+   ]
+  },
+  {
+   "id": "dy-kamp",
+   "ad": "Doğru – yanlış: kampçılık",
+   "tur": "dy",
+   "aciklama": "Kamp alanı, çadır, ateş, yön bulma ve ilk yardım: 100 önerme",
+   "sorular": [
+    {
+     "no": 1,
+     "metin": "Kamp alanı seçilirken ilk dikkat edilmesi gereken unsur manzaranın güzelliğidir.",
+     "dogru": false
+    },
+    {
+     "no": 2,
+     "metin": "Kamp alanı, su kaynaklarına yakın ama taşkın riskinden uzak olmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 3,
+     "metin": "Rüzgâr yönü dikkate alınmadan çadır kurmak güvenli değildir.",
+     "dogru": true
+    },
+    {
+     "no": 4,
+     "metin": "Çadır, güneşin en yoğun vurduğu açık alanlara kurulmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 5,
+     "metin": "Ağaç altına çadır kurmak, yıldırım riski nedeniyle sakıncalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 6,
+     "metin": "Taşlık ve kök dolu zeminler çadır için en uygun alanlardır.",
+     "dogru": false
+    },
+    {
+     "no": 7,
+     "metin": "Çadırın altına naylon örtü serilmesi, taban suyu geçişini önler.",
+     "dogru": true
+    },
+    {
+     "no": 8,
+     "metin": "Çadırın kapısı hâkim rüzgâr yönüne bakmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 9,
+     "metin": "Çadır kazıkları zemine 45 derece açıyla çakılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 10,
+     "metin": "Çadır kurarken taban gergin, dış tente gevşek olmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 11,
+     "metin": "Yağışlı havalarda çadırın havalandırma pencereleri kapatılmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 12,
+     "metin": "Uyku tulumu içinde kalın giysilerle uyumak ısı yalıtımını artırır.",
+     "dogru": false
+    },
+    {
+     "no": 13,
+     "metin": "Uyku tulumu vücut sıcaklığıyla ısınır; içine fazla kıyafetle girilmemelidir.",
+     "dogru": true
+    },
+    {
+     "no": 14,
+     "metin": "Uyku tulumunun altına mat serilmesi ısı kaybını azaltır.",
+     "dogru": true
+    },
+    {
+     "no": 15,
+     "metin": "Kaz tüyü tulumlar nemli ortamlarda sentetik olanlardan daha dayanıklıdır.",
+     "dogru": false
+    },
+    {
+     "no": 16,
+     "metin": "Uyku tulumları kullanılmadıkları zaman sıkıştırılmış olarak saklanmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 17,
+     "metin": "Mat, vücut ile zemin arasındaki ısı kaybını önlemek için kullanılır.",
+     "dogru": true
+    },
+    {
+     "no": 18,
+     "metin": "Şişme matlar genellikle köpük matlara göre daha ağırdır.",
+     "dogru": true
+    },
+    {
+     "no": 19,
+     "metin": "Kamp çantası hazırlanırken en ağır eşyalar sırta yakın yerleştirilir.",
+     "dogru": true
+    },
+    {
+     "no": 20,
+     "metin": "Hafif eşyalar çantanın alt kısmına konmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 21,
+     "metin": "Kamp çantasının bel kemeri ağırlığın büyük kısmını kalçaya aktarır.",
+     "dogru": true
+    },
+    {
+     "no": 22,
+     "metin": "Yağmurluk çantanın içinde taşınmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 23,
+     "metin": "Kamp ocağı açık alanda, çadırdan uzak bir yerde yakılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 24,
+     "metin": "Likit yakıtlı ocaklarda ateşleme öncesi sızdırmazlık kontrolü yapılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 25,
+     "metin": "Ocak üzerinde yemek pişirirken çadır içinde kullanmak güvenlidir.",
+     "dogru": false
+    },
+    {
+     "no": 26,
+     "metin": "Rüzgâr yönü ocak kullanımı sırasında dikkate alınmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 27,
+     "metin": "Yemek artıklarını doğaya bırakmak vahşi hayvanları bölgeye çeker.",
+     "dogru": true
+    },
+    {
+     "no": 28,
+     "metin": "Bulaşıklar nehir veya göl içinde yıkanmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 29,
+     "metin": "Kamp alanında sabun olarak biyolojik olarak çözünebilen ürünler tercih edilmelidir.",
+     "dogru": true
+    },
+    {
+     "no": 30,
+     "metin": "Katı atıklar kamp alanında yakılarak imha edilmelidir.",
+     "dogru": false
+    },
+    {
+     "no": 31,
+     "metin": "Kamp ateşi, toprak zemin üzerinde önceden açılmış çukurda yakılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 32,
+     "metin": "Ateşin söndüğünden emin olmak için üzerine toprak atmak yeterlidir.",
+     "dogru": false
+    },
+    {
+     "no": 33,
+     "metin": "Ateş yakmadan önce etraftaki kuru yapraklar temizlenmelidir.",
+     "dogru": true
+    },
+    {
+     "no": 34,
+     "metin": "Rüzgârlı havalarda ateş yakmak tehlikelidir.",
+     "dogru": true
+    },
+    {
+     "no": 35,
+     "metin": "Kamp ateşi sonrası kül ve yanık kalıntıları tamamen uzaklaştırılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 36,
+     "metin": "Ateş yeri çadırdan en az 3 metre uzakta olmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 37,
+     "metin": "Ateş çevresine taş dizmek ısı yalıtımını artırır.",
+     "dogru": false
+    },
+    {
+     "no": 38,
+     "metin": "Kamp ateşi yalnızca ısınmak için kullanılabilir.",
+     "dogru": false
+    },
+    {
+     "no": 39,
+     "metin": "Ateş yakmak yasak bölgelerde taşınabilir ocak kullanılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 40,
+     "metin": "Kamp alanını terk ederken ateş yerinin üstü doğal malzeme ile kapatılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 41,
+     "metin": "Kamp sırasında kişisel hijyen ihmal edilmemelidir.",
+     "dogru": true
+    },
+    {
+     "no": 42,
+     "metin": "El temizliği yalnızca sabunla yapılmalıdır; dezenfektanlar etkisizdir.",
+     "dogru": false
+    },
+    {
+     "no": 43,
+     "metin": "Tuvalet çukuru su kaynağından en az 50 metre uzak olmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 44,
+     "metin": "Kamp alanında çöp gömme yöntemi doğrudur.",
+     "dogru": false
+    },
+    {
+     "no": 45,
+     "metin": "Diş fırçalama suları doğrudan dereye dökülebilir.",
+     "dogru": false
+    },
+    {
+     "no": 46,
+     "metin": "Kamp alanında yemek hazırlama alanı rüzgâr altına kurulmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 47,
+     "metin": "Gıda maddeleri hava geçirmez kaplarda saklanmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 48,
+     "metin": "Kamp alanında yiyecekleri çadır dışında bırakmak hayvan saldırılarını önler.",
+     "dogru": false
+    },
+    {
+     "no": 49,
+     "metin": "Kamp sonrası alan eski haline getirilmelidir.",
+     "dogru": true
+    },
+    {
+     "no": 50,
+     "metin": "“İz bırakma” ilkesi kamp etiğinin temelini oluşturur.",
+     "dogru": true
+    },
+    {
+     "no": 51,
+     "metin": "Rüzgâr yönünü belirlemenin en kolay yolu pusula kullanmaktır.",
+     "dogru": true
+    },
+    {
+     "no": 52,
+     "metin": "Güneşin doğduğu yön her zaman tam doğudur.",
+     "dogru": false
+    },
+    {
+     "no": 53,
+     "metin": "Geceleri kuzey yıldızı yön tayininde kullanılabilir.",
+     "dogru": true
+    },
+    {
+     "no": 54,
+     "metin": "Yön tayininde saat yöntemi yalnızca güney yarımkürede geçerlidir.",
+     "dogru": false
+    },
+    {
+     "no": 55,
+     "metin": "Gölge yönü, güneşin konumuna bağlı olarak öğlen vakti kuzeyi gösterir.",
+     "dogru": true
+    },
+    {
+     "no": 56,
+     "metin": "Pusula, manyetik alanlardan etkilenmez.",
+     "dogru": false
+    },
+    {
+     "no": 57,
+     "metin": "Harita üzerinde yön bulurken harita kuzeye çevrilmelidir.",
+     "dogru": true
+    },
+    {
+     "no": 58,
+     "metin": "Pusula ibresi kırmızı ucu ile kuzeyi gösterir.",
+     "dogru": true
+    },
+    {
+     "no": 59,
+     "metin": "Metal cisimler pusula okumalarında hata oluşturabilir.",
+     "dogru": true
+    },
+    {
+     "no": 60,
+     "metin": "Pusula ile yön bulurken cep telefonu kullanımı ölçümü etkilemez.",
+     "dogru": false
+    },
+    {
+     "no": 61,
+     "metin": "Kamp yürüyüşlerinde öncünün temposu grubun tamamına göre ayarlanmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 62,
+     "metin": "Dağ yürüyüşlerinde çıkış hızı iniş hızından genellikle daha fazladır.",
+     "dogru": false
+    },
+    {
+     "no": 63,
+     "metin": "Grup düzeninde en tecrübeli kişi genellikle arkada yer alır.",
+     "dogru": true
+    },
+    {
+     "no": 64,
+     "metin": "Yürüyüş sırasında sık molalar verilmesi enerji kaybını artırır.",
+     "dogru": false
+    },
+    {
+     "no": 65,
+     "metin": "Sıvı kaybı önlemek için sık sık az miktarda su içilmelidir.",
+     "dogru": true
+    },
+    {
+     "no": 66,
+     "metin": "Güneş çarpması durumunda hasta sıcak bir yere alınmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 67,
+     "metin": "Sıcak çarpması, terleme mekanizmasının bozulmasıyla oluşur.",
+     "dogru": true
+    },
+    {
+     "no": 68,
+     "metin": "Hipotermi vücut ısısının 35°C’nin altına düşmesiyle başlar.",
+     "dogru": true
+    },
+    {
+     "no": 69,
+     "metin": "Donma durumunda etkilenen bölge hemen sıcak suya sokulmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 70,
+     "metin": "Burkulmalarda soğuk uygulama ve dinlenme en uygun ilk yardımdır.",
+     "dogru": true
+    },
+    {
+     "no": 71,
+     "metin": "Zehirli yılan ısırığında yaraya turnike uygulanmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 72,
+     "metin": "Arı sokmalarında bölgeye soğuk uygulama yapılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 73,
+     "metin": "Kamp alanında böcek kovucu kullanmak ısırık riskini azaltır.",
+     "dogru": true
+    },
+    {
+     "no": 74,
+     "metin": "Çadır içinde mum yakmak güvenlidir.",
+     "dogru": false
+    },
+    {
+     "no": 75,
+     "metin": "Kamp alanında gece feneri, yangın riskini azaltmak için el altında olmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 76,
+     "metin": "Su ihtiyacı yalnızca dere ve göllerden karşılanmalıdır.",
+     "dogru": false
+    },
+    {
+     "no": 77,
+     "metin": "Doğal su kaynakları kaynatılmadan içilebilir.",
+     "dogru": false
+    },
+    {
+     "no": 78,
+     "metin": "Su arıtma tabletleri, mikroorganizmaları öldürmek için kullanılır.",
+     "dogru": true
+    },
+    {
+     "no": 79,
+     "metin": "Su arıtıcı filtreler, kimyasal kirleticileri tamamen yok eder.",
+     "dogru": false
+    },
+    {
+     "no": 80,
+     "metin": "Susuz kalmamak için yürüyüş öncesi vücut sıvı dengesi sağlanmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 81,
+     "metin": "Güneş kremi yüksek irtifada UV ışınlarına karşı etkisizdir.",
+     "dogru": false
+    },
+    {
+     "no": 82,
+     "metin": "Gözlük, karda oluşan yansımayı azaltmak için kullanılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 83,
+     "metin": "Kamp planlamasında hava durumu önemsizdir.",
+     "dogru": false
+    },
+    {
+     "no": 84,
+     "metin": "Şiddetli rüzgârda çadırın ipleri gevşetilmelidir.",
+     "dogru": false
+    },
+    {
+     "no": 85,
+     "metin": "Fırtına anında açık alanda durmak tehlikelidir.",
+     "dogru": true
+    },
+    {
+     "no": 86,
+     "metin": "Yıldırım tehlikesinde metal eşyalar uzaklaştırılmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 87,
+     "metin": "Grup içinde haberleşme yalnızca telsizle sağlanabilir.",
+     "dogru": false
+    },
+    {
+     "no": 88,
+     "metin": "El işaretleri sessiz iletişim yöntemlerinden biridir.",
+     "dogru": true
+    },
+    {
+     "no": 89,
+     "metin": "Yardım çağrısı olarak üç kısa düdük sesi uluslararası sinyaldir.",
+     "dogru": true
+    },
+    {
+     "no": 90,
+     "metin": "Yönlendirme işaretleri rastgele yerlere bırakılabilir.",
+     "dogru": false
+    },
+    {
+     "no": 91,
+     "metin": "Kampçılıkta etik davranış, doğal çevreye ve diğer kişilere saygıyı içerir.",
+     "dogru": true
+    },
+    {
+     "no": 92,
+     "metin": "Gürültü yapmak doğa deneyiminin bir parçasıdır.",
+     "dogru": false
+    },
+    {
+     "no": 93,
+     "metin": "Diğer kampların mahremiyetine saygı göstermek kamp etiğinin bir gereğidir.",
+     "dogru": true
+    },
+    {
+     "no": 94,
+     "metin": "Yaban hayatını beslemek doğa sevgisinin göstergesidir.",
+     "dogru": false
+    },
+    {
+     "no": 95,
+     "metin": "Bitki koparmak veya taş toplamak doğal dengeye zarar verir.",
+     "dogru": true
+    },
+    {
+     "no": 96,
+     "metin": "İz bırakmadan kamp yapmak çevre korumanın temelidir.",
+     "dogru": true
+    },
+    {
+     "no": 97,
+     "metin": "Geri dönüştürülebilir atıklar ayrı toplanmalıdır.",
+     "dogru": true
+    },
+    {
+     "no": 98,
+     "metin": "Su kaynaklarını kirletmemek doğa kampçılığının sorumluluğudur.",
+     "dogru": true
+    },
+    {
+     "no": 99,
+     "metin": "Kampta sessizlik, yalnızca gece saatlerinde önemlidir.",
+     "dogru": false
+    },
+    {
+     "no": 100,
+     "metin": "Kampçı, doğada bulunduğu sürece hem misafir hem de koruyucudur.",
+     "dogru": true
+    }
+   ]
+  },
+  {
+   "id": "cs3",
+   "ad": "Üç seçenekli sorular",
+   "tur": "cs",
+   "aciklama": "Kampçılığın temel kuralları: 80 soru",
+   "sorular": [
+    {
+     "no": 1,
+     "kok": "Kamp alanı seçerken en önemli kriter aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Manzaranın güzelliği",
+      "B": "Güvenli ve düz zemin",
+      "C": "Suya en yakın yer"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 2,
+     "kok": "Çadır kurarken kapı hangi yöne bakmamalıdır?",
+     "secenekler": {
+      "A": "Rüzgâr yönüne",
+      "B": "Sabah güneşine",
+      "C": "Düz bir yamaca"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 3,
+     "kok": "Uyku tulumunun ısınma prensibi aşağıdakilerden hangisine dayanır?",
+     "secenekler": {
+      "A": "İçine konulan sıcak hava yastığına",
+      "B": "Vücut ısısının korunmasına",
+      "C": "Tulumu ısıtan dış katmana"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 4,
+     "kok": "Ağaç altına çadır kurmak neden sakıncalıdır?",
+     "secenekler": {
+      "A": "Gölge yapmaz",
+      "B": "Dallardan düşme veya yıldırım riski vardır",
+      "C": "Toprak su tutmaz"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 5,
+     "kok": "Kamp ateşi yakmak için en güvenli yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Rüzgâr yönüne göre alanda yakmak",
+      "B": "Taşlarla çevrilmiş, toprak zeminde yakmak",
+      "C": "Çadırın girişinde yakmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 6,
+     "kok": "Uyku tulumu hangi durumda en verimli ısı sağlar?",
+     "secenekler": {
+      "A": "Kalın montla girildiğinde",
+      "B": "İnce, kuru giysilerle girildiğinde",
+      "C": "Üstü açık bırakıldığında"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 7,
+     "kok": "Kamp çantasındaki ağır eşyalar nereye yerleştirilmelidir?",
+     "secenekler": {
+      "A": "Üste ve dışa",
+      "B": "Alta ve uzağa",
+      "C": "Sırta yakın kısma"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 8,
+     "kok": "Çadırın altına serilen örtü ne işe yarar?",
+     "secenekler": {
+      "A": "Çadırı süsler",
+      "B": "Isı yalıtımı ve su geçişini engeller",
+      "C": "Zemin kayganlığını artırır"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 9,
+     "kok": "Kamp ocağı nerede kullanılmalıdır?",
+     "secenekler": {
+      "A": "Çadır içinde",
+      "B": "Kapalı ortamda",
+      "C": "Açık ve havadar alanda"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 10,
+     "kok": "Kamp alanında çöp nasıl bertaraf edilmelidir?",
+     "secenekler": {
+      "A": "Yakılarak",
+      "B": "Gömülerek",
+      "C": "Ayrıştırılarak geri taşınmalıdır"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 11,
+     "kok": "Ateşin tamamen söndüğünden emin olmak için ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Üzerine su dökülmeli ve karıştırılmalıdır",
+      "B": "Üzerine sadece toprak atılmalıdır",
+      "C": "Rüzgârla soğuması beklenmelidir"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 12,
+     "kok": "Rüzgârlı havalarda ateş yakmak neden tehlikelidir?",
+     "secenekler": {
+      "A": "Ateşin sönmesi zor olur",
+      "B": "Kıvılcımlar çevreye sıçrayabilir",
+      "C": "Yeterli oksijen bulunmaz"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 13,
+     "kok": "Kamp alanında bulaşık nerede yıkanmalıdır?",
+     "secenekler": {
+      "A": "Derede",
+      "B": "Gölden uzakta, toprakta filtrelenerek",
+      "C": "Akarsu içinde"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 14,
+     "kok": "Doğada “İz bırakmama” ilkesinin temel amacı nedir?",
+     "secenekler": {
+      "A": "Kamp alanını daha düzenli göstermek",
+      "B": "Ekolojik dengeyi korumak",
+      "C": "Görsel estetik sağlamak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 15,
+     "kok": "Yön bulmada güneşten yararlanılırken öğle vakti gölge hangi yönü gösterir?",
+     "secenekler": {
+      "A": "Kuzey",
+      "B": "Güney",
+      "C": "Batı"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 16,
+     "kok": "Geceleri yön tayininde hangi yıldız kullanılır?",
+     "secenekler": {
+      "A": "Sirius",
+      "B": "Kutup Yıldızı",
+      "C": "Orion"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 17,
+     "kok": "Pusula ile yön bulurken hangi unsur ölçümü bozar?",
+     "secenekler": {
+      "A": "Rüzgâr",
+      "B": "Metal nesneler",
+      "C": "Toprak türü"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 18,
+     "kok": "Kamp yürüyüşlerinde grup düzeni nasıl olmalıdır?",
+     "secenekler": {
+      "A": "En tecrübeliler en önde",
+      "B": "En yavaş kişiler ortada",
+      "C": "En deneyimli kişi genelde arkada"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 19,
+     "kok": "Yürüyüş sırasında su tüketimi nasıl olmalıdır?",
+     "secenekler": {
+      "A": "Az ama sık aralıklarla",
+      "B": "Çok ve seyrek",
+      "C": "Yalnızca mola verildiğinde"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 20,
+     "kok": "Hipotermi ne zaman başlar?",
+     "secenekler": {
+      "A": "Vücut ısısı 35°C’nin altına düştüğünde",
+      "B": "Kalp atışı yavaşladığında",
+      "C": "Kas krampları başladığında"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 21,
+     "kok": "Donma durumunda yapılmaması gereken uygulama hangisidir?",
+     "secenekler": {
+      "A": "Bölgeyi ovmak",
+      "B": "Hafif ısıtmak",
+      "C": "Kuru bezle korumak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 22,
+     "kok": "Yılan ısırığında ilk yardım olarak ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Turnike uygulanmalı",
+      "B": "Yara emilmeli",
+      "C": "Yara kalp hizasında tutulmalı ve tıbbi yardım çağrılmalı"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 23,
+     "kok": "Güneş çarpması geçiren bir kişi nereye alınmalıdır?",
+     "secenekler": {
+      "A": "Sıcak ortama",
+      "B": "Gölge ve serin ortama",
+      "C": "Ateşin yanına"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 24,
+     "kok": "Doğal su kaynaklarından alınan su neden kaynatılmalıdır?",
+     "secenekler": {
+      "A": "Tat vermek için",
+      "B": "Mikroorganizmaları öldürmek için",
+      "C": "Buharlaşmayı azaltmak için"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 25,
+     "kok": "Yıldırım riski varsa hangi önlem alınmalıdır?",
+     "secenekler": {
+      "A": "Ağaç altına sığınmak",
+      "B": "Metal eşyaları uzaklaştırmak",
+      "C": "Yere uzanmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 26,
+     "kok": "Kamp sırasında “üç kısa düdük sesi” ne anlama gelir?",
+     "secenekler": {
+      "A": "Tehlike çağrısı",
+      "B": "Mola zamanı",
+      "C": "Kamp sonu sinyali"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 27,
+     "kok": "Kamp çantasında yağmurluk nerede bulunmalıdır?",
+     "secenekler": {
+      "A": "En altta",
+      "B": "Kolay ulaşılabilecek üst kısımda",
+      "C": "Yan ceplerde"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 28,
+     "kok": "Kamp alanında yemekler nereye konulmamalıdır?",
+     "secenekler": {
+      "A": "Güneş altına",
+      "B": "Kapalı kutulara",
+      "C": "Soğuk gölge alana"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 29,
+     "kok": "“Katmanlı giyim sistemi”nin amacı nedir?",
+     "secenekler": {
+      "A": "Görsel uyum sağlamak",
+      "B": "Vücut ısısını dengelemek",
+      "C": "Ağırlığı artırmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 30,
+     "kok": "Kampçının doğada sahip olması gereken temel etik davranış hangisidir?",
+     "secenekler": {
+      "A": "Gürültü yapmamak ve çevreye saygı göstermek",
+      "B": "İz bırakmadan gezmek ama çöp gömmek",
+      "C": "Fotoğraf çekerken bitki koparmak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 31,
+     "kok": "Kamp alanı seçilirken aşağıdakilerden hangisine dikkat edilmelidir?",
+     "secenekler": {
+      "A": "Zeminin düz olması",
+      "B": "Gökyüzünün açık görünmesi",
+      "C": "En yüksek noktada olmak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 32,
+     "kok": "Kamp çadırı kurulurken en çok dikkat edilmesi gereken unsur hangisidir?",
+     "secenekler": {
+      "A": "Zemin eğimi",
+      "B": "Gölge miktarı",
+      "C": "Çadır rengi"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 33,
+     "kok": "Çadır kazıkları toprağa hangi açıyla çakılmalıdır?",
+     "secenekler": {
+      "A": "45 derece",
+      "B": "90 derece",
+      "C": "60 derece"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 34,
+     "kok": "Çadırın dış tentesi gevşek kalırsa ne olur?",
+     "secenekler": {
+      "A": "Hava akımı artar",
+      "B": "Su birikir",
+      "C": "Isı artar"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 35,
+     "kok": "Uyku tulumu içinde kalın giysiyle uyumak neden önerilmez?",
+     "secenekler": {
+      "A": "Terlemeyi artırır",
+      "B": "Vücut ısısını düşürür",
+      "C": "Hava geçirmezliği azaltır"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 36,
+     "kok": "Çadırın altına serilen örtünün amacı nedir?",
+     "secenekler": {
+      "A": "Çadırı sabitlemek",
+      "B": "Sıcaklığı artırmak",
+      "C": "Su geçişini önlemek"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 37,
+     "kok": "Kamp ateşi yakarken ilk olarak ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Odun biriktirmek",
+      "B": "Zemini temizlemek",
+      "C": "Kibrit yakmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 38,
+     "kok": "Kamp ateşi çadırdan en az kaç metre uzakta olmalıdır?",
+     "secenekler": {
+      "A": "1 metre",
+      "B": "3 metre",
+      "C": "5 metre"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 39,
+     "kok": "Ateşin tamamen söndüğünden emin olmak için ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Üzerine su dökülür",
+      "B": "Üzeri yaprakla kapatılır",
+      "C": "Toprakla örtülür"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 40,
+     "kok": "Kamp çantasının ağır eşyaları nereye yerleştirilmelidir?",
+     "secenekler": {
+      "A": "Alta",
+      "B": "Sırta yakın kısma",
+      "C": "Üste"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 41,
+     "kok": "Mat kullanmanın temel amacı nedir?",
+     "secenekler": {
+      "A": "Konfor sağlamak",
+      "B": "Isı kaybını azaltmak",
+      "C": "Yumuşak zemin oluşturmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 42,
+     "kok": "Kamp yürüyüşlerinde su tüketimi nasıl olmalıdır?",
+     "secenekler": {
+      "A": "Az ama sık",
+      "B": "Çok ama seyrek",
+      "C": "Sadece molalarda"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 43,
+     "kok": "Doğal su kaynakları neden kaynatılmalıdır?",
+     "secenekler": {
+      "A": "Tat versin diye",
+      "B": "Mikroorganizmaları öldürmek için",
+      "C": "Daha hızlı soğusun diye"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 44,
+     "kok": "Geceleri yön bulmada hangi yıldızdan yararlanılır?",
+     "secenekler": {
+      "A": "Sirius",
+      "B": "Kutup Yıldızı",
+      "C": "Vega"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 45,
+     "kok": "Kamp alanında sabun kullanırken dikkat edilmesi gereken nedir?",
+     "secenekler": {
+      "A": "Biyolojik olarak çözünür sabun tercih edilmeli",
+      "B": "Herhangi bir sabun kullanılabilir",
+      "C": "Sabun kullanılmamalıdır"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 46,
+     "kok": "Kamp sırasında yiyeceklerin korunması için ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Açıkta bırakılır",
+      "B": "Ağza sıkı kapanan kaplarda saklanır",
+      "C": "Ateş yakınında tutulur"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 47,
+     "kok": "Rüzgâr yönü çadır kurulurken neden önemlidir?",
+     "secenekler": {
+      "A": "Gürültü azaltmak için",
+      "B": "Dumanın yönünü belirler",
+      "C": "Çadırın yıpranmasını önler"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 48,
+     "kok": "Kamp çadırı kurulacak zemin aşağıdakilerden hangisi olmamalıdır?",
+     "secenekler": {
+      "A": "Kumluk",
+      "B": "Çakıllı ve köklü",
+      "C": "Düz ve toprak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 49,
+     "kok": "Çadırın içi havalandırılmadığında ne olur?",
+     "secenekler": {
+      "A": "Isı artar",
+      "B": "Yoğuşma oluşur",
+      "C": "Rüzgâr girer"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 50,
+     "kok": "Kamp alanında hijyen için en doğru davranış hangisidir?",
+     "secenekler": {
+      "A": "El yıkamaya gerek yoktur",
+      "B": "Elleri su yoksa dezenfektanla temizlemek",
+      "C": "Elleri yalnızca sabunla yıkamak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 51,
+     "kok": "Kamp sırasında çöp imha etmenin doğru yolu nedir?",
+     "secenekler": {
+      "A": "Geri taşımak",
+      "B": "Gömerek yok etmek",
+      "C": "Yakmak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 52,
+     "kok": "Hipotermi nedir?",
+     "secenekler": {
+      "A": "Güneş çarpması",
+      "B": "Vücut ısısının 35°C altına düşmesi",
+      "C": "Kas krampları"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 53,
+     "kok": "Donma durumunda hangi davranış yanlıştır?",
+     "secenekler": {
+      "A": "Bölgeyi ovmak",
+      "B": "Kuru bezle korumak",
+      "C": "Ilık suyla ısıtmak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 54,
+     "kok": "Yılan ısırığında ilk yardımda yapılmaması gereken nedir?",
+     "secenekler": {
+      "A": "Turnike uygulamak",
+      "B": "Yarayı kalp hizasında tutmak",
+      "C": "Hemen tıbbi yardım istemek"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 55,
+     "kok": "Güneş çarpmasında hastaya nasıl müdahale edilir?",
+     "secenekler": {
+      "A": "Serin ve gölgeli yere alınır",
+      "B": "Üzeri örtülür",
+      "C": "Yürütülür"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 56,
+     "kok": "Kamp ateşi hangi zeminde yakılmalıdır?",
+     "secenekler": {
+      "A": "Tahta zemin",
+      "B": "Toprak zemin",
+      "C": "Çimen zemin"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 57,
+     "kok": "Rüzgârlı havalarda ateş yakmak neden tehlikelidir?",
+     "secenekler": {
+      "A": "Alev yayılabilir",
+      "B": "Duman azalır",
+      "C": "Isı yetersiz olur"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 58,
+     "kok": "Pusula kullanırken dikkat edilmesi gereken nedir?",
+     "secenekler": {
+      "A": "Metal eşyalardan uzak tutulmalı",
+      "B": "Güneşe doğru çevrilmeli",
+      "C": "Düz tutulmamalı"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 59,
+     "kok": "Kamp planlamasında hava durumu neden önemlidir?",
+     "secenekler": {
+      "A": "Yolculuk süresini belirler",
+      "B": "Kamp güvenliğini etkiler",
+      "C": "Manzara kalitesini artırır"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 60,
+     "kok": "Kamp alanında temizlik suyu nereye dökülmemelidir?",
+     "secenekler": {
+      "A": "Toprağa",
+      "B": "Akarsuya",
+      "C": "Çukura"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 61,
+     "kok": "Kamp sırasında kullanılan iplerin bakımı nasıl yapılmalıdır?",
+     "secenekler": {
+      "A": "Güneşte bırakılmalı",
+      "B": "Kuru ve gölgede saklanmalı",
+      "C": "Su içinde bekletilmeli"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 62,
+     "kok": "Kamp feneri hangi enerji kaynağıyla çalışırsa en güvenlidir?",
+     "secenekler": {
+      "A": "Benzin",
+      "B": "Pilli veya şarjlı",
+      "C": "Gazyağı"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 63,
+     "kok": "Katmanlı giyim sisteminde orta katmanın görevi nedir?",
+     "secenekler": {
+      "A": "Suyu geçirmemek",
+      "B": "Isıyı yalıtmak",
+      "C": "Görünürlük sağlamak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 64,
+     "kok": "Kamp sırasında fazla eşyalar nereye bırakılmalıdır?",
+     "secenekler": {
+      "A": "Çadır dışında",
+      "B": "Çadır içinde düzenli bir yerde",
+      "C": "Ateşin yakınında"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 65,
+     "kok": "Kamp alanında tuvalet çukuru su kaynağından ne kadar uzakta olmalıdır?",
+     "secenekler": {
+      "A": "10 metre",
+      "B": "50 metre",
+      "C": "100 metre"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 66,
+     "kok": "Arı sokmasında doğru ilk yardım hangisidir?",
+     "secenekler": {
+      "A": "Soğuk uygulama yapmak",
+      "B": "Sıcak suyla yıkamak",
+      "C": "Böceği ezmek"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 67,
+     "kok": "Kamp alanında yangın riskini azaltmak için ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Ateş etrafı temizlenmeli",
+      "B": "Ağaç altına çadır kurmak",
+      "C": "Mumla aydınlatma"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 68,
+     "kok": "Yön tayininde gölge yöntemi hangi zamanda en güvenilir sonuç verir?",
+     "secenekler": {
+      "A": "Sabah",
+      "B": "Öğle",
+      "C": "Akşam"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 69,
+     "kok": "Güneş yanığından korunmak için ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Kalın kıyafet giymek",
+      "B": "Güneş kremi sürmek",
+      "C": "Güneş altında oturmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 70,
+     "kok": "Kamp çantasında ilk yardım malzemeleri nereye yerleştirilmelidir?",
+     "secenekler": {
+      "A": "Alt bölüme",
+      "B": "Orta kısma",
+      "C": "Kolay ulaşılabilecek üst kısma"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 71,
+     "kok": "Kamp alanında sessizliğin önemi nedir?",
+     "secenekler": {
+      "A": "Yaban hayatını rahatsız etmemek",
+      "B": "Gürültüden kaçınmak için",
+      "C": "Enerji tasarrufu yapmak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 72,
+     "kok": "Kamp alanı terk edilirken yapılması gereken en önemli işlem nedir?",
+     "secenekler": {
+      "A": "Ateşi söndürmek",
+      "B": "Çadırı bırakmak",
+      "C": "Atıkları gömmek"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 73,
+     "kok": "Çadır direkleri hangi malzemeden yapılırsa daha dayanıklıdır?",
+     "secenekler": {
+      "A": "Alüminyum",
+      "B": "Plastik",
+      "C": "Tahta"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 74,
+     "kok": "Kamp alanında hava soğuduğunda en etkili ısınma yöntemi nedir?",
+     "secenekler": {
+      "A": "Ateş yakmak",
+      "B": "Tuluma girmek",
+      "C": "Koşmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 75,
+     "kok": "Pusula yönleri sırasıyla hangi harflerle gösterilir?",
+     "secenekler": {
+      "A": "N, E, S, W",
+      "B": "S, N, W, E",
+      "C": "W, E, N, S"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 76,
+     "kok": "Kamp yürüyüşlerinde grup liderinin görevi nedir?",
+     "secenekler": {
+      "A": "Hızlı yürümek",
+      "B": "Temponun dengesini korumak",
+      "C": "En arkada kalmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 77,
+     "kok": "Kamp malzemeleri arasında hangisi kişisel eşyadır?",
+     "secenekler": {
+      "A": "Çadır",
+      "B": "Uyku tulumu",
+      "C": "Kamp ocağı"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 78,
+     "kok": "“İz bırakma” ilkesine göre kampçı ne yapmamalıdır?",
+     "secenekler": {
+      "A": "Bitki koparmak",
+      "B": "Atıkları geri taşımak",
+      "C": "Ateşi tamamen söndürmek"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 79,
+     "kok": "Gece yürüyüşlerinde fenerin nereye tutulması uygundur?",
+     "secenekler": {
+      "A": "Gökyüzüne",
+      "B": "Yere, adım önüne",
+      "C": "Arkadaki kişiye"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 80,
+     "kok": "Kamp sırasında doğa ile uyumlu davranışın temel amacı nedir?",
+     "secenekler": {
+      "A": "Çevreyi korumak",
+      "B": "Hızlı hareket etmek",
+      "C": "Kampı kolay toplamak"
+     },
+     "dogru": "A"
+    }
+   ]
+  },
+  {
+   "id": "cs5-zor",
+   "ad": "Beş seçenekli sorular (zor)",
+   "tur": "cs",
+   "aciklama": "Kamp, pusula, giyim ve etik üzerine muhakeme: 50 soru",
+   "sorular": [
+    {
+     "no": 1,
+     "kok": "Aşağıdakilerden hangisi “Leave No Trace / İz Bırakma” ilkesinin kamp alanı terk edilirken uygulanmasıyla doğrudan ilişkili değildir?",
+     "secenekler": {
+      "A": "Ateş yerinin izini doğal malzemeyle kapatmak",
+      "B": "Çadır alanındaki taş ve dalları eski yerine koymak",
+      "C": "Kamp alanından ayrılırken küçük miktarda organik çöpü gömmek",
+      "D": "Toprakta açılan tuvalet çukurunu tamamen kapatmak",
+      "E": "Çevredeki doğal taş ve bitkileri yerlerinden oynatmamak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 2,
+     "kok": "Aşağıdaki kombinasyonlardan hangisi “yüksek irtifada gecelik kamp” için hipotermi riskini en fazla artıran yanlış uygulamadır?",
+     "secenekler": {
+      "A": "Pamuklu içlik + ıslak çorap + dar uyku tulumu",
+      "B": "Sentetik içlik + kuru çorap + uygun konfor sıcaklıklı tulum",
+      "C": "Yün içlik + mat + rüzgârlı ama kapalı çadır",
+      "D": "Katmanlı giyim + sıcak içecek + rüzgârlık",
+      "E": "Şapka + eldiven + boyunluk kullanımı"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 3,
+     "kok": "Aşağıdakilerden hangisi bir kamp ocağının çadır içinde kullanılmasının tehlikelerinden biri değildir?",
+     "secenekler": {
+      "A": "Karbonmonoksit zehirlenmesi",
+      "B": "Alev alma ve yangın riski",
+      "C": "Çadır kumaşının UV dayanımının azalması",
+      "D": "Kapalı ortamda oksijenin azalması",
+      "E": "Sıcak yüzeye temasla yanık riski"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 4,
+     "kok": "Aşağıdaki durumlardan hangisinde “doğru pusula okuması” ihtimali en fazla bozulur?",
+     "secenekler": {
+      "A": "Bilekte metal saat varken ölçüm yapmak",
+      "B": "Arka cepte telefon varken pusulayı önde kullanmak",
+      "C": "Çelik iskeletli çantaya çok yakın ölçüm yapmak",
+      "D": "Alüminyum trekking batonuna 30–40 cm mesafede ölçmek",
+      "E": "Harita çantasında plastik dosyayla birlikte ölçüm yapmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 5,
+     "kok": "Aşağıdaki kamp alanı seçeneklerinden hangisi hem sel hem de kaya düşmesi riskini en iyi azaltır?",
+     "secenekler": {
+      "A": "Vadi tabanına yakın, suya çok yakın düz alan",
+      "B": "Dik kaya duvarının hemen eteğindeki düz bant",
+      "C": "Hafif eğimli, su yoluna paralel dar sırt hattı",
+      "D": "Yamaçta eski dere yatağından uzak, hafif yükselti üzerinde alan",
+      "E": "Göl kenarında rüzgâra tamamen açık düzlük"
+     },
+     "dogru": "D"
+    },
+    {
+     "no": 6,
+     "kok": "Aşağıdakilerden hangisi uyku tulumunun “etiket üzerindeki konfor sıcaklığına” en fazla aykırılık oluşturur?",
+     "secenekler": {
+      "A": "Yorgun ve aç şekilde tuluma girmek",
+      "B": "Altına mat sermeden zemine doğrudan sermek",
+      "C": "Tulumu çadır dışında güneşte havalandırmak",
+      "D": "Tulum içinde ince sentetik içlik kullanmak",
+      "E": "Tulumu geniş bir saklama torbasında tutmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 7,
+     "kok": "Dağ yürüyüşünde grup güvenliği açısından aşağıdaki yerleşimlerden hangisi en doğrusudur?",
+     "secenekler": {
+      "A": "En tecrübeliler önde, en zayıflar en arkada",
+      "B": "En hızlı yürüyen en önde, rehber en arkada",
+      "C": "Rehber önde, en deneyimli ikinci kişi en arkada",
+      "D": "En yavaş yürüyen ortada, rehber ortanın gerisinde",
+      "E": "Herkes istediği sıraya göre dağınık düzende"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 8,
+     "kok": "Aşağıdakilerden hangisi “dağlık alanda su hijyeni” için tek başına yeterli değildir?",
+     "secenekler": {
+      "A": "Suyu en yukarı noktadan almak",
+      "B": "Suyu en az 1 dakika kaynatmak",
+      "C": "Su arıtma tableti kullanmak",
+      "D": "Mekanik filtre (0,1–0,2 mikron) kullanmak",
+      "E": "Suyu sadece kaynağa en yakın noktadan almak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 9,
+     "kok": "Aşağıdaki davranışlardan hangisi “kamp etiği” açısından en problemli olanıdır?",
+     "secenekler": {
+      "A": "Gürültülü müzik açmak",
+      "B": "Başka çadırların fotoğrafını izinsiz çekmek",
+      "C": "İzole edilmiş bölgede drone uçurmak",
+      "D": "Gece geç saatte yüksek sesle konuşmak",
+      "E": "Tüm plastikleri geri taşımak fakat organikleri gömmek"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 10,
+     "kok": "Kış kamplarında sıcak su dolu şişenin uyku tulumu içinde kullanılmasının temel avantajı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nem oranını artırması",
+      "B": "Vücut ısısını hızlı yükseltmesi",
+      "C": "Tulum içindeki havayı dolaşımla kurutması",
+      "D": "Matın izolasyon değerini artırması",
+      "E": "Çadır içindeki hava basıncını dengelemesi"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 11,
+     "kok": "Aşağıdakilerden hangisi, pusula ile doğrultu-eğim ölçümü yaparken sistematik hatayı en çok artırır?",
+     "secenekler": {
+      "A": "Pusula tabanının tam yataylanmaması",
+      "B": "Klinometrenin kabarcığının çizgiden hafif sapması",
+      "C": "Ölçüm yapılan yüzeyin hafif pürüzlü olması",
+      "D": "Haritada izohips aralıklarının geniş olması",
+      "E": "Pusulanın dereceli dairesinin solak kullanımda ters tutulması"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 12,
+     "kok": "Manyetik deklinasyonun arazide düzeltilmemesi aşağıdaki sonuçlardan hangisine en doğrudan yol açar?",
+     "secenekler": {
+      "A": "Yükseklik hatası",
+      "B": "Rota eğimi hatası",
+      "C": "Azimut temelli yön hatası",
+      "D": "Sıcaklık tahmini hatası",
+      "E": "Zaman planlama hatası"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 13,
+     "kok": "Aşağıdakilerden hangisi “geriden kestirme” yöntemiyle yer belirlemede hata payını en çok büyütür?",
+     "secenekler": {
+      "A": "İki hedef nokta arasındaki açının çok dar olması",
+      "B": "Hedef noktaların yüksekliklerinin birbirine yakın olması",
+      "C": "Hedeflerin izohips üzerinde bulunması",
+      "D": "İki hedefi de aynı pusula ile ölçmek",
+      "E": "Aynı haritayı kullanmak"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 14,
+     "kok": "Pusula–altimetre ile yer belirlemede, aşağıdaki veri ikililerinden hangisi temel alınır?",
+     "secenekler": {
+      "A": "Yön – zaman",
+      "B": "Yükseklik – sıcaklık",
+      "C": "Yükseklik – doğrultu",
+      "D": "Basınç – sıcaklık",
+      "E": "Basınç – azimut"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 15,
+     "kok": "Aşağıdaki giysi kombinasyonlarından hangisi yüksek irtifada “terledikten sonra hızla soğuma” riskini en çok artırır?",
+     "secenekler": {
+      "A": "Pamuklu içlik + rüzgârlık yok + ağır sırt çantası",
+      "B": "Sentetik içlik + polar orta kat + su geçirmez dış kat",
+      "C": "Yün içlik + hafif rüzgârlık",
+      "D": "Sentetik içlik + şapka + eldiven",
+      "E": "Yün çorap + su geçirmez bot"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 16,
+     "kok": "Aşağıdakilerden hangisi kamp ateşinin yasak olduğu bir bölgede en uygun çözümdür?",
+     "secenekler": {
+      "A": "Çok küçük ateş yakmak",
+      "B": "Sadece kuru dallarla ateş yakmak",
+      "C": "Yalnızca akşamları ateş yakmak",
+      "D": "Kapalı sistem kamp ocağı kullanmak",
+      "E": "Ateşi su kenarına taşımak"
+     },
+     "dogru": "D"
+    },
+    {
+     "no": 17,
+     "kok": "Aşağıdakilerden hangisi “çadır içi yoğuşma”yı azaltmaya yönelik en etkili uygulamadır?",
+     "secenekler": {
+      "A": "İç tenteyi tamamen kapatmak",
+      "B": "Havalandırma pencerelerini rüzgârlı tarafta kapatmak",
+      "C": "Çadır içinde yemek pişirmek",
+      "D": "Nefes alışverişini azaltmak için ağız-burun örtmek",
+      "E": "Üst havalandırma pencerelerini açık tutmak"
+     },
+     "dogru": "E"
+    },
+    {
+     "no": 18,
+     "kok": "Yüksek irtifada uyku kalitesini en çok bozan, kamp planlama hatası aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Konfor sıcaklığı sınırda bir tulum seçmek",
+      "B": "Bir günde çok fazla irtifa kazanmak",
+      "C": "Mat kalınlığının az olması",
+      "D": "Çadır renginin koyu olması",
+      "E": "Sırt çantasının ağır olması"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 19,
+     "kok": "Aşağıdakilerden hangisi “kaz tüyü yalıtımın nemli ortamlarda dezavantajına” örnektir?",
+     "secenekler": {
+      "A": "Islakken daha fazla hava hapsetmesi",
+      "B": "Kurutma süresinin uzun olması",
+      "C": "Sıkıştırılamaması",
+      "D": "Isıyı çabuk dışarı vermesi",
+      "E": "Dikiş yerlerinden sızması"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 20,
+     "kok": "Aşağıdaki kamp ocaklarından hangisi soğuk ve yüksek irtifada performans kaybına en çok açıktır?",
+     "secenekler": {
+      "A": "Sıvı yakıtlı (benzinli) ocak",
+      "B": "Çok yakıtlı ekspedisyon ocağı",
+      "C": "Kartuşlu propan–bütan karışımlı ocak",
+      "D": "Odunla yanan katlanır ocak",
+      "E": "Alkol ocağı"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 21,
+     "kok": "Aşağıdakilerden hangisi “çöp yönetimi” açısından en doğru stratejidir?",
+     "secenekler": {
+      "A": "Organik atıklar gömülür, plastikler yakılır",
+      "B": "Tüm atıklar dere yatağından uzak bir çukura gömülür",
+      "C": "Geri dönüştürülebilir atıklar ayrılır ve geri taşınır",
+      "D": "Plastikler yakılır, metal atıklar gömülür",
+      "E": "Doğal materyaller (kağıt, karton) kamp alanında bırakılır"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 22,
+     "kok": "Aşağıdakilerden hangisi UIAA dağ etiği çerçevesinde “tarz” kavramına en uygun örnektir?",
+     "secenekler": {
+      "A": "Zirveye ne pahasına olursa olsun ulaşmak",
+      "B": "Kullanılan ekipman, rota ve destek yöntemlerini şeffafça belirtmek",
+      "C": "Yardım almadan tırmanmayı reddetmek",
+      "D": "Sadece en kısa rotayı kullanmak",
+      "E": "Kayıt altına alınmayan tırmanış yapmamak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 23,
+     "kok": "Dağcılıkta “takım ruhu” açısından aşağıdaki davranışlardan hangisi en sorunludur?",
+     "secenekler": {
+      "A": "En yavaş üyenin temposuna göre yürümek",
+      "B": "Yük dağılımını fiziksel kapasiteye göre ayarlamak",
+      "C": "Kendi performansını ön plana çıkarmak için gruptan kopmak",
+      "D": "Yeni başlayanlara teknik yardımda bulunmak",
+      "E": "Zor kararlarda çoğunluğun fikrine uymak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 24,
+     "kok": "Aşağıdaki malzemelerden hangisinin “kritik kişisel” sayılması en doğrudur?",
+     "secenekler": {
+      "A": "Çadır",
+      "B": "Kamp ocağı",
+      "C": "Uyku tulumu",
+      "D": "Kazma",
+      "E": "Tencere"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 25,
+     "kok": "“Yüksek irtifada sıvı kaybı” ile ilgili aşağıdaki ifadelerden hangisi daha doğrudur?",
+     "secenekler": {
+      "A": "Soğuk havada terleme olmadığı için sıvı kaybı olmaz",
+      "B": "Nefes verirken su buharı kaybı artar",
+      "C": "Yüksek irtifada idrar üretimi azalır",
+      "D": "Yüksek irtifada daha az su içmek uygundur",
+      "E": "Sadece sıcak havalarda su dengesine dikkat etmek gerekir"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 26,
+     "kok": "Aşağıdaki durumların hangisinde “güneş çarpması” riskinin en yüksek olması beklenir?",
+     "secenekler": {
+      "A": "Orman içi gölgelik alanda hafif yürüyüş",
+      "B": "Açık sırtta öğle güneşinde ağır çantayla hızlı çıkış",
+      "C": "Serin havada yavaş tırmanış",
+      "D": "Bulutlu havada sabah yürüyüşü",
+      "E": "Akşam üzeri kanyon yürüyüşü"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 27,
+     "kok": "Kamp alanında “böcek ve yaban hayvanı çekme” riskini en çok artıran uygulama hangisidir?",
+     "secenekler": {
+      "A": "Yiyecekleri çadır içinde saklamak",
+      "B": "Yiyecek kokulu atıkları açıkta bırakmak",
+      "C": "Kapaklı plastik kap kullanmak",
+      "D": "Yiyecek çantalarını ağaç dalına asmak",
+      "E": "Yemek hazırlama alanını çadırdan uzak tutmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 28,
+     "kok": "Aşağıdaki pusula hatalarından hangisi “kullanıcıya bağlı sistematik hata” örneğidir?",
+     "secenekler": {
+      "A": "Deklinasyon değerinin yanlış uygulanması",
+      "B": "Pusula ibresinin takılması",
+      "C": "Pusula sıvısının donması",
+      "D": "Manyetik fırtına etkisi",
+      "E": "Pusula camının çatlaması"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 29,
+     "kok": "Düzlemsel yapı ölçümünde “strike–dip” gösteriminde aşağıdakilerden hangisi en doğrusudur?",
+     "secenekler": {
+      "A": "Sadece eğim açısını yazmak",
+      "B": "Sadece doğrultu yönünü yazmak",
+      "C": "Doğrultu yönü + eğim yönü + eğim açısı",
+      "D": "Eğim yönü + eğim açısı",
+      "E": "Doğrultu yönü + yükseklik"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 30,
+     "kok": "Aşağıdaki katmanlı giyim dizilimlerinden hangisi prensip olarak yanlıştır?",
+     "secenekler": {
+      "A": "İç: pamuklu – Orta: polar – Dış: su geçirmez",
+      "B": "İç: sentetik – Orta: polar – Dış: rüzgâr/su geçirmez",
+      "C": "İç: yün – Orta: hafif polar – Dış: kabuk ceket",
+      "D": "İç: sentetik – Orta: yün – Dış: hardshell",
+      "E": "İç: sentetik – Orta: kaz tüyü – Dış: rüzgârlık"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 31,
+     "kok": "Aşağıdakilerden hangisi “çadır direği malzemesi” olarak yüksek dağ koşullarında en avantajlı kabul edilir?",
+     "secenekler": {
+      "A": "Katı plastik",
+      "B": "Hafif ahşap",
+      "C": "Alüminyum alaşım",
+      "D": "İnce bakır boru",
+      "E": "Sıradan çelik boru"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 32,
+     "kok": "Aşağıdaki kamp alanlarından hangisi “mikro iklim” açısından en değişken ve riskli koşullara sahiptir?",
+     "secenekler": {
+      "A": "Geniş orman içi düzlük",
+      "B": "Göl kenarı hafif eğim",
+      "C": "Sırt hattına çok yakın açıklık",
+      "D": "Vadi tabanının tam ortası",
+      "E": "Ağaçlıklı hafif yamaç"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 33,
+     "kok": "Aşağıdaki tuvalet uygulamalarından hangisi çevresel etki açısından en doğrudur?",
+     "secenekler": {
+      "A": "Su kenarından 10–15 m uzaklaşmak",
+      "B": "Geniş ve derin bir çukur kazıp toplu kullanım",
+      "C": "Su kaynağından en az 50–70 m uzak, küçük ve kişisel çukur yöntemi",
+      "D": "Organik olduğu için açıkta bırakmak",
+      "E": "Tüm atıkları aynı çukura toplamak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 34,
+     "kok": "Aşağıdakilerden hangisi “hipotermi başlangıcının saha bulgusu” olarak en az tipiktir?",
+     "secenekler": {
+      "A": "Titreme",
+      "B": "Konuşma bozulması",
+      "C": "Bilinçte bulanıklık",
+      "D": "Nabızda hafif yavaşlama",
+      "E": "Ani yüksek ateş"
+     },
+     "dogru": "E"
+    },
+    {
+     "no": 35,
+     "kok": "Dağcılıkta kullanılan kazmalarla ilgili aşağıdaki ifadelerden hangisi daha doğrudur?",
+     "secenekler": {
+      "A": "Klasik kazmalar dik buz duvarı tırmanışı için optimize edilmiştir",
+      "B": "Teknik buz kazmaları, yürüyüş rotalarında baton yerine kullanılır",
+      "C": "Klasik kazmalar, kar emniyeti ve durdurma (self arrest) için uygundur",
+      "D": "Buz kazması daima batonlardan daha uzundur",
+      "E": "Kazmanın teknikliği sadece ağırlığına bağlıdır"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 36,
+     "kok": "Aşağıdaki ekipmanlardan hangisinin “ağırlık dağılımı” doğru planlanmadığında diz eklemine en çok ek yük bindirmesi beklenir?",
+     "secenekler": {
+      "A": "Kafa lambası",
+      "B": "Bel çantası",
+      "C": "Aşırı yüklenmiş ana sırt çantası",
+      "D": "Boyun askılı su matarası",
+      "E": "Eldivenler"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 37,
+     "kok": "Aşağıdakilerden hangisi kamp çantasının boy–beden uyumunun bozuk olduğuna işaret eder?",
+     "secenekler": {
+      "A": "Bel kemerinin leğen kemiği üzerine oturmaması",
+      "B": "Göğüs kayışının ayarlanabilir olması",
+      "C": "Omuz askılarının yumuşak olması",
+      "D": "Alt bölümünde tulum gözü bulunması",
+      "E": "Üst kapakta harita cebi olması"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 38,
+     "kok": "Aşağıdaki davranışlardan hangisi kampçılıkta “yaban hayatına müdahalenin” en ağır örneklerindendir?",
+     "secenekler": {
+      "A": "Yaban hayvanları uzaktan fotoğraflamak",
+      "B": "Gözleme noktası kurmak",
+      "C": "Hayvanları yiyecekle insanlara alıştırmak",
+      "D": "Uzak mesafeden dürbünle gözlem yapmak",
+      "E": "Hayvan izlerini takip etmek"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 39,
+     "kok": "Aşağıdaki aydınlatma seçeneklerinden hangisi gece kamp güvenliği açısından en dengeli çözümdür?",
+     "secenekler": {
+      "A": "Yalnızca mum kullanmak",
+      "B": "Yalnızca telefon feneri kullanmak",
+      "C": "Kafa lambası + yedek pilli el feneri",
+      "D": "Kamp ateşi hariç hiçbir ışık kullanmamak",
+      "E": "Çadırın içine sabit gaz lambası asmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 40,
+     "kok": "Aşağıdakilerden hangisi “pilli/şarjlı aydınlatma” için en kritik yedek stratejisidir?",
+     "secenekler": {
+      "A": "Farklı cihazlar için farklı pil tipleri kullanmak",
+      "B": "Tüm ışık kaynaklarını tek pile bağımlı kılmak",
+      "C": "Yedek pil veya powerbank bulundurmak",
+      "D": "Sadece gündüz yürüyüş planlamak",
+      "E": "Hafif olduğu için tek küçük fener almak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 41,
+     "kok": "Aşağıdaki uygulamalardan hangisi “harita–pusula uyumu” için zorunludur?",
+     "secenekler": {
+      "A": "Haritayı rüzgâra dik tutmak",
+      "B": "Haritayı coğrafi kuzeye göre çevirmek",
+      "C": "Haritayı her zaman katlı halde tutmak",
+      "D": "Haritayı pusuladan ayrı kullanmak",
+      "E": "Pusulayı haritanın altına koymak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 42,
+     "kok": "Aşağıdakilerden hangisi “çadır yerinin seçiminde” en son bakılması gereken unsurdur?",
+     "secenekler": {
+      "A": "Sel riski",
+      "B": "Kaya düşmesi riski",
+      "C": "Rüzgâr koruması",
+      "D": "Manzara",
+      "E": "Yıldırım tehlikesi"
+     },
+     "dogru": "D"
+    },
+    {
+     "no": 43,
+     "kok": "Aşağıdakilerden hangisi “gürültü kirliliğinin” doğa deneyimine etkisini en iyi özetler?",
+     "secenekler": {
+      "A": "Yalnızca hayvanları etkiler",
+      "B": "Yalnızca insanları etkiler",
+      "C": "Hem yaban hayatını hem diğer kampçıların deneyimini bozar",
+      "D": "Sadece gündüz olduğunda sorun yaratır",
+      "E": "Sadece rüzgâr yoksa hissedilir"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 44,
+     "kok": "Aşağıdaki uygulamalardan hangisi “çadır içi yangın riskini” en çok artırır?",
+     "secenekler": {
+      "A": "Sentetik uyku tulumu kullanmak",
+      "B": "Çadır içinde mum yakmak",
+      "C": "Tulumun çadıra değmesi",
+      "D": "Matın ince olması",
+      "E": "Çadır renginin koyu olması"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 45,
+     "kok": "Aşağıdaki su taşıma yöntemlerinden hangisi denge ve güvenlik açısından en uygunudur?",
+     "secenekler": {
+      "A": "Tek elde büyük pet şişe",
+      "B": "Boyunda asılı metal matara",
+      "C": "Sırt çantasına entegre su torbası (hydration pack)",
+      "D": "İki elde ayrı şişe taşımak",
+      "E": "Belde gevşek asılı küçük mataralar"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 46,
+     "kok": "Aşağıdakilerden hangisi “yükseklik hastalığı” için en önemli korunma prensibidir?",
+     "secenekler": {
+      "A": "İlk gün mümkün olan en fazla irtifayı kazanmak",
+      "B": "Susuz kalmamak için az su içmek",
+      "C": "Yavaş yükselmek ve uyku irtifasını kontrollü artırmak",
+      "D": "Yoğun egzersizle hızlı aklimatizasyon sağlamak",
+      "E": "İlk geceyi en yüksek noktada geçirmek"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 47,
+     "kok": "Aşağıdaki katılım biçimlerinden hangisi dağcılıkta “ticari tırmanış” etik tartışmalarına en çok konu olan modeldir?",
+     "secenekler": {
+      "A": "Küçük kulüp tırmanışları",
+      "B": "Arkadaş grubu ile planlanan tırmanışlar",
+      "C": "Ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanışlar",
+      "D": "Solo tırmanışlar",
+      "E": "Aile ile günübirlik yürüyüşler"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 48,
+     "kok": "Aşağıdaki malzeme ikililerinden hangisi “ıslanma sonrası yalıtımını en çok kaybeden kombinasyon”dur?",
+     "secenekler": {
+      "A": "Sentetik içlik + polar",
+      "B": "Yün çorap + sentetik mont",
+      "C": "Pamuklu içlik + kaz tüyü mont",
+      "D": "Sentetik içlik + sentetik mont",
+      "E": "Yün içlik + softshell"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 49,
+     "kok": "Aşağıdakilerden hangisi “kamp yemeği planlamasında” en kritik hatadır?",
+     "secenekler": {
+      "A": "Karbonhidrat ağırlıklı plan yapmak",
+      "B": "Hafif ama kalorili yiyecek seçmek",
+      "C": "Sadece hacmi büyük ama kalorisi düşük gıda taşımak",
+      "D": "Yağ içeren gıdaları da dahil etmek",
+      "E": "Atıştırmalık kuruyemiş planlamak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 50,
+     "kok": "Aşağıdaki davranışlardan hangisi “kamp sonrası alanın kontrolünde” mutlaka yapılması gereken bir adımdır?",
+     "secenekler": {
+      "A": "Sadece ateş yerini kontrol etmek",
+      "B": "Sadece çadır alanını kontrol etmek",
+      "C": "Yalnızca görünür çöpleri toplamak",
+      "D": "Kamp alanının tamamını, küçük atıklar açısından da taramak",
+      "E": "Yalnızca fotoğraf çekip ayrılmak"
+     },
+     "dogru": "D"
+    }
+   ]
+  },
+  {
+   "id": "cs5",
+   "ad": "Beş seçenekli sorular",
+   "tur": "cs",
+   "aciklama": "Hocanın cevap anahtarı yok; cevaplar MeDSor tarafından işaretlendi",
+   "anahtarsiz": true,
+   "sorular": [
+    {
+     "no": 1,
+     "kok": "Kamp alanı seçerken ilk bakılması gereken özellik hangisidir?",
+     "secenekler": {
+      "A": "Manzara",
+      "B": "Düz ve güvenli zemin",
+      "C": "Ağaç sayısı",
+      "D": "Taş miktarı",
+      "E": "Yol uzaklığı"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 2,
+     "kok": "Çadır kurmak için en uygun zemin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Çok eğimli yamaç",
+      "B": "Dere yatağı",
+      "C": "Düz ve taşsız alan",
+      "D": "Kaya dibi",
+      "E": "Bataklık alan"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 3,
+     "kok": "Çadırın dış tentesinin temel görevi nedir?",
+     "secenekler": {
+      "A": "Rüzgârı içeri almak",
+      "B": "Suyu ve yağmuru engellemek",
+      "C": "Çadırı ağırlaştırmak",
+      "D": "Çadırı süslemek",
+      "E": "Isıyı dışarı vermek"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 4,
+     "kok": "Uyku tulumunun en önemli amacı nedir?",
+     "secenekler": {
+      "A": "Taşımayı kolaylaştırmak",
+      "B": "Vücudu ısı kaybından korumak",
+      "C": "Çantayı doldurmak",
+      "D": "Yumuşak yatak olmak",
+      "E": "Ayakkabı saklamak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 5,
+     "kok": "Kamp çantasındaki en ağır eşyalar nereye yerleştirilmelidir?",
+     "secenekler": {
+      "A": "Çantanın en üstüne",
+      "B": "Çantanın en dışına",
+      "C": "Sırta yakın kısmına",
+      "D": "Çantanın ön cebine",
+      "E": "Çantanın kapağına"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 6,
+     "kok": "Mat hangi amaçla kullanılır?",
+     "secenekler": {
+      "A": "Çadırı süslemek",
+      "B": "Vücudu zeminden yalıtmak",
+      "C": "Çantayı doldurmak",
+      "D": "Masa örtüsü olmak",
+      "E": "Yağmurluk yerine kullanmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 7,
+     "kok": "Sıcak havalarda başı korumak için ne kullanılmalıdır?",
+     "secenekler": {
+      "A": "Eldiven",
+      "B": "Bere",
+      "C": "Şapka",
+      "D": "Atkı",
+      "E": "Tozluk"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 8,
+     "kok": "Soğuk havalarda ısı kaybını azaltmak için hangisi en önemlidir?",
+     "secenekler": {
+      "A": "Kısa kollu t-shirt",
+      "B": "Açık ayakkabı",
+      "C": "Şapka ve eldiven",
+      "D": "Islak çorap",
+      "E": "İnce şort"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 9,
+     "kok": "Kamp ateşi hangi amaçla kullanılabilir?",
+     "secenekler": {
+      "A": "Sadece ışık için",
+      "B": "Isınma ve yemek pişirme için",
+      "C": "Sadece çöp yakmak için",
+      "D": "Sadece fotoğraf çekmek için",
+      "E": "Yalnızca duman çıkarmak için"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 10,
+     "kok": "Kamp ateşi nereye yakın kurulmamalıdır?",
+     "secenekler": {
+      "A": "Taşlara",
+      "B": "Ağaç gövdelerine",
+      "C": "Açık alana",
+      "D": "Toprak zemine",
+      "E": "Su kenarına"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 11,
+     "kok": "Çadırın kapısı genellikle nereye bakmamalıdır?",
+     "secenekler": {
+      "A": "Sabah güneşine",
+      "B": "Göl manzarasına",
+      "C": "Hâkim rüzgâr yönüne",
+      "D": "Düz zemine",
+      "E": "Patikaya"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 12,
+     "kok": "Tuvalet çukuru nereden uzak olmalıdır?",
+     "secenekler": {
+      "A": "Çadırdan",
+      "B": "Ateşten",
+      "C": "Su kaynağından",
+      "D": "Yoldan",
+      "E": "Ağaçlardan"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 13,
+     "kok": "Kamp sırasında çöpler nasıl yönetilmelidir?",
+     "secenekler": {
+      "A": "Ormana saçılmalıdır",
+      "B": "Ateşe atılmalıdır",
+      "C": "Geri taşınmak üzere toplanmalıdır",
+      "D": "Dereye atılmalıdır",
+      "E": "Çadıra gömülmelidir"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 14,
+     "kok": "Kamp yürüyüşünde su tüketimi nasıl olmalıdır?",
+     "secenekler": {
+      "A": "Çok az ve seyrek",
+      "B": "Hiç su içmeden",
+      "C": "Az ama sık aralıklarla",
+      "D": "Sadece akşamları",
+      "E": "Sadece acıkınca"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 15,
+     "kok": "Güneş çarpmasından korunmak için aşağıdakilerden hangisi uygundur?",
+     "secenekler": {
+      "A": "Koyu renk kalın mont giymek",
+      "B": "Güneş kremi ve şapka kullanmak",
+      "C": "Hiç su içmemek",
+      "D": "Güneş altında oturmak",
+      "E": "Uzun süre koşmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 16,
+     "kok": "Doğal sudan alınan su neden arıtılmalıdır?",
+     "secenekler": {
+      "A": "Daha soğuk olsun diye",
+      "B": "Rengi değişsin diye",
+      "C": "Mikroplardan korunmak için",
+      "D": "Kokusu artsın diye",
+      "E": "Köpürsün diye"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 17,
+     "kok": "Pusulanın kırmızı ucu genellikle hangi yönü gösterir?",
+     "secenekler": {
+      "A": "Güney",
+      "B": "Doğu",
+      "C": "Kuzey",
+      "D": "Batı",
+      "E": "Güneybatı"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 18,
+     "kok": "Pusula kullanırken aşağıdakilerden hangisi sakıncalıdır?",
+     "secenekler": {
+      "A": "Pusulayı düz tutmak",
+      "B": "Metal eşyalara çok yakın kullanmak",
+      "C": "Haritayla birlikte kullanmak",
+      "D": "Açık alanda kullanmak",
+      "E": "Çantanın üstünde taşımak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 19,
+     "kok": "Kamp alanında gürültü yapmamak neden önemlidir?",
+     "secenekler": {
+      "A": "Çadırı yıpratır",
+      "B": "Yıldırım çeker",
+      "C": "Yaban hayatını ve diğer kampçıları rahatsız etmez",
+      "D": "Ateşi büyütür",
+      "E": "Haritayı bozar"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 20,
+     "kok": "Aşağıdakilerden hangisi kamp çadırının temel parçalarındandır?",
+     "secenekler": {
+      "A": "Direk ve kazık",
+      "B": "Fırın ve buzdolabı",
+      "C": "Klima ve televizyon",
+      "D": "Pencere perdesi",
+      "E": "Beton kolon"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 21,
+     "kok": "Katmanlı giyim sisteminde “iç katman”ın görevi nedir?",
+     "secenekler": {
+      "A": "Rüzgârı kesmek",
+      "B": "Suyu içeri almak",
+      "C": "Teri vücuttan uzaklaştırmak",
+      "D": "Çantayı doldurmak",
+      "E": "Renk uyumu sağlamak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 22,
+     "kok": "Aşağıdakilerden hangisi “kişisel malzeme”dir?",
+     "secenekler": {
+      "A": "Çadır",
+      "B": "Tencere",
+      "C": "Uyku tulumu",
+      "D": "Kamp ocağı",
+      "E": "Masa"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 23,
+     "kok": "Aşağıdakilerden hangisi yürüyüşte ayak sağlığını en iyi korur?",
+     "secenekler": {
+      "A": "Pamuklu çorap",
+      "B": "Islak çorap",
+      "C": "Yün veya sentetik yürüyüş çorabı",
+      "D": "Çorapsız yürümek",
+      "E": "Plastik poşetle yürümek"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 24,
+     "kok": "Kamp feneri kullanmanın en temel amacı nedir?",
+     "secenekler": {
+      "A": "Çadırı ısıtmak",
+      "B": "Yemek pişirmek",
+      "C": "Gece görüşü sağlamak",
+      "D": "Çantayı ağırlaştırmak",
+      "E": "Pusulayı çalıştırmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 25,
+     "kok": "Aşağıdakilerden hangisi kamp güvenliği için gereklidir?",
+     "secenekler": {
+      "A": "Çadırda mum yakmak",
+      "B": "Ateşi çadırın hemen önünde yakmak",
+      "C": "Su ve yiyeceği planlı kullanmak",
+      "D": "Telefonu kapatmak",
+      "E": "Pusulayı suya atmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 26,
+     "kok": "Yürüyüş sırasında grubun en yavaş üyesine göre tempo ayarlamak neden önemlidir?",
+     "secenekler": {
+      "A": "Manzarayı uzatmak için",
+      "B": "Grup dağılmasını önlemek için",
+      "C": "Fotoğraf çekmek için",
+      "D": "Lideri yormamak için",
+      "E": "Haritayı korumak için"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 27,
+     "kok": "Aşağıdakilerden hangisi “iz bırakmama” ilkesine uygundur?",
+     "secenekler": {
+      "A": "Çöpleri gömmek",
+      "B": "Çöpleri dereye atmak",
+      "C": "Çöpleri toplayıp geri taşımak",
+      "D": "Sadece plastikleri almak",
+      "E": "Sadece organikleri bırakmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 28,
+     "kok": "Aşağıdaki malzemelerden hangisi “temel ilk yardım çantası”nda bulunmalıdır?",
+     "secenekler": {
+      "A": "Oyun kartı",
+      "B": "Dikiş seti (tıbbi)",
+      "C": "Büyük tencere",
+      "D": "Çekiç",
+      "E": "Boya kalemi"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 29,
+     "kok": "Doğada yön bulurken hangisi görsel bir ipucu olabilir?",
+     "secenekler": {
+      "A": "Yıldızlar",
+      "B": "Buzdolabı",
+      "C": "Trafik lambası",
+      "D": "Sinyal panosu",
+      "E": "Asansör"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 30,
+     "kok": "Gece yürüyüşü yaparken en uygun aydınlatma hangisidir?",
+     "secenekler": {
+      "A": "Çakmak alevi",
+      "B": "Mum",
+      "C": "Kafa lambası",
+      "D": "Telefon ekranı",
+      "E": "Feneri arkaya tutmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 31,
+     "kok": "Çadırın içi düzenli tutulmazsa ne olabilir?",
+     "secenekler": {
+      "A": "Rüzgâr artar",
+      "B": "Ateş söner",
+      "C": "Aradığın malzemeyi bulmak zorlaşır",
+      "D": "Pusula çalışmaz",
+      "E": "Harita silinir"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 32,
+     "kok": "Kamp ocağı nerede kullanılmamalıdır?",
+     "secenekler": {
+      "A": "Açık alanda",
+      "B": "Taşlık zemin üzerinde",
+      "C": "Çadırın içinde",
+      "D": "Rüzgârdan korunaklı alanda",
+      "E": "Ateş yeri yakınına kurulmuş düz zeminde"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 33,
+     "kok": "Kış kampında ayakların üşümemesi için hangisi önemlidir?",
+     "secenekler": {
+      "A": "Islak çorap giymek",
+      "B": "Dar ayakkabı giymek",
+      "C": "Kuru ve yalıtımlı çorap kullanmak",
+      "D": "Ayakkabısız dolaşmak",
+      "E": "Ayakları sürekli sudan geçirmek"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 34,
+     "kok": "Aşağıdakilerden hangisi “kamp yürüyüşü” için uygun olmayan ayakkabıdır?",
+     "secenekler": {
+      "A": "Bileği kavrayan trekking botu",
+      "B": "Yumuşak tabanlı spor ayakkabı",
+      "C": "Deniz terliği",
+      "D": "Suya dayanıklı dağ botu",
+      "E": "Hafif yürüyüş ayakkabısı"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 35,
+     "kok": "Güneşli bir günde gözlük takmanın temel amacı nedir?",
+     "secenekler": {
+      "A": "Daha iyi görünmek",
+      "B": "Gözleri UV ışınından korumak",
+      "C": "Çantayı hafifletmek",
+      "D": "Haritayı daha parlak görmek",
+      "E": "Pusulayı korumak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 36,
+     "kok": "Aşağıdakilerden hangisi kamp planlamasında mutlaka kontrol edilmelidir?",
+     "secenekler": {
+      "A": "TV yayını",
+      "B": "İnternet hızı",
+      "C": "Hava durumu",
+      "D": "Şehir merkezi uzaklığı",
+      "E": "AVM sayısı"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 37,
+     "kok": "Aşağıdaki davranışlardan hangisi grup içi iletişim için uygundur?",
+     "secenekler": {
+      "A": "Herkesin farklı yöne gitmesi",
+      "B": "El işaretleri ve düdük kullanılması",
+      "C": "Sessizce ayrılmak",
+      "D": "Yalnızca telefonla konuşmak",
+      "E": "Hiç konuşmamak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 38,
+     "kok": "Aşağıdakilerden hangisi kamp alanında yangın riskini artırır?",
+     "secenekler": {
+      "A": "Ateş etrafını temizlemek",
+      "B": "Ateşi tam söndürmeden ayrılmak",
+      "C": "Ateşe su dökmek",
+      "D": "Ateşi toprakla kapatmak",
+      "E": "Ateşi küçük alanda tutmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 39,
+     "kok": "“Pamuklu giysi” dağ ve kamp için neden uygun değildir?",
+     "secenekler": {
+      "A": "Çok parlak olduğu için",
+      "B": "Çok pahalı olduğu için",
+      "C": "Islanınca geç kurur ve üşütür",
+      "D": "Rengi çabuk solar",
+      "E": "Kolay yırtılmaz"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 40,
+     "kok": "Aşağıdakilerden hangisi “pusula okumak” için gereklidir?",
+     "secenekler": {
+      "A": "Pusulayı sallamak",
+      "B": "Pusulayı düz ve sabit tutmak",
+      "C": "Pusulayı ters çevirmek",
+      "D": "Pusulayı cebin içinde tutmak",
+      "E": "Pusulayı kapalı kutuda kullanmak"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 41,
+     "kok": "Aşağıdakilerden hangisi kamp sırasında “kişisel hijyen”e örnektir?",
+     "secenekler": {
+      "A": "Elleri hiç yıkamamak",
+      "B": "Elleri sadece suyla ıslatmak",
+      "C": "Elleri su yoksa dezenfektanla temizlemek",
+      "D": "Elleri çadıra silmek",
+      "E": "Elleri toprakla ovmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 42,
+     "kok": "Kamp alanında “yabani hayvanları çekmemek” için ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Yiyecekleri açıkta bırakmak",
+      "B": "Yemek artıklarını çadır önüne dökmek",
+      "C": "Yiyecekleri kapalı kaplarda saklamak",
+      "D": "Çöpleri ormanda bırakmak",
+      "E": "Yemek kokusunu yaymak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 43,
+     "kok": "Uygun bir kamp çantasının vazgeçilmez özelliği hangisidir?",
+     "secenekler": {
+      "A": "Sadece tek omuz askısı olması",
+      "B": "Bel kemerinin olmaması",
+      "C": "Bel kemerinin ağırlığı kalçaya aktarması",
+      "D": "Hiç cebi olmaması",
+      "E": "Çok ağır olması"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 44,
+     "kok": "Aşağıdakilerden hangisi ip ve emniyet ekipmanları için genel bir kuraldır?",
+     "secenekler": {
+      "A": "Güneşte sürekli bırakmak",
+      "B": "Islak halde sıkıştırmak",
+      "C": "Kuru ve gölgede saklamak",
+      "D": "Çamura bulayıp yıkamamak",
+      "E": "Ateş yanında kurutmak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 45,
+     "kok": "Aşağıdakilerden hangisi “doğa etiği”nin bir parçasıdır?",
+     "secenekler": {
+      "A": "Yaban hayvanlarını beslemek",
+      "B": "Bitki koparmamak",
+      "C": "Taşlara yazı yazmak",
+      "D": "Ağaç kabuğunu soymak",
+      "E": "Çöp gömmek"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 46,
+     "kok": "Aşağıdakilerden hangisi “ilk yardım çantasına” ait değildir?",
+     "secenekler": {
+      "A": "Bandaj",
+      "B": "Yara bandı",
+      "C": "Antiseptik solüsyon",
+      "D": "Temiz gazlı bez",
+      "E": "Mutfak tencere kapağı"
+     },
+     "dogru": "E"
+    },
+    {
+     "no": 47,
+     "kok": "Aşağıdakilerden hangisi doğada yön bulma yöntemlerinden biridir?",
+     "secenekler": {
+      "A": "Yol tabelasına bakmak",
+      "B": "Güneş ve gölgeyi kullanmak",
+      "C": "Mağara duvarına yazı yazmak",
+      "D": "Ağaç kabuklarına zarar vermek",
+      "E": "Çöp yığınlarını takip etmek"
+     },
+     "dogru": "B"
+    },
+    {
+     "no": 48,
+     "kok": "Aşağıdakilerden hangisi “kamp yeri” için olumsuz bir özelliktir?",
+     "secenekler": {
+      "A": "Su kaynağına çok yakın olması (taşkın alanı)",
+      "B": "Düz olması",
+      "C": "Rüzgârdan kısmen korunmuş olması",
+      "D": "Kaya düşmesi riskinden uzak olması",
+      "E": "Su kaynağına yürünebilir mesafede olması"
+     },
+     "dogru": "A"
+    },
+    {
+     "no": 49,
+     "kok": "Aşağıdakilerden hangisi “kamp sonrası kontrol”de yapılmalıdır?",
+     "secenekler": {
+      "A": "Sadece çadırı toplamak",
+      "B": "Ateşin sönüp sönmediğine bakmamak",
+      "C": "Küçük çöpleri de toplayıp alanı temizlemek",
+      "D": "Kül ve kömürleri yaymak",
+      "E": "Çöpü çalı altına saklamak"
+     },
+     "dogru": "C"
+    },
+    {
+     "no": 50,
+     "kok": "Aşağıdakilerden hangisi “kampçının doğadaki rolü”nü en iyi özetler?",
+     "secenekler": {
+      "A": "Sadece misafirdir",
+      "B": "Sadece ziyaretçidir",
+      "C": "Hem misafir hem koruyucudur",
+      "D": "Sadece gözlemcidir",
+      "E": "Sadece yürüyüşçüdür"
+     },
+     "dogru": "C"
+    }
+   ]
+  }
+ ]
+}

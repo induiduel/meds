@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 480" role="img" aria-label="İmdat işaretleri ve yılan ısırığında yapılacaklar ile yapılmayacaklar">
+<rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+<g font-family="Inter, 'Liberation Sans', Arial, sans-serif" fill="#1E2A2E" font-size="20">
+<rect x="24" y="24" width="752" height="44" rx="16" fill="#24384F"/>
+<text x="400" y="54" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Acil: <tspan fill="#F2C14E">112</tspan></text>
+
+<rect x="24" y="84" width="368" height="112" rx="20" fill="#fff"/>
+<g transform="translate(84,140)"><circle r="40" fill="#CFE0CF"/>
+<rect x="-2" y="-16" width="32" height="15" rx="4" fill="#D9865B"/><circle cx="-4" cy="4" r="18" fill="#D9865B"/><circle cx="-4" cy="4" r="7" fill="#1E2A2E"/>
+</g>
+<g stroke="#2F5D50" stroke-width="4" stroke-linecap="round"><path d="M140 124 h14 M162 124 h14 M184 124 h14"/></g>
+<text x="140" y="160" font-size="22" font-weight="700">3 kısa işaret</text>
+
+<rect x="24" y="212" width="368" height="112" rx="20" fill="#fff"/>
+<g transform="translate(84,268)"><circle r="40" fill="#CFE0CF"/>
+<circle cx="-18" cy="-18" r="9" fill="#F2C14E"/>
+<path d="M-12 -12 L2 4 L30 -14" fill="none" stroke="#D9865B" stroke-width="3" stroke-dasharray="5 6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="-14" y="0" width="30" height="22" rx="5" fill="#CDE3EA" stroke="#2F5D50" stroke-width="3" transform="rotate(-12 1 11)"/>
+</g>
+<text x="140" y="276" font-size="22" font-weight="700">Aynayla yansıt</text>
+
+<rect x="24" y="340" width="368" height="112" rx="20" fill="#fff"/>
+<rect x="40" y="354" width="204" height="84" rx="14" fill="#E4D8C3"/>
+<g fill="none" stroke="#2F5D50" stroke-width="11" stroke-linecap="round" stroke-dasharray="0 14">
+<path d="M88 368 H60 V396 H88 V424 H60"/>
+<path d="M128 368 H156 V424 H128Z"/>
+<path d="M224 368 H196 V396 H224 V424 H196"/>
+</g>
+<text x="318" y="406" text-anchor="middle" font-size="28" font-weight="700">SOS</text>
+
+<rect x="408" y="84" width="368" height="60" rx="18" fill="#E4D8C3"/>
+<path d="M430 120 C448 96 466 138 486 114 C502 96 518 130 536 112" fill="none" stroke="#2F5D50" stroke-width="10" stroke-linecap="round"/>
+<path d="M548 108 l12 -5 M548 108 l12 3" stroke="#C8553D" stroke-width="2.500" stroke-linecap="round"/>
+<ellipse cx="540" cy="110" rx="10" ry="8" fill="#2F5D50"/><circle cx="543" cy="107" r="2" fill="#fff"/>
+<text x="752" y="121" text-anchor="end" font-weight="700">Yılan ısırığı</text>
+
+<rect x="408" y="160" width="176" height="292" rx="20" fill="#fff"/>
+<circle cx="496" cy="206" r="26" fill="#2F5D50"/>
+<path d="M485 206 l8 9 l15 -18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g text-anchor="middle" font-weight="600"><text x="496" y="280">Sakin tut</text><text x="496" y="328">Sabitle</text><text x="496" y="382" font-size="30" font-weight="700" fill="#2F5D50">112</text></g>
+
+<rect x="600" y="160" width="176" height="292" rx="20" fill="#fff"/>
+<circle cx="688" cy="206" r="26" fill="#C8553D"/>
+<path d="M679 197 l18 18 M697 197 l-18 18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+<g text-anchor="middle" font-weight="600"><text x="688" y="280">Kesme</text><text x="688" y="324">Emme</text><text x="688" y="368">Turnike</text><text x="688" y="412">Buz</text></g>
+</g>
+</svg>

@@ -1,0 +1,706 @@
+{
+  "no": 5,
+  "baslik": "Kamp Alanı ve Barınak",
+  "ozet": "Çadırı nereye ve nasıl kuracağını, tulum ve matla geceyi nasıl sıcak geçireceğini öğrenirsin.",
+  "konular": [
+    {
+      "id": "5a",
+      "baslik": "Kamp yeri seçimi ve çadır kurma",
+      "ozet": "Güvenli ve düz zemini seçmeyi, çadırı rüzgâra göre gergin ve kuru kurmayı öğrenirsin.",
+      "gorsel": "kamp-yeri.svg",
+      "gorsel_alt": "Yamaçtaki hafif yükseltide doğru kurulmuş çadır ile kurulmaması gereken yerler: dere yatağı, kaya dibi, ağaç altı ve sırt hattı.",
+      "bolumler": [
+        {
+          "baslik": "Önce güvenlik, en son manzara",
+          "ekran": "Kamp alanında ilk bakılan şey güvenli ve düz zemindir; manzara en son gelir.\n\n- **Arazi:** düz ve açık, yangın tehlikesinden uzak\n- **Üç büyük risk:** sel, çığ ve kaya düşmesi olan yere kurulmaz\n- **Hâkimiyet:** bölgenin üçte ikilik, yani yüksek kısmına hâkim ol\n- **Hava durumu:** planlamada mutlaka kontrol edilir; kamp güvenliğini etkiler\n\n> [!IMPORTANT] Sıra: önce sel, kaya düşmesi, yıldırım ve rüzgâr; en son manzara.",
+          "ses": [
+            "Kamp yeri seçerken gözün önce manzaraya kayar, ama ilk ölçüt güvenli ve düz zemindir.",
+            "Alan düz ve açık bir arazide, yangın tehlikesinden uzak olmalı.",
+            "Sel, çığ ve kaya düşmesi riski olan yere çadır kurulmaz.",
+            "Bölgenin üçte ikilik, yani yüksek kısmına hâkim bir yer seçersen çevreni rahatça görürsün.",
+            "Yola çıkmadan hava durumuna da bak, çünkü kamp güvenliğini doğrudan etkiler.",
+            "Sel, kaya düşmesi, yıldırım ve rüzgâr tek tek geçildikten sonra sıra manzaraya gelir.",
+            "Güzel fotoğraf, güvenli gecenin ödülüdür."
+          ]
+        },
+        {
+          "baslik": "Su yakın olsun, taşkın uzak olsun",
+          "ekran": "Su kaynağına yakın ama taşkın riskinden uzak bir yer aranır.\n\n- **Taşkın alanı:** suya çok yakın düzlük kamp yeri için olumsuz özelliktir\n- **Dere yatağı ve vadi tabanı:** sel suyunun yoludur, çadır kurulmaz\n- **Dik kaya dibi:** kaya düşmesi riski taşır\n- **Mağara duvarı:** çökme riski vardır, yakınına çadır kurulmaz\n- **En iyisi:** yamaçta, eski dere yatağından uzak, hafif yükselti üzerinde alan",
+          "ses": [
+            "Su kaynağı yürünebilir mesafede olsun, ama çadırın taşkın alanında durmasın.",
+            "Suya çok yakın düzlük rahat görünür, oysa su yükselince ilk orası dolar.",
+            "Dere yatağı ve vadi tabanı sel suyunun yoludur, kuru görünse bile çadır yeri değildir.",
+            "Dik kaya duvarının dibi de olmaz, çünkü yukarıdan kaya düşebilir.",
+            "Mağara duvarlarına yakın kurma, orada çökme riski vardır.",
+            "Hem selden hem kaya düşmesinden uzak kalmanın yolu bellidir.",
+            "Yamaçta, eski dere yatağından uzak ve hafif yükselti üzerindeki alanı seç."
+          ]
+        },
+        {
+          "baslik": "Ağaç altı, sırt hattı, güneş ve hayvan yolu",
+          "ekran": "Gölgesi ya da manzarası güzel diye seçilen bazı yerler aslında risklidir.\n\n- **Ağaç altı:** düşen dal ve yıldırım riski nedeniyle sakıncalıdır\n- **Sırt hattına yakın açıklık:** mikro iklimi en değişken ve riskli yerdir\n- **Güneşin en yoğun vurduğu açık alan:** çadır buraya kurulmaz\n- **Hayvan geçiş yolları:** kamp alanı bunlara uzak olmalıdır\n\n> [!NOTE] Yer seçimi iz bırakmama ilkesine de uyar: doğaya zarar vermeyen alan seçilir.",
+          "ses": [
+            "Ağaç altı gölgesiyle çağırır, ama orada dal kırılması riski her zaman vardır.",
+            "Fırtınada yıldırım da ağacı bulur; bu yüzden ağaç altına çadır kurmak sakıncalıdır.",
+            "Sırt hattına çok yakın açıklıkta hava bir anda değişir.",
+            "Orası mikro iklim açısından en değişken ve en riskli kamp yeridir.",
+            "Güneşin en yoğun vurduğu açık alan da uygun değildir, çadırın içi fırın gibi olur.",
+            "Hayvan geçiş yollarından uzak dur ki gece yolun sahipleriyle karşılaşmayasın.",
+            "Seçtiğin yer doğaya zarar vermemeli; iz bırakmama ilkesi yer seçerken başlar."
+          ]
+        },
+        {
+          "baslik": "Zemin ve çadırın parçaları",
+          "ekran": "Çadır seni rüzgâr, yağmur, soğuk ve güneşten korur; ama önce zemin hazır olmalıdır.\n\n- **Zemin:** düz ve taşsız olur; çakıllı, köklü zemine kurulmaz\n- **Zemin eğimi:** çadır kurarken en çok dikkat edilen unsurdur\n- **Temel parçalar:** direk ve kazık; en dayanıklı direk alüminyumdur\n- **Tabanlık:** çadırın altına serilen koruyucu naylon örtü; su geçişini önler",
+          "ses": [
+            "Çadır seni dört şeyden korur: rüzgâr, yağmur, soğuk ve güneş.",
+            "Kurmadan önce zemine bak; düz ve taşsız olmalı.",
+            "Çakıllı, taşlık ve kök dolu zemin hem sırtını hem çadırın tabanını hırpalar.",
+            "Çadır kurarken en çok dikkat edeceğin unsur zemin eğimidir.",
+            "Çadırın temel parçaları direk ve kazıktır.",
+            "Direklerde en dayanıklı malzeme alüminyumdur; plastik ve tahta onunla yarışamaz.",
+            "Çadırın altına serilen koruyucu örtüye tabanlık denir.",
+            "Bu naylon örtü taban suyunun geçişini önler, zeminin soğuğunu da biraz keser."
+          ]
+        },
+        {
+          "baslik": "Rüzgâra göre kur, gergin kur",
+          "ekran": "Rüzgâr yönü dikkate alınmadan çadır kurmak güvenli değildir.\n\n- **Arka kısım:** rüzgâr yönüne gelecek biçimde konumlandırılır\n- **Kapı:** hâkim rüzgâr yönüne bakmaz\n- **Kazık:** zemine 45° açıyla çakılır\n- **Gerginlik:** taban da dış tente de gergin; gevşek dış tentede su birikir\n- **Şiddetli rüzgâr:** çadırın ipleri gevşetilmez\n\n> [!NOTE] Çalışma sorularında kazık açısı 90° olarak da geçiyor; ikisini de bil.",
+          "ses": [
+            "Çadırı kurmadan önce rüzgârın nereden estiğine bak.",
+            "Çadırın arka kısmını rüzgâr yönüne ver; kapı hâkim rüzgâra bakmasın.",
+            "Doğru yön çadırın yıpranmasını önler, kapıyı açtığında içeri rüzgâr da dolmaz.",
+            "Kazıkları zemine kırk beş derece açıyla çak.",
+            "Çalışma sorularında doksan derece de geçer, ikisini de aklında tut.",
+            "Taban gergin, dış tente de gergin olmalı; gevşek kalan dış tentede su birikir.",
+            "Şiddetli rüzgârda ipleri gevşetme, gergin ip çadırı yerinde tutar."
+          ]
+        },
+        {
+          "baslik": "İki tente ve kuru bir çadır",
+          "ekran": "Çadırın içini kuru tutan şey iki tentenin iş bölümü ve havalandırmadır.\n\n- **Dış tente, iç tente:** dış tente su geçirmez, iç tente hava geçirir\n- **Temas yok:** iç ve dış tente birbirine değmez\n- **Dikiş mühürleyici:** dikiş yerlerinden su sızmasını engeller\n- **Havalandırma sistemi:** nemi dışarı atar; yağışta da üst pencereler açık kalır\n- **İç düzen:** kapı her giriş çıkışta kapanır, eşyalar düzenli durur\n\n> [!IMPORTANT] Bakımın en önemli kuralı: çadırı kuru ve havalandırılmış saklamak.",
+          "ses": [
+            "Dış tente su geçirmez, yağmuru dışarıda tutar; iç tente ise hava geçirir.",
+            "İkisi birbirine değmemeli, değdiği yerden içerisi ıslanır.",
+            "Dikiş yerlerine dikiş mühürleyici sürersen su sızmasını engellersin.",
+            "İçerideki nem havalandırma sistemiyle dışarı çıkar; yağışlı havada bile üst pencereleri açık tut.",
+            "Pencereleri kapatırsan nefesinin nemi içeride kalır ve yoğuşma oluşur.",
+            "Çadıra girerken de çıkarken de kapıyı mutlaka kapat, içerisi açık kalmasın.",
+            "Eşyalarını düzenli yerleştir, yoksa gece aradığın malzemeyi bulmak zorlaşır.",
+            "Dönüşte çadırı kuru ve havalandırılmış sakla; bakımın en önemli kuralı budur."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "D-A-K-T",
+        "acilim": "Düz ve taşsız zemin · Arka kısım rüzgâra · Kazık 45° · Tenteler gergin ve birbirine değmez",
+        "not": "Çadırı kurarken dört kontrolü sırayla hatırlatır: zemin, rüzgâr yönü, kazık açısı ve tenteler."
+      },
+      "yap": [
+        "Önce güvenli ve düz zemini ara",
+        "Çadırın altına tabanlık ser",
+        "Arka kısmı rüzgâr yönüne ver",
+        "Dikiş yerlerine dikiş mühürleyici sür",
+        "Yağışta da üst havalandırma pencerelerini açık tut"
+      ],
+      "yapma": [
+        "Dere yatağına, kaya dibine, mağara duvarına kurma",
+        "Ağaç altına çadır kurma",
+        "Kapıyı hâkim rüzgâr yönüne çevirme",
+        "Dış tenteyi gevşek bırakma",
+        "Şiddetli rüzgârda ipleri gevşetme"
+      ],
+      "spotlar": [
+        {
+          "metin": "Kamp alanı seçiminde ilk ölçüt **güvenli ve düz zemin**, en son bakılan unsur **manzaradır**.",
+          "ses": "Kamp alanı seçerken ilk ölçüt güvenli ve düz zemindir, manzaraya en son bakılır."
+        },
+        {
+          "metin": "Kamp alanı **sel, çığ ve kaya düşmesi** riski olan yere kurulmaz; mağara duvarında **çökme** riski vardır.",
+          "ses": "Sel, çığ ve kaya düşmesi riski olan yere kamp kurulmaz; mağara duvarının yanında da çökme riski vardır."
+        },
+        {
+          "metin": "**Ağaç altına** çadır kurmak sakıncalıdır: **düşen dal** ve **yıldırım** riski vardır.",
+          "ses": "Ağaç altına çadır kurmak sakıncalıdır, çünkü düşen dal ve yıldırım riski vardır."
+        },
+        {
+          "metin": "Çadırın altına serilen koruyucu örtüye **tabanlık** denir; su geçişini önler.",
+          "ses": "Çadırın altına serilen koruyucu örtüye tabanlık denir ve bu örtü su geçişini önler."
+        },
+        {
+          "metin": "Çadırın **arka kısmı** rüzgâr yönüne gelir; **kapı** hâkim rüzgâra bakmaz.",
+          "ses": "Çadırın arka kısmı rüzgâr yönüne gelir, kapısı ise hâkim rüzgâra bakmaz."
+        },
+        {
+          "metin": "Kazıklar zemine **45°** açıyla çakılır; **gevşek dış tentede** su birikir.",
+          "ses": "Kazıklar zemine kırk beş derece açıyla çakılır; dış tente gevşek kalırsa üstünde su birikir."
+        },
+        {
+          "metin": "**Dış tente** su geçirmez, **iç tente** hava geçirir; dikişlere **dikiş mühürleyici** sürülür.",
+          "ses": "Dış tente su geçirmez, iç tente hava geçirir; dikiş yerlerine de dikiş mühürleyici sürülür."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Doğru mu, yanlış mı?",
+          "ifadeler": [
+            {
+              "metin": "Kamp alanı seçerken önce manzaraya, sonra zemine bakılır.",
+              "dogru": false,
+              "aciklama": "İlk ölçüt güvenli ve düz zemindir; manzara en son bakılan unsurdur."
+            },
+            {
+              "metin": "Kamp alanı suya yakın, ama taşkın riskinden uzak olmalıdır.",
+              "dogru": true,
+              "aciklama": "Su yürünebilir mesafede olur; suya çok yakın taşkın alanı ise olumsuz bir özelliktir."
+            },
+            {
+              "metin": "Yağış başlayınca çadırın havalandırma pencereleri kapatılır.",
+              "dogru": false,
+              "aciklama": "Pencereler kapanırsa nem içeride kalır ve yoğuşma oluşur; üst pencereler açık tutulur."
+            },
+            {
+              "metin": "Şiddetli rüzgârda çadır rahatlasın diye ipler gevşetilir.",
+              "dogru": false,
+              "aciklama": "İpler gevşetilmez; çadırı yerinde tutan şey gergin iplerdir."
+            },
+            {
+              "metin": "Çadırın tabanı da dış tentesi de gergin kurulur.",
+              "dogru": true,
+              "aciklama": "Gevşek kalan dış tentede su birikir; bu yüzden ikisi de gergin olur."
+            }
+          ]
+        },
+        {
+          "tur": "esle",
+          "baslik": "Hangi parça ne işe yarar?",
+          "ciftler": [
+            { "sol": "Tabanlık", "sag": "Alttan su geçişini önler" },
+            { "sol": "Dikiş mühürleyici", "sag": "Dikişten su sızmasını engeller" },
+            { "sol": "Dış tente", "sag": "Yağmuru geçirmez" },
+            { "sol": "İç tente", "sag": "Hava geçirir" },
+            { "sol": "Havalandırma sistemi", "sag": "Nemi dışarı atar" }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Çadırın altına serilerek su geçişini önleyen koruyucu örtü aşağıdakilerden hangisidir?",
+          "secenekler": { "A": "Dış tente", "B": "Tabanlık", "C": "İç tente", "D": "Dikiş mühürleyici", "E": "Kazık" },
+          "dogru": "B",
+          "cozum": "Çadırın altına serilen koruyucu naylon örtüye tabanlık denir; taban suyunun çadıra geçmesini önler.",
+          "siklar": {
+            "A": "Dış tente çadırın en üstündeki su geçirmez katmandır; yağmuru yukarıdan keser, çadırın altına serilmez ve zeminden gelen suyu durdurmaz.",
+            "B": "Tabanlık, çadırın altına serilen koruyucu naylon örtüdür; taban suyunun geçişini önler ve zeminin soğuğunu da bir miktar keser.",
+            "C": "İç tente hava geçiren katmandır ve çadırın içinde, dış tentenin altında durur; zemine serilen bir örtü olmadığı için alttan gelen suyu kesmez.",
+            "D": "Dikiş mühürleyici bir örtü değil, dikiş yerlerine sürülen bir üründür; görevi dikişlerden su sızmasını engellemektir.",
+            "E": "Kazık, direkle birlikte çadırın temel parçasıdır ve çadırı zemine sabitler; zemine 45° açıyla çakılır, su geçişiyle bir ilgisi yoktur."
+          },
+          "ses_cozum": "Çadırın altına serilen koruyucu örtünün adı tabanlıktır ve taban suyunun geçişini önler. Dış tente de su geçirmez, ama o çadırın üstündedir ve yağmuru yukarıdan keser."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Çadır kurulurken çadırın hangi kısmı rüzgâr yönüne gelecek biçimde konumlandırılır?",
+          "secenekler": { "A": "Kapısı", "B": "Üst havalandırma penceresi", "C": "Dikiş yerleri", "D": "Arka kısmı", "E": "Tabanlığı" },
+          "dogru": "D",
+          "cozum": "Çadırın arka kısmı rüzgâr yönüne gelir; kapı hâkim rüzgâra bakmaz. Doğru yön çadırın yıpranmasını da önler.",
+          "siklar": {
+            "A": "Kapı hâkim rüzgâr yönüne bakmamalıdır; rüzgâra dönük kapı her açılışta içeriyi rüzgârla doldurur ve çadırı zorlar.",
+            "B": "Üst havalandırma pencereleri nemi dışarı atmak için açık tutulur; çadırın rüzgâra göre yönünü belirleyen kısım pencereler değildir.",
+            "C": "Dikiş yerleri su sızmasına karşı dikiş mühürleyiciyle korunur; çadırın yönü dikişlere göre değil, arka kısma ve kapıya göre ayarlanır.",
+            "D": "Arka kısım rüzgâr yönüne verilir; böylece rüzgâr çadırın sırtına çarpar, kapı korunur ve çadır daha az yıpranır.",
+            "E": "Tabanlık çadırın altına serilen örtüdür ve su geçişini önler; yere serildiği için rüzgâra göre çevrilecek bir yönü yoktur."
+          },
+          "ses_cozum": "Çadırın arka kısmı rüzgâr yönüne gelecek biçimde kurulur. Kapı ise tam tersine hâkim rüzgâra bakmamalıdır, yoksa her açışında içeri rüzgâr dolar ve çadır çabuk yıpranır."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Aşağıdakilerden hangisi çadır kurmak için uygun bir zemindir?",
+          "secenekler": { "A": "Düz ve taşsız toprak", "B": "Çakıllı ve köklü alan", "C": "Dere yatağı", "D": "Dik kaya dibi", "E": "Büyük bir ağacın altı" },
+          "dogru": "A",
+          "cozum": "Çadır kurmadan önce zemin düz ve taşsız olmalıdır; çakıllı, köklü zemin, dere yatağı, kaya dibi ve ağaç altı uygun değildir.",
+          "siklar": {
+            "A": "Düz ve taşsız zemin çadır için aranan zemindir; çadır dengeli oturur, taban zarar görmez ve gece rahat uyunur.",
+            "B": "Çakıllı ve köklü zemin çadır kurulacak zeminin tam tersidir; hem çadırın tabanını hırpalar hem de üstünde rahat uyunmaz.",
+            "C": "Dere yatağı sel suyunun yoludur; kuru ve düz görünse bile sel riski taşıdığı için kamp alanı olarak seçilmez.",
+            "D": "Dik kaya dibi kaya düşmesi riski taşır; kamp alanı sel, çığ ve kaya düşmesi riski olan yerlere kurulmaz.",
+            "E": "Ağaç altı gölgeli olsa da düşen dal ve yıldırım riski nedeniyle sakıncalıdır; çadır ağacın altına kurulmaz."
+          },
+          "ses_cozum": "Çadır düz ve taşsız zemine kurulur. Çakıllı ve köklü alan en yaygın yanlıştır; orada çadırın tabanı zarar görür, sen de sabaha kadar bir o yana bir bu yana dönersin."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Aşağıdaki çadır kurma uygulamalarından hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Kazıkları zemine 45° açıyla çakmak",
+            "B": "Çadırın altına tabanlık sermek",
+            "C": "Tabanı gergin, dış tenteyi gevşek kurmak",
+            "D": "Arka kısmı rüzgâr yönüne vermek",
+            "E": "İç ve dış tenteyi birbirine değdirmemek"
+          },
+          "dogru": "C",
+          "cozum": "Taban da dış tente de gergin kurulur; dış tente gevşek kalırsa üstünde su birikir.",
+          "siklar": {
+            "A": "Kazıkların zemine 45° açıyla çakılması doğru uygulamadır; çalışma sorularında 90° olarak da geçtiği için iki sayı da bilinmelidir.",
+            "B": "Tabanlık çadırın altına serilen koruyucu örtüdür; taban suyunun geçişini önlediği için sermek doğru bir uygulamadır.",
+            "C": "Dış tente gevşek bırakılırsa üstünde su birikir; bu yüzden yalnız taban değil dış tente de gergin kurulmalıdır.",
+            "D": "Arka kısmın rüzgâr yönüne verilmesi doğrudur; kapı hâkim rüzgâra bakmaz ve çadır daha az yıpranır.",
+            "E": "İç tente hava geçirir, dış tente su geçirmez; ikisinin birbirine değmemesi gerektiği için bu uygulama doğrudur."
+          },
+          "ses_cozum": "Yanlış olan, dış tenteyi gevşek kurmaktır; gevşek tentede su birikir. Taban da dış tente de gergin olur. Kazığı kırk beş derece açıyla çakmak ise doğru uygulamadır."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Ağaç altına çadır kurmanın sakıncası aşağıdaki risk ikililerinden hangisiyle açıklanır?",
+          "secenekler": {
+            "A": "Düşen dal ve yıldırım",
+            "B": "Sel ve çığ",
+            "C": "Çökme ve taşkın",
+            "D": "Yoğuşma ve su birikmesi",
+            "E": "Kaya düşmesi ve yangın"
+          },
+          "dogru": "A",
+          "cozum": "Ağaç altında dal kırılması riski her zaman vardır; ayrıca yıldırım riski nedeniyle de ağaç altı sakıncalıdır.",
+          "siklar": {
+            "A": "Ağaç altında dal kırılıp çadırın üstüne düşebilir, fırtınada yıldırım da ağaca düşebilir; ağaç altını sakıncalı yapan iki risk bunlardır.",
+            "B": "Sel ve çığ kamp alanının genel olarak uzak durması gereken risklerdir; dere yatağı ve çığ yolu için geçerlidir, ağaç altına özgü değildir.",
+            "C": "Çökme mağara duvarlarının, taşkın ise suya çok yakın alanların riskidir; ikisi de ağaç altını sakıncalı yapan nedenler arasında yer almaz.",
+            "D": "Yoğuşma havalandırılmayan çadırın, su birikmesi gevşek dış tentenin sorunudur; bunlar yer seçimiyle değil kurulumla ilgilidir.",
+            "E": "Kaya düşmesi dik kaya diplerinin riskidir; yangın tehlikesinden uzak durmak genel bir kuraldır, ağaç altının iki özel riski bunlar değildir."
+          },
+          "ses_cozum": "Ağaç altına çadır kurmak iki nedenle sakıncalıdır: düşen dal ve yıldırım. Çökme mağara duvarının, taşkın ise suya çok yakın alanın riskidir; bunları ağaç altıyla karıştırma."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Kamp yeri ile taşıdığı risk eşleştirmelerinden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Dere yatağı – düşen dal",
+            "B": "Ağaç altı – çığ",
+            "C": "Dik kaya dibi – yoğuşma",
+            "D": "Sırt hattına yakın açıklık – taşkın",
+            "E": "Mağara duvarı yakını – çökme"
+          },
+          "dogru": "E",
+          "cozum": "Çadır, çökme riski olan mağara duvarlarına yakın kurulmaz. Dere yatağında sel, ağaç altında düşen dal ve yıldırım, kaya dibinde kaya düşmesi riski vardır.",
+          "siklar": {
+            "A": "Dere yatağı sel suyunun yoludur ve riski sel ile taşkındır; düşen dal ise ağaç altına kurulan çadırın riskidir.",
+            "B": "Ağaç altının riskleri düşen dal ve yıldırımdır; çığ, karlı yamaçlarda kamp alanının uzak durması gereken ayrı bir risktir.",
+            "C": "Dik kaya dibinin riski kaya düşmesidir; yoğuşma ise havalandırma pencereleri kapalı tutulan çadırın içinde oluşur.",
+            "D": "Sırt hattına yakın açıklık mikro iklim açısından en değişken ve riskli yerdir; taşkın ise suya çok yakın alanların sorunudur.",
+            "E": "Mağara duvarlarında çökme riski vardır; bu nedenle çadır mağara duvarlarının yakınına kurulmaz ve eşleştirme doğrudur."
+          },
+          "ses_cozum": "Mağara duvarının riski çökmedir, bu yüzden çadır yakınına kurulmaz. Sırt hattına yakın açıklığın sorunu taşkın değil, havanın çok değişken olmasıdır; taşkın suya çok yakın alanda görülür."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Yağışlı bir gecede çadır içi yoğuşmayı en çok artıran uygulama aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Dikiş yerlerine dikiş mühürleyici sürmek",
+            "B": "Bütün havalandırma pencerelerini kapatmak",
+            "C": "Çadırın altına tabanlık sermek",
+            "D": "Dış tenteyi gergin kurmak",
+            "E": "Üst havalandırma pencerelerini açık tutmak"
+          },
+          "dogru": "B",
+          "cozum": "Çadırın içi havalandırılmazsa nem dışarı çıkamaz ve yoğuşma oluşur; yağışlı havada da üst pencereler açık tutulur.",
+          "siklar": {
+            "A": "Dikiş mühürleyici dikiş yerlerinden su sızmasını engeller; dışarıdan gelen suyu keser, içerideki nemi ve yoğuşmayı artırmaz.",
+            "B": "Pencereler kapanınca içerideki nem dışarı çıkamaz ve yoğuşma oluşur; yağış var diye pencereleri kapatmak bu yüzden yanlıştır.",
+            "C": "Tabanlık çadırın altından su geçişini önler; içeriye alttan nem girmesini azalttığı için yoğuşmayı artıran bir uygulama sayılmaz.",
+            "D": "Gergin dış tentede su birikmez ve tente iç tenteye değmez; bu doğru bir kurulumdur, yoğuşmayı artırmaz.",
+            "E": "Üst havalandırma pencerelerini açık tutmak yoğuşmayı azaltmanın en etkili yoludur; nem havalandırma sistemiyle dışarı atılır."
+          },
+          "ses_cozum": "Yoğuşmayı en çok artıran şey bütün havalandırma pencerelerini kapatmaktır, çünkü nem içeride kalır. Yağmur yağsa bile üst pencereleri açık tutarsın. Dikiş mühürleyici ise yalnızca dışarıdan sızan suyu keser."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki kamp alanlarından hangisi güvenlik açısından en uygundur?",
+          "secenekler": {
+            "A": "Vadi tabanında, suya bitişik düzlük",
+            "B": "Dik kaya duvarının dibindeki düz bant",
+            "C": "Sırt hattına çok yakın, manzaralı açıklık",
+            "D": "Eski dere yatağından uzak, hafif yükseltideki düzlük",
+            "E": "Büyük ağacın altındaki gölgeli, yumuşak zemin"
+          },
+          "dogru": "D",
+          "cozum": "Yamaçta, eski dere yatağından uzak ve hafif yükselti üzerindeki alan hem sel hem kaya düşmesi riskini en iyi azaltır.",
+          "siklar": {
+            "A": "Vadi tabanı sel suyunun yoludur ve suya bitişik düzlük taşkın alanıdır; düz olması bu yeri güvenli yapmaz.",
+            "B": "Dik kaya duvarının dibinde zemin düz olsa da yukarıdan kaya düşmesi riski vardır; kamp alanı bu riskin olduğu yere kurulmaz.",
+            "C": "Sırt hattına çok yakın açıklık mikro iklim açısından en değişken ve riskli yerdir; manzara ise en son bakılacak unsurdur.",
+            "D": "Hafif yükselti selden, dere yatağından ve kaya duvarından uzak olmak da kaya düşmesinden korur; zemin düz olduğu için çadır da rahat kurulur.",
+            "E": "Ağaç altı gölgeli ve yumuşak olsa da düşen dal ve yıldırım riski taşır; bu nedenle çadır ağaç altına kurulmaz."
+          },
+          "ses_cozum": "En uygun yer, eski dere yatağından uzak ve hafif yükselti üzerindeki düzlüktür; selden de kaya düşmesinden de uzaktır. Vadi tabanındaki düzlük rahat görünür, ama orası sel suyunun yoludur."
+        }
+      ]
+    },
+    {
+      "id": "5b",
+      "baslik": "Uyku tulumu, mat ve kış kampı",
+      "ozet": "Tulumun ısıyı nasıl koruduğunu, matın görevini ve kış kampında sıcak uyumayı öğrenirsin.",
+      "gorsel": "uyku-sistemi.svg",
+      "gorsel_alt": "Uyku sisteminin katmanları alttan üste: zemin, mat, uyku tulumu ve içinde ince kuru giysili kampçı; yanında sıcak su şişesi.",
+      "bolumler": [
+        {
+          "baslik": "Tulum ısıtmaz, ısını korur",
+          "ekran": "Uyku tulumu vücudun ısı kaybını önlemek için kullanılır; kendisi ısı üretmez.\n\n- **Prensip:** vücut ısısının korunması; tulum vücut sıcaklığıyla ısınır\n- **Yalıtım:** içindeki hava miktarına ve dolgu malzemesi kalitesine bağlıdır\n- **Kişisel malzeme:** çadır ve ocak ortaktır, uyku tulumu kişiseldir\n- **Soğukta ısınma:** en etkili yöntem tuluma girmektir",
+          "ses": [
+            "Uyku tulumu soba değildir; görevi vücudunun ısı kaybını önlemektir.",
+            "Isıyı sen üretirsin, tulum yalnızca korur; yani vücut sıcaklığınla ısınır.",
+            "Yalıtımı iki şeye bağlıdır: içindeki hava miktarı ve dolgu malzemesinin kalitesi.",
+            "Dolgu ne kadar çok havayı hapsederse ısın o kadar az kaçar.",
+            "Tulum kişisel malzemedir; çadır ve ocak paylaşılır, tulum paylaşılmaz.",
+            "Kamp alanında hava soğuduğunda en etkili ısınma yöntemi tuluma girmektir.",
+            "Ateş yakmak ya da koşmak onun yerini tutmaz."
+          ]
+        },
+        {
+          "baslik": "Kaz tüyü mü, sentetik mi?",
+          "ekran": "Dolgunun türü, tulumun nemle nasıl baş edeceğini belirler.\n\n- **Kaz tüyü:** kış kampında sıcak tutar ama ıslandığında zor kurur\n- **Sentetik:** nemli ortamda kaz tüyünden daha dayanıklıdır\n- **Kuru tut:** tulum kuru tutulur, ıslandığında mutlaka kurutulur\n\n> [!IMPORTANT] Kaz tüyünün nemli ortamdaki dezavantajı kurutma süresinin uzun olmasıdır.",
+          "ses": [
+            "Kış kampında kaz tüyü tulumlar çok sıcak tutar.",
+            "Zayıf yanı sudur; ıslandığında zor kurur, kurutma süresi uzundur.",
+            "Islak kaz tüyü yalıtmaz, sen de sabaha kadar üşürsün.",
+            "Nemli ortamda sentetik dolgu kaz tüyünden daha dayanıklıdır.",
+            "Hangi dolguyu seçersen seç, kural aynıdır.",
+            "Tulumu kuru tut, ıslanırsa mutlaka kurut.",
+            "Yağışlı ve nemli bölgeye gidiyorsan sentetik, kuru ve soğuk bölgeye gidiyorsan kaz tüyü işini görür."
+          ]
+        },
+        {
+          "baslik": "Tulumun bakımı",
+          "ekran": "Tulumun ömrünü, kamptan sonra ona nasıl davrandığın belirler.\n\n- **Faaliyet sonrası:** tulum asma yerlerinden asılır\n- **Saklama:** sıkıştırılmış saklanmaz; geniş bir saklama torbasında durur\n- **Temizlik:** deterjan kullanılmaz\n- **Uzun kamp:** küflenmeye karşı çadır ve tulumda kurutma ve havalandırma yapılır",
+          "ses": [
+            "Faaliyetten dönünce tulumu torbasında unutma; asma yerlerinden as.",
+            "Kullanmadığın zaman sıkıştırılmış saklama, çünkü ezilen dolgu kabarıklığını yitirir.",
+            "Onun yerine geniş bir saklama torbası kullan; dolguyu ezmeden korur.",
+            "Temizlerken deterjan kullanma, dolguya zarar verir.",
+            "Uzun süreli kamplarda çadır ve tulum nem toplar.",
+            "Küflenmeyi önlemek için ikisine de kurutma ve havalandırma yap.",
+            "Tulumu çadır dışında güneşte havalandırmak bu yüzden iyi bir alışkanlıktır."
+          ]
+        },
+        {
+          "baslik": "Tuluma nasıl girilir?",
+          "ekran": "Tulum en verimli ısıyı ince, kuru giysilerle girildiğinde sağlar.\n\n- **Giysi:** ince ve kuru; kalın ya da fazla giysi terlemeyi artırır\n- **Fazla boşluk:** polar giysilerle doldurulur\n- **Önce ısın:** girmeden önce hafif bir yürüyüş vücudu ısıtır\n- **Sıcak su şişesi:** kış kampında tuluma konur; vücut ısısını hızlı yükseltir\n\n> [!IMPORTANT] Kalın giysiyle uyumak yalıtımı artırmaz; terletir.",
+          "ses": [
+            "Tuluma girmeden önce üstündeki nemli giysileri çıkar, kuru giysiler giy.",
+            "Tulum en verimli ısıyı ince ve kuru giysilerle girdiğinde sağlar.",
+            "Kalın montla ya da kat kat giysiyle girmek yalıtımı artırmaz, terlemeyi artırır.",
+            "Ter de gecenin ortasında seni üşütür.",
+            "Tulumda fazla boşluk kaldıysa orayı polar giysilerle doldur.",
+            "Girmeden önce hafif bir yürüyüş yap; ısınmış vücut tulumu çabuk ısıtır.",
+            "Kış kampında sıcak su dolu bir şişeyi tulumun içine koyabilirsin.",
+            "Şişe vücut ısını hızlı yükseltir; yalnız kapağını sıkıca kapat."
+          ]
+        },
+        {
+          "baslik": "Mat: soğuk alttan gelir",
+          "ekran": "Uyku tulumunun altına serilen yalıtım malzemesine mat denir.\n\n- **Görevi:** vücut ile zemin arasındaki ısı kaybını önler\n- **Temel amaç:** konfor ya da yumuşak zemin değil, ısı kaybını azaltmak\n- **Şişme mat:** genellikle köpük mattan daha ağırdır\n- **En büyük hata:** tulumu mat sermeden doğrudan zemine sermek\n\n> [!IMPORTANT] Etiketteki konfor sıcaklığına en aykırı hata, altına mat sermemektir.",
+          "ses": [
+            "Soğuk yalnız havadan gelmez, zemin de ısını alttan çeker.",
+            "Tulumun altına serilen yalıtım malzemesine mat denir.",
+            "Mat, vücudunla zemin arasındaki ısı kaybını önler; seni zeminden yalıtır.",
+            "Temel amacı konfor ya da yumuşak yatak değil, ısı kaybını azaltmaktır.",
+            "Şişme matlar genellikle köpük matlardan daha ağırdır; çantanı hazırlarken bunu hesaba kat.",
+            "Tulumun etiketinde bir konfor sıcaklığı yazar.",
+            "Altına mat sermeden tulumu doğrudan zemine serersen o değere güvenemezsin.",
+            "Yorgun ve aç yatmak da üşütür, ama matsız yatmak hepsinden kötüdür."
+          ]
+        },
+        {
+          "baslik": "Kış kampı ve yüksek irtifa",
+          "ekran": "Karda ve yüksekte küçük hatalar büyük üşümeye dönüşür.\n\n- **Kar tabakası:** kış kampında çadır altına konan kar yalıtım sağlar\n- **Kar mağarası ve iglo:** havalandırma deliği karbonmonoksit zehirlenmesini önler\n- **En riskli üçlü:** pamuklu içlik + ıslak çorap + dar uyku tulumu\n- **Ayaklar:** kuru ve yalıtımlı çorap kullanılır\n- **Uyku kalitesi:** bir günde çok fazla irtifa kazanmak en çok bozar",
+          "ses": [
+            "Kış kampında çadırın altına konan kar tabakası düşman değil, yalıtımdır.",
+            "Kar mağarası ya da iglo yaparsan havalandırma deliği bırak; karbonmonoksit zehirlenmesini önler.",
+            "Hipotermi, vücut ısısının tehlikeli biçimde düşmesidir.",
+            "Yüksek irtifada gece kampında bu riski en çok artıran üçlüyü ezberle.",
+            "Pamuklu içlik, ıslak çorap ve dar uyku tulumu.",
+            "Ayakların üşümesin diye kuru ve yalıtımlı çorap giy.",
+            "Yüksekte uykunu en çok bozan planlama hatası bir günde çok fazla irtifa kazanmaktır.",
+            "Yavaş yüksel, kuru yat, rahat uyu."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "İnce – Kuru – Mat",
+        "acilim": "İnce giysiyle gir · Kuru tulum, kuru giysi · Altına mat ser",
+        "not": "Sıcak bir gecenin üç şartını hatırlatır; biri eksikse tulum etiketindeki konfor sıcaklığına güvenilmez."
+      },
+      "yap": [
+        "Tuluma ince ve kuru giysilerle gir",
+        "Tulumun altına mutlaka mat ser",
+        "Fazla boşluğu polar giysilerle doldur",
+        "Faaliyet sonrası tulumu asma yerlerinden as",
+        "İgloda havalandırma deliği bırak"
+      ],
+      "yapma": [
+        "Tuluma kalın montla girme",
+        "Tulumu sıkıştırılmış saklama",
+        "Tulumu deterjanla temizleme",
+        "Islak çorap ve pamuklu içlikle yatma",
+        "Bir günde çok fazla irtifa kazanma"
+      ],
+      "spotlar": [
+        {
+          "metin": "Uyku tulumu ısı üretmez; **vücudun ısı kaybını önler** ve vücut sıcaklığıyla ısınır.",
+          "ses": "Uyku tulumu ısı üretmez; vücudunun ısı kaybını önler ve senin sıcaklığınla ısınır."
+        },
+        {
+          "metin": "Tulumun yalıtımı içindeki **hava miktarına** ve **dolgu malzemesi kalitesine** bağlıdır.",
+          "ses": "Tulumun yalıtımı içindeki hava miktarına ve dolgu malzemesinin kalitesine bağlıdır."
+        },
+        {
+          "metin": "**Kaz tüyü** sıcak tutar ama ıslanınca zor kurur; nemde **sentetik** daha dayanıklıdır.",
+          "ses": "Kaz tüyü sıcak tutar ama ıslanınca zor kurur; nemli ortamda sentetik dolgu daha dayanıklıdır."
+        },
+        {
+          "metin": "Tuluma **ince, kuru giysilerle** girilir; kalın giysi **terlemeyi artırır**, fazla boşluk **polar** giysiyle doldurulur.",
+          "ses": "Tuluma ince ve kuru giysilerle gir; kalın giysi terletir, fazla boşluğu ise polar giysilerle doldur."
+        },
+        {
+          "metin": "Tulum faaliyet sonrası **asma yerlerinden** asılır, **sıkıştırılmış** saklanmaz, **deterjanla** temizlenmez.",
+          "ses": "Tulum faaliyet sonrası asma yerlerinden asılır, sıkıştırılmış saklanmaz ve deterjanla temizlenmez."
+        },
+        {
+          "metin": "**Mat** vücut ile zemin arasındaki ısı kaybını önler; **şişme mat** genellikle köpük mattan ağırdır.",
+          "ses": "Mat, vücut ile zemin arasındaki ısı kaybını önler; şişme mat genellikle köpük mattan daha ağırdır."
+        },
+        {
+          "metin": "Kar mağarası ve igloda **havalandırma deliği** **karbonmonoksit zehirlenmesini** önler.",
+          "ses": "Kar mağarasında ve igloda bırakılan havalandırma deliği karbonmonoksit zehirlenmesini önler."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "sirala",
+          "baslik": "Kış gecesi yatış sırası",
+          "soru": "Doğru sıraya diz",
+          "adimlar": [
+            "Matı zemine ser",
+            "Tulumu matın üstüne aç",
+            "Girmeden hemen önce hafif yürüyüşle ısın",
+            "İnce, kuru giysilerle tuluma gir",
+            "Sabah tulumu asma yerlerinden as"
+          ],
+          "aciklama": "Önce zeminden yalıtım kurulur, sonra vücut ısıtılıp kuru giysiyle tuluma girilir; faaliyet sonrası tulum asılır."
+        },
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Doğru mu, yanlış mı?",
+          "ifadeler": [
+            {
+              "metin": "Tuluma ne kadar kalın giyinip girersen yalıtım o kadar artar.",
+              "dogru": false,
+              "aciklama": "Kalın giysi terlemeyi artırır; tulum vücut sıcaklığıyla ısınır, ince ve kuru giysiyle girilir."
+            },
+            {
+              "metin": "Kaz tüyü tulum nemli ortamda sentetik tulumdan daha dayanıklıdır.",
+              "dogru": false,
+              "aciklama": "Kaz tüyü ıslanınca zor kurur; nemli ortamda sentetik dolgu daha dayanıklıdır."
+            },
+            {
+              "metin": "Şişme matlar genellikle köpük matlardan daha ağırdır.",
+              "dogru": true,
+              "aciklama": "Çanta hazırlanırken şişme matın genellikle daha ağır olduğu hesaba katılır."
+            },
+            {
+              "metin": "Kullanılmayan tulum yer kaplamasın diye sıkıştırılmış saklanır.",
+              "dogru": false,
+              "aciklama": "Tulum sıkıştırılmış saklanmaz; geniş bir saklama torbasında tutulur."
+            },
+            {
+              "metin": "Kış kampında çadır altına konan kar tabakası yalıtım sağlar.",
+              "dogru": true,
+              "aciklama": "Kar tabakası çadırın altında yalıtım, yani izolasyon amacıyla kullanılır."
+            }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Uyku tulumunun altına serilen yalıtım malzemesi aşağıdakilerden hangisidir?",
+          "secenekler": { "A": "Tabanlık", "B": "Dış tente", "C": "Mat", "D": "İç tente", "E": "Polar giysi" },
+          "dogru": "C",
+          "cozum": "Uyku tulumunun altına serilen yalıtım malzemesine mat denir; vücut ile zemin arasındaki ısı kaybını önler.",
+          "siklar": {
+            "A": "Tabanlık çadırın altına serilen koruyucu naylon örtüdür ve su geçişini önler; tulumun değil çadırın altında durur.",
+            "B": "Dış tente çadırın su geçirmez üst katmanıdır; yağmuru dışarıda tutar, tulumun altına serilen bir yalıtım malzemesi değildir.",
+            "C": "Mat, uyku tulumunun altına serilen yalıtım malzemesidir; vücut ile zemin arasındaki ısı kaybını önler ve seni zeminden yalıtır.",
+            "D": "İç tente çadırın hava geçiren katmanıdır; çadırın gövdesini oluşturur, tulumun altına serilerek zeminden yalıtım sağlamaz.",
+            "E": "Polar giysi tulumda fazla boşluk kaldığında o boşluğu doldurmak için kullanılır; tulumun altına serilen yalıtım malzemesi mattır."
+          },
+          "ses_cozum": "Tulumun altına serilen yalıtım malzemesi mattır ve vücut ile zemin arasındaki ısı kaybını önler. Tabanlık ise tulumun değil çadırın altına serilir, görevi su geçişini önlemektir."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Faaliyet sonrasında uyku tulumu nasıl bekletilmelidir?",
+          "secenekler": {
+            "A": "Sıkıştırma torbasında sıkıca bastırılarak",
+            "B": "Asma yerlerinden asılarak",
+            "C": "Deterjanla yıkanıp katlanarak",
+            "D": "Çadırın tabanlığına sarılarak",
+            "E": "Nemliyken torbasına konarak"
+          },
+          "dogru": "B",
+          "cozum": "Uyku tulumu faaliyet sonrasında asma yerlerinden asılır; sıkıştırılmış saklanmaz ve deterjanla temizlenmez.",
+          "siklar": {
+            "A": "Tulum kullanılmadığı zaman sıkıştırılmış saklanmaz; ezilen dolgu kabarıklığını yitirir, bu yüzden geniş bir saklama torbası kullanılır.",
+            "B": "Faaliyet sonrasında tulum asma yerlerinden asılır; böylece dolgu ezilmez, tulum havalanır ve içindeki nem kurur.",
+            "C": "Uyku tulumu temizlenirken deterjan kullanılmaz; deterjan dolguya zarar verdiği için bu uygulama tulumun ömrünü kısaltır.",
+            "D": "Tabanlık çadırın altına serilen koruyucu örtüdür; tulumu ona sarmak tulumu havalandırmaz ve bakım kuralları arasında yer almaz.",
+            "E": "Tulum kuru tutulmalı, ıslandığında mutlaka kurutulmalıdır; nemli hâlde torbaya konan tulum küflenir ve yalıtımını yitirir."
+          },
+          "ses_cozum": "Faaliyet sonrasında tulum asma yerlerinden asılır. Sıkıştırma torbasında bırakmak en yaygın hatadır; tulum sıkıştırılmış saklanmaz, çünkü ezilen dolgu kabarıklığını yitirir ve eskisi gibi sıcak tutmaz."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Uyku tulumuyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Dış katmanı sayesinde kendi ısısını üretir",
+            "B": "Vücudun ısı kaybını önler",
+            "C": "Kalın giysiyle girilince daha iyi yalıtır",
+            "D": "Sıkıştırılmış olarak saklanmalıdır",
+            "E": "Deterjanla temizlenmelidir"
+          },
+          "dogru": "B",
+          "cozum": "Uyku tulumu vücudun ısı kaybını önlemek için kullanılır; ısınma prensibi vücut ısısının korunmasına dayanır.",
+          "siklar": {
+            "A": "Tulumun ısı üreten bir katmanı yoktur; tulum vücut sıcaklığıyla ısınır ve yalnızca bu ısının kaçmasını önler.",
+            "B": "Uyku tulumunun en önemli amacı vücudu ısı kaybından korumaktır; ısıyı vücut üretir, tulum içindeki hava ve dolguyla korur.",
+            "C": "Kalın giysiyle uyumak yalıtımı artırmaz, terlemeyi artırır; tulum en verimli ısıyı ince ve kuru giysilerle girildiğinde sağlar.",
+            "D": "Tulum kullanılmadığı zaman sıkıştırılmış saklanmaz; geniş bir saklama torbasında durur, faaliyet sonrası asma yerlerinden asılır.",
+            "E": "Uyku tulumu temizlenirken deterjan kullanılmaz; bu ifade tulum bakımının temel kurallarından biriyle açıkça çelişir."
+          },
+          "ses_cozum": "Uyku tulumu vücudun ısı kaybını önler; ısıyı sen üretirsin, tulum yalnızca korur. Kalın giysiyle girmek daha iyi yalıtmaz, tersine terletir ve gecenin ortasında seni üşütür."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Uyku tulumunun içinde fazla boşluk kalırsa aşağıdakilerden hangisi yapılır?",
+          "secenekler": {
+            "A": "Boşluk polar giysilerle doldurulur",
+            "B": "Tuluma kalın montla girilir",
+            "C": "Tulum sıkıştırılarak daraltılır",
+            "D": "Mat tulumun içine yerleştirilir",
+            "E": "Boşluğa nemli giysiler konur"
+          },
+          "dogru": "A",
+          "cozum": "Uyku tulumunda fazla boşluk kalırsa polar giysilerle doldurulur; tuluma kalın giysiyle girilmez.",
+          "siklar": {
+            "A": "Fazla boşluk polar giysilerle doldurulur; böylece vücudun ısıtması gereken boş hacim azalır ve tulum daha çabuk ısınır.",
+            "B": "Kalın montla tuluma girmek terlemeyi artırır; tuluma fazla kıyafetle girilmez, boşluk giysiyi üstüne giyerek değil yanına koyarak doldurulur.",
+            "C": "Tulumun yalıtımı içindeki hava miktarına bağlıdır; dolguyu sıkıştırmak bu havayı azaltır ve tulumun sıcak tutmasını zorlaştırır.",
+            "D": "Mat tulumun altına serilir ve vücut ile zemin arasındaki ısı kaybını önler; tulumun içine konursa zeminden yalıtım kalmaz.",
+            "E": "Tulum kuru tutulmalıdır; nemli giysiler tulumu ıslatır, ıslanan dolgu da yalıtmaz ve geceyi üşüyerek geçirirsin."
+          },
+          "ses_cozum": "Tulumda fazla boşluk kalırsa orayı polar giysilerle doldurursun. Kalın montu üstüne giyip girmek aynı şey değildir; kalın giysi terletir ve tulumun verimini belirgin biçimde düşürür."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Kış kampında tuluma girmeden önce yapılan aşağıdaki uygulamalardan hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Hafif bir yürüyüş yapmak",
+            "B": "Tuluma sıcak su dolu şişe koymak",
+            "C": "Kuru giysiler giymek",
+            "D": "Tulumun altına mat sermek",
+            "E": "Terlememek için kalın mont giymek"
+          },
+          "dogru": "E",
+          "cozum": "Tuluma kalın giysiyle girilmez; kalın giysi terlemeyi artırır. Tulum ince, kuru giysilerle en verimli ısıyı sağlar.",
+          "siklar": {
+            "A": "Tuluma girmeden önce hafif bir yürüyüş yapmak vücudu ısıtır; ısınmış vücut tulumu daha çabuk ısıttığı için doğru bir uygulamadır.",
+            "B": "Kış kamplarında sıcak su dolu şişe tulumun içine konabilir; temel avantajı vücut ısısını hızlı yükseltmesidir.",
+            "C": "Tuluma girmeden önce kuru giysiler giyilir; nemli giysi tulumu ıslatır ve vücudu üşütür, bu nedenle uygulama doğrudur.",
+            "D": "Mat vücut ile zemin arasındaki ısı kaybını önler; altına mat sermemek konfor sıcaklığına en aykırı hatadır.",
+            "E": "Kalın mont terlemeyi önlemez, tam tersine artırır; tuluma fazla kıyafetle girilmez, ince ve kuru giysi yeterlidir."
+          },
+          "ses_cozum": "Burada yanlış olan kalın mont giyip tuluma girmektir, çünkü kalın giysi terlemeyi artırır. Sıcak su dolu şişe ise doğru bir uygulamadır; vücut ısısını hızlı yükseltir."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Kaz tüyü uyku tulumuyla ilgili aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Nemli ortamda sentetikten daha dayanıklıdır",
+            "B": "Islandığında çabuk kurur",
+            "C": "Sıcak tutar ama ıslandığında zor kurur",
+            "D": "Islakken daha fazla hava hapseder",
+            "E": "Sıkıştırılmış saklanınca daha iyi yalıtır"
+          },
+          "dogru": "C",
+          "cozum": "Kaz tüyü tulumlar kış kampında sıcak tutar, fakat ıslandığında zor kurur; nemli ortamda sentetik dolgu daha dayanıklıdır.",
+          "siklar": {
+            "A": "Nemli ortamda dayanıklı olan sentetik dolgudur; kaz tüyü ıslanınca yalıtmaz ve zor kuruduğu için nemde dezavantajlıdır.",
+            "B": "Kaz tüyünün nemli ortamdaki dezavantajı tam da kurutma süresinin uzun olmasıdır; ıslanan kaz tüyü tulum çabuk kurumaz.",
+            "C": "Kaz tüyü kış kampında çok sıcak tutar; zayıf yanı sudur, ıslandığında zor kurur ve kuruyana kadar yalıtmaz.",
+            "D": "Islanan kaz tüyü hava hapsedemez; tulumun yalıtımı içindeki hava miktarına bağlı olduğu için ıslak tulum sıcak tutmaz.",
+            "E": "Hiçbir tulum sıkıştırılmış saklanmaz; ezilen dolgu kabarıklığını yitirir, bu yüzden geniş bir saklama torbası kullanılır."
+          },
+          "ses_cozum": "Kaz tüyü tulum kış kampında sıcak tutar ama ıslandığında zor kurur. Nemli ortamda daha dayanıklı olan kaz tüyü değil, sentetik dolgudur; bu ikisini birbiriyle karıştırma."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Etiketindeki konfor sıcaklığı geceye uygun olan bir tulumda yine de üşümenin en olası nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Tulumu mat sermeden zemine sermek",
+            "B": "Tulumu geniş bir torbada saklamış olmak",
+            "C": "Tulumun içinde ince sentetik içlik giymek",
+            "D": "Tulumu gündüz güneşte havalandırmış olmak",
+            "E": "Yatmadan önce hafif bir yürüyüş yapmak"
+          },
+          "dogru": "A",
+          "cozum": "Konfor sıcaklığına en aykırı hata, tulumun altına mat sermeden doğrudan zemine sermektir; ısı alttan zemine kaçar.",
+          "siklar": {
+            "A": "Mat olmadan vücut ısısı zemine kaçar; bu, tulumun etiketindeki konfor sıcaklığına en fazla aykırılık oluşturan hatadır.",
+            "B": "Geniş saklama torbası tulumun doğru saklama biçimidir; dolgu ezilmediği için tulumun yalıtımını korur, üşümeye yol açmaz.",
+            "C": "Tulum en verimli ısıyı ince ve kuru giysilerle girildiğinde sağlar; ince sentetik içlik doğru bir seçimdir.",
+            "D": "Tulumu güneşte havalandırmak nemi atar ve küflenmeyi önler; kuru tulum daha iyi yalıttığı için bu yararlı bir uygulamadır.",
+            "E": "Tuluma girmeden önce hafif yürüyüş vücudu ısıtır; ısınmış vücut tulumu çabuk ısıttığı için üşümeyi azaltır."
+          },
+          "ses_cozum": "En olası neden mat sermemektir; vücut ısısı alttan zemine kaçar ve etiketteki değere güvenilmez. Tulumu geniş torbada saklamak ise bir hata değil, doğru saklama biçimidir."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Kış kampıyla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Çadır altındaki kar tabakası – yalıtım",
+            "B": "İgloda havalandırma deliği – karbonmonoksitten korunma",
+            "C": "Tulumdaki sıcak su şişesi – vücut ısısını hızlı yükseltme",
+            "D": "Şişme mat – köpük mattan daha hafif olma",
+            "E": "Kurutma ve havalandırma – küflenmeyi önleme"
+          },
+          "dogru": "D",
+          "cozum": "Şişme matlar genellikle köpük matlara göre daha ağırdır; diğer eşleştirmelerin tümü doğrudur.",
+          "siklar": {
+            "A": "Kış kamplarında çadır altına konan kar tabakası yalıtım, yani izolasyon amacıyla kullanılır; bu eşleştirme doğrudur.",
+            "B": "Kar mağarası ya da iglo yapılırken bırakılan havalandırma deliği karbonmonoksit zehirlenmesini önler; eşleştirme doğrudur.",
+            "C": "Sıcak su dolu şişenin tulum içinde kullanılmasının temel avantajı vücut ısısını hızlı yükseltmesidir; eşleştirme doğrudur.",
+            "D": "Şişme matlar genellikle köpük matlardan daha ağırdır; hafif olduğunu söyleyen bu eşleştirme gerçeğin tersini verir.",
+            "E": "Uzun süreli kamplarda çadır ve tulumların küflenmesini önlemek için kurutma ve havalandırma yapılır; eşleştirme doğrudur."
+          },
+          "ses_cozum": "Yanlış eşleştirme şişme matla ilgili olandır; şişme mat genellikle köpük mattan daha ağırdır. İglodaki havalandırma deliği ise gerçekten karbonmonoksit zehirlenmesini önler, kar tabakası da yalıtım sağlar."
+        }
+      ]
+    }
+  ]
+}

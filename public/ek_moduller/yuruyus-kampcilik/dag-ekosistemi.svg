@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Dağ ekosistemi yükseklik zonlaşması: orman, çalı, alpin çayır, kar ve buz; her 100 metrede 0,6 derece azalır; oksijen azalır, gece–gündüz farkı büyük, kalın tüylü yaprak">
+  <rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+  <defs><clipPath id="pn"><rect x="24" y="24" width="400" height="432" rx="20"/></clipPath><clipPath id="mt"><path d="M24,456 L70,400 L250,70 L350,330 L376,312 L424,400 V456Z"/></clipPath></defs>
+  <g font-family="Inter, 'Liberation Sans', Arial, sans-serif" font-size="18" fill="#1E2A2E" stroke-linecap="round" stroke-linejoin="round">
+
+<g clip-path="url(#pn)"><rect x="24" y="24" width="400" height="432" fill="#CDE3EA"/>
+<g clip-path="url(#mt)"><rect x="0" y="0" width="460" height="480" fill="#FFFFFF"/>
+<path d="M0,480 V176 L176,176 L196,160 L216,180 L240,158 L262,182 L284,160 L306,178 H460 V480Z" fill="#CFE0CF"/>
+<rect x="0" y="262" width="460" height="230" fill="#7FA387"/><rect x="0" y="356" width="460" height="130" fill="#2F5D50"/>
+<g fill="#F2C14E"><circle cx="186" cy="244" r="4"/><circle cx="300" cy="238" r="4"/><circle cx="284" cy="198" r="4"/><circle cx="196" cy="200" r="4"/></g>
+<g fill="#2F5D50"><circle cx="140" cy="340" r="9"/><circle cx="156" cy="344" r="7"/><circle cx="318" cy="340" r="9"/><circle cx="302" cy="345" r="7"/><circle cx="372" cy="342" r="7"/></g>
+<g fill="#7FA387"><path d="M84,440 l14,-34 l14,34Z M118,446 l14,-34 l14,34Z M316,446 l14,-34 l14,34Z M352,438 l14,-34 l14,34Z M386,448 l14,-34 l14,34Z M52,450 l12,-28 l12,28Z"/></g>
+</g></g>
+<text x="42" y="60" fill="#24384F" font-weight="700">Yükseklik zonlaşması</text>
+<g font-size="20" font-weight="700" text-anchor="middle">
+<text x="238" y="228">Alpin çayır</text><text x="230" y="318">Çalı</text><text x="226" y="412" fill="#FFFFFF">Orman</text></g>
+<text x="296" y="130" font-size="20" font-weight="700" fill="#24384F">Kar ve buz</text>
+<path d="M290,123 H262" stroke="#24384F" stroke-width="3" fill="none"/><circle cx="258" cy="123" r="5" fill="#24384F"/>
+<path d="M456,448 V40" stroke="#D9865B" stroke-width="6" fill="none"/><path d="M444,54 L456,38 L468,54" fill="none" stroke="#D9865B" stroke-width="6"/>
+<text x="490" y="56">Her 100 m'de</text>
+<text x="490" y="100" font-size="38" font-weight="700" fill="#D9865B">0,6 °C</text>
+<text x="490" y="130">azalır</text>
+<rect x="490" y="160" width="286" height="72" rx="30" fill="#FFFFFF"/><g transform="translate(526,196.0)"><circle r="24" fill="#CDE3EA"/><text x="-4" y="7" font-size="20" font-weight="700" fill="#24384F" text-anchor="middle">O</text><text x="9" y="12" font-size="13" font-weight="700" fill="#24384F" text-anchor="middle">2</text></g><text x="564" y="202.0">Oksijen azalır</text>
+<rect x="490" y="252" width="286" height="72" rx="30" fill="#FFFFFF"/><g transform="translate(526,288.0)"><path d="M0,-24 A24,24 0 0 0 0,24Z" fill="#F2C14E"/><path d="M0,-24 A24,24 0 0 1 0,24Z" fill="#24384F"/><circle cx="9" cy="-3" r="6" fill="#F4EEE2"/><circle cx="12" cy="-6" r="5" fill="#24384F"/></g><text x="564" y="283.0">Gece–gündüz</text><text x="564" y="305.0">farkı büyük</text>
+<rect x="490" y="344" width="286" height="72" rx="30" fill="#FFFFFF"/><g transform="translate(526,380.0)"><circle r="24" fill="#CFE0CF"/><path d="M-13,13 Q-15,-12 13,-14 Q15,12 -13,13Z" fill="#2F5D50"/><path d="M-12,12 L8,-9" stroke="#CFE0CF" stroke-width="3" fill="none"/></g><text x="564" y="386.0">Kalın, tüylü yaprak</text>
+
+  </g>
+</svg>

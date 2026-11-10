@@ -163,6 +163,7 @@ const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV
 const VideoDersV15 = React.lazy(() => wrapLazy(import('./components/v15/VideoDersV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
 const MasaView = React.lazy(() => wrapLazy(import('./components/masa/MasaView')));
+const EkModullerV15 = React.lazy(() => wrapLazy(import('./components/v15/ekModul/EkModullerV15')));
 const SoruAktarV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruAktarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const ProgramEkleV15 = React.lazy(() => wrapLazy(import('./components/v15/ProgramEkleV15')));
@@ -2179,6 +2180,13 @@ export default function App() {
         {gorunenTab === 'video_ders' && (
           <Suspense fallback={<ViewFallback />}>
             <VideoDersV15 />
+          </Suspense>
+        )}
+
+        {/* TAB: /ek-moduller (görünen /dersler/ek-moduller/kurul<N>/<modül>/…) — seçmeli/geçici ders modülleri */}
+        {gorunenTab === 'ek_moduller' && (
+          <Suspense fallback={<ViewFallback />}>
+            <EkModullerV15 />
           </Suspense>
         )}
 

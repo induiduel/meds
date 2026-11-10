@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Kamp yeri seçimi: düz, hafif yüksek ve korunaklı yer uygundur; dere yatağı, kuru dal altı ve sırt uygun değildir; dereden en az 50 metre uzak durulur">
+  <rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+  <g font-family="Inter, 'Liberation Sans', Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- gök -->
+    <path d="M0,28 Q0,0 28,0 H772 Q800,0 800,28 V204 H0 Z" fill="#CDE3EA"/>
+    <circle cx="430" cy="78" r="28" fill="#F2C14E"/>
+
+    <!-- dağ ve sırt -->
+    <polygon points="14,204 150,60 232,150 282,104 380,204" fill="#7FA387"/>
+    <polygon points="150,60 174,86 160,82 150,94 139,82 126,86" fill="#FFFFFF"/>
+    <path d="M470,204 Q560,122 650,120 Q730,118 800,162 V204 Z" fill="#7FA387"/>
+
+    <!-- çayır -->
+    <path d="M0,200 H800 V452 Q800,480 772,480 H28 Q0,480 0,452 Z" fill="#CFE0CF"/>
+
+    <!-- dere -->
+    <path d="M205,200 C235,260 190,300 175,340 C160,385 120,420 95,480" fill="none" stroke="#2F5D50" stroke-width="42" stroke-linecap="butt"/>
+    <path d="M205,198 C235,260 190,300 175,340 C160,385 120,420 95,482" fill="none" stroke="#CDE3EA" stroke-width="36" stroke-linecap="butt"/>
+    <path d="M206,236 q6,10 2,20 M186,318 q-6,10 -8,20 M150,400 q-8,10 -14,18" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+
+    <!-- sırttaki çadır (yanlış) -->
+    <polygon points="624,122 650,86 676,122" fill="#D9865B" stroke="#D9865B" stroke-width="3"/>
+    <polygon points="643,122 650,104 657,122" fill="#1E2A2E"/>
+    <path d="M548,104 h34 q10,0 10,-9 M540,122 h50" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <polygon points="752,66 736,96 748,96 741,120 765,88 752,88 760,66" fill="#F2C14E" stroke="#1E2A2E" stroke-width="3"/>
+
+    <!-- dere kıyısındaki çadır (yanlış) -->
+    <polygon points="230,320 258,284 286,320" fill="#D9865B" stroke="#D9865B" stroke-width="3"/>
+    <polygon points="251,320 258,302 265,320" fill="#1E2A2E"/>
+
+    <!-- hafif yüksek düzlük, ağaçlar, iyi çadır -->
+    <ellipse cx="505" cy="352" rx="124" ry="24" fill="#7FA387"/>
+    <g>
+      <rect x="417" y="322" width="7" height="26" fill="#D9865B"/>
+      <polygon points="398,328 420,268 442,328" fill="#2F5D50"/>
+      <rect x="566" y="318" width="7" height="28" fill="#D9865B"/>
+      <polygon points="545,324 570,246 595,324" fill="#2F5D50"/>
+      <rect x="604" y="326" width="7" height="24" fill="#D9865B"/>
+      <polygon points="587,332 608,274 629,332" fill="#2F5D50"/>
+    </g>
+    <polygon points="452,352 500,290 548,352" fill="#D9865B" stroke="#D9865B" stroke-width="3"/>
+    <polygon points="488,352 500,318 512,352" fill="#1E2A2E"/>
+
+    <!-- kuru dallı ağaç ve altındaki çadır (yanlış) -->
+    <g fill="none" stroke="#1E2A2E">
+      <path d="M690,354 V250" stroke-width="8"/>
+      <path d="M690,312 L662,284 M690,292 L728,266 M690,262 L676,238 M728,266 L744,252 M728,266 L740,282 M662,284 L650,278" stroke-width="5"/>
+    </g>
+    <polygon points="704,354 730,320 756,354" fill="#D9865B" stroke="#D9865B" stroke-width="3"/>
+    <polygon points="723,354 730,337 737,354" fill="#1E2A2E"/>
+
+    <!-- rozetler -->
+    <circle cx="500" cy="264" r="17" fill="#2F5D50" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M492,264 l6,7 l11,-13" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <g fill="#C8553D">
+      <circle cx="690" cy="84" r="16"/><circle cx="296" cy="280" r="16"/><circle cx="764" cy="316" r="16"/>
+    </g>
+    <g fill="none" stroke="#FFFFFF" stroke-width="4">
+      <path d="M684,78 l12,12 M696,78 l-12,12"/>
+      <path d="M290,274 l12,12 M302,274 l-12,12"/>
+      <path d="M758,310 l12,12 M770,310 l-12,12"/>
+    </g>
+
+    <!-- ölçü -->
+    <g fill="none" stroke="#1E2A2E" stroke-width="3">
+      <path d="M180,402 H448"/>
+      <path d="M192,394 L180,402 L192,410 M436,394 L448,402 L436,410"/>
+    </g>
+    <text x="314" y="392" font-size="22" font-weight="700" fill="#1E2A2E" text-anchor="middle">en az 50 m</text>
+
+    <!-- etiketler -->
+    <g fill="#1E2A2E" font-size="18" text-anchor="middle">
+      <text x="640" y="52">Sırt: rüzgâr, yıldırım</text>
+      <text x="306" y="246">Dere yatağı: sel</text>
+      <text x="708" y="388">Kuru dal altı</text>
+      <text x="520" y="442">Düz, hafif yüksek, korunaklı</text>
+    </g>
+  </g>
+</svg>

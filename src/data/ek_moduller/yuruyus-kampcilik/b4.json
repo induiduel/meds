@@ -1,0 +1,763 @@
+{
+  "no": 4,
+  "baslik": "Giyim ve Malzeme",
+  "ozet": "Katmanlı giyin, ayağını ve başını koru; çantanı doğru yerleştir, malzemeni sınıfına ve işine göre tanı.",
+  "konular": [
+    {
+      "id": "4a",
+      "baslik": "Katmanlı giyim, ayakkabı ve koruyucular",
+      "ozet": "Birden fazla ince kat giy, pamuktan kaçın; başını, elini, gözünü ve ayağını ayrı ayrı koru.",
+      "gorsel": "katmanlar.svg",
+      "gorsel_alt": "İç, orta ve dış katmanı üst üste gösteren kesit; her katmanın yanında görevi yazıyor.",
+      "ek_gorseller": [
+        {
+          "dosya": "ayakkabi.svg",
+          "alt": "Yürüyüş çorabı, tozluk, yürüyüş botu ve plastik dağcılık botu yan yana; deniz terliğinin üstü çizili."
+        }
+      ],
+      "bolumler": [
+        {
+          "baslik": "Kalın tek kat değil, birden fazla ince kat",
+          "ekran": "Doğada giyimin en önemli kuralı: kalın tek kat yerine **birden fazla** ince kat giyilir.\n\n- **Katmanlı giyim sistemi:** Amacı vücut ısısını dengelemek, ısı dengesini korumaktır.\n- **İç katman:** Teri vücuttan uzaklaştırır.\n- **Orta katman:** Isıyı yalıtır; polar ya da kaz tüyü.\n- **Dış katman:** Rüzgâr ve yağıştan korur; rüzgârlık, kabuk ceket.\n\n> [!IMPORTANT] Isınınca kat çıkar, durunca kat giy; ısı dengesini sen ayarlarsın.",
+          "ses": [
+            "Doğada seni tek bir kalın mont değil, üst üste giydiğin birden fazla ince kat korur.",
+            "Buna katmanlı giyim sistemi denir ve amacı vücut ısısını dengede tutmaktır.",
+            "Tene değen iç katman teri vücuttan uzaklaştırır.",
+            "Orta katman ısıyı yalıtır; polar ya da kaz tüyü bu işi görür.",
+            "En dıştaki katman seni rüzgârdan ve yağıştan korur.",
+            "Yokuşta ısınınca bir kat çıkarırsın, molada durur durmaz geri giyersin.",
+            "Tek kalın montla bunu yapamazsın; ya terlersin ya üşürsün."
+          ]
+        },
+        {
+          "baslik": "Kumaş seçimi: pamuk neden olmaz?",
+          "ekran": "Katmanın işe yaraması kumaşına bağlıdır; ıslanınca ne yaptığına bak.\n\n- **Pamuk:** Teri dışarı atmaz; ıslanınca geç kurur ve üşütür.\n- **Yün:** Islanınca yalıtım özelliğini tamamen kaybetmez.\n- **Polipropilen:** İç katman için uygun sentetik kumaş.\n- **Tercih:** Teri dışarı atabilen sentetik ya da yün karışımlı giysiler.\n\n> [!IMPORTANT] İç katmanı pamuklu olan dizilim, üstüne ne giyersen giy, baştan yanlıştır.",
+          "ses": [
+            "Pamuklu tişört şehirde rahattır ama dağ için en uygun kumaş değildir.",
+            "Pamuk teri dışarı atmaz, içinde tutar; ıslanınca geç kurur ve seni üşütür.",
+            "Yün ise ıslansa bile yalıtım özelliğini tamamen kaybetmez.",
+            "Polipropilen iç katman için uygun sentetik bir kumaştır; teri tenden alıp dışarı taşır.",
+            "Bu yüzden doğada teri dışarı atabilen sentetik ya da yün karışımlı giysiler seçilir.",
+            "İçliğin pamukluysa üstüne polar ve su geçirmez ceket giymen durumu kurtarmaz.",
+            "Islak pamuk tenine yapışır ve durduğun anda seni soğutur."
+          ]
+        },
+        {
+          "baslik": "Kaz tüyü mü, sentetik dolgu mu?",
+          "ekran": "Orta katmandaki dolgunun türü nemli havada bütün farkı yaratır.\n\n- **Kaz tüyü:** Kuruyken çok sıcak tutar; ıslanınca yalıtmaz.\n- **Dezavantajı:** Nemli ortamda kurutma süresi uzundur.\n- **Sentetik dolgu:** Nemli ortamlarda kaz tüyünden daha avantajlıdır.\n- **En kötü ikili:** Pamuklu içlik + kaz tüyü mont; ıslanınca yalıtımını en çok kaybeder.\n\n> [!NOTE] Yağışta kaz tüyü montun üstüne mutlaka su geçirmez dış katman giy.",
+          "ses": [
+            "Kaz tüyü kuruyken hafif ve çok sıcaktır, ama ıslandığında sıcak tutma özelliğini korumaz.",
+            "Üstelik geç kurur; nemli ortamdaki asıl dezavantajı kurutma süresinin uzun olmasıdır.",
+            "Sentetik dolgu malzemeleri nemli ortamlarda kaz tüyüne göre daha avantajlıdır.",
+            "Islanınca yalıtımını en çok kaybeden ikili, pamuklu içlik ile kaz tüyü monttur.",
+            "İkisi de suyu çeker, ikisi de geç kurur.",
+            "Yağmur ihtimali varsa kaz tüyü montu su geçirmez bir dış katmanın altında tut.",
+            "Nemli ve yağışlı bir rotada sentetik dolgulu mont daha güvenli bir seçimdir."
+          ]
+        },
+        {
+          "baslik": "Terleyip soğumak: tehlikeli üçlü",
+          "ekran": "Yüksekte asıl tehlike terledikten sonra hızla soğumaktır.\n\n- **En riskli üçlü:** Pamuklu içlik + rüzgârlık yok + ağır sırt çantası.\n- **Ağır çanta:** Seni yokuşta terletir.\n- **Pamuklu içlik:** Teri tutar, ıslak kalır.\n- **Rüzgârlık yoksa:** Rüzgâr ıslak giysiyi hızla soğutur.\n\n> [!IMPORTANT] Doğru dizilim: sentetik ya da yün içlik + polar orta kat + rüzgâr ve su geçirmez dış kat.",
+          "ses": [
+            "Yüksekte en sinsi tehlike, terledikten sonra hızla soğumaktır.",
+            "Bu riski en çok artıran üçlü pamuklu içlik, rüzgârlığın olmaması ve ağır sırt çantasıdır.",
+            "Ağır çanta seni yokuşta terletir.",
+            "Pamuklu içlik o teri tutar ve ıslak kalır.",
+            "Rüzgârlığın yoksa sırtına vuran rüzgâr ıslak giysiyi hızla soğutur.",
+            "Çözüm basit: sentetik ya da yün içlik, üstüne polar, en dışa rüzgâr ve su geçirmez kat.",
+            "Terlemeyi beklemeden kat çıkarırsan içliğin de kuru kalır."
+          ]
+        },
+        {
+          "baslik": "Baş, eller ve güneş",
+          "ekran": "Baş ve eller hem soğukta hem güneşte ayrıca korunur.\n\n- **Sıcak havada:** Başı korumak için şapka kullanılır.\n- **Soğuk havada:** Isı kaybını önlemek için bere ve eldiven takılır.\n- **Baş:** Vücut ısısının %50'sinden fazlası baş bölgesinden kaybedilebilir.\n- **Eldiven:** Tek kat yetmez; eldivende de katman sistemi uygulanır.\n- **Güneş:** Güneş kremi yüksekte de etkilidir; gözlük UV ışınından ve kar yansımasından korur.",
+          "ses": [
+            "Sıcak havada başını şapkayla korursun; güneş çarpmasına karşı ilk önlem şapka ve güneş kremidir.",
+            "Soğuk havada ısı kaybını önlemek için bere ve eldiven takarsın.",
+            "Vücut ısısının yüzde ellisinden fazlası baş bölgesinden kaybedilebilir; şapka bu yüzden ısıyı korumada önemlidir.",
+            "Eldivende de katman sistemi uygulanır: içte ince bir eldiven, üstünde kalın ve rüzgâr geçirmez olanı.",
+            "Yükseğe çıktıkça güneş ışınları güçlenir; güneş kremi orada da işe yarar ve yanıktan korur.",
+            "Gözlük gözlerini morötesi ışından korur, karda oluşan yansımayı da azaltır."
+          ]
+        },
+        {
+          "baslik": "Çorap, tozluk ve ayakkabı",
+          "ekran": "Yürüyüşü ayakların yapar; onları kuru ve korunaklı tut.\n\n- **Çorap:** Yün ya da sentetik yürüyüş çorabı; pamuklu çorap su toplamasını önlemez.\n- **Kışın:** Kuru ve yalıtımlı çorap ayağı üşütmez.\n- **Tozluk:** Pantolon paçası ile bot arasındaki boşluğu kapatır, su girişini önler.\n- **Plastik dağcılık botu:** Kar–buz karışık zeminler içindir; sıcak ve kuru iklim için değil.\n- **Deniz terliği:** Kamp yürüyüşüne uygun değildir.",
+          "ses": [
+            "Ayak sağlığını en iyi yün ya da sentetik yürüyüş çorabı korur.",
+            "Pamuklu çorap nemi tutar ve ayağın su toplamasını engellemez.",
+            "Kış kampında ayakların üşümesin istiyorsan çorabın kuru ve yalıtımlı olsun.",
+            "Tozluk, pantolon paçası ile bot arasındaki boşluğu kapatır; içeri su ve kar girmesini önler.",
+            "Plastik dağcılık botları kar ve buzun karışık olduğu zeminler için yapılmıştır, sıcak ve kuru iklim için değil.",
+            "Kamp yürüyüşüne bileği kavrayan bot ya da hafif yürüyüş ayakkabısıyla çıkılır.",
+            "Deniz terliği ise kumsalda kalsın; patikada ayağını korumaz."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "T-I-R",
+        "acilim": "Ter uzaklaşır (iç) · Isı yalıtılır (orta) · Rüzgâr ve yağış kesilir (dış)",
+        "not": "Üç katmanın görevini içten dışa doğru sırasıyla hatırlatır."
+      },
+      "yap": [
+        "Kalın tek kat yerine birden fazla ince kat giy",
+        "İçliği sentetik ya da yünden seç",
+        "Yağışta kaz tüyünün üstüne su geçirmez kat giy",
+        "Soğukta bere ve eldiven, güneşte şapka ve gözlük tak",
+        "Yün ya da sentetik yürüyüş çorabı giy"
+      ],
+      "yapma": [
+        "Pamuklu içlik ve pamuklu çorap giyme",
+        "Rüzgârlığı evde bırakma",
+        "Kaz tüyü montu ıslatma",
+        "Deniz terliğiyle yürüyüşe çıkma",
+        "Güneş kremini yüksekte gereksiz sanma"
+      ],
+      "spotlar": [
+        {
+          "metin": "Doğada giyim kuralı: kalın tek kat yerine **birden fazla ince kat**.",
+          "ses": "Doğada kalın tek kat yerine birden fazla ince kat giyilir."
+        },
+        {
+          "metin": "**İç katman** teri uzaklaştırır, **orta katman** ısıyı yalıtır, **dış katman** rüzgâr ve yağıştan korur.",
+          "ses": "İç katman teri uzaklaştırır, orta katman ısıyı yalıtır, dış katman rüzgâr ve yağıştan korur."
+        },
+        {
+          "metin": "**Pamuk** ıslanınca geç kurur ve üşütür; **yün** ıslanınca yalıtımını tamamen kaybetmez.",
+          "ses": "Pamuk ıslanınca geç kurur ve üşütür; yün ise ıslansa da yalıtımını tamamen kaybetmez."
+        },
+        {
+          "metin": "**Kaz tüyü** ıslanınca yalıtmaz ve geç kurur; nemli ortamda **sentetik dolgu** daha avantajlıdır.",
+          "ses": "Kaz tüyü ıslanınca yalıtmaz ve geç kurur; nemli ortamda sentetik dolgu daha avantajlıdır."
+        },
+        {
+          "metin": "Vücut ısısının **%50'sinden fazlası** baş bölgesinden kaybedilebilir; soğukta bere ve eldiven tak.",
+          "ses": "Vücut ısısının yüzde ellisinden fazlası baştan kaybedilebilir; soğukta bere ve eldiven tak."
+        },
+        {
+          "metin": "**Tozluk**, pantolon paçası ile bot arasındaki boşluğu kapatarak su girişini önler.",
+          "ses": "Tozluk, pantolon paçası ile bot arasındaki boşluğu kapatarak su girişini önler."
+        },
+        {
+          "metin": "**Plastik dağcılık botu** kar–buz karışık zeminler içindir; sıcak ve kuru iklim için değil.",
+          "ses": "Plastik dağcılık botu kar ve buzun karışık olduğu zeminler içindir; sıcak ve kuru iklim için değil."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            {
+              "metin": "Yün kumaş ıslanınca yalıtım özelliğini bütünüyle yitirir.",
+              "dogru": false,
+              "aciklama": "Yün ıslansa da yalıtımını tamamen kaybetmez; pamuktan üstün yanı budur."
+            },
+            {
+              "metin": "Polipropilen, iç katmanda kullanılan sentetik bir kumaştır.",
+              "dogru": true,
+              "aciklama": "Polipropilen teri tenden uzaklaştırır ve iç katman için uygundur."
+            },
+            {
+              "metin": "Eldivende tek kat yeter; katman sistemi yalnız gövde içindir.",
+              "dogru": false,
+              "aciklama": "Eldivende de katman sistemi uygulanır."
+            },
+            {
+              "metin": "Pamuklu çorap ayağın su toplamasını önler.",
+              "dogru": false,
+              "aciklama": "Pamuklu çorap nemi tutar; ayağı yün ya da sentetik yürüyüş çorabı korur."
+            },
+            {
+              "metin": "Nemli ortamda sentetik dolgu kaz tüyünden daha avantajlıdır.",
+              "dogru": true,
+              "aciklama": "Kaz tüyü ıslanınca yalıtmaz ve geç kurur; sentetik dolgu nemde üstündür."
+            }
+          ]
+        },
+        {
+          "tur": "esle",
+          "baslik": "Kim neyi korur?",
+          "ciftler": [
+            {
+              "sol": "İç katman",
+              "sag": "Teri vücuttan uzaklaştırır"
+            },
+            {
+              "sol": "Orta katman",
+              "sag": "Isıyı yalıtır"
+            },
+            {
+              "sol": "Dış katman",
+              "sag": "Rüzgâr ve yağıştan korur"
+            },
+            {
+              "sol": "Tozluk",
+              "sag": "Paça ile bot arasını kapatır"
+            },
+            {
+              "sol": "Gözlük",
+              "sag": "UV ve kar yansımasından korur"
+            }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Katmanlı giyim sisteminde teri vücuttan uzaklaştırmak hangisinin görevidir?",
+          "secenekler": {
+            "A": "Dış katman",
+            "B": "Orta katman",
+            "C": "İç katman",
+            "D": "Tozluk",
+            "E": "Rüzgârlık"
+          },
+          "dogru": "C",
+          "cozum": "Teri vücuttan uzaklaştırmak iç katmanın görevidir; orta katman ısıyı yalıtır, dış katman rüzgâr ve yağıştan korur.",
+          "siklar": {
+            "A": "Dış katman en üstte giyilir ve rüzgâr ile yağıştan korur; tene değmediği için teri vücuttan alıp uzaklaştırmak onun işi değildir.",
+            "B": "Orta katman polar ya da kaz tüyü gibi malzemelerle ısıyı yalıtır; görevi ter taşımak değil, sıcaklığı içeride tutmaktır.",
+            "C": "İç katman tene değen ilk kattır; sentetik ya da yün kumaşıyla teri vücuttan uzaklaştırır ve cildin kuru kalmasını sağlar.",
+            "D": "Tozluk pantolon paçası ile bot arasındaki boşluğu kapatıp su girişini önler; terle değil, dışarıdan gelen su ve karla ilgilidir.",
+            "E": "Rüzgârlık dış katmanda giyilen ince bir cekettir ve rüzgârı keser; teri uzaklaştırma işi en içteki katmana aittir."
+          },
+          "ses_cozum": "Teri vücuttan uzaklaştıran iç katmandır, çünkü tene doğrudan değen kat odur. Orta katman ısıyı yalıtır, dış katman ise rüzgâr ve yağıştan korur; ikisi de terle uğraşmaz."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Polipropilen için aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "İç katmanda kullanılan sentetik bir kumaştır",
+            "B": "Orta katmanda kullanılan bir dolgu türüdür",
+            "C": "Islanınca geç kuruyan doğal bir liftir",
+            "D": "Dış katmanda kullanılan su geçirmez kabuktur",
+            "E": "Paça ile bot arasını kapatan parçadır"
+          },
+          "dogru": "A",
+          "cozum": "Polipropilen iç katmanda kullanılan sentetik bir kumaştır; pamuğun aksine teri dışarı atar.",
+          "siklar": {
+            "A": "Polipropilen teri tenden alıp dışarı taşıyan sentetik bir kumaştır; bu özelliğiyle iç katman için uygundur.",
+            "B": "Orta katmanın dolgusu kaz tüyü ya da sentetik dolgudur ve ısıyı yalıtır; polipropilen ise tene değen içliğin kumaşıdır.",
+            "C": "Islanınca geç kuruyan ve üşüten doğal lif pamuktur; polipropilen sentetiktir ve teri dışarı atabildiği için tercih edilir.",
+            "D": "Dış katman rüzgâr ve yağıştan koruyan kabuk ceket ya da rüzgârlıktır; polipropilen en içte, teri uzaklaştırmak için giyilir.",
+            "E": "Paça ile bot arasındaki boşluğu kapatan parça tozluktur; polipropilen bir kumaş türüdür, ayrı bir koruyucu parça değildir."
+          },
+          "ses_cozum": "Polipropilen iç katman için uygun sentetik bir kumaştır ve teri tenden uzaklaştırır. Islanınca geç kuruyan ve üşüten kumaş pamuktur; ısıyı yalıtan dolgu ise orta katmanda durur."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Tozluk hangi amaçla kullanılır?",
+          "secenekler": {
+            "A": "Sıcak havada başı güneşten korumak",
+            "B": "Soğukta ellerden ısı kaybını önlemek",
+            "C": "Teri vücuttan uzaklaştırıp cildi kuru tutmak",
+            "D": "Karda oluşan yansımayı azaltıp gözü korumak",
+            "E": "Paça ile bot arasından su girişini önlemek"
+          },
+          "dogru": "E",
+          "cozum": "Tozluk, pantolon paçası ile bot arasındaki boşluğu kapatarak su ve kar girişini önler.",
+          "siklar": {
+            "A": "Sıcak havada başı güneşten koruyan şapkadır; tozluk başla değil, bacağın alt kısmı ve botla ilgili bir koruyucudur.",
+            "B": "Soğukta ellerden ısı kaybını eldiven önler ve eldivende de katman sistemi uygulanır; tozluk ele değil bota takılır.",
+            "C": "Teri vücuttan uzaklaştırmak iç katmanın görevidir; tozluk dışarıdan gelen suya karşı kullanılan ayrı bir parçadır.",
+            "D": "Karda oluşan yansımayı azaltan ve gözü UV ışınından koruyan gözlüktür; tozluğun gözle bir ilgisi yoktur.",
+            "E": "Tozluk pantolon paçası ile bot arasındaki boşluğu kapatır; böylece ıslak otta ya da karda botun içine su girmez."
+          },
+          "ses_cozum": "Tozluk, pantolon paçası ile bot arasındaki boşluğu kapatır ve içeri su ya da kar girmesini önler. Başı şapka, eli eldiven, gözü gözlük korur; tozluğun yeri bileğin çevresidir."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Aşağıdaki katman dizilimlerinden hangisi doğru kurulmuştur?",
+          "secenekler": {
+            "A": "İç: pamuklu – Orta: polar – Dış: rüzgârlık",
+            "B": "İç: sentetik – Orta: polar – Dış: su geçirmez kat",
+            "C": "İç: kaz tüyü – Orta: pamuklu – Dış: polar",
+            "D": "İç: pamuklu – Orta: kaz tüyü – Dış: yok",
+            "E": "İç: rüzgârlık – Orta: yün – Dış: pamuklu"
+          },
+          "dogru": "B",
+          "cozum": "Doğru dizilimde içlik sentetik ya da yündür, orta kat ısıyı yalıtır, dış kat rüzgâr ve yağıştan korur; pamuklu içlik dizilimi bozar.",
+          "siklar": {
+            "A": "Orta ve dış kat yerinde olsa da içlik pamukludur; pamuk teri tutar, geç kurur ve üşütür, bu yüzden dizilim baştan bozuktur.",
+            "B": "Sentetik içlik teri uzaklaştırır, polar ısıyı yalıtır, su geçirmez kat rüzgâr ve yağıştan korur; üç katman da kendi görevindedir.",
+            "C": "Kaz tüyü ısı yalıtan bir orta katman dolgusudur, tene giyilmez; pamuklu orta kat da nemi tutar, polar ise dış koruma sağlamaz.",
+            "D": "Pamuklu içlik ile kaz tüyü ıslanınca yalıtımını en çok kaybeden ikilidir; üstelik dış katman olmadığı için yağış doğrudan ulaşır.",
+            "E": "Rüzgârlık dış katmandır, tene giyilirse teri uzaklaştıramaz; en dışta pamuklu giysi ise yağışta ıslanır ve geç kurur."
+          },
+          "ses_cozum": "Doğru dizilim sentetik içlik, polar orta kat ve su geçirmez dış kattır. İçliği pamuklu olan dizilim, üstüne polar ve rüzgârlık giyilse bile yanlıştır, çünkü pamuk teri tutar."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Nemli ve yağışlı bir rotada orta katmanda kaz tüyü yerine sentetik dolgu seçilmesinin nedeni hangisidir?",
+          "secenekler": {
+            "A": "Sentetik dolgunun teri tenden uzaklaştırması",
+            "B": "Kaz tüyünün rüzgârı hiç kesmemesi",
+            "C": "Sentetik dolgunun güneş ışınlarını yansıtması",
+            "D": "Kaz tüyünün ıslanınca yalıtmaması ve geç kuruması",
+            "E": "Kaz tüyünün ıslanınca daha çok hava hapsetmesi"
+          },
+          "dogru": "D",
+          "cozum": "Kaz tüyü ıslanınca yalıtmaz ve geç kurur; sentetik dolgu nemli ortamlarda kaz tüyünden daha avantajlıdır.",
+          "siklar": {
+            "A": "Teri tenden uzaklaştırmak iç katmanın işidir; dolgu orta katmandadır ve ısıyı yalıtır, seçim nedeni ter taşıma değildir.",
+            "B": "Rüzgârı kesmek zaten dış katmanın görevidir; iki dolgu arasındaki fark rüzgârda değil, ıslandıklarında ortaya çıkar.",
+            "C": "Güneş ışınlarına karşı güneş kremi, şapka ve gözlük kullanılır; dolgu malzemesinin görevi ise ısıyı yalıtmaktır.",
+            "D": "Kaz tüyü ıslandığında sıcak tutma özelliğini korumaz ve kurutma süresi uzundur; sentetik dolgu nemli ortamda bu yüzden daha avantajlıdır.",
+            "E": "Kaz tüyü ıslanınca hava tutamaz hâle gelir ve yalıtımını yitirir; yani bu ifade gerçekte olanın tam tersini söyler."
+          },
+          "ses_cozum": "Kaz tüyü ıslandığında sıcak tutmaz ve kuruması uzun sürer. Sentetik dolgu nemli ortamda bu yüzden daha avantajlıdır; ter taşımak ise dolgunun değil, tene değen içliğin işidir."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Baş, eller ve güneşle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Sıcak havada baş şapkayla korunur",
+            "B": "Vücut ısısının %50'sinden fazlası baştan kaybedilebilir",
+            "C": "Güneş kremi yüksek irtifada UV ışınlarına karşı etkisizdir",
+            "D": "Gözlük karda oluşan yansımayı azaltır",
+            "E": "Soğukta bere ve eldiven ısı kaybını önler"
+          },
+          "dogru": "C",
+          "cozum": "Güneş kremi yüksek irtifada etkisiz değildir; UV ışınlarına karşı korur. Diğer dört ifade doğrudur.",
+          "siklar": {
+            "A": "Sıcak havada başı korumak için şapka kullanılır; şapka güneş kremiyle birlikte güneş çarpmasından korunmanın da parçasıdır.",
+            "B": "Vücut ısısının yarısından fazlası baş bölgesinden kaybedilebilir; şapka ve berenin ısıyı korumada önemli olmasının nedeni budur.",
+            "C": "Güneş kremi yüksek irtifada da işe yarar ve güneş yanığından korur; yükseldikçe güneş ışınları güçlendiği için daha da gereklidir.",
+            "D": "Gözlük gözleri UV ışınından korur ve karda oluşan yansımayı azaltır; karlı arazide bu yüzden mutlaka takılır.",
+            "E": "Soğuk havada ısı kaybını önlemek için bere ve eldiven takılır; eldivende ayrıca katman sistemi de uygulanır."
+          },
+          "ses_cozum": "Yanlış olan, güneş kreminin yüksekte işe yaramadığı ifadesidir. Güneş kremi yüksek irtifada da yanıktan korur; şapka, bere, eldiven ve gözlükle ilgili öteki bilgilerin hepsi doğrudur."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Pamuklu içlik + rüzgârlık yok + ağır sırt çantası üçlüsü yüksek irtifada en çok hangi riski artırır?",
+          "secenekler": {
+            "A": "Terledikten sonra hızla soğuma",
+            "B": "Güneş yanığı ve cilt soyulması",
+            "C": "Kar yansımasına bağlı göz hasarı",
+            "D": "Ayakta su toplaması",
+            "E": "Botun içine kar girmesi"
+          },
+          "dogru": "A",
+          "cozum": "Ağır çanta terletir, pamuklu içlik ıslak kalır, rüzgârlık olmayınca rüzgâr soğutur: sonuç terledikten sonra hızla soğumadır.",
+          "siklar": {
+            "A": "Ağır çanta terletir, pamuklu içlik teri tutup ıslak kalır, rüzgârlık olmayınca rüzgâr ıslak giysiyi soğutur; üçü birlikte hızlı soğumaya yol açar.",
+            "B": "Güneş yanığı korumasız cildin güneş ışınlarına açık kalmasıyla oluşur; önlemi güneş kremi ve şapkadır, bu üçlüyle ilgisi yoktur.",
+            "C": "Kar yansımasından gözü gözlük korur; içlik, rüzgârlık ve çanta ağırlığı göze gelen ışığı değiştirmez.",
+            "D": "Ayakta su toplaması çorap seçimiyle ilgilidir; pamuklu çorap bunu önlemez, yün ya da sentetik yürüyüş çorabı ayağı korur.",
+            "E": "Botun içine kar ve su girmesini paça ile bot arasını kapatan tozluk önler; üçlüdeki hiçbir öge bununla ilgili değildir."
+          },
+          "ses_cozum": "Bu üçlü terledikten sonra hızla soğuma riskini en çok artırır. Ağır çanta seni terletir, pamuklu içlik teri tutar, rüzgârlık olmayınca da rüzgâr ıslak giysiyi soğutur."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Aşağıdakilerden hangisi pamuk ile kaz tüyünün ortak zayıflığıdır?",
+          "secenekler": {
+            "A": "Rüzgârı hiç kesmemeleri",
+            "B": "Islanınca sıcak tutmamaları ve geç kurumaları",
+            "C": "Teri çok hızlı dışarı atmaları",
+            "D": "Kuruyken de ısıyı yalıtmamaları",
+            "E": "Yalnız dış katmanda kullanılabilmeleri"
+          },
+          "dogru": "B",
+          "cozum": "İkisi de ıslanınca sıcak tutmaz ve geç kurur; ıslanınca yalıtımını en çok kaybeden ikili pamuklu içlik + kaz tüyü monttur.",
+          "siklar": {
+            "A": "Rüzgârı kesmek dış katmanın görevidir; pamuk ve kaz tüyünü birlikte kötü ikili yapan özellik rüzgâr değil, sudur.",
+            "B": "Pamuk ıslanınca geç kurur ve üşütür, kaz tüyü ıslanınca yalıtmaz ve geç kurur; pamuklu içlik ile kaz tüyü mont bu yüzden en kötü ikilidir.",
+            "C": "Teri dışarı atabilen kumaşlar sentetik ve yün karışımlı olanlardır; pamuk tersine teri içinde tutar, kaz tüyü ise bir dolgudur.",
+            "D": "Kaz tüyü kuruyken çok sıcak tutar ve orta katman için uygundur; sorun ancak ıslandığında başlar.",
+            "E": "Kaz tüyü ısıyı yalıtan orta katmanda kullanılır; ikisi de ıslanmaya dayanamadığı için yağışa açık dış katmanda işe yaramaz."
+          },
+          "ses_cozum": "Pamuk da kaz tüyü de ıslanınca sıcak tutmaz ve geç kurur. Bu yüzden pamuklu içlik ile kaz tüyü mont, ıslanınca yalıtımını en çok kaybeden ikilidir."
+        }
+      ]
+    },
+    {
+      "id": "4b",
+      "baslik": "Sırt çantası, kamp ve teknik malzeme",
+      "ozet": "Ağır eşyayı sırta yakın koy, yükü kalçaya bindir; malzemeyi kişisel, kamp ve teknik diye ayır.",
+      "gorsel": "canta.svg",
+      "gorsel_alt": "Sırt çantasının kesiti: ağır eşya sırta yakın, hafif eşya dışta, sıvı en altta, yağmurluk ve ilk yardım üstte.",
+      "ek_gorseller": [
+        {
+          "dosya": "on-temel-malzeme.svg",
+          "alt": "On temel malzemenin simgeleri: harita ve pusula, kafa lambası, güneş koruması, ilk yardım çantası, çakı, ateş, termal battaniye, yiyecek, su ve giysi."
+        }
+      ],
+      "bolumler": [
+        {
+          "baslik": "Çantayı yerleştir: ağır sırta, hafif dışa",
+          "ekran": "Çantada her eşyanın yeri ağırlığına ve ne sıklıkla gerektiğine göre belirlenir.\n\n- **Ağır eşyalar:** Sırta yakın yerleştirilir.\n- **Hafif eşyalar:** Dışa doğru yerleştirilir; hafifleri alta koymak kural değildir.\n- **Sıvı maddeler (benzin gibi):** En alt kısma konur.\n- **Yağmurluk ve ilk yardım malzemeleri:** Kolay ulaşılabilecek üst kısımda durur.\n\n> [!IMPORTANT] Yağmurluk çantanın içine gömülmez; yağmur başlayınca tek hamlede çıkmalıdır.",
+          "ses": [
+            "Çantayı doldururken her eşya için tek soru sor: bu ağır mı, hafif mi?",
+            "Ağır eşyalar sırta yakın yerleştirilir; yük sırtına yaklaştıkça dengen bozulmaz.",
+            "Hafif eşyalar ise dışa doğru gider.",
+            "Hafifleri alta koymak diye bir kural yoktur; ölçü sırta yakınlıktır.",
+            "Benzin gibi sıvı maddeler en alt kısma konur; sızarsa öteki eşyalarına bulaşmasın.",
+            "Yağmurluk ve ilk yardım malzemeleri kolay ulaşılabilecek üst kısımda durur.",
+            "Yağmurluğu çantanın dibine gömersen, onu bulana kadar çoktan ıslanırsın."
+          ]
+        },
+        {
+          "baslik": "Çanta sana uymalı: bel kemeri ve sırt sistemi",
+          "ekran": "Doğru çanta yükü omuza değil kalçaya taşıtır.\n\n- **Bel kemeri:** Ağırlığın büyük kısmını kalçaya aktarır; uygun çantanın vazgeçilmez özelliğidir.\n- **Uyum bozuksa:** Bel kemeri leğen kemiği üzerine oturmaz.\n- **Ayarlanabilir sırt sistemi:** Farklı boylardaki kullanıcılara göre uyarlanır.\n- **Aşırı yüklenmiş ana sırt çantası:** Diz eklemine en çok ek yükü bindirir.\n- **Su torbası (hydration pack):** Çantaya entegre; denge ve güvenlik için en uygun su taşıma yolu.",
+          "ses": [
+            "İyi bir çantada yükü omuzların değil kalçan taşır.",
+            "Bel kemeri ağırlığın büyük kısmını kalçaya aktarır; bu yüzden uygun bir çantanın vazgeçilmez özelliğidir.",
+            "Kemer leğen kemiğinin üzerine oturmuyorsa çantanın boyu bedenine uymuyor demektir.",
+            "Ayarlanabilir sırt sistemli çantalar farklı boylardaki kullanıcılara göre uyarlanabilir.",
+            "Ağırlık dağılımı kötü planlanmış, aşırı yüklü bir ana sırt çantası en çok dizlerine yük bindirir.",
+            "Suyu elde şişeyle ya da boyna asılı matarayla değil, çantaya yerleşik su torbasıyla taşı.",
+            "Böylece ellerin boş, dengen yerinde kalır."
+          ]
+        },
+        {
+          "baslik": "Üç sınıf malzeme: kişisel, kamp, teknik",
+          "ekran": "Malzemeler kimin için ve ne için taşındığına göre üç sınıfa ayrılır.\n\n- **Kişisel malzeme:** Uyku tulumu, giysi; herkes kendisininkini taşır.\n- **Kamp malzemesi:** Çadır, ocak, mat, tencere; teknik malzeme değildir.\n- **Teknik malzeme:** İp, kazma, emniyet kemeri, baton.\n\n> [!IMPORTANT] Uyku tulumu kritik kişisel malzemedir; çadır ve kamp ocağı kişisel sayılmaz.",
+          "ses": [
+            "Malzemeleri üç sınıfta düşün: kişisel, kamp ve teknik.",
+            "Kişisel malzeme yalnız senin kullandığındır; uyku tulumun ve giysilerin bu sınıftadır.",
+            "Uyku tulumu kritik kişisel malzemedir, çünkü gece vücut ısını koruyan odur.",
+            "Çadır, ocak, mat ve tencere kamp malzemesidir; bunlar teknik malzeme grubuna girmez.",
+            "Teknik malzeme tırmanış ve emniyet içindir: ip, kazma, emniyet kemeri ve baton.",
+            "Çadırı teknik sanma; teknik sözcüğü burada emniyet ve ilerleme araçlarını anlatır."
+          ]
+        },
+        {
+          "baslik": "Teknik malzeme: baton, ip, kazma, emniyet kemeri",
+          "ekran": "Her teknik malzemenin belli bir işi vardır; başka işte kullanılmaz.\n\n- **Baton:** Alt uçlarındaki tungsten pimler değiştirilebilir.\n- **Yarım ip:** Dağ yürüyüşlerinde güvenlik amacıyla tercih edilir.\n- **Klasik kazma:** Yürüyüş, kar emniyeti ve kayışı durdurma (self arrest) içindir.\n- **Teknik buz kazması:** Dik buz duvarında tırmanış içindir.\n- **Tam vücut (full body) emniyet kemeri:** Ağırlığı tüm vücuda dengeli dağıtır.\n\n> [!NOTE] İp ve emniyet malzemesi kuru ve gölgede saklanır.",
+          "ses": [
+            "Batonların alt uçlarında tungsten pimler bulunur ve bu pimler değiştirilebilir.",
+            "Yarım ip, dağ yürüyüşlerinde güvenlik amacıyla tercih edilir.",
+            "Klasik kazma yürüyüş kazmasıdır; kar emniyetinde ve kayarken kendini durdurmada kullanılır.",
+            "Dik buz duvarında tırmanış ise klasik kazmanın değil, teknik buz kazmasının işidir.",
+            "Tam vücut emniyet kemeri ağırlığı tüm vücuda dengeli dağıtır.",
+            "İpleri ve emniyet malzemesini güneşte bırakma, ıslak hâlde sıkıştırma, ateş yanında kurutma.",
+            "Onları kuru ve gölgede sakla; hayatını bu malzemeye emanet ediyorsun."
+          ]
+        },
+        {
+          "baslik": "Aydınlatma, bıçak ve çakı",
+          "ekran": "Karanlıkta güvenliğin ışığına, ışığın da yedeğine bağlıdır.\n\n- **Fener:** Amacı gece görüşü sağlamaktır; en güvenlisi pilli ya da şarjlı olandır.\n- **En dengeli çözüm:** Kafa lambası + yedek pilli el feneri.\n- **Yedek:** Yedek pil ya da powerbank bulundurulur.\n- **Gece yürüyüşü:** Işık yere, adım önüne tutulur.\n- **Bıçak, çakı:** Dikkatli kullanılır.\n\n> [!IMPORTANT] Fener gece el altında durur; mumla aydınlanmak yangın riskidir.",
+          "ses": [
+            "Fenerin temel amacı gece görüşü sağlamaktır ve en güvenlisi pilli ya da şarjlı olanıdır.",
+            "Gece kamp güvenliği için en dengeli çözüm kafa lambası ile yedek pilli bir el feneridir.",
+            "Kafa lambası ellerini boş bırakır; gece yürüyüşünde en uygun aydınlatma odur.",
+            "Işığı gökyüzüne ya da arkandaki kişiye değil, yere, adımının önüne tut.",
+            "Pil biter, şarj tükenir; bu yüzden yedek pil ya da pavırbenk çantada olsun.",
+            "Feneri gece el altında tutarsan muma ya da aleve gerek kalmaz, yangın riski azalır.",
+            "Bıçak ve çakı gibi aletleri de dikkatli kullan; küçük bir kesik yürüyüşü bitirebilir."
+          ]
+        },
+        {
+          "baslik": "On temel malzeme",
+          "ekran": "Günübirlik yürüyüşte bile çantada bulunması gereken on temel malzeme vardır.\n\n- **Yön ve aydınlatma:** Harita + pusula; kafa lambası + yedek pil.\n- **Korunma:** Şapka, gözlük, güneş kremi; ilk yardım çantası.\n- **Alet ve ateş:** Bıçak ya da çakı; çakmak, kibrit.\n- **Acil barınak:** Termal battaniye.\n- **Fazladan üçlü:** Yiyecek, su, giysi.\n\n> [!NOTE] Hepsinin arkasında tek soru var: bir gece dışarıda kalırsam idare edebilir miyim?",
+          "ses": [
+            "On temel malzemenin arkasında tek bir soru var: bir gece dışarıda kalırsam idare edebilir miyim?",
+            "Harita ve pusula yolunu, kafa lambası ile yedek pili karanlığı çözer.",
+            "Şapka, gözlük ve güneş kremi seni güneşten korur; ilk yardım çantası küçük kazalar içindir.",
+            "Bıçak ya da çakı ile çakmak ve kibrit, alet ve ateş ihtiyacını karşılar.",
+            "Termal battaniye acil barınağındır.",
+            "Fazladan yiyecek, su ve giysi de planın aksadığı saatler içindir.",
+            "Su ve yiyeceği planlı kullanmak kamp güvenliğinin bir parçasıdır."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "Sırta · Dışa · Alta · Üste",
+        "acilim": "Ağır sırta · Hafif dışa · Sıvı en alta · Yağmurluk ve ilk yardım üste",
+        "not": "Çantayı yerleştirirken dört eşya grubunun yerini tek solukta hatırlatır."
+      },
+      "yap": [
+        "Ağır eşyayı sırta yakın yerleştir",
+        "Yağmurluğu ve ilk yardımı üst kısımda tut",
+        "Bel kemerini leğen kemiğinin üstüne oturt",
+        "Yedek pil ya da powerbank al",
+        "İpi kuru ve gölgede sakla"
+      ],
+      "yapma": [
+        "Ağır eşyayı sırttan uzağa koyma",
+        "Yağmurluğu çantanın dibine gömme",
+        "Çantayı aşırı yükleme; dizlerine yük biner",
+        "Klasik kazmayla dik buz duvarına girme",
+        "Tek küçük fenere güvenme"
+      ],
+      "spotlar": [
+        {
+          "metin": "Ağır eşyalar **sırta yakın**, hafif eşyalar **dışa doğru** yerleştirilir.",
+          "ses": "Çantada ağır eşyalar sırta yakın, hafif eşyalar dışa doğru yerleştirilir."
+        },
+        {
+          "metin": "Benzin gibi **sıvı maddeler** çantanın **en alt kısmına** konur.",
+          "ses": "Benzin gibi sıvı maddeler çantanın en alt kısmına konur."
+        },
+        {
+          "metin": "**Bel kemeri** ağırlığın büyük kısmını **kalçaya** aktarır.",
+          "ses": "Bel kemeri ağırlığın büyük kısmını kalçaya aktarır."
+        },
+        {
+          "metin": "Çadır, ocak ve mat **kamp malzemesidir**; teknik malzeme ip, kazma, emniyet kemeri ve batondur.",
+          "ses": "Çadır, ocak ve mat kamp malzemesidir; teknik malzeme ip, kazma, emniyet kemeri ve batondur."
+        },
+        {
+          "metin": "**Klasik kazma** kar emniyeti ve kayışı durdurma içindir; dik buz duvarı **teknik buz kazması** ister.",
+          "ses": "Klasik kazma kar emniyeti ve kayışı durdurma içindir; dik buz duvarı teknik buz kazması ister."
+        },
+        {
+          "metin": "En dengeli aydınlatma: **kafa lambası + yedek pilli el feneri**; ışık yere, adım önüne.",
+          "ses": "En dengeli aydınlatma kafa lambası ile yedek pilli el feneridir; ışığı yere, adımının önüne tut."
+        },
+        {
+          "metin": "**İp ve emniyet malzemesi** kuru ve gölgede saklanır.",
+          "ses": "İp ve emniyet malzemesi kuru ve gölgede saklanır."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            {
+              "metin": "Hafif eşyaların yeri çantanın alt kısmıdır.",
+              "dogru": false,
+              "aciklama": "Hafif eşyalar dışa doğru yerleştirilir; en alt kısım benzin gibi sıvı maddelerin yeridir."
+            },
+            {
+              "metin": "Çadır, ocak ve mat teknik malzeme sayılır.",
+              "dogru": false,
+              "aciklama": "Bunlar kamp malzemesidir; teknik malzeme ip, kazma, emniyet kemeri ve batondur."
+            },
+            {
+              "metin": "Batonun alt ucundaki tungsten pimler değiştirilebilir.",
+              "dogru": true,
+              "aciklama": "Pimler değiştirilebilir özelliktedir."
+            },
+            {
+              "metin": "Klasik kazma dik buz duvarında teknik tırmanış için kullanılır.",
+              "dogru": false,
+              "aciklama": "Klasik kazma yürüyüş, kar emniyeti ve kayışı durdurma içindir; dik buz teknik buz kazması ister."
+            },
+            {
+              "metin": "Ayarlanabilir sırt sistemli çanta farklı boylara uyarlanabilir.",
+              "dogru": true,
+              "aciklama": "Sırt sistemi kullanıcının boyuna göre ayarlanır; bel kemeri böylece leğen kemiğine oturur."
+            }
+          ]
+        },
+        {
+          "tur": "esle",
+          "baslik": "Hangi malzeme ne işe yarar?",
+          "ciftler": [
+            {
+              "sol": "Bel kemeri",
+              "sag": "Yükü kalçaya aktarır"
+            },
+            {
+              "sol": "Yarım ip",
+              "sag": "Dağ yürüyüşünde güvenlik"
+            },
+            {
+              "sol": "Klasik kazma",
+              "sag": "Kar emniyeti, kayışı durdurma"
+            },
+            {
+              "sol": "Tam vücut emniyet kemeri",
+              "sag": "Ağırlığı tüm vücuda dağıtır"
+            },
+            {
+              "sol": "Su torbası",
+              "sag": "Dengeli su taşıma"
+            }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Sırt çantasında benzin gibi sıvı maddeler nereye yerleştirilir?",
+          "secenekler": {
+            "A": "Sırta yakın orta kısma",
+            "B": "Çantanın en alt kısmına",
+            "C": "Kolay ulaşılan üst kısma",
+            "D": "Üst kapağın cebine",
+            "E": "Dışarıya asılarak"
+          },
+          "dogru": "B",
+          "cozum": "Benzin gibi sıvı maddeler çantanın en alt kısmına yerleştirilir; ağır eşyalar sırta yakın, yağmurluk ve ilk yardım üst kısımda durur.",
+          "siklar": {
+            "A": "Sırta yakın kısım ağır eşyaların yeridir; yük sırta yaklaştıkça denge korunur, ama sıvı maddeler için ayrı bir kural vardır.",
+            "B": "Benzin gibi sıvı maddeler en alt kısma konur; böylece sızsa bile çantadaki giysi ve yiyeceğe bulaşmaz.",
+            "C": "Kolay ulaşılan üst kısım yağmurluk ve ilk yardım malzemeleri içindir; yakıt oraya konursa sızıntı bütün çantaya yayılır.",
+            "D": "Üst kapak sık gereken küçük eşyalar için kullanışlıdır; yakıt gibi sıvılar burada durursa sızıntı aşağıdaki her şeye iner.",
+            "E": "Dışarıya asılan eşya sallanır ve dengeyi bozar; sıvı maddeler çantanın içinde, en alt kısımda taşınır."
+          },
+          "ses_cozum": "Benzin gibi sıvı maddeler çantanın en alt kısmına konur. Sırta yakın kısım ağır eşyaların, kolay ulaşılan üst kısım ise yağmurluk ve ilk yardım malzemelerinin yeridir."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Sırt çantasında ağırlığın büyük kısmını kalçaya aktaran parça hangisidir?",
+          "secenekler": {
+            "A": "Omuz askısı",
+            "B": "Göğüs kayışı",
+            "C": "Üst kapak",
+            "D": "Bel kemeri",
+            "E": "Su torbası"
+          },
+          "dogru": "D",
+          "cozum": "Bel kemeri ağırlığın büyük kısmını kalçaya aktarır; bu yüzden uygun bir kamp çantasının vazgeçilmez özelliğidir.",
+          "siklar": {
+            "A": "Omuz askıları çantayı sırtta tutar; ancak yükün büyük kısmı omuzda kalırsa çabuk yorulursun, asıl taşıyıcı kalça olmalıdır.",
+            "B": "Göğüs kayışı omuz askılarını birbirine bağlayıp yerinde tutar; yük taşımaz ve ağırlığı kalçaya aktarmaz.",
+            "C": "Üst kapak sık kullanılan küçük eşyaların konduğu bölmedir; ağırlık aktarımıyla ilgisi olmayan bir saklama yeridir.",
+            "D": "Bel kemeri ağırlığın büyük kısmını kalçaya aktarır ve uygun bir çantanın vazgeçilmez özelliğidir; leğen kemiği üzerine oturmalıdır.",
+            "E": "Su torbası çantaya entegre su taşıma düzenidir; dengeli taşıma sağlar ama yükü kalçaya aktaran bir parça değildir."
+          },
+          "ses_cozum": "Ağırlığın büyük kısmını kalçaya aktaran parça bel kemeridir ve leğen kemiğinin üzerine oturmalıdır. Omuz askıları çantayı sırtta tutar, ama yükü asıl taşıması gereken yer kalçadır."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Çantada yağmurluk ile ilk yardım malzemelerinin ortak yeri neresidir?",
+          "secenekler": {
+            "A": "Kolay ulaşılabilecek üst kısım",
+            "B": "Çantanın en alt kısmı",
+            "C": "Sırta en yakın, orta bölümün dibi",
+            "D": "Uyku tulumunun içi",
+            "E": "Çadır torbasının içi"
+          },
+          "dogru": "A",
+          "cozum": "Yağmurluk ve ilk yardım malzemeleri kolay ulaşılabilecek üst kısımda taşınır; yağmurluk çantanın içine gömülmez.",
+          "siklar": {
+            "A": "Yağmurluk ve ilk yardım malzemeleri aniden gerekir; bu yüzden çantayı boşaltmadan alınabilecek üst kısımda taşınır.",
+            "B": "En alt kısım benzin gibi sıvı maddelerin yeridir; yağmurluk oraya gömülürse çıkarana kadar ıslanırsın.",
+            "C": "Sırta yakın bölüm ağır eşyalar içindir; acil gereken malzeme oraya konursa üstündekileri boşaltmadan ulaşılamaz.",
+            "D": "Uyku tulumu kuru kalması gereken kişisel malzemedir; içine başka eşya saklanmaz, hele ıslanabilecek yağmurluk hiç konmaz.",
+            "E": "Çadır kamp malzemesidir ve ancak kamp yerinde açılır; yolda gereken yağmurluk ve ilk yardım onun torbasında taşınmaz."
+          },
+          "ses_cozum": "Yağmurluk ve ilk yardım malzemeleri kolay ulaşılabilecek üst kısımda durur, çünkü aniden gerekirler. En alt kısım sıvı maddelerin, sırta yakın bölüm ise ağır eşyaların yeridir."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Bel kemeri leğen kemiği üzerine oturmayan bir çanta için en doğru yorum hangisidir?",
+          "secenekler": {
+            "A": "Çanta aşırı yüklenmiştir",
+            "B": "Ağır eşyalar dışa doğru konmuştur",
+            "C": "Su torbası boşalmıştır",
+            "D": "Sıvı maddeler üst kısma konmuştur",
+            "E": "Çantanın boy–beden uyumu bozuktur"
+          },
+          "dogru": "E",
+          "cozum": "Bel kemeri leğen kemiği üzerine oturmuyorsa çantanın boy–beden uyumu bozuktur; kemer yükü kalçaya aktaramaz.",
+          "siklar": {
+            "A": "Aşırı yük diz eklemine ek yük bindirir, ama kemerin nereye oturduğunu belirlemez; kemerin yeri çantanın boyuyla ilgilidir.",
+            "B": "Ağır eşyanın dışa konması dengeyi bozan bir yerleştirme hatasıdır; kemerin leğen kemiğine oturmamasını açıklamaz.",
+            "C": "Su torbası çantaya entegre su taşıma düzenidir; dolu ya da boş olması kemerin vücuttaki yerini değiştirmez.",
+            "D": "Sıvı maddelerin yeri en alt kısımdır ve üste konmaları hatadır; ancak bu hata kemerin oturuşunu etkilemez.",
+            "E": "Bel kemerinin leğen kemiği üzerine oturmaması, çantanın boyunun kullanıcıya uymadığını gösterir; ayarlanabilir sırt sistemi bu uyumu sağlar."
+          },
+          "ses_cozum": "Kemer leğen kemiğinin üzerine oturmuyorsa çantanın boyu bedene uymuyor demektir. Aşırı yük ya da yanlış yerleştirme başka sorunlar yaratır, ama kemerin vücutta oturduğu yeri değiştirmez."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Dik bir buz duvarında tırmanış için aşağıdaki araçlardan hangisi kullanılır?",
+          "secenekler": {
+            "A": "Klasik kazma",
+            "B": "Tungsten pimli baton",
+            "C": "Teknik buz kazması",
+            "D": "Çadır kazığı",
+            "E": "Çakı"
+          },
+          "dogru": "C",
+          "cozum": "Dik buz duvarında teknik buz kazması kullanılır; klasik kazma yürüyüş, kar emniyeti ve kayışı durdurma içindir.",
+          "siklar": {
+            "A": "Klasik kazma yürüyüş, kar emniyeti ve kayışı durdurma için uygundur; dik buz duvarında teknik tırmanış için yapılmamıştır.",
+            "B": "Baton yürüyüşte denge ve destek sağlar, alt ucundaki tungsten pimler değiştirilebilir; dik buzda tutunma aracı değildir.",
+            "C": "Teknik buz kazması dik buz duvarında tırmanış için tasarlanmıştır; klasik kazmanın yetmediği yerde kullanılan teknik malzemedir.",
+            "D": "Çadır kazığı çadırı zemine sabitleyen kamp malzemesidir; tırmanışta kullanılan teknik malzemeler arasında yer almaz.",
+            "E": "Çakı dikkatli kullanılması gereken küçük bir kesici alettir; buzda tutunmak ya da tırmanmak için kullanılmaz."
+          },
+          "ses_cozum": "Dik buz duvarında teknik buz kazması kullanılır. Klasik kazma ise yürüyüşte, kar emniyetinde ve kayışı durdurmada işe yarar; dik buz duvarı onun işi hiç değildir."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Aşağıdaki aydınlatma uygulamalarından hangisi doğrudur?",
+          "secenekler": {
+            "A": "Gece yürüyüşünde ışığı yere, adım önüne tutmak",
+            "B": "Hafif olsun diye yalnızca tek küçük fener almak",
+            "C": "Çadırın içini mumla aydınlatmak",
+            "D": "Tüm ışıkları tek pile bağımlı kılmak",
+            "E": "Feneri gece çantanın dibinde tutmak"
+          },
+          "dogru": "A",
+          "cozum": "Gece yürüyüşünde ışık yere, adım önüne tutulur; tek fener, tek pil ve mum güvenli değildir.",
+          "siklar": {
+            "A": "Gece yürüyüşünde ışık yere, adımın önüne tutulur; böylece bastığın yeri görürsün ve arkadaşının gözünü almazsın.",
+            "B": "Tek küçük fener bozulur ya da pili biterse karanlıkta kalırsın; dengeli çözüm kafa lambası ile yedek pilli el feneridir.",
+            "C": "Mum açık alevdir ve çadırda yangın riski yaratır; en güvenli aydınlatma pilli ya da şarjlı fenerdir.",
+            "D": "Bütün ışıklar tek pile bağlıysa o pil bitince hepsi söner; bu yüzden yedek pil ya da powerbank bulundurulur.",
+            "E": "Fener gece el altında durmalıdır; çantanın dibindeyse karanlıkta bulunamaz ve insanı mum ya da aleve yöneltir."
+          },
+          "ses_cozum": "Gece yürüyüşünde ışık yere, adımının önüne tutulur. Tek küçük fenere ya da tek pile güvenmek seni karanlıkta bırakabilir; çadırın içinde mum yakmak ise yangın riskidir."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki çanta yerleşimlerinden hangisi tümüyle doğrudur?",
+          "secenekler": {
+            "A": "Ağır eşya dışta + benzin üstte + yağmurluk altta",
+            "B": "Ağır eşya sırta yakın + benzin üstte + yağmurluk altta",
+            "C": "Ağır eşya üst kapakta + ilk yardım altta + benzin ortada",
+            "D": "Ağır eşya sırta yakın + benzin en altta + yağmurluk üstte",
+            "E": "Hafif eşya sırta yakın + ağır eşya dışta + ilk yardım üstte"
+          },
+          "dogru": "D",
+          "cozum": "Ağır eşya sırta yakın, hafif eşya dışa doğru, sıvı maddeler en alt kısma, yağmurluk ve ilk yardım kolay ulaşılan üst kısma konur.",
+          "siklar": {
+            "A": "Üç öge de yanlış yerdedir: ağır eşya sırta yakın, benzin en altta, yağmurluk ise kolay ulaşılan üst kısımda olmalıdır.",
+            "B": "Ağır eşyanın yeri doğrudur, ancak benzin gibi sıvılar en alta konur ve yağmurluk çantanın dibine gömülmez.",
+            "C": "Ağır eşya üst kapakta dengeyi bozar; ilk yardım kolay ulaşılan üst kısımda, benzin ise en alt kısımda taşınır.",
+            "D": "Ağır eşya sırta yakın olunca denge korunur, sıvı madde en altta durur, yağmurluk üst kısımdan tek hamlede çıkar; üçü de kurala uygundur.",
+            "E": "İlk yardımın yeri doğrudur, ama ağır ile hafif yer değiştirmiştir: ağır eşya sırta yakın, hafif eşya dışa doğru konur."
+          },
+          "ses_cozum": "Doğru yerleşimde ağır eşya sırta yakın, benzin en altta, yağmurluk üsttedir. Ağır eşyayı dışa ya da üst kapağa koymak dengeyi bozar; yağmurluğu alta gömmek de seni ıslatır."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki malzeme–sınıf eşleştirmelerinden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Uyku tulumu – kişisel malzeme",
+            "B": "Çadır – kamp malzemesi",
+            "C": "Mat – teknik malzeme",
+            "D": "Baton – teknik malzeme",
+            "E": "Kamp ocağı – kamp malzemesi"
+          },
+          "dogru": "C",
+          "cozum": "Çadır, ocak ve mat teknik malzeme grubuna girmez; teknik malzeme ip, kazma, emniyet kemeri ve batondur.",
+          "siklar": {
+            "A": "Uyku tulumu, giysi gibi herkesin kendisi için taşıdığı kritik kişisel malzemedir; bu eşleştirme doğru kurulmuştur.",
+            "B": "Çadır bütün ekibin barındığı kamp malzemesidir; teknik malzeme ya da kişisel malzeme sayılmaz, eşleştirme doğrudur.",
+            "C": "Mat, çadır ve ocak gibi kamp malzemesidir; teknik malzeme grubu ip, kazma, emniyet kemeri ve batondan oluşur.",
+            "D": "Baton, ip, kazma ve emniyet kemeriyle birlikte teknik malzeme grubundadır; alt ucundaki tungsten pimler değiştirilebilir.",
+            "E": "Kamp ocağı çadır, mat ve tencereyle aynı sınıftadır; kamp malzemesidir, eşleştirmede bir hata yoktur."
+          },
+          "ses_cozum": "Mat teknik malzeme değildir; çadır ve ocak gibi kamp malzemesidir. Teknik malzeme ip, kazma, emniyet kemeri ve batondur; uyku tulumu ise kritik bir kişisel malzemedir."
+        }
+      ]
+    }
+  ]
+}

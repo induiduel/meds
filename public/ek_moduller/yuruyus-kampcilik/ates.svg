@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Ateş üçgeni: ısı, yakıt, oksijen. Kurulumlar: çadır çabuk tutuşur, kulübe iyi köz verir ve yemek için uygundur, yıldız az odunla uzun süre yanar. Yakıt sırası: tutuşturucu, çıra, odun">
+  <rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+  <g font-family="Inter, 'Liberation Sans', Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- ateş üçgeni -->
+    <polygon points="170,70 58,258 282,258" fill="#FFFFFF" stroke="#2F5D50" stroke-width="10"/>
+    <g transform="translate(170,196) scale(1.5)">
+      <path d="M0,-30 C10,-16 22,-8 22,8 C22,22 12,30 0,30 C-12,30 -22,22 -22,8 C-22,-2 -16,-8 -12,-14 C-10,-6 -6,-4 -4,-6 C-6,-16 -4,-24 0,-30 Z" fill="#C8553D"/>
+      <path d="M0,4 C6,10 10,13 10,19 C10,26 5,30 0,30 C-5,30 -10,26 -10,19 C-10,13 -4,10 0,4 Z" fill="#F2C14E"/>
+    </g>
+    <g fill="#2F5D50" font-size="20" font-weight="700" text-anchor="middle">
+      <text x="170" y="50">ISI</text>
+      <text x="76" y="296">YAKIT</text>
+      <text x="262" y="296">OKSİJEN</text>
+    </g>
+
+    <!-- Çadır kurulumu -->
+    <g transform="translate(404,128)">
+      <path d="M-14,46 L4,-44" stroke="#1E2A2E" stroke-width="14"/><path d="M-14,46 L4,-44" stroke="#E4D8C3" stroke-width="8"/>
+      <g transform="translate(2,18) scale(0.95)">
+        <path d="M0,-30 C10,-16 22,-8 22,8 C22,22 12,30 0,30 C-12,30 -22,22 -22,8 C-22,-2 -16,-8 -12,-14 C-10,-6 -6,-4 -4,-6 C-6,-16 -4,-24 0,-30 Z" fill="#C8553D"/>
+        <path d="M0,4 C6,10 10,13 10,19 C10,26 5,30 0,30 C-5,30 -10,26 -10,19 C-10,13 -4,10 0,4 Z" fill="#F2C14E"/>
+      </g>
+      <path d="M-44,46 L6,-46" stroke="#1E2A2E" stroke-width="14"/><path d="M-44,46 L6,-46" stroke="#E4D8C3" stroke-width="8"/>
+      <path d="M44,46 L-6,-46" stroke="#1E2A2E" stroke-width="14"/><path d="M44,46 L-6,-46" stroke="#E4D8C3" stroke-width="8"/>
+    </g>
+
+    <!-- Kulübe kurulumu -->
+    <g transform="translate(553,128)">
+      <g transform="translate(0,-10) scale(1.05)">
+        <path d="M0,-30 C10,-16 22,-8 22,8 C22,22 12,30 0,30 C-12,30 -22,22 -22,8 C-22,-2 -16,-8 -12,-14 C-10,-6 -6,-4 -4,-6 C-6,-16 -4,-24 0,-30 Z" fill="#C8553D"/>
+        <path d="M0,4 C6,10 10,13 10,19 C10,26 5,30 0,30 C-5,30 -10,26 -10,19 C-10,13 -4,10 0,4 Z" fill="#F2C14E"/>
+      </g>
+      <path d="M-44,40 H44" stroke="#1E2A2E" stroke-width="16"/><path d="M-44,40 H44" stroke="#E4D8C3" stroke-width="10"/>
+      <circle cx="-34" cy="22" r="8.5" fill="#E4D8C3" stroke="#1E2A2E" stroke-width="3"/>
+      <circle cx="34" cy="22" r="8.5" fill="#E4D8C3" stroke="#1E2A2E" stroke-width="3"/>
+      <path d="M-44,4 H44" stroke="#1E2A2E" stroke-width="16"/><path d="M-44,4 H44" stroke="#E4D8C3" stroke-width="10"/>
+      <circle cx="-34" cy="-14" r="8.5" fill="#E4D8C3" stroke="#1E2A2E" stroke-width="3"/>
+      <circle cx="34" cy="-14" r="8.5" fill="#E4D8C3" stroke="#1E2A2E" stroke-width="3"/>
+    </g>
+
+    <!-- Yıldız kurulumu -->
+    <g transform="translate(702,128)">
+      <g stroke="#1E2A2E" stroke-width="14">
+        <path d="M0,-16 L0,-50"/><path d="M15,-5 L48,-16"/><path d="M9,13 L29,41"/><path d="M-9,13 L-29,41"/><path d="M-15,-5 L-48,-16"/>
+      </g>
+      <g stroke="#E4D8C3" stroke-width="8">
+        <path d="M0,-16 L0,-50"/><path d="M15,-5 L48,-16"/><path d="M9,13 L29,41"/><path d="M-9,13 L-29,41"/><path d="M-15,-5 L-48,-16"/>
+      </g>
+      <g transform="translate(0,-4) scale(0.7)">
+        <path d="M0,-30 C10,-16 22,-8 22,8 C22,22 12,30 0,30 C-12,30 -22,22 -22,8 C-22,-2 -16,-8 -12,-14 C-10,-6 -6,-4 -4,-6 C-6,-16 -4,-24 0,-30 Z" fill="#C8553D"/>
+        <path d="M0,4 C6,10 10,13 10,19 C10,26 5,30 0,30 C-5,30 -10,26 -10,19 C-10,13 -4,10 0,4 Z" fill="#F2C14E"/>
+      </g>
+    </g>
+
+    <g fill="#2F5D50" font-size="20" font-weight="700" text-anchor="middle">
+      <text x="404" y="222">Çadır</text>
+      <text x="553" y="222">Kulübe</text>
+      <text x="702" y="222">Yıldız</text>
+    </g>
+    <g fill="#1E2A2E" font-size="18" text-anchor="middle">
+      <text x="404" y="247">çabuk tutuşur</text>
+      <text x="553" y="247">iyi köz, yemek</text>
+      <text x="702" y="247">az odun,</text>
+      <text x="702" y="270">uzun süre</text>
+    </g>
+
+    <!-- yakıt şeridi -->
+    <rect x="40" y="318" width="720" height="136" rx="22" fill="#FFFFFF"/>
+    <!-- tutuşturucu -->
+    <g fill="none" stroke="#D9865B" stroke-width="3">
+      <path d="M118,396 q22,-40 46,-8"/><path d="M128,400 q28,-46 62,-10"/><path d="M122,378 q34,-26 70,14"/>
+      <path d="M140,402 q16,-34 56,-26"/><path d="M150,362 q8,24 30,38"/><path d="M134,368 q30,6 52,30"/><path d="M166,358 q-18,20 -36,40"/>
+    </g>
+    <!-- çıra -->
+    <g>
+      <path d="M358,398 L442,358" stroke="#1E2A2E" stroke-width="10"/><path d="M358,398 L442,358" stroke="#E4D8C3" stroke-width="4"/>
+      <path d="M362,362 L440,396" stroke="#1E2A2E" stroke-width="10"/><path d="M362,362 L440,396" stroke="#E4D8C3" stroke-width="4"/>
+      <path d="M368,382 L436,376" stroke="#1E2A2E" stroke-width="10"/><path d="M368,382 L436,376" stroke="#E4D8C3" stroke-width="4"/>
+    </g>
+    <!-- odun -->
+    <g>
+      <path d="M598,390 H686" stroke="#1E2A2E" stroke-width="26"/><path d="M598,390 H686" stroke="#E4D8C3" stroke-width="20"/>
+      <path d="M612,362 H676" stroke="#1E2A2E" stroke-width="26"/><path d="M612,362 H676" stroke="#E4D8C3" stroke-width="20"/>
+      <circle cx="686" cy="390" r="5" fill="none" stroke="#1E2A2E" stroke-width="3"/>
+      <circle cx="676" cy="362" r="5" fill="none" stroke="#1E2A2E" stroke-width="3"/>
+    </g>
+    <!-- oklar -->
+    <g fill="none" stroke="#1E2A2E" stroke-width="3">
+      <path d="M254,380 H306 M294,370 L306,380 L294,390"/>
+      <path d="M494,380 H546 M534,370 L546,380 L534,390"/>
+    </g>
+    <g fill="#1E2A2E" font-size="20" font-weight="700" text-anchor="middle">
+      <text x="158" y="438">Tutuşturucu</text>
+      <text x="400" y="438">Çıra</text>
+      <text x="642" y="438">Odun</text>
+    </g>
+  </g>
+</svg>

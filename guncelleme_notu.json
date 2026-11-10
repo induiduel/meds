@@ -1,18 +1,37 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 699,
-  "baslik": "Çizgi Yarışı: Eğlenceli mod",
+  "onem": 700,
+  "baslik": "Ek modüller: Yürüyüş ve Kampçılık",
   "maddeler": [
-    "Çizgi Yarışı Eğlenceli mod: pistte bonus kareler (+3 adım, yan hakkı, yeniden zar) ve tuzaklar (2 kare geri). Kareler iki oyuncu için eşit dağıtılır.",
-    "Klasik mod aynen duruyor; modu masayı kurarken seçersin."
+    "Ek modüller: Ders çalış altında, kurul derslerinin dışındaki seçmeli ve geçici dersler için yeni sayfa.",
+    "Yürüyüş ve Kampçılık: hocanın çalışma sorularına göre hazırlanan 16 konu; sesli ders, spot bilgiler ve sınav öncesi tekrar EMA sesiyle.",
+    "160 soru: konu soruları, genel tekrar ve her açılışta yenilenen 20 soruluk sınav denemesi; her sorunun çözümü sesli.",
+    "Hocanın çalışma soruları: 480 soru boşluk doldurma, doğru–yanlış ve çoktan seçmeli olarak çözülebilir.",
+    "PDF: resimli ders kitapçığı, spot bilgiler, sınav öncesi özet ve soru kitapçığı indirilebilir."
   ],
   "eklenen": [
-    "Çizgi Yarışı Eğlenceli mod"
+    "Ek modüller sayfası",
+    "Yürüyüş ve Kampçılık modülü"
   ],
   "degisen": [],
-  "duzeltilen": [
-    "Çizgi Yarışı yanlış \"tur yandı\" yazısı"
-  ],
+  "duzeltilen": [],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "Ek modüller",
+      "nerede": {
+        "ad": "Ders çalış › Ek modüller",
+        "yol": "/dersler/ek-moduller"
+      },
+      "amac": "Seçmeli ve geçici derslere kurul derslerinden ayrı, tek yerden çalışmak.",
+      "islevler": [
+        "Sesli ders: ekranda kısa not, kulakta anlatım",
+        "Spot bilgiler ve sınav öncesi tekrar",
+        "Sesli çözümlü sorular ve 20 soruluk sınav denemesi",
+        "Hocanın çalışma soruları",
+        "PDF kitapçıkları"
+      ],
+      "ipucu": "İlk modül: Yürüyüş ve Kampçılık (Kurul 2)."
+    }
+  ]
 }

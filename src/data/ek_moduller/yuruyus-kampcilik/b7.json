@@ -1,0 +1,751 @@
+{
+  "no": 7,
+  "baslik": "Yön Bulma",
+  "ozet": "Pusulayla, haritayla ve gökyüzüyle yön bulmak; jeolog pusulasıyla tabakanın doğrultusunu ve eğimini ölçmek.",
+  "konular": [
+    {
+      "id": "7a",
+      "baslik": "Doğada yön bulma, harita ve pusula",
+      "ozet": "Pusulanın çalışması, ibreyi şaşırtanlar, deklinasyon, kestirme yöntemleri ve pusulasız yön bulma.",
+      "gorsel": "yon-bulma.svg",
+      "gorsel_alt": "Kırmızı uçlu ibresiyle pusula kadranı ve çevresinde gölge çubuğu, kol saati, Kutup Yıldızı ile yön bulma yolları.",
+      "ek_gorseller": [
+        {
+          "dosya": "esyukselti.svg",
+          "alt": "Eşyükselti (izohips) eğrileriyle çizilmiş bir tepe; sık eğriler dik yamacı, seyrek eğriler yatık araziyi gösterir."
+        }
+      ],
+      "bolumler": [
+        {
+          "baslik": "Pusula: ibre ve dört harf",
+          "ekran": "Pusula, **yerkürenin manyetik** özelliğine dayanarak yön belirlemeye yarayan alettir.\n\n- **İbre:** Dünya'nın manyetik alanı sayesinde yön tayini yapar\n- **Kırmızı uç:** kuzeyi gösterir; ağırlıklı uç genellikle güneyi gösterir\n- **Ağırlıklı uç yoksa:** N harfiyle işaretli uç kuzeyi gösterir\n- **Harfler:** N kuzey, S güney, E doğu, W batı; saat yönünde sıra N, E, S, W\n- **Tutuş:** pusula düz ve sabit tutulur\n\n> [!IMPORTANT] Kırmızı uç kuzey, ağırlıklı uç güney.",
+          "ses": [
+            "Pusula, yerkürenin manyetik özelliğine dayanarak yön belirlemeye yarayan küçük bir alettir.",
+            "İçindeki ibre, Dünya'nın manyetik alanı sayesinde hep aynı doğrultuya dizilir.",
+            "İbrenin kırmızı ucu kuzeyi, ağırlıklı ucu ise genellikle güneyi gösterir.",
+            "Ağırlıklı uç yoksa işin daha da kolay: en harfiyle işaretli uç kuzeydir.",
+            "Kadrandaki en, es, e ve dabılyu harfleri sırasıyla kuzeyi, güneyi, doğuyu ve batıyı gösterir.",
+            "Kuzeyden başlayıp saat yönünde dönersen sıra kuzey, doğu, güney, batı olur.",
+            "Okuma yaparken pusulayı düz ve sabit tut; sallanan pusulada ibre de kararsız kalır."
+          ]
+        },
+        {
+          "baslik": "İbreyi şaşırtanlar",
+          "ekran": "Pusula manyetik alanlardan etkilenir; ibrenin sapması yakındaki **manyetik** veya **metalik** maddelerden kaynaklanır.\n\n- **Metal saat, telefon, araç gövdesi:** manyetik alan (sapma) etkisi yaratır, ölçüm doğruluğunu bozar\n- **Çelik iskeletli çanta:** çok yakınında okuma en fazla bozulur\n- **Cep telefonu:** cepte dursa bile ölçümü etkiler\n- **Çözüm:** metal eşyalardan uzaklaş, sonra oku\n\n> [!IMPORTANT] Okumadan önce çevrene bak: yakında metal var mı?",
+          "ses": [
+            "Pusula manyetik alanlardan etkilenir; ibre yalnız Dünya'yı değil, yanındaki demiri de dinler.",
+            "İbrenin sapması, yakın çevredeki manyetik veya metalik maddelerden kaynaklanır.",
+            "Metal saat, telefon ya da araç gövdesi sapma etkisi yaratır ve ölçüm doğruluğunu bozar.",
+            "Okumayı en çok bozan durum, çelik iskeletli bir çantanın çok yakınında ölçüm yapmaktır.",
+            "Bilekteki metal saat ve cepteki telefon da ibreyi oynatır, ama büyük bir çelik kütlesi kadar değil.",
+            "Plastik dosya ya da biraz uzaktaki alüminyum baton ise ibreyi pek etkilemez.",
+            "Çare basit: metal eşyalardan uzaklaş, pusulayı düz ve sabit tut, sonra oku."
+          ]
+        },
+        {
+          "baslik": "Harita, deklinasyon ve azimut",
+          "ekran": "Harita ile pusula birlikte çalışır; ama pusulanın kuzeyi ile haritanın kuzeyi aynı değildir.\n\n- **Harita–pusula uyumu:** harita coğrafi kuzeye çevrilerek kullanılır\n- **Manyetik deklinasyon:** manyetik kuzey ile gerçek (coğrafi) kuzey arasındaki açı farkı\n- **Değişim:** her yıl değişir, birimi derece/yıl; güncel harita ile düzeltilir\n- **Azimut:** bir doğrultunun coğrafi kuzey ile yaptığı açının saat yönünde ölçülmesi, 0°–360°\n- **Düzeltilmezse:** azimut temelli yön hatası doğar\n\n> [!IMPORTANT] Deklinasyonu yanlış uygulamak, kullanıcıya bağlı sistematik hatadır.",
+          "ses": [
+            "Haritada yön bulurken ilk iş haritayı kuzeye çevirmektir; böylece kâğıttaki tepe arazideki tepeyle aynı tarafa düşer.",
+            "Yalnız bir incelik var: ibre manyetik kuzeyi gösterir, harita ise gerçek yani coğrafi kuzeye göre çizilir.",
+            "Bu iki kuzey arasındaki açı farkına manyetik deklinasyon denir.",
+            "İbre tam kuzeyi göstermiyorsa ölçüm hatasının nedeni genellikle bu deklinasyon sapmasıdır.",
+            "Deklinasyon her yıl değişim gösterir; yıllık sapma derece bölü yıl birimiyle verilir ve güncel haritayla düzeltilir.",
+            "Azimut, bir doğrultunun coğrafi kuzeyle yaptığı açının saat yönünde ölçülmesidir; sıfırdan üç yüz altmış dereceye uzanır.",
+            "Doğu doksan, güney yüz seksen, batı iki yüz yetmiş derecedir.",
+            "Deklinasyonu düzeltmezsen azimut temelli yön hatası yaparsın; yanlış uygulamak da kullanıcıya bağlı sistematik hatadır."
+          ]
+        },
+        {
+          "baslik": "Neredeyim? Geriden ve ileriden kestirme",
+          "ekran": "Pusula ile yer belirlemenin iki klasik yolu vardır: **geriden kestirme** ve **ileriden kestirme**.\n\n- **Geriden kestirme:** bilinen iki noktaya ölçüm yapılır; haritada çizilen doğruların kesişim noktası bulunduğun konumdur\n- **Dar açı:** iki nokta arasındaki açı darsa kesişim noktası büyük (belirsizlik) hatası verir\n- **Hata payı:** azaltmak için ikiden fazla noktadan atış yapılır\n- **İleriden kestirme:** doğrudan ulaşılamayan (girilemeyen) bir noktanın konumunu haritada belirler\n\n> [!NOTE] Geriden kestirme: ben neredeyim? İleriden kestirme: o nerede?",
+          "ses": [
+            "Yerini bilmiyorsan ama haritada tanıdığın iki tepe görüyorsan geriden kestirme yaparsın.",
+            "Pusulayla iki noktaya da ölçüm alır, haritada o noktalardan kendine doğru birer doğru çizersin.",
+            "İki doğrunun kesişim noktası, bulunduğun konumdur.",
+            "Seçtiğin iki nokta arasındaki açı dar ise doğrular makas gibi uzun uzun kesişir ve hata büyür.",
+            "Hata payını azaltmak için ikiden fazla noktadan atış yapılır.",
+            "İleriden kestirme bunun tersidir: yerini bildiğin noktalardan, gidemediğin bir hedefe ölçüm alırsın.",
+            "Böylece doğrudan ulaşılamayan, girilemeyen bir noktanın konumunu harita üzerinde belirlersin.",
+            "Kısacası geriden kestirme ben neredeyim diye sorar, ileriden kestirme o nerede diye."
+          ]
+        },
+        {
+          "baslik": "Pusula–altimetre ve eşyükselti eğrileri",
+          "ekran": "Tek bir doğrultu ile bir yükseklik de konumunu verir: pusula–altimetre yöntemi.\n\n- **Pusula:** doğrultu yönünü verir\n- **Altimetre:** yükseklik bilgisini sağlar; hava basıncı değişimine bağlı olarak ölçer\n- **Konum:** haritadaki eşyükseklik (eşyükselti, izohips) eğrisi üzerinden belirlenir\n- **İzohips:** aynı yükseklikteki noktaları birleştiren eğri; sık eğri dik yamaç demektir\n\n> [!IMPORTANT] Pusula–altimetre yönteminin veri ikilisi: yükseklik + doğrultu.",
+          "ses": [
+            "Sisli bir yamaçta tek bir tepe görüyorsan pusula altimetre yöntemi imdadına yetişir.",
+            "Bu yöntemde pusula doğrultu yönünü verir, altimetre ise yükseklik bilgisini sağlar.",
+            "Altimetre yüksekliği hava basıncı değişimine bağlı olarak ölçer; yükseldikçe basınç düşer.",
+            "Haritada aynı yükseklikteki noktaları birleştiren çizgilere eşyükseklik eğrisi ya da izohips denir.",
+            "Ölçtüğün yüksekliğin eğrisini haritada bulursun; pusulayla çizdiğin doğrunun o eğriyi kestiği yer senin yerindir.",
+            "Yani konum aynı anda iki veriyle belirlenir: doğrultu ve yükseklik.",
+            "Eğriler sıklaştıysa yamaç dikleşmiştir; seyrekse arazi yatıktır."
+          ]
+        },
+        {
+          "baslik": "Pusulasız yön: güneş, gölge, saat ve yıldız",
+          "ekran": "Pusula yoksa gökyüzü yardım eder; güneş, gölge ve yıldızlar görsel ipucudur.\n\n- **Güneş:** her zaman tam doğudan doğmaz; kabaca doğu sayılır\n- **Öğle gölgesi:** kuzeyi gösterir; gölge yöntemi en güvenilir sonucu öğle vakti verir\n- **Gölge çubuğu:** 15–20 dakika arayla iki işaret; ilki batı, ikincisi doğu\n- **Kol saati:** akrep güneşe; akrep ile 12 arasının ortası güney (kuzey yarımkürede)\n- **Kutup Yıldızı:** gece kuzeyi gösterir; Sirius, Orion ya da Vega değil\n\n> [!NOTE] Rüzgâr yönünü belirlemenin en kolay yolu yine pusuladır.",
+          "ses": [
+            "Güneş kabaca doğudan doğar, ama her zaman tam doğudan değil; mevsime göre kayar.",
+            "Öğle vakti gölgen kuzeyi gösterir; gölge yöntemi en güvenilir sonucu da öğlen verir.",
+            "Başka saatlerde yere bir çubuk dik, gölgesinin ucunu işaretle, on beş yirmi dakika sonra yeniden işaretle.",
+            "İlk işaret batı, ikinci işaret doğudur.",
+            "Kol saatinde akrebi güneşe çevir; akrep ile on iki arasındaki açının ortası güneydir.",
+            "Bu saat yöntemi yalnız güney yarımkürede değil, bizim kuzey yarımkürede de geçerlidir.",
+            "Gece kuzeyi Kutup Yıldızı gösterir; parlak diye siriyusa ya da vegaya kanma.",
+            "Rüzgârın hangi yönden estiğini anlamanın en kolay yolu ise yine pusulaya bakmaktır."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "N – E – S – W",
+        "acilim": "Kuzey 0° · Doğu 90° · Güney 180° · Batı 270° — kuzeyden başla, saat yönünde dön",
+        "not": "Kadrandaki harflerin sırasını ve azimutun dört ana durağını tek seferde hatırlatır."
+      },
+      "yap": [
+        "Pusulayı düz ve sabit tut",
+        "Okumadan önce metal eşyalardan uzaklaş",
+        "Haritayı kuzeye çevirerek kullan",
+        "Deklinasyonu güncel haritayla düzelt",
+        "Kestirmede ikiden fazla noktadan atış yap"
+      ],
+      "yapma": [
+        "Çelik iskeletli çantanın yanında pusula okuma",
+        "Dar açılı iki noktayla yer belirlemeye çalışma",
+        "En parlak yıldızı Kutup Yıldızı sanma",
+        "Kaybolunca paniğe kapılıp yürümeyi sürdürme"
+      ],
+      "spotlar": [
+        {
+          "metin": "Pusulada **kırmızı uç kuzeyi**, ağırlıklı uç genellikle güneyi gösterir.",
+          "ses": "Pusulanın kırmızı ucu kuzeyi, ağırlıklı ucu ise genellikle güneyi gösterir."
+        },
+        {
+          "metin": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkı **manyetik deklinasyon**dur; her yıl değişir, birimi derece/yıl.",
+          "ses": "Manyetik kuzey ile gerçek kuzey arasındaki açı farkı manyetik deklinasyondur; her yıl değişir ve güncel haritayla düzeltilir."
+        },
+        {
+          "metin": "**Geriden kestirme:** iki noktadan çizilen doğruların kesişim noktası bulunduğun yerdir; dar açı hatayı büyütür.",
+          "ses": "Geriden kestirmede iki noktadan çizdiğin doğruların kesişim noktası senin yerindir; aradaki açı darsa hata büyür."
+        },
+        {
+          "metin": "**İleriden kestirme**, doğrudan ulaşılamayan bir noktanın konumunu harita üzerinde belirler.",
+          "ses": "İleriden kestirme, doğrudan ulaşamadığın bir noktanın konumunu harita üzerinde belirlemeni sağlar."
+        },
+        {
+          "metin": "**Altimetre** hava basıncı değişimine bağlı ölçer; pusula–altimetre yöntemi yükseklik + doğrultu ister.",
+          "ses": "Altimetre yüksekliği hava basıncı değişimine bağlı ölçer; pusula altimetre yöntemi yükseklik ve doğrultu verisini birleştirir."
+        },
+        {
+          "metin": "Güneş ile ufuk arasındaki **her parmak yaklaşık 15 dakika**, dört parmak yaklaşık 1 saat gün ışığıdır.",
+          "ses": "Kolunu ileri uzat; güneşle ufuk arasına sığan her parmak yaklaşık on beş dakika, dört parmak bir saattir."
+        },
+        {
+          "metin": "Kaybolunca **DUR**: dur, düşün, gözle, planla; emin değilsen olduğun yerde kal.",
+          "ses": "Kaybolduğunu anlayınca dur, düşün, çevreni gözle ve planla; emin değilsen olduğun yerde kal."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            {
+              "metin": "Güneş yılın her günü tam doğudan doğar.",
+              "dogru": false,
+              "aciklama": "Güneşin doğduğu yön her zaman tam doğu değildir; mevsime göre kayar."
+            },
+            {
+              "metin": "Cepte duran telefon pusula ölçümünü etkilemez.",
+              "dogru": false,
+              "aciklama": "Telefon da metal saat ve araç gövdesi gibi sapma etkisi yaratır."
+            },
+            {
+              "metin": "Saat yöntemiyle yön bulma kuzey yarımkürede de işe yarar.",
+              "dogru": true,
+              "aciklama": "Yöntem yalnız güney yarımküreye özgü değildir; kuzey yarımkürede akrep güneşe çevrilir."
+            },
+            {
+              "metin": "Öğle vakti gölge kuzeyi gösterir.",
+              "dogru": true,
+              "aciklama": "Gölge yöntemi en güvenilir sonucu da öğle vakti verir."
+            },
+            {
+              "metin": "Pusulanın ağırlıklı ucu genellikle kuzeyi gösterir.",
+              "dogru": false,
+              "aciklama": "Ağırlıklı uç genellikle güneyi, kırmızı ya da N işaretli uç kuzeyi gösterir."
+            }
+          ]
+        },
+        {
+          "tur": "sirala",
+          "baslik": "Geriden kestirme adım adım",
+          "soru": "Doğru sıraya diz",
+          "adimlar": [
+            "Haritada tanıdığın iki nokta seç",
+            "Pusulayla birinci noktaya ölçüm al",
+            "Haritada o noktadan kendine doğru doğruyu çiz",
+            "İkinci nokta için ölçümü ve çizimi yinele",
+            "Doğruların kesişim noktasını işaretle",
+            "Üçüncü bir noktayla hata payını azalt"
+          ],
+          "aciklama": "İki noktadan çizilen doğruların kesişim noktası bulunduğun konumdur; ikiden fazla nokta hata payını azaltır."
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Pusula ibresinde ağırlıklı uç bulunmuyorsa kuzeyi aşağıdakilerden hangisi gösterir?",
+          "secenekler": {
+            "A": "S harfiyle işaretli uç",
+            "B": "E harfiyle işaretli uç",
+            "C": "N harfiyle işaretli uç",
+            "D": "W harfiyle işaretli uç",
+            "E": "İbrenin kısa olan ucu"
+          },
+          "dogru": "C",
+          "cozum": "Ağırlıklı uç genellikle güneyi gösterir; ağırlıklı uç yoksa N harfiyle işaretli uç kuzeyi gösterir.",
+          "siklar": {
+            "A": "S harfi güneyi simgeler. Bu harfi taşıyan uç kuzeyin tam karşısını gösterdiği için kuzeyi bulmak isteyen kişiyi ters yöne yürütür.",
+            "B": "E harfi doğuyu simgeler. Kadranda kuzeyden saat yönünde dönünce ilk karşılaşılan harftir, ama kuzeyi göstermek gibi bir görevi yoktur.",
+            "C": "N harfi kuzeyi simgeler. İbrede ağırlıklı uç bulunmadığında kuzeyi gösteren uç bu harfle işaretlenmiştir; kırmızı uç da aynı işi görür.",
+            "D": "W harfi batıyı simgeler. Saat yönündeki sıralamada en sonda yer alır ve ibrenin kuzey ucunu tanımak için kullanılmaz.",
+            "E": "İbrenin uçları uzunluğa göre değil; renge, ağırlığa ya da harfe göre ayırt edilir. Kısa uç diye bir kuzey göstergesi anlatılmamıştır."
+          },
+          "ses_cozum": "Pusulada ağırlıklı uç genellikle güneyi gösterir. Ağırlıklı uç yoksa kuzeyi en harfiyle işaretli uçtan tanırsın. Es harfli uç ise tam tersini, yani güneyi gösterir; kırmızı uç da kuzeydir."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Altimetre, arazide yüksekliği aşağıdakilerden hangisinin değişimine bağlı olarak ölçer?",
+          "secenekler": {
+            "A": "Hava basıncı",
+            "B": "Hava sıcaklığı",
+            "C": "Manyetik alan",
+            "D": "Rüzgâr hızı",
+            "E": "Gölge boyu"
+          },
+          "dogru": "A",
+          "cozum": "Altimetre hava basıncı değişimine bağlı olarak ölçüm yapar; yükseldikçe basınç düşer ve alet bunu yüksekliğe çevirir.",
+          "siklar": {
+            "A": "Yükseğe çıkıldıkça hava basıncı düşer. Altimetre bu değişimi algılayıp yüksekliğe çevirir; pusula–altimetre yönteminde yükseklik bilgisini sağlayan da budur.",
+            "B": "Hava sıcaklığı da yükseklikle değişir, ama altimetrenin ölçüm ilkesi sıcaklığa değil basınca dayanır. Sıcaklık, yer belirlemede kullanılan veri ikilisinde bulunmaz.",
+            "C": "Manyetik alan pusula ibresini yönlendirir ve yön tayininde işe yarar. Yüksekliği ölçen altimetrenin çalışma ilkesiyle ilgisi yoktur.",
+            "D": "Rüzgâr hızı hava durumunu yorumlamaya yarar. Yükseklik hakkında bilgi vermediği için altimetrenin dayandığı büyüklük olamaz.",
+            "E": "Gölge boyu ve yönü güneşle yön bulmada kullanılır; öğle vakti gölge kuzeyi gösterir. Yükseklik ölçümünde bir rolü yoktur."
+          },
+          "ses_cozum": "Altimetre yüksekliği hava basıncı değişimine bağlı olarak ölçer; yükseldikçe basınç düşer. Manyetik alan ise pusulanın işidir. Kısacası yer belirlerken pusula sana doğrultuyu, altimetre de yüksekliği verir."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Öğle vakti gölge ve gece Kutup Yıldızı sırasıyla hangi yönleri gösterir?",
+          "secenekler": {
+            "A": "Güney – kuzey",
+            "B": "Kuzey – güney",
+            "C": "Doğu – kuzey",
+            "D": "Batı – güney",
+            "E": "Kuzey – kuzey"
+          },
+          "dogru": "E",
+          "cozum": "Öğle vakti gölge kuzeyi gösterir; gece Kutup Yıldızı da kuzeyi gösterir. İkisi de aynı yönü verir.",
+          "siklar": {
+            "A": "Öğle vakti güneyde duran güneşin kendisidir; gölge ise onun karşısına, kuzeye düşer. Bu yüzden ilk yön güney olamaz.",
+            "B": "Gölge için kuzey doğrudur, ancak Kutup Yıldızı güneyi değil kuzeyi gösterir. İkinci yön hatalı olduğu için eşleşme bozulur.",
+            "C": "Doğu, güneşin kabaca doğduğu taraftır ve sabah saatleriyle ilgilidir. Öğle gölgesi doğuyu değil kuzeyi gösterir.",
+            "D": "Gölge çubuğunda ilk işaret batıyı verir, ama bu öğle gölgesinin yönü değildir. Kutup Yıldızı da güneyi göstermez.",
+            "E": "Öğle vakti gölge kuzeye düşer, gece de Kutup Yıldızı kuzeyi gösterir. Gündüz ve gece yöntemi aynı yönü verdiği için eşleşme tutar."
+          },
+          "ses_cozum": "Öğle vakti gölgen kuzeyi gösterir, gece de Kutup Yıldızı kuzeyi gösterir. Öğlen güneyde duran gölge değil, güneşin kendisidir. Bu soruda en sık karıştırılan nokta da tam olarak budur."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Aşağıdakilerden hangisi geriden kestirme yönteminde hata payını azaltır?",
+          "secenekler": {
+            "A": "Aralarındaki açı çok dar iki nokta seçmek",
+            "B": "İkiden fazla noktadan atış yapmak",
+            "C": "Ölçümü araç gövdesine yaslanarak almak",
+            "D": "Deklinasyon düzeltmesini atlamak",
+            "E": "Yalnız tek noktaya ölçüm almak"
+          },
+          "dogru": "B",
+          "cozum": "Geriden kestirmede hata payını azaltmak için ikiden fazla noktadan atış yapılır; dar açılı iki nokta ise hatayı büyütür.",
+          "siklar": {
+            "A": "İki nokta arasındaki açı darsa çizilen doğrular uzun bir alanda kesişir ve kesişim noktası büyük belirsizlik hatası verir; hata azalmaz, büyür.",
+            "B": "Üçüncü ve sonraki noktalardan çizilen doğrular kesişim noktasını sınar. İkiden fazla noktadan atış yapmak hata payını azaltmanın yoludur.",
+            "C": "Araç gövdesi büyük bir metal kütlesidir ve sapma etkisi yaratır. Ona yaslanarak alınan ölçüm doğruluğu bozar, yer belirlemeyi kötüleştirir.",
+            "D": "Deklinasyon düzeltilmezse azimut temelli yön hatası doğar. Düzeltmeyi atlamak çizilen doğruları kaydırır ve hatayı artırır.",
+            "E": "Tek noktadan yalnız bir doğru çizilir, kesişim oluşmaz. Geriden kestirme en az iki bilinen nokta ister; tek ölçüm konum vermez."
+          },
+          "ses_cozum": "Geriden kestirmede hata payını azaltmak için ikiden fazla noktadan atış yapılır. Aralarındaki açı dar olan iki nokta seçmek ise tam tersine kesişim noktasındaki hatayı büyütür."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Manyetik deklinasyon ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Her yıl değişim gösterir",
+            "B": "Yıllık sapma derece/yıl birimiyle ifade edilir",
+            "C": "Güncel harita ile düzeltilir",
+            "D": "Altimetreyle yükseklik ölçülerek giderilir",
+            "E": "Düzeltilmezse azimut temelli yön hatası doğar"
+          },
+          "dogru": "D",
+          "cozum": "Deklinasyon manyetik kuzey ile gerçek kuzey arasındaki açı farkıdır; yükseklikle ilgisi yoktur ve güncel harita ile düzeltilir.",
+          "siklar": {
+            "A": "Deklinasyon sabit bir değer değildir, her yıl değişim gösterir. Arazide ölçümden önce güncel değere bakılmasının nedeni budur; ifade doğrudur.",
+            "B": "Manyetik kuzeyin yıllık sapma miktarı derece/yıl birimiyle verilir. Haritaların kenarında bu değer yazar; ifade doğrudur.",
+            "C": "Değer her yıl değiştiği için düzeltme güncel harita ile yapılır. Eski haritadaki değer bugünkü sapmayı yansıtmayabilir; ifade doğrudur.",
+            "D": "Altimetre hava basıncından yükseklik ölçer. Deklinasyon ise iki kuzey arasındaki açıdır; yükseklik ölçmek bu açıyı ne bulur ne de düzeltir.",
+            "E": "Deklinasyon düzeltilmezse pusuladan okunan açı coğrafi kuzeye göre kayar. Bunun en doğrudan sonucu azimut temelli yön hatasıdır; ifade doğrudur."
+          },
+          "ses_cozum": "Deklinasyon her yıl değişir, derece bölü yıl birimiyle verilir ve güncel haritayla düzeltilir. Altimetre ise yalnız yükseklik ölçer; manyetik kuzey ile gerçek kuzey arasındaki açıyı düzeltemez."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "İleriden kestirme yöntemi hangi amaçla kullanılır?",
+          "secenekler": {
+            "A": "Bulunulan noktanın yüksekliğini hava basıncından bulmak",
+            "B": "Manyetik kuzey ile gerçek kuzey farkını düzeltmek",
+            "C": "Ulaşılamayan bir noktanın konumunu haritada belirlemek",
+            "D": "Kendi konumunu iki doğrunun kesişiminden bulmak",
+            "E": "Rüzgârın estiği yönü pusulayla belirlemek"
+          },
+          "dogru": "C",
+          "cozum": "İleriden kestirme, doğrudan ulaşılamayan (girilemeyen) bir noktanın konumunun harita üzerinde belirlenmesini sağlar.",
+          "siklar": {
+            "A": "Yüksekliği hava basıncından bulmak altimetrenin işidir ve pusula–altimetre yönteminde kullanılır. İleriden kestirmenin amacı yükseklik değildir.",
+            "B": "İki kuzey arasındaki fark manyetik deklinasyondur ve güncel harita ile düzeltilir. Bu bir düzeltme işlemidir, kestirme yöntemi değildir.",
+            "C": "İleriden kestirmede yeri bilinen noktalardan hedefe ölçüm alınır. Böylece doğrudan ulaşılamayan, girilemeyen bir noktanın konumu haritada belirlenir.",
+            "D": "Kendi konumunu, bilinen iki noktadan çizilen doğruların kesişim noktasından bulmak geriden kestirmedir. İleriden kestirme bunun ters yönlüsüdür.",
+            "E": "Rüzgâr yönünü belirlemenin en kolay yolu pusuladır, ama bu basit bir yön okumasıdır. Haritada konum belirleyen kestirme yöntemleriyle ilgisi yoktur."
+          },
+          "ses_cozum": "İleriden kestirme, doğrudan ulaşamadığın bir noktanın konumunu harita üzerinde belirlemeye yarar. Kendi bulunduğun yeri, bilinen iki noktadan çizdiğin doğruların kesişim noktasından bulmak ise geriden kestirmedir."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki durumlardan hangisinde pusula okumasının bozulması en az beklenir?",
+          "secenekler": {
+            "A": "Çelik iskeletli çantaya çok yakın ölçüm",
+            "B": "Araç gövdesine yaslanarak ölçüm",
+            "C": "Bilekte metal saat varken ölçüm",
+            "D": "Telefonu pusulanın yanında tutarak ölçüm",
+            "E": "Plastik dosyalı harita çantasının üstünde ölçüm"
+          },
+          "dogru": "E",
+          "cozum": "İbreyi manyetik veya metalik maddeler saptırır. Plastik dosya metal olmadığı için ibreyi pek etkilemez; en çok bozan çelik iskeletli çantadır.",
+          "siklar": {
+            "A": "Çelik iskelet büyük bir demir kütlesidir. Çok yakınında yapılan ölçüm, doğru pusula okumasının en fazla bozulduğu durum olarak öğretilmiştir.",
+            "B": "Araç gövdesi geniş bir metal yüzeydir ve sapma etkisi yaratarak ölçüm doğruluğunu bozar. Ona yaslanmak ibreyi belirgin biçimde oynatır.",
+            "C": "Metal saat pusulayı tutan elin hemen yanındadır. Küçük olsa da manyetik alan etkisi yaratır ve okumayı bozabilir.",
+            "D": "Telefon pusula ölçümünü etkileyen nesnelerdendir. Pusulanın hemen yanında tutulduğunda sapma etkisi yaratır ve ibrenin kuzeyden kayması beklenir.",
+            "E": "Plastik ne manyetik ne metaliktir. Plastik dosyanın üstünde yapılan ölçümde ibreyi saptıracak bir etki bulunmadığından bozulma en az beklenir."
+          },
+          "ses_cozum": "İbreyi manyetik ya da metalik maddeler saptırır. Plastik dosya metal olmadığı için ibreyi pek etkilemez. Okumayı en çok bozan ise çelik iskeletli çantanın çok yakınında ölçüm yapmaktır."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Pusula–altimetre yöntemiyle yer belirleyen bir yürüyüşçü için aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Konumunu doğrultu ve yükseklik verisiyle izohips üzerinde bulur",
+            "B": "Konumunu iki tepeden çizdiği doğruların kesişiminden bulur",
+            "C": "Altimetreden doğrultuyu, pusuladan yüksekliği okur",
+            "D": "Altimetresi manyetik alan değişimine bağlı ölçtüğünden metalden etkilenir",
+            "E": "Yöntemi uygulamak için en az üç bilinen noktaya ölçüm alır"
+          },
+          "dogru": "A",
+          "cozum": "Pusula–altimetre yönteminde pusula doğrultuyu, altimetre yüksekliği verir; konum haritadaki eşyükseklik (izohips) eğrisi üzerinden belirlenir.",
+          "siklar": {
+            "A": "Yöntemin veri ikilisi yükseklik ve doğrultudur. Ölçülen yüksekliğin izohips eğrisi haritada bulunur, pusuladan gelen doğrultu ile konum bu eğri üzerinde belirlenir.",
+            "B": "İki bilinen noktadan çizilen doğruların kesişim noktasıyla yer bulmak geriden kestirmedir. O yöntemde yükseklik verisi kullanılmaz.",
+            "C": "Görevler ters verilmiştir. Pusula doğrultu yönünü verir, altimetre ise yükseklik bilgisini sağlar; aletlerin işi yer değiştirmez.",
+            "D": "Altimetre manyetik alana değil hava basıncı değişimine bağlı ölçer. Metalden etkilenen alet, ibresi manyetik alanla yönlenen pusuladır.",
+            "E": "İkiden fazla nokta, geriden kestirmede hata payını azaltmak için önerilir. Pusula–altimetre yönteminde ise tek doğrultu ile yükseklik birleştirilir."
+          },
+          "ses_cozum": "Pusula altimetre yönteminde pusula doğrultuyu, altimetre yüksekliği verir ve konum izohips eğrisi üzerinde bulunur. İki tepeden çizilen doğruların kesişim noktasıyla yer bulmak ise geriden kestirmenin işidir."
+        }
+      ]
+    },
+    {
+      "id": "7b",
+      "baslik": "Jeolog pusulası: doğrultu ve eğim ölçümü",
+      "ozet": "Eğik bir tabakanın doğrultusunu, eğim yönünü ve eğim açısını jeolog pusulasıyla ölçmek ve yazmak.",
+      "gorsel": "jeolog-pusulasi.svg",
+      "gorsel_alt": "Eğik bir tabakaya yaslanmış jeolog pusulası; doğrultu, eğim yönü ve eğim açısı oklarla gösterilmiş.",
+      "bolumler": [
+        {
+          "baslik": "Jeolog pusulası ne ölçer?",
+          "ekran": "Jeolog pusulası, kayadaki yapıların duruşunu ölçen donanımlı bir pusuladır.\n\n- **İki iş:** düzlemsel yapıların ölçümü ve çizgisel yapıların yönünün tayini\n- **Düzlemsel yapı:** yüzeysel özelliktedir; tabaka ve fay gibi\n- **Çizgisel yapı:** doğrusal özelliktedir; çizgi gibi uzanır\n- **Kısımları:** klinometre (eğim ölçer) ve el düzeci (düzey ölçer)\n- **Ayna:** göz hizası ve düzlem konumu doğruluğunu sağlar\n\n> [!NOTE] Dereceli daire azimut (yatay açı) sistemine göre 0°–360° kalibre edilmiştir.",
+          "ses": [
+            "Jeolog pusulası, kayaların duruşunu ölçmek için yapılmış donanımlı bir pusuladır.",
+            "Hem düzlemsel yapıların ölçümünde hem de çizgisel yapıların yönünün tayininde kullanılır.",
+            "Düzlemsel yapı yüzeysel özelliktedir; eğik duran bir masa tablası gibi düşün, tabaka ya da fay böyledir.",
+            "Çizgisel yapı ise doğrusal özelliktedir; tablanın üstüne bırakılmış bir kalem gibidir.",
+            "Aletin iki önemli kısmı vardır: eğim ölçer olan klinometre ve düzey ölçer olan el düzeci.",
+            "Kapaktaki ayna, ölçüm sırasında hem göz hizasının hem düzlem konumunun doğruluğunu sağlar.",
+            "Dereceli daire ise azimut sistemine göre sıfırdan üç yüz altmış dereceye kalibre edilmiştir."
+          ]
+        },
+        {
+          "baslik": "Doğrultu ölçümü ve yer değiştirmiş E–W",
+          "ekran": "Doğrultu, eğik tabakanın yatay kenarının yönüdür; eğik masa tablasının yere paralel kenarı gibi.\n\n- **Doğrultu açısı:** ibrenin kuzey ile yaptığı dar açı; E–N–W aralığında okunur\n- **Önce yatay:** taban yatay hâle getirilmeden ölçüm yapılmaz\n- **Kabarcıklı düzeç:** ortalanmamışsa sonuç seviye (horizontallik) hatası içerir\n- **E–W harfleri:** tabanda yer değiştirmiş olarak yazılır\n- **Nedeni:** ibre saat ibresinin tersi yönünde döner\n\n> [!IMPORTANT] Sistematik hatayı en çok artıran: tabanın tam yataylanmaması.",
+          "ses": [
+            "Eğik bir masa tablası düşün; tablanın yere paralel kalan kenarının yönü doğrultudur.",
+            "Doğrultu açısı, pusula ibresinin kuzeyle yaptığı dar açıdır ve doğu kuzey batı aralığında okunur.",
+            "Ölçmek için pusulanın kenarını tabakaya yaslar, tabanı yatay hâle getirirsin.",
+            "Taban yatay olmadan ölçüm yapılmaz; kabarcıklı düzeç ortalanmamışsa sonuç seviye hatası içerir.",
+            "Tabanın tam yataylanmaması, sistematik hatayı en çok artıran kusurdur.",
+            "Kadrana bakınca şaşırma: tabandaki doğu ve batı harfleri yer değiştirmiş yazılır.",
+            "Çünkü sen pusulayı çevirirken ibre kadrana göre saat ibresinin tersi yönünde döner.",
+            "Harfler yer değiştirince ibrenin ucu, baktığın yönü doğrudan okutur."
+          ]
+        },
+        {
+          "baslik": "Eğim yönü: bilye nereye yuvarlanır?",
+          "ekran": "Eğim yönü, tabakanın alçaldığı yöndür; eğik masaya bırakılan bilyenin yuvarlanacağı yön.\n\n- **Yaslama:** pusulanın N veya S kenarı ölçülecek düzleme yaslanır\n- **N kenarı yaslanırsa:** eğim yönünü ibrenin S ucu gösterir\n- **S kenarı yaslanırsa:** eğim yönünü ibrenin N ucu gösterir\n- **Kural:** eğim yönü daima doğrultuya diktir\n- **Düzgün olmayan yüzey:** jeolog çekici veya defter ile düzleştirilir\n\n> [!IMPORTANT] Yaslanan kenar ile okunan uç terstir: N kenarı → S ucu.",
+          "ses": [
+            "Eğik masaya bir bilye bırak; bilyenin yuvarlandığı yön eğim yönüdür.",
+            "Eğim yönünü bulmak için pusulanın en ya da es kenarı ölçülecek düzleme yaslanır.",
+            "En kenarını yasladıysan eğim yönünü ibrenin es ucu gösterir.",
+            "Es kenarını yasladıysan bu kez ibrenin en ucu gösterir; yani yaslanan kenar ile okunan uç terstir.",
+            "Eğim yönü daima doğrultuya diktir; bilye de tablanın yatay kenarına dik yuvarlanır.",
+            "Pusula kenarı tabaka yüzeyine tam oturmuyorsa yüzey pürüzsüz, düz hâle getirilmelidir.",
+            "Bunun için ölçüm yüzeyi jeolog çekici ya da defter ile düzleştirilir; pusula bu düz yüzeye yaslanır."
+          ]
+        },
+        {
+          "baslik": "Eğim açısı: klinometre iş başında",
+          "ekran": "Eğim açısı, tabakanın yatayla yaptığı açıdır; masa tablasının ne kadar yattığını söyler.\n\n- **Okuma:** eğim açısı klinometre düzeci yardımıyla okunur\n- **Kenar:** klinometreli kenar ölçülen düzleme dik konumda tutulur\n- **Taban:** doğruluk, pusula tabanının düşey konumda tutulmasına bağlıdır\n- **Brunton pusulası:** silindirik kabarcıklı düzeç yataylanarak ölçülür\n- **Breithaupt pusulası:** pusula içindeki oynar sarkaç yardımıyla okunur\n\n> [!IMPORTANT] Doğrultuda taban yatay, eğim açısında taban düşey.",
+          "ses": [
+            "Eğim açısı, tabakanın yatay düzlemle yaptığı açıdır; masanın ne kadar yattığını söyler.",
+            "Bu açı klinometre düzeci yardımıyla okunur.",
+            "Ölçerken pusulanın klinometreli kenarı ölçülen düzleme dik konumda tutulur.",
+            "Okumanın doğruluğu, pusula tabanının düşey konumda tutulmasına bağlıdır.",
+            "Doğrultuda tabanı yatay tutmuştun; eğim açısında ise taban düşeydir, karıştırma.",
+            "İki ünlü pusula bu işi farklı yapar.",
+            "Brantın pusulasında silindirik kabarcıklı düzeç yataylanarak açı ölçülür.",
+            "Braythaupt pusulasında ise açı, pusula içindeki oynar sarkaç yardımıyla okunur."
+          ]
+        },
+        {
+          "baslik": "Ölçümü yazmak: strike–dip ve DDD",
+          "ekran": "Ölçülen düzlem deftere iki yaygın gösterimle yazılır.\n\n- **Strike–dip:** doğrultu yönü + eğim yönü + eğim açısı; doğrultu kuzey yönü referans alınarak verilir\n- **DDD (dip direction–dip amount):** ilk sayı eğim yönü, ikinci sayı eğim açısı\n- **Örnek:** eğim yönü kuzeydoğu ise doğrultu kuzeybatı–güneydoğu\n- **Kayıt:** tüm ölçümler lokasyon numaralı notlarla saha defterine yazılır\n\n> [!NOTE] DDD örneği 045/30: eğim yönü 45° (kuzeydoğu), eğim açısı 30°.",
+          "ses": [
+            "Ölçtüğün düzlemi deftere iki biçimde yazabilirsin.",
+            "Doğrultu eğim gösteriminde, yani strayk dip yazımında üç bilgi bulunur: doğrultu yönü, eğim yönü ve eğim açısı.",
+            "Doğrultu genellikle kuzey yönü referans alınarak verilir.",
+            "De de de gösterimi daha kısadır: ilk sayı eğim yönü, ikinci sayı eğim açısıdır.",
+            "Eğim yönü doğrultuya dik olduğundan biri bilinince öteki çıkar.",
+            "Örneğin tabakanın eğim yönü kuzeydoğu ise doğrultusu kuzeybatı güneydoğu uzanır.",
+            "Arazide yaptığın bütün pusula ölçümlerini lokasyon numaralı notlarla saha defterine kaydet.",
+            "Numarasız ölçüm, etiketsiz kan tüpüne benzer; kime ait olduğu bilinmez."
+          ]
+        },
+        {
+          "baslik": "Çizgisel yapılar, dalım yönü ve jeomanyetik eğim",
+          "ekran": "Düzlemden sonra sıra çizgide: çizgisel elemanların da yönü belirlenir.\n\n- **Dalım yönü:** çizgisel yapının eğildiği (daldığı) yön\n- **Vektörel büyüklük:** yapının yer altında nereye daldığını (yöneldiğini) gösterir\n- **Jeomanyetik eğim (inklinasyon):** manyetik alan çizgilerinin yatay düzlemle yaptığı eğim (dalma) açısı\n- **Karıştırma:** deklinasyon iki kuzey arasındaki açıdır, inklinasyon yataya göre açıdır\n\n> [!NOTE] Düzlemde eğim yönü, çizgide dalım yönü sorulur.",
+          "ses": [
+            "Eğik masanın üstüne bir kalem koy; kalem çizgisel yapıyı temsil eder.",
+            "Çizgisel elemanların yönü belirlenirken dalım yönüne bakılır.",
+            "Dalım yönü, çizgisel yapının eğildiği, daldığı yöndür; kalemin aşağı bakan ucunun gösterdiği taraf.",
+            "Vektörel bir büyüklüktür ve yapının yer altında nereye doğru daldığını gösterir.",
+            "Bir de adı benzeyen jeomanyetik eğim var; öteki adı inklinasyondur.",
+            "İnklinasyon, manyetik alan çizgilerinin yatay düzlemle yaptığı eğim açısıdır.",
+            "Deklinasyonla karıştırma: o, manyetik kuzey ile gerçek kuzey arasındaki açıydı."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "N → S, S → N",
+        "acilim": "N kenarı yaslanırsa ibrenin S ucu · S kenarı yaslanırsa ibrenin N ucu eğim yönünü gösterir",
+        "not": "Eğim yönü okurken yaslanan kenar ile okunan ucun ters olduğunu hatırlatır."
+      },
+      "yap": [
+        "Doğrultu ölçmeden önce tabanı yatay hâle getir",
+        "Kabarcıklı düzeci ortala",
+        "Düzgün olmayan yüzeyi çekiç ya da defterle düzleştir",
+        "Eğim açısında pusula tabanını düşey tut",
+        "Her ölçümü lokasyon numarasıyla saha defterine yaz"
+      ],
+      "yapma": [
+        "E–W harflerini sıradan pusuladaki gibi okuma",
+        "Yaslanan kenarla aynı harfli ucu okuma",
+        "Deklinasyon ile inklinasyonu karıştırma",
+        "Ölçümü deftere yazmayı sonraya bırakma"
+      ],
+      "spotlar": [
+        {
+          "metin": "Jeolog pusulasının kısımları: **klinometre** (eğim ölçer) ve **el düzeci** (düzey ölçer).",
+          "ses": "Jeolog pusulası iki kısımdan oluşur: eğim ölçer olan klinometre ve düzey ölçer olan el düzeci."
+        },
+        {
+          "metin": "Tabanda **E–W harfleri yer değiştirmiş** yazılır; çünkü ibre saat ibresinin tersi yönünde döner.",
+          "ses": "Jeolog pusulasının tabanında doğu ve batı harfleri yer değiştirmiştir; çünkü ibre saat ibresinin tersi yönünde döner."
+        },
+        {
+          "metin": "**Doğrultu açısı**, ibrenin kuzeyle yaptığı dar açıdır; ölçümden önce taban yatay hâle getirilir.",
+          "ses": "Doğrultu açısı ibrenin kuzeyle yaptığı dar açıdır; ölçmeden önce pusula tabanı yatay hâle getirilir."
+        },
+        {
+          "metin": "N kenarı yaslanırsa eğim yönünü **ibrenin S ucu**, S kenarı yaslanırsa N ucu gösterir.",
+          "ses": "En kenarı yaslanırsa eğim yönünü ibrenin es ucu, es kenarı yaslanırsa en ucu gösterir."
+        },
+        {
+          "metin": "Eğim açısı: **Brunton**'da silindirik kabarcıklı düzeç, **Breithaupt**'ta oynar sarkaç ile okunur.",
+          "ses": "Eğim açısı brantın pusulasında silindirik kabarcıklı düzeçle, braythaupt pusulasında oynar sarkaçla okunur."
+        },
+        {
+          "metin": "**DDD** gösteriminde ilk sayı eğim yönü, ikinci sayı eğim açısıdır.",
+          "ses": "De de de gösteriminde ilk sayı eğim yönünü, ikinci sayı eğim açısını verir."
+        },
+        {
+          "metin": "**Eğim yönü daima doğrultuya diktir:** eğim yönü kuzeydoğu ise doğrultu kuzeybatı–güneydoğu.",
+          "ses": "Eğim yönü daima doğrultuya diktir; eğim yönü kuzeydoğu ise doğrultu kuzeybatı güneydoğu uzanır."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "esle",
+          "baslik": "Parça ve görevi",
+          "ciftler": [
+            {
+              "sol": "Klinometre",
+              "sag": "Eğim ölçer"
+            },
+            {
+              "sol": "El düzeci",
+              "sag": "Düzey ölçer"
+            },
+            {
+              "sol": "Ayna",
+              "sag": "Göz hizası ve düzlem konumu"
+            },
+            {
+              "sol": "Brunton pusulası",
+              "sag": "Silindirik kabarcıklı düzeç"
+            },
+            {
+              "sol": "Breithaupt pusulası",
+              "sag": "Oynar sarkaç"
+            }
+          ]
+        },
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Doğru ölçüm mü, hatalı ölçüm mü?",
+          "ifadeler": [
+            {
+              "metin": "Eğim açısı ölçülürken pusula tabanı yatay tutulur.",
+              "dogru": false,
+              "aciklama": "Eğim açısında taban düşey tutulur; yatay taban doğrultu ölçümünün koşuludur."
+            },
+            {
+              "metin": "Eğim yönü daima doğrultuya diktir.",
+              "dogru": true,
+              "aciklama": "Bilye, eğik tablanın yatay kenarına dik yuvarlanır; eğim yönü de doğrultuya diktir."
+            },
+            {
+              "metin": "DDD gösteriminde ilk sayı eğim açısıdır.",
+              "dogru": false,
+              "aciklama": "İlk sayı eğim yönü, ikinci sayı eğim açısıdır."
+            },
+            {
+              "metin": "Düzlemsel yapılar doğrusal, çizgisel yapılar yüzeysel özelliktedir.",
+              "dogru": false,
+              "aciklama": "Tersi geçerlidir: düzlemsel yapılar yüzeysel, çizgisel yapılar doğrusal özelliktedir."
+            },
+            {
+              "metin": "Jeolog pusulasının dereceli dairesi azimut sistemine göre 0°–360° kalibre edilmiştir.",
+              "dogru": true,
+              "aciklama": "Dereceli daire azimut (yatay açı) sistemine göre tam tur, yani 0°–360° bölümlenmiştir."
+            }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Jeolog pusulasında eğim ölçer olarak görev yapan kısım aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "El düzeci",
+            "B": "Klinometre",
+            "C": "Ayna",
+            "D": "Dereceli daire",
+            "E": "Altimetre"
+          },
+          "dogru": "B",
+          "cozum": "Jeolog pusulası klinometre (eğim ölçer) ve el düzeci (düzey ölçer) kısımlarından oluşur; eğimi ölçen klinometredir.",
+          "siklar": {
+            "A": "El düzeci düzey ölçerdir; pusulanın yatay durup durmadığını gösterir. Eğim açısını ölçmez, ölçümün düzgün konumda yapılmasına yardım eder.",
+            "B": "Klinometre eğim ölçer anlamına gelir. Tabakanın yatayla yaptığı eğim açısı klinometre düzeci yardımıyla okunur.",
+            "C": "Ayna, ölçüm sırasında göz hizasının ve düzlem konumunun doğruluğunu sağlamaya yarar. Açıyı kendisi ölçmez, doğru bakışı kolaylaştırır.",
+            "D": "Dereceli daire azimut sistemine göre 0°–360° kalibre edilmiştir ve yön açısının okunduğu yerdir. Eğimi değil yatay açıyı verir.",
+            "E": "Altimetre hava basıncı değişiminden yükseklik ölçen ayrı bir alettir. Jeolog pusulasının bir kısmı değildir ve eğim ölçmez."
+          },
+          "ses_cozum": "Jeolog pusulasında eğim ölçer olan kısım klinometredir. El düzeci ise düzey ölçerdir ve pusulanın yataylığını gösterir. Adları birbirine benzediği için en sık bu iki kısım karıştırılır."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Breithaupt pusulasında eğim açısı aşağıdakilerden hangisinin yardımıyla okunur?",
+          "secenekler": {
+            "A": "Silindirik kabarcıklı düzeç",
+            "B": "Kapaktaki ayna",
+            "C": "Altimetre",
+            "D": "Oynar sarkaç",
+            "E": "El düzeci"
+          },
+          "dogru": "D",
+          "cozum": "Breithaupt pusulasında eğim açısı pusula içindeki oynar sarkaç yardımıyla okunur; silindirik kabarcıklı düzeç Brunton pusulasına aittir.",
+          "siklar": {
+            "A": "Silindirik kabarcıklı düzeç Brunton pusulasının eğim açısı düzeneğidir; düzeç yataylanarak açı ölçülür. Breithaupt pusulasında bu iş başka parçayla yapılır.",
+            "B": "Ayna göz hizası ve düzlem konumu doğruluğunu sağlar. Eğim açısının değerini vermez, yalnız doğru hizalamaya yardım eder.",
+            "C": "Altimetre hava basıncından yükseklik ölçer ve yer belirlemede pusulayla birlikte kullanılır. Tabakanın eğim açısını okumakla ilgisi yoktur.",
+            "D": "Breithaupt pusulasının içinde oynar bir sarkaç bulunur. Pusula eğildiğinde sarkaç düşeyi korur ve eğim açısı onun yardımıyla okunur.",
+            "E": "El düzeci düzey ölçerdir ve pusulanın yataylığını denetler. Breithaupt pusulasında eğim açısını okutan parça olarak anlatılmamıştır."
+          },
+          "ses_cozum": "Braythaupt pusulasında eğim açısı, pusula içindeki oynar sarkaç yardımıyla okunur. Silindirik kabarcıklı düzeç ise brantın pusulasına aittir; orada düzeç yataylanarak açı ölçülür, bu ikisi birbirine karıştırılmamalı."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Jeolog pusulasının tabanında E–W harfleri neden yer değiştirmiş olarak yazılır?",
+          "secenekler": {
+            "A": "İbre saat ibresinin tersi yönünde döndüğü için",
+            "B": "Dereceli daire 0°–360° kalibre edildiği için",
+            "C": "Ayna görüntüyü ters çevirdiği için",
+            "D": "Manyetik deklinasyon her yıl değiştiği için",
+            "E": "Klinometre düşey konumda çalıştığı için"
+          },
+          "dogru": "A",
+          "cozum": "E–W harflerinin yer değiştirmesi, ibrenin saat ibresinin tersi yönünde dönmesinden kaynaklanır; böylece ibre ucu yönü doğrudan okutur.",
+          "siklar": {
+            "A": "Pusula çevrilirken ibre kadrana göre saat ibresinin tersi yönünde döner. Harfler yer değiştirince ibrenin ucu bakılan yönü doğrudan okutur.",
+            "B": "Dereceli dairenin 0°–360° kalibre edilmesi azimut sistemiyle ilgilidir. Bu bölümleme doğu ve batı harflerinin yerini açıklamaz.",
+            "C": "Ayna göz hizası ve düzlem konumu doğruluğu için kullanılır. Kadrandaki harflerin yazılış yeri aynadaki görüntüye göre belirlenmez.",
+            "D": "Deklinasyon manyetik kuzey ile gerçek kuzey arasındaki açıdır ve güncel haritayla düzeltilir. Harflerin kadrandaki yerini etkilemez.",
+            "E": "Klinometre eğim açısını ölçer ve o ölçümde taban düşey tutulur. Bunun kadrandaki yön harflerinin diziliş nedeni olmasıyla ilgisi yoktur."
+          },
+          "ses_cozum": "Tabandaki doğu ve batı harfleri, ibre saat ibresinin tersi yönünde döndüğü için yer değiştirmiş yazılır. Aynanın görevi ise yalnız göz hizası ve düzlem konumunu doğrulamaktır."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Pusulanın S kenarı tabakaya yaslanarak eğim yönü ölçülüyor. Eğim yönünü aşağıdakilerden hangisi gösterir?",
+          "secenekler": {
+            "A": "İbrenin S ucu",
+            "B": "Klinometre düzeci",
+            "C": "Oynar sarkaç",
+            "D": "El düzecinin kabarcığı",
+            "E": "İbrenin N ucu"
+          },
+          "dogru": "E",
+          "cozum": "Eğim yönü, N kenarı yaslanırsa ibrenin S ucu, S kenarı yaslanırsa ibrenin N ucu tarafından gösterilir.",
+          "siklar": {
+            "A": "İbrenin S ucu, pusulanın N kenarı düzleme yaslandığında eğim yönünü gösterir. Burada yaslanan S kenarı olduğu için okunacak uç bu değildir.",
+            "B": "Klinometre düzeci eğim açısını, yani tabakanın yatayla yaptığı açıyı okutur. Eğimin hangi yöne olduğunu göstermez.",
+            "C": "Oynar sarkaç Breithaupt pusulasında eğim açısını okumaya yarar. Açının büyüklüğünü verir, eğim yönünü ibre gösterir.",
+            "D": "El düzecinin kabarcığı pusulanın yatay durduğunu gösterir. Düzeyi denetler; eğim yönü hakkında bir okuma vermez.",
+            "E": "Yaslanan kenar ile okunan uç terstir. S kenarı düzleme yaslandığında eğim yönünü ibrenin N ucu gösterir."
+          },
+          "ses_cozum": "Yaslanan kenar ile okunan uç terstir. Es kenarını yasladıysan eğim yönünü ibrenin en ucu gösterir. İbrenin es ucu ise ancak en kenarı ölçülecek düzleme yaslandığında okunur."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Eğim yönü güneydoğu olarak ölçülen bir tabakanın doğrultusu aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Kuzey–güney",
+            "B": "Doğu–batı",
+            "C": "Kuzeydoğu–güneybatı",
+            "D": "Kuzeybatı–güneydoğu",
+            "E": "Yalnız güneydoğu"
+          },
+          "dogru": "C",
+          "cozum": "Eğim yönü daima doğrultuya diktir. Güneydoğuya dik olan çizgi kuzeydoğu–güneybatı uzanır.",
+          "siklar": {
+            "A": "Kuzey–güney çizgisi güneydoğu yönüyle dik açı değil, yarım dik açı yapar. Eğim yönü doğrultuya dik olmak zorunda olduğundan uymaz.",
+            "B": "Doğu–batı çizgisi de güneydoğu ile yarım dik açı yapar. Bu doğrultuya dik eğim yönü ancak kuzey ya da güney olabilir.",
+            "C": "Eğim yönü daima doğrultuya diktir. Güneydoğu yönüne dik uzanan çizgi kuzeydoğu–güneybatıdır; eğim yönü kuzeydoğu örneğinin bir çeyrek tur dönmüş biçimidir.",
+            "D": "Kuzeybatı–güneydoğu çizgisi eğim yönüyle aynı hat üzerindedir, ona dik değildir. Bu doğrultu, eğim yönü kuzeydoğu olan tabakaya aittir.",
+            "E": "Doğrultu yatay bir çizginin yönüdür ve iki uçlu yazılır. Tek bir yön olan güneydoğu burada eğim yönünün kendisidir, doğrultu olamaz."
+          },
+          "ses_cozum": "Eğim yönü daima doğrultuya diktir. Güneydoğuya dik uzanan çizgi kuzeydoğu güneybatıdır. Kuzeybatı güneydoğu çizgisi ise eğim yönüyle aynı hat üzerinde kaldığı için bu tabakanın doğrultusu olamaz."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Aşağıdakilerden hangisi doğrultu ölçümünde seviye (horizontallik) hatasına yol açar?",
+          "secenekler": {
+            "A": "Ölçümü lokasyon numarasıyla deftere yazmak",
+            "B": "Kabarcıklı düzecin ortalanmaması",
+            "C": "Yüzeyi defterle düzleştirmek",
+            "D": "Dereceli daireyi azimut sistemine göre okumak",
+            "E": "Aynayla göz hizasını denetlemek"
+          },
+          "dogru": "B",
+          "cozum": "Kabarcıklı düzeç ortalanmamışsa taban yatay değildir ve sonuçlar seviye (horizontallik) hatası içerir.",
+          "siklar": {
+            "A": "Ölçümleri lokasyon numaralı notlarla saha defterine yazmak doğru kayıt alışkanlığıdır. Ölçümün kendisini etkilemez, hataya yol açmaz.",
+            "B": "Kabarcık ortada değilse pusula tabanı yatay değildir. Doğrultu yatay tabanla ölçüldüğünden sonuç seviye hatası içerir.",
+            "C": "Tabaka yüzeyi düzgün değilse jeolog çekici ya da defter ile düzleştirilir. Bu uygulama ölçümü bozmaz, tersine doğruluğu artırır.",
+            "D": "Dereceli daire zaten azimut sistemine göre 0°–360° kalibre edilmiştir. Onu bu sisteme göre okumak olağan kullanımdır.",
+            "E": "Ayna göz hizası ve düzlem konumu doğruluğunu sağlamak için vardır. Onunla hizayı denetlemek hatayı azaltan bir adımdır."
+          },
+          "ses_cozum": "Kabarcıklı düzeç ortalanmamışsa taban yatay değildir ve doğrultu ölçümü seviye hatası içerir. Düzgün olmayan yüzeyi jeolog çekici ya da defterle düzleştirmek ise hata değil, doğru bir hazırlıktır."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Jeolog pusulasıyla eğim açısı ölçümüne ilişkin aşağıdakilerden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Klinometre düzeci yardımıyla okunur",
+            "B": "Klinometreli kenar düzleme dik tutulur",
+            "C": "Brunton'da silindirik kabarcıklı düzeç yataylanır",
+            "D": "Pusula tabanı yatay konumda tutulur",
+            "E": "Breithaupt'ta oynar sarkaç kullanılır"
+          },
+          "dogru": "D",
+          "cozum": "Eğim açısının doğruluğu pusula tabanının düşey konumda tutulmasına bağlıdır; yatay taban doğrultu ölçümünün koşuludur.",
+          "siklar": {
+            "A": "Eğim açısı klinometre düzeci yardımıyla okunur; klinometre zaten eğim ölçer demektir. İfade ölçümün temelini doğru anlatır.",
+            "B": "Eğim ölçümü sırasında pusulanın klinometreli kenarı ölçülen düzleme dik konumda tutulur. İfade doğru bir uygulamayı anlatır.",
+            "C": "Brunton pusulasında eğim açısı, silindirik kabarcıklı düzeç yataylanarak ölçülür. İfade bu pusulanın düzeneğini doğru tanımlar.",
+            "D": "Yatay taban doğrultu ölçümünün koşuludur. Klinometreyle eğim açısı ölçülürken taban düşey konumda tutulur; yatay tutulursa açı doğru okunamaz.",
+            "E": "Breithaupt pusulasında eğim açısı, pusula içindeki oynar sarkaç yardımıyla okunur. İfade bu pusulanın düzeneğini doğru tanımlar."
+          },
+          "ses_cozum": "Eğim açısı ölçülürken pusula tabanı düşey konumda tutulur. Yatay taban ise doğrultu ölçümünün koşuludur. İki ölçümün taban konumu birbirine karıştırıldığında işte tam bu hataya düşülür."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Saha defterine DDD gösterimiyle 120/40 yazılmıştır. Bu kayıt için aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Eğim yönü 120°, eğim açısı 40°",
+            "B": "Doğrultu 120°, eğim açısı 40°",
+            "C": "Eğim açısı 120°, eğim yönü 40°",
+            "D": "Doğrultu 40°, eğim yönü 120°",
+            "E": "Dalım yönü 120°, yükseklik 40 m"
+          },
+          "dogru": "A",
+          "cozum": "DDD (dip direction–dip amount) gösteriminde ilk sayı eğim yönü, ikinci sayı eğim açısıdır: eğim yönü 120°, eğim açısı 40°.",
+          "siklar": {
+            "A": "DDD gösteriminde ilk sayı eğim yönünü, ikinci sayı eğim açısını verir. Buna göre tabaka 120° yönüne doğru 40° eğimlidir.",
+            "B": "Doğrultu yönünün yazıldığı gösterim strike–dip gösterimidir ve üç bilgi içerir. DDD gösteriminde ilk sayı doğrultu değil eğim yönüdür.",
+            "C": "Sayıların anlamı ters çevrilmiştir. İlk sayı eğim yönü, ikinci sayı eğim açısıdır; üstelik bir tabakanın yatayla açısı 120° olamaz.",
+            "D": "DDD gösteriminde doğrultu yazılmaz; doğrultu, eğim yönüne dik olduğu için ondan çıkarılır. Sayıların sırası da burada karıştırılmıştır.",
+            "E": "Dalım yönü çizgisel yapılara ait bir büyüklüktür ve yükseklik altimetreyle ölçülür. DDD gösterimi düzlemin eğim yönünü ve eğim açısını bildirir."
+          },
+          "ses_cozum": "De de de gösteriminde ilk sayı eğim yönü, ikinci sayı eğim açısıdır. Yani tabaka yüz yirmi derece yönüne kırk derece eğimlidir. Doğrultu bu gösterimde ayrıca yazılmaz."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 480" role="img" aria-label="Eşyükselti eğrileri: kuşbakışı harita ve aynı arazinin yandan kesiti">
+<rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+<g font-family="Inter, 'Liberation Sans', Arial, sans-serif" fill="#1E2A2E" font-size="18">
+<g stroke="#2F5D50" stroke-width="3">
+<ellipse cx="345" cy="140" rx="215" ry="88" fill="#CFE0CF"/>
+<ellipse cx="322.500" cy="140" rx="162.500" ry="66" fill="#CFE0CF"/>
+<ellipse cx="300" cy="140" rx="110" ry="44" fill="#7FA387"/>
+<ellipse cx="277.500" cy="140" rx="57.500" ry="22" fill="#7FA387"/>
+</g>
+<text x="277.500" y="146" text-anchor="middle" font-weight="700">Tepe</text>
+<path d="M130 404 L220 314 Q262 272 335 314 L560 404Z" fill="#7FA387" stroke="#2F5D50" stroke-width="3" stroke-linejoin="round"/>
+<path d="M100 404 H590" stroke="#2F5D50" stroke-width="3" stroke-linecap="round"/>
+<g stroke="#1E2A2E" stroke-width="1.500" stroke-dasharray="4 5" opacity=".6">
+<path d="M130 140 V404 M160 140 V374 M190 140 V344 M220 140 V314 M335 140 V314 M410 140 V344 M485 140 V374 M560 140 V404"/>
+</g>
+<g fill="#1E2A2E"><circle cx="130" cy="140" r="3.500"/><circle cx="160" cy="140" r="3.500"/><circle cx="190" cy="140" r="3.500"/><circle cx="220" cy="140" r="3.500"/><circle cx="335" cy="140" r="3.500"/><circle cx="410" cy="140" r="3.500"/><circle cx="485" cy="140" r="3.500"/><circle cx="560" cy="140" r="3.500"/>
+<circle cx="160" cy="374" r="3.500"/><circle cx="190" cy="344" r="3.500"/><circle cx="220" cy="314" r="3.500"/><circle cx="335" cy="314" r="3.500"/><circle cx="410" cy="344" r="3.500"/><circle cx="485" cy="374" r="3.500"/></g>
+<text x="170" y="440" text-anchor="middle" font-weight="600">Sık çizgi = dik</text>
+<text x="440" y="440" text-anchor="middle" font-weight="600">Seyrek çizgi = yatık</text>
+
+<circle cx="680" cy="100" r="42" fill="#fff" stroke="#1E2A2E" stroke-width="3"/>
+<path d="M680 66 L692 100 H668Z" fill="#C8553D"/>
+<path d="M680 134 L692 100 H668Z" fill="#1E2A2E"/>
+<circle cx="680" cy="100" r="4" fill="#fff"/>
+<text x="680" y="48" text-anchor="middle" font-size="20" font-weight="700">K</text>
+
+<ellipse cx="606" cy="238" rx="17" ry="12" fill="#CFE0CF" stroke="#2F5D50" stroke-width="3"/>
+<ellipse cx="606" cy="238" rx="7" ry="4.500" fill="#7FA387" stroke="#2F5D50" stroke-width="3"/>
+<text x="634" y="234" font-weight="600">Kapalı halka</text>
+<text x="634" y="258" font-weight="600">= tepe</text>
+
+<rect x="584" y="318" width="192" height="96" rx="16" fill="#fff"/>
+<text x="680" y="358" text-anchor="middle" font-size="28" font-weight="700" fill="#2F5D50">1:25.000</text>
+<path d="M606 388 h22 m-8 -7 l8 7 l-8 7" fill="none" stroke="#D9865B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="640" y="394">1 cm = 250 m</text>
+</g>
+</svg>

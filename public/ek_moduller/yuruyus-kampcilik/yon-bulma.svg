@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 480" role="img" aria-label="Pusulasız yön bulma: gündüz kol saatiyle güney, gece Büyükayı ile Kutup Yıldızı">
+<rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+<defs><clipPath id="np"><rect x="412" y="24" width="364" height="432" rx="20"/></clipPath></defs>
+<g font-family="Inter, 'Liberation Sans', Arial, sans-serif" fill="#1E2A2E" font-size="18">
+<rect x="24" y="24" width="364" height="432" rx="20" fill="#CDE3EA"/>
+<g stroke="#F2C14E" stroke-width="5" stroke-linecap="round"><path d="M76 104 v10 M76 166 v10 M40 140 h10 M102 140 h10 M50.500 114.500 l7 7 M94.500 158.500 l7 7 M101.500 114.500 l-7 7 M57.500 158.500 l-7 7"/></g>
+<circle cx="76" cy="140" r="20" fill="#F2C14E"/>
+<rect x="176" y="100" width="60" height="44" rx="8" fill="#2F5D50"/>
+<rect x="176" y="286" width="60" height="44" rx="8" fill="#2F5D50"/>
+<circle cx="206" cy="215" r="90" fill="#fff" stroke="#1E2A2E" stroke-width="3"/>
+<path d="M206 215 L155.800 186 A58 58 0 0 1 235 164.800Z" fill="#F2C14E"/>
+<g stroke="#1E2A2E" stroke-width="3" stroke-linecap="round">
+<path d="M206 131 v6 M206 293 v6 M122 215 h6 M284 215 h6 M164 142.300 l3 5.200 M245 282.500 l3 5.200 M133.300 173 l5.200 3 M273.500 254 l5.200 3 M133.300 257 l5.200 -3 M273.500 176 l5.200 -3 M164 287.700 l3 -5.200 M245 147.500 l3 -5.200"/></g>
+<circle cx="241" cy="156" r="14" fill="#F2C14E" stroke="#1E2A2E" stroke-width="2"/>
+<g font-weight="700" text-anchor="middle"><text x="206" y="160">12</text><text x="241" y="162.500">1</text><text x="270" y="221.500">3</text><text x="206" y="286">6</text><text x="142" y="221.500">9</text></g>
+<path d="M128 170 L98 153" stroke="#2F5D50" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+<path d="M206 215 L154 185" stroke="#1E2A2E" stroke-width="8" stroke-linecap="round"/>
+<path d="M206 215 L168.700 75.300" stroke="#D9865B" stroke-width="8" stroke-linecap="round"/>
+<path d="M163 52 L182.300 71.700 L155.100 79Z" fill="#D9865B" stroke="#D9865B" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="206" cy="215" r="7" fill="#1E2A2E"/>
+<text x="192" y="66" font-size="26" font-weight="700">GÜNEY</text>
+<text x="206" y="388" text-anchor="middle" font-weight="600">Akrep güneşe</text>
+<text x="206" y="414" text-anchor="middle">akrep ile 1'in ortası güney</text>
+
+<g clip-path="url(#np)">
+<rect x="412" y="24" width="364" height="432" fill="#24384F"/>
+<path d="M412 424 C470 392 520 402 580 414 C650 428 720 398 776 406 V456 H412Z" fill="#2F5D50"/>
+</g>
+<g fill="#fff"><circle cx="440" cy="60" r="2"/><circle cx="500" cy="96" r="1.500"/><circle cx="560" cy="52" r="2"/><circle cx="470" cy="150" r="1.500"/><circle cx="600" cy="140" r="1.500"/><circle cx="745" cy="190" r="2"/><circle cx="720" cy="290" r="1.500"/><circle cx="650" cy="350" r="2"/><circle cx="440" cy="300" r="1.500"/><circle cx="480" cy="372" r="2"/><circle cx="752" cy="352" r="1.500"/><circle cx="620" cy="76" r="1.500"/></g>
+<path d="M452 220 L486 214 L520 226 L556 246 L610 270 L592 300 L540 282 L556 246" fill="none" stroke="#CDE3EA" stroke-width="2.500" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M616 260 L692 133" stroke="#F2C14E" stroke-width="3" stroke-dasharray="7 8" stroke-linecap="round"/>
+<g fill="#fff"><circle cx="452" cy="220" r="6"/><circle cx="486" cy="214" r="6"/><circle cx="520" cy="226" r="6"/><circle cx="556" cy="246" r="6"/><circle cx="540" cy="282" r="6"/><circle cx="592" cy="300" r="7.500"/><circle cx="610" cy="270" r="7.500"/></g>
+<path d="M700 98 L706 114 L722 120 L706 126 L700 142 L694 126 L678 120 L694 114Z" fill="#F2C14E"/>
+<g fill="#fff">
+<text x="756" y="58" text-anchor="end" font-size="20">Kutup Yıldızı</text>
+<text x="756" y="88" text-anchor="end" font-size="26" font-weight="700">= KUZEY</text>
+<text x="672" y="212" font-size="20" font-weight="700">5 kat</text>
+<text x="506" y="340" text-anchor="middle" fill="#CDE3EA">Büyükayı</text>
+</g>
+</g>
+</svg>

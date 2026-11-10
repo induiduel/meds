@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 480" role="img" aria-label="Üçler kuralı ve vücut sıcaklığı kademeleri">
+<rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+<defs><clipPath id="tb"><rect x="474" y="48" width="28" height="350" rx="14"/></clipPath></defs>
+<g font-family="Inter, 'Liberation Sans', Arial, sans-serif" fill="#1E2A2E" font-size="20">
+<g transform="translate(24,24)"><rect width="188" height="204" rx="20" fill="#fff"/><circle cx="94" cy="54" r="34" fill="#CFE0CF"/>
+<path d="M74 44 h30 a8 8 0 1 0 -8 -8 M74 56 h42 M74 68 h24 a7 7 0 1 1 -7 7" fill="none" stroke="#2F5D50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="94" y="140" text-anchor="middle" font-weight="700" fill="#2F5D50"><tspan font-size="40">3</tspan><tspan font-size="26" dx="6">dk</tspan></text>
+<text x="94" y="176" text-anchor="middle" font-weight="600">havasız</text></g>
+<g transform="translate(228,24)"><rect width="188" height="204" rx="20" fill="#fff"/><circle cx="94" cy="54" r="34" fill="#CFE0CF"/>
+<path d="M94 32 L118 72 H70Z" fill="#D9865B"/><path d="M94 52 L102 72 H86Z" fill="#1E2A2E"/>
+<text x="94" y="140" text-anchor="middle" font-weight="700" fill="#2F5D50"><tspan font-size="40">3</tspan><tspan font-size="26" dx="6">saat</tspan></text>
+<text x="94" y="176" text-anchor="middle" font-weight="600">barınaksız</text></g>
+<g transform="translate(24,252)"><rect width="188" height="204" rx="20" fill="#fff"/><circle cx="94" cy="54" r="34" fill="#CFE0CF"/>
+<path transform="translate(94,56)" d="M0 -22 C10 -8 16 0 16 7 A16 16 0 0 1 -16 7 C-16 0 -10 -8 0 -22Z" fill="#24384F"/>
+<text x="94" y="140" text-anchor="middle" font-weight="700" fill="#2F5D50"><tspan font-size="40">3</tspan><tspan font-size="26" dx="6">gün</tspan></text>
+<text x="94" y="176" text-anchor="middle" font-weight="600">susuz</text></g>
+<g transform="translate(228,252)"><rect width="188" height="204" rx="20" fill="#fff"/><circle cx="94" cy="54" r="34" fill="#CFE0CF"/>
+<path transform="translate(94,54)" d="M0 -8 C-8 -16 -20 -10 -18 4 C-16 18 -6 22 0 17 C6 22 16 18 18 4 C20 -10 8 -16 0 -8Z" fill="#C8553D"/>
+<path d="M94 46 C94 40 96 36 100 33" fill="none" stroke="#1E2A2E" stroke-width="3" stroke-linecap="round"/>
+<text x="94" y="140" text-anchor="middle" font-weight="700" fill="#2F5D50"><tspan font-size="40">3</tspan><tspan font-size="26" dx="6">hafta</tspan></text>
+<text x="94" y="176" text-anchor="middle" font-weight="600">aç</text></g>
+
+<rect x="466" y="40" width="44" height="380" rx="22" fill="#fff" stroke="#1E2A2E" stroke-width="3"/>
+<circle cx="488" cy="412" r="34" fill="#24384F" stroke="#1E2A2E" stroke-width="3"/>
+<g clip-path="url(#tb)">
+<rect x="474" y="48" width="28" height="64" fill="#C8553D"/>
+<rect x="474" y="112" width="28" height="64" fill="#7FA387"/>
+<rect x="474" y="176" width="28" height="64" fill="#CDE3EA"/>
+<rect x="474" y="240" width="28" height="64" fill="#24384F" fill-opacity=".5"/>
+<rect x="474" y="304" width="28" height="94" fill="#24384F"/>
+</g>
+<g stroke="#1E2A2E" stroke-width="3" stroke-linecap="round"><path d="M512 80 h14 M512 144 h14 M512 208 h14 M512 272 h14 M512 336 h14"/></g>
+<g font-weight="700">
+<text x="536" y="76" fill="#C8553D">40 °C üstü</text>
+<text x="536" y="140">36,5–37,5 °C</text>
+<text x="536" y="204">35–32 °C</text>
+<text x="536" y="268">32–28 °C</text>
+<text x="536" y="332">28 °C altı</text></g>
+<g font-size="18">
+<text x="536" y="99">sıcak çarpması</text>
+<text x="536" y="163">normal</text>
+<text x="536" y="227">hafif: titreme</text>
+<text x="536" y="291">orta: titreme durur</text>
+<text x="536" y="355">ağır</text></g>
+</g>
+</svg>

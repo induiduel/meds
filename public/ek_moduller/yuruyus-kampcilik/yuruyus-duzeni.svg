@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Yürüyüş düzeni: tek sıra, önde rehber (öncü), arkada artçı en deneyimli ikinci kişi, tempo en yavaşa göre; az ama sık su, fener yere adım önüne, 3 kısa düdük yardım">
+  <rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+  <defs><clipPath id="bg"><rect width="800" height="480" rx="28"/></clipPath></defs>
+  <g font-family="Inter, 'Liberation Sans', Arial, sans-serif" font-size="18" fill="#1E2A2E" stroke-linecap="round" stroke-linejoin="round">
+
+<circle cx="700" cy="70" r="26" fill="#F2C14E"/>
+<g clip-path="url(#bg)"><path d="M0,336 L800,150 V480 H0Z" fill="#7FA387"/><path d="M0,372 L800,250 V480 H0Z" fill="#CFE0CF"/></g>
+<g transform="translate(130,307.775) scale(1.15)">
+<path d="M-1,-28 L-9,-1 M-1,-28 L9,-2" stroke="#1E2A2E" stroke-width="6" fill="none"/>
+<rect x="-18" y="-55" width="14" height="24" rx="5" fill="#2F5D50"/>
+<path d="M-1,-29 L3,-50" stroke="#F2C14E" stroke-width="13" fill="none"/>
+<path d="M4,-47 L18,-36" stroke="#F2C14E" stroke-width="5" fill="none"/><path d="M18,-36 L21,-1" stroke="#1E2A2E" stroke-width="3" fill="none"/>
+<circle cx="6" cy="-64" r="8" fill="#1E2A2E"/></g><g transform="translate(250,279.875) scale(1.15)">
+<path d="M-1,-28 L-9,-1 M-1,-28 L9,-2" stroke="#1E2A2E" stroke-width="6" fill="none"/>
+<rect x="-18" y="-55" width="14" height="24" rx="5" fill="#2F5D50"/>
+<path d="M-1,-29 L3,-50" stroke="#24384F" stroke-width="13" fill="none"/>
+<path d="M4,-47 L18,-36" stroke="#24384F" stroke-width="5" fill="none"/><path d="M18,-36 L21,-1" stroke="#1E2A2E" stroke-width="3" fill="none"/>
+<circle cx="6" cy="-64" r="8" fill="#1E2A2E"/></g><g transform="translate(370,251.975) scale(1.15)">
+<path d="M-1,-28 L-9,-1 M-1,-28 L9,-2" stroke="#1E2A2E" stroke-width="6" fill="none"/>
+<rect x="-18" y="-55" width="14" height="24" rx="5" fill="#2F5D50"/>
+<path d="M-1,-29 L3,-50" stroke="#D9865B" stroke-width="13" fill="none"/>
+<path d="M4,-47 L18,-36" stroke="#D9865B" stroke-width="5" fill="none"/><path d="M18,-36 L21,-1" stroke="#1E2A2E" stroke-width="3" fill="none"/>
+<circle cx="6" cy="-64" r="8" fill="#1E2A2E"/></g><g transform="translate(490,224.075) scale(1.15)">
+<path d="M-1,-28 L-9,-1 M-1,-28 L9,-2" stroke="#1E2A2E" stroke-width="6" fill="none"/>
+<rect x="-18" y="-55" width="14" height="24" rx="5" fill="#2F5D50"/>
+<path d="M-1,-29 L3,-50" stroke="#24384F" stroke-width="13" fill="none"/>
+<path d="M4,-47 L18,-36" stroke="#24384F" stroke-width="5" fill="none"/><path d="M18,-36 L21,-1" stroke="#1E2A2E" stroke-width="3" fill="none"/>
+<circle cx="6" cy="-64" r="8" fill="#1E2A2E"/></g><g transform="translate(610,196.17499999999998) scale(1.15)">
+<path d="M-1,-28 L-9,-1 M-1,-28 L9,-2" stroke="#1E2A2E" stroke-width="6" fill="none"/>
+<rect x="-18" y="-55" width="14" height="24" rx="5" fill="#2F5D50"/>
+<path d="M-1,-29 L3,-50" stroke="#C8553D" stroke-width="13" fill="none"/>
+<path d="M4,-47 L18,-36" stroke="#C8553D" stroke-width="5" fill="none"/><path d="M18,-36 L21,-1" stroke="#1E2A2E" stroke-width="3" fill="none"/>
+<circle cx="6" cy="-64" r="8" fill="#1E2A2E"/></g>
+<text x="40" y="170" font-size="20" font-weight="700" fill="#2F5D50">Artçı</text>
+<text x="40" y="194">en deneyimli ikinci kişi</text>
+<text x="370" y="132" font-size="20" font-weight="700" fill="#2F5D50" text-anchor="middle">Tempo en yavaşa göre</text>
+<text x="590" y="72" font-size="20" font-weight="700" fill="#2F5D50" text-anchor="middle">Rehber (öncü)</text>
+<g stroke="#1E2A2E" stroke-width="3" fill="none"><path d="M137,206 V216"/><path d="M377,144 V160"/><path d="M617,84 V104"/></g>
+<rect x="24" y="400" width="190" height="48" rx="24" fill="#FFFFFF"/><g transform="translate(50,424)"><path d="M0,-14 q13,19 0,27 q-13,-8 0,-27Z" fill="#CDE3EA" stroke="#24384F" stroke-width="3"/></g><text x="74" y="430">Az ama sık su</text><rect x="230" y="400" width="270" height="48" rx="24" fill="#FFFFFF"/><g transform="translate(256,424)"><path d="M-12,-10 l10,-6 l8,12 l-10,6Z" fill="#24384F"/><path d="M4,2 L14,14 H-4Z" fill="#F2C14E"/></g><text x="280" y="430">Fener yere, adım önüne</text><rect x="516" y="400" width="260" height="48" rx="24" fill="#FFFFFF"/><g transform="translate(542,424)"><circle cx="-3" cy="2" r="10" fill="#D9865B"/><rect x="-3" y="-8" width="18" height="9" rx="2" fill="#D9865B"/><circle cx="-3" cy="2" r="3.500" fill="#FFFFFF"/></g><text x="566" y="430">3 kısa düdük = yardım</text>
+
+  </g>
+</svg>

@@ -34,6 +34,7 @@ import { registerKampRoutes } from './src/services/kampRoutes';
 import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import { registerPatolojiCozucuAltRoutes } from './src/services/patolojiCozucuAlt';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
+import { registerEkModulSesRoutes } from './src/services/ekModulSes';
 import { registerOgrenSesRoutes } from './src/services/ogrenSes';
 import { registerTerimSesRoutes } from './src/services/terimSes';
 import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalog';
@@ -171,6 +172,7 @@ import {
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
+import { registerAsistanRoutes } from './src/services/asistan/routes.ts';
 import { registerBakimHataRoutes } from './src/services/bakimHataRoutes.ts';
 import { denetimAraKatmani, registerDenetimRoutes } from './src/services/yonetim16/denetim.ts';
 import { registerSiteAyarRoutes, bayrakKapisi, icerikKapisi } from './src/services/yonetim16/siteAyar.ts';
@@ -2999,6 +3001,7 @@ registerKampRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin
 registerPatolojiCozucuRoutes(app);
 registerPatolojiCozucuAltRoutes(app);
 registerCozucuSesRoutes(app);
+registerEkModulSesRoutes(app);
 registerCevrimdisiKatalogRoutes(app);
 registerOgrenSesRoutes(app);
 registerTerimSesRoutes(app);
@@ -10626,6 +10629,7 @@ app.post('/api/rag/ask', async (req, res) => {
 // 3. RAG Stats: Current indexing and database state
 // Saklanan vektörlerden ilgili/benzer/kopya içerik (embed servisi gerekmez)
 registerRagRelatedRoutes(app);
+registerAsistanRoutes(app);
 
 app.get('/api/rag/stats', async (req, res) => {
   try {

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 480" role="img" aria-label="Su: idrar rengi skalası, doğada su bulma ipuçları ve günlük su ihtiyacı">
+<rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+<defs>
+<clipPath id="sk"><rect x="48" y="40" width="60" height="316" rx="18"/></clipPath>
+<clipPath id="pn"><rect x="10" y="10" width="230" height="96" rx="12"/></clipPath>
+<g id="paw"><ellipse cx="0" cy="6" rx="11" ry="9"/><circle cx="-13" cy="-5" r="4.5"/><circle cx="-5" cy="-12" r="4.5"/><circle cx="5" cy="-12" r="4.5"/><circle cx="13" cy="-5" r="4.5"/></g>
+<path id="leaf" d="M0 0 C-20 -18 -20 -52 0 -72 C20 -52 20 -18 0 0Z"/>
+</defs>
+<g font-family="Inter, 'Liberation Sans', Arial, sans-serif" fill="#1E2A2E" font-size="20">
+<g clip-path="url(#sk)">
+<rect x="48" y="40" width="60" height="79" fill="#FBF2C0"/>
+<rect x="48" y="119" width="60" height="79" fill="#F2D766"/>
+<rect x="48" y="198" width="60" height="79" fill="#E3A72F"/>
+<rect x="48" y="277" width="60" height="79" fill="#B5701C"/>
+</g>
+<rect x="48" y="40" width="60" height="316" rx="18" fill="none" stroke="#1E2A2E" stroke-width="3"/>
+<text x="126" y="87" font-weight="700">İyi</text>
+<text x="126" y="166">Yeterli</text>
+<text x="126" y="245">Su iç</text>
+<text x="126" y="324" font-weight="700">Susuzsun</text>
+
+<g transform="translate(252,40)">
+<rect width="250" height="150" rx="18" fill="#fff"/>
+<g clip-path="url(#pn)">
+<rect x="10" y="10" width="230" height="96" fill="#F4EEE2"/>
+<ellipse cx="125" cy="104" rx="46" ry="12" fill="#CDE3EA"/>
+<path d="M10 26 L100 106 H10Z" fill="#7FA387"/>
+<path d="M240 20 L150 106 H240Z" fill="#2F5D50"/>
+</g>
+<path d="M125 22 V70 M112 58 L125 73 L138 58" fill="none" stroke="#D9865B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="125" y="134" text-anchor="middle" font-weight="600">Vadiye in</text>
+</g>
+
+<g transform="translate(522,40)">
+<rect width="250" height="150" rx="18" fill="#fff"/>
+<g clip-path="url(#pn)">
+<rect x="10" y="10" width="230" height="96" fill="#F4EEE2"/>
+<rect x="10" y="94" width="230" height="12" fill="#E4D8C3"/>
+<g transform="translate(125,98)">
+<use xlink:href="#leaf" fill="#7FA387" transform="rotate(-66) scale(.8)"/>
+<use xlink:href="#leaf" fill="#7FA387" transform="rotate(66) scale(.8)"/>
+<use xlink:href="#leaf" fill="#2F5D50" transform="rotate(-34)"/>
+<use xlink:href="#leaf" fill="#2F5D50" transform="rotate(34)"/>
+<use xlink:href="#leaf" fill="#7FA387" transform="scale(1.12)"/>
+</g>
+<g transform="translate(42,98) scale(.5)"><use xlink:href="#leaf" fill="#2F5D50" transform="rotate(-40)"/><use xlink:href="#leaf" fill="#2F5D50" transform="rotate(40)"/><use xlink:href="#leaf" fill="#7FA387"/></g>
+<g transform="translate(208,98) scale(.5)"><use xlink:href="#leaf" fill="#2F5D50" transform="rotate(-40)"/><use xlink:href="#leaf" fill="#2F5D50" transform="rotate(40)"/><use xlink:href="#leaf" fill="#7FA387"/></g>
+</g>
+<text x="125" y="134" text-anchor="middle" font-weight="600">Gür yeşil bitki</text>
+</g>
+
+<g transform="translate(252,206)">
+<rect width="250" height="150" rx="18" fill="#fff"/>
+<rect x="10" y="10" width="230" height="96" rx="12" fill="#F4EEE2"/>
+<g fill="#2F5D50">
+<use xlink:href="#paw" transform="translate(52,76) rotate(70)"/>
+<use xlink:href="#paw" transform="translate(98,42) rotate(70)"/>
+<use xlink:href="#paw" transform="translate(150,76) rotate(70)"/>
+<use xlink:href="#paw" transform="translate(196,42) rotate(70)"/>
+</g>
+<text x="125" y="134" text-anchor="middle" font-weight="600">Hayvan izleri</text>
+</g>
+
+<g transform="translate(522,206)">
+<rect width="250" height="150" rx="18" fill="#fff"/>
+<g clip-path="url(#pn)">
+<rect x="10" y="10" width="230" height="96" fill="#CDE3EA"/>
+<path d="M10 106 C30 82 62 88 80 106Z M170 106 C190 86 224 84 240 106Z" fill="#fff"/>
+<path d="M98 44 C102 20 148 20 152 44Z" fill="#fff"/>
+<rect x="92" y="46" width="66" height="36" rx="6" fill="#24384F"/>
+<rect x="85" y="42" width="80" height="8" rx="4" fill="#1E2A2E"/>
+<path d="M125 106 C108 106 106 93 116 86 C118 92 123 90 122 82 C136 87 144 106 125 106Z" fill="#D9865B"/>
+<path d="M125 106 C118 106 117 99 123 95 C130 98 132 106 125 106Z" fill="#F2C14E"/>
+<g fill="#fff"><circle cx="40" cy="34" r="4"/><circle cx="66" cy="58" r="3"/><circle cx="196" cy="30" r="4"/><circle cx="214" cy="60" r="3"/><circle cx="178" cy="54" r="3"/></g>
+</g>
+<text x="125" y="134" text-anchor="middle" font-weight="600">Karı eriterek iç</text>
+</g>
+
+<rect x="24" y="384" width="752" height="64" rx="20" fill="#2F5D50"/>
+<text x="400" y="423" text-anchor="middle" fill="#fff" font-weight="600">Dinlenirken 2–3 L/gün · sıcak yürüyüşte saatte 0,5–1 L</text>
+</g>
+</svg>

@@ -1,0 +1,712 @@
+{
+  "no": 2,
+  "baslik": "Dağ Ortamı",
+  "ozet": "Bastığın kayayı, üstünde yürüdüğün buzu, soluduğun ince havayı ve dağın canlılarını tanırsın.",
+  "konular": [
+    {
+      "id": "2a",
+      "baslik": "Kayaçlar ve buzullar",
+      "ozet": "Granit, kireçtaşı, gnays ve şistin kökeni; buzulun akışı ve dört yer adı.",
+      "gorsel": "kayac-buzul.svg",
+      "gorsel_alt": "Solda dört kayaç örneği ve kökenleri, sağda bergschrund, serak, moren ve buzul burnu işaretlenmiş bir buzul kesiti.",
+      "bolumler": [
+        {
+          "baslik": "Üç kayaç ailesi: ateş, su, baskı",
+          "ekran": "Dağı tanımak, bastığın kayayı tanımakla başlar.\n\n- **Magmatik:** magmanın soğuyup katılaşmasıyla oluşur; örneği **granit**\n- **Tortul (çökelti):** tabaka tabaka çökelen malzemeden oluşur; örneği **kireçtaşı**\n- **Başkalaşım:** eski kayanın basınç ve sıcaklıkla değişmesi; örnekleri **gnays** ve **şist**\n- **Granit:** yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur\n\n> [!IMPORTANT] Kireçtaşı çökelti kökenlidir, magmatik değildir; granit magmatiktir, tortul değildir.",
+          "ses": [
+            "Dağdaki her kaya üç aileden birine girer ve her ailenin doğum hikâyesi farklıdır.",
+            "Birinci aile magmatik kayalardır; bunlar erimiş magmanın soğuyup katılaşmasıyla doğar.",
+            "Granit bu ailenin en ünlü üyesidir ve yer kabuğunun altında, derinde oluşur.",
+            "Orada magma çok yavaş soğur, soğurken de kristalleşir; granit işte böyle ortaya çıkar.",
+            "İkinci aile tortul, yani çökelti kökenli kayalardır; malzeme tabaka tabaka birikir ve taşlaşır.",
+            "Kireçtaşı bu ailedendir; onu magmatik sanırsan yanılırsın.",
+            "Üçüncü aile başkalaşım kayalarıdır; eski bir kaya basınç ve sıcaklık altında yeni bir kayaya dönüşür."
+          ]
+        },
+        {
+          "baslik": "Başkalaşım kayaları: gnays, şist ve mermer",
+          "ekran": "Başkalaşım, bir kayanın erimeden kılık değiştirmesidir.\n\n- **Gnays:** yüksek basınç ve sıcaklık altında oluşmuş başkalaşım kayasıdır; bantlı görünür\n- **Şist:** yer kabuğu katlanması sırasında yüksek basınç altında oluşur; yaprak yaprak ayrılır\n- **Mermer:** kireçtaşının başkalaşmış hâlidir\n\n> [!NOTE] “Gnays kristalleri çıplak gözle görülebilir” ifadesi bu derste yanlış kabul edilir.",
+          "ses": [
+            "Başkalaşım kayası, erimeden değişen kayadır; onu değiştiren şey basınç ve sıcaklıktır.",
+            "Gnays, yüksek basınç ve yüksek sıcaklık altında oluşmuş bir başkalaşım kayasıdır.",
+            "Üzerindeki açık ve koyu bantlar, ona çizgili bir kumaş görünümü verir.",
+            "Bu derste gnays kristalleri çıplak gözle görülebilir ifadesi yanlış sayılır; bunu böyle bil.",
+            "Şist ise yer kabuğu katlanırken, yüksek basınç altında oluşur.",
+            "Katlanan kabuk kayayı öyle sıkıştırır ki şist ince yapraklar hâlinde ayrılır.",
+            "Bu yüzden şist kırılgandır; tutunduğun parça elinde kalabilir.",
+            "Kireçtaşı da başkalaşıma uğrar ve mermere dönüşür; mermer, kılık değiştirmiş kireçtaşıdır."
+          ]
+        },
+        {
+          "baslik": "Buzul: ağır ağır akan buz nehri",
+          "ekran": "Buzul, yıllarca biriken karın sıkışıp buza dönmesiyle oluşur ve durmaz, akar.\n\n- **Akış yönü:** eğim yönünde, yani aşağı doğrudur; eğimin tersine akmaz\n- **Hız:** her buzulda ve her yerde aynı değildir; sabit bir hız yoktur\n- **Nerede hızlı:** dik eğimde ve buzulun ortasında; kenarlarda sürtünme yavaşlatır\n- **İklim:** buzullar iklim değişikliğinin doğrudan göstergeleridir\n\n> [!IMPORTANT] Isınan iklimde buzul incelir ve geri çekilir.",
+          "ses": [
+            "Buzul, yıllar boyunca üst üste biriken karın sıkışıp buza dönüşmesiyle oluşur.",
+            "Yerinde duruyor gibi görünür ama aslında ağır ağır akan bir buz nehridir.",
+            "Akış yönü eğim yönündedir; buz da su gibi aşağıya iner, yokuş yukarı tırmanmaz.",
+            "Hızı ise sabit değildir; buzuldan buzula, hatta aynı buzulun içinde bile değişir.",
+            "Dik eğimde hızlanır, düzlükte yavaşlar; ortası kenarlarından hızlı akar.",
+            "Buzullar iklim değişikliğinin doğrudan göstergeleridir.",
+            "İklim ısındıkça buzul incelir, kısalır ve geri çekilir; dağ sana bunu açıkça gösterir."
+          ]
+        },
+        {
+          "baslik": "Buzulun dört yer adı",
+          "ekran": "Buzulu yukarıdan aşağıya dört sözcükle okuyabilirsin.\n\n- **Bergschrund:** buzul ile kaya duvarı arasındaki sınırı belirleyen buz çatlağı\n- **Serak:** buzul yüzeyinde oluşan dev buz kuleleri\n- **Moren:** buzulun taşıdığı döküntülerin birikmesiyle oluşur\n- **Buzul burnu:** buzulun inceldiği ve sonlandığı nokta\n\n> [!IMPORTANT] Serak, buzulun yatay ilerlediği yerde değil, dikleşip kırıldığı yerde oluşur.",
+          "ses": [
+            "Buzulun en tepesinde, kaya duvarına yaslandığı yerde derin bir çatlak görürsün.",
+            "Bu buz çatlağının adı bergşrunttur; buzul ile kaya duvarı arasındaki sınırı belirler.",
+            "Biraz aşağıda yatak dikleşir, buz bu eğime dayanamaz ve kırılır.",
+            "Kırılan buzdan dev buz kuleleri yükselir; bu kulelere serak denir.",
+            "Serak buzulun yatay ilerlediği düzlükte değil, dikleşip kırıldığı yerde oluşur.",
+            "Buzul yol boyunca taş ve toprak taşır; bu döküntülerin birikmesiyle morenler oluşur.",
+            "En aşağıda buz incelir ve biter; buzulun sonlandığı bu noktaya buzul burnu denir."
+          ]
+        },
+        {
+          "baslik": "Kayada ve buzda güvenli adım",
+          "ekran": "Kayanın ve buzun huyunu bilen, nereye basacağını da bilir.\n\n- **Granit:** genellikle sağlam ve pürüzlüdür, ayakkabı iyi tutar\n- **Kireçtaşı:** su onu zamanla eritir; oyuklu yüzeyler ve mağaralar oluşur\n- **Şist:** yapraklı ve kırılgandır; tutamak kopabilir\n- **Serak altı:** buz kulesi devrilebilir, altında oyalanılmaz\n- **Buzul yarığı:** kar altında gizlenebilir; buzulda iple bağlı yürünür",
+          "ses": [
+            "Kayanın türü, tırmanışın tadını da tehlikesini de belirler.",
+            "Granit genellikle sağlam ve pürüzlüdür; ayakkabının tabanı ona güzel tutunur.",
+            "Kireçtaşını su yavaş yavaş eritir; bu yüzden üzerinde oyuklar, delikler ve mağaralar bulursun.",
+            "Şist yapraklı yapısı yüzünden kırılgandır; tutamağa yüklenmeden önce onu hafifçe yokla.",
+            "Buzda ise iki yere dikkat et: serak ve yarık.",
+            "Dev buz kulesi her an devrilebilir; serak altında mola verilmez, oradan hızla geçilir.",
+            "Buzul yarıkları ince bir kar örtüsünün altında saklanabilir; bu yüzden buzulda ekip iple bağlı yürür."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "Ateş · Su · Baskı",
+        "acilim": "Granit ateşten (magma) · Kireçtaşı sudan (çökelti) · Gnays ve şist baskıdan (başkalaşım)",
+        "not": "Dört kayacın kökenini tek tekerlemeyle birbirinden ayırırsın."
+      },
+      "yap": [
+        "Tutamağa yüklenmeden önce kayayı yokla",
+        "Buzulda ekipçe iple bağlı yürü",
+        "Serak altından oyalanmadan geç",
+        "Buzulu yukarıdan aşağı dört adıyla oku"
+      ],
+      "yapma": [
+        "Serak altında mola verme",
+        "Kar örtülü buzulda ipsiz dolaşma",
+        "Granite tortul, kireçtaşına magmatik deme",
+        "Buzulun hızını her yerde aynı sanma"
+      ],
+      "spotlar": [
+        {
+          "metin": "**Kireçtaşı** çökelti (tortul) kökenli bir kayaçtır; magmatik değildir.",
+          "ses": "Kireçtaşı çökelti kökenli, yani tortul bir kayaçtır; magmatik değildir."
+        },
+        {
+          "metin": "**Granit**, yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur.",
+          "ses": "Granit, yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşan magmatik bir kayadır."
+        },
+        {
+          "metin": "**Gnays**, yüksek basınç ve sıcaklık altında oluşmuş başkalaşım kayasıdır.",
+          "ses": "Gnays, yüksek basınç ve sıcaklık altında oluşmuş bir başkalaşım kayasıdır."
+        },
+        {
+          "metin": "**Şist**, yer kabuğu katlanması sırasında yüksek basınç altında oluşur.",
+          "ses": "Şist, yer kabuğu katlanırken yüksek basınç altında oluşur ve yaprak yaprak ayrılır."
+        },
+        {
+          "metin": "Buzul **eğim yönünde** akar; hızı her yerde aynı değildir ve iklim değişikliğinin **doğrudan göstergesidir**.",
+          "ses": "Buzul eğim yönünde akar, hızı sabit değildir ve iklim değişikliğinin doğrudan göstergesidir."
+        },
+        {
+          "metin": "**Serak** buzul yüzeyindeki dev buz kulesidir; **moren** buzulun taşıdığı döküntünün birikintisidir.",
+          "ses": "Serak buzul yüzeyindeki dev buz kulesidir; moren ise buzulun taşıdığı döküntünün birikintisidir."
+        },
+        {
+          "metin": "**Bergschrund** buzul ile kaya duvarının sınırıdır; **buzul burnu** buzulun inceldiği ve sonlandığı noktadır.",
+          "ses": "Bergşrunt buzul ile kaya duvarının sınırını belirler; buzul burnu ise buzulun inceldiği ve sonlandığı noktadır."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "esle",
+          "baslik": "Kim nereden geliyor?",
+          "ciftler": [
+            {
+              "sol": "Granit",
+              "sag": "Yavaş soğuyan magma"
+            },
+            {
+              "sol": "Kireçtaşı",
+              "sag": "Çökelti kökenli"
+            },
+            {
+              "sol": "Serak",
+              "sag": "Dev buz kulesi"
+            },
+            {
+              "sol": "Moren",
+              "sag": "Taşınan döküntünün birikintisi"
+            },
+            {
+              "sol": "Buzul burnu",
+              "sag": "Buzulun sonlandığı nokta"
+            }
+          ]
+        },
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            {
+              "metin": "Granit, tortul kayaçlar arasında sayılır.",
+              "dogru": false,
+              "aciklama": "Granit magmatiktir; yer kabuğunun altında yavaş soğuyan magmadan kristalleşir."
+            },
+            {
+              "metin": "Şist, kabuk katlanırken yüksek basınç altında oluşur.",
+              "dogru": true,
+              "aciklama": "Şist bir başkalaşım kayasıdır ve katlanma sırasındaki yüksek basıncın ürünüdür."
+            },
+            {
+              "metin": "Buzullar çoğunlukla eğimin tersine doğru akar.",
+              "dogru": false,
+              "aciklama": "Buzul eğim yönünde, yani aşağıya doğru akar."
+            },
+            {
+              "metin": "Buzulların ilerleme hızı dünyanın her yerinde aynıdır.",
+              "dogru": false,
+              "aciklama": "Hız buzuldan buzula ve aynı buzulun içinde bile değişir."
+            },
+            {
+              "metin": "Buzulların geri çekilmesi iklim değişikliğini doğrudan gösterir.",
+              "dogru": true,
+              "aciklama": "Buzullar iklim değişikliğinin doğrudan göstergeleridir."
+            }
+          ]
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Kireçtaşı hangi kökenli bir kayaçtır?",
+          "secenekler": {
+            "A": "Magmatik",
+            "B": "Başkalaşım (metamorfik)",
+            "C": "Buzul döküntüsü",
+            "D": "Çökelti (tortul)",
+            "E": "Magmatik ve başkalaşım karışımı"
+          },
+          "dogru": "D",
+          "cozum": "Kireçtaşı çökelti kökenli, yani tortul bir kayaçtır. Magmatik olan kayaç ise granittir.",
+          "siklar": {
+            "A": "Magmatik kayalar magmanın soğuyup katılaşmasıyla oluşur; bunun örneği granittir. Kireçtaşı magmadan değil, çökelen malzemeden oluştuğu için bu aileye girmez.",
+            "B": "Başkalaşım kayaları eski bir kayanın basınç ve sıcaklıkla değişmesiyle oluşur; gnays ve şist böyledir. Kireçtaşı ancak başkalaşınca mermere dönüşür, kendisi bu ailede değildir.",
+            "C": "Buzulun taşıyıp biriktirdiği döküntü morendir; bu bir kayaç ailesi değil, bir birikinti şeklidir. Kireçtaşının kökenini anlatmaz.",
+            "D": "Çökelti kökenli kayalar malzemenin tabaka tabaka birikip taşlaşmasıyla oluşur. Kireçtaşı tam olarak bu ailenin örneğidir.",
+            "E": "Kayalar üç aileden birine girer ve kireçtaşının yeri tortul ailedir. Magmatik ile başkalaşımı karıştıran bu tanım kireçtaşının çökelerek oluşmasına uymaz."
+          },
+          "ses_cozum": "Kireçtaşı çökelti kökenli, yani tortul bir kayaçtır. Onu magmatik sanmak en sık yapılan yanlıştır; magmatik olan kireçtaşı değil, granittir. Tekerlemeyi hatırla: kireçtaşı sudan, granit ateşten gelir."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Buzulun taşıdığı döküntülerin birikmesiyle oluşan yapı aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Serak",
+            "B": "Moren",
+            "C": "Bergschrund",
+            "D": "Buzul burnu",
+            "E": "Buzul yarığı"
+          },
+          "dogru": "B",
+          "cozum": "Buzul yol boyunca taş ve toprak taşır; bu döküntülerin birikmesiyle moren oluşur.",
+          "siklar": {
+            "A": "Serak, buzulun dikleşip kırıldığı yerde yükselen dev buz kulesidir. Buzdan oluşur, taşınan döküntünün birikmesiyle ilgisi yoktur.",
+            "B": "Moren, buzulun yol boyunca taşıdığı taş ve toprak döküntüsünün birikmesiyle oluşan yığındır. Sorudaki tanım doğrudan onu anlatır.",
+            "C": "Bergschrund, buzul ile kaya duvarı arasındaki sınırı belirleyen buz çatlağıdır. Bir birikinti değil, bir açıklıktır.",
+            "D": "Buzul burnu, buzulun inceldiği ve sonlandığı noktadır. Bir yeri tarif eder, döküntü yığınını değil.",
+            "E": "Buzul yarığı, buzun içinde açılan ve kar altında gizlenebilen derin çatlaktır. Taşınan döküntüyle değil, buzun kırılmasıyla oluşur."
+          },
+          "ses_cozum": "Buzul yol boyunca taş ve toprak taşır, bunların birikmesiyle moren oluşur. Serak ise döküntü değil, buzdan bir kuledir; ikisini karıştırma. Moren taş ve topraktır, serak ise buzun kendisidir."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Buzulun inceldiği ve sonlandığı noktaya ne ad verilir?",
+          "secenekler": {
+            "A": "Bergschrund",
+            "B": "Serak",
+            "C": "Moren",
+            "D": "Buzul yarığı",
+            "E": "Buzul burnu"
+          },
+          "dogru": "E",
+          "cozum": "Buzul en aşağıda incelir ve biter; bu son noktaya buzul burnu denir.",
+          "siklar": {
+            "A": "Bergschrund buzulun en üstünde, kaya duvarıyla buluştuğu yerdeki buz çatlağıdır. Buzulun bittiği ucu değil, başladığı sınırı gösterir.",
+            "B": "Serak, buzul yüzeyinde yükselen dev buz kulesidir ve buzulun dikleşip kırıldığı yerde görülür. Buzulun sonlandığı noktanın adı değildir.",
+            "C": "Moren, buzulun taşıdığı döküntünün birikmesiyle oluşan yığındır. Buzulun ucunda da bulunabilir ama sonlanma noktasının adı bu değildir.",
+            "D": "Buzul yarığı, buzun içinde açılan derin çatlaktır ve buzulun birçok yerinde görülebilir. Buzulun bittiği yeri anlatmaz.",
+            "E": "Buzul burnu, buzulun inceldiği ve sonlandığı noktadır. İklim ısındıkça bu ucun geri çekildiği gözle izlenebilir."
+          },
+          "ses_cozum": "Buzulun inceldiği ve bittiği noktaya buzul burnu denir. Bergşrunt ise tam ters uçtadır; buzulun tepede kaya duvarıyla buluştuğu sınırdaki çatlaktır. Biri buzulun başında, öteki sonundadır."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Granit ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur",
+            "B": "Tortul kayaç sınıfındadır, tabaka tabaka çökelerek oluşur",
+            "C": "Yer kabuğu katlanması sırasında yüksek basınç altında oluşur",
+            "D": "Kireçtaşının başkalaşıma uğramış hâlidir",
+            "E": "Buzulun taşıdığı döküntülerin birikmesiyle oluşur"
+          },
+          "dogru": "A",
+          "cozum": "Granit magmatik bir kayadır; yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur.",
+          "siklar": {
+            "A": "Granit magmatik ailedendir. Magma yer kabuğunun altında çok yavaş soğur ve soğurken kristalleşir; granit bu yolla ortaya çıkar.",
+            "B": "Tabaka tabaka çökelerek oluşan kayalar tortuldur ve bunun örneği kireçtaşıdır. Granit magmadan oluştuğu için tortul sayılmaz.",
+            "C": "Kabuk katlanırken yüksek basınç altında oluşan kaya şisttir. Şist bir başkalaşım kayasıdır, granit ise magmatiktir.",
+            "D": "Kireçtaşı başkalaşınca mermere dönüşür. Granitin kireçtaşıyla böyle bir akrabalığı yoktur; granitin kökeni derinde yavaş soğuyan magmadır.",
+            "E": "Buzulun taşıdığı döküntünün birikmesi moreni oluşturur. Moren bir döküntü yığınıdır, granit ise derinde kristalleşmiş bir kayadır."
+          },
+          "ses_cozum": "Granit magmatik bir kayadır; yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur. Katlanma sırasında basınçla oluşan kaya ise granit değil, şisttir. Granit ateşten, şist baskıdan doğar."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Buzullarla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "İklim değişikliğinin doğrudan göstergeleridir",
+            "B": "Eğim yönünde, aşağıya doğru akarlar",
+            "C": "İlerleme hızları tüm dünyada sabittir",
+            "D": "Taşıdıkları döküntüler birikerek moreni oluşturur",
+            "E": "İnceldikleri ve sonlandıkları nokta buzul burnudur"
+          },
+          "dogru": "C",
+          "cozum": "Buzulun hızı sabit değildir; buzuldan buzula ve aynı buzulun içinde değişir. Öteki ifadeler doğrudur.",
+          "siklar": {
+            "A": "Buzullar ısınan iklimde incelir ve geri çekilir. Bu yüzden iklim değişikliğinin doğrudan göstergesi sayılırlar; ifade doğrudur.",
+            "B": "Buz da su gibi aşağıya iner; buzulun akış yönü eğim yönündedir. Eğimin tersine akış olmadığı için bu ifade doğrudur.",
+            "C": "Buzulun hızı her yerde aynı değildir; dik eğimde hızlanır, düzlükte yavaşlar, ortası kenarından hızlı akar. Sabit hız iddiası bu yüzden hatalıdır.",
+            "D": "Buzul yol boyunca taş ve toprak taşır, bu döküntü birikince moren oluşur. İfade morenin tanımını doğru verir.",
+            "E": "Buzul en aşağıda incelir ve biter; bu noktanın adı buzul burnudur. İfade doğru bir tanımdır."
+          },
+          "ses_cozum": "Buzulun hızı sabit değildir; eğime ve buzulun neresinde olduğuna göre değişir. Eğim yönünde akması ise doğrudur, onu yanlış sanma. Dik eğimde hızlanır, düzlükte yavaşlar; ortası kenarından hızlı akar."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Bergschrund adı verilen buz çatlağı hangi ikisi arasındaki sınırı belirler?",
+          "secenekler": {
+            "A": "İki moren sırtı",
+            "B": "Buzul ile kaya duvarı",
+            "C": "Buzul burnu ile vadi tabanı",
+            "D": "İki serak kulesi",
+            "E": "Granit ile kireçtaşı tabakası"
+          },
+          "dogru": "B",
+          "cozum": "Bergschrund, buzulun tepede kaya duvarına yaslandığı yerdeki buz çatlağıdır; buzul ile kaya duvarının sınırını belirler.",
+          "siklar": {
+            "A": "Moren, buzulun taşıdığı döküntünün birikintisidir. İki moren arasında kalan yer buzulun kendisidir, bergschrund adı buraya verilmez.",
+            "B": "Bergschrund buzulun en üstünde, buzun kaya duvarından ayrıldığı yerde açılan çatlaktır. Buzul ile kaya duvarı arasındaki sınırı belirler.",
+            "C": "Buzul burnu buzulun sonlandığı alt uçtur. Bergschrund ise buzulun üst ucundadır, vadi tabanıyla ilgisi yoktur.",
+            "D": "Serak, buzulun dikleşip kırıldığı yerde yükselen buz kulesidir. Kuleler arasındaki boşluklar bergschrund olarak adlandırılmaz.",
+            "E": "Granit ve kireçtaşı farklı kökenli iki kayaçtır. Bergschrund kayaçlar arasındaki bir sınır değil, buzda açılan bir çatlaktır."
+          },
+          "ses_cozum": "Bergşrunt, buzulun tepede kaya duvarına yaslandığı yerdeki buz çatlağıdır. Buzul ile kaya duvarının sınırını belirler; buzulun alt ucundaki buzul burnuyla karıştırma. Bergşrunt yukarıda, buzul burnu aşağıdadır."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "Bir buzul üzerinde ilerleyen ekip, serakları buzulun en çok hangi kesiminde bekler?",
+          "secenekler": {
+            "A": "Yatağın dikleşip buzun kırıldığı kesimde",
+            "B": "Buzulun yatay ilerlediği düz kesimde",
+            "C": "Buzul burnunun ötesindeki vadi tabanında",
+            "D": "Moren yığınının iç kısmında",
+            "E": "Buzulun sonlandığı ince uçta"
+          },
+          "dogru": "A",
+          "cozum": "Serak, buzulun yatay ilerlediği yerde değil, yatağın dikleşip buzun kırıldığı yerde oluşan dev buz kulesidir.",
+          "siklar": {
+            "A": "Yatak dikleşince buz bu eğime dayanamaz ve kırılır; kırılan buzdan dev buz kuleleri, yani seraklar yükselir. Ekip bu kesimden oyalanmadan geçer.",
+            "B": "Yatay ilerleyen düz kesimde buz kırılmadan akar. Serağın yatay ilerleme yerinde oluştuğu düşüncesi bu konunun bilinen yanlışıdır.",
+            "C": "Buzul burnunun ötesinde artık buz yoktur. Dev buz kulesi, buzun hiç bulunmadığı vadi tabanında oluşamaz.",
+            "D": "Moren, taş ve toprak döküntüsünün birikintisidir. Serak ise buzdan oluşur; döküntü yığınının içinde beklenmez.",
+            "E": "Buzulun ince ucu buzul burnudur; burada buz incelir ve biter. Dev kuleler buzun kalın olduğu ve kırıldığı dik kesimde oluşur."
+          },
+          "ses_cozum": "Serak, yatağın dikleştiği ve buzun kırıldığı yerde yükselen dev buz kulesidir. Buzulun yatay ilerlediği düzlükte oluşmaz; bu en sık karıştırılan noktadır. Serak altında mola verilmez, oradan hızla geçilir."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki kayaç – oluşum eşleştirmelerinden hangisi yanlıştır?",
+          "secenekler": {
+            "A": "Kireçtaşı – çökelti kökenli",
+            "B": "Granit – yer kabuğunun altında yavaş soğuyan magma",
+            "C": "Gnays – magmanın soğuyup katılaşması",
+            "D": "Şist – kabuk katlanması sırasında yüksek basınç",
+            "E": "Mermer – kireçtaşının başkalaşması"
+          },
+          "dogru": "C",
+          "cozum": "Gnays magmatik değildir; yüksek basınç ve sıcaklık altında oluşmuş bir başkalaşım kayasıdır. Öteki eşleştirmeler doğrudur.",
+          "siklar": {
+            "A": "Kireçtaşı çökelen malzemenin tabaka tabaka birikip taşlaşmasıyla oluşur ve tortul ailedendir. Bu eşleştirme doğru kurulmuştur.",
+            "B": "Granit magmatik bir kayadır; yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur. Bu eşleştirme doğrudur.",
+            "C": "Gnays yüksek basınç ve sıcaklık altında oluşmuş bir başkalaşım kayasıdır. Magmanın soğuyup katılaşması magmatik kayaları anlatır; bu eşleştirme hatalıdır.",
+            "D": "Şist, yer kabuğu katlanırken yüksek basınç altında oluşan bir başkalaşım kayasıdır. Bu eşleştirme doğru kurulmuştur.",
+            "E": "Kireçtaşı başkalaşıma uğrayınca mermere dönüşür. Mermerin kılık değiştirmiş kireçtaşı olduğu bilgisiyle bu eşleştirme uyumludur."
+          },
+          "ses_cozum": "Gnays magmadan katılaşmaz; yüksek basınç ve sıcaklık altında oluşan bir başkalaşım kayasıdır. Magmanın soğumasıyla oluşan kaya granittir, ikisini ayır. Gnays ve şist baskıdan, granit ateşten gelir."
+        }
+      ]
+    },
+    {
+      "id": "2b",
+      "baslik": "Dağ iklimi ve ekosistemi",
+      "ozet": "Yükseldikçe soğuyan ve incelen hava, güçlenen güneş, kuşak kuşak bitkiler ve enerjisini koruyan hayvanlar.",
+      "gorsel": "dag-ekosistemi.svg",
+      "gorsel_alt": "Bir dağ kesitinde aşağıdan yukarıya bitki kuşakları, yanında her 100 metrede 0,6 °C düşen sıcaklık ve azalan oksijen okları.",
+      "bolumler": [
+        {
+          "baslik": "Yükseldikçe soğur",
+          "ekran": "Dağda termometre yükseklikle birlikte iner.\n\n- **Kural:** sıcaklık her 100 metrede ortalama **0,6 °C azalır**\n- **Hesap:** 1000 m yukarıda hava yaklaşık 6 °C daha soğuktur\n- **Gece–gündüz:** sıcaklık farkı büyüktür; gündüz terleten yer gece dondurabilir\n- **Sonuç:** zirve için kat kat giysi çantada hazır durur\n\n> [!IMPORTANT] Sıcaklık yükseldikçe artmaz, azalır: 100 metrede 0,6 °C.",
+          "ses": [
+            "Dağa çıktıkça hava soğur ve bunun kolay bir kuralı vardır.",
+            "Sıcaklık her yüz metrede ortalama sıfır virgül altı derece azalır.",
+            "Bin metre tırmandığında hava yaklaşık altı derece soğumuş olur.",
+            "Vadide tişörtle yürürken zirvede montunu araman bu yüzdendir.",
+            "Dağda gece ile gündüz arasındaki sıcaklık farkı da büyüktür.",
+            "İnce ve kuru hava ısıyı tutamaz; güneş batınca sıcaklık hızla düşer.",
+            "Gündüz seni terleten yamaç, gece matarandaki suyu dondurabilir.",
+            "Bu yüzden hava ne kadar güzel olursa olsun, kat kat giysin çantanda hazır dursun."
+          ]
+        },
+        {
+          "baslik": "İnce hava: az oksijen, çok su kaybı",
+          "ekran": "Yükseldikçe hava basıncı düşer, hava incelir.\n\n- **Oksijen:** yükseklik arttıkça azalır, artmaz; her nefeste daha az oksijen alırsın\n- **Vücut:** daha sık ve derin nefes alır, nabız hızlanır\n- **Su:** nefes verirken su buharı kaybı artar; soğukta da susuz kalırsın\n- **Önlem:** susamayı beklemeden az ama sık su iç\n\n> [!IMPORTANT] Soğuk havada terlemiyor olman, su kaybetmediğin anlamına gelmez.",
+          "ses": [
+            "Yükseldikçe hava basıncı düşer ve hava incelir.",
+            "Bu yüzden yükseklik arttıkça oksijen azalır; her nefeste ciğerine daha az oksijen girer.",
+            "Vücudun açığı kapatmak için daha sık ve daha derin nefes alır, nabzın hızlanır.",
+            "Yüksekte hava hem soğuk hem kurudur; sen onu her nefeste ısıtıp nemlendirirsin.",
+            "Nefes verirken bu nemi dışarı bırakırsın; yani nefesle su buharı kaybın artar.",
+            "Terlemesen bile su kaybedersin; üstelik soğuk hava susuzluğu gizler.",
+            "Çözüm basit: susamayı bekleme, az ama sık su iç."
+          ]
+        },
+        {
+          "baslik": "Güneş yüksekte daha sert",
+          "ekran": "Yüksekte güneş ışığı daha ince bir hava katmanından geçer; UV (morötesi) ışınları güçlenir.\n\n- **Güneş kremi:** yüksek irtifada UV ışınlarına karşı etkisiz değildir; mutlaka sürülür\n- **Gözlük:** gözleri UV ışınından korur, karda oluşan yansımayı azaltır\n- **Kar:** ışığı ayna gibi yansıtır; gözlüksüz göz kar körlüğüne gider\n- **Şapka:** başı ve yüzü güneşten korur",
+          "ses": [
+            "Yüksekte güneş ışınları daha ince bir hava katmanından geçer ve morötesi ışınlar güçlenir.",
+            "Hava serin olduğu için yandığını fark etmezsin, akşam aynada görürsün.",
+            "Güneş kremi yüksek irtifada da işe yarar; etkisiz olduğu inancı yanlıştır.",
+            "Kremi burnuna, kulaklarına ve dudaklarına da sür, gün içinde yenile.",
+            "Kar ışığı ayna gibi yansıtır; ışın sana hem gökten hem yerden gelir.",
+            "Gözlük gözünü morötesi ışından korur ve kardaki yansımayı azaltır.",
+            "Gözlüksüz geçen karlı bir gün gözde yanık demektir; buna kar körlüğü denir."
+          ]
+        },
+        {
+          "baslik": "Bitkiler: kat kat dağ",
+          "ekran": "Dağ, aşağıdan yukarıya kuşak kuşak değişen bir bahçedir.\n\n- **Yüksekliğe dayalı zonlaşma:** bitki örtüsünün yüksekliğe göre değişmesi\n- **Kuşaklar:** yapraklı orman → iğne yapraklı orman → alpin çayır → kaya ve kalıcı kar\n- **Yapraklar:** yüksek rakımda kalın ve tüylüdür; tüyler su kaybını azaltır\n- **Fotosentez:** oksijen azaldıkça artmaz; soğuk ve kısa mevsim bitkiyi zorlar\n\n> [!NOTE] Dağlar yalnız yüksekliğe göre değil, ekosistem özelliklerine göre de sınıflandırılır.",
+          "ses": [
+            "Dağa tırmanırken bitki örtüsü kat kat değişir.",
+            "Bitki örtüsünün yüksekliğe göre değişmesine yüksekliğe dayalı zonlaşma denir.",
+            "Aşağıda yapraklı ormanlar, üstünde iğne yapraklı ormanlar, daha yukarıda alpin çayırlar vardır.",
+            "En tepede yalnızca kaya ve kalıcı kar kalır.",
+            "Yüksek rakımda bitkilerin yaprakları kalın ve tüylüdür; bu tüyler su kaybını azaltır.",
+            "Oksijen azaldıkça fotosentez artmaz; soğuk ve kısa yaz bitkiyi zaten zorlar.",
+            "Dağlar da yalnızca yüksekliğe göre değil, ekosistem özelliklerine göre de sınıflandırılır."
+          ]
+        },
+        {
+          "baslik": "Hayvanlar ve kırılgan denge",
+          "ekran": "Dağda enerji kıymetlidir; hayvanlar onu idareli harcar, biz de izimizi küçük tutarız.\n\n- **Kış uykusu:** dağ hayvanlarının sert iklime uyum sağlama yöntemidir\n- **Az hareket:** hayvanlar kışın enerji kaybını azaltmak için aktivitelerini düşürür\n- **Plastik poşet:** doğada yüzlerce yıl kalır\n- **Çöp:** gömülmez, yakılmaz; geri taşınır\n\n> [!NOTE] “Poşet en fazla 10 yıl kalır” da “100 yılda tamamen çözünür” de yanlıştır.",
+          "ses": [
+            "Dağda kış uzun, yiyecek azdır; hayvanlar enerjiyi idareli harcamak zorundadır.",
+            "Kış uykusu, dağ hayvanlarının bu sert iklime uyum sağlama yöntemidir.",
+            "Uyumayanlar da kışın aktivitelerini düşürür ve böylece enerji kaybını azaltır.",
+            "Sen onları ürkütüp koşturursan, kış için biriktirdikleri enerjiyi boşa harcatırsın.",
+            "Dağ ekosistemi yavaş iyileşir; soğukta her şey ağır ağır çürür.",
+            "Bir plastik poşet doğada yüzlerce yıl kalır; on yılda ya da yüz yılda kaybolmaz.",
+            "Çöpü gömmek de yakmak da çözüm değildir; getirdiğin her şeyi geri taşırsın."
+          ]
+        }
+      ],
+      "akilda": {
+        "kod": "100 m = 0,6 °C",
+        "acilim": "Her 100 metrede sıcaklık ortalama 0,6 °C azalır · 1000 metrede yaklaşık 6 °C",
+        "not": "Vadideki sıcaklıktan zirvedeki sıcaklığı kafadan kestirirsin."
+      },
+      "yap": [
+        "Susamayı beklemeden az ama sık su iç",
+        "Güneş kremi sür, gün içinde yenile",
+        "Karda UV korumalı gözlük tak",
+        "Zirve için kat kat giysi taşı",
+        "Çöpünün tamamını geri taşı"
+      ],
+      "yapma": [
+        "Soğukta su içmeyi ihmal etme",
+        "Karlı zeminde gözlüksüz yürüme",
+        "Çöpü gömme ya da yakma",
+        "Yaban hayvanlarını ürkütüp koşturma"
+      ],
+      "spotlar": [
+        {
+          "metin": "Sıcaklık her **100 metrede** ortalama **0,6 °C azalır**.",
+          "ses": "Dağda sıcaklık her yüz metrede ortalama sıfır virgül altı derece azalır."
+        },
+        {
+          "metin": "Yükseklik arttıkça **oksijen azalır**; gece–gündüz sıcaklık farkı **büyüktür**.",
+          "ses": "Yükseklik arttıkça oksijen azalır, gece ile gündüz arasındaki sıcaklık farkı da büyüktür."
+        },
+        {
+          "metin": "Bitki örtüsünün yüksekliğe göre değişmesine **yüksekliğe dayalı zonlaşma** denir.",
+          "ses": "Bitki örtüsünün yüksekliğe göre değişmesine yüksekliğe dayalı zonlaşma denir."
+        },
+        {
+          "metin": "Yüksek rakım bitkilerinin yaprakları **kalın ve tüylüdür**; tüyler **su kaybını azaltır**.",
+          "ses": "Yüksek rakımda bitkilerin yaprakları kalın ve tüylüdür; bu tüyler su kaybını azaltır."
+        },
+        {
+          "metin": "Dağ hayvanları **kış uykusuyla** ve kışın **aktivitelerini düşürerek** enerji kaybını azaltır.",
+          "ses": "Dağ hayvanları kış uykusuna yatarak ve kışın aktivitelerini düşürerek enerji kaybını azaltır."
+        },
+        {
+          "metin": "**Plastik poşet** doğada yüzlerce yıl kalır; çöp gömülmez, yakılmaz, **geri taşınır**.",
+          "ses": "Plastik poşet doğada yüzlerce yıl kalır; çöp gömülmez, yakılmaz, geri taşınır."
+        },
+        {
+          "metin": "Yüksek irtifada nefes verirken **su buharı kaybı artar**; güneş kremi ve **UV gözlüğü** şarttır.",
+          "ses": "Yüksek irtifada nefes verirken su buharı kaybı artar; güneş kremi ve gözlük de şarttır."
+        }
+      ],
+      "etkinlikler": [
+        {
+          "tur": "dogru_yanlis",
+          "baslik": "Efsane mi, gerçek mi?",
+          "ifadeler": [
+            {
+              "metin": "Dağda yükseldikçe solunan oksijen artar.",
+              "dogru": false,
+              "aciklama": "Yükseklik arttıkça hava incelir ve oksijen azalır."
+            },
+            {
+              "metin": "Dağda gece ile gündüz arasındaki sıcaklık farkı küçüktür.",
+              "dogru": false,
+              "aciklama": "İnce ve kuru hava ısıyı tutamaz; fark büyüktür."
+            },
+            {
+              "metin": "Kış uykusu, dağ hayvanlarının sert iklime uyum yollarından biridir.",
+              "dogru": true,
+              "aciklama": "Hayvanlar kış uykusuyla ve az hareketle enerji kaybını azaltır."
+            },
+            {
+              "metin": "Oksijen azaldıkça bitkilerin fotosentezi hızlanır.",
+              "dogru": false,
+              "aciklama": "Fotosentez artmaz; soğuk ve kısa mevsim bitkiyi zorlar."
+            },
+            {
+              "metin": "Güneş kremi yüksek irtifada da UV ışınlarına karşı korur.",
+              "dogru": true,
+              "aciklama": "Yüksekte UV güçlenir; krem etkisiz değildir, mutlaka sürülür."
+            }
+          ]
+        },
+        {
+          "tur": "sirala",
+          "baslik": "Dağın katları",
+          "soru": "Bitki kuşaklarını aşağıdan yukarıya doğru sıraya diz",
+          "adimlar": [
+            "Yapraklı orman",
+            "İğne yapraklı orman",
+            "Alpin çayır",
+            "Kaya ve kalıcı kar"
+          ],
+          "aciklama": "Bitki örtüsü yükseklikle kuşak kuşak değişir; buna yüksekliğe dayalı zonlaşma denir."
+        }
+      ],
+      "sorular": [
+        {
+          "no": 1,
+          "zorluk": "kolay",
+          "kok": "Dağ ekosistemlerinde her 100 metre yükseldikçe sıcaklık ortalama nasıl değişir?",
+          "secenekler": {
+            "A": "0,6 °C artar",
+            "B": "6 °C azalır",
+            "C": "0,6 °C azalır",
+            "D": "6 °C artar",
+            "E": "Hiç değişmez"
+          },
+          "dogru": "C",
+          "cozum": "Sıcaklık her 100 metrede ortalama 0,6 °C azalır; 6 °C'lik düşüş ancak 1000 metrede görülür.",
+          "siklar": {
+            "A": "Sayı doğru ama yön ters: yükseldikçe hava ısınmaz, soğur. Sıcaklığın arttığını söyleyen ifade bu konunun bilinen yanlışıdır.",
+            "B": "Yön doğru ama miktar on kat fazla. Altı derecelik düşüş yüz metrede değil, yaklaşık bin metrelik çıkışta görülür.",
+            "C": "Dağda sıcaklık her 100 metrede ortalama 0,6 °C azalır. Vadide tişörtle yürüyüp zirvede mont aramanın nedeni budur.",
+            "D": "Hem yön hem miktar hatalı: yükseldikçe sıcaklık artmaz, azalır ve yüz metredeki değişim altı derece kadar büyük değildir.",
+            "E": "Sıcaklık yükseklikle belirgin biçimde değişir; her yüz metrede ortalama 0,6 °C düşer. Değişmediğini düşünen kişi zirveye eksik giysiyle çıkar."
+          },
+          "ses_cozum": "Sıcaklık her yüz metrede ortalama sıfır virgül altı derece azalır. Artar diyen ifade yönü ters çevirir; altı derecelik düşüş ise bin metrenin hesabıdır. Sayıyı ve yönü birlikte ezberle."
+        },
+        {
+          "no": 2,
+          "zorluk": "kolay",
+          "kok": "Bitki örtüsünün yüksekliğe göre kuşak kuşak değişmesine ne ad verilir?",
+          "secenekler": {
+            "A": "Yüksekliğe dayalı zonlaşma",
+            "B": "Yüksekliğe dayalı başkalaşım",
+            "C": "Kış uykusu",
+            "D": "Buzul geri çekilmesi",
+            "E": "Fotosentez artışı"
+          },
+          "dogru": "A",
+          "cozum": "Bitki örtüsünün yüksekliğe göre değişmesi yüksekliğe dayalı zonlaşmadır: yapraklı orman, iğne yapraklı orman, alpin çayır, kaya ve kar.",
+          "siklar": {
+            "A": "Yüksekliğe dayalı zonlaşma, bitki örtüsünün aşağıdan yukarıya kuşaklar hâlinde değişmesidir. Ormandan alpin çayıra, oradan kalıcı kara geçiş bunun örneğidir.",
+            "B": "Başkalaşım, bir kayanın basınç ve sıcaklıkla başka bir kayaya dönüşmesidir; gnays ve şist böyle oluşur. Bitki kuşaklarını anlatan bir terim değildir.",
+            "C": "Kış uykusu, dağ hayvanlarının sert iklime uyum sağlama yöntemidir. Hayvanların enerji korumasını anlatır, bitki örtüsünün değişmesini değil.",
+            "D": "Buzulun geri çekilmesi iklim değişikliğinin göstergesidir ve buzla ilgilidir. Bitki örtüsünün yükseklikle değişmesine bu ad verilmez.",
+            "E": "Yüksekte fotosentez artmaz; soğuk ve kısa mevsim bitkiyi zorlar. Ayrıca bu ifade bir kuşaklanmayı değil, bir süreci anlatır."
+          },
+          "ses_cozum": "Bitki örtüsünün yüksekliğe göre değişmesine yüksekliğe dayalı zonlaşma denir. Başkalaşım sözcüğü ise kayalar içindir; gnays ve şistin oluşumunu anlatır. Aşağıdan yukarıya orman, alpin çayır, sonra kaya ve kar gelir."
+        },
+        {
+          "no": 3,
+          "zorluk": "kolay",
+          "kok": "Dağda bırakılan plastik poşetle ilgili aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Doğada en fazla 10 yıl kalır",
+            "B": "Yaklaşık 100 yılda tamamen çözünür",
+            "C": "Gömülürse doğaya zarar vermez",
+            "D": "Yakılması en doğru yöntemdir",
+            "E": "Doğada yüzlerce yıl kalır"
+          },
+          "dogru": "E",
+          "cozum": "Plastik poşet doğada yüzlerce yıl kalır. Gömmek ya da yakmak çözüm değildir; çöp geri taşınır.",
+          "siklar": {
+            "A": "On yıl, poşetin doğadaki ömrü için çok kısa bir tahmindir. Plastik soğuk dağ ortamında çok daha uzun süre kalır.",
+            "B": "Yüz yılda tamamen çözündüğü düşüncesi de hatalıdır. Plastik poşet doğada yüzlerce yıl kalır ve bu sürede kaybolmaz.",
+            "C": "Gömülen poşet gözden kaybolur ama toprağın içinde yüzlerce yıl durur. Dağda çöp gömülmez, geri taşınır.",
+            "D": "Çöpü yakmak da gömmek kadar hatalı bir yöntemdir. Doğru olan, getirdiğin her şeyi çantanda geri taşımaktır.",
+            "E": "Plastik poşet doğada yüzlerce yıl kalır. Dağ ekosistemi yavaş iyileştiği için tek doğru davranış çöpü geri taşımaktır."
+          },
+          "ses_cozum": "Plastik poşet doğada yüzlerce yıl kalır; on yılda ya da yüz yılda kaybolmaz. Yakmak da çözüm değildir, çöpün tamamı geri taşınır. Gömmek yalnızca sorunu gözden saklar."
+        },
+        {
+          "no": 4,
+          "zorluk": "orta",
+          "kok": "Yüksek rakımda yetişen bitkilerin yaprakları neden kalın ve tüylüdür?",
+          "secenekler": {
+            "A": "Azalan oksijenle fotosentezi artırmak için",
+            "B": "Su kaybını azaltmak için",
+            "C": "Daha fazla UV ışını almak için",
+            "D": "Üzerindeki karı daha çabuk eritmek için",
+            "E": "Kış uykusuna hazırlanmak için"
+          },
+          "dogru": "B",
+          "cozum": "Yüksek rakımda bitkilerin yaprakları kalın ve tüylüdür; bu tüyler bitkinin su kaybını azaltır.",
+          "siklar": {
+            "A": "Oksijen azaldıkça fotosentez artmaz; soğuk ve kısa mevsim bitkiyi zaten zorlar. Tüylü yaprak fotosentezi hızlandırmaya yaramaz.",
+            "B": "Kalın ve tüylü yaprak, kuru ve rüzgârlı dağ havasında bitkinin su kaybını azaltır. Yüksek rakım bitkilerinin tipik uyumu budur.",
+            "C": "Yüksekte UV ışınları zaten güçlüdür ve canlılar ondan korunmaya çalışır. Bitkinin daha fazla ışın toplamak için tüylenmesi söz konusu değildir.",
+            "D": "Tüylerin karı eritmek gibi bir görevi yoktur. Kalın ve tüylü yaprağın anlatılan yararı su kaybını azaltmasıdır.",
+            "E": "Kış uykusu dağ hayvanlarının sert iklime uyum yöntemidir. Bitki yaprağının yapısını açıklayan bir kavram değildir."
+          },
+          "ses_cozum": "Yüksek rakımda yapraklar kalın ve tüylüdür, çünkü tüyler su kaybını azaltır. Fotosentezi artırmak için değildir; oksijen azaldıkça fotosentez artmaz. Soğuk ve kısa mevsim bitkiyi zaten zorlar."
+        },
+        {
+          "no": 5,
+          "zorluk": "orta",
+          "kok": "Dağ ortamıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Yükseklik arttıkça oksijen artar",
+            "B": "Oksijen azaldıkça bitkilerin fotosentezi artar",
+            "C": "Güneş kremi yüksek irtifada UV ışınlarına karşı etkisizdir",
+            "D": "Gece–gündüz sıcaklık farkı büyüktür",
+            "E": "Hayvanlar kışın aktivitelerini artırarak enerji korur"
+          },
+          "dogru": "D",
+          "cozum": "Dağda gece–gündüz sıcaklık farkı büyüktür. Oksijen yükseklikle azalır, fotosentez artmaz, güneş kremi etkisiz değildir.",
+          "siklar": {
+            "A": "Yükseldikçe hava basıncı düşer ve hava incelir; her nefeste alınan oksijen azalır. Artış yönündeki ifade gerçeğin tersidir.",
+            "B": "Oksijenin azalması fotosentezi artırmaz. Yüksekte soğuk ve kısa mevsim bitkiyi zorlar; bu ifade bilinen bir yanlıştır.",
+            "C": "Yüksekte UV ışınları güçlenir ve güneş kremi burada da korur. Kremin etkisiz olduğu inancı insanı yanıkla baş başa bırakır.",
+            "D": "İnce ve kuru dağ havası ısıyı tutamaz; güneş batınca sıcaklık hızla düşer. Bu yüzden gece ile gündüz arasındaki fark büyüktür.",
+            "E": "Hayvanlar kışın enerji kaybını azaltmak için aktivitelerini artırmaz, düşürür. Bir kısmı da kış uykusuna yatar."
+          },
+          "ses_cozum": "Dağda gece ile gündüz arasındaki sıcaklık farkı büyüktür, çünkü ince hava ısıyı tutamaz. Oksijenin yükseklikle arttığı düşüncesi ise terstir; oksijen azalır. Güneş kremi de yüksekte etkisiz değildir."
+        },
+        {
+          "no": 6,
+          "zorluk": "orta",
+          "kok": "Soğuk ve yüksek bir kampta terlemediği hâlde susuz kalan dağcıda sıvı kaybının en önemli nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Nefes verirken su buharı kaybının artması",
+            "B": "Soğukta vücudun su ihtiyacının ortadan kalkması",
+            "C": "Kardan yansıyan ışığın gözü yorması",
+            "D": "Gece–gündüz sıcaklık farkının küçük olması",
+            "E": "Güneş kreminin terlemeyi engellemesi"
+          },
+          "dogru": "A",
+          "cozum": "Yüksekte soğuk ve kuru hava her nefeste ısıtılıp nemlendirilir; nefes verirken su buharı kaybı artar.",
+          "siklar": {
+            "A": "Yüksekte daha sık nefes alırsın ve soğuk, kuru havayı her nefeste nemlendirirsin. Nefes verirken bu nem dışarı gider, su buharı kaybı artar.",
+            "B": "Soğukta su ihtiyacı bitmez; yalnızca susuzluk hissi gizlenir. Bu düşünce insanı az su içmeye iter ve kaybı büyütür.",
+            "C": "Kar ışığı yansıtır ve gözlüksüz gözde kar körlüğüne yol açar. Bu bir göz sorunudur, vücudun sıvı kaybını açıklamaz.",
+            "D": "Dağda gece–gündüz sıcaklık farkı küçük değil, büyüktür. Ayrıca bu fark sıvı kaybının nedeni olarak anlatılmaz.",
+            "E": "Güneş kremi cildi UV ışınından korur; terlemeyi durdurmaz ve sıvı dengesini bozmaz. Susuzluğun nedeni olarak düşünülemez."
+          },
+          "ses_cozum": "Yüksek irtifada nefes verirken su buharı kaybı artar; terlemesen de su kaybedersin. Soğukta su ihtiyacının bittiği düşüncesi yanlıştır, yalnızca susuzluk hissi gizlenir. Bu yüzden az ama sık su içilir."
+        },
+        {
+          "no": 7,
+          "zorluk": "zor",
+          "kok": "2000 metredeki kampta hava 12 °C'dir. Aynı anda 3000 metredeki zirvede beklenen sıcaklık yaklaşık kaç derecedir?",
+          "secenekler": {
+            "A": "18 °C",
+            "B": "6 °C",
+            "C": "11,4 °C",
+            "D": "0 °C",
+            "E": "12 °C"
+          },
+          "dogru": "B",
+          "cozum": "Fark 1000 metredir. Her 100 metrede 0,6 °C azalma, 1000 metrede yaklaşık 6 °C eder: 12 − 6 = 6 °C.",
+          "siklar": {
+            "A": "Bu sonuç, sıcaklığın yükseklikle arttığı varsayılırsa çıkar. Oysa yükseldikçe hava soğur; altı derece eklenmez, çıkarılır.",
+            "B": "Kamp ile zirve arasında 1000 metre vardır. Her 100 metrede 0,6 °C düşüş, toplamda yaklaşık 6 °C eder ve sıcaklık 6 °C'ye iner.",
+            "C": "Bu sonuç yalnızca tek bir 100 metrelik basamağın düşüşünü hesaba katar. Arada on basamak vardır, düşüş on kat fazladır.",
+            "D": "Sıfır derece, 2000 metrelik bir yükseklik farkının hesabıdır. Buradaki fark 1000 metredir ve düşüş yaklaşık 6 °C'dir.",
+            "E": "Sıcaklığın değişmediğini varsayar. Oysa dağda her 100 metrede ortalama 0,6 °C düşüş beklenir; zirve kamptan belirgin biçimde soğuktur."
+          },
+          "ses_cozum": "Kamp ile zirve arasında bin metre var. Her yüz metrede sıfır virgül altı derece düşüş, bin metrede yaklaşık altı derece eder. On iki dereceden altı çıkınca altı derece kalır."
+        },
+        {
+          "no": 8,
+          "zorluk": "zor",
+          "kok": "Aşağıdaki kombinasyonlardan hangisi karlı ve güneşli bir zirve gününde en yanlış uygulamadır?",
+          "secenekler": {
+            "A": "UV gözlüğü + güneş kremi + az ama sık su",
+            "B": "UV gözlüğü + şapka + kat kat giysi",
+            "C": "Gözlüksüz yürümek + krem sürmemek + az su içmek",
+            "D": "Güneş kremi + şapka + çöpü geri taşımak",
+            "E": "UV gözlüğü + güneş kremi + çantada yedek giysi"
+          },
+          "dogru": "C",
+          "cozum": "Yüksekte UV güçlenir, kar ışığı yansıtır ve nefesle su kaybı artar. Gözlüksüz, kremsiz ve az suyla yürümek üç riski birden büyütür.",
+          "siklar": {
+            "A": "Gözlük gözü, krem cildi UV ışınından korur; az ama sık su da nefesle artan su kaybını karşılar. Üçü de doğru uygulamadır.",
+            "B": "Gözlük kardaki yansımayı azaltır, şapka başı korur, kat kat giysi her 100 metrede düşen sıcaklığa hazırlar. Yerinde bir kombinasyondur.",
+            "C": "Gözlüksüz göz karda kar körlüğüne gider, kremsiz cilt güçlenen UV ile yanar, az su nefesle artan kaybı karşılamaz. Üç hata bir aradadır.",
+            "D": "Krem ve şapka güneşten korur; çöpü geri taşımak da dağ ekosistemini korur. Bu kombinasyonda hatalı bir davranış yoktur.",
+            "E": "Gözlük ve krem UV'ye karşı korur, yedek giysi gece–gündüz sıcaklık farkına karşı güvencedir. Doğru bir hazırlıktır."
+          },
+          "ses_cozum": "Yüksekte morötesi ışın güçlenir, kar ışığı yansıtır ve nefesle su kaybı artar. Gözlüksüz, kremsiz ve az suyla yürümek bu üç riski aynı anda büyütür. Üç hata bir arada olunca gün kötü biter."
+        }
+      ]
+    }
+  ]
+}

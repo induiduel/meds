@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Dağcılık türleri: dağ yürüyüşü, kaya tırmanışı, alpinizm, ferrata, ekspedisyon; yaz dağcılığı 21 Mart – 21 Aralık, kış dağcılığı 21 Aralık – 21 Mart">
+  <rect width="800" height="480" rx="28" fill="#F4EEE2"/>
+  <defs><clipPath id="ct"><rect x="12" y="12" width="216" height="96" rx="14"/></clipPath><clipPath id="cb"><rect x="12" y="12" width="150" height="146" rx="14"/></clipPath></defs>
+  <g font-family="Inter, 'Liberation Sans', Arial, sans-serif" font-size="18" fill="#1E2A2E" stroke-linecap="round" stroke-linejoin="round">
+
+<g transform="translate(24,24)"><rect width="240" height="170" rx="20" fill="#FFFFFF"/>
+<g clip-path="url(#ct)"><rect x="12" y="12" width="216" height="96" fill="#CDE3EA"/>
+<circle cx="44" cy="38" r="13" fill="#F2C14E"/>
+<path d="M12,108 V84 Q60,60 110,74 T228,36 V108Z" fill="#7FA387"/>
+<path d="M12,108 V98 Q70,84 120,94 T228,70 V108Z" fill="#CFE0CF"/>
+<path d="M30,100 Q80,84 124,88 T214,60" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="2 8"/>
+<g transform="translate(128,88) scale(0.72)">
+<path d="M-1,-28 L-9,-1 M-1,-28 L9,-2" stroke="#1E2A2E" stroke-width="6" fill="none"/>
+<rect x="-18" y="-55" width="14" height="24" rx="5" fill="#2F5D50"/>
+<path d="M-1,-29 L3,-50" stroke="#D9865B" stroke-width="13" fill="none"/>
+<path d="M4,-47 L18,-36" stroke="#D9865B" stroke-width="5" fill="none"/><path d="M18,-36 L21,-1" stroke="#1E2A2E" stroke-width="3" fill="none"/>
+<circle cx="6" cy="-64" r="8" fill="#1E2A2E"/></g></g>
+<text x="120" y="148" font-size="22" font-weight="700" fill="#2F5D50" text-anchor="middle">Dağ yürüyüşü</text></g>
+
+<g transform="translate(280,24)"><rect width="240" height="170" rx="20" fill="#FFFFFF"/>
+<g clip-path="url(#ct)"><rect x="12" y="12" width="216" height="96" fill="#CDE3EA"/>
+<path d="M58,108 L80,62 L70,12 H228 V108Z" fill="#E4D8C3"/>
+<path d="M112,12 L124,48 L114,108 M190,12 L182,58 L196,108" fill="none" stroke="#7FA387" stroke-width="3"/>
+<path d="M156,12 L151,76" stroke="#D9865B" stroke-width="3" fill="none"/>
+<path d="M150,62 L163,48 M149,63 L137,52 M148,80 L160,92 M148,80 L137,90" stroke="#1E2A2E" stroke-width="4.5" fill="none"/>
+<path d="M150,62 L148,80" stroke="#C8553D" stroke-width="9" fill="none"/>
+<circle cx="151" cy="52" r="6.500" fill="#1E2A2E"/></g>
+<text x="120" y="148" font-size="22" font-weight="700" fill="#2F5D50" text-anchor="middle">Kaya tırmanışı</text></g>
+
+<g transform="translate(536,24)"><rect width="240" height="170" rx="20" fill="#FFFFFF"/>
+<g clip-path="url(#ct)"><rect x="12" y="12" width="216" height="96" fill="#CDE3EA"/>
+<path d="M12,108 L80,46 L112,70 L150,20 L228,108Z" fill="#24384F"/>
+<path d="M150,20 L127,50 L140,58 L150,48 L163,60 L176,49Z" fill="#FFFFFF"/>
+<path d="M80,46 L64,61 L78,64 L88,58 L96,58Z" fill="#FFFFFF"/>
+<path d="M112,108 Q120,84 150,76 Q160,90 190,108Z" fill="#FFFFFF"/>
+<path d="M134,96 l10,4 M150,88 l10,6" stroke="#CDE3EA" stroke-width="3" fill="none"/></g>
+<text x="120" y="136" font-size="22" font-weight="700" fill="#2F5D50" text-anchor="middle">Alpinizm</text>
+<text x="120" y="159" text-anchor="middle">kaya + kar + buzul</text></g>
+
+<g transform="translate(24,206)"><rect width="368" height="170" rx="20" fill="#FFFFFF"/>
+<g clip-path="url(#cb)"><rect x="12" y="12" width="150" height="146" fill="#E4D8C3"/>
+<path d="M12,12 H70 L40,70 L12,90Z" fill="#CDE3EA"/>
+<path d="M40,70 L64,100 L52,158 M118,12 L130,60 L162,80" fill="none" stroke="#7FA387" stroke-width="3"/>
+<path d="M36,152 L70,110 L104,66 L146,22" fill="none" stroke="#24384F" stroke-width="3"/>
+<g fill="#24384F"><circle cx="36" cy="152" r="4.500"/><circle cx="70" cy="110" r="4.500"/><circle cx="104" cy="66" r="4.500"/><circle cx="146" cy="22" r="4.500"/></g>
+<path d="M84,146 h24 M92,128 h24 M100,110 h24 M108,92 h24 M116,74 h24" stroke="#24384F" stroke-width="4.500" fill="none"/>
+<path d="M112,98 L96,86" stroke="#F2C14E" stroke-width="3" fill="none"/>
+<path d="M114,86 L124,74 M112,104 L104,126 M112,104 L122,110" stroke="#1E2A2E" stroke-width="4.500" fill="none"/>
+<path d="M115,84 L112,104" stroke="#D9865B" stroke-width="9" fill="none"/>
+<circle cx="118" cy="73" r="6.500" fill="#1E2A2E"/></g>
+<text x="182" y="82" font-size="22" font-weight="700" fill="#2F5D50">Ferrata</text>
+<text x="182" y="110">sabit metal aksam</text></g>
+
+<g transform="translate(408,206)"><rect width="368" height="170" rx="20" fill="#FFFFFF"/>
+<g clip-path="url(#cb)"><rect x="12" y="12" width="150" height="146" fill="#CDE3EA"/>
+<path d="M12,158 L50,72 L70,92 L100,24 L150,112 L162,102 V158Z" fill="#24384F"/>
+<path d="M100,24 L86,55 L96,62 L104,54 L113,64 L119,57Z" fill="#FFFFFF"/>
+<rect x="12" y="128" width="150" height="30" fill="#CFE0CF"/>
+<path d="M28,142 L44,116 L60,142Z" fill="#D9865B"/><path d="M44,142 V130" stroke="#1E2A2E" stroke-width="3"/>
+<path d="M68,148 L86,118 L104,148Z" fill="#F2C14E"/><path d="M86,148 V134" stroke="#1E2A2E" stroke-width="3"/>
+<path d="M112,142 L126,120 L140,142Z" fill="#FFFFFF"/><path d="M126,142 V132" stroke="#1E2A2E" stroke-width="3"/></g>
+<text x="182" y="82" font-size="22" font-weight="700" fill="#2F5D50">Ekspedisyon</text>
+<text x="182" y="110">uzun süreli sefer</text></g>
+
+<rect x="24" y="392" width="368" height="64" rx="20" fill="#F2C14E"/>
+<rect x="408" y="392" width="368" height="64" rx="20" fill="#CDE3EA"/>
+<text x="208" y="419" font-size="20" font-weight="700" text-anchor="middle">Yaz dağcılığı</text>
+<text x="208" y="443" text-anchor="middle">21 Mart – 21 Aralık</text>
+<text x="592" y="419" font-size="20" font-weight="700" text-anchor="middle">Kış dağcılığı</text>
+<text x="592" y="443" text-anchor="middle">21 Aralık – 21 Mart</text>
+
+  </g>
+</svg>

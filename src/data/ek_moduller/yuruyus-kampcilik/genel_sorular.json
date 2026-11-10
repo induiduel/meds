@@ -1,0 +1,740 @@
+{
+  "sorular": [
+    {
+      "no": 1,
+      "konu": "5a",
+      "zorluk": "orta",
+      "kok": "Sırt hattına çok yakın bir açıklığın kamp yeri olarak riskli sayılmasının nedeni aşağıdakilerden hangisidir?",
+      "secenekler": {
+        "A": "Düşen dal tehlikesinin her zaman bulunması",
+        "B": "Taşkın suyunun yolu üzerinde olması",
+        "C": "Hayvan geçiş yolunun tam ortasında kalması",
+        "D": "Yakınındaki duvarın çökme riski taşıması",
+        "E": "Mikro ikliminin en değişken yer olması"
+      },
+      "dogru": "E",
+      "cozum": "Sırt hattına çok yakın açıklık, mikro iklim açısından en değişken ve riskli kamp yeridir.",
+      "siklar": {
+        "A": "Düşen dal ve yıldırım, ağaç altına çadır kurmanın sakıncasıdır; açıklıkta çadırın üstünde dal bulunmaz.",
+        "B": "Taşkın ve sel riski dere yatağı ile vadi tabanına özgüdür; sırt hattı suyun toplanıp aktığı yer değildir.",
+        "C": "Kamp alanı hayvan geçiş yollarından uzak olmalıdır, ama bu her arazide ayrıca bakılan bir ölçüttür; sırt hattına özgü değildir.",
+        "D": "Çökme riski mağara duvarlarının yakını için geçerlidir; sırt hattındaki açıklığın sakıncası bu değil, değişken havadır.",
+        "E": "Sırt hattına çok yakın açıklık, mikro iklim açısından en değişken ve riskli koşullara sahip kamp yeridir."
+      },
+      "ses_cozum": "Sırt hattına çok yakın açıklık, mikro iklimi en değişken ve en riskli kamp yeridir. Taşkın dere yatağının, çökme mağara duvarının riskidir. Düşen dal ise ağaç altına kurulan çadırın başına gelir."
+    },
+    {
+      "no": 2,
+      "konu": "1a",
+      "zorluk": "kolay",
+      "kok": "Uzun süreli, çok günlü büyük dağ seferi aşağıdaki adlardan hangisiyle anılır?",
+      "secenekler": {
+        "A": "Ekspedisyon",
+        "B": "Dağ yürüyüşü (trekking)",
+        "C": "Ferrata",
+        "D": "Spor tırmanış",
+        "E": "Ticari tırmanış"
+      },
+      "dogru": "A",
+      "cozum": "Uzun süreli, çok günlü büyük dağ seferine ekspedisyon denir; günübirlik çıkışa bu ad verilmez.",
+      "siklar": {
+        "A": "Ekspedisyon, günlerce hatta haftalarca süren büyük dağ seferidir; uzun süreli ve çok günlü olması onu öteki türlerden ayırır.",
+        "B": "Dağ yürüyüşü patikada yürüyerek yapılan etkinliktir; günübirlik de olabilir, bu yüzden büyük dağ seferi anlamını taşımaz.",
+        "C": "Ferrata, kayaya sabitlenmiş çelik halat, basamak ve bolt gibi metal aksamla ilerlenen rotadır; süreyle değil rotadaki düzenekle tanımlanır.",
+        "D": "Spor tırmanış, emniyet noktaları hazır rotada ya da yapay duvarda yapılır; çok günlü sefer değil, kısa süreli bir tırmanış biçimidir.",
+        "E": "Ticari tırmanış, ücretli rehber ve taşıyıcı desteğiyle yapılan paket tırmanıştır; onu belirleyen süre değil, katılım biçimidir."
+      },
+      "ses_cozum": "Günlerce, hatta haftalarca süren büyük dağ seferinin adı ekspedisyondur. Günübirlik bir çıkışa bu ad verilmez. Ferrata ise süreyle değil, kayaya sabitlenmiş metal aksamla tanınan bir rotadır."
+    },
+    {
+      "no": 3,
+      "konu": "7b",
+      "zorluk": "orta",
+      "kok": "Jeolog pusulasıyla ölçülen doğrultu açısı için aşağıdakilerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "Klinometre düzeci yardımıyla okunur",
+        "B": "Tabakanın yatayla yaptığı açıdır",
+        "C": "Pusula tabanı düşey tutularak ölçülür",
+        "D": "İbrenin kuzeyle yaptığı dar açıdır",
+        "E": "Çizgisel yapının daldığı yöndür"
+      },
+      "dogru": "D",
+      "cozum": "Doğrultu açısı, ibrenin kuzeyle yaptığı dar açıdır (E–N–W aralığı). Taban yatayken ölçülür; eğim açısı ise klinometreyle, taban düşeyken okunur.",
+      "siklar": {
+        "A": "Klinometre düzeciyle okunan değer eğim açısıdır; doğrultu açısı ise taban yatayken pusula ibresinden okunur.",
+        "B": "Tabakanın yatayla yaptığı açı eğim açısıdır; doğrultu ise eğik tabakanın yatay kenarının yönünü anlatır.",
+        "C": "Taban eğim açısı ölçülürken düşey tutulur; doğrultu ölçümünde ise taban yatay hâle getirilmeden ölçüm yapılmaz.",
+        "D": "Doğrultu açısı, pusula ibresinin kuzey ile yaptığı dar açıdır ve E–N–W aralığında okunur; ölçümden önce taban yataylanır.",
+        "E": "Çizgisel yapının eğildiği ya da daldığı yön dalım yönüdür; doğrultu açısı düzlemsel yapılar için ölçülen bir değerdir."
+      },
+      "ses_cozum": "Doğrultu açısı, pusula ibresinin kuzeyle yaptığı dar açıdır ve taban yatayken ölçülür. Klinometreyle okunan değer ise doğrultu değil, eğim açısıdır. Onu ölçerken pusulanın tabanını düşey tutarsın."
+    },
+    {
+      "no": 4,
+      "konu": "3b",
+      "zorluk": "zor",
+      "kok": "Aşağıdaki kamp uygulaması kombinasyonlarından hangisi tümüyle doğrudur?",
+      "secenekler": {
+        "A": "Kâğıt ve karton alanda bırakılır + taşlar yerine konur + alan taranır",
+        "B": "Diş fırçalama suyu dereye + bulaşık toprakta + bitki koparılmaz",
+        "C": "Plastikler geri taşınır + organik atık gömülür + ateş söndürülür",
+        "D": "Tuvalet çukuru sudan 10 m uzakta + çukur kapatılır + çöp toplanır",
+        "E": "Biyolojik çözünür sabun + bulaşık sudan uzakta + çöp geri taşınır"
+      },
+      "dogru": "E",
+      "cozum": "Sabun biyolojik çözünür olur, bulaşık sudan uzakta yıkanır, çöp geri taşınır. Öteki kombinasyonların her birinde bir yanlış uygulama vardır.",
+      "siklar": {
+        "A": "Taşları yerine koymak ve alanı taramak doğrudur; kâğıt ve karton ise doğal sayılıp kamp alanında bırakılmaz.",
+        "B": "Bulaşığı toprakta yıkamak ve bitki koparmamak doğrudur, ama diş fırçalama suyu da doğrudan dereye dökülmez.",
+        "C": "Plastiği geri taşımak ve ateşi söndürmek doğrudur, ama organik atık da gömülmez; bu yüzden kombinasyon bozulur.",
+        "D": "Çukuru kapatmak ve çöpü toplamak doğrudur; ancak tuvalet çukuru su kaynağından en az 50 metre uzakta olmalıdır.",
+        "E": "Sabun biyolojik çözünür olmalı, bulaşık sudan uzakta yıkanıp suyu toprağa süzdürülmeli, çöp ayrıştırılıp geri taşınmalıdır; üçü de doğrudur."
+      },
+      "ses_cozum": "Doğru üçlüde sabun doğada çözünür, bulaşık sudan uzakta yıkanır ve çöp sırtta geri döner. Öteki kombinasyonların her birine bir yanlış saklanmış. Organik atık gömülmez, tuvalet çukuru sudan en az elli metre uzakta açılır."
+    },
+    {
+      "no": 5,
+      "konu": "8a",
+      "zorluk": "kolay",
+      "kok": "El işaretleri, grup içi haberleşmede aşağıdakilerden hangisine örnektir?",
+      "secenekler": {
+        "A": "Uluslararası yardım çağrısı",
+        "B": "Yönlendirme işareti bırakma",
+        "C": "Telsizle haberleşme",
+        "D": "Sessiz iletişim yöntemi",
+        "E": "Işıkla imdat işareti"
+      },
+      "dogru": "D",
+      "cozum": "El işaretleri sessiz iletişim yöntemlerinden biridir. Grup içinde haberleşme yalnız telsizle değil, el işaretleri ve düdükle de sağlanır.",
+      "siklar": {
+        "A": "Uluslararası yardım çağrısı üç kısa düdük sesidir; el işareti ise grup içinde olağan haberleşme için kullanılır.",
+        "B": "Yönlendirme işaretleri araziye, görünür ve anlaşılır noktalara bırakılan işaretlerdir; elle verilen anlık işaretlerden farklıdır.",
+        "C": "Telsiz cihazla yapılan sesli bir haberleşme yoludur; el işaretleri ise cihaz gerektirmeyen, sessiz bir yöntemdir.",
+        "D": "El işaretleri ses çıkarmadan dur, gel, yavaşla gibi bilgileri aktarır; bu yüzden sessiz iletişim yöntemlerinden biridir.",
+        "E": "Işıkla imdat işareti fenerle üç kısa işaret vermektir ve yardım istemeye yarar; el işaretleri olağan grup iletişimidir."
+      },
+      "ses_cozum": "El işaretleri, ses çıkarmadan anlaşmanı sağlayan sessiz iletişim yöntemidir. Dağda haberleşme yalnız telsizle olmaz; elin ve düdüğün her zaman yanındadır. Yardım çağrısı ise üç kısa düdük sesidir."
+    },
+    {
+      "no": 6,
+      "konu": "2a",
+      "zorluk": "zor",
+      "kok": "Bir buzulu kaya duvarından aşağıya doğru izleyen dağcı, aşağıdaki yapılarla hangi sırada karşılaşır?",
+      "secenekler": {
+        "A": "Buzul burnu – serak – bergschrund",
+        "B": "Bergschrund – buzul burnu – serak",
+        "C": "Bergschrund – serak – buzul burnu",
+        "D": "Serak – bergschrund – buzul burnu",
+        "E": "Serak – buzul burnu – bergschrund"
+      },
+      "dogru": "C",
+      "cozum": "Bergschrund buzul ile kaya duvarı arasındaki en üst çatlaktır, serak dikleşen kesimdeki buz kulesidir, buzul burnu buzulun sonlandığı noktadır.",
+      "siklar": {
+        "A": "Bu dizi aşağıdan yukarıya doğrudur; buzul burnu buzulun inceldiği ve bittiği en alt noktadır, bu yüzden başta yer alamaz.",
+        "B": "Buzul burnu buzulun sonlandığı noktadır; ondan sonra buz kalmaz, bu yüzden serak buzul burnundan sonra gelemez.",
+        "C": "Bergschrund en tepede buzul ile kaya duvarı arasındadır, seraklar yatağın dikleştiği yerde yükselir, buzul burnu en aşağıdaki sonlanma noktasıdır.",
+        "D": "Bergschrund buzulun kaya duvarına yaslandığı en üst kesimdedir; seraklar onun altında, buzun kırıldığı dik yerde oluşur, sıra ters verilmiştir.",
+        "E": "Bergschrund kaya duvarının dibindeki sınır çatlağıdır ve en üsttedir; en sona yazılması buzulun yukarıdan aşağıya yapısına uymaz."
+      },
+      "ses_cozum": "Buzulun en tepesinde, kaya duvarına yaslandığı yerde bergşrunt çatlağı durur. Biraz aşağıda yatak dikleşir, buz kırılır ve seraklar yükselir. En aşağıda buz incelir ve buzul burnunda sona erer."
+    },
+    {
+      "no": 7,
+      "konu": "6b",
+      "zorluk": "orta",
+      "kok": "Dağda berrak görünen bir dereden su alan kampçı için aşağıdakilerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "Arıtma tableti yalnız suyun rengini açar",
+        "B": "Mekanik filtre kimyasal kirliliği de tümüyle giderir",
+        "C": "Suyu en yukarı noktadan aldıysa arıtması gerekmez",
+        "D": "Kaynatmanın amacı suya tat vermektir",
+        "E": "Berrak su da mikroorganizma taşır; kaynatmadan içmez"
+      },
+      "dogru": "E",
+      "cozum": "Doğal su berrak da olsa kaynatılmadan içilmez; en az 1 dakika kaynatma mikroorganizmaları öldürür. En yukarı nokta tek başına yetmez.",
+      "siklar": {
+        "A": "Su arıtma tableti renk için değil, mikroorganizmaları öldürmek için kullanılır; kaynatmanın yanında ikinci bir arıtma yoludur.",
+        "B": "Mekanik filtre 0,1–0,2 mikron gözenekle mikroorganizmaları tutar, ama kimyasal kirleticileri tamamen yok etmez.",
+        "C": "Suyu en yukarı noktadan almak su hijyeni için tek başına yeterli değildir; kaynatma ya da arıtma yine gerekir.",
+        "D": "Kaynatmanın amacı tat değil, mikroorganizmaları öldürmektir; doğal su bunun için en az bir dakika kaynatılır.",
+        "E": "Berrak görünen doğal su da mikroorganizma taşır; içmeden önce en az bir dakika kaynatmak ya da arıtmak gerekir."
+      },
+      "ses_cozum": "Suyun berrak görünmesi temiz olduğunu göstermez, içinde mikroorganizma taşıyabilir. Bu yüzden doğal suyu en az bir dakika kaynatmadan içmezsin. Suyu en yukarı noktadan almış olman da tek başına yeterli değildir."
+    },
+    {
+      "no": 8,
+      "konu": "4a",
+      "zorluk": "kolay",
+      "kok": "Plastik dağcılık botu aşağıdaki koşullardan hangisi için uygundur?",
+      "secenekler": {
+        "A": "Sıcak ve kuru iklimde uzun yürüyüş",
+        "B": "Kar–buz karışık zeminde tırmanış",
+        "C": "Deniz kıyısında kumluk parkur",
+        "D": "Yaz günü orman içi patika",
+        "E": "Kamp alanında çadır çevresi"
+      },
+      "dogru": "B",
+      "cozum": "Plastik dağcılık botu kar–buz karışık zeminler içindir; sıcak ve kuru iklim için uygun değildir.",
+      "siklar": {
+        "A": "Plastik bot sıcak ve kuru iklim için uygun değildir; bu koşula uygun olduğunu söyleyen ifade bilinen bir yanlıştır.",
+        "B": "Plastik dağcılık botu soğuğa ve ıslaklığa karşı korur; kar ve buzun karışık olduğu zeminlerde tırmanış için uygundur.",
+        "C": "Kumluk ve sıcak bir parkur plastik botun yapılış amacına uymaz; bu bot karlı ve buzlu zemin için tasarlanmıştır.",
+        "D": "Orman patikasında hafif yürüyüş ayakkabısı ya da bileği kavrayan trekking botu yeter; plastik bot kar ve buz içindir.",
+        "E": "Çadır çevresinde dolaşmak için ağır bir tırmanış botuna gerek yoktur; plastik bot karlı ve buzlu zemin içindir."
+      },
+      "ses_cozum": "Plastik dağcılık botu karın ve buzun karışık olduğu zeminler için yapılmıştır. Seni soğuktan ve ıslaklıktan korur. Sıcak ve kuru iklim ise bu botun yeri değildir; orada hafif yürüyüş ayakkabısı giyersin."
+    },
+    {
+      "no": 9,
+      "konu": "1b",
+      "zorluk": "kolay",
+      "kok": "Türkiye Dağcılık Federasyonu (TDF) hangi yıl resmen kurulmuştur?",
+      "secenekler": {
+        "A": "1936",
+        "B": "1939",
+        "C": "1924",
+        "D": "1953",
+        "E": "1966"
+      },
+      "dogru": "E",
+      "cozum": "TDF 1966'da resmen kuruldu. Kökeni, 1939'da kurulan Dağcılık ve Kış Sporları Federasyonu'na dayanır; iki yılı karıştırma.",
+      "siklar": {
+        "A": "1936 için söylenen, Türkiye'nin UIAA üyeliğinin o yıl gerçekleştiğidir ve bu bilgi doğru değildir; federasyonun kuruluşuyla da ilgisi yoktur.",
+        "B": "1939'da Dağcılık ve Kış Sporları Federasyonu kuruldu; bugünkü federasyonun kökeni odur, ama TDF'nin resmen kuruluşu daha sonradır.",
+        "C": "1924, Miralay Cemil Cahit Toydemir'in Erciyes'e tırmandığı ve Türk dağcılığının başlangıcı sayılan yıldır; federasyonun kuruluş yılı değildir.",
+        "D": "1953, Edmund Hillary ile Tenzing Norgay'ın Everest zirvesine ilk kez ulaştığı yıldır; Türkiye'deki federasyonla bir bağlantısı yoktur.",
+        "E": "1966, Türkiye Dağcılık Federasyonu'nun resmen kurulduğu yıldır; kökeni ise 1939'da kurulan daha eski bir federasyona dayanır."
+      },
+      "ses_cozum": "Türkiye Dağcılık Federasyonu bin dokuz yüz altmış altıda resmen kuruldu. Bin dokuz yüz otuz dokuz ise kökeni sayılan Dağcılık ve Kış Sporları Federasyonu'nun yılıdır. Köken otuz dokuz, resmî kuruluş altmış altı diye ayır."
+    },
+    {
+      "no": 10,
+      "konu": "7a",
+      "zorluk": "orta",
+      "kok": "Azimut için aşağıdaki tanımlardan hangisi doğrudur?",
+      "secenekler": {
+        "A": "Manyetik kuzey ile gerçek kuzey arasındaki açı",
+        "B": "Coğrafi kuzeyden saatin tersi yönde ölçülen açı",
+        "C": "Coğrafi kuzeyden saat yönünde ölçülen açı",
+        "D": "Manyetik alan çizgilerinin yatayla yaptığı açı",
+        "E": "Pusula ibresinin kuzeyle yaptığı dar açı"
+      },
+      "dogru": "C",
+      "cozum": "Azimut, bir doğrultunun coğrafi kuzeyle yaptığı açının saat yönünde ölçülmesidir (0°–360°). İki kuzey arasındaki açı ise deklinasyondur.",
+      "siklar": {
+        "A": "Bu tanım manyetik deklinasyona aittir; deklinasyon iki kuzey arasındaki farktır, her yıl değişir ve güncel haritayla düzeltilir.",
+        "B": "Azimut saatin tersi yönde değil, saat yönünde ölçülür; kuzeyden başlanır, doğu 90, güney 180, batı 270 derecedir.",
+        "C": "Azimut, bir doğrultunun coğrafi kuzey ile yaptığı açının saat yönünde ölçülmesidir; 0 ile 360 derece arasında değer alır.",
+        "D": "Bu tanım jeomanyetik eğime, yani inklinasyona aittir; yön açısını değil, alan çizgilerinin yatay düzleme göre eğimini anlatır.",
+        "E": "İbrenin kuzeyle yaptığı dar açı, jeolog pusulasıyla ölçülen doğrultu açısının tanımıdır; azimut ise tam daire üzerinden verilir."
+      },
+      "ses_cozum": "Azimut, coğrafi kuzeyden başlayıp saat yönünde ölçtüğün açıdır. Sıfırdan üç yüz altmış dereceye kadar değer alır. Manyetik kuzey ile gerçek kuzey arasındaki açı ise azimut değil, manyetik deklinasyondur."
+    },
+    {
+      "no": 11,
+      "konu": "3a",
+      "zorluk": "orta",
+      "kok": "UIAA Dağ Etikleri Bildirgesi için aşağıdakilerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "Dağ rehberlerinin etik yükümlülüklerini içermez",
+        "B": "Yalnız kültürel mirasın korunmasını konu alır",
+        "C": "Yüksek irtifada oksijen desteğini etik dışı sayar",
+        "D": "Dağ rehberlerinin sorumluluklarına da değinir",
+        "E": "Sponsorlu dağcıyı etik kuralların dışında tutar"
+      },
+      "dogru": "D",
+      "cozum": "UIAA Dağ Etikleri Bildirgesi dağ rehberlerinin sorumluluklarına da değinir. Kültürel miras Katmandu'nun, tırmanış etiği Tirol'ün konusudur.",
+      "siklar": {
+        "A": "Tam tersine bildirge rehberlerin etik yükümlülüklerini içerir; rehberi kapsam dışı sayan bu ifade bilinen bir tuzaktır.",
+        "B": "Kültürel mirasın ve dağ ortamlarının korunması ile yerel halkın haklarına saygı, Katmandu Bildirgesi'nin konusudur.",
+        "C": "Yüksek irtifada oksijen desteği kullanmak etik dışı değildir; etik olmayan davranış, boş tüpleri dağda bırakmaktır.",
+        "D": "Bu bildirge dağ rehberlerinin sorumluluklarına ve etik yükümlülüklerine de yer verir; rehberi konunun dışında bırakmaz.",
+        "E": "Sponsorluk ilişkilerinde de dağcının etik kurallara uyması beklenir; para işe girince kurallar gevşemez, ifade doğru değildir."
+      },
+      "ses_cozum": "Dağ Etikleri Bildirgesi, dağ rehberlerinin sorumluluklarına ve etik yükümlülüklerine de değinir. Kültürel mirasın korunması ise Katmandu Bildirgesi'nin konusudur. Tırmanış etiğini belirleyen belge de tirol deklarasyonudur."
+    },
+    {
+      "no": 12,
+      "konu": "5b",
+      "zorluk": "kolay",
+      "kok": "Kış kampında çadırın altına konan kar tabakası hangi amaçla kullanılır?",
+      "secenekler": {
+        "A": "Yalıtım sağlamak",
+        "B": "Tulumdaki fazla boşluğu doldurmak",
+        "C": "Karbonmonoksit zehirlenmesini önlemek",
+        "D": "Çadır kazıklarının yerini tutmak",
+        "E": "Çadırın içindeki yoğuşmayı azaltmak"
+      },
+      "dogru": "A",
+      "cozum": "Kış kampında çadır altına konan kar tabakası yalıtım (izolasyon) amacıyla kullanılır; karbonmonoksitten koruyan ise havalandırma deliğidir.",
+      "siklar": {
+        "A": "Kış kampında çadır altına konan kar tabakası yalıtım, yani izolasyon amacıyla kullanılır; görevi ısı kaybını azaltmaktır.",
+        "B": "Tulumda kalan fazla boşluk polar giysilerle doldurulur; kar tabakası çadırın altındadır, tulumun içiyle ilgisi yoktur.",
+        "C": "Karbonmonoksit zehirlenmesini önleyen şey kar mağarasında ve igloda bırakılan havalandırma deliğidir, çadır altındaki kar değil.",
+        "D": "Çadırı kazıklar ve gergin ipler sabitler; alttaki kar tabakasının görevi sabitlemek değil, soğuğa karşı yalıtmaktır.",
+        "E": "Yoğuşmayı azaltan, havalandırma sistemi ve açık bırakılan üst pencerelerdir; alttaki kar tabakası nemle ilgili değildir."
+      },
+      "ses_cozum": "Kış kampında çadırın altındaki kar tabakası yalıtım işi görür. Karbonmonoksitten koruyan şey ise kar mağarasında ya da igloda bırakılan havalandırma deliğidir. Bu ikisini birbirine karıştırma."
+    },
+    {
+      "no": 13,
+      "konu": "8b",
+      "zorluk": "zor",
+      "kok": "Yağmurda pamuklu içliği ıslanan bir yürüyüşçü titriyor, konuşması bozuluyor ve bilinci bulanıyor. En doğru yorum ve ilk adım aşağıdakilerden hangisidir?",
+      "secenekler": {
+        "A": "Donma; etkilenen parmaklar karla ovulur",
+        "B": "Hipotermi; rüzgârdan korunur, kuru giysi giydirilir",
+        "C": "Sıcak çarpması; gölgeye alınır, suyla ıslatılır",
+        "D": "Yükseklik hastalığı; dinlenmeden yukarı çıkılır",
+        "E": "Hipotermi; kollar ve bacaklar ovulur, alkol verilir"
+      },
+      "dogru": "B",
+      "cozum": "Titreme, konuşma bozulması ve bilinç bulanıklığı hipotermi bulgusudur. Kişi rüzgârdan korunur, kuru giydirilir, zeminden yalıtılır; ovulmaz, alkol verilmez.",
+      "siklar": {
+        "A": "Donma parmak, burun gibi uçlarda soluk ve hissiz ciltle görülür; karla ovmak da dokuya zarar veren bir uygulamadır.",
+        "B": "Titreme, konuşma bozulması ve bilinç bulanıklığı hipoterminin saha bulgularıdır; ıslak pamuk üşütür, kişi rüzgârdan korunup kuru giydirilir.",
+        "C": "Sıcak çarpması terleme mekanizmasının bozulmasıyla, sıcakta gelişir; yağmurda ıslanıp titreyen kişinin tablosu buna uymaz.",
+        "D": "Yükseklik hastalığı baş ağrısı ve bulantıyla tanınır; ayrıca belirti varken daha yükseğe çıkılmaz, öneri iki yönden hatalıdır.",
+        "E": "Tablo hipotermidir, ama kol ve bacaklar ovulmaz, alkol de verilmez; yorum doğru olsa da önerilen adım yanlıştır."
+      },
+      "ses_cozum": "Islak pamuk üşütür; titreme, bozulan konuşma ve bulanan bilinç hipotermiyi haber verir. Arkadaşını rüzgârdan korur, kuru giysi giydirir ve zeminden yalıtırsın. Kollarını bacaklarını ovmaz, alkol de vermezsin."
+    },
+    {
+      "no": 14,
+      "konu": "2b",
+      "zorluk": "orta",
+      "kok": "Dağ ekosistemiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "secenekler": {
+        "A": "Hayvanlar kışın aktivitelerini düşürerek enerji korur",
+        "B": "Bitki örtüsü yüksekliğe göre kuşak kuşak değişir",
+        "C": "Oksijen azaldıkça bitkilerin fotosentez oranı artar",
+        "D": "Kış uykusu sert iklime uyum sağlama yöntemidir",
+        "E": "Yüksek rakımda bitki yaprakları kalın ve tüylüdür"
+      },
+      "dogru": "C",
+      "cozum": "Yükseldikçe oksijen azalır, fotosentez artmaz. Kış uykusu, kışın az hareket, tüylü yaprak ve zonlaşma doğru bilgilerdir.",
+      "siklar": {
+        "A": "Dağda enerji kıymetlidir; hayvanlar kışın daha az hareket ederek enerji kaybını azaltır, bu ifade doğru bir bilgidir.",
+        "B": "Bitki örtüsünün yüksekliğe göre değişmesine yüksekliğe dayalı zonlaşma denir; ormandan alpin çayıra geçiş bunun örneğidir.",
+        "C": "Yüksekte oksijen azalır ama fotosentez bununla artmaz; soğuk ve kısa mevsim bitkiyi zorlar, bu yüzden ifade yanlıştır.",
+        "D": "Kış uykusu, dağ hayvanlarının soğuk ve yiyeceksiz dönemi atlatmak için kullandığı uyum yöntemidir; ifade doğrudur.",
+        "E": "Yüksekte bitkilerin yaprakları kalın ve tüylü olur; tüyler su kaybını azaltır, bu nedenle ifade doğru bir bilgidir."
+      },
+      "ses_cozum": "Yükseldikçe oksijen azalır ama bitkinin fotosentezi bununla artmaz. Soğuk ve kısa mevsim bitkiyi zaten zorlar. Kış uykusu, kışın az hareket ve tüylü yapraklar ise dağ canlılarının gerçek uyum yollarıdır."
+    },
+    {
+      "no": 15,
+      "konu": "6a",
+      "zorluk": "kolay",
+      "kok": "Likit (sıvı) yakıtlı kamp ocağında ateşlemeden önce aşağıdakilerden hangisi yapılmalıdır?",
+      "secenekler": {
+        "A": "Yakıt kapağını gevşetmek",
+        "B": "Sızdırmazlık kontrolü",
+        "C": "Çevresine taş çember dizmek",
+        "D": "Ocağı çadırın içine almak",
+        "E": "Üzerine su dökmek"
+      },
+      "dogru": "B",
+      "cozum": "Likit yakıtlı ocaklarda ateşleme öncesi sızdırmazlık kontrolü yapılır. Ocak açık ve havadar alanda, çadırdan uzakta yakılır.",
+      "siklar": {
+        "A": "Kapağı gevşetmek yakıtın sızmasına yol açar; ateşlemeden önce yapılması gereken tam tersine sızdırmazlığı denetlemektir.",
+        "B": "Likit yakıtlı ocaklarda ateşleme öncesi sızdırmazlık kontrolü yapılır; sızan yakıtın alev alması yangın ve yanık demektir.",
+        "C": "Taş çember kamp ateşini sınırlamak için dizilir; ocağın ateşleme öncesi hazırlığı değildir ve yakıt sızıntısını göstermez.",
+        "D": "Ocak çadır içinde kullanılmaz; kapalı ortamda karbonmonoksit zehirlenmesi, yangın, oksijenin azalması ve yanık riski doğurur.",
+        "E": "Su dökmek kamp ateşini söndürürken yapılır; ocağı yakmadan önce yapılacak bir hazırlık değildir, sızıntıyı da ortaya çıkarmaz."
+      },
+      "ses_cozum": "Sıvı yakıtlı ocağı yakmadan önce sızdırmazlığını denetlersin. Sızan yakıt alev alırsa yangın ve yanık kaçınılmaz olur. Ocağı da her zaman açık ve havadar bir alanda, çadırdan uzakta yakarsın."
+    },
+    {
+      "no": 16,
+      "konu": "4b",
+      "zorluk": "orta",
+      "kok": "Klasik kazma aşağıdaki amaçlardan hangisi için kullanılır?",
+      "secenekler": {
+        "A": "Kar emniyeti ve kayışı durdurma",
+        "B": "Dik buz duvarında teknik tırmanış",
+        "C": "Yükün büyük kısmını kalçaya aktarma",
+        "D": "Dağ yürüyüşünde iple güvenlik alma",
+        "E": "Ağırlığı tüm vücuda dengeli dağıtma"
+      },
+      "dogru": "A",
+      "cozum": "Klasik kazma yürüyüş, kar emniyeti ve kayışı durdurma içindir. Dik buz duvarında teknik buz kazması kullanılır.",
+      "siklar": {
+        "A": "Klasik kazma yürüyüşte destek, kar emniyeti ve kayan dağcının kendini durdurması için kullanılır; asıl işi budur.",
+        "B": "Dik buz duvarı teknik buz kazmasının işidir; klasik kazma bu tür tırmanış için uygun değildir ve orada yetersiz kalır.",
+        "C": "Yükü kalçaya aktaran parça sırt çantasının bel kemeridir; kazma taşıma sistemiyle ilgili bir malzeme değildir.",
+        "D": "Dağ yürüyüşlerinde güvenlik amacıyla tercih edilen malzeme yarım iptir; kazma ipin yerini tutan bir araç değildir.",
+        "E": "Ağırlığı tüm vücuda dengeli dağıtan malzeme tam vücut emniyet kemeridir; kazmanın böyle bir görevi yoktur."
+      },
+      "ses_cozum": "Klasik kazma yürüyüşte, kar emniyetinde ve kayan dağcının kendini durdurmasında işe yarar. Dik buz duvarı ise teknik buz kazmasının alanıdır. Klasik olan yürüyüş ve durdurma, teknik olan dik buz içindir."
+    },
+    {
+      "no": 17,
+      "konu": "2b",
+      "zorluk": "kolay",
+      "kok": "Yüksek irtifada güneşe karşı alınan önlemlerle ilgili aşağıdakilerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "Kar ışığı emdiği için karda gözlük gerekmez",
+        "B": "Güneş kremi yüksek irtifada UV'ye karşı etkisizdir",
+        "C": "Soğuk havada güneş yakmaz; şapka yalnız yazın takılır",
+        "D": "UV ışınları zayıflar; güneş kremi gereksizdir",
+        "E": "UV ışınları güçlenir; krem ve gözlük kullanılır"
+      },
+      "dogru": "E",
+      "cozum": "Yüksekte UV ışınları güçlenir. Güneş kremi etkisiz değildir; gözlük gözü UV'den ve kardaki yansımadan korur.",
+      "siklar": {
+        "A": "Kar ışığı emmez, ayna gibi yansıtır; gözlüksüz göz kar körlüğüne gider, bu yüzden karda gözlük şarttır.",
+        "B": "Güneş kremi yüksek irtifada da UV ışınlarına karşı etkilidir; etkisiz olduğu düşüncesi yaygın bir yanlış inanıştır.",
+        "C": "Güneşin yakması sıcaklığa değil UV ışınlarına bağlıdır; şapka soğuk ve yüksek yerde de başı ve yüzü korur.",
+        "D": "Yükseldikçe UV zayıflamaz, güçlenir; bu yüzden krem gereksiz değil zorunludur ve yüksek irtifada da işe yarar.",
+        "E": "Yüksekte ışık daha ince hava katmanından geçer ve UV güçlenir; güneş kremi etkilidir, gözlük de gözü korur."
+      },
+      "ses_cozum": "Yükseldikçe güneş ışığı daha ince bir hava katmanından geçer ve morötesi ışınlar güçlenir. Bu yüzden güneş kremi yüksekte de işe yarar. Gözlük ise gözünü hem bu ışınlardan hem kardaki yansımadan korur."
+    },
+    {
+      "no": 18,
+      "konu": "6a",
+      "zorluk": "zor",
+      "kok": "Kamp alanından ayrılırken ateş yerinde yapılan işlemlerin doğru sırası aşağıdakilerden hangisidir?",
+      "secenekler": {
+        "A": "Külü uzaklaştır – su dök – elle yokla – karıştır – üstünü kapat",
+        "B": "Karıştır – toprak at – elle yokla – su dök – üstünü kapat",
+        "C": "Su dök – karıştır – elle yokla – külü uzaklaştır – üstünü kapat",
+        "D": "Toprak at – üstünü kapat – külü uzaklaştır – su dök – karıştır",
+        "E": "Su dök – üstünü kapat – karıştır – külü uzaklaştır – elle yokla"
+      },
+      "dogru": "C",
+      "cozum": "Sıra: su dök, karıştır, soğuduğunu elle yokla; sonra kül ve kalıntıları uzaklaştır, ateş yerinin üstünü doğal malzemeyle kapat.",
+      "siklar": {
+        "A": "Kül ve kalıntılar ateş söndükten sonra uzaklaştırılır; sönmemiş külü taşımak yangın riskidir, bu sıra baştan hatalıdır.",
+        "B": "Suyu dökmeden karıştırmak közü söndürmez; toprak da yeterli değildir, bu yüzden elle yoklama aşaması anlamını yitirir.",
+        "C": "Önce su dökülüp karıştırılır, küller dokunulacak kadar soğuyunca kalıntılar uzaklaştırılır ve ateş yerinin üstü doğal malzemeyle kapatılır.",
+        "D": "Yalnız toprak atmak söndürmez, köz altta için için yanar; suyu en sona bırakmak sırayı baştan bozar.",
+        "E": "Üstünü kapatmak son adımdır; karıştırmadan ve soğuduğunu yoklamadan kapatılan ateş yerinde sönmemiş köz kalabilir."
+      },
+      "ses_cozum": "Önce közlerin üzerine su dökersin, sonra karıştırırsın. Küller elle dokunulacak kadar soğuyunca kalıntıları uzaklaştırır, ateş yerinin üstünü doğal malzemeyle kapatırsın. Yalnız toprak atmak yetmez, çünkü köz toprağın altında için için yanar."
+    },
+    {
+      "no": 19,
+      "konu": "4b",
+      "zorluk": "orta",
+      "kok": "Çanta ve malzemeyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "Batonun tungsten pimleri değiştirilebilir",
+        "B": "Çadır, ocak ve mat teknik malzeme grubuna girer",
+        "C": "Hafif eşyalar çantanın alt kısmına konur",
+        "D": "İp ve emniyet malzemesi güneşte saklanır",
+        "E": "Yağmurluk çantanın en dibinde taşınır"
+      },
+      "dogru": "A",
+      "cozum": "Batonların alt uçlarındaki tungsten pimler değiştirilebilir. Çadır, ocak ve mat kamp malzemesidir; hafif eşya dışa, yağmurluk üste konur.",
+      "siklar": {
+        "A": "Batonların alt uçlarındaki tungsten pimler aşındığında değiştirilebilir; bu, teknik malzemeyle ilgili doğru bir bilgidir.",
+        "B": "Çadır, ocak ve mat kamp malzemesidir; teknik malzeme ip, kazma, emniyet kemeri ve baton gibi araçlardır.",
+        "C": "Hafif eşyalar alta değil dışa doğru yerleştirilir; çantanın en alt kısmı benzin gibi sıvı maddelerin yeridir.",
+        "D": "İp ve emniyet malzemesi güneşte bırakılmaz; genel kural bu malzemeyi kuru ve gölgede saklamaktır, ifade yanlıştır.",
+        "E": "Yağmurluk çantaya gömülmez; yağmur başlayınca tek hamlede çıkması için kolay ulaşılan üst kısımda durur."
+      },
+      "ses_cozum": "Batonların ucundaki tungsten pimler aşınınca değiştirilebilir. Çadır, ocak ve mat teknik değil, kamp malzemesidir. Hafif eşyalar dışa doğru, yağmurluk ise kolay ulaşılan üst kısma yerleştirilir."
+    },
+    {
+      "no": 20,
+      "konu": "8a",
+      "zorluk": "zor",
+      "kok": "Kamp alanında yıldırımlı fırtına başladığında aşağıdaki davranış kombinasyonlarından hangisi tümüyle doğrudur?",
+      "secenekler": {
+        "A": "Metal eşyaları uzaklaştırmak + ağaç altına sığınmak + çömelmek",
+        "B": "Metal eşyaları uzaklaştırmak + ağaçtan uzak durmak + çömelmek",
+        "C": "Ağaçtan uzak durmak + yere boylu boyunca uzanmak + beklemek",
+        "D": "Çadır iplerini gevşetmek + açık alanda ayakta beklemek",
+        "E": "Sırt hattına çıkmak + metal batonu elde tutmak + çömelmek"
+      },
+      "dogru": "B",
+      "cozum": "Yıldırımda metal eşyalar uzaklaştırılır, ağaç altına sığınılmaz, yere uzanılmaz; zirve ve sırttan uzaklaşıp ayaklar bitişik çömelinir.",
+      "siklar": {
+        "A": "Metalden uzaklaşmak ve çömelmek doğrudur, ama yıldırım tehlikesinde ağaç altına sığınılmaz; bu adım kombinasyonu bozar.",
+        "B": "Yıldırım tehlikesinde metal eşyalar uzaklaştırılır, ağaç altına sığınılmaz, ayaklar bitişik çömelinir; bu üç davranış da doğrudur.",
+        "C": "Ağaçtan uzak durmak doğrudur; ancak yıldırım tehlikesinde yere uzanılmaz, doğru duruş ayakları bitiştirip çömelmektir.",
+        "D": "Şiddetli rüzgârda çadır ipleri gevşetilmez; fırtınada açık alanda durmak da tehlikelidir, korunaklı bir yere geçilir.",
+        "E": "Yıldırımda zirve ve sırttan uzaklaşılır, metal eşyalar da uzaklaştırılır; sırta çıkmak ve batonu tutmak iki ayrı hatadır."
+      },
+      "ses_cozum": "Yıldırım tehlikesinde metal eşyaları kendinden uzaklaştırırsın. Ağaç altına sığınmaz, yere de uzanmazsın. Zirveden ve sırttan uzaklaşıp ayaklarını bitiştirerek çömelmek en doğru duruştur; fırtınada açık alanda ayakta beklemek tehlikelidir."
+    },
+    {
+      "no": 21,
+      "konu": "1a",
+      "zorluk": "orta",
+      "kok": "Dağcılıkla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "secenekler": {
+        "A": "Dağlar ekosistem özelliklerine göre de sınıflandırılır",
+        "B": "Başarı fiziksel hazırlık kadar ruhsal dengeye bağlıdır",
+        "C": "Ferrata rotasında bolt gibi metal aksam kullanılır",
+        "D": "Her etkinlik önceden planlandığından kaza riski yoktur",
+        "E": "Kış dağcılığı 21 Aralık – 21 Mart arasını kapsar"
+      },
+      "dogru": "D",
+      "cozum": "Plan riski azaltır ama sıfırlamaz; dağcılıkta kaza riski hiçbir zaman sıfır değildir. Öteki dört ifade doğrudur.",
+      "siklar": {
+        "A": "Sınıflamada yükseklik ilk ölçüttür ama tek ölçüt değildir; iklim, bitki örtüsü ve yaban hayatı da dikkate alınır.",
+        "B": "Dağcılık fiziksel dayanıklılık, teknik ve ruhsal hazırlık ister; korkuyu ve yorgunluğu yönetmek başarının parçasıdır, ifade doğrudur.",
+        "C": "Ferrata, kayaya sabitlenmiş çelik halat, basamak ve boltlarla ilerlenen rotadır; bolt kullanılmadan kurulmaz, ifade doğrudur.",
+        "D": "İyi plan riski küçültür ama sıfırlamaz; dağcılıkta kaza riski hiçbir zaman sıfır değildir, bu yüzden ifade yanlıştır.",
+        "E": "Kış dağcılığı takvime göre 21 Aralık ile 21 Mart arasındaki üç aylık dönemdir; bu ifade doğru bir bilgidir."
+      },
+      "ses_cozum": "Dağcılıkta en iyi plan bile kaza riskini sıfıra indirmez, yalnızca küçültür. Bu yüzden risk yoktur diyen ifade yanlıştır. Kış döneminin tarihleri, ferratadaki boltlar ve ruhsal denge ise doğru bilgilerdir."
+    },
+    {
+      "no": 22,
+      "konu": "5a",
+      "zorluk": "zor",
+      "kok": "Aşağıdaki çadır kurulumlarından hangisi tümüyle doğrudur?",
+      "secenekler": {
+        "A": "Alüminyum direk + şiddetli rüzgârda ipler gevşek + taban gergin",
+        "B": "Kapı hâkim rüzgâra + kazık 45° + çadır altında tabanlık",
+        "C": "Arka kısım rüzgâra + kazık 45° + tenteler birbirine değmiyor",
+        "D": "Kazık 45° + yağışta üst pencereler kapalı + kapı kapalı",
+        "E": "Arka kısım rüzgâra + dış tente gevşek + altında tabanlık"
+      },
+      "dogru": "C",
+      "cozum": "Arka kısım rüzgâra verilir, kazık 45° çakılır, tenteler birbirine değmez. Kapı rüzgâra bakmaz, dış tente gevşek kalmaz, yağışta pencere kapanmaz.",
+      "siklar": {
+        "A": "Alüminyum direk ve gergin taban doğrudur, ama şiddetli rüzgârda çadırın ipleri gevşetilmez, gergin tutulur.",
+        "B": "Kazık açısı ve tabanlık doğrudur, ama kapı hâkim rüzgâr yönüne bakmaz; rüzgâra çadırın arka kısmı verilir.",
+        "C": "Çadırın arka kısmı rüzgâr yönüne gelir, kazık 45 derece açıyla çakılır, iç ve dış tente birbirine değmez; üçü de doğrudur.",
+        "D": "Yağışta da üst havalandırma pencereleri açık kalır; kapatılırsa nem dışarı çıkamaz ve çadırın içinde yoğuşma oluşur.",
+        "E": "Yön ve tabanlık doğrudur; ancak dış tente de gergin olmalıdır, gevşek kalırsa üzerinde su birikir."
+      },
+      "ses_cozum": "Çadırın arka kısmı rüzgâra verilir, kazık kırk beş derece açıyla çakılır. İç ve dış tente de birbirine değmez. Kapıyı rüzgâra açmak, dış tenteyi gevşek bırakmak ya da yağışta pencereleri kapatmak kurulumu bozar."
+    },
+    {
+      "no": 23,
+      "konu": "7b",
+      "zorluk": "zor",
+      "kok": "Düzlemsel yapı ölçümlerinin yazımıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "DDD gösteriminde ikinci sayı doğrultuyu bildirir",
+        "B": "Strike–dip'te doğrultu kuzeye göre verilir",
+        "C": "DDD gösteriminde ilk sayı eğim açısını bildirir",
+        "D": "Eğim yönü her zaman doğrultuya paralel uzanır",
+        "E": "Strike–dip gösterimi yalnız eğim açısından oluşur"
+      },
+      "dogru": "B",
+      "cozum": "Strike–dip'te doğrultu kuzey referanslı verilir. DDD'de ilk sayı eğim yönü, ikinci sayı eğim açısıdır; eğim yönü doğrultuya diktir.",
+      "siklar": {
+        "A": "DDD gösteriminde doğrultu yazılmaz; ilk sayı eğim yönünü, ikinci sayı eğim açısını bildirir, bu ifade yanlış kurulmuştur.",
+        "B": "Strike–dip gösteriminde doğrultu yönü, eğim yönü ve eğim açısı yazılır; doğrultu genellikle kuzey yönü referans alınarak verilir.",
+        "C": "DDD gösteriminde ilk sayı eğim yönüdür, ikinci sayı eğim açısıdır; bu ifade iki sayının sırasını ters çevirmiştir.",
+        "D": "Eğim yönü doğrultuya paralel değil, daima diktir; eğim yönü kuzeydoğu ise doğrultu kuzeybatı–güneydoğu olur.",
+        "E": "Strike–dip üç bilgiyi birlikte verir: doğrultu yönü, eğim yönü ve eğim açısı; yalnız açıyı yazmak eksik kalır."
+      },
+      "ses_cozum": "Doğrultu ve eğim yazılırken doğrultu, kuzey yönü referans alınarak verilir. Eğim yönü ve eğim açısı gösteriminde ise ilk sayı eğim yönü, ikinci sayı eğim açısıdır. Eğim yönü de doğrultuya paralel değil, her zaman diktir."
+    },
+    {
+      "no": 24,
+      "konu": "3b",
+      "zorluk": "kolay",
+      "kok": "Başka çadırların fotoğrafını izinsiz çekmek, kamp etiğinin hangi gereğine aykırıdır?",
+      "secenekler": {
+        "A": "Mahremiyete saygı",
+        "B": "Alanı eski hâline getirme",
+        "C": "Çöpü geri taşıma",
+        "D": "Yaban hayatını beslememe",
+        "E": "Su kaynaklarını kirletmeme"
+      },
+      "dogru": "A",
+      "cozum": "Diğer kampların mahremiyetine saygı kamp etiğinin gereğidir. İzinsiz çadır fotoğrafı bu saygıyı çiğner ve en problemli davranış sayılır.",
+      "siklar": {
+        "A": "Diğer kampların mahremiyetine saygı kamp etiğinin gereğidir; izinsiz fotoğraf çekmek bu saygıyı çiğneyen en problemli davranış sayılır.",
+        "B": "Bu gerek, ayrılırken ateş yerini kapatmayı ve taşları yerine koymayı anlatır; başkalarının çadırını görüntülemekle ilgisi yoktur.",
+        "C": "Çöpü ayrıştırıp geri taşımak atık yönetimiyle ilgilidir; izinsiz fotoğrafın çiğnediği şey atık kuralı değil, kişilerin özel alanıdır.",
+        "D": "Bu kural hayvanların yiyecekle insana alıştırılmasını önler; çadır fotoğrafı insanlarla ilgilidir, yaban hayatıyla ilgili değildir.",
+        "E": "Su kaynaklarını korumak bulaşık, tuvalet ve sabun kurallarıyla ilgilidir; fotoğraf çekmek suyu kirleten bir davranış değildir."
+      },
+      "ses_cozum": "Kamp etiği yalnız doğaya değil, yandaki çadıra da saygıdır. Başkasının çadırını izinsiz fotoğraflamak mahremiyeti çiğner ve en problemli davranış sayılır. Su, çöp ve yaban hayatı kuralları ise doğayı korumaya yöneliktir."
+    },
+    {
+      "no": 25,
+      "konu": "6b",
+      "zorluk": "orta",
+      "kok": "Kamp yemeği ve yiyecek saklamayla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "secenekler": {
+        "A": "Yemekler güneş altına konmaz",
+        "B": "Hacmi büyük ama kalorisi düşük gıda taşımak kritik hatadır",
+        "C": "Yağ içeren gıdalar ve kuruyemiş plana girer",
+        "D": "Yiyeceği açıkta bırakmak hayvan saldırısını önler",
+        "E": "Yemek hazırlama alanı çadırdan uzak tutulur"
+      },
+      "dogru": "D",
+      "cozum": "Yiyeceği çadır dışında açıkta bırakmak hayvan saldırılarını önlemez, hayvanı çeker. Yiyecek kapalı, hava geçirmez kaplarda saklanır.",
+      "siklar": {
+        "A": "Yemekler güneş altına ve ateş yakınına konmaz; yiyecekler kapalı, hava geçirmez kaplarda saklanır, ifade doğrudur.",
+        "B": "Yalnızca hacmi büyük ama kalorisi düşük gıda taşımak kamp yemeği planlamasının en kritik hatasıdır; ifade doğrudur.",
+        "C": "Yağ içeren gıdalar ve atıştırmalık kuruyemiş kamp yemeği planına alınır; hafif ama kalorili yiyecek ilkesine uyarlar.",
+        "D": "Yiyeceği açıkta, çadır dışında bırakmak saldırıyı önlemez; kokusu yaban hayvanını kampa çeker, bu yüzden ifade yanlıştır.",
+        "E": "Yemek hazırlama alanı çadırdan uzak tutulur; böylece yiyecek kokusu uyuduğun yere hayvan çekmez, ifade doğrudur."
+      },
+      "ses_cozum": "Yiyeceği açıkta bırakmak hayvanı uzak tutmaz, tam tersine kokusuyla kampa çağırır. Doğrusu yiyeceği ağzı sıkı kapanan kaplarda saklamaktır. Yağlı gıda ve kuruyemiş taşımak ise hata değil, hafif ve kalorili beslenmenin gereğidir."
+    },
+    {
+      "no": 26,
+      "konu": "1b",
+      "zorluk": "orta",
+      "kok": "Dağcılık tarihiyle ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "Reinhold Messner – Everest'e ilk çıkan kişi",
+        "B": "Cilo Dağı – Türkiye'nin en yüksek dağı",
+        "C": "Erciyes – Türk dağcılığının başladığı dağ",
+        "D": "Mont Blanc – Himalayalar'ın en yüksek zirvesi",
+        "E": "Ağrı Dağı – 3916 metre yükseklik"
+      },
+      "dogru": "C",
+      "cozum": "Türk dağcılığı 1924'te Erciyes'te başladı. En yüksek dağ Ağrı'dır (5137 m), Everest'in ilki Hillary ile Tenzing'dir, Mont Blanc Alpler'dedir.",
+      "siklar": {
+        "A": "Everest'e ilk çıkanlar Hillary ile Tenzing'dir; Messner ise 8000 metrenin üstündeki 14 dağın tümüne çıkan ilk kişidir.",
+        "B": "Cilo yüksek bir dağdır ama Türkiye'nin en yüksek dağı değildir; bu unvan 5137 metrelik Ağrı Dağı'na aittir.",
+        "C": "1924'te Cemil Cahit Toydemir'in Erciyes tırmanışı Türk dağcılığının başlangıcı sayılır; Erciyes bu yüzden ünlüdür, eşleştirme doğrudur.",
+        "D": "Mont Blanc Alpler'in en yüksek zirvesidir ve 1786'daki çıkışıyla tanınır; Himalayalar'da yer alan dağ ise Everest'tir.",
+        "E": "Ağrı Dağı 5137 metredir; 3916 sayısı Ağrı'ya değil, 3917 metrelik Erciyes'in yüksekliğine yakındır ve kolayca karıştırılır."
+      },
+      "ses_cozum": "Erciyes yüksekliğiyle değil, Türk dağcılığının başladığı dağ olmasıyla ünlüdür. En yüksek dağ Cilo değil Ağrı'dır ve beş bin yüz otuz yedi metredir. Mesner de Everest'in değil, sekiz binliklerin ilkidir."
+    },
+    {
+      "no": 27,
+      "konu": "4a",
+      "zorluk": "orta",
+      "kok": "Kumaş ve dolgu malzemeleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "secenekler": {
+        "A": "Kaz tüyü ıslandığında yalıtım özelliğini korumaz",
+        "B": "Polipropilen iç katman için uygun bir kumaştır",
+        "C": "Sentetik dolgu nemli ortamda kaz tüyünden avantajlıdır",
+        "D": "Pamuk ıslanınca geç kurur ve üşütür",
+        "E": "Yün ıslanınca yalıtım özelliğini tamamen kaybeder"
+      },
+      "dogru": "E",
+      "cozum": "Yün ıslanınca yalıtımını tamamen kaybetmez. Islanınca yalıtmayan ve geç kuruyan malzemeler pamuk ile kaz tüyüdür.",
+      "siklar": {
+        "A": "Kaz tüyü kuruyken çok sıcak tutar ama ıslanınca yalıtmaz ve kuruması uzun sürer; bu ifade doğru bir bilgidir.",
+        "B": "Polipropilen teri vücuttan uzaklaştıran sentetik bir kumaştır ve iç katmanda kullanılır; bu ifade doğru bir bilgidir.",
+        "C": "Kaz tüyü ıslanınca yalıtmaz ve geç kurur; sentetik dolgunun nemli ortamdaki üstünlüğü buradan gelir, ifade doğrudur.",
+        "D": "Pamuk teri dışarı atmaz, ıslanınca geç kurur ve üşütür; dağ ve kamp için uygun olmamasının nedeni budur.",
+        "E": "Yün ıslandığında yalıtımını tamamen kaybetmez, ıslakken de bir ölçüde sıcak tutar; bu yüzden ifade yanlıştır."
+      },
+      "ses_cozum": "Yün ıslansa bile yalıtımını tümüyle yitirmez, seni bir ölçüde sıcak tutmayı sürdürür. Islanınca işe yaramayan ikili pamuk ile kaz tüyüdür. Nemli havada bu yüzden yün ya da sentetik seçilir."
+    },
+    {
+      "no": 28,
+      "konu": "8b",
+      "zorluk": "orta",
+      "kok": "Aşağıdaki durum – ilk yardım eşleştirmelerinden hangisi yanlıştır?",
+      "secenekler": {
+        "A": "Burkulma – soğuk uygulama ve dinlenme",
+        "B": "Donma – ılık suyla yavaş ısıtmak",
+        "C": "Yılan ısırığı – yarayı kalp hizasında tutmak",
+        "D": "Güneş çarpması – üzerini örtüp yürütmek",
+        "E": "Arı sokması – bölgeye soğuk uygulama"
+      },
+      "dogru": "D",
+      "cozum": "Güneş çarpmasında kişi gölge ve serin yere alınır; sıcak yere almak, üzerini örtmek ve yürütmek yapılmaz.",
+      "siklar": {
+        "A": "Burkulmada en uygun ilk yardım soğuk uygulama ve dinlenmedir; bu eşleştirme doğru verilmiştir, yanlış olan başkasıdır.",
+        "B": "Donan bölge ovulmaz, hemen sıcak suya sokulmaz; kuru bezle korunup ılık suyla yavaşça ısıtılır, eşleştirme doğrudur.",
+        "C": "Yılan ısırığında turnike ve emme yapılmaz; yara kalp hizasında tutulur ve tıbbi yardım çağrılır, eşleştirme doğrudur.",
+        "D": "Güneş çarpmasında kişi gölge ve serin yere alınıp serinletilir; üzerini örtmek ve yürütmek yapılmaması gereken uygulamalardır.",
+        "E": "Arı sokmasında doğru ilk yardım bölgeye soğuk uygulama yapmaktır; sıcak suyla yıkamak çözüm değildir, eşleştirme doğrudur."
+      },
+      "ses_cozum": "Güneş çarpmasında ilk iş kişiyi gölge ve serin bir yere almaktır. Üzerini örtmek ya da onu yürütmek yapılmaz. Arı sokması ile burkulmada soğuk uygulama, donmada ise ılık suyla yavaş ısıtma doğrudur."
+    },
+    {
+      "no": 29,
+      "konu": "2a",
+      "zorluk": "orta",
+      "kok": "Kayaçlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "secenekler": {
+        "A": "Kireçtaşı, magmanın soğumasıyla oluşan bir kayaçtır",
+        "B": "Gnays basınç ve sıcaklıkla oluşan başkalaşım kayasıdır",
+        "C": "Şist, magmanın çok yavaş soğuyup kristalleşmesiyle oluşur",
+        "D": "Mermer, granitin başkalaşıma uğramış hâlidir",
+        "E": "Granit, tabaka tabaka çökelen tortul bir kayaçtır"
+      },
+      "dogru": "B",
+      "cozum": "Gnays ve şist başkalaşım kayasıdır. Granit magmatik, kireçtaşı çökelti kökenlidir; mermer de kireçtaşının başkalaşmış hâlidir.",
+      "siklar": {
+        "A": "Kireçtaşı çökelti, yani tortul kökenlidir; malzemenin tabaka tabaka birikip taşlaşmasıyla oluşur, magmatik bir kaya değildir.",
+        "B": "Gnays yüksek basınç ve sıcaklık altında oluşmuş bir başkalaşım kayasıdır; eski kaya erimeden kılık değiştirir, ifade doğrudur.",
+        "C": "Bu tanım granite aittir; şist yer kabuğu katlanırken yüksek basınç altında oluşan, yaprak yaprak ayrılan başkalaşım kayasıdır.",
+        "D": "Mermer granitin değil, kireçtaşının başkalaşmış hâlidir; kireçtaşı basınç ve sıcaklıkla kılık değiştirerek mermere dönüşür.",
+        "E": "Granit magmatiktir; yer kabuğunun altında yavaş soğuyan magmanın kristalleşmesiyle oluşur, bu yüzden tortul sınıfa girmez."
+      },
+      "ses_cozum": "Gnays, yüksek basınç ve sıcaklık altında kılık değiştirmiş bir başkalaşım kayasıdır. Granit ateşten, yani magmadan doğar; kireçtaşı ise sudan çökelir. Mermer de granitin değil, kireçtaşının başkalaşmış hâlidir."
+    },
+    {
+      "no": 30,
+      "konu": "7a",
+      "zorluk": "zor",
+      "kok": "Harita ve pusulayla yer belirlemeye ilişkin aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+      "secenekler": {
+        "A": "Harita–pusula uyumu – haritayı coğrafi kuzeye çevirme",
+        "B": "Geriden kestirme – doğruların kesişimi bulunduğun konumdur",
+        "C": "Geriden kestirme – hedefler arası açı darsa hata azalır",
+        "D": "İleriden kestirme – ulaşılamayan noktanın konumunu bulma",
+        "E": "Pusula–altimetre – doğrultu ve yükseklik verisi"
+      },
+      "dogru": "C",
+      "cozum": "Geriden kestirmede iki hedef arasındaki açı darsa hata büyür. Hata payını azaltmak için ikiden fazla noktadan atış yapılır.",
+      "siklar": {
+        "A": "Harita ile pusulanın birlikte çalışması için harita coğrafi kuzeye çevrilerek kullanılır; bu, uyumun zorunlu adımıdır.",
+        "B": "Geriden kestirmede bilinen iki noktaya ölçüm yapılır; haritada çizilen doğruların kesişim noktası bulunduğun yeri verir.",
+        "C": "İki hedef arasındaki açı darsa kesişim noktası belirsizleşir ve hata büyür; dar açı hatayı azaltmaz, eşleştirme yanlıştır.",
+        "D": "İleriden kestirme, doğrudan ulaşılamayan ya da girilemeyen bir noktanın konumunu harita üzerinde belirlemeye yarar; eşleştirme doğrudur.",
+        "E": "Bu yöntemde pusula doğrultuyu, altimetre yüksekliği verir; konum haritadaki eşyükselti eğrisi üzerinde bulunur, eşleştirme doğrudur."
+      },
+      "ses_cozum": "Geriden kestirmede iki hedefin arasındaki açı darsa kesişim noktası belirsizleşir ve hata büyür. Hatayı küçültmek için ikiden fazla noktaya ölçüm yaparsın. Haritayı da her zaman coğrafi kuzeye çevirerek kullanırsın."
+    },
+    {
+      "no": 31,
+      "konu": "5b",
+      "zorluk": "zor",
+      "kok": "Aşağıdaki kombinasyonlardan hangisi yüksek irtifada gecelik kampta hipotermi riskini en çok azaltır?",
+      "secenekler": {
+        "A": "Pamuklu içlik + kuru çorap + tulum altında mat",
+        "B": "Sentetik içlik + kuru çorap + ıslanmış uyku tulumu",
+        "C": "Yün içlik + kalın mont + mat serilmemiş tulum",
+        "D": "Sentetik içlik + kuru çorap + tulum altında mat",
+        "E": "Sentetik içlik + ıslak çorap + dar uyku tulumu"
+      },
+      "dogru": "D",
+      "cozum": "Sentetik içlik, kuru çorap ve mat riski azaltır. Pamuklu içlik, ıslak çorap, dar ya da ıslak tulum ve matsız zemin riski artırır.",
+      "siklar": {
+        "A": "Çorap ve mat doğrudur, ama pamuklu içlik teri tutar, ıslak kalır ve üşütür; riski artıran halka odur.",
+        "B": "Tulum kuru tutulmalı, ıslandığında mutlaka kurutulmalıdır; içlik ve çorap doğru olsa da ıslak tulum bu kombinasyonu bozar.",
+        "C": "Kalın giysiyle tuluma girmek terletir, mat sermemek de zemine ısı kaybettirir; yün içlik bu iki hatayı kapatamaz.",
+        "D": "Sentetik içlik teri uzaklaştırır, kuru çorap ayağı yalıtır, mat zemine ısı kaybını önler; üç uygulama da doğrudur.",
+        "E": "İçlik doğru seçilmiştir; ancak ıslak çorap ve dar tulum, hipotermiyi en çok artıran üçlünün iki parçasıdır."
+      },
+      "ses_cozum": "Riski en çok artıran üçlü pamuklu içlik, ıslak çorap ve dar tulumdur. Tersini kurarsan korunursun: sentetik içlik, kuru çorap ve altında mat. Kalın montla tuluma girmek ise ısıtmaz, terletir."
+    },
+    {
+      "no": 32,
+      "konu": "3a",
+      "zorluk": "zor",
+      "kok": "Aşağıdaki davranışlardan hangisi dağcılıkta “tarz” anlayışına en aykırıdır?",
+      "secenekler": {
+        "A": "Zirveyi öne alıp alınan desteği gizlemek",
+        "B": "İlk çıkışta kullanılan teknikleri ayrıntılı bildirmek",
+        "C": "Seçilen rotayı ve taşıyıcı desteğini duyurmak",
+        "D": "Boş oksijen tüplerini dağdan geri indirmek",
+        "E": "Kullanılan oksijen desteğini açıkça belirtmek"
+      },
+      "dogru": "A",
+      "cozum": "Tarz sonuca ulaşmaktan önemlidir: ekipman, rota ve destek şeffafça belirtilir. Desteği gizleyip yalnız zirveye bakmak buna aykırıdır.",
+      "siklar": {
+        "A": "Tarz, ekipmanı, rotayı ve destek yöntemlerini şeffafça belirtmektir; desteği gizleyip yalnız sonuca bakmak bu anlayışın tam karşıtıdır.",
+        "B": "İlk çıkışlarda kullanılan tekniklerin ayrıntılı belirtilmesi beklenir; bu davranış tarzın gereğidir, ona aykırı değildir.",
+        "C": "Rotayı ve alınan desteği duyurmak, tarzın tanımındaki şeffaflığın kendisidir; dürüst bildirim etik bir davranıştır.",
+        "D": "Boş tüpleri dağda bırakmak etik değildir; geri indirmek doğru davranıştır ve tarzla çelişen bir yanı yoktur.",
+        "E": "Oksijen desteği etik dışı değildir; kullanıldığını açıkça söylemek şeffaflıktır ve tarz anlayışına uygun düşer."
+      },
+      "ses_cozum": "Dağcılıkta nasıl çıktığın, çıkıp çıkmadığından daha önemlidir. Tarz, kullandığın ekipmanı, rotayı ve aldığın desteği açıkça söylemektir. Desteği gizleyip yalnız zirveyle övünmek bu anlayışa ters düşer."
+    }
+  ]
+}

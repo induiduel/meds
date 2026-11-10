@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 480" role="img" aria-label="Alacakaranlıkta dağlar, çadır ve kamp ateşi">
+<defs><clipPath id="k"><rect width="800" height="480" rx="28"/></clipPath>
+<path id="cam" d="M0 -152 L30 -94 H16 L42 -48 H24 L52 0 H-52 L-24 -48 H-42 L-16 -94 H-30Z"/></defs>
+<g clip-path="url(#k)">
+<rect width="800" height="480" fill="#24384F"/>
+<rect y="150" width="800" height="330" fill="#CDE3EA"/>
+<rect y="150" width="800" height="46" fill="#24384F" fill-opacity=".66"/>
+<rect y="196" width="800" height="40" fill="#24384F" fill-opacity=".33"/>
+<rect y="270" width="800" height="26" fill="#F4EEE2"/>
+<rect y="296" width="800" height="100" fill="#F2C14E"/>
+<g fill="#fff"><circle cx="70" cy="50" r="2.500"/><circle cx="150" cy="110" r="1.800"/><circle cx="230" cy="40" r="2"/><circle cx="310" cy="96" r="2.500"/><circle cx="390" cy="34" r="1.800"/><circle cx="450" cy="120" r="2"/><circle cx="520" cy="60" r="2.500"/><circle cx="730" cy="48" r="2"/><circle cx="760" cy="126" r="1.800"/><circle cx="600" cy="136" r="1.800"/><circle cx="110" cy="170" r="1.800"/><circle cx="360" cy="168" r="1.800"/><circle cx="700" cy="174" r="1.800"/></g>
+<circle cx="640" cy="88" r="30" fill="#F4EEE2"/><circle cx="653" cy="79" r="27" fill="#24384F"/>
+<path d="M0 300 L110 205 L170 250 L230 215 L340 330 H0Z M500 330 L620 222 L670 262 L740 196 L800 240 V330Z" fill="#CFE0CF"/>
+<path d="M0 330 L80 290 L160 325 L270 262 L360 330 L440 300 L540 345 L640 280 L730 335 L800 300 V480 H0Z" fill="#7FA387"/>
+<path d="M0 380 L120 330 L220 372 L330 340 L470 388 L600 338 L700 376 L800 346 V480 H0Z" fill="#2F5D50"/>
+<g fill="#1E2A2E">
+<use xlink:href="#cam" transform="translate(84,428)"/>
+<use xlink:href="#cam" transform="translate(166,424) scale(.68)"/>
+<use xlink:href="#cam" transform="translate(716,430) scale(1.1)"/>
+<use xlink:href="#cam" transform="translate(632,424) scale(.8)"/>
+<use xlink:href="#cam" transform="translate(566,420) scale(.5)"/>
+<path d="M0 420 C150 394 300 402 420 412 C560 424 680 398 800 410 V480 H0Z"/>
+</g>
+<path d="M262 420 L330 330 L398 420Z" fill="#D9865B"/>
+<path d="M330 362 L352 420 H308Z" fill="#F2C14E"/>
+<path d="M324 320 L330 330 L336 320" fill="none" stroke="#F4EEE2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M436 428 L472 418 M472 428 L436 418" stroke="#E4D8C3" stroke-width="5" stroke-linecap="round"/>
+<path d="M454 384 C468 396 474 408 468 418 C463 426 445 426 440 418 C434 408 446 402 454 384Z" fill="#D9865B"/>
+<path d="M454 402 C461 408 463 414 460 419 C457 423 451 423 448 419 C445 414 450 410 454 402Z" fill="#F2C14E"/>
+</g>
+</svg>
