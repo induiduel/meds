@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 714,
+  "onem": 715,
   "baslik": "Sözlük ve Öğren destelerinde kaybolan kayıtlar geri geldi",
   "maddeler": [
     "Sözlükte görünmeyen 750 terim (bilinç, koma, somnolans, stupor, ARAS…) yeniden listeleniyor; sözlük yine 4368 kayıt (H559)",
     "Öğren bölümünde görünmeyen 11 deste (Nörolojik Hastaya Yaklaşım, Bilinç Bozukluğu, Serebrovasküler Hastalıklar ve İnme…) yeniden açıldı; deste sayısı 186 (H559)",
+    "Sözlükte 53 terimin kısaltılmış eski açıklaması ve destelerde 74 eski komite adı temizlendi; artık güncel metin ve tek tip komite adları görünüyor",
     "Kök neden: içerik katmanında kalan eski bir tam kopya, dönüştürülürken bu kayıtları “yönetici sildi” diye işaretlemişti; artık toplu silme şüphesinde kayıtlar gizlenmiyor, karantinaya alınıp günlüğe yazılıyor",
     "PDF indirme düzeltmesi (H556) önceki sürümden geliyor: parolasız indirme ve canlıda PDF basma çalışıyor"
   ],
