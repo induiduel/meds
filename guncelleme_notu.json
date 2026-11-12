@@ -1,13 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 716,
+  "onem": 717,
   "baslik": "Yapay zekâ altyapısı yeni sağlayıcıya taşındı; tasarım stüdyosu eklendi",
   "maddeler": [
     "İçerik ve soru üretiminin yapay zekâ altyapısı yeni sağlayıcıya taşındı (DeepSeek, GLM, GPT aileleri); yazar ve denetçi her zaman farklı model ailesinden çalışıyor",
     "Site içi yapay zekâ istekleri artık beş kademeli yedek zincirle yanıtlanıyor: yerel servis → yeni sağlayıcı → Groq → Muse Spark → Gemini",
     "Yeni tasarım stüdyosu: rapor, pano ve veri özetleri tek sayfalık, çevrimdışı açılan sayfalar olarak üretilebiliyor (açık/koyu tema, yazdırma)",
     "Kodlama ve tasarım denetimi için resmî eklentiler kuruldu: tip denetimi, kod inceleme, sadeleştirme ve tasarım kalitesi denetleyicileri",
-    "Önceki sürümdeki sözlük ve Öğren düzeltmeleri (H559) ve parolasız PDF indirme (H556) bu sürümde de geçerli"
+    "Önceki sürümdeki sözlük ve Öğren düzeltmeleri (H559) ve parolasız PDF indirme (H556) bu sürümde de geçerli",
+    "Yeni sağlayıcı canlıda doğrulandı: site içi yapay zekâ istekleri OpenDesign (DeepSeek) üzerinden yanıt veriyor"
   ],
   "eklenen": [
     "Yeni sağlayıcı model köprüsü ve tek kaynaklı model seçimi (yazar/denetçi/hızlı rolleri)",
