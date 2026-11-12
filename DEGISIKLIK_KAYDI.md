@@ -4,7 +4,8 @@
 - **Çözüm:** uç `STUDENT_WRITE_ROUTES`'a `belge` sınıfıyla eklendi (IP başına 20/dk, 300/saat; Chrome kuyruğu zaten sınırlı 2 koşut + 8 kuyruk). `Dockerfile.oracle`'a `chromium` + `fonts-dejavu-core` eklendi (ARM'de uçtan uca sınandı: `%PDF-1.4`, 13.595 bayt). `API_KATALOG.md`'ye parolasız uçlar bölümü yazıldı. Yeni kapı `scripts/kapilar/pdf_basim_kapisi.py` (yerel 0 HATA).
 - **Sınama:** yerel 3000'de dış istemci benzetimi (`cf-connecting-ip`) ile `POST /api/pdf/render` → 200, 11.816 bayt `PDF 1.4`; `/api/questions`, `/api/ai/extract-document` hâlâ 401 (yazma koruması bozulmadı); `tsc` 0 hata.
 - **Dağıtım notu:** imaj değişti (`Dockerfile.oracle`) → `deploy-code.sh` kendiliğinden `--imaj` yolunu seçer; canlı Chrome kurulumu için dağıtım biraz uzun sürer.
-- **Durum:** yerel hazır; commit + `dagit.sh` sonrası canlı doğrulanacak.
+- **Canlı doğrulama (dagit.sh sonrası):** `pdf/status` `available:true`; canlıda `POST /api/pdf/render` parolasız 200, 7.218 bayt `%PDF-1.4`; `/api/questions` hâlâ parola/doğrulama istiyor (yazma koruması bozulmadı); canlı kapı `0 HATA`. Tuzak: kapı canlıda elle `cf-connecting-ip` basınca Cloudflare `403 error code: 1000` verdi — kapı artık hedefe göre başlık seçer (yerelde `cf-connecting-ip`, canlıda tarayıcı User-Agent'ı) (commit 943cebc1).
+- **Durum:** canlıda — onem 713, sürüm 20261112213630.
 
 ## 2026-11-10 — Sesli çalışma soruları: boşluk doldurma doğal soru olarak okunuyor (H552, onem 711)
 - **Belirti/kök:** `ek_modul/ses.py` `____`'yi " boşluk " diye okuyordu (ekran metni sese gidiyordu).
