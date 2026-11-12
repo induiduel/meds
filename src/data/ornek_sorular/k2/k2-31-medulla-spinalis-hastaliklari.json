@@ -1,0 +1,2105 @@
+{
+ "id": "k2-31-medulla-spinalis-hastaliklari",
+ "sira": 31,
+ "kurul": 1,
+ "ders": "Nöroloji",
+ "konu": "Medulla Spinalis Hastalıkları",
+ "ogretim_uyesi": "Dr. Dursun Ceylan",
+ "tarih": "2026-11-11",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Medulla spinalisin segmentlerini, genişlemelerini, kesit anatomisini, başlıca çıkan-inen yollarını ve bu yolların somatotopisini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "C3–T2 vertebraları arasında yer alan, C4–T1 spinal segmentlerini içeren ve ortalama çapı 38 mm olan medulla spinalis genişlemesi hangisidir?",
+     "secenekler": {
+      "A": "İntumesentia servikalis",
+      "B": "İntumesentia lumbosakralis",
+      "C": "Konus medüllaris",
+      "D": "Kauda ekuina",
+      "E": "Filum terminale"
+     },
+     "dogru": "A",
+     "aciklama": "İntumesentia servikalis C3–T2 vertebraları arasında, C4–T1 segmentlerini içerir ve ortalama çapı 38 mm'dir; lumbosakral genişlemenin çapı 35 mm'dir.",
+     "sik_aciklamalari": {
+      "A": "İntumesentia servikalis, kol sinirlerinin çıktığı C4–T1 segmentlerini taşıyan boyun genişlemesidir. C3–T2 vertebraları arasında yer alması ve 38 mm ortalama çapıyla kökteki tanıma tam uyduğu için doğru cevaptır (s. 7).",
+      "B": "İntumesentia lumbosakralis, bacak sinirlerinin çıktığı L2–S3 segmentlerini taşıyan alt genişlemedir. T9–T12 vertebraları arasında yer alır ve ortalama çapı 35 mm olduğu için kökteki değerlere uymaz (s. 7).",
+      "C": "Konus medüllaris, medulla spinalisin alt ucundaki konik sonlanma bölümüdür ve lezyonu sfinkter bozukluğuyla belirir. Boyun düzeyinde bir genişleme değildir, bu nedenle C3–T2 tanımına uymaz (s. 2).",
+      "D": "Kauda ekuina, kordun bittiği yerin altında dural kese içinde aşağı inen sinir köklerinin oluşturduğu demettir. Bir kord genişlemesi olmadığı ve servikal düzeyde bulunmadığı için kökle örtüşmez (s. 2).",
+      "E": "Filum terminale, konus medüllarisin ucundan aşağı uzanıp kordu alta sabitleyen ince uzantıdır. Spinal segment içermediği ve boyun düzeyinde yer almadığı için tanımlanan genişleme olamaz (s. 2)."
+     },
+     "bilgi": [
+      14,
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Çapı ortalama: 38 mm"
+     },
+     "s": 7,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b01"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q05",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Lateral kortikospinal traktusu oluşturan lifler nerede çaprazlaşır?",
+     "secenekler": {
+      "A": "Ön beyaz komissürde, girdiği segment düzeyinde",
+      "B": "Bulbustaki duyusal çaprazlaşmada",
+      "C": "İç kapsülde, talamus düzeyinde",
+      "D": "Ön boynuzda, sinaps yaptıkları segmentte",
+      "E": "Bulbusun alt ucundaki piramidal çaprazlaşmada"
+     },
+     "dogru": "E",
+     "aciklama": "Kortikospinal lifler bulbusun alt ucunda piramidal çaprazlaşmayı yapar ve kordda aynı tarafta lateral kortikospinal traktus olarak iner; bu yüzden yarı kesi lezyonla aynı tarafta üst motor nöron felci yapar.",
+     "sik_aciklamalari": {
+      "A": "Ön beyaz komissür, santral kanalın önünde iki yarıyı birleştiren beyaz cevher bölümüdür ve siringomiyelide kavitenin bastığı yerdir. İnen motor yolun çaprazlaşma yeri burası olmadığı için uymaz (s. 6).",
+      "B": "Duyusal çaprazlaşma, nükleus grasilis ve kuneatustan çıkan derin duyu liflerinin karşıya geçip medial lemniskusu oluşturduğu yerdir. Bu çıkan yola aittir, inen kortikospinal yola değil (s. 11).",
+      "C": "İç kapsül, kortikospinal liflerin motor korteksten inerken geçtiği beyaz cevher yoludur. Lifler burada henüz çaprazlaşmaz, karşıya geçiş daha aşağıda bulbusta olur (s. 12).",
+      "D": "Ön boynuz, kortikospinal liflerin sonlandığı ve ön kökle çıkan motor nöronların bulunduğu gri cevher bölümüdür. Lifler buraya ulaşmadan çok önce bulbusta çaprazlaştığı için uymaz (s. 12).",
+      "E": "Piramidal çaprazlaşma, motor korteksten inen kortikospinal liflerin bulbusun alt ucunda karşı tarafa geçtiği yerdir. Çaprazlaşan lifler kordda lateral kortikospinal traktus olarak indiği için doğru cevaptır (s. 12)."
+     },
+     "bilgi": [
+      29,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Decussation of pyramids Anterior cerebrospinal fasciculus",
+      "gorsel": true
+     },
+     "s": 12,
+     "dayanak": [
+      "cikmis:past-1790877482971-276482"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q09",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Lateral kortikospinal traktus medulla spinalis beyaz cevherinin hangi bölümünde iner?",
+     "secenekler": {
+      "A": "Arka funikulus",
+      "B": "Ön boynuz",
+      "C": "Lateral funikulus",
+      "D": "Arka boynuz",
+      "E": "Ön beyaz komissür"
+     },
+     "dogru": "C",
+     "aciklama": "Lateral kortikospinal traktus lateral funikulusta iner; arka funikulus derin duyu, gri cevher ise nöron gövdelerini taşır.",
+     "sik_aciklamalari": {
+      "A": "Arka funikulus, grasil ve kuneat fasikulusları taşıyan beyaz cevher bölümüdür. Burada derin duyu yukarı çıkar, inen motor yol bulunmaz (s. 6).",
+      "B": "Ön boynuz, motor nöronların bulunduğu gri cevher bölümüdür ve kortikospinal lifler burada sonlanır. Gri cevher olduğu için yolun indiği beyaz cevher bölümü değildir (s. 4).",
+      "C": "Lateral funikulus, ön ve arka kökler arasında kalan beyaz cevher bölümüdür ve inen lateral kortikospinal traktusu taşır. Kortikospinal yol burada aşağı indiği için doğru cevaptır (s. 6).",
+      "D": "Arka boynuz, arka kökle giren duyu liflerinin ulaştığı gri cevher bölümüdür. Motor yol bu bölümde yer almadığı için kortikospinal traktusun yeri olamaz (s. 4).",
+      "E": "Ön beyaz komissür, santral kanalın önünde iki yarıyı birleştiren ince beyaz cevher bandıdır. Kortikospinal traktus bu bağlantı bölümünde değil lateral funikulusta iner (s. 6)."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Posterior funiculus Lateral funiculus Anterior funiculus",
+      "gorsel": true
+     },
+     "s": 6,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İntumesentia lumbosakralis aşağıdaki spinal segmentlerden hangilerini içerir?",
+     "secenekler": {
+      "A": "T9–T12",
+      "B": "L2–S3",
+      "C": "C4–T1",
+      "D": "C3–T2",
+      "E": "L1–L5"
+     },
+     "dogru": "B",
+     "aciklama": "İntumesentia lumbosakralis T9–T12 vertebraları arasındadır ama L2–S3 spinal segmentlerini içerir; vertebra ve segment düzeyi karıştırılmamalıdır.",
+     "sik_aciklamalari": {
+      "A": "T9–T12, intumesentia lumbosakralisin yer aldığı vertebra aralığıdır, içerdiği spinal segmentler değildir. Vertebra düzeyi ile segment düzeyini karıştıran bu aralık sorulan segmentleri vermez (s. 7).",
+      "B": "L2–S3, intumesentia lumbosakralisin içerdiği spinal segment aralığıdır ve bacak sinirleri bu segmentlerden çıkar. Genişleme T9–T12 vertebraları arasında olsa da içerdiği segmentler L2–S3 olduğu için doğru cevaptır (s. 7).",
+      "C": "C4–T1, intumesentia servikalisin içerdiği spinal segmentlerdir ve kol sinirleri bu düzeyden çıkar. Üst genişlemeye ait olduğu için lumbosakral genişlemenin segmentleriyle karıştırılmamalıdır (s. 7).",
+      "D": "C3–T2, intumesentia servikalisin yer aldığı vertebra aralığıdır. Hem üst genişlemeye ait hem de segment değil vertebra düzeyini gösterdiği için lumbosakral segmentlerin yerine geçmez (s. 7).",
+      "E": "L1–L5, beş lumbar segmentin tamamını anlatan bir aralıktır ve medulla spinaliste 5 lumbar segment vardır. Lumbosakral genişleme ise sakral S1–S3 segmentlerini de kapsadığı için bu aralık eksik kalır (s. 6)."
+     },
+     "bilgi": [
+      14,
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "L2-S3 spinal segmetleri"
+     },
+     "s": 7,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b01"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "C7 ve T1 vertebraları arasındaki foramenden çıkan spinal sinir hangisidir?",
+     "secenekler": {
+      "A": "C7",
+      "B": "T1",
+      "C": "C8",
+      "D": "C6",
+      "E": "T2"
+     },
+     "dogru": "C",
+     "aciklama": "Servikalde 7 vertebra ve 8 spinal sinir vardır; C1–C7 sinirleri aynı numaralı vertebranın üstünden çıkarken C8 siniri C7 ile T1 vertebraları arasından çıkar.",
+     "sik_aciklamalari": {
+      "A": "C7 siniri, servikal sinirler aynı numaralı vertebranın üstünden çıktığı için C6 ile C7 vertebraları arasından çıkar. C7 vertebranın altındaki aralık bir sonraki sinire ait olduğundan uymaz (s. 2).",
+      "B": "T1 siniri, torakal bölgede sinirler aynı numaralı vertebranın altından çıktığı için T1 ile T2 vertebraları arasından çıkar. C7–T1 aralığını kullanan sinir servikal seriden olduğu için uymaz (s. 2).",
+      "C": "C8 siniri, servikalde vertebradan bir fazla sinir bulunduğu için C7 vertebranın altından ve T1 vertebranın üstünden çıkar. Yedi servikal vertebraya karşılık sekiz servikal sinir olduğundan doğru cevaptır (s. 2).",
+      "D": "C6 siniri, C5 ile C6 vertebraları arasından çıkan servikal sinirdir ve brakiyal pleksusa katılır. Aralıkta iki vertebra yukarıda kaldığı için C7–T1 foramenine ait değildir (s. 2).",
+      "E": "T2 siniri, T2 vertebranın altından çıkan ve interkostal sinir olarak devam eden torakal sinirdir. Torakal düzeyde daha aşağıda çıktığı için C7–T1 aralığıyla ilgisi kurulamaz (s. 2)."
+     },
+     "bilgi": [
+      4,
+      1,
+      5
+     ],
+     "benzer_cikmis": [
+      "fccec81b0770"
+     ],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "C1 C2 C3 C4 C5 C6 C7 C8",
+      "gorsel": true
+     },
+     "s": 2,
+     "dayanak": [
+      "cikmis:fccec81b0770",
+      "ogrenci:B:notta-yok-C8"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Medulla spinalisin sağ yarısının kesildiği bir hastada lezyon düzeyinin altında aşağıdaki bulgular veriliyor:\nI. Sağ tarafta üst motor nöron felci\nII. Sağ tarafta pozisyon ve vibrasyon duyusu kaybı\nIII. Sol tarafta üst motor nöron felci\nIV. Sol tarafta pozisyon ve vibrasyon duyusu kaybı\nBunlardan hangileri beklenir?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "II ve III",
+      "D": "III ve IV",
+      "E": "II ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Arka kolon lifleri bulbusta, kortikospinal lifler piramidal çaprazlaşmada karşıya geçtiği için kordda ikisi de aynı taraftadır; yarı kesi lezyon tarafında felç ve derin duyu kaybı yapar.",
+     "sik_aciklamalari": {
+      "A": "Sağ tarafta üst motor nöron felci ile sağ tarafta derin duyu kaybı birlikte beklenen iki bulgudur. Kortikospinal ve arka kolon lifleri kordda aynı taraftan geçtiği için bu birleşim doğru cevaptır (s. 11).",
+      "B": "Bu seçenek felci iki tarafa birden yayar. Sağ yarı kesisinde yalnız sağ lateral kortikospinal traktus kesildiğinden sol tarafta üst motor nöron felci beklenmez (s. 12).",
+      "C": "Bu birleşim derin duyuyu doğru tarafa, felci ise karşı tarafa koyar. Kortikospinal lifler bulbusta çaprazlaşıp kordda aynı tarafta indiği için felç de lezyon tarafında olur (s. 12).",
+      "D": "Bu birleşim iki bulguyu da karşı tarafa yerleştirir. Hem lateral kortikospinal traktus hem arka kolon kordda çaprazlaşmadan ilerlediği için bulgular lezyon tarafında kalır (s. 11).",
+      "E": "Bu seçenek derin duyu kaybını iki tarafa birden yayar. Arka kolon lifleri bulbustaki duyusal çaprazlaşmaya kadar aynı tarafta yükseldiğinden yalnız sağ taraf etkilenir (s. 11)."
+     },
+     "bilgi": [
+      29,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Medial lemniscus Sensory decussation Fasciculus cuneatus",
+      "gorsel": true
+     },
+     "s": 11,
+     "dayanak": [
+      "cikmis:past-1790877482971-276482"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Arka kolonlarda bacaktan gelen derin duyu lifleri nerede yer alır?",
+     "secenekler": {
+      "A": "Medialde, orta hatta yakın",
+      "B": "Lateralde, arka boynuza yakın",
+      "C": "Lateral funikulusta, dışta",
+      "D": "Ön funikulusta, ön fissüre yakın",
+      "E": "Santral kanal çevresindeki gri komissürde"
+     },
+     "dogru": "A",
+     "aciklama": "Arka kolonlarda bacak lifleri medialde (fasikulus grasilis), kol lifleri lateralde (fasikulus kuneatus) yer alır; lateral kortikospinal traktusta dizilim terstir.",
+     "sik_aciklamalari": {
+      "A": "Arka kolonlarda bacak lifleri medialde, kol lifleri lateralde dizilir ve segment sırası içten dışa sakral, lumbar, torakal, servikaldır. Bacak lifleri orta hatta en yakın bölümde olduğu için doğru cevaptır (s. 9).",
+      "B": "Arka kolonların lateral bölümü kol ve servikal liflerin yeridir. Yukarıdan gelen lifler dışa eklenerek dizildiği için bacak lifleri burada değil iç tarafta bulunur (s. 9).",
+      "C": "Lateral funikulusta dışta yer alan lifler lateral kortikospinal traktusun sakral ve bacak lifleridir. Bu inen motor yola ait dizilimdir, arka kolondaki derin duyu liflerini anlatmaz (s. 9).",
+      "D": "Ön funikulus, ön median fissür ile ön kök arasında kalan beyaz cevher bölümüdür. Derin duyu taşıyan grasil ve kuneat fasikuluslar arka funikulusta yer aldığı için uymaz (s. 6).",
+      "E": "Gri komissür, santral kanalı çevreleyen ve iki yarıyı birleştiren gri cevher bölümüdür. Yükselen derin duyu lifleri gri cevherde değil arka funikulusun beyaz cevherinde ilerler (s. 4)."
+     },
+     "bilgi": [
+      19,
+      18,
+      16
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Posterior Columns: LEG ARM S L T C",
+      "gorsel": true
+     },
+     "s": 9,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Medulla spinalisin segment dağılımı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "7 servikal, 12 torakal, 5 lumbar, 5 sakral, 1 koksigeal",
+      "B": "8 servikal, 12 torakal, 5 lumbar, 4 sakral, 1 koksigeal",
+      "C": "8 servikal, 11 torakal, 5 lumbar, 5 sakral, 1 koksigeal",
+      "D": "8 servikal, 12 torakal, 5 lumbar, 5 sakral, 1 koksigeal",
+      "E": "7 servikal, 12 torakal, 5 lumbar, 5 sakral, 2 koksigeal"
+     },
+     "dogru": "D",
+     "aciklama": "Medulla spinalis 8 servikal, 12 torakal, 5 lumbar, 5 sakral ve 1 koksigeal segmentten oluşur; servikalde segment sayısı vertebra sayısından bir fazladır.",
+     "sik_aciklamalari": {
+      "A": "Bu dağılım servikal vertebra sayısını segment sayısı yerine koyar. Servikal bölgede 7 vertebra olsa da 8 spinal segment ve 8 sinir bulunduğu için servikal sayı eksiktir (s. 6).",
+      "B": "Bu dağılımda servikal, torakal ve lumbar sayılar doğrudur, sakral segment sayısı ise azaltılmıştır. Sakral bölgede 5 segment bulunduğu için dağılım hatalıdır (s. 6).",
+      "C": "Bu dağılım torakal segmentleri bir eksik verir. Torakal bölgede 12 segment bulunduğu ve T1–T12 sinirleri interkostal sinirleri oluşturduğu için torakal sayı hatalıdır (s. 6).",
+      "D": "Medulla spinalis 31 segmentten oluşur ve servikalde vertebradan bir fazla, yani 8 segment bulunur. Torakal 12, lumbar 5, sakral 5 ve koksigeal 1 segmentle tam dağılım bu olduğu için doğru cevaptır (s. 6).",
+      "E": "Bu dağılımda hem servikal hem koksigeal sayı yanlıştır. Servikalde 8 segment, koksigeal bölgede ise yalnız 1 segment bulunduğu için iki değer de kaymıştır (s. 6)."
+     },
+     "bilgi": [
+      11,
+      13,
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "8 cervical 12 thoracic 5 lumbar 5 sacral 1 coccygeal",
+      "gorsel": true
+     },
+     "s": 6,
+     "dayanak": [
+      "cikmis:fccec81b0770"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q08",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Lateral kortikospinal traktusta sakral segmentlere giden lifler nerede yer alır?",
+     "secenekler": {
+      "A": "En içte, gri cevhere komşu",
+      "B": "En dışta, lateral bölümde",
+      "C": "Traktusun orta bölümünde, torakal liflerin içinde",
+      "D": "Arka kolonda, orta hatta yakın",
+      "E": "Ön funikulusta, ön kortikospinal traktus içinde"
+     },
+     "dogru": "B",
+     "aciklama": "Lateral kortikospinal traktusta servikal lifler içte, sakral lifler dışta yer alır; arka kolon ve spinotalamik traktusta sakral liflerin yeri farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Lateral kortikospinal traktusun gri cevhere komşu iç bölümünde servikal ve kol lifleri yer alır. Sakral lifler bunun tam karşısında, dış kenarda bulunduğu için uymaz (s. 9).",
+      "B": "Lateral kortikospinal traktusta içten dışa dizilim servikal, torakal, lumbar, sakraldır. Sakral ve bacak lifleri traktusun en dış bölümünde bulunduğu için doğru cevaptır (s. 9).",
+      "C": "Traktusun orta bölümünde torakal ve lumbar lifler sıralanır. Sakral lifler dizinin son halkası olarak en dışta yer aldığından ortada konumlanmaz (s. 9).",
+      "D": "Arka kolonun orta hatta yakın bölümü sakral derin duyu liflerinin yeridir. Bu çıkan duyu yolundaki dizilimdir ve inen kortikospinal traktusun sakral lifleriyle karıştırılmamalıdır (s. 9).",
+      "E": "Ön kortikospinal traktus, piramidal çaprazlaşmada karşıya geçmeyen liflerin ön funikulusta indiği yoldur. Soru lateral kortikospinal traktustaki dizilimi sorduğu için bu yer uymaz (s. 12)."
+     },
+     "bilgi": [
+      19,
+      20,
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Corticospinal Tract: LEG ARM C T L S",
+      "gorsel": true
+     },
+     "s": 9,
+     "dayanak": [
+      "ayrinti"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q10",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Spinal kord duyu sendromlarında lezyonun kesitteki yeri ile ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tam kesi – kesitin tamamı",
+      "B": "Yarı kesi – kordun bir yarısı",
+      "C": "Siringomiyelik sendrom – santral kanal çevresi",
+      "D": "Tabetik sendrom – ön boynuzlar ve ön kökler",
+      "E": "Anterior spinal arter sendromu – kesitin ön üçte ikisi"
+     },
+     "dogru": "D",
+     "aciklama": "Tabetik sendromda lezyon arka kolonlar ve arka kök girişindedir; anterior spinal arter sendromunda ön üçte iki tutulur, arka kolonlar korunur.",
+     "sik_aciklamalari": {
+      "A": "Tam kesi şeklinde medulla spinalis kesitinin tamamı taralıdır ve lezyon altında bütün yollar kesilir. Bu eşleştirme kesitteki yerle uyumludur (s. 10).",
+      "B": "Yarı kesi, Brown-Séquard sendromu olarak da bilinir ve kordun yalnız bir yarısının tutulmasıdır. O yarıdaki arka kolon ve kortikospinal yol birlikte etkilendiğinden eşleştirme doğrudur (s. 10).",
+      "C": "Siringomiyelik sendromda lezyon santral kanal çevresinde küçük bir alandır. Kavite buradan başlayıp büyüdükçe çaprazlaşan liflere ve ön boynuza yayıldığı için bu eşleştirme doğrudur (s. 10).",
+      "D": "Tabetik sendromda tutulan alan iki arka kolon ile arka kök giriş bölgesidir, ön boynuz ve ön kökler korunur. Eşleştirme lezyonu yanlış yere koyduğu için bu yüzden doğru cevaptır (s. 10).",
+      "E": "Anterior spinal arter sendromunda kesitin ön üçte ikisi tutulur ve iki arka kolon korunur. Bu yüzden derin duyu korunurken ağrı-ısı kaybı ve pleji görülür, eşleştirme doğrudur (s. 10)."
+     },
+     "bilgi": [
+      21,
+      27,
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Tabetic Complete Hemisection Syndrome Transection",
+      "gorsel": true
+     },
+     "s": 10,
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h32"
+     ],
+     "gorsel": true
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "fccec81b0770",
+     "soru": "C 8 sinir kökü hangi 2 vertebra arasından çıkar",
+     "secenekler": {
+      "A": "C6-C7",
+      "B": "C7-C8",
+      "C": "C8-C9",
+      "D": "C7-T1",
+      "E": "T1-T2"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Lezyonun kesitteki yerine göre tam kesi, yarı kesi (Brown-Séquard), siringomiyelik, arka kolon ve anterior spinal arter sendromlarının bulgularını ayırt eder; spinal şoku tanımlar.",
+   "sorular": [
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q14",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Medulla spinalisin tam kesisinde lezyon düzeyinde ön boynuz hücresi ya da ön kök harabiyetine bağlı olarak hangi bulgu beklenir?",
+     "secenekler": {
+      "A": "Ekstansör plantar yanıt",
+      "B": "Spastisite ve hiperrefleksi",
+      "C": "Fasikülasyon ve atrofi",
+      "D": "Horner sendromu",
+      "E": "Pelerin tarzında ağrı ve ısı kaybı"
+     },
+     "dogru": "C",
+     "aciklama": "Tam kesinin lezyon düzeyinde ön boynuz ya da ön kök harabiyeti alt motor nöron bulguları (parezi, atrofi, fasikülasyon, arefleksi), lezyon altında ise üst motor nöron bulguları yapar.",
+     "sik_aciklamalari": {
+      "A": "Ekstansör plantar yanıt, kortikospinal yolun kesilmesiyle lezyon düzeyinin altında ortaya çıkan üst motor nöron bulgusudur. Lezyon düzeyindeki ön boynuz harabiyetinin sonucu değildir (s. 15).",
+      "B": "Spastisite ve hiperrefleksi, spinal şok geçtikten sonra lezyonun altında yerleşen üst motor nöron bulgularıdır. Ön boynuz ve ön kök hasarı ise tersine arefleksi yapar (s. 15).",
+      "C": "Ön boynuz hücresi ya da ön kök harabiyeti lezyon düzeyinde alt motor nöron bulgularına yol açar. Parezi, atrofi, fasikülasyon ve arefleksi bu grupta yer aldığı için doğru cevaptır (s. 15).",
+      "D": "Horner sendromu, tam kesinin otonom bulguları arasında sayılır. Motor nöron harabiyetini değil otonom yolların tutulumunu gösterdiği için soruya uymaz (s. 15).",
+      "E": "Pelerin tarzında ağrı ve ısı kaybı, siringomiyelide santral kavitenin çaprazlaşan duyu liflerine basısıyla ortaya çıkar. Ön boynuz harabiyetinin motor bulgusu değildir (s. 40)."
+     },
+     "bilgi": [
+      39,
+      36,
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Ön boynuz hücresi veya ön kök harabiyetine bağlı lezyon düzeyinde alt"
+     },
+     "s": 15,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q18",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Siringomiyelide ilk ortaya çıkan duyu bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pelerin tarzında ağrı ve ısı duyusu kaybı",
+      "B": "Lezyon altında tüm duyularda kayıp",
+      "C": "Simetrik süvari yaması duyu kusuru",
+      "D": "Pozisyon ve vibrasyon duyusunun iki tarafta birden kaybı",
+      "E": "Gluteal bölgede asimetrik duyu bozukluğu"
+     },
+     "dogru": "A",
+     "aciklama": "Siringomiyelide ilk bulgu kollarda pelerin tarzında ağrı ve ısı kaybıdır; dokunma ve derin duyu korunur.",
+     "sik_aciklamalari": {
+      "A": "Siringomiyelide santral kavite önce çaprazlaşan ağrı ve ısı liflerini etkiler ve kollarda pelerin tarzında kayıp yapar. Dokunma ve derin duyu bu evrede korunduğu için doğru cevaptır (s. 40).",
+      "B": "Lezyon altında tüm duyuların kaybolması tam kesinin bulgusudur. Siringomiyelide ise duyu kaybı başlangıçta seçicidir, yalnız ağrı ve ısı etkilenir, dokunma ve derin duyu korunur (s. 40).",
+      "C": "Simetrik süvari yaması duyu kusuru konus medüllaris lezyonunun bulgusudur ve perianal bölgeyi tutar. Servikal yerleşimli santral kavitenin ilk bulgusuyla örtüşmez (s. 41).",
+      "D": "Pozisyon ve vibrasyon kaybı arka kordon tutulumunun bulgusudur. Siringomiyelide bu kayıp ancak lezyon yana ve arkaya yayıldığında, geç dönemde ortaya çıkar (s. 40).",
+      "E": "Gluteal bölgede asimetrik duyu bozukluğu kauda ekuina lezyonunda kök tutulumuna bağlı görülür. Servikal kavitenin kollarda yaptığı duyu kaybıyla ilgisi yoktur (s. 41)."
+     },
+     "bilgi": [
+      115
+     ],
+     "benzer_cikmis": [
+      "d3-k2-nor-006"
+     ],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "İlk olarak pelerin tarzında ağrı ve ısı duyusunda kayıp varken, dokunma ve derin duyu korunur"
+     },
+     "s": 40,
+     "dayanak": [
+      "cikmis:d3-k2-nor-006",
+      "ogrenci:A:noro-s05-b19"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Medulla spinalisin tam kesisinin akut döneminde lezyon düzeyinin altında hangi motor tablo görülür?",
+     "secenekler": {
+      "A": "Spastik ve hiperrefleksik parapleji",
+      "B": "Yalnız lezyon tarafında üst motor nöron felci",
+      "C": "Duyu normalken asimetrik flask bacak felci",
+      "D": "Ellerde segmental nörojenik atrofi ve parezi",
+      "E": "Flask ve arefleksik parapleji"
+     },
+     "dogru": "E",
+     "aciklama": "Tam kesinin akut döneminde spinal şok vardır: felç flask ve arefleksiktir; sonra spastik ve hiperrefleksik parapleji ya da kuadripleji gelişir.",
+     "sik_aciklamalari": {
+      "A": "Spastik ve hiperrefleksik parapleji, tam kesinin spinal şok dönemi geçtikten sonra yerleşen tablosudur. Akut dönemde refleksler artmaz, kaybolur; bu nedenle soruda istenen evreye uymaz (s. 15).",
+      "B": "Lezyon tarafında üst motor nöron felci, kordun yalnız bir yarısının kesildiği yarı kesinin bulgusudur. Tam kesi iki yanı birden tuttuğu için felç tek taraflı kalmaz (s. 10).",
+      "C": "Duyunun normal kaldığı asimetrik flask felç, ön boynuz hücrelerini tutan paralitik poliomiyelitin tablosudur. Tam kesi lezyon altında tüm duyuları da kaldırdığı için bu tabloya uymaz (s. 21).",
+      "D": "Segmental nörojenik atrofi ve parezi, siringomiyelide kavitenin ön boynuza yayılmasıyla görülür. Bu bulgu santral bir lezyonun genişlemesini anlatır, tam kesinin akut motor tablosu değildir (s. 40).",
+      "E": "Tam kesinin akut döneminde spinal şok nedeniyle lezyon altındaki felç flask ve arefleksiktir. Bu dönem geçince tablo spastik ve hiperrefleksik hâle döndüğü için akut dönemin karşılığı olarak doğru cevaptır (s. 15)."
+     },
+     "bilgi": [
+      37,
+      40
+     ],
+     "benzer_cikmis": [
+      "6f885e32472d"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Akut lezyonlarda flask ve arefleksik"
+     },
+     "s": 15,
+     "dayanak": [
+      "cikmis:6f885e32472d",
+      "ogrenci:A:noro-s05-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "34 yaşında kadın hastada iki gün içinde gelişen iki bacakta güçsüzlük, göbek hizasının altında tüm duyularda kayıp, idrar yapamama ve konstipasyon saptanıyor. Bu hastada lezyon en olası nerededir?",
+     "secenekler": {
+      "A": "Konus medüllaris",
+      "B": "Torakal medulla spinalis",
+      "C": "Kauda ekuina",
+      "D": "Arka kolonlar",
+      "E": "Servikal ön boynuz hücreleri"
+     },
+     "dogru": "B",
+     "aciklama": "Parapleji, gövdede seviye veren tüm duyu kaybı ve sfinkter bozukluğu birlikteyse lezyon medulla spinalistedir; göbek hizası seviyesi torakal tutulumu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Konus medüllaris lezyonu erken ve tam sfinkter tutulumu ile simetrik süvari yaması duyu kusuru yapar. Duyu kaybı perianal bölgeyle sınırlı kaldığından göbek hizasında seviye vermez (s. 41).",
+      "B": "Torakal medulla spinalisin tam ya da tama yakın kesisi iki bacakta felç, gövdede seviye veren duyu kaybı ve otonom bozukluk yapar. Göbek hizasında seviye ile parapleji ve sfinkter bulgusu birlikte olduğu için doğru cevaptır (s. 15).",
+      "C": "Kauda ekuina lezyonu L3 vertebra altındaki köklerin tutulmasıdır ve şiddetli radiküler ağrı ile asimetrik duyu bulgusu yapar. Gövdede seviye vermediği ve sfinkter geç tutulduğu için uymaz (s. 41).",
+      "D": "Arka kolonların seçici tutulumu tabes dorsaliste olduğu gibi pozisyon ve vibrasyon kaybı, Romberg pozitifliği ve duysal ataksi yapar. Tüm duyularda seviye ve parapleji açıklanamaz (s. 26).",
+      "E": "Ön boynuz hücrelerinin harabiyeti poliomiyelitte olduğu gibi duyunun korunduğu flask felç yapar. Bu hastada tüm duyular kaybolduğu ve otonom bulgu olduğu için ön boynuz tutulumu yetmez (s. 21)."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-57"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Lezyon altında tüm duyularda kayıp"
+     },
+     "s": 15,
+     "dayanak": [
+      "cikmis:past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-57",
+      "ogrenci:A:noro-s05-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi medulla spinalisin tam kesisinde görülen otonom bulgulardandır?",
+     "secenekler": {
+      "A": "Argyll Robertson pupillası",
+      "B": "Kardiyak iletim bozukluğu",
+      "C": "Charcot eklemi",
+      "D": "Horner sendromu",
+      "E": "Optik atrofi"
+     },
+     "dogru": "D",
+     "aciklama": "Tam kesinin otonom bulguları sık idrara çıkma, idrar yapamama, idrar kaçırma, konstipasyon ve Horner sendromudur; Argyll Robertson pupillası tabes dorsaliste görülür.",
+     "sik_aciklamalari": {
+      "A": "Argyll Robertson pupillası, ışık refleksinin kaybolup akomodasyonun korunduğu miyotik pupildir. Tabes dorsalisin bulgusudur, tam kesinin otonom tablosunda yer almaz (s. 26).",
+      "B": "Kardiyak iletim bozukluğu, otozomal resesif geçişli Friedreich ataksisine eşlik eden bulgudur. Kalıtsal dejeneratif bir hastalığa ait olduğu için tam kesiyle bağlantısı yoktur (s. 44).",
+      "C": "Charcot eklemi, tabes dorsaliste ağrı ve derin duyu kaybına bağlı gelişen eklem harabiyetidir. Arka kolon hastalığının bulgusu olduğundan tam kesinin otonom bulgusu sayılmaz (s. 25).",
+      "D": "Horner sendromu, tam kesinin otonom bozuklukları arasında idrar sorunları ve konstipasyonla birlikte sayılır. Otonom yolların kesilmesini gösterdiği için doğru cevaptır (s. 15).",
+      "E": "Optik atrofi, tabes dorsaliste diğer kraniyel nöropatilerle birlikte görülen bulgudur. Medulla spinalis kesisinin otonom etkisiyle değil nörosifilizin kraniyel tutulumuyla ilgilidir (s. 26)."
+     },
+     "bilgi": [
+      40,
+      41
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Sık idrara çıkma, idrar yapamama, idrar kaçırma"
+     },
+     "s": 15,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Medulla spinalisin tam kesisinde spinal şok dönemi geçtikten sonra lezyon altında hangi tablo yerleşir?",
+     "secenekler": {
+      "A": "Kalıcı flask ve arefleksik parapleji",
+      "B": "Duyunun korunduğu flask felç",
+      "C": "Derin tendon refleksi kaybıyla birlikte Babinski pozitifliği",
+      "D": "Arefleksik ve atrofik asimetrik güçsüzlük",
+      "E": "Spastik ve hiperrefleksik parapleji"
+     },
+     "dogru": "E",
+     "aciklama": "Spinal şok döneminde felç flask ve arefleksiktir; şok geçince lezyon altında spastik ve hiperrefleksik parapleji ya da kuadripleji yerleşir.",
+     "sik_aciklamalari": {
+      "A": "Flask ve arefleksik felç, tam kesinin yalnız akut spinal şok döneminin tablosudur. Bu dönem kalıcı değildir, ardından refleksler artar (s. 15).",
+      "B": "Duyunun korunduğu flask felç, ön boynuz hücrelerinin harap olduğu paralitik poliomiyelitte görülür. Tam kesi lezyon altında tüm duyuları kaldırdığı için bu tabloya uymaz (s. 21).",
+      "C": "Derin tendon reflekslerinin kaybıyla Babinski pozitifliğinin birlikte olması Friedreich ataksisinin özelliğidir. Spinal şok sonrası tam kesinde refleksler kaybolmaz, artar (s. 44).",
+      "D": "Arefleksik, atrofinin eşlik ettiği asimetrik güçsüzlük kauda ekuina sendromunun motor tablosudur. Kökler tutulduğu için alt motor nöron bulgusu verir, tam kesinin geç dönemine uymaz (s. 43).",
+      "E": "Tam kesinin akut flask ve arefleksik dönemi geçince lezyon altındaki felç spastik ve hiperrefleksik hâle gelir. Spinal şok sonrası yerleşen tablo bu olduğu için doğru cevaptır (s. 15)."
+     },
+     "bilgi": [
+      37,
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "sonra spastik ve hiperrefleksik"
+     },
+     "s": 15,
+     "dayanak": [
+      "cikmis:6f885e32472d",
+      "ogrenci:A:noro-s05-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q19",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Medulla spinalis kesitinde lezyonun yalnız santral kanal çevresinde küçük bir alanda bulunduğu sendrom hangisidir?",
+     "secenekler": {
+      "A": "Arka kolon sendromu",
+      "B": "Siringomiyelik sendrom",
+      "C": "Anterior spinal arter sendromu",
+      "D": "Tabetik sendrom",
+      "E": "Yarı kesi (Brown-Séquard) sendromu"
+     },
+     "dogru": "B",
+     "aciklama": "Siringomiyelik sendromda lezyon santral kanal çevresindedir; arka kolon ve tabetik sendrom arkada, anterior spinal arter sendromu önde yerleşir.",
+     "sik_aciklamalari": {
+      "A": "Arka kolon sendromunda yalnız iki arka kolon tutulur ve derin duyu kaybı ön plandadır. Lezyon arkada yer aldığı için santral kanal çevresine uymaz (s. 10).",
+      "B": "Siringomiyelik sendromda lezyon santral kanal çevresinde küçük bir alan olarak başlar. Kavite buradan çaprazlaşan duyu liflerine ve ön boynuza yayıldığı için doğru cevaptır (s. 10).",
+      "C": "Anterior spinal arter sendromunda kesitin ön üçte ikisi tutulur, iki arka kolon korunur. Geniş ön yerleşimli bir alan olduğundan santral küçük lezyonla karıştırılmamalıdır (s. 10).",
+      "D": "Tabetik sendromda tutulan alan iki arka kolon ile arka kök giriş bölgesidir. Tabes dorsaliste görülen bu tablo arka yerleşimlidir, santral değildir (s. 10).",
+      "E": "Brown-Séquard sendromunda kordun bir yarısı bütünüyle tutulur. Lezyon tek tarafa yayılan geniş bir alan olduğu için santral kanal çevresindeki küçük lezyonu anlatmaz (s. 10)."
+     },
+     "bilgi": [
+      21,
+      25,
+      27
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Syringomyelic Posterior Anterior Syndrome Column",
+      "gorsel": true
+     },
+     "s": 10,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b19"
+     ],
+     "gorsel": true
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Medulla spinalisin tam kesisi (transvers miyelopati) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Lezyon altında yalnız ağrı ve ısı duyusu kaybolur",
+      "B": "Lezyon düzeyinde radiküler ağrı olabilir",
+      "C": "Yüzeyel karın cildi refleksi kaybolur",
+      "D": "Lezyon düzeyinde fasikülasyon ve atrofi görülebilir",
+      "E": "Sakral düzeyin üstünde mesane spastik ve küçüktür"
+     },
+     "dogru": "A",
+     "aciklama": "Tam kesinin duyu bulgusu lezyon altında tüm duyularda kayıptır; ağrı-ısıyla sınırlı kayıp siringomiyeli ve anterior spinal arter infarktının özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Tam kesinin duyu bozukluğu lezyon altında tüm duyuların kaybıdır, yalnız ağrı ve ısı ile sınırlı kalmaz. İfade bulguyu daraltarak yanlış verdiği için bu yüzden doğru cevaptır (s. 15).",
+      "B": "Tam kesinin duyu bozuklukları arasında belli bir köke ait radiküler ağrı ve segmental paresteziler vardır. Bu bulgu lezyon düzeyini gösterdiği için ifade doğrudur (s. 15).",
+      "C": "Yüzeyel karın cildi refleksinin kaybı, tam kesinin motor bulguları arasında sayılır. Ekstansör plantar yanıtla birlikte üst motor nöron hasarını gösterdiği için ifade doğrudur (s. 15).",
+      "D": "Lezyon düzeyindeki ön boynuz hücresi ya da ön kök harabiyeti alt motor nöron bulguları yapar. Parezi, atrofi, fasikülasyon ve arefleksi bu düzeyde görülebildiği için ifade doğrudur (s. 15).",
+      "E": "Tam kesinin otonom bulgularında mesane sakral düzeyde flask ve genişlemiş, üstünde ise spastik ve küçüktür. Lezyon düzeyine göre mesane tipinin değişmesini doğru anlattığı için ifade doğrudur (s. 15)."
+     },
+     "bilgi": [
+      36,
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Lezyon altında tüm duyularda kayıp"
+     },
+     "s": 15,
+     "dayanak": [
+      "cikmis:6f885e32472d",
+      "ogrenci:A:noro-s05-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Medulla spinalisin tam kesisi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Sakral düzeydeki lezyonda mesane flask ve genişlemiştir.\nII. Sakral düzeyin üstündeki lezyonda mesane spastik ve küçüktür.\nIII. Konstipasyon görülebilir.\nIV. Yüzeyel karın cildi refleksi artar.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Tam kesinde mesane sakral düzeyde flask ve genişlemiş, üstünde spastik ve küçüktür; konstipasyon görülür ve yüzeyel karın cildi refleksi kaybolur.",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci öncüller mesane tipini doğru verir ama konstipasyon da tam kesinin otonom bulgusudur. Üçüncü öncül dışarıda kaldığı için seçenek eksiktir (s. 15).",
+      "B": "Birinci ve üçüncü öncüller doğrudur, sakral düzeyin üstündeki lezyonda spastik ve küçük mesane bilgisi ise atlanmıştır. İkinci öncül de doğru olduğundan seçenek eksiktir (s. 15).",
+      "C": "İkinci öncül doğrudur ama dördüncü öncül yanlıştır, çünkü tam kesinde yüzeyel karın cildi refleksi artmaz, kaybolur. Bu birleşim yanlış bir öncülü içerdiği için uymaz (s. 15).",
+      "D": "Sakral düzeyde flask ve genişlemiş, üstünde spastik ve küçük mesane ile konstipasyon tam kesinin otonom bulgularıdır. Karın cildi refleksi kaybolduğu için ilk üç öncülü veren seçenek doğru cevaptır (s. 15).",
+      "E": "İkinci ve üçüncü öncüller doğrudur, dördüncü öncül ise yanlıştır. Tam kesinin motor bulgusu yüzeyel karın cildi refleksinin kaybı olduğundan bu birleşim uymaz (s. 15)."
+     },
+     "bilgi": [
+      40,
+      38,
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "ve genişlemiş, üstünde spastik ve küçük mesane"
+     },
+     "s": 15,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q20",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "28 yaşında erkek hastada iki kolda ve omuzlarda ağrı ve ısı duyusu azalmış, dokunma ve pozisyon duyusu normal bulunuyor; ellerde segmental atrofi ve parezi saptanıyor. Bu hastada atrofi ve pareziyi en iyi hangi yapının tutulumu açıklar?",
+     "secenekler": {
+      "A": "Arka kordon",
+      "B": "Lateral kortikospinal traktus",
+      "C": "Ön boynuz",
+      "D": "Ön beyaz komissür",
+      "E": "Arka kök giriş bölgesi"
+     },
+     "dogru": "C",
+     "aciklama": "Siringomiyelide kavite önce çaprazlaşan ağrı-ısı liflerini, büyüdükçe ön boynuzu (segmental atrofi, parezi), yana yayılınca kortikospinal yolu ve arka kordonu tutar.",
+     "sik_aciklamalari": {
+      "A": "Arka kordonun tutulumu siringomiyelide lezyon yana ve arkaya yayıldığında vibrasyon ve pozisyon duyusu kaybı yapar. Bu hastada pozisyon duyusu normal olduğundan atrofiyi açıklamaz (s. 40).",
+      "B": "Lateral kortikospinal traktusun tutulumu lezyon düzeyi altında spastik paralizi yapar. Üst motor nöron bulgusu olduğundan segmental atrofi ve nörojenik güçsüzlüğü açıklamaz (s. 40).",
+      "C": "Siringomiyelide kavite büyüdükçe ön boynuza yayılır ve segmental nörojenik atrofi ile parezi yapar. Ellerdeki atrofi bu yayılımın sonucu olduğu için doğru cevaptır (s. 40).",
+      "D": "Ön beyaz komissürde çaprazlaşan lifler ağrı ve ısı duyusunu taşır, siringomiyelide ilk etkilenen yapı budur. Bu tutulum pelerin tarzı duyu kaybını açıklar, kas atrofisini açıklamaz (s. 40).",
+      "E": "Arka kök giriş bölgesi, tabetik sendromda arka kolonlarla birlikte tutulan alandır. Duyu liflerinin girişine ait olduğundan motor nöron kaybına bağlı atrofiyi açıklamaz (s. 10)."
+     },
+     "bilgi": [
+      116,
+      113
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Kavite büyüdükçe ön boynuza yayılır ve segmental nörojenik atrofi, parezi olur"
+     },
+     "s": 40,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b19"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-nor-006",
+     "soru": "Servikal medulla spinalisin santral kanalında genişleme (kavitasyon) sonucu ön beyaz komissürden geçen spinotalamik liflerin çaprazlaşma yerinde basıya uğramasıyla kollarda 'pelerin tarzında' ağrı ve ısı duyusu kaybı, buna karşın dokunma ve propriyosepsiyonun korunması (disosiye duyu kaybı) ile seyreden hastalık hangisidir?",
+     "secenekler": {
+      "A": "Tabes dorsalis",
+      "B": "Siringomiyeli",
+      "C": "Brown-Séquard sendromu",
+      "D": "Poliomiyelit",
+      "E": "Subakut kombine dejenerasyon"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "6f885e32472d",
+     "soru": "Nöroloji MEDULLA SPINALIS Hastalıkları Medulla spinalisin tam yada tama yakın hasarında aşağıdakilerden hangisi görülmez? No Lezyon seviyesi altında otonom fonksiyonlar etkilenmiştir Lezyon seviyesi altında flask tipte güç kaybı olur Lezyon seviyesi altında derin duyu etkilenmiştir. Spinal şok döneminde refleksler artmıştır. Lezyon seviyesi altında his kaybı görülür Lezyon s",
+     "secenekler": {
+      "A": "Lezyon seviyesi altında otonom fonksiyonlar etkilenmiştir",
+      "B": "Lezyon seviyesi altında flask tipte güç kaybı olur",
+      "C": "Lezyon seviyesi altında derin duyu etkilenmiştir.",
+      "D": "Spinal şok döneminde refleksler artmıştır.",
+      "E": "Lezyon seviyesi altında his kaybı görülür"
+     },
+     "cevap": null
+    },
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-57",
+     "soru": "Nörolojik muayenesinde parapleji+ gövdede seviye veren his kusuru+ sifinkter bozukluğu olan hastada lezyon lokalizasyonu nerededir?",
+     "secenekler": {
+      "A": "Serebellum",
+      "B": "1. sakral radiks",
+      "C": "Sağ hemisfer",
+      "D": "Medulla spinalis",
+      "E": "Beyin sapı"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Miyelit ve miyelopatiyi tanımlar; viral, bakteriyel, sifilitik, tüberküloz ve otoimmün miyelitlerin sınıflamasını, poliomiyelit ve nörosifilizin klinik ve BOS bulgularını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q21",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Medulla spinalisin yalnız gri cevherini tutan miyelit hangisidir?",
+     "secenekler": {
+      "A": "Lökomiyelit",
+      "B": "Transvers miyelit",
+      "C": "Meningomiyelit",
+      "D": "Poliomiyelit",
+      "E": "Meningoradikülit"
+     },
+     "dogru": "D",
+     "aciklama": "Miyelit tutulan yapıya göre adlandırılır: gri cevher poliomiyelit, beyaz cevher lökomiyelit, ikisi birlikte transvers miyelit, meninks ve kök meningoradikülittir.",
+     "sik_aciklamalari": {
+      "A": "Lökomiyelit, miyelitin yalnız beyaz cevheri tuttuğu biçimdir. Gri cevher korunduğu ve tutulum yalnız beyaz cevherde kaldığı için kökte sorulan gri cevher tutulumuna uymaz (s. 13).",
+      "B": "Transvers miyelit, gri ve beyaz cevherin birlikte tutulduğu miyelittir. Tutulum gri cevherle sınırlı kalmayıp beyaz cevheri de kapsadığından yalnız gri cevheri tutan miyelit tanımına uymaz (s. 13).",
+      "C": "Meningomiyelit, meninkslerin ve spinal kordun birlikte tutulduğu inflamasyondur. Zarların da tutulduğu bu tablo kordun yalnız gri cevherini tutan miyelit biçimini anlatmadığı için uymaz (s. 13).",
+      "D": "Poliomiyelit, miyelitin gri cevheri tuttuğu biçimidir ve ön boynuz hücrelerinin harabiyeti buna örnektir. Tutulan yapıya göre yapılan adlandırmada gri cevhere karşılık geldiği için doğru cevaptır (s. 13).",
+      "E": "Meningoradikülit, meninkslerle sinir köklerinin birlikte tutulmasıdır ve tabes dorsalis buna örnektir. Kord gri cevheri yerine kök ve zarlar etkilendiği için uymaz (s. 13)."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Gri cevher: poliomyelit • Beyaz cevher"
+     },
+     "s": 13,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b03"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q27",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Poliomiyelit ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnız beyaz cevheri tutar",
+      "B": "Enfeksiyondan 15–20 yıl sonra ortaya çıkar ve arka kordonu belirgin tutar",
+      "C": "Ön boynuzlar korunur, arka kökler harap olur",
+      "D": "Hastaların çoğunda paralitik form gelişir",
+      "E": "Fekal-oral yolla bulaşır ve çoğunlukla asemptomatik geçer"
+     },
+     "dogru": "E",
+     "aciklama": "Poliomiyelit aseptik menenjit ve ön boynuz harabiyetiyle oluşur, fekal-oral bulaşır ve yüzde 90–95 asemptomatik geçer; az sayıda hastada SSS tutulur.",
+     "sik_aciklamalari": {
+      "A": "Yalnız beyaz cevheri tutan miyelite lökomiyelit denir. Poliomiyelit ise gri cevheri, özellikle ön boynuz hücrelerini tuttuğu için ifade yanlıştır (s. 13).",
+      "B": "Enfeksiyondan 15–20 yıl sonra arka kordonun tutulması sifilizin tabes dorsalis biçimine özgüdür. Poliomiyelitte hedef arka kordon değil ön boynuzdur (s. 25).",
+      "C": "Arka köklerde başlayıp arka kordona yayılan inflamasyon tabes dorsalisin özelliğidir. Poliomiyelit ise aseptik menenjit ve ön boynuz hücrelerinin harabiyetiyle oluşur (s. 26).",
+      "D": "Paralitik poliomiyelit, sinir sistemi tutulan az sayıdaki hastada görülen biçimdir. Enfeksiyonun büyük kısmı belirtisiz geçtiği için çoğunlukta felç beklenmez (s. 19).",
+      "E": "Poliomiyelit çoğunlukla poliovirüslerle oluşur, fekal-oral yolla bulaşır ve yüzde 90–95 oranında asemptomatik geçer. Yalnız az sayıda hastada sinir sistemi tutulduğu için doğru cevaptır (s. 19)."
+     },
+     "bilgi": [
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Bulaşma fekal oral yolla olur"
+     },
+     "s": 19,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b09"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q22",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Miyelit ve miyelopati kavramları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Miyelit, toksik ve nütrisyonel kord hastalıklarının ortak adıdır",
+      "B": "Miyelitler her zaman tek bir spinal segmenti tutar",
+      "C": "Miyelitler tam ya da yarı medulla kesisine benzeyen klinik tablolara hiçbir evrede ve hiçbir hastada yol açmaz",
+      "D": "B12 eksikliğine bağlı tutulum miyelit olarak adlandırılır",
+      "E": "Miyelopati, enflamatuvar ve enfeksiyöz olmayan medulla spinalis hastalıklarını anlatır"
+     },
+     "dogru": "E",
+     "aciklama": "Miyelit medulla spinalisin enflamatuvar hastalığıdır; miyelopati enflamatuvar ve enfeksiyöz olmayan toksik, nütrisyonel ve nekrotizan hastalıkları anlatır.",
+     "sik_aciklamalari": {
+      "A": "Miyelit, medulla spinalisin enflamatuvar hastalıklarına verilen addır. Toksik ve nütrisyonel nedenli hastalıklar miyelopati terimiyle anlatıldığı için ifade terimleri karıştırır (s. 14).",
+      "B": "Miyelitler birkaç spinal segmenti tutarak akut ya da subakut başlayabilir. Yukarı doğru yayılabildikleri için tek segmentle sınırlı kalmaları beklenmez (s. 14).",
+      "C": "Miyelitler tam ya da yarı medulla kesisi gibi semptom verebilir. Kesitteki tutulumun genişliğine göre her iki tabloyu da taklit ettikleri için ifade yanlıştır (s. 14).",
+      "D": "B12 eksikliği, nütrisyonel nedenli subakut kombine dejenerasyon yapar ve en sık miyelopati nedenidir. Enflamatuvar olmadığı için miyelit değil miyelopati grubundadır (s. 33).",
+      "E": "Miyelopati, enflamatuvar ve enfeksiyöz olmayan toksik, nütrisyonel ve nekrotizan medulla spinalis hastalıkları için kullanılır. İki terimi doğru ayırdığı için doğru cevaptır (s. 14)."
+     },
+     "bilgi": [
+      33,
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Miyelopati enflamatuvar ve enfeksiyöz olmayan"
+     },
+     "s": 14,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b03"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q23",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Saatler içinde yukarı doğru hızla yayılan (assendan) miyelit hangi seviyenin üstüne çıkarsa solunum felcine neden olabilir?",
+     "secenekler": {
+      "A": "C3",
+      "B": "C8",
+      "C": "T1",
+      "D": "C5",
+      "E": "T4"
+     },
+     "dogru": "A",
+     "aciklama": "Miyelitler birkaç segmenti tutup saatler içinde yukarı doğru yayılabilir; C3 seviyesinin üstüne çıkarsa solunum felci gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Assendan miyelit C3 seviyesinin üstüne çıktığında solunum felcine neden olabilir. Miyelitin yukarı doğru saatler içinde ilerleyebildiği hatırlanırsa bu sınır doğru cevaptır (s. 14).",
+      "B": "C8, servikal bölgenin son segmentidir ve siniri C7 ile T1 vertebraları arasından çıkar. Solunum felci için verilen sınır bundan çok daha yukarıda olduğu için uymaz (s. 14).",
+      "C": "T1, intumesentia servikalisin alt sınırındaki segmenttir ve ilk torakal segmenttir. Bu düzeye ulaşan miyelit solunum felci sınırına henüz yaklaşmamıştır (s. 7).",
+      "D": "C5, intumesentia servikalis içindeki bir segmenttir. Solunum felci için tanımlanan sınır daha yukarıdaki C3 seviyesi olduğundan bu değer yakın ama hatalı bir sınırdır (s. 14).",
+      "E": "T4, üst torakal bir segmenttir ve gövde düzeyinde duyu seviyesi verir. Solunum felcinin ortaya çıktığı servikal sınırın altında kaldığı için uymaz (s. 14)."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "C3 seviyesinin üstüne çıkarsa solunum felcine neden olabilir"
+     },
+     "s": 14,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b03"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q24",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tropikal spastik paraparezi tablosuna neden olan viral miyelit etkeni hangisidir?",
+     "secenekler": {
+      "A": "Herpes zoster virüsü",
+      "B": "HTLV-I",
+      "C": "Kuduz virüsü",
+      "D": "Epstein-Barr virüsü",
+      "E": "Hepatit B virüsü"
+     },
+     "dogru": "B",
+     "aciklama": "Viral miyelit etkenleri enterovirüsler, herpes zoster, EBV, CMV, HSV, kuduz, hepatit B, HTLV-I ve AIDS'tir; HTLV-I tropikal spastik paraparezi yapar.",
+     "sik_aciklamalari": {
+      "A": "Herpes zoster virüsü, viral miyelit etkenleri listesinde ayrı bir başlık olarak yer alır. Tropikal spastik paraparezi adıyla anılan tablo bu virüse değil başka bir retrovirüse aittir (s. 16).",
+      "B": "HTLV-I, viral miyelit etkenleri arasında sayılır ve tropikal spastik paraparezi tablosunu oluşturur. Posterolateral kolonu tutan HTLV ilişkili miyelopati bu adla bilindiği için doğru cevaptır (s. 16).",
+      "C": "Kuduz, viral miyelit nedenleri arasında sayılan bir enfeksiyondur. Spastik paraparezinin tropikal adla bilinen kronik tablosu ise HTLV-I ile ilişkilidir (s. 16).",
+      "D": "Epstein-Barr virüsü, sitomegalovirüs ve herpes simpleks virüsüyle birlikte viral miyelit etkenleri arasında yer alır. Tropikal spastik paraparezi bu gruba ait bir tablo değildir (s. 16).",
+      "E": "Hepatit B virüsü, viral miyelitler listesinde ayrı bir etken olarak geçer. Tropikal spastik paraparezi ile eşleştirilen virüs olmadığı için uymaz (s. 16)."
+     },
+     "bilgi": [
+      42,
+      43
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "HTLV-I (Tropikal spastik paraparezi)"
+     },
+     "s": 16,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b06"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q26",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Poliomiyelitin akut döneminde beyin omurilik sıvısında (BOS) beklenen bulgu hangisidir?",
+     "secenekler": {
+      "A": "Tamamen normal BOS bulguları",
+      "B": "Kanlı ve santrifüj sonrası ksantokromik BOS",
+      "C": "Mononükleer pleositoz, glukoz normal, poliovirüs IgM negatif",
+      "D": "Mononükleer pleositoz, protein hafif artmış, glukoz normal",
+      "E": "Mononükleer hücre 10–200/mm3 ve VDRL pozitifliği"
+     },
+     "dogru": "D",
+     "aciklama": "Poliomiyelitin akut döneminde BOS'ta mononükleer pleositoz, hafif protein artışı, normal glukoz ve poliovirüs IgM pozitifliği vardır; nonparalitik formda BOS normaldir.",
+     "sik_aciklamalari": {
+      "A": "Normal BOS, nonparalitik ya da preparalitik poliomiyelit için belirtilen bulgudur. Paralitik hastalığın akut döneminde ise hücre artışı ve IgM pozitifliği görüldüğü için uymaz (s. 20).",
+      "B": "Kanlı ve santrifüjden sonra ksantokromik BOS, medulla spinalis içine kanama olan hematomiyeliyi düşündürür. Kanamalı miyelopatinin bulgusu olduğu için poliomiyelitin akut dönemine uymaz (s. 32).",
+      "C": "Bu seçenekte hücre ve glukoz bulguları doğrudur ama antikor sonucu ters verilmiştir. Akut dönemde poliovirüs IgM pozitif olduğu için ifade yanlış bir ayrıntı taşır (s. 22).",
+      "D": "Poliomiyelitin akut döneminde BOS'ta mononükleer pleositoz, hafif protein artışı ve normal glukoz bulunur, poliovirüs IgM pozitiftir. Akut dönemin tipik BOS tablosu olduğu için doğru cevaptır (s. 22).",
+      "E": "Mononükleer hücre artışı ile birlikte VDRL pozitifliği nörosifiliz tanısının BOS bulgusudur. Treponema enfeksiyonuna ait olduğu için poliovirüsle ilişkili değildir (s. 27)."
+     },
+     "bilgi": [
+      58,
+      59
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Mononükleer pleositoz, protein hafif artmış, glukoz normaldir."
+     },
+     "s": 22,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b10"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q28",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Işık refleksinin kaybolduğu, akomodasyonun korunduğu miyotik pupil aşağıdaki hastalıklardan hangisinde görülür?",
+     "secenekler": {
+      "A": "Tabes dorsalis",
+      "B": "Medulla spinalisin tam kesisi",
+      "C": "Friedreich ataksisi",
+      "D": "Subakut kombine dejenerasyon",
+      "E": "Siringomiyeli"
+     },
+     "dogru": "A",
+     "aciklama": "Argyll Robertson pupillasında ışık refleksi kaybolur, akomodasyon korunur ve pupil miyotiktir; tabes dorsalisin önemli bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Tabes dorsalis, nörosifilizin arka kordonu seçici olarak tutan biçimidir ve Argyll Robertson pupillası önemli bulgularındandır. Işık refleksi kayıp, akomodasyon korunmuş miyotik pupil bu hastalıkta görüldüğü için doğru cevaptır (s. 26).",
+      "B": "Tam kesinin otonom bulguları arasında Horner sendromu sayılır. Horner sendromu ışık refleksi kaybıyla giden pupil tablosu olmadığından Argyll Robertson pupillasıyla karıştırılmamalıdır (s. 15).",
+      "C": "Friedreich ataksisi, otozomal resesif trinükleotid tekrar hastalığıdır ve ataksi, derin tendon refleksi kaybı ile kardiyak iletim bozukluğu yapar. Bu hastalıkta sayılan bulgular arasında ışık refleksi kaybıyla giden bir pupil anomalisi bulunmadığı için uymaz (s. 44).",
+      "D": "Subakut kombine dejenerasyon, B12 eksikliğinde arka ve lateral kolonların birlikte tutulmasıdır. Optik sinir etkilenebilse de ışık-akomodasyon ayrışmasıyla giden pupil tabes dorsalise özgüdür (s. 35).",
+      "E": "Siringomiyeli, servikal santral kavitenin önce pelerin tarzında ağrı ve ısı kaybı yaptığı hastalıktır. Pupilde ışık refleksi kaybı bu hastalığın bulgusu değildir (s. 40)."
+     },
+     "bilgi": [
+      71,
+      66,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Argyll Robertson pupillası (Işık refleksi kayıp, akomodasyon korunmuş, miyotikpupil)"
+     },
+     "s": 26,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b13"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q29",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tabes dorsaliste Aşil tendonu sıkıldığında hastanın acı duymaması hangi adla bilinir?",
+     "secenekler": {
+      "A": "Argyll Robertson pupillası",
+      "B": "Abadie belirtisi",
+      "C": "Charcot eklemi",
+      "D": "Romberg bulgusu",
+      "E": "Babinski yanıtı"
+     },
+     "dogru": "B",
+     "aciklama": "Tabes dorsaliste ağrı duyumu azalır ve Aşil tendonu sıkılmasına duyarsızlık Abadie belirtisi olarak bilinir.",
+     "sik_aciklamalari": {
+      "A": "Argyll Robertson pupillası, tabes dorsaliste ışık refleksinin kaybolup akomodasyonun korunduğu miyotik pupildir. Aynı hastalığın bulgusu olsa da ağrı duyumuyla değil pupil yanıtıyla ilgilidir (s. 26).",
+      "B": "Abadie belirtisi, tabes dorsaliste ağrı duyumunun azalmasına bağlı olarak Aşil tendonu sıkıldığında acı duyulmamasıdır. Kökte tarif edilen bulgunun adı olduğu için doğru cevaptır (s. 26).",
+      "C": "Charcot eklemi, tabes dorsaliste duyu kaybına bağlı gelişen eklem harabiyetidir. Eklem yapısındaki bozulmayı anlatır, tendon sıkılmasına duyarsızlığın adı değildir (s. 25).",
+      "D": "Romberg bulgusu, gözler kapatıldığında dengenin bozulmasıdır ve tabes dorsaliste şiddetli biçimde pozitiftir. Derin duyu kaybını gösterir, ağrı duyumu kaybını anlatmaz (s. 26).",
+      "E": "Babinski yanıtı, ekstansör plantar yanıt olarak da bilinir ve kortikospinal yol hasarında lezyon düzeyinin altında görülür. Motor yolun bulgusu olduğu için tabesteki ağrı duyumu kaybının adı değildir (s. 15)."
+     },
+     "bilgi": [
+      70,
+      68,
+      67
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Aşil tendonu sıkılmasına duyarsızlık"
+     },
+     "s": 26,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b13"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q25",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Paralitik poliomiyelit ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sıklıkla bacakları tutar ve asimetrik olabilir",
+      "B": "Üçüncü haftadan itibaren kas atrofisi fark edilir",
+      "C": "Felçli ekstremitede belirgin duyu kaybı olur",
+      "D": "Nadiren bulber tutuluş olabilir",
+      "E": "Kas zaafının şiddeti harap olan ön boynuz hücresi sayısıyla orantılıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Paralitik poliomiyelit sıklıkla bacakları tutan, asimetrik olabilen flask bir felçtir; duyu normal kalır ve üçüncü haftadan itibaren atrofi görülür.",
+     "sik_aciklamalari": {
+      "A": "Paralitik poliomiyelitte güçsüzlük sıklıkla bacakları tutar, asimetrik olabilir ve bir ya da birkaç ekstremiteyi etkileyebilir. Bu ifade hastalığın tipik dağılımını doğru anlatır (s. 21).",
+      "B": "Ön boynuz hücrelerinin kaybına bağlı kaslarda atrofi gelişir ve üçüncü haftadan itibaren fark edilir. Alt motor nöron hasarının beklenen sonucu olduğu için ifade doğrudur (s. 21).",
+      "C": "Paralitik poliomiyelit flask bir paralizidir ve duyu normal kalır, çünkü virüs ön boynuz motor hücrelerini harap eder. Felçli ekstremitede duyu kaybı olacağını söyleyen ifade yanlıştır, bu yüzden doğru cevaptır (s. 21).",
+      "D": "Poliovirüs omurilik ön boynuzlarının yanı sıra beyin sapı motor çekirdeklerini de tutabilir. Bu nedenle nadiren bulber tutuluş görülmesi doğru bir ifadedir (s. 21).",
+      "E": "Paralitik poliomiyelitte kas zaafının şiddeti hasara uğrayan ön boynuz hücrelerinin sayısıyla orantılıdır. Felçli kalan kaslarda bu hücrelerin yüzde ondan azı sağlam kalır, ifade doğrudur (s. 21)."
+     },
+     "bilgi": [
+      55,
+      54,
+      59
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Flask bir paralizidir. Duyu normal kalır."
+     },
+     "s": 21,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b09"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q30",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Tabes dorsalis ile ilgili aşağıdaki ifadeler veriliyor:\nI. Sifiliz miyelitinin kronik meningoradikülit biçimidir.\nII. Enfeksiyondan 15–20 yıl sonra ortaya çıkar.\nIII. Arka köklerde başlayan inflamasyon arka kordona yayılır.\nIV. Kortikospinal traktus belirtileri ön plandadır.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "I ve IV",
+      "D": "II ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Tabes dorsalis sifilizin kronik meningoradikülit biçimidir; enfeksiyondan 15–20 yıl sonra arka kökten başlayıp arka kordona yayılır. Kortikospinal bulguların ön planda olduğu form Erb'in spastik paraplejisidir.",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci öncüller doğrudur ama arka köklerde başlayıp arka kordona yayılan inflamasyon da tabesin özelliğidir. Üçüncü öncül dışarıda kaldığı için seçenek eksiktir (s. 26).",
+      "B": "Tabes dorsalis sifilizin kronik meningoradikülit biçimidir, enfeksiyondan 15–20 yıl sonra çıkar ve arka kökten arka kordona yayılır. Kortikospinal bulguların ön planda olduğu form Erb paraplejisi olduğundan ilk üç öncül doğru cevaptır (s. 26).",
+      "C": "Birinci öncül doğrudur ama dördüncü öncül sifilitik meningomiyeliti, yani Erb'in spastik paraplejisini anlatır. Tabeste arka kordon tutulduğu için bu birleşim yanlıştır (s. 27).",
+      "D": "İkinci öncül doğrudur, dördüncü öncül ise Erb'in spastik paraplejisine aittir. Tabes dorsaliste ön planda olan derin duyu kaybı ve ataksi olduğundan seçenek uymaz (s. 27).",
+      "E": "Üçüncü öncül doğrudur ama kortikospinal traktus belirtilerinin ön planda olduğu tablo sifilitik meningomiyelittir. Tabesin bir başka spinal sifiliz formuyla karıştırıldığı bu seçenek yanlıştır (s. 27)."
+     },
+     "bilgi": [
+      67,
+      65,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Enfeksiyondan 15-20 yıl sonra ortaya çıkar. Arka kordonu belirgin etkiler."
+     },
+     "s": 25,
+     "dayanak": [
+      "ogrenci:B:noro-s05-b07",
+      "ogrenci:B:noro-s05-b13"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Medulla spinalisin iskemik (anterior spinal arter infarktı, dekompresyon hastalığı) ve kanamalı hastalıklarının nedenlerini, kliniğini ve tanısını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q31",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Medulla spinalis iskemik hastalıkları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Beyin iskemisinden daha sık görülür",
+      "B": "Posterior spinal arter alanındaki infarktlar sıktır",
+      "C": "Genellikle anterior spinal arter alanında gelişir",
+      "D": "İnfarktlar en sık üst servikal bölgede görülür",
+      "E": "Başlangıçta spinal şok dönemi görülmez"
+     },
+     "dogru": "C",
+     "aciklama": "Spinal iskemi beyne göre nadirdir, genellikle anterior spinal arter alanında ve alt torakal sınır bölgesinde gelişir; başlangıçta spinal şok olur.",
+     "sik_aciklamalari": {
+      "A": "Medulla spinalis iskemisi beyne göre daha nadir görülür. Çoğunlukla ekstravertebral damarların omuriliğe sunduğu kanın azalmasıyla ortaya çıktığı için ifade yanlıştır (s. 30).",
+      "B": "Posterior spinal arterler arka kolonları besler ve bu alandaki infarktlar seyrek görülür. Sıklık sıralaması ters verildiği için ifade yanlıştır (s. 31).",
+      "C": "Spinal infarkt genellikle anterior spinal arter alanında gelişir, posterior spinal arter alanındaki infarktlar seyrektir. Kordun ön kısmı en sık iskemiye uğrayan bölge olduğu için doğru cevaptır (s. 31).",
+      "D": "Spinal infarktlar sıklıkla sınır bölgelerinde, özellikle alt torakal bölgede görülür. Üst servikal bölge bu sınır alanlarından biri olarak tanımlanmadığı için ifade yanlıştır (s. 30).",
+      "E": "Spinal infarktta genellikle başlangıçta bir spinal şok dönemi olur. Felç hızla yerleşip başta flask seyrettiği için bu ifade gerçeğin tersidir (s. 31)."
+     },
+     "bilgi": [
+      89,
+      87,
+      90
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h32"
+     ],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Genellikle anterior spinal arter alanında gelişir."
+     },
+     "s": 31,
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h32",
+      "cikmis:d3k2-2024-2025-h11c",
+      "ogrenci:A:noro-s05-b17"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q36",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Akut parapleji ve seviye gösteren duyu kusuru olan hastada BOS'un kanlı olması ve santrifüjden sonra ksantokromik görünmesi hangi tabloyu düşündürür?",
+     "secenekler": {
+      "A": "Paralitik poliomiyelit",
+      "B": "Otoimmün transvers miyelit",
+      "C": "Hematomiyeli",
+      "D": "Anterior spinal arter infarktı",
+      "E": "Nörosifiliz"
+     },
+     "dogru": "C",
+     "aciklama": "Hematomiyelide akut parapleji ve seviye gösteren duyu kusuru vardır; BOS'un kanlı ve santrifüjden sonra ksantokromik olması kanamalı miyelopatiyi düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Paralitik poliomiyelit, duyunun korunduğu asimetrik flask felçtir. Akut dönem BOS'unda kanama değil mononükleer pleositoz ve poliovirüs IgM pozitifliği bulunur (s. 22).",
+      "B": "Otoimmün transvers miyelit, postenfeksiyöz, otoimmün hastalıklara bağlı ya da multipl skleroz seyrinde görülen inflamatuvar miyelopatidir. Kanlı ve ksantokromik BOS bu inflamatuvar tablonun bulgusu değildir (s. 29).",
+      "C": "Hematomiyeli, medulla spinalis içine kanamadır ve akut parapleji ile seviye gösteren duyu kusuru yapar. Kanlı, santrifüj sonrası ksantokromik BOS kanamalı miyelopatiyi düşündürdüğü için doğru cevaptır (s. 32).",
+      "D": "Anterior spinal arter infarktı da ani pleji yapar ama iskemik bir olaydır ve tanısı MR ile konur. BOS'ta kanama bulgusu iskemiyi değil kanamalı miyelopatiyi düşündürür (s. 31).",
+      "E": "Nörosifilizde BOS'ta mononükleer hücre, protein ve gama globulin artışı olur, VDRL pozitifliği tanı koydurur. İnflamatuvar bir BOS tablosu olduğundan kanlı BOS ile karıştırılmamalıdır (s. 27)."
+     },
+     "bilgi": [
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "BOS’un kanlı ve santrifüjden sonra ksantokromik"
+     },
+     "s": 32,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q33",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Dekompresyon (Caisson) hastalığında miyelopati hangi mekanizmayla gelişir?",
+     "secenekler": {
+      "A": "Anterior spinal arterin aterosklerotik ya da embolik tıkanması",
+      "B": "Aortun 30 dakikadan uzun klemplenmesi",
+      "C": "Dördüncü ventrikül çıkışının tıkanmasıyla kavite oluşması",
+      "D": "Miyelinin metilmalonil-KoA yolunda bozulması",
+      "E": "Epidural venlerde azot kabarcıklarının venöz dolaşımı bozması"
+     },
+     "dogru": "E",
+     "aciklama": "Dekompresyon (Caisson) hastalığında epidural venlerde serbestleşen azot kabarcıkları omuriliğin venöz dolaşımını bozar ve iskemik-hemorajik miyelopati yapar.",
+     "sik_aciklamalari": {
+      "A": "Aorttan çıkan damarların aterosklerotik ya da embolik tıkanması arteriyel spinal iskemi nedenidir. Dekompresyon hastalığındaki sorun ise arterde değil venöz dolaşımdadır (s. 30).",
+      "B": "Aortun 30 dakikadan uzun süre klemplendiği cerrahi girişimler, omuriliğe gelen kanı azaltarak iskemi yapar. Bu ameliyatla ilgili bir nedendir, gaz kabarcığı mekanizmasını anlatmaz (s. 30).",
+      "C": "Dördüncü ventrikül çıkışının doğuştan tıkanması santral kanalı genişletir ve siringomiyeli kavitesini oluşturur. Vasküler değil gelişimsel bir mekanizma olduğu için uymaz (s. 40).",
+      "D": "Metilmalonil-KoA'nın süksinil-KoA'ya dönüşmesinin bozulması B12 eksikliğinde miyelin hasarını açıklar. Subakut kombine dejenerasyona ait metabolik bir mekanizmadır, dekompresyonla ilgisi yoktur (s. 35).",
+      "E": "Dekompresyon hastalığında epidural venlerde serbest hâle geçen azot gazı kabarcıkları omuriliğin venöz dolaşımını bozar. Bunun sonucunda iskemik-hemorajik miyelopati geliştiği için doğru cevaptır (s. 30)."
+     },
+     "bilgi": [
+      88
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Dekompresyon hastalığında (Caisson hastalığı) epidural venlerde serbest hale"
+     },
+     "s": 30,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b17"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q34",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Medulla spinalis infarktları en sık hangi bölgede görülür?",
+     "secenekler": {
+      "A": "Alt torakal sınır (watershed) bölgesi",
+      "B": "Üst servikal bölge",
+      "C": "Konus medüllaris",
+      "D": "Kauda ekuina kökleri",
+      "E": "Lomber intumesentia içindeki sakral segmentler"
+     },
+     "dogru": "A",
+     "aciklama": "Spinal infarktlar sıklıkla watershed bölgelerinde, özellikle alt torakal bölgede görülür ve genellikle anterior spinal arter alanını tutar.",
+     "sik_aciklamalari": {
+      "A": "Spinal infarktlar sıklıkla iki damar alanının sınırındaki watershed bölgelerde, özellikle alt torakal bölgede görülür. Kanlanmanın en zayıf olduğu bu bölge en sık tutulduğu için doğru cevaptır (s. 30).",
+      "B": "Üst servikal bölge, assendan miyelitte C3 üstüne çıkılınca solunum felcinin geliştiği düzeydir. Spinal infarktın en sık yerleştiği sınır bölgesi olarak tanımlanmaz (s. 30).",
+      "C": "Konus medüllaris kordun alt ucudur ve lezyonu erken, tam sfinkter tutulumu yapar. Tethered kord sendromu sık nedenlerindendir, iskemik infarktın en sık yeri değildir (s. 41).",
+      "D": "Kauda ekuina, kordun bittiği yerin altındaki sinir kökleridir ve medulla spinalis dokusu içermez. Kord infarktının yeri olamayacağı için uymaz (s. 2).",
+      "E": "İntumesentia lumbosakralis L2–S3 segmentlerini içeren alt genişlemedir. İnfarktların en sık görüldüğü yer olarak sınır bölgesi tanımlanır, bu genişleme değil (s. 7)."
+     },
+     "bilgi": [
+      87,
+      89,
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "İnfarktlar sıklıkla watershed bölgelerde özellikle alt torakal bölgede sıktır."
+     },
+     "s": 30,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b17"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q32",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "62 yaşında erkek hastada torakal aort cerrahisinden sonra ani gelişen iki bacakta felç, lezyon düzeyi altında ağrı ve ısı duyusu kaybı ve sfinkter kusuru saptanıyor; pozisyon ve vibrasyon duyusu korunmuş. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Hematomiyeli",
+      "B": "Dekompresyon (Caisson) hastalığı",
+      "C": "Siringomiyeli",
+      "D": "Anterior spinal arter infarktı",
+      "E": "Subakut kombine dejenerasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Aort cerrahisi sonrası ani pleji, lezyon altında ağrı-ısı kaybı ve sfinkter kusuru ile korunmuş derin duyu anterior spinal arter infarktını gösterir; arka kolonlar posterior spinal arterlerden beslenir.",
+     "sik_aciklamalari": {
+      "A": "Hematomiyeli, medulla spinalis içine kanamadır ve akut parapleji ile seviye gösteren duyu kusuru yapar. Travma, damar malformasyonu ve antikoagülan kullanımıyla ilişkilidir, derin duyunun seçici korunmasını açıklamaz (s. 32).",
+      "B": "Dekompresyon hastalığında epidural venlerde serbestleşen azot kabarcıkları venöz dolaşımı bozar ve iskemik-hemorajik miyelopati yapar. Basınç değişimine bağlıdır, aort cerrahisi sonrası tabloyu açıklamaz (s. 30).",
+      "C": "Siringomiyeli, santral kavitenin önce kollarda pelerin tarzında ağrı ve ısı kaybı yaptığı yavaş ilerleyen hastalıktır. Ani başlayan bacak felci ve sfinkter kusuru bu tabloya uymaz (s. 40).",
+      "D": "Anterior spinal arter infarktı lezyon altında akut pleji, ağrı-ısı kaybı ve sfinkter kusuru yapar, arka kolonlar korunduğu için derin duyu kalır. Aort cerrahisi spinal iskeminin nedenleri arasında olduğundan doğru cevaptır (s. 31).",
+      "E": "Subakut kombine dejenerasyon, B12 eksikliğinde arka ve lateral kolonların tutulmasıdır ve ağrı-ısı duyumu normal kalır. Bu hastada derin duyu korunup ağrı-ısı kaybolduğu için tablo terstir (s. 34)."
+     },
+     "bilgi": [
+      90,
+      89,
+      95
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Lezyon düzeyi altında akut pleji, ağrı ve ısı duyusu kaybı ve"
+     },
+     "s": 31,
+     "dayanak": [
+      "cikmis:d3k2-2024-2025-h11c",
+      "cikmis:d3k2-2025-2026-h32",
+      "ogrenci:A:noro-s05-b17"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q35",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Anterior spinal arter alanındaki spinal infarkt ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sıklıkla sırt ya da ensede ağrıyla başlar",
+      "B": "Posterior spinal arter alanındaki infarktlardan daha seyrektir",
+      "C": "Felcin yerleşimi hızlıdır ve akut pleji gelişir",
+      "D": "Başlangıçta genellikle bir spinal şok dönemi olur",
+      "E": "Tanıda kullanılan görüntüleme yöntemi manyetik rezonans görüntülemedir (MR)"
+     },
+     "dogru": "B",
+     "aciklama": "Anterior spinal arter infarktı sırt ya da ense ağrısıyla başlar, felç hızla yerleşir, başta spinal şok olur ve tanı MR ile konur; posterior spinal arter alanındaki infarkt seyrektir.",
+     "sik_aciklamalari": {
+      "A": "Anterior spinal arter alanındaki infarkt sıklıkla sırt ya da ensede ağrıyla başlar. Başlangıç belirtisini doğru verdiği için ifade doğrudur (s. 31).",
+      "B": "Spinal infarkt genellikle anterior spinal arter alanında gelişir, posterior spinal arterlerin alanındaki infarktlar ise seyrektir. Sıklığı tersine çeviren ifade yanlış olduğu için bu yüzden doğru cevaptır (s. 31).",
+      "C": "Spinal infarktta felcin yerleşimi hızlıdır ve lezyon altında akut pleji gelişir. Vasküler olayın ani doğasına uyduğu için ifade doğrudur (s. 31).",
+      "D": "Spinal infarktta genellikle başlangıçta bir spinal şok dönemi olur. Felcin önce flask ve arefleksik seyretmesini açıkladığı için ifade doğrudur (s. 31).",
+      "E": "Manyetik rezonans görüntüleme, kord içindeki iskemik lezyonu gösteren ve slaytta spinal iskemik hastalıkların tanı yöntemi olarak verilen incelemedir. Tanı yöntemini doğru verdiği için ifade doğrudur (s. 31)."
+     },
+     "bilgi": [
+      90,
+      89,
+      91
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Posterior spinal arterlerin alanında infarktlar seyrek görülür."
+     },
+     "s": 31,
+     "dayanak": [
+      "cikmis:d3k2-2024-2025-h11c",
+      "ogrenci:A:noro-s05-b17"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2025-2026-h32",
+     "soru": "Medulla spinalisin anterior kısmında hasar varsa en olası hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Siringomiyeli",
+      "B": "Tabes dorsalis",
+      "C": "Spinal iskemik hasar",
+      "D": "Subakut kombine dejenerasyon",
+      "E": "HIV vakuoler miyelopatisi"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "B12 eksikliğine bağlı subakut kombine dejenerasyonun nedenlerini, mekanizmasını ve bulgularını; spinal tümörlerin yerleşime göre sınıflamasını ve siringomiyelinin gelişimini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q37",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Subakut kombine dejenerasyon (nöro-anemik sendrom) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnız arka kolonu tutar, lateral kolon korunur",
+      "B": "Ağrı ve ısı duyusu erken kaybolur",
+      "C": "Megaloblastik anemi olmadan görülmez",
+      "D": "En sık karşılaşılan miyelopati nedenidir",
+      "E": "En ağır hasar lomber bölgenin ön kordonlarındadır"
+     },
+     "dogru": "D",
+     "aciklama": "Subakut kombine dejenerasyon B12 eksikliğine bağlı en sık miyelopati nedenidir; arka ve lateral kolonları tutar ve anemi olmadan da görülebilir.",
+     "sik_aciklamalari": {
+      "A": "B12 eksikliğinde arka kolon ve lateral kolon birlikte etkilenir, bu yüzden posterolateral kolon hastalığı denir. Yalnız arka kolonu tutan seçici hastalık tabes dorsalistir (s. 34).",
+      "B": "Subakut kombine dejenerasyonda ağrı ve ısı duyumu normaldir, parestezi ve duysal ataksi ön plandadır. Erken ağrı-ısı kaybı siringomiyelinin özelliğidir (s. 34).",
+      "C": "Nörolojik belirti ve bulguları olan hastaların bir kısmında megaloblastik anemi görülmez. Anemi yokluğu tanıyı dışlamadığı için nörolojik tablo tek başına da görülebilir ve ifade yanlıştır (s. 33).",
+      "D": "Subakut kombine dejenerasyon, B12 vitamini eksikliği sonucu ortaya çıkar ve en sık karşılaşılan miyelopati nedenidir. Hastalığın tanımını doğru verdiği için doğru cevaptır (s. 33).",
+      "E": "B12 eksikliğinde en ağır hasar servikal ve üst dorsal bölgenin arka ve lateral kordonlarında olur. Hem bölge hem kordon yanlış verildiği için ifade hatalıdır (s. 35)."
+     },
+     "bilgi": [
+      97,
+      102,
+      101
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "En sık karşılaşılan miyelopati nedenidir."
+     },
+     "s": 33,
+     "dayanak": [
+      "ogrenci:B:noro-s06-b08"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q43",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Siringomiyelik sendromdaki santral kavitasyon en sık hangi bölgede yerleşir?",
+     "secenekler": {
+      "A": "Lomber bölge",
+      "B": "Torakal bölge",
+      "C": "Servikal bölge",
+      "D": "Konus medüllaris",
+      "E": "Kauda ekuina"
+     },
+     "dogru": "C",
+     "aciklama": "Siringomiyelik kavite sıklıkla servikal bölgededir, bazen medulla oblongataya, nadiren torakal ya da lomber segmentlere uzanır.",
+     "sik_aciklamalari": {
+      "A": "Lomber segmentler siringomiyelik kavitenin nadiren uzandığı bölgelerdendir. Kavite sıklıkla servikal bölgede bulunduğundan lomber bölge en sık yerleşim yeri olarak kabul edilmez (s. 40).",
+      "B": "Torakal segmentler de kavitenin nadiren uzandığı bölgelerdir. Sıklık sırasında servikal bölgenin gerisinde kaldığı için kavitenin en sık yerleştiği bölge olarak kabul edilmez (s. 40).",
+      "C": "Siringomiyelik sendromda santral kavitasyon sıklıkla servikal bölgededir, bazen medulla oblongataya, nadiren torakal ya da lomber segmentlere uzanır. Kollarda pelerin tarzı duyu kaybını da bu yerleşim açıkladığı için doğru cevaptır (s. 40).",
+      "D": "Konus medüllaris kordun alt ucudur ve lezyonu sfinkter tutulumu ile süvari yaması duyu kusuru yapar. Santral kavitasyonun tipik yerleşim yeri değildir (s. 41).",
+      "E": "Kauda ekuina, kordun bitiminin altındaki sinir kökleridir ve santral kanal içermez. Santral kavitasyon kord dokusu gerektirdiği için burada gelişmez (s. 2)."
+     },
+     "bilgi": [
+      113,
+      114
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Sıklıkla servikal bölgede, bazen medulla oblangataya"
+     },
+     "s": 40,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b19"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q44",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi intramedüller medulla spinalis tümörüdür?",
+     "secenekler": {
+      "A": "Menenjiom",
+      "B": "Nörofibrom",
+      "C": "Lenfoma",
+      "D": "Ependimom",
+      "E": "Miyelom"
+     },
+     "dogru": "D",
+     "aciklama": "İntramedüller tümörler kordun kendi yapılarından gelişir (ependimom, astrositom); menenjiom ve nörofibrom ekstramedüller, lenfoma ve miyelom ekstraduraldir.",
+     "sik_aciklamalari": {
+      "A": "Menenjiom, medulla spinalisin komşuluğundaki yapılardan kaynaklanan ekstramedüller tümördür. Kordun kendi dokusundan değil dışındaki zarlardan gelişip baskı yaptığı için intramedüller tümör sayılmaz (s. 38).",
+      "B": "Nörofibrom, menenjiomla birlikte ekstramedüller tümörlere örnek gösterilir. Kordun dışındaki komşu yapılardan kaynaklandığı için kordun kendi yapısından çıkan intramedüller tümörler grubuna girmez (s. 38).",
+      "C": "Lenfoma, invazyon sonucu gelişen ekstradural ekstramedüller tümörlerdendir. Prostat ve meme kanseriyle aynı grupta yer alır ve dura dışında yerleştiği için kord dokusundan çıkan tümörlere uymaz (s. 38).",
+      "D": "Ependimom, medulla spinalis yapılarından kaynaklanan intramedüller tümörlere örnektir ve astrositomla birlikte bu gruptadır. Tümör kordun kendi dokusundan çıktığı için doğru cevaptır (s. 38).",
+      "E": "Miyelom, prostat ve meme kanseriyle birlikte ekstradural ekstramedüller tümörler arasında sayılır. Kordun kendi yapısından kaynaklanmadığı ve invazyonla geliştiği için intramedüller tümör değildir (s. 38)."
+     },
+     "bilgi": [
+      110,
+      109,
+      108
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Ependimom ve astrositomlar bunlara örnektir."
+     },
+     "s": 38,
+     "dayanak": [
+      "ogrenci:C:noro-s06-b07"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q39",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakiler veriliyor:\nI. Metformin kullanımı\nII. Proton pompa inhibitörü kullanımı\nIII. Gastrektomi\nIV. Aortun 30 dakikadan uzun klemplenmesi\nBunlardan hangileri B12 vitamini eksikliği nedenlerindendir?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "B12 eksikliği nedenleri yetersiz alım, intrensek faktör yetersizliği (pernisiyöz anemi, gastrektomi), emilim bozukluğu, transkobalamin yetersizliği ve kronik ilaçlardır (H2 antagonistleri, PPI, metformin).",
+     "sik_aciklamalari": {
+      "A": "Metformin kronik ilaç kullanımına bağlı B12 eksikliği nedenidir ama tek başına yeterli değildir. Proton pompa inhibitörü ve gastrektomi de nedenler arasında olduğundan seçenek eksiktir (s. 33).",
+      "B": "Metformin ve proton pompa inhibitörü kronik ilaç kullanımı başlığında B12 eksikliği nedenidir. Gastrektomi de intrensek faktör yetersizliğiyle eksikliğe yol açtığından üçüncü öncül eksik kalmıştır (s. 33).",
+      "C": "Proton pompa inhibitörü doğru bir nedendir, aort klemplenmesi ise spinal iskemi nedenidir. Vasküler bir nedeni B12 eksikliğine kattığı için bu birleşim yanlıştır (s. 30).",
+      "D": "Gastrektomi intrensek faktör yetersizliği yaparak B12 eksikliğine yol açar. Aortun uzun süre klemplenmesi ise omurilik iskemisinin cerrahi nedeni olduğu için seçenek uymaz (s. 30).",
+      "E": "Metformin ve proton pompa inhibitörü kronik ilaç kullanımı, gastrektomi ise intrensek faktör yetersizliği yoluyla B12 eksikliği yapar. Aort klemplenmesi spinal iskemiye yol açtığından ilk üç öncülü veren seçenek doğru cevaptır (s. 33)."
+     },
+     "bilgi": [
+      98,
+      99,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "proton pompa inhibitörleri, antidiabetik (metformin)"
+     },
+     "s": 33,
+     "dayanak": [
+      "ogrenci:B:noro-s06-b08"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q41",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Siringomiyelide santral kavite oluşumu aşağıdakilerden hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "Anterior spinal arter alanında infarkt gelişmesi",
+      "B": "Dördüncü ventrikül çıkışının tıkanmasıyla santral kanalın genişlemesi",
+      "C": "Epidural venlerde azot kabarcıklarının birikmesi",
+      "D": "Arka köklerde başlayan inflamasyon ve dejenerasyonun zamanla arka kordona yayılması",
+      "E": "Ön boynuz hücrelerinin viral harabiyeti"
+     },
+     "dogru": "B",
+     "aciklama": "Siringomiyeli dördüncü ventrikül çıkışının doğuştan tıkanmasına bağlı santral kanal genişlemesi ya da artmış BOS basıncıyla kordun içine BOS sızmasıyla açıklanır.",
+     "sik_aciklamalari": {
+      "A": "Anterior spinal arter alanındaki infarkt, kesitin ön üçte ikisini tutan iskemik bir lezyondur. Akut damar olayıdır ve santral kanal çevresinde kavite oluşturmaz (s. 31).",
+      "B": "Siringomiyeli, dördüncü ventrikül çıkışının doğuştan tıkanmasına bağlı santral kanal genişlemesiyle ya da artmış BOS basıncıyla kordun içine BOS sızmasıyla açıklanır. Kavite oluşumunu doğru anlattığı için doğru cevaptır (s. 40).",
+      "C": "Epidural venlerde biriken azot kabarcıkları dekompresyon hastalığında venöz dolaşımı bozar. Bu süreç iskemik-hemorajik miyelopati yapar, santral kanal çevresinde sıvı dolu kavite oluşturmadığı için uymaz (s. 30).",
+      "D": "Arka köklerde başlayıp arka kordona yayılan inflamasyon ve dejenerasyon tabes dorsalisin mekanizmasıdır. Bu mekanizma arka kolonu seçici olarak tutar ve santral kanal çevresinde boşluk oluşumunu açıklamaz (s. 26).",
+      "E": "Ön boynuz hücrelerinin viral harabiyeti poliomiyelitin temelidir ve asimetrik flask felç yapar. Hücre kaybıdır, sıvı dolu kavite oluşumuyla ilgisi yoktur (s. 19)."
+     },
+     "bilgi": [
+      114
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "4.ventrikül çıkışının konjenital tıkanmasına bağlı santral kanalın"
+     },
+     "s": 40,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b19"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q45",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Medulla spinalisi etkileyen metastatik tümörler sıklıkla nerede yerleşir?",
+     "secenekler": {
+      "A": "İntramedüller",
+      "B": "İntradural ekstramedüller",
+      "C": "Santral kanal içi",
+      "D": "Ön boynuz",
+      "E": "Ekstradural"
+     },
+     "dogru": "E",
+     "aciklama": "Metastatik tümörler sıklıkla ekstradural yerleşimlidir; ekstradural ekstramedüller tümörlere lenfoma, prostat ve meme kanseri ile miyelom örnektir.",
+     "sik_aciklamalari": {
+      "A": "İntramedüller yerleşim, ependimom ve astrositom gibi kordun kendi yapısından kaynaklanan tümörlerin yeridir. Uzaktan gelen metastazların sık yeri olarak tanımlanmaz (s. 38).",
+      "B": "İntradural ekstramedüller yerleşim, menenjiom ve nörofibrom gibi komşu yapılardan kaynaklanan tümörlerin yeridir. Metastazlar için verilen sık yer bu değildir (s. 37).",
+      "C": "Santral kanal çevresi, siringomiyelide kavitenin geliştiği yerdir. Tümörler ise intramedüller, intradural ekstramedüller ve ekstradural diye sınıflandığından bu bölge ayrı bir yerleşim grubu sayılmaz (s. 37).",
+      "D": "Ön boynuz, motor nöronların bulunduğu gri cevher bölümüdür ve poliomiyelitte harap olur. Metastatik tümörlerin sık yerleşim yeri olarak tanımlanmaz (s. 21).",
+      "E": "Metastatik tümörler sıklıkla ekstradural yerleşimlidir ve invazyonla gelişen tümörler gibi dura dışından kordu etkiler. Yerleşim yeri doğru verildiği için doğru cevaptır (s. 39)."
+     },
+     "bilgi": [
+      112,
+      110
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Metastatik tümörler Sıklıkla ekstradural yerleşimlidir."
+     },
+     "s": 39,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q38",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "B12 vitamini eksikliğine bağlı subakut kombine dejenerasyonda aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Ayaklarda ve ellerde parestezi",
+      "B": "Duysal ataksi ve Romberg pozitifliği",
+      "C": "Spastisite ve hiperrefleksi",
+      "D": "Mesane atonisi",
+      "E": "Ağrı ve ısı duyumu kaybı"
+     },
+     "dogru": "E",
+     "aciklama": "B12 eksikliğinde parestezi, duysal ataksi, Romberg pozitifliği, mesane atonisi, spastisite ve hiperrefleksi görülür; ağrı ve ısı duyumu normaldir.",
+     "sik_aciklamalari": {
+      "A": "Ayaklarda ve ellerde parestezi, subakut kombine dejenerasyonun bulguları arasında ilk sayılandır. Arka kolon tutulumuna bağlı duysal yakınmayı gösterdiği için beklenir (s. 34).",
+      "B": "Duysal ataksi ve Romberg pozitifliği, arka kolonların hasarına bağlı derin duyu kaybını gösterir. Subakut kombine dejenerasyonda görüldüğü için beklenen bir bulgudur (s. 34).",
+      "C": "Spastisite ve hiperrefleksi, lateral kolondaki kortikospinal yolun tutulumunu gösterir. Periferik nöropati eşlik ederse refleksler zayıflasa da bu bulgu hastalıkta beklenir (s. 34).",
+      "D": "Mesane atonisi, subakut kombine dejenerasyonun bulguları arasında sayılır. Spinal tutulumun mesane üzerindeki otonom sonucunu gösterdiği için parestezi ve ataksiyle birlikte beklenen bir bulgudur (s. 34).",
+      "E": "Subakut kombine dejenerasyonda ağrı ve ısı duyumu normaldir, çünkü hastalık spinotalamik yolları değil arka ve lateral kolonları tutar. Bu bulgu beklenmediği için doğru cevaptır (s. 34)."
+     },
+     "bilgi": [
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Ağrı ve ısı duyumu normaldir."
+     },
+     "s": 34,
+     "dayanak": [
+      "ogrenci:B:noro-s06-b08"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q40",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "B12 vitamini, miyelin kılıfı için önemli olan metilmalonil-KoA'nın hangi maddeye dönüşmesinde temel koenzimdir?",
+     "secenekler": {
+      "A": "Süksinil-KoA",
+      "B": "S-adenozil-L-metionin",
+      "C": "Miyelin bazik protein",
+      "D": "Transkobalamin",
+      "E": "İntrensek faktör"
+     },
+     "dogru": "A",
+     "aciklama": "B12 vitamini metilmalonil-KoA'nın süksinil-KoA'ya dönüşmesinde koenzimdir ve S-adenozil-L-metionin aracılığıyla miyelin bazik protein metilasyonunda rol alır.",
+     "sik_aciklamalari": {
+      "A": "B12 vitamini metilmalonil-KoA'nın süksinil-KoA'ya dönüşmesinde temel koenzimdir. Bu basamak miyelin kılıfı için önemli olduğundan eksikliğinde miyelin bozulur ve doğru cevaptır (s. 35).",
+      "B": "S-adenozil-L-metionin, B12 vitamininin miyelin bazik protein metilasyonunda aracılık ettiği moleküldür. B12'nin ikinci görevine ait olduğu için metilmalonil-KoA'nın dönüştüğü madde değildir (s. 35).",
+      "C": "Miyelin bazik protein, metilasyonuyla lamellar miyelin yapısının stabilitesini sağlayan proteindir. Metilasyon yoluyla ilişkilidir, metilmalonil-KoA'nın dönüşüm ürünü değildir (s. 35).",
+      "D": "Transkobalamin, eksikliği konjenital B12 yetersizliğine yol açan taşıyıcı proteindir. B12'nin taşınmasıyla ilgilidir, koenzim olarak katıldığı tepkimenin ürünü değildir (s. 33).",
+      "E": "İntrensek faktör, yetersizliği pernisiyöz anemi, gastrektomi ve gastrik atrofide B12 eksikliği yapan emilim faktörüdür. Emilim basamağına ait olduğundan dönüşüm ürünü olamaz (s. 33)."
+     },
+     "bilgi": [
+      105
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "metilmalonil CoA’nın süksinil CoA ya dönüşmesinde"
+     },
+     "s": 35,
+     "dayanak": [
+      "ayrinti"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q42",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Siringomiyelinin seyri ile ilgili aşağıdaki ifadeler veriliyor:\nI. İlk olarak pelerin tarzında ağrı ve ısı duyusu kaybolur.\nII. Kavite ön boynuza yayılınca segmental nörojenik atrofi gelişir.\nIII. Lezyon yana yayılınca lezyon düzeyi altında spastik paralizi olur.\nIV. Dokunma ve derin duyu ilk etkilenen duyulardır.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, II ve III",
+      "D": "I ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Siringomiyelide önce pelerin tarzında ağrı-ısı kaybı olur, dokunma ve derin duyu korunur; kavite ön boynuza yayılınca atrofi, yana yayılınca spastik paralizi ve arka kordon tutulumu gelişir.",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci öncüller doğrudur ama lezyon yana yayıldığında gelişen spastik paralizi de seyrin parçasıdır. Üçüncü öncül dışarıda kaldığı için seçenek eksiktir (s. 40).",
+      "B": "İkinci ve üçüncü öncüller doğrudur, ilk bulgu olan pelerin tarzında ağrı ve ısı kaybı ise atlanmıştır. Seyrin başlangıcı eksik kaldığı için seçenek tamamlanmamıştır (s. 40).",
+      "C": "Siringomiyelide önce pelerin tarzında ağrı ve ısı kaybı olur, kavite ön boynuza yayılınca atrofi, yana yayılınca spastik paralizi gelişir. Dokunma ve derin duyu başlangıçta korunduğundan ilk üç öncül doğru cevaptır (s. 40).",
+      "D": "Birinci öncül doğrudur ama dördüncü öncül yanlıştır, çünkü başlangıçta dokunma ve derin duyu korunur. Bu korunma siringomiyelinin disosiye duyu kaybını oluşturduğu için seçenek uymaz (s. 40).",
+      "E": "Üçüncü öncül doğrudur ama dördüncü öncül seyri ters çevirir. Derin duyu ancak arka kordon geç dönemde tutulunca kaybolduğu için seçenek yanlıştır (s. 40)."
+     },
+     "bilgi": [
+      117,
+      115,
+      116
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Lezyon yana yayılınca lezyon düzeyi altında spastik paralizi"
+     },
+     "s": 40,
+     "dayanak": [
+      "ogrenci:A:noro-s05-b19"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Konus medüllaris ile kauda ekuina lezyonlarını ayırt eder; Friedreich ataksisi ve herediter spastik paraplejinin özelliklerini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q46",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Konus medüllaris ve kauda ekuina lezyonlarının ayrımında ağrı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kaudada ön planda, konusta geri planda",
+      "B": "Konusta ön planda, kaudada geri plandadır",
+      "C": "İkisinde de ağrı belirgin değildir",
+      "D": "İkisinde de ağrı simetrik ve bilateraldir",
+      "E": "Ağrı yalnız sfinkter tutulumundan sonra başlar"
+     },
+     "dogru": "A",
+     "aciklama": "Konus medüllaris sendromunda sfinkter tutulumu tam ve akut, duysal bulgular simetrik ve ağrı geri plandadır; kauda ekuinada ağrı ön planda, sfinkter geç ve bulgular asimetriktir.",
+     "sik_aciklamalari": {
+      "A": "Kauda ekuina sendromunda ağrı ön plandadır, konus medüllaris sendromunda ise geri plandadır ve nadirdir. İki lezyonu ayıran en belirgin fark olarak doğru verildiği için doğru cevaptır (s. 42).",
+      "B": "Bu ifade ağrının iki lezyondaki yerini ters çevirir. Konus lezyonunda ağrı nadirdir, kaudada ise akut radiküler ağrı tabloyu başlatır (s. 42).",
+      "C": "Ağrının belirgin olmaması yalnız konus medüllaris lezyonu için geçerlidir. Kauda ekuina lezyonu akut ve şiddetli radiküler ağrıyla ortaya çıktığı için ifade yanlıştır (s. 41).",
+      "D": "Kauda ekuinadaki ağrı unilateral olabilir ve duysal bulgular asimetriktir. Simetrik bulgu konusa ait olduğundan iki lezyonu aynı sayan ifade yanlıştır (s. 41).",
+      "E": "Kauda ekuinada ağrı ilk belirtidir, sfinkter bozukluğu ise konusa göre daha geç gelişir. Sıralamayı ters veren bu ifade lezyonların seyrine uymaz (s. 41)."
+     },
+     "bilgi": [
+      125,
+      124,
+      127
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Kauda equina sendromunda sfinkter daha geç tutulur. Ağrı ön plandadır."
+     },
+     "s": 42,
+     "dayanak": [
+      "ogrenci:A:noro-s06-b03"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q53",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi konus medüllaris lezyonunun sık nedenlerinden biridir?",
+     "secenekler": {
+      "A": "Pott hastalığı",
+      "B": "Dekompresyon (Caisson) hastalığı",
+      "C": "Tethered kord sendromu",
+      "D": "Poliomiyelit",
+      "E": "HTLV-I miyeliti"
+     },
+     "dogru": "C",
+     "aciklama": "Konus medüllaris lezyonu pelvik taban güçsüzlüğü, akut inkontinans ve nörojenik mesane yapar; tethered kord sendromu sık nedenlerindendir.",
+     "sik_aciklamalari": {
+      "A": "Pott hastalığı, tüberküloz spondilitidir ve en çok dorsal ile dorsolomber vertebraları tutarak epidural bası yapar. Konus lezyonunun sık nedeni olarak tanımlanmaz (s. 28).",
+      "B": "Dekompresyon hastalığı, epidural venlerde azot kabarcıklarıyla iskemik-hemorajik miyelopati yapar. Vasküler kökenli bu tablo konus medüllaris lezyonunun sık nedeni olarak tanımlanmadığı için uymaz (s. 30).",
+      "C": "Tethered kord sendromu, konus medüllaris lezyonunun sık nedenlerinden biri olarak bilinir. Kordun alt ucunu etkileyen bir durum olduğu için doğru cevaptır (s. 41).",
+      "D": "Poliomiyelit, ön boynuz hücrelerinin viral harabiyetiyle duyunun korunduğu flask felç yapar. Sfinkter ve süvari yaması bulgulu konus lezyonunun nedeni olarak verilmez (s. 21).",
+      "E": "HTLV-I miyeliti tropikal spastik paraparezi tablosunu oluşturan viral miyelittir. Spastik bir tablo yapan bu enfeksiyon konus medüllaris lezyonunun sık nedeni olarak tanımlanmadığı için uymaz (s. 16)."
+     },
+     "bilgi": [
+      118,
+      120,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Tethered kord sendromu sık nedenlerden biridir."
+     },
+     "s": 41,
+     "dayanak": [
+      "ogrenci:B:noro-s06-b01"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q47",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Konus medüllaris lezyonunun yol açtığı nörojenik mesane ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İstemli işeme korunur",
+      "B": "Doluluk duyusu kaybolur, rezidü artar",
+      "C": "İdrar rezidüsü azalır",
+      "D": "Sfinkter bozukluğu hastalığın ileri döneminde gelişir",
+      "E": "Mesane spastik ve küçüktür"
+     },
+     "dogru": "B",
+     "aciklama": "Konus medüllaris lezyonunda nörojenik mesane gelişir: istemli işeme yapılamaz, idrar rezidüsü artar, doluluk duyumu yoktur; sfinkter tutulumu akut ve tamdır.",
+     "sik_aciklamalari": {
+      "A": "Konus medüllaris lezyonunda volanter işeme yapılamaz, çünkü sakral merkezler doğrudan etkilenir. İstemli işemenin korunması nörojenik mesanenin bulgularıyla çeliştiği için bu lezyona uymaz (s. 41).",
+      "B": "Konus medüllaris lezyonunda nörojenik mesane gelişir: istemli işeme yapılamaz, idrar rezidüsü artar ve vesikal doluluk duyumu yoktur. Bu iki bulguyu doğru birleştirdiği için doğru cevaptır (s. 41).",
+      "C": "Konus lezyonunda mesane boşaltılamadığı için idrar rezidüsü artar. Rezidünün azalması, istemli işemenin yapılamadığı ve doluluk duyusunun kaybolduğu nörojenik mesanenin tersini anlatır (s. 41).",
+      "D": "Sfinkter bozukluğunun geç gelişmesi kauda ekuina lezyonunun özelliğidir. Konus medüllaris sendromunda ise sfinkter tutulumu hastalığın başında, tam ve akut olarak ortaya çıkar (s. 42).",
+      "E": "Spastik ve küçük mesane, tam kesinde lezyonun sakral düzeyin üstünde olduğu durumda görülür. Konus lezyonunda üriner retansiyon ve atonik sfinkterler beklenir (s. 15)."
+     },
+     "bilgi": [
+      119,
+      123,
+      118
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Vesikal doluluk duyumu yoktur"
+     },
+     "s": 41,
+     "dayanak": [
+      "ogrenci:B:noro-s06-b01"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q48",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "45 yaşında erkek hastada aniden başlayan idrar retansiyonu, taşma inkontinansı ve perianal bölgede simetrik süvari yaması tarzında duyu kaybı saptanıyor; ağrı hafif düzeyde. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Kauda ekuina sendromu",
+      "B": "Anterior spinal arter infarktı",
+      "C": "Konus medüllaris sendromu",
+      "D": "Siringomiyeli",
+      "E": "Tabes dorsalis"
+     },
+     "dogru": "C",
+     "aciklama": "Ani ve bilateral başlangıç, akut ve tam sfinkter tutulumu, simetrik süvari yaması duyu kaybı ve hafif ağrı konus medüllaris sendromunu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Kauda ekuina sendromu yavaş ve tek yanlı başlar, ağrısı çok şiddetlidir ve duysal bulgular asimetriktir. Sfinkter yalnız ileri dönemde etkilendiği için bu hastaya uymaz (s. 43).",
+      "B": "Anterior spinal arter infarktı lezyon altında akut pleji ve ağrı-ısı kaybı yapar. Bacaklarda felç olmadan yalnız perianal duyu kaybı ve sfinkter bulgusu bu tabloya uymaz (s. 31).",
+      "C": "Konus medüllaris sendromunda sfinkter tutulumu tam ve akuttur, duyu kusuru simetrik süvari yaması biçimindedir ve ağrı hafiftir. Üriner retansiyon ve taşma inkontinansı da tabloya uyduğu için doğru cevaptır (s. 43).",
+      "D": "Siringomiyeli, servikal santral kavitenin kollarda pelerin tarzında ağrı ve ısı kaybı yaptığı hastalıktır. Perianal duyu kaybı ve akut sfinkter tutulumu bu yerleşime uymaz (s. 40).",
+      "E": "Tabes dorsalis, arka kordonu tutan geç nörosifilizdir ve şiddetli Romberg pozitifliği, Argyll Robertson pupillası ile seyreder. Üriner inkontinans olabilse de ani süvari yaması tablosu konusu gösterir (s. 26)."
+     },
+     "bilgi": [
+      124,
+      120,
+      128
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Konus medüllaris sendromunda sfinkter tutulumu tam ve akuttur."
+     },
+     "s": 42,
+     "dayanak": [
+      "ogrenci:A:noro-s06-b03",
+      "ogrenci:A:noro-s06-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q50",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Konus medüllaris sendromunda refleks bulguları aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Patella ve Aşil refleksleri artmıştır",
+      "B": "Patella refleksi kaybolur, Aşil refleksi korunur",
+      "C": "Derin tendon refleksleri kayıp, Babinski pozitif",
+      "D": "Yalnız yüzeyel karın cildi refleksi kaybolur",
+      "E": "Patella refleksi korunur, Aşil refleksi kaybolur"
+     },
+     "dogru": "E",
+     "aciklama": "Konus medüllaris sendromunda patella refleksi alınır, Aşil refleksi kaybolur; DTR'ler artabilir ve fasikülasyon olabilir.",
+     "sik_aciklamalari": {
+      "A": "İki refleksin birlikte artması, spinal şok geçtikten sonra tam kesinin lezyon altında yaptığı hiperrefleksiye benzer. Konus lezyonunda Aşil refleksi kaybolduğu için uymaz (s. 15).",
+      "B": "Bu dağılım iki refleksin durumunu ters çevirir. Konus medüllaris sendromunda korunan refleks patella refleksi, kaybolan refleks ise Aşil refleksi olduğundan seçenek yanlıştır (s. 43).",
+      "C": "Derin tendon reflekslerinin kaybıyla Babinski pozitifliğinin birlikte bulunması Friedreich ataksisinin özelliğidir. Kalıtsal dejeneratif hastalığa ait bu tablo konus lezyonunu anlatmaz (s. 44).",
+      "D": "Yüzeyel karın cildi refleksinin kaybı, tam kesinin motor bulguları arasındadır. Konus lezyonunun refleks bulgusu ise alt ekstremitede patella korunurken Aşil refleksinin kaybolmasıdır (s. 43).",
+      "E": "Konus medüllaris sendromunda patella refleksi alınır, Aşil refleksi ise kaybolur. Lezyon kordun en alt ucunu tuttuğu için bu refleks dağılımı doğru cevaptır (s. 43)."
+     },
+     "bilgi": [
+      128,
+      126,
+      124
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Refleksler Patella (+), Aşil (-) Patella ve aşil (-)"
+     },
+     "s": 43,
+     "dayanak": [
+      "ogrenci:A:noro-s06-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q51",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kauda ekuina sendromunda aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Ani ve bilateral başlangıç",
+      "B": "Radiküler dağılımlı asimetrik duysal bulgu",
+      "C": "Arefleksik ve atrofik asimetrik güçsüzlük",
+      "D": "Çok şiddetli ağrı",
+      "E": "İmpotansın nadir görülmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Kauda ekuina sendromu yavaş ve tek yanlı başlar, ağrı çok şiddetlidir, duysal bulgu radiküler ve asimetriktir, güçsüzlük arefleksik ve atrofiktir, impotans nadirdir.",
+     "sik_aciklamalari": {
+      "A": "Ani ve bilateral başlangıç konus medüllaris sendromunun özelliğidir, kauda ekuina sendromu ise yavaş ve tek yanlı başlar. Kaudada beklenmeyen bulgu olduğu için doğru cevaptır (s. 43).",
+      "B": "Kauda ekuinada sinir kökleri tutulduğu için duysal bulgular radiküler dağılımlı ve asimetriktir. Konusun simetrik perianal duyu kusurundan farklı olan bu bulgu kauda ekuina sendromunda beklenir (s. 43).",
+      "C": "Kauda ekuina sendromunda parezi arefleksik, atrofinin eşlik ettiği ve asimetrik güçsüzlük biçimindedir. Kök tutulumuna bağlı alt motor nöron bulgusu olduğu için beklenir (s. 43).",
+      "D": "Kauda ekuina sendromunda ağrı çok şiddetlidir ve tablonun en belirgin özelliğidir. Konusta ağrı hafif olduğundan iki sendromu ayırmada kullanılan bu bulgu kaudada beklenir (s. 43).",
+      "E": "İmpotans konus medüllaris sendromunda sık, kauda ekuinada ise nadirdir. Kaudada nadir olması beklenen bir durum olduğu için ifade sendroma uyar (s. 43)."
+     },
+     "bilgi": [
+      127,
+      125,
+      128
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Başlangıç Ani ve bilateral Yavaş ve tek yanlı"
+     },
+     "s": 43,
+     "dayanak": [
+      "ogrenci:A:noro-s06-b04"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q54",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kauda ekuina lezyonu hangi vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar?",
+     "secenekler": {
+      "A": "T9",
+      "B": "T12",
+      "C": "S2",
+      "D": "L3",
+      "E": "C7"
+     },
+     "dogru": "D",
+     "aciklama": "Kauda ekuina lezyonu L3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile başlar; ağrı tek taraflı olabilir.",
+     "sik_aciklamalari": {
+      "A": "T9, intumesentia lumbosakralisin başladığı vertebra düzeyidir. Bu düzeyde hâlâ kord dokusu bulunduğundan kauda ekuina lezyonu için verilen sınır değildir (s. 7).",
+      "B": "T12, intumesentia lumbosakralisin üst sınır aralığındaki son torakal vertebradır. Kauda ekuina lezyonları için tanımlanan sınırın üstünde kaldığı için uymaz (s. 7).",
+      "C": "S2 düzeyi sakrum içindedir ve kauda ekuina kökleri buraya daha yukarıdan iner. Lezyonun ağrıyla ortaya çıktığı sınır olarak verilen düzey bundan yukarıdadır (s. 41).",
+      "D": "Kauda ekuina lezyonu L3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar. Bu düzeyin altında kord yerine sinir kökleri bulunduğu için doğru cevaptır (s. 41).",
+      "E": "C7, intumesentia servikalis bölgesinde yer alan servikal vertebradır. Kauda ekuina alt lomber ve sakral köklerden oluştuğu için bu düzeyle ilgisi yoktur (s. 7)."
+     },
+     "bilgi": [
+      121,
+      123,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "L3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar."
+     },
+     "s": 41,
+     "dayanak": [
+      "ogrenci:A:noro-s06-b03"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q55",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Derin tendon reflekslerinin kayıp, Babinski yanıtının pozitif olduğu ve kardiyak iletim bozukluğunun eşlik ettiği otozomal resesif geçişli hastalık hangisidir?",
+     "secenekler": {
+      "A": "Herediter spastik parapleji",
+      "B": "Tabes dorsalis",
+      "C": "Subakut kombine dejenerasyon",
+      "D": "Erb'in spastik paraplejisi",
+      "E": "Friedreich ataksisi"
+     },
+     "dogru": "E",
+     "aciklama": "Friedreich ataksisi otozomal resesif trinükleotid tekrar hastalığıdır; derin tendon refleksleri kayıpken Babinski pozitiftir ve kardiyak iletim bozukluğu eşlik eder.",
+     "sik_aciklamalari": {
+      "A": "Herediter spastik parapleji, sıklıkla otozomal dominant geçişli, alt ekstremitelerde yavaş ilerleyen spastisite ve refleks artışıyla seyreden hastalıktır. Refleksler kaybolmadığı ve kalıtımı farklı olduğu için uymaz (s. 45).",
+      "B": "Tabes dorsalis, sifilizin arka kordonu tutan geç biçimidir ve refleks kaybı ile şiddetli Romberg pozitifliği yapar. Kalıtsal olmadığı ve kardiyak iletim bozukluğu taşımadığı için uymaz (s. 26).",
+      "C": "Subakut kombine dejenerasyon, B12 eksikliğine bağlı edinsel posterolateral kolon hastalığıdır. Kalıtsal geçiş göstermediği ve tipik olarak hiperrefleksi yaptığı için bu tanıma uymaz (s. 34).",
+      "D": "Erb'in spastik paraplejisi, kortikospinal traktus belirtilerinin ön planda olduğu sifilitik meningomiyelittir. Enfeksiyonla gelişen spastik bir tablo olduğundan kalıtsal Friedreich tablosuyla karıştırılmamalıdır (s. 27).",
+      "E": "Friedreich ataksisi, otozomal resesif geçişli trinükleotid tekrar hastalığıdır ve herediter spinoserebellar ataksilerin prototipidir. Derin tendon refleksi kaybıyla Babinski pozitifliğinin birlikteliği ve kardiyak iletim bozukluğu bu hastalığa özgü olduğundan doğru cevaptır (s. 44)."
+     },
+     "bilgi": [
+      134,
+      132,
+      133
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "DTR’leri kayıp, Babinski (+)"
+     },
+     "s": 44,
+     "dayanak": [
+      "ogrenci:B:noro-s06-b05"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q49",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "50 yaşında kadın hastada tek taraflı, yatınca artan şiddetli radiküler ağrı, gluteal bölgede asimetrik duyu bozukluğu ve alınamayan Aşil refleksi saptanıyor; sfinkter işlevi normal. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Konus medüllaris lezyonu",
+      "B": "Subakut kombine dejenerasyon",
+      "C": "Tabes dorsalis",
+      "D": "Kauda ekuina lezyonu",
+      "E": "Hematomiyeli"
+     },
+     "dogru": "D",
+     "aciklama": "L3 vertebra altındaki lezyonlarda tek taraflı radiküler ağrı, ekstramedüller tümörde yatınca artış, gluteal asimetrik duyu bozukluğu, Aşil kaybı ve geç sfinkter tutulumu kauda ekuinayı gösterir.",
+     "sik_aciklamalari": {
+      "A": "Konus medüllaris lezyonu akut ve tam sfinkter tutulumu yapar, ağrı nadirdir ve duyu kusuru simetriktir. Sfinkteri normal, ağrısı şiddetli bu hastaya uymaz (s. 41).",
+      "B": "Subakut kombine dejenerasyon, B12 eksikliğinde ellerde ve ayaklarda parestezi, duysal ataksi ve spastisite yapar. Ağrı ve ısı duyumu normal kaldığı için şiddetli radiküler ağrıyı açıklamaz (s. 34).",
+      "C": "Tabes dorsaliste parlayıcı nöropatik ağrılar ve derin tendon refleksi kaybı olabilir ama tutulum iki taraflı arka kordondur. Tek taraflı yatınca artan kök ağrısı ve gluteal asimetri bu tabloya uymaz (s. 26).",
+      "D": "Kauda ekuina lezyonu akut radiküler ağrıyla başlar, ağrı tek taraflı olabilir ve ekstramedüller tümörde yatınca artar. Gluteal asimetrik duyu bozukluğu, Aşil kaybı ve geç sfinkter tutulumu birlikte olduğu için doğru cevaptır (s. 41).",
+      "E": "Hematomiyeli, kord içine kanamadır ve akut parapleji ile seviye gösteren duyu kusuru yapar. Felç ve seviye olmadan tek kökte ağrı bu tanıyı düşündürmez (s. 32)."
+     },
+     "bilgi": [
+      122,
+      121,
+      125
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "Eğer neden ekstramedüller tümör ise yakınmalar ayakta iken"
+     },
+     "s": 41,
+     "dayanak": [
+      "ogrenci:A:noro-s06-b03"
+     ]
+    },
+    {
+     "id": "k2-31-medulla-spinalis-hastaliklari-q52",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Konus medüllaris sendromu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İmpotans sıktır",
+      "B": "Ağrı çok şiddetlidir",
+      "C": "Perianal duyu kusuru görülür",
+      "D": "Anal ve üriner sfinkterler atoniktir",
+      "E": "Alt ekstremite distalinde simetrik hafif güçsüzlük olur"
+     },
+     "dogru": "B",
+     "aciklama": "Konus medüllaris sendromunda başlangıç ani ve bilateral, ağrı hafif, perianal duyu kusuru ve sık impotans vardır, sfinkterler atoniktir; çok şiddetli ağrı kauda ekuinanın bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Konus medüllaris sendromunda impotans sık görülür ve erektil disfonksiyon ile ejakülasyon bozukluğu lezyonun bulguları arasındadır. Kaudada impotans nadir olduğundan bu ifade konus için doğrudur (s. 43).",
+      "B": "Konus medüllaris sendromunda ağrı hafiftir ve geri plandadır, çok şiddetli ağrı kauda ekuina sendromunun özelliğidir. İfade iki sendromu karıştırdığı için yanlıştır, bu yüzden doğru cevaptır (s. 43).",
+      "C": "Konus medüllaris sendromunun duysal bulgusu perianal duyu kusurudur ve süvari yaması biçiminde simetriktir. Kaudadaki radiküler ve asimetrik duyu bulgusundan farklı olan bu ifade doğrudur (s. 43).",
+      "D": "Konus medüllaris sendromunda üriner retansiyon gelişir, anal ve üriner sfinkterler atoniktir ve taşma inkontinansı olur. Sfinkter kusurunu doğru anlattığı için ifade doğrudur (s. 43).",
+      "E": "Konus medüllaris sendromunda parezi alt ekstremite distallerinde simetrik ve hafiftir, fasikülasyon olabilir. Kaudadaki arefleksik ve asimetrik güçsüzlükten ayrılan bu ifade tabloyu doğru verir (s. 43)."
+     },
+     "bilgi": [
+      127,
+      129,
+      125
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Ağrı Hafif Çok şiddetli"
+     },
+     "s": 43,
+     "dayanak": [
+      "ogrenci:A:noro-s06-b04"
+     ]
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 55
+}

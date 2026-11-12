@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Siringomiyeli: kavite ortadan dışa büyüdükçe bulgular sırayla eklenir</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Aynı servikal kesitte üç evre</text>
+<rect x="30" y="95" width="360" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="210" y="130" font-size="20" fill="#ea580c" text-anchor="middle" font-weight="bold">1 · Ön komissür</text>
+<path d="M90.0 260.0 C90.0 194.0 144.0 164.0 210.0 164.0 C276.0 164.0 330.0 194.0 330.0 260.0 C330.0 326.0 276.0 356.0 219.6 356.0 L210.0 334.4 L200.4 356.0 C144.0 356.0 90.0 326.0 90.0 260.0 Z" stroke="#475569" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.0 252.8 C188.4 250.4 178.8 224.0 174.0 176.0 C164.4 176.0 159.6 212.0 162.0 243.2 C135.60000000000002 257.6 130.8 296.0 140.4 317.6 C157.2 329.6 183.6 312.8 195.6 279.2 C202.8 272.0 207.6 269.6 210.0 269.6 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.0 252.8 C231.6 250.4 241.2 224.0 246.0 176.0 C255.6 176.0 260.4 212.0 258.0 243.2 C284.4 257.6 289.2 296.0 279.6 317.6 C262.8 329.6 236.4 312.8 224.4 279.2 C217.2 272.0 212.4 269.6 210.0 269.6 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M206.4 250.4 C193.2 224.0 183.6 194.0 178.8 168.8 C198.0 164.0 222.0 164.0 241.2 168.8 C236.4 194.0 226.8 224.0 213.6 250.4 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#bfdbfe" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+<ellipse cx="123.60000000000001" cy="243.2" rx="20.4" ry="26.4" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="126.0" cy="303.2" rx="19.2" ry="18.0" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="159.6" cy="300.8" rx="15.6" ry="13.2" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<ellipse cx="296.4" cy="243.2" rx="20.4" ry="26.4" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="294.0" cy="303.2" rx="19.2" ry="18.0" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="260.4" cy="300.8" rx="15.6" ry="13.2" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="210.0" cy="260.0" r="4.8" fill="#ffffff" stroke="#475569" stroke-width="1.2"/>
+<ellipse cx="210.0" cy="264.8" rx="16.8" ry="13.2" fill="#7c3aed" fill-opacity="0.32" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="210" y="385" font-size="15" fill="#0f172a" text-anchor="middle">çaprazlaşan spinotalamik</text>
+<text x="210" y="407" font-size="15" fill="#0f172a" text-anchor="middle">lifler kesilir →</text>
+<text x="210" y="429" font-size="15" fill="#0f172a" text-anchor="middle">pelerin tarzı ağrı-ısı kaybı;</text>
+<text x="210" y="451" font-size="15" fill="#0f172a" text-anchor="middle">dokunma ve derin duyu</text>
+<text x="210" y="473" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">KORUNUR (çıkmış)</text>
+<rect x="420" y="95" width="360" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="600" y="130" font-size="20" fill="#b91c1c" text-anchor="middle" font-weight="bold">2 · Ön boynuz</text>
+<path d="M480.0 260.0 C480.0 194.0 534.0 164.0 600.0 164.0 C666.0 164.0 720.0 194.0 720.0 260.0 C720.0 326.0 666.0 356.0 609.6 356.0 L600.0 334.4 L590.4 356.0 C534.0 356.0 480.0 326.0 480.0 260.0 Z" stroke="#475569" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600.0 252.8 C578.4 250.4 568.8 224.0 564.0 176.0 C554.4 176.0 549.6 212.0 552.0 243.2 C525.6 257.6 520.8 296.0 530.4 317.6 C547.2 329.6 573.6 312.8 585.6 279.2 C592.8 272.0 597.6 269.6 600.0 269.6 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600.0 252.8 C621.6 250.4 631.2 224.0 636.0 176.0 C645.6 176.0 650.4 212.0 648.0 243.2 C674.4 257.6 679.2 296.0 669.6 317.6 C652.8 329.6 626.4 312.8 614.4 279.2 C607.2 272.0 602.4 269.6 600.0 269.6 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M596.4 250.4 C583.2 224.0 573.6 194.0 568.8 168.8 C588.0 164.0 612.0 164.0 631.2 168.8 C626.4 194.0 616.8 224.0 603.6 250.4 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#bfdbfe" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+<ellipse cx="513.6" cy="243.2" rx="20.4" ry="26.4" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="516.0" cy="303.2" rx="19.2" ry="18.0" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="549.6" cy="300.8" rx="15.6" ry="13.2" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<ellipse cx="686.4" cy="243.2" rx="20.4" ry="26.4" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="684.0" cy="303.2" rx="19.2" ry="18.0" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="650.4" cy="300.8" rx="15.6" ry="13.2" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="600.0" cy="260.0" r="4.8" fill="#ffffff" stroke="#475569" stroke-width="1.2"/>
+<path d="M600.0 245.6 C636.0 245.6 662.4 279.2 655.2 308.0 C636.0 322.4 564.0 322.4 544.8 308.0 C537.6 279.2 564.0 245.6 600.0 245.6 Z" fill="#7c3aed" fill-opacity="0.32" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="600" y="385" font-size="15" fill="#0f172a" text-anchor="middle">lezyon düzeyinde</text>
+<text x="600" y="407" font-size="15" fill="#0f172a" text-anchor="middle">segmental nörojenik</text>
+<text x="600" y="429" font-size="15" fill="#0f172a" text-anchor="middle">atrofi ve parezi</text>
+<text x="600" y="451" font-size="15" fill="#0f172a" text-anchor="middle">(alt motor nöron)</text>
+<rect x="810" y="95" width="360" height="430" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="990" y="130" font-size="20" fill="#7c3aed" text-anchor="middle" font-weight="bold">3 · Yana ve arkaya</text>
+<path d="M870.0 260.0 C870.0 194.0 924.0 164.0 990.0 164.0 C1056.0 164.0 1110.0 194.0 1110.0 260.0 C1110.0 326.0 1056.0 356.0 999.6 356.0 L990.0 334.4 L980.4 356.0 C924.0 356.0 870.0 326.0 870.0 260.0 Z" stroke="#475569" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M990.0 252.8 C968.4 250.4 958.8 224.0 954.0 176.0 C944.4 176.0 939.6 212.0 942.0 243.2 C915.6 257.6 910.8 296.0 920.4 317.6 C937.2 329.6 963.6 312.8 975.6 279.2 C982.8 272.0 987.6 269.6 990.0 269.6 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M990.0 252.8 C1011.6 250.4 1021.2 224.0 1026.0 176.0 C1035.6 176.0 1040.4 212.0 1038.0 243.2 C1064.4 257.6 1069.2 296.0 1059.6 317.6 C1042.8 329.6 1016.4 312.8 1004.4 279.2 C997.2 272.0 992.4 269.6 990.0 269.6 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M986.4 250.4 C973.2 224.0 963.6 194.0 958.8 168.8 C978.0 164.0 1002.0 164.0 1021.2 168.8 C1016.4 194.0 1006.8 224.0 993.6 250.4 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#bfdbfe" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+<ellipse cx="903.6" cy="243.2" rx="20.4" ry="26.4" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="906.0" cy="303.2" rx="19.2" ry="18.0" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="939.6" cy="300.8" rx="15.6" ry="13.2" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<ellipse cx="1076.4" cy="243.2" rx="20.4" ry="26.4" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="1074.0" cy="303.2" rx="19.2" ry="18.0" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="1040.4" cy="300.8" rx="15.6" ry="13.2" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="990.0" cy="260.0" r="4.8" fill="#ffffff" stroke="#475569" stroke-width="1.2"/>
+<path d="M990.0 204.8 C1050.0 204.8 1100.4 231.2 1100.4 272.0 C1093.2 315.2 1038.0 327.2 990.0 324.8 C942.0 327.2 886.8 315.2 879.6 272.0 C879.6 231.2 930.0 204.8 990.0 204.8 Z" fill="#7c3aed" fill-opacity="0.32" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="990" y="385" font-size="15" fill="#0f172a" text-anchor="middle">lezyon altında spastik</text>
+<text x="990" y="407" font-size="15" fill="#0f172a" text-anchor="middle">paralizi (kortikospinal);</text>
+<text x="990" y="429" font-size="15" fill="#0f172a" text-anchor="middle">arka kordon tutulursa</text>
+<text x="990" y="451" font-size="15" fill="#0f172a" text-anchor="middle">vibrasyon-pozisyon kaybı</text>
+<path d="M390 300 C410 285 430 285 455 300" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<path d="M780 300 C800 285 820 285 845 300" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="422" y="275" font-size="15" fill="#0f172a" text-anchor="middle" font-style="italic">büyür</text>
+<text x="812" y="275" font-size="15" fill="#0f172a" text-anchor="middle" font-style="italic">büyür</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 4 (santral kanal, ön komissür), 10 (siringomiyelik kesit), 40 · mor taralı = kavite, turuncu spinotalamik, kırmızı motor, mavi arka kolon</text>
+</svg>

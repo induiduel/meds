@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Konus medullaris mi, kauda ekuina mı? Merkez hasarı ile kök basısı</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Konus sakral segmentlerin kendisidir; kauda tek tek köklerdir</text>
+<rect x="30" y="90" width="560" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="122" font-size="20" fill="#7c3aed" text-anchor="start" font-weight="bold">A · Konus medullaris: merkez iki yandan birden</text>
+<rect x="610" y="90" width="560" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="122" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Kauda ekuina: kökler tek tek sıkışır</text>
+<path d="M240 130 C240 200 238 250 250 300 C262 250 260 200 260 130 Z" stroke="#475569" stroke-width="2" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M246 300 C242 320 238 340 236 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M243 300 C236 320 229 340 225 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M240 300 C230 320 220 340 214 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M237 300 C224 320 211 340 203 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M254 300 C258 320 262 340 264 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M257 300 C264 320 271 340 275 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260 300 C270 320 280 340 286 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M263 300 C276 320 289 340 297 360" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="250" cy="270" rx="34" ry="42" fill="#7c3aed" fill-opacity="0.3" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4"/>
+<line x1="280" y1="260" x2="330" y2="215" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="280" cy="260" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="336" y="220" font-size="15" fill="#7c3aed" text-anchor="start">sakral segmentler (mesane,</text>
+<text x="336" y="240" font-size="15" fill="#7c3aed" text-anchor="start">anal sfinkter, perianal duyu)</text>
+<text x="60" y="385" font-size="15" fill="#0f172a" text-anchor="start">Başlangıç ani, bilateral</text>
+<text x="60" y="404" font-size="15" fill="#0f172a" text-anchor="start">Sfinkter tam ve akut:</text>
+<text x="60" y="423" font-size="15" fill="#0f172a" text-anchor="start">retansiyon, taşma</text>
+<text x="60" y="442" font-size="15" fill="#0f172a" text-anchor="start">inkontinansı</text>
+<text x="60" y="461" font-size="15" fill="#0f172a" text-anchor="start">Duyu simetrik:</text>
+<text x="60" y="480" font-size="15" fill="#0f172a" text-anchor="start">süvari yaması, perianal</text>
+<text x="60" y="499" font-size="15" fill="#0f172a" text-anchor="start">Ağrı hafif, geri planda</text>
+<text x="60" y="518" font-size="15" fill="#0f172a" text-anchor="start">İmpotans sık</text>
+<text x="330" y="385" font-size="15" fill="#0f172a" text-anchor="start">Refleks (tablo):</text>
+<text x="330" y="404" font-size="15" fill="#0f172a" text-anchor="start">patella (+), Aşil (−)</text>
+<text x="330" y="423" font-size="15" fill="#0f172a" text-anchor="start">Parezi distal, simetrik,</text>
+<text x="330" y="442" font-size="15" fill="#0f172a" text-anchor="start">hafif; DTR artar,</text>
+<text x="330" y="461" font-size="15" fill="#0f172a" text-anchor="start">fasikülasyon olabilir</text>
+<text x="330" y="480" font-size="15" fill="#0f172a" text-anchor="start">Sık neden: tethered kord</text>
+<path d="M820 130 C820 160 822 180 830 200 C838 180 840 160 840 130 Z" stroke="#475569" stroke-width="2" fill="#e2e8f0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M827 200 C820 260 816 330 814 400" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M824 200 C812 260 804 330 800 400" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M821 200 C804 260 792 330 786 400" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M818 200 C796 260 780 330 772 400" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M833 200 C840 260 844 330 846 400" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M836 200 C848 260 856 330 860 400" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M839 200 C856 260 868 330 874 400" stroke="#ea580c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M842 200 C864 260 880 330 888 400" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="878" cy="300" rx="20" ry="26" fill="#ea580c" fill-opacity="0.3" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="6 4"/>
+<line x1="895" y1="300" x2="960" y2="280" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="895" cy="300" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="966" y="285" font-size="15" fill="#ea580c" text-anchor="start">tek kök sıkışır → keskin</text>
+<text x="966" y="300" font-size="15" fill="#ea580c" text-anchor="start">radiküler ağrı, tek yanlı</text>
+<text x="630" y="420" font-size="15" fill="#0f172a" text-anchor="start">L3 vertebra altı · başlangıç yavaş, tek yanlı</text>
+<text x="630" y="442" font-size="15" fill="#0f172a" text-anchor="start">Ağrı ÇOK şiddetli, ön planda (en belirgin fark)</text>
+<text x="630" y="464" font-size="15" fill="#0f172a" text-anchor="start">Duyu radiküler, asimetrik · sfinkter GEÇ, nadir</text>
+<text x="630" y="486" font-size="15" fill="#0f172a" text-anchor="start">Güçsüzlük arefleksik, atrofik, asimetrik</text>
+<text x="960" y="150" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">Refleks:</text>
+<text x="960" y="171" font-size="15" fill="#0f172a" text-anchor="start">s41: Aşil kayıp,</text>
+<text x="960" y="192" font-size="15" fill="#0f172a" text-anchor="start">patella elde edilebilir</text>
+<text x="960" y="213" font-size="15" fill="#0f172a" text-anchor="start">s43: patella ve</text>
+<text x="960" y="234" font-size="15" fill="#0f172a" text-anchor="start">Aşil (−)</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 41 (konus, kauda), 42 (ayırım özeti), 43 (karşılaştırma tablosu, L1–L2 çizimi) · mor = merkez hasarı, turuncu = kök basısı</text>
+</svg>

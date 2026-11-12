@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="700" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">İki tekrar hastalığı, iki zıt mekanizma</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Huntington CAG ↔ Friedreich GAA · slayt 53, 54, 59</text>
+<rect x="30" y="88" width="560" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · Huntington: toksik protein kazanılır</text>
+<rect x="610" y="88" width="560" height="520" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="628" y="119" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Friedreich: protein azalır</text>
+<rect x="50" y="140" width="520" height="54" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="66" y="174" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Kalıtım</text>
+<text x="170" y="174" font-size="17" fill="#0f172a" text-anchor="start">otozomal dominant</text>
+<line x1="310" y1="194" x2="310" y2="206" stroke="#b91c1c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="50" y="206" width="520" height="54" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="66" y="240" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Tekrar</text>
+<text x="170" y="240" font-size="17" fill="#0f172a" text-anchor="start">CAG (glutamin) · huntingtin geni</text>
+<line x1="310" y1="260" x2="310" y2="272" stroke="#b91c1c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="50" y="272" width="520" height="54" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="66" y="306" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Gen</text>
+<text x="170" y="306" font-size="17" fill="#0f172a" text-anchor="start">çalışır, uzun poliglutamin üretir</text>
+<line x1="310" y1="326" x2="310" y2="338" stroke="#b91c1c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="50" y="338" width="520" height="54" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="66" y="372" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Sonuç</text>
+<text x="170" y="372" font-size="17" fill="#0f172a" text-anchor="start">toksik fonksiyon kazanımı</text>
+<line x1="310" y1="392" x2="310" y2="404" stroke="#b91c1c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="50" y="404" width="520" height="54" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="66" y="438" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Hücrede</text>
+<text x="170" y="438" font-size="17" fill="#0f172a" text-anchor="start">intranükleer agregat</text>
+<rect x="630" y="140" width="520" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<text x="646" y="174" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">Kalıtım</text>
+<text x="750" y="174" font-size="17" fill="#0f172a" text-anchor="start">otozomal resesif</text>
+<line x1="890" y1="194" x2="890" y2="206" stroke="#ea580c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="630" y="206" width="520" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<text x="646" y="240" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">Tekrar</text>
+<text x="750" y="240" font-size="17" fill="#0f172a" text-anchor="start">GAA · frataxin geni</text>
+<line x1="890" y1="260" x2="890" y2="272" stroke="#ea580c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="630" y="272" width="520" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<text x="646" y="306" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">Gen</text>
+<text x="750" y="306" font-size="17" fill="#0f172a" text-anchor="start">susturulur</text>
+<line x1="890" y1="326" x2="890" y2="338" stroke="#ea580c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="630" y="338" width="520" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<text x="646" y="372" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">Sonuç</text>
+<text x="750" y="372" font-size="17" fill="#0f172a" text-anchor="start">frataxin azalır</text>
+<line x1="890" y1="392" x2="890" y2="404" stroke="#ea580c" stroke-width="2" marker-end="url(#ok)"/>
+<rect x="630" y="404" width="520" height="54" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<text x="646" y="438" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">Hücrede</text>
+<text x="750" y="438" font-size="17" fill="#0f172a" text-anchor="start">mitokondride demir dengesi bozulur</text>
+<circle cx="890" cy="520" r="46" fill="#fef3c7" stroke="#ea580c" stroke-width="2.5"/>
+<path d="M860 520 C870 495 910 495 920 520 C910 545 870 545 860 520" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="890" y="590" font-size="17" fill="#ea580c" text-anchor="middle" font-weight="bold">mitokondri: oksidatif hasar</text>
+<path d="M942 515 C960 500 975 500 992 508" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="1000" y="505" font-size="17" fill="#475569" text-anchor="start">kardiyomiyopati</text>
+<text x="1000" y="527" font-size="17" fill="#475569" text-anchor="start">diyabet riski</text>
+<circle cx="310" cy="520" r="46" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="310" cy="520" r="12" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<text x="310" y="590" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">çekirdekte agregat</text>
+<rect x="30" y="620" width="1140" height="46" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="600" y="650" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">Friedreich: ilk dekadda yürüyüş ataksisi, pes cavus, kifoskolyoz, kardiyomiyopati ve diyabet riski</text>
+<text x="600.0" y="687" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 52, 53, 54, 59</text>
+</svg>

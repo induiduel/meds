@@ -1,0 +1,177 @@
+{
+  "key": "k2-30-norodejeneratif-hastaliklar",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Prion hastalığına dört giriş yolu, tek dönüşüm döngüsü",
+      "aciklama": "Sporadik, ailesel, iyatrojenik ve varyant CJD'de PrPSc farklı yollardan ortaya çıkar; sonra hepsinde PrPSc, PrPC'yi kendine benzeterek çoğalır.",
+      "adimlar": [
+        "1. Sporadik formda PrPC çok düşük oranda kendiliğinden PrPSc'ye döner.",
+        "2. Ailesel formda PRNP mutasyonu bu dönüşümün hızını artırır.",
+        "3. İyatrojenik ve varyant formda PrPSc dışarıdan gelir.",
+        "4. PrPSc, PrPC'yi PrPSc'ye çevirir; süreç kendi kendini artırır ve agregat birikir."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 14,
+      "bitis": 14,
+      "kaynak": [
+        12,
+        13,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "r02",
+      "baslik": "Tau bozulunca mikrotübül rayları dağılır",
+      "aciklama": "Normalde tau mikrotübüllere bağlanıp onları sabitler; Alzheimer'da hiperfosforile tau bu işi yapamaz ve nörofibriller yumak hâlinde kümelenir.",
+      "adimlar": [
+        "1. Tau akson mikrotübüllerine bağlanır ve onları sabitler.",
+        "2. Alzheimer'da tau hiperfosforile olur.",
+        "3. Bağlanma ve stabilizasyon yeteneği kaybolur, tau yumak oluşturur.",
+        "4. Hasar: kronik stres yanıtı ve stabilizasyon kaybı."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 23,
+      "bitis": 23,
+      "kaynak": [
+        26
+      ]
+    },
+    {
+      "id": "r03",
+      "baslik": "FTLD'nin iki protein grubu: tau ve TDP-43",
+      "aciklama": "FTLD-tau'da tau geni mutasyonu izoform dengesini bozar; FTLD-TDP'de TDP-43 çekirdekten kaybolup sitoplazmada inklüzyon yapar.",
+      "adimlar": [
+        "1. FTLD-tau: tau geni mutasyonu fosforilasyon ya da splicing'i etkiler.",
+        "2. İzoform oranı değişir, agregasyon artar.",
+        "3. FTLD-TDP: en sık neden C9orf72 heksanükleotid tekrarı.",
+        "4. TDP-43 çekirdekte kaybolur, sitoplazmada kümelenir; aynı motif ALS'de de görülür."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 37,
+      "bitis": 37,
+      "kaynak": [
+        37,
+        38,
+        41
+      ]
+    },
+    {
+      "id": "r04",
+      "baslik": "Parkinson: α-sinüklein temizlenemeyince Lewy cisimciği oluşur",
+      "aciklama": "α-sinüklein normalde otofaji ile temizlenir; bu yol ya da mitokondri bozulursa protein birikir, Lewy cisimciği oluşur ve dopaminerjik nöron kaybolur.",
+      "adimlar": [
+        "1. α-sinüklein otofaji–lizozom yoluyla temizlenir.",
+        "2. Yol aksarsa α-sinüklein sitoplazmada Lewy cisimciği olarak birikir.",
+        "3. Genetik tetikler: α-sinüklein mutasyonu, LRRK2, parkin, glukoserebrosidaz.",
+        "4. Substantia nigra nöronları kaybolur, hipokinetik bozukluk gelişir."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 39,
+      "bitis": 39,
+      "kaynak": [
+        43,
+        44
+      ]
+    },
+    {
+      "id": "r05",
+      "baslik": "Aynı protein, farklı hücre: Parkinson ve MSA",
+      "aciklama": "İki hastalıkta da α-sinüklein birikir; Parkinson'da nöronda, MSA'da oligodendrositte. MSA üç devreyi tutar.",
+      "adimlar": [
+        "1. Parkinson: α-sinüklein nöron sitoplazmasında Lewy cisimciği yapar.",
+        "2. MSA: α-sinüklein oligodendrosit sitoplazmasında birikir.",
+        "3. Striatonigral devre parkinsonizm, olivopontoserebellar devre ataksi, otonom sistem ortostatik hipotansiyon verir.",
+        "4. Başta tek sistem baskındır, zamanla hepsi tutulur."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 46,
+      "bitis": 46,
+      "kaynak": [
+        44,
+        51
+      ]
+    },
+    {
+      "id": "r06",
+      "baslik": "Huntington: CAG tekrarı uzadıkça hastalık erken başlar",
+      "aciklama": "Normal alel 11–34 CAG tekrarı taşır; daha uzun tekrar daha erken başlangıç demektir ve genişleme babadan geçişte artar.",
+      "adimlar": [
+        "1. Normal alelde 11–34 CAG tekrarı vardır.",
+        "2. Tekrar arttıkça hastalık daha erken başlar.",
+        "3. Genişleme spermatogenezde artar; babadan geçişte çocuk daha erken hastalanır.",
+        "4. Mutant huntingtin parçaları çekirdekte agregat yapar."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 49,
+      "bitis": 49,
+      "kaynak": [
+        53,
+        54
+      ]
+    },
+    {
+      "id": "r07",
+      "baslik": "Huntington ve Friedreich: iki zıt tekrar mekanizması",
+      "aciklama": "Huntington'da CAG tekrarı toksik bir protein kazandırır; Friedreich ataksisinde GAA tekrarı geni susturur ve frataxin azalır.",
+      "adimlar": [
+        "1. Huntington: otozomal dominant, CAG tekrarı, toksik fonksiyon kazanımı.",
+        "2. Friedreich: otozomal resesif, GAA tekrarı.",
+        "3. Gen susturulur, frataxin azalır.",
+        "4. Mitokondride demir dengesi bozulur, oksidatif hasar gelişir."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 54,
+      "bitis": 54,
+      "kaynak": [
+        53,
+        54,
+        59
+      ]
+    },
+    {
+      "id": "r08",
+      "baslik": "ALS: üst ve alt motor nöron birlikte",
+      "aciklama": "Üst motor nöron kaybı parezi, hiperrefleksi, spastisite ve Babinski; alt motor nöron kaybı amyotrofi, güçsüzlük ve fasikülasyon verir.",
+      "adimlar": [
+        "1. Üst motor nöron korteksten omuriliğe iner; kaybı lateral sklerozu oluşturur.",
+        "2. Bulguları parezi, hiperrefleksi, spastisite, Babinski pozitifliğidir.",
+        "3. Alt motor nöron omurilikten kasa gider; kaybı amyotrofi yapar.",
+        "4. Bulguları güçsüzlük ve fasikülasyondur; duyu korunur."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 55,
+      "bitis": 55,
+      "kaynak": [
+        60,
+        61
+      ]
+    },
+    {
+      "id": "r09",
+      "baslik": "Hastalık, protein ve birikim yeri haritası",
+      "aciklama": "Dersteki her hastalığın biriken proteini ve bu proteinin hücre dışında, sitoplazmada ya da çekirdekte nerede toplandığı tek tabloda.",
+      "adimlar": [
+        "1. Prion: PrPSc · Alzheimer: Aβ ve tau.",
+        "2. FTLD: tau ya da TDP-43.",
+        "3. Parkinson ve MSA: α-sinüklein.",
+        "4. Huntington ve spinoserebellar ataksi: poliglutamin · ALS: SOD1 ve TDP-43."
+      ],
+      "svg": "r09.svg",
+      "paragraf": 61,
+      "bitis": 61,
+      "kaynak": [
+        11,
+        22,
+        32,
+        44,
+        51,
+        54,
+        58,
+        62
+      ]
+    }
+  ]
+}

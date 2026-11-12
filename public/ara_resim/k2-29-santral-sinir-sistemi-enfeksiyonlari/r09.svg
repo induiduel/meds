@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="720" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Üç lökodistrofi: eksik halka nerede?</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Krabbe, metakromatik lökodistrofi, adrenolökodistrofi · slayt 38–40 (s.52–55)</text>
+<rect x="30" y="88" width="360" height="470" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">Krabbe hastalığı</text>
+<text x="48" y="148" font-size="17" fill="#475569" text-anchor="start">otozomal resesif</text>
+<rect x="420" y="88" width="360" height="470" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="438" y="119" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">Metakromatik lökodistrofi</text>
+<text x="438" y="148" font-size="17" fill="#475569" text-anchor="start">otozomal resesif</text>
+<rect x="810" y="88" width="360" height="470" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="828" y="119" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">Adrenolökodistrofi</text>
+<text x="828" y="148" font-size="17" fill="#475569" text-anchor="start">X'e bağlı resesif · gen ABCD1</text>
+<rect x="60" y="175" width="300" height="50" rx="10" fill="#fff" stroke="#b91c1c" stroke-width="2"/>
+<text x="210" y="207" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">Galaktosil-serebrosid</text>
+<path d="M210 225 C210 250 210 260 210 280" stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)" stroke-dasharray="6 5"/>
+<path d="M195 245 L225 265 M225 245 L195 265" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="255" y="305" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">galaktosil-seramidaz yok</text>
+<path d="M150 225 C100 280 100 320 150 345" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<rect x="60" y="345" width="300" height="50" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+<text x="210" y="377" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">Galaktosil-sfingozin</text>
+<text x="210" y="418" font-size="17" fill="#b91c1c" text-anchor="middle">sitotoksik → oligodendrosit ölür</text>
+<text x="50" y="455" font-size="17" fill="#0f172a" text-anchor="start">MSS ve periferik sinirde miyelin</text>
+<text x="50" y="478" font-size="17" fill="#0f172a" text-anchor="start">kaybı; globoid hücreler; başlangıç</text>
+<text x="50" y="501" font-size="17" fill="#0f172a" text-anchor="start">3–6 ay.</text>
+<rect x="450" y="175" width="300" height="50" rx="10" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+<text x="600" y="207" font-size="18" fill="#0f172a" text-anchor="middle" font-weight="bold">Sülfatid</text>
+<path d="M600 225 C600 250 600 260 600 280" stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)" stroke-dasharray="6 5"/>
+<path d="M585 245 L615 265 M615 245 L585 265" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="690" y="262" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">arilsülfataz A</text>
+<text x="690" y="282" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">yok</text>
+<path d="M540 300 C520 320 540 345 580 345 C620 345 660 320 640 300 C620 290 560 290 540 300 Z" stroke="#ea580c" stroke-width="2.5" fill="#fed7aa" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="565" cy="322" r="6" fill="#f472b6" stroke="#be185d" stroke-width="1.5"/>
+<circle cx="590" cy="322" r="6" fill="#f472b6" stroke="#be185d" stroke-width="1.5"/>
+<circle cx="615" cy="322" r="6" fill="#f472b6" stroke="#be185d" stroke-width="1.5"/>
+<line x1="615" y1="322" x2="470" y2="400" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="615" cy="322" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="476" y="406" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">makrofajda sülfatid birikimi</text>
+<text x="440" y="440" font-size="17" fill="#0f172a" text-anchor="start">Toluidin mavisiyle metakromazi;</text>
+<text x="440" y="463" font-size="17" fill="#0f172a" text-anchor="start">başlangıç ne kadar erkense</text>
+<text x="440" y="486" font-size="17" fill="#0f172a" text-anchor="start">ilerleme o kadar hızlı.</text>
+<path d="M890 280 C870 220 930 180 990 180 C1050 180 1110 220 1090 280 C1080 330 1030 350 990 350 C950 350 900 330 890 280 Z" stroke="#6d28d9" stroke-width="2.5" fill="#ede9fe" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="970" y="170" width="40" height="22" rx="6" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/>
+<path d="M960 181 C950 181 940 181 930 181" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M922 172 L938 190 M938 172 L922 190" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="990" y1="181" x2="1040" y2="215" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="990" cy="181" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="1046" y="221" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">taşıyıcı</text>
+<text x="990" y="260" font-size="18" fill="#6d28d9" text-anchor="middle" font-weight="bold">peroksizom</text>
+<text x="990" y="285" font-size="17" fill="#0f172a" text-anchor="middle">VLCFA yıkılamaz</text>
+<text x="990" y="307" font-size="17" fill="#0f172a" text-anchor="middle">(katabolize edilemez)</text>
+<path d="M990 355 C990 375 990 385 990 400" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="990" y="425" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">serum VLCFA ↑</text>
+<text x="830" y="455" font-size="17" fill="#0f172a" text-anchor="start">Davranış değişikliği, adrenal</text>
+<text x="830" y="478" font-size="17" fill="#0f172a" text-anchor="start">yetmezlik, beyaz madde</text>
+<text x="830" y="501" font-size="17" fill="#0f172a" text-anchor="start">demiyelinizasyonu.</text>
+<rect x="30" y="572" width="1140" height="104" rx="14" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="50" y="604" font-size="17" fill="#0f172a" text-anchor="start">Krabbe ve metakromatik lökodistrofide eksik olan bir enzimdir;</text>
+<text x="50" y="630" font-size="17" fill="#0f172a" text-anchor="start">adrenolökodistrofide ise peroksizoma madde taşıyan ABCD1 proteini bozuktur.</text>
+<text x="50" y="658" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Çıkmış: peroksizomal defekt sorulursa cevap adrenolökodistrofidir.</text>
+<text x="600.0" y="707" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 38–40 ve eŞekil 21.8 (PDF s.52–55). VLCFA: çok uzun zincirli yağ asitleri.</text>
+</svg>

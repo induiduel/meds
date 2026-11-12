@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Yarı kesi (Brown-Séquard): hangi bulgu hangi tarafta çıkar?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Üç yolun çaprazlaştığı yer, kesilen yarıdaki bulgunun tarafını belirler</text>
+<rect x="30" y="90" width="520" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="122" font-size="20" fill="#7c3aed" text-anchor="start" font-weight="bold">A · Sol yarı kesik (arka yüz üstte)</text>
+<path d="M75.0 290.0 C75.0 221.25 131.25 190.0 200.0 190.0 C268.75 190.0 325.0 221.25 325.0 290.0 C325.0 358.75 268.75 390.0 210.0 390.0 L200.0 367.5 L190.0 390.0 C131.25 390.0 75.0 358.75 75.0 290.0 Z" stroke="#475569" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200.0 282.5 C177.5 280.0 167.5 252.5 162.5 202.5 C152.5 202.5 147.5 240.0 150.0 272.5 C122.5 287.5 117.5 327.5 127.5 350.0 C145.0 362.5 172.5 345.0 185.0 310.0 C192.5 302.5 197.5 300.0 200.0 300.0 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200.0 282.5 C222.5 280.0 232.5 252.5 237.5 202.5 C247.5 202.5 252.5 240.0 250.0 272.5 C277.5 287.5 282.5 327.5 272.5 350.0 C255.0 362.5 227.5 345.0 215.0 310.0 C207.5 302.5 202.5 300.0 200.0 300.0 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M196.25 280.0 C182.5 252.5 172.5 221.25 167.5 195.0 C187.5 190.0 212.5 190.0 232.5 195.0 C227.5 221.25 217.5 252.5 203.75 280.0 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#bfdbfe" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+<ellipse cx="110.0" cy="272.5" rx="21.25" ry="27.5" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="112.5" cy="335.0" rx="20.0" ry="18.75" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="290.0" cy="272.5" rx="21.25" ry="27.5" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="287.5" cy="335.0" rx="20.0" ry="18.75" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<circle cx="200.0" cy="290.0" r="5.0" fill="#ffffff" stroke="#475569" stroke-width="1.2"/>
+<path d="M200.0 190.0 C131.25 190.0 75.0 221.25 75.0 290.0 C75.0 358.75 131.25 390.0 190.0 390.0 L200.0 367.5 Z" fill="#7c3aed" fill-opacity="0.32" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4"/>
+<line x1="175" y1="215" x2="360" y2="150" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="175" cy="215" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="366" y="155" font-size="15" fill="#1d4ed8" text-anchor="start">arka kolon (derin duyu)</text>
+<line x1="110" y1="272" x2="360" y2="200" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="110" cy="272" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="366" y="205" font-size="15" fill="#b91c1c" text-anchor="start">lateral kortikospinal</text>
+<line x1="112" y1="335" x2="360" y2="250" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="112" cy="335" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="366" y="255" font-size="15" fill="#ea580c" text-anchor="start">spinotalamik (ağrı-ısı)</text>
+<line x1="200" y1="290" x2="360" y2="300" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="200" cy="290" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="366" y="305" font-size="15" fill="#0f172a" text-anchor="start">santral kanal</text>
+<line x1="200" y1="330" x2="360" y2="350" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="200" cy="330" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="366" y="355" font-size="15" fill="#0f172a" text-anchor="start">ön beyaz komissür:</text>
+<text x="366" y="375" font-size="15" fill="#ea580c" text-anchor="start">ağrı-ısı lifleri</text>
+<text x="366" y="393" font-size="15" fill="#ea580c" text-anchor="start">burada karşıya geçer</text>
+<text x="60" y="470" font-size="15" fill="#7c3aed" text-anchor="start">taralı mor alan = lezyon (kesitin bir yarısı)</text>
+<text x="60" y="494" font-size="15" fill="#0f172a" text-anchor="start">bulbusta çaprazlaşan iki yol aynı tarafta kalır</text>
+<rect x="570" y="90" width="600" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="590" y="122" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Hastada bulgunun tarafı (lezyon altında)</text>
+<circle cx="760.0" cy="152.0" r="20.0" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+<path d="M760.0 176.0 C734.0 176.0 714.0 182.0 710.0 200.0 L694.0 290.0 L706.0 294.0 L722.0 222.0 L724.0 300.0 L730.0 430.0 L750.0 430.0 L756.0 320.0 L760.0 320.0 Z" stroke="#475569" stroke-width="2" fill="#c7d2fe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M760.0 176.0 C786.0 176.0 806.0 182.0 810.0 200.0 L826.0 290.0 L814.0 294.0 L798.0 222.0 L796.0 300.0 L790.0 430.0 L770.0 430.0 L764.0 320.0 L760.0 320.0 Z" stroke="#475569" stroke-width="2" fill="#fed7aa" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="680.0" y1="330.0" x2="840.0" y2="330.0" stroke="#7c3aed" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="760" y="455" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="bold">LEZYON TARAFI ← | → KARŞI TARAF</text>
+<text x="690" y="335" font-size="15" fill="#7c3aed" text-anchor="end">lezyon</text>
+<text x="690" y="352" font-size="15" fill="#7c3aed" text-anchor="end">düzeyi</text>
+<text x="850" y="150" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">Lezyonla aynı taraf:</text>
+<text x="850" y="171" font-size="15" fill="#b91c1c" text-anchor="start">• üst motor nöron felci</text>
+<text x="850" y="192" font-size="15" fill="#b91c1c" text-anchor="start">  (kortikospinal kordda</text>
+<text x="850" y="213" font-size="15" fill="#b91c1c" text-anchor="start">  aynı tarafta iner)</text>
+<text x="850" y="234" font-size="15" fill="#b91c1c" text-anchor="start">• pozisyon ve vibrasyon</text>
+<text x="850" y="255" font-size="15" fill="#b91c1c" text-anchor="start">  kaybı (arka kolon</text>
+<text x="850" y="276" font-size="15" fill="#b91c1c" text-anchor="start">  ancak bulbusta çaprazlaşır)</text>
+<text x="850" y="320" font-size="15" fill="#ea580c" text-anchor="start" font-weight="bold">Karşı taraf:</text>
+<text x="850" y="341" font-size="15" fill="#ea580c" text-anchor="start">• ağrı ve ısı kaybı</text>
+<text x="850" y="362" font-size="15" fill="#ea580c" text-anchor="start">  (spinotalamik lif kordda</text>
+<text x="850" y="383" font-size="15" fill="#ea580c" text-anchor="start">  ön komissürden karşıya</text>
+<text x="850" y="404" font-size="15" fill="#ea580c" text-anchor="start">  geçmiştir)</text>
+<path d="M845 238 C795 290 765 340 744 384" stroke="#b91c1c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<path d="M835 340 C815 345 805 360 800 380" stroke="#ea580c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 9 (yerleşim), 10 (hemiseksiyon kesiti), 11 (arka kolon yolu), 12 (kortikospinal yol) · kırmızı motor, mavi derin duyu, turuncu ağrı-ısı</text>
+</svg>

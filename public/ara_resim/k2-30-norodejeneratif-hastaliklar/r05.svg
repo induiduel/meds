@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="700" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Aynı protein, farklı hücre: Parkinson ve çoklu sistem atrofisi</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">α-sinüklein nöronda mı, oligodendrositte mi · slayt 44, 51</text>
+<rect x="30" y="88" width="420" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · Parkinson: nöronda</text>
+<path d="M112 262 C106 220 148 204 178 214 C214 226 220 274 202 298 C178 322 124 316 112 262 Z" stroke="#1d4ed8" stroke-width="2.5" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114 250 C76 226 64 202 46 196" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M124 298 C94 328 70 334 52 352" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M172 212 C178 178 166 160 154 142" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210 268 C268 268 328 262 388 268" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="155" cy="265" r="15" fill="#fca5a5" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="155" y1="265" x2="60" y2="352" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="155" cy="265" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="66" y="358" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Lewy cisimciği (nöron sitoplazması)</text>
+<rect x="30" y="400" width="420" height="260" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="431" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">B · MSA: oligodendrositte</text>
+<ellipse cx="160" cy="520" rx="45" ry="35" fill="#ede9fe" stroke="#6d28d9" stroke-width="2.5"/>
+<path d="M200 500.0 C260 460 300 442.0 350 430.0" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 513.3333333333334 C260 500 300 494.0 350 490.0" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 526.6666666666666 C260 540 300 546.0 350 550.0" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 540.0 C260 580 300 598.0 350 610.0" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="300" y="450" width="20" height="140" rx="10" fill="#e0e7ff" stroke="#1d4ed8" stroke-width="2"/>
+<circle cx="150" cy="520" r="14" fill="#fca5a5" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="150" y1="520" x2="60" y2="610" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="150" cy="520" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="66" y="616" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">α-sinüklein (glia sitoplazması)</text>
+<line x1="310" y1="470" x2="340" y2="440" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="310" cy="470" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="346" y="446" font-size="17" fill="#1d4ed8" text-anchor="start">miyelin</text>
+<rect x="470" y="88" width="700" height="572" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="488" y="119" font-size="20" fill="#475569" text-anchor="start" font-weight="bold">C · MSA'da tutulan üç devre ve belirtisi</text>
+<rect x="500" y="150" width="300" height="100" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="650" y="195" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="bold">Striatonigral devre</text>
+<text x="650" y="222" font-size="17" fill="#475569" text-anchor="middle">tutulur</text>
+<line x1="800" y1="200" x2="860" y2="200" stroke="#b91c1c" stroke-width="3" marker-end="url(#okk)"/>
+<text x="870" y="190" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">parkinsonizm (L-DOPA'ya</text>
+<text x="870" y="213" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">zayıf yanıt)</text>
+<rect x="500" y="290" width="300" height="100" rx="10" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="650" y="335" font-size="18" fill="#1d4ed8" text-anchor="middle" font-weight="bold">Olivopontoserebellar devre</text>
+<text x="650" y="362" font-size="17" fill="#475569" text-anchor="middle">tutulur</text>
+<line x1="800" y1="340" x2="860" y2="340" stroke="#1d4ed8" stroke-width="3" marker-end="url(#okb)"/>
+<text x="870" y="330" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">ataksi</text>
+<rect x="500" y="430" width="300" height="100" rx="10" fill="#ffffff" stroke="#6d28d9" stroke-width="2"/>
+<text x="650" y="475" font-size="18" fill="#6d28d9" text-anchor="middle" font-weight="bold">Otonom sinir sistemi</text>
+<text x="650" y="502" font-size="17" fill="#475569" text-anchor="middle">tutulur</text>
+<line x1="800" y1="480" x2="860" y2="480" stroke="#6d28d9" stroke-width="3" marker-end="url(#okm)"/>
+<text x="870" y="470" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">ortostatik hipotansiyon,</text>
+<text x="870" y="493" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">otonom bozukluk</text>
+<path d="M1000 600 C900 640 700 640 600 600" stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okg)"/>
+<text x="820" y="590" font-size="17" fill="#475569" text-anchor="middle" font-weight="bold">başta tek sistem baskın, zamanla hepsi</text>
+<text x="600.0" y="687" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 44, 49, 51 · MSA sporadiktir</text>
+</svg>

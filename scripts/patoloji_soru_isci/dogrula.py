@@ -55,6 +55,14 @@ def main() -> int:
             t = (ac.get(h) or "").strip()
             if len(re.findall(r"[.!?](\s|$)", t)) < 2: H(k, f"{h} açıklaması en az 2 cümle olmalı")
             if GECISTIRME.search(t): H(k, f"{h} açıklaması geçiştirme kalıbı")
+        # H555: aynı sorunun iki şıkkında birebir aynı cümle = uzunluk dolgusu (kapı uzunluğu sayar, tekrarı saymazdı)
+        gor = {}
+        for h in "ABCDE":
+            for c in re.split(r"(?<=[.!?])\s+", (ac.get(h) or "").strip()):
+                w = " ".join(re.findall(r"\w+", c.lower()))
+                if len(w.split()) >= 6: gor.setdefault(w, []).append(h)
+        for w, hs in gor.items():
+            if len(set(hs)) > 1: H(k, f"{'/'.join(sorted(set(hs)))} açıklamalarında aynı cümle (dolgu, H555): {w[:60]}…")
     sab = {}
     for n, q in enumerate(sor):
         for h, t in (q.get("aciklama") or {}).items():

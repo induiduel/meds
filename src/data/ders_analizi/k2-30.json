@@ -1,0 +1,1380 @@
+{
+ "surum": 1,
+ "key": "k2-30",
+ "kod": "2p04",
+ "kurul": 2,
+ "brans": "Patoloji",
+ "konu": "Nörodejeneratif Hastalıklar",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "profil": "Tıbbi Patoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2p04"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Nörodejeneratif hastalıklar belirli nöron gruplarının ilerleyici kaybı ve karakteristik protein agregatlarıyla tanınır. Prion hastalıkları, Alzheimer, FTLD, Parkinson ve atipik parkinsonizm, Huntington, spinoserebellar ataksiler, ALS ve öteki motor nöron hastalıkları klinik örüntü, biriken protein, genetik ve morfolojiyle işlenir.",
+   "maddeler": [
+    {
+     "metin": "Nörodejeneratif hastalıkların ortak ilkeleri"
+    },
+    {
+     "metin": "Prion hastalıkları"
+    },
+    {
+     "metin": "Alzheimer hastalığının patogenezi"
+    },
+    {
+     "metin": "Alzheimer hastalığının morfolojisi ve kliniği"
+    },
+    {
+     "metin": "Frontotemporal lobar dejenerasyon"
+    },
+    {
+     "metin": "Parkinson hastalığı ve atipik parkinsonizm"
+    },
+    {
+     "metin": "Huntington hastalığı"
+    },
+    {
+     "metin": "Spinoserebellar dejenerasyonlar"
+    },
+    {
+     "metin": "Amyotrofik lateral skleroz ve diğer motor nöron hastalıkları"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Nörodejeneratif hastalıklar belirli nöron gruplarının ilerleyici kaybı ve karakteristik protein agregatlarıyla tanınır. Prion hastalıkları, Alzheimer, FTLD, Parkinson ve atipik parkinsonizm, Huntington, spinoserebellar ataksiler, ALS ve öteki motor nöron hastalıkları klinik örüntü, biriken protein, genetik ve morfolojiyle işlenir.",
+    "Nörodejeneratif hastalıkların ortak ilkeleri.",
+    "Prion hastalıkları.",
+    "Alzheimer hastalığının patogenezi.",
+    "Alzheimer hastalığının morfolojisi ve kliniği.",
+    "Frontotemporal lobar dejenerasyon.",
+    "Parkinson hastalığı ve atipik parkinsonizm.",
+    "Huntington hastalığı.",
+    "Spinoserebellar dejenerasyonlar.",
+    "Amyotrofik lateral skleroz ve diğer motor nöron hastalıkları."
+   ],
+   "v": "46bd4b2179"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Ortak Patolojik Süreç: Protein Agregasyonu",
+     "metin": "Çıkmış (ilgili): Protein konformasyonunu bozan mutasyonlar",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Tablo 21.3. Başlıca Nörodejeneratif Hastalıkların Özellikleri",
+     "metin": "Çıkmış (dogrudan): α-sinüklein (Lewy cisimcikleri içinde)",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Prion Hastalıklarına Giriş",
+     "metin": "Çıkmış (ilgili): Yanlış katlanmış prion proteini (PrP) agregasyonu ve hücreler arası yayılımı ile",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Prion Protein (PrP) ve Konformasyon",
+     "metin": "Çıkmış (ilgili): Proteolize dirençli.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Aβ Üretimi ve Ailesel Alzheimer",
+     "metin": "Çıkmış (dogrudan): γ-sekretaz bileşenleri presenilin-1, presenilin-2 mutasyonları",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "ApoE ve Diğer Genetik Risk Faktörleri",
+     "metin": "Çıkmış (ilgili): Geç başlangıçlı AD riskinin ≈%25’i bu lokusla ilişkilidir.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Alzheimer Hastalığı: Makroskopi",
+     "metin": "Çıkmış (dogrudan): Doku kaybına bağlı ventrikül genişlemesi",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Nörofibriller Yumaklar ve Diğer Bulgular",
+     "metin": "Çıkmış (dogrudan): Serebral amiloid anjiyopati (CAA) AD’de çok sık",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Alzheimer Hastalığında Biyobelirteçler ve",
+     "metin": "Çıkmış (ilgili): BOS’ta Aβ düzeyinde azalma.",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "FTLD: Morfoloji ve Pick Hastalığı",
+     "metin": "Çıkmış (dogrudan): Frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Parkinson Hastalığı ve Parkinsonizm",
+     "metin": "Çıkmış (dogrudan): Substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Parkinson Hastalığı Patogenezi",
+     "metin": "Çıkmış (dogrudan): α-sinüklein içeren sitoplazmik inklüzyon.",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Parkinson Hastalığı: Tedavi ve Diğer",
+     "metin": "Çıkmış (dogrudan): Zamanla etkinlik azalır, motor dalgalanma artar.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Huntington Hastalığı: Klinik",
+     "metin": "Çıkmış (dogrudan): Otozomal dominant, ilerleyici hareket bozukluğu.",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Huntington Hastalığı: Genetik ve Patogenez",
+     "metin": "Çıkmış (dogrudan): Huntingtin proteinini kodlayan gende CAG (glutamin) tekrar genişlemesi.",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Amyotrofik Lateral Skleroz (ALS): Klinik",
+     "metin": "Çıkmış (dogrudan): Babinski pozitif",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "ALS: Genetik ve Patogenez",
+     "metin": "Çıkmış (ilgili): Vakaların ≈%90’ı sporadik, ≈%10’u ailesel; çoğu otozomal dominant.",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "Genel Özet",
+     "metin": "Çıkmış (dogrudan): Protein yanlış katlanması ve agregasyonu",
+     "s": [
+      66
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Ortak Patolojik Süreç: Protein Agregasyonu: Çıkmış (ilgili): Protein konformasyonunu bozan mutasyonlar.",
+    "Tablo 21.3. Başlıca Nörodejeneratif Hastalıkların Özellikleri: Çıkmış (dogrudan): α-sinüklein (Lewy cisimcikleri içinde).",
+    "Prion Hastalıklarına Giriş: Çıkmış (ilgili): Yanlış katlanmış prion proteini (PrP) agregasyonu ve hücreler arası yayılımı ile.",
+    "Prion Protein (PrP) ve Konformasyon: Çıkmış (ilgili): Proteolize dirençli.",
+    "Aβ Üretimi ve Ailesel Alzheimer: Çıkmış (dogrudan): γ-sekretaz bileşenleri presenilin-1, presenilin-2 mutasyonları.",
+    "ApoE ve Diğer Genetik Risk Faktörleri: Çıkmış (ilgili): Geç başlangıçlı AD riskinin ≈%25’i bu lokusla ilişkilidir.",
+    "Alzheimer Hastalığı: Makroskopi: Çıkmış (dogrudan): Doku kaybına bağlı ventrikül genişlemesi.",
+    "Nörofibriller Yumaklar ve Diğer Bulgular: Çıkmış (dogrudan): Serebral amiloid anjiyopati (CAA) AD’de çok sık.",
+    "Alzheimer Hastalığında Biyobelirteçler ve: Çıkmış (ilgili): BOS’ta Aβ düzeyinde azalma.",
+    "FTLD: Morfoloji ve Pick Hastalığı: Çıkmış (dogrudan): Frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi.",
+    "Parkinson Hastalığı ve Parkinsonizm: Çıkmış (dogrudan): Substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket.",
+    "Parkinson Hastalığı Patogenezi: Çıkmış (dogrudan): α-sinüklein içeren sitoplazmik inklüzyon.",
+    "Parkinson Hastalığı: Tedavi ve Diğer: Çıkmış (dogrudan): Zamanla etkinlik azalır, motor dalgalanma artar.",
+    "Huntington Hastalığı: Klinik: Çıkmış (dogrudan): Otozomal dominant, ilerleyici hareket bozukluğu.",
+    "Huntington Hastalığı: Genetik ve Patogenez: Çıkmış (dogrudan): Huntingtin proteinini kodlayan gende CAG (glutamin) tekrar genişlemesi.",
+    "Amyotrofik Lateral Skleroz (ALS): Klinik: Çıkmış (dogrudan): Babinski pozitif.",
+    "ALS: Genetik ve Patogenez: Çıkmış (ilgili): Vakaların ≈%90’ı sporadik, ≈%10’u ailesel; çoğu otozomal dominant.",
+    "Genel Özet: Çıkmış (dogrudan): Protein yanlış katlanması ve agregasyonu."
+   ],
+   "v": "86c5d521cd"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmışlarda en çok hastalık ile biriken protein ya da inklüzyon eşleştirmesi soruldu; Alzheimer hastalığında görülmeyen bulgu olarak Lewy cisimciği üç ayrı yılda geldi. Parkinson, Huntington, ALS ve Pick hastalığının tanımlayıcı bulguları da birden çok yılda tekrarlandı.",
+   "maddeler": [
+    {
+     "baslik": "Hastalık ve biriken protein eşleşmesi",
+     "metin": "Her nörodejeneratif hastalık karakteristik bir protein birikimiyle tanınır: prionda PrPsc, Alzheimer hastalığında Aβ ve tau, Parkinson hastalığında α-sinüklein.",
+     "neden": "2020-21 sınavında hem yanlış hem doğru eşleştirmeyi soran iki ayrı soru geldi; dersin en çok sorulan kalıbıdır.",
+     "s": [
+      11
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Lewy cisimciğinin içeriği",
+     "metin": "Parkinson hastalığının tanısal histolojik bulgusu Lewy cisimciği, α-sinüklein içeren sitoplazmik inklüzyondur.",
+     "neden": "2025-26 sınavında Lewy cisimciğinin içeriği doğrudan soruldu; çeldiriciler tau, Aβ, PrPsc ve TDP-43 idi.",
+     "s": [
+      44
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Alzheimer'da olmayan mikroskopik bulgu: Lewy",
+     "metin": "Alzheimer hastalığının mikroskopik bulguları nöritik plak, nörofibriller yumak ve serebral amiloid anjiyopatidir; Lewy cisimciği bu listede yer almaz.",
+     "neden": "'Alzheimer hastalığında görülmeyen bulgu Lewy cisimciği' kalıbı 2020-21, 2022-23 ve 2023-24'te tekrar soruldu.",
+     "s": [
+      30,
+      32
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Parkinson: substantia nigra dopaminerjik nöron kaybı",
+     "metin": "Parkinson hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğudur.",
+     "neden": "Nigrostriatal dopaminerjik sistem bozukluğundan Parkinson hastalığına giden soru 2018-19 ve 2020-21 sınavlarında aynen soruldu.",
+     "s": [
+      43
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Huntington hastalığı: otozomal dominant kore",
+     "metin": "Huntington hastalığı otozomal dominant, ilerleyici bir hareket bozukluğudur; temel bulgu koreiform hareketler, patolojik odak striatumdur.",
+     "neden": "2018-19 sınavında otozomal dominant, koreiform hareket ve demans üçlüsünden tanı soruldu.",
+     "s": [
+      52
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "ALS: üst ve alt motor nöron bulguları",
+     "metin": "ALS hastalığında alt motor nöron kaybı atrofi ve fasikülasyon, üst motor nöron kaybı parezi, hiperrefleksi, spastisite ve Babinski yapar.",
+     "neden": "2023-24 sınavında fasikülasyon, hiperrefleksi, parezi ve Babinski birlikteliğinden ALS tanısı soruldu.",
+     "s": [
+      60
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Nörofibriller yumak",
+     "metin": "Nörofibriller yumak, nöron sitoplazmasında hiperfosforile tau içeren, çekirdeği itebilen ya da çevreleyebilen çift sarmal lif demetidir.",
+     "neden": "2019-20 sınavında çekirdeği çevreleyen tau filamanlarının adı soruldu; çeldiriciler Lewy, Hirano ve plaklardı.",
+     "s": [
+      32
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Alzheimer hastalığının makroskopisi",
+     "metin": "Alzheimer hastalığında frontal, temporal ve parietal kortikal atrofi, genişlemiş sulkuslar ve hidrosefali ex vacuo görülür.",
+     "neden": "2023-24 sınavında Alzheimer hastalığında görülmeyen bulgu olarak substantia nigra dopamin azalması soruldu.",
+     "s": [
+      29
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmışlarda en çok hastalık ile biriken protein ya da inklüzyon eşleştirmesi soruldu; Alzheimer hastalığında görülmeyen bulgu olarak Lewy cisimciği üç ayrı yılda geldi. Parkinson, Huntington, ALS ve Pick hastalığının tanımlayıcı bulguları da birden çok yılda tekrarlandı.",
+    "Hastalık ve biriken protein eşleşmesi: Her nörodejeneratif hastalık karakteristik bir protein birikimiyle tanınır: prionda PrPsc, Alzheimer hastalığında Aβ ve tau, Parkinson hastalığında α-sinüklein.",
+    "Lewy cisimciğinin içeriği: Parkinson hastalığının tanısal histolojik bulgusu Lewy cisimciği, α-sinüklein içeren sitoplazmik inklüzyondur.",
+    "Alzheimer'da olmayan mikroskopik bulgu: Lewy: Alzheimer hastalığının mikroskopik bulguları nöritik plak, nörofibriller yumak ve serebral amiloid anjiyopatidir; Lewy cisimciği bu listede yer almaz.",
+    "Parkinson: substantia nigra dopaminerjik nöron kaybı: Parkinson hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğudur.",
+    "Huntington hastalığı: otozomal dominant kore: Huntington hastalığı otozomal dominant, ilerleyici bir hareket bozukluğudur; temel bulgu koreiform hareketler, patolojik odak striatumdur.",
+    "ALS: üst ve alt motor nöron bulguları: ALS hastalığında alt motor nöron kaybı atrofi ve fasikülasyon, üst motor nöron kaybı parezi, hiperrefleksi, spastisite ve Babinski yapar.",
+    "Nörofibriller yumak: Nörofibriller yumak, nöron sitoplazmasında hiperfosforile tau içeren, çekirdeği itebilen ya da çevreleyebilen çift sarmal lif demetidir.",
+    "Alzheimer hastalığının makroskopisi: Alzheimer hastalığında frontal, temporal ve parietal kortikal atrofi, genişlemiş sulkuslar ve hidrosefali ex vacuo görülür."
+   ],
+   "v": "2b61fee70b"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış çıkmışları 24 tanedir: 16'sı doğrudan bu dersin slaytından çözülür, 8'i ilgili düzeydedir (çoğu Tıbbi Genetik ya da SSS enfeksiyonları dersinin sorusu ya da kurgu/hatırlama kaydıdır). En çok tekrar eden alt başlık hastalık ile biriken protein ya da inklüzyon eşleştirmesidir: Alzheimer'da görülmeyen bulgu (Lewy cisimciği) üç ayrı yılda, Lewy cisimciğinin içeriği, protein eşleştirmenin doğru ve yanlış yönü ayrı sorular olarak sorulmuştur. İkinci sırada tanım kökünden hastalığı bulma gelir: nigrostriatal dopamin kaybı → Parkinson iki yılda aynı kelimelerle, otozomal dominant kore + demans → Huntington, asimetrik lobar atrofi → Pick, alt ve üst motor nöron bulguları → ALS. Kök kalıbı çoğunlukla 'hangisidir' ve 'hangisi görülmez / değildir / yanlıştır' biçimindedir; çeldiriciler her zaman aynı dersin komşu hastalıklarıdır.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Nigrostriatal dopaminerjik sistem bozukluğu sonucu gelişen, demans ve motor bozukluklarla karakterize klinik bulguları olan hastalık hangisidir?",
+     "cevap": "Parkinson hastalığı",
+     "s": [
+      43
+     ],
+     "aciklama": [
+      "Soru, bazal gangliyon tutulumuna bağlı hipokinetik hareket bozukluğunun hangi hastalık olduğunu ölçüyor; kök nigrostriatal dopaminerjik sistemin bozulmasını tarif eder.",
+      "Doğru cevap Parkinson hastalığıdır: 33. slayt (s.43) hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğu diye tanımlar; kökteki demans s.48'de dalgalanan kognitif bozukluk ve Lewy cisimciği demansı olarak geçer.",
+      "En güçlü çeldirici Alzheimer hastalığıdır, çünkü o da demans yapar; ancak Alzheimer'ın tutulumu hipokampus ve korteksedir, hareket bozukluğu değil hafıza kaybıyla başlar."
+     ],
+     "ornek": "Şekil 21.27'de sağlıklı orta beyindeki koyu substantia nigra bandı, Parkinson'lu hastada pigmentsiz görünür; kaybolan pigment, dopamin yapan nöronların kaybıdır.",
+     "tuzak": "Demans kelimesine takılıp Alzheimer'ı seçmek; ayrıca hiperkinetik Huntington ile hipokinetik Parkinson'u karıştırmak."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Nigrostriatal dopaminerjik sistem bozukluğu sonucu gelişen, demans ve motor bozukluklarla karakterize klinik bulguları olan hastalık hangisidir?",
+     "cevap": "Parkinson hastalığı",
+     "s": [
+      43
+     ],
+     "aciklama": [
+      "Bu soru 2020-21 sorusunun aynısıdır ve Parkinson hastalığının tanımını nigrostriatal dopaminerjik sistem üzerinden ölçer.",
+      "Doğru cevap Parkinson hastalığıdır; s.43'te substantia nigra dopaminerjik nöron kaybı hipokinetik hareket bozukluğunun nedeni olarak verilir.",
+      "Spinoserebellar ataksiler de hareketi bozar ama tutulan yapı beyincik ve bağlantılarıdır, klinik ataksidir; bu yüzden dopamin kaybı tarifine uymaz."
+     ],
+     "ornek": "s.5'teki bölgesel tutulum listesi: bazal gangliyon → hipokinetik Parkinson, hiperkinetik Huntington; beyincik → ataksi. Soru bu eşlemenin ilk satırını sorar.",
+     "tuzak": "Hareket bozukluğu yapan her hastalığı (SCA, Huntington, ALS) aynı kefeye koymak; yalnız dopamin kaybı Parkinson'a özgüdür."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Otozomal dominant kalıtım gösteren, tüm vücutta istemsiz koreiform hareket bozukluğu ve ilerleyici demans ile seyreden nörodejeneratif hastalık hangisidir?",
+     "cevap": "Huntington hastalığı",
+     "s": [
+      52
+     ],
+     "aciklama": [
+      "Soru, kalıtım biçimi, hareket bozukluğunun türü ve demans birlikteliğinden hastalığı bulmayı ölçüyor.",
+      "Doğru cevap Huntington hastalığıdır: s.52 hastalığı otozomal dominant, ilerleyici, istemsiz ani kıvranma tarzı koreiform hareketlerle giden ve demansa ilerleyebilen bir tablo olarak verir.",
+      "En güçlü çeldirici Parkinson hastalığıdır; o da bazal gangliyon hastalığıdır ama hipokinetiktir ve başlangıcı tipik olarak sporadiktir, istemsiz kore yapmaz."
+     ],
+     "ornek": "Şekil 21.28'de Huntington'lı yarım kürede kaudat ve putamen küçülmüş, lateral ventrikül genişlemiştir; koreyi yapan striatum dejenerasyonudur.",
+     "tuzak": "Hiperkinetik (Huntington) ile hipokinetik (Parkinson) ayrımını ters çevirmek; Pick'i demans nedeniyle seçmek."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Alzheimer hastalığında aşağıdakilerden hangisi görülmez?",
+     "cevap": "Beyin sapında (substantia nigra) dopamin azalması",
+     "s": [
+      29
+     ],
+     "aciklama": [
+      "Soru, Alzheimer hastalığının makroskopik ve mikroskopik bulgularını Parkinson'un bulgusundan ayırmayı ölçüyor; kök olumsuzdur.",
+      "Doğru cevap beyin sapında substantia nigra dopamin azalmasıdır: bu, s.43 ve s.45'e göre Parkinson hastalığının bulgusudur; kortikal atrofi ve hidrosefali ex vacuo s.29'da, nöritik plak s.30'da, hiperfosforile tau içeren yumak s.32'de Alzheimer bulgusudur.",
+      "En güçlü çeldirici hidrosefali ex vacuodur; ventrikül genişlemesi ilk bakışta ayrı bir hastalık gibi görünür, ama Alzheimer'da doku kaybına bağlı olarak beklenen bir bulgudur."
+     ],
+     "ornek": "s.29'daki makroskopi: frontal, temporal, parietal loblarda genişlemiş sulkuslar ve ince korteks; eriyen dokunun yerini ventrikül doldurur.",
+     "tuzak": "Hidrosefali ex vacuoyu gerçek (tıkayıcı) hidrosefali sanıp 'görülmez' diye işaretlemek."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Fasikülasyon, hiperrefleksi, parezi ve Babinski bulgusunun birlikte görüldüğü nörodejeneratif hastalık hangisidir?",
+     "cevap": "Amiyotrofik lateral skleroz",
+     "s": [
+      60
+     ],
+     "aciklama": [
+      "Soru, üst ve alt motor nöron bulgularının bir arada bulunmasından hastalığı tanımayı ölçüyor.",
+      "Doğru cevap ALS'dir: s.60'a göre fasikülasyon alt motor nöron kaybının, parezi, hiperrefleksi ve Babinski pozitifliği üst motor nöron kaybının bulgusudur; ALS ikisinin birlikte dejenerasyonudur.",
+      "En güçlü çeldirici spinal musküler atrofidir; o da motor nöron hastalığıdır ve fasikülasyon yapabilir, ama s.65'e göre yalnız alt motor nöronu tutar, hiperrefleksi ve Babinski beklenmez."
+     ],
+     "ornek": "Şekil 21.29'da ön (motor) kökler incelmiş, kortikospinal yolda miyelin kaybı vardır: biri alt, diğeri üst motor nöron kaybının izidir.",
+     "tuzak": "Ham belgede bir öğrencinin 'prion hastalığı' yazması gibi, motor bulguyu demans yapan hastalıkla karıştırmak."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Motor nöronlarda dejenerasyon ve ölüm ile karakterize, alt ve üst motor nöronları etkileyen, motor nöron hastalıklarının en yaygını aşağıdakilerden hangisidir?",
+     "cevap": "ALS",
+     "s": [
+      60
+     ],
+     "aciklama": [
+      "Soru, alt ve üst motor nöronları birlikte tutan motor nöron hastalığını ölçüyor.",
+      "Doğru cevap ALS'dir: s.60 ALS'yi alt motor nöron ve üst motor nöron dejenerasyonu olarak tanımlar; 'en yaygın' ifadesi bu dersin slaytında yazmaz, soru Tıbbi Genetik dersindendir.",
+      "SMA güçlü çeldiricidir; s.65'te SMA yalnız alt motor nöron kaybıdır, bu yüzden 'alt ve üst' koşulunu karşılamaz."
+     ],
+     "ornek": "s.6'daki bölgesel tutulum: motor sistem (üst + alt motor nöron) → güçsüzlük, fasikülasyon, yutma-solunum güçlüğü; örnek ALS.",
+     "tuzak": "SCA'yı motor nöron hastalığı sanmak; SCA'nın tutulumu beyincik ve bağlantılarıdır."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Lewy cisimciği aşağıdakilerden hangisini içerir?",
+     "cevap": "Alfa-sinüklein",
+     "s": [
+      44
+     ],
+     "aciklama": [
+      "Soru, Parkinson hastalığının tanısal histolojik bulgusunun hangi proteini içerdiğini ölçüyor.",
+      "Doğru cevap α-sinükleindir: s.44 Lewy cisimciğini α-sinüklein içeren sitoplazmik inklüzyon olarak tanımlar; s.45 bu cisimciklerin eozinofilik, yuvarlak-uzamış olduğunu söyler.",
+      "En güçlü çeldirici hiperfosforile tau'dur; tau da hücre içi inklüzyon yapar, ama Alzheimer yumaklarının ve FTLD-tau'nun proteinidir (s.32, s.37)."
+     ],
+     "ornek": "Şekil 21.27C'de substantia nigra nöronunun sitoplazmasında pembe, yuvarlak bir Lewy cismi ok ile gösterilir.",
+     "tuzak": "TDP-43'ü seçmek; TDP-43 FTLD-TDP ve ALS inklüzyonunun proteinidir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisinin Alzheimer hastalığı patogenezinde rolü olduğu kanıtlanmamıştır?",
+     "cevap": "α-sinüklein",
+     "s": [
+      23
+     ],
+     "aciklama": [
+      "Soru, Alzheimer patogenezinde rol oynayan genetik ve moleküler etkenleri, başka hastalığın proteininden ayırmayı ölçüyor.",
+      "Doğru cevap α-sinükleindir: s.23 ailesel AD'de APP mutasyonu, presenilin-1/2 ve APP gen kopya artışını (Down sendromu = trizomi 21), s.27 ApoE'yi, s.22 beta amiloidi sayar; α-sinüklein ise Lewy cisimciğinin proteinidir (s.44).",
+      "En güçlü çeldirici trizomi 21'dir; kromozom anomalisi ilgisiz görünür, ama APP geni 21. kromozomdadır ve kopya artışı Aβ üretimini artırır."
+     ],
+     "ornek": "s.23: APP gen kopya artışı (Down sendromu, APP duplikasyonları) ailesel Alzheimer'ın nedenleri arasında yazılıdır.",
+     "tuzak": "Down sendromunu Alzheimer'la ilişkisiz sanmak; ApoE'yi lipit proteini diye elemek."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nörodejeneratif hastalıklar ve ilişkili protein ya da inklüzyon eşleştirmelerinden hangisi yanlıştır?",
+     "cevap": "Alzheimer hastalığı – α-sinüklein",
+     "s": [
+      11
+     ],
+     "aciklama": [
+      "Soru, nörodejeneratif hastalıkları biriken protein ya da inklüzyonla eşleştirmeyi ölçüyor; kök yanlış eşleşmeyi ister.",
+      "Doğru cevap 'Alzheimer – α-sinüklein'dir: Tablo 21.3 (s.11) Alzheimer'ı Aβ plakları ve tau yumaklarıyla, α-sinükleini Parkinson'un Lewy cisimcikleriyle eşler.",
+      "Huntington–poliglutamin (s.11, s.53), Friedreich–frataksin (s.59) ve Pick–hiperfosforile tau (s.39) doğru eşleşmelerdir; ALS–Bunina cisimciği ise bu yılın slaytında yer almaz, ALS'nin bu derste verilen proteinleri SOD1 ve TDP-43'tür."
+     ],
+     "ornek": "Tablo 21.3'ün üçüncü sütunu tek başına bu sorunun anahtarıdır: her hastalığın karşısında biriken proteini yazar.",
+     "tuzak": "Alzheimer ile Parkinson'un proteinlerini yer değiştirmek."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nörodejeneratif hastalıklar ve protein birikimi eşleştirmelerinden hangisi doğrudur?",
+     "cevap": "Parkinson hastalığı – α-sinüklein",
+     "s": [
+      44
+     ],
+     "aciklama": [
+      "Soru, q95'in ters yönüdür: aynı eşleştirme listesinde doğru olanı bulmayı ölçer.",
+      "Doğru cevap 'Parkinson – α-sinüklein'dir: s.44'e göre Parkinson'un tanısal bulgusu α-sinüklein içeren Lewy cisimciğidir.",
+      "Beta amiloid Alzheimer'ın (s.22), frataksin Friedreich ataksisinin (s.59) proteinidir; ubikitin ve Bunina cisimciği bu derste Pick ya da ataksi telenjiektazi ile eşlenmez."
+     ],
+     "ornek": "Tablo 21.3'te Parkinson satırı: hipokinetik hareket bozukluğu – α-sinüklein (Lewy cisimcikleri içinde).",
+     "tuzak": "Ubikitinin Huntington inklüzyonunda boyanmasından yola çıkıp Pick'e bağlamak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Hangisi Alzheimer hastalığında görülen mikroskobik bulgulardan değildir?",
+     "cevap": "Lewy cisimciği",
+     "s": [
+      32
+     ],
+     "aciklama": [
+      "Soru, Alzheimer'ın mikroskopik bulgularını başka hastalığın inklüzyonundan ayırmayı ölçüyor.",
+      "Doğru cevap Lewy cisimciğidir: Alzheimer'da nöritik plak (s.30), nörofibriller yumak (s.32) ve serebral amiloid anjiyopati (s.32) görülür; Lewy cisimciği Parkinson'un bulgusudur (s.44).",
+      "En güçlü çeldirici amiloid anjiyopatidir; damar duvarı bulgusu olduğu için 'nöron hastalığına ait değil' gibi görünür, ama s.32'ye göre Alzheimer'da çok sıktır. Hirano cisimleri bu yılın slaytında geçmez."
+     ],
+     "ornek": "Şekil 21.25'te plak (A, B) ve yumak (C, D, E) aynı Alzheimer beyninde gösterilir; Lewy cismi ise Şekil 21.27C'de Parkinson nöronundadır.",
+     "tuzak": "CAA'yı yalnız hipertansif kanamayla ilişkilendirip elemek."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdakilerden hangisi Alzheimer hastalığında beyinde gözlenen mikroskobik değişikliklerden biri değildir?",
+     "cevap": "Lewy cisimleri",
+     "s": [
+      32
+     ],
+     "aciklama": [
+      "Bu soru 2020-21 q92'nin 2022-23'te aynı şıklarla yinelenmesidir; Alzheimer'ın mikroskopik bulgularını ölçer.",
+      "Doğru cevap Lewy cisimleridir; Alzheimer'ın bulguları nöritik plak, nörofibriller yumak ve CAA'dır (s.30, s.32), Lewy cisimciği α-sinüklein içeren Parkinson inklüzyonudur (s.44).",
+      "Nöritik (senil) plak en sık 'Alzheimer'a özgü değil' sanılan seçenektir; oysa Aβ çekirdeği ve distrofik nöritleriyle Alzheimer'ın temel bulgusudur."
+     ],
+     "ornek": "s.30: nöritik plak = Aβ çekirdek + distrofik nöritler, çevrede mikroglia ve reaktif astrosit; özellikle hipokampus ve amigdala.",
+     "tuzak": "Üç yılda aynı kalıp sorulmuştur; çeldirici sırası değişse de cevap Lewy'dir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Nörodejeneratif hastalıklarda görülen, nöron sitoplazmasında nükleusu çevreleyen ya da yerini alan, alev şekilli tau proteininden oluşan filamanların adı nedir?",
+     "cevap": "Nörofibriler yumaklar",
+     "s": [
+      32
+     ],
+     "aciklama": [
+      "Soru, nöron sitoplazmasında çekirdeği iten ya da çevreleyen, tau'dan oluşan yapının adını ölçüyor.",
+      "Doğru cevap nörofibriller yumaktır: s.32 yumakları nöron sitoplazmasında çift sarmal lif demetleri olarak tanımlar, çekirdeği itebildiğini ya da çevreleyebildiğini ve başlıca bileşeninin hiperfosforile tau olduğunu söyler.",
+      "En güçlü çeldiriciler nöritik ve distrofik plaktır; plaklar hücre dışındadır ve çekirdeği Aβ'dir, tau yalnız çevresindeki nöritlerde bulunur (s.30, Şekil 21.25E)."
+     ],
+     "ornek": "Şekil 21.25D'de gümüş boyası sitoplazmadaki yumağı siyah, alev biçimli bir şerit olarak gösterir.",
+     "tuzak": "Lewy cisimciğini de sitoplazmik olduğu için seçmek; Lewy α-sinüklein içerir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Klinik olarak erken yaşlarda ortaya çıkan, ilerleyici demansla seyreden ve beyinde asimetrik lobar atrofiye neden olan hastalık hangisidir?",
+     "cevap": "Pick hastalığı",
+     "s": [
+      39
+     ],
+     "aciklama": [
+      "Soru, erken yaş, demans ve asimetrik lobar atrofi birlikteliğinden hastalığı tanımayı ölçüyor.",
+      "Doğru cevap Pick hastalığıdır: s.39 Pick alt tipinde frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi ve ince bıçak ağzı giruslar tarif eder; s.36 FTLD'nin Alzheimer'dan daha genç yaşta başladığını söyler.",
+      "En güçlü çeldirici Alzheimer'dır; o da demans ve atrofi yapar, ama atrofisi frontal, temporal ve parietal loblarda yaygındır ve başlangıç daha ileri yaştadır (s.29, s.21)."
+     ],
+     "ornek": "s.39: dış kortikal tabakalarda ağır nöron kaybı, şişkin Pick hücreleri ve gümüşle iyi boyanan Pick cisimleri; Şekil 21.26B'de Pick cisimleri siyah yuvarlaklardır.",
+     "tuzak": "'Atrofi' gören her soruda Alzheimer'ı seçmek; 'asimetrik' ve 'erken yaş' Pick'i işaret eder."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "\"Alzheimer hastalığı (AH), Parkinson hastalığı (PH), Huntington hastalığı (HH), amiyotrofik lateral skleroz (ALS), kanser, diyabet vb. hastalıklar genelde ............ kaynaklanırlar.\" şeklinde verilen bilgide boş bırakılan yere gelmesi gereken ifade hangisidir?",
+     "cevap": "Protein katlanma bozuklukları",
+     "s": [
+      66
+     ],
+     "aciklama": [
+      "Soru, Alzheimer, Parkinson, Huntington ve ALS'nin ortak patogenez eksenini ölçüyor.",
+      "Doğru cevap protein katlanma bozukluklarıdır: s.7 birçok nörodejeneratif hastalıkta belirli proteinlerin agregatlarının biriktiğini, s.66 ortak eksenin protein yanlış katlanması ve agregasyonu olduğunu söyler.",
+      "En güçlü çeldirici ailesel yatkınlıktır; bazı formlar ailesel olsa da Alzheimer'ın çoğu (s.21) ve ALS'nin %90'ı (s.62) sporadiktir, bu yüzden ortak açıklama olamaz."
+     ],
+     "ornek": "Tablo 21.3'ün son sütunu her hastalık için ayrı bir birikmiş proteini gösterir: ortak dil protein agregasyonudur.",
+     "tuzak": "Ailesel olguların varlığını tüm hastalığın açıklaması sanmak."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Parkinson hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Parkinson hastalığının hareket ile ilişkili semptomları L-dihidroksifenilalanine (L-DOPA) yanıt verir ve bu tedavi hastalığın ilerlemesini yavaşlatır, hatta durdurur.",
+     "s": [
+      48
+     ],
+     "aciklama": [
+      "Soru, Parkinson hastalığının patogenez, klinik ve tedavi özelliklerini önerme önerme ölçüyor; kök yanlış olanı ister.",
+      "Doğru cevap 'L-DOPA ilerlemeyi yavaşlatır, hatta durdurur' önermesidir: s.48'e göre L-DOPA başlangıçta iyi yanıt verir ama zamanla etkinliği azalır ve motor dalgalanma artar; hastalığın ilerlemesini durdurduğu yazmaz.",
+      "Diğer önermeler doğrudur: 10–15 yılda artan motor yavaşlama ve sporadik başlangıç s.47'de, dopaminerjik nöron kaybına bağlı hipokinetik bozukluk s.43'te, α-sinüklein içeren Lewy cisimleri s.44'tedir."
+     ],
+     "ornek": "s.48'de derin beyin stimülasyonunun L-DOPA dozunu azaltabildiği de yazılıdır; tedavi belirtiyi kontrol eder, nöron kaybını geri çevirmez.",
+     "tuzak": "'Başlangıçta iyi yanıt'ı 'hastalığı durdurur' diye okumak."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Huntington koresi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Otozomal dominant geçişli olup CAG trinükleotid tekrar artışı sonucu ortaya çıkar.",
+     "s": [
+      53
+     ],
+     "aciklama": [
+      "Soru, Huntington hastalığının kalıtım biçimini ve genetik temelini ölçüyor.",
+      "Doğru cevap otozomal dominant geçiş ve CAG trinükleotid tekrar artışıdır: s.52 hastalığı otozomal dominant, s.53 huntingtin geninde CAG (glutamin) tekrar genişlemesi olarak verir.",
+      "En güçlü çeldirici FXN genindeki GAA tekrarıdır; tekrar genişlemesi olduğu için benzer görünür, ama o Friedreich ataksisinin (otozomal resesif) genetik temelidir (s.59)."
+     ],
+     "ornek": "s.53: normal allel 11–34 tekrar, hastalık aleli daha fazla; tekrar arttıkça başlangıç erkene kayar.",
+     "tuzak": "CAG (Huntington, SCA, Kennedy) ile GAA (Friedreich) tekrarlarını karıştırmak."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "\"Prionlar, esasen yanlış katlanmış protein dizileridir. Bu yanlış katlanmış proteinler beyin gibi merkezi sinir sistemine ait organlarda birikerek tüm bilinç ve hareket sistemini felç edip ölümlere yol açabilir. En sık görülen dört kardinal bulgu ise uykusuzluk, depresyon, kişilik değişiklikleri ve hafıza kaybıdır.\" Bahsedilen hastalık aşağıdakilerden hangisidir?",
+     "cevap": "Creutzfeldt-Jakob hastalığı",
+     "s": [
+      12
+     ],
+     "aciklama": [
+      "Soru, yanlış katlanmış protein birikimiyle giden bulaşıcı nörodejeneratif hastalığı ölçüyor.",
+      "Doğru cevap Creutzfeldt–Jakob hastalığıdır: s.12 prion hastalıklarını yanlış katlanmış prion proteininin agregasyonu ve hücreler arası yayılımıyla tanımlar, insan formu olarak CJD'yi sayar; kökteki dört bulgu bu slaytta yazmaz.",
+      "Alzheimer ve Parkinson güçlü çeldiricidir, çünkü onlarda da protein yanlış katlanır; ancak s.10'a göre bu hastalıklarda kişiden kişiye bulaş gösterilmemiştir, 'prion' sözcüğü yalnız CJD'ye gider."
+     ],
+     "ornek": "s.13: PrPsc, normal PrPc ile etkileşip onu PrPsc'ye çevirir; bu kendi kendini artıran süreç prionu diğer agregatlardan ayırır.",
+     "tuzak": "Prion benzeri yayılımı (Alzheimer, Parkinson) gerçek prion hastalığı sanmak."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdaki hastalıklardan hangisinin oluşum mekanizmasında \"proteinlerin yanlış katlanması\" rol almaz?",
+     "cevap": "Ailevi Akdeniz ateşi",
+     "s": [
+      7
+     ],
+     "aciklama": [
+      "Soru, protein yanlış katlanmasının rol oynadığı hastalıkları tanımayı ölçüyor; kök olumsuzdur.",
+      "Doğru cevap Ailevi Akdeniz ateşidir; bu dersin slaytlarında protein agregasyonu Alzheimer, Parkinson ve deli dana (prion) için verilir (s.7, s.11, s.12), Ailevi Akdeniz ateşi bu derste yer almaz.",
+      "Deli dana hastalığı güçlü çeldiricidir, çünkü hayvan hastalığı olduğu için dışlanabilir; ama s.12'de sığır spongiform ensefalopatisi prion hastalığının hayvan formu olarak sayılır. Kistik fibrozis bu derste anlatılmaz."
+     ],
+     "ornek": "Tablo 21.3'teki her hastalığın kendine ait bir birikmiş proteini vardır; deli danada PrPsc'dir.",
+     "tuzak": "Hayvan hastalığını insan prion hastalığından ayrı sanmak."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Prionlarla ilgili; I. Prionlar filtre edilebilen ajanlardır. II. Prionlara karşı inflamatuvar yanıt gelişmez. III. Prionlara serolojik tanı konulamaz. IV. Prionların nükleik asitleri bulunmaz. ifadelerinden hangisi/hangileri doğrudur?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru, prionların biyolojik özelliklerini ölçüyor.",
+      "Bu derste prion proteininin β-tabaka zengin ve proteolize dirençli olduğu (s.13) ve dokuda spongiform değişim, nöron kaybı ve reaktif gliyoz geliştiği (s.18) anlatılır; prionun bir protein olduğu bilgisi IV. öncülü destekler.",
+      "Filtre edilebilirlik, inflamatuvar yanıt gelişmemesi ve serolojik tanı yapılamaması bu dersin slaytında yer almaz, Enfeksiyon Hastalıkları dersinden gelir; bu yüzden soru 'ilgili' düzeydedir."
+     ],
+     "ornek": "s.19: tanıda serolojiye değil, dokuda proteinaz K'ye dirençli PrPsc'nin immünohistokimyayla gösterilmesine başvurulur.",
+     "tuzak": "Prionu virüs gibi düşünüp antikor yanıtı beklemek."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Kurgu Soru: Nörodejeneratif hastalıklarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Spinal müsküler atrofide SMN2 kopya sayısı arttıkça hastalık daha ağır seyreder",
+     "s": [
+      35
+     ],
+     "aciklama": [
+      "Kurgu soru, nörodejeneratif hastalıklarla ilgili doğru ve yanlış önermeleri ölçüyor.",
+      "Bu dersten çözülebilen önermeler: Alzheimer'da BOS'ta Aβ düzeyi azalır (s.35) ve ALS'de hem üst hem alt motor nöron tutulur (s.60); ikisi de doğrudur.",
+      "Cevap olan SMN2 kopya sayısı bilgisi bu dersin slaytında yoktur (s.65 yalnız SMN1 fonksiyon kaybını verir); juvenil Huntington ve MS önermeleri Tıbbi Genetik dersinden gelir."
+     ],
+     "ornek": "s.35'teki biyobelirteçler: görüntülemede Aβ birikimi, BOS'ta fosforile tau artışı, BOS'ta Aβ azalması.",
+     "tuzak": "Aβ beyinde biriktiği için BOS'ta da arttığını sanmak."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi geç başlangıçlı Alzheimer hastalığı ile ilişkili genetik risk belirteçlerinden biri DEĞİLDİR?",
+     "cevap": "Presenilin 1 (PSEN1) ve Presenilin 2 (PSEN2) mutasyonları",
+     "s": [
+      27
+     ],
+     "aciklama": [
+      "Soru, geç başlangıçlı Alzheimer'ın risk belirteçlerini ailesel formun mutasyonlarından ayırmayı ölçüyor.",
+      "Bu dersten çözülen kısım: ApoE geç başlangıçlı AD riskinin yaklaşık %25'iyle ilişkilidir (s.27), presenilin-1 ve -2 mutasyonları ise ailesel AD ile ilişkilidir (s.23); bu yüzden PSEN1/PSEN2 geç başlangıç belirteci değildir.",
+      "TREM2, SORL1 ve klusterin bu derste yer almaz, Tıbbi Genetik dersinden gelir; soru bu nedenle 'ilgili' düzeydedir."
+     ],
+     "ornek": "s.27: ε4 dozu arttıkça risk artar; ApoE4 Aβ birikimini kolaylaştırır.",
+     "tuzak": "Ailesel (erken) ve geç başlangıçlı Alzheimer genlerini karıştırmak."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Amiyotrofik lateral skleroz (ALS) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "ALS otoimmün ve demiyelinizan bir hastalıktır.",
+     "s": [
+      62
+     ],
+     "aciklama": [
+      "Hatırlamadan kurulan soru, ALS'nin genetik ve patogenez özelliklerini ölçüyor; cevap 'ALS otoimmün ve demiyelinizandır' önermesidir.",
+      "Bu dersten çözülen kısım: ALS alt ve üst motor nöron dejenerasyonudur (s.60), vakaların yaklaşık %90'ı sporadik, %10'u aileseldir ve ailesel ALS'nin en sık nedeni C9orf72 heksanükleotid genişlemesidir (s.62).",
+      "Otoimmün demiyelinizasyon bu derste anlatılmaz ve ALS'nin tanımıyla uyuşmaz; SOD1 yüzdesi ise slaytta yoktur, bu yüzden soru 'ilgili' düzeydedir."
+     ],
+     "ornek": "s.62: ilk tanımlanan gen SOD1 (kromozom 21), yanlış katlanmış SOD1 katlanmamış protein yanıtı ve apoptoz yapar.",
+     "tuzak": "Motor nöron dejenerasyonunu miyelin hastalığıyla karıştırmak."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdakilerden hangisi geri döndürülebilir bir demans nedeni değildir?",
+     "cevap": "Lewy cisimcikli demans",
+     "s": [
+      48
+     ],
+     "aciklama": [
+      "Soru, geri döndürülebilir demans nedenlerini nörodejeneratif demanstan ayırmayı ölçüyor.",
+      "Bu derste Lewy cisimciği demansı, Parkinson'da demansın motor semptomlardan sonra bir yıl içinde başladığı nörodejeneratif tablo olarak geçer (s.48); nörodejeneratif hastalıklar ilerleyicidir (s.4).",
+      "Hiponatremi, B12 eksikliği, karaciğer yetmezliği ve hipotiroidi bu derste anlatılmaz; soru bu yüzden 'ilgili' düzeydedir."
+     ],
+     "ornek": "s.4: nörodejeneratif hastalıklar genellikle yaşla ortaya çıkar ve ilerleyicidir; ilerleyici nöron kaybı geri dönmez.",
+     "tuzak": "Dalgalanan kognitif bozukluğu geçici, geri dönen bir durum sanmak."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış çıkmışları 24 tanedir: 16'sı doğrudan bu dersin slaytından çözülür, 8'i ilgili düzeydedir (çoğu Tıbbi Genetik ya da SSS enfeksiyonları dersinin sorusu ya da kurgu/hatırlama kaydıdır). En çok tekrar eden alt başlık hastalık ile biriken protein ya da inklüzyon eşleştirmesidir: Alzheimer'da görülmeyen bulgu (Lewy cisimciği) üç ayrı yılda, Lewy cisimciğinin içeriği, protein eşleştirmenin doğru ve yanlış yönü ayrı sorular olarak sorulmuştur. İkinci sırada tanım kökünden hastalığı bulma gelir: nigrostriatal dopamin kaybı → Parkinson iki yılda aynı kelimelerle, otozomal dominant kore + demans → Huntington, asimetrik lobar atrofi → Pick, alt ve üst motor nöron bulguları → ALS. Kök kalıbı çoğunlukla 'hangisidir' ve 'hangisi görülmez / değildir / yanlıştır' biçimindedir; çeldiriciler her zaman aynı dersin komşu hastalıklarıdır.",
+    "2020-2021: Nigrostriatal dopaminerjik sistem bozukluğu sonucu gelişen, demans ve motor bozukluklarla karakterize klinik bulguları olan hastalık hangisidir?",
+    "Cevap: Parkinson hastalığı.",
+    "Soru, bazal gangliyon tutulumuna bağlı hipokinetik hareket bozukluğunun hangi hastalık olduğunu ölçüyor; kök nigrostriatal dopaminerjik sistemin bozulmasını tarif eder.",
+    "Doğru cevap Parkinson hastalığıdır: 33. slayt (s.43) hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğu diye tanımlar; kökteki demans s.48'de dalgalanan kognitif bozukluk ve Lewy cisimciği demansı olarak geçer.",
+    "En güçlü çeldirici Alzheimer hastalığıdır, çünkü o da demans yapar; ancak Alzheimer'ın tutulumu hipokampus ve korteksedir, hareket bozukluğu değil hafıza kaybıyla başlar.",
+    "Örnek: Şekil 21.27'de sağlıklı orta beyindeki koyu substantia nigra bandı, Parkinson'lu hastada pigmentsiz görünür; kaybolan pigment, dopamin yapan nöronların kaybıdır.",
+    "Tuzak: Demans kelimesine takılıp Alzheimer'ı seçmek; ayrıca hiperkinetik Huntington ile hipokinetik Parkinson'u karıştırmak.",
+    "2018-2019: Nigrostriatal dopaminerjik sistem bozukluğu sonucu gelişen, demans ve motor bozukluklarla karakterize klinik bulguları olan hastalık hangisidir?",
+    "Cevap: Parkinson hastalığı.",
+    "Bu soru 2020-21 sorusunun aynısıdır ve Parkinson hastalığının tanımını nigrostriatal dopaminerjik sistem üzerinden ölçer.",
+    "Doğru cevap Parkinson hastalığıdır; s.43'te substantia nigra dopaminerjik nöron kaybı hipokinetik hareket bozukluğunun nedeni olarak verilir.",
+    "Spinoserebellar ataksiler de hareketi bozar ama tutulan yapı beyincik ve bağlantılarıdır, klinik ataksidir; bu yüzden dopamin kaybı tarifine uymaz.",
+    "Örnek: s.5'teki bölgesel tutulum listesi: bazal gangliyon → hipokinetik Parkinson, hiperkinetik Huntington; beyincik → ataksi. Soru bu eşlemenin ilk satırını sorar.",
+    "Tuzak: Hareket bozukluğu yapan her hastalığı (SCA, Huntington, ALS) aynı kefeye koymak; yalnız dopamin kaybı Parkinson'a özgüdür.",
+    "2018-2019: Otozomal dominant kalıtım gösteren, tüm vücutta istemsiz koreiform hareket bozukluğu ve ilerleyici demans ile seyreden nörodejeneratif hastalık hangisidir?",
+    "Cevap: Huntington hastalığı.",
+    "Soru, kalıtım biçimi, hareket bozukluğunun türü ve demans birlikteliğinden hastalığı bulmayı ölçüyor.",
+    "Doğru cevap Huntington hastalığıdır: s.52 hastalığı otozomal dominant, ilerleyici, istemsiz ani kıvranma tarzı koreiform hareketlerle giden ve demansa ilerleyebilen bir tablo olarak verir.",
+    "En güçlü çeldirici Parkinson hastalığıdır; o da bazal gangliyon hastalığıdır ama hipokinetiktir ve başlangıcı tipik olarak sporadiktir, istemsiz kore yapmaz.",
+    "Örnek: Şekil 21.28'de Huntington'lı yarım kürede kaudat ve putamen küçülmüş, lateral ventrikül genişlemiştir; koreyi yapan striatum dejenerasyonudur.",
+    "Tuzak: Hiperkinetik (Huntington) ile hipokinetik (Parkinson) ayrımını ters çevirmek; Pick'i demans nedeniyle seçmek.",
+    "2023-2024: Alzheimer hastalığında aşağıdakilerden hangisi görülmez?",
+    "Cevap: Beyin sapında (substantia nigra) dopamin azalması.",
+    "Soru, Alzheimer hastalığının makroskopik ve mikroskopik bulgularını Parkinson'un bulgusundan ayırmayı ölçüyor; kök olumsuzdur.",
+    "Doğru cevap beyin sapında substantia nigra dopamin azalmasıdır: bu, s.43 ve s.45'e göre Parkinson hastalığının bulgusudur; kortikal atrofi ve hidrosefali ex vacuo s.29'da, nöritik plak s.30'da, hiperfosforile tau içeren yumak s.32'de Alzheimer bulgusudur.",
+    "En güçlü çeldirici hidrosefali ex vacuodur; ventrikül genişlemesi ilk bakışta ayrı bir hastalık gibi görünür, ama Alzheimer'da doku kaybına bağlı olarak beklenen bir bulgudur.",
+    "Örnek: s.29'daki makroskopi: frontal, temporal, parietal loblarda genişlemiş sulkuslar ve ince korteks; eriyen dokunun yerini ventrikül doldurur.",
+    "Tuzak: Hidrosefali ex vacuoyu gerçek (tıkayıcı) hidrosefali sanıp 'görülmez' diye işaretlemek.",
+    "2023-2024: Fasikülasyon, hiperrefleksi, parezi ve Babinski bulgusunun birlikte görüldüğü nörodejeneratif hastalık hangisidir?",
+    "Cevap: Amiyotrofik lateral skleroz.",
+    "Soru, üst ve alt motor nöron bulgularının bir arada bulunmasından hastalığı tanımayı ölçüyor.",
+    "Doğru cevap ALS'dir: s.60'a göre fasikülasyon alt motor nöron kaybının, parezi, hiperrefleksi ve Babinski pozitifliği üst motor nöron kaybının bulgusudur; ALS ikisinin birlikte dejenerasyonudur.",
+    "En güçlü çeldirici spinal musküler atrofidir; o da motor nöron hastalığıdır ve fasikülasyon yapabilir, ama s.65'e göre yalnız alt motor nöronu tutar, hiperrefleksi ve Babinski beklenmez.",
+    "Örnek: Şekil 21.29'da ön (motor) kökler incelmiş, kortikospinal yolda miyelin kaybı vardır: biri alt, diğeri üst motor nöron kaybının izidir.",
+    "Tuzak: Ham belgede bir öğrencinin 'prion hastalığı' yazması gibi, motor bulguyu demans yapan hastalıkla karıştırmak.",
+    "2023-2024: Motor nöronlarda dejenerasyon ve ölüm ile karakterize, alt ve üst motor nöronları etkileyen, motor nöron hastalıklarının en yaygını aşağıdakilerden hangisidir?",
+    "Cevap: ALS.",
+    "Soru, alt ve üst motor nöronları birlikte tutan motor nöron hastalığını ölçüyor.",
+    "Doğru cevap ALS'dir: s.60 ALS'yi alt motor nöron ve üst motor nöron dejenerasyonu olarak tanımlar; 'en yaygın' ifadesi bu dersin slaytında yazmaz, soru Tıbbi Genetik dersindendir.",
+    "SMA güçlü çeldiricidir; s.65'te SMA yalnız alt motor nöron kaybıdır, bu yüzden 'alt ve üst' koşulunu karşılamaz.",
+    "Örnek: s.6'daki bölgesel tutulum: motor sistem (üst + alt motor nöron) → güçsüzlük, fasikülasyon, yutma-solunum güçlüğü; örnek ALS.",
+    "Tuzak: SCA'yı motor nöron hastalığı sanmak; SCA'nın tutulumu beyincik ve bağlantılarıdır.",
+    "2025-2026: Lewy cisimciği aşağıdakilerden hangisini içerir?",
+    "Cevap: Alfa-sinüklein.",
+    "Soru, Parkinson hastalığının tanısal histolojik bulgusunun hangi proteini içerdiğini ölçüyor.",
+    "Doğru cevap α-sinükleindir: s.44 Lewy cisimciğini α-sinüklein içeren sitoplazmik inklüzyon olarak tanımlar; s.45 bu cisimciklerin eozinofilik, yuvarlak-uzamış olduğunu söyler.",
+    "En güçlü çeldirici hiperfosforile tau'dur; tau da hücre içi inklüzyon yapar, ama Alzheimer yumaklarının ve FTLD-tau'nun proteinidir (s.32, s.37).",
+    "Örnek: Şekil 21.27C'de substantia nigra nöronunun sitoplazmasında pembe, yuvarlak bir Lewy cismi ok ile gösterilir.",
+    "Tuzak: TDP-43'ü seçmek; TDP-43 FTLD-TDP ve ALS inklüzyonunun proteinidir.",
+    "2020-2021: Aşağıdakilerden hangisinin Alzheimer hastalığı patogenezinde rolü olduğu kanıtlanmamıştır?",
+    "Cevap: α-sinüklein.",
+    "Soru, Alzheimer patogenezinde rol oynayan genetik ve moleküler etkenleri, başka hastalığın proteininden ayırmayı ölçüyor.",
+    "Doğru cevap α-sinükleindir: s.23 ailesel AD'de APP mutasyonu, presenilin-1/2 ve APP gen kopya artışını (Down sendromu = trizomi 21), s.27 ApoE'yi, s.22 beta amiloidi sayar; α-sinüklein ise Lewy cisimciğinin proteinidir (s.44).",
+    "En güçlü çeldirici trizomi 21'dir; kromozom anomalisi ilgisiz görünür, ama APP geni 21. kromozomdadır ve kopya artışı Aβ üretimini artırır.",
+    "Örnek: s.23: APP gen kopya artışı (Down sendromu, APP duplikasyonları) ailesel Alzheimer'ın nedenleri arasında yazılıdır.",
+    "Tuzak: Down sendromunu Alzheimer'la ilişkisiz sanmak; ApoE'yi lipit proteini diye elemek.",
+    "2020-2021: Nörodejeneratif hastalıklar ve ilişkili protein ya da inklüzyon eşleştirmelerinden hangisi yanlıştır?",
+    "Cevap: Alzheimer hastalığı – α-sinüklein.",
+    "Soru, nörodejeneratif hastalıkları biriken protein ya da inklüzyonla eşleştirmeyi ölçüyor; kök yanlış eşleşmeyi ister.",
+    "Doğru cevap 'Alzheimer – α-sinüklein'dir: Tablo 21.3 (s.11) Alzheimer'ı Aβ plakları ve tau yumaklarıyla, α-sinükleini Parkinson'un Lewy cisimcikleriyle eşler.",
+    "Huntington–poliglutamin (s.11, s.53), Friedreich–frataksin (s.59) ve Pick–hiperfosforile tau (s.39) doğru eşleşmelerdir; ALS–Bunina cisimciği ise bu yılın slaytında yer almaz, ALS'nin bu derste verilen proteinleri SOD1 ve TDP-43'tür.",
+    "Örnek: Tablo 21.3'ün üçüncü sütunu tek başına bu sorunun anahtarıdır: her hastalığın karşısında biriken proteini yazar.",
+    "Tuzak: Alzheimer ile Parkinson'un proteinlerini yer değiştirmek.",
+    "2020-2021: Nörodejeneratif hastalıklar ve protein birikimi eşleştirmelerinden hangisi doğrudur?",
+    "Cevap: Parkinson hastalığı – α-sinüklein.",
+    "Soru, q95'in ters yönüdür: aynı eşleştirme listesinde doğru olanı bulmayı ölçer.",
+    "Doğru cevap 'Parkinson – α-sinüklein'dir: s.44'e göre Parkinson'un tanısal bulgusu α-sinüklein içeren Lewy cisimciğidir.",
+    "Beta amiloid Alzheimer'ın (s.22), frataksin Friedreich ataksisinin (s.59) proteinidir; ubikitin ve Bunina cisimciği bu derste Pick ya da ataksi telenjiektazi ile eşlenmez.",
+    "Örnek: Tablo 21.3'te Parkinson satırı: hipokinetik hareket bozukluğu – α-sinüklein (Lewy cisimcikleri içinde).",
+    "Tuzak: Ubikitinin Huntington inklüzyonunda boyanmasından yola çıkıp Pick'e bağlamak.",
+    "2020-2021: Hangisi Alzheimer hastalığında görülen mikroskobik bulgulardan değildir?",
+    "Cevap: Lewy cisimciği.",
+    "Soru, Alzheimer'ın mikroskopik bulgularını başka hastalığın inklüzyonundan ayırmayı ölçüyor.",
+    "Doğru cevap Lewy cisimciğidir: Alzheimer'da nöritik plak (s.30), nörofibriller yumak (s.32) ve serebral amiloid anjiyopati (s.32) görülür; Lewy cisimciği Parkinson'un bulgusudur (s.44).",
+    "En güçlü çeldirici amiloid anjiyopatidir; damar duvarı bulgusu olduğu için 'nöron hastalığına ait değil' gibi görünür, ama s.32'ye göre Alzheimer'da çok sıktır. Hirano cisimleri bu yılın slaytında geçmez.",
+    "Örnek: Şekil 21.25'te plak (A, B) ve yumak (C, D, E) aynı Alzheimer beyninde gösterilir; Lewy cismi ise Şekil 21.27C'de Parkinson nöronundadır.",
+    "Tuzak: CAA'yı yalnız hipertansif kanamayla ilişkilendirip elemek.",
+    "2022-2023: Aşağıdakilerden hangisi Alzheimer hastalığında beyinde gözlenen mikroskobik değişikliklerden biri değildir?",
+    "Cevap: Lewy cisimleri.",
+    "Bu soru 2020-21 q92'nin 2022-23'te aynı şıklarla yinelenmesidir; Alzheimer'ın mikroskopik bulgularını ölçer.",
+    "Doğru cevap Lewy cisimleridir; Alzheimer'ın bulguları nöritik plak, nörofibriller yumak ve CAA'dır (s.30, s.32), Lewy cisimciği α-sinüklein içeren Parkinson inklüzyonudur (s.44).",
+    "Nöritik (senil) plak en sık 'Alzheimer'a özgü değil' sanılan seçenektir; oysa Aβ çekirdeği ve distrofik nöritleriyle Alzheimer'ın temel bulgusudur.",
+    "Örnek: s.30: nöritik plak = Aβ çekirdek + distrofik nöritler, çevrede mikroglia ve reaktif astrosit; özellikle hipokampus ve amigdala.",
+    "Tuzak: Üç yılda aynı kalıp sorulmuştur; çeldirici sırası değişse de cevap Lewy'dir.",
+    "2019-2020: Nörodejeneratif hastalıklarda görülen, nöron sitoplazmasında nükleusu çevreleyen ya da yerini alan, alev şekilli tau proteininden oluşan filamanların adı nedir?",
+    "Cevap: Nörofibriler yumaklar.",
+    "Soru, nöron sitoplazmasında çekirdeği iten ya da çevreleyen, tau'dan oluşan yapının adını ölçüyor.",
+    "Doğru cevap nörofibriller yumaktır: s.32 yumakları nöron sitoplazmasında çift sarmal lif demetleri olarak tanımlar, çekirdeği itebildiğini ya da çevreleyebildiğini ve başlıca bileşeninin hiperfosforile tau olduğunu söyler.",
+    "En güçlü çeldiriciler nöritik ve distrofik plaktır; plaklar hücre dışındadır ve çekirdeği Aβ'dir, tau yalnız çevresindeki nöritlerde bulunur (s.30, Şekil 21.25E).",
+    "Örnek: Şekil 21.25D'de gümüş boyası sitoplazmadaki yumağı siyah, alev biçimli bir şerit olarak gösterir.",
+    "Tuzak: Lewy cisimciğini de sitoplazmik olduğu için seçmek; Lewy α-sinüklein içerir.",
+    "2019-2020: Klinik olarak erken yaşlarda ortaya çıkan, ilerleyici demansla seyreden ve beyinde asimetrik lobar atrofiye neden olan hastalık hangisidir?",
+    "Cevap: Pick hastalığı.",
+    "Soru, erken yaş, demans ve asimetrik lobar atrofi birlikteliğinden hastalığı tanımayı ölçüyor.",
+    "Doğru cevap Pick hastalığıdır: s.39 Pick alt tipinde frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi ve ince bıçak ağzı giruslar tarif eder; s.36 FTLD'nin Alzheimer'dan daha genç yaşta başladığını söyler.",
+    "En güçlü çeldirici Alzheimer'dır; o da demans ve atrofi yapar, ama atrofisi frontal, temporal ve parietal loblarda yaygındır ve başlangıç daha ileri yaştadır (s.29, s.21).",
+    "Örnek: s.39: dış kortikal tabakalarda ağır nöron kaybı, şişkin Pick hücreleri ve gümüşle iyi boyanan Pick cisimleri; Şekil 21.26B'de Pick cisimleri siyah yuvarlaklardır.",
+    "Tuzak: 'Atrofi' gören her soruda Alzheimer'ı seçmek; 'asimetrik' ve 'erken yaş' Pick'i işaret eder.",
+    "2022-2023: \"Alzheimer hastalığı (AH), Parkinson hastalığı (PH), Huntington hastalığı (HH), amiyotrofik lateral skleroz (ALS), kanser, diyabet vb. hastalıklar genelde ............ kaynaklanırlar.\" şeklinde verilen bilgide boş bırakılan yere gelmesi gereken ifade hangisidir?",
+    "Cevap: Protein katlanma bozuklukları.",
+    "Soru, Alzheimer, Parkinson, Huntington ve ALS'nin ortak patogenez eksenini ölçüyor.",
+    "Doğru cevap protein katlanma bozukluklarıdır: s.7 birçok nörodejeneratif hastalıkta belirli proteinlerin agregatlarının biriktiğini, s.66 ortak eksenin protein yanlış katlanması ve agregasyonu olduğunu söyler.",
+    "En güçlü çeldirici ailesel yatkınlıktır; bazı formlar ailesel olsa da Alzheimer'ın çoğu (s.21) ve ALS'nin %90'ı (s.62) sporadiktir, bu yüzden ortak açıklama olamaz.",
+    "Örnek: Tablo 21.3'ün son sütunu her hastalık için ayrı bir birikmiş proteini gösterir: ortak dil protein agregasyonudur.",
+    "Tuzak: Ailesel olguların varlığını tüm hastalığın açıklaması sanmak.",
+    "2021-2022: Parkinson hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Parkinson hastalığının hareket ile ilişkili semptomları L-dihidroksifenilalanine (L-DOPA) yanıt verir ve bu tedavi hastalığın ilerlemesini yavaşlatır, hatta durdurur.",
+    "Soru, Parkinson hastalığının patogenez, klinik ve tedavi özelliklerini önerme önerme ölçüyor; kök yanlış olanı ister.",
+    "Doğru cevap 'L-DOPA ilerlemeyi yavaşlatır, hatta durdurur' önermesidir: s.48'e göre L-DOPA başlangıçta iyi yanıt verir ama zamanla etkinliği azalır ve motor dalgalanma artar; hastalığın ilerlemesini durdurduğu yazmaz.",
+    "Diğer önermeler doğrudur: 10–15 yılda artan motor yavaşlama ve sporadik başlangıç s.47'de, dopaminerjik nöron kaybına bağlı hipokinetik bozukluk s.43'te, α-sinüklein içeren Lewy cisimleri s.44'tedir.",
+    "Örnek: s.48'de derin beyin stimülasyonunun L-DOPA dozunu azaltabildiği de yazılıdır; tedavi belirtiyi kontrol eder, nöron kaybını geri çevirmez.",
+    "Tuzak: 'Başlangıçta iyi yanıt'ı 'hastalığı durdurur' diye okumak.",
+    "2023-2024: Huntington koresi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Otozomal dominant geçişli olup CAG trinükleotid tekrar artışı sonucu ortaya çıkar.",
+    "Soru, Huntington hastalığının kalıtım biçimini ve genetik temelini ölçüyor.",
+    "Doğru cevap otozomal dominant geçiş ve CAG trinükleotid tekrar artışıdır: s.52 hastalığı otozomal dominant, s.53 huntingtin geninde CAG (glutamin) tekrar genişlemesi olarak verir.",
+    "En güçlü çeldirici FXN genindeki GAA tekrarıdır; tekrar genişlemesi olduğu için benzer görünür, ama o Friedreich ataksisinin (otozomal resesif) genetik temelidir (s.59).",
+    "Örnek: s.53: normal allel 11–34 tekrar, hastalık aleli daha fazla; tekrar arttıkça başlangıç erkene kayar.",
+    "Tuzak: CAG (Huntington, SCA, Kennedy) ile GAA (Friedreich) tekrarlarını karıştırmak.",
+    "2022-2023: \"Prionlar, esasen yanlış katlanmış protein dizileridir. Bu yanlış katlanmış proteinler beyin gibi merkezi sinir sistemine ait organlarda birikerek tüm bilinç ve hareket sistemini felç edip ölümlere yol açabilir. En sık görülen dört kardinal bulgu ise uykusuzluk, depresyon, kişilik değişiklikleri ve hafıza kaybıdır.\" Bahsedilen hastalık aşağıdakilerden hangisidir?",
+    "Cevap: Creutzfeldt-Jakob hastalığı.",
+    "Soru, yanlış katlanmış protein birikimiyle giden bulaşıcı nörodejeneratif hastalığı ölçüyor.",
+    "Doğru cevap Creutzfeldt–Jakob hastalığıdır: s.12 prion hastalıklarını yanlış katlanmış prion proteininin agregasyonu ve hücreler arası yayılımıyla tanımlar, insan formu olarak CJD'yi sayar; kökteki dört bulgu bu slaytta yazmaz.",
+    "Alzheimer ve Parkinson güçlü çeldiricidir, çünkü onlarda da protein yanlış katlanır; ancak s.10'a göre bu hastalıklarda kişiden kişiye bulaş gösterilmemiştir, 'prion' sözcüğü yalnız CJD'ye gider.",
+    "Örnek: s.13: PrPsc, normal PrPc ile etkileşip onu PrPsc'ye çevirir; bu kendi kendini artıran süreç prionu diğer agregatlardan ayırır.",
+    "Tuzak: Prion benzeri yayılımı (Alzheimer, Parkinson) gerçek prion hastalığı sanmak.",
+    "2022-2023: Aşağıdaki hastalıklardan hangisinin oluşum mekanizmasında \"proteinlerin yanlış katlanması\" rol almaz?",
+    "Cevap: Ailevi Akdeniz ateşi.",
+    "Soru, protein yanlış katlanmasının rol oynadığı hastalıkları tanımayı ölçüyor; kök olumsuzdur.",
+    "Doğru cevap Ailevi Akdeniz ateşidir; bu dersin slaytlarında protein agregasyonu Alzheimer, Parkinson ve deli dana (prion) için verilir (s.7, s.11, s.12), Ailevi Akdeniz ateşi bu derste yer almaz.",
+    "Deli dana hastalığı güçlü çeldiricidir, çünkü hayvan hastalığı olduğu için dışlanabilir; ama s.12'de sığır spongiform ensefalopatisi prion hastalığının hayvan formu olarak sayılır. Kistik fibrozis bu derste anlatılmaz.",
+    "Örnek: Tablo 21.3'teki her hastalığın kendine ait bir birikmiş proteini vardır; deli danada PrPsc'dir.",
+    "Tuzak: Hayvan hastalığını insan prion hastalığından ayrı sanmak.",
+    "2021-2022: Prionlarla ilgili; I. Prionlar filtre edilebilen ajanlardır. II. Prionlara karşı inflamatuvar yanıt gelişmez. III. Prionlara serolojik tanı konulamaz. IV. Prionların nükleik asitleri bulunmaz. ifadelerinden hangisi/hangileri doğrudur?",
+    "Cevap: I, II, III ve IV.",
+    "Soru, prionların biyolojik özelliklerini ölçüyor.",
+    "Bu derste prion proteininin β-tabaka zengin ve proteolize dirençli olduğu (s.13) ve dokuda spongiform değişim, nöron kaybı ve reaktif gliyoz geliştiği (s.18) anlatılır; prionun bir protein olduğu bilgisi IV. öncülü destekler.",
+    "Filtre edilebilirlik, inflamatuvar yanıt gelişmemesi ve serolojik tanı yapılamaması bu dersin slaytında yer almaz, Enfeksiyon Hastalıkları dersinden gelir; bu yüzden soru 'ilgili' düzeydedir.",
+    "Örnek: s.19: tanıda serolojiye değil, dokuda proteinaz K'ye dirençli PrPsc'nin immünohistokimyayla gösterilmesine başvurulur.",
+    "Tuzak: Prionu virüs gibi düşünüp antikor yanıtı beklemek.",
+    "2025-2026: Kurgu Soru: Nörodejeneratif hastalıklarla ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Spinal müsküler atrofide SMN2 kopya sayısı arttıkça hastalık daha ağır seyreder.",
+    "Kurgu soru, nörodejeneratif hastalıklarla ilgili doğru ve yanlış önermeleri ölçüyor.",
+    "Bu dersten çözülebilen önermeler: Alzheimer'da BOS'ta Aβ düzeyi azalır (s.35) ve ALS'de hem üst hem alt motor nöron tutulur (s.60); ikisi de doğrudur.",
+    "Cevap olan SMN2 kopya sayısı bilgisi bu dersin slaytında yoktur (s.65 yalnız SMN1 fonksiyon kaybını verir); juvenil Huntington ve MS önermeleri Tıbbi Genetik dersinden gelir.",
+    "Örnek: s.35'teki biyobelirteçler: görüntülemede Aβ birikimi, BOS'ta fosforile tau artışı, BOS'ta Aβ azalması.",
+    "Tuzak: Aβ beyinde biriktiği için BOS'ta da arttığını sanmak.",
+    "2025-2026: Aşağıdakilerden hangisi geç başlangıçlı Alzheimer hastalığı ile ilişkili genetik risk belirteçlerinden biri DEĞİLDİR?",
+    "Cevap: Presenilin 1 (PSEN1) ve Presenilin 2 (PSEN2) mutasyonları.",
+    "Soru, geç başlangıçlı Alzheimer'ın risk belirteçlerini ailesel formun mutasyonlarından ayırmayı ölçüyor.",
+    "Bu dersten çözülen kısım: ApoE geç başlangıçlı AD riskinin yaklaşık %25'iyle ilişkilidir (s.27), presenilin-1 ve -2 mutasyonları ise ailesel AD ile ilişkilidir (s.23); bu yüzden PSEN1/PSEN2 geç başlangıç belirteci değildir.",
+    "TREM2, SORL1 ve klusterin bu derste yer almaz, Tıbbi Genetik dersinden gelir; soru bu nedenle 'ilgili' düzeydedir.",
+    "Örnek: s.27: ε4 dozu arttıkça risk artar; ApoE4 Aβ birikimini kolaylaştırır.",
+    "Tuzak: Ailesel (erken) ve geç başlangıçlı Alzheimer genlerini karıştırmak.",
+    "2024-2025: Amiyotrofik lateral skleroz (ALS) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: ALS otoimmün ve demiyelinizan bir hastalıktır.",
+    "Hatırlamadan kurulan soru, ALS'nin genetik ve patogenez özelliklerini ölçüyor; cevap 'ALS otoimmün ve demiyelinizandır' önermesidir.",
+    "Bu dersten çözülen kısım: ALS alt ve üst motor nöron dejenerasyonudur (s.60), vakaların yaklaşık %90'ı sporadik, %10'u aileseldir ve ailesel ALS'nin en sık nedeni C9orf72 heksanükleotid genişlemesidir (s.62).",
+    "Otoimmün demiyelinizasyon bu derste anlatılmaz ve ALS'nin tanımıyla uyuşmaz; SOD1 yüzdesi ise slaytta yoktur, bu yüzden soru 'ilgili' düzeydedir.",
+    "Örnek: s.62: ilk tanımlanan gen SOD1 (kromozom 21), yanlış katlanmış SOD1 katlanmamış protein yanıtı ve apoptoz yapar.",
+    "Tuzak: Motor nöron dejenerasyonunu miyelin hastalığıyla karıştırmak.",
+    "2022-2023: Aşağıdakilerden hangisi geri döndürülebilir bir demans nedeni değildir?",
+    "Cevap: Lewy cisimcikli demans.",
+    "Soru, geri döndürülebilir demans nedenlerini nörodejeneratif demanstan ayırmayı ölçüyor.",
+    "Bu derste Lewy cisimciği demansı, Parkinson'da demansın motor semptomlardan sonra bir yıl içinde başladığı nörodejeneratif tablo olarak geçer (s.48); nörodejeneratif hastalıklar ilerleyicidir (s.4).",
+    "Hiponatremi, B12 eksikliği, karaciğer yetmezliği ve hipotiroidi bu derste anlatılmaz; soru bu yüzden 'ilgili' düzeydedir.",
+    "Örnek: s.4: nörodejeneratif hastalıklar genellikle yaşla ortaya çıkar ve ilerleyicidir; ilerleyici nöron kaybı geri dönmez.",
+    "Tuzak: Dalgalanan kognitif bozukluğu geçici, geri dönen bir durum sanmak."
+   ],
+   "v": "248cb8839e"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok sınıflama ve adlandırma (%38) ve tanım ve kavram (%24) sorulur."
+    },
+    {
+     "baslik": "Sınıflama ve adlandırma",
+     "metin": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%67) ve anlama ve ilişki kurma (%29) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir.",
+    "Sorulan bilgi: En çok sınıflama ve adlandırma (%38) ve tanım ve kavram (%24) sorulur.",
+    "Sınıflama ve adlandırma: Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%67) ve anlama ve ilişki kurma (%29) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "417986b1fb"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Myastenia Gravis",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: șağidakdlerden hangisi, nõromüskūler kavșağ hedeñleyen otoantikorlanın neden olduğu, dalgalanan kas güçsüzlüğü gösteren otoimmu hastalik olan, en sik postsinaptik asetikolin reseptörlerini etkileyen,."
+    },
+    {
+     "baslik": "Lewy cisimcikli demans",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi geri döndürülebilir bir demans nedeni değildir?"
+    },
+    {
+     "baslik": "Wernicke ensefalopatisi",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Tiamin (B1 vitamini) eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom aşağıdakilerden hangisidir?"
+    },
+    {
+     "baslik": "Aβ amiloid",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Alzheimer hastalarının serebral lezyonlarında hangi tip amiloid bulunur?"
+    },
+    {
+     "baslik": "Hastalık ve biriken protein eşleşmesi",
+     "metin": "2020-21 sınavında hem yanlış hem doğru eşleştirmeyi soran iki ayrı soru geldi; dersin en çok sorulan kalıbıdır."
+    },
+    {
+     "baslik": "Lewy cisimciğinin içeriği",
+     "metin": "2025-26 sınavında Lewy cisimciğinin içeriği doğrudan soruldu; çeldiriciler tau, Aβ, PrPsc ve TDP-43 idi."
+    },
+    {
+     "baslik": "Alzheimer'da olmayan mikroskopik bulgu: Lewy",
+     "metin": "'Alzheimer hastalığında görülmeyen bulgu Lewy cisimciği' kalıbı 2020-21, 2022-23 ve 2023-24'te tekrar soruldu."
+    },
+    {
+     "baslik": "Parkinson: substantia nigra dopaminerjik nöron kaybı",
+     "metin": "Nigrostriatal dopaminerjik sistem bozukluğundan Parkinson hastalığına giden soru 2018-19 ve 2020-21 sınavlarında aynen soruldu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Myastenia Gravis: Çıkmışlarda 2 kez soruldu. Örnek kök: șağidakdlerden hangisi, nõromüskūler kavșağ hedeñleyen otoantikorlanın neden olduğu, dalgalanan kas güçsüzlüğü gösteren otoimmu hastalik olan, en sik postsinaptik asetikolin reseptörlerini etkileyen,.",
+    "Lewy cisimcikli demans: Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi geri döndürülebilir bir demans nedeni değildir?",
+    "Wernicke ensefalopatisi: Çıkmışlarda 2 kez soruldu. Örnek kök: Tiamin (B1 vitamini) eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom aşağıdakilerden hangisidir?",
+    "Aβ amiloid: Çıkmışlarda 2 kez soruldu. Örnek kök: Alzheimer hastalarının serebral lezyonlarında hangi tip amiloid bulunur?",
+    "Hastalık ve biriken protein eşleşmesi: 2020-21 sınavında hem yanlış hem doğru eşleştirmeyi soran iki ayrı soru geldi; dersin en çok sorulan kalıbıdır.",
+    "Lewy cisimciğinin içeriği: 2025-26 sınavında Lewy cisimciğinin içeriği doğrudan soruldu; çeldiriciler tau, Aβ, PrPsc ve TDP-43 idi.",
+    "Alzheimer'da olmayan mikroskopik bulgu: Lewy: 'Alzheimer hastalığında görülmeyen bulgu Lewy cisimciği' kalıbı 2020-21, 2022-23 ve 2023-24'te tekrar soruldu.",
+    "Parkinson: substantia nigra dopaminerjik nöron kaybı: Nigrostriatal dopaminerjik sistem bozukluğundan Parkinson hastalığına giden soru 2018-19 ve 2020-21 sınavlarında aynen soruldu.",
+    "Çalışma yolu: Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "8959d331aa"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Nörodejeneratif hastalıklar belirli nöron gruplarının ilerleyici kaybı ve karakteristik protein agregatlarıyla tanınır. Prion hastalıkları, Alzheimer, FTLD, Parkinson ve atipik parkinsonizm, Huntington, spinoserebellar ataksiler, ALS ve öteki motor nöron hastalıkları klinik örüntü, biriken protein, genetik ve morfolojiyle işlenir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Nörodejeneratif hastalıklar belirli nöron gruplarının ilerleyici kaybı ve karakteristik protein agregatlarıyla tanınır. Prion hastalıkları, Alzheimer, FTLD, Parkinson ve atipik parkinsonizm, Huntington, spinoserebellar ataksiler, ALS ve öteki motor nöron hastalıkları klinik örüntü, biriken protein, genetik ve morfolojiyle işlenir."
+   ],
+   "v": "b4313f3201"
+  },
+  {
+   "id": "2p04-01",
+   "baslik": "Hastalık ve biriken protein eşleşmesi",
+   "giris": "Her nörodejeneratif hastalık karakteristik bir protein birikimiyle tanınır: prionda PrPsc, Alzheimer hastalığında Aβ ve tau, Parkinson hastalığında α-sinüklein.",
+   "s": [
+    11
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Demans; spongiform değişim ve anormal prion proteini PrPsc."
+    },
+    {
+     "metin": "Demans; Aβ plakları ve tau içeren nörofibriller yumaklar."
+    },
+    {
+     "metin": "Davranış değişikliği ve dil bozukluğu; tau, TDP-43 ve nadir başka proteinler."
+    },
+    {
+     "metin": "Hipokinetik hareket bozukluğu; Lewy cisimcikleri içinde α-sinüklein."
+    },
+    {
+     "metin": "Koreik hareketlerle hiperkinetik bozukluk; huntingtin, poliglutamin tekrar genişlemesi."
+    },
+    {
+     "metin": "Serebellar ataksi; çeşitli proteinler, çoğunlukla poliglutamin genişlemeleri."
+    },
+    {
+     "metin": "Kas güçsüzlüğü, üst ve alt motor nöron bulguları; SOD1 ve TDP-43."
+    },
+    {
+     "metin": "Alzheimer hastalığını α-sinükleinle, Parkinson hastalığını β-amiloidle eşleştiren şıklar yanlıştır."
+    }
+   ],
+   "klip": "o-2p04-01",
+   "ses": [
+    "Hastalık ve biriken protein eşleşmesi.",
+    "Her nörodejeneratif hastalık karakteristik bir protein birikimiyle tanınır: prionda PrPsc, Alzheimer hastalığında Aβ ve tau, Parkinson hastalığında α-sinüklein.",
+    "Demans; spongiform değişim ve anormal prion proteini PrPsc.",
+    "Demans; Aβ plakları ve tau içeren nörofibriller yumaklar.",
+    "Davranış değişikliği ve dil bozukluğu; tau, TDP-43 ve nadir başka proteinler.",
+    "Hipokinetik hareket bozukluğu; Lewy cisimcikleri içinde α-sinüklein.",
+    "Koreik hareketlerle hiperkinetik bozukluk; huntingtin, poliglutamin tekrar genişlemesi.",
+    "Serebellar ataksi; çeşitli proteinler, çoğunlukla poliglutamin genişlemeleri.",
+    "Kas güçsüzlüğü, üst ve alt motor nöron bulguları; SOD1 ve TDP-43.",
+    "Alzheimer hastalığını α-sinükleinle, Parkinson hastalığını β-amiloidle eşleştiren şıklar yanlıştır."
+   ],
+   "v": "899fbd9de4"
+  },
+  {
+   "id": "2p04-09",
+   "baslik": "Aβ üretimi ve ailesel Alzheimer genetiği",
+   "giris": "Patojenik Aβ42, APP proteininin β-sekretaz ve γ-sekretazla kesilmesiyle oluşur; ailesel Alzheimer hastalığında APP, presenilin-1 ve presenilin-2 mutasyonları vardır.",
+   "s": [
+    23
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Aβ42 peptidi."
+    },
+    {
+     "metin": "APP proteininin β-sekretaz (BACE) ve γ-sekretazla kesilmesi Aβ üretir."
+    },
+    {
+     "metin": "α-sekretaz ve γ-sekretaz kesimi patojenik olmayan çözünür peptid oluşturur."
+    },
+    {
+     "metin": "APP geni mutasyonu, γ-sekretaz bileşenleri presenilin-1 ve presenilin-2 mutasyonları, APP gen kopya artışı (Down sendromu, APP duplikasyonları)."
+    },
+    {
+     "metin": "On dokuzuncu kromozomdaki ApoE."
+    },
+    {
+     "metin": "α-sinüklein Parkinson hastalığına aittir."
+    }
+   ],
+   "klip": "o-2p04-09",
+   "ses": [
+    "Aβ üretimi ve ailesel Alzheimer genetiği.",
+    "Patojenik Aβ42, APP proteininin β-sekretaz ve γ-sekretazla kesilmesiyle oluşur; ailesel Alzheimer hastalığında APP, presenilin-1 ve presenilin-2 mutasyonları vardır.",
+    "Aβ42 peptidi.",
+    "APP proteininin β-sekretaz (BACE) ve γ-sekretazla kesilmesi Aβ üretir.",
+    "α-sekretaz ve γ-sekretaz kesimi patojenik olmayan çözünür peptid oluşturur.",
+    "APP geni mutasyonu, γ-sekretaz bileşenleri presenilin-1 ve presenilin-2 mutasyonları, APP gen kopya artışı (Down sendromu, APP duplikasyonları).",
+    "On dokuzuncu kromozomdaki ApoE.",
+    "α-sinüklein Parkinson hastalığına aittir."
+   ],
+   "v": "e63dae0987"
+  },
+  {
+   "id": "2p04-08",
+   "baslik": "Alzheimer hastalığının makroskopisi",
+   "giris": "Alzheimer hastalığında frontal, temporal ve parietal kortikal atrofi, genişlemiş sulkuslar ve hidrosefali ex vacuo görülür.",
+   "s": [
+    29
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Frontal, temporal ve parietal loblarda kortikal atrofi."
+    },
+    {
+     "metin": "Genişlemiş sulkuslar ve ince korteks."
+    },
+    {
+     "metin": "Doku kaybına bağlı genişleme, yani hidrosefali ex vacuo."
+    },
+    {
+     "metin": "Aβ çekirdekli nöritik plaklar ve hiperfosforile tau içeren yumaklar."
+    },
+    {
+     "metin": "Substantia nigra ve locus coeruleus solukluğu Parkinson hastalığına aittir."
+    }
+   ],
+   "klip": "o-2p04-08",
+   "ses": [
+    "Alzheimer hastalığının makroskopisi.",
+    "Alzheimer hastalığında frontal, temporal ve parietal kortikal atrofi, genişlemiş sulkuslar ve hidrosefali ex vacuo görülür.",
+    "Frontal, temporal ve parietal loblarda kortikal atrofi.",
+    "Genişlemiş sulkuslar ve ince korteks.",
+    "Doku kaybına bağlı genişleme, yani hidrosefali ex vacuo.",
+    "Aβ çekirdekli nöritik plaklar ve hiperfosforile tau içeren yumaklar.",
+    "Substantia nigra ve locus coeruleus solukluğu Parkinson hastalığına aittir."
+   ],
+   "v": "500609c4d8"
+  },
+  {
+   "id": "2p04-03",
+   "baslik": "Alzheimer'da olmayan mikroskopik bulgu: Lewy",
+   "giris": "Alzheimer hastalığının mikroskopik bulguları nöritik plak, nörofibriller yumak ve serebral amiloid anjiyopatidir; Lewy cisimciği bu listede yer almaz.",
+   "s": [
+    30,
+    32
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Aβ içeren amiloid çekirdek ve çevresinde distrofik nöritler; çevrede mikroglia ve reaktif astrositler."
+    },
+    {
+     "metin": "Nöritik reaksiyon olmadan amiloid birikintisi; erken evreyi temsil edebilir."
+    },
+    {
+     "metin": "Nöron sitoplazmasında hiperfosforile tau içeren çift sarmal lif demetleri."
+    },
+    {
+     "metin": "Alzheimer hastalığında çok sık, hastalığı olmayanlarda da görülebilir."
+    },
+    {
+     "metin": "Lewy cisimciği α-sinüklein içerir ve Parkinson hastalığının tanısal bulgusudur."
+    },
+    {
+     "metin": "Substantia nigra solukluğu da Parkinson hastalığına aittir."
+    }
+   ],
+   "klip": "o-2p04-03",
+   "ses": [
+    "Alzheimer'da olmayan mikroskopik bulgu: Lewy.",
+    "Alzheimer hastalığının mikroskopik bulguları nöritik plak, nörofibriller yumak ve serebral amiloid anjiyopatidir; Lewy cisimciği bu listede yer almaz.",
+    "Aβ içeren amiloid çekirdek ve çevresinde distrofik nöritler; çevrede mikroglia ve reaktif astrositler.",
+    "Nöritik reaksiyon olmadan amiloid birikintisi; erken evreyi temsil edebilir.",
+    "Nöron sitoplazmasında hiperfosforile tau içeren çift sarmal lif demetleri.",
+    "Alzheimer hastalığında çok sık, hastalığı olmayanlarda da görülebilir.",
+    "Lewy cisimciği α-sinüklein içerir ve Parkinson hastalığının tanısal bulgusudur.",
+    "Substantia nigra solukluğu da Parkinson hastalığına aittir."
+   ],
+   "v": "5b072301df"
+  },
+  {
+   "id": "2p04-07",
+   "baslik": "Nörofibriller yumak",
+   "giris": "Nörofibriller yumak, nöron sitoplazmasında hiperfosforile tau içeren, çekirdeği itebilen ya da çevreleyebilen çift sarmal lif demetidir.",
+   "s": [
+    32
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Nöron sitoplazmasında çift sarmal lif demetleri; çekirdeği itebilir ya da çevreleyebilir."
+    },
+    {
+     "metin": "Başlıca bileşen hiperfosforile taudur."
+    },
+    {
+     "metin": "En sık kortikal nöronlar, hipokampal piramidal hücreler, amigdala, bazal ön beyin ve rafe çekirdekleri."
+    },
+    {
+     "metin": "Nöron öldükten sonra hücre dışında kalabilir."
+    },
+    {
+     "metin": "Gümüş boyası nöronal sitoplazmadaki yumağı siyah gösterir; immünohistokimya tau içeriğini gösterir."
+    },
+    {
+     "metin": "Lewy cisimciği α-sinüklein, nöritik plak Aβ çekirdek içerir."
+    }
+   ],
+   "klip": "o-2p04-07",
+   "ses": [
+    "Nörofibriller yumak.",
+    "Nörofibriller yumak, nöron sitoplazmasında hiperfosforile tau içeren, çekirdeği itebilen ya da çevreleyebilen çift sarmal lif demetidir.",
+    "Nöron sitoplazmasında çift sarmal lif demetleri; çekirdeği itebilir ya da çevreleyebilir.",
+    "Başlıca bileşen hiperfosforile taudur.",
+    "En sık kortikal nöronlar, hipokampal piramidal hücreler, amigdala, bazal ön beyin ve rafe çekirdekleri.",
+    "Nöron öldükten sonra hücre dışında kalabilir.",
+    "Gümüş boyası nöronal sitoplazmadaki yumağı siyah gösterir; immünohistokimya tau içeriğini gösterir.",
+    "Lewy cisimciği α-sinüklein, nöritik plak Aβ çekirdek içerir."
+   ],
+   "v": "2a4023595b"
+  },
+  {
+   "id": "2p04-10",
+   "baslik": "Pick hastalığı",
+   "giris": "Pick hastalığı frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi ve ince bıçak ağzı giruslar yapan FTLD-tau alt tipidir.",
+   "s": [
+    39
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "FTLD-tau içinde bir alt tip."
+    },
+    {
+     "metin": "Frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi; ince bıçak ağzı giruslar."
+    },
+    {
+     "metin": "Dış kortikal tabakalarda ağır nöron kaybı; şişkin nöronlar olan Pick hücreleri."
+    },
+    {
+     "metin": "Gümüş boyalarla yoğun boyanan yuvarlak, homojen nöronal sitoplazmik inklüzyonlar."
+    },
+    {
+     "metin": "FTLD gibi davranış ve dil bozukluğu hafızadan önce, daha genç yaşta başlar."
+    }
+   ],
+   "klip": "o-2p04-10",
+   "ses": [
+    "Pick hastalığı.",
+    "Pick hastalığı frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi ve ince bıçak ağzı giruslar yapan FTLD-tau alt tipidir.",
+    "FTLD-tau içinde bir alt tip.",
+    "Frontal ve temporal lobda belirgin, sıklıkla asimetrik atrofi; ince bıçak ağzı giruslar.",
+    "Dış kortikal tabakalarda ağır nöron kaybı; şişkin nöronlar olan Pick hücreleri.",
+    "Gümüş boyalarla yoğun boyanan yuvarlak, homojen nöronal sitoplazmik inklüzyonlar.",
+    "FTLD gibi davranış ve dil bozukluğu hafızadan önce, daha genç yaşta başlar."
+   ],
+   "v": "6e85a5740c"
+  },
+  {
+   "id": "2p04-04",
+   "baslik": "Parkinson: substantia nigra dopaminerjik nöron kaybı",
+   "giris": "Parkinson hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğudur.",
+   "s": [
+    43
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Parkinson hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğudur."
+    },
+    {
+     "metin": "α-sinüklein agregasyonu, mitokondriyal bozukluk ve dopaminerjik nöron kaybı."
+    },
+    {
+     "metin": "Bazal gangliyon tutulumunda hipokinetik örnek Parkinson, hiperkinetik örnek Huntington hastalığıdır."
+    },
+    {
+     "metin": "Sıklıkla dalgalanan kognitif bozukluk ve halüsinasyonlar olur; demans motor semptomlardan sonra bir yıl içinde başlarsa tablo Lewy cisimciği demansıdır."
+    },
+    {
+     "metin": "Alzheimer hastalığı hipokampus, Pick hastalığı frontotemporal korteks, spinoserebellar ataksi beyincik, ALS motor nöron tutulumuyla gider."
+    }
+   ],
+   "klip": "o-2p04-04",
+   "ses": [
+    "Parkinson: substantia nigra dopaminerjik nöron kaybı.",
+    "Parkinson hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğudur.",
+    "Parkinson hastalığı substantia nigra dopaminerjik nöron kaybına bağlı hipokinetik hareket bozukluğudur.",
+    "α-sinüklein agregasyonu, mitokondriyal bozukluk ve dopaminerjik nöron kaybı.",
+    "Bazal gangliyon tutulumunda hipokinetik örnek Parkinson, hiperkinetik örnek Huntington hastalığıdır.",
+    "Sıklıkla dalgalanan kognitif bozukluk ve halüsinasyonlar olur; demans motor semptomlardan sonra bir yıl içinde başlarsa tablo Lewy cisimciği demansıdır.",
+    "Alzheimer hastalığı hipokampus, Pick hastalığı frontotemporal korteks, spinoserebellar ataksi beyincik, ALS motor nöron tutulumuyla gider."
+   ],
+   "v": "a70e75c69c"
+  },
+  {
+   "id": "2p04-02",
+   "baslik": "Lewy cisimciğinin içeriği",
+   "giris": "Parkinson hastalığının tanısal histolojik bulgusu Lewy cisimciği, α-sinüklein içeren sitoplazmik inklüzyondur.",
+   "s": [
+    44
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Lewy cisimciği α-sinüklein içeren sitoplazmik inklüzyondur ve Parkinson hastalığının tanısal histolojik bulgusudur."
+    },
+    {
+     "metin": "Kalan nöronlarda sitoplazmik, eozinofilik, yuvarlak ya da uzamış cisimcikler hâlinde izlenir."
+    },
+    {
+     "metin": "α-sinüklein içeren distrofik nöritlerdir."
+    },
+    {
+     "metin": "Hiperfosforile tau nörofibriller yumak ve Pick cismini, Aβ plakları, PrPsc kuru plaklarını, TDP-43 ise FTLD-TDP ve ALS inklüzyonlarını oluşturur."
+    },
+    {
+     "metin": "α-sinüklein bu kez oligodendrosit sitoplazmasında birikir."
+    }
+   ],
+   "klip": "o-2p04-02",
+   "ses": [
+    "Lewy cisimciğinin içeriği.",
+    "Parkinson hastalığının tanısal histolojik bulgusu Lewy cisimciği, α-sinüklein içeren sitoplazmik inklüzyondur.",
+    "Lewy cisimciği α-sinüklein içeren sitoplazmik inklüzyondur ve Parkinson hastalığının tanısal histolojik bulgusudur.",
+    "Kalan nöronlarda sitoplazmik, eozinofilik, yuvarlak ya da uzamış cisimcikler hâlinde izlenir.",
+    "α-sinüklein içeren distrofik nöritlerdir.",
+    "Hiperfosforile tau nörofibriller yumak ve Pick cismini, Aβ plakları, PrPsc kuru plaklarını, TDP-43 ise FTLD-TDP ve ALS inklüzyonlarını oluşturur.",
+    "α-sinüklein bu kez oligodendrosit sitoplazmasında birikir."
+   ],
+   "v": "2b7f5bb46c"
+  },
+  {
+   "id": "2p04-05",
+   "baslik": "Huntington hastalığı: otozomal dominant kore",
+   "giris": "Huntington hastalığı otozomal dominant, ilerleyici bir hareket bozukluğudur; temel bulgu koreiform hareketler, patolojik odak striatumdur.",
+   "s": [
+    52
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Otozomal dominant, ilerleyici hareket bozukluğu."
+    },
+    {
+     "metin": "İstemsiz, ani, kıvranma tarzı koreiform hareketler; hiperkinetik bozukluk."
+    },
+    {
+     "metin": "Kaudat ve putamenden oluşan striatumun dejenerasyonu."
+    },
+    {
+     "metin": "Unutkanlık, düşünce ve duygu durum bozuklukları; demansa ilerleyebilir."
+    },
+    {
+     "metin": "Ortalama yaklaşık 15 yılda ölüm."
+    },
+    {
+     "metin": "Parkinson hastalığı hipokinetiktir; Alzheimer ve Pick hastalığı hareket bozukluğuyla başlamaz."
+    }
+   ],
+   "klip": "o-2p04-05",
+   "ses": [
+    "Huntington hastalığı: otozomal dominant kore.",
+    "Huntington hastalığı otozomal dominant, ilerleyici bir hareket bozukluğudur; temel bulgu koreiform hareketler, patolojik odak striatumdur.",
+    "Otozomal dominant, ilerleyici hareket bozukluğu.",
+    "İstemsiz, ani, kıvranma tarzı koreiform hareketler; hiperkinetik bozukluk.",
+    "Kaudat ve putamenden oluşan striatumun dejenerasyonu.",
+    "Unutkanlık, düşünce ve duygu durum bozuklukları; demansa ilerleyebilir.",
+    "Ortalama yaklaşık 15 yılda ölüm.",
+    "Parkinson hastalığı hipokinetiktir; Alzheimer ve Pick hastalığı hareket bozukluğuyla başlamaz."
+   ],
+   "v": "7a87eb6533"
+  },
+  {
+   "id": "2p04-06",
+   "baslik": "ALS: üst ve alt motor nöron bulguları",
+   "giris": "ALS hastalığında alt motor nöron kaybı atrofi ve fasikülasyon, üst motor nöron kaybı parezi, hiperrefleksi, spastisite ve Babinski yapar.",
+   "s": [
+    60
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Kas denervasyonu, atrofi (amyotrofi), güçsüzlük ve fasikülasyon."
+    },
+    {
+     "metin": "Parezi, hiperrefleksi, spastisite, Babinski pozitifliği."
+    },
+    {
+     "metin": "Ayak tabanı uyarılınca başparmağın yukarı kalkması ve diğer parmakların yelpaze gibi açılması."
+    },
+    {
+     "metin": "Lateral kortikospinal yol dejenerasyonu."
+    },
+    {
+     "metin": "Duyu genelde korunur, bilişsel bozukluk eşlik edebilir."
+    },
+    {
+     "metin": "Spinal musküler atrofi ve Kennedy hastalığı yalnız alt motor nöron hastalığıdır."
+    }
+   ],
+   "klip": "o-2p04-06",
+   "ses": [
+    "ALS: üst ve alt motor nöron bulguları.",
+    "ALS hastalığında alt motor nöron kaybı atrofi ve fasikülasyon, üst motor nöron kaybı parezi, hiperrefleksi, spastisite ve Babinski yapar.",
+    "Kas denervasyonu, atrofi (amyotrofi), güçsüzlük ve fasikülasyon.",
+    "Parezi, hiperrefleksi, spastisite, Babinski pozitifliği.",
+    "Ayak tabanı uyarılınca başparmağın yukarı kalkması ve diğer parmakların yelpaze gibi açılması.",
+    "Lateral kortikospinal yol dejenerasyonu.",
+    "Duyu genelde korunur, bilişsel bozukluk eşlik edebilir.",
+    "Spinal musküler atrofi ve Kennedy hastalığı yalnız alt motor nöron hastalığıdır."
+   ],
+   "v": "ccd281b6e8"
+  }
+ ]
+}

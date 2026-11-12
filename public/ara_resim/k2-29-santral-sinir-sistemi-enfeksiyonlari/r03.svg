@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="720" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Tabes dorsalis: arka sütun hasarından Charcot eklemine</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Nörosifilizin geç formu · slayt 11 (s.15)</text>
+<rect x="30" y="88" width="560" height="530" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">A · Omurilik kesiti</text>
+<path d="M120 330 C120 200 210 150 310 150 C410 150 500 200 500 330 C500 450 410 510 310 510 C210 510 120 450 120 330 Z" stroke="#94a3b8" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M220 260 C240 220 290 250 310 300 C330 250 380 220 400 260 C420 300 390 330 360 330 C380 380 400 420 370 440 C340 450 320 400 310 360 C300 400 280 450 250 440 C220 420 240 380 260 330 C230 330 200 300 220 260 Z" stroke="#9a6b55" stroke-width="2" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M285 470 C290 420 300 380 310 360 C320 380 330 420 335 470 Z" stroke="#b91c1c" stroke-width="2" fill="#fecaca" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 470 C200 480 250 470 285 470" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)" stroke-dasharray="7 5"/>
+<circle cx="150" cy="470" r="16" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<line x1="150" y1="470" x2="60" y2="532" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="150" cy="470" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="66" y="538" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">dorsal kök duyu siniri hasarı</text>
+<line x1="310" y1="440" x2="60" y2="558" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="310" cy="440" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="66" y="564" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">arka sütun lifleri: yavaş demiyelinizasyon</text>
+<line x1="370" y1="290" x2="450" y2="190" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="370" cy="290" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="456" y="196" font-size="17" fill="#475569" text-anchor="start">gri madde</text>
+<text x="310" y="180" font-size="17" fill="#475569" text-anchor="middle">ön (ventral)</text>
+<text x="310" y="600" font-size="17" fill="#475569" text-anchor="middle">arka (dorsal) taraf aşağıda çizildi</text>
+<rect x="610" y="88" width="560" height="530" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="628" y="119" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">B · Kaybolan duyudan bulguya</text>
+<rect x="630" y="150" width="520" height="90" rx="12" fill="#fff7f7" stroke="#b91c1c" stroke-width="2"/>
+<path d="M650 195 C660 170 680 170 690 195 C700 220 720 220 730 195" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="745" y="187" font-size="19" fill="#b91c1c" text-anchor="start" font-weight="bold">Pozisyon duyusu kaybı</text>
+<text x="745" y="216" font-size="17" fill="#0f172a" text-anchor="start">eklemin yerini bilemez → ataksi</text>
+<rect x="630" y="260" width="520" height="90" rx="12" fill="#fff7f7" stroke="#b91c1c" stroke-width="2"/>
+<path d="M650 305 C660 280 680 280 690 305 C700 330 720 330 730 305" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="745" y="297" font-size="19" fill="#b91c1c" text-anchor="start" font-weight="bold">Ağrı duyusu kaybı</text>
+<text x="745" y="326" font-size="17" fill="#0f172a" text-anchor="start">zedelenmeyi hissetmez → Charcot eklem</text>
+<rect x="630" y="370" width="520" height="90" rx="12" fill="#fff7f7" stroke="#b91c1c" stroke-width="2"/>
+<path d="M650 415 C660 390 680 390 690 415 C700 440 720 440 730 415" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="745" y="407" font-size="19" fill="#b91c1c" text-anchor="start" font-weight="bold">Ağrı atakları</text>
+<text x="745" y="436" font-size="17" fill="#0f172a" text-anchor="start">ani saplanan şimşek ağrıları</text>
+<rect x="630" y="480" width="520" height="90" rx="12" fill="#fff7f7" stroke="#b91c1c" stroke-width="2"/>
+<path d="M650 525 C660 500 680 500 690 525 C700 550 720 550 730 525" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="745" y="517" font-size="19" fill="#b91c1c" text-anchor="start" font-weight="bold">Refleks kaybı</text>
+<text x="745" y="546" font-size="17" fill="#0f172a" text-anchor="start">derin tendon refleksi kaybolur</text>
+<rect x="30" y="630" width="1140" height="50" rx="10" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2"/>
+<text x="600" y="662" font-size="19" fill="#6d28d9" text-anchor="middle" font-weight="bold">Tedavisiz sifilizden ortalama 15–20 yıl sonra ortaya çıkar.</text>
+<text x="600.0" y="707" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 11 ve açıklama kutusu (PDF s.15).</text>
+</svg>

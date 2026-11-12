@@ -1,0 +1,3276 @@
+{
+ "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+ "sira": 29,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Santral Sinir Sistemi Enfeksiyonları",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-11-11",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "MSS enfeksiyonlarının hasar mekanizmalarını, hedef yapılarını ve mikroorganizmaların beş giriş yolunu açıklar; menenjiti tanımlayıp alt tiplerini ve etken tablosunu sıralar.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Mikroorganizmaların merkezi sinir sistemine en sık giriş yolu hangisidir?",
+     "secenekler": {
+      "A": "Doğrudan implantasyon",
+      "B": "Hematogen yayılım",
+      "C": "Plasenta yoluyla geçiş",
+      "D": "Sinüs ya da diş odağından lokal yayılım",
+      "E": "Periferik sinir boyunca ilerleme"
+     },
+     "dogru": "B",
+     "aciklama": "Mikroorganizmalar MSS'ye en sık hematogen yolla, çoğunlukla arteriyel sistemle ulaşır; doğrudan implantasyon, plasenta, lokal yayılım ve periferik sinir daha sınırlı yollardır. (s. 5)",
+     "sik_aciklamalari": {
+      "A": "Doğrudan implantasyon, açık ya da delici kafa travmasında veya meningomyelosel gibi konjenital defektlerde etkenin dokuya doğrudan girmesidir. Belirli durumlara bağlı bir yol olduğundan en sık giriş yolu sayılmaz (s.5).",
+      "B": "Hematogen yayılım, mikroorganizmanın kan yoluyla beyne taşınmasıdır ve çoğunlukla arteriyel sistemle olur. Giriş yolları içinde en sık görülen yol olduğu için doğru cevaptır (s.5).",
+      "C": "Plasenta yoluyla geçiş, perinatal enfeksiyonlarda etkenin anneden fetüse ulaşmasıdır ve ciddi beyin malformasyonu ile kalsifikasyon yapabilir. Yalnız fetal dönemi ilgilendirdiği için en sık yol olamaz (s.5).",
+      "D": "Lokal yayılım, sinüs, diş, kafatası ya da omurga enfeksiyonunun komşuluk yoluyla beyne ilerlemesidir. Beyin apsesi gibi tabloların kaynağı olabilir ama giriş yolları içinde en sık olanı kan yoludur (s.5).",
+      "E": "Periferik sinir boyunca ilerleme, kuduz ve herpes zoster virüslerinin sinir lifini izleyerek merkezi sinir sistemine ulaşmasıdır. Yalnız bu birkaç virüse özgü olduğundan en sık yol sayılmaz (s.5)."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q84"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "En sık; çoğunlukla arteriyel sistemle."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q84"
+     ],
+     "s": 5,
+     "onem_id": "o16",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      5,
+      19,
+      34,
+      36
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Periferik sinir boyunca ilerleyerek merkezi sinir sistemine ulaşan etken çifti hangisidir?",
+     "secenekler": {
+      "A": "Enterovirüs ve kızamık virüsü",
+      "B": "Toxoplasma gondii ve sitomegalovirüs",
+      "C": "JC poliyomavirüsü ve HIV",
+      "D": "Kuduz ve herpes zoster virüsleri",
+      "E": "Streptokoklar ve stafilokoklar"
+     },
+     "dogru": "D",
+     "aciklama": "Periferik sinir boyunca yayılım kuduz ve herpes zoster virüslerine özgü giriş yoludur; kuduz virüsü hayvan ısırığıyla bulaşıp sinir boyunca MSS'ye ilerler. (s. 5)",
+     "sik_aciklamalari": {
+      "A": "Enterovirüsler aseptik menenjitin en sık etkenidir, kızamık virüsü ise subakut sklerozan panensefalit yapar. Her ikisi de etken tablosunda menenjit grubunda yer alır, sinir boyunca yayılımla anılmaz (s.5).",
+      "B": "Toxoplasma gondii ve sitomegalovirüs, immünsüprese erişkinde ve konjenital enfeksiyonda beyni tutan etkenlerdir. Fetüse plasenta yoluyla geçebilirler; periferik sinirle yayılım bu çifte ait sayılmaz (s.5).",
+      "C": "JC poliyomavirüsü immünsüprese hastada reaktive olarak PML yapar, HIV ise mikrogliayı enfekte ederek ensefalit oluşturur. Bu iki virüs sinir lifi boyunca ilerleyen etkenler arasında bulunmaz (s.5).",
+      "D": "Kuduz ve herpes zoster virüsleri, periferik sinir lifini izleyerek merkezi sinir sistemine taşınır. Kuduzda virüs ısırık yerinden sinir boyunca ilerlediği için doğru cevap bu çifttir (s.5).",
+      "E": "Streptokoklar ve stafilokoklar, beyin apsesinin yaygın etkenleridir ve beyne genellikle kan yoluyla ya da komşu odaktan ulaşır. Periferik sinir boyunca yayılım bu bakterilerin yolu sayılmaz (s.5)."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Kuduz, herpes zoster virüsleri."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 5,
+     "onem_id": "o16",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      5,
+      7,
+      27,
+      32
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi enfeksiyonun beyne lokal yayılımla ulaştığı odaklardan değildir?",
+     "secenekler": {
+      "A": "Plasentadan fetüse geçiş",
+      "B": "Sinüs enfeksiyonu",
+      "C": "Diş enfeksiyonu",
+      "D": "Kafatası kemiği enfeksiyonu",
+      "E": "Omurga enfeksiyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Lokal yayılım sinüs, diş, kafatası ve omurga enfeksiyonlarından olur; plasenta yoluyla geçiş perinatal enfeksiyonlara ait ayrı bir giriş yoludur. (s. 5)",
+     "sik_aciklamalari": {
+      "A": "Plasentadan fetüse geçiş, perinatal enfeksiyonlarda etkenin anneden fetüse geçtiği ayrı bir giriş yoludur ve beyin malformasyonu ile kalsifikasyon yapabilir. Komşuluk yoluyla yayılım olmadığı için doğru cevaptır (s.5).",
+      "B": "Sinüs enfeksiyonları komşuluk yoluyla beyne ve zarlarına yayılabilen odaklardır. Epidural ve subdural enfeksiyonlar da sinüzit gibi komşu odaklardan gelişir, bu yüzden lokal yayılım odağıdır (s.5).",
+      "C": "Diş enfeksiyonu, kafatası içine komşuluk yoluyla ilerleyebilen yerel bir odaktır. Lokal yayılımın sayılan kaynakları arasında yer aldığından bu ifade doğrudur. Diş kökü çevresindeki iltihap komşu kemik ve sinüs yoluyla beyin apsesine kaynaklık edebilir (s.5).",
+      "D": "Kafatası enfeksiyonu, kemikten zarlara ve beyne doğrudan komşulukla yayılabilir. Osteomiyelit gibi komşu odaklar epidural enfeksiyonun da nedenidir; lokal yayılım odağıdır. Kafatası kemiğinin osteomiyeliti epidural apse ya da subdural ampiyemin başlangıç odağı olabilir (s.5).",
+      "E": "Omurga enfeksiyonu komşuluk yoluyla spinal kanala ilerleyebilir ve özellikle spinal epidural apse yapabilir. Lokal yayılım odakları arasında sayıldığından cevap olamaz. Spinal epidural apse omuriliği sıkıştırabildiği için acil olarak ele alınan bir tablodur (s.5)."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Sinüs, diş, kafatası, omurga enfeksiyonlarından."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 5,
+     "onem_id": "o16",
+     "kalip": "olumsuz",
+     "celdirici_kaynak": [
+      5,
+      19,
+      36
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Merkezi sinir sistemi enfeksiyonlarında klinik sendrom–etken eşleşmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kronik menenjit – Neisseria meningitidis",
+      "B": "Amoebik ensefalit – Taenia solium",
+      "C": "Spinal poliyomiyelit – Batı Nil virüsü",
+      "D": "Subakut sklerozan panensefalit – HIV",
+      "E": "Rombensefalit – kuduz virüsü"
+     },
+     "dogru": "E",
+     "aciklama": "Etken tablosunda rombensefalit kuduz virüsüne, spinal poliyomiyelit polio virüsüne, kronik menenjit tüberküloz basiline, SSPE kızamık virüsüne bağlanır. (s. 7)",
+     "sik_aciklamalari": {
+      "A": "Neisseria meningitidis, ergen ve genç erişkinde akut piyojenik menenjitin etkenidir. Kronik menenjitin tablodaki etkeni Mycobacterium tuberculosis olduğundan eşleşme yanlıştır. Meningokok hızlı seyirli, nötrofilden zengin pürülan eksüda yapan akut bir menenjit etkenidir (s.7).",
+      "B": "Taenia solium larvalarıyla sistiserkoz yapan bir parazittir ve kist oluşturarak kitle lezyonu ile nöbete yol açar. Amoebik ensefalitin etkeni Naegleria türleridir (s.7).",
+      "C": "Batı Nil virüsü, eklembacaklıyla taşınan bir arbovirüstür ve ensefalit ile menenjit yapar. Spinal poliyomiyelit tabloda polio virüsüne bağlanır, bu yüzden eşleşme yanlıştır (s.7).",
+      "D": "Subakut sklerozan panensefalit tabloda kızamık virüsüne bağlanan bir tablodur. HIV ise aseptik menenjit ve ensefalit yapar; bu eşleşme yanlıştır. HIV etken tablosunda hem aseptik menenjit hem ensefalit sütununda yer alan bir virüstür (s.7).",
+      "E": "Rombensefalit, beyin sapını tutan ensefalittir ve etken tablosunda kuduz virüsüyle eşleştirilir. Kuduz virüsü sinir boyunca ilerleyip beyin sapını tuttuğu için bu eşleşme doğrudur (s.7)."
+     },
+     "bilgi": [
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Beyin sapı ve omurilik sendromları Rombensefalit Kuduz (Rabies)"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 7,
+     "onem_id": "o16",
+     "kalip": "eslesme",
+     "celdirici_kaynak": [
+      7,
+      11,
+      27,
+      34
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q84",
+     "soru": "I. Nazofarinks kolonizasyonu patogenezde rol oynar.\nII. Meninkslerin inflamasyonu kafa içi basınç artışını engeller.\nIII. İnfektif endokardit gibi lokalize bir odaktan gelişebilir.\nIV. Patogenezinde komşuluk yolunun rolü yoktur.\nAkut bakteriyel menenjitin patogenezi hakkında yukarıdakilerden hangisi/hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Akut bakteriyel menenjitin yaşa göre etkenlerini, kliniğini, BOS bulgularını, morfolojisini ve komplikasyonlarını; aseptik menenjitin tanımını, etkenini ve BOS farkını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Yenidoğanda akut piyojenik menenjitin sık etkenleri hangisidir?",
+     "secenekler": {
+      "A": "Neisseria meningitidis",
+      "B": "Streptococcus pneumoniae ve Listeria",
+      "C": "Escherichia coli ve B grubu streptokok",
+      "D": "Mycobacterium tuberculosis",
+      "E": "Enterovirüsler"
+     },
+     "dogru": "C",
+     "aciklama": "Yenidoğanda Escherichia coli ve B grubu streptokok, ergen-genç erişkinde Neisseria meningitidis, yaşlı erişkinde Streptococcus pneumoniae ve Listeria monocytogenes öne çıkar. (s. 8)",
+     "sik_aciklamalari": {
+      "A": "Neisseria meningitidis, ergen ve genç erişkinde akut piyojenik menenjitin sık etkenidir. Yaş grubu farklı olduğundan yenidoğan menenjitinin etkeni olarak seçilmez. Meningokok menenjitinde de leptomeninkste pürülan eksüda ve nötrofilik pleositoz görülür (s.8).",
+      "B": "Streptococcus pneumoniae ve Listeria monocytogenes, yaşlı erişkinde bakteriyel menenjitin sık etkenleridir. Yenidoğanda öne çıkan etkenler bunlar değil, Escherichia coli ve B grubu streptokoktur (s.8).",
+      "C": "Escherichia coli ve B grubu streptokok, yenidoğan döneminin sık bakteriyel menenjit etkenleridir. B grubu streptokokun türü Streptococcus agalactiae olarak bilinir; bu yüzden doğru cevaptır (s.8).",
+      "D": "Mycobacterium tuberculosis, kronik menenjitin başlıca etkenidir ve bazal araknoid fibrozisle hidrosefali yapabilir. Akut piyojenik menenjitin yenidoğan etkeni sayılmaz. Bu basil BOS'ta orta hücre artışı ve belirgin yüksek proteinle seyreden kronik bir tablo yapar (s.8).",
+      "E": "Enterovirüsler, etken bulunduğunda aseptik menenjitin yaklaşık yüzde sekseninden sorumlu virüslerdir. Akut piyojenik yani bakteriyel menenjitin etkeni olmadıklarından yanlıştır. Enterovirüs menenjitinde BOS'ta lenfositik pleositoz görülür ve glukoz genelde normaldir (s.8)."
+     },
+     "bilgi": [
+      20,
+      21,
+      22
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q85"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Yenidoğan: Escherichia coli, B grubu Streptococcus spp."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q85"
+     ],
+     "s": 8,
+     "onem_id": "o08",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      8,
+      11,
+      13
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Listeria monocytogenes menenjitinin öne çıktığı yaş grubu hangisidir?",
+     "secenekler": {
+      "A": "Yenidoğan",
+      "B": "Ergen ve genç erişkin",
+      "C": "Yaşlı erişkin",
+      "D": "İmmünsüprese erişkin",
+      "E": "Çocuk ve genç erişkin"
+     },
+     "dogru": "C",
+     "aciklama": "Listeria monocytogenes, Streptococcus pneumoniae ile birlikte yaşlı erişkinde bakteriyel menenjitin sık etkenidir; yenidoğanda Escherichia coli ve B grubu streptokok öne çıkar. (s. 8)",
+     "sik_aciklamalari": {
+      "A": "Yenidoğan döneminde bakteriyel menenjitin sık etkenleri Escherichia coli ve B grubu streptokoktur. Listeria bu yaş grubunun sık etkenleri arasında bulunmaz. Escherichia coli ve Streptococcus agalactiae doğumda kazanılan, bu döneme özgü etkenlerdir (s.8).",
+      "B": "Ergen ve genç erişkinde akut piyojenik menenjitin sık etkeni Neisseria meningitidis'tir. Listeria bu yaş grubu için öne çıkan etken olarak verilmez (s.8).",
+      "C": "Yaşlı erişkinde bakteriyel menenjitin sık etkenleri Streptococcus pneumoniae ve Listeria monocytogenes'tir. Listeria bu yaş grubunda öne çıktığı için doğru cevaptır (s.8).",
+      "D": "İmmünsüprese erişkin, Cryptococcus neoformans, Toxoplasma gondii ve sitomegalovirüs gibi etkenlerin merkezi sinir sistemi hastalığı yaptığı gruptur. Listeria menenjiti yaşa göre etken sıralamasında yaşlı erişkine bağlanır (s.8).",
+      "E": "Çocuk ve genç erişkin, HSV-1 ensefalitinin özellikle görüldüğü yaş grubudur. Bakteriyel menenjitte Listeria bu yaşlarda öne çıkan etken olarak verilmez (s.8)."
+     },
+     "bilgi": [
+      20,
+      21,
+      22
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q85"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Yaşlı erişkin: Streptococcus pneumoniae, Listeria monocytogenes."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q85"
+     ],
+     "s": 8,
+     "onem_id": "o08",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      8,
+      7,
+      11
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi akut piyojenik menenjitin klinik bulgularından değildir?",
+     "secenekler": {
+      "A": "Fotofobi",
+      "B": "Boyun sertliği",
+      "C": "İrritabilite",
+      "D": "Bilinç bulanıklığı",
+      "E": "Hidrofobi"
+     },
+     "dogru": "E",
+     "aciklama": "Akut piyojenik menenjit ateş, baş ağrısı, fotofobi, boyun sertliği, bilinç bulanıklığı ve irritabiliteyle seyreder; hidrofobi kuduza özgüdür. (s. 8)",
+     "sik_aciklamalari": {
+      "A": "Fotofobi, ışıktan rahatsız olma durumudur ve meninks inflamasyonunun tipik bulgularındandır. Akut piyojenik menenjit kliniğinde ateş ve baş ağrısıyla birlikte sayılır. Fotofobi, iltihaplı meninkslerin uyarılmasıyla oluşan meningeal irritasyonun bir parçasıdır (s.8).",
+      "B": "Boyun sertliği, iltihaplı leptomeninkslerin gerilmesine bağlı meningeal irritasyon bulgusudur. Bakteriyel menenjitin klasik kliniğinde yer alır. Ense sertliği, hekimin muayenede aradığı en temel meningeal irritasyon bulgusudur (s.8).",
+      "C": "İrritabilite, hastanın aşırı huzursuz ve uyarılara tepkili olmasıdır. Akut piyojenik menenjitin klinik bulguları arasında bilinç bulanıklığıyla birlikte sayılır. Bu bulgu fotofobi ve boyun sertliğiyle birlikte meninks iltihabının klinik tablosunu oluşturur (s.8).",
+      "D": "Bilinç bulanıklığı, beyin işlevlerinin inflamasyondan etkilenmesini gösteren bir bulgudur. Akut bakteriyel menenjitte ateş, baş ağrısı ve boyun sertliğine eşlik eden bir klinik bulgudur (s.8).",
+      "E": "Hidrofobi, kuduz virüsünün yaptığı ensefalitte görülen sudan korkma bulgusudur ve aşırı uyarılabilirlikle birlikte bulunur. Akut piyojenik menenjitin bulguları arasında yer almadığı için doğru cevaptır (s.8)."
+     },
+     "bilgi": [
+      20,
+      21,
+      22
+     ],
+     "benzer_cikmis": [
+      "final-2018-2019-q057"
+     ],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "baş ağrısı, fotofobi Boyun sertliği Bilinç bulanıklığı"
+     },
+     "dayanak": [
+      "cikmis:final-2018-2019-q057"
+     ],
+     "s": 8,
+     "onem_id": "o08",
+     "kalip": "olumsuz",
+     "celdirici_kaynak": [
+      8,
+      15,
+      27
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Nötrofilik pleositoz, yüksek protein ve düşük glukoz içeren BOS en olası hangi tabloya aittir?",
+     "secenekler": {
+      "A": "Aseptik menenjit",
+      "B": "Akut piyojenik menenjit",
+      "C": "Tüberküloz menenjiti",
+      "D": "Kriptokok mantar menenjiti",
+      "E": "Beyin apsesi"
+     },
+     "dogru": "B",
+     "aciklama": "Nötrofilik pleositoz, yüksek protein ve düşük glukoz bakteriyel menenjitin BOS tablosudur; apsede glukoz normal, aseptik menenjitte lenfositoz vardır. (s. 9)",
+     "sik_aciklamalari": {
+      "A": "Aseptik menenjit, çoğunlukla viral olan ve bakteriyel kültürde etken üretilemeyen akut menenjittir. BOS'ta lenfositik pleositoz bulunur ve glukoz genelde normaldir (s.9).",
+      "B": "Akut piyojenik menenjitte BOS basıncı artar, nötrofilik pleositoz, yüksek protein ve düşük glukoz bulunur. Bu dörtlü bakteriyel menenjitin tipik BOS tablosu olduğundan doğru cevaptır (s.9).",
+      "C": "Tüberküloz menenjiti kronik menenjittir; BOS'ta hücre sayısı orta artmış, protein belirgin yüksektir. Glukoz ise hafif azalmış ya da normaldir, belirgin düşüklük beklenmez (s.9).",
+      "D": "Kriptokok menenjiti immünsüprese kişilerde görülen mantar menenjitidir. BOS'ta az hücre ve yüksek protein vardır, tanıda Hint mürekkebi ve antijen testi kullanılır (s.9).",
+      "E": "Beyin apsesi, merkezinde liküfaksiyon nekrozu bulunan lokalize bakteriyel odaktır. BOS'ta yüksek lökosit ve protein görülür ama glukoz normal kalır. Apse lokalize bir odak olduğu için bakteriler subaraknoid boşlukta yaygın glukoz tüketmez (s.9)."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q87"
+     ],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Nötrofilik pleositoz Yüksek protein Düşük glukoz"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q87"
+     ],
+     "s": 9,
+     "onem_id": "o11",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      9,
+      11,
+      13,
+      17,
+      20
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aseptik menenjitte etken saptandığında en sık hangi virüs grubu bulunur?",
+     "secenekler": {
+      "A": "Enterovirüsler",
+      "B": "Herpes simplex virüsleri",
+      "C": "JC poliyomavirüsü",
+      "D": "Arbovirüsler",
+      "E": "Kuduz virüsü"
+     },
+     "dogru": "A",
+     "aciklama": "Aseptik menenjit çoğunlukla viraldir; etken bulunduğunda yaklaşık %80 enterovirüstür. (s. 11)",
+     "sik_aciklamalari": {
+      "A": "Enterovirüsler, etken bulunan aseptik menenjit olgularının yaklaşık yüzde seksenini oluşturur. Kendini sınırlayan viral menenjitin en sık etkeni oldukları için doğru cevaptır (s.11).",
+      "B": "Herpes simplex virüsleri ensefalitik sendromların etkenidir; HSV-1 özellikle temporal ve frontal lobu tutan ağır ensefalit yapar. Aseptik menenjitin en sık etkeni olarak verilmez (s.11).",
+      "C": "JC poliyomavirüsü çoğu insanda latent kalır ve immünsüprese hastada oligodendrositi hedefleyerek PML yapar. Menenjit değil, demiyelinizan bir lökoensefalopati etkenidir. PML lezyonlarında yamalı demiyelinizasyon ve kenarda inklüzyonlu dev oligodendrositler bulunur (s.11).",
+      "D": "Arbovirüsler eklembacaklılarla taşınan ve tropikal bölgelerde salgın ensefalit yapan virüslerdir. Doğu ve Batı at ensefaliti ile Batı Nil virüsü bu gruptadır; aseptik menenjitin en sık etkeni sayılmaz (s.11).",
+      "E": "Kuduz virüsü hayvan ısırığıyla bulaşır ve periferik sinir boyunca ilerleyerek ölümcül ensefalit yapar. Kendini sınırlayan aseptik menenjitin etkeni sayılmaz. Kuduzda hidrofobi, aşırı uyarılabilirlik, konvülsiyon ve koma görülür (s.11)."
+     },
+     "bilgi": [
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": [
+      "57ffcc508b51"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Etken bulunursa çoğunlukla enterovirüs"
+     },
+     "dayanak": [
+      "cikmis:57ffcc508b51"
+     ],
+     "s": 11,
+     "onem_id": "o11",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      11,
+      7,
+      32,
+      23,
+      27
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q09",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Bakteriyel menenjitte leptomeningeal fibrozisin geç sonucu hangisidir?",
+     "secenekler": {
+      "A": "Charcot eklemi",
+      "B": "Korsakoff amnezisi",
+      "C": "Kuadripleji",
+      "D": "Hidrosefali",
+      "E": "Parapleji"
+     },
+     "dogru": "D",
+     "aciklama": "Bakteriyel menenjitin komplikasyonları serebrit, vaskülit, venöz tromboz, hemorajik enfarkt ve leptomeningeal fibrozise bağlı hidrosefalidir. (s. 9)",
+     "sik_aciklamalari": {
+      "A": "Charcot eklemi, ağrı duyusu kaybolan eklemin tekrarlayan hasarla bozulmasıdır. Tabes dorsalisin bulgusu olup meninks fibrozisinin sonucu sayılmaz. Charcot eklemi Treponema pallidum'un geç döneminde, duyu kaybına bağlı olarak gelişir (s.9).",
+      "B": "Korsakoff sendromu, tedavi edilmemiş tiamin eksikliğinde gelişen kalıcı ağır amnezidir. Meninkslerdeki fibrozisle değil, mamiller cisim ve talamus hasarıyla ilişkilidir. Korsakoff tablosu Wernicke ensefalopatisi tedavi edilmezse ortaya çıkan kalıcı sonuçtur (s.9).",
+      "C": "Kuadripleji, dört ekstremitenin felcidir ve hiponatreminin ani düzeltilmesinden sonra ozmotik demiyelinizasyon sendromunda hızla gelişir. Bakteriyel menenjitin fibrozis sonucu olarak verilmez. Bu tabloda sodyumun hızlı yükseltilmesi beyin sapında sınırlı miyelin kaybına neden olur (s.9).",
+      "D": "Hidrosefali, beyin omurilik sıvısının birikmesiyle ventriküllerin genişlemesidir. Bakteriyel menenjitte leptomeningeal fibrozis bu sıvının dolaşımını bozduğu için hidrosefali gelişir ve doğru cevap budur (s.9).",
+      "E": "Parapleji, iki alt ekstremitenin felcidir ve ileri B12 eksikliğinde omurilik beyaz maddesi hasarıyla gelişir. Leptomeningeal fibrozisin yaptığı tablo sayılmaz. Bu parapleji subakut kombine dejenerasyonun geç evresidir ve yerleşince genelde kalıcıdır (s.9)."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "hemorajik enfarkt Leptomeningeal fibrozis → hidrosefali."
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 9,
+     "onem_id": "o11",
+     "kalip": "bilesik",
+     "celdirici_kaynak": [
+      9,
+      13,
+      38,
+      40
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q11",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aseptik menenjit ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bakteriyel kültürde etken üretilmez",
+      "B": "BOS glukozu belirgin düşüktür",
+      "C": "BOS'ta lenfositik pleositoz bulunur",
+      "D": "Sıklıkla kendini sınırlar",
+      "E": "Nadiren riketsiyal ya da otoimmün kökenlidir"
+     },
+     "dogru": "B",
+     "aciklama": "Aseptik menenjitte BOS'ta lenfositik pleositoz, hafif–orta protein artışı ve genelde normal glukoz bulunur; tablo sıklıkla kendini sınırlar. (s. 11)",
+     "sik_aciklamalari": {
+      "A": "Aseptik menenjit, akut menenjit tablosu olup bakteriyel kültürde etken bulunmayan durumu tanımlayan klinik bir terimdir. Bu ifade tanımın kendisidir ve doğrudur (s.11).",
+      "B": "Aseptik menenjitte BOS glukozu genelde normaldir; belirgin glukoz düşüklüğü bakteriyel menenjitin özelliğidir. İfade bu nedenle yanlıştır ve doğru cevap budur. Glukozun korunması aseptik menenjiti bakteriyel menenjitten ayıran en pratik BOS bulgusudur (s.11).",
+      "C": "Lenfositik pleositoz, beyin omurilik sıvısında lenfosit ağırlıklı hücre artışıdır. Viral nedenli aseptik menenjitin tipik BOS bulgusu olduğundan ifade doğrudur. Bakteriyel menenjitte ise BOS'ta nötrofil ağırlıklı hücre artışı beklenir (s.11).",
+      "D": "Aseptik menenjit sıklıkla kendiliğinden geçen bir hastalıktır ve tedavisi semptomatiktir. Bu özellik onu ağır seyirli bakteriyel menenjitten ayırır; ifade doğrudur. Hastalar çoğunlukla destek tedavisiyle iz bırakmadan iyileşir (s.11).",
+      "E": "Aseptik menenjit çoğunlukla viraldir, ancak nadiren riketsiyal ya da otoimmün nedenlerle de gelişebilir. Bu ifade de doğrudur, yanlış olan glukozla ilgili ifadedir (s.11)."
+     },
+     "bilgi": [
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Protein hafif–orta artmış Glukoz genelde normal."
+     },
+     "dayanak": [
+      "cikmis:57ffcc508b51"
+     ],
+     "s": 11,
+     "onem_id": "o11",
+     "kalip": "yanlis_bul",
+     "celdirici_kaynak": [
+      11,
+      9,
+      13
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3k2-2018-2019-k4-q85",
+     "soru": "Bakteriyel menenjit etiyolojisi hakkında aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Streptococcus pneumoniae erişkinlerde en sık etkendir",
+      "B": "Pseudomonas aeruginosa nozokomiyal menenjit etkenidir",
+      "C": "Listeria monocytogenes 50 yaşından küçüklerde ve bir aydan büyüklerde etken olabilir",
+      "D": "Grup B streptokoklar yenidoğanlarda (<1 ay) sıklıkla etkendir",
+      "E": "Haemophilus influenzae aşısı sonucunda bebeklik dönemindeki insidansı azalmıştır"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "final-2018-2019-q057",
+     "soru": "Aşağıdakilerden hangisi akut bakteriyel menenjitin sık bulgularından biri değildir?",
+     "secenekler": {
+      "A": "Şaşılık",
+      "B": "Baş ağrısı",
+      "C": "Bilinç değişikliği",
+      "D": "Ense sertliği",
+      "E": "Ateş"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q87",
+     "soru": "Ani başlayan baş ağrısı, ateş ve bilinç değişikliği şikâyetiyle acile başvuran 25 yaşında erkek hastaya lomber ponksiyon yapılmıştır.\nI. BOS basıncı 150 mmH₂O\nII. BOS'ta 120/mm³ hücre (%82 PNL)\nIII. BOS proteini 20 mg/dL\nIV. BOS/kan glukozu 20/120 mg/dL\nBOS incelemesinde yukarıdaki parametrelerden hangisi/hangileri patolojiktir?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "57ffcc508b51",
+     "soru": "Enfeksiyon hs Enfeksiyon hs ENFEKSİYON 1 En sık menenjit etkeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Virüsler",
+      "B": "Bakteriler",
+      "C": "Mantarlar",
+      "D": "Parazitler",
+      "E": "Prionlar"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Kronik menenjit etkenlerini sayar; tüberküloz menenjiti, nörosifilizin üç formu, nöroborreliyoz ve mantar (kriptokok, Histoplasma, Coccidioides) menenjitlerinin klinik, BOS ve morfoloji özelliklerini ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Dorsal kök duyu sinir hasarıyla pozisyon duyusu kaybı ve ataksi yapan nörosifiliz formu hangisidir?",
+     "secenekler": {
+      "A": "Meningovasküler nörosifiliz",
+      "B": "Parezik nörosifiliz",
+      "C": "Subakut kombine dejenerasyon",
+      "D": "Nöroborreliyoz",
+      "E": "Tabes dorsalis"
+     },
+     "dogru": "E",
+     "aciklama": "Tabes dorsalis dorsal kök duyu sinir hasarıyla pozisyon duyusu kaybı, ataksi, şimşek ağrıları, Charcot eklemi ve refleks kaybı yapar. (s. 15)",
+     "sik_aciklamalari": {
+      "A": "Meningovasküler nörosifiliz, beyin tabanında kronik menenjit ve plazma hücresinden zengin obliteratif endarteritle seyreden formdur. Dorsal kök hasarı bu formun bulgusu sayılmaz (s.15).",
+      "B": "Parezik nörosifiliz, parankim tutulumuna bağlı nöron kaybı ve yoğun mikroglia proliferasyonuyla seyreder. İlerleyici kognitif ve motor bozulma ile ağır demans yapar, duyu kökü hasarı yol açmaz (s.15).",
+      "C": "Subakut kombine dejenerasyon, B12 eksikliğinde omurilik beyaz maddesinde yaygın demiyelinizasyon ve akson kaybıyla gelişir. Ataksi yapabilir ama bir nörosifiliz formu sayılmaz (s.15).",
+      "D": "Nöroborreliyoz, Borrelia burgdorferi ile oluşan Lyme hastalığının sinir sistemi tutulumudur. Aseptik menenjit, yüz siniri paralizisi ve polinöropati yapar; sifilizle ilgisi yoktur (s.15).",
+      "E": "Tabes dorsalis, dorsal kök duyu sinirlerinin hasarıyla seyreden nörosifiliz formudur. Duruş ve pozisyon duyusu kaybı, ataksi, şimşek ağrıları ve Charcot eklemi yaptığı için doğru cevaptır (s.15)."
+     },
+     "bilgi": [
+      43,
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Dorsal kök duyu sinir hasarı"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 15,
+     "onem_id": "o12",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      15,
+      14,
+      16,
+      40
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q19",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Kriptokok türleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Cryptococcus neoformans yalnız immün sağlam kişide görülür",
+      "B": "Kriptokok menenjitinde BOS'ta çok sayıda hücre bulunur",
+      "C": "Kriptokoklar sıklıkla baziler menenjit yapar",
+      "D": "Cryptococcus gattii immün sağlam kişide hastalık yapar",
+      "E": "Tanı BOS'ta oligoklonal bant gösterilmesiyle konur"
+     },
+     "dogru": "D",
+     "aciklama": "Cryptococcus neoformans immünsüprese kişilerde, Cryptococcus gattii ise immün sağlam kişilerde ve sıklıkla akciğer tutulumuyla hastalık yapar. (s. 17)",
+     "sik_aciklamalari": {
+      "A": "Cryptococcus neoformans, immünsüprese kişilerde menenjit ve meningoensefalit yapan türdür. Yalnız immün sağlam kişiyle sınırlayan ifade yanlıştır. Bu tür beyinde Virchow–Robin boşluklarını genişleterek sabun köpüğü görünümü oluşturur (s.17).",
+      "B": "Kriptokok menenjitinde BOS'ta az hücre ve yüksek protein bulunur. Tanıda Hint mürekkebi ve antijen testi kullanılır; çok hücre ifadesi yanlıştır (s.17).",
+      "C": "Baziler menenjit, Histoplasma ve Coccidioides gibi mantarların sık yaptığı tablodur. Kriptokokozun belirgin bulgusu Virchow–Robin boşluklarının genişlemesidir. Bu mantarlar yüksek protein, hafif glukoz düşüklüğü ve lenfositozla seyreder (s.17).",
+      "D": "Cryptococcus gattii immün sistemi sağlam kişilerde, sıklıkla akciğer tutulumuyla birlikte hastalık yapan türdür. Bu nedenle ifade doğrudur. Cryptococcus neoformans ise bağışıklığı baskılanmış kişilerde menenjit ve meningoensefalit yapar (s.17).",
+      "E": "Oligoklonal IgG bantları multipl sklerozda BOS'ta sık saptanan bulgudur. Kriptokok tanısında Hint mürekkebi ve antijen testi kullanılır. Hint mürekkebi kapsüllü mayayı gösterir, antijen testi ise kriptokok antijenini saptar (s.17)."
+     },
+     "bilgi": [
+      50,
+      51,
+      52
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "İmmün sağlamlarda; sıklıkla akciğer tutulumu ile."
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 17,
+     "onem_id": "o13",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      17,
+      16,
+      7
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "BOS'ta orta artmış hücre, belirgin yüksek protein ve hafif azalmış glukoz bulunan kronik menenjit hangisidir?",
+     "secenekler": {
+      "A": "Akut piyojenik menenjit",
+      "B": "Aseptik menenjit",
+      "C": "Meningovasküler nörosifiliz",
+      "D": "Tüberküloz menenjiti",
+      "E": "Amebik meningoensefalit"
+     },
+     "dogru": "D",
+     "aciklama": "Tüberküloz menenjitinde BOS hücre sayısı orta artmış, protein belirgin yüksek, glukoz hafif azalmış ya da normaldir. (s. 13)",
+     "sik_aciklamalari": {
+      "A": "Akut piyojenik menenjit bakteriyel ve akut bir tablodur; BOS'ta nötrofilik pleositoz ve belirgin düşük glukoz vardır. Kronik seyir ve hafif glukoz düşüklüğü ona uymaz (s.13).",
+      "B": "Aseptik menenjit çoğunlukla viral, kendini sınırlayan akut bir menenjittir. BOS'ta lenfositik pleositoz ve hafif–orta protein artışı bulunur, kronik menenjit grubunda yer almaz (s.13).",
+      "C": "Meningovasküler nörosifiliz, beyin tabanında plazma hücresi ve lenfositten zengin obliteratif endarteritle seyreden kronik menenjittir. Tarif edilen BOS tablosu ve tüberkülom yatkınlığı tüberküloza aittir (s.13).",
+      "D": "Tüberküloz menenjitinde BOS hücre sayısı orta derecede artar, protein belirgin yükselir, glukoz hafif azalmış ya da normaldir. Tarif edilen kronik tablo bu olduğu için doğru cevaptır (s.13).",
+      "E": "Amebik meningoensefalit, Naegleria fowleri ile hızla ölümcül nekrotizan bir süreçtir. Ani ve ağır seyirli olduğu için kronik menenjit BOS tablosuyla tanımlanmaz (s.13)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38
+     ],
+     "benzer_cikmis": [
+      "641350560656"
+     ],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Hücre sayısı orta artmış (mono ± polimorf) Belirgin yüksek protein"
+     },
+     "dayanak": [
+      "cikmis:641350560656"
+     ],
+     "s": 13,
+     "onem_id": "o09",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      13,
+      9,
+      11,
+      15,
+      36
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Parezik nörosifilizin en karakteristik morfolojik özelliği hangisidir?",
+     "secenekler": {
+      "A": "Beyin tabanında obliteratif endarterit",
+      "B": "Dorsal kök duyu sinir hasarı",
+      "C": "Nöron kaybı ve yoğun mikroglia proliferasyonu",
+      "D": "Virchow–Robin boşluklarının genişlemesi",
+      "E": "Çok çekirdekli dev hücreler"
+     },
+     "dogru": "C",
+     "aciklama": "Parezik nörosifilizde parankim tutulur; nöron kaybı ve yoğun mikroglia proliferasyonuyla ilerleyici kognitif ve motor bozulma, ağır demans gelişir. (s. 15)",
+     "sik_aciklamalari": {
+      "A": "Obliteratif endarterit, plazma hücresi ve lenfositten zengin damar inflamasyonudur. Beyin tabanındaki kronik menenjitle birlikte meningovasküler formun bulgusudur. Meningovasküler formda arter lümeni daraldığı için iskemik hasar gelişebilir (s.15).",
+      "B": "Dorsal kök duyu sinir hasarı tabes dorsalisin temel lezyonudur. Pozisyon duyusu kaybı ve ataksi yapar, parezik formun morfolojisi olarak verilmez. Tabes dorsaliste ağrı duyusu kaybına bağlı Charcot eklemi ve şimşek ağrıları da görülür (s.15).",
+      "C": "Parezik nörosifiliz, parankimin tutulduğu formdur ve nöron kaybı ile yoğun mikroglia proliferasyonu gösterir. İlerleyici kognitif ve motor bozulmayla ağır demans yaptığından doğru cevaptır (s.15).",
+      "D": "Virchow–Robin boşluklarının genişlemesi, kriptokok enfeksiyonunda sabun köpüğü görünümü veren değişikliktir. Sifilizin parankim tutulumuna ait sayılmaz. Bu genişleme organizmaların perivasküler alanda yayılmasıyla oluşur (s.15).",
+      "E": "Çok çekirdekli dev hücreler, yaygın mikroglial nodül ve gliyozla birlikte HIV ensefalitinin morfolojik bulgusudur. Parezik nörosifilizi tanımlamak için kullanılmaz. Bu dev hücreler HIV ile enfekte mikroglianın birleşmesiyle ortaya çıkar (s.15)."
+     },
+     "bilgi": [
+      43,
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Nöron kaybı, yoğun mikroglia proliferasyonu"
+     },
+     "dayanak": [
+      "cikmis:4ba7687e6187"
+     ],
+     "s": 15,
+     "onem_id": "o12",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      15,
+      31,
+      22
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q17",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "BOS'ta az hücre ve yüksek protein bulunan, tanıda Hint mürekkebi ve antijen testinin kullanıldığı menenjit etkeni hangisidir?",
+     "secenekler": {
+      "A": "Mycobacterium tuberculosis",
+      "B": "Borrelia burgdorferi",
+      "C": "Treponema pallidum",
+      "D": "Histoplasma capsulatum",
+      "E": "Cryptococcus neoformans"
+     },
+     "dogru": "E",
+     "aciklama": "Kriptokok menenjitinde BOS'ta az hücre ve yüksek protein bulunur; Hint mürekkebi ve antijen testi tanıda kullanılır. (s. 17)",
+     "sik_aciklamalari": {
+      "A": "Mycobacterium tuberculosis kronik menenjitin başlıca etkenidir. BOS'ta orta derecede hücre artışı ve belirgin yüksek protein yapar, tanısı Hint mürekkebiyle konmaz (s.17).",
+      "B": "Borrelia burgdorferi, Lyme hastalığının spiroket etkenidir. Nöroborreliyozda aseptik menenjit, yüz siniri paralizisi ve polinöropati yapar. Lyme etkeni sitolojide görülen kapsüllü maya biçiminde değildir, bu yüzden Hint mürekkebi tanıda kullanılmaz (s.17).",
+      "C": "Treponema pallidum sifilizin etkenidir ve tedavi edilmemiş olguların yaklaşık yüzde onunda üçüncül evrede nörosifiliz yapar. Hint mürekkebiyle tanınan bir etken sayılmaz (s.17).",
+      "D": "Histoplasma capsulatum sıklıkla baziler menenjit yapan bir mantardır. BOS'ta yüksek protein, hafif glukoz düşüklüğü ve lenfositoz bulunur; Hint mürekkebi kriptokoka özgüdür (s.17).",
+      "E": "Cryptococcus neoformans immünsüprese kişilerde menenjit ve meningoensefalit yapan mayadır. BOS'ta az hücre, yüksek protein bulunur ve Hint mürekkebi ile antijen testiyle gösterildiği için doğru cevaptır (s.17)."
+     },
+     "bilgi": [
+      50,
+      51,
+      52
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Hint mürekkebi ve antijen testi tanıda."
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 17,
+     "onem_id": "o13",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      17,
+      13,
+      16,
+      14
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q20",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aseptik menenjit, yüz siniri paralizisi ve polinöropati ile seyreden spiroket enfeksiyonu hangisidir?",
+     "secenekler": {
+      "A": "Nöroborreliyoz",
+      "B": "Tabes dorsalis",
+      "C": "Meningovasküler nörosifiliz",
+      "D": "Kriptokokoz",
+      "E": "Rocky Mountain benekli humması"
+     },
+     "dogru": "A",
+     "aciklama": "Nöroborreliyoz (Lyme) Borrelia burgdorferi ile aseptik menenjit, yüz siniri paralizisi, hafif ensefalopati ve polinöropati yapar. (s. 16)",
+     "sik_aciklamalari": {
+      "A": "Nöroborreliyoz, Borrelia burgdorferi'nin yaptığı Lyme hastalığının sinir sistemi tutulumudur. Aseptik menenjit, yüz siniri paralizisi, hafif ensefalopati ve polinöropati yaptığı için doğru cevaptır (s.16).",
+      "B": "Tabes dorsalis, Treponema pallidum'un yaptığı nörosifilizin dorsal kök duyu sinirlerini tutan formudur. Ataksi ve Charcot eklemi yapar, yüz siniri paralizisiyle tanımlanmaz (s.16).",
+      "C": "Meningovasküler nörosifiliz, beyin tabanında kronik menenjit ve obliteratif endarteritle seyreden sifiliz formudur. Etkeni Treponema pallidum olup tarif edilen tablo Lyme'a aittir (s.16).",
+      "D": "Kriptokokoz, Cryptococcus türlerinin yaptığı bir mantar enfeksiyonudur. Spiroket enfeksiyonu değildir ve BOS'ta Hint mürekkebiyle tanınır. Bu mantar özellikle bağışıklığı baskılanmış hastada menenjit ve meningoensefalit yapar (s.16).",
+      "E": "Rocky Mountain benekli humması, Rickettsia rickettsii'nin yaptığı bir menenjit sendromudur. Etkeni spiroket değil riketsiyadır. Riketsiyalar aseptik menenjitin nadir etkenleri arasında da anılır (s.16)."
+     },
+     "bilgi": [
+      48,
+      49
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Aseptik menenjit Yüz siniri paralizisi"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 16,
+     "onem_id": "o28",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      16,
+      15,
+      17
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q13",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Tüberküloz menenjitinde hidrosefalinin gelişim mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Bazal araknoid fibrozis → BOS emilimi bozulur",
+      "B": "Tüberkülomun ventriküle açılması → tıkanma",
+      "C": "Obliteratif endarterit → serebral enfarkt",
+      "D": "Virchow–Robin genişlemesi → sabun köpüğü",
+      "E": "Köprü ven tromboflebiti → venöz enfarkt"
+     },
+     "dogru": "A",
+     "aciklama": "Tüberküloz menenjitinde bazal araknoid fibrozis BOS emilimini bozar ve hidrosefali gelişir. (s. 13)",
+     "sik_aciklamalari": {
+      "A": "Bazal araknoid fibrozis, beyin tabanındaki zarların kronik inflamasyonla kalınlaşmasıdır. BOS emilimini bozarak hidrosefali yapar; tüberküloz menenjitinin komplikasyonu olarak doğru cevaptır. Aynı fibrozis mekanizması bakteriyel menenjitin leptomeningeal fibrozis komplikasyonunda da görülür (s.13).",
+      "B": "Tüberkülom, Mycobacterium tuberculosis'in parankim içinde oluşturduğu kitledir. Tüberküloz menenjitinde hidrosefali mekanizması olarak tüberkülom değil, bazal fibrozis verilir. Tüberkülom kitle etkisi yapabilen ayrı bir parankim lezyonudur (s.13).",
+      "C": "Obliteratif endarterit, plazma hücresi ve lenfositten zengin damar duvarı inflamasyonuyla lümenin daralmasıdır. Meningovasküler nörosifilizin bulgusudur, hidrosefali mekanizması sayılmaz. Bu damar daralması arteriyel beslenmeyi bozarak iskemik hasara zemin hazırlar (s.13).",
+      "D": "Virchow–Robin boşluklarının genişlemesi, kriptokok enfeksiyonunda organizmaların perivasküler alanda çoğalmasıyla oluşur. Sabun köpüğü görünümü verir ama BOS emilimini bozan mekanizma bu sayılmaz (s.13).",
+      "E": "Köprü ven tromboflebiti, subdural ampiyemde gelişip venöz enfarkta yol açan bir komplikasyondur. Tüberküloz menenjitinde hidrosefaliyi açıklamaz. Subdural ampiyem kitle etkisi de yapar ve uygun cerrahi ile antibiyotikle genellikle tam düzelir (s.13)."
+     },
+     "bilgi": [
+      36,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "BOS emilimi bozulması → hidrosefali."
+     },
+     "dayanak": [
+      "cikmis:641350560656"
+     ],
+     "s": 13,
+     "onem_id": "o09",
+     "kalip": "bilesik",
+     "celdirici_kaynak": [
+      13,
+      15,
+      17,
+      36
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q16",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Tabes dorsalis ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dorsal kök duyu sinirleri hasarlanır",
+      "B": "Pozisyon duyusu kaybıyla ataksi gelişir",
+      "C": "Derin tendon refleksleri artar",
+      "D": "Ağrı duyusu kaybı Charcot eklemine yol açar",
+      "E": "Şimşek ağrıları görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Tabes dorsalisde dorsal kök duyu sinir hasarı, pozisyon duyusu kaybı, ataksi, Charcot eklemi, şimşek ağrıları ve derin tendon refleks kaybı bulunur. (s. 15)",
+     "sik_aciklamalari": {
+      "A": "Tabes dorsalisin temel lezyonu dorsal kök duyu sinirlerinin hasarıdır. Pozisyon duyusu kaybı, ataksi ve ağrı duyusu kaybı gibi diğer bulgular bu duyu yolu kaybından kaynaklandığından ifade doğrudur (s.15).",
+      "B": "Duruş ve pozisyon duyusunun kaybı, hastanın gözü kapalıyken eklem konumunu algılayamamasına ve dengesinin bozulmasına yol açar. Bu ataksi tabes dorsalisin tipik bulgusu olduğundan ifade doğrudur (s.15).",
+      "C": "Tabes dorsalisde derin tendon refleksleri kaybolur; refleks artışı bu tabloya uymaz. İfade yanlış olduğu için doğru cevaptır. Tabes dorsalis dorsal kök duyu sinirlerini tuttuğu için refleks yayının duyu kolu bozulur ve refleks kaybolur (s.15).",
+      "D": "Ağrı duyusu kaybolan eklem tekrarlayan küçük hasarları fark etmez ve zamanla bozularak Charcot eklemine dönüşür. Bu bilgi tabes dorsalis için doğrudur (s.15).",
+      "E": "Şimşek ağrıları, bacaklarda ani başlayan, keskin ve batıcı ağrı ataklarıdır. Tabes dorsalisde derin tendon refleks kaybıyla birlikte görüldüğü için ifade doğrudur (s.15)."
+     },
+     "bilgi": [
+      43,
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "derin tendon refleks kaybı"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 15,
+     "onem_id": "o12",
+     "kalip": "yanlis_bul",
+     "celdirici_kaynak": [
+      15,
+      40,
+      14
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q18",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kriptokok enfeksiyonunda 'sabun köpüğü' görünümünün en olası nedeni hangisidir?",
+     "secenekler": {
+      "A": "Merkezde liküfaksiyon nekrozu",
+      "B": "Virchow–Robin boşluklarının genişlemesi",
+      "C": "Yaygın mikroglial nodüller",
+      "D": "Larvaların kist oluşturması",
+      "E": "Yamalı demiyelinizasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Kriptokok enfeksiyonunda organizmalar perivasküler alanda yayılır; Virchow–Robin boşlukları genişler ve sabun köpüğü görünümü oluşur. (s. 17)",
+     "sik_aciklamalari": {
+      "A": "Liküfaksiyon nekrozu, beyin apsesinin merkezinde dokunun eriyerek sıvılaşmasıdır. Çevresinde ödem ve granülasyon dokusu bulunur; çok sayıda küçük boşluk görünümü vermez. Apsenin dış katmanını neovaskülarizasyonlu granülasyon dokusu oluşturur (s.17).",
+      "B": "Kriptokoklar perivasküler Virchow–Robin boşluklarına yayılıp çoğalır ve bu boşlukları genişletir. Beyin kesitinde çok sayıda küçük boşluk oluştuğu için sabun köpüğü görünümünün nedeni budur ve doğru cevaptır (s.17).",
+      "C": "Mikroglial nodüller, viral ensefalitlerde ve HIV ensefalitinde mikroglia hücrelerinin küçük kümeler oluşturmasıdır. Kriptokokozun sabun köpüğü görünümünü açıklamaz. Bu nodüller nöronofaji ve perivasküler lenfosit manşetleriyle birlikte viral ensefalit histolojisini oluşturur (s.17).",
+      "D": "Larva kisti, Taenia solium sistiserkozunda parazitin beyne yerleşmesiyle oluşur. Kitle lezyonu ve nöbet yapar; mantar enfeksiyonuna ait sayılmaz. Larva öldüğünde çevresinde yoğun eozinofilik inflamasyon ve gliyoz gelişir (s.17).",
+      "E": "Yamalı demiyelinizasyon, JC virüsünün oligodendrositi enfekte ettiği PML'nin bulgusudur. Lezyonlarda lipid yüklü makrofaj ve tuhaf dev astrositler bulunur. Bu tablo bağışıklığı baskılanmış hastada latent virüsün yeniden etkinleşmesiyle ortaya çıkar (s.17)."
+     },
+     "bilgi": [
+      50,
+      51,
+      52
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Virchow–Robin boşlukları genişler"
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 17,
+     "onem_id": "o13",
+     "kalip": "bilesik",
+     "celdirici_kaynak": [
+      17,
+      18,
+      20,
+      32,
+      34
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "641350560656",
+     "soru": "Aşağıdakilerden hangisi tüberküloz menenjitine ait BOS bulgularından değildir?",
+     "secenekler": {
+      "A": "BOS glukoz eş zamanlı kan glukozunun 2/3'ünden düşüktür",
+      "B": "BOS proteini azalmıştır",
+      "C": "Lenfosit hakimiyetinde inflamatuar hücre birikimi görülür",
+      "D": "BOS ADA değeri yükselmiştir",
+      "E": "BOS berrak, bulanık, ksantokromik görünümde olabilir"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Beyin apsesinin geliş yollarını, predispozan durumlarını, katmanlı morfolojisini, BOS bulgularını ve komplikasyonlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q21",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Beyin apsesinin yaygın etkenleri hangisidir?",
+     "secenekler": {
+      "A": "Enterovirüsler",
+      "B": "Streptokoklar ve stafilokoklar",
+      "C": "Cryptococcus neoformans mantarı",
+      "D": "Toxoplasma gondii",
+      "E": "Taenia solium"
+     },
+     "dogru": "B",
+     "aciklama": "Beyin apsesi genellikle bakteriyeldir; yaygın etkenler streptokoklar ve stafilokoklardır. (s. 7)",
+     "sik_aciklamalari": {
+      "A": "Enterovirüsler, aseptik menenjitin en sık bulunan etkenidir ve kendini sınırlayan akut menenjit yapar. Nekrotik odak oluşturan apsenin etkeni sayılmaz. Etken bulunduğunda aseptik menenjit olgularının yaklaşık yüzde sekseninden enterovirüsler sorumludur (s.7).",
+      "B": "Streptokoklar ve stafilokoklar, lokalize bakteriyel enfeksiyon olan beyin apsesinin yaygın etkenleridir. Apse genellikle bakteriyel olduğu için doğru cevaptır. Bu bakteriler beyne komşu odaktan, kan yoluyla ya da doğrudan implantasyonla ulaşır (s.7).",
+      "C": "Cryptococcus neoformans immünsüprese kişide menenjit ve meningoensefalit yapan mayadır. Virchow–Robin boşluklarında sabun köpüğü görünümü verir, apse etkeni olarak verilmez. Tanısı BOS'ta Hint mürekkebi ve antijen testiyle konur (s.7).",
+      "D": "Toxoplasma gondii, immünsüprese erişkinde çoklu halka tarzı lezyonlar yapan bir protozoondur. Lokalize enfeksiyon yapsa da tabloda bakteriyel apsenin etkeni olarak verilmez (s.7).",
+      "E": "Taenia solium, larvalarıyla beyinde kist oluşturan ve sistiserkoz yapan parazittir. Kitle lezyonu ve nöbet yapar, bakteriyel apse etkeni sayılmaz. Parazit öldüğünde yoğun eozinofilik inflamasyon gelişir ve belirtiler artar (s.7)."
+     },
+     "bilgi": [
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Abse Streptokoklar ve stafilokoklar"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 7,
+     "onem_id": "o17",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      7,
+      11,
+      17,
+      34
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q22",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi beyin apsesi için predispozan durumlardan değildir?",
+     "secenekler": {
+      "A": "Akut bakteriyel endokardit",
+      "B": "Siyanotik konjenital kalp hastalığı",
+      "C": "Kronik akciğer enfeksiyonları",
+      "D": "Hiponatreminin hızlı düzeltilmesi",
+      "E": "Mastoidit gibi komşu odak"
+     },
+     "dogru": "D",
+     "aciklama": "Beyin apsesine endokardit, siyanotik konjenital kalp hastalığı, kronik akciğer enfeksiyonları ve mastoidit, sinüzit gibi komşu odaklar zemin hazırlar. (s. 19)",
+     "sik_aciklamalari": {
+      "A": "Akut bakteriyel endokardit, kalpten kan yoluyla mikroorganizma yayarak beyin apsesine zemin hazırlar. Apsenin predispozan durumları arasında sayılır. Kalp kapağındaki enfekte vejetasyonlardan kopan parçalar beyne bakteri taşır (s.19).",
+      "B": "Siyanotik konjenital kalp hastalığı, beyin apsesi için tanımlanmış predispozan durumlardan biridir. Bu nedenle ifade doğrudur ve apse riskini artırır. Endokardit gibi kalp kaynaklı bu durum da bakterinin kan yoluyla beyne ulaşmasını kolaylaştırır (s.19).",
+      "C": "Kronik akciğer enfeksiyonları, hematogen yayılımla beyne mikroorganizma taşıyabilir. Beyin apsesinin predispozan durumları arasında yer alır. Akciğerdeki süregen iltihap odağı kan dolaşımına tekrar tekrar bakteri bırakabilir (s.19).",
+      "D": "Hiponatreminin hızlı düzeltilmesi, ozmotik demiyelinizasyon sendromuna yol açar ve hızla gelişen kuadripleji yapar. Beyin apsesine zemin hazırlayan durumlar arasında yer almadığı için doğru cevaptır (s.19).",
+      "E": "Mastoidit, mastoid kemiğindeki hava odacıklarının bakteriyel enfeksiyonudur. Komşu odak olarak beyin apsesinin geliş yollarından biridir. Mastoid kemiği beyne komşu olduğu için iltihap kemiği aşarak temporal loba ya da serebelluma ilerleyebilir (s.19)."
+     },
+     "bilgi": [
+      55,
+      56,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Siyanotik konjenital kalp hastalığı"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 19,
+     "onem_id": "o17",
+     "kalip": "olumsuz",
+     "celdirici_kaynak": [
+      19,
+      50,
+      36
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q23",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Beyin apsesinin tanısında BOS incelemesinde en olası bulgu hangisidir?",
+     "secenekler": {
+      "A": "Yüksek lökosit ve protein, normal glukoz",
+      "B": "Nötrofilik pleositoz ve düşük glukoz",
+      "C": "Az hücre, yüksek protein, Hint mürekkebi pozitif",
+      "D": "Hafif protein artışı, oligoklonal IgG bantları",
+      "E": "Orta hücre artışı, belirgin yüksek protein"
+     },
+     "dogru": "A",
+     "aciklama": "Beyin apsesinde BOS'ta yüksek lökosit, yüksek protein ve normal glukoz bulunur; bakteriyel menenjitte glukoz düşüktür. (s. 20)",
+     "sik_aciklamalari": {
+      "A": "Beyin apsesinde BOS'ta lökosit ve protein yükselir, glukoz ise normal kalır. Enfeksiyon kapsüllü odakta sınırlı kaldığı için bu bulgu doğru cevaptır (s.20).",
+      "B": "Nötrofilik pleositoz ve düşük glukoz, akut piyojenik menenjitin BOS bulgusudur. Bakteriler subaraknoid boşlukta yaygın olduğundan glukoz düşer; apsede glukoz normaldir. Akut piyojenik menenjitte bunlara artmış basınç ve yüksek protein de eşlik eder (s.20).",
+      "C": "Az hücre, yüksek protein ve Hint mürekkebi pozitifliği kriptokok menenjitinin BOS bulgusudur. İmmünsüprese hastada mantar menenjitini gösterir. Hint mürekkebi kapsüllü mayayı gösteren bir boyama yöntemidir (s.20).",
+      "D": "Hafif protein artışı, artmış immünoglobulin oranı ve oligoklonal IgG bantları multipl sklerozun BOS bulgusudur. Otoimmün demiyelinizasyonu yansıtır. Oligoklonal bantlar sinir sistemi içinde sınırlı bir antikor yapımını gösterir (s.20).",
+      "E": "Orta hücre artışı ve belirgin yüksek protein, glukozun hafif düştüğü tüberküloz menenjitinin BOS bulgusudur. Kronik menenjite aittir. Tüberküloz menenjitinde hücreler mononükleer ağırlıklıdır ve glukoz hafif azalmış ya da normaldir (s.20)."
+     },
+     "bilgi": [
+      59,
+      60,
+      61
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Yüksek lökosit, yüksek protein, normal glukoz."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 20,
+     "onem_id": "o17",
+     "kalip": "bilesik",
+     "celdirici_kaynak": [
+      20,
+      9,
+      17,
+      47
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q24",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Siyanotik konjenital kalp hastalığı olan çocukta fokal nörolojik defisit ve kafa içi basınç artışı gelişiyor; lezyon merkezde liküfaksiyon nekrozu, dışta granülasyon dokusu içeriyor. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Serebral toksoplazmoz",
+      "B": "Sistiserkoz",
+      "C": "Subdural ampiyem",
+      "D": "Tüberkülom",
+      "E": "Beyin apsesi"
+     },
+     "dogru": "E",
+     "aciklama": "Siyanotik konjenital kalp hastalığı beyin apsesine zemin hazırlar; apse merkezde liküfaksiyon nekrozu, çevrede ödem, dışta granülasyon dokusu içerir. (s. 20)",
+     "sik_aciklamalari": {
+      "A": "Serebral toksoplazmoz, immünsüprese erişkinde korteks–beyaz madde bileşkesinde ve derin gri çekirdeklerde çoklu halka tarzı lezyon yapar. Siyanotik kalp hastalığıyla ilişkili sayılmaz (s.20).",
+      "B": "Sistiserkoz, Taenia solium larvalarının beyinde kist oluşturmasıdır. Kitle lezyonu ve nöbet yapar; merkezde liküfaksiyon nekrozu içeren bakteriyel odak sayılmaz. Larva öldüğünde eozinofilik inflamasyonla belirtiler artar (s.20).",
+      "C": "Subdural ampiyem, sinüzit gibi komşu odaklardan gelişen ve dura altında biriken polimikrobiyal irin birikimidir. Kitle etkisi yapar ama parankim içinde granülasyon dokusuyla çevrili odak oluşturmaz (s.20).",
+      "D": "Tüberkülom, Mycobacterium tuberculosis'in parankim içinde oluşturduğu kitledir ve tüberküloz menenjitine eşlik edebilir. Siyanotik kalp hastalığıyla ilişkilendirilen lezyon sayılmaz. Tüberkülom granülomatöz bir kitle olup merkezinde liküfaksiyon nekrozu ve granülasyon dokusu katmanı tanımlanmaz (s.20).",
+      "E": "Beyin apsesi, merkezde liküfaksiyon nekrozu, çevrede ödem ve dışta neovaskülarizasyonlu granülasyon dokusu içeren lokalize bakteriyel odaktır. Siyanotik kalp hastalığı zemininde fokal defisit ve basınç artışı yaptığı için doğru cevaptır (s.20)."
+     },
+     "bilgi": [
+      59,
+      60,
+      61
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Merkezde liküfaksiyon nekrozu Çevrede ödem"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 20,
+     "onem_id": "o17",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      20,
+      34,
+      36,
+      13
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Viral ensefalitin ortak histolojisini ve BOS'unu; arbovirüs, HSV-1/HSV-2/VZV, CMV, polio ve kuduzun klinik ve morfolojik özelliklerini (Cowdry A, nöronofaji) açıklar.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q25",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Herpes ensefalitinde nöron ve glialarda görülen büyük eozinofilik intranükleer inklüzyon hangisidir?",
+     "secenekler": {
+      "A": "Mikroglial nodül",
+      "B": "Nöronofaji odağı",
+      "C": "Cowdry tip A inklüzyonu",
+      "D": "Devleşmiş oligodendrosit çekirdeği",
+      "E": "Çok çekirdekli dev hücre"
+     },
+     "dogru": "C",
+     "aciklama": "Herpes ensefalitinde nöron ve glialarda büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A) bulunur. (s. 25)",
+     "sik_aciklamalari": {
+      "A": "Mikroglial nodül, birçok viral ensefalitte mikroglia hücrelerinin küçük kümeler oluşturmasıdır. Bir hücre kümesidir, çekirdek içi viral inklüzyon sayılmaz. Mikroglial nodüller herpes dışındaki viral ensefalitlerde de görülen genel bir bulgudur (s.25).",
+      "B": "Nöronofaji, ölen nöronun mikroglial hücrelerle çevrilip ortadan kaldırılmasıdır. Viral enfeksiyonlarda görülen tek hücre nekrozudur ama inklüzyon cisimciği sayılmaz. Nöronofaji mikroglial nodül ve perivasküler infiltratla birlikte viral ensefalitin histolojisini tamamlar (s.25).",
+      "C": "Cowdry tip A inklüzyonu, herpes ensefalitinde nöron ve glia çekirdeğinde görülen büyük eozinofilik viral cisimciktir. Herpes ensefalitinin tanımlayıcı mikroskopik bulgusu olduğu için doğru cevaptır (s.25).",
+      "D": "Devleşmiş, inklüzyonlu oligodendrosit çekirdekleri PML lezyonlarının kenarında görülür. JC virüsünün oligodendrositi enfekte ettiğini gösterir, herpes ensefaliti için tanımlanmaz. PML lezyonunun merkezinde ise lipid yüklü makrofajlar bulunur (s.25).",
+      "E": "Çok çekirdekli dev hücreler, yaygın mikroglial nodül ve gliyozla birlikte HIV ensefalitinde görülür. HIV ile enfekte mikroglia kaynaklıdır, herpes ensefalitinin bulgusu sayılmaz (s.25)."
+     },
+     "bilgi": [
+      76,
+      77,
+      78
+     ],
+     "benzer_cikmis": [
+      "past-1790877044051-128509",
+      "f3694ce4c15f"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A)."
+     },
+     "dayanak": [
+      "cikmis:past-1790877044051-128509",
+      "cikmis:f3694ce4c15f"
+     ],
+     "s": 25,
+     "onem_id": "o07",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      25,
+      22,
+      31,
+      32
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q26",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Herpes simplex ensefalitinde en ağır lezyonların bulunduğu bölge hangisidir?",
+     "secenekler": {
+      "A": "Mamiller cisimler ve hipotalamus",
+      "B": "Periventriküler alanlar ve optik sinir",
+      "C": "Temporal lob alt-medial kısmı, frontal orbital giruslar",
+      "D": "Korteks–beyaz madde bileşkesi",
+      "E": "Subkortikal beyaz madde ve diensefalon"
+     },
+     "dogru": "C",
+     "aciklama": "Herpes ensefalitinde en ağır lezyonlar temporal lobun alt/medial kısmı ve frontal orbital giruslardadır; nekrotizan ve sıklıkla hemorajiktir. (s. 25)",
+     "sik_aciklamalari": {
+      "A": "Mamiller cisimler ve hipotalamus, Wernicke–Korsakoff sendromunda en sık tutulan bölgelerdir. Tiamin eksikliğine bağlı kanama ve nekroz burada görülür. Bu bölgelerde kanama, nekroz ve çözülme sonrası kistik boşluklar oluşur (s.25).",
+      "B": "Periventriküler alanlar, optik sinir ve kiazma multipl skleroz plaklarının sık yerleştiği bölgelerdir. Otoimmün demiyelinizasyonu yansıtır. Bu bölgelerdeki plaklar keskin sınırlıdır ve aktif dönemde miyelin kalıntılı makrofaj içerir (s.25).",
+      "C": "Herpes ensefalitinde en ağır lezyonlar temporal lobun alt ve medial kısmında ve frontal orbital giruslardadır. Nekrotizan, sıklıkla hemorajik tutulum burada yoğunlaştığı için doğru cevaptır (s.25).",
+      "D": "Korteks–beyaz madde bileşkesi ve derin gri çekirdekler, erişkin toksoplazmozunda çoklu halka tarzı lezyonların yeridir. Herpes ensefalitinin ağır tutulum bölgesi sayılmaz (s.25).",
+      "E": "Subkortikal beyaz madde ve diensefalon, HIV ensefalitinde mikroglial nodül ve gliyozun yoğunlaştığı bölgelerdir. Herpes ensefalitinin yerleşimiyle karıştırılmamalıdır. HIV ensefalitinde çok çekirdekli dev hücreler de bu bölgelerde görülür (s.25)."
+     },
+     "bilgi": [
+      76,
+      77,
+      78
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Temporal lob alt/medial kısımları"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q78"
+     ],
+     "s": 25,
+     "onem_id": "o07",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      25,
+      39,
+      47,
+      34,
+      31
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q27",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Erişkinde genelde menenjit, genital enfeksiyonlu anneden doğan bebekte ağır yaygın ensefalit yapan virüs hangisidir?",
+     "secenekler": {
+      "A": "Herpes simplex virüs tip 1",
+      "B": "Varisella zoster virüsü",
+      "C": "Sitomegalovirüs",
+      "D": "Poliovirüs",
+      "E": "Herpes simplex virüs tip 2"
+     },
+     "dogru": "E",
+     "aciklama": "HSV-2 erişkinlerde genelde menenjit yapar; HSV genital enfeksiyonlu anneden doğan bebekte ağır yaygın ensefalit oluşturur. (s. 24)",
+     "sik_aciklamalari": {
+      "A": "HSV-1 özellikle çocuk ve genç erişkinde temporal ve frontal lobu tutan ensefalit yapar. Ruh hali, hafıza ve davranış değişiklikleriyle seyreder; yenidoğan tablosu HSV-2'ye aittir (s.24).",
+      "B": "Varisella zoster virüsü primer enfeksiyonda suçiçeği yapar ve dorsal kök ganglionunda latent kalır. Zona ve postherpetik nevralji yapar, tarif edilen tabloya uymaz (s.24).",
+      "C": "Sitomegalovirüs fetüste ve immünsüprese erişkinde merkezi sinir sistemini tutar. İntrauterin enfeksiyonda periventriküler nekroz, kalsifikasyon ve mikrosefali yapar. Erişkinde ise periventriküler subakut ensefalit, hemorajik alanlar ve tipik inklüzyonlar yapar (s.24).",
+      "D": "Poliovirüs bir enterovirüstür; çoğu olguda hafif sindirim sistemi enfeksiyonu yapar. Az olguda motor nöron hasarıyla flasid paralizi gelişir. Yıllar sonra aynı kaslarda postpolio sendromu ortaya çıkabilir (s.24).",
+      "E": "HSV-2 erişkinlerde genelde menenjit yapar, genital enfeksiyonlu anneden doğan bebekte ise ağır yaygın ensefalite yol açar. İki farklı yaş tablosunu birlikte açıkladığı için doğru cevaptır (s.24)."
+     },
+     "bilgi": [
+      71,
+      72,
+      73
+     ],
+     "benzer_cikmis": [
+      "past-1790877044051-128509"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Erişkinlerde genelde menenjit HSV genital enfeksiyonlu anneden"
+     },
+     "dayanak": [
+      "cikmis:past-1790877044051-128509"
+     ],
+     "s": 24,
+     "onem_id": "o24",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      24,
+      27,
+      32
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q29",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Sitomegalovirüsün merkezi sinir sistemi tutulumu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Konjenital enfeksiyonda koryoretinit ve hidrosefali triadı yapar",
+      "B": "Erişkinde en ağır lezyonu temporal lobun medialinde yapar",
+      "C": "Erişkinde oligodendrositi hedef alıp demiyelinizasyon yapar",
+      "D": "İntrauterin enfeksiyonda periventriküler nekroz ve mikrosefali yapar",
+      "E": "Yalnız immün sağlam erişkinlerde hastalık yapar"
+     },
+     "dogru": "D",
+     "aciklama": "İntrauterin CMV periventriküler nekroz, kalsifikasyon ve mikrosefali yapar; erişkinde periventriküler subakut ensefalit görülür. (s. 27)",
+     "sik_aciklamalari": {
+      "A": "Koryoretinit, hidrosefali ve kalsifikasyon konjenital toksoplazmozun klasik triadıdır. Kalsifikasyon ortak olsa da bu üçlü Toxoplasma gondii enfeksiyonuna aittir. Toksoplazma erişkinde ise derin gri çekirdeklerde çoklu halka tarzı lezyon yapar (s.27).",
+      "B": "Temporal lobun alt ve medial kısmında nekrotizan, hemorajik tutulum herpes simplex ensefalitinin özelliğidir. Sitomegalovirüs erişkinde periventriküler subakut ensefalit yapar. Herpes ensefalitinde nöron ve glialarda Cowdry tip A inklüzyonları görülür (s.27).",
+      "C": "Oligodendrositi hedef alıp yamalı demiyelinizasyon yapan virüs, PML'nin etkeni olan JC virüsüdür. Sitomegalovirüsün tipik tablosu bu sayılmaz. JC virüsü çoğu insanda latent kalır ve ancak bağışıklık baskılanınca hastalık yapar (s.27).",
+      "D": "İntrauterin sitomegalovirüs enfeksiyonu periventriküler nekroz, kalsifikasyon ve mikrosefali yapar. Fetal beyinde ventrikül çevresinin tutulması tipik olduğundan ifade doğrudur. Erişkinde ise aynı virüs periventriküler subakut ensefalit ve hemorajik alanlar yapar (s.27).",
+      "E": "Sitomegalovirüs merkezi sinir sistemini özellikle fetüste ve immünsüprese erişkinde tutar. Yalnız immün sağlam erişkinle sınırlayan ifade yanlıştır. Erişkin tutulumu periventriküler subakut ensefalit ve hemorajik alanlarla seyreder (s.27)."
+     },
+     "bilgi": [
+      81,
+      82,
+      83
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "İntrauterin: periventriküler nekroz, kalsifikasyon, mikrosefali"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 27,
+     "onem_id": "o19",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      27,
+      34,
+      24,
+      32
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q30",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Poliovirüs enfeksiyonu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Az olguda motor nöron hasarıyla flasid paralizi yapar",
+      "B": "Dorsal kök duyu sinirlerini hasarlayıp ataksi yapar",
+      "C": "Oligodendrositi enfekte ederek demiyelinizasyon yapar",
+      "D": "Omurilik beyaz maddesinde yaygın demiyelinizasyon yapar",
+      "E": "Paralizi yıllar sonra farklı kaslarda yeniden başlar"
+     },
+     "dogru": "A",
+     "aciklama": "Poliovirüs çoğu olguda hafif GİS enfeksiyonu yapar; az olguda motor nöron hasarıyla flasid paralizi ve solunum yetmezliği gelişir, yıllar sonra aynı dağılımda postpolio sendromu görülebilir. (s. 27)",
+     "sik_aciklamalari": {
+      "A": "Poliovirüs bir enterovirüstür; çoğu olguda hafif sindirim sistemi enfeksiyonu yapar, az olguda ise motor nöronları hasarlar. Kas tonusunun kaybolduğu flasid paralizi ve solunum yetmezliği bu hasardan kaynaklandığı için ifade doğrudur (s.27).",
+      "B": "Dorsal kök duyu sinir hasarı ve buna bağlı ataksi, nörosifilizin tabes dorsalis formunun bulgusudur. Poliovirüs duyu kökünü değil motor nöronu hedef aldığından ifade yanlıştır (s.27).",
+      "C": "Oligodendrosit enfeksiyonu ve demiyelinizasyon, JC virüsünün immünsüprese hastada yaptığı PML'nin mekanizmasıdır. Poliovirüs miyelin yapan hücreyi hedef almaz. Poliovirüs bir enterovirüstür ve omurilikte motor nöronları hasarlayarak flasid paralizi yapar (s.27).",
+      "D": "Omurilik beyaz maddesinde yaygın demiyelinizasyon ve akson kaybı, B12 eksikliğine bağlı subakut kombine dejenerasyonun bulgusudur. Spastik güçsüzlük yapar, flasid paralizi yol açmaz (s.27).",
+      "E": "Postpolio sendromunda yıllar sonra yeni güçsüzlük gelişir, ancak bu güçsüzlük geçmişte etkilenen kaslarla aynı dağılımda ortaya çıkar. Farklı kaslarda başladığını söyleyen ifade yanlıştır (s.27)."
+     },
+     "bilgi": [
+      81,
+      82,
+      83
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Az olguda motor nöron hasarı → flasid paralizi, solunum yetmezliği."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 27,
+     "onem_id": "o19",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      27,
+      15,
+      32,
+      36
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q32",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Viral ensefalitte ölen nöronun mikroglial hücrelerle çevrilerek ortadan kaldırılmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Reaktif gliyoz",
+      "B": "Mikroglial nodül",
+      "C": "Perivasküler lenfosit manşeti",
+      "D": "Nöronofaji",
+      "E": "Liküfaksiyon nekrozu"
+     },
+     "dogru": "D",
+     "aciklama": "Nöronofaji ölen nöronun mikroglial hücrelerle çevrilmesidir; viral enfeksiyonlarda görülür ve muhtemelen sitotoksik T lenfositlerle oluşur. (s. 28)",
+     "sik_aciklamalari": {
+      "A": "Gliyoz, hasar sonrası glial hücrelerin çoğalmasıyla oluşan onarım değişikliğidir. İnaktif multipl skleroz plaklarında belirgindir; tek nöronun mikrogliayla çevrilmesini anlatmaz. Gliyoz yerleşmiş hasarın kalıcı izi olarak geç dönemde belirginleşir (s.28).",
+      "B": "Mikroglial nodül, viral ensefalitlerde mikroglia hücrelerinin küçük kümeler oluşturmasıdır. Nöronofajiyle birlikte görülse de ölen nöronun çevrilmesi sürecinin adı sayılmaz. Nodüller tek bir nöronla sınırlı kalmaz, parankimde dağınık küçük kümeler oluşturur (s.28).",
+      "C": "Perivasküler lenfosit manşeti, damar çevresinde lenfositlerin halka biçiminde toplanmasıdır. Viral ensefalitin tipik bulgusudur ama nöron yıkımını tanımlamaz. Manşetler damar çevresinde yer alır, tek tek ölen nöronların temizlenmesini göstermez (s.28).",
+      "D": "Nöronofaji, nöronun ölüp mikroglial hücrelerle çevrildiği süreçtir. Viral enfeksiyonların özelliği olan tek hücre nöron nekrozunu anlattığı için doğru cevaptır. Ölü nöronun etrafında toplanan mikroglia hücreleri onu fagosite ederek ortadan kaldırır (s.28).",
+      "E": "Liküfaksiyon nekrozu, dokunun eriyerek sıvılaştığı nekroz biçimidir ve beyin apsesinin merkezinde görülür. Tek bir nöronun mikrogliayla temizlenmesini anlatmaz. Bu nekroz geniş bir doku alanını kapsar ve apse boşluğunu oluşturur (s.28)."
+     },
+     "bilgi": [
+      88,
+      89
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Nöronofaji, nöronun öldüğü ve mikrogliyal hücrelerle"
+     },
+     "dayanak": [
+      "cikmis:4ba7687e6187"
+     ],
+     "s": 28,
+     "onem_id": "o18",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      22,
+      28,
+      31,
+      47
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q28",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Varisella zoster virüsü ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Primer enfeksiyonda suçiçeği yapar",
+      "B": "Ensefaliti en çok immün sağlam çocuklarda görülür",
+      "C": "Dorsal kök ganglionunda latent kalır",
+      "D": "Zona ve postherpetik nevralji yapar",
+      "E": "Granülomatöz arterit ve enfarkt yapabilir"
+     },
+     "dogru": "B",
+     "aciklama": "VZV primerde suçiçeği yapar, dorsal kök ganglionunda latent kalır; zona, postherpetik nevralji, granülomatöz arterit ve enfarkt yapar; ensefaliti immünsüprese hastada görülür. (s. 24)",
+     "sik_aciklamalari": {
+      "A": "Varisella zoster virüsü ilk karşılaşmada suçiçeği hastalığını oluşturur. Bu ifade virüsün primer enfeksiyonunu doğru tanımlar. Suçiçeğinden sonra virüs vücuttan atılmaz, sinir ganglionunda saklanır (s.24).",
+      "B": "Varisella zoster ensefaliti immünsüprese hastada görülür; immün sağlam çocuklara bağlamak yanlıştır. Bu ifade yanlış olduğu için doğru cevaptır. İmmün sağlam kişide primer enfeksiyon çoğunlukla suçiçeği olarak geçer (s.24).",
+      "C": "Varisella zoster virüsü primer enfeksiyondan sonra dorsal kök ganglionunda latent olarak yaşamını sürdürür. Reaktivasyonun kaynağı burası olduğundan ifade doğrudur. Bağışıklık zayıfladığında virüs bu ganglionda yeniden çoğalarak sinir boyunca deriye ulaşır (s.24).",
+      "D": "Latent virüsün reaktivasyonu zona ve ardından süren postherpetik nevralji tablosunu oluşturur. Bu ifade doğrudur. Varisella zoster ayrıca granülomatöz arterite ve enfarkta da yol açabilir (s.24).",
+      "E": "Varisella zoster virüsü damar duvarını tutarak granülomatöz arterit ve buna bağlı enfarkt yapabilir. Bu bilgi de virüsün sinir sistemi etkileri arasında doğrudur (s.24)."
+     },
+     "bilgi": [
+      71,
+      72,
+      73
+     ],
+     "benzer_cikmis": [
+      "past-1790877044051-128509"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "İmmünsüprese hastada VZV ensefaliti."
+     },
+     "dayanak": [
+      "cikmis:past-1790877044051-128509"
+     ],
+     "s": 24,
+     "onem_id": "o24",
+     "kalip": "yanlis_bul",
+     "celdirici_kaynak": [
+      24,
+      27,
+      32
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q31",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kuduz virüsünün yayılma yolu ve klinik bulgusu birlikte hangisinde verilmiştir?",
+     "secenekler": {
+      "A": "Hematogen yayılır; şimşek ağrıları",
+      "B": "Periferik sinir boyunca ilerler; hidrofobi",
+      "C": "Plasentayı geçer; mikrosefali",
+      "D": "Larva kisti yapar; nöbet",
+      "E": "Ilık suyla bulaşır; nekrotizan süreç"
+     },
+     "dogru": "B",
+     "aciklama": "Kuduz virüsü hayvan ısırığıyla bulaşır, periferik sinir boyunca MSS'ye ilerler; hidrofobi, aşırı uyarılabilirlik, konvülsiyon ve koma ile ölüme yol açar. (s. 27)",
+     "sik_aciklamalari": {
+      "A": "Şimşek ağrıları, tabes dorsalisde derin tendon refleks kaybıyla birlikte görülen ani batıcı ağrılardır. Kuduzun yayılma yolu kan değil periferik sinirdir. Kuduzda bulgu tablosunu hidrofobi, aşırı uyarılabilirlik ve konvülsiyon oluşturur (s.27).",
+      "B": "Kuduz virüsü hayvan ısırığıyla bulaşır ve periferik sinir boyunca merkezi sinir sistemine ilerler. Hidrofobi, aşırı uyarılabilirlik ve konvülsiyon yaptığından doğru cevap budur (s.27).",
+      "C": "Plasenta yoluyla geçiş ve mikrosefali, intrauterin sitomegalovirüs enfeksiyonunun özelliğidir. Kuduz hayvan ısırığıyla bulaşan bir virüstür. Kuduz virüsü ısırık yerinden periferik sinir boyunca merkezi sinir sistemine ilerler (s.27).",
+      "D": "Larva kisti ve nöbet, Taenia solium sistiserkozunun bulgularıdır. Parazit ölümüyle eozinofilik inflamasyon ve semptom artışı görülür. Kuduzun yayılma yolu ise periferik sinirdir ve parazitle ilgisi yoktur (s.27).",
+      "E": "Ilık durgun sudan bulaşan ve hızla ölümcül nekrotizan süreç yapan etken Naegleria fowleri'dir. Kuduz virüsünün bulaş yolu hayvan ısırığıdır. Bu amip bir virüs olmayıp hızla ölümcül nekrotizan meningoensefalit yapan bir parazittir (s.27)."
+     },
+     "bilgi": [
+      81,
+      82,
+      83
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Periferik sinir boyunca MSS’ye ilerler"
+     },
+     "dayanak": [
+      "cikmis:past-1790877492932-949906"
+     ],
+     "s": 27,
+     "onem_id": "o19",
+     "kalip": "bilesik",
+     "celdirici_kaynak": [
+      27,
+      5,
+      15,
+      34,
+      36
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877044051-128509",
+     "soru": "Herpes grubu virüsler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "HSV-1 ensefaliti en sık çocuklarda ve genç erişkinlerde görülmekle birlikte, her yaş grubunda enfeksiyona neden olabilir.",
+      "B": "Hem nöronlarda hem de glial hücrelerde eozinofilik intranükleer viral inklüzyonlar (Bunina cisimleri) bulunabilir.",
+      "C": "HSV-2 santral sinir sistemini tuttuğunda, erişkinlerde genellikle menenjite neden olur.",
+      "D": "Aktif, primer HSV genital enfeksiyonuna sahip kadınlardan vajinal doğum ile dünyaya gelen yenidoğanlarda yaygın şiddetli ensefalit gelişir.",
+      "E": "Varicella-zoster virüsü (VZV) primer enfeksiyonunda su çiçeği hastalığını meydana getirir ve genellikle nörolojik tutulum bulguları yoktur."
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "f3694ce4c15f",
+     "soru": "Şeffaf bir halo ile çevrelenen açık mor, homojen intranükleer inklüzyon (Cowdry A inklüzyon) hangisi ile infeksiyonda görülür?",
+     "secenekler": {
+      "A": "Human papillomavirus",
+      "B": "Neisseria gonorrhoeae",
+      "C": "Herpes Simpleks",
+      "D": "Trichomonas vaginalis"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "HIV'in MSS etkilerini (HIV ensefaliti, HAND, IRIS, primer MSS lenfoması) ve JC virüsünün oligodendrositi hedefleyerek PML yapmasını morfolojisiyle açıklar.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q33",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "JC poliyomavirüsü ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İmmünsüprese hastada oligodendrositi enfekte eder",
+      "B": "İmmün sağlam kişide astrositte latent kalır",
+      "C": "Mikrogliayı enfekte ederek dev hücre oluşturur",
+      "D": "Nöron çekirdeğinde Cowdry tip A inklüzyonu yapar",
+      "E": "Periferik sinirde Schwann hücresini hedef alır"
+     },
+     "dogru": "A",
+     "aciklama": "JC poliyomavirüsü çoğu insanda latenttir; immünsüprese hastada reaktive olur, oligodendrositi hedef alır ve demiyelinizasyonla PML yapar. (s. 32)",
+     "sik_aciklamalari": {
+      "A": "JC poliyomavirüsü çoğu insanda latenttir ve immünsüprese hastada reaktive olarak miyelin yapan oligodendrositi enfekte eder. Bu yolla demiyelinizasyon ve PML geliştiği için ifade doğrudur (s.32).",
+      "B": "Astrositler destek glial hücrelerdir; PML lezyonlarında tuhaf dev astrositler görülür. Ancak virüsün hedefi ve demiyelinizasyonun nedeni oligodendrosit enfeksiyonudur. Doğru bilgi virüsün çoğu insanda latent kalması ve immünsüprese hastada reaktive olmasıdır (s.32).",
+      "C": "Mikroglia beynin fagositik hücresidir; mikrogliayı enfekte edip çok çekirdekli dev hücre oluşturan virüs HIV'dir. JC virüsünün hedefi bu hücre sayılmaz (s.32).",
+      "D": "Cowdry tip A inklüzyonu, herpes ensefalitinde nöron ve glia çekirdeğinde görülen büyük eozinofilik cisimciktir. PML'de inklüzyon devleşmiş oligodendrosit çekirdeğindedir. PML'de çekirdeği devleşmiş oligodendrositler lezyon kenarında yer alır (s.32).",
+      "E": "Schwann hücreleri periferik sinirde miyelini yapan hücrelerdir ve protein ile lipid içerikleri merkezi miyelinden farklıdır. PML merkezi sinir sistemi beyaz maddesini tutar (s.32)."
+     },
+     "bilgi": [
+      97,
+      98,
+      99
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Hedef hücre: oligodendrosit → demiyelinizasyon."
+     },
+     "dayanak": [
+      "cikmis:4bde7b004e4d"
+     ],
+     "s": 32,
+     "onem_id": "o10",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      32,
+      31,
+      41,
+      22
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q34",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Progresif multifokal lökoensefalopati miyelin hastalıkları içinde hangi gruba girer?",
+     "secenekler": {
+      "A": "Miyelinin düzgün oluşmadığı kalıtsal dismiyelinizasyon",
+      "B": "Peroksizomal taşıyıcı defektli lökodistrofi",
+      "C": "Lizozomal enzim eksikliğine bağlı lökodistrofi",
+      "D": "Enfeksiyon sonrası monofazik otoimmün demiyelinizasyon",
+      "E": "Normal miyelinin hasarlandığı edinilmiş demiyelinizasyon"
+     },
+     "dogru": "E",
+     "aciklama": "PML, MS ve toksik-ilaç etkili demiyelinizasyon gibi önceden normal miyelinin hasarlandığı edinilmiş demiyelinizasyondur; lökodistrofiler ise genetik dismiyelinizasyondur. (s. 42)",
+     "sik_aciklamalari": {
+      "A": "Dismiyelinizasyon, miyelinin genetik nedenle düzgün oluşmadığı ya da yıkımının anormal olduğu lökodistrofileri tanımlar. Krabbe, metakromatik lökodistrofi ve adrenolökodistrofi bu gruptadır. Bu hastalıklarda miyelin baştan kusurludur, PML'de ise önceden normal olan miyelin hasarlanır (s.42).",
+      "B": "Peroksizomal taşıyıcı defekti, ABCD1 geni mutasyonuyla çok uzun zincirli yağ asitlerinin yıkılamadığı adrenolökodistrofiyi tanımlar. PML ise virüse bağlı edinilmiş bir hastalıktır (s.42).",
+      "C": "Arilsülfataz A eksikliğiyle sülfatid biriken metakromatik lökodistrofi, lizozomal enzim eksikliğine bağlı kalıtsal bir hastalıktır. PML genetik bir enzim eksikliğinden kaynaklanmaz. PML'de miyelin kaybı JC virüsünün oligodendrositi enfekte etmesiyle sonradan gelişir (s.42).",
+      "D": "Enfeksiyon sonrası monofazik otoimmün demiyelinizasyon, enfeksiyondan 1–2 hafta sonra başlayan akut yaygın ensefalomiyeliti tanımlar. PML ise virüsün doğrudan oligodendrositi enfekte etmesiyle gelişir (s.42).",
+      "E": "Edinilmiş demiyelinizasyon, önceden normal olan miyelinin sonradan hasarlanmasıdır. PML, multipl skleroz ve toksik-ilaç etkili demiyelinizasyonla birlikte bu grubun örneği olduğundan doğru cevaptır (s.42)."
+     },
+     "bilgi": [
+      126,
+      127
+     ],
+     "benzer_cikmis": [
+      "4bde7b004e4d",
+      "q-KURUL_2_C_IKMIS__3-84"
+     ],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Örnek: Multipl Skleroz, PML, toksik-ilaç etkili demiyelinizasyon."
+     },
+     "dayanak": [
+      "cikmis:4bde7b004e4d",
+      "cikmis:q-KURUL_2_C_IKMIS__3-84"
+     ],
+     "s": 42,
+     "onem_id": "o01",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      42,
+      50,
+      51,
+      52,
+      55
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q36",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "HIV ensefalitinin en karakteristik morfolojik bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Cowdry tip A intranükleer inklüzyonlar",
+      "B": "Yamalı demiyelinizasyon, tuhaf dev astrositler",
+      "C": "Mikroglial nodüller, gliyoz, çok çekirdekli dev hücreler",
+      "D": "Çoklu halka tarzı lezyon ve ödem",
+      "E": "Mamiller cisimlerde kanama ve nekroz"
+     },
+     "dogru": "C",
+     "aciklama": "HIV ensefalitinde yaygın mikroglial nodüller, gliyoz ve çok çekirdekli dev hücreler özellikle subkortikal beyaz madde ve diensefalondadır. (s. 31)",
+     "sik_aciklamalari": {
+      "A": "Cowdry tip A inklüzyonları, herpes ensefalitinde nöron ve glia çekirdeğinde görülen büyük eozinofilik cisimciklerdir. HIV ensefalitinin morfolojisi olarak verilmez. Bu inklüzyonlar temporal lob ağırlıklı nekrotizan ve hemorajik ensefalitte bulunur (s.31).",
+      "B": "Yamalı demiyelinizasyon, lipid yüklü makrofajlar ve tuhaf dev astrositler PML'nin morfolojisidir. JC virüsünün oligodendrosit enfeksiyonunu gösterir. PML lezyonunun kenarında inklüzyonlu dev oligodendrosit çekirdekleri görülür (s.31).",
+      "C": "HIV ensefalitinde özellikle subkortikal beyaz madde ve diensefalonda yaygın mikroglial nodüller, gliyoz ve çok çekirdekli dev hücreler görülür. HIV ile enfekte mikroglia bu tabloyu oluşturduğu için doğru cevaptır (s.31).",
+      "D": "Korteks–beyaz madde bileşkesinde çoklu halka tarzı lezyon ve ödem, immünsüprese erişkinde serebral toksoplazmozun görünümüdür. HIV'in doğrudan ensefalitini tanımlamaz. Toksoplazma putamen ve talamusta apse da oluşturabilir (s.31).",
+      "E": "Mamiller cisimlerde kanama ve nekroz odakları, tiamin eksikliğine bağlı Wernicke–Korsakoff sendromunun bulgusudur. Viral bir ensefalitin morfolojisi sayılmaz. Bu bulgular kronik alkol kullanımı gibi tiamin eksikliği nedenlerinin zemininde gelişir (s.31)."
+     },
+     "bilgi": [
+      94,
+      95,
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "çok çekirdekli dev hücreler."
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 31,
+     "onem_id": "o20",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      31,
+      25,
+      32,
+      34,
+      39
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q35",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Progresif multifokal lökoensefalopati ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "JC virüsü çoğu insanda latent kalır",
+      "B": "İmmünsüprese hastada reaktivasyonla gelişir",
+      "C": "Spesifik tedaviyle çoğu hasta tam iyileşir",
+      "D": "Kenarda inklüzyonlu dev oligodendrosit çekirdekleri bulunur",
+      "E": "Beyaz maddede çok odaklı lezyonlar görülür"
+     },
+     "dogru": "C",
+     "aciklama": "PML'de spesifik tedavi yoktur ve hastalık genellikle 1 yıldan kısa sürede ölümcüldür. (s. 32)",
+     "sik_aciklamalari": {
+      "A": "JC poliyomavirüsü insanların çoğunda belirti vermeden latent olarak bulunur. Hastalık ancak bağışıklık baskılandığında ortaya çıktığından ifade doğrudur. Bu latent durum belirti vermez ve bağışıklık sistemi sağlam kaldıkça sürer (s.32).",
+      "B": "PML, latent JC virüsünün immünsüprese hastada yeniden etkinleşmesiyle gelişir. Bu bilgi hastalığın patogenezini doğru anlatır. Reaktive olan virüs miyelini yapan oligodendrositi hedef alır (s.32).",
+      "C": "PML'nin spesifik tedavisi yoktur ve hastalık genellikle bir yıldan kısa sürede ölümcüldür. Tam iyileşme ifadesi yanlış olduğu için doğru cevaptır (s.32).",
+      "D": "PML lezyonlarının kenarında devleşmiş, viral inklüzyon içeren oligodendrosit çekirdekleri görülür. Bu bulgu hastalığın mikroskopik özelliği olarak doğrudur. Bu çekirdekler virüsle enfekte hücreye özgü viral inklüzyon taşır (s.32).",
+      "E": "Görüntülemede hemisferik ve serebellar beyaz maddede çok odaklı lezyonlar izlenir. Hastalığın adındaki multifokal sözcüğü de bunu anlatır; ifade doğrudur. Miyelin boyasında bu alanlar düzensiz, soluk ve yer yer birleşen miyelin kaybı olarak görülür (s.32)."
+     },
+     "bilgi": [
+      97,
+      98,
+      99
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Spesifik tedavi yok Genellikle <1 yılda ölümcül."
+     },
+     "dayanak": [
+      "cikmis:4bde7b004e4d"
+     ],
+     "s": 32,
+     "onem_id": "o10",
+     "kalip": "yanlis_bul",
+     "celdirici_kaynak": [
+      32,
+      33,
+      31
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q37",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Etkili antiretroviral tedaviden sonra hızlı bilişsel bozulma ve serebral ödem gelişen hastanın lezyonlarında yaygın infiltrasyon hangi hücreyle olur?",
+     "secenekler": {
+      "A": "Th1 ve Th17 hücresi",
+      "B": "Plazma hücresi",
+      "C": "Eozinofil",
+      "D": "Lipid yüklü makrofaj",
+      "E": "CD8+ T hücresi"
+     },
+     "dogru": "E",
+     "aciklama": "IRIS etkili tedavi sonrası hızlı bilişsel bozulma ve serebral ödemle gelişir; sıklıkla eşlik eden fırsatçı enfeksiyon vardır ve lezyonlarda yaygın CD8+ T hücre infiltrasyonu görülür. (s. 31)",
+     "sik_aciklamalari": {
+      "A": "Th1 ve Th17 hücreleri, multipl sklerozda miyelin antijenlerine karşı aktive olan yardımcı T hücreleridir. İmmün yeniden yapılanma sendromunun lezyonlarını tanımlamaz. Bu hücreler interferon gama gibi sitokinlerle makrofaj ve lökositleri etkinleştirir (s.31).",
+      "B": "Plazma hücreleri, lenfositlerle birlikte meningovasküler nörosifilizde obliteratif endarteritin hücreleridir. Antiretroviral tedavi sonrası gelişen sendromun infiltratı sayılmaz. Plazma hücreleri bu tabloda arter duvarını daraltan inflamasyonun parçasıdır (s.31).",
+      "C": "Eozinofiller, Taenia solium sistiserkozunda parazit öldükten sonra gelişen yoğun inflamasyonun hücreleridir. Bu sendromun lezyonlarında baskın hücre olarak tanımlanmaz. Eozinofil artışı burada ölen paraziti çevreleyen doku tepkisini yansıtır (s.31).",
+      "D": "Lipid yüklü makrofajlar, aktif multipl skleroz plağında ve PML'de miyelin yıkım ürünlerini temizleyen hücrelerdir. Tarif edilen sendromun yaygın infiltratı T hücreleridir (s.31).",
+      "E": "İmmün yeniden yapılanma inflamatuvar sendromunda lezyonlarda yaygın CD8+ T hücre infiltrasyonu bulunur. Etkili tedavi sonrası hızlı bilişsel bozulma ve ödemle seyreden bu tabloda doğru cevap budur (s.31)."
+     },
+     "bilgi": [
+      94,
+      95,
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Lezyonlarda yaygın CD8+ T hücre infiltrasyonu."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 31,
+     "onem_id": "o20",
+     "kalip": "bilesik",
+     "celdirici_kaynak": [
+      31,
+      46,
+      47,
+      34
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "4bde7b004e4d",
+     "soru": "Hangisi demyelinizan hastalıktır?",
+     "secenekler": {
+      "A": "Metakromatik lökodistrofi",
+      "B": "Canavan hastalığı (demyelinizan)",
+      "C": "Progresif multifokal lökoensefalopati (demyelinizan)",
+      "D": "Alexander hastalığı (demyelinizan)",
+      "E": "Kraubbe Hastalığı"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "q-KURUL_2_C_IKMIS__3-84",
+     "soru": "Hangisi demiyelinizan hastalıktır?",
+     "secenekler": {
+      "A": "Metakromatik lökodistrofi",
+      "B": "Progresif multifokal lökoensefalopati",
+      "C": "Krabbe hastalığı",
+      "D": "Adrenolökodistrofi",
+      "E": "Canavan hastalığı"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Serebral toksoplazmoz, sistiserkoz, amebik meningoensefalit ile epidural apse ve subdural ampiyemin özelliklerini ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q38",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Konjenital toksoplazmozun klasik triadı hangisidir?",
+     "secenekler": {
+      "A": "Periventriküler nekroz, kalsifikasyon, mikrosefali",
+      "B": "Koryoretinit, hidrosefali, kalsifikasyon",
+      "C": "Akut psikoz, göz hareket bozukluğu, ataksi",
+      "D": "Ateş, baş ağrısı, boyun sertliği",
+      "E": "Davranış değişikliği, adrenal yetmezlik, demiyelinizasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Konjenital toksoplazmoz koryoretinit, hidrosefali ve kalsifikasyon üçlüsüyle; erişkinde ise çoklu halka tarzı lezyonlarla seyreder. (s. 34)",
+     "sik_aciklamalari": {
+      "A": "Periventriküler nekroz, kalsifikasyon ve mikrosefali intrauterin sitomegalovirüs enfeksiyonunun sonuçlarıdır. Kalsifikasyon ortak olsa da bu üçlü toksoplazmozu tanımlamaz. Sitomegalovirüs fetal beyinde ventrikül çevresindeki dokuyu tutar (s.34).",
+      "B": "Konjenital toksoplazmozun klasik triadı koryoretinit, hidrosefali ve kalsifikasyondur. Toxoplasma gondii fetüste bu üç bulguyu birlikte yaptığı için doğru cevaptır. Kalsifikasyon intrauterin sitomegalovirüste de görülür ama koryoretinitle birlikte toksoplazmayı gösterir (s.34).",
+      "C": "Akut psikoz, göz hareket bozukluğu ve ataksi, tiamin eksikliğine bağlı Wernicke ensefalopatisinin bulgularıdır. Tiamin tedavisiyle geri dönebilir. Bu üçlü tedavi edilmezse kalıcı Korsakoff amnezisine ilerler (s.34).",
+      "D": "Ateş, baş ağrısı ve boyun sertliği akut piyojenik menenjitin klinik bulgularıdır. Fotofobi ve bilinç bulanıklığı da eşlik eder; konjenital bir triad sayılmaz (s.34).",
+      "E": "Davranış değişikliği, adrenal yetmezlik ve beyaz madde demiyelinizasyonu adrenolökodistrofinin klinik tablosudur. X'e bağlı kalıtsal bir hastalıktır, enfeksiyon sayılmaz. Bu hastalıkta ABCD1 geni bozuktur ve serumda çok uzun zincirli yağ asitleri yükselir (s.34)."
+     },
+     "bilgi": [
+      102,
+      103,
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Konjenital triad: koryoretinit, hidrosefali, kalsifikasyon."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 34,
+     "onem_id": "o21",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      34,
+      27,
+      38,
+      8,
+      55
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q39",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Taenia solium sistiserkozu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Merkezde liküfaksiyon nekrozlu bakteriyel odak yapar",
+      "B": "Virchow–Robin boşluklarını genişletip sabun köpüğü yapar",
+      "C": "Köprü ven tromboflebitiyle venöz enfarkt yapar",
+      "D": "Parazit ölünce eozinofilik inflamasyonla semptomlar artar",
+      "E": "Konjenital olarak koryoretinit ve kalsifikasyon yapar"
+     },
+     "dogru": "D",
+     "aciklama": "Sistiserkozda larvalar MSS'ye yerleşip kist oluşturur, kitle lezyonu ve nöbet yapar; parazit ölünce yoğun eozinofilik inflamasyon ve gliyozla semptomlar artar. (s. 34)",
+     "sik_aciklamalari": {
+      "A": "Merkezinde liküfaksiyon nekrozu bulunan, dışı granülasyon dokusuyla çevrili odak beyin apsesidir. Sistiserkozda lezyon larva kistidir. Apsenin çevresinde ödem ve dışta neovaskülarizasyonlu granülasyon dokusu bulunur (s.34).",
+      "B": "Virchow–Robin boşluklarının genişlemesi ve sabun köpüğü görünümü kriptokok enfeksiyonunun bulgusudur. Parazitin yaptığı kistik lezyonla karıştırılmamalıdır. Kriptokoklar perivasküler alanda yayılarak bu boşlukları genişletir (s.34).",
+      "C": "Köprü ven tromboflebiti ve venöz enfarkt, subdural ampiyemin komplikasyonudur. Sistiserkozda larvalar beyin dokusunda kist oluşturur. Subdural ampiyem sinüzit ya da osteomiyelit gibi komşu odaklardan gelişir (s.34).",
+      "D": "Parazit öldüğünde çevresinde yoğun eozinofilik inflamasyon ve gliyoz gelişir. Bu doku tepkisi kitle etkisini ve nöbetleri artırdığından ifade doğrudur. Bu yüzden parazitin ölümü belirtilerin geçici olarak artmasına yol açar (s.34).",
+      "E": "Koryoretinit, hidrosefali ve kalsifikasyon konjenital toksoplazmozun klasik triadıdır. Bu bulgu Toxoplasma gondii'ye aittir, Taenia solium'a değil. Taenia solium ise larva kistiyle kitle lezyonu ve nöbet yapar (s.34)."
+     },
+     "bilgi": [
+      102,
+      103,
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Parazit ölümü ile yoğun eozinofilik inflamasyon ve gliyoz; semptom artışı."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 34,
+     "onem_id": "o21",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      34,
+      20,
+      17,
+      36
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q40",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Ilık durgun suyla bulaşan ve hızla ölümcül nekrotizan meningoensefalit yapan amip hangisidir?",
+     "secenekler": {
+      "A": "Naegleria fowleri",
+      "B": "Entamoeba histolytica",
+      "C": "Acanthamoeba türleri",
+      "D": "Toxoplasma gondii",
+      "E": "Taenia solium"
+     },
+     "dogru": "A",
+     "aciklama": "Naegleria fowleri ılık durgun suda bulunur ve hızla ölümcül nekrotizan meningoensefalit yapar; Acanthamoeba kronik granülomatöz tablo oluşturur. (s. 36)",
+     "sik_aciklamalari": {
+      "A": "Naegleria fowleri ılık durgun sudan bulaşan bir amiptir ve hızla ölümcül nekrotizan meningoensefalit yapar. Tarif edilen tablonun etkeni olduğu için doğru cevaptır (s.36).",
+      "B": "Entamoeba histolytica kolondan yayılarak beyne ulaşan bir amiptir. Ani başlayıp hızla ölüme yol açar ama bulaşı ılık durgun suyla tanımlanmaz. Bu amip beyne bağırsak enfeksiyonundan kan yoluyla taşınır (s.36).",
+      "C": "Acanthamoeba türleri kronik granülomatöz meningoensefalit yapan amiplerdir. Seyri kroniktir; hızla ölümcül nekrotizan süreç Naegleria'ya aittir. Acanthamoeba enfeksiyonunda granülom oluşumu baskındır (s.36).",
+      "D": "Toxoplasma gondii, immünsüprese erişkinde ve konjenital enfeksiyonda beyni tutan bir protozoondur. Amip değildir ve çoklu halka tarzı lezyon yapar. Konjenital toksoplazmoz koryoretinit, hidrosefali ve kalsifikasyon üçlüsüyle tanınır (s.36).",
+      "E": "Taenia solium larvalarıyla beyinde kist oluşturan bir parazittir. Kitle lezyonu ve nöbet yapar, amebik meningoensefalit etkeni sayılmaz. Sistiserkozda parazit ölünce yoğun eozinofilik inflamasyon gelişir (s.36)."
+     },
+     "bilgi": [
+      108,
+      109,
+      110
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Naegleria fowleri: ılık durgun suda, hızlı ölümcül nekrotizan süreç."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 36,
+     "onem_id": "o22",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      36,
+      34,
+      7
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q41",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Subdural ampiyemde venöz enfarktın gelişim yolu hangisidir?",
+     "secenekler": {
+      "A": "Omurilik kompresyonu → parapleji",
+      "B": "Köprü ven tromboflebiti → venöz enfarkt",
+      "C": "Bazal araknoid fibrozis → hidrosefali",
+      "D": "Obliteratif endarterit → enfarkt",
+      "E": "Virchow–Robin genişlemesi → kistik alan"
+     },
+     "dogru": "B",
+     "aciklama": "Subdural ampiyem kitle etkisi yapar; köprü ven tromboflebiti venöz enfarkta yol açar. Uygun cerrahi ve antibiyotikle genellikle tam iyileşme olur. (s. 36)",
+     "sik_aciklamalari": {
+      "A": "Omurilik kompresyonu, özellikle spinal yerleşimli epidural apsede gelişen acil durumdur. Subdural ampiyemdeki venöz enfarktı açıklamaz. Epidural apse çoğunlukla sinüzit ya da osteomiyelit gibi komşu bir odaktan gelişir (s.36).",
+      "B": "Subdural ampiyemde köprü venlerde tromboflebit gelişir ve venöz drenaj bozularak venöz enfarkt oluşur. Kitle etkisine eşlik eden bu komplikasyon zinciri doğru cevaptır (s.36).",
+      "C": "Bazal araknoid fibrozis, tüberküloz menenjitinde BOS emilimini bozarak hidrosefali yapar. Subdural ampiyemin venöz enfarkt yolu sayılmaz. Bu fibrozis beyin tabanındaki zarlarda kronik inflamasyonla oluşur (s.36).",
+      "D": "Obliteratif endarterit, meningovasküler nörosifilizde plazma hücresinden zengin arter duvarı inflamasyonudur. Venöz değil arteriyel bir süreçtir. Obliteratif endarteritte plazma hücresi ve lenfositten zengin infiltrat arter lümenini daraltır (s.36).",
+      "E": "Virchow–Robin boşluklarının genişlemesi kriptokok enfeksiyonunda sabun köpüğü görünümü yapar. Venöz enfarkt mekanizması sayılmaz. Kriptokok organizmaları damar çevresindeki bu boşluklarda yayılarak çok sayıda küçük kistik alan oluşturur (s.36)."
+     },
+     "bilgi": [
+      108,
+      109,
+      110
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Subdural ampiyem: kitle etkisi, köprü ven tromboflebiti → venöz enfarkt."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 36,
+     "onem_id": "o22",
+     "kalip": "sira",
+     "celdirici_kaynak": [
+      36,
+      13,
+      15,
+      17,
+      9
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Tiamin eksikliğinde Wernicke–Korsakoff ile B12 eksikliğinde subakut kombine dejenerasyonun nedenlerini, morfolojisini, kliniğini ve geri dönüşümlülüğünü açıklar.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q42",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Wernicke–Korsakoff sendromuna yol açan eksiklik hangisidir?",
+     "secenekler": {
+      "A": "B12 eksikliği",
+      "B": "Galaktosil-seramidaz eksikliği",
+      "C": "Arilsülfataz A eksikliği",
+      "D": "Tiamin eksikliği",
+      "E": "Hiponatremi"
+     },
+     "dogru": "D",
+     "aciklama": "Tiamin eksikliği Wernicke–Korsakoff'a, B12 eksikliği subakut kombine dejenerasyona yol açar. (s. 37)",
+     "sik_aciklamalari": {
+      "A": "B12 eksikliği megaloblastik anemi ve subakut kombine dejenerasyon yapar. Omurilik beyaz maddesini tutar, Wernicke–Korsakoff sendromunun nedeni sayılmaz. Bu hastalıkta haftalar içinde ataksi, parestezi ve spastik güçsüzlük gelişir (s.37).",
+      "B": "Galaktosil-seramidaz eksikliği Krabbe hastalığına yol açan kalıtsal enzim eksikliğidir. Sitotoksik galaktosil-sfingozin birikir ve yaygın miyelin kaybı olur. Krabbe hastalığı 3–6 aylıkken başlar ve hızla ilerler (s.37).",
+      "C": "Arilsülfataz A eksikliği metakromatik lökodistrofinin nedenidir ve makrofajlarda sülfatid birikir. Beslenmeye bağlı bir eksiklik sayılmaz. Biriken sülfatid toluidin mavisiyle metakromazi denen anormal renk değişimi gösterir (s.37).",
+      "D": "Tiamin eksikliği, kronik alkol kullanımı, malabsorpsiyon ve sürekli kusmada gelişen bir vitamin eksikliğidir. Wernicke–Korsakoff sendromunun nedeni olduğu için doğru cevaptır (s.37).",
+      "E": "Hiponatreminin ani düzeltilmesi ozmotik demiyelinizasyon sendromuna ve hızla gelişen kuadripleji tablosuna yol açar. Wernicke–Korsakoff sendromunun nedeni sayılmaz. Bu sendromun nedeni bir vitamin eksikliği değil, sodyum düzeyinin hızla değiştirilmesidir (s.37)."
+     },
+     "bilgi": [
+      112,
+      113
+     ],
+     "benzer_cikmis": [
+      "558be25ec117"
+     ],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "Tiamin eksikliği → Wernicke–Korsakoff"
+     },
+     "dayanak": [
+      "cikmis:558be25ec117"
+     ],
+     "s": 37,
+     "onem_id": "o05",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      37,
+      52,
+      54,
+      50
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q43",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi tiamin eksikliğine yol açan durumlardan değildir?",
+     "secenekler": {
+      "A": "Hiponatreminin hızlı düzeltilmesi",
+      "B": "Kronik alkol kullanım bozukluğu",
+      "C": "Gastrik cerrahi",
+      "D": "Hiperemezis gravidarum",
+      "E": "Sürekli kusmaya yol açan bulimia nervosa"
+     },
+     "dogru": "A",
+     "aciklama": "Tiamin eksikliği kronik alkol kullanımı, malabsorpsiyon, gastrik cerrahi ve sürekli kusmada (hiperemezis gravidarum, bulimia nervosa) gelişir. (s. 38)",
+     "sik_aciklamalari": {
+      "A": "Hiponatreminin hızlı düzeltilmesi ozmotik demiyelinizasyon sendromuna yol açar ve sınırlı miyelin kaybıyla kuadripleji yapar. Tiamin eksikliği nedeni olmadığı için doğru cevaptır (s.38).",
+      "B": "Kronik alkol kullanım bozukluğu tiamin eksikliğinin en bilinen nedenidir. Wernicke–Korsakoff sendromunun zemini olarak sayıldığından ifade doğrudur. Bu hastalarda Wernicke ensefalopatisi ve tedavisiz kalırsa kalıcı Korsakoff amnezisi gelişebilir (s.38).",
+      "C": "Gastrik cerrahi, besinlerin emilimini bozarak tiamin eksikliğine yol açabilir. Malabsorpsiyonla birlikte tiamin eksikliği nedenleri arasında yer alır. Mide ameliyatı sonrası emilim yüzeyinin azalması vitamin eksikliğine zemin hazırlar (s.38).",
+      "D": "Hiperemezis gravidarum gebelikte görülen sürekli kusmadır. Tiamin kaybına yol açarak Wernicke ensefalopatisine zemin hazırlar. Bu gebelerde inatçı kusma nedeniyle besin ve vitamin alımı ciddi biçimde azalır (s.38).",
+      "E": "Bulimia nervosa, tekrarlayan kusmayla seyreden bir yeme bozukluğudur. Sürekli kusma tiamin eksikliğinin nedenlerinden biri olarak sayılır. Kusma ile vitamin kaybı ve yetersiz alım birleşerek eksikliği derinleştirir (s.38)."
+     },
+     "bilgi": [
+      114,
+      115,
+      116
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Kronik alkol kullanım bozukluğu Malabsorpsiyon, gastrik cerrahi"
+     },
+     "dayanak": [
+      "cikmis:558be25ec117"
+     ],
+     "s": 38,
+     "onem_id": "o05",
+     "kalip": "olumsuz",
+     "celdirici_kaynak": [
+      38,
+      50,
+      37
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q44",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Wernicke–Korsakoff sendromunda en sık tutulan yapı hangisidir?",
+     "secenekler": {
+      "A": "Temporal lobun medial kısmı",
+      "B": "Omurilik beyaz maddesi",
+      "C": "Periventriküler beyaz madde",
+      "D": "Putamen ve talamus",
+      "E": "Mamiller cisimler"
+     },
+     "dogru": "E",
+     "aciklama": "Wernicke–Korsakoff'ta en sık mamiller cisimler, hipotalamus ve 3.–4. ventrikül çevresi tutulur; kanama, nekroz, kistik boşluk ve hemosiderin yüklü makrofaj görülür. (s. 39)",
+     "sik_aciklamalari": {
+      "A": "Temporal lobun alt ve medial kısmı, herpes simplex ensefalitinde en ağır nekrotizan lezyonların bulunduğu bölgedir. Tiamin eksikliğinin hedefi sayılmaz. Bu herpes tutulumu nekrotizan ve sıklıkla hemorajik özelliktedir (s.39).",
+      "B": "Omurilik beyaz maddesi, B12 eksikliğinde yaygın demiyelinizasyon ve akson kaybının yeridir. Subakut kombine dejenerasyonu anlatır. B12 eksikliğinde ataksi, parestezi ve spastik güçsüzlük bu hasara bağlıdır (s.39).",
+      "C": "Periventriküler beyaz madde, multipl skleroz plaklarının sık yerleştiği bölgedir. Keskin sınırlı demiyelinizasyon plakları burada görülür. MS plakları ayrıca optik sinir, beyin sapı, serebellum ve omurilikte de yerleşir (s.39).",
+      "D": "Putamen ve talamustaki apseler, immünsüprese hastada toksoplazma enfeksiyonunun görünümüdür. Wernicke–Korsakoff sendromunun en sık tutulan yapısı sayılmaz. Toksoplazma bu derin gri çekirdeklerde halka tarzı lezyonlar yapar (s.39).",
+      "E": "Mamiller cisimler, Wernicke–Korsakoff sendromunda en sık tutulan yapıdır. Burada kanama ve nekroz odakları, sonra kistik boşluklar ve hemosiderin yüklü makrofajlar görüldüğü için doğru cevaptır (s.39)."
+     },
+     "bilgi": [
+      117,
+      118,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "En sık tutulan bölgeler: Mamiller cisimler"
+     },
+     "dayanak": [
+      "cikmis:558be25ec117"
+     ],
+     "s": 39,
+     "onem_id": "o05",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      39,
+      25,
+      40,
+      47,
+      35
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q46",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "B12 eksikliğinin sinir sistemi etkisiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Omurilik ön boynuzunda motor nöronları hasarlar",
+      "B": "Dorsal kök duyu sinirlerinde hasar yapar",
+      "C": "Omurilik beyaz maddesinde demiyelinizasyon ve akson kaybı yapar",
+      "D": "Mamiller cisimlerde kanama ve nekroz yapar",
+      "E": "Optik sinirde antikor aracılı demiyelinizasyon yapar"
+     },
+     "dogru": "C",
+     "aciklama": "B12 eksikliği megaloblastik anemiyle birlikte omurilik beyaz maddesinde yaygın demiyelinizasyon ve akson kaybı yapar. (s. 40)",
+     "sik_aciklamalari": {
+      "A": "Motor nöron hasarı, poliovirüsün az olguda yaptığı ve flasid paraliziye yol açan lezyondur. B12 eksikliğinin omurilik bulgusu bu sayılmaz. B12 eksikliğinde ise lezyon gri madde motor nöronunda değil, beyaz madde yollarındadır (s.40).",
+      "B": "Dorsal kök duyu sinir hasarı, tabes dorsalisin temel lezyonudur ve pozisyon duyusu kaybıyla ataksi yapar. Nörosifilize ait bir bulgudur. B12 eksikliği ise omuriliğin kendi beyaz madde yollarını tutar (s.40).",
+      "C": "B12 eksikliğinde omurilik beyaz maddesinde yaygın demiyelinizasyon ve akson kaybı gelişir. Subakut kombine dejenerasyonun temel lezyonu olduğu için ifade doğrudur. Bu hasar erken B12 replasmanıyla geri dönebilir, ancak yerleşmiş parapleji genelde kalıcıdır (s.40).",
+      "D": "Mamiller cisimlerde kanama ve nekroz odakları tiamin eksikliğine bağlı Wernicke–Korsakoff sendromunun bulgusudur. B12 eksikliğinin hedefi omuriliktir. Bu odaklar tiamin tedavisi gecikirse kalıcı amneziyle sonuçlanabilir (s.40).",
+      "E": "Optik sinir ve omurilikte antikor aracılı demiyelinizasyon nöromiyelit optikanın mekanizmasıdır. B12 eksikliğinin yaptığı hasarı tanımlamaz. B12 eksikliği ise omurilikte demiyelinizasyon ve akson kaybı yapan bir beslenme bozukluğudur (s.40)."
+     },
+     "bilgi": [
+      120,
+      121,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Omurilik beyaz maddesinde yaygın demiyelinizasyon ve akson kaybı."
+     },
+     "dayanak": [
+      "cikmis:d3-b-071"
+     ],
+     "s": 40,
+     "onem_id": "o14",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      40,
+      27,
+      15,
+      36,
+      50
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q45",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Wernicke–Korsakoff sendromunda hafıza bozukluğuyla ilişkili yapı hangisidir?",
+     "secenekler": {
+      "A": "Frontal orbital giruslar ve temporal lob",
+      "B": "Dorsal kök duyu sinirleri",
+      "C": "Talamusun medial dorsal çekirdeği",
+      "D": "Optik sinir ve kiazma",
+      "E": "Serebellum ve beyin sapı"
+     },
+     "dogru": "C",
+     "aciklama": "Wernicke–Korsakoff'ta talamusun medial dorsal çekirdeğinin tutulumu hafıza bozukluğu ile ilişkilidir. (s. 39)",
+     "sik_aciklamalari": {
+      "A": "Frontal orbital giruslar, temporal lobun alt-medial kısmıyla birlikte herpes ensefalitinde en ağır nekrotizan lezyonların yeridir. Tiamin eksikliğinde hafıza bozukluğuyla bağlanan yapı sayılmaz (s.39).",
+      "B": "Dorsal kök duyu sinirleri, tabes dorsalisde hasarlanan ve pozisyon duyusu kaybına yol açan yapılardır. Hafıza ile ilişkili sayılmaz. Bu sinirlerin hasarı şimşek ağrılarına ve derin tendon refleks kaybına da yol açar (s.39).",
+      "C": "Talamusun medial dorsal çekirdeği, Wernicke–Korsakoff sendromunda tutulduğunda hafıza bozukluğuyla ilişkilendirilen yapıdır. Korsakoff'taki kalıcı amneziyi açıkladığı için doğru cevaptır. Mamiller cisimler en sık tutulan bölge olsa da bellek kaybıyla özellikle bu çekirdek ilişkilendirilir (s.39).",
+      "D": "Optik sinir ve kiazma, multipl skleroz plaklarının sık yerleştiği yerlerdir ve optik nörit yapabilir. Wernicke–Korsakoff sendromunun bellek yapısı sayılmaz. Bu bölgelerdeki plaklar keskin sınırlı beyaz madde lezyonlarıdır (s.39).",
+      "E": "Serebellum ve beyin sapı multipl sklerozun sık tuttuğu bölgelerdir; tutulumları ataksi ve nistagmus yapar. Hafıza bozukluğu için tanımlanan yapılar bunlar sayılmaz (s.39)."
+     },
+     "bilgi": [
+      117,
+      118,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Hafıza bozukluğu ile ilişkili."
+     },
+     "dayanak": [
+      "cikmis:558be25ec117"
+     ],
+     "s": 39,
+     "onem_id": "o05",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      39,
+      25,
+      15,
+      47
+     ],
+     "cikarim": true
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q47",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Subakut kombine dejenerasyon ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Megaloblastik anemiyle birlikte görülür",
+      "B": "Hafif ataksi ve alt ekstremite paresteziyle başlar",
+      "C": "Spastik güçsüzlük gelişebilir",
+      "D": "Erken B12 replasmanıyla geri dönebilir",
+      "E": "Yerleşmiş parapleji tedaviyle tamamen düzelir"
+     },
+     "dogru": "E",
+     "aciklama": "Subakut kombine dejenerasyon erken B12 replasmanıyla geri dönebilir; yerleşmiş parapleji genelde kalıcıdır. (s. 40)",
+     "sik_aciklamalari": {
+      "A": "B12 eksikliği megaloblastik anemi ile birlikte merkezi sinir sistemini etkiler. Bu ifade hastalığın zeminini doğru anlatır. Kan ve sinir sistemi bulgularının birlikte görülmesi B12 eksikliğini düşündürmede yol gösterir (s.40).",
+      "B": "Klinik haftalar içinde başlayan hafif ataksi ve alt ekstremitede paresteziyle ortaya çıkar. Bu ifade hastalığın başlangıcını doğru tanımlar. Bu belirtiler omurilik beyaz maddesindeki demiyelinizasyonun ilk yansımasıdır (s.40).",
+      "C": "Omurilik beyaz maddesi hasarı ilerledikçe spastik güçsüzlük gelişir. İleri olgularda parapleji görülür; ifade doğrudur. Spastik güçsüzlük kas tonusu artmış, refleksleri canlı bir felç tablosudur (s.40).",
+      "D": "Erken dönemde B12 verilmesi nörolojik bulguları geri döndürebilir. Erken tedavide geri dönüşümlülük bu hastalığın önemli özelliğidir; ifade doğrudur. Bu nedenle B12 eksikliğinin erken tanınması kalıcı hasarı önlemek için kritiktir (s.40).",
+      "E": "Subakut kombine dejenerasyonda erken B12 replasmanı tabloyu geri döndürebilir, ancak yerleşmiş parapleji genelde kalıcıdır. Tamamen düzelir ifadesi yanlış olduğu için doğru cevaptır (s.40)."
+     },
+     "bilgi": [
+      120,
+      121,
+      122
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Yerleşmiş parapleji genelde kalıcı."
+     },
+     "dayanak": [
+      "cikmis:d3-b-071"
+     ],
+     "s": 40,
+     "onem_id": "o14",
+     "kalip": "yanlis_bul",
+     "celdirici_kaynak": [
+      40,
+      38,
+      57
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "558be25ec117",
+     "soru": "Tiamin eksikliğinde göz hareketleri anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom hangisidir?",
+     "secenekler": {
+      "A": "Von Hippel-Lindau",
+      "B": "Tüberoz Skleroz",
+      "C": "Wernicke ensefalopatisi",
+      "D": "Multiple skleroz"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "MSS ve periferik miyelini, edinilmiş demiyelinizasyonu ve dismiyelinizasyonu ayırt eder; MS'in tanımını, epidemiyolojisini, genetiğini, otoimmün patogenezini, plak morfolojisini, BOS bulgularını ve klinik tiplerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q48",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Multipl sklerozun tanımındaki iki temel yayılım özelliği hangisidir?",
+     "secenekler": {
+      "A": "Çocuklukta başlangıç, simetrik beyaz madde kaybı",
+      "B": "Farklı zamanlarda ataklar, farklı bölgelerde plaklar",
+      "C": "Enfeksiyon sonrası monofazik seyir",
+      "D": "Hiponatremi düzeltmesi sonrası kuadripleji",
+      "E": "Optik sinir ve omurilikte antikor aracılı hasar"
+     },
+     "dogru": "B",
+     "aciklama": "MS tanısı için hasarların hem farklı zamanlarda tekrarladığı hem de beynin/omuriliğin farklı bölgelerine yayıldığı gösterilmelidir. (s. 43)",
+     "sik_aciklamalari": {
+      "A": "Çocuklukta başlangıç ve görüntülemede yaygın simetrik beyaz madde kaybı lökodistrofilerin özellikleridir. Kalıtsal dismiyelinizasyonu tanımlar. Lökodistrofilerde miyelin genetik nedenle baştan düzgün oluşmaz (s.43).",
+      "B": "Multipl sklerozda ataklar farklı zamanlarda ayrılır ve plaklar farklı anatomik bölgelerin beyaz maddesindedir. Zamanda ve yerde yayılım tanının temelidir; doğru cevap budur (s.43).",
+      "C": "Enfeksiyondan 1–2 hafta sonra başlayan monofazik seyir akut yaygın ensefalomiyeliti tanımlar. Tekrarlayan ataklarla seyreden multipl sklerozdan farklıdır. Bu hastalıkta baş ağrısı, bilinç değişikliği ve koma gibi yaygın belirtiler görülür (s.43).",
+      "D": "Hiponatreminin ani düzeltilmesinden sonra hızla gelişen kuadripleji ozmotik demiyelinizasyon sendromudur. Otoimmün değil, oligodendrosite yönelik bir hasardır. Bu tabloda tek seferlik bir elektrolit değişikliği hasarı başlatır (s.43).",
+      "E": "Optik sinir ve omurilikte antikor aracılı demiyelinizasyon nöromiyelit optikanın tanımıdır. Multipl sklerozu tanımlayan zaman ve yer yayılımı sayılmaz. Nöromiyelit optikada hasar bu iki yapıda yoğunlaşır (s.43)."
+     },
+     "bilgi": [
+      128,
+      129
+     ],
+     "benzer_cikmis": [
+      "4c4eb178b88b"
+     ],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Farklı anatomik bölgelerde) beyaz madde plakları."
+     },
+     "dayanak": [
+      "cikmis:4c4eb178b88b"
+     ],
+     "s": 43,
+     "onem_id": "o03",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      43,
+      50,
+      51
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q49",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Başlangıcı genellikle 20–40 yaşta olan, kadınlarda yaklaşık iki kat sık görülen demiyelinizan hastalık hangisidir?",
+     "secenekler": {
+      "A": "Adrenolökodistrofi",
+      "B": "Krabbe hastalığı",
+      "C": "Akut yaygın ensefalomiyelit",
+      "D": "Multipl skleroz",
+      "E": "Ozmotik demiyelinizasyon sendromu"
+     },
+     "dogru": "D",
+     "aciklama": "MS genellikle 20–40 yaşta başlar, kadın/erkek oranı yaklaşık 2:1'dir; ABD ve Avrupa'da sıklığı yaklaşık 1/1000'dir. (s. 43)",
+     "sik_aciklamalari": {
+      "A": "Adrenolökodistrofi, X'e bağlı resesif kalıtılan ve çocukluk–ergenlikte başlayan bir lökodistrofidir. Davranış değişikliği ve adrenal yetmezlik yapar. Bu hastalıkta serumda çok uzun zincirli yağ asitleri yükselir (s.43).",
+      "B": "Krabbe hastalığı otozomal resesif bir lökodistrofidir ve 3–6 aylıkken başlayıp hızla ilerler. Hastaların çoğu iki yıldan uzun yaşamaz. Hastalığın ayırt edici bulgusu lipitle dolu çok çekirdekli globoid hücrelerdir (s.43).",
+      "C": "Akut yaygın ensefalomiyelit, enfeksiyondan 1–2 hafta sonra başlayan monofazik otoimmün demiyelinizasyondur. Yaş ve cinsiyet ağırlığıyla tanımlanmaz. Hastaların yaklaşık yüzde yirmisi kaybedilir, kalanlarda sıklıkla tam iyileşme olur (s.43).",
+      "D": "Multipl skleroz otoimmün demiyelinizan bir hastalıktır, genellikle 20–40 yaşta başlar ve kadın erkek oranı yaklaşık ikiye birdir. Tarif edilen epidemiyolojik özellikler ona ait olduğu için doğru cevaptır (s.43).",
+      "E": "Ozmotik demiyelinizasyon sendromu, hiponatreminin ani düzeltilmesinden sonra gelişen sınırlı miyelin kaybıdır. Belirli bir yaş ve cinsiyet dağılımıyla tarif edilmez. Hızla gelişen kuadripleji bu sendromun tipik bulgusudur (s.43)."
+     },
+     "bilgi": [
+      128,
+      129
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h44",
+      "q-2__kurul_-6"
+     ],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Başlangıç genellikle 20–40 yaş;"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2025-2026-h44",
+      "cikmis:q-2__kurul_-6"
+     ],
+     "s": 43,
+     "onem_id": "o03",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      43,
+      51,
+      52,
+      50
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q50",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Multipl skleroz patogenezinde miyelin antijenlerine karşı aktive olan hücreler hangisidir?",
+     "secenekler": {
+      "A": "Th1 ve Th17 hücreleri",
+      "B": "CD8+ T hücreleri",
+      "C": "Nötrofilik lökositler",
+      "D": "Eozinofilik lökositler",
+      "E": "Mikroglial dev hücreler"
+     },
+     "dogru": "A",
+     "aciklama": "MS'te Th1/Th17 hücreleri miyelin antijenlerine karşı aktive olur; IFN-γ ve sitokinlerle makrofaj ve lökositler uyarılır, B hücreleri ve antikorlar da önemlidir. (s. 46)",
+     "sik_aciklamalari": {
+      "A": "Th1 ve Th17 hücreleri, multipl sklerozda miyelin antijenlerine karşı aktive olan yardımcı T hücreleridir. IFN-γ ve diğer sitokinlerle makrofaj ve lökositleri uyardıkları için doğru cevaptır (s.46).",
+      "B": "CD8+ T hücreleri, etkili antiretroviral tedavi sonrası gelişen immün yeniden yapılanma sendromunun lezyonlarında yaygın olan hücrelerdir. Multipl skleroz patogenezinde temel aktive hücre Th1 ve Th17'dir (s.46).",
+      "C": "Nötrofilik lökositler, akut piyojenik menenjitte subaraknoid boşlukta yoğun bulunan ve BOS'ta nötrofilik pleositoz yapan hücrelerdir. Miyelin antijenine karşı aktive olan hücreler sayılmaz (s.46).",
+      "D": "Eozinofilik lökositler, sistiserkozda parazit ölümünden sonra gelişen yoğun inflamasyonun hücreleridir. Multipl sklerozun otoimmün mekanizmasında yer almaz. MS'te ise miyelin antijenlerine karşı Th1 ve Th17 hücreleri aktive olur (s.46).",
+      "E": "Çok çekirdekli dev hücreler, HIV ile enfekte mikrogliadan kaynaklanır ve HIV ensefalitinin bulgusudur. Multipl sklerozda miyeline karşı aktive olan hücreler bunlar sayılmaz (s.46)."
+     },
+     "bilgi": [
+      133,
+      134,
+      135
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q91"
+     ],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Th1/Th17 hücreleri miyelin antijenlerine karşı aktive"
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q91"
+     ],
+     "s": 46,
+     "onem_id": "o25",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      46,
+      31,
+      34,
+      47
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q52",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi multipl sklerozda plakların sık yerleştiği yerlerden değildir?",
+     "secenekler": {
+      "A": "Periventriküler alanlar",
+      "B": "Optik sinir ve kiazma",
+      "C": "Beyin sapı",
+      "D": "Mamiller cisimler",
+      "E": "Omurilik"
+     },
+     "dogru": "D",
+     "aciklama": "MS plakları özellikle periventriküler alanlar, optik sinir ve kiazma, beyin sapı, serebellum ve omurilikte yerleşir. (s. 47)",
+     "sik_aciklamalari": {
+      "A": "Periventriküler alanlar, multipl skleroz plaklarının en tipik yerleşim yeridir. Ventrikül çevresindeki beyaz maddede keskin sınırlı plaklar görülür. Ventrikül çevresi MS plaklarının en çok yoğunlaştığı yer olarak bilinir (s.47).",
+      "B": "Optik sinir ve kiazma multipl sklerozda sık tutulur. Bu tutulum ilk belirti olarak optik nörit şeklinde ortaya çıkabilir. Optik sinir plağı görme kaybı ve göz ağrısıyla seyreden optik nöriti oluşturur (s.47).",
+      "C": "Beyin sapı plakları multipl sklerozda ataksi, nistagmus ve internükleer oftalmopleji yapar. Sık tutulan bölgeler arasındadır. Bu bulgular atak döneminde ortaya çıkar ve aralarında düzelme olabilir (s.47).",
+      "D": "Mamiller cisimler, tiamin eksikliğine bağlı Wernicke–Korsakoff sendromunda en sık tutulan yapıdır. Multipl skleroz plaklarının sık yerleşim yerleri arasında sayılmadığı için doğru cevaptır (s.47).",
+      "E": "Omurilik plakları motor ve duyu bozuklukları, spastisite ve mesane disfonksiyonu yapar. Multipl sklerozun sık tutulum yeridir. Omurilik plakları bacaklarda güçsüzlük ve idrar yakınmalarının kaynağıdır (s.47)."
+     },
+     "bilgi": [
+      136,
+      137,
+      138
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q91"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "periventriküler alanlar, optik sinir ve kiazma, beyin sapı, serebellum, omurilik."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q91",
+      "cikmis:q-2021final_230619_142600-3-r62"
+     ],
+     "s": 47,
+     "onem_id": "o02",
+     "kalip": "olumsuz",
+     "celdirici_kaynak": [
+      47,
+      39,
+      25
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q53",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Aktif multipl skleroz plağına hücresel görünüm veren en tipik bulgu hangisidir?",
+     "secenekler": {
+      "A": "Miyelin kalıntılarıyla dolu makrofajlar",
+      "B": "Belirgin gliyoz",
+      "C": "İnklüzyonlu devleşmiş oligodendrositler",
+      "D": "Globoid hücreler",
+      "E": "Cowdry tip A inklüzyonları"
+     },
+     "dogru": "A",
+     "aciklama": "Aktif MS plağı lipid yüklü, miyelin kalıntılı makrofajlar ve perivasküler T hücre manşetleri nedeniyle hücreseldir. (s. 47)",
+     "sik_aciklamalari": {
+      "A": "Aktif plakta miyelin kalıntılarıyla dolu lipid yüklü makrofajlar ve perivasküler T hücre manşetleri bulunur. Çok sayıdaki makrofaj plağı hücresel gösterdiği için doğru cevaptır (s.47).",
+      "B": "Belirgin gliyoz, az inflamasyon ve miyelinden yoksun alanlarla birlikte inaktif plağın özelliğidir. Aktif plağın hücresel görünümünü açıklamaz. Gliyoz astrositlerin çoğalmasıyla oluşan ve sert bir skar dokusu bırakan onarım yanıtıdır (s.47).",
+      "C": "İnklüzyonlu devleşmiş oligodendrositler, JC virüsüyle enfekte hücrelerdir ve PML lezyonlarının kenarında görülür. Multipl skleroz plağının bulgusu sayılmaz. PML de bir demiyelinizasyondur ama nedeni JC virüsünün oligodendrosit enfeksiyonudur (s.47).",
+      "D": "Globoid hücreler, bazen lipitle dolu çok çekirdekli hücrelerdir ve Krabbe hastalığının ayırt edici özelliğidir. Multipl skleroz plağında aranmaz. Krabbe'de galaktosil-seramidaz eksikliği yaygın miyelin ve oligodendrosit kaybı yapar (s.47).",
+      "E": "Cowdry tip A inklüzyonları herpes ensefalitinde nöron ve glia çekirdeğinde görülür. Otoimmün demiyelinizasyonla ilişkili sayılmaz. Bu inklüzyonlar virüsün hücre çekirdeğinde çoğaldığını gösterir (s.47)."
+     },
+     "bilgi": [
+      136,
+      137,
+      138
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Miyelin kalıntıları ile dolu makrofajlar"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-pat-007"
+     ],
+     "s": 47,
+     "onem_id": "o04",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      47,
+      32,
+      53,
+      25
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q55",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Multipl skleroz tanısında BOS incelemesinde en sık saptanan bulgu hangisidir?",
+     "secenekler": {
+      "A": "Nötrofilik pleositoz",
+      "B": "Belirgin düşük glukoz",
+      "C": "Oligoklonal IgG bantları",
+      "D": "Hint mürekkebiyle görülen maya",
+      "E": "Belirgin hücre ve protein artışı"
+     },
+     "dogru": "C",
+     "aciklama": "MS'te BOS'ta hafif protein artışı, artmış immünoglobulin oranı ve sık olarak oligoklonal IgG bantları bulunur. (s. 47)",
+     "sik_aciklamalari": {
+      "A": "Nötrofilik pleositoz, akut piyojenik menenjitte BOS'ta nötrofil ağırlıklı hücre artışıdır. Bakteriyel enfeksiyonu gösterir, otoimmün demiyelinizasyonu değil. Bu menenjitte BOS'ta yüksek protein ve düşük glukoz da bulunur (s.47).",
+      "B": "Belirgin düşük glukoz, bakterilerin subaraknoid boşlukta yaygın olduğu bakteriyel menenjitin BOS bulgusudur. Multipl sklerozda beklenmez. Bakteriler glukozu tükettiği için BOS glukozu kan düzeyine göre belirgin düşer (s.47).",
+      "C": "Oligoklonal IgG bantları, BOS'ta immünoglobulin oranının arttığını gösteren ve multipl sklerozda sık saptanan bulgudur. Hafif protein artışıyla birlikte görüldüğü için doğru cevaptır (s.47).",
+      "D": "Hint mürekkebiyle görülen kapsüllü maya, kriptokok menenjitinin tanı yöntemidir. Bu menenjitte BOS'ta az hücre ve yüksek protein bulunur. Kriptokok bağışıklığı baskılanmış hastada menenjit yapan kapsüllü bir mantardır (s.47).",
+      "E": "Orta derecede hücre artışı ve belirgin yüksek protein, tüberküloz menenjitinin BOS bulgusudur. Multipl sklerozda protein artışı yalnız hafiftir. Tüberküloz menenjitinde hücreler mononükleer ağırlıklıdır ve glukoz hafif azalır (s.47)."
+     },
+     "bilgi": [
+      136,
+      137,
+      138
+     ],
+     "benzer_cikmis": [
+      "q-KURUL_2_C_IKMIS__3-83"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Oligoklonal IgG bantları sık."
+     },
+     "dayanak": [
+      "cikmis:q-KURUL_2_C_IKMIS__3-83"
+     ],
+     "s": 47,
+     "onem_id": "o04",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      47,
+      9,
+      13,
+      17
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q56",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Multipl sklerozda plakların en sık yerleştiği bölge hangisidir?",
+     "secenekler": {
+      "A": "Mamiller cisimler",
+      "B": "Korteks–beyaz madde bileşkesi",
+      "C": "Periventriküler alanlar",
+      "D": "Subkortikal beyaz madde ve diensefalon",
+      "E": "Temporal lobun alt ve medial kısmı"
+     },
+     "dogru": "C",
+     "aciklama": "MS plakları özellikle periventriküler alanlarda, ayrıca optik sinir ve kiazma, beyin sapı, serebellum ve omurilikte yerleşir. (s. 47)",
+     "sik_aciklamalari": {
+      "A": "Mamiller cisimler, tiamin eksikliğine bağlı Wernicke–Korsakoff sendromunda en sık tutulan yapıdır. Kanama ve nekroz odaklarıyla tanımlanır, demiyelinizan plak yeri sayılmaz (s.47).",
+      "B": "Korteks–beyaz madde bileşkesi ve derin gri çekirdekler, erişkin toksoplazmozunda çoklu halka tarzı lezyonların yerleştiği bölgelerdir. Multipl sklerozun tipik plak yeri sayılmaz (s.47).",
+      "C": "Periventriküler alanlar, multipl skleroz plaklarının sık yerleşim yerleri arasında ilk sırada sayılan bölgedir. Plakların çoğu ventrikül çevresindeki beyaz maddede görüldüğü için doğru cevaptır (s.47).",
+      "D": "Subkortikal beyaz madde ve diensefalon, HIV ensefalitinde mikroglial nodül, gliyoz ve çok çekirdekli dev hücrelerin yoğunlaştığı bölgelerdir. Multipl skleroz plaklarını tanımlamaz (s.47).",
+      "E": "Temporal lobun alt ve medial kısmı, herpes simplex ensefalitinde en ağır nekrotizan lezyonların yeridir. Viral ve hemorajik bir süreçtir, otoimmün plak sayılmaz (s.47)."
+     },
+     "bilgi": [
+      136,
+      137,
+      138
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q91"
+     ],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "periventriküler alanlar, optik sinir ve kiazma, beyin sapı, serebellum, omurilik."
+     },
+     "dayanak": [
+      "cikmis:d3k2-2018-2019-k4-q91"
+     ],
+     "s": 47,
+     "onem_id": "o02",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      47,
+      39,
+      34,
+      31,
+      25
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q51",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Multipl skleroz genetiği ve patogenezi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Birinci derece akrabada MS riski yaklaşık 15 kat artırır",
+      "B": "B hücre hedefli tedaviler etkisizdir",
+      "C": "Tek yumurta ikizinde risk yaklaşık 150 kat artar",
+      "D": "HLA-DRB1*1501 her alleli riski yaklaşık 3 kat artırır",
+      "E": "EBV enfeksiyonu ile ilişki bildirilmiştir"
+     },
+     "dogru": "B",
+     "aciklama": "MS'te B hücreleri ve antikorlar önemlidir, B hücre hedefli tedaviler etkilidir; birinci derece akrabada risk 15, tek yumurta ikizinde ≈150 kat artar. (s. 46)",
+     "sik_aciklamalari": {
+      "A": "Birinci derece akrabasında multipl skleroz bulunan kişide risk yaklaşık 15 kat artar. Genetik yatkınlığı gösteren bu ifade doğrudur. Bu artış ailesel yatkınlığın hastalık gelişiminde rol oynadığını gösterir (s.46).",
+      "B": "Multipl sklerozda B hücreleri ve antikorlar önemlidir ve B hücre hedefli tedaviler etkilidir. Etkisizdir ifadesi yanlış olduğu için doğru cevaptır. Bu tedavilerin işe yaraması B hücrelerinin hastalık sürecindeki rolünü destekler (s.46).",
+      "C": "Tek yumurta ikizinde multipl skleroz riski yaklaşık 150 kat artar. Genetik yatkınlığın en güçlü göstergesidir ve ifade doğrudur. Aynı genetik yapıyı paylaşan bireyler arasında riskin bu kadar artması genetiğin önemini vurgular (s.46).",
+      "D": "HLA-DRB1*1501 allelinin her kopyası multipl skleroz riskini yaklaşık 3 kat artırır. İmmün yanıt genleriyle birlikte genetik yatkınlığı anlatan doğru bir ifadedir (s.46).",
+      "E": "Epstein–Barr virüsü enfeksiyonu ile multipl skleroz arasında ilişki bildirilmiştir, ancak mekanizma net değildir. Bu ifade doğrudur. Bu ilişki çevresel etkenlerin de hastalıkta rol oynayabileceğini düşündürür (s.46)."
+     },
+     "bilgi": [
+      133,
+      134,
+      135
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "B hücre hedefli tedaviler etkili."
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 46,
+     "onem_id": "o25",
+     "kalip": "yanlis_bul",
+     "celdirici_kaynak": [
+      46,
+      43,
+      47
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q54",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Multipl skleroz plağında miyelin boyası ve nörofilament immün boyasının birlikte gösterdiği tablo hangisidir?",
+     "secenekler": {
+      "A": "Miyelin korunmuş, aksonlar kesintiye uğramış",
+      "B": "Miyelin ve aksonlar tamamen kaybolmuş",
+      "C": "Miyelin ve aksonlar normal, yalnız gliyoz var",
+      "D": "Yamalı miyelin kaybı, aksonda viral inklüzyon",
+      "E": "Miyelin tamamen yok, aksonlar nispeten korunmuş"
+     },
+     "dogru": "E",
+     "aciklama": "Luxol fast blue–PAS boyası plakta miyelinin tamamen yokluğunu, nörofilament boyası aksonların nispeten korunduğunu gösterir. (s. 45)",
+     "sik_aciklamalari": {
+      "A": "Miyelinin korunup aksonların kesintiye uğraması, plağın gerçek tablosunun tersidir. Multipl sklerozda hasar miyelindedir, aksonlar nispeten korunur. Luxol fast blue–PAS boyası plakta miyelinin tamamen yokluğunu gösterir (s.45).",
+      "B": "Hem miyelinin hem aksonların tamamen kaybolması plak için tanımlanmaz. Nörofilament boyası aksonların büyük ölçüde yerinde durduğunu gösterir. Akson korunması MS plağını aksonları da yıkan nekrotik lezyonlardan ayırır (s.45).",
+      "C": "Yalnız gliyoz görülmesi plağı açıklamaz; inaktif plakta bile miyelinden yoksun alanlar bulunur. Miyelin boyası plakta boyanma kaybı gösterir. Aktif plakta ayrıca lipid yüklü makrofajlar lezyona hücresel görünüm verir (s.45).",
+      "D": "Yamalı miyelin kaybı ve viral inklüzyon, JC virüsünün yaptığı PML'nin bulgusudur. Orada inklüzyon oligodendrosit çekirdeğindedir, multipl skleroz plağı için tanımlanmaz (s.45).",
+      "E": "Luxol fast blue–PAS boyası plakta miyelinin tamamen yokluğunu, nörofilament boyası ise aksonların nispeten korunduğunu gösterir. Bu iki bulgunun birlikte görülmesi multipl skleroz plağının özelliği olduğundan doğru cevaptır (s.45)."
+     },
+     "bilgi": [
+      131,
+      132
+     ],
+     "benzer_cikmis": [
+      "d3-k2-pat-007"
+     ],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Relative preservation of axons"
+     },
+     "dayanak": [
+      "cikmis:d3-k2-pat-007"
+     ],
+     "s": 45,
+     "onem_id": "o04",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      45,
+      47,
+      32,
+      52
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q57",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Genç bir kadında yıllar içinde optik nörit, sonra nistagmus ve internükleer oftalmopleji atakları gelişip düzeliyor. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Akut yaygın ensefalomiyelit",
+      "B": "Nöromiyelit optika",
+      "C": "Progresif multifokal lökoensefalopati",
+      "D": "Adrenolökodistrofi",
+      "E": "Multipl skleroz"
+     },
+     "dogru": "E",
+     "aciklama": "MS'te ilk belirti genelde klinik izole sendromdur; beyin sapı tutulumu ataksi, nistagmus ve internükleer oftalmopleji yapar. (s. 49)",
+     "sik_aciklamalari": {
+      "A": "Akut yaygın ensefalomiyelit, enfeksiyondan 1–2 hafta sonra baş ağrısı, bilinç değişikliği ve komayla başlayan monofazik bir hastalıktır. Yıllara yayılan tekrarlayan ataklar ona uymaz (s.49).",
+      "B": "Nöromiyelit optika, optik sinir ve omurilikte antikor aracılı demiyelinizasyon yapan hastalıktır. Tarif edilen beyin sapı atakları multipl skleroz lehinedir. Nöromiyelit optikada hasar optik sinir ve omurilikte yoğunlaşır, internükleer oftalmopleji gibi beyin sapı atakları bu tabloyu tanımlamaz (s.49).",
+      "C": "Progresif multifokal lökoensefalopati, immünsüprese hastada JC virüsü reaktivasyonuyla gelişir ve ilerleyici seyirle genellikle bir yılda ölümcüldür. Ataklar arasında düzelme göstermez. Hastalık ataklarla değil sürekli kötüleşerek ilerler (s.49).",
+      "D": "Adrenolökodistrofi, çocukluk–ergenlikte davranış değişikliği ve adrenal yetmezlikle başlayan X'e bağlı kalıtsal bir lökodistrofidir. Genç kadında atak–düzelme tablosu yol açmaz (s.49).",
+      "E": "Multipl sklerozda ilk belirti genelde optik nörit gibi klinik izole sendromdur; beyin sapı tutulumu ataksi, nistagmus ve internükleer oftalmopleji yapar. Farklı zamanlarda farklı bölgeleri tutan ataklar olduğu için doğru cevaptır (s.49)."
+     },
+     "bilgi": [
+      141,
+      142,
+      143
+     ],
+     "benzer_cikmis": [
+      "q-2021final_230619_142600-3-r62"
+     ],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Beyin sapı tutulumu: ataksi, nistagmus, internükleer oftalmopleji."
+     },
+     "dayanak": [
+      "cikmis:q-2021final_230619_142600-3-r62",
+      "cikmis:4c4eb178b88b"
+     ],
+     "s": 49,
+     "onem_id": "o03",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      49,
+      50,
+      32,
+      55
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "4c4eb178b88b",
+     "soru": "Nörolojik muayenede hastaya yaklaşırken öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzeldiği anlaşılana, olası tanınız nedir?",
+     "secenekler": {
+      "A": "Serebrovasküler hastalık",
+      "B": "Guillain-Barre sendromu",
+      "C": "Kafa içi yer kaplayan lezyon",
+      "D": "MS",
+      "E": "Parkinson hastalığı"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2025-2026-h44",
+     "soru": "Multipl skleroz (MS) için aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kadınlarda sık görülür",
+      "B": "Otoimmündür",
+      "C": "Yaş ilerledikçe atakların tekrar sıklığı artar",
+      "D": "Plaklar büyük çoğunlukla ventrikül yakınında yerleşir",
+      "E": "Ataklar arasında nörolojik bozuklukta kısmi düzelme görülür"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "q-2__kurul_-6",
+     "soru": "Multipl skleroz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genellikle genç erişkinlerde başlar ve kadınlarda daha sık görülür",
+      "B": "En sık klinik seyir atak ve remisyonlarla giden (relapsing-remitting) formdur",
+      "C": "Ataklardan sonra kalan sekeller birikerek özürlülüğe yol açar",
+      "D": "Atakların tekrarlama sıklığı zamanla artar",
+      "E": "Beyin omurilik sıvısında oligoklonal bant saptanabilir"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3k2-2018-2019-k4-q91",
+     "soru": "Multipl skleroz ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gri cevher hastalığıdır",
+      "B": "Rekürrenslerde semptomlar giderek hafifler",
+      "C": "Plakların büyük çoğunluğu ventrikül yakınlarında belirir",
+      "D": "Gelişiminde en temel rolü CD8+ T lenfositler oynar",
+      "E": "En sık görülen dismiyelinizan hastalıktır"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "q-KURUL_2_C_IKMIS__3-83",
+     "soru": "Multipl skleroz ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Remiyelinizasyon sonucu inaktif plaklar ortaya çıkar",
+      "B": "Nörolojik defisit süreç içerisinde giderek hafifler",
+      "C": "Plakların büyüklüğü çok değişkendir",
+      "D": "En sık 50 yaşından sonra ortaya çıkar",
+      "E": "Tanısında poliklonal bantlar önemlidir"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3-k2-pat-007",
+     "soru": "Multipl sklerozun makroskopik ve mikroskopik patolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Periventriküler beyaz cevherde, optik sinirde ve beyin sapında çevre dokudan keskin sınırlı plaklar görülür.",
+      "B": "Aktif plaklarda devam eden miyelin yıkımı, damar çevresinde lenfositler ve miyelin parçacıkları içeren makrofajlar izlenir.",
+      "C": "Klasik patolojide öncelikle akson gövdeleri tamamen kesintiye uğrar; miyelin kılıf ise korunur.",
+      "D": "İnaktif plaklarda inflamasyon ortadan kaybolur, geride pek az miyelin kalır ve astrositik proliferasyonla gliozis belirginleşir.",
+      "E": "BOS incelemesinde oligoklonal bantlar saptanabilir."
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "q-2021final_230619_142600-3-r62",
+     "soru": "Erişkin bir kadının otopsisinde beyinde ventriküllerin çevresindeki beyaz cevherde, ortası demiyelinize, çevresinde perivasküler lenfositik infiltrasyonlar bulunan çok sayıda alan saptanıyor. Hastanın genç yaştan beri devam eden, ataklarla seyreden nörolojik semptomları ve görme bozukluğu olduğu öğreniliyor. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alzheimer hastalığı",
+      "B": "Multipl skleroz",
+      "C": "Amiyotrofik lateral skleroz",
+      "D": "Frontotemporal lober dejenerasyon",
+      "E": "Huntington hastalığı"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "ADEM, akut nekrotizan hemorajik ensefalomiyelit, NMO ve ozmotik demiyelinizasyonu; Krabbe, metakromatik lökodistrofi ve adrenolökodistrofinin kalıtım, enzim, birikim ve kliniğini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q59",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Adrenolökodistrofinin temel defekti hangisidir?",
+     "secenekler": {
+      "A": "Galaktosil-seramidaz eksikliği",
+      "B": "Arilsülfataz A eksikliği",
+      "C": "Oligodendrositte JC virüs reaktivasyonu",
+      "D": "Peroksizomal taşıyıcı ABCD1 mutasyonu",
+      "E": "Miyeline karşı Th1/Th17 yanıtı"
+     },
+     "dogru": "D",
+     "aciklama": "Adrenolökodistrofi X'e bağlı resesif; ABCD1 (peroksizomal taşıyıcı) bozukluğuyla VLCFA katabolize edilemez ve serumda yükselir. (s. 55)",
+     "sik_aciklamalari": {
+      "A": "Galaktosil-seramidaz eksikliği Krabbe hastalığının nedenidir ve sitotoksik galaktosil-sfingozin birikir. Adrenolökodistrofinin defekti sayılmaz. Krabbe'nin ayırt edici bulgusu lipitle dolu çok çekirdekli globoid hücrelerdir (s.55).",
+      "B": "Arilsülfataz A eksikliği metakromatik lökodistrofiye yol açar ve makrofajlarda sülfatid birikir. Peroksizomal bir defekt sayılmaz. Sülfatid birikimi toluidin mavisiyle metakromazi gösterir (s.55).",
+      "C": "Oligodendrositte JC virüsü reaktivasyonu immünsüprese hastada PML yapar. Edinilmiş bir demiyelinizasyondur, kalıtsal defekt sayılmaz. Yamalı demiyelinizasyon ve tuhaf dev astrositler PML'nin morfolojik bulgularıdır (s.55).",
+      "D": "Adrenolökodistrofide peroksizomal taşıyıcıyı kodlayan ABCD1 geni bozuktur. Çok uzun zincirli yağ asitleri yıkılamadığı ve serumda yükseldiği için doğru cevaptır. Bu yüzden hastalık hem beyaz madde demiyelinizasyonu hem adrenal yetmezlik yapar (s.55).",
+      "E": "Miyelin antijenlerine karşı Th1 ve Th17 hücre yanıtı multipl sklerozun otoimmün mekanizmasıdır. Adrenolökodistrofi ise genetik bir taşıyıcı defektidir. Bu yanıtta interferon gama gibi sitokinler makrofajları etkinleştirir (s.55)."
+     },
+     "bilgi": [
+      158,
+      159,
+      160
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-11"
+     ],
+     "kanit": {
+      "sayfa": 55,
+      "alinti": "Gen: ABCD1 (peroksizomal taşıyıcı)."
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-11"
+     ],
+     "s": 55,
+     "onem_id": "o06",
+     "kalip": "ters_yon",
+     "celdirici_kaynak": [
+      55,
+      52,
+      54,
+      32,
+      46
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q58",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Lökodistrofileri edinilmiş demiyelinizan hastalıklardan ayıran temel özellik hangisidir?",
+     "secenekler": {
+      "A": "Önceden normal miyelinin hasarlanması",
+      "B": "Genetik olup miyelinin düzgün oluşmaması",
+      "C": "Enfeksiyondan 1–2 hafta sonra başlaması",
+      "D": "Otoimmün plaklarla seyretmesi",
+      "E": "Virüs reaktivasyonuyla oluşması"
+     },
+     "dogru": "B",
+     "aciklama": "Lökodistrofiler genetik dismiyelinizasyondur; miyelin düzgün oluşmaz ya da yıkımı anormaldir. Edinilmiş demiyelinizasyonda önceden normal miyelin hasarlanır. (s. 42)",
+     "sik_aciklamalari": {
+      "A": "Önceden normal miyelinin hasarlanması, multipl skleroz ve PML gibi edinilmiş demiyelinizan hastalıkların tanımıdır. Lökodistrofileri değil, karşı grubu anlatır. Bu grupta miyelin başlangıçta sağlam oluşur, sonradan bağışıklık, virüs ya da ilaç etkisiyle zarar görür (s.42).",
+      "B": "Lökodistrofiler genetik dismiyelinizasyon hastalıklarıdır; miyelin düzgün oluşmaz ya da yıkımı anormaldir. Önceden normal miyelinin hasarlandığı edinilmiş hastalıklardan bu yönüyle ayrıldıkları için doğru cevaptır (s.42).",
+      "C": "Enfeksiyondan 1–2 hafta sonra başlama, akut yaygın ensefalomiyelitin özelliğidir. Enfeksiyon sonrası otoimmün bir demiyelinizasyonu tanımlar. Akut yaygın ensefalomiyelitte bağışıklık hücreleri enfeksiyon antijenine yanıt verirken miyelinle çapraz tepkimeye girer (s.42).",
+      "D": "Otoimmün mekanizmayla zaman ve yerde yayılan plaklar multipl sklerozun özelliğidir. Edinilmiş bir hastalığı tanımlar, kalıtsal grubu değil. MS'te zamanda ve yerde yayılan ataklar tanının temelidir (s.42).",
+      "E": "Virüs reaktivasyonuyla oluşma, JC virüsünün immünsüprese hastada PML yapmasını anlatır. Bu edinilmiş bir demiyelinizasyondur. PML'de virüs oligodendrositi enfekte ederek miyelini sonradan yıkar (s.42)."
+     },
+     "bilgi": [
+      126,
+      127
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Genetik; miyelin düzgün oluşmaz veya yıkımı anormaldir."
+     },
+     "dayanak": [
+      "cikmis:4bde7b004e4d",
+      "cikmis:q-KURUL_2_C_IKMIS__3-84"
+     ],
+     "s": 42,
+     "onem_id": "o01",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      42,
+      32,
+      43,
+      50
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q60",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Serumda çok uzun zincirli yağ asitlerinin yükseldiği, adrenal yetmezlikle seyreden lökodistrofinin kalıtım biçimi hangisidir?",
+     "secenekler": {
+      "A": "X'e bağlı resesif",
+      "B": "Otozomal resesif",
+      "C": "Edinilmiş otoimmün",
+      "D": "Enfeksiyon sonrası otoimmün",
+      "E": "Viral reaktivasyonla edinilmiş"
+     },
+     "dogru": "A",
+     "aciklama": "Adrenolökodistrofi X'e bağlı resesiftir; Krabbe ve metakromatik lökodistrofi otozomal resesiftir. (s. 55)",
+     "sik_aciklamalari": {
+      "A": "Adrenolökodistrofi X'e bağlı resesif kalıtılan bir hastalıktır. Çok uzun zincirli yağ asidi yüksekliği ve adrenal yetmezlik bu hastalığı tanımladığı için doğru cevaptır (s.55).",
+      "B": "Otozomal resesif kalıtım, Krabbe hastalığı ve metakromatik lökodistrofi için verilir. Bu iki hastalık enzim eksikliğidir, adrenal yetmezlik yol açmaz. Bu kalıtımda hastalığın ortaya çıkması için iki kopyanın da bozuk olması gerekir (s.55).",
+      "C": "Edinilmiş otoimmün mekanizma multipl sklerozu tanımlar; ataklar farklı zamanlarda ve farklı bölgelerde ortaya çıkar. Kalıtsal bir lökodistrofinin geçiş biçimi sayılmaz. MS'te miyelin antijenlerine karşı Th1 ve Th17 hücreleri aktive olur (s.55).",
+      "D": "Enfeksiyon sonrası otoimmün demiyelinizasyon, akut yaygın ensefalomiyelitin mekanizmasıdır. Genetik bir hastalığın kalıtım biçimi sayılmaz. Bu hastalık enfeksiyondan 1–2 hafta sonra tek atakla seyreder (s.55).",
+      "E": "Viral reaktivasyonla edinilen demiyelinizasyon, JC virüsünün yaptığı PML'yi anlatır. Kalıtsal yağ asidi yıkım bozukluğunu açıklamaz. PML'de JC virüsü immünsüprese hastada oligodendrositi enfekte eder (s.55)."
+     },
+     "bilgi": [
+      158,
+      159,
+      160
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 55,
+      "alinti": "X’e bağlı resesif hastalık."
+     },
+     "dayanak": [
+      "cikmis:q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-11"
+     ],
+     "s": 55,
+     "onem_id": "o06",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      55,
+      52,
+      54,
+      46
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q61",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Galaktosil-seramidaz eksikliği sonucu sitotoksik galaktosil-sfingozin oluşan lökodistrofi hangisidir?",
+     "secenekler": {
+      "A": "Metakromatik lökodistrofi",
+      "B": "Krabbe hastalığı",
+      "C": "Adrenolökodistrofi",
+      "D": "Progresif multifokal lökoensefalopati",
+      "E": "Multipl skleroz"
+     },
+     "dogru": "B",
+     "aciklama": "Krabbe hastalığı galaktosil-seramidaz eksikliğidir; galaktosil-serebrosid sitotoksik galaktosil-sfingozin yoluyla metabolize olur. (s. 52)",
+     "sik_aciklamalari": {
+      "A": "Metakromatik lökodistrofi arilsülfataz A eksikliğiyle oluşur ve özellikle makrofajlarda sülfatid birikir. Toluidin mavisiyle anormal renk değişimi gösterir. Bu hastalıkta başlangıç yaşı ne kadar erkense ilerleme o kadar hızlıdır (s.52).",
+      "B": "Krabbe hastalığı galaktosil-seramidaz eksikliğine bağlı otozomal resesif bir lökodistrofidir. Galaktosil-serebrosid sitotoksik galaktosil-sfingozin yoluyla metabolize olduğu için doğru cevaptır (s.52).",
+      "C": "Adrenolökodistrofi ABCD1 peroksizomal taşıyıcı bozukluğuyla çok uzun zincirli yağ asitlerinin yıkılamadığı X'e bağlı hastalıktır. Enzim eksikliğiyle galaktosil-sfingozin birikmez. Klinikte davranış değişikliği ve adrenal yetmezlik öne çıkar (s.52).",
+      "D": "Progresif multifokal lökoensefalopati, JC virüsünün oligodendrositi enfekte ettiği edinilmiş bir demiyelinizasyondur. Kalıtsal enzim eksikliğiyle ilgisi yoktur. Hastalık immünsüprese kişide latent virüsün yeniden etkinleşmesiyle ortaya çıkar (s.52).",
+      "E": "Multipl skleroz, ataklarla seyreden otoimmün bir demiyelinizan hastalıktır. Genetik enzim eksikliği değil, miyeline karşı T hücre yanıtı söz konusudur. MS plakları periventriküler alanlarda yoğunlaşan keskin sınırlı lezyonlardır (s.52)."
+     },
+     "bilgi": [
+      151,
+      152,
+      153
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "Enzim eksikliği: galaktosil-seramidaz."
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 52,
+     "onem_id": "o15",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      52,
+      54,
+      55,
+      32
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q63",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Akut yaygın ensefalomiyelit ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Enfeksiyondan 1–2 hafta sonra monofazik seyirle başlar",
+      "B": "Zamanda ve yerde yayılan ataklarla seyreder",
+      "C": "Optik sinir ve omurilikte antikor aracılı hasar yapar",
+      "D": "Hiponatreminin ani düzeltilmesinden sonra gelişir",
+      "E": "İmmünsüprese hastada JC virüsü reaktivasyonuyla oluşur"
+     },
+     "dogru": "A",
+     "aciklama": "ADEM enfeksiyondan 1–2 hafta sonra yaygın baş ağrısı, bilinç değişikliği, koma ile başlar; monofaziktir, %20 ölümcül, kalanlarda sık tam iyileşme olur. (s. 50)",
+     "sik_aciklamalari": {
+      "A": "Akut yaygın ensefalomiyelit, enfeksiyondan 1–2 hafta sonra başlayan otoimmün demiyelinizasyondur. Yaygın baş ağrısı, bilinç değişikliği ve koma yapar ve monofazik seyrettiği için ifade doğrudur (s.50).",
+      "B": "Zamanda ve yerde yayılan ataklar multipl sklerozun tanımıdır. Akut yaygın ensefalomiyelit tek atakla seyreder, tekrarlayıcı sayılmaz. MS'te plaklar farklı zamanlarda ve farklı anatomik bölgelerde ortaya çıkar (s.50).",
+      "C": "Optik sinir ve omurilikte antikor aracılı demiyelinizasyon nöromiyelit optikayı tanımlar. Enfeksiyon sonrası yaygın beyin tutulumu bu tabloya uymaz. Bu hastalıkta hasar optik sinir ve omurilikte yoğunlaşır (s.50).",
+      "D": "Hiponatreminin ani düzeltilmesinden sonra gelişen sınırlı miyelin kaybı ozmotik demiyelinizasyon sendromudur. Hızla gelişen kuadripleji yapar. Bu sendromun tetikleyicisi enfeksiyon değil elektrolit tedavisidir (s.50).",
+      "E": "JC virüsü reaktivasyonu immünsüprese hastada PML yapar; hastalık ilerleyicidir ve genellikle bir yılda ölümcüldür. Enfeksiyon sonrası otoimmün tabloyu açıklamaz. PML lezyonlarında kenarda inklüzyonlu dev oligodendrosit çekirdekleri görülür (s.50)."
+     },
+     "bilgi": [
+      145,
+      146,
+      147
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Enfeksiyon sonrası 1–2 hafta içinde"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 50,
+     "onem_id": "o23",
+     "kalip": "ters_ad",
+     "celdirici_kaynak": [
+      50,
+      43,
+      32,
+      49
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q64",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Hiponatreminin hızlı düzeltilmesinden sonra hızla gelişen kuadripleji en olası hangi tabloyu düşündürür?",
+     "secenekler": {
+      "A": "Akut nekrotizan hemorajik ensefalomiyelit",
+      "B": "Nöromiyelit optika",
+      "C": "Subakut kombine dejenerasyon",
+      "D": "Wernicke ensefalopatisi",
+      "E": "Ozmotik demiyelinizasyon sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Ozmotik demiyelinizasyon sendromunda hiponatreminin ani düzeltilmesi sonrası sınırlı miyelin kaybı ve hızla gelişen kuadripleji görülür. (s. 50)",
+     "sik_aciklamalari": {
+      "A": "Akut nekrotizan hemorajik ensefalomiyelit, çoğunlukla gençlerde görülen ve enfeksiyon sonrası gelişen daha ağır hemorajik formdur. Sodyum düzeltmesiyle ilişkili sayılmaz. Bu form akut yaygın ensefalomiyelitin daha ağır ve kanamalı biçimi olarak anlatılır (s.50).",
+      "B": "Nöromiyelit optika, optik sinir ve omurilikte antikor aracılı demiyelinizasyondur. Elektrolit düzeltmesinden sonra gelişen bir tablo sayılmaz. Bu hastalıkta görme kaybı ve omurilik bulguları öne çıkar (s.50).",
+      "C": "Subakut kombine dejenerasyon, B12 eksikliğinde omurilik beyaz maddesinin haftalar içinde hasarlanmasıdır. İleri olguda parapleji olur, hiponatremiyle ilişkisi yoktur. Bu tabloya megaloblastik anemi eşlik eder (s.50).",
+      "D": "Wernicke ensefalopatisi, tiamin eksikliğinde akut psikoz, göz hareket bozukluğu ve ataksiyle seyreder. Tiamin tedavisiyle geri dönebilir, kuadripleji yol açmaz. Tedavi edilmezse kalıcı Korsakoff amnezisine ilerleyebilir (s.50).",
+      "E": "Ozmotik demiyelinizasyon sendromu, hiponatreminin ani düzeltilmesinden sonra sınırlı miyelin kaybıyla gelişir. Hızla gelişen kuadripleji tipik bulgusu olduğu için doğru cevaptır. Bu nedenle hiponatremi yavaş ve kontrollü düzeltilmelidir (s.50)."
+     },
+     "bilgi": [
+      145,
+      146,
+      147
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Hiponatreminin ani düzeltilmesi sonrası sınırlı miyelin kaybı"
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 50,
+     "onem_id": "o23",
+     "kalip": "dogrudan",
+     "celdirici_kaynak": [
+      50,
+      40,
+      38,
+      49
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q65",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Lökodistrofilerin ortak özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kalıtsal dismiyelinizan hastalıklardır",
+      "B": "Çocuklukta başlar",
+      "C": "Ataklar ve düzelmelerle seyreder",
+      "D": "İlerleyici seyirlidir",
+      "E": "Yaygın simetrik beyaz madde kaybı görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Lökodistrofiler kalıtsal dismiyelinizasyondur; çocuklukta başlar, progresif seyreder, görüntülemede yaygın simetrik beyaz madde kaybı yapar. (s. 51)",
+     "sik_aciklamalari": {
+      "A": "Lökodistrofiler, miyelinin genetik nedenle düzgün oluşmadığı kalıtsal dismiyelinizasyon hastalıklarıdır. Bu ifade grubu doğru tanımlar. Örnekleri Krabbe hastalığı, metakromatik lökodistrofi ve adrenolökodistrofidir (s.51).",
+      "B": "Lökodistrofilerin tipik özelliği çocuklukta başlamalarıdır. Krabbe hastalığı 3–6 aylıkken başlayan bir örnektir; ifade doğrudur. Adrenolökodistrofi ise çocukluk ve ergenlik döneminde ortaya çıkar (s.51).",
+      "C": "Lökodistrofiler progresif seyirli hastalıklardır; atak ve düzelmelerle seyir multipl skleroza aittir. İfade lökodistrofiler için yanlış olduğundan doğru cevaptır. Lökodistrofilerde tablo zamanla durmaksızın kötüleşir, ataklar arasında düzelme olmaz (s.51).",
+      "D": "Lökodistrofiler ilerleyici seyirle kötüleşen hastalıklardır. Bu özellik onları ataklarla seyreden multipl sklerozdan ayırır; ifade doğrudur. Krabbe hastalarının çoğu iki yaşını göremez (s.51).",
+      "E": "Görüntülemede yaygın ve simetrik beyaz madde kaybı lökodistrofilerin tipik bulgusudur. Multipl sklerozun çok odaklı plaklarından farklıdır; ifade doğrudur. Bu simetrik dağılım hastalığın genetik ve yaygın doğasını yansıtır (s.51)."
+     },
+     "bilgi": [
+      149,
+      150
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "Görüntülemede yaygın, simetrik beyaz madde kaybı."
+     },
+     "dayanak": [
+      "ayrinti"
+     ],
+     "s": 51,
+     "onem_id": "o15",
+     "kalip": "yanlis_bul",
+     "celdirici_kaynak": [
+      51,
+      49,
+      43
+     ],
+     "cikarim": false
+    },
+    {
+     "id": "k2-29-santral-sinir-sistemi-enfeksiyonlari-q62",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Metakromatik lökodistrofide eksik enzim ve biriken madde hangisinde doğru eşleştirilmiştir?",
+     "secenekler": {
+      "A": "Galaktosil-seramidaz – galaktosil-sfingozin",
+      "B": "ABCD1 – çok uzun zincirli yağ asidi",
+      "C": "Arilsülfataz A – galaktosil-sfingozin",
+      "D": "Arilsülfataz A – sülfatid",
+      "E": "Galaktosil-seramidaz – sülfatid"
+     },
+     "dogru": "D",
+     "aciklama": "Metakromatik lökodistrofi: arilsülfataz A eksikliği → sülfatid birikimi (özellikle makrofajlarda); toluidin mavisiyle metakromazi. (s. 54)",
+     "sik_aciklamalari": {
+      "A": "Galaktosil-seramidaz eksikliği ve sitotoksik galaktosil-sfingozin oluşumu Krabbe hastalığına aittir. Bu eşleşme metakromatik lökodistrofi için yanlıştır. Krabbe'de bu sitotoksik madde oligodendrositleri öldürür (s.54).",
+      "B": "ABCD1 peroksizomal taşıyıcı bozukluğu ve çok uzun zincirli yağ asidi yüksekliği adrenolökodistrofinin özelliğidir. Metakromatik lökodistrofiyi tanımlamaz. Bu hastalık X'e bağlı resesif geçer (s.54).",
+      "C": "Arilsülfataz A eksikliği doğru enzimdir ama galaktosil-sfingozin Krabbe hastalığında oluşan sitotoksik maddedir. Bileşenler yer değiştirdiği için eşleşme yanlıştır. Metakromatik lökodistrofide biriken madde sülfatittir (s.54).",
+      "D": "Metakromatik lökodistrofide arilsülfataz A eksiktir ve özellikle makrofajlarda sülfatid birikir. Enzim ile birikim maddesi doğru eşleştiği için doğru cevaptır. Biriken sülfatid toluidin mavisiyle metakromazi gösterdiği için hastalık bu adı alır (s.54).",
+      "E": "Galaktosil-seramidaz Krabbe hastalığında eksik olan enzimdir, sülfatid ise metakromatik lökodistrofide birikir. İki hastalığın bileşenleri karıştırıldığı için eşleşme yanlıştır. Krabbe'de biriken sitotoksik madde galaktosil-sfingozindir (s.54)."
+     },
+     "bilgi": [
+      155,
+      156,
+      157
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Enzim: arilsülfataz A eksik."
+     },
+     "dayanak": [
+      "profil"
+     ],
+     "s": 54,
+     "onem_id": "o15",
+     "kalip": "eslesme",
+     "celdirici_kaynak": [
+      54,
+      52,
+      55
+     ],
+     "cikarim": false
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-11",
+     "soru": "Aşağıdaki hastalıklardan hangisi peroksizomal defektler sonucunda gelişir?",
+     "secenekler": {
+      "A": "Alexander hastalığı",
+      "B": "Krabbe hastalığı",
+      "C": "Metakromatik lökodistrofi",
+      "D": "Adrenolökodistrofi",
+      "E": "Tay-Sachs hastalığı"
+     },
+     "cevap": "D"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 65
+}

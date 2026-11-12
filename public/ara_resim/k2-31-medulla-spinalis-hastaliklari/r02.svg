@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Tam kesi: önce spinal şok, sonra spastisite</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Aynı hastada zamanla değişen tablo; düzeyde ve düzeyin altında farklı bulgu</text>
+<rect x="30" y="90" width="700" height="250" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="122" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · Zaman çizgisi: akut dönemden kronik döneme</text>
+<path d="M70 250 C250 250 450 250 700 250" stroke="#0f172a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<path d="M80 165 C130 165 150 225 220 230 C300 236 320 236 360 232" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360 232 C420 222 450 175 520 160 C580 150 620 148 690 146" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="155" font-size="15" fill="#475569" text-anchor="start">refleks düzeyi</text>
+<text x="200" y="280" font-size="17" fill="#1d4ed8" text-anchor="middle" font-weight="bold">SPİNAL ŞOK</text>
+<text x="200" y="300" font-size="15" fill="#1d4ed8" text-anchor="middle">flask, arefleksik felç</text>
+<text x="200" y="318" font-size="15" fill="#1d4ed8" text-anchor="middle" font-weight="bold">refleks YOK</text>
+<text x="560" y="280" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">SPASTİK DÖNEM</text>
+<text x="560" y="300" font-size="15" fill="#b91c1c" text-anchor="middle">spastik, hiperrefleksik</text>
+<text x="560" y="318" font-size="15" fill="#b91c1c" text-anchor="middle">Babinski (+), karın cildi refleksi (−)</text>
+<text x="380" y="210" font-size="15" fill="#0f172a" text-anchor="middle" font-style="italic">şok geçer</text>
+<rect x="750" y="90" width="420" height="250" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="770" y="122" font-size="20" fill="#7c3aed" text-anchor="start" font-weight="bold">B · Çıkmış tuzağı</text>
+<text x="770" y="150" font-size="16" fill="#0f172a" text-anchor="start">Tam ya da tama yakın hasarda</text>
+<text x="770" y="176" font-size="16" fill="#0f172a" text-anchor="start">GÖRÜLMEYEN bulgu:</text>
+<text x="770" y="202" font-size="16" fill="#0f172a" text-anchor="start">“spinal şok döneminde</text>
+<text x="770" y="228" font-size="16" fill="#0f172a" text-anchor="start">refleksler artmıştır”.</text>
+<text x="770" y="254" font-size="16" fill="#0f172a" text-anchor="start">Şok döneminde refleks kaybolur;</text>
+<text x="770" y="280" font-size="16" fill="#0f172a" text-anchor="start">artış ancak şoktan sonra gelir.</text>
+<rect x="30" y="355" width="1140" height="175" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="387" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">C · Kesik düzeyinde ve altında ne olur?</text>
+<path d="M85.0 445.0 C85.0 414.75 109.75 401.0 140.0 401.0 C170.25 401.0 195.0 414.75 195.0 445.0 C195.0 475.25 170.25 489.0 144.4 489.0 L140.0 479.1 L135.6 489.0 C109.75 489.0 85.0 475.25 85.0 445.0 Z" stroke="#475569" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140.0 441.7 C130.1 440.6 125.7 428.5 123.5 406.5 C119.1 406.5 116.9 423.0 118.0 437.3 C105.9 443.9 103.69999999999999 461.5 108.1 471.4 C115.8 476.9 127.9 469.2 133.4 453.8 C136.7 450.5 138.9 449.4 140.0 449.4 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140.0 441.7 C149.9 440.6 154.3 428.5 156.5 406.5 C160.9 406.5 163.1 423.0 162.0 437.3 C174.1 443.9 176.3 461.5 171.9 471.4 C164.2 476.9 152.1 469.2 146.6 453.8 C143.3 450.5 141.1 449.4 140.0 449.4 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="116.9" cy="463.7" rx="7.15" ry="6.050000000000001" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<ellipse cx="163.1" cy="463.7" rx="7.15" ry="6.050000000000001" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="140.0" cy="445.0" r="2.2" fill="#ffffff" stroke="#475569" stroke-width="1.2"/>
+<ellipse cx="140.0" cy="445.0" rx="55.00000000000001" ry="44.0" fill="#7c3aed" fill-opacity="0.32" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4"/>
+<line x1="160" y1="470" x2="230" y2="500" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="160" cy="470" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="236" y="505" font-size="15" fill="#7c3aed" text-anchor="start">tam kesi = kesitin tamamı</text>
+<text x="260" y="405" font-size="15" fill="#0f172a" text-anchor="start" font-weight="bold">Lezyon DÜZEYİNDE: ön boynuz / ön kök harap →</text>
+<text x="260" y="426" font-size="15" fill="#0f172a" text-anchor="start">alt motor nöron: parezi, atrofi, fasikülasyon, arefleksi;</text>
+<text x="260" y="447" font-size="15" fill="#0f172a" text-anchor="start">radiküler ağrı, segmental parestezi</text>
+<text x="720" y="400" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">Lezyonun ALTINDA:</text>
+<text x="720" y="421" font-size="15" fill="#b91c1c" text-anchor="start">tüm duyularda kayıp (duyu seviyesi)</text>
+<text x="720" y="442" font-size="15" fill="#b91c1c" text-anchor="start">üst motor nöron: spastik parapleji/kuadripleji</text>
+<text x="720" y="463" font-size="15" fill="#b91c1c" text-anchor="start">Mesane: sakral düzey → flask, geniş</text>
+<text x="720" y="484" font-size="15" fill="#b91c1c" text-anchor="start">sakral üstü → spastik, küçük</text>
+<line x1="255" y1="490" x2="700" y2="490" stroke="#0f172a" stroke-width="2" marker-end="url(#ok)" stroke-dasharray="6 5"/>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 15 (tam kesi bulguları), 31 (iskemide başlangıçta spinal şok) · mavi = şok dönemi, kırmızı = üst motor nöron dönemi, mor = lezyon</text>
+</svg>

@@ -16,7 +16,7 @@ from pathlib import Path
 MEDS = Path(__file__).resolve().parents[2]
 BRANS = 'k2patolojihoca'
 W = MEDS.parent / 'meds_temp/spot_cozucu' / BRANS
-KODLAR = {'k2-03': '2h01', 'k2-04': '2h02'}   # yeni derste buraya eklenir (kod: <kurul><h><sıra>)
+KODLAR = {'k2-03': '2h01', 'k2-04': '2h02', 'k2-29': '2h03', 'k2-30': '2h04'}   # yeni derste buraya eklenir (kod: <kurul><h><sıra>)
 KAYNAK = MEDS / 'src/data/hoca_uslubu_sorular/k2'
 DOKUM = MEDS.parent / 'meds_temp/patoloji_analiz/k2'
 

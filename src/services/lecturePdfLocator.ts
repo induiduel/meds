@@ -279,6 +279,22 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/FTR/2)NÖROLOJİK HASTALIKLARDA REHABİLİTASYON.pdf', name: '2)NÖROLOJİK HASTALIKLARDA REHABİLİTASYON.pdf', pages: 46, fileId: '1zGxWg8ORUzrkGZIECiMg6bV6u42op6W2' } as SourceFile],
   },
+  // 2026-11-12 9. parti (k2-29, k2-30, k2-31): deste yok.
+  'k2p-k2-29-santral-sinir-sistemi-enfeksiyonlari': {
+    title: 'Santral Sinir Sistemi Enfeksiyonları',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Patoloji/3)Santral Sinir Sistemi Enfeksiyonları.pdf', name: '3)Santral Sinir Sistemi Enfeksiyonları.pdf', pages: 57, fileId: '10NYEyjYvB8k8Qt_1zHA55wcUoA4gA0Xl' } as SourceFile],
+  },
+  'k2p-k2-30-norodejeneratif-hastaliklar': {
+    title: 'Nörodejeneratif Hastalıklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Patoloji/4)Nörodejeneratif Hastalıklar.pdf', name: '4)Nörodejeneratif Hastalıklar.pdf', pages: 67, fileId: '1P7PYS5R2fJOJ44tIL0tqYj0VHT5EqKke' } as SourceFile],
+  },
+  'k2p-k2-31-medulla-spinalis-hastaliklari': {
+    title: 'Medulla Spinalis Hastalıkları',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/8)Medulla Spinalis Hastalıkları.pdf', name: '8)Medulla Spinalis Hastalıkları.pdf', pages: 46, fileId: '1ISKIIXBm01K1ohrRtdoOJrHxqrVknPwf' } as SourceFile],
+  },
   'k2p-k2-38-travma-ve-stres-baglantili-bozukluklar': {
     title: 'Travma ve Stres Bağlantılı Bozukluklar',
     decks: [],

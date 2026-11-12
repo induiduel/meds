@@ -1,0 +1,173 @@
+{
+  "key": "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Mikroorganizmaların MSS'ye beş giriş yolu",
+      "aciklama": "En sık yol arteriyel kan yoluyla hematogen yayılımdır; implantasyon, plasenta, komşu odak ve periferik sinir öbür yollardır.",
+      "adimlar": [
+        "1. Hematogen yayılım en sıktır, çoğunlukla arteriyel; daha az retrograd venöz.",
+        "2. Doğrudan implantasyon: delici kafa travması ya da meningomiyelosel.",
+        "3. Plasenta: perinatal enfeksiyon, malformasyon ve kalsifikasyon.",
+        "4. Lokal yayılım: sinüs, diş, kafatası ya da omurga enfeksiyonu.",
+        "5. Periferik sinir boyunca: kuduz ve herpes zoster."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 2,
+      "bitis": 2,
+      "kaynak": [
+        5
+      ]
+    },
+    {
+      "id": "r02",
+      "baslik": "Menenjitten hidrosefaliye: zarların nedbeleşmesi",
+      "aciklama": "Bakteriyel menenjitte iyileşen leptomeninks, tüberküloz menenjitinde beyin tabanındaki araknoid fibrozise uğrar; BOS emilimi bozulur ve hidrosefali gelişir.",
+      "adimlar": [
+        "1. Normalde BOS ventriküllerden subaraknoid boşluğa geçer ve emilir.",
+        "2. Bakteriyel menenjitte pürülan eksüda zarları kaplar, iyileşirken leptomeningeal fibrozis kalır.",
+        "3. Tüberküloz menenjitinde fibrozis beyin tabanındaki araknoidde yoğunlaşır.",
+        "4. İki durumda da BOS emilimi bozulur ve ventriküller genişler."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 10,
+      "bitis": 10,
+      "kaynak": [
+        9,
+        13
+      ]
+    },
+    {
+      "id": "r03",
+      "baslik": "Tabes dorsalis: dorsal kök ve arka sütun hasarı",
+      "aciklama": "Nörosifilizin geç formunda dorsal kök duyu sinirleri ve arka sütun lifleri hasarlanır; pozisyon ve ağrı duyusu kaybı ataksi ve Charcot eklemi yapar.",
+      "adimlar": [
+        "1. Dorsal kök duyu sinirleri ve arka sütun lifleri yavaşça demiyelinize olur.",
+        "2. Pozisyon duyusu kaybı ataksiye yol açar.",
+        "3. Ağrı duyusu kaybı eklemi korumasız bırakır: Charcot eklemi.",
+        "4. Şimşek ağrıları ve derin tendon refleks kaybı eşlik eder."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 12,
+      "bitis": 12,
+      "kaynak": [
+        15
+      ]
+    },
+    {
+      "id": "r04",
+      "baslik": "BOS bulgularıyla enfeksiyonları ayırma tablosu",
+      "aciklama": "Hücre tipi ve glukoz düzeyi ayrımın iki anahtarıdır: bakteriyel menenjitte nötrofil ve düşük glukoz, viral tablolarda lenfosit ve normal glukoz görülür.",
+      "adimlar": [
+        "1. Bakteriyel menenjit: nötrofil, yüksek protein, düşük glukoz.",
+        "2. Aseptik menenjit ve viral ensefalit: lenfosit, glukoz normal.",
+        "3. Tüberküloz: protein belirgin yüksek, glukoz hafif düşük ya da normal.",
+        "4. Kriptokok: az hücre, yüksek protein; apse: lökosit ve protein yüksek, glukoz normal."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 19,
+      "bitis": 19,
+      "kaynak": [
+        9,
+        11,
+        13,
+        17,
+        20,
+        22
+      ]
+    },
+    {
+      "id": "r05",
+      "baslik": "PML: JC virüsünden yamalı demiyelinizasyona",
+      "aciklama": "Latent JC virüsü bağışıklık baskılanınca reaktive olur, oligodendrositi enfekte edip öldürür; miyelin korunamaz ve beyaz maddede çok odaklı demiyelinizasyon gelişir.",
+      "adimlar": [
+        "1. JC virüsü çoğu insanda latenttir.",
+        "2. İmmünsüpresyonda reaktive olur ve oligodendrositi enfekte eder.",
+        "3. Oligodendrosit çekirdeği devleşir, hücre ölür, miyelin kaybolur.",
+        "4. Yamalı alanların merkezinde lipid yüklü makrofaj, kenarında dev astrosit bulunur."
+      ],
+      "svg": "r05.svg",
+      "paragraf": 29,
+      "bitis": 29,
+      "kaynak": [
+        32,
+        33
+      ]
+    },
+    {
+      "id": "r06",
+      "baslik": "Wernicke–Korsakoff: tiamin eksikliğinden kalıcı amneziye",
+      "aciklama": "Tiamin eksikliğinde önce tiaminle geri dönebilen Wernicke üçlüsü gelişir; tedavisiz kalırsa kalıcı Korsakoff amnezisi yerleşir. Hasar mamiller cisimler, hipotalamus, ventrikül çevresi ve talamusta toplanır.",
+      "adimlar": [
+        "1. Nedenler: kronik alkol, malabsorpsiyon, gastrik cerrahi, sürekli kusma.",
+        "2. Wernicke: akut psikoz, göz hareket bozukluğu, ataksi; tiaminle geri dönebilir.",
+        "3. Tedavisiz olguda kalıcı ağır amnezi: Korsakoff.",
+        "4. Lezyonlar mamiller cisimler, hipotalamus, üçüncü ve dördüncü ventrikül çevresinde; talamus medial dorsal çekirdeği hafızayla ilişkilidir."
+      ],
+      "svg": "r06.svg",
+      "paragraf": 36,
+      "bitis": 36,
+      "kaynak": [
+        38,
+        39
+      ]
+    },
+    {
+      "id": "r07",
+      "baslik": "Demiyelinizasyon ile dismiyelinizasyon ayrımı",
+      "aciklama": "Edinilmiş demiyelinizasyonda normal yapılmış miyelin sonradan hasarlanır; lökodistrofilerde genetik kusur yüzünden miyelin baştan düzgün oluşmaz ya da yıkımı anormaldir.",
+      "adimlar": [
+        "1. Edinilmiş demiyelinizasyon: önceden normal miyelin sonradan yıkılır.",
+        "2. Örnekler: multipl skleroz, PML, toksik-ilaç etkili demiyelinizasyon.",
+        "3. Dismiyelinizasyon: genetik, miyelin düzgün oluşmaz ya da yıkımı anormaldir.",
+        "4. Çıkmışta çeldirici olan Krabbe ve metakromatik lökodistrofi bu gruptadır."
+      ],
+      "svg": "r07.svg",
+      "paragraf": 39,
+      "bitis": 39,
+      "kaynak": [
+        41,
+        42
+      ]
+    },
+    {
+      "id": "r08",
+      "baslik": "Multipl skleroz: otoimmün saldırıdan aktif ve inaktif plağa",
+      "aciklama": "Th1 ve Th17 hücreleri miyelin antijenine karşı aktive olur, sitokinlerle makrofajları uyarır; aktif plakta makrofaj ve perivasküler T hücreleri miyelini yıkarken akson korunur, inaktif plakta gliyoz kalır.",
+      "adimlar": [
+        "1. Th1/Th17 hücreleri miyelin antijenine karşı aktive olur; B hücreleri ve antikorlar da rol alır.",
+        "2. IFN-γ ve sitokinler makrofajı uyarır, miyelin yıkılır.",
+        "3. Aktif plak: miyelin kalıntılı makrofaj, perivasküler T hücre manşeti; akson nispeten korunur.",
+        "4. İnaktif plak: az inflamasyon, belirgin gliyoz, miyelinsiz alan."
+      ],
+      "svg": "r08.svg",
+      "paragraf": 44,
+      "bitis": 44,
+      "kaynak": [
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "id": "r09",
+      "baslik": "Üç lökodistrofi: eksik enzim mi, bozuk taşıyıcı mı?",
+      "aciklama": "Krabbe'de galaktosil-seramidaz, metakromatik lökodistrofide arilsülfataz A eksiktir; adrenolökodistrofide peroksizomal ABCD1 taşıyıcısı bozuk olduğu için çok uzun zincirli yağ asitleri yıkılamaz.",
+      "adimlar": [
+        "1. Krabbe: galaktosil-seramidaz yok, sitotoksik galaktosil-sfingozin oligodendrositi öldürür.",
+        "2. Metakromatik lökodistrofi: arilsülfataz A yok, sülfatid makrofajlarda birikir.",
+        "3. Adrenolökodistrofi: X'e bağlı, ABCD1 bozuk, VLCFA yıkılamaz ve serumda yükselir.",
+        "4. İlk ikisi otozomal resesif enzim eksikliği, üçüncüsü peroksizomal taşıyıcı bozukluğu."
+      ],
+      "svg": "r09.svg",
+      "paragraf": 52,
+      "bitis": 52,
+      "kaynak": [
+        52,
+        53,
+        54,
+        55
+      ]
+    }
+  ]
+}

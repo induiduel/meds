@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="720" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Miyelin hastalıkları iki yoldan gelişir</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Edinilmiş demiyelinizasyon ve dismiyelinizasyon (lökodistrofi) · slayt 30–31 (s.41–42)</text>
+<rect x="30" y="88" width="560" height="470" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · Edinilmiş demiyelinizasyon</text>
+<text x="50" y="150" font-size="18" fill="#1d4ed8" text-anchor="start" font-weight="bold">1. Miyelin önce normal yapılır</text>
+<line x1="60" y1="190" x2="560" y2="190" stroke="#9a6b55" stroke-width="5"/>
+<rect x="80" y="177" width="70" height="26" rx="13" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<rect x="162" y="177" width="70" height="26" rx="13" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<rect x="244" y="177" width="70" height="26" rx="13" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<rect x="326" y="177" width="70" height="26" rx="13" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<rect x="408" y="177" width="70" height="26" rx="13" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<circle cx="70" cy="230" r="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.5"/>
+<path d="M80 222 C100 205 110 200 120 192" stroke="#1d4ed8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="70" y1="230" x2="120" y2="250" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="70" cy="230" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="126" y="256" font-size="17" fill="#1d4ed8" text-anchor="start">oligodendrosit</text>
+<line x1="310" y1="270" x2="310" y2="305" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<text x="50" y="330" font-size="18" fill="#b91c1c" text-anchor="start" font-weight="bold">2. Sonradan hasar görür</text>
+<line x1="60" y1="370" x2="560" y2="370" stroke="#9a6b55" stroke-width="5"/>
+<rect x="80" y="357" width="70" height="26" rx="13" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<rect x="326" y="357" width="70" height="26" rx="13" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<path d="M175 345 C190 330 215 330 230 345" stroke="#b91c1c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="220" y1="372" x2="120" y2="420" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="220" cy="372" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="126" y="426" font-size="17" fill="#b91c1c" text-anchor="start">yama yama miyelin kaybı, akson yerinde</text>
+<text x="50" y="470" font-size="18" fill="#0f172a" text-anchor="start" font-weight="bold">Örnekler: multipl skleroz, PML,</text>
+<text x="50" y="496" font-size="18" fill="#0f172a" text-anchor="start">toksik-ilaç etkili demiyelinizasyon</text>
+<rect x="610" y="88" width="560" height="470" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="628" y="119" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">B · Dismiyelinizasyon (lökodistrofi)</text>
+<text x="630" y="150" font-size="18" fill="#6d28d9" text-anchor="start" font-weight="bold">1. Genetik kusur baştan vardır</text>
+<path d="M640 200 C660 180 680 220 700 200 C720 180 740 220 760 200" stroke="#6d28d9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="700" y1="200" x2="790" y2="205" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="700" cy="200" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="796" y="211" font-size="17" fill="#6d28d9" text-anchor="start">miyelin protein yolaklarında mutasyon</text>
+<line x1="890" y1="240" x2="890" y2="280" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<text x="630" y="310" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">2. Miyelin düzgün oluşmaz ya da yıkımı anormaldir</text>
+<line x1="640" y1="360" x2="1140" y2="360" stroke="#9a6b55" stroke-width="5"/>
+<rect x="660" y="347" width="70" height="26" rx="13" fill="#e9d5ff" stroke="#6d28d9" stroke-width="2"/>
+<rect x="742" y="347" width="70" height="26" rx="13" fill="#e9d5ff" stroke="#6d28d9" stroke-width="2"/>
+<rect x="824" y="347" width="70" height="26" rx="13" fill="#e9d5ff" stroke="#6d28d9" stroke-width="2"/>
+<rect x="906" y="347" width="70" height="26" rx="13" fill="#e9d5ff" stroke="#6d28d9" stroke-width="2"/>
+<rect x="988" y="347" width="70" height="26" rx="13" fill="#e9d5ff" stroke="#6d28d9" stroke-width="2"/>
+<path d="M660 395 C760 410 1000 410 1130 395" stroke="#6d28d9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<line x1="900" y1="372" x2="660" y2="425" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="900" cy="372" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="666" y="431" font-size="17" fill="#6d28d9" text-anchor="start">yaygın, simetrik beyaz madde kaybı</text>
+<text x="630" y="470" font-size="18" fill="#0f172a" text-anchor="start" font-weight="bold">Örnekler: Krabbe hastalığı,</text>
+<text x="630" y="496" font-size="18" fill="#0f172a" text-anchor="start">metakromatik lökodistrofi</text>
+<rect x="30" y="572" width="1140" height="100" rx="14" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="50" y="605" font-size="17" fill="#0f172a" text-anchor="start">MSS miyelinini oligodendrosit, periferik miyelini Schwann hücresi yapar;</text>
+<text x="50" y="632" font-size="17" fill="#0f172a" text-anchor="start">içerikleri farklı olduğu için MSS miyelin hastalığı periferi çoğu kez anlamlı etkilemez.</text>
+<text x="50" y="659" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">Çıkmış: normal miyelinin sonradan hasarı sorulursa cevap edinilmiş gruptur (örneğin PML).</text>
+<text x="600.0" y="707" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 30–31 (PDF s.41–42). Mavi = sağlam miyelin, mor = kusurlu miyelin, kırmızı = kayıp.</text>
+</svg>

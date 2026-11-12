@@ -633,6 +633,20 @@
         "kaynak": "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
         "zaman": "2026-11-10"
       }
+    },
+    "yas_etken": {
+      "ad": "Yaşa göre etken",
+      "duzen": "tablo",
+      "basliklar": [
+        "Yaş grubu",
+        "Olası etken"
+      ],
+      "ne_zaman": "bir enfeksiyonun etkeninin hastanın yaşına göre değişmesi",
+      "ornek": "Yenidoğan | E. coli, B grubu streptokok",
+      "eklenme": {
+        "kaynak": "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+        "zaman": "2026-11-12"
+      }
     }
   }
 }

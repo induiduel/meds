@@ -1,0 +1,139 @@
+{
+ "key": "k2-31-medulla-spinalis-hastaliklari",
+ "resimler": [
+  {
+   "id": "r01",
+   "baslik": "Yarı kesi (Brown-Séquard): hangi bulgu hangi tarafta çıkar?",
+   "aciklama": "Kordun bir yarısı kesilince aynı tarafta üst motor nöron felci ve derin duyu kaybı, karşı tarafta ağrı-ısı kaybı olur; tarafı yolların çaprazlaştığı yer belirler.",
+   "adimlar": [
+    "1. Kortikospinal lifler bulbusta çaprazlaşır, kordda kasla aynı tarafta iner.",
+    "2. Arka kolon lifleri kordda aynı tarafta çıkar, ancak bulbusta çaprazlaşır.",
+    "3. Spinotalamik lifler kordda ön komissürden karşıya geçer.",
+    "4. Sonuç: aynı tarafta üst motor nöron felci + derin duyu kaybı, karşı tarafta ağrı-ısı kaybı."
+   ],
+   "svg": "r01.svg",
+   "paragraf": 8,
+   "bitis": 10,
+   "kaynak": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "id": "r02",
+   "baslik": "Tam kesi: önce spinal şok, sonra spastisite",
+   "aciklama": "Tam keside akut dönemde flask ve arefleksik spinal şok, ardından spastik-hiperrefleksik felç gelir; lezyon düzeyinde alt motor nöron, altında üst motor nöron bulgusu ve tüm duyularda kayıp vardır.",
+   "adimlar": [
+    "1. Akut dönem: flask, arefleksik felç (spinal şok).",
+    "2. Şok geçer: spastik, hiperrefleksik parapleji ya da kuadripleji, Babinski (+).",
+    "3. Düzeyde alt motor nöron, altında üst motor nöron bulgusu.",
+    "4. Mesane: sakral lezyonda flask-geniş, sakral üstünde spastik-küçük."
+   ],
+   "svg": "r02.svg",
+   "paragraf": 13,
+   "bitis": 13,
+   "kaynak": [
+    15,
+    31
+   ]
+  },
+  {
+   "id": "r03",
+   "baslik": "Poliomiyelitin seyri: bulaşmadan post-polio sendromuna",
+   "aciklama": "Fekal-oral bulaşan poliovirüs çoğunlukla belirtisiz geçer; sinir sistemini tutunca önce BOS'u normal nonparalitik dönem, sonra akut dönemde pleositozlu, flask ve duyusu normal felç, yıllar sonra post-polio sendromu gelir.",
+   "adimlar": [
+    "1. Fekal-oral bulaş, %90–95 asemptomatik.",
+    "2. Nonparalitik dönem: meningeal bulgular, BOS normal.",
+    "3. Paralitik dönem: flask, asimetrik, duyu normal; akut BOS'ta mononükleer pleositoz.",
+    "4. 1–2 dekat sonra post-polio sendromu."
+   ],
+   "svg": "r03.svg",
+   "paragraf": 17,
+   "bitis": 20,
+   "kaynak": [
+    19,
+    20,
+    21,
+    22,
+    23
+   ]
+  },
+  {
+   "id": "r04",
+   "baslik": "B12 eksikliği miyelini nasıl bozar?",
+   "aciklama": "B12, metilmalonil KoA'nın süksinil KoA'ya dönüşümünde koenzimdir ve SAM aracılığıyla miyelin bazik proteinin metilasyonunda rol alır; eksikliğinde lamellar miyelin bozulur, arka ve lateral kolonlar tutulur.",
+   "adimlar": [
+    "1. Metilmalonil KoA → süksinil KoA dönüşümü B12 ister.",
+    "2. SAM aracılığıyla miyelin bazik protein metilasyonu lamellar miyelini stabil tutar.",
+    "3. Eksiklikte arka ve lateral kolonlarda miyelin kaybı (en çok servikal-üst dorsal).",
+    "4. Duysal ataksi, Romberg, spastisite; ağrı ve ısı normal."
+   ],
+   "svg": "r04.svg",
+   "paragraf": 32,
+   "bitis": 33,
+   "kaynak": [
+    34,
+    35
+   ]
+  },
+  {
+   "id": "r05",
+   "baslik": "Kord iskemisi: kan nereden kesilir, kesitte hangi alan ölür?",
+   "aciklama": "Kord iskemisi çoğu zaman aort ve dallarından gelen kanın azalmasıyla, sıklıkla alt torakal watershed bölgesinde ve anterior spinal arter alanında gelişir; ön üçte iki ölür, arka kolonlar korunur. Caisson hastalığında sorun venöz taraftadır.",
+   "adimlar": [
+    "1. Neden: aort diseksiyonu, travma, ateroskleroz/emboli, 30 dakikadan uzun klemp.",
+    "2. Yer: watershed, özellikle alt torakal; çoğunlukla anterior spinal arter alanı.",
+    "3. Bulgu: akut pleji, ağrı-ısı kaybı, sfinkter kusuru; derin duyu korunur.",
+    "4. Caisson: epidural venlerde azot kabarcığı, iskemik-hemorajik miyelopati."
+   ],
+   "svg": "r05.svg",
+   "paragraf": 28,
+   "bitis": 29,
+   "kaynak": [
+    10,
+    30,
+    31
+   ]
+  },
+  {
+   "id": "r06",
+   "baslik": "Siringomiyeli: kavite ortadan dışa büyüdükçe bulgular sırayla eklenir",
+   "aciklama": "Santral kavite önce ön komissürde çaprazlaşan ağrı-ısı liflerini keser; büyüdükçe ön boynuza, sonra yana ve arka kordona yayılır ve bulgular bu sırayla eklenir.",
+   "adimlar": [
+    "1. Ön komissür: pelerin tarzında ağrı-ısı kaybı, dokunma ve derin duyu korunur.",
+    "2. Ön boynuz: segmental nörojenik atrofi, parezi.",
+    "3. Yana: lezyon altında spastik paralizi.",
+    "4. Arka kordon: vibrasyon-pozisyon kaybı."
+   ],
+   "svg": "r06.svg",
+   "paragraf": 38,
+   "bitis": 38,
+   "kaynak": [
+    4,
+    10,
+    40
+   ]
+  },
+  {
+   "id": "r07",
+   "baslik": "Konus medullaris mi, kauda ekuina mı? Merkez hasarı ile kök basısı",
+   "aciklama": "Konus lezyonunda sakral merkez iki yandan birden bozulur: sfinkter erken ve tam, duyu simetrik, ağrı geri planda. Kaudada kökler tek tek sıkışır: ağrı şiddetli ve tek yanlı, bulgular asimetrik, sfinkter geç.",
+   "adimlar": [
+    "1. Konus: ani, bilateral; sfinkter tam ve akut; simetrik süvari yaması; ağrı hafif.",
+    "2. Kauda: L3 vertebra altı; yavaş, tek yanlı; şiddetli radiküler ağrı; asimetrik; sfinkter geç.",
+    "3. En belirgin fark ağrıdır.",
+    "4. Patella refleksi kaudada s41'de elde edilebilir, s43 tablosunda negatif yazılır; Aşil ikisinde de kayıp."
+   ],
+   "svg": "r07.svg",
+   "paragraf": 39,
+   "bitis": 41,
+   "kaynak": [
+    41,
+    42,
+    43
+   ]
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="700" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Huntington: CAG tekrarı uzadıkça hastalık erken başlar</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Tekrar sayısı, başlangıç yaşı ve antisipasyon · slayt 53–54</text>
+<rect x="30" y="88" width="1140" height="250" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">A · Huntingtin geninde CAG (glutamin) tekrar sayısı</text>
+<rect x="80" y="170" width="1040" height="40" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<rect x="80" y="170" width="300" height="40" rx="8" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+<rect x="380" y="170" width="740" height="40" rx="8" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<text x="230" y="197" font-size="17" fill="#15803d" text-anchor="middle" font-weight="bold">normal alel: 11–34 tekrar</text>
+<text x="750" y="197" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">hastalık aleli: daha fazla, bazen yüzlerce</text>
+<text x="100" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="185" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="270" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="355" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="440" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="525" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="610" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="695" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="780" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="865" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="950" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<text x="1035" y="245" font-size="17" fill="#ea580c" text-anchor="start">CAG</text>
+<path d="M400 290 C600 260 800 320 1100 285" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="420" y="318" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">tekrar arttıkça → daha erken başlangıç</text>
+<text x="1100" y="318" font-size="17" fill="#475569" text-anchor="end">süre tekrardan bağımsız</text>
+<rect x="30" y="350" width="560" height="310" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="381" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Antisipasyon: babadan geçişte</text>
+<circle cx="130" cy="410" r="14.0" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+<path d="M112.0 480.0 C108.0 440.0 120.0 426.0 130 426.0 C140.0 426.0 152.0 440.0 148.0 480.0 Z" stroke="#ea580c" stroke-width="2" fill="#ea580c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M121.0 480.0 L119.0 532.0" stroke="#ea580c" stroke-width="8.0" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M139.0 480.0 L141.0 532.0" stroke="#ea580c" stroke-width="8.0" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="130" y="570" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">baba</text>
+<text x="130" y="594" font-size="17" fill="#475569" text-anchor="middle">CAG tekrarı</text>
+<circle cx="320" cy="410" r="14.0" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<path d="M302.0 480.0 C298.0 440.0 310.0 426.0 320 426.0 C330.0 426.0 342.0 440.0 338.0 480.0 Z" stroke="#b91c1c" stroke-width="2" fill="#b91c1c" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M311.0 480.0 L309.0 532.0" stroke="#b91c1c" stroke-width="8.0" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M329.0 480.0 L331.0 532.0" stroke="#b91c1c" stroke-width="8.0" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="320" y="570" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">çocuk</text>
+<text x="320" y="594" font-size="17" fill="#475569" text-anchor="middle">uzamış tekrar</text>
+<path d="M170 470 C220 430 260 430 300 470" stroke="#ea580c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<text x="222" y="425" font-size="17" fill="#ea580c" text-anchor="middle" font-weight="bold">spermatogenez</text>
+<text x="400" y="470" font-size="17" fill="#0f172a" text-anchor="start">Genişleme özellikle</text>
+<text x="400" y="493" font-size="17" fill="#0f172a" text-anchor="start">spermatogenezde</text>
+<text x="400" y="516" font-size="17" fill="#0f172a" text-anchor="start">artar; çocukta</text>
+<text x="400" y="539" font-size="17" fill="#0f172a" text-anchor="start">hastalık daha erken</text>
+<text x="400" y="562" font-size="17" fill="#0f172a" text-anchor="start">başlar.</text>
+<rect x="610" y="350" width="560" height="310" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="628" y="381" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">C · Hücrede: toksik fonksiyon kazanımı</text>
+<path d="M686 530 C680 492 719 477 746 486 C780 497 785 541 768 563 C746 585 697 580 686 530 Z" stroke="#1d4ed8" stroke-width="2.5" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M688 519 C653 497 642 475 626 470" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M697 563 C670 590 648 596 631 612" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M741 484 C746 453 736 436 724 420" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M776 536 C829 536 884 530 939 536" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="730" cy="530" r="20" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+<circle cx="730" cy="530" r="8" fill="#b91c1c" stroke="#b91c1c" stroke-width="1"/>
+<line x1="730" y1="530" x2="800" y2="420" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="730" cy="530" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="806" y="426" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">intranükleer agregat</text>
+<text x="960" y="445" font-size="17" fill="#0f172a" text-anchor="start">Mutant huntingtin</text>
+<text x="960" y="468" font-size="17" fill="#0f172a" text-anchor="start">ubikitinlenir,</text>
+<text x="960" y="491" font-size="17" fill="#0f172a" text-anchor="start">parçalanır; parçalar</text>
+<text x="960" y="514" font-size="17" fill="#0f172a" text-anchor="start">çekirdekte toplanır.</text>
+<text x="960" y="560" font-size="17" fill="#b91c1c" text-anchor="start">Transkripsiyon</text>
+<text x="960" y="583" font-size="17" fill="#b91c1c" text-anchor="start">faktörleri bağlanır,</text>
+<text x="960" y="606" font-size="17" fill="#b91c1c" text-anchor="start">protein yıkımı ve</text>
+<text x="960" y="629" font-size="17" fill="#b91c1c" text-anchor="start">mitokondri bozulur.</text>
+<text x="600.0" y="687" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 53, 54 · semptom sonrası hastalık süresi tekrar uzunluğundan bağımsızdır</text>
+</svg>

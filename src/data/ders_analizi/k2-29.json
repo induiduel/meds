@@ -1,0 +1,1495 @@
+{
+ "surum": 1,
+ "key": "k2-29",
+ "kod": "2p03",
+ "kurul": 2,
+ "brans": "Patoloji",
+ "konu": "Santral Sinir Sistemi Enfeksiyonları",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "profil": "Tıbbi Patoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2p03"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders üç konuyu işler: merkezi sinir sistemi enfeksiyonları (menenjitler, apse, viral ensefalitler, HIV ve PML, parazitler), beslenme bozuklukları (tiamin eksikliğinde Wernicke–Korsakoff, B12 eksikliğinde subakut kombine dejenerasyon) ve miyelin hastalıkları (edinilmiş demiyelinizasyon, multipl skleroz, ADEM, NMO, ozmotik demiyelinizasyon ve lökodistrofiler).",
+   "maddeler": [
+    {
+     "metin": "Dersin kapsamı ve enfeksiyonun merkezi sinir sistemine ulaşması"
+    },
+    {
+     "metin": "Menenjit: tanım, türler ve etkenlerin tablosu"
+    },
+    {
+     "metin": "Akut piyojenik bakteriyel menenjit"
+    },
+    {
+     "metin": "Aseptik ve kronik menenjitler"
+    },
+    {
+     "metin": "Nörosifiliz, Lyme ve mantar menenjitleri"
+    },
+    {
+     "metin": "Beyin apsesi"
+    },
+    {
+     "metin": "Viral ensefalitler: genel özellikler, arbovirüs ve herpes"
+    },
+    {
+     "metin": "Sitomegalovirüs, polio, kuduz ve nöronofaji"
+    },
+    {
+     "metin": "HIV ve progresif multifokal lökoensefalopati"
+    },
+    {
+     "metin": "Parazitler, amipler ve epidural ya da subdural enfeksiyonlar"
+    },
+    {
+     "metin": "Beslenme bozuklukları: tiamin ve B12 eksikliği"
+    },
+    {
+     "metin": "Miyelin hastalıklarına giriş: demiyelinizasyon ve dismiyelinizasyon"
+    },
+    {
+     "metin": "Multipl skleroz: tanım, görüntüleme ve histoloji"
+    },
+    {
+     "metin": "Multipl skleroz: patogenez, plaklar ve klinik"
+    },
+    {
+     "metin": "Öteki edinilmiş demiyelinizan hastalıklar"
+    },
+    {
+     "metin": "Lökodistrofiler"
+    },
+    {
+     "metin": "Genel özet"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders üç konuyu işler: merkezi sinir sistemi enfeksiyonları (menenjitler, apse, viral ensefalitler, HIV ve PML, parazitler), beslenme bozuklukları (tiamin eksikliğinde Wernicke–Korsakoff, B12 eksikliğinde subakut kombine dejenerasyon) ve miyelin hastalıkları (edinilmiş demiyelinizasyon, multipl skleroz, ADEM, NMO, ozmotik demiyelinizasyon ve lökodistrofiler).",
+    "Dersin kapsamı ve enfeksiyonun merkezi sinir sistemine ulaşması.",
+    "Menenjit: tanım, türler ve etkenlerin tablosu.",
+    "Akut piyojenik bakteriyel menenjit.",
+    "Aseptik ve kronik menenjitler.",
+    "Nörosifiliz, Lyme ve mantar menenjitleri.",
+    "Beyin apsesi.",
+    "Viral ensefalitler: genel özellikler, arbovirüs ve herpes.",
+    "Sitomegalovirüs, polio, kuduz ve nöronofaji.",
+    "HIV ve progresif multifokal lökoensefalopati.",
+    "Parazitler, amipler ve epidural ya da subdural enfeksiyonlar.",
+    "Beslenme bozuklukları: tiamin ve B12 eksikliği.",
+    "Miyelin hastalıklarına giriş: demiyelinizasyon ve dismiyelinizasyon.",
+    "Multipl skleroz: tanım, görüntüleme ve histoloji.",
+    "Multipl skleroz: patogenez, plaklar ve klinik.",
+    "Öteki edinilmiş demiyelinizan hastalıklar.",
+    "Lökodistrofiler.",
+    "Genel özet."
+   ],
+   "v": "a09e7ce0a4"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Mikroorganizmaların MSS’ye Giriş Yolları",
+     "metin": "Çıkmış (ilgili): Hematogen yayılım:",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Akut Piyojenik (Bakteriyel) Menenjit",
+     "metin": "Çıkmış (dogrudan): Boyun sertliği Bilinç bulanıklığı,",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Bakteriyel Menenjit: BOS ve Morfoloji",
+     "metin": "Çıkmış (ilgili): Düşük glukoz.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Aseptik (Viral) Menenjit",
+     "metin": "Çıkmış (ilgili): Çoğunlukla viral; nadiren riketsiyal/otoimmün.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Tüberküloz Menenjiti",
+     "metin": "Çıkmış (dogrudan): Belirgin yüksek protein Glukoz hafif azalmış veya normal.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Nörosifilis Alt Tipleri",
+     "metin": "Çıkmış (ilgili): Nöron kaybı, yoğun mikroglia proliferasyonu",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Viral Ensefalit: Genel Özellikler",
+     "metin": "Çıkmış (ilgili): Parankimal beyin enfeksiyonu",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Herpes Virüs Ensefalitleri",
+     "metin": "Çıkmış (ilgili): Ruh hali, hafıza, davranış değişiklikleri",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Herpes Ensefaliti: Morfoloji",
+     "metin": "Çıkmış (dogrudan): Büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A).",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "CMV, Polio ve Kuduz",
+     "metin": "Çıkmış (ilgili): Hayvan ısırığı ile bulaşır",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Tiamin Eksikliği ve Wernicke–Korsakoff",
+     "metin": "Çıkmış (dogrudan): Akut psikoz Göz hareket bozukluğu Ataksi",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "B12 Eksikliği ve Subakut Kombine",
+     "metin": "Çıkmış (ilgili): Erken B12 replasmanı ile geri dönebilir;",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Demiyelinizasyon ve Lökodistrofi",
+     "metin": "Çıkmış (dogrudan): Örnek: Multipl Skleroz, PML, toksik-ilaç etkili demiyelinizasyon.",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Multipl Skleroz: Tanım ve Epidemiyoloji",
+     "metin": "Çıkmış (dogrudan): Başlangıç genellikle 20–40 yaş;",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "A",
+     "metin": "Çıkmış (dogrudan): Aynı lezyon, Luxol fast blue- periyodik asit-Schiff boyasıyla boyandığında",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "MS: Morfoloji ve BOS",
+     "metin": "Çıkmış (dogrudan): Çok odaklı, keskin sınırlı beyaz madde lezyonları (Şekil 21.20).",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Adrenolökodistrofi",
+     "metin": "Çıkmış (dogrudan): Gen: ABCD1 (peroksizomal taşıyıcı).",
+     "s": [
+      55
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Mikroorganizmaların MSS’ye Giriş Yolları: Çıkmış (ilgili): Hematogen yayılım:.",
+    "Akut Piyojenik (Bakteriyel) Menenjit: Çıkmış (dogrudan): Boyun sertliği Bilinç bulanıklığı,.",
+    "Bakteriyel Menenjit: BOS ve Morfoloji: Çıkmış (ilgili): Düşük glukoz.",
+    "Aseptik (Viral) Menenjit: Çıkmış (ilgili): Çoğunlukla viral; nadiren riketsiyal/otoimmün.",
+    "Tüberküloz Menenjiti: Çıkmış (dogrudan): Belirgin yüksek protein Glukoz hafif azalmış veya normal.",
+    "Nörosifilis Alt Tipleri: Çıkmış (ilgili): Nöron kaybı, yoğun mikroglia proliferasyonu.",
+    "Viral Ensefalit: Genel Özellikler: Çıkmış (ilgili): Parankimal beyin enfeksiyonu.",
+    "Herpes Virüs Ensefalitleri: Çıkmış (ilgili): Ruh hali, hafıza, davranış değişiklikleri.",
+    "Herpes Ensefaliti: Morfoloji: Çıkmış (dogrudan): Büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A).",
+    "CMV, Polio ve Kuduz: Çıkmış (ilgili): Hayvan ısırığı ile bulaşır.",
+    "Tiamin Eksikliği ve Wernicke–Korsakoff: Çıkmış (dogrudan): Akut psikoz Göz hareket bozukluğu Ataksi.",
+    "B12 Eksikliği ve Subakut Kombine: Çıkmış (ilgili): Erken B12 replasmanı ile geri dönebilir;.",
+    "Demiyelinizasyon ve Lökodistrofi: Çıkmış (dogrudan): Örnek: Multipl Skleroz, PML, toksik-ilaç etkili demiyelinizasyon.",
+    "Multipl Skleroz: Tanım ve Epidemiyoloji: Çıkmış (dogrudan): Başlangıç genellikle 20–40 yaş;.",
+    "A: Çıkmış (dogrudan): Aynı lezyon, Luxol fast blue- periyodik asit-Schiff boyasıyla boyandığında.",
+    "MS: Morfoloji ve BOS: Çıkmış (dogrudan): Çok odaklı, keskin sınırlı beyaz madde lezyonları (Şekil 21.20).",
+    "Adrenolökodistrofi: Çıkmış (dogrudan): Gen: ABCD1 (peroksizomal taşıyıcı)."
+   ],
+   "v": "a741d3cbe0"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu konudan sorulan çıkmışların ağırlığı miyelin hastalıklarındadır: PML'nin edinilmiş demiyelinizan hastalık olması 2019-20 ve 2023-24'te, MS plaklarının yerleşimi ve özellikleri 2018-19, 2019-20, 2020-21, 2023-24 ve 2025-26'da, MS epidemiyolojisi 2024-25 ve 2025-26'da soruldu. Wernicke ensefalopatisi, adrenolökodistrofi, herpes ensefalitinde Cowdry tip A ve bakteriyel ile tüberküloz menenjiti de çıkmışta yer aldı.",
+   "maddeler": [
+    {
+     "baslik": "MS plaklarının yerleşimi ve görünümü",
+     "metin": "MS plakları çok odaklı, keskin sınırlı beyaz madde lezyonlarıdır; en sık periventriküler alanlarda yerleşir.",
+     "neden": "2018-19, 2019-20, 2020-21, 2023-24 ve 2025-26 sınavlarında MS plaklarıyla ilgili soru soruldu; en sık tekrar eden konu budur.",
+     "s": [
+      47
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Edinilmiş demiyelinizasyon ve lökodistrofi",
+     "metin": "Edinilmiş demiyelinizasyonda önceden normal miyelin hasarlanır; MS, PML ve toksik-ilaç etkili demiyelinizasyon örnektir.",
+     "neden": "2019-20 ve 2023-24'te 'normal oluşmuş miyelinin sonradan hasarlandığı hastalık' olarak PML soruldu; şıklar lökodistrofilerdi.",
+     "s": [
+      42
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "MS tanımı ve epidemiyolojisi",
+     "metin": "MS otoimmün bir demiyelinizasyondur; ataklar zamanda, plaklar yerde yayılır, başlangıç genellikle 20–40 yaştadır.",
+     "neden": "2024-25 ve 2025-26'da 'MS için hangisi yanlıştır' kalıbıyla soruldu; kadın baskınlığı ve otoimmünite doğru şıklardı.",
+     "s": [
+      43
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Herpes ensefaliti: yerleşim ve Cowdry tip A",
+     "metin": "Herpes ensefalitinde nöron ve glialarda büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A) bulunur.",
+     "neden": "2022-23'te herpes virüsleri için yanlış ifade olarak inklüzyonun 'Bunina' diye adlandırılması soruldu; doğru ad Cowdry tip A'dır.",
+     "s": [
+      25
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Tiamin eksikliği ve Wernicke–Korsakoff",
+     "metin": "Tiamin eksikliği akut psikoz, göz hareket bozukluğu ve ataksiyle seyreden Wernicke ensefalopatisi yapar.",
+     "neden": "2020-21'de tiamin eksikliğinde göz hareket anormalliği, konfüzyon ve ataksiyle giden sendrom olarak Wernicke ensefalopatisi soruldu.",
+     "s": [
+      38
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Adrenolökodistrofi",
+     "metin": "Adrenolökodistrofi X'e bağlı resesif, ABCD1 peroksizomal taşıyıcı bozukluğuyla çok uzun zincirli yağ asitlerinin yıkılamadığı hastalıktır.",
+     "neden": "2023-24'te 'peroksizomal defekt sonucu gelişen hastalık' olarak soruldu; çeldiriciler Krabbe ve metakromatik lökodistrofiydi.",
+     "s": [
+      55
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Aktif ve inaktif MS plağı, aksonların korunması",
+     "metin": "Aktif plakta miyelin kalıntılı makrofajlar ve perivasküler T hücre manşetleri, inaktif plakta az inflamasyon ve belirgin gliyoz vardır.",
+     "neden": "2025-26'da MS patolojisi için yanlış ifade 'aksonlar kesintiye uğrar, miyelin korunur' oldu; 2019-20'de inaktif plağın remiyelinizasyonla oluştuğu çeldiriciydi.",
+     "s": [
+      47
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Bakteriyel menenjitin yaşa göre etkenleri",
+     "metin": "Yenidoğanda Escherichia coli ve B grubu streptokok, ergen-genç erişkinde Neisseria meningitidis, yaşlı erişkinde Streptococcus pneumoniae ve Listeria sık etkendir.",
+     "neden": "2018-19'da 'Listeria 50 yaşından küçüklerde etken olabilir' yanlış ifadesi soruldu; yaş–etken eşleşmesi en sık sorulan menenjit bilgisidir.",
+     "s": [
+      8
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu konudan sorulan çıkmışların ağırlığı miyelin hastalıklarındadır: PML'nin edinilmiş demiyelinizan hastalık olması 2019-20 ve 2023-24'te, MS plaklarının yerleşimi ve özellikleri 2018-19, 2019-20, 2020-21, 2023-24 ve 2025-26'da, MS epidemiyolojisi 2024-25 ve 2025-26'da soruldu. Wernicke ensefalopatisi, adrenolökodistrofi, herpes ensefalitinde Cowdry tip A ve bakteriyel ile tüberküloz menenjiti de çıkmışta yer aldı.",
+    "MS plaklarının yerleşimi ve görünümü: MS plakları çok odaklı, keskin sınırlı beyaz madde lezyonlarıdır; en sık periventriküler alanlarda yerleşir.",
+    "Edinilmiş demiyelinizasyon ve lökodistrofi: Edinilmiş demiyelinizasyonda önceden normal miyelin hasarlanır; MS, PML ve toksik-ilaç etkili demiyelinizasyon örnektir.",
+    "MS tanımı ve epidemiyolojisi: MS otoimmün bir demiyelinizasyondur; ataklar zamanda, plaklar yerde yayılır, başlangıç genellikle 20–40 yaştadır.",
+    "Herpes ensefaliti: yerleşim ve Cowdry tip A: Herpes ensefalitinde nöron ve glialarda büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A) bulunur.",
+    "Tiamin eksikliği ve Wernicke–Korsakoff: Tiamin eksikliği akut psikoz, göz hareket bozukluğu ve ataksiyle seyreden Wernicke ensefalopatisi yapar.",
+    "Adrenolökodistrofi: Adrenolökodistrofi X'e bağlı resesif, ABCD1 peroksizomal taşıyıcı bozukluğuyla çok uzun zincirli yağ asitlerinin yıkılamadığı hastalıktır.",
+    "Aktif ve inaktif MS plağı, aksonların korunması: Aktif plakta miyelin kalıntılı makrofajlar ve perivasküler T hücre manşetleri, inaktif plakta az inflamasyon ve belirgin gliyoz vardır.",
+    "Bakteriyel menenjitin yaşa göre etkenleri: Yenidoğanda Escherichia coli ve B grubu streptokok, ergen-genç erişkinde Neisseria meningitidis, yaşlı erişkinde Streptococcus pneumoniae ve Listeria sık etkendir."
+   ],
+   "v": "c57d5383f8"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersten çıkmışların ağırlığı miyelin hastalıklarındadır: MS'in plak yerleşimi, sınırı ve boyutu, BOS'taki oligoklonal bant, başlangıç yaşı ve kadın baskınlığı neredeyse her yıl 'hangisi doğrudur/yanlıştır' kalıbıyla sorulmuş. İkinci sık grup 'hangisi demiyelinizandır' sorusudur; PML edinilmiş demiyelinizasyon, Krabbe, metakromatik ve adrenolökodistrofi ise dismiyelinizan çeldiricilerdir. Enfeksiyon kısmında yaşa göre bakteriyel menenjit etkenleri, menenjit kliniği, TB menenjitinde BOS ve herpes ensefalitinde Cowdry tip A inklüzyonu sorulmuş; tiamin eksikliği ile Wernicke ensefalopatisi eşleşmesi de çıkmıştır. Kök kalıbı çoğunlukla kısa doğru/yanlış ifade listesi ya da tanımdan hastalık bulma biçimindedir.",
+   "maddeler": [
+    {
+     "baslik": "2019-2020",
+     "metin": "Hangisi demiyelinizan hastalıktır?",
+     "cevap": "Progresif multifokal lökoensefalopati",
+     "s": [
+      42
+     ],
+     "aciklama": [
+      "Soru, normal oluşmuş miyelinin sonradan yıkıldığı edinilmiş demiyelinizasyon ile kalıtsal dismiyelinizasyonu (lökodistrofi) ayırt etmeyi ölçer.",
+      "Slayt s. 42'de edinilmiş demiyelinizasyonun örnekleri olarak MS, PML ve toksik-ilaç etkili demiyelinizasyon verilir; PML'de JC virüsü miyelini yapan oligodendrositi öldürdüğü için normal miyelin sonradan kaybolur (s. 32).",
+      "Metakromatik lökodistrofi, Krabbe ve adrenolökodistrofi ise s. 51'de kalıtsal dismiyelinizasyon örnekleridir; miyelin baştan kusurlu yapıldığı için 'demiyelinizan' sayılmazlar ve en güçlü çeldiricilerdir."
+     ],
+     "ornek": "s. 33'teki Şekil 21.19'da miyelin boyasında birleşen soluk alanlar ve kenarda inklüzyonlu büyük oligodendrosit çekirdeği, PML'deki demiyelinizasyonun dokudaki karşılığıdır.",
+     "tuzak": "Lökodistrofileri (Krabbe, metakromatik, adrenolökodistrofi) 'beyaz madde hastalığı' diye demiyelinizan sanmak; bunlar dismiyelinizandır."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Aşağıdakilerden hangisi, normal oluşmuş miyelinin sonradan hasarlandığı demiyelinizan bir hastalıktır?",
+     "cevap": "Progresif multifokal lökoensefalopati",
+     "s": [
+      42
+     ],
+     "aciklama": [
+      "Kök, edinilmiş demiyelinizasyonun tanımını ('normal oluşmuş miyelinin sonradan hasarlanması') doğrudan verir ve bu tanıma uyan hastalığı ister.",
+      "Slayt s. 42 tanımı ve örnekleri birebir verir: önceden normal olan miyelinin hasarı; MS, PML, toksik-ilaç etkili demiyelinizasyon.",
+      "Krabbe (galaktosil-seramidaz, s. 52) ve metakromatik lökodistrofi (arilsülfataz A, s. 54) genetik enzim eksiklikleriyle miyelinin baştan bozuk yapıldığı lökodistrofilerdir; bu yüzden tanıma uymazlar."
+     ],
+     "ornek": "PML hastası tipik olarak immünsüpresedir; latent JC virüsü reaktive olur ve oligodendrositleri hedef alır (s. 32).",
+     "tuzak": "Kökteki 'sonradan' sözcüğünü atlayıp kalıtsal lökodistrofi seçmek."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Multipl skleroz ile ilgili hangisi doğrudur?",
+     "cevap": "Plakların büyüklüğü çok değişkendir",
+     "s": [
+      47
+     ],
+     "aciklama": [
+      "Soru MS'in epidemiyolojisini, plak özelliklerini ve BOS bulgusunu birlikte yoklar.",
+      "Slayt s. 43 başlangıcı 20–40 yaş ve kadın/erkek ≈2:1 verir, s. 47 plakları çok odaklı ve keskin sınırlı beyaz madde lezyonları olarak tanımlar, BOS'ta oligoklonal IgG bantlarını sayar; doğru şık plak büyüklüğünün değişkenliğidir.",
+      "'Tanısında poliklonal bantlar önemlidir' şıkkı güçlü çeldiricidir: slayttaki bant oligoklonaldır; 'remiyelinizasyon sonucu inaktif plak' ise yanlıştır çünkü inaktif plak gliyozla tanımlanır (s. 47)."
+     ],
+     "ornek": "s. 44'teki MR görüntüsünde aynı hastada farklı büyüklükte çok sayıda parlak lezyon görülür; bu, plak boyutlarının değişkenliğini gözle gösterir.",
+     "tuzak": "Oligoklonal ile poliklonal bant; inaktif plakta gliyoz ile remiyelinizasyon."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Multipl skleroz ile ilgili hangisi doğrudur?",
+     "cevap": "Plakların büyük çoğunluğu ventrikül yakınlarında belirir",
+     "s": [
+      47
+     ],
+     "aciklama": [
+      "Soru MS plaklarının yerleşimini ve hastalığın sınıfını ölçer.",
+      "Slayt s. 47'ye göre plaklar özellikle periventriküler alanlarda, optik sinir-kiazma, beyin sapı, serebellum ve omurilikte yerleşir; bu yüzden plakların çoğunun ventrikül yakınında olması doğrudur.",
+      "'En sık görülen dismiyelinizan hastalık' çeldiricisi yanlıştır: MS edinilmiş demiyelinizan bir hastalıktır (s. 42); 'gelişiminde temel rol CD8+ T lenfosit' de yanlıştır, slayt Th1/Th17 hücrelerini verir (s. 46)."
+     ],
+     "ornek": "s. 48'deki Şekil 21.20A'da plak yan ventrikülün oksipital boynuzu çevresinde çerçevelenmiştir.",
+     "tuzak": "MS'i dismiyelinizan sanmak; IRIS'teki CD8+ T hücresini MS patogenezine taşımak."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Multipl sklerozda (MS) görülen plaklarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Plakların boyutları çok büyük farklılık gösterebilir",
+     "s": [
+      47
+     ],
+     "aciklama": [
+      "Soru MS plaklarının sayısı, boyutu, sınırı ve yerleşimiyle ilgili morfolojiyi ölçer.",
+      "Slayt s. 47 plakları çok odaklı, keskin sınırlı beyaz madde lezyonları olarak tanımlar ve periventriküler yerleşimi öne çıkarır; doğru şık plak boyutlarının çok farklı olabilmesidir.",
+      "'Genellikle tek veya az sayıda plak' çok odaklılıkla, 'en çok girus tepelerinde' periventriküler yerleşimle, 'sınırları belirsiz' keskin sınırlılıkla çelişir."
+     ],
+     "ornek": "s. 48'deki LFB-PAS boyalı beyin sapı kesitinde dördüncü ventrikül çevresinde birden çok, farklı büyüklükte boyanmamış alan görülür.",
+     "tuzak": "Keskin sınırlı MS plağını PML'nin düzensiz, belirsiz sınırlı soluk alanlarıyla karıştırmak (s. 33)."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Multipl sklerozda gölge plak (shadow plaque) oluşumu aşağıdakilerden hangisinde gözlenir?",
+     "cevap": "Remiyelinizasyon",
+     "s": [
+      47
+     ],
+     "aciklama": [
+      "Soru MS plaklarının evrelerini, yani plağın etkin dönemden sonra nasıl şekillendiğini ölçer.",
+      "Bu yılın slaytı (s. 47) yalnız aktif plak (miyelin kalıntılı makrofajlar, perivasküler T hücre manşetleri) ile inaktif plak (az inflamasyon, belirgin gliyoz, miyelinsiz alan) ayrımını verir; gölge plak ve remiyelinizasyon terimi slaytta geçmez.",
+      "Bu nedenle soru konu düzeyinde ilgilidir: cevap remiyelinizasyondur, ama çalışırken asıl dayanak aktif ve inaktif plak farkıdır."
+     ],
+     "ornek": "s. 45'teki Şekil 21.21'de aktif plakta lipid yüklü makrofajlar, Luxol fast blue ile miyelinin tamamen yokluğu ve nörofilament boyasıyla aksonların görece korunduğu görülür.",
+     "tuzak": "İnaktif plağın remiyelinizasyonla değil gliyozla şekillendiğini unutma; gölge plağı inaktif plakla karıştırma."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Multipl skleroz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Atakların tekrarlama sıklığı zamanla artar",
+     "s": [
+      43
+     ],
+     "aciklama": [
+      "Soru MS'in seyri ve klinik özelliklerini yanlış ifadeyi bularak sorar.",
+      "Slayt s. 43 genç erişkin başlangıcı ve kadın baskınlığını, s. 49 en yaygın tipin nükseden-düzelen olduğunu, s. 47 BOS'ta oligoklonal bantları verir; bu şıklar doğrudur.",
+      "Yanlış ifade atakların tekrarlama sıklığının zamanla arttığıdır; slayt tedavinin nüks sayısını azaltmayı hedeflediğini söyler, sıklığın yaşla arttığına dair bir bilgi vermez."
+     ],
+     "ornek": "Tipik hasta 20–40 yaşlarında bir kadındır ve ilk belirti çoğu kez optik nörit gibi klinik izole sendromdur (s. 49).",
+     "tuzak": "Sekellerin birikmesi (doğru) ile atak sıklığının artması (yanlış) ifadelerini karıştırmak."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Multipl skleroz (MS) için aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Yaş ilerledikçe atakların tekrar sıklığı artar",
+     "s": [
+      43
+     ],
+     "aciklama": [
+      "Bu, en yeni yılın (2025-26) çıkmışıdır ve MS'in temel özelliklerini yanlış ifade üzerinden sorar.",
+      "Slayt s. 43 MS'i otoimmün MSS demiyelinizasyon hastalığı olarak tanımlar ve kadın/erkek oranını ≈2:1 verir; 'kadınlarda sık' ve 'otoimmün' şıkları bu yüzden doğrudur.",
+      "Yanlış ifade 'yaş ilerledikçe atakların tekrar sıklığı artar' şıkkıdır; slaytta böyle bir bilgi yoktur, hastalık 20–40 yaşta başlar ve seyir nükseden-düzelen tiptedir (s. 49)."
+     ],
+     "ornek": "Aynı sınavda hatırlanan bir başka şıkta MS'te akson hasarı soruldu; s. 45'teki nörofilament boyası aksonların görece korunduğunu gösterir.",
+     "tuzak": "Plakların ventrikül yakınında olması (doğru) ile atak sıklığının artması (yanlış)."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Multipl sklerozun makroskopik ve mikroskopik patolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "cevap": "Klasik patolojide öncelikle akson gövdeleri tamamen kesintiye uğrar; miyelin kılıf ise korunur.",
+     "s": [
+      45
+     ],
+     "aciklama": [
+      "Soru MS'in makroskopik ve mikroskopik patolojisini, özellikle aksonun durumunu ölçer.",
+      "Slayt s. 45'teki Şekil 21.21: aktif plakta lipid yüklü makrofajlar, LFB-PAS'ta miyelinin tamamen yokluğu ve nörofilament boyasında aksonların nispeten korunması; s. 47 inaktif plakta inflamasyonun azaldığını ve gliyozu verir.",
+      "Yanlış ifade 'klasik patolojide öncelikle akson gövdelerinin tamamen kesintiye uğraması'dır; MS'te birincil hedef miyelindir. Bu soru öğrenci hatırlamasından kurulduğu için şık ifadeleri yaklaşık olabilir."
+     ],
+     "ornek": "s. 45'te aynı lezyonun üç boyası yan yana konur: H&E'de makrofajlar, LFB-PAS'ta miyelin yok, nörofilamentte aksonlar duruyor.",
+     "tuzak": "MS'teki akson korunmasını B12 eksikliğindeki 'demiyelinizasyon ve akson kaybı' ile karıştırmak (s. 40)."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Erişkin bir kadının otopsisinde beyinde ventriküllerin çevresindeki beyaz cevherde, ortası demiyelinize, çevresinde perivasküler lenfositik infiltrasyonlar bulunan çok sayıda alan saptanıyor. Hastanın genç yaştan beri devam eden, ataklarla seyreden nörolojik semptomları ve görme bozukluğu olduğu öğreniliyor. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
+     "cevap": "Multipl skleroz",
+     "s": [
+      47
+     ],
+     "aciklama": [
+      "Bu bir otopsi vakasıdır; morfolojik tarif verilip tanı istenir.",
+      "Slayt s. 47 MS plaklarını periventriküler beyaz madde lezyonları olarak, aktif plağı da miyelin kalıntılı makrofajlar ve perivasküler T hücre manşetleri ile tanımlar; ortası demiyelinize, çevresinde perivasküler lenfositler olan çok sayıda periventriküler alan MS'tir.",
+      "Diğer şıklar (Alzheimer, ALS, frontotemporal dejenerasyon, Huntington) nörodejeneratif hastalıklardır; beyaz madde demiyelinizasyonu değil nöron kaybı yaparlar."
+     ],
+     "ornek": "s. 48'deki taze kesitte oksipital boynuz çevresindeki gri-kahverengi plak vakadaki makroskopik görünümün karşılığıdır.",
+     "tuzak": "Perivasküler lenfosit görünce viral ensefalit düşünmek; viral ensefalitte lezyon gri madde ve parankim ağırlıklıdır, demiyelinize periventriküler alan yoktur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Tiamin eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom hangisidir?",
+     "cevap": "Wernicke ensefalopatisi",
+     "s": [
+      38
+     ],
+     "aciklama": [
+      "Soru tiamin eksikliğine bağlı akut tablonun adını ölçer.",
+      "Slayt s. 38 Wernicke ensefalopatisini akut psikoz, göz hareket bozukluğu ve ataksi ile tanımlar ve tiamin tedavisiyle geri dönebildiğini söyler; kökteki göz hareket anormalliği, konfüzyon ve ataksi bu üçlüdür.",
+      "Çeldiricilerden multipl skleroz da ataksi ve göz bulgusu (internükleer oftalmopleji) yapabilir, ama tiamin eksikliğiyle ilişkisi yoktur; nöromiyelit optika optik sinir ve omurilik tutan antikor aracılı bir demiyelinizasyondur (s. 50)."
+     ],
+     "ornek": "Kronik alkol kullanım bozukluğu olan ya da hiperemezis gravidarum nedeniyle sürekli kusan bir hasta tipik örnektir (s. 38).",
+     "tuzak": "Wernicke (akut, geri dönebilir) ile Korsakoff (kalıcı amnezi) ayrımı."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Aşağıdaki hastalıklardan hangisi peroksizomal defektler sonucunda gelişir?",
+     "cevap": "Adrenolökodistrofi",
+     "s": [
+      55
+     ],
+     "aciklama": [
+      "Soru lökodistrofileri metabolik kusurun yerine göre ayırt etmeyi ölçer.",
+      "Slayt s. 55 adrenolökodistrofide ABCD1 geninin peroksizomal bir taşıyıcıyı kodladığını, çok uzun zincirli yağ asitlerinin yıkılamadığını ve serumda yükseldiğini verir.",
+      "Krabbe (galaktosil-seramidaz, s. 52) ve metakromatik lökodistrofi (arilsülfataz A, s. 54) en güçlü çeldiricilerdir; ikisinde de sorun peroksizom değil enzim eksikliğidir."
+     ],
+     "ornek": "Davranış değişikliği ve adrenal yetmezlikle gelen erkek çocuk, X'e bağlı kalıtım nedeniyle tipik hastadır (s. 55).",
+     "tuzak": "Üç lökodistrofinin eksik enzim/taşıyıcı eşleşmesini karıştırmak."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Herpes grubu virüsler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Hem nöronlarda hem de glial hücrelerde eozinofilik intranükleer viral inklüzyonlar (Bunina cisimleri) bulunabilir.",
+     "s": [
+      25
+     ],
+     "aciklama": [
+      "Soru herpes grubu virüslerin MSS tutulumunu yanlış ifade üzerinden sorar.",
+      "Slayt s. 24 HSV-1'in çocuk ve genç erişkinde ensefalit, HSV-2'nin erişkinde menenjit, genital HSV'li anneden doğan bebekte ağır ensefalit yaptığını ve VZV'nin primerde suçiçeği olduğunu verir; s. 25 nöron ve gliadaki inklüzyonun Cowdry tip A olduğunu söyler.",
+      "Yanlış ifade, inklüzyonu 'Bunina cisimleri' diye adlandıran şıktır; slayttaki ad Cowdry tip A'dır. Diğer şıklar slaytla birebir örtüştüğü için tuzak, doğru bilgilerin arasına konmuş yanlış addır."
+     ],
+     "ornek": "s. 26'daki Şekil 21.18D'de nekrotizan inflamasyon ve ek resimde immün boyamayla kahverengi görünen nükleer viral inklüzyonlar herpesin mikroskopik karşılığıdır.",
+     "tuzak": "HSV-2'yi erişkinde ensefalit sanmak; erişkinde menenjit, yenidoğanda ensefalit yapar."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi akut bakteriyel menenjitin sık bulgularından biri değildir?",
+     "cevap": "Şaşılık",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Soru akut bakteriyel menenjitin sık klinik bulgularını ölçer.",
+      "Slayt s. 8 kliniği ateş, baş ağrısı, fotofobi, boyun sertliği, bilinç bulanıklığı ve irritabilite olarak sayar; şıklardaki baş ağrısı, bilinç değişikliği, ense sertliği ve ateş bu listededir.",
+      "Şaşılık listede yoktur; bu yüzden 'sık bulgu değildir' sorusunun cevabıdır. Ensefalitte görülen fokal bulgular (ör. oküler felç, s. 23) menenjitin klasik bulgusu sayılmaz."
+     ],
+     "ornek": "Ateşli, ense sertliği olan ve bilinci bulanıklaşan genç erişkinde etken çoğunlukla meningokoktur (s. 8).",
+     "tuzak": "Ensefalitin fokal bulgularını menenjitin klasik bulgularıyla karıştırmak."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Bakteriyel menenjit etiyolojisi hakkında aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Listeria monocytogenes 50 yaşından küçüklerde ve bir aydan büyüklerde etken olabilir",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Soru bakteriyel menenjitin yaşa göre etkenlerini ölçer.",
+      "Slayt s. 8 yenidoğanda E. coli ve grup B streptokok, genç erişkinde N. meningitidis, yaşlı erişkinde S. pneumoniae ve Listeria monocytogenes verir.",
+      "Yanlış ifade Listeria'yı 50 yaş altına bağlayan şıktır; slayt Listeria'yı yaşlı erişkin etkeni olarak verir. Grup B streptokokun yenidoğan etkeni olması doğru şıktır ve güçlü çeldirici olarak durur."
+     ],
+     "ornek": "s. 7'deki tabloda aynı yaş eşleşmesi sarı vurguyla verilir (bebekler, genç erişkinler, yaşlı erişkinler).",
+     "tuzak": "Listeria'nın yaş grubunu yenidoğan ya da genç erişkine kaydırmak."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi erişkinlerde en sık bakteriyel menenjit etkenidir?",
+     "cevap": "Streptococcus pneumoniae",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Soru erişkinde en sık bakteriyel menenjit etkenini sorar.",
+      "Slayt s. 8'de yaşlı erişkinin sık etkenleri S. pneumoniae ve Listeria'dır; s. 7 tablosu da aynı bilgiyi verir. Sorudaki doğru cevap S. pneumoniae'dır.",
+      "Listeria ve grup B streptokok güçlü çeldiricilerdir: Listeria yaşlı erişkinde ikinci etken, grup B streptokok yenidoğan etkenidir. Neisseria gonorrhoeae menenjit etkeni olarak slaytta yoktur; slaytta genç erişkin etkeni N. meningitidis'tir."
+     ],
+     "ornek": "Yaşlı bir hastada ateş, ense sertliği ve bilinç bulanıklığıyla gelen pürülan menenjitte ilk düşünülen pnömokoktur (s. 8, s. 10).",
+     "tuzak": "N. gonorrhoeae ile N. meningitidis'i karıştırmak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi tüberküloz menenjitine ait BOS bulgularından değildir?",
+     "cevap": "BOS proteini azalmıştır",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru tüberküloz menenjitinin BOS bulgularını ölçer.",
+      "Slayt s. 13'e göre TB menenjitinde hücre sayısı orta derecede artmış (mononükleer ± polimorf), protein belirgin yüksek, glukoz hafif azalmış veya normaldir.",
+      "'BOS proteini azalmıştır' ifadesi yanlıştır; TB menenjitinin en belirgin BOS bulgusu protein artışıdır. Lenfosit hâkimiyeti şıkkı slayttaki mononükleer hücre artışıyla uyumludur."
+     ],
+     "ornek": "Bazal araknoid fibrozisle BOS emilimi bozulup hidrosefali gelişen hasta TB menenjitinin tipik sonucudur (s. 13).",
+     "tuzak": "TB menenjitinin BOS'unu bakteriyel menenjitinkiyle (düşük glukoz, nötrofil) karıştırmak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "En sık menenjit etkeni aşağıdakilerden hangisidir?",
+     "cevap": "Virüsler",
+     "s": [
+      11
+     ],
+     "aciklama": [
+      "Soru menenjitin en sık etken grubunu sorar ve etiyoloji-risk türündedir.",
+      "Slayt s. 11 aseptik menenjitin çoğunlukla viral olduğunu, etken bulunursa yaklaşık yüzde seksen enterovirüs olduğunu söyler; s. 6 enfeksiyöz menenjiti akut piyojenik, aseptik ve kronik diye ayırır.",
+      "Bakteriler en ağır tabloyu yaptığı için akla ilk gelir ama en sık neden virüslerdir; mantar ve tüberküloz kronik menenjitin daha seyrek nedenleridir."
+     ],
+     "ornek": "s. 11'de BOS'ta lenfositik pleositoz, hafif-orta protein artışı ve normal glukozla kendini sınırlayan viral menenjit tablosu anlatılır.",
+     "tuzak": "En ağır olanla en sık olanı karıştırma: bakteriyel menenjit ağırdır, viral menenjit sıktır."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi en sık ensefalomiyelit etkenidir?",
+     "cevap": "Virüsler",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Soru beyin parankimi ve omuriliği birlikte tutan enfeksiyonların en sık etken grubunu ölçer.",
+      "Slayt s. 22 viral ensefaliti parankimal beyin enfeksiyonu olarak tanımlar ve tipik histolojisini (perivasküler mononükleer infiltrasyon, mikroglial nodül, nöronofaji, viral inklüzyon) verir; s. 7 tablosunda ensefalit ve beyin sapı-omurilik sendromlarının etkenleri ağırlıkla virüslerdir.",
+      "Bakteriler daha çok menenjit ve apse, mantarlar kronik menenjit yaptığı için çeldiricidir."
+     ],
+     "ornek": "s. 7 tablosunda rombensefalitte kuduz, spinal poliyomiyelitte polio, ensefalitte HSV, CMV ve Batı Nil virüsü yer alır.",
+     "tuzak": "Menenjitte bakteri ağırlığını ensefalomiyelite taşıma; parankim tutulumunda virüsler öndedir."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdaki bulgulardan hangisi, ensefalomiyelitte daha sık görülürken aynı zamanda menenjit ve ensefalomiyelitin ayırıcı tanısında klinik olarak kullanılmaktadır?",
+     "cevap": "Kişilik ve davranış değişikliği",
+     "s": [
+      24
+     ],
+     "aciklama": [
+      "Soru menenjiti ensefalitten klinik olarak ayıran bulguyu ölçer.",
+      "Slayt s. 24'te HSV-1 ensefalitinin temporal ve frontal lobu tutarak ruh hali, hafıza ve davranış değişikliği yaptığı anlatılır; bu parankim tutulumunun bulgusudur.",
+      "Ateş, baş ağrısı ve boyun sertliği (s. 8) menenjitte de görüldüğü için ayırıcı değildir; kişilik ve davranış değişikliği beyin dokusunun tutulduğunu gösterir."
+     ],
+     "ornek": "s. 26'daki Şekil 21.18C'de herpes ensefalitinde alt frontal ve ön temporal lobların yaygın tahribatı görülür; davranış değişikliğinin dokudaki karşılığı budur.",
+     "tuzak": "Boyun sertliğini ayırıcı bulgu sanma; o meninks irritasyonudur ve iki tabloda da olabilir."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Nazofarinks kolonizasyonu patogenezde rol oynar. II. Meninkslerin inflamasyonu kafa içi basınç artışını engeller. III. İnfektif endokardit gibi lokalize bir odaktan gelişebilir. IV. Patogenezinde komşuluk yolunun rolü yoktur. Akut bakteriyel menenjitin patogenezi hakkında yukarıdakilerden hangisi/hangileri doğrudur?",
+     "cevap": "I ve III",
+     "s": [
+      5
+     ],
+     "aciklama": [
+      "Soru akut bakteriyel menenjitin patogenezini, özellikle mikroorganizmanın MSS'ye giriş yollarını ölçer.",
+      "Slayt s. 5 en sık girişin hematogen (çoğunlukla arteriyel) yol olduğunu, ayrıca sinüs, diş, kafatası ve omurga enfeksiyonlarından lokal yayılımın olduğunu söyler; s. 19 akut bakteriyel endokarditi uzak odak olarak verir.",
+      "Bu yüzden lokalize bir odaktan gelişme doğrudur, komşuluk yolunun rolü yoktur ifadesi yanlıştır; nazofarinks kolonizasyonu slaytta geçmez, meninks inflamasyonunun basıncı artırdığı ise s. 9'daki artmış BOS basıncıyla desteklenir."
+     ],
+     "ornek": "s. 9'da bakteriyel menenjitte BOS basıncının arttığı ve leptomeningeal fibrozisin hidrosefali yaptığı anlatılır.",
+     "tuzak": "Komşuluk yayılımını (sinüzit, mastoidit) unutma; slayt bunu ayrı bir giriş yolu olarak sayar."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Ani başlayan baş ağrısı, ateş ve bilinç değişikliği şikâyetiyle acile başvuran 25 yaşında erkek hastaya lomber ponksiyon yapılmıştır. I. BOS basıncı 150 mmH₂O II. BOS'ta 120/mm³ hücre (%82 PNL) III. BOS proteini 20 mg/dL IV. BOS/kan glukozu 20/120 mg/dL BOS incelemesinde yukarıdaki parametrelerden hangisi/hangileri patolojiktir?",
+     "cevap": "II ve IV",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Soru bakteriyel menenjitte BOS parametrelerini yorumlamayı ölçer.",
+      "Slayt s. 9 bakteriyel menenjitte BOS'ta artmış basınç, nötrofilik pleositoz, yüksek protein ve düşük glukoz olduğunu söyler; nötrofil ağırlıklı hücre artışı ve düşük BOS/kan glukoz oranı bu yüzden patolojiktir.",
+      "Normal sınırdaki basınç ve düşük-normal protein değerleri patolojik sayılmaz; en güçlü çeldirici basınçtır, çünkü menenjitte artması beklenir ama verilen değer artmış değildir."
+     ],
+     "ornek": "s. 10'daki Şekil 21.16'da beyin sapı ve serebellumu kaplayan kalın irinli eksüda, BOS'taki nötrofil artışının dokudaki karşılığıdır.",
+     "tuzak": "Her parametreyi tek tek değerlendir; menenjit tanısı var diye bütün değerlerin bozuk olduğunu varsayma."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Tüberküloz menenjiti ile ilgili hangisi yanlıştır?",
+     "cevap": "Ekstrameningeal tüberküloz bulgusu tanıyı ekarte eder.",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru tüberküloz menenjitinin özelliklerini yanlış ifadeyi bulma kalıbıyla ölçer.",
+      "Slayt s. 13 tüberküloz menenjitinde baş ağrısı, halsizlik, zihinsel karışıklık, kusma; BOS'ta orta hücre artışı, belirgin yüksek protein ve hafif azalmış ya da normal glukoz verir ve Mycobacterium tuberculosis'in beyin içinde tüberkülom da yapabildiğini söyler.",
+      "Hastalık sistemik bir enfeksiyonun MSS yerleşimi olduğu için başka organda tüberküloz bulunması tanıyı dışlamaz; bu yüzden cevap bu ifadedir, öteki şıklar slayttaki bulgularla uyumludur."
+     ],
+     "ornek": "s. 13'te bazal araknoid fibrozisin BOS emilimini bozup hidrosefali yaptığı anlatılır; bu, kronik menenjitin tipik komplikasyonudur.",
+     "tuzak": "Ekstrameningeal tutulumu dışlama ölçütü sanma; aksine eşlik edebilir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi tüberküloz menenjiti için yanlıştır?",
+     "cevap": "Standart rejim ile 6 aylık tedavi uygulanır",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru tüberküloz menenjiti hakkında yanlış ifadeyi bulmayı ölçer ve tedavi süresine dayanır.",
+      "Bu yılın slaytında tüberküloz menenjitinin tedavi rejimi ve süresi yer almaz; s. 13 yalnız klinik, BOS bulguları, tüberkülom ve bazal araknoid fibrozis-hidrosefali komplikasyonunu verir.",
+      "Bu yüzden soru konu düzeyinde ilgilidir; cevap altı aylık standart rejim ifadesidir, öteki şıkları s. 13'teki BOS ve komplikasyon bilgisiyle çürütmek mümkündür."
+     ],
+     "ornek": "s. 13'te BOS'ta belirgin yüksek protein ve hafif düşük ya da normal glukoz, bakteriyel menenjitteki belirgin düşük glukozdan ayrılır.",
+     "tuzak": "Slaytta olmayan tedavi ayrıntısını slayt bilgisi sanma; patoloji dersinden çıkan bu tür soruda dayanak morfoloji ve BOS'tur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Histopatolojik bulgu olarak beyinde Negri cisimcikleri ile karakterize virüs hangisidir?",
+     "cevap": "Rabies virüs",
+     "s": [
+      27
+     ],
+     "aciklama": [
+      "Soru kuduzun tanısal histopatolojik bulgusu olan Negri cisimciğini etkenle eşleştirmeyi ölçer.",
+      "Slayt s. 27 kuduz virüsünün hayvan ısırığıyla bulaştığını, periferik sinir boyunca MSS'ye ilerlediğini ve hidrofobi, konvülsiyon, koma ile ölüme götürdüğünü anlatır; Negri cisimciği bu yılın slaytında geçmez.",
+      "Bu yüzden soru konu düzeyinde ilgilidir; inklüzyon soran çeldiricilerde HSV'nin çekirdek içi Cowdry tip A inklüzyonu (s. 25) en güçlü tuzaktır."
+     ],
+     "ornek": "s. 5'te periferik sinir boyunca girişin kuduz ve herpes zoster virüslerine özgü bir yol olduğu belirtilir.",
+     "tuzak": "Negri cisimciğini Cowdry tip A ile karıştırma; Cowdry A herpes ensefalitinin çekirdek içi inklüzyonudur."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdakilerden hangisi geri döndürülebilir bir demans nedeni değildir?",
+     "cevap": "Lewy cisimcikli demans",
+     "s": [
+      40
+     ],
+     "aciklama": [
+      "Soru geri döndürülebilir demans nedenlerini ölçer ve beslenme bozukluklarıyla bağlantılıdır.",
+      "Slayt s. 40 B12 eksikliğinin erken replasmanla geri dönebildiğini, s. 38 Wernicke ensefalopatisinin tiamin tedavisiyle düzelebildiğini söyler; s. 57 özetinde de tiamin ve B12 eksikliğinin erken tedavide geri dönüşümlü olduğu vurgulanır.",
+      "Lewy cisimcikli demans nörodejeneratif bir hastalıktır ve bu derste anlatılmaz; geri döndürülemez olduğu için cevaptır."
+     ],
+     "ornek": "s. 40'ta B12 eksikliğinde haftalar içinde başlayan ataksi ve parestezinin erken replasmanla düzelebildiği, yerleşmiş paraplejinin ise kalıcı kaldığı anlatılır.",
+     "tuzak": "Geri dönüşümlülük erken tedaviye bağlıdır; yerleşmiş hasar (parapleji, Korsakoff amnezisi) kalıcıdır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki hücrelerden hangisi santral sinir sistemi enfeksiyonlarında rol oynayan ve SSS'nin birincil fagositik (makrofajik) hücre işlevini üstlenen glial elemandır?",
+     "cevap": "Mikroglia",
+     "s": [
+      15
+     ],
+     "aciklama": [
+      "Soru MSS'nin fagositik glial hücresini tanımayı ölçer.",
+      "Slayt s. 15 parezik nörosifiliste yoğun mikroglia proliferasyonunu, s. 22 viral ensefalitte mikroglial nodülleri ve nöronofajiyi verir; nöronofajide ölen nöronu mikroglia hücreleri çevreler (s. 28).",
+      "Astrosit hasar sonrası gliyoz yapar, oligodendrosit miyelin üretir; fagositik işlev mikrogliaya aittir."
+     ],
+     "ornek": "s. 28'deki eŞekil 21.4'te ölen nöronun mikroglial hücrelerle çevrelendiği nöronofaji görülür.",
+     "tuzak": "Gliyozu yapan astrositle fagosit mikrogliayı karıştırma."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Şeffaf bir halo ile çevrelenen açık mor, homojen intranükleer inklüzyonlar (Cowdry A inklüzyonları) hangi etkenle oluşan enfeksiyonda görülür?",
+     "cevap": "Herpes simpleks virüs",
+     "s": [
+      25
+     ],
+     "aciklama": [
+      "Soru Cowdry tip A çekirdek içi inklüzyonunu etkenle eşleştirmeyi ölçer.",
+      "Slayt s. 25 herpes ensefalitinde nöron ve glialarda büyük eozinofilik intranükleer inklüzyonların (Cowdry tip A) görüldüğünü söyler; lezyonlar temporal lobun alt-medial kısmında ve frontal orbital giruslarda nekrotizan ve hemorajiktir.",
+      "CMV de çekirdek içi inklüzyon yapar (s. 29), bu yüzden en güçlü çeldiricidir; ama Cowdry tip A adı slaytta herpese bağlanır."
+     ],
+     "ornek": "s. 26'daki Şekil 21.18D'de nekrotizan inflamasyon ve immün boyamayla vurgulanan çekirdek içi viral inklüzyonlar görülür.",
+     "tuzak": "İnklüzyonun yerini (çekirdek içi) ve adını birlikte hatırla; CMV ile karıştırma."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzeldiği anlaşılan hastada olası tanınız nedir?",
+     "cevap": "MS",
+     "s": [
+      43
+     ],
+     "aciklama": [
+      "Soru MS tanısının temel ölçütünü, zamanda ve yerde yayılımı klinik öyküden tanımayı ölçer.",
+      "Slayt s. 43 MS'i farklı zamanlarda ayrılmış ataklar ve farklı anatomik bölgelerde beyaz madde plaklarıyla tanımlar; s. 49 en yaygın tipin nükseden-düzelen form olduğunu söyler.",
+      "Sinir sisteminin farklı bölgelerini etkileyen, geçip düzelen ataklar bu tanımın klinik karşılığıdır; tek atakla seyreden ADEM (s. 50) en güçlü çeldiricidir."
+     ],
+     "ornek": "s. 44'teki MR görüntüsünde alevlenme sırasında çok sayıda parlak demiyelinizasyon plağı görülür; bu, yerde yayılımın görüntüdeki karşılığıdır.",
+     "tuzak": "Monofazik ADEM ile tekrarlayan MS'i karıştırma."
+    },
+    {
+     "baslik": "Yılı belirsiz",
+     "metin": "Lomber ponksiyonda BOS basıncının belirgin artmış, görünümün bulanık/pürülan, nötrofil hâkimiyetinde belirgin lökositoz, yüksek protein ve ileri derecede düşük glukoz (BOS/kan glukoz oranı <0,4) saptandığı klinik tablo aşağıdakilerden hangisidir?",
+     "cevap": "Akut pürülan (bakteriyel) menenjit",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Soru BOS bulgularından menenjit tipini tanımayı ölçer.",
+      "Slayt s. 9 bakteriyel menenjitte artmış basınç, nötrofilik pleositoz, yüksek protein ve düşük glukozu verir; morfolojide leptomeninkste pürülan eksüda vardır.",
+      "Viral menenjitte lenfositik pleositoz ve normal glukoz (s. 11), tüberkülozda orta hücre artışı ve hafif düşük glukoz (s. 13) bulunur; bu yüzden ileri derecede düşük glukoz ve nötrofil hâkimiyeti bakteriyel menenjiti gösterir."
+     ],
+     "ornek": "s. 10'daki Şekil 21.16'da pürülan menenjitte kalın irinli eksüdanın beyin sapını ve serebellumu kapladığı görülür.",
+     "tuzak": "Tüberküloz menenjitinde de glukoz düşebilir ama hafiftir ve hücreler nötrofil ağırlıklı değildir."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersten çıkmışların ağırlığı miyelin hastalıklarındadır: MS'in plak yerleşimi, sınırı ve boyutu, BOS'taki oligoklonal bant, başlangıç yaşı ve kadın baskınlığı neredeyse her yıl 'hangisi doğrudur/yanlıştır' kalıbıyla sorulmuş. İkinci sık grup 'hangisi demiyelinizandır' sorusudur; PML edinilmiş demiyelinizasyon, Krabbe, metakromatik ve adrenolökodistrofi ise dismiyelinizan çeldiricilerdir. Enfeksiyon kısmında yaşa göre bakteriyel menenjit etkenleri, menenjit kliniği, TB menenjitinde BOS ve herpes ensefalitinde Cowdry tip A inklüzyonu sorulmuş; tiamin eksikliği ile Wernicke ensefalopatisi eşleşmesi de çıkmıştır. Kök kalıbı çoğunlukla kısa doğru/yanlış ifade listesi ya da tanımdan hastalık bulma biçimindedir.",
+    "2019-2020: Hangisi demiyelinizan hastalıktır?",
+    "Cevap: Progresif multifokal lökoensefalopati.",
+    "Soru, normal oluşmuş miyelinin sonradan yıkıldığı edinilmiş demiyelinizasyon ile kalıtsal dismiyelinizasyonu (lökodistrofi) ayırt etmeyi ölçer.",
+    "Slayt s. 42'de edinilmiş demiyelinizasyonun örnekleri olarak MS, PML ve toksik-ilaç etkili demiyelinizasyon verilir; PML'de JC virüsü miyelini yapan oligodendrositi öldürdüğü için normal miyelin sonradan kaybolur (s. 32).",
+    "Metakromatik lökodistrofi, Krabbe ve adrenolökodistrofi ise s. 51'de kalıtsal dismiyelinizasyon örnekleridir; miyelin baştan kusurlu yapıldığı için 'demiyelinizan' sayılmazlar ve en güçlü çeldiricilerdir.",
+    "Örnek: s. 33'teki Şekil 21.19'da miyelin boyasında birleşen soluk alanlar ve kenarda inklüzyonlu büyük oligodendrosit çekirdeği, PML'deki demiyelinizasyonun dokudaki karşılığıdır.",
+    "Tuzak: Lökodistrofileri (Krabbe, metakromatik, adrenolökodistrofi) 'beyaz madde hastalığı' diye demiyelinizan sanmak; bunlar dismiyelinizandır.",
+    "2023-2024: Aşağıdakilerden hangisi, normal oluşmuş miyelinin sonradan hasarlandığı demiyelinizan bir hastalıktır?",
+    "Cevap: Progresif multifokal lökoensefalopati.",
+    "Kök, edinilmiş demiyelinizasyonun tanımını ('normal oluşmuş miyelinin sonradan hasarlanması') doğrudan verir ve bu tanıma uyan hastalığı ister.",
+    "Slayt s. 42 tanımı ve örnekleri birebir verir: önceden normal olan miyelinin hasarı; MS, PML, toksik-ilaç etkili demiyelinizasyon.",
+    "Krabbe (galaktosil-seramidaz, s. 52) ve metakromatik lökodistrofi (arilsülfataz A, s. 54) genetik enzim eksiklikleriyle miyelinin baştan bozuk yapıldığı lökodistrofilerdir; bu yüzden tanıma uymazlar.",
+    "Örnek: PML hastası tipik olarak immünsüpresedir; latent JC virüsü reaktive olur ve oligodendrositleri hedef alır (s. 32).",
+    "Tuzak: Kökteki 'sonradan' sözcüğünü atlayıp kalıtsal lökodistrofi seçmek.",
+    "2019-2020: Multipl skleroz ile ilgili hangisi doğrudur?",
+    "Cevap: Plakların büyüklüğü çok değişkendir.",
+    "Soru MS'in epidemiyolojisini, plak özelliklerini ve BOS bulgusunu birlikte yoklar.",
+    "Slayt s. 43 başlangıcı 20–40 yaş ve kadın/erkek ≈2:1 verir, s. 47 plakları çok odaklı ve keskin sınırlı beyaz madde lezyonları olarak tanımlar, BOS'ta oligoklonal IgG bantlarını sayar; doğru şık plak büyüklüğünün değişkenliğidir.",
+    "'Tanısında poliklonal bantlar önemlidir' şıkkı güçlü çeldiricidir: slayttaki bant oligoklonaldır; 'remiyelinizasyon sonucu inaktif plak' ise yanlıştır çünkü inaktif plak gliyozla tanımlanır (s. 47).",
+    "Örnek: s. 44'teki MR görüntüsünde aynı hastada farklı büyüklükte çok sayıda parlak lezyon görülür; bu, plak boyutlarının değişkenliğini gözle gösterir.",
+    "Tuzak: Oligoklonal ile poliklonal bant; inaktif plakta gliyoz ile remiyelinizasyon.",
+    "2018-2019: Multipl skleroz ile ilgili hangisi doğrudur?",
+    "Cevap: Plakların büyük çoğunluğu ventrikül yakınlarında belirir.",
+    "Soru MS plaklarının yerleşimini ve hastalığın sınıfını ölçer.",
+    "Slayt s. 47'ye göre plaklar özellikle periventriküler alanlarda, optik sinir-kiazma, beyin sapı, serebellum ve omurilikte yerleşir; bu yüzden plakların çoğunun ventrikül yakınında olması doğrudur.",
+    "'En sık görülen dismiyelinizan hastalık' çeldiricisi yanlıştır: MS edinilmiş demiyelinizan bir hastalıktır (s. 42); 'gelişiminde temel rol CD8+ T lenfosit' de yanlıştır, slayt Th1/Th17 hücrelerini verir (s. 46).",
+    "Örnek: s. 48'deki Şekil 21.20A'da plak yan ventrikülün oksipital boynuzu çevresinde çerçevelenmiştir.",
+    "Tuzak: MS'i dismiyelinizan sanmak; IRIS'teki CD8+ T hücresini MS patogenezine taşımak.",
+    "2023-2024: Multipl sklerozda (MS) görülen plaklarla ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Plakların boyutları çok büyük farklılık gösterebilir.",
+    "Soru MS plaklarının sayısı, boyutu, sınırı ve yerleşimiyle ilgili morfolojiyi ölçer.",
+    "Slayt s. 47 plakları çok odaklı, keskin sınırlı beyaz madde lezyonları olarak tanımlar ve periventriküler yerleşimi öne çıkarır; doğru şık plak boyutlarının çok farklı olabilmesidir.",
+    "'Genellikle tek veya az sayıda plak' çok odaklılıkla, 'en çok girus tepelerinde' periventriküler yerleşimle, 'sınırları belirsiz' keskin sınırlılıkla çelişir.",
+    "Örnek: s. 48'deki LFB-PAS boyalı beyin sapı kesitinde dördüncü ventrikül çevresinde birden çok, farklı büyüklükte boyanmamış alan görülür.",
+    "Tuzak: Keskin sınırlı MS plağını PML'nin düzensiz, belirsiz sınırlı soluk alanlarıyla karıştırmak (s. 33).",
+    "2023-2024: Multipl sklerozda gölge plak (shadow plaque) oluşumu aşağıdakilerden hangisinde gözlenir?",
+    "Cevap: Remiyelinizasyon.",
+    "Soru MS plaklarının evrelerini, yani plağın etkin dönemden sonra nasıl şekillendiğini ölçer.",
+    "Bu yılın slaytı (s. 47) yalnız aktif plak (miyelin kalıntılı makrofajlar, perivasküler T hücre manşetleri) ile inaktif plak (az inflamasyon, belirgin gliyoz, miyelinsiz alan) ayrımını verir; gölge plak ve remiyelinizasyon terimi slaytta geçmez.",
+    "Bu nedenle soru konu düzeyinde ilgilidir: cevap remiyelinizasyondur, ama çalışırken asıl dayanak aktif ve inaktif plak farkıdır.",
+    "Örnek: s. 45'teki Şekil 21.21'de aktif plakta lipid yüklü makrofajlar, Luxol fast blue ile miyelinin tamamen yokluğu ve nörofilament boyasıyla aksonların görece korunduğu görülür.",
+    "Tuzak: İnaktif plağın remiyelinizasyonla değil gliyozla şekillendiğini unutma; gölge plağı inaktif plakla karıştırma.",
+    "2024-2025: Multipl skleroz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Atakların tekrarlama sıklığı zamanla artar.",
+    "Soru MS'in seyri ve klinik özelliklerini yanlış ifadeyi bularak sorar.",
+    "Slayt s. 43 genç erişkin başlangıcı ve kadın baskınlığını, s. 49 en yaygın tipin nükseden-düzelen olduğunu, s. 47 BOS'ta oligoklonal bantları verir; bu şıklar doğrudur.",
+    "Yanlış ifade atakların tekrarlama sıklığının zamanla arttığıdır; slayt tedavinin nüks sayısını azaltmayı hedeflediğini söyler, sıklığın yaşla arttığına dair bir bilgi vermez.",
+    "Örnek: Tipik hasta 20–40 yaşlarında bir kadındır ve ilk belirti çoğu kez optik nörit gibi klinik izole sendromdur (s. 49).",
+    "Tuzak: Sekellerin birikmesi (doğru) ile atak sıklığının artması (yanlış) ifadelerini karıştırmak.",
+    "2025-2026: Multipl skleroz (MS) için aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Yaş ilerledikçe atakların tekrar sıklığı artar.",
+    "Bu, en yeni yılın (2025-26) çıkmışıdır ve MS'in temel özelliklerini yanlış ifade üzerinden sorar.",
+    "Slayt s. 43 MS'i otoimmün MSS demiyelinizasyon hastalığı olarak tanımlar ve kadın/erkek oranını ≈2:1 verir; 'kadınlarda sık' ve 'otoimmün' şıkları bu yüzden doğrudur.",
+    "Yanlış ifade 'yaş ilerledikçe atakların tekrar sıklığı artar' şıkkıdır; slaytta böyle bir bilgi yoktur, hastalık 20–40 yaşta başlar ve seyir nükseden-düzelen tiptedir (s. 49).",
+    "Örnek: Aynı sınavda hatırlanan bir başka şıkta MS'te akson hasarı soruldu; s. 45'teki nörofilament boyası aksonların görece korunduğunu gösterir.",
+    "Tuzak: Plakların ventrikül yakınında olması (doğru) ile atak sıklığının artması (yanlış).",
+    "2025-2026: Multipl sklerozun makroskopik ve mikroskopik patolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Cevap: Klasik patolojide öncelikle akson gövdeleri tamamen kesintiye uğrar; miyelin kılıf ise korunur.",
+    "Soru MS'in makroskopik ve mikroskopik patolojisini, özellikle aksonun durumunu ölçer.",
+    "Slayt s. 45'teki Şekil 21.21: aktif plakta lipid yüklü makrofajlar, LFB-PAS'ta miyelinin tamamen yokluğu ve nörofilament boyasında aksonların nispeten korunması; s. 47 inaktif plakta inflamasyonun azaldığını ve gliyozu verir.",
+    "Yanlış ifade 'klasik patolojide öncelikle akson gövdelerinin tamamen kesintiye uğraması'dır; MS'te birincil hedef miyelindir. Bu soru öğrenci hatırlamasından kurulduğu için şık ifadeleri yaklaşık olabilir.",
+    "Örnek: s. 45'te aynı lezyonun üç boyası yan yana konur: H&E'de makrofajlar, LFB-PAS'ta miyelin yok, nörofilamentte aksonlar duruyor.",
+    "Tuzak: MS'teki akson korunmasını B12 eksikliğindeki 'demiyelinizasyon ve akson kaybı' ile karıştırmak (s. 40).",
+    "2020-2021: Erişkin bir kadının otopsisinde beyinde ventriküllerin çevresindeki beyaz cevherde, ortası demiyelinize, çevresinde perivasküler lenfositik infiltrasyonlar bulunan çok sayıda alan saptanıyor. Hastanın genç yaştan beri devam eden, ataklarla seyreden nörolojik semptomları ve görme bozukluğu olduğu öğreniliyor. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
+    "Cevap: Multipl skleroz.",
+    "Bu bir otopsi vakasıdır; morfolojik tarif verilip tanı istenir.",
+    "Slayt s. 47 MS plaklarını periventriküler beyaz madde lezyonları olarak, aktif plağı da miyelin kalıntılı makrofajlar ve perivasküler T hücre manşetleri ile tanımlar; ortası demiyelinize, çevresinde perivasküler lenfositler olan çok sayıda periventriküler alan MS'tir.",
+    "Diğer şıklar (Alzheimer, ALS, frontotemporal dejenerasyon, Huntington) nörodejeneratif hastalıklardır; beyaz madde demiyelinizasyonu değil nöron kaybı yaparlar.",
+    "Örnek: s. 48'deki taze kesitte oksipital boynuz çevresindeki gri-kahverengi plak vakadaki makroskopik görünümün karşılığıdır.",
+    "Tuzak: Perivasküler lenfosit görünce viral ensefalit düşünmek; viral ensefalitte lezyon gri madde ve parankim ağırlıklıdır, demiyelinize periventriküler alan yoktur.",
+    "2020-2021: Tiamin eksikliğinde göz hareketi anormallikleri, konfüzyon ve ataksi ile ortaya çıkan sendrom hangisidir?",
+    "Cevap: Wernicke ensefalopatisi.",
+    "Soru tiamin eksikliğine bağlı akut tablonun adını ölçer.",
+    "Slayt s. 38 Wernicke ensefalopatisini akut psikoz, göz hareket bozukluğu ve ataksi ile tanımlar ve tiamin tedavisiyle geri dönebildiğini söyler; kökteki göz hareket anormalliği, konfüzyon ve ataksi bu üçlüdür.",
+    "Çeldiricilerden multipl skleroz da ataksi ve göz bulgusu (internükleer oftalmopleji) yapabilir, ama tiamin eksikliğiyle ilişkisi yoktur; nöromiyelit optika optik sinir ve omurilik tutan antikor aracılı bir demiyelinizasyondur (s. 50).",
+    "Örnek: Kronik alkol kullanım bozukluğu olan ya da hiperemezis gravidarum nedeniyle sürekli kusan bir hasta tipik örnektir (s. 38).",
+    "Tuzak: Wernicke (akut, geri dönebilir) ile Korsakoff (kalıcı amnezi) ayrımı.",
+    "2023-2024: Aşağıdaki hastalıklardan hangisi peroksizomal defektler sonucunda gelişir?",
+    "Cevap: Adrenolökodistrofi.",
+    "Soru lökodistrofileri metabolik kusurun yerine göre ayırt etmeyi ölçer.",
+    "Slayt s. 55 adrenolökodistrofide ABCD1 geninin peroksizomal bir taşıyıcıyı kodladığını, çok uzun zincirli yağ asitlerinin yıkılamadığını ve serumda yükseldiğini verir.",
+    "Krabbe (galaktosil-seramidaz, s. 52) ve metakromatik lökodistrofi (arilsülfataz A, s. 54) en güçlü çeldiricilerdir; ikisinde de sorun peroksizom değil enzim eksikliğidir.",
+    "Örnek: Davranış değişikliği ve adrenal yetmezlikle gelen erkek çocuk, X'e bağlı kalıtım nedeniyle tipik hastadır (s. 55).",
+    "Tuzak: Üç lökodistrofinin eksik enzim/taşıyıcı eşleşmesini karıştırmak.",
+    "2022-2023: Herpes grubu virüsler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Hem nöronlarda hem de glial hücrelerde eozinofilik intranükleer viral inklüzyonlar (Bunina cisimleri) bulunabilir.",
+    "Soru herpes grubu virüslerin MSS tutulumunu yanlış ifade üzerinden sorar.",
+    "Slayt s. 24 HSV-1'in çocuk ve genç erişkinde ensefalit, HSV-2'nin erişkinde menenjit, genital HSV'li anneden doğan bebekte ağır ensefalit yaptığını ve VZV'nin primerde suçiçeği olduğunu verir; s. 25 nöron ve gliadaki inklüzyonun Cowdry tip A olduğunu söyler.",
+    "Yanlış ifade, inklüzyonu 'Bunina cisimleri' diye adlandıran şıktır; slayttaki ad Cowdry tip A'dır. Diğer şıklar slaytla birebir örtüştüğü için tuzak, doğru bilgilerin arasına konmuş yanlış addır.",
+    "Örnek: s. 26'daki Şekil 21.18D'de nekrotizan inflamasyon ve ek resimde immün boyamayla kahverengi görünen nükleer viral inklüzyonlar herpesin mikroskopik karşılığıdır.",
+    "Tuzak: HSV-2'yi erişkinde ensefalit sanmak; erişkinde menenjit, yenidoğanda ensefalit yapar.",
+    "2018-2019: Aşağıdakilerden hangisi akut bakteriyel menenjitin sık bulgularından biri değildir?",
+    "Cevap: Şaşılık.",
+    "Soru akut bakteriyel menenjitin sık klinik bulgularını ölçer.",
+    "Slayt s. 8 kliniği ateş, baş ağrısı, fotofobi, boyun sertliği, bilinç bulanıklığı ve irritabilite olarak sayar; şıklardaki baş ağrısı, bilinç değişikliği, ense sertliği ve ateş bu listededir.",
+    "Şaşılık listede yoktur; bu yüzden 'sık bulgu değildir' sorusunun cevabıdır. Ensefalitte görülen fokal bulgular (ör. oküler felç, s. 23) menenjitin klasik bulgusu sayılmaz.",
+    "Örnek: Ateşli, ense sertliği olan ve bilinci bulanıklaşan genç erişkinde etken çoğunlukla meningokoktur (s. 8).",
+    "Tuzak: Ensefalitin fokal bulgularını menenjitin klasik bulgularıyla karıştırmak.",
+    "2018-2019: Bakteriyel menenjit etiyolojisi hakkında aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Listeria monocytogenes 50 yaşından küçüklerde ve bir aydan büyüklerde etken olabilir.",
+    "Soru bakteriyel menenjitin yaşa göre etkenlerini ölçer.",
+    "Slayt s. 8 yenidoğanda E. coli ve grup B streptokok, genç erişkinde N. meningitidis, yaşlı erişkinde S. pneumoniae ve Listeria monocytogenes verir.",
+    "Yanlış ifade Listeria'yı 50 yaş altına bağlayan şıktır; slayt Listeria'yı yaşlı erişkin etkeni olarak verir. Grup B streptokokun yenidoğan etkeni olması doğru şıktır ve güçlü çeldirici olarak durur.",
+    "Örnek: s. 7'deki tabloda aynı yaş eşleşmesi sarı vurguyla verilir (bebekler, genç erişkinler, yaşlı erişkinler).",
+    "Tuzak: Listeria'nın yaş grubunu yenidoğan ya da genç erişkine kaydırmak.",
+    "2019-2020: Aşağıdakilerden hangisi erişkinlerde en sık bakteriyel menenjit etkenidir?",
+    "Cevap: Streptococcus pneumoniae.",
+    "Soru erişkinde en sık bakteriyel menenjit etkenini sorar.",
+    "Slayt s. 8'de yaşlı erişkinin sık etkenleri S. pneumoniae ve Listeria'dır; s. 7 tablosu da aynı bilgiyi verir. Sorudaki doğru cevap S. pneumoniae'dır.",
+    "Listeria ve grup B streptokok güçlü çeldiricilerdir: Listeria yaşlı erişkinde ikinci etken, grup B streptokok yenidoğan etkenidir. Neisseria gonorrhoeae menenjit etkeni olarak slaytta yoktur; slaytta genç erişkin etkeni N. meningitidis'tir.",
+    "Örnek: Yaşlı bir hastada ateş, ense sertliği ve bilinç bulanıklığıyla gelen pürülan menenjitte ilk düşünülen pnömokoktur (s. 8, s. 10).",
+    "Tuzak: N. gonorrhoeae ile N. meningitidis'i karıştırmak.",
+    "2020-2021: Aşağıdakilerden hangisi tüberküloz menenjitine ait BOS bulgularından değildir?",
+    "Cevap: BOS proteini azalmıştır.",
+    "Soru tüberküloz menenjitinin BOS bulgularını ölçer.",
+    "Slayt s. 13'e göre TB menenjitinde hücre sayısı orta derecede artmış (mononükleer ± polimorf), protein belirgin yüksek, glukoz hafif azalmış veya normaldir.",
+    "'BOS proteini azalmıştır' ifadesi yanlıştır; TB menenjitinin en belirgin BOS bulgusu protein artışıdır. Lenfosit hâkimiyeti şıkkı slayttaki mononükleer hücre artışıyla uyumludur.",
+    "Örnek: Bazal araknoid fibrozisle BOS emilimi bozulup hidrosefali gelişen hasta TB menenjitinin tipik sonucudur (s. 13).",
+    "Tuzak: TB menenjitinin BOS'unu bakteriyel menenjitinkiyle (düşük glukoz, nötrofil) karıştırmak.",
+    "2020-2021: En sık menenjit etkeni aşağıdakilerden hangisidir?",
+    "Cevap: Virüsler.",
+    "Soru menenjitin en sık etken grubunu sorar ve etiyoloji-risk türündedir.",
+    "Slayt s. 11 aseptik menenjitin çoğunlukla viral olduğunu, etken bulunursa yaklaşık yüzde seksen enterovirüs olduğunu söyler; s. 6 enfeksiyöz menenjiti akut piyojenik, aseptik ve kronik diye ayırır.",
+    "Bakteriler en ağır tabloyu yaptığı için akla ilk gelir ama en sık neden virüslerdir; mantar ve tüberküloz kronik menenjitin daha seyrek nedenleridir.",
+    "Örnek: s. 11'de BOS'ta lenfositik pleositoz, hafif-orta protein artışı ve normal glukozla kendini sınırlayan viral menenjit tablosu anlatılır.",
+    "Tuzak: En ağır olanla en sık olanı karıştırma: bakteriyel menenjit ağırdır, viral menenjit sıktır.",
+    "2018-2019: Aşağıdakilerden hangisi en sık ensefalomiyelit etkenidir?",
+    "Cevap: Virüsler.",
+    "Soru beyin parankimi ve omuriliği birlikte tutan enfeksiyonların en sık etken grubunu ölçer.",
+    "Slayt s. 22 viral ensefaliti parankimal beyin enfeksiyonu olarak tanımlar ve tipik histolojisini (perivasküler mononükleer infiltrasyon, mikroglial nodül, nöronofaji, viral inklüzyon) verir; s. 7 tablosunda ensefalit ve beyin sapı-omurilik sendromlarının etkenleri ağırlıkla virüslerdir.",
+    "Bakteriler daha çok menenjit ve apse, mantarlar kronik menenjit yaptığı için çeldiricidir.",
+    "Örnek: s. 7 tablosunda rombensefalitte kuduz, spinal poliyomiyelitte polio, ensefalitte HSV, CMV ve Batı Nil virüsü yer alır.",
+    "Tuzak: Menenjitte bakteri ağırlığını ensefalomiyelite taşıma; parankim tutulumunda virüsler öndedir.",
+    "2018-2019: Aşağıdaki bulgulardan hangisi, ensefalomiyelitte daha sık görülürken aynı zamanda menenjit ve ensefalomiyelitin ayırıcı tanısında klinik olarak kullanılmaktadır?",
+    "Cevap: Kişilik ve davranış değişikliği.",
+    "Soru menenjiti ensefalitten klinik olarak ayıran bulguyu ölçer.",
+    "Slayt s. 24'te HSV-1 ensefalitinin temporal ve frontal lobu tutarak ruh hali, hafıza ve davranış değişikliği yaptığı anlatılır; bu parankim tutulumunun bulgusudur.",
+    "Ateş, baş ağrısı ve boyun sertliği (s. 8) menenjitte de görüldüğü için ayırıcı değildir; kişilik ve davranış değişikliği beyin dokusunun tutulduğunu gösterir.",
+    "Örnek: s. 26'daki Şekil 21.18C'de herpes ensefalitinde alt frontal ve ön temporal lobların yaygın tahribatı görülür; davranış değişikliğinin dokudaki karşılığı budur.",
+    "Tuzak: Boyun sertliğini ayırıcı bulgu sanma; o meninks irritasyonudur ve iki tabloda da olabilir.",
+    "2018-2019: I. Nazofarinks kolonizasyonu patogenezde rol oynar. II. Meninkslerin inflamasyonu kafa içi basınç artışını engeller. III. İnfektif endokardit gibi lokalize bir odaktan gelişebilir. IV. Patogenezinde komşuluk yolunun rolü yoktur. Akut bakteriyel menenjitin patogenezi hakkında yukarıdakilerden hangisi/hangileri doğrudur?",
+    "Cevap: I ve III.",
+    "Soru akut bakteriyel menenjitin patogenezini, özellikle mikroorganizmanın MSS'ye giriş yollarını ölçer.",
+    "Slayt s. 5 en sık girişin hematogen (çoğunlukla arteriyel) yol olduğunu, ayrıca sinüs, diş, kafatası ve omurga enfeksiyonlarından lokal yayılımın olduğunu söyler; s. 19 akut bakteriyel endokarditi uzak odak olarak verir.",
+    "Bu yüzden lokalize bir odaktan gelişme doğrudur, komşuluk yolunun rolü yoktur ifadesi yanlıştır; nazofarinks kolonizasyonu slaytta geçmez, meninks inflamasyonunun basıncı artırdığı ise s. 9'daki artmış BOS basıncıyla desteklenir.",
+    "Örnek: s. 9'da bakteriyel menenjitte BOS basıncının arttığı ve leptomeningeal fibrozisin hidrosefali yaptığı anlatılır.",
+    "Tuzak: Komşuluk yayılımını (sinüzit, mastoidit) unutma; slayt bunu ayrı bir giriş yolu olarak sayar.",
+    "2018-2019: Ani başlayan baş ağrısı, ateş ve bilinç değişikliği şikâyetiyle acile başvuran 25 yaşında erkek hastaya lomber ponksiyon yapılmıştır. I. BOS basıncı 150 mmH₂O II. BOS'ta 120/mm³ hücre (%82 PNL) III. BOS proteini 20 mg/dL IV. BOS/kan glukozu 20/120 mg/dL BOS incelemesinde yukarıdaki parametrelerden hangisi/hangileri patolojiktir?",
+    "Cevap: II ve IV.",
+    "Soru bakteriyel menenjitte BOS parametrelerini yorumlamayı ölçer.",
+    "Slayt s. 9 bakteriyel menenjitte BOS'ta artmış basınç, nötrofilik pleositoz, yüksek protein ve düşük glukoz olduğunu söyler; nötrofil ağırlıklı hücre artışı ve düşük BOS/kan glukoz oranı bu yüzden patolojiktir.",
+    "Normal sınırdaki basınç ve düşük-normal protein değerleri patolojik sayılmaz; en güçlü çeldirici basınçtır, çünkü menenjitte artması beklenir ama verilen değer artmış değildir.",
+    "Örnek: s. 10'daki Şekil 21.16'da beyin sapı ve serebellumu kaplayan kalın irinli eksüda, BOS'taki nötrofil artışının dokudaki karşılığıdır.",
+    "Tuzak: Her parametreyi tek tek değerlendir; menenjit tanısı var diye bütün değerlerin bozuk olduğunu varsayma.",
+    "2020-2021: Tüberküloz menenjiti ile ilgili hangisi yanlıştır?",
+    "Cevap: Ekstrameningeal tüberküloz bulgusu tanıyı ekarte eder.",
+    "Soru tüberküloz menenjitinin özelliklerini yanlış ifadeyi bulma kalıbıyla ölçer.",
+    "Slayt s. 13 tüberküloz menenjitinde baş ağrısı, halsizlik, zihinsel karışıklık, kusma; BOS'ta orta hücre artışı, belirgin yüksek protein ve hafif azalmış ya da normal glukoz verir ve Mycobacterium tuberculosis'in beyin içinde tüberkülom da yapabildiğini söyler.",
+    "Hastalık sistemik bir enfeksiyonun MSS yerleşimi olduğu için başka organda tüberküloz bulunması tanıyı dışlamaz; bu yüzden cevap bu ifadedir, öteki şıklar slayttaki bulgularla uyumludur.",
+    "Örnek: s. 13'te bazal araknoid fibrozisin BOS emilimini bozup hidrosefali yaptığı anlatılır; bu, kronik menenjitin tipik komplikasyonudur.",
+    "Tuzak: Ekstrameningeal tutulumu dışlama ölçütü sanma; aksine eşlik edebilir.",
+    "2020-2021: Aşağıdakilerden hangisi tüberküloz menenjiti için yanlıştır?",
+    "Cevap: Standart rejim ile 6 aylık tedavi uygulanır.",
+    "Soru tüberküloz menenjiti hakkında yanlış ifadeyi bulmayı ölçer ve tedavi süresine dayanır.",
+    "Bu yılın slaytında tüberküloz menenjitinin tedavi rejimi ve süresi yer almaz; s. 13 yalnız klinik, BOS bulguları, tüberkülom ve bazal araknoid fibrozis-hidrosefali komplikasyonunu verir.",
+    "Bu yüzden soru konu düzeyinde ilgilidir; cevap altı aylık standart rejim ifadesidir, öteki şıkları s. 13'teki BOS ve komplikasyon bilgisiyle çürütmek mümkündür.",
+    "Örnek: s. 13'te BOS'ta belirgin yüksek protein ve hafif düşük ya da normal glukoz, bakteriyel menenjitteki belirgin düşük glukozdan ayrılır.",
+    "Tuzak: Slaytta olmayan tedavi ayrıntısını slayt bilgisi sanma; patoloji dersinden çıkan bu tür soruda dayanak morfoloji ve BOS'tur.",
+    "2020-2021: Histopatolojik bulgu olarak beyinde Negri cisimcikleri ile karakterize virüs hangisidir?",
+    "Cevap: Rabies virüs.",
+    "Soru kuduzun tanısal histopatolojik bulgusu olan Negri cisimciğini etkenle eşleştirmeyi ölçer.",
+    "Slayt s. 27 kuduz virüsünün hayvan ısırığıyla bulaştığını, periferik sinir boyunca MSS'ye ilerlediğini ve hidrofobi, konvülsiyon, koma ile ölüme götürdüğünü anlatır; Negri cisimciği bu yılın slaytında geçmez.",
+    "Bu yüzden soru konu düzeyinde ilgilidir; inklüzyon soran çeldiricilerde HSV'nin çekirdek içi Cowdry tip A inklüzyonu (s. 25) en güçlü tuzaktır.",
+    "Örnek: s. 5'te periferik sinir boyunca girişin kuduz ve herpes zoster virüslerine özgü bir yol olduğu belirtilir.",
+    "Tuzak: Negri cisimciğini Cowdry tip A ile karıştırma; Cowdry A herpes ensefalitinin çekirdek içi inklüzyonudur.",
+    "2022-2023: Aşağıdakilerden hangisi geri döndürülebilir bir demans nedeni değildir?",
+    "Cevap: Lewy cisimcikli demans.",
+    "Soru geri döndürülebilir demans nedenlerini ölçer ve beslenme bozukluklarıyla bağlantılıdır.",
+    "Slayt s. 40 B12 eksikliğinin erken replasmanla geri dönebildiğini, s. 38 Wernicke ensefalopatisinin tiamin tedavisiyle düzelebildiğini söyler; s. 57 özetinde de tiamin ve B12 eksikliğinin erken tedavide geri dönüşümlü olduğu vurgulanır.",
+    "Lewy cisimcikli demans nörodejeneratif bir hastalıktır ve bu derste anlatılmaz; geri döndürülemez olduğu için cevaptır.",
+    "Örnek: s. 40'ta B12 eksikliğinde haftalar içinde başlayan ataksi ve parestezinin erken replasmanla düzelebildiği, yerleşmiş paraplejinin ise kalıcı kaldığı anlatılır.",
+    "Tuzak: Geri dönüşümlülük erken tedaviye bağlıdır; yerleşmiş hasar (parapleji, Korsakoff amnezisi) kalıcıdır.",
+    "2020-2021: Aşağıdaki hücrelerden hangisi santral sinir sistemi enfeksiyonlarında rol oynayan ve SSS'nin birincil fagositik (makrofajik) hücre işlevini üstlenen glial elemandır?",
+    "Cevap: Mikroglia.",
+    "Soru MSS'nin fagositik glial hücresini tanımayı ölçer.",
+    "Slayt s. 15 parezik nörosifiliste yoğun mikroglia proliferasyonunu, s. 22 viral ensefalitte mikroglial nodülleri ve nöronofajiyi verir; nöronofajide ölen nöronu mikroglia hücreleri çevreler (s. 28).",
+    "Astrosit hasar sonrası gliyoz yapar, oligodendrosit miyelin üretir; fagositik işlev mikrogliaya aittir.",
+    "Örnek: s. 28'deki eŞekil 21.4'te ölen nöronun mikroglial hücrelerle çevrelendiği nöronofaji görülür.",
+    "Tuzak: Gliyozu yapan astrositle fagosit mikrogliayı karıştırma.",
+    "2020-2021: Şeffaf bir halo ile çevrelenen açık mor, homojen intranükleer inklüzyonlar (Cowdry A inklüzyonları) hangi etkenle oluşan enfeksiyonda görülür?",
+    "Cevap: Herpes simpleks virüs.",
+    "Soru Cowdry tip A çekirdek içi inklüzyonunu etkenle eşleştirmeyi ölçer.",
+    "Slayt s. 25 herpes ensefalitinde nöron ve glialarda büyük eozinofilik intranükleer inklüzyonların (Cowdry tip A) görüldüğünü söyler; lezyonlar temporal lobun alt-medial kısmında ve frontal orbital giruslarda nekrotizan ve hemorajiktir.",
+    "CMV de çekirdek içi inklüzyon yapar (s. 29), bu yüzden en güçlü çeldiricidir; ama Cowdry tip A adı slaytta herpese bağlanır.",
+    "Örnek: s. 26'daki Şekil 21.18D'de nekrotizan inflamasyon ve immün boyamayla vurgulanan çekirdek içi viral inklüzyonlar görülür.",
+    "Tuzak: İnklüzyonun yerini (çekirdek içi) ve adını birlikte hatırla; CMV ile karıştırma.",
+    "2020-2021: Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzeldiği anlaşılan hastada olası tanınız nedir?",
+    "Cevap: MS.",
+    "Soru MS tanısının temel ölçütünü, zamanda ve yerde yayılımı klinik öyküden tanımayı ölçer.",
+    "Slayt s. 43 MS'i farklı zamanlarda ayrılmış ataklar ve farklı anatomik bölgelerde beyaz madde plaklarıyla tanımlar; s. 49 en yaygın tipin nükseden-düzelen form olduğunu söyler.",
+    "Sinir sisteminin farklı bölgelerini etkileyen, geçip düzelen ataklar bu tanımın klinik karşılığıdır; tek atakla seyreden ADEM (s. 50) en güçlü çeldiricidir.",
+    "Örnek: s. 44'teki MR görüntüsünde alevlenme sırasında çok sayıda parlak demiyelinizasyon plağı görülür; bu, yerde yayılımın görüntüdeki karşılığıdır.",
+    "Tuzak: Monofazik ADEM ile tekrarlayan MS'i karıştırma.",
+    "Yılı belirsiz: Lomber ponksiyonda BOS basıncının belirgin artmış, görünümün bulanık/pürülan, nötrofil hâkimiyetinde belirgin lökositoz, yüksek protein ve ileri derecede düşük glukoz (BOS/kan glukoz oranı <0,4) saptandığı klinik tablo aşağıdakilerden hangisidir?",
+    "Cevap: Akut pürülan (bakteriyel) menenjit.",
+    "Soru BOS bulgularından menenjit tipini tanımayı ölçer.",
+    "Slayt s. 9 bakteriyel menenjitte artmış basınç, nötrofilik pleositoz, yüksek protein ve düşük glukozu verir; morfolojide leptomeninkste pürülan eksüda vardır.",
+    "Viral menenjitte lenfositik pleositoz ve normal glukoz (s. 11), tüberkülozda orta hücre artışı ve hafif düşük glukoz (s. 13) bulunur; bu yüzden ileri derecede düşük glukoz ve nötrofil hâkimiyeti bakteriyel menenjiti gösterir.",
+    "Örnek: s. 10'daki Şekil 21.16'da pürülan menenjitte kalın irinli eksüdanın beyin sapını ve serebellumu kapladığı görülür.",
+    "Tuzak: Tüberküloz menenjitinde de glukoz düşebilir ama hafiftir ve hücreler nötrofil ağırlıklı değildir."
+   ],
+   "v": "6d2d924ec6"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok neden ve risk etkeni (%33) ve tanım ve kavram (%20) sorulur."
+    },
+    {
+     "baslik": "Neden ve risk etkeni",
+     "metin": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%47) ve anlama ve ilişki kurma (%47) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir.",
+    "Sorulan bilgi: En çok neden ve risk etkeni (%33) ve tanım ve kavram (%20) sorulur.",
+    "Neden ve risk etkeni: Neden ve risk faktörü önleme/tanıyı yönlendirir.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%47) ve anlama ve ilişki kurma (%47) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta."
+   ],
+   "v": "d7ebd649f3"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "MS plaklarının yerleşimi ve görünümü",
+     "metin": "2018-19, 2019-20, 2020-21, 2023-24 ve 2025-26 sınavlarında MS plaklarıyla ilgili soru soruldu; en sık tekrar eden konu budur."
+    },
+    {
+     "baslik": "Edinilmiş demiyelinizasyon ve lökodistrofi",
+     "metin": "2019-20 ve 2023-24'te 'normal oluşmuş miyelinin sonradan hasarlandığı hastalık' olarak PML soruldu; şıklar lökodistrofilerdi."
+    },
+    {
+     "baslik": "MS tanımı ve epidemiyolojisi",
+     "metin": "2024-25 ve 2025-26'da 'MS için hangisi yanlıştır' kalıbıyla soruldu; kadın baskınlığı ve otoimmünite doğru şıklardı."
+    },
+    {
+     "baslik": "Herpes ensefaliti: yerleşim ve Cowdry tip A",
+     "metin": "2022-23'te herpes virüsleri için yanlış ifade olarak inklüzyonun 'Bunina' diye adlandırılması soruldu; doğru ad Cowdry tip A'dır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta neden ve risk etkeni bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "MS plaklarının yerleşimi ve görünümü: 2018-19, 2019-20, 2020-21, 2023-24 ve 2025-26 sınavlarında MS plaklarıyla ilgili soru soruldu; en sık tekrar eden konu budur.",
+    "Edinilmiş demiyelinizasyon ve lökodistrofi: 2019-20 ve 2023-24'te 'normal oluşmuş miyelinin sonradan hasarlandığı hastalık' olarak PML soruldu; şıklar lökodistrofilerdi.",
+    "MS tanımı ve epidemiyolojisi: 2024-25 ve 2025-26'da 'MS için hangisi yanlıştır' kalıbıyla soruldu; kadın baskınlığı ve otoimmünite doğru şıklardı.",
+    "Herpes ensefaliti: yerleşim ve Cowdry tip A: 2022-23'te herpes virüsleri için yanlış ifade olarak inklüzyonun 'Bunina' diye adlandırılması soruldu; doğru ad Cowdry tip A'dır.",
+    "Çalışma yolu: Okurken her başlıkta neden ve risk etkeni bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "ced35ee675"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders üç konuyu işler: merkezi sinir sistemi enfeksiyonları (menenjitler, apse, viral ensefalitler, HIV ve PML, parazitler), beslenme bozuklukları (tiamin eksikliğinde Wernicke–Korsakoff, B12 eksikliğinde subakut kombine dejenerasyon) ve miyelin hastalıkları (edinilmiş demiyelinizasyon, multipl skleroz, ADEM, NMO, ozmotik demiyelinizasyon ve lökodistrofiler).",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders üç konuyu işler: merkezi sinir sistemi enfeksiyonları (menenjitler, apse, viral ensefalitler, HIV ve PML, parazitler), beslenme bozuklukları (tiamin eksikliğinde Wernicke–Korsakoff, B12 eksikliğinde subakut kombine dejenerasyon) ve miyelin hastalıkları (edinilmiş demiyelinizasyon, multipl skleroz, ADEM, NMO, ozmotik demiyelinizasyon ve lökodistrofiler)."
+   ],
+   "v": "801178977f"
+  },
+  {
+   "id": "2p03-10",
+   "baslik": "Akut piyojenik menenjit kliniği",
+   "giris": "Akut piyojenik menenjit ateş, baş ağrısı, fotofobi, boyun sertliği, bilinç bulanıklığı ve irritabilite ile seyreder.",
+   "s": [
+    6,
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Menenjit, subaraknoid boşluktaki leptomeninks enfeksiyonunun yol açtığı inflamasyondur; beyne yayılırsa meningoensefalit denir."
+    },
+    {
+     "metin": "Enfeksiyöz menenjit akut piyojenik yani bakteriyel, aseptik yani viral ve kronik olarak ayrılır; kronik menenjitin etkenleri tüberküloz, spiroket ve mantarlardır."
+    },
+    {
+     "metin": "Ateş, baş ağrısı, fotofobi, boyun sertliği, bilinç bulanıklığı ve irritabilite."
+    },
+    {
+     "metin": "Bu listede olmayan bir bulgu, örneğin şaşılık ya da kuduza özgü hidrofobi, akut bakteriyel menenjitin sık bulgusu sayılmaz."
+    },
+    {
+     "metin": "Menenjitlerin ayırıcı tanısında BOS incelemesi temeldir."
+    }
+   ],
+   "klip": "o-2p03-10",
+   "ses": [
+    "Akut piyojenik menenjit kliniği.",
+    "Akut piyojenik menenjit ateş, baş ağrısı, fotofobi, boyun sertliği, bilinç bulanıklığı ve irritabilite ile seyreder.",
+    "Menenjit, subaraknoid boşluktaki leptomeninks enfeksiyonunun yol açtığı inflamasyondur; beyne yayılırsa meningoensefalit denir.",
+    "Enfeksiyöz menenjit akut piyojenik yani bakteriyel, aseptik yani viral ve kronik olarak ayrılır; kronik menenjitin etkenleri tüberküloz, spiroket ve mantarlardır.",
+    "Ateş, baş ağrısı, fotofobi, boyun sertliği, bilinç bulanıklığı ve irritabilite.",
+    "Bu listede olmayan bir bulgu, örneğin şaşılık ya da kuduza özgü hidrofobi, akut bakteriyel menenjitin sık bulgusu sayılmaz.",
+    "Menenjitlerin ayırıcı tanısında BOS incelemesi temeldir."
+   ],
+   "v": "060cdf19ef"
+  },
+  {
+   "id": "2p03-08",
+   "baslik": "Bakteriyel menenjitin yaşa göre etkenleri",
+   "giris": "Yenidoğanda Escherichia coli ve B grubu streptokok, ergen-genç erişkinde Neisseria meningitidis, yaşlı erişkinde Streptococcus pneumoniae ve Listeria sık etkendir.",
+   "s": [
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Escherichia coli ve B grubu streptokok; B grubu streptokokun türü Streptococcus agalactiae'dir."
+    },
+    {
+     "metin": "Neisseria meningitidis."
+    },
+    {
+     "metin": "Streptococcus pneumoniae ve Listeria monocytogenes."
+    },
+    {
+     "metin": "Akut piyojenik menenjitte bebeklerde Escherichia coli veya grup B streptokoklar, genç erişkinlerde Neisseria meningitidis, yaşlı erişkinlerde Streptococcus pneumoniae veya Listeria monocytogenes verilir."
+    },
+    {
+     "metin": "Listeria yaşlı erişkin etkeni olarak öğrenilmelidir; genç yaşla eşleştirilen ifade yanlıştır. Kronik menenjitin etkeni ise Mycobacterium tuberculosis'tir."
+    }
+   ],
+   "klip": "o-2p03-08",
+   "ses": [
+    "Bakteriyel menenjitin yaşa göre etkenleri.",
+    "Yenidoğanda Escherichia coli ve B grubu streptokok, ergen-genç erişkinde Neisseria meningitidis, yaşlı erişkinde Streptococcus pneumoniae ve Listeria sık etkendir.",
+    "Escherichia coli ve B grubu streptokok; B grubu streptokokun türü Streptococcus agalactiae'dir.",
+    "Neisseria meningitidis.",
+    "Streptococcus pneumoniae ve Listeria monocytogenes.",
+    "Akut piyojenik menenjitte bebeklerde Escherichia coli veya grup B streptokoklar, genç erişkinlerde Neisseria meningitidis, yaşlı erişkinlerde Streptococcus pneumoniae veya Listeria monocytogenes verilir.",
+    "Listeria yaşlı erişkin etkeni olarak öğrenilmelidir; genç yaşla eşleştirilen ifade yanlıştır. Kronik menenjitin etkeni ise Mycobacterium tuberculosis'tir."
+   ],
+   "v": "e1ca721405"
+  },
+  {
+   "id": "2p03-04",
+   "baslik": "Herpes ensefaliti: yerleşim ve Cowdry tip A",
+   "giris": "Herpes ensefalitinde nöron ve glialarda büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A) bulunur.",
+   "s": [
+    25
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Herpes ensefalitinde nöron ve glia çekirdeklerinde büyük eozinofilik intranükleer inklüzyonlar görülür; adı Cowdry tip A'dır. Nükleer viral inklüzyonlar immün boyamayla vurgulanabilir."
+    },
+    {
+     "metin": "En ağır lezyonlar temporal lobun alt ve medial kısımlarında ve frontal orbital giruslardadır; şekilde alt frontal, ön temporal loblar ve singulat girusların yaygın tahribatı görülür."
+    },
+    {
+     "metin": "Süreç nekrotizan ve sıklıkla hemorajiktir, perivasküler inflamatuvar infiltratlar vardır."
+    },
+    {
+     "metin": "Özellikle çocuk ve genç erişkinde ruh hali, hafıza ve davranış değişiklikleri yapar; bazı olgular TLR-3 yol defektiyle ilişkilidir."
+    },
+    {
+     "metin": "Erişkinde genelde menenjit, genital enfeksiyonlu anneden doğan bebekte ağır yaygın ensefalit yapar."
+    }
+   ],
+   "klip": "o-2p03-04",
+   "ses": [
+    "Herpes ensefaliti: yerleşim ve Cowdry tip A.",
+    "Herpes ensefalitinde nöron ve glialarda büyük eozinofilik intranükleer inklüzyonlar (Cowdry tip A) bulunur.",
+    "Herpes ensefalitinde nöron ve glia çekirdeklerinde büyük eozinofilik intranükleer inklüzyonlar görülür; adı Cowdry tip A'dır. Nükleer viral inklüzyonlar immün boyamayla vurgulanabilir.",
+    "En ağır lezyonlar temporal lobun alt ve medial kısımlarında ve frontal orbital giruslardadır; şekilde alt frontal, ön temporal loblar ve singulat girusların yaygın tahribatı görülür.",
+    "Süreç nekrotizan ve sıklıkla hemorajiktir, perivasküler inflamatuvar infiltratlar vardır.",
+    "Özellikle çocuk ve genç erişkinde ruh hali, hafıza ve davranış değişiklikleri yapar; bazı olgular TLR-3 yol defektiyle ilişkilidir.",
+    "Erişkinde genelde menenjit, genital enfeksiyonlu anneden doğan bebekte ağır yaygın ensefalit yapar."
+   ],
+   "v": "8043936380"
+  },
+  {
+   "id": "2p03-09",
+   "baslik": "JC virüsü ve PML",
+   "giris": "JC poliyomavirüsü immünsüprese hastada reaktive olur, oligodendrositi hedef alarak demiyelinizasyonla PML yapar.",
+   "s": [
+    32
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "JC poliyomavirüsü çoğu insanda latenttir; immünsüprese hastada reaktive olarak PML yapar."
+    },
+    {
+     "metin": "Oligodendrosittir; miyelin yapan hücre enfekte olunca demiyelinizasyon gelişir."
+    },
+    {
+     "metin": "İlerleyici nörolojik defisit; görüntülemede hemisferik ve serebellar beyaz maddede çok odaklı lezyonlar."
+    },
+    {
+     "metin": "Spesifik tedavisi yoktur, genellikle bir yıldan kısa sürede ölümcüldür."
+    },
+    {
+     "metin": "Yamalı demiyelinizasyon, merkezde lipid yüklü makrofajlar, kenarda devleşmiş inklüzyonlu oligodendrosit çekirdekleri ve tuhaf dev astrositler. Miyelin boyasında düzensiz, belirsiz sınırlı ve yer yer birleşen soluk alanlar görülür."
+    }
+   ],
+   "klip": "o-2p03-09",
+   "ses": [
+    "JC virüsü ve PML.",
+    "JC poliyomavirüsü immünsüprese hastada reaktive olur, oligodendrositi hedef alarak demiyelinizasyonla PML yapar.",
+    "JC poliyomavirüsü çoğu insanda latenttir; immünsüprese hastada reaktive olarak PML yapar.",
+    "Oligodendrosittir; miyelin yapan hücre enfekte olunca demiyelinizasyon gelişir.",
+    "İlerleyici nörolojik defisit; görüntülemede hemisferik ve serebellar beyaz maddede çok odaklı lezyonlar.",
+    "Spesifik tedavisi yoktur, genellikle bir yıldan kısa sürede ölümcüldür.",
+    "Yamalı demiyelinizasyon, merkezde lipid yüklü makrofajlar, kenarda devleşmiş inklüzyonlu oligodendrosit çekirdekleri ve tuhaf dev astrositler. Miyelin boyasında düzensiz, belirsiz sınırlı ve yer yer birleşen soluk alanlar görülür."
+   ],
+   "v": "306c2a8a8d"
+  },
+  {
+   "id": "2p03-05",
+   "baslik": "Tiamin eksikliği ve Wernicke–Korsakoff",
+   "giris": "Tiamin eksikliği akut psikoz, göz hareket bozukluğu ve ataksiyle seyreden Wernicke ensefalopatisi yapar.",
+   "s": [
+    38
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Kronik alkol kullanım bozukluğu, malabsorpsiyon, gastrik cerrahi ve sürekli kusma; hiperemezis gravidarum ve bulimia nervosa sürekli kusma örnekleridir."
+    },
+    {
+     "metin": "Akut psikoz, göz hareket bozukluğu ve ataksi ile seyreder; tiamin tedavisiyle geri dönebilir."
+    },
+    {
+     "metin": "Tedavi edilmeyen olgularda gelişen kalıcı ağır amnezidir; ikisi birlikte Wernicke–Korsakoff sendromu adını alır."
+    },
+    {
+     "metin": "En sık mamiller cisimler, hipotalamus ve üçüncü ile dördüncü ventrikül çevresi tutulur; kanama ve nekroz odakları, çözülme sonrası kistik boşluklar ve hemosiderin yüklü makrofajlar görülür."
+    },
+    {
+     "metin": "Talamusun medial dorsal çekirdeğinin tutulumu hafıza bozukluğuyla ilişkilidir."
+    },
+    {
+     "metin": "Beyin yüksek oksijen ve glukoz gereksinimi nedeniyle beslenme bozukluklarına duyarlıdır."
+    }
+   ],
+   "klip": "o-2p03-05",
+   "ses": [
+    "Tiamin eksikliği ve Wernicke–Korsakoff.",
+    "Tiamin eksikliği akut psikoz, göz hareket bozukluğu ve ataksiyle seyreden Wernicke ensefalopatisi yapar.",
+    "Kronik alkol kullanım bozukluğu, malabsorpsiyon, gastrik cerrahi ve sürekli kusma; hiperemezis gravidarum ve bulimia nervosa sürekli kusma örnekleridir.",
+    "Akut psikoz, göz hareket bozukluğu ve ataksi ile seyreder; tiamin tedavisiyle geri dönebilir.",
+    "Tedavi edilmeyen olgularda gelişen kalıcı ağır amnezidir; ikisi birlikte Wernicke–Korsakoff sendromu adını alır.",
+    "En sık mamiller cisimler, hipotalamus ve üçüncü ile dördüncü ventrikül çevresi tutulur; kanama ve nekroz odakları, çözülme sonrası kistik boşluklar ve hemosiderin yüklü makrofajlar görülür.",
+    "Talamusun medial dorsal çekirdeğinin tutulumu hafıza bozukluğuyla ilişkilidir.",
+    "Beyin yüksek oksijen ve glukoz gereksinimi nedeniyle beslenme bozukluklarına duyarlıdır."
+   ],
+   "v": "5dd1d81f0c"
+  },
+  {
+   "id": "2p03-02",
+   "baslik": "Edinilmiş demiyelinizasyon ve lökodistrofi",
+   "giris": "Edinilmiş demiyelinizasyonda önceden normal miyelin hasarlanır; MS, PML ve toksik-ilaç etkili demiyelinizasyon örnektir.",
+   "s": [
+    42
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Önceden normal olan miyelinin sonradan hasarlanmasıdır. Örnekleri multipl skleroz, progresif multifokal lökoensefalopati ve toksik-ilaç etkili demiyelinizasyondur."
+    },
+    {
+     "metin": "Dismiyelinizasyon hastalıklarıdır; genetiktir, miyelin düzgün oluşmaz ya da yıkımı anormaldir. Çoğunda miyelin protein yolaklarında mutasyon vardır."
+    },
+    {
+     "metin": "Krabbe hastalığı, metakromatik lökodistrofi ve adrenolökodistrofi; çocuklukta başlar, ilerleyicidir, görüntülemede yaygın simetrik beyaz madde kaybı yapar."
+    },
+    {
+     "metin": "PML virüse bağlı olduğu için edinilmiştir; şıklarda yer alan Krabbe ya da metakromatik lökodistrofi kalıtsal gruptadır."
+    },
+    {
+     "metin": "MSS miyelini oligodendrositten, periferik miyelin Schwann hücresinden yapılır; çoğu MSS miyelin hastalığı periferik siniri anlamlı etkilemez."
+    }
+   ],
+   "klip": "o-2p03-02",
+   "ses": [
+    "Edinilmiş demiyelinizasyon ve lökodistrofi.",
+    "Edinilmiş demiyelinizasyonda önceden normal miyelin hasarlanır; MS, PML ve toksik-ilaç etkili demiyelinizasyon örnektir.",
+    "Önceden normal olan miyelinin sonradan hasarlanmasıdır. Örnekleri multipl skleroz, progresif multifokal lökoensefalopati ve toksik-ilaç etkili demiyelinizasyondur.",
+    "Dismiyelinizasyon hastalıklarıdır; genetiktir, miyelin düzgün oluşmaz ya da yıkımı anormaldir. Çoğunda miyelin protein yolaklarında mutasyon vardır.",
+    "Krabbe hastalığı, metakromatik lökodistrofi ve adrenolökodistrofi; çocuklukta başlar, ilerleyicidir, görüntülemede yaygın simetrik beyaz madde kaybı yapar.",
+    "PML virüse bağlı olduğu için edinilmiştir; şıklarda yer alan Krabbe ya da metakromatik lökodistrofi kalıtsal gruptadır.",
+    "MSS miyelini oligodendrositten, periferik miyelin Schwann hücresinden yapılır; çoğu MSS miyelin hastalığı periferik siniri anlamlı etkilemez."
+   ],
+   "v": "fbbdc63ed7"
+  },
+  {
+   "id": "2p03-03",
+   "baslik": "MS tanımı ve epidemiyolojisi",
+   "giris": "MS otoimmün bir demiyelinizasyondur; ataklar zamanda, plaklar yerde yayılır, başlangıç genellikle 20–40 yaştadır.",
+   "s": [
+    43
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Multipl skleroz otoimmün bir merkezi sinir sistemi demiyelinizasyon hastalığıdır."
+    },
+    {
+     "metin": "Ataklar farklı zamanlarda ayrılmıştır."
+    },
+    {
+     "metin": "Beyaz madde plakları farklı anatomik bölgelerdedir; tanı için hasarların hem farklı zamanlarda tekrarladığı hem de beynin ve omuriliğin farklı bölgelerine yayıldığı gösterilmelidir."
+    },
+    {
+     "metin": "ABD ve Avrupa'da yaklaşık binde birdir ve artma eğilimindedir."
+    },
+    {
+     "metin": "Başlangıç genellikle 20–40 yaştadır; kadınlarda erkeklerden yaklaşık iki kat sıktır."
+    },
+    {
+     "metin": "En yaygın klinik tip nükseden–düzelen tiptir; ataklar arasında düzelme olur. Elli yaş sonrası başlangıç ya da yaşla atak sıklığının artması bu hastalığı tanımlamaz."
+    }
+   ],
+   "klip": "o-2p03-03",
+   "ses": [
+    "MS tanımı ve epidemiyolojisi.",
+    "MS otoimmün bir demiyelinizasyondur; ataklar zamanda, plaklar yerde yayılır, başlangıç genellikle 20–40 yaştadır.",
+    "Multipl skleroz otoimmün bir merkezi sinir sistemi demiyelinizasyon hastalığıdır.",
+    "Ataklar farklı zamanlarda ayrılmıştır.",
+    "Beyaz madde plakları farklı anatomik bölgelerdedir; tanı için hasarların hem farklı zamanlarda tekrarladığı hem de beynin ve omuriliğin farklı bölgelerine yayıldığı gösterilmelidir.",
+    "ABD ve Avrupa'da yaklaşık binde birdir ve artma eğilimindedir.",
+    "Başlangıç genellikle 20–40 yaştadır; kadınlarda erkeklerden yaklaşık iki kat sıktır.",
+    "En yaygın klinik tip nükseden–düzelen tiptir; ataklar arasında düzelme olur. Elli yaş sonrası başlangıç ya da yaşla atak sıklığının artması bu hastalığı tanımlamaz."
+   ],
+   "v": "0226faf8bf"
+  },
+  {
+   "id": "2p03-01",
+   "baslik": "MS plaklarının yerleşimi ve görünümü",
+   "giris": "MS plakları çok odaklı, keskin sınırlı beyaz madde lezyonlarıdır; en sık periventriküler alanlarda yerleşir.",
+   "s": [
+    47
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Multipl skleroz plakları çok odaklı ve keskin sınırlı beyaz madde lezyonlarıdır; taze beyin kesitinde yan ventrikülün oksipital boynuzu çevresinde gri-kahverengi plak olarak görülür."
+    },
+    {
+     "metin": "Özellikle periventriküler alanlar, optik sinir ve kiazma, beyin sapı, serebellum ve omurilik tutulur; plakların çoğu ventrikül yakınındadır."
+    },
+    {
+     "metin": "MS gri cevher değil beyaz madde hastalığıdır; tek ya da az sayıda değil, çok sayıda plak bulunur."
+    },
+    {
+     "metin": "MR'da demiyelinizasyon plaklarını gösteren çok sayıda parlak lezyon izlenir."
+    },
+    {
+     "metin": "Lökodistrofilerde kayıp yaygın ve simetriktir; PML'de ise düzensiz, belirsiz sınırlı ve yer yer birleşen alanlar vardır."
+    }
+   ],
+   "klip": "o-2p03-01",
+   "ses": [
+    "MS plaklarının yerleşimi ve görünümü.",
+    "MS plakları çok odaklı, keskin sınırlı beyaz madde lezyonlarıdır; en sık periventriküler alanlarda yerleşir.",
+    "Multipl skleroz plakları çok odaklı ve keskin sınırlı beyaz madde lezyonlarıdır; taze beyin kesitinde yan ventrikülün oksipital boynuzu çevresinde gri-kahverengi plak olarak görülür.",
+    "Özellikle periventriküler alanlar, optik sinir ve kiazma, beyin sapı, serebellum ve omurilik tutulur; plakların çoğu ventrikül yakınındadır.",
+    "MS gri cevher değil beyaz madde hastalığıdır; tek ya da az sayıda değil, çok sayıda plak bulunur.",
+    "MR'da demiyelinizasyon plaklarını gösteren çok sayıda parlak lezyon izlenir.",
+    "Lökodistrofilerde kayıp yaygın ve simetriktir; PML'de ise düzensiz, belirsiz sınırlı ve yer yer birleşen alanlar vardır."
+   ],
+   "v": "484c50b7d6"
+  },
+  {
+   "id": "2p03-07",
+   "baslik": "Aktif ve inaktif MS plağı, aksonların korunması",
+   "giris": "Aktif plakta miyelin kalıntılı makrofajlar ve perivasküler T hücre manşetleri, inaktif plakta az inflamasyon ve belirgin gliyoz vardır.",
+   "s": [
+    47
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Miyelin kalıntılarıyla dolu makrofajlar ve perivasküler T hücre manşetleri bulunur; çok sayıda lipid yüklü makrofaj nedeniyle oldukça hücresel görünür."
+    },
+    {
+     "metin": "İnflamasyon azdır, gliyoz belirgindir ve miyelinden yoksun alanlar kalır. İnaktif plak remiyelinizasyonla değil gliyozla tanımlanır."
+    },
+    {
+     "metin": "Luxol fast blue–PAS boyası aynı lezyonda miyelinin tamamen yokluğunu, nörofilament immün boyası aksonların nispeten korunduğunu gösterir."
+    },
+    {
+     "metin": "Multipl sklerozda hasar miyelindedir; aksonların tamamen kesildiği ve miyelinin korunduğu ifadesi yanlıştır."
+    },
+    {
+     "metin": "Bu inflamatuvar süreç BOS'ta artmış immünoglobulin oranı ve oligoklonal IgG bantlarıyla yansır."
+    }
+   ],
+   "klip": "o-2p03-07",
+   "ses": [
+    "Aktif ve inaktif MS plağı, aksonların korunması.",
+    "Aktif plakta miyelin kalıntılı makrofajlar ve perivasküler T hücre manşetleri, inaktif plakta az inflamasyon ve belirgin gliyoz vardır.",
+    "Miyelin kalıntılarıyla dolu makrofajlar ve perivasküler T hücre manşetleri bulunur; çok sayıda lipid yüklü makrofaj nedeniyle oldukça hücresel görünür.",
+    "İnflamasyon azdır, gliyoz belirgindir ve miyelinden yoksun alanlar kalır. İnaktif plak remiyelinizasyonla değil gliyozla tanımlanır.",
+    "Luxol fast blue–PAS boyası aynı lezyonda miyelinin tamamen yokluğunu, nörofilament immün boyası aksonların nispeten korunduğunu gösterir.",
+    "Multipl sklerozda hasar miyelindedir; aksonların tamamen kesildiği ve miyelinin korunduğu ifadesi yanlıştır.",
+    "Bu inflamatuvar süreç BOS'ta artmış immünoglobulin oranı ve oligoklonal IgG bantlarıyla yansır."
+   ],
+   "v": "27dfd45a43"
+  },
+  {
+   "id": "2p03-06",
+   "baslik": "Adrenolökodistrofi",
+   "giris": "Adrenolökodistrofi X'e bağlı resesif, ABCD1 peroksizomal taşıyıcı bozukluğuyla çok uzun zincirli yağ asitlerinin yıkılamadığı hastalıktır.",
+   "s": [
+    55
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "X'e bağlı resesif bir hastalıktır."
+    },
+    {
+     "metin": "ABCD1 geni peroksizomal bir taşıyıcıyı kodlar; bozulduğunda çok uzun zincirli yağ asitleri katabolize edilemez ve serumda yükselir."
+    },
+    {
+     "metin": "Çocukluk ve ergenlikte davranış değişiklikleri, adrenal yetmezlik ve merkezi sinir sistemi beyaz madde demiyelinizasyonu görülür."
+    },
+    {
+     "metin": "Ölüm genelde tanıdan 1–10 yıl sonra olur."
+    },
+    {
+     "metin": "Krabbe hastalığı galaktosil-seramidaz, metakromatik lökodistrofi arilsülfataz A eksikliğiyle oluşan otozomal resesif hastalıklardır; peroksizomal defekt yalnız adrenolökodistrofidedir."
+    },
+    {
+     "metin": "Bazı Krabbe ve metakromatik lökodistrofi olgularında hematopoetik kök hücre nakliyle kısmi düzelme bildirilmektedir."
+    }
+   ],
+   "klip": "o-2p03-06",
+   "ses": [
+    "Adrenolökodistrofi.",
+    "Adrenolökodistrofi X'e bağlı resesif, ABCD1 peroksizomal taşıyıcı bozukluğuyla çok uzun zincirli yağ asitlerinin yıkılamadığı hastalıktır.",
+    "X'e bağlı resesif bir hastalıktır.",
+    "ABCD1 geni peroksizomal bir taşıyıcıyı kodlar; bozulduğunda çok uzun zincirli yağ asitleri katabolize edilemez ve serumda yükselir.",
+    "Çocukluk ve ergenlikte davranış değişiklikleri, adrenal yetmezlik ve merkezi sinir sistemi beyaz madde demiyelinizasyonu görülür.",
+    "Ölüm genelde tanıdan 1–10 yıl sonra olur.",
+    "Krabbe hastalığı galaktosil-seramidaz, metakromatik lökodistrofi arilsülfataz A eksikliğiyle oluşan otozomal resesif hastalıklardır; peroksizomal defekt yalnız adrenolökodistrofidedir.",
+    "Bazı Krabbe ve metakromatik lökodistrofi olgularında hematopoetik kök hücre nakliyle kısmi düzelme bildirilmektedir."
+   ],
+   "v": "4ff8aa4e2d"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="720" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Tiamin eksikliği: geri dönebilen Wernicke'den kalıcı Korsakoff'a</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Slayt 27–28 (s.38–39)</text>
+<rect x="30" y="88" width="380" height="540" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">A · Nedenler</text>
+<circle cx="58" cy="144" r="8" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<text x="76" y="150" font-size="17" fill="#0f172a" text-anchor="start">Kronik alkol kullanım bozukluğu</text>
+<circle cx="58" cy="188" r="8" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<text x="76" y="194" font-size="17" fill="#0f172a" text-anchor="start">Malabsorpsiyon</text>
+<circle cx="58" cy="232" r="8" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<text x="76" y="238" font-size="17" fill="#0f172a" text-anchor="start">Gastrik cerrahi</text>
+<circle cx="58" cy="276" r="8" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<text x="76" y="282" font-size="17" fill="#0f172a" text-anchor="start">Sürekli kusma: hiperemezis</text>
+<text x="76" y="326" font-size="17" fill="#0f172a" text-anchor="start">gravidarum, bulimia nervoza</text>
+<path d="M220 380 C220 420 220 440 220 470" stroke="#ea580c" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<rect x="60" y="480" width="320" height="60" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="220" y="518" font-size="21" fill="#ea580c" text-anchor="middle" font-weight="bold">Tiamin eksikliği</text>
+<text x="50" y="575" font-size="17" fill="#475569" text-anchor="start">Beyin çok glukoz ve oksijen harcar;</text>
+<text x="50" y="598" font-size="17" fill="#475569" text-anchor="start">beslenmeye duyarlıdır.</text>
+<rect x="430" y="88" width="740" height="260" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="448" y="119" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">B · Klinik seyir</text>
+<rect x="450" y="140" width="300" height="180" rx="14" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
+<text x="600" y="172" font-size="19" fill="#15803d" text-anchor="middle" font-weight="bold">Wernicke ensefalopatisi</text>
+<text x="470" y="206" font-size="17" fill="#0f172a" text-anchor="start">• Akut psikoz</text>
+<text x="470" y="233" font-size="17" fill="#0f172a" text-anchor="start">• Göz hareket bozukluğu</text>
+<text x="470" y="260" font-size="17" fill="#0f172a" text-anchor="start">• Ataksi</text>
+<text x="600" y="300" font-size="17" fill="#15803d" text-anchor="middle" font-weight="bold">tiaminle geri dönebilir</text>
+<path d="M760 230 C800 200 830 200 870 230" stroke="#b91c1c" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<text x="815" y="190" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">tedavisiz</text>
+<rect x="880" y="140" width="270" height="180" rx="14" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+<text x="1015" y="172" font-size="19" fill="#b91c1c" text-anchor="middle" font-weight="bold">Korsakoff sendromu</text>
+<text x="900" y="210" font-size="18" fill="#0f172a" text-anchor="start">Kalıcı, ağır amnezi</text>
+<text x="900" y="260" font-size="17" fill="#475569" text-anchor="start">İkisi birlikte:</text>
+<text x="900" y="283" font-size="17" fill="#475569" text-anchor="start">Wernicke–Korsakoff</text>
+<rect x="430" y="368" width="740" height="260" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="448" y="399" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">C · Hasarın yeri</text>
+<path d="M620 421 C550 418 503 460 503 515 C503 570 542 605 589 609 C604 610 614 601 620 593 C626 601 636 610 651 609 C698 605 737 570 737 515 C737 460 690 418 620 421 Z" stroke="#9a6b55" stroke-width="2.5" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M534 476 C550 453 573 468 589 445" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M706 476 C690 453 667 468 651 445" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M603 490 C595 515 603 535 615 532 M637 490 C645 515 637 535 625 532" stroke="#1d4ed8" stroke-width="2.5" fill="#bae6fd" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="612" cy="552" r="8" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<circle cx="628" cy="552" r="8" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<circle cx="620" cy="518" r="6" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<circle cx="606" cy="497" r="5" fill="#fca5a5" stroke="#b91c1c" stroke-width="2"/>
+<line x1="606" y1="497" x2="790" y2="420" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="606" cy="497" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="796" y="426" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">talamus medial dorsal çekirdeği</text>
+<text x="796" y="444" font-size="17" fill="#6d28d9" text-anchor="start">hafıza bozukluğuyla ilişkili</text>
+<line x1="620" y1="518" x2="790" y2="488" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="620" cy="518" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="796" y="494" font-size="17" fill="#b91c1c" text-anchor="start">hipotalamus, 3. ve 4. ventrikül çevresi</text>
+<line x1="612" y1="555" x2="790" y2="530" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="612" cy="555" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="796" y="536" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">mamiller cisimler</text>
+<text x="790" y="575" font-size="17" fill="#475569" text-anchor="start">Bulgular: kanama, nekroz, kistik</text>
+<text x="790" y="598" font-size="17" fill="#475569" text-anchor="start">boşluk, hemosiderinli makrofaj</text>
+<text x="600.0" y="707" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 27–28 (PDF s.38–39). Koronal kesit şematiktir.</text>
+</svg>

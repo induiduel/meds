@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="720" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Mikroorganizma MSS'ye beş yoldan ulaşır</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Giriş yolları · slayt 3 (s.5)</text>
+<rect x="30" y="88" width="640" height="570" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#1d4ed8" text-anchor="start" font-weight="bold">A · Beş giriş yolu</text>
+<path d="M180 380 C155 230 280 142 380 155 C480 168 518 255 505 342 C530 368 536 405 505 418 L492 480 C468 518 405 518 380 549 L255 549 C230 480 192 442 180 380 Z" stroke="#94a3b8" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M205 355 C192 242 292 180 374 186 C455 199 480 268 468 330 C455 374 380 386 330 380 C280 392 218 399 205 355 Z" stroke="#9a6b55" stroke-width="2.5" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M242 280 C274 242 305 292 336 249" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M355 218 C386 255 418 236 442 280" stroke="#c9a28e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 645 C255 560 275 480 300 420" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<line x1="254" y1="600" x2="60" y2="590" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="254" cy="600" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="66" y="596" font-size="18" fill="#b91c1c" text-anchor="start" font-weight="bold">1 · Hematogen, arteriyel</text>
+<text x="66" y="615" font-size="17" fill="#b91c1c" text-anchor="start">en sık yol</text>
+<path d="M520 470 C470 450 450 420 430 380" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)" stroke-dasharray="8 6"/>
+<line x1="505" y1="462" x2="470" y2="545" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="505" cy="462" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="476" y="551" font-size="17" fill="#1d4ed8" text-anchor="start">yüz venleri–sinüs:</text>
+<text x="476" y="569" font-size="17" fill="#1d4ed8" text-anchor="start">retrograd venöz</text>
+<line x1="330" y1="110" x2="330" y2="175" stroke="#0f172a" stroke-width="4" marker-end="url(#ok)"/>
+<text x="345" y="120" font-size="18" fill="#0f172a" text-anchor="start" font-weight="bold">2 · Doğrudan implantasyon</text>
+<text x="345" y="143" font-size="17" fill="#475569" text-anchor="start">delici kafa travması, meningomiyelosel</text>
+<circle cx="470" cy="330" r="16" fill="#fed7aa" stroke="#ea580c" stroke-width="2.5"/>
+<path d="M462 320 C440 305 430 300 415 300" stroke="#ea580c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#oko)"/>
+<line x1="482" y1="330" x2="495" y2="262" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="482" cy="330" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="501" y="268" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">4 · Lokal yayılım</text>
+<text x="501" y="286" font-size="17" fill="#ea580c" text-anchor="start">sinüs, diş, kafatası</text>
+<path d="M600 600 C560 540 520 520 470 470 C450 450 420 430 400 410" stroke="#6d28d9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okm)"/>
+<line x1="590" y1="585" x2="470" y2="600" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="590" cy="585" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="476" y="606" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">5 · Periferik sinir</text>
+<text x="476" y="630" font-size="17" fill="#6d28d9" text-anchor="start">kuduz, herpes zoster</text>
+<rect x="690" y="88" width="480" height="250" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="708" y="119" font-size="20" fill="#ea580c" text-anchor="start" font-weight="bold">B · Plasenta yoluyla geçiş</text>
+<ellipse cx="820" cy="220" rx="70" ry="60" fill="#fde68a" stroke="#ea580c" stroke-width="2.5"/>
+<path d="M760 220 C790 180 850 180 880 220 C850 250 790 260 760 220 Z" stroke="#9a6b55" stroke-width="2" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="890" y1="220" x2="960" y2="220" stroke="#ea580c" stroke-width="4" marker-end="url(#oko)"/>
+<text x="975" y="205" font-size="18" fill="#ea580c" text-anchor="start" font-weight="bold">3 · Perinatal</text>
+<text x="975" y="228" font-size="18" fill="#ea580c" text-anchor="start" font-weight="bold">enfeksiyon</text>
+<text x="710" y="290" font-size="17" fill="#1e293b" text-anchor="start">Sonuç: ciddi beyin malformasyonu ve</text>
+<text x="710" y="313" font-size="17" fill="#1e293b" text-anchor="start">kalsifikasyon.</text>
+<rect x="690" y="352" width="480" height="306" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="708" y="383" font-size="20" fill="#15803d" text-anchor="start" font-weight="bold">C · Akılda kalacak sıra</text>
+<text x="710" y="420" font-size="17" fill="#1e293b" text-anchor="start">Ana yol kandır ve çoğunlukla arter yoluyla</text>
+<text x="710" y="443" font-size="17" fill="#1e293b" text-anchor="start">olur.</text>
+<text x="710" y="474" font-size="17" fill="#1e293b" text-anchor="start">Komşu sinüs, diş, kafatası ya da omurga odağı</text>
+<text x="710" y="497" font-size="17" fill="#1e293b" text-anchor="start">içeri sızabilir.</text>
+<text x="710" y="528" font-size="17" fill="#6d28d9" text-anchor="start">Kuduz ve herpes zoster virüsü sinir boyunca</text>
+<text x="710" y="551" font-size="17" fill="#6d28d9" text-anchor="start">geriye yürür.</text>
+<text x="710" y="582" font-size="17" fill="#1e293b" text-anchor="start">Açık travma ve doğuştan açıklık mikrobu</text>
+<text x="710" y="605" font-size="17" fill="#1e293b" text-anchor="start">doğrudan içeri sokar.</text>
+<text x="600.0" y="707" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 3 (PDF s.5). Numara sırası slayttaki sıradır.</text>
+</svg>

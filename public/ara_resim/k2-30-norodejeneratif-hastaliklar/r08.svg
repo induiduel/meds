@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="700" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">ALS: iki motor nöron, iki bulgu grubu</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Üst motor nöron (lateral skleroz) + alt motor nöron (amyotrofi) · slayt 60–61</text>
+<rect x="30" y="88" width="520" height="572" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#475569" text-anchor="start" font-weight="bold">A · Motor yol</text>
+<path d="M140 210 C120 180 200 160 260 170 C330 160 400 190 380 230 C360 260 200 265 140 210 Z" stroke="#9a6b55" stroke-width="2.5" fill="#fbe3d6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="265" y="222" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">motor korteks</text>
+<rect x="230" y="370" width="80" height="140" rx="30" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="270" y="535" font-size="17" fill="#475569" text-anchor="middle">omurilik</text>
+<path d="M272 240 C288 290 282 335 262 398" stroke="#b91c1c" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okk)"/>
+<circle cx="260" cy="420" r="12" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<path d="M262 432 C300 460 360 470 418 500" stroke="#1d4ed8" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#okb)"/>
+<ellipse cx="460" cy="545" rx="42" ry="58" fill="#fecdd3" stroke="#be123c" stroke-width="2"/>
+<text x="460" y="630" font-size="17" fill="#0f172a" text-anchor="middle" font-weight="bold">kas</text>
+<line x1="284" y1="300" x2="60" y2="330" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="284" cy="300" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="66" y="336" font-size="17" fill="#b91c1c" text-anchor="start" font-weight="bold">üst motor nöron</text>
+<text x="66" y="358" font-size="17" fill="#b91c1c" text-anchor="start">lateral kortikospinal yol</text>
+<line x1="330" y1="466" x2="60" y2="590" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="330" cy="466" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="66" y="596" font-size="17" fill="#1d4ed8" text-anchor="start" font-weight="bold">alt motor nöron</text>
+<text x="66" y="620" font-size="17" fill="#1d4ed8" text-anchor="start">(omurilik → kas)</text>
+<rect x="570" y="88" width="600" height="270" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="588" y="119" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">B · Üst motor nöron kaybı</text>
+<text x="600" y="150" font-size="18" fill="#b91c1c" text-anchor="start">• Parezi</text>
+<text x="600" y="190" font-size="18" fill="#b91c1c" text-anchor="start">• Hiperrefleksi, spastisite</text>
+<text x="600" y="230" font-size="18" fill="#b91c1c" text-anchor="start">• Babinski pozitif</text>
+<text x="600" y="270" font-size="18" fill="#b91c1c" text-anchor="start">• Lateral kortikospinal yol dejenerasyonu</text>
+<text x="600" y="310" font-size="18" fill="#b91c1c" text-anchor="start" font-weight="bold">= adın “lateral skleroz” kısmı</text>
+<rect x="570" y="370" width="600" height="290" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="588" y="401" font-size="20" fill="#1d4ed8" text-anchor="start" font-weight="bold">C · Alt motor nöron kaybı</text>
+<text x="600" y="430" font-size="18" fill="#1d4ed8" text-anchor="start">• Kas denervasyonu</text>
+<text x="600" y="470" font-size="18" fill="#1d4ed8" text-anchor="start" font-weight="bold">• Atrofi = amyotrofi</text>
+<text x="600" y="510" font-size="18" fill="#1d4ed8" text-anchor="start">• Güçsüzlük</text>
+<text x="600" y="550" font-size="18" fill="#1d4ed8" text-anchor="start">• Fasikülasyon</text>
+<text x="600" y="590" font-size="18" fill="#1d4ed8" text-anchor="start">• Kas gücü ve hacmi azalır</text>
+<text x="870" y="640" font-size="17" fill="#475569" text-anchor="middle">Duyu genellikle korunur; bilişsel bozukluk eşlik edebilir.</text>
+<text x="600.0" y="687" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 60, 61 · alt ve üst motor nöron bulgusu birlikte = ALS</text>
+</svg>

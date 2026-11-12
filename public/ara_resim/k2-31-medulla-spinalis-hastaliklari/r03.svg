@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">Poliomiyelitin seyri: bulaşmadan post-polio sendromuna</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">Ön boynuz hücresini hedef alan virüsün dönem dönem bıraktığı izler</text>
+<path d="M60 190 C300 190 900 190 1150 190" stroke="#0f172a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<circle cx="120" cy="190" r="16" fill="#64748b" stroke="#0f172a" stroke-width="2"/>
+<text x="120" y="150" font-size="18" fill="#64748b" text-anchor="middle" font-weight="bold">Bulaşma</text>
+<text x="120" y="170" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">fekal-oral yol</text>
+<text x="120" y="232" font-size="15" fill="#0f172a" text-anchor="middle">poliovirüs</text>
+<text x="120" y="252" font-size="15" fill="#0f172a" text-anchor="middle">çoğunlukla neden</text>
+<circle cx="300" cy="190" r="16" fill="#15803d" stroke="#0f172a" stroke-width="2"/>
+<text x="300" y="150" font-size="18" fill="#15803d" text-anchor="middle" font-weight="bold">%90–95</text>
+<text x="300" y="170" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">asemptomatik</text>
+<text x="300" y="232" font-size="15" fill="#0f172a" text-anchor="middle">az sayıda hastada</text>
+<text x="300" y="252" font-size="15" fill="#0f172a" text-anchor="middle">SSS tutuluşu</text>
+<circle cx="500" cy="190" r="16" fill="#ea580c" stroke="#0f172a" stroke-width="2"/>
+<text x="500" y="150" font-size="18" fill="#ea580c" text-anchor="middle" font-weight="bold">Nonparalitik</text>
+<text x="500" y="170" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">preparalitik</text>
+<text x="500" y="232" font-size="15" fill="#0f172a" text-anchor="middle">ateş, ense sertliği,</text>
+<text x="500" y="252" font-size="15" fill="#0f172a" text-anchor="middle">meningeal irritasyon</text>
+<text x="500" y="272" font-size="15" fill="#0f172a" text-anchor="middle">BOS NORMAL</text>
+<circle cx="730" cy="190" r="16" fill="#b91c1c" stroke="#0f172a" stroke-width="2"/>
+<text x="730" y="150" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="bold">Paralitik</text>
+<text x="730" y="170" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">2–5 gün sonra</text>
+<text x="730" y="232" font-size="15" fill="#0f172a" text-anchor="middle">flask, asimetrik, bacak</text>
+<text x="730" y="252" font-size="15" fill="#0f172a" text-anchor="middle">duyu normal, 3. hafta</text>
+<text x="730" y="272" font-size="15" fill="#0f172a" text-anchor="middle">atrofi; akut BOS'ta</text>
+<text x="730" y="292" font-size="15" fill="#0f172a" text-anchor="middle">mononükleer pleositoz,</text>
+<text x="730" y="312" font-size="15" fill="#0f172a" text-anchor="middle">protein hafif ↑, glukoz</text>
+<text x="730" y="332" font-size="15" fill="#0f172a" text-anchor="middle">normal, IgM (+)</text>
+<circle cx="1000" cy="190" r="16" fill="#7c3aed" stroke="#0f172a" stroke-width="2"/>
+<text x="1000" y="150" font-size="18" fill="#7c3aed" text-anchor="middle" font-weight="bold">Post-polio</text>
+<text x="1000" y="170" font-size="15" fill="#475569" text-anchor="middle" font-style="italic">1–2 dekat sonra</text>
+<text x="1000" y="232" font-size="15" fill="#0f172a" text-anchor="middle">güçsüzlükte yeniden</text>
+<text x="1000" y="252" font-size="15" fill="#0f172a" text-anchor="middle">artış ya da yeni</text>
+<text x="1000" y="272" font-size="15" fill="#0f172a" text-anchor="middle">bölgede güçsüzlük</text>
+<rect x="30" y="370" width="1140" height="160" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="402" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">Neden flask ve duyu normal? Lezyon yalnız ön boynuzda</text>
+<path d="M70.0 455.0 C70.0 422.0 97.0 407.0 130.0 407.0 C163.0 407.0 190.0 422.0 190.0 455.0 C190.0 488.0 163.0 503.0 134.8 503.0 L130.0 492.2 L125.2 503.0 C97.0 503.0 70.0 488.0 70.0 455.0 Z" stroke="#475569" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130.0 451.4 C119.2 450.2 114.4 437.0 112.0 413.0 C107.2 413.0 104.8 431.0 106.0 446.6 C92.80000000000001 453.8 90.4 473.0 95.2 483.8 C103.6 489.8 116.8 481.4 122.8 464.6 C126.4 461.0 128.8 459.8 130.0 459.8 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130.0 451.4 C140.8 450.2 145.6 437.0 148.0 413.0 C152.8 413.0 155.2 431.0 154.0 446.6 C167.2 453.8 169.6 473.0 164.8 483.8 C156.4 489.8 143.2 481.4 137.2 464.6 C133.6 461.0 131.2 459.8 130.0 459.8 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="104.8" cy="475.4" rx="7.8" ry="6.6" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<ellipse cx="155.2" cy="475.4" rx="7.8" ry="6.6" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+<circle cx="130.0" cy="455.0" r="2.4" fill="#ffffff" stroke="#475569" stroke-width="1.2"/>
+<ellipse cx="104.8" cy="475.4" rx="9" ry="8" fill="#7c3aed" stroke="#7c3aed" stroke-width="1"/>
+<ellipse cx="155.2" cy="475.4" rx="9" ry="8" fill="#7c3aed" stroke="#7c3aed" stroke-width="1"/>
+<line x1="150" y1="476" x2="230" y2="505" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="150" cy="476" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="236" y="510" font-size="15" fill="#7c3aed" text-anchor="start">ön boynuz hücresi harap</text>
+<text x="420" y="440" font-size="15" fill="#0f172a" text-anchor="start">• Motor nöron ölür → kas lifi sinirsiz kalır → flask felç, atrofi</text>
+<text x="420" y="462" font-size="15" fill="#0f172a" text-anchor="start">• Duyu yolları sağlam → duyu normal</text>
+<text x="420" y="484" font-size="15" fill="#0f172a" text-anchor="start">• Zaafın şiddeti harap ön boynuz hücresi sayısıyla orantılı;</text>
+<text x="420" y="506" font-size="15" fill="#0f172a" text-anchor="start">  felçli kası innerve eden hücrelerin %10'undan azı sağlam</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 19–23 · yeşil = belirtisiz, turuncu = meningeal dönem, kırmızı = felç, mor = geç sekel</text>
+</svg>

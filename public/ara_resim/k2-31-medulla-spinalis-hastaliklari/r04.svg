@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="okl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="560" fill="url(#zemin)"/>
+<text x="600.0" y="42" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">B12 eksikliği miyelini nasıl bozar?</text>
+<text x="600.0" y="70" font-size="17" fill="#475569" text-anchor="middle">İki biyokimyasal görev, iki kolon tutulumu, iki bulgu grubu</text>
+<rect x="30" y="90" width="560" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="122" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">A · B12'nin miyelin için iki görevi</text>
+<circle cx="120" cy="200" r="42" fill="#fef3c7" stroke="#a16207" stroke-width="3"/>
+<text x="120" y="207" font-size="22" fill="#a16207" text-anchor="middle" font-weight="bold">B12</text>
+<path d="M160 180 C220 150 260 150 300 160" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="310" y="150" font-size="15" fill="#0f172a" text-anchor="start">koenzim:</text>
+<text x="310" y="172" font-size="16" fill="#0f172a" text-anchor="start" font-weight="bold">metilmalonil KoA</text>
+<text x="330" y="194" font-size="16" fill="#0f172a" text-anchor="start">↓</text>
+<text x="310" y="216" font-size="16" fill="#0f172a" text-anchor="start" font-weight="bold">süksinil KoA</text>
+<path d="M160 225 C220 270 260 290 300 300" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ok)"/>
+<text x="310" y="292" font-size="16" fill="#0f172a" text-anchor="start" font-weight="bold">S-adenozil-L-metiyonin</text>
+<text x="310" y="314" font-size="15" fill="#0f172a" text-anchor="start">→ miyelin bazik protein</text>
+<text x="310" y="334" font-size="15" fill="#0f172a" text-anchor="start">metilasyonu</text>
+<path d="M90 420 C140 380 240 380 290 420" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 412 C140 370 240 370 290 412" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 404 C140 360 240 360 290 404" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 396 C140 350 240 350 290 396" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 388 C140 340 240 340 290 388" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 420 C330 450 360 450 390 430" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<text x="70" y="465" font-size="15" fill="#1d4ed8" text-anchor="start">lamellar (katmanlı) miyelin stabil kalır</text>
+<text x="70" y="490" font-size="15" fill="#7c3aed" text-anchor="start" font-weight="bold">B12 yoksa katmanlar dağılır → uzun yollar çalışmaz</text>
+<rect x="610" y="90" width="560" height="440" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="630" y="122" font-size="20" fill="#0f172a" text-anchor="start" font-weight="bold">B · Tutulan kolonlar ve bulgular</text>
+<path d="M650.0 260.0 C650.0 199.5 699.5 172.0 760.0 172.0 C820.5 172.0 870.0 199.5 870.0 260.0 C870.0 320.5 820.5 348.0 768.8 348.0 L760.0 328.2 L751.2 348.0 C699.5 348.0 650.0 320.5 650.0 260.0 Z" stroke="#475569" stroke-width="2.5" fill="#f8fafc" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M760.0 253.4 C740.2 251.2 731.4 227.0 727.0 183.0 C718.2 183.0 713.8 216.0 716.0 244.6 C691.8 257.8 687.4 293.0 696.2 312.8 C711.6 323.8 735.8 308.4 746.8 277.6 C753.4 271.0 757.8 268.8 760.0 268.8 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M760.0 253.4 C779.8 251.2 788.6 227.0 793.0 183.0 C801.8 183.0 806.2 216.0 804.0 244.6 C828.2 257.8 832.6 293.0 823.8 312.8 C808.4 323.8 784.2 308.4 773.2 277.6 C766.6 271.0 762.2 268.8 760.0 268.8 Z" stroke="#64748b" stroke-width="1.5" fill="#cbd5e1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M756.7 251.2 C744.6 227.0 735.8 199.5 731.4 176.39999999999998 C749.0 172.0 771.0 172.0 788.6 176.39999999999998 C784.2 199.5 775.4 227.0 763.3 251.2 Z" stroke="#1d4ed8" stroke-width="1.5" fill="#bfdbfe" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+<ellipse cx="680.8" cy="244.6" rx="18.700000000000003" ry="24.200000000000003" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="683.0" cy="299.6" rx="17.6" ry="16.5" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="839.2" cy="244.6" rx="18.700000000000003" ry="24.200000000000003" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+<ellipse cx="837.0" cy="299.6" rx="17.6" ry="16.5" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+<circle cx="760.0" cy="260.0" r="4.4" fill="#ffffff" stroke="#475569" stroke-width="1.2"/>
+<path d="M757 251 C744 228 736 200 731 176 C748 172 772 172 789 176 C784 200 776 228 763 251 Z" fill="#7c3aed" fill-opacity="0.35" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+<ellipse cx="681" cy="245" rx="19" ry="24" fill="#7c3aed" stroke="#7c3aed" stroke-width="1"/>
+<ellipse cx="839" cy="245" rx="19" ry="24" fill="#7c3aed" stroke="#7c3aed" stroke-width="1"/>
+<line x1="760" y1="190" x2="900" y2="140" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="760" cy="190" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="906" y="145" font-size="15" fill="#1d4ed8" text-anchor="start">arka kolon soluk</text>
+<line x1="839" y1="245" x2="900" y2="200" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="839" cy="245" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="906" y="205" font-size="15" fill="#b91c1c" text-anchor="start">lateral kortikospinal</text>
+<line x1="837" y1="300" x2="900" y2="320" stroke="#64748b" stroke-width="1.4"/>
+<circle cx="837" cy="300" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="906" y="325" font-size="15" fill="#15803d" text-anchor="start">spinotalamik korunur</text>
+<text x="630" y="400" font-size="15" fill="#0f172a" text-anchor="start">Arka kolon → parestezi, duysal ataksi, Romberg (+)</text>
+<text x="630" y="423" font-size="15" fill="#0f172a" text-anchor="start">Lateral kolon → spastisite, hiperrefleksi</text>
+<text x="630" y="446" font-size="15" fill="#0f172a" text-anchor="start">  (periferik nöropati varsa refleks zayıflar)</text>
+<text x="630" y="469" font-size="15" fill="#0f172a" text-anchor="start">Spinotalamik sağlam → ağrı ve ısı NORMAL</text>
+<text x="600.0" y="546" font-size="13" fill="#64748b" text-anchor="middle">Kaynak: slayt 33–36 · en ağır hasar servikal ve üst dorsal arka-lateral kordonlar · mavi derin duyu, kırmızı motor, mor = miyelin kaybı</text>
+</svg>

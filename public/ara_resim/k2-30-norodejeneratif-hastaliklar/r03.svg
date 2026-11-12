@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf7"/><stop offset="1" stop-color="#f1efe9"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#6d28d9"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+<marker id="oko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#ea580c"/></marker>
+<marker id="okk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="700" fill="url(#zemin)"/>
+<text x="600.0" y="40" font-size="27" fill="#0f172a" text-anchor="middle" font-weight="bold">FTLD'nin iki protein grubu: tau ve TDP-43</text>
+<text x="600.0" y="68" font-size="17" fill="#475569" text-anchor="middle">Mutasyon → protein bozukluğu → inklüzyon · slayt 37, 38, 41</text>
+<rect x="30" y="88" width="560" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="119" font-size="20" fill="#b91c1c" text-anchor="start" font-weight="bold">A · FTLD-tau</text>
+<rect x="610" y="88" width="560" height="500" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="628" y="119" font-size="20" fill="#6d28d9" text-anchor="start" font-weight="bold">B · FTLD-TDP</text>
+<rect x="60" y="140" width="500" height="70" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="80" y="168" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">Tau geninde mutasyon: fosforilasyon ya da</text>
+<text x="80" y="191" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">splicing etkilenir</text>
+<line x1="310" y1="210" x2="310" y2="245" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="60" y="250" width="500" height="60" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+<text x="310" y="287" font-size="17" fill="#b91c1c" text-anchor="middle">Tau izoform oranı değişir → agregasyon artar</text>
+<line x1="310" y1="310" x2="310" y2="345" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M160 430 C155 395 190 382 215 390 C245 400 250 440 235 460 C215 480 170 475 160 430 Z" stroke="#1d4ed8" stroke-width="2.5" fill="#dbeafe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M162 420 C130 400 120 380 105 375" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 460 C145 485 125 490 110 505" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210 388 C215 360 205 345 195 330" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M242 435 C290 435 340 430 390 435" stroke="#1d4ed8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M185 420 C195 400 215 405 210 425 C205 445 180 450 185 430" stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="205" y1="425" x2="330" y2="380" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="205" cy="425" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="336" y="386" font-size="15" fill="#b91c1c" text-anchor="start" font-weight="bold">tau pozitif inklüzyon / yumak</text>
+<text x="330" y="470" font-size="15" fill="#0f172a" text-anchor="start">fonksiyon kaybı: normal tau eksik</text>
+<text x="330" y="495" font-size="15" fill="#b91c1c" text-anchor="start">toksik kazanım: hiperfosforile tau</text>
+<text x="310" y="560" font-size="17" fill="#b91c1c" text-anchor="middle" font-weight="bold">Pick hastalığı bu grupta: gümüşle boyanan Pick cismi</text>
+<rect x="640" y="140" width="500" height="70" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="660" y="168" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">En sık: C9orf72 heksanükleotid tekrarı; nadir:</text>
+<text x="660" y="191" font-size="17" fill="#ea580c" text-anchor="start" font-weight="bold">TDP-43 ya da progranulin geni</text>
+<line x1="890" y1="210" x2="890" y2="245" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="640" y="250" width="500" height="60" rx="10" fill="#ffffff" stroke="#6d28d9" stroke-width="2"/>
+<text x="890" y="287" font-size="17" fill="#6d28d9" text-anchor="middle">TDP-43: RNA bağlayıcı, RNA işlenmesinde görevli</text>
+<line x1="890" y1="310" x2="890" y2="345" stroke="#0f172a" stroke-width="3" marker-end="url(#ok)"/>
+<path d="M740 430 C735 395 770 382 795 390 C825 400 830 440 815 460 C795 480 750 475 740 430 Z" stroke="#6d28d9" stroke-width="2.5" fill="#ede9fe" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M742 420 C710 400 700 380 685 375" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M750 460 C725 485 705 490 690 505" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M790 388 C795 360 785 345 775 330" stroke="#6d28d9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M822 435 C870 435 920 430 970 435" stroke="#6d28d9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="785" cy="432" r="16" fill="#ffffff" stroke="#6d28d9" stroke-width="2"/>
+<path d="M745 400 C755 390 770 395 765 410 C760 420 745 418 745 400" stroke="#6d28d9" stroke-width="4" fill="#c4b5fd" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="785" y1="432" x2="900" y2="395" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="785" cy="432" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="906" y="401" font-size="17" fill="#6d28d9" text-anchor="start" font-weight="bold">çekirdekte boyanma kaybı</text>
+<line x1="755" y1="405" x2="900" y2="440" stroke="#64748b" stroke-width="1.5"/>
+<circle cx="755" cy="405" r="3.5" fill="#64748b" stroke="#64748b" stroke-width="1"/>
+<text x="906" y="446" font-size="17" fill="#6d28d9" text-anchor="start">sitoplazmik TDP-43 inklüzyonu</text>
+<text x="900" y="480" font-size="17" fill="#6d28d9" text-anchor="start">kayıp + agregat toksisitesi</text>
+<text x="890" y="560" font-size="17" fill="#6d28d9" text-anchor="middle" font-weight="bold">Aynı TDP-43 görünümü ALS'de de görülür</text>
+<rect x="30" y="600" width="1140" height="56" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="600" y="634" font-size="18" fill="#0f172a" text-anchor="middle" font-weight="bold">Klinik alt tip ile inklüzyon tipi arasında birebir ilişki yok: ayrım dokuda boyamayla yapılır.</text>
+<text x="600.0" y="687" font-size="17" fill="#64748b" text-anchor="middle">Kaynak: slayt 37, 38, 41</text>
+</svg>

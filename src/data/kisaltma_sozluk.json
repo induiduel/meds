@@ -52,6 +52,14 @@
   "definition": "ASIA bozukluk skalası. Omurilik yaralanmasında lezyonun yerini ve şiddetini değerlendirir; komplet yaralanma A, inkomplet yaralanma B, C ve D olarak sınıflanır.",
   "term": "ABS"
  },
+ "ADEM": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-31-medulla-spinalis-hastaliklari"
+  ],
+  "definition": "Akut dissemine ensefalomiyelit",
+  "term": "ADEM"
+ },
  "ADH": {
   "category": "kisaltma",
   "decks": [
@@ -1804,6 +1812,14 @@
   "definition": "Forkhead kutu I1 geni",
   "term": "FOXI1"
  },
+ "FTA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-31-medulla-spinalis-hastaliklari"
+  ],
+  "definition": "Floresan treponemal antikor (FTA-ABS: floresan treponemal antikor absorpsiyon testi; sifilizde treponemal test)",
+  "term": "FTA"
+ },
  "FTLD": {
   "category": "kisaltma",
   "decks": [
@@ -2186,6 +2202,14 @@
   "definition": "İnsan bağışıklık yetmezliği virüsü",
   "term": "HIV"
  },
+ "HLA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "İnsan lökosit antijeni",
+  "term": "HLA"
+ },
  "HMG": {
   "baska": [
    "Yüksek hareketlilikli grup (high mobility group)"
@@ -2276,6 +2300,15 @@
   ],
   "definition": "17-beta hidroksisteroid dehidrogenaz 4 geni",
   "term": "HSD17B4"
+ },
+ "HSV": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-31-medulla-spinalis-hastaliklari",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Herpes simpleks virüsü",
+  "term": "HSV"
  },
  "HT": {
   "category": "kisaltma",
@@ -2393,6 +2426,22 @@
   ],
   "definition": "İzositrat dehidrogenaz",
   "term": "IDH"
+ },
+ "IFN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "İnterferon",
+  "term": "IFN"
+ },
+ "IGM": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-31-medulla-spinalis-hastaliklari"
+  ],
+  "definition": "İmmünoglobulin M (IgM; akut enfeksiyonda ilk yükselen antikor sınıfı)",
+  "term": "IGM"
  },
  "IHH": {
   "category": "kisaltma",
@@ -3133,6 +3182,14 @@
   "definition": "Multipl skleroz",
   "term": "MS"
  },
+ "MSA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-30-norodejeneratif-hastaliklar"
+  ],
+  "definition": "Çoklu sistem atrofisi",
+  "term": "MSA"
+ },
  "MSS": {
   "baska": [
    "Merkezi sinir sistemi",
@@ -3322,6 +3379,14 @@
   "definition": "National Health Service (Birleşik Krallık Ulusal Sağlık Hizmeti)",
   "term": "NHS"
  },
+ "NKB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Nörokognitif bozukluklar",
+  "term": "NKB"
+ },
  "NMDA": {
   "category": "kisaltma",
   "decks": [
@@ -3345,7 +3410,8 @@
   "category": "kisaltma",
   "decks": [
    "y25-k2-31-medulla-spinalis-hastaliklari",
-   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar"
+   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar",
+   "k2-31-medulla-spinalis-hastaliklari"
   ],
   "definition": "Nöromiyelitis optika",
   "term": "NMO"
@@ -3403,7 +3469,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
-   "k2-26-norolojik-hastaliklar"
+   "k2-26-norolojik-hastaliklar",
+   "k2-31-medulla-spinalis-hastaliklari"
   ],
   "definition": "Otozomal dominant",
   "term": "OD"
@@ -3460,7 +3527,8 @@
   "category": "kisaltma",
   "decks": [
    "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
-   "k2-26-norolojik-hastaliklar"
+   "k2-26-norolojik-hastaliklar",
+   "k2-31-medulla-spinalis-hastaliklari"
   ],
   "definition": "Otozomal resesif",
   "term": "OR"
@@ -3633,6 +3701,14 @@
   "definition": "Protokaderin 19 geni",
   "term": "PCDH19"
  },
+ "PD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-30-norodejeneratif-hastaliklar"
+  ],
+  "definition": "Parkinson hastalığı",
+  "term": "PD"
+ },
  "PDZD7": {
   "category": "kisaltma",
   "decks": [
@@ -3749,6 +3825,14 @@
   ],
   "definition": "Protein fosfataz 2 düzenleyici alt birim B beta geni",
   "term": "PPP2R2B"
+ },
+ "PPS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Postpolio sendromu",
+  "term": "PPS"
  },
  "PRIS": {
   "baska": [
@@ -4647,6 +4731,14 @@
   "definition": "Total intravenöz anestezi",
   "term": "TIVA"
  },
+ "TLR": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Toll-benzeri reseptör",
+  "term": "TLR"
+ },
  "TMN": {
   "category": "kisaltma",
   "decks": [
@@ -4707,6 +4799,22 @@
   ],
   "definition": "Triptofan hidroksilaz geni",
   "term": "TPH"
+ },
+ "TPHA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-31-medulla-spinalis-hastaliklari"
+  ],
+  "definition": "Treponema pallidum hemaglütinasyon testi (sifilizde treponemal doğrulama testi)",
+  "term": "TPHA"
+ },
+ "TPI": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-31-medulla-spinalis-hastaliklari"
+  ],
+  "definition": "Treponema pallidum immobilizasyon testi (sifilizde treponemal test)",
+  "term": "TPI"
  },
  "TS": {
   "baska": [
@@ -4936,6 +5044,14 @@
   "definition": "Vazoaktif intestinal peptit",
   "term": "VIP"
  },
+ "VLCFA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Çok uzun zincirli yağ asitleri",
+  "term": "VLCFA"
+ },
  "VMAT": {
   "category": "kisaltma",
   "decks": [
@@ -4984,6 +5100,14 @@
   ],
   "definition": "Talamusun ventral posteromedial çekirdeği",
   "term": "VPM"
+ },
+ "VZV": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Varicella zoster virüs",
+  "term": "VZV"
  },
  "WDR": {
   "category": "kisaltma",
