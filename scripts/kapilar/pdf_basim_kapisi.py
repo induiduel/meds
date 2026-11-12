@@ -23,8 +23,15 @@ ap = argparse.ArgumentParser()
 ap.add_argument('--sunucu', default='http://localhost:3000')
 a = ap.parse_args()
 
-# Dış istemci benzetimi: gerçek loopback yöneticisi sayılmasın (yoksa kapı, öğrencinin yolunu sınamaz)
-BASLIKLAR = {'Content-Type': 'application/json', 'cf-connecting-ip': '203.0.113.9'}
+UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Safari/604.1'
+YEREL = 'localhost' in a.sunucu or '127.0.0.1' in a.sunucu
+# Yerelde dış istemci benzetimi: yönetici loopback'i sayılmasın diye `cf-connecting-ip` basılır (yoksa kapı,
+# öğrencinin yolunu sınamaz). Canlıda bu başlık GÖNDERİLMEZ: Cloudflare istemcinin yazdığı `cf-connecting-ip`i
+# sahte sayıp 403 (error 1000) veriyor; zaten canlıda Cloudflare gerçek başlığı kendisi ekliyor, sunucu isteği
+# loopback saymıyor. User-Agent da bot korumasına takılmamak için tarayıcı gibi.
+BASLIKLAR = {'Content-Type': 'application/json', 'User-Agent': UA}
+if YEREL:
+    BASLIKLAR['cf-connecting-ip'] = '203.0.113.9'
 GOVDE = json.dumps({
     'html': '<html><head><style>@page{size:A4}</style></head><body><h1>Kapı sınaması</h1></body></html>',
     'title': 'kapı sınaması',
@@ -41,7 +48,9 @@ def hata_yaz(mesaj: str) -> None:
 
 
 try:
-    durum = json.load(urllib.request.urlopen(f'{a.sunucu}/api/pdf/status', timeout=30))
+    durum = json.load(urllib.request.urlopen(
+        urllib.request.Request(f'{a.sunucu}/api/pdf/status', headers={'User-Agent': UA}),
+        timeout=30))
 except Exception as e:  # noqa: BLE001
     hata_yaz(f'pdf/status okunamadı: {e}')
     durum = {}
