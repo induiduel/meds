@@ -519,7 +519,7 @@ function hasValidWritePassword(req: express.Request): boolean {
 // Ekleme-yalnız uçlar ya da sahipliği kendisi denetleyen düzenleme/silme uçları buraya girer.
 // Soruyu bütünüyle yazan uçlar (PUT/PATCH /api/questions/:id) ve kimlik uçları (/api/users/sync) GİRMEZ.
 // Sınıf başına IP sınırı: [dakikada, saatte].
-const STUDENT_WRITE_LIMITS = { icerik: [6, 60], oy: [30, 300], esles: [60, 600] } as const;
+const STUDENT_WRITE_LIMITS = { icerik: [6, 60], oy: [30, 300], esles: [60, 600], belge: [20, 300] } as const;
 type StudentWriteKind = keyof typeof STUDENT_WRITE_LIMITS;
 const STUDENT_WRITE_ROUTES: Array<[string, RegExp, StudentWriteKind]> = [
   // Çıkmış sorular: yorum, bildirim, beğeni, cevap anketi
@@ -554,6 +554,10 @@ const STUDENT_WRITE_ROUTES: Array<[string, RegExp, StudentWriteKind]> = [
   ['POST', /^\/api\/(arkadas\/(istek|kabul|reddet|cikar|sohbet|davet)|kisi\/gizlilik)$/, 'esles'],
   // Not paylaşımı (kimlik + hız sınırı services/notPaylas.ts'te)
   ['POST', /^\/api\/not-paylas(\/\d+\/kaldir)?$/, 'icerik'],
+  // Belge basımı (PDF Stüdyosu, soru dışa aktarımı, ek modül föyü): yalnız gönderilen HTML → PDF, veri yazmaz.
+  // Öğrenciye parola verilmediği için bu uç eskiden 401 dönüyordu (H556); ağır Chrome işi sunucuda kuyruğa
+  // alınır (pdfRenderService: 2 koşut + 8 kuyruk), burada IP başına sınırlanır.
+  ['POST', /^\/api\/pdf\/render$/, 'belge'],
 ];
 const studentWriteHits = new Map<string, number[]>();
 /** Eşleşen uç sırası (sayaç uç başına ayrı tutulur) ya da -1 */

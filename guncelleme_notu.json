@@ -1,9 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 712,
-  "baslik": "Kurul 2: üç yeni ders eklendi",
+  "onem": 713,
+  "baslik": "PDF indirme düzeltildi: herkes indirebilir",
   "maddeler": [
-    "Santral Sinir Sistemi Enfeksiyonları (Patoloji), Nörodejeneratif Hastalıklar (Patoloji) ve Medulla Spinalis Hastalıkları (Nöroloji) sesli dersleri yayında"
+    "PDF Stüdyosu, soru dışa aktarımı ve ek modül föyünde “PDF indir” artık parola istemiyor; girişli ya da girişsiz her öğrenci indirebilir (H556)",
+    "Canlı sunucuya PDF basan başsız tarayıcı (Chromium) kuruldu: canlıda PDF oluşturma yeniden çalışıyor",
+    "Yeni kapı: scripts/kapilar/pdf_basim_kapisi.py — basımın parolasız ve tarayıcı hazır olduğunu sınar"
   ],
   "eklenen": [
     "Üç dersin sesli anlatımı, PDF üstü çizim ve işaretler, ara resimler",

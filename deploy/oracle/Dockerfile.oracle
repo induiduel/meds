@@ -6,7 +6,11 @@
 # Node ESM çözümü /app'ten yukarı çıkarak /node_modules'u bulur; process.cwd() yolları için MEDS_NODE_MODULES.
 FROM node:24-bookworm-slim
 
-RUN apt-get update && apt-get install -y --no-install-recommends python3 \
+# Chromium: PDF Stüdyosu, soru dışa aktarımı ve ek modül föyü `/api/pdf/render` ile başsız tarayıcıda basılır.
+# 2026-11-13: imajda Chrome yoktu → canlıda `pdf/status` "available:false", üstelik uç yazma parolası istiyordu (H556).
+# Tarayıcı + Türkçe glifler için DejaVu yazı tipleri; Chrome kendi kum havuzuyla çalışır (konteyner root olsa da
+# chromium paketi `--no-sandbox` olmadan açılır; pdfRenderService root'ta `--no-sandbox` ekler).
+RUN apt-get update && apt-get install -y --no-install-recommends python3 chromium fonts-dejavu-core \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /

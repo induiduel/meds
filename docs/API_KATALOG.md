@@ -206,5 +206,20 @@ Parola yalnızca sunucunun `.env` dosyasında `MEDSORU_API_PASSWORD` olarak tutu
 arayüzü ilk yazma denemesinde parolayı ister ve tarayıcı oturumu boyunca saklar. Yönetim,
 kullanıcı hesapları, e-posta ve otomasyon uçları ayrıca kendi yetki kurallarına da tabidir.
 
+**Parolasız uçlar (herkese açık, veri yazmayı kapsamaz):** öğrenciye parola verilmediği için
+aşağıdakiler `X-API-Password` istemez; kendi hız sınırları vardır (`server.ts`
+`STUDENT_WRITE_ROUTES`).
+
+- `POST /api/pdf/render` — gönderilen HTML belgesini başsız tarayıcıda PDF'e basar (PDF Stüdyosu, soru
+  dışa aktarımı, ek modül föyü). Yalnız `{html, title, fileName}` alır, veri yazmaz; IP başına dakikada 20,
+  saatte 300 istek. Sunucuda Chrome/Chromium yoksa `503` (`GET /api/pdf/status` → `available`).
+- Diğerleri: `/api/tts`, `/api/past-questions/similar`, `/api/sources/for-fragment`, `/api/db/query` (yazma
+  yalnız yönetici), `/api/notes`, `/api/user-data/backup`, `/api/users/sync` (sahipliği kendisi doğrular),
+  `/api/learn/social/*`, `/api/live/broadcast`, `/api/live/ping`.
+
+**Tarayıcıdaki öğrenci yazma uçları** (yorumsuz; kimliği ve saatlik sınırı uç kendisi denetler):
+çıkmış yorum/bildirim/oy, soru ekleme ve parça/şık önerisi, öğren geri bildirimi, topluluk mesajı,
+arkadaşlık/davet, not paylaşımı (`STUDENT_WRITE_ROUTES`).
+
 Web kullanıcıları soru havuzunu [`/sorular`](/sorular) sayfasından kullanabilir. Yazılım
 entegrasyonları için sürümlü `/v1` yolları tercih edilmelidir.

@@ -1,3 +1,11 @@
+## 2026-11-13 — "PDF indir" herkese 401 veriyordu; canlı imajda başsız tarayıcı da yoktu (H556, onem 713, kullanıcı bildirdi)
+- **Belirti:** soru çıktısı, soru dışa aktarımı ve ek modül föyünde PDF indirme `X-API-Password başlığı gereklidir` hatasıyla duruyordu; öğrenciye parola verilmediği için hiçbir öğrenci indiremiyordu.
+- **Kök neden:** `/api/pdf/render` yalnız HTML'i PDF'e basar (veri yazmaz) ama `requireWritePassword` ara katmanının parolasız listelerinde (`readOnlyPosts`, `STUDENT_WRITE_ROUTES`) yoktu. İkinci engel: canlı Oracle imajında (`Dockerfile.oracle`) Chrome/Chromium yoktu, canlıda `pdf/status` `available:false` dönüyordu. Yerelde Chrome kurulu ve istekler loopback (yönetici) olduğu için hata geliştirmede görünmüyordu.
+- **Çözüm:** uç `STUDENT_WRITE_ROUTES`'a `belge` sınıfıyla eklendi (IP başına 20/dk, 300/saat; Chrome kuyruğu zaten sınırlı 2 koşut + 8 kuyruk). `Dockerfile.oracle`'a `chromium` + `fonts-dejavu-core` eklendi (ARM'de uçtan uca sınandı: `%PDF-1.4`, 13.595 bayt). `API_KATALOG.md`'ye parolasız uçlar bölümü yazıldı. Yeni kapı `scripts/kapilar/pdf_basim_kapisi.py` (yerel 0 HATA).
+- **Sınama:** yerel 3000'de dış istemci benzetimi (`cf-connecting-ip`) ile `POST /api/pdf/render` → 200, 11.816 bayt `PDF 1.4`; `/api/questions`, `/api/ai/extract-document` hâlâ 401 (yazma koruması bozulmadı); `tsc` 0 hata.
+- **Dağıtım notu:** imaj değişti (`Dockerfile.oracle`) → `deploy-code.sh` kendiliğinden `--imaj` yolunu seçer; canlı Chrome kurulumu için dağıtım biraz uzun sürer.
+- **Durum:** yerel hazır; commit + `dagit.sh` sonrası canlı doğrulanacak.
+
 ## 2026-11-10 — Sesli çalışma soruları: boşluk doldurma doğal soru olarak okunuyor (H552, onem 711)
 - **Belirti/kök:** `ek_modul/ses.py` `____`'yi " boşluk " diye okuyordu (ekran metni sese gidiyordu).
 - **Çözüm:** `hoca_sorulari.json` bosluk setinin 100 sorusuna soru biçimli `okunus` alanı; `ses.py` onu okur (ekran/kitapçık `metin` aynen). h-bosluk-* sesleri GPU'da yeniden üretildi, `pdf_esle_hoca.py` yeniden koşuldu (1262/1262). `dogrula.py --modul` okunuşsuz boşluklu soruda HATA verir. Diğer setlerde (doğru–yanlış, çoktan seçmeli) boşluk yok.
