@@ -1,0 +1,141 @@
+{
+  "baslik": "Kurul 2 · İçerik hattı durumu",
+  "altbaslik": "Ders işçisi son 7 gün — katman katman tamamlanma",
+  "etiket": "Örnek reçete · artifact stüdyosu",
+  "tema": "acik",
+  "vurgu": "#2f6f4f",
+  "kutular": [
+    {
+      "tur": "metrik",
+      "etiket": "Tamamlanan ders",
+      "deger": 18,
+      "degisim": "+3",
+      "yon": "artis",
+      "alt": "hedef 24"
+    },
+    {
+      "tur": "metrik",
+      "etiket": "Kapı hatası",
+      "deger": 0,
+      "degisim": "0",
+      "yon": "notr",
+      "alt": "son çalıştırma"
+    },
+    {
+      "tur": "metrik",
+      "etiket": "Ortalama süre",
+      "deger": 41,
+      "birim": "dk",
+      "alt": "ders başına"
+    },
+    {
+      "tur": "metrik",
+      "etiket": "Ses klibi",
+      "deger": 1240,
+      "alt": "EMA · GPU"
+    },
+    {
+      "tur": "grafik",
+      "baslik": "Günlük üretim",
+      "tip": "sutun",
+      "etiketler": [
+        "Pzt",
+        "Sal",
+        "Çar",
+        "Per",
+        "Cum",
+        "Cmt",
+        "Paz"
+      ],
+      "seriler": [
+        {
+          "ad": "Ders",
+          "degerler": [
+            2,
+            3,
+            3,
+            4,
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "ad": "Örnek soru",
+          "eksen": "sag",
+          "degerler": [
+            40,
+            62,
+            58,
+            80,
+            96,
+            74,
+            51
+          ]
+        }
+      ],
+      "kaynak": "otomasyon/hat.json → durum.json"
+    },
+    {
+      "tur": "metin",
+      "baslik": "Bu hafta",
+      "genislik": "yarim",
+      "govde": "Kurul 2 dersleri tam otomatik hattan geçti; tüm kapılar sıfır hatayla kapandı.",
+      "maddeler": [
+        "Sesli ders + örnek soru çözücü",
+        "Hoca soruları ve ara soru katmanı",
+        "Çıkmış eşlemesi doğrulandı"
+      ]
+    },
+    {
+      "tur": "not",
+      "tur2": "uyari",
+      "baslik": "Elle komut kilidi",
+      "govde": "LLM aşamaları yalnız kullanıcı komutuyla başlar (kural 20).",
+      "genislik": "yarim"
+    },
+    {
+      "tur": "tablo",
+      "baslik": "Katman durumu",
+      "basliklar": [
+        "Katman",
+        "Durum",
+        "Not"
+      ],
+      "satirlar": [
+        [
+          "Anlatım",
+          "Tamam",
+          "metin_denetle 0 HATA"
+        ],
+        [
+          "Ses",
+          "Tamam",
+          "EMA · GPU"
+        ],
+        [
+          "Çizim",
+          "Tamam",
+          "çapa + çizim kapısı"
+        ],
+        [
+          "Öğren destesi",
+          "Atlandı",
+          "kullanıcı kararı"
+        ]
+      ],
+      "kaynak": "DEGISIKLIK_KAYDI.md"
+    },
+    {
+      "tur": "alinti",
+      "govde": "Yalnız kaynağa dayanan içerik öğrenciye güven verir.",
+      "baslik": "İçerik ilkesi",
+      "genislik": "yarim"
+    },
+    {
+      "tur": "kod",
+      "baslik": "Tek komut",
+      "kod": "python3 meds/scripts/artifact_studio/studyo.py recete.json"
+    }
+  ]
+}

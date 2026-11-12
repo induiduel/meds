@@ -130,3 +130,6 @@ data/terim_ses/
 
 # Ek modüller: EMA klipleri bu bilgisayarda üretilir, Oracle'a rsync (klip dizini src/data/ek_moduller/<modül>/klip.json repoda)
 data/ek_moduller/ses/
+
+# Artifact stüdyosu: üretilen sayfalar (betik ve örnek reçete repoda)
+scripts/artifact_studio/cikti/

@@ -1,0 +1,41 @@
+{
+  "_aciklama": "OpenDesign köprüsünün model eşlemesi (tek kaynak). `kur.sh` bunu ~/.claude/opendesign-kopru.json içine yazar. advertised = masaüstü/CLI'ın gördüğü Anthropic adı; upstream = geçitteki gerçek model. alias:true satırları seçicide görünmez, yalnız istek eşlemesinde çalışır (depodaki eski adlar için).",
+  "port": 8787,
+  "upstream": "https://amr-link.open-design.ai",
+  "routes": [
+    {"advertised": "claude-sonnet-5", "upstream": "deepseek-v4.1-flash", "label": "DeepSeek V4.1 Flash (varsayılan)"},
+    {"advertised": "claude-opus-4-8", "upstream": "deepseek-v4-pro", "label": "DeepSeek V4 Pro"},
+    {"advertised": "claude-opus-4-7", "upstream": "glm-5.3-flashx", "label": "GLM 5.3 FlashX"},
+    {"advertised": "claude-opus-5", "upstream": "kimi-k2.7-code", "label": "Kimi K2.7 Code"},
+    {"advertised": "claude-haiku-5-5", "upstream": "claude-haiku-5.5", "label": "Claude Haiku 5.5"},
+    {"advertised": "claude-fable-5", "upstream": "hy4-preview", "label": "HY4 (önizleme)"},
+    {"advertised": "claude-fable-6", "upstream": "gpt-6-luna", "label": "GPT-6 Luna"},
+    {"advertised": "claude-fable-7", "upstream": "glm-5.3-flash", "label": "GLM 5.3 Flash"},
+    {"advertised": "claude-mythos-1", "upstream": "minimax-m3.1-flash", "label": "MiniMax M3.1 Flash"},
+    {"advertised": "claude-mythos-2", "upstream": "deepseek-v4-flash", "label": "DeepSeek V4 Flash"},
+    {"advertised": "claude-mythos-3", "upstream": "deepseek-v4-flash-vision-exp", "label": "DeepSeek V4 Flash Vision (deneysel)"},
+    {"advertised": "claude-mythos-4", "upstream": "deepseek-v4.1-flash-eco", "label": "DeepSeek V4.1 Flash Eco"},
+    {"advertised": "claude-mythos-5", "upstream": "mimo-v2.6-flash", "label": "MiMo 2.6 Flash"},
+    {"advertised": "claude-mythos-6", "upstream": "mimo-v2.6-pro", "label": "MiMo 2.6 Pro"},
+
+    {"advertised": "claude-opus-5-5", "upstream": "deepseek-v4-pro", "label": "depo adı: DeepSeek V4 Pro (yazar)", "alias": true},
+    {"advertised": "claude-opus-5-1", "upstream": "deepseek-v4-pro", "label": "depo adı: DeepSeek V4 Pro", "alias": true},
+    {"advertised": "claude-sonnet-5-5", "upstream": "deepseek-v4.1-flash", "label": "depo adı: DeepSeek V4.1 Flash (denetçi)", "alias": true},
+    {"advertised": "claude-haiku-4-5-20251001", "upstream": "claude-haiku-5.5", "label": "depo adı: Claude Haiku 5.5", "alias": true},
+
+    {"advertised": "claude-od-01", "upstream": "deepseek-v4.1-flash", "label": "eski ad: DeepSeek V4.1 Flash (varsayılan)", "alias": true},
+    {"advertised": "claude-od-02", "upstream": "deepseek-v4-pro", "label": "eski ad: DeepSeek V4 Pro", "alias": true},
+    {"advertised": "claude-od-03", "upstream": "deepseek-v4.1-flash-eco", "label": "eski ad: DeepSeek V4.1 Flash Eco", "alias": true},
+    {"advertised": "claude-od-04", "upstream": "deepseek-v4-flash", "label": "eski ad: DeepSeek V4 Flash", "alias": true},
+    {"advertised": "claude-od-05", "upstream": "deepseek-v4-flash-vision-exp", "label": "eski ad: DeepSeek V4 Flash Vision (deneysel)", "alias": true},
+    {"advertised": "claude-od-06", "upstream": "claude-haiku-5.5", "label": "eski ad: Claude Haiku 5.5", "alias": true},
+    {"advertised": "claude-od-07", "upstream": "glm-5.3-flash", "label": "eski ad: GLM 5.3 Flash", "alias": true},
+    {"advertised": "claude-od-08", "upstream": "glm-5.3-flashx", "label": "eski ad: GLM 5.3 FlashX", "alias": true},
+    {"advertised": "claude-od-09", "upstream": "gpt-6-luna", "label": "eski ad: GPT-6 Luna", "alias": true},
+    {"advertised": "claude-od-10", "upstream": "kimi-k2.7-code", "label": "eski ad: Kimi K2.7 Code", "alias": true},
+    {"advertised": "claude-od-11", "upstream": "minimax-m3.1-flash", "label": "eski ad: MiniMax M3.1 Flash", "alias": true},
+    {"advertised": "claude-od-12", "upstream": "mimo-v2.6-flash", "label": "eski ad: MiMo 2.6 Flash", "alias": true},
+    {"advertised": "claude-od-13", "upstream": "mimo-v2.6-pro", "label": "eski ad: MiMo 2.6 Pro", "alias": true},
+    {"advertised": "claude-od-14", "upstream": "hy4-preview", "label": "eski ad: HY4 (önizleme)", "alias": true}
+  ]
+}

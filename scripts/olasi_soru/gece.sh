@@ -68,9 +68,11 @@ yayinla() {
   python3 "$KOK/meds/scripts/db/icerik_kaydi.py" --kimlik "k$K" --tur olasi_soru --kurul "$K" --oracle \
     --kaynak-sha "$(python3 -c "import json;print(json.load(open('$D/yuvalar.json'))['parmak_izi'][:16])")" --yol "data/olasi_sorular/k$K.json" || true
 }
-# Claude (başsız). Dar izin listesi: yalnız dosya okuma/yazma + doğrulayıcı + yerel API okuma.
+# Claude Code başsız (2026-11-13: Claude aboneliği değil, OpenDesign geçidi — köprü Anthropic kimliğini
+# deepseek-v4-pro'ya eşler). Dar izin listesi: yalnız dosya okuma/yazma + doğrulayıcı + yerel API okuma.
 IZIN='Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)'
-cl() { timeout 3h claude -p "$1" --model claude-opus-5-5 --allowedTools "$IZIN" --add-dir "$KOK" >> "$D/claude.log" 2>&1 || echo "claude çıkış $? (devam: kapı karar verir)" >> "$D/claude.log"; }
+AJAN_MODEL="${MEDS_AJAN_MODEL:-claude-opus-5-5}"
+cl() { timeout 3h claude -p "$1" --model "$AJAN_MODEL" --allowedTools "$IZIN" --add-dir "$KOK" >> "$D/claude.log" 2>&1 || echo "claude çıkış $? (devam: kapı karar verir)" >> "$D/claude.log"; }
 echo "=== $(date -Is) kurul $K sentez ===" >> "$D/claude.log"
 cl "meds/scripts/olasi_soru/TALIMAT.md talimatını uygula (kurul $K). Çalışma dizini: $D. Proje kökü: $KOK. Bitince 'python3 $KOK/meds/scripts/olasi_soru/dogrula.py --kurul $K' çalıştır ve 0 HATA olana kadar düzelt."
 for tur in 1 2; do

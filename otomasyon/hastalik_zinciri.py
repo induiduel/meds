@@ -11,12 +11,14 @@ Durum: meds_temp/hat/hastalik_zinciri.json {ders_id: öneri sha}. LLM yalnız Cl
   hastalik_zinciri.py [--kuru] [--en-cok 4]
 """
 import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+from llm.model_sec import ajan_model as _ajan_model  # noqa: E402  2026-11-13: model kimliği tek kaynaktan
 if __name__ == "__main__":
     _llm_kilit("hastalik_zinciri")
 import argparse, hashlib, json, subprocess, sys
 from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
+AJAN_MODEL = _ajan_model()   # kullanıcı: MEDS_AJAN_MODEL > butce.json claude.model > claude-opus-5-5
 ONERI = KOK / "meds_database_v2/ders_isci/hastalik_onerileri"
 DURUM = KOK / "meds_temp/hat/hastalik_zinciri.json"
 DIS = MEDS / "src/data/diseases.json"
@@ -49,7 +51,7 @@ def main():
         (ONERI / "sema2").mkdir(exist_ok=True)
         with open(KOK / "meds_temp/hat/hastalik_claude.log", "a") as log:
             try:
-                k = subprocess.run(["claude", "-p", istem, "--model", "claude-opus-5-5", "--allowedTools", IZIN, "--add-dir", str(KOK)],
+                k = subprocess.run(["claude", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
                                    cwd=KOK, stdout=log, stderr=subprocess.STDOUT, timeout=3 * 3600).returncode
             except subprocess.TimeoutExpired:
                 print("   claude zaman aşımı (3 sa) — sonraki gece yeniden"); k = 124

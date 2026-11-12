@@ -16,12 +16,14 @@ Bir part ders kümesi ve özetleri değişmedikçe yeniden yazılmaz (iz.txt). K
 --prova: yalnız plan + ilk partın yazar/denetçi/derle adımları; src/data, data/ ve Oracle'a dokunmaz.
 """
 import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+from llm.model_sec import ajan_model as _ajan_model  # noqa: E402  2026-11-13: model kimliği tek kaynaktan
 if __name__ == "__main__":
     _llm_kilit("son_prova_zinciri")
 import argparse, datetime as dt, hashlib, json, shutil, subprocess, sys
 from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
+AJAN_MODEL = _ajan_model()   # kullanıcı: MEDS_AJAN_MODEL > butce.json claude.model > claude-opus-5-5
 SP = MEDS / "scripts/son_prova"
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *)"
 SON_PROVA_GUN = 9  # sınavdan kaç gün önce (dahil) üretim başlar
@@ -41,7 +43,7 @@ def claude(istem, W, kuru):
         print("   [kuru] claude:", istem[:160]); return
     with open(W / "log" / "claude.log", "a") as log:
         try:
-            subprocess.run(["claude", "-p", istem, "--model", "claude-opus-5-5", "--allowedTools", IZIN, "--add-dir", str(KOK)],
+            subprocess.run(["claude", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
                            cwd=W, stdout=log, stderr=subprocess.STDOUT, timeout=4 * 3600)
         except subprocess.TimeoutExpired:
             print("   claude zaman aşımı")

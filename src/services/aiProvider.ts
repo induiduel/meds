@@ -628,17 +628,125 @@ export async function callMuseSpark(
   throw finalError;
 }
 
-// Resilient Multi-Provider AI Caller with Automated 3-Phase Failover
-// Deneme 1: Birincil Sağlayıcı (Gemini / Groq / Muse Spark)
-// Deneme 2: Alternatif Yedek Sağlayıcı (Groq / Gemini)
-// Deneme 3 (Kurtarıcı / Son Çare): Tüm AI'lar Limit Doldurduysa Otomatik Devreye Giren Muse Spark 1.3 Free
+// =========================================================================
+// OpenDesign GEÇİDİ (2026-11-13) — Claude/Anthropic aboneliği yerine DeepSeek/GLM/GPT modelleri.
+// Geçit Anthropic Messages API'si konuşur (`POST /v1/messages`). Adres sırası:
+//   MEDS_OPENDESIGN_URL > yerel köprü (127.0.0.1:8787) > genel geçit (amr-link.open-design.ai).
+// Anahtar yalnız sunucu .env'inden: MEDS_OPENDESIGN_KEY | OPEN_DESIGN_API_KEY | ANTHROPIC_AUTH_TOKEN.
+// Bu dosya sunucu tarafındadır (server-only); anahtar istemci paketine girmez.
+// =========================================================================
+export const OPENDESIGN_DEFAULT_MODEL = 'deepseek-v4.1-flash';
+
+export function openDesignApiKey(): string {
+  return (process.env.MEDS_OPENDESIGN_KEY || process.env.OPEN_DESIGN_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN || '').trim();
+}
+
+export function openDesignBaseUrls(): string[] {
+  const envUrl = (process.env.MEDS_OPENDESIGN_URL || '').trim().replace(/\/+$/, '');
+  const list = [envUrl, 'http://127.0.0.1:8787', 'https://amr-link.open-design.ai'].filter(Boolean);
+  return list.filter((u, i) => list.indexOf(u) === i);
+}
+
+export async function callOpenDesign(
+  prompt: string,
+  model: string = process.env.MEDS_OPENDESIGN_MODEL || OPENDESIGN_DEFAULT_MODEL,
+  options: {
+    systemPrompt?: string;
+    isJson?: boolean;
+    messages?: { role: string; content: string }[];
+    timeoutMs?: number;
+    apiKey?: string;
+  } = {}
+): Promise<{ text: string; model: string; providerUsed: string }> {
+  const key = (options.apiKey || openDesignApiKey()).trim();
+  if (!key) {
+    throw new Error('OpenDesign anahtarı tanımlı değil (MEDS_OPENDESIGN_KEY / OPEN_DESIGN_API_KEY). Sunucu .env dosyasına ekleyin.');
+  }
+
+  const msgs = (options.messages && options.messages.length)
+    ? options.messages
+        .filter((m) => m && m.content)
+        .map((m) => ({ role: m.role === 'assistant' ? 'assistant' : 'user', content: m.content }))
+    : [{ role: 'user', content: prompt }];
+
+  let system = options.systemPrompt || '';
+  if (options.isJson) {
+    system = `${system}\n\nYALNIZ geçerli JSON yaz; açıklama, kod bloğu, önsöz ekleme.`.trim();
+  }
+
+  const body: any = { model, max_tokens: 8192, temperature: 0.1, messages: msgs };
+  if (system) body.system = system;
+
+  const effectiveTimeout = options.timeoutMs || getModelTimeoutMs(model, false);
+  let lastErr: any = null;
+  const urls = openDesignBaseUrls();
+
+  for (let i = 0; i < urls.length; i++) {
+    const base = urls[i];
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), effectiveTimeout);
+    try {
+      const res = await fetch(`${base}/v1/messages`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'anthropic-version': '2023-06-01',
+          'x-api-key': key,
+          authorization: `Bearer ${key}`,
+          'user-agent': 'MeDSor/OpenDesign-1.0'
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+      if (!res.ok) {
+        const detail = (await res.text().catch(() => '')).slice(0, 300);
+        const err: any = new Error(`OpenDesign HTTP ${res.status}: ${detail}`);
+        err.status = res.status;
+        // 4xx (anahtar/model sorunu) → sonraki adrese değil, doğrudan yedek sağlayıcıya geç
+        if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+          logAiExecutionError({ provider: 'opendesign', model, prompt, error: err });
+          throw err;
+        }
+        lastErr = err;
+        continue;
+      }
+      const data: any = await res.json();
+      const text = (data?.content || [])
+        .filter((b: any) => (b?.type || 'text') === 'text')
+        .map((b: any) => b?.text || '')
+        .join('')
+        .trim();
+      if (!text) {
+        lastErr = new Error(`OpenDesign (${model}) boş yanıt döndü (stop=${data?.stop_reason || 'yok'}).`);
+        continue;
+      }
+      console.log(`[AI OpenDesign] ✓ ${model} yanıt verdi (${base}).`);
+      return { text, model, providerUsed: `OpenDesign (${model})` };
+    } catch (err: any) {
+      clearTimeout(timeoutId);
+      const isTimeout = /abort|timeout|timed out/i.test(err?.message || '') || controller.signal.aborted;
+      lastErr = isTimeout
+        ? new Error(`OpenDesign (${model}) ${Math.round(effectiveTimeout / 1000)} saniye içinde yanıt vermedi (Zaman Aşımı).`)
+        : err;
+      if (err?.status && err.status >= 400 && err.status < 500 && err.status !== 429) break;
+    }
+  }
+
+  logAiExecutionError({ provider: 'opendesign', model, prompt, error: lastErr || new Error('OpenDesign yanıt vermedi.') });
+  throw lastErr || new Error('OpenDesign yanıt vermedi.');
+}
+
+// Resilient Multi-Provider AI Caller with Automated Failover
+// Sıra (2026-11-13): Yerel GPU (istenirse) → OpenDesign geçidi → Groq Cloud → Muse Spark 1.3 Free → Google Gemini.
+// OpenDesign basamağı Claude aboneliğinin yerini alır (DeepSeek/GLM/GPT); anahtar yoksa atlanır.
 export async function generateResilientMedicalAi(options: {
   prompt: string;
   customGeminiKey?: string;
   customGroqKey?: string;
   customMuseSparkKey?: string;
   museSparkBaseUrl?: string;
-  preferredProvider?: 'gemini' | 'groq' | 'muse-spark' | 'local-ollama' | 'auto';
+  preferredProvider?: 'gemini' | 'groq' | 'muse-spark' | 'opendesign' | 'local-ollama' | 'auto';
   model?: string;
   responseFormat?: 'json' | 'text';
   systemInstruction?: string;
@@ -704,10 +812,38 @@ export async function generateResilientMedicalAi(options: {
   }
 
   // =========================================================================
-  // 2. BASAMAK: GROQ CLOUD (GPT-OSS 120B / Llama 3)
-  // Yerel çalışmadığında İLK BULUT SEÇENEĞİ her zaman Groq'tur.
+  // 2. BASAMAK: OPENDESIGN GEÇİDİ (2026-11-13 — Claude aboneliği yerine DeepSeek/GLM/GPT)
+  // Anahtar sunucu .env'inde yoksa bu basamak sessizce atlanır (maliyet/kota harcanmaz).
   // =========================================================================
-  console.log(`[AI Multi-Provider] 🟢 2. BASAMAK: Groq Cloud (openai/gpt-oss-120b) devreye alınıyor...`);
+  if (openDesignApiKey()) {
+    console.log(`[AI Multi-Provider] 🟢 2. BASAMAK: OpenDesign geçidi (${process.env.MEDS_OPENDESIGN_MODEL || OPENDESIGN_DEFAULT_MODEL}) devreye alınıyor...`);
+    try {
+      const odRes = await callOpenDesign(prompt, process.env.MEDS_OPENDESIGN_MODEL || OPENDESIGN_DEFAULT_MODEL, {
+        systemPrompt: systemInstruction,
+        isJson,
+        messages,
+        timeoutMs
+      });
+      console.log(`[AI Multi-Provider] ✓ 2. BASAMAK (OpenDesign ${odRes.model}) başarıyla yanıt verdi!`);
+      return {
+        text: odRes.text,
+        providerUsed: odRes.providerUsed,
+        planUsed: `OpenDesign geçidi (${odRes.model})`,
+        attemptsCount: isLocalPreferred ? 3 : 2,
+        fallbackUsed: isLocalPreferred
+      };
+    } catch (odErr: any) {
+      console.warn(`[AI Multi-Provider] ⚠️ 2. BASAMAK (OpenDesign) başarısız oldu:`, odErr.message);
+    }
+  } else {
+    console.log('[AI Multi-Provider] ⏭️ 2. BASAMAK (OpenDesign) atlandı: MEDS_OPENDESIGN_KEY tanımlı değil.');
+  }
+
+  // =========================================================================
+  // 3. BASAMAK: GROQ CLOUD (GPT-OSS 120B / Llama 3)
+  // OpenDesign yanıt vermezse ilk ücretsiz bulut seçeneği Groq'tur.
+  // =========================================================================
+  console.log(`[AI Multi-Provider] 🟢 3. BASAMAK: Groq Cloud (openai/gpt-oss-120b) devreye alınıyor...`);
   try {
     const groqModel = 'openai/gpt-oss-120b';
     const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
@@ -715,23 +851,23 @@ export async function generateResilientMedicalAi(options: {
       isJson,
       messages
     });
-    console.log(`[AI Multi-Provider] ✓ 2. BASAMAK (Groq Cloud ${groqRes.model}) başarıyla yanıt verdi!`);
+    console.log(`[AI Multi-Provider] ✓ 3. BASAMAK (Groq Cloud ${groqRes.model}) başarıyla yanıt verdi!`);
     return {
       text: groqRes.text,
       providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
       planUsed: `Groq Cloud (${groqRes.model})`,
-      attemptsCount: isLocalPreferred ? 2 : 1,
-      fallbackUsed: isLocalPreferred
+      attemptsCount: isLocalPreferred ? 3 : 2,
+      fallbackUsed: true
     };
   } catch (groqErr: any) {
-    console.warn(`[AI Multi-Provider] ⚠️ 2. BASAMAK (Groq Cloud) başarısız oldu:`, groqErr.message);
+    console.warn(`[AI Multi-Provider] ⚠️ 3. BASAMAK (Groq Cloud) başarısız oldu:`, groqErr.message);
   }
 
   // =========================================================================
-  // 3. BASAMAK: MUSE SPARK 1.3 FREE (SINIRSIZ / ÜCRETSİZ KATMAN)
+  // 4. BASAMAK: MUSE SPARK 1.3 FREE (SINIRSIZ / ÜCRETSİZ KATMAN)
   // Groq yanıt vermezse devreye giren 2. bulut alternatifi
   // =========================================================================
-  console.log(`[AI Multi-Provider] ⚡ 3. BASAMAK: Muse Spark 1.3 Free devreye alınıyor...`);
+  console.log(`[AI Multi-Provider] ⚡ 4. BASAMAK: Muse Spark 1.3 Free devreye alınıyor...`);
   try {
     const sparkRes = await callMuseSpark(
       prompt,
@@ -744,45 +880,45 @@ export async function generateResilientMedicalAi(options: {
         baseUrl: museSparkBaseUrl
       }
     );
-    console.log(`[AI Multi-Provider] ✓ 3. BASAMAK (Muse Spark 1.3 Free ${sparkRes.model}) başarıyla yanıt verdi!`);
+    console.log(`[AI Multi-Provider] ✓ 4. BASAMAK (Muse Spark 1.3 Free ${sparkRes.model}) başarıyla yanıt verdi!`);
     return {
       text: sparkRes.text,
       providerUsed: `Muse Spark 1.3 Free [Yedek]`,
       planUsed: `Muse Spark (${sparkRes.model})`,
-      attemptsCount: isLocalPreferred ? 3 : 2,
+      attemptsCount: isLocalPreferred ? 4 : 3,
       fallbackUsed: true
     };
   } catch (sparkErr: any) {
-    console.warn(`[AI Multi-Provider] ⚠️ 3. BASAMAK (Muse Spark 1.3 Free) başarısız oldu:`, sparkErr.message);
+    console.warn(`[AI Multi-Provider] ⚠️ 4. BASAMAK (Muse Spark 1.3 Free) başarısız oldu:`, sparkErr.message);
   }
 
   // =========================================================================
-  // 4. BASAMAK: GOOGLE GEMINI FLASH (EN SON SEÇENEK)
-  // Yerel, Groq ve Muse başarısız olduğunda en son çare olarak Gemini denenir.
+  // 5. BASAMAK: GOOGLE GEMINI FLASH (EN SON SEÇENEK)
+  // Yerel, OpenDesign, Groq ve Muse başarısız olduğunda en son çare olarak Gemini denenir.
   // =========================================================================
-  console.log(`[AI Multi-Provider] 🛡️ 4. BASAMAK (EN SON SEÇENEK): Google Gemini Flash deneniyor...`);
+  console.log(`[AI Multi-Provider] 🛡️ 5. BASAMAK (EN SON SEÇENEK): Google Gemini Flash deneniyor...`);
   try {
     const geminiModel = 'gemini-3.8-flash';
     const geminiRes = await callGeminiPool(prompt, customGeminiKey, geminiModel, isJson, systemInstruction);
-    console.log(`[AI Multi-Provider] ✓ 4. BASAMAK (Google Gemini Flash ${geminiModel}) başarıyla yanıt verdi!`);
+    console.log(`[AI Multi-Provider] ✓ 5. BASAMAK (Google Gemini Flash ${geminiModel}) başarıyla yanıt verdi!`);
     return {
       text: geminiRes.text,
       providerUsed: `${geminiRes.providerUsed} [Son Çare Yedek]`,
       planUsed: geminiRes.planUsed,
-      attemptsCount: isLocalPreferred ? 4 : 3,
+      attemptsCount: isLocalPreferred ? 5 : 4,
       fallbackUsed: true
     };
   } catch (geminiErr: any) {
-    console.error(`[AI Multi-Provider] ❌ 4. BASAMAK (Google Gemini Flash) DA BAŞARISIZ OLDU:`, geminiErr.message);
+    console.error(`[AI Multi-Provider] ❌ 5. BASAMAK (Google Gemini Flash) DA BAŞARISIZ OLDU:`, geminiErr.message);
   }
 
   // =========================================================================
   // TÜM BASAMAKLAR BAŞARISIZ OLDUĞUNDA HATA FIRLAT
   // =========================================================================
   const failureError: any = new Error(
-    `Tüm yapay zeka basamakları denendi ve hiçbiri yanıt veremedi (Sıra: Yerel GPU RTX 4060 -> Groq Cloud -> Muse Spark -> Google Gemini). Lütfen internet bağlantınızı veya API durumunuzu kontrol edin.`
+    `Tüm yapay zeka basamakları denendi ve hiçbiri yanıt veremedi (Sıra: Yerel GPU RTX 4060 -> OpenDesign geçidi -> Groq Cloud -> Muse Spark -> Google Gemini). Lütfen internet bağlantınızı veya API durumunuzu kontrol edin.`
   );
-  failureError.attemptsCount = 4;
+  failureError.attemptsCount = 5;
   failureError.isAllFailed = true;
   throw failureError;
 }

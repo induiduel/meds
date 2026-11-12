@@ -15,6 +15,7 @@ Kodlar defterden (2n03): kurullar ve branşlar arası tekil.
   ders_zinciri.py --kurul 2 [--ders k2-07] [--adim hazirla] [--kuru]
 """
 import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+from llm.model_sec import ajan_model as _ajan_model  # noqa: E402  2026-11-13: model kimliği tek kaynaktan
 if __name__ == "__main__":
     _llm_kilit("ders_zinciri")
 import argparse, datetime as dt, hashlib, json, os, re, shutil, subprocess, sys
@@ -22,6 +23,7 @@ from collections import defaultdict
 from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
+AJAN_MODEL = _ajan_model()   # kullanıcı: MEDS_AJAN_MODEL > butce.json claude.model > claude-opus-5-5
 SC = MEDS / "scripts/spot_cozucu"
 W0 = KOK / "meds_temp/spot_cozucu"
 DURUM = KOK / "meds_temp/hat/dersler"
@@ -87,7 +89,7 @@ def calistir(komut, cwd=KOK, kuru=False):
 
 
 def claude(istem, W, kuru):
-    kom = ["claude", "-p", istem, "--model", "claude-opus-5-5", "--allowedTools", IZIN, "--add-dir", str(KOK)]
+    kom = ["claude", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)]
     print("   $ claude -p …", istem[:120])
     if kuru:
         return 0

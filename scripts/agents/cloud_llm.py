@@ -5,6 +5,8 @@ Ortak bulut LLM istemcisi (yerel model yok). Faz 5/6/7 v2, hakem ve lib.chat bun
 Model zinciri (yalnız ücretsiz anahtarlar; faturalı GEMINI_BILLED_KEY hiçbir fazda kullanılmaz, MEDS_FREE_ONLY=1):
   varsayılan DEFAULT_CHAIN: Gemini (flash, flash-lite, 3.5-flash, 3.5-flash-lite) → Groq (gpt-oss-120b, qwen3.8-27b);
   → OpenRouter ücretsiz (Nemotron 3 Ultra, Gemma 4 31B). Zen yalnız MEDS_CLOUD_ZEN=1 ile; MEDS_CLOUD_CHAIN ile tümü değiştirilir.
+  → OpenDesign geçidi (2026-11-13, `opendesign:<model>`, son yedek): DeepSeek/GLM/GPT modelleri; Claude aboneliği yerine geçer.
+  OpenDesign'i başa almak için: `MEDS_CLOUD_CHAIN=opendesign:deepseek-v4.1-flash,...`.
   (+ MEDS_CLOUD_EXTRA_MODELS, ör. "openrouter:meta/muse-spark-1.3" — OpenRouter hesabında model açılınca)
 Kota: 429 "günlük" yanıtı veren model o gün bir daha denenmez (meds_temp/state/cloud_llm.json, süreçler arası);
 dakikalık 429'da kısa beklenir. 400/401/403/404 veren model bu süreçte atlanır. Anahtar havuzu sırayla denenir.
@@ -25,9 +27,13 @@ TEMP = Path(os.environ.get("MEDS_TEMP_DIR") or ROOT.parent / "meds_temp")
 STATE = TEMP / "state" / "cloud_llm.json"
 UA = "MedSor/1.0"
 
+_OPENDESIGN_SON = "opendesign:deepseek-v4.1-flash"   # 2026-11-13: Claude yerine OpenDesign geçidi (son yedek)
+
 DEFAULT_CHAIN = ["gemini:gemini-flash-latest", "gemini:gemini-flash-lite-latest", "gemini:gemini-3.5-flash", "gemini:gemini-3.5-flash-lite", "groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b",
                  # OpenRouter ücretsiz (2026-10-23 sınaması: Nemotron 3 Ultra Türkçe + Naegele hesabı doğru, 5 sn)
-                 "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:google/gemma-4-31b-it:free"]
+                 "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:google/gemma-4-31b-it:free",
+                 # Ücretsiz anahtarlar tükendiğinde/yanıt vermediğinde OpenDesign geçidi (ücretli hesap; anahtar varsa)
+                 _OPENDESIGN_SON]
 
 
 def _env() -> dict:
@@ -56,6 +62,47 @@ KEYS = {
     "zen": [k for k in (ENV.get("OPENCODE_API_KEY"),) if k],
 }
 ZEN_FREE = "zen:muse-spark-1.3-contributor-free"
+
+
+# ── OpenDesign geçidi (2026-11-13) ───────────────────────────────────────────────────────────────
+# Claude aboneliği yerine DeepSeek/GLM/GPT modelleri. Tek istemci `otomasyon/llm/opendesign.py`;
+# anahtar `MEDS_OPENDESIGN_KEY` > `OPEN_DESIGN_API_KEY` > `ANTHROPIC_AUTH_TOKEN` > meds/.env > ~/.claude/settings.json.
+def _od():
+    if getattr(_od, "_m", None) is None:
+        import sys as _sys
+        _sys.path.insert(0, str(ROOT / "otomasyon"))
+        from llm import opendesign as _m
+        _od._m = _m
+    return _od._m
+
+
+def _od_anahtarlar() -> list[str]:
+    try:
+        k = _od().anahtar()
+    except Exception:  # noqa: BLE001
+        k = ""
+    return [k] if k else []
+
+
+def _opendesign(key: str, model: str, system, prompt, as_json, max_tokens: int, temperature: float,
+                timeout: int) -> str:
+    """Geçit çağrısı. Hatalar zincirin beklediği HTTPError/URLError biçimine çevrilir (429/400/401… aynı kurallar)."""
+    import io
+    od = _od()
+    try:
+        metin = od.sohbet(prompt, sistem=system, model=model, as_json=as_json, max_tokens=max_tokens,
+                          sicaklik=temperature, zaman_asimi=timeout, deneme=1)
+    except od.GecitHatasi as e:
+        url = od.ayar()["url"] + "/v1/messages"
+        if e.kod:
+            raise urllib.error.HTTPError(url, e.kod, str(e), None, io.BytesIO(str(e).encode())) from e
+        raise urllib.error.URLError(str(e)) from e
+    if not metin:
+        raise BosYanit(f"{model}: boş yanıt")
+    return metin
+
+
+KEYS["opendesign"] = _od_anahtarlar()   # anahtar yoksa boş liste → zincirde bu adım sessizce atlanır
 
 
 def chain() -> list[str]:
@@ -162,6 +209,8 @@ def _call(spec: str, key: str, system, prompt, as_json, max_tokens, temperature,
     if prov == "openrouter":
         base = (ENV.get("MUSE_SPARK_BASE_URL") or "https://openrouter.ai/api/v1").rstrip("/")
         return _openai_style(base, key, model, system, prompt, as_json, max_tokens, temperature, timeout)
+    if prov == "opendesign":
+        return _opendesign(key, model, system, prompt, as_json, max_tokens, temperature, timeout)
     raise ValueError(f"bilinmeyen sağlayıcı: {prov}")
 
 

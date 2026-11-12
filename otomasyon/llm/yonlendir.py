@@ -97,6 +97,35 @@ def _ajan_sayac_artir(ad: str, sure_sn: float):
 _ANSI = re.compile(r"\x1b\[[0-9;?]*[A-Za-z]")
 
 
+def _opendesign(istem: str, ad: str) -> tuple[str | None, str | None]:
+    """A katmanı — OpenDesign geçidi (2026-11-13): CLI yok, `otomasyon/llm/opendesign.py` doğrudan `/v1/messages`
+    gönderir. Yerel köprü ayaktaysa oraya, değilse genel geçide. Modeller `butce.json` › `ajanlar.<ad>.modeller`
+    sırasıyla denenir (yazar deepseek, denetçi glm/gpt ailesi). Günlük tavan `gunluk_cagri`."""
+    from . import opendesign as od
+    a = _ajan_ayar().get(ad) or {}
+    if a.get("kapali"):
+        return None, None
+    if ajan_kalan(ad) <= 0:
+        return None, "butce"
+    modeller = a.get("modeller") or [od.VARSAYILAN_MODEL]
+    for model in modeller:
+        t0 = time.time()
+        try:
+            cevap = od.sohbet(istem, sistem=SISTEM, model=model,
+                              max_tokens=int(a.get("max_cikti", 4096)),
+                              sicaklik=float(a.get("sicaklik", 0.2)),
+                              zaman_asimi=float(a.get("zaman_asimi_sn", 900)),
+                              gunluk=lambda m: c.gunluk(olay="model_uyari", ajan=ad, mesaj=m))
+        except od.GecitHatasi as e:
+            c.gunluk(olay="ajan_hata", ajan=ad, model=model, hata=str(e)[:300])
+            continue
+        _ajan_sayac_artir(ad, time.time() - t0)
+        if not cevap:
+            continue
+        return cevap, f"{ad}:{od.model_id(model)}"
+    return None, None
+
+
 def _ajan(ad: str, istem: str) -> tuple[str | None, str | None]:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1])); from llm_kilit import serbest  # LLM kilidi 2026-10-27
     if not serbest():
@@ -104,6 +133,8 @@ def _ajan(ad: str, istem: str) -> tuple[str | None, str | None]:
     """A katmanı: ajan CLI'si (OpenCode, Command Code, Antigravity; Claude ayrı bütçeyle `_claude`). İstem stdin'den,
     boş bir çalışma klasöründe, salt okunur kipte; cevap metni döner (derleyicinin json_cikar'ı önsöz/ANSI'ye hoşgörülü).
     Ajanın `modeller` listesi sırayla denenir (ilk dolu cevap). Günlük tavan butce.json'dan; dolunca (None, "butce")."""
+    if ad.startswith("opendesign"):
+        return _opendesign(istem, ad)
     if ad.startswith("claude"):
         return _claude(istem, (_ajan_ayar().get(ad) or {}).get("claude_model"))
     a = _ajan_ayar().get(ad)
@@ -186,11 +217,11 @@ def _claude(istem: str, model: str | None = None) -> tuple[str | None, str | Non
                            cwd=str(c.TEMP), env={**os.environ, "CUDA_VISIBLE_DEVICES": ""})
     except (subprocess.TimeoutExpired, FileNotFoundError) as e:
         c.gunluk(olay="claude_hata", hata=repr(e))
-        return None, None
+        return _opendesign(istem, "opendesign")      # 2026-11-13: CLI yoksa doğrudan geçit
     _sayac_artir(time.time() - t0)
     if r.returncode != 0 or not r.stdout.strip():
         c.gunluk(olay="claude_hata", kod=r.returncode, hata=r.stderr[-400:])
-        return None, None
+        return _opendesign(istem, "opendesign")      # 2026-11-13: köprü/CLI düştüyse doğrudan geçit
     return r.stdout.strip(), f"claude:{model}"
 
 

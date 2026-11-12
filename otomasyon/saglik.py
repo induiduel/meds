@@ -131,6 +131,19 @@ def claude_cli():
         return False
 
 
+def gecit_kopru():
+    """OpenDesign köprüsü (2026-11-13): `claude -p` ve masaüstü uygulaması artık abonelikle değil
+    `http://127.0.0.1:8787` köprüsü üzerinden geçide (`amr-link.open-design.ai`) gider. Köprü kapalıysa
+    CLI yerinde olsa bile her LLM aşaması kimlik doğrulamada düşer — 2026-10-23'teki sessiz düşüşün eşi."""
+    import sys as _s
+    _s.path.insert(0, str(KOK / "meds/otomasyon"))
+    try:
+        from llm import opendesign as od
+        return od.kopru_var(2.0)
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def main():
     s = {
         "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -138,6 +151,7 @@ def main():
         "oracle_ssh": ssh_ok(),
         "yerel_3000": http("http://127.0.0.1:3000/api/health"),
         "embed_bge": birim("meds-embed-bge"), "ema_isci": birim("meds-ema"), "claude_cli": claude_cli(),
+        "gecit_kopru": gecit_kopru(),
         "disk_bos_gb": round(shutil.disk_usage(str(KOK)).free / 1e9, 1),
     }
     s["oracle_ok"] = s["canli_api"] == 200 and s["oracle_ssh"]
@@ -147,6 +161,8 @@ def main():
     sorun = [k for k, ok in [("canli_api", s["canli_api"] == 200), ("oracle_ssh", s["oracle_ssh"]),
                              ("yerel_3000", s["yerel_3000"] == 200), ("embed_bge", s["embed_bge"] == "active"),
                              ("ema_isci", s["ema_isci"] == "active"), ("claude_cli", s["claude_cli"]),
+                             # köprü yalnız CLI yerindeyken aranır (Oracle'da köprü yok, sunucu hattı doğrudan geçide gider)
+                             ("gecit_kopru", s["gecit_kopru"] or not s["claude_cli"]),
                              ("disk", s["disk_bos_gb"] >= 10),
                              ("kapi_ariza", not s["kapi_ariza"]), ("kayit_defteri", not s["kayit_defteri"]),
                              ("turev_eksik_k2", not (s["turev_eksik"].get("k2") or []))] if not ok]  # K1 eksikleri yalnız rapor

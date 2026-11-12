@@ -15,6 +15,7 @@ Kullanım: .venv-ocr/bin/python scripts/cizim/cizim_uret.py <key> --dok <capa_do
 """
 from __future__ import annotations
 import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+from llm.model_sec import ajan_model as _ajan_model  # noqa: E402  2026-11-13: model kimliği tek kaynaktan
 # H489 (2026-11-05): kilit yalnız gerçek LLM çağrısında (claude()) yoklanır; hazır parti dosyalarıyla yerleşim/kapı
 # LLM çağırmaz ve oturum içinde (INVOCATION_ID kalıtılan masaüstü oturumu) kilide takılmamalı. Kilit gevşetilmedi.
 
@@ -668,8 +669,7 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
 
 def claude(cwd: Path, istem: str, sure: int = 1800) -> str:
     _llm_kilit("cizim_uret")  # her LLM çağrısı elle komut şartına bağlı (kural 20)
-    b = json.loads((MEDS / "otomasyon" / "llm" / "butce.json").read_text())
-    kom = ["claude", "-p", istem, "--permission-mode", "bypassPermissions", "--model", b["claude"].get("model", "claude-opus-5-5"),
+    kom = ["claude", "-p", istem, "--permission-mode", "bypassPermissions", "--model", _ajan_model(),  # 2026-11-13: OpenDesign
            "--add-dir", str(cwd)]
     try:
         r = subprocess.run(kom, cwd=cwd, capture_output=True, text=True, timeout=sure,

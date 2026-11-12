@@ -1,19 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 715,
-  "baslik": "Sözlük ve Öğren destelerinde kaybolan kayıtlar geri geldi",
+  "onem": 716,
+  "baslik": "Yapay zekâ altyapısı yeni sağlayıcıya taşındı; tasarım stüdyosu eklendi",
   "maddeler": [
-    "Sözlükte görünmeyen 750 terim (bilinç, koma, somnolans, stupor, ARAS…) yeniden listeleniyor; sözlük yine 4368 kayıt (H559)",
-    "Öğren bölümünde görünmeyen 11 deste (Nörolojik Hastaya Yaklaşım, Bilinç Bozukluğu, Serebrovasküler Hastalıklar ve İnme…) yeniden açıldı; deste sayısı 186 (H559)",
-    "Sözlükte 53 terimin kısaltılmış eski açıklaması ve destelerde 74 eski komite adı temizlendi; artık güncel metin ve tek tip komite adları görünüyor",
-    "Kök neden: içerik katmanında kalan eski bir tam kopya, dönüştürülürken bu kayıtları “yönetici sildi” diye işaretlemişti; artık toplu silme şüphesinde kayıtlar gizlenmiyor, karantinaya alınıp günlüğe yazılıyor",
-    "PDF indirme düzeltmesi (H556) önceki sürümden geliyor: parolasız indirme ve canlıda PDF basma çalışıyor"
+    "İçerik ve soru üretiminin yapay zekâ altyapısı yeni sağlayıcıya taşındı (DeepSeek, GLM, GPT aileleri); yazar ve denetçi her zaman farklı model ailesinden çalışıyor",
+    "Site içi yapay zekâ istekleri artık beş kademeli yedek zincirle yanıtlanıyor: yerel servis → yeni sağlayıcı → Groq → Muse Spark → Gemini",
+    "Yeni tasarım stüdyosu: rapor, pano ve veri özetleri tek sayfalık, çevrimdışı açılan sayfalar olarak üretilebiliyor (açık/koyu tema, yazdırma)",
+    "Kodlama ve tasarım denetimi için resmî eklentiler kuruldu: tip denetimi, kod inceleme, sadeleştirme ve tasarım kalitesi denetleyicileri",
+    "Önceki sürümdeki sözlük ve Öğren düzeltmeleri (H559) ve parolasız PDF indirme (H556) bu sürümde de geçerli"
   ],
   "eklenen": [
-    "Üç dersin sesli anlatımı, PDF üstü çizim ve işaretler, ara resimler",
-    "Her ders için örnek sorular, En önemliler listesi ve sesli soru çözücü",
-    "Hocanın sorabileceği ara sorular (sesli) ve ayrıntılı çıkmış analizi",
-    "Patoloji derslerinde Hoca soruları ve Sesli hoca çözücü"
+    "Yeni sağlayıcı model köprüsü ve tek kaynaklı model seçimi (yazar/denetçi/hızlı rolleri)",
+    "Site yapay zekâsında OpenDesign sağlayıcısı (yedek zincirin ikinci kademesi)",
+    "Kodlama ve tasarım eklentileri: typescript-lsp, pyright-lsp, frontend-design, code-review, code-simplifier, feature-dev, claude-security, security-guidance, pr-review-toolkit, plugin-dev",
+    "Yerel artifact stüdyosu: JSON reçeteden tek dosyalık HTML sayfa, önizleme bölmesinde açılır"
   ],
   "degisen": [],
   "duzeltilen": [],

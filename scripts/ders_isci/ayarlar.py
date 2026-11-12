@@ -9,6 +9,10 @@ import threading
 import time
 from pathlib import Path
 
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "otomasyon"))
+from llm.model_sec import ajan_model as _ajan_model  # noqa: E402  2026-11-13: model kimliği tek kaynaktan (OpenDesign)
+
 APP = Path(os.environ.get("MEDS_APP_DIR") or Path(__file__).resolve().parents[2])          # meds/
 ROOT = APP.parent                                                                          # medsor/
 DOWNLOADS = Path(os.environ.get("MEDS_DOWNLOADS_DIR") or ROOT / "meds_downloads")
@@ -30,7 +34,7 @@ DERS_ARASI_SN = int(os.environ.get("MEDS_ISCI_DERS_ARASI", "10800"))  # iki ders
 SAATLER = os.environ.get("MEDS_ISCI_SAATLER", "00-24")           # Claude işi yalnız bu saatlerde (TR saati); 00-24 = tüm gün
 ARALIK_SN = int(os.environ.get("MEDS_ISCI_ARALIK", "7200"))      # Drive tarama aralığı (2 saat → günde 12 kontrol)
 CLAUDE_BIN = os.environ.get("MEDS_ISCI_CLAUDE", "claude")
-CLAUDE_MODEL = os.environ.get("MEDS_ISCI_MODEL", "claude-opus-5-5")  # kullanıcı kararı (2026-10-12): Opus 5.5
+CLAUDE_MODEL = os.environ.get("MEDS_ISCI_MODEL") or _ajan_model()  # 2026-11-13: OpenDesign (claude-opus-5-5 → deepseek-v4-pro)
 CLAUDE_EFFORT = os.environ.get("MEDS_ISCI_EFFORT", "low")            # düşük efor; boş: CLI varsayılanı
 API = os.environ.get("MEDS_ISCI_API", "http://meds-server:3000")  # bildirim + benzer soru için site API'si
 EMBED = os.environ.get("MEDS_EMBED_URL", "http://meds-embed:8094/embed")
@@ -105,7 +109,11 @@ AYAR_TANIM: dict[str, tuple] = {  # anahtar → (tür, varsayılan, alt, üst)
     "paralel": (int, 4, 1, 8),                           # eşzamanlı Claude oturumu
     "otomatik_onay": (bool, True, None, None),           # Kurul 2+: kapılar 0 HATA + yüksek eşleşme → yönetici onayı beklenmez (2026-10-20)
 }
-MODELLER = ["claude-opus-5-5", "claude-sonnet-5-5", "claude-fable-5-1", "claude-haiku-4-5-20251001"]
+# 2026-11-13: ilk ikisi köprüde geçit modeline eşlenir (claude-opus-5-5 → deepseek-v4-pro,
+# claude-sonnet-5-5 → deepseek-v4.1-flash); geçit kimlikleri doğrudan da seçilebilir.
+MODELLER = ["claude-opus-5-5", "claude-sonnet-5-5",
+            "deepseek-v4-pro", "deepseek-v4.1-flash", "deepseek-v4.1-flash-eco",
+            "glm-5.3-flash", "gpt-6-luna", "kimi-k2.7-code", "claude-haiku-5.5"]
 EFORLAR = ["", "low", "medium", "high"]
 
 

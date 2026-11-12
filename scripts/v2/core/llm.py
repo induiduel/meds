@@ -29,6 +29,8 @@ DEFAULT_CHAIN = [
     "groq:qwen/qwen3.8-27b",
     "gemini:gemini-flash-latest",
     "gemini:gemini-3.5-flash",
+    # 2026-11-13: ücretsiz anahtarlar tükendiğinde OpenDesign geçidi (DeepSeek; Claude aboneliği yerine)
+    "opendesign:deepseek-v4.1-flash",
 ]
 ZEN_FREE = "zen:muse-spark-1.3-contributor-free"
 VISION_CHAIN = ["gemini:gemini-3.5-flash", "gemini:gemini-flash-latest"]
@@ -58,7 +60,46 @@ def keys() -> dict[str, list[str]]:
         "openrouter": [k for k in (env.get("MUSE_SPARK_API_KEY"), env.get("OPENROUTER_API_KEY")) if k],
         "cmd": [env["CMD_API_KEY"]] if env.get("CMD_API_KEY") else [],
         "cmdmsg": [env["CMD_API_KEY"]] if env.get("CMD_API_KEY") else [],
+        "opendesign": _od_anahtarlar(),
     }
+
+
+# ── OpenDesign geçidi (2026-11-13): tek istemci otomasyon/llm/opendesign.py ─────────────────────
+def _od():
+    if getattr(_od, "_m", None) is None:
+        import sys as _sys
+        _kok = next(q for q in _llm_pl.Path(__file__).resolve().parents if (q / "otomasyon").is_dir())
+        _sys.path.insert(0, str(_kok / "otomasyon"))
+        from llm import opendesign as _m
+        _od._m = _m
+    return _od._m
+
+
+def _od_anahtarlar() -> list[str]:
+    """Anahtar `MEDS_OPENDESIGN_KEY` > `OPEN_DESIGN_API_KEY` > `ANTHROPIC_AUTH_TOKEN` > meds/.env > ~/.claude/settings.json."""
+    try:
+        k = _od().anahtar()
+    except Exception:  # noqa: BLE001
+        k = ""
+    return [k] if k else []
+
+
+def _opendesign(key: str, model: str, system, prompt, as_json, max_tokens: int, temperature: float,
+                timeout: int) -> str:
+    """Geçit çağrısı. Hatalar zincirin beklediği HTTPError/URLError biçimine çevrilir (429/400/401… aynı kurallar)."""
+    import io
+    od = _od()
+    try:
+        metin = od.sohbet(prompt, sistem=system, model=model, as_json=as_json, max_tokens=max_tokens,
+                          sicaklik=temperature, zaman_asimi=timeout, deneme=1)
+    except od.GecitHatasi as e:
+        url = od.ayar()["url"] + "/v1/messages"
+        if e.kod:
+            raise urllib.error.HTTPError(url, e.kod, str(e), None, io.BytesIO(str(e).encode())) from e
+        raise urllib.error.URLError(str(e)) from e
+    if not metin:
+        raise ValueError(f"{model}: boş yanıt")
+    return metin
 
 
 def chain() -> list[str]:
@@ -193,6 +234,8 @@ def _call(spec: str, key: str, system, prompt, as_json, max_tokens, temperature,
     if provider == "cmdmsg":
         base = (os.environ.get("CMD_API_BASE_URL") or "https://api.commandcode.ai/provider/v1").rstrip("/")
         return _anthropic(base, key, model, system, prompt, as_json, max_tokens, temperature, timeout)
+    if provider == "opendesign":
+        return _opendesign(key, model, system, prompt, as_json, max_tokens, temperature, timeout)
     raise ValueError(f"bilinmeyen sağlayıcı: {provider}")
 
 
