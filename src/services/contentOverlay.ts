@@ -159,6 +159,18 @@ function eskiIds(rel: string): string[] | null {
 }
 
 /**
+ * Toplu silme şüphesinde (H559) kayıt kimliklerini saklar: hiçbir kayıt sessizce gizlenmesin, yönetici
+ * data/content/_karantina_silinen.json içinden gerçek silmeyi seçebilsin.
+ */
+function karantinaYaz(rel: string, idler: string[]) {
+  const p = path.join(DIR, '_karantina_silinen.json');
+  let liste: any[] = [];
+  try { const d = okuJson(p); if (Array.isArray(d)) liste = d; } catch { /* dosya yok */ }
+  liste.unshift({ zaman: new Date().toISOString(), dosya: rel, adet: idler.length, idler: idler.slice(0, 500) });
+  try { atomikYaz(p, JSON.stringify(liste.slice(0, 20), null, 1)); } catch (e: any) { console.warn('[katman] karantina yazılamadı:', e?.message); }
+}
+
+/**
  * data/content/<rel> tam kopyasını farka çevirir ve siler.
  * Taban = kaynak + önceki fark (yazıcının okuduğu birleşik hâl). Tam kopya kaynaktan ESKİYSE (eski biçim katman
  * ya da kaynak sonradan güncellenmiş) kaynakta sonradan eklenen kayıtlar "silindi" sayılmaz; _ids.json'da iz
@@ -202,8 +214,21 @@ export function donustur(rel: string): boolean {
       if (!(id in f.taban)) f.taban[id] = kx === undefined ? null : sha(kx);
     }
     if (!bayat) {
+      // Toplu silme freni (H559): kaynakta olup tam kopyada olmayan kayıt sayısı eşiği aşarsa kopya bayat/eksiktir
+      // (eski bir birleşimden üretilmiş, elle kopyalanmış ya da yarıda kalmış yazım). O zaman yönetici silmesi
+      // sayılmaz: kayıtlar gizlenmez, kimlikler karantinaya yazılır ve uyarı günlüğe düşer.
+      const eskiSil = new Set(f.silinen);
+      const yeni: string[] = [];
+      for (const id of tM.keys()) if (!yM.has(id) && kM.has(id) && !eskiSil.has(id)) yeni.push(id);
+      const esik = Math.max(5, Math.ceil(kM.size * 0.05));
+      const toplu = yeni.length > esik;
+      if (toplu) {
+        karantinaYaz(rel, yeni);
+        console.warn(`[katman] ${rel}: tam kopya kaynakta ${yeni.length} kaydı içermiyor (eşik ${esik}) — toplu silme sayılmadı, karantinaya alındı`);
+      }
       for (const id of tM.keys()) {
         if (yM.has(id)) continue;
+        if (toplu) continue; // bayat kopya: ne silme yaz ne de bekleyen değişikliği düşür
         delete f.kayitlar[id];
         if (kM.has(id)) { sil.add(id); if (!(id in f.taban)) f.taban[id] = sha(kM.get(id)); } else delete f.taban[id];
       }
