@@ -36,6 +36,14 @@
   "definition": "ATP bağlayıcı kaset alt ailesi B üyesi 7 geni",
   "term": "ABCB7"
  },
+ "ABCD1": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Peroksizomal taşıyıcıyı kodlayan gen",
+  "term": "ABCD1"
+ },
  "ABD": {
   "category": "kisaltma",
   "decks": [
@@ -92,6 +100,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-24-epilepsi",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-24-epilepsi"
   ],
   "definition": "Antiepileptik ilaç",
@@ -136,6 +145,8 @@
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "k2-22-psikosomatik-bozukluklar",
    "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-14-beyin-tumorleri",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -226,6 +237,7 @@
  "APP": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -402,6 +414,14 @@
   "definition": "Arteriyovenöz malformasyon",
   "term": "AVM"
  },
+ "ApoE4": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-30-norodejeneratif-hastaliklar"
+  ],
+  "definition": "Apolipoprotein E ε4 aleli",
+  "term": "ApoE4"
+ },
  "B1": {
   "category": "kisaltma",
   "decks": [
@@ -418,6 +438,8 @@
   "decks": [
    "k2-15-sizofrenik-bozukluklar",
    "k2-17-periferik-noropati",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-15-sizofrenik-bozukluklar",
    "y25-k2-17-periferik-noropati",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -466,6 +488,14 @@
   ],
   "definition": "Bipolar bozukluk",
   "term": "BD"
+ },
+ "BDH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Beyin damar hastalığı",
+  "term": "BDH"
  },
  "BDNF": {
   "baska": [
@@ -618,6 +648,9 @@
    "k2-04-serebrovaskuler-hastaliklar-ve-inme",
    "k2-12-kafa-ve-omurilik-yaralanmalari",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-30-norodejeneratif-hastaliklar",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon",
@@ -654,6 +687,7 @@
    "k2-12-kafa-ve-omurilik-yaralanmalari",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "k2-24-epilepsi",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-14-beyin-tumorleri",
@@ -708,6 +742,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-06-agri-yollari-ve-mekanizmalari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-13-spinal-travmalar",
    "y25-k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-46-sempatomimetikler"
@@ -718,6 +753,7 @@
  "C4": {
   "category": "kisaltma",
   "decks": [
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-13-spinal-travmalar",
    "y25-k2-31-medulla-spinalis-hastaliklari"
   ],
@@ -735,7 +771,8 @@
  "CAA": {
   "category": "kisaltma",
   "decks": [
-   "k2-04-serebrovaskuler-hastaliklar-ve-inme"
+   "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "k2-30-norodejeneratif-hastaliklar"
   ],
   "definition": "Serebral amiloid anjiyopati",
   "term": "CAA"
@@ -771,6 +808,14 @@
   ],
   "definition": "Kanabinoid 1 reseptörü",
   "term": "CB1"
+ },
+ "CD8": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+  ],
+  "definition": "Sitotoksik T hücre yüzey belirteci",
+  "term": "CD8"
  },
  "CDH23": {
   "category": "kisaltma",
@@ -859,6 +904,7 @@
  "CJD": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
   "definition": "Creutzfeldt-Jakob hastalığı",
@@ -893,6 +939,8 @@
   "decks": [
    "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
    "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-03-sss-hasar-bicimleri-odem-hidrosefali-herniasyon",
    "y25-k2-04-serebrovaskuler-hastaliklar",
    "y25-k2-31-medulla-spinalis-hastaliklari"
@@ -907,6 +955,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-05-norolojik-muayene",
+   "k2-62-kraniyal-sinir-muayenesi",
    "y25-k2-05-norolojik-muayene"
   ],
   "definition": "Kranyal sinir",
@@ -1025,6 +1074,14 @@
   "definition": "Katekol-O-metiltransferaz",
   "term": "COMT"
  },
+ "COOH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-30-norodejeneratif-hastaliklar"
+  ],
+  "definition": "Karboksil grubu",
+  "term": "COOH"
+ },
  "COX": {
   "baska": [
    "Siklooksijenaz. Prostaglandin yapımını sağlayan enzimdir; non-opioid analjezikler bu enzimi engelleyerek etki eder."
@@ -1047,6 +1104,22 @@
   ],
   "definition": "Sürekli pasif hareket",
   "term": "CPM"
+ },
+ "CPP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Serebral perfüzyon basıncı",
+  "term": "CPP"
+ },
+ "CRP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "C-reaktif protein",
+  "term": "CRP"
  },
  "CSD": {
   "category": "kisaltma",
@@ -1276,6 +1349,14 @@
   "definition": "Otozomal resesif sağırlık lokusu",
   "term": "DFNB"
  },
+ "DH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Deksra hemisfer",
+  "term": "DH"
+ },
  "DIC": {
   "baska": [
    "Dissemine intravasküler koagülasyon; damar içinde yaygın pıhtılaşma ve pıhtı faktörlerinin tükenmesidir. Varlığında akut kanama BT'de hiperdens olmayabilir."
@@ -1320,6 +1401,7 @@
    "k2-26-norolojik-hastaliklar",
    "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
    "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
@@ -1327,6 +1409,14 @@
   ],
   "definition": "Diabetes mellitus",
   "term": "DM"
+ },
+ "DMAH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Düşük molekül ağırlıklı heparin",
+  "term": "DMAH"
  },
  "DMD": {
   "baska": [
@@ -1373,9 +1463,13 @@
   "term": "DNIC"
  },
  "DOPA": {
+  "baska": [
+   "Dihidroksifenilalanin"
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-09-sss-ilaclari"
+   "k2-09-sss-ilaclari",
+   "k2-30-norodejeneratif-hastaliklar"
   ],
   "definition": "Dihidroksifenilalanin (L-DOPA: dopaminin öncüsü)",
   "term": "DOPA"
@@ -1451,6 +1545,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-17-periferik-noropati",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-17-periferik-noropati",
    "y25-k2-22-psikosomatik-bozukluklar",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -1516,7 +1611,8 @@
  "EAH": {
   "category": "kisaltma",
   "decks": [
-   "k2-24-epilepsi"
+   "k2-24-epilepsi",
+   "k2-62-kraniyal-sinir-muayenesi"
   ],
   "definition": "Eğitim ve Araştırma Hastanesi",
   "term": "EAH"
@@ -1524,6 +1620,8 @@
  "EBV": {
   "category": "kisaltma",
   "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-31-medulla-spinalis-hastaliklari"
   ],
   "definition": "Epstein-Barr virüsü",
@@ -1581,6 +1679,7 @@
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "k2-22-psikosomatik-bozukluklar",
    "k2-24-epilepsi",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-20-psikiyatrik-tedaviler",
@@ -1675,6 +1774,14 @@
   ],
   "definition": "Eksitatör postsinaptik potansiyel",
   "term": "EPSP"
+ },
+ "ES": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Ense sertliği",
+  "term": "ES"
  },
  "EYA1": {
   "category": "kisaltma",
@@ -1823,6 +1930,7 @@
  "FTLD": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar"
   ],
   "definition": "Frontotemporal lobar dejenerasyon",
@@ -1831,6 +1939,7 @@
  "FUS": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -1875,6 +1984,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-26-norolojik-hastaliklar",
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi"
   ],
   "definition": "Guanin-adenin-adenin üçlü tekrarı",
@@ -1889,6 +1999,7 @@
    "k2-09-sss-ilaclari",
    "k2-15-sizofrenik-bozukluklar",
    "k2-21-sedatif-ve-hipnotik-ilaclar",
+   "k2-30-norodejeneratif-hastaliklar",
    "k2-58-alkoller",
    "y25-k2-06-agri-yollari-ve-mekanizmalari",
    "y25-k2-07-genel-anestezik-ilaclar",
@@ -1975,6 +2086,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-14-beyin-tumorleri"
   ],
   "definition": "Glioblastoma multiforme",
@@ -2121,10 +2233,19 @@
   "definition": "Günlük yaşam aktiviteleri",
   "term": "GYA"
  },
+ "GİA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Geçici iskemik atak",
+  "term": "GİA"
+ },
  "GİS": {
   "category": "kisaltma",
   "decks": [
-   "k2-26-norolojik-hastaliklar"
+   "k2-26-norolojik-hastaliklar",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
   ],
   "definition": "Gastrointestinal sistem",
   "term": "GİS"
@@ -2159,7 +2280,8 @@
  "HD": {
   "category": "kisaltma",
   "decks": [
-   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi"
+   "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "k2-30-norodejeneratif-hastaliklar"
   ],
   "definition": "Homeodomain",
   "term": "HD"
@@ -2193,6 +2315,8 @@
    "k2-17-periferik-noropati",
    "k2-22-psikosomatik-bozukluklar",
    "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-17-periferik-noropati",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -2302,10 +2426,13 @@
   "term": "HSD17B4"
  },
  "HSV": {
+  "baska": [
+   "Herpes simpleks virüs"
+  ],
   "category": "kisaltma",
   "decks": [
-   "k2-31-medulla-spinalis-hastaliklari",
-   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari"
   ],
   "definition": "Herpes simpleks virüsü",
   "term": "HSV"
@@ -2331,6 +2458,7 @@
  "HTLV": {
   "category": "kisaltma",
   "decks": [
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-31-medulla-spinalis-hastaliklari"
   ],
   "definition": "İnsan T-hücresi lenfotropik virüsü",
@@ -2489,6 +2617,14 @@
   "definition": "İş-meşguliyet tedavisi",
   "term": "IMT"
  },
+ "INO": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-62-kraniyal-sinir-muayenesi"
+  ],
+  "definition": "İnternükleer oftalmopleji",
+  "term": "INO"
+ },
  "IP3": {
   "category": "kisaltma",
   "decks": [
@@ -2529,7 +2665,8 @@
  "JC": {
   "category": "kisaltma",
   "decks": [
-   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon"
+   "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari"
   ],
   "definition": "JC virüsü (John Cunningham virüsü)",
   "term": "JC"
@@ -2577,6 +2714,14 @@
   ],
   "definition": "Kan-beyin bariyeri",
   "term": "KBB"
+ },
+ "KBÜ": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-62-kraniyal-sinir-muayenesi"
+  ],
+  "definition": "Karabük Üniversitesi",
+  "term": "KBÜ"
  },
  "KCNE1": {
   "category": "kisaltma",
@@ -2792,6 +2937,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-05-norolojik-muayene",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-05-norolojik-muayene"
   ],
   "definition": "Kafa içi basınç artışı sendromu",
@@ -2806,6 +2952,14 @@
   "definition": "Birinci lomber vertebra",
   "term": "L1"
  },
+ "LACS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Laküner sendrom",
+  "term": "LACS"
+ },
  "LARS2": {
   "category": "kisaltma",
   "decks": [
@@ -2817,6 +2971,7 @@
  "LBD": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar"
   ],
   "definition": "Lewy cisimciği demansı",
@@ -2887,6 +3042,7 @@
  "LRRK2": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
   "definition": "Lösin bakımından zengin tekrar kinaz 2 geni",
@@ -2992,6 +3148,14 @@
   ],
   "definition": "Miyelin temel proteini",
   "term": "MBP"
+ },
+ "MCA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Orta serebral arter",
+  "term": "MCA"
  },
  "MD": {
   "category": "kisaltma",
@@ -3107,6 +3271,8 @@
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "k2-22-psikosomatik-bozukluklar",
    "k2-26-norolojik-hastaliklar",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-10-bas-agrisina-yaklasim",
@@ -3143,6 +3309,8 @@
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "k2-24-epilepsi",
    "k2-28-sik-gorulen-norolojik-hastaliklar-ve-rehabilitasyo",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-20-psikiyatrik-tedaviler",
    "y25-k2-24-epilepsi"
@@ -3155,6 +3323,7 @@
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-12-kafa-travmalari",
@@ -3164,12 +3333,22 @@
   "definition": "Manyetik rezonans görüntüleme",
   "term": "MRI"
  },
+ "MRV": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Manyetik rezonans venografi",
+  "term": "MRV"
+ },
  "MS": {
   "category": "kisaltma",
   "decks": [
    "k2-01-norolojik-hastaya-yaklasim",
    "k2-22-psikosomatik-bozukluklar",
    "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -3204,6 +3383,7 @@
    "k2-09-sss-ilaclari",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "k2-21-sedatif-ve-hipnotik-ilaclar",
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
    "k2-58-alkoller",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-09-sss-ilaclari",
@@ -3255,6 +3435,14 @@
   ],
   "definition": "Monozigot ikiz",
   "term": "MZ"
+ },
+ "MİB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Meningeal irritasyon bulguları",
+  "term": "MİB"
  },
  "NAD": {
   "category": "kisaltma",
@@ -3379,6 +3567,14 @@
   "definition": "National Health Service (Birleşik Krallık Ulusal Sağlık Hizmeti)",
   "term": "NHS"
  },
+ "NIHSS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Ulusal Sağlık Enstitüleri İnme Ölçeği",
+  "term": "NIHSS"
+ },
  "NKB": {
   "category": "kisaltma",
   "decks": [
@@ -3409,9 +3605,10 @@
  "NMO": {
   "category": "kisaltma",
   "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-31-medulla-spinalis-hastaliklari",
-   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar",
-   "k2-31-medulla-spinalis-hastaliklari"
+   "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar"
   ],
   "definition": "Nöromiyelitis optika",
   "term": "NMO"
@@ -3769,6 +3966,7 @@
  "PML": {
   "category": "kisaltma",
   "decks": [
+   "k2-29-santral-sinir-sistemi-enfeksiyonlari",
    "y25-k2-66-primer-myelin-ve-metabolik-toksik-hastaliklar"
   ],
   "definition": "Progresif multifokal lökoensefalopati",
@@ -3848,6 +4046,7 @@
  "PRNP": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
   "definition": "Prion protein geni",
@@ -3934,6 +4133,14 @@
   "definition": "QT aralığı",
   "term": "QT"
  },
+ "RCC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Renal hücreli karsinom",
+  "term": "RCC"
+ },
  "REM": {
   "category": "kisaltma",
   "decks": [
@@ -3953,6 +4160,7 @@
  "RNA": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar",
    "y25-k2-39-kolinoseptor-bloke-edici-ilaclar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
@@ -4057,6 +4265,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-26-norolojik-hastaliklar",
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -4251,6 +4460,14 @@
   "definition": "SIX homeobox 5 geni",
   "term": "SIX5"
  },
+ "SKB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Sistolik kan basıncı",
+  "term": "SKB"
+ },
  "SLC26A4": {
   "category": "kisaltma",
   "decks": [
@@ -4297,6 +4514,7 @@
  "SMN": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
   "definition": "Hayatta kalma motor nöron proteini",
@@ -4309,6 +4527,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-27-aile-hekimliginde-periyodik-muayeneler-1",
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -4377,6 +4596,7 @@
  "SOD1": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi"
   ],
@@ -4453,6 +4673,8 @@
    "k2-12-kafa-ve-omurilik-yaralanmalari",
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
    "k2-26-norolojik-hastaliklar",
+   "k2-31-medulla-spinalis-hastaliklari",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-04-serebrovaskuler-hastaliklar",
    "y25-k2-07-genel-anestezik-ilaclar",
@@ -4528,6 +4750,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-12-kafa-ve-omurilik-yaralanmalari",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-12-kafa-travmalari"
   ],
   "definition": "Duyarlılık ağırlıklı görüntüleme",
@@ -4552,6 +4775,7 @@
  "T12": {
   "category": "kisaltma",
   "decks": [
+   "k2-31-medulla-spinalis-hastaliklari",
    "y25-k2-13-spinal-travmalar",
    "y25-k2-31-medulla-spinalis-hastaliklari"
   ],
@@ -4668,8 +4892,12 @@
   "term": "TDCS"
  },
  "TDP": {
+  "baska": [
+   "TAR DNA bağlayıcı protein"
+  ],
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar"
   ],
   "definition": "TDP-43 proteini",
@@ -4678,10 +4906,19 @@
  "TDP43": {
   "category": "kisaltma",
   "decks": [
+   "k2-30-norodejeneratif-hastaliklar",
    "y25-k2-30-norodejeneratif-hastaliklar"
   ],
   "definition": "TDP-43 proteini",
   "term": "TDP43"
+ },
+ "TDP43e": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-30-norodejeneratif-hastaliklar"
+  ],
+  "definition": "TAR DNA bağlayıcı protein 43",
+  "term": "TDP43e"
  },
  "TENS": {
   "category": "kisaltma",
@@ -4762,6 +4999,14 @@
   "definition": "Transkraniyal manyetik uyarım",
   "term": "TMS"
  },
+ "TND": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Türk Nöroloji Derneği",
+  "term": "TND"
+ },
  "TNF": {
   "category": "kisaltma",
   "decks": [
@@ -4791,6 +5036,14 @@
   ],
   "definition": "Toksoplazmozis, Rubella, Cytomegalovirüs, Herpes simpleks virüs",
   "term": "TORCH"
+ },
+ "TPA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Doku plazminojen aktivatörü",
+  "term": "TPA"
  },
  "TPH": {
   "category": "kisaltma",
@@ -4951,6 +5204,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-14-intrakraniyal-kitlelerde-belirti-ve-bulgular",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-14-beyin-tumorleri"
   ],
   "definition": "Geçici iskemik atak",
@@ -5187,6 +5441,14 @@
   "definition": "Klinefelter sendromu",
   "term": "XXY"
  },
+ "YBÜ": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "Yoğun bakım ünitesi",
+  "term": "YBÜ"
+ },
  "YD": {
   "baska": [
    "Yenidoğan. Doğumdan sonraki ilk 28 günlük bebektir; genişletilmiş YD tarama programı yenidoğan taramasını kapsar."
@@ -5284,10 +5546,19 @@
   "decks": [
    "k2-07-genel-anestezik-ilaclar",
    "k2-07-genel-anestezik-ilaclarin-farmakolojisi",
+   "k2-65-serebrovaskuler-hastaliklar",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-41-otonom-sinir-sistemi-farmakolojisi"
   ],
   "definition": "İntravenöz",
   "term": "İV"
+ },
+ "İYE": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-65-serebrovaskuler-hastaliklar"
+  ],
+  "definition": "İdrar yolu enfeksiyonu",
+  "term": "İYE"
  }
 }

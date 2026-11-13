@@ -81,7 +81,9 @@ def dosya(klasor: Path, key: str, uzanti: str) -> Path | None:
 
 def kayit_bul(key: str) -> tuple[dict, dict]:
     kurul = int(key[1])
+    # ders anahtarı (key) "k2-62-kraniyal-sinir-muayenesi" biçimindedir; kayıt defterindeki id yalnız "k2-62" (H570).
     dersler = json.loads((MEDS / f"src/data/dersler/k{kurul}.json").read_text(encoding="utf-8"))["dersler"]
+    key = "-".join(key.split("-")[:2]) if key[:1] == "k" and key[2] == "-" else key
     d = next((x for x in dersler if x["id"] == key), None)
     if not d:
         raise SystemExit(f"{key}: ders kayıt defterinde yok")

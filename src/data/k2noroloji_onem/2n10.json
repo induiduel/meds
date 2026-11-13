@@ -1,0 +1,909 @@
+{
+ "kod": "2n10",
+ "no": 62,
+ "baslik": "Kraniyal Sinir Muayenesi",
+ "pdf": "Kraniyal Sinir Muayenesi.pdf",
+ "ozet": "On iki kraniyal sinirin işlevi, muayene basamağı ve lezyon bulgusu sinir sinir anlatılır. Koku ve görme yolları, görme alanı defektleri, göz hareketinin kas-sinir haritası, pupilla reflekslerinin yolu, üçüncü, dördüncü ve altıncı sinir felçleri, yatay bakış merkezi ve internükleer oftalmopleji, trigeminal duyu ve kornea refleksi, fasyal paralizinin periferik-santral ayrımı, işitme testleri, alt kraniyal sinirler ve dilin sapması bu dersin başlıklarıdır.",
+ "neden_onemli": "Nörolojide bulgunun sinire ve düzeye çevrilmesi bu dersle kurulur. Çıkmış sorularda kavernöz bölge lezyonu, dışa bakış kısıtlılığı, supranükleer yüz felci ve atrofisiz dil sapması sorulmuştur; geçmiş yıl öğrencileri Bielschowsky testini, kornea refleksinin iki dalını ve dil sapmasını ayrıca işaretlemiştir.",
+ "maddeler": [
+  {
+   "id": "2n10-01",
+   "puan": 97,
+   "tur": "karakteristik",
+   "baslik": "Tam üçüncü sinir felcinin dört bulgusu",
+   "bilgi": "Tam üçüncü sinir felcinde göz aşağı ve dışa kayar, kapak düşer, pupilla genişler ve uyum refleksi kaybolur.",
+   "alt": [
+    "Göz aşağı dışa kayar çünkü üst oblik ile lateral rektus sağlam kalır",
+    "Kapak düşüklüğü kapağı kaldıran kasın felcinden olur",
+    "Pupilla geniş kalır çünkü parasempatik lifler aynı sinirden gider"
+   ],
+   "alinti": [
+    {
+     "sayfa": 15,
+     "metin": "SIGNS AND SYMPTOMS: EYE IS DOWN AND OUT, EYELID DROOPS, PUPIL IS DILATED, ACCOMMODATION REFLEX IS ABSENT"
+    }
+   ],
+   "neden": "Dört bulgunun bir arada olması tam felcin en belirgin özelliğidir; sınavda tek tek bulgu ya da birlikte verilip sinir sorulur.",
+   "detay": "- **Gözün yönü:** Üçüncü sinir üst, alt ve medial rektusu, alt obliği ve kapağı kaldıran kası besler. Bu kaslar çalışmayınca yalnız üst oblik ile lateral rektus çeker; göz aşağı ve dışa kayar.\n- **Kapak:** Levator palpebra superioris felç olunca pitozis gelişir; hasta kapağı kaldıramaz.\n- **Pupilla:** İris sfinkterini çalıştıran parasempatik lifler üçüncü sinirle gider; lifler kesilince pupilla geniş kalır ve ışığa daralmaz.\n- **Uyum:** Silier kas felç olunca mercek kalınlaşamaz, yakın görme bulanıklaşır ve akomodasyon refleksi kaybolur.\n- **Ayırıcı ipucu:** Yalnız kapak düşüklüğü varsa sinirin tamamı değil, kapağı kaldıran dal etkilenmiştir; pupilla korunmuşsa parasempatik lifler sağlamdır.\n- **Klinik bağlantı:** Kavernöz sinüs ya da arka kommünikan arter anevrizması gibi bölge lezyonlarında üçüncü sinir, komşu sinirlerle birlikte tutulabilir; bu yüzden muayenede dördüncü ve altıncı sinir de sınanır.",
+   "cikmis": [
+    "d3-k2-nor-005",
+    "d3k2-2025-2026-h31"
+   ],
+   "ornek26": [
+    {
+     "kok": "Göz kapağı düşük, gözü aşağı ve dışa kaymış, pupillası geniş ve ışığa daralmayan hastada hangi sinir felci düşünülür?",
+     "secenekler": {
+      "A": "Üçüncü kraniyal sinir",
+      "B": "Dördüncü kraniyal sinir",
+      "C": "Altıncı kraniyal sinir",
+      "D": "Yedinci kraniyal sinir",
+      "E": "İkinci kraniyal sinir"
+     },
+     "dogru": "A",
+     "aciklama": "Üçüncü sinir üst, alt ve medial rektusu, alt obliği ve kapağı kaldıran kası besler; felçte göz aşağı dışa kayar, kapak düşer ve pupilla geniş kalır.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n10-02",
+   "puan": 96,
+   "tur": "eslesme",
+   "baslik": "Periferik ve santral fasyal paralizi ayrımı",
+   "bilgi": "Santral fasyal paralizide alın kasları korunur, periferik tipte alın da dahil yarım yüzün tamamı felç olur.",
+   "alt": [
+    "Santral tipte yalnız yüzün alt yarısı tutulur ve hemiparezi eşlik eder",
+    "Periferik tipte göz kapanmaz, kaş kalkmaz, ağız sağlam tarafa kayar",
+    "Ayrımın anahtarı alın kaslarının iki taraflı innervasyonudur"
+   ],
+   "alinti": [
+    {
+     "sayfa": 25,
+     "metin": "Periferik ve santral tipte fasyal paralizi"
+    },
+    {
+     "sayfa": 27,
+     "metin": "SANTRAL VS PERİFERİK"
+    }
+   ],
+   "neden": "İki tip birbirine çok benzer; sınavda genellikle alın kırışıklığı ve göz kapanması üzerinden ayrım sorulur.",
+   "detay": "- **Periferik tip:** Lezyon çekirdekte ya da sinir gövdesindedir; yüzün yarımındaki bütün mimik kasları felç olur. Göz kapanmaz, kaş kaldırılamaz, alın kırışmaz, ağız köşesi sağlam tarafa kayar. Göz kapanmadığı için kornea kurur.\n- **Santral tip:** Lezyon çekirdeğin üstündedir. Alın kasları iki taraftan ayrı ayrı emir aldığı için korunur; yalnız yüzün alt yarısı etkilenir. Hasta gözünü kapatabilir ve alın kırıştırabilir, ama ağız köşesi kayar.\n- **Eşlik eden bulgu:** Santral tip hemen her zaman aynı taraftaki kol ve bacak kuvvetsizliğiyle birliktedir; yalnız yüzde bulgu veren santral tip beklenmez.\n- **Klinik bağlantı:** Periferik tipte dilin ön üçte birinde tat kaybı ve kulak çevresinde ağrı olabilir, çünkü aynı sinir bu lifleri de taşır. Santral tipte bu eşlik eden bulgular görülmez.",
+   "cikmis": [
+    "past-1790877480031-411629"
+   ],
+   "ornek26": [
+    {
+     "kok": "Yüzünün sağ yarısında ağız kayması olan hastada alın kırışıklıkları korunmuş ve gözünü tam kapatabiliyor. Bu tablo hangi tipe uyar?",
+     "secenekler": {
+      "A": "Periferik fasyal paralizi",
+      "B": "Santral fasyal paralizi",
+      "C": "Bilateral fasyal paralizi",
+      "D": "Üçüncü sinir felci",
+      "E": "Hipoglossal felç"
+     },
+     "dogru": "B",
+     "aciklama": "Alın kaslarının iki taraflı innervasyonu çekirdek üstü lezyonda korunur; yalnız alt yüzün tutulması santral tipi gösterir.",
+     "zorluk": "orta"
+    },
+    {
+     "kok": "Periferik fasyal paralizide aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Gözün kapanmaması",
+      "B": "Ağız köşesinin karşı tarafa kayması",
+      "C": "Alın kırışıklığının korunması",
+      "D": "Kaşın kaldırılamaması",
+      "E": "Dilin ön kısmında tat kaybı"
+     },
+     "dogru": "C",
+     "aciklama": "Periferik tipte alın da tutulur; alın kırışıklığının korunması santral tipe ait bir bulgudur.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-03",
+   "puan": 94,
+   "tur": "eslesme",
+   "baslik": "Kornea refleksinin iki dalı",
+   "bilgi": "Kornea refleksinde afferent dal beşinci sinirin göz dalı, efferent dal yedinci sinirdir.",
+   "alt": [
+    "Refleks kaybolduğunda iki sinirden biri bozuktur",
+    "Yanıt göz kırpmadır",
+    "Muayenede üst kapak hafifçe kaldırılır"
+   ],
+   "alinti": [
+    {
+     "sayfa": 23,
+     "metin": "Maseter ve temporalis kası"
+    },
+    {
+     "sayfa": 23,
+     "metin": "(afferent 5 efferent 7)"
+    }
+   ],
+   "neden": "Çıkmış soruda doğrudan \"kornea refleksinden sorumlu sinir çifti\" diye soruldu; iki dalın ayrı sinir olması klasik tuzaktır.",
+   "detay": "- **Afferent dal:** Korneaya dokunulunca uyarı beşinci sinirin göz dalıyla gelir; bu dal yüzün üst bölümünün duyusunu taşır.\n- **Efferent dal:** Yanıtı veren kaslar yedinci sinirle çalışır; göz kırpma kapağı kapatan mimik kaslarının işidir.\n- **Değerlendirme:** Yanıt yoksa önce duyu (afferent) sonra hareket (efferent) sınanır. Yüzün o bölgesinde duyu kaybı varsa sorun beşinci sinirdedir; duyu sağlam ama göz kırpma yoksa yedinci sinirdedir.\n- **Tuzak:** Üçüncü sinir kornea duyusunu taşımaz; kronik kornea hasarında üçüncü sinir değil beşinci ve yedinci sinir düşünülür.\n- **Klinik bağlantı:** Yüzde duyu kaybı ile birlikte tek taraflı göz kırpma kaybı, iki sinirin birlikte tutulduğu beyin sapı ya da kavernöz bölge lezyonlarında görülebilir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Kornea refleksinin afferent ve efferent dallarını taşıyan sinirler hangileridir?",
+     "secenekler": {
+      "A": "Üçüncü ve dördüncü",
+      "B": "İkinci ve üçüncü",
+      "C": "Dokuzuncu ve onuncu",
+      "D": "Beşinci ve yedinci",
+      "E": "Altıncı ve yedinci"
+     },
+     "dogru": "D",
+     "aciklama": "Kornea duyusu beşinci sinirin göz dalıyla gelir; göz kırpma yanıtını yedinci sinir verir.",
+     "zorluk": "zor"
+    },
+    {
+     "kok": "Kornea refleksi alınmayan hastada yüzün o bölgesinde duyu sağlam. Sorun hangi sinirdedir?",
+     "secenekler": {
+      "A": "Beşinci sinir",
+      "B": "Üçüncü sinir",
+      "C": "İkinci sinir",
+      "D": "On ikinci sinir",
+      "E": "Yedinci sinir"
+     },
+     "dogru": "E",
+     "aciklama": "Duyu sağlamsa afferent dal çalışıyor; yanıtın olmaması efferent dalı, yani yedinci siniri gösterir.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-04",
+   "puan": 92,
+   "tur": "mekanizma",
+   "baslik": "Işık refleksi yolu ve iki yanıtı",
+   "bilgi": "Işık göze tutulunca uyarı optik sinirle gelir, pretektal çekirdekten geçer ve üçüncü sinirin parasempatik lifleriyle pupillayı küçültür.",
+   "alt": [
+    "Işık tutulan gözün küçülmesi doğrudan yanıttır",
+    "Karşı gözün küçülmesi konsensüel yanıttır",
+    "Lezyon yerine göre iki yanıt birlikte değerlendirilir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 13,
+     "metin": "PARASYMPATHETIC DIVISION OF OCULOMOTOR NERVE"
+    },
+    {
+     "sayfa": 13,
+     "metin": "SHORT CILIARY NERVE"
+    }
+   ],
+   "neden": "Refleks yolunun basamakları ve iki yanıtın adı, sınavda hem tanım hem lezyon yeri sorusu olarak çıkar.",
+   "detay": "- **Afferent basamak:** Işık retinaya düşünce uyarı optik sinir, kiazma ve optik trakt boyunca gelir; pretektal çekirdeğe ulaşır.\n- **Bağlantı:** Pretektal çekirdek her iki taraftaki Edinger-Westphal çekirdeğine ileti gönderir; bu yüzden tek göze ışık tutulunca iki pupilla da küçülür.\n- **Efferent basamak:** Edinger-Westphal çekirdeğinden çıkan parasempatik lifler üçüncü sinirle silier gangliyona, oradan kısa silier sinirlerle iris sfinkterine gider.\n- **İki yanıt:** Işık tutulan gözün pupillasının küçülmesi doğrudan yanıt, karşı gözünki konsensüel yanıttır. Konsensüel yanıt, iletinin iki tarafa birden ulaştığını kanıtlar.\n- **Lezyon mantığı:** Optik sinir kesilirse o gözün ışığa yanıtı kaybolur. Üçüncü sinir kesilirse pupilla geniş kalır; ışık tutulduğunda küçülmez.\n- **Klinik bağlantı:** Sadece ışık refleksi bozulup yakın refleks korunursa ışık yolundaki bir kesinti düşünülür; muayenede iki refleks ayrı ayrı bakılır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Işık tutulan gözün pupillası küçülürken karşı gözün pupillasının da küçülmesine ne denir?",
+     "secenekler": {
+      "A": "Konsensüel yanıt",
+      "B": "Doğrudan yanıt",
+      "C": "Akomodasyon yanıtı",
+      "D": "Paradoks yanıt",
+      "E": "Bakış yanıtı"
+     },
+     "dogru": "A",
+     "aciklama": "Karşı gözün küçülmesi konsensüel yanıttır ve iletinin iki tarafa birden ulaştığını gösterir.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n10-05",
+   "puan": 91,
+   "tur": "tuzak",
+   "baslik": "Dilin sapması ve atrofi ayrımı",
+   "bilgi": "Hipoglossal felçte dil felçli tarafa sapar; atrofi varsa lezyon sinirin kendisinde, yoksa çekirdek üstündedir.",
+   "alt": [
+    "Tek taraflı lezyonda dilde atrofi görülür",
+    "Atrofisiz sapma üst düzey lezyonu gösterir",
+    "İki taraflı lezyonda dil her yöne zor hareket eder"
+   ],
+   "alinti": [
+    {
+     "sayfa": 33,
+     "metin": "Dil kasları (palatoglossal hariç)"
+    }
+   ],
+   "neden": "Çıkmış soru atrofisiz sapmayı vermiş ve yeri sormuştu; atrofinin varlığı tuzak kurmada belirleyici.",
+   "detay": "- **Sapmanın yönü:** Dili dışarı çıkaran genioglossus kasıdır. Tek taraflı zayıflıkta karşı taraf sağlam kalır ve dil, zayıf tarafa doğru itilir; bu yüzden dil felçli tarafa sapar.\n- **Atrofi:** On ikinci sinirin çekirdeği ya da gövdesi kesilirse kas küçülür; dilde atrofi, oluk ve kenarda girinti görülür.\n- **Üst düzey lezyon:** Çekirdeğin üstündeki yolda kesinti varsa kas trofik destek almaya devam eder; saptan atrofi görülmez. Bu tablo genellikle hemiparezi ile birliktedir.\n- **İki taraflı lezyon:** Atrofi ile birlikte dil her yöne zor hareket eder; yutma ve konuşma belirgin bozulur.\n- **Klinik bağlantı:** Atrofi ve seğirme alt motor nöron lezyonunu gösterir; atrofi yoksa ve dil sapması tek bulguysa kortikobulber yol akla gelir.",
+   "cikmis": [
+    "88612c9f5ce5"
+   ],
+   "ornek26": [
+    {
+     "kok": "Dilini çıkardığında sağ tarafa sapan hastada dilde atrofi yok. Lezyon en olası nerededir?",
+     "secenekler": {
+      "A": "Sağ hipoglossal sinir gövdesi",
+      "B": "Sol hipoglossal sinirin çekirdek üstü yolu",
+      "C": "Sağ hipoglossal çekirdek",
+      "D": "Sağ beyin sapı çekirdeği",
+      "E": "Sol dil kası"
+     },
+     "dogru": "B",
+     "aciklama": "Atrofi yoksa lezyon çekirdek üstündedir; dil zayıf tarafın karşıtına, yani lezyonun karşı tarafına sapar.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-06",
+   "puan": 88,
+   "tur": "karakteristik",
+   "baslik": "Altıncı sinir felci: göz içe kaymış",
+   "bilgi": "Altıncı sinir felçinde lateral rektus çalışmaz, göz dışa çevrilemez ve içe kaymış olarak kalır.",
+   "alt": [
+    "Dışa bakış kısıtlanır",
+    "Hasta başını o tarafa çevirerek açığı kapatır",
+    "Sinir yalnız lateral rektusu innerve eder"
+   ],
+   "alinti": [
+    {
+     "sayfa": 19,
+     "metin": "SIGNS: EYE IS IN"
+    },
+    {
+     "sayfa": 19,
+     "metin": "LATERAL RECTUS MUSCLE"
+    }
+   ],
+   "neden": "Dışa bakış kısıtlılığı tek kas ve tek sinirle açıklandığı için çıkmış soruda doğrudan sorulmuştur.",
+   "detay": "- **Kas ve sinir:** Yalnızca altıncı sinir lateral rektusu innerve eder; başka hiçbir sinir bu kası beslemez.\n- **Bulgular:** Felçte göz içe kayar, dışa bakış yapılamaz ve yatay bakışta o göz geride kalır. Hastada yatay çift görme olur.\n- **Telafi:** Hasta başını etkilenen tarafa çevirerek gözü daha az dışa bakmak zorunda bırakır; bu duruş öyküde ipucu verir.\n- **Ek bulgular:** Çekirdek düzeyindeki lezyonda yüzdeki sinir lifleri de etkilenebilir; o zaman yatay bakış kusuru ve yüz felci birliktedir.\n- **Klinik bağlantı:** Altıncı sinir kafa içi basınç artışında en erken etkilenen sinirdir; izole altıncı sinir felcinde basınç artışı akılda tutulur.",
+   "cikmis": [
+    "past-1790877494321-845620"
+   ],
+   "ornek26": [
+    {
+     "kok": "Gözün laterale bakışı kısıtlı olan hastada hangi sinirde lezyon vardır?",
+     "secenekler": {
+      "A": "Üçüncü kraniyal sinir",
+      "B": "Dördüncü kraniyal sinir",
+      "C": "Altıncı kraniyal sinir",
+      "D": "Yedinci kraniyal sinir",
+      "E": "Beşinci kraniyal sinir"
+     },
+     "dogru": "C",
+     "aciklama": "Dışa bakışı yapan tek kas lateral rektustur ve bu kası yalnız altıncı sinir besler.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-07",
+   "puan": 86,
+   "tur": "mekanizma",
+   "baslik": "Dördüncü sinir felci ve Bielschowsky testi",
+   "bilgi": "Dördüncü sinir felçinde göz yukarı ve içe kayar; baş etkilenen tarafa eğilince çift görme artar.",
+   "alt": [
+    "Üst oblik kası çalışmaz",
+    "Baş eğme testiyle felç ortaya çıkarılır",
+    "Dikey çift görme en çok merdiven inerken belirginleşir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 17,
+     "metin": "SIGNS: EYE IS UP AND IN"
+    },
+    {
+     "sayfa": 18,
+     "metin": "Bielschowsky baş tilt testi"
+    }
+   ],
+   "neden": "Baş eğme testinin hangi siniri gösterdiği çıkmış kalıp olarak sorulur; tek başına felç ayırıcı tanıda öne çıkar.",
+   "detay": "- **Kasın işi:** Üst oblik gözü aşağı ve içe çeker; ayrıca göz içe bakarken aşağı hareketin asıl yapan kastır.\n- **Felç bulgusu:** Kas çekemeyince karşıt etki baskın gelir; göz yukarı ve içe kayar.\n- **Bielschowsky testi:** Hasta başını bir yana eğer. Baş etkilenen tarafa eğilince dikey kayma ve çift görme artar; karşı tarafa eğilince azalır. Testin mantığı, baş eğildiğinde düzeltici dönme hareketini üst obliğin yapmasıdır.\n- **Yakınma:** Hasta özellikle merdiven inerken ve okurken çift görür; dikey kayma nedeniyle iki görüntü üst üste binmez.\n- **Klinik bağlantı:** Travma sonrası dördüncü sinir felci sık görülür; baş eğik tutma çocukta tortikollis ayırıcı tanısına girer.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Başını sağ omzuna eğdiğinde çift görme yakınması artan hastada hangi sinir felci düşünülür?",
+     "secenekler": {
+      "A": "Sol üçüncü kraniyal sinir",
+      "B": "Sağ altıncı kraniyal sinir",
+      "C": "Sol yedinci kraniyal sinir",
+      "D": "Sağ dördüncü kraniyal sinir",
+      "E": "Sağ beşinci kraniyal sinir"
+     },
+     "dogru": "D",
+     "aciklama": "Bielschowsky testinde baş etkilenen tarafa eğilince çift görme artar; bu bulgu dördüncü sinir felcini gösterir.",
+     "zorluk": "zor"
+    }
+   ]
+  },
+  {
+   "id": "2n10-08",
+   "puan": 84,
+   "tur": "mekanizma",
+   "baslik": "İnternükleer oftalmopleji: fasikül lezyonu",
+   "bilgi": "Medial longitudinal fasikül kesilince lezyon tarafındaki göz içe bakamaz, öteki göz dışa bakarken nistagmus yapar.",
+   "alt": [
+    "Yatay bakış iki gözde birlikte yönetilir",
+    "Fasikül emri karşı tarafın üçüncü sinir çekirdeğine taşır",
+    "İki gözde birlikte kısıtlılık merkez lezyonunu gösterir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 21,
+     "metin": "INABILITY TO MOVE IPSILATERAL EYE MEDIALLY"
+    },
+    {
+     "sayfa": 20,
+     "metin": "MEDIAL LONGITUDINAL FASCICULUS"
+    }
+   ],
+   "neden": "Bakış merkezi ile tek sinir felcini ayıran temel tablodur; sınavda lokalizasyon sorusu olarak çıkar.",
+   "detay": "- **Yatay bakışın kurgusu:** Ön lobdan gelen komut ponstaki paramedian pontin retiküler oluşuma, oradan abdusens çekirdeğine ulaşır. Abdusens çekirdeği lateral rektusu çalıştırırken aynı emri medial longitudinal fasikül üzerinden karşı tarafın üçüncü sinir çekirdeğine gönderir.\n- **Lezyon:** Fasikül kesilince karşı göze giden emir ulaşmaz; lezyon tarafındaki göz içe getirilemez.\n- **Eşlik eden:** Dışa bakan göz tek taraflı emir aldığı için nistagmus yapar. Bu ikili, internükleer oftalmoplejinin klasik görünümüdür.\n- **Ayırt edici nokta:** Tek gözde kısıtlılık kas ya da sinir felcini; iki gözde birlikte kısıtlılık bakış merkezi lezyonunu gösterir.\n- **Klinik bağlantı:** Genç hastada iki taraflı internükleer oftalmopleji demiyelinizan hastalığı akla getirir; ileri yaşta damar hastalığı düşünülür.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Yatay bakışta sağ göz içe getirilemiyor, sol göz dışa bakarken nistagmus yapıyor. Lezyon hangi yapıdadır?",
+     "secenekler": {
+      "A": "Sağ lateral rektus kası",
+      "B": "Sağ üçüncü sinir gövdesi",
+      "C": "Sol abdusens çekirdeği",
+      "D": "Sol ön lob",
+      "E": "Medial longitudinal fasikül"
+     },
+     "dogru": "E",
+     "aciklama": "Fasikül emri karşı tarafın üçüncü sinir çekirdeğine taşır; kesilince lezyon tarafındaki göz içe bakamaz.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-09",
+   "puan": 81,
+   "tur": "eslesme",
+   "baslik": "Kiazma lezyonu: bitemporal hemianopsi",
+   "bilgi": "Kiazmada çaprazlaşan nazal lifler etkilenince iki gözün dış yarısında görme kaybı olur ve buna bitemporal hemianopsi denir.",
+   "alt": [
+    "Kiazma öncesi lezyon tek gözü etkiler",
+    "Kiazma sonrası lezyon homonim hemianopsi yapar",
+    "Kuadrantanopi kaybın bir çeyrekle sınırlı biçimidir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 4,
+     "metin": "Homonymous Hemianopia with Macular Sparing"
+    },
+    {
+     "sayfa": 4,
+     "metin": "Binocular Chiasmal or Postchiasmal Field Defects"
+    }
+   ],
+   "neden": "Görme alanı defektinin lezyon yerini göstermesi, nörolojide en sık sorulan lokalizasyon mantığıdır.",
+   "detay": "- **Yol:** Her gözün lifleri kiazmaya kadar ayrıdır; bu yüzden kiazma öncesi lezyon tek gözde kayıp yapar. Kiazmada burun tarafındaki lifler çaprazlaşır; bu lifler gözün dış yarısının görüntüsünü taşır.\n- **Kiazma lezyonu:** İki gözün dış yarısı körleşir; buna bitemporal hemianopsi denir. Hipofiz kitlesi bu bölgeye bası yapan klasik nedendir.\n- **Bileşke lezyonu:** Kiazma ile göz arasındaki bileşke noktası tutulursa bir gözde merkezî kayıp, öteki gözde dış yarıda kayıp birlikte görülür.\n- **Kiazma sonrası:** Trakt, lateral genikulat gövde, optik radyasyon ve korteks lezyonlarında iki gözde aynı yarı etkilenir; buna homonim hemianopsi denir.\n- **Makula:** Santral görme korunuyorsa makula korunması denir ve lezyonun kortekse yakın olduğu düşünülür.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "İki gözün dış yarısında görme kaybı saptanan hastada lezyon en olası nerededir?",
+     "secenekler": {
+      "A": "Optik kiazma",
+      "B": "Sol optik sinir",
+      "C": "Sağ optik trakt",
+      "D": "Sağ optik radyasyon",
+      "E": "Sol görme korteksi"
+     },
+     "dogru": "A",
+     "aciklama": "Kiazmada çaprazlaşan lifler gözlerin dış yarısını taşır; kesilince bitemporal hemianopsi doğar.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n10-10",
+   "puan": 78,
+   "tur": "siniflama",
+   "baslik": "Göz kaslarının hareketleri",
+   "bilgi": "Lateral rektus abdüksiyon, medial rektus addüksiyon, üst rektus elevasyon, alt rektus depresyon yapar.",
+   "alt": [
+    "Oblik kaslar dikey ve büküm hareketlerine katılır",
+    "Üst oblik intorsiyon, alt oblik ekstorsiyon yapar",
+    "Konverjans iki gözün birlikte buruna dönmesidir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 10,
+     "metin": "Lat rektus: abdüksiyon"
+    },
+    {
+     "sayfa": 10,
+     "metin": "Sup oblik: intorsiyon"
+    }
+   ],
+   "neden": "Kas-hareket tablosu, sinir felçlerinin bulgusunu çıkarmanın temelidir; sınavda eşleme sorusu olarak çıkar.",
+   "detay": "- **Yatay hareket:** Lateral rektus gözü dışa, medial rektus içe çevirir. Bu iki kas yatay bakışın tamamını yapar.\n- **Dikey hareket:** Üst rektus gözü yukarı, alt rektus aşağı çevirir. Oblik kaslar da dikey harekete katılır: alt oblik elevasyon, üst oblik depresyon yönünde çalışır.\n- **Büküm:** Üst oblik intorsiyon, alt oblik ekstorsiyon yapar; büküm gözün kendi ön arka ekseni çevresindeki dönmesidir.\n- **Birlikte çalışma:** Konverjans iki gözün birlikte buruna dönmesidir; tek kasın işi değil, iki medial rektusun eşzamanlı çalışmasıdır.\n- **Klinik bağlantı:** Hangi hareket kaybolduysa o hareketi yapan kası besleyen sinir aranır; tablo bu yüzden sinir felçlerinin anahtarıdır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Gözün dışa çevrilmesini sağlayan kas ve hareket hangisidir?",
+     "secenekler": {
+      "A": "Medial rektus, addüksiyon",
+      "B": "Lateral rektus, abdüksiyon",
+      "C": "Üst rektus, elevasyon",
+      "D": "Alt oblik, elevasyon",
+      "E": "Üst oblik, depresyon"
+     },
+     "dogru": "B",
+     "aciklama": "Yatay harekette lateral rektus abdüksiyonu, medial rektus addüksiyonu yapar.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-11",
+   "puan": 75,
+   "tur": "eslesme",
+   "baslik": "Üç göz sinirinin innervasyon alanı",
+   "bilgi": "Üçüncü sinir dört göz kasını ve kapağı, dördüncü sinir yalnız üst obliği, altıncı sinir yalnız lateral rektusu besler.",
+   "alt": [
+    "Üçüncü sinir ayrıca iris sfinkterini ve silier kasları çalıştırır",
+    "Dördüncü sinir intorsiyon yaptırır",
+    "Edinger-Westphal çekirdeği parasempatik bölümdür"
+   ],
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "N. OCULOMOTORIUS & N. TROCHLEARIS & N. ABDUCENS"
+    }
+   ],
+   "neden": "Tablo doğrudan sorulur; özellikle yalnız bir kası besleyen sinirler ayırt edici bilgidir.",
+   "detay": "- **Üçüncü sinir:** Üst, alt ve medial rektusu, alt obliği, kapağı kaldıran kası, iris sfinkterini ve silier kasları besler. Yani dört göz kası ve iki iç göz yapısı tek sinire bağlıdır.\n- **Dördüncü sinir:** Yalnız üst obliği besler; göz dışa bakarken intorsiyon yaptırır.\n- **Altıncı sinir:** Yalnız lateral rektusu besler ve gözü dışa çevirir.\n- **Parasempatik bölüm:** Edinger-Westphal çekirdeği üçüncü sinirin parasempatik bölümüdür; iris sfinkteri ve silier kasları çalıştırır.\n- **Ezber yerine mantık:** Gözü çeviren kas hangi sinirden besleniyorsa, o hareket kaybolduğunda sorulan sinir odur. Bu mantık tabloyu ezberlemeden bulguyu yorumlamayı sağlar.",
+   "cikmis": [
+    "d3-k2-nor-005",
+    "d3k2-2025-2026-h31"
+   ],
+   "ornek26": [
+    {
+     "kok": "Yalnız üst oblik kasını innerve eden kraniyal sinir hangisidir?",
+     "secenekler": {
+      "A": "Üçüncü kraniyal sinir",
+      "B": "Altıncı kraniyal sinir",
+      "C": "Dördüncü kraniyal sinir",
+      "D": "Beşinci kraniyal sinir",
+      "E": "Yedinci kraniyal sinir"
+     },
+     "dogru": "C",
+     "aciklama": "Dördüncü sinir yalnız üst obliği besler; üçüncü ve altıncı sinirlerin birden çok ya da farklı kası vardır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-12",
+   "puan": 72,
+   "tur": "tani_tedavi",
+   "baslik": "Koku muayenesi ve anosmi nedeni",
+   "bilgi": "Koku kaybına anosmi denir; muayenede mukoza tahriş etmeyen kokularla iki taraf ayrı ayrı değerlendirilir.",
+   "alt": [
+    "Koku ayrımı, eşiği ve adlandırma ayrı bakılır",
+    "Kafa travması ve ön kafa tabanı tümörleri nedenler arasındadır",
+    "Lifler kribriform plakadan geçer"
+   ],
+   "alinti": [
+    {
+     "sayfa": 3,
+     "metin": "Lezyonunda: Koku alamama"
+    },
+    {
+     "sayfa": 3,
+     "metin": "Muayene: Burun mukozasını"
+    }
+   ],
+   "neden": "Koku kaybının nedeni ve muayene yöntemi birinci sinirin sınav karşılığıdır; kribriform plaka anatomisi eşlik eder.",
+   "detay": "- **İşlev:** Birinci sinir koku duyusunu taşır; lezyonunda koku alma kaybolur ve bu duruma anosmi denir.\n- **Muayene:** Burun mukozasını tahriş etmeyen kokular kullanılır; iki taraf ayrı ayrı değerlendirilir. Yalnız kokuyu alıp almama değil, koku ayrımı, koku eşiği ve koku adlandırma da sınanır.\n- **Nedenler:** Kafa travması ve ön kafa tabanı tümörleri öne çıkar. Lifler ön kafa tabanındaki ince deliklerden geçtiği için travmada kopabilir.\n- **Şema:** Koku molekülleri burun boşluğundan kribriform plakadaki birinci sıra duyu nöronlarına, oradan koku soğancığındaki mitral hücrelere ulaşır.\n- **Klinik bağlantı:** Koku kaybı tek taraflıysa ve burun tıkanıklığı yoksa ön kafa tabanı değerlendirmesi yapılır; iki taraflı kayıpta önce burun ve mukoza nedenleri aranır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Koku alamama yakınması olan ve kafa travması öyküsü bulunan hastada hangi yapı hasarı düşünülür?",
+     "secenekler": {
+      "A": "Optik kiazma",
+      "B": "Trigeminal gangliyon",
+      "C": "Silier gangliyon",
+      "D": "Kribriform plakadan geçen koku lifleri",
+      "E": "Vestibüler çekirdek"
+     },
+     "dogru": "D",
+     "aciklama": "Koku lifleri kribriform plakadaki ince deliklerden geçer; travmada kopmaları anosmi yapar.",
+     "zorluk": "zor"
+    }
+   ]
+  },
+  {
+   "id": "2n10-13",
+   "puan": 71,
+   "tur": "eslesme",
+   "baslik": "Weber ve Rinne testleri",
+   "bilgi": "İletim tipi işitme kaybında Weber hasta kulağa kayar ve Rinne negatifleşir; sensörinöral kayıpta Weber sağlam kulağa gider.",
+   "alt": [
+    "Normalde ses orta hatta duyulur ve Rinne pozitiftir",
+    "Rinne testi kemik ve hava yolunu karşılaştırır",
+    "İki test birlikte kaybın katmanını söyler"
+   ],
+   "alinti": [
+    {
+     "sayfa": 29,
+     "metin": "Normal: Weber orta hatta"
+    },
+    {
+     "sayfa": 29,
+     "metin": "Kondüksiyon tipi işitme kaybı: Rinne (-)"
+    }
+   ],
+   "neden": "İki testin sonuç kombinasyonu, işitme kaybının iletim mi sinir mi olduğunu ayırmada sınav sorusudur.",
+   "detay": "- **Weber testi:** Diyapazon alına ya da tepeye konur; sesin hangi kulakta daha güçlü duyulduğu sorulur. Normalde ses orta hatta duyulur.\n- **Weber yorumu:** İletim tipi kayıpta hasta kulakta kemik iletimi görece daha iyi kaldığı için ses hasta kulağa kayar. Sensörinöral kayıpta ses sağlam kulağa kayar.\n- **Rinne testi:** Diyapazon önce kemiğe, sonra kulağın yanına tutulur. Normalde hava yolu kemik yolundan uzundur ve test pozitif sayılır.\n- **Rinne yorumu:** İletim tipi kayıpta kemik yolu hava yolundan uzun bulunur, test negatif çıkar. Sensörinöral kayıpta her iki yol birlikte kısaldığı için test pozitif kalır.\n- **Birlikte kullanım:** İki testin bileşimi sorunun kulak ileti yolu katmanında mı yoksa sinirde mi olduğunu söyler.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Diyapazon alına konduğunda sesi sağ kulağında daha güçlü duyan hastada sağ kulakta hangi tipte işitme kaybı vardır?",
+     "secenekler": {
+      "A": "Sensörinöral tip",
+      "B": "Santral tip",
+      "C": "Karışık tip",
+      "D": "İşitme kaybı yok",
+      "E": "İletim tipi"
+     },
+     "dogru": "E",
+     "aciklama": "Weber testinde sesin hasta kulağa kayması iletim tipi kaybı gösterir; sensörinöral kayıpta ses karşı kulağa gider.",
+     "zorluk": "orta"
+    },
+    {
+     "kok": "Rinne testi negatif olan kulakta işitme kaybı hangi tiptedir?",
+     "secenekler": {
+      "A": "İletim tipi",
+      "B": "Sensörinöral tip",
+      "C": "Retrokoklear tip",
+      "D": "Santral tip",
+      "E": "Normal işitme"
+     },
+     "dogru": "A",
+     "aciklama": "İletim tipi kayıpta kemik yolu hava yolundan uzun bulunur ve Rinne negatifleşir; sensörinöral kayıpta Rinne pozitif kalır.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n10-14",
+   "puan": 68,
+   "tur": "siniflama",
+   "baslik": "Göz hareketinin adları",
+   "bilgi": "Göz hareketleri altı kasla yapılır; abdüksiyon dışa, addüksiyon içe, elevasyon yukarı, depresyon aşağı çevirmedir.",
+   "alt": [
+    "Konverjans iki gözün buruna dönmesidir",
+    "İntorsiyon ve ekstorsiyon eksen çevresinde dönmedir",
+    "Hareket adı bilinmeden bulgu yorumlanamaz"
+   ],
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "N. OCULOMOTORIUS & N. TROCHLEARIS & N. ABDUCENS"
+    },
+    {
+     "sayfa": 9,
+     "metin": "Elevasyon Konverjans Abdüksiyon"
+    }
+   ],
+   "neden": "Hareket adları muayene dilidir; sınavda bulgunun doğru adlandırılması istenir.",
+   "detay": "- **Altı kas:** Her gözü çeviren altı kas vardır; dördü rektus, ikisi obliktir.\n- **Yatay adlar:** Abdüksiyon gözü dışa, addüksiyon içe çevirir.\n- **Dikey adlar:** Elevasyon gözü yukarı, depresyon aşağı çevirir.\n- **Büküm adları:** İntorsiyon ve ekstorsiyon, gözün ön arka ekseni çevresindeki dönmesidir; dışarıdan bakınca gözün üst kısmının içe ya da dışa yatması gibi görünür.\n- **Konverjans:** İki gözün birlikte buruna doğru dönmesidir; yakına bakarken ortaya çıkar.\n- **Neden önemli:** Muayenede hastaya altı yön baktırılır ve her yönün adı ayrı kaydedilir; bulgunun adı ile kas-sinir eşlemesi bu adlar üzerinden kurulur.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Gözün buruna doğru içe çevrilmesine ne denir?",
+     "secenekler": {
+      "A": "Abdüksiyon",
+      "B": "Addüksiyon",
+      "C": "Elevasyon",
+      "D": "Depresyon",
+      "E": "Ekstorsiyon"
+     },
+     "dogru": "B",
+     "aciklama": "İçe çevirme addüksiyondur; dışa çevirme abdüksiyon olarak adlandırılır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-15",
+   "puan": 65,
+   "tur": "tani_tedavi",
+   "baslik": "Görme keskinliğinin Snellen kartıyla ölçümü",
+   "bilgi": "Görme keskinliği Snellen kartındaki satırlar okutularak ölçülür ve iki göz ayrı ayrı değerlendirilir.",
+   "alt": [
+    "Satırlar yukarıdan aşağıya küçülür",
+    "Kartta harf grupları ve satır numaraları vardır",
+    "Tek göz kapatmak için delikli perde kullanılır"
+   ],
+   "alinti": [
+    {
+     "sayfa": 5,
+     "metin": "Görme Keskinliği (Snellen Kartları)"
+    },
+    {
+     "sayfa": 5,
+     "metin": "E F P T O Z"
+    }
+   ],
+   "neden": "Görme muayenesinin ilk basamağıdır; kartın yapısı ve ölçüm kuralı temel bilgi olarak sorulur.",
+   "detay": "- **Kart:** Snellen kartında harfler yukarıdan aşağıya küçülür; her satırın bir numarası vardır. Hasta karttan okuyabildiği en küçük satırı söyler.\n- **Ölçüm:** Önce bir göz kapatılır, iki göz ayrı ayrı ölçülür. Sonuç, okunabilen en küçük satırın karşılığıdır.\n- **Yardımcı araç:** Soldaki delikli perde, muayene sırasında bir gözü kapatmak için kullanılır.\n- **Neden ayrı ayrı:** Tek gözdeki düşüş, görme yolu ya da göz hastalığının erken bulgusu olabilir; iki göz birlikte ölçülürse kayıp gizlenir.\n- **Klinik bağlantı:** Keskinlik düşükse görme alanı, gözdibi ve renk görme basamakları sırayla tamamlanır; tek basamakla görme değerlendirmesi bitmez.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Görme keskinliği ölçümünde Snellen kartı kullanılırken aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnız sağ göz ölçülür",
+      "B": "Yalnız uzak görme ölçülür ve yakın görme ölçülmez",
+      "C": "İki göz ayrı ayrı değerlendirilir",
+      "D": "Kart karanlık odada okutulur",
+      "E": "Hasta kartı eline alıp yakından okur"
+     },
+     "dogru": "C",
+     "aciklama": "Her göz ayrı ölçülür; tek gözdeki kayıp iki göz birlikte ölçülünce gizlenir.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-16",
+   "puan": 63,
+   "tur": "eslesme",
+   "baslik": "Onuncu sinirin işlevleri",
+   "bilgi": "Onuncu sinir farenks ve larenks kaslarını, palatoglossus kasını çalıştırır ve organların parasempatik innervasyonunu sağlar.",
+   "alt": [
+    "Farenks ve larenksin duyusunu taşır",
+    "Yutma güçlüğü ve boğuk ses felçte görülür",
+    "Yumuşak damak kayması eşlik edebilir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 31,
+     "metin": "Farenks ve larenks kasları"
+    },
+    {
+     "sayfa": 31,
+     "metin": "Organların parasempatik innervasyonu"
+    }
+   ],
+   "neden": "Yutma ve ses ile ilgili bulgular bu sinire bağlanır; felç tablosu sınavda vaka üzerinden sorulur.",
+   "detay": "- **Motor işlev:** Farenks ve larenks kaslarını çalıştırır. Bu kaslar yutma sırasında gırtlağı kapatır ve ses tellerini hareket ettirir.\n- **Dil kası:** Palatoglossus kası da bu sinirden beslenir; dilin geri kalanı on ikinci sinire bağlıdır.\n- **Parasempatik işlev:** Göğüs ve karın organlarının parasempatik innervasyonunu sağlar; kalp hızı ve sindirim üzerinde etkilidir.\n- **Duyu:** Farenks ve larenksin duyusunu taşır; bu yüzden öğürme refleksinin efferent dalı onuncu sinirdir.\n- **Felç tablosu:** Ses boğuklaşır, yutma güçleşir ve yumuşak damak bir tarafa kayar. Yumuşak damak orta hatta kalıyorsa damak kasları sağlam demektir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Yumuşak damak kaslarını ve farenks kaslarını çalıştıran kraniyal sinir hangisidir?",
+     "secenekler": {
+      "A": "Dokuzuncu kraniyal sinir",
+      "B": "On ikinci kraniyal sinir",
+      "C": "Yedinci kraniyal sinir",
+      "D": "Onuncu kraniyal sinir",
+      "E": "Beşinci kraniyal sinir"
+     },
+     "dogru": "D",
+     "aciklama": "Farenks ve larenks kasları ile palatoglossus onuncu sinire bağlıdır; dokuzuncu sinir stilofaringeusla ilgilidir.",
+     "zorluk": "zor"
+    }
+   ]
+  },
+  {
+   "id": "2n10-17",
+   "puan": 61,
+   "tur": "tanim",
+   "baslik": "On birinci sinir: omuz ve boyun kasları",
+   "bilgi": "On birinci sinir trapezius ve sternokleidomastoid kaslarını çalıştırır; felçte omuz düşer ve baş çevirme zorlaşır.",
+   "alt": [
+    "Muayenede omuz kaldırma ve dirence karşı baş çevirme istenir",
+    "İki kas omuz ve boyun hareketinin ana kaslarıdır",
+    "Tek taraflı felçte omuz asimetrisi görülür"
+   ],
+   "alinti": [
+    {
+     "sayfa": 32,
+     "metin": "Trapezius ve sternokleidomastoid kaslar"
+    }
+   ],
+   "neden": "Omuz düşüklüğü ile boyun hareketi üzerinden sinir tanınır; muayene basamağı sınavda sorulur.",
+   "detay": "- **Kaslar:** Trapezius omzu kaldırır ve kürek kemiğini sabitler; sternokleidomastoid başı karşı tarafa çevirir ve öne eğer.\n- **Muayene:** Hastadan omuzlarını kaldırması ve başını direnç karşısında çevirmesi istenir. İki taraf karşılaştırılır.\n- **Felç bulgusu:** Omuz düşer, omuz kaldırma güçsüzleşir ve baş o yana doğru zor çevrilir. Uzun süren felçte omuzda ve boyunda kas küçülmesi görülür.\n- **Ayırt edici nokta:** Omuz ağrısı nedeniyle hareket kısıtlılığı ile sinir felci karışabilir; dirençli muayenede gerçek kas gücü anlaşılır.\n- **Klinik bağlantı:** Boyun kökü cerrahisi ve travmasında bu sinir zedelenebilir; omuz düşüklüğü tek başına bulgu olabilir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Omuz kaldırma ve baş çevirme gücünü değerlendiren sinir hangisidir?",
+     "secenekler": {
+      "A": "Onuncu kraniyal sinir",
+      "B": "Dokuzuncu kraniyal sinir",
+      "C": "Yedinci kraniyal sinir",
+      "D": "Beşinci kraniyal sinir",
+      "E": "On birinci kraniyal sinir"
+     },
+     "dogru": "E",
+     "aciklama": "Trapezius ve sternokleidomastoid on birinci sinirle çalışır; muayenede omuz kaldırma ve baş çevirme sınanır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-18",
+   "puan": 57,
+   "tur": "tani_tedavi",
+   "baslik": "Gözdibi muayenesi",
+   "bilgi": "Gözdibi oftalmoskopla bakılır; optik disk, damarlar ve makula değerlendirilir.",
+   "alt": [
+    "Disk sınırları ve damar dallanması kaydedilir",
+    "Işığı göze yönlendiren başlık ve odak halkası vardır",
+    "İki göz ayrı ayrı incelenir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "Gözdibi fotoğrafları: optik disk, damarlar ve makula",
+     "gorsel": true
+    }
+   ],
+   "neden": "Görme muayenesinin basamağıdır; disk ve damarların değerlendirilmesi temel klinik bilgidir.",
+   "detay": "- **Araç:** Gözdibi oftalmoskopla bakılır. Oftalmoskopun başlığı ışığı göze yönlendirir, ayar halkası odak ve büyütmeyi değiştirir.\n- **İncelenen yapılar:** Optik disk, damarlar ve makula değerlendirilir. Disk sınırlarının netliği ve damarların diskten dışa dallanması kaydedilir.\n- **Uygulama:** Hekim hastanın başı hizasına gelir ve ışığı göz bebeğine yönlendirir; iki göz ayrı ayrı incelenir.\n- **Neden önemli:** Disk şişmesi kafa içi basınç artışının, damar değişiklikleri damar hastalıklarının göstergesi olabilir.\n- **Klinik bağlantı:** Görme keskinliği düşük olan hastada gözdibi bakısı, kaybın göz kaynaklı mı yoksa sinir kaynaklı mı olduğunu ayırmaya yardım eder.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Gözdibi muayenesinde oftalmoskopla aşağıdakilerden hangisi değerlendirilir?",
+     "secenekler": {
+      "A": "Optik disk ve damarlar",
+      "B": "Kornea ve konjonktiva",
+      "C": "Lens kesafeti",
+      "D": "Göz içi basıncı",
+      "E": "Kapak aralığı"
+     },
+     "dogru": "A",
+     "aciklama": "Gözdibinde optik disk, damarlar ve makula değerlendirilir; kornea ve lens ön segment yapılarıdır.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n10-19",
+   "puan": 54,
+   "tur": "eslesme",
+   "baslik": "Dokuzuncu sinir ve öğürme refleksi",
+   "bilgi": "Dokuzuncu sinir stilofaringeus kasını ve parotis bezini çalıştırır; öğürme refleksinde afferent dal budur.",
+   "alt": [
+    "Dilin arka üçte birinin tat ve dokunma duyusunu taşır",
+    "Öğürme refleksinin efferent dalı onuncu sinirdir",
+    "Yanıt yoksa iki sinir birlikte değerlendirilir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 30,
+     "metin": "Dilin arka 1/3’ün tad ve dokunma duyusu"
+    },
+    {
+     "sayfa": 30,
+     "metin": "Öğürme refleksi: Afferent 9, Efferent 10"
+    }
+   ],
+   "neden": "Öğürme refleksinin iki dalı ve tat duyusu alanı, sınavda eşleme sorusu olarak çıkar.",
+   "detay": "- **Motor işlev:** Stilofaringeus kasını çalıştırır; bu kas yutma sırasında farenksi yukarı çeker. Parotis bezinin salgısını da düzenler.\n- **Duyu:** Dilin arka üçte birinin tat ve dokunma duyusunu taşır.\n- **Öğürme refleksi:** Farenks duvarı uyarılınca refleks başlar. Afferent dal dokuzuncu, efferent dal onuncu sinirdir; yanıt farenks kaslarının kasılmasıdır.\n- **Sonucun yorumu:** Refleks alınmıyorsa iki sinir birlikte değerlendirilir; tek başına hangisinin bozuk olduğu söylenemez.\n- **Klinik bağlantı:** Yutma güçlüğü olan hastada tat duyusu da sınanır; dilin arka kısmındaki tat kaybı dokuzuncu siniri işaret eder.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Öğürme refleksinde afferent dalı taşıyan sinir hangisidir?",
+     "secenekler": {
+      "A": "Onuncu kraniyal sinir",
+      "B": "Dokuzuncu kraniyal sinir",
+      "C": "On ikinci kraniyal sinir",
+      "D": "Yedinci kraniyal sinir",
+      "E": "Beşinci kraniyal sinir"
+     },
+     "dogru": "B",
+     "aciklama": "Farenks duyusu dokuzuncu sinirle gelir; yanıtı veren kaslar onuncu sinirle çalışır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n10-20",
+   "puan": 51,
+   "tur": "tani_tedavi",
+   "baslik": "Renk görme ve kontrast duyarlılığı",
+   "bilgi": "Renk görme Ishihara kartlarıyla, kontrast duyarlılığı azalan kontrast satırlarıyla değerlendirilir.",
+   "alt": [
+    "Ishihara kartında sayı renk lekeleri arasında gizlidir",
+    "Renk ayrımı bozuk hastada sayı okunamaz",
+    "Keskinlik normal olsa da düşük kontrast seçilemeyebilir"
+   ],
+   "alinti": [
+    {
+     "sayfa": 8,
+     "metin": "Renkli Görme (Ishıhara Kartları)"
+    },
+    {
+     "sayfa": 8,
+     "metin": "Kontrast duyarlılığı tablosundaki azalan kontrast satırları",
+     "gorsel": true
+    }
+   ],
+   "neden": "Görme muayenesinin tamamlayıcı basamağıdır; renk körlüğü taraması ve kontrast kaybı sınavda tanınır.",
+   "detay": "- **Renk görme:** Ishihara kartlarında sayı, farklı renkteki noktaların arasına gizlenmiştir. Renk ayrımı bozuk olan hasta sayıyı okuyamaz.\n- **Kontrast duyarlılığı:** Azalan kontrastlı satırlarla ölçülür. Görme keskinliği normal olsa da düşük kontrasttaki ayrıntıyı seçemeyen hasta burada yakalanır.\n- **Neden iki basamak:** Renk ve kontrast, keskinlik ölçümünün gösteremediği ince işlev kayıplarını ortaya çıkarır.\n- **Klinik bağlantı:** Optik sinir hastalıklarında renk görme erken bozulabilir; bu yüzden renk kartları görme siniri muayenesinin parçasıdır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Renk görme değerlendirmesinde kullanılan kart hangisidir?",
+     "secenekler": {
+      "A": "Snellen kartı",
+      "B": "Amsler ızgarası",
+      "C": "Ishihara kartları",
+      "D": "Kontrast duyarlılık tablosu",
+      "E": "Göz dibi fotoğrafı"
+     },
+     "dogru": "C",
+     "aciklama": "Ishihara kartlarında sayı renk lekeleri arasında gizlenir; renk ayrımı bozuk hastada sayı okunamaz.",
+     "zorluk": "orta"
+    }
+   ]
+  }
+ ],
+ "cikmis": {
+  "88612c9f5ce5": {
+   "sinav": "2020-2021 Kurul 2",
+   "kok": "Kraniyal sinir muayenesi esnasında hasta, dilini dışarı çıkardığında sağ tarafa sapma olduğu görülmektedir. Dil atrofisi olmayan bu hastada lezyon nerede olabilir?",
+   "secenekler": {
+    "A": "Sağ nervus hypoglossus",
+    "B": "Sağ nucleus ambiguus",
+    "C": "Sol nucleus tractus solitarius",
+    "D": "Sol hipoglossal sinirin supranükleer (kortikobulber) yolu",
+    "E": "Sol nervus glossopharyngeus"
+   },
+   "dogru": "D"
+  },
+  "d3-k2-nor-005": {
+   "sinav": "2025-2026 Kurul 2",
+   "kok": "Bir hastada pitozis, göz hareketlerinde dışa, yukarı ve aşağı bakış kısıtlılığı ile birlikte alın ve kornea duyusunda azalma saptanıyor. Bu klinik tabloyu oluşturan lezyon öncelikle hangi anatomik bölgededir?",
+   "secenekler": {
+    "A": "Foramen jugulare",
+    "B": "Serebellopontin açı",
+    "C": "Sinüs kavernozus",
+    "D": "Kanalis fasyalis",
+    "E": "Foramen magnum"
+   },
+   "dogru": "C"
+  },
+  "d3k2-2025-2026-h31": {
+   "sinav": "2025-2026 Kurul 2",
+   "kok": "Göz hareketlerini sağlayan okülomotor kraniyal sinirlerin (III, IV ve VI) birlikte hasarlandığı bir hastada lezyon en olası nerededir?",
+   "secenekler": {
+    "A": "Hipotalamus",
+    "B": "Optik kiazma",
+    "C": "Sinüs kavernozus",
+    "D": "Serebellopontin köşe",
+    "E": "Juguler foramen"
+   },
+   "dogru": "C"
+  },
+  "past-1790877480031-411629": {
+   "sinav": "2020-2021 Kurul 2",
+   "kok": "Beyinde tek taraflı supranükleer (nükleus üstü) seviyede bir lezyon durumunda aşağıdaki kraniyal sinirler veriliyor:\nI. N. abducens\nII. N. facialis\nIII. N. accessorius\nIV. N. hypoglossus\nYukarıdakilerden hangilerinin motor işlevleri bozulur?",
+   "secenekler": {
+    "A": "I, II ve III",
+    "B": "I ve III",
+    "C": "II ve IV",
+    "D": "Yalnız IV",
+    "E": "I, II, III ve IV"
+   },
+   "dogru": "C"
+  },
+  "past-1790877494321-845620": {
+   "sinav": "2020-2021 Kurul 2",
+   "kok": "Trafik kazası geçiren bir kişide gözün laterale bakışı bozuk ise hangi sinirde lezyon vardır?",
+   "secenekler": {
+    "A": "N. opticus",
+    "B": "N. oculomotorius",
+    "C": "N. trochlearis",
+    "D": "N. abducens",
+    "E": "N. facialis"
+   },
+   "dogru": "D"
+  }
+ },
+ "_uretici": {
+  "uretken": "DeepSeek V4.1 Flash Eco",
+  "model": "opendesign/deepseek-v4.1-flash-eco"
+ }
+}

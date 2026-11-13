@@ -1,0 +1,5862 @@
+{
+ "kod": "2n11",
+ "no": 65,
+ "baslik": "Serebrovasküler Hastalıklar",
+ "klasor": "2n11",
+ "sorular": [
+  {
+   "no": 3,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Aşağıdakilerden hangisi beyin damar hastalıklarının fokal beyin disfonksiyonu ile giden grubunda yer alır?",
+   "secenekler": {
+    "A": "Vasküler demans",
+    "B": "Hipertansif ensefalopati",
+    "C": "Geçici iskemik atak",
+    "D": "Asemptomatik karotis darlığı",
+    "E": "Baş ağrısı"
+   },
+   "dogru": "C",
+   "ipucu": "Sınıflamada ani başlayan kayıpların hangi başlık altında toplandığını düşün.",
+   "siklar": {
+    "A": "Vasküler demans, damar hastalığının bellek ve bilişsel işlevleri bozduğu ayrı bir başlıktır. Fokal kayıpla giden grupta yer almadığı için bu soruya uymaz.",
+    "B": "Hipertansif ensefalopati, yüksek kan basıncının beyin işlevini bozduğu tablodur ve sınıflamada ayrı başlık olarak durur. Ani fokal kayıpla seyretmediği için bu grupta değildir.",
+    "C": "Geçici iskemik atak, iskemik kökenli olduğu düşünülen ve yirmi dört saatten kısa süren fokal kayıptır. Fokal beyin disfonksiyonu ile giden grupta inme ile birlikte yer aldığı için doğru cevaptır.",
+    "D": "Asemptomatik karotis darlığı, damar hastalığı bulunduğu hâlde henüz nörolojik bulgu vermeyen gruptur. Fokal kayıp oluşmadığı için asemptomatik grupta izlenir.",
+    "E": "Baş ağrısı, inmede hastaların bir bölümünde eşlik eden sık bir yakınmadır. Tek başına damar kaynaklı fokal kayıp anlamına gelmediği için fokal grup içinde yer almaz."
+   },
+   "cozum": "Fokal beyin disfonksiyonu ile giden grupta geçici iskemik atak ve inme bulunur. Demans, ensefalopati ve asemptomatik darlık ayrı başlıklardır.",
+   "sayfa": [
+    2
+   ]
+  },
+  {
+   "no": 28,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Zaman profili dikkate alındığında, birden başlayan, genellikle 5-15 dakika süren ve 24 saat içinde tamamen düzelen geçici fokal nörolojik defisit aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Tam inme",
+    "B": "Reversibl iskemik nörolojik defisit (RİND)",
+    "C": "Progresif inme",
+    "D": "Geçici iskemik atak (TİA)",
+    "E": "Hiçbiri"
+   },
+   "dogru": "D",
+   "ipucu": "Yirmi dört saatte tam düzelme ve kalıcı doku hasarı olmaması hangi tabloyu anlatır?",
+   "siklar": {
+    "A": "Tam inme, fokal kaybın yirmi dört saatten uzun sürdüğü ve kalıcı doku hasarı bırakan tablodur. Süre kısa ve düzelme tam olduğu için bu tanıma uymaz.",
+    "B": "Geri dönüşlü iskemik nörolojik defisit, kaybın yirmi dört saatten uzun sürüp birkaç haftada gerilediği ve lezyonun kaldığı eski bir tanımdır. Sorudaki süre ve tam düzelme bu tanıma uymaz.",
+    "C": "Progresif inme, fokal kaybın saatler ile günler boyunca ilerleyerek yerleştiği inme biçimidir. Burada kayıp kısa sürede tamamen düzeldiği için ilerleyen tablo yoktur.",
+    "D": "Geçici iskemik atak, yirmi dört saatten kısa süren ve kalıcı doku hasarı bırakmayan fokal kayıptır. Dakikalar içinde başlayıp tamamen düzelen tablo bu tanıma uyduğu için doğru cevaptır.",
+    "E": "Hiçbiri seçeneği, tanımlanan tablonun listedeki hiçbir tanıya uymadığını söyler. Geçici iskemik atak tanımı sorudaki süre ve düzelmeyle birebir uyuştuğu için bu seçenek yanlıştır."
+   },
+   "cozum": "Yirmi dört saat içinde tamamen düzelen ve kalıcı doku hasarı bırakmayan fokal kayıp geçici iskemik ataktır. Atağın süresi kısa, düzelmesi tamdır.",
+   "sayfa": [
+    3,
+    14
+   ]
+  },
+  {
+   "no": 1,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Geçici iskemik atak geçiren bir hastada aşağıdakilerden hangisi beklenir?",
+   "secenekler": {
+    "A": "Yakınmaların tamamen gerilemesi",
+    "B": "Görüntülemede kalıcı enfarkt alanı",
+    "C": "Kalıcı yarım felç",
+    "D": "Kalıcı konuşma kaybı",
+    "E": "Bilinç kaybının sürmesi"
+   },
+   "dogru": "A",
+   "ipucu": "Atakta kaybın süresini ve kalıcı doku hasarı bırakıp bırakmadığını düşün.",
+   "siklar": {
+    "A": "Geçici iskemik atak yirmi dört saatten kısa süren ve kalıcı doku hasarı bırakmayan fokal kayıptır. Yakınmalar tamamen gerilediği için doğru cevaptır.",
+    "B": "Görüntülemede kalıcı enfarkt alanı, iskemik inmede doku ölümünün yerleştiğini gösteren geri dönüşsüz lezyondur. Geçici atakta kalıcı hasar oluşmadığı için bu bulgu beklenmez.",
+    "C": "Kalıcı yarım felç, iskemik inmede karşı yarıyı tutan yerleşmiş motor kayıptır. Atakta kayıp geçici olduğundan kalıcı felç beklenmez.",
+    "D": "Kalıcı konuşma kaybı, afazi biçiminde yerleşen ve iskemik inmede kalan fokal bulgudur. Geçici atakta konuşma bulgusu tamamen düzelir.",
+    "E": "Bilinç kaybı, inmede geniş hematom ya da kitle etkisiyle bozulabilen genel bir bulgudur. Yakınmaların gerilediği atakta bilinç açık kalır."
+   },
+   "cozum": "Geçici iskemik atak yirmi dört saatten kısa sürer ve kalıcı doku hasarı bırakmaz, yakınmalar tamamen geriler. Kalıcı lezyon varlığı ile atak ayrılır.",
+   "sayfa": [
+    3,
+    14
+   ]
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Geçici iskemik atak ile iskemik inme arasındaki en önemli fark nedir?",
+   "secenekler": {
+    "A": "Baş ağrısının olması",
+    "B": "Nörogörüntülemede lezyon varlığı",
+    "C": "Hastanın yaşı",
+    "D": "Kan basıncı yüksekliği",
+    "E": "Bilinç düzeyi"
+   },
+   "dogru": "B",
+   "ipucu": "İki tablonun ayrımında doku hasarının kalıcı olup olmadığını düşün.",
+   "siklar": {
+    "A": "Baş ağrısı inmede sık görülebilen eşlikçi bir yakınmadır ve hastaların dörtte birinden fazlasında bildirilir. İki tablonun ayrımını yapmadığı için bu ölçüt değildir.",
+    "B": "Nörogörüntüleme, beyindeki kalıcı doku lezyonunu gösteren incelemedir ve iskemik inmede lezyon kalıcı olarak saptanır. Ataktan ayıran temel ölçüt bu lezyonun varlığı olduğu için doğru cevaptır.",
+    "C": "Yaş, inme sıklığını artıran değiştirilemeyen bir risk faktörüdür ve ileri yaşta inme daha sık görülür. Atak ile inmenin ayrımını belirlemediği için ölçüt değildir.",
+    "D": "Kan basıncı yüksekliği, inmede sık görülen bir durumdur ve tedavi eşiği iki yüz yirmiye yüz yirmi sınırıyla belirlenir. İki tablonun ayrımında belirleyici olmadığı için bu soruda ölçüt değildir.",
+    "E": "Bilinç düzeyi, inmede geniş hematom ya da kitle etkisiyle bozulabilen genel bir bulgudur. Geçici atakta bilinç genellikle korunur, ancak bu fark iki tabloyu kesin ayırmaz."
+   },
+   "cozum": "Görüntülemede kalıcı lezyon saptanması iskemik inmeyi belirler, atakta doku hasarı kalmaz. Bu yüzden ayrım nörogörüntüleme bulgusuna dayanır.",
+   "sayfa": [
+    3,
+    14
+   ]
+  },
+  {
+   "no": 24,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Aşağıdakilerden hangisi non-fokal nörolojik belirtidir?",
+   "secenekler": {
+    "A": "Vücudun bir yarısında güçsüzlük",
+    "B": "Tek gözde görme kaybı",
+    "C": "Homonim hemianopsi",
+    "D": "Baygınlık hissi",
+    "E": "Yüzde tek taraflı kayma"
+   },
+   "dogru": "D",
+   "ipucu": "Vücudun bir yarısına oturmayan, genel bir duygu durumunu düşün.",
+   "siklar": {
+    "A": "Vücudun bir yarısında güçsüzlük, hemiparezi ya da monoparezi biçiminde tek yarıya oturan fokal kayıptır. Tek yarıya sınırlı olduğu için fokal olmayan grupta sayılmaz.",
+    "B": "Tek gözde görme kaybı, geçici monooküler körlük ya da amaurosis fugax olarak bilinen fokal bulgudur. Tek göze sınırlı olduğu için fokal gruptadır.",
+    "C": "Homonim hemianopsi, görme alanının yarısının kaybıdır ve fokal görme yolu lezyonunu gösterir. Görme alanının bir bölümüne oturduğu için fokal belirtidir.",
+    "D": "Baygınlık hissi, kişinin kendini kötü hissedip düşecekmiş gibi olmasıdır ve tek bir vücut bölgesine oturmaz. Fokal grup dışında kaldığı için fokal olmayan belirti olarak doğru cevaptır.",
+    "E": "Yüzde tek taraflı kayma, fasial parezi biçiminde tek yarıya oturan fokal motor bulgudur. Yüzün bir yarısıyla sınırlı olduğu için fokal olmayan grupta sayılmaz."
+   },
+   "cozum": "Baygınlık ve sersemlik hissi tek bir vücut bölgesine oturmadığı için fokal olmayan belirtidir. Tek yarıya ya da tek işleve oturan kayıplar fokal sayılır.",
+   "sayfa": [
+    5,
+    4
+   ]
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "İnmelerin yaklaşık yüzde kaçı intraserebral kanama nedeniyle gelişir?",
+   "secenekler": {
+    "A": "Yüzde seksen",
+    "B": "Yüzde beş",
+    "C": "Yüzde otuz",
+    "D": "Yüzde on beş",
+    "E": "Yüzde kırk"
+   },
+   "dogru": "D",
+   "ipucu": "İskemik ve kanayıcı inmelerin dağılımını düşün, subaraknoid payı ayrı kalır.",
+   "siklar": {
+    "A": "Yüzde seksen, inmelerin beyin infarktı yani iskemik inme payıdır. Kanama payı sorulduğu için bu oran intraserebral kanamayı vermez.",
+    "B": "Yüzde beş, subaraknoid kanamanın payıdır ve kanın subaraknoid aralığa geçmesiyle gelişen tabloya aittir. İntraserebral kanama payı bundan yüksek olduğu için uymaz.",
+    "C": "Yüzde otuz, bir yıl içinde ölen hasta oranıdır ve inme seyrine ait mortalite ölçüsüdür. Kanama payı inmelerin dağılımıyla belirlenir, bu oranla değil.",
+    "D": "Yüzde on beş, inmelerin intraserebral kanama nedeniyle gelişen bölümünü gösterir. İskemik pay yüzde seksen olduğundan kanamaya düşen oran bu değerdir ve doğru cevaptır.",
+    "E": "Yüzde kırk, putaminal kanamanın intraserebral kanamalar içindeki payının alt sınırıdır. Tüm inmeler içindeki pay sorulduğu için bu oran uymaz."
+   },
+   "cozum": "İnmelerin yüzde sekseni beyin infarktı, yüzde on beşi intraserebral kanama, yüzde beşi subaraknoid kanamadır. Kanamanın sıklığı bu dağılımdan okunur.",
+   "sayfa": [
+    6
+   ]
+  },
+  {
+   "no": 32,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Aşağıdakilerden hangisi serebrovasküler olaylarda değiştirilebilir (tedavi edilebilir) risk faktörlerinden biridir?",
+   "secenekler": {
+    "A": "Pozitif aile öyküsü",
+    "B": "Irk",
+    "C": "Hipertansiyon",
+    "D": "Eski serebrovasküler olay öyküsü",
+    "E": "Hiçbiri"
+   },
+   "dogru": "C",
+   "ipucu": "Kan basıncı yüksekliğinin ilaçla düşürülebildiğini düşün.",
+   "siklar": {
+    "A": "Pozitif aile öyküsü, soygeçmişte inme ya da geçici iskemik atak bulunmasıdır ve değiştirilemeyen grupta yer alır. Tedaviyle ortadan kaldırılamadığı için aranan faktör değildir.",
+    "B": "Irk, değiştirilemeyen risk faktörlerinden biridir ve bazı topluluklarda inme sıklığının daha yüksek olmasıyla ilişkilidir. Değiştirilemediği için bu soruya uymaz.",
+    "C": "Hipertansiyon, tedaviyle düşürülebilen ve inme ile ilişkisi kesin olan en önemli risk faktörüdür. Değiştirilebilir grupta yer aldığı için doğru cevaptır.",
+    "D": "Eski serebrovasküler olay öyküsü, daha önce inme ya da atak geçirilmiş olmasıdır ve değiştirilemeyen grupta sayılır. Geçmişte olan bir olay geri alınamadığı için aranan faktör değildir.",
+    "E": "Hiçbiri seçeneği, listede değiştirilebilir faktör bulunmadığını söyleyen toplu bir yanıttır ve tüm seçenekleri birlikte değerlendirir. Hipertansiyon açıkça bu grupta yer aldığı için bu seçenek yanlıştır."
+   },
+   "cozum": "Hipertansiyon, sigara, diyabet ve kalp hastalıkları ilişkisi kesin ve değiştirilebilen risk faktörleridir. Aile öyküsü ve ırk değiştirilemeyen grupta kalır.",
+   "sayfa": [
+    8,
+    7
+   ]
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Risk faktörü ile grubu arasındaki eşleştirmelerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Yaş: ilişkisi kesin ve değiştirilebilen grup",
+    "B": "Sigara: değiştirilemeyen grup",
+    "C": "Irk: etkisi kesin olmayan grup",
+    "D": "Hipertansiyon: ilişkisi kesin ve değiştirilebilen grup",
+    "E": "Metabolik sendrom: değiştirilemeyen grup"
+   },
+   "dogru": "D",
+   "ipucu": "Kan basıncı yüksekliğinin tedaviyle düzeltilebildiğini ve inme ile bağının kanıtlı olduğunu hatırla.",
+   "siklar": {
+    "A": "Yaş, değiştirilemeyen grupta yer alan ve inme sıklığını artıran bir faktördür. Eşleştirmede onu değiştirilebilen gruba yazdığı için bu ifade yanlıştır.",
+    "B": "Sigara, damar duvarına zarar vererek inme riskini artıran ve bırakıldığında bu riski azaltan değiştirilebilir faktördür. Değiştirilemeyen gruba yazıldığı için bu eşleştirme yanlıştır.",
+    "C": "Irk, değiştirilemeyen grupta yer alır ve bazı topluluklarda inme sıklığının yüksek olmasının nedenleri arasında sayılır. Etkisi kesin olmayan gruba yazıldığı için bu ifade yanlıştır.",
+    "D": "Hipertansiyon, tedaviyle düşürülebilen ve inme ile ilişkisi kesin olan grupta yer alır; ikincil korumanın ilk hedefidir. Yazıldığı grup doğru olduğu için bu eşleştirme doğru cevaptır.",
+    "E": "Metabolik sendrom, inme ilişkisi ya da değiştirilmesinin etkisi kesin olmayan grupta yer alır ve bu grupta hiperhomosistinemi ile uyku apnesi de bulunur. Değiştirilemeyen gruba yazıldığı için bu eşleştirme yanlıştır."
+   },
+   "cozum": "Hipertansiyon ilişkisi kesin ve değiştirilebilen gruptadır; yaş, cins ve ırk değiştirilemez, metabolik sendrom ise etkisi kesin olmayan gruptadır.",
+   "sayfa": [
+    8,
+    7,
+    9
+   ]
+  },
+  {
+   "no": 19,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Aşağıdakilerden hangisi inmede değiştirilemeyen risk faktörüdür?",
+   "secenekler": {
+    "A": "Hipertansiyon",
+    "B": "Sigara",
+    "C": "Diyabet",
+    "D": "Düşük doğum tartısı",
+    "E": "Obezite"
+   },
+   "dogru": "D",
+   "ipucu": "Bebeklikte belirlenen ve sonradan tedaviyle düzeltilemeyen özellikleri düşün.",
+   "siklar": {
+    "A": "Hipertansiyon, tedaviyle düşürülebilen ve inme ile ilişkisi kesin olan risk faktörüdür. Değiştirilebilir grupta yer aldığı için bu soruya uymaz.",
+    "B": "Sigara, damar duvarını bozarak inme riskini artıran ve bırakıldığında bu riski azaltan değiştirilebilir bir faktördür. Bu nedenle değiştirilemeyen grup içinde sayılmaz.",
+    "C": "Diyabet, kan şekeri kontrolüyle yönetilen ve damar hasarını artıran değiştirilebilir faktördür. Tedavi edilebildiği için bu sorudaki gruba girmez.",
+    "D": "Düşük doğum tartısı, yaşam boyu taşınan ve sonradan değiştirilemeyen bir özelliktir; yaş, cins, ırk ve aile öyküsü de bu gruptadır. Sorudaki tanıma uyduğu için doğru cevaptır.",
+    "E": "Obezite, kilo yönetimiyle düzeltilebilen ve diyet ile fiziksel etkinlikle ilişkili bir faktördür. Değiştirilebilir grupta yer aldığı için bu soruya uymaz."
+   },
+   "cozum": "Yaş, cins, ırk, aile öyküsü ve düşük doğum tartısı değiştirilemeyen risk faktörleridir. Diğerleri yaşam biçimi ve tedaviyle değiştirilebilir.",
+   "sayfa": [
+    7
+   ]
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Aşağıdakilerden hangisi inme ile ilişkisi kesin olmayan risk faktörleri grubunda yer alır?",
+   "secenekler": {
+    "A": "Hipertansiyon",
+    "B": "Diyabet",
+    "C": "Sigara",
+    "D": "Asemptomatik karotis stenozu",
+    "E": "Uyku apnesi"
+   },
+   "dogru": "E",
+   "ipucu": "Kanıtı tartışmalı olan grupta hangi faktörlerin toplandığını ve solunumla ilgili olanı ayır.",
+   "siklar": {
+    "A": "Hipertansiyon, ilişkisi kesin ve değiştirilebilen grupta yer alan en önemli faktördür. Bu grupta sorulmadığı için bu seçenek uymaz.",
+    "B": "Diyabet, kan şekeri yüksekliğiyle damar duvarını bozan ve ilişkisi kesin olan değiştirilebilir faktördür. Kesin grupta yer aldığı için bu sorudaki gruba girmez.",
+    "C": "Sigara, damar üzerindeki zararlı etkisi kanıtlanmış ve bırakılması önerilen değiştirilebilir faktördür. İlişkisi kesin grupta olduğu için aranan grup değildir.",
+    "D": "Asemptomatik karotis stenozu, boyun damarında darlık bulunduğu hâlde henüz belirti vermeyen durumdur ve ilişkisi kesin olan değiştirilebilir grupta sayılır. Bu nedenle kesin olmayan gruba yazılamaz.",
+    "E": "Uyku apnesi, uyku sırasında solunumun tekrarlayan duraklamalarıyla seyreden ve inme ilişkisi henüz kesinleşmemiş faktördür. Etkisi kesin olmayan grupta yer aldığı için doğru cevaptır."
+   },
+   "cozum": "Uyku apnesi, metabolik sendrom ve hiperhomosistinemi etkisi kesin olmayan gruptadır. Hipertansiyon, diyabet, sigara ve karotis stenozu ise ilişkisi kesin gruptadır.",
+   "sayfa": [
+    9,
+    8
+   ]
+  },
+  {
+   "no": 34,
+   "tur": "cikmis",
+   "sinav": "2024-2025 Kurul 2",
+   "soru": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+   "secenekler": {
+    "A": "Beyin tümörü",
+    "B": "Alzheimer hastalığı",
+    "C": "Hemipleji",
+    "D": "Parkinson hastalığı",
+    "E": "Amiyotrofik lateral skleroz"
+   },
+   "dogru": "C",
+   "ipucu": "Damar olayının dakikalar içinde yerleştiğini, dejeneratif süreçlerin yavaş ilerlediğini düşün.",
+   "siklar": {
+    "A": "Beyin tümörü, büyüyen kitle etkisiyle haftalar ve aylar içinde ilerleyen bir tablodur. Akut yerleşmediği için bu sorudaki özelliğe uymaz.",
+    "B": "Alzheimer hastalığı, bellek ve bilişsel işlevlerin yıllar içinde aşamalı olarak bozulduğu dejeneratif bir hastalıktır. Ani başlangıç göstermediği için uymaz.",
+    "C": "Hemipleji, damar kaynaklı fokal kaybın dakikalar içinde yerleştiği motor tablodur ve inme ile birlikte ani başlar. Akut başlangıcın tipik örneği olduğu için doğru cevaptır.",
+    "D": "Parkinson hastalığı, titreme ve hareket yavaşlığının yıllar içinde geliştiği dejeneratif bir hastalıktır. Akut başlangıçlı tablo olmadığı için bu soruya uymaz.",
+    "E": "Amiyotrofik lateral skleroz, kas güçsüzlüğünün aylar içinde ilerlediği motor nöron hastalığıdır. Yavaş seyrettiği için akut başlangıç özelliğini taşımaz."
+   },
+   "cozum": "Ani başlangıç damar kaynaklı tabloların özelliğidir ve hemipleji dakikalar içinde yerleşir. Tümör, Alzheimer, Parkinson ve motor nöron hastalığı yavaş ilerler.",
+   "sayfa": [
+    13
+   ]
+  },
+  {
+   "no": 20,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "İnme tanısında yatak başında yapılamayan ayrım hangisidir?",
+   "secenekler": {
+    "A": "Başlangıcın ani olup olmadığı",
+    "B": "Fokal belirtinin varlığı",
+    "C": "Risk faktörlerinin sorgulanması",
+    "D": "Nöbet öyküsünün alınması",
+    "E": "Hemorajik ile iskemik inme ayrımı"
+   },
+   "dogru": "E",
+   "ipucu": "Muayene ile kanamanın varlığının anlaşılıp anlaşılamayacağını düşün.",
+   "siklar": {
+    "A": "Başlangıcın ani olması, damar kaynaklı tabloları destekleyen bir öykü özelliğidir ve yatak başında öğrenilir. Bu özellik sorgulanabildiği için yatak başında yapılamayan ayrım değildir.",
+    "B": "Fokal belirtinin varlığı, muayenede tek yarıya ya da tek işleve oturan kaybın saptanmasıdır. Muayene ile belirlendiği için bu ayrım yatak başında yapılabilir.",
+    "C": "Risk faktörlerinin sorgulanması, öyküde hipertansiyon, diyabet ve sigara gibi etkenlerin öğrenilmesidir. Yatak başında yapılabildiği için bu sorudaki ayrım değildir.",
+    "D": "Nöbet öyküsünün alınması, inmede epileptik nöbetin eşlik edip etmediğini öğrenmeyi sağlar. Öyküyle elde edildiği için yatak başında yapılamayan ayrım değildir.",
+    "E": "Hemorajik ile iskemik inme ayrımı, kanamanın varlığını gösteren görüntüleme olmadan yatak başında yapılamaz. Öykü ve muayene tanıyı yüksek oranda koysa da bu ayrım için görüntüleme gerektiğinden doğru cevaptır."
+   },
+   "cozum": "Öykü ve muayene ile inme tanısı büyük ölçüde konur, ancak kanama ile iskemi ayrımı yatak başında yapılamaz. Bu ayrım için görüntüleme gerekir.",
+   "sayfa": [
+    13
+   ]
+  },
+  {
+   "no": 21,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Nörolojik hastalıklarda ani başlangıç aşağıdakilerden hangisi için tipiktir?",
+   "secenekler": {
+    "A": "Damar kaynaklı tablolar",
+    "B": "Yavaş ilerleyen dejeneratif hastalıklar",
+    "C": "Doğuştan metabolik hastalıklar",
+    "D": "Kas erimesi hastalıkları",
+    "E": "Zehirlenmeler"
+   },
+   "dogru": "A",
+   "ipucu": "Başlangıcın dakikalar içinde yerleşmesinin hangi sürece işaret ettiğini düşün.",
+   "siklar": {
+    "A": "Damar kaynaklı tablolar, ani başlangıçlı fokal nörolojik kayıpla yerleşen iskemik ve kanayıcı inmelerdir. Dakikalar ile saatler içinde oturdukları için doğru cevaptır.",
+    "B": "Dejeneratif hastalıklar yavaş ve aşamalı ilerler; belirtiler yıllar içinde yerleşir. Ani başlangıç beklentisi bu gruba uymadığı için seçilemez.",
+    "C": "Doğuştan metabolik hastalıklar genellikle erken çocuklukta bulgu verir ve seyirleri daha yavaştır. Ani yerleşen bir tablo olmadıkları için bu soruya uymaz.",
+    "D": "Kas erimesi hastalıkları, kas gücünün aylar içinde azaldığı nöromusküler tablolardır ve seyirleri yavaştır. Ani başlangıç göstermedikleri için aranan özellik değildir.",
+    "E": "Zehirlenmeler, zehirin alınmasından sonra dakikalar içinde bulgu verebilen ve madde etkisiyle seyreden tablolardır. Ancak soruda istenen, ani başlangıcı damar hastalığıyla eşleştiren tablodur."
+   },
+   "cozum": "Ani başlangıç, dakikalar ile saatler içinde yerleşen fokal kayıpla damar kaynaklı tabloların özelliğidir. Dejeneratif hastalıklar yıllar içinde ilerler.",
+   "sayfa": [
+    13
+   ]
+  },
+  {
+   "no": 14,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Reperfüzyon tedavisinin kurtarmayı hedeflediği doku hangisidir?",
+   "secenekler": {
+    "A": "Enfarkt çekirdeği",
+    "B": "Beyaz madde",
+    "C": "Serebellum",
+    "D": "Penumbra",
+    "E": "Hipokampus"
+   },
+   "dogru": "D",
+   "ipucu": "Kan akımı düşmüş ama henüz ölmemiş, yeniden kanlanmayla kurtulabilen alanı düşün.",
+   "siklar": {
+    "A": "Enfarkt çekirdeği, kan akımının en düşük olduğu ve geri dönüşsüz ölen alandır; doku burada tamamen kaybedilmiştir. Kurtarılamadığı için bu sorudaki hedef doku değildir.",
+    "B": "Beyaz madde, miyelinli sinir liflerini taşıyan doku katmanıdır ve iskemide çekirdek ile birlikte etkilenir. Kurtarılabilir alan tanımına uymadığı için bu soruya girmez.",
+    "C": "Serebellum, denge ve hareket eşgüdümünü sağlayan beyin bölgesidir ve kanaması ayrı bir klinik tablo yapar. Reperfüzyonun hedeflediği doku tanımı olmadığı için uymaz.",
+    "D": "Penumbra, iskemiye uğramış ama henüz ölmemiş, yeniden kanlanmayla kurtarılabilen beyin dokusudur. Reperfüzyon tedavisi bu alanı kurtarmayı hedeflediği için doğru cevaptır.",
+    "E": "Hipokampus, belleğin yerleştiği beyin bölgesidir ve iskemiden erken etkilenen yapılardan biridir. Kurtarılabilir alan tanımını karşılamadığı için bu soruda yer almaz."
+   },
+   "cozum": "Penumbra, yeniden kanlanmayla kurtarılabilen dokudur ve tedavinin hedefidir. Çekirdek alan ise geri dönüşsüz ölmüştür.",
+   "sayfa": [
+    15,
+    27
+   ]
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Kortikal bulgu ve hemianopsi olmaksızın yüz, kol ve bacaktan en az ikisinde motor kayıp veren tablo hangisidir?",
+   "secenekler": {
+    "A": "Tam anterior sendrom",
+    "B": "Parsiyel anterior sendrom",
+    "C": "Posterior sendrom",
+    "D": "Subaraknoid kanama",
+    "E": "Laküner sendrom"
+   },
+   "dogru": "E",
+   "ipucu": "Küçük derin infarktların korteksi ve görme alanını hiç tutmadığını hatırla.",
+   "siklar": {
+    "A": "Tam anterior sendrom, hemiparezi, afazi ya da ihmal ve homonim hemianopsinin üçünün birlikte bulunduğu tablodur. Hemianopsi bu sendromda arandığı için kortikal bulgusuz tabloya uymaz.",
+    "B": "Parsiyel anterior sendrom, üç bileşenin ikisinin bulunduğu ya da motor ve duyusal bulguların monoparezi gibi sınırlı kaldığı tablodur. Hemianopsi bu grupta görülebildiği için sorudaki tanıma uymaz.",
+    "C": "Posterior sendrom, oksipital lob, beyin sapı ve serebellar belirtilerin bileşiminden oluşur ve hemianopsi ile ataksi öne çıkar. Kortikal tutulum beklendiği için bu tabloya uymaz.",
+    "D": "Subaraknoid kanama, kanın subaraknoid aralığa geçmesiyle gelişen kanayıcı inme biçimidir ve ani baş ağrısıyla seyreder. Kortikal bulgu ile tanımlanan fokal sendrom olmadığı için uymaz.",
+    "E": "Laküner sendrom, kapsüla interna ve bazis pontis gibi sıkışık bölgeleri sulayan penetran arterlerin tıkanmasıyla gelişen küçük derin infarktların tablosudur. Kortikal bulgu ve hemianopsi olmadan yüz, kol ve bacaktan en az ikisini tuttuğu için doğru cevaptır."
+   },
+   "cozum": "Laküner sendrom küçük derin infarktlara bağlıdır ve yüz, kol, bacaktan en az ikisini tutar. Kortikal bulgu ile hemianopsi bu tabloda yoktur.",
+   "sayfa": [
+    16
+   ]
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Hemiparezi, ihmal ve homonim hemianopsinin birlikte görüldüğü tablo hangisidir?",
+   "secenekler": {
+    "A": "Tam anterior sendrom",
+    "B": "Laküner sendrom",
+    "C": "Posterior sendrom",
+    "D": "Geçici iskemik atak",
+    "E": "Vasküler demans"
+   },
+   "dogru": "A",
+   "ipucu": "Üç fokal bulgunun aynı anda ve tamamının bulunması hangi tabloyu tanımlar?",
+   "siklar": {
+    "A": "Tam anterior sendrom, hemiparezi, afazi ya da ihmal ve homonim hemianopsinin üçünün birlikte bulunduğu tablodur. Üç bulgu bir arada olduğu için doğru cevaptır.",
+    "B": "Laküner sendrom, kortikal bulgu ve hemianopsi olmadan yüz, kol ve bacaktan en az ikisini tutan küçük derin infarkt tablosudur. Hemianopsi ve ihmal bu tabloda bulunmadığı için uymaz.",
+    "C": "Posterior sendrom, oksipital lob, beyin sapı ve serebellar belirtilerin bileşimidir ve ataksi ile hemianopsi görülebilir. İhmal bu bileşimde yer almadığı için sorudaki üçlüye uymaz.",
+    "D": "Geçici iskemik atak, yirmi dört saatten kısa süren ve kalıcı hasar bırakmayan fokal kayıptır. Kayıp geçici olduğu için yerleşmiş üç bulguyu tanımlayan tablo olamaz.",
+    "E": "Vasküler demans, damar hastalığının bellek ve bilişsel işlevleri bozduğu ayrı başlıktır. Fokal motor ve görme alanı bulgularıyla tanımlanmadığı için bu üçlüye uymaz."
+   },
+   "cozum": "Üç bileşenin birlikte bulunması tam anterior sendromu tanımlar. İki bileşen varsa parsiyel anterior sendrom düşünülür.",
+   "sayfa": [
+    16
+   ]
+  },
+  {
+   "no": 27,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Serebrovasküler hastalık ve hipertansiyon öyküsü olan ve sol tarafında ani güç kaybı, dizartri ve baş ağrısı ile acile başvuran hastada öncelikle hangi tetkik/tetkikleri istersiniz?",
+   "secenekler": {
+    "A": "Kontrastsız beyin bilgisayarlı tomografi - difüzyon manyetik rezonans görüntüleme",
+    "B": "Kontrastlı beyin bilgisayarlı tomografi",
+    "C": "Beyin manyetik rezonans görüntüleme",
+    "D": "Karotis-vertebral arter renkli Doppler ultrasonografi",
+    "E": "Anjiyografi"
+   },
+   "dogru": "A",
+   "ipucu": "Kanamayı dışlayan hızlı inceleme ile yeni lezyonu gösteren doku incelemesinin birlikte istendiğini düşün.",
+   "siklar": {
+    "A": "Kontrastsız bilgisayarlı tomografi kanamayı gösterip iskemiyi dışlar, difüzyon manyetik rezonans ise yeni enfarktı erken gösterir. İkisi birlikte tip ayrımını ve lezyon yerini verdiği için doğru cevaptır.",
+    "B": "Kontrastlı bilgisayarlı tomografi, damar ve kanlanma hakkında ek bilgi veren incelemedir; kanama ayrımında kontrastsız inceleme esastır. Bu yüzden ilk sırada kontrastlı inceleme istenmez.",
+    "C": "Beyin manyetik rezonans görüntüleme, dokuyu ayrıntılı gösteren ve erken iskemide duyarlı olan incelemedir. Tek başına ilk sırada istenmesi kanamayı hızla dışlama gereğini karşılamaz.",
+    "D": "Karotis ve vertebral arter Doppler ultrasonografi, boyun damarlarındaki darlığı ve akımı gösterir. Kaynağı araştıran bu inceleme akut tip ayrımından sonraki basamakta yer alır.",
+    "E": "Anjiyografi, damar lümenini ve tıkanıklığı gösteren girişimsel incelemedir ve seçilmiş hastalarda uygulanır. İlk basamakta kanama ile iskemi ayrımını vermediği için öncelikli değildir."
+   },
+   "cozum": "Akut inmede kontrastsız bilgisayarlı tomografi kanamayı dışlar, difüzyon manyetik rezonans yeni enfarktı gösterir. İki inceleme birlikte tip ve yer bilgisini verir.",
+   "sayfa": [
+    46,
+    25
+   ]
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Akut inmede ilk görüntülemenin kontrastsız yapılmasının temel amacı nedir?",
+   "secenekler": {
+    "A": "Damar darlığını ölçmek",
+    "B": "Kanamayı hızla gösterip tromboliz öncesi dışlamak",
+    "C": "Beyin dokusunun kan akımını sayısallaştırmak",
+    "D": "Kalp kaynaklı pıhtıyı göstermek",
+    "E": "Beyin sapı reflekslerini değerlendirmek"
+   },
+   "dogru": "B",
+   "ipucu": "Pıhtı çözücü tedavi verilmeden hangi tehlikeli durumun ekarte edilmesi gerektiğini düşün.",
+   "siklar": {
+    "A": "Damar darlığı, tomografi anjiyografisi ya da Doppler ile değerlendirilen damar duvarı ve lümen sorunudur. İlk kontrastsız inceleme damarı ölçmediği için bu amaç taşınmaz.",
+    "B": "Kanama, kontrastsız bilgisayarlı tomografide hızla görünen ve pıhtı çözücü tedavinin önündeki en önemli engeldir. Kanamayı dışlayarak tedavi güvenliğini sağladığı için doğru cevaptır.",
+    "C": "Beyin dokusunun kan akımı, perfüzyon incelemeleriyle sayısallaştırılır ve çekirdek ile penumbra ayrımında kullanılır. İlk kontrastsız tomografi kan akımı ölçmediği için bu amaçla yapılmaz.",
+    "D": "Kalp kaynaklı pıhtı, kardiyoembolik inmede sol atriyum ya da ventriküldeki trombüsten kopan embolidir. Beyin tomografisi bu pıhtıyı göstermediği için amaç bu değildir.",
+    "E": "Beyin sapı refleksleri, nörolojik muayenede değerlendirilen ışık ve göz hareketi yanıtlarıdır. Görüntüleme refleks ölçmediği için bu amaç geçerli değildir."
+   },
+   "cozum": "Kontrastsız bilgisayarlı tomografi kanamayı hızla gösterir ve pıhtı çözücü tedaviden önce kanamayı dışlar. Damar ve akım değerlendirmesi ayrı incelemelerle yapılır.",
+   "sayfa": [
+    46,
+    25
+   ]
+  },
+  {
+   "no": 26,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Aşağıdakilerden hangisi akut iskemik inmede tromboliz için dışlama ölçütüdür?",
+   "secenekler": {
+    "A": "Görüntülemede akut kanama saptanması",
+    "B": "Hastanın altmış yaşında olması",
+    "C": "Baş ağrısı bulunması",
+    "D": "Hafif dizartri olması",
+    "E": "Tek taraflı güçsüzlük"
+   },
+   "dogru": "A",
+   "ipucu": "Pıhtı çözücü tedavinin en tehlikeli engelinin ne olduğunu düşün.",
+   "siklar": {
+    "A": "Akut kanama, beyin dokusunda taze kan birikmesidir ve pıhtı çözücü ilacın kanamayı büyütme riskini taşır. Görüntülemede kanama saptanması tedaviyi engellediği için doğru cevaptır.",
+    "B": "Altmış yaş, inme sıklığını artıran ancak tek başına tedaviyi engellemeyen bir özelliktir. Yaş sınırı dışlama ölçütü olarak kullanılmadığı için bu seçenek uymaz.",
+    "C": "Baş ağrısı, inmede hastaların bir bölümünde görülen eşlikçi bir yakınmadır ve kanamanın göstergesi sayılmaz. Tek başına dışlama nedeni olmadığı için uymaz.",
+    "D": "Hafif dizartri, konuşmanın peltek çıkmasıdır ve hafif nörolojik kaybın bulgusudur. Tedaviyi engelleyen bir durum olmadığı için bu seçenek uymaz.",
+    "E": "Tek taraflı güçsüzlük, inmede karşı yarıyı tutan fokal motor kayıptır ve pıhtı çözücü tedavinin hedeflediği asıl tablodur. Bu nedenle dışlama ölçütü değildir."
+   },
+   "cozum": "Görüntülemede akut kanama, geniş hipodansite, kontrolsüz yüksek kan basıncı ve düşük trombosit sayısı tedaviyi engeller. Kanama saptanması bu nedenle dışlama ölçütüdür.",
+   "sayfa": [
+    25
+   ]
+  },
+  {
+   "no": 25,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Modifiye Rankin ölçeğinde altı puan neyi gösterir?",
+   "secenekler": {
+    "A": "Hiç belirti olmamasını",
+    "B": "Hafif sakatlığı",
+    "C": "Orta sakatlığı",
+    "D": "Belirgin sakatlık olmamasını",
+    "E": "Ölüm"
+   },
+   "dogru": "E",
+   "ipucu": "Ölçeğin en yüksek puanının sağ kalan hasta için kullanılmadığını düşün.",
+   "siklar": {
+    "A": "Sıfır puan hiç belirti olmamasını anlatır ve hasta tam bağımsızdır. Altı puan bu derecenin çok uzağında kaldığı için bu seçenek uymaz.",
+    "B": "Hafif sakatlık ikinci ve üçüncü puanlarda yer alır ve hasta günlük işlerini yardımla sürdürür. Altı puan bu düzeyi göstermediği için uymaz.",
+    "C": "Orta sakatlık üçüncü puanda tanımlanır ve hastanın bazı işlerde desteğe gereksinimi olduğunu anlatır. Altı puan bu düzeyi göstermediği için uymaz.",
+    "D": "Belirgin sakatlık olmaması birinci puandır ve hasta yakınmalara karşın günlük işlerini yapabilir. Altı puan bu düzeyi anlatmadığı için uymaz.",
+    "E": "Altı puan ölümü gösterir ve ölçeğin son basamağıdır; sağ kalan hastada puan en çok beşe kadar çıkar. Altıncı basamağın karşılığı ölüm olduğu için doğru cevaptır."
+   },
+   "cozum": "Modifiye Rankin ölçeği sıfırdan altıya kadar puanlanır; sıfır hiç belirti yok, beş çok ağır sakatlık, altı ölüm demektir. Puan yükseldikçe bağımsızlık azalır.",
+   "sayfa": [
+    26
+   ]
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Akut iskemik inmede doku plazminojen aktivatörünün uygulaması nasıldır?",
+   "secenekler": {
+    "A": "Tamamı tek seferde bolus",
+    "B": "Dozun yüzde onu bir dakikada bolus, kalanı altmış dakikada infüzyon",
+    "C": "Yarısı iki saatte infüzyon",
+    "D": "Doz kilogram başına üç miligram",
+    "E": "Yalnız intravenöz yoldan dört saatte"
+   },
+   "dogru": "B",
+   "ipucu": "İlacın küçük bir bölümünün hızlı, çoğunun ise yavaş uygulamayla verildiğini düşün.",
+   "siklar": {
+    "A": "Tek seferde bolus, ilacın tamamının kısa sürede damara verilmesidir ve ani kanama riskini artırır. Uygulama iki basamaklı olduğu için bu tanım soruya uymaz.",
+    "B": "İlaç kilogram başına sıfır virgül dokuz miligram, en çok doksan miligram olarak hesaplanır; yüzde onu bir dakikada bolus, kalanı altmış dakikada infüzyonla verilir. Bu iki basamaklı uygulama doğru cevaptır.",
+    "C": "Yarısının iki saatlik infüzyonla verilmesi, dozun bölünme oranını ve süresini yanlış kurar. Gerçek uygulamada bolus payı yüzde on, infüzyon süresi altmış dakikadır.",
+    "D": "Kilogram başına üç miligram, doğru dozun çok üzerinde bir hesaplamadır; doz kilogram başına sıfır virgül dokuz miligramdır. Yüksek doz kanama riskini artırdığı için bu seçenek uymaz.",
+    "E": "Yalnız damar içi yoldan dört saatte verilmesi, tedavinin zamanla azalan yararını gözetmez; uygulama kısa sürede tamamlanır. Süre ve yol yanlış kurulduğu için bu seçenek uymaz."
+   },
+   "cozum": "Doz kilogram başına sıfır virgül dokuz miligram, en çok doksan miligramdır. Yüzde onu bir dakikada bolus, kalanı altmış dakikada infüzyonla verilir.",
+   "sayfa": [
+    28
+   ]
+  },
+  {
+   "no": 29,
+   "tur": "cikmis",
+   "sinav": "2025-2026 Kurul 2",
+   "soru": "Aşağıda verilen inme komplikasyonları ve tedavileriyle ilgili ifadelerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Mesane ve bağırsak disfonksiyonu görülmez",
+    "B": "DVT'yi önlemek için eklem hareket açıklığı egzersizleri önerilir",
+    "C": "Bası yarasını önlemek için pozisyonlama yapılır",
+    "D": "İnme sonrası depresyon olabilir, gerektiğinde medikal tedavi başlanır",
+    "E": "Yutma bozukluğu nedeniyle aspirasyon pnömonisi gelişebilir"
+   },
+   "dogru": "A",
+   "ipucu": "İnme sonrası sfinkter işlevlerinin etkilenip etkilenmediğini düşün.",
+   "siklar": {
+    "A": "Mesane ve bağırsak disfonksiyonu inme sonrası sık görülen bir komplikasyondur ve sfinkter denetimi bakım planında yer alır. İfade gerçeğe aykırı olduğu için yanlıştır, bu yüzden doğru cevaptır.",
+    "B": "Eklem hareket açıklığı egzersizleri, hareketsizliği azaltarak pıhtı oluşumunu önlemeye yardım eder. İfade doğru olduğu için bu sorudaki yanlış cümle değildir.",
+    "C": "Pozisyonlama, basınç noktalarını değiştirerek deri bütünlüğünü korur ve bası yarasını önler. Bu ifade doğru olduğundan aranan yanlış ifade değildir.",
+    "D": "İnme sonrası depresyon gelişebilir ve belirgin olduğunda medikal tedavi başlanır. İfade doğru olduğu için yanlış cümle olarak seçilemez.",
+    "E": "Yutma bozukluğu, gıdanın solunum yoluna kaçmasıyla aspirasyon pnömonisine yol açabilir. Bu ifade doğru olduğu için yanlış cümle değildir."
+   },
+   "cozum": "Mesane ve bağırsak disfonksiyonu inme sonrası görülen komplikasyonlardandır; bu nedenle görülmez diyen cümle yanlıştır. Diğer dört ifade bakım ve korunma önlemlerini doğru anlatır.",
+   "sayfa": [
+    31,
+    60
+   ]
+  },
+  {
+   "no": 31,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Aşağıdakilerden hangisi/hangileri serebrovasküler olay sonrası gelişen komplikasyonlardandır?",
+   "secenekler": {
+    "A": "Üst ekstremite komplikasyonları",
+    "B": "Derin ven trombozu (DVT) ve pulmoner emboli",
+    "C": "Bağırsak disfonksiyonları",
+    "D": "Bası yaraları",
+    "E": "Hepsi"
+   },
+   "dogru": "E",
+   "ipucu": "Yatağa bağlı kalan hastada hareket kısıtlılığının yol açtığı sorunları birlikte düşün.",
+   "siklar": {
+    "A": "Üst ekstremitenin komplikasyonları, omuz ağrısı ve eklem hareket kısıtlılığı gibi sorunları kapsar ve inme sonrası sık görülür. Yalnız bu grubu söylemek diğerlerini dışladığı için eksik kalır.",
+    "B": "Derin ven trombozu ve pulmoner emboli, hareketsizliğe bağlı pıhtı oluşumuyla gelişen ve mortaliteyi artıran komplikasyonlardır. Tek başına bu ikiliyi söylemek eksik liste verdiği için uymaz.",
+    "C": "Bağırsak disfonksiyonu, kabızlık ve sfinkter sorunları biçiminde inme sonrası görülen komplikasyonlardır. Yalnız bu başlığı seçmek diğerlerini dışarıda bırakır.",
+    "D": "Bası yaraları, uzun süre aynı pozisyonda kalmaya bağlı gelişir ve pozisyonlama ile önlenmeye çalışılır. Tek başına bunu söylemek tam listeyi vermediği için uymaz.",
+    "E": "Hepsi, sayılan dört başlığın tamamını kapsar; üst ekstremite sorunları, toplardamar pıhtısı, bağırsak işlev bozukluğu ve bası yaraları inme sonrası görülür. Tümünü kapsayan ifade doğru cevaptır."
+   },
+   "cozum": "İnme sonrası üst ekstremite sorunları, derin ven trombozu, bağırsak işlev bozukluğu ve bası yaraları görülebilir. Bu nedenle komplikasyonların tümü birlikte değerlendirilir.",
+   "sayfa": [
+    31,
+    60
+   ]
+  },
+  {
+   "no": 22,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "İnme sonrası genel bakımda aşağıdakilerden hangisi önerilmez?",
+   "secenekler": {
+    "A": "Erken mobilizasyon",
+    "B": "Rutin idrar kateterizasyonu",
+    "C": "Beslenme ve hidrasyonun sağlanması",
+    "D": "Zatürre şüphesinde hızlı tedavi",
+    "E": "Nöbetin tedavi edilmesi"
+   },
+   "dogru": "B",
+   "ipucu": "Enfeksiyon kaynağı olabilecek bir uygulamanın gereksiz yere yapılıp yapılmadığını düşün.",
+   "siklar": {
+    "A": "Erken mobilizasyon, yatakta kalmayı azaltarak zatürre ve toplardamar pıhtısı riskini düşüren bir uygulamadır. Genel bakımda önerildiği için aranan ifade değildir.",
+    "B": "Rutin idrar kateterizasyonu, her hastaya sonda takılması anlamına gelir ve sonda enfeksiyon kaynağı olduğu için önerilmez. Uygulamanın önerilmediğini söyleyen ifade doğru cevaptır.",
+    "C": "Beslenme ve hidrasyonun hızla sağlanması, yutma güçlüğü olan hastada güvenli yolun seçilmesini de içerir. Önerilen bir uygulama olduğu için bu sorudaki ifade değildir.",
+    "D": "Zatürre şüphesinde tedavinin hızla başlanması, inme bakımında önerilen ve gecikmeyi önleyen bir uygulamadır. Bu yaklaşım koruyucu antibiyotikten ayrılır; burada var olan enfeksiyon tedavi edilir.",
+    "E": "Nöbetin tedavi edilmesi önerilir; buna karşın koruyucu antiepileptik ilaç verilmesi önerilmez. Bu ifade önerilen uygulamalar arasında yer aldığı için sorulan uygulama bu değildir."
+   },
+   "cozum": "Rutin idrar sondası önerilmez, çünkü sonda enfeksiyon kaynağıdır ve yalnız gerektiğinde takılır. Erken mobilizasyon, beslenme ve nöbet tedavisi ise önerilir.",
+   "sayfa": [
+    31
+   ]
+  },
+  {
+   "no": 23,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "İnme sonrası gelişen komplikasyonlarla ilgili aşağıdakilerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Mesane ve bağırsak sorunları hiç görülmez",
+    "B": "Zatürre mortaliteyi etkilemez",
+    "C": "Pulmoner emboli mortalitenin bir bölümünden sorumludur",
+    "D": "Profilaktik antiepileptik ilaç verilmelidir",
+    "E": "İdrar sondası her hastaya takılmalıdır"
+   },
+   "dogru": "C",
+   "ipucu": "Bacakta oluşan pıhtının akciğere gidişinin ölüm oranını nasıl etkilediğini düşün.",
+   "siklar": {
+    "A": "Mesane ve bağırsak sorunları, inme sonrası sık görülen komplikasyonlardır ve bakım planını etkiler. Hiç görülmediğini söyleyen ifade gerçeğe uymadığı için doğru yanıt olamaz.",
+    "B": "Zatürre, yutma güçlüğü ve yatakta kalmaya bağlı gelişir ve mortalite ile morbiditeyi artırır. Etkilemediğini söyleyen ifade yanlış olduğu için seçilemez.",
+    "C": "Pulmoner emboli, bacaktaki pıhtının akciğer damarlarını tıkamasıyla gelişir ve mortalitenin bir bölümünden sorumludur. Bu ifade gerçeği yansıttığı için doğru cevaptır.",
+    "D": "Nöbetler inme sonrası tedavi edilir, ancak henüz nöbet geçirmemiş hastaya koruyucu antiepileptik ilaç başlanması önerilmez. Koruyucu uygulamayı şart koşan ifade bu nedenle yanlıştır.",
+    "E": "İdrar sondası, idrar çıkışını izlemek için gerektiğinde kullanılan bir araçtır ve her hastaya takılması enfeksiyon riskini artırır. Her hastaya takılmasını söyleyen ifade yanlıştır."
+   },
+   "cozum": "Pulmoner emboli, inme sonrası mortalitenin bir bölümünden sorumludur ve bacaktaki pıhtının akciğere gitmesiyle gelişir. Erken mobilizasyon bu riski azaltır.",
+   "sayfa": [
+    31,
+    60
+   ]
+  },
+  {
+   "no": 15,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Akut inmede kan şekeri hangi aralıkta tutulmalıdır?",
+   "secenekler": {
+    "A": "80-100 mg/dl",
+    "B": "200-250 mg/dl",
+    "C": "60-80 mg/dl",
+    "D": "250-300 mg/dl",
+    "E": "140-180 mg/dl"
+   },
+   "dogru": "E",
+   "ipucu": "Hedefin çok düşük ve çok yüksek değerlerden kaçınan orta bir bant olduğunu düşün.",
+   "siklar": {
+    "A": "Seksen ile yüz arası, sağlıklı kişilerde açlık kan şekeri düzeyine yakındır, ancak akut inmede bu kadar dar bir aralık hedeflenmez. Hipoglisemi riski nedeniyle uygun değildir.",
+    "B": "İki yüz ile iki yüz elli arası, hiperglisemiyi düzeltmek yerine yüksek değerde bırakır; hiperglisemi hemorajik dönüşüm ve ödem riskini artırır. Bu aralık hedef değildir.",
+    "C": "Altmış ile seksen arası, hipoglisemiye yakın düşük değerleri içerir ve nörolojik bulguları ağırlaştırır. Akut inmede bu aralık hedeflenmez.",
+    "D": "İki yüz elli ile üç yüz arası, açıkça hiperglisemik bir aralıktır ve enfarkt alanının genişlemesine yol açar. Düzeltilmesi gereken değerler olduğu için hedef olamaz.",
+    "E": "Yüz kırk ile yüz seksen arası, hipergliseminin zararlarını önlerken hipoglisemiden de kaçınan aralıktır. Bu nedenle kan şekeri hedefi doğru cevaptır."
+   },
+   "cozum": "Hiperglisemi hemorajik dönüşümü, ödemi ve enfarkt genişlemesini artırır. Kan şekeri yüz kırk ile yüz seksen arasında tutulacak şekilde düzeltilir.",
+   "sayfa": [
+    32
+   ]
+  },
+  {
+   "no": 13,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Akut iskemik inmenin ilk yirmi dört saatinde kan basıncı için doğru yaklaşım hangisidir?",
+   "secenekler": {
+    "A": "Her hastada hemen normal sınıra indirilir",
+    "B": "Kan basıncı düşükse yükseltilmez",
+    "C": "Eşlik eden sorun yoksa ve çok yüksek değilse hemen düşürülmez",
+    "D": "İlk saatte yarıya indirilir",
+    "E": "Yalnız idrar söktürücü ile düşürülür"
+   },
+   "dogru": "C",
+   "ipucu": "İlk gün tansiyonun kendiliğinden gerilediğini ve acil müdahale eşiğinin çok üstte olduğunu hatırla.",
+   "siklar": {
+    "A": "Her hastada hemen normal sınıra indirmek, beyin perfüzyonunu düşürerek iskemiyi derinleştirir. İlk gün bu yaklaşım uygulanmadığı için bu seçenek yanlıştır.",
+    "B": "Kan basıncının düşük kalması beyin perfüzyonunu doğrudan azaltır ve hipotansiyon ile düşük hacim mutlaka düzeltilir. Düzeltmeyi reddeden bu seçenek bu nedenle yanlıştır.",
+    "C": "İlk yirmi dört saatte kan basıncı çok yüksek değilse ve eşlik eden kalp ya da aort sorunu yoksa hemen düşürülmez. Bu yaklaşım perfüzyonu koruduğu için doğru cevaptır.",
+    "D": "İlk saatte yarıya indirmek aşırı ve hızlı bir düşüşe yol açar; gerektiğinde hedef yüzde on beşlik azaltmadır. Bu nedenle bu seçenek yanlıştır.",
+    "E": "İdrar söktürücü tek başına kan basıncını hızla düşürür ama hacim kaybıyla perfüzyonu bozar. İlk gün rutin böyle bir uygulama yapılmadığı için bu seçenek uymaz."
+   },
+   "cozum": "İlk yirmi dört saatte kan basıncı iki yüz yirmiye yüz yirmi sınırının altında ve eşlik eden sorun yoksa düşürülmez. Gerektiğinde hedef yüzde on beşlik azaltmadır.",
+   "sayfa": [
+    36,
+    35
+   ]
+  },
+  {
+   "no": 33,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Serebrovasküler olaylarda fonksiyonel düzeyi olumsuz yönde etkileyen kötü prognoz belirteçleri ile ilgili aşağıdaki öncüller verilmiştir:\nI. Multipl nörolojik defisit\nII. Zayıf kognitif fonksiyon\nIII. Algısal ve uzaysal kayıplar\nIV. Başlangıçta koma olmaması\nBunlardan hangileri kötü prognoz belirtecidir?",
+   "secenekler": {
+    "A": "I, II ve III",
+    "B": "I ve III",
+    "C": "II ve IV",
+    "D": "Yalnız IV",
+    "E": "I, II, III ve IV"
+   },
+   "dogru": "A",
+   "ipucu": "Başlangıçta bilinç korunmuşsa bunun seyir için olumlu mu olumsuz mu sayıldığını düşün.",
+   "siklar": {
+    "A": "Bir, iki ve üçüncü öncüller çoklu nörolojik defisit, zayıf kognitif işlev ve algısal uzaysal kayıpları anlatır; üçü de işlev düzeyini düşüren belirteçlerdir. Dördüncü öncül koma olmamasını söylediği için kötü belirteç değildir ve bu küme doğru cevaptır.",
+    "B": "Bir ve üçüncü öncüller doğru belirteçlerdir, ancak ikinci öncüldeki zayıf kognitif işlev de kötü seyir göstergesidir. Bu öncül dışlandığı için küme eksik olur.",
+    "C": "İkinci öncül doğrudur; dördüncü öncüldeki başlangıçta koma olmaması ise seyri olumlu gösterir. Bu ikisinin birlikte verilmesi yanlış kümeyi oluşturur.",
+    "D": "Yalnız dördüncü öncül, başlangıçta koma olmamasını söyler ve bilincin korunduğunu gösterir. Tek başına kötü belirteç olmadığı için bu seçenek yanlıştır.",
+    "E": "Dört öncülün tümünü almak, başlangıçta koma olmaması gibi olumlu bir durumu da kötü belirteç sayar. Bu nedenle tamamı doğru küme değildir."
+   },
+   "cozum": "Çoklu nörolojik defisit, zayıf kognitif işlev ve algısal uzaysal kayıplar kötü prognozu gösterir. Başlangıçta bilincin korunması ise olumlu bir bulgudur.",
+   "sayfa": [
+    37,
+    47
+   ]
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Hemorajik inme için aşağıdakilerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Tüm inmelerin yarısını oluşturur",
+    "B": "Sekil bırakmadan iyileşir",
+    "C": "Otuz günlük mortalitesi iskemik inmeden belirgin yüksektir",
+    "D": "Genç hastalarda hiç görülmez",
+    "E": "Tanısında lomber ponksiyon ilk seçenektir"
+   },
+   "dogru": "C",
+   "ipucu": "Kanamanın kitle etkisi ve ödem nedeniyle erken dönemde ağır seyrettiğini hatırla.",
+   "siklar": {
+    "A": "Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır ve yarısını oluşturmaz. En sık tip iskemik infarkt olduğu için bu oran yanlıştır.",
+    "B": "Sekilsiz iyileşme, küçük ve yüzeyel kanamalarda görülebilen bir sonuçtur ve genel kural değildir. Hayatta kalanların ancak yüzde yirmisi altıncı ayda tam bağımsız kaldığı için bu ifade yanlıştır.",
+    "C": "Hemorajik inmede otuz günlük mortalite belirgin yüksektir; kitle etkisi, ödem ve ventriküle açılma bu seyri ağırlaştırır. Bu nedenle mortalite karşılaştırması doğru cevaptır.",
+    "D": "Hemorajik inme genç hastalarda da görülebilir; hipertansiyon dışında damar anomalisi ve antikoagülan kullanımı bu yaşta etkili olur. Yaşla sınırlı olmadığı için bu ifade yanlıştır.",
+    "E": "Lomber ponksiyon, beyin omurilik sıvısını inceleyen girişimdir ve subaraknoid kanamada yardımcı olur. İntraserebral kanama tanısında ilk seçenek görüntülemedir, bu girişim değildir."
+   },
+   "cozum": "Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır ve otuz günlük mortalitesi yüksektir. Hayatta kalanların ancak yüzde yirmisi altıncı ayda bağımsız kalır.",
+   "sayfa": [
+    37
+   ]
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "İntraserebral kanamalarda en sık görülen yerleşim hangisidir?",
+   "secenekler": {
+    "A": "Putaminal kanama",
+    "B": "Lober subkortikal kanama",
+    "C": "Talamik kanama",
+    "D": "Pontin kanama",
+    "E": "Serebellar kanama"
+   },
+   "dogru": "A",
+   "ipucu": "Yerleşimlerin yaklaşık yarısını oluşturan derin bölgeyi ve ikinci sırayı düşün.",
+   "siklar": {
+    "A": "Putaminal kanama, intraserebral kanamaların yüzde kırk ile elli arasındaki bölümünü oluşturan en sık yerleşimdir. Hemiparezi ile seyrettiği için sıklık sorusunun doğru cevabıdır.",
+    "B": "Lober subkortikal kanama, kortekse yakın yerleşen ve yüzde yirmi ile otuz arasında görülen kanamadır. Sıklıkta ikinci sırada kaldığı için en sık yerleşim değildir.",
+    "C": "Talamik kanama, duyu kusuru ve talamik ağrıyla seyreden ve yüzde yirmi ile otuz arasında görülen yerleşimdir. Putaminal kanamanın gerisinde kaldığı için bu soruya uymaz.",
+    "D": "Pontin kanama, yüzde beş ile sekiz arasında görülen seyrek ama kötü seyirli kanamadır. Sıklık sıralamasında önde olmadığı için en sık yerleşim değildir.",
+    "E": "Serebellar kanama, yüzde sekiz ile on arasında görülen ve arka kafa çukurunda basınç artışı yapan kanamadır. Seyrek yerleşimler arasında kaldığı için bu soruya uymaz."
+   },
+   "cozum": "Putaminal kanama yüzde kırk ile elli arasındaki payla en sıktır ve onu lober ile talamik kanama izler.",
+   "sayfa": [
+    40
+   ]
+  },
+  {
+   "no": 17,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Fikse göz küreleri, miyotik pupillalar ve dakikalar içinde gelişen koma tablosu hangi kanamayı düşündürür?",
+   "secenekler": {
+    "A": "Putaminal kanama",
+    "B": "Pontin kanama",
+    "C": "Lober kanama",
+    "D": "Subaraknoid kanama",
+    "E": "Serebellar kanama"
+   },
+   "dogru": "B",
+   "ipucu": "Beyin sapındaki hayati merkezleri tutan ve göz hareketini bozan yerleşimi düşün.",
+   "siklar": {
+    "A": "Putaminal kanama, kapsüla interna üzerine bası yaparak hemiparezi ve geniş hematomlarda koma oluşturur. Göz kürelerinde fiksasyon bu yerleşimin bulgusu değildir.",
+    "B": "Pontin kanamada göz küreleri fikse, pupillalar miyotik ve ışık yanıtlıdır; geniş kanama dakikalar içinde komaya götürür. Bu tablo pons yerleşimini gösterdiği için doğru cevaptır.",
+    "C": "Lober kanama, kortekse yakın yerleşir ve yerleştiği loba göre hemianopsi, afazi ya da hemiparezi yapar. Göz hareketini fikse eden beyin sapı tablosu olmadığı için uymaz.",
+    "D": "Subaraknoid kanama, kanın subaraknoid aralığa geçmesiyle gelişir ve ani şiddetli baş ağrısıyla seyreder. Miyotik pupilla ve fikse göz bulgusu bu tabloya ait değildir.",
+    "E": "Serebellar kanama, baş ağrısı, baş dönmesi, kusma ve ataksiyle seyreder ve basınç artışı hızla gelişir. Fikse göz küresi pons bulgusudur, bu yerleşime uymaz."
+   },
+   "cozum": "Pontin kanamada göz küreleri fikse, pupillalar miyotik ve ışık yanıtlıdır; tablo dakikalar içinde komaya ilerler. Geniş ve ışığa yanıtsız pupilla ise herniasyonu gösterir.",
+   "sayfa": [
+    44
+   ]
+  },
+  {
+   "no": 18,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Serebellar kanamada kafa içi basınç artışının hızla gelişmesinin nedeni nedir?",
+   "secenekler": {
+    "A": "Kanamanın her zaman ventriküle açılması",
+    "B": "Hastaların genç olması",
+    "C": "Arka kafa çukurunun genişleme kapasitesinin sınırlı olması",
+    "D": "Kanamanın yüzeyel olması",
+    "E": "Serebellumun duyu organı olması"
+   },
+   "dogru": "C",
+   "ipucu": "Kafatasının alt bölümündeki dar alanda hematoma yer kalmadığını düşün.",
+   "siklar": {
+    "A": "Ventriküle açılma, kanamaların yaklaşık yüzde kırkında görülen bir durumdur ve tabloyu ağırlaştırır. Her kanamada olmadığı için basınç artışının tek nedeni olarak gösterilemez.",
+    "B": "Genç yaş, kanamanın daha hafif seyretmesini sağlayan bir etkendir ve basınç artışının mekanizmasını açıklamaz. Yaş değişkeni bu sorudaki nedeni vermez.",
+    "C": "Arka kafa çukuru sınırlı genişleme kapasitesine sahiptir; hematom ve ödem bu dar alanda basıncı hızla yükseltir. Bu nedenle basınç artışının doğru cevabıdır.",
+    "D": "Yüzeyel yerleşim, kanamanın kortekse yakın olduğunu ve fokal epileptik nöbete yol açabildiğini anlatır. Basınç artışının hızını belirleyen etken çukur kapasitesidir.",
+    "E": "Serebellum, denge ve hareket eşgüdümünü sağlayan bir merkezdir ve duyu organı değildir. Bu nedenle basınç artışını açıklayan bir özellik olarak kullanılamaz."
+   },
+   "cozum": "Arka kafa çukurunun genişleme kapasitesi sınırlıdır ve hematom ile ödem basıncı hızla artırır. Bu yüzden bilinç yakından izlenir ve sık tomografi yapılır.",
+   "sayfa": [
+    45
+   ]
+  },
+  {
+   "no": 30,
+   "tur": "cikmis",
+   "sinav": "2024-2026 Kurul 2",
+   "soru": "Aniden konuşamama ve sağ kol ile bacakta ani güç kaybı (akut hemipleji) ile başvuran hastada, semptomların ilk saatlerinde iskemik inme ile hemorajik inme ayrımını yapmak için ilk seçilecek acil tetkik hangisidir?",
+   "secenekler": {
+    "A": "Lomber ponksiyon",
+    "B": "Kontrastsız beyin bilgisayarlı tomografi (BT)",
+    "C": "Elektroensefalografi (EEG)",
+    "D": "Karotis Doppler ultrasonografi (USG)",
+    "E": "Beyin PET/BT"
+   },
+   "dogru": "B",
+   "ipucu": "Kanamayı hızla dışlayan ve en kısa sürede sonuç veren görüntülemeyi düşün.",
+   "siklar": {
+    "A": "Lomber ponksiyon, beyin omurilik sıvısının iğneyle alınmasıdır ve menenjit ile subaraknoid kanamada sıvı incelemesi sağlar. İlk saatlerde tip ayrımını görüntüleme yapar, bu girişim değil.",
+    "B": "Kontrastsız bilgisayarlı tomografi, kanamayı ilk dakikalarda gösteren ve iskemik inmede kanamayı dışlayan hızlı incelemedir. İlk saatlerde iki tipi ayıran tetkik olduğu için doğru cevaptır.",
+    "C": "Elektroensefalografi, beyin elektriksel etkinliğini kaydeden ve nöbet tanısında kullanılan incelemedir. Kanama ile iskemi ayrımını göstermediği için ilk tetkik olarak seçilmez.",
+    "D": "Karotis Doppler ultrasonografi, boyun damarlarındaki darlık ve akımı gösteren damar incelemesidir. Beyin içindeki kanama ile iskemi ayrımını yapmadığı için ilk sırada yer almaz.",
+    "E": "Pozitron emisyon tomografisi, beyin metabolizmasını gösteren ileri bir görüntüleme yöntemidir ve seçilmiş olgularda kullanılır. Acil ilk saatlerde kanama ayrımını hızla vermediği için ilk tetkik olmaz."
+   },
+   "cozum": "İlk saatlerde iskemik ile kanamalı inme ayrımı kontrastsız bilgisayarlı tomografiyle yapılır ve kanama hemen görünür. Damar incelemesi sonraki basamağa kalır.",
+   "sayfa": [
+    46
+   ]
+  },
+  {
+   "no": 16,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "İntraserebral kanamada hematom hacmi nasıl hesaplanır?",
+   "secenekler": {
+    "A": "Üç eksenin çarpımının yarısı alınarak",
+    "B": "İki eksenin toplamıyla",
+    "C": "Yalnız en uzun eksenle",
+    "D": "Kesit sayısı sayılarak",
+    "E": "Kan dansitesi ölçülerek"
+   },
+   "dogru": "A",
+   "ipucu": "Bilgisayarlı tomografide ölçülen üç boyutun birlikte kullanıldığını düşün.",
+   "siklar": {
+    "A": "Hacim, bilgisayarlı tomografide ölçülen üç eksenin çarpımının yarısı alınarak hesaplanır. Bu hesap hacmi yaklaşık verdiği için doğru cevaptır.",
+    "B": "İki eksenin toplanması, hacim yerine tek bir uzunluk ölçüsü üretir ve derinliği hesaba katmaz. Hacim üç boyut gerektirdiği için bu yöntem uymaz.",
+    "C": "Yalnız en uzun eksen, kanamanın bir çapını verir ve hacmi vermez. Kitle etkisini değerlendirmek için üç boyut gerekir.",
+    "D": "Kesit sayısı, görüntülemenin kaç kesitte alındığını gösterir ve kanamanın büyüklüğünü ölçmez. Hacim hesabında kesit sayısı değil eksen ölçüleri kullanılır.",
+    "E": "Kan dansitesi, taze kanın tomografide parlak görünmesini açıklar ve miktar ölçüsü değildir. Hacmi hesaplamadığı için bu seçenek uymaz."
+   },
+   "cozum": "Hematom hacmi, bilgisayarlı tomografide üç eksenin çarpımının yarısı alınarak hesaplanır. Hacim büyüdükçe mortalite artar.",
+   "sayfa": [
+    47
+   ]
+  }
+ ],
+ "klip": {
+  "q-3": {
+   "v": "fac97f15427b",
+   "sure": 15.72,
+   "zaman": [
+    [
+     0.12,
+     5.563
+    ],
+    [
+     6.015,
+     7.219
+    ],
+    [
+     7.67,
+     9.476
+    ],
+    [
+     9.928,
+     11.412
+    ],
+    [
+     11.864,
+     13.734
+    ],
+    [
+     14.185,
+     15.269
+    ]
+   ]
+  },
+  "i-3": {
+   "v": "783611dac3b6",
+   "sure": 4.632,
+   "zaman": [
+    [
+     0.122,
+     4.176
+    ]
+   ]
+  },
+  "c-3": {
+   "v": "172e57e3d2b6",
+   "sure": 11.568,
+   "zaman": [
+    [
+     0.121,
+     2.33
+    ],
+    [
+     2.783,
+     7.125
+    ],
+    [
+     7.577,
+     11.116
+    ]
+   ]
+  },
+  "d-3": {
+   "v": "da51200a61ba",
+   "sure": 9.768,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.322
+    ],
+    [
+     5.774,
+     9.315
+    ]
+   ]
+  },
+  "s-3-A": {
+   "v": "d3ce12f524b4",
+   "sure": 9.36,
+   "zaman": [
+    [
+     0.121,
+     5.084
+    ],
+    [
+     5.536,
+     8.908
+    ]
+   ]
+  },
+  "s-3-B": {
+   "v": "6d333141cd41",
+   "sure": 10.632,
+   "zaman": [
+    [
+     0.121,
+     6.757
+    ],
+    [
+     7.21,
+     10.179
+    ]
+   ]
+  },
+  "s-3-C": {
+   "v": "190d08bbaf18",
+   "sure": 11.592,
+   "zaman": [
+    [
+     0.121,
+     5.777
+    ],
+    [
+     6.229,
+     11.14
+    ]
+   ]
+  },
+  "s-3-D": {
+   "v": "97edf380109a",
+   "sure": 9.744,
+   "zaman": [
+    [
+     0.121,
+     5.672
+    ],
+    [
+     6.125,
+     9.291
+    ]
+   ]
+  },
+  "s-3-E": {
+   "v": "d5bb7cb10e90",
+   "sure": 10.08,
+   "zaman": [
+    [
+     0.121,
+     4.244
+    ],
+    [
+     4.696,
+     9.627
+    ]
+   ]
+  },
+  "q-28": {
+   "v": "7f6e1d8ada54",
+   "sure": 20.064,
+   "zaman": [
+    [
+     0.12,
+     10.659
+    ],
+    [
+     11.111,
+     11.975
+    ],
+    [
+     12.426,
+     14.832
+    ],
+    [
+     15.284,
+     16.482
+    ],
+    [
+     16.933,
+     18.418
+    ],
+    [
+     18.869,
+     19.613
+    ]
+   ]
+  },
+  "i-28": {
+   "v": "97ee3be0cecc",
+   "sure": 5.208,
+   "zaman": [
+    [
+     0.121,
+     4.753
+    ]
+   ]
+  },
+  "c-28": {
+   "v": "6291aa368894",
+   "sure": 11.736,
+   "zaman": [
+    [
+     0.121,
+     2.33
+    ],
+    [
+     2.783,
+     8.54
+    ],
+    [
+     8.992,
+     11.284
+    ]
+   ]
+  },
+  "d-28": {
+   "v": "377892b500e1",
+   "sure": 9.936,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     6.737
+    ],
+    [
+     7.19,
+     9.483
+    ]
+   ]
+  },
+  "s-28-A": {
+   "v": "c3bad7186e73",
+   "sure": 9.384,
+   "zaman": [
+    [
+     0.121,
+     5.446
+    ],
+    [
+     5.899,
+     8.932
+    ]
+   ]
+  },
+  "s-28-B": {
+   "v": "b3259274429f",
+   "sure": 11.016,
+   "zaman": [
+    [
+     0.121,
+     7.494
+    ],
+    [
+     7.947,
+     10.563
+    ]
+   ]
+  },
+  "s-28-C": {
+   "v": "5ffba4c34b56",
+   "sure": 10.032,
+   "zaman": [
+    [
+     0.121,
+     5.197
+    ],
+    [
+     5.65,
+     9.579
+    ]
+   ]
+  },
+  "s-28-D": {
+   "v": "af83197e9977",
+   "sure": 11.208,
+   "zaman": [
+    [
+     0.121,
+     5.668
+    ],
+    [
+     6.121,
+     10.755
+    ]
+   ]
+  },
+  "s-28-E": {
+   "v": "5995a36bcdda",
+   "sure": 10.584,
+   "zaman": [
+    [
+     0.121,
+     4.463
+    ],
+    [
+     4.915,
+     10.132
+    ]
+   ]
+  },
+  "q-1": {
+   "v": "34c531fd5d73",
+   "sure": 15.528,
+   "zaman": [
+    [
+     0.121,
+     3.987
+    ],
+    [
+     4.439,
+     6.488
+    ],
+    [
+     6.94,
+     9.15
+    ],
+    [
+     9.603,
+     11.001
+    ],
+    [
+     11.453,
+     12.976
+    ],
+    [
+     13.428,
+     15.076
+    ]
+   ]
+  },
+  "i-1": {
+   "v": "30f32892875d",
+   "sure": 4.584,
+   "zaman": [
+    [
+     0.121,
+     4.128
+    ]
+   ]
+  },
+  "c-1": {
+   "v": "cd5f902154b2",
+   "sure": 12.6,
+   "zaman": [
+    [
+     0.12,
+     2.932
+    ],
+    [
+     3.383,
+     9.447
+    ],
+    [
+     9.899,
+     12.148
+    ]
+   ]
+  },
+  "d-1": {
+   "v": "1a74cecc7dd9",
+   "sure": 10.2,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     7.045
+    ],
+    [
+     7.497,
+     9.748
+    ]
+   ]
+  },
+  "s-1-A": {
+   "v": "dea62136c364",
+   "sure": 9.216,
+   "zaman": [
+    [
+     0.121,
+     5.494
+    ],
+    [
+     5.947,
+     8.763
+    ]
+   ]
+  },
+  "s-1-B": {
+   "v": "a248ceb0b1dc",
+   "sure": 10.44,
+   "zaman": [
+    [
+     0.121,
+     6.075
+    ],
+    [
+     6.528,
+     9.987
+    ]
+   ]
+  },
+  "s-1-C": {
+   "v": "3ec639182cc1",
+   "sure": 8.376,
+   "zaman": [
+    [
+     0.121,
+     4.486
+    ],
+    [
+     4.94,
+     7.923
+    ]
+   ]
+  },
+  "s-1-D": {
+   "v": "d8d28b244bc0",
+   "sure": 8.4,
+   "zaman": [
+    [
+     0.121,
+     4.915
+    ],
+    [
+     5.368,
+     7.947
+    ]
+   ]
+  },
+  "s-1-E": {
+   "v": "c65a07499f05",
+   "sure": 8.592,
+   "zaman": [
+    [
+     0.121,
+     5.029
+    ],
+    [
+     5.481,
+     8.139
+    ]
+   ]
+  },
+  "q-2": {
+   "v": "5dcf2e645f7a",
+   "sure": 14.088,
+   "zaman": [
+    [
+     0.12,
+     3.891
+    ],
+    [
+     4.343,
+     5.837
+    ],
+    [
+     6.288,
+     8.333
+    ],
+    [
+     8.784,
+     9.988
+    ],
+    [
+     10.44,
+     12.086
+    ],
+    [
+     12.537,
+     13.636
+    ]
+   ]
+  },
+  "i-2": {
+   "v": "b530faa7dfe6",
+   "sure": 4.248,
+   "zaman": [
+    [
+     0.122,
+     3.792
+    ]
+   ]
+  },
+  "c-2": {
+   "v": "08cff754efe9",
+   "sure": 12.072,
+   "zaman": [
+    [
+     0.121,
+     2.921
+    ],
+    [
+     3.373,
+     8.436
+    ],
+    [
+     8.888,
+     11.62
+    ]
+   ]
+  },
+  "d-2": {
+   "v": "7f3c30bfccf1",
+   "sure": 9.696,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.977,
+     6.051
+    ],
+    [
+     6.504,
+     9.243
+    ]
+   ]
+  },
+  "s-2-A": {
+   "v": "f2e9fd181dc1",
+   "sure": 9.864,
+   "zaman": [
+    [
+     0.121,
+     5.88
+    ],
+    [
+     6.333,
+     9.411
+    ]
+   ]
+  },
+  "s-2-B": {
+   "v": "e48ed1ab7fa3",
+   "sure": 11.616,
+   "zaman": [
+    [
+     0.121,
+     6.573
+    ],
+    [
+     7.025,
+     11.164
+    ]
+   ]
+  },
+  "s-2-C": {
+   "v": "35e17905970a",
+   "sure": 9.84,
+   "zaman": [
+    [
+     0.121,
+     5.687
+    ],
+    [
+     6.139,
+     9.388
+    ]
+   ]
+  },
+  "s-2-D": {
+   "v": "421671e71ab8",
+   "sure": 11.352,
+   "zaman": [
+    [
+     0.121,
+     6.491
+    ],
+    [
+     6.943,
+     10.9
+    ]
+   ]
+  },
+  "s-2-E": {
+   "v": "d111a4098db2",
+   "sure": 10.512,
+   "zaman": [
+    [
+     0.121,
+     5.041
+    ],
+    [
+     5.494,
+     10.059
+    ]
+   ]
+  },
+  "q-24": {
+   "v": "05de0eceea43",
+   "sure": 13.872,
+   "zaman": [
+    [
+     0.121,
+     3.165
+    ],
+    [
+     3.617,
+     5.586
+    ],
+    [
+     6.039,
+     7.727
+    ],
+    [
+     8.18,
+     9.627
+    ],
+    [
+     10.079,
+     11.326
+    ],
+    [
+     11.778,
+     13.42
+    ]
+   ]
+  },
+  "i-24": {
+   "v": "7c4ad6515894",
+   "sure": 3.864,
+   "zaman": [
+    [
+     0.122,
+     3.406
+    ]
+   ]
+  },
+  "c-24": {
+   "v": "9c9872019500",
+   "sure": 11.592,
+   "zaman": [
+    [
+     0.121,
+     2.02
+    ],
+    [
+     2.473,
+     7.467
+    ],
+    [
+     7.92,
+     11.139
+    ]
+   ]
+  },
+  "d-24": {
+   "v": "e342ac0ab6eb",
+   "sure": 10.104,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.976
+    ],
+    [
+     6.429,
+     9.651
+    ]
+   ]
+  },
+  "s-24-A": {
+   "v": "e5017d65b5c1",
+   "sure": 9.912,
+   "zaman": [
+    [
+     0.121,
+     5.668
+    ],
+    [
+     6.121,
+     9.459
+    ]
+   ]
+  },
+  "s-24-B": {
+   "v": "2ac6f8d92bcf",
+   "sure": 9.264,
+   "zaman": [
+    [
+     0.121,
+     5.798
+    ],
+    [
+     6.251,
+     8.811
+    ]
+   ]
+  },
+  "s-24-C": {
+   "v": "f138755d9d35",
+   "sure": 9.384,
+   "zaman": [
+    [
+     0.121,
+     5.357
+    ],
+    [
+     5.81,
+     8.931
+    ]
+   ]
+  },
+  "s-24-D": {
+   "v": "873ed1dcad15",
+   "sure": 11.136,
+   "zaman": [
+    [
+     0.121,
+     6.091
+    ],
+    [
+     6.544,
+     10.683
+    ]
+   ]
+  },
+  "s-24-E": {
+   "v": "4f67ca61dcc9",
+   "sure": 9.648,
+   "zaman": [
+    [
+     0.121,
+     5.027
+    ],
+    [
+     5.48,
+     9.196
+    ]
+   ]
+  },
+  "q-4": {
+   "v": "fc630314e752",
+   "sure": 12.072,
+   "zaman": [
+    [
+     0.12,
+     3.896
+    ],
+    [
+     4.347,
+     5.472
+    ],
+    [
+     5.924,
+     6.942
+    ],
+    [
+     7.394,
+     8.471
+    ],
+    [
+     8.923,
+     10.225
+    ],
+    [
+     10.677,
+     11.62
+    ]
+   ]
+  },
+  "i-4": {
+   "v": "510deba100d1",
+   "sure": 4.704,
+   "zaman": [
+    [
+     0.121,
+     4.249
+    ]
+   ]
+  },
+  "c-4": {
+   "v": "49867c94d452",
+   "sure": 11.928,
+   "zaman": [
+    [
+     0.121,
+     2.131
+    ],
+    [
+     2.583,
+     8.815
+    ],
+    [
+     9.268,
+     11.476
+    ]
+   ]
+  },
+  "d-4": {
+   "v": "dd1a145a3983",
+   "sure": 10.32,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     7.207
+    ],
+    [
+     7.66,
+     9.868
+    ]
+   ]
+  },
+  "s-4-A": {
+   "v": "b5543b60596c",
+   "sure": 8.4,
+   "zaman": [
+    [
+     0.121,
+     3.781
+    ],
+    [
+     4.235,
+     7.946
+    ]
+   ]
+  },
+  "s-4-B": {
+   "v": "577e026b1292",
+   "sure": 9.96,
+   "zaman": [
+    [
+     0.121,
+     5.761
+    ],
+    [
+     6.214,
+     9.507
+    ]
+   ]
+  },
+  "s-4-C": {
+   "v": "dc1b15cb956a",
+   "sure": 9.552,
+   "zaman": [
+    [
+     0.121,
+     5.188
+    ],
+    [
+     5.641,
+     9.1
+    ]
+   ]
+  },
+  "s-4-D": {
+   "v": "aefeeacb2a1e",
+   "sure": 10.296,
+   "zaman": [
+    [
+     0.121,
+     4.684
+    ],
+    [
+     5.137,
+     9.843
+    ]
+   ]
+  },
+  "s-4-E": {
+   "v": "b784a9eee7bb",
+   "sure": 8.856,
+   "zaman": [
+    [
+     0.121,
+     4.871
+    ],
+    [
+     5.324,
+     8.403
+    ]
+   ]
+  },
+  "q-32": {
+   "v": "bb6ad6c78806",
+   "sure": 15.12,
+   "zaman": [
+    [
+     0.12,
+     6.083
+    ],
+    [
+     6.534,
+     8.017
+    ],
+    [
+     8.469,
+     9.158
+    ],
+    [
+     9.61,
+     10.774
+    ],
+    [
+     11.226,
+     13.472
+    ],
+    [
+     13.923,
+     14.668
+    ]
+   ]
+  },
+  "i-32": {
+   "v": "1a14a906f75c",
+   "sure": 3.6,
+   "zaman": [
+    [
+     0.122,
+     3.141
+    ]
+   ]
+  },
+  "c-32": {
+   "v": "15217aa05aca",
+   "sure": 11.736,
+   "zaman": [
+    [
+     0.121,
+     1.953
+    ],
+    [
+     2.405,
+     8.153
+    ],
+    [
+     8.605,
+     11.284
+    ]
+   ]
+  },
+  "d-32": {
+   "v": "6560252a0386",
+   "sure": 10.32,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     6.732
+    ],
+    [
+     7.185,
+     9.867
+    ]
+   ]
+  },
+  "s-32-A": {
+   "v": "17112e345034",
+   "sure": 10.728,
+   "zaman": [
+    [
+     0.121,
+     6.35
+    ],
+    [
+     6.803,
+     10.276
+    ]
+   ]
+  },
+  "s-32-B": {
+   "v": "cef7d239a16f",
+   "sure": 9.744,
+   "zaman": [
+    [
+     0.121,
+     6.663
+    ],
+    [
+     7.116,
+     9.291
+    ]
+   ]
+  },
+  "s-32-C": {
+   "v": "870236835a0c",
+   "sure": 9.384,
+   "zaman": [
+    [
+     0.121,
+     5.499
+    ],
+    [
+     5.952,
+     8.931
+    ]
+   ]
+  },
+  "s-32-D": {
+   "v": "be2eb1c71b55",
+   "sure": 11.112,
+   "zaman": [
+    [
+     0.121,
+     6.45
+    ],
+    [
+     6.902,
+     10.66
+    ]
+   ]
+  },
+  "s-32-E": {
+   "v": "44496e3f7519",
+   "sure": 11.856,
+   "zaman": [
+    [
+     0.121,
+     7.108
+    ],
+    [
+     7.561,
+     11.403
+    ]
+   ]
+  },
+  "q-9": {
+   "v": "fd6d08ffe19b",
+   "sure": 18.936,
+   "zaman": [
+    [
+     0.12,
+     3.772
+    ],
+    [
+     4.224,
+     6.943
+    ],
+    [
+     7.395,
+     9.362
+    ],
+    [
+     9.814,
+     11.941
+    ],
+    [
+     12.393,
+     15.624
+    ],
+    [
+     16.075,
+     18.484
+    ]
+   ]
+  },
+  "i-9": {
+   "v": "96ab58f2edf9",
+   "sure": 5.784,
+   "zaman": [
+    [
+     0.121,
+     5.33
+    ]
+   ]
+  },
+  "c-9": {
+   "v": "3c405a0a2d91",
+   "sure": 12.888,
+   "zaman": [
+    [
+     0.121,
+     4.017
+    ],
+    [
+     4.469,
+     12.436
+    ]
+   ]
+  },
+  "d-9": {
+   "v": "99b606f66542",
+   "sure": 9.408,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     8.955
+    ]
+   ]
+  },
+  "s-9-A": {
+   "v": "2caab8795a10",
+   "sure": 9.24,
+   "zaman": [
+    [
+     0.121,
+     4.47
+    ],
+    [
+     4.923,
+     8.787
+    ]
+   ]
+  },
+  "s-9-B": {
+   "v": "876c89005dce",
+   "sure": 10.968,
+   "zaman": [
+    [
+     0.121,
+     6.641
+    ],
+    [
+     7.094,
+     10.515
+    ]
+   ]
+  },
+  "s-9-C": {
+   "v": "00e990893115",
+   "sure": 10.824,
+   "zaman": [
+    [
+     0.121,
+     6.457
+    ],
+    [
+     6.91,
+     10.371
+    ]
+   ]
+  },
+  "s-9-D": {
+   "v": "8f984686a76a",
+   "sure": 10.968,
+   "zaman": [
+    [
+     0.121,
+     6.649
+    ],
+    [
+     7.101,
+     10.516
+    ]
+   ]
+  },
+  "s-9-E": {
+   "v": "67af6b014443",
+   "sure": 12.6,
+   "zaman": [
+    [
+     0.121,
+     8.279
+    ],
+    [
+     8.732,
+     12.148
+    ]
+   ]
+  },
+  "q-19": {
+   "v": "0234044a1f8a",
+   "sure": 11.376,
+   "zaman": [
+    [
+     0.121,
+     3.621
+    ],
+    [
+     4.074,
+     5.16
+    ],
+    [
+     5.613,
+     6.398
+    ],
+    [
+     6.851,
+     7.696
+    ],
+    [
+     8.149,
+     9.718
+    ],
+    [
+     10.17,
+     10.923
+    ]
+   ]
+  },
+  "i-19": {
+   "v": "2f5d4dcde07b",
+   "sure": 4.752,
+   "zaman": [
+    [
+     0.121,
+     4.296
+    ]
+   ]
+  },
+  "c-19": {
+   "v": "b1e54e021846",
+   "sure": 11.304,
+   "zaman": [
+    [
+     0.121,
+     2.315
+    ],
+    [
+     2.767,
+     7.668
+    ],
+    [
+     8.12,
+     10.852
+    ]
+   ]
+  },
+  "d-19": {
+   "v": "58c53173b0a1",
+   "sure": 9.528,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.886
+    ],
+    [
+     6.339,
+     9.075
+    ]
+   ]
+  },
+  "s-19-A": {
+   "v": "187a4f7e4120",
+   "sure": 8.88,
+   "zaman": [
+    [
+     0.121,
+     4.994
+    ],
+    [
+     5.447,
+     8.427
+    ]
+   ]
+  },
+  "s-19-B": {
+   "v": "bf865d8daf56",
+   "sure": 10.08,
+   "zaman": [
+    [
+     0.121,
+     6.499
+    ],
+    [
+     6.951,
+     9.627
+    ]
+   ]
+  },
+  "s-19-C": {
+   "v": "5b89f176c914",
+   "sure": 9.0,
+   "zaman": [
+    [
+     0.121,
+     5.195
+    ],
+    [
+     5.648,
+     8.547
+    ]
+   ]
+  },
+  "s-19-D": {
+   "v": "d95c8912d20f",
+   "sure": 10.872,
+   "zaman": [
+    [
+     0.121,
+     7.593
+    ],
+    [
+     8.046,
+     10.419
+    ]
+   ]
+  },
+  "s-19-E": {
+   "v": "b2cc6ca1f248",
+   "sure": 9.24,
+   "zaman": [
+    [
+     0.121,
+     5.355
+    ],
+    [
+     5.808,
+     8.787
+    ]
+   ]
+  },
+  "q-10": {
+   "v": "2a72fff90b21",
+   "sure": 13.392,
+   "zaman": [
+    [
+     0.12,
+     4.898
+    ],
+    [
+     5.349,
+     6.434
+    ],
+    [
+     6.886,
+     7.729
+    ],
+    [
+     8.181,
+     9.024
+    ],
+    [
+     9.476,
+     11.404
+    ],
+    [
+     11.856,
+     12.94
+    ]
+   ]
+  },
+  "i-10": {
+   "v": "fe1f679897b7",
+   "sure": 5.616,
+   "zaman": [
+    [
+     0.121,
+     5.161
+    ]
+   ]
+  },
+  "c-10": {
+   "v": "f29d9679b861",
+   "sure": 12.528,
+   "zaman": [
+    [
+     0.121,
+     1.929
+    ],
+    [
+     2.381,
+     7.163
+    ],
+    [
+     7.615,
+     12.076
+    ]
+   ]
+  },
+  "d-10": {
+   "v": "25902129d3be",
+   "sure": 11.136,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.764
+    ],
+    [
+     6.217,
+     10.683
+    ]
+   ]
+  },
+  "s-10-A": {
+   "v": "4a68decdf92e",
+   "sure": 8.4,
+   "zaman": [
+    [
+     0.121,
+     4.915
+    ],
+    [
+     5.368,
+     7.947
+    ]
+   ]
+  },
+  "s-10-B": {
+   "v": "346a9bc1ec26",
+   "sure": 9.552,
+   "zaman": [
+    [
+     0.121,
+     5.631
+    ],
+    [
+     6.083,
+     9.1
+    ]
+   ]
+  },
+  "s-10-C": {
+   "v": "5dd915a76d4d",
+   "sure": 9.576,
+   "zaman": [
+    [
+     0.121,
+     5.635
+    ],
+    [
+     6.088,
+     9.123
+    ]
+   ]
+  },
+  "s-10-D": {
+   "v": "4995fdb838f2",
+   "sure": 11.496,
+   "zaman": [
+    [
+     0.121,
+     8.219
+    ],
+    [
+     8.672,
+     11.044
+    ]
+   ]
+  },
+  "s-10-E": {
+   "v": "e869b0357adb",
+   "sure": 11.088,
+   "zaman": [
+    [
+     0.121,
+     6.87
+    ],
+    [
+     7.322,
+     10.636
+    ]
+   ]
+  },
+  "q-34": {
+   "v": "f6436b09e10a",
+   "sure": 18.144,
+   "zaman": [
+    [
+     0.12,
+     8.725
+    ],
+    [
+     9.177,
+     10.253
+    ],
+    [
+     10.704,
+     12.153
+    ],
+    [
+     12.604,
+     13.567
+    ],
+    [
+     14.018,
+     15.476
+    ],
+    [
+     15.927,
+     17.693
+    ]
+   ]
+  },
+  "i-34": {
+   "v": "c294ac39f91d",
+   "sure": 5.64,
+   "zaman": [
+    [
+     0.121,
+     5.185
+    ]
+   ]
+  },
+  "c-34": {
+   "v": "281c8b8d9a43",
+   "sure": 12.096,
+   "zaman": [
+    [
+     0.121,
+     1.77
+    ],
+    [
+     2.222,
+     7.29
+    ],
+    [
+     7.742,
+     11.644
+    ]
+   ]
+  },
+  "d-34": {
+   "v": "f2f1e7cac389",
+   "sure": 10.848,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.042
+    ],
+    [
+     6.495,
+     10.396
+    ]
+   ]
+  },
+  "s-34-A": {
+   "v": "06bb13f21de1",
+   "sure": 8.448,
+   "zaman": [
+    [
+     0.121,
+     4.656
+    ],
+    [
+     5.109,
+     7.994
+    ]
+   ]
+  },
+  "s-34-B": {
+   "v": "8ecc52869207",
+   "sure": 9.48,
+   "zaman": [
+    [
+     0.121,
+     6.361
+    ],
+    [
+     6.814,
+     9.027
+    ]
+   ]
+  },
+  "s-34-C": {
+   "v": "cda48ae0ec58",
+   "sure": 10.632,
+   "zaman": [
+    [
+     0.121,
+     6.589
+    ],
+    [
+     7.042,
+     10.179
+    ]
+   ]
+  },
+  "s-34-D": {
+   "v": "8f7211ad16ed",
+   "sure": 9.624,
+   "zaman": [
+    [
+     0.121,
+     5.682
+    ],
+    [
+     6.134,
+     9.172
+    ]
+   ]
+  },
+  "s-34-E": {
+   "v": "b4a4e9dd2b39",
+   "sure": 9.336,
+   "zaman": [
+    [
+     0.121,
+     5.272
+    ],
+    [
+     5.725,
+     8.883
+    ]
+   ]
+  },
+  "q-20": {
+   "v": "8745763dcb27",
+   "sure": 15.648,
+   "zaman": [
+    [
+     0.12,
+     3.192
+    ],
+    [
+     3.644,
+     5.692
+    ],
+    [
+     6.144,
+     7.824
+    ],
+    [
+     8.276,
+     10.405
+    ],
+    [
+     10.856,
+     12.59
+    ],
+    [
+     13.042,
+     15.196
+    ]
+   ]
+  },
+  "i-20": {
+   "v": "19279561dd57",
+   "sure": 4.128,
+   "zaman": [
+    [
+     0.122,
+     3.672
+    ]
+   ]
+  },
+  "c-20": {
+   "v": "12c417907949",
+   "sure": 11.904,
+   "zaman": [
+    [
+     0.12,
+     2.931
+    ],
+    [
+     3.382,
+     9.184
+    ],
+    [
+     9.636,
+     11.452
+    ]
+   ]
+  },
+  "d-20": {
+   "v": "40f4e84f717d",
+   "sure": 9.528,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.977,
+     6.799
+    ],
+    [
+     7.252,
+     9.075
+    ]
+   ]
+  },
+  "s-20-A": {
+   "v": "3f4c32087926",
+   "sure": 11.208,
+   "zaman": [
+    [
+     0.121,
+     6.354
+    ],
+    [
+     6.806,
+     10.756
+    ]
+   ]
+  },
+  "s-20-B": {
+   "v": "20047edfeb8a",
+   "sure": 9.432,
+   "zaman": [
+    [
+     0.121,
+     5.202
+    ],
+    [
+     5.655,
+     8.979
+    ]
+   ]
+  },
+  "s-20-C": {
+   "v": "10370b20dbd9",
+   "sure": 9.96,
+   "zaman": [
+    [
+     0.121,
+     5.888
+    ],
+    [
+     6.341,
+     9.507
+    ]
+   ]
+  },
+  "s-20-D": {
+   "v": "a3d63023ede8",
+   "sure": 9.48,
+   "zaman": [
+    [
+     0.121,
+     5.073
+    ],
+    [
+     5.526,
+     9.027
+    ]
+   ]
+  },
+  "s-20-E": {
+   "v": "68ad9fcdf00a",
+   "sure": 12.072,
+   "zaman": [
+    [
+     0.12,
+     5.876
+    ],
+    [
+     6.328,
+     11.62
+    ]
+   ]
+  },
+  "q-21": {
+   "v": "b5f47a6a20c3",
+   "sure": 15.96,
+   "zaman": [
+    [
+     0.121,
+     4.279
+    ],
+    [
+     4.731,
+     6.419
+    ],
+    [
+     6.871,
+     9.321
+    ],
+    [
+     9.773,
+     11.822
+    ],
+    [
+     12.274,
+     13.99
+    ],
+    [
+     14.442,
+     15.508
+    ]
+   ]
+  },
+  "i-21": {
+   "v": "d031db248d8d",
+   "sure": 4.752,
+   "zaman": [
+    [
+     0.122,
+     4.296
+    ]
+   ]
+  },
+  "c-21": {
+   "v": "d80bda17bad7",
+   "sure": 12.216,
+   "zaman": [
+    [
+     0.121,
+     2.534
+    ],
+    [
+     2.986,
+     8.777
+    ],
+    [
+     9.23,
+     11.764
+    ]
+   ]
+  },
+  "d-21": {
+   "v": "1a81f45ee1fa",
+   "sure": 10.2,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.763
+    ],
+    [
+     7.215,
+     9.748
+    ]
+   ]
+  },
+  "s-21-A": {
+   "v": "e18699c9c37e",
+   "sure": 10.152,
+   "zaman": [
+    [
+     0.121,
+     5.93
+    ],
+    [
+     6.382,
+     9.7
+    ]
+   ]
+  },
+  "s-21-B": {
+   "v": "f398a7da6b1a",
+   "sure": 8.928,
+   "zaman": [
+    [
+     0.121,
+     4.762
+    ],
+    [
+     5.215,
+     8.475
+    ]
+   ]
+  },
+  "s-21-C": {
+   "v": "c6974a27304a",
+   "sure": 9.384,
+   "zaman": [
+    [
+     0.121,
+     5.433
+    ],
+    [
+     5.887,
+     8.931
+    ]
+   ]
+  },
+  "s-21-D": {
+   "v": "b9a0e7c72810",
+   "sure": 10.2,
+   "zaman": [
+    [
+     0.121,
+     6.053
+    ],
+    [
+     6.506,
+     9.747
+    ]
+   ]
+  },
+  "s-21-E": {
+   "v": "08763b68761b",
+   "sure": 11.544,
+   "zaman": [
+    [
+     0.121,
+     6.314
+    ],
+    [
+     6.767,
+     11.092
+    ]
+   ]
+  },
+  "q-14": {
+   "v": "94fa34bd3163",
+   "sure": 11.544,
+   "zaman": [
+    [
+     0.121,
+     3.578
+    ],
+    [
+     4.03,
+     5.315
+    ],
+    [
+     5.767,
+     6.927
+    ],
+    [
+     7.379,
+     8.378
+    ],
+    [
+     8.831,
+     9.715
+    ],
+    [
+     10.167,
+     11.092
+    ]
+   ]
+  },
+  "i-14": {
+   "v": "1e02b4dfa58f",
+   "sure": 5.04,
+   "zaman": [
+    [
+     0.121,
+     4.585
+    ]
+   ]
+  },
+  "c-14": {
+   "v": "286031c2a5ee",
+   "sure": 9.576,
+   "zaman": [
+    [
+     0.121,
+     1.624
+    ],
+    [
+     2.076,
+     6.24
+    ],
+    [
+     6.693,
+     9.123
+    ]
+   ]
+  },
+  "d-14": {
+   "v": "1fc4f879a1d3",
+   "sure": 8.496,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.978,
+     5.152
+    ],
+    [
+     5.606,
+     8.042
+    ]
+   ]
+  },
+  "s-14-A": {
+   "v": "f5a1fccd5416",
+   "sure": 10.176,
+   "zaman": [
+    [
+     0.121,
+     6.437
+    ],
+    [
+     6.89,
+     9.723
+    ]
+   ]
+  },
+  "s-14-B": {
+   "v": "3be3c87f7e5f",
+   "sure": 9.984,
+   "zaman": [
+    [
+     0.121,
+     5.849
+    ],
+    [
+     6.301,
+     9.532
+    ]
+   ]
+  },
+  "s-14-C": {
+   "v": "6f83192d7b2b",
+   "sure": 9.984,
+   "zaman": [
+    [
+     0.121,
+     5.942
+    ],
+    [
+     6.394,
+     9.531
+    ]
+   ]
+  },
+  "s-14-D": {
+   "v": "ad98af11615e",
+   "sure": 10.344,
+   "zaman": [
+    [
+     0.121,
+     5.413
+    ],
+    [
+     5.866,
+     9.891
+    ]
+   ]
+  },
+  "s-14-E": {
+   "v": "f984fd9abee2",
+   "sure": 9.984,
+   "zaman": [
+    [
+     0.121,
+     5.356
+    ],
+    [
+     5.809,
+     9.531
+    ]
+   ]
+  },
+  "q-5": {
+   "v": "ac513d484fc5",
+   "sure": 16.08,
+   "zaman": [
+    [
+     0.12,
+     6.426
+    ],
+    [
+     6.878,
+     8.283
+    ],
+    [
+     8.735,
+     10.422
+    ],
+    [
+     10.874,
+     12.159
+    ],
+    [
+     12.611,
+     14.012
+    ],
+    [
+     14.463,
+     15.628
+    ]
+   ]
+  },
+  "i-5": {
+   "v": "4b8cd0855b79",
+   "sure": 4.584,
+   "zaman": [
+    [
+     0.122,
+     4.127
+    ]
+   ]
+  },
+  "c-5": {
+   "v": "23d1a33673d7",
+   "sure": 11.448,
+   "zaman": [
+    [
+     0.121,
+     2.005
+    ],
+    [
+     2.457,
+     7.813
+    ],
+    [
+     8.265,
+     10.996
+    ]
+   ]
+  },
+  "d-5": {
+   "v": "bba19d22380b",
+   "sure": 9.984,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     6.342
+    ],
+    [
+     6.795,
+     9.531
+    ]
+   ]
+  },
+  "s-5-A": {
+   "v": "128b2ac5629d",
+   "sure": 10.92,
+   "zaman": [
+    [
+     0.121,
+     6.173
+    ],
+    [
+     6.625,
+     10.468
+    ]
+   ]
+  },
+  "s-5-B": {
+   "v": "1f1cc194be46",
+   "sure": 11.424,
+   "zaman": [
+    [
+     0.121,
+     7.142
+    ],
+    [
+     7.594,
+     10.971
+    ]
+   ]
+  },
+  "s-5-C": {
+   "v": "b1b97f204b54",
+   "sure": 10.968,
+   "zaman": [
+    [
+     0.121,
+     7.186
+    ],
+    [
+     7.638,
+     10.516
+    ]
+   ]
+  },
+  "s-5-D": {
+   "v": "aef9937fa44a",
+   "sure": 11.112,
+   "zaman": [
+    [
+     0.121,
+     6.664
+    ],
+    [
+     7.117,
+     10.659
+    ]
+   ]
+  },
+  "s-5-E": {
+   "v": "873dc73aaba8",
+   "sure": 15.168,
+   "zaman": [
+    [
+     0.121,
+     8.599
+    ],
+    [
+     9.051,
+     14.716
+    ]
+   ]
+  },
+  "q-6": {
+   "v": "1de6c282b8b1",
+   "sure": 13.752,
+   "zaman": [
+    [
+     0.12,
+     4.377
+    ],
+    [
+     4.828,
+     6.234
+    ],
+    [
+     6.685,
+     7.97
+    ],
+    [
+     8.422,
+     9.707
+    ],
+    [
+     10.158,
+     11.644
+    ],
+    [
+     12.096,
+     13.3
+    ]
+   ]
+  },
+  "i-6": {
+   "v": "d560c7812654",
+   "sure": 4.728,
+   "zaman": [
+    [
+     0.122,
+     4.271
+    ]
+   ]
+  },
+  "c-6": {
+   "v": "3c35ca4099b7",
+   "sure": 10.152,
+   "zaman": [
+    [
+     0.121,
+     2.335
+    ],
+    [
+     2.787,
+     6.209
+    ],
+    [
+     6.662,
+     9.699
+    ]
+   ]
+  },
+  "d-6": {
+   "v": "681efdb92795",
+   "sure": 8.352,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.977,
+     4.403
+    ],
+    [
+     4.857,
+     7.899
+    ]
+   ]
+  },
+  "s-6-A": {
+   "v": "913fbb7c9957",
+   "sure": 9.696,
+   "zaman": [
+    [
+     0.121,
+     6.189
+    ],
+    [
+     6.642,
+     9.243
+    ]
+   ]
+  },
+  "s-6-B": {
+   "v": "6f72f9f4c9f9",
+   "sure": 11.208,
+   "zaman": [
+    [
+     0.121,
+     7.225
+    ],
+    [
+     7.678,
+     10.755
+    ]
+   ]
+  },
+  "s-6-C": {
+   "v": "14e69145e34d",
+   "sure": 11.112,
+   "zaman": [
+    [
+     0.121,
+     6.832
+    ],
+    [
+     7.284,
+     10.66
+    ]
+   ]
+  },
+  "s-6-D": {
+   "v": "79393474aa4d",
+   "sure": 10.104,
+   "zaman": [
+    [
+     0.121,
+     5.352
+    ],
+    [
+     5.805,
+     9.651
+    ]
+   ]
+  },
+  "s-6-E": {
+   "v": "778e4335f998",
+   "sure": 9.984,
+   "zaman": [
+    [
+     0.121,
+     4.864
+    ],
+    [
+     5.317,
+     9.531
+    ]
+   ]
+  },
+  "q-27": {
+   "v": "34a9c44b4a70",
+   "sure": 26.304,
+   "zaman": [
+    [
+     0.12,
+     10.135
+    ],
+    [
+     10.586,
+     15.115
+    ],
+    [
+     15.566,
+     18.01
+    ],
+    [
+     18.461,
+     20.726
+    ],
+    [
+     21.177,
+     24.44
+    ],
+    [
+     24.891,
+     25.853
+    ]
+   ]
+  },
+  "i-27": {
+   "v": "2222ceca797a",
+   "sure": 6.144,
+   "zaman": [
+    [
+     0.121,
+     5.69
+    ]
+   ]
+  },
+  "c-27": {
+   "v": "760060b86e6e",
+   "sure": 15.672,
+   "zaman": [
+    [
+     0.12,
+     5.363
+    ],
+    [
+     5.815,
+     11.958
+    ],
+    [
+     12.41,
+     15.22
+    ]
+   ]
+  },
+  "d-27": {
+   "v": "d5471470acd7",
+   "sure": 10.848,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     7.128
+    ],
+    [
+     7.581,
+     10.396
+    ]
+   ]
+  },
+  "s-27-A": {
+   "v": "3ae62e9198f2",
+   "sure": 11.976,
+   "zaman": [
+    [
+     0.121,
+     7.14
+    ],
+    [
+     7.592,
+     11.524
+    ]
+   ]
+  },
+  "s-27-B": {
+   "v": "2e3f330c3b57",
+   "sure": 11.256,
+   "zaman": [
+    [
+     0.121,
+     7.537
+    ],
+    [
+     7.989,
+     10.804
+    ]
+   ]
+  },
+  "s-27-C": {
+   "v": "0269a1aa0843",
+   "sure": 10.728,
+   "zaman": [
+    [
+     0.121,
+     5.799
+    ],
+    [
+     6.252,
+     10.275
+    ]
+   ]
+  },
+  "s-27-D": {
+   "v": "daa61c46400b",
+   "sure": 10.56,
+   "zaman": [
+    [
+     0.121,
+     5.496
+    ],
+    [
+     5.949,
+     10.108
+    ]
+   ]
+  },
+  "s-27-E": {
+   "v": "431ba03e52ee",
+   "sure": 10.944,
+   "zaman": [
+    [
+     0.121,
+     6.014
+    ],
+    [
+     6.467,
+     10.491
+    ]
+   ]
+  },
+  "q-7": {
+   "v": "1bd2ba5b0504",
+   "sure": 18.792,
+   "zaman": [
+    [
+     0.12,
+     4.146
+    ],
+    [
+     4.598,
+     6.234
+    ],
+    [
+     6.686,
+     9.681
+    ],
+    [
+     10.133,
+     12.942
+    ],
+    [
+     13.394,
+     15.601
+    ],
+    [
+     16.053,
+     18.34
+    ]
+   ]
+  },
+  "i-7": {
+   "v": "b552e580de2b",
+   "sure": 5.376,
+   "zaman": [
+    [
+     0.121,
+     4.922
+    ]
+   ]
+  },
+  "c-7": {
+   "v": "3bfa4a36daa7",
+   "sure": 13.944,
+   "zaman": [
+    [
+     0.121,
+     3.767
+    ],
+    [
+     4.219,
+     9.926
+    ],
+    [
+     10.378,
+     13.492
+    ]
+   ]
+  },
+  "d-7": {
+   "v": "0c042630064c",
+   "sure": 10.704,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.684
+    ],
+    [
+     7.137,
+     10.252
+    ]
+   ]
+  },
+  "s-7-A": {
+   "v": "8011b5fe4650",
+   "sure": 10.32,
+   "zaman": [
+    [
+     0.121,
+     5.713
+    ],
+    [
+     6.166,
+     9.867
+    ]
+   ]
+  },
+  "s-7-B": {
+   "v": "709f96054212",
+   "sure": 11.016,
+   "zaman": [
+    [
+     0.121,
+     6.33
+    ],
+    [
+     6.782,
+     10.563
+    ]
+   ]
+  },
+  "s-7-C": {
+   "v": "9efdfcc01352",
+   "sure": 11.064,
+   "zaman": [
+    [
+     0.121,
+     6.317
+    ],
+    [
+     6.77,
+     10.611
+    ]
+   ]
+  },
+  "s-7-D": {
+   "v": "a2b3cdf4b108",
+   "sure": 10.176,
+   "zaman": [
+    [
+     0.121,
+     5.792
+    ],
+    [
+     6.244,
+     9.724
+    ]
+   ]
+  },
+  "s-7-E": {
+   "v": "5d3c9036203f",
+   "sure": 9.36,
+   "zaman": [
+    [
+     0.121,
+     5.128
+    ],
+    [
+     5.581,
+     8.907
+    ]
+   ]
+  },
+  "q-26": {
+   "v": "1d0dcf736bb9",
+   "sure": 16.272,
+   "zaman": [
+    [
+     0.12,
+     4.335
+    ],
+    [
+     4.787,
+     7.195
+    ],
+    [
+     7.646,
+     9.694
+    ],
+    [
+     10.145,
+     11.746
+    ],
+    [
+     12.198,
+     13.844
+    ],
+    [
+     14.295,
+     15.82
+    ]
+   ]
+  },
+  "i-26": {
+   "v": "44f69b64fc98",
+   "sure": 4.104,
+   "zaman": [
+    [
+     0.122,
+     3.647
+    ]
+   ]
+  },
+  "c-26": {
+   "v": "d8ec6f5626f7",
+   "sure": 14.088,
+   "zaman": [
+    [
+     0.121,
+     3.296
+    ],
+    [
+     3.748,
+     10.41
+    ],
+    [
+     10.863,
+     13.636
+    ]
+   ]
+  },
+  "d-26": {
+   "v": "2990ade89564",
+   "sure": 11.328,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     7.646
+    ],
+    [
+     8.099,
+     10.875
+    ]
+   ]
+  },
+  "s-26-A": {
+   "v": "b96916dc41f1",
+   "sure": 10.968,
+   "zaman": [
+    [
+     0.121,
+     6.078
+    ],
+    [
+     6.53,
+     10.515
+    ]
+   ]
+  },
+  "s-26-B": {
+   "v": "cb0e44a05704",
+   "sure": 9.888,
+   "zaman": [
+    [
+     0.121,
+     5.135
+    ],
+    [
+     5.588,
+     9.435
+    ]
+   ]
+  },
+  "s-26-C": {
+   "v": "187f281bbefb",
+   "sure": 9.576,
+   "zaman": [
+    [
+     0.121,
+     6.051
+    ],
+    [
+     6.504,
+     9.123
+    ]
+   ]
+  },
+  "s-26-D": {
+   "v": "b7b7ee21fac3",
+   "sure": 9.048,
+   "zaman": [
+    [
+     0.121,
+     4.756
+    ],
+    [
+     5.209,
+     8.595
+    ]
+   ]
+  },
+  "s-26-E": {
+   "v": "917b20a72c68",
+   "sure": 9.864,
+   "zaman": [
+    [
+     0.121,
+     6.947
+    ],
+    [
+     7.4,
+     9.411
+    ]
+   ]
+  },
+  "q-25": {
+   "v": "08f5a034ed30",
+   "sure": 12.384,
+   "zaman": [
+    [
+     0.12,
+     2.965
+    ],
+    [
+     3.417,
+     4.952
+    ],
+    [
+     5.404,
+     6.689
+    ],
+    [
+     7.141,
+     8.419
+    ],
+    [
+     8.871,
+     10.839
+    ],
+    [
+     11.29,
+     11.932
+    ]
+   ]
+  },
+  "i-25": {
+   "v": "66e9adfc16d4",
+   "sure": 4.368,
+   "zaman": [
+    [
+     0.122,
+     3.911
+    ]
+   ]
+  },
+  "c-25": {
+   "v": "61977ae2e87f",
+   "sure": 11.832,
+   "zaman": [
+    [
+     0.121,
+     1.445
+    ],
+    [
+     1.898,
+     8.875
+    ],
+    [
+     9.328,
+     11.379
+    ]
+   ]
+  },
+  "d-25": {
+   "v": "dfb964b31d64",
+   "sure": 10.896,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     7.943
+    ],
+    [
+     8.395,
+     10.444
+    ]
+   ]
+  },
+  "s-25-A": {
+   "v": "39894a01f126",
+   "sure": 8.52,
+   "zaman": [
+    [
+     0.121,
+     3.908
+    ],
+    [
+     4.362,
+     8.067
+    ]
+   ]
+  },
+  "s-25-B": {
+   "v": "6195ffe9c5f3",
+   "sure": 8.688,
+   "zaman": [
+    [
+     0.121,
+     5.201
+    ],
+    [
+     5.654,
+     8.234
+    ]
+   ]
+  },
+  "s-25-C": {
+   "v": "9f0bff7cf2af",
+   "sure": 9.168,
+   "zaman": [
+    [
+     0.121,
+     5.687
+    ],
+    [
+     6.14,
+     8.715
+    ]
+   ]
+  },
+  "s-25-D": {
+   "v": "5d1785786f91",
+   "sure": 8.808,
+   "zaman": [
+    [
+     0.121,
+     5.361
+    ],
+    [
+     5.815,
+     8.354
+    ]
+   ]
+  },
+  "s-25-E": {
+   "v": "69d65a86d8db",
+   "sure": 10.176,
+   "zaman": [
+    [
+     0.121,
+     6.006
+    ],
+    [
+     6.458,
+     9.724
+    ]
+   ]
+  },
+  "q-12": {
+   "v": "f7a1d5569eac",
+   "sure": 18.864,
+   "zaman": [
+    [
+     0.12,
+     3.985
+    ],
+    [
+     4.437,
+     6.145
+    ],
+    [
+     6.596,
+     10.609
+    ],
+    [
+     11.061,
+     12.987
+    ],
+    [
+     13.438,
+     15.645
+    ],
+    [
+     16.097,
+     18.413
+    ]
+   ]
+  },
+  "i-12": {
+   "v": "2629d5f8d2c6",
+   "sure": 4.992,
+   "zaman": [
+    [
+     0.121,
+     4.536
+    ]
+   ]
+  },
+  "c-12": {
+   "v": "7af04bb222e8",
+   "sure": 14.28,
+   "zaman": [
+    [
+     0.121,
+     4.824
+    ],
+    [
+     5.276,
+     9.548
+    ],
+    [
+     10.0,
+     13.828
+    ]
+   ]
+  },
+  "d-12": {
+   "v": "76522e5d5b8b",
+   "sure": 9.984,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     5.249
+    ],
+    [
+     5.702,
+     9.531
+    ]
+   ]
+  },
+  "s-12-A": {
+   "v": "7c4fc9225040",
+   "sure": 9.888,
+   "zaman": [
+    [
+     0.121,
+     5.761
+    ],
+    [
+     6.214,
+     9.435
+    ]
+   ]
+  },
+  "s-12-B": {
+   "v": "bb24b5d05ccd",
+   "sure": 12.288,
+   "zaman": [
+    [
+     0.12,
+     9.057
+    ],
+    [
+     9.509,
+     11.836
+    ]
+   ]
+  },
+  "s-12-C": {
+   "v": "b1b371064267",
+   "sure": 10.128,
+   "zaman": [
+    [
+     0.121,
+     5.195
+    ],
+    [
+     5.648,
+     9.675
+    ]
+   ]
+  },
+  "s-12-D": {
+   "v": "c9722ede451d",
+   "sure": 11.088,
+   "zaman": [
+    [
+     0.121,
+     6.906
+    ],
+    [
+     7.358,
+     10.636
+    ]
+   ]
+  },
+  "s-12-E": {
+   "v": "3eeb0d05409a",
+   "sure": 10.848,
+   "zaman": [
+    [
+     0.121,
+     7.086
+    ],
+    [
+     7.539,
+     10.395
+    ]
+   ]
+  },
+  "q-29": {
+   "v": "656d8b55433b",
+   "sure": 25.08,
+   "zaman": [
+    [
+     0.12,
+     5.022
+    ],
+    [
+     5.473,
+     7.999
+    ],
+    [
+     8.45,
+     12.98
+    ],
+    [
+     13.431,
+     16.303
+    ],
+    [
+     16.754,
+     20.803
+    ],
+    [
+     21.254,
+     24.629
+    ]
+   ]
+  },
+  "i-29": {
+   "v": "910d0a12729e",
+   "sure": 4.2,
+   "zaman": [
+    [
+     0.122,
+     3.744
+    ]
+   ]
+  },
+  "c-29": {
+   "v": "a8a02948bfed",
+   "sure": 14.52,
+   "zaman": [
+    [
+     0.12,
+     3.41
+    ],
+    [
+     3.862,
+     10.326
+    ],
+    [
+     10.777,
+     14.068
+    ]
+   ]
+  },
+  "d-29": {
+   "v": "e2be12bc7165",
+   "sure": 11.64,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.975,
+     7.443
+    ],
+    [
+     7.895,
+     11.188
+    ]
+   ]
+  },
+  "s-29-A": {
+   "v": "03269f03969e",
+   "sure": 11.352,
+   "zaman": [
+    [
+     0.121,
+     6.544
+    ],
+    [
+     6.997,
+     10.899
+    ]
+   ]
+  },
+  "s-29-B": {
+   "v": "743e71fde921",
+   "sure": 9.576,
+   "zaman": [
+    [
+     0.121,
+     5.594
+    ],
+    [
+     6.047,
+     9.123
+    ]
+   ]
+  },
+  "s-29-C": {
+   "v": "92cf20e2fb46",
+   "sure": 8.976,
+   "zaman": [
+    [
+     0.121,
+     5.037
+    ],
+    [
+     5.49,
+     8.523
+    ]
+   ]
+  },
+  "s-29-D": {
+   "v": "5f171100d9ef",
+   "sure": 8.472,
+   "zaman": [
+    [
+     0.121,
+     4.582
+    ],
+    [
+     5.036,
+     8.019
+    ]
+   ]
+  },
+  "s-29-E": {
+   "v": "7f9596d570c4",
+   "sure": 8.496,
+   "zaman": [
+    [
+     0.121,
+     4.965
+    ],
+    [
+     5.418,
+     8.043
+    ]
+   ]
+  },
+  "q-31": {
+   "v": "5a6b30035dc3",
+   "sure": 15.912,
+   "zaman": [
+    [
+     0.12,
+     5.176
+    ],
+    [
+     5.628,
+     7.669
+    ],
+    [
+     8.12,
+     10.555
+    ],
+    [
+     11.007,
+     12.77
+    ],
+    [
+     13.221,
+     14.367
+    ],
+    [
+     14.819,
+     15.461
+    ]
+   ]
+  },
+  "i-31": {
+   "v": "02e63a54bcd5",
+   "sure": 4.992,
+   "zaman": [
+    [
+     0.121,
+     4.536
+    ]
+   ]
+  },
+  "c-31": {
+   "v": "a692918bb859",
+   "sure": 12.24,
+   "zaman": [
+    [
+     0.121,
+     1.523
+    ],
+    [
+     1.976,
+     8.208
+    ],
+    [
+     8.661,
+     11.788
+    ]
+   ]
+  },
+  "d-31": {
+   "v": "8462201f7f0c",
+   "sure": 11.232,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     7.203
+    ],
+    [
+     7.655,
+     10.78
+    ]
+   ]
+  },
+  "s-31-A": {
+   "v": "ebe3bd4416e2",
+   "sure": 11.208,
+   "zaman": [
+    [
+     0.121,
+     6.922
+    ],
+    [
+     7.375,
+     10.755
+    ]
+   ]
+  },
+  "s-31-B": {
+   "v": "eb1e8bb39bef",
+   "sure": 11.4,
+   "zaman": [
+    [
+     0.121,
+     6.997
+    ],
+    [
+     7.449,
+     10.948
+    ]
+   ]
+  },
+  "s-31-C": {
+   "v": "405c2cee1822",
+   "sure": 9.384,
+   "zaman": [
+    [
+     0.121,
+     5.677
+    ],
+    [
+     6.13,
+     8.931
+    ]
+   ]
+  },
+  "s-31-D": {
+   "v": "170876570f65",
+   "sure": 9.96,
+   "zaman": [
+    [
+     0.121,
+     5.794
+    ],
+    [
+     6.247,
+     9.507
+    ]
+   ]
+  },
+  "s-31-E": {
+   "v": "33259980b1d1",
+   "sure": 11.928,
+   "zaman": [
+    [
+     0.121,
+     8.854
+    ],
+    [
+     9.306,
+     11.476
+    ]
+   ]
+  },
+  "q-22": {
+   "v": "290f304f60ef",
+   "sure": 15.672,
+   "zaman": [
+    [
+     0.12,
+     3.533
+    ],
+    [
+     3.985,
+     5.35
+    ],
+    [
+     5.802,
+     7.77
+    ],
+    [
+     8.221,
+     10.572
+    ],
+    [
+     11.023,
+     13.069
+    ],
+    [
+     13.521,
+     15.22
+    ]
+   ]
+  },
+  "i-22": {
+   "v": "e93e624f6474",
+   "sure": 5.112,
+   "zaman": [
+    [
+     0.121,
+     4.657
+    ]
+   ]
+  },
+  "c-22": {
+   "v": "db40d970592f",
+   "sure": 12.792,
+   "zaman": [
+    [
+     0.121,
+     2.807
+    ],
+    [
+     3.259,
+     8.353
+    ],
+    [
+     8.805,
+     12.34
+    ]
+   ]
+  },
+  "d-22": {
+   "v": "6f8f21d8a1c1",
+   "sure": 10.512,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.975,
+     6.071
+    ],
+    [
+     6.523,
+     10.06
+    ]
+   ]
+  },
+  "s-22-A": {
+   "v": "01fb11ed934e",
+   "sure": 9.912,
+   "zaman": [
+    [
+     0.121,
+     6.158
+    ],
+    [
+     6.611,
+     9.459
+    ]
+   ]
+  },
+  "s-22-B": {
+   "v": "7b9a11a32335",
+   "sure": 10.728,
+   "zaman": [
+    [
+     0.121,
+     6.751
+    ],
+    [
+     7.203,
+     10.276
+    ]
+   ]
+  },
+  "s-22-C": {
+   "v": "96cf2a8e0dfa",
+   "sure": 10.032,
+   "zaman": [
+    [
+     0.121,
+     5.916
+    ],
+    [
+     6.369,
+     9.579
+    ]
+   ]
+  },
+  "s-22-D": {
+   "v": "74f3e593f2ef",
+   "sure": 11.616,
+   "zaman": [
+    [
+     0.121,
+     6.009
+    ],
+    [
+     6.461,
+     11.164
+    ]
+   ]
+  },
+  "s-22-E": {
+   "v": "24879175d929",
+   "sure": 10.584,
+   "zaman": [
+    [
+     0.121,
+     5.218
+    ],
+    [
+     5.671,
+     10.131
+    ]
+   ]
+  },
+  "q-23": {
+   "v": "263fb45d3610",
+   "sure": 19.896,
+   "zaman": [
+    [
+     0.12,
+     4.406
+    ],
+    [
+     4.857,
+     7.424
+    ],
+    [
+     7.875,
+     9.84
+    ],
+    [
+     10.291,
+     13.489
+    ],
+    [
+     13.941,
+     16.587
+    ],
+    [
+     17.039,
+     19.445
+    ]
+   ]
+  },
+  "i-23": {
+   "v": "230dab13fce9",
+   "sure": 4.824,
+   "zaman": [
+    [
+     0.121,
+     4.369
+    ]
+   ]
+  },
+  "c-23": {
+   "v": "88ab9451e252",
+   "sure": 13.992,
+   "zaman": [
+    [
+     0.121,
+     4.014
+    ],
+    [
+     4.466,
+     10.931
+    ],
+    [
+     11.383,
+     13.54
+    ]
+   ]
+  },
+  "d-23": {
+   "v": "f434d10cd033",
+   "sure": 10.512,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     7.448
+    ],
+    [
+     7.9,
+     10.06
+    ]
+   ]
+  },
+  "s-23-A": {
+   "v": "ba56a962a311",
+   "sure": 10.584,
+   "zaman": [
+    [
+     0.121,
+     5.666
+    ],
+    [
+     6.118,
+     10.132
+    ]
+   ]
+  },
+  "s-23-B": {
+   "v": "f7dd42950ca9",
+   "sure": 9.432,
+   "zaman": [
+    [
+     0.121,
+     5.318
+    ],
+    [
+     5.772,
+     8.979
+    ]
+   ]
+  },
+  "s-23-C": {
+   "v": "d22b907ec1a5",
+   "sure": 10.08,
+   "zaman": [
+    [
+     0.121,
+     6.438
+    ],
+    [
+     6.891,
+     9.627
+    ]
+   ]
+  },
+  "s-23-D": {
+   "v": "649b41332353",
+   "sure": 10.896,
+   "zaman": [
+    [
+     0.121,
+     6.755
+    ],
+    [
+     7.208,
+     10.444
+    ]
+   ]
+  },
+  "s-23-E": {
+   "v": "c356381d47f3",
+   "sure": 10.896,
+   "zaman": [
+    [
+     0.121,
+     7.323
+    ],
+    [
+     7.775,
+     10.444
+    ]
+   ]
+  },
+  "q-15": {
+   "v": "d978e0a28a87",
+   "sure": 18.792,
+   "zaman": [
+    [
+     0.12,
+     2.945
+    ],
+    [
+     3.396,
+     5.56
+    ],
+    [
+     6.011,
+     8.917
+    ],
+    [
+     9.368,
+     11.756
+    ],
+    [
+     12.207,
+     15.123
+    ],
+    [
+     15.574,
+     18.341
+    ]
+   ]
+  },
+  "i-15": {
+   "v": "b3c1d390f3d1",
+   "sure": 4.968,
+   "zaman": [
+    [
+     0.122,
+     4.512
+    ]
+   ]
+  },
+  "c-15": {
+   "v": "f016ec1f6174",
+   "sure": 13.2,
+   "zaman": [
+    [
+     0.121,
+     3.64
+    ],
+    [
+     4.092,
+     8.154
+    ],
+    [
+     8.606,
+     12.748
+    ]
+   ]
+  },
+  "d-15": {
+   "v": "df26255caa02",
+   "sure": 10.08,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     5.035
+    ],
+    [
+     5.487,
+     9.628
+    ]
+   ]
+  },
+  "s-15-A": {
+   "v": "25fb9372135f",
+   "sure": 10.776,
+   "zaman": [
+    [
+     0.121,
+     7.459
+    ],
+    [
+     7.911,
+     10.324
+    ]
+   ]
+  },
+  "s-15-B": {
+   "v": "78511e611ee5",
+   "sure": 10.512,
+   "zaman": [
+    [
+     0.121,
+     8.159
+    ],
+    [
+     8.612,
+     10.06
+    ]
+   ]
+  },
+  "s-15-C": {
+   "v": "d3226ad8eb07",
+   "sure": 8.832,
+   "zaman": [
+    [
+     0.121,
+     5.841
+    ],
+    [
+     6.294,
+     8.379
+    ]
+   ]
+  },
+  "s-15-D": {
+   "v": "7574065a9f31",
+   "sure": 10.32,
+   "zaman": [
+    [
+     0.121,
+     6.438
+    ],
+    [
+     6.89,
+     9.867
+    ]
+   ]
+  },
+  "s-15-E": {
+   "v": "25acf62e39dd",
+   "sure": 9.336,
+   "zaman": [
+    [
+     0.121,
+     5.932
+    ],
+    [
+     6.385,
+     8.883
+    ]
+   ]
+  },
+  "q-13": {
+   "v": "4d7b765c2beb",
+   "sure": 20.352,
+   "zaman": [
+    [
+     0.12,
+     4.937
+    ],
+    [
+     5.388,
+     7.917
+    ],
+    [
+     8.368,
+     10.616
+    ],
+    [
+     11.067,
+     14.904
+    ],
+    [
+     15.355,
+     17.161
+    ],
+    [
+     17.613,
+     19.9
+    ]
+   ]
+  },
+  "i-13": {
+   "v": "5a64136c2281",
+   "sure": 5.76,
+   "zaman": [
+    [
+     0.121,
+     5.305
+    ]
+   ]
+  },
+  "c-13": {
+   "v": "696487f5051b",
+   "sure": 14.976,
+   "zaman": [
+    [
+     0.12,
+     4.702
+    ],
+    [
+     5.154,
+     11.546
+    ],
+    [
+     11.997,
+     14.524
+    ]
+   ]
+  },
+  "d-13": {
+   "v": "ca5d376cacb7",
+   "sure": 10.824,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     7.385
+    ],
+    [
+     7.837,
+     10.371
+    ]
+   ]
+  },
+  "s-13-A": {
+   "v": "f3c430b62c30",
+   "sure": 9.432,
+   "zaman": [
+    [
+     0.121,
+     5.145
+    ],
+    [
+     5.598,
+     8.979
+    ]
+   ]
+  },
+  "s-13-B": {
+   "v": "0a8ba5e1bb18",
+   "sure": 10.248,
+   "zaman": [
+    [
+     0.121,
+     6.438
+    ],
+    [
+     6.891,
+     9.795
+    ]
+   ]
+  },
+  "s-13-C": {
+   "v": "8811eddaba1b",
+   "sure": 10.2,
+   "zaman": [
+    [
+     0.121,
+     6.461
+    ],
+    [
+     6.913,
+     9.748
+    ]
+   ]
+  },
+  "s-13-D": {
+   "v": "36a215cc77c6",
+   "sure": 8.976,
+   "zaman": [
+    [
+     0.121,
+     6.096
+    ],
+    [
+     6.549,
+     8.523
+    ]
+   ]
+  },
+  "s-13-E": {
+   "v": "9ef59438a014",
+   "sure": 9.792,
+   "zaman": [
+    [
+     0.121,
+     5.189
+    ],
+    [
+     5.641,
+     9.34
+    ]
+   ]
+  },
+  "q-33": {
+   "v": "6384bce2443c",
+   "sure": 28.536,
+   "zaman": [
+    [
+     0.12,
+     18.837
+    ],
+    [
+     19.288,
+     20.83
+    ],
+    [
+     21.281,
+     22.502
+    ],
+    [
+     22.953,
+     24.177
+    ],
+    [
+     24.628,
+     25.75
+    ],
+    [
+     26.201,
+     28.085
+    ]
+   ]
+  },
+  "i-33": {
+   "v": "10dc79502792",
+   "sure": 5.184,
+   "zaman": [
+    [
+     0.121,
+     4.729
+    ]
+   ]
+  },
+  "c-33": {
+   "v": "011257b17b3e",
+   "sure": 12.12,
+   "zaman": [
+    [
+     0.121,
+     2.334
+    ],
+    [
+     2.786,
+     8.184
+    ],
+    [
+     8.637,
+     11.667
+    ]
+   ]
+  },
+  "d-33": {
+   "v": "1fb166a1c49e",
+   "sure": 10.32,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.977,
+     6.38
+    ],
+    [
+     6.833,
+     9.867
+    ]
+   ]
+  },
+  "s-33-A": {
+   "v": "e3b7c15cd1d0",
+   "sure": 14.832,
+   "zaman": [
+    [
+     0.12,
+     8.762
+    ],
+    [
+     9.214,
+     14.381
+    ]
+   ]
+  },
+  "s-33-B": {
+   "v": "758be9ff9925",
+   "sure": 9.792,
+   "zaman": [
+    [
+     0.121,
+     6.476
+    ],
+    [
+     6.929,
+     9.339
+    ]
+   ]
+  },
+  "s-33-C": {
+   "v": "b3beb416b7d6",
+   "sure": 9.216,
+   "zaman": [
+    [
+     0.121,
+     5.456
+    ],
+    [
+     5.908,
+     8.763
+    ]
+   ]
+  },
+  "s-33-D": {
+   "v": "02d4e1c714b8",
+   "sure": 9.24,
+   "zaman": [
+    [
+     0.121,
+     5.072
+    ],
+    [
+     5.525,
+     8.787
+    ]
+   ]
+  },
+  "s-33-E": {
+   "v": "e5408e8ea6b9",
+   "sure": 8.52,
+   "zaman": [
+    [
+     0.121,
+     5.455
+    ],
+    [
+     5.908,
+     8.067
+    ]
+   ]
+  },
+  "q-8": {
+   "v": "2fd2d28e0f90",
+   "sure": 17.616,
+   "zaman": [
+    [
+     0.12,
+     3.0
+    ],
+    [
+     3.452,
+     5.46
+    ],
+    [
+     5.912,
+     7.734
+    ],
+    [
+     8.186,
+     11.745
+    ],
+    [
+     12.197,
+     14.165
+    ],
+    [
+     14.617,
+     17.164
+    ]
+   ]
+  },
+  "i-8": {
+   "v": "7434fb4d830e",
+   "sure": 5.064,
+   "zaman": [
+    [
+     0.121,
+     4.609
+    ]
+   ]
+  },
+  "c-8": {
+   "v": "0cbeb7ca46b8",
+   "sure": 15.024,
+   "zaman": [
+    [
+     0.12,
+     4.333
+    ],
+    [
+     4.785,
+     10.48
+    ],
+    [
+     10.931,
+     14.572
+    ]
+   ]
+  },
+  "d-8": {
+   "v": "af6f2564baa9",
+   "sure": 11.232,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.68
+    ],
+    [
+     7.132,
+     10.78
+    ]
+   ]
+  },
+  "s-8-A": {
+   "v": "a0b068077979",
+   "sure": 9.24,
+   "zaman": [
+    [
+     0.121,
+     5.069
+    ],
+    [
+     5.522,
+     8.787
+    ]
+   ]
+  },
+  "s-8-B": {
+   "v": "c7831dae9684",
+   "sure": 11.592,
+   "zaman": [
+    [
+     0.121,
+     5.397
+    ],
+    [
+     5.849,
+     11.14
+    ]
+   ]
+  },
+  "s-8-C": {
+   "v": "6d5d586ed256",
+   "sure": 10.704,
+   "zaman": [
+    [
+     0.121,
+     6.9
+    ],
+    [
+     7.353,
+     10.251
+    ]
+   ]
+  },
+  "s-8-D": {
+   "v": "5ddcac65e587",
+   "sure": 10.68,
+   "zaman": [
+    [
+     0.121,
+     7.099
+    ],
+    [
+     7.551,
+     10.228
+    ]
+   ]
+  },
+  "s-8-E": {
+   "v": "aded48f8798f",
+   "sure": 10.728,
+   "zaman": [
+    [
+     0.121,
+     5.458
+    ],
+    [
+     5.911,
+     10.275
+    ]
+   ]
+  },
+  "q-11": {
+   "v": "aa324e6745ac",
+   "sure": 12.984,
+   "zaman": [
+    [
+     0.121,
+     3.6
+    ],
+    [
+     4.052,
+     5.298
+    ],
+    [
+     5.75,
+     7.585
+    ],
+    [
+     8.038,
+     9.2
+    ],
+    [
+     9.652,
+     10.811
+    ],
+    [
+     11.263,
+     12.532
+    ]
+   ]
+  },
+  "i-11": {
+   "v": "f458a8c7ebc3",
+   "sure": 4.728,
+   "zaman": [
+    [
+     0.121,
+     4.273
+    ]
+   ]
+  },
+  "c-11": {
+   "v": "c00f36539c37",
+   "sure": 8.664,
+   "zaman": [
+    [
+     0.121,
+     2.058
+    ],
+    [
+     2.51,
+     8.211
+    ]
+   ]
+  },
+  "d-11": {
+   "v": "20e6d64cb806",
+   "sure": 7.152,
+   "zaman": [
+    [
+     0.121,
+     0.525
+    ],
+    [
+     0.979,
+     6.698
+    ]
+   ]
+  },
+  "s-11-A": {
+   "v": "b2be3e6d228f",
+   "sure": 10.896,
+   "zaman": [
+    [
+     0.121,
+     6.43
+    ],
+    [
+     6.882,
+     10.444
+    ]
+   ]
+  },
+  "s-11-B": {
+   "v": "8fcea6f8c6de",
+   "sure": 10.08,
+   "zaman": [
+    [
+     0.121,
+     5.795
+    ],
+    [
+     6.248,
+     9.627
+    ]
+   ]
+  },
+  "s-11-C": {
+   "v": "9240004fea92",
+   "sure": 10.224,
+   "zaman": [
+    [
+     0.121,
+     6.082
+    ],
+    [
+     6.536,
+     9.771
+    ]
+   ]
+  },
+  "s-11-D": {
+   "v": "774a11593ec8",
+   "sure": 9.408,
+   "zaman": [
+    [
+     0.121,
+     4.899
+    ],
+    [
+     5.352,
+     8.955
+    ]
+   ]
+  },
+  "s-11-E": {
+   "v": "2f888bd419df",
+   "sure": 10.032,
+   "zaman": [
+    [
+     0.121,
+     6.083
+    ],
+    [
+     6.536,
+     9.579
+    ]
+   ]
+  },
+  "q-17": {
+   "v": "90f870e83f17",
+   "sure": 14.808,
+   "zaman": [
+    [
+     0.121,
+     5.875
+    ],
+    [
+     6.327,
+     7.573
+    ],
+    [
+     8.025,
+     9.183
+    ],
+    [
+     9.635,
+     10.782
+    ],
+    [
+     11.234,
+     12.635
+    ],
+    [
+     13.088,
+     14.356
+    ]
+   ]
+  },
+  "i-17": {
+   "v": "e55135b2da6c",
+   "sure": 4.824,
+   "zaman": [
+    [
+     0.121,
+     4.369
+    ]
+   ]
+  },
+  "c-17": {
+   "v": "95c1e7c94254",
+   "sure": 12.816,
+   "zaman": [
+    [
+     0.121,
+     1.973
+    ],
+    [
+     2.425,
+     8.691
+    ],
+    [
+     9.143,
+     12.364
+    ]
+   ]
+  },
+  "d-17": {
+   "v": "78e1603fe2ad",
+   "sure": 11.376,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     7.248
+    ],
+    [
+     7.7,
+     10.924
+    ]
+   ]
+  },
+  "s-17-A": {
+   "v": "ff1b4420d114",
+   "sure": 9.84,
+   "zaman": [
+    [
+     0.121,
+     5.877
+    ],
+    [
+     6.33,
+     9.387
+    ]
+   ]
+  },
+  "s-17-B": {
+   "v": "73d6fa9ac460",
+   "sure": 10.68,
+   "zaman": [
+    [
+     0.121,
+     6.643
+    ],
+    [
+     7.096,
+     10.227
+    ]
+   ]
+  },
+  "s-17-C": {
+   "v": "13bd48cf76b6",
+   "sure": 10.464,
+   "zaman": [
+    [
+     0.121,
+     6.07
+    ],
+    [
+     6.522,
+     10.012
+    ]
+   ]
+  },
+  "s-17-D": {
+   "v": "0260cd3d06ca",
+   "sure": 10.104,
+   "zaman": [
+    [
+     0.121,
+     5.877
+    ],
+    [
+     6.33,
+     9.651
+    ]
+   ]
+  },
+  "s-17-E": {
+   "v": "cc6fa9b2dbb2",
+   "sure": 10.176,
+   "zaman": [
+    [
+     0.121,
+     6.196
+    ],
+    [
+     6.648,
+     9.723
+    ]
+   ]
+  },
+  "q-18": {
+   "v": "f0fe73f24a82",
+   "sure": 18.48,
+   "zaman": [
+    [
+     0.12,
+     4.315
+    ],
+    [
+     4.767,
+     7.256
+    ],
+    [
+     7.708,
+     9.394
+    ],
+    [
+     9.845,
+     13.378
+    ],
+    [
+     13.83,
+     15.529
+    ],
+    [
+     15.981,
+     18.028
+    ]
+   ]
+  },
+  "i-18": {
+   "v": "be3bb42aec11",
+   "sure": 4.392,
+   "zaman": [
+    [
+     0.121,
+     3.936
+    ]
+   ]
+  },
+  "c-18": {
+   "v": "bc5125148e59",
+   "sure": 14.016,
+   "zaman": [
+    [
+     0.121,
+     4.295
+    ],
+    [
+     4.747,
+     9.934
+    ],
+    [
+     10.386,
+     13.564
+    ]
+   ]
+  },
+  "d-18": {
+   "v": "40abdabe82b6",
+   "sure": 10.248,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.164
+    ],
+    [
+     6.617,
+     9.795
+    ]
+   ]
+  },
+  "s-18-A": {
+   "v": "351edad6b5e9",
+   "sure": 10.416,
+   "zaman": [
+    [
+     0.121,
+     5.488
+    ],
+    [
+     5.941,
+     9.963
+    ]
+   ]
+  },
+  "s-18-B": {
+   "v": "329edb258d89",
+   "sure": 9.264,
+   "zaman": [
+    [
+     0.121,
+     6.062
+    ],
+    [
+     6.515,
+     8.811
+    ]
+   ]
+  },
+  "s-18-C": {
+   "v": "cf03e6b6238c",
+   "sure": 9.696,
+   "zaman": [
+    [
+     0.121,
+     6.252
+    ],
+    [
+     6.705,
+     9.243
+    ]
+   ]
+  },
+  "s-18-D": {
+   "v": "403aeec3fe9e",
+   "sure": 9.648,
+   "zaman": [
+    [
+     0.121,
+     5.571
+    ],
+    [
+     6.023,
+     9.195
+    ]
+   ]
+  },
+  "s-18-E": {
+   "v": "c6aa36c11394",
+   "sure": 9.48,
+   "zaman": [
+    [
+     0.121,
+     4.907
+    ],
+    [
+     5.36,
+     9.027
+    ]
+   ]
+  },
+  "q-30": {
+   "v": "606d03747688",
+   "sure": 24.792,
+   "zaman": [
+    [
+     0.12,
+     12.179
+    ],
+    [
+     12.63,
+     13.874
+    ],
+    [
+     14.325,
+     16.771
+    ],
+    [
+     17.222,
+     18.786
+    ],
+    [
+     19.238,
+     21.283
+    ],
+    [
+     21.734,
+     24.341
+    ]
+   ]
+  },
+  "i-30": {
+   "v": "448328dcae1b",
+   "sure": 4.632,
+   "zaman": [
+    [
+     0.122,
+     4.175
+    ]
+   ]
+  },
+  "c-30": {
+   "v": "e73747a0e324",
+   "sure": 13.176,
+   "zaman": [
+    [
+     0.12,
+     3.292
+    ],
+    [
+     3.744,
+     10.007
+    ],
+    [
+     10.459,
+     12.724
+    ]
+   ]
+  },
+  "d-30": {
+   "v": "c119a5b117b0",
+   "sure": 10.416,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.975,
+     7.244
+    ],
+    [
+     7.696,
+     9.964
+    ]
+   ]
+  },
+  "s-30-A": {
+   "v": "7b26bff97039",
+   "sure": 11.208,
+   "zaman": [
+    [
+     0.121,
+     6.777
+    ],
+    [
+     7.229,
+     10.756
+    ]
+   ]
+  },
+  "s-30-B": {
+   "v": "59833bc182d9",
+   "sure": 11.352,
+   "zaman": [
+    [
+     0.121,
+     6.786
+    ],
+    [
+     7.239,
+     10.899
+    ]
+   ]
+  },
+  "s-30-C": {
+   "v": "085935f9b5bc",
+   "sure": 10.776,
+   "zaman": [
+    [
+     0.121,
+     5.813
+    ],
+    [
+     6.265,
+     10.324
+    ]
+   ]
+  },
+  "s-30-D": {
+   "v": "e17fe49f2947",
+   "sure": 10.56,
+   "zaman": [
+    [
+     0.121,
+     5.451
+    ],
+    [
+     5.904,
+     10.107
+    ]
+   ]
+  },
+  "s-30-E": {
+   "v": "a2d8f51a4dc3",
+   "sure": 11.976,
+   "zaman": [
+    [
+     0.121,
+     6.974
+    ],
+    [
+     7.426,
+     11.524
+    ]
+   ]
+  },
+  "q-16": {
+   "v": "107143121268",
+   "sure": 14.952,
+   "zaman": [
+    [
+     0.121,
+     3.233
+    ],
+    [
+     3.686,
+     6.082
+    ],
+    [
+     6.534,
+     8.141
+    ],
+    [
+     8.593,
+     10.364
+    ],
+    [
+     10.816,
+     12.389
+    ],
+    [
+     12.841,
+     14.5
+    ]
+   ]
+  },
+  "i-16": {
+   "v": "5fcf56a0bc75",
+   "sure": 4.368,
+   "zaman": [
+    [
+     0.122,
+     3.911
+    ]
+   ]
+  },
+  "c-16": {
+   "v": "f81df7303cbe",
+   "sure": 11.376,
+   "zaman": [
+    [
+     0.121,
+     3.19
+    ],
+    [
+     3.643,
+     8.58
+    ],
+    [
+     9.033,
+     10.923
+    ]
+   ]
+  },
+  "d-16": {
+   "v": "7e8768272982",
+   "sure": 8.712,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.915
+    ],
+    [
+     6.368,
+     8.259
+    ]
+   ]
+  },
+  "s-16-A": {
+   "v": "e9582a8fbbb3",
+   "sure": 8.736,
+   "zaman": [
+    [
+     0.121,
+     4.953
+    ],
+    [
+     5.406,
+     8.283
+    ]
+   ]
+  },
+  "s-16-B": {
+   "v": "46e28663a268",
+   "sure": 9.216,
+   "zaman": [
+    [
+     0.121,
+     5.538
+    ],
+    [
+     5.991,
+     8.763
+    ]
+   ]
+  },
+  "s-16-C": {
+   "v": "8e49ef557c2c",
+   "sure": 7.656,
+   "zaman": [
+    [
+     0.121,
+     3.913
+    ],
+    [
+     4.367,
+     7.202
+    ]
+   ]
+  },
+  "s-16-D": {
+   "v": "1382f5a1eb93",
+   "sure": 9.432,
+   "zaman": [
+    [
+     0.121,
+     5.212
+    ],
+    [
+     5.664,
+     8.98
+    ]
+   ]
+  },
+  "s-16-E": {
+   "v": "f242105d1ba8",
+   "sure": 8.592,
+   "zaman": [
+    [
+     0.121,
+     5.272
+    ],
+    [
+     5.725,
+     8.139
+    ]
+   ]
+  }
+ },
+ "_uretici": {
+  "uretken": "DeepSeek V4.1 Flash Eco",
+  "model": "opendesign/deepseek-v4.1-flash-eco"
+ }
+}

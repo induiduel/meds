@@ -295,6 +295,18 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Nöroloji/8)Medulla Spinalis Hastalıkları.pdf', name: '8)Medulla Spinalis Hastalıkları.pdf', pages: 46, fileId: '1ISKIIXBm01K1ohrRtdoOJrHxqrVknPwf' } as SourceFile],
   },
+  // 2026-11-13 Kurul 2, Nöroloji (Öğren askıda, destesiz): 2026-27 seçmeli staj PDF'leri doğrudan bağlı.
+  // k2-62 ders programında 5. hafta (27 Kasım) İrfan Yavaş adına kayıtlı; PDF kapağında Dr. A. Serkan Emekli imzası var.
+  'k2p-k2-62-kraniyal-sinir-muayenesi': {
+    title: 'Kraniyal Sinir Muayenesi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/9)Kraniyal Sinir Muayenesi.pdf', name: '9)Kraniyal Sinir Muayenesi.pdf', pages: 36 } as SourceFile],
+  },
+  'k2p-k2-65-serebrovaskuler-hastaliklar': {
+    title: 'Serebrovasküler Hastalıklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/10)Serebrovasküler Hastalıklar.pdf', name: '10)Serebrovasküler Hastalıklar.pdf', pages: 60 } as SourceFile],
+  },
   'k2p-k2-38-travma-ve-stres-baglantili-bozukluklar': {
     title: 'Travma ve Stres Bağlantılı Bozukluklar',
     decks: [],

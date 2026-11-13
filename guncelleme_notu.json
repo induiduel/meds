@@ -1,52 +1,48 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 718,
-  "baslik": "Soru çıkarıcıda tam ayar şablonu, her ögeye ayrı renk ve tablette yazdırma",
+  "onem": 719,
+  "baslik": "Nöroloji: Kraniyal Sinir Muayenesi ve Serebrovasküler Hastalıklar dersleri (2026-27 PDF)",
   "maddeler": [
-    "Soru dışa aktarıcıya Şablon sekmesi geldi: o anki tüm ayarlar (tasarım, sayfa, yazı, renkler, çözüm, logo ve soru süzgeçleri, soru sayısı) tek adla kaydedilip tek dokunuşla geri yükleniyor",
-    "Şablonlar JSON olarak dışa aktarılıp başka cihaza taşınabiliyor; aynı adla kaydetmek şablonu günceller, kayıtlı ayarlarla birebir eşleşme 'şu an' rozetiyle gösterilir",
-    "Renk › Öge renkleri 40 ögeye çıktı: başlık alt yazısı, grup soru sayısı, etiket, kapak üst yazısı/sayıları/alt başlığı/notu/zemini, cevap anahtarı zemini ve optik form artık ayrı ayrı seçiliyor",
-    "Bir ögenin rengini değiştirmek diğerlerine dokunmaz; boş bırakılan öge eskisi gibi vurgu/metin renginden türetilir",
-    "Tablet dikey görünümde (1024 piksel altı) görünmeyen Yazdır düğmesi alt çubuğa taşındı; Ayarlar ve Önizleme kiplerinde PDF indir ile birlikte duruyor",
-    "Soru çıkarıcı sekmeleri yedi bölüme (Şablon dahil) göre yeniden dizildi; telefonda düğme yazıları taşmadan kısalıyor"
+    "Sesli ders: Kraniyal Sinir Muayenesi (2n10) ve Serebrovasküler Hastalıklar (2n11) 2026-27 PDF’lerinden sıfırdan yazıldı; EMA sesi, cümle/kelime zamanlaması ve PDF takibi hazır.",
+    "En önemlileri: her iki ders için 20 ve 22 maddelik önem listesi, örnek sorular ve şık şık açıklamalı sesli soru çözücü eklendi.",
+    "Hocanın sorabileceği sorular: ara soru sayfaları ve ders dışı sesli çözücü eklendi.",
+    "Ders analizi: dersin kazanımları, çıkmış sorularda ne sorulduğu ve hoca üslubu bölümleri sesli hazırlandı.",
+    "Ders içerikleri: terimler, kısaltmalar, bilgi kartları, tablolar, listeler ve mini sorular sayfası üretildi.",
+    "Nöroloji ders kayıt defteri güncellendi: k2-62 hocası düzeltildi, k2-65 yeni ders olarak eklendi (27 Kasım 13:00)."
   ],
   "eklenen": [
-    "Soru dışa aktarıcı › Şablon sekmesi: tüm ayarları kaydet, güncelle, yükle, sil, JSON dışa/içe aktar",
-    "Şablon eşleşme rozeti (kanonik JSON karşılaştırması) ve şablon özeti (tasarım · düzen · kaynak · soru sayısı · tarih)",
-    "On yeni öge rengi: başlık alt yazısı, grup soru sayısı, etiket rengi, kapak üst yazısı, kapak sayıları, kapak alt başlığı, kapak notu, kapak zemini, cevap anahtarı zemini, optik form",
-    "Alt çubukta Yazdır düğmesi (tablet ve telefon)"
+    "Sesli ders › Kraniyal Sinir Muayenesi (2n10): 2026-27 PDF’inden 15 bölüm, EMA sesi, kelime zamanlaması, PDF işareti",
+    "Sesli ders › Serebrovasküler Hastalıklar (2n11): 2026-27 PDF’inden 16 bölüm, EMA sesi, kelime zamanlaması, PDF işareti",
+    "En önemlileri › 2n10 ve 2n11 önem listeleri (20 ve 22 madde) + örnek sorular + sesli soru çözücü",
+    "Hocanın sorabileceği sorular › 2a62 ve 2a65 (ders içinde ara soru sayfası + ders dışı sesli çözücü)",
+    "Ders analizi ve ders özeti › k2-62, k2-65 (kazanımlar, çıkmış sorularda ne soruldu, hoca üslubu; sesli)",
+    "Ders içerikleri › terim yardımcısı, kısaltmalar, bilgi kartları, tablolar, listeler, mini sorular",
+    "Ders kayıt defteri › k2-65 (Serebrovasküler Hastalıklar, 27 Kasım 13:00)"
   ],
   "degisen": [
-    "Soru dışa aktarıcı şablonları artık yalnız belge ayarını değil soru süzgeçlerini, soru sayısını ve önizleme yakınlığını da saklıyor; eski şablonlar korunuyor",
-    "Tasarım sekmesindeki Şablonlarım bölümü yerine Şablon sekmesine bağlantı kondu",
-    "Öge rengi türetmeleri yeni ögelere bağlandı; etiket rengi sabit gri yerine öge renginden okunuyor"
+    "Nöroloji › k2-62 Kraniyal Sinir Muayenesi dersinin öğretim üyesi 2026-27 ders programına göre Dr. Öğr. Üyesi İrfan Yavaş olarak düzeltildi",
+    "Kısaltma sözlüğü 573 kısaltmaya çıkarıldı (iki dersin kısaltmaları eklendi)"
   ],
   "duzeltilen": [
-    "Tablet dikey görünümde Yazdır düğmesi hiç görünmüyordu (eylem satırı iki kipte de gizleniyordu); alt çubuk artık yazdırmayı da taşıyor"
+    "Ders analizi üreticisi tam ders anahtarıyla çağrıldığında dersi “kayıt defterinde yok” sayıyordu; artık anahtarı kısa kimliğe çeviriyor"
   ],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Soru çıkarıcı şablonları",
-      "nerede": { "ad": "Soru dışa aktarıcı", "yol": "/sorular/disa-aktar" },
-      "amac": "Sık kullandığın belge ayarı ile soru seçimini birlikte sakla, sonra tek dokunuşla geri yükle.",
+      "ad": "Nöroloji 2026-27 sesli dersleri (Kraniyal Sinir Muayenesi, Serebrovasküler Hastalıklar)",
+      "nerede": {
+        "ad": "Ders çalış › Sesli dersler",
+        "yol": "/dersler/kurul2/noroloji"
+      },
+      "amac": "2026-27 ders PDF’lerinden yazılmış, sesli anlatımlı, metni sesle birlikte takip edilen iki Nöroloji dersi.",
       "islevler": [
-        "Şablon sekmesinde ad verip kaydet; aynı adla kaydetmek şablonu günceller",
-        "Şablona dokununca tasarım, sayfa, yazı, renkler, çözüm ve soru süzgeçleri birlikte geri gelir",
-        "JSON olarak dışa aktar, başka cihazda içe aktar",
-        "Listedeki ↻ düğmesi şablonu şu anki ayarlarla günceller, ↓ düğmesi tek şablonu indirir"
+        "Ders sesi EMA ile okunur; konuşulan cümle ve slayttaki satır/şekil birlikte işaretlenir",
+        "En önemlileri sayfasında puanlı önem listesi, örnek sorular ve sesli soru çözücü",
+        "Ders içinde hocanın sorabileceği soru sayfası; ders dışında aynı soruları sesli çözme",
+        "Ders analizi ve ders özeti sesli olarak dinlenebilir",
+        "Ders içerikleri sayfasında terimler, kısaltmalar, tablolar, listeler, kartlar ve mini sorular"
       ],
-      "ipucu": "Şablonlar bu cihazda saklanır; yedeklemek için 'Tümünü dışa aktar'."
-    },
-    {
-      "ad": "Her ögeye ayrı renk",
-      "nerede": { "ad": "Soru dışa aktarıcı › Renk", "yol": "/sorular/disa-aktar" },
-      "amac": "Belgedeki her parçanın rengini tek tek seç; tema seçmek zorunda kalma.",
-      "islevler": [
-        "Renk › Öge renkleri altında 40 öge dört grupta listelenir",
-        "Değiştirilen öge belgeye anında yansır; tema 'Özel' olur, diğer renkler bozulmaz",
-        "× ile öge yeniden vurgu/metin renginden türetilir"
-      ]
+      "ipucu": "Ders sayfasında “En önemlileri”, “Ders içerikleri” ve “Hocanın sorabileceği sorular” sekmelerini kullanabilirsin."
     }
   ]
 }

@@ -1,0 +1,810 @@
+{
+ "surum": 1,
+ "key": "k2-65",
+ "kod": "2n11",
+ "kurul": 2,
+ "brans": "Nöroloji",
+ "konu": "Serebrovasküler Hastalıklar",
+ "ogretim_uyesi": "DR. A. SERKAN EMEKLİ",
+ "profil": "Nöroloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2n11"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Beyin damar hastalıklarının tanımı ve sınıflaması, geçici iskemik atak ile inmenin ayrımı, inme sıklığı ve mortalitesi, değiştirilebilen ve değiştirilemeyen risk faktörleri, beyin kan dolaşımı ve otoregülasyon, iskemik inmede çekirdek ve penumbra, iskemik inme sendromları, etyolojik tipler ve kardiyoembolik kaynaklar, tanı basamakları, doku plazminojen aktivatörü tedavisi ve dışlama ölçütleri, genel bakım, hiperglisemi, beyin ödemı ve kan basıncı yönetimi, hemorajik inmede yerleşime göre klinik tablolar, hematom hacmi, prognoz, nörogörüntüleme ve komplikasyonlar bu dersin başlıklarıdır.",
+   "maddeler": [
+    {
+     "metin": "Dersin çerçevesi ve tanımlar"
+    },
+    {
+     "metin": "Fokal ve non-fokal semptomlar"
+    },
+    {
+     "metin": "Epidemiyoloji ve risk faktörleri"
+    },
+    {
+     "metin": "Beyin kan dolaşımı ve otoregülasyon"
+    },
+    {
+     "metin": "Ayırıcı tanı ve iskemik inme tanımı"
+    },
+    {
+     "metin": "İskemik inme sendromları"
+    },
+    {
+     "metin": "İskemik inmenin etyolojisi"
+    },
+    {
+     "metin": "Tanı ve tedavi çerçevesi"
+    },
+    {
+     "metin": "Damar içi pıhtı eritici tedavi"
+    },
+    {
+     "metin": "Erken dönem ilaç tedavisi"
+    },
+    {
+     "metin": "İskemik inmede genel bakım"
+    },
+    {
+     "metin": "Kanamalı inme: büyüklük ve amaçlar"
+    },
+    {
+     "metin": "Kanamalı inmenin kliniği"
+    },
+    {
+     "metin": "Nörogörüntüleme ve ayırıcı tanı"
+    },
+    {
+     "metin": "Kanamalı inmede tedavi ve komplikasyonlar"
+    },
+    {
+     "metin": "Dersin toparlanması"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Beyin damar hastalıklarının tanımı ve sınıflaması, geçici iskemik atak ile inmenin ayrımı, inme sıklığı ve mortalitesi, değiştirilebilen ve değiştirilemeyen risk faktörleri, beyin kan dolaşımı ve otoregülasyon, iskemik inmede çekirdek ve penumbra, iskemik inme sendromları, etyolojik tipler ve kardiyoembolik kaynaklar, tanı basamakları, doku plazminojen aktivatörü tedavisi ve dışlama ölçütleri, genel bakım, hiperglisemi, beyin ödemı ve kan basıncı yönetimi, hemorajik inmede yerleşime göre klinik tablolar, hematom hacmi, prognoz, nörogörüntüleme ve komplikasyonlar bu dersin başlıklarıdır.",
+    "Dersin çerçevesi ve tanımlar.",
+    "Fokal ve non-fokal semptomlar.",
+    "Epidemiyoloji ve risk faktörleri.",
+    "Beyin kan dolaşımı ve otoregülasyon.",
+    "Ayırıcı tanı ve iskemik inme tanımı.",
+    "İskemik inme sendromları.",
+    "İskemik inmenin etyolojisi.",
+    "Tanı ve tedavi çerçevesi.",
+    "Damar içi pıhtı eritici tedavi.",
+    "Erken dönem ilaç tedavisi.",
+    "İskemik inmede genel bakım.",
+    "Kanamalı inme: büyüklük ve amaçlar.",
+    "Kanamalı inmenin kliniği.",
+    "Nörogörüntüleme ve ayırıcı tanı.",
+    "Kanamalı inmede tedavi ve komplikasyonlar.",
+    "Dersin toparlanması."
+   ],
+   "v": "6a1e9db6e1"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Asemptomatik",
+     "metin": "Çıkmış (dogrudan): kalıcı parenkimal hasat oluşturmayan geçici fokal serebral fonksiyon kaybı",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "İNME RİSK FAKTÖRLERİ",
+     "metin": "Çıkmış (dogrudan): Hipertansiyon",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "İNME SENDROMUNUN AYIRICI TANISI",
+     "metin": "Çıkmış (dogrudan): Başlangıç anidir",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "İSKEMİK İNME / GENEL BAKIM",
+     "metin": "Çıkmış (dolayli): Rutin idrar kateterizasyonu önerilmez",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Tanı",
+     "metin": "Çıkmış (dogrudan): BT - kontrastsız",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Kanamanın hacmi",
+     "metin": "Çıkmış (dolayli): fonksiyonel bağımsızlık olasılığı düşük",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Venöz tromboembolizm",
+     "metin": "Çıkmış (dogrudan): Venöz tromboembolizm",
+     "s": [
+      60
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Asemptomatik: Çıkmış (dogrudan): kalıcı parenkimal hasat oluşturmayan geçici fokal serebral fonksiyon kaybı.",
+    "İNME RİSK FAKTÖRLERİ: Çıkmış (dogrudan): Hipertansiyon.",
+    "İNME SENDROMUNUN AYIRICI TANISI: Çıkmış (dogrudan): Başlangıç anidir.",
+    "İSKEMİK İNME / GENEL BAKIM: Çıkmış (dolayli): Rutin idrar kateterizasyonu önerilmez.",
+    "Tanı: Çıkmış (dogrudan): BT - kontrastsız.",
+    "Kanamanın hacmi: Çıkmış (dolayli): fonksiyonel bağımsızlık olasılığı düşük.",
+    "Venöz tromboembolizm: Çıkmış (dogrudan): Venöz tromboembolizm."
+   ],
+   "v": "86aa5ef226"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "İnme, nörolojinin en sık ve en ölümcül acil tablosudur; dersin her bölümü sınavda vaka sorusuna dönüşür. Çıkmış sorularda geçici iskemik atak tanımı, değiştirilebilir risk faktörü, ilk görüntüleme seçimi, ani başlangıç ve inme sonrası komplikasyonlar sorulmuştur.",
+   "maddeler": [
+    {
+     "baslik": "Geçici iskemik atağın tanımı",
+     "metin": "Geçici iskemik atak, yirmi dört saatten kısa süren ve kalıcı doku hasarı bırakmayan fokal beyin fonksiyon kaybıdır.",
+     "neden": "Süre ve düzelme ölçütü çıkmış soruda doğrudan sorulmuştur; tanımın iki parçası ayırt edicidir.",
+     "s": [
+      3
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Beyin damar hastalıklarının klinik sınıflaması",
+     "metin": "Beyin damar hastalıkları asemptomatik, fokal beyin disfonksiyonu ile giden, vasküler demans ve hipertansif ensefalopati başlıklarında toplanır.",
+     "neden": "Sınıflamanın dalları şıklarda çeldirici olarak kullanılır; hangi tablonun hangi dala girdiği sorulur.",
+     "s": [
+      2
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "İnmenin dağılımı ve mortalitesi",
+     "metin": "İnmelerin yaklaşık yüzde sekseni beyin infarktı, yüzde on beşi intraserebral kanama, yüzde beşi subaraknoid kanamadır.",
+     "neden": "Yüzdeler sınavda rakam sorusu olarak çıkar; dağılım bilinmeden kanama ile iskemi sıklığı karşılaştırılamaz.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "İskemik inme sendromları",
+     "metin": "Tam anterior sendromda hemiparezi, afazi ya da ihmal ve homonim hemianopsi birliktedir; laküner sendromda kortikal bulgu ve hemianopsi yoktur.",
+     "neden": "Dört sendromun bulgu bileşimi, vaka üzerinden lokalizasyon sorusunun temelidir.",
+     "s": [
+      16
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "İlk görüntüleme: kontrastsız bilgisayarlı tomografi",
+     "metin": "Akut inmede ilk görüntüleme kontrastsız bilgisayarlı tomografidir; kanama ile iskemi ayrımı bu tetkikle yapılır.",
+     "neden": "İki ayrı çıkmış soruda ilk istenen tetkik sorulmuştur; cevap her ikisinde de kontrastsız tomografidir.",
+     "s": [
+      13,
+      46
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Hemorajik inmenin ağır seyri",
+     "metin": "Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır ve otuz günlük mortalitesi yüksektir.",
+     "neden": "Kanamalı inmenin ağırlığı rakamla kurulur; prognoz sorularında bu oranlar dayanak olur.",
+     "s": [
+      37
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Değiştirilebilen risk faktörleri",
+     "metin": "Hipertansiyon, kalp hastalıkları, sigara, diyabet ve lipid yüksekliği inme ile ilişkisi kesin olan ve değiştirilebilen risk faktörleridir.",
+     "neden": "Değiştirilebilir risk faktörü çıkmış soruda doğrudan soruldu; üç grup birbirinden ayrılmadan cevap kurulamaz.",
+     "s": [
+      8
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kanamanın yerleşimine göre sıklık",
+     "metin": "Putaminal kanama en sık görülen yerleşimdir; onu lober subkortikal ve talamik kanama izler, pontin ve serebellar kanama daha seyrektir.",
+     "neden": "Yerleşim yüzdeleri tablo sorusu olarak çıkar; en sık yer bilinmeden vaka yorumu yapılamaz.",
+     "s": [
+      40
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "İnme, nörolojinin en sık ve en ölümcül acil tablosudur; dersin her bölümü sınavda vaka sorusuna dönüşür. Çıkmış sorularda geçici iskemik atak tanımı, değiştirilebilir risk faktörü, ilk görüntüleme seçimi, ani başlangıç ve inme sonrası komplikasyonlar sorulmuştur.",
+    "Geçici iskemik atağın tanımı: Geçici iskemik atak, yirmi dört saatten kısa süren ve kalıcı doku hasarı bırakmayan fokal beyin fonksiyon kaybıdır.",
+    "Beyin damar hastalıklarının klinik sınıflaması: Beyin damar hastalıkları asemptomatik, fokal beyin disfonksiyonu ile giden, vasküler demans ve hipertansif ensefalopati başlıklarında toplanır.",
+    "İnmenin dağılımı ve mortalitesi: İnmelerin yaklaşık yüzde sekseni beyin infarktı, yüzde on beşi intraserebral kanama, yüzde beşi subaraknoid kanamadır.",
+    "İskemik inme sendromları: Tam anterior sendromda hemiparezi, afazi ya da ihmal ve homonim hemianopsi birliktedir; laküner sendromda kortikal bulgu ve hemianopsi yoktur.",
+    "İlk görüntüleme: kontrastsız bilgisayarlı tomografi: Akut inmede ilk görüntüleme kontrastsız bilgisayarlı tomografidir; kanama ile iskemi ayrımı bu tetkikle yapılır.",
+    "Hemorajik inmenin ağır seyri: Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır ve otuz günlük mortalitesi yüksektir.",
+    "Değiştirilebilen risk faktörleri: Hipertansiyon, kalp hastalıkları, sigara, diyabet ve lipid yüksekliği inme ile ilişkisi kesin olan ve değiştirilebilen risk faktörleridir.",
+    "Kanamanın yerleşimine göre sıklık: Putaminal kanama en sık görülen yerleşimdir; onu lober subkortikal ve talamik kanama izler, pontin ve serebellar kanama daha seyrektir."
+   ],
+   "v": "3ff2bcd9f6"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 8 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Zaman profili dikkate alındığında, birden başlayan, genellikle 5-15 dakika süren ve 24 saat içinde tamamen düzelen geçici fokal nörolojik defisit aşağıdakilerden hangisidir?",
+     "cevap": "Geçici iskemik atak (TİA)",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi serebrovasküler olaylarda değiştirilebilir (tedavi edilebilir) risk faktörlerinden biridir?",
+     "cevap": "Hipertansiyon",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+     "cevap": "Hemipleji",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2024-2026",
+     "metin": "Aniden konuşamama ve sağ kol ile bacakta ani güç kaybı (akut hemipleji) ile başvuran hastada, semptomların ilk saatlerinde iskemik inme ile hemorajik inme ayrımını yapmak için ilk seçilecek acil tetkik hangisidir?",
+     "cevap": "Kontrastsız beyin bilgisayarlı tomografi (BT)",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Serebrovasküler hastalık ve hipertansiyon öyküsü olan ve sol tarafında ani güç kaybı, dizartri ve baş ağrısı ile acile başvuran hastada öncelikle hangi tetkik/tetkikleri istersiniz?",
+     "cevap": "Kontrastsız beyin bilgisayarlı tomografi - difüzyon manyetik rezonans görüntüleme",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi/hangileri serebrovasküler olay sonrası gelişen komplikasyonlardandır?",
+     "cevap": "Hepsi",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıda verilen inme komplikasyonları ve tedavileriyle ilgili ifadelerden hangisi yanlıştır?",
+     "cevap": "Mesane ve bağırsak disfonksiyonu görülmez",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Serebrovasküler olaylarda fonksiyonel düzeyi olumsuz yönde etkileyen kötü prognoz belirteçleri ile ilgili aşağıdaki öncüller verilmiştir: I. Multipl nörolojik defisit II. Zayıf kognitif fonksiyon III. Algısal ve uzaysal kayıplar IV. Başlangıçta koma olmaması Bunlardan hangileri kötü prognoz belirtecidir?",
+     "cevap": "I, II ve III",
+     "s": [
+      47
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 8 çıkmış soru var.",
+    "2020-2021: Zaman profili dikkate alındığında, birden başlayan, genellikle 5-15 dakika süren ve 24 saat içinde tamamen düzelen geçici fokal nörolojik defisit aşağıdakilerden hangisidir?",
+    "Cevap: Geçici iskemik atak (TİA).",
+    "2020-2021: Aşağıdakilerden hangisi serebrovasküler olaylarda değiştirilebilir (tedavi edilebilir) risk faktörlerinden biridir?",
+    "Cevap: Hipertansiyon.",
+    "2024-2025: Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+    "Cevap: Hemipleji.",
+    "2024-2026: Aniden konuşamama ve sağ kol ile bacakta ani güç kaybı (akut hemipleji) ile başvuran hastada, semptomların ilk saatlerinde iskemik inme ile hemorajik inme ayrımını yapmak için ilk seçilecek acil tetkik hangisidir?",
+    "Cevap: Kontrastsız beyin bilgisayarlı tomografi (BT).",
+    "2020-2021: Serebrovasküler hastalık ve hipertansiyon öyküsü olan ve sol tarafında ani güç kaybı, dizartri ve baş ağrısı ile acile başvuran hastada öncelikle hangi tetkik/tetkikleri istersiniz?",
+    "Cevap: Kontrastsız beyin bilgisayarlı tomografi - difüzyon manyetik rezonans görüntüleme.",
+    "2020-2021: Aşağıdakilerden hangisi/hangileri serebrovasküler olay sonrası gelişen komplikasyonlardandır?",
+    "Cevap: Hepsi.",
+    "2025-2026: Aşağıda verilen inme komplikasyonları ve tedavileriyle ilgili ifadelerden hangisi yanlıştır?",
+    "Cevap: Mesane ve bağırsak disfonksiyonu görülmez.",
+    "2020-2021: Serebrovasküler olaylarda fonksiyonel düzeyi olumsuz yönde etkileyen kötü prognoz belirteçleri ile ilgili aşağıdaki öncüller verilmiştir: I. Multipl nörolojik defisit II. Zayıf kognitif fonksiyon III. Algısal ve uzaysal kayıplar IV. Başlangıçta koma olmaması Bunlardan hangileri kötü prognoz belirtecidir?",
+    "Cevap: I, II ve III."
+   ],
+   "v": "60c3c86ff8"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Hocanın çıkmış sorularına dayanan profil; yol göstericidir, kesin değildir.",
+   "guven": "orta",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%47) ve tanı ve ayırıcı tanı (%16) sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%61) ve anlama ve ilişki kurma (%30) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın çıkmış sorularına dayanan profil; yol göstericidir, kesin değildir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%47) ve tanı ve ayırıcı tanı (%16) sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%61) ve anlama ve ilişki kurma (%30) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+   ],
+   "v": "e5d06e4227"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Geçici iskemik atağın tanımı",
+     "metin": "Süre ve düzelme ölçütü çıkmış soruda doğrudan sorulmuştur; tanımın iki parçası ayırt edicidir."
+    },
+    {
+     "baslik": "İlk görüntüleme: kontrastsız bilgisayarlı tomografi",
+     "metin": "İki ayrı çıkmış soruda ilk istenen tetkik sorulmuştur; cevap her ikisinde de kontrastsız tomografidir."
+    },
+    {
+     "baslik": "Hemorajik inmenin ağır seyri",
+     "metin": "Kanamalı inmenin ağırlığı rakamla kurulur; prognoz sorularında bu oranlar dayanak olur."
+    },
+    {
+     "baslik": "Değiştirilebilen risk faktörleri",
+     "metin": "Değiştirilebilir risk faktörü çıkmış soruda doğrudan soruldu; üç grup birbirinden ayrılmadan cevap kurulamaz."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Geçici iskemik atağın tanımı: Süre ve düzelme ölçütü çıkmış soruda doğrudan sorulmuştur; tanımın iki parçası ayırt edicidir.",
+    "İlk görüntüleme: kontrastsız bilgisayarlı tomografi: İki ayrı çıkmış soruda ilk istenen tetkik sorulmuştur; cevap her ikisinde de kontrastsız tomografidir.",
+    "Hemorajik inmenin ağır seyri: Kanamalı inmenin ağırlığı rakamla kurulur; prognoz sorularında bu oranlar dayanak olur.",
+    "Değiştirilebilen risk faktörleri: Değiştirilebilir risk faktörü çıkmış soruda doğrudan soruldu; üç grup birbirinden ayrılmadan cevap kurulamaz.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "6e01b80d06"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Beyin damar hastalıklarının tanımı ve sınıflaması, geçici iskemik atak ile inmenin ayrımı, inme sıklığı ve mortalitesi, değiştirilebilen ve değiştirilemeyen risk faktörleri, beyin kan dolaşımı ve otoregülasyon, iskemik inmede çekirdek ve penumbra, iskemik inme sendromları, etyolojik tipler ve kardiyoembolik kaynaklar, tanı basamakları, doku plazminojen aktivatörü tedavisi ve dışlama ölçütleri, genel bakım, hiperglisemi, beyin ödemı ve kan basıncı yönetimi, hemorajik inmede yerleşime göre klinik tablolar, hematom hacmi, prognoz, nörogörüntüleme ve komplikasyonlar bu dersin başlıklarıdır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Beyin damar hastalıklarının tanımı ve sınıflaması, geçici iskemik atak ile inmenin ayrımı, inme sıklığı ve mortalitesi, değiştirilebilen ve değiştirilemeyen risk faktörleri, beyin kan dolaşımı ve otoregülasyon, iskemik inmede çekirdek ve penumbra, iskemik inme sendromları, etyolojik tipler ve kardiyoembolik kaynaklar, tanı basamakları, doku plazminojen aktivatörü tedavisi ve dışlama ölçütleri, genel bakım, hiperglisemi, beyin ödemı ve kan basıncı yönetimi, hemorajik inmede yerleşime göre klinik tablolar, hematom hacmi, prognoz, nörogörüntüleme ve komplikasyonlar bu dersin başlıklarıdır."
+   ],
+   "v": "b3cf2d5de4"
+  },
+  {
+   "id": "2n11-02",
+   "baslik": "Beyin damar hastalıklarının klinik sınıflaması",
+   "giris": "Beyin damar hastalıkları asemptomatik, fokal beyin disfonksiyonu ile giden, vasküler demans ve hipertansif ensefalopati başlıklarında toplanır.",
+   "s": [
+    2
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Beyin damar hastalıkları, beynin bir bölgesinin geçici ya da kalıcı olarak iskemi veya kanama nedeniyle etkilendiği ve beyni besleyen damarların patolojik süreçle tutulduğu hastalıkların tümüdür."
+    },
+    {
+     "metin": "Damar hastalığı vardır ama henüz nörolojik bulgu yoktur; karotis darlığı bu grupta izlenir."
+    },
+    {
+     "metin": "Geçici iskemik atak ve inme yer alır. İnme kendi içinde iskemik inme ve kanayıcı inme olarak ikiye ayrılır; kanayıcı grupta beyin kanaması ve subaraknoid kanama bulunur."
+    },
+    {
+     "metin": "Vasküler demans ve hipertansif ensefalopati damar hastalığının beyin işlevini bozduğu ayrı başlıklardır."
+    },
+    {
+     "metin": "Bir tablonun sınıflamadaki yeri, o tablonun damar kaynaklı olup olmadığını ve hangi mekanizmayla geliştiğini gösterir."
+    }
+   ],
+   "klip": "o-2n11-02",
+   "ses": [
+    "Beyin damar hastalıklarının klinik sınıflaması.",
+    "Beyin damar hastalıkları asemptomatik, fokal beyin disfonksiyonu ile giden, vasküler demans ve hipertansif ensefalopati başlıklarında toplanır.",
+    "Beyin damar hastalıkları, beynin bir bölgesinin geçici ya da kalıcı olarak iskemi veya kanama nedeniyle etkilendiği ve beyni besleyen damarların patolojik süreçle tutulduğu hastalıkların tümüdür.",
+    "Damar hastalığı vardır ama henüz nörolojik bulgu yoktur; karotis darlığı bu grupta izlenir.",
+    "Geçici iskemik atak ve inme yer alır. İnme kendi içinde iskemik inme ve kanayıcı inme olarak ikiye ayrılır; kanayıcı grupta beyin kanaması ve subaraknoid kanama bulunur.",
+    "Vasküler demans ve hipertansif ensefalopati damar hastalığının beyin işlevini bozduğu ayrı başlıklardır.",
+    "Bir tablonun sınıflamadaki yeri, o tablonun damar kaynaklı olup olmadığını ve hangi mekanizmayla geliştiğini gösterir."
+   ],
+   "v": "5884df7b48"
+  },
+  {
+   "id": "2n11-01",
+   "baslik": "Geçici iskemik atağın tanımı",
+   "giris": "Geçici iskemik atak, yirmi dört saatten kısa süren ve kalıcı doku hasarı bırakmayan fokal beyin fonksiyon kaybıdır.",
+   "s": [
+    3
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Geçici iskemik atak, iskemik kökenli olduğu düşünülen, genellikle bir damar alanına lokalize edilebilen, kısa süreli ve kalıcı parenkimal hasat bırakmayan geçici fokal serebral fonksiyon kaybıdır."
+    },
+    {
+     "metin": "Kayıp yirmi dört saatten kısa sürer; çoğu atak dakikalar içinde tamamen düzelir."
+    },
+    {
+     "metin": "Görüntülemede kalıcı doku lezyonu yoktur. İskemik inme ile arasındaki en önemli fark nörogörüntülemedeki lezyon varlığıdır."
+    },
+    {
+     "metin": "Geçici iskemik atak ile hafif iskemik inmeler etyoloji, patogenez ve tedavi bakımından birbirinin devamıdır; bu yüzden atak geçiren hasta inme riski taşır."
+    },
+    {
+     "metin": "Atak sonrası ilk saatlerde yeni bir inme gelişebileceği için hasta acil değerlendirme ve damar görüntülemesi açısından izlenir."
+    }
+   ],
+   "klip": "o-2n11-01",
+   "ses": [
+    "Geçici iskemik atağın tanımı.",
+    "Geçici iskemik atak, yirmi dört saatten kısa süren ve kalıcı doku hasarı bırakmayan fokal beyin fonksiyon kaybıdır.",
+    "Geçici iskemik atak, iskemik kökenli olduğu düşünülen, genellikle bir damar alanına lokalize edilebilen, kısa süreli ve kalıcı parenkimal hasat bırakmayan geçici fokal serebral fonksiyon kaybıdır.",
+    "Kayıp yirmi dört saatten kısa sürer; çoğu atak dakikalar içinde tamamen düzelir.",
+    "Görüntülemede kalıcı doku lezyonu yoktur. İskemik inme ile arasındaki en önemli fark nörogörüntülemedeki lezyon varlığıdır.",
+    "Geçici iskemik atak ile hafif iskemik inmeler etyoloji, patogenez ve tedavi bakımından birbirinin devamıdır; bu yüzden atak geçiren hasta inme riski taşır.",
+    "Atak sonrası ilk saatlerde yeni bir inme gelişebileceği için hasta acil değerlendirme ve damar görüntülemesi açısından izlenir."
+   ],
+   "v": "b7ae7391cf"
+  },
+  {
+   "id": "2n11-03",
+   "baslik": "İnmenin dağılımı ve mortalitesi",
+   "giris": "İnmelerin yaklaşık yüzde sekseni beyin infarktı, yüzde on beşi intraserebral kanama, yüzde beşi subaraknoid kanamadır.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İnmelerin yüzde sekseni beyin infarktı, yüzde on beşi intraserebral kanama, yüzde beşi subaraknoid kanamadır. Bu oran, iskemik inmenin kanamalı inmeden çok daha sık olduğunu gösterir."
+    },
+    {
+     "metin": "Kalp hastalıkları ve kanserlerden sonra üçüncü mortalite nedenidir; bu yüzden ölüm nedeni sıralaması sorularında akılda tutulur."
+    },
+    {
+     "metin": "İnsidans binde iki, prevalans yüzde üç olarak verilir."
+    },
+    {
+     "metin": "Hastaların yüzde yirmisi erken dönemde, yüzde otuzu bir yıl içinde ölür; ciddi maluliyet sık görülür."
+    },
+    {
+     "metin": "Sıklık dağılımı, acil serviste önce hangi mekanizmanın düşünüleceğini ve görüntülemede hangi tablonun bekleneceğini belirler."
+    }
+   ],
+   "klip": "o-2n11-03",
+   "ses": [
+    "İnmenin dağılımı ve mortalitesi.",
+    "İnmelerin yaklaşık yüzde sekseni beyin infarktı, yüzde on beşi intraserebral kanama, yüzde beşi subaraknoid kanamadır.",
+    "İnmelerin yüzde sekseni beyin infarktı, yüzde on beşi intraserebral kanama, yüzde beşi subaraknoid kanamadır. Bu oran, iskemik inmenin kanamalı inmeden çok daha sık olduğunu gösterir.",
+    "Kalp hastalıkları ve kanserlerden sonra üçüncü mortalite nedenidir; bu yüzden ölüm nedeni sıralaması sorularında akılda tutulur.",
+    "İnsidans binde iki, prevalans yüzde üç olarak verilir.",
+    "Hastaların yüzde yirmisi erken dönemde, yüzde otuzu bir yıl içinde ölür; ciddi maluliyet sık görülür.",
+    "Sıklık dağılımı, acil serviste önce hangi mekanizmanın düşünüleceğini ve görüntülemede hangi tablonun bekleneceğini belirler."
+   ],
+   "v": "9a16d8de74"
+  },
+  {
+   "id": "2n11-07",
+   "baslik": "Değiştirilebilen risk faktörleri",
+   "giris": "Hipertansiyon, kalp hastalıkları, sigara, diyabet ve lipid yüksekliği inme ile ilişkisi kesin olan ve değiştirilebilen risk faktörleridir.",
+   "s": [
+    8
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Risk faktörleri değiştirilemeyen, ilişkisi kesin olan ve değiştirilebilen, ilişkisi ya da değiştirmenin etkisi kesin olmayan diye üçe ayrılır."
+    },
+    {
+     "metin": "Yaş, cins, soygeçmişte inme ya da geçici iskemik atak öyküsü, ırk ve düşük doğum tartısı bu gruptadır."
+    },
+    {
+     "metin": "Hipertansiyon, kalp hastalıkları, sigara, diyabet, yüksek kan kolesterolü ve lipidler, diyet, obezite, fiziksel inaktivite, menopoz sonrası hormon tedavisi, orak hücreli anemi ve asemptomatik karotis stenozu bulunur."
+    },
+    {
+     "metin": "Metabolik sendrom, hiperhomosistinemi, alkol ve madde kullanımı, oral kontraseptif, hiperkoagülabilite, lipoprotein yüksekliği, inflamatuvar süreçler, migren ve uyku apnesi yer alır."
+    },
+    {
+     "metin": "Değiştirilebilir faktörlerin varlığı, ikincil koruma ve yaşam biçimi düzenlemesinin hedefini belirler; hipertansiyon bu listenin başında yazılıdır."
+    }
+   ],
+   "klip": "o-2n11-07",
+   "ses": [
+    "Değiştirilebilen risk faktörleri.",
+    "Hipertansiyon, kalp hastalıkları, sigara, diyabet ve lipid yüksekliği inme ile ilişkisi kesin olan ve değiştirilebilen risk faktörleridir.",
+    "Risk faktörleri değiştirilemeyen, ilişkisi kesin olan ve değiştirilebilen, ilişkisi ya da değiştirmenin etkisi kesin olmayan diye üçe ayrılır.",
+    "Yaş, cins, soygeçmişte inme ya da geçici iskemik atak öyküsü, ırk ve düşük doğum tartısı bu gruptadır.",
+    "Hipertansiyon, kalp hastalıkları, sigara, diyabet, yüksek kan kolesterolü ve lipidler, diyet, obezite, fiziksel inaktivite, menopoz sonrası hormon tedavisi, orak hücreli anemi ve asemptomatik karotis stenozu bulunur.",
+    "Metabolik sendrom, hiperhomosistinemi, alkol ve madde kullanımı, oral kontraseptif, hiperkoagülabilite, lipoprotein yüksekliği, inflamatuvar süreçler, migren ve uyku apnesi yer alır.",
+    "Değiştirilebilir faktörlerin varlığı, ikincil koruma ve yaşam biçimi düzenlemesinin hedefini belirler; hipertansiyon bu listenin başında yazılıdır."
+   ],
+   "v": "1c9c23d21e"
+  },
+  {
+   "id": "2n11-05",
+   "baslik": "İlk görüntüleme: kontrastsız bilgisayarlı tomografi",
+   "giris": "Akut inmede ilk görüntüleme kontrastsız bilgisayarlı tomografidir; kanama ile iskemi ayrımı bu tetkikle yapılır.",
+   "s": [
+    13,
+    46
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Kontrastsız bilgisayarlı tomografi hızlıdır, kanamayı hemen gösterir ve iskemik inmede kanama dışlanmasını sağlar. Tromboliz kararı bu tetkikten sonra verilir."
+    },
+    {
+     "metin": "Damar tıkanıklığının yeri ve yaygınlığı tomografi anjiyografisi ile değerlendirilir."
+    },
+    {
+     "metin": "Erken iskemide manyetik rezonans daha duyarlıdır; difüzyon ağırlıklı görüntüleme yeni lezyonu gösterir. Kanamayı ayırmada duyarlılık ağırlıklı diziler kullanılır."
+    },
+    {
+     "metin": "Öykü ve muayene ile tanı yüksek oranda konsa da yatak başında iskemik ile kanamalı inme ayrımı yapılamaz; bu yüzden görüntüleme zorunludur."
+    },
+    {
+     "metin": "Tromboliz verilecek hastada kanama dışlanmadan tedaviye başlanmaz; ilk tetkikin sırası bu güvenlik kuralından doğar."
+    }
+   ],
+   "klip": "o-2n11-05",
+   "ses": [
+    "İlk görüntüleme: kontrastsız bilgisayarlı tomografi.",
+    "Akut inmede ilk görüntüleme kontrastsız bilgisayarlı tomografidir; kanama ile iskemi ayrımı bu tetkikle yapılır.",
+    "Kontrastsız bilgisayarlı tomografi hızlıdır, kanamayı hemen gösterir ve iskemik inmede kanama dışlanmasını sağlar. Tromboliz kararı bu tetkikten sonra verilir.",
+    "Damar tıkanıklığının yeri ve yaygınlığı tomografi anjiyografisi ile değerlendirilir.",
+    "Erken iskemide manyetik rezonans daha duyarlıdır; difüzyon ağırlıklı görüntüleme yeni lezyonu gösterir. Kanamayı ayırmada duyarlılık ağırlıklı diziler kullanılır.",
+    "Öykü ve muayene ile tanı yüksek oranda konsa da yatak başında iskemik ile kanamalı inme ayrımı yapılamaz; bu yüzden görüntüleme zorunludur.",
+    "Tromboliz verilecek hastada kanama dışlanmadan tedaviye başlanmaz; ilk tetkikin sırası bu güvenlik kuralından doğar."
+   ],
+   "v": "79dbf56016"
+  },
+  {
+   "id": "2n11-04",
+   "baslik": "İskemik inme sendromları",
+   "giris": "Tam anterior sendromda hemiparezi, afazi ya da ihmal ve homonim hemianopsi birliktedir; laküner sendromda kortikal bulgu ve hemianopsi yoktur.",
+   "s": [
+    16
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Aynı anda hemiparezi, afazi (sol yarıkürede) ya da ihmal (sağ yarıkürede) ve homonim hemianopsi bulunur. Üç bileşenin tamamı vardır."
+    },
+    {
+     "metin": "Üç bileşenden ikisi vardır ya da motor-duyusal bulgular monoparezi gibi sınırlı kalır; izole afazi gibi yeni kortikal bulgu eşlik eder."
+    },
+    {
+     "metin": "Oksipital lob, beyin sapı ve serebellar belirtilerin bileşimiyle oluşur; hemianopsi, ataksi ve beyin sapı bulguları birlikte görülür."
+    },
+    {
+     "metin": "Kortikal bulgu ve hemianopsi olmadan yüz, kol ve bacaktan en az ikisini kapsayan motor ya da duyusal bulgudur. Genellikle kapsüla interna ve bazis pontis gibi sıkışık bölgeleri sulayan penetran arterlerin tıkanmasıyla gelişen küçük derin infarktlardır."
+    },
+    {
+     "metin": "Sendrom adı, tıkanan damarın büyüklüğünü ve korteksin tutulup tutulmadığını gösterir; kortikal bulgu varsa büyük damar, yoksa küçük damar düşünülür."
+    }
+   ],
+   "klip": "o-2n11-04",
+   "ses": [
+    "İskemik inme sendromları.",
+    "Tam anterior sendromda hemiparezi, afazi ya da ihmal ve homonim hemianopsi birliktedir; laküner sendromda kortikal bulgu ve hemianopsi yoktur.",
+    "Aynı anda hemiparezi, afazi (sol yarıkürede) ya da ihmal (sağ yarıkürede) ve homonim hemianopsi bulunur. Üç bileşenin tamamı vardır.",
+    "Üç bileşenden ikisi vardır ya da motor-duyusal bulgular monoparezi gibi sınırlı kalır; izole afazi gibi yeni kortikal bulgu eşlik eder.",
+    "Oksipital lob, beyin sapı ve serebellar belirtilerin bileşimiyle oluşur; hemianopsi, ataksi ve beyin sapı bulguları birlikte görülür.",
+    "Kortikal bulgu ve hemianopsi olmadan yüz, kol ve bacaktan en az ikisini kapsayan motor ya da duyusal bulgudur. Genellikle kapsüla interna ve bazis pontis gibi sıkışık bölgeleri sulayan penetran arterlerin tıkanmasıyla gelişen küçük derin infarktlardır.",
+    "Sendrom adı, tıkanan damarın büyüklüğünü ve korteksin tutulup tutulmadığını gösterir; kortikal bulgu varsa büyük damar, yoksa küçük damar düşünülür."
+   ],
+   "v": "1bcd5aa9d2"
+  },
+  {
+   "id": "2n11-09",
+   "baslik": "Doku plazminojen aktivatörünün dozu",
+   "giris": "Doku plazminojen aktivatörü kilogram başına sıfır virgül dokuz miligram, en çok doksan miligram olarak verilir; ilacın yüzde onu bir dakikada bolus yapılır.",
+   "s": [
+    28
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İlaç tanı konar konmaz, mümkün olan en kısa sürede başlanır; fayda zamanla azalır. İlk bir buçuk saatte verilen tedavinin faydası en yüksektir."
+    },
+    {
+     "metin": "Kilogram başına sıfır virgül dokuz miligram, en çok doksan miligram olarak hesaplanır."
+    },
+    {
+     "metin": "Dozun yüzde onu bir dakikada bolus olarak verilir; kalan kısım altmış dakikada infüzyon şeklinde uygulanır."
+    },
+    {
+     "metin": "Tedavinin hedefi penumbra adı verilen kurtarılabilir dokudur; amaç enfarkt alanını küçültmektir."
+    },
+    {
+     "metin": "Tedavi öncesi kanama, kan basıncı, trombosit sayısı ve pıhtılaşma değerleri dışlama ölçütleri olarak kontrol edilir."
+    }
+   ],
+   "klip": "o-2n11-09",
+   "ses": [
+    "Doku plazminojen aktivatörünün dozu.",
+    "Doku plazminojen aktivatörü kilogram başına sıfır virgül dokuz miligram, en çok doksan miligram olarak verilir; ilacın yüzde onu bir dakikada bolus yapılır.",
+    "İlaç tanı konar konmaz, mümkün olan en kısa sürede başlanır; fayda zamanla azalır. İlk bir buçuk saatte verilen tedavinin faydası en yüksektir.",
+    "Kilogram başına sıfır virgül dokuz miligram, en çok doksan miligram olarak hesaplanır.",
+    "Dozun yüzde onu bir dakikada bolus olarak verilir; kalan kısım altmış dakikada infüzyon şeklinde uygulanır.",
+    "Tedavinin hedefi penumbra adı verilen kurtarılabilir dokudur; amaç enfarkt alanını küçültmektir.",
+    "Tedavi öncesi kanama, kan basıncı, trombosit sayısı ve pıhtılaşma değerleri dışlama ölçütleri olarak kontrol edilir."
+   ],
+   "v": "4ca4545145"
+  },
+  {
+   "id": "2n11-10",
+   "baslik": "İnmede kan basıncı yönetimi",
+   "giris": "Akut iskemik inmede ilk yirmi dört saatte kan basıncı çok yüksek değilse ve eşlik eden sorun yoksa hemen düşürülmez.",
+   "s": [
+    35,
+    36
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Akut dönemde, yani ilk yirmi dört saatte, kan basıncı çok yüksek değilse ve eşlik eden medikal sorun yoksa müdahale edilmez."
+    },
+    {
+     "metin": "Müdahale için sınır iki yüz yirmiye yüz yirmi milimetre cıvanın üzerinde olmaktır; kalp krizi, aort diseksiyonu ve kalp yetersizliği gibi eşlik eden sorunlar varsa sınır uygulanmaz."
+    },
+    {
+     "metin": "Düşürme gerektiğinde hedef kan basıncını yüzde on beş azaltmaktır; hızlı ve aşırı düşürme perfüzyonu bozar."
+    },
+    {
+     "metin": "Hipotansiyon ve düşük hacim mutlaka düzeltilir, çünkü bu durum beyin perfüzyonunu doğrudan azaltır."
+    },
+    {
+     "metin": "Yüksek kan basıncı ödem ve hemorajik dönüşüm riskini artırır; buna karşın erken dönemde aşırı düşürme de iskemiyi derinleştirir."
+    }
+   ],
+   "klip": "o-2n11-10",
+   "ses": [
+    "İnmede kan basıncı yönetimi.",
+    "Akut iskemik inmede ilk yirmi dört saatte kan basıncı çok yüksek değilse ve eşlik eden sorun yoksa hemen düşürülmez.",
+    "Akut dönemde, yani ilk yirmi dört saatte, kan basıncı çok yüksek değilse ve eşlik eden medikal sorun yoksa müdahale edilmez.",
+    "Müdahale için sınır iki yüz yirmiye yüz yirmi milimetre cıvanın üzerinde olmaktır; kalp krizi, aort diseksiyonu ve kalp yetersizliği gibi eşlik eden sorunlar varsa sınır uygulanmaz.",
+    "Düşürme gerektiğinde hedef kan basıncını yüzde on beş azaltmaktır; hızlı ve aşırı düşürme perfüzyonu bozar.",
+    "Hipotansiyon ve düşük hacim mutlaka düzeltilir, çünkü bu durum beyin perfüzyonunu doğrudan azaltır.",
+    "Yüksek kan basıncı ödem ve hemorajik dönüşüm riskini artırır; buna karşın erken dönemde aşırı düşürme de iskemiyi derinleştirir."
+   ],
+   "v": "9779165676"
+  },
+  {
+   "id": "2n11-06",
+   "baslik": "Hemorajik inmenin ağır seyri",
+   "giris": "Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır ve otuz günlük mortalitesi yüksektir.",
+   "s": [
+    37
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır; insidansı yüz binde on beş ile kırk arasındadır."
+    },
+    {
+     "metin": "Otuz günlük mortalite belirgin yüksektir. Bu yükseklik kanamanın kitle etkisi, ödem ve ventrikül içine açılma riskinden gelir."
+    },
+    {
+     "metin": "Hayatta kalanların ancak yüzde yirmisi altıncı ayda tam bağımsız kalabilir; bu da kanamanın iskemik inmeden daha ağır sekil bıraktığını gösterir."
+    },
+    {
+     "metin": "Mortalite ve morbidite kanamanın yeri, hacmi ve eşlik eden ödemle ilişkilidir; derin yerleşimli, serebellar ve beyin sapı kanamaları daha kötü seyreder."
+    },
+    {
+     "metin": "Bu oranlar, kanamalı inmede erken nöromonitorizasyon ve yoğun bakım izleminin neden öncelikli olduğunu açıklar."
+    }
+   ],
+   "klip": "o-2n11-06",
+   "ses": [
+    "Hemorajik inmenin ağır seyri.",
+    "Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır ve otuz günlük mortalitesi yüksektir.",
+    "Hemorajik inme tüm inmelerin yüzde on beş ile yirmisi arasındadır; insidansı yüz binde on beş ile kırk arasındadır.",
+    "Otuz günlük mortalite belirgin yüksektir. Bu yükseklik kanamanın kitle etkisi, ödem ve ventrikül içine açılma riskinden gelir.",
+    "Hayatta kalanların ancak yüzde yirmisi altıncı ayda tam bağımsız kalabilir; bu da kanamanın iskemik inmeden daha ağır sekil bıraktığını gösterir.",
+    "Mortalite ve morbidite kanamanın yeri, hacmi ve eşlik eden ödemle ilişkilidir; derin yerleşimli, serebellar ve beyin sapı kanamaları daha kötü seyreder.",
+    "Bu oranlar, kanamalı inmede erken nöromonitorizasyon ve yoğun bakım izleminin neden öncelikli olduğunu açıklar."
+   ],
+   "v": "1957df4618"
+  },
+  {
+   "id": "2n11-08",
+   "baslik": "Kanamanın yerleşimine göre sıklık",
+   "giris": "Putaminal kanama en sık görülen yerleşimdir; onu lober subkortikal ve talamik kanama izler, pontin ve serebellar kanama daha seyrektir.",
+   "s": [
+    40
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Putaminal kanama yüzde kırk ile elli arasındaki oranla ilk sıradadır; hemiparezi ve geniş hematomlarda koma ile seyreder."
+    },
+    {
+     "metin": "Lober subkortikal kanama yüzde yirmi ile otuz, talamik kanama yine yüzde yirmi ile otuz arasındadır. Talamik kanamada duyu kusuru ve talamik ağrı öne çıkar."
+    },
+    {
+     "metin": "Pontin kanama yüzde beş ile sekiz, serebellar kanama yüzde sekiz ile on arasındadır; buna karşın prognozları yerleşim nedeniyle daha kötüdür."
+    },
+    {
+     "metin": "Sıklık ile prognoz ters yönde olabilir; seyrek görülen pontin ve serebellar kanamalar küçük hacimde bile ağır seyredebilir."
+    },
+    {
+     "metin": "Hematomun yeri, eşlik eden klinik bulguları ve cerrahi kararını belirler; tablo bu yüzden klinikle birlikte okunur."
+    }
+   ],
+   "klip": "o-2n11-08",
+   "ses": [
+    "Kanamanın yerleşimine göre sıklık.",
+    "Putaminal kanama en sık görülen yerleşimdir; onu lober subkortikal ve talamik kanama izler, pontin ve serebellar kanama daha seyrektir.",
+    "Putaminal kanama yüzde kırk ile elli arasındaki oranla ilk sıradadır; hemiparezi ve geniş hematomlarda koma ile seyreder.",
+    "Lober subkortikal kanama yüzde yirmi ile otuz, talamik kanama yine yüzde yirmi ile otuz arasındadır. Talamik kanamada duyu kusuru ve talamik ağrı öne çıkar.",
+    "Pontin kanama yüzde beş ile sekiz, serebellar kanama yüzde sekiz ile on arasındadır; buna karşın prognozları yerleşim nedeniyle daha kötüdür.",
+    "Sıklık ile prognoz ters yönde olabilir; seyrek görülen pontin ve serebellar kanamalar küçük hacimde bile ağır seyredebilir.",
+    "Hematomun yeri, eşlik eden klinik bulguları ve cerrahi kararını belirler; tablo bu yüzden klinikle birlikte okunur."
+   ],
+   "v": "d9ec69323f"
+  }
+ ],
+ "_uretici": {
+  "uretken": "DeepSeek V4.1 Flash Eco",
+  "model": "opendesign/deepseek-v4.1-flash-eco"
+ }
+}

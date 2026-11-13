@@ -1,0 +1,7122 @@
+{
+ "surum": 2,
+ "ders_id": "k2-65",
+ "baslik": "Serebrovasküler Hastalıklar",
+ "bolumler": [
+  {
+   "id": "k2-65-b01",
+   "baslik": "Dersin çerçevesi ve tanımlar",
+   "paragraflar": [
+    {
+     "id": "k2-65-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "ses": "Bu dersin konusu beyin damar hastalıklarıdır; yani beyni besleyen damarların doğrudan tutulduğu ve beynin bir bölgesinin geçici ya da kalıcı olarak etkilendiği hastalıklar.",
+       "ekran": "**Konu**: beyin damar hastalıkları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "SEREBROVASKÜLER HASTALIKLAR   Dr. A. Serkan Emekli"
+        ]
+       },
+       "id": "k2-65-c0001"
+      },
+      {
+       "ses": "Dersin sonunda ani başlayan bir nörolojik tablonun vasküler olup olmadığını, iskemik mi kanamalı mı olduğunu ve hangi tedavinin öncelikli olduğunu söyleyebileceksiniz.",
+       "ekran": "**Amaç**: vasküler mi, iskemik mi kanamalı mı, tedavi ne?",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "amaç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Nöroloji"
+        ]
+       },
+       "id": "k2-65-c0002"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Beyin damar hastalığı, beynin bir bölgesinin geçici ya da kalıcı olarak iskemi veya kanama nedeniyle etkilendiği hastalıkların tümüdür.",
+       "ekran": "**Tanım**: iskemi ya da kanama ile etkilenen beyin bölgesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tanım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "BEYİN DAMAR HASTALIKLARI - TANIMLAR"
+        ]
+       },
+       "id": "k2-65-c0003"
+      },
+      {
+       "ses": "Tanımın ikinci yarısı, beyni besleyen damarların patolojik bir süreçle doğrudan tutulmasını kapsar.",
+       "ekran": "**İkinci yarı**: damarların doğrudan tutulması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İkinci yarı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "ve/veya beyni besleyen damarların patolojik bir süreç ile doğrudan tutulduğu tüm"
+        ]
+       },
+       "id": "k2-65-c0004"
+      },
+      {
+       "ses": "Klinik sınıflamada ilk grup asemptomatik beyin damar hastalığıdır; hastada yakınma yoktur ama damarda sorun vardır.",
+       "ekran": "**Asemptomatik**: yakınma yok, damarda sorun var",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "asemptomatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "A. Asemptomatik BDH"
+        ]
+       },
+       "id": "k2-65-c0005"
+      },
+      {
+       "ses": "İkinci grup, fokal beyin işlev bozukluğuyla giden hastalıklardır ve bu grup ikiye ayrılır: geçici iskemik ataklar ve inme.",
+       "ekran": "**Fokal grup**: geçici iskemik atak ve inme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fokal grup",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "B. Fokal beyin disfonksiyonu ile giden BDH"
+        ]
+       },
+       "id": "k2-65-c0006"
+      },
+      {
+       "ses": "İnme de kendi içinde iskemik inme ve kanayıcı inme olarak ikiye ayrılır; kanayıcı grup beyin kanaması ve subaraknoid kanamayı içerir.",
+       "ekran": "**İnme**: iskemik ve kanayıcı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "-  a. İskemik inme (serebral infarkt)"
+        ]
+       },
+       "id": "k2-65-c0007"
+      },
+      {
+       "ses": "Sınıflamanın son iki grubu vasküler demans ve hipertansif ensefalopatidir.",
+       "ekran": "**Son iki grup**: vasküler demans, hipertansif ensefalopati",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "son iki grup",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "C. Vasküler demans"
+        ]
+       },
+       "id": "k2-65-c0008"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Geçici iskemik atak, iskemik kökenli olduğu düşünülen, genellikle tek bir damar alanına yerleştirilebilen, yirmi dört saatten kısa süren ve kalıcı doku hasarı bırakmayan geçici fokal beyin işlev kaybıdır.",
+       "ekran": "**Geçici iskemik atak**: kısa, kalıcı hasar bırakmaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "geçici iskemik atak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "GİA – iskemik kökenli olduğu düşünülen, genellikle bir damar alanına lokalize edilebilen,"
+        ]
+       },
+       "id": "k2-65-c0009"
+      },
+      {
+       "ses": "Slaytta bu atakların iskemik kökenli olduğu ve tek damar alanına oturduğu özellikle belirtilir; bu iki özellik onu diğer geçici nörolojik tablolardan ayırır.",
+       "ekran": "**İki özellik**: iskemik köken ve tek damar alanı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İki özellik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Asemptomatik"
+        ]
+       },
+       "id": "k2-65-c0010"
+      },
+      {
+       "ses": "Geçici iskemik atak ile hafif iskemik inme birbirinin devamıdır; etyoloji, patogenez ve tedavi aynıdır.",
+       "ekran": "**Devamı**: geçici atak ile hafif inme aynı süreç",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "devamı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "GİA ve hafif iskemik inmeler birbirinin devamı – etyoloji, patogenez, tedavi"
+        ]
+       },
+       "id": "k2-65-c0011"
+      },
+      {
+       "ses": "Tanı için ani yerleşen fokal nörolojik defisit gerekir ve damar dışı başka bir patolojinin bulunmaması şarttır.",
+       "ekran": "**Tanı koşulu**: ani fokal defisit, damar dışı neden yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tanı koşulu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "GİA/İnme – ani yerleşen fokal nörolojik defisit & nonvasküler alternatif patoloji yokluğu"
+        ]
+       },
+       "id": "k2-65-c0012"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b02",
+   "baslik": "Fokal ve non-fokal semptomlar",
+   "paragraflar": [
+    {
+     "id": "k2-65-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Fokal semptomlar, beynin belirli bir bölgesindeki damar tıkanıklığının karşılığıdır ve altı grupta toplanır.",
+       "ekran": "**Fokal semptomlar**: altı grup",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fokal semptomlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "FOKAL NÖROLOJIK VE OKÜLER SEMPTOMLAR"
+        ]
+       },
+       "id": "k2-65-c0013"
+      },
+      {
+       "ses": "Motor grupta vücudun bir yarısının tümünde ya da bir bölümünde zaaf veya sarsaklık vardır; buna hemiparezi ya da monoparezi denir.",
+       "ekran": "**Motor**: hemiparezi, monoparezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Vücudun bir yarısının tümü veya bir bölümünde zaaf"
+        ]
+       },
+       "id": "k2-65-c0014"
+      },
+      {
+       "ses": "Motor grupta eşzamanlı iki taraflı zaaf, yani paraparezi veya kuadriparezi de sayılır; yutma güçlüğü ve dengesizlik de bu gruba yıldızlı olarak eklenmiştir.",
+       "ekran": "**Motor ekleri**: paraparezi, kuadriparezi, disfaji, ataksi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor ekleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Eşzamanlı bilateral zaaf (paraparezi, kuadriparezi)*"
+        ]
+       },
+       "id": "k2-65-c0015"
+      },
+      {
+       "ses": "Konuşma ve lisan bozuklukları grubunda konuşulanı anlamakta ya da ifade etmekte güçlük vardır; buna disfazi denir.",
+       "ekran": "**Lisan**: disfazi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lisan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Konuşulan dili anlamakta veya ifade etmekte güçlük"
+        ]
+       },
+       "id": "k2-65-c0016"
+      },
+      {
+       "ses": "Aynı grupta okuma güçlüğü disleksi, yazma güçlüğü disgrafi, hesap güçlüğü diskalkuli ve peltek konuşma dizartri olarak adlandırılır.",
+       "ekran": "**Lisan ekleri**: disleksi, disgrafi, diskalkuli, dizartri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lisan ekleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Okumada (disleksi) veya yazmada (disgrafi) güçlük"
+        ]
+       },
+       "id": "k2-65-c0017"
+      },
+      {
+       "ses": "Duyusal grupta vücudun bir yarısında farklı duyma, yani hemisensoriyel bozukluk vardır.",
+       "ekran": "**Duyusal**: hemisensoriyel bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "duyusal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Vücudun bir yarısının tümü veya bir bölümünde farklı"
+        ]
+       },
+       "id": "k2-65-c0018"
+      },
+      {
+       "ses": "Görsel grupta tek gözde geçici görme kaybı, yani amaurosis fugax bulunur.",
+       "ekran": "**Görsel**: amaurosis fugax",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "görsel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Bir gözde görme kaybı (geçici monooküler körlük"
+        ]
+       },
+       "id": "k2-65-c0019"
+      },
+      {
+       "ses": "Görme alanının yarısında ya da çeyreğinde kayıp hemianopsi ve kuadrantanopsi olarak adlandırılır; çift görme de bu grupta yıldızlıdır.",
+       "ekran": "**Alan kaybı**: hemianopsi, kuadrantanopsi, diplopi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alan kaybı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Görme alanının yarısı veya çeyreğinde görme kaybı"
+        ]
+       },
+       "id": "k2-65-c0020"
+      },
+      {
+       "ses": "Vestibüler grupta dönme hissi, yani vertigo vardır.",
+       "ekran": "**Vestibüler**: vertigo",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vestibüler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "-  Dönme hissi (vertigo)*"
+        ]
+       },
+       "id": "k2-65-c0021"
+      },
+      {
+       "ses": "Davranışsal ve kognitif grupta giyinme, saç tarama gibi günlük işlerde güçlük, mekan dezoryantasyonu ve ihmal vardır; ihmal, görsel mekansal algı bozukluğudur.",
+       "ekran": "**Kognitif**: ihmal, mekan dezoryantasyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kognitif",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "“neglect”(görsel mekansal algısal fonksiyon"
+        ]
+       },
+       "id": "k2-65-c0022"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Non-fokal semptomlar beynin tek bir bölgesine yerleştirilemeyen belirtilerdir; yaygın zaaf ve duyu bozukluğu bunların başında gelir.",
+       "ekran": "**Non-fokal**: tek bölgeye yerleşmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "non-fokal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "NON-FOKAL NÖROLOJİK SEMPTOMLAR"
+        ]
+       },
+       "id": "k2-65-c0023"
+      },
+      {
+       "ses": "Baygınlık hissi, sersemlik, bilinç kaybı ya da değişmesiyle birlikte göz kararması, idrar ve dışkı kaçırma ve konfüzyon non-fokal belirtilerdir.",
+       "ekran": "**Belirtiler**: baygınlık, bilinç değişmesi, inkontinans, konfüzyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "belirtiler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Baygınlık hissi, sersemlik hissi"
+        ]
+       },
+       "id": "k2-65-c0024"
+      },
+      {
+       "ses": "Tek başına görüldüğünde vertigo, kulak çınlaması, yutma güçlüğü, peltek konuşma, çift görme ve denge kaybı non-fokal sayılır.",
+       "ekran": "**Tek başına**: vertigo, tinnitus, disfaji, diplopi, ataksi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tek başına",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "-  Kulak çınlaması (tinnitus)"
+        ]
+       },
+       "id": "k2-65-c0025"
+      },
+      {
+       "ses": "Ancak bu sayılan belirtiler birkaçı bir arada görüldüğünde ya da başka fokal bulgularla birlikte olduğunda fokal beyin iskemisine işaret edebilir.",
+       "ekran": "**Birlikteyse**: fokal iskemiye işaret eder",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birlikteyse",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "-  * Bu semptomlar, birkaçı bir arada bulunduğunda veya diğer fokal nörolojik semptomlarla birlikte olduğunda fokal serebral"
+        ]
+       },
+       "id": "k2-65-c0026"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b03",
+   "baslik": "Epidemiyoloji ve risk faktörleri",
+   "paragraflar": [
+    {
+     "id": "k2-65-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "İnmelerin yüzde seksenini beyin infarktı, yani iskemik inme oluşturur.",
+       "ekran": "**Yüzde seksen**: beyin infarktı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde seksen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "%80 – beyin infarktı"
+        ]
+       },
+       "id": "k2-65-c0027"
+      },
+      {
+       "ses": "Yüzde on beşi beyin içine kanama, yüzde beşi subaraknoid kanamadır; yani kanamalı inmeler toplamın beşte biridir.",
+       "ekran": "**Yüzde on beş** beyin içi, **yüzde beş** subaraknoid kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde on beş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "%15 – intraserebral kanama"
+        ]
+       },
+       "id": "k2-65-c0028"
+      },
+      {
+       "ses": "İnme, kalp hastalıkları ve kanserlerden sonra üçüncü ölüm nedenidir.",
+       "ekran": "**Üçüncü ölüm nedeni**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üçüncü ölüm nedeni",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "KKH ve kanserlerden sonra üçüncü mortalite sebebidir."
+        ]
+       },
+       "id": "k2-65-c0029"
+      },
+      {
+       "ses": "Sıklığı binde ikidir ve toplumdaki yaygınlığı yüzde üçtür.",
+       "ekran": "**Sıklık**: binde iki; **yaygınlık**: yüzde üç",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sıklık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "İnsidans 2/1000"
+        ]
+       },
+       "id": "k2-65-c0030"
+      },
+      {
+       "ses": "Hastaların yüzde yirmisi erken dönemde, yüzde otuzu bir yıl içinde ölür; inme aynı zamanda ciddi bir maluliyet nedenidir.",
+       "ekran": "**Ölüm**: erken yüzde yirmi, bir yılda yüzde otuz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ölüm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "%20 erken dönemde %30 1 yıl içinde mortal, ciddi bir maluliyet sebebi"
+        ]
+       },
+       "id": "k2-65-c0031"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "Risk faktörleri üç grupta incelenir; ilk grup değiştirilemeyen faktörlerdir.",
+       "ekran": "**Üç grup**: değiştirilemeyen, kesin değiştirilebilen, kesin olmayan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç grup",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "İNME RİSK FAKTÖRLERİ"
+        ]
+       },
+       "id": "k2-65-c0032"
+      },
+      {
+       "ses": "Değiştirilemeyen faktörler yaş, cins, soygeçmişte inme ya da geçici iskemik atak öyküsü, ırk ve düşük doğum tartısıdır.",
+       "ekran": "**Değiştirilemeyen**: yaş, cins, soygeçmiş, ırk, doğum tartısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "değiştirilemeyen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "I. Değiştirilemeyen risk faktörleri"
+        ]
+       },
+       "id": "k2-65-c0033"
+      },
+      {
+       "ses": "Bu gruptaki faktörler hastanın öyküsünden öğrenilir ve tedaviyle değiştirilemez; bu yüzden risk hesabında sabit kabul edilirler.",
+       "ekran": "**Öyküden öğrenilir**: tedaviyle değişmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "öyküden öğrenilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Soygeçmişte inme veya GİA öyküsü"
+        ]
+       },
+       "id": "k2-65-c0034"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "İkinci grup, inme ile ilişkisi kesin olan ve değiştirilebilen faktörlerdir; tedavi edildiğinde inme riski gerçekten azalır.",
+       "ekran": "**Kesin ve değiştirilebilen**: tedaviyle risk azalır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kesin ve değiştirilebilen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "II. İnme ile ilişkisi kesin olan ve değiştirilebilen risk faktörleri"
+        ]
+       },
+       "id": "k2-65-c0035"
+      },
+      {
+       "ses": "Hipertansiyon bu grubun başındadır; ardından atriyal fibrilasyon, koroner arter hastalığı ve kalp yetersizliği gelir.",
+       "ekran": "**Hipertansiyon ve kalp hastalıkları**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipertansiyon ve kalp hastalıkları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "-  Hipertansiyon"
+        ]
+       },
+       "id": "k2-65-c0036"
+      },
+      {
+       "ses": "Sigara, diyabet, yüksek kan kolesterolü ve lipidleri aynı gruptadır.",
+       "ekran": "**Sigara, diyabet, lipitler**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sigara, diyabet, lipitler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "-  Sigara"
+        ]
+       },
+       "id": "k2-65-c0037"
+      },
+      {
+       "ses": "Diyet, obezite ve fiziksel hareketsizlik, menopoz sonrası hormon tedavisi, orak hücreli anemi ve sessiz karotis darlığı da kesin gruptadır.",
+       "ekran": "**Yaşam biçimi**: diyet, obezite, hareketsizlik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yaşam biçimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "-  Diyet, obezite, fiziksel inaktivite"
+        ]
+       },
+       "id": "k2-65-c0038"
+      },
+      {
+       "ses": "Bu gruptaki her faktörün tedavi edilebilir olması, inme korumasının temel dayanağıdır.",
+       "ekran": "**Korunmanın dayanağı**: tedavi edilebilir faktörler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "korunmanın dayanağı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "-  Asemptomatik karotis stenozu"
+        ]
+       },
+       "id": "k2-65-c0039"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Üçüncü grup, inme ile ilişkisi ya da değiştirilmesinin etkisi kesin olmayan faktörlerdir.",
+       "ekran": "**Kesin olmayan grup**: ilişki kanıtlanmamış",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kesin olmayan grup",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "III. İnme ile ilişkisi veya değiştirilmesinin etkisi kesin olmayan risk faktörleri"
+        ]
+       },
+       "id": "k2-65-c0040"
+      },
+      {
+       "ses": "Metabolik sendrom, yüksek homosistein, alkol ve madde kullanımı, doğum kontrol hapı bu grupta sayılır.",
+       "ekran": "**Metabolik sendrom, homosistein, alkol, doğum kontrol hapı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "metabolik sendrom, homosistein, alkol, doğum kontrol hapı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "-  Metabolik sendrom"
+        ]
+       },
+       "id": "k2-65-c0041"
+      },
+      {
+       "ses": "Pıhtılaşmaya yatkınlık yapan durumlar, yani antikardiyolipin antikoru, lupus antikoagülanı, faktör beş leiden mutasyonu ve protein C, protein S ile antitrombin üç eksikliği de bu gruptadır.",
+       "ekran": "**Pıhtılaşmaya yatkınlık**: antikorlar, faktör mutasyonu, eksiklikler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pıhtılaşmaya yatkınlık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "-  Hiperkoagülabilite (antikardiyolipin antikoru, lupus antikoagülanı, faktör V Leiden mutasyonu, protein C"
+        ]
+       },
+       "id": "k2-65-c0042"
+      },
+      {
+       "ses": "Lipoprotein a yüksekliği, iltihabi süreçler, migren ve uyku apnesi de kesin olmayan faktörler arasında yazılmıştır.",
+       "ekran": "**Lipoprotein a, iltihap, migren, uyku apnesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lipoprotein a, iltihap, migren, uyku apnesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "-  Lipoprotein (a) yüksekliği"
+        ]
+       },
+       "id": "k2-65-c0043"
+      },
+      {
+       "ses": "İltihabi süreçler başlığı altında periodontal hastalık, klamidya ve sitomegalovirüs enfeksiyonu, helikobakter pilori ve yüksek duyarlıklı C reaktif protein sayılır.",
+       "ekran": "**İltihabi süreçler**: periodontal hastalık, enfeksiyonlar, C reaktif protein",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İltihabi süreçler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "-  İnflamatuvar süreçler (periodontal hastalık, Chlamydia pneumoniae infeksiyonu, Sitomegalovirus infeksiyonu,"
+        ]
+       },
+       "id": "k2-65-c0044"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b04",
+   "baslik": "Beyin kan dolaşımı ve otoregülasyon",
+   "paragraflar": [
+    {
+     "id": "k2-65-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "ses": "Beyni iki büyük damar sistemi besler: karotis sistemi ve vertebrobaziler sistem.",
+       "ekran": "**İki sistem**: karotis ve vertebrobaziler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İki sistem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "BEYİN KAN DOLAŞIMI"
+        ]
+       },
+       "id": "k2-65-c0045"
+      },
+      {
+       "ses": "Karotis sistemi sağ ve sol ortak karotis arterlerden, vertebral sistem sağ ve sol vertebral arterlerden başlar.",
+       "ekran": "**Kaynak damarlar**: ortak karotis ve vertebral arterler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kaynak damarlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Right common carotid artery"
+        ]
+       },
+       "id": "k2-65-c0046"
+      },
+      {
+       "ses": "Şemada sağ ve sol subklavyen arterler, brakiyosefalik gövde ve aortik ark da adlandırılmıştır.",
+       "ekran": "**Şema**: subklavyen arterler, brakiyosefalik gövde, aortik ark",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şema",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Brachiocephalic trunk"
+        ]
+       },
+       "id": "k2-65-c0047"
+      },
+      {
+       "ses": "Karotis arterler beyinin ön, vertebral arterler arka bölümünü besler; bu yüzden ön ve arka dolaşım ayrı ayrı değerlendirilir.",
+       "ekran": "**Ön ve arka dolaşım** ayrı değerlendirilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön ve arka dolaşım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Vertebrobaziler sistem"
+        ]
+       },
+       "id": "k2-65-c0048"
+      },
+      {
+       "ses": "Şemada iç ve dış karotis arterler ayrı ayrı gösterilmiştir; dış karotis yüz ve kafa derisi gibi beyin dışı yapıları besler.",
+       "ekran": "**İç ve dış karotis** ayrımı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İç ve dış karotis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Right internal carotid artery"
+        ]
+       },
+       "id": "k2-65-c0049"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "ses": "Beyin kan akımı, ortalama arter basıncı ile santral venöz basıncın farkının damar direncine bölünmesiyle hesaplanır.",
+       "ekran": "**Formül**: basınç farkı bölü damar direnci",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "formül",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "CBF=MAP-CVP/CVR"
+        ]
+       },
+       "id": "k2-65-c0050"
+      },
+      {
+       "ses": "Bu formülde kan akımı, ortalama arter basıncı ve damar direnci rol oynar; kan akımının birimi yüz gram dokuda dakikada mililitredir.",
+       "ekran": "**Birim**: yüz gram dokuda dakikada mililitre",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Serebral kan akımı ml/100gr/dak"
+        ]
+       },
+       "id": "k2-65-c0051"
+      },
+      {
+       "ses": "Otoregülasyon, ortalama arter basıncı belirli bir aralıkta değişirken beyin kan akımının sabit kalmasıdır.",
+       "ekran": "**Otoregülasyon**: basınç değişir, akım sabit kalır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "otoregülasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Otoregülasyon aralığı"
+        ]
+       },
+       "id": "k2-65-c0052"
+      },
+      {
+       "ses": "Bu aralığın altında basınç düşerse damarlar genişler ama akım yine de düşer ve hipoperfüzyon gelişir.",
+       "ekran": "**Alt sınır**: damar genişler, akım düşer, hipoperfüzyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alt sınır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Vazodilatasyon eşiği"
+        ]
+       },
+       "id": "k2-65-c0053"
+      },
+      {
+       "ses": "Aralığın üstünde basınç yükselirse damarlar daralır; daralma yetmezse akım artar ve hiperperfüzyon olur.",
+       "ekran": "**Üst sınır**: damar daralır, akım artarsa hiperperfüzyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üst sınır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Vazokonstriksiyon eşiği"
+        ]
+       },
+       "id": "k2-65-c0054"
+      },
+      {
+       "ses": "Grafikte yatay eksende ortalama arter basıncı, dikey eksende beyin kan akımı vardır; eğrinin düz kısmı otoregülasyon aralığıdır.",
+       "ekran": "**Grafik**: yatayda basınç, dikeyde akım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "grafik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "sekil": "otoregülasyon grafiği: yatayda ortalama arter basıncı, dikeyde serebral kan akımı, ortada düz vazokonstriksiyon-vazodilatasyon aralığı"
+       },
+       "id": "k2-65-c0055"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "ses": "İskeminin süresi uzadıkça beyin dokusundaki hasar basamak basamak ağırlaşır; grafik bu süreci gösterir.",
+       "ekran": "**Grafik**: süre uzadıkça hasar ağırlaşır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "grafik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "sekil": "zaman-hasar grafiği: kan akımı düştükçe normal işlev, geri dönüşümlü hasar ve geri dönüşümsüz hasar bölgeleri"
+       },
+       "id": "k2-65-c0056"
+      },
+      {
+       "ses": "Kan akımı hafif düşerse işlev bozulur ama doku geri dönebilir; bu bölgeye geri dönüşümlü hasar denir.",
+       "ekran": "**Geri dönüşümlü hasar**: akım hafif düşük",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "geri dönüşümlü hasar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Geri dönüşümlü hasar"
+        ]
+       },
+       "id": "k2-65-c0057"
+      },
+      {
+       "ses": "Akım daha uzun süre çok düşük kalırsa geri dönüşümsüz hasar, yani ölü doku gelişir.",
+       "ekran": "**Geri dönüşümsüz hasar**: ölü doku",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "geri dönüşümsüz hasar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Geri dönüşümsüz hasar"
+        ]
+       },
+       "id": "k2-65-c0058"
+      },
+      {
+       "ses": "Penumbra, kan akımı düşmüş ama henüz ölmemiş dokudur; tedavinin hedefi bu bölgeyi kurtarmaktır.",
+       "ekran": "**Penumbra**: akım düşük, doku henüz canlı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "penumbra",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Penumbra"
+        ]
+       },
+       "id": "k2-65-c0059"
+      },
+      {
+       "ses": "Bu yüzden inmede tedavi ne kadar erken başlarsa kurtarılan doku o kadar büyük olur.",
+       "ekran": "**Erken tedavi**: kurtarılan doku artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "erken tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Normal fonksiyon"
+        ]
+       },
+       "id": "k2-65-c0060"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b05",
+   "baslik": "Ayırıcı tanı ve iskemik inme tanımı",
+   "paragraflar": [
+    {
+     "id": "k2-65-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "ses": "İnme sendromunun ayırıcı tanısında iki soru sorulur: belirtiler gerçekten damar kaynaklı mı ve inmenin patolojik tipi kanamalı mı iskemik mi?",
+       "ekran": "**İki soru**: vasküler mi, kanamalı mı iskemik mi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İki soru",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "İNME SENDROMUNUN AYIRICI TANISI"
+        ]
+       },
+       "id": "k2-65-c0061"
+      },
+      {
+       "ses": "Tanı yatak başında konur; öykü ve muayene ile tanıya yaklaşım oranı yüzde doksan beştir.",
+       "ekran": "**Yatak başı tanı**: öykü ve muayene",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yatak başı tanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Tanı yatak başıdır. Öykü + muayene ile tanı %95. Yatakbaşında patolojik ayrım yapılamaz."
+        ]
+       },
+       "id": "k2-65-c0062"
+      },
+      {
+       "ses": "Yatak başında patolojik ayrım yapılamaz; kanamalı ile iskemik inme ancak görüntülemeyle ayrılır.",
+       "ekran": "**Görüntüleme olmadan** patolojik ayrım yapılamaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "görüntüleme olmadan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Tanı yatak başıdır. Öykü + muayene ile tanı %95. Yatakbaşında patolojik ayrım yapılamaz."
+        ]
+       },
+       "id": "k2-65-c0063"
+      },
+      {
+       "ses": "Tanı, damar risk faktörleri taşıyan yaşlı bir hastada ani başlangıçlı fokal defisitin varlığına ve benzer tablo yapan diğer hastalıkların dışlanmasına dayanır.",
+       "ekran": "**Dayanak**: ani fokal defisit ve diğer hastalıkların dışlanması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dayanak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Genelikle vasküler risk faktörlerini taşıyan yaşlı bir hastada, ani başlangıçlı, fokal nörolojik"
+        ]
+       },
+       "id": "k2-65-c0064"
+      },
+      {
+       "ses": "Başlangıç anidir; bazı hastalarda merdivenvari bir kötüleşme görülebilir.",
+       "ekran": "**Başlangıç**: ani; bazı hastada merdivenvari kötüleşme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "başlangıç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Başlangıç anidir. Bazı hastalarda merdivenvari bir kötüleşme görülebilir."
+        ]
+       },
+       "id": "k2-65-c0065"
+      },
+      {
+       "ses": "Belirtilerin süresi uzadıkça damar kaynaklı olma olasılığı azalır; bu yüzden zaman çizgisi ayırıcı tanının parçasıdır.",
+       "ekran": "**Süre**: uzadıkça damar kaynaklı olma olasılığı azalır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "süre",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Progresyon süresi arttıkça semptomların vasküler olma olasılığı azalır."
+        ]
+       },
+       "id": "k2-65-c0066"
+      },
+      {
+       "ses": "İnmeye epileptik nöbet yüzde iki, baş ağrısı ise değişen oranlarda eşlik edebilir.",
+       "ekran": "**Eşlik eden**: nöbet ve baş ağrısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "eşlik eden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Epileptik nöbet %2, başağrısı %25-100"
+        ]
+       },
+       "id": "k2-65-c0067"
+      },
+      {
+       "ses": "Fonksiyonel etkilenme fokal ya da non-fokal belirtilerle, ayrıca pozitif ve negatif belirtilerle değerlendirilir; özgeçmiş ve soygeçmiş de tanıya katılır.",
+       "ekran": "**Değerlendirme**: fokal-nonfokal, pozitif-negatif belirtiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "değerlendirme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Fonksiyonel etkilenme fokal/non-fokal semptomlar, pozitif ve negatif semptomlar"
+        ]
+       },
+       "id": "k2-65-c0068"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "ses": "İskemik inme, damar nedeniyle beyin ve omurilik dokusunda fokal hasar gelişmesine bağlı nörolojik defisittir.",
+       "ekran": "**İskemik inme**: damar nedeni ile fokal doku hasarı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İskemik inme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "İSKEMİK İNME"
+        ]
+       },
+       "id": "k2-65-c0069"
+      },
+      {
+       "ses": "Azalmış kan akımı nedeniyle gelişir; yani temel olay dokunun kanlanmasının düşmesidir.",
+       "ekran": "**Temel olay**: kan akımının azalması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "temel olay",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "-  Azalmış kan akımı nedeniyle gelişir"
+        ]
+       },
+       "id": "k2-65-c0070"
+      },
+      {
+       "ses": "İskemik inme ile geçici iskemik atak arasındaki en önemli fark, görüntülemede lezyon bulunup bulunmamasıdır.",
+       "ekran": "**En önemli fark**: görüntülemede lezyon varlığı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en önemli fark",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "İskemik inme ile GİA arasındaki en önemli fark nörogörüntülemedeki lezyon varlığıdır"
+        ]
+       },
+       "id": "k2-65-c0071"
+      },
+      {
+       "ses": "Başlangıç anidir; şahitsiz hastada başlangıç zamanı olarak son normal görülme zamanı kabul edilir.",
+       "ekran": "**Şahitsiz hasta**: son normal görülme zamanı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şahitsiz hasta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "-  Şahitsiz vakalarda başlangıç zamanı son normal görülme zamanı kabul edilir."
+        ]
+       },
+       "id": "k2-65-c0072"
+      },
+      {
+       "ses": "Dünya genelinde her dört kişiden biri hayatı boyunca en az bir kez inme geçirecektir.",
+       "ekran": "**Dört kişiden biri** hayatında bir kez inme geçirir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört kişiden biri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Dünya genelinde her «4 kişiden 1’i» hayatı boyunca bir kez inme geçirecektir."
+        ]
+       },
+       "id": "k2-65-c0073"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "ses": "Penumbra, kurtarılabilir beyin dokusudur ve reperfüzyon tedavisinin hedeflediği alandır.",
+       "ekran": "**Penumbra**: kurtarılabilir doku, tedavinin hedefi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "penumbra",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "PENUMBRA"
+        ]
+       },
+       "id": "k2-65-c0074"
+      },
+      {
+       "ses": "Penumbra perfüzyon görüntülemeleriyle, yani bilgisayarlı tomografi ya da manyetik rezonans perfüzyonuyla gösterilir.",
+       "ekran": "**Perfüzyon görüntüleme**: penumbrayı gösterir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "perfüzyon görüntüleme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Perfüzyon görüntülemeler ile"
+        ]
+       },
+       "id": "k2-65-c0075"
+      },
+      {
+       "ses": "Şemada kan akımı düştükçe sırasıyla hafif azalma, protein sentezinin durması, glikoliz ve ölü çekirdek bölgesi işaretlenmiştir.",
+       "ekran": "**Basamaklar**: hafif azalma, protein sentezi durur, glikoliz, ölü çekirdek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "basamaklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "sekil": "iskemi basamak şeması: oligemia, protein sentezi inhibisyonu, glikoliz, iskemik çekirdek, penumbra"
+       },
+       "id": "k2-65-c0076"
+      },
+      {
+       "ses": "İskemik çekirdek ölü dokudur; çevresindeki penumbra ise enerji yetersizliğine girmiş ama hâlâ canlı hücrelerden oluşur.",
+       "ekran": "**Çekirdek ölü**, **penumbra canlı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çekirdek ölü, penumbra canlı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ischemic Core"
+        ]
+       },
+       "id": "k2-65-c0077"
+      },
+      {
+       "ses": "Çekirdekte hücre ölümü nekroz biçiminde olurken penumbrada programlı hücre ölümü öne çıkar; bu fark kurtarma penceresinin temelidir.",
+       "ekran": "**Ölüm biçimi**: çekirdekte nekroz, penumbrada programlı ölüm",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ölüm biçimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Necrotic Cell death"
+        ]
+       },
+       "id": "k2-65-c0078"
+      },
+      {
+       "ses": "Kan akımı geri gelirse penumbradaki hücreler yaşamını sürdürebilir; bu yüzden reperfüzyon şansı tanımlar.",
+       "ekran": "**Reperfüzyon**: penumbrayı yaşatır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "reperfüzyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Survival"
+        ]
+       },
+       "id": "k2-65-c0079"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b06",
+   "baslik": "İskemik inme sendromları",
+   "paragraflar": [
+    {
+     "id": "k2-65-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "ses": "İskemik inme sendromları dört grupta sınıflanır ve gruplar tutulan damar alanına göre adlandırılır.",
+       "ekran": "**Dört sendrom**: toplam, parsiyel, posterior, laküner",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört sendrom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "İSKEMİK İNME SENDROMLARI"
+        ]
+       },
+       "id": "k2-65-c0080"
+      },
+      {
+       "ses": "Toplam anterior dolaşım infarktında akut hemiparezi, afazi ya da ihmal ve homonim hemianopsi birliktedir.",
+       "ekran": "**Toplam anterior**: hemiparezi, afazi veya ihmal, hemianopsi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "toplam anterior",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "TACI (total anterior sirkülasyon infarktı)"
+        ]
+       },
+       "id": "k2-65-c0081"
+      },
+      {
+       "ses": "Parsiyel anterior dolaşım infarktında üç bileşenden ikisi vardır ya da motor ve duyusal bulgular monoparezi gibi sınırlı kalır.",
+       "ekran": "**Parsiyel anterior**: iki bileşen ya da sınırlı bulgu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "parsiyel anterior",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "PACI (parsiyel anterior sirkülasyon infarktı)"
+        ]
+       },
+       "id": "k2-65-c0082"
+      },
+      {
+       "ses": "Posterior dolaşım infarktı oksipital lob, beyin sapı ve serebellar belirtilerin birleşimiyle oluşur.",
+       "ekran": "**Posterior**: oksipital, beyin sapı ve serebellar bulgular",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "posterior",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "POCI (posterior sirkülasyon infarktı)"
+        ]
+       },
+       "id": "k2-65-c0083"
+      },
+      {
+       "ses": "Laküner sendromda kortikal bulgular ve hemianopsi yoktur; yüz, kol ve bacaktan en az ikisini tutan motor ya da duyusal bulgu vardır.",
+       "ekran": "**Laküner**: kortikal bulgu yok, en az iki bölge",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "laküner",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "LACI (laküner sendrom)"
+        ]
+       },
+       "id": "k2-65-c0084"
+      },
+      {
+       "ses": "Laküner infarktlar çoğunlukla iç kapsül ve pons tabanı gibi motor ve duyusal liflerin sıkışık olduğu bölgeleri besleyen küçük, derin penetran arterlerin tıkanmasıyla gelişir.",
+       "ekran": "**Laküner yerleşim**: iç kapsül ve pons tabanı, derin küçük arterler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "laküner yerleşim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "-  Çoğunlukla kapsüla interna, bazis pontis gibi motor duysal liflerin sıkışık veyakın olduğu bölgeleri"
+        ]
+       },
+       "id": "k2-65-c0085"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "ses": "Bu iki görüntü toplam ve parsiyel anterior dolaşım infarktlarını karşılaştırır.",
+       "ekran": "**Karşılaştırma**: toplam ve parsiyel anterior infarkt",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "karşılaştırma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Sol hemipleji, ihmal ve     Sol hemiparezi, ihmal (PACI)"
+        ]
+       },
+       "id": "k2-65-c0086"
+      },
+      {
+       "ses": "Soldaki görüntüde geniş sağ orta serebral arter alanında infarkt vardır ve tablo sol hemipleji, ihmal ve homonim hemianopsi ile toplam anterior infarkta uyar.",
+       "ekran": "**Geniş alan**: sol hemipleji, ihmal, hemianopsi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "geniş alan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Sol hemipleji, ihmal ve homonim hemianopsi (TACI)"
+        ]
+       },
+       "id": "k2-65-c0087"
+      },
+      {
+       "ses": "Sağdaki görüntüde sağ orta serebral arter alanında sınırlı bir infarkt vardır ve tablo sol hemiparezi ile ihmalle parsiyel anterior infarkta uyar.",
+       "ekran": "**Sınırlı alan**: sol hemiparezi ve ihmal",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sınırlı alan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Sağ MCA sınırlı infarkt"
+        ]
+       },
+       "id": "k2-65-c0088"
+      },
+      {
+       "ses": "İki görüntünün farkı, tutulan alanın büyüklüğü ve bulguların kaç bileşeninin bir arada olduğudur.",
+       "ekran": "**Fark**: alan büyüklüğü ve bulgu sayısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fark",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Geniş sağ MCA alanında"
+        ]
+       },
+       "id": "k2-65-c0089"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "ses": "Bu iki görüntü laküner ve posterior dolaşım infarktlarını gösterir.",
+       "ekran": "**Karşılaştırma**: laküner ve posterior infarkt",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "karşılaştırma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Sağ motor/duysal hemiparezi (LACS)"
+        ]
+       },
+       "id": "k2-65-c0090"
+      },
+      {
+       "ses": "Soldaki görüntüde sol talamusta küçük bir infarkt vardır; tablo sağ motor ve duyusal hemiparezidir ve laküner sendroma uyar.",
+       "ekran": "**Laküner**: sol talamik infarkt, sağ hemiparezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "laküner",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Sol talamik infarkt"
+        ]
+       },
+       "id": "k2-65-c0091"
+      },
+      {
+       "ses": "Sağdaki görüntüde serebellar bulgular öne çıkar; bu tablo posterior dolaşım infarktına uyar.",
+       "ekran": "**Posterior**: serebellar bulgular",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "posterior",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Serebellar bulgular (POCI)"
+        ]
+       },
+       "id": "k2-65-c0092"
+      },
+      {
+       "ses": "Talamik infarktta duyu bulgusu ön plandadır; serebellar infarktta ise denge ve koordinasyon bozulur.",
+       "ekran": "**Talamik infarkt** duyuyu, **serebellar infarkt** dengeyi bozar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Talamik infarkt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Sağ motor/duysal"
+        ]
+       },
+       "id": "k2-65-c0093"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b07",
+   "baslik": "İskemik inmenin etyolojisi",
+   "paragraflar": [
+    {
+     "id": "k2-65-p019",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "ses": "İskemik inmenin etyolojisinde üç mekanizma sayılır: trombotik, embolik ve hemodinamik.",
+       "ekran": "**Üç mekanizma**: trombotik, embolik, hemodinamik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üç mekanizma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "İSKEMİK İNME – ETİYOLOJİK"
+        ]
+       },
+       "id": "k2-65-c0094"
+      },
+      {
+       "ses": "Trombotik tipte aterosklerotik plağın üzerine trombüs yerleşir ve damarı tıkar.",
+       "ekran": "**Trombotik**: aterosklerotik plak üzerine trombüs",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trombotik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "1) Trombotik"
+        ]
+       },
+       "id": "k2-65-c0095"
+      },
+      {
+       "ses": "Embolik tipte damar, kollateral dalların distalindeki bir noktada kopup gelen pıhtıyla tıkanır.",
+       "ekran": "**Embolik**: distalde emboli ile tıkanma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Embolik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "2) Embolik"
+        ]
+       },
+       "id": "k2-65-c0096"
+      },
+      {
+       "ses": "Hemodinamik tip daha nadirdir; proksimal damarlarda ciddi darlık ya da tıkanma varken beyin kanlanmasının kritik düşmesiyle oluşur.",
+       "ekran": "**Hemodinamik**: ciddi darlık ve kanlanmanın kritik düşmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hemodinamik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "3) Hemodinamik"
+        ]
+       },
+       "id": "k2-65-c0097"
+      },
+      {
+       "ses": "Kalp debisinin azalması da hemodinamik tipe zemin hazırlar; slaytta bu örnek ayrıca yazılmıştır.",
+       "ekran": "**Örnek**: kalp debisinin azalması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Örnek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "-  Daha nadir. Proksimal arterlerde ciddi darlık veya tıkanma ile birlikte serebral perfüzyonun kritik"
+        ]
+       },
+       "id": "k2-65-c0098"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "ses": "Kardiyoembolik inmede embolinin kaynağı kalptir ve kaynaklar yüksek riskli ile orta riskli diye ikiye ayrılır.",
+       "ekran": "**İki grup kaynak**: yüksek ve orta riskli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İki grup kaynak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "KARDİYOEMBOLİK İNME"
+        ]
+       },
+       "id": "k2-65-c0099"
+      },
+      {
+       "ses": "Yüksek riskli kaynaklar arasında mekanik protez kapak, mitral stenoz ve atriyal fibrilasyon, sol atriyumda trombüs ve taze miyokard infarktüsü vardır.",
+       "ekran": "**Yüksek risk**: protez kapak, mitral stenoz, atriyal fibrilasyon, sol atriyum trombüsü, taze infarktüs",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüksek risk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "-  Mekanik protez kapakçık"
+        ]
+       },
+       "id": "k2-65-c0100"
+      },
+      {
+       "ses": "Sol ventrikül trombüsü, genişlemiş kardiyomiyopati, akinetik segment, atriyal miksoma ve enfektif endokardit de yüksek riskli gruptadır.",
+       "ekran": "**Yüksek risk ekleri**: ventrikül trombüsü, kardiyomiyopati, miksoma, endokardit",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüksek risk ekleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "-  Sol ventriküler trombüs"
+        ]
+       },
+       "id": "k2-65-c0101"
+      },
+      {
+       "ses": "Orta riskli kaynaklar mitral kapak prolapsusu, mitral anulus kalsifikasyonu, atriyal flutter ve biyoprotez kapağı içerir.",
+       "ekran": "**Orta risk**: prolapsus, anulus kalsifikasyonu, flutter, biyoprotez kapak",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Orta risk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "-  Mitral kapakçık prolapsusu"
+        ]
+       },
+       "id": "k2-65-c0102"
+      },
+      {
+       "ses": "Tek başına atriyal fibrilasyon orta riskli grupta yazılmıştır; ilk sütundaki atriyal fibrilasyon ise ayrı bir başlık olarak geçer.",
+       "ekran": "**Tek başına atriyal fibrilasyon**: orta risk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tek başına atriyal fibrilasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "-  Tek başına “ lone“ AF"
+        ]
+       },
+       "id": "k2-65-c0103"
+      },
+      {
+       "ses": "Hangi kaynağın bulunduğu tedavi süresini ve antikoagülan kararını belirler; bu yüzden kaynak araştırması inme tanısının parçasıdır.",
+       "ekran": "**Kaynak araştırması**: tedavi süresini belirler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kaynak araştırması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "-  İnfektif endokardit"
+        ]
+       },
+       "id": "k2-65-c0104"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b08",
+   "baslik": "Tanı ve tedavi çerçevesi",
+   "paragraflar": [
+    {
+     "id": "k2-65-p021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "ses": "İnme tanısında ilk iş, yakınmaların gerçekten inmeden kaynaklandığına karar vermek ve inmeyi taklit eden hastalıkları dışlamaktır.",
+       "ekran": "**İlk iş**: inmeyi taklit eden hastalıkları dışla",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlk iş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "TANI"
+        ]
+       },
+       "id": "k2-65-c0105"
+      },
+      {
+       "ses": "Ardından beyin hasarının geliştiği bölge belirlenir.",
+       "ekran": "**İkinci iş**: hasarın bölgesini belirle",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İkinci iş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Beyin hasarının geliştiği bölgeyi lokalize etmek"
+        ]
+       },
+       "id": "k2-65-c0106"
+      },
+      {
+       "ses": "Kanamalı ve iskemik inme arasında ayırıcı tanı yapılır.",
+       "ekran": "**Üçüncü iş**: kanamalı-iskemik ayrımı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üçüncü iş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Hemorajik ve iskemik inme arasında ayırıcı tanı yapmak"
+        ]
+       },
+       "id": "k2-65-c0107"
+      },
+      {
+       "ses": "İnmeye yol açan neden hakkında ilk bilgiler toplanır.",
+       "ekran": "**Dördüncü iş**: nedene yönelik ilk bilgiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dördüncü iş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "İnmeye yol açan nedene yönelik ilk bilgileri toplamak"
+        ]
+       },
+       "id": "k2-65-c0108"
+      },
+      {
+       "ses": "Son olarak inme seyrinde çıkabilecek akut nörolojik ve tıbbi komplikasyonlar araştırılır.",
+       "ekran": "**Beşinci iş**: komplikasyonları ara",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Beşinci iş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "İnme seyrinde ortaya çıkabilecek akut nörolojik ve medikal komplikasyonları ortaya"
+        ]
+       },
+       "id": "k2-65-c0109"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "ses": "Tedavide zaman çizgisinin başlangıcı, semptomların başladığı an değil son normal görülme zamanıdır.",
+       "ekran": "**Başlangıç**: son normal görülme zamanı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Başlangıç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Semptom zamanı son normal"
+        ]
+       },
+       "id": "k2-65-c0110"
+      },
+      {
+       "ses": "Uykuda ya da şahitsiz gelişen inmelerde bu kural özellikle önemlidir; çünkü hastanın en son ne zaman sağlıklı görüldüğü bilinir, inmenin saat kaçta başladığı bilinmez.",
+       "ekran": "**Uykuda ve şahitsiz**: son normal görülme zamanı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Uykuda ve şahitsiz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "- Uykuda ve şahitsiz"
+        ]
+       },
+       "id": "k2-65-c0111"
+      },
+      {
+       "ses": "Halka yönelik uyarıda dört basamak vardır: yüzde kayma, kolda kuvvetsizlik, konuşmada bozulma ve acil yardımı arama zamanı.",
+       "ekran": "**Dört basamak**: yüz, kol, konuşma, zaman",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dört basamak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "FAST"
+        ]
+       },
+       "id": "k2-65-c0112"
+      },
+      {
+       "ses": "Bu dörtlü, inme belirtilerini erken tanıyıp hastanın zaman kaybetmeden hastaneye ulaşmasını sağlamak için öğretilir.",
+       "ekran": "**Amaç**: erken tanı ve hızlı hastane başvurusu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Amaç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "sekil": "FAST infografiği: face drooping, arm weakness, speech difficulty, time to call emergency"
+       },
+       "id": "k2-65-c0113"
+      },
+      {
+       "ses": "Slaytta bu uyarının yirmi dört saat, yani günün her saati geçerli olduğu ayrıca yazılmıştır.",
+       "ekran": "**Yirmi dört saat**: uyarı her zaman geçerli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yirmi dört saat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "24/7"
+        ]
+       },
+       "id": "k2-65-c0114"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p023",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "ses": "Dersin tedavi bölümü iki kaynağa dayanır: Sağlık Bakanlığının akut iskemik inme tanı ve tedavi rehberi ile Türk Nöroloji Derneği rehberi.",
+       "ekran": "**İki kaynak**: Sağlık Bakanlığı ve Türk Nöroloji Derneği rehberi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İki kaynak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "AKUT İSKEMİK İNME TANI VE TEDAVİ REHBERİ"
+        ]
+       },
+       "id": "k2-65-c0115"
+      },
+      {
+       "ses": "Sağlık Bakanlığı rehberi Ankara'da yayımlanmıştır ve tarih bilgisi kapakta yazılıdır.",
+       "ekran": "**Sağlık Bakanlığı rehberi**: Ankara baskısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sağlık Bakanlığı rehberi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "T.C. SAĞLIK BAKANLIĞI"
+        ]
+       },
+       "id": "k2-65-c0116"
+      },
+      {
+       "ses": "Türk Nöroloji Derneği rehberi ise kurumun kendi belgesidir ve slaytta kaynak adresi verilmiştir.",
+       "ekran": "**Dernek rehberi**: kurum belgesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dernek rehberi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "TND Rehberi"
+        ]
+       },
+       "id": "k2-65-c0117"
+      },
+      {
+       "ses": "Bu iki belge tedavi eşiklerini ve dışlama ölçütlerini tek çatı altında toplar; anlatılan sayısal sınırlar bu belgelerden alınmıştır.",
+       "ekran": "**Rol**: tedavi eşikleri ve dışlama ölçütleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Rol",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "TND Rehberi:"
+        ]
+       },
+       "id": "k2-65-c0118"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "ses": "İnme şiddeti bir ölçekle puanlanır; bu ölçek on bir başlıktan oluşur ve tedavi kararının temelidir.",
+       "ekran": "**İnme şiddet ölçeği**: on bir başlık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnme şiddet ölçeği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "NIH İNME ÖLÇEĞİ"
+        ]
+       },
+       "id": "k2-65-c0119"
+      },
+      {
+       "ses": "İlk üç başlık bilinç düzeyini ölçer: göz açma ve uyanıklık, sorulara yanıt ve emirleri yerine getirme.",
+       "ekran": "**Bilinç**: üç alt başlık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "1a- Bilinç Düzeyi"
+        ]
+       },
+       "id": "k2-65-c0120"
+      },
+      {
+       "ses": "Ardından bakış, görme alanı ve yüz parezisi değerlendirilir.",
+       "ekran": "**Bakış, görme alanı, yüz parezisi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bakış, görme alanı, yüz parezisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "2- Bakış"
+        ]
+       },
+       "id": "k2-65-c0121"
+      },
+      {
+       "ses": "Motor bölümünde kollar ve bacaklar ayrı ayrı puanlanır.",
+       "ekran": "**Motor**: kollar ve bacaklar ayrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Motor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "5- Motor (Kollar)"
+        ]
+       },
+       "id": "k2-65-c0122"
+      },
+      {
+       "ses": "Son başlıklar ataksi, duyu, konuşma, dizartri ve ihmaldir.",
+       "ekran": "**Son başlıklar**: ataksi, duyu, konuşma, dizartri, ihmal",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Son başlıklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "7- Ataksi"
+        ]
+       },
+       "id": "k2-65-c0123"
+      },
+      {
+       "ses": "Ölçek puanı yükseldikçe inme ağırlaşır; bu yüzden aynı hastada tekrarlanan puanlama seyri de gösterir.",
+       "ekran": "**Puan yükselirse**: inme ağırlaşır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Puan yükselirse",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "sekil": "inme ölçeği tablosu: on bir başlıklı puanlama listesi"
+       },
+       "id": "k2-65-c0124"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b09",
+   "baslik": "Damar içi pıhtı eritici tedavi",
+   "paragraflar": [
+    {
+     "id": "k2-65-p025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "ses": "Damar içi pıhtı eritici tedavi, yani trombolitik tedavi, her hastaya verilmez; bazı durumlar kesin dışlama nedenidir.",
+       "ekran": "**Trombolitik**: kesin dışlama nedenleri vardır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trombolitik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "AKUT İSKEMİK İNME / İV-TPA"
+        ]
+       },
+       "id": "k2-65-c0125"
+      },
+      {
+       "ses": "En başta gelen dışlama nedeni, tedaviye semptom başlangıcından sonraki dört buçuk saat içinde başlanamayacak olmasıdır.",
+       "ekran": "**Zaman sınırı**: dört buçuk saat",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Zaman sınırı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Terapiye semptom başlamasından sonraki 4,5 saat içinde başlanamayacak ise"
+        ]
+       },
+       "id": "k2-65-c0126"
+      },
+      {
+       "ses": "Görüntülemede herhangi bir tipte akut kanama görülmesi de kesin dışlama nedenidir; bu, beyin içi, subaraknoid ve subdural kanamayı kapsar.",
+       "ekran": "**Kanama**: herhangi bir tipte akut kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Görüntülemede herhangi bir tip akut (intraserebral, subaraknoid, subdural) kanama"
+        ]
+       },
+       "id": "k2-65-c0127"
+      },
+      {
+       "ses": "Bilgisayarlı tomografide geniş ve sınırları belirgin düşük yoğunluklu alan görülmesi de tedaviyi engeller; çünkü bu alan artık geri dönüşümsüz hasarlı dokudur.",
+       "ekran": "**Geniş hipodansite**: geri dönüşümsüz hasar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geniş hipodansite",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "BT'de demarke ve geniş hipodansite"
+        ]
+       },
+       "id": "k2-65-c0128"
+      },
+      {
+       "ses": "Kan basıncı yüksekliği de dışlama nedenidir: sistolik basınç yüz seksen beşin, diastolik basınç yüz onun üzerinde olmamalıdır.",
+       "ekran": "**Kan basıncı sınırı**: 185/110 mmHg altı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kan basıncı sınırı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Sistolik kan basıncı >185 mmHg veya diastolik kan basıncı >110 mmHg"
+        ]
+       },
+       "id": "k2-65-c0129"
+      },
+      {
+       "ses": "Trombosit sayısının yüz binin altında olması, kan sulandırıcı kullanımına bağlı pıhtılaşma testlerinin yüksek olması da dışlamadır.",
+       "ekran": "**Kanama riski testleri**: düşük trombosit, yüksek pıhtılaşma testleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kanama riski testleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Trombositopeni (<100 bin/mm³)"
+        ]
+       },
+       "id": "k2-65-c0130"
+      },
+      {
+       "ses": "Uykuda başlayan ve şahidi olmayan inmeler slaytta soru işaretiyle verilmiştir; başlangıç zamanı belirsiz olduğu için tedavi kararı özellikle zordur.",
+       "ekran": "**Uykuda ve şahitsiz inme**: başlangıç zamanı belirsiz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Uykuda ve şahitsiz inme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Wake-up stroke ?"
+        ]
+       },
+       "id": "k2-65-c0131"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "ses": "Hastanın inme sonrası işlev düzeyi modifiye Rankin skalasıyla ölçülür; ölçek sıfırdan altıya kadar gider.",
+       "ekran": "**Modifiye Rankin**: sıfırdan altıya",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Modifiye Rankin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "MODİFİYE RANKIN SKALASI"
+        ]
+       },
+       "id": "k2-65-c0132"
+      },
+      {
+       "ses": "Sıfır hiç semptom olmaması, bir belirgin sakatlık olmaması, iki hafif sakatlık demektir.",
+       "ekran": "**Sıfır, bir, iki**: hiç semptom, belirgin sakatlık yok, hafif sakatlık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sıfır, bir, iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "0 – Hiç semptom yok"
+        ]
+       },
+       "id": "k2-65-c0133"
+      },
+      {
+       "ses": "Üç orta, dört ağır sakatlığı gösterir; beş çok ağır sakatlık, altı ise ölümdür.",
+       "ekran": "**Üç ve dört** orta-ağır, **beş** çok ağır, **altı** ölüm",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üç ve dört",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "3 – Orta derecede sakatlık"
+        ]
+       },
+       "id": "k2-65-c0134"
+      },
+      {
+       "ses": "Skala ikiye kadar olan hastalar bağımsız, üç ve üzeri hastalar bağımlı kabul edilir.",
+       "ekran": "**Bağımsız**: iki ve altı; **bağımlı**: üç ve üzeri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bağımsız",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Bağımsız"
+        ]
+       },
+       "id": "k2-65-c0135"
+      },
+      {
+       "ses": "Bu eşik, tedavi çalışmalarının sonuç ölçütü olarak kullanılır; yani amaç yalnız yaşatmak değil, bağımsız bir hayat bırakmaktır.",
+       "ekran": "**Sonuç ölçütü**: bağımsız hayat",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sonuç ölçütü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "sekil": "modifiye Rankin skalası: bağımsız-bağımlı ayrımı ve altı basamak"
+       },
+       "id": "k2-65-c0136"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p027",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "ses": "Akut iskemik inme tedavisinin sloganı slaytta zaman beyindir diye yazılmıştır.",
+       "ekran": "**Slogan**: zaman beyindir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Slogan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "AKUT İSKEMİK İNME TEDAVİSİ"
+        ]
+       },
+       "id": "k2-65-c0137"
+      },
+      {
+       "ses": "Hedef doku penumbradır; yani ölü çekirdek değil, çevresinde kurtarılabilir doku.",
+       "ekran": "**Hedef doku**: penumbra",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hedef doku",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Hedef Doku: Penumbra"
+        ]
+       },
+       "id": "k2-65-c0138"
+      },
+      {
+       "ses": "Rekanalizasyonun amacı enfarkt alanını küçültmektir.",
+       "ekran": "**Amaç**: enfarkt alanını küçültmek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Amaç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Rekanalizasyon Amacı: Enfarkt alanını küçültmek"
+        ]
+       },
+       "id": "k2-65-c0139"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p028",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "ses": "Doku plazminojen aktivatörü mümkün olan en kısa sürede başlanmalıdır, çünkü faydası zamana bağlıdır.",
+       "ekran": "**Fayda zaman bağımlıdır**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fayda zaman bağımlıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "İv-tPA mümkün olan en kısa sürede başlanmalıdır"
+        ]
+       },
+       "id": "k2-65-c0140"
+      },
+      {
+       "ses": "Doğru hastada doz kilogram başına sıfır virgül dokuz miligramdır ve toplam doz doksan miligramı geçmez.",
+       "ekran": "**Doz**: kilogram başına 0,9 mg, en çok 90 mg",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "-  0,9 mg/kg, max 90 mg, %10’u 1 dakikada bolus"
+        ]
+       },
+       "id": "k2-65-c0141"
+      },
+      {
+       "ses": "Dozun yüzde onu bir dakikada damar içine bolus olarak verilir.",
+       "ekran": "**Bolus**: dozun yüzde onu, bir dakika",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bolus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "-  0,9 mg/kg, max 90 mg, %10’u 1 dakikada bolus"
+        ]
+       },
+       "id": "k2-65-c0142"
+      },
+      {
+       "ses": "Kalan kısım altmış dakika içinde infüzyon olarak verilir.",
+       "ekran": "**İnfüzyon**: kalan doz, altmış dakika",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnfüzyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "-  Kalanı 60 dakikada infuzyon şeklinde verilir"
+        ]
+       },
+       "id": "k2-65-c0143"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p029",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "ses": "İlk dört buçuk saat içinde verilen trombolitiğin ne kadar işe yaradığı bir grafikle gösterilmiştir; grafikte fayda, tedavi ekranına ve odds oranına göre çizilmiştir.",
+       "ekran": "**Grafik**: tedavi penceresine göre fayda ve odds oranı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Grafik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "sekil": "odds oranı grafiği: tedavi penceresi kısaldıkça odds oranı yükseliyor, güven aralıkları çizili"
+       },
+       "id": "k2-65-c0144"
+      },
+      {
+       "ses": "İlk doksan dakika içinde tedavi edilen hastada bir hastanın iyileşmesi için dört buçuk hastanın tedavi edilmesi yeterlidir.",
+       "ekran": "**İlk doksan dakika**: dört buçuk hastada bir iyileşme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlk doksan dakika",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "≤90 dakika (ilk 1,5 saat)"
+        ]
+       },
+       "id": "k2-65-c0145"
+      },
+      {
+       "ses": "Doksan ile yüz seksen dakika arasında bu sayı dokuza çıkar.",
+       "ekran": "**Doksan ile yüz seksen dakika**: dokuz hastada bir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doksan ile yüz seksen dakika",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "90–180 dakika (1,5–3 saat arası)"
+        ]
+       },
+       "id": "k2-65-c0146"
+      },
+      {
+       "ses": "Yüz seksen ile iki yüz yetmiş dakika arasında ise on dört hastayı tedavi etmek gerekir.",
+       "ekran": "**Yüz seksen ile iki yüz yetmiş**: on dört hastada bir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüz seksen ile iki yüz yetmiş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "180–270 dakika (3–4,5 saat arası)"
+        ]
+       },
+       "id": "k2-65-c0147"
+      },
+      {
+       "ses": "Yani tedavi geciktikçe aynı faydayı sağlamak için daha çok hasta tedavi edilmek zorunda kalır; bu, zaman kaybının ölçülebilir bedelidir.",
+       "ekran": "**Gecikmenin bedeli**: aynı fayda için daha çok hasta",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Gecikmenin bedeli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "NNT: 4,5 – 9 – 14 – 21"
+        ]
+       },
+       "id": "k2-65-c0148"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b10",
+   "baslik": "Erken dönem ilaç tedavisi",
+   "paragraflar": [
+    {
+     "id": "k2-65-p030",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "ses": "İlk kırk sekiz saat içinde başlanan yüz altmış ile üç yüz miligram arasındaki aspirinin anlamlı yararı gösterilmiştir.",
+       "ekran": "**Aspirin**: ilk 48 saat, 160–300 mg",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Aspirin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "İlk 48 saatte başlanan 160-300 mg aspirinin anlamlı yararı gösterilmiştir."
+        ]
+       },
+       "id": "k2-65-c0149"
+      },
+      {
+       "ses": "Hafif inmede ya da geçici iskemik atakta üç yüz miligram klopidogrel ve üç yüz miligram aspirin yüklemesi yapılır.",
+       "ekran": "**İkili yükleme**: 300 mg klopidogrel ve 300 mg aspirin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İkili yükleme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "NIHSS ≤ 3 veya TİA’da 300 mg klopidogrel ve 300 mg aspirin yüklemesi sonrası 3"
+        ]
+       },
+       "id": "k2-65-c0150"
+      },
+      {
+       "ses": "Ardından üç hafta boyunca yetmiş beş miligram klopidogrel ile yüz miligram aspirin sürdürülür ve bu tedavinin tekrarlayan inme riskini azalttığı gösterilmiştir.",
+       "ekran": "**İdame**: 3 hafta, 75 mg klopidogrel ve 100 mg aspirin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İdame",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "hafta 75 mg klopidogrel ve 100 mg aspirin tedavisinin rekürren inme riskini azalttığı"
+        ]
+       },
+       "id": "k2-65-c0151"
+      },
+      {
+       "ses": "Erken dönemde antikoagülanın ek bir yararı yoktur.",
+       "ekran": "**Antikoagülan**: erken dönemde ek yarar yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Antikoagülan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Erken dönemde antikoagülanın ek yararı yoktur."
+        ]
+       },
+       "id": "k2-65-c0152"
+      },
+      {
+       "ses": "Kardiyoemboli kaynağı ya da pıhtılaşmaya yatkınlık saptanırsa, antikoagülan tedavinin başlangıç zamanı inmenin büyüklüğüne göre belirlenir.",
+       "ekran": "**Antikoagülan zamanı**: inmenin büyüklüğüne göre",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Antikoagülan zamanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Kardiyoemboli kaynağı veya hiperkoagulabl durum saptanması halinde iskemik"
+        ]
+       },
+       "id": "k2-65-c0153"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b11",
+   "baslik": "İskemik inmede genel bakım",
+   "paragraflar": [
+    {
+     "id": "k2-65-p031",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "ses": "Genel bakımda beslenme ve sıvı desteği hızla sağlanır.",
+       "ekran": "**Beslenme ve sıvı**: hızla sağlanır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Beslenme ve sıvı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "İSKEMİK İNME / GENEL BAKIM"
+        ]
+       },
+       "id": "k2-65-c0154"
+      },
+      {
+       "ses": "Zatürre ölüm ve hastalık yükünü artırır; bu yüzden erken hareketlendirme ve akciğer rehabilitasyonu yapılır.",
+       "ekran": "**Zatürre**: erken hareketlendirme ve akciğer rehabilitasyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Zatürre",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Pnöomoni mortalite ve morbiditeyi artırır"
+        ]
+       },
+       "id": "k2-65-c0155"
+      },
+      {
+       "ses": "Rutin idrar sondası takılması önerilmez.",
+       "ekran": "**İdrar sondası**: rutin önerilmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İdrar sondası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Rutin idrar kateterizasyonu önerilmez"
+        ]
+       },
+       "id": "k2-65-c0156"
+      },
+      {
+       "ses": "Zatürre ya da idrar yolu enfeksiyonu şüphesinde tedavi hızla başlanır; koruyucu amaçla antibiyotik verilmez.",
+       "ekran": "**Tedavi**: şüphede başla, koruyucu antibiyotik yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Pnömoni veya İYE şüphesinde etkn tedavi hızla başlanmalı – profilaktik değil"
+        ]
+       },
+       "id": "k2-65-c0157"
+      },
+      {
+       "ses": "Akciğer embolisi ölümlerin yüzde onundan sorumludur.",
+       "ekran": "**Akciğer embolisi**: ölümlerin yüzde onu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Akciğer embolisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Pulmoner emboli mortalitenin %10’undan sorumlu"
+        ]
+       },
+       "id": "k2-65-c0158"
+      },
+      {
+       "ses": "Epileptik nöbetler tedavi edilir, ancak koruyucu amaçla nöbet ilacı başlanmaz.",
+       "ekran": "**Nöbet**: tedavi var, koruyucu ilaç yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöbet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Epileptik nöbetler tedavi edilmeli ancak profilaktik antikonvülzan önerilmez"
+        ]
+       },
+       "id": "k2-65-c0159"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p032",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "ses": "İnme hastalarının yüzde kırkından fazlasında kan şekeri yüksekliği görülür.",
+       "ekran": "**Hiperglisemi**: hastaların yüzde kırkından fazlası",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hiperglisemi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "HİPERGLİSEMİ"
+        ]
+       },
+       "id": "k2-65-c0160"
+      },
+      {
+       "ses": "Bunun bir kısmı daha önce tanı konmamış diyabettir, bir kısmı ise stres hiperglisemisidir.",
+       "ekran": "**İki kaynak**: tanı konmamış diyabet, stres hiperglisemisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İki kaynak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "-  Daha önce tanı konulmamış DM"
+        ]
+       },
+       "id": "k2-65-c0161"
+      },
+      {
+       "ses": "Kan şekeri yüksekliği kanamalı dönüşüm riskini artırır.",
+       "ekran": "**Kanamalı dönüşüm** riski artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kanamalı dönüşüm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Hemorajik transformasyon riskini artırır"
+        ]
+       },
+       "id": "k2-65-c0162"
+      },
+      {
+       "ses": "Enfarkt alanının genişlemesine, ödemin ve kitle etkisinin artmasına neden olur.",
+       "ekran": "**Enfarkt alanı genişler**, ödem ve kitle etkisi artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Enfarkt alanı genişler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Enfarkt alanında genişlemeye neden olur"
+        ]
+       },
+       "id": "k2-65-c0163"
+      },
+      {
+       "ses": "Klinik sonlanımı kötüleştirir ve damar açıcı tedavinin yanıtını bozar.",
+       "ekran": "**Sonlanım kötüleşir**, tedavi yanıtı bozulur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sonlanım kötüleşir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Klinik sonlanımı kötüleştirir"
+        ]
+       },
+       "id": "k2-65-c0164"
+      },
+      {
+       "ses": "Bu yüzden kan şekeri yüz kırk ile yüz seksen miligram bölü desilitre arasında tutulacak şekilde düzeltilir.",
+       "ekran": "**Hedef**: 140–180 mg/dl",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hedef",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Kan şekeri 140-180 mg/dl arasında olacak şekilde hiperglisemi düzeltilmeli"
+        ]
+       },
+       "id": "k2-65-c0165"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p033",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "ses": "Beyin ödemi, sitotoksik tipte üçüncü ile beşinci günler arasında en yüksek düzeye çıkar.",
+       "ekran": "**Ödem tepe zamanı**: 3–5. gün",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ödem tepe zamanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "BEYİN ÖDEMİ"
+        ]
+       },
+       "id": "k2-65-c0166"
+      },
+      {
+       "ses": "İlk yirmi dört saatte görülen ödem ise erken damar açılmaya bağlıdır ve malign beyin ödemi diye adlandırılır.",
+       "ekran": "**İlk 24 saat**: erken reperfüzyon ödemi, malign ödem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlk 24 saat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "İlk 24 st erken reperfüzyona bağlı gözlenebilir – malign beyin ödemi"
+        ]
+       },
+       "id": "k2-65-c0167"
+      },
+      {
+       "ses": "Ödem riski geniş hacimli enfarktlarda ve arka kafa çukuru enfarktlarında yüksektir.",
+       "ekran": "**Riskli**: geniş hacimli ve arka kafa çukuru enfarktı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Riskli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Geniş hacimli enfarktlarda"
+        ]
+       },
+       "id": "k2-65-c0168"
+      },
+      {
+       "ses": "Önlem olarak düşük ozmolariteli sıvılardan kaçınılır.",
+       "ekran": "**Önlem**: düşük ozmolariteli sıvılardan kaçın",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Önlem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "-  Hipo-osmolar sıvılardan kaçınılmalı"
+        ]
+       },
+       "id": "k2-65-c0169"
+      },
+      {
+       "ses": "Fazla şeker verilmez; oksijen düşüklüğü, karbondioksit yüksekliği ve ateş önlenir.",
+       "ekran": "**Kaçın**: fazla şeker, hipoksi, hiperkarbi, hipertermi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kaçın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "-  Fazla glukoz verilmemeli"
+        ]
+       },
+       "id": "k2-65-c0170"
+      },
+      {
+       "ses": "Damar genişletici tansiyon ilaçlarından kaçınılır ve hastanın başı yirmi ile otuz derece arasında kaldırılır.",
+       "ekran": "**Yatak başı**: 20–30 derece yükseltilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yatak başı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "-  Vazodilatasyon yapan antihipertansiflerden kaçınılmalı"
+        ]
+       },
+       "id": "k2-65-c0171"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p034",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "ses": "Beyin ödemi tedavisinde beş araç sayılır: hiperventilasyon, idrar söktürücüler, hipertonik salin, mannitol ve dekompresif cerrahi.",
+       "ekran": "**Beş araç**: hiperventilasyon, diüretik, hipertonik salin, mannitol, cerrahi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Beş araç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "BEYİN ÖDEMİ"
+        ]
+       },
+       "id": "k2-65-c0172"
+      },
+      {
+       "ses": "Hiperventilasyon ve idrar söktürücüler akut dönemde köprü tedavi olarak kullanılır.",
+       "ekran": "**Köprü tedavi**: hiperventilasyon ve diüretik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Köprü tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Hiperventilasyon"
+        ]
+       },
+       "id": "k2-65-c0173"
+      },
+      {
+       "ses": "Hipertonik salin ve mannitol, dokudan sıvı çekerek ödemi azaltır.",
+       "ekran": "**Ozmotik tedavi**: hipertonik salin ve mannitol",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ozmotik tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Mannitol"
+        ]
+       },
+       "id": "k2-65-c0174"
+      },
+      {
+       "ses": "Dekompresif cerrahi ise kafatasının bir kısmının çıkarılmasıyla artmış basıncı boşaltır.",
+       "ekran": "**Dekompresif cerrahi**: basıncı boşaltır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dekompresif cerrahi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Dekompresif Cerrahi"
+        ]
+       },
+       "id": "k2-65-c0175"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p035",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "ses": "Hipotansiyon ve sıvı açığı düzeltilir; çünkü düşük basınç beyin kanlanmasını daha da bozar.",
+       "ekran": "**Önce düzelt**: hipotansiyon ve sıvı açığı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Önce düzelt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "HİPERTANSİYON"
+        ]
+       },
+       "id": "k2-65-c0176"
+      },
+      {
+       "ses": "İnmede tansiyon yüksekliği çok sıktır; hastaların yüzde sekseninde sistolik basınç yüz otuz dokuzun üzerindedir.",
+       "ekran": "**Yüzde seksen**: sistolik basınç 139 üzeri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yüzde seksen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Tansiyon yüksekliği oldukça sıktır"
+        ]
+       },
+       "id": "k2-65-c0177"
+      },
+      {
+       "ses": "Ilımlı tansiyon yüksekliği beyin perfüzyon basıncını artırır.",
+       "ekran": "**Ilımlı yükseklik**: perfüzyon basıncı artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ilımlı yükseklik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "-  CPP artışı"
+        ]
+       },
+       "id": "k2-65-c0178"
+      },
+      {
+       "ses": "Ancak aynı yükseklik ödem ve kanamalı dönüşüm riskini de artırır.",
+       "ekran": "**Aynı zamanda**: ödem ve kanamalı dönüşüm riski",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Aynı zamanda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "-  Ödem ve hemorajik transformasyon riski artışı"
+        ]
+       },
+       "id": "k2-65-c0179"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p036",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "ses": "Akut dönemde, yani ilk yirmi dört saatte tansiyona müdahale edilmez.",
+       "ekran": "**İlk 24 saat**: tansiyona müdahale yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlk 24 saat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Akut dönemde – ilk 24 saatte müdahele etme"
+        ]
+       },
+       "id": "k2-65-c0180"
+      },
+      {
+       "ses": "Müdahale için iki istisna vardır: basıncın iki yüz yirmi bölü yüz yirmi değerini aşması ya da kalp krizi, aort diseksiyonu, kalp yetersizliği gibi eşlik eden sorunların bulunması.",
+       "ekran": "**İstisna**: 220/120 üzeri ya da eşlik eden sorun",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İstisna",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "-  Eğer >220/120 değilse veya"
+        ]
+       },
+       "id": "k2-65-c0181"
+      },
+      {
+       "ses": "Müdahale gerektiğinde hedef, kan basıncını yüzde on beş düşürmektir.",
+       "ekran": "**Hedef düşüş**: yüzde on beş",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hedef düşüş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Hedef kan basıncını %15 düşürmektir."
+        ]
+       },
+       "id": "k2-65-c0182"
+      },
+      {
+       "ses": "Basınç iki yüz yirmi bölü yüz yirmi altındaysa, eşlik eden hastalık yoksa ve damar açıcı tedavi yapılmadıysa, ilk kırk sekiz ile yetmiş iki saatte tansiyon ilacı başlamanın ek yararı yoktur.",
+       "ekran": "**Ek yarar yok**: erken antihipertansif",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ek yarar yok",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "KB<220/120 ise komorbidite yoksa ve reperfüzyon tedavileri yapılmadıysa ilk 48-"
+        ]
+       },
+       "id": "k2-65-c0183"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b12",
+   "baslik": "Kanamalı inme: büyüklük ve amaçlar",
+   "paragraflar": [
+    {
+     "id": "k2-65-p037",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "ses": "Kanamalı inme tüm inmelerin yüzde on beş ile yüzde yirmisi arasındadır.",
+       "ekran": "**Kanamalı inme**: inmelerin yüzde 15–20'si",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kanamalı inme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "HEMORAJIK İNME"
+        ]
+       },
+       "id": "k2-65-c0184"
+      },
+      {
+       "ses": "Sıklığı yüz binde on beş ile kırk arasındadır.",
+       "ekran": "**Sıklık**: yüz binde 15–40",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sıklık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "İnsidansı:15-40/100000"
+        ]
+       },
+       "id": "k2-65-c0185"
+      },
+      {
+       "ses": "Otuz günlük ölüm oranı yüksektir ve slaytta yüzde altmış bir olarak verilmiştir.",
+       "ekran": "**Otuz günlük ölüm**: yüzde altmış bir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Otuz günlük ölüm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "30 günlük mortalite yüksek -> %61"
+        ]
+       },
+       "id": "k2-65-c0186"
+      },
+      {
+       "ses": "Hayatta kalanların ancak yüzde yirmisi altıncı ayda tam bağımsız kalabilir.",
+       "ekran": "**Altıncı ay**: yüzde yirmi tam bağımsız",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Altıncı ay",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Hayatta kalanların ancak %20’si 6. ayda tam bağımsız"
+        ]
+       },
+       "id": "k2-65-c0187"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p038",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "ses": "Kanamalı inmede dört amaç vardır: erken tanı, kanamanın artışını önlemek, akut komplikasyonları tedavi etmek ve etyolojiyi belirleyip tedavi etmek.",
+       "ekran": "**Dört amaç**: erken tanı, kanama artışını önleme, komplikasyon, etyoloji",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dört amaç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "AMAÇLAR"
+        ]
+       },
+       "id": "k2-65-c0188"
+      },
+      {
+       "ses": "Akut komplikasyonlar başlığında kitle etkisi ve tıkayıcı hidrosefali sayılır.",
+       "ekran": "**Komplikasyonlar**: kitle etkisi, tıkayıcı hidrosefali",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Komplikasyonlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "- kitle etkisi, obstruktif hidrosefali…"
+        ]
+       },
+       "id": "k2-65-c0189"
+      },
+      {
+       "ses": "Etyolojiyi belirlemek tedavinin ikinci yarısıdır; çünkü tekrarlayan kanamayı önlemek nedene bağlıdır.",
+       "ekran": "**Etyoloji**: tekrarlayan kanamayı önler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Etyoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Etiyolojinin belirlenmesi ve tedavisi"
+        ]
+       },
+       "id": "k2-65-c0190"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b13",
+   "baslik": "Kanamalı inmenin kliniği",
+   "paragraflar": [
+    {
+     "id": "k2-65-p039",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "ses": "Kanamalı inme akut başlar ve görece hızlı yerleşir.",
+       "ekran": "**Başlangıç**: akut ve hızlı yerleşim",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Başlangıç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "KLINIK"
+        ]
+       },
+       "id": "k2-65-c0191"
+      },
+      {
+       "ses": "Hipertansiyona bağlı kanama akut, kan sulandırıcıya bağlı kanama ise subakut seyreder.",
+       "ekran": "**Hipertansif kanama akut**, **antikoagülan kanaması subakut**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hipertansif kanama akut, antikoagülan kanaması subakut",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Hipertansif kanama akut, antikoagülanlara bağlı kanama"
+        ]
+       },
+       "id": "k2-65-c0192"
+      },
+      {
+       "ses": "Klinik bulgular hematomun yerleştiği yere göre değişir.",
+       "ekran": "**Bulgu**: hematomun yerine göre",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bulgu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Klinik bulgular hematomun yerleştiği yere göre"
+        ]
+       },
+       "id": "k2-65-c0193"
+      },
+      {
+       "ses": "Bilinç bozukluğu değişen derecelerde görülür: uykuya eğilim, uyarılara yanıtın azalması ve koma.",
+       "ekran": "**Bilinç**: uykuya eğilimden komaya kadar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bilinç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Çeşitli derecelerde bilinç bozuklukları (somnolans, stupor, koma)"
+        ]
+       },
+       "id": "k2-65-c0194"
+      },
+      {
+       "ses": "Kanamaların yaklaşık yüzde kırkı karıncık sistemine açılır; ancak bu, çok büyük olmadıkça klinik tabloyu tek başına ağırlaştıran etken sayılmaz.",
+       "ekran": "**Karıncığa açılım**: yüzde kırk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Karıncığa açılım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Kanamaların yaklaşık % 40’ı ventrikül sistemine açılır"
+        ]
+       },
+       "id": "k2-65-c0195"
+      },
+      {
+       "ses": "Kanın subaraknoid aralığa geçmesi ense sertliği ve meningeal uyarı bulgularına yol açar.",
+       "ekran": "**Subaraknoid geçiş**: ense sertliği, meningeal bulgu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Subaraknoid geçiş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Kanın subaraknoidal aralığa geçmesiyle ES ve MİB"
+        ]
+       },
+       "id": "k2-65-c0196"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p040",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "ses": "Kanamaların yerleşim dağılımı şemada yüzdelerle gösterilmiştir.",
+       "ekran": "**Yerleşim dağılımı**: şemada yüzdelerle",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yerleşim dağılımı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Lober subkortikal kanama (%20-30)"
+        ]
+       },
+       "id": "k2-65-c0197"
+      },
+      {
+       "ses": "Putaminal kanama en sıktır ve yüzde kırk ile elli arasında görülür.",
+       "ekran": "**Putaminal**: en sık, yüzde 40–50",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Putaminal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Putaminal kanama (%40-50)"
+        ]
+       },
+       "id": "k2-65-c0198"
+      },
+      {
+       "ses": "Lober ve talamik kanamalar yüzde yirmi ile otuz arasındadır.",
+       "ekran": "**Lober ve talamik**: yüzde 20–30",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lober ve talamik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Lober subkortikal kanama (%20-30)"
+        ]
+       },
+       "id": "k2-65-c0199"
+      },
+      {
+       "ses": "Serebellar kanama yüzde sekiz ile on arasında, pontin kanama ise en az görülen grup olarak yüzde beş ile sekiz arasındadır.",
+       "ekran": "**Serebellar**: yüzde 8–10; **pontin**: yüzde 5–8",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Serebellar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Serebellar kanama (%8-10)"
+        ]
+       },
+       "id": "k2-65-c0200"
+      },
+      {
+       "ses": "Şemada bu beş yerleşim başın kesitinde ayrı ayrı kutu ile işaretlenmiştir.",
+       "ekran": "**Şema**: beş yerleşim, baş kesiti",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Şema",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "sekil": "kanama yerleşim şeması: lober, putaminal, talamik, pontin ve serebellar kanama, yüzdeleriyle"
+       },
+       "id": "k2-65-c0201"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p041",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "ses": "Putamino-kapsüler kanamada hemiparezi görülür; geniş hematomlarda hemipleji ve ardından koma gelişir.",
+       "ekran": "**Putamino-kapsüler**: hemiparezi, hemipleji, koma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Putamino-kapsüler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Klinik"
+        ]
+       },
+       "id": "k2-65-c0202"
+      },
+      {
+       "ses": "Bu hastaların büyük bölümü hafif sekellerle normal yaşamlarına döner.",
+       "ekran": "**Seyir**: çoğu hafif sekelle döner",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Seyir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Büyük bölümü hafif sekellerle normal yaşamlarına döner"
+        ]
+       },
+       "id": "k2-65-c0203"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p042",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "ses": "Lober kanamada bulgular loba göre değişir; oksipital yerleşimde göz çevresinde ağrı ve hemianopsi görülür.",
+       "ekran": "**Oksipital lob**: göz çevresi ağrı ve hemianopsi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Oksipital lob",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Oksipital; göz çevresinde ağrı ve hemianopsi,"
+        ]
+       },
+       "id": "k2-65-c0204"
+      },
+      {
+       "ses": "Temporal yerleşimde görme alanı defekti ve baskın tarafta afazi vardır.",
+       "ekran": "**Temporal**: görme alanı defekti ve afazi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Temporal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Temporal; görme alanı defekti ve afazi (DH)"
+        ]
+       },
+       "id": "k2-65-c0205"
+      },
+      {
+       "ses": "Frontal yerleşimde hemiparezi ve Vulpian belirtisi görülür.",
+       "ekran": "**Frontal**: hemiparezi, Vulpian belirtisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Frontal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Frontal; hemiparezi, Vulpian belirtisi"
+        ]
+       },
+       "id": "k2-65-c0206"
+      },
+      {
+       "ses": "Parietal yerleşimde yarım vücutta duyu azalması, yani hemihipoestezi vardır.",
+       "ekran": "**Parietal**: hemihipoestezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parietal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Parietal; hemihipoestezi"
+        ]
+       },
+       "id": "k2-65-c0207"
+      },
+      {
+       "ses": "Kortekse uzanan hematomlarda fokal epileptik nöbetler görülebilir.",
+       "ekran": "**Kortekse uzanan hematom**: fokal nöbet",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kortekse uzanan hematom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Kortekse uzanan hematomlarda fokal epileptik nöbetler"
+        ]
+       },
+       "id": "k2-65-c0208"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p043",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "ses": "Talamik kanamada duyu kusuru vardır ve hasta bunu sıklıkla derin ağrı ve yanma biçiminde tarif eder.",
+       "ekran": "**Talamik kanama**: duyu kusuru, yanıcı ağrı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Talamik kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Klinik"
+        ]
+       },
+       "id": "k2-65-c0209"
+      },
+      {
+       "ses": "Kanamanın şiddetine ve büyüklüğüne göre değişen oranda iç kapsüle bası olur ve hemiparezi gelişir.",
+       "ekran": "**İç kapsül basısı**: hemiparezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İç kapsül basısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "“kapsula interna” basısı =>hemiparezi"
+        ]
+       },
+       "id": "k2-65-c0210"
+      },
+      {
+       "ses": "Arkaya ve dışa uzanan kanamalar hemianopsi yapar; bakış anomalisi de görülebilir.",
+       "ekran": "**Arkaya uzanan kanama**: hemianopsi ve bakış anomalisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Arkaya uzanan kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Arkaya-dışa doğru uzanan kanamalar, hemianopsi"
+        ]
+       },
+       "id": "k2-65-c0211"
+      },
+      {
+       "ses": "Kanama şiddetli ve büyükse hasta hızla komaya ve fıtıklaşma tablosuna girebilir.",
+       "ekran": "**Büyük kanama**: koma ve fıtıklaşma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Büyük kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Kanama şiddetli ve büyükse hızla koma ve herniasyon tablosu"
+        ]
+       },
+       "id": "k2-65-c0212"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p044",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "ses": "Geniş pons kanamasında hasta dakikalar içinde beyin sapı işlevini yitirir ve komaya girer.",
+       "ekran": "**Pons kanaması**: dakikalar içinde koma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pons kanaması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Klinik"
+        ]
+       },
+       "id": "k2-65-c0213"
+      },
+      {
+       "ses": "Göz küreleri genellikle sabittir, pupillalar küçüktür ama ışığa yanıt korunmuştur.",
+       "ekran": "**Gözler sabit**, **pupillalar küçük**, ışık yanıtı var",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Gözler sabit",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Göz küreleri genellikle fikse, pupillalar miyotik, ışık yanıtı var"
+        ]
+       },
+       "id": "k2-65-c0214"
+      },
+      {
+       "ses": "Göz küresini çeviren refleksler, yani okülo-sefalik ve okülo-vestibüler refleksler azalmış ya da kaybolmuştur.",
+       "ekran": "**Göz refleksleri**: azalmış ya da kaybolmuş",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Göz refleksleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Okülo-sefalik ve okülo–vestibüler refleksler azalmış/kaybolmuş"
+        ]
+       },
+       "id": "k2-65-c0215"
+      },
+      {
+       "ses": "Solunum bozuklukları değişen derecelerde görülür.",
+       "ekran": "**Solunum**: değişen derecelerde bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Solunum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Çeşitli derecelerde solunum bozuklukları"
+        ]
+       },
+       "id": "k2-65-c0216"
+      },
+      {
+       "ses": "Gözler genellikle lezyonun karşı tarafına dönüktür.",
+       "ekran": "**Göz yönü**: lezyonun karşı tarafı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Göz yönü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Gözler genellikle lezyonun karşı tarafına dönük"
+        ]
+       },
+       "id": "k2-65-c0217"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p045",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "ses": "Serebellar kanamada baş ağrısı, dönme hissi, bulantı, kusma ve ataksi vardır.",
+       "ekran": "**Serebellar kanama**: baş ağrısı, vertigo, kusma, ataksi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Serebellar kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Klinik"
+        ]
+       },
+       "id": "k2-65-c0218"
+      },
+      {
+       "ses": "Erken dönemde nistagmus ve öteki serebellar bulgular silik kalabilir.",
+       "ekran": "**Erken dönem**: serebellar bulgular silik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Erken dönem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Erken dönemde nistagmus ve öteki serebellar bulgular silik"
+        ]
+       },
+       "id": "k2-65-c0219"
+      },
+      {
+       "ses": "Aynı tarafta hafif altıncı ve yedinci sinir felci, göz kapağı spazmı, gözlerin kayması ve ışığa yanıtlı küçük pupilla görülebilir.",
+       "ekran": "**Eşlik eden**: altıncı ve yedinci sinir, göz kayması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Eşlik eden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Aynı tarafta hafif 6. ve 7. sinir paralizisi, blefarospazm, “skew"
+        ]
+       },
+       "id": "k2-65-c0220"
+      },
+      {
+       "ses": "Arka kafa çukurunda genişleme payı sınırlı olduğu için hematom ve ödem hızla kafa içi basınç artışına yol açar.",
+       "ekran": "**Dar arka çukur**: hızla basınç artışı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dar arka çukur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Arka kafa çukurunun ekspansiyon kapasitesinin sınırlı olması"
+        ]
+       },
+       "id": "k2-65-c0221"
+      },
+      {
+       "ses": "Bu nedenle bilinç durumu yakından izlenir ve bilgisayarlı tomografi sık tekrarlanır.",
+       "ekran": "**İzlem**: bilinç takibi ve sık tomografi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İzlem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "nedeniyle hematom ve ödeme bağlı hızla KİBAS gelişimi"
+        ]
+       },
+       "id": "k2-65-c0222"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b14",
+   "baslik": "Nörogörüntüleme ve ayırıcı tanı",
+   "paragraflar": [
+    {
+     "id": "k2-65-p046",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "ses": "Görüntüleme tanıyı koyar, izlem planını yapar ve etyolojiyi belirlemeye yardım eder.",
+       "ekran": "**Görüntülemenin üç işlevi**: tanı, izlem, etyoloji",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Görüntülemenin üç işlevi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Nörogörüntüleme"
+        ]
+       },
+       "id": "k2-65-c0223"
+      },
+      {
+       "ses": "İlk görüntüleme kontrastsız bilgisayarlı tomografidir.",
+       "ekran": "**İlk tercih**: kontrastsız tomografi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlk tercih",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "• BT - kontrastsız"
+        ]
+       },
+       "id": "k2-65-c0224"
+      },
+      {
+       "ses": "Damar değerlendirmesi için bilgisayarlı tomografi anjiyografisi kullanılır.",
+       "ekran": "**Damarlar**: tomografi anjiyografisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Damarlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "• BT Anjiyografi"
+        ]
+       },
+       "id": "k2-65-c0225"
+      },
+      {
+       "ses": "Manyetik rezonansda kanı göstermeye yarayan özel sekanslar, yani kan duyarlı ve gradient eko sekansları da kullanılır.",
+       "ekran": "**Kan duyarlı sekanslar**: manyetik rezonans",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kan duyarlı sekanslar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "• MR –SWI, GRE…"
+        ]
+       },
+       "id": "k2-65-c0226"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p047",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "ses": "Hematom hacmi, üç eksenin ölçüsünün çarpımının yarısıyla hesaplanır.",
+       "ekran": "**Hacim**: üç ölçünün çarpımı bölü iki",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hacim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "AxBxC"
+        ]
+       },
+       "id": "k2-65-c0227"
+      },
+      {
+       "ses": "Hastaların üçte birinde ilk üç saat içinde hematom boyutları büyür.",
+       "ekran": "**Üçte bir**: ilk üç saatte büyüme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üçte bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Hastaların 1/3’ünde ilk 3 saat içinde hematom boyutlarında artış"
+        ]
+       },
+       "id": "k2-65-c0228"
+      },
+      {
+       "ses": "Otuzuncu gün ölümü otuz santimetre küpün altındaki hematomlarda yüzde yirmiden az, altmış santimetre küpün üstündekilerde yüzde doksandan fazladır.",
+       "ekran": "**Hacim ve ölüm**: 30 cm³ altında düşük, 60 cm³ üstünde çok yüksek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hacim ve ölüm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "30. gün mortalite <30cm3-> <%20; >60cm3 -> >%90;"
+        ]
+       },
+       "id": "k2-65-c0229"
+      },
+      {
+       "ses": "Otuz santimetre küpün üzerindeki hematomlarda fonksiyonel bağımsızlık olasılığı düşüktür.",
+       "ekran": "**Otuz cm³ üzeri**: bağımsızlık olasılığı düşük",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Otuz cm³ üzeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         ">30cm3 -> fonksiyonel bağımsızlık olasılığı düşük"
+        ]
+       },
+       "id": "k2-65-c0230"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p048",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "ses": "Kanamanın yeri de seyri belirler; derin yerleşimli, serebellum ve beyin sapı kanamalarında ölüm ve sakatlık daha yüksektir.",
+       "ekran": "**Yer**: derin, serebellar ve beyin sapı daha kötü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Kanamanın yeri"
+        ]
+       },
+       "id": "k2-65-c0231"
+      },
+      {
+       "ses": "Pons kanaması yirmi santimetre küpün altında olsa bile kötü seyirli olabilir.",
+       "ekran": "**Pons kanaması**: küçük hacimde de kötü seyir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pons kanaması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Pontin kanama , <20cm3 bile olsa prognoz kötü olabilir"
+        ]
+       },
+       "id": "k2-65-c0232"
+      },
+      {
+       "ses": "Hematom çevresindeki ödem ilk anda genişse fonksiyonel sonlanım kötü olur.",
+       "ekran": "**Geniş çevre ödemi**: kötü sonlanım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geniş çevre ödemi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Perihematomal ödem"
+        ]
+       },
+       "id": "k2-65-c0233"
+      },
+      {
+       "ses": "Bu ödem ilk yirmi dört ile kırk sekiz saat arasında hızla artar ve erken nörolojik kötüleşmenin nedenidir.",
+       "ekran": "**Ödem artışı**: ilk 24–48 saat",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ödem artışı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "İlk 24 (-48) saatte hızla artar -> erken nörolojik kötüleşme"
+        ]
+       },
+       "id": "k2-65-c0234"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p049",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "ses": "Büyük hematomlar kritik beyin yapılarını iter ve fıtıklaşma yapar; fıtıklaşma biçimi hematomun yerine bağlıdır.",
+       "ekran": "**Fıtıklaşma paterni**: hematom yerine bağlı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fıtıklaşma paterni",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Kritik beyin yapılarının yer değiştirmesi ve herniasyon"
+        ]
+       },
+       "id": "k2-65-c0235"
+      },
+      {
+       "ses": "Temporal lob hematomları unkal fıtıklaşmaya yol açar.",
+       "ekran": "**Temporal lob**: unkal fıtıklaşma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Temporal lob",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "- temporal lob hematomları-> unkal herniasyon"
+        ]
+       },
+       "id": "k2-65-c0236"
+      },
+      {
+       "ses": "Orta hat ve frontal lob hematomları subfalksiyan ya da singüler fıtıklaşma yapar.",
+       "ekran": "**Orta hat ve frontal**: subfalksiyan, singüler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Orta hat ve frontal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "- orta hat/frontal lob -> subfalksiyan/singüler herniasyon"
+        ]
+       },
+       "id": "k2-65-c0237"
+      },
+      {
+       "ses": "Yarım kürenin üstündeki lezyonlar santral transtentoryal, arka çukur lezyonları tonsiller fıtıklaşma yapar.",
+       "ekran": "**Üst hemisfer**: transtentoryal; **arka çukur**: tonsiller",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üst hemisfer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "- arka çukur->tonsiller herniasyon"
+        ]
+       },
+       "id": "k2-65-c0238"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p050",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "ses": "İskemik enfarktın kanamalı dönüşümü, yani enfarkt alanına kan sızması, ayrı bir başlıktır.",
+       "ekran": "**Kanamalı dönüşüm**: enfarkt alanına kan sızması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kanamalı dönüşüm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "İskemik enfarktın hemorajik"
+        ]
+       },
+       "id": "k2-65-c0239"
+      },
+      {
+       "ses": "Risk faktörleri kardiyoembolik inme, geniş enfarkt, damar çevresinde beyaz lekeler, ileri yaş, kontrolsüz hipertansiyon ve kan sulandırıcı ya da pıhtı eritici tedavidir.",
+       "ekran": "**Risk**: kardiyoembolik inme, geniş enfarkt, ileri yaş, kontrolsüz hipertansiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Risk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Risk faktörleri:"
+        ]
+       },
+       "id": "k2-65-c0240"
+      },
+      {
+       "ses": "Bilgisayarlı tomografide sitotoksik ödem ve gri ile beyaz madde ayrımının kaybı görülür.",
+       "ekran": "**Tomografi**: gri-beyaz madde ayrımı kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tomografi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "BT -> sitotoksik ödem ve gri-beyaz maddde ayırımının kaybı"
+        ]
+       },
+       "id": "k2-65-c0241"
+      },
+      {
+       "ses": "Manyetik rezonansta ise damar alanına uyan yayılım kısıtlılığı görülür.",
+       "ekran": "**Manyetik rezonans**: yayılım kısıtlılığı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Manyetik rezonans",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "MR -> vasküler sulama alanına uyan diffüzyon kısıtlılığı"
+        ]
+       },
+       "id": "k2-65-c0242"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p051",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "ses": "Dural venöz sinüs trombozunda toplardamar içindeki basınç artar ve küçük damarlar yırtılarak kanama olabilir.",
+       "ekran": "**Dural venöz sinüs trombozu**: basınç artışı ve kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dural venöz sinüs trombozu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Dural venöz sinüs trombozu"
+        ]
+       },
+       "id": "k2-65-c0243"
+      },
+      {
+       "ses": "Tipik yerleşimler drenaj bölgesine göredir: parasagittal subkortikal alan, arka temporal lob ve talamus.",
+       "ekran": "**Tipik yerleşim**: parasagittal, arka temporal, talamus",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tipik yerleşim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "F/P lobların parasagittal subkortikal kısımları -> SSS drenajı"
+        ]
+       },
+       "id": "k2-65-c0244"
+      },
+      {
+       "ses": "Frontal ve parietal lobların parasagittal subkortikal kısımları üst sagittal sinüsün drenaj alanıdır.",
+       "ekran": "**Parasagittal alan**: üst sagittal sinüs drenajı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parasagittal alan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "F/P lobların parasagittal subkortikal kısımları -> SSS drenajı"
+        ]
+       },
+       "id": "k2-65-c0245"
+      },
+      {
+       "ses": "Arka temporal lob Labbé ve transvers sinüsün, talamus ise derin venöz sistemin drenaj alanındadır.",
+       "ekran": "**Arka temporal**: Labbé ve transvers sinüs",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Arka temporal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Posterior T lob -> Labbé ve TS drenajı"
+        ]
+       },
+       "id": "k2-65-c0246"
+      },
+      {
+       "ses": "Tanıda kan duyarlı manyetik rezonans sekansı ve manyetik rezonans venografi kullanılır.",
+       "ekran": "**Tanı**: kan duyarlı sekans ve venografi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "-MR T2*, MRV"
+        ]
+       },
+       "id": "k2-65-c0247"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p052",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "ses": "Bu üç görüntü dural venöz sinüs trombozunun üç ayrı bulgusunu gösterir.",
+       "ekran": "**Üç bulgu**: T1, T2 ve venografi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üç bulgu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Dural venöz sinüs trombozu"
+        ]
+       },
+       "id": "k2-65-c0248"
+      },
+      {
+       "ses": "İlk görüntüde parasagittal kortikal kanama görülür.",
+       "ekran": "**T1**: parasagittal kortikal kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "T1",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "MR T1: parasagittal kortikal kanama"
+        ]
+       },
+       "id": "k2-65-c0249"
+      },
+      {
+       "ses": "İkinci görüntüde iki yanlı parasagittal ödem görülür.",
+       "ekran": "**T2**: iki yanlı parasagittal ödem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "T2",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "MR T2: bilateral parasagittal ödem"
+        ]
+       },
+       "id": "k2-65-c0250"
+      },
+      {
+       "ses": "Üçüncü görüntüde sinüsün dolmadığı, yani dolum kusuru olan bir venografi görülür.",
+       "ekran": "**Venografi**: sinüs dolum kusuru",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Venografi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "MRV: sinüs dolum defekti"
+        ]
+       },
+       "id": "k2-65-c0251"
+      },
+      {
+       "ses": "Bu üç bulgu bir arada tromboz tanısını destekler.",
+       "ekran": "**Birlikte**: tromboz tanısını destekler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Birlikte",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "sekil": "üç panel: T1 parasagittal kortikal kanama, T2 iki yanlı parasagittal ödem, venografide sinüs dolum kusuru"
+       },
+       "id": "k2-65-c0252"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p053",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "ses": "Kanamayı taklit edebilen tümörler ayırıcı tanıda düşünülür; tümör metastazları arasında en sık böbrek, melanom, koryokarsinom ve tiroid kanserleri sayılır.",
+       "ekran": "**Metastaz**: böbrek, melanom, koryokarsinom, tiroid",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Metastaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Tümörler"
+        ]
+       },
+       "id": "k2-65-c0253"
+      },
+      {
+       "ses": "Primer beyin tümörleri arasında en sık olan, kötü huylu glial tümördür.",
+       "ekran": "**Primer tümör**: kötü huylu glial tümör en sık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Primer tümör",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Primer beyin tümörleri: GBM’de (en sık)"
+        ]
+       },
+       "id": "k2-65-c0254"
+      },
+      {
+       "ses": "Bilgisayarlı tomografide tümör heterojen, sınırları düzensiz ve çevresel ödemi asimetrik ve kalın görünür.",
+       "ekran": "**Tomografi**: heterojen, düzensiz sınır, asimetrik kalın ödem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tomografi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "BT-> Heterojen, düzensiz sınırlı, çevresel ödemi asimetrik ve kalın"
+        ]
+       },
+       "id": "k2-65-c0255"
+      },
+      {
+       "ses": "Kesin tanı manyetik rezonansla konur.",
+       "ekran": "**Kesin tanı**: manyetik rezonans",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kesin tanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "MR ile net tanı"
+        ]
+       },
+       "id": "k2-65-c0256"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b15",
+   "baslik": "Kanamalı inmede tedavi ve komplikasyonlar",
+   "paragraflar": [
+    {
+     "id": "k2-65-p054",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "ses": "Tedavi nöro-yoğun bakım ünitesinde nörolojik kötüleşmenin izlenmesiyle başlar.",
+       "ekran": "**İzlem**: nöro-yoğun bakım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İzlem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Tedavi"
+        ]
+       },
+       "id": "k2-65-c0257"
+      },
+      {
+       "ses": "Kliniğin ağırlığına göre hasta inme ünitesinde ya da ara yoğun bakımda izlenir.",
+       "ekran": "**Yer**: inme ünitesi ya da ara yoğun bakım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "(kliniğin ağırlığına göre inme ünitesi/ara YBÜ)"
+        ]
+       },
+       "id": "k2-65-c0258"
+      },
+      {
+       "ses": "Kan dolaşımı açısından stabil olmayan hastalarda atardamar içi kan basıncı izlemi önerilir.",
+       "ekran": "**Stabil olmayan hasta**: atardamar içi basınç izlemi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Stabil olmayan hasta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Hemodinamik açıdan stabil olmayan hastalara invaviz kan basıncı monitorizasyonu"
+        ]
+       },
+       "id": "k2-65-c0259"
+      },
+      {
+       "ses": "Mekanik solunum desteğindeki hastalarda oksijen ölçer ve karbondioksit ölçer ile izlem yapılır.",
+       "ekran": "**Solunum desteği**: oksijen ve karbondioksit ölçümü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Solunum desteği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Mekanik ventilasyondaki hastalar için oksimetre ve kapnografi ile izlem"
+        ]
+       },
+       "id": "k2-65-c0260"
+      },
+      {
+       "ses": "Bilinci dalgalanan hastalarda sessiz nöbetleri yakalamak için elektroensefalografi çekilir.",
+       "ekran": "**Sessiz nöbet**: elektroensefalografi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sessiz nöbet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "EEG -> bilinci dalgalanan hastalarda subklinik nöbetlerin saptanmasında"
+        ]
+       },
+       "id": "k2-65-c0261"
+      },
+      {
+       "ses": "Kan şekeri düzeyleri de izlenir.",
+       "ekran": "**Kan şekeri**: izlenir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kan şekeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Kan glukoz düzeylerinin izlemi"
+        ]
+       },
+       "id": "k2-65-c0262"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p055",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "ses": "Kanamalı inmede tansiyon kontrolü tedavinin merkezindedir.",
+       "ekran": "**Tansiyon kontrolü**: tedavinin merkezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tansiyon kontrolü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Medikal Tedavi"
+        ]
+       },
+       "id": "k2-65-c0263"
+      },
+      {
+       "ses": "Sistolik basıncın yüz kırkın üzerinde olması hematomun büyümesi ve kötü iyileşme ile ilişkilidir.",
+       "ekran": "**140 mmHg üzeri**: hematom büyümesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "140 mmHg üzeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Sistolik kan basıncının >140mmHg olması"
+        ]
+       },
+       "id": "k2-65-c0264"
+      },
+      {
+       "ses": "İlk dört ile altı saatte sistolik basınç yüz otuz ile yüz kırk arasına indirilir.",
+       "ekran": "**Hedef**: ilk 4–6 saatte 130–140 mmHg",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hedef",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "İlk 4-6 saatte:"
+        ]
+       },
+       "id": "k2-65-c0265"
+      },
+      {
+       "ses": "Ancak bu sırada düşük tansiyon geliştirilmemelidir.",
+       "ekran": "**Sınır**: hipotansiyon geliştirilmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sınır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "sistolik kan basıncı 130-140mmHg seviyesine indirilmeli;"
+        ]
+       },
+       "id": "k2-65-c0266"
+      },
+      {
+       "ses": "Bu amaçla metoprolol, esmolol ve furosemid gibi ilaçlar kullanılır.",
+       "ekran": "**İlaçlar**: metoprolol, esmolol, furosemid",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlaçlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Metoprolol, esmolol, furosemid…"
+        ]
+       },
+       "id": "k2-65-c0267"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p056",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "ses": "Cerrahi tedavide dekompresif cerrahi, yani basıncı boşaltan ameliyat, belirgin klinik yarar görecek hastalara uygulanır.",
+       "ekran": "**Dekompresif cerrahi**: belirgin yarar görecek hastaya",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dekompresif cerrahi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Cerrahi Tedavi"
+        ]
+       },
+       "id": "k2-65-c0268"
+      },
+      {
+       "ses": "Serebellar hematom beyin sapına bası riski yüksek olduğu için bu gruptadır.",
+       "ekran": "**Serebellar hematom**: beyin sapı basısı riski",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Serebellar hematom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Serebellar hematom-> yüksek beyin sapı kompresyonu riski"
+        ]
+       },
+       "id": "k2-65-c0269"
+      },
+      {
+       "ses": "Geniş lober hematomlar ve orta hat kayması olan hastalar da cerrahiden yarar görür.",
+       "ekran": "**Geniş lober hematom ve orta hat kayması**: cerrahi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geniş lober hematom ve orta hat kayması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Geniş lober hematomlar"
+        ]
+       },
+       "id": "k2-65-c0270"
+      },
+      {
+       "ses": "Karıncık içi kanamada hidrosefali gelişirse karıncık drenajı yapılır.",
+       "ekran": "**Karıncık drenajı**: hidrosefali",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Karıncık drenajı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Ventriküler drenaj"
+        ]
+       },
+       "id": "k2-65-c0271"
+      },
+      {
+       "ses": "Minimal invaziv cerrahi de seçenekler arasında sayılmıştır.",
+       "ekran": "**Minimal invaziv cerrahi**: seçenek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Minimal invaziv cerrahi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Minimal invaziv cerrahi"
+        ]
+       },
+       "id": "k2-65-c0272"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p057",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "ses": "Karıncık içi kanama, beyin içi kanamanın sık ve ciddi bir komplikasyonudur.",
+       "ekran": "**Karıncık içi kanama**: sık ve ciddi komplikasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Karıncık içi kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Kanamaya bağlı komplikasyonlar,"
+        ]
+       },
+       "id": "k2-65-c0273"
+      },
+      {
+       "ses": "Genellikle karıncık sistemine yakın kanamalarda görülür; talamus ve kaudat çekirdek bunların başında gelir.",
+       "ekran": "**Yakın yerleşim**: talamus, kaudat çekirdek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yakın yerleşim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Sıklıkla ventriküler sisteme yakın komşuluktaki kanamalarda         -> talamus, kaudat"
+        ]
+       },
+       "id": "k2-65-c0274"
+      },
+      {
+       "ses": "Bilinç kaybı, hidrosefali ve kötü sonlanım bu komplikasyonun sonuçlarıdır.",
+       "ekran": "**Sonuç**: bilinç kaybı, hidrosefali, kötü sonlanım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sonuç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "->Bilinç kaybı, hidrosefali, kötü sonlanım"
+        ]
+       },
+       "id": "k2-65-c0275"
+      },
+      {
+       "ses": "Hematom içine pıhtı eritici madde verilerek eriyen hematomun drene edilmesi tedavi seçenekleri arasındadır.",
+       "ekran": "**Fibrinoliz**: hematom içine pıhtı eritici",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fibrinoliz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Hematom içine fibrinolitik madde verilerek fibrinoliz gelişen hematomun drene edilmesi"
+        ]
+       },
+       "id": "k2-65-c0276"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p058",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "ses": "Kanamalı inmede nöbet riski yüzde beş ile on arasındadır.",
+       "ekran": "**Nöbet riski**: yüzde 5–10",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöbet riski",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Epileptik nöbetler"
+        ]
+       },
+       "id": "k2-65-c0277"
+      },
+      {
+       "ses": "Koruyucu amaçla nöbet ilacı önerilmez.",
+       "ekran": "**Koruyucu ilaç**: önerilmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Koruyucu ilaç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Profilaktik AEİ önerilmiyor"
+        ]
+       },
+       "id": "k2-65-c0278"
+      },
+      {
+       "ses": "Yedi gün içinde gelen erken nöbette üç ile altı ay süreyle nöbet ilacı verilir.",
+       "ekran": "**Erken nöbet**: 7 gün içinde, 3–6 ay tedavi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Erken nöbet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Erken nöbet (<7 gün) 3-6 ay AEİ"
+        ]
+       },
+       "id": "k2-65-c0279"
+      },
+      {
+       "ses": "Yedi günden sonra gelen geç nöbette ise diğer ikincil epilepsi tedavileriyle benzer yaklaşım önerilir.",
+       "ekran": "**Geç nöbet**: 7 günden sonra, ikincil epilepsi yaklaşımı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geç nöbet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Geç nöbet (>7 gün) diğer sekonder epilepsi tedavileri ile benzer"
+        ]
+       },
+       "id": "k2-65-c0280"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p059",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "ses": "Serebral ödem hematom hacmiyle orantılıdır; kan-beyin bariyerinin bozulmasıyla sıvı ve protein sızması sonucu gelişir.",
+       "ekran": "**Ödem**: hematom hacmiyle orantılı, bariyer bozulması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ödem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Serebral ödem"
+        ]
+       },
+       "id": "k2-65-c0281"
+      },
+      {
+       "ses": "Geniş hematom belirgin ödem, orta hat kayması ve kötü seyir yapar.",
+       "ekran": "**Geniş hematom**: belirgin ödem, orta hat kayması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geniş hematom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Geniş hematom -> belirgin ödem -> orta hat şifti, kötü prognoz"
+        ]
+       },
+       "id": "k2-65-c0282"
+      },
+      {
+       "ses": "Tedavide mannitol ve hipertonik salin gibi ozmolariteyi artıran sıvılar kullanılır.",
+       "ekran": "**Tedavi**: mannitol ve hipertonik salin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Hiperosmolar tedaviler: mannitol, hipertonik salin…"
+        ]
+       },
+       "id": "k2-65-c0283"
+      }
+     ]
+    },
+    {
+     "id": "k2-65-p060",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "ses": "Toplardamar tromboembolizmi kanamalı inmenin bir komplikasyonudur ve koruyucu önlem gerektirir.",
+       "ekran": "**Toplardamar tromboembolizmi**: koruyucu önlem gerekir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Toplardamar tromboembolizmi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Venöz tromboembolizm"
+        ]
+       },
+       "id": "k2-65-c0284"
+      },
+      {
+       "ses": "Bacak toplardamarlarına dıştan basınç uygulanarak, yani pnömatik kompresyonla korunma sağlanır.",
+       "ekran": "**Pnömatik kompresyon**: dıştan basınç",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pnömatik kompresyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Pnömotik kompresyon"
+        ]
+       },
+       "id": "k2-65-c0285"
+      },
+      {
+       "ses": "Koruyucu düşük molekül ağırlıklı heparin için yirmi dört ile kırk sekiz saat beklenmelidir.",
+       "ekran": "**Koruyucu heparin**: 24–48 saat bekle",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Koruyucu heparin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Profilaktik DMAH için 24-48 saat beklemeli (tekrar kanama riski)"
+        ]
+       },
+       "id": "k2-65-c0286"
+      },
+      {
+       "ses": "Beklemenin nedeni tekrar kanama riskidir.",
+       "ekran": "**Neden**: tekrar kanama riski",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Neden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Profilaktik DMAH için 24-48 saat beklemeli (tekrar kanama riski)"
+        ]
+       },
+       "id": "k2-65-c0287"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-65-b16",
+   "baslik": "Dersin toparlanması",
+   "paragraflar": [
+    {
+     "id": "k2-65-p061",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Ani başlayan fokal nörolojik tabloda üç soru sırayla sorulur: belirtiler damar kaynaklı mı, inme iskemik mi kanamalı mı, tedavi penceresi açık mı?",
+       "ekran": "**Üç soru**: vasküler mi, iskemik-kanamalı mı, pencere açık mı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üç soru",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Klinik Sınıflama"
+        ]
+       },
+       "id": "k2-65-c0288"
+      },
+      {
+       "ses": "İskemik inmede hedef penumbra, araç damar açma ve erken aspirindir; kanamalı inmede ise tansiyon kontrolü, basınç boşaltma ve komplikasyon yönetimi öne çıkar.",
+       "ekran": "**İskemik**: penumbra; **kanamalı**: basınç kontrolü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İskemik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "-  b. Kanayıcı inme (beyin kanaması, subaraknoid kanama)"
+        ]
+       },
+       "id": "k2-65-c0289"
+      },
+      {
+       "ses": "Her iki durumda da zaman en belirleyici etkendir; gecikme doğrudan kurtarılan doku miktarını ve bağımsızlık olasılığını azaltır.",
+       "ekran": "**Zaman**: kurtarılan doku ve bağımsızlık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Zaman",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "- 2. İnme"
+        ]
+       },
+       "id": "k2-65-c0290"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "k2-65-serebrovaskuler-hastaliklar"
+}

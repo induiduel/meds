@@ -1,0 +1,4811 @@
+{
+ "kod": "2n10",
+ "no": 62,
+ "baslik": "Kraniyal Sinir Muayenesi",
+ "klasor": "2n10",
+ "sorular": [
+  {
+   "no": 14,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Koku alamama yakınması olan ve kafa travması öyküsü bulunan hastada hangi yapı hasarı düşünülür?",
+   "secenekler": {
+    "A": "Optik kiazma",
+    "B": "Trigeminal gangliyon",
+    "C": "Silier gangliyon",
+    "D": "Kribriform plakadan geçen koku lifleri",
+    "E": "Vestibüler çekirdek"
+   },
+   "dogru": "D",
+   "ipucu": "Ön kafa tabanındaki ince deliklerden çıkan duyu dallarının travmada kopabildiğini hatırla.",
+   "siklar": {
+    "A": "Optik kiazma görme liflerinin çaprazlaştığı yerdir ve hasarında görme alanı kaybı olur. Koku duyusuyla ilişkisi olmadığı için bu yapı tabloyu açıklamaz.",
+    "B": "Trigeminal gangliyon yüzün duyusunu taşıyan liflerin gövdesidir ve yüz duyusu kaybıyla gider. Koku alma kaybı bu yapının işlevi olmadığı için seçenek uymaz.",
+    "C": "Silier gangliyon göz içi kaslarının parasempatik kontrolünü sağlayan bir düğümdür ve göz bebeği işlevine katılır. Koku kaybı gözle ilgili olmadığı için bu düğüm tabloyu açıklamaz.",
+    "D": "Kribriform plakadan geçen koku lifleri, burun boşluğundaki duyu nöronlarının ön kafa tabanındaki ince deliklerden koku soğancığına uzanan dallarıdır. Kafa travmasında bu ince lifler kopabildiği için koku kaybını açıklayan yapı doğru cevaptır.",
+    "E": "Vestibüler çekirdek denge organından gelen uyarıları işleyen yapıdır ve denge ile göz hareketlerinin uyumunu sağlar. Koku duyusu bu yapıdan geçmediği için seçenek yanlıştır."
+   },
+   "cozum": "Koku lifleri ön kafa tabanındaki kribriform plakanın ince deliklerinden geçer ve travmada kopabilir. Kopan lifler koku iletisini keserek anosmi yapar.",
+   "sayfa": [
+    3
+   ]
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "İki gözün dış yarısında görme kaybı saptanan hastada lezyon en olası nerededir?",
+   "secenekler": {
+    "A": "Optik kiazma",
+    "B": "Sol optik sinir",
+    "C": "Sağ optik trakt",
+    "D": "Sağ optik radyasyon",
+    "E": "Sol görme korteksi"
+   },
+   "dogru": "A",
+   "ipucu": "Burun tarafındaki liflerin çaprazlaştığı yeri ve bu liflerin hangi görme yarısını taşıdığını düşün.",
+   "siklar": {
+    "A": "Optik kiazma, burun tarafındaki liflerin çaprazlaştığı yerdir ve bu lifler gözlerin dış yarısının görüntüsünü taşır. Çaprazlaşan lifler kesilince iki gözün dış yarısında kayıp doğduğu için bu yapı doğru cevaptır ve tablo bitemporal hemianopsi adını alır.",
+    "B": "Sol optik sinir o gözün liflerini kiazmaya kadar taşır ve kesildiğinde yalnız o gözde görme kaybı yapar. İki gözün dış yarısının birlikte etkilenmesi tek gözün lifleriyle açıklanamadığı için bu seçenek uymaz.",
+    "C": "Sağ optik trakt, kiazmadan sonra iki gözün aynı yarısının liflerini taşır ve kesildiğinde homonim hemianopsi yapar. Kayıp iki gözün dış yarısında olduğu için trakt lezyonu bu tabloya uymaz.",
+    "D": "Sağ optik radyasyon, lateral genikulat gövdeden kortekse giden lif demetidir ve lezyonunda homonim taraflı kayıp görülür. Dış yarıların birlikte kaybı kiazma düzeyine ait olduğu için radyasyon lezyonu bu tabloyu vermez.",
+    "E": "Sol görme korteksi görüntünün son işlendiği bölgedir ve lezyonunda karşı yarıya düşen homonim kayıp olur. İki gözün dış yarısındaki kayıp korteks lezyonunun dağılımına uymadığı için bu seçenek yanlıştır."
+   },
+   "cozum": "Her gözün lifleri kiazmaya kadar ayrı gider ve kiazmada burun tarafındaki lifler çaprazlaşır. Bu lifler gözlerin dış yarısını taşıdığı için kiazma lezyonu bitemporal hemianopsi yapar.",
+   "sayfa": [
+    4
+   ]
+  },
+  {
+   "no": 18,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Görme keskinliği ölçümünde Snellen kartı kullanılırken aşağıdakilerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Yalnız sağ göz ölçülür",
+    "B": "Yalnız uzak görme ölçülür ve yakın görme ölçülmez",
+    "C": "İki göz ayrı ayrı değerlendirilir",
+    "D": "Kart karanlık odada okutulur",
+    "E": "Hasta kartı eline alıp yakından okur"
+   },
+   "dogru": "C",
+   "ipucu": "Tek gözdeki kaybın iki göz birlikte bakılınca gizlenebildiğini, bu yüzden her gözün sırayla sınandığını düşün.",
+   "siklar": {
+    "A": "Yalnız sağ gözün ölçülmesi sol gözdeki kaybın görülmeden kalmasına yol açar. Görme muayenesinde iki gözün ayrı ayrı değerlendirilmesi gerektiği için bu ifade yanlıştır.",
+    "B": "Yalnız uzak görmenin ölçülmesi yakın görme kaybını atlar, oysa iki mesafe ayrı değerlendirilir. Kartın kullanımı iki mesafe ölçümünü de kapsadığı için bu ifade eksik ve yanlıştır.",
+    "C": "Snellen kartındaki satırlar yukarıdan aşağıya küçülür ve hasta okuyabildiği en küçük satırı söyler, ölçüm sırasında gözler ayrı ayrı kapatılır. Tek gözdeki kayıp iki göz birlikte bakılınca gizlenebildiği için iki gözün ayrı ayrı değerlendirilmesi doğru cevaptır.",
+    "D": "Kartın karanlık odada okutulması harflerin seçilmesini zorlaştırır ve ölçümü güvenilmez kılar. Muayene yeterli aydınlatmada yapıldığı için bu ifade yanlıştır.",
+    "E": "Hastanın kartı eline alıp yakından okuması ölçümün belirlenen uzaklıkta yapılmasını engeller. Kartın sabit uzaklıkta tutulması gerektiği için bu ifade yanlıştır."
+   },
+   "cozum": "Görme keskinliği Snellen kartıyla ölçülürken her göz ayrı ayrı kapatılıp değerlendirilir. Tek gözdeki düşüş ancak bu şekilde yakalanır, iki göz birlikte bakılırsa kayıp gizlenir.",
+   "sayfa": [
+    5
+   ]
+  },
+  {
+   "no": 21,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Gözdibi muayenesinde oftalmoskopla aşağıdakilerden hangisi değerlendirilir?",
+   "secenekler": {
+    "A": "Optik disk ve damarlar",
+    "B": "Kornea ve konjonktiva",
+    "C": "Lens kesafeti",
+    "D": "Göz içi basıncı",
+    "E": "Kapak aralığı"
+   },
+   "dogru": "A",
+   "ipucu": "Işığı göz bebeğine yönlendirip arka tabakadaki sinir başını ve ince dalları incelediğini düşün.",
+   "siklar": {
+    "A": "Gözdibi muayenesi oftalmoskopla yapılır ve optik diskin sınırları, diskten dışa dallanan damarlar ile makula değerlendirilir. Bu yapıların görüntülenmesi gözdibi bakısının temel amacı olduğu için seçenek doğru cevaptır.",
+    "B": "Kornea ve konjonktiva gözün ön yüzeyindeki tabakalardır ve aydınlatılarak yakından incelenir. Oftalmoskopla arka tabakaya bakıldığı için bu yapılar gözdibi muayenesinin konusu değildir.",
+    "C": "Lens kesafeti, gözün ön segmentindeki saydam yapının bulanıklaşmasıdır ve ön segment muayenesinde değerlendirilir. Gözdibi bakısı arka tabakayı hedeflediği için lens kesafeti bu muayenenin konusu değildir.",
+    "D": "Göz içi basıncı tonometriyle ölçülür ve gözün sertliğini değerlendirir. Oftalmoskopla basınç ölçülmediği için bu seçenek gözdibi muayenesine uymaz.",
+    "E": "Kapak aralığı göz kapaklarının açıklığını gösteren bir ölçüdür ve kapak muayenesinde değerlendirilir. Gözdibi bakısı gözün arka bölümünü incelediği için kapak aralığı bu muayenenin parçası değildir."
+   },
+   "cozum": "Gözdibi oftalmoskopla bakılır; ışık göz bebeğine yönlendirilerek optik diskin sınırları, damarların dallanması ve makula değerlendirilir. Bu bakı, görme kaybının göz kaynaklı mı sinir kaynaklı mı olduğunu ayırmaya yardım eder.",
+   "sayfa": [
+    7
+   ]
+  },
+  {
+   "no": 23,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Renk görme değerlendirmesinde kullanılan kart hangisidir?",
+   "secenekler": {
+    "A": "Snellen kartı",
+    "B": "Amsler ızgarası",
+    "C": "Ishihara kartları",
+    "D": "Kontrast duyarlılık tablosu",
+    "E": "Göz dibi fotoğrafı"
+   },
+   "dogru": "C",
+   "ipucu": "Renk lekeleri arasına gizlenmiş sayıları okutarak renk ayrımını sınayan aracı düşün.",
+   "siklar": {
+    "A": "Snellen kartı, sıraları yukarıdan aşağıya küçülen harflerle görme keskinliğini ölçer. Ölçtüğü işlev görme keskinliği olduğu için renk ayrımı bu kartla değerlendirilmez.",
+    "B": "Amsler ızgarası, gözün merkezî görme alanındaki bozulmaları ve çarpık görmeyi yakalamak için kullanılır. Renk ayrımını değil merkezî alanın bütünlüğünü sınadığı için seçenek uymaz.",
+    "C": "Ishihara kartlarında sayı, farklı renkteki lekelerin arasına gizlenmiştir ve hasta bu sayıyı okuyarak renk ayrımını gösterir. Renk ayrımı bozuk olan hasta gizlenmiş sayıyı okuyamadığı için renk görmenin değerlendirilmesinde bu kartlar doğru cevaptır.",
+    "D": "Kontrast duyarlılık tablosu, azalan kontrasttaki satırlarla ince ayrıntının seçilip seçilmediğini ölçer. Renk ayrımını ölçmediği için sorudaki işlevi bu tablo karşılamaz.",
+    "E": "Göz dibi fotoğrafı optik disk, damarlar ve makulayı görüntüleyerek arka tabakayı değerlendirir. Renk ayrımını göstermediği için bu görüntüleme sorudaki işleve uymaz."
+   },
+   "cozum": "Ishihara kartlarında renk lekeleri arasına gizlenmiş sayı okutulur ve renk ayrımı bozuk hastada sayı seçilemez. Kontrast duyarlılığı ise azalan kontrastlı satırlarla ayrıca değerlendirilir.",
+   "sayfa": [
+    8
+   ]
+  },
+  {
+   "no": 17,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Gözün buruna doğru içe çevrilmesine ne denir?",
+   "secenekler": {
+    "A": "Abdüksiyon",
+    "B": "Addüksiyon",
+    "C": "Elevasyon",
+    "D": "Depresyon",
+    "E": "Ekstorsiyon"
+   },
+   "dogru": "B",
+   "ipucu": "Gözü buruna yaklaştıran yatay hareketin adını, dışa çeviren hareketten ayır.",
+   "siklar": {
+    "A": "Abdüksiyon gözü dışa çeviren yatay harekettir ve lateral rektusun işidir. Soruda buruna doğru içe çevirme istendiği için bu ad uymaz.",
+    "B": "Addüksiyon, gözün buruna doğru içe çevrilmesidir ve medial rektusun yaptığı yatay harekettir. İçe çevirmenin adı bu olduğu için seçenek doğru cevaptır.",
+    "C": "Elevasyon gözü yukarı çeviren dikey harekettir ve üst rektus ile alt obliğin katkısıyla oluşur. Soruda yatay içe çevirme istendiği için bu ad uymaz.",
+    "D": "Depresyon gözü aşağı çeviren dikey harekettir ve alt rektus ile üst obliğin katkısıyla oluşur. İçe çevirme yatay yönde olduğu için bu ad sorudaki hareketi karşılamaz.",
+    "E": "Ekstorsiyon, gözün ön arka ekseni çevresinde dışa doğru dönmesidir ve alt obliğin yaptığı büküm hareketidir. Sorulan hareket yatay düzlemde olduğu için bu ad uymaz."
+   },
+   "cozum": "Yatay hareketlerde içe çevirme addüksiyon, dışa çevirme abdüksiyon adını alır. Buruna doğru içe çevirme medial rektusun yaptığı addüksiyondur.",
+   "sayfa": [
+    9
+   ]
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Gözün dışa çevrilmesini sağlayan kas ve hareket hangisidir?",
+   "secenekler": {
+    "A": "Medial rektus, addüksiyon",
+    "B": "Lateral rektus, abdüksiyon",
+    "C": "Üst rektus, elevasyon",
+    "D": "Alt oblik, elevasyon",
+    "E": "Üst oblik, depresyon"
+   },
+   "dogru": "B",
+   "ipucu": "Gözü dışa çeviren kasın adını ve bu hareketin adını eşleştir.",
+   "siklar": {
+    "A": "Medial rektus ve addüksiyon, gözü buruna doğru içe çeviren ikilidir ve içe bakışı yürütür. Soruda dışa çevirme istendiği için bu kas ve hareket eşleşmesi uymaz.",
+    "B": "Lateral rektus gözü dışa çeviren kastır ve bu hareket abdüksiyon olarak adlandırılır. Dışa çevirmenin tek kası lateral rektus olduğu için bu eşleşme doğru cevaptır.",
+    "C": "Üst rektus elevasyon yapar, yani gözü yukarı çevirir ve dikey hareketin kaslarından biridir. Soruda yatay yönde dışa çevirme istendiği için bu eşleşme yanlıştır.",
+    "D": "Alt oblik elevasyon yönünde çalışan bir oblik kastır ve gözün dikey hareketine katkı yapar. Dışa çevirme yatay bir hareket olduğu için bu kas ve hareket uymaz.",
+    "E": "Üst oblik depresyon yönünde çalışır ve göz dışa bakarken dönme hareketine katkı yapar. Yatay dışa çevirmenin kendisi bu kasla yapılmadığı için eşleşme yanlıştır."
+   },
+   "cozum": "Yatay hareketin dışa yönünü lateral rektus abdüksiyonla yapar, içe yönünü medial rektus addüksiyonla yapar. Bu yüzden dışa çevirme lateral rektus ile abdüksiyonun eşleşmesidir.",
+   "sayfa": [
+    10
+   ]
+  },
+  {
+   "no": 26,
+   "tur": "cikmis",
+   "sinav": "2025-2026 Kurul 2",
+   "soru": "Göz hareketlerini sağlayan okülomotor kraniyal sinirlerin (III, IV ve VI) birlikte hasarlandığı bir hastada lezyon en olası nerededir?",
+   "secenekler": {
+    "A": "Hipotalamus",
+    "B": "Optik kiazma",
+    "C": "Sinüs kavernozus",
+    "D": "Serebellopontin köşe",
+    "E": "Juguler foramen"
+   },
+   "dogru": "C",
+   "ipucu": "Üç göz hareketi sinirinin aynı dar boşlukta yan yana ilerlediğini ve birlikte zedelenebildiğini hatırla.",
+   "siklar": {
+    "A": "Hipotalamus, hipofiz ve vücut sıvı dengesiyle ilgili merkezleri barındıran bölgedir; göz hareketini çeviren sinirler burada seyretmez. Üç sinirin birlikte tutulması bu bölgeyle açıklanmadığı için seçenek uymaz.",
+    "B": "Optik kiazma, görme liflerinin çaprazlaştığı yerdir ve lezyonunda görme alanı kaybı olur. Göz hareketini çeviren sinirlerin birlikte tutulması bu yapıyla ilgili olmadığı için seçenek yanlıştır.",
+    "C": "Sinüs kavernozus, üçüncü, dördüncü ve altıncı sinirlerin yan yana geçtiği venöz boşluktur; bu yüzden bölgedeki bir lezyon üç siniri birden tutabilir. Sorudaki birlikte hasarlanma bu komşuluğa uyduğu için seçenek doğru cevaptır.",
+    "D": "Serebellopontin köşe, beyin sapı ile beyincik arasındaki bölgedir ve yedinci ile sekizinci sinirler burada seyreder. Sorulan üç göz siniri bu bölgede birlikte geçmediği için seçenek uymaz.",
+    "E": "Juguler foramen, kafa tabanında dokuzuncu, onuncu ve on birinci sinirlerin geçtiği deliktir. Göz hareketini çeviren sinirler bu delikten çıkmadığı için seçenek yanlıştır."
+   },
+   "cozum": "Üçüncü, dördüncü ve altıncı sinirler kavernöz sinüsten geçer ve aynı bölgedeki lezyonlardan birlikte etkilenir. Bu yüzden üç sinirin birlikte hasarı bölge lezyonunu düşündürür.",
+   "sayfa": [
+    11
+   ]
+  },
+  {
+   "no": 13,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Yalnız üst oblik kasını innerve eden kraniyal sinir hangisidir?",
+   "secenekler": {
+    "A": "Üçüncü kraniyal sinir",
+    "B": "Altıncı kraniyal sinir",
+    "C": "Dördüncü kraniyal sinir",
+    "D": "Beşinci kraniyal sinir",
+    "E": "Yedinci kraniyal sinir"
+   },
+   "dogru": "C",
+   "ipucu": "Gözü aşağı ve içe çeken, dışa bakarken büküm yaptıran tek kası hangi yolun beslediğini düşün.",
+   "siklar": {
+    "A": "Üçüncü sinir dört göz kasını ve kapağı kaldıran kası besler, tek bir kasla sınırlı değildir. Soruda yalnız bir kası besleyen sinir arandığı için üçüncü sinir uymaz.",
+    "B": "Altıncı sinir yalnız lateral rektusu besler ve gözü dışa çevirir, ancak bu kas üst oblik değildir. Sorulan kas üst oblik olduğu için bu sinir yanlış eşleşmedir.",
+    "C": "Dördüncü sinir yalnız üst oblik kasını besler ve göz dışa bakarken bu kastaki dönme hareketini yürütür. Yalnız bir kası beslemesi ve o kasın üst oblik olması nedeniyle bu sinir doğru cevaptır.",
+    "D": "Beşinci sinir yüzün duyusunu ve çiğneme kaslarını taşır, göz kaslarını beslemez. Soruda gözü çeviren bir kas arandığı için bu sinir uymaz.",
+    "E": "Yedinci sinir mimik kaslarını çalıştırır ve göz kapağını kapatır, gözün dışa dönmesini sağlayan kaslarla ilişkisi yoktur. Üst oblik kası bu sinirin alanında olmadığı için seçenek yanlıştır."
+   },
+   "cozum": "Üst oblik gözü aşağı ve içe çeker, dışa bakarken intorsiyon yaptırır. Bu kası tek başına dördüncü sinir beslediği için sorulan eşleşme dördüncü sinirdir.",
+   "sayfa": [
+    11
+   ]
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Işık tutulan gözün pupillası küçülürken karşı gözün pupillasının da küçülmesine ne denir?",
+   "secenekler": {
+    "A": "Konsensüel yanıt",
+    "B": "Doğrudan yanıt",
+    "C": "Akomodasyon yanıtı",
+    "D": "Paradoks yanıt",
+    "E": "Bakış yanıtı"
+   },
+   "dogru": "A",
+   "ipucu": "Tek göze ışık tutulduğunda iki göz bebeğinin birlikte küçülmesini sağlayan çift taraflı bağlantıyı hatırla.",
+   "siklar": {
+    "A": "Konsensüel yanıt, ışık tutulan gözün karşısındaki göz bebeğinin de küçülmesidir ve pretektal çekirdekten iki tarafa birden giden iletiden doğar. Karşı gözün de küçülmesi iletinin iki tarafa ulaştığını gösterdiği için doğru cevaptır.",
+    "B": "Işık tutulan gözün kendi göz bebeğinin küçülmesi doğrudan yanıt olarak adlandırılır ve aynı gözdeki efferent yolla oluşur. Soruda karşı gözün de küçülmesi anlatıldığı için bu ad uymaz.",
+    "C": "Akomodasyon yanıtı, yakına bakarken merceğin kalınlaşması ve gözlerin buruna dönmesiyle ortaya çıkan yakın görme ayarıdır. Işık tutulmasıyla değil yakın bakışla tetiklendiği için sorudaki tabloya uymaz.",
+    "D": "Paradoks yanıt, ışık tutulduğunda göz bebeğinin küçülmesi yerine genişlemesidir ve normal ışık yolunun tersine çalışmasını anlatır. Karşı gözdeki normal küçülme bu tabloya uymadığı için bu ad kullanılmaz.",
+    "E": "Bakış yanıtı, iki gözün birlikte bir yöne çevrilmesiyle oluşan hareket ayarıdır ve göz bebeği çapıyla ilgisi yoktur. Soruda göz bebeğinin küçülmesi sorulduğu için bu seçenek yanlıştır."
+   },
+   "cozum": "Işık uyarısı pretektal çekirdekten iki taraftaki parasempatik çekirdeklere birden gider; bu yüzden karşı göz bebeği de küçülür ve bu yanıt konsensüel yanıt adını alır.",
+   "sayfa": [
+    13
+   ]
+  },
+  {
+   "no": 25,
+   "tur": "cikmis",
+   "sinav": "2025-2026 Kurul 2",
+   "soru": "Bir hastada pitozis, göz hareketlerinde dışa, yukarı ve aşağı bakış kısıtlılığı ile birlikte alın ve kornea duyusunda azalma saptanıyor. Bu klinik tabloyu oluşturan lezyon öncelikle hangi anatomik bölgededir?",
+   "secenekler": {
+    "A": "Foramen jugulare",
+    "B": "Serebellopontin açı",
+    "C": "Sinüs kavernozus",
+    "D": "Kanalis fasyalis",
+    "E": "Foramen magnum"
+   },
+   "dogru": "C",
+   "ipucu": "Göz hareketlerini çeviren sinirlerle yüzün üst bölümünün duyusunu taşıyan dalın aynı dar boşlukta komşu olduğunu düşün.",
+   "siklar": {
+    "A": "Foramen jugulare, kafa tabanında alt kraniyal sinirlerin geçtiği bir deliktir ve dokuzuncu, onuncu ve on birinci sinirler buradan çıkar. Göz hareketini çeviren sinirler bu delikten geçmediği için tabloyu açıklamaz.",
+    "B": "Serebellopontin açı, beyin sapı ile beyincik arasındaki köşedir ve yedinci ile sekizinci sinirlerin bu bölgede seyretmesiyle bilinir. Bulgular göz hareketleri ve yüz duyusunda olduğu için bu bölge uymaz.",
+    "C": "Sinüs kavernozus, kafa tabanında yan yana ilerleyen üçüncü, dördüncü ve altıncı sinirler ile beşinci sinirin göz dalının komşu olduğu venöz boşluktur. Pitozis, dışa yukarı ve aşağı bakış kısıtlılığı ile alın ve kornea duyusu kaybı bu komşuluğu gösterdiği için doğru cevaptır.",
+    "D": "Kanalis fasyalis, yedinci sinirin içinden geçtiği kemik kanaldır ve buradaki tutulumlar yüz felciyle sonuçlanır. Göz hareketi ile yüz duyusunun birlikte tutulması bu kanalla açıklanmadığı için seçenek yanlıştır.",
+    "E": "Foramen magnum, medullanın kafatasından çıktığı büyük deliktir ve alt beyin sapı basıları burada olur. Üst bölüm sinirlerinin birlikte tutulduğu bu tabloya uymadığı için seçenek yanlıştır."
+   },
+   "cozum": "Üçüncü, dördüncü ve altıncı sinirler ile beşinci sinirin göz dalı kavernöz sinüste yan yana seyreder. Bu yüzden bölgedeki bir lezyon göz hareketini ve yüzün üst bölümünün duyusunu birlikte bozar.",
+   "sayfa": [
+    15,
+    23
+   ]
+  },
+  {
+   "no": 1,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Göz kapağı düşük, gözü aşağı ve dışa kaymış, pupillası geniş ve ışığa daralmayan hastada hangi sinir felci düşünülür?",
+   "secenekler": {
+    "A": "Üçüncü kraniyal sinir",
+    "B": "Dördüncü kraniyal sinir",
+    "C": "Altıncı kraniyal sinir",
+    "D": "Yedinci kraniyal sinir",
+    "E": "İkinci kraniyal sinir"
+   },
+   "dogru": "A",
+   "ipucu": "Gözün aşağı ve dışa kayması, kapağın düşmesi ve geniş kalan bir göz bebeği aynı felcin dört bulgusudur.",
+   "siklar": {
+    "A": "Üçüncü kraniyal sinir üst, alt ve medial rektusu, alt obliği ve kapağı kaldıran kası besler, ayrıca iris sfinkterine parasempatik lifler gönderir. Bu yüzden felçte göz aşağı ve dışa kayar, kapak düşer, göz bebeği geniş kalır; dört bulgunun bir arada görülmesi tam felci gösterdiği için doğru cevaptır.",
+    "B": "Dördüncü kraniyal sinir yalnız üst oblik kasını besleyen ince bir sinirdir ve gözün dönme hareketine katkı yapar. Felcinde göz yukarı ve içe kayar, çift görme baş eğilince artar; bu tablo gözün dışa kaymasıyla giden tam felçle uyuşmadığı için yanlıştır.",
+    "C": "Altıncı kraniyal sinir yalnız lateral rektusu besler ve gözü dışa çeviren tek yolu oluşturur. Felcinde göz içe kayar ve dışa bakış yapılamaz; kapağın düşmesi ve geniş kalan göz bebeği bu sinirin işi olmadığı için bu tabloya uymaz.",
+    "D": "Yedinci kraniyal sinir mimik kaslarını, gözü kapatan kasları ve dilin ön kısmının tat duyusunu taşır. Felcinde göz kapanmaz ve ağız köşesi kayar; göz hareketini çeviren kaslarla ilişkisi olmadığı için sorudaki tabloyu açıklamaz.",
+    "E": "İkinci kraniyal sinir görme duyusunu taşır ve gözün ışık algısını sağlar. Kesildiğinde o gözde görme kaybı ve ışık refleksi kaybı olur; göz hareketlerini çeviren kasları beslemediği için bu dört bulguyu vermez."
+   },
+   "cozum": "Üçüncü sinir gözü çeviren dört kası ve kapağı kaldıran kası besler; parasempatik lifleri de taşıdığı için tam felçte göz aşağı dışa kayar, kapak düşer ve göz bebeği geniş kalır.",
+   "sayfa": [
+    15
+   ]
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Başını sağ omzuna eğdiğinde çift görme yakınması artan hastada hangi sinir felci düşünülür?",
+   "secenekler": {
+    "A": "Sol üçüncü kraniyal sinir",
+    "B": "Sağ altıncı kraniyal sinir",
+    "C": "Sol yedinci kraniyal sinir",
+    "D": "Sağ dördüncü kraniyal sinir",
+    "E": "Sağ beşinci kraniyal sinir"
+   },
+   "dogru": "D",
+   "ipucu": "Baş bir yana eğilince düzeltici dönme hareketini yapan kasın zayıfladığını hatırla.",
+   "siklar": {
+    "A": "Sol üçüncü sinir felci gözün aşağı dışa kayması, kapağın düşmesi ve göz bebeğinin genişlemesiyle gider. Baş eğmeyle artan dikey çift görme bu sinirin tablosu olmadığı için uymaz.",
+    "B": "Sağ altıncı sinir felcinde göz içe kayar ve dışa bakış yapılamaz, çift görme yatay yönde belirginleşir. Sorudaki yakınma baş eğmeyle artan dikey kayma olduğu için bu sinir uymaz.",
+    "C": "Sol yedinci sinir felcinde yüz mimik kasları tutulur, göz kapanmaz ve ağız kayar. Baş eğmeyle çift görme artması göz hareketiyle ilgili olduğu için yüz kaslarının siniri bu tabloyu açıklamaz.",
+    "D": "Dördüncü sinir üst obliği besler; bu kas baş eğildiğinde gözü düzeltici yönde çevirir, kas zayıflayınca dikey kayma artar. Baş sağ omza eğilince yakınmanın artması sağ dördüncü sinir felcini gösterdiği için doğru cevaptır.",
+    "E": "Beşinci sinir yüzün duyusunu taşır ve çiğneme kaslarını çalıştırır, gözün dikey hizalanmasında görevi yoktur. Baş eğmeyle değişen çift görme göz hareketinden doğduğu için bu sinir uymaz."
+   },
+   "cozum": "Üst oblik, baş yana eğildiğinde gözü ters yöne çeviren kastır; zayıflayınca baş o yana eğildikçe dikey kayma artar. Baş eğme testi bu yüzden dördüncü sinir felcini ortaya çıkarır.",
+   "sayfa": [
+    17,
+    18
+   ]
+  },
+  {
+   "no": 28,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Trafik kazası geçiren bir kişide gözün laterale bakışı bozuk ise hangi sinirde lezyon vardır?",
+   "secenekler": {
+    "A": "N. opticus",
+    "B": "N. oculomotorius",
+    "C": "N. trochlearis",
+    "D": "N. abducens",
+    "E": "N. facialis"
+   },
+   "dogru": "D",
+   "ipucu": "Gözü dışa çeviren tek kası besleyen siniri ve travmada bu sinirin sık zedelendiğini hatırla.",
+   "siklar": {
+    "A": "Optik sinir görme duyusunu taşır ve kesildiğinde o gözde görme kaybı olur. Gözün dışa bakışını çeviren kasları beslemediği için tabloyu açıklamaz.",
+    "B": "Okulomotor sinir gözü çeviren dört kası ve kapağı kaldıran kası besler, felcinde göz aşağı dışa kayar ve kapak düşer. Dışa bakışın tek başına kısıtlanması bu sinirin tablosuna uymadığı için seçenek yanlıştır.",
+    "C": "Troklear sinir yalnız üst obliği besler ve gözün dönme hareketine katkı yapar, felcinde göz yukarı ve içe kayar. Yatay bakışın kısıtlanması bu sinirin işi olmadığı için seçenek uymaz.",
+    "D": "Abducens siniri yalnız lateral rektusu besler ve gözü dışa çeviren tek yolu oluşturur. Laterale bakış bozulduğunda bu kas çalışmadığı için lezyonun yeri bu sinirdir ve seçenek doğru cevaptır.",
+    "E": "Fasyal sinir mimik kaslarını ve göz kapağının kapanmasını yürütür, göz hareketini çeviren kasları beslemez. Dışa bakışın bozulması yüz kaslarıyla ilgili olmadığı için seçenek yanlıştır."
+   },
+   "cozum": "Gözün dışa çevrilmesini yalnız lateral rektus yapar ve bu kası altıncı sinir besler. Laterale bakışın bozulması bu yüzden bu sinirin lezyonunu gösterir.",
+   "sayfa": [
+    19
+   ]
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Gözün laterale bakışı kısıtlı olan hastada hangi sinirde lezyon vardır?",
+   "secenekler": {
+    "A": "Üçüncü kraniyal sinir",
+    "B": "Dördüncü kraniyal sinir",
+    "C": "Altıncı kraniyal sinir",
+    "D": "Yedinci kraniyal sinir",
+    "E": "Beşinci kraniyal sinir"
+   },
+   "dogru": "C",
+   "ipucu": "Gözü dışa çeviren tek kası hangi yolun beslediğini ve bu kas zayıflayınca gözün hangi yöne kaydığını düşün.",
+   "siklar": {
+    "A": "Üçüncü sinir gözü çeviren dört kası ve kapağı besler; felcinde göz aşağı ve dışa kayar, kapak düşer. Dışa bakışın tek başına kısıtlanması bu sinirin felcinde beklenen bir bulgu olmadığı için uymaz.",
+    "B": "Dördüncü sinir yalnız üst obliği besler ve gözün dönme hareketine katkı yapar; felcinde göz yukarı ve içe kayar, baş eğilince çift görme artar. Yatay bakışı doğrudan kesen bir tablo olmadığı için bu sinir uymaz.",
+    "C": "Altıncı sinir yalnız lateral rektusu besler ve gözü dışa çeviren tek yolu oluşturur. Bu sinir felç olunca dışa bakış yapılamadığı için lezyonun yeri bu sinirdir; sorudaki kısıtlılık bu cevabı doğrular.",
+    "D": "Yedinci sinir mimik kaslarını ve göz kapaklarını kapatmayı yürütür, göz hareketini çeviren kasları beslemez. Bulgu yatay bakışta olduğu için yüz kaslarının siniri bu tabloyu açıklamaz.",
+    "E": "Beşinci sinir yüzün duyusunu ve çiğneme kaslarını taşır, göz hareketleriyle ilişkisi yoktur. Dışa bakışın yapılamaması duyu ve çiğneme işleviyle ilgili olmadığı için bu sinir sorumlu tutulmaz."
+   },
+   "cozum": "Yatay hareketin dışa yarısını yalnız lateral rektus yapar ve bu kası tek başına altıncı sinir besler. Bu yüzden dışa bakışın kaybı altıncı sinir felcini gösterir.",
+   "sayfa": [
+    19
+   ]
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Yatay bakışta sağ göz içe getirilemiyor, sol göz dışa bakarken nistagmus yapıyor. Lezyon hangi yapıdadır?",
+   "secenekler": {
+    "A": "Sağ lateral rektus kası",
+    "B": "Sağ üçüncü sinir gövdesi",
+    "C": "Sol abdusens çekirdeği",
+    "D": "Sol ön lob",
+    "E": "Medial longitudinal fasikül"
+   },
+   "dogru": "E",
+   "ipucu": "Bakış emrini bir gözden öteki gözün içe bakan kasına taşıyan yapıyı düşün.",
+   "siklar": {
+    "A": "Sağ lateral rektus kası gözü dışa çevirir; bu kas zedelenirse sağ gözün dışa bakışı kısıtlanır. Soruda içe bakışın kaybı ve karşı gözde nistagmus anlatıldığı için tek kas lezyonu bu tabloyu açıklamaz.",
+    "B": "Sağ üçüncü sinir gövdesi gözü çeviren dört kası ve kapağı besler; felcinde göz aşağı dışa kayar ve kapak düşer. Yalnız içe bakışın kısıtlanması bu sinirin tam tablosuna uymadığı için seçenek yanlıştır.",
+    "C": "Sol abdusens çekirdeği sol lateral rektusu çalıştırır ve sol gözün dışa bakışını yürütür. Lezyonda dışa bakış kısıtlanır, oysa buradaki kısıtlılık içe bakışta olduğu için bu yapı uymaz.",
+    "D": "Sol ön lob, bakışın istemli başlatıldığı yerdir ve tek gözün içe hareketini doğrudan yönetmez. İki gözün aynı yöne çevrilmesini etkileyen bir lezyon olduğu için yalnız bir gözdeki içe bakış kaybı bu yapıyı göstermez.",
+    "E": "Medial longitudinal fasikül, abdusens çekirdeğinden karşı tarafın üçüncü sinir çekirdeğine uzanarak yatay bakışı iki göze birlikte taşır. Kesildiğinde lezyon tarafındaki göz içe getirilemez, öteki göz dışa bakarken nistagmus yapar; bu ikili tabloyu açıklayan yapı olduğu için doğru cevaptır."
+   },
+   "cozum": "Yatay bakışta abdusens çekirdeği lateral rektusu çalıştırırken aynı emri fasikül yoluyla karşı tarafın üçüncü sinir çekirdeğine gönderir. Fasikül kesilince lezyon tarafındaki göz içe bakamaz.",
+   "sayfa": [
+    20,
+    21
+   ]
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Kornea refleksinin afferent ve efferent dallarını taşıyan sinirler hangileridir?",
+   "secenekler": {
+    "A": "Üçüncü ve dördüncü",
+    "B": "İkinci ve üçüncü",
+    "C": "Dokuzuncu ve onuncu",
+    "D": "Beşinci ve yedinci",
+    "E": "Altıncı ve yedinci"
+   },
+   "dogru": "D",
+   "ipucu": "Uyarıyı getiren dal duyu, yanıtı veren dal harekettir; refleksin iki dalı ayrı kraniyal yollardan geçer.",
+   "siklar": {
+    "A": "Üçüncü ve dördüncü sinirler göz hareketini çeviren kasları besler ve kornea duyusunu taşımaz. Korneaya dokunulunca uyarıyı getiren dal ile göz kırpmayı yapan kaslar başka sinirlere bağlı olduğu için bu ikili uymaz.",
+    "B": "İkinci ve üçüncü sinirler görme duyusunu ve göz hareketini yürütür, kornea duyusu ve göz kırpma bunların işi değildir. Refleksin iki dalı duyu ve hareket dalları olduğu için bu çift yanlıştır.",
+    "C": "Dokuzuncu ve onuncu sinirler farenks ve larenks bölgesinin duyusunu ve yutmayı yürütür. Kornea refleksi yüzün üst bölümünde çalıştığı için bu iki sinir refleksin dallarını oluşturmaz.",
+    "D": "Beşinci sinir korneanın duyusunu göz dalıyla taşır ve refleksin uyarıyı getiren dalını yapar; yedinci sinir göz kırpmayı yapan mimik kaslarını çalıştırır. Duyu beşinci, yanıt yedinci sinirden geçtiği için bu ikili doğru cevaptır.",
+    "E": "Altıncı ve yedinci sinirlerden biri gözü dışa çevirir, öteki mimik kaslarını çalıştırır. Kornea duyusunu taşıyan dal eksik kaldığı için bu çift refleksin tam yolunu vermez."
+   },
+   "cozum": "Kornea refleksinde korneanın duyusu beşinci sinirin göz dalıyla gelir, göz kırpma yanıtını yedinci sinir verir. Bu yüzden refleksin afferent dalı beşinci, efferent dalı yedinci sinirdir.",
+   "sayfa": [
+    23
+   ]
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Kornea refleksi alınmayan hastada yüzün o bölgesinde duyu sağlam. Sorun hangi sinirdedir?",
+   "secenekler": {
+    "A": "Beşinci sinir",
+    "B": "Üçüncü sinir",
+    "C": "İkinci sinir",
+    "D": "On ikinci sinir",
+    "E": "Yedinci sinir"
+   },
+   "dogru": "E",
+   "ipucu": "Duyu sağlamsa uyarıyı taşıyan yol çalışıyor demektir; geriye kalan yolu düşün.",
+   "siklar": {
+    "A": "Beşinci sinir yüzün duyusunu ve çiğneme kaslarını yürütür, kornea duyusunu taşıyan dal da ona bağlıdır. Duyunun sağlam bulunduğu bu hastada uyarıyı getiren yol çalıştığı için sorun bu sinirde değildir.",
+    "B": "Üçüncü sinir göz hareketini ve göz bebeğinin küçülmesini sağlar, kornea duyusu ve göz kırpma ile ilgisi yoktur. Refleks yanıtı bu sinirin çalıştırdığı kaslarla oluşmadığı için tabloya uymaz.",
+    "C": "İkinci sinir görme duyusunu taşır, korneanın dokunma duyusunu veya göz kırpmayı yürütmez. Hastadaki kayıp duyu ve göz kırpma yoluyla ilgili olduğu için bu sinir sorumlu değildir.",
+    "D": "On ikinci sinir dil kaslarını çalıştırır ve dilin hareketini yürütür. Kornea refleksiyle ilişkisi olmadığı için bu tabloyu açıklamaz; dil sapması olsaydı bu sinir düşünülürdü.",
+    "E": "Yedinci sinir gözü kapatan mimik kaslarını çalıştırır ve kornea refleksinin yanıt dalını oluşturur. Duyu sağlam olduğu için uyarıyı getiren dal çalışıyor demektir; yanıtın olmaması bu siniri gösterdiği için doğru cevaptır."
+   },
+   "cozum": "Duyu sağlam olduğunda korneaya gelen uyarı beşinci sinirle taşınıyor demektir; yanıtın oluşmaması gözü kapatan kasları çalıştıran yedinci siniri işaret eder.",
+   "sayfa": [
+    23
+   ]
+  },
+  {
+   "no": 27,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Beyinde tek taraflı supranükleer (nükleus üstü) seviyede bir lezyon durumunda aşağıdaki kraniyal sinirler veriliyor:\nI. N. abducens\nII. N. facialis\nIII. N. accessorius\nIV. N. hypoglossus\nYukarıdakilerden hangilerinin motor işlevleri bozulur?",
+   "secenekler": {
+    "A": "I, II ve III",
+    "B": "I ve III",
+    "C": "II ve IV",
+    "D": "Yalnız IV",
+    "E": "I, II, III ve IV"
+   },
+   "dogru": "C",
+   "ipucu": "Supranükleer lezyonda iki taraftan emir alan çekirdekler korunur, tek taraflı emir alanlar etkilenir.",
+   "siklar": {
+    "A": "Birinci, ikinci ve üçüncü öncüller abducens, fasyal ve aksessorius sinirlerini sayar. Supranükleer lezyonda iki taraftan emir alan çekirdekler korunduğu için abducens ve aksesorius bu grupta bozulmaz, bu yüzden seçenek yanlıştır.",
+    "B": "Birinci ve üçüncü öncüller abducens ile aksesorius sinirleridir ve ikisi de çekirdek düzeyinde iki taraftan emir aldığı için üst yol kesintisinden korunur. Yalnız bu iki sinirin tutulduğu bir tablo supranükleer lezyona uymadığı için seçenek yanlıştır.",
+    "C": "İkinci öncül fasyal, dördüncü öncül hipoglossus siniridir ve bu iki sinirin çekirdeği yüzün alt yarısı ile dil için tek taraflı üst yol emri alır. Supranükleer lezyonda bu iki sinirin motor işlevi bozulduğu için seçenek doğru cevaptır.",
+    "D": "Yalnız dördüncü öncül hipoglossus sinirini sayar ve fasyal sinirin de aynı düzeyde etkilendiği bir lezyonda bu dar seçim eksik kalır. İki sinirin birlikte tutulması beklendiği için seçenek yanlıştır.",
+    "E": "Dört öncülün tamamı alındığında abducens ve aksesorius da bozulmuş sayılır, oysa bu iki sinirin çekirdeği üst yol kesintisinden korunur. Gereksiz öncülleri aldığı için seçenek yanlıştır."
+   },
+   "cozum": "Supranükleer lezyonda yüzün alt yarısını ve dili yöneten çekirdekler tek taraflı üst yol emri aldığı için bozulur. Bu yüzden fasyal ve hipoglossus sinirlerinin motor işlevleri etkilenir.",
+   "sayfa": [
+    25,
+    33
+   ]
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Periferik fasyal paralizide aşağıdakilerden hangisi beklenmez?",
+   "secenekler": {
+    "A": "Gözün kapanmaması",
+    "B": "Ağız köşesinin karşı tarafa kayması",
+    "C": "Alın kırışıklığının korunması",
+    "D": "Kaşın kaldırılamaması",
+    "E": "Dilin ön kısmında tat kaybı"
+   },
+   "dogru": "C",
+   "ipucu": "Yüzün tamamı tutulduğunda göz kapanmaz ve kaş kalkmaz; bu tabloda hangi bölgenin sağlam kaldığını düşün.",
+   "siklar": {
+    "A": "Gözün kapanmaması periferik tipte gözü kapatan mimik kaslarının felcinden olur ve korneanın kurumasına yol açar. Bu bulgu periferik paralizide beklendiği için tabloya aykırı bir yan bulgu değildir.",
+    "B": "Ağız köşesinin karşı tarafa kayması, sağlam kalan mimik kaslarının zayıf tarafa doğru çekmesinden olur. Periferik tipte bu kayma tipik olduğu için soruda beklenmeyen bulgu olarak düşünülmez.",
+    "C": "Alın kırışıklığının korunması çekirdek üstü lezyonun bulgusudur, çünkü alın kasları iki taraftan emir alır. Periferik tipte alın da tutulduğu için kırışıklığın korunması beklenmez; ifade bu tipin tablosuna uymadığı için doğru cevaptır.",
+    "D": "Kaşın kaldırılamaması, kaşı kaldıran mimik kasının felcinden olur ve periferik tipte sık görülür. Alınla birlikte kaş hareketinin de kaybolması periferik tutulumu gösterdiği için bu bulgu beklenir.",
+    "E": "Dilin ön kısmında tat kaybı, aynı sinirin taşıdığı tat liflerinin tutulmasıyla periferik tipte görülebilir. Bu eşlik eden bulgu periferik yerleşimi desteklediği için beklenen bulgulardan biridir."
+   },
+   "cozum": "Periferik tipte yüzün yarımındaki bütün mimik kasları tutulur; alın kasları da felç olduğu için kırışıklık kaybolur. Korunmuş alın kırışıklığı çekirdek üstü lezyonun bulgusudur.",
+   "sayfa": [
+    25,
+    27
+   ]
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Yüzünün sağ yarısında ağız kayması olan hastada alın kırışıklıkları korunmuş ve gözünü tam kapatabiliyor. Bu tablo hangi tipe uyar?",
+   "secenekler": {
+    "A": "Periferik fasyal paralizi",
+    "B": "Santral fasyal paralizi",
+    "C": "Bilateral fasyal paralizi",
+    "D": "Üçüncü sinir felci",
+    "E": "Hipoglossal felç"
+   },
+   "dogru": "B",
+   "ipucu": "Alın kasları iki taraftan ayrı emir aldığı için çekirdek üstü lezyonda bu bölge korunur.",
+   "siklar": {
+    "A": "Periferik fasyal paralizi yüzün yarımındaki bütün mimik kaslarının felcidir; göz kapanmaz, kaş kalkmaz ve alın kırışmaz. Bu tipte alın kasları da tutulduğu için kırışıklıkların korunması ve gözün kapanabilmesi tabloyu açıklamaz.",
+    "B": "Santral fasyal paralizi, çekirdeğin üstündeki yoldaki kesintinin yüzün alt yarısını tuttuğu tiptir; alın kasları iki taraftan emir aldığı için korunur. Hasta alnını kırıştırıp gözünü kapatabildiği hâlde ağız köşesi kayıyorsa bu tip doğru cevaptır.",
+    "C": "Bilateral fasyal paralizi iki yüz yarısının birlikte tutulduğu, göz kapaklarının kapanmadığı ağır tablodur. Soruda tek taraflı ağız kayması ve korunmuş alın kasları anlatıldığı için iki taraflı tutulum bu tabloya uymaz.",
+    "D": "Üçüncü sinir felci göz kapağının düşmesi ve gözün aşağı dışa kaymasıyla gider, mimik kaslarını etkilemez. Sorudaki ağız kayması ve alın değerlendirmesi yüz sinirine ait olduğu için bu seçenek yanlıştır.",
+    "E": "Hipoglossal felç dilin bir tarafa sapması ve dilde küçülme ile gider, yüzün mimik kaslarını tutmaz. Soruda dil değil yüz yarısındaki kayma ve alın kasları değerlendirildiği için bu tabloyu açıklamaz."
+   },
+   "cozum": "Alın kasları yüz çekirdeğinden iki taraflı emir aldığı için çekirdek üstü lezyonlarda korunur; bu yüzden korunmuş alın ve kapanan göz santral tipi gösterir.",
+   "sayfa": [
+    27
+   ]
+  },
+  {
+   "no": 15,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Diyapazon alına konduğunda sesi sağ kulağında daha güçlü duyan hastada sağ kulakta hangi tipte işitme kaybı vardır?",
+   "secenekler": {
+    "A": "Sensörinöral tip",
+    "B": "Santral tip",
+    "C": "Karışık tip",
+    "D": "İşitme kaybı yok",
+    "E": "İletim tipi"
+   },
+   "dogru": "E",
+   "ipucu": "Ses hasta kulağa kaydığında o kulakta kemik yoluyla duyumun görece daha iyi kaldığını unutma.",
+   "siklar": {
+    "A": "Sensörinöral tip, sesin iç kulaktaki yapılarda ya da işitme sinirinde işlenmesinin bozulduğu kayıptır ve çoğunlukla yüksek frekanslarda belirginleşir. Bu tipte ses karşı kulağa kaydığı için sorudaki tabloya uymaz.",
+    "B": "Santral tip, işitme yollarının beyin sapı ve üstündeki bölümlerindeki bozukluğu anlatır ve iki kulağı birlikte etkileyebilir. Sorudaki tek kulakta belirgin kayma bu düzeye uymadığı için seçenek yanlıştır.",
+    "C": "Karışık tip, iletim ve algı bozukluğunun aynı kulakta birlikte bulunduğu kayıptır ve iki mekanizmanın bulguları birlikte görülür. Tek bir testte net kayma ile ayrılan bu tablo karışık tipe uymaz.",
+    "D": "İşitme kaybı olmadığında Weber testinde ses orta hatta duyulur ve bir kulağa kayma normal işitmede beklenmez. Sesin bir kulağa kayması işitmenin normal olduğunu göstermediği için bu seçenek uymaz.",
+    "E": "İletim tipi işitme kaybı, sesin dış ve orta kulaktaki iletiminin bozulduğu durumdur ve bu kulakta kemik yolu hava yolundan daha iyi kalır. Bu yüzden diyapazon alına konduğunda ses hasta kulağa kayar ve sorudaki tablo bu tipe uyduğu için doğru cevaptır."
+   },
+   "cozum": "İletim tipi kayıpta dış ve orta kulaktaki engel hava yolunu kısaltır, kemik iletimi görece iyi kalır. Bu yüzden diyapazon alına konduğunda ses hasta kulağa kayar.",
+   "sayfa": [
+    29
+   ]
+  },
+  {
+   "no": 16,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Rinne testi negatif olan kulakta işitme kaybı hangi tiptedir?",
+   "secenekler": {
+    "A": "İletim tipi",
+    "B": "Sensörinöral tip",
+    "C": "Retrokoklear tip",
+    "D": "Santral tip",
+    "E": "Normal işitme"
+   },
+   "dogru": "A",
+   "ipucu": "Kemik yolu hava yolundan uzun bulunduğunda dış ve orta kulaktaki engelin öne çıktığını hatırla.",
+   "siklar": {
+    "A": "İletim tipi, dış ve orta kulaktaki ses iletiminin bozulduğu kayıptır ve kemik yolu hava yolundan uzun bulunur. Rinne testinde bu dengesizlik testin negatif çıkmasına yol açtığı için negatif sonuç iletime işaret eder ve seçenek doğru cevaptır.",
+    "B": "Sensörinöral tip, iç kulak ve işitme sinirindeki algı bozukluğudur; bu kayıpta hava ve kemik yolu birlikte kısaldığı için Rinne pozitif kalır. Negatif sonuç bu tipe uymadığı için seçenek yanlıştır.",
+    "C": "Retrokoklear tip, işitme sinirinin arkasındaki yolların bozukluğunu anlatır ve algı tipinin özel bir yerleşimidir. Rinne sonucu bu yerleşimi tek başına ayırmadığı için bu seçenek uymaz.",
+    "D": "Santral tip, beyin sapı ve üstündeki işitme yollarının tutulumudur ve iki kulağı birlikte etkileyebilir. Testin tek kulaktaki negatif sonucu bu düzeyi göstermediği için seçenek yanlıştır.",
+    "E": "Normal işitmede hava yolu kemik yolundan uzundur ve Rinne pozitif bulunur, bu yüzden negatif sonuç normal işitmeyi göstermez. Testin negatif çıkması bir kaybın varlığını gösterdiği için bu seçenek uymaz."
+   },
+   "cozum": "Kemik yolu hava yolundan uzun bulunduğunda ses dış ve orta kulaktaki engel yüzünden havadan gelemez. Rinne testinin negatif çıkması iletim tipi kaybı gösterir.",
+   "sayfa": [
+    29
+   ]
+  },
+  {
+   "no": 22,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Öğürme refleksinde afferent dalı taşıyan sinir hangisidir?",
+   "secenekler": {
+    "A": "Onuncu kraniyal sinir",
+    "B": "Dokuzuncu kraniyal sinir",
+    "C": "On ikinci kraniyal sinir",
+    "D": "Yedinci kraniyal sinir",
+    "E": "Beşinci kraniyal sinir"
+   },
+   "dogru": "B",
+   "ipucu": "Farenks duvarı uyarıldığında uyarıyı getiren dalı ve yanıtı veren kasları birbirinden ayır.",
+   "siklar": {
+    "A": "Onuncu sinir farenks ve larenks kaslarını çalıştırır ve öğürme yanıtının kaslarını harekete geçirir, yanıtı veren dal odur. Uyarıyı getiren dal sorulduğu için bu sinir afferent rolü üstlenmez.",
+    "B": "Dokuzuncu sinir dilin arka üçte birinin duyusunu ve farenksin duyusunu taşır, öğürme refleksinde uyarıyı getiren dalı oluşturur. Farenks duvarı uyarıldığında uyarı bu sinirle geldiği için sorulan afferent dal dokuzuncu sinirdir ve seçenek doğru cevaptır.",
+    "C": "On ikinci sinir dil kaslarını çalıştırır ve dilin hareketini yürütür. Farenksin duyusunu taşımadığı için bu sinir öğürme refleksinin uyarı dalını oluşturmaz.",
+    "D": "Yedinci sinir mimik kaslarını ve dilin ön kısmının tat duyusunu taşır. Farenks duyusu bu sinirin alanında olmadığı için bu sinir öğürme refleksinin uyarı dalını oluşturmaz.",
+    "E": "Beşinci sinir yüzün duyusunu ve çiğneme kaslarını yürütür. Farenks ve dilin arka kısmının duyusu bu sinirin alanına girmediği için seçenek yanlıştır."
+   },
+   "cozum": "Öğürme refleksinde farenks duvarından gelen uyarı dokuzuncu sinirle taşınır, yanıtı veren kaslar onuncu sinirle çalışır. Bu yüzden refleksin afferent dalı dokuzuncu, efferent dalı onuncu sinirdir.",
+   "sayfa": [
+    30
+   ]
+  },
+  {
+   "no": 19,
+   "tur": "ornek",
+   "zorluk": "zor",
+   "soru": "Yumuşak damak kaslarını ve farenks kaslarını çalıştıran kraniyal sinir hangisidir?",
+   "secenekler": {
+    "A": "Dokuzuncu kraniyal sinir",
+    "B": "On ikinci kraniyal sinir",
+    "C": "Yedinci kraniyal sinir",
+    "D": "Onuncu kraniyal sinir",
+    "E": "Beşinci kraniyal sinir"
+   },
+   "dogru": "D",
+   "ipucu": "Yutma sırasında gırtlağı kapatan ve ses tellerini hareket ettiren kasları besleyen, aynı zamanda göğüs ve karın organlarına parasempatik lifler gönderen yolu düşün.",
+   "siklar": {
+    "A": "Dokuzuncu sinir stilofaringeus kasını ve parotis bezini çalıştırır, dilin arka kısmının duyusunu taşır. Farenks ve larenks kaslarının bütünü ile organların parasempatik innervasyonu bu sinirin alanında olmadığı için seçenek yanlıştır.",
+    "B": "On ikinci sinir dil kaslarını çalıştırır ve dilin hareketini yürütür, palatoglossus bu sinirin alanı dışında kalır. Yutma ve sesle ilgili kasların bütünü bu sinire bağlı olmadığı için seçenek uymaz.",
+    "C": "Yedinci sinir mimik kaslarını ve dilin ön kısmının tat duyusunu taşır. Farenks ve larenks kasları ile göğüs karın organlarının parasempatik innervasyonu bu sinirin işi olmadığı için uymaz.",
+    "D": "Onuncu sinir farenks ve larenks kaslarını, palatoglossus kasını çalıştırır ve göğüs ile karın organlarının parasempatik innervasyonunu sağlar. Yutma ve sesle ilgili kaslar bu sinirle çalıştığı için sorudaki tanım bu sinire aittir ve seçenek doğru cevaptır.",
+    "E": "Beşinci sinir yüzün duyusunu ve çiğneme kaslarını yürütür. Yumuşak damak ve farenks kaslarıyla organların parasempatik innervasyonu bu sinirin alanına girmediği için seçenek yanlıştır."
+   },
+   "cozum": "Farenks ve larenks kasları, palatoglossus ve organların parasempatik innervasyonu onuncu sinire bağlıdır. Bu sinir yutma ve ses işlevlerini yürüttüğü için felçte ses boğuklaşır ve yutma güçleşir.",
+   "sayfa": [
+    31
+   ]
+  },
+  {
+   "no": 20,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Omuz kaldırma ve baş çevirme gücünü değerlendiren sinir hangisidir?",
+   "secenekler": {
+    "A": "Onuncu kraniyal sinir",
+    "B": "Dokuzuncu kraniyal sinir",
+    "C": "Yedinci kraniyal sinir",
+    "D": "Beşinci kraniyal sinir",
+    "E": "On birinci kraniyal sinir"
+   },
+   "dogru": "E",
+   "ipucu": "Omzu kaldıran ve başı yana çeviren iki kası hangi yolun beslediğini hatırla.",
+   "siklar": {
+    "A": "Onuncu sinir farenks ve larenks kaslarını çalıştırır ve organların parasempatik innervasyonunu sağlar. Omuz ve boyun hareketini yürüten kaslar bu sinirin alanında olmadığı için seçenek uymaz.",
+    "B": "Dokuzuncu sinir stilofaringeus kasını ve parotis bezini çalıştırır, dilin arka kısmının duyusunu taşır. Omuz kaldırma ve baş çevirme bu sinirin işlevleri arasında olmadığı için seçenek yanlıştır.",
+    "C": "Yedinci sinir mimik kaslarını ve göz kapağını kapatmayı yürütür. Omuz ve boyun kasları yüz kaslarından ayrı bir sinirle çalıştığı için seçenek uymaz.",
+    "D": "Beşinci sinir yüzün duyusunu ve çiğneme kaslarını taşır. Omuz kaldırma ve baş çevirme ile ilişkisi olmadığı için bu sinir sorudaki işlevleri karşılamaz.",
+    "E": "On birinci sinir trapezius ve sternokleidomastoid kaslarını çalıştırır; trapezius omzu kaldırır, sternokleidomastoid başı çevirir. Muayenede omuz kaldırma ve dirence karşı baş çevirme istendiği için bu sinir sorudaki işlevleri yürütür ve seçenek doğru cevaptır."
+   },
+   "cozum": "Trapezius omzu kaldırır, sternokleidomastoid başı karşı yana çevirir ve iki kas birlikte omuz boyun hareketini yürütür. Bu iki kası on birinci sinir beslediği için muayenede omuz kaldırma ve baş çevirme sınanır.",
+   "sayfa": [
+    32
+   ]
+  },
+  {
+   "no": 24,
+   "tur": "cikmis",
+   "sinav": "2020-2021 Kurul 2",
+   "soru": "Kraniyal sinir muayenesi esnasında hasta, dilini dışarı çıkardığında sağ tarafa sapma olduğu görülmektedir. Dil atrofisi olmayan bu hastada lezyon nerede olabilir?",
+   "secenekler": {
+    "A": "Sağ nervus hypoglossus",
+    "B": "Sağ nucleus ambiguus",
+    "C": "Sol nucleus tractus solitarius",
+    "D": "Sol hipoglossal sinirin supranükleer (kortikobulber) yolu",
+    "E": "Sol nervus glossopharyngeus"
+   },
+   "dogru": "D",
+   "ipucu": "Dil sapmasının yönü zayıf tarafı, kas küçülmesinin varlığı ise hasarın düzeyini gösterir.",
+   "siklar": {
+    "A": "Sağ hipoglossal sinir dil kaslarını doğrudan besleyen sinirdir ve gövdesi kesilirse kas trofik destekten yoksun kalır, dilde küçülme görülür. Küçülme bulunmadığı için gövde lezyonu bu hastaya uymadığından seçenek yanlıştır.",
+    "B": "Nukleus ambigus, dokuzuncu ve onuncu sinirlerin motor çekirdeğidir ve yutma kaslarını yönetir, dil kaslarıyla ilişkisi yoktur. Dil sapması bu çekirdeğin işi olmadığı için seçenek uymaz.",
+    "C": "Nukleus traktus solitarius, tat ve iç organ duyularının işlendiği duyu çekirdeğidir. Dil hareketini yürüten motor birim olmadığı için dildeki sapmayı açıklamaz ve seçenek yanlıştır.",
+    "D": "Sol hipoglossal sinirin supranükleer yolu, çekirdeğin üstünden gelen kortikobulber liflerdir ve kesildiğinde kas trofik desteğini korur. Atrofi olmadan dil sağa, yani lezyonun karşı tarafına saptığı için bu yol doğru cevaptır.",
+    "E": "Sol glossofaringeus siniri dilin arka üçte birinin duyusunu taşır ve stilofaringeus kasını çalıştırır. Dilin hareketini yürüten kasları beslemediği için sapmayı açıklamaz ve seçenek yanlıştır."
+   },
+   "cozum": "Dil dışarı çıkarıldığında zayıf tarafa doğru itilir, sapma bu yüzden felçli tarafladır. Kas küçülmesi yoksa kesinti çekirdeğin üstündeki kortikobulber yoldadır.",
+   "sayfa": [
+    33
+   ]
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "zorluk": "orta",
+   "soru": "Dilini çıkardığında sağ tarafa sapan hastada dilde atrofi yok. Lezyon en olası nerededir?",
+   "secenekler": {
+    "A": "Sağ hipoglossal sinir gövdesi",
+    "B": "Sol hipoglossal sinirin çekirdek üstü yolu",
+    "C": "Sağ hipoglossal çekirdek",
+    "D": "Sağ beyin sapı çekirdeği",
+    "E": "Sol dil kası"
+   },
+   "dogru": "B",
+   "ipucu": "Dil zayıf tarafa itilir; kas küçülmesi yoksa hasar kasın kendisinde değildir.",
+   "siklar": {
+    "A": "Sağ hipoglossal sinir gövdesi dil kaslarını besleyen lifleri taşır ve kesilmesi kası trofik destekten yoksun bırakır. Bu durumda dilde küçülme ve seğirme görüleceği için gövde lezyonu bu hastaya uymaz.",
+    "B": "Sol hipoglossal sinirin çekirdek üstü yolu, kası besleyen çekirdeğin üstündeki kortikobulber yoldur ve burada kesinti olunca kas trofik desteğini korur. Atrofi görülmeden dil sağa, yani lezyonun karşı tarafına saptığı için doğru cevaptır.",
+    "C": "Sağ hipoglossal çekirdeğin kendisi zedelenirse kası besleyen alt motor nöron kaybolur ve dilde küçülme ile seğirme ortaya çıkar. Bu tabloda küçülme beklenmediği için çekirdek lezyonu bu hastaya uymaz.",
+    "D": "Sağ beyin sapı çekirdeği dil kaslarının doğrudan çıkış noktasıdır ve buradaki hasar kası trofik destekten yoksun bırakır. Dil küçülmesinin bulunmaması bu düzeydeki lezyonu dışlar.",
+    "E": "Sol dil kasının kendisinin zedelenmesi dilde güçsüzlük yapar, ancak kasın kendisi tek başına sinir lezyonunun yerini açıklamaz. Soruda lezyonun yeri sorulduğu ve sapma sinir yolundan doğduğu için kasın kendisi bu tabloyu karşılamaz."
+   },
+   "cozum": "Dil dışarı çıkarılırken zayıf tarafa doğru itilir, bu yüzden sapma felçli tarafladır. Kas küçülmesi yoksa kesinti çekirdeğin üstündeki kortikobulber yoldadır.",
+   "sayfa": [
+    33
+   ]
+  }
+ ],
+ "klip": {
+  "q-14": {
+   "v": "170e323d24c6",
+   "sure": 15.768,
+   "zaman": [
+    [
+     0.12,
+     5.399
+    ],
+    [
+     5.85,
+     6.974
+    ],
+    [
+     7.426,
+     8.871
+    ],
+    [
+     9.322,
+     10.607
+    ],
+    [
+     11.059,
+     13.5
+    ],
+    [
+     13.952,
+     15.316
+    ]
+   ]
+  },
+  "i-14": {
+   "v": "19f3341cfdc2",
+   "sure": 5.232,
+   "zaman": [
+    [
+     0.122,
+     4.776
+    ]
+   ]
+  },
+  "c-14": {
+   "v": "8ae5fdb07fef",
+   "sure": 12.816,
+   "zaman": [
+    [
+     0.12,
+     3.25
+    ],
+    [
+     3.702,
+     9.022
+    ],
+    [
+     9.474,
+     12.364
+    ]
+   ]
+  },
+  "d-14": {
+   "v": "5c01d20ae155",
+   "sure": 10.104,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.304
+    ],
+    [
+     6.757,
+     9.652
+    ]
+   ]
+  },
+  "s-14-A": {
+   "v": "d409271f092d",
+   "sure": 9.384,
+   "zaman": [
+    [
+     0.121,
+     4.899
+    ],
+    [
+     5.352,
+     8.932
+    ]
+   ]
+  },
+  "s-14-B": {
+   "v": "1276a3a08761",
+   "sure": 9.6,
+   "zaman": [
+    [
+     0.121,
+     5.152
+    ],
+    [
+     5.605,
+     9.147
+    ]
+   ]
+  },
+  "s-14-C": {
+   "v": "00937d4d662a",
+   "sure": 10.656,
+   "zaman": [
+    [
+     0.121,
+     6.093
+    ],
+    [
+     6.545,
+     10.204
+    ]
+   ]
+  },
+  "s-14-D": {
+   "v": "32a47b7026bf",
+   "sure": 13.968,
+   "zaman": [
+    [
+     0.121,
+     7.999
+    ],
+    [
+     8.451,
+     13.516
+    ]
+   ]
+  },
+  "s-14-E": {
+   "v": "32ed35dc8d81",
+   "sure": 10.248,
+   "zaman": [
+    [
+     0.121,
+     6.2
+    ],
+    [
+     6.653,
+     9.795
+    ]
+   ]
+  },
+  "q-11": {
+   "v": "e7b92fc0c971",
+   "sure": 14.208,
+   "zaman": [
+    [
+     0.12,
+     4.485
+    ],
+    [
+     4.936,
+     6.06
+    ],
+    [
+     6.512,
+     7.946
+    ],
+    [
+     8.398,
+     9.803
+    ],
+    [
+     10.254,
+     11.82
+    ],
+    [
+     12.272,
+     13.756
+    ]
+   ]
+  },
+  "i-11": {
+   "v": "675f229b9326",
+   "sure": 5.76,
+   "zaman": [
+    [
+     0.121,
+     5.305
+    ]
+   ]
+  },
+  "c-11": {
+   "v": "a956a0f91d90",
+   "sure": 13.248,
+   "zaman": [
+    [
+     0.121,
+     1.929
+    ],
+    [
+     2.381,
+     7.562
+    ],
+    [
+     8.014,
+     12.796
+    ]
+   ]
+  },
+  "d-11": {
+   "v": "b98cfbb9a8af",
+   "sure": 11.856,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     6.163
+    ],
+    [
+     6.616,
+     11.403
+    ]
+   ]
+  },
+  "s-11-A": {
+   "v": "6f4c978dac99",
+   "sure": 14.832,
+   "zaman": [
+    [
+     0.12,
+     6.446
+    ],
+    [
+     6.898,
+     14.38
+    ]
+   ]
+  },
+  "s-11-B": {
+   "v": "840a672399b9",
+   "sure": 12.36,
+   "zaman": [
+    [
+     0.121,
+     5.943
+    ],
+    [
+     6.396,
+     11.907
+    ]
+   ]
+  },
+  "s-11-C": {
+   "v": "91f590b5ca7f",
+   "sure": 11.352,
+   "zaman": [
+    [
+     0.121,
+     6.387
+    ],
+    [
+     6.84,
+     10.9
+    ]
+   ]
+  },
+  "s-11-D": {
+   "v": "ae4e83bf81ac",
+   "sure": 12.792,
+   "zaman": [
+    [
+     0.121,
+     6.661
+    ],
+    [
+     7.113,
+     12.34
+    ]
+   ]
+  },
+  "s-11-E": {
+   "v": "75e0fa46035d",
+   "sure": 11.928,
+   "zaman": [
+    [
+     0.121,
+     5.747
+    ],
+    [
+     6.199,
+     11.476
+    ]
+   ]
+  },
+  "q-18": {
+   "v": "e0dfaaa1c3ff",
+   "sure": 18.912,
+   "zaman": [
+    [
+     0.12,
+     4.831
+    ],
+    [
+     5.282,
+     6.975
+    ],
+    [
+     7.427,
+     10.613
+    ],
+    [
+     11.064,
+     13.329
+    ],
+    [
+     13.781,
+     15.747
+    ],
+    [
+     16.198,
+     18.461
+    ]
+   ]
+  },
+  "i-18": {
+   "v": "f4fd1549e12d",
+   "sure": 6.6,
+   "zaman": [
+    [
+     0.121,
+     6.147
+    ]
+   ]
+  },
+  "c-18": {
+   "v": "eee0ecbdc2a6",
+   "sure": 14.304,
+   "zaman": [
+    [
+     0.121,
+     3.044
+    ],
+    [
+     3.496,
+     8.399
+    ],
+    [
+     8.851,
+     13.852
+    ]
+   ]
+  },
+  "d-18": {
+   "v": "f0dd06549b34",
+   "sure": 11.784,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     5.878
+    ],
+    [
+     6.33,
+     11.332
+    ]
+   ]
+  },
+  "s-18-A": {
+   "v": "b6fea5dc1126",
+   "sure": 10.152,
+   "zaman": [
+    [
+     0.121,
+     4.36
+    ],
+    [
+     4.813,
+     9.699
+    ]
+   ]
+  },
+  "s-18-B": {
+   "v": "42071644bbe2",
+   "sure": 11.136,
+   "zaman": [
+    [
+     0.121,
+     5.53
+    ],
+    [
+     5.982,
+     10.684
+    ]
+   ]
+  },
+  "s-18-C": {
+   "v": "a76225ef0f64",
+   "sure": 15.168,
+   "zaman": [
+    [
+     0.121,
+     7.876
+    ],
+    [
+     8.328,
+     14.716
+    ]
+   ]
+  },
+  "s-18-D": {
+   "v": "7be71b85a567",
+   "sure": 9.528,
+   "zaman": [
+    [
+     0.121,
+     5.233
+    ],
+    [
+     5.686,
+     9.075
+    ]
+   ]
+  },
+  "s-18-E": {
+   "v": "c7e03bbc9cf7",
+   "sure": 9.672,
+   "zaman": [
+    [
+     0.121,
+     5.113
+    ],
+    [
+     5.566,
+     9.219
+    ]
+   ]
+  },
+  "q-21": {
+   "v": "42db64873c8c",
+   "sure": 13.872,
+   "zaman": [
+    [
+     0.12,
+     4.135
+    ],
+    [
+     4.587,
+     6.235
+    ],
+    [
+     6.686,
+     8.284
+    ],
+    [
+     8.735,
+     10.02
+    ],
+    [
+     10.472,
+     11.892
+    ],
+    [
+     12.344,
+     13.42
+    ]
+   ]
+  },
+  "i-21": {
+   "v": "3195577ec34c",
+   "sure": 5.544,
+   "zaman": [
+    [
+     0.122,
+     5.088
+    ]
+   ]
+  },
+  "c-21": {
+   "v": "906d8a6ea391",
+   "sure": 16.08,
+   "zaman": [
+    [
+     0.12,
+     2.488
+    ],
+    [
+     2.94,
+     10.362
+    ],
+    [
+     10.813,
+     15.629
+    ]
+   ]
+  },
+  "d-21": {
+   "v": "e0c02c93bb66",
+   "sure": 14.136,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     8.408
+    ],
+    [
+     8.861,
+     13.684
+    ]
+   ]
+  },
+  "s-21-A": {
+   "v": "10464a8c6ce3",
+   "sure": 12.84,
+   "zaman": [
+    [
+     0.121,
+     6.983
+    ],
+    [
+     7.435,
+     12.388
+    ]
+   ]
+  },
+  "s-21-B": {
+   "v": "2a3317c74ba8",
+   "sure": 10.92,
+   "zaman": [
+    [
+     0.121,
+     5.128
+    ],
+    [
+     5.581,
+     10.467
+    ]
+   ]
+  },
+  "s-21-C": {
+   "v": "07af09f60ec6",
+   "sure": 12.24,
+   "zaman": [
+    [
+     0.121,
+     6.515
+    ],
+    [
+     6.967,
+     11.788
+    ]
+   ]
+  },
+  "s-21-D": {
+   "v": "875a419942fc",
+   "sure": 9.024,
+   "zaman": [
+    [
+     0.121,
+     3.91
+    ],
+    [
+     4.363,
+     8.571
+    ]
+   ]
+  },
+  "s-21-E": {
+   "v": "4313329eb4f9",
+   "sure": 11.304,
+   "zaman": [
+    [
+     0.121,
+     5.415
+    ],
+    [
+     5.867,
+     10.852
+    ]
+   ]
+  },
+  "q-23": {
+   "v": "d47665190125",
+   "sure": 13.032,
+   "zaman": [
+    [
+     0.121,
+     3.154
+    ],
+    [
+     3.607,
+     4.813
+    ],
+    [
+     5.265,
+     6.592
+    ],
+    [
+     7.045,
+     8.423
+    ],
+    [
+     8.876,
+     10.766
+    ],
+    [
+     11.218,
+     12.58
+    ]
+   ]
+  },
+  "i-23": {
+   "v": "50df23b90eee",
+   "sure": 5.064,
+   "zaman": [
+    [
+     0.121,
+     4.61
+    ]
+   ]
+  },
+  "c-23": {
+   "v": "53c35684a494",
+   "sure": 13.656,
+   "zaman": [
+    [
+     0.12,
+     2.179
+    ],
+    [
+     2.631,
+     8.535
+    ],
+    [
+     8.987,
+     13.204
+    ]
+   ]
+  },
+  "d-23": {
+   "v": "2a8f84569858",
+   "sure": 12.0,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     6.879
+    ],
+    [
+     7.331,
+     11.548
+    ]
+   ]
+  },
+  "s-23-A": {
+   "v": "9b4923d482c9",
+   "sure": 10.248,
+   "zaman": [
+    [
+     0.121,
+     4.832
+    ],
+    [
+     5.285,
+     9.795
+    ]
+   ]
+  },
+  "s-23-B": {
+   "v": "ce4e30049010",
+   "sure": 10.704,
+   "zaman": [
+    [
+     0.121,
+     5.784
+    ],
+    [
+     6.236,
+     10.252
+    ]
+   ]
+  },
+  "s-23-C": {
+   "v": "865c94901206",
+   "sure": 14.256,
+   "zaman": [
+    [
+     0.121,
+     6.866
+    ],
+    [
+     7.317,
+     13.804
+    ]
+   ]
+  },
+  "s-23-D": {
+   "v": "a904bf1f43c1",
+   "sure": 10.392,
+   "zaman": [
+    [
+     0.121,
+     5.869
+    ],
+    [
+     6.322,
+     9.94
+    ]
+   ]
+  },
+  "s-23-E": {
+   "v": "919abbaa6047",
+   "sure": 9.984,
+   "zaman": [
+    [
+     0.121,
+     5.274
+    ],
+    [
+     5.727,
+     9.531
+    ]
+   ]
+  },
+  "q-17": {
+   "v": "cb469f4f8427",
+   "sure": 10.08,
+   "zaman": [
+    [
+     0.121,
+     2.616
+    ],
+    [
+     3.068,
+     3.994
+    ],
+    [
+     4.446,
+     5.452
+    ],
+    [
+     5.905,
+     6.871
+    ],
+    [
+     7.324,
+     8.249
+    ],
+    [
+     8.702,
+     9.627
+    ]
+   ]
+  },
+  "i-17": {
+   "v": "f58b1f6caca4",
+   "sure": 4.704,
+   "zaman": [
+    [
+     0.122,
+     4.248
+    ]
+   ]
+  },
+  "c-17": {
+   "v": "84699419a5f4",
+   "sure": 10.752,
+   "zaman": [
+    [
+     0.121,
+     1.809
+    ],
+    [
+     2.261,
+     6.538
+    ],
+    [
+     6.99,
+     10.3
+    ]
+   ]
+  },
+  "d-17": {
+   "v": "a4636faf12d7",
+   "sure": 9.48,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.259
+    ],
+    [
+     5.712,
+     9.027
+    ]
+   ]
+  },
+  "s-17-A": {
+   "v": "ce4c325db779",
+   "sure": 8.376,
+   "zaman": [
+    [
+     0.121,
+     4.149
+    ],
+    [
+     4.603,
+     7.923
+    ]
+   ]
+  },
+  "s-17-B": {
+   "v": "0e397089998e",
+   "sure": 9.312,
+   "zaman": [
+    [
+     0.121,
+     5.219
+    ],
+    [
+     5.671,
+     8.859
+    ]
+   ]
+  },
+  "s-17-C": {
+   "v": "c844d544e24b",
+   "sure": 9.384,
+   "zaman": [
+    [
+     0.121,
+     5.456
+    ],
+    [
+     5.909,
+     8.931
+    ]
+   ]
+  },
+  "s-17-D": {
+   "v": "bbf5fe38c93d",
+   "sure": 10.224,
+   "zaman": [
+    [
+     0.121,
+     5.421
+    ],
+    [
+     5.874,
+     9.772
+    ]
+   ]
+  },
+  "s-17-E": {
+   "v": "b1e0cd36e3d2",
+   "sure": 10.176,
+   "zaman": [
+    [
+     0.121,
+     6.096
+    ],
+    [
+     6.548,
+     9.724
+    ]
+   ]
+  },
+  "q-12": {
+   "v": "52b845673336",
+   "sure": 14.688,
+   "zaman": [
+    [
+     0.121,
+     3.378
+    ],
+    [
+     3.83,
+     5.598
+    ],
+    [
+     6.05,
+     7.938
+    ],
+    [
+     8.39,
+     10.078
+    ],
+    [
+     10.53,
+     12.217
+    ],
+    [
+     12.669,
+     14.236
+    ]
+   ]
+  },
+  "i-12": {
+   "v": "449b2390e359",
+   "sure": 4.008,
+   "zaman": [
+    [
+     0.122,
+     3.551
+    ]
+   ]
+  },
+  "c-12": {
+   "v": "eef3a6e4a5fa",
+   "sure": 13.512,
+   "zaman": [
+    [
+     0.121,
+     2.693
+    ],
+    [
+     3.146,
+     8.932
+    ],
+    [
+     9.384,
+     13.06
+    ]
+   ]
+  },
+  "d-12": {
+   "v": "1d371c9b85b9",
+   "sure": 11.352,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     6.768
+    ],
+    [
+     7.22,
+     10.899
+    ]
+   ]
+  },
+  "s-12-A": {
+   "v": "734f277adc91",
+   "sure": 9.936,
+   "zaman": [
+    [
+     0.121,
+     5.19
+    ],
+    [
+     5.642,
+     9.483
+    ]
+   ]
+  },
+  "s-12-B": {
+   "v": "8ebdaf6f3597",
+   "sure": 10.152,
+   "zaman": [
+    [
+     0.121,
+     4.945
+    ],
+    [
+     5.398,
+     9.7
+    ]
+   ]
+  },
+  "s-12-C": {
+   "v": "99da2dba2ec0",
+   "sure": 9.816,
+   "zaman": [
+    [
+     0.121,
+     5.146
+    ],
+    [
+     5.598,
+     9.364
+    ]
+   ]
+  },
+  "s-12-D": {
+   "v": "9e3c58405c6e",
+   "sure": 9.816,
+   "zaman": [
+    [
+     0.121,
+     5.151
+    ],
+    [
+     5.603,
+     9.363
+    ]
+   ]
+  },
+  "s-12-E": {
+   "v": "1c7bdc4392d6",
+   "sure": 9.96,
+   "zaman": [
+    [
+     0.121,
+     4.95
+    ],
+    [
+     5.403,
+     9.507
+    ]
+   ]
+  },
+  "q-26": {
+   "v": "ad19e73e6139",
+   "sure": 17.712,
+   "zaman": [
+    [
+     0.12,
+     8.819
+    ],
+    [
+     9.27,
+     10.234
+    ],
+    [
+     10.685,
+     11.85
+    ],
+    [
+     12.301,
+     13.626
+    ],
+    [
+     14.077,
+     15.603
+    ],
+    [
+     16.054,
+     17.26
+    ]
+   ]
+  },
+  "i-26": {
+   "v": "926d122be01e",
+   "sure": 6.216,
+   "zaman": [
+    [
+     0.121,
+     5.762
+    ]
+   ]
+  },
+  "c-26": {
+   "v": "e84a3e2027f1",
+   "sure": 13.032,
+   "zaman": [
+    [
+     0.121,
+     2.131
+    ],
+    [
+     2.583,
+     8.67
+    ],
+    [
+     9.122,
+     12.58
+    ]
+   ]
+  },
+  "d-26": {
+   "v": "c350771dfc5b",
+   "sure": 11.424,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     7.062
+    ],
+    [
+     7.514,
+     10.972
+    ]
+   ]
+  },
+  "s-26-A": {
+   "v": "a1d5819f6a3e",
+   "sure": 12.408,
+   "zaman": [
+    [
+     0.121,
+     7.401
+    ],
+    [
+     7.853,
+     11.956
+    ]
+   ]
+  },
+  "s-26-B": {
+   "v": "ab159edaf4c1",
+   "sure": 11.304,
+   "zaman": [
+    [
+     0.121,
+     5.108
+    ],
+    [
+     5.561,
+     10.851
+    ]
+   ]
+  },
+  "s-26-C": {
+   "v": "9f4935fdfb41",
+   "sure": 13.272,
+   "zaman": [
+    [
+     0.12,
+     8.214
+    ],
+    [
+     8.666,
+     12.82
+    ]
+   ]
+  },
+  "s-26-D": {
+   "v": "a8a525ad556e",
+   "sure": 11.328,
+   "zaman": [
+    [
+     0.121,
+     6.479
+    ],
+    [
+     6.932,
+     10.875
+    ]
+   ]
+  },
+  "s-26-E": {
+   "v": "67b600b20911",
+   "sure": 10.248,
+   "zaman": [
+    [
+     0.121,
+     5.217
+    ],
+    [
+     5.669,
+     9.795
+    ]
+   ]
+  },
+  "q-13": {
+   "v": "cb65a62866f0",
+   "sure": 14.232,
+   "zaman": [
+    [
+     0.12,
+     3.573
+    ],
+    [
+     4.025,
+     5.528
+    ],
+    [
+     5.98,
+     7.581
+    ],
+    [
+     8.033,
+     9.721
+    ],
+    [
+     10.172,
+     11.774
+    ],
+    [
+     12.226,
+     13.78
+    ]
+   ]
+  },
+  "i-13": {
+   "v": "a0875acf6129",
+   "sure": 5.688,
+   "zaman": [
+    [
+     0.121,
+     5.233
+    ]
+   ]
+  },
+  "c-13": {
+   "v": "d6ac32de1b8a",
+   "sure": 12.528,
+   "zaman": [
+    [
+     0.121,
+     2.553
+    ],
+    [
+     3.005,
+     7.105
+    ],
+    [
+     7.557,
+     12.076
+    ]
+   ]
+  },
+  "d-13": {
+   "v": "c04e1c59f5ea",
+   "sure": 10.512,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.082
+    ],
+    [
+     5.534,
+     10.059
+    ]
+   ]
+  },
+  "s-13-A": {
+   "v": "84390a0d0f3b",
+   "sure": 10.104,
+   "zaman": [
+    [
+     0.121,
+     5.36
+    ],
+    [
+     5.813,
+     9.652
+    ]
+   ]
+  },
+  "s-13-B": {
+   "v": "dd00c10d9e99",
+   "sure": 10.08,
+   "zaman": [
+    [
+     0.121,
+     5.752
+    ],
+    [
+     6.205,
+     9.627
+    ]
+   ]
+  },
+  "s-13-C": {
+   "v": "422b1b7f2c12",
+   "sure": 11.688,
+   "zaman": [
+    [
+     0.121,
+     5.823
+    ],
+    [
+     6.275,
+     11.235
+    ]
+   ]
+  },
+  "s-13-D": {
+   "v": "e257985d4146",
+   "sure": 8.664,
+   "zaman": [
+    [
+     0.121,
+     4.557
+    ],
+    [
+     5.011,
+     8.21
+    ]
+   ]
+  },
+  "s-13-E": {
+   "v": "66eb1a8e7cea",
+   "sure": 11.232,
+   "zaman": [
+    [
+     0.121,
+     6.655
+    ],
+    [
+     7.108,
+     10.779
+    ]
+   ]
+  },
+  "q-6": {
+   "v": "7a07f79c1067",
+   "sure": 13.944,
+   "zaman": [
+    [
+     0.121,
+     4.896
+    ],
+    [
+     5.348,
+     6.635
+    ],
+    [
+     7.087,
+     8.334
+    ],
+    [
+     8.786,
+     10.314
+    ],
+    [
+     10.766,
+     11.954
+    ],
+    [
+     12.406,
+     13.492
+    ]
+   ]
+  },
+  "i-6": {
+   "v": "ce41f3cf81da",
+   "sure": 6.264,
+   "zaman": [
+    [
+     0.121,
+     5.809
+    ]
+   ]
+  },
+  "c-6": {
+   "v": "4051573ce7a8",
+   "sure": 12.096,
+   "zaman": [
+    [
+     0.121,
+     2.131
+    ],
+    [
+     2.583,
+     11.644
+    ]
+   ]
+  },
+  "d-6": {
+   "v": "387975d8d531",
+   "sure": 10.488,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     10.036
+    ]
+   ]
+  },
+  "s-6-A": {
+   "v": "2ea840988022",
+   "sure": 13.608,
+   "zaman": [
+    [
+     0.121,
+     8.0
+    ],
+    [
+     8.452,
+     13.156
+    ]
+   ]
+  },
+  "s-6-B": {
+   "v": "d3dfdb3b4a26",
+   "sure": 11.016,
+   "zaman": [
+    [
+     0.121,
+     6.688
+    ],
+    [
+     7.141,
+     10.563
+    ]
+   ]
+  },
+  "s-6-C": {
+   "v": "03fe6e4d2841",
+   "sure": 11.928,
+   "zaman": [
+    [
+     0.12,
+     6.83
+    ],
+    [
+     7.281,
+     11.476
+    ]
+   ]
+  },
+  "s-6-D": {
+   "v": "96c2d759697a",
+   "sure": 12.216,
+   "zaman": [
+    [
+     0.121,
+     7.172
+    ],
+    [
+     7.624,
+     11.764
+    ]
+   ]
+  },
+  "s-6-E": {
+   "v": "b02f186bfba3",
+   "sure": 10.944,
+   "zaman": [
+    [
+     0.121,
+     6.488
+    ],
+    [
+     6.94,
+     10.492
+    ]
+   ]
+  },
+  "q-25": {
+   "v": "1829fbab3dae",
+   "sure": 20.328,
+   "zaman": [
+    [
+     0.12,
+     11.212
+    ],
+    [
+     11.663,
+     12.844
+    ],
+    [
+     13.296,
+     14.78
+    ],
+    [
+     15.232,
+     16.556
+    ],
+    [
+     17.007,
+     18.331
+    ],
+    [
+     18.783,
+     19.877
+    ]
+   ]
+  },
+  "i-25": {
+   "v": "390c230cd362",
+   "sure": 6.864,
+   "zaman": [
+    [
+     0.121,
+     6.41
+    ]
+   ]
+  },
+  "c-25": {
+   "v": "3bdbfb594593",
+   "sure": 13.92,
+   "zaman": [
+    [
+     0.121,
+     2.13
+    ],
+    [
+     2.582,
+     8.113
+    ],
+    [
+     8.565,
+     13.468
+    ]
+   ]
+  },
+  "d-25": {
+   "v": "95aabf0b52e4",
+   "sure": 12.312,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     6.506
+    ],
+    [
+     6.958,
+     11.86
+    ]
+   ]
+  },
+  "s-25-A": {
+   "v": "9e3eeba55141",
+   "sure": 12.696,
+   "zaman": [
+    [
+     0.121,
+     7.632
+    ],
+    [
+     8.084,
+     12.244
+    ]
+   ]
+  },
+  "s-25-B": {
+   "v": "002179687ad4",
+   "sure": 11.976,
+   "zaman": [
+    [
+     0.121,
+     7.274
+    ],
+    [
+     7.726,
+     11.524
+    ]
+   ]
+  },
+  "s-25-C": {
+   "v": "dc86f35f7a4d",
+   "sure": 16.008,
+   "zaman": [
+    [
+     0.12,
+     8.21
+    ],
+    [
+     8.662,
+     15.556
+    ]
+   ]
+  },
+  "s-25-D": {
+   "v": "16eb85c40d48",
+   "sure": 12.336,
+   "zaman": [
+    [
+     0.121,
+     6.22
+    ],
+    [
+     6.672,
+     11.884
+    ]
+   ]
+  },
+  "s-25-E": {
+   "v": "88faecdf4f08",
+   "sure": 10.92,
+   "zaman": [
+    [
+     0.121,
+     5.643
+    ],
+    [
+     6.095,
+     10.468
+    ]
+   ]
+  },
+  "q-1": {
+   "v": "62c5bb1f241e",
+   "sure": 17.136,
+   "zaman": [
+    [
+     0.12,
+     6.577
+    ],
+    [
+     7.029,
+     8.531
+    ],
+    [
+     8.982,
+     10.671
+    ],
+    [
+     11.122,
+     12.72
+    ],
+    [
+     13.172,
+     14.773
+    ],
+    [
+     15.224,
+     16.685
+    ]
+   ]
+  },
+  "i-1": {
+   "v": "5807485b470b",
+   "sure": 6.408,
+   "zaman": [
+    [
+     0.121,
+     5.954
+    ]
+   ]
+  },
+  "c-1": {
+   "v": "825469a63a90",
+   "sure": 13.416,
+   "zaman": [
+    [
+     0.12,
+     2.386
+    ],
+    [
+     2.838,
+     8.338
+    ],
+    [
+     8.789,
+     12.964
+    ]
+   ]
+  },
+  "d-1": {
+   "v": "f7d9b82eb04e",
+   "sure": 11.568,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.483
+    ],
+    [
+     6.935,
+     11.116
+    ]
+   ]
+  },
+  "s-1-A": {
+   "v": "d368ef1ee115",
+   "sure": 17.856,
+   "zaman": [
+    [
+     0.12,
+     8.27
+    ],
+    [
+     8.722,
+     17.404
+    ]
+   ]
+  },
+  "s-1-B": {
+   "v": "3183396dd3b3",
+   "sure": 15.072,
+   "zaman": [
+    [
+     0.12,
+     6.302
+    ],
+    [
+     6.753,
+     14.62
+    ]
+   ]
+  },
+  "s-1-C": {
+   "v": "1835490b3326",
+   "sure": 13.632,
+   "zaman": [
+    [
+     0.12,
+     5.219
+    ],
+    [
+     5.67,
+     13.18
+    ]
+   ]
+  },
+  "s-1-D": {
+   "v": "a0f9ec9f4c35",
+   "sure": 13.416,
+   "zaman": [
+    [
+     0.121,
+     5.649
+    ],
+    [
+     6.101,
+     12.964
+    ]
+   ]
+  },
+  "s-1-E": {
+   "v": "63cba3523d4a",
+   "sure": 12.48,
+   "zaman": [
+    [
+     0.121,
+     4.14
+    ],
+    [
+     4.593,
+     12.028
+    ]
+   ]
+  },
+  "q-9": {
+   "v": "71be13916ff9",
+   "sure": 16.944,
+   "zaman": [
+    [
+     0.12,
+     5.037
+    ],
+    [
+     5.488,
+     7.233
+    ],
+    [
+     7.685,
+     9.56
+    ],
+    [
+     10.012,
+     11.881
+    ],
+    [
+     12.333,
+     14.25
+    ],
+    [
+     14.702,
+     16.492
+    ]
+   ]
+  },
+  "i-9": {
+   "v": "8f0fa5e484cf",
+   "sure": 4.92,
+   "zaman": [
+    [
+     0.122,
+     4.464
+    ]
+   ]
+  },
+  "c-9": {
+   "v": "7cf5a5a44596",
+   "sure": 14.088,
+   "zaman": [
+    [
+     0.121,
+     2.709
+    ],
+    [
+     3.161,
+     9.711
+    ],
+    [
+     10.163,
+     13.636
+    ]
+   ]
+  },
+  "d-9": {
+   "v": "e87cd5fa1e86",
+   "sure": 11.904,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.975,
+     7.526
+    ],
+    [
+     7.978,
+     11.452
+    ]
+   ]
+  },
+  "s-9-A": {
+   "v": "61220421fa5c",
+   "sure": 11.04,
+   "zaman": [
+    [
+     0.121,
+     5.93
+    ],
+    [
+     6.382,
+     10.588
+    ]
+   ]
+  },
+  "s-9-B": {
+   "v": "190abad570f2",
+   "sure": 10.824,
+   "zaman": [
+    [
+     0.121,
+     5.773
+    ],
+    [
+     6.226,
+     10.371
+    ]
+   ]
+  },
+  "s-9-C": {
+   "v": "b88d8a3a207b",
+   "sure": 11.544,
+   "zaman": [
+    [
+     0.121,
+     4.828
+    ],
+    [
+     5.28,
+     11.091
+    ]
+   ]
+  },
+  "s-9-D": {
+   "v": "c2733cb1d7ba",
+   "sure": 13.368,
+   "zaman": [
+    [
+     0.121,
+     6.957
+    ],
+    [
+     7.409,
+     12.916
+    ]
+   ]
+  },
+  "s-9-E": {
+   "v": "f43a6b8f3f35",
+   "sure": 11.088,
+   "zaman": [
+    [
+     0.121,
+     6.009
+    ],
+    [
+     6.462,
+     10.635
+    ]
+   ]
+  },
+  "q-28": {
+   "v": "fce0c922511d",
+   "sure": 14.688,
+   "zaman": [
+    [
+     0.121,
+     5.264
+    ],
+    [
+     5.716,
+     6.922
+    ],
+    [
+     7.374,
+     8.901
+    ],
+    [
+     9.353,
+     10.76
+    ],
+    [
+     11.212,
+     12.578
+    ],
+    [
+     13.03,
+     14.236
+    ]
+   ]
+  },
+  "i-28": {
+   "v": "6781dc78fdb8",
+   "sure": 5.544,
+   "zaman": [
+    [
+     0.121,
+     5.089
+    ]
+   ]
+  },
+  "c-28": {
+   "v": "f10311bc4f5d",
+   "sure": 11.808,
+   "zaman": [
+    [
+     0.121,
+     2.149
+    ],
+    [
+     2.601,
+     7.264
+    ],
+    [
+     7.716,
+     11.356
+    ]
+   ]
+  },
+  "d-28": {
+   "v": "4bfe40650792",
+   "sure": 10.2,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.647
+    ],
+    [
+     6.1,
+     9.747
+    ]
+   ]
+  },
+  "s-28-A": {
+   "v": "5f02c1df6020",
+   "sure": 8.928,
+   "zaman": [
+    [
+     0.121,
+     4.274
+    ],
+    [
+     4.727,
+     8.475
+    ]
+   ]
+  },
+  "s-28-B": {
+   "v": "994998af1f59",
+   "sure": 12.528,
+   "zaman": [
+    [
+     0.121,
+     6.818
+    ],
+    [
+     7.271,
+     12.075
+    ]
+   ]
+  },
+  "s-28-C": {
+   "v": "24fa8ab30044",
+   "sure": 11.184,
+   "zaman": [
+    [
+     0.121,
+     6.474
+    ],
+    [
+     6.927,
+     10.731
+    ]
+   ]
+  },
+  "s-28-D": {
+   "v": "dbe865b2890f",
+   "sure": 11.52,
+   "zaman": [
+    [
+     0.121,
+     4.945
+    ],
+    [
+     5.397,
+     11.068
+    ]
+   ]
+  },
+  "s-28-E": {
+   "v": "df921d9926f5",
+   "sure": 10.944,
+   "zaman": [
+    [
+     0.121,
+     5.916
+    ],
+    [
+     6.369,
+     10.491
+    ]
+   ]
+  },
+  "q-8": {
+   "v": "43f68251d6e3",
+   "sure": 14.616,
+   "zaman": [
+    [
+     0.12,
+     3.958
+    ],
+    [
+     4.41,
+     5.913
+    ],
+    [
+     6.365,
+     8.054
+    ],
+    [
+     8.506,
+     10.105
+    ],
+    [
+     10.557,
+     12.158
+    ],
+    [
+     12.61,
+     14.164
+    ]
+   ]
+  },
+  "i-8": {
+   "v": "1e0b31e4db5e",
+   "sure": 6.432,
+   "zaman": [
+    [
+     0.121,
+     5.979
+    ]
+   ]
+  },
+  "c-8": {
+   "v": "c7e6e4a35478",
+   "sure": 12.6,
+   "zaman": [
+    [
+     0.12,
+     2.49
+    ],
+    [
+     2.941,
+     8.483
+    ],
+    [
+     8.935,
+     12.148
+    ]
+   ]
+  },
+  "d-8": {
+   "v": "cc3f1e5c5009",
+   "sure": 10.656,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     6.53
+    ],
+    [
+     6.982,
+     10.203
+    ]
+   ]
+  },
+  "s-8-A": {
+   "v": "2716266eeeb3",
+   "sure": 12.048,
+   "zaman": [
+    [
+     0.121,
+     5.992
+    ],
+    [
+     6.445,
+     11.595
+    ]
+   ]
+  },
+  "s-8-B": {
+   "v": "55116d193040",
+   "sure": 12.744,
+   "zaman": [
+    [
+     0.121,
+     8.18
+    ],
+    [
+     8.632,
+     12.292
+    ]
+   ]
+  },
+  "s-8-C": {
+   "v": "aabefda44e69",
+   "sure": 11.952,
+   "zaman": [
+    [
+     0.121,
+     4.769
+    ],
+    [
+     5.222,
+     11.499
+    ]
+   ]
+  },
+  "s-8-D": {
+   "v": "17401fcc8afc",
+   "sure": 10.872,
+   "zaman": [
+    [
+     0.121,
+     5.948
+    ],
+    [
+     6.4,
+     10.42
+    ]
+   ]
+  },
+  "s-8-E": {
+   "v": "7d92db69d73e",
+   "sure": 11.16,
+   "zaman": [
+    [
+     0.121,
+     5.065
+    ],
+    [
+     5.518,
+     10.707
+    ]
+   ]
+  },
+  "q-10": {
+   "v": "3e288429258f",
+   "sure": 17.04,
+   "zaman": [
+    [
+     0.12,
+     6.062
+    ],
+    [
+     6.513,
+     8.227
+    ],
+    [
+     8.679,
+     10.526
+    ],
+    [
+     10.977,
+     12.663
+    ],
+    [
+     13.115,
+     14.33
+    ],
+    [
+     14.782,
+     16.588
+    ]
+   ]
+  },
+  "i-10": {
+   "v": "97609eb6397b",
+   "sure": 4.632,
+   "zaman": [
+    [
+     0.122,
+     4.176
+    ]
+   ]
+  },
+  "c-10": {
+   "v": "10edfc64a6ac",
+   "sure": 14.256,
+   "zaman": [
+    [
+     0.121,
+     2.732
+    ],
+    [
+     3.184,
+     10.419
+    ],
+    [
+     10.871,
+     13.804
+    ]
+   ]
+  },
+  "d-10": {
+   "v": "6a685b6dc135",
+   "sure": 12.048,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.975,
+     8.21
+    ],
+    [
+     8.662,
+     11.596
+    ]
+   ]
+  },
+  "s-10-A": {
+   "v": "d911300d130f",
+   "sure": 12.144,
+   "zaman": [
+    [
+     0.121,
+     5.571
+    ],
+    [
+     6.023,
+     11.692
+    ]
+   ]
+  },
+  "s-10-B": {
+   "v": "4e3e051181f1",
+   "sure": 12.144,
+   "zaman": [
+    [
+     0.12,
+     6.427
+    ],
+    [
+     6.878,
+     11.692
+    ]
+   ]
+  },
+  "s-10-C": {
+   "v": "2882359d5114",
+   "sure": 11.112,
+   "zaman": [
+    [
+     0.121,
+     5.024
+    ],
+    [
+     5.476,
+     10.66
+    ]
+   ]
+  },
+  "s-10-D": {
+   "v": "62946f25ab28",
+   "sure": 12.816,
+   "zaman": [
+    [
+     0.121,
+     5.383
+    ],
+    [
+     5.834,
+     12.364
+    ]
+   ]
+  },
+  "s-10-E": {
+   "v": "6938a5e78eb4",
+   "sure": 16.8,
+   "zaman": [
+    [
+     0.12,
+     7.512
+    ],
+    [
+     7.963,
+     16.349
+    ]
+   ]
+  },
+  "q-4": {
+   "v": "3cd48403ddeb",
+   "sure": 14.064,
+   "zaman": [
+    [
+     0.121,
+     4.287
+    ],
+    [
+     4.739,
+     6.137
+    ],
+    [
+     6.589,
+     7.941
+    ],
+    [
+     8.393,
+     9.896
+    ],
+    [
+     10.348,
+     11.794
+    ],
+    [
+     12.246,
+     13.612
+    ]
+   ]
+  },
+  "i-4": {
+   "v": "82164cc5b72b",
+   "sure": 6.504,
+   "zaman": [
+    [
+     0.121,
+     6.05
+    ]
+   ]
+  },
+  "c-4": {
+   "v": "775e8de94c11",
+   "sure": 13.584,
+   "zaman": [
+    [
+     0.121,
+     2.25
+    ],
+    [
+     2.702,
+     8.622
+    ],
+    [
+     9.074,
+     13.132
+    ]
+   ]
+  },
+  "d-4": {
+   "v": "287f08d72eeb",
+   "sure": 11.856,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     6.894
+    ],
+    [
+     7.346,
+     11.404
+    ]
+   ]
+  },
+  "s-4-A": {
+   "v": "2a07e138b4e9",
+   "sure": 12.456,
+   "zaman": [
+    [
+     0.121,
+     5.061
+    ],
+    [
+     5.513,
+     12.004
+    ]
+   ]
+  },
+  "s-4-B": {
+   "v": "be843facb523",
+   "sure": 11.328,
+   "zaman": [
+    [
+     0.121,
+     6.456
+    ],
+    [
+     6.909,
+     10.875
+    ]
+   ]
+  },
+  "s-4-C": {
+   "v": "4b07f524e627",
+   "sure": 10.632,
+   "zaman": [
+    [
+     0.121,
+     4.663
+    ],
+    [
+     5.115,
+     10.18
+    ]
+   ]
+  },
+  "s-4-D": {
+   "v": "7818eb81d6d6",
+   "sure": 13.272,
+   "zaman": [
+    [
+     0.12,
+     8.212
+    ],
+    [
+     8.664,
+     12.82
+    ]
+   ]
+  },
+  "s-4-E": {
+   "v": "d35436ed6290",
+   "sure": 10.416,
+   "zaman": [
+    [
+     0.121,
+     4.977
+    ],
+    [
+     5.43,
+     9.963
+    ]
+   ]
+  },
+  "q-5": {
+   "v": "644e786e3f2c",
+   "sure": 13.656,
+   "zaman": [
+    [
+     0.12,
+     5.056
+    ],
+    [
+     5.508,
+     6.61
+    ],
+    [
+     7.061,
+     8.236
+    ],
+    [
+     8.688,
+     9.862
+    ],
+    [
+     10.314,
+     11.698
+    ],
+    [
+     12.15,
+     13.204
+    ]
+   ]
+  },
+  "i-5": {
+   "v": "86bce0cdf999",
+   "sure": 4.872,
+   "zaman": [
+    [
+     0.122,
+     4.416
+    ]
+   ]
+  },
+  "c-5": {
+   "v": "a39f63410578",
+   "sure": 11.16,
+   "zaman": [
+    [
+     0.121,
+     1.926
+    ],
+    [
+     2.379,
+     10.707
+    ]
+   ]
+  },
+  "d-5": {
+   "v": "2925fd4d3750",
+   "sure": 9.768,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.977,
+     9.315
+    ]
+   ]
+  },
+  "s-5-A": {
+   "v": "02d852139b65",
+   "sure": 11.592,
+   "zaman": [
+    [
+     0.121,
+     5.671
+    ],
+    [
+     6.123,
+     11.14
+    ]
+   ]
+  },
+  "s-5-B": {
+   "v": "154782cfbcc3",
+   "sure": 11.28,
+   "zaman": [
+    [
+     0.121,
+     6.211
+    ],
+    [
+     6.663,
+     10.828
+    ]
+   ]
+  },
+  "s-5-C": {
+   "v": "79c80b8a0ab4",
+   "sure": 10.512,
+   "zaman": [
+    [
+     0.121,
+     5.065
+    ],
+    [
+     5.518,
+     10.059
+    ]
+   ]
+  },
+  "s-5-D": {
+   "v": "4c431edd4789",
+   "sure": 10.584,
+   "zaman": [
+    [
+     0.121,
+     3.923
+    ],
+    [
+     4.376,
+     10.131
+    ]
+   ]
+  },
+  "s-5-E": {
+   "v": "21df9d098630",
+   "sure": 12.888,
+   "zaman": [
+    [
+     0.121,
+     5.349
+    ],
+    [
+     5.802,
+     12.436
+    ]
+   ]
+  },
+  "q-27": {
+   "v": "7c0c37ccc077",
+   "sure": 25.608,
+   "zaman": [
+    [
+     0.12,
+     15.902
+    ],
+    [
+     16.353,
+     17.896
+    ],
+    [
+     18.347,
+     19.569
+    ],
+    [
+     20.021,
+     21.246
+    ],
+    [
+     21.697,
+     22.82
+    ],
+    [
+     23.272,
+     25.157
+    ]
+   ]
+  },
+  "i-27": {
+   "v": "ad1317f7ae19",
+   "sure": 6.168,
+   "zaman": [
+    [
+     0.121,
+     5.714
+    ]
+   ]
+  },
+  "c-27": {
+   "v": "fad2bf5bea2b",
+   "sure": 13.296,
+   "zaman": [
+    [
+     0.121,
+     2.036
+    ],
+    [
+     2.488,
+     8.595
+    ],
+    [
+     9.047,
+     12.844
+    ]
+   ]
+  },
+  "d-27": {
+   "v": "eb04a27ec41e",
+   "sure": 11.784,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     7.082
+    ],
+    [
+     7.534,
+     11.332
+    ]
+   ]
+  },
+  "s-27-A": {
+   "v": "f9896f4f079b",
+   "sure": 13.512,
+   "zaman": [
+    [
+     0.12,
+     4.778
+    ],
+    [
+     5.23,
+     13.06
+    ]
+   ]
+  },
+  "s-27-B": {
+   "v": "78281c8eb0a2",
+   "sure": 14.304,
+   "zaman": [
+    [
+     0.12,
+     8.326
+    ],
+    [
+     8.777,
+     13.852
+    ]
+   ]
+  },
+  "s-27-C": {
+   "v": "dbb960e1b4c6",
+   "sure": 14.04,
+   "zaman": [
+    [
+     0.12,
+     8.321
+    ],
+    [
+     8.773,
+     13.588
+    ]
+   ]
+  },
+  "s-27-D": {
+   "v": "2a17f05f8c39",
+   "sure": 11.472,
+   "zaman": [
+    [
+     0.121,
+     7.093
+    ],
+    [
+     7.545,
+     11.02
+    ]
+   ]
+  },
+  "s-27-E": {
+   "v": "430241578eee",
+   "sure": 11.304,
+   "zaman": [
+    [
+     0.121,
+     7.726
+    ],
+    [
+     8.178,
+     10.851
+    ]
+   ]
+  },
+  "q-3": {
+   "v": "cac7555006bb",
+   "sure": 15.648,
+   "zaman": [
+    [
+     0.12,
+     3.571
+    ],
+    [
+     4.023,
+     5.427
+    ],
+    [
+     5.878,
+     8.227
+    ],
+    [
+     8.678,
+     10.684
+    ],
+    [
+     11.135,
+     12.781
+    ],
+    [
+     13.232,
+     15.197
+    ]
+   ]
+  },
+  "i-3": {
+   "v": "ec45ce3f13d0",
+   "sure": 6.336,
+   "zaman": [
+    [
+     0.121,
+     5.882
+    ]
+   ]
+  },
+  "c-3": {
+   "v": "55edfdbdeff5",
+   "sure": 13.416,
+   "zaman": [
+    [
+     0.121,
+     2.774
+    ],
+    [
+     3.226,
+     9.336
+    ],
+    [
+     9.788,
+     12.964
+    ]
+   ]
+  },
+  "d-3": {
+   "v": "31e863e90d77",
+   "sure": 11.16,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     7.081
+    ],
+    [
+     7.533,
+     10.708
+    ]
+   ]
+  },
+  "s-3-A": {
+   "v": "f28bada558ca",
+   "sure": 11.352,
+   "zaman": [
+    [
+     0.121,
+     6.085
+    ],
+    [
+     6.537,
+     10.9
+    ]
+   ]
+  },
+  "s-3-B": {
+   "v": "b8df0bb8ab49",
+   "sure": 11.328,
+   "zaman": [
+    [
+     0.121,
+     5.755
+    ],
+    [
+     6.207,
+     10.875
+    ]
+   ]
+  },
+  "s-3-C": {
+   "v": "225806aaa2db",
+   "sure": 13.416,
+   "zaman": [
+    [
+     0.12,
+     5.781
+    ],
+    [
+     6.233,
+     12.964
+    ]
+   ]
+  },
+  "s-3-D": {
+   "v": "ae5f1ce8ba30",
+   "sure": 11.832,
+   "zaman": [
+    [
+     0.121,
+     5.665
+    ],
+    [
+     6.117,
+     11.38
+    ]
+   ]
+  },
+  "s-3-E": {
+   "v": "21f122e6f4d6",
+   "sure": 11.352,
+   "zaman": [
+    [
+     0.121,
+     5.835
+    ],
+    [
+     6.288,
+     10.899
+    ]
+   ]
+  },
+  "q-2": {
+   "v": "bbc285249501",
+   "sure": 17.808,
+   "zaman": [
+    [
+     0.12,
+     7.3
+    ],
+    [
+     7.752,
+     9.396
+    ],
+    [
+     9.847,
+     11.532
+    ],
+    [
+     11.983,
+     13.748
+    ],
+    [
+     14.199,
+     15.662
+    ],
+    [
+     16.113,
+     17.357
+    ]
+   ]
+  },
+  "i-2": {
+   "v": "c07339357886",
+   "sure": 5.52,
+   "zaman": [
+    [
+     0.122,
+     5.064
+    ]
+   ]
+  },
+  "c-2": {
+   "v": "d840427d1900",
+   "sure": 11.736,
+   "zaman": [
+    [
+     0.121,
+     2.515
+    ],
+    [
+     2.967,
+     11.284
+    ]
+   ]
+  },
+  "d-2": {
+   "v": "2c4a747d27e5",
+   "sure": 9.768,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.977,
+     9.315
+    ]
+   ]
+  },
+  "s-2-A": {
+   "v": "eb0c89f1f2d4",
+   "sure": 13.392,
+   "zaman": [
+    [
+     0.12,
+     6.746
+    ],
+    [
+     7.198,
+     12.94
+    ]
+   ]
+  },
+  "s-2-B": {
+   "v": "4a14b5d5d1b0",
+   "sure": 14.352,
+   "zaman": [
+    [
+     0.121,
+     8.221
+    ],
+    [
+     8.674,
+     13.9
+    ]
+   ]
+  },
+  "s-2-C": {
+   "v": "be710c3872dc",
+   "sure": 12.816,
+   "zaman": [
+    [
+     0.121,
+     5.925
+    ],
+    [
+     6.377,
+     12.364
+    ]
+   ]
+  },
+  "s-2-D": {
+   "v": "1b6970964e11",
+   "sure": 12.096,
+   "zaman": [
+    [
+     0.121,
+     5.923
+    ],
+    [
+     6.375,
+     11.644
+    ]
+   ]
+  },
+  "s-2-E": {
+   "v": "283feb88f1a1",
+   "sure": 11.832,
+   "zaman": [
+    [
+     0.121,
+     5.632
+    ],
+    [
+     6.085,
+     11.379
+    ]
+   ]
+  },
+  "q-15": {
+   "v": "c159bcc040c8",
+   "sure": 14.952,
+   "zaman": [
+    [
+     0.12,
+     6.397
+    ],
+    [
+     6.849,
+     8.174
+    ],
+    [
+     8.626,
+     9.71
+    ],
+    [
+     10.162,
+     11.244
+    ],
+    [
+     11.696,
+     13.061
+    ],
+    [
+     13.513,
+     14.5
+    ]
+   ]
+  },
+  "i-15": {
+   "v": "0f046a9d41ed",
+   "sure": 5.52,
+   "zaman": [
+    [
+     0.121,
+     5.066
+    ]
+   ]
+  },
+  "c-15": {
+   "v": "5fc8af006291",
+   "sure": 12.12,
+   "zaman": [
+    [
+     0.121,
+     1.847
+    ],
+    [
+     2.299,
+     7.96
+    ],
+    [
+     8.412,
+     11.668
+    ]
+   ]
+  },
+  "d-15": {
+   "v": "5f07ea5d83cc",
+   "sure": 10.8,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.638
+    ],
+    [
+     7.091,
+     10.348
+    ]
+   ]
+  },
+  "s-15-A": {
+   "v": "7695a7521e02",
+   "sure": 12.6,
+   "zaman": [
+    [
+     0.121,
+     8.159
+    ],
+    [
+     8.611,
+     12.148
+    ]
+   ]
+  },
+  "s-15-B": {
+   "v": "8da54297ce79",
+   "sure": 11.76,
+   "zaman": [
+    [
+     0.121,
+     6.655
+    ],
+    [
+     7.108,
+     11.308
+    ]
+   ]
+  },
+  "s-15-C": {
+   "v": "095b7f2e6375",
+   "sure": 11.64,
+   "zaman": [
+    [
+     0.121,
+     6.973
+    ],
+    [
+     7.426,
+     11.188
+    ]
+   ]
+  },
+  "s-15-D": {
+   "v": "f4612b3a691a",
+   "sure": 11.856,
+   "zaman": [
+    [
+     0.121,
+     6.35
+    ],
+    [
+     6.803,
+     11.404
+    ]
+   ]
+  },
+  "s-15-E": {
+   "v": "a8f4ef583586",
+   "sure": 14.808,
+   "zaman": [
+    [
+     0.12,
+     7.805
+    ],
+    [
+     8.256,
+     14.357
+    ]
+   ]
+  },
+  "q-16": {
+   "v": "51782085b310",
+   "sure": 12.048,
+   "zaman": [
+    [
+     0.121,
+     3.383
+    ],
+    [
+     3.836,
+     4.844
+    ],
+    [
+     5.296,
+     6.663
+    ],
+    [
+     7.116,
+     8.483
+    ],
+    [
+     8.935,
+     10.021
+    ],
+    [
+     10.473,
+     11.596
+    ]
+   ]
+  },
+  "i-16": {
+   "v": "d51fa77da649",
+   "sure": 5.664,
+   "zaman": [
+    [
+     0.121,
+     5.209
+    ]
+   ]
+  },
+  "c-16": {
+   "v": "c7f981415ba2",
+   "sure": 11.856,
+   "zaman": [
+    [
+     0.121,
+     1.846
+    ],
+    [
+     2.299,
+     7.805
+    ],
+    [
+     8.257,
+     11.404
+    ]
+   ]
+  },
+  "d-16": {
+   "v": "258abab8bf44",
+   "sure": 10.536,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.483
+    ],
+    [
+     6.936,
+     10.084
+    ]
+   ]
+  },
+  "s-16-A": {
+   "v": "922873ae81c6",
+   "sure": 14.28,
+   "zaman": [
+    [
+     0.121,
+     6.306
+    ],
+    [
+     6.758,
+     13.828
+    ]
+   ]
+  },
+  "s-16-B": {
+   "v": "eba2c79b1d69",
+   "sure": 11.784,
+   "zaman": [
+    [
+     0.121,
+     7.837
+    ],
+    [
+     8.289,
+     11.332
+    ]
+   ]
+  },
+  "s-16-C": {
+   "v": "4a5feb1819eb",
+   "sure": 10.968,
+   "zaman": [
+    [
+     0.121,
+     6.279
+    ],
+    [
+     6.732,
+     10.515
+    ]
+   ]
+  },
+  "s-16-D": {
+   "v": "6a7a6639ea3c",
+   "sure": 11.064,
+   "zaman": [
+    [
+     0.121,
+     5.709
+    ],
+    [
+     6.162,
+     10.612
+    ]
+   ]
+  },
+  "s-16-E": {
+   "v": "9d329b603625",
+   "sure": 12.192,
+   "zaman": [
+    [
+     0.121,
+     7.03
+    ],
+    [
+     7.482,
+     11.74
+    ]
+   ]
+  },
+  "q-22": {
+   "v": "e5e4c37bb3bb",
+   "sure": 14.136,
+   "zaman": [
+    [
+     0.12,
+     3.253
+    ],
+    [
+     3.704,
+     5.208
+    ],
+    [
+     5.66,
+     7.344
+    ],
+    [
+     7.796,
+     9.624
+    ],
+    [
+     10.076,
+     11.678
+    ],
+    [
+     12.13,
+     13.684
+    ]
+   ]
+  },
+  "i-22": {
+   "v": "c79550050f5a",
+   "sure": 5.232,
+   "zaman": [
+    [
+     0.121,
+     4.777
+    ]
+   ]
+  },
+  "c-22": {
+   "v": "797e93c0951f",
+   "sure": 14.352,
+   "zaman": [
+    [
+     0.12,
+     2.529
+    ],
+    [
+     2.98,
+     9.317
+    ],
+    [
+     9.769,
+     13.9
+    ]
+   ]
+  },
+  "d-22": {
+   "v": "ec261ce637c2",
+   "sure": 12.36,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     7.319
+    ],
+    [
+     7.771,
+     11.908
+    ]
+   ]
+  },
+  "s-22-A": {
+   "v": "d7ea8609c8d9",
+   "sure": 11.304,
+   "zaman": [
+    [
+     0.121,
+     6.657
+    ],
+    [
+     7.11,
+     10.851
+    ]
+   ]
+  },
+  "s-22-B": {
+   "v": "7db82515ef20",
+   "sure": 14.52,
+   "zaman": [
+    [
+     0.12,
+     6.971
+    ],
+    [
+     7.423,
+     14.068
+    ]
+   ]
+  },
+  "s-22-C": {
+   "v": "da90694c4b43",
+   "sure": 9.408,
+   "zaman": [
+    [
+     0.121,
+     3.927
+    ],
+    [
+     4.38,
+     8.955
+    ]
+   ]
+  },
+  "s-22-D": {
+   "v": "791e71a6367f",
+   "sure": 10.152,
+   "zaman": [
+    [
+     0.121,
+     3.907
+    ],
+    [
+     4.36,
+     9.699
+    ]
+   ]
+  },
+  "s-22-E": {
+   "v": "93c65c62fc7f",
+   "sure": 8.856,
+   "zaman": [
+    [
+     0.121,
+     3.153
+    ],
+    [
+     3.606,
+     8.404
+    ]
+   ]
+  },
+  "q-19": {
+   "v": "93d7854d0afd",
+   "sure": 15.456,
+   "zaman": [
+    [
+     0.121,
+     4.533
+    ],
+    [
+     4.985,
+     6.634
+    ],
+    [
+     7.086,
+     8.893
+    ],
+    [
+     9.345,
+     10.987
+    ],
+    [
+     11.439,
+     12.997
+    ],
+    [
+     13.449,
+     15.004
+    ]
+   ]
+  },
+  "i-19": {
+   "v": "c604a1c6a965",
+   "sure": 9.408,
+   "zaman": [
+    [
+     0.121,
+     8.955
+    ]
+   ]
+  },
+  "c-19": {
+   "v": "4b9caf700446",
+   "sure": 14.352,
+   "zaman": [
+    [
+     0.12,
+     2.386
+    ],
+    [
+     2.838,
+     8.551
+    ],
+    [
+     9.003,
+     13.9
+    ]
+   ]
+  },
+  "d-19": {
+   "v": "33150dbf4d09",
+   "sure": 12.504,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.975,
+     6.695
+    ],
+    [
+     7.148,
+     12.052
+    ]
+   ]
+  },
+  "s-19-A": {
+   "v": "7816191de6f6",
+   "sure": 13.344,
+   "zaman": [
+    [
+     0.121,
+     5.748
+    ],
+    [
+     6.2,
+     12.892
+    ]
+   ]
+  },
+  "s-19-B": {
+   "v": "9325dc4b800d",
+   "sure": 11.736,
+   "zaman": [
+    [
+     0.121,
+     6.37
+    ],
+    [
+     6.822,
+     11.284
+    ]
+   ]
+  },
+  "s-19-C": {
+   "v": "2f6daeb72d55",
+   "sure": 11.088,
+   "zaman": [
+    [
+     0.121,
+     3.904
+    ],
+    [
+     4.356,
+     10.635
+    ]
+   ]
+  },
+  "s-19-D": {
+   "v": "cbca083fdd2a",
+   "sure": 14.736,
+   "zaman": [
+    [
+     0.121,
+     7.81
+    ],
+    [
+     8.262,
+     14.284
+    ]
+   ]
+  },
+  "s-19-E": {
+   "v": "3ae4f1f3cbc4",
+   "sure": 10.752,
+   "zaman": [
+    [
+     0.121,
+     3.153
+    ],
+    [
+     3.605,
+     10.3
+    ]
+   ]
+  },
+  "q-20": {
+   "v": "0c6548dacf6e",
+   "sure": 14.616,
+   "zaman": [
+    [
+     0.12,
+     3.733
+    ],
+    [
+     4.185,
+     5.688
+    ],
+    [
+     6.139,
+     7.823
+    ],
+    [
+     8.275,
+     9.915
+    ],
+    [
+     10.367,
+     11.968
+    ],
+    [
+     12.42,
+     14.164
+    ]
+   ]
+  },
+  "i-20": {
+   "v": "0a8759c8d06a",
+   "sure": 4.752,
+   "zaman": [
+    [
+     0.121,
+     4.297
+    ]
+   ]
+  },
+  "c-20": {
+   "v": "7512687d84e3",
+   "sure": 15.936,
+   "zaman": [
+    [
+     0.12,
+     2.611
+    ],
+    [
+     3.063,
+     9.851
+    ],
+    [
+     10.303,
+     15.484
+    ]
+   ]
+  },
+  "d-20": {
+   "v": "03e3ab44d749",
+   "sure": 13.848,
+   "zaman": [
+    [
+     0.121,
+     0.522
+    ],
+    [
+     0.974,
+     7.763
+    ],
+    [
+     8.214,
+     13.396
+    ]
+   ]
+  },
+  "s-20-A": {
+   "v": "e0167d991581",
+   "sure": 11.28,
+   "zaman": [
+    [
+     0.121,
+     5.672
+    ],
+    [
+     6.125,
+     10.827
+    ]
+   ]
+  },
+  "s-20-B": {
+   "v": "2d4e2cce3808",
+   "sure": 11.592,
+   "zaman": [
+    [
+     0.121,
+     5.754
+    ],
+    [
+     6.206,
+     11.139
+    ]
+   ]
+  },
+  "s-20-C": {
+   "v": "24a320b36bb7",
+   "sure": 9.072,
+   "zaman": [
+    [
+     0.121,
+     3.547
+    ],
+    [
+     4.001,
+     8.619
+    ]
+   ]
+  },
+  "s-20-D": {
+   "v": "c6a0d338a334",
+   "sure": 9.192,
+   "zaman": [
+    [
+     0.121,
+     3.098
+    ],
+    [
+     3.55,
+     8.739
+    ]
+   ]
+  },
+  "s-20-E": {
+   "v": "57e1c44d0f63",
+   "sure": 15.336,
+   "zaman": [
+    [
+     0.12,
+     7.468
+    ],
+    [
+     7.919,
+     14.884
+    ]
+   ]
+  },
+  "q-24": {
+   "v": "aa748f0b9737",
+   "sure": 22.584,
+   "zaman": [
+    [
+     0.12,
+     9.025
+    ],
+    [
+     9.477,
+     11.102
+    ],
+    [
+     11.553,
+     13.117
+    ],
+    [
+     13.569,
+     15.695
+    ],
+    [
+     16.146,
+     19.876
+    ],
+    [
+     20.328,
+     22.133
+    ]
+   ]
+  },
+  "i-24": {
+   "v": "041120182e93",
+   "sure": 5.568,
+   "zaman": [
+    [
+     0.121,
+     5.112
+    ]
+   ]
+  },
+  "c-24": {
+   "v": "2e350c6d536d",
+   "sure": 14.52,
+   "zaman": [
+    [
+     0.12,
+     4.607
+    ],
+    [
+     5.059,
+     9.68
+    ],
+    [
+     10.132,
+     14.068
+    ]
+   ]
+  },
+  "d-24": {
+   "v": "8ea60e81abae",
+   "sure": 10.464,
+   "zaman": [
+    [
+     0.121,
+     0.524
+    ],
+    [
+     0.977,
+     5.611
+    ],
+    [
+     6.064,
+     10.011
+    ]
+   ]
+  },
+  "s-24-A": {
+   "v": "982c96464a90",
+   "sure": 13.056,
+   "zaman": [
+    [
+     0.12,
+     7.778
+    ],
+    [
+     8.23,
+     12.604
+    ]
+   ]
+  },
+  "s-24-B": {
+   "v": "aee9484e392f",
+   "sure": 11.016,
+   "zaman": [
+    [
+     0.121,
+     6.92
+    ],
+    [
+     7.372,
+     10.564
+    ]
+   ]
+  },
+  "s-24-C": {
+   "v": "85aa92f96ccd",
+   "sure": 10.68,
+   "zaman": [
+    [
+     0.121,
+     4.686
+    ],
+    [
+     5.139,
+     10.227
+    ]
+   ]
+  },
+  "s-24-D": {
+   "v": "8e0955c6fa86",
+   "sure": 13.536,
+   "zaman": [
+    [
+     0.121,
+     7.49
+    ],
+    [
+     7.942,
+     13.084
+    ]
+   ]
+  },
+  "s-24-E": {
+   "v": "2bbb8e3f5801",
+   "sure": 11.28,
+   "zaman": [
+    [
+     0.121,
+     5.634
+    ],
+    [
+     6.087,
+     10.827
+    ]
+   ]
+  },
+  "q-7": {
+   "v": "391b263fce94",
+   "sure": 17.256,
+   "zaman": [
+    [
+     0.12,
+     5.135
+    ],
+    [
+     5.586,
+     7.632
+    ],
+    [
+     8.083,
+     10.742
+    ],
+    [
+     11.193,
+     12.999
+    ],
+    [
+     13.45,
+     15.173
+    ],
+    [
+     15.624,
+     16.805
+    ]
+   ]
+  },
+  "i-7": {
+   "v": "0c7a996c1ed8",
+   "sure": 4.92,
+   "zaman": [
+    [
+     0.122,
+     4.464
+    ]
+   ]
+  },
+  "c-7": {
+   "v": "7297fe70dab2",
+   "sure": 13.32,
+   "zaman": [
+    [
+     0.121,
+     3.4
+    ],
+    [
+     3.852,
+     8.479
+    ],
+    [
+     8.931,
+     12.868
+    ]
+   ]
+  },
+  "d-7": {
+   "v": "480bbe01cbd9",
+   "sure": 10.464,
+   "zaman": [
+    [
+     0.121,
+     0.523
+    ],
+    [
+     0.976,
+     5.613
+    ],
+    [
+     6.066,
+     10.011
+    ]
+   ]
+  },
+  "s-7-A": {
+   "v": "d9040a67df04",
+   "sure": 11.808,
+   "zaman": [
+    [
+     0.121,
+     6.445
+    ],
+    [
+     6.897,
+     11.356
+    ]
+   ]
+  },
+  "s-7-B": {
+   "v": "5d16ae323800",
+   "sure": 13.872,
+   "zaman": [
+    [
+     0.121,
+     8.188
+    ],
+    [
+     8.64,
+     13.42
+    ]
+   ]
+  },
+  "s-7-C": {
+   "v": "71ec0e8ca552",
+   "sure": 11.976,
+   "zaman": [
+    [
+     0.121,
+     7.132
+    ],
+    [
+     7.584,
+     11.524
+    ]
+   ]
+  },
+  "s-7-D": {
+   "v": "468eac2270ce",
+   "sure": 10.632,
+   "zaman": [
+    [
+     0.121,
+     6.591
+    ],
+    [
+     7.044,
+     10.18
+    ]
+   ]
+  },
+  "s-7-E": {
+   "v": "09436f827b21",
+   "sure": 13.344,
+   "zaman": [
+    [
+     0.12,
+     6.94
+    ],
+    [
+     7.391,
+     12.892
+    ]
+   ]
+  }
+ },
+ "_uretici": {
+  "uretken": "DeepSeek V4.1 Flash Eco",
+  "model": "opendesign/deepseek-v4.1-flash-eco"
+ }
+}
