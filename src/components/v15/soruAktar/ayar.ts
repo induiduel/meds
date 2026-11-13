@@ -28,7 +28,10 @@ export type RenkOge =
   | 'numara' | 'kok' | 'sik' | 'sikHarf' | 'dogru' | 'dogruZemin'
   | 'cozumZemin' | 'cozumKenar' | 'cozumMetin' | 'cevapHarfi' | 'kaynak'
   | 'ayirici' | 'sutunCizgi' | 'hucreKenar' | 'yazmaCizgi' | 'anahtarKenar' | 'filigran' | 'kapakBaslik'
-  | 'baslikZemin' | 'kutuKenar' | 'kutuZemin' | 'desen' | 'notCizgi' | 'kesim';
+  | 'baslikZemin' | 'kutuKenar' | 'kutuZemin' | 'desen' | 'notCizgi' | 'kesim'
+  /* 2026-11-13: ayrı ayrı değiştirilebilen eksik ögeler (başlık alt yazısı, kapak parçaları, etiket, anahtar zemini, optik) */
+  | 'baslikAlt' | 'grupSayi' | 'kapakUst' | 'kapakSayi' | 'kapakAlt' | 'kapakNot' | 'kapakZemin'
+  | 'etiket' | 'anahtarZemin' | 'optik';
 export type Renkler = Record<RenkOge, string>;
 export type TemaId = 'klasik' | 'lacivert' | 'bordo' | 'orman' | 'mor' | 'turuncu' | 'okyanus' | 'sepya' | 'gri' | 'pembe' | 'gece' | 'kahve' | 'zeytin' | 'mavi-gri' | 'ozel';
 export type CizgiStil = 'solid' | 'dashed' | 'dotted' | 'double';
@@ -326,13 +329,23 @@ export const RENK_OGELERI: { id: RenkOge; ad: string; grup: 'sayfa' | 'metin' | 
   { id: 'sayfaZemin', ad: 'Sayfa zemini', grup: 'sayfa' },
   { id: 'baslik', ad: 'Sayfa başlığı', grup: 'sayfa' },
   { id: 'baslikCizgi', ad: 'Başlık çizgisi', grup: 'sayfa' },
+  { id: 'baslikAlt', ad: 'Başlık alt yazısı', grup: 'sayfa' },
   { id: 'altBilgi', ad: 'Alt bilgi', grup: 'sayfa' },
   { id: 'bant', ad: 'Bölüm bandı', grup: 'sayfa' },
   { id: 'grup', ad: 'Grup başlıkları', grup: 'sayfa' },
+  { id: 'grupSayi', ad: 'Grup soru sayısı', grup: 'sayfa' },
+  { id: 'etiket', ad: 'Etiket rengi', grup: 'sayfa' },
   { id: 'kapakBaslik', ad: 'Kapak başlığı', grup: 'sayfa' },
+  { id: 'kapakAlt', ad: 'Kapak alt başlığı', grup: 'sayfa' },
+  { id: 'kapakUst', ad: 'Kapak üst yazısı', grup: 'sayfa' },
+  { id: 'kapakSayi', ad: 'Kapak sayıları', grup: 'sayfa' },
+  { id: 'kapakNot', ad: 'Kapak notu', grup: 'sayfa' },
+  { id: 'kapakZemin', ad: 'Kapak zemini / yan bandı', grup: 'sayfa' },
   { id: 'baslikZemin', ad: 'Başlık bandı zemini', grup: 'sayfa' },
   { id: 'filigran', ad: 'Filigran', grup: 'sayfa' },
   { id: 'desen', ad: 'Zemin deseni', grup: 'sayfa' },
+  { id: 'anahtarZemin', ad: 'Cevap anahtarı zemini', grup: 'sayfa' },
+  { id: 'optik', ad: 'Optik form (daire ve çizgi)', grup: 'sayfa' },
   { id: 'numara', ad: 'Soru numarası', grup: 'metin' },
   { id: 'kok', ad: 'Soru kökü', grup: 'metin' },
   { id: 'sik', ad: 'Şık metni', grup: 'metin' },
@@ -404,6 +417,12 @@ export function ogeRenk(a: Ayar, k: RenkOge): string {
     case 'kutuZemin': return '';
     case 'desen': return '#d1d5db';
     case 'kesim': return '#9ca3af';
+    /* 2026-11-13: yeni ayrı ögeler; boş bırakılırsa eski davranışla aynı yere bağlanır */
+    case 'baslikAlt': case 'grupSayi': case 'kapakAlt': case 'optik': return '#6b7280';
+    case 'kapakUst': case 'kapakSayi': case 'kapakZemin': return a.vurgu;
+    case 'kapakNot': return a.metinRenk;
+    case 'etiket': return '#64748b';
+    case 'anahtarZemin': return '';
     default: return a.vurgu;
   }
 }

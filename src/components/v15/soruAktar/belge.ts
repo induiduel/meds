@@ -209,7 +209,7 @@ function etiketRengi(h: HS, alan: Alan, a: Ayar): string {
     case 'alan': return alan === 'ders' && a.dersRenkleri ? h.dersRenk : ALAN_RENK[alan];
     case 'ders': return h.dersRenk;
     case 'ozel': return a.etiketMetin;
-    default: return '#64748b';
+    default: return ogeRenk(a, 'etiket');
   }
 }
 export function etiketler(h: HS, a: Ayar): Etiket[] {
@@ -354,7 +354,8 @@ export function belgeCss(a: Ayar, onizleme = false): string {
         : a.baslikStil === 'sade' ? `border-bottom:0;`
           : '';
   const baslikRenk = a.baslikStil === 'bant' ? zemin : R('baslik');
-  const baslikAlt = a.baslikStil === 'bant' ? `color-mix(in srgb,${zemin} 82%,${R('baslikZemin')})` : R('altBilgi');
+  const baslikAlt = a.baslikStil === 'bant' ? `color-mix(in srgb,${zemin} 82%,${R('baslikZemin')})` : R('baslikAlt');
+  const kapakZemin = R('kapakZemin') || vurgu;
   return `
 @page{size:${yp.w}mm ${yp.h}mm;margin:0}
 *{box-sizing:border-box}
@@ -413,7 +414,7 @@ ${a.asiliGirinti ? `.sb .kok{display:flex;gap:.35em;align-items:baseline}.sb .ko
 .et{display:flex;flex-wrap:wrap;gap:1.2mm;margin:0 0 calc(${a.paragraf}pt * var(--k,1));align-items:flex-start}
 .et.alt{margin:calc(${a.paragraf}pt * var(--k,1)) 0 0}
 .et.d-sag{justify-content:flex-end}.et.d-orta{justify-content:center}.et.d-dikey{flex-direction:column;gap:.6mm}
-.et span{--ek:#64748b;font-size:${a.etiketBoyut}em;line-height:1.3;padding:.15em .55em;border-radius:99px;background:color-mix(in srgb,var(--ek) 13%,${zemin});color:color-mix(in srgb,var(--ek) 78%,${a.metinRenk});font-weight:${a.etiketKalin ? 600 : 400};letter-spacing:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.et span{--ek:${R('etiket')};font-size:${a.etiketBoyut}em;line-height:1.3;padding:.15em .55em;border-radius:99px;background:color-mix(in srgb,var(--ek) 13%,${zemin});color:color-mix(in srgb,var(--ek) 78%,${a.metinRenk});font-weight:${a.etiketKalin ? 600 : 400};letter-spacing:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .et.s-kutu span{border-radius:.3em}.et.s-kose span{border-radius:0}
 .et.s-cizgi span{background:none;border:.5pt solid color-mix(in srgb,var(--ek) 55%,${zemin});color:color-mix(in srgb,var(--ek) 85%,${a.metinRenk})}
 .et.s-duz{gap:.2em}.et.s-duz span{background:none;padding:0;color:color-mix(in srgb,var(--ek) 85%,${a.metinRenk})}
@@ -444,7 +445,7 @@ ${a.isaretStil === 'tik' ? `.sk li.dg>span::after{content:' ✓';color:${dogru}}
 .cb .cb-bas{display:flex;align-items:baseline;gap:.5em;margin-bottom:.3em}
 .gb{font-family:${basF};font-weight:${a.baslikAgirlik};color:var(--rk,${R('grup')});${buyukCss(a.grupBuyuk)}font-size:calc(${a.punto * 1.12}pt * var(--k,1));padding:.2em 0 .25em;margin-bottom:calc(${a.soruArasi * 0.5}mm * var(--k,1));display:flex;align-items:baseline;gap:.5em;min-width:0}
 .gb>span{min-width:0;overflow:hidden;text-overflow:ellipsis}
-.gb em{font-style:normal;font-weight:600;font-size:.78em;color:${R('altBilgi')};flex:none;text-transform:none;font-variant-caps:normal;letter-spacing:0}
+.gb em{font-style:normal;font-weight:600;font-size:.78em;color:${R('grupSayi')};flex:none;text-transform:none;font-variant-caps:normal;letter-spacing:0}
 .gb.s0{font-size:calc(${a.punto * 1.28}pt * var(--k,1))}.gb.s1{font-size:calc(${a.punto * 1.12}pt * var(--k,1))}.gb.s2{font-size:calc(${a.punto * 1.0}pt * var(--k,1));font-weight:700}.gb.s3{font-size:calc(${a.punto * 0.92}pt * var(--k,1));font-weight:700}
 .gb.s1{margin-left:1.5mm}.gb.s2{margin-left:3mm}.gb.s3{margin-left:4.5mm}
 .gb.ic{margin-left:0;font-size:calc(${a.punto * 0.95}pt * var(--k,1));padding:.1em 0 .15em;margin-bottom:calc(${a.paragraf}pt * var(--k,1))}.gb.ic.s2,.gb.ic.s3{font-size:calc(${a.punto * 0.86}pt * var(--k,1))}
@@ -453,25 +454,25 @@ ${a.grupStil === 'bant' ? `.gb{background:color-mix(in srgb,var(--rk,${R('grup')
 ${a.grupStil === 'kutu' ? `.gb{border:.6pt solid color-mix(in srgb,var(--rk,${R('grup')}) 55%,${zemin});padding:.25em .7em;border-radius:.35em}` : ''}
 ${a.grupStil === 'sade' ? `.gb{padding:.1em 0}` : ''}
 .ank{display:grid;gap:1.2mm}
-.ank div{height:${ANAHTAR_H - 1.2}mm;display:flex;align-items:center;justify-content:space-between;padding:0 2mm;border:.6pt solid ${R('anahtarKenar')};border-radius:1.2mm;font-size:${Math.max(8, a.punto * 0.92)}pt;border-left:1.1mm solid var(--rk,${R('anahtarKenar')})}
+.ank div{height:${ANAHTAR_H - 1.2}mm;display:flex;align-items:center;justify-content:space-between;padding:0 2mm;border:.6pt solid ${R('anahtarKenar')};border-radius:1.2mm;background:${R('anahtarZemin') || 'transparent'};font-size:${Math.max(8, a.punto * 0.92)}pt;border-left:1.1mm solid var(--rk,${R('anahtarKenar')})}
 .ank b{font-weight:800}
 .ank i{font-style:normal;font-weight:800;color:${R('cevapHarfi')}}
 .opt{display:grid;column-gap:5mm}
-.opt div{height:${OPTIK_H}mm;display:flex;align-items:center;gap:1.6mm;font-size:8pt;border-bottom:.4pt solid color-mix(in srgb,${R('anahtarKenar')} 50%,${zemin})}
+.opt div{height:${OPTIK_H}mm;display:flex;align-items:center;gap:1.6mm;font-size:8pt;border-bottom:.4pt solid color-mix(in srgb,${R('optik')} 50%,${zemin})}
 .opt b{width:8mm;text-align:right;font-weight:700}
-.opt i{width:4.6mm;height:4.6mm;border-radius:50%;border:.6pt solid ${R('altBilgi')};display:grid;place-items:center;font-style:normal;font-size:6pt;color:${R('altBilgi')}}
+.opt i{width:4.6mm;height:4.6mm;border-radius:50%;border:.6pt solid ${R('optik')};display:grid;place-items:center;font-style:normal;font-size:6pt;color:${R('optik')}}
 .kp{height:100%;display:flex;flex-direction:column;justify-content:center;gap:7mm;padding:0 6mm;position:relative;z-index:1}
-${a.kapakStil === 'bant' ? `.kp{border-left:4mm solid ${vurgu};padding-left:8mm}` : ''}
-${a.kapakStil === 'zemin' ? `.pg.kpk{background:${vurgu}}.pg.kpk .pg-in{border-color:color-mix(in srgb,${zemin} 50%,${vurgu})}.kp{color:${zemin}}.kp .ust,.kp h1,.kp h2,.kp .sy b,.kp .sy span,.kp .not,.kp .alan,.kp .lj{color:${zemin}}.kp .sy div{border-color:color-mix(in srgb,${zemin} 55%,${vurgu})}.kp .yon{background:color-mix(in srgb,${zemin} 14%,${vurgu});border-color:${zemin};color:${zemin}}.kp .alan i{border-color:${zemin}}.kp .kpn{color:${zemin}}` : ''}
-.kp .kpn{margin:0;font-size:10pt;line-height:1.5;white-space:pre-wrap;color:${R('cozumMetin')}}
+${a.kapakStil === 'bant' ? `.kp{border-left:4mm solid ${kapakZemin};padding-left:8mm}` : ''}
+${a.kapakStil === 'zemin' ? `.pg.kpk{background:${kapakZemin}}.pg.kpk .pg-in{border-color:color-mix(in srgb,${zemin} 50%,${kapakZemin})}.kp{color:${zemin}}.kp .ust,.kp h1,.kp h2,.kp .sy b,.kp .sy span,.kp .not,.kp .alan,.kp .lj{color:${zemin}}.kp .sy div{border-color:color-mix(in srgb,${zemin} 55%,${kapakZemin})}.kp .yon{background:color-mix(in srgb,${zemin} 14%,${kapakZemin});border-color:${zemin};color:${zemin}}.kp .alan i{border-color:${zemin}}.kp .kpn{color:${zemin}}` : ''}
+.kp .kpn{margin:0;font-size:10pt;line-height:1.5;white-space:pre-wrap;color:${R('kapakNot')}}
 .kp .pg-logo{height:${Math.max(a.logoYuk, 14)}mm;max-width:80mm}
-.kp .ust{font-size:9pt;letter-spacing:.18em;text-transform:uppercase;color:${vurgu};font-weight:800}
+.kp .ust{font-size:9pt;letter-spacing:.18em;text-transform:uppercase;color:${R('kapakUst')};font-weight:800}
 .kp h1{margin:0;font-family:${basF};font-size:30pt;line-height:1.08;color:${R('kapakBaslik')};font-weight:${a.baslikAgirlik};${buyukCss(a.baslikBuyuk)}}
-.kp h2{margin:0;font-size:13pt;font-weight:500;color:${R('altBilgi')}}
+.kp h2{margin:0;font-size:13pt;font-weight:500;color:${R('kapakAlt')}}
 .kp .sy{display:flex;flex-wrap:wrap;gap:3mm}
 .kp .sy div{border:.7pt solid ${R('anahtarKenar')};border-radius:2mm;padding:3mm 4mm;min-width:32mm}
-.kp .sy b{display:block;font-size:17pt;color:${vurgu}}
-.kp .sy span{font-size:8.5pt;color:${R('altBilgi')}}
+.kp .sy b{display:block;font-size:17pt;color:${R('kapakSayi')}}
+.kp .sy span{font-size:8.5pt;color:${R('kapakAlt')}}
 .kp .yon{border-left:1.2mm solid ${R('cozumKenar')};background:${cozumZeminCss(a)};padding:3mm 4mm;font-size:9pt;line-height:1.5;color:${R('cozumMetin')}}
 .kp .alan{display:grid;gap:5mm;font-size:10pt}
 .kp .alan span{display:flex;gap:3mm;align-items:flex-end}

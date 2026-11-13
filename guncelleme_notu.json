@@ -1,23 +1,52 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 717,
-  "baslik": "Yapay zekâ altyapısı yeni sağlayıcıya taşındı; tasarım stüdyosu eklendi",
+  "onem": 718,
+  "baslik": "Soru çıkarıcıda tam ayar şablonu, her ögeye ayrı renk ve tablette yazdırma",
   "maddeler": [
-    "İçerik ve soru üretiminin yapay zekâ altyapısı yeni sağlayıcıya taşındı (DeepSeek, GLM, GPT aileleri); yazar ve denetçi her zaman farklı model ailesinden çalışıyor",
-    "Site içi yapay zekâ istekleri artık beş kademeli yedek zincirle yanıtlanıyor: yerel servis → yeni sağlayıcı → Groq → Muse Spark → Gemini",
-    "Yeni tasarım stüdyosu: rapor, pano ve veri özetleri tek sayfalık, çevrimdışı açılan sayfalar olarak üretilebiliyor (açık/koyu tema, yazdırma)",
-    "Kodlama ve tasarım denetimi için resmî eklentiler kuruldu: tip denetimi, kod inceleme, sadeleştirme ve tasarım kalitesi denetleyicileri",
-    "Önceki sürümdeki sözlük ve Öğren düzeltmeleri (H559) ve parolasız PDF indirme (H556) bu sürümde de geçerli",
-    "Yeni sağlayıcı canlıda doğrulandı: site içi yapay zekâ istekleri OpenDesign (DeepSeek) üzerinden yanıt veriyor"
+    "Soru dışa aktarıcıya Şablon sekmesi geldi: o anki tüm ayarlar (tasarım, sayfa, yazı, renkler, çözüm, logo ve soru süzgeçleri, soru sayısı) tek adla kaydedilip tek dokunuşla geri yükleniyor",
+    "Şablonlar JSON olarak dışa aktarılıp başka cihaza taşınabiliyor; aynı adla kaydetmek şablonu günceller, kayıtlı ayarlarla birebir eşleşme 'şu an' rozetiyle gösterilir",
+    "Renk › Öge renkleri 40 ögeye çıktı: başlık alt yazısı, grup soru sayısı, etiket, kapak üst yazısı/sayıları/alt başlığı/notu/zemini, cevap anahtarı zemini ve optik form artık ayrı ayrı seçiliyor",
+    "Bir ögenin rengini değiştirmek diğerlerine dokunmaz; boş bırakılan öge eskisi gibi vurgu/metin renginden türetilir",
+    "Tablet dikey görünümde (1024 piksel altı) görünmeyen Yazdır düğmesi alt çubuğa taşındı; Ayarlar ve Önizleme kiplerinde PDF indir ile birlikte duruyor",
+    "Soru çıkarıcı sekmeleri yedi bölüme (Şablon dahil) göre yeniden dizildi; telefonda düğme yazıları taşmadan kısalıyor"
   ],
   "eklenen": [
-    "Yeni sağlayıcı model köprüsü ve tek kaynaklı model seçimi (yazar/denetçi/hızlı rolleri)",
-    "Site yapay zekâsında OpenDesign sağlayıcısı (yedek zincirin ikinci kademesi)",
-    "Kodlama ve tasarım eklentileri: typescript-lsp, pyright-lsp, frontend-design, code-review, code-simplifier, feature-dev, claude-security, security-guidance, pr-review-toolkit, plugin-dev",
-    "Yerel artifact stüdyosu: JSON reçeteden tek dosyalık HTML sayfa, önizleme bölmesinde açılır"
+    "Soru dışa aktarıcı › Şablon sekmesi: tüm ayarları kaydet, güncelle, yükle, sil, JSON dışa/içe aktar",
+    "Şablon eşleşme rozeti (kanonik JSON karşılaştırması) ve şablon özeti (tasarım · düzen · kaynak · soru sayısı · tarih)",
+    "On yeni öge rengi: başlık alt yazısı, grup soru sayısı, etiket rengi, kapak üst yazısı, kapak sayıları, kapak alt başlığı, kapak notu, kapak zemini, cevap anahtarı zemini, optik form",
+    "Alt çubukta Yazdır düğmesi (tablet ve telefon)"
   ],
-  "degisen": [],
-  "duzeltilen": [],
+  "degisen": [
+    "Soru dışa aktarıcı şablonları artık yalnız belge ayarını değil soru süzgeçlerini, soru sayısını ve önizleme yakınlığını da saklıyor; eski şablonlar korunuyor",
+    "Tasarım sekmesindeki Şablonlarım bölümü yerine Şablon sekmesine bağlantı kondu",
+    "Öge rengi türetmeleri yeni ögelere bağlandı; etiket rengi sabit gri yerine öge renginden okunuyor"
+  ],
+  "duzeltilen": [
+    "Tablet dikey görünümde Yazdır düğmesi hiç görünmüyordu (eylem satırı iki kipte de gizleniyordu); alt çubuk artık yazdırmayı da taşıyor"
+  ],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "Soru çıkarıcı şablonları",
+      "nerede": { "ad": "Soru dışa aktarıcı", "yol": "/sorular/disa-aktar" },
+      "amac": "Sık kullandığın belge ayarı ile soru seçimini birlikte sakla, sonra tek dokunuşla geri yükle.",
+      "islevler": [
+        "Şablon sekmesinde ad verip kaydet; aynı adla kaydetmek şablonu günceller",
+        "Şablona dokununca tasarım, sayfa, yazı, renkler, çözüm ve soru süzgeçleri birlikte geri gelir",
+        "JSON olarak dışa aktar, başka cihazda içe aktar",
+        "Listedeki ↻ düğmesi şablonu şu anki ayarlarla günceller, ↓ düğmesi tek şablonu indirir"
+      ],
+      "ipucu": "Şablonlar bu cihazda saklanır; yedeklemek için 'Tümünü dışa aktar'."
+    },
+    {
+      "ad": "Her ögeye ayrı renk",
+      "nerede": { "ad": "Soru dışa aktarıcı › Renk", "yol": "/sorular/disa-aktar" },
+      "amac": "Belgedeki her parçanın rengini tek tek seç; tema seçmek zorunda kalma.",
+      "islevler": [
+        "Renk › Öge renkleri altında 40 öge dört grupta listelenir",
+        "Değiştirilen öge belgeye anında yansır; tema 'Özel' olur, diğer renkler bozulmaz",
+        "× ile öge yeniden vurgu/metin renginden türetilir"
+      ]
+    }
+  ]
 }

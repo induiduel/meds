@@ -28,10 +28,41 @@ const SKEY = 'medsoru_soru_aktar_suzgec_v1';
 const TKEY = 'medsoru_soru_aktar_sablon_v1';
 const ONIZ_SORU = 60;
 const ONIZ_SAYFA = 40;
+const SABLON_EN_COK = 40;
 const oku = <T,>(k: string, v: T): T => { try { const r = localStorage.getItem(k); return r ? JSON.parse(r) : v; } catch { return v; } };
 const yaz = (k: string, v: unknown) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* özel pencere */ } };
 
-type Sekme = 'sorular' | 'tasarim' | 'sayfa' | 'metin' | 'renk' | 'cozum';
+/** Soru sayısı sınırı (Tümü / İlk N / Rastgele N) */
+type Sinir = { mod: 'hepsi' | 'ilk' | 'rastgele'; n: number };
+/** Şablon: o anki TÜM ayarlar — belge ayarı, soru süzgeci, soru sayısı ve önizleme yakınlığı */
+type Sablon = { ad: string; tarih: number; ayar: Ayar; suzgec?: Omit<Suzgec, 'arama'>; sinir?: Sinir; zum?: 'sigdir' | number };
+/** Eski şablonlar (yalnız `ayar`) da okunur; eksik katmanlar yüklenirken atlanır */
+function sablonlariOku(): Sablon[] {
+  const ham = oku<unknown[]>(TKEY, []);
+  if (!Array.isArray(ham)) return [];
+  return ham.flatMap((x) => {
+    const s = x as Partial<Sablon>;
+    if (!s || typeof s.ad !== 'string' || !s.ad.trim() || !s.ayar) return [];
+    return [{ ad: s.ad.slice(0, 60), tarih: Number(s.tarih) || 0, ayar: s.ayar, suzgec: s.suzgec, sinir: s.sinir, zum: s.zum }];
+  }).slice(0, SABLON_EN_COK);
+}
+/** İki ayarı/süzgeci anahtar sırasından bağımsız karşılaştırmak için kanonik JSON */
+function kanonik(v: unknown): string {
+  if (Array.isArray(v)) return `[${v.map(kanonik).join(',')}]`;
+  if (v && typeof v === 'object') return `{${Object.keys(v as object).sort().map((k) => `${JSON.stringify(k)}:${kanonik((v as Record<string, unknown>)[k])}`).join(',')}}`;
+  return JSON.stringify(v ?? null);
+}
+const sablonTarih = (t: number) => (t ? new Date(t).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: '2-digit' }) : '');
+/** Şablon listesinde tek satır özet: tasarım · düzen · kaynak · soru sayısı · tarih */
+function sablonOzet(x: Sablon): string {
+  const t = TASARIMLAR.find((y) => y.id === x.ayar.tasarim)?.ad || 'Tasarım';
+  const d = x.ayar.duzen === 'akis' ? 'akış' : `${x.ayar.duzen}/sayfa`;
+  const k = x.suzgec?.kaynaklar?.length || 0;
+  const n = x.sinir && x.sinir.mod !== 'hepsi' ? ` · ${x.sinir.mod === 'ilk' ? 'ilk' : 'rastgele'} ${x.sinir.n} soru` : '';
+  return [t, d, k ? `${k} kaynak` : '', n.replace(/^ · /, ''), sablonTarih(x.tarih)].filter(Boolean).join(' · ');
+}
+
+type Sekme = 'sorular' | 'tasarim' | 'sayfa' | 'metin' | 'renk' | 'cozum' | 'sablon';
 const SEKMELER: { id: Sekme; ad: string; Ic: React.ElementType }[] = [
   { id: 'sorular', ad: 'Sorular', Ic: ListChecks },
   { id: 'tasarim', ad: 'Tasarım', Ic: LayoutGrid },
@@ -39,6 +70,7 @@ const SEKMELER: { id: Sekme; ad: string; Ic: React.ElementType }[] = [
   { id: 'metin', ad: 'Metin', Ic: Type },
   { id: 'renk', ad: 'Renk', Ic: Palette },
   { id: 'cozum', ad: 'Çözüm', Ic: CheckSquare },
+  { id: 'sablon', ad: 'Şablon', Ic: Save },
 ];
 const BICIMLER: { id: Bicim; ad: string; uz: string; Ic: React.ElementType }[] = [
   { id: 'pdf', ad: 'PDF', uz: 'pdf', Ic: FileDown },
@@ -355,14 +387,14 @@ export default function SoruAktarV15() {
   useV15Baslik({ baslik: 'Soru dışa aktarıcı', alt: 'PDF · Word · PowerPoint' });
   const [ayar, setAyar] = useState<Ayar>(() => ayarNormal(oku(AKEY, null)));
   const [suzgec, setSuzgec] = useState<Suzgec>(() => ({ ...BOS_SUZGEC, ...oku<Partial<Suzgec>>(SKEY, {}), arama: '' }));
-  const [sablon, setSablon] = useState<{ ad: string; ayar: Ayar }[]>(() => oku(TKEY, []));
+  const [sablon, setSablon] = useState<Sablon[]>(sablonlariOku);
   const [sekme, setSekme] = useState<Sekme>('sorular');
   const [mobil, setMobil] = useState<'ayar' | 'oniz'>('ayar');
   const [veri, setVeri] = useState<Partial<Record<KaynakId, AQ[]>>>({});
   const [durum, setDurum] = useState<Partial<Record<KaynakId, 'y' | 'h'>>>({});
   const [desteler, setDesteler] = useState<DeckCatalogEntry[] | null>(null);
   const [cikarilan, setCikarilan] = useState<Set<string>>(() => new Set());
-  const [sinir, setSinir] = useState<{ mod: 'hepsi' | 'ilk' | 'rastgele'; n: number }>({ mod: 'hepsi', n: 40 });
+  const [sinir, setSinir] = useState<Sinir>({ mod: 'hepsi', n: 40 });
   const [oniz, setOniz] = useState<Oniz | null>(null);
   const [onizYuk, setOnizYuk] = useState(false);
   const [zum, setZum] = useState<'sigdir' | number>('sigdir');
@@ -370,6 +402,55 @@ export default function SoruAktarV15() {
   const [sablonAd, setSablonAd] = useState('');
   const set = useCallback((p: Partial<Ayar>) => setAyar((a) => ({ ...a, ...p })), []);
   const setS = useCallback((p: Partial<Suzgec>) => setSuzgec((s) => ({ ...s, ...p })), []);
+
+  /* ---- şablon: o anki TÜM ayarlar (belge + süzgeç + soru sayısı + yakınlık) ---- */
+  const sablonAnlik = useMemo<Omit<Sablon, 'ad' | 'tarih'>>(() => ({ ayar, suzgec: { ...suzgec, arama: '' }, sinir, zum }), [ayar, suzgec, sinir, zum]);
+  const sablonImza = kanonik(sablonAnlik);
+  const eslesenSablon = sablon.find((x) => kanonik({ ayar: ayarNormal(x.ayar), suzgec: x.suzgec, sinir: x.sinir, zum: x.zum }) === sablonImza)?.ad;
+  const sablonKaydet = useCallback((ad: string) => {
+    const temiz = ad.trim().slice(0, 60);
+    if (!temiz) return;
+    const yeni: Sablon = { ad: temiz, tarih: Date.now(), ...sablonAnlik };
+    setSablon((l) => [yeni, ...l.filter((x) => x.ad !== temiz)].slice(0, SABLON_EN_COK));
+    toast.success('Şablon kaydedildi', temiz);
+  }, [sablonAnlik]);
+  const sablonYukle = useCallback((x: Sablon) => {
+    setAyar(ayarNormal(x.ayar));
+    if (x.suzgec) {
+      const k = x.suzgec.kaynaklar?.length ? x.suzgec.kaynaklar : BOS_SUZGEC.kaynaklar;
+      setSuzgec({ ...BOS_SUZGEC, ...x.suzgec, kaynaklar: k, arama: '' });
+    }
+    if (x.sinir && ['hepsi', 'ilk', 'rastgele'].includes(x.sinir.mod)) setSinir({ mod: x.sinir.mod, n: Math.max(1, Math.round(Number(x.sinir.n) || 40)) });
+    if (x.zum === 'sigdir' || typeof x.zum === 'number') setZum(x.zum);
+    toast.info('Şablon yüklendi', `${x.ad} — belge ve soru süzgeçleri geri geldi`);
+  }, []);
+  const sablonSil = useCallback((ad: string) => setSablon((l) => l.filter((x) => x.ad !== ad)), []);
+  const sablonDisaAktar = (liste: Sablon[], ad = 'medsor-sablonlar') => {
+    if (!liste.length) return;
+    const veri = { tur: 'medsor-soru-sablon', surum: 2, sablonlar: liste };
+    downloadBlob(new Blob([JSON.stringify(veri, null, 2)], { type: 'application/json' }), `${safeFileName(ad)}.json`);
+  };
+  const sablonIceAktar = async (f: File | undefined) => {
+    if (!f) return;
+    try {
+      const j = JSON.parse(await f.text());
+      const ham: unknown[] = Array.isArray(j) ? j : Array.isArray(j?.sablonlar) ? j.sablonlar : [j];
+      const gelen = ham.flatMap((x) => {
+        const s = x as Partial<Sablon>;
+        if (!s || typeof s.ad !== 'string' || !s.ad.trim() || !s.ayar) return [];
+        return [{ ad: s.ad.trim().slice(0, 60), tarih: Number(s.tarih) || Date.now(), ayar: s.ayar, suzgec: s.suzgec, sinir: s.sinir, zum: s.zum } as Sablon];
+      });
+      if (!gelen.length) { toast.error('Şablon dosyası okunamadı', 'Dosyada ad ve ayar taşıyan şablon yok.'); return; }
+      setSablon((l) => {
+        const yeni = [...gelen];
+        for (const x of l) if (!yeni.some((y) => y.ad === x.ad)) yeni.push(x);
+        return yeni.slice(0, SABLON_EN_COK);
+      });
+      toast.success('Şablonlar içe aktarıldı', `${gelen.length} şablon eklendi (aynı ad varsa yenisi geçerli)`);
+    } catch {
+      toast.error('Dosya okunamadı', 'Geçerli bir şablon JSON dosyası seç.');
+    }
+  };
 
   useEffect(() => yaz(AKEY, ayar), [ayar]);
   // seçili Google yazı tiplerini panel önizlemesi için sayfaya da yükle
@@ -636,22 +717,8 @@ export default function SoruAktarV15() {
           </>
         )}
       </Bolum>
-      <Bolum baslik="Şablonlarım" alt="Ayarları adıyla kaydet, sonra tek dokunuşla geri yükle (bu cihazda).">
-        <form className="sx15-sablon" onSubmit={(e) => { e.preventDefault(); const ad = sablonAd.trim(); if (!ad) return; setSablon((l) => [{ ad, ayar }, ...l.filter((x) => x.ad !== ad)].slice(0, 20)); setSablonAd(''); toast.success('Şablon kaydedildi', ad); }}>
-          <input type="text" value={sablonAd} maxLength={40} placeholder="Şablon adı (ör. Patoloji deneme)" onChange={(e) => setSablonAd(e.target.value)} aria-label="Şablon adı" />
-          <button type="submit" className="v15-btn is-soft" disabled={!sablonAd.trim()}><Save aria-hidden />Kaydet</button>
-        </form>
-        {sablon.length > 0 && (
-          <ul className="sx15-sl">
-            {sablon.map((x) => (
-              <li key={x.ad}>
-                <button type="button" className="sx15-sl-a" onClick={() => { setAyar(ayarNormal(x.ayar)); toast.info('Şablon yüklendi', x.ad); }}><b>{x.ad}</b><small>{TASARIMLAR.find((t) => t.id === x.ayar.tasarim)?.ad} · {x.ayar.duzen === 'akis' ? 'akış' : `${x.ayar.duzen}/sayfa`}</small></button>
-                <button type="button" className="v15-ib" aria-label={`${x.ad} şablonunu sil`} onClick={() => setSablon((l) => l.filter((y) => y.ad !== x.ad))}><Trash2 aria-hidden /></button>
-              </li>
-            ))}
-          </ul>
-        )}
-        <button type="button" className="sx15-lnk" onClick={() => setAyar({ ...VARSAYILAN, bicim: ayar.bicim })}><RotateCcw aria-hidden />Tüm ayarları varsayılana döndür</button>
+      <Bolum baslik="Şablonlar" alt="Şablonlar artık yalnız tasarımı değil, soru süzgeçleri ve soru sayısı dahil TÜM ayarları saklar.">
+        <button type="button" className="v15-btn is-soft sx15-kb" onClick={() => setSekme('sablon')}><Save aria-hidden />Şablonları aç ({sablon.length})</button>
       </Bolum>
     </>
   );
@@ -965,7 +1032,47 @@ export default function SoruAktarV15() {
     </>
   );
 
-  const PANEL: Record<Sekme, React.ReactNode> = { sorular: panelSorular, tasarim: panelTasarim, sayfa: panelSayfa, metin: panelMetin, renk: panelRenk, cozum: panelCozum };
+  const panelSablon = (
+    <>
+      <Bolum
+        baslik="Şablon kaydet"
+        alt="O anki TÜM ayarlar kaydedilir: tasarım, sayfa düzeni, yazı, renkler (her öge ayrı), çözüm, logo ve soru süzgeçleri (kaynaklar, kurul/ders/konu/yıl/tür/zorluk/etiket, soru sayısı). Aynı adla kaydedersen şablon güncellenir."
+      >
+        <form className="sx15-sablon" onSubmit={(e) => { e.preventDefault(); sablonKaydet(sablonAd); setSablonAd(''); }}>
+          <input type="text" value={sablonAd} maxLength={40} placeholder="Şablon adı (ör. Patoloji 40 soru · renkli)" onChange={(e) => setSablonAd(e.target.value)} aria-label="Şablon adı" list="sx15-sablon-adlar" />
+          <button type="submit" className="v15-btn is-soft" disabled={!sablonAd.trim()}><Save aria-hidden />{sablon.some((x) => x.ad === sablonAd.trim()) ? 'Güncelle' : 'Kaydet'}</button>
+        </form>
+        <datalist id="sx15-sablon-adlar">{sablon.map((x) => <option key={x.ad} value={x.ad} />)}</datalist>
+        <p className="v15-cap">{eslesenSablon ? `Şu anki ayarlar "${eslesenSablon}" şablonuyla birebir aynı.` : 'Şu anki ayarlar kayıtlı bir şablonla aynı değil.'}</p>
+        <div className="sx15-sablon-h">
+          <label className="v15-btn is-ghost sx15-sablon-sec"><input type="file" accept="application/json,.json" onChange={(e) => { void sablonIceAktar(e.target.files?.[0]); e.target.value = ''; }} />İçe aktar (JSON)</label>
+          <button type="button" className="v15-btn is-ghost" disabled={!sablon.length} onClick={() => sablonDisaAktar(sablon)}><FileDown aria-hidden />Tümünü dışa aktar</button>
+          <button type="button" className="v15-btn is-ghost" onClick={() => setAyar({ ...VARSAYILAN, bicim: ayar.bicim })}><RotateCcw aria-hidden />Varsayılana dön</button>
+        </div>
+      </Bolum>
+      <Bolum baslik={`Şablonlarım (${sablon.length})`} alt="Dokununca belge ayarları ve soru süzgeçleri birlikte geri gelir. Şablonlar bu cihazda saklanır; JSON ile başka cihaza taşınır.">
+        {sablon.length === 0
+          ? <p className="sx15-bos">Henüz şablon yok. Yukarıda ad verip kaydet.</p>
+          : (
+            <ul className="sx15-sl">
+              {sablon.map((x) => (
+                <li key={x.ad} className={eslesenSablon === x.ad ? 'is-on' : ''}>
+                  <button type="button" className="sx15-sl-a" onClick={() => sablonYukle(x)}>
+                    <b>{x.ad}{eslesenSablon === x.ad && <span className="sx15-sl-rozet">şu an</span>}</b>
+                    <small>{sablonOzet(x)}</small>
+                  </button>
+                  <button type="button" className="v15-ib" title="Şu anki ayarlarla güncelle" aria-label={`${x.ad} şablonunu şu anki ayarlarla güncelle`} onClick={() => { setSablon((l) => l.map((y) => (y.ad === x.ad ? { ...y, tarih: Date.now(), ...sablonAnlik } : y))); toast.success('Şablon güncellendi', x.ad); }}><RotateCcw aria-hidden /></button>
+                  <button type="button" className="v15-ib" title="JSON olarak indir" aria-label={`${x.ad} şablonunu indir`} onClick={() => sablonDisaAktar([x], x.ad)}><FileDown aria-hidden /></button>
+                  <button type="button" className="v15-ib" aria-label={`${x.ad} şablonunu sil`} onClick={() => sablonSil(x.ad)}><Trash2 aria-hidden /></button>
+                </li>
+              ))}
+            </ul>
+          )}
+      </Bolum>
+    </>
+  );
+
+  const PANEL: Record<Sekme, React.ReactNode> = { sorular: panelSorular, tasarim: panelTasarim, sayfa: panelSayfa, metin: panelMetin, renk: panelRenk, cozum: panelCozum, sablon: panelSablon };
 
   const bicimSec = (
     <Seg ad="Biçim" deger={ayar.bicim} degis={(b) => set({ bicim: b })} ogeler={BICIMLER.map((b) => ({ v: b.id, ad: <><b.Ic aria-hidden />{b.ad}</> }))} />
@@ -1022,8 +1129,9 @@ export default function SoruAktarV15() {
         </div>
       </div>
 
-      <div className="sx15-alt" role="region" aria-label="İndirme">
+      <div className="sx15-alt" role="region" aria-label="İndirme ve yazdırma">
         <span>{uretim || ozet}</span>
+        <button type="button" className="v15-btn is-ghost sx15-alt-yazdir" disabled={!hs.length || !!uretim} onClick={() => void indir(true)}><Printer aria-hidden /><span>Yazdır</span></button>
         {indirDugme}
       </div>
       {uretim && <div className="sx15-perde" role="status"><Loader2 className="sx15-don" aria-hidden /><span>{uretim}</span></div>}
