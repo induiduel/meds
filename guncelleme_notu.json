@@ -1,48 +1,32 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 719,
-  "baslik": "Nöroloji: Kraniyal Sinir Muayenesi ve Serebrovasküler Hastalıklar dersleri (2026-27 PDF)",
+  "onem": 720,
+  "baslik": "Soru dışa aktarıcı: sayfayı yenile ekranı ve PDF'te kesilen/üst üste binen metin düzeltildi",
   "maddeler": [
-    "Sesli ders: Kraniyal Sinir Muayenesi (2n10) ve Serebrovasküler Hastalıklar (2n11) 2026-27 PDF’lerinden sıfırdan yazıldı; EMA sesi, kelime zamanlaması ve PDF takibi hazır.",
-    "En önemlileri: her iki ders için 20 ve 22 maddelik önem listesi, örnek sorular ve her şıkkı açıklayan sesli soru çözücü eklendi.",
-    "Hocanın sorabileceği sorular: ders içinde ara soru sayfası ve ders dışında sesli çözüm (2a62, 2a65).",
-    "Ders analizi: dersin kazanımları, çıkmış sorularda ne sorulduğu ve hoca üslubu bölümleri sesli hazırlandı.",
-    "Ders içerikleri: terim yardımcısı (73 ve 119 terim), kısaltmalar, bilgi kartları, tablolar, listeler ve mini sorular.",
-    "Nöroloji ders kayıt defteri güncellendi: k2-62 hocası düzeltildi, k2-65 yeni ders olarak eklendi (27 Kasım 13:00)."
+    "Soru dışa aktarıcı bazen çöküp \"sayfayı yenile\" ekranı gösteriyordu; renk paleti ayarındaki bozuk/eksik değer artık ekranı düşürmüyor, Canlı palete dönüyor.",
+    "PDF, Word ve PowerPoint çıktısında logo başlık kutusuna sığıyor; alt bilgi ile üst üste binme bitti.",
+    "Uzun alt bilgi ve uzun başlık artık kesilmiyor: alt bilgi iki satıra, başlık iki satıra kadar sarıyor.",
+    "Izgarada (2/4/8'li) hücreye sığmayan soru kırpılmıyor; belgenin sonunda tam genişlik \"Sığmayan sorular\" sayfasına alınıyor, hiçbir metin kaybolmuyor.",
+    "Güncelleme sonrası \"yeni sürüm hazır\" ekranında kalma döngüsü giderildi: yenilemeden önce önbellek kendiliğinden tazeleniyor.",
+    "Oyunlar sayfasında masaya girerken oluşan çökme giderildi."
   ],
   "eklenen": [
-    "Sesli ders › Kraniyal Sinir Muayenesi (2n10): 2026-27 PDF’inden 15 bölüm, EMA sesi, kelime zamanlaması, PDF işareti",
-    "Sesli ders › Serebrovasküler Hastalıklar (2n11): 2026-27 PDF’inden 16 bölüm, EMA sesi, kelime zamanlaması, PDF işareti",
-    "En önemlileri › 2n10 ve 2n11 önem listeleri (20 ve 22 madde) + örnek sorular + sesli soru çözücü",
-    "Hocanın sorabileceği sorular › 2a62 ve 2a65 (ders içinde ara soru sayfası + ders dışı sesli çözücü)",
-    "Ders analizi ve ders özeti › k2-62, k2-65 (kazanımlar, çıkmış sorularda ne soruldu, hoca üslubu; sesli)",
-    "Ders içerikleri › terim yardımcısı, kısaltmalar, bilgi kartları, tablolar, listeler, mini sorular",
-    "Ders kayıt defteri › k2-65 (Serebrovasküler Hastalıklar, 27 Kasım 13:00)"
+    "Soru dışa aktarıcı › metin kaybı yok: ızgaraya sığmayan sorular tam genişlik \"Sığmayan sorular\" bölümüne alınır",
+    "Soru dışa aktarıcı › uzun alt bilgi artık iki satıra sarar, kesilmez",
+    "Soru dışa aktarıcı › logo yüksekliğine göre başlık bandı büyür (PDF/Word/PowerPoint aynı)"
   ],
   "degisen": [
-    "Nöroloji › k2-62 Kraniyal Sinir Muayenesi dersinin öğretim üyesi 2026-27 ders programına göre Dr. Öğr. Üyesi İrfan Yavaş olarak düzeltildi",
-    "Kısaltma sözlüğü 573 kısaltmaya çıkarıldı (iki dersin kısaltmaları eklendi)"
+    "Soru dışa aktarıcı › renk paleti: tanınmayan/bozuk palet değeri Canlı palete düşer (ekran çökmez)",
+    "Soru dışa aktarıcı › kapak: çerçevesiz kapakta iç boşluk ve taşma güvenliği",
+    "Site güncelleme: yenileme öncesi bekleyen sürüm ve bayat çalışma zamanı önbelleği tazelenir"
   ],
   "duzeltilen": [
-    "Ders analizi üreticisi tam ders anahtarıyla çağrıldığında dersi “kayıt defterinde yok” sayıyordu; artık anahtarı kısa kimliğe çeviriyor"
+    "Soru dışa aktarıcı: bilinmeyen palet ayarı tüm ekranı çökertiyordu",
+    "Soru dışa aktarıcı: logo yüksekliği başlık bandını aştığında gövdeyle çakışıyordu (PDF/DOCX/PPTX)",
+    "Soru dışa aktarıcı: uzun alt bilgi tek satırda kesiliyordu; başlık kutusundan taşıyordu",
+    "Soru dışa aktarıcı: ızgarada en küçük ölçekte sığmayan soru sessizce kırpılıyordu; artık ayrı sayfaya alınıyor",
+    "Yeni sürüm ekranı: yenileme öncesi bayat kabuk/parça önbelleği tazelenmiyordu",
+    "Oyunlar: oda durumunda cezalar alanı yoksa masa çöküyordu"
   ],
-  "silinen": [],
-  "yenilikler": [
-    {
-      "ad": "Nöroloji 2026-27 sesli dersleri (Kraniyal Sinir Muayenesi, Serebrovasküler Hastalıklar)",
-      "nerede": {
-        "ad": "Ders çalış › Sesli dersler",
-        "yol": "/dersler/kurul2/noroloji"
-      },
-      "amac": "2026-27 ders PDF’lerinden yazılmış, sesli anlatımlı, metni sesle birlikte takip edilen iki Nöroloji dersi.",
-      "islevler": [
-        "Ders sesi EMA ile okunur; konuşulan cümle ve slayttaki satır/şekil birlikte işaretlenir",
-        "En önemlileri sayfasında puanlı önem listesi, örnek sorular ve sesli soru çözücü",
-        "Ders içinde hocanın sorabileceği soru sayfası; ders dışında aynı soruları sesli çözme",
-        "Ders analizi ve ders özeti sesli olarak dinlenebilir",
-        "Ders içerikleri sayfasında terimler, kısaltmalar, tablolar, listeler, kartlar ve mini sorular"
-      ],
-      "ipucu": "Ders sayfasında “En önemlileri”, “Ders içerikleri” ve “Hocanın sorabileceği sorular” sekmelerini kullanabilirsin."
-    }
-  ]
+  "silinen": []
 }

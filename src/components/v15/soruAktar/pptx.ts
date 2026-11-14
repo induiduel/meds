@@ -6,7 +6,7 @@
  */
 import JSZip from 'jszip';
 import { cozumBos, cozumIcerik, etiketler, harfMetni, numaraMetni, parcala, KOLON_ARA, ANAHTAR_H, OPTIK_H, OPTIK_W, type Belge, type Blok, type HS, type Sayfa } from './belge';
-import { ALT_MM, BASLIK_MM, GRUP_MM, SERIT_MM, YAZI, baslikYazi, ogeRenk, sayfaOlcu, type Ayar, type HarfBuyuk } from './ayar';
+import { GRUP_MM, SERIT_MM, YAZI, altYukMm, baslikYazi, baslikYukMm, ogeRenk, sayfaOlcu, type Ayar, type HarfBuyuk } from './ayar';
 import { coreXml, karis, xml } from './docx';
 import { kaynakAdi } from './kaynak';
 
@@ -165,14 +165,16 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
 
   const g = pg.g;
   if (g.baslik) {
+    // H572: başlık bandı yüksekliği logoyu/alt başlığı kapsar (govde() ile aynı ölçü)
+    const basH = baslikYukMm(a, true);
     const sag = a.adSoyad || a.tarih ? Math.min(60, g.w * 0.42) : 0;
-    s.kutu(x0, y, g.w - sag, BASLIK_MM - 1, [
+    s.kutu(x0, y, g.w - sag, basH - 1, [
       p(r(a.baslik, { fs: Math.min(16, a.punto * a.baslikOran), b: true, bas: true, caps: a.baslikBuyuk, renk: ogeRenk(a, 'baslik') }), { satir: 1.1 }, { fs: 12 }),
       a.altBaslik ? p(r(a.altBaslik, { fs: Math.max(7, a.punto * 0.8), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.1 }, { fs: 8 }) : '',
     ].filter(Boolean), { anchor: 'b' });
-    if (sag) s.kutu(x0 + g.w - sag, y, sag, BASLIK_MM - 1, [a.adSoyad ? p(r('Ad Soyad: _______________', { fs: Math.max(7, a.punto * 0.78), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.3 }, { fs: 8 }) : '', a.tarih ? p(r('Tarih: _______________', { fs: Math.max(7, a.punto * 0.78), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.3 }, { fs: 8 }) : ''].filter(Boolean), { anchor: 'b' });
-    s.dortgen(x0, y + BASLIK_MM - 0.45, g.w, 0.4, ogeRenk(a, 'baslikCizgi'));
-    y += BASLIK_MM;
+    if (sag) s.kutu(x0 + g.w - sag, y, sag, basH - 1, [a.adSoyad ? p(r('Ad Soyad: _______________', { fs: Math.max(7, a.punto * 0.78), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.3 }, { fs: 8 }) : '', a.tarih ? p(r('Tarih: _______________', { fs: Math.max(7, a.punto * 0.78), renk: ogeRenk(a, 'altBilgi') }), { satir: 1.3 }, { fs: 8 }) : ''].filter(Boolean), { anchor: 'b' });
+    s.dortgen(x0, y + basH - 0.45, g.w, 0.4, ogeRenk(a, 'baslikCizgi'));
+    y += basH;
   }
   if (pg.bant) {
     s.dortgen(x0, y + GRUP_MM / 2 - 1.3, 2.6, 2.6, pg.bant.renk || ogeRenk(a, 'bant'));
@@ -230,7 +232,8 @@ function slaytKur(pg: Sayfa, a: Ayar, no: number, toplam: number, b: Belge): Sla
     y += SERIT_MM;
   }
   if (a.sayfaNo || a.altMetin.trim()) {
-    s.kutu(x0, y, g.w, ALT_MM, [p(r(a.altMetin, { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'altBilgi') }) + TAB + (a.sayfaNo ? r(`${no} / ${toplam}`, { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'altBilgi') }) : ''), { satir: 1, tab: [{ pos: EMU(g.w), algn: 'r' }] }, { fs: 7 })], { anchor: 'b' });
+    // H572: alt bilgi yüksekliği alt metnin satır sayısını kapsar (uzun metin kutudan taşıp kesiliyordu)
+    s.kutu(x0, y, g.w, altYukMm(a), [p(r(a.altMetin, { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'altBilgi') }) + TAB + (a.sayfaNo ? r(`${no} / ${toplam}`, { fs: Math.max(6.5, a.punto * 0.72), renk: ogeRenk(a, 'altBilgi') }) : ''), { satir: 1.2, tab: [{ pos: EMU(g.w), algn: 'r' }] }, { fs: 7 })], { anchor: 'b' });
   }
   return s;
 }

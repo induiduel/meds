@@ -72,7 +72,7 @@ export function ElSonu({ oda, sonuc, macBitti, macaGec }: { oda: OdaGorunum; son
       : sonuc.neden === 'berabere' ? `Yığın bitti, kimse oynayamıyor. Bu elin kazananı yok; herkes elinde kalan ${birim(oda.tur)} kadar eksi aldı.` : 'Deste tükendi; bu eli kazanan yok. Herkes elindekine göre puan aldı.';
 
   const sirali = [...sonuc.satirlar].sort((a, b) => Number(b.kazandi) - Number(a.kazandi) || b.puan - a.puan);
-  const cezalilar = sonuc.satirlar.filter((s) => s.cezalar.length);
+  const cezalilar = (sonuc.satirlar || []).filter((s) => s?.cezalar?.length);
   const kurucu = oda.kurucu === oda.ben;
   const kurucuBagli = !!oda.oyuncular.find((o) => o.id === oda.kurucu)?.bagli;
   const elMetni = `${OYUN_ADI[oda.tur]} · ${oda.elNo}. el${oda.ayar.elSayisi ? ` / ${oda.ayar.elSayisi}` : ''}`;
@@ -129,7 +129,7 @@ export function ElSonu({ oda, sonuc, macBitti, macaGec }: { oda: OdaGorunum; son
                   <li key={s.id}>
                     <b>{ad(s.id)}</b>
                     <div>
-                      {s.cezalar.map((c, i) => {
+                      {(s.cezalar || []).map((c, i) => {
                         const b = cezaBilgi(c);
                         return (
                           <span key={i} className={`mk-ceza ${b.sinif}`}>

@@ -1110,7 +1110,8 @@ export default function SoruAktarV15() {
             <span className="sx15-ozet">{ozet}</span>
             <Seg ad="Yakınlık" kucuk deger={zum} degis={setZum} ogeler={[{ v: 'sigdir', ad: 'Sığdır' }, { v: 0.5, ad: '%50' }, { v: 0.75, ad: '%75' }, { v: 1, ad: '%100' }, { v: 1.5, ad: '%150' }]} />
           </div>
-          {oniz && oniz.tasan > 0 && <p className="sx15-uyari">{oniz.tasan} soru hücresine en küçük ölçekte de sığmadı ve kırpıldı; sayfa başına daha az soru seç ya da puntoyu küçült.</p>}
+          {/* H572: kırpılan soru artık kaybolmuyor — belgenin sonunda tam genişlik "Sığmayan sorular" bölümüne alınır */}
+          {oniz && oniz.tasan > 0 && <p className="sx15-uyari">{oniz.tasan} soru hücresine sığmadı; belgenin sonunda tam genişlik "Sığmayan sorular" sayfalarına alındı (metin kaybolmaz). Hepsini ızgaraya sığdırmak için sayfa başına daha az soru seç ya da puntoyu küçült.</p>}
           {oniz && ayar.sigdir !== 'yok' && (
             <p className="v15-cap">
               Sayfaya sığdır: yazı ölçeği %{Math.round(oniz.olcek * 100)} ({(ayar.punto * oniz.olcek).toFixed(1)} pt).

@@ -142,17 +142,17 @@ installKabukBayraklari();
 // Auto reload on stale Vite chunk after a new deployment
 // (Wi-Fi bağlı ama internetsizken de yenilenmez: önce sunucuya ulaşılıyor mu bakılır)
 window.addEventListener('vite:preloadError', (event) => {
-  if (!navigator.onLine) {
-    event.preventDefault();
-    return;
-  }
-  void sunucuyaUlasilir().then((ok) => {
+  event.preventDefault(); // Vite'ın kendi reload'u ile çakışmasın; kurtarmayı biz yapıyoruz (H572)
+  if (!navigator.onLine) return;
+  void sunucuyaUlasilir().then(async (ok) => {
     if (!ok) return;
     const key = 'medsoru_last_chunk_reload';
     const now = Date.now();
     const last = Number(sessionStorage.getItem(key) || 0);
-    if (now - last > 5000) {
+    if (now - last > 8000) {
       sessionStorage.setItem(key, String(now));
+      // H572: önce bekleyen SW + bayat kabuk temizlenir; sonra yenileme (döngüde aynı ekran kalmıyor)
+      await kabukOnbelleginiTazele();
       window.location.reload();
     }
   });
@@ -170,6 +170,41 @@ interface ErrorBoundaryState {
   yigin?: string;
 }
 
+/**
+ * H572 (2026-11-14, kullanıcı bildirdi): "sayfayı yenile" ekranı çoğu zaman TEMBEL PARÇA (chunk) eksikliğinden
+ * çıkıyordu. Kök neden: açık eski sekme yeni derlemenin parça adlarını ister; o parça cihaz önbelleğinde yoksa
+ * (önbellek budandı/yer açıldı/temizlendi) ya da service worker eski kabuğu veriyorsa import düşer. Eskiden
+ * istemci yalnız `location.reload()` deniyordu; SW gezinmede eski kabuğu döndürünce DÖNGÜ doğuyor ve kullanıcıya
+ * "sayfayı yenile" ekranı kalıyordu. Artık kurtarma iki aşamalı ve KENDİLİĞİNDEN: (1) bekleyen service worker'ı
+ * etkinleştir, (2) kabuk/parça önbelleklerini atlayıp yeni derlemeye geç. Yenileme sınırı döngüyü engeller;
+ * sınır aşılırsa yine yenileme ekranı görünür (kullanıcı karar verir).
+ */
+const CHUNK_RE = /Failed to fetch dynamically imported module|Importing a module script failed|Unable to preload CSS/i;
+
+async function kabukOnbelleginiTazele() {
+  try {
+    const reg = await navigator.serviceWorker?.getRegistration();
+    // bekleyen yeni SW varsa etkinleştir; yoksa güncellemeyi dene
+    (reg?.waiting || reg?.installing)?.postMessage({ type: 'SKIP_WAITING' });
+    await reg?.update?.().catch(() => {});
+  } catch { /* SW yoksa sorun değil */ }
+  if (!('caches' in window)) return;
+  try {
+    for (const k of await caches.keys()) {
+      // çevrimdışı ders/PDF paketleri kullanıcının indirdiğidir, dokunulmaz
+      if (/canli-ders|pdf-offline|paket|bekleyen|paylasim/.test(k)) continue;
+      const c = await caches.open(k);
+      for (const r of await c.keys()) {
+        const u = new URL(r.url);
+        if (u.origin !== location.origin || u.pathname.startsWith('/api/')) continue;
+        // kabuk ve sürümsüz çalışma zamanı kopyaları: yeni derlemeyi geri vermesin
+        if (u.pathname === '/' || u.pathname.endsWith('.html') || !/\.[a-z0-9]+$/i.test(u.pathname)) await c.delete(r);
+        // eksik parça adı önbellekte yoksa zaten ağdan gelecek; varsa bayat kopyayı bırak (hash'li ad değişmez)
+      }
+    }
+  } catch { /* önbellek erişimi yoksa yenileme yine dener */ }
+}
+
 class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
@@ -185,21 +220,25 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
     this.setState({ yigin: `${error?.stack || ''}\n${errorInfo?.componentStack || ''}`.trim() });
     if (!navigator.onLine) return;
     const msg = error?.message || '';
-    if (!/Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg)) {
+    const chunkHatasi = CHUNK_RE.test(msg);
+    if (!chunkHatasi) {
       void fetch('/api/istemci-hata', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ mesaj: msg, yigin: error?.stack || '', bilesen: errorInfo?.componentStack || '', adres: location.pathname + location.search, surum: typeof __MEDS_SURUM__ === 'string' ? __MEDS_SURUM__ : '' }),
       }).then((r) => { if (r.ok) this.setState({ iletildi: true }); }).catch(() => {});
     }
-    if (/Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg)) {
-      void sunucuyaUlasilir().then((ok) => {
+    if (chunkHatasi) {
+      void sunucuyaUlasilir().then(async (ok) => {
         if (!ok) { this.forceUpdate(); return; } // internetsiz: "cihazında yok" ekranı (render cevrimdisiGibi'ye bakar)
         const key = 'medsoru_last_chunk_reload';
         const now = Date.now();
         const last = Number(sessionStorage.getItem(key) || 0);
+        // H572: yeniden denemeden önce kabuğu/parça önbelleğini tazele — eskiden yalnız reload edildiği ve SW eski
+        // kabuğu geri verdiği için kullanıcı aynı ekranda kalıyordu. 8 sn içinde ikinci hatada döngüyü kesme.
         if (now - last > 8000) {
           sessionStorage.setItem(key, String(now));
+          await kabukOnbelleginiTazele();
           window.location.reload();
         }
       });
@@ -243,7 +282,7 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
   render() {
     if (this.state.hasError) {
       const msg = this.state.error?.message || 'Bilinmeyen arayüz hatası';
-      const isChunkError = /Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg);
+      const isChunkError = CHUNK_RE.test(msg);
       if (isChunkError && cevrimdisiGibi()) return <CevrimdisiYok />;
 
       const yonetici = isAdminUser(getLocalAdminSession());

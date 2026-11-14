@@ -743,7 +743,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
       <div className="om-alt">
         {bildirim && <div key={bildirim.n} className={`om-bildirim om-bildirim--${bildirim.tur}`} role="status">{bildirim.metin}</div>}
         <EylemCubugu eylemler={eylemler} durum={durumYazi} kisa={duzen.kisa}>
-          {benO && (benO.cezalar.length > 0 || benO.takim) && <span className="om-benrozet">{benO.takim && <em className={`om-takim om-takim--${benO.takim}`}>Takım {benO.takim}</em>}<CezaRozetleri o={benO} /></span>}
+          {benO && ((benO.cezalar?.length ?? 0) > 0 || benO.takim) && <span className="om-benrozet">{benO.takim && <em className={`om-takim om-takim--${benO.takim}`}>Takım {benO.takim}</em>}<CezaRozetleri o={benO} /></span>}
           {remiAcilis && (
             <span className={`om-balon${remiAcilis.toplam >= A.REMI_ACILIS ? ' om-balon--tamam' : ''}`} title="Istakada boşlukla ayırdığın geçerli perlerin toplamı">
               <b>{remiAcilis.toplam}</b><i>/ {A.REMI_ACILIS}</i>

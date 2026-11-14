@@ -9,7 +9,7 @@
 import type { PdfOption } from '../../pdf/pdfSources';
 import { kaynakAdi, type AQ } from './kaynak';
 import {
-  ALAN_RENK, ALT_MM, BASLIK_MM, GRUP_MM, KAGIT, NOT_PAY_MM, PX_MM, SERIT_MM, YAZI, altBilgiVar, baslikYazi, buyukCss, cozumZeminCss, dersRengi, dogruZeminCss, govde, izgara, karistir,
+  ALAN_RENK, ALT_SATIR_EN_COK, ALT_MM, BASLIK_MM, GRUP_MM, KAGIT, NOT_PAY_MM, PX_MM, SERIT_MM, YAZI, altBilgiVar, altYukMm, baslikYukMm, baslikYazi, buyukCss, cozumZeminCss, dersRengi, dogruZeminCss, govde, izgara, karistir,
   kaynakSirasi, ogeRenk, paletRenkleri, sayfaAraligi, sayfaOlcu, stilCss, yaprakOlcu, yaziBaglantilari,
   type Alan, type Ayar, type Govde, type RenkAlan,
 } from './ayar';
@@ -69,9 +69,11 @@ export function renkHaritasi(list: AQ[], a: Ayar): { v: string; renk: string; n:
   const sik = a.renkAlan === 'etiket' ? etiketSikligi(list) : undefined;
   const m = new Map<string, number>();
   for (const q of list) { const v = deger(q, a.renkAlan, sik); m.set(v, (m.get(v) || 0) + 1); }
+  // H572: palet daima `paletRenkleri`den gelir (tanınmayan palet → Canlı); burası boş dönse bile en az bir renk kalır
   const pal = paletRenkleri(a);
   const sabit = a.renkAlan === 'ders' && a.dersRenkleri;
-  return [...m].map(([v, n], i) => ({ v, n, renk: a.renkOzel[`${a.renkAlan}:${v}`] || (sabit ? dersRengi(v) : pal[i % pal.length]) }));
+  const ozel = a.renkOzel || {};
+  return [...m].map(([v, n], i) => ({ v, n, renk: ozel[`${a.renkAlan}:${v}`] || (sabit ? dersRengi(v) : pal[i % Math.max(1, pal.length)] || a.vurgu) }));
 }
 
 const sirala = (list: AQ[], a: Ayar): AQ[] => {
@@ -277,7 +279,7 @@ export interface Sayfa {
 export interface Belge {
   sayfalar: Sayfa[];
   hs: HS[];
-  /** ızgaraya sığmayıp kırpılan soru sayısı */
+  /** hücreye/kolona sığmayıp ölçek sınırında taşan blok sayısı (H572: ızgarada kırpılmaz, "Sığmayan sorular" bölümüne alınır) */
   tasan: number;
   /** önizlemede yalnız ilk sorular sayfalandıysa tahmini toplam sayfa */
   tahmini?: number;
@@ -307,6 +309,8 @@ export function belgeCss(a: Ayar, onizleme = false): string {
   const { w, h } = sayfaOlcu(a);
   const [kt, ks, ka, kl] = a.kenar;
   const ic = a.cerceve ? a.cerceveIc : 0;
+  // H572: çerçevesiz kapakta iç boşluk yoktu → logo/başlık sayfa kenarına yapışıyordu; kapak sadeyken 8 mm iç boşluk
+  const kapakIc = a.kapakStil === 'sade' ? 8 : ic;
   const vurgu = a.vurgu;
   const R = (k: Parameters<typeof ogeRenk>[1]) => ogeRenk(a, k);
   const zemin = R('sayfaZemin');
@@ -371,17 +375,19 @@ ${onizleme ? `html{background:#d4d7dd}body{padding:14px 0}.pg,.yp{margin:0 auto 
 .yp>div>.pg{transform:scale(${yp.olcek.toFixed(5)});transform-origin:0 0;break-after:auto;page-break-after:auto}
 ${a.yaprak === 'kitapcik' && !onizleme ? '' : a.yaprak !== 'tek' ? `.yp>div+div::before{content:'';position:absolute;left:-.3pt;top:0;bottom:0;border-left:.3pt dashed ${R('kesim')};opacity:.6}` : ''}
 .pg-in{height:100%;position:relative;${a.cerceve ? `border:${a.cerceveKalin}pt ${a.cerceveStil} ${a.cerceveRenk};border-radius:${a.cerceveYaricap}mm;padding:${ic}mm;` : ''}${desen}}
+.pg.kpk .pg-in{padding:${kapakIc}mm}
 .pg-logo{height:${a.logoYuk}mm;width:auto;max-width:60mm;object-fit:contain;flex:none;display:block}
 .pg-not{height:${a.notAlani + NOT_PAY_MM}mm;padding-top:${NOT_PAY_MM - 1.5}mm;position:relative;z-index:1;overflow:hidden}
 .pg-not b{display:block;font-size:${Math.max(6.5, a.punto * 0.72)}pt;color:${R('altBilgi')};line-height:1.2;margin-bottom:.6mm;font-weight:600}
 .pg-not i{display:block;height:${(a.punto * a.satir * 1.35).toFixed(2)}pt;border-bottom:.5pt solid ${R('notCizgi')}}
 .fil{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:0}
 .fil span{transform:rotate(-32deg);font-size:${Math.min(w, h) / 7}mm;font-weight:800;font-family:${basF};color:${R('filigran')};opacity:.06;white-space:nowrap;letter-spacing:.04em}
-.pg-bas{height:${BASLIK_MM}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;padding-bottom:2.2mm;border-bottom:1.1pt solid ${R('baslikCizgi')};position:relative;z-index:1;${baslikKutu}}
+.pg-bas{min-height:${baslikYukMm(a, true).toFixed(2)}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;padding-bottom:2.2mm;border-bottom:1.1pt solid ${R('baslikCizgi')};position:relative;z-index:1;${baslikKutu}}
 .pg-bas.orta{justify-content:center;text-align:center}
 .pg-bas.orta .bl{flex:1}
-.pg-bas h1{margin:0;font-family:${basF};font-size:${Math.min(16, a.punto * a.baslikOran)}pt;line-height:1.15;color:${baslikRenk};font-weight:${a.baslikAgirlik};${buyukCss(a.baslikBuyuk)}white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pg-bas p{margin:.6mm 0 0;font-size:${Math.max(7, a.punto * 0.8)}pt;line-height:1.2;color:${baslikAlt};white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* H572: uzun başlık tek satırda kırpılıyordu (ölçüm: 438 px taşma); artık iki satıra kadar sarar, ötesi üç nokta */
+.pg-bas h1{margin:0;font-family:${basF};font-size:${Math.min(16, a.punto * a.baslikOran)}pt;line-height:1.15;color:${baslikRenk};font-weight:${a.baslikAgirlik};${buyukCss(a.baslikBuyuk)}overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.pg-bas p{margin:.6mm 0 0;font-size:${Math.max(7, a.punto * 0.8)}pt;line-height:1.2;color:${baslikAlt};overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
 .pg-bas .bl{min-width:0;display:flex;align-items:flex-end;gap:3mm}
 .pg-bas .bl>div{min-width:0}
 .pg-bas .br{flex:none;display:grid;gap:1.6mm;font-size:${Math.max(7, a.punto * 0.78)}pt;color:${baslikAlt};text-align:left}
@@ -392,8 +398,9 @@ ${a.yaprak === 'kitapcik' && !onizleme ? '' : a.yaprak !== 'tek' ? `.yp>div+div:
 .pg-gv{position:relative;z-index:1;overflow:hidden}
 .pg-serit{height:${SERIT_MM}mm;border-top:.6pt dashed ${R('ayirici')};padding-top:1.4mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;line-height:1.35;color:${R('cozumMetin')};overflow:hidden;position:relative;z-index:1}
 .pg-serit b{color:${R('cevapHarfi')}}
-.pg-alt{height:${ALT_MM}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:3mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;color:${R('altBilgi')};position:relative;z-index:1;${a.altCizgi ? `border-top:.5pt solid ${R('anahtarKenar')};` : ''}}
-.pg-alt>span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-alt{min-height:${altYukMm(a).toFixed(2)}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:3mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;line-height:1.35;color:${R('altBilgi')};position:relative;z-index:1;${a.altCizgi ? `border-top:.5pt solid ${R('anahtarKenar')};` : ''}}
+/* H572: uzun alt metin tek satırda kesilmiyordu; artık en çok ALT_SATIR_EN_COK satıra sarar, ötesi üç noktayla biter */
+.pg-alt>span{flex:1;min-width:0;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:${ALT_SATIR_EN_COK};overflow:hidden}
 .pg-alt>span:nth-child(2){text-align:center}.pg-alt>span:nth-child(3){text-align:right}
 .izg{display:grid;height:100%}
 .hc{overflow:hidden;position:relative;min-width:0}
@@ -461,7 +468,10 @@ ${a.grupStil === 'sade' ? `.gb{padding:.1em 0}` : ''}
 .opt div{height:${OPTIK_H}mm;display:flex;align-items:center;gap:1.6mm;font-size:8pt;border-bottom:.4pt solid color-mix(in srgb,${R('optik')} 50%,${zemin})}
 .opt b{width:8mm;text-align:right;font-weight:700}
 .opt i{width:4.6mm;height:4.6mm;border-radius:50%;border:.6pt solid ${R('optik')};display:grid;place-items:center;font-style:normal;font-size:6pt;color:${R('optik')}}
-.kp{height:100%;display:flex;flex-direction:column;justify-content:center;gap:7mm;padding:0 6mm;position:relative;z-index:1}
+/* H572: uzun kapak notu/ders listesi içerik taşırırsa ortalanmış sütun her iki uçtan taşıyordu; artık kaydırılabilir
+   (basılı belgede görünmez çubuk) ve üstten hizalı taşma yerine güvenli iç boşlukla sığar */
+.kp{height:100%;display:flex;flex-direction:column;justify-content:center;gap:7mm;padding:0 6mm;position:relative;z-index:1;overflow:auto}
+.kp>*{flex:none}
 ${a.kapakStil === 'bant' ? `.kp{border-left:4mm solid ${kapakZemin};padding-left:8mm}` : ''}
 ${a.kapakStil === 'zemin' ? `.pg.kpk{background:${kapakZemin}}.pg.kpk .pg-in{border-color:color-mix(in srgb,${zemin} 50%,${kapakZemin})}.kp{color:${zemin}}.kp .ust,.kp h1,.kp h2,.kp .sy b,.kp .sy span,.kp .not,.kp .alan,.kp .lj{color:${zemin}}.kp .sy div{border-color:color-mix(in srgb,${zemin} 55%,${kapakZemin})}.kp .yon{background:color-mix(in srgb,${zemin} 14%,${kapakZemin});border-color:${zemin};color:${zemin}}.kp .alan i{border-color:${zemin}}.kp .kpn{color:${zemin}}` : ''}
 .kp .kpn{margin:0;font-size:10pt;line-height:1.5;white-space:pre-wrap;color:${R('kapakNot')}}
@@ -717,11 +727,20 @@ function sayfalaEs(hs: HS[], a: Ayar, olcer: Olcer, tahminToplam: number | undef
   if (a.kapak) sayfalar.push({ tur: 'kapak', g: govde({ ...a, baslikAcik: false, sayfaNo: false, altMetin: '' }, { ilk: false, serit: false, grup: false }) });
 
   /* ---- ızgara: en üst katman sayfa bandı + sayfa kırılımı; alt katmanlar hücre içinde küçük başlık ---- */
+  /**
+   * H572: Hücreye en küçük ölçekte (MIN_K) de sığmayan soru artık KIRPILMIYOR. Eskiden soru hücreye konup
+   * `overflow:hidden` ile kesiliyordu: PDF'te sorunun son şıkları / bir kısmı sessizce kayboluyordu.
+   * Bu sorular sayfadan çıkarılıp belgenin sonunda TAM GENİŞLİK tek sütun sayfalara yerleştirilir (akış koridoru);
+   * böylece hiçbir metin kaybolmaz. Tamamen boş kalan ızgara sayfası hiç üretilmez. Taşma olmayan sayfalar
+   * değişmez; PDF sayfa sayısı yalnız gerektiğinde artar. Taşan sayısı `tasan`da raporlanır (önizleme uyarısı).
+   */
   if (a.duzen !== 'akis') {
     const n = a.duzen;
     const { sut, sat } = izgara(a, n);
     const buyut = a.sigdir === 'doldur';
     const basliklar = katmanBasliklari(hs, a, k0, 1);
+    // taşan sorular blok olarak burada birikir; döngüden sonra tam genişlikte yerleştirilir
+    const tasanBloklar: { blok: Blok; basliklar?: GrupBlok[] }[] = [];
     let i = 0;
     while (i < hs.length) {
       const g = govde(a, { ilk: ilkMi(), serit, grup: grupVar });
@@ -742,12 +761,22 @@ function sayfalaEs(hs: HS[], a: Ayar, olcer: Olcer, tahminToplam: number | undef
       const ortak = buyut ? Math.min(...sig.map((f) => Math.max(f.k, k0))) : k0;
       const hucre: (Blok | null)[] = parca.map((h, j) => {
         const f = sig[j];
-        if (f.tasma) tasan++;
-        return { t: 'soru', h, k: buyut && f.k >= k0 ? ortak : f.k, tasma: f.tasma, basliklar: basliklar[bas + j].length ? basliklar[bas + j] : undefined };
+        // sığmayan soru ızgaraya konmaz (boş hücre bırakılır), tam genişlik sayfaya aktarılır
+        if (f.tasma) {
+          tasan++;
+          tasanBloklar.push({ blok: { t: 'soru', h, k: k0 }, basliklar: basliklar[bas + j].length ? basliklar[bas + j] : undefined });
+          return null;
+        }
+        return { t: 'soru', h, k: buyut && f.k >= k0 ? ortak : f.k, tasma: false, basliklar: basliklar[bas + j].length ? basliklar[bas + j] : undefined };
       });
       while (hucre.length < n) hucre.push(null);
+      // H572: sayfadaki soruların hepsi sığmadıysa ızgara sayfası boş kalır → hiç üretilmez (tamamen boş sayfa yok)
+      const hucreDolu = hucre.filter(Boolean);
+      if (!hucreDolu.length) continue;
       const bant = grupVar ? { ad: grup, renk: parca[0].grupRenk[0] ?? bantRenk(parca[0]) } : undefined;
-      sayfalar.push({ tur: 'soru', g, izgara: { sut, sat, cw, ch }, hucre, bant, dolu: parca.length / n, serit: serit ? parca.map((h) => ({ no: h.no, harf: h.dogru || '—' })) : undefined });
+      const sayfada = new Set(hucreDolu.map((h) => (h as { h: HS }).h));
+      const sayfaHs = parca.filter((h) => sayfada.has(h));
+      sayfalar.push({ tur: 'soru', g, izgara: { sut, sat, cw, ch }, hucre, bant, dolu: sayfaHs.length / n, serit: serit ? sayfaHs.map((h) => ({ no: h.no, harf: h.dogru || '—' })) : undefined });
       if (a.cozumYeri === 'arkada') {
         const g2 = govde(a, { ilk: false, serit: false, grup: grupVar });
         const ch2 = (g2.h - (sat - 1) * a.hucreAralik) / sat;
@@ -764,6 +793,45 @@ function sayfalaEs(hs: HS[], a: Ayar, olcer: Olcer, tahminToplam: number | undef
         }
         sayfalar.push({ tur: 'cozum', g: g2, izgara: { sut, sat, cw, ch: ch2 }, hucre: arka, dolu: parca.length / n, bant: { ad: `Çözümler${bant ? ` · ${bant.ad}` : ''}`, renk: bant?.renk || null } });
       }
+    }
+    // taşan sorular: akış koridorunda, tam genişlik, tek sütun (kırpılmaz, sayfa taşarsa ölçek küçülür)
+    if (tasanBloklar.length) {
+      const bloklar: Blok[] = tasanBloklar.flatMap((x) => [...(x.basliklar || []), x.blok]);
+      zorunluAkis(bloklar, 'soru', 'Sığmayan sorular');
+    }
+  }
+
+  /**
+   * H572: Izgaraya sığmayan sorular için tam genişlik, tek sütunlu akış koridoru. `akisYerlestir`den ayrı tutulur:
+   * bu bloklar "arkada" çözüm akışını tetiklemez, kendi başlık bandıyla (`Sığmayan sorular`) başlar.
+   * Hâlâ tek sayfaya sığmayan uzun soru tek başına bir sayfaya konur; orada ölçek küçültülür, metin kırpılmaz.
+   */
+  function zorunluAkis(bloklar: Blok[], tur: 'soru' | 'cozum', bolum: string) {
+    if (!bloklar.length) return;
+    const yeni = () => {
+      const g = govde(a, { ilk: tur === 'soru' ? ilkMi() : false, serit: tur === 'soru' && serit, grup: true });
+      const p: Sayfa = { tur, g, kolon: [[]], kolonW: g.w, bant: { ad: bolum, renk: null }, serit: tur === 'soru' && serit ? [] : undefined, dolu: 0 };
+      sayfalar.push(p);
+      return p;
+    };
+    let p = yeni();
+    let kalan = pxMm(p.g.h);
+    for (const b of bloklar) {
+      let h = olcer.tek(html(b), p.kolonW!);
+      if (h > kalan && p.kolon![0].length) { p = yeni(); kalan = pxMm(p.g.h); }
+      let k = k0;
+      let tasma = false;
+      if (h > kalan) {
+        const f = olcer.sigdir((kk) => html(b, kk), p.kolonW!, kalan, h, k0);
+        k = f.k;
+        tasma = !!f.tasma;
+        if (tasma) tasan++;
+        h = olcer.tek(html(b, k), p.kolonW!);
+      }
+      p.kolon![0].push(b.t === 'grup' ? b : { ...b, k, tasma });
+      if (b.t === 'soru') p.serit?.push({ no: b.h.no, harf: b.h.dogru || '—' });
+      kalan -= h;
+      p.dolu = (p.dolu || 0) + h / pxMm(p.g.h);
     }
   }
 

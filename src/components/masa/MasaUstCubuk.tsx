@@ -53,7 +53,12 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
   };
   const sec = (fn: () => void) => () => { setMenu(false); fn(); };
   const elMetni = `El ${oda.elNo}${oda.ayar.elSayisi ? `/${oda.ayar.elSayisi}` : ''}`;
-  const cezali = okey && oda.oyun ? (oda.oyun as OkeyGorunum).oyuncular.filter((o) => o.cezalar?.length) : [];
+  // H572: sunucudan gelen eski biçimli oyun durumunda `oyuncu.cezalar` yok; `?.` yalnız alanı korur, filter'ın
+  // kendisi çöküyordu ("Cannot read properties of undefined (reading 'filter')" → /sorular/oyunlar). Önce dizi
+  // olduğundan emin olunur.
+  const cezali = okey && oda.oyun && Array.isArray((oda.oyun as OkeyGorunum).oyuncular)
+    ? (oda.oyun as OkeyGorunum).oyuncular.filter((o) => Array.isArray(o?.cezalar) && o.cezalar.length)
+    : [];
 
   return (
     <header className="mk-cubuk">
@@ -156,7 +161,7 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
                 {cezali.map((o) => (
                   <li key={o.id}>
                     <b>{sadeAd(oyuncuAdi(oda, o.id))}</b>
-                    <span>{o.cezalar.map((c, i) => <i key={i} className={`mk-ceza-rozet ${cezaBilgi(c).sinif}`}>{cezaBilgi(c).ad} <em>{puanYaz(c.puan)}</em></i>)}</span>
+                    <span>{(o.cezalar || []).map((c, i) => <i key={i} className={`mk-ceza-rozet ${cezaBilgi(c).sinif}`}>{cezaBilgi(c).ad} <em>{puanYaz(c.puan)}</em></i>)}</span>
                   </li>
                 ))}
               </ul>

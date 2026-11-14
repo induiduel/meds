@@ -14,9 +14,9 @@ export const CEZA_BILGI: Record<string, { kisa: string; ad: string }> = {
 };
 
 export function CezaRozetleri({ o }: { o: OkeyOyuncuGorunum }) {
-  if (!o.cezalar.length) return null;
+  if (!o.cezalar?.length) return null;
   const say = new Map<string, number>();
-  for (const c of o.cezalar) say.set(c.tur, (say.get(c.tur) || 0) + 1);
+  for (const c of o.cezalar || []) say.set(c.tur, (say.get(c.tur) || 0) + 1);
   return (
     <span className="om-cezalar">
       {[...say].map(([tur, n]) => (

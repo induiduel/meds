@@ -12,7 +12,7 @@ import {
   cozumBos, cozumIcerik, etiketler, harfMetni, numaraMetni, parcala, KOLON_ARA, MIN_K,
   type Belge, type Blok, type HS, type Sayfa,
 } from './belge';
-import { ALT_MM, BASLIK_MM, GRUP_MM, SERIT_MM, YAZI, baslikYazi, ogeRenk, sayfaOlcu, type Ayar, type HarfBuyuk, type MetinStil } from './ayar';
+import { GRUP_MM, SERIT_MM, YAZI, altYukMm, baslikYazi, baslikYukMm, ogeRenk, sayfaOlcu, type Ayar, type HarfBuyuk, type MetinStil } from './ayar';
 import { kaynakAdi } from './kaynak';
 
 const tw = (mm: number) => Math.max(0, Math.round(mm * 56.6929));
@@ -217,7 +217,8 @@ function baslikTablo(a: Ayar, w: number): string {
   const sagIc = (a.adSoyad ? alan('Ad Soyad:') : '') + (a.tarih ? alan('Tarih:') : '');
   const kenar = `<w:tcBorders><w:bottom w:val="single" w:sz="9" w:color="${hex(ogeRenk(a, 'baslikCizgi'))}"/></w:tcBorders>`;
   const hucre = (gen: number, ic: string) => `<w:tc><w:tcPr><w:tcW w:w="${gen}" w:type="dxa"/>${kenar}<w:vAlign w:val="bottom"/></w:tcPr>${ic || BOS_P}</w:tc>`;
-  return tablo([w - sag, sag], [tr(hucre(w - sag, sol) + hucre(sag, sagIc), BASLIK_MM - 0.4)]);
+  // H572: başlık yüksekliği logoyu/alt başlığı kapsar (govde() ile aynı ölçü), sabit 16 mm değil
+  return tablo([w - sag, sag], [tr(hucre(w - sag, sol) + hucre(sag, sagIc), baslikYukMm(a, true) - 0.4)]);
 }
 
 const bantPara = (ad: string, renk: string | null, a: Ayar) =>
@@ -376,8 +377,8 @@ export async function docxUret(belge: Belge, a: Ayar): Promise<Blob> {
     : '';
   const sectPr = (b: Bolum, ilkSayfaNo: boolean, devam: boolean) => {
     const ust = b.ustBilgi && !b.kapak;
-    const top = a.kenar[0] + ic + (ust ? BASLIK_MM : 0);
-    const bottom = a.kenar[2] + ic + (altVar && !b.kapak ? ALT_MM : 0);
+    const top = a.kenar[0] + ic + (ust ? baslikYukMm(a, true) : 0);
+    const bottom = a.kenar[2] + ic + (altVar && !b.kapak ? altYukMm(a) : 0);
     return `<w:sectPr>${ust ? '<w:headerReference w:type="default" r:id="rIdBas"/>' : ''}${!b.kapak && altVar ? '<w:footerReference w:type="default" r:id="rIdAlt"/>' : ''}<w:type w:val="${devam ? 'continuous' : 'nextPage'}"/><w:pgSz w:w="${tw(PW)}" w:h="${tw(PH)}"${PW > PH ? ' w:orient="landscape"' : ''}/><w:pgMar w:top="${tw(top)}" w:right="${tw(a.kenar[1] + ic)}" w:bottom="${tw(bottom)}" w:left="${tw(a.kenar[3] + ic)}" w:header="${tw(a.kenar[0] + ic)}" w:footer="${tw(Math.max(2, a.kenar[2] + ic))}" w:gutter="0"/>${b.kapak ? '' : kenarlik}${ilkSayfaNo ? '<w:pgNumType w:start="1"/>' : ''}<w:cols w:num="${b.sutun}" w:space="${tw(KOLON_ARA)}"${b.sutun > 1 && a.sutunCizgi ? ' w:sep="1"' : ''}/>${b.kapak ? '<w:vAlign w:val="center"/>' : ''}</w:sectPr>`;
   };
   let govdeXml = '';

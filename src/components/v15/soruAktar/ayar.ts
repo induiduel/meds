@@ -470,8 +470,23 @@ export const PALETLER: Record<PaletId, { ad: string; renk: string[] }> = {
   ofis: { ad: 'Ofis', renk: ['#4472c4', '#ed7d31', '#a5a5a5', '#ffc000', '#5b9bd5', '#70ad47', '#264478', '#9e480e', '#636363', '#997300'] },
   ozel: { ad: 'Kendi paletim', renk: [] },
 };
-/** Renk anahtarının paleti: 'ozel' kullanıcının kendi listesi (boşsa Canlı) */
-export const paletRenkleri = (a: Ayar): string[] => (a.palet === 'ozel' ? (a.paletOzel.length ? a.paletOzel : PALETLER.canli.renk) : PALETLER[a.palet]?.renk || PALETLER.canli.renk);
+/**
+ * Renk anahtarının paleti: 'ozel' kullanıcının kendi listesi (boşsa Canlı).
+ * H572: `a.palet` localStorage'daki eski ayardan ya da bozuk bir şablondan tanınmayan bir değer olabilir; burada
+ * ve `paletRenkleri`nin TÜM çağrılarında tanınmayan değer Canlı'ya düşer. Eskiden `renkHaritasi` doğrudan
+ * `PALETLER[a.palet].renk` okuyordu; tanınmayan palet tüm dışa aktarıcı ekranını çökertiyordu (React #306 /
+ * "undefined is not an object"). Palet erişimi artık yalnız buradan yapılır, koda çıplak `PALETLER[…].renk` yazılmaz.
+ */
+export const paletRenkleri = (a: Ayar): string[] => {
+  const secili = (PALETLER as Record<string, { ad: string; renk: string[] } | undefined>)[String(a.palet)];
+  if (a.palet === 'ozel') return a.paletOzel?.length ? a.paletOzel : PALETLER.canli.renk;
+  return secili?.renk?.length ? secili.renk : PALETLER.canli.renk;
+};
+/** Tanınmayan palet adını Canlı'ya çeker (kayıttan/şablondan gelen ayar için) */
+export const paletNormal = (v: unknown): PaletId => {
+  const k = String(v ?? '');
+  return Object.prototype.hasOwnProperty.call(PALETLER, k) && k !== 'ozel' ? (k as PaletId) : 'canli';
+};
 
 const ORTAK: Ayar = {
   tasarim: 'sinav', bicim: 'pdf', kagit: 'a4', yatay: false, slayt: 'genis', duzen: 'akis', sutun: 2,
@@ -564,6 +579,8 @@ export function ayarNormal(raw: any): Ayar {
   a.sikGirinti = Math.min(12, Math.max(0, Number(a.sikGirinti) || 0));
   if (!TEMALAR.some((t) => t.id === a.tema)) a.tema = 'klasik';
   if (!PALETLER[a.palet as PaletId]) a.palet = 'canli';
+  // H572: tanınmayan palet adı (eski kayıt, bozuk şablon) Canlı'ya çekilir; 'ozel' korunur
+  else if (a.palet !== 'ozel') a.palet = paletNormal(a.palet);
   const hexMi = (v: unknown) => typeof v === 'string' && /^#[0-9a-f]{6}([0-9a-f]{2})?$/i.test(v);
   a.paletOzel = (Array.isArray(a.paletOzel) ? a.paletOzel : []).filter(hexMi).slice(0, 24);
   a.renkler = Object.fromEntries(Object.entries(a.renkler || {}).filter(([k, v]) => RENK_OGELERI.some((o) => o.id === k) && hexMi(v)));
@@ -604,12 +621,35 @@ export function ayarNormal(raw: any): Ayar {
 export const PX_MM = 96 / 25.4;
 export const BASLIK_MM = 16;
 export const ALT_MM = 7;
+/** Alt bölgede izin verilen en çok satır: tek satırlık alt bilgi uzun metinle kesilmesin (H572) */
+export const ALT_SATIR_EN_COK = 2;
 export const SERIT_MM = 11;
 export const GRUP_MM = 9;
 /** not alanının başlık + üst boşluk payı (mm) */
 export const NOT_PAY_MM = 4;
 /** alt bilgi var mı: sayfa numarası ya da üç bölgeden birinde metin */
 export const altBilgiVar = (a: Ayar) => a.sayfaNo || !!(a.altMetin || '').trim() || !!(a.altOrta || '').trim() || !!(a.altSag || '').trim();
+/**
+ * Sayfa başlığı bandının gerçek yüksekliği (mm). H572: eskiden sabit 16 mm varsayılıyordu; logo 16 mm'den yüksek
+ * seçilince logo başlık kutusundan taşıp gövdenin üstüne biniyordu (ölçüm: 24 mm logo → 91 px, kutu 60 px).
+ * Artık ölçü logoyu da kapsar: taban 16 mm + logo yüksekliği 10 mm'yi aşan kısmı + alt başlık satırı için pay.
+ */
+export function baslikYukMm(a: Ayar, baslikVar: boolean): number {
+  if (!baslikVar) return 0;
+  const logo = a.logo && (a.logoYer === 'baslik' || a.logoYer === 'ikisi') ? Math.max(0, a.logoYuk - 10) : 0;
+  const alt = (a.altBaslik || '').trim() ? 2.6 : 0;
+  return BASLIK_MM + logo + alt;
+}
+/**
+ * Alt bilgi bandının gerçek yüksekliği (mm): alt bilgi satırları iki satıra kadar sarar; eskiden sabit 7 mm
+ * varsayılıyordu, uzun alt metin kutunun dışına taşıp kesiliyordu (H572). Satır yüksekliği punto ile ölçeklenir.
+ */
+export function altYukMm(a: Ayar): number {
+  if (!altBilgiVar(a)) return 0;
+  const punto = Math.max(6.5, a.punto * 0.72);
+  const satirH = (punto * 1.35 * 0.3528); // mm
+  return Math.max(ALT_MM, Math.round((satirH * ALT_SATIR_EN_COK + 1.2) * 10) / 10);
+}
 
 /** Sayfa aralığı metni ("1-4, 7") → sayfa numarası kümesi; boş/bozuk = null (tümü). Kapak 0 sayılır */
 export function sayfaAraligi(t: string): Set<number> | null {
@@ -660,10 +700,10 @@ export function govde(a: Ayar, o: { ilk: boolean; serit: boolean; grup: boolean 
   const { w, h } = sayfaOlcu(a);
   const ic = a.cerceve ? a.cerceveIc + a.cerceveKalin * 0.35 : 0;
   const baslik = a.baslikAcik && (o.ilk || a.baslikHerSayfa);
-  const altVar = altBilgiVar(a);
   const gw = w - a.kenar[1] - a.kenar[3] - ic * 2;
   const not = a.notAlani > 0 ? a.notAlani + NOT_PAY_MM : 0;
-  const gh = h - a.kenar[0] - a.kenar[2] - ic * 2 - (baslik ? BASLIK_MM : 0) - (altVar ? ALT_MM : 0) - (o.serit ? SERIT_MM : 0) - (o.grup ? GRUP_MM : 0) - not;
+  // H572: başlık ve alt bilgi yüksekliği sabit değil, gerçek ölçüden (logo, alt başlık, alt metin satırları) gelir
+  const gh = h - a.kenar[0] - a.kenar[2] - ic * 2 - baslikYukMm(a, baslik) - altYukMm(a) - (o.serit ? SERIT_MM : 0) - (o.grup ? GRUP_MM : 0) - not;
   return { w: Math.max(20, gw), h: Math.max(20, gh), baslik };
 }
 
