@@ -627,6 +627,8 @@ export const SERIT_MM = 11;
 export const GRUP_MM = 9;
 /** not alanının başlık + üst boşluk payı (mm) */
 export const NOT_PAY_MM = 4;
+/** baskı toleransı (mm): Chrome'un baskı dizgisi ölçümden birkaç px farklı olabilir (H575) */
+export const BASKI_PAY_MM = 1.2;
 /** alt bilgi var mı: sayfa numarası ya da üç bölgeden birinde metin */
 export const altBilgiVar = (a: Ayar) => a.sayfaNo || !!(a.altMetin || '').trim() || !!(a.altOrta || '').trim() || !!(a.altSag || '').trim();
 /**
@@ -703,7 +705,9 @@ export function govde(a: Ayar, o: { ilk: boolean; serit: boolean; grup: boolean 
   const gw = w - a.kenar[1] - a.kenar[3] - ic * 2;
   const not = a.notAlani > 0 ? a.notAlani + NOT_PAY_MM : 0;
   // H572: başlık ve alt bilgi yüksekliği sabit değil, gerçek ölçüden (logo, alt başlık, alt metin satırları) gelir
-  const gh = h - a.kenar[0] - a.kenar[2] - ic * 2 - baslikYukMm(a, baslik) - altYukMm(a) - (o.serit ? SERIT_MM : 0) - (o.grup ? GRUP_MM : 0) - not;
+  // H575: baskı motoru ölçümden 1-2 px farklı diziyor; sıfır boşlukta son satır .pg-gv/.hc kırpma altında kalır.
+  // Gövdeden baskı toleransı düşülür: küçük artışlar payı yer, metin asla kırpılmaz.
+  const gh = h - a.kenar[0] - a.kenar[2] - ic * 2 - baslikYukMm(a, baslik) - altYukMm(a) - (o.serit ? SERIT_MM : 0) - (o.grup ? GRUP_MM : 0) - not - BASKI_PAY_MM;
   return { w: Math.max(20, gw), h: Math.max(20, gh), baslik };
 }
 

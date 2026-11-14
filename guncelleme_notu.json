@@ -1,14 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 720,
-  "baslik": "Soru dışa aktarıcı: sayfayı yenile ekranı ve PDF'te kesilen/üst üste binen metin düzeltildi",
+  "onem": 721,
+  "baslik": "Soru dışa aktarıcı PDF: sayfa altında metin kesilmesine karşı baskı toleransı",
   "maddeler": [
-    "Soru dışa aktarıcı bazen çöküp \"sayfayı yenile\" ekranı gösteriyordu; renk paleti ayarındaki bozuk/eksik değer artık ekranı düşürmüyor, Canlı palete dönüyor.",
-    "PDF, Word ve PowerPoint çıktısında logo başlık kutusuna sığıyor; alt bilgi ile üst üste binme bitti.",
-    "Uzun alt bilgi ve uzun başlık artık kesilmiyor: alt bilgi iki satıra, başlık iki satıra kadar sarıyor.",
-    "Izgarada (2/4/8'li) hücreye sığmayan soru kırpılmıyor; belgenin sonunda tam genişlik \"Sığmayan sorular\" sayfasına alınıyor, hiçbir metin kaybolmuyor.",
-    "Güncelleme sonrası \"yeni sürüm hazır\" ekranında kalma döngüsü giderildi: yenilemeden önce önbellek kendiliğinden tazeleniyor.",
-    "Oyunlar sayfasında masaya girerken oluşan çökme giderildi."
+    "PDF çıktısında sayfanın en alt satırının/şıkların kesik kalma riski giderildi: sayfa yerleşimi artık baskı motorunun piksel farklarını karşılayan küçük bir toleransla hesaplanıyor.",
+    "Dört çıktı kipi (normal akış, 4'lü ızgara, kitapçık, sayfa altı cevap) gerçek indirme akışıyla uçtan uca sınandı; soru ve şık metinlerinin tamamı PDF'te doğrulandı."
   ],
   "eklenen": [
     "Soru dışa aktarıcı › metin kaybı yok: ızgaraya sığmayan sorular tam genişlik \"Sığmayan sorular\" bölümüne alınır",
