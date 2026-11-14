@@ -1,3 +1,10 @@
+## 2026-11-15 — Soru dışa aktarıcı PDF: sayfa kutusu kâğıttan kısa basıldı, alt bilgi üstüne binmesi yapısal olarak kapatıldı (H576, onem 722, kullanıcı bildirdi)
+- **İstek:** "Alt bilgi satırında sayfa sayısı bilgisi yazsa bile bir katman oluşturup diğer metnin üstünü kaplayarak sorun teşkil ediyor." (Çıktı türü: PDF dosyası.)
+- **Kök neden:** `.pg`/`.yp` kutusu `@page` ölçüsüne eşit kuruluyordu. HTML'de alt bilgi akış içinde olduğundan üstüne binemez; ama Chrome baskı dizgisi kutuyu yarım piksel büyütürse kutuyu parçalayıp taşanı SONRAKİ basılı sayfanın içeriğinin üstüne basar (sayfa sayısı değişmez). Alt bilgi en altta olduğundan en sık o taşar.
+- **Çözüm:** `belge.ts`: `.pg` ve `.yp` yüksekliği `${ölçü − 0,25 mm}`. Kutu her zaman kâğıda sığar; baskı parçalaması olanaksızlaşır. `npm run lint` 0 hata, `npx vite build` ✓.
+- **Kural:** Sabit sayfa kutusu kâğıda eşit ölçülmez; "eşit" yuvarlamada "büyük" demektir. Ayrıntı: `docs/KURUL2_YAPILMAYACAK_HATALAR.md` H576.
+- **Dosya:** `src/components/v15/soruAktar/belge.ts` (yalnız).
+
 ## 2026-11-15 — Soru dışa aktarıcı PDF: sıfır boşluklu gövdeye baskı toleransı (H575, onem 721, kullanıcı bildirdi)
 - **İstek:** "Soru dışa aktarıcıda PDF oluştururken sayfanın alt kısmında soruların veya şıkların metinlerinin kesik kalması veya görüntülenmemesi sorunu devam etmekte." (H572 düzeltmelerinden sonra tekrar bildirdi.)
 - **Kanıt:** Canlı sitede gerçek "PDF indir" akışı dört kipte birebir yinelendi (varsayılan akış 2.345 sayfa, 4'lü ızgara 2.953, kitapçık 1.174, sayfaAlti 672): DOM taşması 0, pdftotext boşluksuz karşılaştırmada önizlemedeki 60 sorunun kök+şık metinlerinin tamamı PDF'te, sayfa alt 30 pt'sine giren sözcük 0. Yayın bu kiplerde metin kaybetmiyor; kalan risk: Chrome baskı dizgisi ölçümden 1–2 px farklı dizebilir, sıfır boşluk + `overflow:hidden` ile son satır sessizce kırpılır.

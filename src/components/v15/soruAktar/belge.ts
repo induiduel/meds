@@ -366,10 +366,14 @@ export function belgeCss(a: Ayar, onizleme = false): string {
 html,body{margin:0;padding:0}
 body{font-family:${YAZI[a.yazi].css};font-weight:${a.agirlik};color:${a.metinRenk};-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:${a.punto}pt;line-height:${a.satir};letter-spacing:${a.harfAralik}em;text-rendering:geometricPrecision;font-kerning:normal}
 ${onizleme ? `html{background:#d4d7dd}body{padding:14px 0}.pg,.yp{margin:0 auto 14px;box-shadow:0 2px 10px rgb(0 0 0 / .18)}.yp .pg{margin:0;box-shadow:none}` : ''}
-.pg{width:${w}mm;height:${h}mm;padding:${kt}mm ${ks}mm ${ka}mm ${kl}mm;position:relative;overflow:hidden;background:${zemin};break-after:page;page-break-after:always}
+/* H576: sayfa kutusu kâğıttan KISA basılır (0,25 mm). Kutu kâğıttan büyük ya da eşitse Chrome baskıda
+ * yarım piksellik büyümede bile kutuyu parçalayıp taşanı SONRAKİ basılı sayfanın üstüne basar; alt bilgi
+ * en altta durduğu için en çok o üstüne biner ("alt bilgi diğer metni kapatıyor"). 0,25 mm boşluk
+ * gövde toleransının (BASKI_PAY_MM) içinde kaldığından içerik kırpılmaz. */
+.pg{width:${w}mm;height:${(h - 0.25).toFixed(2)}mm;padding:${kt}mm ${ks}mm ${ka}mm ${kl}mm;position:relative;overflow:hidden;background:${zemin};break-after:page;page-break-after:always}
 .pg.cift{padding:${kt}mm ${kl}mm ${ka}mm ${ks}mm}
 .pg:last-child{break-after:auto;page-break-after:auto}
-.yp{width:${yp.w}mm;height:${yp.h}mm;display:flex;justify-content:center;align-items:center;overflow:hidden;background:${zemin};break-after:page;page-break-after:always;position:relative}
+.yp{width:${yp.w}mm;height:${(yp.h - 0.25).toFixed(2)}mm;display:flex;justify-content:center;align-items:center;overflow:hidden;background:${zemin};break-after:page;page-break-after:always;position:relative}
 .yp:last-child{break-after:auto;page-break-after:auto}
 .yp>div{width:${(w * yp.olcek).toFixed(3)}mm;height:${(h * yp.olcek).toFixed(3)}mm;overflow:hidden;flex:none;position:relative}
 .yp>div>.pg{transform:scale(${yp.olcek.toFixed(5)});transform-origin:0 0;break-after:auto;page-break-after:auto}

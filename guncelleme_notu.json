@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 721,
-  "baslik": "Soru dışa aktarıcı PDF: sayfa altında metin kesilmesine karşı baskı toleransı",
+  "onem": 722,
+  "baslik": "Soru dışa aktarıcı PDF: alt bilgi üstüne binmesi kökenden kapatıldı",
   "maddeler": [
-    "PDF çıktısında sayfanın en alt satırının/şıkların kesik kalma riski giderildi: sayfa yerleşimi artık baskı motorunun piksel farklarını karşılayan küçük bir toleransla hesaplanıyor.",
-    "Dört çıktı kipi (normal akış, 4'lü ızgara, kitapçık, sayfa altı cevap) gerçek indirme akışıyla uçtan uca sınandı; soru ve şık metinlerinin tamamı PDF'te doğrulandı."
+    "PDF'te alt bilgi satırının (sayfa numarası dahil) sonraki sayfanın metninin üstüne binmesi giderildi: sayfa kutuları artık kâğıttan 0,25 mm kısa basılıyor, baskı yuvarlaması ne yaparsa yapsın üst üste binme oluşamıyor."
   ],
   "eklenen": [
     "Soru dışa aktarıcı › metin kaybı yok: ızgaraya sığmayan sorular tam genişlik \"Sığmayan sorular\" bölümüne alınır",
