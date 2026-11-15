@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 730,
- "baslik": "Soru dışa aktarıcı: çok soruda PDF zaman aşımı düzeltildi",
+ "onem": 731,
+ "baslik": "Opioid Analjezikler dersi yayında (sesli ders + örnek sorular)",
  "maddeler": [
-  "Çok sayıda soru seçilip PDF indirilince (binlerce sayfalık belge) sunucu sabit 120 saniyede zaman aşımına uğrayıp belgeyi hiç üretemiyordu; ölçülüp (2800 sayfa ≈312 sn) tavan 10 dakikaya çıkarıldı. Belge boyutu üst sınırı da 25 MB'tan 60 MB'a yükseltildi.",
-  "Sunucuda PDF üretimi artık ısınmış bir Chrome havuzundan sekme açıp kapatıyor; her istekte sıfırdan Chrome işlemi açılıp kapanmıyor, indirme/yazdırma daha çabuk başlıyor.",
-  "Soru dışa aktarıcıda sayfa altındaki bilgi şeridinin zemini şeffaf yapıldı: bir sığdırma ölçüm hatası olsa bile sorunun metnini kapatmaz, taşma gizlenmek yerine görünür kalır."
+  "Kurul 2 Tıbbi Farmakoloji — Opioid Analjezikler ve Antagonistleri sesli dersi eklendi (71 slayt, 18 bölüm).",
+  "58 örnek soru, önem listesi (25 madde) ve sesli çözücü (34 soru) eklendi.",
+  "Terim (85) ve kısaltma (42) yardımcı katmanları ders sayfasına bağlandı."
  ],
  "eklenen": [],
  "degisen": [

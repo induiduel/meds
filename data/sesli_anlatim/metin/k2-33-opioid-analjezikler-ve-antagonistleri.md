@@ -1,0 +1,147 @@
+# Opioid Analjezikler ve Antagonistleri
+
+@@ Giriş: opioidler ve morfinin kaynağı
+Bu dersin konusu opioid analjezikler ve bunların antagonistleridir; önce bu ilaçların kaynağını ve temel kavramlarını, ardından mekanizmasını, etkilerini ve zehirlenmede kullanılan antagonistleri göreceğiz. Opioid agonistlerinin prototipi olan morfin, şiddetli ağrıya karşı uzun yıllardır kullanılan temel ilaçtır. Güçlü analjezikler karşılaştırıldığında morfin standart ilaç olarak önemini korur ve bu gruba opioid analjezikler adı verilir. Opioid terimi hem doğal ve yarı sentetik alkaloidleri, hem nalokson ile bloke edilen opioid benzeri ilaçları, hem de endojen opioid peptidleri kapsar.
+
+Morfinin kaynağı olan opium, haşhaş bitkisinden elde edilir. Haşhaş kapsüllerinin çizilmesiyle sızan beyaz madde koyulaşarak ham opiumu oluşturur. Opium çok sayıda alkaloid içerir ve en önemlisi, yaklaşık yüzde on oranında bulunan morfindir. Kodein ise ticari olarak morfinden sentezlenir. Opiat terimi yalnızca doğal alkaloidleri, yani morfin, kodein, tebain ve papaverini tanımlar.
+
+@@ Opioid reseptörleri ve agonist tipleri
+Opioid ilaçlar tam agonistleri, parsiyel agonistleri ve antagonistleri kapsar. Morfin, en önemli analjezik reseptör olan mü opioid reseptörünün tam agonistidir. Diğer reseptör alt tipleri arasında delta ve kappa opioid reseptörleri ile reseptör benzeri alt tip bir bulunur. Karışık agonist-antagonist olan nalbufin, bir reseptör alt tipinde agonist, diğerinde antagonist etki üretebilir. Kodein ise parsiyel, yani zayıf bir mü reseptör agonistidir. Tam agonist morfinin yapısı değiştirilerek güçlü mü reseptör antagonisti nalokson elde edilir.
+
+@@ Endojen opioid peptidler
+Opioid alkaloidlerin analjezik etkisini sağlayan merkezi sinir sistemi reseptörleri, bazı endojen peptidlerin etkilerine de aracılık eder. Bu maddelere endojen opioid peptidler denir. Üç endojen opioid peptid ailesi tanımlanmıştır: endorfinler, enkefalinler ve dinorfinler. Bu peptidler üç farklı prekürsör proteinden köken alır. Enkefalinler, mü reseptöre göre delta reseptöre biraz daha fazla afinite gösterir.
+
+Endomorfin bir ve endomorfin iki, analjezi ve mü reseptörüne yüksek afiniteyle bağlanma gibi opioid peptid özellikleri taşır. Doku zedelenmesi ve inflamasyon sonrası omuriliğin arka boynuzunda dinorfin düzeyi artar. Bu dinorfin artışının ağrıyı şiddetlendirdiği ve uzun süreli hiperaljeziyi tetiklediği düşünülür. Dinorfin ayrıca uyarıcı bir reseptör olan n metil d aspartat reseptörlerine bağlanarak onları aktive eder. Opioid peptidlere benzeyen yeni bir reseptör sistemi de bulunmuştur; ana reseptörü orfanin opioid reseptör benzeri tip birdir. Bu sistemin endojen ligandı nosiseptin, yani orphanin olarak adlandırılır ve sistem nosiseptin sistemi diye bilinir.
+
+@@ Farmakokinetik: emilim ve dağılım
+Şimdi dışarıdan verilen opioidlerin farmakokinetiğine geçiyoruz ve ilk başlık emilimdir. Opioid analjeziklerin çoğu deri altı, kas içi ve ağız yoluyla verildiğinde iyi emilir. Ancak ilk geçiş etkisi nedeniyle morfin gibi ilaçların ağızdan etkili dozu, parenteral dozdan çok daha yüksek olmak zorunda kalabilir. Kodein ve oksikodon, düşük ilk geçiş metabolizmaları nedeniyle ağızdan etkilidir. Diğer uygulama yolları arasında buruna sprey, ağız mukozasına pastil ve deriye yapıştırılan yama vardır.
+
+Dağılımda opioidler kandan hızla ayrılıp beyin, akciğer, karaciğer, böbrek ve dalak gibi çok kanlanan organlarda yüksek yoğunluğa ulaşır. İskelet kasındaki yoğunluk düşük olsa da kas kitlesinin büyüklüğü nedeniyle kas ana depo görevi görür. Metabolizmada opioidler büyük ölçüde polar metabolitlere, yani glukuronidlere dönüşür ve hızla böbreklerden atılır, bu nokta çıkmış sınavlarda sorulmuştur. Morfin, serbest hidroksil grupları nedeniyle önce uyarıcı özellikli morfin üç glukuronide dönüşür.
+
+Morfinin yaklaşık yüzde onu ise ana ilaçtan dört ila altı kat daha güçlü olan morfin altı glukuronide dönüşür. Bu metabolitler böbrek yetmezliğinde ya da uzun süreli yüksek doz morfinde birikerek beklenmeyen yan etkilere yol açabilir. Ester yapılı opioidler, örneğin heroin ve remifentanil, doku esterazları tarafından hızla parçalanır. Fenilpiperidin grubu, yani meperidin, fentanil, alfentanil ve sufentanil, başlıca karaciğerde oksidasyonla yıkılır. Meperidinin yıkım ürünü olan normeperidin birikerek yüksek dozda nöbetlere yol açabilir.
+
+Fentanil karaciğerdeki sitokrom enzimleriyle yıkılır ve bilinen aktif bir metaboliti yoktur. Kodein, oksikodon ve hidrokodon ise başka bir sitokrom enzimiyle daha güçlü metabolitlere çevrilir. Atılımda polar metabolitler ve glukuronid konjugatları başlıca idrarla, bir miktar da safrayla atılır.
+
+@@ Etki mekanizması ve hücresel etkiler
+Şimdi farmakodinamiye, yani etki mekanizmasına geçiyoruz. Opioid agonistleri, ağrının iletim ve düzenlenmesinde rol oynayan beyin ve omurilik bölgelerindeki g protein kenetli reseptörlere bağlanarak analjezi oluşturur. Üç ana opioid reseptör tipi vardır: mü, delta ve kappa; hepsi g protein kenetli reseptör ailesindendir. Her reseptörün ayrıca farmakolojik ölçütlere göre tanımlanmış alt tipleri gösterilmiştir. Bir opioid farklı reseptörlerde farklı güçte agonist, parsiyel agonist ya da antagonist olabildiği için çok çeşitli etkiler ortaya çıkar.
+
+Hücresel düzeyde opioid reseptörleri g proteinleriyle kenetlenir ve iyon kanallarını, hücre içi kalsiyum dağılımını ve protein fosforilasyonunu değiştirir. Opioidlerin iyi bilinen ilk etkisi, presinaptik uçlarda voltaj bağımlı kalsiyum kanallarını kapatarak transmiter salınımını azaltmaktır ve bu nokta çıkmış sınavlarda sorulmuştur. İkinci etkisi, potasyum kanallarını açarak postsinaptik nöronu hiperpolarize etmek ve böylece baskılamaktır. Günümüzde kullanılan opioid analjeziklerin çoğu başlıca mü reseptörü üzerinden etki eder. Morfinin analjezik, öforizan, solunum baskılayıcı ve fiziksel bağımlılık yapıcı etkileri mü reseptörü üzerinden ortaya çıkar ve bu bilgi çıkmış sınavlarda sorulmuştur.
+
+@@ Reseptör-etki ilişkisi ve spinal analjezi
+Analjezide mü dışında delta ve kappa reseptörlerinin de katkısı vardır. Solunum depresyonu ve bağımlılık riski düşük ilaç arayışıyla kappa reseptörüne afinitesi yüksek bileşikler geliştirilmiştir. Bunlardan butorfanol ve nalbufin kısmi analjezik başarı sağlamış, ancak etki güçleri sınırlı kalmıştır. İlginç olarak butorfanolün kadınlarda daha güçlü etki gösterdiği ve mü ile delta analjezisinde de cinsiyete bağlı farklar olduğu bildirilmiştir.
+
+Her üç reseptör tipi de omuriliğin arka boynuzunda yoğun olarak bulunur. Opioidler arka boynuzdaki ağrı iletim nöronlarını doğrudan baskılar ve primer aferentlerden uyarıcı transmiter salınımını da engeller. Opioidler omuriliğe doğrudan uygulandığında güçlü ve bölgesel bir analjezi sağlar. Bu spinal uygulama solunum depresyonu, bulantı, kusma ve sedasyon gibi istenmeyen etkileri azaltır.
+
+Opioidlerin ağrı kesici etkisi kısmen endojen opioid peptidlerin salınmasına da bağlıdır. İnflamasyona eşlik eden ağrı, bu periferik opioid etkisine özellikle duyarlıdır. Zedelenmiş dokudaki bağışıklık hücrelerinden salınan endorfin, periferdeki mü reseptörlerini fizyolojik olarak etkinleştirir.
+
+Tekrarlanan dozlarla opioid etkisinde kademeli bir azalma olur ve bu etkinlik kaybına tolerans denir. Tolerans ile birlikte gelişen diğer durum fiziksel bağımlılıktır. Fiziksel bağımlılık, ilaç kesildiğinde ya da antagonist verildiğinde ortaya çıkan yoksunluk sendromuyla kendini gösterir.
+
+Tolerans gelişmesinin yanı sıra uzun süreli opioid kullanımı ağrı algısını artırarak hiperaljeziye yol açabilir. Opioid kaynaklı hiperaljezi morfin, fentanil ve remifentanil gibi birçok opioidde görülebilir.
+
+@@ Santral sinir sistemi etkileri
+Morfin ve benzerlerinin başlıca etkileri merkezi sinir sistemi üzerinedir; en önemlileri analjezi, öfori, sedasyon ve solunum depresyonudur. Ağrının hem duyusal hem de duygusal, yani emosyonel bir bileşeni vardır. Opioidler ağrının her iki bileşenini, özellikle de duygusal yönünü baskıladığı için özgün bir etkiye sahiptir. Buna karşılık ibuprofen gibi steroid olmayan antiinflamatuvar ilaçların ağrının duygusal yönüne anlamlı bir etkisi yoktur.
+
+Öfori, damardan morfin alan hastalarda anksiyete ve sıkıntının azalmasıyla birlikte hoş bir duygu halidir. Sedasyon, yani uyuşukluk ve mental bulanıklık opioidlerin en sık etkilerindendir ve amnezi çok az görülür. Uyku etkisi yaşlılarda gençlere göre daha sık görülür. Morfinin diğer santral depresanlarla birleştirilmesi derin uykuya yol açabilir.
+
+Bütün opioid analjezikler beyin sapındaki solunum merkezini baskılayarak belirgin solunum depresyonu yapar. Solunum depresyonu doza bağlıdır. Kafa içi basıncı artmış, astımı, kronik obstrüktif akciğer hastalığı ya da kor pulmonalesi olan hastalar bu solunum baskılanmasını tolere edemeyebilir ve bu konu çıkmış sınavlarda sorulmuştur. Opioidlerin yaptığı solunum depresyonu, şiddetli ağrı tedavisinin en önemli sorunlarından biridir.
+
+@@ Göz, öksürük, rijidite, bulantı ve ısı etkileri
+Opioidler öksürük refleksini baskılar; kodein özellikle patolojik öksürüğü olan ve entübe edilmiş hastalarda kullanılır. Ancak öksürüğün baskılanması sekresyonların birikmesine, hava yolu tıkanıklığına ve atelektaziye yol açabilir. Bütün opioid agonistleri göz bebeğini daraltır, yani miyozis yapar. Miyozise karşı tolerans gelişmez ve bu özellik yüksek doz opioid tanısında önemli olduğu için çıkmış sınavlarda sorulmuştur. Miyozis morfinin bir etkisidir, ancak ateş düşürücü, yani antipiretik etki opioidlerde bulunmaz ve bu ayrım çıkmış sınavlarda sorulmuştur.
+
+Birçok opioid, gövdenin büyük kaslarının tonusunu artırarak trunkal rijidite, yani gövde sertliği yapar. Gövde sertliği göğüs hacmini azaltıp solunumu bozar ve en çok fentanil gibi yağda çözünürlüğü yüksek opioidlerin hızlı damar içi verilmesiyle belirginleşir. Opioidler beyin sapındaki kemoreseptör tetikleyici bölgeyi uyararak bulantı ve kusma yapar.
+
+Morfin gibi mü agonistleri ön hipotalamusa etkiyle hipertermi, kappa agonistleri ise hipotermi yapar. Opioidler derin uyku evrelerinin yüzdesini azaltabilir ve uyku apnesi gibi bozukluklara yol açabilir. Periferik etkilere geçersek, opioidlerin çoğunun bradikardi dışında kalp üzerine doğrudan bir etkisi yoktur.
+
+@@ Periferik organ etkileri
+Meperidin, antimuskarinik etkisi nedeniyle taşikardi yapabildiği için bu genellemenin dışında kalır. Opioid alan hastalarda vazomotor merkez baskısı ve histamin salınımına bağlı hafif bir hipotansiyon görülebilir. Opioidlerin bilinen ve uzun kullanımla azalmayan etkisi kabızlıktır, bu yüzden ishal değil konstipasyon beklenir ve bu nokta çıkmış sınavlarda sorulmuştur. Kabızlığa tolerans gelişmemesi, opioidin bu etkisinin uzun kullanımda da sürdüğü anlamına gelir.
+
+Opioid reseptörleri sindirim kanalında yoğundur, bu yüzden kabızlığa hem merkezi sinir sistemi hem de enterik sinir sistemi katkı verir. Midede hareket azalır ama tonus artar ve asit salgısı da azalır. Kalın bağırsakta itici hareketler azalıp tonus arttığı için dışkının geçişi uzar, su emilimi artar ve kabızlık gelişir.
+
+Opioidler safra yollarının düz kasında spazm yaparak safra koliğine yol açabilir. Oddi sfinkterini kastıkları için safra ve pankreas salgısı geri kaçabilir, amilaz ve lipaz yükselebilir. Opioidler böbrek işlevini baskılar ve mü agonistleri antidiüretik etki gösterir.
+
+Opioid analjezikler doğum eylemini uzatır. Opioidler antidiüretik hormon, prolaktin ve somatostatin salınımını artırır, lüteinleştirici hormonu ise baskılar. Uzun süreli opioid tedavisi alan hastalarda testosteron düşebilir, bu da libido, enerji ve ruh halinde azalmaya yol açar.
+
+Morfin ve kodein gibi opiatlar terleme, kurdeşen ve kaşıntıyla birlikte deride kızarıklık yapabilir. Bu deri belirtilerinden opioidlerin santral etkisi ve periferik histamin salınımı sorumlu olabilir. Opioidler lenfosit çoğalmasını, antikor yapımını ve kemotaksisi etkileyerek bağışıklık sistemini düzenler.
+
+@@ Karma agonist-antagonist opioidler
+Buprenorfin, mü reseptörüne afinitesi yüksek ama içsel etkinliği düşük bir opioid agonistidir. Mü reseptöründen yavaş ayrılması, opioid yoksunluğunun tedavisinde metadona bir alternatif olmasını sağlar. Buprenorfin delta ve kappa reseptörlerinin antagonisti olduğu için karma agonist-antagonist diye adlandırılır ve güçlü mü agonistlerinin etkisini azaltabilir. Bu gruba pentazosin ve nalbufin de örnektir, ancak halüsinasyon, kabus ve anksiyete gibi psikotomimetik etkiler yapabilir.
+
+@@ Klinik kullanım: analjezi ve diğer endikasyonlar
+Şimdi klinik kullanıma geçiyoruz ve en temel endikasyon şiddetli ağrının giderilmesidir. Yüksek içsel etkinlikli opioidler şiddetli ve sürekli ağrıda etkilidir, ancak aralıklı keskin ağrıları iyi kontrol edemez. Kanser ve terminal dönem hastalıklarının ağrısı opioidlerle tedavi edilir. Sabit aralıklarla verilen opioid, gerektikçe dozlamaya göre ağrıyı daha etkili azaltır.
+
+Sol kalp yetmezliğine bağlı akut akciğer ödeminde ortaya çıkan nefes darlığı, damardan morfinle giderilir. Obstetride opioidler sık kullanılır, ancak plasentayı geçip fetüsü etkiledikleri için yenidoğan depresyonunu en aza indirmek gerekir.
+
+Öksürük, analjezi için gerekenden daha düşük dozlarla kesilebilir. Nedeni ne olursa olsun diyare opioidlerle kontrol edilebilir, ancak enfeksiyöz diyarede uygun tedavinin yerini almamalıdır. Günümüzde diyare için difenoksilat ve loperamid gibi merkezi etkisi az olan sentetik opioidler tercih edilir. Titreme tüm opioid agonistlerince azaltılsa da en belirgin etki meperidinde görülür.
+
+@@ Anestezi ve alternatif uygulama yolları
+Opioidler sakinleştirici, anksiyete giderici ve ağrı kesici özellikleriyle anestezi ve cerrahi öncesi hazırlıkta sık kullanılır. Kalp damar cerrahisi gibi yüksek riskli ameliyatlarda kardiyovasküler baskılanmayı azaltmak için özellikle tercih edilir. Opioidler epidural ve subaraknoid bölgeye verilerek bölgesel analjezik olarak da kullanılır, ancak kaşıntı, bulantı ve kusma nalokson ile düzeltilebilir.
+
+Hasta kontrollü analjezide hasta, bir düğmeye basarak önceden ayarlanmış opioid dozunu kendisi verir. Transdermal yamada en başarılı opioid fentanildir ve sürekli, dirençli ağrıda endikasyon almıştır.
+
+Buruna sprey yolu, tekrarlı enjeksiyonlardan ve ilk geçiş etkisinden kaçınmayı sağlar; bu yolla kullanılan ilaç butorfanoldür. Bukkal yolla fentanil sitrat, pastil ya da lolipop şeklinde ağız mukozasından verilebilir.
+
+@@ Toksisite, tolerans ve çapraz tolerans
+Opioidlerin başlıca doğrudan toksik etkileri solunum depresyonu, bulantı, kusma ve kabızlıktır. Opioid bağımlısına bir antagonist verilmesi kısa ama şiddetli yoksunluk belirtileri çıkarır.
+
+Toleransın gelişmesi ilk dozla başlar, ancak klinik belirtiler genellikle iki üç hafta ilaç kullanımından sonra ortaya çıkar. Opioidlerin analjezik, sedatif ve solunum baskılayıcı etkilerine karşı yüksek derecede tolerans gelişir ve bu bilgi çıkmış sınavlarda sorulmuştur.
+
+Tolerans gelişmemiş bir kişide altmış miligram morfin solunumu durdurabilir. Tolerans antidiüretik, kusturucu ve hipotansif etkilere karşı gelişir, ama miyozis, konvülsiyon ve kabızlık yapıcı etkilere karşı gelişmez ve bu ayrım çıkmış sınavlarda sorulmuştur. Sedasyon ve solunum üzerindeki tolerans, ilaç kesildikten birkaç gün sonra ortadan kalkar.
+
+Morfine tolerans gelişmiş kişilerde diğer mü agonistlerinin de etkisi azalır; buna çapraz tolerans denir. Çapraz tolerans yalnız analjezide değil, öfori, sedasyon ve solunum etkilerinde de görülür.
+
+Çapraz tolerans yetersiz olabildiği için kanser ağrısında opioid rotasyonu kavramı gelişmiştir. Ketamin gibi n metil d aspartat reseptör antagonistleri, opioid kaynaklı hiperaljezi ve toleransı önlemede umut vericidir.
+
+@@ Bağımlılık, yoksunluk ve doz aşımı
+Mü tipi opioidlerin tekrarlı kullanımıyla gelişen toleransa hemen her zaman fiziksel bağımlılık eşlik eder. Yoksunluk belirtileri arasında burun akıntısı, gözyaşı, esneme, tüylerin diken diken olması, göz bebeği büyümesi, kas ağrısı, kusma ve ishal vardır. Morfin ya da heroin yoksunluğu son dozdan altı ila on saat sonra başlar ve otuz altı kırk sekiz saatte doruğa ulaşır.
+
+Meperidin yoksunluğu çoğunlukla yirmi dört saatte azalırken, metadon yoksunluğunun doruğu günler alır ve yaklaşık iki hafta sürer. Metadonun yavaş ve hafif yoksunluğu, heroin bağımlılarının detoksifikasyonunda kullanılmasının temelidir. Metadonun yanı sıra buprenorfin ve klonidin de opioid detoksifikasyonu için onaylanmıştır.
+
+Bağımlılık, yani addiction, özellikle damardan kullanımın verdiği öfori ve sedasyon nedeniyle ilacın takıntılı kullanımına yol açar.
+
+Opioidlerin tedavi amaçlı kullanımında bile bağımlılık riski göz önünde bulundurulmalıdır. Naloksonun damardan verilmesi opioid doz aşımına bağlı komayı büyük ölçüde geri çevirir, ama diğer santral depresanların komasını çevirmez.
+
+@@ Kontrendikasyonlar ve dikkat edilecek durumlar
+Zayıf karma agonist olan pentazosin, tam agonist morfin alan bir hastaya verilirse analjezi azalır ve yoksunluk tablosu çıkabilir. Kafa travmasında solunum depresyonuna bağlı karbondioksit birikimi beyin damarlarını genişletir ve kafa içi basıncı artmış hastada ölümcül olabilir. Kronik opioid kullanan gebelerde fetüste bağımlılık gelişebilir ve doğumdan sonra yoksunluk belirtileri görülebilir.
+
+Solunum fonksiyonu bozuk hastalarda opioidlerin baskılayıcı etkisi akut solunum yetmezliğine yol açabilir.
+
+Morfin başlıca karaciğerde yıkıldığı için karaciğer yetmezliğinde dikkatli kullanılmalıdır. Böbrek bozukluğunda morfin ve aktif glukuronid metabolitleri birikebildiği için doz azaltılır. Addison hastalığı ve hipotiroidide opioid yanıtı uzamış ve şiddetlenmiş olabilir.
+
+@@ Spesifik ilaçlar: güçlü agonistler
+Şimdi güçlü agonistlere geçelim; fenantren grubundan morfin, hidromorfon ve oksimorfon şiddetli ağrıda kullanılan güçlü agonistlerdir. Heroin güçlü ve hızlı etkilidir, ancak bazı ülkelerde kullanımı yasaklanmıştır.
+
+Metadon güçlü bir mü agonisti olmanın yanı sıra n metil d aspartat reseptörünü ve monoamin geri alım taşıyıcılarını da bloke eder. Bu özellikleri metadonu nöropatik ve kanser ağrısı gibi tedavisi zor ağrılarda etkili kılar. Metadon opioid bağımlılığının tedavisinde sıklıkla kullanılır ve bu ilacın bağımlılık tedavisindeki yeri çıkmış sınavlarda sorulmuştur.
+
+Metadonun ani kesilmesindeki yoksunluk morfininkinden daha hafif ama daha uzun sürer, bu yüzden idame tedavisinde kullanılır. Fenilpiperidinlerden fentanil, sentetik opioidler arasında en sık kullanılanlardan biridir.
+
+Sufentanil fentanilden beş ila yedi kat daha güçlüdür. Alfentanilin etki gücü fentanilden az olsa da daha hızlı etkiler ve etki süresi daha kısadır. Remifentanil kan ve doku esterazlarıyla çok hızlı yıkıldığı için etki süresi son derece kısadır.
+
+@@ Zayıf-orta agonistler, karma ilaçlar ve antitüsifler
+Şimdi zayıf ve orta etkili agonistlere gelelim; kodein, hidrokodein ve hidrokodon morfinden daha düşük etkinliktedir. Oksikodon daha güçlüdür ve orta ile şiddetli ağrıda tek başına kullanılabilir.
+
+Propoksifen metadona kimyasal olarak benzer, ancak analjezik etkinliği çok düşüktür. Difenoksilat ve metaboliti difenoksin, analjezi için değil diyare tedavisinde kullanılır ve bu bilgi çıkmış sınavlarda sorulmuştur.
+
+Diyare tedavisinde kullanılan bir diğer fenilpiperidin türevi loperamiddir ve beyine geçişi sınırlı olduğu için merkezi etkisi çok azdır, bu nokta çıkmış sınavlarda sorulmuştur. Loperamidin beyne geçişi sınırlı olduğu için kötüye kullanım potansiyeli düşüktür ve reçetesiz verilebilir.
+
+Karma agonist-antagonistlerden nalbufin, güçlü bir kappa agonisti ve mü antagonistidir. Nalbufinin yaptığı solunum depresyonu, reseptöre afinitesi yüksek olduğu için naloksona göre daha dirençli olabilir.
+
+Buprenorfin parsiyel bir mü agonisti, delta ve kappa antagonistidir ve güçlü, uzun etkilidir. Belirgin ilk geçiş etkisinden kaçınmak için buprenorfin dilaltı yolla kullanılır ve heroin bağımlılığının idamesinde metadon kadar etkilidir.
+
+Butorfanol baskın olarak bir kappa agonistidir ve nalbufine eşdeğer analjezi sağlar. Pentazosin, zayıf mü antagonisti ya da parsiyel agonisti özelliği de olan bir kappa agonistidir.
+
+Tramadol, etki mekanizması ağırlıklı olarak serotonin geri alımını bloke etmeye dayanan santral etkili bir analjeziktir ve bu özelliği çıkmış sınavlarda sorulmuştur. Tramadol aynı zamanda noradrenalin taşıyıcısını inhibe eder ve yalnız zayıf bir mü agonistidir. Tapentadol, orta derecede mü afinitesi olan ve güçlü noradrenalin geri alım inhibisyonu yapan yeni bir analjeziktir.
+
+Opioidler en etkili öksürük kesicilerdir ve bu etki analjeziden daha düşük dozlarda elde edilir. En sık kullanılan öksürük kesici opioid türevleri dekstrometorfan, kodein, levopropoksifen ve noskapindir, bu yüzden güçlü analjezik fentanil bir antitüsif değildir ve bu ayrım çıkmış sınavlarda sorulmuştur.
+
+Dekstrometorfanın bağımlılık yapıcı etkisi yok gibidir ve kodeine göre daha az kabızlık yapar.
+
+@@ Opioid antagonistleri ve dersin toparlanması
+Şimdi antagonistlere geçelim; nalokson, naltrekson ve nalmefen tam opioid antagonistleri olup morfin türevleridir. Bu ilaçların mü reseptörüne afinitesi yüksektir ve delta ile kappa agonistlerinin etkilerini de tersine çevirir. Nalokson genellikle enjeksiyonla verilir ve yarı ömrü bir ila iki saat gibi kısadır. Naltrekson ağızdan iyi emilir, yarı ömrü yaklaşık on saattir ve tek doz, heroin etkisini kırk sekiz saate kadar bloke eder.
+
+Nalmefen bir naltrekson türevidir, yalnızca damardan verilir ve opioid doz aşımında kullanılır. Morfinle tedavi edilen kişiye damardan verildiğinde antagonistler bir ila üç dakika içinde opioid etkilerini tamamen tersine çevirir. Doz aşımıyla baskılanmış hastada antagonist solunumu, bilinci, göz bebeğini ve bağırsak hareketlerini normale döndürür.
+
+Naloksonun en önemli kullanım yeri akut opioid zehirlenmesidir ve bu bilgi çıkmış sınavlarda sorulmuştur. Hayatı tehdit eden solunum ve santral sinir sistemi depresyonunda naloksonun başlangıç dozu damardan düşük tutulur.
+
+Düşük doz nalokson, analjeziyi korurken opioidlere bağlı kaşıntı, bulantı ve kusmayı giderebilir. Metilnaltrekson ve alvimopan, opioide bağlı kabızlık ve ameliyat sonrası bağırsak tembelliğinde kullanılan periferik antagonistlerdir.
+
+Naltrekson uzun etkisi nedeniyle bağımlıların idame programlarında kullanılır ve kronik alkoliklerde alkol isteğini azalttığı için de onaylanmıştır. Özetle bu derste opioidlerin kaynağını, mü, delta ve kappa reseptörleri üzerinden mekanizmasını, santral ve periferik etkilerini, tolerans ile bağımlılığını, klinik kullanımını ve antagonist nalokson ile zehirlenme tedavisini birbirine bağlı biçimde gördük. Reseptör tipiyle etki ilişkisini ve tolerans gelişen ile gelişmeyen etkileri ayırt edebilmek, bu dersin sınav açısından en kritik kazanımıdır.

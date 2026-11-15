@@ -1,0 +1,1652 @@
+{
+ "id": "k2-33-opioid-analjezikler-ve-antagonistleri",
+ "sira": 33,
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Opioid Analjezikler ve Antagonistleri",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "tarih": "2026-11-15",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Opioid analjeziklerin kaynağını, opioid/opiat ayrımını, reseptör tiplerini (µ, δ, ĸ, ORL-1) ve agonist/parsiyel/antagonist sınıflamasını açıklar (s. 2-4).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Opium içinde yaklaşık %10 konsantrasyonda bulunan ve opioid analjeziklerin prototipi kabul edilen alkaloid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kodein",
+      "B": "Morfin",
+      "C": "Papaverin",
+      "D": "Tebain",
+      "E": "Noskapin"
+     },
+     "dogru": "B",
+     "aciklama": "Opium çok sayıda alkaloid içerir; en önemlisi yaklaşık %10 konsantrasyonunda bulunan morfindir ve güçlü analjeziklerin standart ilacıdır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Kodein opiumda bulunan bir alkaloiddir ancak ticari olarak morfinden sentez edilir ve zayıf µ agonistidir. Prototip ve en yüksek oranlı alkaloid morfin olduğu için aranan madde o değildir.",
+      "B": "Morfin opiumun yaklaşık %10'unu oluşturan ana alkaloididir ve µ reseptörünün tam agonisti olarak güçlü analjezi sağlar. Prototip opioid olması nedeniyle doğru cevaptır.",
+      "C": "Papaverin opiumdan elde edilen, düz kas gevşetici bir alkaloiddir. Papaverin opiumdan elde edilen bir opiat alkaloididir ama analjezik değil düz kas gevşeticisi özelliktedir. Standart analjezik prototip olmadığından burada beklenen yanıt değildir.",
+      "D": "Tebain opiumda bulunan doğal bir alkaloiddir, kendisi analjezik olarak kullanılmaz ancak yarı sentetik türevlerin öncülüdür. En yüksek oranlı prototip alkaloid olmadığı için uymaz.",
+      "E": "Noskapin opium alkaloidi olup öksürük kesici etkisiyle bilinir, analjezik prototip değildir. Opiumun ana bileşeni ve standart analjezik morfin olduğundan tercih edilmez."
+     },
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "en önemlisi yaklaşık %10 konsantrasyonunda bulunan morfin'dir"
+     },
+     "s": 3,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k1"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Opioid reseptörlerini etkileyen tüm bileşikleri değil, yalnızca doğal olarak oluşan alkaloidleri (morfin, kodein, tebain, papaverin) tanımlamak için kullanılan terim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Opiat",
+      "B": "Opioid",
+      "C": "Endorfin",
+      "D": "Enkefalin",
+      "E": "Antagonist"
+     },
+     "dogru": "A",
+     "aciklama": "Opiat terimi özellikle doğal olarak oluşan alkaloidleri tanımlarken, opioid terimi opioid reseptörlerini etkileyen tüm bileşikleri kapsar (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Opiat, opiumdan elde edilen doğal alkaloidleri (morfin, kodein, tebain, papaverin) belirten dar kapsamlı terimdir. Soruda istenen bu dar tanım olduğundan doğru cevaptır.",
+      "B": "Opioid, opioid reseptörlerini etkileyen tam agonist, parsiyel agonist ve antagonistler dâhil tüm bileşikleri kapsayan geniş terimdir. Yalnız doğal alkaloidleri değil hepsini içerdiği için istenen dar tanıma uymaz.",
+      "C": "Endorfinler proopiomelanokortinden türeyen, µ etkili endojen opioid peptidlerdir. Endorfin merkezi sinir sisteminde üretilen endojen opioid peptid ailesindendir, dışarıdan verilen bir alkaloid değildir. Doğal bitkisel alkaloid grubunu tanımlamadığı için uygun değildir.",
+      "D": "Enkefalinler δ ve µ reseptörlerine bağlanan pentapeptid endojen opioidlerdir. Enkefalinler met ve lö enkefalinden oluşan endojen opioid peptidlerdir, haşhaş kökenli alkaloid değildir. İstenen doğal alkaloid terimini karşılamaz.",
+      "E": "Antagonist, reseptöre bağlanıp agonist etkiyi bloke eden ilaç sınıfını belirtir (örneğin nalokson). Bir köken tanımı değil etki tipi olduğu için sorudaki terime karşılık gelmez."
+     },
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Opiat terimi özellikle doğal olarak oluşan alkaloidleri"
+     },
+     "s": 3,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k1"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Major analjezik opioid reseptörü kabul edilen ve morfinin tam agonisti olarak etki gösterdiği reseptör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "δ (delta) reseptörü",
+      "B": "ĸ (kappa) reseptörü",
+      "C": "µ (mü) reseptörü",
+      "D": "ORL-1 reseptörü",
+      "E": "NMDA reseptörü"
+     },
+     "dogru": "C",
+     "aciklama": "Morfin, major analjezik opioid reseptörü olan µ reseptörünün tam agonistidir; analjezik, öforizan ve solunum depresan etkileri bu reseptöre bağlıdır (s. 3, 16).",
+     "sik_aciklamalari": {
+      "A": "Delta reseptörü analjeziye katkı veren bir opioid reseptör tipidir ve enkefalinlerin başlıca hedefidir. Morfinin tam agonist olduğu major analjezik reseptör bu değildir.",
+      "B": "Kappa reseptörü spinal analjezi ve disfori ile ilişkilidir; butorfanol ve nalbufin bu reseptöre afinite gösterir. Morfinin major agonist etkisini taşıdığı reseptör olmadığından uymaz.",
+      "C": "Mü reseptörü, morfinin tam agonisti olduğu major analjezik opioid reseptörüdür ve analjezi, öfori, solunum depresyonu ile fiziksel bağımlılığa aracılık eder. Bu nedenle doğru cevaptır.",
+      "D": "ORL-1 (orfanin) reseptörü nosiseptin/orphanin FQ sisteminin ana reseptörüdür ve klasik analjezik etkiden farklı süreçleri modüle eder. Morfinin major hedefi değildir.",
+      "E": "NMDA bir glutamat reseptörüdür ve dinorfin gibi maddelerce aktive edilebilen bir reseptördür. NMDA reseptörü glutamaterjik bir reseptördür; dinorfin bağlanabilse de klasik opioid analjezik reseptörü değildir. Morfinin tam agonist etkisi buradan doğmaz."
+     },
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "µ (mü)-opioid reseptörünün tam agonistidir"
+     },
+     "s": 3,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k1"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi opioid reseptör tiplerinden biri değildir?",
+     "secenekler": {
+      "A": "µ reseptörü",
+      "B": "δ reseptörü",
+      "C": "ĸ reseptörü",
+      "D": "ORL-1 reseptörü",
+      "E": "GABA-A reseptörü"
+     },
+     "dogru": "E",
+     "aciklama": "Üç ana opioid reseptör tipi µ, δ ve ĸ'dır; bunlara ORL-1 benzeri alt tip eşlik eder. GABA-A ise bir klor kanalı reseptörüdür, opioid reseptörü değildir (s. 4, 15).",
+     "sik_aciklamalari": {
+      "A": "Mü reseptörü analjezi, öfori ve solunum depresyonuna aracılık eden ana opioid reseptör tipidir. Gerçek bir opioid reseptörü olduğu için eleme sorusunda beklenen özelliği taşımaz.",
+      "B": "Delta reseptörü enkefalinlerin tercih ettiği, analjeziye katkı veren bir opioid reseptör tipidir. Opioid reseptör ailesinin üyesi olduğundan dışta kalan seçenek değildir.",
+      "C": "Kappa reseptörü spinal analjezi ve disforik etkilerle ilişkili opioid reseptör tipidir. Üç ana tipten biri olduğu için beklenen istisna değildir.",
+      "D": "ORL-1, G proteinine kenetli orfanin opioid reseptör benzeri tip 1 reseptördür ve opioid reseptör ailesiyle akrabadır. Opioid sistemine ait olduğundan eleme dışı kalmaz.",
+      "E": "GABA-A reseptörü, inhibitör nörotransmiter GABA'nın bağlandığı bir ligand kapılı klor kanalıdır ve benzodiazepinlerin hedefidir. Opioid reseptörü olmadığı için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "üç ana opioid reseptör tipi (µ, δ ve ĸ)"
+     },
+     "s": 4,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k1"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Tam agonist morfinin yapısal değişikliğiyle elde edilen ve µ reseptöründe güçlü antagonist etki gösteren ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kodein",
+      "B": "Nalokson",
+      "C": "Nalbufin",
+      "D": "Metadon",
+      "E": "Fentanil"
+     },
+     "dogru": "B",
+     "aciklama": "Tam agonist morfinin yapısal değişikliği ile güçlü µ reseptör antagonisti nalokson elde edilir (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein morfinden sentez edilen parsiyel (zayıf) bir µ agonistidir; antagonist değildir. Reseptörü bloke etmediği için aranan güçlü antagonist o değildir.",
+      "B": "Nalokson, morfinin yapısal değişikliğiyle elde edilen güçlü µ reseptör antagonistidir ve opioid etkilerini tersine çevirir. Soruda tarif edilen antagonist olduğu için doğru cevaptır.",
+      "C": "Nalbufin ĸ agonisti ve µ antagonisti olan bir karma agonist-antagonisttir. Nalbufin karma agonist-antagonisttir; ĸ reseptöründe agonist, µ reseptöründe antagonisttir. Saf güçlü µ antagonisti olmadığı için tam karşılık gelmez.",
+      "D": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon güçlü bir µ reseptör agonistidir ve bağımlılık tedavisinde kullanılır. Antagonist değil agonist olduğundan sorudaki tanıma uymaz.",
+      "E": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil güçlü ve lipofilik bir sentetik µ agonistidir, anestezide kullanılır. Reseptörü aktive ettiği için antagonist tanımına girmez."
+     },
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "güçlü µ-reseptör antagonisti nalokson elde edilir"
+     },
+     "s": 4,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k1"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Opioid terminolojisi ve sınıflamasıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Opioid terimi, opioid reseptörlerini etkileyen tüm bileşikleri tanımlar.\nII. Opiat terimi özellikle doğal olarak oluşan alkaloidleri tanımlar.\nIII. Kodein, parsiyel (zayıf) bir µ reseptör agonistidir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Opioid tüm reseptör etkileyen bileşikleri, opiat ise doğal alkaloidleri tanımlar; kodein parsiyel µ agonistidir. Üç ifade de doğrudur (s. 3, 4).",
+     "sik_aciklamalari": {
+      "A": "Üç öncül de slayttaki tanımlarla birebir örtüşür: opioid geniş, opiat dar kapsamlıdır ve kodein zayıf µ agonistidir. Hepsi doğru olduğu için bu seçenek doğrudur.",
+      "B": "Bu seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa opiat tanımını veren ikinci öncül de doğrudur. İkinci öncülü dışladığı için eksik kalır.",
+      "C": "Seçenek var olmayan dördüncü bir öncüle atıf yapar ve ikinciyi tek doğru gibi gösterir. Birinci ve üçüncü doğru öncülleri dışladığı için yanlıştır.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız dördüncü öncülü doğru kabul eder; soruda dört numaralı öncül yoktur ve ilk üç ifade doğrudur. Bu nedenle uygun değildir.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülün tümünü doğru sayar, ancak soruda yalnız üç öncül vardır. Olmayan bir öncülü kapsadığı için seçilmez."
+     },
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Opioid terimi, opioid reseptörlerini etkileyen tüm bileşikleri"
+     },
+     "s": 3,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q06-k1"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Endojen opioid peptid ailelerini (endorfin, enkefalin, dinorfin), reseptör afinitelerini ve N/OFQ sistemini tanımlar (s. 5-8).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Belirlenmiş üç endojen opioid peptid ailesi aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Endorfinler, enkefalinler ve dinorfinler",
+      "B": "Serotonin, dopamin ve GABA",
+      "C": "Substance P, bradikinin ve histamin",
+      "D": "Nosiseptin, glutamat ve glisin",
+      "E": "Prolaktin, somatostatin ve ADH"
+     },
+     "dogru": "A",
+     "aciklama": "Üç endojen opioid peptid ailesi endorfinler, pentapeptid enkefalinler (met- ve lö-enkefalin) ve dinorfinlerdir (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Endorfinler, enkefalinler ve dinorfinler üç prekürsör proteinden türeyen endojen opioid peptid aileleridir ve opioid reseptörlerine bağlanır. Slayttaki üçlüyü tam verdiği için doğru cevaptır.",
+      "B": "Bu üçlü klasik nörotransmiter veya hormonlardan oluşan maddelerdir. Serotonin, dopamin ve GABA klasik nörotransmiterlerdir; opioid peptid ailesi değildir. Opioid reseptörlerini doğal ligand olarak etkilemedikleri için uymazlar.",
+      "C": "Bu üçlü klasik nörotransmiter veya hormonlardan oluşan maddelerdir. Substance P, bradikinin ve histamin ağrı ve inflamasyon mediatörleridir. Endojen opioid peptid sınıfına girmedikleri için aranan üçlü değildir.",
+      "D": "Nosiseptin ORL-1 reseptörünün endojen ligandıdır ve N-OFQ sistemini oluşturur. Nosiseptin bir opioid benzeri peptid olsa da glutamat ve glisin aminoasit nörotransmiterleridir. Üçü birlikte klasik opioid peptid ailesini oluşturmaz.",
+      "E": "Bu üçlü klasik nörotransmiter veya hormonlardan oluşan maddelerdir. Prolaktin, somatostatin ve ADH hipofiz/hipotalamus hormonlarıdır. Endojen opioid peptid ailesi olmadıkları için doğru seçenek değildir."
+     },
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "endojen opioid peptid ailesi belirlenmiştir: endorfinler"
+     },
+     "s": 6,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k2"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Met-enkefalin ve lö-enkefalin, µ reseptörlerine oranla hangi reseptöre biraz daha fazla afinite gösterir?",
+     "secenekler": {
+      "A": "δ (delta) reseptörü",
+      "B": "ĸ (kappa) reseptörü",
+      "C": "ORL-1 reseptörü",
+      "D": "NMDA reseptörü",
+      "E": "GABA-B reseptörü"
+     },
+     "dogru": "A",
+     "aciklama": "Preproenkefalinden türeyen lö- ve met-enkefalinler, µ reseptörlere oranla δ reseptörlere biraz daha fazla afinite gösterirler (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Delta reseptörü enkefalinlerin görece yüksek afiniteyle bağlandığı opioid reseptör tipidir ve analjeziye katkı verir. Enkefalinlerin µ'ye göre tercih ettiği reseptör olduğu için doğru cevaptır.",
+      "B": "Kappa reseptörü dinorfinlerin başlıca hedefidir ve spinal analjeziyle ilişkilidir. Enkefalinlerin µ'ye göre daha fazla afinite gösterdiği reseptör bu değildir.",
+      "C": "ORL-1, N-OFQ sisteminin G proteinine kenetli ana reseptörüdür. ORL-1 reseptörünün ligandı nosiseptin/orphanin FQ'dur, enkefalin değildir. Enkefalinlerin tercih afinitesini taşımaz.",
+      "D": "NMDA bir glutamat reseptörüdür ve dinorfin gibi maddelerce aktive edilebilen bir reseptördür. NMDA bir glutamat reseptörüdür; dinorfin bağlanabilse de enkefalinlerin opioid afinite hedefi değildir. Bu nedenle uymaz.",
+      "E": "GABA-B metabotropik inhibitör bir reseptördür ve opioid dışı iletiyi düzenler. GABA-B metabotropik inhibitör bir reseptördür, opioid peptid hedefi değildir. Enkefalinlerle doğrudan afinite ilişkisi tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "δ (delta) reseptörlere biraz daha fazla afinite gösterirler"
+     },
+     "s": 6,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k2"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "G-proteine kenetli ORL-1 reseptörünün endojen ligandı olan ve nosiseptin olarak da adlandırılan madde aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Orphanin FQ",
+      "B": "Dinorfin A",
+      "C": "β-endorfin",
+      "D": "Met-enkefalin",
+      "E": "Endomorfin-1"
+     },
+     "dogru": "A",
+     "aciklama": "ORL-1 reseptörünün endojen ligandı bir grupça nosiseptin, diğerince orphanin FQ olarak adlandırılmıştır; sistem N/OFQ olarak bilinir (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Orphanin FQ (nosiseptin), ORL-1 reseptörünün endojen ligandıdır ve N/OFQ sistemini oluşturur. Sorudaki tanımın karşılığı olduğu için doğru cevaptır.",
+      "B": "Dinorfin A, preprodinorfinden türeyen ve ĸ reseptörlerine bağlanan bir opioid peptiddir. ORL-1'in özgül endojen ligandı olmadığı için uymaz.",
+      "C": "Endorfinler proopiomelanokortinden türeyen, µ etkili endojen opioid peptidlerdir. Beta-endorfin proopiomelanokortinden türeyen, µ reseptörüne etkili bir endojen opioiddir. ORL-1'in nosiseptin olarak adlandırılan ligandı değildir.",
+      "D": "Enkefalinler δ ve µ reseptörlerine bağlanan pentapeptid endojen opioidlerdir. Met-enkefalin bir pentapeptid olup δ ve µ reseptörlerine bağlanır. ORL-1'in endojen ligandı olmadığından sorudaki tanıma girmez.",
+      "E": "Endomorfin-1, µ reseptörlerine yüksek afinite gösteren bir endojen peptiddir. ORL-1 reseptörünün ligandı nosiseptin olduğu için bu seçenek doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "nosiseptin, diğer bir\n  grup tarafından ise orphanin FQ"
+     },
+     "s": 8,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k2"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Doku zedelenmesi ve inflamasyonu takiben arka boynuzda düzeyi artan, ağrıyı şiddetlendirip hiperaljeziyi tetikleyen ve NMDA reseptörlerini de aktive eden endojen opioid peptid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Dinorfin",
+      "B": "β-endorfin",
+      "C": "Met-enkefalin",
+      "D": "Nosiseptin",
+      "E": "Endomorfin-2"
+     },
+     "dogru": "A",
+     "aciklama": "Doku zedelenmesi sonrası arka boynuzda dinorfin düzeyi artar; bu artışın ağrıyı şiddetlendirdiği ve dinorfinin NMDA reseptörlerine bağlandığı belirtilir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Dinorfin, inflamasyonda arka boynuzda artan, hiperaljeziyi tetikleyen ve NMDA reseptörlerini aktive eden endojen opioid peptiddir. Soruda sayılan özellikler ona ait olduğundan doğru cevaptır.",
+      "B": "Beta-endorfin analjezik etkili bir endojen opioiddir ve µ reseptörüne etkir. Hiperaljeziyi tetikleyip NMDA'yı aktive eden peptid o değildir.",
+      "C": "Enkefalinler δ ve µ reseptörlerine bağlanan pentapeptid endojen opioidlerdir. Met-enkefalin δ ve µ reseptörlerine bağlanan analjezik bir peptiddir. Arka boynuzda artıp ağrıyı şiddetlendiren NMDA aktivatörü değildir.",
+      "D": "Nosiseptin ORL-1 reseptörünün endojen ligandıdır ve N-OFQ sistemini oluşturur. Nosiseptin ORL-1 reseptörünün ligandıdır; duygudurum ve öksürük gibi süreçleri modüle eder. NMDA aktive eden hiperaljezik dinorfin özelliğini taşımaz.",
+      "E": "Endomorfin-2 µ reseptörüne yüksek afiniteli bir endojen opioid peptiddir. Endomorfin-2, µ reseptörüne yüksek afiniteli analjezik bir peptiddir. Hiperaljezi ve NMDA aktivasyonuyla tanımlanan peptid olmadığından uymaz."
+     },
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "arka boynuzda dinorfin\n  düzeylerinde artış"
+     },
+     "s": 7,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k2"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "N/OFQ (nosiseptin/orphanin FQ) sistemi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Ana reseptörü G-proteine kenetli ORL-1'dir.\nII. MSS'de ve periferde yaygın olarak bulunur.\nIII. Ödüllendirme, duygudurum, anksiyete ve öksürük süreçlerini modüle edebilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "N/OFQ sisteminin ana reseptörü ORL-1'dir; sistem MSS ve periferde yaygındır ve ödüllendirme, duygudurum, anksiyete, öksürük süreçlerini modüle eder (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Üç öncül de slayttaki N/OFQ tanımına uyar: ORL-1 ana reseptördür, sistem yaygındır ve sayılan süreçleri modüle eder. Hepsi doğru olduğundan bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru kabul eder; oysa sistemin yaygın dağılımını belirten ikinci öncül de doğrudur. Eksik kaldığı için yanlıştır.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yapar ve doğru öncülleri dışlar. Bu nedenle uygun değildir.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncül doğruyken bunları yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru sayar, ancak soruda üç öncül bulunur. Olmayan öncülü kapsadığı için doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "ödüllendirme, öğrenme, duygudurum, anksiyete ve\n  öksürük"
+     },
+     "s": 8,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k2"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Opioidlerin absorpsiyon, dağılım, metabolizma (M3G, M6G, normeperidin) ve atılım özellikleri ile metabolize edici enzimleri ayırt eder (s. 9-14).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Düşük ilk-geçiş metabolizması nedeniyle oral yoldan etkili olan opioidlere örnek aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kodein ve oksikodon",
+      "B": "Morfin ve hidromorfon",
+      "C": "Remifentanil ve esmolol",
+      "D": "Nalokson ve naltrekson",
+      "E": "Heroin ve diamorfin"
+     },
+     "dogru": "A",
+     "aciklama": "Kodein ve oksikodon gibi bazı opioidler düşük ilk-geçiş metabolizmaları nedeniyle oral yoldan etkilidir; morfinde oral doz parenterale göre çok yüksek olmalıdır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Kodein ve oksikodon, ilk-geçiş metabolizması düşük olduğu için oral biyoyararlanımı yeterli opioidlerdir. Soruda istenen bu özelliği taşıdıklarından doğru cevaptır.",
+      "B": "Morfin ve hidromorfon belirgin ilk-geçiş etkisine uğrar; morfinin oral dozu parenterale göre çok yüksek olmalıdır. Oral yoldan verimli olmadıkları için uymazlar.",
+      "C": "Remifentanil esterazlarla hızla yıkılan intravenöz bir opioiddir, esmolol ise opioid değil bir beta blokerdir. Oral etkili opioid örneği olmadığından yanlıştır.",
+      "D": "Nalokson µ reseptörüne yüksek afiniteli, kısa etkili tam bir antagonisttir ve doz aşımında kullanılır. Nalokson ve naltrekson antagonisttir; nalokson oral verildiğinde yoğun ilk-geçişe uğrar. Analjezik oral opioid örneği olmadıkları için uygun değildir.",
+      "E": "Heroin esterazlarla hızla hidroliz olan bir ön ilaçtır ve oral kullanıma uygun değildir. Düşük ilk-geçişle oral etkili grup örneği olamaz."
+     },
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "düşük ilk-geçiş\n  metabolizmaları nedeniyle oral yoldan etkilidirler"
+     },
+     "s": 10,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k3"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Morfinin başlıca dönüştüğü, primer olarak nöroeksitatör özellikler taşıyan ve etkisine GABA/glisinerjik sistemin aracılık ettiği düşünülen metabolit aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Morfin-3-glukuronid",
+      "B": "Morfin-6-glukuronid",
+      "C": "Normorfin",
+      "D": "Hidromorfon",
+      "E": "Kodein-6-glukuronid"
+     },
+     "dogru": "A",
+     "aciklama": "Morfin primer olarak morfin-3-glukuronide (M3G) dönüşür; M3G nöroeksitatördür ve etkisine µ'den çok GABA/glisinerjik sistem aracılık eder (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Morfin-3-glukuronid, morfinin başlıca metaboliti olup analjezik değil nöroeksitatör etkilidir ve MSS eksitasyonuna yol açabilir. Soruda tarif edilen metabolit olduğu için doğru cevaptır.",
+      "B": "Morfin-6-glukuronid morfinden daha güçlü analjezik etkili bir metabolittir, nöroeksitatör değildir. Tarif edilen GABA/glisinerjik nöroeksitasyon ona ait olmadığından uymaz.",
+      "C": "Normorfin morfinin demetile türevidir. Normorfin morfinin demetile türevidir ve soruda tanımlanan başlıca glukuronid metaboliti değildir. Primer nöroeksitatör metabolit tanımına girmez.",
+      "D": "Hidromorfon şiddetli ağrıda kullanılan, konjugasyonla metabolize olan güçlü bir agonisttir. Hidromorfon ayrı bir güçlü opioid ilaçtır; konjugasyonla H3G metaboliti oluşur. Morfinin primer metaboliti olmadığı için doğru değildir.",
+      "E": "Kodein-6-glukuronid kodein metabolizmasıyla ilişkili bir konjugattır. Kodein-6-glukuronid kodein metabolizmasıyla ilişkilidir, morfinin ana metaboliti değildir. Soruda sorulan M3G'ye karşılık gelmez."
+     },
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "morfin-3-glukuronide (M3G)"
+     },
+     "s": 11,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k3"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Morfinin yaklaşık %10'unun dönüştüğü ve ana bileşikten 4-6 kez daha güçlü analjezik etkinliğe sahip metabolit aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Morfin-6-glukuronid",
+      "B": "Morfin-3-glukuronid",
+      "C": "Hidromorfon-3-glukuronid",
+      "D": "Normeperidin",
+      "E": "Monoasetilmorfin"
+     },
+     "dogru": "A",
+     "aciklama": "Morfinin yaklaşık %10'u, ana bileşikten 4-6 kez daha güçlü analjezik etkinliğe sahip morfin-6-glukuronide (M6G) dönüşür (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Morfin-6-glukuronid, morfinden 4-6 kat güçlü analjezik etkili bir metabolittir ve böbrek yetmezliğinde birikerek etki uzamasına yol açar. Soruda sorulan güçlü metabolit olduğu için doğru cevaptır.",
+      "B": "Morfin-3-glukuronid morfinin başlıca nöroeksitatör metabolitidir. Morfin-3-glukuronid morfinin başlıca metabolitidir ancak analjezik değil nöroeksitatör etkilidir. Güçlü analjezik metabolit tanımına uymaz.",
+      "C": "Hidromorfon-3-glukuronid hidromorfonun MSS'yi eksite eden metabolitidir. Hidromorfon-3-glukuronid hidromorfonun MSS'yi eksite eden metabolitidir, morfininki değildir. Güçlü analjezik etki özelliği taşımaz.",
+      "D": "Normeperidin meperidinin demetile, yüksek dozda nöbet yapan metabolitidir. Normeperidin meperidinin nöbet yapabilen metabolitidir, morfinle ilgili değildir. Güçlü analjezik morfin metaboliti tanımına girmez.",
+      "E": "Monoasetilmorfin heroinin morfine hidrolizi sırasında oluşan ara üründür. Monoasetilmorfin heroinin hidrolizinde oluşan bir ara üründür. Morfinin %10'unun dönüştüğü güçlü analjezik metabolit olmadığından uygun değildir."
+     },
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "4-6 kez daha güçlü\n  analjezik etkinliğe sahip bir metabolit olan morfin-6-glukuronide"
+     },
+     "s": 12,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k3"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Meperidinin demetillenmesiyle oluşan ve yüksek dozlarda birikerek nöbetlere neden olabilen metabolit aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Normeperidin",
+      "B": "Normorfin",
+      "C": "Morfin-6-glukuronid",
+      "D": "Hidromorfon-3-glukuronid",
+      "E": "Noroksikodon"
+     },
+     "dogru": "A",
+     "aciklama": "Meperidinin demetillenmiş metaboliti olan normeperidin birikebilir ve yüksek dozlarda nöbetlere neden olabilir (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Normeperidin meperidinin demetile, yüksek dozda nöbet yapan metabolitidir. Normeperidin, meperidinin demetile metabolitidir ve biriktiğinde MSS'yi uyararak nöbet yapabilir. Soruda tanımlanan nörotoksik metabolit olduğundan doğru cevaptır.",
+      "B": "Normorfin morfinin demetile türevidir. Normorfin morfinin demetile türevidir ve meperidinle ilişkili değildir. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "C": "Morfin-6-glukuronid morfinden 4-6 kat güçlü, böbrek yetmezliğinde biriken analjezik metabolittir. Morfin-6-glukuronid morfinin güçlü analjezik metabolitidir; nöbetle değil etki uzamasıyla ilişkilidir. Meperidin kaynaklı olmadığı için uymaz.",
+      "D": "Hidromorfon-3-glukuronid hidromorfonun MSS'yi eksite eden metabolitidir. Hidromorfon-3-glukuronid hidromorfonun eksitatör metabolitidir. Meperidin demetilasyonuyla oluşan nöbet yapıcı metabolit değildir.",
+      "E": "Noroksikodon oksikodonun bir metabolitidir. Noroksikodon oksikodon metabolizmasıyla ilişkilidir. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur."
+     },
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "normeperidin birikebilir.\n  Bu metabolit yüksek dozlarda nöbetlere neden olabilir"
+     },
+     "s": 13,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k3"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Fentanilin karaciğerde N-dealkilasyonla metabolize edilmesinden ve oral alındığında ilk-geçiş metabolizmasından sorumlu olan sitokrom P450 enzimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "CYP3A4",
+      "B": "CYP2D6",
+      "C": "CYP2E1",
+      "D": "CYP1A2",
+      "E": "CYP2C9"
+     },
+     "dogru": "A",
+     "aciklama": "Fentanil karaciğerde P450 CYP3A4 ile N-dealkilasyona uğrar; CYP3A4 ince barsak mukozasında da bulunarak oral fentanilin ilk-geçişine katkı sağlar (s. 14).",
+     "sik_aciklamalari": {
+      "A": "CYP3A4, fentanilin N-dealkilasyonunu yürüten ve barsak mukozasında da bulunan sitokrom P450 enzimidir. Fentanil metabolizmasından sorumlu olduğu için doğru cevaptır.",
+      "B": "CYP2D6 kodein, oksikodon ve hidrokodonu güçlü metabolitlerine çeviren enzimdir. CYP2D6 kodein, oksikodon ve hidrokodonu daha güçlü metabolitlerine çeviren enzimdir. Fentanilin başlıca metabolize edici enzimi olmadığından uymaz.",
+      "C": "CYP2E1 etanol metabolizmasında rol alan mikrozomal bir izoformdur. CYP2E1 etanol metabolizmasında rol alan mikrozomal bir izoformdur. Fentanilin N-dealkilasyonundan sorumlu değildir.",
+      "D": "CYP1A2 bazı ksenobiyotikleri metabolize eden bir sitokrom izoformudur. CYP1A2 bazı ksenobiyotikleri metabolize eden bir izoformdur; fentanilin ana yolağı değildir. Bu nedenle doğru seçenek olamaz.",
+      "E": "CYP2C9 warfarin gibi ilaçların metabolizmasıyla bilinen bir izoformdur. CYP2C9 warfarin gibi ilaçların metabolizmasıyla bilinir. Fentanil metabolizmasında tanımlı rolü olmadığı için uygun değildir."
+     },
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "P450 CYP3A4 tarafından N-dealkilasyon ile\n  metabolize edilir"
+     },
+     "s": 14,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k3"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki opioidlerden hangisi doku esterazları tarafından hızla hidroliz edilen ester yapılı bir ilaç değildir?",
+     "secenekler": {
+      "A": "Kodein",
+      "B": "Heroin",
+      "C": "Remifentanil",
+      "D": "Heroin (diasetilmorfin)",
+      "E": "Remifentanil (esteraz substratı)"
+     },
+     "dogru": "A",
+     "aciklama": "Heroin ve remifentanil gibi esterler doku esterazlarıyla hızla hidroliz edilir; kodein ise ester değildir ve CYP2D6 ile metabolize olur (s. 13, 14).",
+     "sik_aciklamalari": {
+      "A": "Kodein fenantren türevi bir opioiddir ve CYP2D6 ile morfine metabolize olur, ester değildir. Esterazla hidroliz edilen grup dışında kaldığı için doğru cevaptır.",
+      "B": "Heroin (diasetilmorfin) ester yapılı bir ön ilaçtır ve doku esterazlarıyla hızla monoasetilmorfine, sonra morfine hidroliz olur. Ester olduğundan eleme dışı kalmaz.",
+      "C": "Remifentanil kan ve non-spesifik doku esterazlarıyla hızla yıkılan ultra kısa etkili bir opioiddir. Ester substratı olduğundan aranan istisna değildir.",
+      "D": "Heroin esterazlarla morfine hidroliz olan, hızlı etkili bir ester ön ilaçtır. Diasetilmorfin heroinin kimyasal adıdır ve ester yapılıdır. Esterazla hidroliz edildiği için dışta kalan seçenek olamaz.",
+      "E": "Remifentanil doku esterazlarıyla hızla yıkılan ultra kısa etkili bir sentetik opioiddir. Remifentanil tipik bir esteraz substratıdır ve yarı ömrü çok kısadır. Ester grubundan olduğu için beklenen istisna değildir."
+     },
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Esterler (örn heroin, remifentanil) belli başlı doku esterazları"
+     },
+     "s": 13,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q06-k3"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Opioidlerin metabolizması ve atılımıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Kodein, oksikodon ve hidrokodon CYP2D6 ile daha güçlü metabolitlerine dönüşür.\nII. Fentanil CYP3A4 ile N-dealkilasyona uğrar.\nIII. Polar metabolitler ve glukuronid konjugatları başlıca idrarla atılır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Kodein/oksikodon/hidrokodon CYP2D6 ile, fentanil CYP3A4 ile metabolize olur; polar metabolitler idrarla atılır. Üç ifade de doğrudur (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Üç öncül de slayttaki metabolizma ve atılım bilgileriyle örtüşür. Hepsi doğru olduğu için bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa fentanilin CYP3A4 metabolizmasını belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yaparak doğru öncülleri dışlar. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncülü yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "P450 CYP2D6\n  tarafından metabolize edilirler"
+     },
+     "s": 14,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q07-k3"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Opioidlerin reseptör ve hücresel etki mekanizmalarını, reseptör-etki ilişkisini, tolerans, bağımlılık ve hiperaljezi kavramlarını açıklar (s. 15-22).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Opioidlerin presinaptik sinir uçlarında voltaj-bağımlı Ca2+ kanallarını kapatmasının temel sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Transmiter salıverilmesinin azalması",
+      "B": "Postsinaptik nöronun depolarizasyonu",
+      "C": "Na+ kanallarının açılması",
+      "D": "Hücre içi cAMP'nin artması",
+      "E": "Transmiter geri alımının durması"
+     },
+     "dogru": "A",
+     "aciklama": "Opioidler presinaptik voltaj-bağımlı Ca2+ kanallarını kapatarak transmiter salıverilmesini azaltır; postsinaptik nöronlarda ise K+ kanalını açıp hiperpolarize eder (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Presinaptik Ca2+ kanalının kapanması, nörotransmiter vezikül salınımını azaltarak sinaptik iletiyi baskılar. Opioidin bu hücresel etkisi doğru şekilde tanımlandığından doğru cevaptır.",
+      "B": "Depolarizasyon membran potansiyelini eşiğe yaklaştırarak uyarılabilirliği artırır. Opioidler postsinaptik nöronu depolarize etmez, aksine K+ çıkışıyla hiperpolarize eder. Depolarizasyon ifadesi mekanizmanın tersi olduğu için yanlıştır.",
+      "C": "Sodyum kanalının açılması membranı depolarize ederek uyarılabilirliği artırır. Na+ kanallarının açılması uyarılabilirliği artırır; opioidlerin tarif edilen etkisi bu değildir. Mekanizmayla uyuşmadığından uymaz.",
+      "D": "Opioidler G proteini üzerinden adenilil siklazı inhibe ederek cAMP'yi azaltır, artırmaz. cAMP artışı ifadesi yanlış yönde olduğundan doğru değildir.",
+      "E": "Transmiter geri alım blokajı başlıca monoaminerjik ilaçların etki yoludur. Opioidlerin tanımlı iki etkisi Ca2+ kanalı kapatma ve K+ kanalı açmadır; geri alım blokajı bu mekanizmaya ait değildir. Bu nedenle uygun değildir."
+     },
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "presinaptik sinir uçlarında voltaj-bağımlı Ca2+ kanallarını kapatır"
+     },
+     "s": 16,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k4"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Opioidlerin postsinaptik nöronları hiperpolarize ederek inhibe etmesini sağlayan iyon kanalı olayı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "K+ kanallarının açılması",
+      "B": "Ca2+ kanallarının açılması",
+      "C": "Cl- kanallarının kapanması",
+      "D": "Na+/K+ ATPaz'ın inhibisyonu",
+      "E": "Voltaj-bağımlı Na+ kanalı açılması"
+     },
+     "dogru": "A",
+     "aciklama": "Opioidler K+ kanallarını açarak postsinaptik nöronları hiperpolarize eder ve böylece inhibe eder (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Potasyum kanallarının açılması hücreden K+ çıkışıyla membranı hiperpolarize eder ve nöronu inhibe eder. Opioidin postsinaptik etkisi bu olduğundan doğru cevaptır.",
+      "B": "Kalsiyum kanalının açılması hücre uyarılabilirliğini ve transmiter salınımını artırır. Ca2+ kanalının açılması hücreyi uyarır; opioidler presinaptik Ca2+ kanalını ise kapatır. Hiperpolarizasyon mekanizması bu değildir.",
+      "C": "Klor kanalı hareketi başlıca GABA aracılı inhibitör mekanizmalarla ilişkilidir. Klor kanallarının kapanması GABA mekanizmalarıyla ilişkilidir, opioidlerin tanımlı etkisi değildir. Postsinaptik hiperpolarizasyonu açıklamaz.",
+      "D": "Sodyum-potasyum ATPaz hücre membranındaki iyon gradyanını koruyan bir pompadır. Na+/K+ ATPaz inhibisyonu opioidlerin bilinen etki yolu değildir. Tanımlanan iyon kanalı olayına karşılık gelmez.",
+      "E": "Sodyum kanalının açılması membranı depolarize ederek uyarılabilirliği artırır. Na+ kanalı açılması depolarizasyon yapar, hiperpolarizasyon değil. Opioidin inhibitör etkisiyle çeliştiği için doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "K+ kanallarını açarak postsinaptik nöronları hiperpolarize eder"
+     },
+     "s": 16,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k4"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Opioid farmakodinamisiyle ilgili aşağıdaki ifadeler veriliyor:\nI. Opioidler presinaptik sinir uçlarında Ca2+ kanallarını kapatarak transmisyonu azaltır.\nII. Postsinaptik nöronlarda K+ kanallarını açarak hiperpolarizasyon yaparlar.\nIII. Morfinin analjezik, öforizan ve solunum depresan etkileri µ reseptörü üzerinedir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Üç ifade de doğrudur: Ca2+ kanalı kapanır, K+ kanalı açılır ve morfinin başlıca etkileri µ reseptörü üzerinedir (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Üç öncül de slayttaki hücresel ve reseptör düzeyi bilgilerle örtüşür. Hepsi doğru olduğu için bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa K+ kanalı açılmasını belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yapar ve doğru öncülleri dışlar. Bu nedenle yanlıştır.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir. Gerçek üç öncülü yok saydığı için seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "(2) K+ kanallarını açarak postsinaptik nöronları hiperpolarize eder"
+     },
+     "s": 16,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k4"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kappa reseptörlerine afinitesi yüksek olup kadınlarda erkeklere oranla daha güçlü analjezik etki gösterdiği belirlenen opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Butorfanol",
+      "B": "Morfin",
+      "C": "Fentanil",
+      "D": "Kodein",
+      "E": "Metadon"
+     },
+     "dogru": "A",
+     "aciklama": "Solunum depresyonu ve bağımlılığı düşük, ĸ afinitesi yüksek bileşiklerden butorfanolün kadınlarda erkeklere oranla daha güçlü analjezik etki gösterdiği belirlenmiştir (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Butorfanol, ĸ reseptörüne afinitesi yüksek bir opioiddir ve kadınlarda daha güçlü analjezi gösterdiği bildirilmiştir. Soruda tanımlanan cinsiyet farkı ona ait olduğundan doğru cevaptır.",
+      "B": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin µ reseptörünün tam agonistidir ve tipik güçlü analjeziktir. Kappa afinitesi yüksek, kadında belirgin güçlü etkiyle tanımlanan ilaç değildir.",
+      "C": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil güçlü, lipofilik bir µ agonistidir. Kappa ağırlıklı ve cinsiyete bağlı analjezi özelliğiyle tanımlanmadığı için uymaz.",
+      "D": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein zayıf bir µ agonistidir, öksürük kesici olarak kullanılır. Kappa afinitesi yüksek ve kadında güçlü etkiyle tanımlanan ilaç değildir.",
+      "E": "Metadon güçlü bir µ agonistidir ve bağımlılık tedavisinde kullanılır. Soruda tarif edilen ĸ afiniteli cinsiyet farklı analjezik olmadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "butorfanolün kadınlarda erkeklere oranla daha güçlü"
+     },
+     "s": 17,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k4"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Morfin ve benzerlerinin terapötik dozlarının sık tekrarlanmasıyla etkinlikte görülen kademeli azalmaya verilen ad aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tolerans",
+      "B": "Taşiflaksi",
+      "C": "Hiperaljezi",
+      "D": "Bağımlılık",
+      "E": "Çapraz-duyarlılık"
+     },
+     "dogru": "A",
+     "aciklama": "Morfin ve benzerlerinin terapötik dozlarının sık tekrarıyla etkinlikte kademeli bir azalma görülür; bu etkinlik kaybına tolerans denir (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Tolerans, bir ilacın tekrarlayan kullanımıyla aynı dozun giderek daha az etki yapması durumudur. Soruda tanımlanan etkinlik kaybı bu olduğundan doğru cevaptır.",
+      "B": "Taşiflaksi çok hızlı gelişen tolerans biçimidir, ancak opioidlerde tarif edilen kademeli süreç için kullanılan terim değildir. Slayttaki tanıma tam karşılık gelmez.",
+      "C": "Hiperaljezi uzun süreli opioid kullanımında ağrı duyarlılığının artmasıdır. Hiperaljezi uzun süreli opioid kullanımında ağrı algısının artmasıdır, etkinlik kaybı değildir. Sorudaki tanımdan farklı bir fenomendir.",
+      "D": "Fiziksel bağımlılık ilaç kesilince yoksunluk doğuran bir uyum durumudur. Bağımlılık ilaç kesildiğinde yoksunluk doğuran fiziksel/psikolojik durumdur. Doz etkinliğinin azalmasını tanımlamadığından doğru değildir.",
+      "E": "Çapraz-duyarlılık bir ilaca duyarlılığın benzer ilaca yansımasıdır. Çapraz-duyarlılık bir ilaca duyarlılığın benzer ilaca yansımasıdır; etkinlik kaybı anlamına gelmez. Tolerans tanımına uymaz."
+     },
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "bu etkinlik kaybına tolerans adı verilmektedir"
+     },
+     "s": 21,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k4"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Uzun süreli opioid analjezik uygulamasının, tolerans gelişmesine ek olarak ağrı algılanmasını artırarak yol açtığı duruma verilen ad aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Opioid kaynaklı hiperaljezi",
+      "B": "Fiziksel bağımlılık",
+      "C": "Opioid rotasyonu",
+      "D": "Çapraz-tolerans",
+      "E": "Yoksunluk sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Tolerans gelişmesine ek olarak, uzun süreli opioid uygulaması ağrı algılanmasını artırarak hiperaljeziye neden olabilir; morfin, fentanil ve remifentanilde görülebilir (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Opioid kaynaklı hiperaljezi, uzun süreli opioid kullanımında ağrı duyarlılığının paradoksal olarak artmasıdır. Soruda tanımlanan durum bu olduğundan doğru cevaptır. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "B": "Fiziksel bağımlılık ilaç kesilince yoksunluk doğuran bir uyum durumudur. Fiziksel bağımlılık ilaç kesildiğinde yoksunluk doğuran uyum durumudur, ağrı algısının artması değildir. Tarif edilen fenomeni karşılamaz.",
+      "C": "Opioid rotasyonu yetersiz çapraz-tolerans nedeniyle başka opioide geçiş stratejisidir. Opioid rotasyonu yetersiz çapraz-tolerans nedeniyle başka opioide geçiş stratejisidir. Ağrı algısının artmasını tanımlamaz.",
+      "D": "Çapraz-tolerans bir opioide gelişen toleransın başka opioide yansımasıdır. Çapraz-tolerans bir opioide gelişen toleransın diğerine yansımasıdır. Hiperaljezinin tanımına girmez.",
+      "E": "Yoksunluk sendromu opioid kesildiğinde ortaya çıkan belirtiler bütünüdür. Yoksunluk sendromu ilaç kesilince ortaya çıkan belirtiler bütünüdür. Uzun kullanımla ağrı artışı anlamına gelmediği için doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "ağrı algılanmasını artırarak hiperaljezi durumuna neden"
+     },
+     "s": 22,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q06-k4"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Morfin ve benzerlerinin santral (analjezi, solunum depresyonu, miyozis, bulantı) ve periferik (GİS, safra, endokrin) etkilerini ayırt eder (s. 23-33).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi morfinin yan etkilerinden biri değildir?",
+     "secenekler": {
+      "A": "Antipiretik etki",
+      "B": "Konstipasyon",
+      "C": "Miyozis",
+      "D": "Solunum depresyonu",
+      "E": "Öfori"
+     },
+     "dogru": "A",
+     "aciklama": "Morfinin başlıca etkileri analjezi, öfori, sedasyon, solunum depresyonu, miyozis ve konstipasyondur; antipiretik etki morfinin bir özelliği değildir (s. 23-26).",
+     "sik_aciklamalari": {
+      "A": "Antipiretik etki ateşi düşürmedir ve başlıca NSAİİ ile parasetamolde görülür. Antipiretik etki ateşi düşürme özelliğidir ve NSAİİ ile parasetamolde görülür. Morfinin tanımlı etkileri arasında yer almadığından doğru cevaptır.",
+      "B": "Konstipasyon morfinin barsak motilitesini azaltıp tonusu artırmasıyla oluşan en kalıcı yan etkisidir. Gerçek bir morfin etkisi olduğundan eleme dışı kalmaz.",
+      "C": "Miyozis bütün µ agonistlerinin yaptığı, tolerans gelişmeyen pupil daralmasıdır. Miyozis bütün µ agonistlerinin yaptığı pupil daralmasıdır ve tolerans gelişmez. Morfinin yan etkisi olduğu için beklenen istisna değildir.",
+      "D": "Solunum depresyonu beyin sapı solunum merkezinin baskılanmasıyla oluşan doz bağımlı, hayatı tehdit eden morfin etkisidir. Gerçek etki olduğundan dışta kalmaz.",
+      "E": "Öfori opioidlerin µ reseptörü üzerinden oluşturduğu hoş duygu halidir. Öfori, morfinin µ reseptörü üzerinden oluşturduğu hoş duygu halidir. Bilinen bir morfin etkisi olduğu için beklenen özelliği taşımaz."
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q103"
+     ],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "analjezi, öfori, sedasyon ve solunum depresyonudur"
+     },
+     "s": 26,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bütün opioid agonistlerinin yaptığı, tolerans gelişmediği için yüksek doz opioid alınmasının tanısında önemli olan göz bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Miyozis",
+      "B": "Midriyazis",
+      "C": "Nistagmus",
+      "D": "Pitozis",
+      "E": "Diplopi"
+     },
+     "dogru": "A",
+     "aciklama": "Bütün opioid agonistleri pupillaları daraltır; miyozis toleransın az geliştiği bir etkidir, bu yüzden yüksek doz opioid tanısında önemlidir (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Miyozis, opioidlerin okülomotor çekirdeği uyarmasıyla oluşan pupil daralmasıdır ve ileri bağımlılarda bile görülür. Tolerans gelişmeyip tanıda önemli olduğundan doğru cevaptır.",
+      "B": "Midriyazis pupil genişlemesidir ve opioid yoksunluğunun bir bulgusudur. Midriyazis pupil genişlemesidir ve opioid yoksunluğunda görülür, opioid etkisinde değil. Soruda tarif edilen daralma bulgusunun tersidir.",
+      "C": "Nistagmus gözlerin istemsiz ritmik hareketi olan bir klinik bulgudur. Nistagmus gözlerin istemsiz ritmik hareketidir; opioidlerin tanı değeri taşıyan özgül göz bulgusu değildir. Bu nedenle uymaz.",
+      "D": "Pitozis üst göz kapağının düşmesiyle giden bir klinik bulgudur. Pitozis üst göz kapağının düşmesidir ve opioidlerin tipik pupil etkisiyle ilgisizdir. Tanıda kullanılan opioid bulgusu değildir.",
+      "E": "Diplopi çift görme anlamına gelen bir görsel bulgudur. Diplopi çift görme olup opioidlerin karakteristik pupil etkisi değildir. Yüksek doz opioid tanısındaki bulguyu tanımlamaz."
+     },
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Bütün opioid agonistleri pupillaları daraltır. Miyozis"
+     },
+     "s": 26,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Opioidlerin aşağıdaki etkilerinden hangisine karşı tolerans gelişmez?",
+     "secenekler": {
+      "A": "Analjezi",
+      "B": "Sedasyon",
+      "C": "Miyozis",
+      "D": "Öfori",
+      "E": "Solunum depresyonu"
+     },
+     "dogru": "C",
+     "aciklama": "Opioidlerin analjezik, sedatif, öforizan ve solunum baskılayıcı etkilerine tolerans gelişir; miyozis ve konstipasyona tolerans gelişmez (s. 26, 43).",
+     "sik_aciklamalari": {
+      "A": "Analjezi opioidlerin µ reseptörü aracılı ağrı baskılayıcı temel etkisidir. Analjezi µ reseptörü aracılı ağrı baskılamasıdır ve tekrarlı kullanımda tolerans gelişir. Tolerans geliştiği için tolerans gelişmeyen etki o değildir.",
+      "B": "Sedasyon opioidlerin sık görülen, zamanla tolerans gelişen MSS depresan etkisidir. Sedasyon opioidlerin sık görülen MSS depresan etkisidir ve zamanla tolerans gelişir. Tolerans gelişmeyen etki tanımına uymaz.",
+      "C": "Miyozis, toleransın çok az geliştiği veya hiç gelişmediği bir etkidir; bu yüzden ileri bağımlılarda bile görülür. Tolerans gelişmediği için doğru cevaptır.",
+      "D": "Öfori opioidlerin µ reseptörü üzerinden oluşturduğu hoş duygu halidir. Öfori opioidlerin ödül etkisidir ve tekrarlı kullanımda azalır, yani tolerans gelişir. Tolerans gelişmeyen etki değildir.",
+      "E": "Solunum depresyonu beyin sapı solunum merkezinin doz bağımlı baskılanmasıdır. Solunum depresyonuna belirgin tolerans gelişir ve bu, bağımlıların yüksek doz tolere edebilmesini açıklar. Tolerans gelişmeyen etki tanımına girmez."
+     },
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-26"
+     ],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Miyozis,\n  toleransın çok az geliştiği veya hiç gelişmediği"
+     },
+     "s": 26,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Opioid analjeziklerin beyin sapındaki \"kemoreseptör tetikleyici bölge\"yi aktive etmesinin sonucu olan etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bulantı ve kusma",
+      "B": "Miyozis",
+      "C": "Konstipasyon",
+      "D": "Bradikardi",
+      "E": "Hipertermi"
+     },
+     "dogru": "A",
+     "aciklama": "Opioid analjezikler beyin sapındaki kemoreseptör tetikleyici bölgeyi aktive ederek bulantı ve kusma yaparlar (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Bulantı ve kusma opioidlerin kemoreseptör tetikleyici bölgeyi uyarmasıyla oluşur. Bulantı ve kusma, opioidlerin kemoreseptör tetikleyici bölgeyi uyarmasıyla ortaya çıkan etkidir. Soruda sorulan mekanizmanın sonucu olduğundan doğru cevaptır.",
+      "B": "Miyozis bütün µ agonistlerinin yaptığı, tolerans gelişmeyen pupil daralmasıdır. Miyozis opioidlerin pupiller etkisidir ve Edinger-Westphal çekirdeğiyle ilişkilidir, kemoreseptör bölgeyle değil. Bu nedenle uymaz.",
+      "C": "Konstipasyon opioidlerin en kalıcı, tolerans gelişmeyen gastrointestinal etkisidir. Konstipasyon enterik sinir sistemi ve barsak düz kası etkisiyle oluşur. Kemoreseptör tetikleyici bölge aktivasyonunun sonucu değildir.",
+      "D": "Bradikardi bazı opioidlerin kalp hızını yavaşlatan etkisidir. Bradikardi opioidlerin bazılarında görülen kardiyak etkidir; kemoreseptör tetikleyici bölgeyle açıklanmaz. Tarif edilen mekanizmaya ait değildir.",
+      "E": "Hipertermi µ agonistlerinin ön hipotalamusa etkisiyle ilişkilidir. Hipertermi µ agonistlerinin ön hipotalamusa etkisiyle ilişkilidir, kusma merkeziyle değil. Soruda sorulan etki olmadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "kemoreseptör tetikleyici bölge\"yi (chemoreceptor trigger zone)\n  aktive ederek bulantı ve kusma"
+     },
+     "s": 27,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gövde kaslarının tonusunu artırıp göğüs hacmini azaltarak ventilasyonu bozan ve özellikle fentanil gibi lipofilik opioidlerin hızlı intravenöz verilmesiyle belirginleşen etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trunkal rijidite",
+      "B": "Miyozis",
+      "C": "Konstipasyon",
+      "D": "Safra koliği",
+      "E": "Pruritus"
+     },
+     "dogru": "A",
+     "aciklama": "Birçok opioid gövde kaslarının tonusunu artırır; trunkal rijidite göğüs hacmini azaltarak ventilasyonu bozar ve lipofilik opioidlerin hızlı IV verilmesiyle belirginleşir (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Trunkal rijidite, opioidlerin büyük gövde kaslarının tonusunu artırmasıyla oluşan ve ventilasyonu bozan etkidir. Fentanil gibi lipofilik opioidlerle belirginleştiğinden doğru cevaptır.",
+      "B": "Miyozis bütün µ agonistlerinin yaptığı, tolerans gelişmeyen pupil daralmasıdır. Miyozis pupil daralmasıdır ve kas tonusuyla ilgisizdir. Göğüs hacmini azaltan rijidite tablosunu tanımlamaz.",
+      "C": "Konstipasyon opioidlerin en kalıcı, tolerans gelişmeyen gastrointestinal etkisidir. Konstipasyon barsak etkisidir, iskelet kası tonusuyla ilgili değildir. Ventilasyonu bozan gövde sertliği tanımına uymaz.",
+      "D": "Oddi sfinkteri spazmı safra koliği ile amilaz-lipaz artışına yol açan opioid etkisidir. Safra koliği Oddi sfinkteri spazmıyla oluşan bir etkidir. Gövde kası rijiditesiyle ilgisizdir.",
+      "E": "Pruritus kaşıntı olup santral etki ve histamin salınımıyla ilişkilidir. Pruritus kaşıntı olup histamin salınımı ve santral etkiyle ilişkilidir. Trunkal rijidite tablosunu açıklamaz."
+     },
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Trunkal rijidite göğüs hacmini azaltarak ventilasyonu bozar"
+     },
+     "s": 27,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Opioidlerin uzun süreli kullanımda bile azalmayan, enterik sinir sistemi katkısıyla oluşan ve tolerans gelişmeyen gastrointestinal etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Konstipasyon",
+      "B": "Diyare",
+      "C": "Hipersekresyon",
+      "D": "Mide boşalmasının hızlanması",
+      "E": "Peristaltizmin artması"
+     },
+     "dogru": "A",
+     "aciklama": "Opioidlerin uzun süreli kullanımda azalmayan etkisi konstipasyondur; bu etkiye tolerans gelişmez ve MSS kadar enterik sinir sistemi de katkıda bulunur (s. 29, 30).",
+     "sik_aciklamalari": {
+      "A": "Konstipasyon, opioidlerin barsakta itici peristaltizmi azaltıp tonusu artırması ve su emilimini çoğaltmasıyla oluşur. Tolerans gelişmeyip uzun kullanımda süren etki olduğundan doğru cevaptır.",
+      "B": "Diyare barsak geçişinin hızlanmasıyla giden bir durumdur ve opioidlerle kontrol altına alınır. Diyare opioidlerin etkisinin tersidir; opioidler aksine diyareyi kontrol altına alır. Konstipasyon yapan etkiyle uyuşmadığından yanlıştır.",
+      "C": "Opioidler midede hidroklorik asit sekresyonunu azaltan bir etki gösterir. Opioidler mide hidroklorik asit sekresyonunu azaltır, artırmaz. Hipersekresyon ifadesi slaytla ters olduğu için doğru değildir.",
+      "D": "Opioidler barsak motilitesini ve itici peristaltizmi azaltan bir etki gösterir. Opioidler mide boşalmasını yavaşlatır, hızlandırmaz. Tanımlanan GİS etkisine zıt olduğundan uymaz.",
+      "E": "Opioidler barsak motilitesini ve itici peristaltizmi azaltan bir etki gösterir. Opioidler itici peristaltik hareketleri azaltır; peristaltizmi artırmaz. Konstipasyon yapan mekanizmaya ters olduğundan seçilmez."
+     },
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "azalmayan bir etkisi konstipasyondur"
+     },
+     "s": 29,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q06-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Opioidlerin safra yolları düz kaslarını ve Oddi sfinkterini kasması sonucu ortaya çıkabilen bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Safra koliği ve plazma amilaz-lipaz artışı",
+      "B": "Antidiüretik etkinin azalması",
+      "C": "Barsak motilitesinin artması",
+      "D": "Mide asidinin artması",
+      "E": "Uterus kontraktilitesinin artması"
+     },
+     "dogru": "A",
+     "aciklama": "Opioidler safra yollarında spazm yaparak safra koliğine neden olur; Oddi sfinkterini kasarak safra/pankreas reflüsüne ve plazma amilaz-lipaz artışına yol açabilir (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Oddi sfinkterinin kasılması safra ve pankreas salgısının geri kaçışına ve amilaz-lipaz yükselmesine yol açar. Opioidin safra yolu etkisini doğru tanımladığından doğru cevaptır.",
+      "B": "Opioidler santral ve periferik mekanizmalarla antidiüretik etki gösterir. Opioidler antidiüretik etki gösterir, azaltmaz; ayrıca bu safra yolu değil böbrek etkisidir. Sorudaki safra sistemi bulgusuna karşılık gelmez.",
+      "C": "Opioidler barsak motilitesini ve itici peristaltizmi azaltan bir etki gösterir. Opioidler barsak motilitesini azaltır, artırmaz. Safra yolu spazmı bulgusuyla da ilgisizdir.",
+      "D": "Opioidler midede hidroklorik asit sekresyonunu azaltan bir etki gösterir. Opioidler mide asit sekresyonunu azaltır. Safra koliği ve enzim artışını tanımlamadığından doğru değildir.",
+      "E": "Opioid analjezikler doğum eylemini uzatan bir etki gösterir. Opioidler uterus kontraktilitesini genelde artırmaz, doğumu uzatır. Safra yolu spazmı bulgusunu açıklamaz."
+     },
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Oddi sfinkterini kasarlar, böylelikle safra ve pankreas salgılarının\n  reflüsüne ve plazma amilaz ve lipaz düzeylerinde artışa"
+     },
+     "s": 31,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q07-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Opioidlerin uterus ve endokrin sistem üzerindeki etkileriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Opioid analjezikler doğum eylemini uzatırlar.\nII. ADH, prolaktin ve somatostatin salıverilmesini uyarırlar.\nIII. Lüteinleştirici hormon salıverilmesini inhibe ederler.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Opioidler doğum eylemini uzatır; ADH, prolaktin ve somatostatin salıverilmesini uyarır ancak lüteinleştirici hormonu inhibe eder. Üç ifade de doğrudur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Üç öncül de slayttaki uterus ve endokrin etkilerle örtüşür: doğum uzar, bazı hormonlar uyarılır, LH inhibe olur. Hepsi doğru olduğundan bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa ADH/prolaktin/somatostatin uyarımını belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yaparak doğru öncülleri dışlar. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncülü yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "ADH, prolaktin ve somatostatin\n  salıverilmesini uyarır, fakat lüteinleştirici hormon"
+     },
+     "s": 32,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q08-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi morfinin gastrointestinal sistem etkilerinden biri değildir?",
+     "secenekler": {
+      "A": "Diyare",
+      "B": "Konstipasyon",
+      "C": "Mide boşalmasının gecikmesi",
+      "D": "Oddi sfinkterinde spazm",
+      "E": "Kalın barsak tonusunda artış"
+     },
+     "dogru": "A",
+     "aciklama": "Morfin konstipasyon, mide boşalmasında gecikme, Oddi sfinkteri spazmı ve barsak tonusunda artış yapar; diyare ise opioidlerin etkisinin tersidir (s. 29, 30, 31).",
+     "sik_aciklamalari": {
+      "A": "Diyare barsak geçişinin hızlanmasıyla giden bir durumdur ve opioidlerle kontrol altına alınır. Diyare, barsak geçişinin hızlanmasıyla oluşan bir durumdur; opioidler aksine motiliteyi azaltıp konstipasyon yapar. Morfinin GİS etkisi olmadığından doğru cevaptır.",
+      "B": "Konstipasyon opioidlerin en kalıcı, tolerans gelişmeyen gastrointestinal etkisidir. Konstipasyon, opioidlerin en kalıcı ve tolerans gelişmeyen gastrointestinal etkisidir. Gerçek bir morfin etkisi olduğu için eleme dışı kalmaz.",
+      "C": "Mide motilitesinin azalması boşalmayı geciktiren bir opioid etkisidir. Mide motilitesinin azalması boşalmayı geciktirir ve bu morfinin bilinen etkisidir. GİS etkisi olduğundan beklenen istisna değildir.",
+      "D": "Oddi sfinkteri spazmı safra koliği ve enzim artışına yol açan morfin etkisidir. Gerçek bir etki olduğu için dışta kalan seçenek değildir.",
+      "E": "Kalın barsakta tonus artışı ve geçiş uzaması konstipasyona katkı verir. Kalın barsakta tonus artışı ve itici peristaltizmin azalması konstipasyona katkı verir. Morfinin GİS etkisi olduğundan beklenen özelliği taşımaz."
+     },
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Kalın barsakta ise itici peristaltik hareketler azalır ve tonus artar"
+     },
+     "s": 30,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q09-k5"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Opioidlerin solunum etkileriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Opioidler beyin sapındaki solunum mekanizmalarını inhibe eder.\nII. Solunum depresyonu doz-bağımlıdır.\nIII. Kafa içi basıncı artmış, KOAH veya kor pulmonalesi olanlar bu azalmayı tolere edemeyebilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Opioidler beyin sapı solunum merkezini inhibe eder, solunum depresyonu doz-bağımlıdır ve KOAH/kor pulmonale hastaları bunu tolere edemeyebilir. Üç ifade de doğrudur (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Üç öncül de slayttaki solunum depresyonu bilgileriyle örtüşür. Hepsi doğru olduğu için bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa doz bağımlılığını belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yaparak doğru öncülleri dışlar. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncülü yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q6"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "beyin sapındaki solunum mekanizmalarını inhibe ederek"
+     },
+     "s": 25,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q10-k5"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Opioidlerin klinik endikasyonlarını, toksisitesini, tolerans/yoksunluk özelliklerini ve kontrendikasyonlarını açıklar (s. 34-52).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Plasentayı aşabilmesine karşın morfine oranla yenidoğanda daha az solunum depresyonu yaptığı için obstetride tercih edilebilen opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Meperidin",
+      "B": "Fentanil",
+      "C": "Metadon",
+      "D": "Nalbufin",
+      "E": "Buprenorfin"
+     },
+     "dogru": "A",
+     "aciklama": "Meperidin, morfine oranla yenidoğanlarda daha az solunum depresyonuna neden olur; bu obstetride kullanılmasının bir nedenidir (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Meperidin bir fenilpiperidin opioididir ve morfine kıyasla yenidoğanda daha az solunum depresyonu yapar. Obstetrik kullanım nedeni bu olduğundan doğru cevaptır.",
+      "B": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil güçlü lipofilik bir opioiddir ve plasentayı kolay geçer. Yenidoğanda daha az solunum depresyonu özelliğiyle öne çıkmadığı için uymaz.",
+      "C": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon uzun etkili bir µ agonistidir ve bağımlılık tedavisinde kullanılır. Obstetride düşük neonatal depresyonla tanımlanan ilaç değildir.",
+      "D": "Nalbufin ĸ agonisti ve µ antagonisti olan bir karma agonist-antagonisttir. Nalbufin karma agonist-antagonisttir; obstetrik tercih nedeni olarak düşük neonatal solunum depresyonuyla tanımlanmaz. Bu nedenle doğru değildir.",
+      "E": "Buprenorfin parsiyel µ agonisti, δ ve ĸ antagonisti olan uzun etkili bir ilaçtır. Buprenorfin parsiyel µ agonistidir, bağımlılık tedavisinde kullanılır. Soruda tarif edilen obstetrik meperidin özelliğini taşımaz."
+     },
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "Meperidin, morfine oranla yenidoğanlarda depresyona"
+     },
+     "s": 37,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sol kalp yetmezliğine eşlik eden pulmoner ödeme bağlı dispnenin giderilmesinde intravenöz olarak kullanılan opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Morfin",
+      "B": "Loperamid",
+      "C": "Difenoksilat",
+      "D": "Nalokson",
+      "E": "Kodein"
+     },
+     "dogru": "A",
+     "aciklama": "Sol kalp yetmezliğine bağlı pulmoner ödem dispnesi intravenöz morfin ile giderilir; solunum depresyonu sorun olursa furosemid tercih edilebilir (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Morfin, pulmoner ödemde venodilatasyon ve dispne algısını azaltarak akut rahatlama sağlar ve bu amaçla IV kullanılır. Soruda tarif edilen endikasyona uyduğundan doğru cevaptır.",
+      "B": "Loperamid beyne geçişi az olan, periferik etkili antidiyareik bir opioiddir. Loperamid periferik etkili, diyare tedavisinde kullanılan bir opioiddir. Pulmoner ödem dispnesinde kullanılmadığı için uymaz.",
+      "C": "Difenoksilat diyare tedavisinde atropinle kombine kullanılan bir fenilpiperidindir. Difenoksilat antidiyareik bir fenilpiperidindir. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Nalokson µ reseptörüne yüksek afiniteli, kısa etkili tam bir antagonisttir ve doz aşımında kullanılır. Nalokson bir opioid antagonistidir ve doz aşımını geri çevirir. Pulmoner ödem dispnesini gidermek için kullanılmaz.",
+      "E": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein zayıf agonist ve öksürük kesicidir. Akut pulmoner ödem dispnesinde tercih edilen opioid değildir."
+     },
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "pulmoner ödeme bağlı olarak gelişen\n  dispne intravenöz morfin ile giderilir"
+     },
+     "s": 37,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Difenoksilat ve loperamid gibi sentetik opioidlerin başlıca kullanıldığı endikasyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Diyare",
+      "B": "Nöropatik ağrı",
+      "C": "Öksürük",
+      "D": "Pulmoner ödem",
+      "E": "Titreme"
+     },
+     "dogru": "A",
+     "aciklama": "Difenoksilat ve loperamid, selektif gastrointestinal etkileri olan ve MSS etkileri az olan sentetik opioidlerdir; diyare tedavisinde tercih edilir (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Diyare barsak geçişinin hızlanmasıyla giden bir durumdur ve opioidlerle kontrol altına alınır. Difenoksilat ve loperamid barsakta µ reseptörleri üzerinden motiliteyi azaltarak diyareyi kontrol eder. Soruda sorulan endikasyon bu olduğundan doğru cevaptır.",
+      "B": "Nöropatik ağrıda metadon gibi NMDA etkili opioidler veya adjuvanlar öne çıkar. Nöropatik ağrıda metadon gibi NMDA etkili opioidler veya adjuvanlar öne çıkar. Difenoksilat ve loperamidin birincil endikasyonu bu değildir.",
+      "C": "Öksürük kesici etki kodein gibi opioidlerin öksürük refleksini baskılamasıdır. Öksürük tedavisinde kodein, dekstrometorfan gibi antitüsifler kullanılır. Bu ikilinin başlıca endikasyonu öksürük değildir.",
+      "D": "Akut pulmoner ödem dispnesi intravenöz morfinle giderilir. Pulmoner ödemde morfin kullanılır. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "E": "Titremeyi azaltmada en belirgin etki meperidindedir. Titremede en belirgin etki meperidindedir. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur."
+     },
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "difenoksilat ve loperamid gibi selektif gastrointestinal\n  etkileri olan"
+     },
+     "s": 38,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Bütün opioid agonistleri titremeyi azaltıcı etki gösterse de, bu etkisi en belirgin olduğu bildirilen opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Meperidin",
+      "B": "Morfin",
+      "C": "Fentanil",
+      "D": "Kodein",
+      "E": "Metadon"
+     },
+     "dogru": "A",
+     "aciklama": "Bütün opioid agonistlerinin titremeyi azaltıcı etkisi olsa da en belirgin etkisi olanın meperidin olduğu bildirilmiştir (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Meperidin, postoperatif titremeyi azaltmada en belirgin etkili opioid olarak bildirilmiştir. Soruda sorulan ayırt edici özellik ona ait olduğu için doğru cevaptır.",
+      "B": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin güçlü bir analjeziktir ancak titreme üzerine en belirgin etkili opioid olarak tanımlanmaz. Bu özellikle öne çıkan ilaç değildir.",
+      "C": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil anestezide kullanılan güçlü bir opioiddir; titremeyi azaltmada meperidin kadar öne çıkmaz. Bu nedenle uymaz.",
+      "D": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein zayıf agonist ve antitüsiftir. Titreme üzerine en belirgin etkiyle tanımlanan opioid değildir.",
+      "E": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon uzun etkili bir agonisttir; titreme azaltıcı etkisiyle öne çıkan ilaç değildir. Soruda tarif edilen özelliği taşımaz."
+     },
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "en belirgin etkisi olanın meperidin olduğu bildirilmiştir"
+     },
+     "s": 38,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Opioid toleransı ile ilgili aşağıdaki ifadeler veriliyor:\nI. Analjezik, sedatif ve solunumu baskılayıcı etkilere yüksek tolerans gelişebilir.\nII. Miyotik ve konstipasyon yapıcı etkilere tolerans gelişmez.\nIII. Tolerans en hızlı kısa aralıklarla yüksek dozda ilaç uygulandığında gelişir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Analjezik/sedatif/solunum etkilerine tolerans gelişir; miyotik ve konstipasyon etkilerine gelişmez; tolerans en hızlı kısa aralıklı yüksek dozlarda gelişir. Üç ifade de doğrudur (s. 42, 43).",
+     "sik_aciklamalari": {
+      "A": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Üç öncül de slayttaki tolerans kurallarıyla örtüşür. Hepsi doğru olduğu için bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa miyotik/konstipasyon etkilerine tolerans gelişmediğini belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yaparak doğru öncülleri dışlar. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncülü yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "miyotik, konvülsan ve konstipasyon yapıcı\n  etkilere karşı gelişmez"
+     },
+     "s": 43,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisine opioidlerin kronik kullanımında tolerans gelişmez?",
+     "secenekler": {
+      "A": "Konstipasyon",
+      "B": "Analjezi",
+      "C": "Sedasyon",
+      "D": "Emezis",
+      "E": "Hipotansiyon"
+     },
+     "dogru": "A",
+     "aciklama": "Tolerans analjezik, sedatif, antidiüretik, emetik ve hipotansif etkilere gelişir; miyotik, konvülsan ve konstipasyon yapıcı etkilere gelişmez (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Konstipasyon, opioidlerin enterik etkisiyle oluşan ve tolerans gelişmeyen kalıcı yan etkidir. Bu nedenle kronik kullanımda süren etki olarak doğru cevaptır.",
+      "B": "Analjezi opioidlerin µ reseptörü aracılı ağrı baskılayıcı temel etkisidir. Analjezi µ aracılı etkidir ve tekrarlı kullanımda tolerans gelişir. Tolerans gelişmeyen etki tanımına girmediğinden uymaz.",
+      "C": "Sedasyon opioidlerin sık görülen, zamanla tolerans gelişen MSS depresan etkisidir. Sedasyona tolerans gelişir ve ilaç kesilince birkaç günde kaybolur. Tolerans gelişmeyen etki değildir.",
+      "D": "Emetik etkiye tolerans gelişir; opioidler kemoreseptör bölge yoluyla kusma yapabilir. Emetik (kusma) etkiye tolerans gelişir. Kalıcı, tolerans gelişmeyen etki tanımına uymaz.",
+      "E": "Hipotansiyon opioidlerin vazomotor merkez ve histamin aracılı etkisiyle oluşur. Hipotansif etkiye de tolerans gelişir. Konstipasyon gibi kalıcı olmadığı için doğru seçenek değildir."
+     },
+     "benzer_cikmis": [
+      "past-1790877035975-587418"
+     ],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Tolerans aynı zamanda antidiüretik, emetik ve hipotansif"
+     },
+     "s": 43,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q06-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Opioidlere fiziksel bağımlılığı olan bir kişiye nalokson gibi bir antagonist verilmesiyle ortaya çıkan, enjeksiyondan sonraki 3 dakika içinde başlayan tabloya verilen ad aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Antagoniste-bağlı yoksunluk",
+      "B": "Opioid toleransı",
+      "C": "Opioid kaynaklı hiperaljezi",
+      "D": "Kompulsif kullanım",
+      "E": "Çapraz-tolerans"
+     },
+     "dogru": "A",
+     "aciklama": "Antagoniste-bağlı yoksunluk, fiziksel bağımlı kişiye nalokson uygulanmasıyla oluşur; belirtiler 3 dakikada başlar, 10-20 dakikada doruğa çıkar (s. 47, 48).",
+     "sik_aciklamalari": {
+      "A": "Antagoniste-bağlı yoksunluk, bağımlı kişiye antagonist verildiğinde ani ortaya çıkan kesilme sendromudur. Soruda tarif edilen hızlı başlangıçlı tablo bu olduğu için doğru cevaptır.",
+      "B": "Opioid toleransı doz etkinliğinin azalmasıdır; antagonistle tetiklenen akut bir sendrom değildir. Tarif edilen tabloya karşılık gelmez. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "C": "Opioid kaynaklı hiperaljezi uzun kullanımda ağrı artışıdır, antagonist enjeksiyonuyla doğan akut sendrom değildir. Bu nedenle uymaz. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Kompulsif kullanım bağımlılığın davranışsal, takıntılı boyutudur. Kompulsif kullanım bağımlılığın davranışsal boyutudur, antagonistle tetiklenen yoksunluğu tanımlamaz. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "E": "Çapraz-tolerans bir opioide gelişen toleransın başka opioide yansımasıdır. Çapraz-tolerans bir opioide gelişen toleransın diğerine yansımasıdır. Antagonistin başlattığı akut yoksunluk tablosunu tanımlamaz."
+     },
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Antagoniste-bağlı yoksunluk adı verilebilen kısa süreli ani kesilme"
+     },
+     "s": 48,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q07-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yarı-ömrü uzamış olması nedeniyle morfin ve aktif glukuronid metabolitlerinin birikebildiği ve dozun genellikle azaltıldığı hasta grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Böbrek fonksiyon bozukluğu olanlar",
+      "B": "Hipertansiyon hastaları",
+      "C": "Astım hastaları",
+      "D": "Diyabet hastaları",
+      "E": "Hipertiroidi hastaları"
+     },
+     "dogru": "A",
+     "aciklama": "Böbrek fonksiyon bozukluğu olan hastalarda morfinin yarı-ömrü uzar, aktif glukuronid metabolitleri birikebilir ve doz genellikle azaltılır (s. 52).",
+     "sik_aciklamalari": {
+      "A": "Böbrek yetmezliğinde morfin metabolitleri (özellikle M6G) atılamayıp birikir ve etki uzar; bu yüzden doz azaltılır. Soruda tarif edilen grup olduğundan doğru cevaptır.",
+      "B": "Hipertansiyon kardiyovasküler bir durumdur, morfin metabolit birikimi için özgül grup değildir. Hipertansiyon başlıca kardiyovasküler bir durumdur; morfin metabolit birikimi için özgül risk grubu olarak tanımlanmaz. Bu nedenle uymaz.",
+      "C": "Astım solunum riski taşır ama metabolit birikimi böbrek işleviyle ilişkilidir. Astım solunum açısından dikkat gerektirir ama metabolit birikimi böbrek işleviyle ilgilidir. Soruda sorulan grup astım değildir.",
+      "D": "Diyabet, morfin glukuronid birikim riski grubunu tanımlamaz. Diyabet başlı başına morfin glukuronid birikim riski grubunu tanımlamaz. Tarif edilen böbrek kaynaklı durumla eşleşmez.",
+      "E": "Hipertiroidide opioid yanıtı değişebilir ama metabolit birikimi böbrek yetmezliğine bağlıdır. Hipertiroidide opioid yanıtı farklı olabilir ama metabolit birikimi böbrek yetmezliğine bağlıdır. Bu nedenle doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "Böbrek fonksiyon bozukluğu olan hastalarda yarı-ömrü uzamıştır"
+     },
+     "s": 52,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q08-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi opioid analjeziklerin klinik endikasyonlarından biri değildir?",
+     "secenekler": {
+      "A": "Hipertansiyon tedavisi",
+      "B": "Şiddetli ağrının giderilmesi",
+      "C": "Akut pulmoner ödem dispnesi",
+      "D": "Diyarenin kontrolü",
+      "E": "Öksürüğün kesilmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Opioidler şiddetli ağrı, pulmoner ödem dispnesi, diyare ve öksürük tedavisinde kullanılır; hipertansiyon tedavisi opioid endikasyonları arasında yer almaz (s. 35, 37, 38).",
+     "sik_aciklamalari": {
+      "A": "Hipertansiyon tedavisi başlıca antihipertansif ilaç sınıflarıyla yürütülür. Hipertansiyon tedavisi antihipertansif ilaçlarla yürütülen bir endikasyondur ve opioidlerin kullanım alanı değildir. Opioid endikasyonları arasında bulunmadığından doğru cevaptır.",
+      "B": "Şiddetli sürekli ağrı, yüksek etkinlikli opioidlerin temel endikasyonudur. Şiddetli sürekli ağrı, yüksek intrinsik aktiviteli opioidlerin temel endikasyonudur. Gerçek bir opioid kullanım alanı olduğundan eleme dışı kalmaz.",
+      "C": "Sol kalp yetmezliğine bağlı pulmoner ödem dispnesi intravenöz morfinle giderilir. Opioid endikasyonu olduğu için beklenen istisna değildir. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Diyare barsak geçişinin hızlanmasıyla giden bir durumdur ve opioidlerle kontrol altına alınır. Diyare, difenoksilat ve loperamid gibi opioidlerle kontrol altına alınabilir. Gerçek bir endikasyon olduğundan dışta kalan seçenek değildir.",
+      "E": "Öksürük kesici etki kodein gibi opioidlerin öksürük refleksini baskılamasıdır. Öksürüğün kesilmesi kodein gibi opioidlerin bilinen bir endikasyonudur. Opioid kullanım alanı olduğu için beklenen özelliği taşımaz."
+     },
+     "benzer_cikmis": [
+      "49a496151263"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "diyare opioid analjezikler tarafından kontrol"
+     },
+     "s": 38,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q09-k6"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Opioid yoksunluk sendromunun zaman seyriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Morfin veya heroin yoksunluğu son dozdan 6-10 saat sonra başlar.\nII. Doruk etkilere 36-48 saat sonra erişilir.\nIII. Metadon yoksunluğunun belirtileri morfine göre daha hafif ama daha uzun sürelidir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Morfin/heroin yoksunluğu 6-10 saatte başlar, doruğa 36-48 saatte ulaşır; metadon yoksunluğu daha hafif ama uzun sürelidir. Üç ifade de doğrudur (s. 46, 47, 55).",
+     "sik_aciklamalari": {
+      "A": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Üç öncül de slayttaki yoksunluk zaman seyriyle örtüşür. Hepsi doğru olduğu için bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa doruk süresini belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yaparak doğru öncülleri dışlar. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncülü yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "son\n  dozdan sonraki 6-10 saat içinde başlar. Doruk etkilere 36-48 saat"
+     },
+     "s": 46,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q10-k6"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Spesifik opioidleri (güçlü/zayıf agonistler, karma agonist-antagonistler, antitüsifler) etki ve kullanımlarıyla ayırt eder (s. 53-65).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Genel anestezide intravenöz indüksiyon ve analjezi amacıyla sık kullanılan, yüksek lipofilitesiyle kan-beyin bariyerini hızla geçen sentetik opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fentanil",
+      "B": "Morfin",
+      "C": "Kodein",
+      "D": "Metadon",
+      "E": "Buprenorfin"
+     },
+     "dogru": "A",
+     "aciklama": "Fentanil sentetik opioidler arasında anestezide en sık kullanılanlardandır; lipofilik yapısı kan-beyin bariyerini hızla geçmesini ve hızlı etkiyi sağlar (s. 55, 27).",
+     "sik_aciklamalari": {
+      "A": "Fentanil güçlü ve çok lipofilik bir sentetik opioiddir; hızlı etki başlangıcıyla anestezi indüksiyonunda tercih edilir. Soruda tarif edilen özellikler ona ait olduğundan doğru cevaptır.",
+      "B": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin suda daha çözünür bir fenantrendir ve etki başlangıcı fentanilden yavaştır. Hızlı anestezik indüksiyon opioidi olarak tanımlanmaz.",
+      "C": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein zayıf bir agonist ve antitüsiftir; anestezi indüksiyonunda kullanılmaz. Soruda tarif edilen lipofilik hızlı opioid değildir.",
+      "D": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon uzun etkili bir µ agonistidir ve bağımlılık tedavisinde kullanılır. Hızlı etkili anestezik indüksiyon ilacı olmadığından uymaz.",
+      "E": "Buprenorfin parsiyel µ agonisti, δ ve ĸ antagonisti olan uzun etkili bir ilaçtır. Buprenorfin parsiyel agonisttir ve uzun etkilidir. Hızlı anestezi indüksiyonuyla tanımlanan opioid değildir."
+     },
+     "benzer_cikmis": [
+      "d3-k2-far-007"
+     ],
+     "kanit": {
+      "sayfa": 55,
+      "alinti": "Fentanil sentetik opioidler, arasında en sıklıkla kullanılan"
+     },
+     "s": 55,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k7"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Kan ve non-spesifik doku esterazları tarafından hızla metabolize edilmesi nedeniyle farmakokinetik ve farmakodinamik yarı-ömürleri son derece kısa olan opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Remifentanil",
+      "B": "Metadon",
+      "C": "Morfin",
+      "D": "Levorfanol",
+      "E": "Buprenorfin"
+     },
+     "dogru": "A",
+     "aciklama": "Remifentanil kan ve non-spesifik doku esterazlarıyla hızla metabolize edilir; bu nedenle yarı-ömrü son derece kısadır (s. 56).",
+     "sik_aciklamalari": {
+      "A": "Remifentanil, doku esterazlarıyla hızla parçalanan ultra kısa etkili bir sentetik opioiddir ve infüzyon kesilince etkisi çabuk biter. Soruda tarif edilen kinetik ona ait olduğundan doğru cevaptır.",
+      "B": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon uzun yarı-ömürlü bir opioiddir; esterazlarla hızlı yıkılmaz. Kısa etkili tanımına tam zıt olduğu için uymaz.",
+      "C": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin glukuronidasyonla metabolize olur, esterazlarla değil ve etkisi saatlerce sürer. Ultra kısa etkili opioid değildir.",
+      "D": "Levorfanol etkileri morfine benzeyen sentetik bir opioid analjeziktir. Levorfanol morfine benzeyen sentetik bir opioiddir ve kısa etkili değildir. Esteraz temelli hızlı yıkım özelliği taşımaz.",
+      "E": "Buprenorfin parsiyel µ agonisti, δ ve ĸ antagonisti olan uzun etkili bir ilaçtır. Buprenorfin uzun etkili bir parsiyel agonisttir. Esterazla hızla yıkılan kısa etkili opioid tanımına girmez."
+     },
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "Remifentanil kan ve non-spesifik doku esterazları tarafından hızla"
+     },
+     "s": 56,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k7"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Güçlü bir µ agonisti olmasının yanı sıra NMDA reseptörlerini ve monoaminerjik geri-alım taşıyıcılarını da bloke ederek nöropatik ve kanser ağrısında etkili olabilen opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Metadon",
+      "B": "Fentanil",
+      "C": "Kodein",
+      "D": "Nalokson",
+      "E": "Loperamid"
+     },
+     "dogru": "A",
+     "aciklama": "Metadon sadece güçlü bir µ agonisti değildir; NMDA reseptörlerini ve monoaminerjik geri-alım taşıyıcılarını da bloke eder ve tedavisi zor ağrılarda etkilidir (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Metadon, µ agonizmine ek olarak NMDA blokajı ve monoamin geri-alım inhibisyonu yapan uzun etkili bir opioiddir. Nöropatik/kanser ağrısındaki bu ek etkiler ona ait olduğundan doğru cevaptır.",
+      "B": "Fentanil saf güçlü bir µ agonistidir; NMDA ve monoamin taşıyıcı blokajı tipik özelliği değildir. Soruda tarif edilen çok yönlü etkiyi taşımaz.",
+      "C": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein zayıf bir µ agonisti ve antitüsiftir. NMDA veya monoamin geri-alım etkisiyle tanımlanmaz, bu nedenle uymaz.",
+      "D": "Nalokson µ reseptörüne yüksek afiniteli, kısa etkili tam bir antagonisttir ve doz aşımında kullanılır. Nalokson bir antagonisttir ve ağrı tedavisinde agonist olarak kullanılmaz. Soruda tanımlanan çok etkili agonist değildir.",
+      "E": "Loperamid beyne geçişi az olan, periferik etkili antidiyareik bir opioiddir. Loperamid periferik etkili antidiyareik bir opioiddir. Santral NMDA/monoamin etkisiyle tanımlanmadığı için doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "NMDA reseptörlerini ve monoaminerjik geri-alım\n  taşıyıcılarını da bloke eder"
+     },
+     "s": 54,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k7"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Etki mekanizması ağırlıklı olarak serotonin geri alımını bloke etmeye dayanan, noradrenalin taşıyıcısını da inhibe eden ve yalnızca zayıf µ agonist etkisi olan santral etkili analjezik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tramadol",
+      "B": "Morfin",
+      "C": "Fentanil",
+      "D": "Naltrekson",
+      "E": "Pentazosin"
+     },
+     "dogru": "A",
+     "aciklama": "Tramadol, ağırlıklı olarak serotonin geri alımını ve noradrenalin taşıyıcısını bloke eden, nalokson tarafından kısmen antagonize edilen zayıf µ agonisti santral analjeziktir (s. 63).",
+     "sik_aciklamalari": {
+      "A": "Tramadol, monoamin geri alımını bloke eden ve zayıf µ agonist etkisi olan santral etkili bir analjeziktir. Soruda tarif edilen çift mekanizma ona ait olduğundan doğru cevaptır.",
+      "B": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin güçlü bir µ agonistidir; etkisi serotonin geri alım blokajına dayanmaz. Tarif edilen monoaminerjik mekanizmayı taşımaz.",
+      "C": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil güçlü lipofilik bir µ agonistidir, monoamin taşıyıcı etkisiyle tanımlanmaz. Bu nedenle uymaz.",
+      "D": "Naltrekson uzun etkili tam bir antagonisttir; bağımlılık idamesi ve alkol özleminde kullanılır. Naltrekson bir opioid antagonistidir ve analjezik değildir. Serotonerjik santral analjezik tanımına girmez.",
+      "E": "Pentazosin zayıf µ antagonisti özellikleri de olan bir ĸ agonisti ve en eski karma ajandır. Pentazosin karma agonist-antagonisttir; etkisi ĸ agonizmi üzerinedir, serotonin geri alımı değil. Soruda tanımlanan ilaç değildir."
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q147"
+     ],
+     "kanit": {
+      "sayfa": 63,
+      "alinti": "ağırlıklı olarak serotonin geri alımını\n  bloke etmeye dayanan, santral etkili bir analjeziktir"
+     },
+     "s": 63,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k7"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Periferik µ reseptörleri üzerine etki edip beyne geçişi sınırlı olduğundan kötüye kullanım potansiyeli çok düşük kabul edilen ve reçetesiz verilebilen antidiyareik opioid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Loperamid",
+      "B": "Metadon",
+      "C": "Morfin",
+      "D": "Fentanil",
+      "E": "Pentazosin"
+     },
+     "dogru": "A",
+     "aciklama": "Loperamid periferik µ reseptörleri üzerine etki eder, beyne geçişi sınırlıdır; bu nedenle kötüye kullanım potansiyeli düşüktür ve reçetesiz verilebilir (s. 59).",
+     "sik_aciklamalari": {
+      "A": "Loperamid, kan-beyin bariyerini az geçen, periferik etkili bir antidiyareik opioiddir ve bağımlılık riski düşüktür. Soruda tarif edilen özellikler ona ait olduğundan doğru cevaptır.",
+      "B": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon santral etkili güçlü bir µ agonistidir ve sıkı kontrole tabidir. Beyne geçişi sınırlı reçetesiz antidiyareik tanımına uymaz.",
+      "C": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin santral etkili güçlü bir opioiddir ve yüksek kötüye kullanım potansiyeli taşır. Tarif edilen periferik düşük riskli ilaç değildir.",
+      "D": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil güçlü santral bir opioiddir; reçetesiz verilmez. Soruda tanımlanan antidiyareik profile karşılık gelmez.",
+      "E": "Pentazosin zayıf µ antagonisti özellikleri de olan bir ĸ agonisti ve en eski karma ajandır. Pentazosin karma agonist-antagonisttir ve analjezik amaçlı kullanılır. Periferik antidiyareik düşük riskli opioid değildir."
+     },
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h65"
+     ],
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "Beyine geçişi sınırlı olduğundan kötüye kullanılma potansiyelinin çok\n  düşük"
+     },
+     "s": 59,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k7"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi güçlü agonist opioidlerden biri değildir?",
+     "secenekler": {
+      "A": "Kodein",
+      "B": "Morfin",
+      "C": "Hidromorfon",
+      "D": "Metadon",
+      "E": "Fentanil"
+     },
+     "dogru": "A",
+     "aciklama": "Morfin, hidromorfon, metadon ve fentanil güçlü agonistlerdir; kodein ise zayıf-orta derecede etkili bir agonisttir (s. 53, 55, 57).",
+     "sik_aciklamalari": {
+      "A": "Kodein, morfine göre daha düşük etkinlikte, zayıf-orta derecede etkili bir agonisttir ve daha çok antitüsif olarak kullanılır. Güçlü agonist grubunda yer almadığından doğru cevaptır.",
+      "B": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin fenantren yapılı, şiddetli ağrıda kullanılan güçlü bir agonisttir. Güçlü grupta olduğu için eleme dışı kalmaz.",
+      "C": "Hidromorfon şiddetli ağrıda kullanılan, konjugasyonla metabolize olan güçlü bir agonisttir. Hidromorfon şiddetli ağrıda kullanılan güçlü bir agonisttir. Güçlü opioidler arasında sayıldığından aranan istisna değildir.",
+      "D": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon güçlü ve klinikte faydalı bir µ agonistidir. Güçlü agonist grubunda olduğundan dışta kalan seçenek değildir.",
+      "E": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil anestezide kullanılan güçlü bir sentetik agonisttir. Güçlü opioidler arasında olduğu için beklenen istisna değildir."
+     },
+     "kanit": {
+      "sayfa": 57,
+      "alinti": "Kodein, hidrokodein ve hidrokodonun hepsi morfine göre daha düşük\n  etkinliğe"
+     },
+     "s": 57,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q06-k7"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Parenteral uygulanan, güçlü bir ĸ-reseptör agonisti ve µ-reseptör antagonisti olan ve solunum depresyonunda naloksonla tersine çevrilmeye nispeten dirençli olabilen karma agonist-antagonist aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nalbufin",
+      "B": "Morfin",
+      "C": "Fentanil",
+      "D": "Metadon",
+      "E": "Kodein"
+     },
+     "dogru": "A",
+     "aciklama": "Nalbufin parenteral uygulanan güçlü bir ĸ agonisti ve µ antagonistidir; reseptöre naloksondan fazla afinitesi nedeniyle solunum depresyonu naloksonla tersine çevrilmeye dirençli olabilir (s. 60).",
+     "sik_aciklamalari": {
+      "A": "Nalbufin, ĸ reseptöründe agonist, µ reseptöründe antagonist etkili karma bir opioiddir ve naloksona nispeten dirençli solunum depresyonu yapabilir. Soruda tarif edilen profil ona ait olduğundan doğru cevaptır.",
+      "B": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin saf bir µ agonistidir, karma agonist-antagonist değildir. Kappa agonisti/µ antagonisti tanımına uymaz.",
+      "C": "Fentanil yüksek lipofiliteli, anestezide sık kullanılan güçlü bir sentetik µ agonistidir. Fentanil güçlü bir µ agonistidir; µ antagonist bileşeni yoktur. Karma profil taşımadığından doğru değildir.",
+      "D": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon güçlü bir µ agonistidir; karma agonist-antagonist değildir. Soruda tanımlanan ilaç olamaz.",
+      "E": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein zayıf bir µ agonistidir, karma etki göstermez. Kappa agonisti/µ antagonisti tanımına girmez."
+     },
+     "kanit": {
+      "sayfa": 60,
+      "alinti": "güçlü bir ĸ-reseptör agonisti\n  ve µ-reseptör antagonistidir"
+     },
+     "s": 60,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q07-k7"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki opioidlerden hangisi karma agonist-antagonist grubunda bulunmaz?",
+     "secenekler": {
+      "A": "Morfin",
+      "B": "Pentazosin",
+      "C": "Nalbufin",
+      "D": "Butorfanol",
+      "E": "Buprenorfin"
+     },
+     "dogru": "A",
+     "aciklama": "Pentazosin, nalbufin, butorfanol ve buprenorfin karma agonist-antagonist özellikler taşır; morfin ise saf bir µ tam agonistidir (s. 34, 60, 61, 62).",
+     "sik_aciklamalari": {
+      "A": "Morfin fenantren yapılı, µ reseptörünün tam agonisti olan standart güçlü analjeziktir. Morfin, µ reseptörünün saf tam agonistidir ve antagonist bileşeni yoktur. Karma agonist-antagonist grubuna girmediği için doğru cevaptır.",
+      "B": "Pentazosin, zayıf µ antagonisti özellikleri de olan bir ĸ agonistidir ve klasik karma agonist-antagonisttir. Bu gruba ait olduğundan eleme dışı kalmaz.",
+      "C": "Nalbufin ĸ agonisti ve µ antagonisti olan bir karma agonist-antagonisttir. Nalbufin ĸ agonisti, µ antagonisti olan bir karma ajan olarak tanımlanır. Gruba dâhil olduğu için beklenen istisna değildir.",
+      "D": "Butorfanol baskın bir ĸ agonisti olup µ'de kısmi agonist/antagonist davranır. Karma grupta yer aldığından dışta kalan seçenek değildir.",
+      "E": "Buprenorfin parsiyel µ agonisti, δ ve ĸ antagonistidir ve karma agonist-antagonist kabul edilir. Bu gruba ait olduğundan beklenen özelliği taşımaz."
+     },
+     "kanit": {
+      "sayfa": 60,
+      "alinti": "Pentazosin ve nalbufin, karma agonist-antagonist özelliklere sahip"
+     },
+     "s": 60,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q08-k7"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Opioid antagonistlerini (nalokson, naltrekson, nalmefen, metilnaltrekson) etki yeri ve endikasyonlarıyla tanımlar (s. 66-70).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Akut opiyat (opioid) intoksikasyonunda komayı ve solunum depresyonunu geri çevirmek için kullanılan tam opioid antagonisti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nalokson",
+      "B": "Metadon",
+      "C": "Tramadol",
+      "D": "Pentazosin",
+      "E": "Kodein"
+     },
+     "dogru": "A",
+     "aciklama": "Naloksonun en önemli kullanım yeri akut opioid zehirlenmesidir; intravenöz nalokson opioid doz aşımına bağlı komayı önemli ölçüde tersine çevirir (s. 68).",
+     "sik_aciklamalari": {
+      "A": "Nalokson, µ reseptörüne yüksek afiniteli tam bir opioid antagonistidir ve doz aşımında solunumu, bilinci ve pupilleri hızla düzeltir. Akut opioid zehirlenmesinin özgül ilacı olduğundan doğru cevaptır.",
+      "B": "Metadon uzun etkili, NMDA'yı da bloke eden ve bağımlılık idamesinde kullanılan güçlü bir µ agonistidir. Metadon güçlü bir µ agonistidir ve opioid etkisini artırır, geri çevirmez. Akut intoksikasyonu tersine çevirmediği için uymaz.",
+      "C": "Tramadol monoamin geri alımını bloke eden, zayıf µ agonisti santral bir analjeziktir. Tramadol zayıf µ agonisti etkili santral bir analjeziktir, antagonist değildir. Doz aşımını geri çeviren ilaç olamaz.",
+      "D": "Pentazosin zayıf µ antagonisti özellikleri de olan bir ĸ agonisti ve en eski karma ajandır. Pentazosin karma agonist-antagonisttir; akut opioid zehirlenmesinin ilk tedavisi değildir. Tam antagonist nalokson tercih edilir.",
+      "E": "Kodein morfinden sentezlenen, CYP2D6 ile aktive olan zayıf bir µ agonisti ve antitüsiftir. Kodein zayıf bir agonisttir ve antagonist etkisi yoktur. Opioid intoksikasyonunu geri çeviremediğinden doğru değildir."
+     },
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q16"
+     ],
+     "kanit": {
+      "sayfa": 68,
+      "alinti": "Naloksonun en önemli kullanım yeri akut opioid zehirlenmesidir"
+     },
+     "s": 68,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q01-k8"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Uzun etki süresi nedeniyle bağımlıların idame programlarında kullanılan ve kronik alkoliklerde β-endorfin salıverilmesini artırarak alkol özlemini azalttığı için FDA onayı alan opioid antagonisti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Naltrekson",
+      "B": "Nalokson",
+      "C": "Nalmefen",
+      "D": "Metilnaltrekson",
+      "E": "Alvimopan"
+     },
+     "dogru": "A",
+     "aciklama": "Naltrekson uzun etki süresiyle idame tedavisinde kullanılır; kronik alkoliklerde alkol özlemini azalttığı bildirilmiş ve bu amaçla FDA onayı almıştır (s. 70).",
+     "sik_aciklamalari": {
+      "A": "Naltrekson, oral etkili ve uzun süreli bir opioid antagonistidir; heroin etkisini bloke eder ve alkol bağımlılığında özlemi azaltır. Soruda tarif edilen FDA onaylı endikasyon ona ait olduğundan doğru cevaptır.",
+      "B": "Nalokson µ reseptörüne yüksek afiniteli, kısa etkili tam bir antagonisttir ve doz aşımında kullanılır. Nalokson kısa etkili bir antagonisttir ve başlıca akut doz aşımında kullanılır. Uzun idame ve alkol özlemi endikasyonu olmadığından uymaz.",
+      "C": "Nalmefen intravenöz kullanılan bir naltrekson türevi tam antagonisttir. Nalmefen bir naltrekson türevidir ve doz aşımında intravenöz kullanılır. Soruda tanımlanan uzun süreli alkol endikasyonuyla birincil olarak tanımlanmaz.",
+      "D": "Metilnaltrekson periferik etkili bir antagonisttir ve opioid kaynaklı konstipasyonda kullanılır. Metilnaltrekson periferik etkili bir antagonisttir ve opioid kaynaklı konstipasyonda kullanılır. Alkol özlemi endikasyonu taşımadığından doğru değildir.",
+      "E": "Alvimopan periferik etkili bir antagonisttir ve postoperatif ileus tedavisinde kullanılır. Alvimopan periferik etkili bir antagonisttir ve postoperatif ileusta kullanılır. Alkol bağımlılığı endikasyonuyla ilgisi olmadığından uymaz."
+     },
+     "kanit": {
+      "sayfa": 70,
+      "alinti": "alkol özlemini azalttığı bildirilmiş ve bu amaçla FDA"
+     },
+     "s": 70,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q02-k8"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Terminal dönem hastalıklarda görülen opioid kaynaklı konstipasyonun tedavisi için geliştirilen periferik etkili opioid antagonisti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Metilnaltrekson",
+      "B": "Nalokson",
+      "C": "Naltrekson",
+      "D": "Nalmefen",
+      "E": "Buprenorfin"
+     },
+     "dogru": "A",
+     "aciklama": "Metilnaltrekson, terminal dönem hastalıklarda görülen opioid kaynaklı konstipasyonun tedavisi için geliştirilmiş periferik etkili bir antagonisttir (s. 69).",
+     "sik_aciklamalari": {
+      "A": "Metilnaltrekson, kan-beyin bariyerini geçmeyen periferik bir opioid antagonistidir ve analjeziyi bozmadan barsak konstipasyonunu düzeltir. Soruda tanımlanan endikasyona uyduğundan doğru cevaptır.",
+      "B": "Nalokson santral ve periferik etkili, kısa süreli bir antagonisttir ve başlıca doz aşımında kullanılır. Özgül olarak opioid konstipasyonu için geliştirilmemiştir.",
+      "C": "Naltrekson uzun etkili tam bir antagonisttir; bağımlılık idamesi ve alkol özleminde kullanılır. Naltrekson uzun etkili santral bir antagonisttir; bağımlılık idamesi ve alkol özleminde kullanılır. Periferik konstipasyon ilacı olarak tanımlanmaz.",
+      "D": "Nalmefen intravenöz kullanılan bir naltrekson türevi tam antagonisttir. Nalmefen doz aşımında kullanılan intravenöz bir antagonisttir. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "E": "Buprenorfin parsiyel µ agonisti, δ ve ĸ antagonisti olan uzun etkili bir ilaçtır. Buprenorfin parsiyel agonisttir, antagonist değildir ve bağımlılık tedavisinde kullanılır. Konstipasyon tedavisi için geliştirilmiş periferik antagonist değildir."
+     },
+     "kanit": {
+      "sayfa": 69,
+      "alinti": "konstipasyonun\n  tedavisi için geliştirilen metilnaltrekson"
+     },
+     "s": 69,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q03-k8"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Opioid antagonistleriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Nalokson, naltrekson ve nalmefen morfin türevleridir.\nII. Bu ilaçların µ-reseptör bağlanma bölgelerine görece yüksek afiniteleri vardır.\nIII. Tek başlarına uygulandıklarında agonist etkiyi bloke eden dozlarda bile neredeyse etkisizdirler.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Nalokson, naltrekson ve nalmefen morfin türevidir, µ bağlanma bölgelerine yüksek afinite gösterir ve tek başlarına verildiklerinde neredeyse etkisizdirler. Üç ifade de doğrudur (s. 66, 67).",
+     "sik_aciklamalari": {
+      "A": "Üç öncül de slayttaki antagonist özellikleriyle örtüşür: morfin türevidirler, µ'ye yüksek afinite gösterir ve tek başına etkisizdirler. Hepsi doğru olduğundan bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa µ bağlanma afinitesini belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yaparak doğru öncülleri dışlar. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncülü yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 66,
+      "alinti": "nalokson, naltrekson ve nalmefen,\n  morfin türevleridir"
+     },
+     "s": 66,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q04-k8"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Naltreksonun farmakokinetiği ve kullanımıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Oral alımdan sonra iyi absorbe edilir fakat hızla ilk-geçiş etkisine uğrar.\nII. Yarı ömrü yaklaşık 10 saattir.\nIII. Oral tek doz 100 mg, heroin enjeksiyonunun etkilerini 48 saate kadar bloke eder.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Naltrekson oral iyi absorbe olur ama hızlı ilk-geçişe uğrar; yarı ömrü 10 saattir ve 100 mg tek doz heroin etkisini 48 saate kadar bloke eder. Üç ifade de doğrudur (s. 66).",
+     "sik_aciklamalari": {
+      "A": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Üç öncül de slayttaki naltrekson kinetiğiyle birebir örtüşür. Hepsi doğru olduğundan bu seçenek doğrudur.",
+      "B": "Seçenek yalnız birinci ve üçüncü öncülü doğru sayar; oysa yarı ömrü belirten ikinci öncül de doğrudur. Eksik kaldığı için uygun değildir.",
+      "C": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Olmayan bir dördüncü öncüle atıf yaparak doğru öncülleri dışlar. Bu ayrım, sorunun doğru yanıtını belirlerken diğer seçeneklerden ayıran belirleyici ve sınavda sık ölçülen bir ölçüt oluşturur.",
+      "D": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Yalnız var olmayan dördüncü öncülü doğru gösterir; gerçek üç öncülü yok sayar. Dolayısıyla seçilmez.",
+      "E": "Öncüller slayttaki bilgilerle tek tek karşılaştırılarak değerlendirilir. Dört öncülü doğru kabul eder; ancak soruda üç öncül vardır. Olmayan öncülü kapsadığından doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 66,
+      "alinti": "Yarı ömrü 10 saattir; oral yolla verilen 100 mg"
+     },
+     "s": 66,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q05-k8"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ilaçlardan hangisi tam opioid antagonisti değildir?",
+     "secenekler": {
+      "A": "Buprenorfin",
+      "B": "Nalokson",
+      "C": "Naltrekson",
+      "D": "Nalmefen",
+      "E": "Metilnaltrekson"
+     },
+     "dogru": "A",
+     "aciklama": "Nalokson, naltrekson, nalmefen ve metilnaltrekson antagonist etkili ilaçlardır; buprenorfin ise parsiyel µ agonistidir, tam antagonist değildir (s. 61, 66, 69).",
+     "sik_aciklamalari": {
+      "A": "Buprenorfin parsiyel µ agonisti, δ ve ĸ antagonisti olan uzun etkili bir ilaçtır. Buprenorfin, µ reseptöründe parsiyel agonist, δ ve ĸ reseptörlerinde antagonist olan bir ilaçtır. Tam antagonist olmadığı için doğru cevaptır.",
+      "B": "Nalokson, µ reseptörüne yüksek afiniteli tam bir opioid antagonistidir ve doz aşımında kullanılır. Tam antagonist grubunda yer aldığından eleme dışı kalmaz.",
+      "C": "Naltrekson uzun etkili tam bir antagonisttir; bağımlılık idamesi ve alkol özleminde kullanılır. Naltrekson, uzun etkili tam bir opioid antagonistidir ve bağımlılık idamesinde kullanılır. Antagonist olduğu için beklenen istisna değildir.",
+      "D": "Nalmefen intravenöz kullanılan bir naltrekson türevi tam antagonisttir. Nalmefen, intravenöz kullanılan bir naltrekson türevi tam antagonisttir. Antagonist grupta olduğundan dışta kalan seçenek değildir.",
+      "E": "Metilnaltrekson periferik etkili bir antagonisttir ve opioid kaynaklı konstipasyonda kullanılır. Metilnaltrekson periferik etkili bir opioid antagonistidir ve opioid konstipasyonunda kullanılır. Antagonist olduğu için beklenen özelliği taşımaz."
+     },
+     "kanit": {
+      "sayfa": 66,
+      "alinti": "Tam opioid antagonist ilaçlar olan nalokson, naltrekson ve nalmefen"
+     },
+     "s": 66,
+     "id": "k2-33-opioid-analjezikler-ve-antagonistleri-q06-k8"
+    }
+   ]
+  }
+ ]
+}
