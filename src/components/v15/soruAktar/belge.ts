@@ -9,7 +9,7 @@
 import type { PdfOption } from '../../pdf/pdfSources';
 import { kaynakAdi, type AQ } from './kaynak';
 import {
-  ALAN_RENK, ALT_SATIR_EN_COK, ALT_MM, BASLIK_MM, GRUP_MM, KAGIT, NOT_PAY_MM, PX_MM, SERIT_MM, YAZI, altBilgiVar, altYukMm, baslikYukMm, baslikYazi, buyukCss, cozumZeminCss, dersRengi, dogruZeminCss, govde, izgara, karistir,
+  ALAN_RENK, ALT_SATIR_EN_COK, ALT_MM, BASKI_KUTU_KISA_MM, BASLIK_MM, GRUP_MM, KAGIT, NOT_PAY_MM, PX_MM, SERIT_MM, YAZI, altBilgiVar, altYukMm, baslikYukMm, baslikYazi, buyukCss, cozumZeminCss, dersRengi, dogruZeminCss, govde, izgara, karistir,
   kaynakSirasi, ogeRenk, paletRenkleri, sayfaAraligi, sayfaOlcu, stilCss, yaprakOlcu, yaziBaglantilari,
   type Alan, type Ayar, type Govde, type RenkAlan,
 } from './ayar';
@@ -368,12 +368,14 @@ body{font-family:${YAZI[a.yazi].css};font-weight:${a.agirlik};color:${a.metinRen
 ${onizleme ? `html{background:#d4d7dd}body{padding:14px 0}.pg,.yp{margin:0 auto 14px;box-shadow:0 2px 10px rgb(0 0 0 / .18)}.yp .pg{margin:0;box-shadow:none}` : ''}
 /* H576: sayfa kutusu kâğıttan KISA basılır (0,25 mm). Kutu kâğıttan büyük ya da eşitse Chrome baskıda
  * yarım piksellik büyümede bile kutuyu parçalayıp taşanı SONRAKİ basılı sayfanın üstüne basar; alt bilgi
- * en altta durduğu için en çok o üstüne biner ("alt bilgi diğer metni kapatıyor"). 0,25 mm boşluk
- * gövde toleransının (BASKI_PAY_MM) içinde kaldığından içerik kırpılmaz. */
-.pg{width:${w}mm;height:${(h - 0.25).toFixed(2)}mm;padding:${kt}mm ${ks}mm ${ka}mm ${kl}mm;position:relative;overflow:hidden;background:${zemin};break-after:page;page-break-after:always}
+ * en altta durduğu için en çok o üstüne biner ("alt bilgi diğer metni kapatıyor"). H576 ilk çözümünde kutu
+ * kâğıttan 0,25 mm kısaydı; baskı çözünürlüğünde (mm→nokta yuvarlaması) bu ~1 px'e denk geldiğinden bazı
+ * kâğıt/yazıcı bileşimlerinde parçalama yine oluyordu (kullanıcı 2026-11-15'te yeniden bildirdi). Artık kutu
+ * ${BASKI_KUTU_KISA_MM} mm kısa basılır; bu boşluk gövde toleransının (BASKI_PAY_MM) içinde kaldığından içerik kırpılmaz. */
+.pg{width:${w}mm;height:${(h - BASKI_KUTU_KISA_MM).toFixed(2)}mm;padding:${kt}mm ${ks}mm ${ka}mm ${kl}mm;position:relative;overflow:hidden;background:${zemin};break-after:page;page-break-after:always}
 .pg.cift{padding:${kt}mm ${kl}mm ${ka}mm ${ks}mm}
 .pg:last-child{break-after:auto;page-break-after:auto}
-.yp{width:${yp.w}mm;height:${(yp.h - 0.25).toFixed(2)}mm;display:flex;justify-content:center;align-items:center;overflow:hidden;background:${zemin};break-after:page;page-break-after:always;position:relative}
+.yp{width:${yp.w}mm;height:${(yp.h - BASKI_KUTU_KISA_MM).toFixed(2)}mm;display:flex;justify-content:center;align-items:center;overflow:hidden;background:${zemin};break-after:page;page-break-after:always;position:relative}
 .yp:last-child{break-after:auto;page-break-after:auto}
 .yp>div{width:${(w * yp.olcek).toFixed(3)}mm;height:${(h * yp.olcek).toFixed(3)}mm;overflow:hidden;flex:none;position:relative}
 .yp>div>.pg{transform:scale(${yp.olcek.toFixed(5)});transform-origin:0 0;break-after:auto;page-break-after:auto}

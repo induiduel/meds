@@ -627,8 +627,15 @@ export const SERIT_MM = 11;
 export const GRUP_MM = 9;
 /** not alanının başlık + üst boşluk payı (mm) */
 export const NOT_PAY_MM = 4;
-/** baskı toleransı (mm): Chrome'un baskı dizgisi ölçümden birkaç px farklı olabilir (H575) */
-export const BASKI_PAY_MM = 1.2;
+/** baskı toleransı (mm): Chrome'un baskı dizgisi ölçümden birkaç px farklı olabilir (H575).
+ *  H576 (2026-11-15): sayfa kutusu kâğıttan BASKI_KUTU_KISA_MM kısa basıldığından, o boşluk da bu
+ *  toleransın içinden gelir; tolerans kutu kısaltmasından büyük tutulur ki içerik yine kırpılmasın. */
+export const BASKI_PAY_MM = 2;
+/** baskı kutusu (.pg/.yp) kâğıttan ne kadar kısa basılır (mm): kutu kâğıta eşit/büyük ölçülürse Chrome
+ *  yarım piksellik büyümeyi kutuyu parçalayıp taşan parçayı sonraki sayfaya basarak telafi eder ve alt
+ *  bilgi diğer metnin üstüne biner (H576). İlk çözümdeki 0,25 mm baskı çözünürlüğünde ~1 px'e inip bazı
+ *  kâğıt/yazıcılarda yetmediğinden 1 mm'ye çıkarıldı; BASKI_PAY_MM'den küçük olduğundan içerik kırpılmaz. */
+export const BASKI_KUTU_KISA_MM = 1;
 /** alt bilgi var mı: sayfa numarası ya da üç bölgeden birinde metin */
 export const altBilgiVar = (a: Ayar) => a.sayfaNo || !!(a.altMetin || '').trim() || !!(a.altOrta || '').trim() || !!(a.altSag || '').trim();
 /**

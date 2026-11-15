@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 722,
-  "baslik": "Soru dışa aktarıcı PDF: alt bilgi üstüne binmesi kökenden kapatıldı",
+  "onem": 723,
+  "baslik": "Soru dışa aktarıcı PDF: alt bilgi üstüne binmesi daha güçlü kapatıldı",
   "maddeler": [
-    "PDF'te alt bilgi satırının (sayfa numarası dahil) sonraki sayfanın metninin üstüne binmesi giderildi: sayfa kutuları artık kâğıttan 0,25 mm kısa basılıyor, baskı yuvarlaması ne yaparsa yapsın üst üste binme oluşamıyor."
+    "PDF'te alt bilgi satırının (sayfa numarası dahil) metnin üstüne binmesi bazı kâğıt/yazıcılarda sürüyordu: sayfa kutusu kâğıttan artık 1 mm kısa basılıyor (eski 0,25 mm baskıda ~1 piksele iniyordu), içerik kırpılmasın diye baskı payı da büyütüldü."
   ],
   "eklenen": [
     "Soru dışa aktarıcı › metin kaybı yok: ızgaraya sığmayan sorular tam genişlik \"Sığmayan sorular\" bölümüne alınır",
