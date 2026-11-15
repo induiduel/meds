@@ -1,22 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 727,
- "baslik": "Nöroloji 2n10/2n11: canlı çizim ve ara resim katmanları eklendi",
+ "onem": 728,
+ "baslik": "Klinik çıkmışlar tam taranıp eksikler tamamlandı (2. tur)",
  "maddeler": [
-  "Kraniyal Sinir Muayenesi (2n10) ve Serebrovasküler Hastalıklar (2n11) derslerinde sesli anlatım sırasında PDF üstünde canlı çizim: ışık refleksi yolu, göz kas-sinir haritası, fasyal paralizi ayrımı, penumbra, tPA zaman-fayda grafiği ve kanama yerleşimi şeması anlatılırken ilgili bölge/ok/etiket çizilir.",
-  "Her iki derse dörder ara resim eklendi (göz hareketleri kas-sinir haritası, ışık refleksi, yakın refleks/akomodasyon, periferik-santral fasyal paralizi; iskemi-hasar basamakları, penumbra, trombolitik zaman-fayda, kanamalı inme yerleşim-klinik). Resimler anlatılan paragraf aralığında açılır, aralık bitince kalkar.",
-  "Çizim ve ara resim kapıları 0 HATA: çizim yalnız resim sayfasında ve lazerin gösterdiği yerde, tablo anlatılırken yalnız işaret; ara resimler kaynak slaytlı ve Türkçe etiketli."
+  "İlk turda kaçırılan sayfalar bulundu ve işlendi: 15 PDF'in her sayfası tek tek kontrol edildi, 39 sayfalık hiç işlenmemiş bölüm (Halk Sağlığı, FTR, Üroloji, Dahiliye, Nöroloji, Enfeksiyon) ve daha önce çıkarılıp karara bağlanmamış 54 soru tamamlandı; toplam 127 yeni soru + 17 düzeltme daha eklendi (önceki turla birlikte toplam 6662 çıkmış soru).",
+  "Bir kayıtta kurul numarası (3→6) hatalı atanmıştı, düzeltildi; bir soruda kaynakta kesik kalan 5. şık tamamlandı."
  ],
- "eklenen": [
-  "Canlı çizim katmanı: k2-62 (64 komut) ve k2-65 (163 komut) — kontur, akış oku, eğri fazı, şema paneli",
-  "Ara resim katmanı: k2-62 dört, k2-65 dört mekanizma resmi (SVG, açık zemin, kılavuz etiketli)"
- ],
- "degisen": [
-  "PDF işaretleme: kanama yerleşim şeması gibi etiketleri görselin içinde olan slaytlarda lazer artık şemayı gösteriyor (sayfa vurgusu yerine)",
-  "Çizim üretimi: resim dışı cümlede ok, tabloda kontur ve resim dışı zoom üretilmiyor (kapıya gitmeden elenir)"
- ],
+ "eklenen": [],
+ "degisen": [],
  "duzeltilen": [
-  "Şekil çapası olan slaytta görsel 'yazı taşıyor' diye resim sayılmadığı için lazer sayfaya düşüyordu; şema artık görsel olarak işaretleniyor ve üstüne çizim yapılabiliyor"
+  "Dahiliye/Halk Sağlığı/FTR/Üroloji/Nöroloji/Enfeksiyon çıkmış sorularında eksik kalan sayfalar ve kurul ataması"
  ],
  "silinen": []
 }

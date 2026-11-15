@@ -1221,38 +1221,6 @@
          "explanation": "Verilen dört ifadenin tümü antijenik shift için doğrudur; bu nedenle cevap 'Hepsi'dir.\n\n- **Değişikliğin büyüklüğü:** Shift majör bir antijenik değişikliktir; HA ve/veya NA geni başka bir alt tiple yer değiştirir.\n- **Mekanizma:** Farklı konak suşları arasında segment değişimi (genetic reassortment).\n- **Yeni subtip:** Yalnız influenza A'da yeni alt tip oluşur.\n- **Epidemiyoloji:** Toplumda kazanılmış immünite yoktur; 10-40 yılda bir pandemi gelişir.\n- **Klinik:** Ağır form genç ve sağlıklı bireyler dahil tüm yaşları etkileyebilir.\n\nSınav: Drift'le ilgili sorularda 'mevsimsel epidemi' doğru, shift'le ilgili sorularda yanlış çeldiricidir; yönü dikkatle oku."
         },
         {
-         "id": "33d703cbaf8e",
-         "questionNumber": 614,
-         "stem": "İnfluenza pandemisinin özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
-         "correctAnswer": "E",
-         "options": [
-          {
-           "key": "A",
-           "text": "Hastalığın paterni mevsimsel influenzadan farklı olabilir, normal influenza sezonu dışında da görülebilir"
-          },
-          {
-           "key": "B",
-           "text": "Gençlerde ve sağlıklı kişilerde de hastaneye yatış ve ölüm görülebilir"
-          },
-          {
-           "key": "C",
-           "text": "Hepsi yanlış"
-          },
-          {
-           "key": "D",
-           "text": "Toplumda yeni subtipe karşı önceden kazanılmış bağışıklık bulunmadığından hızla yayılır"
-          },
-          {
-           "key": "E",
-           "text": "Hepsi"
-          }
-         ],
-         "year": "2020-2021",
-         "discipline": "Enfeksiyon Hastalıkları",
-         "topic": "İnfluenza",
-         "explanation": "Verilen ifadelerin tümü pandemik influenzanın özelliğidir; bu nedenle doğru cevap 'Hepsi'dir.\n\n- **Kaynağı:** Pandemiler yalnız influenza A'da, antijenik shift (gen segmentlerinin yeniden düzenlenmesi) ile yeni bir HA ve/veya NA alt tipinin ortaya çıkmasıyla oluşur; 10-40 yılda bir görülür.\n- **Bağışıklık açığı:** Toplumda yeni alt tipe karşı kazanılmış immünite olmadığından atak hızı yüksektir ve virüs kıtalar arasında hızla yayılır.\n- **Zamanlama:** Mevsimsel gripten farklı olarak sezon dışında, birkaç dalga hâlinde görülebilir.\n- **Yaş dağılımı:** Genç ve sağlıklı erişkinlerde de ağır pnömoni, hastaneye yatış ve ölüm görülebilir.\n- **Karşıtı:** Antijenik drift (nokta mutasyonu) ise A ve B'de 1-2 yılda bir görülür ve mevsimsel epidemiler yapar.\n\nSınav: Pandemi = shift = yalnız influenza A; mevsimsel epidemi = drift = A ve B."
-        },
-        {
          "id": "9cb581374ad7",
          "questionNumber": 623,
          "stem": "İnfluenza bulaşı nasıl olur ?",
@@ -1315,38 +1283,6 @@
          "discipline": "Enfeksiyon Hastalıkları",
          "topic": "İnfluenza",
          "explanation": "Antijenik drift için A-D'de verilen ifadelerin hepsi doğrudur; bu yüzden cevap 'Hepsi doğrudur'.\n\n- **Oluşum:** Mevcut HA ya da NA üzerindeki nokta mutasyonlarıyla gelişen küçük (minör) antijenik değişikliktir.\n- **Virüs tipi:** İnfluenza A ve B'de görülür.\n- **Zaman çizelgesi:** Her yıl veya 1-2 yılda bir yeni varyant çıkar; shift ise 10-40 yılda bir görülür.\n- **Epidemiyoloji:** Yeni subtip oluşmadığı için toplumda kısmi bağışıklık vardır; sonuç pandemi değil epidemidir.\n- **Klinik yansıma:** Önceki bağışıklık hastalığı kısmen hafifletir; yıllık aşı güncellemesi bu nedenle zorunludur.\n\nSınav: Drift = minör, nokta mutasyon, A+B, epidemi; shift = majör, reassortment, yalnız A, pandemi."
-        },
-        {
-         "id": "c8e8008ea4c5",
-         "questionNumber": 1531,
-         "stem": "İnfluenza virüsünde görülen antijenik shift ile ilgili aşağıdakilerden hangisi doğru DEĞİLDİR?",
-         "correctAnswer": "E",
-         "options": [
-          {
-           "key": "A",
-           "text": "Sadece influenza A virüsünde görülür"
-          },
-          {
-           "key": "B",
-           "text": "10-40 yılda bir görülür"
-          },
-          {
-           "key": "C",
-           "text": "Farklı antijen yapısına sahip yeni virüsler oluşur"
-          },
-          {
-           "key": "D",
-           "text": "HA ve/veya NA'da büyük ve ani genetik varyasyonlar oluşur"
-          },
-          {
-           "key": "E",
-           "text": "Nokta mutasyonlar sonucu yavaş ve kademeli olarak gerçekleşir"
-          }
-         ],
-         "year": "2020-2021",
-         "discipline": "Enfeksiyon Hastalıkları",
-         "topic": "İnfluenza",
-         "explanation": "Nokta mutasyonlarla yavaş ve kademeli antijenik değişim driftin özelliğidir; shift için doğru değildir.\n\n- **Shift mekanizması:** Farklı konaklardan (insan, kuş, domuz) gelen iki influenza A suşu aynı hücreyi enfekte edince segmentli genom karışır (genetic reassortment).\n- **Sonuç:** Yeni bir HA ve/veya NA alt tipi taşıyan, toplumun bağışık olmadığı virüs ortaya çıkar.\n- **Sıklık ve etki:** 10-40 yılda bir görülür, pandemilere yol açar; domuz 'karıştırma kabı' rolü oynar.\n- **Yalnız A:** B ve C'de alt tip yoktur, bu nedenle shift görülmez.\n- **Drift ile fark:** Drift HA/NA'da nokta mutasyon, A ve B'de, 1-2 yılda bir, yeni subtip yok, epidemi.\n\nSınav: 'Nokta mutasyon', 'yavaş/kademeli' ve 'epidemi' kelimeleri drift; 'reassortment', 'ani/majör' ve 'pandemi' kelimeleri shift çağrıştırır."
         },
         {
          "id": "past-1790877036195-194604",
@@ -1637,6 +1573,38 @@
          "explanation": "Grip (influenza), ani başlayan ateş, miyalji, halsizlik ile seyreden ve özellikle risk gruplarında (yaşlı, gebe, kronik hastalığı olan) sekonder bakteriyel komplikasyonlara (otit, sinüzit, pnömoni) yol açabilen viral bir enfeksiyondur; inaktif influenza aşısı gebelikte güvenlidir ve önerilir.\n\n- **Pandemi yalnız A tipinde:** Pandemik yayılım, virüsün hayvan rezervuarları (kuş, domuz) ile insan arasında segment değişimi (antijenik şift) yapabilmesine bağlıdır; bu özellik yalnızca influenza A'da bulunur.\n- **B ve C virüsleri:** Konakçısı sadece insan olan influenza B ve C, antijenik drift ile küçük mutasyonlar geçirebilir ve epidemi (B) veya hafif/sporadik enfeksiyon (C) yapar, ancak pandemiye neden olamaz.\n- **Sonuç:** 'Tüm influenza virüsler pandemi yapabilir' ifadesi bu nedenle yanlıştır; soru kökünün aradığı tek yanlış ifade budur.\n\nSınav: İnfluenza A/B/C ayrımı ve pandemi potansiyelinin sadece A tipine ait olduğu sık sorulan bir kazanımdır."
         },
         {
+         "id": "cl-p15-enfeksiyon-p043-5-2",
+         "questionNumber": 5,
+         "stem": "Grip ile ilgili aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Ani başlangıçlı ateş, halsizlik, miyalji şikayetleri olabilir"
+          },
+          {
+           "key": "B",
+           "text": "Özellikle risk gruplarında sekonder bakteriyel enfeksiyon komplikasyonları (otit, pnömoni, sinüzit vb) görülebilir"
+          },
+          {
+           "key": "C",
+           "text": "Tüm influenza virüsler pandemi yapabilir"
+          },
+          {
+           "key": "D",
+           "text": "İnfluenza sezonunda gebe olanlar influenzaya karşı aşılanmalıdır"
+          },
+          {
+           "key": "E",
+           "text": "İnfluenza B ve C'de hemaglutinin ve nöraminidaz antijenler bulunmaz"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "İnfluenza",
+         "explanation": "Grip (influenza), ani başlayan ateş, miyalji, halsizlik ile seyreden ve özellikle risk gruplarında (yaşlı, gebe, kronik hastalığı olan) sekonder bakteriyel komplikasyonlara (otit, sinüzit, pnömoni) yol açabilen viral bir enfeksiyondur; inaktif influenza aşısı gebelikte güvenlidir ve önerilir.\n\n- **Pandemi yalnız A tipinde:** Pandemik yayılım, virüsün hayvan rezervuarları (kuş, domuz) ile insan arasında segment değişimi (antijenik şift) yapabilmesine bağlıdır; bu özellik yalnızca influenza A'da bulunur.\n- **B ve C virüsleri:** Konakçısı sadece insan olan influenza B ve C, antijenik drift ile küçük mutasyonlar geçirebilir ve epidemi (B) veya hafif/sporadik enfeksiyon (C) yapar, ancak pandemiye neden olamaz.\n- **Sonuç:** 'Tüm influenza virüsler pandemi yapabilir' ifadesi bu nedenle yanlıştır; soru kökünün aradığı tek yanlış ifade budur.\n\nSınav: İnfluenza A/B/C ayrımı ve pandemi potansiyelinin sadece A tipine ait olduğu sık sorulan bir kazanımdır."
+        },
+        {
          "id": "d3-k4-enf-008",
          "questionNumber": 8,
          "stem": "İnfluenza virüslerinde görülen genetik değişimlerle ilgili olarak aşağıdaki ifadelerden hangisi yanlıştır?",
@@ -1670,6 +1638,38 @@
         },
         {
          "id": "cl-p15-enfeksiyon-p045-61",
+         "questionNumber": 61,
+         "stem": "Aşağıdaki ifadelerden hangisi influenza virüsü hakkında yanlıştır?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "İnfluenza B pandemi ve epidemilerden sorumludur"
+          },
+          {
+           "key": "B",
+           "text": "İnfluenza zarflı RNA virüsüdür"
+          },
+          {
+           "key": "C",
+           "text": "Antijenik şift varyasyonu pandemiden sorumludur"
+          },
+          {
+           "key": "D",
+           "text": "İnfluenza B'nin konakçısı sadece insandır"
+          },
+          {
+           "key": "E",
+           "text": "İnfluenza C epidemi yapmaz"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "İnfluenza",
+         "explanation": "İnfluenza virüsleri (Orthomyxoviridae ailesi), zarflı, segmentli, negatif polariteli RNA virüsleridir; A, B ve C tipleri arasında pandemi/epidemi yapma potansiyeli açısından önemli farklar vardır.\n\n- **Pandemi yalnız A'da görülür:** Pandemi, virüsün hayvan rezervuarlarıyla (kuş, domuz) gen segmenti değişimi (antijenik şift, reassortment) yaparak tamamen yeni bir alt tip oluşturmasına bağlıdır; bu özellik yalnızca influenza A'ya aittir.\n- **İnfluenza B:** Konakçısı sadece insan olduğundan hayvan rezervuarıyla gen değişimi yapamaz, bu yüzden antijenik şift ve dolayısıyla pandemi yapamaz; yalnızca antijenik drift ile epidemi (yıllık mevsimsel salgın) oluşturabilir.\n- **İnfluenza C:** Daha hafif, genellikle çocuklarda sporadik üst solunum yolu enfeksiyonuna neden olur; epidemi veya pandemi yapmaz.\n- **Genel virolojik özellik:** Tüm influenza tipleri zarflı, tek iplikli, negatif polariteli RNA virüsleridir (Orthomyxoviridae).\n\nSınav: 'İnfluenza B pandemi yapar' ifadesi klasik bir tuzaktır; B tipi epidemi yapar ama pandemi yapma yeteneği yalnızca A tipine özgüdür."
+        },
+        {
+         "id": "cl-p15-enfeksiyon-p045-61-2",
          "questionNumber": 61,
          "stem": "Aşağıdaki ifadelerden hangisi influenza virüsü hakkında yanlıştır?",
          "correctAnswer": "A",
@@ -10792,6 +10792,38 @@
          "explanation": "Pnömoni etyolojisinde anamnez bulguları (yaşam ortamı, maruziyet, önceki enfeksiyon) etkeni tahmin etmede önemli ipuçları verir; I, II ve III doğru eşleşmeler, IV ise yanlış bir eşleşmedir.\n\n- **Kışla/yatılı okul (I):** Kalabalık, kapalı ortamlarda yaşayan genç yetişkinlerde (askeri birlikler, yurtlar, okullar) Chlamydia pneumoniae ve Mycoplasma pneumoniae gibi atipik etkenlerle salgın tarzında solunum yolu enfeksiyonları bildirilmiştir.\n- **Huzurevi (II):** Bakımevi/huzurevi sakinlerinde aspirasyon riski ve altta yatan kronik hastalıklar nedeniyle Klebsiella pneumoniae gibi Gram negatif enterik basiller sık etken olarak karşımıza çıkar.\n- **Grip sonrası pnömoni (III):** İnfluenza enfeksiyonu solunum epitelini hasara uğratarak sekonder bakteriyel pnömoniye yol açar; bu sekonder pnömonilerin en sık klasik etkeni Streptococcus pneumoniae'dir (S. aureus da sık görülür).\n- **Papağan maruziyeti (IV) yanlış:** Papağan/muhabbet kuşu gibi evcil kuşlarla temas, Legionella değil Chlamydia psittaci'nin neden olduğu psittakoz (ornitoz) ile ilişkilidir; Legionella pneumophila ise kontamine su sistemleri/klima kuleleriyle bulaşır.\n\nSınav: Pnömoni etken-anamnez eşleştirmelerinde kuş maruziyetinin Legionella değil Chlamydia psittaci ile karıştırılması klasik bir tuzaktır."
         },
         {
+         "id": "cl-p15-enfeksiyon-p045-59-2",
+         "questionNumber": 59,
+         "stem": "Pnömoni etkenleri ve anamnez bulguları eşleşmesinde aşağıdakilerden hangisi/hangileri doğrudur?\nI. Kışla ve yatılı okulda olmak – Chlamydia pneumoniae\nII. Huzurevinde olmak – Klebsiella pneumoniae\nIII. Grip sonrası gelişen pnömoni – Streptococcus pneumoniae\nIV. Papağan ile yakın temas sonrası – Legionella pneumophila",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Yalnız I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "Yalnız I ve III"
+          },
+          {
+           "key": "C",
+           "text": "Yalnız II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Göğüs Hastalıkları",
+         "topic": "Pnömoniler",
+         "explanation": "Pnömoni etyolojisinde anamnez bulguları (yaşam ortamı, maruziyet, önceki enfeksiyon) etkeni tahmin etmede önemli ipuçları verir; I, II ve III doğru eşleşmeler, IV ise yanlış bir eşleşmedir.\n\n- **Kışla/yatılı okul (I):** Kalabalık, kapalı ortamlarda yaşayan genç yetişkinlerde (askeri birlikler, yurtlar, okullar) Chlamydia pneumoniae ve Mycoplasma pneumoniae gibi atipik etkenlerle salgın tarzında solunum yolu enfeksiyonları bildirilmiştir.\n- **Huzurevi (II):** Bakımevi/huzurevi sakinlerinde aspirasyon riski ve altta yatan kronik hastalıklar nedeniyle Klebsiella pneumoniae gibi Gram negatif enterik basiller sık etken olarak karşımıza çıkar.\n- **Grip sonrası pnömoni (III):** İnfluenza enfeksiyonu solunum epitelini hasara uğratarak sekonder bakteriyel pnömoniye yol açar; bu sekonder pnömonilerin en sık klasik etkeni Streptococcus pneumoniae'dir (S. aureus da sık görülür).\n- **Papağan maruziyeti (IV) yanlış:** Papağan/muhabbet kuşu gibi evcil kuşlarla temas, Legionella değil Chlamydia psittaci'nin neden olduğu psittakoz (ornitoz) ile ilişkilidir; Legionella pneumophila ise kontamine su sistemleri/klima kuleleriyle bulaşır.\n\nSınav: Pnömoni etken-anamnez eşleştirmelerinde kuş maruziyetinin Legionella değil Chlamydia psittaci ile karıştırılması klasik bir tuzaktır."
+        },
+        {
          "id": "cl-p15-enfeksiyon-p045-60",
          "questionNumber": 60,
          "stem": "Aşağıdaki ifadelerden hangisi hastane kökenli pnömoni etkeni değildir?",
@@ -10904,6 +10936,38 @@
         },
         {
          "id": "cl-p02-gogus-p013-41",
+         "questionNumber": 41,
+         "stem": "Plevral sıvı ve plevral boşluk basıncı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Eksüda karakterde plevral sıvıların en sık karşılaşılan sebebi parapnömonik efüzyonlardır."
+          },
+          {
+           "key": "B",
+           "text": "Deniz seviyesinde plevral boşluğun basıncı 1 atm'dir."
+          },
+          {
+           "key": "C",
+           "text": "Plevral sıvıdan çalışılan LDH değerinin serum LDH değerinin 2/3'ünden fazla olması plevral sıvının eksüda karakterde olduğunu gösterir."
+          },
+          {
+           "key": "D",
+           "text": "Konjestif kalp yetmezliğine bağlı olduğu düşünülen plevral efüzyonlarda torasentez yapılmasına gerek yoktur."
+          },
+          {
+           "key": "E",
+           "text": "Salgılanan plevral sıvı parietal plevradan geri emilir."
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Göğüs Hastalıkları",
+         "topic": "Plevral efüzyon ve ampiyem",
+         "explanation": "Plevral boşluk, parietal ve visseral plevra arasında kalan ve normalde birkaç mililitre sıvı içeren potansiyel boşluktur; buradaki basınç atmosfer basıncına değil, akciğerin elastik geri çekilmesine bağlıdır.\n\n- **Basınç:** Deniz seviyesinde plevral boşluk basıncı istirahatte yaklaşık -5 ile -8 cmH2O arasındadır ve akciğerin göğüs duvarına yaslanmasını sağlar. Bir atmosfer basınç yalnız çevre ortamı ve hava yolu için geçerlidir.\n- **Eksüda:** Eksüda karakterde plevral sıvıların en sık nedeni parapnömonik efüzyondur; komşu enfeksiyon plevra geçirgenliğini artırır.\n- **Light ölçütü:** Plevral sıvı LDH düzeyinin serum LDH düzeyinin üçte ikisinden yüksek olması eksüdayı destekler.\n- **Kalp yetmezliği:** Kliniği uyumlu ve tedaviye yanıt veren kalp yetmezliği efüzyonlarında tanısal torasentez çoğu kez gerekmez.\n- **Emilim:** Plevral sıvı esas olarak parietal plevranın lenfatikleriyle geri emilir.\n\nSınav: Plevral basınç subatmosferiktir; boşluk basıncını 1 atm olarak veren ifade yanlıştır."
+        },
+        {
+         "id": "cl-p02-gogus-p013-41-2",
          "questionNumber": 41,
          "stem": "Plevral sıvı ve plevral boşluk basıncı ile ilgili aşağıdakilerden hangisi yanlıştır?",
          "correctAnswer": "B",
@@ -17325,6 +17389,70 @@
          "discipline": "İç Hastalıkları",
          "topic": "Hiperlipidemiler",
          "explanation": "Lipoproteinler yoğunluklarına göre şilomikron, VLDL, IDL, LDL ve HDL olarak sıralanır; dört öncül de bu sınıflamanın temel özelliklerini doğru verir.\n\n- **Şilomikron:** Diyetle alınan trigliseridi taşıyan en büyük ve dansitesi en düşük partiküldür; bağırsakta oluşur.\n- **VLDL:** Karaciğerde sentezlenen, trigliseridden zengin çok düşük dansiteli lipoproteindir.\n- **IDL:** VLDL'den lipoprotein lipaz etkisiyle trigliserid uzaklaştırılması sonucu oluşan ara üründür; bir kısmı LDL'ye dönüşür.\n- **LDL katabolizması:** Plazma LDL'sinin yaklaşık %70-75'i karaciğerdeki LDL reseptörleri aracılığıyla kandan uzaklaştırılır.\n\nSınav: Lipoprotein sınıflamasında büyüklük, dansite ve metabolik sıra birlikte sorulur; bu dört ifadenin hepsi doğrudur."
+        },
+        {
+         "id": "cl-p11-dahiliye-p047-97-2",
+         "questionNumber": 97,
+         "stem": "Aşağıdakilerden hangisi/hangileri doğrudur?\nI. Şilomikronlar en büyük lipoproteinlerdir.\nII. VLDL çok düşük dansiteli lipoproteinlerdir.\nIII. IDL, trigliseridlerin VLDL'den uzaklaştırılması ile oluşur.\nIV. LDL'nin %75'i plazmadan LDL reseptörü yoluyla karaciğerde uzaklaştırılır.",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Yalnız I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "Yalnız I ve III"
+          },
+          {
+           "key": "C",
+           "text": "Yalnız II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "İç Hastalıkları",
+         "topic": "Hiperlipidemiler",
+         "explanation": "Lipoproteinler yoğunluklarına göre şilomikron, VLDL, IDL, LDL ve HDL olarak sıralanır; dört öncül de bu sınıflamanın temel özelliklerini doğru verir.\n\n- **Şilomikron:** Diyetle alınan trigliseridi taşıyan en büyük ve dansitesi en düşük partiküldür; bağırsakta oluşur.\n- **VLDL:** Karaciğerde sentezlenen, trigliseridden zengin çok düşük dansiteli lipoproteindir.\n- **IDL:** VLDL'den lipoprotein lipaz etkisiyle trigliserid uzaklaştırılması sonucu oluşan ara üründür; bir kısmı LDL'ye dönüşür.\n- **LDL katabolizması:** Plazma LDL'sinin yaklaşık %70-75'i karaciğerdeki LDL reseptörleri aracılığıyla kandan uzaklaştırılır.\n\nSınav: Lipoprotein sınıflamasında büyüklük, dansite ve metabolik sıra birlikte sorulur; bu dört ifadenin hepsi doğrudur."
+        },
+        {
+         "id": "cl-p11-dahiliye-p047-98",
+         "questionNumber": 98,
+         "stem": "Aşağıdakilerden hangisi aterojenik lipoproteinlerden biri değildir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Şilomikronlar"
+          },
+          {
+           "key": "B",
+           "text": "Şilomikron kalıntıları"
+          },
+          {
+           "key": "C",
+           "text": "VLDL"
+          },
+          {
+           "key": "D",
+           "text": "IDL"
+          },
+          {
+           "key": "E",
+           "text": "LDL"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "İç Hastalıkları",
+         "topic": "Hiperlipidemiler",
+         "explanation": "Aterojenik lipoproteinler, arter duvarına nüfuz edip kolesterol biriktirerek plak oluşumunu başlatabilen partiküllerdir; bu özelliği belirleyen temel etken partikülün boyutudur.\n- **Şilomikronlar aterojenik değildir:** Diyetle alınan yağları taşıyan bu partiküller çok büyük ve düşük yoğunluklu olduklarından endotel altına geçemezler, bu yüzden damar duvarında birikip ateroskleroza yol açmazlar.\n- **Şilomikron kalıntıları:** Lipoprotein lipaz trigliseritlerini boşalttıkça küçülen kalıntı partiküller endotele sızabilecek boyuta ulaşır ve kolesterol ester yükü taşıdıkları için plak gelişimine katkı sağlar.\n- **VLDL, IDL ve dönüşüm zinciri:** Karaciğerde üretilen VLDL dolaşımda trigliserit kaybederek önce IDL'ye, sonra LDL'ye dönüşür; bu ara ve son ürünlerin her biri yeterince küçük olduğu için endotel altına girip oksitlenir ve makrofajlarca alınarak köpük hücresi oluşumunu tetikler.\n- **LDL'nin merkezi rolü:** Dolaşımdaki en bol kolesterol taşıyıcısı olan LDL, aterosklerotik sürecin ana hedefidir; düzeyinin düşürülmesi kardiyovasküler korumanın temelini oluşturur.\n> [!IMPORTANT] Sınav: Büyük ve hafif olan şilomikronlar aterojenik değildir; küçük ve yoğun partiküller (kalıntılar, VLDL, IDL, LDL) aterojeniktir."
         }
        ],
        "ornekSorular": [],
@@ -24083,6 +24211,38 @@
          "discipline": "Çocuk Sağlığı ve Hastalıkları",
          "topic": "Solunum sıkıntısı olan yeni doğana yaklaşım",
          "explanation": "Yenidoğanda solunum sıkıntısı çok sayıda akciğer, kalp ve sistemik hastalıktan kaynaklanır; cerrahi düzeltme gerektiren yapısal nedenleri ayırmak tedavi planını belirler.\n\n- **Özofagus atrezisi:** Trakea ile özofagus arasındaki fistül yoluyla süt ve sekresyonlar hava yoluna kaçar; beslenmeyle gelen öksürük, siyanoz ve aspirasyon pnömonisi tipiktir, erken cerrahi onarım gerekir.\n- **Diyafragma hernisi:** Karın organları toraks içine geçerek akciğer gelişimini ve hacmini azaltır; doğum sonrası ağır solunum sıkıntısı ve çökük karın görülür.\n- **Pnömotoraks:** Plevral boşlukta hava birikmesi akciğeri söndürür; gergin pnömotoraksta acil drenaj, gerektiğinde cerrahi girişim yapılır.\n- **Plevral effüzyon:** Plevral boşlukta sıvı toplanması akciğer ekspansiyonunu kısıtlar; altta yatan nedene ve miktara göre drenaj gerekir.\n- **Polisitemi:** Hematokrit yüksekliği kan viskozitesini ve pulmoner vasküler direnci artırır; tedavi sıvı desteği ve gerektiğinde kısmi kan değişimidir, cerrahi bir neden değildir.\n\nSınav: Yenidoğanda solunum sıkıntısının cerrahi nedenleri arasında özofagus atrezisi, diyafragma hernisi, pnömotoraks ve plevral effüzyon yer alır; polisitemi, hipoglisemi ve sepsis medikal nedenlerdir."
+        },
+        {
+         "id": "cl-p04-pediatri-p041-0-2",
+         "questionNumber": null,
+         "stem": "Yenidoğanda solunum sıkıntısı yapan cerrahi nedenlerden olmayanı işaretleyiniz?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Özofagus atrezisi (trakeal fistüllü veya fistülsüz)"
+          },
+          {
+           "key": "B",
+           "text": "Diyafragma hernisi"
+          },
+          {
+           "key": "C",
+           "text": "Pnömotoraks"
+          },
+          {
+           "key": "D",
+           "text": "Plevral effüzyon"
+          },
+          {
+           "key": "E",
+           "text": "Polisitemi"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Çocuk Sağlığı ve Hastalıkları",
+         "topic": "Solunum sıkıntısı olan yeni doğana yaklaşım",
+         "explanation": "Yenidoğanda solunum sıkıntısı çok sayıda akciğer, kalp ve sistemik hastalıktan kaynaklanır; cerrahi düzeltme gerektiren yapısal nedenleri ayırmak tedavi planını belirler.\n\n- **Özofagus atrezisi:** Trakea ile özofagus arasındaki fistül yoluyla süt ve sekresyonlar hava yoluna kaçar; beslenmeyle gelen öksürük, siyanoz ve aspirasyon pnömonisi tipiktir, erken cerrahi onarım gerekir.\n- **Diyafragma hernisi:** Karın organları toraks içine geçerek akciğer gelişimini ve hacmini azaltır; doğum sonrası ağır solunum sıkıntısı ve çökük karın görülür.\n- **Pnömotoraks:** Plevral boşlukta hava birikmesi akciğeri söndürür; gergin pnömotoraksta acil drenaj, gerektiğinde cerrahi girişim yapılır.\n- **Plevral effüzyon:** Plevral boşlukta sıvı toplanması akciğer ekspansiyonunu kısıtlar; altta yatan nedene ve miktara göre drenaj gerekir.\n- **Polisitemi:** Hematokrit yüksekliği kan viskozitesini ve pulmoner vasküler direnci artırır; tedavi sıvı desteği ve gerektiğinde kısmi kan değişimidir, cerrahi bir neden değildir.\n\nSınav: Yenidoğanda solunum sıkıntısının cerrahi nedenleri arasında özofagus atrezisi, diyafragma hernisi, pnömotoraks ve plevral effüzyon yer alır; polisitemi, hipoglisemi ve sepsis medikal nedenlerdir."
         }
        ],
        "ornekSorular": [],
@@ -25924,6 +26084,38 @@
         },
         {
          "id": "cl-p01-halk-p007-2",
+         "questionNumber": 2,
+         "stem": "Kurgu Soru: Aşağıdakilerden hangisi kardiyovasküler hastalıkların epidemiyolojisi için doğru değildir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Kardiyovasküler hastalıklar dünyada en sık ölüm nedenidir."
+          },
+          {
+           "key": "B",
+           "text": "Türkiye'de ölüm nedenleri arasında ilk sırada yer alır."
+          },
+          {
+           "key": "C",
+           "text": "Sigara, hipertansiyon, diyabet ve dislipidemi başlıca değiştirilebilir risk faktörleridir."
+          },
+          {
+           "key": "D",
+           "text": "2010 yılında, 20 yaş ve üstü ABD'li yetişkinlerde hipertansiyon prevalansı erkeklerde yüzde 66 ve kadınlarda yüzde 55 idi."
+          },
+          {
+           "key": "E",
+           "text": "Erkeklerde kadınlara göre daha erken yaşlarda ortaya çıkar."
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Halk Sağlığı",
+         "topic": "Kardiyovasküler sistem hastalıklarının epidemiyolojisi",
+         "explanation": "Kardiyovasküler hastalıklar kalp ve damar sistemini tutan, ölüm ve sakatlık yükü en yüksek hastalık grubudur. Epidemiyolojik değerlendirmede hastalığın sıklığı, dağılımı ve risk faktörleri birlikte ele alınır.\n\n- **Ölüm yükü:** Kardiyovasküler hastalıklar dünyada ve Türkiye'de en sık ölüm nedenidir; bu nedenle toplum sağlığı açısından birinci öncelikli hastalık grubudur.\n- **Risk faktörleri:** Sigara, hipertansiyon, diyabet, dislipidemi, obezite ve fiziksel hareketsizlik değiştirilebilir başlıca risk faktörleridir.\n- **Cinsiyet farkı:** Erkeklerde hastalık kadınlara göre daha erken yaşlarda ortaya çıkar; kadınlarda koruyucu hormonların etkisiyle birkaç yıl gecikir.\n- **Prevalans değeri:** ABD'de 2010 yılında 20 yaş ve üstü yetişkinlerde hipertansiyon prevalansı yaklaşık üçte bir düzeyindedir; erkeklerde yüzde 66 ve kadınlarda yüzde 55 gibi değerler gerçek prevalansı aşırı yükseltir.\n- **Önemi:** Prevalansın olduğundan yüksek gösterilmesi, koruyucu sağlık hizmetlerinin planlamasını ve müdahale önceliklerini yanlış yönlendirir.\n\nSınav: Hipertansiyon prevalansını yüzde 66 ve 55 gibi olduğundan çok yüksek veren ifade yanlıştır; kardiyovasküler hastalıkların dünyada ve Türkiye'de ilk ölüm nedeni olduğu ve erkeklerde daha erken başladığı bilgisi sık sorulur."
+        },
+        {
+         "id": "cl-p01-halk-p007-2-2",
          "questionNumber": 2,
          "stem": "Kurgu Soru: Aşağıdakilerden hangisi kardiyovasküler hastalıkların epidemiyolojisi için doğru değildir?",
          "correctAnswer": "D",
