@@ -2641,3 +2641,18 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Ek sağlamlaştırma:** "Yazdır" da ham HTML'i native print'e vermez; önce **sunucuda PDF üretip** (`renderPdfOnServer`) o PDF'i gizli iframe'de bastırır (`printPdfBlob`, `src/components/pdf/pdfDocument.ts`) — native `window.print()` yazdırma kutusunun kenar boşluğuyla `@page margin:0`'ı ezip sabit sayfa kutularını parçalayabildiğinden. Sunucu üretimi başarısızsa eski `printDocument` yedeğe düşer.
 - **Önleme:** (a) **İstemcide ölçülüp sunucuda basılan her belgede ölçüm yazı tipi ile basım yazı tipi AYNI aileye düşmelidir.** Render ortamına yazı tipi eklerken/çıkarırken `fc-match` ile yığının gerçekte hangi dosyaya düştüğü denetlenir; metrik uyumlu aile (Liberation↔MS core) şarttır. Yeni bir yazı tipi seçeneği eklenince hem istemcide (web font / sistem) hem Oracle konteynerinde karşılığı bulunmalı. (b) Yerel sınama konteynerle aynı yazı tiplerini kullandığından bu sınıf hatayı GİZLER; PDF düzeni hatalarında önce `docker exec meds-app fc-match "<yığının ilk adı>"` ve çıktı PDF'inde `pdffonts` bakılır. (c) Sabit yükseklikli kutuyla kurulan yazdırılabilir belgede native `window.print()` kullanıcının kenar boşluğuna bağımlıdır; deterministik çıktı için hep sunucu PDF'i bastırılır.
 - **Önleme:** Sabit sayfa kutusu (`height: kâğıt ölçüsü`) + `break-after:page` kombinasyonunda kutu asla kâğıda eşit ölçülmez; "eşit" ölçü yuvarlamada "büyük" demektir ve Chrome bunu sonraki sayfaya taşıyarak çözer. Bu sınıfın sınaması: ihracat HTML'i bağımsız Chrome'da basılır, `.pg` sayısı ile PDF sayfa sayısı ve sayfa başına alt bilgi metni karşılaştırılır; sayfa sayıları eşit olsa bile parçalama sayfa sayısını değiştirmeden üstüne basabildiğinden kesin kanıt için kutu yüksekliği kâğıttan kısa tutulmalıdır.
+
+### H572 — Etiketleri görselin içinde olan slayt şeması "resim" sayılmıyordu: lazer sayfaya düşüyor, üstüne çizim yapılamıyordu (2026-11-15, k2-65 s.40)
+- **Belirti:** Kanamalı inme dersinde "Şemada bu beş yerleşim başın kesitinde ayrı ayrı kutu ile işaretlenmiştir" cümlesi
+  şemayı anlatırken lazer **sayfaya** düşüyordu; `cizim_kapisi` K1 "şekil çapası var ama lazer sayfa" hatası veriyor,
+  şemanın üstüne kontur çizilemiyordu. Dökümde/de `R#` kutusu hiç yoktu.
+- **Kök neden:** `pdf_isaret.Sayfa`, görsel kutusunun içinde ≥8 metin kelimesi varsa onu "yazının arkasındaki şablon/kart
+  zemini" sayıp `tekil_resim` listesinden çıkarıyordu (H59 düzeltmesi). Bu ölçüt, **kendi etiketlerini taşıyan slayt
+  şemasını** da eliyor: 16 etiketli kelime kutunun içinde, dışarıda 1 kelime (başlık) var → kutu elenir. Sonuç:
+  `resim_kutusu()` None, `sekil_isareti()` sayfa döndürür.
+- **Kalıcı çözüm:** `sekil_isareti`, zemin yedeği de yoksa ve sayfa yazısının neredeyse **tümü** en büyük görsel kutusunun
+  içindeyse (dışarıda ≤3 kelime, sayfa ≤24 kelime) o kutuyu şekil kabul eder. `cizim_uret.dok_uret` de `tekil_resim`
+  boşken sayfadaki görsel kutularını döküme çizer (R# numarası doğrulayıcının beklediği sıra).
+- **Önleme kuralı:** "İçinde çok yazı var" tek başına zemin göstergesi DEĞİL; ayırt edici ölçüt yazının **nerede** olduğudur
+  (kutunun dışında kalan kelime sayısı). Yeni bir görsel/görsel-içi-etiket slaytı eklendiğinde: `sekil_isareti` çıktısı
+  `t: resim` olmalı, dökümde `R#` satırı bulunmalı; bulunmuyorsa şablon zemin değil şema kabul edilir. Kapı gevşetilmez.

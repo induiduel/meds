@@ -1,32 +1,22 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 726,
-  "baslik": "Klinik derslerin çıkmış soruları eklendi ve mevcut çıkmışlar düzeltildi",
-  "maddeler": [
-    "15 klinik ders PDF'inden (Nöroloji, Enfeksiyon, Halk Sağlığı, Göğüs Hastalıkları, FTR, Pediatri, Ürogenital, Üroloji, Aile Hekimliği, Acil Tıp, Beyin Cerrahisi, 3. Sınıf, Dahiliye, Final, Nöropsikiyatri) tüm çıkmış sorular okundu, veritabanındaki eşleşen kayıtlarla karşılaştırıldı: 1.338 soru zaten vardı (doğrulandı), 210 yeni soru eklendi, 14 kayıt eksik/hatalı şıkkı veya kökü düzeltildi. Her yeni/düzeltilmiş kayıt bağımsız bir denetimden geçti (154 kayıt örneklendi; 2 düzeltme, 1 karantina).",
-    "Soru dışa aktarıcı PDF: alt bilgi/metin kesilmesi kökten giderildi (yazı tipi uyuşmazlığı)."
-  ],
-  "maddeler": [
-    "PDF indir çıktısında sayfanın altındaki soruların kesilip alt bilgi şeridinin üstüne binmesi giderildi. Kök neden: düzen senin tarayıcının yazı tipiyle (Times New Roman) ölçülürken PDF, sunucuda yalnız DejaVu Serif ile basılıyordu; DejaVu daha geniş olduğundan metin taşıp kesiliyordu. Sunucuya Times ile metrik uyumlu Liberation yazı tipleri eklendi; artık ölçümle basım aynı.",
-    "\"Yazdır\" da artık sunucuda hazır PDF üretip bastırıyor; yazdırma kutusundaki kenar boşluğu ayarından etkilenmiyor."
-  ],
-  "eklenen": [
-    "Soru dışa aktarıcı › metin kaybı yok: ızgaraya sığmayan sorular tam genişlik \"Sığmayan sorular\" bölümüne alınır",
-    "Soru dışa aktarıcı › uzun alt bilgi artık iki satıra sarar, kesilmez",
-    "Soru dışa aktarıcı › logo yüksekliğine göre başlık bandı büyür (PDF/Word/PowerPoint aynı)"
-  ],
-  "degisen": [
-    "Soru dışa aktarıcı › renk paleti: tanınmayan/bozuk palet değeri Canlı palete düşer (ekran çökmez)",
-    "Soru dışa aktarıcı › kapak: çerçevesiz kapakta iç boşluk ve taşma güvenliği",
-    "Site güncelleme: yenileme öncesi bekleyen sürüm ve bayat çalışma zamanı önbelleği tazelenir"
-  ],
-  "duzeltilen": [
-    "Soru dışa aktarıcı: bilinmeyen palet ayarı tüm ekranı çökertiyordu",
-    "Soru dışa aktarıcı: logo yüksekliği başlık bandını aştığında gövdeyle çakışıyordu (PDF/DOCX/PPTX)",
-    "Soru dışa aktarıcı: uzun alt bilgi tek satırda kesiliyordu; başlık kutusundan taşıyordu",
-    "Soru dışa aktarıcı: ızgarada en küçük ölçekte sığmayan soru sessizce kırpılıyordu; artık ayrı sayfaya alınıyor",
-    "Yeni sürüm ekranı: yenileme öncesi bayat kabuk/parça önbelleği tazelenmiyordu",
-    "Oyunlar: oda durumunda cezalar alanı yoksa masa çöküyordu"
-  ],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
+ "onem": 727,
+ "baslik": "Nöroloji 2n10/2n11: canlı çizim ve ara resim katmanları eklendi",
+ "maddeler": [
+  "Kraniyal Sinir Muayenesi (2n10) ve Serebrovasküler Hastalıklar (2n11) derslerinde sesli anlatım sırasında PDF üstünde canlı çizim: ışık refleksi yolu, göz kas-sinir haritası, fasyal paralizi ayrımı, penumbra, tPA zaman-fayda grafiği ve kanama yerleşimi şeması anlatılırken ilgili bölge/ok/etiket çizilir.",
+  "Her iki derse dörder ara resim eklendi (göz hareketleri kas-sinir haritası, ışık refleksi, yakın refleks/akomodasyon, periferik-santral fasyal paralizi; iskemi-hasar basamakları, penumbra, trombolitik zaman-fayda, kanamalı inme yerleşim-klinik). Resimler anlatılan paragraf aralığında açılır, aralık bitince kalkar.",
+  "Çizim ve ara resim kapıları 0 HATA: çizim yalnız resim sayfasında ve lazerin gösterdiği yerde, tablo anlatılırken yalnız işaret; ara resimler kaynak slaytlı ve Türkçe etiketli."
+ ],
+ "eklenen": [
+  "Canlı çizim katmanı: k2-62 (64 komut) ve k2-65 (163 komut) — kontur, akış oku, eğri fazı, şema paneli",
+  "Ara resim katmanı: k2-62 dört, k2-65 dört mekanizma resmi (SVG, açık zemin, kılavuz etiketli)"
+ ],
+ "degisen": [
+  "PDF işaretleme: kanama yerleşim şeması gibi etiketleri görselin içinde olan slaytlarda lazer artık şemayı gösteriyor (sayfa vurgusu yerine)",
+  "Çizim üretimi: resim dışı cümlede ok, tabloda kontur ve resim dışı zoom üretilmiyor (kapıya gitmeden elenir)"
+ ],
+ "duzeltilen": [
+  "Şekil çapası olan slaytta görsel 'yazı taşıyor' diye resim sayılmadığı için lazer sayfaya düşüyordu; şema artık görsel olarak işaretleniyor ve üstüne çizim yapılabiliyor"
+ ],
+ "silinen": []
 }

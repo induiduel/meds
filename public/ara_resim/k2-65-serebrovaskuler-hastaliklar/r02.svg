@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="gcekir" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#b91c1c"/></radialGradient>
+<radialGradient id="gpen" cx="0.4" cy="0.4" r="0.8"><stop offset="0" stop-color="#fef9c3"/><stop offset="1" stop-color="#f59e0b"/></radialGradient>
+<linearGradient id="gkademe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecfdf5"/><stop offset="1" stop-color="#fef2f2"/></linearGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" text-anchor="middle" font-weight="bold" fill="#0f172a">Penumbra: ölü çekirdeğin çevresindeki kurtarılabilir doku</text>
+<text x="600" y="74" font-size="18" text-anchor="middle" fill="#475569">Çekirdek ölmüş dokudur, penumbra enerji yetersizliğine girmiş ama canlı hücrelerdir;</text>
+<text x="600" y="98" font-size="18" text-anchor="middle" fill="#475569">kan akımı geri gelirse bu doku yaşamını sürdürür (slayt 15)</text>
+<rect x="24" y="116" width="620" height="480" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="146" font-size="21" font-weight="bold" fill="#0f172a">A · Kan akımının eşikleri ve hücrenin durumu</text>
+<line x1="70" y1="186" x2="70" y2="540" stroke="#94a3b8" stroke-width="2"/>
+<line x1="70" y1="540" x2="604" y2="540" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+<line x1="70" y1="452" x2="604" y2="452" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="82" y="446" font-size="17" fill="#475569">Ölü çekirdek eşiği</text>
+<path d="M 70 204 C 168 210 248 244 328 304 C 408 364 478 424 560 470" stroke="#dc2626" stroke-width="5" fill="none"/>
+<path d="M 70 204 C 178 202 258 230 338 290 C 418 350 488 416 566 464" stroke="#f59e0b" stroke-width="3" stroke-dasharray="7 5" fill="none"/>
+<text x="600" y="186" font-size="17" text-anchor="end" fill="#0f172a">Kan akımı (yüz gram dokuda dakikada mililitre)</text>
+<text x="600" y="580" font-size="17" text-anchor="end" fill="#334155">tıkanmaya kadar geçen süre</text>
+<circle cx="152" cy="220" r="10" fill="#059669"/>
+<circle cx="326" cy="300" r="10" fill="#b45309"/>
+<circle cx="476" cy="390" r="10" fill="#b91c1c"/>
+<circle cx="566" cy="464" r="10" fill="#7f1d1d"/>
+<text x="148" y="256" font-size="17" fill="#059669">Normal akım:</text>
+<text x="148" y="278" font-size="17" fill="#475569">hücreler çalışır</text>
+<text x="296" y="342" font-size="17" text-anchor="end" fill="#b45309">Protein sentezi durur</text>
+<text x="448" y="432" font-size="17" text-anchor="end" fill="#b91c1c">Glikoliz öne çıkar</text>
+<text x="540" y="500" font-size="17" text-anchor="end" fill="#7f1d1d">Ölü çekirdek</text>
+<text x="46" y="518" font-size="17" fill="#475569">İlk iki eşik arasındaki doku penumbradır.</text>
+<rect x="668" y="116" width="508" height="480" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="690" y="146" font-size="21" font-weight="bold" fill="#0f172a">B · İki bölgede iki ayrı ölüm biçimi</text>
+<circle cx="800" cy="280" r="56" fill="#fecaca" stroke="#b91c1c" stroke-width="3"/>
+<circle cx="800" cy="280" r="24" fill="#7f1d1d"/>
+<path d="M 760 246 C 774 258 786 262 796 262" stroke="#b91c1c" stroke-width="2" fill="none"/>
+<path d="M 838 310 C 824 322 812 326 802 326" stroke="#b91c1c" stroke-width="2" fill="none"/>
+<path d="M 844 240 C 862 224 878 214 894 210" stroke="#b91c1c" stroke-width="3" fill="none" opacity="0.7"/>
+<text x="800" y="368" font-size="17" text-anchor="middle" fill="#b91c1c">İskemik çekirdek</text>
+<text x="800" y="390" font-size="17" text-anchor="middle" fill="#475569">doku geri dönmez;</text>
+<text x="800" y="412" font-size="17" text-anchor="middle" fill="#475569">nekroz burada gelişir.</text>
+<text x="800" y="442" font-size="17" text-anchor="middle" fill="#b91c1c">Ölüm nekroz biçimindedir.</text>
+<circle cx="1046" cy="280" r="56" fill="#fef3c7" stroke="#b45309" stroke-width="3"/>
+<circle cx="1046" cy="280" r="24" fill="#d97706"/>
+<path d="M 1014 254 C 1020 244 1032 240 1040 242" stroke="#b45309" stroke-width="2" fill="none"/>
+<path d="M 1078 306 C 1084 316 1096 320 1104 318" stroke="#b45309" stroke-width="2" fill="none"/>
+<circle cx="1010" cy="330" r="9" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+<circle cx="1000" cy="252" r="8" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+<text x="1046" y="368" font-size="17" text-anchor="middle" fill="#b45309">Penumbra</text>
+<text x="1046" y="390" font-size="17" text-anchor="middle" fill="#475569">hücre canlı kalır,</text>
+<text x="1046" y="412" font-size="17" text-anchor="middle" fill="#475569">enerjisi yetmez.</text>
+<text x="1046" y="442" font-size="17" text-anchor="middle" fill="#b45309">Ölüm programlı biçimdedir.</text>
+<text x="690" y="482" font-size="17" fill="#334155">Perfüzyon tomografisi ya da manyetik rezonans</text>
+<text x="690" y="504" font-size="17" fill="#334155">perfüzyonu bu iki bölgeyi ayırt eder.</text>
+<text x="690" y="536" font-size="17" fill="#475569">Kan akımı geri gelirse penumbra yaşar;</text>
+<text x="690" y="558" font-size="17" fill="#475569">çekirdek hiçbir zaman kurtulamaz.</text>
+<rect x="24" y="612" width="1152" height="152" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="642" font-size="19" font-weight="bold" fill="#0f172a">C · Reperfüzyonun hedefi ve sonucu</text>
+<rect x="60" y="660" width="236" height="86" rx="12" fill="url(#gkademe)" stroke="#0f766e" stroke-width="2"/>
+<text x="178" y="690" font-size="17" text-anchor="middle" fill="#0f172a">Tıkanan damar açılır</text>
+<text x="178" y="716" font-size="17" text-anchor="middle" fill="#475569">kan akımı geri gelir</text>
+<line x1="306" y1="703" x2="344" y2="703" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="356" y="660" width="236" height="86" rx="12" fill="url(#gkademe)" stroke="#0f766e" stroke-width="2"/>
+<text x="474" y="690" font-size="17" text-anchor="middle" fill="#0f172a">Penumbra kurtulur</text>
+<text x="474" y="716" font-size="17" text-anchor="middle" fill="#475569">enfarkt alanı küçülür</text>
+<line x1="602" y1="703" x2="640" y2="703" stroke="#334155" stroke-width="3" marker-end="url(#ok)"/>
+<rect x="652" y="660" width="236" height="86" rx="12" fill="url(#gkademe)" stroke="#0f766e" stroke-width="2"/>
+<text x="770" y="690" font-size="17" text-anchor="middle" fill="#0f172a">Defisit azalır</text>
+<text x="770" y="716" font-size="17" text-anchor="middle" fill="#475569">işlev geri döner</text>
+<text x="902" y="680" font-size="17" fill="#334155">Tedavi erken başlarsa</text>
+<text x="902" y="702" font-size="17" fill="#334155">kurtarılan doku büyür;</text>
+<text x="902" y="724" font-size="17" fill="#334155">gecikirse penumbra</text>
+<text x="902" y="746" font-size="17" fill="#334155">ölü çekirdeğe katılır.</text>
+<text x="600" y="790" font-size="17" text-anchor="middle" fill="#64748b">Kaynak slayt 15: penumbra, perfüzyon görüntülemesi ve reperfüzyonun hedefi.</text>
+</svg>

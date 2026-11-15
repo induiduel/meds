@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="gderi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde8d7"/><stop offset="1" stop-color="#f3c9ae"/></linearGradient>
+<linearGradient id="gfelc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cbd5e1"/><stop offset="1" stop-color="#94a3b8"/></linearGradient>
+<radialGradient id="ggoz" cx="0.45" cy="0.4" r="0.8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dbe4ee"/></radialGradient>
+<linearGradient id="gbeyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f5f9"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient>
+<radialGradient id="gcekir" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#dc2626"/></radialGradient>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="42" font-size="29" text-anchor="middle" font-weight="bold" fill="#0f172a">Fasyal paralizi: alın kasları periferik ile santrali ayırır</text>
+<text x="600" y="72" font-size="18" text-anchor="middle" fill="#475569">Yedinci sinir mimik kaslarını çalıştırır; alın kasları iki taraftan ayrı ayrı innerve edildiği için</text>
+<text x="600" y="96" font-size="18" text-anchor="middle" fill="#475569">santral tipte korunur (slayt 25, 26, 27)</text>
+<rect x="24" y="116" width="576" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="146" font-size="21" font-weight="bold" fill="#0f172a">A · Periferik tip: yarım yüzün tamamı</text>
+<ellipse cx="300" cy="340" rx="112" ry="142" fill="url(#gderi)" stroke="#a16207" stroke-width="2"/>
+<path d="M 300 198 C 236 198 194 244 190 300 L 190 350 L 410 350 L 410 300 C 406 244 364 198 300 198 Z" fill="url(#gfelc)" stroke="#64748b" stroke-width="2" opacity="0.85"/>
+<path d="M 210 268 C 250 240 350 240 390 268" stroke="#475569" stroke-width="4" fill="none"/>
+<path d="M 214 254 q18 -10 34 -4" stroke="#475569" stroke-width="3" fill="none"/>
+<ellipse cx="258" cy="308" rx="26" ry="16" fill="url(#ggoz)" stroke="#64748b" stroke-width="2"/>
+<ellipse cx="348" cy="308" rx="26" ry="16" fill="url(#ggoz)" stroke="#64748b" stroke-width="2"/>
+<circle cx="262" cy="308" r="8" fill="#0f172a"/><circle cx="352" cy="308" r="8" fill="#0f172a"/>
+<path d="M 258 288 C 258 280 268 278 272 284" stroke="#475569" stroke-width="3" fill="none"/>
+<path d="M 348 288 C 348 280 358 278 362 284" stroke="#475569" stroke-width="3" fill="none"/>
+<path d="M 300 330 C 288 356 292 372 300 384" stroke="#a16207" stroke-width="2.5" fill="none"/>
+<path d="M 244 418 C 274 402 326 402 356 418 C 340 434 300 438 244 418 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2"/>
+<path d="M 244 418 C 254 442 262 448 268 446" stroke="#7f1d1d" stroke-width="2" fill="none"/>
+<path d="M 268 450 C 292 460 330 452 356 430" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#okm)"/>
+<text x="392" y="452" font-size="17" fill="#b91c1c">Ağız sağlam tarafa kayar</text>
+<text x="46" y="196" font-size="17" fill="#b91c1c">Alın kırışmaz</text>
+<line x1="140" y1="202" x2="236" y2="248" stroke="#94a3b8" stroke-width="1.3"/><circle cx="236" cy="248" r="3" fill="#334155"/>
+<text x="46" y="238" font-size="17" fill="#b91c1c">Kaş kaldırılamaz</text>
+<line x1="150" y1="244" x2="216" y2="258" stroke="#94a3b8" stroke-width="1.3"/><circle cx="216" cy="258" r="3" fill="#334155"/>
+<text x="46" y="372" font-size="17" fill="#b91c1c">Göz kapanmaz</text>
+<line x1="146" y1="378" x2="228" y2="322" stroke="#94a3b8" stroke-width="1.3"/><circle cx="228" cy="322" r="3" fill="#334155"/>
+<text x="424" y="246" font-size="17" fill="#475569">Felçli yarım yüz</text>
+<text x="424" y="268" font-size="17" fill="#475569">gri taranmış alan</text>
+<line x1="414" y1="266" x2="384" y2="292" stroke="#94a3b8" stroke-width="1.3"/><circle cx="384" cy="292" r="3" fill="#334155"/>
+<text x="46" y="504" font-size="17" fill="#334155">Lezyon çekirdeğe ya da çekirdeğin altındaki gövdeye oturur;</text>
+<text x="46" y="526" font-size="17" fill="#334155">bu nedenle alın kasları da felç olur ve yüzün tamamı tutulur.</text>
+<text x="46" y="550" font-size="17" fill="#475569">Yedinci sinir ayrıca dilin ön üçte birinin tat duyusunu taşır,</text>
+<text x="46" y="566" font-size="17" fill="#475569">parotis dışı tükürük bezlerini ve stapedius kasını çalıştırır.</text>
+<rect x="624" y="116" width="552" height="450" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="646" y="146" font-size="21" font-weight="bold" fill="#0f172a">B · Santral tip: yalnız yüzün alt yarısı</text>
+<ellipse cx="900" cy="340" rx="112" ry="142" fill="url(#gderi)" stroke="#a16207" stroke-width="2"/>
+<path d="M 900 198 C 836 198 794 244 790 300 L 790 350 L 1010 350 L 1010 300 C 1006 244 964 198 900 198 Z" fill="url(#gfelc)" stroke="#64748b" stroke-width="2" opacity="0.5"/>
+<path d="M 900 350 L 900 480 L 1010 480 L 1010 350 Z" fill="url(#gfelc)" stroke="#64748b" stroke-width="2" opacity="0.85"/>
+<path d="M 810 268 C 850 240 950 240 990 268" stroke="#475569" stroke-width="4" fill="none"/>
+<path d="M 814 254 q18 -10 34 -4" stroke="#475569" stroke-width="3" fill="none"/>
+<path d="M 826 282 q20 -8 36 -2" stroke="#475569" stroke-width="3" fill="none"/>
+<path d="M 936 282 q20 -8 36 -2" stroke="#475569" stroke-width="3" fill="none"/>
+<ellipse cx="858" cy="308" rx="26" ry="16" fill="url(#ggoz)" stroke="#64748b" stroke-width="2"/>
+<ellipse cx="948" cy="308" rx="26" ry="16" fill="url(#ggoz)" stroke="#64748b" stroke-width="2"/>
+<circle cx="862" cy="308" r="8" fill="#0f172a"/><circle cx="952" cy="308" r="8" fill="#0f172a"/>
+<path d="M 900 330 C 888 356 892 372 900 384" stroke="#a16207" stroke-width="2.5" fill="none"/>
+<path d="M 844 418 C 874 402 926 402 956 418 C 940 434 900 438 844 418 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2"/>
+<path d="M 844 418 C 854 442 862 448 868 446" stroke="#7f1d1d" stroke-width="2" fill="none"/>
+<path d="M 868 450 C 892 460 930 452 956 430" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#okm)"/>
+<text x="992" y="452" font-size="17" fill="#b91c1c">Ağız köşesi kayar</text>
+<text x="944" y="216" font-size="17" fill="#059669">Alın kırışır</text>
+<line x1="938" y1="222" x2="918" y2="248" stroke="#94a3b8" stroke-width="1.3"/><circle cx="918" cy="248" r="3" fill="#334155"/>
+<text x="944" y="252" font-size="17" fill="#059669">Kaş kaldırılır</text>
+<line x1="936" y1="256" x2="920" y2="276" stroke="#94a3b8" stroke-width="1.3"/><circle cx="920" cy="276" r="3" fill="#334155"/>
+<text x="944" y="376" font-size="17" fill="#059669">Göz kapanır</text>
+<line x1="940" y1="380" x2="922" y2="326" stroke="#94a3b8" stroke-width="1.3"/><circle cx="922" cy="326" r="3" fill="#334155"/>
+<text x="646" y="250" font-size="17" fill="#475569">Korunan üst yarı</text>
+<line x1="768" y1="258" x2="806" y2="288" stroke="#94a3b8" stroke-width="1.3"/><circle cx="806" cy="288" r="3" fill="#334155"/>
+<text x="646" y="288" font-size="17" fill="#475569">Felçli alt yarı</text>
+<line x1="768" y1="296" x2="846" y2="330" stroke="#94a3b8" stroke-width="1.3"/><circle cx="846" cy="330" r="3" fill="#334155"/>
+<text x="646" y="504" font-size="17" fill="#334155">Lezyon çekirdeğin üstündedir; alın kasları iki taraftan</text>
+<text x="646" y="526" font-size="17" fill="#334155">ayrı ayrı innerve edildiği için korunur ve tablo hemen</text>
+<text x="646" y="548" font-size="17" fill="#334155">her zaman aynı taraftaki hemipareziyle birliktedir.</text>
+<rect x="24" y="586" width="1152" height="186" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="614" font-size="19" font-weight="bold" fill="#0f172a">C · İki tipin ayrımı: alın kasları çalışıyor mu?</text>
+<path d="M 186 662 L 240 698 L 186 734 L 132 698 Z" fill="#eef2f7" stroke="#334155" stroke-width="2"/>
+<text x="186" y="694" font-size="17" text-anchor="middle" fill="#334155">Alın kasları</text>
+<text x="186" y="714" font-size="17" text-anchor="middle" fill="#334155">çalışır mı?</text>
+<path d="M 240 680 C 262 662 284 654 306 650" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#okg)"/>
+<path d="M 240 716 C 262 734 284 742 306 746" stroke="#b91c1c" stroke-width="3" fill="none" marker-end="url(#okm)"/>
+<text x="248" y="646" font-size="17" fill="#059669">Evet</text>
+<text x="248" y="766" font-size="17" fill="#b91c1c">Hayır</text>
+<text x="320" y="644" font-size="18" font-weight="bold" fill="#059669">Santral tip</text>
+<text x="320" y="668" font-size="17" fill="#334155">Lezyon çekirdeğin üstündedir.</text>
+<text x="320" y="690" font-size="17" fill="#334155">Göz kapanır, alın kırışır;</text>
+<text x="320" y="712" font-size="17" fill="#334155">ağız köşesi kayar ve tablo</text>
+<text x="320" y="734" font-size="17" fill="#334155">aynı taraftaki hemiparezi</text>
+<text x="320" y="756" font-size="17" fill="#334155">ile birliktedir.</text>
+<text x="700" y="644" font-size="18" font-weight="bold" fill="#b91c1c">Periferik tip</text>
+<text x="700" y="668" font-size="17" fill="#334155">Lezyon çekirdeğe ya da gövdeye</text>
+<text x="700" y="690" font-size="17" fill="#334155">oturur; göz kapanmaz, kaş</text>
+<text x="700" y="712" font-size="17" fill="#334155">kaldırılamaz, alın kırışmaz ve</text>
+<text x="700" y="734" font-size="17" fill="#334155">ağız sağlam tarafa kayar.</text>
+<text x="700" y="756" font-size="17" fill="#475569">Yarım yüzün tamamı felç olur.</text>
+</svg>

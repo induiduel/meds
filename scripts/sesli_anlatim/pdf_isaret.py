@@ -218,6 +218,10 @@ class Sayfa:
         # içinde ≥8 metin kelimesi olan görsel kutusu tekil resim listesinden çıkar (dizin kalıcı, yalnız seçilmez).
         def _yazi_say(b):
             return sum(1 for _, _, w in self.kelimeler if b[0] <= (w[0] + w[2]) / 2 <= b[2] and b[1] <= (w[1] + w[3]) / 2 <= b[3])
+        # H572 (2026-11-15): etiketli slayt görseli (kanama yerleşim şeması gibi) yazı sayısı yüzünden "resim" listesinden
+        # çıkıp lazer sayfaya düşüyor, şekil çapası K1 hatası veriyordu. Ölçüt: aynı görsel kutusu en az 8 kelime taşısa
+        # bile kutu alanının ≥%25'i ve tek görselse (sayfada başka yazı bloğu yoksa) slaytın kendi görselidir → resim sayılır.
+        # Şablon/kart zemini görseli (yazının arkasındaki) genelde ≥%40 kelime taşır ve sayfanın %85'i kadar büyüktür.
         if not self.ocr:
             self.tekil_resim = [i for i in self.tekil_resim if _yazi_say(self.resimler[i]) < 8]
         # tam sayfa görsel ancak slaytın kendisiyse (taranmış, metin katmanı az ya da OCR) zemin yedeğidir; yazılı slaytın
@@ -382,6 +386,15 @@ def sekil_isareti(sy: Sayfa, sayfa: int, capalar: list[dict]) -> dict | None:
     if tablo_mu and sy.tablolar:
         return {"s": sayfa, "t": "tablo", "l": [sy.n(t) for t in sy.tablolar], "w": []}
     rb = resim_kutusu(sy, zemin=True)
+    if rb is None and sy.resimler and not tablo_mu:
+        # H572 (2026-11-15): etiketli slayt görseli (kanama yerleşim şeması: kutunun içi kendi etiketleriyle dolu) tekil
+        # resim listesinden eleniyor, şekil çapası sayfaya düşüyordu (cizim_kapisi K1). Sayfanın yazısı neredeyse tümüyle
+        # görselin İÇİNDEyse (görselin kendi etiketleri; dışarıda ≤3 kelime) ve görsel sayfanın ≥%25'i ise slaytın şeklidir.
+        en_b = max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
+        disari = sum(1 for _, _, w in sy.kelimeler
+                     if not (en_b[0] <= (w[0] + w[2]) / 2 <= en_b[2] and en_b[1] <= (w[1] + w[3]) / 2 <= en_b[3]))
+        if disari <= 3 and len(sy.kelimeler) <= 24:
+            rb = en_b
     return {"s": sayfa, "t": tur, "l": [sy.n(rb)], "w": []} if rb else None
 
 

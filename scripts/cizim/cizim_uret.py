@@ -723,6 +723,16 @@ def anlam_denetimi(W: Path, key: str, C: dict, komutlar: list) -> dict:
         return {}
 
 
+def lazer_tipi(isr: dict | None, cid: str) -> str | None:
+    """Cümlenin lazer türü (resim/tablo/metin/kelime/sayfa) — çizim türü uyumu (H85) ve kapı K10–K12 kararları için."""
+    try:
+        pn, ci = cid[1:].split(".C")
+        i = ((isr or {}).get("c") or {}).get(pn)[int(ci)]
+    except (TypeError, ValueError, IndexError, AttributeError):
+        return None
+    return (i or {}).get("t")
+
+
 def lazer_uyumu(isr: dict | None, cid: str, k: dict, s: int) -> str | None:
     """Çizim, öğrencinin o an baktığı yerde olmalı (H59, cizim_kapisi K4/K7): komutun sayfası cümlenin lazer sayfası
     değilse ya da lazer bir resmi gösterirken panel (sema) yazılmışsa reddedilir."""
@@ -759,7 +769,12 @@ def dok_uret(belge, out_dir: Path, force: bool = False):
             pg.draw_rect(r, color=(0, 0, 1), width=0.8)
             pg.insert_text((r.x0 - 2, r.y0 + 6), f"M{mi}", fontsize=7, color=(0, 0, 1))
             satir.append(f"M{mi}: {' '.join(m['metin'])}")
-        for ri in sy.tekil_resim:  # yinelenen (üst üste) görsel kutusu gösterilmez; numara kalıcı dizindir
+        # H572 (2026-11-15): etiketleri görselin İÇİNDE olan slayt şeması (kanama yerleşim şeması) tekil_resim'den
+        # eleniyor, dökümde R# kutusu hiç görünmüyordu → görsel üstü kontur doğrulanamıyordu. Tekil resim boşsa ama sayfada
+        # görsel varsa kutu yine çizilir (yalnız döküm; tekil_resim/pdf_isaret davranışı değişmez).
+        for ri in (sy.tekil_resim or list(range(len(sy.resimler)))):
+            if ri >= len(sy.resimler):
+                continue
             b = sy.resimler[ri]
             r = pymupdf.Rect(b)
             pg.draw_rect(r, color=(1, 0, 0), width=1.2)
@@ -1069,8 +1084,9 @@ def main() -> int:
         acik = []
         for k in komutlar:
             if k.get("tur") == "akis" and isinstance(k.get("dallar"), list) and k["dallar"]:
-                n = min(4, len(k["dallar"])); g = f"{k.get('cumle')}-{len(acik)}"
-                for i, dl in enumerate(k["dallar"][:4]):
+                # H85/K6: cümlede en çok 2 çizim → dallı ok da en çok 2 dal (kaynak + 2 hedef). Fazlası atılır.
+                n = min(2, len(k["dallar"])); g = f"{k.get('cumle')}-{len(acik)}"
+                for i, dl in enumerate(k["dallar"][:2]):
                     acik.append({**{x: v for x, v in k.items() if x != "dallar"}, **dl, "dal": {"g": g, "i": i, "n": n}})
             else:
                 acik.append(k)
@@ -1080,6 +1096,18 @@ def main() -> int:
             if cid not in C:
                 say["ret"]["bilinmeyen cümle"] = say["ret"].get("bilinmeyen cümle", 0) + 1; continue
             s = int(k.get("sayfa") or 0)
+            # H85/H573 (2026-11-15): çizim türü lazer türüne uymalı. Ok yalnız resim üstünde (K11; kelime↔kelime oku
+            # okumayı bozar), tablo anlatılırken yalnız marker (K10) → bu ikisi kapıya gitmeden atılır; kapı gevşetilmez.
+            lt = lazer_tipi(isr, cid)
+            if k.get("tur") == "akis" and lt and lt not in ("resim", "tablo"):
+                say["ret"]["ok yalnız resim üstünde (H85)"] = say["ret"].get("ok yalnız resim üstünde (H85)", 0) + 1
+                continue
+            if k.get("tur") == "akis" and lt == "tablo":
+                say["ret"]["tablo anlatılırken ok (H85)"] = say["ret"].get("tablo anlatılırken ok (H85)", 0) + 1
+                continue
+            if k.get("tur") in ("kontur", "egri_faz") and lt == "tablo":
+                say["ret"]["tablo anlatılırken kontur (H85)"] = say["ret"].get("tablo anlatılırken kontur (H85)", 0) + 1
+                continue
             neden_l = lazer_uyumu(isr, cid, k, s)
             if neden_l:
                 say["ret"][neden_l] = say["ret"].get(neden_l, 0) + 1
@@ -1172,6 +1200,10 @@ def main() -> int:
                 continue
             kb = kutular(dok / f"s{s:02d}.txt")
             yk = yakinlasma(yer, kb, resim_sayfasi(kb, satir_onbellek.get(s), raster.get(s)))
+            # H85/K12 (2026-11-15): yakınlaşma yalnız resim cümlesinde anlamlı (kapı resim dışındaki zoom'u reddediyor).
+            if yk and lt not in (None, "resim"):
+                yk = None
+                say["zoom_resim_disi"] = say.get("zoom_resim_disi", 0) + 1
             # kısa anlatımda zoom yok (2026-10-28): çizimin başından cümle sonuna ZOOM_EN_AZ karakterden az kaldıysa
             # yakınlaşma tamamlanmadan slayt/cümle değişiyordu (ön yüz de 55 karakter altını yakınlaştırmaz)
             if yk and len(C[cid]) - komut["k"][0] < ZOOM_EN_AZ:

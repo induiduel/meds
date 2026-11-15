@@ -1,0 +1,82 @@
+{
+  "key": "k2-62-kraniyal-sinir-muayenesi",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "Göz hareketleri: altı kas, üç sinir",
+      "aciklama": "Gözü çeviren altı kas üç sinirden beslenir; yatay harekette lateral ve medial rektus, dikey harekette üst ve alt rektus ile oblik kaslar, bükümde oblik kaslar görev alır.",
+      "adimlar": [
+        "1. Yatay harekette lateral rektus gözü dışa, medial rektus içe çevirir.",
+        "2. Dikey harekette üst rektus gözü yukarı, alt rektus aşağı çevirir; oblik kaslar da bu harekete katılır.",
+        "3. Büküm hareketinde üst oblik intorsiyon, alt oblik ekstorsiyon yapar.",
+        "4. Üçüncü sinir üst, alt ve medial rektusu, alt obliği, kapağı kaldıran kası, iris sfinkterini ve silier kasları innerve eder.",
+        "5. Dördüncü sinir yalnız üst obliği, altıncı sinir yalnız lateral rektusu innerve eder.",
+        "6. Muayenede göz hareketleri, göz kapağı, pupilla ve varsa nistagmus değerlendirilir."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 9,
+      "bitis": 11,
+      "kaynak": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "r02",
+      "baslik": "Işık refleksi: retinadan iris sfinkterine uzanan yol",
+      "aciklama": "Işık optik sinirle gelir, pretektal çekirdek üzerinden Edinger-Westphal çekirdeğine geçer ve üçüncü sinirin parasempatik lifleriyle iris sfinkterini daraltır; ileti iki tarafa birden ulaştığı için karşı göz de daralır.",
+      "adimlar": [
+        "1. Işık retinaya düşer ve optik sinirle pretektal çekirdeğe ulaşır.",
+        "2. Pretektal çekirdekten Edinger-Westphal çekirdeğine geçen ileti, üçüncü sinirin parasempatik liflerini harekete geçirir.",
+        "3. Lifler silier gangliyona, oradan kısa silier sinirlerle iris sfinkterine gider ve pupilla daralır.",
+        "4. Işık tutulan gözün pupillası küçülürse doğrudan, karşı gözün pupillası da küçülürse konsensüel yanıt denir.",
+        "5. Optik sinir lezyonunda o gözün yanıtı kaybolur; üçüncü sinir lezyonunda pupilla geniş kalır ve ışığa daralmaz."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 12,
+      "bitis": 12,
+      "kaynak": [
+        13
+      ]
+    },
+    {
+      "id": "r03",
+      "baslik": "Yakın refleks: konverjans ve uyum iki ayrı yoldan yürür",
+      "aciklama": "Göz yakına odaklandığında gözler buruna doğru döner ve merceğin uyumu artar; konverjansa medial rektusu çalıştıran üçüncü sinir, uyuma silier gangliyon üzerinden giden parasempatik lifler aracılık eder.",
+      "adimlar": [
+        "1. Görme uyarısı optik sinirden, kiazmadan, traktustan ve lateral genikulat gövdeden geçerek oksipital kortekse ulaşır.",
+        "2. Konverjansın merkezi orta beyindeki konverjans merkezidir; emir üçüncü sinirle medial rektusa iner ve iki göz buruna döner.",
+        "3. Uyum yolu silier gangliyondan geçen parasempatik liflerle silier kasa gider.",
+        "4. Silier kas gevşeyince mercek kırıcılığı artar ve yakın görüntü retinaya düşer.",
+        "5. İki yanıt birlikte ortaya çıkar; bu nedenle yakın refleks adı verilir."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 13,
+      "bitis": 13,
+      "kaynak": [
+        14
+      ]
+    },
+    {
+      "id": "r04",
+      "baslik": "Fasyal paralizi: alın kasları periferik ile santrali ayırır",
+      "aciklama": "Periferik tipte yarım yüzün tamamı, santral tipte yalnız alt yarısı felç olur; ayrım alın kaslarının çalışıp çalışmamasına dayanır, çünkü alın kasları iki taraftan ayrı ayrı innerve edilir.",
+      "adimlar": [
+        "1. Yedinci sinir mimik kaslarını, gözü kapatma kaslarını ve kulak zarına bağlı stapedius kasını çalıştırır.",
+        "2. Periferik tipte lezyon çekirdeğe ya da çekirdeğin altındaki gövdeye oturur; alın kasları da dahil bütün yarım yüz felç olur.",
+        "3. Periferik tipte göz kapanmaz, kaş kaldırılamaz, alın kırışmaz ve ağız köşesi sağlam tarafa kayar.",
+        "4. Santral tipte lezyon çekirdeğin üstündedir; alın kasları korunur, hasta gözünü kapatabilir ve alın kırıştırabilir.",
+        "5. Santral tipte ağız köşesi kayar ve tablo hemen her zaman aynı taraftaki hemipareziyle birliktedir."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 24,
+      "bitis": 26,
+      "kaynak": [
+        25,
+        26,
+        27
+      ]
+    }
+  ]
+}

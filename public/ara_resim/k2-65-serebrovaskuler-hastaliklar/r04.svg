@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<linearGradient id="gbeyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f5f9"/><stop offset="0.6" stop-color="#dbe4ee"/><stop offset="1" stop-color="#c3cfdd"/></linearGradient>
+<radialGradient id="ghem" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#7f1d1d"/></radialGradient>
+<radialGradient id="ghem2" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#b91c1c"/></radialGradient>
+<radialGradient id="gvent" cx="0.4" cy="0.4" r="0.8"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" text-anchor="middle" font-weight="bold" fill="#0f172a">Kanamalı inme: yerleşim dağılımı ve klinik karşılığı</text>
+<text x="600" y="74" font-size="18" text-anchor="middle" fill="#475569">Kanamaların yerleşimi klinik tabloyu belirler; putaminal kanama en sık görülürken</text>
+<text x="600" y="98" font-size="18" text-anchor="middle" fill="#475569">pons ve serebellar kanama en az sıklıkta ama en ağır seyirlidir (slayt 40–45)</text>
+<rect x="24" y="116" width="560" height="472" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="146" font-size="21" font-weight="bold" fill="#0f172a">A · Eksenel kesitte beş yerleşim</text>
+<ellipse cx="304" cy="322" rx="184" ry="150" fill="url(#gbeyin)" stroke="#64748b" stroke-width="2"/>
+<path d="M 200 176 C 236 190 258 208 268 236" stroke="#94a3b8" stroke-width="2" fill="none"/>
+<path d="M 408 176 C 372 190 350 208 340 236" stroke="#94a3b8" stroke-width="2" fill="none"/>
+<path d="M 304 300 C 270 288 236 292 222 312 C 234 338 270 346 300 338 C 316 326 316 310 304 300 Z" fill="url(#gvent)" stroke="#0284c7" stroke-width="1.5"/>
+<path d="M 304 300 C 338 288 372 292 386 312 C 374 338 338 346 308 338 C 292 326 292 310 304 300 Z" fill="url(#gvent)" stroke="#0284c7" stroke-width="1.5"/>
+<line x1="304" y1="228" x2="304" y2="452" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<ellipse cx="250" cy="350" rx="24" ry="18" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+<ellipse cx="358" cy="350" rx="24" ry="18" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+<ellipse cx="266" cy="296" rx="16" ry="12" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+<ellipse cx="342" cy="296" rx="16" ry="12" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+<path d="M 240 336 C 252 330 264 332 272 340 C 266 354 254 358 244 352 Z" fill="url(#ghem)" stroke="#450a0a" stroke-width="2"/>
+<ellipse cx="278" cy="296" rx="12" ry="10" fill="url(#ghem2)" stroke="#7f1d1d" stroke-width="2"/>
+<path d="M 404 212 C 442 206 470 226 474 254 C 460 274 434 278 410 268 C 392 250 390 224 404 212 Z" fill="url(#ghem2)" stroke="#7f1d1d" stroke-width="2"/>
+<path d="M 172 372 C 206 368 230 384 236 404 C 224 422 196 426 174 414 C 160 398 160 384 172 372 Z" fill="url(#ghem2)" stroke="#7f1d1d" stroke-width="2"/>
+<path d="M 240 500 C 262 488 296 486 318 496 C 330 514 322 538 304 548 C 280 556 252 546 240 528 C 232 514 232 506 240 500 Z" fill="url(#ghem)" stroke="#450a0a" stroke-width="2"/>
+<path d="M 340 520 C 358 510 380 514 390 526 C 396 542 388 556 372 560 C 352 560 340 544 338 532 Z" fill="url(#ghem)" stroke="#450a0a" stroke-width="2"/>
+<text x="176" y="190" font-size="17" fill="#334155">Frontal lob</text>
+<text x="418" y="190" font-size="17" fill="#334155">Parietal lob</text>
+<text x="60" y="262" font-size="17" fill="#334155">Temporal lob</text>
+<text x="432" y="322" font-size="17" fill="#334155">Oksipital</text>
+<text x="432" y="344" font-size="17" fill="#334155">lob</text>
+<text x="304" y="360" font-size="17" text-anchor="middle" fill="#0369a1">Karıncık</text>
+<text x="250" y="386" font-size="17" text-anchor="middle" fill="#475569">Putamen</text>
+<text x="358" y="386" font-size="17" text-anchor="middle" fill="#475569">Putamen</text>
+<text x="304" y="282" font-size="17" text-anchor="middle" fill="#475569">Talamus</text>
+<text x="304" y="580" font-size="17" text-anchor="middle" fill="#475569">Serebellum</text>
+<text x="386" y="580" font-size="17" text-anchor="middle" fill="#475569">Pons</text>
+<text x="76" y="470" font-size="17" fill="#b91c1c">Putaminal: yüzde 40–50</text>
+<line x1="196" y1="456" x2="242" y2="362" stroke="#94a3b8" stroke-width="1.3"/><circle cx="242" cy="362" r="3" fill="#334155"/>
+<text x="76" y="492" font-size="17" fill="#b91c1c">en sık yerleşim</text>
+<text x="420" y="236" font-size="17" fill="#b91c1c">Lober ve talamik:</text>
+<text x="420" y="258" font-size="17" fill="#b91c1c">yüzde 20–30</text>
+<line x1="458" y1="270" x2="424" y2="290" stroke="#94a3b8" stroke-width="1.3"/><circle cx="424" cy="290" r="3" fill="#334155"/>
+<text x="60" y="542" font-size="17" fill="#b91c1c">Serebellar:</text>
+<text x="60" y="564" font-size="17" fill="#b91c1c">yüzde 8–10</text>
+<line x1="146" y1="534" x2="244" y2="508" stroke="#94a3b8" stroke-width="1.3"/><circle cx="244" cy="508" r="3" fill="#334155"/>
+<text x="404" y="556" font-size="17" fill="#b91c1c">Pontin: yüzde 5–8</text>
+<line x1="430" y1="542" x2="382" y2="530" stroke="#94a3b8" stroke-width="1.3"/><circle cx="382" cy="530" r="3" fill="#334155"/>
+<text x="304" y="604" font-size="17" text-anchor="middle" fill="#475569">Kanamaların yaklaşık yüzde kırkı karıncık sistemine açılır.</text>
+<rect x="604" y="116" width="572" height="472" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="626" y="146" font-size="21" font-weight="bold" fill="#0f172a">B · Yerleşim klinik tabloyu belirler</text>
+<circle cx="646" cy="180" r="8" fill="#7f1d1d"/>
+<text x="664" y="186" font-size="17" font-weight="bold" fill="#7f1d1d">Putamino-kapsüler</text>
+<text x="664" y="212" font-size="17" fill="#334155">Hemiparezi görülür; geniş hematomda</text>
+<text x="664" y="234" font-size="17" fill="#334155">hemipleji ve ardından koma gelişir.</text>
+<text x="664" y="256" font-size="17" fill="#475569">Çoğu hasta hafif sekelle geri döner.</text>
+<circle cx="646" cy="300" r="8" fill="#b45309"/>
+<text x="664" y="306" font-size="17" font-weight="bold" fill="#b45309">Talamik</text>
+<text x="664" y="332" font-size="17" fill="#334155">Derin ağrı ve yanma biçiminde duyu</text>
+<text x="664" y="354" font-size="17" fill="#334155">kusuru; iç kapsüle bası hemiparezi,</text>
+<text x="664" y="376" font-size="17" fill="#334155">arkaya uzanan kanama hemianopsi yapar.</text>
+<circle cx="646" cy="420" r="8" fill="#0369a1"/>
+<text x="664" y="426" font-size="17" font-weight="bold" fill="#0369a1">Lober</text>
+<text x="664" y="452" font-size="17" fill="#334155">Oksipital kanamada hemianopsi, temporal</text>
+<text x="664" y="474" font-size="17" fill="#334155">kanamada afazi, frontal kanamada</text>
+<text x="664" y="496" font-size="17" fill="#334155">hemiparezi, parietal kanamada duyu azalması.</text>
+<circle cx="646" cy="518" r="8" fill="#450a0a"/>
+<text x="664" y="524" font-size="17" font-weight="bold" fill="#450a0a">Pontin ve serebellar</text>
+<text x="626" y="548" font-size="17" fill="#334155">Geniş pons kanaması dakikalar içinde komaya götürür;</text>
+<text x="626" y="570" font-size="17" fill="#334155">serebellar kanamada ataksi ve bulantı öne çıkar.</text>
+<rect x="24" y="604" width="1152" height="152" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="632" font-size="19" font-weight="bold" fill="#0f172a">C · Kanamalı inmede klinik zincir ve dört amaç</text>
+<circle cx="84" cy="694" r="9" fill="#b91c1c"/>
+<text x="60" y="672" font-size="17" fill="#334155">Kanama</text>
+<circle cx="212" cy="694" r="9" fill="#b45309"/>
+<text x="186" y="672" font-size="17" fill="#334155">Hematom</text>
+<circle cx="344" cy="694" r="9" fill="#334155"/>
+<text x="314" y="672" font-size="17" fill="#334155">Kitle etkisi</text>
+<circle cx="486" cy="694" r="9" fill="#450a0a"/>
+<text x="450" y="672" font-size="17" fill="#334155">Bası ve fıtıklaşma</text>
+<circle cx="632" cy="694" r="9" fill="#7f1d1d"/>
+<text x="606" y="672" font-size="17" fill="#334155">Bilinç kaybı</text>
+<path d="M 96 694 C 132 678 168 678 200 694" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+<path d="M 224 694 C 260 678 296 678 332 694" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+<path d="M 356 694 C 392 678 432 678 474 694" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+<path d="M 498 694 C 534 678 574 678 620 694" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+<text x="706" y="660" font-size="17" fill="#334155">Erken tanı, kanamanın artışını önlemek,</text>
+<text x="706" y="682" font-size="17" fill="#334155">akut komplikasyonları tedavi etmek ve</text>
+<text x="706" y="704" font-size="17" fill="#334155">etyolojiyi belirleyip tedavi etmek</text>
+<text x="706" y="728" font-size="17" fill="#475569">kanamalı inmenin dört amacıdır.</text>
+<text x="600" y="788" font-size="17" text-anchor="middle" fill="#64748b">Kaynak slayt 40–45: yerleşim yüzdeleri ile putaminal, talamik, lober, pontin ve serebellar kanamanın klinik bulguları.</text>
+</svg>

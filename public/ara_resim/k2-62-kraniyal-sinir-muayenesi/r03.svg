@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="ggoz" cx="0.45" cy="0.4" r="0.8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dbe4ee"/></radialGradient>
+<radialGradient id="gmercek" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#38bdf8"/></radialGradient>
+<linearGradient id="gbeyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f5f9"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient>
+<radialGradient id="gnuk" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#dc2626"/></radialGradient>
+<marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="okg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="29" text-anchor="middle" font-weight="bold" fill="#0f172a">Yakın refleks: konverjans ve uyum iki ayrı yoldan yürür</text>
+<text x="600" y="74" font-size="18" text-anchor="middle" fill="#475569">Göz yakına odaklandığında gözler buruna döner ve merceğin kırıcılığı artar;</text>
+<text x="600" y="98" font-size="18" text-anchor="middle" fill="#475569">iki yanıtın yolu birbirinden ayrıdır (slayt 14)</text>
+<rect x="24" y="116" width="556" height="424" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="146" font-size="21" font-weight="bold" fill="#0f172a">A · Göz kesiti: mercek ve silier kas</text>
+<ellipse cx="272" cy="330" rx="120" ry="104" fill="url(#ggoz)" stroke="#64748b" stroke-width="2"/>
+<path d="M 196 236 C 128 260 120 400 196 424" stroke="#0ea5e9" stroke-width="7" fill="none"/>
+<path d="M 200 246 C 174 296 174 364 200 414" stroke="#7dd3fc" stroke-width="4" fill="none"/>
+<ellipse cx="244" cy="330" rx="18" ry="48" fill="url(#gmercek)" stroke="#0284c7" stroke-width="2"/>
+<ellipse cx="244" cy="330" rx="30" ry="54" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="6 5" fill="none"/>
+<path d="M 254 268 q22 10 16 32" stroke="#059669" stroke-width="3.5" fill="none"/>
+<path d="M 254 392 q22 -10 16 -32" stroke="#059669" stroke-width="3.5" fill="none"/>
+<circle cx="268" cy="288" r="7" fill="#059669"/><circle cx="268" cy="372" r="7" fill="#059669"/>
+<path d="M 388 316 C 442 306 466 310 496 314" stroke="#b45309" stroke-width="6" fill="none" marker-end="url(#ok)"/>
+<path d="M 320 200 C 300 168 258 164 226 180" stroke="#94a3b8" stroke-width="2" fill="none"/>
+<path d="M 320 460 C 300 492 258 496 226 480" stroke="#94a3b8" stroke-width="2" fill="none"/>
+<text x="212" y="182" font-size="17" fill="#2563eb">Medial rektus kasılır, göz buruna döner</text>
+
+<text x="46" y="196" font-size="17" fill="#0ea5e9">Kornea</text>
+<line x1="118" y1="204" x2="164" y2="240" stroke="#94a3b8" stroke-width="1.3"/><circle cx="164" cy="240" r="3" fill="#334155"/>
+<text x="46" y="286" font-size="17" fill="#b45309">Retina</text>
+<line x1="118" y1="292" x2="188" y2="298" stroke="#94a3b8" stroke-width="1.3"/><circle cx="188" cy="298" r="3" fill="#334155"/>
+<text x="64" y="490" font-size="17" fill="#0284c7">Mercek: kırıcılığı artar</text>
+<line x1="240" y1="448" x2="240" y2="386" stroke="#94a3b8" stroke-width="1.3"/><circle cx="240" cy="386" r="3" fill="#334155"/>
+<text x="358" y="454" font-size="17" fill="#059669">Silier kas gevşer</text>
+<line x1="330" y1="384" x2="284" y2="358" stroke="#94a3b8" stroke-width="1.3"/><circle cx="284" cy="358" r="3" fill="#334155"/>
+<text x="300" y="516" font-size="17" fill="#059669">Silier kas halkası merceği sarmalar.</text>
+
+<text x="404" y="290" font-size="17" fill="#b45309">Optik sinir</text>
+<text x="404" y="312" font-size="17" fill="#475569">iletiyi beyne taşır</text>
+<text x="46" y="540" font-size="17" fill="#475569">Kas gevşeyince mercek kalınlaşır ve kırıcılığı artar.</text>
+<rect x="612" y="116" width="564" height="424" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="634" y="146" font-size="21" font-weight="bold" fill="#0f172a">B · Konverjans ve uyum yolları</text>
+<path d="M 660 208 C 692 180 756 184 782 214 C 794 248 776 280 734 286 C 698 290 664 262 660 208 Z" fill="url(#gbeyin)" stroke="#64748b" stroke-width="2"/>
+<text x="672" y="236" font-size="17" fill="#334155">Oksipital</text>
+<text x="672" y="256" font-size="17" fill="#334155">korteks</text>
+<path d="M 796 248 C 852 258 890 278 924 296" stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#okb)"/>
+<circle cx="966" cy="312" r="30" fill="url(#gnuk)" stroke="#b91c1c" stroke-width="2"/>
+<text x="966" y="316" font-size="17" text-anchor="middle" fill="#ffffff">Orta</text>
+<text x="966" y="332" font-size="17" text-anchor="middle" fill="#ffffff">beyin</text>
+<text x="1004" y="298" font-size="17" fill="#b91c1c">Konverjans merkezi</text>
+<path d="M 996 318 C 1046 336 1068 380 1056 424" stroke="#b45309" stroke-width="4" fill="none" marker-end="url(#ok)"/>
+<circle cx="1040" cy="456" r="21" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+<text x="1040" y="462" font-size="17" text-anchor="middle" fill="#b45309">III</text>
+<text x="866" y="452" font-size="17" fill="#b45309">Üçüncü sinir</text>
+<text x="1004" y="478" font-size="17" fill="#b45309">medial rektusa gider</text>
+<path d="M 966 342 C 930 386 886 414 846 436" stroke="#059669" stroke-width="4" fill="none" marker-end="url(#okg)"/>
+<circle cx="812" cy="454" r="21" fill="#bbf7d0" stroke="#059669" stroke-width="2"/>
+<text x="812" y="460" font-size="17" text-anchor="middle" fill="#059669">EW</text>
+<path d="M 791 462 C 762 472 740 476 720 478" stroke="#059669" stroke-width="4" fill="none" marker-end="url(#okg)"/>
+<circle cx="686" cy="480" r="19" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+<text x="690" y="486" font-size="17" text-anchor="middle" fill="#059669">SG</text>
+<text x="634" y="502" font-size="17" fill="#059669">Silier gangliyondan çıkan lifler kası gevşetir.</text>
+<text x="634" y="526" font-size="17" fill="#475569">Edinger-Westphal çekirdeği üçüncü sinirin</text>
+<text x="634" y="548" font-size="17" fill="#475569">parasempatik bölümüdür ve silier kası besler.</text>
+<rect x="24" y="556" width="1152" height="172" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="46" y="586" font-size="19" font-weight="bold" fill="#0f172a">C · İki yanıtın karşılaştırması</text>
+<text x="286" y="622" font-size="19" text-anchor="middle" font-weight="bold" fill="#2563eb">Konverjans</text>
+<text x="286" y="648" font-size="17" text-anchor="middle" fill="#334155">Gözler buruna doğru birlikte döner.</text>
+<text x="286" y="670" font-size="17" text-anchor="middle" fill="#334155">Kas medial rektustur, sinir üçüncüdür.</text>
+<text x="286" y="692" font-size="17" text-anchor="middle" fill="#334155">Merkez orta beyindeki konverjans merkezidir.</text>
+<line x1="600" y1="610" x2="600" y2="706" stroke="#cbd5e1" stroke-width="2"/>
+<text x="914" y="622" font-size="19" text-anchor="middle" font-weight="bold" fill="#059669">Uyum</text>
+<text x="914" y="648" font-size="17" text-anchor="middle" fill="#334155">Silier kas gevşer, mercek kırıcılığı artar.</text>
+<text x="914" y="670" font-size="17" text-anchor="middle" fill="#334155">Yol silier gangliyon üzerinden parasempatiktir.</text>
+<text x="914" y="692" font-size="17" text-anchor="middle" fill="#334155">Yakın görüntü retina üzerinde odaklanır.</text>
+<text x="600" y="770" font-size="17" text-anchor="middle" fill="#64748b">Kaynak slayt 14: yakın refleks, konverjans merkezi, silier gangliyon ve medial rektus.</text>
+</svg>

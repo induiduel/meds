@@ -1,0 +1,86 @@
+{
+  "key": "k2-65-serebrovaskuler-hastaliklar",
+  "resimler": [
+    {
+      "id": "r01",
+      "baslik": "İskemi uzadıkça hasar basamak basamak ağırlaşır",
+      "aciklama": "Kan akımı hafif düşerse işlev bozulur ama doku geri dönebilir; akım uzun süre çok düşük kalırsa geri dönüşümsüz hasar gelişir ve arada kalan penumbra tedavinin hedefi olur.",
+      "adimlar": [
+        "1. Kan akımı hafif düşerse işlev bozulur, doku geri dönebilir; bu bölgeye geri dönüşümlü hasar denir.",
+        "2. Penumbra, kan akımı düşmüş ama henüz ölmemiş dokudur.",
+        "3. Akım daha uzun süre çok düşük kalırsa geri dönüşümsüz hasar, yani ölü doku gelişir.",
+        "4. Tedavi ne kadar erken başlarsa kurtarılan doku o kadar büyük olur."
+      ],
+      "svg": "r01.svg",
+      "paragraf": 11,
+      "bitis": 11,
+      "kaynak": [
+        12
+      ]
+    },
+    {
+      "id": "r02",
+      "baslik": "Penumbra: ölü çekirdeğin çevresindeki kurtarılabilir doku",
+      "aciklama": "İskemik çekirdek ölü dokudur; çevresindeki penumbra enerji yetersizliğine girmiş ama canlı hücrelerden oluşur ve kan akımı geri gelirse yaşamını sürdürür.",
+      "adimlar": [
+        "1. Kan akımı düştükçe sırasıyla hafif azalma, protein sentezinin durması ve glikoliz görülür.",
+        "2. En düşük akımda ölü çekirdek oluşur; çekirdekte hücre ölümü nekroz biçimindedir.",
+        "3. Penumbrada programlı hücre ölümü öne çıkar; bu fark kurtarma penceresinin temelidir.",
+        "4. Penumbra perfüzyon görüntülemeleriyle gösterilir ve reperfüzyonun hedefidir.",
+        "5. Kan akımı geri gelirse penumbradaki hücreler yaşamını sürdürür."
+      ],
+      "svg": "r02.svg",
+      "paragraf": 14,
+      "bitis": 14,
+      "kaynak": [
+        15
+      ]
+    },
+    {
+      "id": "r03",
+      "baslik": "Trombolitik tedavi: fayda saat saat azalır",
+      "aciklama": "Doku plazminojen aktivatörünün faydası zamana bağlıdır; başlangıç anı son normal görülme zamanıdır ve aynı iyileşmeyi sağlamak için tedavi geciktikçe daha çok hasta tedavi edilmesi gerekir.",
+      "adimlar": [
+        "1. Başlangıç anı, hastanın son normal görüldüğü zamandır; uykuda gelişen inmede bu an belirleyicidir.",
+        "2. Doz kilogram başına sıfır virgül dokuz miligramdır ve toplam doz doksan miligramı geçmez.",
+        "3. Dozun yüzde onu bir dakikada bolus, kalan kısım altmış dakika içinde infüzyon olarak verilir.",
+        "4. İlk doksan dakikada bir hastanın iyileşmesi için dört buçuk hasta tedavi edilmesi yeterlidir.",
+        "5. Doksan ile yüz seksen dakika arasında bu sayı dokuza, yüz seksen ile iki yüz yetmiş dakika arasında on dörde çıkar.",
+        "6. Tedaviye semptom başlangıcından sonraki dört buçuk saat içinde başlanamıyorsa trombolitik verilmez."
+      ],
+      "svg": "r03.svg",
+      "paragraf": 27,
+      "bitis": 28,
+      "kaynak": [
+        22,
+        25,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "r04",
+      "baslik": "Kanamalı inme: yerleşim dağılımı ve klinik karşılığı",
+      "aciklama": "Kanamaların yerleşimi klinik tabloyu belirler; putaminal kanama en sık görülürken pons ve serebellar kanama en az sıklıkta ama en ağır seyirlidir.",
+      "adimlar": [
+        "1. Putaminal kanama yüzde kırk ile elli arasında, lober ve talamik kanama yüzde yirmi ile otuz arasında görülür.",
+        "2. Serebellar kanama yüzde sekiz ile on, pontin kanama yüzde beş ile sekiz arasındadır.",
+        "3. Putamino-kapsüler kanamada hemiparezi, geniş hematomda hemipleji ve koma gelişir.",
+        "4. Talamik kanamada derin ağrı ve yanma biçiminde duyu kusuru, iç kapsüle basıyla hemiparezi görülür.",
+        "5. Geniş pons kanaması dakikalar içinde komaya götürür; serebellar kanamada ataksi ve bulantı öne çıkar.",
+        "6. Klinik zincir kanama, hematom, kitle etkisi, bası ve bilinç kaybı biçiminde ilerler; erken tanı bu zinciri keser."
+      ],
+      "svg": "r04.svg",
+      "paragraf": 39,
+      "bitis": 44,
+      "kaynak": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    }
+  ]
+}

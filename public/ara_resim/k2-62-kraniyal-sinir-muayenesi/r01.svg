@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<linearGradient id="zemin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+<radialGradient id="ggoz" cx="0.4" cy="0.35" r="0.78"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2e8f0"/></radialGradient>
+<radialGradient id="giris" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#93c5fd"/><stop offset="1" stop-color="#1d4ed8"/></radialGradient>
+<linearGradient id="gbeyin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f5f9"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient>
+<marker id="okm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b45309"/></marker>
+<marker id="oky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+<marker id="okb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+</defs>
+<rect width="1200" height="800" fill="url(#zemin)"/>
+<text x="600" y="44" font-size="30" text-anchor="middle" font-weight="bold" fill="#0f172a">Göz hareketleri: altı kas, üç sinir</text>
+<text x="600" y="76" font-size="19" text-anchor="middle" fill="#475569">Her hareketi bir kas yapar, her kası bir sinir besler; kaybolan hareket sorulan siniri gösterir (slayt 9, 10, 11)</text>
+<rect x="26" y="100" width="558" height="468" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="132" font-size="21" font-weight="bold" fill="#0f172a">A · Göz küresini çeviren kaslar</text>
+<ellipse cx="300" cy="330" rx="101" ry="101" fill="url(#ggoz)" stroke="#64748b" stroke-width="2"/>
+<circle cx="300" cy="330" r="45" fill="url(#giris)" stroke="#1e3a8a" stroke-width="2"/>
+<circle cx="300" cy="330" r="19" fill="#0f172a"/>
+<ellipse cx="282" cy="312" rx="13" ry="9" fill="#ffffff" opacity="0.55"/>
+<path d="M 213 208 Q 300 148 387 208" stroke="#b45309" stroke-width="14" stroke-linecap="round" fill="none"/>
+<path d="M 213 452 Q 300 512 387 452" stroke="#b45309" stroke-width="14" stroke-linecap="round" fill="none"/>
+<path d="M 200 243 Q 140 330 200 417" stroke="#b45309" stroke-width="14" stroke-linecap="round" fill="none"/>
+<path d="M 400 243 Q 460 330 400 417" stroke="#2563eb" stroke-width="14" stroke-linecap="round" fill="none"/>
+<path d="M 222 250 Q 262 276 292 292" stroke="#059669" stroke-width="10" stroke-linecap="round" fill="none"/>
+<path d="M 222 410 Q 262 384 292 368" stroke="#b45309" stroke-width="10" stroke-linecap="round" fill="none"/>
+<path d="M 372 226 A 118 118 0 0 1 424 300" stroke="#059669" stroke-width="3" fill="none" stroke-dasharray="7 5" marker-end="url(#oky)"/>
+<path d="M 228 434 A 118 118 0 0 0 176 360" stroke="#b45309" stroke-width="3" fill="none" stroke-dasharray="7 5" marker-end="url(#okm)"/>
+<text x="60" y="180" font-size="17" fill="#b45309">Üst rektus: elevasyon</text>
+<line x1="212" y1="188" x2="282" y2="178" stroke="#94a3b8" stroke-width="1.3"/><circle cx="212" cy="188" r="3" fill="#334155"/>
+<text x="366" y="178" font-size="17" fill="#059669">Üst oblik: intorsiyon</text>
+<line x1="428" y1="186" x2="382" y2="212" stroke="#94a3b8" stroke-width="1.3"/><circle cx="428" cy="186" r="3" fill="#334155"/>
+<text x="34" y="296" font-size="17" fill="#b45309">Medial rektus</text>
+<text x="34" y="318" font-size="17" fill="#475569">addüksiyon</text>
+<text x="34" y="340" font-size="17" fill="#475569">üçüncü sinir</text>
+<line x1="150" y1="348" x2="196" y2="352" stroke="#94a3b8" stroke-width="1.3"/><circle cx="196" cy="352" r="3" fill="#334155"/>
+<text x="430" y="296" font-size="17" fill="#2563eb">Lateral rektus</text>
+<text x="430" y="318" font-size="17" fill="#475569">abdüksiyon</text>
+<text x="430" y="340" font-size="17" fill="#475569">altıncı sinir</text>
+<line x1="428" y1="330" x2="402" y2="330" stroke="#94a3b8" stroke-width="1.3"/><circle cx="402" cy="330" r="3" fill="#334155"/>
+<text x="300" y="452" font-size="17" text-anchor="middle" fill="#64748b">Göz küresi, önden bakış</text>
+<text x="60" y="496" font-size="17" fill="#b45309">Alt rektus: depresyon</text>
+<text x="60" y="518" font-size="17" fill="#475569">üçüncü sinir besler</text>
+<line x1="196" y1="500" x2="272" y2="470" stroke="#94a3b8" stroke-width="1.3"/><circle cx="272" cy="470" r="3" fill="#334155"/>
+<text x="398" y="496" font-size="17" fill="#b45309">Alt oblik: ekstorsiyon</text>
+<text x="398" y="518" font-size="17" fill="#475569">üçüncü sinir besler</text>
+<line x1="398" y1="500" x2="320" y2="408" stroke="#94a3b8" stroke-width="1.3"/><circle cx="320" cy="408" r="3" fill="#334155"/>
+<text x="48" y="548" font-size="17" fill="#334155">Renk siniri gösterir:</text>
+<circle cx="246" cy="542" r="7" fill="#b45309"/><text x="260" y="548" font-size="17" fill="#475569">üçüncü sinir</text>
+<circle cx="376" cy="542" r="7" fill="#059669"/><text x="390" y="548" font-size="17" fill="#475569">dördüncü sinir</text>
+<circle cx="508" cy="542" r="7" fill="#2563eb"/><text x="522" y="548" font-size="17" fill="#475569">altıncı sinir</text>
+<rect x="606" y="100" width="568" height="468" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="628" y="132" font-size="21" font-weight="bold" fill="#0f172a">B · Sinirlerin kaynağı ve beslediği kaslar</text>
+<path d="M 656 200 C 686 176 742 180 766 206 C 778 236 762 262 726 268 C 694 272 664 252 656 200 Z" fill="url(#gbeyin)" stroke="#64748b" stroke-width="2"/>
+<path d="M 654 330 C 686 302 744 306 770 334 C 782 366 760 396 720 402 C 682 406 652 376 654 330 Z" fill="url(#gbeyin)" stroke="#64748b" stroke-width="2"/>
+<text x="628" y="176" font-size="17" fill="#334155">Beyin sapı: sinirler buradan çıkar</text>
+<text x="628" y="436" font-size="17" fill="#334155">Altıncı sinir pons hizasından çıkar</text>
+<path d="M 770 232 C 880 250 960 282 1032 306" stroke="#b45309" stroke-width="4.5" fill="none" marker-end="url(#okm)"/>
+<path d="M 770 258 C 890 300 970 322 1032 330" stroke="#059669" stroke-width="4" fill="none" marker-end="url(#oky)"/>
+<path d="M 772 352 C 890 352 960 344 1032 336" stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#okb)"/>
+<text x="796" y="244" font-size="19" font-weight="bold" fill="#b45309">III</text>
+<text x="796" y="294" font-size="19" font-weight="bold" fill="#059669">IV</text>
+<text x="796" y="372" font-size="19" font-weight="bold" fill="#2563eb">VI</text>
+<circle cx="1080" cy="330" r="44" fill="url(#ggoz)" stroke="#64748b" stroke-width="2"/>
+<circle cx="1080" cy="330" r="18" fill="url(#giris)" stroke="#1e3a8a" stroke-width="2"/>
+<circle cx="1080" cy="330" r="7" fill="#0f172a"/>
+<text x="1080" y="402" font-size="17" text-anchor="middle" fill="#64748b">Göz küresi</text>
+<text x="628" y="478" font-size="17" fill="#b45309">Üçüncü sinir: üst, alt ve medial rektus, alt oblik,</text>
+<text x="628" y="500" font-size="17" fill="#b45309">kapağı kaldıran kas, iris sfinkteri ve silier kas.</text>
+<text x="628" y="522" font-size="17" fill="#059669">Dördüncü sinir yalnız üst obliği besler.</text>
+<text x="628" y="544" font-size="17" fill="#2563eb">Altıncı sinir yalnız lateral rektusu besler.</text>
+<rect x="26" y="586" width="1148" height="186" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="48" y="614" font-size="20" font-weight="bold" fill="#0f172a">C · Muayenede dört şey değerlendirilir</text>
+<circle cx="76" cy="652" r="10" fill="#b45309"/>
+<text x="96" y="646" font-size="17" fill="#334155">Göz hareketleri: altı yöne baktırılarak,</text>
+<text x="96" y="668" font-size="17" fill="#334155">hastaya parmağı izlettirilerek denenir.</text>
+<circle cx="76" cy="700" r="10" fill="#334155"/>
+<text x="96" y="694" font-size="17" fill="#334155">Göz kapağı: kapak düşüklüğü üçüncü siniri,</text>
+<text x="96" y="716" font-size="17" fill="#334155">yani kapağı kaldıran kası düşündürür.</text>
+<circle cx="76" cy="748" r="10" fill="#7c3aed"/>
+<text x="96" y="742" font-size="17" fill="#334155">Pupilla ve nistagmus: nistagmus sekizinci</text>
+<text x="96" y="764" font-size="17" fill="#334155">siniri ve beyin sapı işlevini gösterir.</text>
+<text x="570" y="640" font-size="17" fill="#0f172a">Gözü çeviren kas hangi sinirden besleniyorsa,</text>
+<text x="570" y="662" font-size="17" fill="#334155">o hareket kaybolduğunda sorulan sinir odur.</text>
+<text x="570" y="694" font-size="17" fill="#334155">Üçüncü sinir üst, alt ve medial rektusu, alt obliği,</text>
+<text x="570" y="722" font-size="17" fill="#334155">kapağı kaldıran kası, iris sfinkterini ve silier kasları besler.</text>
+
+<text x="570" y="750" font-size="17" fill="#475569">Dördüncü sinir üst obliği, altıncı sinir lateral rektusu besler.</text>
+<text x="600" y="790" font-size="17" text-anchor="middle" fill="#64748b">Kaynak slayt 9, 10 ve 11: göz hareketini yapan kaslar, kasları besleyen sinirler ve muayene basamakları.</text>
+</svg>
