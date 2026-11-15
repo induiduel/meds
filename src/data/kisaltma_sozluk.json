@@ -1507,7 +1507,7 @@
    "k2-37-okb-ve-iliskili-bozukluklar",
    "y25-k2-22-psikosomatik-bozukluklar",
    "y25-k2-23-cinsel-kimlik-bozukluklari",
-   "y25-k2-34-unipolar-depresyon",
+   "k2-34-unipolar-depresyon",
    "y25-k2-35-kisilik-bozukluklari",
    "y25-k2-37-okb-ve-iliskili-bozukluklar",
    "y25-k2-42-norogelisimsel-bozukluklar",
@@ -2017,7 +2017,7 @@
    "y25-k2-25-antiepileptik-ilaclar",
    "y25-k2-30-norodejeneratif-hastaliklar",
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
-   "y25-k2-34-unipolar-depresyon",
+   "k2-34-unipolar-depresyon",
    "y25-k2-46-sempatomimetikler",
    "y25-k2-55-panik-bozukluk",
    "y25-k2-58-alkoller",
@@ -2328,7 +2328,7 @@
    "y25-k2-17-periferik-noropati",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
-   "y25-k2-34-unipolar-depresyon",
+   "k2-34-unipolar-depresyon",
    "y25-k2-65-konjenital-malformasyonlar-ve-perinatal-beyin-hasari"
   ],
   "definition": "İnsan bağışıklık yetmezliği virüsü",
@@ -2837,7 +2837,7 @@
   "category": "kisaltma",
   "decks": [
    "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
-   "y25-k2-34-unipolar-depresyon",
+   "k2-34-unipolar-depresyon",
    "y25-k2-39-kolinoseptor-bloke-edici-ilaclar",
    "y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
    "y25-k2-46-sempatomimetikler",
@@ -3177,7 +3177,7 @@
  "MDB": {
   "category": "kisaltma",
   "decks": [
-   "y25-k2-34-unipolar-depresyon",
+   "k2-34-unipolar-depresyon",
    "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
   ],
   "definition": "Majör depresif bozukluk",
@@ -3360,7 +3360,7 @@
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
-   "y25-k2-34-unipolar-depresyon",
+   "k2-34-unipolar-depresyon",
    "y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
    "y25-k2-45-intihar-ve-kendine-zarar-verme",
    "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
@@ -5584,5 +5584,85 @@
   ],
   "definition": "İdrar yolu enfeksiyonu",
   "term": "İYE"
+ },
+ "GBD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Küresel Hastalık Yükü (Global Burden of Disease)",
+  "term": "GBD"
+ },
+ "COVID": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Koronavirüs hastalığı (COVID-19)",
+  "term": "COVID"
+ },
+ "YLD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Yeti yitimiyle geçen yıllar (Years Lived with Disability)",
+  "term": "YLD"
+ },
+ "CRH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Kortikotropin salgılatıcı hormon",
+  "term": "CRH"
+ },
+ "ACTH": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Adrenokortikotropik hormon",
+  "term": "ACTH"
+ },
+ "PHQ": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Hasta Sağlık Anketi (Patient Health Questionnaire)",
+  "term": "PHQ"
+ },
+ "WHO": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Dünya Sağlık Örgütü (World Health Organization)",
+  "term": "WHO"
+ },
+ "DC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Washington, DC (yayın yeri)",
+  "term": "DC"
+ },
+ "CC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Creative Commons (lisans)",
+  "term": "CC"
+ },
+ "BY": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-34-unipolar-depresyon"
+  ],
+  "definition": "Creative Commons Atıf (BY) lisansı",
+  "term": "BY"
  }
 }

@@ -1,0 +1,91 @@
+{
+ "surum": 1,
+ "metinHash": "",
+ "dogrulama": "ham sınav belgesi + slayt kanıtı, elle (E1, 2026-11-15); banka id'leri soru köküyle eşleştirildi.",
+ "q": [
+  {
+   "id": "d3k2-2025-2026-h9",
+   "kok": "Kurgu Soru: Depresyon alt tiplerinin özellikleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "cevap": "D",
+   "yil": "2025-2026",
+   "s": 24,
+   "seviye": "dogrudan",
+   "kanit": "kış depresyonu: enerji azlığı, aşırı uyku, iştah artışı, karbonhidrat isteği, kilo alma (s24: mevsimsel örüntü en sık kış depresyonudur; D şıkkı 'yaz depresyonu' bu nedenle yanlıştır)",
+   "kaynak": "`D3K2 2025-2026.pdf` (2025-2026 Kurul 2 öğrenci hatırlaması; belge başlığı 'DÖNEM 3 KURUL 2 2025-2026'). Banka sinavKimligi d3k2pdf:y2025, Kurgu Soru (şıklar hatırlamadan tamamlanmıştır).",
+   "dogrulandi": true,
+   "neden": "Doğru şık D 'Mevsimsel depresyonun en sık görülen biçimi yaz depresyonudur' slayt s24 ile çelişir (en sık kış depresyonu). Çeldiriciler melankolik (s23 anhedoni, sabah erken uyanma, kilo kaybı) ve atipik (s23 iştah/kilo artışı, aşırı uyku) özelliklerinden kurulmuştur; hepsi öğretilmiş alt tiplerdir."
+  },
+  {
+   "id": "d3k2-2018-2019-k4-q64",
+   "kok": "Aşağıdakilerden hangisi depresyon nöbeti için yanlıştır?",
+   "cevap": "B",
+   "yil": "2018-2019",
+   "s": 20,
+   "seviye": "dogrudan",
+   "kanit": "Aynı 2 haftalık dönemde, neredeyse her gün ve günün çoğunda aşağıdakilerden en az 5'i; bunlardan biri mutlaka (1) ya da (2) (s20: DSM-5-TR MDB süre ölçütü 2 haftadır; 'en az 6 ay' yanlıştır)",
+   "kaynak": "`D3K2 2021-2022-2023.pdf` s.— soru 64 (banka sinavKimligi: 2018-2019 Kurul 4 basılı sınav kâğıdı taraması; aynı kâğıt meds_downloads/donem3/3. Sınıf/Kurul 4/Kurul IV Sınavı.pdf, resmî cevap anahtarı 04.03.2019 — eski müfredatta nöropsikiyatri bloğu, konu Unipolar Depresyon).",
+   "dogrulandi": true,
+   "neden": "Doğru şık B 'Belirtilerin en az 6 ay devamı gereklidir' yanlıştır; DSM-5-TR süre ölçütü 2 haftadır (s20, s40). Çeldiriciler s20-s21'deki gerçek ölçütlerden (işlev kaybı, çökkünlük/anhedoni zorunluluğu, kilo değişimi, uyku değişikliği) kurulmuştur."
+  },
+  {
+   "id": "past-q-22_final_230619_145249-82",
+   "kok": "Aşağıdakilerden hangisi DSM-5 kriterlerine göre majör depresif bozukluk tanı kriterleri içerisinde yer almaz?",
+   "cevap": "E",
+   "yil": "2021-2022",
+   "s": 20,
+   "seviye": "dogrudan",
+   "kanit": "Aynı 2 haftalık dönemde, neredeyse her gün ve günün çoğunda aşağıdakilerden en az 5 (s20: DSM-5-TR MDB 9 ölçütü arasında kas gerginliği yoktur; kas gerginliği anksiyete belirtisidir)",
+   "kaynak": "`22 final_230619_145249.pdf` s.— soru 82 (banka sinavKimligi: 2021-2022 Final karnesi, konu Unipolar Depresyon).",
+   "dogrulandi": true,
+   "neden": "Doğru şık E 'Kas gerginliği' DSM-5-TR majör depresif bozukluk ölçütleri (s20) arasında yer almaz; kas gerginliği anksiyöz sıkıntı belirleyicisine (s23) özgüdür. Çeldiriciler (konsantrasyon kaybı, uyku azalması, iştah artışı, ölüm düşünceleri) s20'deki gerçek ölçütlerdir."
+  },
+  {
+   "id": "d3k2-2018-2019-k4-q66",
+   "kok": "Distimik bozukluk ile ilgili hangisi yanlıştır?",
+   "cevap": "D",
+   "yil": "2018-2019",
+   "s": 38,
+   "seviye": "dogrudan",
+   "kanit": "Hiç manik ya da hipomanik epizot olmamıştır (s38: distimi ölçütü E; 'karma nöbet' görülmesi distimi ile bağdaşmaz)",
+   "kaynak": "`D3K2 2021-2022-2023.pdf` s.— soru 66 (banka sinavKimligi: 2018-2019 Kurul 4 basılı sınav kâğıdı taraması; resmî cevap anahtarı 04.03.2019, konu Unipolar Depresyon/distimi).",
+   "dogrulandi": true,
+   "neden": "Doğru şık D 'Bu süre içerisinde karma nöbet görülebilir' yanlıştır; süregen depresif bozukluk ölçütü E hiç manik/hipomanik epizot olmamasını şart koşar (s38). Çeldiriciler s38 ölçütlerinden (≥2 yıl süre, MDB için yetersiz belirti) ve s38 yaygınlık verisinden kurulmuştur."
+  },
+  {
+   "id": "d3-b-073",
+   "kok": "Depresif bozukluklar hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+   "cevap": "A",
+   "yil": "2022-2023",
+   "s": 32,
+   "seviye": "dogrudan",
+   "kanit": "Değersizlik ve kendinden nefret (s32: majör depresyonda benlik saygısı yitirilir; 'benlik saygısını yitirmez' yanlıştır)",
+   "kaynak": "`22-23D3Butunleme_101817.pdf` s.— soru 73 (banka sinavKimligi: 2022-2023 Bütünleme, konu Unipolar Depresyon).",
+   "dogrulandi": true,
+   "neden": "Doğru şık A 'Depresyonda yastan farklı olarak kişi benlik saygısını yitirmez' söylenemez (yanlıştır); majör depresyonda değersizlik ve kendinden nefret vardır (s32), yasta ise benlik saygısı korunur. Çeldiriciler slaytta doğru olarak geçen bilgilerdir: yaşam boyu yaygınlık %17-25 (s7), HPA aksı (s11), kadınlarda 2 kat (s7), histriyonik/borderline/obsesif özellikler (s18)."
+  },
+  {
+   "id": "past-1790877042004-879090",
+   "kok": "Depresyona bağlı bilişsel bozulmada (psödodemans) aşağıdakilerden hangisi görülmez?",
+   "cevap": "D",
+   "yil": "2020-2021",
+   "s": 26,
+   "seviye": "ilgili",
+   "kanit": "Görece akut, belirli bir zamanda (s26: psödodemansta başlangıç görece akuttur; 'yavaş ilerler' demans özelliğidir)",
+   "kaynak": "`4_5812298320197980532_240515_235438.txt` soru 1 (banka sinavKimligi belirsiz; konu Yaşlılığa Özgü Ruhsal Sorunlar, içerik bu dersin s25-s26 psödodemans konusu). Yıl bankadaki 2020-2021 etiketinden.",
+   "dogrulandi": true,
+   "neden": "Doğru şık D 'Yavaş ilerler, ilk semptomlar gözden kaçar' psödodemansta görülmez; bu demansın sinsi başlangıcıdır (s26). Psödodemans başlangıcı görece akut ve belirli bir zamandadır. Farmakoloji/bu dersin tanı sorusu olmadığından seviye ilgili; içerik s25-s26'da öğretilmiştir."
+  },
+  {
+   "id": "d3-k2-psi-018",
+   "kok": "Majör depresyon tedavisinde selektif serotonin geri alım inhibitörü (SSRI) başlanan bir hastada, ilacın klinik antidepresan etkinliğinin ortaya çıkması için genellikle en az ne kadar süre beklenmelidir?",
+   "cevap": "B",
+   "yil": "Yılı belirsiz",
+   "s": 10,
+   "seviye": "ilgili",
+   "kanit": "Bu değişikliklerin 2–4 hafta sürmesi, etkinin neden gecikerek başladığını açıklar (s10: antidepresan etki haftalar sonra başlar; SSRI yanıtı için 2-4 hafta beklenir)",
+   "kaynak": "`Psikiyatri_Kurul2_Cikmis_Sorular.json` soru 18 (banka sinavNote: Dönem 3 Kurul 2 Psikiyatri Dersi; yıl kanıtı yok → 'Yılı belirsiz'). Konu Antidepresan İlaçlar; içerik bu dersin monoamin hipotezinde (s10) öğretilir.",
+   "dogrulandi": true,
+   "neden": "Doğru şık B '2-4 hafta' s10 ile doğrulanır: antidepresanlar monoamin düzeyini saatler içinde artırır ama reseptör uyumu 2-4 hafta sürdüğü için klinik etki gecikir. Tedavi/farmakoloji sorusu olduğundan seviye ilgili. Çeldiriciler (1-2 gün, hemen) hızlı etki yanılgısını, 8-12 hafta/6 ay aşırı süreyi test eder."
+  }
+ ]
+}

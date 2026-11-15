@@ -1,0 +1,2028 @@
+{
+ "id": "k2-34-unipolar-depresyon",
+ "sira": 34,
+ "kurul": 2,
+ "ders": "Psikiyatri",
+ "konu": "Unipolar Depresyon",
+ "ogretim_uyesi": "Doç. Dr. Zuhal Koç Apaydın",
+ "tarih": "2026-11-15",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Depresyon kavramı, DSM-5-TR sınıflaması ve epidemiyolojisini açıklayabilme",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Psikiyatride depresyon kavramı aşağıdakilerden hangisiyle tanımlanır?",
+     "secenekler": {
+      "A": "Yalnızca bir olaya bağlı kısa süreli üzüntü",
+      "B": "Duygudurumda keder yönünde artış ve ilgi kaybıyla giden sendrom",
+      "C": "Benlik saygısının korunduğu normal yas tepkisi",
+      "D": "Yalnızca bedensel yakınmalarla giden tablo",
+      "E": "Taşkınlık ve konuşma baskısıyla giden dönem"
+     },
+     "dogru": "B",
+     "aciklama": "Psikiyatride depresyon, duygudurumda keder ve elem yönünde artış ile ilgi kaybının birlikte görüldüğü, sıradan üzüntüden daha uzun ve şiddetli bir sendromdur (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Gündelik dildeki depresyon kısa süreli ve çoğunlukla bir olaya bağlıdır ve kişi işlevini sürdürebilir. Psikiyatrik depresyon bundan daha uzun ve şiddetli olduğundan aranan tanım bu değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Çökkünlük, duygudurumda keder ve elem yönünde süregen bir artıştır ve depresyonun çekirdek belirtisidir. Majör depresyonda ilgi kaybıyla birlikte tanının zorunlu ölçütlerinden birini oluşturur. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Yas, gerçek bir sevgi nesnesinin yitirilmesine bağlı, dalgalar hâlinde gelen ve zamanla azalan bir üzüntüdür. Yasta benlik saygısı korunur ve olumlu duygular arada yaşanabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Bedensel yakınmalar depresyona eşlik edebilir ama tek başına depresyon tanımını vermez; tablo bir duygudurum bozukluğudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Taşkınlık ve konuşma baskısı mani belirtileridir ve depresyonun değil bipolar bozukluğun özelliğidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": ""
+     },
+     "s": 3,
+     "id": "k2-34-unipolar-depresyon-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "DSM-5-TR depresif bozukluklar sınıflaması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Majör depresif bozukluk bu grubun üyesidir",
+      "B": "Süregen depresif bozukluk yani distimi bu gruptadır",
+      "C": "Premenstrüel disforik bozukluk bu gruptadır",
+      "D": "Yıkıcı duygudurumu düzenleyememe bozukluğu bu gruptadır",
+      "E": "Yaygın anksiyete bozukluğu bu grubun üyesidir"
+     },
+     "dogru": "E",
+     "aciklama": "DSM-5-TR depresif bozukluklar başlığı majör depresyon, distimi, premenstrüel disforik bozukluk ve yıkıcı duygudurumu düzenleyememe bozukluğunu kapsar; yaygın anksiyete bozukluğu ayrı gruptadır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Majör depresif bozukluk, çökkünlük ya da anhedoninin iki hafta boyunca en az beş belirtiyle sürdüğü tablodur. Bu dersin odağı olan epizodik ve tedavi edilebilir bir duygudurum bozukluğudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Süregen depresif bozukluk yani distimi, en az iki yıl süren daha hafif ama kronik bir çökkünlüktür. Çocuk ve ergende irritabl duygudurumla ve en az bir yıl süreyle tanınır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Premenstrüel disforik bozukluk, luteal fazda başlayıp menstrüasyonla geçen duygudurum belirtileriyle tanımlanır. Depresif bozukluklar başlığı altında sınıflanır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Yıkıcı duygudurumu düzenleyememe bozukluğu, altı ile on sekiz yaş arasında sık öfke patlamaları ve süregen irritabiliteyle giden bir depresif bozukluktur. Çocukluk çağına özgü bir tanıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Yaygın anksiyete bozukluğu, aşırı ve denetlenemeyen kaygıyla giden bir anksiyete bozukluğudur. Depresif bozukluklar başlığının değil, ayrı bir tanı grubunun üyesidir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": ""
+     },
+     "s": 4,
+     "id": "k2-34-unipolar-depresyon-q02"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi DSM-5-TR depresif bozukluklar başlığı altında yer almaz?",
+     "secenekler": {
+      "A": "Madde ya da ilaç kaynaklı depresif bozukluk",
+      "B": "Başka bir sağlık durumuna bağlı depresif bozukluk",
+      "C": "Premenstrüel disforik bozukluk",
+      "D": "Şizofreni",
+      "E": "Yıkıcı duygudurumu düzenleyememe bozukluğu"
+     },
+     "dogru": "D",
+     "aciklama": "Depresif bozukluklar grubu madde kaynaklı, sağlık durumuna bağlı, premenstrüel disforik ve yıkıcı duygudurumu düzenleyememe bozukluğunu içerir; şizofreni psikotik bozukluktur (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Madde ya da ilaç kaynaklı depresif bozukluk, zehirlenme, yoksunluk ya da bir ilacın etkisiyle ortaya çıkan depresyondur. Nedensel madde kesildiğinde tablo genellikle düzelir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "B": "Başka bir sağlık durumuna bağlı depresif bozukluk, hipotiroidi, inme ya da Parkinson gibi tıbbi hastalıkların doğrudan etkisiyle gelişir. Tedavi altta yatan hastalığa yöneliktir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "C": "Premenstrüel disforik bozukluk, luteal fazda başlayıp menstrüasyonla geçen duygudurum belirtileriyle tanımlanır. Depresif bozukluklar başlığı altında sınıflanır. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "D": "Şizofreni, sanrı, varsanı ve dağınık düşünceyle giden psikotik bir bozukluktur. Duygudurum bozukluğu olmadığından depresif bozukluklar sınıfında yer almaz. Bu tanı sorulan gruba girmediğinden doğru cevap budur.",
+      "E": "Yıkıcı duygudurumu düzenleyememe bozukluğu, altı ile on sekiz yaş arasında sık öfke patlamaları ve süregen irritabiliteyle giden bir depresif bozukluktur. Çocukluk çağına özgü bir tanıdır. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": ""
+     },
+     "s": 4,
+     "id": "k2-34-unipolar-depresyon-q03"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Majör depresyonun epidemiyolojisiyle ilgili ortalama başlangıç yaşı ve kadın erkek oranı aşağıdakilerden hangisinde birlikte doğru verilmiştir?",
+     "secenekler": {
+      "A": "Ortalama 50 yaş ve erkeklerde iki kat",
+      "B": "Ortalama 10 yaş ve eşit oran",
+      "C": "Ortalama 29 yaş ve kadınlarda iki kat",
+      "D": "Ortalama 70 yaş ve kadınlarda üç kat az",
+      "E": "Ortalama 40 yaş ve yalnızca erkeklerde"
+     },
+     "dogru": "C",
+     "aciklama": "Depresyonun ortalama başlangıç yaşı yaklaşık yirmi dokuzdur ve kadınlarda erkeklere göre yaklaşık iki kat sık görülür (s. 7).",
+     "sik_aciklamalari": {
+      "A": "İleri yaş ortalama başlangıç değildir ve oran erkekler lehine değil kadınlar lehinedir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Depresyon çocukluk çağının tipik başlangıç dönemi değildir ve cinsiyet oranı eşit değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Depresyon her yaşta başlayabilir ancak ortalama başlangıç yaşı yaklaşık yirmi dokuzdur. En sık yirmi ile kırk beş yaş arasında görülür. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Depresyon yaşlılıkta başlayabilir ama ortalama başlangıç ileri yaş değildir ve kadınlarda daha azdır ifadesi yanlıştır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Depresyon yalnızca bir cinsiyete özgü değildir ve ortalama başlangıç bu değerde değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [
+      "d3-b-073"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": ""
+     },
+     "s": 7,
+     "id": "k2-34-unipolar-depresyon-q04"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Depresyonun halk sağlığı açısından önemini artıran etkenlerden biri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kronikleşme riski ve yeti yitimi",
+      "B": "Her zaman kendiliğinden ve hızla düzelmesi",
+      "C": "Toplumda çok nadir görülmesi",
+      "D": "İntihar davranışıyla hiç ilişkisi olmaması",
+      "E": "Yalnızca ileri yaşta görülmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Depresyonun önemini tanı güçlükleri, kronikleşme riski, intihar davranışı, yeti yitimi ve ekonomik sonuçlar artırır (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Güncel küresel hastalık yükü verilerinde depresif bozukluklar yeti yitimiyle geçen yılların en önde gelen nedenleri arasındadır. Pandeminin ilk yılında vakalar yaklaşık yüzde yirmi sekiz artmıştır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "B": "Depresyon tedavi edilebilir olsa da her zaman kendiliğinden ve hızla düzelmez; kronikleşme ve yineleme sıktır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Depresyon toplumda yaygın görülen bir hastalıktır ve nadir değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyon intihar davranışıyla yakından ilişkilidir ve bu önemini artıran etkenlerdendir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Depresyon her yaşta görülür, yalnızca ileri yaşa özgü değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": ""
+     },
+     "s": 5,
+     "id": "k2-34-unipolar-depresyon-q05"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Küresel hastalık yükü ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Depresif bozukluklar yeti yitimiyle geçen yılların önde gelen nedenlerindendir",
+      "B": "Pandeminin ilk yılında vakalar yaklaşık yarı yarıya azalmıştır",
+      "C": "Depresyon kalp hastalığının hem sonucu hem risk etkenidir",
+      "D": "Depresyon eşlik ettiğinde mortaliteyi artırır",
+      "E": "Depresyon diyabet ve inmeyle ilişkilidir"
+     },
+     "dogru": "B",
+     "aciklama": "Güncel verilerde depresif bozukluklar yeti yitimiyle geçen yılların önde gelen nedenlerindendir; pandeminin ilk yılında vakalar yaklaşık yüzde yirmi sekiz artmıştır (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Güncel küresel hastalık yükü verilerinde depresif bozukluklar yeti yitimiyle geçen yılların en önde gelen nedenleri arasındadır. Pandeminin ilk yılında vakalar yaklaşık yüzde yirmi sekiz artmıştır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Pandeminin ilk yılında majör depresif bozukluk vakaları azalmamış, yaklaşık yüzde yirmi sekiz artmıştır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Depresyon pankreas karsinomu, hipotiroidi, Cushing, inme ve Parkinson gibi tıbbi hastalıklara eşlik eder. İlişki çift yönlüdür; tıbbi hastalık depresyon riskini, depresyon da mortaliteyi artırır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyon eşlik eden tıbbi hastalıklarda tedavi uyumunu bozarak ölüm oranını artırır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Depresyon diyabet ve inme gibi hastalıklarla çift yönlü ilişki içindedir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": ""
+     },
+     "s": 6,
+     "id": "k2-34-unipolar-depresyon-q06"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Depresyonun yaşam boyu yaygınlığı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Toplumun yalnızca binde birinde görülür",
+      "B": "Yalnızca kadınlarda görülür",
+      "C": "Erkeklerde kadınlardan yüksektir",
+      "D": "Yaklaşık yüzde on beş ile yirmi arasındadır",
+      "E": "Yaşla birlikte sıfıra iner"
+     },
+     "dogru": "D",
+     "aciklama": "Majör depresyonun yaşam boyu yaygınlığı yaklaşık yüzde on beş ile yirmidir, bazı çalışmalarda yüzde yirmi beşe varır (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Depresyon toplumda yaygın bir hastalıktır ve binde bir gibi düşük bir sıklıkta görülmez. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Depresyon kadınlarda daha sık olsa da erkeklerde de görülür, yalnızca kadınlara özgü değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Depresyon kadınlarda erkeklerden daha sık görülür, tersi değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Majör depresyonun yaşam boyu yaygınlığı yüzde on beş ile yirmi arasındadır ve bazı çalışmalarda yüzde yirmi beşe varır. Her toplum kesiminde görülen yaygın bir hastalıktır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Depresyon her yaşta görülür ve yaşla birlikte ortadan kalkmaz. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": ""
+     },
+     "s": 7,
+     "id": "k2-34-unipolar-depresyon-q07"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi çocukluk çağına özgü, sık öfke patlamaları ve süregen irritabiliteyle giden bir depresif bozukluk değildir?",
+     "secenekler": {
+      "A": "Yıkıcı duygudurumu düzenleyememe bozukluğu değerlendirilir",
+      "B": "Altı ile on sekiz yaş arasında tanınır",
+      "C": "Süregen irritabilite görülür",
+      "D": "Sık öfke patlamaları görülür",
+      "E": "Luteal fazda başlayıp menstrüasyonla geçer"
+     },
+     "dogru": "E",
+     "aciklama": "Yıkıcı duygudurumu düzenleyememe bozukluğu altı ile on sekiz yaşta öfke patlamaları ve süregen irritabiliteyle gider; luteal fazda başlayıp menstrüasyonla geçmesi premenstrüel disforik bozukluğun özelliğidir (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Yıkıcı duygudurumu düzenleyememe bozukluğu, altı ile on sekiz yaş arasında sık öfke patlamaları ve süregen irritabiliteyle giden bir depresif bozukluktur. Çocukluk çağına özgü bir tanıdır. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "B": "Yıkıcı duygudurumu düzenleyememe bozukluğu altı ile on sekiz yaş arasında tanınan çocukluk çağı tanısıdır. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "C": "Bu bozuklukta süregen irritabilite temel bir bulgudur. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "D": "Sık öfke patlamaları bu bozukluğun tanımlayıcı bulgusudur. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "E": "Premenstrüel disforik bozukluk, luteal fazda başlayıp menstrüasyonla geçen duygudurum belirtileriyle tanımlanır. Depresif bozukluklar başlığı altında sınıflanır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": ""
+     },
+     "s": 4,
+     "id": "k2-34-unipolar-depresyon-q08"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Yas ile psikiyatrik depresyon ayrımıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yasta benlik saygısı korunur",
+      "B": "Depresyonda işlevsellikte belirgin bozulma olur",
+      "C": "Yasta ölen kişiye özlem yerine süregen değersizlik ön plandadır",
+      "D": "Depresyon sıradan üzüntüden daha uzun ve şiddetlidir",
+      "E": "Yasta üzüntü anımsatıcılarla dalgalanır"
+     },
+     "dogru": "C",
+     "aciklama": "Yasta temel duygu ölen kişiye özlemdir ve benlik saygısı korunur; süregen değersizlik ise majör depresyonun özelliğidir (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Yasta benlik saygısı korunur ve kişi kendini değersiz görmez. Bu özellik yası majör depresyondan ayırmaya yarar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Psikiyatrik depresyonda genel işlevsellikte ve kişilerarası ilişkilerde belirgin bozulma olur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Yas, gerçek bir sevgi nesnesinin yitirilmesine bağlı, dalgalar hâlinde gelen ve zamanla azalan bir üzüntüdür. Yasta benlik saygısı korunur ve olumlu duygular arada yaşanabilir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Çökkünlük, duygudurumda keder ve elem yönünde süregen bir artıştır ve depresyonun çekirdek belirtisidir. Majör depresyonda ilgi kaybıyla birlikte tanının zorunlu ölçütlerinden birini oluşturur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Yasta üzüntü dalgalar hâlinde, anımsatıcılarla gelir ve zamanla azalır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": ""
+     },
+     "s": 3,
+     "id": "k2-34-unipolar-depresyon-q09"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Depresyonun dünya genelindeki yükü düşünüldüğünde, tedavi hizmetine erişimle ilgili en çarpıcı sorun aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastaların çoğunun hizmete ulaşamaması",
+      "B": "Her hastanın kolayca tedaviye ulaşması",
+      "C": "Depresyonun hiç yeti yitimi yapmaması",
+      "D": "Hastalığın hiç kronikleşmemesi",
+      "E": "İntihar davranışının hiç görülmemesi"
+     },
+     "dogru": "A",
+     "aciklama": "Depresyonlu kişilerden yalnızca bir kısmı resmi ruh sağlığı hizmeti alabilmektedir ve bu, tanı güçlükleriyle birlikte hastalığın önemini artırır (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Güncel küresel hastalık yükü verilerinde depresif bozukluklar yeti yitimiyle geçen yılların en önde gelen nedenleri arasındadır. Pandeminin ilk yılında vakalar yaklaşık yüzde yirmi sekiz artmıştır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "B": "Gerçekte depresyonlu kişilerin büyük bölümü yeterli ruh sağlığı hizmetine ulaşamaz; kolay erişim iddiası gerçekle çelişir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Depresyon yeti yitiminin önde gelen nedenlerindendir, yeti yitimi yapmaması söz konusu değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyon önemli oranda kronikleşir, hiç kronikleşmediği doğru değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "İntihar davranışı depresyonun önemini artıran temel etkenlerdendir, hiç görülmemesi söz konusu değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": ""
+     },
+     "s": 5,
+     "id": "k2-34-unipolar-depresyon-q10"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Depresyonun biyolojik etiyolojisini ve nörobiyolojik modellerini açıklayabilme",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Diatez-stres modeline göre depresyonun ortaya çıkışıyla ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Yatkınlık tek başına depresyon için yeterli değildir",
+      "B": "Stresörle karşılaşınca tablo ortaya çıkar",
+      "C": "İlk epizotlar çoğunlukla belirgin stresle başlar",
+      "D": "Sonraki epizotlar ancak daha büyük stresle başlar",
+      "E": "Yinelemeyle tetikleyici eşik düşebilir"
+     },
+     "dogru": "D",
+     "aciklama": "Diatez-stres modelinde yatkınlık tek başına yetmez; ilk epizotlar belirgin stresle, sonrakiler daha az stresle tetiklenir, buna tutuşma denir (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Diatez-stres modelinde yatkınlık tek başına yetmez, stresörle karşılaşınca depresyon ortaya çıkar. İlk epizotlar çoğunlukla belirgin stresle başlar, sonrakiler daha az stresle tetiklenir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Diatez-stres modelinde yatkınlık stresörle birleşince depresyon ortaya çıkar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "İlk epizotlar çoğunlukla belirgin bir stresle başlar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Tutuşma yani kindling, yinelenen epizotlarla depresyonun giderek daha küçük stresörlerle tetiklenebilir hâle gelmesidir. İlk epizotlar belirgin stresle, sonrakiler daha az stresle başlar. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Yineleyen epizotlarla tablo giderek daha küçük stresörlerle tetiklenebilir hâle gelir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": ""
+     },
+     "s": 9,
+     "id": "k2-34-unipolar-depresyon-q11"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Monoamin hipoteziyle ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Serotonin işlev azlığı uyku, iştah ve intiharla ilişkilendirilir",
+      "B": "Dopamin eksikliği anhedoni ve motivasyon kaybıyla ilişkilidir",
+      "C": "Antidepresanların klinik etkisi ilk dozla birlikte başlar",
+      "D": "Noradrenalin locus coeruleus nöronlarından salınır",
+      "E": "Basit serotonin eksikliği açıklaması tek başına yetersizdir"
+     },
+     "dogru": "C",
+     "aciklama": "Antidepresanlar sinaptik monoamini saatler içinde artırsa da klinik etki haftalar sonra başlar; basit serotonin eksikliği açıklaması yetersizdir (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Serotonin, beyin sapındaki rafe çekirdeklerinden salınan bir monoamindir. Serotonerjik işlev azlığı uyku, iştah, dürtü denetimi ve intiharla ilişkilendirilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Dopamin, mezolimbik ödül sisteminde rol oynayan bir monoamindir. Dopamin eksikliği anhedoni ve motivasyon kaybına yol açar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Serotonin geri alım inhibitörü başlanan hastada klinik antidepresan etki genellikle iki ile dört hafta sonra ortaya çıkar. İlaç monoamini saatler içinde artırsa da reseptör uyumu haftalar sürdüğü için etki gecikir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Noradrenalin, başlıca ponstaki locus coeruleus nöronlarından salınan bir monoamindir. Depresyonda noradrenalin eksikliği ya da inaktivasyonu öne sürülür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Monoamin hipotezi, depresyonu noradrenalin, serotonin ve dopamin gibi ileticilerin işlev azlığıyla açıklar. Antidepresanlar sinaptik monoamini saatler içinde artırsa da klinik etki haftalar sonra başladığından bu açıklama tek başına yetersizdir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [
+      "d3-k2-psi-018"
+     ],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": ""
+     },
+     "s": 10,
+     "id": "k2-34-unipolar-depresyon-q12"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Depresyonda serotonerjik işlev azlığının en çok ilişkilendirildiği belirti kümesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca kas gücü artışı",
+      "B": "Uyku, iştah ve intihar",
+      "C": "Görme keskinliğinde artış",
+      "D": "Eklem ağrıları",
+      "E": "Boy uzaması"
+     },
+     "dogru": "B",
+     "aciklama": "Serotonin beyin sapındaki rafe çekirdeklerinden salınır ve serotonerjik işlev azlığı uyku, iştah, dürtü denetimi ve intiharla ilişkilendirilir (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Kas gücünde artış serotonin işleviyle tanımlanan bir belirti kümesi değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Serotonin, beyin sapındaki rafe çekirdeklerinden salınan bir monoamindir. Serotonerjik işlev azlığı uyku, iştah, dürtü denetimi ve intiharla ilişkilendirilir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Görme keskinliğinde artış serotonerjik işlev azlığıyla tanımlanan bir tablo değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Eklem ağrıları bedensel bir yakınmadır ve serotonerjik işlev azlığının depresyonda tanımladığı belirti kümesiyle doğrudan bağlantılı kabul edilmez. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Boy uzaması serotonerjik işlevle açıklanan bir belirti değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": ""
+     },
+     "s": 10,
+     "id": "k2-34-unipolar-depresyon-q13"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Depresyonda HPA aksı ile ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Glukokortikoid reseptör direnci gelişir",
+      "B": "Kortizol yüksek kalır",
+      "C": "Deksametazonla kortizol baskılanmayabilir",
+      "D": "Negatif geri bildirim normalden daha güçlü çalışır",
+      "E": "Uzun süreli yüksek kortizol hipokampusa zarar verir"
+     },
+     "dogru": "D",
+     "aciklama": "Depresyonda glukokortikoid reseptör direnci nedeniyle dur sinyali zayıflar, kortizol yüksek kalır ve uzun süreli yükseklik hipokampusa zarar verir (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Hipotalamus hipofiz adrenal aksı, stresle CRH, ACTH ve kortizol salgılatan nöroendokrin sistemdir. Depresyonda glukokortikoid reseptör direnci nedeniyle kortizol yüksek kalır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Kortizol, adrenal korteksten salınan ve stresle yükselen bir glukokortikoiddir. Depresyonda negatif geri bildirim zayıfladığından kortizol baskılanmadan yüksek kalır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Deksametazon supresyon testinde ağır ve melankolik depresyonda kortizol baskılanmaz. Bu bir tanı testi değil, araştırma bulgusudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyonda negatif geri bildirim güçlenmez, tersine glukokortikoid reseptör direnci nedeniyle zayıflar ve dur sinyali alınmaz. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Hipokampus, aksı baskılayan ve bellekte rol oynayan bir bölgedir. Uzun süreli yüksek kortizol hipokampusa zarar verip hacmini azaltır ve kısır döngü oluşturur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": ""
+     },
+     "s": 11,
+     "id": "k2-34-unipolar-depresyon-q14"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Deksametazon supresyon testiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kesin bir tanı testidir",
+      "B": "Ağır ve melankolik depresyonda kortizol baskılanmaz",
+      "C": "Tüm depresyon hastalarında kesin pozitiftir",
+      "D": "Serotonin düzeyini ölçer",
+      "E": "Tiroid işlevini değerlendirir"
+     },
+     "dogru": "B",
+     "aciklama": "Deksametazon supresyon testinde özellikle ağır ve melankolik depresyonda kortizol baskılanmaz; bu bir tanı testi değil araştırma bulgusudur (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Deksametazon supresyon testi tanı koydurucu kesin bir test değil, araştırma bulgusudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Deksametazon supresyon testinde ağır ve melankolik depresyonda kortizol baskılanmaz. Bu bir tanı testi değil, araştırma bulgusudur. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Test tüm hastalarda kesin sonuç vermez; özellikle ağır ve melankolik tabloda belirginleşir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Bu test serotonin düzeyini ölçmez; kortizol baskılanmasını değerlendirir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Bu test tiroid işlevini değil kortizol yanıtını değerlendirir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": ""
+     },
+     "s": 11,
+     "id": "k2-34-unipolar-depresyon-q15"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Depresyonda monoaminlerin ötesindeki güncel modellerle ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Stres ve depresyonda beyin kaynaklı nörotrofik faktör azalır",
+      "B": "Ketamin saatler içinde antidepresan etki gösterir",
+      "C": "Bir alt grupta inflamatuar belirteçler yüksek bulunur",
+      "D": "Antidepresanlar nöroplastisiteyi artırabilir",
+      "E": "Ketamin monoamin geri alımını bloke eden klasik bir ilaçtır"
+     },
+     "dogru": "E",
+     "aciklama": "Güncel modellerde nöroplastisite, glutamat ve inflamasyon öne çıkar; ketamin en em de a reseptör antagonisti olarak saatler içinde etki gösterir (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Nöroplastisite kuramında stres ve depresyonda BDNF azalır ve sinaps kaybı olur. Antidepresanlar nöroplastisiteyi artırarak haftalar içinde etki gösterir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Glutamat sisteminde NMDA reseptör antagonisti ketamin saatler içinde antidepresan etki gösterir. Bu bulgu glutamatın depresyondaki rolüne dikkat çekmiştir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "İnflamasyon kuramında bir alt grupta IL-6, TNF-alfa ve CRP yüksek bulunur. İnterferon tedavisi depresyona yol açabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Nöroplastisite kuramında stres ve depresyonda BDNF azalır ve sinaps kaybı olur. Antidepresanlar nöroplastisiteyi artırarak haftalar içinde etki gösterir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Ketamin klasik bir monoamin geri alım blokeri değil, glutamat sisteminde etkili bir en em de a reseptör antagonistidir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": ""
+     },
+     "s": 12,
+     "id": "k2-34-unipolar-depresyon-q16"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Depresyonun genetik özellikleriyle ilgili kalıtılabilirlik oranı ve geçiş biçimi aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Kalıtılabilirlik neredeyse yüzde yüz ve tek gen",
+      "B": "Kalıtsal değil ve tamamen çevresel",
+      "C": "Yaklaşık yüzde otuz yedi ve poligenik geçiş",
+      "D": "Yalnızca X kromozomuna bağlı kesin geçiş",
+      "E": "Yüzde beşin altında ve tek gen"
+     },
+     "dogru": "C",
+     "aciklama": "İkiz çalışmalarında kalıtılabilirlik yaklaşık yüzde otuz yedidir ve geçiş heterojen, poligeniktir; tek bir depresyon geni yoktur (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Depresyon tek bir genle ve tama yakın kalıtımla açıklanmaz; geçiş çok genlidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Depresyonda genetik yatkınlık vardır, tümüyle çevresel değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Genetik etkenlerde birinci ve ikinci derece akrabalarda depresyon riski iki ile üç kat artar ve ikiz çalışmalarında kalıtılabilirlik yaklaşık yüzde otuz yedidir. Geçiş heterojen ve poligeniktir; tek bir depresyon geni yoktur. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Depresyonda X kromozomuna bağlı kesin bir geçiş kanıtlanmamıştır; geçiş poligeniktir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Kalıtılabilirlik yüzde beşin altında ve tek gen değildir; ikiz çalışmalarında daha yüksektir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": ""
+     },
+     "s": 13,
+     "id": "k2-34-unipolar-depresyon-q17"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Depresyonun nöroanatomik bulgularıyla ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Bulgular yalnızca serebellumda yoğunlaşır",
+      "B": "Prefrontal kortekste bilişsel denetim azalır",
+      "C": "Amigdala olumsuz uyaranlara aşırı yanıt verir",
+      "D": "Hipokampusta hacim azalması görülebilir",
+      "E": "Frontolimbik bölgelerde hücre değişiklikleri bildirilmiştir"
+     },
+     "dogru": "A",
+     "aciklama": "Depresyonda prefrontal korteks, orbitofrontal korteks, anterior singulat, amigdala ve hipokampustan oluşan frontolimbik bölgelerde değişiklikler bildirilmiştir (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Depresyonun nöroanatomik bulguları serebellumda değil, prefrontal korteks, amigdala ve hipokampus gibi frontolimbik bölgelerde yoğunlaşır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "B": "Prefrontal kortekste bilişsel denetim azalır; bu doğru bir bulgudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Amigdala olumsuz uyaranlara aşırı yanıt verir; bu doğru bir bulgudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Hipokampus, aksı baskılayan ve bellekte rol oynayan bir bölgedir. Uzun süreli yüksek kortizol hipokampusa zarar verip hacmini azaltır ve kısır döngü oluşturur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Frontolimbik bölgelerde nöronal ve glial hücre değişiklikleri bildirilmiştir; bu doğrudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": ""
+     },
+     "s": 13,
+     "id": "k2-34-unipolar-depresyon-q18"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Depresyonda nöroendokrin değerlendirme sırasında her hastada bakılması önerilen tiroid göstergesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca kortizol ölçümü yeterlidir",
+      "B": "Hiçbir tiroid göstergesine gerek yoktur",
+      "C": "Yalnızca serotonin ölçümü",
+      "D": "Tiroid uyarıcı hormon",
+      "E": "Yalnızca prolaktin ölçümü"
+     },
+     "dogru": "D",
+     "aciklama": "Depresyonda bazı hastalarda subklinik tiroid işlev bozukluğu bulunur; bu nedenle her hastada tiroid uyarıcı hormon bakılmalıdır (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Kortizol ölçümü tek başına tiroid işlevini göstermez; tiroid değerlendirmesi ayrıca gerekir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Depresyonda subklinik tiroid bozukluğu olabileceğinden tiroid göstergesine bakılması önerilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Serotonin ölçümü rutin tiroid değerlendirmesinin bir parçası değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyon ayırıcı tanısında her hastada tiroid işlevleri değerlendirilmeli, TSH bakılmalıdır. Hipotiroidi gibi durumlar depresyon tablosunu taklit edebilir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Prolaktin ölçümü tiroid işlevini doğrudan göstermez. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": ""
+     },
+     "s": 11,
+     "id": "k2-34-unipolar-depresyon-q19"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ketaminin depresyon tedavisindeki etkisiyle ilgili en ayırt edici özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca haftalar sonra etki gösterir",
+      "B": "Serotonin geri alımını bloke eder",
+      "C": "Saatler içinde hızlı antidepresan etki gösterir",
+      "D": "Hiçbir antidepresan etkisi yoktur",
+      "E": "Yalnızca kortizolü düşürerek etki eder"
+     },
+     "dogru": "C",
+     "aciklama": "En em de a reseptör antagonisti ketamin saatler içinde antidepresan etki gösterir ve glutamat sisteminin depresyondaki rolüne dikkat çekmiştir (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Klasik antidepresanlar haftalar sonra etki gösterirken ketaminin ayırt edici yönü bu değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Ketamin serotonin geri alımını bloke eden bir ilaç değildir; glutamat sisteminde etkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Glutamat sisteminde NMDA reseptör antagonisti ketamin saatler içinde antidepresan etki gösterir. Bu bulgu glutamatın depresyondaki rolüne dikkat çekmiştir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Ketamin saatler içinde antidepresan etki gösterir, etkisizlik söz konusu değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Ketaminin etkisi yalnızca kortizolü düşürmeyle açıklanmaz; glutamat sistemine etkisi öne çıkar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": ""
+     },
+     "s": 12,
+     "id": "k2-34-unipolar-depresyon-q20"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Depresyonun psikososyal modellerini ve risk etkenlerini açıklayabilme",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Freud'un yas ve melankoli yaklaşımıyla ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Yasta gerçek bir sevgi nesnesi yitirilmiştir",
+      "B": "Melankolide bilinçdışı imgesel bir yitim vardır",
+      "C": "Melankolide kayba yönelik öfke tümüyle dışa, çevreye yönelir",
+      "D": "Yasta benlik saygısı korunur",
+      "E": "Melankolide benlik saygısı azalır"
+     },
+     "dogru": "C",
+     "aciklama": "Psikoanalitik yaklaşımda melankolide kaybedilen nesneye yönelik öfke dışa değil benliğe döner ve kendini suçlamaya yol açar (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Yas, gerçek bir sevgi nesnesinin yitirilmesine bağlı, dalgalar hâlinde gelen ve zamanla azalan bir üzüntüdür. Yasta benlik saygısı korunur ve olumlu duygular arada yaşanabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Psikoanalitik kuramda melankolide gerçek bir kayıp olmasa da bilinçdışı imgesel bir yitim duygusu vardır. Kaybedilen nesneye yönelik öfke benliğe döner ve benlik saygısı azalır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Psikoanalitik kuramda melankolide gerçek bir kayıp olmasa da bilinçdışı imgesel bir yitim duygusu vardır. Kaybedilen nesneye yönelik öfke benliğe döner ve benlik saygısı azalır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Yasta benlik saygısı korunur ve kişi kendini değersiz görmez. Bu özellik yası majör depresyondan ayırmaya yarar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Psikoanalitik kuramda melankolide gerçek bir kayıp olmasa da bilinçdışı imgesel bir yitim duygusu vardır. Kaybedilen nesneye yönelik öfke benliğe döner ve benlik saygısı azalır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": ""
+     },
+     "s": 14,
+     "id": "k2-34-unipolar-depresyon-q21"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Beck'in bilişsel modeliyle ilgili bilişsel üçlünün ögelerinden biri aşağıdakilerden hangisi değildir?",
+     "secenekler": {
+      "A": "Kişinin kendisine olumsuz bakışı",
+      "B": "Dünyaya olumsuz bakışı",
+      "C": "Geleceğe olumsuz bakışı",
+      "D": "Otomatik olumsuz düşünceler",
+      "E": "Taşkın ve coşkulu duygudurum"
+     },
+     "dogru": "E",
+     "aciklama": "Beck'in bilişsel üçlüsünde kişi kendisini, dünyayı ve geleceği olumsuz görür; taşkın coşkulu duygudurum ise mani belirtisidir (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Beck'in bilişsel üçlüsünde kişi kendisini, dünyayı ve geleceği olumsuz görür. Çocukluktaki değersizlik şemaları stresle etkinleşip otomatik olumsuz düşünceler doğurur. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "B": "Beck'in bilişsel üçlüsünde kişi kendisini, dünyayı ve geleceği olumsuz görür. Çocukluktaki değersizlik şemaları stresle etkinleşip otomatik olumsuz düşünceler doğurur. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "C": "Beck'in bilişsel üçlüsünde kişi kendisini, dünyayı ve geleceği olumsuz görür. Çocukluktaki değersizlik şemaları stresle etkinleşip otomatik olumsuz düşünceler doğurur. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "D": "Otomatik olumsuz düşünceler Beck modelinde şemaların etkinleşmesiyle ortaya çıkar ve modelin bir parçasıdır. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "E": "Taşkın ve coşkulu duygudurum mani belirtisidir ve Beck'in depresif bilişsel modeliyle bağdaşmaz. Bu tanı sorulan gruba girmediğinden doğru cevap budur."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": ""
+     },
+     "s": 15,
+     "id": "k2-34-unipolar-depresyon-q22"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Seligman'ın öğrenilmiş çaresizlik kuramıyla ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Kaçınılmaz şok alan hayvanlar sonradan kaçmayı denemez",
+      "B": "Kurama göre depresyon doğuştan gelen bir refleks bozukluğudur",
+      "C": "Sorunların çözümsüz olduğuna inanmak depresyona yol açar",
+      "D": "Hayvanlardaki pasiflik depresyon belirtilerine benzer",
+      "E": "Olumsuz olayları içsel, kalıcı ve genel açıklama riski artırır"
+     },
+     "dogru": "B",
+     "aciklama": "Seligman'a göre depresyon bir yanlış öğrenmedir; sorunların çözümsüz olduğuna inanmak ve olumsuz olayları içsel, kalıcı, genel açıklamak riski artırır (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Öğrenilmiş çaresizlik, Seligman'ın kaçınılmaz şok verilen deney hayvanlarının kaçış mümkünken bile denememesiyle tanımladığı durumdur. Sorunların çözümsüz olduğuna inanmak depresyona yol açar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Öğrenilmiş çaresizlik kuramında depresyon doğuştan bir refleks bozukluğu değil, bir yanlış öğrenme olarak ele alınır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Öğrenilmiş çaresizlik, Seligman'ın kaçınılmaz şok verilen deney hayvanlarının kaçış mümkünken bile denememesiyle tanımladığı durumdur. Sorunların çözümsüz olduğuna inanmak depresyona yol açar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Deney hayvanlarındaki pasiflik, iştah ve uyku değişiklikleri depresyon belirtilerine benzer. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Yeniden formülasyonda olumsuz olayları içsel, kalıcı ve genel biçimde açıklayan kişide çaresizlik ve depresyon riski artar. Bu yükleme biçimi davranışçı kuramın önemli parçasıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": ""
+     },
+     "s": 16,
+     "id": "k2-34-unipolar-depresyon-q23"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "I. İçsel yükleme II. Kalıcı yükleme III. Genel yükleme. Öğrenilmiş çaresizliğin yeniden formülasyonunda çaresizlik ve depresyon riskini artıran yükleme biçimlerinden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız II",
+      "C": "I ve II",
+      "D": "I, II ve III",
+      "E": "Yalnız III"
+     },
+     "dogru": "D",
+     "aciklama": "Yeniden formülasyonda olumsuz olayları içsel, kalıcı ve genel biçimde açıklayan kişide çaresizlik ve depresyon riski artar (s. 16).",
+     "sik_aciklamalari": {
+      "A": "İçsel yükleme bu formülasyonun yalnızca bir ögesidir; kalıcı ve genel yükleme de riske katkıda bulunur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Kalıcı yükleme tek başına formülasyonun tamamını karşılamaz; içsel ve genel yükleme de yer alır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "İçsel ve kalıcı yükleme doğrudur ama genel yükleme de riski artıran üçüncü ögedir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Yeniden formülasyonda olumsuz olayları içsel, kalıcı ve genel biçimde açıklayan kişide çaresizlik ve depresyon riski artar. Bu yükleme biçimi davranışçı kuramın önemli parçasıdır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Genel yükleme tek başına formülasyonun tümünü karşılamaz; içsel ve kalıcı yükleme de gereklidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": ""
+     },
+     "s": 16,
+     "id": "k2-34-unipolar-depresyon-q24"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Depresif bireylerin çocukluk yaşantıları ve aile özellikleriyle ilgili aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Çocuklukta daha fazla kayıp yaşantısı",
+      "B": "Çocuklukta daha fazla travmatik yaşantı",
+      "C": "Hükmeden ebeveyn tutumu",
+      "D": "Aşırı koruyan ebeveyn tutumu",
+      "E": "İhmal ve travmanın ilişkisiz olması"
+     },
+     "dogru": "E",
+     "aciklama": "Depresif bireylerin çocukluğunda daha fazla kayıp ve travmatik yaşantı vardır; ebeveynleri hükmeden, aşırı koruyan ya da aşırı disiplinci olarak tanımlanır (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Çocukluk çağı travması, istismar, ihmal ve erken ebeveyn kaybı depresyon riskini artırır. Depresif bireylerin çocukluğunda daha fazla kayıp ve travmatik yaşantı bulunur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Çocukluk çağı travması, istismar, ihmal ve erken ebeveyn kaybı depresyon riskini artırır. Depresif bireylerin çocukluğunda daha fazla kayıp ve travmatik yaşantı bulunur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Depresif bireylerin ebeveynleri çoğu zaman hükmeden olarak tanımlanır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresif bireylerin ebeveynleri aşırı koruyan ya da aşırı disiplinci olarak tanımlanabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "İhmal ve travma depresyon riskini artıran önemli etkenlerdir; ilişkisizlik iddiası gerçekle çelişir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": ""
+     },
+     "s": 17,
+     "id": "k2-34-unipolar-depresyon-q25"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Depresyon risk etkenleriyle ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Kadın cinsiyet riski artırır",
+      "B": "Birinci derece akrabada duygudurum bozukluğu riski artırır",
+      "C": "Yüksek sosyoekonomik düzey riski belirgin biçimde artırır",
+      "D": "Peripartum dönem riskli bir üreme dönemidir",
+      "E": "Nevrotizm yatkınlığı artırır"
+     },
+     "dogru": "C",
+     "aciklama": "Risk etkenleri arasında düşük gelir ve işsizlik sayılır; yüksek gelir ve güçlü sosyal destek ise koruyucu etkenlerdir (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Depresyon kadınlarda erkeklere göre yaklaşık iki kat daha sıktır ve fark ergenlikte ortaya çıkar. Kadınlar daha fazla belirti bildirir ve daha çok tedavi arar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Aile öyküsünde birinci derece akrabada unipolar ya da bipolar duygudurum bozukluğu bulunması riski artırır. Kalıtsal yatkınlık çevresel stresle etkileşir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Yüksek gelir riski artırmaz; tersine düşük gelir ve işsizlik risk etkenidir, güçlü destek ise koruyucudur. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Peripartum dönem ve perimenopoz riskli üreme dönemleridir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Kişilik özelliklerinden nevrotizm ile histriyonik, borderline ve obsesif özellikler depresyona yatkınlığı artırır. Bu özellikler risk etkenleri arasında sayılır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": ""
+     },
+     "s": 18,
+     "id": "k2-34-unipolar-depresyon-q26"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Depresyonda cinsiyet farkıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kadınlar daha fazla belirti bildirir",
+      "B": "Cinsiyet farkı yaşlılıkta ilk kez ortaya çıkar",
+      "C": "Kadınlar daha çok tedavi arar",
+      "D": "Kadın erkek oranı yaklaşık iki ile üç arasındadır",
+      "E": "Hormonal etkenler rol oynar"
+     },
+     "dogru": "B",
+     "aciklama": "Kadınlar daha fazla belirti bildirir ve daha çok tedavi arar; kadın erkek oranı iki ile üçtür ve fark ergenlikte ortaya çıkar (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Depresyon kadınlarda erkeklere göre yaklaşık iki kat daha sıktır ve fark ergenlikte ortaya çıkar. Kadınlar daha fazla belirti bildirir ve daha çok tedavi arar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Depresyonda cinsiyet farkı yaşlılıkta değil ergenlikte ortaya çıkar. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Depresyon kadınlarda erkeklere göre yaklaşık iki kat daha sıktır ve fark ergenlikte ortaya çıkar. Kadınlar daha fazla belirti bildirir ve daha çok tedavi arar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyonda kadın erkek oranı yaklaşık iki ile üç arasındadır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Hormonal etkenler kadınlardaki yüksek riskte rol oynar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": ""
+     },
+     "s": 18,
+     "id": "k2-34-unipolar-depresyon-q27"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi depresyon için risk etkeni olarak değerlendirilmez?",
+     "secenekler": {
+      "A": "Irk ya da etnik köken bakımından belirgin fark",
+      "B": "Eşinden ayrılmış ya da boşanmış olmak",
+      "C": "Düşük gelir ve işsizlik",
+      "D": "Birinci derece akrabada duygudurum bozukluğu",
+      "E": "Çocukluk çağı istismarı"
+     },
+     "dogru": "A",
+     "aciklama": "Depresyonda ırk ya da etnik köken bakımından belirgin bir fark gösterilmemiştir; medeni durum, düşük gelir, aile öyküsü ve çocukluk travması ise risk etkenleridir (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Depresyon riski bakımından ırk ya da etnik köken için belirgin bir fark gösterilmemiştir. Bu tanı sorulan gruba girmediğinden doğru cevap budur.",
+      "B": "Medeni durumda eşinden ayrılmış, boşanmış ya da evlilik uyumu bozuk bireylerde depresyon daha sıktır. İlişkilerdeki kayıp ve çatışma risk etkenidir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "C": "Düşük gelir ve işsizlik depresyon için risk etkenleridir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "D": "Aile öyküsünde birinci derece akrabada unipolar ya da bipolar duygudurum bozukluğu bulunması riski artırır. Kalıtsal yatkınlık çevresel stresle etkileşir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "E": "Çocukluk çağı travması, istismar, ihmal ve erken ebeveyn kaybı depresyon riskini artırır. Depresif bireylerin çocukluğunda daha fazla kayıp ve travmatik yaşantı bulunur. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": ""
+     },
+     "s": 18,
+     "id": "k2-34-unipolar-depresyon-q28"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Depresyonu başlatabilen yaşam olaylarıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca olumlu olaylar tetikleyicidir",
+      "B": "Hiçbir yaşam olayı tetikleyici değildir",
+      "C": "Kayıplar, ayrılıklar ve iş değişiklikleri tabloyu başlatabilir",
+      "D": "Yalnızca genetik etkenler rol oynar",
+      "E": "Yaşam olayları yalnızca çocuklarda etkilidir"
+     },
+     "dogru": "C",
+     "aciklama": "Eşler arası anlaşmazlık, ayrılık, kayıplar, iş güçlükleri ve aile bireylerinin ölümü ya da ağır hastalığı depresyonu başlatabilir (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Depresyonu tetikleyen olaylar olumlu değil, çoğunlukla kayıp ve çatışma gibi olumsuz olaylardır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Yaşam olayları depresyonu başlatabilir; tetikleyici olmadığı iddiası gerçekle çelişir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Medeni durumda eşinden ayrılmış, boşanmış ya da evlilik uyumu bozuk bireylerde depresyon daha sıktır. İlişkilerdeki kayıp ve çatışma risk etkenidir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Depresyon yalnızca genetik etkenlerle açıklanmaz; yaşam olayları da rol oynar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Yaşam olayları her yaşta depresyonu etkiler, yalnızca çocuklara özgü değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": ""
+     },
+     "s": 17,
+     "id": "k2-34-unipolar-depresyon-q29"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kırk iki yaşında, eşinden yeni boşanmış, işsiz kalmış ve birinci derece akrabasında duygudurum bozukluğu olan bir kadın değerlendiriliyor. Bu kişide depresyon riskini artıran etkenlerle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Kadın cinsiyet riski artırır",
+      "B": "Boşanma ve evlilik uyumsuzluğu riski artırır",
+      "C": "İşsizlik ve düşük gelir riski artırır",
+      "D": "Aile öyküsünün bulunması riski azaltır",
+      "E": "Bu etkenler bir arada riski daha da yükseltir"
+     },
+     "dogru": "D",
+     "aciklama": "Kadın cinsiyet, boşanma, işsizlik ve birinci derece akrabada duygudurum bozukluğu depresyon riskini artırır; aile öyküsü riski azaltmaz (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Depresyon kadınlarda erkeklere göre yaklaşık iki kat daha sıktır ve fark ergenlikte ortaya çıkar. Kadınlar daha fazla belirti bildirir ve daha çok tedavi arar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Medeni durumda eşinden ayrılmış, boşanmış ya da evlilik uyumu bozuk bireylerde depresyon daha sıktır. İlişkilerdeki kayıp ve çatışma risk etkenidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "İşsizlik ve düşük gelir depresyon için risk etkenleridir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Aile öyküsünde birinci derece akrabada unipolar ya da bipolar duygudurum bozukluğu bulunması riski artırır. Kalıtsal yatkınlık çevresel stresle etkileşir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Birden çok risk etkeninin bir arada bulunması toplam riski daha da yükseltir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": ""
+     },
+     "s": 18,
+     "id": "k2-34-unipolar-depresyon-q30"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Majör depresif bozukluğun tanı ölçütlerini, klinik görünümünü ve ölçeklerini tanıyabilme",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "DSM-5-TR majör depresif bozukluk tanı ölçütleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Belirtiler aynı iki haftalık dönemde bulunmalıdır",
+      "B": "En az beş belirti gereklidir",
+      "C": "Belirtilerden biri mutlaka çökkünlük ya da anhedoni olmalıdır",
+      "D": "Belirgin sıkıntı ya da işlev bozulması gereklidir",
+      "E": "Tabloda mutlaka manik bir epizot bulunmalıdır"
+     },
+     "dogru": "E",
+     "aciklama": "Majör depresif bozukluk ölçütlerinde hiç manik ya da hipomanik epizot bulunmaması gerekir; manik epizot varlığı tanıyı dışlar (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Majör depresif bozuklukta belirtilerin aynı iki haftalık dönemde neredeyse her gün sürmesi gerekir. Bu süre ölçütü tabloyu geçici üzüntüden ayırt eden temel ölçüttür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Majör depresyon tanısı için iki haftalık dönemde dokuz ölçütten en az beşinin bulunması gerekir. Bu beş belirtiden en az biri çökkünlük ya da anhedoni olmalıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Anhedoni, daha önce zevk veren etkinliklere karşı ilgi ve zevk alma yetisinin kaybıdır. Depresif duygudurumla birlikte majör depresif bozukluğun iki çekirdek belirtisinden biridir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Tanı için klinik olarak belirgin sıkıntı ya da işlevsellikte bozulma gereklidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Manik ya da hipomanik epizot öyküsü, taşkınlık, konuşma baskısı ve düşünce uçuşmasıyla giden dönemleri gösterir. Bu öykü tanıyı bipolar bozukluğa taşır ve tedaviyi değiştirir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q64",
+      "past-q-22_final_230619_145249-82"
+     ],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": ""
+     },
+     "s": 20,
+     "id": "k2-34-unipolar-depresyon-q31"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi DSM-5-TR majör depresif bozukluk tanı ölçütlerinden biri değildir?",
+     "secenekler": {
+      "A": "İştah ya da kiloda değişiklik",
+      "B": "Uykusuzluk ya da aşırı uyku",
+      "C": "Enerji kaybı ve yorgunluk",
+      "D": "Değersizlik ya da aşırı suçluluk",
+      "E": "Kas gerginliği ve bedensel titreme"
+     },
+     "dogru": "E",
+     "aciklama": "Majör depresyonun dokuz ölçütü arasında iştah, uyku, enerji ve değersizlik yer alır; kas gerginliği anksiyöz sıkıntı belirleyicisine özgü olup ölçütlerden biri değildir (s. 20).",
+     "sik_aciklamalari": {
+      "A": "İştah ve kiloda azalma ya da artma majör depresyonun tanı ölçütlerinden biridir. Hem iştahsızlık hem de aşırı yeme depresyonda görülebilir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "B": "Uyku bozukluğu depresyonda uykusuzluk ya da aşırı uyku biçiminde görülür ve tanı ölçütleri arasındadır. Melankolik tabloda sabah erken uyanma, atipik tabloda aşırı uyku öne çıkar. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "C": "Enerji kaybı ve yorgunluk, az bir çabayla bile bitkin hissetme durumudur ve depresyonun tanı ölçütlerindendir. Nörovejetatif belirtiler arasında isteksizlikle birlikte görülür. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "D": "Değersizlik ya da aşırı suçluluk, kişinin kendini yetersiz ve kusurlu görmesidir ve depresyonun tanı ölçütlerindendir. Bilişsel belirtiler içinde kendini olumsuz değerlendirme olarak ortaya çıkar. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "E": "Kas gerginliği, bedensel bir gerginlik ve tutukluk duygusudur ve anksiyete tablolarının belirtisidir. Bu belirti anksiyöz sıkıntı belirleyicisine özgüdür, majör depresyonun dokuz tanı ölçütünden biri değildir. Bu tanı sorulan gruba girmediğinden doğru cevap budur."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [
+      "past-q-22_final_230619_145249-82"
+     ],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": ""
+     },
+     "s": 20,
+     "id": "k2-34-unipolar-depresyon-q32"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "DSM-5-TR majör depresif bozukluk tanısı için gereken süre ve en az belirti sayısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1 hafta ve 3 belirti",
+      "B": "2 hafta ve 3 belirti",
+      "C": "2 hafta ve 5 belirti",
+      "D": "6 ay ve 5 belirti",
+      "E": "1 ay ve 4 belirti"
+     },
+     "dogru": "C",
+     "aciklama": "Tanı için belirtilerin aynı iki haftalık dönemde ve en az beş tane bulunması, birinin çökkünlük ya da anhedoni olması gerekir (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Bir haftalık süre ve üç belirti majör depresyon ölçütleri için yetersiz değerlerdir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "İki haftalık süre doğru olsa da üç belirti gerekli beş belirtinin altındadır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Majör depresyon tanısı belirtilerin aynı iki haftalık dönemde bulunmasını ve en az beşinin olmasını gerektirir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Altı aylık süre majör depresyon için istenen süreden çok daha uzundur ve bu kadar bekleme ölçütlerde yer almaz. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Bir ay ve dört belirti tanı ölçütleriyle örtüşen değerler değildir; istenen iki hafta ve beş belirtidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q64"
+     ],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": ""
+     },
+     "s": 20,
+     "id": "k2-34-unipolar-depresyon-q33"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Çocuk ve ergende majör depresyon tanısıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çökkünlük yerine irritabl duygudurum görülebilir",
+      "B": "Kilo kaybı yerine beklenen kiloyu alamama olabilir",
+      "C": "Tanı için çekirdek belirtilerden biri yine gereklidir",
+      "D": "İki haftalık süre ölçütü çocuklarda tamamen kalkar",
+      "E": "Belirtiler işlevselliği bozmalıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Çocuk ve ergende çökkünlük yerine irritabl duygudurum, kilo kaybı yerine beklenen kiloyu alamama görülebilir; tanının temel çerçevesi korunur (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Majör depresif bozukluk, çökkünlük ya da anhedoninin iki hafta boyunca en az beş belirtiyle sürdüğü tablodur. Bu dersin odağı olan epizodik ve tedavi edilebilir bir duygudurum bozukluğudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Çocuk ve ergende kilo kaybı yerine beklenen kiloyu alamama görülebilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Anhedoni, daha önce zevk veren etkinliklere karşı ilgi ve zevk alma yetisinin kaybıdır. Depresif duygudurumla birlikte majör depresif bozukluğun iki çekirdek belirtisinden biridir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "İki haftalık süre ölçütü çocuklarda tümüyle kalkmaz; tanının temel çerçevesi korunur, yalnızca belirtilerin biçimi değişir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Belirtilerin klinik olarak belirgin sıkıntı ya da işlev bozulması yapması tanı için gereklidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": ""
+     },
+     "s": 20,
+     "id": "k2-34-unipolar-depresyon-q34"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Depresyonun dört alanda bozulmasıyla ilgili, acı verecek olaylara bile duygusal tepki verememe durumu aşağıdakilerden hangisiyle adlandırılır?",
+     "secenekler": {
+      "A": "Diürnal değişim",
+      "B": "Affektif anestezi",
+      "C": "Psikomotor ajitasyon",
+      "D": "Ruminasyon",
+      "E": "Anhedoni"
+     },
+     "dogru": "B",
+     "aciklama": "Affektif alanda ağır hastalarda acı verecek olaylara bile duygusal tepki verememe durumu görülür ve buna affektif anestezi denir (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Diürnal değişim, belirtilerin sabah saatlerinde daha ağır olup gün ilerledikçe hafiflemesidir. Melankolik depresyonun nörovejetatif özelliklerindendir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Affektif alanda üzüntü, umutsuzluk, suçluluk ve anhedoni görülür. Ağır hastalarda acı verici olaylara bile tepki verememe yani affektif anestezi ortaya çıkar. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Psikomotor değişiklik, hareket ve konuşmanın belirgin yavaşlaması ya da tersine huzursuz ajitasyon biçiminde olur. Majör depresyonun tanı ölçütlerinden biridir ve başkalarınca gözlenebilir olmalıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Kognitif alanda bellek, dikkat ve yürütücü işlevler bozulur; kişi kendini, dünyayı ve geleceği olumsuz görür. Ruminasyon ve intihar düşünceleri bu alanda yer alır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Anhedoni, daha önce zevk veren etkinliklere karşı ilgi ve zevk alma yetisinin kaybıdır. Depresif duygudurumla birlikte majör depresif bozukluğun iki çekirdek belirtisinden biridir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": ""
+     },
+     "s": 21,
+     "id": "k2-34-unipolar-depresyon-q35"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Depresyonda görülen belirtilerin alanlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Affektif alanda umutsuzluk ve suçluluk görülür",
+      "B": "Kognitif alanda dikkat ve yürütücü işlevler bozulur",
+      "C": "Nörovejetatif alanda uyku ve iştah değişir",
+      "D": "Sosyal alanda çekilme ve performans düşüşü olur",
+      "E": "Diürnal değişim akşam saatlerinde kötüleşme biçimindedir"
+     },
+     "dogru": "E",
+     "aciklama": "Diürnal değişim sabahları daha kötü hissetme biçimindedir; akşam kötüleşmesi olarak tanımlanması yanlıştır (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Affektif alanda üzüntü, umutsuzluk, suçluluk ve anhedoni görülür. Ağır hastalarda acı verici olaylara bile tepki verememe yani affektif anestezi ortaya çıkar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Kognitif alanda bellek, dikkat ve yürütücü işlevler bozulur; kişi kendini, dünyayı ve geleceği olumsuz görür. Ruminasyon ve intihar düşünceleri bu alanda yer alır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Nörovejetatif alanda enerji kaybı, iştah ve uyku değişikliği, libido azalması ve psikomotor değişiklik görülür. Sabahları daha kötü hissetme yani diürnal değişim de bu alandadır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Sosyal alanda sosyal çekilme, iş ve okul performansında düşme görülür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Diürnal değişim, belirtilerin sabah saatlerinde daha ağır olup gün ilerledikçe hafiflemesidir. Melankolik depresyonun nörovejetatif özelliklerindendir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": ""
+     },
+     "s": 21,
+     "id": "k2-34-unipolar-depresyon-q36"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Depresyonda kullanılan ölçme araçlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "PHQ-9 toplam puanı sıfır ile yirmi yedi arasındadır",
+      "B": "PHQ-2 pozitifse PHQ-9 uygulanır",
+      "C": "Ölçekler tek başına tanı koydurur",
+      "D": "Hamilton ölçeği klinisyen tarafından uygulanır",
+      "E": "Beck envanteri öz bildirim ölçeğidir"
+     },
+     "dogru": "C",
+     "aciklama": "Ölçekler tarama ve izlem içindir; şiddet belirti sayısı, yoğunluğu ve işlev kaybına göre belirlenir, tanı klinik görüşmeyle konur (s. 22).",
+     "sik_aciklamalari": {
+      "A": "PHQ-9, birinci basamakta kullanılan, toplam puanı sıfır ile yirmi yedi arasında değişen bir öz bildirim tarama ölçeğidir. Tanı koymaz; şiddeti ve izlemi destekler. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "PHQ-2, son iki haftadaki ilgi-zevk azlığı ve çökkünlüğü soran iki maddelik ön tarama ölçeğidir. Pozitifse PHQ-9 uygulanır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Ölçekler yalnızca tarama ve izlem içindir ve şiddeti belirlemeye yarar; tanı klinik görüşmeyle konur. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Hamilton Depresyon Ölçeği, klinisyen tarafından uygulanan ve şiddet ile tedavi yanıtını izlemede kullanılan bir ölçektir. Tanı değil izlem aracıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Beck Depresyon Envanteri, yirmi bir maddelik bir öz bildirim ölçeğidir ve Türkçe geçerliği yapılmıştır. Belirti şiddetini ölçer, tanı klinik görüşmeyle konur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": ""
+     },
+     "s": 22,
+     "id": "k2-34-unipolar-depresyon-q37"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Birinci basamakta depresyon taraması için önce uygulanan iki maddelik ölçek ve pozitif çıktığında uygulanan ölçek aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Önce PHQ-2, pozitifse PHQ-9",
+      "B": "Önce Hamilton, pozitifse PHQ-2",
+      "C": "Önce Beck envanteri, pozitifse Hamilton",
+      "D": "Önce PHQ-9, pozitifse PHQ-2",
+      "E": "Önce tanı görüşmesi, sonra PHQ-2"
+     },
+     "dogru": "A",
+     "aciklama": "Birinci basamakta önce iki maddelik PHQ-2 uygulanır; son iki haftadaki ilgi-zevk azlığı ve çökkünlüğü sorar, pozitifse PHQ-9 uygulanır (s. 22).",
+     "sik_aciklamalari": {
+      "A": "PHQ-2, son iki haftadaki ilgi-zevk azlığı ve çökkünlüğü soran iki maddelik ön tarama ölçeğidir. Pozitifse PHQ-9 uygulanır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "B": "Hamilton ölçeği klinisyen uygular ve iki maddelik bir ön tarama değildir; sıralama bu değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Beck envanteri yirmi bir maddelik bir ölçektir ve iki maddelik ön tarama olarak kullanılmaz. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Tarama sıralaması önce iki maddelik ön tarama, sonra dokuz maddelik ölçek biçimindedir; bu seçenekte sıra terstir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Birinci basamak taraması tanı görüşmesiyle değil kısa ön tarama ölçeğiyle başlar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": ""
+     },
+     "s": 22,
+     "id": "k2-34-unipolar-depresyon-q38"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Majör depresyon tanısında en az beş belirtiden en az birinin mutlaka olması gereken çekirdek belirtiler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Çökkün duygudurum ya da anhedoni",
+      "B": "Değersizlik ya da suçluluk",
+      "C": "Uykusuzluk ya da aşırı uyku",
+      "D": "Enerji kaybı ya da yorgunluk",
+      "E": "Odaklanma güçlüğü ya da kararsızlık"
+     },
+     "dogru": "A",
+     "aciklama": "Tanı için gereken en az beş belirtiden biri mutlaka çökkün duygudurum ya da ilgi ve zevk kaybı yani anhedoni olmalıdır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Anhedoni, daha önce zevk veren etkinliklere karşı ilgi ve zevk alma yetisinin kaybıdır. Depresif duygudurumla birlikte majör depresif bozukluğun iki çekirdek belirtisinden biridir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "B": "Değersizlik ya da aşırı suçluluk, kişinin kendini yetersiz ve kusurlu görmesidir ve depresyonun tanı ölçütlerindendir. Bilişsel belirtiler içinde kendini olumsuz değerlendirme olarak ortaya çıkar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Uyku bozukluğu depresyonda uykusuzluk ya da aşırı uyku biçiminde görülür ve tanı ölçütleri arasındadır. Melankolik tabloda sabah erken uyanma, atipik tabloda aşırı uyku öne çıkar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Enerji kaybı ve yorgunluk, az bir çabayla bile bitkin hissetme durumudur ve depresyonun tanı ölçütlerindendir. Nörovejetatif belirtiler arasında isteksizlikle birlikte görülür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Düşünme, odaklanma ve karar vermede güçlük depresyonun bilişsel tanı ölçütlerinden biridir. Dikkat ve yürütücü işlevlerdeki bozulmayla birlikte görülür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": ""
+     },
+     "s": 20,
+     "id": "k2-34-unipolar-depresyon-q39"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Depresyonda şiddet belirlenmesiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Şiddet yalnızca hastanın yaşına göre belirlenir",
+      "B": "Şiddet yalnızca cinsiyete göre belirlenir",
+      "C": "Şiddet yalnızca aile öyküsüne göre belirlenir",
+      "D": "Şiddet belirti sayısı, yoğunluğu ve işlev kaybına göre belirlenir",
+      "E": "Şiddet yalnızca ölçek olmadan belirlenemez"
+     },
+     "dogru": "D",
+     "aciklama": "Depresyonda şiddet belirti sayısı, yoğunluğu ve işlev kaybına göre hafif, orta ya da ağır olarak belirlenir; ölçekler tarama ve izlem içindir (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Şiddet hastanın yaşıyla değil belirtilerin ağırlığıyla belirlenir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Şiddet cinsiyete göre değil belirti ve işlev kaybına göre belirlenir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Aile öyküsü risk etkeni olsa da şiddet belirlemesinin ölçütü değildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyonda şiddet belirti sayısı, belirtilerin yoğunluğu ve işlev kaybına göre hafif, orta ya da ağır olarak belirlenir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Şiddet ölçekler olmadan da klinik olarak belirti ve işlev kaybına göre belirlenebilir; ölçekler yardımcıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": ""
+     },
+     "s": 22,
+     "id": "k2-34-unipolar-depresyon-q40"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Depresyonun belirleyicilerini, özel dönemlerini ve eşlik eden durumlarını ayırt edebilme",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Melankolik özellikler belirleyicisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Anhedoni ya da uyaranlara tepkisizlik zorunludur",
+      "B": "Sabah erken uyanma görülebilir",
+      "C": "Belirgin iştahsızlık ve kilo kaybı olabilir",
+      "D": "Zorunlu bulgu olumlu olaylarla duygudurumun düzelmesidir",
+      "E": "Sabahları kötüleşme görülür"
+     },
+     "dogru": "D",
+     "aciklama": "Melankolik tabloda zorunlu bulgu anhedonidir; olumlu olaylarla duygudurumun düzelmesi yani duygudurum tepkiselliği ise atipik belirleyicinin zorunlu özelliğidir (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Melankolik özelliklerde zorunlu bulgu anhedoni ya da hoşa giden uyaranlara tepkisizliktir. Buna sabah erken uyanma, sabahları kötüleşme, iştahsızlık ve kilo kaybı eklenir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Sabah erken uyanma melankolik tablonun uyku bulgusudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Belirgin iştahsızlık ve kilo kaybı melankolik özelliklerdendir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Atipik özelliklerde zorunlu bulgu duygudurum tepkiselliğidir yani olumlu olaylarla düzelmedir. Buna iştah ve kilo artışı, aşırı uyku ve reddedilmeye aşırı duyarlılık eklenir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Sabahları kötüleşme yani diürnal değişim melankolik tablonun özelliğidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h9"
+     ],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": ""
+     },
+     "s": 23,
+     "id": "k2-34-unipolar-depresyon-q41"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Atipik özellikler belirleyicisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Zorunlu bulgu duygudurum tepkiselliğidir",
+      "B": "Sabah erken uyanma ve kilo kaybı tipiktir",
+      "C": "İştah ve kilo artışı görülür",
+      "D": "Aşırı uyku görülür",
+      "E": "Reddedilmeye aşırı duyarlılık olur"
+     },
+     "dogru": "B",
+     "aciklama": "Atipik tabloda iştah ve uyku artar; sabah erken uyanma ve kilo kaybı ise melankolik özelliklerdir (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Atipik özelliklerde zorunlu bulgu duygudurum tepkiselliğidir yani olumlu olaylarla düzelmedir. Buna iştah ve kilo artışı, aşırı uyku ve reddedilmeye aşırı duyarlılık eklenir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Melankolik özelliklerde zorunlu bulgu anhedoni ya da hoşa giden uyaranlara tepkisizliktir. Buna sabah erken uyanma, sabahları kötüleşme, iştahsızlık ve kilo kaybı eklenir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Atipik tabloda iştah ve kilo artışı görülür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Atipik tabloda aşırı uyku görülür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Atipik tabloda reddedilmeye uzun süreli aşırı duyarlılık görülür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": ""
+     },
+     "s": 23,
+     "id": "k2-34-unipolar-depresyon-q42"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Depresif epizot sırasında en az üç manik ya da hipomanik belirtinin eşlik ettiği ve bipolar bozukluğa geçiş açısından uyarıcı olan belirleyici aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anksiyöz sıkıntı ile",
+      "B": "Karma özellikler ile",
+      "C": "Melankolik özellikler ile",
+      "D": "Atipik özellikler ile",
+      "E": "Mevsimsel örüntü ile"
+     },
+     "dogru": "B",
+     "aciklama": "Karma özellikler belirleyicisinde depresif epizotta en az üç manik ya da hipomanik belirti eşlik eder ve bipolar bozukluğa geçiş açısından uyarıcıdır (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Anksiyöz sıkıntı belirleyicisinde gerginlik, huzursuzluk ve kötü bir şey olacağı korkusu bulunur. İntihar riskini ve tedavi direncini artırır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Karma özellikler belirleyicisinde depresif epizotta en az üç manik ya da hipomanik belirti eşlik eder. Bipolar bozukluğa geçiş açısından uyarıcıdır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Melankolik özelliklerde zorunlu bulgu anhedoni ya da hoşa giden uyaranlara tepkisizliktir. Buna sabah erken uyanma, sabahları kötüleşme, iştahsızlık ve kilo kaybı eklenir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Atipik özelliklerde zorunlu bulgu duygudurum tepkiselliğidir yani olumlu olaylarla düzelmedir. Buna iştah ve kilo artışı, aşırı uyku ve reddedilmeye aşırı duyarlılık eklenir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Mevsimsel örüntüde epizotlar yılın belirli bir mevsiminde başlayıp düzelir ve yineler. En sık kış depresyonu görülür; enerji azlığı, aşırı uyku, iştah artışı ve kilo alma eşlik eder. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": ""
+     },
+     "s": 23,
+     "id": "k2-34-unipolar-depresyon-q43"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Belirleyicilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Psikotik tabloya sanrı ve varsanılar eşlik eder",
+      "B": "Katatonide stupor ve mutizm görülebilir",
+      "C": "Peripartum başlangıç doğumdan sonraki dört hafta içinde başlar",
+      "D": "Mevsimsel örüntüde en sık yaz depresyonu görülür",
+      "E": "Psikotik tabloda intihar riski yüksektir"
+     },
+     "dogru": "D",
+     "aciklama": "Mevsimsel örüntüde en sık kış depresyonu görülür; enerji azlığı, aşırı uyku, iştah artışı ve kilo alma eşlik eder, yaz değil (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Psikotik özelliklerde depresyona sanrı ve varsanılar eşlik eder; bunlar duygudurumla uyumlu ya da uyumsuz olabilir. Prognoz daha kötüdür ve intihar riski yüksektir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Katatoni belirleyicisinde hareketsizlik, balmumu esnekliği, negativizm, mutizm ve ekolali gibi motor bulgular görülür. Verilen pozisyonu koruma yani katalepsi tipik örnektir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Peripartum başlangıçlı depresyon, epizodun gebelikte ya da doğumdan sonraki dört hafta içinde başlamasıdır. Postpartum depresyonların önemli bir kısmı aslında gebelikte başlar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Mevsimsel örüntüde epizotlar yılın belirli bir mevsiminde başlayıp düzelir ve yineler. En sık kış depresyonu görülür; enerji azlığı, aşırı uyku, iştah artışı ve kilo alma eşlik eder. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Psikotik özelliklerde depresyona sanrı ve varsanılar eşlik eder; bunlar duygudurumla uyumlu ya da uyumsuz olabilir. Prognoz daha kötüdür ve intihar riski yüksektir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [
+      "d3k2-2025-2026-h9"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": ""
+     },
+     "s": 24,
+     "id": "k2-34-unipolar-depresyon-q44"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Katatoni belirleyicisiyle ilgili aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Stupor",
+      "B": "Verilen pozisyonu koruma yani katalepsi",
+      "C": "Olumlu olaylarla hızlı duygudurum düzelmesi",
+      "D": "Mutizm",
+      "E": "Ekolali"
+     },
+     "dogru": "C",
+     "aciklama": "Katatonide hareketsizlik, stupor, katalepsi, mutizm ve ekolali görülür; olumlu olaylarla düzelme ise atipik tablonun özelliğidir (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Katatoni belirleyicisinde hareketsizlik, balmumu esnekliği, negativizm, mutizm ve ekolali gibi motor bulgular görülür. Verilen pozisyonu koruma yani katalepsi tipik örnektir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "B": "Katatoni belirleyicisinde hareketsizlik, balmumu esnekliği, negativizm, mutizm ve ekolali gibi motor bulgular görülür. Verilen pozisyonu koruma yani katalepsi tipik örnektir. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "C": "Atipik özelliklerde zorunlu bulgu duygudurum tepkiselliğidir yani olumlu olaylarla düzelmedir. Buna iştah ve kilo artışı, aşırı uyku ve reddedilmeye aşırı duyarlılık eklenir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Mutizm yani konuşmama katatoninin motor bulgularındandır. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir.",
+      "E": "Ekolali yani söyleneni yineleme katatoninin bulgularındandır. Bu tanı sorulan grubun gerçek bir üyesi olduğundan, gruba girmeyeni arayan soruda doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": ""
+     },
+     "s": 24,
+     "id": "k2-34-unipolar-depresyon-q45"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Depresyona bağlı bilişsel bozulma yani psödodemans ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Başlangıç görece akuttur",
+      "B": "Hasta bellek yakınmasını kendisi abartır",
+      "C": "Depresyon tedavisiyle düzelir",
+      "D": "Testlerde yakın yanıtlar verip çaba gösterir",
+      "E": "Bilişsel bozulmadan önce çökkünlük vardır"
+     },
+     "dogru": "D",
+     "aciklama": "Psödodemansta hasta testlerde çaba göstermez ve bilmiyorum der; yakın yanıtlar verip çaba göstermek ve konfabülasyon demansın özelliğidir (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Depresyona bağlı bilişsel bozukluk yani psödodemans, görece akut başlar ve hasta bellek yakınmasını kendisi abartarak dile getirir. Testlerde çaba göstermeyip bilmiyorum der ve depresyon tedavisiyle düzelir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Depresyona bağlı bilişsel bozukluk yani psödodemans, görece akut başlar ve hasta bellek yakınmasını kendisi abartarak dile getirir. Testlerde çaba göstermeyip bilmiyorum der ve depresyon tedavisiyle düzelir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Depresyona bağlı bilişsel bozukluk yani psödodemans, görece akut başlar ve hasta bellek yakınmasını kendisi abartarak dile getirir. Testlerde çaba göstermeyip bilmiyorum der ve depresyon tedavisiyle düzelir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Demans, sinsi ve yavaş ilerleyen bir bilişsel bozukluktur; hasta yakınmayı fark etmez ya da gizler. Testlerde yakın yanıtlar verir ve konfabülasyon görülür, tablo ilerleyicidir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Psödodemansta bilişsel bozulmadan önce çökkün duygudurum bulunur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": [
+      "past-1790877042004-879090"
+     ],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": ""
+     },
+     "s": 26,
+     "id": "k2-34-unipolar-depresyon-q46"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Yaşlılarda depresyonun klinik görünümüyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Suçluluk duyguları her zaman çok belirgindir",
+      "B": "Bedensel yakınmaların ön planda olması",
+      "C": "Hiçbir zaman bilişsel bozulma yapmaz",
+      "D": "Yalnızca taşkınlıkla seyreder",
+      "E": "Hiç psikomotor yavaşlama görülmez"
+     },
+     "dogru": "B",
+     "aciklama": "Yaşlılarda iştahsızlık ve kilo kaybı sık, suçluluk daha az belirgindir; bedensel yakınmalar, ajitasyon ve hipokondriyak uğraşlar ön plandadır (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Yaşlılarda suçluluk genellikle daha az belirgindir; her zaman çok belirgin olduğu ifadesi gerçekle çelişir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Yaşlılarda depresyonda iştahsızlık, kilo kaybı ve bedensel yakınmalar öne çıkar; suçluluk daha az belirgindir. Ajitasyon, hipokondriyak uğraşlar ve psödodemansa varan bilişsel bozulma görülür. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Yaşlılarda depresyon stupora varan psikomotor yavaşlama ve psödodemansa kadar giden bilişsel bozulma yapabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Yaşlılarda depresyon taşkınlıkla değil çökkünlük ve bedensel yakınmalarla seyreder. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Yaşlılarda stupora varan psikomotor yavaşlama görülebilir; hiç görülmediği iddiası yanlıştır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": ""
+     },
+     "s": 25,
+     "id": "k2-34-unipolar-depresyon-q47"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Doğum sonrası dönemle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Annelik hüznü ilk üç ile yedi günde başlar",
+      "B": "Annelik hüznü iki hafta içinde geçer ve hastalık sayılmaz",
+      "C": "Postpartum psikoz ani başlar ve psikiyatrik acildir",
+      "D": "Postpartum psikoz en sık görülen doğum sonrası tablodur",
+      "E": "Postpartum depresyon anne-bebek bağlanmasını etkiler"
+     },
+     "dogru": "D",
+     "aciklama": "Annelik hüznü doğum sonrası en sık görülen tablodur; postpartum psikoz ise binde bir ile iki sıklıkta, nadir ama acil bir durumdur (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Annelik hüznü, doğumdan sonraki ilk üç ile yedi günde başlayıp iki hafta içinde geçen geçici bir durumdur. Hastalık sayılmaz; destek ve güvence genellikle yeterlidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Annelik hüznü, doğumdan sonraki ilk üç ile yedi günde başlayıp iki hafta içinde geçen geçici bir durumdur. Hastalık sayılmaz; destek ve güvence genellikle yeterlidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Postpartum psikoz, genellikle doğumdan sonraki ilk iki ile dört haftada ani başlayan, konfüzyon, sanrı ve varsanıyla giden bir tablodur. Bipolar bozuklukla güçlü ilişkilidir ve psikiyatrik acildir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Postpartum psikoz binde bir ile iki gibi nadir bir tablodur; en sık görülen doğum sonrası durum annelik hüznüdür. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Postpartum depresyon, doğumu izleyen ilk yıl içinde, çoğunlukla ilk altı ayda başlayan majör depresyondur. Anne-bebek bağlanmasını ve bebeğin gelişimini etkiler. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": ""
+     },
+     "s": 27,
+     "id": "k2-34-unipolar-depresyon-q48"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Yirmi altı yaşında, doğumdan on gün sonra ani başlayan konfüzyon, sanrı ve varsanılarla getirilen bir kadında en olası tanı ve yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Annelik hüznü, destek yeterlidir",
+      "B": "Premenstrüel disforik bozukluk",
+      "C": "Normal lohusalık tepkisi, izlem gerekmez",
+      "D": "Distimi, uzun süreli tedavi",
+      "E": "Postpartum psikoz, psikiyatrik acil"
+     },
+     "dogru": "E",
+     "aciklama": "Doğumdan sonra ilk haftalarda ani başlayan konfüzyon, sanrı ve varsanı postpartum psikozu düşündürür; anne ve bebek güvenliği için psikiyatrik acildir (s. 24, 27).",
+     "sik_aciklamalari": {
+      "A": "Annelik hüznü, doğumdan sonraki ilk üç ile yedi günde başlayıp iki hafta içinde geçen geçici bir durumdur. Hastalık sayılmaz; destek ve güvence genellikle yeterlidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Premenstrüel disforik bozukluk, luteal fazda başlayıp menstrüasyonla geçen duygudurum belirtileriyle tanımlanır. Depresif bozukluklar başlığı altında sınıflanır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Ani başlayan konfüzyon, sanrı ve varsanı normal bir lohusalık tepkisi değildir ve izlemsiz bırakılamaz. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Süregen depresif bozukluk yani distimi, en az iki yıl süren daha hafif ama kronik bir çökkünlüktür. Çocuk ve ergende irritabl duygudurumla ve en az bir yıl süreyle tanınır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Postpartum psikoz, genellikle doğumdan sonraki ilk iki ile dört haftada ani başlayan, konfüzyon, sanrı ve varsanıyla giden bir tablodur. Bipolar bozuklukla güçlü ilişkilidir ve psikiyatrik acildir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": ""
+     },
+     "s": 24,
+     "id": "k2-34-unipolar-depresyon-q49"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Depresyonun eşlik ettiği tıbbi hastalıklarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Pankreas karsinomu depresyonla ilişkilidir",
+      "B": "Hipotiroidi depresyon yapabilir",
+      "C": "Tıbbi hastalık ile depresyon arasında hiçbir ilişki yoktur",
+      "D": "İnme ve Parkinson depresyonla ilişkilidir",
+      "E": "Depresyon tıbbi hastalığın seyrini kötüleştirebilir"
+     },
+     "dogru": "C",
+     "aciklama": "Depresyon malignansiler, endokrin, nörolojik ve enfeksiyöz hastalıklara eşlik eder; ilişki çift yönlüdür ve mortaliteyi artırabilir (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Depresyon pankreas karsinomu, hipotiroidi, Cushing, inme ve Parkinson gibi tıbbi hastalıklara eşlik eder. İlişki çift yönlüdür; tıbbi hastalık depresyon riskini, depresyon da mortaliteyi artırır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Başka bir sağlık durumuna bağlı depresif bozukluk, hipotiroidi, inme ya da Parkinson gibi tıbbi hastalıkların doğrudan etkisiyle gelişir. Tedavi altta yatan hastalığa yöneliktir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Tıbbi hastalık ile depresyon arasında güçlü ve çift yönlü bir ilişki vardır; ilişkisizlik iddiası gerçekle çelişir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Depresyon pankreas karsinomu, hipotiroidi, Cushing, inme ve Parkinson gibi tıbbi hastalıklara eşlik eder. İlişki çift yönlüdür; tıbbi hastalık depresyon riskini, depresyon da mortaliteyi artırır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Depresyon tedavi uyumunu bozarak tıbbi hastalığın seyrini ve ölüm oranını kötüleştirebilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": ""
+     },
+     "s": 28,
+     "id": "k2-34-unipolar-depresyon-q50"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Depresyona yol açabilen ilaçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Rezerpin depresyona yol açabilir",
+      "B": "Kortikosteroidler depresyona yol açabilir",
+      "C": "İnterferon tedavisi depresyona yol açabilir",
+      "D": "İzotretinoin depresyonla ilişkilendirilmiştir",
+      "E": "İlaç başlandıktan sonra çıkan depresyonda ilaç etkisi hiç düşünülmez"
+     },
+     "dogru": "E",
+     "aciklama": "Beta blokerler, rezerpin, kortikosteroidler, interferon ve izotretinoin depresyona yol açabilir; ilaç başlandıktan sonra çıkan depresyonda ilaç etkisi düşünülmelidir (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Beta blokerler, rezerpin, metildopa, kortikosteroidler, interferon ve izotretinoin gibi ilaçlar depresyona yol açabilir. İlaç başlandıktan sonra ortaya çıkan depresyonda ilaç etkisi düşünülmelidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Beta blokerler, rezerpin, metildopa, kortikosteroidler, interferon ve izotretinoin gibi ilaçlar depresyona yol açabilir. İlaç başlandıktan sonra ortaya çıkan depresyonda ilaç etkisi düşünülmelidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "İnflamasyon kuramında bir alt grupta IL-6, TNF-alfa ve CRP yüksek bulunur. İnterferon tedavisi depresyona yol açabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Beta blokerler, rezerpin, metildopa, kortikosteroidler, interferon ve izotretinoin gibi ilaçlar depresyona yol açabilir. İlaç başlandıktan sonra ortaya çıkan depresyonda ilaç etkisi düşünülmelidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "İlaç başlandıktan sonra ortaya çıkan depresyonda ilaç etkisi mutlaka düşünülmelidir; hiç düşünülmediği ifadesi yanlıştır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": ""
+     },
+     "s": 30,
+     "id": "k2-34-unipolar-depresyon-q51"
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Depresyonun ayırıcı tanısını, seyrini, prognozunu ve distimiyi değerlendirebilme",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Depresyon ayırıcı tanısıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bipolar bozukluk için mani öyküsü sorgulanır",
+      "B": "Uyum bozukluğu stresörden sonra üç ayda başlar",
+      "C": "Yasta benlik saygısı korunur",
+      "D": "Temel tetkiklerde tiroid işlevine hiç bakılmaz",
+      "E": "Demansta bilişsel bozulma ön plandadır"
+     },
+     "dogru": "D",
+     "aciklama": "Ayırıcı tanıda temel tetkikler arasında tam kan sayımı, tiroid işlevleri, kan şekeri ve vitamin düzeyleri yer alır; tiroid uyarıcı hormon unutulmaz (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Bipolar bozukluk ayırıcı tanısında mani ya da hipomani öyküsü aranır. Öykünün varlığı tedaviyi değiştirdiğinden her hastada sorgulanmalıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Depresif duygudurumla giden uyum bozukluğu, bir stresörden sonraki üç ay içinde başlar ve majör depresyon ölçütlerini karşılamaz. Stresörle bağlantısı belirgindir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Yasta benlik saygısı korunur ve kişi kendini değersiz görmez. Bu özellik yası majör depresyondan ayırmaya yarar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyon ayırıcı tanısında temel tetkikler arasında tiroid işlevi yer alır ve her hastada bakılması önerilir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Demans, sinsi ve yavaş ilerleyen bir bilişsel bozukluktur; hasta yakınmayı fark etmez ya da gizler. Testlerde yakın yanıtlar verir ve konfabülasyon görülür, tablo ilerleyicidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": ""
+     },
+     "s": 31,
+     "id": "k2-34-unipolar-depresyon-q52"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yas ile majör depresyon ayrımıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Majör depresyonda yastan farklı olarak kişi benlik saygısını korur",
+      "B": "Yasta olumlu duygular ve mizah korunabilir",
+      "C": "Majör depresyonda anhedoni yaygındır",
+      "D": "Yasta üzüntü anımsatıcılarla dalgalanır",
+      "E": "Majör depresyonda değersizlik ve kendinden nefret görülür"
+     },
+     "dogru": "A",
+     "aciklama": "Yasta benlik saygısı korunur ve olumlu duygular yaşanabilir; majör depresyonda ise değersizlik ve kendinden nefret vardır (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Majör depresyonda değersizlik ve kendinden nefret vardır, yani benlik saygısı yitirilir; korunan benlik saygısı yasın özelliğidir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "B": "Yas, gerçek bir sevgi nesnesinin yitirilmesine bağlı, dalgalar hâlinde gelen ve zamanla azalan bir üzüntüdür. Yasta benlik saygısı korunur ve olumlu duygular arada yaşanabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Anhedoni, daha önce zevk veren etkinliklere karşı ilgi ve zevk alma yetisinin kaybıdır. Depresif duygudurumla birlikte majör depresif bozukluğun iki çekirdek belirtisinden biridir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Yas, gerçek bir sevgi nesnesinin yitirilmesine bağlı, dalgalar hâlinde gelen ve zamanla azalan bir üzüntüdür. Yasta benlik saygısı korunur ve olumlu duygular arada yaşanabilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Değersizlik ya da aşırı suçluluk, kişinin kendini yetersiz ve kusurlu görmesidir ve depresyonun tanı ölçütlerindendir. Bilişsel belirtiler içinde kendini olumsuz değerlendirme olarak ortaya çıkar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [
+      "d3-b-073"
+     ],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": ""
+     },
+     "s": 32,
+     "id": "k2-34-unipolar-depresyon-q53"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "DSM-5-TR ile tanımlanan, erişkinde kayıptan en az on iki ay sonra süren yoğun özlem ve uğraşla giden tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Annelik hüznü",
+      "B": "Distimi",
+      "C": "Uzamış yas bozukluğu",
+      "D": "Premenstrüel disforik bozukluk",
+      "E": "Uyum bozukluğu"
+     },
+     "dogru": "C",
+     "aciklama": "DSM-5-TR ile tanımlanan uzamış yas bozukluğu, erişkinde kayıptan en az on iki ay sonra süren yoğun özlem ve uğraşla tanınır (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Annelik hüznü, doğumdan sonraki ilk üç ile yedi günde başlayıp iki hafta içinde geçen geçici bir durumdur. Hastalık sayılmaz; destek ve güvence genellikle yeterlidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Süregen depresif bozukluk yani distimi, en az iki yıl süren daha hafif ama kronik bir çökkünlüktür. Çocuk ve ergende irritabl duygudurumla ve en az bir yıl süreyle tanınır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Uzamış yas bozukluğu, erişkinde kayıptan en az on iki ay sonra süren yoğun özlem ve uğraşla tanımlanan yeni bir tanıdır. DSM-5-TR ile tanımlanmıştır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Premenstrüel disforik bozukluk, luteal fazda başlayıp menstrüasyonla geçen duygudurum belirtileriyle tanımlanır. Depresif bozukluklar başlığı altında sınıflanır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Depresif duygudurumla giden uyum bozukluğu, bir stresörden sonraki üç ay içinde başlar ve majör depresyon ölçütlerini karşılamaz. Stresörle bağlantısı belirgindir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": ""
+     },
+     "s": 32,
+     "id": "k2-34-unipolar-depresyon-q54"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Depresyonun seyrinde kullanılan 5R kavramlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yanıt belirtilerde en az yüzde elli azalmadır",
+      "B": "Remisyon belirtilerin neredeyse tamamen kaybolmasıdır",
+      "C": "Relaps remisyondan sonra aynı epizodun geri dönmesidir",
+      "D": "İyileşme yalnızca birkaç günlük remisyondur",
+      "E": "Rekürrens iyileşmeden sonra yeni bir epizottur"
+     },
+     "dogru": "D",
+     "aciklama": "İyileşme en az dört ile altı ay süren remisyondur; birkaç günlük remisyon olarak tanımlanması yanlıştır (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Yanıt, tedaviyle belirtilerde en az yüzde elli azalmadır. Seyirde iyileşmenin ilk basamağını gösterir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Remisyon, belirtilerin neredeyse tamamen kaybolmasıdır. Tedavinin asıl hedefi tam remisyona ulaşmaktır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Relaps, remisyondan sonra tam iyileşme sağlanmadan aynı epizodun geri dönmesidir. İyileşmeden önceki dönemde ortaya çıkar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "İyileşme, en az dört ile altı ay süren remisyon durumudur. Bu eşik aşıldığında epizodun geçtiği kabul edilir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Rekürrens, iyileşmeden sonra yeni bir epizodun ortaya çıkmasıdır. Risk bir epizottan sonra yaklaşık yüzde elli, üç epizottan sonra yüzde doksandır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": ""
+     },
+     "s": 34,
+     "id": "k2-34-unipolar-depresyon-q55"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Depresyonun rekürrens riskiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Epizot sayısı arttıkça risk azalır",
+      "B": "İlk epizottan sonra risk neredeyse sıfırdır",
+      "C": "Epizot sayısı arttıkça rekürrens riski belirgin biçimde artar",
+      "D": "Üç epizottan sonra risk ortadan kalkar",
+      "E": "Rekürrens riski hiçbir zaman değişmez"
+     },
+     "dogru": "C",
+     "aciklama": "Rekürrens riski bir epizottan sonra yaklaşık yüzde elli, iki epizottan sonra yüzde yetmiş, üç epizottan sonra yüzde doksandır (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Epizot sayısı arttıkça rekürrens riski azalmaz, tersine artar. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "İlk epizottan sonra rekürrens riski sıfır değildir, belirgin bir orandadır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Rekürrens, iyileşmeden sonra yeni bir epizodun ortaya çıkmasıdır. Risk bir epizottan sonra yaklaşık yüzde elli, üç epizottan sonra yüzde doksandır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Üç epizottan sonra risk ortadan kalkmaz, tersine en yüksek düzeye ulaşır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Rekürrens riski sabit değildir; epizot sayısına göre değişir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": ""
+     },
+     "s": 34,
+     "id": "k2-34-unipolar-depresyon-q56"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Depresyonda kötü prognoz etkenleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kişilik bozukluğu kötü prognozla ilişkilidir",
+      "B": "Hafif epizot kötü prognoz etkenidir",
+      "C": "Madde kullanım bozukluğu kötü prognozla ilişkilidir",
+      "D": "Eşlik eden anksiyete kötü prognozla ilişkilidir",
+      "E": "Tedavinin ani kesilmesi kötü gidişle ilişkilidir"
+     },
+     "dogru": "B",
+     "aciklama": "Hafif epizot, psikotik belirti olmaması ve güçlü sosyal destek iyi prognoz etkenleridir; hafif epizot kötü prognoz etkeni değildir (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "İyi prognoz etkenleri arasında hafif epizot, psikotik belirti olmaması, güçlü sosyal destek ve tam remisyona ulaşılması bulunur. İyi premorbid işlevsellik de olumlu bir etkendir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "C": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": ""
+     },
+     "s": 35,
+     "id": "k2-34-unipolar-depresyon-q57"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Depresyonda iyi prognoz etkenleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tam remisyona ulaşılması iyi prognoz göstergesidir",
+      "B": "Kronik psikososyal sorunlar iyi prognoz göstergesidir",
+      "C": "Alkol ve madde kullanımı iyi prognoz göstergesidir",
+      "D": "Sık ve şiddetli ataklar iyi prognoz göstergesidir",
+      "E": "Kişilik bozukluğu iyi prognoz göstergesidir"
+     },
+     "dogru": "A",
+     "aciklama": "İyi prognoz etkenleri arasında hafif epizot, psikotik belirti olmaması, güçlü sosyal destek ve tam remisyona ulaşılması sayılır (s. 35).",
+     "sik_aciklamalari": {
+      "A": "İyi prognoz etkenleri arasında hafif epizot, psikotik belirti olmaması, güçlü sosyal destek ve tam remisyona ulaşılması bulunur. İyi premorbid işlevsellik de olumlu bir etkendir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "B": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Kötü prognoz etkenleri arasında kronik psikososyal sorunlar, kişilik bozukluğu, madde kullanımı, ileri yaş ve eşlik eden anksiyete bulunur. Tedavinin ani kesilmesi de kötü gidişle ilişkilidir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": ""
+     },
+     "s": 35,
+     "id": "k2-34-unipolar-depresyon-q58"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Depresyonda intihar riskiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Önceki intihar girişimi en güçlü belirleyicidir",
+      "B": "Umutsuzluk ve somut plan riski artırır",
+      "C": "Psikotik belirtiler ve madde kullanımı riski artırır",
+      "D": "İntiharı sormak riski belirgin biçimde artırır",
+      "E": "Tedavinin ilk haftaları riskli dönemdir"
+     },
+     "dogru": "D",
+     "aciklama": "İntihar riskini önceki girişim, umutsuzluk, somut plan, psikotik belirti ve madde kullanımı artırır; intiharı sormak riski artırmaz, tersine korur (s. 36).",
+     "sik_aciklamalari": {
+      "A": "İntihar riskini artıran en güçlü belirleyici önceki intihar girişimidir; umutsuzluk, somut plan, ajitasyon ve psikotik belirtiler de riski yükseltir. İntiharı sormak riski artırmaz, tersine korur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "İntihar riskini artıran en güçlü belirleyici önceki intihar girişimidir; umutsuzluk, somut plan, ajitasyon ve psikotik belirtiler de riski yükseltir. İntiharı sormak riski artırmaz, tersine korur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "İntihar riskini artıran en güçlü belirleyici önceki intihar girişimidir; umutsuzluk, somut plan, ajitasyon ve psikotik belirtiler de riski yükseltir. İntiharı sormak riski artırmaz, tersine korur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "İntiharı sormak riski artırmaz; tersine koruyucudur ve değerlendirmenin önemli bir parçasıdır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Tedavinin ilk haftaları ve taburculuk sonrası dönem intihar açısından riskli dönemlerdir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": ""
+     },
+     "s": 36,
+     "id": "k2-34-unipolar-depresyon-q59"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yirmi sekiz yaşında, çocukluğundan beri çoğu gün süren hafif çökkünlükten yakınan ve hep böyleydim diyen bir hastada en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mevsimsel örüntülü majör depresyon",
+      "B": "Postpartum depresyon",
+      "C": "Süregen depresif bozukluk yani distimi",
+      "D": "Premenstrüel disforik bozukluk",
+      "E": "Uyum bozukluğu"
+     },
+     "dogru": "C",
+     "aciklama": "Yıllardır süren, hep böyleydim denen hafif çökkünlük süregen depresif bozukluğu yani distimiyi düşündürür; distimi en az iki yıl süren kronik bir tablodur (s. 38, 39).",
+     "sik_aciklamalari": {
+      "A": "Mevsimsel örüntüde epizotlar yılın belirli bir mevsiminde başlayıp düzelir ve yineler. En sık kış depresyonu görülür; enerji azlığı, aşırı uyku, iştah artışı ve kilo alma eşlik eder. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Postpartum depresyon, doğumu izleyen ilk yıl içinde, çoğunlukla ilk altı ayda başlayan majör depresyondur. Anne-bebek bağlanmasını ve bebeğin gelişimini etkiler. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Süregen depresif bozukluk yani distimi, en az iki yıl süren daha hafif ama kronik bir çökkünlüktür. Çocuk ve ergende irritabl duygudurumla ve en az bir yıl süreyle tanınır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Premenstrüel disforik bozukluk, luteal fazda başlayıp menstrüasyonla geçen duygudurum belirtileriyle tanımlanır. Depresif bozukluklar başlığı altında sınıflanır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Depresif duygudurumla giden uyum bozukluğu, bir stresörden sonraki üç ay içinde başlar ve majör depresyon ölçütlerini karşılamaz. Stresörle bağlantısı belirgindir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": ""
+     },
+     "s": 38,
+     "id": "k2-34-unipolar-depresyon-q60"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Süregen depresif bozukluk yani distimi için gereken en kısa süre erişkinde aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "En az 2 hafta",
+      "B": "En az 1 ay",
+      "C": "En az 2 yıl",
+      "D": "En az 6 ay",
+      "E": "En az 10 yıl"
+     },
+     "dogru": "C",
+     "aciklama": "Süregen depresif bozukluk tanısı için çökkün duygudurumun erişkinde en az iki yıl, çocuk ve ergende en az bir yıl sürmesi gerekir (s. 38).",
+     "sik_aciklamalari": {
+      "A": "İki haftalık süre majör depresif epizodun süresidir, süregen depresif bozukluğun değil. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Bir aylık süre distimi için gereken kronik süreyi karşılamaz. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Distimi tanısı için çökkün duygudurumun en az iki yıl, çoğu gün sürmesi gerekir. Bu sürede iki aydan uzun belirtisiz dönem olmamalıdır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "D": "Altı aylık süre distimi için gereken en az iki yıllık süreden kısadır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "On yıl distimi için gereken en kısa süre değildir; ölçüt en az iki yıldır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [
+      "d3k2-2018-2019-k4-q66"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": ""
+     },
+     "s": 38,
+     "id": "k2-34-unipolar-depresyon-q61"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Majör depresif epizot ile distimi karşılaştırmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Majör epizotta sanrı ve varsanı olabilir, distimide yoktur",
+      "B": "Majör epizot daha şiddetlidir",
+      "C": "Distimi en az iki yıl süren kronik bir tablodur",
+      "D": "Distimide intihar düşüncesi majör epizottan daha sıktır",
+      "E": "Distimi sinsi başlar, karakterin parçası gibidir"
+     },
+     "dogru": "D",
+     "aciklama": "Majör epizotta psikotik belirti ve intihar düşüncesi daha sık; distimi daha hafif, kronik ve sinsi başlangıçlıdır, karakterin parçası gibidir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Psikotik özelliklerde depresyona sanrı ve varsanılar eşlik eder; bunlar duygudurumla uyumlu ya da uyumsuz olabilir. Prognoz daha kötüdür ve intihar riski yüksektir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Majör depresif bozukluk, çökkünlük ya da anhedoninin iki hafta boyunca en az beş belirtiyle sürdüğü tablodur. Bu dersin odağı olan epizodik ve tedavi edilebilir bir duygudurum bozukluğudur. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Distimi tanısı için çökkün duygudurumun en az iki yıl, çoğu gün sürmesi gerekir. Bu sürede iki aydan uzun belirtisiz dönem olmamalıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "İntihar düşüncesi majör depresif epizotta distimiye göre daha sıktır; distimide daha azdır. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur.",
+      "E": "Süregen depresif bozukluk yani distimi, en az iki yıl süren daha hafif ama kronik bir çökkünlüktür. Çocuk ve ergende irritabl duygudurumla ve en az bir yıl süreyle tanınır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": ""
+     },
+     "s": 39,
+     "id": "k2-34-unipolar-depresyon-q62"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Depresyonun akılda kalması gereken temel ilkeleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tanı için en az iki hafta ve en az beş belirti gerekir",
+      "B": "Çökkünlük ya da anhedoni mutlaka olmalıdır",
+      "C": "Her hastada mani öyküsü ve intihar riski sorgulanır",
+      "D": "Tıbbi, ilaç ve madde nedenleri dışlanır",
+      "E": "Depresyon tedavi edilemeyen, kötü seyirli bir hastalıktır"
+     },
+     "dogru": "E",
+     "aciklama": "Depresyon tedavi edilebilir bir hastalıktır; amaç remisyondur ve doğru tedaviyle hastaların çoğu iyileşir (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Majör depresif bozuklukta belirtilerin aynı iki haftalık dönemde neredeyse her gün sürmesi gerekir. Bu süre ölçütü tabloyu geçici üzüntüden ayırt eden temel ölçüttür. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "B": "Anhedoni, daha önce zevk veren etkinliklere karşı ilgi ve zevk alma yetisinin kaybıdır. Depresif duygudurumla birlikte majör depresif bozukluğun iki çekirdek belirtisinden biridir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "C": "Bipolar bozukluk ayırıcı tanısında mani ya da hipomani öyküsü aranır. Öykünün varlığı tedaviyi değiştirdiğinden her hastada sorgulanmalıdır. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "D": "Depresyon ayırıcı tanısında her hastada tiroid işlevleri değerlendirilmeli, TSH bakılmalıdır. Hipotiroidi gibi durumlar depresyon tablosunu taklit edebilir. Bu bilgi slayttaki haliyle doğru olduğundan, yanlış olanı soran soruda bu seçenek doğru kabul edilerek elenir.",
+      "E": "Depresyon tedavi edilebilir bir hastalıktır ve doğru tedaviyle hastaların çoğu iyileşir; tedavi edilemez ve kötü seyirli olduğu ifadesi gerçekle çelişir. Bu ifade doğru bilgiyle çeliştiğinden, yanlış olanı soran soruda doğru cevap budur."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": ""
+     },
+     "s": 40,
+     "id": "k2-34-unipolar-depresyon-q63"
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 63
+}

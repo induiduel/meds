@@ -318,6 +318,12 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /5)Opioid Analjezikler ve Antagonistleri.pdf', name: '5)Opioid Analjezikler ve Antagonistleri.pdf', pages: 71, fileId: '1RszF-tApYv66d0T262k-xYz4vOpBiQ7-' } as SourceFile],
   },
+  // 2026-11-15 Unipolar Depresyon (k2-34, tasarruf kipi): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-34-unipolar-depresyon': {
+    title: 'Unipolar Depresyon',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /9)Depresyon.pdf', name: '9)Depresyon.pdf', pages: 41, fileId: '160ZyGIBKdGrGk37o0FwoaMReRlt32OE5' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [
