@@ -1,7 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 725,
-  "baslik": "Soru dışa aktarıcı PDF: alt bilgi/metin kesilmesi kökten giderildi (yazı tipi uyuşmazlığı)",
+  "onem": 726,
+  "baslik": "Klinik derslerin çıkmış soruları eklendi ve mevcut çıkmışlar düzeltildi",
+  "maddeler": [
+    "15 klinik ders PDF'inden (Nöroloji, Enfeksiyon, Halk Sağlığı, Göğüs Hastalıkları, FTR, Pediatri, Ürogenital, Üroloji, Aile Hekimliği, Acil Tıp, Beyin Cerrahisi, 3. Sınıf, Dahiliye, Final, Nöropsikiyatri) tüm çıkmış sorular okundu, veritabanındaki eşleşen kayıtlarla karşılaştırıldı: 1.338 soru zaten vardı (doğrulandı), 210 yeni soru eklendi, 14 kayıt eksik/hatalı şıkkı veya kökü düzeltildi. Her yeni/düzeltilmiş kayıt bağımsız bir denetimden geçti (154 kayıt örneklendi; 2 düzeltme, 1 karantina).",
+    "Soru dışa aktarıcı PDF: alt bilgi/metin kesilmesi kökten giderildi (yazı tipi uyuşmazlığı)."
+  ],
   "maddeler": [
     "PDF indir çıktısında sayfanın altındaki soruların kesilip alt bilgi şeridinin üstüne binmesi giderildi. Kök neden: düzen senin tarayıcının yazı tipiyle (Times New Roman) ölçülürken PDF, sunucuda yalnız DejaVu Serif ile basılıyordu; DejaVu daha geniş olduğundan metin taşıp kesiliyordu. Sunucuya Times ile metrik uyumlu Liberation yazı tipleri eklendi; artık ölçümle basım aynı.",
     "\"Yazdır\" da artık sunucuda hazır PDF üretip bastırıyor; yazdırma kutusundaki kenar boşluğu ayarından etkilenmiyor."
