@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 724,
-  "baslik": "Soru dışa aktarıcı: Yazdır çıktısında alt bilgi üstüne binmesi giderildi",
+  "onem": 725,
+  "baslik": "Soru dışa aktarıcı PDF: alt bilgi/metin kesilmesi kökten giderildi (yazı tipi uyuşmazlığı)",
   "maddeler": [
-    "\"Yazdır\" artık sayfayı tarayıcının yazdırma kutusuna ham olarak vermek yerine sunucuda hazır PDF üretip onu bastırıyor: yazdırma kutusundaki kenar boşluğu ayarı ne olursa olsun alt bilgi (sayfa numarası dahil) başka sayfanın metninin üstüne binmiyor, sayfa altı kesilmiyor. \"PDF indir\" zaten bu temiz yolu kullanıyordu."
+    "PDF indir çıktısında sayfanın altındaki soruların kesilip alt bilgi şeridinin üstüne binmesi giderildi. Kök neden: düzen senin tarayıcının yazı tipiyle (Times New Roman) ölçülürken PDF, sunucuda yalnız DejaVu Serif ile basılıyordu; DejaVu daha geniş olduğundan metin taşıp kesiliyordu. Sunucuya Times ile metrik uyumlu Liberation yazı tipleri eklendi; artık ölçümle basım aynı.",
+    "\"Yazdır\" da artık sunucuda hazır PDF üretip bastırıyor; yazdırma kutusundaki kenar boşluğu ayarından etkilenmiyor."
   ],
   "eklenen": [
     "Soru dışa aktarıcı › metin kaybı yok: ızgaraya sığmayan sorular tam genişlik \"Sığmayan sorular\" bölümüne alınır",
