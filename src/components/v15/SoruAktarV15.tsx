@@ -12,7 +12,7 @@ import {
   type Alan, type Ayar, type Bicim, type Duzen, type RenkOge, type TasarimId, type YaziId,
 } from './soruAktar/ayar';
 import { Olcer, belgeHtml, ciktiSuz, hazirla, kagitAdi, renkHaritasi, sayfala, yaprakSayisi, type HS } from './soruAktar/belge';
-import { downloadBlob, printDocument, renderPdfOnServer, safeFileName } from '../pdf/pdfDocument';
+import { downloadBlob, printDocument, printPdfBlob, renderPdfOnServer, safeFileName } from '../pdf/pdfDocument';
 import { toast } from '../ui/Toast';
 import type { DeckCatalogEntry } from '../../data/deckStore';
 import '../../styles/v15/soruaktar.css';
@@ -557,11 +557,16 @@ export default function SoruAktarV15() {
       if (!b.sayfalar.length) { toast.info('Seçime uyan sayfa yok', 'Çıktı seçimini ya da sayfa aralığını değiştir.'); return; }
       if (yazdir || a.bicim === 'pdf') {
         const html = belgeHtml(b, a, { baslik: a.baslik });
-        if (yazdir) { setUretim('Yazdırma penceresi açılıyor…'); await printDocument(html); return; }
-        setUretim(`PDF oluşturuluyor (${b.sayfalar.length} sayfa)…`);
+        // H576: "Yazdır"da da önce sunucuda PDF üretip onu bastırırız. Tarayıcının native print'i, yazdırma
+        // kutusundaki kenar boşluğu "Varsayılan" iken @page{margin:0}'ı ezip sabit yükseklikli sayfa kutularını
+        // yeniden parçalar ve alt bilgi sonraki sayfanın metnine biner. Sunucu PDF'i olduğu gibi basıldığından bu olmaz.
+        setUretim(yazdir ? 'Yazdırma için PDF hazırlanıyor…' : `PDF oluşturuluyor (${b.sayfalar.length} sayfa)…`);
         try {
-          downloadBlob(await renderPdfOnServer(html, a.baslik || 'Sorular', ad), ad);
+          const blob = await renderPdfOnServer(html, a.baslik || 'Sorular', ad);
+          if (yazdir) { setUretim('Yazdırma penceresi açılıyor…'); await printPdfBlob(blob); }
+          else downloadBlob(blob, ad);
         } catch (e: any) {
+          if (yazdir) { setUretim('Yazdırma penceresi açılıyor…'); await printDocument(html); return; }
           toast.info('PDF sunucuda oluşturulamadı', `${e?.message || ''} Yazdırma penceresinde "PDF olarak kaydet"i seç.`.trim());
           await printDocument(html);
           return;

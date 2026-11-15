@@ -425,6 +425,36 @@ export function downloadBlob(blob: Blob, fileName: string) {
   setTimeout(() => URL.revokeObjectURL(url), 4000);
 }
 
+/**
+ * Sunucuda üretilmiş PDF Blob'unu gizli bir iframe'de yazdırır. Tarayıcının PDF görüntüleyicisi PDF'i sayfa sayfa
+ * OLDUĞU GİBİ basar: yazdırma kutusundaki kenar boşluğu/ölçek ayarı belgeyi yeniden sayfalamadığından (H576'nın
+ * tekrarı olan) "alt bilgi sonraki sayfanın metnine biniyor / sayfa altı kesiliyor" sınıfı bu yolda oluşamaz.
+ * `printDocument` (ham HTML'i native print'e verir) yalnız sunucu üretimi başarısızsa yedek olarak kullanılır.
+ */
+export function printPdfBlob(blob: Blob): Promise<void> {
+  return new Promise((resolve) => {
+    const url = URL.createObjectURL(blob);
+    const frame = document.createElement('iframe');
+    frame.setAttribute('aria-hidden', 'true');
+    frame.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden';
+    frame.src = url;
+    document.body.appendChild(frame);
+    let bitti = false;
+    const temizle = () => { if (bitti) return; bitti = true; frame.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); resolve(); };
+    frame.addEventListener('load', () => {
+      setTimeout(() => {
+        try {
+          frame.contentWindow?.focus();
+          frame.contentWindow?.print();
+        } catch { /* yazdırılamazsa sessizce kapan */ }
+        setTimeout(temizle, 1500);
+      }, 300);
+    }, { once: true });
+    // yükleme hiç tetiklenmezse (ör. görüntüleyici yok) kaynakları bırak
+    setTimeout(temizle, 15000);
+  });
+}
+
 /** Tarayıcının yazdırma penceresini (PDF olarak kaydet) aynı belgeyle açar. */
 export function printDocument(html: string): Promise<void> {
   return new Promise((resolve) => {
