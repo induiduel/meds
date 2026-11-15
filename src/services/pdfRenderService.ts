@@ -31,8 +31,17 @@ const CANDIDATES = [
 export const findChrome = (): string | null => CANDIDATES.find((p) => fs.existsSync(p)) || null;
 
 const ALLOWED_HOSTS = new Set(['fonts.googleapis.com', 'fonts.gstatic.com']);
-export const MAX_HTML_BYTES = 25 * 1024 * 1024;
-const TIMEOUT_MS = 120_000;
+/** 2026-11-15: soru dışa aktarıcıda çok soru seçilince (binlerce sayfalık tek belge) eskiden 25 MB'ta kesilirdi; ölçümde
+ * gerçek dünya belgeleri bundan daha yoğun olabilir (soru + şık + çözüm + etiket), tavan güvenlik payıyla yükseltildi. */
+export const MAX_HTML_BYTES = 60 * 1024 * 1024;
+/**
+ * 2026-11-15: "çok soru eklenince PDF oluşturulamıyor" şikâyeti ölçüldü — kök neden önbellek değil, sabit 120 sn'lik
+ * zaman aşımıydı. `Page.printToPDF` tek bir büyük belgeyi bastığında süre sayfa sayısıyla doğrusaldan hızlı büyüyor
+ * (ölçüm: 400 sayfa ≈5 sn, 1600 sayfa ≈62 sn, 2800 sayfa ≈312 sn — aynı sunucuda, bu havuzlu sürümle). 120 sn ~1500
+ * sayfa civarında kesiliyordu. Tavan 10 dakikaya çıkarıldı; ölçülen en kötü durumun (2800 sayfa/312 sn) iki katından
+ * fazla pay bırakır. Çok daha büyük belgeler için gerçek çözüm belgeyi parçalara bölüp ayrı ayrı basmaktır — bu, tek
+ * başına zaman aşımını büyütmekten daha büyük bir değişikliktir, burada kapsam dışı tutuldu. */
+const TIMEOUT_MS = 10 * 60_000;
 
 /** Gönderilen belgeden çalıştırılabilir ve gömülü içerikleri ayıklar (ikinci savunma hattı). */
 const sanitize = (html: string) =>
