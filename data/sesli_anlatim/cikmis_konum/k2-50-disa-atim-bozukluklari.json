@@ -1,0 +1,67 @@
+{
+ "surum": 1,
+ "metinHash": "",
+ "dogrulama": "ham belge + slayt kanıtı, elle (k2-50, 2026-11-16); pastQuestions.json topic 'Dışa Atım Bozuklukları'.",
+ "q": [
+  {
+   "id": "195a76703179",
+   "kok": "Enürezis hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+   "cevap": "Psikiyatrik vakalar genelde sekonder enürezis şeklinde başvururlar.",
+   "yil": "2020-2021",
+   "s": 4,
+   "seviye": "dogrudan",
+   "kanit": "ek psikiyatrik sorun görülme olasılığı",
+   "kaynak": "pastQuestions.json id 195a76703179 (2020-2021, soru 36, sourceFile 336f0e2a54d6; topic 'Dışa Atım Bozuklukları').",
+   "dogrulandi": true,
+   "neden": "Slayt s4 'sekonder enüreziste ek psikiyatrik sorun görülme olasılığı daha fazladır' der; ancak psikiyatrik vakaların GENELDE sekonder enürezis şeklinde başvurduğu söylenemez — bu nedenle D söylenemez. Doğru ölçütler (haftada 2 kez, 3 ay, erkek/kız 2/1, çoğunluk primer) s3-s4 ile birebir."
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs4",
+   "kok": "Primer enürezis için en doğru tanım aşağıdakilerden hangisidir?",
+   "cevap": "Çocuğun bugüne kadar en az 6 ay süren kesintisiz bir kuru dönem geçirmemiş olmasıdır",
+   "yil": "2025-2026",
+   "s": 4,
+   "seviye": "dogrudan",
+   "kanit": "En az 6 aylık kontinans ardından ortaya",
+   "kaynak": "pastQuestions.json id q-25-26_d_nem_3_kurul_2-82-cs4 (2025-2026, sourceFile '25-26 dönem 3 kurul 2.pdf'; topic 'Dışa Atım Bozuklukları').",
+   "dogrulandi": true,
+   "neden": "Slayt s4 sekonder enürezisi 'en az 6 aylık kontinans ardından ortaya çıkar' diye tanımlar; primer ise hiç kesintisiz kuru dönem geçirmemiş olmaktır (B). Çeldirici A sekonder tanımıdır, C diürnal, D organik, E yaş ölçütüdür."
+  },
+  {
+   "id": "past-1790877036003-183147",
+   "kok": "Aşağıdakilerden hangisi enürezis ile ilgili yanlış bir bilgidir?",
+   "cevap": "Prolaktin hormonu düzeyleri enürezis gelişiminde temel rol oynar",
+   "yil": "2024-2025",
+   "s": 5,
+   "seviye": "dogrudan",
+   "kanit": "Gece yeterli ADH üretiminin olmaması",
+   "kaynak": "pastQuestions.json id past-1790877036003-183147 (2024-2025, soru 34, sourceFile '2. kurul .txt'; topic 'Dışa Atım Bozuklukları').",
+   "dogrulandi": true,
+   "neden": "Slayt s5 etyolojide ADH (vazopressin) yetersizliği, mesane işlev bozukluğu ve uyku-uyanıklık bozukluğunu sayar; prolaktinin temel rol oynadığı bilgisi slaytta yoktur ve yanlıştır (C). Vazopressin ve mesane kapasitesi çeldiricileri s5 ile uyumlu, doğru bilgilerdir."
+  },
+  {
+   "id": "d3k2-2018-2019-k4-q56",
+   "kok": "Enürezis nokturna yakınmasıyla polikliniğe getirilen 7 yaşındaki çocuğun hiç kuru dönemi olmadığı ifade edilmektedir. Bu durumla ilgili olarak aşağıdaki yorumlardan hangisi yapılamaz?",
+   "cevap": "Uykudayken uyandırılmadan tuvalete götürülmeli ve çiş yaptırılmalıdır",
+   "yil": "2018-2019",
+   "s": 9,
+   "seviye": "dogrudan",
+   "kanit": "Gece belli saatte tuvalete kaldırma",
+   "kaynak": "pastQuestions.json id d3k2-2018-2019-k4-q56 (2018-2019, soru 56, sourceFile 'D3K2 2021-2022-2023.pdf'; topic 'Dışa Atım Bozuklukları').",
+   "dogrulandi": true,
+   "neden": "Slayt s9 tedavide 'gece belli saatte tuvalete kaldırma (en fazla 2 kez)' der — çocuk uyandırılarak kaldırılır. D şıkkı 'uyandırılmadan' dediği için yapılamaz. Organik araştırma (s6) ve primer tanım (s4) doğru yorumlardır."
+  },
+  {
+   "id": "k1-2020-2021-a-q093",
+   "kok": "Fonksiyonel retansif olmayan fekal inkontinanslı (FNRFI) çocuklar için aşağıdakilerden hangisi doğrudur?",
+   "cevap": "Dışkı tutma kanıtı olmaksızın dışkıyı uygun olmayan yerlere yaparlar",
+   "yil": "2020-2021",
+   "s": 17,
+   "seviye": "ilgili",
+   "kanit": "normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan",
+   "kaynak": "pastQuestions.json id k1-2020-2021-a-q093 (2020-2021, soru 93, sourceFile 'Dönem III Kurul I Tüm Çıkmışlar.pdf'; topic 'Dışa Atım Bozuklukları').",
+   "dogrulandi": true,
+   "neden": "Slayt s17 'normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklar' = retansif olmayan (nonretentif) enkoprezis tanımıyla örtüşür (C). Kurul 1 patoloji/pediatri bağlamı olduğundan 'ilgili'. Palpabl fekal kitle ve laksatif çeldiricileri konstipasyonlu (retentif) tipe aittir (s18)."
+  }
+ ]
+}

@@ -1,0 +1,1672 @@
+{
+ "surum": 2,
+ "ders_id": "k2-50",
+ "baslik": "Dışa Atım Bozuklukları",
+ "anahtar": "k2-50-disa-atim-bozukluklari",
+ "bolumler": [
+  {
+   "id": "k2-50-b01",
+   "baslik": "Dersin çerçevesi ve enürezis epidemiyolojisi",
+   "paragraflar": [
+    {
+     "id": "k2-50-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "ses": "Bu dersin konusu dışa atım bozukluklarıdır; yani çocuğun idrar ve dışkı kontrolünü beklenen yaşta kazanamaması ya da kazandıktan sonra yeniden kaybetmesidir.",
+       "ekran": "**Konu**: dışa atım bozuklukları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Konu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Dışa Atım Bozuklukları"
+        ]
+       },
+       "id": "k2-50-c0001"
+      },
+      {
+       "ses": "Dersi iki ana başlıkta göreceğiz: önce idrar kaçırmanın karşılığı olan enürezisi, ardından dışkı kaçırmanın karşılığı olan enkoprezisi inceleyeceğiz.",
+       "ekran": "**Plan**: önce enürezis, sonra enkoprezis",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "enürezis",
+         "tur": "terim"
+        },
+        {
+         "metin": "enkoprezis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Dışa Atım Bozuklukları"
+        ]
+       },
+       "id": "k2-50-c0002"
+      },
+      {
+       "ses": "Dersin sonunda bu iki bozukluğun tanı ölçütlerini, tiplerini, nedenlerini ve tedavi basamaklarını birbirinden ayırt edebileceksiniz.",
+       "ekran": "**Amaç**: tanı, tip, neden, tedavi ayrımı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Amaç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Dışa Atım Bozuklukları"
+        ]
+       },
+       "id": "k2-50-c0003"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Enürezis, idrar kaçırmanın tıptaki adıdır ve görülme sıklığı yaşla birlikte belirgin biçimde azalır.",
+       "ekran": "**Enürezis**: idrar kaçırma; yaşla azalır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Enürezis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "2 yaşında çocukların %82’si enüretik"
+        ]
+       },
+       "id": "k2-50-c0004"
+      },
+      {
+       "ses": "İki yaşındaki çocukların yüzde seksen ikisi altını ıslatırken, bu oran üç yaşında yüzde kırk dokuza, beş yaşında ise yüzde yediye kadar iner.",
+       "ekran": "**Sıklık**: iki yaşında yüzde seksen iki, beş yaşında yüzde yedi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde seksen iki",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "2 yaşında çocukların %82’si enüretik"
+        ]
+       },
+       "id": "k2-50-c0005"
+      },
+      {
+       "ses": "On iki yaşına gelindiğinde altını ıslatan çocuk oranı yüzde ikiye kadar geriler; bu yüzden enürezis çoğu çocukta gelişimle birlikte kendiliğinden düzelen bir sorundur.",
+       "ekran": "**On iki yaş**: yüzde iki; çoğunlukla kendiliğinden düzelir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde iki",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "2 yaşında çocukların %82’si enüretik"
+        ]
+       },
+       "id": "k2-50-c0006"
+      },
+      {
+       "ses": "Yani yaş ilerledikçe oranın düşmesi, sorunun büyük bölümünün tedavi gerektirmeden yaşla çözülebileceğini gösterir ve bu bilgi ailenin kaygısını azaltmakta kullanılır.",
+       "ekran": "**Yorum**: yaşla azalma, ailenin kaygısını azaltır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "2 yaşında çocukların %82’si enüretik"
+        ]
+       },
+       "id": "k2-50-c0007"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b02",
+   "baslik": "Enürezis tanı ölçütleri",
+   "paragraflar": [
+    {
+     "id": "k2-50-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Enürezis tanısına geçmeden önce, hangi çocukta bu tanının konulabileceğini belirleyen ölçütleri sırayla görelim.",
+       "ekran": "**Tanı ölçütleri**: cinsiyet, yaş, sıklık, süre",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tanı ölçütleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Haftada en az 2 kez enüresis yakınması"
+        ]
+       },
+       "id": "k2-50-c0008"
+      },
+      {
+       "ses": "Enürezis erkeklerde kızlara göre yaklaşık iki kat daha sıktır; yani erkek kız oranı iki bire yakındır.",
+       "ekran": "**Cinsiyet**: erkek kız oranı iki bir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Haftada en az 2 kez enüresis yakınması"
+        ]
+       },
+       "id": "k2-50-c0009"
+      },
+      {
+       "ses": "Tanı koyabilmek için çocuğun takvim yaşının ya da zihinsel yaşının en az beş olması gerekir, çünkü bu yaşa kadar gece idrar kontrolünün tam gelişmemesi normal kabul edilir.",
+       "ekran": "**Tanı yaşı**: en az beş",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az beş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Haftada en az 2 kez enüresis yakınması"
+        ]
+       },
+       "id": "k2-50-c0010"
+      },
+      {
+       "ses": "Belirtilerin haftada en az iki kez görülmesi ya da sıklıktan bağımsız olarak belirgin sosyal ve psikolojik sıkıntıya yol açması tanı için aranır.",
+       "ekran": "**Ölçüt**: haftada en az iki kez ya da belirgin sıkıntı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "haftada en az iki kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Haftada en az 2 kez enüresis yakınması"
+        ]
+       },
+       "id": "k2-50-c0011"
+      },
+      {
+       "ses": "Ayrıca bu belirtilerin birbirini izleyen üç ay boyunca sürmesi gerekir.",
+       "ekran": "**Süre**: üç ay",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Haftada en az 2 kez enüresis yakınması"
+        ]
+       },
+       "id": "k2-50-c0012"
+      },
+      {
+       "ses": "Bu ölçütlerin birlikte değerlendirilmesi, geçici ve tek tük ıslatmaları gerçek enürezis tanısından ayırmaya yarar.",
+       "ekran": "**Amaç**: geçici ıslatmayı gerçek tanıdan ayırmak",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Haftada en az 2 kez enüresis yakınması"
+        ]
+       },
+       "id": "k2-50-c0013"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b03",
+   "baslik": "Enürezis tipleri: primer, sekonder, diürnal ve mikst",
+   "paragraflar": [
+    {
+     "id": "k2-50-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Enürezis seyrine göre birkaç tipe ayrılır; en sık görüleni, vakaların yaklaşık yüzde seksenini oluşturan primer enürezistir.",
+       "ekran": "**Tip**: primer; vakaların yüzde sekseni",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "primer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0014"
+      },
+      {
+       "ses": "Primer enürezis, çocuğun doğumundan beri hiç kesintisiz kuru dönem geçirmemiş, yani altını hep ıslatmaya devam ediyor olmasıdır.",
+       "ekran": "**Primer**: hiç kesintisiz kuru dönem yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kesintisiz kuru dönem",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0015"
+      },
+      {
+       "ses": "Primer tipin tam tanımı çıkmış sınavda doğrudan sorulmuştur: çocuğun bugüne kadar en az altı ay süren kesintisiz bir kuru dönem hiç geçirmemiş olması primer enürezistir.",
+       "ekran": "**Çıkmış**: primer = hiç altı aylık kuru dönem yaşanmamış",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-82-cs4"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0016"
+      },
+      {
+       "ses": "Sekonder enürezis ise en az altı aylık kuru, yani idrarını tutabildiği bir dönemin ardından çocuğun yeniden altını ıslatmaya başlamasıdır.",
+       "ekran": "**Sekonder**: altı aylık kontinans sonrası tekrar ıslatma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "altı aylık",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0017"
+      },
+      {
+       "ses": "Örneğin beş yaşına kadar hiç kuru gecesi olmamış bir çocuk primer, iki yıl kuru kaldıktan sonra kardeşi doğunca yeniden ıslatmaya başlayan çocuk ise sekonder enürezis için tipik örnektir.",
+       "ekran": "**Örnek**: hiç kuru yoksa primer; sonradan başlarsa sekonder",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "primer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0018"
+      },
+      {
+       "ses": "Sekonder enüreziste, ek bir psikiyatrik bozukluğun bulunma olasılığı primer tipe göre daha yüksektir.",
+       "ekran": "**Sekonder**: ek psikiyatrik sorun olasılığı daha yüksek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikiyatrik",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0019"
+      },
+      {
+       "ses": "Bu nokta çıkmış sınavda sorulmuştur: sekonder enüreziste eş tanı olasılığı artsa da, psikiyatrik olguların çoğunun sekonder enürezisle başvurduğunu söylemek yanlıştır.",
+       "ekran": "**Çıkmış**: psikiyatrik olgular genelde sekonder enürezisle başvurmaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "195a76703179"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0020"
+      },
+      {
+       "ses": "Yalnızca gündüz görülen diürnal tipte ve hem gündüz hem gece görülen mikst tipte, altta yatan organik bir hastalığın bulunma riski daha fazladır.",
+       "ekran": "**Diürnal ve mikst**: organik patoloji riski daha yüksek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "organik",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "%80’i vakaların primer tipte"
+        ]
+       },
+       "id": "k2-50-c0021"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b04",
+   "baslik": "Enürezis etyolojisi",
+   "paragraflar": [
+    {
+     "id": "k2-50-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Enürezisin nedenleri çok etmenlidir ve kalıtımın payı belirgindir.",
+       "ekran": "**Etyoloji**: çok etmenli; kalıtım belirgin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Etyoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gece yeterli ADH üretiminin olmaması"
+        ]
+       },
+       "id": "k2-50-c0022"
+      },
+      {
+       "ses": "Vakaların yaklaşık yüzde yetmiş beşinde birinci derece yakınlarında da enürezis öyküsü vardır; üstelik olumlu aile öyküsü tedaviye iyi yanıtın işaretidir.",
+       "ekran": "**Aile öyküsü**: yüzde yetmiş beş; iyi prognoz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde yetmiş beş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gece yeterli ADH üretiminin olmaması"
+        ]
+       },
+       "id": "k2-50-c0023"
+      },
+      {
+       "ses": "Nedenler arasında gece yeterince antidiüretik hormon salgılanamaması, mesanenin işlev bozukluğu ve uyku ile uyanıklık düzeninin bozukluğu sayılır.",
+       "ekran": "**Neden**: antidiüretik hormon eksikliği, mesane, uyku bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antidiüretik hormon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gece yeterli ADH üretiminin olmaması"
+        ]
+       },
+       "id": "k2-50-c0024"
+      },
+      {
+       "ses": "Bu etyoloji çıkmış sınavda sorulmuş ve prolaktin hormonunun enürezis gelişiminde temel rol oynadığı bilgisinin yanlış olduğu vurgulanmıştır.",
+       "ekran": "**Çıkmış**: prolaktin temel rol oynamaz, bu yanlıştır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877036003-183147"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gece yeterli ADH üretiminin olmaması"
+        ]
+       },
+       "id": "k2-50-c0025"
+      },
+      {
+       "ses": "Enürezis uykunun herhangi bir döneminde ortaya çıkabilir; belirli tek bir uyku evresine bağlı değildir.",
+       "ekran": "**Uyku**: her evrede olabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "her evrede",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gece yeterli ADH üretiminin olmaması"
+        ]
+       },
+       "id": "k2-50-c0026"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b05",
+   "baslik": "Enürezis nokturnada tetkik ve organik nedenlerin dışlanması",
+   "paragraflar": [
+    {
+     "id": "k2-50-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Gece idrar kaçıran bir çocukta öncelikle organik nedenler dışlanmalıdır; özellikle böbrek ve idrar toplayıcı sistem hastalıkları araştırılır.",
+       "ekran": "**Ekartasyon**: önce organik nedenler; böbrek, toplayıcı sistem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "organik nedenler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "E. nokturna da organik nedenler mutlaka ekarte"
+        ]
+       },
+       "id": "k2-50-c0027"
+      },
+      {
+       "ses": "Bu amaçla tam idrar tetkiki ile idrar kültürü, gaitada parazit incelemesi ve karın ile pelvis ultrasonografisi istenir.",
+       "ekran": "**Tetkik**: idrar tetkiki, kültür, gaita parazit, ultrasonografi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ultrasonografi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "E. nokturna da organik nedenler mutlaka ekarte"
+        ]
+       },
+       "id": "k2-50-c0028"
+      },
+      {
+       "ses": "Ayrıca değerlendirmede, fazla idrara yol açabilen şeker hastalığı ve diyabet insipidus gibi durumlar da akılda tutulur.",
+       "ekran": "**Ayırıcı**: şeker hastalığı ve diyabet insipidus",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "diyabet insipidus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "E. nokturna da organik nedenler mutlaka ekarte"
+        ]
+       },
+       "id": "k2-50-c0029"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b06",
+   "baslik": "Enürezis tedavisi: farmakolojik olmayan yaklaşımlar",
+   "paragraflar": [
+    {
+     "id": "k2-50-p007",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Enürezis tedavisi iki koldan yürür; önce ilaç dışı yöntemleri, sonra ilaçları ele alacağız ve en iyi sonuç bu ikisinin birlikte uygulanmasıyla alınır.",
+       "ekran": "**Tedavi**: ilaç dışı ve ilaçlı, kombine",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gece belli saatte tuvalete kaldırma (en fazla 2 kez)"
+        ]
+       },
+       "id": "k2-50-c0030"
+      },
+      {
+       "ses": "İlaç dışı yaklaşımlar arasında mesane egzersizleri, gece sıvı alımının kısıtlanması ve çocuğu gece belirli saatte en fazla iki kez tuvalete kaldırma yer alır.",
+       "ekran": "**İlaç dışı**: mesane egzersizi, sıvı kısıtlama, iki kez tuvalete kaldırma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gece belli saatte tuvalete kaldırma (en fazla 2 kez)"
+        ]
+       },
+       "id": "k2-50-c0031"
+      },
+      {
+       "ses": "Bunlara tablo ile ödüllendirme, aileye ve öğretmene rehberlik ve geceleri uyandıran alarm cihazı eklenir.",
+       "ekran": "**Ek yöntem**: ödüllendirme, rehberlik, alarm cihazı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alarm cihazı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gece belli saatte tuvalete kaldırma (en fazla 2 kez)"
+        ]
+       },
+       "id": "k2-50-c0032"
+      },
+      {
+       "ses": "Bu yöntemlerin ortak amacı, çocuğu idrar hissiyle uyanmaya ve mesanesini gün içinde daha iyi kontrol etmeye alıştırmaktır.",
+       "ekran": "**Amaç**: idrar hissiyle uyanma ve mesane kontrolü",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gece belli saatte tuvalete kaldırma (en fazla 2 kez)"
+        ]
+       },
+       "id": "k2-50-c0033"
+      },
+      {
+       "ses": "Çıkmış sınavda sorulduğu üzere çocuk gece uyandırılarak tuvalete kaldırılır; uykusunda hiç uyandırılmadan tuvalete götürmek doğru bir yaklaşım değildir.",
+       "ekran": "**Çıkmış**: uyandırarak kaldır; uyandırmadan götürmek yanlış",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3k2-2018-2019-k4-q56"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gece belli saatte tuvalete kaldırma (en fazla 2 kez)"
+        ]
+       },
+       "id": "k2-50-c0034"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b07",
+   "baslik": "Enürezis tedavisi: farmakolojik yaklaşımlar",
+   "paragraflar": [
+    {
+     "id": "k2-50-p008",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "ses": "İlaç tedavisinde ilk sırada tercih edilen ilaç imipramindir; altı yaşından itibaren kullanılabilir.",
+       "ekran": "**İlk ilaç**: imipramin; altı yaştan itibaren",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "imipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İmipramin(Tofranil): İlk sırada tercih edilecek ilaç 6"
+        ]
+       },
+       "id": "k2-50-c0035"
+      },
+      {
+       "ses": "İmipramin kalp ileti sistemini etkileyebildiği için verilirken mutlaka elektrokardiyografi ile izlenmelidir.",
+       "ekran": "**İmipramin**: kalp iletisi; elektrokardiyografi takibi şart",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "elektrokardiyografi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İmipramin(Tofranil): İlk sırada tercih edilecek ilaç 6"
+        ]
+       },
+       "id": "k2-50-c0036"
+      },
+      {
+       "ses": "İkinci sırada tercih edilen ilaç desmopressindir; ancak çocukta nöbet bozukluğu da varsa desmopressin ilk sıraya alınır.",
+       "ekran": "**İkinci ilaç**: desmopressin; nöbet varsa ilk sırada desmopressin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "desmopressin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İmipramin(Tofranil): İlk sırada tercih edilecek ilaç 6"
+        ]
+       },
+       "id": "k2-50-c0037"
+      },
+      {
+       "ses": "Böylece ilaç seçimi sabit değildir; çocuğun ek hastalığına göre imipramin ve desmopressin arasındaki sıralama değişebilir.",
+       "ekran": "**İlke**: ilaç sırası ek hastalığa göre değişir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İmipramin(Tofranil): İlk sırada tercih edilecek ilaç 6"
+        ]
+       },
+       "id": "k2-50-c0038"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p009",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "ses": "İlaç tedavisi ortalama altı ay sürdürülmeli ve mümkün olan en düşük dozla başlanmalıdır.",
+       "ekran": "**İlke**: ortalama altı ay; en düşük doz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "altı ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Farmakolojik tedavi ortalama 6 ay sürmeli"
+        ]
+       },
+       "id": "k2-50-c0039"
+      },
+      {
+       "ses": "Enürezis tedavisinde psikoterapi tek başına etkili değildir; en iyi sonuç ilaçlı ve ilaç dışı yöntemlerin birlikte uygulanmasıyla alınır.",
+       "ekran": "**Psikoterapi**: tek başına etkisiz; kombine tedavi gerekir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikoterapi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Farmakolojik tedavi ortalama 6 ay sürmeli"
+        ]
+       },
+       "id": "k2-50-c0040"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b08",
+   "baslik": "Enkoprezis: tanım, ölçütler ve kontrol gelişimi",
+   "paragraflar": [
+    {
+     "id": "k2-50-p010",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "ses": "Konu burada değişiyor: idrar kaçırmayı bırakıp dışkı kaçırmanın karşılığı olan enkoprezise geçiyoruz.",
+       "ekran": "**Yeni konu**: enkoprezis (dışkı kaçırma)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "enkoprezis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Feçesin uygun olmayan yere bırakılması"
+        ]
+       },
+       "id": "k2-50-c0041"
+      },
+      {
+       "ses": "Enkoprezis, dışkının uygun olmayan yerlere istemli ya da istemsiz biçimde bırakılmasıdır.",
+       "ekran": "**Enkoprezis**: dışkıyı uygunsuz yere istemli ya da istemsiz bırakma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemli ya da istemsiz",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Feçesin uygun olmayan yere bırakılması"
+        ]
+       },
+       "id": "k2-50-c0042"
+      },
+      {
+       "ses": "Enkoprezis tanısı için bu durumun en az ayda bir kez ve üç ay boyunca sürmesi, çocuğun kronolojik ya da zihinsel yaşının en az dört olması ve doğrudan tıbbi bir nedene bağlı olmaması gerekir.",
+       "ekran": "**Ölçüt**: ayda bir kez, üç ay, yaş en az dört, tıbbi neden yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ayda bir kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Feçesin uygun olmayan yere bırakılması"
+        ]
+       },
+       "id": "k2-50-c0043"
+      },
+      {
+       "ses": "Yaş ölçütü önemlidir, çünkü tuvalet eğitiminin henüz tamamlanmadığı daha küçük çocuklarda dışkı kaçırma normal gelişimin parçasıdır ve bu tanı konmaz.",
+       "ekran": "**Yaş ölçütü**: tuvalet eğitimi öncesi tanı konmaz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Feçesin uygun olmayan yere bırakılması"
+        ]
+       },
+       "id": "k2-50-c0044"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p011",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "ses": "Barsak ve mesane kontrolü normalde belirli bir sırayla, dört basamakta kazanılır.",
+       "ekran": "**Gelişim**: dört basamakta kazanılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört basamak",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Barsak ve mesane işlevleri üzerine kontrolün gelişimi"
+        ]
+       },
+       "id": "k2-50-c0045"
+      },
+      {
+       "ses": "Önce gece dışkı kontrolü, sonra gündüz dışkı kontrolü, ardından gündüz idrar kontrolü ve en sona gece idrar kontrolü gelişir.",
+       "ekran": "**Sıra**: gece dışkı, gündüz dışkı, gündüz idrar, gece idrar kontrolü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gece idrar kontrolü",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Barsak ve mesane işlevleri üzerine kontrolün gelişimi"
+        ]
+       },
+       "id": "k2-50-c0046"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b09",
+   "baslik": "Enkoprezis: yaygınlık ve etyoloji",
+   "paragraflar": [
+    {
+     "id": "k2-50-p012",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "ses": "Enkoprezis erkeklerde kızlara göre daha sıktır; erkek kız oranı yaklaşık üç dört kat kadardır.",
+       "ekran": "**Yaygınlık**: erkeklerde sık; oran üç dört kat",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç dört",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Enkoprezis erkeklerde daha fazla 3-4/1"
+        ]
+       },
+       "id": "k2-50-c0047"
+      },
+      {
+       "ses": "Enkoprezis sıklıkla dikkat sorunları gibi başka nörogelişimsel tablolarla ve düşük tolerans eşiğiyle birlikte bulunabilir.",
+       "ekran": "**Birliktelik**: dikkat sorunları, nörogelişimsel tablolar, düşük tolerans",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nörogelişimsel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Enkoprezis erkeklerde daha fazla 3-4/1"
+        ]
+       },
+       "id": "k2-50-c0048"
+      },
+      {
+       "ses": "Bu birliktelik, enkoprezisi değerlendirirken çocuğun yalnızca bağırsak işlevine değil, genel gelişimine de bakılması gerektiğini gösterir.",
+       "ekran": "**Yaklaşım**: genel gelişime de bakılmalı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Enkoprezis erkeklerde daha fazla 3-4/1"
+        ]
+       },
+       "id": "k2-50-c0049"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p013",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "ses": "Enkoprezis nedenlerinin başında etkisiz ve yetersiz sfinkter kontrolü gelir.",
+       "ekran": "**Etyoloji**: etkisiz sfinkter kontrolü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sfinkter",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Etkisiz ve yetersiz sfinkter kontrolü"
+        ]
+       },
+       "id": "k2-50-c0050"
+      },
+      {
+       "ses": "Psikojenik megakolonda çocuk dışkısını tutar ve istemli ya da ikincil olarak kabız hale gelir.",
+       "ekran": "**Psikojenik megakolon**: dışkı tutma, kabızlık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikojenik megakolon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Etkisiz ve yetersiz sfinkter kontrolü"
+        ]
+       },
+       "id": "k2-50-c0051"
+      },
+      {
+       "ses": "Dışkılama gereksinimini fark edememe, tuvalete zamanında yetişememe ve biriken dışkının taşmasıyla oluşan taşma inkontinansı da nedenler arasındadır.",
+       "ekran": "**Neden**: gereksinimi fark etmeme, yetişememe, taşma inkontinansı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "taşma inkontinansı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Etkisiz ve yetersiz sfinkter kontrolü"
+        ]
+       },
+       "id": "k2-50-c0052"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p014",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "ses": "Enkoprezis bazen yaşam olaylarının tetiklemesiyle, özellikle gerileme yani regresyona yol açan kardeş doğumu ya da hastaneye yatış gibi durumların ardından ortaya çıkar.",
+       "ekran": "**Tetikleyici**: regresyon; kardeş doğumu, hastaneye yatış",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "regresyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Yaşam olaylarının tetiklemesi, regresyon"
+        ]
+       },
+       "id": "k2-50-c0053"
+      },
+      {
+       "ses": "Bu nedenle çocuğun öyküsünde yakın zamanda yaşanan önemli bir değişiklik olup olmadığı dikkatle sorgulanmalıdır.",
+       "ekran": "**Öykü**: yakın zamandaki yaşam değişiklikleri sorgulanır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Yaşam olaylarının tetiklemesi, regresyon"
+        ]
+       },
+       "id": "k2-50-c0054"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p015",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "ses": "Barsak işlevini aslında kontrol edebilen, ancak normal kıvam ve miktardaki dışkısını bilerek uygunsuz yerlere bırakan çocuklarda genellikle daha ciddi bir ruhsal sorun bulunur.",
+       "ekran": "**Nonretentif**: kontrol var; normal kıvam ve miktardaki dışkıyı uygunsuz yere bırakır; ciddi ruhsal sorun",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "normal kıvam ve miktardaki",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Normal kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklar"
+        ]
+       },
+       "id": "k2-50-c0055"
+      },
+      {
+       "ses": "Nonretentif tipteki bu çocuklara davranım bozukluğu, karşıt olma karşıt gelme bozukluğu ve anne ile çocuk arasında otonomi çatışmaları sıkça eşlik eder.",
+       "ekran": "**Eşlik eden**: davranım bozukluğu, karşıt gelme, otonomi çatışması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "davranım bozukluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Normal kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklar"
+        ]
+       },
+       "id": "k2-50-c0056"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-50-b10",
+   "baslik": "Enkoprezis: klinik tipler, seyir ve tedavi",
+   "paragraflar": [
+    {
+     "id": "k2-50-p016",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "ses": "Enkoprezisin konstipasyonla giden ve konstipasyonun eşlik etmediği olmak üzere iki klinik tipi vardır.",
+       "ekran": "**İki tip**: iki klinik tip; konstipasyonlu ve konstipasyonsuz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "2 tipi vardır: konstipasyonla giden ve konstipasyon olmayan"
+        ]
+       },
+       "id": "k2-50-c0057"
+      },
+      {
+       "ses": "Konstipasyonla giden tipte anormal sfinkter tonusu, anal fissür, agangliyonik megakolon yani Hirschsprung hastalığı ve nörolojik hastalıklar araştırılmalı, bu nedenle çocuk pediatriye yönlendirilmelidir.",
+       "ekran": "**Konstipasyonlu tip**: anal fissür, agangliyonik megakolon (Hirschsprung), nöroloji; pediatriye yönlendir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "agangliyonik megakolon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "2 tipi vardır: konstipasyonla giden ve konstipasyon olmayan"
+        ]
+       },
+       "id": "k2-50-c0058"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p017",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "ses": "Enkoprezis çoğunlukla kendini sınırlayan bir sorundur ve nadiren on üç ile on altı yaş arasındaki orta ergenlik dönemine dek sürer.",
+       "ekran": "**Seyir**: çoğunlukla kendiliğinden düzelir; nadiren on üç ile on altı yaş, orta ergenliğe dek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "on üç ile on altı",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Nadiren orta ergenliğe (13-16 yaş) dek devam eder"
+        ]
+       },
+       "id": "k2-50-c0059"
+      },
+      {
+       "ses": "Tedavide ailenin iş birliği çok önemlidir, çünkü bu çocukların ailelerinde gerginlik yüksektir ve çocuk akranları tarafından sıklıkla dışlanır.",
+       "ekran": "**Tedavi**: aile iş birliği; gerginlik, dışlanma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aile iş birliği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Nadiren orta ergenliğe (13-16 yaş) dek devam eder"
+        ]
+       },
+       "id": "k2-50-c0060"
+      },
+      {
+       "ses": "Bu süreçte çocuğun düşük benlik saygısı ve sürekli reddedilme duygusu da göz önünde tutulmalı, tedavi yalnızca bedensel değil ruhsal boyutuyla da ele alınmalıdır.",
+       "ekran": "**Dikkat**: düşük benlik saygısı, reddedilme duygusu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Nadiren orta ergenliğe (13-16 yaş) dek devam eder"
+        ]
+       },
+       "id": "k2-50-c0061"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p018",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "ses": "Tedavinin temel kuralı evde cezalandırıcı bir ortam oluşturmamak, aile gerginliğini azaltmak ve çocuğun kendi sorumluluğunu almasını sağlamaktır.",
+       "ekran": "**İlke**: cezalandırıcı ortam yok; gerginliği azalt; çocuğa sorumluluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cezalandırıcı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Evde cezalandırıcı bir ortam olmamalı"
+        ]
+       },
+       "id": "k2-50-c0062"
+      }
+     ]
+    },
+    {
+     "id": "k2-50-p019",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "ses": "Davranışçı yaklaşımlar arasında her öğünden sonra tuvalete oturma, lifli diyetin artırılması ve tablo ile ödüllendirme yer alır; ilaç tedavisinin yeri ise tartışmalıdır.",
+       "ekran": "**Davranışçı**: öğün sonrası tuvalet, lifli diyet, ödül; ilaç tartışmalı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lifli diyet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Her öğünden sonra tuvalete oturma, artmış lifli diyet"
+        ]
+       },
+       "id": "k2-50-c0063"
+      },
+      {
+       "ses": "Özetle bu iki dışa atım bozukluğunu gördük: idrar kaçırmanın karşılığı enürezis ve dışkı kaçırmanın karşılığı enkoprezis.",
+       "ekran": "**Özet**: enürezis ve enkoprezis",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "enürezis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Her öğünden sonra tuvalete oturma, artmış lifli diyet"
+        ]
+       },
+       "id": "k2-50-c0064"
+      },
+      {
+       "ses": "Her ikisinde de tanı yaş, sıklık ve süre ölçütlerine dayanır; enüreziste ilaç seçimi imipramin ve desmopressin ile, enkopreziste ise ailenin iş birliği ve davranışçı yöntemlerle şekillenir.",
+       "ekran": "**Bağ**: ortak tanı ölçütleri; enüreziste imipramin, enkopreziste aile ve davranış",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "imipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Her öğünden sonra tuvalete oturma, artmış lifli diyet"
+        ]
+       },
+       "id": "k2-50-c0065"
+      },
+      {
+       "ses": "Bu ayrımları bildiğinizde, primer ile sekonder enürezis ayrımını ve enüreziste ilaç tercih sırasını güvenle çözebilirsiniz.",
+       "ekran": "**Kazanım**: primer-sekonder ayrımı ve ilaç sırası",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "primer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Her öğünden sonra tuvalete oturma, artmış lifli diyet"
+        ]
+       },
+       "id": "k2-50-c0066"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

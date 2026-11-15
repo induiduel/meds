@@ -330,6 +330,18 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Psikiyatri /10)Kişilik Bozuklukları.pdf', name: '10)Kişilik Bozuklukları.pdf', pages: 41, fileId: '1o9JnHhv1IcF8CWDO3WdyVNukO7Ikh_9P' } as SourceFile],
   },
+  // 2026-11-16 DEHB (k2-49, tasarruf kipi): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-49-dikkat-eksikligi-hiperaktivite-bozuklugu': {
+    title: 'Dikkat Eksikliği Hiperaktivite Bozukluğu',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /11)Dikkat Eksikliği Hiperaktivite Bozukluğu.pdf', name: '11)Dikkat Eksikliği Hiperaktivite Bozukluğu.pdf', pages: 18, fileId: '1QcgXnrYC37RB4Ob7a6UC9WGC6mz2l0zf' } as SourceFile],
+  },
+  // 2026-11-16 Dışa Atım Bozuklukları (k2-50, tasarruf kipi): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-50-disa-atim-bozukluklari': {
+    title: 'Dışa Atım Bozuklukları',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /12)Dışa Atım Bozuklukları .pdf', name: '12)Dışa Atım Bozuklukları .pdf', pages: 23, fileId: '1B5-r9jmHPoUy5tP6uxBdXBfBRyKviPA3' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [

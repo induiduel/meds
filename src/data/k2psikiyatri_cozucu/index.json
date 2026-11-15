@@ -50,7 +50,7 @@
    "soru": 21,
    "ornek": 14,
    "cikmis": 7,
-   "ses": false,
+   "ses": true,
    "sayfa": [
     4,
     38
@@ -63,7 +63,7 @@
    "soru": 21,
    "ornek": 14,
    "cikmis": 7,
-   "ses": false,
+   "ses": true,
    "sayfa": [
     8,
     34
@@ -80,6 +80,32 @@
    "sayfa": [
     3,
     41
+   ]
+  },
+  {
+   "kod": "2s15",
+   "no": 11,
+   "baslik": "Dikkat Eksikliği Hiperaktivite Bozukluğu",
+   "soru": 20,
+   "ornek": 18,
+   "cikmis": 2,
+   "ses": true,
+   "sayfa": [
+    2,
+    18
+   ]
+  },
+  {
+   "kod": "2s16",
+   "no": 12,
+   "baslik": "Dışa Atım Bozuklukları",
+   "soru": 21,
+   "ornek": 16,
+   "cikmis": 5,
+   "ses": true,
+   "sayfa": [
+    2,
+    17
    ]
   },
   {

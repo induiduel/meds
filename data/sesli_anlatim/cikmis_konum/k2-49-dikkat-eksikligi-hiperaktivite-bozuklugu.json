@@ -1,0 +1,31 @@
+{
+ "surum": 1,
+ "metinHash": "",
+ "dogrulama": "Ham banka + slayt kanıtı, elle doğrulandı (k2-49, 2026-11-16). 22 adaydan DEHB dersine ait ve slayt kanıtı birebir geçen 2 soru alındı; geri kalanlar (uyum bozukluğu, TSSB, otizm, histriyonik, ilaç yan etkisi vb.) konu dışı ya da slaytta kanıtsız olduğundan atlandı.",
+ "q": [
+  {
+   "id": "d3k2-2018-2019-k4-q67",
+   "kok": "Aşağıdakilerden hangisi dikkat eksikliği hiperaktivite bozukluğu (DEHB) için söylenemez?",
+   "cevap": "Çocukken tanı alan kişilerde büyük olasılıkla erişkin döneminde düzelir",
+   "yil": "2018-2019",
+   "s": 4,
+   "seviye": "dogrudan",
+   "kanit": "Çocukluğunda bu tanıyı alanların %70-80’i ergenlikte de aynı belirtileri gösterirler (s4); Bunların da %50-65’i erişkinlikte de aynı tanıyı alırlar.",
+   "kaynak": "`D3K2 2021-2022-2023.pdf` (2018-2019 Dönem 3 Kurul 2 çıkmış derlemesi), banka kimliği d3k2-2018-2019-k4-q67, examYear 2018-2019, kurul 2.",
+   "dogrulandi": true,
+   "neden": "Doğru (söylenemeyen) şık 'erişkin döneminde düzelir'tir; slayt s4 bozukluğun ergenlik ve erişkinlikte sürdüğünü (%70-80, %50-65) gösterir, yani düzelme beklenmez. Çeldiriciler slaytta geçen gerçek belirtilerdir: eşya kaybetme (s9), akademik başarısızlık/kapasite altı işlev (s12,s15), düşük öz saygı (s11), madde kullanımı (s13)."
+  },
+  {
+   "id": "d3-k2-psi-009",
+   "kok": "Dikkat Eksikliği Hiperaktivite Bozukluğu (DEHB) tanısı için DSM-5 ölçütlerine göre dikkatsizlik veya hiperaktivite/dürtüsellik belirtileri hangi ortam koşulunu karşılamalıdır?",
+   "cevap": "En az 2 ortamda",
+   "yil": "2025-2026",
+   "s": 3,
+   "seviye": "dogrudan",
+   "kanit": "Birden fazla ortamda görülmeli ( hem ev hem okul)",
+   "kaynak": "`Psikiyatri_Kurul2_Cikmis_Sorular.json` (Kurul 2 Psikiyatri çıkmış derlemesi), banka kimliği d3-k2-psi-009, examYear 2025-2026, kurul 2.",
+   "dogrulandi": true,
+   "neden": "Slayt s3 tanı ölçütü olarak belirtilerin 'birden fazla ortamda (hem ev hem okul)' görülmesini ister; bu en az iki ortam demektir. Slayttaki DSM IV ölçütü ile DSM-5'in 'en az iki ortam' koşulu ortam sayısında örtüşür (slayt başlangıç yaşını 7 verir, DSM-5 12 der; ortam ölçütü değişmez)."
+  }
+ ]
+}
