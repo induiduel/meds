@@ -1,11 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 736,
- "baslik": "DEHB ve Dışa Atım dersleri + tüm çözücü sesleri yayında",
+ "onem": 737,
+ "baslik": "DEHB ve Dışa Atım: terim/kısaltma yardımcıları eklendi",
  "maddeler": [
-  "Kurul 2 Psikiyatri — DEHB (k2-49) ve Dışa Atım Bozuklukları (k2-50) sesli dersleri eklendi.",
-  "İki derse 51 ve 53 örnek soru, önem listeleri ve sesli çözücüler eklendi.",
-  "Opioid, Depresyon, Kişilik Bozuklukları, DEHB ve Dışa Atım derslerinin sesli çözücüleri artık sesli (EMA)."
+  "DEHB ve Dışa Atım Bozuklukları derslerine terim ve kısaltma yardımcı katmanları eklendi."
  ],
  "eklenen": [],
  "degisen": [
