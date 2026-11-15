@@ -324,6 +324,12 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Psikiyatri /9)Depresyon.pdf', name: '9)Depresyon.pdf', pages: 41, fileId: '160ZyGIBKdGrGk37o0FwoaMReRlt32OE5' } as SourceFile],
   },
+  // 2026-11-15 Kişilik Bozuklukları (k2-35, tasarruf kipi): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-35-kisilik-bozukluklari': {
+    title: 'Kişilik Bozuklukları',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /10)Kişilik Bozuklukları.pdf', name: '10)Kişilik Bozuklukları.pdf', pages: 41, fileId: '1o9JnHhv1IcF8CWDO3WdyVNukO7Ikh_9P' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [

@@ -1,0 +1,91 @@
+{
+ "surum": 1,
+ "metinHash": "",
+ "dogrulama": "ham belge + slayt kanıtı, elle (E1, 2026-11-15); 30 çıkmış adayından yalnız Kişilik Bozuklukları dersine ait, bankada bulunan ve kanıtı slaytta birebir geçen 7 soru alındı.",
+ "q": [
+  {
+   "id": "bea2e4416c65",
+   "kok": "Gözünde aşırı büyütme ve yerin dibine sokma uçları arasında gidip gelme, gergin ve tutarsız kişilerarası ilişkilerin olması, kimlik karmaşası, yineleyen özkıyımla ilgili davranışlar, girişimler olan, duygudurumda belirgin tepkiselliğe bağlı instabilite gözlenen kişilik bozukluğu hangisidir?",
+   "cevap": "Borderline kişilik bozukluğu",
+   "yil": "2020-2021",
+   "s": 23,
+   "seviye": "dogrudan",
+   "kanit": "İdealleştirme ve değersizleştirme uçları arasında gidip gelen, gergin ve tutarsız ilişkiler",
+   "neden": "Soru kökündeki 'idealleştirme–değersizleştirme uçları', 'tutarsız ilişkiler', 'kimlik karmaşası', 'yineleyen özkıyım' ve 'duygudurumda tepkisellik' ölçütlerinin tümü s23'te borderline tanı ölçütleri olarak birebir sayılır. En güçlü çeldirici histriyonik (dikkat çekme) ve narsistik (büyüklenme); onlarda kendine zarar ve terk edilme çekirdeği yoktur.",
+   "dogrulandi": true,
+   "kaynak": "Soru bankasında doğrulandı (src/data/pastQuestions.json, id bea2e4416c65, konu 'Kişilik Bozuklukları', examYear 2020-2021); kök ve cevap bankadaki kayıtla birebir, kanıt slayt s23'te geçer. Ham sınav derlemesi Dönem 3 Kurul 2 psikiyatri çıkmışları."
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-75",
+   "kok": "Bir kadın, çevresindekilerin kendisiyle ilgilenmediğinden ve ona yardım etmediklerinden yakınmaktadır. Bunu anlatırken bazı yerlerde ağlamaklı olduğu, bazı yerlerde ise yersiz kahkahalar attığı görülmektedir. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+   "cevap": "Histriyonik kişilik bozukluğu",
+   "yil": "2025-2026",
+   "s": 26,
+   "seviye": "dogrudan",
+   "kanit": "Hızla değişen, yüzeysel duygular sergiler",
+   "neden": "Vakadaki 'bir ağlamaklı, bir kahkaha' tablosu s26'daki 'hızla değişen, yüzeysel duygular' ve dikkat çekme ölçütünü gösterir. Çeldirici borderline'da duygu değişimi kişilerarası tetikleyiciye bağlı ve kendine zararla gider; burada ilgi arayışı öndedir.",
+   "dogrulandi": true,
+   "kaynak": "Soru bankasında doğrulandı (src/data/pastQuestions.json, id q-25-26_d_nem_3_kurul_2-75, konu 'Kişilik Bozuklukları', examYear 2025-2026); kök ve cevap bankadaki kayıtla birebir, kanıt slayt s26'te geçer. Ham sınav derlemesi Dönem 3 Kurul 2 psikiyatri çıkmışları."
+  },
+  {
+   "id": "d3-k2-psi-005",
+   "kok": "Sürekli ilgi odağı olma arzusu taşıyan, giyiminde dikkat çekici ve baştan çıkarıcı tarzı benimseyen, duygularını teatral ve abartılı yaşayan, ancak duygusal derinliği sığ ve çabuk değişen kişilik bozukluğu aşağıdakilerden hangisidir?",
+   "cevap": "Histriyonik Kişilik Bozukluğu",
+   "yil": "2025-2026",
+   "s": 26,
+   "seviye": "dogrudan",
+   "kanit": "Kendini dramatize eder, yapmacıktır, duygularını abartarak gösterir",
+   "neden": "Kökteki 'ilgi odağı olma', 'baştan çıkarıcı tarz', 'teatral/abartılı ama sığ duygu' ifadeleri s26 histriyonik ölçütlerinin (ilgi odağı olma, cinsel yönden ayartıcılık, dramatize etme, yüzeysel duygular) birebir karşılığıdır.",
+   "dogrulandi": true,
+   "kaynak": "Soru bankasında doğrulandı (src/data/pastQuestions.json, id d3-k2-psi-005, konu 'Kişilik Bozuklukları', examYear 2025-2026); kök ve cevap bankadaki kayıtla birebir, kanıt slayt s26'te geçer. Ham sınav derlemesi Dönem 3 Kurul 2 psikiyatri çıkmışları."
+  },
+  {
+   "id": "d3k2-2023-2024-h48",
+   "kok": "35 yaşındaki bir kadın, kimsenin onu anlamadığını ve onunla ilgilenmediğini söylüyor. Bunları anlatırken bir ağlıyor bir gülüyor ve yönlendirmeye (telkine) açık olduğu görülüyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+   "cevap": "Histriyonik kişilik bozukluğu",
+   "yil": "2023-2024",
+   "s": 26,
+   "seviye": "dogrudan",
+   "kanit": "Telkine yatkındır; başkalarından ya da durumlardan kolay etkilenir",
+   "neden": "'Telkine açık olma' s26'daki histriyonik ölçüt 7 ile birebir; hızlı değişen yüzeysel duygu (ağlama–gülme) tabloyu tamamlar. Önceki yılın 75 numaralı sorusuyla aynı vakanın başka bir yazımıdır (yineleyen soru).",
+   "dogrulandi": true,
+   "kaynak": "Soru bankasında doğrulandı (src/data/pastQuestions.json, id d3k2-2023-2024-h48, konu 'Kişilik Bozuklukları', examYear 2023-2024); kök ve cevap bankadaki kayıtla birebir, kanıt slayt s26'te geçer. Ham sınav derlemesi Dönem 3 Kurul 2 psikiyatri çıkmışları."
+  },
+  {
+   "id": "past-1790877044869-84754",
+   "kok": "\"Devamlı kendisinden bahsedilmesini ister, başkalarının duygularını anlamaz, empati yapamaz.\" Yukarıda tanımlanan hasta için aşağıdakilerden hangisi en olası tanıdır?",
+   "cevap": "Narsistik kişilik bozukluğu",
+   "yil": "2019-2020",
+   "s": 27,
+   "seviye": "dogrudan",
+   "kanit": "Empati yapamaz",
+   "neden": "Kökteki 'kendinden bahsettirme (büyüklenme/önemlilik)' ve 'empati yapamama' s27 narsistik ölçütlerinin (çok önemli olma duygusu, empati yapamama) birebir karşılığıdır. Antisosyalde vicdan azabı yokluğu, borderline'da terk edilme çekirdeği öndedir.",
+   "dogrulandi": true,
+   "kaynak": "Soru bankasında doğrulandı (src/data/pastQuestions.json, id past-1790877044869-84754, konu 'Kişilik Bozuklukları', examYear 2019-2020); kök ve cevap bankadaki kayıtla birebir, kanıt slayt s27'te geçer. Ham sınav derlemesi Dönem 3 Kurul 2 psikiyatri çıkmışları."
+  },
+  {
+   "id": "d3k2-2024-2025-h39",
+   "kok": "Telepati yapabildiğine inanan ve birilerinin kendisini takip ettiğini düşünen bir kişide en olası kişilik bozukluğu aşağıdakilerden hangisidir?",
+   "cevap": "Şizotipal kişilik bozukluğu",
+   "yil": "2024-2025",
+   "s": 18,
+   "seviye": "dogrudan",
+   "kanit": "Davranışı etkileyen, kültürüyle uyumsuz acayip inanışlar, büyüsel düşünce",
+   "neden": "'Telepati inancı' s18 şizotipal ölçütündeki 'büyüsel düşünce/acayip inanış', 'takip edilme düşüncesi' ise 'kuşkuculuk ya da paranoid düşünce' ölçütüdür. Paranoid KB'de büyüsel düşünce ve algısal yaşantı yoktur; ayrımı bu kurar.",
+   "dogrulandi": true,
+   "kaynak": "Soru bankasında doğrulandı (src/data/pastQuestions.json, id d3k2-2024-2025-h39, konu 'Kişilik Bozuklukları', examYear 2024-2025); kök ve cevap bankadaki kayıtla birebir, kanıt slayt s18'te geçer. Ham sınav derlemesi Dönem 3 Kurul 2 psikiyatri çıkmışları."
+  },
+  {
+   "id": "d3k2-2018-2019-k4-q57",
+   "kok": "19 yaşında bir çocuk anne-babası tarafından küçüklükten bu yana aykırı tutum ve davranışlarının olması, arkadaş çevresi ile geçinmede ve toplumsal kurallara uymada sıkıntı yaşadığı gerekçesiyle psikiyatriste getirilir. Halüsinasyon ve hezeyanı olmadığı, öğretmenlerinin ve ailesinin uyarılarına rağmen tutum ve davranışlarında bir değişim göstermediği anlaşılmaktadır. Yukarıdaki hasta için aşağıdaki",
+   "cevap": "Antisosyal kişilik bozukluğu",
+   "yil": "2018-2019",
+   "s": 21,
+   "seviye": "dogrudan",
+   "kanit": "Tutuklanmaya zemin hazırlayan yinelenen eylemler; yasalara ve toplumsal kurallara uyamama",
+   "neden": "'Küçüklükten beri aykırı tutum, toplumsal kurallara uymada sıkıntı, uyarılara rağmen değişmeme' s21 antisosyal ölçütleriyle (yasalara uymama, 15 yaşından önce davranım bozukluğu) örtüşür. 'Halüsinasyon/hezeyan yok' ibaresi şizofreniyi dışlar; ego-sintonik yapı nedeniyle değişim görülmez.",
+   "dogrulandi": true,
+   "kaynak": "Soru bankasında doğrulandı (src/data/pastQuestions.json, id d3k2-2018-2019-k4-q57, konu 'Kişilik Bozuklukları', examYear 2018-2019); kök ve cevap bankadaki kayıtla birebir, kanıt slayt s21'te geçer. Ham sınav derlemesi Dönem 3 Kurul 2 psikiyatri çıkmışları."
+  }
+ ]
+}
