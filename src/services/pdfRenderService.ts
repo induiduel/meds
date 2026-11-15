@@ -70,6 +70,11 @@ class Cdp {
   on(fn: (m: any) => void) {
     this.listeners.push(fn);
   }
+  /** Dinleyiciyi kaldırır: havuzda Chrome işlemi birden çok isteğe hizmet eder, her isteğin kendi dinleyicisi işi bitince silinmeli (aksi halde dizi sınırsız büyür) */
+  off(fn: (m: any) => void) {
+    const i = this.listeners.indexOf(fn);
+    if (i >= 0) this.listeners.splice(i, 1);
+  }
   waitFor(pred: (m: any) => boolean, ms: number): Promise<any> {
     return new Promise((resolve, reject) => {
       const t = setTimeout(() => reject(new Error('Chrome yanıt vermedi')), ms);
@@ -112,6 +117,59 @@ const launch = async (chrome: string): Promise<{ proc: ChildProcess; dir: string
   return { proc, dir, wsUrl: `ws://127.0.0.1:${port}${wsPath}` };
 };
 
+/**
+ * Isınmış Chrome havuzu: eskiden her istek kendi Chrome işlemini açıp kapatıyordu — işlem açılışı (yüzlerce ms'den
+ * saniyelere) "PDF indirme/yazdırma geç başlıyor" şikâyetinin asıl kök nedeniydi. Artık en çok MAX_PARALLEL kadar
+ * Chrome işlemi kalıcı tutulur; her istek yalnız yeni bir sekme (`Target.createTarget`) açar/kapatır, Chrome
+ * işlemine dokunmaz. BOS_SURE boyunca isteksiz kalan işlem kapatılır (RAM'i boşa tutmamak için); sonraki istek
+ * yeniden açar. Çöken/yanıt vermeyen işlem havuzdan silinir, yerine yenisi açılır.
+ */
+const BOS_SURE = 10 * 60_000;
+interface Havuz { proc: ChildProcess; dir: string; wsUrl: string; ws: WebSocket; cdp: Cdp; mesgul: boolean; bosZaman: number }
+const havuz: Havuz[] = [];
+let bosTemizleyici: ReturnType<typeof setInterval> | null = null;
+
+const havuzSil = (h: Havuz) => {
+  const i = havuz.indexOf(h);
+  if (i >= 0) havuz.splice(i, 1);
+  try { h.ws.close(); } catch {}
+  try { h.proc.kill('SIGKILL'); } catch {}
+  setTimeout(() => fs.rm(h.dir, { recursive: true, force: true }, () => {}), 500);
+};
+
+async function havuzAc(chrome: string): Promise<Havuz> {
+  const { proc, dir, wsUrl } = await launch(chrome);
+  const ws = new WebSocket(wsUrl);
+  await new Promise<void>((resolve, reject) => {
+    ws.addEventListener('open', () => resolve(), { once: true });
+    ws.addEventListener('error', () => reject(new Error('Chrome bağlantısı kurulamadı')), { once: true });
+  });
+  const cdp = new Cdp(ws);
+  const h: Havuz = { proc, dir, wsUrl, ws, cdp, mesgul: false, bosZaman: Date.now() };
+  ws.addEventListener('close', () => havuzSil(h));
+  proc.once('exit', () => havuzSil(h));
+  if (!bosTemizleyici) {
+    bosTemizleyici = setInterval(() => {
+      for (const x of [...havuz]) if (!x.mesgul && Date.now() - x.bosZaman > BOS_SURE) havuzSil(x);
+    }, 60_000);
+  }
+  return h;
+}
+
+/** Kullanılabilir bir Chrome işlemi: boşta olan varsa onu, yoksa (havuz MAX_PARALLEL'in altındaysa) yeni açılanı verir */
+async function havuzAl(chrome: string): Promise<Havuz> {
+  const bos = havuz.find((h) => !h.mesgul);
+  if (bos) { bos.mesgul = true; return bos; }
+  const h = await havuzAc(chrome);
+  h.mesgul = true;
+  havuz.push(h);
+  return h;
+}
+function havuzBirak(h: Havuz) {
+  h.mesgul = false;
+  h.bosZaman = Date.now();
+}
+
 export interface RenderOptions {
   /** Belge başlığı (PDF meta verisi) */
   title?: string;
@@ -120,21 +178,19 @@ export interface RenderOptions {
 const render = async (html: string, _opts: RenderOptions): Promise<Buffer> => {
   const chrome = findChrome();
   if (!chrome) throw Object.assign(new Error('Sunucuda Chrome bulunamadı'), { status: 503 });
-  const { proc, dir, wsUrl } = await launch(chrome);
-  let ws: WebSocket | null = null;
+  const h = await havuzAl(chrome);
+  const cdp = h.cdp;
+  let targetId = '';
+  let agListener: ((m: any) => void) | null = null;
+  let bosListener: ((m: any) => void) | null = null;
   try {
-    ws = new WebSocket(wsUrl);
-    await new Promise<void>((resolve, reject) => {
-      ws!.addEventListener('open', () => resolve(), { once: true });
-      ws!.addEventListener('error', () => reject(new Error('Chrome bağlantısı kurulamadı')), { once: true });
-    });
-    const cdp = new Cdp(ws);
-    const { targetId } = await cdp.send('Target.createTarget', { url: 'about:blank' });
+    // Her istek kendi sekmesinde (target) çalışır: işlem Chrome'un kendisi değil, yalnız bu sekme kapanır.
+    ({ targetId } = await cdp.send('Target.createTarget', { url: 'about:blank' }));
     const { sessionId } = await cdp.send('Target.attachToTarget', { targetId, flatten: true });
     const s = (m: string, p: Record<string, any> = {}) => cdp.send(m, p, sessionId);
 
     // Ağ: yalnız Google Fonts
-    cdp.on((m) => {
+    agListener = (m) => {
       if (m.method !== 'Fetch.requestPaused' || m.sessionId !== sessionId) return;
       let allowed = false;
       try {
@@ -147,17 +203,19 @@ const render = async (html: string, _opts: RenderOptions): Promise<Buffer> => {
         ? s('Fetch.continueRequest', { requestId: m.params.requestId })
         : s('Fetch.failRequest', { requestId: m.params.requestId, errorReason: 'BlockedByClient' })
       ).catch(() => {});
-    });
+    };
+    cdp.on(agListener);
     // Ağ boşta mı: yazı tipi dosyaları yerleşim sırasında istenir, bitene kadar beklenir
     const inflight = new Set<string>();
     let lastActivity = Date.now();
-    cdp.on((m) => {
+    bosListener = (m) => {
       if (m.sessionId !== sessionId) return;
       if (m.method === 'Network.requestWillBeSent') inflight.add(m.params.requestId);
       else if (m.method === 'Network.loadingFinished' || m.method === 'Network.loadingFailed') inflight.delete(m.params.requestId);
       else return;
       lastActivity = Date.now();
-    });
+    };
+    cdp.on(bosListener);
     await s('Network.enable');
     await s('Fetch.enable', { patterns: [{ urlPattern: '*' }] });
     await s('Emulation.setScriptExecutionDisabled', { value: true });
@@ -175,13 +233,10 @@ const render = async (html: string, _opts: RenderOptions): Promise<Buffer> => {
     });
     return Buffer.from(data, 'base64');
   } finally {
-    try {
-      ws?.close();
-    } catch {}
-    try {
-      proc.kill('SIGKILL');
-    } catch {}
-    setTimeout(() => fs.rm(dir, { recursive: true, force: true }, () => {}), 500);
+    if (agListener) cdp.off(agListener);
+    if (bosListener) cdp.off(bosListener);
+    if (targetId) { try { await cdp.send('Target.closeTarget', { targetId }); } catch { havuzSil(h); } }
+    havuzBirak(h);
   }
 };
 

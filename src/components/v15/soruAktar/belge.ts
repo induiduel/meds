@@ -404,7 +404,10 @@ ${a.yaprak === 'kitapcik' && !onizleme ? '' : a.yaprak !== 'tek' ? `.yp>div+div:
 .pg-gv{position:relative;z-index:1;overflow:hidden}
 .pg-serit{height:${SERIT_MM}mm;border-top:.6pt dashed ${R('ayirici')};padding-top:1.4mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;line-height:1.35;color:${R('cozumMetin')};overflow:hidden;position:relative;z-index:1}
 .pg-serit b{color:${R('cevapHarfi')}}
-.pg-alt{min-height:${altYukMm(a).toFixed(2)}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:3mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;line-height:1.35;color:${R('altBilgi')};position:relative;z-index:1;${a.altCizgi ? `border-top:.5pt solid ${R('anahtarKenar')};` : ''}}
+/* Alt bilgi zemini DAİMA transparan: sayfaya sığdırma yanlış ölçerse (örn. yazı tipi uyuşmazlığı) son sorunun
+   altı .pg-gv'nin üstüne taşabilir; alt bilgi opak olsaydı o taşan metnin üstünü kapatıp hatayı gizlerdi. Transparan
+   zeminde taşma görünür kalır (teşhis kolaylaşır) ve alt bilgi metni üst üste bindiğinde de sorunun metni okunur kalır. */
+.pg-alt{min-height:${altYukMm(a).toFixed(2)}mm;display:flex;align-items:flex-end;justify-content:space-between;gap:3mm;font-size:${Math.max(6.5, a.punto * 0.72)}pt;line-height:1.35;color:${R('altBilgi')};position:relative;z-index:1;background:transparent;${a.altCizgi ? `border-top:.5pt solid ${R('anahtarKenar')};` : ''}}
 /* H572: uzun alt metin tek satırda kesilmiyordu; artık en çok ALT_SATIR_EN_COK satıra sarar, ötesi üç noktayla biter */
 .pg-alt>span{flex:1;min-width:0;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:${ALT_SATIR_EN_COK};overflow:hidden}
 .pg-alt>span:nth-child(2){text-align:center}.pg-alt>span:nth-child(3){text-align:right}

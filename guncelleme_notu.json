@@ -1,15 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 728,
- "baslik": "Klinik çıkmışlar tam taranıp eksikler tamamlandı (2. tur)",
+ "onem": 729,
+ "baslik": "Soru dışa aktarıcı: PDF/yazdırma hızlandı, alt bilgi şeffaf",
  "maddeler": [
-  "İlk turda kaçırılan sayfalar bulundu ve işlendi: 15 PDF'in her sayfası tek tek kontrol edildi, 39 sayfalık hiç işlenmemiş bölüm (Halk Sağlığı, FTR, Üroloji, Dahiliye, Nöroloji, Enfeksiyon) ve daha önce çıkarılıp karara bağlanmamış 54 soru tamamlandı; toplam 127 yeni soru + 17 düzeltme daha eklendi (önceki turla birlikte toplam 6662 çıkmış soru).",
-  "Bir kayıtta kurul numarası (3→6) hatalı atanmıştı, düzeltildi; bir soruda kaynakta kesik kalan 5. şık tamamlandı."
+  "Sunucuda PDF üretimi artık ısınmış bir Chrome havuzundan sekme açıp kapatıyor; her istekte sıfırdan Chrome işlemi açılıp kapanmıyor, indirme/yazdırma daha çabuk başlıyor.",
+  "Soru dışa aktarıcıda sayfa altındaki bilgi şeridinin zemini şeffaf yapıldı: bir sığdırma ölçüm hatası olsa bile sorunun metnini kapatmaz, taşma gizlenmek yerine görünür kalır."
  ],
  "eklenen": [],
- "degisen": [],
+ "degisen": [
+  "PDF render servisi (src/services/pdfRenderService.ts): kalıcı Chrome havuzu, istek başına yalnız yeni sekme"
+ ],
  "duzeltilen": [
-  "Dahiliye/Halk Sağlığı/FTR/Üroloji/Nöroloji/Enfeksiyon çıkmış sorularında eksik kalan sayfalar ve kurul ataması"
+  "Soru dışa aktarıcı alt bilgi zemini artık şeffaf (sığdırma hatasında metni kapatmaz)"
  ],
  "silinen": []
 }
