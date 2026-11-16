@@ -188,3 +188,9 @@
   gerçek ÇALIŞMA girdileriyle koşulur (yayınlanmış kopya değil); (f) taşınan her yol `tasinan_yollar.txt`'ye; birim değişince repo kopyası
   da değişir; (g) liste/süpürme Python ile (yerel ayardan bağımsız).
 
+
+## H584 — "patoloji_onem betikleri veriyi bulamıyor; arsiv_yayinla çıkmış konumunda `lib` bulunamayabilir" (2026-11-16)
+- **Belirti:** `patoloji_onem/birlestir.py` ve `dogrula.py` açılışta `scripts/pdf_liste.json` / `scripts/cikmis_pdf.json` için FileNotFoundError; `arsiv_yayinla.cikmis_konum_yerel` `from lib import` yalnız `isle` önceden yüklendiyse çalışıyordu; `dashboard_server.py` geçersiz `\s` kaçışları (SyntaxWarning, gelecekte SyntaxError).
+- **Kök neden:** Betikler eskiden `meds_temp/patoloji_onem/araclar/` kopyasından çalışıyordu (`dirname(dirname(__file__))` = veri klasörü); kod git'e alınınca aynı ifade `scripts/`'i gösterdi (çift kopya kalıntısı, H578 sınıfı). `lib` yolu başka modülün yan etkisine bağlıydı. JS kodu düz Python dizesinde tutuluyordu.
+- **Kalıcı çözüm:** Veri klasörü `PATOLOJI_ONEM_KOK` ya da `meds_temp/patoloji_onem`; `arsiv_yayinla` `scripts/altyapi/agents`'ı kendisi ekler; kaçışlar `\\s`. `patoloji_cozucu/girdi3_hazirla.py`'nin aradığı `girdi2/` hiçbir yerde yok — kullanılmayan eski adım, dokunulmadı.
+- **Önleme kuralı:** Taşıma/temizlikten sonra tüm betikler gerçek yerel içe aktarmayla taranır (`_temizlik/araclar/kum2.py`: depo modüllerini gerçekten yükler, yalnız dış paketleri sahteler); `python3 -W error -m py_compile` uyarıları da hata sayar.

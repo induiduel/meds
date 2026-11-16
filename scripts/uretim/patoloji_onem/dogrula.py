@@ -12,7 +12,7 @@ import kok as _kok  # noqa: E402
 import json, os, re, sys, unicodedata
 sys.path.insert(0, str(_kok.SCRIPTS))
 from turkce_uslup import denetle_yapi as uslup_yapi  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
-W = str(_kok.SCRIPTS)
+W = os.environ.get("PATOLOJI_ONEM_KOK") or str(_kok.PROJE / "meds_temp" / "patoloji_onem")  # çalışma verisi (kod git'te)
 CIK = json.load(open(f'{W}/cikmis_pdf.json'))
 TUR = {'tanim', 'en_sik', 'karakteristik', 'sayi', 'eslesme', 'mekanizma', 'siniflama', 'tuzak', 'tani_tedavi'}
 def norm(s):

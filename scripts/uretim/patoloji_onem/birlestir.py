@@ -9,7 +9,7 @@ if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
 import glob, json, os, re, subprocess, sys
-W = str(_kok.SCRIPTS)
+W = os.environ.get("PATOLOJI_ONEM_KOK") or str(_kok.PROJE / "meds_temp" / "patoloji_onem")  # çalışma verisi (kod git'te)
 OUT = '/home/indu/medsor/meds/src/data/patoloji_onem_k1.json'
 L = {x['kod']: x for x in json.load(open(f'{W}/pdf_liste.json'))}
 C = json.load(open(f'{W}/cikmis_pdf.json'))

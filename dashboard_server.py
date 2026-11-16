@@ -1199,8 +1199,8 @@ HTML_PAGE = """<!DOCTYPE html>
             if (!oldStr) return { oldHtml: '', newHtml: `<span class="bg-emerald-500/30 text-emerald-200 px-1 py-0.5 rounded border border-emerald-500/40">${escapeHtml(newStr)}</span>` };
             if (!newStr) return { oldHtml: `<span class="bg-rose-500/30 text-rose-200 line-through px-1 py-0.5 rounded border border-rose-500/40">${escapeHtml(oldStr)}</span>`, newHtml: '' };
 
-            const oldWords = oldStr.split(/(\s+|[.,;!?()]+)/);
-            const newWords = newStr.split(/(\s+|[.,;!?()]+)/);
+            const oldWords = oldStr.split(/(\\s+|[.,;!?()]+)/);
+            const newWords = newStr.split(/(\\s+|[.,;!?()]+)/);
             const oldSet = new Set(oldWords.map(w => w.trim().toLowerCase()).filter(w => w.length > 0));
             const newSet = new Set(newWords.map(w => w.trim().toLowerCase()).filter(w => w.length > 0));
 

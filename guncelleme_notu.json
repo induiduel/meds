@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 759,
-  "baslik": "Kullanılmayan kod temizlendi",
+  "onem": 760,
+  "baslik": "Hata ayıklama turu",
   "maddeler": [
-    "Kullanılmayan eski bileşenler, servisler ve derleme artıkları kaldırıldı; site davranışı değişmedi."
+    "Arka plan betiklerindeki yol hataları düzeltildi; site davranışı değişmedi."
   ],
   "eklenen": [],
   "degisen": [],

@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 93 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 94 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
 
 ### H1 — Geçiştirici şık açıklaması (2026-10-18)
 - **Kurul 2'de doğrusu:** Her şık (doğru dahil) için kavramın ne olduğu + ne işe yaradığı + bu soruda neden doğru/yanlış olduğu,
@@ -694,6 +694,7 @@
   gerçek ÇALIŞMA girdileriyle koşulur (yayınlanmış kopya değil); (f) taşınan her yol `tasinan_yollar.txt`'ye; birim değişince repo kopyası
   da değişir; (g) liste/süpürme Python ile (yerel ayardan bağımsız).
 
+
 ### H579 — "Oracle'da kok'u import eden her betik çöküyor": kök markerı yalnız geliştirme makinesinde vardı (2026-11-16, dağıtım sonrası canlı sınama)
 - **Önleme kuralı:** Kök çözümü yalnız REPO İÇİNDE izlenen dosyalara dayanır (git'te olmayan, makineye özgü dosya marker olamaz).
   Yol/altyapı değişikliği dağıtıldıktan sonra Oracle'da en az bir zamanlayıcı birimi GERÇEKTEN çalıştırılıp günlüğü okunur; sağlık uç
@@ -706,3 +707,6 @@
 
 ### H583 — "`git add -A` gizli anahtarı ve 600 MB çalışma verisini herkese açık depoya gönderdi" (2026-11-16)
 - **Önleme kuralı:** Toplu commit'te `git add -A` yerine yol listesi; "her şeyi commitle" = izlenen + bilinçli yeni kod/belge, çalışma verisi değil. Sahnelenen yeni dosyalarda ≥5 MB ya da gizli adlı (`anahtar`, `.env`, `key`, `token`, `secret`) dosya kapı tarafından durdurulur.
+
+### H584 — "patoloji_onem betikleri veriyi bulamıyor; arsiv_yayinla çıkmış konumunda `lib` bulunamayabilir" (2026-11-16)
+- **Önleme kuralı:** Taşıma/temizlikten sonra tüm betikler gerçek yerel içe aktarmayla taranır (`_temizlik/araclar/kum2.py`: depo modüllerini gerçekten yükler, yalnız dış paketleri sahteler); `python3 -W error -m py_compile` uyarıları da hata sayar.

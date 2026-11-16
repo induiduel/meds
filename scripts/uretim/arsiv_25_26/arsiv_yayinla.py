@@ -42,6 +42,7 @@ sys.path.insert(0, str(MEDS / "scripts" / "uretim" / "ders_isci"))
 sys.path.insert(0, str(MEDS / "scripts" / "uretim" / "sesli_anlatim"))
 sys.path.insert(0, str(MEDS / "scripts" / "uretim" / "cizim"))
 sys.path.insert(0, str(MEDS / "scripts" / "hat" / "paket"))
+sys.path.insert(0, str(MEDS / "scripts" / "altyapi" / "agents"))  # cikmis_konum_yerel: from lib import (isle'nin yüklenmesine bağlı kalmasın)
 
 
 def json_kilitli_guncelle(yol: Path, varsayilan, guncelle_fn):
