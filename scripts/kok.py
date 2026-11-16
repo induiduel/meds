@@ -6,7 +6,7 @@ Marker dosyaları worktree-güvenlidir (walk-up yalnız üst dizinlere bakar):
 
 - SCRIPTS = meds/scripts   (marker: kok.py — bu dosya)
 - MEDS    = meds/          (marker: server.ts)
-- PROJE   = /home/indu/medsor (marker: PROJE_TANITIMI.md)
+- PROJE   = MEDS.parent (marker YOK — Oracle/Docker'da kök belgeleri bulunmaz, H579)
 
 Kullanım (taşınan betiğin başına):
     import sys; from pathlib import Path as _P
@@ -28,8 +28,13 @@ def _up(marker: str, start: str = __file__) -> Path:
 
 
 SCRIPTS = _up("kok.py")
-MEDS = _up("server.ts")
-PROJE = _up("PROJE_TANITIMI.md")
+try:
+    MEDS = _up("server.ts")
+except RuntimeError:  # server.ts olmayan dağıtım/kopya: scripts/ her zaman meds/ altındadır
+    MEDS = SCRIPTS.parent
+# PROJE marker'a BAĞLANMAZ (H579): PROJE_TANITIMI.md yalnız geliştirme makinesindeki repo-dışı kökte var; Oracle
+# (/home/ubuntu/medsor) ve Docker (/app) onu taşımaz → import anında çöküyordu. Eski kodun parents[3]'ü ile birebir aynı anlam.
+PROJE = MEDS.parent
 
 
 def scripts_koku(start: str = __file__) -> Path:
@@ -41,7 +46,7 @@ def meds_koku(start: str = __file__) -> Path:
 
 
 def proje_koku(start: str = __file__) -> Path:
-    return _up("PROJE_TANITIMI.md", start)
+    return meds_koku(start).parent
 
 
 if __name__ == "__main__":

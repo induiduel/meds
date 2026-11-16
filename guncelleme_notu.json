@@ -1,20 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 748,
-  "baslik": "Altyapı düzeni: betikler amaca göre gruplandı (öğrenci tarafında değişiklik yok)",
+  "onem": 749,
+  "baslik": "Altyapı düzeltmesi: Oracle'da betik kök çözümü (H579)",
   "maddeler": [
-    "Betik klasörü: meds/scripts artık hat/, uretim/, altyapi/, moduller/, kapilar/, arsiv/ gruplarında; harita scripts/HARITA.md.",
-    "Konum-bağımsız kök: betikler kökü scripts/kok.py ile bulur; sabit parents[N] kaldırıldı (taşınsa da yol bozulmaz).",
-    "Çift kopya: son_prova, blok_ozet, tekrar_analizi kodu tek kaynakta (git); çalışma verisi meds_temp'te.",
-    "Dağıtım: Oracle sistem birimleri repo ile eşitlenir; taşınan eski konumlar Oracle'da silinmeden arşive alınır.",
-    "Ölü kod: 64 eski deste betiği ve Kurul 1 üretim artıkları scripts/arsiv altına; tsc ve Oracle gönderiminden çıkarıldı."
+    "kok.py: proje kökü artık sunucuda da bulunur (PROJE = MEDS.parent); Oracle zamanlayıcıları ve sunucu betikleri yeniden çalışıyor."
   ],
   "eklenen": [],
-  "degisen": [
-    "meds/scripts dizin düzeni (eski→yeni yol listesi: deploy/oracle/tasinan_yollar.txt)"
-  ],
+  "degisen": [],
   "duzeltilen": [
-    "son_prova / blok_ozet betiklerinin git kopyasından çalıştırılınca meds/meds yolunu üretmesi"
+    "Oracle'da cümle zamanlaması ve ders yayını betiklerinin kök markerı bulunamadığı için açılışta çökmesi"
   ],
   "silinen": []
 }

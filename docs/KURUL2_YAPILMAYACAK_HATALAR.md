@@ -2701,3 +2701,16 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   taraması; (d) py-dışı göreli atıf yalnız dosyaya-göreli bağlamda değiştirilir, tüm uzantılar (.tsx dahil) listelenir; (e) gerçek kapılar
   gerçek ÇALIŞMA girdileriyle koşulur (yayınlanmış kopya değil); (f) taşınan her yol `tasinan_yollar.txt`'ye; birim değişince repo kopyası
   da değişir; (g) liste/süpürme Python ile (yerel ayardan bağımsız).
+
+### H579 — "Oracle'da kok'u import eden her betik çöküyor": kök markerı yalnız geliştirme makinesinde vardı (2026-11-16, dağıtım sonrası canlı sınama)
+- **Belirti:** c02db09f dağıtımı sağlık 200 ve "BİTTİ" verdi; ama Oracle'da `meds-cumle-zaman` günlüğü `RuntimeError: kök markerı
+  'PROJE_TANITIMI.md' bulunamadı` yazıyordu. Birim "success" görünüyordu (`sh -c '… | grep >> log'` boru hattı çıkış kodunu yutuyor).
+- **Kök neden:** `scripts/kok.py` `PROJE`'yi modül yüklenirken `PROJE_TANITIMI.md` markerıyla arıyordu. Bu dosya yalnız geliştirme
+  makinesindeki repo-DIŞI kökte (/home/indu/medsor) bulunur; Oracle (/home/ubuntu/medsor) ve Docker (/app) taşımaz. Sonuç: `kok`
+  import eden her betik (cumle_zaman, yayinla --sunucu, sunucunun başlattığı Python işleri) import anında çöker. Yerel sınamalar ve
+  kum havuzu bunu gösteremezdi — hepsi markerın olduğu makinede koştu.
+- **Kalıcı çözüm:** `PROJE = MEDS.parent` (eski `parents[3]` ile birebir aynı anlam, marker yok); `MEDS` markerı yoksa `SCRIPTS.parent`.
+  Yerel + Oracle taklidi (kök belgesi yok) + Docker taklidi (server.ts da yok) düzenlerinde sınandı.
+- **Önleme kuralı:** Kök çözümü yalnız REPO İÇİNDE izlenen dosyalara dayanır (git'te olmayan, makineye özgü dosya marker olamaz).
+  Yol/altyapı değişikliği dağıtıldıktan sonra Oracle'da en az bir zamanlayıcı birimi GERÇEKTEN çalıştırılıp günlüğü okunur; sağlık uç
+  noktası ve birim "success" durumu yeterli kanıt değildir (boru hattı çıkış kodunu yutabilir).
