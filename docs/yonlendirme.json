@@ -1,0 +1,1367 @@
+{
+ "_aciklama": "Görev → okunacak dosyalar yönlendirme kataloğu. Sorgu: python3 scripts/altyapi/nereye.py \"<görev>\". Yollar meds/ köküne göredir; --denetle ile doğrulanır.",
+ "gorevler": [
+  {
+   "id": "tam_hat",
+   "ad": "Yeni ders PDF'i / tam içerik hattı",
+   "anahtarlar": [
+    "yeni pdf",
+    "pdf geldi",
+    "pdf eklendi",
+    "tam hat",
+    "icerik iscisi",
+    "tum asamalar",
+    "yeni ders",
+    "drive",
+    "new lecture",
+    "full pipeline",
+    "kosucu",
+    "hazirlik"
+   ],
+   "oku": [
+    {
+     "yol": "docs/KURUL2_DERS_STANDARDI.md",
+     "neden": "Kurul 2+ ders tek standardı"
+    },
+    {
+     "yol": "docs/TAM_HAT_HIZLI_AKIS.md",
+     "neden": "read-once baglam ve aşama sırası"
+    },
+    {
+     "yol": "docs/KURUL_OTOMASYON_EL_KITABI.md",
+     "neden": "aşama aşama işletim talimatı"
+    },
+    {
+     "yol": "docs/KURUL2_YAPILMAYACAK_HATALAR.md",
+     "neden": "tekrarlanmayacak hata dizini"
+    },
+    {
+     "yol": "scripts/hat/tam_hat/mod.py",
+     "neden": "tam/tasarruf aşama listesi"
+    },
+    {
+     "yol": "DEGISIKLIK_KAYDI.md",
+     "neden": "açık işler, çift iş önleme"
+    }
+   ],
+   "kurallar": [
+    "14",
+    "15",
+    "20",
+    "21",
+    "22",
+    "22b",
+    "23",
+    "26",
+    "27",
+    "28",
+    "29"
+   ],
+   "kapilar": [
+    "python3 scripts/hat/tam_hat/kosucu.py <klasor> --ders <key> --mod tam",
+    "python3 scripts/kapilar/kos.py <asama> key=<key> ..."
+   ],
+   "hatalar": [
+    "docs/hatalar/ders_metni_anlatim.md",
+    "docs/hatalar/ders_metni_degerlendirme.md",
+    "docs/hatalar/dagitim_sunucu.md"
+   ]
+  },
+  {
+   "id": "tasarruf",
+   "ad": "Tasarruf kipi tam hat",
+   "anahtarlar": [
+    "tasarruf",
+    "tasarruf modu",
+    "tasarruf kipi",
+    "ucuz",
+    "hizli mod",
+    "economy mode",
+    "cheap mode"
+   ],
+   "oku": [
+    {
+     "yol": "docs/TAM_HAT_HIZLI_AKIS.md",
+     "neden": "§0 tasarruf kipi akışı"
+    },
+    {
+     "yol": "scripts/hat/tam_hat/mod.py",
+     "neden": "hangi katman atlanır"
+    },
+    {
+     "yol": "docs/KURUL2_DERS_STANDARDI.md",
+     "neden": "ders standardı"
+    }
+   ],
+   "kurallar": [
+    "22c",
+    "22b",
+    "20"
+   ],
+   "kapilar": [
+    "python3 scripts/hat/tam_hat/kosucu.py <klasor> --ders <key> --mod tasarruf"
+   ],
+   "hatalar": [
+    "docs/hatalar/ders_metni_anlatim.md"
+   ]
+  },
+  {
+   "id": "kaynak_degerlendirme",
+   "ad": "Kaynak hazırlık: öğrenci notu, hoca sesi, değerlendirme paketi",
+   "anahtarlar": [
+    "ogrenci notu",
+    "hoca sesi",
+    "hoca dokumu",
+    "ses kaydi",
+    "degerlendirme paketi",
+    "hoca vurgu",
+    "transcript",
+    "student notes",
+    "lecturer audio",
+    "ogrenci onem"
+   ],
+   "oku": [
+    {
+     "yol": "docs/KURUL2_DERS_STANDARDI.md",
+     "neden": "girdiler ve kapılar"
+    },
+    {
+     "yol": "docs/OGRENCI_ONEM_YONTEMI.md",
+     "neden": "öğrenci önem birimleri"
+    },
+    {
+     "yol": "docs/HOCA_TAHMIN_REHBERI.md",
+     "neden": "hoca tahmin yazımı"
+    }
+   ],
+   "kurallar": [
+    "21",
+    "28",
+    "29"
+   ],
+   "kapilar": [
+    "python3 scripts/kapilar/kos.py degerlendirme key=<key> pdf=<pdf>",
+    "python3 scripts/uretim/ogrenci_onem/kapi.py <k2-xx>"
+   ],
+   "hatalar": [
+    "docs/hatalar/ders_metni_degerlendirme.md"
+   ],
+   "asama": "kaynak"
+  },
+  {
+   "id": "anlatim_metni",
+   "ad": "Sesli ders anlatım metni yaz/düzelt",
+   "anahtarlar": [
+    "anlatim",
+    "anlatim metni",
+    "sesli ders metni",
+    "metin denetle",
+    "dolgu",
+    "turkce uslup",
+    "narration",
+    "script text",
+    "lecture text"
+   ],
+   "oku": [
+    {
+     "yol": "docs/ANLATIM_KURGU_STANDARDI.md",
+     "neden": "anlatım kurgusu"
+    },
+    {
+     "yol": "docs/TURKCE_USLUP_STANDARDI.md",
+     "neden": "yasak mecaz ve etiketler"
+    },
+    {
+     "yol": "docs/KURUL2_DERS_STANDARDI.md",
+     "neden": "ders standardı"
+    }
+   ],
+   "kurallar": [
+    "14",
+    "21",
+    "28"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/sesli_anlatim/metin_denetle.py <dosya>",
+    "python3 scripts/turkce_uslup.py <dosya>",
+    "python3 scripts/kapilar/kos.py anlatim dizin=<d> sayfalar=<s> key=<key>"
+   ],
+   "hatalar": [
+    "docs/hatalar/ders_metni_anlatim.md"
+   ],
+   "asama": "anlatim"
+  },
+  {
+   "id": "ses_uretim",
+   "ad": "Sesli ders / EMA ses üretimi, cümle-kelime zamanı",
+   "anahtarlar": [
+    "ses",
+    "ses uretimi",
+    "ema",
+    "seslendir",
+    "xtts",
+    "tts",
+    "audio",
+    "voice",
+    "cumle zamani",
+    "kelime zamani",
+    "mp3",
+    "ses kaymasi"
+   ],
+   "oku": [
+    {
+     "yol": "docs/GPU_KULLANIM.md",
+     "neden": "GPU istisnaları, saat/ısı eşikleri"
+    },
+    {
+     "yol": "scripts/uretim/sesli_anlatim/cumle_zaman.py",
+     "neden": "cümle zamanlama"
+    },
+    {
+     "yol": "scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh",
+     "neden": "EMA GPU sarmalayıcı"
+    }
+   ],
+   "kurallar": [
+    "10",
+    "26",
+    "27"
+   ],
+   "kapilar": [
+    "bash scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh scripts/uretim/spot_cozucu/ses.py --brans <brans> <kod>"
+   ],
+   "hatalar": [
+    "docs/hatalar/ses.md"
+   ],
+   "asama": "ses"
+  },
+  {
+   "id": "gpu",
+   "ad": "GPU / yerel model işi",
+   "anahtarlar": [
+    "gpu",
+    "cuda",
+    "rtx",
+    "ollama",
+    "llama",
+    "gpuguard",
+    "ekran karti",
+    "local model",
+    "embedding",
+    "vektor"
+   ],
+   "oku": [
+    {
+     "yol": "docs/GPU_KULLANIM.md",
+     "neden": "tam istisna listesi"
+    },
+    {
+     "yol": "scripts/altyapi/agents/lib.py",
+     "neden": "CPU embed yardımcıları"
+    }
+   ],
+   "kurallar": [
+    "10"
+   ],
+   "kapilar": [
+    "systemctl --user status meds-gpuguard"
+   ],
+   "hatalar": [
+    "docs/hatalar/ses.md",
+    "docs/hatalar/betik_altyapi.md"
+   ]
+  },
+  {
+   "id": "cizim",
+   "ad": "Canlı çizim / çapa / lazer",
+   "anahtarlar": [
+    "cizim",
+    "capa",
+    "lazer",
+    "kontur",
+    "pdf isareti",
+    "imlec",
+    "cizim kayiyor",
+    "drawing",
+    "annotation",
+    "anchor",
+    "laser"
+   ],
+   "oku": [
+    {
+     "yol": "docs/CIZIM_KURALLARI.md",
+     "neden": "§10 çizim kuralları"
+    },
+    {
+     "yol": "scripts/uretim/cizim/TALIMAT_CIZIM.md",
+     "neden": "model talimatı 21-30"
+    },
+    {
+     "yol": "src/components/v15/DersPdfEkranV15.tsx",
+     "neden": "PDF ekranı çizim katmanı"
+    }
+   ],
+   "kurallar": [
+    "17",
+    "18"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/cizim/cizim_kapisi.py <key> --kok <veri koku>"
+   ],
+   "hatalar": [
+    "docs/hatalar/cizim.md",
+    "docs/hatalar/on_yuz_oynatici_ders.md"
+   ],
+   "asama": "capa_cizim"
+  },
+  {
+   "id": "ornek_soru",
+   "ad": "Örnek soru / sesli çözücü / önem listesi",
+   "anahtarlar": [
+    "ornek soru",
+    "soru yaz",
+    "cozucu",
+    "sesli cozucu",
+    "onem listesi",
+    "spot",
+    "sik aciklama",
+    "celdirici",
+    "practice question",
+    "solver",
+    "distractor"
+   ],
+   "oku": [
+    {
+     "yol": "docs/SIK_ACIKLAMA_STANDARDI.md",
+     "neden": "her şık için açıklama"
+    },
+    {
+     "yol": "docs/SORU_USLUBU.md",
+     "neden": "soru kökü üslubu"
+    },
+    {
+     "yol": "docs/HOCA_USLUBU_YONTEMI.md",
+     "neden": "hoca üslubu profili"
+    },
+    {
+     "yol": "scripts/uretim/spot_cozucu/TALIMAT_COZUCU.md",
+     "neden": "çözücü yazım biçimi"
+    }
+   ],
+   "kurallar": [
+    "4",
+    "7",
+    "14",
+    "23",
+    "26",
+    "28",
+    "29"
+   ],
+   "kapilar": [
+    "python3 scripts/kapilar/kos.py ornek_soru dosya=<f> uslup=<u> ders=<d> sayfalar=<s>",
+    "python3 scripts/uretim/spot_cozucu/cozucu_dogrula.py <dosya>",
+    "python3 scripts/sik_aciklama.py <dosya>",
+    "python3 scripts/uretim/hoca_profili/profil_kapisi.py <ornek_sorular.json> --ders <ders>"
+   ],
+   "hatalar": [
+    "docs/hatalar/soru_cozucu.md"
+   ],
+   "asama": "ornek_soru"
+  },
+  {
+   "id": "patoloji_hoca",
+   "ad": "Patoloji hoca soruları + sesli hoca çözücü",
+   "anahtarlar": [
+    "patoloji",
+    "hoca sorulari",
+    "hoca uslubu",
+    "k2patolojihoca",
+    "pathology",
+    "teacher style"
+   ],
+   "oku": [
+    {
+     "yol": "docs/PATOLOJI_HOCA_SORU_MANTIGI.md",
+     "neden": "patoloji soru mantığı v2"
+    },
+    {
+     "yol": "docs/PATOLOJI_SORU_ESLEME_TABLOSU.md",
+     "neden": "soru eşleme tablosu"
+    },
+    {
+     "yol": "scripts/uretim/patoloji_soru_isci/TALIMAT.md",
+     "neden": "işçi talimatı"
+    },
+    {
+     "yol": "docs/HOCA_USLUBU_YONTEMI.md",
+     "neden": "profil okuma"
+    }
+   ],
+   "kurallar": [
+    "25",
+    "26"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/patoloji_soru_isci/dogrula.py sorular.json paket.json",
+    "python3 scripts/uretim/patoloji_soru_isci/cozucu_kur.py dogrula <ders-id>"
+   ],
+   "hatalar": [
+    "docs/hatalar/soru_cozucu.md"
+   ],
+   "asama": "ornek_soru"
+  },
+  {
+   "id": "ara_soru",
+   "ad": "Hocanın sorabileceği soru ara sayfası",
+   "anahtarlar": [
+    "ara soru",
+    "hocanin sorabilecegi",
+    "hocaara",
+    "ara sayfa",
+    "interstitial question"
+   ],
+   "oku": [
+    {
+     "yol": "scripts/uretim/hoca_ara_soru/TALIMAT.md",
+     "neden": "akış ve yazım"
+    },
+    {
+     "yol": "docs/HOCA_TAHMIN_REHBERI.md",
+     "neden": "tahmin satırları"
+    }
+   ],
+   "kurallar": [
+    "7",
+    "26",
+    "27"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/hoca_ara_soru/kur.py dogrula <key> --ses"
+   ],
+   "hatalar": [
+    "docs/hatalar/soru_cozucu.md",
+    "docs/hatalar/on_yuz_oynatici_ders.md"
+   ],
+   "asama": "ornek_soru"
+  },
+  {
+   "id": "cikmis_analiz",
+   "ad": "Ayrıntılı çıkmış analizi (ders analizi)",
+   "anahtarlar": [
+    "cikmis analizi",
+    "ders analizi",
+    "cikmis_analiz",
+    "ne soruldu",
+    "past exam analysis"
+   ],
+   "oku": [
+    {
+     "yol": "docs/KURUL2_DERS_STANDARDI.md",
+     "neden": "çıkmış takipçisi kuralları"
+    },
+    {
+     "yol": "scripts/uretim/ders_analizi/uret.py",
+     "neden": "analiz üretimi ve kapı"
+    }
+   ],
+   "kurallar": [
+    "21",
+    "29"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/ders_analizi/uret.py --dogrula <key>"
+   ],
+   "hatalar": [
+    "docs/hatalar/ders_metni_degerlendirme.md",
+    "docs/hatalar/veri_cikmis.md"
+   ],
+   "asama": "kaynak"
+  },
+  {
+   "id": "ders_icerik",
+   "ad": "Ders içerik paketi (terim, kısaltma, tablo, kart)",
+   "anahtarlar": [
+    "ders icerik",
+    "icerik paketi",
+    "terim",
+    "kisaltma",
+    "tablo",
+    "karsilastirma",
+    "kart",
+    "bilgi paketi",
+    "glossary layer",
+    "content pack"
+   ],
+   "oku": [
+    {
+     "yol": "docs/DERS_ICERIK_BICIMI.md",
+     "neden": "içerik paketi biçimi"
+    },
+    {
+     "yol": "scripts/ders_icerik_uret.py",
+     "neden": "paket üretici"
+    },
+    {
+     "yol": "src/components/v15/DersIcerikV15.tsx",
+     "neden": "ekran"
+    }
+   ],
+   "kurallar": [
+    "23"
+   ],
+   "kapilar": [
+    "python3 scripts/ders_icerik_dogrula.py <key>"
+   ],
+   "hatalar": [
+    "docs/hatalar/ders_metni_terim_kisaltma.md"
+   ],
+   "asama": "ders_icerik"
+  },
+  {
+   "id": "ogren",
+   "ad": "Öğren destesi / etkileşim (ASKIDA)",
+   "anahtarlar": [
+    "ogren",
+    "deste",
+    "etkilesim",
+    "bosluk doldurma",
+    "mini soru",
+    "ders sonu oyun",
+    "learn deck",
+    "interactive",
+    "quiz"
+   ],
+   "oku": [
+    {
+     "yol": "docs/KURALLAR_OGREN_QUIZ.md",
+     "neden": "Öğren/quiz kuralları"
+    },
+    {
+     "yol": "docs/OGREN_ETKILESIM_REHBERI.md",
+     "neden": "etkileşim türleri"
+    },
+    {
+     "yol": "scripts/validate_learning_decks.py",
+     "neden": "deste doğrulayıcı"
+    }
+   ],
+   "kurallar": [
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "9b",
+    "19",
+    "22"
+   ],
+   "kapilar": [
+    "python3 scripts/validate_learning_decks.py"
+   ],
+   "hatalar": [
+    "docs/hatalar/ogren_modul_oyun.md"
+   ],
+   "asama": "ogren_deste"
+  },
+  {
+   "id": "yayin_dagitim",
+   "ad": "Dağıtım / commit / Oracle'a yayın",
+   "anahtarlar": [
+    "dagit",
+    "dagitim",
+    "deploy",
+    "oracle",
+    "yayin",
+    "commit",
+    "push",
+    "canliya",
+    "onem",
+    "guncelleme notu",
+    "release"
+   ],
+   "oku": [
+    {
+     "yol": "deploy/oracle/dagit.sh",
+     "neden": "tek dağıtım yolu"
+    },
+    {
+     "yol": "guncelleme_notu.json",
+     "neden": "onem +1 zorunlu"
+    },
+    {
+     "yol": "deploy/oracle/README.md",
+     "neden": "Oracle dağıtım ayrıntısı"
+    },
+    {
+     "yol": "docs/KURUL_OTOMASYON_EL_KITABI.md",
+     "neden": "yayın aşaması"
+    }
+   ],
+   "kurallar": [
+    "13",
+    "15"
+   ],
+   "kapilar": [
+    "git push origin main && bash deploy/oracle/dagit.sh"
+   ],
+   "hatalar": [
+    "docs/hatalar/dagitim_sunucu.md"
+   ],
+   "asama": "yayin"
+  },
+  {
+   "id": "on_yuz",
+   "ad": "Ön yüz ekranı / bileşen değiştir",
+   "anahtarlar": [
+    "on yuz",
+    "ekran",
+    "bilesen",
+    "tsx",
+    "react",
+    "arayuz",
+    "tasarim",
+    "frontend",
+    "ui",
+    "component",
+    "sayfa duzeni",
+    "v15"
+   ],
+   "oku": [
+    {
+     "yol": "docs/V15_PLAN.md",
+     "neden": "v15 ekran planı"
+    },
+    {
+     "yol": "src/components/v15/DersDetayV15.tsx",
+     "neden": "ders detay ekranı örneği"
+    },
+    {
+     "yol": "docs/V15_EKRAN_DENETIMI.md",
+     "neden": "ekran denetim bulguları"
+    }
+   ],
+   "kurallar": [
+    "12",
+    "16"
+   ],
+   "kapilar": [
+    "npm run lint",
+    "npx vite build"
+   ],
+   "hatalar": [
+    "docs/hatalar/on_yuz_tasarim_tema.md",
+    "docs/hatalar/on_yuz_sayfa_denetimi.md",
+    "docs/hatalar/on_yuz_oynatici_ders.md"
+   ]
+  },
+  {
+   "id": "sesli_oynatici",
+   "ad": "Sesli ders oynatıcı / PDF senkronu",
+   "anahtarlar": [
+    "oynatici",
+    "sesli ders ekrani",
+    "pdf senkron",
+    "takipci",
+    "zoom",
+    "player",
+    "sync",
+    "metin takip"
+   ],
+   "oku": [
+    {
+     "yol": "docs/KURUL2_DERS_STANDARDI.md",
+     "neden": "zoom/metin takipçisi kuralları"
+    },
+    {
+     "yol": "src/components/v15/DersPdfEkranV15.tsx",
+     "neden": "PDF ekranı"
+    },
+    {
+     "yol": "docs/CIZIM_KURALLARI.md",
+     "neden": "çizim zamanlaması"
+    }
+   ],
+   "kurallar": [
+    "18",
+    "27"
+   ],
+   "kapilar": [
+    "npx vite build"
+   ],
+   "hatalar": [
+    "docs/hatalar/on_yuz_oynatici_ders.md",
+    "docs/hatalar/ses.md"
+   ]
+  },
+  {
+   "id": "sunucu_ucu",
+   "ad": "Sunucu ucu (API) ekle/değiştir",
+   "anahtarlar": [
+    "api",
+    "api ucu",
+    "endpoint",
+    "route",
+    "sunucu",
+    "server",
+    "express",
+    "yeni uc",
+    "backend"
+   ],
+   "oku": [
+    {
+     "yol": "docs/API_KATALOG.md",
+     "neden": "mevcut uçlar kataloğu"
+    },
+    {
+     "yol": "server.ts",
+     "neden": "sunucu giriş noktası"
+    },
+    {
+     "yol": "deploy/oracle/SISTEM_MIMARISI.md",
+     "neden": "sistem mimarisi"
+    }
+   ],
+   "kurallar": [
+    "12",
+    "20"
+   ],
+   "kapilar": [
+    "npm run lint",
+    "systemctl --user restart meds-web && curl -s localhost:3000/api/health"
+   ],
+   "hatalar": [
+    "docs/hatalar/dagitim_sunucu.md"
+   ]
+  },
+  {
+   "id": "veritabani",
+   "ad": "Veritabanı / meds-pg",
+   "anahtarlar": [
+    "veritabani",
+    "pg",
+    "postgres",
+    "meds-pg",
+    "sql",
+    "tablo",
+    "db",
+    "database",
+    "kv",
+    "user_data",
+    "sse"
+   ],
+   "oku": [
+    {
+     "yol": "src/services/pgDb.ts",
+     "neden": "pg erişim katmanı"
+    },
+    {
+     "yol": "docs/ORACLE_REALTIME_DATABASE_REHBERI.md",
+     "neden": "NOTIFY/SSE rehberi"
+    },
+    {
+     "yol": "src/services/pgAdminRoutes.ts",
+     "neden": "yönetici DB uçları"
+    },
+    {
+     "yol": "deploy/oracle/db-yonet.sh",
+     "neden": "Oracle DB tüneli"
+    }
+   ],
+   "kurallar": [
+    "12"
+   ],
+   "kapilar": [
+    "npm run lint"
+   ],
+   "hatalar": [
+    "docs/hatalar/dagitim_sunucu.md",
+    "docs/hatalar/yonetim_basarim.md"
+   ]
+  },
+  {
+   "id": "cikmis_soru",
+   "ad": "Çıkmış soru ekle / düzelt",
+   "anahtarlar": [
+    "cikmis",
+    "cikmis soru",
+    "gecmis soru",
+    "past question",
+    "past exam",
+    "cevap anahtari",
+    "examyear",
+    "soru duzelt"
+   ],
+   "oku": [
+    {
+     "yol": "src/data/pastQuestions.json",
+     "neden": "çıkmış soru verisi"
+    },
+    {
+     "yol": "scripts/uretim/cikmis_2627/uret.py",
+     "neden": "yeni yıl çıkmış hattı"
+    },
+    {
+     "yol": "docs/SORU_EKLEME_AJAN_PROMPTU.md",
+     "neden": "soru ekleme talimatı"
+    }
+   ],
+   "kurallar": [
+    "4",
+    "15"
+   ],
+   "kapilar": [
+    "npm run lint"
+   ],
+   "hatalar": [
+    "docs/hatalar/veri_cikmis.md"
+   ]
+  },
+  {
+   "id": "sozluk",
+   "ad": "Sözlük / ansiklopedi / terim",
+   "anahtarlar": [
+    "sozluk",
+    "terim",
+    "ansiklopedi",
+    "glossary",
+    "dictionary",
+    "kisaltma sozlugu",
+    "tanim"
+   ],
+   "oku": [
+    {
+     "yol": "src/data/medical_glossary.json",
+     "neden": "sözlük verisi"
+    },
+    {
+     "yol": "src/data/kisaltma_sozluk.json",
+     "neden": "kısaltma sözlüğü"
+    },
+    {
+     "yol": "src/data/glossary.ts",
+     "neden": "sözlük servisi"
+    },
+    {
+     "yol": "src/data/ansiklopediYukle.ts",
+     "neden": "ansiklopedi yükleyici"
+    }
+   ],
+   "kurallar": [
+    "4",
+    "14"
+   ],
+   "kapilar": [
+    "npx vite build"
+   ],
+   "hatalar": [
+    "docs/hatalar/ders_metni_terim_kisaltma.md",
+    "docs/hatalar/diger.md"
+   ]
+  },
+  {
+   "id": "ek_modul",
+   "ad": "Ek modül (seçmeli ders)",
+   "anahtarlar": [
+    "ek modul",
+    "secmeli",
+    "yuruyus",
+    "kampcilik",
+    "elective",
+    "extra module"
+   ],
+   "oku": [
+    {
+     "yol": "scripts/uretim/ek_modul/TALIMAT.md",
+     "neden": "yazım kuralları"
+    },
+    {
+     "yol": "src/data/ek_moduller/index.json",
+     "neden": "modül dizini"
+    },
+    {
+     "yol": "src/components/v15/ekModul",
+     "neden": "ekranlar"
+    }
+   ],
+   "kurallar": [
+    "10",
+    "30"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/ek_modul/dogrula.py --modul <modul>",
+    "meds/.venv-ocr/bin/python scripts/uretim/ek_modul/pdf_esle.py --modul <modul>"
+   ],
+   "hatalar": [
+    "docs/hatalar/ses.md",
+    "docs/hatalar/on_yuz_oynatici_ders.md"
+   ]
+  },
+  {
+   "id": "llm_betik",
+   "ad": "LLM çağıran betik yaz",
+   "anahtarlar": [
+    "llm",
+    "claude -p",
+    "api cagrisi",
+    "model",
+    "opendesign",
+    "gemini",
+    "groq",
+    "openrouter",
+    "yapay zeka",
+    "ai script"
+   ],
+   "oku": [
+    {
+     "yol": "otomasyon/llm_kilit.py",
+     "neden": "zorunlu elle komut kilidi"
+    },
+    {
+     "yol": "otomasyon/llm/model_sec.py",
+     "neden": "model kimliği seçimi"
+    },
+    {
+     "yol": "docs/ICERIK_MOTORU_V3.md",
+     "neden": "betik→LLM yönlendirmesi"
+    }
+   ],
+   "kurallar": [
+    "20",
+    "31"
+   ],
+   "kapilar": [
+    "MEDS_LLM_ELLE=1 python3 <betik>  # kilitsiz çalışmamalı (çıkış 75)"
+   ],
+   "hatalar": [
+    "docs/hatalar/betik_altyapi.md"
+   ]
+  },
+  {
+   "id": "yeni_betik",
+   "ad": "Yeni betik ekle / betik bul",
+   "anahtarlar": [
+    "yeni betik",
+    "script",
+    "betik",
+    "script ekle",
+    "kok.py",
+    "harita",
+    "nerede betik",
+    "helper script"
+   ],
+   "oku": [
+    {
+     "yol": "scripts/HARITA.md",
+     "neden": "betik grupları ve yerleri"
+    },
+    {
+     "yol": "scripts/kok.py",
+     "neden": "kök bulma (parents[N] yasak)"
+    },
+    {
+     "yol": "deploy/oracle/tasinan_yollar.txt",
+     "neden": "eski→yeni yol"
+    }
+   ],
+   "kurallar": [
+    "10",
+    "20"
+   ],
+   "kapilar": [
+    "python3 scripts/altyapi/betik_haritasi.py"
+   ],
+   "hatalar": [
+    "docs/hatalar/betik_altyapi.md"
+   ]
+  },
+  {
+   "id": "belge",
+   "ad": "Belge ekle / belge bul",
+   "anahtarlar": [
+    "belge",
+    "dokuman",
+    "doc",
+    "docs",
+    "markdown",
+    "harita",
+    "documentation",
+    "rehber"
+   ],
+   "oku": [
+    {
+     "yol": "docs/HARITA.md",
+     "neden": "belge konu haritası"
+    },
+    {
+     "yol": "scripts/altyapi/belge_haritasi.py",
+     "neden": "haritayı üretir"
+    }
+   ],
+   "kurallar": [],
+   "kapilar": [
+    "python3 scripts/altyapi/belge_haritasi.py"
+   ],
+   "hatalar": [
+    "docs/hatalar/diger.md"
+   ]
+  },
+  {
+   "id": "hata_kaydi",
+   "ad": "Hata kaydı yaz (kök neden)",
+   "anahtarlar": [
+    "hata kaydi",
+    "kok neden",
+    "hata defteri",
+    "bug",
+    "postmortem",
+    "yapilmayacak hatalar",
+    "degisiklik kaydi",
+    "root cause"
+   ],
+   "oku": [
+    {
+     "yol": "docs/KURUL2_YAPILMAYACAK_HATALAR.md",
+     "neden": "hata dizini"
+    },
+    {
+     "yol": "DEGISIKLIK_KAYDI.md",
+     "neden": "oturum değişiklik kaydı"
+    },
+    {
+     "yol": "docs/hatalar/diger.md",
+     "neden": "konu dosyası örneği"
+    }
+   ],
+   "kurallar": [
+    "15"
+   ],
+   "kapilar": [
+    "python3 scripts/hat/tam_hat/kural_secici.py --denetle"
+   ],
+   "hatalar": []
+  },
+  {
+   "id": "performans",
+   "ad": "Performans / CSS / donma",
+   "anahtarlar": [
+    "performans",
+    "yavas",
+    "donma",
+    "css",
+    "stil",
+    "kasma",
+    "perf",
+    "slow",
+    "jank",
+    "acilis",
+    "yukleme"
+   ],
+   "oku": [
+    {
+     "yol": "docs/HANTALLIK_KOK_NEDENLERI.md",
+     "neden": "bilinen hantallık kökleri"
+    },
+    {
+     "yol": "scripts/altyapi/perf/yazma_olcum.mjs",
+     "neden": "yazma gecikmesi ölçümü"
+    },
+    {
+     "yol": "scripts/altyapi/perf/sayfa_tarama.mjs",
+     "neden": "rota ekran taraması"
+    }
+   ],
+   "kurallar": [
+    "12"
+   ],
+   "kapilar": [
+    "npx vite build",
+    "node scripts/altyapi/perf/yazma_olcum.mjs"
+   ],
+   "hatalar": [
+    "docs/hatalar/yonetim_basarim.md",
+    "docs/hatalar/on_yuz_tasarim_tema.md"
+   ]
+  },
+  {
+   "id": "yonetim",
+   "ad": "Yönetim paneli (/manage)",
+   "anahtarlar": [
+    "yonetim",
+    "panel",
+    "manage",
+    "admin",
+    "yonetici",
+    "gorunurluk",
+    "console"
+   ],
+   "oku": [
+    {
+     "yol": "docs/YONETIM_V16_PLAN.md",
+     "neden": "v16 panel planı"
+    },
+    {
+     "yol": "docs/YONETIM_V16_KIT.md",
+     "neden": "panel bileşen kiti"
+    },
+    {
+     "yol": "src/components/manage16",
+     "neden": "panel ekranları"
+    }
+   ],
+   "kurallar": [
+    "20",
+    "24"
+   ],
+   "kapilar": [
+    "npm run lint",
+    "npx vite build"
+   ],
+   "hatalar": [
+    "docs/hatalar/yonetim_basarim.md"
+   ]
+  },
+  {
+   "id": "site_haritasi",
+   "ad": "Site haritası / yeni sayfa / adres",
+   "anahtarlar": [
+    "site haritasi",
+    "yeni sayfa",
+    "adres",
+    "rota",
+    "url",
+    "route",
+    "navigation",
+    "kategori",
+    "sayfa ekle"
+   ],
+   "oku": [
+    {
+     "yol": "docs/SITE_HARITASI_KURALLARI.md",
+     "neden": "yeni sayfa ekleme sırası"
+    },
+    {
+     "yol": "src/siteHaritasi.ts",
+     "neden": "adres çeviri tek kaynak"
+    },
+    {
+     "yol": "src/components/merkez/merkezModel.ts",
+     "neden": "merkez modeli"
+    }
+   ],
+   "kurallar": [
+    "16"
+   ],
+   "kapilar": [
+    "npx vite build"
+   ],
+   "hatalar": [
+    "docs/hatalar/on_yuz_sayfa_denetimi.md"
+   ]
+  },
+  {
+   "id": "dis_ajan",
+   "ad": "Dış ajan (Gemini/GPT) tam hat",
+   "anahtarlar": [
+    "dis ajan",
+    "gemini",
+    "gpt",
+    "deepseek",
+    "antigravity",
+    "external agent",
+    "ag-"
+   ],
+   "oku": [
+    {
+     "yol": "docs/DIS_AJAN_YOL_HARITASI.md",
+     "neden": "zorunlu yol haritası"
+    },
+    {
+     "yol": "scripts/hat/tam_hat/dis_ajan/TALIMAT_DIS_AJAN.md",
+     "neden": "ajan görev yönergesi"
+    }
+   ],
+   "kurallar": [
+    "24",
+    "20",
+    "22"
+   ],
+   "kapilar": [
+    "python3 scripts/hat/tam_hat/dis_ajan_kapisi.py <key>"
+   ],
+   "hatalar": [
+    "docs/hatalar/dagitim_sunucu.md"
+   ]
+  },
+  {
+   "id": "hoca_profili",
+   "ad": "Hoca üslubu profili / tahmin",
+   "anahtarlar": [
+    "hoca profili",
+    "uslup analizi",
+    "tahmin",
+    "kazanim haritasi",
+    "teacher profile",
+    "prediction"
+   ],
+   "oku": [
+    {
+     "yol": "docs/HOCA_USLUBU_YONTEMI.md",
+     "neden": "yöntem ve sınırlar"
+    },
+    {
+     "yol": "docs/HOCA_TAHMIN_REHBERI.md",
+     "neden": "tahmin yazımı v5"
+    },
+    {
+     "yol": "scripts/uretim/hoca_profili/profil_oku.py",
+     "neden": "ders üslubu okuma"
+    }
+   ],
+   "kurallar": [
+    "26"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/hoca_profili/profil_oku.py --ders <ders> --konu <konu>"
+   ],
+   "hatalar": [
+    "docs/hatalar/soru_cozucu.md"
+   ]
+  },
+  {
+   "id": "sinav_spot",
+   "ad": "Sınav spotları / sınav asistanı",
+   "anahtarlar": [
+    "sinav spotu",
+    "spot",
+    "sinav asistani",
+    "spotlar",
+    "exam spot",
+    "assistant"
+   ],
+   "oku": [
+    {
+     "yol": "scripts/uretim/sinav_spotlari/dogrula.py",
+     "neden": "spot doğrulayıcı"
+    },
+    {
+     "yol": "docs/SIK_ACIKLAMA_STANDARDI.md",
+     "neden": "Yardım al şık açıklaması"
+    }
+   ],
+   "kurallar": [
+    "14"
+   ],
+   "kapilar": [
+    "python3 scripts/uretim/sinav_spotlari/dogrula.py --kurul2"
+   ],
+   "hatalar": [
+    "docs/hatalar/soru_cozucu.md"
+   ],
+   "asama": "ornek_soru"
+  },
+  {
+   "id": "sunucu_yeniden",
+   "ad": "Yerel sunucu (3000) yeniden başlatma",
+   "anahtarlar": [
+    "restart",
+    "yeniden baslat",
+    "meds-web",
+    "3000",
+    "sunucu acilmiyor",
+    "health",
+    "systemd"
+   ],
+   "oku": [
+    {
+     "yol": "docs/KURUL_OTOMASYON_EL_KITABI.md",
+     "neden": "servis işletimi"
+    }
+   ],
+   "kurallar": [
+    "12"
+   ],
+   "kapilar": [
+    "systemctl --user restart meds-web",
+    "curl -s localhost:3000/api/health"
+   ],
+   "hatalar": [
+    "docs/hatalar/dagitim_sunucu.md"
+   ]
+  },
+  {
+   "id": "model_saglayici",
+   "ad": "Model sağlayıcı / OpenDesign köprüsü",
+   "anahtarlar": [
+    "opendesign",
+    "kopru",
+    "model saglayici",
+    "rota",
+    "8787",
+    "provider",
+    "gateway"
+   ],
+   "oku": [
+    {
+     "yol": "scripts/altyapi/opendesign/rotalar.json",
+     "neden": "rota eşleme tek kaynak"
+    },
+    {
+     "yol": "otomasyon/llm/model_sec.py",
+     "neden": "rol→model seçimi"
+    },
+    {
+     "yol": "src/services/aiProvider.ts",
+     "neden": "site AI sırası"
+    }
+   ],
+   "kurallar": [
+    "31",
+    "20"
+   ],
+   "kapilar": [
+    "bash scripts/altyapi/opendesign/kur.sh --kontrol"
+   ],
+   "hatalar": [
+    "docs/hatalar/betik_altyapi.md"
+   ]
+  },
+  {
+   "id": "ders_pdf",
+   "ad": "Ders PDF'i / yazdır / basım",
+   "anahtarlar": [
+    "ders pdf",
+    "pdf tasarim",
+    "yazdir",
+    "basim",
+    "print",
+    "pdf export",
+    "tasma",
+    "bos sayfa"
+   ],
+   "oku": [
+    {
+     "yol": "docs/DERS_ICERIK_BICIMI.md",
+     "neden": "içerik biçimi"
+    },
+    {
+     "yol": "scripts/kapilar/ders_pdf_kapisi.py",
+     "neden": "ders PDF kapısı"
+    },
+    {
+     "yol": "scripts/kapilar/pdf_basim_kapisi.py",
+     "neden": "basım kapısı"
+    }
+   ],
+   "kurallar": [
+    "23"
+   ],
+   "kapilar": [
+    "python3 scripts/kapilar/ders_pdf_kapisi.py <key>"
+   ],
+   "hatalar": [
+    "docs/hatalar/on_yuz_disa_aktarim.md"
+   ],
+   "asama": "pdf_tasarim"
+  }
+ ]
+}

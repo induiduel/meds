@@ -48,7 +48,9 @@ scripts/
 - Derleme/sınama: `vite/` (splitLearningDecks, surumDosyasi — vite.config.ts buradan import eder) · `design/` (kontrast kapısı) ·
   `perf/` · `cevrimdisi_sinama/` · `v15/` · `fixtures/` · `artifact_studio/` · `claude_eklenti/`
 - Tek dosyalık: `gpu_recovery.sh` (GPU kurtarma) · `rag-yeniden-parcala.mts` (RAG yeniden parçalama)
-- Belgeler: `belge_haritasi.py` → `docs/HARITA.md` (belge eklenince yeniden çalıştır)
+- Belgeler: `belge_haritasi.py` → `docs/HARITA.md` (belge eklenince yeniden çalıştır) · `betik_haritasi.py` → bu dosyanın kök bölümü
+- **Yönlendirme:** `nereye.py "<görev>"` (katalog `docs/yonlendirme.json`, `--denetle` D8'de) · `bag.py kim|ne|etki|yetim <yol>`
+  (içe aktarma + veri + çağrı bağları; önbellek `~/.cache/meds/bag.json`, artımlı)
 
 ## moduller/ — site özellik araçları
 `recall/` (soru havuzu motoru) · `composer/` · `sozluk_v2/` · `diseases/` · `saglik/` · `eval/` (`npm run eval:*`)

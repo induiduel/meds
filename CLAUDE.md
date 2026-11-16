@@ -15,6 +15,8 @@ and an LLM reconstructs the full question grounded on those sources. See README.
 
 UI text, prompts and most comments are Turkish. Keep new user-facing strings Turkish.
 
+
+**Başlarken:** `python3 scripts/altyapi/nereye.py "<görev>"` okunacak dosyaları, kuralları ve kapıları verir; `python3 scripts/altyapi/bag.py kim|etki <yol>` bağımlılıkları (grep yerine). Klasöre özgü kurallar alt klasörlerin kısa `CLAUDE.md`'lerinde.
 ## Commands
 
 - `npm run dev` — backend + Vite middleware on http://localhost:3000 (`PORT` is hardcoded in `server.ts`)
@@ -77,27 +79,7 @@ and may write to `data/*.json`. Check `git status` afterwards and revert uninten
 
 ## Veritabanı (meds-pg) ve canlı yayın
 
-Supabase 2026-10-12'de kaldırıldı. Tek veritabanı `meds-pg` (Postgres 17 + pgvector, `deploy/pg/`); asıl kaynak hâlâ
-`data/*.json`, Postgres sorgulanabilir kopya + RAG vektörleri + canlı yayın kaynağıdır.
-- Sunucu: `src/services/pgDb.ts` (`pgDb.from(...)` Supabase zincir biçimi, `pgDb.rpc`, `pgListen`). Bağlantı `DATABASE_URL`.
-- Tarayıcı veritabanına bağlanmaz: `getSupabaseClient()` → `dbRemoteClient` → `POST /api/db/query` (beyaz liste,
-  yazma yalnız yönetici; `src/services/dbQueryRoute.ts`).
-- Canlı yayın: tablo tetikleyicisi `pg_notify('meds_changes')` (`deploy/pg/sql/realtime.sql`) → server.ts hub
-  (120 ms toplu paket) → SSE `/api/realtime/events`. İstemciden istemciye: `broadcastLiveEvent` / `onLiveEvent`
-  (`POST /api/live/broadcast`, `app:*` olayları). Gidiş-dönüş testi `POST /api/live/ping`.
-- SSE güvenilirliği (2026-10-14): her olay `id: <açılış>-<sıra>` taşır, son 10 dk/2.000 olay halkada; istemci
-  (`realtimeEvents.ts`) yeniden bağlanırken `?lastEventId=` yollar, aradakiler yeniden gelir; telafi edilemezse `resync`
-  → `medsoru:realtime-resync` (havuz, çıkmış, notlar, profil yeniden çekilir). 20 sn'de bir `hb`; istemci 45 sn veri
-  almazsa akışı yeniden kurar. Tek havuz sorusu yazan uçlar `saveQuestionLive(q)` kullanır (meds-pg → `question_updated`
-  / `db_change`); yalnız `saveDatabase()` canlı yayın yapmaz. Ekranda canlı abonelik: `hooks/useLiveEvent.ts`.
-- Kişiler (yönetim › `/manage/kisiler/<anahtar>`): `src/services/peopleInsights.ts` — `POST /api/presence` (cihaz +
-  etkin süre, `user_devices`/`user_usage_daily`), öğrenci yazma uçları ara katmanla `user_events`'e; tetikleyici →
-  yalnız yöneticilere `people_changed`. Şema açılışta kendiliğinden uygulanır (`deploy/pg/sql/user_activity.sql`).
-  `/api/admin/people*` başlık e-postasına GÜVENMEZ: loopback, yöneticinin erişim jetonu ya da `MEDS_PANEL_SECRET`
-  (iki makinenin .env'inde aynı). Yerel panel Oracle hedefindeyken istek yerel sunucudan vekille gider.
-- Şema değişikliği: `deploy/pg/sql/` altına idempotent .sql, iki makinede `docker exec -i meds-pg psql -U meds -d meds < ...`.
-- Cihazdaki eski betikler `127.0.0.1:8000/rest/v1` (PostgREST, `meds-rest`) ile çalışmaya devam eder; Oracle'da yoktur.
-- Yedek: Oracle `meds-pg-yedek.timer` her gece 03:30 → `~/yedek/meds-pg/` (7 gün).
+Ayrıntı (pgDb, SSE, Kişiler, şema, yedek): `src/services/CLAUDE.md`.
 
 ## Retrieval
 
@@ -114,15 +96,7 @@ Hybrid BM25 + vectors (`src/services/vectorSearch.ts`): query → embed service 
 both machines) → meds-pg `match_rag_chunks_bge_m3` (HNSW) → RRF with BM25. Enabled when `MEDS_EMBED_URL` is set
 (`MEDS_VECTOR_SEARCH=0` disables). Older `HYBRID=1` eval (e5): 94/93/41 (w 0.8) vs BM25 96/92/44.
 
-Vector pipeline (2026-10-13): `scripts/altyapi/advanced_ai/rag_vektor_hatti.py` is the only writer of `rag_chunks`
-(`rag_vector_build.py` is a compat wrapper). It reads `data/local_rag_chunks.json`, embeds only new/changed chunks
-through the CPU services (no in-process model), writes meds-pg with COPY, deletes rows no longer in the source, and
-with `--oracle` sends only the diff (id + hashes + vector fingerprint) to Oracle over ssh (gzip). `--denetle` finds and
-repairs bge vectors stored under the wrong chunk. Cron every 3 h on the device. Never restore `rag_chunks` with a full
-dump without re-running `deploy/pg/sql/rag_chunks_indexes.sql` (Oracle lost every index that way → 1.7 s queries).
-SQL functions live in `deploy/pg/sql/rag_vektor_islevleri.sql` (dynamic plpgsql so HNSW is used with/without filters).
-`GET /api/rag/related` (`src/services/ragRelatedRoutes.ts`) uses stored vectors (no embed call): `mod=ilgili` lecture
-material, `benzer` similar questions, `kopya` near-duplicates; `GET /api/rag/vectors/health` shows coverage.
+Vector pipeline (`rag_vektor_hatti.py`, indeks SQL, `/api/rag/related`): `scripts/altyapi/advanced_ai/CLAUDE.md`.
 
 The in-memory BM25 index stores postings as typed arrays (`Int32Array` doc numbers + `Uint16Array` tf); chunks added
 after a rebuild go to a small pending map. The old nested `Map<term, Map<chunkId, tf>>` (~1 GB) made `meds-web` hit the
@@ -149,14 +123,7 @@ after a rebuild go to a small pending map. The old nested `Map<term, Map<chunkId
 
 ## Büyük veri dosyaları (2026-11-16)
 
-Tek-satır dev JSON'lar ripgrep aramasından gizlidir (`.ignore`, `src/data/.ignore`, `data/.ignore`; runtime'a etkisi yok) —
-eskiden tek terim araması 146 MB döndürüyordu. Bunları **asla bütün okuma**; yolu açıkça verip `jq` ile dilimle:
-`src/data/pastQuestions.json` (97 MB), `interactive_learning_decks.json` (85 MB; deste başı okunur kopya derlemede
-`src/data/decks/items/<id>.json`), `sinav_calisma_k1.json`, `lecture_notes.json`, `kazanimlar/k1.json`, `data/local_rag_chunks.json`.
-Örnek: `jq '.[] | select(.id=="X")' src/data/pastQuestions.json`, `jq 'keys' src/data/lecture_notes.json | head`.
-**Desteler tek depodan:** Python `scripts/deste_deposu.py` (`hepsi/oku/duzenle/guncelle/sil`, atomik + kilit), sunucu
-`src/services/desteDeposu.ts` (`desteleriOku/desteOku/desteleriYaz`, içerik katmanı üzerinden). Deste dosyasını doğrudan açan
-yeni kod YAZMA; fiziksel bölme gerekirse yalnız bu iki modülün arka ucu değişir. lecture_notes: etkin yazıcılar `data/lecture_notes.json`'a yazar.
+Ayrıntı (dev JSON'lar, `jq`, deste deposu): `src/data/CLAUDE.md`.
 
 ## Paths
 
@@ -167,15 +134,8 @@ yeni kod YAZMA; fiziksel bölme gerekirse yalnız bu iki modülün arka ucu değ
 
 ## Yeni veri hattı (scripts/altyapi/pipeline/)
 
-Akış: Drive → `meds_downloads` (ham) → `meds_temp` (ara) → `meds_database` (temiz). Kapsam: Dönem 3.
-`00-init` iskelet, `01-inventory` envanter (`_manifest.json`), `02-download` artımlı indirme
-(`_downloads.json` durum; ücretsiz herkese açık indirme, olmazsa `GOOGLE_SERVICE_ACCOUNT_FILE`).
-Eski Supabase verisinin tam dökümleri `meds_temp/yedek/supabase_oncesi_20261012/` altında saklanır (silinmez).
+Ayrıntı: `scripts/altyapi/pipeline/CLAUDE.md`.
 
 ## Faz 14 kullanıcı kuyruğu
 
-Students can send a past question to Faz 14 review; error reports join the same queue. The server owns
-`meds_database_v2/phase14_past_question_editor/kullanici_kuyrugu.json` (`src/services/phase14UserQueue.ts`); the script
-`phase14_cloud_question_editor.py --kullanici-kuyrugu` (free keys only, its own lock) appends results to `kullanici_sonuclari.jsonl`.
-The server applies results with `applyPhase14Review` (same path as admin approval) and e-mails non-admin reporters the old/new
-question (`src/services/phase14Mail.ts`). Reporter e-mails live only in the local queue file — never in question records or the cloud.
+Ayrıntı: `src/services/CLAUDE.md`.

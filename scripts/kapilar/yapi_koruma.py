@@ -51,6 +51,7 @@ ATLA_DIZIN = {"__pycache__", "node_modules", ".git", ".venv", ".venv-ocr"}
 # ---------------------------------------------------------------- D1
 DESTE = "interactive_learning_decks.json"
 D1_IZINLI_DOSYA = {  # destenin tek okuma/yazma noktaları ve katman altyapısı
+    "scripts/altyapi/bag.py",  # bağ haritası: deste dosya adını yalnız veri kenarı eşlemek için anar
     "scripts/deste_deposu.py",
     "src/services/desteDeposu.ts",
     "scripts/icerik_katman.py",
@@ -356,12 +357,16 @@ def d7() -> None:
 def d8() -> None:
     """İki harita üreticisinin --denetle'si (paralel; ölçüm 2026-11-16 ≈0,7 sn)."""
     import subprocess
-    ureticiler = [SCRIPTS / "altyapi" / "betik_haritasi.py", SCRIPTS / "altyapi" / "belge_haritasi.py"]
+    ureticiler = [SCRIPTS / "altyapi" / "betik_haritasi.py", SCRIPTS / "altyapi" / "belge_haritasi.py",
+                  SCRIPTS / "altyapi" / "nereye.py"]
     isler = [(u, subprocess.Popen([sys.executable, str(u), "--denetle"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True))
              for u in ureticiler]
     for u, pr in isler:
         cikti = pr.communicate()[0].strip()
         if pr.returncode:
+            if u.name == "nereye.py":
+                bul("D8", "HATA", "docs/yonlendirme.json", None, "görev kataloğunda kırık yol/kural — python3 scripts/altyapi/nereye.py --denetle")
+                continue
             hedef = "scripts/HARITA.md" if u.name == "betik_haritasi.py" else "docs/HARITA.md"
             bul("D8", "HATA", hedef, None, f"harita bayat — yeniden üret: python3 scripts/altyapi/{u.name}")
 

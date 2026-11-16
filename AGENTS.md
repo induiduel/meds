@@ -8,7 +8,8 @@
 > 3. Kalıcı çözüm ve geleceğe yönelik önleme kuralı
 > mutlaka `docs/KURUL2_YAPILMAYACAK_HATALAR.md` ve `../DEGISIKLIK_KAYDI.md` dosyalarına işlenmelidir. Hiçbir ajan kök nedeni anlamadan yüzeysel geçici yama yapamaz, hatayı geçiştiremez!
 
-Bu klasör MeDSor uygulamasının kodudur. Kurallar tek yerde tutulur:
+Bu klasör MeDSor uygulamasının kodudur. **İşe başlarken:** `python3 scripts/altyapi/nereye.py "<görev>"` (okunacaklar + kapılar);
+bağımlılık sorusu: `python3 scripts/altyapi/bag.py kim|ne|etki <yol>`. Kurallar tek yerde tutulur:
 
 - **`../AGENTS.md`** — içerik, deste, etkileşim ve GPU kuralları (esas belge; çelişkide bu geçerlidir).
 - **`../PROJE_TANITIMI.md`** — amaç, klasör yapısı, veri hattı (downloads → temp → database).

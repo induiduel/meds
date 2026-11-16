@@ -153,3 +153,9 @@ data/sesli_anlatim/.tasima_yedek/
 /cikis/
 /meds_temp/
 /meds_downloads/
+# 2026-11-16: sunucunun çalışırken yazdığı kayıtlar (her işlemde ağacı kirletiyordu; okuyucular yoksa boş varsayılan kullanır)
+data/admin_notifications.json
+data/admin_push_subscriptions.json
+data/drive_check_result.json
+data/ogrenci_drive_envanter.json
+data/content/
