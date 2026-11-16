@@ -96,8 +96,20 @@ def main() -> int:
         KS.uret()
         print("hat başı: aşama özetleri yenilendi (defterden eskiydi)")
     import ders_kilit as DK  # noqa: E402
-    if DK.al(a.ders, "E0-hazırlık", DK._oturum(None)) != 0:
+    # Efemer oturum (koşucu dışında, doğrudan çalıştırma): MEDS_OTURUM yoksa kilidi kimse bırakmaz → sonunda biz bırakırız.
+    # MEDS_OTURUM varsa sahibi koşucudur; kilidi tüm hat boyunca tutar ve yayında (E6) kendisi bırakır — biz dokunmayız.
+    _efemer = "MEDS_OTURUM" not in os.environ
+    _oturum = DK._oturum(None)
+    if DK.al(a.ders, "E0-hazırlık", _oturum) != 0:
         return 3  # başka oturum bu dersi işliyor
+    try:
+        return _govde(a, k, pdf)
+    finally:
+        if _efemer:
+            DK.birak(a.ders, _oturum)  # sızıntıyı önle: efemer oturumun kilidini yalnız kendi aldıysak bırak
+
+
+def _govde(a, k: Path, pdf: Path) -> int:
     from mod import yapilacak
     (k / "mod.json").write_text(json.dumps({"mod": a.mod, "katmanlar": yapilacak(a.mod)}, ensure_ascii=False, indent=1))
     (k / "op").mkdir(exist_ok=True)

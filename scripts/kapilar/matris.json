@@ -1,0 +1,14 @@
+{
+  "_aciklama": "Hat aşaması → kanonik kapı komutu (tek giriş: kos.py). {ad} yer tutucuları kos.py'ye verilen ad=değer çiftlerinden doldurulur. Kullanıcı kararı 2026-11-16: dağınık kapı çağrıları yerine tek dispatcher; alttaki doğrulayıcılar bu matrisin yapı taşlarıdır (silinmez, buradan çağrılır).",
+  "asamalar": {
+    "degerlendirme":  {"kapi": "scripts/ogrenci_drive/degerlendirme_dogrula.py", "arg": ["{key}", "--pdf", "{pdf}"], "gerekli": ["key", "pdf"]},
+    "anlatim":        {"kapi": "scripts/tam_hat/anlatim_kapi.py", "arg": ["{dizin}", "--sayfalar", "{sayfalar}", "--key", "{key}"], "gerekli": ["dizin", "sayfalar", "key"]},
+    "ornek_soru":     {"kapi": "scripts/tam_hat/ornek_soru_kapi.py", "arg": ["{dosya}", "--uslup", "{uslup}", "--ders", "{ders}", "--sayfalar", "{sayfalar}"], "gerekli": ["dosya", "uslup", "ders", "sayfalar"]},
+    "onem":           {"kapi": "scripts/spot_cozucu/onem_dogrula.py", "arg": ["{dosya}"], "gerekli": ["dosya"]},
+    "cozucu":         {"kapi": "scripts/spot_cozucu/cozucu_dogrula.py", "arg": ["{dosya}"], "gerekli": ["dosya"]},
+    "cikmis_analiz":  {"kapi": "scripts/ders_analizi/uret.py", "arg": ["--dogrula", "{key}"], "gerekli": ["key"]},
+    "ders_icerik":    {"kapi": "scripts/ders_icerik_dogrula.py", "arg": ["{key}"], "gerekli": ["key"]},
+    "cizim":          {"kapi": "scripts/cizim/cizim_kapisi.py", "arg": ["{key}", "--kok", "{kok}"], "gerekli": ["key", "kok"]},
+    "ara_soru":       {"kapi": "scripts/hoca_ara_soru/kur.py", "arg": ["dogrula", "{key}", "--ses"], "gerekli": ["key"]}
+  }
+}

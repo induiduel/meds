@@ -21,9 +21,13 @@ PY = sys.executable
 
 def _gate(ad: str, cmd: list[str]) -> list[str]:
     r = subprocess.run(cmd, cwd=KOK, capture_output=True, text=True)
+    out = (r.stdout + "\n" + r.stderr)
+    # Alt kapı çökerse (traceback/exception) çıkış 0 olsa bile HATA say — yoksa "0 HATA" yanılgısı doğar (kullanıcı gözlemi 2026-11-16).
+    if "Traceback (most recent call last)" in out or r.returncode < 0:
+        son = (out.strip().splitlines() or ["(çıktı yok)"])[-1]
+        return [f"[{ad}] alt kapı çöktü (çıkış {r.returncode}): {son[:200]}"]
     if r.returncode == 0:
         return []
-    out = (r.stdout + "\n" + r.stderr)
     satir = [f"[{ad}] {l.strip()}" for l in out.splitlines() if "HATA" in l or "hata" in l.lower()]
     return satir[:40] or [f"[{ad}] çıkış {r.returncode}: {out.strip()[:200]}"]
 

@@ -1,9 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 746,
-  "baslik": "İç hat bütünlüğü: hoca tahmin rehberi izlemeye alındı",
+  "onem": 747,
+  "baslik": "Hat sağlamlığı: deploy kilidi, ders kilidi sızıntısı, tek kapı girişi",
   "maddeler": [
-    "Tam içerik hattı kaynak aşamasının referans verdiği HOCA_TAHMIN_REHBERI.md git'e eklendi (temiz checkout eksikliği giderildi)."
+    "server.ts'teki git-dışı asistan import'u geri alındı (temiz checkout tsc patlaması önlendi).",
+    "hazirlik.py doğrudan çalıştırmada ders kilidini sonunda bırakır (efemer oturum sızıntısı giderildi).",
+    "Tek kapı girişi: scripts/kapilar/kos.py + matris.json (dağınık kapılar tek adla çağrılır).",
+    "ornek_soru kapısı alt kapı traceback'ini artık yutmaz; tasarruf mod filtresi ara-soru talimatını da eler."
   ],
   "eklenen": [],
   "degisen": [

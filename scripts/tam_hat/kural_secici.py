@@ -105,9 +105,11 @@ def uret() -> dict[str, int]:
     return {a: len(l) for a, l in kova.items()}
 
 
-# Yalnız tam modda okunacak (tasarrufta atlanır) belgeler — kullanıcı kararı 2026-11-16: hoca tahmin rehberi
-# sürekli kullanılmasın, tasarruf modunda hiç kullanılmasın (gereksiz token + kanıtsız önem damgası riski).
-YALNIZ_TAM = {"docs/HOCA_TAHMIN_REHBERI.md"}
+# Yalnız tam modda okunacak (tasarrufta atlanır) belgeler — kullanıcı kararı 2026-11-16.
+#  * HOCA_TAHMIN_REHBERI: hoca tahmin katmanı tasarrufta yok (gereksiz token + kanıtsız önem damgası riski).
+#  * hoca_ara_soru/TALIMAT: ara soru katmanı tasarrufta üretilmez (mod.py atlar), ama örnek_soru aşaması iki modda da
+#    çağrıldığından TALIMAT özete sızıyordu — tasarrufta ölü ağırlık, elenir.
+YALNIZ_TAM = {"docs/HOCA_TAHMIN_REHBERI.md", "scripts/hoca_ara_soru/TALIMAT.md"}
 
 
 def oku(asama: str, mod: str = "tam") -> list[str]:
