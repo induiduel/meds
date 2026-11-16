@@ -1,9 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 737,
- "baslik": "DEHB ve Dışa Atım: terim/kısaltma yardımcıları eklendi",
+ "onem": 738,
+ "baslik": "İçerik hattı optimizasyonu: tek hat koşucu + read-once baglam + ders kilidi",
  "maddeler": [
-  "DEHB ve Dışa Atım Bozuklukları derslerine terim ve kısaltma yardımcı katmanları eklendi."
+  "Tam içerik hattı tek kaynaktan (mod.py) koşucu ile; read-once baglam ile tekrar okuma azaltıldı.",
+  "Ders kilidi (atomik, oturum çakışması önleme), kural özeti sıkıştırma, GPU kuralı belgeye taşındı."
  ],
  "eklenen": [],
  "degisen": [

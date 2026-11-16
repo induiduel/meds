@@ -32,7 +32,7 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "_baglam":     ("E1", "betik", "python3 scripts/tam_hat/baglam.py {k} --ders {d} --mod {m}   (read-once: paket→baglam/kaynak.md+sema.md)"),
     "anlatim":     ("E2", "llm", "Anlatım konusma_v2: OKU baglam/kaynak.md + baglam/sema.md (§anlatım) + docs/asama_kurallari/anlatim.md. "
                                  "ÜRET {k}/anlatim/v2/konusma_v2.json. Kapı: konusma_v2 --turet/--dogrula + metin_denetle + turkce_uslup → 0 HATA. Sonra bağımsız denetçi GEÇER."),
-    "ders_ekle":   ("E2", "betik", "sesli_yayinla.py --key {d} --no <N> --baslik <...> --v2 {k}/anlatim/v2 --deck k2p-{d} --pdf-yol/--pdf-ad/--sayfa/--file-id"),
+    "ders_ekle":   ("E2", "şablon", "python3 scripts/ogrenci_drive/sesli_yayinla.py --key {d} --no <N> --baslik \"<konu>\" --v2 {k}/anlatim/v2 --deck k2p-{d} --pdf-yol \"Kurul N/<branş>/<dosya>.pdf\" --pdf-ad \"<dosya>.pdf\" --sayfa <N> --file-id <drive-id>  (ders-özel değerler elle doldurulur; Oracle tüneli 3310 açık olmalı)"),
     "ema_ses":     ("E3", "ses", "EMA ses: ders-ekle kuyruğa koydu → meds-ema (CPU) üretir. Çözücü: ses.py --brans <brans> <kod> (CPU: CUDA_VISIBLE_DEVICES=)."),
     "zaman_isaret": ("E3", "betik", "cumle_zaman.py / kelime_zaman.py (ses sonrası, yalnız yeni klipler)"),
     "cikmis_chip": ("E3", "betik", "cikmis_konum.py --ders {d}  (yayınlı paragraflardan p/c)"),
@@ -91,16 +91,23 @@ def main() -> int:
         if basildi:
             print()
     if a.calistir:
-        print("## Çalıştırılıyor (E0 + baglam)…")
+        # Oturum sahibi koşucudur: kararlı MEDS_OTURUM üret + alt adımlara geçir → kilit tek kimlikle tutulur,
+        # yayın adımında `ders_kilit.py birak {d}` ile bırakılır (runbook E6'da yazılı). Varsa dışarıdan geleni koru.
+        import os
+        env = dict(os.environ)
+        env.setdefault("MEDS_OTURUM", f"kosucu-{a.ders}-{os.getpid()}")
+        print(f"## Çalıştırılıyor (E0 + baglam) · oturum {env['MEDS_OTURUM']}…")
         # Argümanlar liste olarak (shell yok): enjeksiyon riski yok, ders/klasör metakarakterleri yorumlanmaz.
         adimlar = [["python3", "scripts/tam_hat/hazirlik.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod],
                    ["python3", "scripts/tam_hat/baglam.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod]]
         for cmd in adimlar:
             print("$ " + " ".join(cmd))
-            r = subprocess.run(cmd, cwd=KOK)
+            r = subprocess.run(cmd, cwd=KOK, env=env)
             if r.returncode != 0:
                 print(f"DURDU: {cmd[1]} çıkış {r.returncode}", file=sys.stderr)
                 return r.returncode
+        print(f"NOT: ders kilidi oturum '{env['MEDS_OTURUM']}' ile tutuluyor; yayın bitince: "
+              f"MEDS_OTURUM='{env['MEDS_OTURUM']}' python3 scripts/tam_hat/ders_kilit.py birak {a.ders}")
     return 0
 
 

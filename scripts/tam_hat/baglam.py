@@ -46,10 +46,25 @@ def kaynak_md(ders: str, klasor: Path) -> str:
     for b in pk.get("bilgi_paketleri", []):
         md = " · ".join(m.strip()[:140] for m in (b.get("maddeler") or [])[:4])
         L.append(f"[{b.get('id')}] s{b.get('s')} «{b.get('baslik','').strip()[:80]}» — {md}")
-    L.append("\n## Atomlar (damıtılmış gerçekler — anlatım/soru BUNLARDAN kurulur)")
+    L.append("\n## Atomlar (damıtılmış gerçekler — anlatım/soru bunlardan kurulur; kapak/başlık atomu varsa KULLANMA)")
     for a in pk.get("atomik_bilgi_envanteri", {}).get("atomlar", []):
         ck = f" [çıkmış {','.join(a['cikmis'])}]" if a.get("cikmis") else ""
         L.append(f"{a.get('id')} [{a.get('kategori')}] s{a.get('s')}{ck}: {a.get('ifade','').strip()[:200]}")
+    # Hoca vurguları (kural 21 katmanı — baglam'ın ÖNCEDEN düşürdüğü, 2026-11-16 düzeltmesi). Anlatıma girer; çıkmış damgası DEĞİL.
+    hv = pk.get("hoca_vurgulari") or []
+    if hv:
+        L.append("\n## Hoca vurguları (zaman damgalı alıntı — anlatımda dayanak; çıkmış damgası değil)")
+        for v in hv:
+            metin = str(v.get("alinti") or v.get("ifade") or "").strip().replace("\n", " ")
+            L.append(f"s{v.get('s')} t{v.get('t')} [{v.get('tur','')}/{v.get('kategori','')}]: {metin[:220]}")
+    # Öğrenci önem notları (geçen yıl; kural 28). A = çıkmış kanıtlı, B = vurgu/el notu.
+    on = pk.get("ogrenci_notlari") or []
+    if on:
+        L.append("\n## Öğrenci önem notları (geçen yıl — A çıkmış-kanıtlı, B vurgu/el notu; rozet dayanağı)")
+        for n in on:
+            oc = n.get("oncelik") or n.get("birim") or ""
+            metin = str(n.get("hedef") or n.get("not") or n.get("ifade") or "").strip().replace("\n", " ")
+            L.append(f"s{n.get('s')} [{oc}]: {metin[:180]}")
     # Doğrulanmış çıkmışlar
     ckp = pk.get("cikmis", {}).get("kaynak")
     if ckp and (KOK / ckp).exists():
