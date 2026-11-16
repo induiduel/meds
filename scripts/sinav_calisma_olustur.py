@@ -6,7 +6,7 @@ Tüm Kurul 1 derslerinin her konusunun her kazanımı için:
 - Kapsamlı ve öğretici ÖZET KONU ANLATIMI (bilinmesi gereken temel bilgiler, mekanizmalar, sınav tuzakları)
 - EMA seslendiricisi ile uyumlu ses metinleri (kok_ses, secenek_ses, ipucu_ses, siklar_ses, cozum_ses, anlatim_ses)
 - Branş ve çözücü ders kodu eşleşmesi (patoloji, genetik, enfeksiyon, üroloji vb. ve gerçek ses klasörleri)
-- meds/src/data/sinav_calisma_k1.json ve meds/src/data/kazanimlar/k1.json güncellemesi
+- meds_temp/sinav_calisma/sinav_calisma_k1.json (ara dosya) ve meds/src/data/kazanimlar/k1.json güncellemesi
 """
 
 import json
@@ -270,7 +270,9 @@ def main():
     save_json(k1_path, k1_data)
     print(f"K1 kazanımları güncellendi: {k1_path}")
 
-    sinav_calisma_path = DATA_DIR / "sinav_calisma_k1.json"
+    # Ara monolit: yalnız sinav_calisma_bol.py okur → git/src/data dışında (meds_temp).
+    sinav_calisma_path = ROOT / "meds_temp/sinav_calisma/sinav_calisma_k1.json"
+    sinav_calisma_path.parent.mkdir(parents=True, exist_ok=True)
     save_json(sinav_calisma_path, k1_data)
     print(f"Sınav çalışma verisi kaydedildi: {sinav_calisma_path}")
 

@@ -12,6 +12,7 @@ Denetimler (her bulgu dosya:satır ile):
   D6 UYARI  token bütçesi: AGENTS.md / hata defteri / docs/hatalar/*.md / MEMORY.md kelime tavanları
   D7 HATA   scripts/ kökünde HARITA.md'de anılmayan yeni alt dizin
   D9 HATA   sahnelenen yeni dosya gizli adlı (.env, *anahtar*, *secret*, *.pem…) ya da ≥5 MB (H583)
+  D10 UYARI veri_bakim denetle: data/backups+_yedek > 300 MB ya da src/data↔data aynı >5 MB kopya (izin listesi dışı)
   D8 HATA   scripts/HARITA.md kök dosyalar bölümü ya da docs/HARITA.md bayat (üreticilerin --denetle'si; --hizli'de de)
 
 İzin listeleri bu dosyadadır; IZINLI_ESKI listeleri yalnız AZALABİLİR (düzeltilen kalem listeden silinir; artık
@@ -395,6 +396,17 @@ def d9() -> None:
             bul("D9", "HATA", yol, None, f"{boy // 1048576} MB yeni dosya sahnelendi — çalışma verisi/ikili git dışında tutulur")
 
 
+def d10() -> None:
+    """veri_bakim.denetle_bulgular() — yalnız UYARI (çıkış kodunu bozmaz). Arşivleme: veri_bakim.py arsivle."""
+    try:
+        sys.path.insert(0, str(SCRIPTS / "altyapi"))
+        import veri_bakim  # noqa: E402
+        for m in veri_bakim.denetle_bulgular():
+            bul("D10", "UYARI", "data/", None, m)
+    except Exception as e:
+        bul("D10", "UYARI", "scripts/altyapi/veri_bakim.py", None, f"denetim çalışmadı: {e}")
+
+
 def main() -> int:
     argv = sys.argv[1:]
     hizli, js = "--hizli" in argv, "--json" in argv
@@ -404,6 +416,7 @@ def main() -> int:
     d9()
     if not hizli:
         d6()
+        d10()
     d7()
     d8()
     hata = sum(1 for b in bulgular if b["duzey"] == "HATA")

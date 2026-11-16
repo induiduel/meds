@@ -28,6 +28,7 @@ import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import { pgDb } from './pgDb';
+import { veriOlayi } from './veriGunlugu';
 import { loadDeepSeekContributions } from './deepseekDataService.ts';
 import { foldTurkish as foldTrUtil, FastFuzzyVocab } from '../utils/fuzzyMatching.ts';
 import { KIND_LABEL, factPlain, normalizeDisease, sectionTexts, sectionTitle } from './diseaseModel.ts';
@@ -301,7 +302,15 @@ export async function saveLocalChunksToFile(forceImmediate: boolean = false): Pr
       const list = Array.from(memoryChunks.values());
       // Compact JSON without 2-space indentation saves ~35MB disk space and reduces I/O by 80%
       const jsonStr = JSON.stringify(list);
-      await fs.promises.writeFile(LOCAL_CHUNKS_FILE, jsonStr, 'utf-8');
+      // Atomik yazım: aynı dizinde geçici dosya + rename; hata olursa eski dosya yerinde kalır (bayt biçimi aynı: kompakt JSON)
+      const tmp = `${LOCAL_CHUNKS_FILE}.${process.pid}.tmp`;
+      try {
+        await fs.promises.writeFile(tmp, jsonStr, 'utf-8');
+        await fs.promises.rename(tmp, LOCAL_CHUNKS_FILE);
+      } catch (e) {
+        try { await fs.promises.unlink(tmp); } catch { /* yok */ }
+        throw e;
+      }
       console.log(`[LocalRagEngine] 💾 ${list.length} parça diskte güncellendi (${Math.round(jsonStr.length / 1024 / 1024)} MB).`);
     } catch (err: any) {
       console.error('[LocalRagEngine] Yerel parçalar kaydedilemedi:', err.message);
@@ -1578,8 +1587,19 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
     const pqIds = new Set(pq.map((c) => c.id));
     pastQuestionsRunCache = null;
     let pruned = 0;
-    for (const [id, c] of memoryChunks) {
-      if (c.documentType === 'past_question' && !pqIds.has(id)) { memoryChunks.delete(id); pruned++; }
+    // Budama freni: budama yapan tek tür past_question'dır (öteki türler merge ile yalnız eklenir/güncellenir).
+    // Okuyucu [] döndürürse (dosya yok/bozuk) ya da sayı yarıdan fazla düşerse eski parçalar korunur.
+    let oncekiPq = 0;
+    for (const c of memoryChunks.values()) if (c.documentType === 'past_question') oncekiPq++;
+    // Not: merge sonrası sayıldığı için oncekiPq = eski ∪ yeni (eski sayının üst sınırı); kıyas buna göre yapılır.
+    const zorla = process.env.MEDS_RAG_BUDAMA_ZORLA === '1';
+    const frenle = !zorla && (pqIds.size === 0 || (oncekiPq >= 200 && pqIds.size < oncekiPq * 0.5));
+    if (frenle) {
+      veriOlayi('uyari', 'rag-budama', 'past_question budaması durduruldu (yeni parça sayısı şüpheli düşük); eski parçalar korundu', { onceki: oncekiPq, yeni: pqIds.size, kacis: 'MEDS_RAG_BUDAMA_ZORLA=1' });
+    } else {
+      for (const [id, c] of memoryChunks) {
+        if (c.documentType === 'past_question' && !pqIds.has(id)) { memoryChunks.delete(id); pruned++; }
+      }
     }
     if (pruned) console.log(`🧹 Artık gösterilmeyen ${pruned} çıkmış soru parçası dizinden çıkarıldı`);
 

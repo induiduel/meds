@@ -18,3 +18,8 @@ eskiden tek terim araması 146 MB döndürüyordu. Bunları **asla bütün okuma
 **Desteler tek depodan:** Python `scripts/deste_deposu.py` (`hepsi/oku/duzenle/guncelle/sil`, atomik + kilit), sunucu
 `src/services/desteDeposu.ts` (`desteleriOku/desteOku/desteleriYaz`, içerik katmanı üzerinden). Deste dosyasını doğrudan açan
 yeni kod YAZMA; fiziksel bölme gerekirse yalnız bu iki modülün arka ucu değişir. lecture_notes: etkin yazıcılar `data/lecture_notes.json`'a yazar.
+
+## Veri sorgu aracı (2026-11-16)
+`jq`'dan önce: `python3 scripts/altyapi/veri.py bul "<sorgu>" [--tur cikmis|deste|ornek|sozluk|ansiklopedi|hastalik|ozet|not] [--kurul N]`,
+`veri.py al <tür> <id> --kisa`, `veri.py ders <k2-xx>` (dersin tüm katman dosyaları + eksikler). Dizin türetilmiş (`~/.cache/meds/veri.sqlite`).
+Ara/çalışma dosyası buraya yazılmaz (`sinav_calisma_k1.json` → `../meds_temp/sinav_calisma/`). Model: `docs/VERI_MODELI.md`.

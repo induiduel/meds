@@ -9,3 +9,9 @@
 - Sunucu açılışı buraya yazar; sonra `git status` bak, istenmeyen veri değişikliğini geri al.
 - Boş sonuçla veri üzerine yazma; dev dosyaları bütün okuma, `jq` ile dilimle.
 - Çalışma/ara veri `meds_temp/<modül>/`'e, buraya değil. Ayrıntı: `docs/hatalar/dagitim_sunucu.md` (H583).
+
+## Yedek, arşiv, günlük (2026-11-16)
+- Yedek/kalıntı elle silinmez: `python3 scripts/altyapi/veri_bakim.py rapor|arsivle [--uygula]|geri <yol>|denetle` (zstd + sha256 doğrulama,
+  `../_arsiv_veri/MANIFEST.jsonl`). `backups/catalog` ad başına en yeni 3 (sunucu) — tavan `denetle`: backups + _yedek ≤ 300 MB (kapı D10).
+- Günlük `gunluk/veri-*.jsonl` (sunucu, `veriGunlugu.ts`) + `gunluk/betik-*.jsonl` (`scripts/gunluk.py`); oku: `python3 scripts/gunluk.py son --seviye uyari`.
+- Frenler: çıkmış kaydı %10'dan fazla küçülürse yazılmaz (`MEDS_PAST_TOPLU_SIL=1`), RAG çıkmış budaması yarıdan fazla düşüşte durur (`MEDS_RAG_BUDAMA_ZORLA=1`).

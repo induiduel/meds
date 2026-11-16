@@ -17,6 +17,7 @@ import crypto from 'crypto';
 import type express from 'express';
 import { mergeSiblings } from './questionMerge.ts';
 import { resolveContent, writableContent } from './contentOverlay.ts';
+import { veriOlayi } from './veriGunlugu.ts';
 
 type Any = Record<string, any>;
 
@@ -129,10 +130,16 @@ function writeJsonAtomic(file: string, data: any, backupDir: string) {
   fs.renameSync(tmp, target);
   fileCache.delete(target);
   fileCache.delete(current);
-  // Yedek klasörü şişmesin: dosya başına son 10 yedek kalır
+  // Yedek klasörü şişmesin: dosya başına en yeni 3 yedek kalır (24 dosya 582 MB birikmişti).
+  // Yalnız bu işlevin ad kalıbı: <ad>.<ISO zaman damgası>.bak
   const prefix = path.basename(file) + '.';
-  const olds = fs.readdirSync(backupDir).filter((f) => f.startsWith(prefix)).sort();
-  for (const f of olds.slice(0, Math.max(0, olds.length - 10))) fs.unlinkSync(path.join(backupDir, f));
+  const kalip = /^\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z\.bak$/;
+  const olds = fs.readdirSync(backupDir).filter((f) => f.startsWith(prefix) && kalip.test(f.slice(prefix.length))).sort();
+  const silinen: string[] = [];
+  for (const f of olds.slice(0, Math.max(0, olds.length - 3))) {
+    try { fs.unlinkSync(path.join(backupDir, f)); silinen.push(f); } catch { /* yok */ }
+  }
+  if (silinen.length) veriOlayi('bilgi', 'katalog-yedek', `${path.basename(file)} için ${silinen.length} eski yedek silindi`, { silinen });
 }
 
 /** Yalnız izin verilen alanları uygular; dizi alanları virgüllü metinden diziye çevrilir. */

@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 760,
-  "baslik": "Hata ayıklama turu",
+  "onem": 761,
+  "baslik": "Veri güvenliği ve hız altyapısı",
   "maddeler": [
-    "Arka plan betiklerindeki yol hataları düzeltildi; site davranışı değişmedi."
+    "Veri güvenliği: soru ve içerik kayıtları yanlışlıkla boşalmaya karşı ek korumalarla yazılıyor",
+    "Altyapı: yedekler sıkıştırılarak arşivlendi, sunucu veri günlüğü tutuyor; site davranışı değişmedi"
   ],
   "eklenen": [],
   "degisen": [],

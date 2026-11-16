@@ -2,7 +2,8 @@
 
 - `kos.py` + `matris.json`: aşama → kapı komutu eşlemesi (tek giriş).
 - `yapi_koruma.py`: D1 deste deposu, D2 `parents[N]`, D3 taşınan yollar, D4 hata dizini, D5 src/data yazımı, D6 token bütçesi,
-  D7 HARITA'sız alt dizin, D8 haritalar bayat, D9 gizli/≥5 MB sahneleme. Pre-commit `.githooks/pre-commit` (`--hizli`).
+  D7 HARITA'sız alt dizin, D8 haritalar bayat, D9 gizli/≥5 MB sahneleme, D10 (UYARI) veri bakımı: `data/backups`+`_yedek` >300 MB ya da src/data↔data aynı >5 MB kopya
+  (`scripts/altyapi/veri_bakim.py denetle`; izin listesi yalnız azalır). Pre-commit `.githooks/pre-commit` (`--hizli`).
 - `ders_pdf_kapisi.py`, `pdf_basim_kapisi.py`.
 
 ## Kurallar

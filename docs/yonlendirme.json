@@ -346,6 +346,10 @@
     {
      "yol": "scripts/uretim/spot_cozucu/TALIMAT_COZUCU.md",
      "neden": "çözücü yazım biçimi"
+    },
+    {
+     "yol": "scripts/altyapi/veri.py",
+     "neden": "içerik verisini az tokenla sorgula (ders manifesti, bul/al)"
     }
    ],
    "kurallar": [
@@ -462,6 +466,10 @@
     {
      "yol": "scripts/uretim/ders_analizi/uret.py",
      "neden": "analiz üretimi ve kapı"
+    },
+    {
+     "yol": "scripts/altyapi/veri.py",
+     "neden": "içerik verisini az tokenla sorgula (ders manifesti, bul/al)"
     }
    ],
    "kurallar": [
@@ -504,6 +512,10 @@
     {
      "yol": "src/components/v15/DersIcerikV15.tsx",
      "neden": "ekran"
+    },
+    {
+     "yol": "scripts/altyapi/veri.py",
+     "neden": "içerik verisini az tokenla sorgula (ders manifesti, bul/al)"
     }
    ],
    "kurallar": [
@@ -765,6 +777,10 @@
     {
      "yol": "deploy/oracle/db-yonet.sh",
      "neden": "Oracle DB tüneli"
+    },
+    {
+     "yol": "scripts/altyapi/veri.py",
+     "neden": "içerik verisini az tokenla sorgula (ders manifesti, bul/al)"
     }
    ],
    "kurallar": [
@@ -803,6 +819,10 @@
     {
      "yol": "docs/SORU_EKLEME_AJAN_PROMPTU.md",
      "neden": "soru ekleme talimatı"
+    },
+    {
+     "yol": "scripts/altyapi/veri.py",
+     "neden": "içerik verisini az tokenla sorgula (ders manifesti, bul/al)"
     }
    ],
    "kurallar": [
@@ -844,6 +864,10 @@
     {
      "yol": "src/data/ansiklopediYukle.ts",
      "neden": "ansiklopedi yükleyici"
+    },
+    {
+     "yol": "scripts/altyapi/veri.py",
+     "neden": "içerik verisini az tokenla sorgula (ders manifesti, bul/al)"
     }
    ],
    "kurallar": [

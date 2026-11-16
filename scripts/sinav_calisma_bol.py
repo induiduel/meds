@@ -2,7 +2,7 @@
 """
 Sınav Çalışması verisini sayfanın yükleyebileceği küçük parçalara böler.
 
-Girdi : src/data/sinav_calisma_k1.json   (sinav_calisma_olustur.py üretir, ~38 MB — pakete GİRMEZ)
+Girdi : <PROJE>/meds_temp/sinav_calisma/sinav_calisma_k1.json (eski: src/data/…)   (sinav_calisma_olustur.py üretir, ~38 MB — pakete GİRMEZ)
 Çıktı : src/data/sinav_calisma/k1/index.json        ders → konu → kazanım özeti (soru sayıları, zorluk dağılımı)
         src/data/sinav_calisma/k1/<ders>-<konu>.json   o konunun kazanım ayrıntısı + soruları (açılınca yüklenir)
 
@@ -15,8 +15,18 @@ import re
 import shutil
 from pathlib import Path
 
-MEDS = Path(__file__).resolve().parent.parent
-KAYNAK = MEDS / "src/data/sinav_calisma_k1.json"
+import sys as _sys
+_s = Path(__file__).resolve()
+while not (_s / "kok.py").exists() and _s != _s.parent:
+    _s = _s.parent
+_sys.path.insert(0, str(_s))
+import kok as _kok  # noqa: E402
+
+MEDS = _kok.MEDS
+# Ara monolit (yalnız olustur → bol arası) git ve src/data dışında; eski yol yalnız geri dönüş (taşınana dek).
+KAYNAK_YENI = _kok.PROJE / "meds_temp/sinav_calisma/sinav_calisma_k1.json"
+KAYNAK_ESKI = MEDS / "src/data/sinav_calisma_k1.json"
+KAYNAK = KAYNAK_ESKI if (not KAYNAK_YENI.exists() and KAYNAK_ESKI.exists()) else KAYNAK_YENI
 HEDEF = MEDS / "src/data/sinav_calisma/k1"
 HARFLER = "ABCDE"
 

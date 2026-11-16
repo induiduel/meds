@@ -1,4 +1,5 @@
 import express from 'express';
+import { veriOlayi } from './src/services/veriGunlugu';
 import { dersIsciRouter } from './src/services/dersIsciProxy';
 import { dersIsciEkRouter } from './src/services/dersIsciEkRoutes';
 import { dersRevizeRouter } from './src/services/dersRevizeRoutes';
@@ -2661,6 +2662,14 @@ function getPastQuestionsDb(): any[] {
 
 function savePastQuestionsDb(list: any[]) {
   try {
+    // Boşla/toplu ezme freni: boş dizi ya da mevcut sayının %90'ının altı (mevcut ≥ 100) reddedilir.
+    // Bilerek toplu silme: MEDS_PAST_TOPLU_SIL=1
+    const mevcut = cachedPastQuestionsDb ? cachedPastQuestionsDb.length : 0;
+    const yeniSayi = Array.isArray(list) ? list.length : 0;
+    if (process.env.MEDS_PAST_TOPLU_SIL !== '1' && (yeniSayi === 0 || (mevcut >= 100 && yeniSayi < mevcut * 0.9))) {
+      veriOlayi('hata', 'cikmis-kayit', 'pastQuestions yazımı reddedildi (boş ya da şüpheli düşük kayıt sayısı)', { mevcut, yeni: yeniSayi, kacis: 'MEDS_PAST_TOPLU_SIL=1' });
+      return;
+    }
     const deletedSet = getDeletedPastQuestions();
     const cleanList = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
     cachedPastQuestionsDb = cleanList;

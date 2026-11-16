@@ -51,12 +51,14 @@ scripts/
 - Belgeler: `belge_haritasi.py` → `docs/HARITA.md` (belge eklenince yeniden çalıştır) · `betik_haritasi.py` → bu dosyanın kök bölümü
 - **Yönlendirme:** `nereye.py "<görev>"` (katalog `docs/yonlendirme.json`, `--denetle` D8'de) · `bag.py kim|ne|etki|yetim <yol>`
   (içe aktarma + veri + çağrı bağları; önbellek `~/.cache/meds/bag.json`, artımlı)
+- **Veri sorgusu:** `veri.py ders|bul|al|liste|say|kur|--denetle` (çıkmış/deste/örnek/sözlük/ansiklopedi/hastalık/özet/not/anlatım; FTS5 önbelleği `~/.cache/meds/veri.sqlite`, artımlı)
+- **Veri bakımı:** `veri_bakim.py rapor|arsivle [--uygula]|geri <yol>|denetle` (yedek kalıntısı → `_arsiv_veri/` zstd, sha256 doğrulamalı; D10) · günlük `scripts/gunluk.py son|ozet`
 
 ## moduller/ — site özellik araçları
 `recall/` (soru havuzu motoru) · `composer/` · `sozluk_v2/` · `diseases/` · `saglik/` · `eval/` (`npm run eval:*`)
 
 <!-- kok-dosyalar:bas -->
-## Kök dosyalar (77) — otomatik: `python3 scripts/altyapi/betik_haritasi.py`
+## Kök dosyalar (78) — otomatik: `python3 scripts/altyapi/betik_haritasi.py`
 
 **Kapılar / doğrulayıcılar** (10)
 - `audit-and-disconnect-faulty-slides.mjs` — MeDSor Slayt İlişkisi Denetim ve Hatalı İlişkileri Kesme Scripti (Script 1)
@@ -133,10 +135,11 @@ scripts/
 - `rebuild-all-past-questions.mjs` — meds_sorular_txt'ten tüm çıkmış soru verisini yeniden kurar
 - `slide-matching-utils.mjs` — MeDSor Slayt Eşleştirme ve Denetim Yardımcı Modülü
 
-**Diğer** (12)
+**Diğer** (13)
 - `automation-runner.mjs` — MeDSor Central Script & Automation Runner Engine
 - `deck_pdf_slide_duzeltme.json` — deste ↔ PDF slayt eşleme düzeltmeleri (build_deck_pdf_sources girdisi)
 - `fast_hybrid_server.py` — MeDSor Low-Latency Hybrid Serving API — FastAPI + DuckDB (cursor-per-request).
+- `gunluk.py` — Ortak betik günlüğü (yalnız stdlib; asla istisna fırlatmaz).
 - `kok.py` — konum-bağımsız kök yolları: SCRIPTS / MEDS / PROJE
 - `manage-service.ps1` — Windows: otomasyon servisini kur/başlat/durdur/durum (eski)
 - `manage-service.sh` — manage-service.ps1'in Linux karşılığı.
