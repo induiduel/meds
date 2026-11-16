@@ -148,6 +148,17 @@ if [[ -d "$MEDS_DIR/data/son_prova/pdf" ]]; then
   echo "  son_prova/pdf: $n dosya"
 fi
 
+# Ders PDF'leri (git dışı; meds_downloads/drive_root). lecturePdfLocator bunları Oracle'da indeksler; yoksa sesli derste
+# "Bu dersin PDF dosyası sunucuda yok" → "Drive'da aç" yedeğine düşer (2026-11-16). Artımlı: yalnız yeni/değişen PDF gider.
+DRIVE_ROOT="${MEDS_DRIVE_ROOT:-/home/indu/medsor/meds_downloads/drive_root}"
+if [[ -d "$DRIVE_ROOT" ]]; then
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "sudo mkdir -p /home/ubuntu/medsor/meds_downloads/drive_root && sudo chown -R ubuntu:ubuntu /home/ubuntu/medsor/meds_downloads/drive_root"
+  n=$(rsync -az --checksum --rsync-path='sudo rsync' --chown=ubuntu:ubuntu --out-format='%i %n' -e "$SSH" \
+    --include='*/' --include='*.pdf' --exclude='*' \
+    "$DRIVE_ROOT/" "$ORACLE_USER@$ORACLE_HOST:/home/ubuntu/medsor/meds_downloads/drive_root/" | grep -c '^>f' || true)
+  echo "  drive_root ders PDF: $n dosya"
+fi
+
 if grep -qE '^(package(-lock)?\.json|deploy/oracle/(Dockerfile\.oracle|docker-compose\.oracle\.yml))$' "$CHANGED"; then DO_IMAGE=1; fi
 # Sunucunun belleğe aldığı her şey: dist/, public/, ön yüz bileşenleri, belgeler dışındaki her değişiklik
 NEED_RESTART=$FORCE
