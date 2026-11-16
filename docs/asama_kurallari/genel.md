@@ -1,6 +1,6 @@
 # Aşama kuralları — genel
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 23 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 29 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
 
 ### H39 — Sesli metin kısaydı: sayfa atlanıyor, şekiller anlatılmıyordu (2026-10-24, kullanıcı "ders süresi az")
 - k2-02'de 56 içerik sayfasının 12'si anlatılmamış, 19 sayfa tek cümleyle geçilmişti; "kısa ve öz" + paralel üretimde kapı yoktu.
@@ -105,4 +105,42 @@
 ### H440 — Arka plan işleri boşta da bellek, CPU, internet ve LLM kotası harcıyordu (sistem başarım turu, 2026-10-29)
 - **Çözüm:** LLM kilidi `v2/core/llm.py` (`chat`, `vision_ocr`) ve `processQueueItemOtomatik` + zamanlayıcılı `questionIntake`/`poolClusterService` yolları (`MEDS_LLM_OTOMATIK=1` yoksa çalışmaz); `cycle.py` dosya özeti önbelleği (ad+boyut+mtime) + her tur ayrı alt süreç; panel istatistiği yalnız son 60 sn'de istenmişse, Ollama yoklaması kaldırıldı; bekçi 60 sn + yalnız başlık; arama servisleri sorgu vektörünü `meds-embed`'den (:8091, `MEDS_E5_EMBED_URL`) alır, boyut 384 değilse yerel modele düşer; `embed_server.py` model bırakınca `malloc_trim`; birimlere `HF_HUB_OFFLINE=1` (`*.service.d/20-cevrimdisi.conf`); query-intel ucuz ön imza (`data/search/query-intel.onimza`); RAG değişen parça yoksa dizin/dosya yeniden kurulmaz, bekleme 2 dk; Firestore yedek yoklaması canlı dinleyici varken 10 dk; istemci saat yalnız çalarken, bakım yoklaması yalnız görünür sekmede, SW mühürleme günde bir, başarım yoklaması 10 dk, müzik listesi ilk bağlanmada tekrar çekilmez. `meds-web` doğrudan `node --import tsx server.ts` (`30-dogrudan-node.conf`).
 - **Önleme:** (a) Sürekli çalışan servis tur başına değişmeyen girdiyi baştan okumaz/özetlemez: önce ad+boyut+mtime ön imzası. (b) Ağır son işlemi olan uzun ömürlü Python döngüsü işi alt süreçte yapar (bellek tur sonunda iade). (c) Yalnız ekran açıkken anlamlı olan hesap (panel istatistiği, saat, yoklama) "son istek/görünürlük" koşuluna bağlanır. (d) LLM çağıran HER yol — en alt katmandaki ortak `chat` işlevi dahil — kilidi denetler; yalnız zamanlayıcıyı duraklatmak yetmez. (e) Aynı modeli taşıyan ikinci servis yazılmaz; ortak vektörleme servisine istek atılır. (f) Kaldırılan servisin (Ollama vb.) yoklaması panel/bekçi kodundan da silinir.
+
+
+### H457 — Sesli ders "İndir" düğmesi indirmeyi hiç başlatmıyordu (çevrimdışı, 2026-10-31)
+- **Çözüm:** Background Fetch kapatıldı (`BF_ETKIN = false`, `canliDersCevrimdisi.ts`); ses, metin ve PDF yalnız sayfa içi
+  `fetch` ile uygulamanın önbelleğine (Cache Storage, `CD_OFFLINE_CACHE`) yazılır; indirilenler klasörüne dosya düşmez.
+  `cdTakiliArkaPlanIptal()` eski takılı `cd|…` kayıtlarını açılışta ve her indirmede iptal eder.
+- **Önleme:** tarayıcıya devredilen bir indirme/iş, ilerleme gelmezse zaman aşımıyla sayfa içi yola düşmeden kullanılmaz;
+  çevrimdışı içerik kullanıcının dosya sistemine değil uygulama önbelleğine yazılır.
+
+
+### H478 — LLM kilidi masaüstü Claude oturumunu zamanlayıcı sandı (2026-11-03)
+- **Çözüm (bu sefer):** kullanıcının açık onayıyla (2026-11-03) yalnız k2-12/k2-64 yerleştirmesi `env -u INVOCATION_ID MEDS_LLM_ELLE=1` + her
+  çağrıyı reddeden sahte `claude` ile koşturuldu; anlam denetimi ayrı ajanla yapıldı. k2-13/k2-14'te ajanlar bunu onaysız yapmıştı (kayıt).
+- **Önleme:** ajan kilidi kendi başına aşmaz; takılırsa ana oturum kullanıcıya sorar. Kalıcı çözüm kullanıcı kararı bekler: kilidin yalnız
+  `claude()`/`anlam_denetimi()` çağrısına taşınması ya da masaüstü oturumunu tanıyan ayrı bayrak (kilit gevşetme sayılır → kullanıcı onayı şart).
+
+
+### H481
+- **Çözüm:** SW bu iki önbellekteki lecture-pdf adreslerini kümede tutar (`cihazPdfYukle`, PAKET_CHANGED ile tazelenir; sesli ders ve
+  `savePdfOffline` kayıttan sonra bildirir). Kümede olan istek cihazdan (`aralikYaniti`, Range → 206) verilir; olmayan yine ağa bırakılır.
+  Sınama: headless Chrome, internetsiz → tam yanıt + 206.
+- **Önleme:** bir isteği SW'den "ağa bırakan" her kısa devre, o adresi yazan TÜM önbellekleri (paket, sesli ders, eski PDF) önce denetlemelidir;
+  çevrimdışı düzeltmesi internetsiz gerçek sınamayla doğrulanmadan bitmiş sayılmaz.
+
+
+### H484
+- **Çözüm:** birim adına süreç numarası eklendi (`meds-hazirlik-<iş>-<pid>-<sn>`).
+- **Önleme:** systemd-run ile geçici birim açan her betik adı süreçten tekil kurar (pid ya da uuid); zaman damgası tek başına kimlik sayılmaz.
+
+
+### H493
+- **Çözüm:** bu aralıkta süs ikonu gizlenir, açıklama iki satıra sarar (`line-clamp:2`).
+- **Önleme:** tek bilgi taşıyan satır asla tek satır üç noktaya düşürülmez; en dar kapsayıcı genişliğinde ekran görüntüsüyle denetlenir.
+
+
+### H494
+- **Çözüm:** hepsi `lockScroll()/unlockScroll()`'a geçirildi (LessonPlayer'daki `documentElement` yazımı dahil).
+- **Önleme:** `body/documentElement.style.overflow`'a doğrudan yazmak yasak; yalnız `utils/scrollLock`. Denetim: `grep -rn "body.style.overflow\s*=" src` boş dönmeli.
 

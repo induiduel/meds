@@ -77,6 +77,8 @@ def main() -> int:
     ap.add_argument("klasor", type=Path)
     ap.add_argument("--ders", required=True)
     ap.add_argument("--kurul", type=int, default=2)
+    ap.add_argument("--mod", choices=("tam", "tasarruf"), default="tam",
+                    help="hat kipi (scripts/tam_hat/mod.py); <klasör>/mod.json'a yazılır, sonraki aşamalar oradan okur")
     ap.add_argument("--cpu-is", type=int, default=2, help="eşzamanlı CPU işi (varsayılan 2; RAM 15 GB)")
     a = ap.parse_args()
     k = a.klasor.resolve()
@@ -84,6 +86,20 @@ def main() -> int:
     if not pdf.exists():
         print(f"HATA: {pdf} yok", file=sys.stderr)
         return 2
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    # Hat başı kapıları (kullanıcı kararı 2026-11-16):
+    #  1) Aşama özetleri defterden eskiyse kendiliğinden yenilenir (kural_secici --denetle → uret); alt ajanlar hep güncel okur.
+    #  2) Ders kilidi alınır: aynı dersi başka oturum işliyorsa dur (çakışma/ezme önlenir).
+    import kural_secici as KS  # noqa: E402
+    _bayat = (not KS.CIKIS.exists()) or any(p.stat().st_mtime < KS.DEFTER.stat().st_mtime for p in KS.CIKIS.glob("*.md"))
+    if _bayat:
+        KS.uret()
+        print("hat başı: aşama özetleri yenilendi (defterden eskiydi)")
+    import ders_kilit as DK  # noqa: E402
+    if DK.al(a.ders, "E0-hazırlık", DK._oturum(None)) != 0:
+        return 3  # başka oturum bu dersi işliyor
+    from mod import yapilacak
+    (k / "mod.json").write_text(json.dumps({"mod": a.mod, "katmanlar": yapilacak(a.mod)}, ensure_ascii=False, indent=1))
     (k / "op").mkdir(exist_ok=True)
     (k / "loglar").mkdir(exist_ok=True)
     L = lambda ad: k / "loglar" / f"{ad}.log"  # noqa: E731
@@ -114,7 +130,7 @@ def main() -> int:
                                         [PY, str(KOK / "scripts/ogrenci_onem/oku.py"), "--ders", ders_id.group(0), "--sayfalar",
                                          str(k / "sayfalar.json"), "--yaz", str(k / "ogrenci_onem.json")], L("ogrenci_onem")))
         sonuc += [f.result() for f in isler]
-    durum = {"ders": a.ders, "toplam_sn": round(time.time() - t0), "isler": sonuc}
+    durum = {"ders": a.ders, "mod": a.mod, "toplam_sn": round(time.time() - t0), "isler": sonuc}
     (k / "hazirlik_durum.json").write_text(json.dumps(durum, ensure_ascii=False, indent=1))
     for s in sonuc:
         print(f"{'OK ' if s['kod'] == 0 else 'HATA'} {s['is']:<14} {s['sn']:>5} sn  {s['log']}")

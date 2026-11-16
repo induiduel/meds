@@ -88,10 +88,17 @@ def uret() -> dict[str, int]:
     return {a: len(l) for a, l in kova.items()}
 
 
-def oku(asama: str) -> list[str]:
+# Yalnız tam modda okunacak (tasarrufta atlanır) belgeler — kullanıcı kararı 2026-11-16: hoca tahmin rehberi
+# sürekli kullanılmasın, tasarruf modunda hiç kullanılmasın (gereksiz token + kanıtsız önem damgası riski).
+YALNIZ_TAM = {"docs/HOCA_TAHMIN_REHBERI.md"}
+
+
+def oku(asama: str, mod: str = "tam") -> list[str]:
     if asama not in ASAMALAR:
         raise SystemExit(f"bilinmeyen aşama: {asama} ({', '.join(ASAMALAR)})")
     dosya = [f"docs/asama_kurallari/{asama}.md", "docs/asama_kurallari/genel.md", *ASAMALAR[asama][1]]
+    if mod == "tasarruf":
+        dosya = [d for d in dosya if d not in YALNIZ_TAM]
     return [d for d in dosya if (KOK / d).exists()]
 
 
@@ -99,9 +106,10 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--denetle", action="store_true")
     ap.add_argument("--oku")
+    ap.add_argument("--mod", choices=("tam", "tasarruf"), default="tam")
     a = ap.parse_args()
     if a.oku:
-        print("\n".join(oku(a.oku)))
+        print("\n".join(oku(a.oku, a.mod)))
         return 0
     if a.denetle:
         eski = [p.name for p in CIKIS.glob("*.md") if p.stat().st_mtime < DEFTER.stat().st_mtime] or \
