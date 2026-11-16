@@ -5,7 +5,7 @@ Amaç: kullanıcı bir içeriği indirdiğinde o içerik **internetsiz, eksiksiz
 
 Altyapı: katalog `src/services/cevrimdisiKatalog.ts` (sunucu) → motor `src/services/cevrimdisi/paketMotoru.ts`
 (+ `uyarlayicilar.ts`: sesli ders, soru veritabanı) → önbellek `medsor-paket-v1` → `public/sw.js` sunar.
-Sınama: `scripts/cevrimdisi_sinama/` (aşağıda).
+Sınama: `scripts/altyapi/cevrimdisi_sinama/` (aşağıda).
 
 ## 1. Özellik × indirilmesi gerekenler
 
@@ -44,7 +44,7 @@ olaylar (SSE), yönetim paneli, soru ekleme gönderimi (kuyruğa alınır, bağl
 5. Internetsiz yedekleme denemesi konsola hata yazıyordu (uyarıya indirildi).
 6. Google yazı tipi CSS'i hiç önbelleğe alınmıyordu (internetsiz açılışta sistem yazı tipi). SW + uygulama paketi.
 
-## 3. Sınama düzeneği (`scripts/cevrimdisi_sinama/`)
+## 3. Sınama düzeneği (`scripts/altyapi/cevrimdisi_sinama/`)
 
 - `vekil.mjs` — `:3100 → :3000` vekil; denetim `:3101/kapat|ac`. Kapalıyken bağlantılar anında kesilir: tarayıcı ve SW gerçek ağ
   hatası görür, `navigator.onLine` true kalır (en zor durum: Wi-Fi var, internet yok). Ayrı köken → SW/önbellekler bağımsız.
@@ -54,7 +54,7 @@ olaylar (SSE), yönetim paneli, soru ekleme gönderimi (kuyruğa alınır, bağl
 - `etkilesim.mjs` — internetsiz eylemler: Öğren ilerleme/ses/PDF, çözücü/asistan/alternatif ses, sesli ders oynatma, çıkmış
   cevap, arama, test.
 
-Çalıştırma: `node scripts/cevrimdisi_sinama/vekil.mjs &` sonra `node scripts/cevrimdisi_sinama/sinama.mjs && node scripts/cevrimdisi_sinama/etkilesim.mjs`.
+Çalıştırma: `node scripts/altyapi/cevrimdisi_sinama/vekil.mjs &` sonra `node scripts/altyapi/cevrimdisi_sinama/sinama.mjs && node scripts/altyapi/cevrimdisi_sinama/etkilesim.mjs`.
 
 ## 4. Yol haritası
 
@@ -89,5 +89,5 @@ Sesli ders paketi (`sesli:<key>`, `canliDersCevrimdisi.ts`) artık ses + PDF + a
   başka kayıtta geçen ek (ortak klipler) silinmez.
 - Ders çevrimiçi açılınca `cdYerelDetayTazele`: ayrıntı kopyası (yalnız cihazdaki seslerle) tazelenir, yeni eklerin eksikleri
   arka planda iner (oturumda ders başına bir kez; süren indirme varsa dokunmaz).
-- Sınama: `DERS=<key> node scripts/cevrimdisi_sinama/sesli_ek.mjs` (vekil :3100 açık olmalı). Yeni katman eklerken üç yer
+- Sınama: `DERS=<key> node scripts/altyapi/cevrimdisi_sinama/sesli_ek.mjs` (vekil :3100 açık olmalı). Yeni katman eklerken üç yer
   birlikte: `cdEkDosyalar()` satırı, sw.js dalı, `sesli_ek.mjs` denemesi.

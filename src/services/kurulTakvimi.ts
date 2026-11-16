@@ -1,7 +1,7 @@
 /**
  * Kurul takvimi — tek doğruluk kaynağı `src/data/kurul_takvimi_ozet.json`
- * (`scripts/takvim/kurul_takvimi.py --yaz` ders programı PDF'inden üretir; ders işçisi program değişince yeniler).
- * Sunucu ve ön yüz aynı kuralı kullanır; Python karşılığı `scripts/takvim/aktif_kurul.py`.
+ * (`scripts/hat/takvim/kurul_takvimi.py --yaz` ders programı PDF'inden üretir; ders işçisi program değişince yeniler).
+ * Sunucu ve ön yüz aynı kuralı kullanır; Python karşılığı `scripts/hat/takvim/aktif_kurul.py`.
  *
  * Kural: aktif kurul = sınav günü henüz geçmemiş ilk kurul (sınav günü dahil o kurul aktiftir).
  * Sınavı geçmiş kurullar "arşiv"dir: verileri silinmez, ayrı görünümden erişilir.

@@ -5,14 +5,14 @@
 
 ## 0.0 Tek hat + read-once bağlam (kullanıcı kararı 2026-11-16, ZORUNLU)
 
-Sıra artık kafada/4 ayrı dosyada değil, **tek kaynakta**: `scripts/tam_hat/mod.py` (katmanlar + kip). Koşucu runbook basar ve
+Sıra artık kafada/4 ayrı dosyada değil, **tek kaynakta**: `scripts/hat/tam_hat/mod.py` (katmanlar + kip). Koşucu runbook basar ve
 hazırlık adımlarını çalıştırır:
 ```
-python3 scripts/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf> [--calistir]
+python3 scripts/hat/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf> [--calistir]
 ```
 **Aynı kaynağı defalarca okuma YASAK (token israfı).** E1 paketi üretildikten sonra bir kez bağlam üretilir:
 ```
-python3 scripts/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <klasör>/baglam/kaynak.md + sema.md
+python3 scripts/hat/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <klasör>/baglam/kaynak.md + sema.md
 ```
 - `baglam/kaynak.md` = tek-kaynak: slayt dizini + bilgi paketleri + **atomlar** (damıtılmış gerçekler) + doğrulanmış çıkmış + üslub.
 - `baglam/sema.md` = aşama çıktı şemaları + kapı komutları (33k şablon dosyası + kapı-kaynağı okumak YERİNE ~2k).
@@ -30,14 +30,14 @@ python3 scripts/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <klasö
 net şema). baglam + sıkıştırılmış özet girdiyi küçültür ama dibi iterasyon belirler. Ders kilidi + hat-başı özet kapısı E0'da otomatiktir.
 
 **Anlatım TEK KAPI (iterasyon + bütünlük, ZORUNLU):** 4 ayrı kapı yerine tek komut —
-`python3 scripts/tam_hat/anlatim_kapi.py <v2 dizin> --sayfalar <sayfalar.json> --key <key>` (turet+dogrula+metin_denetle+
+`python3 scripts/hat/tam_hat/anlatim_kapi.py <v2 dizin> --sayfalar <sayfalar.json> --key <key>` (turet+dogrula+metin_denetle+
 turkce_uslup birlikte, TÜM sorunlar bir seferde). Kapı `kaynak.md` yoksa `sayfalar.json`'dan üretir → `slayt.satir` birebir
 denetimi ASLA atlanmaz. (Ölçüm: baglam-yalnız anlatım, `kaynak.md` yokken 46 hatalı satırı sessizce geçiriyordu — bu kapı yakalar.)
 
 ## 0. Tasarruf kipi (kullanıcı kararı 2026-11-07)
 
-Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` ile yürür: `python3 scripts/tam_hat/hazirlik.py <klasör> --ders <key> --mod tasarruf`
-(`<klasör>/mod.json` yazılır; katman tablosu `python3 scripts/tam_hat/mod.py --rapor <klasör>`, tek kaynak `scripts/tam_hat/mod.py`).
+Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` ile yürür: `python3 scripts/hat/tam_hat/hazirlik.py <klasör> --ders <key> --mod tasarruf`
+(`<klasör>/mod.json` yazılır; katman tablosu `python3 scripts/hat/tam_hat/mod.py --rapor <klasör>`, tek kaynak `scripts/hat/tam_hat/mod.py`).
 - **Yapılır:** sesli ders (anlatım, EMA, cümle/kelime zamanı + PDF metin vurgusu/takip), çıkmış chip + ayrıntılı çıkmış analizi + ders analizi,
   terim/kısaltma, önem listesi, örnek sorular + sesli çözücü + EMA sesi, patoloji hoca soruları kartı + sesli hoca çözücü, ders içerik paketi (betik), kapılar + tek denetçi, yayın.
 - **Yapılmaz (atlandı — tasarruf kipi):** çapa + canlı çizim (E4 tümüyle), ara resim katmanı (`src/data/ara_resim`), ara soru sayfası,
@@ -51,7 +51,7 @@ Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` i
 
 | Evre | İşler (aynı anda) | Kaynak payı |
 |---|---|---|
-| **E0 Hazırlık** (LLM yok) | `python3 scripts/tam_hat/hazirlik.py <klasör> --ders <key>`: hoca dökümü (GPU) ∥ sayfa metni ∥ sayfa görüntüleri ∥ öğrenci notu ∥ çıkmış aday | GPU tek iş; CPU en çok 2 iş, her biri `CPUQuota=200%` `MemoryMax=2G` |
+| **E0 Hazırlık** (LLM yok) | `python3 scripts/hat/tam_hat/hazirlik.py <klasör> --ders <key>`: hoca dökümü (GPU) ∥ sayfa metni ∥ sayfa görüntüleri ∥ öğrenci notu ∥ çıkmış aday | GPU tek iş; CPU en çok 2 iş, her biri `CPUQuota=200%` `MemoryMax=2G` |
 | **E1 Kaynak** | değerlendirme paketi ∥ `soru_uslup_ornek.py` | — |
 | **E2 Yazım** (alt ajanlar) | anlatım metni ∥ ~~Öğren destesi~~ (ASKIDA 2026-11-02, kullanıcı aksi demedikçe üretilmez) ∥ örnek sorular + çözücü ∥ atomik envanter | En çok **3 alt ajan** aynı anda (RAM 15 GB, Claude oturumları korunur) |
 | **E3 Ses + yerleşim** | EMA sesi (GPU) → cümle/kelime zamanı ∥ çıkmış chip ∥ terim/kısaltma ∥ ders içerik paketi | GPU işleri sırayla (tek kart) |
@@ -69,7 +69,7 @@ Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` i
 Her alt ajan istemine yalnız kendi aşamasının listesi konur:
 
 ```bash
-python3 scripts/tam_hat/kural_secici.py --oku <kaynak|anlatim|ses|capa_cizim|ders_icerik|ogren_deste|ornek_soru|pdf_tasarim|yayin>
+python3 scripts/hat/tam_hat/kural_secici.py --oku <kaynak|anlatim|ses|capa_cizim|ders_icerik|ogren_deste|ornek_soru|pdf_tasarim|yayin>
 ```
 
 - Liste = `docs/asama_kurallari/<aşama>.md` (defterin o aşamaya ait maddeleri, kural satırları aynen) + `genel.md` + aşamanın
@@ -101,15 +101,15 @@ python3 scripts/tam_hat/kural_secici.py --oku <kaynak|anlatim|ses|capa_cizim|der
 
 ## 5. Örnek soru üslubu
 
-1. `python3 scripts/tam_hat/soru_uslup_ornek.py <klasör>` → `soru_uslubu.json`: konuya en yakın **8** çıkmış (her kalıptan en
+1. `python3 scripts/hat/tam_hat/soru_uslup_ornek.py <klasör>` → `soru_uslubu.json`: konuya en yakın **8** çıkmış (her kalıptan en
    az biri), kalıp payları ve ortalama kök uzunluğu. Yazar yalnız bunu okur.
 2. Yazım kuralları: `docs/SORU_USLUBU.md`.
-3. Kapı: `python3 scripts/tam_hat/soru_uslup.py ornek_sorular.json --uslup soru_uslubu.json` 0 HATA (ayrıca mevcut
+3. Kapı: `python3 scripts/hat/tam_hat/soru_uslup.py ornek_sorular.json --uslup soru_uslubu.json` 0 HATA (ayrıca mevcut
    `sik_aciklama.py`, `cozucu_dogrula.py`).
 
 ## 6. PDF tasarım taraması
 
-`npx tsx scripts/ders_pdf.mts <key> <çıktı.pdf>` → `.venv-ocr/bin/python -I scripts/tam_hat/pdf_tarama.py <çıktı.pdf>`:
+`npx tsx scripts/ders_pdf.mts <key> <çıktı.pdf>` → `.venv-ocr/bin/python -I scripts/hat/tam_hat/pdf_tarama.py <çıktı.pdf>`:
 boş sayfa, kenar taşması, üst üste binen yazı, harf harf kırılma HATA; seyrek sayfa UYARI. Rapor sayfa numarası verir;
 yalnız o sayfanın kartı/tablosu düzeltilir.
 
@@ -134,11 +134,11 @@ E2 örnek soru çıkışı `soru_uslup.py` + **`profil_kapisi.py`** kapılarınd
 
 
 ## Hoca tahmin adımı (2026-10-29)
-E2 önem listesi öncesi: `scripts/hoca_profili/tahmin_girdisi.py` (profil + aday satırlar + K) → yazar `docs/HOCA_TAHMIN_REHBERI.md` v6 ile K tahmin; kör sınama %75–80 (docs/HOCA_USLUBU/TEST_TURLARI.md). Tahmin satırları önem listesine `kanit: profil` ve gerekçeyle girer.
-E2 ara sorular (kural 27): tahmin satırlarından seçilen slaytlar için `scripts/hoca_ara_soru/TALIMAT.md` (iskele → yazım → `kur.py dogrula` → denetçi); E3'te EMA GPU + `dogrula --ses`.
+E2 önem listesi öncesi: `scripts/uretim/hoca_profili/tahmin_girdisi.py` (profil + aday satırlar + K) → yazar `docs/HOCA_TAHMIN_REHBERI.md` v6 ile K tahmin; kör sınama %75–80 (docs/HOCA_USLUBU/TEST_TURLARI.md). Tahmin satırları önem listesine `kanit: profil` ve gerekçeyle girer.
+E2 ara sorular (kural 27): tahmin satırlarından seçilen slaytlar için `scripts/uretim/hoca_ara_soru/TALIMAT.md` (iskele → yazım → `kur.py dogrula` → denetçi); E3'te EMA GPU + `dogrula --ses`.
 
 ## Öğrenci önem notu adımı (2026-10-30, AGENTS 28)
 E0 `hazirlik.py` → `ogrenci_onem.json` (geçmiş yıl öğrenci derlemesinin A/B birimleri bu yılın sayfalarına eşlenmiş). E2 yazarlarının
 istemine `oku.py --ders <k2-xx>` özeti (≤45 satır) + `docs/OGRENCI_ONEM/<ders>.md` bağlantısı girer; önem listesi, anlatım, örnek soru ve ara
-soru bu belgedeki öncelik haritasına ve soru payına uyar. E5'te `scripts/ogrenci_onem/kapi.py <ders>` 0 HATA (eksik bilgi listesi §3 kısmi
+soru bu belgedeki öncelik haritasına ve soru payına uyar. E5'te `scripts/uretim/ogrenci_onem/kapi.py <ders>` 0 HATA (eksik bilgi listesi §3 kısmi
 düzeltmeyle yalnız o bilgilere uygulanır). Yöntem: `docs/OGRENCI_ONEM_YONTEMI.md`.

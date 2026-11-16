@@ -31,10 +31,10 @@ Metin ortanca 152 kelimedir (en kısa 107, en uzun 317). Seslendirme toplamı de
 ## Üretim
 
 ```bash
-python3 meds/scripts/patoloji_cozucu_alt/uret.py          # metinler
-bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh \
-  meds/scripts/patoloji_cozucu_alt/seslendir.py 01 02    # ses (GPU, gpuguard + saat kilidi)
-python3 meds/scripts/patoloji_cozucu_alt/topla.py         # index.json
+python3 meds/scripts/uretim/patoloji_cozucu_alt/uret.py          # metinler
+bash meds/scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh \
+  meds/scripts/uretim/patoloji_cozucu_alt/seslendir.py 01 02    # ses (GPU, gpuguard + saat kilidi)
+python3 meds/scripts/uretim/patoloji_cozucu_alt/topla.py         # index.json
 ```
 
 Ses üretimi tekrar çalıştırıldığında metni değişmeyen klipler yeniden üretilmez (`kayit.json` içindeki özet).

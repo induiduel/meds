@@ -24,7 +24,7 @@ import '../../styles/spots.css';
 export { KATEGORILER };
 
 /**
- * Sınav spotları (Kurul 1). Veri: src/data/exam_spots_k1.json — scripts/sinav_spotlari/birlestir.py üretir;
+ * Sınav spotları (Kurul 1). Veri: src/data/exam_spots_k1.json — scripts/uretim/sinav_spotlari/birlestir.py üretir;
  * her spotun ders notundan birebir alıntısı dogrula.py ile denetlenir. Sayfa yalnız gösterir.
  * Yerleşim (kapsayıcı genişliğine göre, styles/spots.css .xs-*):
  *  - telefon: başlık (ilerleme halkası) · Oku/Kendini sına · ders hapları · kategori çipleri · tek sütun kart
@@ -42,7 +42,7 @@ const ONEM_SECENEK: { id: OnemSuzgec; ad: string }[] = [
   { id: 'ogrenilmemis', ad: 'Öğrenilmemiş' },
 ];
 
-/** Spot → kazanım eşlemesi (scripts/sinav_spotlari/kazanim_esle.py, bge-m3 ile en yakın kazanım) */
+/** Spot → kazanım eşlemesi (scripts/uretim/sinav_spotlari/kazanim_esle.py, bge-m3 ile en yakın kazanım) */
 interface KazanimEsleme { dersler: Record<string, string[]>; spotlar: Record<string, number> }
 const KURULLAR = (kurulIndex as { kurul: number; name: string }[]).map((k) => ({ no: k.kurul, ad: k.name }));
 

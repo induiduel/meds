@@ -30,7 +30,7 @@ type Durum = {
   dersler: Ders[]; kuyruk: Is[]; saglayicilar: SaglayiciBilgi[];
   butce: { tavanTL: number; kilitTL: number; harcananTL: number; kalanTL: number; varsayim: string; anahtarVar: boolean };
   isci: { aktif: boolean; calisiyor: boolean };
-  /** Coqui XTTS v2: yöneticinin bilgisayarındaki işçi (scripts/sesli_anlatim/xtts_isci.py); eski sunucuda yok */
+  /** Coqui XTTS v2: yöneticinin bilgisayarındaki işçi (scripts/uretim/sesli_anlatim/xtts_isci.py); eski sunucuda yok */
   yerel?: YerelOzet & { aktif: boolean; isciler?: Partial<Record<Saglayici, YerelOzet>> };
   ucretliAktif: boolean;
   /** Yerel ses planı: ders → yerel sağlayıcı + konuşmacı (sunucuda yerel_plan.json) */

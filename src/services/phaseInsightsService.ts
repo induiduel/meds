@@ -1,7 +1,7 @@
 /**
  * Faz 5 / 6 / 6.5 / 8 analizlerini okur (server-only).
  * Kaynak: $MEDS_DATABASE_DIR/derived/phase_insights/insights.json
- * (scripts/advanced_ai/export_phase_insights.py üretir; faz zinciri her turda yeniler).
+ * (scripts/altyapi/advanced_ai/export_phase_insights.py üretir; faz zinciri her turda yeniler).
  * Dosya değişince (mtime) yeniden yüklenir. Faz 6 yapay zekâ üretimidir ve `dogrulanmadi: true` taşır.
  */
 import fs from 'fs';

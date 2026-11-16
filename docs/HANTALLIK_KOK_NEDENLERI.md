@@ -17,7 +17,7 @@ doğrulanabilir.
 | 1 | **Talimat belgesi enflasyonu** | Oturum açılışında zorunlu 7 belge ≈ **205.000 kelime (~308k token)**; `DEGISIKLIK_KAYDI.md` tek başına 1,23 MB / 141k kelime | Ajan bağlamının büyük kısmı talimat okumaya gidiyor; asıl işe az yer kalıyor, talimatın bir kısmı hiç okunmuyor |
 | 2 | **Aynı kural 4–6 yerde, farklı sürümde** | "Tasarruf kipi" AGENTS+hızlı akış+el kitabı+mod.py; Hoca tahmin rehberi AGENTS'te v5, hızlı akışta v6 | Ajan hangi sürümün geçerli olduğunu bilemiyor; yanlış sürümle üretim → yeniden üretim |
 | 3 | **Tek doğruluk kaynağı yok: 4 ayrı "hat" listesi** | `hat.json` 33 aşama · `mod.py` 22 katman · `ders_zinciri.py` 11 adım · el kitabı §19 11 adım | Her oturum listeyi kafasında birleştiriyor; katman atlanıyor ya da iki kez yapılıyor |
-| 4 | **E1–E6 adımlarının koşucusu yok** | `scripts/tam_hat/` yalnız E0'ı (`hazirlik.py`) çalıştırıyor; sonrası insan sırası | Her ders "elle sıralanan 15–20 komut + alt ajan" demek; otomasyon hissi kayboldu |
+| 4 | **E1–E6 adımlarının koşucusu yok** | `scripts/hat/tam_hat/` yalnız E0'ı (`hazirlik.py`) çalıştırıyor; sonrası insan sırası | Her ders "elle sıralanan 15–20 komut + alt ajan" demek; otomasyon hissi kayboldu |
 | 5 | **Veri 3–4 köke dağılmış, tek ders 34–36 dosya** | `src/data`, `data`, `meds_database_v2`, `public`; k2-62 izi 36 dosya / 35 klasör | Bulma, senkron, dağıtım ve doğrulama maliyeti katlanıyor |
 | 6 | **Kapı sayısı çok, kapsamı dağınık** | 34 `*dogrula*` + 9 `*kapi*` + 8 `*validate*` = **51**; 18'i aynı adı taşıyor; `cozucu_dogrula{1,2,3}` kopya | Hangi kapı neyi denetliyor belirsiz; yanlış pozitif ve sessiz atlama üretiyor |
 | 7 | **Yeniden yazım kültürü** | Hata defterinde 53/241 madde "kapı gevşek/atlandı", 27/241 "baştan üretim gerekti", 332 kez "düzeltildi/yeniden yaz" | Tek hata tüm katmanı yeniden üretiyor → hem süre hem limit |
@@ -118,11 +118,11 @@ bazen 11, bazen 14, bazen 20 katman çalıştırıyor. Aynı dersin iki oturumda
 | Kaynak | Adım sayısı | Kapsam |
 |---|---|---|
 | `otomasyon/hat.json` | 33 aşama | tüm sistem (sağlık, db göçü, kamp, checkup…) |
-| `scripts/tam_hat/mod.py` | 22 katman | ders hattı |
+| `scripts/hat/tam_hat/mod.py` | 22 katman | ders hattı |
 | `otomasyon/ders_zinciri.py` `ADIMLAR` | 11 | hazirla…terim |
 | `docs/KURUL_OTOMASYON_EL_KITABI.md` §19 | 11 | adım 1–11 |
 
-- `scripts/tam_hat/` içinde **yalnız E0** var (`hazirlik.py`); E1–E6 için betik yok, sıralama el kitabında düz metin.
+- `scripts/hat/tam_hat/` içinde **yalnız E0** var (`hazirlik.py`); E1–E6 için betik yok, sıralama el kitabında düz metin.
   Alt ajan istemleri de elle kuruluyor (`kural_secici.py --oku <aşama>` yalnız okuma listesi veriyor, görevi vermiyor).
 - `hat.json`'daki 33 aşamanın 15'inin komutu **çalıştırılabilir değil** (dosya yolu yok ya da `ders_zinciri.py` gibi genel
   betiğe işaret ediyor). Yani defter "makine okunur" değil, "insan okur".
@@ -134,7 +134,7 @@ belgesini ve kendi betiğini** getirdi, ama **tek bir koşucuya** bağlanmadı. 
 tercih edildi (kural 20 gereği doğru), fakat bu kez sıralama bilgisi insana/ajana kaldı.
 
 **Kalıcı çözüm.**
-1. Tek koşucu: `python3 scripts/tam_hat/hat.py <ders> --asama <aşama>|--sonraki|--durum`. Her aşama `mod.py`'den okunur,
+1. Tek koşucu: `python3 scripts/hat/tam_hat/hat.py <ders> --asama <aşama>|--sonraki|--durum`. Her aşama `mod.py`'den okunur,
    her aşamanın **girişi/çıktısı/kapısı** JSON'da tanımlıdır (`hat.json` tek kaynak olur, `mod.py` ona delege eder).
 2. Aşama atlanamaz: koşucu "önceki aşamanın kapısı 0 HATA mı" diye bakar; atlanan aşama `atlandi.json`'a **gerekçeyle**
    yazılır (tasarruf/askı), sessiz atlama imkânsız olur.
@@ -187,14 +187,14 @@ denetlemiyor ama "0 HATA" diyor. Ajan kapıyı gevşetmekle suçlanıyor; gevşe
 **Kanıt.**
 - **51** doğrulayıcı: 34 `*dogrula*.py`, 9 `*kapi*.py`, 8 `*validate*.py`. 18'i aynı adı taşıyor
   (`dogrula.py` 13 kez, `cozucu_dogrula.py` 3 ayrı klasörde).
-- `scripts/patoloji_cozucu/cozucu_dogrula.py`, `cozucu_dogrula2.py`, `cozucu_dogrula3.py`: ilk 12 satırı neredeyse birebir
+- `scripts/uretim/patoloji_cozucu/cozucu_dogrula.py`, `cozucu_dogrula2.py`, `cozucu_dogrula3.py`: ilk 12 satırı neredeyse birebir
   aynı (aynı `CUMLE_SINIRI`, `YASAK_SES`, `KISALTMA`, `KARISIK`, `IC_DIL` regex'leri); içlerinde sabit
   `W = "/home/indu/medsor/meds_temp/patoloji_ornek26/cozucu"` yolu var.
 - Hata defterinin kendi sınıflaması: 241 maddenin **53'ü** "kapı gevşetildi/atlandı/denetlenmiyor", **6'sı** "kapı yanlış
   HATA verdi / geçilemez", **13'ü** "sessizce boş geçti". Yani kapılar hem çok sıkı hem çok gevşek, ikisi bir arada.
 - Tek bir "tüm kapılar" koşucusu yok: `package.json`'da `lint` ve `decks:packages` var, ders kapıları için komut yok;
   sıralama el kitabında düz metin.
-- Hat dışı bir betik hatta karışabiliyor: `scripts/tam_hat/ornek_soru_kaynak.py` hattın zorunlu kapısı değil, ama
+- Hat dışı bir betik hatta karışabiliyor: `scripts/hat/tam_hat/ornek_soru_kaynak.py` hattın zorunlu kapısı değil, ama
   çalıştırıldığında çok sayıda yanlış alarm üretti (2026-11-10 kaydı), oturumun bir kısmı buna gitti.
 - Ölçüm: `ders_icerik_dogrula.py k2-62` → 0,02 sn "paket yok" (yol yanlışsa sessizce hızlı HATA; doğru çalıştığında
   aynı kapı manifest/JSON'ları yeniden okuyor).
@@ -399,7 +399,7 @@ sorusu hiçbir yerde toplanmadı.
 
 **Kalıcı çözüm.**
 1. `hat.py` her aşama için `sure_sn`, `llm_cagri`, `kapı_hatasi`, `yeniden_yazim` alanlarını `manifest.json`'a yazar.
-2. `python3 scripts/tam_hat/rapor.py --son 10` → ders başına toplam süre, en pahalı aşama, en çok HATA veren kapı.
+2. `python3 scripts/hat/tam_hat/rapor.py --son 10` → ders başına toplam süre, en pahalı aşama, en çok HATA veren kapı.
 3. Haftalık tek sayfa "hattın sağlığı" raporu (ders sayısı, ortalama süre, tekrar oranı, açık iş sayısı).
 4. Kapıların sınaması CI'ya benzer tek komutla (`python3 scripts/kapilar/kos.py --sinama`) koşar.
 

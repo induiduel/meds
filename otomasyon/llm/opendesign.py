@@ -8,7 +8,7 @@ Sıra: `MEDS_OPENDESIGN_URL` > köprü çalışıyorsa köprü > genel geçit.
 Anahtar: `MEDS_OPENDESIGN_KEY` > `ANTHROPIC_AUTH_TOKEN` > `meds/.env` (`MEDS_OPENDESIGN_KEY` / `OPEN_DESIGN_API_KEY`)
         > `~/.claude/settings.json` → `env.ANTHROPIC_AUTH_TOKEN`.
 
-Bu modül TEK yerdir: `yonlendir.py`, `scripts/agents/cloud_llm.py`, `scripts/v2/core/llm.py` ve doğrulama
+Bu modül TEK yerdir: `yonlendir.py`, `scripts/altyapi/agents/cloud_llm.py`, `scripts/altyapi/v2/core/llm.py` ve doğrulama
 betikleri buradan çağırır. LLM kilidi çağıranın sorumluluğundadır (`otomasyon/llm_kilit.py`); bu modül kendi
 başına iş başlatmaz, yalnız verilen isteği gönderir.
 
@@ -52,7 +52,7 @@ MODELLER: dict[str, dict] = {
 
 # Anthropic kimlikleri (depoda `--model claude-opus-5-5` gibi geçen eski çağrılar) → geçit kimliği.
 # Köprüsüz makinelerde (Oracle) doğrudan geçide gidildiği için bu tablo köprü haritasıyla aynı olmalı:
-# `scripts/opendesign/rotalar.json` ile `kopru.py --doctor` eşleşmeyi denetler.
+# `scripts/altyapi/opendesign/rotalar.json` ile `kopru.py --doctor` eşleşmeyi denetler.
 ESLEME = {
     "claude-opus-5-5": "deepseek-v4-pro",
     "claude-opus-5-1": "deepseek-v4-pro",

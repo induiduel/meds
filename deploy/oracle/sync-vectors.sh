@@ -6,12 +6,12 @@
 #                       ./deploy/oracle/sync-vectors.sh --tam    (tam döküm, ORACLE_HOST gerekir)
 set -euo pipefail
 # 2026-10-13: varsayılan artık FARK eşitlemesi (yalnız değişen satırlar, gzip'li, birkaç yüz KB–birkaç MB):
-#   scripts/advanced_ai/rag_vektor_hatti.py --sadece-oracle
+#   scripts/altyapi/advanced_ai/rag_vektor_hatti.py --sadece-oracle
 # Tam döküm + --clean geri yükleme yalnız --tam ile (DİKKAT: geri yüklemeden sonra indeksleri yeniden kur:
 #   deploy/pg/sql/rag_chunks_indexes.sql — 2026-10-13'te Oracle'da indekssiz kalmıştı).
 if [[ "${1:-}" != "--tam" ]]; then
   cd "$(dirname "$0")/../.."
-  exec .venv-ocr/bin/python scripts/advanced_ai/rag_vektor_hatti.py --sadece-oracle "$@"
+  exec .venv-ocr/bin/python scripts/altyapi/advanced_ai/rag_vektor_hatti.py --sadece-oracle "$@"
 fi
 KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 ORACLE_USER="${ORACLE_USER:-ubuntu}"

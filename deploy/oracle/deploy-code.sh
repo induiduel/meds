@@ -40,7 +40,7 @@ for a in "$@"; do case "$a" in
 # Resmî yol: deploy/oracle/dagit.sh (origin/main → meds-dagitim → bu betik). Çalışma ağacından kirli dağıtım başka
 # oturumların yarım işini canlıya taşıyor, canlıdaki daha yeni bir commit'i geri alıyordu.
 if [[ "$KIRLI_IZIN" == "0" && -z "${MEDS_DAGIT_ONAYLI:-}" ]]; then
-  KIRLI="$(cd "$MEDS_DIR" && git status --porcelain -- src ':!src/data' server.ts index.html vite.config.ts public package.json scripts/vite 2>/dev/null | head -5)"
+  KIRLI="$(cd "$MEDS_DIR" && git status --porcelain -- src ':!src/data' server.ts index.html vite.config.ts public package.json scripts/altyapi/vite 2>/dev/null | head -5)"
   if [[ -n "$KIRLI" ]]; then
     echo "DURDU: çalışma ağacında commit'lenmemiş kod var — kirli dağıtım yapılmaz:" >&2
     echo "$KIRLI" | sed 's/^/    /' >&2
@@ -63,7 +63,7 @@ echo "==> [0/4] ders işçisi yayınları: Oracle'da yayınlanan dersler önce y
 # Oracle onaylanan dersleri kendisi yayınlar (yayinla.py --sunucu). Eşitlemeden rsync, o dersleri sitede eski
 # hâline döndürürdü (Oracle sonraki turda kendini onarır ama arada ders kaybolur).
 PY="$MEDS_DIR/.venv-ocr/bin/python"; [[ -x "$PY" ]] || PY=python3
-"$PY" "$MEDS_DIR/scripts/ders_isci/yayinla.py" --esitle || { echo "DURDU: yayınlar eşitlenemedi (yukarıdaki çıktıya bakın)"; exit 1; }
+"$PY" "$MEDS_DIR/scripts/uretim/ders_isci/yayinla.py" --esitle || { echo "DURDU: yayınlar eşitlenemedi (yukarıdaki çıktıya bakın)"; exit 1; }
 
 echo "==> [0b/4] yönetim paneli değişiklikleri: Oracle data/content/ → yerel src/data (rsync ezmesin)"
 "$SCRIPT_DIR/content-overlay-sync.sh" || { echo "DURDU: panel değişiklikleri eşitlenemedi (yukarıdaki çıktıya bakın)"; exit 1; }
@@ -78,7 +78,7 @@ fi
 import json, subprocess, time
 g = lambda *a: subprocess.run(["git", *a], capture_output=True, text=True).stdout.strip()
 kirli = [l[3:] for l in g("status", "--porcelain", "--", "src", ":!src/data", "server.ts", "index.html", "vite.config.ts",
-                         "public", "package.json", "scripts/vite").splitlines() if l.strip()]
+                         "public", "package.json", "scripts/altyapi/vite").splitlines() if l.strip()]
 json.dump({"commit": g("rev-parse", "HEAD"), "kirli": kirli, "zaman": time.strftime("%Y-%m-%dT%H:%M:%S")},
           open("dist/dagitim.json", "w"), ensure_ascii=False)
 PYEOF
@@ -97,13 +97,31 @@ rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' \
   --exclude='/cloudflared.exe' \
   --exclude='/.env' --exclude='/.env.*' --exclude='*.bak' --exclude='*.bak_*' --exclude='*.backup*' \
   --exclude='/get-pip.py' --exclude='/.agents' --exclude='/.claude' --exclude='/.github' \
-  --exclude='/scripts/archive' --exclude='/scripts/semantic/data' \
+  --exclude='/scripts/arsiv' --exclude='/scripts/altyapi/semantic/data' \
   --exclude='/dist/dagitim.json' \
   -e "$SSH" "$MEDS_DIR/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/" > "$CHANGED"
 # Yalnız içeriği aktarılan dosyalar; gönderimde rsync '<f' yazar ('>f' alımdır — eski kalıp hiçbir satırı tutmuyor, liste hep 0'dı, H480).
 # Tarih/sahip eşitlemesi (.f..t..) yeniden başlatma sebebi değil.
 sed -n 's/^[<>]f[^ ]* //p' "$CHANGED" > "$CHANGED.f" || true; mv "$CHANGED.f" "$CHANGED"
 echo "  $(wc -l < "$CHANGED") dosya aktarıldı"
+
+echo "==> [1a/4] Oracle sistem birimleri: repo (deploy/oracle/systemd) ↔ kurulu birimler eşitlenir"
+# 2026-11-16 yeniden yapılandırma: birimler bir kez elle kurulmuştu, dağıtım onları hiç güncellemiyordu → betik yolu
+# değişince (scripts/sesli_anlatim → scripts/uretim/sesli_anlatim) zamanlayıcı eski yolu sessizce çalıştırırdı.
+# Yalnız Oracle'da ZATEN KURULU olup içeriği farklı olan birim güncellenir; yeni birim etkinleştirilmez. Hata dağıtımı durdurmaz.
+$SSH "$ORACLE_USER@$ORACLE_HOST" "ORACLE_DIR=$ORACLE_DIR bash -s" <<'UZAKEOF' || echo "  UYARI: birim eşitleme yapılamadı (dağıtım sürüyor; elle bakın)"
+set -u
+d="$ORACLE_DIR/deploy/oracle/systemd"; n=0
+[ -d "$d" ] || { echo "  birim klasörü yok"; exit 0; }
+for f in "$d"/*.service "$d"/*.timer "$d"/*.path; do
+  [ -f "$f" ] || continue
+  h="/etc/systemd/system/$(basename "$f")"
+  [ -f "$h" ] || continue
+  cmp -s "$f" "$h" && continue
+  if sudo -n install -m 644 "$f" "$h"; then n=$((n+1)); echo "  güncellendi: $(basename "$f")"; fi
+done
+if [ "$n" -gt 0 ]; then sudo -n systemctl daemon-reload && echo "  daemon-reload ($n birim)"; else echo "  birimler güncel"; fi
+UZAKEOF
 
 echo "==> [1b/4] sesli ders verisi (metin/hizalama/vurgu/çıkmış konumu → Oracle data/sesli_anlatim)"
 # data/ yukarıda dışlanır; bu klasörler metinle birlikte değişmezse canlıda paragraf/cümle zamanlaması, PDF eşlemesi ve
@@ -140,7 +158,7 @@ if [[ -d "$ANA_DB25/medspak" ]]; then
     "$ANA_DB25/medspak/" "$ORACLE_USER@$ORACLE_HOST:/home/ubuntu/medsor/meds_database_25_26/medspak/" | grep -c '^>f' || true)
   echo "  meds_database_25_26/medspak: $n dosya"
 fi
-# Son Prova kırpılmış özet PDF'leri (git dışı; scripts/son_prova/pdf_kirp.mjs üretir, hizalama sayfa numaraları bunlara bağlı)
+# Son Prova kırpılmış özet PDF'leri (git dışı; scripts/uretim/son_prova/pdf_kirp.mjs üretir, hizalama sayfa numaraları bunlara bağlı)
 if [[ -d "$MEDS_DIR/data/son_prova/pdf" ]]; then
   $SSH "$ORACLE_USER@$ORACLE_HOST" "sudo mkdir -p $ORACLE_DIR/data/son_prova/pdf"
   n=$(rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' -e "$SSH" \
@@ -199,6 +217,27 @@ fi
 echo "==> [4/4] sağlık kontrolü (kapı üzerinden, en çok 120 sn)"
 $SSH "$ORACLE_USER@$ORACLE_HOST" 'for i in $(seq 1 60); do curl -sf -m 5 http://127.0.0.1:3000/api/health && exit 0; sleep 2; done; echo "sağlık kontrolü geçmedi"; docker logs meds-app --tail 40; exit 1' | head -c 2000
 echo
+echo "==> [4b/4] taşınan eski konumlar Oracle'da arşive (rsync silmez; eski kod kopyası kalmasın)"
+# deploy/oracle/tasinan_yollar.txt: <eski> <yeni>. Sağlık kontrolünden SONRA çalışır (yeniden başlayan sunucu yeni yolları
+# kullanıyor). Silme yok → /home/ubuntu/medsor/_arsiv_tasinan/<zaman>/. Yeni konum yoksa ya da eski konumdan çalışan
+# süreç varsa kalem atlanır (sonraki dağıtım yeniden dener). 'scripts/arsiv/' hedefliler Oracle'a gönderilmez, yalnız arşivlenir.
+$SSH "$ORACLE_USER@$ORACLE_HOST" "ORACLE_DIR=$ORACLE_DIR bash -s" <<'UZAKEOF' || echo "  UYARI: eski konum arşivi yapılamadı (zararsız; sonraki dağıtım yeniden dener)"
+set -u
+cd "$ORACLE_DIR" || exit 0
+L=deploy/oracle/tasinan_yollar.txt; [ -f "$L" ] || { echo "  liste yok"; exit 0; }
+ARS="/home/ubuntu/medsor/_arsiv_tasinan/$(date +%Y%m%d-%H%M%S)"; n=0
+while read -r eski yeni _; do
+  case "$eski" in ''|\#*) continue;; esac
+  [ -e "$eski" ] && [ ! -L "$eski" ] || continue
+  case "$yeni" in
+    scripts/arsiv/*) : ;;
+    *) [ -e "$yeni" ] || { echo "  ATLANDI $eski: yeni konum ($yeni) Oracle'da yok"; continue; } ;;
+  esac
+  if pgrep -f "(^|[ /])$eski(/| |\$)" >/dev/null 2>&1; then echo "  BEKLETİLDİ $eski: çalışan süreç var"; continue; fi
+  if sudo -n mkdir -p "$ARS/$(dirname "$eski")" && sudo -n mv "$eski" "$ARS/$eski"; then n=$((n+1)); fi
+done < "$L"
+if [ "$n" -gt 0 ]; then echo "  $n eski konum arşive alındı: $ARS"; else echo "  arşivlenecek eski konum yok"; fi
+UZAKEOF
 if [[ "$NEED_RESTART" == "1" || "$DO_IMAGE" == "1" ]]; then
   echo "==> [5/5] arama paketi + hastalık grafiği (AYRI konteynerde, arka planda; imza aynıysa ~1 sn)"
   # Yalnız son komut arka plana atılır (önceki 'a && b && nohup … &' tüm zinciri atıp SSH'ı açık tutuyordu, 2026-10-18)

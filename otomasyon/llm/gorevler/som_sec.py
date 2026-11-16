@@ -1,7 +1,7 @@
 """Görev `som_sec` — anlatılan yapının görseldeki yeri: model yalnız NUMARA seçer (Set-of-Mark, ICERIK_MOTORU_V3.md §17.1).
 
 Hedef: sayfa kimliği `kN-NN-pNN`; `--ayar sorgu="…"` anlatımda sözü edilen yapı (ör. "hipertrofiye uğramış miyosit").
-Girdi: numaralı SoM kopyası (scripts/kroki/som.py; yoksa üretilir) + her numaranın betikle bulunan etiketi (bölgeye düşen
+Girdi: numaralı SoM kopyası (scripts/uretim/kroki/som.py; yoksa üretilir) + her numaranın betikle bulunan etiketi (bölgeye düşen
 slayt yazısı). Model koordinat yazmaz: `{"numara": 3}` ya da `{"numara": null}` (yapı görselde yoksa).
 Kapı: numara SoM eşlemesinde var; etiketi sorguyla AÇIKÇA örtüşen bir bölge varken etiketi örtüşmeyen başka bölge seçilemez.
 Uygulama: `meds_database_v2/ders_bilgi/<ders>/l1/som_secim.json` {sorgu karması: {sayfa, sorgu, roi, numara, model}}.
@@ -16,7 +16,7 @@ from pathlib import Path
 
 from .. import cekirdek as c
 
-sys.path.insert(0, str(c.KOK / "scripts" / "kroki"))
+sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "kroki"))
 
 OGRENCI_METNI = False   # çıktı iç veri (kısa etiket taşır); ortak etiket sızıntısı kapısı uygulanmaz
 KURALLAR = ["cikti_disiplini"]

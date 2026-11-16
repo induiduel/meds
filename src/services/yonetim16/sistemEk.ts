@@ -278,7 +278,7 @@ export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
   });
 
   /* ================= RAG ================= */
-  const RAG_BETIK = path.join(d.rootDir, 'scripts/advanced_ai/rag_vektor_hatti.py');
+  const RAG_BETIK = path.join(d.rootDir, 'scripts/altyapi/advanced_ai/rag_vektor_hatti.py');
   const RAG_PY = path.join(d.rootDir, '.venv-ocr/bin/python');
   const ragCihaz = () => fs.existsSync(RAG_BETIK) && fs.existsSync(RAG_PY) && !process.env.DERS_ISCI_URL;
   const TEMP = process.env.MEDS_TEMP_DIR || path.join(KOK, 'meds_temp'); // Docker'da KOK = / (H479)

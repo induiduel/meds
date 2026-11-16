@@ -1,7 +1,7 @@
 /**
  * Ek modüller — EMA ses klipleri.
  *   GET /api/ek-modul/ses/:modul/:klip.mp3 — MP3 (Range/206). Adreste ?v=<metin özeti> olduğu için uzun önbellek.
- * Klasör: data/ek_moduller/ses/<modül>/ (git dışı). Klipler bu bilgisayarda scripts/ek_modul/ses.py ile (EMA, GPU) üretilir,
+ * Klasör: data/ek_moduller/ses/<modül>/ (git dışı). Klipler bu bilgisayarda scripts/uretim/ek_modul/ses.py ile (EMA, GPU) üretilir,
  * Oracle'a rsync ile taşınır. Klip dizini (özet + süre) ön yüz paketinde: src/data/ek_moduller/<modül>/klip.json.
  */
 import path from 'path';

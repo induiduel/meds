@@ -1,4 +1,4 @@
-# Sesli soru çözücü yazımı (scripts/spot_cozucu/TALIMAT_COZUCU.md özeti)
+# Sesli soru çözücü yazımı (scripts/uretim/spot_cozucu/TALIMAT_COZUCU.md özeti)
 - Önce soruyu denetle: dayanağa göre doğru cevap tartışmasız tek doğru mu, başka şık da doğru sayılabilir mi, kök belirsiz mi? Sorun varsa `kontrol.durum` "sorunlu" ve `not`ta neden (dayanak sayfasıyla); sorun yoksa "tamam". Soruyu, şıkları ya da anahtarı DEĞİŞTİRME.
 - Açıklamalardaki her tıbbi bilgi DAYANAK metinde geçer; kitap bilgisi ekleme, sayı uydurma.
 - `siklar` her şık için 2–3 cümle, 18–60 kelime: kavramın ne olduğu, ne işe yaradığı, bu soruda neden doğru/yanlış. Doğru şıkkın açıklaması "doğru" sözcüğünü içerir; yanlış şık açıklaması "Doğru" ile başlamaz. "Hangisi yanlıştır/değildir" sorusunda doğru şıkkın açıklaması ifadenin neden yanlış olduğunu söyler.

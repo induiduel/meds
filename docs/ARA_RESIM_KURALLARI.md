@@ -50,7 +50,7 @@ Kısa kelime öbekli "kutu + ok" resmi YASAK; öğrenci resme bakınca mekanizma
 
 ## Kapı
 ```
-python3 meds/scripts/ara_resim/dogrula.py <key> [--kok <meds dizini>]
+python3 meds/scripts/uretim/ara_resim/dogrula.py <key> [--kok <meds dizini>]
 ```
 Şema, id tekilliği, SVG varlığı + XML + viewBox + güvenlik + metin ögesi, paragraf aralığı (v2 paragraf sayısı),
 kaynak sayfa (hizalama `dosyalar[0].pages`), çakışma, Türkçe üslup, **ayrıntı** (≥45 kelime, ≥12 etiket, ≥15 çizim ögesi,

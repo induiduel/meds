@@ -464,7 +464,7 @@ export function extractEntities(text: string): string[] {
 }
 
 // ------------------------------------------------------------------------------
-// 6. DERLEM MODELİ (src/data/composer_model.json — scripts/composer/build_composer_model.py)
+// 6. DERLEM MODELİ (src/data/composer_model.json — scripts/moduller/composer/build_composer_model.py)
 // ------------------------------------------------------------------------------
 
 export interface ComposerModel {

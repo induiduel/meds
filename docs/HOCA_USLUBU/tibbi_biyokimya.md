@@ -1,4 +1,4 @@
-# Tıbbi Biyokimya — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Tıbbi Biyokimya — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 28 tekil çıkmış soru · güven: **dusuk** · yıllar: {2018: 1, 2020: 8, 2021: 3, 2022: 2}
 

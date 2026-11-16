@@ -2,8 +2,8 @@
  * Sesli ders ekran yazımı (kullanıcı, 2026-10-22): konuşma metni okunuşla yazılır ("on dördüncü hafta", "beta ha ce ge",
  * "doku plazminojen aktivatörü"); ekranda slayttaki gibi gösterilir: "14. hafta", "β-hCG", "doku plazminojen aktivatörü
  * (t-PA)", "12+6 hafta", "20-24. hafta", "δ". Saklanan metin, ses ve cümle zamanı değişmez; konumlar eşlemeyle taşınır.
- * Sözlük: scripts/sesli_anlatim/yazim_sozlugu.py → src/data/sesli_anlatim/yazim_sozlugu.json.
- * Ses tarafının tersi: scripts/sesli_anlatim/okunus.py SAYI_TTS (ekrandaki rakam → okunuş).
+ * Sözlük: scripts/uretim/sesli_anlatim/yazim_sozlugu.py → src/data/sesli_anlatim/yazim_sozlugu.json.
+ * Ses tarafının tersi: scripts/uretim/sesli_anlatim/okunus.py SAYI_TTS (ekrandaki rakam → okunuş).
  */
 import sozluk from '../data/sesli_anlatim/yazim_sozlugu.json';
 import { sayilariYazEslemeli } from './sayiYazim';

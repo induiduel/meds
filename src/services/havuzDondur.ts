@@ -4,7 +4,7 @@
  *  - serbest metin ayrıştırma (Gemini) ve soru kaydına geri yazma durur (ham girdi yine `question_intake/girdiler.jsonl`e yazılır),
  *  - havuz kümeleme ve yapay zekâ birleştirmesi durur,
  *  - çift modeli öğrenmesi durur,
- *  - cihazdaki olası soru gece işi (`scripts/olasi_soru/gece.sh`) aynı dosyayı Oracle'dan okuyup çıkar.
+ *  - cihazdaki olası soru gece işi (`scripts/hat/olasi_soru/gece.sh`) aynı dosyayı Oracle'dan okuyup çıkar.
  * Kayıt, oy, yorum, ham soru defteri ve meds-pg yansıtması etkilenmez. Kaldırmak: dosyayı sil ya da `dondur: false`.
  * Dosya her istekte değil 5 sn'de bir okunur; sunucu yeniden başlatılmadan açılıp kapanır.
  */

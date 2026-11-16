@@ -1,5 +1,5 @@
 {
- "aciklama": "Kurul teorik sınavı branş başına soru sayısı (fakülte duyurusu). Baraj: bir branşta soruların yarısından az doğru yapılırsa eksik kalan her doğru kadar puan düşülür (puan = 2·doğru − n/2). Bitirdiklerim › 60 planı (components/takip/sinavPlani.ts) okur; scripts/son_prova/plan.py ile aynı olmalı.",
+ "aciklama": "Kurul teorik sınavı branş başına soru sayısı (fakülte duyurusu). Baraj: bir branşta soruların yarısından az doğru yapılırsa eksik kalan her doğru kadar puan düşülür (puan = 2·doğru − n/2). Bitirdiklerim › 60 planı (components/takip/sinavPlani.ts) okur; scripts/uretim/son_prova/plan.py ile aynı olmalı.",
  "kurullar": {
   "1": {
    "toplam": 100,

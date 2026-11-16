@@ -65,7 +65,7 @@ def turev_eksikleri(api="https://api.nofrostlife.com.tr"):
 def kapi_oz_sinama():
     """H5: kapılar bilinen iyi/kötü örnekle doğru karar veriyor mu (çöken kapı her şeyi 'içerik hatası' diye reddeder)."""
     import sys as _s
-    _s.path.insert(0, str(KOK / "meds/scripts")); _s.path.insert(0, str(KOK / "meds/scripts/sesli_anlatim"))
+    _s.path.insert(0, str(KOK / "meds/scripts")); _s.path.insert(0, str(KOK / "meds/scripts/uretim/sesli_anlatim"))
     sorun = []
     try:
         from turkce_uslup import denetle as us
@@ -112,7 +112,7 @@ def kayit_defteri_sorunlari():
 def ema_alt_surec_okunusu():
     """H17: ema_isci.sentezle alt süreçte çalışır; okunuş ayarı (uzun kısaltma / modül) orada da kurulmalı."""
     import inspect, sys as _s
-    _s.path.insert(0, str(KOK / "meds/scripts/sesli_anlatim"))
+    _s.path.insert(0, str(KOK / "meds/scripts/uretim/sesli_anlatim"))
     try:
         import ema_isci as E
         return [] if "uzun_kisaltma_ayarla(" in inspect.getsource(E.sentezle) else ["ema_isci.sentezle okunuş ayarını kurmuyor"]

@@ -1,5 +1,5 @@
 /** Patoloji alternatif sesli soru çözücü — veri yükleyici ve ilerleme deposu.
- * Metin: src/data/patoloji_cozucu_alt/{index,<kod>}.json (scripts/patoloji_cozucu_alt/paketle.py).
+ * Metin: src/data/patoloji_cozucu_alt/{index,<kod>}.json (scripts/uretim/patoloji_cozucu_alt/paketle.py).
  * Ses: /api/patoloji-cozucu-alt/ses/<kod>/<no>.mp3 (src/services/patolojiCozucuAlt.ts).
  */
 import { useEffect, useState } from 'react';

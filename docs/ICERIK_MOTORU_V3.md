@@ -24,7 +24,7 @@
 | L2 Anlatı, çizim, soru | `konusma_v2.json` (ses/ekran iki yüz, kimlik), çapa + imleç yolu, Öğren destesi, spot/çözücü/asistan | **Var** → çizim komutları + parça başı 1–6 soru eklenir (§3, §6) |
 | 4 çizim kipi (kontur, yolak, EKG fazı, görselsiz şema) | `PdfDocView` halka/imleç (`yol`), `SlideDrawingCanvas`, kelime zamanı | **Yeni (R4–R5)**, kelime kimliğine bağlı (ms'ye değil) (§4) |
 | 3+1 renk sistemi, uyarlanır kontrast | `palettes.ts` + kontrast kapısı, öğrenci notu kırmızı marker (`.pdv-not`), cümle/kelime vurgusu | **Kısmen var** → sayfa parlaklığı L0'da ölçülür, renkler palet jetonu (§5) |
-| LiteLLM ile model bağımsızlık; Ollama/vLLM | `scripts/agents/cloud_llm.py` (Gemini Free 1–7, Groq, Zen, OpenRouter zinciri, kota defteri, görsel OCR) | **Uyarla:** LiteLLM eklenmez, mevcut istemci **görev yönlendiricisi** ile genişler; **yerel model YOK** (AGENTS.md 10) (§1) |
+| LiteLLM ile model bağımsızlık; Ollama/vLLM | `scripts/altyapi/agents/cloud_llm.py` (Gemini Free 1–7, Groq, Zen, OpenRouter zinciri, kota defteri, görsel OCR) | **Uyarla:** LiteLLM eklenmez, mevcut istemci **görev yönlendiricisi** ile genişler; **yerel model YOK** (AGENTS.md 10) (§1) |
 | EMA GPU → CPU düşüşü | `meds-ema` drop-in: koruyucu etkinse GPU, değilse CPU; CUDA hatasında oturum CPU | **Var** → OOM'da iş yeniden kuyruğa + CPU sağlaması belgelenir (§7) |
 | `display_text` / `tts_text` + fonetik | `konusma_v2` `ekran`/`ses`, `okunus.py` (kısaltma, `SAYI_TTS`), `ekranYazim.ts`, `yazim_sozlugu.py` | **Var** → tek okunuş sözlüğü + noktalama temizliği + duraklama (§7) |
 | WhisperX kelime hizalama | `kelime_zaman.py` (faster-whisper, CPU/GPU istisnası), `cumle_zaman.py` | **Var** (WhisperX gerekmez) |
@@ -268,7 +268,7 @@ varyant için hesaplanır (H12: türev veri metnin aynı sürümünden — `meti
   `ogrenci_notu` / `hoca_kaydi`: yalnız `--ekler`).
 - **Ses biçimi:** paket içinde Opus (≈%40 küçük). Site bugünkü MP3'leri sunmayı sürdürür; Opus yalnız pakette, Safari
   uyumu sınandıktan sonra sitede de seçenek olur.
-- **Üretim:** `scripts/paket/medspak_uret.py <ders_id> [--ekler]` → `meds_export/medspak/<ders_id>.medspak`; kapı
+- **Üretim:** `scripts/hat/paket/medspak_uret.py <ders_id> [--ekler]` → `meds_export/medspak/<ders_id>.medspak`; kapı
   `medspak_dogrula.py` (her kimlik çözülür, ses/kelime zamanı `metinHash` tutarlı, boyut tavanı).
 - **Okuyucu:** önce web uygulamasının çevrimdışı motoruna uyarlayıcı (`paketMotoru.ts` yeni tür `medspak:<ders>`),
   sql.js tembel yüklenir. Bağımsız masaüstü/mobil okuyucu ancak web uyarlayıcısı oturduktan sonra değerlendirilir.
@@ -531,7 +531,7 @@ Yeni ürün eklemek = yeni görev kaydı + şablon + şema + derleyici + kapı +
 **Bugün:** `isle.py::cikmis_adaylari` her PDF için tüm havuzda (yalnız kurul süzgeciyle) 30 benzer soru sorgusu yapar;
 ders zinciri `aday_hazirla.py` ile yeniden süzer. Yeni çıkmış eklenince **hiçbir PDF'in bağı güncellenmez** (ters yön yok).
 
-### 15.1 Çıkmış dizini (bir kez, artımlı) — `scripts/cikmis_dizin/dizin.py`
+### 15.1 Çıkmış dizini (bir kez, artımlı) — `scripts/uretim/cikmis_dizin/dizin.py`
 
 Her tekil çıkmış (kopya ailesi tek kayıt, `tekrar_analizi` grupları) için bir kez:
 `{id, aile, donem, kurul, brans, ders_kodu?, konu_kimligi?, yil, varliklar: [t-…, h-…, ilaç, gen, sayı+birim], kok_vektor (bge-m3),
@@ -697,7 +697,7 @@ Sahte Kurul 2 dersi (2x99 "Gebelik Terminolojisi ve Kavramları", 60 sayfa; Kuru
 - Ayarlar `otomasyon/llm/butce.json` `ajanlar` (komut, modeller, günlük tavan, zaman aşımı); sayaç
   `meds_temp/state/ajan_butce.json`. Ajan boş klasörde (`meds_temp/ajan_cwd`), salt okunur (`opencode run --agent plan`),
   istem stdin'den. Command Code ve Antigravity tanımlı ama `kapali` (Antigravity'de oturum açık, istem argümanla).
-- Doğrudan API zinciri (`Ü`, scripts/agents/cloud_llm.py) görev hattında kullanılmaz; yalnız `--katman Ü` ile elle.
+- Doğrudan API zinciri (`Ü`, scripts/altyapi/agents/cloud_llm.py) görev hattında kullanılmaz; yalnız `--katman Ü` ile elle.
   `som_sec` (görsel) ajan görsel desteği olmadığından kapalı.
 - Tasarruf: kısmi düzeltme (`yonlendir.kismi_duzeltme`: yalnız hatalı ögeler ve onların girdisi) + toplu denetim
   (`spot_zinciri.denetim`: aynı yazarın işleri ≤60 bin karakterlik paketlerde D1, D2 …). 2x99'da 19 iş → 5 paket.
@@ -727,9 +727,9 @@ kullanıcı izler ve araya girebilir.
 | Aşama | Yapılan | Kalan |
 |---|---|---|
 | Sesli metin kapsamı | `isle.sesli_kapsam`: her içerik/şekil sayfası anlatılır, sayfa başına bilgi maddesi kadar cümle (görselde +1, ≤4); TALIMAT_SESLI "Derinlik" | — |
-| R5 delta | `scripts/ders_isci/delta.py` (iz eşleme → ekler / kısmi / tam); Drive hızlı bakış `hizli_bakis.py` (5 dk, kök + aktif/sonraki kurul klasörleri, değişiklikte tam tarama) | kısmi kipte bilgi paketi güncellenmez; `changes.watch` için Drive API kimliği yok (herkese açık sayfa okunuyor) — hızlı bakış bunun yerine |
-| R6 çizim | `scripts/cizim/` (cizim_uret + cizim_dogrula + TALIMAT_CIZIM), ders zinciri `cizim` adımı, `CizimLayer.tsx` (kontur, akış, eğri fazı, şema), sunucu işarete `z` ekler; kroki adayları (vektör ok `ok.py`, eğri `egri.py`) istemde `"aday": "A#"` → koordinat betikten | eğri fazı derste örnek çıkmadı (k2-02'de grafik yok) |
-| R7 paket | `scripts/paket/medspak_uret.py` + `medspak_dogrula.py` (SQLite; ses Opus 32 kbps, k2-02 4,4 MB) | okuyucu uyarlayıcısı (`paketMotoru.ts` `medspak:` türü, sql.js) |
+| R5 delta | `scripts/uretim/ders_isci/delta.py` (iz eşleme → ekler / kısmi / tam); Drive hızlı bakış `hizli_bakis.py` (5 dk, kök + aktif/sonraki kurul klasörleri, değişiklikte tam tarama) | kısmi kipte bilgi paketi güncellenmez; `changes.watch` için Drive API kimliği yok (herkese açık sayfa okunuyor) — hızlı bakış bunun yerine |
+| R6 çizim | `scripts/uretim/cizim/` (cizim_uret + cizim_dogrula + TALIMAT_CIZIM), ders zinciri `cizim` adımı, `CizimLayer.tsx` (kontur, akış, eğri fazı, şema), sunucu işarete `z` ekler; kroki adayları (vektör ok `ok.py`, eğri `egri.py`) istemde `"aday": "A#"` → koordinat betikten | eğri fazı derste örnek çıkmadı (k2-02'de grafik yok) |
+| R7 paket | `scripts/hat/paket/medspak_uret.py` + `medspak_dogrula.py` (SQLite; ses Opus 32 kbps, k2-02 4,4 MB) | okuyucu uyarlayıcısı (`paketMotoru.ts` `medspak:` türü, sql.js) |
 
 k2-02 (62 sayfa): sesli metin 1.628 → **2.189 kelime (~20 dk), 106 cümle**, atlanan sayfa 0; işaret kapsamı **%96**;
 çizim (kroki adaylarıyla) 76 aday → **68 komut** (34 akış — 16'sı PDF okundan, 21 şema, 13 kontur; 8 atıldı); paket 4,4 MB (Opus), 0 HATA. EMA sesi GPU'da ~1 dk.
@@ -737,7 +737,7 @@ k2-02 (62 sayfa): sesli metin 1.628 → **2.189 kelime (~20 dk), 106 cümle**, a
 ## 23. Canlı çizim v2: anlam şablonları, anlam denetimi, otomatik sınama (2026-10-24)
 
 R6 çizim motoru k2-02 sınamasında kullanıcı geri bildirimleriyle olgunlaştı; ayrıntı `docs/CIZIM_KURALLARI.md`.
-- **Şablon kütüphanesi** (`scripts/cizim/sablonlar.json`, `sablon.py`): dersten bağımsız anlam → düzen eşlemesi (13 + üretilen);
+- **Şablon kütüphanesi** (`scripts/uretim/cizim/sablonlar.json`, `sablon.py`): dersten bağımsız anlam → düzen eşlemesi (13 + üretilen);
   istemci genel düzenleri çizer (`CizimLayer.SablonPanel`), yeni şablon kod gerektirmez. Model önerisi kapıdan geçince eklenir.
 - **Tıbbi anlam denetimi:** ikinci Claude geçişi her paneli/etiketi öğrencinin okuyacağı biçimde cümleyle karşılaştırır.
 - **Görsel önceliği:** resim slaytında panel yok; PDF'in kendi oku kopyalanmaz (aday ya da çizili hat → odak çerçevesi).

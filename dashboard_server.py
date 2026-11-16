@@ -3019,7 +3019,7 @@ def stop_all_phases() -> dict:
     killed = []
     me = os.getpid()
     # göreli yolla başlatılanlar da yakalansın; yeni veri hattı ve orkestratör de durdurulur (yoksa kilit boşalınca sonraki aşamayı başlatır)
-    markers = ("scripts/advanced_ai/", "scripts/agents/stage", "phase14_", "new_data_pipeline.py", "pipeline_runner.py")
+    markers = ("scripts/altyapi/advanced_ai/", "scripts/altyapi/agents/stage", "phase14_", "new_data_pipeline.py", "pipeline_runner.py")
     keep = ("phase_cycle.py", "rag_vector_build.py", "embed_server.py")   # arama altyapısı faz değildir
     for d in Path("/proc").iterdir():
         if not d.name.isdigit() or int(d.name) == me:
@@ -3049,42 +3049,42 @@ def resume_all_phases() -> dict:
 
 # Tüm aşama/faz betiklerinin kataloğu: aşama numarası, AI türü (kaynak koddan otomatik), zincir anahtarı, çalışma durumu
 STAGE_ORDER = [
-    ("1", "Aşama 1 · Drive indirme", "scripts/pipeline/02-download.mjs"),
-    ("1", "Aşama 1 · Belge okuma (PDF/PPTX → metin)", "scripts/agents/read_document.py"),
-    ("1", "Aşama 1 · İndirme izleyici", "scripts/agents/watch_downloads.py"),
-    ("1", "Aşama 1 · Hatalı OCR yenileme", "scripts/agents/stage1_refresh.py"),
-    ("2", "Aşama 2 · Türkçe onarım + soru ayrıştırma", "scripts/agents/stage2_clean.py"),
-    ("3", "Aşama 3 · Birleştirme + RAG zenginleştirme", "scripts/agents/stage3_merge.py"),
-    ("4", "Aşama 4 · Veritabanı aktarımı", "scripts/agents/stage4_database.py"),
-    ("5", "Faz 5 · Çoklu AI konsensüs", "scripts/advanced_ai/multi_ai_consensus_phase5.py"),
-    ("6", "Faz 6 · Derin metadata", "scripts/advanced_ai/deep_metadata_generator_phase6.py"),
-    ("6", "Faz 6 doğrulama", "scripts/advanced_ai/validate_phase6_metadata.py"),
-    ("6.5", "Faz 6.5 · Terim sözlüğü + soru–slayt çapası", "scripts/advanced_ai/thesaurus_anchor_phase6_5.py"),
-    ("7", "Faz 7 v2 · Soru metadatası (elle)", "scripts/advanced_ai/phase7_question_metadata_v2.py"),
-    ("7.5", "Faz 7.5 · Müfredat slayt düzenleme", "scripts/advanced_ai/reconstruct_slides_phase7_5.py"),
-    ("8", "Faz 8 · Müfredat ağacı", "scripts/advanced_ai/phase8_curriculum_graph.py"),
-    ("8", "Kanıtlı sözlük", "scripts/advanced_ai/build_evidence_thesaurus.py"),
-    ("9", "Faz 9 · Sözlük destekli ağaç", "scripts/advanced_ai/phase9_thesaurus_graph.py"),
-    ("10", "Faz 10 · Kavram kimlikleri", "scripts/advanced_ai/phase10_concept_ids.py"),
-    ("11", "Faz 11 · Soru–slayt eşleşmesi", "scripts/advanced_ai/phase11_question_slide.py"),
-    ("11", "Öğren bağlantıları", "scripts/advanced_ai/learn_links.py"),
-    ("11", "Hakem kuyruğu", "scripts/advanced_ai/referee_queue.py"),
-    ("11", "Müfredat çözümleme (sınav başlığı)", "scripts/advanced_ai/curriculum_resolve.py"),
-    ("11", "Karantina", "scripts/advanced_ai/quarantine_questions.py"),
-    ("11", "Sınav çıktısı yeniden bölme", "scripts/advanced_ai/resplit_exam_printout.py"),
-    ("11", "Veritabanına yayın", "scripts/advanced_ai/publish_to_database.py"),
-    ("11", "Site analiz yayını", "scripts/advanced_ai/export_phase_insights.py"),
-    ("12", "Faz 12 · Ders notu temizleme", "scripts/advanced_ai/phase12_clean_notes.py"),
-    ("13", "Faz 13 · Tıbbi varlıklar", "scripts/advanced_ai/phase13_entities.py"),
-    ("13", "Ortak depo + RAG parçaları", "scripts/advanced_ai/build_unified_store.py"),
-    ("14", "Faz 14 · Bulut soru düzeltme", "scripts/advanced_ai/phase14_cloud_question_editor.py"),
-    ("14", "Faz 14 · Yerel soru düzeltme (eski)", "scripts/advanced_ai/phase14_past_question_editor.py"),
-    ("–", "Müfredat bilgi paketi", "scripts/advanced_ai/curriculum_package.py"),
-    ("15", "RAG + veritabanı yenileme", "scripts/agents/rag_refresh.py"),
-    ("16", "Örnek çalışma soruları (müfredat, günlük sınırlı)", "scripts/advanced_ai/practice_question_generator.py"),
-    ("15", "RAG vektörleri → yerel Supabase", "scripts/advanced_ai/rag_vector_build.py"),
-    ("–", "Yeni veri hattı (artımlı)", "scripts/agents/new_data_pipeline.py"),
-    ("14", "Faz 14 otomatik ücretsiz kip", "scripts/agents/faz14_auto.sh"),
+    ("1", "Aşama 1 · Drive indirme", "scripts/altyapi/pipeline/02-download.mjs"),
+    ("1", "Aşama 1 · Belge okuma (PDF/PPTX → metin)", "scripts/altyapi/agents/read_document.py"),
+    ("1", "Aşama 1 · İndirme izleyici", "scripts/altyapi/agents/watch_downloads.py"),
+    ("1", "Aşama 1 · Hatalı OCR yenileme", "scripts/altyapi/agents/stage1_refresh.py"),
+    ("2", "Aşama 2 · Türkçe onarım + soru ayrıştırma", "scripts/altyapi/agents/stage2_clean.py"),
+    ("3", "Aşama 3 · Birleştirme + RAG zenginleştirme", "scripts/altyapi/agents/stage3_merge.py"),
+    ("4", "Aşama 4 · Veritabanı aktarımı", "scripts/altyapi/agents/stage4_database.py"),
+    ("5", "Faz 5 · Çoklu AI konsensüs", "scripts/altyapi/advanced_ai/multi_ai_consensus_phase5.py"),
+    ("6", "Faz 6 · Derin metadata", "scripts/altyapi/advanced_ai/deep_metadata_generator_phase6.py"),
+    ("6", "Faz 6 doğrulama", "scripts/altyapi/advanced_ai/validate_phase6_metadata.py"),
+    ("6.5", "Faz 6.5 · Terim sözlüğü + soru–slayt çapası", "scripts/altyapi/advanced_ai/thesaurus_anchor_phase6_5.py"),
+    ("7", "Faz 7 v2 · Soru metadatası (elle)", "scripts/altyapi/advanced_ai/phase7_question_metadata_v2.py"),
+    ("7.5", "Faz 7.5 · Müfredat slayt düzenleme", "scripts/altyapi/advanced_ai/reconstruct_slides_phase7_5.py"),
+    ("8", "Faz 8 · Müfredat ağacı", "scripts/altyapi/advanced_ai/phase8_curriculum_graph.py"),
+    ("8", "Kanıtlı sözlük", "scripts/altyapi/advanced_ai/build_evidence_thesaurus.py"),
+    ("9", "Faz 9 · Sözlük destekli ağaç", "scripts/altyapi/advanced_ai/phase9_thesaurus_graph.py"),
+    ("10", "Faz 10 · Kavram kimlikleri", "scripts/altyapi/advanced_ai/phase10_concept_ids.py"),
+    ("11", "Faz 11 · Soru–slayt eşleşmesi", "scripts/altyapi/advanced_ai/phase11_question_slide.py"),
+    ("11", "Öğren bağlantıları", "scripts/altyapi/advanced_ai/learn_links.py"),
+    ("11", "Hakem kuyruğu", "scripts/altyapi/advanced_ai/referee_queue.py"),
+    ("11", "Müfredat çözümleme (sınav başlığı)", "scripts/altyapi/advanced_ai/curriculum_resolve.py"),
+    ("11", "Karantina", "scripts/altyapi/advanced_ai/quarantine_questions.py"),
+    ("11", "Sınav çıktısı yeniden bölme", "scripts/altyapi/advanced_ai/resplit_exam_printout.py"),
+    ("11", "Veritabanına yayın", "scripts/altyapi/advanced_ai/publish_to_database.py"),
+    ("11", "Site analiz yayını", "scripts/altyapi/advanced_ai/export_phase_insights.py"),
+    ("12", "Faz 12 · Ders notu temizleme", "scripts/altyapi/advanced_ai/phase12_clean_notes.py"),
+    ("13", "Faz 13 · Tıbbi varlıklar", "scripts/altyapi/advanced_ai/phase13_entities.py"),
+    ("13", "Ortak depo + RAG parçaları", "scripts/altyapi/advanced_ai/build_unified_store.py"),
+    ("14", "Faz 14 · Bulut soru düzeltme", "scripts/altyapi/advanced_ai/phase14_cloud_question_editor.py"),
+    ("14", "Faz 14 · Yerel soru düzeltme (eski)", "scripts/altyapi/advanced_ai/phase14_past_question_editor.py"),
+    ("–", "Müfredat bilgi paketi", "scripts/altyapi/advanced_ai/curriculum_package.py"),
+    ("15", "RAG + veritabanı yenileme", "scripts/altyapi/agents/rag_refresh.py"),
+    ("16", "Örnek çalışma soruları (müfredat, günlük sınırlı)", "scripts/altyapi/advanced_ai/practice_question_generator.py"),
+    ("15", "RAG vektörleri → yerel Supabase", "scripts/altyapi/advanced_ai/rag_vector_build.py"),
+    ("–", "Yeni veri hattı (artımlı)", "scripts/altyapi/agents/new_data_pipeline.py"),
+    ("14", "Faz 14 otomatik ücretsiz kip", "scripts/altyapi/agents/faz14_auto.sh"),
 ]
 _AI_MARKERS = [
     ("bulut_ucretli", ("PHASE14_PAID_GEMINI_KEY",)),
@@ -3097,7 +3097,7 @@ _AI_LABEL = {"bulut_ucretli": "Bulut · ÜCRETLİ (yalnız Faz 14)", "bulut_ucre
 
 
 def script_catalog() -> dict:
-    scripts = str(MEDS_DIR / "scripts" / "agents")
+    scripts = str(MEDS_DIR / "scripts" / "altyapi" / "agents")
     if scripts not in sys.path:
         sys.path.insert(0, scripts)
     try:
@@ -3150,16 +3150,16 @@ INGEST_SETTINGS_FILE = TEMP_DIR / "state" / "ingest_settings.json"
 INGEST_DEFAULTS = {"bulut_ocr": False, "asama2_llm": "kapali", "ornek_soru_gunluk": 10, "drive_kokleri": ["drive_root"]}
 _VENV_PY = str(MEDS_DIR / ".venv-ocr" / "bin" / "python")
 INGEST_STEPS = {
-    "tara": ("Drive'ı tara ve indir (yalnız seçili klasör)", ["node", "scripts/pipeline/01-inventory.mjs"], ["node", "scripts/pipeline/02-download.mjs"]),
-    "oku": ("Yeni dosyaları oku (Aşama 1)", [_VENV_PY, "scripts/agents/read_document.py", str(PROJECT_ROOT / "meds_downloads" / "drive_root")]),
-    "ayristir": ("Ayrıştır (Aşama 2)", [_VENV_PY, "scripts/agents/stage2_clean.py"]),
-    "aktar": ("Veritabanına aktar (Aşama 3–4)", [_VENV_PY, "scripts/agents/pipeline_runner.py", "--sonraki"]),
-    "temizle": ("Ders notu temizleme + ortak RAG (Faz 12 + ortak depo)", [_VENV_PY, "scripts/advanced_ai/phase12_clean_notes.py"],
-                [_VENV_PY, "scripts/advanced_ai/build_unified_store.py"]),
-    "ornek_soru": ("Örnek soru üret (günlük sınırla)", [_VENV_PY, "scripts/advanced_ai/practice_question_generator.py"]),
-    "rag_vektor": ("RAG vektörleri → yerel Supabase", [_VENV_PY, "scripts/advanced_ai/rag_vector_build.py"]),
-    "yeni_veri": ("Yeni verileri işle (yalnız değişen girdiler)", [_VENV_PY, "scripts/agents/new_data_pipeline.py", "--yeni"]),
-    "bekleyen": ("İşlenmemiş verileri bitir", [_VENV_PY, "scripts/agents/new_data_pipeline.py", "--bekleyen"]),
+    "tara": ("Drive'ı tara ve indir (yalnız seçili klasör)", ["node", "scripts/altyapi/pipeline/01-inventory.mjs"], ["node", "scripts/altyapi/pipeline/02-download.mjs"]),
+    "oku": ("Yeni dosyaları oku (Aşama 1)", [_VENV_PY, "scripts/altyapi/agents/read_document.py", str(PROJECT_ROOT / "meds_downloads" / "drive_root")]),
+    "ayristir": ("Ayrıştır (Aşama 2)", [_VENV_PY, "scripts/altyapi/agents/stage2_clean.py"]),
+    "aktar": ("Veritabanına aktar (Aşama 3–4)", [_VENV_PY, "scripts/altyapi/agents/pipeline_runner.py", "--sonraki"]),
+    "temizle": ("Ders notu temizleme + ortak RAG (Faz 12 + ortak depo)", [_VENV_PY, "scripts/altyapi/advanced_ai/phase12_clean_notes.py"],
+                [_VENV_PY, "scripts/altyapi/advanced_ai/build_unified_store.py"]),
+    "ornek_soru": ("Örnek soru üret (günlük sınırla)", [_VENV_PY, "scripts/altyapi/advanced_ai/practice_question_generator.py"]),
+    "rag_vektor": ("RAG vektörleri → yerel Supabase", [_VENV_PY, "scripts/altyapi/advanced_ai/rag_vector_build.py"]),
+    "yeni_veri": ("Yeni verileri işle (yalnız değişen girdiler)", [_VENV_PY, "scripts/altyapi/agents/new_data_pipeline.py", "--yeni"]),
+    "bekleyen": ("İşlenmemiş verileri bitir", [_VENV_PY, "scripts/altyapi/agents/new_data_pipeline.py", "--bekleyen"]),
 }
 AUTOMATION_FILE = TEMP_DIR / "state" / "otomasyon.json"
 PRACTICE_FILE = TEMP_DIR / "state" / "ornek_soru_ayarlari.json"
@@ -3212,7 +3212,7 @@ def save_practice(p: dict) -> dict:
 
 def newdata_status() -> dict:
     try:
-        r = subprocess.run([_VENV_PY, str(MEDS_DIR / "scripts" / "agents" / "new_data_pipeline.py"), "--durum"],
+        r = subprocess.run([_VENV_PY, str(MEDS_DIR / "scripts" / "altyapi" / "agents" / "new_data_pipeline.py"), "--durum"],
                            capture_output=True, text=True, timeout=60)
         d = json.loads(r.stdout)
     except Exception as e:  # noqa: BLE001
@@ -3290,7 +3290,7 @@ def ingest_status() -> dict:
 
 def phase_detail(key: str) -> dict:
     """Bir faz adımının tam görünümü: tanım (komut, varsayılan zaman aşımı), panel ayarları, son 10 çalışma, kuyruk."""
-    scripts = str(MEDS_DIR / "scripts" / "agents")
+    scripts = str(MEDS_DIR / "scripts" / "altyapi" / "agents")
     if scripts not in sys.path:
         sys.path.insert(0, scripts)
     import importlib
@@ -4253,47 +4253,47 @@ def get_master_phases():
 
     # Faz tanımları ve sayaçları
     rows_def = [
-        ("faz5", "Faz 5 · Çoklu AI konsensüs", "soru", "Çıkmış soruların yerel/bulut modellerle taranması ve doğrulanması", "scripts/advanced_ai/multi_ai_consensus_phase5.py",
+        ("faz5", "Faz 5 · Çoklu AI konsensüs", "soru", "Çıkmış soruların yerel/bulut modellerle taranması ve doğrulanması", "scripts/altyapi/advanced_ai/multi_ai_consensus_phase5.py",
          lambda: sum(_fast_lines(f) for f in (db_v2_dir / "questions").glob("*.jsonl")), 7219),
-        ("faz6", "Faz 6 · Derin metadata", "soru", "Tıbbi hiper-metadata, ICD-10 kodları ve ayırıcı tanı entegrasyonu", "scripts/advanced_ai/deep_metadata_generator_phase6.py",
+        ("faz6", "Faz 6 · Derin metadata", "soru", "Tıbbi hiper-metadata, ICD-10 kodları ve ayırıcı tanı entegrasyonu", "scripts/altyapi/advanced_ai/deep_metadata_generator_phase6.py",
          lambda: _safe_json(db_v2_dir / "deep_metadata" / "phase6_metadata_state.json").get("total_questions_processed", 0), 7219),
-        ("faz6_dogrulama", "Faz 6 doğrulama (CPU)", "soru", "Üretilen derin metadatanın CPU üzerinde sentaktik ve şema denetimi", "scripts/advanced_ai/validate_phase6_metadata.py",
+        ("faz6_dogrulama", "Faz 6 doğrulama (CPU)", "soru", "Üretilen derin metadatanın CPU üzerinde sentaktik ve şema denetimi", "scripts/altyapi/advanced_ai/validate_phase6_metadata.py",
          lambda: _fast_lines(db_v2_dir / "deep_metadata_validated" / "dogrulama.jsonl"), 7219),
-        ("faz6_5", "Faz 6.5 · Sözlük & çapa", "çapa", "Tıbbi terimler ontolojisi ve soru-slayt kanıt çapalaması", "scripts/advanced_ai/thesaurus_anchor_phase6_5.py",
+        ("faz6_5", "Faz 6.5 · Sözlük & çapa", "çapa", "Tıbbi terimler ontolojisi ve soru-slayt kanıt çapalaması", "scripts/altyapi/advanced_ai/thesaurus_anchor_phase6_5.py",
          lambda: _fast_lines(db_v2_dir / "medical_thesaurus" / "phase6_5_question_slide_anchors.jsonl"), 4926),
-        ("faz7_5", "Faz 7.5 · Müfredat slaytları", "ders", "Ders slaytlarının resmi KBÜ Dönem 3 müfredat kartlarına dönüştürülmesi", "scripts/advanced_ai/reconstruct_slides_phase7_5.py",
+        ("faz7_5", "Faz 7.5 · Müfredat slaytları", "ders", "Ders slaytlarının resmi KBÜ Dönem 3 müfredat kartlarına dönüştürülmesi", "scripts/altyapi/advanced_ai/reconstruct_slides_phase7_5.py",
          lambda: len(list((db_v2_dir / "slide_reconstructed").glob("*.json"))), 415),
-        ("faz8", "Faz 8 · Kazanım ağacı", "soru", "Soru-kazanım-konu-ders-kurul hiyerarşik graf ağacı inşası", "scripts/advanced_ai/phase8_curriculum_graph.py",
+        ("faz8", "Faz 8 · Kazanım ağacı", "soru", "Soru-kazanım-konu-ders-kurul hiyerarşik graf ağacı inşası", "scripts/altyapi/advanced_ai/phase8_curriculum_graph.py",
          lambda: _fast_lines(temp_dir / "phase8" / "soru_kazanim.jsonl"), 7219),
-        ("sozluk", "Kanıtlı sözlük", "terim", "Amfi ders slaytlarından kısaltma ve yazım varyantı sözlüğü", "scripts/advanced_ai/build_evidence_thesaurus.py",
+        ("sozluk", "Kanıtlı sözlük", "terim", "Amfi ders slaytlarından kısaltma ve yazım varyantı sözlüğü", "scripts/altyapi/advanced_ai/build_evidence_thesaurus.py",
          lambda: _json_count(db_v2_dir / "evidence_thesaurus" / "kanitli_sozluk.json"), 3000),
-        ("faz9", "Faz 9 · Sözlüklü ağaç", "soru", "Kanıtlı sözlük destekli tıbbi müfredat ağacı", "scripts/advanced_ai/phase9_thesaurus_graph.py",
+        ("faz9", "Faz 9 · Sözlüklü ağaç", "soru", "Kanıtlı sözlük destekli tıbbi müfredat ağacı", "scripts/altyapi/advanced_ai/phase9_thesaurus_graph.py",
          lambda: _fast_lines(temp_dir / "phase9" / "soru_kazanim.jsonl"), 7219),
-        ("faz10", "Faz 10 · Kavram kimlikleri", "kavram", "Wikidata ve UMLS kavram kimlik eşleştirmesi", "scripts/advanced_ai/phase10_concept_ids.py",
+        ("faz10", "Faz 10 · Kavram kimlikleri", "kavram", "Wikidata ve UMLS kavram kimlik eşleştirmesi", "scripts/altyapi/advanced_ai/phase10_concept_ids.py",
          lambda: _json_count(db_v2_dir / "concept_ids" / "kavramlar.json"), 2500),
-        ("faz11", "Faz 11 · Soru–slayt eşleşmesi", "soru", "BM25, E5 vektör ve cross-encoder ile soru-slayt kanıt eşleme", "scripts/advanced_ai/phase11_question_slide.py",
+        ("faz11", "Faz 11 · Soru–slayt eşleşmesi", "soru", "BM25, E5 vektör ve cross-encoder ile soru-slayt kanıt eşleme", "scripts/altyapi/advanced_ai/phase11_question_slide.py",
          lambda: _fast_lines(temp_dir / "phase11" / "soru_slayt.jsonl"), 2839),
-        ("ogren", "Öğren bağlantıları", "soru", "Öğrenci çalışma portalı için soru-slayt navigasyon bağları", "scripts/advanced_ai/learn_links.py",
+        ("ogren", "Öğren bağlantıları", "soru", "Öğrenci çalışma portalı için soru-slayt navigasyon bağları", "scripts/altyapi/advanced_ai/learn_links.py",
          lambda: _json_count(db_dir / "derived" / "learn_links.json", "baglantilar"), 7219),
-        ("yeniden_bolme", "Sınav çıktısını yeniden bölme", "adım", "Sınav dökümlerinin kurallı bloklara yeniden ayrıştırılması", "scripts/advanced_ai/resplit_exam_printout.py",
+        ("yeniden_bolme", "Sınav çıktısını yeniden bölme", "adım", "Sınav dökümlerinin kurallı bloklara yeniden ayrıştırılması", "scripts/altyapi/advanced_ai/resplit_exam_printout.py",
          lambda: 1 if (temp_dir / "logs" / "phase_cycle_yeniden_bolme.log").exists() else 0, 1),
-        ("karantina", "Soru karantinası", "soru", "Hatalı şıklı veya desteklenmeyen soruların izole edilmesi ve onarımı", "scripts/advanced_ai/quarantine_questions.py",
+        ("karantina", "Soru karantinası", "soru", "Hatalı şıklı veya desteklenmeyen soruların izole edilmesi ve onarımı", "scripts/altyapi/advanced_ai/quarantine_questions.py",
          lambda: len((_safe_json(db_dir / "derived" / "quarantine" / "karantina.json").get("sorular") or {})), 1000),
-        ("veritabani", "Veritabanı yüklemesi", "kayıt", "Doğrulanmış müfredat bağlarının güvenli veritabanına yüklenmesi", "scripts/advanced_ai/publish_to_database.py",
+        ("veritabani", "Veritabanı yüklemesi", "kayıt", "Doğrulanmış müfredat bağlarının güvenli veritabanına yüklenmesi", "scripts/altyapi/advanced_ai/publish_to_database.py",
          lambda: _safe_json(db_dir / "derived" / "curriculum_links" / "manifest.json").get("sayilar", {}).get("soru_slayt", 0), 2839),
-        ("yayin", "Site yayını", "soru", "Faz 5, 6, 6.5 ve 8 analizlerinin web sitesine aktarılması", "scripts/advanced_ai/export_phase_insights.py",
+        ("yayin", "Site yayını", "soru", "Faz 5, 6, 6.5 ve 8 analizlerinin web sitesine aktarılması", "scripts/altyapi/advanced_ai/export_phase_insights.py",
          lambda: _json_count(db_dir / "derived" / "phase_insights" / "insights.json", "items"), 7219),
-        ("asama1", "Aşama 1 · İndirme & OCR", "kaynak", "Yeni veya yenilenen PDF/PPTX dosyalarının OCR ile taranması", "scripts/agents/stage1_refresh.py",
+        ("asama1", "Aşama 1 · İndirme & OCR", "kaynak", "Yeni veya yenilenen PDF/PPTX dosyalarının OCR ile taranması", "scripts/altyapi/agents/stage1_refresh.py",
          lambda: len(_safe_json(temp_dir / "state" / "stage1_refresh_report.json").get("yeniden_ocr") or []), 10),
-        ("faz12", "Faz 12 · Ders notu temizleme", "chunk", "Glif, OCR çöpü, üst/alt bilgi filtreleme", "scripts/advanced_ai/phase12_clean_notes.py",
+        ("faz12", "Faz 12 · Ders notu temizleme", "chunk", "Glif, OCR çöpü, üst/alt bilgi filtreleme", "scripts/altyapi/advanced_ai/phase12_clean_notes.py",
          lambda: _safe_json(db_dir / "derived" / "clean_notes" / "rapor.json").get("degisen", 0), 5000),
-        ("faz13", "Faz 13 · Tıbbi varlıklar", "soru", "GLiNER ve medikal terminolojiyle varlık tanıma", "scripts/advanced_ai/phase13_entities.py",
+        ("faz13", "Faz 13 · Tıbbi varlıklar", "soru", "GLiNER ve medikal terminolojiyle varlık tanıma", "scripts/altyapi/advanced_ai/phase13_entities.py",
          lambda: _fast_lines(db_dir / "derived" / "entities" / "soru_varliklar.jsonl"), 7219),
-        ("faz14", "Faz 14 · Çıkmış soru redaksiyonu", "soru", "Yerel/bulut modellerle inceleme kuyruğuna redaksiyon önerisi", "scripts/advanced_ai/phase14_past_question_editor.py",
+        ("faz14", "Faz 14 · Çıkmış soru redaksiyonu", "soru", "Yerel/bulut modellerle inceleme kuyruğuna redaksiyon önerisi", "scripts/altyapi/advanced_ai/phase14_past_question_editor.py",
          lambda: _fast_lines(db_v2_dir / "phase14_past_question_editor" / "reviews.jsonl"), 4926),
-        ("ortak", "Ortak RAG deposu", "parça", "Birleştirilmiş ortak ders materyali ve RAG veri havuzu", "scripts/advanced_ai/build_unified_store.py",
+        ("ortak", "Ortak RAG deposu", "parça", "Birleştirilmiş ortak ders materyali ve RAG veri havuzu", "scripts/altyapi/advanced_ai/build_unified_store.py",
          lambda: _fast_lines(db_dir / "ortak" / "rag" / "ders_materyali.jsonl"), 25000),
-        ("hakem", "Hakem kuyruğu", "karar", "Alıntı doğrulamalı konu ve slayt hakem değerlendirmesi", "scripts/advanced_ai/referee_queue.py",
+        ("hakem", "Hakem kuyruğu", "karar", "Alıntı doğrulamalı konu ve slayt hakem değerlendirmesi", "scripts/altyapi/advanced_ai/referee_queue.py",
          lambda: _fast_lines(temp_dir / "hakem" / "kararlar.jsonl"), 1000),
     ]
 

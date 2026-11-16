@@ -32,7 +32,7 @@ def sira(asamalar):
 
 
 def degiskenler():
-    sys.path.insert(0, str(MEDS / "scripts/takvim"))
+    sys.path.insert(0, str(MEDS / "scripts/hat/takvim"))
     from aktif_kurul import durum
     d = durum(dt.date.today().isoformat())
     return {"aktif_kurul": str(d["aktif"]), "son_sinav": str(d["son_sinav"] or "")}
@@ -108,7 +108,7 @@ def sabah_ozeti(df, dusen):
     except (OSError, ValueError):
         pass
     try:
-        sys.path.insert(0, str(MEDS / "scripts/takvim")); from aktif_kurul import durum
+        sys.path.insert(0, str(MEDS / "scripts/hat/takvim")); from aktif_kurul import durum
         k = durum(dt.date.today().isoformat())
         satir.append(f"Takvim: Kurul {k['aktif']} · sınava {k['sinava_gun']} gün")
     except Exception:  # noqa: BLE001

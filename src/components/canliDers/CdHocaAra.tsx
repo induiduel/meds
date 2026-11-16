@@ -2,7 +2,7 @@
 // Hoca üslubuna göre soru çıkabilecek slaytın son paragrafı bitince ders sesi durur, yerine yapay bir soru sayfası açılır:
 // EMA soruyu okur (q-N), kısa bir düşünme payından sonra çözer (c-N) ve çözümü önceki slaytlara dayanarak anlatır (a-N);
 // sayfa kapanınca ders bir sonraki slayttan sürer. Araç çubuğundaki ünlem (CdHocaAraDugme) tüm soruları ardışık oynatır.
-// Veri: src/data/k<N>hocaara_cozucu/{index,<kod>}.json (scripts/hoca_ara_soru/kur.py birlestir); aynı sorular ders dışında
+// Veri: src/data/k<N>hocaara_cozucu/{index,<kod>}.json (scripts/uretim/hoca_ara_soru/kur.py birlestir); aynı sorular ders dışında
 // /soru-cozucu?brans=k<N>hocaara ile çözülür. Ses tek oynatıcıdan sırayla çalınır; ders sesi çalarsa ara ses susar.
 import React, { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';

@@ -1,8 +1,8 @@
 // Sesli ders öncesi "Ders analizi" (kullanıcı kararı 2026-10-29): derste ne anlatılacak, bilinmesi gerekenler, en önemli
 // yerler, çıkmış sorularda ne soruldu, hocanın soru üslubu ve nelere odaklanılmalı. Aynı pencerede "Ders özeti" sekmesi:
 // dersin içerikleri (önem listesi + sesli çözücü) tamamlandıktan sonra onlardan derlenir, en önemli yerleri anlatır.
-// Veri: src/data/ders_analizi/<key>.json (scripts/ders_analizi/uret.py, LLM yok). Her bölüm EMA ile dinlenebilir
-// (scripts/ders_analizi/ses.py → /api/cozucu-ses/k<N>dersanaliz/ema/<kod>/<klip>.mp3); ders sesi çalıyorsa susturulur.
+// Veri: src/data/ders_analizi/<key>.json (scripts/uretim/ders_analizi/uret.py, LLM yok). Her bölüm EMA ile dinlenebilir
+// (scripts/uretim/ders_analizi/ses.py → /api/cozucu-ses/k<N>dersanaliz/ema/<kod>/<klip>.mp3); ders sesi çalıyorsa susturulur.
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { CircleHelp, ClipboardList, ListChecks, Pause, Play, X } from 'lucide-react';

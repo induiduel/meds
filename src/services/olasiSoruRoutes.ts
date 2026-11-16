@@ -8,7 +8,7 @@
  *        → data/olasi_sorular/geri_bildirim_k<N>.jsonl (yalnız eklenir). topla.py bunu kanıt olarak okur.
  *   GET  /api/admin/hat                           — otomasyon/hat.json + meds_temp/hat/durum.json + hat.log sonu
  *
- * Set gece hattında üretilir (scripts/olasi_soru/gece.sh): kapı 0 HATA → data/olasi_sorular/k<N>.json → Oracle.
+ * Set gece hattında üretilir (scripts/hat/olasi_soru/gece.sh): kapı 0 HATA → data/olasi_sorular/k<N>.json → Oracle.
  */
 import crypto from 'crypto';
 import fs from 'fs';

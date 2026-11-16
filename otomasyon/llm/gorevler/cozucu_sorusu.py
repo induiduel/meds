@@ -5,7 +5,7 @@ doğrulayıcının beklediğiyle AYNI (`cozucu_dogrula.beklenen`: önem listesin
 temsilciler), belirlenimci sırada 4'lük partiler. Soru, şıklar, anahtar, ref/tür/onem_id/zorluk/sınav BETİKLE kopyalanır
 (model yazmaz → birebirlik garanti). Model yazar: kontrol (tamam | sorunlu + not), kök/şık okunuşu, ipucu, şık açıklamaları,
 çözüm, sayfa. Dayanak: sorunun önem maddesi (bilgi + detay) + ilgili sayfaların metni.
-Kapı: resmî `scripts/spot_cozucu/cozucu_dogrula.py` partiye uygulanır ("eksik soru" ders düzeyidir) — ses yazımı, ipucu
+Kapı: resmî `scripts/uretim/spot_cozucu/cozucu_dogrula.py` partiye uygulanır ("eksik soru" ders düzeyidir) — ses yazımı, ipucu
 sızıntısı, şık açıklama standardı, Türkçe üslup dahil. Kısmi kabul: hatalı sorular (≤ yarısı) düşer, sonraki partiyle yeniden.
 `sorunlu` soru birleştirmede çıkarılır (örnek → önem listesinden de; çıkmış → `elenen_cikmis`), birleştirici önem
 listesini yeniden doğrular.
@@ -29,7 +29,7 @@ PARTI = 4
 
 
 def _od():
-    sys.path.insert(0, str(c.KOK / "scripts" / "spot_cozucu"))
+    sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "spot_cozucu"))
     import cozucu_dogrula as CD
     return CD
 

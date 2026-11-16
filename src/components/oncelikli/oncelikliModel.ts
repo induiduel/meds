@@ -1,7 +1,7 @@
 /**
  * Öncelikli dersler — puanlama algoritması (ekran tarafı).
  *
- * Ham ölçümler `scripts/oncelikli_dersler/analiz.py` ile ders metninden ve dersin çıkmışlarından çıkarılır
+ * Ham ölçümler `scripts/hat/oncelikli_dersler/analiz.py` ile ders metninden ve dersin çıkmışlarından çıkarılır
  * (`src/data/oncelikli_dersler/k<N>.json`). Her ders altı boyutta 0–100 puan alır (yüksek = öğrenci lehine):
  *
  *   azEzber      farklı yabancı/Latince terim, ilaç ve hastalık adı, sayı yükü az   (yüzdelik, ters)
@@ -42,7 +42,7 @@ export interface OncelikliDers {
   puan: number;
   tur: DersTuru;
   ornekTerim: string[];
-  /** YZ yargısı (Claude, ders metni + çıkmışlar okunarak): scripts/oncelikli_dersler/yz/k<N>.json */
+  /** YZ yargısı (Claude, ders metni + çıkmışlar okunarak): scripts/hat/oncelikli_dersler/yz/k<N>.json */
   yz?: {
     tur?: DersTuru;
     gerekce?: string;

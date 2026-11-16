@@ -1,4 +1,4 @@
-# Göğüs Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Göğüs Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 48 tekil çıkmış soru · güven: **orta** · yıllar: {2018: 1, 2019: 1, 2020: 17, 2021: 3, 2022: 7, 2023: 1, 2025: 3}
 

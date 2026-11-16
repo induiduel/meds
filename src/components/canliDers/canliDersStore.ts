@@ -145,7 +145,7 @@ export interface CdTerim { t: string; a: string; k: 'terim' | 'latince' | 'karis
 export interface CdTerimSayfa { bos: number; t: CdTerim[] }
 /** o: geçmiş yıl öğrenci notunda önem (A: çıkmış kanıtlı, B: vurgulu + el notlu) */
 export interface CdV2Cumle { e: string; d: number; v: [string, string][]; c: string[]; a: number | null; s?: unknown; o?: 'A' | 'B' | null;
-  /** hocanın ders kaydında bu bilgi için söylediği vurgu: [kategori, söz] (scripts/hoca_vurgu, hocaVurgu.ts) */
+  /** hocanın ders kaydında bu bilgi için söylediği vurgu: [kategori, söz] (scripts/uretim/hoca_vurgu, hocaVurgu.ts) */
   h?: [string, string] | null }
 /** s/d: elle doğrulanmış slayt (PDF sayfası) ve dosya; dogrulandi olanlar slaytta yanıp sönen chip olarak gösterilir.
  *  seviye: dogrudan (slayttaki bilgi doğrudan soruldu) | ilgili; kanit: slayttan birebir dayanak */
@@ -456,7 +456,7 @@ function zamanlamaKur() {
 }
 
 /** Paragrafı cümlelere böler: her cümlenin bitiş karakter konumu.
- *  scripts/sesli_anlatim/pdf_hizala.py::cumle_sinirlari ile BİREBİR aynı kural (hizalamanın cümle dizini buna dayanır):
+ *  scripts/uretim/sesli_anlatim/pdf_hizala.py::cumle_sinirlari ile BİREBİR aynı kural (hizalamanın cümle dizini buna dayanır):
  *  [.!?…]+ (+ kapanan tırnak/parantez) ardından boşluk ya da metin sonu; sonraki karakter küçük harfse sınır değil
  *  ("2. basamak", "1.'si" bölünmez). */
 function cumleSinirlari(p: ParaBilgi): number[] {

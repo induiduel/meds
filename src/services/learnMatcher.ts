@@ -99,7 +99,7 @@ class LearnMatcherService {
   private cache = new Map<string, QuestionLearnMatch | null>();
 
   private loading: Promise<void> | null = null;
-  /** Sunucuda önceden hesaplanan bağlantılar (scripts/advanced_ai/learn_links.py: BM25+e5+cross-encoder, eşikli). */
+  /** Sunucuda önceden hesaplanan bağlantılar (scripts/altyapi/advanced_ai/learn_links.py: BM25+e5+cross-encoder, eşikli). */
   private computed: Map<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> | null = null;
 
   /**

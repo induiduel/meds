@@ -1,7 +1,7 @@
 /**
  * Son Prova — veri ve ilerleme deposu.
  * İçerik: src/data/son_prova/k<N>/index.json (kurul, sınav dağılımı, dersler → partlar → aşamalar, genel check-up, denemeler)
- * ve sorular/<brans>.json (soru çözücü havuzundan seçilen sorular; meds_temp/son_prova/soru_dagit.py üretir).
+ * ve sorular/<brans>.json (soru çözücü havuzundan seçilen sorular; meds/scripts/uretim/son_prova/soru_dagit.py üretir).
  * Partın anlatımı sesli ders altyapısındadır (anahtar = part key, ör. k1-81-son-prova-patoloji-1; kırpılmış özet PDF'i
  * deste k1p-<key>). Soru sesleri soru çözücü klipleridir: /api/cozucu-ses/<brans>/ema/<klasör>/<q|i|c|d|s>-<no>.mp3.
  * İlerleme: localStorage medsoru_son_prova_v1 (userKvSync ile hesaba eşitlenir).

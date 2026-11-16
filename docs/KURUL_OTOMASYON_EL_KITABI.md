@@ -31,11 +31,11 @@
 
 | Ne | Nerede |
 |---|---|
-| Ders programı PDF → kurul tarihleri | `scripts/takvim/kurul_takvimi.py --yaz` → `src/data/kurul_takvimi.json` + `_ozet.json` (bozuk ayrıştırma eski takvimi ezmez) |
-| Aktif / son sınav / arşiv kurul | Python `scripts/takvim/aktif_kurul.py [--son-sinav|--json]`, TS `src/services/kurulTakvimi.ts` |
+| Ders programı PDF → kurul tarihleri | `scripts/hat/takvim/kurul_takvimi.py --yaz` → `src/data/kurul_takvimi.json` + `_ozet.json` (bozuk ayrıştırma eski takvimi ezmez) |
+| Aktif / son sınav / arşiv kurul | Python `scripts/hat/takvim/aktif_kurul.py [--son-sinav|--json]`, TS `src/services/kurulTakvimi.ts` |
 | Kural | aktif kurul = sınav günü geçmemiş ilk kurul (sınav günü dahil); geçmişler arşiv |
 | Tarihler (2026-27) | K1 →23 Eki · K2 26 Eki–4 Ara · K3 →22 Oca · K4 →5 Mar · K5 →22 Nis · K6 →11 Haz · final 28 Haz · büt 16 Tem |
-| Ders kayıt defteri | `scripts/dersler/ders_kaydi.py --kurul N --yaz` → `src/data/dersler/kN.json` (kimlik `kN-NN`, kod `N<harf><sıra>`, ör. `2f01`). Branş harfleri tek kaynak: `src/data/dersler/branslar.json`; tanımsız branş/çift kod = HATA |
+| Ders kayıt defteri | `scripts/hat/dersler/ders_kaydi.py --kurul N --yaz` → `src/data/dersler/kN.json` (kimlik `kN-NN`, kod `N<harf><sıra>`, ör. `2f01`). Branş harfleri tek kaynak: `src/data/dersler/branslar.json`; tanımsız branş/çift kod = HATA |
 | Site | ana ekran kurul şeridi; `/gecmis-kurullar`; `?kurul=N` süzgeci (Sesli ders, En önemliler, Spotlar, Soru çözücü, Çıkmış, Öğren, Kazanımlar); örnek sorular K1–6 klasörlerinden |
 
 ---
@@ -59,7 +59,7 @@ Elle çalıştırma: `python3 meds/otomasyon/hat.py --calistir <aşama>`; durum 
 
 ## 3. Ders hattı — aşama aşama (bir Kurul 2+ PDF'i Drive'a düşünce)
 
-### Aşama A — Oracle: ders işçisi (`scripts/ders_isci/`)
+### Aşama A — Oracle: ders işçisi (`scripts/uretim/ders_isci/`)
 1. **Tarama** (`izle.py`): yeni/değişen PDF (sha256) → `kuyruk.json`.
 2. **Okuma** (`cikar.py`): `kaynak.md` (PyMuPDF; boş sayfa → Tesseract) + **`sayfalar.json`** (gerçek tablolar
    satır/sütun, görsel ağırlıklı sayfaların PNG'si `sayfa_goruntu/<n>.png`, hocanın renkli/kalın ifadeleri `vurgulu`).
@@ -91,7 +91,7 @@ Yayın kaydı Oracle'dan salt-okunur okunur; her yayımlanmış Kurul 2+ dersi i
 yarımları da):
 | Adım | İş | Kapı |
 |---|---|---|
-| hazirla | `kaynak.md` + `sayfalar.json` + görüntüler çekilir; çıkmış adayları (müfredat konusu = defter konusu; tekrar grupları); **önem haritası** (`scripts/onem/onem_haritasi.py`: sayfa başı 0–100 = çıkmış benzerliği × soruldu sayısı × yakınlık + hoca vurgusu); çıkmışsız ders UYARI | — |
+| hazirla | `kaynak.md` + `sayfalar.json` + görüntüler çekilir; çıkmış adayları (müfredat konusu = defter konusu; tekrar grupları); **önem haritası** (`scripts/hat/onem/onem_haritasi.py`: sayfa başı 0–100 = çıkmış benzerliği × soruldu sayısı × yakınlık + hoca vurgusu); çıkmışsız ders UYARI | — |
 | onem | Claude `spot_cozucu/TALIMAT_ONEM.md` (önem haritasına dayanır) | `onem_dogrula.py` (≤3 düzeltme turu) |
 | cozucu | Claude `TALIMAT_COZUCU.md` | `cozucu_dogrula.py` |
 | denetim | **bağımsız denetçi** Claude `DENETIM.md`; rapor `denetim/<kod>.md` zorunlu | iki kapı yeniden; geçerse `onayli.json` |
@@ -104,7 +104,7 @@ Art arda hata → 1/2/4/7 gün geri çekilme. Claude zaman aşımı 3 sa. Branş
 sitede sekme, veri klasörü oluşunca kendiliğinden (`components/spots/brans.ts`).
 
 ### Aşama C2 — Otomatik Quiz ve Aktif Geri Çağırma (Active Recall) Hattı
-Kurul 2+ derslerinde Sesli Ders (Audio Lesson) akışının doğal uzantısı olarak çalışan, çakışmasız 4 Fazlı Sıralı Pipeline (`scripts/quiz_motoru/`):
+Kurul 2+ derslerinde Sesli Ders (Audio Lesson) akışının doğal uzantısı olarak çalışan, çakışmasız 4 Fazlı Sıralı Pipeline (`scripts/hat/quiz_motoru/`):
 1. **Faz 1 - Tetikleme ve Kapsam Kontrolü (Drive Watcher & Scope Lock):**
    - Drive'a yeni ders materyali geldiğinde ders ve kurul kontrol edilir.
    - **Kapsam Kilidi (Scope Lock):** Quiz üretimi şimdilik **yalnızca `Farmakoloji` (`f`, `Tıbbi Farmakoloji`)** için aktiftir. Veri modelleri ve pipeline altyapısı tüm branşlara (Patoloji, Mikrobiyoloji, Biyokimya vb.) sadece konfigürasyon değişikliğiyle açılabilecek şekilde ders-bağımsızdır (`course-agnostic`).
@@ -120,20 +120,20 @@ Kurul 2+ derslerinde Sesli Ders (Audio Lesson) akışının doğal uzantısı ol
      * İki soru `question_pair_id` ile eşleşir.
    - **Batch Processing:** Token sınırına takılmamak ve eksiksiz üretim için en fazla 25 atomik bilgi (50 soru) per batch partileri halinde sırayla üretilir.
    - **Soru Yapısı:** 5-15 saniyede çözülebilen kısa active recall formatı. Solo çalışma ve eş zamanlı multiplayer modları destekler. Şık açıklamaları gerekçelidir.
-   - **Kapı:** `python3 meds/scripts/quiz_motoru/quiz_dogrula.py <quiz_dosyasi>` 0 HATA.
+   - **Kapı:** `python3 meds/scripts/hat/quiz_motoru/quiz_dogrula.py <quiz_dosyasi>` 0 HATA.
 
 
 ### Aşama D — Cihaz: hastalık zinciri (`otomasyon/hastalik_zinciri.py`, gece)
-Oracle önerileri (yalnız `k[2-6]-*`) → Claude `scripts/diseases/TALIMAT_SEMA2.md` → `yayinla.hastaliklari_uygula`
+Oracle önerileri (yalnız `k[2-6]-*`) → Claude `scripts/moduller/diseases/TALIMAT_SEMA2.md` → `yayinla.hastaliklari_uygula`
 (`diseases.json` kirliyse bekler; denetim hatası artarsa geri alır) → Oracle `data/content/diseases.json` +
 `POST /api/admin/icerik/diseases/degisti` (panel sırrı) → SSE `content_changed`.
 
 ### Aşama D2 — Cihaz: Patoloji Check Up (`otomasyon/checkup_zinciri.py`, gece)
 Kurulda ≥3 bağımsız denetimden geçmiş patoloji dersi olunca ve onaylı küme/PDF'ler değişince Claude
-`scripts/patoloji_checkup/TALIMAT_CHECKUP.md` → `src/data/patoloji_checkup/k<N>/` → `dogrula.py --kurul N` (geçmezse önceki
+`scripts/uretim/patoloji_checkup/TALIMAT_CHECKUP.md` → `src/data/patoloji_checkup/k<N>/` → `dogrula.py --kurul N` (geçmezse önceki
 sürüm geri). Site: `/patoloji-check-up?kurul=N` (veri yoksa Kurul 1 gösterilir).
 
-### Aşama D3 — Cihaz: ders bilgi deposu (`scripts/dersler/bilgi_deposu.py`, gece)
+### Aşama D3 — Cihaz: ders bilgi deposu (`scripts/hat/dersler/bilgi_deposu.py`, gece)
 **Her PDF bir kez okunur:** yalnız ders işçisi (`cikar.py`) ve yalnız PDF karması değişince. Sonraki her ürün depodan beslenir:
 `meds_database_v2/ders_bilgi/<ders>/manifest.json` (kaynak klasörleri, karmalar) + `ozet.md` (bilgi paketi, önem puanları,
 tablolar, hoca vurgusu, görsel sayfalar, çıkmışlar — her satır `kod:sayfa`). Girdiler değişmezse yeniden derlenmez.
@@ -142,8 +142,8 @@ Python: `from bilgi_deposu import ozet_yolu, manifest`. Yeni üretici yazarken P
 ### Aşama D4 — Cihaz: kurul kampı (`otomasyon/kamp_zinciri.py`, gece)
 Kurul 1 dahil (K1 dersleri bilgi deposunda: 64 ders, branş klasörlerinden kesin eşlemeyle; 2026-10-20). Hoca tüyoları: öğrenci önerir (`POST /api/kamp/tuyo-oner`), yönetici onaylar ya da doğrudan ekler (Yönetim › Kamp tüyoları;
 `/api/admin/kamp/*`); defter `data/kamp/tuyolar.jsonl` (yalnız eklenir). Branşta ≥1 onaylı tüyo + deposu hazır ders olunca:
-Claude `scripts/kamp/TALIMAT_KAMP.md` (yalnız depo özetleri + onaylı tüyolar) → `scripts/kamp/dogrula.py` (her kaynak
-`kod:sayfa` ders metninde, her onaylı tüyo işlenmiş, şık açıklaması, üslup; ≤3 tur) → EMA `scripts/kamp/ses.py` →
+Claude `scripts/uretim/kamp/TALIMAT_KAMP.md` (yalnız depo özetleri + onaylı tüyolar) → `scripts/uretim/kamp/dogrula.py` (her kaynak
+`kod:sayfa` ders metninde, her onaylı tüyo işlenmiş, şık açıklaması, üslup; ≤3 tur) → EMA `scripts/uretim/kamp/ses.py` →
 `src/data/kamp/k<N>/<brans>.json` + Oracle `data/kamp/ses/`. Kapı geçmezse yayımlanan kamp değişmez + bildirim.
 Site: `/kamp?kurul=N`, `/kamp/<N>/<brans>` (sesli anlatım, kalıp kartları, deneme). Kurul 1 TBG genetik kampı ayrı sayfasında kalır.
 
@@ -159,7 +159,7 @@ damga yoksa **atlar (kod 3, panoda)**. Uzak rsync Oracle yayın kilidini tutar. 
 
 ## 4. Olası soru motoru (sınav günü ve sonrası)
 1. Öğrenciler sınavdan sonra soruları ekler (sınav günü + 7 gün "Kaçıncı soruydu?" alanı öne çıkar).
-2. `scripts/olasi_soru/gece.sh` (20:00, 23:30, 02:30): Oracle'dan `questions.json` + soru defteri + ekran geri bildirimi
+2. `scripts/hat/olasi_soru/gece.sh` (20:00, 23:30, 02:30): Oracle'dan `questions.json` + soru defteri + ekran geri bildirimi
    salt-okunur çekilir (çekilemezse DUR) → `topla.py` (TR saatiyle sınav 10:00 sonrası kayıtlar; kök/sürüm/parça/şık/uydu/
    cevap/yorum/defter/geri bildirim → kanıt; numaralı → yuva, numarasız → bge-m3 en yakın yuva; uzlaşı) → yeni kanıt
    varsa Claude `TALIMAT.md` (kanıt > ders > çıkmış) → `dogrula.py` (kimlik `kN-os-NNN`, kanıt bağı, şık açıklama + üslup)
@@ -172,14 +172,14 @@ damga yoksa **atlar (kod 3, panoda)**. Uzak rsync Oracle yayın kilidini tutar. 
 ## 5. Yapay zekâ talimat dosyaları
 | Dosya | Kim çalıştırır | Üretir |
 |---|---|---|
-| `scripts/ders_isci/TALIMAT.md` | Oracle ders işçisi (Claude Opus 5.5) | ders paketi, deste, not, örnek soru, sözlük, hastalık, bağlar |
-| `scripts/ders_isci/TALIMAT_SESLI.md` (+§v2) | ders işçisi, ayrı oturum | konuşma metni (Kurul 2+: `konusma_v2.json`) |
-| `scripts/spot_cozucu/TALIMAT_ONEM.md` | ders zinciri | önem listesi + örnek sorular + çıkmış seçimi |
-| `scripts/spot_cozucu/TALIMAT_COZUCU.md` | ders zinciri | sesli çözücü |
-| `scripts/spot_cozucu/DENETIM.md` | ders zinciri (bağımsız denetçi) | düzeltme + `denetim/<kod>.md` |
-| `scripts/spot_cozucu/TALIMAT_ASISTAN.md` | ders zinciri | sesli sınav asistanı |
-| `scripts/diseases/TALIMAT_SEMA2.md` | hastalık zinciri | şema 2 hastalık profili |
-| `scripts/olasi_soru/TALIMAT.md` | olası soru gece işi | olası sorular |
+| `scripts/uretim/ders_isci/TALIMAT.md` | Oracle ders işçisi (Claude Opus 5.5) | ders paketi, deste, not, örnek soru, sözlük, hastalık, bağlar |
+| `scripts/uretim/ders_isci/TALIMAT_SESLI.md` (+§v2) | ders işçisi, ayrı oturum | konuşma metni (Kurul 2+: `konusma_v2.json`) |
+| `scripts/uretim/spot_cozucu/TALIMAT_ONEM.md` | ders zinciri | önem listesi + örnek sorular + çıkmış seçimi |
+| `scripts/uretim/spot_cozucu/TALIMAT_COZUCU.md` | ders zinciri | sesli çözücü |
+| `scripts/uretim/spot_cozucu/DENETIM.md` | ders zinciri (bağımsız denetçi) | düzeltme + `denetim/<kod>.md` |
+| `scripts/uretim/spot_cozucu/TALIMAT_ASISTAN.md` | ders zinciri | sesli sınav asistanı |
+| `scripts/moduller/diseases/TALIMAT_SEMA2.md` | hastalık zinciri | şema 2 hastalık profili |
+| `scripts/hat/olasi_soru/TALIMAT.md` | olası soru gece işi | olası sorular |
 Gözetimsiz Claude izin listesi: `Read,Write,Edit,Glob,Grep,Bash(python3 *)` (+ yerel API `curl -s http://127.0.0.1:3000/*`).
 İzin dışı komut takılmadan reddedilir (sınandı); talimatlar yalnız `python3` ile çalışan kapılara dayanır.
 
@@ -192,9 +192,9 @@ Gözetimsiz Claude izin listesi: `Read,Write,Edit,Glob,Grep,Bash(python3 *)` (+ 
 Kurul 1 sesli dersleri geri dolduruldu (69 ders, 21.272 cümle; `data/sesli_anlatim/v2/`).
 
 ## 7. Veritabanı
-Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenmiş olmalı) → `scripts/db/goc.py --uygula
+Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenmiş olmalı) → `scripts/altyapi/db/goc.py --uygula
 [--oracle]` (tek işlem, `schema_migrations`); gece `db_goc` aşaması. İçerik sürümleri `icerik_setleri` (0001), yazıcı
-`scripts/db/icerik_kaydi.py`. JSON dosyaları üst düzey `surum` taşır; okuyucular bilinmeyen alanı yok sayar.
+`scripts/altyapi/db/icerik_kaydi.py`. JSON dosyaları üst düzey `surum` taşır; okuyucular bilinmeyen alanı yok sayar.
 
 ## 8. Kalite kapıları (hepsi 0 HATA)
 `validate_learning_decks.py [--oyun-zorunlu --kurul2]` · `turkce_uslup.py` · `sik_aciklama.py` · `ders_isci/denetle.py` ·
@@ -209,7 +209,7 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
   Ders eylemleri kuyruğa yazılır (`meds_temp/hat/eylemler/`), `otomasyon/hat_eylem.py` geçici `meds-hat-eylem` birimiyle
   sırayla işler, gece hattı sürerken bekler: **sürdür** (`ders_zinciri.py --ders`; Oracle aşamasında takılan ders işçinin
   `yeniden`/`yeniden-dene` uçlarıyla), **denetçiye gönder** (`--adim denetim`, geçerse birleştirme ve sonrası yeniden),
-  **baştan üret** (iki adım: 1) Oracle ders işçisi `POST /kuyruk/<is>/yeniden-uret` — `scripts/ders_isci/api.py`, cihazdan
+  **baştan üret** (iki adım: 1) Oracle ders işçisi `POST /kuyruk/<is>/yeniden-uret` — `scripts/uretim/ders_isci/api.py`, cihazdan
   `ssh medsor-oracle docker exec meds-ders-isci` ile iç API'ye — aynı PDF'i yeniden okuyup paketi baştan üretir; iş
   yayımlanmışsa bugünün tarihiyle YENİ kimlikli iş açılır (yayinla.py yayımlanmış is_id'yi yeniden yayımlamaz; aynı gün
   ikinci baştan üretim 409), eski taslak/iz silinmez, yayinla.py yazmadan önce kendi yedeğini alır; `hat_eylem.py`
@@ -277,7 +277,7 @@ bildirim otomatik; gizleme/düzeltme kararı yöneticinin). Genetik sınav kamp�
 - **Sabah özeti** (her gece, başarılı geçse de): aşama sonuçları, son 24 saatte zinciri tamamlanan dersler, güncellenen
   kamp / Check Up / olası soru setleri, sağlık, takvim (`hat.py sabah_ozeti`).
 - **Sınav günü kontrol listesi** (bir kez, sınav günü 20:00): soru girişi, olası soru saatleri, ertesi sabah bakılacaklar;
-  **ertesi gün**: olası soru setinin durumu (`scripts/olasi_soru/gece.sh`; işaret `meds_temp/olasi_soru/sinav_gunu_bildirimleri.json`).
+  **ertesi gün**: olası soru setinin durumu (`scripts/hat/olasi_soru/gece.sh`; işaret `meds_temp/olasi_soru/sinav_gunu_bildirimleri.json`).
 - Çıkmış anahtar çelişkisi → karantina önerisi; kamp kapıdan geçmezse; gece aşaması başarısızsa (sabah özetinde). Sağlık: kapı arızası, Kurul 2+ türev veri eksikliği (cümle/kelime zamanı, PDF işareti).
 
 ### Sağlık kapıları ek (2026-10-20, H16–H17)
@@ -292,7 +292,7 @@ Kurul 1'de iki iş elle (alt ajanlarla) yapıldı; Kurul 2'den itibaren hatta ba
 - **Ne zaman:** aktif kurulun sınavına **9 gün** kala (dahil) her gece; gece başına en çok 5 sa (`MEDS_SON_PROVA_SAAT`),
   kalan partlar ertesi gece. Elle: `python3 meds/otomasyon/son_prova_zinciri.py --kurul 2 [--part KEY] [--zorla]`;
   deneme: `--kuru` (yalnız akış), `--prova` (ilk part; src/data, data/, Oracle'a dokunmaz).
-- **Plan:** `scripts/son_prova/plan_kurul.py` — ders kayıt defteri sırası + bilgi deposu (`ders_bilgi/<id>/`: kaynak.md
+- **Plan:** `scripts/uretim/son_prova/plan_kurul.py` — ders kayıt defteri sırası + bilgi deposu (`ders_bilgi/<id>/`: kaynak.md
   `=== SAYFA N ===`, önem, çıkmış), soru havuzu `src/data/k<N><slug>_cozucu/`. Part ≤ 9.000 kelime, branş içinde eşit
   boy; anahtar `k<N>-81…99-son-prova-<slug>[-<no>]` (ders kimlikleri ≤ 70 ile çakışmaz; canliDers.ts branş adını
   `branslar.json`'dan alır). Bilgi deposu olmayan ders partlara girmez, bildirimde listelenir.
@@ -311,8 +311,8 @@ Kurul 1'de iki iş elle (alt ajanlarla) yapıldı; Kurul 2'den itibaren hatta ba
 
 ### Anlamsal slayt çapası (`ders_zinciri` son adımı `capa`)
 - Sesli dersin her cümlesi slayttaki madde (M#) / resim (R#) kutusuna ya da elle kutuya bağlanır; resim anlatımında
-  hareketli imleç (`yol`). Döküm `scripts/sesli_anlatim/capa_dok.py` (Oracle API ile), yazar Claude
-  `scripts/sesli_anlatim/TALIMAT_CAPA.md`, kapı `capa_dogrula.py` (mdSha1, paragraf/cümle sayısı, sayfa/madde/resim
+  hareketli imleç (`yol`). Döküm `scripts/uretim/sesli_anlatim/capa_dok.py` (Oracle API ile), yazar Claude
+  `scripts/uretim/sesli_anlatim/TALIMAT_CAPA.md`, kapı `capa_dogrula.py` (mdSha1, paragraf/cümle sayısı, sayfa/madde/resim
   aralığı, ≥%70 anlamsal kapsama). Çıktı cihaz + Oracle `data/sesli_anlatim/capa/<key>.json`; Oracle
   `meds-cumle-zaman` zamanlayıcısındaki `pdf_isaret.py --hepsi` 30 dk içinde işaretlere çevirir.
 - Metin değişirse (mdSha1 tutmaz) eski çapa yok sayılır; ders yeniden üretilirse zincir baştan → çapa da yeniden.
@@ -342,18 +342,18 @@ birleştirme ve doğrulama betiktir.
 
 ## 16. Kroki zinciri — L0 / L1 (R1 + R2, `kroki` aşaması, 2026-10-23)
 Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.venv-ocr` (PyMuPDF, OpenCV, SciPy), vektör bge-m3 CPU
-(tek dosyalık önbellek `meds_temp/kroki/vektor_onbellek.sqlite`). Gece: `kroki` aşaması → `scripts/kroki/zincir.py`.
+(tek dosyalık önbellek `meds_temp/kroki/vektor_onbellek.sqlite`). Gece: `kroki` aşaması → `scripts/uretim/kroki/zincir.py`.
 | Betik | Ne yapar | Çıktı |
 |---|---|---|
-| `scripts/kroki/l0.py --ders kN-NN` | PDF bir kez: kelime/satır/blok kutuları, vurgulu, resim, tablo (cikar.py ölçütü), zemin ışıklılığı, varlıklar, sayfa izi (SimHash + pHash); OCR yalnız metinsiz resme; önceki L0 ile eşleşen "aynı" sayfanın OCR/roi/egri/ok'u TAŞINIR | `ders_bilgi/<ders>/l0/sayfalar.json`, `sayfa_eslesme.json` (aynı/değişmiş/yeni + eski kimlik takma adları) |
-| `scripts/kroki/ok.py` | vektör çizimden oklar (çizgi + üçgen/dart baş, blok ok, ⊣), uçlar doğrultu konisinde metin BLOĞUNA | L0 `ok[]` (`guven`: çizgi yüksek, blok düşük) |
-| `scripts/kroki/som.py` | resim içi bölgeler (Canny + kontur), numaralı kopya (SoM) | L0 `roi[]`, `meds_temp/kroki/<ders>/som/pNN.webp` |
-| `scripts/kroki/egri.py --sinama` / `--ders --sayfa --yaz` | grafik eğrisi (ızgara/eksen atılır, sütun izi, tepe/çukur, yükseliş/iniş) — kapı: kapsama, isabet, tekillik | L0 `egri[]` |
-| `scripts/kroki/ogrenci_not.py --ders --not NOT.pdf` | öğrenci notu: sayfa izi eşleme + ECC hizalama + mevcut mürekkep kuralları; yazı uyumu < %85 sayfa yazılmaz | `l1/ogrenci_not/<not_sha>.json` (canlı katmana yayın ayrı karar) |
-| `scripts/cikmis_dizin/dizin.py` | çıkmış dizini (Dönem 3, aile, varlık, bge-m3), ters dizinler; değişen çıkmış → etkilenen dersler | `meds_database_v2/cikmis_dizin/`, `meds_temp/cikmis_dizin/degisen.json` |
-| `scripts/cikmis_dizin/plan.py --ders [--tam]` | hedefli tarama: branş/kurul + varlık kesişimi → yalnız adaylarda vektör; `--tam` kaçanı ölçer | `l1/tarama_plani.json` |
-| `scripts/cikmis_dizin/kanit.py --ders [--olc]` | soru → doğru/çeldirici bölgesi (sözcüksel + anlamsal şart, kesin/olası/bağsız), çelişki kapısı, tekrar listesi | `l1/kanit.json` |
-- Zincir: `scripts/kroki/zincir.py [--kurul N|--ders]` — L0 → ok/SoM → dizin → plan (TEK DERS kuralı tüm dersleri birlikte
+| `scripts/uretim/kroki/l0.py --ders kN-NN` | PDF bir kez: kelime/satır/blok kutuları, vurgulu, resim, tablo (cikar.py ölçütü), zemin ışıklılığı, varlıklar, sayfa izi (SimHash + pHash); OCR yalnız metinsiz resme; önceki L0 ile eşleşen "aynı" sayfanın OCR/roi/egri/ok'u TAŞINIR | `ders_bilgi/<ders>/l0/sayfalar.json`, `sayfa_eslesme.json` (aynı/değişmiş/yeni + eski kimlik takma adları) |
+| `scripts/uretim/kroki/ok.py` | vektör çizimden oklar (çizgi + üçgen/dart baş, blok ok, ⊣), uçlar doğrultu konisinde metin BLOĞUNA | L0 `ok[]` (`guven`: çizgi yüksek, blok düşük) |
+| `scripts/uretim/kroki/som.py` | resim içi bölgeler (Canny + kontur), numaralı kopya (SoM) | L0 `roi[]`, `meds_temp/kroki/<ders>/som/pNN.webp` |
+| `scripts/uretim/kroki/egri.py --sinama` / `--ders --sayfa --yaz` | grafik eğrisi (ızgara/eksen atılır, sütun izi, tepe/çukur, yükseliş/iniş) — kapı: kapsama, isabet, tekillik | L0 `egri[]` |
+| `scripts/uretim/kroki/ogrenci_not.py --ders --not NOT.pdf` | öğrenci notu: sayfa izi eşleme + ECC hizalama + mevcut mürekkep kuralları; yazı uyumu < %85 sayfa yazılmaz | `l1/ogrenci_not/<not_sha>.json` (canlı katmana yayın ayrı karar) |
+| `scripts/uretim/cikmis_dizin/dizin.py` | çıkmış dizini (Dönem 3, aile, varlık, bge-m3), ters dizinler; değişen çıkmış → etkilenen dersler | `meds_database_v2/cikmis_dizin/`, `meds_temp/cikmis_dizin/degisen.json` |
+| `scripts/uretim/cikmis_dizin/plan.py --ders [--tam]` | hedefli tarama: branş/kurul + varlık kesişimi → yalnız adaylarda vektör; `--tam` kaçanı ölçer | `l1/tarama_plani.json` |
+| `scripts/uretim/cikmis_dizin/kanit.py --ders [--olc]` | soru → doğru/çeldirici bölgesi (sözcüksel + anlamsal şart, kesin/olası/bağsız), çelişki kapısı, tekrar listesi | `l1/kanit.json` |
+- Zincir: `scripts/uretim/kroki/zincir.py [--kurul N|--ders]` — L0 → ok/SoM → dizin → plan (TEK DERS kuralı tüm dersleri birlikte
   görür; konu kilidi) → kanıt. Artımlı koşu saniyeler. PDF bulunamayan/içerikle doğrulanamayan ders HATA değil
   `meds_temp/kroki/eksik_kaynak.json` (2026-10-23: k1-06, k1-47).
 - Kanıt güven katmanları: `kesin` (sözcüksel + anlamsal) → bilgi amaçlı; `tekrar: true` (kesin + cevabın tüm kökleri + en
@@ -427,8 +427,8 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
 
 ### 18.3 Canlı çizim ve sesli ders ekranı (2026-10-24, k2-02 sınamasından; bütün dersler)
 
-- **Kurallar:** `docs/CIZIM_KURALLARI.md` (tek kaynak), model talimatı `scripts/cizim/TALIMAT_CIZIM.md` (1–26), hata defteri H40–H52 + H59.
-- **Sıkı kapı (H59, 2026-10-25):** `cizim_uret` + `panel_sinama` sonrası `scripts/cizim/cizim_kapisi.py <key>` 0 HATA olmadan
+- **Kurallar:** `docs/CIZIM_KURALLARI.md` (tek kaynak), model talimatı `scripts/uretim/cizim/TALIMAT_CIZIM.md` (1–26), hata defteri H40–H52 + H59.
+- **Sıkı kapı (H59, 2026-10-25):** `cizim_uret` + `panel_sinama` sonrası `scripts/uretim/cizim/cizim_kapisi.py <key>` 0 HATA olmadan
   çizim yayına gitmez (ders zinciri çıkış 15; arşivde `arsiv_yayinla.py` paket üretmez). Kurallar `CIZIM_KURALLARI.md` §10.
   Kapı eşiği gevşetilmez; düşen ders `sekil_cizim.py onar` (arşiv) ya da ilgili partinin silinip yeniden üretilmesiyle düzeltilir.
 - **Akış (ders zinciri `cizim` adımı):** `cizim_uret.py` → sayfa partileri Claude (görüntüye bakarak; şablon seçer, uygun
@@ -446,7 +446,7 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
 ## 19. Elle ders üretimi — işçisiz (kullanıcı kararı 2026-10-27; ilk uygulama k2-01 Nörolojik Hastaya Yaklaşım)
 
 > **Sıra/paralellik/okuma/düzeltme biçimi (2026-10-28):** `docs/TAM_HAT_HIZLI_AKIS.md` — adım 1–4 E0 hazırlık betiğiyle
-> (`scripts/tam_hat/hazirlik.py`) paralel yürür; yeni kapılar `soru_uslup.py`, `kaynak_kapisi.py`, `pdf_tarama.py`.
+> (`scripts/hat/tam_hat/hazirlik.py`) paralel yürür; yeni kapılar `soru_uslup.py`, `kaynak_kapisi.py`, `pdf_tarama.py`.
 
 LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosyanın hangi ders olduğunu söyleyince bu oturumda
 üretilir. Arşiv (`y25-*`) içeriği kopyalanmaz. Anahtar ve kod ders kayıt defterinden (`src/data/dersler/kN.json`).
@@ -457,9 +457,9 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 3. **Hoca kaydı:** `ogrenci_drive/hoca_dokum.py` (CPU, `MemoryMax=4G`, döküm sürerken `tsc` çalıştırma — H81). Anlaşılmayan
    döküm "hoca vurguladı" dayanağı olmaz.
 4. **Çıkmış:** bankada konu + slayt metniyle aday → her soru elle doğrulanır (`s`, `kanit`, `seviye`, `dogrulandi`) — H79.
-4b. **Geçmiş yıl öğrenci önem notu (AGENTS 28, 2026-10-30):** `hazirlik.py` → `ogrenci_onem.json` (elle `scripts/ogrenci_onem/oku.py --ders
+4b. **Geçmiş yıl öğrenci önem notu (AGENTS 28, 2026-10-30):** `hazirlik.py` → `ogrenci_onem.json` (elle `scripts/uretim/ogrenci_onem/oku.py --ders
     <k2-xx> --sayfalar sayfalar.json`); belge `docs/OGRENCI_ONEM/<ders>.md`. Önem listesi, anlatım, örnek soru, ara soru bu belgenin öncelik
-    haritasına uyar; v2 cümlesi ve önem maddesi `ogrenci` alanını alır (rozet). Kapı `scripts/ogrenci_onem/kapi.py <ders>` 0 HATA.
+    haritasına uyar; v2 cümlesi ve önem maddesi `ogrenci` alanını alır (rozet). Kapı `scripts/uretim/ogrenci_onem/kapi.py <ders>` 0 HATA.
     Yöntem ve isabet: `docs/OGRENCI_ONEM_YONTEMI.md`.
 5. **Değerlendirme paketi:** `meds_database_v2/ders_bilgi/<ders>/degerlendirme/paket.json` → `degerlendirme_dogrula.py` 0 HATA.
 6. **Anlatım:** `# Başlık` + `@@ Bölüm` + paragraf; dolgu yok, "çıkmış sınavda sorulmuştur" yalnız `seviye=dogrudan`.
@@ -485,15 +485,15 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
     `cozucu_dogrula.py` 0 HATA, bağımsız denetçi, EMA GPU sesi §19 adım 8). `ders_icerik_dogrula.py` çözücü yoksa HATA verir; çalıştığı canlıda denenir.
 11d. **Ders analizi + ders özeti (2026-10-29):** sesli ders açılışında ve araç çubuğunda "Ders analizi" penceresi (ne anlatılacak,
     bilinmesi gerekenler, en önemli yerler, çıkmışta ne soruldu, hoca üslubu, odak) + "Ders özeti" sekmesi. Özet, önem listesi ve sesli
-    çözücü bittikten SONRA onlardan derlenir (eksikse `ozetEksik`). `python3 scripts/ders_analizi/uret.py <key>` (LLM yok, 0 HATA;
-    `turkce_uslup` kapısı içinde) → `src/data/ders_analizi/<key>.json`; EMA sesi `bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh
-    meds/scripts/ders_analizi/ses.py <key>` → `data/k<N>dersanaliz_cozucu/ses/<kod>/` (git dışı, Oracle'a rsync). İçerik değişince ikisi yeniden koşulur.
+    çözücü bittikten SONRA onlardan derlenir (eksikse `ozetEksik`). `python3 scripts/uretim/ders_analizi/uret.py <key>` (LLM yok, 0 HATA;
+    `turkce_uslup` kapısı içinde) → `src/data/ders_analizi/<key>.json`; EMA sesi `bash meds/scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh
+    meds/scripts/uretim/ders_analizi/ses.py <key>` → `data/k<N>dersanaliz_cozucu/ses/<kod>/` (git dışı, Oracle'a rsync). İçerik değişince ikisi yeniden koşulur.
     **Ayrıntılı çıkmış analizi (2026-11-06, AGENTS 29):** `uret.py` öncesi `degerlendirme/cikmis_analiz.json` yazılır (her çıkmışa aciklama ≥3 cümle +
     ornek + tuzak, genel eğilim `giris`); `--dogrula` eksikte HATA.
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
     ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
-11c. **Patoloji dersi ise hoca üslubu soru katmanı (ZORUNLU, 2026-10-29):** `scripts/patoloji_soru_isci/hazirla.py` + `TALIMAT.md` akışı; çıktı `src/data/hoca_uslubu_sorular/k2/<ders-id>.json` (derste ayrı "Hoca soruları" kartı); sesli hoca çözücü `cozucu_kur.py` (iskele → TALIMAT_COZUCU yazımı → dogrula → birlestir → EMA GPU `cozucu_ses_gpu.sh … ses.py --brans k2patolojihoca <kod>`); kapı `dogrula.py` 0 HATA. Kurallar `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (AGENTS.md kural 25).
-11d. **Hocanın sorabileceği ara sorular (ZORUNLU, her ders, 2026-10-29):** hoca üslubuna göre soru çıkabilecek slayttan hemen sonra sesli derste yapay soru sayfası; EMA soruyu okur, çözer, çözümü önceki slaytlara numarasıyla dayanarak anlatır (`a-N`); PDF araç çubuğundaki ünlem tümünü ardışık oynatır; ders dışında `k<N>hocaara` çözücüsü. Akış `scripts/hoca_ara_soru/TALIMAT.md`: `kur.py iskele` → yazım → `kur.py dogrula` 0 HATA + bağımsız denetçi → `birlestir` → EMA GPU (`cozucu_ses_gpu.sh … ses.py --brans k<N>hocaara <kod>`) → `dogrula --ses` 0 HATA. Sesi eksikse ders tamamlanmaz (AGENTS.md kural 27).
+11c. **Patoloji dersi ise hoca üslubu soru katmanı (ZORUNLU, 2026-10-29):** `scripts/uretim/patoloji_soru_isci/hazirla.py` + `TALIMAT.md` akışı; çıktı `src/data/hoca_uslubu_sorular/k2/<ders-id>.json` (derste ayrı "Hoca soruları" kartı); sesli hoca çözücü `cozucu_kur.py` (iskele → TALIMAT_COZUCU yazımı → dogrula → birlestir → EMA GPU `cozucu_ses_gpu.sh … ses.py --brans k2patolojihoca <kod>`); kapı `dogrula.py` 0 HATA. Kurallar `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (AGENTS.md kural 25).
+11d. **Hocanın sorabileceği ara sorular (ZORUNLU, her ders, 2026-10-29):** hoca üslubuna göre soru çıkabilecek slayttan hemen sonra sesli derste yapay soru sayfası; EMA soruyu okur, çözer, çözümü önceki slaytlara numarasıyla dayanarak anlatır (`a-N`); PDF araç çubuğundaki ünlem tümünü ardışık oynatır; ders dışında `k<N>hocaara` çözücüsü. Akış `scripts/uretim/hoca_ara_soru/TALIMAT.md`: `kur.py iskele` → yazım → `kur.py dogrula` 0 HATA + bağımsız denetçi → `birlestir` → EMA GPU (`cozucu_ses_gpu.sh … ses.py --brans k<N>hocaara <kod>`) → `dogrula --ses` 0 HATA. Sesi eksikse ders tamamlanmaz (AGENTS.md kural 27).
 
 
 
@@ -511,7 +511,7 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 - Zaman: `kelime_zaman.py` klip başına göreli kelime zamanını `klip_zaman/<key>.json`'da saklar; yalnız yeni klipleri
   Whisper'dan geçirir. `cumle_zaman.py` her seferinde tüm sesi işler (saniyeler). Çizim/çapa/işaret paragraf/cümle
   sırasına bağlıdır, saniyeye değil; ses yeniden kurulunca kayma olmaz.
-- Metin düzeltmesi sırası: (1) `metin/<key>.md` düzenlenir, (2) `python3 scripts/sesli_anlatim/klip_tasi.py <key>`
+- Metin düzeltmesi sırası: (1) `metin/<key>.md` düzenlenir, (2) `python3 scripts/uretim/sesli_anlatim/klip_tasi.py <key>`
   (eski metin git HEAD'den ya da `--eski`) hizalama/çapa/işaret/çizim/vurgu/çıkmış konumu/v2 kayıtlarını aynen kalan
   paragraflara taşır, özgünleri `.tasima_yedek/`'e alır, değişen/yeni paragraf dizinlerini listeler (çıkış 2),
   (3) yalnız o paragraflar için çapa, çizim (`cizim_kapisi.py` 0 HATA), çıkmış konumu, v2 yazılır, (4) `pdf_isaret.py`
@@ -523,4 +523,4 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
   `content-overlay-sync.sh` ([0b]) durur; `python3 scripts/icerik_katman.py goc --veri <data> --kaynak <src/data>` ile çevrilir.
 
 ## 20. Hoca üslubu profili (2026-10-29)
-Her yeni ders için önem listesi + anlatım + örnek soru `docs/HOCA_USLUBU_YONTEMI.md` §4.1'e göre yazılır: `scripts/hoca_profili/profil_oku.py` → önem (çıkmış eşleme + `onem_puanla.py` adayları, gerekçeli) → anlatım (ilk 2 bilgi türü + çekirdek kavramlar) → örnek sorular (`profil_kapisi.py` kapısı). Yeni çıkmış/sınav gelince `uslup_analiz.py` ile profil yenilenir.
+Her yeni ders için önem listesi + anlatım + örnek soru `docs/HOCA_USLUBU_YONTEMI.md` §4.1'e göre yazılır: `scripts/uretim/hoca_profili/profil_oku.py` → önem (çıkmış eşleme + `onem_puanla.py` adayları, gerekçeli) → anlatım (ilk 2 bilgi türü + çekirdek kavramlar) → örnek sorular (`profil_kapisi.py` kapısı). Yeni çıkmış/sınav gelince `uslup_analiz.py` ile profil yenilenir.

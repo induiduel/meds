@@ -1,20 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 747,
-  "baslik": "Hat sağlamlığı: deploy kilidi, ders kilidi sızıntısı, tek kapı girişi",
+  "onem": 748,
+  "baslik": "Altyapı düzeni: betikler amaca göre gruplandı (öğrenci tarafında değişiklik yok)",
   "maddeler": [
-    "server.ts'teki git-dışı asistan import'u geri alındı (temiz checkout tsc patlaması önlendi).",
-    "hazirlik.py doğrudan çalıştırmada ders kilidini sonunda bırakır (efemer oturum sızıntısı giderildi).",
-    "Tek kapı girişi: scripts/kapilar/kos.py + matris.json (dağınık kapılar tek adla çağrılır).",
-    "ornek_soru kapısı alt kapı traceback'ini artık yutmaz; tasarruf mod filtresi ara-soru talimatını da eler."
+    "Betik klasörü: meds/scripts artık hat/, uretim/, altyapi/, moduller/, kapilar/, arsiv/ gruplarında; harita scripts/HARITA.md.",
+    "Konum-bağımsız kök: betikler kökü scripts/kok.py ile bulur; sabit parents[N] kaldırıldı (taşınsa da yol bozulmaz).",
+    "Çift kopya: son_prova, blok_ozet, tekrar_analizi kodu tek kaynakta (git); çalışma verisi meds_temp'te.",
+    "Dağıtım: Oracle sistem birimleri repo ile eşitlenir; taşınan eski konumlar Oracle'da silinmeden arşive alınır.",
+    "Ölü kod: 64 eski deste betiği ve Kurul 1 üretim artıkları scripts/arsiv altına; tsc ve Oracle gönderiminden çıkarıldı."
   ],
   "eklenen": [],
   "degisen": [
-    "PDF render servisi (src/services/pdfRenderService.ts): kalıcı Chrome havuzu, istek başına yalnız yeni sekme; zaman aşımı 120 sn → 10 dk, belge üst sınırı 25 MB → 60 MB"
+    "meds/scripts dizin düzeni (eski→yeni yol listesi: deploy/oracle/tasinan_yollar.txt)"
   ],
   "duzeltilen": [
-    "Soru dışa aktarıcıda çok soru seçilince PDF'in zaman aşımına uğraması",
-    "Soru dışa aktarıcı alt bilgi zemini artık şeffaf (sığdırma hatasında metni kapatmaz)"
+    "son_prova / blok_ozet betiklerinin git kopyasından çalıştırılınca meds/meds yolunu üretmesi"
   ],
   "silinen": []
 }

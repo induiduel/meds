@@ -82,7 +82,7 @@ def _isle(gorev: str, hedef: str, ayar: dict | None, denetle: bool) -> dict:
 
 def ornek_kanit(n_parti: int, rng: random.Random) -> list[tuple[str, dict]]:
     """Kanıt bağlama: örnek sorusu (elle kanıt sayfası) bekleyen Kurul 1 derslerinden rastgele partiler."""
-    sys.path.insert(0, str(c.KOK / "scripts" / "kroki"))
+    sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "kroki"))
     from llm.gorevler import kanit_bagla as KB
     dersler = sorted(p.parent.parent.name for p in (c.DB2 / "ders_bilgi").glob("k1-*/l1/kanit.json"))
     rng.shuffle(dersler)
@@ -99,7 +99,7 @@ def ornek_kanit(n_parti: int, rng: random.Random) -> list[tuple[str, dict]]:
 
 def kanit_referans(r: dict) -> dict:
     """Modelin seçtiği bölge(ler) ↔ örnek sorunun elle konan kanıt sayfası."""
-    sys.path.insert(0, str(c.KOK / "scripts" / "cikmis_dizin"))
+    sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "cikmis_dizin"))
     import kanit as K
     from ortak import DEPO, oku
     _, pj = c.paket(r["is_id"])

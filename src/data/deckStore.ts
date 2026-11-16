@@ -1,7 +1,7 @@
 /**
  * Öğrenme desteleri: liste anında açılsın diye hafif katalog paketle gelir; bir destenin
  * slaytları yalnızca o deste açılınca ayrı bir parça olarak yüklenir.
- * Dosyalar derlemede scripts/vite/splitLearningDecks.ts ile üretilir.
+ * Dosyalar derlemede scripts/altyapi/vite/splitLearningDecks.ts ile üretilir.
  */
 
 export interface DeckCatalogEntry {

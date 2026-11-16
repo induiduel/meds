@@ -2,7 +2,7 @@
 
 > Amaç: Kurul 2+ patoloji vurgu, örnek soru ve "çıkabilecek soru" üretimini hocanın gerçek seçim mantığına bağlamak.
 > Bu not **kanıt düzeyini açıkça** yazar; zayıf kanıtlı kalıbı kesin kural gibi uygulamak YASAK.
-> Soru-soru eşleme: `docs/PATOLOJI_SORU_ESLEME_TABLOSU.md`. İşçi: `scripts/patoloji_soru_isci/` (TALIMAT.md).
+> Soru-soru eşleme: `docs/PATOLOJI_SORU_ESLEME_TABLOSU.md`. İşçi: `scripts/uretim/patoloji_soru_isci/` (TALIMAT.md).
 > v1'den farklar: slayt biçimi yeniden yorumlandı (sarı = yapı etiketi), "ters yön" ve "birleştirme/kopya" dönüşümleri bulundu,
 > 30 sorunun her biri için kaynak slayt bulundu (4 ajan, biçim işaretli döküm).
 
@@ -10,7 +10,7 @@
 - Sınav: `data/cikmis_2627/kurul1_2627.json`, Patoloji soru 35–68. **58, 62, 65, 66 hiç toplanmadı**; 9 sorunun şıkları öğrenci
   hafızasından kısmen tamamlanmış (`siklar_uretildi`: yalnız kök + doğru şık güvenilir). 21 soru `tam`. Örneklem küçüktür (n=30).
 - Slayt: 35 PDF (`drive_root/Kurul 1/Tıbbi Patoloji`; 27, 29, 36–38 numaralı dersler Patoloji PDF'i olarak yok). Biçim işaretli döküm:
-  `scripts/patoloji_soru_isci/dokum.py` (⟦kırmızı⟧ ‹kalın› `Y|` sarı dolgu `#` başlık).
+  `scripts/uretim/patoloji_soru_isci/dokum.py` (⟦kırmızı⟧ ‹kalın› `Y|` sarı dolgu `#` başlık).
 - Karşılaştırma tabanı: 546 eski patoloji çıkmışı (2018–2026). Eski çıkmış taraması **anahtar sözcüklüdür**; "eski yıllarda yok" demek kesin değil.
 
 ## 1. Sorular nereden geldi (30/30 kaynak bulundu)

@@ -1,4 +1,4 @@
-# Kadın Hastalıkları ve Doğum — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Kadın Hastalıkları ve Doğum — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 46 tekil çıkmış soru · güven: **orta** · yıllar: {2019: 8, 2020: 11, 2021: 6, 2022: 2, 2023: 5, 2024: 2, 2025: 5, 2026: 4}
 

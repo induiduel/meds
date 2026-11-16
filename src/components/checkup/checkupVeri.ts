@@ -1,6 +1,6 @@
 /**
  * Patoloji Hızlı Check Up verisi — src/data/patoloji_checkup/NN-*.json (tek kaynak; doğrulayıcı:
- * scripts/patoloji_checkup/dogrula.py, 0 HATA vermeden yayınlanmaz). Kaynak "kod:slayt" biçimindedir
+ * scripts/uretim/patoloji_checkup/dogrula.py, 0 HATA vermeden yayınlanmaz). Kaynak "kod:slayt" biçimindedir
  * (kod = Kurul 1 patoloji ders PDF'i, slayt = PDF sayfası); ders adları dersler.json'dan gelir.
  */
 import { icKonum, icUrl } from '../../siteHaritasi';

@@ -1,6 +1,6 @@
 # Proje Taşıma ve Yeniden Düzenleme Yol Haritası
 
-Durum: **2026-10-07'de uygulandı** — hedef `/home/indu/medsor`. Klasör adları (meds, meds_database, meds_temp, meds_downloads, meds_database_v2) kod bağımlılığı nedeniyle korundu; yedekler `yedek/` altında toplandı. Eski klasör (`~/Masaüstü/MedSoru Project`) dokunulmadan duruyor ve artık çalışmıyor. Aşama E (repo içi temizlik) de 2026-10-07 yapıldı: 142 kullanılmayan betik/kök dosyası `scripts/archive/` altına taşındı, eski `.venv`, `__pycache__`, günlük ve yanlış yerdeki klasörler silindi.
+Durum: **2026-10-07'de uygulandı** — hedef `/home/indu/medsor`. Klasör adları (meds, meds_database, meds_temp, meds_downloads, meds_database_v2) kod bağımlılığı nedeniyle korundu; yedekler `yedek/` altında toplandı. Eski klasör (`~/Masaüstü/MedSoru Project`) dokunulmadan duruyor ve artık çalışmıyor. Aşama E (repo içi temizlik) de 2026-10-07 yapıldı: 142 kullanılmayan betik/kök dosyası `scripts/arsiv/archive/` altına taşındı, eski `.venv`, `__pycache__`, günlük ve yanlış yerdeki klasörler silindi.
 Hazırlanma: 2026-10-07. Kaynak: canlı sistemin taranması (servisler, yollar, klasör boyutları, kod referansları).
 
 ## 0. Karar bekleyen sorular
@@ -85,7 +85,7 @@ Her aşama tek başına geri alınabilir. Bir aşamanın doğrulaması geçmeden
 
 1. Tam yedek: `rsync -aHAX "MedSoru Project/" /yedek-disk/medsoru-ONCE/` (venv'ler hariç, ~3,5 GB). `.env` dahil; repoya girmez.
 2. Bağımlılık kilitleri: `.venv-ocr/bin/pip freeze > app/deploy/requirements-ocr.lock`, aynısı `train` için. Node sürümü `.nvmrc`.
-3. **Yol modülü:** `scripts/agents/paths.py` ve `src/services/paths.ts` — `MEDS_ROOT`, `MEDS_DATABASE_DIR`, `MEDS_TEMP_DIR`, `MEDS_V2_DIR`, `MEDS_DOWNLOADS_DIR`, `MEDS_MODELS_DIR` değerlerini `.env`'den okur, yoksa bugünkü kardeş düzeni varsayar. 45 mutlak yollu dosya bu modüle geçirilir (tek seferlik arşiv betikleri için yalnız uyarı yorumu).
+3. **Yol modülü:** `scripts/altyapi/agents/paths.py` ve `src/services/paths.ts` — `MEDS_ROOT`, `MEDS_DATABASE_DIR`, `MEDS_TEMP_DIR`, `MEDS_V2_DIR`, `MEDS_DOWNLOADS_DIR`, `MEDS_MODELS_DIR` değerlerini `.env`'den okur, yoksa bugünkü kardeş düzeni varsayar. 45 mutlak yollu dosya bu modüle geçirilir (tek seferlik arşiv betikleri için yalnız uyarı yorumu).
 4. Servis şablonları: `deploy/systemd/*.service.in` (`@ROOT@` yer tutucu) + `deploy/install-services.sh`.
 5. Doğrulama: mevcut yerde her şey çalışır (aşağıdaki **Kontrol listesi**). Bu aşama yalnız kod değişikliğidir; git'e girer.
 
@@ -113,7 +113,7 @@ Her aşama tek başına geri alınabilir. Bir aşamanın doğrulaması geçmeden
 | Site | `curl localhost:3000/api/past-exams` | 4551 soru (bugünkü sayı) |
 | Faz verisi | `/api/questions/00a07e4dda4a/insights` | kurul 3, Mide Tümörleri, varlıklar |
 | Öğren bağlantıları | `/api/learn-links` | 300 bağlantı |
-| RAG | `npx tsx scripts/eval/retrieval-eval.mts` (+`STRIP=1`) | 93 / 89 / 40 (±1) |
+| RAG | `npx tsx scripts/moduller/eval/retrieval-eval.mts` (+`STRIP=1`) | 93 / 89 / 40 (±1) |
 | Ders notu temiz katmanı | `/api/lecture-notes/:id` | temiz metin, `?raw=1` özgün |
 | Panel | `localhost:8085` | fazlar, kuyruk, GPU |
 | Faz zinciri | `meds-phases` günlüğü | kaldığı adımdan sürer, `rc=0` |
@@ -126,7 +126,7 @@ Her aşama tek başına geri alınabilir. Bir aşamanın doğrulaması geçmeden
 
 1. Eski klasör 7 gün salt okunur bekletilir (`chmod -R a-w`), sonra yedek diske arşivlenip silinir.
 2. Bölüm 4'teki silinecekler silinir.
-3. Repo içi düzen (scripts/phases, scripts/archive, tools/dashboard) **ayrı commit'lerde** yapılır; her commit sonrası kontrol listesi.
+3. Repo içi düzen (scripts/phases, scripts/arsiv/archive, tools/dashboard) **ayrı commit'lerde** yapılır; her commit sonrası kontrol listesi.
 
 ### Geri dönüş
 
@@ -138,7 +138,7 @@ B/C aşamasında bir şey bozulursa: yeni servisleri durdur → eski servis dosy
 
 **Yedeğe taşınacak (kod kullanmıyor):** `med_data/` (eski proje kopyası), `meds_database_backup_20261005/`, `meds_save_backup1.zip`, `yedekler/`, `meds_database_v2_backups/`.
 
-**Arşiv klasörüne (scripts/archive) taşınacak tek seferlik betikler:** `build_*_deck.py` (~25), `generate_*_deck.py`, `generate_kurul*_redakte_sorular.mjs`, `generate_kurul*_amfi_ozetleri.mjs`, `expand_*_terms.py`, `enrich_*` — her biri için "bir servis, zincir adımı, package.json betiği ya da AdminScriptsTab tarafından çağrılıyor mu" kontrol edilir; çağrılan taşınmaz.
+**Arşiv klasörüne (scripts/arsiv/archive) taşınacak tek seferlik betikler:** `build_*_deck.py` (~25), `generate_*_deck.py`, `generate_kurul*_redakte_sorular.mjs`, `generate_kurul*_amfi_ozetleri.mjs`, `expand_*_terms.py`, `enrich_*` — her biri için "bir servis, zincir adımı, package.json betiği ya da AdminScriptsTab tarafından çağrılıyor mu" kontrol edilir; çağrılan taşınmaz.
 
 **Kullanılmayan faz çıktıları:** Faz 7 hikâyeleri (`phase7_stories`), eski tıbbi sözlük (`medical_thesaurus`) — güvenilmez bulunmuştu; yedeğe.
 

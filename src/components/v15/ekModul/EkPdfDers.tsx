@@ -11,7 +11,7 @@ const GORUNUM_KEY = 'medsoru_ek_modul_pdf_gorunum';
 /**
  * Sesli ders · "PDF ile" kipi: ders kitapçığı sesle birlikte ilerler (klasik sesli dersteki gibi).
  * Çalan bölümün sayfası açılır, bölüm çerçevelenir, o an anlatılan cümlenin not satırı PDF'te ve yandaki notta yanar.
- * Eşleme önceden üretilir (pdf_esle.json; scripts/ek_modul/pdf_esle.py): cümle zamanı sesteki duraklamalardan, cümle → madde
+ * Eşleme önceden üretilir (pdf_esle.json; scripts/uretim/ek_modul/pdf_esle.py): cümle zamanı sesteki duraklamalardan, cümle → madde
  * sözcük köküyle. Karşılığı bulunamayan cümlede satır yanmaz, yalnız bölüm çerçevesi kalır (madde uydurulmaz).
  */
 const Z_MIN = 0.6, Z_MAX = 3;

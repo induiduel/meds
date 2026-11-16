@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+"""
+meds_downloads izleyicisi: yeni/değişen PDF ve PPTX dosyalarını fark eder ve
+read_document.py ile temp1'e çevirir (PROJE_TANITIMI.md, 1. aşama).
+20 çekirdekli CPU için concurrent.futures.ThreadPoolExecutor(max_workers=8)
+ile paralel belge ve OCR işleme desteği içerir.
+
+  watch_downloads.py            # sürekli izle
+  watch_downloads.py --once     # bir kez tara ve çık
+  watch_downloads.py --vision   # OCR yetersizse yerel görsel modeli de kullan
+"""
+from __future__ import annotations
+# Konum-bağımsız kök (2026-11-16): sabit parents[N] yerine scripts/kok.py (dosya taşınsa da doğru).
+import sys as _sys
+from pathlib import Path as _Path
+_d = _Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in _sys.path:
+    _sys.path.append(str(_d))
+import kok as _kok  # noqa: E402
+
+import argparse
+import os
+import json
+import concurrent.futures
+import sys
+import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from read_document import DEFAULT_DOWNLOADS, DEFAULT_TEMP1, SUPPORTED, process_file  # noqa: E402
+
+STABLE_SECONDS = 8  # indirme bitmemiş dosyayı okumamak için son değişiklikten bu kadar bekle
+NUM_CPU_WORKERS = 8  # 20 çekirdeğin 8 tanesini OCR / Belge çıkarma süreçlerine tahsis et
+
+
+def scan(root: Path, seen: dict[Path, tuple[float, int]], vision: bool, docling: bool = False) -> int:
+    pending = []
+    for f in sorted(root.rglob("*")):
+        if not f.is_file() or f.suffix.lower() not in SUPPORTED or f.name.startswith(("~$", ".")):
+            continue
+        if f.name.endswith((".crdownload", ".part", ".tmp")):
+            continue
+        st = f.stat()
+        key = (st.st_mtime, st.st_size)
+        if seen.get(f) == key:
+            continue
+        if time.time() - st.st_mtime < STABLE_SECONDS:
+            continue  # hâlâ yazılıyor olabilir
+        pending.append((f, key))
+
+    if not pending:
+        return 0
+
+    def _worker(item):
+        f, key = item
+        try:
+            process_file(f, DEFAULT_TEMP1, root, force=False, use_ocr=True, use_vision=vision, use_docling=docling)
+            return f, key, None
+        except Exception as e:
+            return f, key, e
+
+    done = 0
+    # 20 çekirdekli CPU için paralel iş parçacığı havuzu
+    with concurrent.futures.ThreadPoolExecutor(max_workers=NUM_CPU_WORKERS) as executor:
+        for f, key, err in executor.map(_worker, pending):
+            seen[f] = key
+            if err:
+                print(f"✗ HATA {f.name}: {err}", file=sys.stderr)
+            else:
+                done += 1
+    if done:
+        enqueue_new_data_if_auto()
+    return done
+
+
+def enqueue_new_data_if_auto():
+    """Otomatik geçiş açıksa (panel: meds_temp/state/otomasyon.json) yeni veri hattını faz kuyruğuna ekle (bir kez)."""
+    import fcntl
+    temp = Path(os.environ.get("MEDS_TEMP_DIR") or _kok.PROJE / "meds_temp") / "state"
+    try:
+        if not json.loads((temp / "otomasyon.json").read_text(encoding="utf-8")).get("otomatik_gecis"):
+            return
+    except Exception:
+        return
+    qf = temp / "phase_queue.json"
+    with open(temp / "phase_queue.lock", "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            q = json.loads(qf.read_text(encoding="utf-8")) if qf.exists() else []
+        except Exception:
+            q = []
+        if "yeni_veri" not in q:
+            q.append("yeni_veri")
+            qf.write_text(json.dumps(q), encoding="utf-8")
+            print("otomatik geçiş: yeni veri hattı kuyruğa alındı", flush=True)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--once", action="store_true")
+    ap.add_argument("--vision", action="store_true")
+    ap.add_argument("--docling", action="store_true")
+    ap.add_argument("--interval", type=int, default=15, help="tarama aralığı (sn)")
+    ap.add_argument("--dir", type=Path, default=DEFAULT_DOWNLOADS)
+    a = ap.parse_args()
+
+    a.dir.mkdir(parents=True, exist_ok=True)
+    seen: dict[Path, tuple[float, int]] = {}
+    print(f"İzleniyor (Paralel {NUM_CPU_WORKERS} Worker): {a.dir}  ->  {DEFAULT_TEMP1}")
+    while True:
+        scan(a.dir, seen, a.vision, a.docling)
+        if a.once:
+            break
+        time.sleep(a.interval)
+
+
+if __name__ == "__main__":
+    main()

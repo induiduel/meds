@@ -3,7 +3,7 @@ import type { Brans } from '../spots/brans';
 
 /**
  * Çıkmış çözücü (Sınava hazırlan): branş başına kurul sınavındaki soru sayısı kadar çıkmış sorudan paketler.
- * Paket tanımı src/data/cikmis_paket/k<N>.json (scripts/cikmis_paket/paketle.py) yalnız başvuru tutar (ders kodu + soru no);
+ * Paket tanımı src/data/cikmis_paket/k<N>.json (scripts/uretim/cikmis_paket/paketle.py) yalnız başvuru tutar (ders kodu + soru no);
  * metin, açıklama ve EMA sesleri sesli soru çözücünün ders dosyalarından okunur. Paket dersi SoruCozucu'ya `kaynak` ile
  * verilir: sorular 1..n yeniden numaralanır, her soru kendi ses klasörünü (`klasor`) ve asıl klip numarasını (`kn`) taşır.
  */
@@ -19,7 +19,7 @@ const DOSYA = import.meta.glob('../../data/cikmis_paket/k*.json') as Record<stri
 export const ccKurullar = (): number[] =>
   Object.keys(DOSYA).map((k) => Number(/\/k(\d+)\.json$/.exec(k)?.[1])).filter(Boolean).sort((a, b) => a - b);
 
-/** ek modül: çözücüde olmayan çıkmışlar (scripts/cikmis_paket/ek_uygula.py), çözücü ders biçiminde; paket başvurusu "ek:<klasör>" */
+/** ek modül: çözücüde olmayan çıkmışlar (scripts/uretim/cikmis_paket/ek_uygula.py), çözücü ders biçiminde; paket başvurusu "ek:<klasör>" */
 const EK_DOSYA = import.meta.glob('../../data/cikmis_paket/ek/*/*.json') as Record<string, () => Promise<{ default: CDers }>>;
 const ekYukle = (brans: string, kl: string): Promise<CDers> => {
   const f = EK_DOSYA[`../../data/cikmis_paket/ek/${brans}/${kl}.json`];

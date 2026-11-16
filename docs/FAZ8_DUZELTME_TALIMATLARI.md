@@ -2,7 +2,7 @@
 
 > Durum: **hazırlık alanında, ana veritabanına alınmadı.** Çıktılar `meds_temp/phase8/` altında.
 > Bu dosya, Faz 8'i ana veritabanına güvenle almak için yapılması gerekenleri ve kabul ölçütlerini anlatır.
-> Betik: `scripts/advanced_ai/phase8_curriculum_graph.py` · Hazırlanma: 2026-10-05
+> Betik: `scripts/altyapi/advanced_ai/phase8_curriculum_graph.py` · Hazırlanma: 2026-10-05
 
 ## 1. Ne yapıyor?
 
@@ -49,7 +49,7 @@ diüretik emilimi → *Antiaritmik İlaçlar*, şizofreni pozitif belirtileri �
 ### 3.2 Kaynağı olmayan konular (%34)
 `kural_dogrulama.kaynagi_olan_konu_orani = 0.657`. Kurul 2–6 için ders programında PDF adayı yok; yalnızca ad/içerik
 benzerliğiyle bağlanıyor.
-- [ ] `scripts/agents/parse_ders_programi.py` ile Kurul 2–6 için de `pdf_adaylari` üret (Kurul 1'deki yöntem).
+- [ ] `scripts/altyapi/agents/parse_ders_programi.py` ile Kurul 2–6 için de `pdf_adaylari` üret (Kurul 1'deki yöntem).
 - [ ] Geçen yılın (`gecen_yil_d3`) PDF'leri bu yılın konusuyla eşleşirse `kaynak.yil` alanıyla işaretle; hoca/konu
       değişmiş olabilir.
 
@@ -78,13 +78,13 @@ Alma yöntemi (geri dönüşlü):
 
 ```bash
 # Tam üretim (meds_temp/phase8 içine; önceki üretim meds_temp/phase8.prev olarak saklanır)
-python3 scripts/advanced_ai/phase8_curriculum_graph.py --sample 40
+python3 scripts/altyapi/advanced_ai/phase8_curriculum_graph.py --sample 40
 
 # Bağımsız ölçüm (Faz 5 ipuçları kapalı, dosya yazmaz)
-python3 scripts/advanced_ai/phase8_curriculum_graph.py --no-hints --dry-run
+python3 scripts/altyapi/advanced_ai/phase8_curriculum_graph.py --no-hints --dry-run
 ```
 
-Otomasyon: `meds-phases` servisi (`scripts/agents/phase_cycle.py`) her turda Faz 5 → 6 → 6.5 → 7 → 7.5 → 8 →
+Otomasyon: `meds-phases` servisi (`scripts/altyapi/agents/phase_cycle.py`) her turda Faz 5 → 6 → 6.5 → 7 → 7.5 → 8 →
 Aşama 1 yenileme sırasıyla çalıştırır. Kayıt: `meds_temp/logs/phase_cycle.log`, durum: `meds_temp/state/phase_cycle_state.json`.
 
 ## 6. Bu turda yapılan ilgili düzeltmeler

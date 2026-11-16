@@ -127,7 +127,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
   görünen `/kamplar/takvim`; merkezModel kamplar + navModel (Sınava hazırlan). Sıradaki sınav (kalan gün, kurul ilerlemesi),
   T‑5/T‑3/T‑1 hazırlık günleri (Son Prova / Çıkmış çözücü / En önemliler'e götürür), yılın sınavları.
 - Soru haritası (b2harita): `v15/SoruHaritasiV15.tsx` + `styles/v15/harita.css`; rota `soru_haritasi` (/soru-haritasi ↔ /sorular/soru-haritasi).
-  Dizin `src/data/soru_haritasi.json` ← `scripts/v15/soru_haritasi.py` (pastQuestions.json sayımı; çıkmış verisi değişince yeniden çalıştır).
+  Dizin `src/data/soru_haritasi.json` ← `scripts/altyapi/v15/soru_haritasi.py` (pastQuestions.json sayımı; çıkmış verisi değişince yeniden çalıştır).
   Hücre → `/sorular/cikmis?kurul=&ders=&yil=` (PastExamsView `?ders=`/`?yil=` ile süzgeç başlatır).
 - Yüzen kronometre (T): `v15/KronometreV15.tsx` + `styles/v15/kronometre.css`; Menü › Araçlar ve kenar menüsünden (`kronometreAc`).
   Başlat/duraklat, tur, bitir (geçmiş 50 oturum, localStorage), sistem süresinden ayrı. Odak ekranında (sesli ders) gizli.

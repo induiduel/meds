@@ -6,7 +6,7 @@ import { createContext, useContext } from 'react';
  *  - ayni:   aynı sayı + aynı yıl + ortak ad sözcükleri (ör. Türkiye TDH 2025 = 1,42)
  *  - farkli: aynı gösterge ve yıl için slaytta BAŞKA bir değer yazıyor (ör. sayfada revize 1,63, slaytta 1,69)
  *  - terim:  slaytta (ve çoğunlukla çıkmış soruda) geçen kavram/kurum/kısaltma (ör. KETEM, Umumi Hıfzıssıhha Kanunu)
- * Dizin: src/data/saglik/ders_eslesme.json (scripts/saglik/ders_eslesme.py) — tembel yüklenir.
+ * Dizin: src/data/saglik/ders_eslesme.json (scripts/moduller/saglik/ders_eslesme.py) — tembel yüklenir.
  */
 
 export interface DersCumle {

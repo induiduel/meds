@@ -2,7 +2,7 @@
  * Anlamsal (vektör) arama + karma sıralama (server-only).
  *
  * Sorgu meds-embed servisinde (127.0.0.1:8091, e5-small, CPU) vektöre çevrilir; meds-pg'deki
- * public.match_rag_chunks_e5 / _bge_m3 fonksiyonu en yakın parçaları döndürür (scripts/advanced_ai/rag_vector_build.py yazar).
+ * public.match_rag_chunks_e5 / _bge_m3 fonksiyonu en yakın parçaları döndürür (scripts/altyapi/advanced_ai/rag_vector_build.py yazar).
  * BM25 (localRagEngine) sonuçlarıyla Reciprocal Rank Fusion ile birleştirilir. Servis ya da veritabanı yanıt vermezse
  * sessizce yalnız BM25 kullanılır (arama asla bozulmaz).
  *

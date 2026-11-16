@@ -2,7 +2,7 @@
 
 > Amaç: tam içerik işçisi bir dersi, hocanın **neden / nasıl / hangi bilgilerle / ne zorlukta / hangi çeldiricilerle** soracağını bilerek anlatsın,
 > öne çıkarsın ve örneklesin; örnek sorular hocanın çıkmışlarına benzesin; sınavda çıkabilecek diğer yerler de yakalansın.
-> Kullanıcı kararı 2026-10-29. Kural: AGENTS.md madde 26. Hat betikleri: `scripts/hoca_profili/`. Veri: `src/data/hoca_profilleri/`. Okunabilir döküm: `docs/HOCA_USLUBU/<ders>.md`.
+> Kullanıcı kararı 2026-10-29. Kural: AGENTS.md madde 26. Hat betikleri: `scripts/uretim/hoca_profili/`. Veri: `src/data/hoca_profilleri/`. Okunabilir döküm: `docs/HOCA_USLUBU/<ders>.md`.
 
 ## 1. Ne üretildi
 
@@ -15,7 +15,7 @@
 | Sınama | `_sinama.json`, `_model/satir_model.json` | geriye dönük sınama sonuçları, satır önem modeli |
 
 Kapsam: 22 ders, 4.846 tekil çıkmış soru (aynı kök+doğru şık tek kayıt; `kez` = tekrar sayısı) + **2026-27 Kurul 1 sınavının 77 tam sorusu** (en yeni, en değerli veri).
-Yeniden üretim: `python3 scripts/hoca_profili/uslup_analiz.py` (yeni çıkmış toplanınca/yeni sınav gelince çalıştır; LLM yok, ~1 dk).
+Yeniden üretim: `python3 scripts/uretim/hoca_profili/uslup_analiz.py` (yeni çıkmış toplanınca/yeni sınav gelince çalıştır; LLM yok, ~1 dk).
 
 ## 2. Algoritmalar (neden birden çok)
 
@@ -52,11 +52,11 @@ yalnız tekrar sinyali AUC 0,73 / ilk-%20 %48 · biçim+işaret 0,63 / %43 · bi
 **Güvensiz (ölçüldü): satır puanı.** Yalnız aday listesi; her aday kanıt ister (sarı/kalın/tekrar, hoca sesi, çıkmış eşlemesi, tıbbi gerekçe). Kanıtsız satıra "önemli" damgası YASAK.
 
 ### 4.1 Aşama aşama (tam hat, E1–E2)
-1. **Kaynak/hazırlık (E1):** `python3 scripts/hoca_profili/profil_oku.py --ders "<ders>" --konu "<konu>"` → özet (≤ 30 satır). `--json` ile makine okuması.
+1. **Kaynak/hazırlık (E1):** `python3 scripts/uretim/hoca_profili/profil_oku.py --ders "<ders>" --konu "<konu>"` → özet (≤ 30 satır). `--json` ile makine okuması.
 2. **Önem/vurgu listesi:** önce kanıtlı eşleme (çıkmış + hoca sesi + öğrenci notu). Sonra **profilin bilgi türü payına göre boşluk taraması**: konuda profilin ilk 3 bilgi türüne uyan ve çıkmışla eşleşmemiş satırlar için `onem_puanla.py <metin> --ders ...` adayları, her adayın neden o bilgi türüne girdiği yazılı gerekçeyle (kanıt satırı: "tür: ilac_yan_etki, sayfa N") eklenir. Eklenen önem "çıkmışta yok, profilden önerildi" etiketi alır (`kanit: profil`), puanı çıkmış eşlemeli maddenin altında kalır.
 3. **Anlatım:** konunun **ilk 2 bilgi türü** anlatımda açık yer alır (mekanizma konusuysa zincir adım adım; ayırıcı konusuysa karşılaştırma tablosu; ilaç konusuysa yan etki/endikasyon). Tekrar eden çekirdek kavramlar (`cekirdek_kavramlar`) anlatımda en az bir kez örnekle işlenir ve sesli derste vurgulanır (vurgu yalnız kanıtlıysa; "hoca vurguladı" yasağı sürer).
 4. **Örnek sorular:** (a) kalıp, bilgi türü ve düzey payları profile ±10 puan; (b) çekirdek kavram başına ≥2 soru, farklı kalıpla (kopya+çevirme, birleştirme, ters yön, ters ad — Patoloji için ayrıca `PATOLOJI_HOCA_SORU_MANTIGI.md`); (c) çeldirici stratejisi profildeki paya uyar (`ayni_ailede_komsu_kavram`, `bilesik_yer_degistirmeli`, `sayisal_yakin_deger`); (d) kaynağa bağımlılığı düşük konuda (özet kanıtlı <%30) en az bir soru slayttan bir mantık adımı ileri (`cikarim`); (e) yeni 2026-27 örneklerinin biçimi (bileşik şık, "en tipik") eski yıllardan farklıysa **yeni** yıl payı esas alınır.
-5. **Kapı:** `python3 scripts/hoca_profili/profil_kapisi.py <ornek_sorular.json> --ders "<ders>"` (soru_uslup.py'ye EK). Güven yüksek + ≥20 soru → sapma HATA ("N soru şu türe çevrilmeli", yalnız o kadar soru yeniden yazılır); orta/düşük → UYARI. `hepsi/hiçbiri` her zaman HATA.
+5. **Kapı:** `python3 scripts/uretim/hoca_profili/profil_kapisi.py <ornek_sorular.json> --ders "<ders>"` (soru_uslup.py'ye EK). Güven yüksek + ≥20 soru → sapma HATA ("N soru şu türe çevrilmeli", yalnız o kadar soru yeniden yazılır); orta/düşük → UYARI. `hepsi/hiçbiri` her zaman HATA.
 6. **Denetçi:** bağımsız denetçi profil özetini de görür: "hocanın bu konuda sorduğu bilgi türleri anlatımda ve sorularda var mı, eksik/yığılma var mı".
 
 ### 4.2 Hocanın soru nedenleri (kazanım haritasının dili)
@@ -73,5 +73,5 @@ Her konu için şu beş soru yanıtlanmış olmalı (haritada alanı vardır): *
 - Konu adları yıllar arasında farklıdır; konu eşleşmesi jeton Jaccard ≥0,34'tür. Eşleşmeyen konu ders profiline düşer.
 
 ## 7. Hoca-tahmin hattı ve test turları (2026-10-29, ikinci aşama)
-Konu bazlı haritalama güçlendirildi: ders adına/hocaya bağlı değil, **dersin satırlarına en yakın 40 geçmiş çıkmış** (bge-m3) "yerel profil" olarak çıkarılır (`tahmin_girdisi.py`). Hocanın soracağı yerleri bulmak için kural: `docs/HOCA_TAHMIN_REHBERI.md` (v5). Girdi: `python3 scripts/hoca_profili/tahmin_girdisi.py <ders.md> --ders ... --konu ... --cikti <klasör>` (meds/.venv-ocr/bin/python).
+Konu bazlı haritalama güçlendirildi: ders adına/hocaya bağlı değil, **dersin satırlarına en yakın 40 geçmiş çıkmış** (bge-m3) "yerel profil" olarak çıkarılır (`tahmin_girdisi.py`). Hocanın soracağı yerleri bulmak için kural: `docs/HOCA_TAHMIN_REHBERI.md` (v5). Girdi: `python3 scripts/uretim/hoca_profili/tahmin_girdisi.py <ders.md> --ders ... --konu ... --cikti <klasör>` (meds/.venv-ocr/bin/python).
 **2026-27 ile kör sınama (6 tur, yargıç ajanı):** K=10–18 tahminle sorunun bilgisini yakalama **%62,5 (hiç ayarlanmamış bekletilmiş 22 ders)** ve **%69 (geliştirme, ders adı düzeltmesi sonrası)**; aynı K ile rastgele %12–26, algoritma tek başına %25–55. Ayrıntı, hatalar ve sınırlar: `docs/HOCA_USLUBU/TEST_TURLARI.md`. §3C'deki "satır modeli güvenilmez" uyarısı **yeni biçimli notlar için anlamsal-tekrar tabanlı birleşik sıra ile revize edildi**: aday listesi rastgeleden iyidir (elle etiketli: ilk-10 %53), ama önem kararını LLM yazar + gerekçe + kanıt verir.

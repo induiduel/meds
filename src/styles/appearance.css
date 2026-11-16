@@ -9,13 +9,13 @@
  *  2. Yoğunluk (map): --dn-space çarpanı, kontrol/satır yükseklikleri, yazı ölçeği, ızgara kolon genişliği.
  *  3. Bileşen (alias): .ui-* bileşenleri yalnız bu iki katmanı okur; ham renk kullanmaz.
  * Palet seçicileri html:root.ui-v7[data-mode][data-palette] (0,4,1) → index.css/health.css'teki eski kuralları ezer.
- * Tüm metin/zemin çiftleri ≥4.5:1 (scripts/design/check-contrast.mjs ile ölçülür).
+ * Tüm metin/zemin çiftleri ≥4.5:1 (scripts/altyapi/design/check-contrast.mjs ile ölçülür).
  * ============================================================================= */
 
 /* ---------- 1. Paletler ----------
  * Renk token'larının TEK kaynağı src/utils/palettes.ts'tir (açık/sarı/koyu × 4 palet). CSS orada üretilir ve
  * <style id="palette-registry"> olarak eklenir (özgüllük 0,4,1); temaya bağlı gölge/perde/ders rengi kuralları da oradadır.
- * Buraya renk değeri YAZMAYIN — kontrast kapısı: npx tsx scripts/design/check-contrast.mjs */
+ * Buraya renk değeri YAZMAYIN — kontrast kapısı: npx tsx scripts/altyapi/design/check-contrast.mjs */
 
 /* health.css koyu segment seçimini sabit #636366 boyar; paletle uyumlu yap */
 html.ui-v7.theme-dark :is(.ds-seg, .ms-seg, .ms-f-seg) > :is(button[aria-checked="true"], button[aria-pressed="true"], button[aria-selected="true"], button.is-on) {

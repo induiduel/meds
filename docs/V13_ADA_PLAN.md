@@ -32,8 +32,8 @@ v12 korunur, v13 isteğe bağlıdır (açılışta sorulur).
 | 10 | Yönetim konsolu (`/manage` tüm bölümler) | ✅ `styles/v13/manage.css`: menü yüzen ada, üst çubuk tek satır kapsül, telefonda 2 satır araç; 22 bölüm × 390/1440 taşma 0 |
 | 11 | Son tarama: tüm rotalar × 9 boyut × 3 tema; dokunma/adsız düğme/kontrast raporu sıfır | ✅ 450 görünüm taşma 0, adsız düğme 0; kontrast 36 sayfa×tema: tek bulgu (koyu temada spot istatistik kartı, tanımsız --color-surface → beyaz zemin) düzeltildi; küçük hedef bulguları ::after genişletmeli (aracın bilinen yanlış alarmı) |
 
-Her aşama sonunda: `npx tsc --noEmit`, `npx vite build`, başsız Chrome taraması (`scripts/perf/sayfa_tarama.mjs`, SEED v13),
-gerekiyorsa `scripts/perf/yazma_olcum.mjs` (CSS başarımı). v12 dosyaları değişmez; v13 kuralları `:root[data-v13='on']`
+Her aşama sonunda: `npx tsc --noEmit`, `npx vite build`, başsız Chrome taraması (`scripts/altyapi/perf/sayfa_tarama.mjs`, SEED v13),
+gerekiyorsa `scripts/altyapi/perf/yazma_olcum.mjs` (CSS başarımı). v12 dosyaları değişmez; v13 kuralları `:root[data-v13='on']`
 kapsamında ya da `a.v13` dalında.
 
 ## Durum notu (2026-10-20)

@@ -20,7 +20,7 @@ Yapay zekâ birleştirmesi (Gemini, ders notu kaynaklı) bunun üstünde, arka p
 - **Sınavın kendi sırası (`numberDersPrior`):** kurullar soruları ders blokları hâlinde sorar, blok sırası yıldan yıla
   değişir. Çıkmış bankasındaki numaralar sınavlar arası tutarsız olduğundan (genel numara→ders tablosu %13–42) havuzun
   numarası bilinen sorularına bakılır: iki yandaki en yakın komşu aynı dersse o ders, değilse komşu oyu (ağırlık 0,15).
-  15 gerçek sınav dökümünde ders isabeti %77,6 → %81,3 (`scripts/eval/recall-number-prior.mts`).
+  15 gerçek sınav dökümünde ders isabeti %77,6 → %81,3 (`scripts/moduller/eval/recall-number-prior.mts`).
 - **Karma kümeleme:** her soru kaydında (server.ts `saveDatabase` → `schedule`) 2 sn sonra artımlı atama (yalnız yeni/
   değişen kayıt mevcut kümelere; analiz önbellekli, ms), son değişiklikten 10 dk (en geç 30 dk) sonra toplu düzeltme.
   Saf artımlı atama F1'i %65 → %58'e düşürdüğü için (açgözlü atama iki yarım kümeyi birleştiremez) toplu düzeltme şart.
@@ -28,7 +28,7 @@ Yapay zekâ birleştirmesi (Gemini, ders notu kaynaklı) bunun üstünde, arka p
   5.000 kayıtta 13,5 → 3,5 sn, test F1 %65,7 → %68,6.
 - **Öğrenci kararlarından öğrenme:** Soru ekle'de "bağla"/"birleştir" = aynı soru, yeni "Farklı soru" düğmesi = farklı
   soru (`POST /api/recall/feedback` → `data/recall_feedback.jsonl`, metin maskeli, IP başına saatte 120). Sunucu
-  haftada bir, ≥20 yeni kararla `scripts/recall/learn.mts --write`'ı düşük öncelikle çalıştırır: sentetik dev çiftleri
+  haftada bir, ≥20 yeni kararla `scripts/moduller/recall/learn.mts --write`'ı düşük öncelikle çalıştırır: sentetik dev çiftleri
   + kararların %75'i (3 kat ağırlık); kararların %25'i ayrılır. Kapı: ayrılan kararlarda doğruluk düşmemeli ve test F1
   en çok 1 puan düşebilir; geçerse `data/recall_weights.json` yazılır, motor yeniden yükler, kümeler baştan hesaplanır.
   Şık ağırlığı, iki tarafında şık olan ≥50 karar yoksa sabit kalır. Her iki dosya git dışında (makineye özgü).
@@ -38,7 +38,7 @@ Yapay zekâ birleştirmesi (Gemini, ders notu kaynaklı) bunun üstünde, arka p
 Bağlantılar: `poolClusterService.ts` (havuz kümeleri, `POST /api/recall/match`), `QuickAddHero.tsx` (yazarken eşleşme ve
 ders tahmini sunucudan), `pool/PoolView.tsx` (öneri bandı, satırda "n benzer"), `admin/QuestionClusterAutomationModal.tsx`.
 
-## Sınama seti (`scripts/eval/datasets/hatirlama/`)
+## Sınama seti (`scripts/moduller/eval/datasets/hatirlama/`)
 
 5.700 doğrulanmış çıkmış sorudan 6 kurul × 24 soru (her konudan bilerek 3 farklı soru — en zor ayırma durumu) ve her
 biri için 4–10 öğrenci tarzı mesaj: %40–75 aksansız, kısaltma/harf hatası, sohbet, yanlış cevap iddiası (~%25),
@@ -68,15 +68,15 @@ katkı yok (AP 0,580 → 0,589), Oracle'ın tek çekirdeğine yük olacağı iç
 
 ```bash
 npm run eval:recall                       # test kümesi (k4–k6)
-npx tsx scripts/eval/recall-engine.mts --split all --bank include
-npx tsx scripts/eval/recall-engine.mts --fit --l2 0.5 --drop opt   # çift modelini yeniden öğren (dev), eşik seç
+npx tsx scripts/moduller/eval/recall-engine.mts --split all --bank include
+npx tsx scripts/moduller/eval/recall-engine.mts --fit --l2 0.5 --drop opt   # çift modelini yeniden öğren (dev), eşik seç
 npm run eval:recall:realtime              # Soru ekle anlık eşleşme: eski ↔ yeni
-npx tsx scripts/eval/recall-engine.mts --split all --incremental 0.3   # artımlı atama (sunucudaki anlık yol)
-npx tsx scripts/eval/recall-number-prior.mts                          # sınav sırası ön bilgisi
-npx tsx scripts/recall/learn.mts [--write] [--data <klasör>]          # öğrenci kararlarıyla yeniden öğren
-npx tsx scripts/eval/pool-cluster-check.mts   # gerçek data/questions.json üzerinde kümeler
+npx tsx scripts/moduller/eval/recall-engine.mts --split all --incremental 0.3   # artımlı atama (sunucudaki anlık yol)
+npx tsx scripts/moduller/eval/recall-number-prior.mts                          # sınav sırası ön bilgisi
+npx tsx scripts/moduller/recall/learn.mts [--write] [--data <klasör>]          # öğrenci kararlarıyla yeniden öğren
+npx tsx scripts/moduller/eval/pool-cluster-check.mts   # gerçek data/questions.json üzerinde kümeler
 ```
 
 Motoru değiştirmeden önce ve sonra `eval:recall` ve `eval:recall:realtime` çalıştırılır; test F1 ve ilk öneri doğruluğu
 düşmemeli. Ağırlıklar yalnız `--fit` ile (geliştirme kümesinde) değiştirilir, test kümesine bakılarak elle ayarlanmaz.
-Eski "4 aşamalı saf NLP" kitle kaynak denemesi: `scripts/archive/kitle_kaynak/README.md` (neden arşivlendiği).
+Eski "4 aşamalı saf NLP" kitle kaynak denemesi: `scripts/arsiv/archive/kitle_kaynak/README.md` (neden arşivlendiği).

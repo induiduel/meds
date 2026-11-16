@@ -12,8 +12,8 @@
 // Sağlayıcılar: Microsoft Edge Emel (ücretsiz), Gemini TTS ücretsiz anahtar havuzu (GEMINI_API_KEY + GEMINI_FREE_KEY_N),
 // Gemini TTS ücretli anahtar (TTS_PAID_GEMINI_KEY; yalnız panelden elle, bütçe kilidi 850 TL / tavan 900 TL),
 // Coqui XTTS v2 — yöneticinin bilgisayarında CPU ile (xtts-yerel): sunucu sentezlemez; işi o PC'deki
-// scripts/sesli_anlatim/xtts_isci.py `/api/sesli-anlatim/yerel/*` uçlarından alır, parçaları yükler, birleştirme burada.
-// EMA Lightning (ema-yerel) — aynı yerel işçi protokolü; tek sabit Türkçe ses, yalnız CPU (scripts/sesli_anlatim/ema_isci.py).
+// scripts/uretim/sesli_anlatim/xtts_isci.py `/api/sesli-anlatim/yerel/*` uçlarından alır, parçaları yükler, birleştirme burada.
+// EMA Lightning (ema-yerel) — aynı yerel işçi protokolü; tek sabit Türkçe ses, yalnız CPU (scripts/uretim/sesli_anlatim/ema_isci.py).
 import express from 'express';
 import type { Express, Request, Response, NextFunction } from 'express';
 import fs from 'fs';
@@ -1461,7 +1461,7 @@ export function registerSesliAnlatimRoutes(
     res.json({ ok: true, eklendi, atlandi });
   });
 
-  // Ders işçisi yayını (scripts/ders_isci/yayinla.py --sunucu) onaylanan dersi canlı derse ekler: ders listesi, konuşma
+  // Ders işçisi yayını (scripts/uretim/ders_isci/yayinla.py --sunucu) onaylanan dersi canlı derse ekler: ders listesi, konuşma
   // metni, PDF hizalaması (paragraf → sayfa, metni yazan Claude'un sayfa listesinden) ve varsayılan iki ses: Emel (varsayılan)
   // + EMA (Oracle'daki meds-ema konteyneri). Güncellenen derste metin değişirse yeni sesler varsayılan olur, eskiler kalır.
   // Gövde: { key, no, baslik, metin, sayfalar?: number[], deckId?, dosya?: {path,name,pages,fileId}, capalar?: [[{ses,sayfa,satir,sekil}]] }

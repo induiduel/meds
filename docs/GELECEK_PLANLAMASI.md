@@ -84,12 +84,12 @@
 ## 4. Yol haritası
 
 ### P0 — Kurul 1 sınav haftası (20–25 Ekim) ✅ kısmen bu oturumda
-- [x] **Kurul takvimi:** `scripts/takvim/kurul_takvimi.py` ders programı PDF'inden 6 kurulu, sınav/final/bütünleme
+- [x] **Kurul takvimi:** `scripts/hat/takvim/kurul_takvimi.py` ders programı PDF'inden 6 kurulu, sınav/final/bütünleme
   tarihlerini ve ders listesini çıkarır → `src/data/kurul_takvimi.json` (+ istemci özeti `kurul_takvimi_ozet.json`).
   Kurul 1 sınavı **23 Ekim**, Kurul 2 **26 Ekim–4 Aralık**.
-- [x] **Aktif kurul tek kural:** `src/services/kurulTakvimi.ts` + `scripts/takvim/aktif_kurul.py`;
+- [x] **Aktif kurul tek kural:** `src/services/kurulTakvimi.ts` + `scripts/hat/takvim/aktif_kurul.py`;
   `getDefaultActiveCommitteeId()` artık takvimden.
-- [x] **Olası soru motoru v1:** `scripts/olasi_soru/` — `topla.py` (kanıt toplama: kök, sürüm, parça, şık, uydu,
+- [x] **Olası soru motoru v1:** `scripts/hat/olasi_soru/` — `topla.py` (kanıt toplama: kök, sürüm, parça, şık, uydu,
   cevap iddiası, yorum, defter katkısı; numaralı → yuva, numarasız → bge-m3 ile en yakın yuva; uzlaşı özeti;
   parmak izi), `TALIMAT.md` (Claude sentezi, kanıt > ders > çıkmış), `dogrula.py` (şema, kararlı kimlik
   `k1-os-001`, kanıt bağı, şık açıklama + Türkçe üslup kapıları), `gece.sh` (yeni kanıt yoksa atlar).
@@ -169,7 +169,7 @@ biçiminde referans verir; ekran bunu "Derste: …" bağlantısına çevirir.
 ## 6. Veritabanı uyumu
 
 - `deploy/pg/sql/goc/NNNN_ad.sql` numaralı, idempotent göçler; `schema_migrations(no, ad, uygulandi)` tablosu;
-  `scripts/db/goc.py` hem yerelde hem Oracle'da (tünel) sırayla uygular. Göç yalnız ekler; ad değişikliği =
+  `scripts/altyapi/db/goc.py` hem yerelde hem Oracle'da (tünel) sırayla uygular. Göç yalnız ekler; ad değişikliği =
   yeni kolon + geçiş dönemi.
 - JSON içerik dosyaları: üst düzey `surum`; okuyucu `surum`'a göre dönüştürücü (`normalize_vN`) çalıştırır.
 - Yeni site sürümü eski veriyi okuyabilmeli: istemci bilinmeyen alanı yok sayar, eksik alana varsayılan verir.
@@ -200,11 +200,11 @@ biçiminde referans verir; ekran bunu "Derste: …" bağlantısına çevirir.
 
 | Dosya | Görev |
 |---|---|
-| `meds/scripts/takvim/kurul_takvimi.py` | Ders programı PDF → kurul takvimi JSON |
-| `meds/scripts/takvim/aktif_kurul.py` | Aktif / son sınav / arşiv kurul (Python) |
+| `meds/scripts/hat/takvim/kurul_takvimi.py` | Ders programı PDF → kurul takvimi JSON |
+| `meds/scripts/hat/takvim/aktif_kurul.py` | Aktif / son sınav / arşiv kurul (Python) |
 | `meds/src/services/kurulTakvimi.ts` | Aynı kural (TS); `firestoreDb.getDefaultActiveCommitteeId` buna bağlı |
 | `meds/src/data/kurul_takvimi.json`, `kurul_takvimi_ozet.json` | Üretilmiş takvim |
-| `meds/scripts/olasi_soru/{topla,dogrula}.py`, `gece.sh`, `TALIMAT.md` | Olası soru motoru v1 |
+| `meds/scripts/hat/olasi_soru/{topla,dogrula}.py`, `gece.sh`, `TALIMAT.md` | Olası soru motoru v1 |
 | `meds/otomasyon/hat.json`, `hat.py` | Aşama kayıt defteri + çalıştırıcı |
 | `meds/docs/GELECEK_PLANLAMASI.md` | Bu belge |
 
@@ -214,12 +214,12 @@ biçiminde referans verir; ekran bunu "Derste: …" bağlantısına çevirir.
 |---|---|---|
 | Gece zamanlayıcısı kuruldu (02:30, `Persistent`, 10 sa, 4G, LLM = `claude -p` dar izin listesi) | `~/.config/systemd/user/meds-hat-gece.{service,timer}` | etkin, uçtan uca denendi |
 | Sağlık denetimi (canlı API, Oracle SSH, 3000, vektör, EMA, disk) | `meds/otomasyon/saglik.py` | hatta |
-| Olası soru uçları + yayın (kapı → `data/olasi_sorular/kN.json` → Oracle) + öğrenci geri bildirimi kanıta döner | `src/services/olasiSoruRoutes.ts`, `scripts/olasi_soru/gece.sh`, `topla.py` | hazır |
-| **Ders kayıt defteri** (Kurul 2–6, 289 ders; kimlik `k2-07`, kod `2f01`, kararlı; K2 çıkmışlarının 684/684'ü derse bağlı) | `scripts/dersler/ders_kaydi.py` → `src/data/dersler/kN.json` | hazır |
-| Ders işçisi K2 numarası/kodu defterden | `scripts/ders_isci/isle.py` `ders_kaydi_eslesmesi` | Oracle dağıtımı bekliyor |
+| Olası soru uçları + yayın (kapı → `data/olasi_sorular/kN.json` → Oracle) + öğrenci geri bildirimi kanıta döner | `src/services/olasiSoruRoutes.ts`, `scripts/hat/olasi_soru/gece.sh`, `topla.py` | hazır |
+| **Ders kayıt defteri** (Kurul 2–6, 289 ders; kimlik `k2-07`, kod `2f01`, kararlı; K2 çıkmışlarının 684/684'ü derse bağlı) | `scripts/hat/dersler/ders_kaydi.py` → `src/data/dersler/kN.json` | hazır |
+| Ders işçisi K2 numarası/kodu defterden | `scripts/uretim/ders_isci/isle.py` `ders_kaydi_eslesmesi` | Oracle dağıtımı bekliyor |
 | **Ders zinciri** (hazirla → onem → cozucu → bağımsız denetim → birlestir → asistan → EMA ses → Oracle; kapılı, durumlu, kaynak değişince baştan) | `meds/otomasyon/ders_zinciri.py` | hatta (gece 3 ders) |
-| `aday_hazirla.py` fonksiyonlara ayrıldı (K1 çıktısı birebir aynı, ölçüldü) | `scripts/spot_cozucu/aday_hazirla.py` | hazır |
-| **Sesli metin v2** (cümle kimliği, ses/ekran iki yüz, madde düzeyi, vurgu kodu, sayfa + slayt + çıkmış bağı; eski biçim türetilir) | `scripts/sesli_anlatim/konusma_v2.py`, `TALIMAT_SESLI.md §v2`, `isle.py`, `yayinla.py` | K2 için zorunlu; Oracle dağıtımı bekliyor |
+| `aday_hazirla.py` fonksiyonlara ayrıldı (K1 çıktısı birebir aynı, ölçüldü) | `scripts/uretim/spot_cozucu/aday_hazirla.py` | hazır |
+| **Sesli metin v2** (cümle kimliği, ses/ekran iki yüz, madde düzeyi, vurgu kodu, sayfa + slayt + çıkmış bağı; eski biçim türetilir) | `scripts/uretim/sesli_anlatim/konusma_v2.py`, `TALIMAT_SESLI.md §v2`, `isle.py`, `yayinla.py` | K2 için zorunlu; Oracle dağıtımı bekliyor |
 | K1 geri doldurma: 69 ders, 21.272 cümle kimliği (metin değişmedi, kayıpsız) | `data/sesli_anlatim/v2/` | yerel; Oracle'a gönderilmedi |
 | Evrensel kimlik çözücü | `GET /api/k/:id` (`src/services/kimlikRoutes.ts`) | yerel |
 
@@ -231,15 +231,15 @@ görsel/tablo çıkarımı (P2.1); göç koşucusu (P3).
 
 - **Kesinti nedeni:** iki oturumun eşzamanlı dağıtımı Oracle'da belleği tüketti (deploy-code.sh'a kilit eklendi). Sağlık aşaması bunu artık gece yakalar.
 - **Canlıda:** ders işçisi K2 defter numarası, `--kurul2` kapıları (denetle + yayinla), sesli metin v2 kapısı, **otomatik onay** (Kurul 2+, panel ayarı `otomatik_onay`), PDF tablo/görsel/hoca vurgusu çıkarımı + görsel kanıt türü; `/k/<kimlik>` 302 kısa bağlantı (servis çalışanı dışında); ses uçları `2n03` kodlarını ve `k2<brans>` klasörlerini kabul eder; K1 cümle kimlikleri Oracle'da.
-- **Göç koşucusu:** `scripts/db/goc.py` + `schema_migrations`; `0001_icerik_setleri` iki makinede uygulandı; gece `db_goc` aşaması. Üreticiler `scripts/db/icerik_kaydi.py` ile sürüm yazar.
-- **Önem haritası:** `scripts/onem/onem_haritasi.py` (sayfa başı 0–100), zincirin hazirla adımında; sınamada 3 K1 dersinde bağlanamayan çıkmış 0.
+- **Göç koşucusu:** `scripts/altyapi/db/goc.py` + `schema_migrations`; `0001_icerik_setleri` iki makinede uygulandı; gece `db_goc` aşaması. Üreticiler `scripts/altyapi/db/icerik_kaydi.py` ile sürüm yazar.
+- **Önem haritası:** `scripts/hat/onem/onem_haritasi.py` (sayfa başı 0–100), zincirin hazirla adımında; sınamada 3 K1 dersinde bağlanamayan çıkmış 0.
 - **Branş tek kaynak:** `src/data/dersler/branslar.json`; `brans.ts` Kurul 2+ klasörlerini kendiliğinden sekmeye çevirir (derleme ile sınandı).
 - **Tuzak:** `dist` `emptyOutDir:false` → eski parçalar kalır; derleme sınamasında yalnız güncel parçaya bak. rsync saat damgasını koruduğu için "değişen dosya → yeniden başlat" kararı yanılabilir; sunucu kodu gönderilince sağlık + uç denemesiyle doğrula.
 - **Açık:** sesli ders/olası soru ekranında `#kimlik` kaydırması; Sesli ders · En önemliler · Spotlar · Soru çözücü · Çıkmış ekranlarına `?kurul=` süzgeci; ders zincirinin ilk gerçek Kurul 2 dersiyle uçtan uca koşusu (ilk K2 PDF'i gelince).
 
 ## 12. 4. tur (2026-10-20) — kalan işler kapatıldı
 
-- **Hastalık zinciri** `otomasyon/hastalik_zinciri.py`: Oracle önerileri → Claude şema 2 (`scripts/diseases/TALIMAT_SEMA2.md`) →
+- **Hastalık zinciri** `otomasyon/hastalik_zinciri.py`: Oracle önerileri → Claude şema 2 (`scripts/moduller/diseases/TALIMAT_SEMA2.md`) →
   `yayinla.hastaliklari_uygula` (kapılı, geri alınır) → Oracle `data/content/diseases.json` + `POST /api/admin/icerik/diseases/degisti`
   (`src/services/icerikYayinRoutes.ts`, panel sırrı; x-admin-email'e güvenmez) → SSE. Uçtan uca koşuldu: 3 profil (k1-40), denetim 0→0, canlıda.
 - **Gece içerik dağıtımı** `otomasyon/icerik_dagit.py`: Oracle'da ön yüz derlenmediği için yayımlanan deste/zincir çıktıları dist
@@ -289,7 +289,7 @@ Bulunan ve kapatılan hatalar:
 ## 15. Son Prova (2026-10-21) — her kurul için sınav öncesi son tekrar
 - **Kurulan (Kurul 1, canlı):** `/son-prova`; 7 ders, 14 sesli özet part (Patoloji 4, diğerleri 1–2; 30–62 dk), 89 aşama, aşama sonu
   soruları (sesli asistan), part check-up, genel check-up, sınav dağılımıyla 3 × 100 deneme, yanlıştan eksik aşamaya yönlendirme,
-  kırpılmış özet PDF (ders + slayt şeridi), indirme şartı + çevrimdışı paketler, özet PDF/DOCX indirme. Hat: `scripts/son_prova/README.md`.
+  kırpılmış özet PDF (ders + slayt şeridi), indirme şartı + çevrimdışı paketler, özet PDF/DOCX indirme. Hat: `scripts/uretim/son_prova/README.md`.
 - **Kurul 2 yol haritası (sınavdan ~5 gün önce, otomatik hatta aşama olarak):**
   1. `plan.py`'ye `SINAV` (fakülte duyurusu) + `PARTLAR` (kN-8x anahtarları) — duyuru gelince elle, sonrası otomatik.
   2. Yazar + bağımsız denetçi (TALIMAT/DENETIM; `--kurul2` kapıları: şık açıklaması, Türkçe üslup) → `dogrula.py --part` 0 HATA.
@@ -314,7 +314,7 @@ Ayrıntı: **`meds/docs/ICERIK_MOTORU_V3.md`**. Özet:
 - **Hedefli çıkmış taraması (§15):** çıkmış dizini (bir kez, artımlı) + PDF başına tarama planı + yeni çıkmışta ters yön.
 - **Kanıt bölgeleri (§16):** her soru → doğru/çeldirici/kök bölgesi (betik şartları, belirsizde görev) → otomatik tekrar sunumu.
 - **Kalite (§17):** SoM, makro harita → pencereli anlatım, sıfır kayıp kapsam denetimi, çeldirici, ok açılımı (yalnız PDF mekanizması).
-- **R0 kuruldu (2026-10-23):** `otomasyon/gorev.py` (El kitabı §15). **R1 + R2 ve R3 + R4'ün ilk görevleri (kanit_bagla, som_sec, gölge) kuruldu (aynı gün):** `scripts/kroki/`, `scripts/cikmis_dizin/`, gece aşaması `kroki` (El kitabı §16; K1 ölçümleri ICERIK_MOTORU_V3 §10). Sıra: R0 sözleşme → R1 L0 + betikler, R2 hedefli çıkmış + kanıt (paralel) → R3 gölge kipi → R4 görev görev geçiş →
+- **R0 kuruldu (2026-10-23):** `otomasyon/gorev.py` (El kitabı §15). **R1 + R2 ve R3 + R4'ün ilk görevleri (kanit_bagla, som_sec, gölge) kuruldu (aynı gün):** `scripts/uretim/kroki/`, `scripts/uretim/cikmis_dizin/`, gece aşaması `kroki` (El kitabı §16; K1 ölçümleri ICERIK_MOTORU_V3 §10). Sıra: R0 sözleşme → R1 L0 + betikler, R2 hedefli çıkmış + kanıt (paralel) → R3 gölge kipi → R4 görev görev geçiş →
   R5 L1 akışları + delta → R6 ses/çizim/öğrenci özellikleri → R7 paket.
 
 ## Güncelleme 2026-10-24 — canlı çizim v2 hazır (R6 tamam)

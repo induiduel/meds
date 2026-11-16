@@ -2,7 +2,7 @@
 """Hastalık zinciri: ders işçisi önerileri (Oracle) → Claude şema 2 → diseases.json birleştirme (kapılı) → canlı katman.
 
   1. Oracle'dan meds_database_v2/ders_isci/hastalik_onerileri/*.json salt-okunur çekilir (silme yok).
-  2. Şema 2'ye çevrilmemiş (ya da önerisi değişmiş) her ders için Claude: scripts/diseases/TALIMAT_SEMA2.md → sema2/<id>.json
+  2. Şema 2'ye çevrilmemiş (ya da önerisi değişmiş) her ders için Claude: scripts/moduller/diseases/TALIMAT_SEMA2.md → sema2/<id>.json
   3. yayinla.hastaliklari_uygula(): diseases.json'a upsert; başka oturum diseases.json'u değiştiriyorsa BEKLER; denetim
      hatası artarsa geri alır (yedek meds_temp/…).
   4. Değişen diseases.json → Oracle data/content/diseases.json (canlı katman) + POST /api/admin/icerik/diseases/degisti
@@ -43,7 +43,7 @@ def main():
     bekleyen = [p for p in sorted(ONERI.glob("k[2-6]-*.json")) if durum.get(p.stem) != sha(p)][: a.en_cok]
     print(f"{len(bekleyen)} ders önerisi şema 2 bekliyor")
     for p in bekleyen:
-        istem = (f"{MEDS}/scripts/diseases/TALIMAT_SEMA2.md talimatını uygula. Girdi: {p}. Çıktı klasörü: {ONERI}/sema2/. "
+        istem = (f"{MEDS}/scripts/moduller/diseases/TALIMAT_SEMA2.md talimatını uygula. Girdi: {p}. Çıktı klasörü: {ONERI}/sema2/. "
                  f"Proje kökü {KOK}.")
         print("▶", p.stem)
         if a.kuru:
@@ -61,7 +61,7 @@ def main():
     if a.kuru:
         return 0
     once = sha(DIS); onceki = {d["id"]: json.dumps(d, sort_keys=True) for d in json.loads(DIS.read_text())}
-    sys.path.insert(0, str(MEDS / "scripts/ders_isci")); import yayinla
+    sys.path.insert(0, str(MEDS / "scripts/uretim/ders_isci")); import yayinla
     sonuc = yayinla.hastaliklari_uygula()
     if sonuc:  # geri alındı (denetim hatası arttı) ya da yazılamadı: önerileri yeniden denemeye aç, hatayı göster
         for p in bekleyen:

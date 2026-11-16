@@ -3,7 +3,7 @@
 
   spot_zinciri.py onem   W kod [--katman A|Ü|C] [--golge]
   spot_zinciri.py cozucu W kod [--katman A|Ü|C] [--golge]
-  spot_zinciri.py asistan W kod [--katman A|Ü|C] [--golge]   (plan: scripts/spot_cozucu/asistan_plan.py önceden)
+  spot_zinciri.py asistan W kod [--katman A|Ü|C] [--golge]   (plan: scripts/uretim/spot_cozucu/asistan_plan.py önceden)
   spot_zinciri.py sesli   TASLAK - [--katman A|Ü|C]         (ders işçisi taslağı → konusma_v2.json; Oracle bağlantısı ayrı adım)
 
 onem  : her sayfa grubu için `onem_listesi` (hazırla → yönlendirici → kapı → uygula) → `spot_birlestir.onem` → W/onem/<kod>.json

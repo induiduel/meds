@@ -1,6 +1,6 @@
 /**
  * "Video oluştur" penceresi › yalnız yönetici: videoyu yerel bilgisayarın GPU'sunda (NVENC) üretme kuyruğu.
- * Sunucu: src/services/dersVideoIs.ts · işçi: scripts/ders_video/video_uret.py (meds-ders-video; AGENTS.md §10 beşinci istisna).
+ * Sunucu: src/services/dersVideoIs.ts · işçi: scripts/uretim/ders_video/video_uret.py (meds-ders-video; AGENTS.md §10 beşinci istisna).
  */
 import React, { useCallback, useEffect, useState } from 'react';
 import { Cpu, Download, X } from 'lucide-react';

@@ -1,7 +1,7 @@
 /**
  * Ders işçisi onay kapısı — yöneticinin öğrenci notu / ders ses kaydı yüklemesi (2026-10-24).
  * Dosyalar doğrudan diske akar (belleğe alınmaz): data/ders_isci_ekler/<is_id>/{not,ses}/<ad>. İşçi konteyneri aynı klasörü
- * salt okunur görür (/app/data …; scripts/ders_isci/ayarlar.py EK_DIZIN) ve onayda iş kaydına yazar.
+ * salt okunur görür (/app/data …; scripts/uretim/ders_isci/ayarlar.py EK_DIZIN) ve onayda iş kaydına yazar.
  * server.ts: app.use('/api/admin/ders-isci-ek', requireAdmin, dersIsciEkRouter());
  *   GET    /:isId                     → {not: [{ad, boyut}], ses: [...]}
  *   POST   /:isId?tur=not|ses&ad=<dosya adı>   (gövde: ham dosya)  → {ok, ad, boyut}

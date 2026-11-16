@@ -1,6 +1,6 @@
 # Faz zinciri (meds-phases) — 2026-10-06
 
-Orkestratör: `scripts/agents/phase_cycle.py` (systemd kullanıcı servisi `meds-phases`). Adımlar sırayla çalışır, aynı anda
+Orkestratör: `scripts/altyapi/agents/phase_cycle.py` (systemd kullanıcı servisi `meds-phases`). Adımlar sırayla çalışır, aynı anda
 yalnızca biri. Servis yeniden başlarsa **aynı turda kalınan adımdan** devam eder (`meds_temp/state/phase_cycle_state.json`
 → `tur_tamamlanan`). Kayıt: `meds_temp/logs/phase_cycle.log` ve adım başına `phase_cycle_<adım>.log`.
 İzleme: `python3 scripts/monitor.py` (faz tablosu: durum, süre, çıktı, hız; GPU koruyucu; son hata kayıtları).
@@ -30,6 +30,6 @@ Faz 7 (eski hikâye üretimi) karantinada; Faz 7 v2 (`phase7_question_metadata_v
 - Boş sonuç mevcut çıktının üzerine yazılmaz; yazımlar atomiktir.
 
 ## GPU güvenliği
-`scripts/agents/gpu_guard.py` (servis `meds-gpuguard`): ≥ 89 °C → GPU istemci betikleri SIGSTOP (≤ 86 °C'de SIGCONT);
+`scripts/altyapi/agents/gpu_guard.py` (servis `meds-gpuguard`): ≥ 89 °C → GPU istemci betikleri SIGSTOP (≤ 86 °C'de SIGCONT);
 30 sn ortalama kullanım ≥ %92 → 8 sn görev döngüsü; ≥ 95 °C acil. Kullanıcı sınırı: < 90 °C, < %92, asla > 95 °C.
 2026-10-06'da GPU "fallen off the bus" (Xid 79) oldu — yeniden başlatma gerekir; o sürede Faz 6 tur atlar, diğerleri CPU'da sürer.

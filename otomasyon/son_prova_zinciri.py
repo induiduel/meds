@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Son Prova zinciri — Kurul 2+ (gece; kurul sınavından SON_PROVA_GUN gün önce açılır). Kurul 1 Son Provası elle kuruldu
-(scripts/son_prova/README.md); bu zincir aynı adımları insan müdahalesiz yürütür:
+(scripts/uretim/son_prova/README.md); bu zincir aynı adımları insan müdahalesiz yürütür:
 
-  plan    scripts/son_prova/plan_kurul.py → meds_temp/son_prova_k<N>/plan.json + havuz/ (ders bilgi deposundan, PDF okunmaz)
+  plan    scripts/uretim/son_prova/plan_kurul.py → meds_temp/son_prova_k<N>/plan.json + havuz/ (ders bilgi deposundan, PDF okunmaz)
   yazar   Claude, TALIMAT.md + YENI_SORU.md, yazar grubu başına → parca/<part>/aNN.json; kapı dogrula.py <dosya> 0 HATA
   denetçi Claude (bağımsız oturum), DENETIM.md + YENI_DENETIM.md → kapı dogrula.py --part <part> PART 0 HATA
-  derle   derle.py <part> → cikti/<part>/;  özet PDF  node scripts/son_prova/pdf_kirp.mjs → data/son_prova/pdf/<part>.pdf
+  derle   derle.py <part> → cikti/<part>/;  özet PDF  node scripts/uretim/son_prova/pdf_kirp.mjs → data/son_prova/pdf/<part>.pdf
   sorular soru_dagit.py → src/data/son_prova/k<N>/ (gece içerik dağıtımı yayınlar)
   ses     yeni_ses.py (EMA, CPU, korumalı kapsam) → data/<k<N><slug>>_cozucu/ses/sNN/
   canlı   metin/hizalama/vurgu + özet PDF + ses Oracle'a (rsync, dağıtım kilidi) → POST /api/sesli-anlatim/ders-ekle (yalnizEma)
@@ -24,7 +24,7 @@ from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
 AJAN_MODEL = _ajan_model()   # kullanıcı: MEDS_AJAN_MODEL > butce.json claude.model > claude-opus-5-5
-SP = MEDS / "scripts/son_prova"
+SP = MEDS / "scripts/uretim/son_prova"
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *)"
 SON_PROVA_GUN = 9  # sınavdan kaç gün önce (dahil) üretim başlar
 BUTCE_SAAT = float(__import__("os").environ.get("MEDS_SON_PROVA_SAAT", "5"))  # gece başına; kalan partlar ertesi gece (gece birimi 10 sa)
@@ -136,7 +136,7 @@ def main():
     ap.add_argument("--kurul", type=int); ap.add_argument("--part"); ap.add_argument("--zorla", action="store_true")
     ap.add_argument("--kuru", action="store_true"); ap.add_argument("--prova", action="store_true")
     a = ap.parse_args()
-    sys.path.insert(0, str(MEDS / "scripts/takvim")); sys.path.insert(0, str(MEDS / "otomasyon"))
+    sys.path.insert(0, str(MEDS / "scripts/hat/takvim")); sys.path.insert(0, str(MEDS / "otomasyon"))
     from aktif_kurul import durum
     du = durum(dt.date.today().isoformat())
     N = a.kurul or du["aktif"]

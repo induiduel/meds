@@ -6,7 +6,7 @@ import '../../styles/v15/hocaVurgu.css';
 
 /**
  * v15 · "Hocanın vurguladıkları" (ders sayfası ?b=vurgu). Hocanın ders kaydında "sınavda sorarım", "çıkmıştı", "önemli",
- * "bilin", "dikkat edin" dediği yerler AYRI kategori olarak (scripts/hoca_vurgu/yayinla.py → src/data/hoca_vurgu/<ders>.json).
+ * "bilin", "dikkat edin" dediği yerler AYRI kategori olarak (scripts/uretim/hoca_vurgu/yayinla.py → src/data/hoca_vurgu/<ders>.json).
  * Her madde: hocanın sözü (zaman damgalı), vurgulanan bilgi, slayt; öğrenci yıldızla işaretler (profil eşitlemeli),
  * "Sesli derste aç" o bilginin anlatıldığı paragrafa gider. Kayıt yalnız döküm anlaşılır ve slayta bağlanmışsa üretilir.
  */

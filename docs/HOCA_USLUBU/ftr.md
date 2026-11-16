@@ -1,4 +1,4 @@
-# FTR — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# FTR — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 132 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 2, 2020: 69, 2021: 11, 2022: 8, 2023: 5, 2024: 1}
 

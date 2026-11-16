@@ -1,4 +1,4 @@
-# Ortopedi ve Travmatoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Ortopedi ve Travmatoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 73 tekil çıkmış soru · güven: **orta** · yıllar: {2020: 44, 2021: 4, 2022: 3, 2023: 2, 2025: 3}
 

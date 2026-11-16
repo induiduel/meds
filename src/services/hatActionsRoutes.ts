@@ -141,7 +141,7 @@ export function registerHatActionRoutes(app: Express, deps: { rootDir: string; r
           const al = async (y: string) => { const r = await fetch(ISCI_URL + y, { signal: AbortSignal.timeout(15000) }); return r.ok ? r.json() : []; };
           const [t, k] = await Promise.all([al('/taslaklar'), al('/kuyruk')]);
           const taslaklar: Taslak[] = (t || []).map((x: any) => ({ ...x, denetim_hatalar: [] }));
-          const yayin = oku<any[]>(path.join(MEDS, 'scripts/ders_isci/yayin_kaydi.json'), []);
+          const yayin = oku<any[]>(path.join(MEDS, 'scripts/uretim/ders_isci/yayin_kaydi.json'), []);
           return { taslaklar, kuyruk: k || [], yayin, zaman: Date.now() };
         }
         const r = await calistir('ssh', ['-o', 'ConnectTimeout=10', '-o', 'BatchMode=yes', 'medsor-oracle', 'python3', '-'], 25000, ORACLE_OZET_PY);
@@ -149,7 +149,7 @@ export function registerHatActionRoutes(app: Express, deps: { rootDir: string; r
         throw new Error(r.err.trim().slice(0, 200) || `ssh kod ${r.kod}`);
       } catch (e: any) {
         // Oracle'a ulaşılamadı: cihazdaki yayın kaydı kopyası (yayinla.py --esitle günceller)
-        const yayin = oku<any[]>(path.join(MEDS, 'scripts/ders_isci/yayin_kaydi.json'), []);
+        const yayin = oku<any[]>(path.join(MEDS, 'scripts/uretim/ders_isci/yayin_kaydi.json'), []);
         return { taslaklar: [], kuyruk: [], yayin, zaman: Date.now(), hata: `Oracle ders işçisi okunamadı: ${String(e?.message || e)}` };
       }
     })().then((x) => { onbellek = x; suruyor = null; return x; });

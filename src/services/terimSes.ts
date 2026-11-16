@@ -1,4 +1,4 @@
-// Terim / kısaltma / bilgi paketi hazır sesleri (EMA GPU, scripts/sesli_anlatim/terim_ses_uret.py)
+// Terim / kısaltma / bilgi paketi hazır sesleri (EMA GPU, scripts/uretim/sesli_anlatim/terim_ses_uret.py)
 // GET /api/terim-ses?b=<başlık>&g=<tanım>  -> MP3 (Range destekli) ya da 404. Anahtar, betikteki anahtar() ile birebir aynıdır:
 // sha1("terim-1|" + nokta(temizle(başlık)) + "|" + nokta(temizle(tanım)))[:12]; dosya data/terim_ses/<h2>/<h>.mp3
 import type { Express, Request, Response } from 'express';

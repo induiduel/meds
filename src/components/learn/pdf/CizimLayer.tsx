@@ -2,7 +2,7 @@ import { memo, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 /**
  * Canlı çizim katmanı (R6, ICERIK_MOTORU_V3.md §4): hoca konuşurken PDF üstünde kontur / akış oku / eğri fazı / şema.
- * Komutlar scripts/cizim/cizim_uret.py'den (kapı cizim_dogrula.py), sunucu cümle işaretine `z` olarak ekler. İlerleme
+ * Komutlar scripts/uretim/cizim/cizim_uret.py'den (kapı cizim_dogrula.py), sunucu cümle işaretine `z` olarak ekler. İlerleme
  * imleçle aynı sayaçtan: cümle içi konuşulan karakter `k[0]`→`k[1]` aralığında 0→1. Aralığa gelmeden çizim yok, geçince
  * tam kalır (cümle bitene dek). Koordinatlar sayfa oranı (0–1); SVG sayfayı kaplar, çizgi kalınlığı ölçekten bağımsız.
  */
@@ -19,7 +19,7 @@ export interface CizimKomut {
   kenar?: { a: string; b: string; tur: string; etiket?: string }[];
   /** şema panel türü (cizim_uret.panel_tipi) */
   tip?: 'zincir' | 'grup' | 'dal' | 'maske' | 'karsit';
-  /** şablonlu panel (scripts/cizim/sablon.py, sablonlar.json): düzen + alanlar */
+  /** şablonlu panel (scripts/uretim/cizim/sablon.py, sablonlar.json): düzen + alanlar */
   sablon?: string;
   sablon_ad?: string;
   duzen?: 'tablo' | 'zincir' | 'grup' | 'dal' | 'karsit' | 'maske' | 'liste' | 'adimlar' | 'deger';

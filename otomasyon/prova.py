@@ -17,7 +17,7 @@ import argparse, datetime as dt, json, os, shutil, subprocess, sys, time
 from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
-sys.path.insert(0, str(MEDS / "otomasyon")); sys.path.insert(0, str(MEDS / "scripts/ders_isci"))
+sys.path.insert(0, str(MEDS / "otomasyon")); sys.path.insert(0, str(MEDS / "scripts/uretim/ders_isci"))
 import ders_zinciri as Z  # noqa: E402
 
 BRANS = "provak2"
@@ -44,7 +44,7 @@ def main():
             os.environ["MEDS_AJAN_PROFIL"] = a.profil
         sys.path.insert(0, str(MEDS / "otomasyon")); from llm import yonlendir as Y
         claude_once = Y._sayac()["cagri"]
-    pk = dict(next(y for y in json.load(open(MEDS / "scripts/ders_isci/yayin_kaydi.json")) if y["is_id"] == a.is_id))
+    pk = dict(next(y for y in json.load(open(MEDS / "scripts/uretim/ders_isci/yayin_kaydi.json")) if y["is_id"] == a.is_id))
     pk["deste_id"] = None  # Öğren adım sesi gerçek desteye yazar → provada kapalı
     d = {"id": "k2-99", "kod": "2x99", "kurul": 2, "brans": pk["ders"], "konu": pk["konu"], "cikmis_konular": [pk["konu"]],
          "cikmis_kurul": pk.get("kurul", 1)}  # prova: çıkmışlar dersin gerçek kurulundan

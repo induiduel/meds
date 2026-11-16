@@ -1,4 +1,4 @@
-# Üroloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Üroloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 187 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 6, 2019: 20, 2020: 64, 2021: 25, 2022: 7, 2023: 21, 2024: 11, 2025: 15, 2026: 11}
 

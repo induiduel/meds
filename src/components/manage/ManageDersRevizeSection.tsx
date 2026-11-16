@@ -11,7 +11,7 @@ const LessonPlayer = React.lazy(() => import('../learn/lesson/LessonPlayer').the
 /**
  * Revize Ders İşçisi: yayındaki derslerin 2026-27 PDF'inden yeniden üretilmiş taslakları (cihazda, Claude Code oturumu).
  * Her taslak için: Yer değiştir / Güncelle (alternatif varsa) · Ekle (alternatif yoksa) · Her ikisini tut (V1 + V2) · Kaldır.
- * Veri: /api/admin/ders-revize/* (src/services/dersRevizeRoutes.ts) → yayın: scripts/ders_isci/yayinla.py --yerel.
+ * Veri: /api/admin/ders-revize/* (src/services/dersRevizeRoutes.ts) → yayın: scripts/uretim/ders_isci/yayinla.py --yerel.
  */
 type Olcu = { adim: number; etkilesim: number; kelime: number; boyutKb: number };
 type Islem = 'degistir' | 'ekle' | 'kaldir' | 'ikisini_tut';

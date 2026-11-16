@@ -2,7 +2,7 @@ import type { EkModul, HocaSet, HocaSoru } from './ekVeri';
 
 /**
  * Çalışma föyünün saf (React'sız) kısmı: konu → soru listesi ve basılacak HTML belgesi. Hem ekran (EkFoy.tsx, "PDF oluştur")
- * hem de hazır PDF betiği (scripts/ek_modul/foy_pdf.mts) aynı belgeyi kullanır.
+ * hem de hazır PDF betiği (scripts/uretim/ek_modul/foy_pdf.mts) aynı belgeyi kullanır.
  */
 export type Tur = 'bosluk' | 'dy' | 'cs';
 export const TUR_AD: Record<Tur, string> = { bosluk: 'Boşluk doldurma', dy: 'Doğru mu, yanlış mı?', cs: 'Çoktan seçmeli' };

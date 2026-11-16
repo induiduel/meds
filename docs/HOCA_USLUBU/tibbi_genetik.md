@@ -1,4 +1,4 @@
-# Tıbbi Genetik — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Tıbbi Genetik — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 179 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 6, 2019: 1, 2020: 31, 2021: 11, 2022: 9, 2023: 8, 2024: 10, 2025: 25, 2026: 12}
 

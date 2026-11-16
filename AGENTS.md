@@ -15,9 +15,11 @@ Bu klasör MeDSor uygulamasının kodudur. Kurallar tek yerde tutulur:
 - **`../DEGISIKLIK_KAYDI.md`** — oturum günlüğü; işe başlamadan oku.
 - **`CLAUDE.md`** — kod düzeni, komutlar, RAG/grounding kuralları.
 - **`docs/OGREN_ETKILESIM_REHBERI.md`** — Öğren destesi şeması ve gönderim adımları.
-- **İçerik üretimi (tek hat):** `python3 scripts/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf>` sırayı tek
-  kaynaktan (`scripts/tam_hat/mod.py`) verir; aşamalar bir kez üretilen **read-once `baglam/`** (`scripts/tam_hat/baglam.py`)
-  okur, ham slaytı/şablonu tekrar tekrar değil. Ders kilidi `scripts/tam_hat/ders_kilit.py` (oturum çakışması). Akış: `docs/TAM_HAT_HIZLI_AKIS.md` §0.0.
+- **İçerik üretimi (tek hat):** `python3 scripts/hat/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf>` sırayı tek
+  kaynaktan (`scripts/hat/tam_hat/mod.py`) verir; aşamalar bir kez üretilen **read-once `baglam/`** (`scripts/hat/tam_hat/baglam.py`)
+  okur, ham slaytı/şablonu tekrar tekrar değil. Ders kilidi `scripts/hat/tam_hat/ders_kilit.py` (oturum çakışması). Akış: `docs/TAM_HAT_HIZLI_AKIS.md` §0.0.
+- **Betik haritası:** `scripts/HARITA.md` (gruplar `hat/ uretim/ altyapi/ moduller/ kapilar/ arsiv/`; yeni betik `scripts/kok.py`
+  ile kök bulur, `parents[N]` yok; eski→yeni yol `deploy/oracle/tasinan_yollar.txt`).
 - **GPU istisnaları + ısı/saat protokolleri:** `docs/GPU_KULLANIM.md` (ana AGENTS kural 10'un ayrıntısı).
 - **`deploy/oracle/SISTEM_MIMARISI.md`** + **`YENI_YAPI_YOL_HARITASI.md`** — Oracle canlı mimarisi ve toparlama planı.
 
@@ -25,7 +27,7 @@ Bu klasör MeDSor uygulamasının kodudur. Kurallar tek yerde tutulur:
 
 - **Yerel GPU YASAK.** Ollama, llama-server, CUDA'lı PyTorch, GPU'lu konteyner ve LoRA eğitimi kaldırıldı.
 - Vektörleme yalnız CPU: `meds-embed-bge` (bge-m3, 127.0.0.1:8094) ve `meds-embed` (e5-small, :8091) systemd birimleri;
-  Python'da `scripts/agents/lib.py::embed`. Oracle'da aynı `embed_server.py` `meds-embed` konteynerinde çalışır.
+  Python'da `scripts/altyapi/agents/lib.py::embed`. Oracle'da aynı `embed_server.py` `meds-embed` konteynerinde çalışır.
 - LLM gereken her iş ücretsiz bulut zincirine gider (`MEDS_LLM_BACKEND=cloud`, `MEDS_FREE_ONLY=1`).
 - Makinede 15 GB RAM var: yeni servislerde `MemoryMax`/`CPUQuota`/`OOMScoreAdjust` zorunlu; ağır işleri (vite build, tsc,
   model yükleme) aynı anda çalıştırma.

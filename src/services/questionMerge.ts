@@ -2,7 +2,7 @@
  * Kopya soru birleştirme katmanı (server-only).
  *
  * Aynı çıkmış soru farklı sınav dökümlerinden farklı kimliklerle birden çok kez girilmiş. Gruplar
- * scripts/advanced_ai/merge_duplicate_questions.py ile hesaplanır ve
+ * scripts/altyapi/advanced_ai/merge_duplicate_questions.py ile hesaplanır ve
  * $MEDS_DATABASE_DIR/../meds_database_v2/soru_birlestirme/birlestirmeler.json dosyasında tutulur.
  * Veri dosyası (pastQuestions.json) değişmez: okuma sırasında her gruptan yalnız "asil" soru gösterilir, kopyalar
  * gizlenir. Asıl soruya yönetici için anahtarlar eklenir (kullanıcı arayüzünde gösterilmez):

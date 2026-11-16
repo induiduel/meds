@@ -4,7 +4,7 @@
  *  - Paket (data/search/query-intel.{json,bin}) açılıştan sonra gecikmeli ve asenkron okunur; hazır değilse uçlar
  *    boş/eskiye düşer, istek asla beklemez.
  *  - Paket dosyası değişince (en çok 30 sn'de bir stat) arka planda yeniden yüklenir.
- *  - Derleme sunucu sürecinde YAPILMAZ: `scripts/search/build-query-intel.mts` düşük öncelikli (nice 15) alt süreç
+ *  - Derleme sunucu sürecinde YAPILMAZ: `scripts/altyapi/search/build-query-intel.mts` düşük öncelikli (nice 15) alt süreç
  *    olarak açılışta ve 6 saatte bir çağrılır; imza aynıysa ~1 sn'de çıkar. Kilit dosyasıyla tek kopya.
  *  - Öneri/anlamlandırma sonuçları küçük LRU önbellekte tutulur.
  */
@@ -136,7 +136,7 @@ export function runQueryIntelBuild(opts: { force?: boolean; graph?: boolean } = 
   building = true;
   const t0 = Date.now();
   const tsx = path.join(ROOT, 'node_modules', '.bin', 'tsx');
-  const args = [tsx, path.join(ROOT, 'scripts', 'search', 'build-query-intel.mts')];
+  const args = [tsx, path.join(ROOT, 'scripts', 'altyapi', 'search', 'build-query-intel.mts')];
   if (opts.force) args.push('--force');
   if (opts.graph === false) args.push('--no-graph');
   return new Promise((resolve) => {

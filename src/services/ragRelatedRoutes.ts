@@ -60,7 +60,7 @@ function snippet(content: string): string {
 let healthCache: { at: number; body: any } | null = null;
 
 export function registerRagRelatedRoutes(app: express.Express) {
-  // Vektör sağlığı: tür başına kapsama + son hat raporu (scripts/advanced_ai/rag_vektor_hatti.py). 60 sn önbellek.
+  // Vektör sağlığı: tür başına kapsama + son hat raporu (scripts/altyapi/advanced_ai/rag_vektor_hatti.py). 60 sn önbellek.
   app.get('/api/rag/vectors/health', async (_req, res) => {
     try {
       if (!healthCache || Date.now() - healthCache.at > 60_000) {

@@ -3,7 +3,7 @@
  *
  * - `fitPairModel`: işaret kısıtlı (benzerlik ≥ 0, ceza ≤ 0), sınıf dengeli, L2'li lojistik; standartlaştırılmış
  *   özelliklerle Adam. Örnek ağırlığı verilebilir (öğrenci kararları sentetik çiftlerden daha değerlidir).
- * - Öğrenilmiş ağırlıklar `data/recall_weights.json`'da durur (scripts/recall/learn.mts yazar; yalnız sınama setinde
+ * - Öğrenilmiş ağırlıklar `data/recall_weights.json`'da durur (scripts/moduller/recall/learn.mts yazar; yalnız sınama setinde
  *   gerileme yoksa). Sunucu motoru kurarken `loadLearnedWeights` ile okur; dosya yoksa/uyumsuzsa kod içi ağırlıklar.
  */
 import fs from 'fs';

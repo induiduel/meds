@@ -40,7 +40,7 @@
 - Bu defterdeki her maddenin kapısı Kurul 2 hattının doğrulayıcılarına bağlıdır (2026-10-18):
   - Sınav asistanı, sesli çözücü, spot önem listesi doğrulayıcıları: her zaman HATA.
   - Öğren: `validate_learning_decks.py deck.json --oyun-zorunlu --kurul2`; sınav spotları: `sinav_spotlari/dogrula.py --kurul2`.
-  - **Kurul 2 başlarken ders işçisinin denetimine (`meds/scripts/ders_isci/denetle.py`, Öğren çağrısı) `--kurul2` eklenmeli** ve
+  - **Kurul 2 başlarken ders işçisinin denetimine (`meds/scripts/uretim/ders_isci/denetle.py`, Öğren çağrısı) `--kurul2` eklenmeli** ve
     işçi talimatına bu defter okutulmalı. Kurul 1 işçisi bayraksız çalıştığı için şimdilik etkilenmez.
 
 ## Sesli ders PDF/DOCX dışa aktarımı (2026-10-20)
@@ -166,7 +166,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök:** `ema_isci.sentezle` ayrı süreçte çalışır; üst süreçte `uzun_kisaltma_ayarla` ile kurulan genel ayar (H3 uzun
   kısaltma, modül okunuşu) oraya taşınmıyordu → kısaltmalar eski yolla okundu.
 - **Kural:** sesi etkileyen her ayar iş dosyasından (`is.key`) sentez sürecinin İÇİNDE kurulur; genel değişkene üst süreçten
-  güvenilmez. Kamp sesi (`scripts/kamp/ses.py`) süreç içi çalışır, anahtarı `kN-kamp` (K2+ uzun kısaltma yolu).
+  güvenilmez. Kamp sesi (`scripts/uretim/kamp/ses.py`) süreç içi çalışır, anahtarı `kN-kamp` (K2+ uzun kısaltma yolu).
 - **Kapı — EKLENDİ:** `sentezle` başta `uzun_kisaltma_ayarla(is.key)` çağırır; `saglik.py ema_alt_surec_okunusu` bu
   çağrı kalkarsa kapı arızası verir. Modül dersleri (birden çok dersin özeti) `modul_okunus.py MODUL_ANAHTARLAR`'a eklenir.
 
@@ -231,7 +231,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   kısa ama eksiksiz metin doğrudur. Önem vurgusu yalnız dayanağı varsa (çıkmış soru, öğrenci notu, slayttaki işaret) ve
   kritik noktada yapılır; dayanağı yazılmadan "hoca vurguladı/işaretledi/altını çizdi" denmez. Tekrar, geçiş ve özet
   dolgusu ("şimdi gelelim", "bir kez daha hatırlatalım", "daha önce de söylediğimiz gibi") yasak.
-- **Kapı — EKLENDİ:** `scripts/sesli_anlatim/metin_denetle.py` → `DOLGU` kalıpları HATA; "Burası önemli/çok önemli/sınavda
+- **Kapı — EKLENDİ:** `scripts/uretim/sesli_anlatim/metin_denetle.py` → `DOLGU` kalıpları HATA; "Burası önemli/çok önemli/sınavda
   sık" bölüm sayısının yarısını (en az 3) aşarsa HATA; kelime alt sınırı artık yalnız uyarı. K1 metinlerine toplu müdahale yok.
 
 ### H23 — Öğrenci işaretli slayt yanlış yorumlandı + okunuşla yazılmış metin (İmmünofarmakoloji V2, kullanıcı, 2026-10-22)
@@ -383,7 +383,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ## H42 — Okun başlangıcı belirsizdi; resimdeki bölge vurgulanmıyordu (2026-10-24, genel kural)
 - Kullanıcı: "okların başlangıç noktası belirsiz", "resimlerde marker ile boyama yapılıp hatlar belirginleştirilebilir";
   "bu derse özgü değil, genel kural". Düzeltme: her okun kaynağı çerçevelenir (kutu yoksa halkalı turuncu nokta); `kontur`
-  yarı saydam sarı fosforlu dolgu + kırmızı hatla çizilir. Genel kurallar listesi: `scripts/cizim/TALIMAT_CIZIM.md`.
+  yarı saydam sarı fosforlu dolgu + kırmızı hatla çizilir. Genel kurallar listesi: `scripts/uretim/cizim/TALIMAT_CIZIM.md`.
 
 ## H43 — Panelde bağımsız iki ilişki tek zincir gibi okunuyordu (2026-10-24, s.43)
 - "uzamış kanama zamanı → intrakraniyal kanama" ve "trombositopeni → kanama, sepsis" aynı satırda bitişik dizilince
@@ -444,7 +444,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 
 ## H50 — Panel tıbben yanlış okunuyordu; takip kaydırması sessizce boşa gidiyordu; ekran kalabalıktı (2026-10-24)
 - "üremik ensefalopati → istenir → üre, kreatinin", "glukoz —hızla geri döndürür⊣ hipoglisemi": ok yönü/işareti anlamı
-  bozuyordu. Düzeltme: anlam şablonu kütüphanesi (`scripts/cizim/sablonlar.json`, `sablon.py`), yönsüz eşleşmeler başlıklı
+  bozuyordu. Düzeltme: anlam şablonu kütüphanesi (`scripts/uretim/cizim/sablonlar.json`, `sablon.py`), yönsüz eşleşmeler başlıklı
   tablo; yeni şablon önerisi kütüphaneye eklenir; bağımsız tıbbi anlam denetimi (tamam/düzelt/sil). Numaralı/madde imli
   liste, kesikli satır/sütun ayracı.
 - Takip: tarayıcının `scroll-behavior: smooth` kaydırması PDF kapsayıcısında ilerlemiyordu; hesap sayfa geometrisinden
@@ -463,7 +463,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - Kök: sınama yalnız panel kutusunun taşmasını ölçüyordu (iç taşma, satır kırılması, kesik söz yoktu) ve elle yapılıyordu.
 - Düzeltme: `resim_sayfasi` kapısı (görsel slaytta panel yok; 7 sayfa Claude ile görselin üstünde yeniden çizildi), yatay zincir
   tek satır yoksa dikey, maske "İlk izlenim / ⚠ maskeleyebilir / Atlanmaması gereken", liste numaraları, grup ızgarası.
-  Kalıcı otomatik kapı `scripts/cizim/panel_sinama.mjs` (366/567/1100 px, 8 hata türü) ders zincirinde; düşen çizim yayına gitmez.
+  Kalıcı otomatik kapı `scripts/uretim/cizim/panel_sinama.mjs` (366/567/1100 px, 8 hata türü) ders zincirinde; düşen çizim yayına gitmez.
 
 ## H52 — Etiket çizimden kopuk; PDF'in kendi oku yeniden çiziliyordu (2026-10-24, s.14 ve s.27 görsel denetimi)
 - s.14 "santral herniasyon" etiketi 3 numaralı okun yanında, "tonsiller" etiketi 6'dan uzakta; s.27'de slaytın kırmızı okları
@@ -532,7 +532,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kapı:** `pdf_isaret.sekil_isareti` (şekil önceliği), `capa_dogrula.py` T# denetimi; `uygula_lazer_takip.py` çapa yazmaz.
 - **Ek (2026-10-25, çizim):** şekil cümlelerinin yalnız 59/853'ü görsel üstünde çiziliyordu; çizimler lazerden başka
   sayfaya (paragraf sayfası) düşüyor, resim anlatılırken panel kuruluyor, yazı slaytının arkasındaki şablon/kart görseli
-  "resim" sayılıp bütün slayt çerçeveleniyordu. **Kural:** her ders `scripts/cizim/cizim_kapisi.py` (K1–K9) 0 HATA olmadan
+  "resim" sayılıp bütün slayt çerçeveleniyordu. **Kural:** her ders `scripts/uretim/cizim/cizim_kapisi.py` (K1–K9) 0 HATA olmadan
   yayına girmez; model talimatı `TALIMAT_CIZIM.md` 21–26; kapı gevşetilmez.
 
 ## H60 — Slayt Çizimlerinin Toplu Gösterilmesi ve Erken/Tekrarlı Çizim Hatası (`sayfaCizimleri` Yasağı) (2026-10-25/26, kullanıcı)
@@ -561,7 +561,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   2. **Kapsam Kilidi (Scope Lock):** Quiz üretimi şimdilik YALNIZCA `Farmakoloji` (`Tıbbi Farmakoloji`) dersi için aktiftir. Kod altyapısı ders-bağımsız (`course-agnostic`) kurulmuştur.
   3. **Single Source of Truth:** Sesli dersin ilk analiz adımında üretilen `atomik_bilgi_envanteri.json`, hem Sesli Dersi hem de ardından çalışacak Quiz Ajanını besler. İkinci bir LLM analizi yapılmaz; mükerrer araştırma yasaktır.
   4. **2x Çapraz Sorgulama ve Batch Processing:** $N$ atomik bilgi $\rightarrow$ en az $2N$ soru. Token limitine takılmamak için en fazla 25 atom (50 soru) partileri halinde döngüyle işlenir.
-- **Kapı:** `meds/scripts/quiz_motoru/quiz_dogrula.py` (Öncelik kilidi, 2x soru kuralı, 5-15 sn okunma süresi, gerekçeli şık açıklamaları, sıfır halüsinasyon). Çıkış kod 0 olmadan yayın yapılamaz.
+- **Kapı:** `meds/scripts/hat/quiz_motoru/quiz_dogrula.py` (Öncelik kilidi, 2x soru kuralı, 5-15 sn okunma süresi, gerekçeli şık açıklamaları, sıfır halüsinasyon). Çıkış kod 0 olmadan yayın yapılamaz.
 
 ## H63 — Sesli Derslerde Arşiv PDF'lerinin Çok Geç Yüklenmesi veya Hiç Yüklenmemesi (AutoFetch, SW Range ve Linearization Hatası) (2026-10-26, kullanıcı)
 
@@ -1046,7 +1046,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** "Muayene başlıklarının sırası" tablosu 1, 2, 4, 5 diye gidiyordu; Motor sistem yoktu (Öğren tablosu + ders içerik sekmesi).
 - **Kök neden:** Yazar parçası (`uret/parca_A.json`) interactive_table'ı yazarken 3. satırı atlamış; slayt metni beş başlığı doğru sayıyordu, tabloyla metin kıyaslanmadı. `ders_icerik_uret.py` tabloyu aynen kopyaladığı için hata iki yüzeye taşındı.
 - **Çözüm:** 3. satır (Motor sistem) parça, taslak deste ve `interactive_learning_decks.json`'a eklendi; ders içerik paketi yeniden yazıldı.
-- **Kural:** Sıra/Adım sütunlu tablolarda numaralar 1'den kesintisiz olmalı ve slayt metnindeki sayımla eşleşmeli (`docs/DERS_ICERIK_BICIMI.md`). Kapı: `scripts/ders_icerik/sira_kapisi.py`.
+- **Kural:** Sıra/Adım sütunlu tablolarda numaralar 1'den kesintisiz olmalı ve slayt metnindeki sayımla eşleşmeli (`docs/DERS_ICERIK_BICIMI.md`). Kapı: `scripts/uretim/ders_icerik/sira_kapisi.py`.
 
 ## H118 · Anlamsız karşılaştırma tabloları (Öge / Sınıf / Gerekçe) (2026-10-27)
 - **Belirti:** "Anatomik basamak mı, muayene başlığı mı?" gibi karşılaştırma kartı/tablosu: Türkçesi bozuk, tıbbi olarak anlamsız ve öğretmiyor.
@@ -1116,7 +1116,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kural:** `docs/TAM_HAT_HIZLI_AKIS.md` — E0 `hazirlik.py` (döküm GPU ≤2500 MHz, AGENTS §10 altıncı istisna); alt ajana yalnız
   `kural_secici.py --oku <aşama>`; yalnız hatalı parça yeniden yazılır (sayısal hedefte ±%10, kalite hatasında tolerans yok);
   ders başına tek denetçi.
-- **Kapı — EKLENDİ:** `scripts/tam_hat/soru_uslup.py` (ders çağrıştıran kök, ipuçlu uzun doğru şık, kazanım bağı, kalıp payı),
+- **Kapı — EKLENDİ:** `scripts/hat/tam_hat/soru_uslup.py` (ders çağrıştıran kök, ipuçlu uzun doğru şık, kazanım bağı, kalıp payı),
   `kaynak_kapisi.py` (kayıt içeriği `s` sayfasında mı), `pdf_tarama.py` (boş sayfa, taşma, üst üste, harf harf kırılma).
 
 ## H124 · Soru çözücüde Kurul 2 seçili görünürken Kurul 1 dersleri listeleniyordu (2026-10-28)
@@ -1137,14 +1137,14 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kural:** Terim tanımı dersin sayfasındaki bağlamla yazılır (genel sözlük yalnız yardımcıdır, ilk anlamı kopyalanmaz); kaynakta
   olmayan sayı/eşik yazılmaz. Terim eklemeden önce ad + `e` eşanlamları normalleştirilip kopya aranır; slayttaki yazım farkı
   (Gl13, FLBN, speksifikasyon) `e`'ye girer. Şekilden okunan kayıt `gorsel: true`. Doğru şık çeldiricilerle benzer uzunlukta yazılır.
-- **Kapı — EKLENDİ:** `scripts/tam_hat/kaynak_kapisi.py` (terim adı sayfada mı → HATA; tanım az örtüşüyorsa UYARI, denetçi bağlamı okur),
+- **Kapı — EKLENDİ:** `scripts/hat/tam_hat/kaynak_kapisi.py` (terim adı sayfada mı → HATA; tanım az örtüşüyorsa UYARI, denetçi bağlamı okur),
   `soru_uslup.py` (≥6 kelimelik doğru şık en uzun ve 1,8× → HATA), `hazirlik.py` madde imi temizliği.
 
 ## H126 · Sesli ders ekranında gen sembolleri okunuşla görünüyordu: "hoks, o te iks, me se iks, paks 6" (2026-10-28, k2-08)
 - **Belirti:** Beyin ve İskelet Sistemi Gelişimi Genetiği sesli dersinde ana metin "hoks, o te iks ve me se iks genleri ile göz geni paks 6" yazıyordu; doğrusu HOX, OTX, MSX, PAX6.
 - **Kök neden:** Ders metni iki katmanlıdır: `ses` (EMA'nın okuduğu) ve `ekran` (v2 `cumleler[].ekran`, doğru yazımla). Ana paragraf ise `ses` metninden `ekranYazim.ts` ile geri çevrilerek gösterilir; bu geri çeviri sözlüğü (`yazim_sozlugu.json`) yalnız kaynak md'den türetiliyordu ve harf harf okunmayan / kelime gibi okunan gen sembollerini (hoks, paks, soks) hiç tanımıyordu. Sayı geçişi "altı"yı "6" yaptığı için "paks 6" gibi karma yazım çıktı. Sözlük ayrıca uzun süre yeniden üretilmediği için yeni derslerin kısaltmaları hiç girmemişti.
 - **Çözüm:** `yazim_sozlugu.py` artık her v2 dersinin `ses` ↔ `ekran` cümle çiftlerini hizalayıp okunuş → yazım eşlemesini kendisi çıkarır ("hoks" → HOX, "paks altı" → PAX6, "ce o le bir a bir" → COL1A1); Türkçe sözcük, Roma rakamı ve rakamsız okunuşa rakamlı yazım eşlemeleri elenir.
-- **Kural:** Kullanıcıya gösterilen metin daima yazımla (HOX, OTX, PAX6), EMA'ya giden metin okunuşla olur. Tam içerik hattında her yeni v2 metni yazılınca `python3 scripts/sesli_anlatim/yazim_sozlugu.py` yeniden çalıştırılır ve ekran metni okunuş artığı için gözle denetlenir; `ekran` alanı her cümlede doldurulur (sembol içeren cümlede boş bırakılmaz).
+- **Kural:** Kullanıcıya gösterilen metin daima yazımla (HOX, OTX, PAX6), EMA'ya giden metin okunuşla olur. Tam içerik hattında her yeni v2 metni yazılınca `python3 scripts/uretim/sesli_anlatim/yazim_sozlugu.py` yeniden çalıştırılır ve ekran metni okunuş artığı için gözle denetlenir; `ekran` alanı her cümlede doldurulur (sembol içeren cümlede boş bırakılmaz).
 
 ## H110 · Çıkmış sorular yıl çipi 21, listede 20 soru (2026-10-28)
 - **Belirti:** 2025–2026 çipi "21" gösteriyor, çipe basınca liste 20 soru veriyordu.
@@ -1168,7 +1168,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   yoktu. (3) Panel ilerlemesi `k0` = terimin söylendiği kelimeden başlıyordu. (4) Zoom yalnız bölge boyutuna bakıyordu,
   anlatım süresine bakmıyordu. (5) Kontur rengi CSS'te sabit kırmızıydı, boyama yalnız %13 sarı ışıltıydı, çizim hangi
   resim kutusuna ait olduğunu taşımıyordu.
-- **Kalıcı çözüm:** `scripts/sesli_anlatim/terim_okunus.py` + `data/sesli_anlatim/okunus/terim_okunus.json` (eponim, Latince,
+- **Kalıcı çözüm:** `scripts/uretim/sesli_anlatim/terim_okunus.py` + `data/sesli_anlatim/okunus/terim_okunus.json` (eponim, Latince,
   İngilizce, ticari ad + Latince kural motoru) EMA'ya giden Kurul 2+/modül metnine uygulanır (`ema_isci.paragraf_seslendir`);
   `ses_temizle` (DC, RMS eşitleme, yumuşak tepe sınırı, 12 ms geçiş). `docs/ANLATIM_KURGU_STANDARDI.md` (plan → metin,
   ±%20 sayısal tolerans). `CizimLayer.tsx` panel cümle başından, zoom ≥55 karakter; `cizim_uret.py` ZOOM_EN_AZ=70, `renk_ata`,
@@ -1285,7 +1285,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ## H131 — Yönetim öğrenci uygulamasının ortak girişiyle açılıyordu; ayrı giriş + SW önbellek zehirlenmesi riski (2026-10-28, Yönetim v16)
 - **Belirti:** /manage ilk yükü 544 KB gzip JS + 152 KB gzip CSS (öğrenci App.tsx girişi, Tailwind index.css, splash, tüm kabuk yardımcıları); yönetim yavaş açılıyordu.
 - **Kök neden:** v16 kabuğu `App.tsx` içinde `React.lazy` ile açılıyordu; yönetim için ayrı Vite girişi yoktu, bu yüzden öğrenci girişinin statik içe aktardığı her şey önce iniyordu.
-- **Kalıcı çözüm:** `manage.html` + `src/manage-main.tsx` (yalnız adminFetchAuth, Firebase kimlik, palettes.ts tokenları, `styles/yonetim-temel.css`, kit, kabuk). `vite.config.ts` çoklu giriş; `server.ts` SPA geri dönüşü `/manage*` için `dist/manage.html`; geliştirmede `scripts/vite/yonetimGirisi.ts`. Yönetici değilse (moderatör) ya da `?kabuk=v14` ise `manage-main` tam uygulamayı (`import('./main')`) yükler. Uygulama içinden /manage'e geçiş (`App.tsx yonetimGirisineGec`) tam sayfa gezinmesi yapar (10 sn döngü koruması). Ölçüm: /manage 544+152 KB → 179+5 KB gzip; tarayıcıda 191 KB aktarım, FCP 164 ms.
+- **Kalıcı çözüm:** `manage.html` + `src/manage-main.tsx` (yalnız adminFetchAuth, Firebase kimlik, palettes.ts tokenları, `styles/yonetim-temel.css`, kit, kabuk). `vite.config.ts` çoklu giriş; `server.ts` SPA geri dönüşü `/manage*` için `dist/manage.html`; geliştirmede `scripts/altyapi/vite/yonetimGirisi.ts`. Yönetici değilse (moderatör) ya da `?kabuk=v14` ise `manage-main` tam uygulamayı (`import('./main')`) yükler. Uygulama içinden /manage'e geçiş (`App.tsx yonetimGirisineGec`) tam sayfa gezinmesi yapar (10 sn döngü koruması). Ölçüm: /manage 544+152 KB → 179+5 KB gzip; tarayıcıda 191 KB aktarım, FCP 164 ms.
 - **SW kuralı:** `public/sw.js` gezinme yanıtını `/` ve `/index.html` olarak da önbelleğe yazar; /manage artık farklı HTML döndürdüğünden yönetim gezinmesi SW'de atlanır (ağdan gelir) ve `CACHE_VERSION` v18'e çıktı (eski SW'nin bir kez zehirleyebileceği önbellek etkinleşmede silinir). **Önleme:** Sunucu bir yol için farklı HTML kabuğu döndürmeye başlarsa sw.js gezinme önbelleğinden o yol çıkarılır ve sürüm artırılır.
 
 ## H131a — `/react-dom/` eşleşmesi react-dom/server'ı her sayfanın açılış parçasına sokuyordu (2026-10-28)
@@ -1518,7 +1518,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 
 ## H390–H392 — Veri tutarlılığı: yıldız işaretleri, soru haritası sayımı, deste kurul adları, yinelenen kazanım konuları (2026-10-28, kullanıcı onayıyla)
 - **H390 Belirti:** Deneme ekranında soru/şık metninde `**değildir**`, `**Soru:**` ham görünüyordu. **Kök neden:** veri doğru (kasıtlı vurgu; çıkmışta 49 soru, Öğren klinik karar vakalarında 414 öge), `PracticeV15` metni işlemeden yazıyordu. **Çözüm:** `**…**` kalın yazıya çevrilir; veri değişmedi.
-- **H391 Belirti:** Soru haritası Kurul 2'de 498, çıkmış sayfası 571+ gösteriyordu. **Kök neden:** 178 çıkmış soruda `isPastExam` alanı yok (kaynakları çıkmış PDF'leri); harita betiği yalnız `true` olanları sayıyordu. **Çözüm:** `scripts/v15/soru_haritasi.py` yalnız açıkça false ve gizli soruları dışlar; harita yeniden üretildi (K2 574).
+- **H391 Belirti:** Soru haritası Kurul 2'de 498, çıkmış sayfası 571+ gösteriyordu. **Kök neden:** 178 çıkmış soruda `isPastExam` alanı yok (kaynakları çıkmış PDF'leri); harita betiği yalnız `true` olanları sayıyordu. **Çözüm:** `scripts/altyapi/v15/soru_haritasi.py` yalnız açıkça false ve gizli soruları dışlar; harita yeniden üretildi (K2 574).
 - **H392a Deste kurul adları:** Kurul 1 için 12 yazım vardı; boş/"Ürogenital Sistem Komitesi" yazılı 4 deste öğrenci tarafında "Diğer"e düşüyordu. 74 destenin `committee` alanı "Kurul 1 - Ürogenital ve Obstetrik Kurulu" yapıldı (kaynak `interactive_learning_decks.json`, biçim birebir korundu; doğrulayıcı 0 HATA, paketler yeniden üretildi).
 - **H392b Kazanım konu çiftleri:** Aynı dersin kesik/tam başlıklı iki kazanım kümesi (7 çift: K1 Genetik, K1 Üroloji ÜSE, K5 Demir, K5 Spondilodiskit, K6 Histamin, K6 Yaşlılıkta beslenme, K6 Biyokimya) tam başlıkta birleştirildi; yalnız birebir aynı 13 kazanım atıldı, kimlikleri taşındı (kazanım soruları, sınav çalışması, müfredat paketi, eşleme dizini byDeck yeniden üretildi; artık başvuru 0), slayt kanıtları birleşti. 25 konu başlığından hoca adı / "UZM." eki temizlendi. Ders kayıt defterine (`dersler/kN.json`) dokunulmadı: K5/K6 çiftleri orada iki ayrı ders kimliğidir (kural: kimlikler kalıcı). Betik: oturum yedeğiyle `kz/birlestir.py`.
 - **Tuzaklar:** (1) `lite/`, `questions/`, `pastQuestions.json`, `sinav_calisma_k*.json` git dışıdır; dağıtım temiz `meds-dagitim` ağacından derler, bu dosyaların güncel kopyası oraya elle konmazsa canlı derleme eski veriyi gömer. (2) Çıkmışların canlı asıl kopyası Oracle `data/pastQuestions.json`'dır (sunucu bellekte tutup üzerine yazar); yerel `src/data/pastQuestions.json` yalnız yansıdır. Canlı çıkmış konu/kimlik güncellemesi ayrı, sunucu uçlarıyla yapılmalı (yapılmadı, açık).
@@ -1569,8 +1569,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ## H435 — Örnek sorular hocanın yeni sınav kalıbını yansıtmıyordu (2026-10-29, kullanıcı bildirdi)
 - **Belirti:** Kurul 1 2026-27 patoloji sınavı kısa tek-kavram şıkları yerine bileşik/kombinasyon şıklı, "en tipik/en olası" köklü sorularla geldi; hazırlanan örnek sorular bunu karşılamıyordu.
 - **Kök neden:** Üslup yalnız eski çıkmışlardan (2018–25: bileşik şık %14, üstünlük kökü %12) örneklenmişti; yeni sınav ve slayt biçimi (kırmızı/sarı/kalın) hiç ölçülmemişti, önem puanı biçime ve tekrar edilen eski konulara dayanıyordu.
-- **Kural / Önleme:** Patoloji örnek soru ve önem noktası `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` + `scripts/patoloji_soru_isci/` kapısına göre yazılır: her önem noktasına ≥2 farklı kalıpta soru, çeldirici yalnız aynı dersin komşu kavramları, doğru şık en uzun olmaz. Sarı dolgu ve başlık önem sinyali sayılmaz; kırmızı tek başına "önemli" değildir (slaytların ~%42'si kırmızı).
-- **Kapı:** `python3 scripts/patoloji_soru_isci/dogrula.py sorular.json paket.json` → 0 HATA.
+- **Kural / Önleme:** Patoloji örnek soru ve önem noktası `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` + `scripts/uretim/patoloji_soru_isci/` kapısına göre yazılır: her önem noktasına ≥2 farklı kalıpta soru, çeldirici yalnız aynı dersin komşu kavramları, doğru şık en uzun olmaz. Sarı dolgu ve başlık önem sinyali sayılmaz; kırmızı tek başına "önemli" değildir (slaytların ~%42'si kırmızı).
+- **Kapı:** `python3 scripts/uretim/patoloji_soru_isci/dogrula.py sorular.json paket.json` → 0 HATA.
 
 ## H435 — Sıralama: ölçü değişince eski veri yanlış birimle görünüyor, tepki geç (2026-10-29)
 - **Belirti:** Sıralamada ölçü/süzgeç değiştirince başka sütunun verileri görünüyor, tepki geç geliyordu.
@@ -1654,7 +1654,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   malzemedir: A birimi anlatımda ayrıntılı (tanım → ayırt edici nokta → sayı/ölçüt → komşu kavram), önem listesinde `ogrenci` etiketli
   madde, ≥2 örnek soru; B birimi anlatımda açık + ≥1 soru. Slaytta yalnız adı geçen kavram, notta/çıkmışta tanımı soruluyorsa tanımıyla anlatılır.
 - **Önleme:** "ders yalnız adını verir / yalnız adlarıyla sayar" türü geçiştirme, kavram öğrenci notunda ya da çıkmışta tanımıyla geçiyorsa yasaktır.
-- **Kapı:** `python3 scripts/ogrenci_onem/kapi.py <ders>` 0 HATA — bilgi düzeyinde (el notu, vurgulu satır, çıkmış önermesi) anlatım ve önem
+- **Kapı:** `python3 scripts/uretim/ogrenci_onem/kapi.py <ders>` 0 HATA — bilgi düzeyinde (el notu, vurgulu satır, çıkmış önermesi) anlatım ve önem
   listesi cümlelerinde arar (vektör + kelime kökü örtüşmesi; yalnız vektör "spastisite ve rijidite" cümlesini rijidite tanımı sanıyordu).
 - **Ek (2026-10-30, kapı):** `kapi.py` ilk sürümü sesli metni (okunuşla: "Düşen", "müsküler") yazılı çıkmışla ("Duchenne muskuler")
   karşılaştırıp anlatılmış bilgiyi "yok" sayıyordu (k2-08). Çözüm: v2 `ekran` maddeleri (yazımla) da aday cümledir. Önleme: sesli metinle
@@ -1732,7 +1732,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Yıl filtresinde "2021-2026" (692 kayıt), "Geçmiş Yıllar Çıkmışı (Arşiv)" (310), "Kategorisiz" (134), "2026" (25),
   "2025-2026 (Geçen Sene)" (5) grupları vardı; öğrenci bir sorunun hangi yılın sınavı olduğunu göremiyordu, aynı soru farklı yıllarda
   farklı etiketlerle duruyordu.
-- **Kök neden:** Ders derlemesi üretim betikleri (`scripts/archive/generate_kurul*_redakte_sorular.mjs`) `examYear: '2021-2026'` sabitini
+- **Kök neden:** Ders derlemesi üretim betikleri (`scripts/arsiv/archive/generate_kurul*_redakte_sorular.mjs`) `examYear: '2021-2026'` sabitini
   yazdı; soru notundaki gerçek yıl (`sourceNote`) alana taşınmadı. Eski içe aktarımlar yıl bulamayınca "Geçmiş Yıllar…"/"Kategorisiz"
   koydu; mega kayıt parçalama "2026" (işlem yılı) yazdı. Belge düzeyi yıl kanıtı (karne tarihi, belge içi tarih, dosya adı) hiç kullanılmadı.
 - **Çözüm:** `meds_temp/cikmis_yil_duzelt/yil_duzelt.py` kural zinciri (soru notu → D3K1 PDF eşlemesi → tekrar analizi kimliği → belge
@@ -1830,7 +1830,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   (ve `'once'`) görünmeden önceki sessiz paya sıkıştırır ("olmuş bitmiş"), sonrakileri atar; sahneye ait sayaç sahne
   kaybolunca biten adım etiketlerine çevrilir. 45 etiket ≤30 harfe kısaltıldı; sahne düzeltmeleri `adim_lottie.py` ve
   `lottie_uret.py`'de. Kapı: `dogrula.py` → `lottie_dsl.etiket_denetle` (≤30 harf, kadraj, altyazı bölgesi, çakışma) HATA.
-- **Önleme:** Video değişikliğinden sonra `node meds/scripts/kmb/kare_onizle.mjs [ad…]` ile temas sayfası üretilir ve her
+- **Önleme:** Video değişikliğinden sonra `node meds/scripts/uretim/kmb/kare_onizle.mjs [ad…]` ile temas sayfası üretilir ve her
   cümle karesi metinle karşılaştırılır (rapor.json otomatik bulgu 0 olmalı). Etiket ≤30 harf; önemli öge (torba, meatus,
   kan) sahnenin alt %24'üne konmaz; alt kompozisyonda "son durum" gerekiyorsa `'once'` kullanılır, None değil.
 
@@ -2313,7 +2313,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Kullanıcı: "hipnotik dersinde neden ara resim yok?" — k2-21 sesli derste hiç ara resim yoktu.
 - **Kök neden:** k2-21 anlatımı güvenlik filtresine takıldığı için B1 görevi (anlatım + ara resim tek ajan) yerine sayfa aralıklarına bölünmüş üç ajana yalnız anlatım yazdırıldı; koordinatör ara resim adımını parçalara vermedi ve yayın öncesi `ara_resim/dogrula.py` çalıştırılmadı.
 - **Kalıcı çözüm:** Ara resimler v2 yayımlandıktan sonra ayrı adımda üretildi (paragraf dizini yayındaki v2'den).
-- **Önleme:** B1 bölünürse ara resim ayrı bir alt görev olarak MUTLAKA açılır; yayın öncesi kontrol listesinde `python3 scripts/ara_resim/dogrula.py <key>` çalıştırılır ve `src/data/ara_resim/<key>.json` yoksa ders tamamlandı sayılmaz.
+- **Önleme:** B1 bölünürse ara resim ayrı bir alt görev olarak MUTLAKA açılır; yayın öncesi kontrol listesinde `python3 scripts/uretim/ara_resim/dogrula.py <key>` çalıştırılır ve `src/data/ara_resim/<key>.json` yoksa ders tamamlandı sayılmaz.
 
 ### H513 — dist/assets hiç budanmıyordu: cihazda 473 derleme (3 GB), Oracle'da 92 bin parça (5,2 GB) + 5,9 GB arşiv (2026-11-09)
 - **Belirti:** Kullanıcı "optimizasyon problemlerini çöz" dedi; ölçümde `meds/dist/assets` 65.794 dosya / 3,0 GB, Oracle `dist/assets` 92.674 dosya / 5,2 GB, `data/asset-archive` 101.057 dosya / 5,9 GB; Oracle diski %63 (Docker derleme önbelleği 49,9 GB ayrıca).
@@ -2324,7 +2324,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ### H514 — Örnek sorular ders listesinde "Hoca üslubu · N yeni soru" rozeti öğretim üyesi adının üstüne biniyordu (tablet/masaüstü, 2026-11-09)
 - **Belirti:** 768–1024 px tablette (ve masaüstünde) `/sorular/ornek` ders satırlarında rozet ile "Prof. Dr. …" yazısı aynı yere çizilip okunmaz oluyordu; telefonda alt alta göründüğü için fark edilmemişti.
 - **Kök neden:** `KazanimSorulariView.tsx` iki ayrı `.ks-lesson-who` span yazıyordu; `secondary.css` ≥720 px ızgarasında ikisi de `grid-area: who` alanına düşüyor (ızgara aynı alana iki öge koyunca üst üste bindirir). ≤719 px düzeninde alanlar satır satır aktığı için sorun yalnız geniş ekranda çıkıyordu.
-- **Çözüm/önleme:** tek `.ks-lesson-who` içinde yazar + ` · ` + rozet (`<b>`); alan `white-space: normal` ile sığmazsa sarar. Kural: adlandırılmış ızgara alanına (`grid-area`) birden çok kardeş öge yazılmaz; koşullu ek satır aynı kabın içine girer. Düzen değişikliği telefon + tablet (768/820) + masaüstü üçünde birden denetlenir (`scripts/perf/sayfa_tarama.mjs` taşma raporu üst üste binmeyi GÖREMEZ, ekran görüntüsüne bakılır).
+- **Çözüm/önleme:** tek `.ks-lesson-who` içinde yazar + ` · ` + rozet (`<b>`); alan `white-space: normal` ile sığmazsa sarar. Kural: adlandırılmış ızgara alanına (`grid-area`) birden çok kardeş öge yazılmaz; koşullu ek satır aynı kabın içine girer. Düzen değişikliği telefon + tablet (768/820) + masaüstü üçünde birden denetlenir (`scripts/altyapi/perf/sayfa_tarama.mjs` taşma raporu üst üste binmeyi GÖREMEZ, ekran görüntüsüne bakılır).
 
 ### H516 — Dağıtım yeniden başlatması sırasında açılan sayfa açılış ekranında sessizce takılıyordu (2026-11-09)
 - **Belirti:** Kullanıcı "site açılmıyor, splash'tan geçmiyor" dedi; tam o dakikada başka oturumun `dagit.sh` dağıtımı Oracle `meds-app`'i yeniden başlatmıştı (RAG yükü 1-2 dk). Sunucu dönünce site sorunsuzdu ama kullanıcı elle yenilemeden kurtulamamıştı.
@@ -2400,7 +2400,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ### H532 — CPU'lu `meds-ema` birimi açıkken ders EMA işi GPU yerine CPU'ya düşebiliyordu (2026-11-10)
 - **Belirti:** GPU'lu EMA işçisi beklerken `meds-ema.service` (yalnız CPU, aynı `ema-yerel` kuyruğu) da etkindi; kuyruğa giren işi hangisinin alacağı belirsizdi (kullanıcı kararı 2026-10-24: EMA DAİMA GPU).
 - **Kök neden:** iki işçi aynı sağlayıcı adıyla `/yerel/al` soruyor; birim hâlâ açılışta başlıyor.
-- **Çözüm/önleme:** ders sesi üretmeden önce `systemctl --user stop meds-ema` + `cozucu_ses_gpu.sh scripts/sesli_anlatim/ema_isci.py bekle`; günlükte "EMA Lightning hazır: cuda" görülür. İş bitince birim yeniden başlatılır. Kalıcı çözüm (birimi kaldırmak ya da GPU başlatıcısına çevirmek) kullanıcı kararı bekliyor.
+- **Çözüm/önleme:** ders sesi üretmeden önce `systemctl --user stop meds-ema` + `cozucu_ses_gpu.sh scripts/uretim/sesli_anlatim/ema_isci.py bekle`; günlükte "EMA Lightning hazır: cuda" görülür. İş bitince birim yeniden başlatılır. Kalıcı çözüm (birimi kaldırmak ya da GPU başlatıcısına çevirmek) kullanıcı kararı bekliyor.
 
 ### H533 — Taş Masası: dar ıstakada grup toplamı yanlış; Go/XOX botu hiç hata yapmıyordu (2026-11-10)
 - **Belirti:** Istaka daralınca (telefon, döndürme) bitişik duran taşların per toplamı (101 açılış balonu, Remi 30) yanlış görünüyordu. Go ve XOX'ta bot "hep en mantıklı yolu seçip" kazanıyordu. Takım Yedili/Yedili Zorlu modda masa dizilimi ve ıstaka sıralaması kapalıydı; çekilen taş ıstakaya rastgele ilk boşa giriyordu.
@@ -2473,7 +2473,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ### H544 — Ek modül içeriği hocanın materyali sorulmadan yazıldı; çalışma soruları gelince 16 konunun tamamı yeniden yazıldı (2026-11-10, Yürüyüş ve Kampçılık)
 - **Belirti:** "Yürüyüş ve Kampçılık" seçmeli dersi için kazanım bilinmediğinden doğada beceri ağırlıklı 8 başlık yazıldı (128 soru + 17 görsel). Kullanıcı ardından hocanın 32 sayfalık çalışma sorularını verdi: dersin yarısı ilk taslakta hiç yoktu (dağcılık tarihi ve türleri, kayaç–buzul, dağ ekosistemi, UIAA bildirgeleri, jeolog pusulası) ve taslaktaki bazı bilgiler hocanın cevabıyla çelişiyordu (su kaynağına 60 m ↔ 50 m; "altta hafif ve hacimli" ↔ hocaya göre yanlış; çanta görseli).
 - **Kök neden:** müfredat dışı derste tek kaynak hocadır; içerik genel bilgiyle kurulup sonradan hocaya uydurulmaya çalışıldı. Üretime başlamadan önce "hocanın notu, sunumu, çalışma sorusu var mı" diye sorulmadı.
-- **Kalıcı çözüm:** içerik `meds_temp/ek_modul/<modül>/hoca_calisma_sorulari.txt` esas alınarak yeniden kuruldu (`GOREV.md`: konu başına hoca soru numaraları + hocanın kendi içinde çeliştiği yerlerde verilen kararlar); ilk taslak `eski/` altında kaynak olarak kaldı. `scripts/ek_modul/TALIMAT.md`'ye "Hocanın çalışma soruları varsa ESAS KAYNAK odur" bölümü eklendi; iki bağımsız denetçi hoca kapsamını soru soru yeniden eşledi.
+- **Kalıcı çözüm:** içerik `meds_temp/ek_modul/<modül>/hoca_calisma_sorulari.txt` esas alınarak yeniden kuruldu (`GOREV.md`: konu başına hoca soru numaraları + hocanın kendi içinde çeliştiği yerlerde verilen kararlar); ilk taslak `eski/` altında kaynak olarak kaldı. `scripts/uretim/ek_modul/TALIMAT.md`'ye "Hocanın çalışma soruları varsa ESAS KAYNAK odur" bölümü eklendi; iki bağımsız denetçi hoca kapsamını soru soru yeniden eşledi.
 - **Önleme:** yeni ek modülde ilk iş hocanın materyalini istemektir (AGENTS kural 30). Hocanın kendi içinde çeliştiği cevaplar (kazık 45°/90°, tuvalet 50/150 m) sessizce "düzeltilmez": en çok yinelenen değer esas alınır, ekrana "ikisini de bil" notu düşülür ve kullanıcıya raporlanır. Hocanın bilimsel olarak tartışmalı ifadesi (baştan %50 ısı kaybı, gnays kristalleri) hocanın dediği gibi kalır; metin ona aykırı yeni iddia eklemez.
 
 ### H545 — `git add server.ts` başka oturumun commit'lenmemiş iki satırını da commit'e aldı; depoda olmayan dosyayı içe aktaran sunucu kodu origin/main'e gitti (2026-11-10)
@@ -2485,7 +2485,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ### H546 — Ek modülde sesli ders PDF'le birlikte ilerlemiyordu; eşleme kurulurken iki ölçüm tuzağı (2026-11-10, Yürüyüş ve Kampçılık)
 - **Belirti:** kullanıcı: "ek modüllerde sesli ders oluşturdum fakat PDF ile birlikte aynı anda işlenmiyor". Ek modül sesli dersi yalnız bölüm kartlarını sırayla yakıyordu; klasik sesli dersteki gibi PDF sayfası, anlatılan satır ve cümle takibi yoktu.
 - **Kök neden:** ek modül hattı (kural 30) kurul hattından ayrı kuruldu ve klasik dersin iki katmanı hiç üretilmedi: cümle zamanı (`ses.py` EMA'nın döndürdüğü zamanlamayı atıyor, klip başına yalnız süre yazıyordu) ve PDF konumu (kitapçık `pdf.py` ile basılıyor ama hangi bölümün hangi sayfada/kutuda olduğu kaydedilmiyordu).
-- **Kalıcı çözüm:** `scripts/ek_modul/pdf_esle.py` → `src/data/ek_moduller/<modül>/pdf_esle.json` (klip başına sayfa, bölüm kutusu, satır kutuları, cümle zamanı, cümle → not maddesi); ekranda "PDF ile" kipi (`EkPdfDers.tsx`, `PdfDocView` işaret katmanı). LLM ve GPU yok; ses yeniden üretilmedi.
+- **Kalıcı çözüm:** `scripts/uretim/ek_modul/pdf_esle.py` → `src/data/ek_moduller/<modül>/pdf_esle.json` (klip başına sayfa, bölüm kutusu, satır kutuları, cümle zamanı, cümle → not maddesi); ekranda "PDF ile" kipi (`EkPdfDers.tsx`, `PdfDocView` işaret katmanı). LLM ve GPU yok; ses yeniden üretilmedi.
 - **Tuzak 1 (PDF metin sırası):** PyMuPDF blokları okuma sırasıyla vermez; madde listeleri bloğun sonuna düşer, başlıktan sonraki satır bir sonraki bölümün başlığı olur. Satırlar sayfa içinde konuma (y, x) göre sıralanmadan başlık/madde aranmaz.
 - **Tuzak 2 (duraklama eşiği):** `cumle_zaman.py` eşiği (konuşma düzeyinin %2,5'i) EMA kliplerinde paragraf içi cümle sonlarını (0,2–0,3 sn, taban tam sessiz değil) görmüyor; sınırların %20'si tahminde kalıyor, klip sonundaki nefes payı son sınırı kapıyordu (son cümle 0,3 sn). Eşik %6'ya çıkarıldı, baş/son sessizlik aday dışı, tahmin konuşulan süre üzerinden, bütün sınırlar birlikte (sıra korunarak) yerleştirildi: 631/667 sınır duraklamada; üç klipte Whisper kelime zamanıyla ortalama sapma 0,06 sn, en çok 0,56 sn.
 - **Önleme:** ek modülde ses ya da ders kitapçığı yeniden üretilince `pdf_esle.py` yeniden çalıştırılır; `dogrula.py --modul` eşleme eskimişse (klip özeti ya da PDF boyutu tutmuyorsa) HATA verir, ekran da özeti tutmayan klibin eşlemesini kullanmaz. Karşılığı bulunamayan cümleye madde uydurulmaz (yalnız bölüm çerçevesi; kural 17'deki "çapa uydurma" yasağıyla aynı ilke).
@@ -2577,7 +2577,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ### H560 — Ajan hattı OpenDesign geçidine taşınırken roller tek modelde birleşti, eşlenmemiş adlar sessizce geçide gitti (2026-11-13, kullanıcı istedi)
 - **Belirti:** `claude -p` çağrıları geçit kipine alındıktan sonra (1) yazar ve denetçi aşamaları **aynı** modelle koşuyordu — yazar ≠ denetçi kuralı (AGENTS 14/26) kâğıt üstünde kalıyordu; (2) bazı betikler `--model claude-opus-5-5` gibi depoda gömülü adlar gönderdiğinde geçit isteği reddediyor ya da ad olduğu gibi iletildiği için anlaşılmaz hata dönüyordu; (3) bazı zincirler hâlâ eski `claude` CLI'ye ve Claude aboneliğine bağlıydı — abonelik bittiği için o aşamalar hiç çalışmıyordu.
 - **Kök neden:** Model kimliği **koda gömülüydü** (her betikte ayrı `"claude-opus-5-5"` sabiti; `butce.json`'da tek `claude.model`). Köprü eşlemesinde karşılığı olmayan ad `alias` tablosunda yoksa **olduğu gibi** geçide iletilir; geçit Anthropic kimliğini tanımaz. `ayan_model` fikri ilk yazıldığında yalnız tek varsayılan döndürdüğü için denetçi de yazarın modelini aldı. Yani "model seçimi" üç ayrı yerde (betik, butce.json, köprü tablosu) tutuluyordu ve hiçbiri diğerini denetlemiyordu.
-- **Kalıcı çözüm:** (1) **Tek kaynak** `otomasyon/llm/model_sec.py::ajan_model(rol)` — yazar/denetci/hizli rolleri ayrı: `butce.json` → `claude.model`, `claude.model_denetci` (`claude-opus-4-7` → `glm-5.3-flashx`, farklı aile), `claude.model_hizli`. Bütün zincirler (ders, son prova, hastalık, checkup, kamp, olası soru, çizim, arşiv, ders işçisi) buradan beslenir; koda model adı yazılmaz. (2) Köprü haritası `scripts/opendesign/rotalar.json` (tek kaynak, 14 görünen + 18 alias) ve `otomasyon/llm/opendesign.py::ESLEME` aynı olmak zorunda: `python3 scripts/opendesign/kopru.py --doctor` ikisini karşılaştırır, eksik eşlemede HATA verir. (3) CLI'sız makineler (Oracle) için `opendesign.py` doğrudan `/v1/messages` gönderir ve adı `ESLEME` ile çevirir; tanınmayan ad gönderilmez, açık hata yazılır. (4) `llm_kilit.py` bütün yollarda korunur — taşıma, kurallı 20'yi gevşetmez.
+- **Kalıcı çözüm:** (1) **Tek kaynak** `otomasyon/llm/model_sec.py::ajan_model(rol)` — yazar/denetci/hizli rolleri ayrı: `butce.json` → `claude.model`, `claude.model_denetci` (`claude-opus-4-7` → `glm-5.3-flashx`, farklı aile), `claude.model_hizli`. Bütün zincirler (ders, son prova, hastalık, checkup, kamp, olası soru, çizim, arşiv, ders işçisi) buradan beslenir; koda model adı yazılmaz. (2) Köprü haritası `scripts/altyapi/opendesign/rotalar.json` (tek kaynak, 14 görünen + 18 alias) ve `otomasyon/llm/opendesign.py::ESLEME` aynı olmak zorunda: `python3 scripts/altyapi/opendesign/kopru.py --doctor` ikisini karşılaştırır, eksik eşlemede HATA verir. (3) CLI'sız makineler (Oracle) için `opendesign.py` doğrudan `/v1/messages` gönderir ve adı `ESLEME` ile çevirir; tanınmayan ad gönderilmez, açık hata yazılır. (4) `llm_kilit.py` bütün yollarda korunur — taşıma, kurallı 20'yi gevşetmez.
 - **Önleme:** Yeni bir model/ad eklenirken **iki** yere yazılır: `rotalar.json` ve `opendesign.ESLEME`; sonra `kopru.py --doctor` koşulur (0 HATA). Bir betiğe `--model <sabit ad>` yazılmaz, `ajan_model()` çağrılır. Aynı aile iki rolde görünüyorsa (yazar = denetçi) denetim bağımsızlığı yoktur: denetçi rolü ayrı aileye (`glm-*`/`gpt-*`) bakar. `claude` CLI çağrısı eklerken önce `llm_kilit` + `model_sec` çifti eklenir, sonra çağrı yazılır.
 
 ### H561 — Artifact stüdyosu: önizleme sunucusu bulunamadı, grafikte iki farklı büyüklük tek eksende ezildi, `.claude/launch.json` `/dev/null` ile maskelendi (2026-11-13, kullanıcı istedi)
@@ -2593,7 +2593,7 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme:** `.env`'e yalnız dotenv'in okuyacağı yeni anahtar ekleniyorsa konteyner yeniden başlatma yeterlidir; **compose `environment:` listesine eklenmesi gereken** bir değişken söz konusuysa `docker compose up -d --force-recreate` gerekir (bu tur gerekmedi). "Container env'de yok" tek başına "uygulama görmüyor" demek değildir; kanıt uygulamanın kendi ucundan alınır. Konteyner içinden atılan istek yönetici/loopback muamelesi görmez.
 
 ### H570 — Ders analizi betiği tam ders anahtarını "kayıt defterinde yok" sandı (2026-11-13, k2-62/k2-65)
-- **Belirti:** `python3 scripts/ders_analizi/uret.py k2-62-kraniyal-sinir-muayenesi` → "k2-62-kraniyal-sinir-muayenesi: ders kayıt defterinde yok" ve çıktı yazılmadı. Aynı derste `--dogrula` → "çıktı yok, 1 HATA". Oysa ders kayıt defterinde (`src/data/dersler/k2.json`) k2-62 vardı ve `meds_database_v2/ders_bilgi/k2-62/degerlendirme/paket.json` hazırdı.
+- **Belirti:** `python3 scripts/uretim/ders_analizi/uret.py k2-62-kraniyal-sinir-muayenesi` → "k2-62-kraniyal-sinir-muayenesi: ders kayıt defterinde yok" ve çıktı yazılmadı. Aynı derste `--dogrula` → "çıktı yok, 1 HATA". Oysa ders kayıt defterinde (`src/data/dersler/k2.json`) k2-62 vardı ve `meds_database_v2/ders_bilgi/k2-62/degerlendirme/paket.json` hazırdı.
 - **Kök neden:** İki kimlik biçimi karıştı. Sesli ders **anahtarı** `k2-62-kraniyal-sinir-muayenesi` (tam), kayıt defterindeki **id** `k2-62` (kısa), değerlendirme klasörü de kısa kimlikle (`meds_database_v2/ders_bilgi/k2-62/`). `uret.py::kayit_bul` gelen anahtarı doğrudan `d["id"] == key` ile karşılaştırıyordu; `uret.py::uret` de paket yolunu tam anahtarla kuruyordu. Bu yüzden tam anahtarla çağrı hiçbir zaman eşleşmiyor, kısa anahtarla çağrı ise `ders_analizi/k2-62.json` gibi farklı dosya adı üretiyordu (eski dersler kısa adla üretilmişti, yeni dersler için çelişki doğdu).
 - **Kalıcı çözüm:** `kayit_bul` gelen anahtarı `k2-62` biçimine normalleştirir (`"-".join(key.split("-")[:2])`); paket yolu ve çıktı adı kısa kimlikle kurulur, MEtin/hizalama dosyaları `glob` ile tam anahtar üzerinden bulunur. Doğrulama: `uret.py k2-62` ve `uret.py k2-65` → 6 analiz bölümü + özet, `--dogrula` 0 HATA.
 - **Önleme:** Yeni bir betik yazarken **üç kimliği** ayrı tut: (a) sesli ders anahtarı (`k2-62-…`), (b) kayıt defteri id'si (`k2-62`), (c) alt klasör adı (`meds_database_v2/ders_bilgi/k2-62`). Betik hangisini beklediğini kullanım satırında yazsın; karşılaştırma ve dosya yolu **aynı** biçimden kurulsun. "kayıt defterinde yok" hatası görüldüğünde önce anahtarın hangi biçimde olduğu ve dizinin gerçek adı kontrol edilir, kayıt defterine madde eklenmez.
@@ -2656,3 +2656,48 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme kuralı:** "İçinde çok yazı var" tek başına zemin göstergesi DEĞİL; ayırt edici ölçüt yazının **nerede** olduğudur
   (kutunun dışında kalan kelime sayısı). Yeni bir görsel/görsel-içi-etiket slaytı eklendiğinde: `sekil_isareti` çıktısı
   `t: resim` olmalı, dökümde `R#` satırı bulunmalı; bulunmuyorsa şablon zemin değil şema kabul edilir. Kapı gevşetilmez.
+
+### H577 — "Toplu yol süpürmesi bazı betikleri sessizce atladı": Türkçe yerel ayarda sed/grep `[a-z]` aralığı "i" harfini eşleştirmiyor (2026-11-16, yeniden yapılandırma)
+- **Belirti:** son_prova çift-kopya temizliğinde `sed -E 's#meds_temp/son_prova/([a-z_]+\.py)#meds/scripts/uretim/son_prova/\1#g'`
+  ile docstring'lerdeki betik yolları kanonik konuma çevrildi. Hata vermedi ama **yalnız bir kısmı** değişti:
+  `plan.py`, `derle.py`, `dogrula.py` düzeldi; `deneme_degistir.py`, `soru_dagit.py` (ve `spVeri.ts`'teki atıf) **eski kaldı**.
+- **Kök neden:** Sistem dili `tr_TR.UTF-8`. GNU sed/grep köşeli parantez aralıklarını (`[a-z]`) yerel ayarın sıralama
+  kuralına (LC_COLLATE/LC_CTYPE) göre yorumlar. Türkçede noktalı/noktasız i (i/ı/İ/I) sıralaması yüzünden `[a-z]` aralığı
+  C ayarındaki gibi "i"yi kapsamaz; `[a-z_]+` "i" içeren her adda eşleşmez. Kaçan adların hepsinde "i" var
+  (degist**i**r, dag**i**t); "i" içermeyenler sorunsuz. Aynı komut `LC_ALL=C` ile hepsini eşleştirdi (doğrulandı).
+- **Kalıcı çözüm:** Kalan atıflar `LC_ALL=C sed ...` ile düzeltildi; `LC_ALL=C grep` ile 0 kalıntı doğrulandı.
+- **Önleme kuralı:** (a) Bu projede aralık içeren her sed/grep/awk süpürmesi (`[a-z]`, `[A-Z]`, `[a-zA-Z0-9]`)
+  **`LC_ALL=C` önekiyle** çalıştırılır. (b) Süpürmenin kendi doğrulaması da `LC_ALL=C` ile yapılır — tr_TR altında yapılan
+  denetim aynı kör noktayı tekrarlar ve "0 kaldı" yanılsaması verir. (c) Taşıma/silme **güvenlik kapılarında** aralık değil
+  birebir dosya adı (`grep -F` / sabit dize) kullanılır; bu turdaki kapılar böyle olduğundan etkilenmedi. (d) Büyük/küçük
+  harf duyarsız eşleşmede (`-i`) de aynı i/İ katlama tuzağı vardır; yol/dosya adında `-i` yerine birebir eşleşme tercih edilir.
+
+### H578 — Betik dizini taşırken sessiz kırılma sınıfları: yeniden yapılandırmada yakalanan 7 tuzak (2026-11-16)
+- **Belirti:** `meds/scripts/` 79 modülü `hat/ uretim/ altyapi/ moduller/ arsiv/` gruplarına taşınırken yol süpürmesi "0 kalıntı",
+  kum havuzu "fark yok" dediği hâlde gerçek çalıştırma kırılmalar gösterdi; bir kısmı dağıtımı da bozacaktı.
+- **Kök nedenler (her biri ayrı mekanizma):**
+  1. **Sabit kademe:** 123/153 betik kökü `Path(__file__).parents[N]` ile buluyordu; bir kademe derine taşıma hepsini yanlış yola sokar.
+  2. **Çift konum:** son_prova / blok_ozet / tekrar_analizi `meds_temp/<modül>/` KOPYASINDAN çalışacak şekilde yazılmıştı
+     (`KOK.parents[1]` = repo kökü yalnız orada doğru); git kopyası `meds/meds` gibi yanlış yol üretiyordu.
+  3. **Paket adıyla import:** `ders_isci/yayinla.py` scripts kökünü path'e ekleyip `from v2.stages import …` yapıyordu; v2 taşınınca
+     kırıldı. Kum havuzu stdlib dışı her importu sahteyle değiştirdiği için bunu GÖREMEZ. `deploy-code.sh` [0/4] bu betiği çağırır →
+     dağıtım bozulurdu.
+  4. **`python -m` + WorkingDirectory:** meds-core/v2search/v2semantic/revize `WorkingDirectory=…/scripts` + `-m v2` ile çalışıyordu;
+     yol dizesi olmadığından süpürme yakalamaz. Ayrıca v2 içi `cwd=parents[1]` "scripts kökü" değil "paket kabı" anlamındaydı —
+     kök sabitine çevrilseydi bozulurdu.
+  5. **Bağlamı yanlış okunan `..`:** `gece.sh` çalışma dizinine, `pdf_kirp.mjs` bir değişkene (`MEDS`) göreli `..` kullanıyordu;
+     sözdizimsel "+1 ..'" kuralı bunları bozardı. `.tsx` dosyaları düzelticinin uzantı listesinde yoktu (tsc yakaladı).
+  6. **Oracle sapması:** `rsync` silme yapmadığından taşınan eski dizinler Oracle'da kalır; Oracle sistem birimleri bir kez elle
+     kurulmuştu, dağıtım onları hiç güncellemiyordu → zamanlayıcılar eski kodu sessizce çalıştırmaya devam ederdi.
+  7. **Yerel ayar:** liste üretirken `sed '[a-z]'` yine "i"li adları eledi (H577 tekrarı).
+- **Kalıcı çözüm:** `scripts/kok.py` (marker walk-up, `_kok.MEDS/SCRIPTS/PROJE`); dönüştürücü yalnız modül DIŞINA çıkan ataları
+  çevirir, modül içi yollar göreli kalır; çift konumlu modüllerde kod git'te, veri `meds_temp/<modül>` (`*_KOK` env). yayinla.py
+  v2 kabını (`scripts/altyapi`) path'e ekler; dört birim `WorkingDirectory=…/scripts/altyapi`. `deploy-code.sh` [1a] kurulu Oracle
+  birimlerini repo ile eşitler, [4b] `deploy/oracle/tasinan_yollar.txt`'deki eski konumları sağlık kontrolünden SONRA arşive alır.
+  Araçlar ve doğrulama: `_temizlik/araclar/` (kum.py, yakala.py, donustur.py, supur.py, karsilastir.py).
+- **Önleme kuralı (dizin taşıma/yeniden adlandırma kontrol listesi):** (a) önce yol-çözümleme envanteri (`__file__`, `parents`, `dirname`,
+  `os.path.join(...'..')`, değişken zincirleri); (b) `meds_temp`'te aynı adlı kopya var mı → varsa önce kod/veri ayrımı; (c) kum havuzu
+  diferansiyeli YETMEZ — ayrıca AST ile "taşınan modülü paket adıyla import eden dış dosya" taraması ve `-m <modül>` / `WorkingDirectory`
+  taraması; (d) py-dışı göreli atıf yalnız dosyaya-göreli bağlamda değiştirilir, tüm uzantılar (.tsx dahil) listelenir; (e) gerçek kapılar
+  gerçek ÇALIŞMA girdileriyle koşulur (yayınlanmış kopya değil); (f) taşınan her yol `tasinan_yollar.txt`'ye; birim değişince repo kopyası
+  da değişir; (g) liste/süpürme Python ile (yerel ayardan bağımsız).

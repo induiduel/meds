@@ -2,7 +2,7 @@
  * Okunuş için yazıya dökülmüş sayıları yazılı biçime geri çevirir:
  *   "iki virgül bir" → "2,1", "sıfır virgül sıfır beşe" → "0,05'e", "yüzde kırkına" → "%40'ına", "yüzde on iki virgül beş" → "%12,5".
  * Yalnız ondalık (virgül) ve yüzde kalıplarına dokunur; "üç yılda" gibi düz sayı sözcükleri metinde kalır.
- * Ekran/PDF/DOCX dışa aktarımı ve Python denetim kapısı (scripts/sesli_anlatim/metin_denetle.py) aynı kuralı kullanır.
+ * Ekran/PDF/DOCX dışa aktarımı ve Python denetim kapısı (scripts/uretim/sesli_anlatim/metin_denetle.py) aynı kuralı kullanır.
  */
 const DEGER: Record<string, number> = {
   sıfır: 0, bir: 1, iki: 2, üç: 3, dört: 4, beş: 5, altı: 6, yedi: 7, sekiz: 8, dokuz: 9,

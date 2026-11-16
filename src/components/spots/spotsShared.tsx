@@ -2,7 +2,7 @@ import React from 'react';
 
 /**
  * Sınav spotları ortak tipleri ve küçük yardımcılar (ExamSpotsView + SpotCard).
- * Veri biçimi: src/data/exam_spots_k1.json (scripts/sinav_spotlari/birlestir.py üretir).
+ * Veri biçimi: src/data/exam_spots_k1.json (scripts/uretim/sinav_spotlari/birlestir.py üretir).
  */
 
 export type Kategori = 'en_sik' | 'karakteristik' | 'sayi' | 'eslesme' | 'tani_tedavi' | 'mekanizma' | 'tuzak' | 'siniflama';

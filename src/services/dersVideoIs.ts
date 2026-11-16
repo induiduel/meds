@@ -1,5 +1,5 @@
 // Sesli ders · yerel GPU video iş kuyruğu (yalnız yönetici). Öğrenciler videoyu kendi cihazında üretir (cdVideo.ts);
-// yönetici isterse iş burada kuyruğa girer, yerel bilgisayardaki işçi (scripts/ders_video/video_isci.py) alır, NVENC ile
+// yönetici isterse iş burada kuyruğa girer, yerel bilgisayardaki işçi (scripts/uretim/ders_video/video_isci.py) alır, NVENC ile
 // üretip MP4'ü Oracle'a rsync'ler ve durumu bildirir. GPU kuralları: AGENTS.md §10 beşinci istisna (meds-gpuguard + saat kilidi).
 //   POST   /api/canli-ders/video-is              { key, vid, cozunurluk }  → iş ekler
 //   GET    /api/canli-ders/video-is              → son işler + işçi son görülme

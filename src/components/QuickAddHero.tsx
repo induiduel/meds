@@ -275,7 +275,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       if (isCancelled) return;
       try {
         // Kurul uyuşmazlığı uyarısı yerel ve hafif; ders/konu tahmini ve havuz eşleşmesi sunucudaki motordan
-        // (src/services/recall/; ölçüm scripts/eval/recall-realtime.mts: ilk öneri doğru %83, ders %63 —
+        // (src/services/recall/; ölçüm scripts/moduller/eval/recall-realtime.mts: ilk öneri doğru %83, ders %63 —
         // eski tarayıcı algoritması %54,5 / %36 ve yazarken 39 ms ana iş parçacığı yükü).
         const local = getSmartQuestionAssistant(q, optionsList, committee.id);
         lastMatchTextRef.current = q;

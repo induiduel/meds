@@ -1,6 +1,6 @@
 /**
  * Soru karantinası (server-only): $MEDS_DATABASE_DIR/derived/quarantine/karantina.json
- * (scripts/advanced_ai/quarantine_questions.py üretir). Okuma uçlarında karantinadaki sorular gösterilmez,
+ * (scripts/altyapi/advanced_ai/quarantine_questions.py üretir). Okuma uçlarında karantinadaki sorular gösterilmez,
  * onarılanlar temiz kök/şıklarla döner. Kaynak dosyalar DEĞİŞTİRİLMEZ (yazma yolları filtrelenmemiş listeyi kullanır).
  */
 import fs from 'fs';

@@ -5,7 +5,7 @@ Hedef: `<brans>:<kod>/parca/<n>` (W = meds_temp/spot_cozucu/<brans>, sınamada `
 Girdi: parçanın sayfa satırları (L etiketli, sayfa başına önem haritası puanı) + bu sayfalara düşen çıkmış temsilciler (Q).
 Model yazar: maddeler (puan, başlık, bilgi, alt, tür, alıntı = L etiketleri, neden, detay, bağlı Q'lar, örnek sorular) +
 bu parçadaki her Q için karar (bağla ya da `elenen`). Alıntı metnini model YAZMAZ: derleyici L satırlarını birebir alır.
-Kapı: resmî `scripts/spot_cozucu/onem_dogrula.py` parçaya uygulanır (ders düzeyi sayım/bant kuralları birleştirmeye kalır) +
+Kapı: resmî `scripts/uretim/spot_cozucu/onem_dogrula.py` parçaya uygulanır (ders düzeyi sayım/bant kuralları birleştirmeye kalır) +
 parça hedefleri (madde ±2, örnek sayısı ve zorluk dağılımı birebir, her Q'ya karar).
 Uygulama: W/gorev/<kod>/onem_parca_<n>.json; birleştirme `otomasyon/llm/spot_birlestir.py onem`.
 """
@@ -178,7 +178,7 @@ DERS_DUZEYI = re.compile(r"madde sayısı|bandında|örnek soru \d+ \(beklenen|z
 
 def resmi_kapi(onem: dict, W: Path, kod: str) -> tuple[list[str], list[str]]:
     """Resmî onem_dogrula.check'i geçici bir çalışma klasöründe çalıştırır (pdf_metin/girdi/cikmis bağlantı)."""
-    sys.path.insert(0, str(c.KOK / "scripts" / "spot_cozucu"))
+    sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "spot_cozucu"))
     import onem_dogrula as OD
     with tempfile.TemporaryDirectory(prefix="onem_kapi_") as t:
         T = Path(t)

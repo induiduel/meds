@@ -14,7 +14,7 @@ import { OnayKapisi } from './ManageDersIsciOnay';
 const LessonPlayer = React.lazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
 
 /**
- * "Yeni dersler": Oracle'daki ders işçisinin (scripts/ders_isci) Drive'dan yakalayıp Claude ile ürettiği ders paketleri.
+ * "Yeni dersler": Oracle'daki ders işçisinin (scripts/uretim/ders_isci) Drive'dan yakalayıp Claude ile ürettiği ders paketleri.
  * Yönetici taslağı inceler (rapor, deste önizlemesi, sorular, sözlük, hastalıklar, bilgi havuzu, çıkmış bağları, kitaptan
  * tamamlanan bilgiler) ve karar verir. Karar taslağa yazılır; yayına birleştirme ayrı adımdır (onaylananlar).
  * Veri: /api/admin/ders-isci/* (sunucu → işçinin iç API'si).

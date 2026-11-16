@@ -2,7 +2,7 @@ import type { Brans } from '../brans';
 
 /**
  * Sesli çözücü sorusu / sesli asistan noktası → Öğren slaytı eşlemesi (branş başına tembel dosya).
- * Üretim: scripts/spot_cozucu/ogren_esle.py → src/data/cozucu_ogren/<brans>.json
+ * Üretim: scripts/uretim/spot_cozucu/ogren_esle.py → src/data/cozucu_ogren/<brans>.json
  *  dersler[<kod>].s[<soruNo>] · dersler[<kod>].n[<noktaId>] = [[desteSırası, slaytNo, puan], …] (puan 0–100, iyi olan önce)
  */
 export interface OgrenYer { deck: string; slayt: number; puan: number }

@@ -88,7 +88,7 @@ deploy [0b] geri çekme listesine ekleme demektir.
 | Kazanımlar | `src/data/kazanimlar/k*.json` | orta | Katalog | data/content (yeni) | sunucu |
 | Öğren desteleri | `src/data/interactive_learning_decks.json` | 86 MB | Katalog `decks` (data/content var) | var + `validate_learning_decks.py` kapısı | sunucu |
 | Ders kayıt defteri | `src/data/dersler/kN.json`, `branslar.json` | küçük | **Yok** | yeni: `data/content/dersler/` | hayır |
-| Kurul takvimi | `src/data/kurul_takvimi.json`, `kurulTakvimi.ts`, `scripts/takvim/aktif_kurul.py` | küçük | **Yok** | yeni: `data/content/kurul_takvimi.json` + SSE | hayır |
+| Kurul takvimi | `src/data/kurul_takvimi.json`, `kurulTakvimi.ts`, `scripts/hat/takvim/aktif_kurul.py` | küçük | **Yok** | yeni: `data/content/kurul_takvimi.json` + SSE | hayır |
 | Ders içerik paketleri | `src/data/ders_icerik/` | büyük | Yok (salt üretim) | salt okunur + yayın bayrağı | sunucu |
 | Sesli ders | `src/data/sesli_anlatim/`, `data/sesli_anlatim/`, `data/ogren_ses` | büyük | ManageSesliAnlatim | mevcut + görünürlük bayrağı | sunucu |
 | Önem/asistan/çözücü (branş) | `src/data/*_onem`, `*_asistan`, `*_cozucu`, `data/*_cozucu` | orta | **Yok** | yeni salt okunur + gizle | sunucu |

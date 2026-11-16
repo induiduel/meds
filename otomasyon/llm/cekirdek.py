@@ -25,7 +25,7 @@ TEMP = Path(os.environ.get("MEDS_TEMP_DIR") or KOK.parent / "meds_temp")
 IS_DIZIN = Path(os.environ.get("MEDS_GOREV_DIR") or TEMP / "gorev")
 ONBELLEK = TEMP / "llm_onbellek"
 DB2 = KOK.parent / "meds_database_v2"
-for p in (KOK / "scripts", KOK / "scripts" / "agents"):
+for p in (KOK / "scripts", KOK / "scripts" / "altyapi" / "agents"):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
@@ -289,9 +289,9 @@ def etiket_sizintisi(cikti, esleme: dict, paket_md: str = "") -> list[str]:
 # ── betik onarımı: ses alanlarında kısaltma/Roma rakamı okunuşu (B katmanı; modelin uğraşmasına gerek yok) ─────────────
 def ses_onar(cikti):
     """`ses`, `*_ses` ve `secenek_ses` altındaki metinlerde büyük harfli kısaltmaları ve Roma rakamlarını projenin EMA
-    okunuşuna çevirir (scripts/sesli_anlatim/modul_okunus.donustur: "MSH" → "mee see haa", "tip II" → "tip iki").
+    okunuşuna çevirir (scripts/uretim/sesli_anlatim/modul_okunus.donustur: "MSH" → "mee see haa", "tip II" → "tip iki").
     Yerinde değiştirir, değişen alan sayısını döndürür. Okunuşa çevrilmiş metinde büyük harf kalmadığından eş güçlüdür."""
-    sys.path.insert(0, str(KOK / "scripts" / "sesli_anlatim"))
+    sys.path.insert(0, str(KOK / "scripts" / "uretim" / "sesli_anlatim"))
     import modul_okunus as MO
     say = 0
 

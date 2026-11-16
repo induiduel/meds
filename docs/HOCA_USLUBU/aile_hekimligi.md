@@ -1,4 +1,4 @@
-# Aile Hekimliği — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Aile Hekimliği — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 53 tekil çıkmış soru · güven: **orta** · yıllar: {2018: 2, 2020: 24, 2021: 4, 2022: 2, 2023: 6, 2025: 1}
 

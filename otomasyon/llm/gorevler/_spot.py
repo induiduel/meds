@@ -69,7 +69,7 @@ def cikmis_sayfasi(W: Path, kod: str) -> dict[str, int]:
     C = [x for x in cikmislar(W, kod) if x["id"] not in out]
     if C:
         import sys
-        sys.path.insert(0, str(c.KOK / "scripts" / "kroki"))
+        sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "kroki"))
         from ortak import vektorle
         S = sayfalar(W, kod)
         no = [n for n in sorted(S) if len(S[n].split()) >= 5]

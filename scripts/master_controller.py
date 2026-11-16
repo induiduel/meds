@@ -55,7 +55,7 @@ MANAGED_SCRIPTS = {
     },
     "watchdog": {
         "name": "Otonom Donanım & Süreç Bekçisi (Watchdog)",
-        "script": "scripts/agents/watchdog.py",
+        "script": "scripts/altyapi/agents/watchdog.py",
         "cwd": ROOT_DIR,
         "category": "core",
         "desc": "Termal fren (%90 GPU, 80°C), çökme kurtarma, -ngl 3 taşma önleme ve otomatik süreç canlandırma.",
@@ -64,7 +64,7 @@ MANAGED_SCRIPTS = {
     },
     "pipeline_runner": {
         "name": "Ana Boru Hattı Koşucusu (Pipeline Runner)",
-        "script": "scripts/agents/pipeline_runner.py",
+        "script": "scripts/altyapi/agents/pipeline_runner.py",
         "cwd": ROOT_DIR,
         "category": "pipeline",
         "desc": "Aşama 2'den Aşama 10'a kadar tüm döngüyü sırayla ve güvenle yürüten ana motor.",
@@ -91,7 +91,7 @@ MANAGED_SCRIPTS = {
     },
     "question_quality_inspector": {
         "name": "Soru Kalite & Mükerrerlik Denetmeni",
-        "script": "scripts/agents/question_quality_inspector.py",
+        "script": "scripts/altyapi/agents/question_quality_inspector.py",
         "cwd": ROOT_DIR,
         "category": "audit",
         "desc": "Arka planda düşük CPU/GPU ile 6.263 soruyu tarar; hatalı ve mükerrer soruları raporlar.",
@@ -100,7 +100,7 @@ MANAGED_SCRIPTS = {
     },
     "thesaurus_anchor": {
         "name": "Faz 6.5: Tıbbi Sözlük (Thesaurus) & Kanıt Motoru",
-        "script": "scripts/advanced_ai/thesaurus_anchor_phase6_5.py",
+        "script": "scripts/altyapi/advanced_ai/thesaurus_anchor_phase6_5.py",
         "cwd": ROOT_DIR,
         "category": "advanced_ai",
         "desc": "Sorular ile amfi slaytlarını Latince/Türkçe tıp terminolojisi üzerinden kesin kancalar.",
@@ -109,7 +109,7 @@ MANAGED_SCRIPTS = {
     },
     "deep_metadata": {
         "name": "Faz 6: Derin Hiper-Metadata Motoru",
-        "script": "scripts/advanced_ai/deep_metadata_generator_phase6.py",
+        "script": "scripts/altyapi/advanced_ai/deep_metadata_generator_phase6.py",
         "cwd": ROOT_DIR,
         "category": "advanced_ai",
         "desc": "ICD-10, ayırıcı tanı, multidisipliner ilişkiler ve hiper-arama etiketleri üretir.",
@@ -118,7 +118,7 @@ MANAGED_SCRIPTS = {
     },
     "reconstruct_slides": {
         "name": "Faz 7.5: Amfi Ders Slaytı Müfredat Düzenleyici",
-        "script": "scripts/advanced_ai/reconstruct_slides_phase7_5.py",
+        "script": "scripts/altyapi/advanced_ai/reconstruct_slides_phase7_5.py",
         "cwd": ROOT_DIR,
         "category": "advanced_ai",
         "desc": "KBÜ Dönem 3 resmi müfredat hedeflerine göre amfi slaytlarını zenginleştirir.",
@@ -127,7 +127,7 @@ MANAGED_SCRIPTS = {
     },
     "phase14_cloud": {
         "name": "Faz 14: Çıkmış Soru İyileştirme (Gemini Flash Bulut)",
-        "script": "scripts/advanced_ai/phase14_cloud_question_editor.py",
+        "script": "scripts/altyapi/advanced_ai/phase14_cloud_question_editor.py",
         "cwd": ROOT_DIR,
         "category": "advanced_ai",
         "desc": "Gemini 3.8 Flash bulut modeliyle Robbins/Guyton tıp literatürüne dayalı kök/şık onarımı ve YZV üretimi.",
@@ -136,7 +136,7 @@ MANAGED_SCRIPTS = {
     },
     "phase14_local": {
         "name": "Faz 14: Çıkmış Soru Redaksiyonu (Gemma 3:4b Yerel GPU)",
-        "script": "scripts/advanced_ai/phase14_past_question_editor.py",
+        "script": "scripts/altyapi/advanced_ai/phase14_past_question_editor.py",
         "cwd": ROOT_DIR,
         "category": "advanced_ai",
         "desc": "Yerel RTX 4060 GPU Gemma 3 modeliyle OCR/imla ve müfredat redaksiyonu üretimi.",

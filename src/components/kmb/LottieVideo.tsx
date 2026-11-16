@@ -10,7 +10,7 @@
  * kurulur, uzaklaşınca yok edilir; JSON modül önbelleğinde (ön yükleme `lottieOnYukle`); kare yalnız değişince çizilir,
  * arayüz saati 10 fps. `zaman` verilirse (ders videosu) dış saatle sessiz çizer.
  * Ses: EMA klibi `o-<adım>` (adım videosu) ya da `l-<ad>` (konu videosu); bölüm içinde ses saatine eşlenir, bekleme payında durur.
- * Veri: scripts/kmb/lottie_uret.py + adim_lottie.py → src/data/kmb/lottie/.
+ * Veri: scripts/uretim/kmb/lottie_uret.py + adim_lottie.py → src/data/kmb/lottie/.
  */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { getCustomApiUrl } from '../../services/api';
@@ -29,7 +29,7 @@ export type LottieBilgi = {
 };
 type SesKayit = Record<string, { h: string; sure: number; zaman: [number, number][] }>;
 
-/** Lottie sürümü (2026-11-01): 2B düz çizgi film hattı `lottie2b/` (scripts/kmb/lottie2b) varsayılan; eski gerçekçi hat
+/** Lottie sürümü (2026-11-01): 2B düz çizgi film hattı `lottie2b/` (scripts/uretim/kmb/lottie2b) varsayılan; eski gerçekçi hat
  *  `lottie/` korunur ve `localStorage.medsoru_kmb_lottie_eski='1'` ile (karşılaştırma) seçilir. Aynı ad için 2B dosyası yoksa eskisi. */
 export const ESKI_TERCIH = 'medsoru_kmb_lottie_eski';
 export const eskiLottie = () => { try { return localStorage.getItem(ESKI_TERCIH) === '1'; } catch { return false; } };

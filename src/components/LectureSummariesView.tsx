@@ -5,7 +5,7 @@ import { Check, ChevronRight, Download, Search } from 'lucide-react';
 import { FilterPills, PageToolbar, type ToolbarChip } from './ui/PageToolbar';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';
 import summariesMetaData from '../data/summaries_meta.json';
-// Resmi ders programı + kaynak PDF eşleşmesi: scripts/pipeline/10-enrich-summaries.mjs üretir
+// Resmi ders programı + kaynak PDF eşleşmesi: scripts/altyapi/pipeline/10-enrich-summaries.mjs üretir
 import summariesEnrichment from '../data/summaries_enrichment.json';
 import curriculumDisciplines from '../data/curriculum_disciplines.json';
 import { SummaryReader } from './summary/SummaryReader';

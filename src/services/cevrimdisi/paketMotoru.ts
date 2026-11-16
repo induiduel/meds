@@ -795,7 +795,7 @@ export async function cevrimdisiBaslat() {
   }
   await sinir(import('./uyarlayicilar').then((m) => m.uyarlayicilariKur())).catch(() => {});
   guncelle({ hazir: true });
-  // Otomatik çevrimdışı sınaması (scripts/cevrimdisi_sinama) motoru arayüzsüz sürer
+  // Otomatik çevrimdışı sınaması (scripts/altyapi/cevrimdisi_sinama) motoru arayüzsüz sürer
   (window as any).__medsorCevrimdisi = { eksikleriGider: (z?: boolean) => import('./eksikGider').then((m) => m.eksikleriGider(z)), kuyrugaEkle, durumAl, katalogYenile, paketSil, ayarYaz, paketDurumu, cevrimdisiModuAc };
   void depolamaYenile();
   window.addEventListener('online', () => { void calistir(); void otomatikTur(); });

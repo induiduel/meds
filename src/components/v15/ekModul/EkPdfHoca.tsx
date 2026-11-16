@@ -8,7 +8,7 @@ const EkPdfBolum = lazy(() => import('./EkPdfBolum').then((x) => ({ default: x.E
 /**
  * Hoca soruları · "PDF ile" sesli çözüm: çözümlü soru kitapçığında çalan sorunun bloğu ekrana sığar, o an okunan cümlenin
  * satırı yanar (soru okunurken kök ve sırayla şıklar, çözümde doğru şık ve çözüm kutusunun satırları). Eşleme önceden
- * üretilir (hoca_pdf_esle.json; scripts/ek_modul/pdf_esle_hoca.py). Ses durmuşken ekrandaki sorunun bloğu açık durur.
+ * üretilir (hoca_pdf_esle.json; scripts/uretim/ek_modul/pdf_esle_hoca.py). Ses durmuşken ekrandaki sorunun bloğu açık durur.
  */
 export const EkPdfHoca: React.FC<{ m: EkModul; klipler: string[]; soru: number; sira: Sira }> = ({ m, klipler, soru, sira }) => {
   const esle = m.hocaPdf!;

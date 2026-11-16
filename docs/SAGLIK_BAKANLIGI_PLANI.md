@@ -38,11 +38,11 @@ Telefon: üstte yatay bölüm şeridi; masaüstü: solda bölüm rayı, ortada i
 - `src/data/saglik/` (tembel `import()`): `kaynaklar.json`, `turkiye.json`, `karabuk.json`, `asi.json`,
   `yenidogan.json`, `anne_kadin.json`, `tarama.json`, `salgin.json`, `cevre.json`, `kurumlar.json`,
   `baglantilar.json` (üretilir).
-- `scripts/saglik/baglantilari_kur.py`: her bölümün konu/anahtar kelime tanımından çıkmış soruları
+- `scripts/moduller/saglik/baglantilari_kur.py`: her bölümün konu/anahtar kelime tanımından çıkmış soruları
   (`src/data/pastQuestions.json`, disiplin+konu+kök eşleşmesi), kazanımları (`kazanimlar/lite`), desteleri
   (`interactive_learning_decks.json` + kazanım slayt bağları), spotları (`exam_spots_k1.json`) bulur →
   `baglantilar.json`. Ders başına yalnız Dönem 3 verisi.
-- `scripts/saglik/dogrula.py`: her veri öğesinin `kaynak` alanı kaynaklar.json'da var mı, URL devlet alan adı mı
+- `scripts/moduller/saglik/dogrula.py`: her veri öğesinin `kaynak` alanı kaynaklar.json'da var mı, URL devlet alan adı mı
   (`.gov.tr`, `tuik`, `resmigazete`, `.edu.tr`), boş sayı/metin yok mu.
 
 ## Aşamalar
@@ -61,7 +61,7 @@ Telefon: üstte yatay bölüm şeridi; masaüstü: solda bölüm rayı, ortada i
 
 - [x] 1 Plan + iskelet — rota `health_ministry` (`/saglik`, `/saglik/<bölüm>`), gezinme (Başvuru + v12 Kaynaklar), ön yükleme, arama paleti alt sayfaları
 - [x] 2 Araştırma — aşı (24 kaynak), anne/kadın/yenidoğan/tarama (48), Karabük (40), Türkiye istatistik/salgın/çevre/kurumlar (103); birleşik 192 kaynak
-- [x] 3 Bağlar — `scripts/saglik/baglantilari_kur.py` (9 bölüm, ~840 çıkmış soru, kazanım, deste, slayt çapası, spot, müfredat haritası)
+- [x] 3 Bağlar — `scripts/moduller/saglik/baglantilari_kur.py` (9 bölüm, ~840 çıkmış soru, kazanım, deste, slayt çapası, spot, müfredat haritası)
 - [x] 4 Arayüz — `components/saglik/` (SaglikView, SaglikBolumler, SaglikAraclar, SaglikOrtak, saglikVeri) + `styles/saglik.css`
 - [x] 5 Doğrulama — bağımsız denetim 156 kalem: 154 doğru, 0 yanlış, 1 yuvarlama (TDH 2025 → 1,42 düzeltildi), 1 kaynak eksik (topuk kanı zamanlaması → BCE 2026 eklendi); 5 göstergeye SİY 2025 bülteni değerleri eklendi. tsc 0, vite build; tarayıcı 375/800/1440 taşma taraması temiz
 - [x] 6 Kayıt — DEGISIKLIK_KAYDI, hafıza. commit 98c506a + Oracle dağıtımı yapıldı (2026-10-14)
@@ -69,9 +69,9 @@ Telefon: üstte yatay bölüm şeridi; masaüstü: solda bölüm rayı, ortada i
 ## Veri güncelleme yolu
 
 1. Araştırma çıktısını (asi.json, anne_yenidogan.json, karabuk.json, turkiye.json; her biri `kaynaklar` listesiyle) bir klasöre koy.
-2. `python3 scripts/saglik/birlestir.py --kaynak <klasör>` — devlet alan adı denetimi, kimlik birleştirme, kaynaksız öge eleme →
+2. `python3 scripts/moduller/saglik/birlestir.py --kaynak <klasör>` — devlet alan adı denetimi, kimlik birleştirme, kaynaksız öge eleme →
    `src/data/saglik/{kaynaklar,asi,anne_yenidogan,karabuk,turkiye}.json`.
-3. `python3 scripts/saglik/baglantilari_kur.py` — çıkmış soru / kazanım / deste bağları → `baglantilar.json` + `sorular/<bölüm>.json`.
+3. `python3 scripts/moduller/saglik/baglantilari_kur.py` — çıkmış soru / kazanım / deste bağları → `baglantilar.json` + `sorular/<bölüm>.json`.
    Çıkmış sorular ya da desteler değişince yeniden çalıştır.
 4. `npx vite build` (sunucu yeniden başlatılmaz; veri ön yüzle derlenir).
 
@@ -122,6 +122,6 @@ bölünecekse aynı desen: `BolumProps.alt/altGit` + `bolumKaynaklari(id, v, alt
 
 ## 5. tur (2026-10-15): tablo tam ekran, kompakt mod, ders slaytı işareti
 
-- Ders slaytı eşleşme dizini: `python3 scripts/saglik/ders_eslesme.py` → `src/data/saglik/ders_eslesme.json`; eşleştirici
+- Ders slaytı eşleşme dizini: `python3 scripts/moduller/saglik/ders_eslesme.py` → `src/data/saglik/ders_eslesme.json`; eşleştirici
   `src/components/saglik/saglikDers.ts` (eşikler ESIK_GUCLU/ESIK_YILLI/ESIK_ZAYIF). Yanlış eşleşme görülürse önce eşikler.
 - Tablo kabı ve tam ekran: `SaglikTablo.tsx` (TabloKabi). Kompakt: `.sbk.is-kompakt`.

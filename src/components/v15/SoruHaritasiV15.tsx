@@ -7,7 +7,7 @@ import '../../styles/v15/harita.css';
 
 /**
  * v15 · Soru haritası (tasarım sistemi v15.4 › b2harita): kurul × ders × sınav yılı çıkmış soru sayıları ısı tablosu.
- * Yeni sayfa: /soru-haritasi ↔ /sorular/soru-haritasi. Veri src/data/soru_haritasi.json (scripts/v15/soru_haritasi.py,
+ * Yeni sayfa: /soru-haritasi ↔ /sorular/soru-haritasi. Veri src/data/soru_haritasi.json (scripts/altyapi/v15/soru_haritasi.py,
  * pastQuestions.json'dan yalnız sayım). Hücreye dokunmak çıkmışları o ders ve yılla süzülü açar (?ders=&yil=&kurul=).
  * Tablo kendi kartında yatay kayar; ders sütunu yapışkan.
  */

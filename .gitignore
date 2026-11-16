@@ -30,7 +30,7 @@ __pycache__/
 .tmp*
 data/nested_fix_report.json
 data/local_rag_chunks.json
-# Sorgu zekâsı + hastalık grafiği: derlemden üretilir (scripts/search/build-query-intel.mts; sunucu açılışta kendisi derler)
+# Sorgu zekâsı + hastalık grafiği: derlemden üretilir (scripts/altyapi/search/build-query-intel.mts; sunucu açılışta kendisi derler)
 data/search/
 data/asset-archive/
 data/knowledge/
@@ -55,7 +55,7 @@ training_data/
 linux/
 \# raw DeepSeek exports to ingest/
 
-# Öğrenme desteleri ve kazanımlar derlemede bölünür (scripts/vite/splitLearningDecks.ts)
+# Öğrenme desteleri ve kazanımlar derlemede bölünür (scripts/altyapi/vite/splitLearningDecks.ts)
 src/data/decks/items/
 src/data/decks/flashcards.json
 src/data/kazanimlar/lite/
@@ -73,7 +73,7 @@ data/user_backups_birlestirme/
 data/backups/
 data/question_intake/
 
-# Çıkmış soru bankası git dışında (GitHub 100 MiB sınırı); günlük yedek: scripts/yedek/cikmis_yedek.sh → ~/medsor-yedek/cikmis/
+# Çıkmış soru bankası git dışında (GitHub 100 MiB sınırı); günlük yedek: scripts/altyapi/yedek/cikmis_yedek.sh → ~/medsor-yedek/cikmis/
 data/pastQuestions.json
 src/data/pastQuestions.json
 
@@ -122,7 +122,7 @@ data/ders_video/
 # Başarım kayıtları (kişi başına puan/ATP, ödemeler) — canlı veri
 data/basarim/
 
-# Son Prova kırpılmış özet PDFleri (scripts/son_prova/pdf_kirp.mjs; deploy-code.sh [1b] gönderir)
+# Son Prova kırpılmış özet PDFleri (scripts/uretim/son_prova/pdf_kirp.mjs; deploy-code.sh [1b] gönderir)
 data/son_prova/pdf/
 data/ders_isci_ekler/
 data/kmb_cozucu/ses/
@@ -132,7 +132,7 @@ data/terim_ses/
 data/ek_moduller/ses/
 
 # Artifact stüdyosu: üretilen sayfalar (betik ve örnek reçete repoda)
-scripts/artifact_studio/cikti/
+scripts/altyapi/artifact_studio/cikti/
 data/k2hocaara_cozucu/ses/
 data/k2noroloji_cozucu/ses/
 data/k2dersanaliz_cozucu/ses/

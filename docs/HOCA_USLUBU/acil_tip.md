@@ -1,4 +1,4 @@
-# Acil Tıp — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Acil Tıp — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 113 tekil çıkmış soru · güven: **orta** · yıllar: {2018: 5, 2020: 71, 2022: 13, 2023: 1, 2025: 1}
 

@@ -33,11 +33,11 @@ Eski profiller düz metin dizileriydi ve alanların çoğu tüm hastalıklarda a
 
 Varlık türleri: `belirti, bulgu, laboratuvar, goruntuleme, histopatoloji, patojen, gen_protein, ilac, tedavi, test, hastalik,
 anatomi, risk_faktoru, hucre, mekanizma`. Ad normalizasyonu: Türkçe, küçük harf, yalın, tekil ("ateş"); niteleyici `qualifier`'da
-("yüksek, titremeli"). Eş anlamlılar `scripts/diseases/varlik_esanlamlari.json` ile kanonik ada çevrilir.
+("yüksek, titremeli"). Eş anlamlılar `scripts/moduller/diseases/varlik_esanlamlari.json` ile kanonik ada çevrilir.
 
 ## Akış
 
-1. Profiller yeniden yazılır/düzenlenir (yönetici formu ya da toplu iş) → `scripts/diseases/hastalik_profilleri.py birlestir --yaz`
+1. Profiller yeniden yazılır/düzenlenir (yönetici formu ya da toplu iş) → `scripts/moduller/diseases/hastalik_profilleri.py birlestir --yaz`
    (eski dosya `meds_temp/hastalik_yedek/<zaman>/` altına yedeklenir).
 2. `hastalik_profilleri.py denetle` → 0 HATA (şablon cümle, eksik bölüm, geçersiz varlık türü).
 3. `hastalik_profilleri.py disa-aktar` → veri havuzu `$MEDS_DATABASE_DIR/derived/hastaliklar/`:

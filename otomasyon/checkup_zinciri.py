@@ -24,7 +24,7 @@ def main():
     if a.kurul:
         kurullar = [a.kurul]
     else:
-        sys.path.insert(0, str(MEDS / "scripts/takvim")); from aktif_kurul import durum
+        sys.path.insert(0, str(MEDS / "scripts/hat/takvim")); from aktif_kurul import durum
         kurullar = list(range(2, durum(dt.date.today().isoformat())["aktif"] + 1))
     durum_ = json.loads(DURUM.read_text()) if DURUM.exists() else {}
     hata = 0
@@ -46,7 +46,7 @@ def main():
         yedek = Path(tempfile.mkdtemp(prefix="medsor-checkup-"))
         if hedef.exists():
             shutil.copytree(hedef, yedek / "eski")
-        istem = (f"{MEDS}/scripts/patoloji_checkup/TALIMAT_CHECKUP.md talimatını uygula. Kurul {k}. Girdi klasörü {W}, "
+        istem = (f"{MEDS}/scripts/uretim/patoloji_checkup/TALIMAT_CHECKUP.md talimatını uygula. Kurul {k}. Girdi klasörü {W}, "
                  f"çıktı klasörü {hedef}. Proje kökü {KOK}.")
         try:
             with open(KOK / "meds_temp/hat/checkup_claude.log", "a") as log:
@@ -54,7 +54,7 @@ def main():
                                cwd=KOK, stdout=log, stderr=subprocess.STDOUT, timeout=3 * 3600)
         except subprocess.TimeoutExpired:
             print("   claude zaman aşımı")
-        r = subprocess.run([sys.executable, str(MEDS / "scripts/patoloji_checkup/dogrula.py"), "--kurul", str(k)],
+        r = subprocess.run([sys.executable, str(MEDS / "scripts/uretim/patoloji_checkup/dogrula.py"), "--kurul", str(k)],
                            capture_output=True, text=True)
         print("  ", (r.stdout.strip().splitlines() or ["?"])[-1])
         if r.returncode:  # kapı geçmedi: önceki sürüm geri (yarım/hatalı tablo yayına girmesin)

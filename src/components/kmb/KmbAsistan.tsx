@@ -810,7 +810,7 @@ function Yol({ ders, b, git, izle, ek }: { ders: Ders; b: string; git: (b: strin
 }
 
 /** Geliştirici önizlemesi: /kmb?sahne=<id>[&goster=1][&etiket=1][&odak=<öge>][&eylem=<json>] — tek sahneyi (3B varsa 3B) büyük çizer;
- *  scripts/kmb/sahne3b_onizle.mjs bununla yüksek çözünürlüklü kare alır. Öğrenciye bağlantı verilmez. */
+ *  scripts/uretim/kmb/sahne3b_onizle.mjs bununla yüksek çözünürlüklü kare alır. Öğrenciye bağlantı verilmez. */
 function SahneOnizle({ sp }: { sp: URLSearchParams }) {
   const sahne = sp.get('sahne') || 'foley';
   const durum = useMemo<SahneDurum>(() => {

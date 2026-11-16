@@ -57,7 +57,7 @@ yolu; doğrulayıcı da yalnız uzunluk üst sınırını ölçüyordu.
 
 ## Kalite kapısı
 
-- Asistan doğrulayıcıları (`meds/scripts/spot_cozucu/asistan_dogrula.py`, `meds/scripts/patoloji_onem/asistan_dogrula.py`)
+- Asistan doğrulayıcıları (`meds/scripts/uretim/spot_cozucu/asistan_dogrula.py`, `meds/scripts/uretim/patoloji_onem/asistan_dogrula.py`)
   `yardim` için alt sınır, boş kalıp yasağı ve olumlu cümle şartını **HATA** olarak denetler.
 - Çözücü doğrulayıcıları (`cozucu_dogrula*.py`) `siklar` / `yanlis` için aynı kalıp yasağını denetler.
 - Öğren: `validate_learning_decks.py deck.json --oyun-zorunlu --kurul2` mini soru şık açıklamalarını (`explanation`, 15–55 kelime,

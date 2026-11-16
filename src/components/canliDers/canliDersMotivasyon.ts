@@ -1,6 +1,6 @@
 /**
  * Sesli ders · motivasyon konuşmaları ve mola. Ders sesine DOKUNMAZ: kısa klipler (public/ses/motivasyon/<id>.mp3,
- * metinler src/data/sesli_motivasyon/havuz.json, üretim scripts/sesli_anlatim/motivasyon_ses_uret.py) ayrı bir ses
+ * metinler src/data/sesli_motivasyon/havuz.json, üretim scripts/uretim/sesli_anlatim/motivasyon_ses_uret.py) ayrı bir ses
  * öğesiyle çalar; o sırada ders duraklar, klip bitince kaldığı paragrafın başından sürer.
  *
  * Yerler: dersin başı (baştan başlarken), ortası (yarıyı geçince ilk paragraf sınırında), sonu (ders bitince) — her

@@ -1,4 +1,4 @@
-/** Sesli ders PDF terim yardımcısı (2026-10-26, scripts/sesli_anlatim/terim_sozlugu.py).
+/** Sesli ders PDF terim yardımcısı (2026-10-26, scripts/uretim/sesli_anlatim/terim_sozlugu.py).
  *  Yardımcı açıkken slayttaki terimlerin altı ince kesikli çizilir ve çok hafif sarı işaretlenir; dokununca terimin
  *  açıklaması kelimenin hemen üstünde ya da altında (sayfadaki yerine göre sola/sağa yaslı) açılır. Aynı terimler
  *  konuşmacı metninde paragrafın altında yazılı durur (seslendirilmez). Kapalıyken PDF'te hiçbir işaret yoktur. */

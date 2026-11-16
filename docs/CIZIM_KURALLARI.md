@@ -1,9 +1,9 @@
 # Canlı çizim ve işaretleme kuralları (bütün kurullar, bütün dersler, bütün PDF'ler)
 
 Sesli derste hoca anlatırken PDF üstünde çizilen her şeyin (ok, boyama, panel, etiket, işaretçi) kuralları. Kaynak:
-kullanıcı geri bildirimleri (2026-10-24, H40–H49). Üretim `scripts/cizim/cizim_uret.py` (yerleşim betikte), kapı
-`scripts/cizim/cizim_dogrula.py`, çizim `src/components/learn/pdf/CizimLayer.tsx` + `pdfDoc.css`, görüntüleyici
-`PdfDocView.tsx`. Modelin (Claude) uyduğu kısa liste `scripts/cizim/TALIMAT_CIZIM.md`'dedir; bu belge ayrıntıdır.
+kullanıcı geri bildirimleri (2026-10-24, H40–H49). Üretim `scripts/uretim/cizim/cizim_uret.py` (yerleşim betikte), kapı
+`scripts/uretim/cizim/cizim_dogrula.py`, çizim `src/components/learn/pdf/CizimLayer.tsx` + `pdfDoc.css`, görüntüleyici
+`PdfDocView.tsx`. Modelin (Claude) uyduğu kısa liste `scripts/uretim/cizim/TALIMAT_CIZIM.md`'dedir; bu belge ayrıntıdır.
 Kural ders ya da PDF'e özgü yazılmaz; yeni geri bildirim buraya ve TALIMAT'a genel kural olarak eklenir.
 
 ## 1. Ne zaman ne çizilir
@@ -25,7 +25,7 @@ Kural ders ya da PDF'e özgü yazılmaz; yeni geri bildirim buraya ve TALIMAT'a 
 - Birbirine bağlı olmayan ilişkiler **ayrı satır**; hepsi tek "A → B" ise **hizalı tablo** (kaynak | ok | hedef).
 - Kenar türleri: aktive (→), inhibe (⊣, kırmızı, belirgin uç), dönüşür (⇒), maske, karşıt; kenar etiketi ≤5 kelime.
 
-## 2b. Anlam şablonları (dersten bağımsız kütüphane: `scripts/cizim/sablonlar.json`)
+## 2b. Anlam şablonları (dersten bağımsız kütüphane: `scripts/uretim/cizim/sablonlar.json`)
 
 Panel, ilişkinin **tıbbi anlamına** göre bir şablona bağlanır; düzen anlamdan gelir, ders ya da PDF'ten değil.
 - Yönlü etki yoksa ok yoktur: **durum → bakılacak tetkik** (`tani_tetkik`), **zehirlenme → antidot/tedavi**
@@ -130,7 +130,7 @@ Betik her panel için sürümleri öncelik sırasıyla dener ve slaytın boşlu�
 
 ## 9. Sınama (her yeni ders ya da yerleşim değişikliğinde)
 
-**Otomatik kapı:** `node scripts/cizim/panel_sinama.mjs <ders>` — gerçek bileşen + stil, başsız Chrome, 366/567/1100 px;
+**Otomatik kapı:** `node scripts/uretim/cizim/panel_sinama.mjs <ders>` — gerçek bileşen + stil, başsız Chrome, 366/567/1100 px;
 taşma, iç taşma, ayrılan yükseklik aşımı, yatay zincirde kırılma, kelime ortasından kırılma, kesik yazı, panel içi üst üste
 binme, 7 px altı yazı. Ders zinciri (`cizim` adımı) çalıştırır; düşerse `CIZIM_PAY=1.4` ile bir kez yeniden yerleştirir,
 yine düşerse çizim yayına gönderilmez (çıkış 14).
@@ -142,7 +142,7 @@ yine düşerse çizim yayına gönderilmez (çıkış 14).
 
 ## 10. Sıkı ders kapısı ve şekil cümlesi (H59, kullanıcı kararı 2026-10-25: "bir daha kimse çizim hatası yapmasın")
 
-`scripts/cizim/cizim_kapisi.py <key> --kok <data/sesli_anlatim | data/arsiv_25_26/sesli_anlatim>` — `cizim_dogrula.py`
+`scripts/uretim/cizim/cizim_kapisi.py <key> --kok <data/sesli_anlatim | data/arsiv_25_26/sesli_anlatim>` — `cizim_dogrula.py`
 komutları tek tek süzer; bu kapı yayınlanacak dersin BÜTÜNÜNE bakar. 0 HATA olmadan çizim/işaret yayına gitmez:
 ders zinciri `cizim` adımı (çıkış 15), `arsiv_yayinla.py` (paket üretilmez), `sekil_cizim.py birlestir` (kapi_hata).
 
@@ -161,7 +161,7 @@ ders zinciri `cizim` adımı (çıkış 15), `arsiv_yayinla.py` (paket üretilme
 Üretim tarafındaki karşılıkları (kapıya gelmeden): `pdf_isaret.sekil_isareti` (şekil önceliği, komşu sayfa),
 `Sayfa.tekil_resim` (yinelenen kutu ve içinde ≥8 yazı kelimesi olan şablon/kart görseli resim sayılmaz; tam sayfa görsel
 yalnız metinsiz/taranmış slaytta zemin), `cizim_uret.lazer_uyumu` (K4/K7 komut düzeyinde ret), `TALIMAT_CIZIM.md` 21–26.
-Şekil cümlesi üretimi/onarımı: `scripts/arsiv_25_26/sekil_cizim.py hazirla → calistir → onar [--tur N] → birlestir`
+Şekil cümlesi üretimi/onarımı: `scripts/uretim/arsiv_25_26/sekil_cizim.py hazirla → calistir → onar [--tur N] → birlestir`
 (★ = lazeri resim/tablo olan cümle; onar turunda kapının ret nedeni modele geri verilir).
 **Kapı gevşetilmez; eşik değiştirmek kullanıcı kararıdır.** Kapı düşerse içerik yeniden üretilir.
 

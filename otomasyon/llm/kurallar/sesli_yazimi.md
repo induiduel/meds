@@ -1,4 +1,4 @@
-# Sesli ders metni (scripts/ders_isci/TALIMAT_SESLI.md §v2 özeti)
+# Sesli ders metni (scripts/uretim/ders_isci/TALIMAT_SESLI.md §v2 özeti)
 - Eksiksiz: bölüm sayfalarındaki her tıbbi bilgi (tanım, sınıflama, mekanizma, örnek, sayı/yüzde, gen/ilaç/hastalık adı, ayırıcı tanı, şekil/tablo açıklaması) anlatılır; yeni olgu/sayı/ilaç ekleme; OCR bozukluğunu doğru tıbbi biçimle yaz.
 - `ses`: deneyimli bir hekimin öğrencisine anlatır gibi doğal, tam Türkçe cümle; mekanizmayı neden-sonuç bağıyla kur; karıştırılan kavramları açıkça karşılaştır. "Arkadaşlar" seyrek. Merhaba, tanıtım, "bugün şunları göreceğiz", teşekkür YOK.
 - `ekran`: aynı bilginin kısa madde hâli (en çok 28 kelime), kilit kavram **kalın**; `duzey` 0 ana, 1 alt madde.

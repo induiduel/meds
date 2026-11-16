@@ -1,6 +1,6 @@
 /**
  * Kurul kampı ortak verisi: ders kayıt defteri (data/dersler/kN.json), branşlar (branslar.json), kamp dosyaları
- * (data/kamp/k<N>/<brans>.json, gece otomasyon/kamp_zinciri.py üretir; şema scripts/kamp/TALIMAT_KAMP.md) ve
+ * (data/kamp/k<N>/<brans>.json, gece otomasyon/kamp_zinciri.py üretir; şema scripts/uretim/kamp/TALIMAT_KAMP.md) ve
  * kaynak etiketi ("2f01:12" → "Ders 7 · Genel Anestezik İlaçlar · s.12").
  */
 import { getCustomApiUrl } from '../../services/api';

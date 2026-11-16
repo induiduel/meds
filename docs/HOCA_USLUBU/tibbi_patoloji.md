@@ -1,4 +1,4 @@
-# Tıbbi Patoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Tıbbi Patoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 1526 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 126, 2019: 27, 2020: 693, 2021: 192, 2022: 70, 2023: 87, 2024: 40, 2025: 24, 2026: 21}
 

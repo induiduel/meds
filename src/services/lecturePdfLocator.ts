@@ -432,7 +432,7 @@ export function resolveDeckPdfs(deckId: string): ResolvedDeckPdf[] {
 }
 
 /*
- * Son Prova özet PDF'leri (scripts/son_prova/pdf_kirp.mjs): partın konuşma metninde atıf yapılan slayt sayfaları,
+ * Son Prova özet PDF'leri (scripts/uretim/son_prova/pdf_kirp.mjs): partın konuşma metninde atıf yapılan slayt sayfaları,
  * kaynak derslerin PDF'lerinden kırpılıp tek PDF'te birleştirilir → data/son_prova/pdf/<partKey>.pdf (+ .json: ad, sayfa).
  * Deste kimliği "k<kurul>p-<partKey>" (ör. k1p-k1-81-son-prova-patoloji-1); eşleme dosyasına girmez.
  */

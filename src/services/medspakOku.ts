@@ -1,6 +1,6 @@
 /**
  * Tekil ders paketi okuyucusu (R7, ICERIK_MOTORU_V3.md §6): `.medspak` (SQLite) dosyası tarayıcıda, sunucuya
- * gönderilmeden açılır. sql.js + WASM yalnız paket açılınca yüklenir. Üretici: scripts/paket/medspak_uret.py.
+ * gönderilmeden açılır. sql.js + WASM yalnız paket açılınca yüklenir. Üretici: scripts/hat/paket/medspak_uret.py.
  */
 export interface MedspakCumle {
   id: string;

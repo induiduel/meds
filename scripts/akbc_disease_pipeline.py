@@ -444,7 +444,7 @@ def run_akbc_pipeline(limit: Optional[int] = None):
         if e_id in processed_ids and e_id in existing_profiles:
             continue
         # Şema 2 (yapılandırılmış, kaynakla doğrulanmış) profiller bu betikle EZİLMEZ;
-        # birleştirilmiş eski kimlikler (aliases) de yeniden açılmaz. Bkz. scripts/diseases/hastalik_profilleri.py
+        # birleştirilmiş eski kimlikler (aliases) de yeniden açılmaz. Bkz. scripts/moduller/diseases/hastalik_profilleri.py
         if existing_profiles.get(e_id, {}).get("schemaVersion") == 2 or any(
                 e_id in (p.get("aliases") or []) for p in existing_profiles.values()):
             continue

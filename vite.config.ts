@@ -4,10 +4,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import dotenv from 'dotenv';
-import { splitLearningDecks } from './scripts/vite/splitLearningDecks';
-import { surumDosyasi } from './scripts/vite/surumDosyasi';
-import { cevrimdisiManifest } from './scripts/vite/cevrimdisiManifest';
-import { yonetimGirisi } from './scripts/vite/yonetimGirisi';
+import { splitLearningDecks } from './scripts/altyapi/vite/splitLearningDecks';
+import { surumDosyasi } from './scripts/altyapi/vite/surumDosyasi';
+import { cevrimdisiManifest } from './scripts/altyapi/vite/cevrimdisiManifest';
+import { yonetimGirisi } from './scripts/altyapi/vite/yonetimGirisi';
 
 dotenv.config();
 

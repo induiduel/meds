@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 /**
  * Hastalık → ders programı (Kurul → Ders → Konu) eşlemesi: src/data/disease_lessons.json.
- * Üretim: `python3 scripts/diseases/hastalik_ders_eslesmesi.py [--rapor]` (yalnız CPU; diseases.json, kazanımlar,
+ * Üretim: `python3 scripts/moduller/diseases/hastalik_ders_eslesmesi.py [--rapor]` (yalnız CPU; diseases.json, kazanımlar,
  * çıkmış soru konu etiketleri ya da ders özetleri değişince yeniden çalıştır). Eşleşme tahmin değildir: profilin adı /
  * eş adı / Latince adı o konunun metninde sözcük sınırıyla geçmelidir (ayrıntı betiğin başında).
  */

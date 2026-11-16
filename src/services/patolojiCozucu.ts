@@ -1,7 +1,7 @@
 /**
  * Patoloji sesli soru çözücü — EMA ses klipleri.
  *   GET /api/patoloji-cozucu/ses/:kod/:klip.mp3  — MP3 (Range/206). Adreste ?v=<metin özeti> olduğu için uzun önbellek.
- * Klipler scripts/patoloji_cozucu/cozucu_ses.py ile bu bilgisayarda EMA Lightning'le üretilir → data/patoloji_cozucu/ses/<kod>/
+ * Klipler scripts/uretim/patoloji_cozucu/cozucu_ses.py ile bu bilgisayarda EMA Lightning'le üretilir → data/patoloji_cozucu/ses/<kod>/
  * (ortak klipler: ses/ortak/). İçerik (metinler, zamanlamalar) ön yüz paketinde: src/data/patoloji_cozucu/<kod>.json.
  */
 import path from 'path';

@@ -2,7 +2,7 @@
 
 > Kullanıcı kararı 2026-10-30: öğrencilerin en önemli bulduğu, hocanın vurguladığı, çıkmışta sorulan ya da sorulması muhtemel
 > yerleri derleyen notlar **hem oluşturulmuş hem oluşturulacak** 2026-27 dersleri için tam içerik işçisinin zorunlu malzemesidir.
-> Kural: AGENTS.md madde 28. Veri: `src/data/ogrenci_onem/`. Ders belgeleri: `docs/OGRENCI_ONEM/<ders>.md`. Betikler: `scripts/ogrenci_onem/`.
+> Kural: AGENTS.md madde 28. Veri: `src/data/ogrenci_onem/`. Ders belgeleri: `docs/OGRENCI_ONEM/<ders>.md`. Betikler: `scripts/uretim/ogrenci_onem/`.
 
 ## 1. Kaynak
 
@@ -31,7 +31,7 @@ sayfada okuyucu ayrıca doğruladı. Ham okuma `data/ogrenci_onem/ham/<pdf>_sNN.
    soruda öğrencinin "Angelman" cevabı yanlış, bankada Turner; KLP sorusunda "Rancho Los Amigos" üstünü çizip "Glasgow" yazmış,
    banka cevabı "Hepsi"). Bunlar **kullanılmaz**; ders belgesinde §9 tablosundadır.
 
-## 3. Birim, sinyal, öncelik (`scripts/ogrenci_onem/birlestir.py`)
+## 3. Birim, sinyal, öncelik (`scripts/uretim/ogrenci_onem/birlestir.py`)
 
 - Birim = slayt / öğrenci özeti / el notu bloğu. Yapıştırılmış çıkmış, aynı dersin en yakın birimine bağlanır (bge-m3 ≥ 0,50).
 - Bankadaki Kurul 2 çıkmışları (Psikiyatri, Nöroloji, Tıbbi Genetik, FTR; karantina dışı; OCR varyantları kosinüs ≥ 0,95 ile tekilleştirildi)
@@ -44,7 +44,7 @@ sayfada okuyucu ayrıca doğruladı. Ham okuma `data/ogrenci_onem/ham/<pdf>_sNN.
 - Puan bir **yönlendirmedir**, tıbbi kanıt değildir; kanıtsız "önemli" damgası yasağı (AGENTS 26) sürer: rozet ve vurgu
   cümlesi yalnız A/B biriminde ve birimin kanıtı (çıkmış / işaret / el notu) belgede yazılıyken kullanılır.
 
-## 4. İsabet (başarı) ölçümü (`scripts/ogrenci_onem/basari.py`)
+## 4. İsabet (başarı) ölçümü (`scripts/uretim/ogrenci_onem/basari.py`)
 
 Soru: öğrencinin notu gerçekten sorulan yerleri yakalıyor mu? Vektör benzerliği yalnız konuyu yakalar (k2-05'te nöroanatomi
 soruları muayene birimlerine 0,5 benzerlikle düşüyor). Bu yüzden bankadaki her Kurul 2 çıkmışı için bağımsız yargıç (alt ajan)
@@ -80,8 +80,8 @@ Yorum:
 
 ## 5. Tam içerik işçisi kuralları (AGENTS 28)
 
-1. **E0 hazırlık:** `scripts/tam_hat/hazirlik.py` → `ogrenci_onem.json` (A/B birimleri bu yılın sayfasına eşlenmiş; eşleşmeyen
-   "bu yıl slaytta yok?" işaretli). Elle: `python3 scripts/ogrenci_onem/oku.py --ders <k2-xx> [--sayfalar sayfalar.json]`.
+1. **E0 hazırlık:** `scripts/hat/tam_hat/hazirlik.py` → `ogrenci_onem.json` (A/B birimleri bu yılın sayfasına eşlenmiş; eşleşmeyen
+   "bu yıl slaytta yok?" işaretli). Elle: `python3 scripts/uretim/ogrenci_onem/oku.py --ders <k2-xx> [--sayfalar sayfalar.json]`.
    Her yazar alt ajanın istemine bu özet + `docs/OGRENCI_ONEM/<ders>.md` bağlantısı konur.
 2. **Önem listesi:** A birimleri (bu yıl slaytta varsa) önem listesinde madde olur, madde `ogrenci: {"oncelik": "A", "not": "<kanıt>"}`
    taşır (ekranda "Öğrenciler buraya çalıştı" rozeti); B birimi madde ise `oncelik: "B"`. Puan sıralamasında çıkmış kanıtlı
@@ -97,7 +97,7 @@ Yorum:
 5. **Ara soru (kural 27):** ders belgesindeki "ara soru adayları" ilk adaylardır.
 6. **Kaynak sadakati:** 2026-27 slaytında karşılığı olmayan birim anlatıma girmez; çıkmış kanıtlıysa önem listesine "geçen yıl
    sorulmuştu" notuyla ve örnek soruya girebilir. §9 yanlışları kullanılmaz; güveni düşük el notu tek başına dayanak olmaz.
-7. **Kapı:** `python3 scripts/ogrenci_onem/kapi.py <ders> [--sayfalar …]` 0 HATA. Bilgi düzeyinde çalışır: birimin her el notu,
+7. **Kapı:** `python3 scripts/uretim/ogrenci_onem/kapi.py <ders> [--sayfalar …]` 0 HATA. Bilgi düzeyinde çalışır: birimin her el notu,
    vurgulu satırı ve çıkmış önermesi anlatım/önem cümlelerinde aranır (bge-m3 ≥ 0,80, ya da ≥ 0,62 + kelime kökü örtüşmesi ≥ %50;
    yalnız vektör yanıltır: "spastisite ve rijidite tonus artışıdır" cümlesi rijiditenin tanımını soran bilgiye 0,69 verir).
    A: anlatım kapsamı ≥ %60, çıkmış bilgisi anlatımda, önem listesinde ≥ 1 bilgi, ≥ 2 soru (eksik = HATA; bu yıl slaytta yoksa UYARI).
@@ -110,7 +110,7 @@ Yorum:
    - `celiski`: `sayfa` + `slayt_alinti` o sayfada birebir (bu yılın değeri farklı: kalıtım %10 ↔ eski çıkmış %20);
    - `slayt_disi`: `yok_terimler` (≥ 2) hiçbir sayfada geçmemeli.
    Kapı her kaydı yeniden denetler; denetimi geçmeyen kayıt HATA'dır. "Eşleyici kaçırıyor" diye HATA bırakılmaz.
-8. **Yeni öğrenci notu gelirse:** `data/ogrenci_onem/ham/` biçiminde okunur (yönerge: `scripts/ogrenci_onem/OKUMA_YONERGESI.md`)
+8. **Yeni öğrenci notu gelirse:** `data/ogrenci_onem/ham/` biçiminde okunur (yönerge: `scripts/uretim/ogrenci_onem/OKUMA_YONERGESI.md`)
    → `birlestir.py` → yargı (`basari.py --hazirla`, yargıç, `--hesapla`) → analiz (`ANALIZ_YONERGESI.md`) → `belge.py`.
 
 ## 6. Sınırlar (gizleme yok)

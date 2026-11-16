@@ -1,4 +1,4 @@
-# Göğüs Cerrahisi — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Göğüs Cerrahisi — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 9 tekil çıkmış soru · güven: **dusuk** · yıllar: {2020: 2, 2022: 2}
 

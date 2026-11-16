@@ -2,7 +2,7 @@
  * Sesli soru çözücü (branş geneli) — ses klipleri.
  *   GET /api/cozucu-ses/:brans/:ses/:kod/:klip.mp3 — MP3 (Range/206). Adreste ?v=<metin özeti> olduğu için uzun önbellek.
  * Klasör: data/<brans>_cozucu/ses/<kod>/ (varsayılan ses, EMA) ya da data/<brans>_cozucu/ses_<ses>/<kod>/ (başka sesler).
- * Klipler bu bilgisayarda üretilir (patoloji: scripts/patoloji_cozucu/cozucu_ses.py; diğerleri: scripts/spot_cozucu/ses.py);
+ * Klipler bu bilgisayarda üretilir (patoloji: scripts/uretim/patoloji_cozucu/cozucu_ses.py; diğerleri: scripts/uretim/spot_cozucu/ses.py);
  * Oracle'a rsync ile taşınır. İçerik (metinler, zamanlamalar) ön yüz paketinde: src/data/<brans>_cozucu/.
  */
 import path from 'path';

@@ -36,7 +36,7 @@ illüstrasyon (sırtüstü hasta, kesit penceresi, yeşil örtü, mavi böbrek k
    probe/enjektör/küvet tanınır; aynı renkte iki şey yan yana gelirse kontur ya da ton ayırır.
 6. **Fizik**: dik duran şey tutulur (penis eldivenli elle dik), yerçekimi (idrar aşağı/arkaya birikir, damla düşer),
    kapta sıvı yatay yüzey; ışık tek yönden.
-7. **Kare denetimi**: her sahne `node scripts/kmb/sahne3b_onizle.mjs <sahne> --goster --etiket` (tüm ögeler + etiketler) ve
+7. **Kare denetimi**: her sahne `node scripts/uretim/kmb/sahne3b_onizle.mjs <sahne> --goster --etiket` (tüm ögeler + etiketler) ve
    `--film` (gerçek vuruş durumları) ile çizilir, PNG göz ile okunur; etiketler üst üste BİNMEZ (koordinatlar buna göre
    seçilir; etiket pili ≈ metin.length × 9,2 px genişlik, 28 px yükseklik), çizim kenarı kesilmez.
 
@@ -51,13 +51,13 @@ illüstrasyon (sırtüstü hasta, kesit penceresi, yeşil örtü, mavi böbrek k
 - Ok işareti `markerEnd="url(#kmb-ok)"`; yardımcı `Boru` (`sahneOrtak.tsx`) kullanılabilir ama 2B'de iki çizgili kateter yeğlenir.
 - Etiket koordinatları öge yakınında, birbirine ≥ 44 px dikey ya da pil genişliği kadar yatay uzaklıkta.
 - Önizleme: sunucu 3000 `dist/`'i sunar → her değişiklikte `flock /tmp/kmb_build.lock npx vite build` (≈15 sn), sonra
-  `node scripts/kmb/sahne3b_onizle.mjs <sahne> [--goster --etiket] [--eylem='[{"t":"goster","id":"…"}]'] --w=1280 --out=<klasör>`.
+  `node scripts/uretim/kmb/sahne3b_onizle.mjs <sahne> [--goster --etiket] [--eylem='[{"t":"goster","id":"…"}]'] --w=1280 --out=<klasör>`.
   Film vuruşları: `--film --hedef=N` (02.json `hedefCalisma[].film`). Tip denetimi `npx tsc --noEmit -p .`.
-- Kapı: `python3 scripts/kmb/dogrula.py` 0 HATA.
+- Kapı: `python3 scripts/uretim/kmb/dogrula.py` 0 HATA.
 
 ## 4. Lottie 2B hattı (videolar; eski hat korunur)
 
-- Tek kaynak yine 2B SVG sahneleri: `scripts/kmb/lottie2b/svg_disa.mjs` sahneleri başsız Chrome'dan SVG + öge kutusu
+- Tek kaynak yine 2B SVG sahneleri: `scripts/uretim/kmb/lottie2b/svg_disa.mjs` sahneleri başsız Chrome'dan SVG + öge kutusu
   (`svg/<sahne>.svg`, `svg/bbox.json`) olarak alır; `svg_lottie.py` bunları Lottie şekil katmanlarına çevirir
   (`svg/<sahne>.lottie.json`: data-id başına katman, degrade dolgu/çizgi, evenodd, ok ucu, `cz` yolları; `<text>` taşınmaz → etiket).
   Sahne değişince ikisi yeniden koşulur (sıra: `npx vite build` → `svg_disa.mjs` → `svg_lottie.py` → üreticiler).
@@ -68,8 +68,8 @@ illüstrasyon (sırtüstü hasta, kesit penceresi, yeşil örtü, mavi böbrek k
   Bölüm adları/metinleri eski hatla birebir (ses klipleri `l-<ad>` / `o-<adım>` değişmedi).
 - Oynatıcı (`LottieVideo.tsx`): aynı ad için `lottie2b/` dosyası varsa onu, yoksa eski `lottie/` dosyasını yükler;
   `localStorage.medsoru_kmb_lottie_eski='1'` eski hattı zorlar (karşılaştırma). Eski üreticiler ve çıktılar silinmez.
-- Kare denetimi: `LOT=src/data/kmb/lottie2b OUT=<klasör> GEN=360 node scripts/kmb/kare_onizle.mjs <ad>` (0 otomatik bulgu + göz);
-  tek kare: `node scripts/kmb/lottie2b/kare.mjs <json> --t=…`.
+- Kare denetimi: `LOT=src/data/kmb/lottie2b OUT=<klasör> GEN=360 node scripts/uretim/kmb/kare_onizle.mjs <ad>` (0 otomatik bulgu + göz);
+  tek kare: `node scripts/uretim/kmb/lottie2b/kare.mjs <json> --t=…`.
 - Hikâye filmi (`HikayeFilmi.tsx`, `?hikaye=1`): 18 adım videosu tek akışta; bölüm başında o bölümde kazanılan hedefler
   (`hedefler[].adimlar`, her hedef ilk geçtiği bölümde), sonunda öğretici bulgular (`puf`, `dikkat`, hedef kartı `hata`), bitişte
   15 kazanım onay listesi. Kartlar metin uzunluğuna göre 6–14 sn geri sayımla ilerler; video bitince kendiliğinden sonraki kart.

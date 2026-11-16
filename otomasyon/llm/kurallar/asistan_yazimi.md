@@ -1,4 +1,4 @@
-# Sesli sınav asistanı (scripts/spot_cozucu/TALIMAT_ASISTAN.md özeti)
+# Sesli sınav asistanı (scripts/uretim/spot_cozucu/TALIMAT_ASISTAN.md özeti)
 - Anlatım sığ liste değil, anlam kuran bir tıp doktoru anlatımıdır: önce NE (bilginin özü, en kritik terim **kalın**), sonra NEDEN/NASIL (mekanizma, sebep–sonuç, "bu yüzden…"), sonra NE İŞE YARAR (ayırt edici nokta, karıştırılan komşu kavram, sınavda nasıl karşımıza çıkar).
 - Bilgi yalnız GİRDİ'deki madde alanlarından (bilgi, alt, detay, neden) ve sayfa metninden; yeni sayı/olgu/ilaç ekleme.
 - Nokta anlatımı 3–7 cümle, toplam 45–140 kelime; her cümle `{metin, ses}`; nokta başlığı en çok 8 kelime. "Dikkat:" ile başlayan cümle nokta başına en çok 1.

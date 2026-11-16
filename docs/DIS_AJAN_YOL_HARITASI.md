@@ -1,6 +1,6 @@
 # Dış yapay zekâ ajanları için tam içerik işçisi yol haritası (kullanıcı kararı 2026-10-29)
 
-> **Ajana verilecek asıl görev yönergesi:** `scripts/tam_hat/dis_ajan/TALIMAT_DIS_AJAN.md` (başlangıç komutları, kanıt→üretim→kapı döngüsü, evre kartları, hata mesajı tablosu, belirsizlik tablosu, rapor şablonu). Bu belge gerekçe ve mimaridir; ajan talimatı ile birlikte okunur.
+> **Ajana verilecek asıl görev yönergesi:** `scripts/hat/tam_hat/dis_ajan/TALIMAT_DIS_AJAN.md` (başlangıç komutları, kanıt→üretim→kapı döngüsü, evre kartları, hata mesajı tablosu, belirsizlik tablosu, rapor şablonu). Bu belge gerekçe ve mimaridir; ajan talimatı ile birlikte okunur.
 
 > Bu belge **Claude dışındaki** her ajan (Gemini, GPT, DeepSeek, Qwen, Antigravity, OpenCode modelleri…) içindir.
 > Amaç: aynı PDF'ten ders üretirken Claude'un izlediği yolu hatasız izlemek. **Önce bu belgeyi baştan sona oku, sonra
@@ -35,22 +35,22 @@ echo '{"ajan":"'$E'","model":"<tam model adı>","tarih":"'$(date -I)'","surum":"
 - **Yazamayacakların:** `src/data/**` içindeki mevcut dosyalar, `interactive_learning_decks.json`, `site_ayar.json`,
   `hat.json`, `guncelleme_notu.json` (onem'i yalnız Claude/kullanıcı artırır), `data/**` mevcut dosyalar, `*.md` belgeler,
   `AGENTS.md`. Aşağıdaki ders-dışı ortak dosyaya ihtiyaç duyarsan **dur ve kullanıcıya yaz**.
-- Çalışma bitince `python3 scripts/tam_hat/dis_ajan_kapisi.py --ajan $E --ders $D` — izinsiz dosya değişimi, eksik
+- Çalışma bitince `python3 scripts/hat/tam_hat/dis_ajan_kapisi.py --ajan $E --ders $D` — izinsiz dosya değişimi, eksik
   `ajan.json`, var olan anahtar varsa HATA verir.
 
 ## 2. İş akışı (Claude ile aynı evreler; sıra TAM_HAT_HIZLI_AKIS.md)
 
 | Evre | Ne yapılır | Çıktı (`$W/` altında) | Kapı |
 |---|---|---|---|
-| E0 | `scripts/tam_hat/hazirlik.py <klasör> --ders $D` (PDF metni, sayfa görüntüleri, öğrenci notu, hoca dökümü) | `sayfalar.json`, `op/s-NNN.png` | dosyalar var |
-| E1 | değerlendirme paketi, `soru_uslup_ornek.py` | `paket.json`, `soru_uslubu.json` | `scripts/ogrenci_drive/degerlendirme_dogrula.py` |
+| E0 | `scripts/hat/tam_hat/hazirlik.py <klasör> --ders $D` (PDF metni, sayfa görüntüleri, öğrenci notu, hoca dökümü) | `sayfalar.json`, `op/s-NNN.png` | dosyalar var |
+| E1 | değerlendirme paketi, `soru_uslup_ornek.py` | `paket.json`, `soru_uslubu.json` | `scripts/uretim/ogrenci_drive/degerlendirme_dogrula.py` |
 | E2 | anlatım planı → anlatım; Öğren destesi; örnek sorular; çözücü; envanter | `anlatim_plani.md`, `metin.md`, … | `metin_denetle.py`, `turkce_uslup`, `validate_learning_decks.py --oyun-zorunlu --kurul2`, `soru_uslup.py`, `kaynak_kapisi.py`, `cozucu_dogrula.py` |
 | E3 | ses + zaman + çıkmış chip + terim/kısaltma + ders içerik paketi | — | `ders_icerik_dogrula.py` |
 | E4 | çapa → çizim | `capa.json`, `cizim.json` | `capa_dogrula.py`, `cizim_kapisi.py` 0 HATA |
 | E5 | `pdf_tarama.py`, tek bağımsız denetim | `denetim.json` | GEÇER |
 | E6 | `ders-ekle` (`ajan` alanlı) → canlı doğrulama | — | `dis_ajan_kapisi.py --yayin --canli …` |
 
-Her evrede yalnız o evrenin kural listesini oku: `python3 scripts/tam_hat/kural_secici.py --oku <aşama>`.
+Her evrede yalnız o evrenin kural listesini oku: `python3 scripts/hat/tam_hat/kural_secici.py --oku <aşama>`.
 Tüm defteri bellekte tutmaya çalışma; unutursan kapı seni yakalar, ama hata yazıldıktan sonra düzeltmek pahalıdır.
 
 ## 3. Prompt'u nasıl algılarsın (hata azaltma kuralları)
@@ -89,7 +89,7 @@ Tüm defteri bellekte tutmaya çalışma; unutursan kapı seni yakalar, ama hata
 
 ## 5. Çizim ve lazer (en hataya açık aşama — dikkatle)
 
-Önce `docs/CIZIM_KURALLARI.md` ve `scripts/cizim/TALIMAT_CIZIM.md` (madde 21–30) oku. Özet:
+Önce `docs/CIZIM_KURALLARI.md` ve `scripts/uretim/cizim/TALIMAT_CIZIM.md` (madde 21–30) oku. Özet:
 
 - **Şekil anlatan cümlede** lazer görselin üstüne gider ve **anlatılan parçayı** (lezyon, yapı, bölge, tablo satırı) kontur
   ya da okla gösterir. Bütün resmi çevreleme, resim içine panel kurma, yalnız metin satırını boyama yapma.
@@ -98,7 +98,7 @@ Tüm defteri bellekte tutmaya çalışma; unutursan kapı seni yakalar, ama hata
 - **Tek cümle = tek çizim.** Çizim yalnız o an konuşulan cümleye aittir; önceki cümlenin çizimini yayma, sonrakini erken
   gösterme, iki konumu aynı anda işaretleme (AGENTS 18).
 - **Çapa uydurma yok:** her cümleye madde/M0/`resim: 0` basarak kapıyı geçmek yasaktır (AGENTS 17).
-- Bitince `python3 scripts/cizim/cizim_kapisi.py <anahtar> --kok <veri kökü>` 0 HATA; ardından `panel_sinama.mjs`.
+- Bitince `python3 scripts/uretim/cizim/cizim_kapisi.py <anahtar> --kok <veri kökü>` 0 HATA; ardından `panel_sinama.mjs`.
   Kapı HATA verirse çizimi **gerçekten** düzelt; kapıyı yumuşatma.
 - Çizimi yapamayacağını düşünüyorsan (görsel okuyamıyorsun, koordinat bulamıyorsun) çizim katmanını **boş bırak ve raporla**.
   Yanlış çizim, çizimsizden kötüdür.
@@ -134,10 +134,10 @@ Tüm defteri bellekte tutmaya çalışma; unutursan kapı seni yakalar, ama hata
 ## 8. Yayın adımları (kullanıcı komutuyla)
 
 1. Tüm kapılar 0 HATA, `denetim.json` GEÇER.
-2. `python3 scripts/tam_hat/dis_ajan_kapisi.py --ajan $E --ders $D` → GEÇTİ.
+2. `python3 scripts/hat/tam_hat/dis_ajan_kapisi.py --ajan $E --ders $D` → GEÇTİ.
 3. `ders-ekle` isteği: `{ "key": "$D-ag-$E", "ajan": "$E", "no": …, "baslik": "<Ders başlığı> [<Ajan> taslağı]", "metin": …, "sayfalar": …, "dosya": … }`.
    Başlığa ajan etiketi ve "taslak" yaz; yönetici panelde ayırt etsin.
-4. `python3 scripts/tam_hat/dis_ajan_kapisi.py --ajan $E --ders $D --yayin --canli <adres>` → canlıda `yalniz-yonetici` ve
+4. `python3 scripts/hat/tam_hat/dis_ajan_kapisi.py --ajan $E --ders $D --yayin --canli <adres>` → canlıda `yalniz-yonetici` ve
    öğrenci isteğinde 403.
 5. Kullanıcıya rapor: üretilen katmanlar, atlananlar ve **nedenleri**, kapı çıktıları, açık sorular. "Yönetici onayı bekliyor."
 
@@ -198,7 +198,7 @@ yerinde ama sonuç yanlış) betik bunu görmez. 2. madde olumsuzluk/sayı/yön 
 kontrolü kullanıcı kararıdır (§9, isteğe bağlı).
 
 ### 12.1 Araçlar (yazıldı ve sınandı, 2026-10-29)
-`scripts/tam_hat/dis_ajan/`: `kanit_dogrula.py` (alıntı sayfada birebir mi), `kanit_tutarlilik.py` (sayı/olumsuzluk/yön/konu örtüşmesi + üslup/dolgu),
+`scripts/hat/tam_hat/dis_ajan/`: `kanit_dogrula.py` (alıntı sayfada birebir mi), `kanit_tutarlilik.py` (sayı/olumsuzluk/yön/konu örtüşmesi + üslup/dolgu),
 `bolum_kontrol.py` (ikisini tek komutla), `anlama_sinavi.py` + `sinav_bankasi.json` (22 soru, %100 şart, yanlışta kural gösterilir),
 `hedef.py` (imzalı sayısal hedef, ±%10/±%20 tolerans), `dis_ajan_kapisi.py` (izin kümesi, iş başı anlık görüntü, sınav ve hedef denetimi).
 Her hata mesajı kod taşır ve "Yapılacak:" ile çözümü söyler; ajan talimatındaki tablo bu kodlara bakar.

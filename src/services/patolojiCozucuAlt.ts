@@ -1,8 +1,8 @@
 /**
  * Patoloji alternatif sesli soru çözücü — EMA ses klipleri.
  *   GET /api/patoloji-cozucu-alt/ses/:kod/:dosya.mp3 — MP3 (Range/206).
- * Klipler meds/scripts/patoloji_cozucu_alt/seslendir.py ile üretilir → data/patoloji_cozucu_alt/ses/<kod>/<no>.mp3
- * Metinler ön yüz paketinde: src/data/patoloji_cozucu_alt/ (scripts/patoloji_cozucu_alt/paketle.py).
+ * Klipler meds/scripts/uretim/patoloji_cozucu_alt/seslendir.py ile üretilir → data/patoloji_cozucu_alt/ses/<kod>/<no>.mp3
+ * Metinler ön yüz paketinde: src/data/patoloji_cozucu_alt/ (scripts/uretim/patoloji_cozucu_alt/paketle.py).
  */
 import path from 'path';
 import type { Express, Request, Response } from 'express';

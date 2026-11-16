@@ -43,7 +43,7 @@ Kullanıcı eşlemeyi söylediyse o esastır; yine de sayfa başlıkları içeri
 | 11 | Anlamsal çapa → Oracle'a yükle → `pdf_isaret.py --key <key> --zorla` (H93) | `capa/`, `isaret/` | `capa_dogrula.py` (≥%70, hedef %100) |
 | 12 | Çizim (tasarım kataloğunun tamamı, §4) + bağımsız anlam denetimi | `cizim/` | `cizim_kapisi.py`, `panel_sinama.mjs` (3 genişlik) |
 | 13 | Spot / önem, sınav asistanı, soru çözücü (branşta varsa) | `src/data/k2<brans>_*` | `onem/asistan/cozucu_dogrula.py`, `sik_aciklama.py` |
-| 13b | Hocanın sorabileceği ara sorular (her ders): slayt arası soru sayfası + ünlem modu + ders dışı çözücü, EMA GPU | `src/data/k<N>hocaara_cozucu/` | `scripts/hoca_ara_soru/kur.py dogrula <key> --ses` + bağımsız denetçi (kural 27, `scripts/hoca_ara_soru/TALIMAT.md`) |
+| 13b | Hocanın sorabileceği ara sorular (her ders): slayt arası soru sayfası + ünlem modu + ders dışı çözücü, EMA GPU | `src/data/k<N>hocaara_cozucu/` | `scripts/uretim/hoca_ara_soru/kur.py dogrula <key> --ses` + bağımsız denetçi (kural 27, `scripts/uretim/hoca_ara_soru/TALIMAT.md`) |
 | 14 | Atomik envanter (her ders); quiz havuzu KAPALI (kullanıcı kararı 2026-11-07, kural 19) | `atomik_bilgi_envanteri.json` (+ `quiz_havuzu.json`) | `quiz_dogrula.py` |
 | 15 | Hastalık birleştirme, RAG vektörü (elle komut) | `diseases`, `rag_chunks` | ilgili denetleyici |
 | 16 | Kayıt + `guncelleme_notu.json` onem+1 + commit + `dagit.sh` | canlı | canlıda §6 doğrulaması |
@@ -60,7 +60,7 @@ Bir aşama ders için uygulanamıyorsa (ör. branşta çözücü yok) nedeni de�
   bırakılmaz; `degerlendirme/cikmis_analiz.json` ile her birine ≥3 cümlelik çözümleme (ölçülen kavram → doğru cevabın
   slayttaki dayanağı → en güçlü çeldiricinin neden yanlış olduğu), hocanın örneği ya da slayt vakasıyla pekiştiren `ornek`
   ve karıştırılan komşu kavramı söyleyen `tuzak` yazılır; `giris` tekrar eden alt başlıkları ve kök kalıbını özetler.
-  Kapı `scripts/ders_analizi/uret.py --dogrula <key>`.
+  Kapı `scripts/uretim/ders_analizi/uret.py --dogrula <key>`.
 - **Öğrenci notu yoksa** çıkmış taraması iki geçişte yapılır (konu, anahtar terim, hoca adı; tüm yıllar); hoca sesindeki
   vurgu ve örnekler önem listesine, anlatıma ve hoca vurgu katmanına eksiksiz girer. Derse ait birden çok ses varsa hepsi dökülür.
 
@@ -80,7 +80,7 @@ Bir aşama ders için uygulanamıyorsa (ör. branşta çözücü yok) nedeni de�
 - Tasarım kataloğunun tamamı amaca göre kullanılır (`TALIMAT_CIZIM.md` 27–30).
 
 ## 5. Metin takipçisi (kelime/cümle takibi) güvencesi
-Her derste yayından önce `scripts/sesli_anlatim/takip_kapisi.py <key>` **0 HATA**:
+Her derste yayından önce `scripts/uretim/sesli_anlatim/takip_kapisi.py <key>` **0 HATA**:
 - kelime zamanlaması eşleşmesi ≥ %95; cümle başlangıçları artan, boşluksuz/çakışmasız; son cümle ses süresinin içinde,
 - her cümlenin PDF işareti (`isaret`) var ve doğru sayfada (çapa ile aynı), kapsama ≥ %95,
 - PDF sayfası ders PDF'inin kendisi (deste/hizalama aynı dosya, sayfa sayısı tutar).
@@ -169,7 +169,7 @@ kaynağa sadık, çıkmışa ve hocanın vurguladığı yere ağırlık veren de
    (sayfa kayması en sık hata); slayttakiyle çelişen not kullanılmaz. Her sayfa GÖRÜNTÜSÜ okunur (metin çıkarımı el yazısını/işareti vermez).
 3. **Hoca sesi:** CPU'da (`hoca_dokum.py`, mutlak yol, systemd-run `MemoryMax=4G`); dersin SON dakikalarında hoca çoğu zaman sınav yerlerini sayar —
    o bölüm ayrıca dinlenir/gerekirse yeniden dökülür, her vurgu zaman damgalı alıntı + slayt sayfası ile kaydedilir; anlaşılmayan yer vurgu olmaz.
-4. **Çıkmışla birleştirme:** hoca vurgusu + doğrulanmış çıkmış + öğrenci işareti + **geçmiş yıl öğrenci önem notunun A/B birimleri** (AGENTS 28; `docs/OGRENCI_ONEM/<ders>.md`, kapı `scripts/ogrenci_onem/kapi.py`) kesişen yerler en önemli sayılır, anlatımda en ayrıntılı ve en vurgulu yerlerdir.
+4. **Çıkmışla birleştirme:** hoca vurgusu + doğrulanmış çıkmış + öğrenci işareti + **geçmiş yıl öğrenci önem notunun A/B birimleri** (AGENTS 28; `docs/OGRENCI_ONEM/<ders>.md`, kapı `scripts/uretim/ogrenci_onem/kapi.py`) kesişen yerler en önemli sayılır, anlatımda en ayrıntılı ve en vurgulu yerlerdir.
    Yalnız hoca/çıkmış dayanaklı vurgu cümlesi kurulur; ikisi yoksa vurgu cümlesi yok. Çıkmış eşleme ham belgede yer göstermeden yapılmaz.
 5. **Her şey kaynak sağlamalı:** kritik tıbbi iddia (eşik, sayı, gen–hastalık, dereceleme) slayt sayfasıyla `kanit`ta eşlenir; emin olunmayan atlanır.
 6. **Fazlı iş + alt ajan:** A (aşama 1–6 içerik) → B (7–11 anlatım/yayın/ses/çapa) → C (12–16 çizim, önem/çözücü/asistan, quiz, dağıtım). Her faz sonunda
@@ -181,6 +181,6 @@ kaynağa sadık, çıkmışa ve hocanın vurguladığı yere ağırlık veren de
    **50'yi aşar, 100'ü geçmez** (50 < n ≤ 100). Sayı bu aralığın dışına çıkarsa önce kapsam oranı ayarlanır, aralık gevşetilmez. Kaynak sadakati ve
    çeldirici/şık standartları değişmez (kural 4, SIK_ACIKLAMA_STANDARDI).
 
-9. **Örnek soru üslubu ve tıbbi kapsam (kullanıcı uyarısı 2026-10-27):** soru kökünde "dersin bölümüne göre", "slaytta belirtildiği gibi" gibi dersi çağrıştıran/öznel ifade yok; çıkmış sorulara benzer, genel kabul görmüş soru kalıpları; her soru müfredat–kazanım–konu ışığında tıbbi ve sınavda sorulabilir bilgiyi ölçer (rastgele slayt ayrıntısı yasak). Ayrıntı: `scripts/ders_isci/TALIMAT.md` §4, `scripts/spot_cozucu/TALIMAT_ONEM.md`.
+9. **Örnek soru üslubu ve tıbbi kapsam (kullanıcı uyarısı 2026-10-27):** soru kökünde "dersin bölümüne göre", "slaytta belirtildiği gibi" gibi dersi çağrıştıran/öznel ifade yok; çıkmış sorulara benzer, genel kabul görmüş soru kalıpları; her soru müfredat–kazanım–konu ışığında tıbbi ve sınavda sorulabilir bilgiyi ölçer (rastgele slayt ayrıntısı yasak). Ayrıntı: `scripts/uretim/ders_isci/TALIMAT.md` §4, `scripts/uretim/spot_cozucu/TALIMAT_ONEM.md`.
 10. **Hızlı ve hatasız akış (2026-10-28):** evreler, paralellik, aşama okuma haritası, kısmi düzeltme ve ±%10 tolerans, soru
     üslubu ve tek denetçi `docs/TAM_HAT_HIZLI_AKIS.md`'dedir; soru yazımı `docs/SORU_USLUBU.md`.

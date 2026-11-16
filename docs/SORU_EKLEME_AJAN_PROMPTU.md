@@ -6,15 +6,15 @@ Bu belgede iki istem var. İkisi de MedSor'un gerçek yapısına göre yazıldı
 - **Bölüm B, üretim istemleri:** Canlı sistemdeki ayrıştırıcı, yönlendirici ve uzman ajanların sistem talimatlarıdır.
 
 **Kod:** `src/services/questionIntake.ts` (istemler, kod denetimi, kuyruk, uçlar) ve `src/services/aiProvider.ts::callFreeGeminiJson`.
-Testler: `npx tsx scripts/eval/question-intake-unit.mts` (LLM'siz, 18 denetim) ve `npx tsx scripts/eval/question-intake-live.mts` (gerçek Gemini).
+Testler: `npx tsx scripts/moduller/eval/question-intake-unit.mts` (LLM'siz, 18 denetim) ve `npx tsx scripts/moduller/eval/question-intake-live.mts` (gerçek Gemini).
 Bölüm B'deki istemlerin canlı sürümü koddadır; bu belgedeki metin özettir, ayrıştığında kod geçerlidir.
 
 Bağlı olduğu yerler:
 
 - `POST /api/questions`: parçalar `MemoryFragment` olarak eklenir, `type` alanı `stem | option | clue | answer` değerlerinden birini alır.
 - `POST /api/questions/:id/ai-reconstruct`: yeniden inşa, `ragService.findSourcesForQuestion` ile yapılır.
-- `src/data/pool_question_clusters.json` ve `src/services/poolClusterService.ts`: kümeleme (eski Python betiği `scripts/archive/`'de).
-- `scripts/agents/cloud_llm.py`: yalnız ücretsiz anahtarlarla çalışan model zinciri.
+- `src/data/pool_question_clusters.json` ve `src/services/poolClusterService.ts`: kümeleme (eski Python betiği `scripts/arsiv/archive/`'de).
+- `scripts/altyapi/agents/cloud_llm.py`: yalnız ücretsiz anahtarlarla çalışan model zinciri.
 - `meds-embed-bge` (bge-m3, CPU, :8094): vektörleme.
 
 ---
@@ -311,7 +311,7 @@ MUTLAK KURALLAR
 
 - **Çözüldü:** `pool_question_clusters.json` içindeki 23 kümede uydurma yer tutucu şıklar ve uydurma "A" cevapları vardı; bunlar `[EKSİK ŞIK]` ve boş cevapla değiştirildi. `cluster_pool_questions.py` artık uydurmuyor, ancak kümeleme mantığı hâlâ zayıf: ilk 4 harfli kelimeye göre grupluyor ve ilgisiz soruları aynı kümeye koyuyor. Bu mantık ayrıştırılmış ders, konu, soru no ve varlıklara göre yeniden yazılmalı.
 - **Çözüldü (geri yazma):** Ayrıştırma bitince sonuç soru kaydına `intake` alanı olarak yazılıyor (`applyIntakeToQuestion`), `data/questions.json`'a kaydediliyor ve Supabase'e yansıtılıyor. Öğrencinin parçaları, şıkları ve oyları değişmiyor. "… Hatırlanan Soru" gibi genel konu ve "Belirtilmedi" ders, güven yüksekse dolduruluyor. Öğrencinin seçtiği ders ezilmiyor; çelişki `ders-uyusmazligi` etiketiyle işaretleniyor. Soru sunucuya henüz ulaşmadıysa 24 saat boyunca yeniden deneniyor. İstemcinin sonraki PUT'u bu alanları genel değerle ezemiyor (`keepIntakeFields`). Soruya ait olmayan birimler ("bi de 30'da…") kümelemede ayrı öge oluyor (`splitUnits`).
-- **Çözüldü (kümeleme):** Kümeleme `src/services/poolClusterService.ts`'te yeniden yazıldı; Python betiği `scripts/archive/`'e taşındı.
+- **Çözüldü (kümeleme):** Kümeleme `src/services/poolClusterService.ts`'te yeniden yazıldı; Python betiği `scripts/arsiv/archive/`'e taşındı.
   - Aynı kurul ve uyumlu ders içinde benzerlik hesaplanıyor. Sinyaller: sözlük ve hastalık listesinden gelen tıbbi terimler, ayrıştırıcının varlıkları, içerik kökleri, şık örtüşmesi, aynı soru no ve aynı konu.
   - Ortalama bağlantılı birleştirme kullanılıyor; farklı soru numaraları birleşmiyor.
   - Şıklar öğrenci oyuyla kuruluyor, çelişkiler gösteriliyor. Cevap ancak oy çoğunluğuyla belirleniyor.

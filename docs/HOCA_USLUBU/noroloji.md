@@ -1,4 +1,4 @@
-# Nöroloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Nöroloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 94 tekil çıkmış soru · güven: **orta** · yıllar: {2020: 52, 2021: 7, 2022: 7, 2023: 1}
 

@@ -1,4 +1,4 @@
-# Önem listesi yazımı (scripts/spot_cozucu/TALIMAT_ONEM.md özeti — tek kaynak ders PDF'i)
+# Önem listesi yazımı (scripts/uretim/spot_cozucu/TALIMAT_ONEM.md özeti — tek kaynak ders PDF'i)
 - Yalnız GİRDİ'deki sayfa satırlarındaki bilgi; sadeleştirebilir, Türkçesini düzeltebilir, kısaltabilirsin; yeni olgu, sayı, oran, ilaç, doz, terim EKLEYEMEZSİN.
 - Madde sınavda sorulabilecek bilgidir (tanım, en sık, karakteristik bulgu, ayırıcı özellik, sayı/eşik/doz/süre, etken–hastalık eşleşmesi, sınıflama, mekanizma, tanı yöntemi, tedavi seçimi, klasik tuzak); tarihçe, genel giriş, teşekkür yok.
 - `bilgi` tek cümle, 4–30 kelime, anahtar terim **kalın**; `alt` en çok 4 kısa madde (her biri ≤20 kelime); bilgi/alt'taki her sayı satırlarda birebir geçer.

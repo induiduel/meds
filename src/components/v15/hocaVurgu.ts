@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react';
 
-/** Hocanın ders kaydında vurguladığı yerler (scripts/hoca_vurgu/yayinla.py → src/data/hoca_vurgu/<ders>.json). */
+/** Hocanın ders kaydında vurguladığı yerler (scripts/uretim/hoca_vurgu/yayinla.py → src/data/hoca_vurgu/<ders>.json). */
 export type HvKategori = 'sorulur' | 'cikmis' | 'onemli' | 'bilin' | 'dikkat';
 export interface HvVurgu {
   id: string;

@@ -68,9 +68,9 @@ export interface EncyclopediaEntry {
   badgeColor?: string;
   /** Alt sınıf yolu: "Enfeksiyon › Cinsel yolla bulaşan › Bakteriyel" (sözlük v2) */
   subcategory?: string;
-  /** Kısa bilgi kartı: iç içe maddeler (sözlük v2, scripts/sozluk_v2) */
+  /** Kısa bilgi kartı: iç içe maddeler (sözlük v2, scripts/moduller/sozluk_v2) */
   infoCard?: { sections: InfoCardSection[] };
-  /** 's13_study': tanım ders notu alıntılarından yazıldı (scripts/v2 study build). */
+  /** 's13_study': tanım ders notu alıntılarından yazıldı (scripts/altyapi/v2 study build). */
   uretici?: string;
   aiAudit: {
     verified: boolean;

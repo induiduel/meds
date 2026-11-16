@@ -7,7 +7,7 @@ import { contentReady, isContentChanged, onContentChanged } from '../services/co
 /**
  * Universal reader and synthesizer for medical terms:
  * - Unifies medical_glossary.json (both string definitions and structured objects)
- * - medical_glossary.json is curated by scripts/v2 (`study build --export`): every entry is checked
+ * - medical_glossary.json is curated by scripts/altyapi/v2 (`study build --export`): every entry is checked
  *   against lecture notes (`dogrulama`, `kaynaklar`)
  * - medical_encyclopedia.json only contributes aliases to existing entries (it is unverified AI content)
  */
@@ -139,7 +139,7 @@ function ingest(rawGlossary: unknown) {
     });
   }
 }
-// Slayt kısaltmaları (scripts/sesli_anlatim/kisaltma_sozlugu.py): terimlerden ayrı "Kısaltmalar" bölümü
+// Slayt kısaltmaları (scripts/uretim/sesli_anlatim/kisaltma_sozlugu.py): terimlerden ayrı "Kısaltmalar" bölümü
 for (const v of Object.values(kisaltmaSozluk as Record<string, any>)) {
   const term = String(v?.term || '').trim();
   if (!term || !v.definition || termMap.has(term.toLowerCase())) continue;

@@ -4,8 +4,8 @@ import { icerikGizli } from '../../../services/siteAyar';
 
 /**
  * Sesli soru çözücü — veri ve ilerleme deposu (branş geneli: patoloji, enfeksiyon, üroloji).
- * İçerik: src/data/<brans>_cozucu/{index,<kod>}.json (patoloji: scripts/patoloji_cozucu/cozucu_birlestir.py; diğerleri:
- * scripts/spot_cozucu/birlestir.py). Patoloji soruları: 2026-27 örnek (ornek), benzer, çıkmış; diğer branşlar: çıkmış + çıkmışların
+ * İçerik: src/data/<brans>_cozucu/{index,<kod>}.json (patoloji: scripts/uretim/patoloji_cozucu/cozucu_birlestir.py; diğerleri:
+ * scripts/uretim/spot_cozucu/birlestir.py). Patoloji soruları: 2026-27 örnek (ornek), benzer, çıkmış; diğer branşlar: çıkmış + çıkmışların
  * üslubunda örnek sorular (zorluk kolay/orta/zor), 40'tan çok sorulu ders setlere bölünür (kod "e04-1", klip klasörü `klasor` "e04").
  * Ses: /api/cozucu-ses/<brans>/<ses>/<klasor>/<klip>.mp3?v=<özet> (q-n kök+şıklar · i-n ipucu · s-n-H şık · c-n çözüm · d-n "Doğru!").
  * Varsayılan ses `klip` alanında (EMA); başka sesler `klipSes[<ses>]` + dizinde `sesler` / `ortakSes` (altyapı; şimdilik yalnız EMA).

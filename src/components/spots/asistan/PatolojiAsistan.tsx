@@ -25,7 +25,7 @@ import '../../../styles/patoloji-asistan.css';
 
 /**
  * Sesli sınav asistanı v2 (tam ekran; Patoloji, Enfeksiyon, Üroloji — branş ders kodunun önekinden). Yalnız "Sınav için en önemliler" spotları için.
- * İçerik: src/data/patoloji_asistan/<kod>.json (scripts/patoloji_onem/asistan_birlestir.py) — ders PDF'ine dayalı; dersin slayt
+ * İçerik: src/data/patoloji_asistan/<kod>.json (scripts/uretim/patoloji_onem/asistan_birlestir.py) — ders PDF'ine dayalı; dersin slayt
  * akışıyla bölümler ("neden önemli" girişiyle), her bölümde noktalar (ne · neden/mekanizma · sınavda nasıl çıkar), her noktadan
  * sonra o noktanın soruları (tüm çıkmışlar + 2026-27 örnek soruları). Her soruda: yanlış şıkka özgü açıklama (neden yanlış ·
  * neyi karıştırdın · doğrusu), doğruda pekiştirme, "Yardım al" (her şık tek kısa cümle, sırayla sesli; okunan şık vurgulu).

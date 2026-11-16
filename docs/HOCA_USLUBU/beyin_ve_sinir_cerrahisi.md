@@ -1,4 +1,4 @@
-# Beyin ve Sinir Cerrahisi — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Beyin ve Sinir Cerrahisi — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 37 tekil çıkmış soru · güven: **dusuk** · yıllar: {2020: 16, 2022: 1, 2023: 2, 2024: 2}
 

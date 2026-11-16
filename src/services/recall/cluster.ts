@@ -27,7 +27,7 @@ export interface RecallItem {
 
 export const PAIR_FEATURES = ['bias', 'cos', 'contain', 'chr', 'term', 'anchor', 'opt', 'sameNo', 'diffNo', 'dersConflict', 'short'] as const;
 /**
- * Öğrenilmiş ağırlıklar: `npx tsx scripts/eval/recall-engine.mts --fit --l2 0.5 --drop opt` (geliştirme kümesi k1–k3,
+ * Öğrenilmiş ağırlıklar: `npx tsx scripts/moduller/eval/recall-engine.mts --fit --l2 0.5 --drop opt` (geliştirme kümesi k1–k3,
  * sınıf dengeli, işaret kısıtlı lojistik; 2026-10-13). `opt` öğrenilmedi (sınama setinde şık nadir): elle 1.0 —
  * formdaki harfli şıklar aynı soruyu güçlü biçimde gösterir.
  */
@@ -486,7 +486,7 @@ export interface RecallDraft {
   bankMatch: { id: string; score: number; margin: number; support: number; stem: string; options: { key: string; text: string }[]; correctAnswer: string } | null;
 }
 
-/** Çıkmış soru önerisi kuralı (scripts/eval/recall-engine.mts --dump-bank ile iki senaryoda ayarlanır). */
+/** Çıkmış soru önerisi kuralı (scripts/moduller/eval/recall-engine.mts --dump-bank ile iki senaryoda ayarlanır). */
 export let BANK_MATCH = (s1: number, margin: number, support: number) => s1 >= 0.4 && margin >= 0.12 && support >= 0.3;
 export const setBankMatch = (f: typeof BANK_MATCH) => { BANK_MATCH = f; };
 

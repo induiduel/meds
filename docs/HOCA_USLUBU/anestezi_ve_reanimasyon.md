@@ -1,4 +1,4 @@
-# Anestezi ve Reanimasyon — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Anestezi ve Reanimasyon — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 18 tekil çıkmış soru · güven: **dusuk** · yıllar: {2020: 5, 2022: 4, 2023: 2, 2025: 1}
 

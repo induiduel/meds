@@ -1,6 +1,6 @@
 /**
  * Olası sorular (/olasi-sorular?kurul=N): sınavdan sonra öğrencilerin eklediği hatıralardan her gece kurulan
- * 100 yuvalık olası soru seti (scripts/olasi_soru → data/olasi_sorular/kN.json → GET /api/olasi-sorular/:kurul).
+ * 100 yuvalık olası soru seti (scripts/hat/olasi_soru → data/olasi_sorular/kN.json → GET /api/olasi-sorular/:kurul).
  * Kart: yuva no, güven rozeti, branş, kök, şıkları çözme (seç → doğru/yanlış + her şıkkın açıklaması), kaynak/destek,
  * ders bağı, benzer çıkmışlar ve geri bildirim (buydu / değildi / düzeltme). Stil: styles/olasi-sorular.css (.os-*).
  */

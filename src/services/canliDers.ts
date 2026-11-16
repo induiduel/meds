@@ -2,7 +2,7 @@
 //   GET /api/canli-ders                     — sesi olan dersler (sıra ile)
 //   GET /api/canli-ders/:key                — bölüm/paragraf metni + varyantlar (zamanlama) + PDF hizalaması
 //   GET /api/canli-ders/ses/:key/:vid.mp3   — MP3 (Range/206; ?indir=1 → ek olarak indir)
-// Veri: data/sesli_anlatim/ (sesliAnlatim.ts) + hizalama/<key>.json (scripts/sesli_anlatim/pdf_hizala.py).
+// Veri: data/sesli_anlatim/ (sesliAnlatim.ts) + hizalama/<key>.json (scripts/uretim/sesli_anlatim/pdf_hizala.py).
 import type { Express, Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
@@ -135,7 +135,7 @@ const BRANS_DUZELT: Record<string, [string, number, number?, number?]> = {
   'k1-49-invaziv-serviks-kanseri-ve-endometriyozis': ['Tıbbi Patoloji', 29],
   // Drive: Meme Kanseri de "33)" (Memenin Benign ile çakışır). Numara = soru çözücü/önem/asistan numarası (34 Erkek
   // Genital, 35 Meme Kanseri; eşleşme numarayla yapılır). 4. öge listeNo: sesli ders listesi anlatım sırasıyla gitsin
-  // (Meme önce). Kapı: scripts/sesli_anlatim/cozucu_eslesme_dogrula.py
+  // (Meme önce). Kapı: scripts/uretim/sesli_anlatim/cozucu_eslesme_dogrula.py
   'k1-65-meme-kanseri-ve-molekuler-tipleri': ['Tıbbi Patoloji', 35, undefined, 34.5],
   'k1-66-erkek-genital-sistem-ve-prostat-hastaliklari': ['Tıbbi Patoloji', 34],
 };
@@ -396,7 +396,7 @@ export function registerCanliDersRoutes(app: Express) {
     const b = bransBilgisi(d);
     const isArsiv = arsivMi(key) || d.donem === '2025-2026';
     const desteId = d.desteId || hz?.deckId || (isArsiv ? `k${b.kurul}p-${key}` : `k${b.kurul}p-${key}`);
-    // Cümle başlangıçları (scripts/sesli_anlatim/cumle_zaman.py): yalnız metin ve ses dosyası ölçüldüğü hâliyle duruyorsa
+    // Cümle başlangıçları (scripts/uretim/sesli_anlatim/cumle_zaman.py): yalnız metin ve ses dosyası ölçüldüğü hâliyle duruyorsa
     const cz = oku<any>(P.cumle(key), null);
     const czHash = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
     const czGecerli = cz && cz.metinHash === czHash;
@@ -405,7 +405,7 @@ export function registerCanliDersRoutes(app: Express) {
       if (!e || !e.p) return null;
       try { return fs.statSync(P.ses(key, vid)).size === e.bayt ? e.p : null; } catch { return null; }
     };
-    // Kelime başlangıçları (scripts/sesli_anlatim/kelime_zaman.py): aynı koşul — metin ve ses dosyası ölçüldüğü hâliyle
+    // Kelime başlangıçları (scripts/uretim/sesli_anlatim/kelime_zaman.py): aynı koşul — metin ve ses dosyası ölçüldüğü hâliyle
     const kz = oku<any>(P.kelime(key), null);
     const kzGecerli = kz && czHash === kz.metinHash;
     const kelimeZaman = (vid: string) => {
@@ -441,15 +441,15 @@ export function registerCanliDersRoutes(app: Express) {
         ...(Array.isArray(v.klipler) && v.klipler.length === pars.length ? { klipler: v.klipler } : {}),
       })),
       pdf,
-      // önemli cümle/terim aralıkları (scripts/sesli_anlatim/vurgu_uret.py): { "<i>": [[bas, son, "c"|"t", onem]] }
+      // önemli cümle/terim aralıkları (scripts/uretim/sesli_anlatim/vurgu_uret.py): { "<i>": [[bas, son, "c"|"t", onem]] }
       vurgu: oku<any>(P.vurgu(key), null)?.p || null,
-      // okunan cümlenin slayttaki satır/kelime/resim kutuları (scripts/sesli_anlatim/pdf_isaret.py); metin değiştiyse gönderilmez
+      // okunan cümlenin slayttaki satır/kelime/resim kutuları (scripts/uretim/sesli_anlatim/pdf_isaret.py); metin değiştiyse gönderilmez
       isaret: (() => {
         const is = oku<any>(P.isaret(key), null);
         if (!is || !pdf) return null;
         const h = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
         if (is.metinHash !== h) return null;
-        // canlı çizim (R6, scripts/cizim/cizim_uret.py): aynı metin sürümünden komutlar cümle işaretine `z` olarak eklenir
+        // canlı çizim (R6, scripts/uretim/cizim/cizim_uret.py): aynı metin sürümünden komutlar cümle işaretine `z` olarak eklenir
         const cz = oku<any>(P.cizim(key), null);
         if (cz?.metinHash !== h || !cz?.p) return is.c;
         const c: Record<string, any[]> = {};
@@ -482,15 +482,15 @@ export function registerCanliDersRoutes(app: Express) {
             // slayt_adim şemada adım KİMLİĞİ ("k2-07-d-s05", konusma_v2.py) → destenin slideNumber'ı (eski sayı biçimi de kabul)
             a: Number.isFinite(c.slayt_adim) ? c.slayt_adim : (/-s(\d+)$/.exec(String(c.slayt_adim || '')) ? Number(/-s(\d+)$/.exec(String(c.slayt_adim))![1]) : null),
             s: c.spot ?? null,
-            // geçmiş yıl öğrenci notunda en çok çalışılan yer (scripts/ogrenci_onem, OGRENCI_ONEM_YONTEMI.md): A çıkmış kanıtlı, B vurgulu
+            // geçmiş yıl öğrenci notunda en çok çalışılan yer (scripts/uretim/ogrenci_onem, OGRENCI_ONEM_YONTEMI.md): A çıkmış kanıtlı, B vurgulu
             o: c.ogrenci?.oncelik === 'A' || c.ogrenci?.oncelik === 'B' ? c.ogrenci.oncelik : null,
-            // hocanın ders kaydında bu bilgi için "sınavda sorarım / önemli / bilin" dediği yer (scripts/hoca_vurgu/yayinla.py)
+            // hocanın ders kaydında bu bilgi için "sınavda sorarım / önemli / bilin" dediği yer (scripts/uretim/hoca_vurgu/yayinla.py)
             h: c.hoca?.kategori ? [String(c.hoca.kategori), String(c.hoca.ifade || '')] : null,
           }));
         });
         return Object.keys(out).length ? { deste: desteId, p: out } : null;
       })(),
-      // çıkmış soru → dayandığı cümle (scripts/sesli_anlatim/cikmis_konum.py); PDF yeri ön yüzde isaret[p][c]'den
+      // çıkmış soru → dayandığı cümle (scripts/uretim/sesli_anlatim/cikmis_konum.py); PDF yeri ön yüzde isaret[p][c]'den
       cikmisKonum: (() => {
         const ck = oku<any>(P.cikmisKonum(key), null);
         if (!ck || !Array.isArray(ck.q) || !ck.q.length) return null;
@@ -499,7 +499,7 @@ export function registerCanliDersRoutes(app: Express) {
         const q = ck.metinHash === h ? ck.q.filter((x: any) => !kaynakBulunamadi(String(x?.id))) : null;
         return q && q.length ? q : null;
       })(),
-      // öğrenci notunda işaretli (önemli) yerler, PDF dosyası başına (scripts/sesli_anlatim/ogrenci_not_isaret.py):
+      // öğrenci notunda işaretli (önemli) yerler, PDF dosyası başına (scripts/uretim/sesli_anlatim/ogrenci_not_isaret.py):
       // { "<dosya i>": { "<sayfa>": { l: [[x0,y0,x1,y1]], y: [x,y] } } } — kırmızı marker + sayfa başına bir yıldız
       ogrenciNot: (() => {
         if (!pdf || !Array.isArray(pdf.dosyalar)) return null;
@@ -510,13 +510,13 @@ export function registerCanliDersRoutes(app: Express) {
         });
         return Object.keys(out).length ? out : null;
       })(),
-      // PDF terim yardımcısı (scripts/sesli_anlatim/terim_sozlugu.py): { "<dosya>": { "<sayfa>": { bos, t: [{ t, a, k, f?, b }] } } }
+      // PDF terim yardımcısı (scripts/uretim/sesli_anlatim/terim_sozlugu.py): { "<dosya>": { "<sayfa>": { bos, t: [{ t, a, k, f?, b }] } } }
       // PDF'e bağlıdır (metin değişse de geçerli)
       terim: (() => {
         const t = oku<any>(P.terim(key), null);
         return t?.d && Object.keys(t.d).length ? t.d : null;
       })(),
-      // PDF kısaltma yardımcısı (scripts/sesli_anlatim/kisaltma_sozlugu.py): ayrı katman, terimlerle aynı kutup yapısı
+      // PDF kısaltma yardımcısı (scripts/uretim/sesli_anlatim/kisaltma_sozlugu.py): ayrı katman, terimlerle aynı kutup yapısı
       // { "<dosya>": { "<sayfa>": { bos, t: [{ t, acilim, a, k: "kisaltma", b }] } } }
       kisaltma: (() => {
         const t = oku<any>(P.kisaltma(key), null);

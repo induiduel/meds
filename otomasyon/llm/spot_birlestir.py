@@ -67,7 +67,7 @@ def harf_dengele(maddeler: list[dict]) -> int:
 
 
 def onem(W: Path, kod: str, log=print) -> int:
-    sys.path.insert(0, str(c.KOK / "scripts" / "spot_cozucu"))
+    sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "spot_cozucu"))
     import onem_dogrula as OD
     plan = _spot.parca_plani(W, kod)
     parcalar = []

@@ -1,4 +1,4 @@
-# Halk Sağlığı — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Halk Sağlığı — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 362 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 28, 2019: 13, 2020: 174, 2021: 62, 2022: 11, 2023: 15, 2024: 15, 2025: 16, 2026: 6}
 

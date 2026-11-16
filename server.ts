@@ -780,7 +780,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Derleme sürümü (dist/surum.json, scripts/vite/surumDosyasi.ts): açık sekmeler önemli güncellemeyi buradan öğrenir
+// Derleme sürümü (dist/surum.json, scripts/altyapi/vite/surumDosyasi.ts): açık sekmeler önemli güncellemeyi buradan öğrenir
 app.get('/api/surum', (_req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   try {
@@ -792,7 +792,7 @@ app.get('/api/surum', (_req, res) => {
 
 registerAiTestRoutes(app);
 
-// Kurul 1 2026-2027 çıkmış sorular PDF'i (scripts/cikmis_2627/uret.py üretir)
+// Kurul 1 2026-2027 çıkmış sorular PDF'i (scripts/uretim/cikmis_2627/uret.py üretir)
 app.get('/api/test/kurul1/2627', (req, res) => {
   const file = path.join(__dirname, 'data', 'cikmis_2627', 'kurul1_2627.pdf');
   if (!fs.existsSync(file)) return res.status(404).json({ error: 'Bulunamadı' });
@@ -1791,7 +1791,7 @@ app.post('/api/recall/match', async (req, res) => {
 });
 
 // Soru ekle: öğrencinin önerilen havuz kaydı için kararı ("aynı soru" bağladı/birleştirdi, "farklı soru" reddetti).
-// Haftalık öğrenme (scripts/recall/learn.mts) bu kararlarla çift modelini yeniden eğitir.
+// Haftalık öğrenme (scripts/moduller/recall/learn.mts) bu kararlarla çift modelini yeniden eğitir.
 app.post('/api/recall/feedback', (req, res) => {
   const { text, committeeId, questionId, decision, prob } = req.body || {};
   const t = typeof text === 'string' ? text.trim() : '';
@@ -2347,7 +2347,7 @@ app.get('/api/curriculum/package', (req, res) => {
     const k = Number(req.query.kurul);
     res.json(k ? { ...pkg, kurullar: (pkg.kurullar || []).filter((x: any) => x.kurul === k) } : pkg);
   } catch {
-    res.status(404).json({ error: 'Müfredat paketi henüz üretilmedi (scripts/advanced_ai/curriculum_package.py).' });
+    res.status(404).json({ error: 'Müfredat paketi henüz üretilmedi (scripts/altyapi/advanced_ai/curriculum_package.py).' });
   }
 });
 
@@ -4293,7 +4293,7 @@ function kickPhase14UserQueue(force = false, yonetici = false) {
     if (phase14Queue.pendingCount() === 0 || phase14UserWorkerRunning()) return false;
     if (!force && Date.now() - phase14UserLastKick < 10 * 60 * 1000) return false;
     phase14UserLastKick = Date.now();
-    const script = path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py');
+    const script = path.resolve(__dirname, 'scripts', 'altyapi', 'advanced_ai', 'phase14_cloud_question_editor.py');
     const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14_kullanici.log');
     fs.mkdirSync(path.dirname(logPath), { recursive: true });
     try { execSync(`systemctl --user reset-failed ${PHASE14_USER_UNIT} 2>/dev/null || true`); } catch (_) {}
@@ -4968,7 +4968,7 @@ function writePhase14Settings(next: Phase14Settings) {
 const PHASE14_AUTO_UNIT = 'meds-faz14-otomatik';
 function startPhase14AutoFree(limit: number): boolean {
   if (isPythonScriptRunning('phase14_cloud_question_editor.py') || isPythonScriptRunning('phase14_past_question_editor.py')) return false;
-  const script = path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py');
+  const script = path.resolve(__dirname, 'scripts', 'altyapi', 'advanced_ai', 'phase14_cloud_question_editor.py');
   const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
   fs.mkdirSync(path.dirname(logPath), { recursive: true });
   try { execSync(`systemctl --user reset-failed ${PHASE14_AUTO_UNIT} 2>/dev/null || true`); } catch (_) {}
@@ -5039,8 +5039,8 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
     }
 
     const scriptPath = mode === 'cloud' || mode === 'free'
-      ? path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py')
-      : path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_past_question_editor.py');
+      ? path.resolve(__dirname, 'scripts', 'altyapi', 'advanced_ai', 'phase14_cloud_question_editor.py')
+      : path.resolve(__dirname, 'scripts', 'altyapi', 'advanced_ai', 'phase14_past_question_editor.py');
 
     const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
     fs.mkdirSync(path.dirname(logPath), { recursive: true });
@@ -7137,7 +7137,7 @@ const recallFeedback = createRecallFeedback(DATA_DIR);
   const tryLearn = () => {
     if (learning || havuzDonduruldu() || recallFeedback.count() - learnedAt < 20) return;
     learning = true;
-    const child = spawn('nice', ['-n', '15', path.join(process.env.MEDS_NODE_MODULES || path.join(__dirname, 'node_modules'), '.bin/tsx'), 'scripts/recall/learn.mts', '--write'], {
+    const child = spawn('nice', ['-n', '15', path.join(process.env.MEDS_NODE_MODULES || path.join(__dirname, 'node_modules'), '.bin/tsx'), 'scripts/moduller/recall/learn.mts', '--write'], {
       cwd: __dirname, env: { ...process.env, CUDA_VISIBLE_DEVICES: '' }, stdio: ['ignore', 'pipe', 'pipe'],
     });
     let log = '';
@@ -7657,7 +7657,7 @@ app.get('/api/audit/status', (_req, res) => {
 app.post('/api/audit/trigger', requireAdmin, (_req, res) => {
   try {
     const { spawn } = require('child_process');
-    const child = spawn('python3', ['scripts/agents/question_quality_inspector.py'], {
+    const child = spawn('python3', ['scripts/altyapi/agents/question_quality_inspector.py'], {
       cwd: __dirname,
       detached: true,
       stdio: 'ignore'

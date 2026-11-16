@@ -65,7 +65,7 @@ Birine "hayır" diyen denetçi yalnız ilgili bölümün kimliğini ve eksik ög
 ## 6. Seslendirme (EMA) okunuşu
 
 Yabancı terim (eponim, Latince tür adı, İngilizce klinik terim, ilaç ticari adı) metinde standart yazımla kalabilir;
-EMA'ya giderken `scripts/sesli_anlatim/terim_okunus.py` Türkçedeki yaygın okunuşa çevirir (Wernicke → Vernike,
+EMA'ya giderken `scripts/uretim/sesli_anlatim/terim_okunus.py` Türkçedeki yaygın okunuşa çevirir (Wernicke → Vernike,
 Staphylococcus → stafilokokus, locked-in → lokt in). Yazar seslendirmeden önce
-`python3 scripts/sesli_anlatim/terim_okunus.py --denetle <anahtar>` çalıştırır; `KURAL` satırlarında yanlış okunuş varsa
+`python3 scripts/uretim/sesli_anlatim/terim_okunus.py --denetle <anahtar>` çalıştırır; `KURAL` satırlarında yanlış okunuş varsa
 `data/sesli_anlatim/okunus/terim_okunus.json`'a ekler (sözlük büyüdükçe sonraki derslerde hata kalmaz).

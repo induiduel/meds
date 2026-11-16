@@ -24,13 +24,13 @@ Kayıttan net duyulamayan sayı/süre (`dogrulanacak: true`) öğrenciye kesin b
 | A3 | Görsel sahneler: SVG sahne kitaplığı (`src/components/kmb/sahneler.tsx`), her öge kimlikli → vurgula/çiz/renklendir/etiket; v2 degrade/anatomik katman; adım başına ana sahne + `ek` yakın plan panelleri (2–3 görsel); malzemeler ürün fotoğraflarına, maket sahnesi eğitim maketine göre | ✅ 14 sahne |
 | A4 | Sınav: dallanan OSCE akışı (`akislar`: karar noktası → yollar, numaralı yuvalar, akış haritası, basamak başına açılır ayrıntılı açıklama + ses) + vaka senaryoları (çoklu) + sahnede bul (hotspot); her şıkta ne/neden açıklaması | ✅ 02 |
 | A5 | EMA sesi (GPU, `cozucu_ses_gpu.sh`) → `data/kmb_cozucu/ses/<kod>/`, zamanlama `src/data/kmb/ses_<kod>.json` | ✅ 02 |
-| A6 | Doğrulama kapısı `scripts/kmb/dogrula.py` (hedef kapsamı, sahne/öge kimlikleri, şık açıklaması, Türkçe üslup) | ✅ |
+| A6 | Doğrulama kapısı `scripts/uretim/kmb/dogrula.py` (hedef kapsamı, sahne/öge kimlikleri, şık açıklaması, Türkçe üslup) | ✅ |
 | A7 | Ekran: `/dersler/kmb[/<beceri>[/ogren|hedef|video|sinav]] (eski /kamplar/kmb yönlenir)` (iç `/kmb`) | ✅ |
-| A8 | Lottie videoları: `scripts/kmb/lottie_dsl.py` (bölüm zaman çizelgesi, SVG yolu→Lottie, yol boyunca hareket, kırpma, degrade) + `lottie_uret.py` (12 video, 18–41 sn, EMA `l-<ad>` sesine kare kare oturur) → `src/data/kmb/lottie/`; oynatıcı `LottieVideo.tsx` (zaman çubuğu, bölümler, hız, altyazı, tam ekran); tam ekran ders videosu `DersVideo.tsx` (adım başına 2–3 görsel yatayda, altta altyazı) | ✅ 02 |
+| A8 | Lottie videoları: `scripts/uretim/kmb/lottie_dsl.py` (bölüm zaman çizelgesi, SVG yolu→Lottie, yol boyunca hareket, kırpma, degrade) + `lottie_uret.py` (12 video, 18–41 sn, EMA `l-<ad>` sesine kare kare oturur) → `src/data/kmb/lottie/`; oynatıcı `LottieVideo.tsx` (zaman çubuğu, bölümler, hız, altyazı, tam ekran); tam ekran ders videosu `DersVideo.tsx` (adım başına 2–3 görsel yatayda, altta altyazı) | ✅ 02 |
 | A8b | **Hedefler filmi** `HedefFilmi.tsx` (2026-10-31): hedef kartları (`hedefCalisma`) tam ekranda art arda; SVG sahneler gerçek zamanlı, cümle başına `film[i]` vuruşu (`sahne?`, `eylem[]`, `odak`, `zoom` 1–2), kamera odak kutusuna yaklaşır + spot, evreler Ne/Nasıl/Neden/Sık hata/Hoca sorar (`h-N`, `h-N-s`), bitiş özeti; kapı `dogrula.py` film denetimi | ✅ 02 |
 | A8c | 3B deneme (three.js, `components/kmb/sahne3b/`): 14 sahne, organik yüzeyler — 2026-11-01 kullanıcı kararıyla ARŞİV (varsayılan kapalı, `localStorage.medsoru_kmb_3b='1'`); ön yüz 2B (SVG+Lottie) hattında, hedef stil düz vektör çizgi film (H462 kuralları) | 🗄 arşiv |
 | A8d | **2B düz çizgi film geçişi** (2026-11-01, kullanıcı onaylı stil, `docs/KMB_2B_STIL.md`): tüm SVG sahneler yeniden çizildi (`sahneler.tsx` Erkek; `sahneler_2b_a/b/c.tsx` kalan 13; ortak sözleşme `sahneOrtak.tsx`, `kmb-2b-*` palet), Lottie paleti aynı tonlara alındı (`lottie_uret.py`/`adim_lottie.py`/`lottie_dsl.py`), H465 (yön sistemi). Canlıya gönderilmedi | ✅ yerel |
-| A8e | **Lottie 2B hattı + Hikâye filmi** (2026-11-01): `scripts/kmb/lottie2b/` (svg_disa → svg_lottie → Sahne2B/ortak2b → uret2b/adim2b), çıktı `src/data/kmb/lottie2b/`, eski hat korunur (`medsoru_kmb_lottie_eski`); `HikayeFilmi.tsx` tam ekran tek akış (kazanım + bulgu kartları) | ✅ yerel |
+| A8e | **Lottie 2B hattı + Hikâye filmi** (2026-11-01): `scripts/uretim/kmb/lottie2b/` (svg_disa → svg_lottie → Sahne2B/ortak2b → uret2b/adim2b), çıktı `src/data/kmb/lottie2b/`, eski hat korunur (`medsoru_kmb_lottie_eski`); `HikayeFilmi.tsx` tam ekran tek akış (kazanım + bulgu kartları) | ✅ yerel |
 | A9 | Kalan beceriler: NG sonda, atel, burun kanaması, hava yolu, enjeksiyon — **ses kaydı geldikçe** A2–A6 tekrar | ⏳ kaynak bekleniyor |
 | A10 | Bağımsız denetçi geçişi (yazar + denetçi), yayın (`dagit.sh`) | ⏳ |
 
@@ -52,10 +52,10 @@ Eylem türleri: `vurgula` (nabız ışığı), `ciz` (çizgi aşama aşama çizi
 ## 4. Komutlar
 
 ```
-python3 meds/scripts/kmb/lottie_uret.py                 # Lottie videoları (ses varsa ses zamanlı); ses.py'den sonra yeniden çalıştır
-python3 meds/scripts/kmb/dogrula.py                     # 0 HATA olmadan ses ve yayın yok (Lottie etiket kapısı dahil)
-node meds/scripts/kmb/kare_onizle.mjs [ad… | konu]     # kare temas sayfası: her cümlenin karesi metinle göz denetimi (OUT=klasör)
-bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/kmb/ses.py 02   # EMA, GPU
+python3 meds/scripts/uretim/kmb/lottie_uret.py                 # Lottie videoları (ses varsa ses zamanlı); ses.py'den sonra yeniden çalıştır
+python3 meds/scripts/uretim/kmb/dogrula.py                     # 0 HATA olmadan ses ve yayın yok (Lottie etiket kapısı dahil)
+node meds/scripts/uretim/kmb/kare_onizle.mjs [ad… | konu]     # kare temas sayfası: her cümlenin karesi metinle göz denetimi (OUT=klasör)
+bash meds/scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/uretim/kmb/ses.py 02   # EMA, GPU
 ```
 
 ## 5. Yeni ders ekleme sırası

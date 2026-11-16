@@ -10,7 +10,7 @@ Zincirlerdeki (`ders_zinciri`, `son_prova_zinciri`, `hastalik_zinciri`, `checkup
 Sıra: `MEDS_AJAN_MODEL` (+ denetçi için `MEDS_AJAN_MODEL_DENETCI`) > `butce.json` → `claude.model` >
 `~/.claude/settings.json` → `env.ANTHROPIC_DEFAULT_OPUS_MODEL` (denetçide SONNET) > `claude-opus-5-5`.
 Masaüstü seçicisi değişince ajanlar kendiliğinden aynı adı kullanır; adların köprüde karşılığı vardır
-(`scripts/opendesign/rotalar.json`, `--kontrol` ile denetlenir). Geçit kimliği doğrudan da verilebilir
+(`scripts/altyapi/opendesign/rotalar.json`, `--kontrol` ile denetlenir). Geçit kimliği doğrudan da verilebilir
 (`MEDS_AJAN_MODEL=deepseek-v4.1-flash`); Claude Code bilinmeyen adı olduğu gibi köprüye geçirir.
 """
 from __future__ import annotations

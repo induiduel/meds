@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Kurul kampı zinciri (gece; Kurul 1 dahil — K1 dersleri branş klasörlerinden bilgi deposunda): ONAYLI hoca tüyoları + ders bilgi deposu → Claude (scripts/kamp/TALIMAT_KAMP.md) → kapı
-(scripts/kamp/dogrula.py) → EMA (scripts/kamp/ses.py) → src/data/kamp/k<N>/<brans>.json + Oracle data/kamp/ses/.
-PDF açılmaz: dersler meds_database_v2/ders_bilgi/<ders>/ozet.md'den (scripts/dersler/bilgi_deposu.py).
+"""Kurul kampı zinciri (gece; Kurul 1 dahil — K1 dersleri branş klasörlerinden bilgi deposunda): ONAYLI hoca tüyoları + ders bilgi deposu → Claude (scripts/uretim/kamp/TALIMAT_KAMP.md) → kapı
+(scripts/uretim/kamp/dogrula.py) → EMA (scripts/uretim/kamp/ses.py) → src/data/kamp/k<N>/<brans>.json + Oracle data/kamp/ses/.
+PDF açılmaz: dersler meds_database_v2/ders_bilgi/<ders>/ozet.md'den (scripts/hat/dersler/bilgi_deposu.py).
 Bir branşta kamp: en az 1 onaylı tüyo + en az 1 deposu hazır ders. Tüyolar ya da ders özetleri değişmediyse yeniden
 üretilmez (karma). Kapı geçmezse yayımlanan kamp değişmez (önceki sürüm kalır) ve yöneticiye bildirim gider.
   kamp_zinciri.py [--kurul N] [--brans farmakoloji] [--kuru]
@@ -15,7 +15,7 @@ from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
 AJAN_MODEL = _ajan_model()   # kullanıcı: MEDS_AJAN_MODEL > butce.json claude.model > claude-opus-5-5
-sys.path.insert(0, str(MEDS / "scripts/dersler")); sys.path.insert(0, str(MEDS / "otomasyon"))
+sys.path.insert(0, str(MEDS / "scripts/hat/dersler")); sys.path.insert(0, str(MEDS / "otomasyon"))
 import bilgi_deposu as BD  # noqa: E402
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *)"
 import os
@@ -35,7 +35,7 @@ def main():
     if a.kurul:
         kurullar = [a.kurul]
     else:
-        sys.path.insert(0, str(MEDS / "scripts/takvim")); from aktif_kurul import durum
+        sys.path.insert(0, str(MEDS / "scripts/hat/takvim")); from aktif_kurul import durum
         kurullar = list(range(1, durum(dt.date.today().isoformat())["aktif"] + 1))  # Kurul 1 dahil (2026-10-20)
     slug_ad = {b["slug"]: b["ad"] for b in json.loads((MEDS / "src/data/dersler/branslar.json").read_text())["branslar"]}
     ad_slug = {v: k for k, v in slug_ad.items()}
@@ -70,8 +70,8 @@ def main():
                 continue
             if yayin.exists() and not (W / "kamp.json").exists():
                 shutil.copy(yayin, W / "kamp.json")  # kimlikler korunsun diye önceki sürümden başla
-            kapi = [sys.executable, str(MEDS / "scripts/kamp/dogrula.py"), str(W / "kamp.json"), "--girdi", str(W / "girdi.json")]
-            istem = (f"{MEDS}/scripts/kamp/TALIMAT_KAMP.md talimatını uygula. Çalışma klasörü {W} (girdi.json orada; çıktı kamp.json). "
+            kapi = [sys.executable, str(MEDS / "scripts/uretim/kamp/dogrula.py"), str(W / "kamp.json"), "--girdi", str(W / "girdi.json")]
+            istem = (f"{MEDS}/scripts/uretim/kamp/TALIMAT_KAMP.md talimatını uygula. Çalışma klasörü {W} (girdi.json orada; çıktı kamp.json). "
                      f"Bitince şu kapıyı 0 HATA olana kadar çalıştır: {' '.join(kapi)}")
             r = 1
             for tur in range(3):
@@ -92,7 +92,7 @@ def main():
                 bildir(f"Kurul {k} {brans} kampı kapıdan geçmedi", (r.stdout or "")[-1500:] + "\nYayımlanan kamp değişmedi.", hedef="kamp")
                 continue
             s = subprocess.run(["systemd-run", "--user", "--scope", "-q", "-p", "CPUQuota=300%", "-p", "MemoryMax=2200M", "--nice=10",
-                                "env", "CUDA_VISIBLE_DEVICES=", str(EMA_PY), str(MEDS / "scripts/kamp/ses.py"), str(W / "kamp.json")]
+                                "env", "CUDA_VISIBLE_DEVICES=", str(EMA_PY), str(MEDS / "scripts/uretim/kamp/ses.py"), str(W / "kamp.json")]
                                + (["--ses-kok", str(KOK / "meds_temp/prova/kamp/ses")] if a.prova else []))
             if s.returncode:
                 print("   HATA: kamp sesi üretilemedi"); hata += 1; continue

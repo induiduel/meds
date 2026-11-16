@@ -1,4 +1,4 @@
-# Tıbbi Farmakoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Tıbbi Farmakoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 679 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 106, 2019: 7, 2020: 237, 2021: 75, 2022: 40, 2023: 28, 2024: 4, 2025: 14, 2026: 4}
 

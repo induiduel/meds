@@ -26,7 +26,7 @@ KURALLAR = ["kaynak_sadakati", "sesli_yazimi", "ses_yazimi", "turkce_uslup", "ci
 
 
 def _sa():
-    for p in (c.KOK / "scripts" / "sesli_anlatim", c.KOK / "scripts", c.KOK / "scripts" / "kroki"):
+    for p in (c.KOK / "scripts" / "uretim" / "sesli_anlatim", c.KOK / "scripts", c.KOK / "scripts" / "uretim" / "kroki"):
         if str(p) not in sys.path:
             sys.path.insert(0, str(p))
     import konusma_v2 as KV
@@ -197,7 +197,7 @@ def _metin_denetle(md: str, ders_duzeyi: bool) -> list[str]:
     with tempfile.TemporaryDirectory(prefix="sesli_md_") as t:
         p = Path(t) / "konusma_metni.md"
         p.write_text(md, encoding="utf-8")
-        r = subprocess.run([sys.executable, str(c.KOK / "scripts" / "sesli_anlatim" / "metin_denetle.py"), str(p)],
+        r = subprocess.run([sys.executable, str(c.KOK / "scripts" / "uretim" / "sesli_anlatim" / "metin_denetle.py"), str(p)],
                            capture_output=True, text=True)
     h = [ln.strip()[5:].strip() for ln in r.stdout.splitlines() if ln.strip().startswith("HATA ")]
     if not ders_duzeyi:

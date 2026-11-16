@@ -6,7 +6,7 @@
  * Her bölüm: başlık kartı (hedef no + belge metni) → Ne / Nasıl / Neden → Sık hata (kırmızı uyarı) → Hoca sorar (soru sesi
  * + düşünme payı) → sonraki hedef. Ses `h-<no>` ve `h-<no>-s` klipleri (ses_<kod>.json, cümle zamanlı); ses yoksa sessiz
  * kipte cümle uzunluğuna göre akar. Denetimler oynarken gizlenir; klavye: boşluk, ←/→ cümle, PgUp/PgDn ya da J/L hedef,
- * f tam ekran, Esc kapat. Veri kapısı: scripts/kmb/dogrula.py (film vuruşları, öge kimlikleri, zoom 1–2).
+ * f tam ekran, Esc kapat. Veri kapısı: scripts/uretim/kmb/dogrula.py (film vuruşları, öge kimlikleri, zoom 1–2).
  */
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';

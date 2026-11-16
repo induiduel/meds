@@ -8,7 +8,7 @@
  * Öge: havuzdaki her soru kaydı (data/questions.json) + soruya bağlanmayan serbest metin birimleri.
  * Kurallar: yalnız aynı kurul; farklı soru numarası ve ders çelişkisi ceza (öğrenciler numarayı ±1 yanlış hatırlar);
  * taslak yalnız kanıtla kurulur (şıklar oyla, eksik harf "[EKSİK ŞIK]", cevap ancak oy çoğunluğuyla).
- * Ölçüm: `npx tsx scripts/eval/recall-engine.mts` (gerçek çıkmış sorulardan üretilmiş 1.023 öğrenci mesajı).
+ * Ölçüm: `npx tsx scripts/moduller/eval/recall-engine.mts` (gerçek çıkmış sorulardan üretilmiş 1.023 öğrenci mesajı).
  */
 import fs from 'fs';
 import crypto from 'crypto';
@@ -451,7 +451,7 @@ export function createPoolClusterService(opts: {
   /**
    * Karma kümeleme: "artımlı" yalnız yeni/değişen kayıtları mevcut kümelere atar (ms; ekran hemen güncellenir);
    * "toplu" ortalama bağlantıyı baştan kurar (kalite: iki yarım kümeyi de birleştirir). Artımlı tek başına F1'i
-   * %65 → %58'e düşürdüğü için (scripts/eval/recall-engine.mts --incremental) her değişiklikten 10 dk sonra toplu düzeltme.
+   * %65 → %58'e düşürdüğü için (scripts/moduller/eval/recall-engine.mts --incremental) her değişiklikten 10 dk sonra toplu düzeltme.
    */
   let state: { eng: RecallEngine; groups: { members: RecallItem[]; cohesion: number }[] } | null = null;
   async function recompute(mode: 'full' | 'incremental' = 'full') {
@@ -615,7 +615,7 @@ export function createPoolClusterService(opts: {
 
   /**
    * "Soru ekle" sırasında: yazılan metni analiz eder ve havuzda aynı soruyu anlatan kayıtları olasılıkla döndürür.
-   * Ölçüm (scripts/eval/recall-realtime.mts): ilk öneri doğru %83, eski tarayıcı algoritması %54,5.
+   * Ölçüm (scripts/moduller/eval/recall-realtime.mts): ilk öneri doğru %83, eski tarayıcı algoritması %54,5.
    */
   async function matchText(input: { text: string; committeeId: string; discipline?: string | null; options?: { key?: string | null; text: string }[]; questionNumber?: number | null; excludeId?: string; limit?: number }) {
     const eng = await getRecallEngine(opts.rootDir, opts.getPastQuestions);

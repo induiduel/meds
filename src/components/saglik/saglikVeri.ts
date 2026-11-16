@@ -6,8 +6,8 @@ import {
 
 /**
  * Sağlık Bakanlığı sekmesi (/saglik) — veri türleri, bölüm listesi ve yükleyiciler.
- * Veri: src/data/saglik/*.json (scripts/saglik/birlestir.py resmî kaynaklı araştırma çıktısından yazar,
- * scripts/saglik/baglantilari_kur.py ders bağlarını üretir). Her sayı bir `kaynak` kimliği taşır; kaynak yoksa gösterilmez.
+ * Veri: src/data/saglik/*.json (scripts/moduller/saglik/birlestir.py resmî kaynaklı araştırma çıktısından yazar,
+ * scripts/moduller/saglik/baglantilari_kur.py ders bağlarını üretir). Her sayı bir `kaynak` kimliği taşır; kaynak yoksa gösterilmez.
  */
 
 export type BolumId =

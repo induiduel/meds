@@ -1,6 +1,6 @@
 /**
  * Sınav spotları › "En önemliler" ve "Soru çözücü" görünümlerinin branşları. Her branşın verisi ayrı klasörde:
- *   src/data/<id>_onem/{index,<kod>}.json   (önem listesi; patoloji: scripts/patoloji_onem, diğerleri: scripts/spot_cozucu/birlestir.py)
+ *   src/data/<id>_onem/{index,<kod>}.json   (önem listesi; patoloji: scripts/uretim/patoloji_onem, diğerleri: scripts/uretim/spot_cozucu/birlestir.py)
  *   src/data/<id>_cozucu/{index,<kod>}.json (sesli soru çözücü; sesler data/<id>_cozucu/ses, ses_<ses> →/api/cozucu-ses/<id>/…)
  * Ders kodları branşlar arasında tekildir (patoloji "07", enfeksiyon "e07", üroloji "u03"); "öğrendim" ve çözücü ilerlemesi koda bağlı.
  */
@@ -72,9 +72,9 @@ const VERI_KLASORLERI = Object.keys({
 });
 const SLUG_AD: Record<string, { ad: string; kisa: string }> = {
   ...Object.fromEntries((branslarVeri as any).branslar.map((b: any) => [b.slug, { ad: b.ad, kisa: b.kisa }])),
-  // Hocanın üslubunda sorular (scripts/patoloji_soru_isci): ayrı çözücü branşı, branslar.json'da yok
+  // Hocanın üslubunda sorular (scripts/uretim/patoloji_soru_isci): ayrı çözücü branşı, branslar.json'da yok
   patolojihoca: { ad: 'Tıbbi Patoloji · Hoca soruları', kisa: 'Patoloji Hoca' },
-  // Sesli derste slayt arası "hocanın sorabileceği" sorular (scripts/hoca_ara_soru), tüm dersler
+  // Sesli derste slayt arası "hocanın sorabileceği" sorular (scripts/uretim/hoca_ara_soru), tüm dersler
   hocaara: { ad: 'Hocanın sorabileceği sorular', kisa: 'Hoca sorabilir' },
 };
 const sonrakiKurullar: BransTanim[] = [...new Set(VERI_KLASORLERI.map((p) => /\/(k[2-6][a-z]+)_(onem|cozucu)\//.exec(p)?.[1]).filter(Boolean) as string[])]

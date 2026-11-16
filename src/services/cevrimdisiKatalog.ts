@@ -2,7 +2,7 @@
  * Çevrimdışı paket kataloğu (istemci: src/services/cevrimdisi/).
  *   GET /api/cevrimdisi/katalog      — tüm paketlerin özeti: kimlik, modül, grup, başlık, bayt, dosya sayısı, sürüm (dosya listesi yok; küçük).
  *   GET /api/cevrimdisi/paket/:id    — tek paketin dosyaları [{u, v, b}] (u: kök göreli adres, v: sürüm, b: bayt).
- * Kaynaklar: dist/cevrimdisi-manifest.json (derleme parçaları; scripts/vite/cevrimdisiManifest.ts), src/data/* (klip adları,
+ * Kaynaklar: dist/cevrimdisi-manifest.json (derleme parçaları; scripts/altyapi/vite/cevrimdisiManifest.ts), src/data/* (klip adları,
  * sürüm özetleri) ve data/* (ses dosyaları, boyut). Paket sürümü dosya adres+sürümlerinin özeti: içerik ya da ses değişince değişir,
  * istemci "güncelleme var" gösterir ve yalnız değişen dosyaları indirir. Sesli dersler (canlı ders) burada değil; istemci kendi
  * kataloğundan (/api/canli-ders) ekler. Çıkmış/soru havuzu veritabanı IndexedDB'ye ayrıca iner (offlineDatabaseService).

@@ -13,7 +13,7 @@ meds_temp / meds_database (boru hattı çıktısı)
         │  deste üretici (ör. scripts/build_batch*_deck.py, ajanlar)
         ▼
 src/data/interactive_learning_decks.json      ← TEK DOĞRU KAYNAK (git'te izlenir)
-        │  vite eklentisi scripts/vite/splitLearningDecks.ts (dev/derleme başında, kaynak değişince)
+        │  vite eklentisi scripts/altyapi/vite/splitLearningDecks.ts (dev/derleme başında, kaynak değişince)
         ▼
 src/data/decks/catalog.json + src/data/decks/items/<id>.json   ← ÜRETİLİR, .gitignore'da, ELLE YAZILMAZ
         │  python3 scripts/build_kazanim_deck_index.py
@@ -116,8 +116,8 @@ Ana içerikte yalnız ders anlatılır; kaynak, terim listesi, kazanım ve sayı
   bilgi_paketi (özet verisi) maddeleri, kaynaktan birebir alıntı. Slaytta `"pdfSayfalari": [ilk, son]` ve
   `sourcePdf.startPage/endPage`; deste `"sayfaHaritasi": "teyitli"`. Öğren'deki PDF eşlemesi bu desteler için tahmin
   yerine doğrudan bu aralıkları kullanır (`build_deck_pdf_sources.py`).
-- Ders özeti (`ders_ozeti.md`) başlık özetlerinden maliyetsiz derlenir (`scripts/ders_isci/ozet_derle.py`).
-- Şema ve denetim: `scripts/ders_isci/TALIMAT.md` §1b–1c, `scripts/ders_isci/denetle.py`.
+- Ders özeti (`ders_ozeti.md`) başlık özetlerinden maliyetsiz derlenir (`scripts/uretim/ders_isci/ozet_derle.py`).
+- Şema ve denetim: `scripts/uretim/ders_isci/TALIMAT.md` §1b–1c, `scripts/uretim/ders_isci/denetle.py`.
 
 ## 4. Metin Biçimi, Sayfa Düzeni ve Tekrarı Önleme Kuralları
 
@@ -285,7 +285,7 @@ Yeni üretilen her destenin **son slaytı** bir oyun sayfasıdır. Dersin tamam�
 - **Öğeler:** 4–6 öge, **yalnız** aşağıdaki dört tür; dördü de en az bir kez kullanılır. Bu türler başka hiçbir slaytta kullanılamaz (`oyun-yeri` HATA).
 - **Ekran:** rayda mor "Oyun ·" satırı, başlıkta "Ders sonu oyunları" etiketi. Bileşenler `lesson/LessonGames.tsx`, stil `styles/learn-games.css`.
 - **Doğrulama:** yeni deste `validate_learning_decks.py deck.json --oyun-zorunlu` ile 0 HATA vermeli. Ders işçisinin denetleyicisi bu bayrakla çalışır. Bayraksız çalıştırmada eski desteler oyun sayfası olmadan geçerlidir. **Kurul 2+:** `--kurul2` eklenir → Türkçe üslup (`docs/TURKCE_USLUP_STANDARDI.md`) ve mini soru/klinik karar şık açıklamaları (`docs/SIK_ACIKLAMA_STANDARDI.md`) HATA olarak denetlenir; hata defteri `docs/KURUL2_YAPILMAYACAK_HATALAR.md`.
-- **Örnek:** `scripts/fixtures/oyun_sayfasi_ornek.json` (k1-68 Enfeksiyon Epidemiyolojisi için tam bir oyun sayfası).
+- **Örnek:** `scripts/altyapi/fixtures/oyun_sayfasi_ornek.json` (k1-68 Enfeksiyon Epidemiyolojisi için tam bir oyun sayfası).
 
 #### `sequence_order` — Sırala
 Öğrenci karışık basamaklara sırayla dokunarak dizer, "Kontrol et" ile yanlış yerdekiler kırmızı ve doğrusu gösterilir.

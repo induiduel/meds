@@ -5,7 +5,7 @@
  * CSS çalışma anında üretilir ve <style id="palette-registry"> olarak eklenir. styles/appearance.css'teki
  * eski elle yazılmış bloklar yalnız yedektir; buradaki seçici daha özgül olduğu için her zaman kazanır.
  *  - Yeni palet = bu listeye bir nesne (tüm anahtarlar zorunlu, bkz. TOKEN_KEYS).
- *  - Kontrast kapısı: `npx tsx scripts/design/check-contrast.mjs` (her çift ≥4.5:1, ink-3 ≥5; vurgu seçenekleri;
+ *  - Kontrast kapısı: `npx tsx scripts/altyapi/design/check-contrast.mjs` (her çift ≥4.5:1, ink-3 ≥5; vurgu seçenekleri;
  *    aynı temada zemin+vurgusu neredeyse aynı iki palet = kopya → HATA).
  *  - Yazıyı `opacity` ile soluklaştırma: bazı paletlerde eşiğin altına düşer; `--color-ink-3` kullan.
  *  - Ayarlar ekranı listeyi otomatik gösterir; silinmiş palet seçimi temanın ilk paletine döner.
@@ -303,7 +303,7 @@ html:root.ui-v7[data-mode="dark"] :is(${DISCIPLINES}) { --d-soft: color-mix(in s
 /* ——— W01 Paleti düzenle: özel vurgu + kontrast kapısı ———
  * Kullanıcının seçtiği renk olduğu gibi kullanılmaz: vurgu, paletin üç zemininde (white/canvas/field) ve kendi yumuşak
  * zemininde ≥4.5:1 okunana dek açıklığı (OKLCH L) kaydırılır; üstündeki yazı (on) siyah/beyazdan kontrastı yüksek olan.
- * scripts/design/check-contrast.mjs bu işlevi de tarar (her ton × tema × palet). */
+ * scripts/altyapi/design/check-contrast.mjs bu işlevi de tarar (her ton × tema × palet). */
 const lin = (c: number) => { c /= 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
 const hexRgb = (h: string) => { const n = parseInt(h.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255]; };
 const lumHex = (h: string) => { const [r, g, b] = hexRgb(h).map(lin); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };

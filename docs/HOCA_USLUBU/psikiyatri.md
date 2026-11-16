@@ -1,4 +1,4 @@
-# Psikiyatri — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Psikiyatri — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 146 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 8, 2020: 50, 2021: 29, 2022: 7, 2023: 4, 2024: 2, 2025: 9}
 

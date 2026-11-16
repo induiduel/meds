@@ -6,7 +6,7 @@ Sıra: görevin `katmanlar` listesi (2026-10-24'ten beri ["A"]). B (betik) katma
       model ailesi.
       (butce.json `ajanlar`: komut, modeller, günlük tavan; sayaç meds_temp/state/ajan_butce.json). Boş klasörde, salt okunur,
       istem stdin'den. Claude bu katmanda da C bütçesini kullanır. Denetimde yazar ajan `haric_aile` ile atlanır.
-  Ü — ücretsiz bulut: scripts/agents/cloud_llm.py zinciri AİLE AİLE (gemini, groq, zen, openrouter). Her ailede ilk
+  Ü — ücretsiz bulut: scripts/altyapi/agents/cloud_llm.py zinciri AİLE AİLE (gemini, groq, zen, openrouter). Her ailede ilk
       cevap + en çok `deneme.Ü` düzeltme turu (hata listesiyle). Aile sırası görevin `yazar_aileleri`; işin meta'sındaki
       `haric_aile` (denetimde yazarın ailesi) atlanır → yazar ≠ denetçi.
   C — Claude (`claude -p`, araçsız, stdin): günlük bütçe (butce.json, sayaç meds_temp/state/claude_butce.json);
@@ -186,7 +186,7 @@ def _gorsel(istem: str, aile: str, k: dict, gorsel: str) -> tuple[str | None, st
 
 
 def _ucretsiz(istem: str, aile: str, k: dict) -> tuple[str | None, str | None]:
-    import cloud_llm  # scripts/agents (çekirdek yol ekler)
+    import cloud_llm  # scripts/altyapi/agents (çekirdek yol ekler)
     modeller = [m for m in cloud_llm.chain() if m.split(":", 1)[0] == aile]
     if not modeller:
         return None, None

@@ -1,4 +1,4 @@
-# Çocuk Sağlığı ve Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Çocuk Sağlığı ve Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 143 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 15, 2020: 57, 2021: 11, 2022: 17, 2023: 2, 2024: 2, 2025: 1}
 

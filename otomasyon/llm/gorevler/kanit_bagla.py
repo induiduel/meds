@@ -19,8 +19,8 @@ from pathlib import Path
 
 from .. import cekirdek as c
 
-sys.path.insert(0, str(c.KOK / "scripts" / "kroki"))
-sys.path.insert(0, str(c.KOK / "scripts" / "cikmis_dizin"))
+sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "kroki"))
+sys.path.insert(0, str(c.KOK / "scripts" / "uretim" / "cikmis_dizin"))
 
 OGRENCI_METNI = False   # çıktı iç veri (kısa etiket taşır); ortak etiket sızıntısı kapısı uygulanmaz
 OGE, OGE_ETIKET = ("sorular", "dict"), r"Q\d+"   # kısmi düzeltme: yalnız hatalı Q'lar (yonlendir.kismi_duzeltme)

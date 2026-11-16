@@ -4,8 +4,8 @@ import { icerikGizli } from '../../../services/siteAyar';
 
 /**
  * Sınav için en önemliler — ortak tipler, sabitler, ders yükleyici ve "öğrendim" deposu (branş geneli).
- * Veri: src/data/<brans>_onem/{index,<kod>}.json (patoloji: scripts/patoloji_onem/birlestir.py; enfeksiyon/üroloji:
- * scripts/spot_cozucu/birlestir.py; her madde branşın Kurul 1 ders PDF'inden birebir alıntılı). Ders başına ayrı dosya, ilk
+ * Veri: src/data/<brans>_onem/{index,<kod>}.json (patoloji: scripts/uretim/patoloji_onem/birlestir.py; enfeksiyon/üroloji:
+ * scripts/uretim/spot_cozucu/birlestir.py; her madde branşın Kurul 1 ders PDF'inden birebir alıntılı). Ders başına ayrı dosya, ilk
  * gerektiğinde indirilir. `ornek26`: patolojide hocanın 2026-27 örnek soruları; diğer branşlarda ders PDF'ine dayalı, çıkmışların
  * üslubunda örnek sorular (`zorluk` alanlı; aynı sorular soru çözücüde de var).
  */
@@ -22,10 +22,10 @@ export interface Madde {
   kaynak?: 'metin' | 'tablo' | 'sekil'; klinik?: boolean; sinavUygun?: boolean;
   /** patoloji (morfoloji/mekanizma/tanım…) · prognoz · tedavi (sorulabilir) · klinik bulgu (sorulmaz) */
   kategori?: Kat;
-  /** Geçmiş yıl (2025-26) öğrenci derleme notu (scripts/ogrenci_onem): A çıkmış kanıtlı, B vurgulu + el notlu; not: öğrencinin
+  /** Geçmiş yıl (2025-26) öğrenci derleme notu (scripts/uretim/ogrenci_onem): A çıkmış kanıtlı, B vurgulu + el notlu; not: öğrencinin
    *  düzeltilmiş el notu ya da işaretin kısa açıklaması */
   ogrenci?: { oncelik: 'A' | 'B'; not?: string };
-  /** Hocanın ders kaydındaki vurgusu (scripts/hoca_vurgu): kategori sorulur|cikmis|onemli|bilin|dikkat, söz = hocanın cümlesi, dk = kayıttaki zaman */
+  /** Hocanın ders kaydındaki vurgusu (scripts/uretim/hoca_vurgu): kategori sorulur|cikmis|onemli|bilin|dikkat, söz = hocanın cümlesi, dk = kayıttaki zaman */
   hoca?: { kategori: string; soz: string; dk?: string };
 }
 export interface Aday { id: string; sira: number; gerekce: string }

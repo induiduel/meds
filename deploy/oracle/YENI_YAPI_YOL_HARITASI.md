@@ -131,9 +131,9 @@ Saklama kuralları:
 6. `aiProvider.ts:204`, `studioAiService.ts:15`, `autoErrorRepairEngine.ts:586` (`:11434` Ollama) →
    Oracle'da Ollama YOK: `generateResilientMedicalAi` zaten cloud'a düşüyor (doğrulandı) — kod değişmez,
    yalnız `MEDS_LLM_BACKEND=cloud` Oracle `.env`de sabitlenecek.
-7. `scripts/semantic/deploy/meds-v2semantic.service:8-11` + `watchdog.py:231` (sabit `/home/indu` pathleri) →
+7. `scripts/altyapi/semantic/deploy/meds-v2semantic.service:8-11` + `watchdog.py:231` (sabit `/home/indu` pathleri) →
    bu üniteler ORACLE DIŞI etiketlenecek (cihaz-only), Oracle imajına GİRMEYECEK (`.dockerignore` + doc).
-8. `scripts/deck_generators/*` sabit `src/data/decks/items` pathleri → `MEDS_PROJECT_ROOT` göreli (cihazda çalışıyor, bozulmasın diye testli).
+8. `scripts/arsiv/deck_generators/*` sabit `src/data/decks/items` pathleri → `MEDS_PROJECT_ROOT` göreli (cihazda çalışıyor, bozulmasın diye testli).
 9. `Dockerfile.oracle`: `ARG VITE_ORACLE_API_URL` eklenecek (şu an kod-default `https://api...` çalışıyor ama
    build'e gömülmeli; apex tek-adres düzeninde `https://nofrostlife.com.tr` olacak).
 10. `api.ts` içindeki `VITE_GEMINI_API_KEY` okuma (3 nokta) → KALDIRILACAK (istemciye secret gömülmesin;
@@ -225,7 +225,7 @@ Kalıcı silme her zaman **önce `/home/indu/medsor-yedek/<tarih>/`e taşı → 
 - **T1 (= F0) — Yedek:** F0'a ek olarak `yedek/` klasörü repo dışına (`/home/indu/medsor-yedek/`) taşınır; `ssh-key1.key` → `~/.ssh/`
   (`deploy-code.sh`/`sync-*.sh` yol güncellemesiyle aynı adımda).
 - **T2 — Kök temizliği:** kökte yalnız `meds/`, veri klasörleri, `AGENTS.md`, `PROJE_TANITIMI.md`, `DEGISIKLIK_KAYDI.md` kalır.
-  Tek seferlik betikler → `meds/scripts/archive/<tarih>/`; başıboş `src/`, `packages/` → içerik `meds/src/data/decks/packages` ile
+  Tek seferlik betikler → `meds/scripts/arsiv/archive/<tarih>/`; başıboş `src/`, `packages/` → içerik `meds/src/data/decks/packages` ile
   diff'lenir, fark yoksa arşiv. `get-pip.py`, `.commandcode/` → sil-adayı.
 - **T3 (F1 ile birlikte) — Derleme birikimi:** `emptyOutDir` false kalabilir (eski SW istemcileri için) ama `scripts/prune-dist.mjs`:
   son 2 derlemenin manifest'inde olmayan + 7 günden eski parçaları siler; `deploy-code.sh --build` sonunda çağrılır. Hedef dist < 250MB.
@@ -258,20 +258,20 @@ Her faz sonunda `DEGISIKLIK_KAYDI.md`'ye kayıt; sayaç tutmazsa durulur.
   Proje dışına taşınan 1.8GB (`yedek/`, `supabase_local.dump`, `ozet_satir_yedek`, `meds_database/backups`, iki `.bak_manual_import`) — liste: `medsor-yedek/proje_disina_tasinan_20261011/TASINANLAR.tsv`. SSH anahtarı `~/.ssh/medsor-oracle.key` (deploy-code/sync-vectors/SISTEM_MIMARISI güncel, SSH doğrulandı).
 - **T2 (kısmi) ✓** kök `patch_*/fix_*/apply_fixed/update_builder.py` + başıboş `src/` → `medsor-yedek/arsiv_kok_20261011/`. Kök `scripts/` ve `packages/` BEKLİYOR (k1-30…42 paketleri yanlış cwd yüzünden köke yazılmış; önce paket yeniden üretim kararı).
 - **T3 ✓** `scripts/prune-dist.mjs` (erişilebilirlik BFS + son 2 derleme defteri + 24s tampon); `postbuild` ve `build:gh-pages` sonuna bağlandı. dist 1.2GB→459MB, dist-gh 434→111MB. §12.2'deki "7 gün" kuralı yerine derleme-sayısı kuralı (bayatların hepsi <7 gün olduğu için).
-- **deploy-code.sh rsync** artık `/.env.*`, `*.bak*`, `*.backup*`, `get-pip.py`, `.agents/.claude/.github`, `scripts/archive`, `scripts/semantic/data` göndermiyor.
-- **Oracle'da bekleyen (kullanıcı eli/izni):** önceki rsync artıkları uygulama ağacında duruyor: `.env.cloud.bak` (secret kopyası), `src/data/pastQuestions.json.bak_manual_import` 61MB, `scripts/semantic/data` 108MB, `.agents` + `.claude` 2×20MB → `~/meds-backup/`e taşınmalı.
+- **deploy-code.sh rsync** artık `/.env.*`, `*.bak*`, `*.backup*`, `get-pip.py`, `.agents/.claude/.github`, `scripts/arsiv/archive`, `scripts/altyapi/semantic/data` göndermiyor.
+- **Oracle'da bekleyen (kullanıcı eli/izni):** önceki rsync artıkları uygulama ağacında duruyor: `.env.cloud.bak` (secret kopyası), `src/data/pastQuestions.json.bak_manual_import` 61MB, `scripts/altyapi/semantic/data` 108MB, `.agents` + `.claude` 2×20MB → `~/meds-backup/`e taşınmalı.
 - Doğrulama: validator 114 deste 0 HATA · tsc 0 · yerel+canlı health 200.
 
 ### 12.4 İlerleme (2026-10-11 gece, devam) — kullanıcı kararları uygulandı
 
 - K/kararlar: eğitim ortamı silindi · GH Pages kaldırıldı · yerel GPU yasak · kelime 60–250 · kalıcı CPU embed servisi.
 - T2 ✓ (paketler tek kaynağa bağlandı, kök `packages/` arşivde) · T3 ✓ · T5 kısmi ✓ (GPU servisleri kalktı; embed birimleri sınırlı; 3 vektör sunucusu birleştirme hâlâ açık) · T6 kısmi ✓ (kaynak tavanları; önbellek/parçalama açık) · T8 kısmi ✓ (kural belgeleri birleşti; kayıt arşivleme açık).
-- Yeni araçlar: `deploy/backup.sh`, `deploy/oracle/db-yonet.sh`, `scripts/db_analiz/analiz.py`, `scripts/build_deck_packages.py`, `scripts/prune-dist.mjs`.
+- Yeni araçlar: `deploy/backup.sh`, `deploy/oracle/db-yonet.sh`, `scripts/altyapi/db_analiz/analiz.py`, `scripts/build_deck_packages.py`, `scripts/prune-dist.mjs`.
 - Açık: T4 (veri klasörü birleştirme), T7 (`npm run check` kapısı + CSS sınıf çakışma denetimi), F1 (git'ten büyük veri çıkarma), F2 (env'leştirme), Oracle'da `--delete`li kod eşitleme, DB analizi → birleştirme/silme (kullanıcı en sona bıraktı).
 
 ### 12.5 Ders işçisi (2026-10-12)
 
-- Drive izleme → taslak (Oracle, `meds-ders-isci`, Claude aboneliği, 01–08) → Yönetim "Yeni dersler" onayı → **B2 yayın ✓** (`scripts/ders_isci/yayinla.py`, cihazda; yayın kaydı `scripts/ders_isci/yayin_kaydi.json`). İlk yayın: k1-67 Gebelik Hastalıkları.
+- Drive izleme → taslak (Oracle, `meds-ders-isci`, Claude aboneliği, 01–08) → Yönetim "Yeni dersler" onayı → **B2 yayın ✓** (`scripts/uretim/ders_isci/yayinla.py`, cihazda; yayın kaydı `scripts/uretim/ders_isci/yayin_kaydi.json`). İlk yayın: k1-67 Gebelik Hastalıkları.
 - Site verisi yazarları toptan ezmeye karşı korundu: s16 site dışa aktarımı yalnız upsert, s15 kapalı (`MEDS_S15_ZORLA=1`), s13/learn_links/checklist yayın kaydına saygılı.
 - Otomatik yayın ✓ (Oracle `meds-ders-yayin.timer`; cihaz `--esitle` dağıtım öncesi zorunlu). Hastalık önerileri şema 2'de hazır, `diseases.json` başka oturumda bitince `--hastaliklar` ile eklenir.
 - Açık: e5 RAG vektörlerinin yeniden üretimi; Kurul 2+ için yayın (şimdilik yalnız Kurul 1).

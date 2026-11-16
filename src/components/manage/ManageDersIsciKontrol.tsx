@@ -7,7 +7,7 @@ import { FactList, PageActions, StatRow, type Stat } from '../v14/pageKit';
 /**
  * Ders işçisi denetimi: canlı durum (şu an işlenen, bugün başlanan/sınır, sonraki başlama), duraklat/sürdür, Drive'ı şimdi
  * tara ve işçinin tüm çalışma ayarları. Ayarlar işçide STATE/ayar.json'a yazılır; döngü her turda (30 sn) okur,
- * yeniden başlatma gerekmez. Veri: /api/admin/ders-isci/ayarlar · /tara (işçi iç API'si, scripts/ders_isci/api.py).
+ * yeniden başlatma gerekmez. Veri: /api/admin/ders-isci/ayarlar · /tara (işçi iç API'si, scripts/uretim/ders_isci/api.py).
  */
 export type IsciAyar = {
   duraklat: boolean;

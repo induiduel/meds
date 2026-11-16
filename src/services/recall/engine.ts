@@ -6,7 +6,7 @@
  * benzer çıkmış soru), src/data/medical_glossary.json + disease_entities.json (terim dizini),
  * src/data/curriculum_disciplines.json (kurulun ders listesi).
  *
- * Ölçüm: `npm run eval:recall` (scripts/eval/recall-engine.mts) — gruplama F1/ARI, ders isabeti, terim duyarlılığı,
+ * Ölçüm: `npm run eval:recall` (scripts/moduller/eval/recall-engine.mts) — gruplama F1/ARI, ders isabeti, terim duyarlılığı,
  * kök benzerliği; değişiklikten önce ve sonra çalıştırılır.
  */
 import fs from 'fs';
@@ -126,9 +126,9 @@ export function dot(a: Vec, b: Vec): number {
   return t;
 }
 
-/** Ders sınıflayıcı birleşim ağırlıkları (scripts/eval/recall-engine.mts --fit-ders ile seçildi). */
+/** Ders sınıflayıcı birleşim ağırlıkları (scripts/moduller/eval/recall-engine.mts --fit-ders ile seçildi). */
 export const CLASSIFY = { bankCentroid: 0.4, bankKnn: 0.4, lecCentroid: 0.2, lecKnn: 0, priorPenalty: 0, hint: 0.25, temperature: 0.06, numberPrior: 0.15 };
-// numberPrior: scripts/eval/recall-number-prior.mts (15 gerçek sınav; 0 → %77,6, 0,15 → %81,3, 0,3 → %78,4)
+// numberPrior: scripts/moduller/eval/recall-number-prior.mts (15 gerçek sınav; 0 → %77,6, 0,15 → %81,3, 0,3 → %78,4)
 
 export interface RecallEngine {
   version: string;

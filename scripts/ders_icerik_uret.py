@@ -127,4 +127,4 @@ for k in sys.argv[1:]: uret(k)
 # H105 kapısı: sıralı tablolarda numara atlanmamalı (0 HATA değilse çıkış 1)
 import subprocess
 if sys.argv[1:]:
-    sys.exit(subprocess.call([sys.executable, os.path.join(R, 'scripts/ders_icerik/sira_kapisi.py')] + [os.path.join(R, 'src/data/ders_icerik', k + '.json') for k in sys.argv[1:]]))
+    sys.exit(subprocess.call([sys.executable, os.path.join(R, 'scripts/uretim/ders_icerik/sira_kapisi.py')] + [os.path.join(R, 'src/data/ders_icerik', k + '.json') for k in sys.argv[1:]]))

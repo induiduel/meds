@@ -1,5 +1,5 @@
 /**
- * Hastalık bilgi grafiği derleyicisi (yalnız Node, ayrı süreçte; scripts/search/build-query-intel.mts çağırır).
+ * Hastalık bilgi grafiği derleyicisi (yalnız Node, ayrı süreçte; scripts/altyapi/search/build-query-intel.mts çağırır).
  *
  * GraphRAG'in hafif ve yerel karşılığı: LLM yok, her çalıştırmada aynı sonuç, ~1 dk CPU.
  *  1) Düğümler: hastalıklar (diseases.json) + sorgu zekâsı paketindeki kavramlar (ilaç, gen, bulgu, patojen…)

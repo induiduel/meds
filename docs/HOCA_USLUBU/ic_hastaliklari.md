@@ -1,4 +1,4 @@
-# İç Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# İç Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 462 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 79, 2019: 1, 2020: 228, 2021: 28, 2022: 19, 2023: 16, 2025: 1}
 

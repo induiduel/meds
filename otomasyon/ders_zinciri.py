@@ -24,7 +24,7 @@ from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
 AJAN_MODEL = _ajan_model()   # kullanıcı: MEDS_AJAN_MODEL > butce.json claude.model > claude-opus-5-5
-SC = MEDS / "scripts/spot_cozucu"
+SC = MEDS / "scripts/uretim/spot_cozucu"
 W0 = KOK / "meds_temp/spot_cozucu"
 DURUM = KOK / "meds_temp/hat/dersler"
 sys.path.insert(0, str(SC))
@@ -42,7 +42,7 @@ def brans_klasoru(d):
 def yayinlar():
     """Yayımlanmış ders paketleri. Asıl kayıt Oracle'dadır (ders işçisi orada yayınlar): SSH ile salt-okunur çekilir;
     ulaşılamazsa cihaz kopyası (yayinla.py --esitle günceller). --esitle commit attığı için gece işinde çağrılmaz."""
-    yerel = MEDS / "scripts/ders_isci/yayin_kaydi.json"
+    yerel = MEDS / "scripts/uretim/ders_isci/yayin_kaydi.json"
     try:
         r = subprocess.run(["ssh", "-o", "ConnectTimeout=15", "-o", "BatchMode=yes", "medsor-oracle",
                             "cat /home/ubuntu/medsor/ders_isci/yayin_kaydi.json"], capture_output=True, text=True, timeout=60)
@@ -174,7 +174,7 @@ def a_hazirla(d, pk, W, kuru):
     if not cik:  # yeni konu olabilir; ama müfredat eşlemesi kopuk da olabilir → görünür kalsın
         print(f"   UYARI {kod}: bu derse eşlenmiş çıkmış soru yok (konu: {d['konu']}) — önem yalnız PDF + örnek sorularla")
     # Önem haritası: sayfa başına sınava konu olma puanı (çıkmış benzerliği × sıklık × yakınlık) → tüm üreticilere girdi
-    return calistir([str(MEDS / ".venv-ocr/bin/python"), str(MEDS / "scripts/onem/onem_haritasi.py"),
+    return calistir([str(MEDS / ".venv-ocr/bin/python"), str(MEDS / "scripts/hat/onem/onem_haritasi.py"),
                      str(W / "pdf_metin" / f"{kod}.md"), str(W / "cikmis" / f"{kod}.json"), "--kod", kod,
                      "--yaz", str(W / "onem_haritasi" / f"{kod}.json"),
                      "--sayfalar", str(kaynak.parent / "sayfalar.json")])
@@ -439,8 +439,8 @@ def a_ses(d, pk, W, kuru):
     if deste:
         # Öğren adım sesleri: EMA venv, makine korumalı kapsam, bitince Oracle'a rsync (--oracle)
         # EMA daima GPU (kullanıcı kararı 2026-10-24): koruyuculu GPU başlatıcısı (cozucu_ses_gpu.sh)
-        r = r or calistir(f"bash {MEDS}/scripts/patoloji_cozucu/cozucu_ses_gpu.sh "
-                          f"{MEDS}/scripts/ogren_ses/ogren_ses_uret.py {deste} --oracle", cwd=MEDS, kuru=kuru)
+        r = r or calistir(f"bash {MEDS}/scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh "
+                          f"{MEDS}/scripts/uretim/ogren_ses/ogren_ses_uret.py {deste} --oracle", cwd=MEDS, kuru=kuru)
     return r or calistir(f"python3 {SC}/birlestir.py {W.name} --taslak", kuru=kuru)
 
 
@@ -480,7 +480,7 @@ def a_capa(d, pk, W, kuru):
         print(f"   {key}: sesli ders metni/hizalaması henüz yok"); return 13
     C = W / "capa" / d["kod"]; C.mkdir(parents=True, exist_ok=True)
     py, api = MEDS / ".venv-ocr/bin/python", "MEDS_API=https://api.nofrostlife.com.tr"
-    r = calistir(f"{api} {py} {MEDS}/scripts/sesli_anlatim/capa_dok.py {key} {C}/dok", cwd=MEDS, kuru=kuru)
+    r = calistir(f"{api} {py} {MEDS}/scripts/uretim/sesli_anlatim/capa_dok.py {key} {C}/dok", cwd=MEDS, kuru=kuru)
     if r:
         return r
     if not kuru:
@@ -489,8 +489,8 @@ def a_capa(d, pk, W, kuru):
         bas["mdSha1"] = sha
         if not (C / "capa.json").exists():
             (C / "capa.json").write_text(json.dumps(bas, ensure_ascii=False))
-    kapi = f"{api} {py} {MEDS}/scripts/sesli_anlatim/capa_dogrula.py {key} {C}/capa.json"
-    istem = (f"{MEDS}/scripts/sesli_anlatim/TALIMAT_CAPA.md talimatını uygula. Ders anahtarı {key}; çalışma klasörü {C} "
+    kapi = f"{api} {py} {MEDS}/scripts/uretim/sesli_anlatim/capa_dogrula.py {key} {C}/capa.json"
+    istem = (f"{MEDS}/scripts/uretim/sesli_anlatim/TALIMAT_CAPA.md talimatını uygula. Ders anahtarı {key}; çalışma klasörü {C} "
              f"(dok/ ve capa.json orada). Bitince şu kapıyı 0 HATA olana dek çalıştır: {kapi}")
     r = kapili_claude(istem, kapi, C, kuru)
     if r or kuru:
@@ -500,7 +500,7 @@ def a_capa(d, pk, W, kuru):
 
 
 def a_cizim(d, pk, W, kuru):
-    """Canlı çizim (R6, ICERIK_MOTORU_V3.md §4; 2026-10-24): çapa dökümü + işaret → scripts/cizim/cizim_uret.py (sayfa
+    """Canlı çizim (R6, ICERIK_MOTORU_V3.md §4; 2026-10-24): çapa dökümü + işaret → scripts/uretim/cizim/cizim_uret.py (sayfa
     partileri eşzamanlı Claude, kapı cizim_dogrula.py; geçmeyen komut atılır) → data/sesli_anlatim/cizim/<key>.json cihaz +
     Oracle. İşaret, çapa geldikten sonra Oracle'da hemen yeniden üretilir ki metinHash aynı sürümden olsun."""
     key, S = pk["ders_id"], MEDS / "data/sesli_anlatim"
@@ -512,21 +512,21 @@ def a_cizim(d, pk, W, kuru):
     (S / "isaret").mkdir(parents=True, exist_ok=True)
     r = r or calistir(f"rsync -az {uz}/isaret/{key}.json {S}/isaret/", kuru=kuru)
     py = MEDS / ".venv-ocr/bin/python"
-    uret = (f"{py} {MEDS}/scripts/cizim/cizim_uret.py {key} --dok {C}/dok --capa {C}/capa.json "
+    uret = (f"{py} {MEDS}/scripts/uretim/cizim/cizim_uret.py {key} --dok {C}/dok --capa {C}/capa.json "
             f"--isaret {S}/isaret/{key}.json --is-dizini {W}/cizim/{d['kod']}")
     r = r or calistir(uret, cwd=MEDS, kuru=kuru)
     if r:
         return r
-    # panel/etiket sınaması (scripts/cizim/panel_sinama.mjs, 3 genişlik, 0 hata şart; H51). Düşerse daha geniş yerleşim
+    # panel/etiket sınaması (scripts/uretim/cizim/panel_sinama.mjs, 3 genişlik, 0 hata şart; H51). Düşerse daha geniş yerleşim
     # payıyla bir kez yeniden yerleştirilir (Claude çağrısı yok, parti önbelleği); yine düşerse çizim yayına gitmez.
-    sin = f"node {MEDS}/scripts/cizim/panel_sinama.mjs {key}"
+    sin = f"node {MEDS}/scripts/uretim/cizim/panel_sinama.mjs {key}"
     if calistir(sin, cwd=MEDS, kuru=kuru):
         if calistir(f"CIZIM_PAY=1.4 {uret}", cwd=MEDS, kuru=kuru) or calistir(sin, cwd=MEDS, kuru=kuru):
             print(f"   {key}: çizim sınaması düştü — yayına gönderilmedi"); return 14
-    # sıkı ders kapısı (H59, scripts/cizim/cizim_kapisi.py K1–K9): şekil çapası görsele gitmeli, uydurma çapa yok,
+    # sıkı ders kapısı (H59, scripts/uretim/cizim/cizim_kapisi.py K1–K9): şekil çapası görsele gitmeli, uydurma çapa yok,
     # şekil cümlelerinin ≥%40'ı görsel üstü çizimli, resimde panel yok, bütün resmi çevreleyen kontur yok, çizim lazerin
     # sayfasında. HATA varsa çizim yayına gitmez (çıkış 15); düzeltme yeniden üretimle, kapı gevşetilerek değil.
-    if calistir(f"{py} {MEDS}/scripts/cizim/cizim_kapisi.py {key} --kok {S}", cwd=MEDS, kuru=kuru):
+    if calistir(f"{py} {MEDS}/scripts/uretim/cizim/cizim_kapisi.py {key} --kok {S}", cwd=MEDS, kuru=kuru):
         print(f"   {key}: çizim kapısı (cizim_kapisi.py) düştü — yayına gönderilmedi"); return 15
     return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' --chown=ubuntu:ubuntu {S}/cizim/{key}.json {uz}/cizim/", kuru=kuru)
 
@@ -540,12 +540,12 @@ def a_terim(d, pk, W, kuru):
     uz = "medsor-oracle:/home/ubuntu/medsor/meds/data/sesli_anlatim"
     T = W / "terim" / d["kod"]; T.mkdir(parents=True, exist_ok=True)
     py, api = MEDS / ".venv-ocr/bin/python", "MEDS_API=https://api.nofrostlife.com.tr"
-    betik = f"{api} {py} {MEDS}/scripts/sesli_anlatim/terim_sozlugu.py"
+    betik = f"{api} {py} {MEDS}/scripts/uretim/sesli_anlatim/terim_sozlugu.py"
     r = calistir(f"{betik} dok {key} {T}", cwd=MEDS, kuru=kuru)
     if r:
         return r
     kapi = f"{betik} dogrula {key} {T}/terimler.json"
-    istem = (f"{MEDS}/scripts/sesli_anlatim/TALIMAT_TERIM.md talimatını uygula. Ders anahtarı {key}; çalışma klasörü {T} "
+    istem = (f"{MEDS}/scripts/uretim/sesli_anlatim/TALIMAT_TERIM.md talimatını uygula. Ders anahtarı {key}; çalışma klasörü {T} "
              f"(sayfalar.md ve terimler.json orada). Bitince şu kapıyı 0 HATA olana dek çalıştır: {kapi}")
     if kapili_claude(istem, kapi, T, kuru):
         print(f"   {key}: terim kapısı düştü — sözlükten otomatik yol yazılıyor")
@@ -570,7 +570,7 @@ def main():
     if a.kurul:
         kurullar = [a.kurul]
     else:  # aktif kurul + önceki Kurul 2+ kurulları (önceki kurulun yarım dersleri terk edilmez)
-        sys.path.insert(0, str(MEDS / "scripts/takvim")); from aktif_kurul import durum
+        sys.path.insert(0, str(MEDS / "scripts/hat/takvim")); from aktif_kurul import durum
         kurullar = list(range(2, durum(dt.date.today().isoformat())["aktif"] + 1))
     kurullar = [k for k in kurullar if k >= 2]
     if not kurullar:
@@ -634,7 +634,7 @@ def main():
                     s["son_hata"] = dt.datetime.now().isoformat(timespec="seconds"); durum_yaz(d, s)
                 print(f"  ✗ {x} kod={kod} — ders bu adımda kaldı"); hata += 1; break
             if x == "oracle" and not a.kuru:  # zincir bitti → içerik seti sürümleri (göç 0001), yerel + Oracle
-                sys.path.insert(0, str(MEDS / "scripts/db")); from icerik_kaydi import kaydet
+                sys.path.insert(0, str(MEDS / "scripts/altyapi/db")); from icerik_kaydi import kaydet
                 kayit_hata = 0
                 for tur in ("onem", "cozucu", "asistan"):
                     yol = next(iter(sorted((MEDS / "src/data" / f"{W.name}_{tur}").glob(f"{d['kod']}*.json"))), None)

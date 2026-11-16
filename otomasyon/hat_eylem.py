@@ -29,7 +29,7 @@ from pathlib import Path
 MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
 EYLEM = KOK / "meds_temp/hat/eylemler"
 CEKILEN = KOK / "meds_temp/hat/yayindan_cekilen"
-SC = MEDS / "scripts/spot_cozucu"
+SC = MEDS / "scripts/uretim/spot_cozucu"
 sys.path.insert(0, str(MEDS / "otomasyon"))
 import ders_zinciri as DZ  # noqa: E402
 
@@ -134,7 +134,7 @@ def isci_yeniden_uret(d, kuru):
         return 0
     k, v = isci(f"/kuyruk/{ana}/yeniden-uret", {"hemen": True, "kim": "hat_eylem"})
     if k == 404 and ("yol yok" in str(v) or "taslak yok" in str(v)):
-        print("   işçide yeniden üretim ucu yok (scripts/ders_isci/api.py Oracle'a dağıtılmadı)"); return 20
+        print("   işçide yeniden üretim ucu yok (scripts/uretim/ders_isci/api.py Oracle'a dağıtılmadı)"); return 20
     if k != 200:
         print(f"   işçi isteği reddetti ({k}):", (v or {}).get("hata", v)); return 20
     yid = v["is_id"]

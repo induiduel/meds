@@ -1,7 +1,7 @@
 # Hoca-tahmin test turları (2026-10-29) — 2026-27 Kurul 1 ile kör sınama
 
 > Amaç: işçinin ders metninden "hocanın soracağı yerleri" ne kadar tutturduğunu 2026-27 sınavıyla ölçmek ve her turda rehberi/girdiyi iyileştirmek.
-> Düzenek: `scripts/hoca_profili/` (`algoritmalar.py`, `karsilastir.py`, `tur_yonet.py`, `yargic.py`). Ham tur verisi: `meds_temp/hoca_profili_sinama/tur1…tur6/`.
+> Düzenek: `scripts/uretim/hoca_profili/` (`algoritmalar.py`, `karsilastir.py`, `tur_yonet.py`, `yargic.py`). Ham tur verisi: `meds_temp/hoca_profili_sinama/tur1…tur6/`.
 
 ## Düzenek (sızıntısız)
 - 52 ders notu · 91 gerçek 2026-27 sorusu. Ders notları md5'e göre **geliştirme 30 ders/51 soru** ve **bekletilmiş 22 ders/40 soru** (ayarlamada hiç bakılmadı).

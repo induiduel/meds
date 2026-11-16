@@ -1,4 +1,4 @@
-# Kardiyoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Kardiyoloji — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 160 tekil çıkmış soru · güven: **yuksek** · yıllar: {2018: 9, 2020: 61, 2021: 9, 2022: 24, 2023: 5, 2025: 2}
 

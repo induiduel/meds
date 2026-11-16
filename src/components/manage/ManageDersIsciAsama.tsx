@@ -4,7 +4,7 @@ import './ders-isci-asama.css';
 /**
  * Ders işçisi ilerleme şeridi: bir dersin Drive'dan canlı derse kadar hangi aşamada olduğu.
  * Kaynak → İçerik (k/11 çıktı) → Denetim → Konuşma metni → Onay → Yayın → Emel sesi → EMA sesi.
- * İşçi aşamaları taslak özetindeki `asama` alanından (scripts/ders_isci/api.py::asama), ses aşamaları sesli anlatım
+ * İşçi aşamaları taslak özetindeki `asama` alanından (scripts/uretim/ders_isci/api.py::asama), ses aşamaları sesli anlatım
  * durumundan (/api/sesli-anlatim: ders varyantları + kuyruk işleri) türetilir.
  */
 export type TaslakAsama = {

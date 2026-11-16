@@ -1,7 +1,7 @@
 /**
  * Yönetim ayrı girişi (2026-10-28, manage.html). Öğrenci uygulamasının ortak girişini (App.tsx, ~540 KB gzip) yüklemez:
  * yalnız kimlik (Firebase + adminFetchAuth), görünüm tokenları (palettes.ts), kit ve v16 kabuğu.
- * - Sunucu /manage* gezinmelerine manage.html döndürür (server.ts; Vite geliştirmede scripts/vite/yonetimGirisi.ts).
+ * - Sunucu /manage* gezinmelerine manage.html döndürür (server.ts; Vite geliştirmede scripts/altyapi/vite/yonetimGirisi.ts).
  * - Yönetici değilse (moderatör) ya da ?kabuk=v14 istendiyse tam uygulama (main.tsx) dinamik yüklenir: eski konsol orada.
  */
 import React, { useEffect, useState } from 'react';

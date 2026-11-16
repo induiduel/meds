@@ -17,7 +17,7 @@ export function ogrenciDriveRouter(): Router {
   const router = Router();
   const appDir = path.resolve(process.cwd());
   const envanterDosyasi = path.join(appDir, 'data', 'ogrenci_drive_envanter.json');
-  const pythonScript = path.join(appDir, 'scripts', 'ogrenci_drive', 'ogrenci_drive.py');
+  const pythonScript = path.join(appDir, 'scripts', 'uretim', 'ogrenci_drive', 'ogrenci_drive.py');
 
   router.get('/envanter', async (_req, res) => {
     try {

@@ -1,4 +1,4 @@
-# Enfeksiyon Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/hoca_profili/uslup_analiz.py`)
+# Enfeksiyon Hastalıkları — hoca üslubu ve kazanım haritası (otomatik; `scripts/uretim/hoca_profili/uslup_analiz.py`)
 
 > 409 tekil çıkmış soru · güven: **yuksek** · yıllar: {2016: 2, 2018: 21, 2019: 30, 2020: 160, 2021: 81, 2022: 17, 2023: 31, 2024: 32, 2025: 22, 2026: 19}
 

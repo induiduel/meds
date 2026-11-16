@@ -1,6 +1,6 @@
 /**
  * Öğrenci kararları (Soru ekle): önerilen havuz kaydı için "aynı soru" (bağladı / birleştirdi) ya da "farklı soru"
- * (öneriyi reddetti). `data/recall_feedback.jsonl`'e eklenir; scripts/recall/learn.mts bunlarla çift modelini yeniden
+ * (öneriyi reddetti). `data/recall_feedback.jsonl`'e eklenir; scripts/moduller/recall/learn.mts bunlarla çift modelini yeniden
  * öğrenir. Metin kişisel veriden maskelenir; kimlik/e-posta yazılmaz.
  */
 import fs from 'fs';

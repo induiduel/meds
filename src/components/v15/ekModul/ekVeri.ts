@@ -4,7 +4,7 @@ import dizinHam from '../../../data/ek_moduller/index.json';
 /**
  * Ek modüller (Ders çalış › Ek modüller): kurul müfredatı dışındaki seçmeli/geçici derslerin verisi.
  * Kaynak: src/data/ek_moduller/index.json (modül listesi) + <modül>/b<N>.json (başlık: 2 konu), sinav_oncesi.json,
- * genel_sorular.json, klip.json (EMA klip dizini; scripts/ek_modul/ses.py yazar). Yazım kuralları: scripts/ek_modul/TALIMAT.md.
+ * genel_sorular.json, klip.json (EMA klip dizini; scripts/uretim/ek_modul/ses.py yazar). Yazım kuralları: scripts/uretim/ek_modul/TALIMAT.md.
  * Ekran metni (`ekran`, `metin`, `cozum`) ile okuma metni (`ses`, `ses_cozum`) ayrıdır; ekranda okuma metni gösterilmez.
  */
 export interface EkModulOzet {
@@ -60,7 +60,7 @@ export type HocaSoru = { cozum?: string; hata?: HocaHata; k?: string; tur?: 'bos
   | { no: number; kok: string; secenekler: Record<string, string>; dogru: string; belirsiz?: boolean });
 export interface HocaSet { id: string; ad: string; tur: 'bosluk' | 'dy' | 'cs'; aciklama: string; anahtarsiz?: boolean; sorular: HocaSoru[] }
 export interface EkKlip { v: string; sure: number }
-/** "PDF ile dinle" kipi (pdf_esle.json; scripts/ek_modul/pdf_esle.py yazar): ders klibinin kitapçıktaki yeri ve cümle zamanları.
+/** "PDF ile dinle" kipi (pdf_esle.json; scripts/uretim/ek_modul/pdf_esle.py yazar): ders klibinin kitapçıktaki yeri ve cümle zamanları.
  *  s: sayfa · k: bölüm kutusu · l: satır kutuları (0 başlık, 1… not maddeleri; sayfa oranı) · c: [cümlenin başladığı saniye, madde | -1] */
 export interface EkPdfKlip { v: string; s: number; k: number[]; l: number[][][]; c: [number, number][] }
 export interface EkPdfEsle { pdf: string; bayt: number; klip: Record<string, EkPdfKlip> }
@@ -74,7 +74,7 @@ export interface EkModul {
   /** Çalışma föyü: hoca sorularının konuya göre düzeni (set id → soru no listesi) + konu bilgi özeti */
   foy: { konular: { id: string; bilgiler: string[]; sorular: Record<string, number[]> }[] } | null;
   pdfEsle: EkPdfEsle | null;
-  /** Hoca soruları · "PDF ile" sesli çözüm (hoca_pdf_esle.json; scripts/ek_modul/pdf_esle_hoca.py): h-/hc- klibinin çözümlü
+  /** Hoca soruları · "PDF ile" sesli çözüm (hoca_pdf_esle.json; scripts/uretim/ek_modul/pdf_esle_hoca.py): h-/hc- klibinin çözümlü
    *  kitapçıktaki soru bloğu, l cümle başına satırlar, c [cümlenin başladığı saniye, l sırası] */
   hocaPdf: EkPdfEsle | null;
 }

@@ -15,7 +15,7 @@ await loadDeckCatalog().catch(() => undefined);
  * "Öğren'de bu yer" paneli: sesli çözücüdeki soru (ya da sesli asistan noktası) için Öğren destesindeki eşleşen adımı
  * çözücüden çıkmadan gösterir. Geniş ekranda sağda yan panel (çözücü daralır), telefonda alttan açılan sayfa.
  * İçerik kendi içinde kayar; önceki/sonraki adıma geçilebilir, "Eşleşen adıma dön" ile geri gelinir, "Öğren'de aç" tam derse gider.
- * Eşleme: scripts/spot_cozucu/ogren_esle.py (PDF sayfası + metin benzerliği; kanıt zayıfsa eşleme yok → panel bunu söyler).
+ * Eşleme: scripts/uretim/spot_cozucu/ogren_esle.py (PDF sayfası + metin benzerliği; kanıt zayıfsa eşleme yok → panel bunu söyler).
  */
 interface Props {
   brans: Brans;

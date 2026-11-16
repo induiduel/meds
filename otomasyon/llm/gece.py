@@ -21,7 +21,7 @@ from llm import yonlendir  # noqa: E402
 
 
 def aktif_kurul() -> int:
-    r = subprocess.run([sys.executable, str(c.KOK / "scripts" / "takvim" / "aktif_kurul.py")], capture_output=True, text=True)
+    r = subprocess.run([sys.executable, str(c.KOK / "scripts" / "hat" / "takvim" / "aktif_kurul.py")], capture_output=True, text=True)
     return int(r.stdout.strip() or 1)
 
 

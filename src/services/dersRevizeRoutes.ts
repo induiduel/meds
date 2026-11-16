@@ -197,7 +197,7 @@ export function dersRevizeRouter(appDir: string): express.Router {
         continue;
       }
       is = { id, islem, asama: 'kaynaklara yazılıyor', basla: Date.now(), gunluk: '' };
-      const kod = await calistir(python, ['scripts/ders_isci/yayinla.py', '--yerel', '--is', id], `kaynaklara yazılıyor (${sira.length} sırada)`);
+      const kod = await calistir(python, ['scripts/uretim/ders_isci/yayinla.py', '--yerel', '--is', id], `kaynaklara yazılıyor (${sira.length} sırada)`);
       desteOnbellek = null;
       if (kod === 0) yayinlananlar.push(id);
       else if (!fs.existsSync(path.join(d, 'yayin.json')))
