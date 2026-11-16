@@ -145,3 +145,17 @@ scripts/test_simple_runner.py scripts/arsiv/olu_deste_uretim_2026-10/test_simple
 scripts/test_slide_build.py scripts/arsiv/olu_deste_uretim_2026-10/test_slide_build.py
 scripts/test_structure.py scripts/arsiv/olu_deste_uretim_2026-10/test_structure.py
 scripts/write_deck_49_s1.py scripts/arsiv/olu_deste_uretim_2026-10/write_deck_49_s1.py
+scripts/VERIFY_INSTRUCTIONS.md scripts/arsiv/olu_kok_2026-11/VERIFY_INSTRUCTIONS.md
+scripts/ai_deck_compiler.py scripts/arsiv/olu_kok_2026-11/ai_deck_compiler.py
+scripts/apply_generated_deck.py scripts/arsiv/olu_kok_2026-11/apply_generated_deck.py
+scripts/auto_curriculum_compiler.py scripts/arsiv/olu_kok_2026-11/auto_curriculum_compiler.py
+scripts/build_curriculum_catalog.py scripts/arsiv/olu_kok_2026-11/build_curriculum_catalog.py
+scripts/build_k1_49_builder.py scripts/arsiv/olu_kok_2026-11/build_k1_49_builder.py
+scripts/build_k1_49_deck.py scripts/arsiv/olu_kok_2026-11/build_k1_49_deck.py
+scripts/enrichment_definitions.py scripts/arsiv/olu_kok_2026-11/enrichment_definitions.py
+scripts/generate_deck_core.py scripts/arsiv/olu_kok_2026-11/generate_deck_core.py
+scripts/generate_deck_util.py scripts/arsiv/olu_kok_2026-11/generate_deck_util.py
+scripts/generate_k2_13_deck.py scripts/arsiv/olu_kok_2026-11/generate_k2_13_deck.py
+scripts/index-practice-questions-rag.mjs scripts/arsiv/olu_kok_2026-11/index-practice-questions-rag.mjs
+scripts/sample_slide.json scripts/arsiv/olu_kok_2026-11/sample_slide.json
+scripts/test_json_write.json scripts/arsiv/olu_kok_2026-11/test_json_write.json

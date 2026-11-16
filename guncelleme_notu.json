@@ -1,14 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 749,
-  "baslik": "Altyapı düzeltmesi: Oracle'da betik kök çözümü (H579)",
+  "onem": 750,
+  "baslik": "Altyapı: kullanılmayan kök betikler arşive alındı",
   "maddeler": [
-    "kok.py: proje kökü artık sunucuda da bulunur (PROJE = MEDS.parent); Oracle zamanlayıcıları ve sunucu betikleri yeniden çalışıyor."
+    "scripts/ kökünde hiçbir kod, birim ya da talimatın çağırmadığı 14 dosya scripts/arsiv/olu_kok_2026-11'e taşındı (silinmedi)."
   ],
   "eklenen": [],
   "degisen": [],
-  "duzeltilen": [
-    "Oracle'da cümle zamanlaması ve ders yayını betiklerinin kök markerı bulunamadığı için açılışta çökmesi"
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
