@@ -22,7 +22,7 @@ scripts/
 ```
 
 ## hat/ — orkestrasyon (tam hat tek giriş: `hat/tam_hat/kosucu.py`)
-- `tam_hat/` — **içerik üretiminin tek hattı** (`mod.py` katmanlar, `baglam.py` read-once, `hazirlik.py`, `ders_kilit.py`, `manifest.py` ders başına katman manifesti → `ders_bilgi/<key>/katman_manifest.json`, `hoca_kirp.py` döküm kırpma, `iskelet.py` çıktı iskeleti). Önce burası.
+- `tam_hat/` — **içerik üretiminin tek hattı** (`mod.py` katmanlar, `baglam.py` read-once, `hazirlik.py`, `ders_kilit.py`, `manifest.py` ders başına katman manifesti → `ders_bilgi/<key>/katman_manifest.json`, `hoca_kirp.py` döküm kırpma, `iskelet.py` çıktı iskeleti, `sentez.py` yönetici açarsa PDF görsel okumasını daraltan sentez kipi). Önce burası.
 - `takvim/` (aktif kurul) · `dersler/` (ders kayıt defteri) · `onem/` · `oncelikli_dersler/` · `olasi_soru/` (gece.sh) ·
   `paket/` (.medspak) · `quiz_motoru/` (quiz KAPALI, kural 19)
 

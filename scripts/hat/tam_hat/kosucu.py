@@ -149,6 +149,9 @@ def main() -> int:
     ap.add_argument("--ders", required=True)
     ap.add_argument("--mod", choices=MOD.KIPLER, default="tam")
     ap.add_argument("--calistir", action="store_true", help="betikle yapılabilen hazırlık adımlarını çalıştır (E0 + baglam)")
+    ap.add_argument("--sentez", action="store_true",
+                    help="YÖNETİCİ AÇAR (varsayılan kapalı): PDF görsel okumasını sentez.py ile daralt — metin betikle, PNG yalnız "
+                         "temas sayfasında seçilen sayfada (TAM_HAT_HIZLI_AKIS §0.0c). Belirtilmezse standart yol (her sayfa PNG).")
     ap.add_argument("--olc", action="store_true", help="üretmeden aşama girdi kelime/token tablosu → meds_temp/hat_olcum/<key>.json")
     a = ap.parse_args()
     if a.olc:
@@ -176,7 +179,10 @@ def main() -> int:
         for x, y in rep.items():
             s = s.replace(x, y)
         return s
-    print(f"# Tek hat runbook — {a.ders} · kip {a.mod} (tek kaynak: mod.py)\n")
+    print(f"# Tek hat runbook — {a.ders} · kip {a.mod} (tek kaynak: mod.py)" + (" · SENTEZ okuma açık (yönetici)" if a.sentez else "") + "\n")
+    if a.sentez:
+        print("  [SENTEZ] PDF okuyan aşamalar (değerlendirme/anlatım) op/ PNG'lerini toptan AÇMAZ: önce baglam/sentez.md + temas_N.png, "
+              "yalnız seçilen sayfanın PNG'si (sentez_secim.json). Kapılar ve denetçi aynen.\n")
     evre_sira = ["E0", "E1", "E2", "E3", "E4", "E5", "E6"]
     for ev in evre_sira:
         basildi = False
@@ -217,6 +223,8 @@ def main() -> int:
         print(f"## Çalıştırılıyor (E0 + baglam) · oturum {env['MEDS_OTURUM']}…")
         # Argümanlar liste olarak (shell yok): enjeksiyon riski yok, ders/klasör metakarakterleri yorumlanmaz.
         adimlar = [("hazirlik", ["python3", "scripts/hat/tam_hat/hazirlik.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod])]
+        if a.sentez:  # yönetici kararı; açılmazsa hiçbir şey değişmez
+            adimlar.append((None, ["python3", "scripts/hat/tam_hat/sentez.py", str(a.klasor)]))
         if (KOK.parent / "meds_database_v2" / "ders_bilgi" / a.ders / "degerlendirme" / "paket.json").exists():
             adimlar += [(None, ["python3", "scripts/hat/tam_hat/baglam.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod]),
                         (None, ["python3", "scripts/hat/tam_hat/iskelet.py", "uret", str(a.klasor), "--ders", a.ders])]

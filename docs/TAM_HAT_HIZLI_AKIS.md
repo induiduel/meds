@@ -51,6 +51,21 @@ net şema). baglam + sıkıştırılmış özet girdiyi küçültür ama dibi it
 turkce_uslup birlikte, TÜM sorunlar bir seferde). Kapı `kaynak.md` yoksa `sayfalar.json`'dan üretir → `slayt.satir` birebir
 denetimi ASLA atlanmaz. (Ölçüm: baglam-yalnız anlatım, `kaynak.md` yokken 46 hatalı satırı sessizce geçiriyordu — bu kapı yakalar.)
 
+### 0.0c Sentez okuma kipi — YALNIZ yönetici açarsa (2026-11-17, deneysel)
+
+`kosucu.py … --sentez` verilmezse hiçbir şey değişmez (standart: alt ajan her sayfanın `op/s-NN.png`'sini açar, H111).
+Açılınca `scripts/hat/tam_hat/sentez.py <klasör>` → `baglam/sentez.md` (sayfa metni + sayfa başına `GÖRSEL: aç|gerekmez`),
+`temas_N.png` (aday sayfaların 3×3 küçük resim ızgarası), `sentez.json`. PDF okuyan aşama önce temas sayfasına bakar, yalnız
+tanısal görüntü/şema/resim-tablo sayfasının tam PNG'sini açar, seçimini `sentez_secim.json`'a yazar. Kapılar/denetçi aynen.
+- **MarkItDown (microsoft/markitdown 0.1.9, `.venv-markitdown`) PDF'te KULLANILMAZ:** k2-13'te pdftotext 568 kelime ↔ MarkItDown
+  779 kelime; fazlası çok sütunlu madde imlerinden uydurulan sahte tablo satırları, sayfa sınırı da yok. Yalnız PDF dışı ek kaynak
+  (pptx/docx/xlsx/html) varsa `baglam/ek_<ad>.md`'ye çevirir.
+- **Ölçüm (k2-13, 20 sayfa, Haiku, aynı atom çıkarma görevi):** standart 20 PNG açtı; sentez 2 temas + 12 PNG (−%40 görsel).
+  Önbellek yazımı 463k → 281k (−%39), önbellek okuma 1,79M → 1,94M, çıktı 65k → 81k; ağırlıklı maliyet (yazım×1,25 + okuma×0,1 +
+  çıktı×5) ≈ 1,09M → 0,95M = **−%12**. Kalite eşit (atom 79 → 107, aynı sayfalarda aynı bilgiler; görsel tanımları denk).
+  **%50 hedefi tutmadı**: maliyetin çoğu görsel değil, alt ajanın tur başına yeniden okunan bağlamı ve çıktısı. Görsel ağırlıklı
+  (patoloji/radyoloji) derste kazanç daha az, saf metin slaytlı derste daha fazla olur. Varsayılan yapılmaz.
+
 ## 0. Tasarruf kipi (kullanıcı kararı 2026-11-07)
 
 Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` ile yürür: `python3 scripts/hat/tam_hat/hazirlik.py <klasör> --ders <key> --mod tasarruf`

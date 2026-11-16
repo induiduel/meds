@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 777,
-  "baslik": "Daha hızlı güncellemeler",
+  "onem": 778,
+  "baslik": "İçerik hattına görsel tasarruf kipi",
   "maddeler": [
-    "Site güncellemeleri artık iki kat hızlı hazırlanıyor",
-    "Uygulama dosyaları biraz küçüldü, açılış bir parça hızlandı"
+    "Ders hazırlık hattına, yöneticinin isteğe bağlı açabildiği ve slayt görsellerini yalnız gerektiğinde okutan deneysel bir tasarruf kipi eklendi.",
+    "Öğrenci ekranlarında bir değişiklik yok."
   ],
   "eklenen": [],
   "degisen": [
