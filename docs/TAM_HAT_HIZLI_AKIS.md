@@ -60,11 +60,17 @@ tanısal görüntü/şema/resim-tablo sayfasının tam PNG'sini açar, seçimini
 - **MarkItDown (microsoft/markitdown 0.1.9, `.venv-markitdown`) PDF'te KULLANILMAZ:** k2-13'te pdftotext 568 kelime ↔ MarkItDown
   779 kelime; fazlası çok sütunlu madde imlerinden uydurulan sahte tablo satırları, sayfa sınırı da yok. Yalnız PDF dışı ek kaynak
   (pptx/docx/xlsx/html) varsa `baglam/ek_<ad>.md`'ye çevirir.
-- **Ölçüm (k2-13, 20 sayfa, Haiku, aynı atom çıkarma görevi):** standart 20 PNG açtı; sentez 2 temas + 12 PNG (−%40 görsel).
-  Önbellek yazımı 463k → 281k (−%39), önbellek okuma 1,79M → 1,94M, çıktı 65k → 81k; ağırlıklı maliyet (yazım×1,25 + okuma×0,1 +
-  çıktı×5) ≈ 1,09M → 0,95M = **−%12**. Kalite eşit (atom 79 → 107, aynı sayfalarda aynı bilgiler; görsel tanımları denk).
-  **%50 hedefi tutmadı**: maliyetin çoğu görsel değil, alt ajanın tur başına yeniden okunan bağlamı ve çıktısı. Görsel ağırlıklı
-  (patoloji/radyoloji) derste kazanç daha az, saf metin slaytlı derste daha fazla olur. Varsayılan yapılmaz.
+- **Ölçüm (k2-13, 20 sayfa, Haiku, aynı atom çıkarma görevi; yanıt kimliğine göre tekilleştirilmiş — ilk ölçüm akış satırlarını
+  iki kez saymıştı ve "−%12" yanlıştı). Ağırlık = yazım×1,25 + okuma×0,1 + çıktı×5 (+ girdi), bin token:**
+  | yol | tur | yazım | okuma | çıktı | ağırlık | atom |
+  |---|---|---|---|---|---|---|
+  | A standart (20 PNG) | 4 | 120k | 259k | 9,7k | 225k | 79 |
+  | B sentez (2 temas + 12 PNG) | 6 | 88k | 493k | 18,3k | 251k (+%12) | 107 |
+  | C0 standart, tek tur kuralı | 3 | 122k | 180k | 11,4k | 227k (+%1) | 88 |
+  | C1 sentez, tek tur kuralı | 4 | 82k | 289k | 13,5k | **198k (−%12)** | 82 |
+  Kalite dört yolda eşit (aynı sayfalarda aynı bilgiler; B ve C1 aynı 12 sayfayı seçti). Sentez görsel yazımını −%30 düşürür ama
+  tur sayısı artarsa okuma ve çıktı kazancı yer; ancak tek tur kuralıyla (`sentez.md` başında yazılı) net kâra döner.
+  **%50 hedefi tutmadı.** Kalan maliyetin çoğu görsel değil, her turda yeniden okunan ajan bağlamı + çıktıdır. Varsayılan yapılmaz.
 
 ## 0. Tasarruf kipi (kullanıcı kararı 2026-11-07)
 

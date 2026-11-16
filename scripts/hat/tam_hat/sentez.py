@@ -138,7 +138,9 @@ def main() -> int:
     b.mkdir(exist_ok=True)
     g = [s for s in sinif if s["gorsel"]]
     satir = [f"# Sentez kaynağı — {len(sinif)} sayfa, görsel açılacak {len(g)} sayfa",
-             "Kural: metin aşağıda; YALNIZ `GÖRSEL: aç` yazan sayfada `op/s-NNN.png` aç. Diğer sayfaların PNG'sini AÇMA.", ""]
+             "Kural: metin aşağıda; YALNIZ `GÖRSEL: aç` yazan sayfada `op/s-NNN.png` aç. Diğer sayfaların PNG'sini AÇMA.",
+             "TUR KURALI (ölçüldü, §0.0c): bu dosya + temas sayfalarını TEK mesajda paralel oku; seçilen PNG'leri TEK mesajda "
+             "paralel oku; çıktıları tek mesajda yaz. Sayfa sayfa sırayla okuma, ara doğrulama okuması yapma.", ""]
     for s in sinif:
         etiket = f"GÖRSEL: aç op/s-{s['s']:02d}.png ({s['neden']})" if s["gorsel"] else "GÖRSEL: gerekmez"
         satir += [f"## Sayfa {s['s']} · {etiket}", (metin.get(str(s["s"])) or "").strip() or "(metin yok)", ""]
