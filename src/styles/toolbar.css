@@ -83,9 +83,8 @@ html { --pt-top: calc(var(--sh-top-h, 52px) + env(safe-area-inset-top, 0px)); }
   .pt-tools .pt-icon { width: 34px; height: 34px; }
 }
 
-/* Kaydırma davranışı (shell/useDockAutoHide → html[data-dock]):
-   hidden  = aşağı kaydırılıyor: çubuk üst çubuğun arkasına çekilir, arama üst çubukta (PageSearchProxy).
-   compact = kaydırılmış, yukarı dönülmüş: telefonda yalnız arama + süzgeç + segment görünür. */
+/* Telefonda araç çubuğu geçişleri (eski useDockAutoHide/PageSearchProxy kaydırma davranışı kullanılmadığı için
+   2026-11-16 kaldırıldı). */
 
 @media (max-width: 767px) {
   .pt-title, .pt-tools { transition: opacity 180ms ease; }

@@ -888,8 +888,6 @@ html.kb-cxdock, html.kb-cxdock body { overflow-anchor: none; }
  *  Aşağı: yuva (arama, süzgeç, sekmeler) transform ile üst çubuğun arkasına kayar; yerleşim değişmez.
  *  Yukarı: geri iner. Yuva saklıyken sayfa araması üst çubuğa gelir (PageSearchProxy). */
 html.ui-v7 .cx-dock { transition: transform 280ms cubic-bezier(.22, 1, .36, 1), opacity 200ms ease, box-shadow 200ms; will-change: transform; }
-html.ui-v7[data-dock="hidden"] .cx-dock { transform: translateY(calc(-100% - 14px)); opacity: 0; pointer-events: none; }
-html.ui-v7[data-dock="hidden"] .cx-dock::after { opacity: 0; }
 @media (prefers-reduced-motion: reduce) { html.ui-v7 .cx-dock { transition: none; } }
 /* Eski "daralan yuva" kalıntıları devre dışı */
 .cx-dock.is-compact > .cx-rail { max-height: none; opacity: 1; }
@@ -943,14 +941,12 @@ html.ui-v7[data-dock="hidden"] .cx-dock::after { opacity: 0; }
  *  - Öğren "+" düğmesi aşağı kaydırırken yuvayla birlikte çekilir, yukarı kaydırınca geri gelir; liste sonu düğmenin altında kalmaz.
  *  - Üst çubukta sayfa araması açıkken çevrimdışı rozeti ve tema düğmesi yer açmak için gizlenir. */
 .ms-fab-wrap { transition: transform 280ms cubic-bezier(.22, 1, .36, 1), opacity 200ms ease; }
-html[data-dock="hidden"] .ms-fab-wrap:not(:has(.ms-fab.is-open)) { transform: translateY(calc(100% + 24px)); opacity: 0; pointer-events: none; }
 @media (max-width: 767px) { html.kb-fab .sh-main { padding-bottom: calc(var(--sh-tabs-h, 58px) + 88px); } }
 @media (max-width: 639px) {
   .sh-top.has-pq .sh-top-tools > :not(.sh-acct-anchor):not([aria-label^="Bildirimler"]) { display: none; }
 }
 /* data-autohide şeritleri (Örnek: Zorluk) de yuvayla aynı biçimde çekilir. */
 [data-autohide] { transition: transform 280ms cubic-bezier(.22, 1, .36, 1), opacity 200ms ease; }
-html[data-dock="hidden"] [data-autohide] { transform: translateY(calc(-100% - 14px)); opacity: 0; pointer-events: none; }
 /* Havuz kartı (.qc) da kendi genişliğine göre künye düzeni seçer; şık satırında son sütun içerik kadar
    (havuzda oy düğmesi, diğerlerinde 36px itiraz düğmesi) — oy sayacı artık kesilmez. */
 .qc { container-type: inline-size; }

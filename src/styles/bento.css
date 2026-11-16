@@ -1,6 +1,6 @@
 /* =========================================================================
  * Bento ızgara altyapısı — sayfalardaki kart / pano ızgaralarının ortak tabanı.
- * Bileşen: components/ui/Bento.tsx (<Bento>, <BentoItem>) ya da düz sınıflar.
+ * Kullanım: düz sınıflar (eski components/ui/Bento.tsx sarmalayıcısı kullanılmadığı için 2026-11-16 kaldırıldı).
  *
  *  .bento                 12 izli ızgara; öğeler izleri genişlik sınıfına göre kaplar.
  *                         Sütun eşikleri EN YAKIN kap sorgulu ataya göredir (container-type:
