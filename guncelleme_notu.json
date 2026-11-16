@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 768,
-  "baslik": "Sesli ders bağlantı toparlama",
+  "onem": 769,
+  "baslik": "Altyapı güncellemesi",
   "maddeler": [
-    "Sesli ders: internet geri gelince açılamayan ders kendiliğinden yükleniyor; karta “Yeniden dene” düğmesi eklendi",
-    "Yönetim girişi: “Şifremi unuttum” ve giriş düğmeleri artık doğru görünüyor",
-    "Altyapı: depo küçültme ve araç düzeltmeleri; değişiklik görünmez"
+    "Altyapı: Öğren desteleri deste başına ayrı dosyada da saklanmaya başladı (geçiş aşaması); değişiklik görünmez",
+    "Sesli ders: internet geri gelince açılamayan ders kendiliğinden yükleniyor"
   ],
   "eklenen": [],
   "degisen": [],

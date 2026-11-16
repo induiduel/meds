@@ -1,0 +1,935 @@
+{
+ "bicim": 1,
+ "desteler": [
+  {
+   "id": "deck-urinary-obstruction",
+   "dosya": "deck-urinary-obstruction.json",
+   "sha1": "eb4968c6ec5ee138bc7c23926e5a6ecd404d7bbb"
+  },
+  {
+   "id": "deck-urolithiasis-pathophysiology",
+   "dosya": "deck-urolithiasis-pathophysiology.json",
+   "sha1": "8f0789304e51d98cdca1a7be8c247ef4b8e7a56f"
+  },
+  {
+   "id": "deck-urinary-tract-infections",
+   "dosya": "deck-urinary-tract-infections.json",
+   "sha1": "5442beee37dde48ff6dc6265dbf3f354acc4d060"
+  },
+  {
+   "id": "learn-odem-hiperemi-konjesyon",
+   "dosya": "learn-odem-hiperemi-konjesyon.json",
+   "sha1": "0e229fa4d0bcea8b40588958dffb018895e3ef17"
+  },
+  {
+   "id": "learn-ana-cocuk-sagligi",
+   "dosya": "learn-ana-cocuk-sagligi.json",
+   "sha1": "e4df8749e66bb3c539e78e1b17668c4142b2ac66"
+  },
+  {
+   "id": "learn-cinsel-yolla-bulasan-enfe",
+   "dosya": "learn-cinsel-yolla-bulasan-enfe.json",
+   "sha1": "d91866a018148364547dba8201f80092664a81d4"
+  },
+  {
+   "id": "learn-dismorfoloji-terminolojisi",
+   "dosya": "learn-dismorfoloji-terminolojisi.json",
+   "sha1": "bbc4e765072238bfb59f1981e9de708e53eda8d6"
+  },
+  {
+   "id": "learn-enfeksiyon-hastaliklari",
+   "dosya": "learn-enfeksiyon-hastaliklari.json",
+   "sha1": "075a316b495662c2326e5cc4e89f14b7ed715cb1"
+  },
+  {
+   "id": "learn-halk-sagligi-salgin-has",
+   "dosya": "learn-halk-sagligi-salgin-has.json",
+   "sha1": "4a84a069b7953f7455dc37b9660415edc901e01b"
+  },
+  {
+   "id": "learn-hucre-hasari-hucre-olumu",
+   "dosya": "learn-hucre-hasari-hucre-olumu.json",
+   "sha1": "001a4a40d84c9645c8c35856e4318772e43e26ca"
+  },
+  {
+   "id": "learn-hucresel-adaptasyon-ve-hu",
+   "dosya": "learn-hucresel-adaptasyon-ve-hu.json",
+   "sha1": "413cfc2ed08ef8627906904089826251aa77f606"
+  },
+  {
+   "id": "learn-hucresel-yaslanma-ve-hucr",
+   "dosya": "learn-hucresel-yaslanma-ve-hucr.json",
+   "sha1": "ff2c9dcbd09aca2492b8b0ce03ca3e5e96e30802"
+  },
+  {
+   "id": "learn-izolasyon-yontemleri",
+   "dosya": "learn-izolasyon-yontemleri.json",
+   "sha1": "5669a3163f19a9f95eb64e34245448099de99339"
+  },
+  {
+   "id": "k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma",
+   "dosya": "k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma.json",
+   "sha1": "d4023fe85a4fa4c9f3c226bce52673e82557954a"
+  },
+  {
+   "id": "deck-acute-inflammation-pathology",
+   "dosya": "deck-acute-inflammation-pathology.json",
+   "sha1": "db28d50f46c01ec2a7642ce079c26b344cfac866"
+  },
+  {
+   "id": "learn-kronik-enflamasyon",
+   "dosya": "learn-kronik-enflamasyon.json",
+   "sha1": "078d283915a63cbd21f3057e7beebc708c356402"
+  },
+  {
+   "id": "learn-intraseluler-birikimler",
+   "dosya": "learn-intraseluler-birikimler.json",
+   "sha1": "30f08518e7ca8ac32f0f9c3df577e9765df427cd"
+  },
+  {
+   "id": "learn-enfeksiyon-izolasyon",
+   "dosya": "learn-enfeksiyon-izolasyon.json",
+   "sha1": "427435d5c4e5cbf14e85e7a34f28036babbcfca1"
+  },
+  {
+   "id": "learn-patolojiye-giris",
+   "dosya": "learn-patolojiye-giris.json",
+   "sha1": "c08212e086084790dc1e761266753de8ff190959"
+  },
+  {
+   "id": "learn-genital-enfeksiyonlar",
+   "dosya": "learn-genital-enfeksiyonlar.json",
+   "sha1": "8aedc9d09728d8e42974ec01b5cc7232a0cd28ab"
+  },
+  {
+   "id": "learn-dogumsal-genital-anomaliler",
+   "dosya": "learn-dogumsal-genital-anomaliler.json",
+   "sha1": "34e571106c541c0284c90c753dd9f07b6a14b94f"
+  },
+  {
+   "id": "learn-doku-onarimi-yara-iyilesmesi",
+   "dosya": "learn-doku-onarimi-yara-iyilesmesi.json",
+   "sha1": "90ea7e6b5d18a64b3111553c75ac9bd08b5f3782"
+  },
+  {
+   "id": "learn-prenatal-tani",
+   "dosya": "learn-prenatal-tani.json",
+   "sha1": "f35c59da4bbf69e990cdce2d5c6427ea78e96006"
+  },
+  {
+   "id": "learn-glomeruler-hastaliklar-nefrotik",
+   "dosya": "learn-glomeruler-hastaliklar-nefrotik.json",
+   "sha1": "85679e801f580e7f01d2a6007aa6367a7b6f1849"
+  },
+  {
+   "id": "learn-glomeruler-hastaliklar-nefritik",
+   "dosya": "learn-glomeruler-hastaliklar-nefritik.json",
+   "sha1": "c8f851e2fc9e126cf14b13f17130932049c67ca0"
+  },
+  {
+   "id": "learn-tubulointerstisyel-hastaliklar",
+   "dosya": "learn-tubulointerstisyel-hastaliklar.json",
+   "sha1": "f3e064a5c6651e54f304966e45a43ca8c2ab7779"
+  },
+  {
+   "id": "learn-vaskuler-kistik-bobrek-hastaliklari",
+   "dosya": "learn-vaskuler-kistik-bobrek-hastaliklari.json",
+   "sha1": "4868707511fab38adbd9b86d7bed026509fc5a63"
+  },
+  {
+   "id": "learn-bobrek-tumorleri",
+   "dosya": "learn-bobrek-tumorleri.json",
+   "sha1": "a3818f14e0e85f725fcdffa129218bde095df22f"
+  },
+  {
+   "id": "learn-mesane-hastaliklari-tumorleri",
+   "dosya": "learn-mesane-hastaliklari-tumorleri.json",
+   "sha1": "7c52f627e174ed4bde63b2188152c9a9c4b9b7ff"
+  },
+  {
+   "id": "learn-tumor-biyolojisi-terminolojisi",
+   "dosya": "learn-tumor-biyolojisi-terminolojisi.json",
+   "sha1": "1b74662e15a66792a0526a17be3ca9b4f50a1124"
+  },
+  {
+   "id": "learn-enflamasyon-kimyasal-mediyatorleri",
+   "dosya": "learn-enflamasyon-kimyasal-mediyatorleri.json",
+   "sha1": "970acdcc55dd449ae08aafa5ac9dc1cc27639de7"
+  },
+  {
+   "id": "learn-asiri-duyarlilik-ve-otoimmunite",
+   "dosya": "learn-asiri-duyarlilik-ve-otoimmunite.json",
+   "sha1": "069833880286f89d9f167912f55fff7634bc25f8"
+  },
+  {
+   "id": "learn-genetik-pediatrik-cevresel-patoloji",
+   "dosya": "learn-genetik-pediatrik-cevresel-patoloji.json",
+   "sha1": "d2bf24c61568bb06b2bcfa7c7ad8285328568c1c"
+  },
+  {
+   "id": "learn-tromboz-patofizyolojisi-tam",
+   "dosya": "learn-tromboz-patofizyolojisi-tam.json",
+   "sha1": "47dc6d28598245921f522e5256bcb05904c64ba7"
+  },
+  {
+   "id": "learn-iskemi-infarktus-ve-sok",
+   "dosya": "learn-iskemi-infarktus-ve-sok.json",
+   "sha1": "b1580b1dbf24d7669d1b9e9856769eff943e6ed2"
+  },
+  {
+   "id": "learn-kronik-ve-granulamatoz-enflamasyon",
+   "dosya": "learn-kronik-ve-granulamatoz-enflamasyon.json",
+   "sha1": "e976675a83f01f8c24d160a505ea2ee61da9928f"
+  },
+  {
+   "id": "learn-karsinojenezin-molekuler-temeli",
+   "dosya": "learn-karsinojenezin-molekuler-temeli.json",
+   "sha1": "c9093d27c5aaf7a1ee41c54fd45c2151c40d1c91"
+  },
+  {
+   "id": "learn-ileri-tumor-genetigi-metabolizmasi",
+   "dosya": "learn-ileri-tumor-genetigi-metabolizmasi.json",
+   "sha1": "2dae10ae4c0562be37f11201cf55ff926cf50dfb"
+  },
+  {
+   "id": "learn-tumor-immunolojisi-metastaz",
+   "dosya": "learn-tumor-immunolojisi-metastaz.json",
+   "sha1": "17683d252a48c9de39ac8ff390c3f2a59599099f"
+  },
+  {
+   "id": "learn-tumor-evreleme-lab-tanisi",
+   "dosya": "learn-tumor-evreleme-lab-tanisi.json",
+   "sha1": "1f0e062926c8a5d31c64e2514d78e646034c4dd1"
+  },
+  {
+   "id": "learn-sistemik-hastaliklar-bobrek-hasari",
+   "dosya": "learn-sistemik-hastaliklar-bobrek-hasari.json",
+   "sha1": "44c46fb8b44b9d5775ada5eabdad7c9922edd385"
+  },
+  {
+   "id": "learn-urogenital-tumorlerde-genetik",
+   "dosya": "learn-urogenital-tumorlerde-genetik.json",
+   "sha1": "e85357ad24317138045a522b2de406e40687e7f0"
+  },
+  {
+   "id": "learn-bebek-beslenmesi",
+   "dosya": "learn-bebek-beslenmesi.json",
+   "sha1": "797566e9c0d13ca62a7dde79921db9b50d4659c2"
+  },
+  {
+   "id": "learn-enfeksiyon-temel-kavramlar",
+   "dosya": "learn-enfeksiyon-temel-kavramlar.json",
+   "sha1": "fdb9daf4352203894349a3d573938514c6dda87d"
+  },
+  {
+   "id": "learn-enfeksiyon-epidemiyoloji",
+   "dosya": "learn-enfeksiyon-epidemiyoloji.json",
+   "sha1": "34bb5e874fcf82b60568300dbc9f2ef7b97ce3b4"
+  },
+  {
+   "id": "learn-halk-sagligi-tarihcesi-ve",
+   "dosya": "learn-halk-sagligi-tarihcesi-ve.json",
+   "sha1": "189d78c30ac2ef5bdfd9d8ebe88218c3bb331ec9"
+  },
+  {
+   "id": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+   "dosya": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji.json",
+   "sha1": "9beea377e63b9d2a470cdd55d81781a549ada7e5"
+  },
+  {
+   "id": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+   "dosya": "learn-uriner-sistemin-spesifik-enfeksiyonlari.json",
+   "sha1": "0fa7f5395bcb74011c473ee7e9667c1a4e569ff4"
+  },
+  {
+   "id": "learn-donem3-kurul1-mufredat-rehberi",
+   "dosya": "learn-donem3-kurul1-mufredat-rehberi.json",
+   "sha1": "0264b199aec8a308f1538fe1085ea3231749d3f1"
+  },
+  {
+   "id": "k1p-k1-01-dismorfolojide-genetik-terminoloji",
+   "dosya": "k1p-k1-01-dismorfolojide-genetik-terminoloji.json",
+   "sha1": "d28e3df2a03c121720dd07557301e5b2375e9c5b"
+  },
+  {
+   "id": "k1p-k1-02-patolojiye-giris",
+   "dosya": "k1p-k1-02-patolojiye-giris.json",
+   "sha1": "26ee7c94cdc051a57c7a2b89386247100bc5a14c"
+  },
+  {
+   "id": "k1p-k1-03-hucresel-adaptasyonlar",
+   "dosya": "k1p-k1-03-hucresel-adaptasyonlar.json",
+   "sha1": "9f85b4c64a15cf2071acbd64308135396876dcf7"
+  },
+  {
+   "id": "k1p-k1-04-hucre-hasari-ve-nekroz-i",
+   "dosya": "k1p-k1-04-hucre-hasari-ve-nekroz-i.json",
+   "sha1": "4ab99d9fa3a1647a637fa500f92f298538f8b1fa"
+  },
+  {
+   "id": "k1p-k1-05-hucre-hasari-ve-nekroz-ii",
+   "dosya": "k1p-k1-05-hucre-hasari-ve-nekroz-ii.json",
+   "sha1": "ba2561a12e1d02d51f7b651f03e6e9b677bd1991"
+  },
+  {
+   "id": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme",
+   "dosya": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme.json",
+   "sha1": "299fc8fea2a4d0a85cca932446d9d3612fa1f3fc"
+  },
+  {
+   "id": "k1p-k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar",
+   "dosya": "k1p-k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar.json",
+   "sha1": "855666d289ddaadb4572c347cd24adf9de988ea2"
+  },
+  {
+   "id": "k1p-k1-08-hucresel-yaslanma",
+   "dosya": "k1p-k1-08-hucresel-yaslanma.json",
+   "sha1": "43dcafa7b8155eadc0783e4d2d7f93dcf8f29f27"
+  },
+  {
+   "id": "k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese",
+   "dosya": "k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese.json",
+   "sha1": "2b2852279f38c880038137f5a2d023adf1783069"
+  },
+  {
+   "id": "k1p-k1-11-uriner-obstruksiyonun-fizyopatolojisi",
+   "dosya": "k1p-k1-11-uriner-obstruksiyonun-fizyopatolojisi.json",
+   "sha1": "5bfc0a8c91254547956c6bf0886d5ed2f0569cf8"
+  },
+  {
+   "id": "k1p-k1-12-enflamasyonun-kimyasal-mediyatorleri",
+   "dosya": "k1p-k1-12-enflamasyonun-kimyasal-mediyatorleri.json",
+   "sha1": "18ca61558257e6ccc7018e52b4382d38859ac174"
+  },
+  {
+   "id": "k1p-k1-13-kronik-ve-granulomatoz-enflamasyon",
+   "dosya": "k1p-k1-13-kronik-ve-granulomatoz-enflamasyon.json",
+   "sha1": "767878ebf2987d452928e6358937028db40ca544"
+  },
+  {
+   "id": "k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri",
+   "dosya": "k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri.json",
+   "sha1": "147d7aa8a3352e445c3acc7fdf528bd2822bc6d9"
+  },
+  {
+   "id": "k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi",
+   "dosya": "k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi.json",
+   "sha1": "f9e50b98e85ac99b2357d25c279f16f0b76c02e8"
+  },
+  {
+   "id": "k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama",
+   "dosya": "k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama.json",
+   "sha1": "14844097baa26e573fddcadc388fb79e639ac127"
+  },
+  {
+   "id": "k1p-k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi",
+   "dosya": "k1p-k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi.json",
+   "sha1": "1e6c3cc158a5290ff6b7c4e8dc9d6f1ee849e134"
+  },
+  {
+   "id": "k1p-k1-18-halk-sagligi-tarihcesi",
+   "dosya": "k1p-k1-18-halk-sagligi-tarihcesi.json",
+   "sha1": "55fd2950c4d1e343ffd4feb1fee8505abb876317"
+  },
+  {
+   "id": "k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri",
+   "dosya": "k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri.json",
+   "sha1": "c5a048d3d5dd09ddbf4537d97348a6fbde7dc664"
+  },
+  {
+   "id": "k1p-k1-20-tromboz-patofizyolojisi",
+   "dosya": "k1p-k1-20-tromboz-patofizyolojisi.json",
+   "sha1": "beb73e9eb34263ffd2d90d0892706b95dfe26bec"
+  },
+  {
+   "id": "k1p-k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
+   "dosya": "k1p-k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme.json",
+   "sha1": "10938f2057d6749651929f187d720c22530c7b5a"
+  },
+  {
+   "id": "k1p-k1-22-bebek-beslenmesi",
+   "dosya": "k1p-k1-22-bebek-beslenmesi.json",
+   "sha1": "01bdabc33650d2244d573a419f40fbb28034a5d9"
+  },
+  {
+   "id": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
+   "dosya": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi.json",
+   "sha1": "2be21b2d1f4561119b6a9461ff3c5fdbf2f02b29"
+  },
+  {
+   "id": "k1p-k1-24-emboli-enfarktus-ve-sok",
+   "dosya": "k1p-k1-24-emboli-enfarktus-ve-sok.json",
+   "sha1": "8fac8c1d2e53171a8ff80897ad66730c3c88bbff"
+  },
+  {
+   "id": "k1p-k1-25-asiri-duyarlilik-ve-otoimmunite",
+   "dosya": "k1p-k1-25-asiri-duyarlilik-ve-otoimmunite.json",
+   "sha1": "bfae26e1b379b61f46a932ffd974cf167291c587"
+  },
+  {
+   "id": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji",
+   "dosya": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji.json",
+   "sha1": "d536b239734e0ea7716e2fe4d204ebf0ad4fba2c"
+  },
+  {
+   "id": "k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi",
+   "dosya": "k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi.json",
+   "sha1": "17aaa9c03c46d6e94e2e2cc92dee2df58da890f4"
+  },
+  {
+   "id": "k1p-k1-28-tumor-biyolojisi-ve-terminolojisi",
+   "dosya": "k1p-k1-28-tumor-biyolojisi-ve-terminolojisi.json",
+   "sha1": "75b14cdb0c1300b7696a52682407665473c17302"
+  },
+  {
+   "id": "k1p-k1-29-karsinojenezin-molekuler-temeli",
+   "dosya": "k1p-k1-29-karsinojenezin-molekuler-temeli.json",
+   "sha1": "dd7dfb6d42220dce4d3397ee86af5ef777537396"
+  },
+  {
+   "id": "k1p-k1-30-ileri-tumor-genetigi-ve-metabolizmasi",
+   "dosya": "k1p-k1-30-ileri-tumor-genetigi-ve-metabolizmasi.json",
+   "sha1": "228fd1f91051f9f31047b6165fecc1239137f723"
+  },
+  {
+   "id": "k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler",
+   "dosya": "k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler.json",
+   "sha1": "b14dee0a21fb9421e7a491292c9bc9a072b4602c"
+  },
+  {
+   "id": "k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari",
+   "dosya": "k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari.json",
+   "sha1": "f72391f516c8b2fa89942e35cc79393fb4ea0ff8"
+  },
+  {
+   "id": "k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan",
+   "dosya": "k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan.json",
+   "sha1": "b064c13ee66fb10a54c60e4a63aaeaf54c4b0101"
+  },
+  {
+   "id": "k1p-k1-34-genital-enfeksiyonlar",
+   "dosya": "k1p-k1-34-genital-enfeksiyonlar.json",
+   "sha1": "3a14fa8016a3c2b31ec78cd8a2b0ca8b2792b9cf"
+  },
+  {
+   "id": "k1p-k1-35-prenatal-tani-yontemleri",
+   "dosya": "k1p-k1-35-prenatal-tani-yontemleri.json",
+   "sha1": "fd006525eade9122a6f6b04e8adfff2c4f373d44"
+  },
+  {
+   "id": "k1p-k1-36-izolasyon-yontemleri",
+   "dosya": "k1p-k1-36-izolasyon-yontemleri.json",
+   "sha1": "db84e4b37cbbbbed87bf9496d4222c3db3baf427"
+  },
+  {
+   "id": "k1p-k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
+   "dosya": "k1p-k1-37-glomeruler-hastaliklar-nefrotik-sendrom.json",
+   "sha1": "3b70610067bc6afd9b08f0a9f9c66ffacf126622"
+  },
+  {
+   "id": "k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom",
+   "dosya": "k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom.json",
+   "sha1": "fd769b258b6d37352b1deca47fd8f9e3376a2aa5"
+  },
+  {
+   "id": "k1p-k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
+   "dosya": "k1p-k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy.json",
+   "sha1": "7bc4f7963740df6854019c41c56b863e8d28cc14"
+  },
+  {
+   "id": "k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k",
+   "dosya": "k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k.json",
+   "sha1": "16e2aa3848c6710f1b3f7c70f32a6c0d409cb1df"
+  },
+  {
+   "id": "k1p-k1-41-sistemik-hastaliklarda-bobrek-hasari",
+   "dosya": "k1p-k1-41-sistemik-hastaliklarda-bobrek-hasari.json",
+   "sha1": "bbfaebd70484d51968911784529b01fc1c3c2810"
+  },
+  {
+   "id": "k1p-k1-42-tubulointerstisyel-hastaliklar",
+   "dosya": "k1p-k1-42-tubulointerstisyel-hastaliklar.json",
+   "sha1": "bf41c59a0e47420238129c491b2fc1b9c68084dc"
+  },
+  {
+   "id": "k1p-k1-48-vulva-vajen-ve-serviks-hastaliklari",
+   "dosya": "k1p-k1-48-vulva-vajen-ve-serviks-hastaliklari.json",
+   "sha1": "8479391c5283a54333118eb8759411370987fff6"
+  },
+  {
+   "id": "k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis",
+   "dosya": "k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis.json",
+   "sha1": "b5e06ec112f41a32ec371d12ce8b682e4ce39971"
+  },
+  {
+   "id": "k1p-k1-50-sifilis",
+   "dosya": "k1p-k1-50-sifilis.json",
+   "sha1": "390aacbdc25e034f53d58398042964b8aa7ac489"
+  },
+  {
+   "id": "k1p-k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari",
+   "dosya": "k1p-k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari.json",
+   "sha1": "7c7d0ec13e9c55ce267b6ac5b13245092c20fb6e"
+  },
+  {
+   "id": "k1p-k1-52-uriner-sistem-enfeksiyonlari",
+   "dosya": "k1p-k1-52-uriner-sistem-enfeksiyonlari.json",
+   "sha1": "2f99b14b82fe3293e72f321e58ed232fe344739f"
+  },
+  {
+   "id": "k1p-k1-53-endometriyal-hiperplazi-ve-kanserleri",
+   "dosya": "k1p-k1-53-endometriyal-hiperplazi-ve-kanserleri.json",
+   "sha1": "7d44a06193886d05d32969809928ef5c4a0fc56f"
+  },
+  {
+   "id": "k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri",
+   "dosya": "k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri.json",
+   "sha1": "e984670565ff6e9ebc8203b441e1eb4fa57cb0e4"
+  },
+  {
+   "id": "k1p-k1-55-over-tumorleri",
+   "dosya": "k1p-k1-55-over-tumorleri.json",
+   "sha1": "b93261615318bb3f798ecbf2ce4503226f373b16"
+  },
+  {
+   "id": "k1p-k1-56-memenin-benign-hastaliklari",
+   "dosya": "k1p-k1-56-memenin-benign-hastaliklari.json",
+   "sha1": "9387821d541b79354497c784071e908cb5aa90ef"
+  },
+  {
+   "id": "k1p-k1-57-intrauterin-enfeksiyonlar",
+   "dosya": "k1p-k1-57-intrauterin-enfeksiyonlar.json",
+   "sha1": "e7f481dc118b7f86c2f03697410feda28e3d3c54"
+  },
+  {
+   "id": "k1p-k1-58-enurezis-nokturna",
+   "dosya": "k1p-k1-58-enurezis-nokturna.json",
+   "sha1": "19b0c6ff8facbc89d1889f9431816a23a0bd1cb3"
+  },
+  {
+   "id": "k1p-k1-59-immunofarmakoloji",
+   "dosya": "k1p-k1-59-immunofarmakoloji.json",
+   "sha1": "af26a57cb0155b73571ceb46a38ac277f12cac55"
+  },
+  {
+   "id": "k1p-k1-60-preimplantasyon-genetik-tani-pgt",
+   "dosya": "k1p-k1-60-preimplantasyon-genetik-tani-pgt.json",
+   "sha1": "feb04c74f36db446e6023c35b371bbbbb333a86f"
+  },
+  {
+   "id": "k1p-k1-61-abortus",
+   "dosya": "k1p-k1-61-abortus.json",
+   "sha1": "fddab2e235d95ab4bceea5edb93658bacf220097"
+  },
+  {
+   "id": "k1p-k1-62-uretral-akinti",
+   "dosya": "k1p-k1-62-uretral-akinti.json",
+   "sha1": "6c47f4c143fd0bc5d569b48a68da341770e42509"
+  },
+  {
+   "id": "k1p-k1-63-turkiye-de-saglik-hizmetleri",
+   "dosya": "k1p-k1-63-turkiye-de-saglik-hizmetleri.json",
+   "sha1": "021e3ab590f553c4e9af7a994a3571f616dd9148"
+  },
+  {
+   "id": "k1p-k1-64-gebelik-terminolojisi-ve-kavramlari",
+   "dosya": "k1p-k1-64-gebelik-terminolojisi-ve-kavramlari.json",
+   "sha1": "276085c93f4ee8756c34e982fe6853e8de582368"
+  },
+  {
+   "id": "k1p-k1-65-meme-kanseri-ve-molekuler-tipleri",
+   "dosya": "k1p-k1-65-meme-kanseri-ve-molekuler-tipleri.json",
+   "sha1": "13d2f5954c11fa1532271ca5a3ee87f37c7f0d3e"
+  },
+  {
+   "id": "k1p-k1-66-erkek-genital-sistem-ve-prostat-hastaliklari",
+   "dosya": "k1p-k1-66-erkek-genital-sistem-ve-prostat-hastaliklari.json",
+   "sha1": "c9ea9bf9a8f4658ac940d59c59268fe6f2a9a81c"
+  },
+  {
+   "id": "k1p-k1-43-uriner-sistemin-spesifik-enfeksiyonlari",
+   "dosya": "k1p-k1-43-uriner-sistemin-spesifik-enfeksiyonlari.json",
+   "sha1": "bf99ef4f11d197abbab47ebc61ec07becbcc4311"
+  },
+  {
+   "id": "k1p-k1-46-mesane-hastaliklari-ve-tumorleri",
+   "dosya": "k1p-k1-46-mesane-hastaliklari-ve-tumorleri.json",
+   "sha1": "0c634677d13efa44e94ef41f3ba5f690a548aaf5"
+  },
+  {
+   "id": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari",
+   "dosya": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari.json",
+   "sha1": "a808e1a88b54b7de5cb721c91a74c3dd6d1537b8"
+  },
+  {
+   "id": "k1p-k1-45-bobrek-tumorleri",
+   "dosya": "k1p-k1-45-bobrek-tumorleri.json",
+   "sha1": "61b1b2a9a7fcfbe45aa1cace820b58eba4450894"
+  },
+  {
+   "id": "k1p-k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
+   "dosya": "k1p-k1-47-bagisikligi-baskili-hastalarda-enfeksiyon.json",
+   "sha1": "1dab0a261e2fade56dcea5933bade680d4b68209"
+  },
+  {
+   "id": "k1p-k1-67-gebelik-hastaliklari",
+   "dosya": "k1p-k1-67-gebelik-hastaliklari.json",
+   "sha1": "9278a783e62a2d2a09076f90a24bb568c06453cb"
+  },
+  {
+   "id": "k1p-k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-v2",
+   "dosya": "k1p-k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-v2.json",
+   "sha1": "86408117dc705406a57851096fd7a15eecb575ea"
+  },
+  {
+   "id": "k1p-k1-36-izolasyon-yontemleri-v2",
+   "dosya": "k1p-k1-36-izolasyon-yontemleri-v2.json",
+   "sha1": "6ae739dd8cf0396aabf7d60e34e23a0f196c3ab6"
+  },
+  {
+   "id": "k1p-k1-50-sifilis-v2",
+   "dosya": "k1p-k1-50-sifilis-v2.json",
+   "sha1": "b4a1e9a274d8c1a8f9cd79afa430801a816317f3"
+  },
+  {
+   "id": "k1p-k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi-v2",
+   "dosya": "k1p-k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi-v2.json",
+   "sha1": "98162d637ac5402a8ea9d16c73afa454487cdcac"
+  },
+  {
+   "id": "k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k-v2",
+   "dosya": "k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k-v2.json",
+   "sha1": "77b500cf8174453f6b7b3120c04dd4226e9d4915"
+  },
+  {
+   "id": "k1p-k1-11-uriner-obstruksiyonun-fizyopatolojisi-v2",
+   "dosya": "k1p-k1-11-uriner-obstruksiyonun-fizyopatolojisi-v2.json",
+   "sha1": "cc5fe077de5acddab07d1ecc3170ec8c94e5500f"
+  },
+  {
+   "id": "k1p-k1-52-uriner-sistem-enfeksiyonlari-v2",
+   "dosya": "k1p-k1-52-uriner-sistem-enfeksiyonlari-v2.json",
+   "sha1": "32baa8c8bb2ae7818deb6ca9afe61be0dfb01fd9"
+  },
+  {
+   "id": "k1p-k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme-v2",
+   "dosya": "k1p-k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme-v2.json",
+   "sha1": "859ae5dcf0e96399776e250573631debafdc7baa"
+  },
+  {
+   "id": "k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-v2",
+   "dosya": "k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-v2.json",
+   "sha1": "34a02d19a28d06b82c7d15551cb89dd452c08c67"
+  },
+  {
+   "id": "k1p-k1-43-uriner-sistemin-spesifik-enfeksiyonlari-v2",
+   "dosya": "k1p-k1-43-uriner-sistemin-spesifik-enfeksiyonlari-v2.json",
+   "sha1": "22a81bf53e4512dbf147d6d4a83568c9ad512a7f"
+  },
+  {
+   "id": "k1p-k1-34-genital-enfeksiyonlar-v2",
+   "dosya": "k1p-k1-34-genital-enfeksiyonlar-v2.json",
+   "sha1": "2add45ed02573933f3648f241ebce0b4406f2e6a"
+  },
+  {
+   "id": "k1p-k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy-v2",
+   "dosya": "k1p-k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy-v2.json",
+   "sha1": "8dfbae660e310e9d2216c962e02c371def8b0899"
+  },
+  {
+   "id": "k1p-k1-04-hucre-hasari-ve-nekroz-i-v2",
+   "dosya": "k1p-k1-04-hucre-hasari-ve-nekroz-i-v2.json",
+   "sha1": "2d26d2854d5b11c564c5d9a41c3a4c2768e2106a"
+  },
+  {
+   "id": "k1p-k1-08-hucresel-yaslanma-v2",
+   "dosya": "k1p-k1-08-hucresel-yaslanma-v2.json",
+   "sha1": "9036f9c98dbce690fbde6543da50e8ed5422bcf7"
+  },
+  {
+   "id": "k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama-v2",
+   "dosya": "k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama-v2.json",
+   "sha1": "b4937f3bf2a566c6a4820450ed33d9865194611a"
+  },
+  {
+   "id": "k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese-v2",
+   "dosya": "k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese-v2.json",
+   "sha1": "bda6830df6b6c01c156cf6d318385a7f28795cc9"
+  },
+  {
+   "id": "k1p-k1-22-bebek-beslenmesi-v2",
+   "dosya": "k1p-k1-22-bebek-beslenmesi-v2.json",
+   "sha1": "1aa65fd989cd31cf55acd8c76eb3118977e14bc3"
+  },
+  {
+   "id": "k1p-k1-02-patolojiye-giris-v2",
+   "dosya": "k1p-k1-02-patolojiye-giris-v2.json",
+   "sha1": "c56c509259a28fee9ab94630b7d8837396c1aef3"
+  },
+  {
+   "id": "k1p-k1-01-dismorfolojide-genetik-terminoloji-v2",
+   "dosya": "k1p-k1-01-dismorfolojide-genetik-terminoloji-v2.json",
+   "sha1": "d5183c08347fb633f5c74e05ccaac82cf3785418"
+  },
+  {
+   "id": "k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri-v2",
+   "dosya": "k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri-v2.json",
+   "sha1": "cd3735eaac5d4109877d34badeb52e41650d09a4"
+  },
+  {
+   "id": "k1p-k1-24-emboli-enfarktus-ve-sok-v2",
+   "dosya": "k1p-k1-24-emboli-enfarktus-ve-sok-v2.json",
+   "sha1": "3e45e8bc75ab436fa8e63e910e85ec0bc3be4057"
+  },
+  {
+   "id": "k1p-k1-03-hucresel-adaptasyonlar-v2",
+   "dosya": "k1p-k1-03-hucresel-adaptasyonlar-v2.json",
+   "sha1": "ff5b5170445dd79d948d2cbeb6c7ed88ad015e28"
+  },
+  {
+   "id": "k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-v2",
+   "dosya": "k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-v2.json",
+   "sha1": "371078dfd59dc6459e8132ffae31ecfb9b3c565e"
+  },
+  {
+   "id": "k1p-k1-05-hucre-hasari-ve-nekroz-ii-v2",
+   "dosya": "k1p-k1-05-hucre-hasari-ve-nekroz-ii-v2.json",
+   "sha1": "98b2335328089aec28972e263360d2b680f4614a"
+  },
+  {
+   "id": "k1p-k1-30-ileri-tumor-genetigi-ve-metabolizmasi-v2",
+   "dosya": "k1p-k1-30-ileri-tumor-genetigi-ve-metabolizmasi-v2.json",
+   "sha1": "b4944bf3347c0e57288fcb3051260fb4092b2f72"
+  },
+  {
+   "id": "k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma-v2",
+   "dosya": "k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma-v2.json",
+   "sha1": "b6bcad0d3624991dbaed03553efe776356a1193f"
+  },
+  {
+   "id": "k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-v2",
+   "dosya": "k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-v2.json",
+   "sha1": "ecc794d91d7a7ffc6f3c97ac1e74829e25959e30"
+  },
+  {
+   "id": "k1p-k1-28-tumor-biyolojisi-ve-terminolojisi-v2",
+   "dosya": "k1p-k1-28-tumor-biyolojisi-ve-terminolojisi-v2.json",
+   "sha1": "26719d54c6d2301677792b98f8b4b2e7f8200be4"
+  },
+  {
+   "id": "k1p-k1-20-tromboz-patofizyolojisi-v2",
+   "dosya": "k1p-k1-20-tromboz-patofizyolojisi-v2.json",
+   "sha1": "1dff880636f444d5c6fcc8bc7b9fd6efc464d5d8"
+  },
+  {
+   "id": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
+   "dosya": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2.json",
+   "sha1": "5efb56d27c82e14b9485166326c4946f8f8ea487"
+  },
+  {
+   "id": "k1p-k1-12-enflamasyonun-kimyasal-mediyatorleri-v2",
+   "dosya": "k1p-k1-12-enflamasyonun-kimyasal-mediyatorleri-v2.json",
+   "sha1": "d591b2e8f9eeca46682f80a6793e04a77bdbb9fc"
+  },
+  {
+   "id": "k1p-k1-25-asiri-duyarlilik-ve-otoimmunite-v2",
+   "dosya": "k1p-k1-25-asiri-duyarlilik-ve-otoimmunite-v2.json",
+   "sha1": "2028fb50a51f86307ea3ae553e21fbc413d1b1df"
+  },
+  {
+   "id": "k1p-k1-13-kronik-ve-granulomatoz-enflamasyon-v2",
+   "dosya": "k1p-k1-13-kronik-ve-granulomatoz-enflamasyon-v2.json",
+   "sha1": "f8213bcb16e5809dad3ba14be7ab0d03d21cb14b"
+  },
+  {
+   "id": "k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan-v2",
+   "dosya": "k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan-v2.json",
+   "sha1": "40c9c8d55a5c2cc8ae20dd463450929bb4d49caf"
+  },
+  {
+   "id": "k1p-k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-v2",
+   "dosya": "k1p-k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-v2.json",
+   "sha1": "c92828ce688beeff1803fef19cb9e575f0bc69ec"
+  },
+  {
+   "id": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari-v2",
+   "dosya": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari-v2.json",
+   "sha1": "f5879032bc2d3c989fe11f379830617d6e691ef5"
+  },
+  {
+   "id": "k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi-v2",
+   "dosya": "k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi-v2.json",
+   "sha1": "cbd976cb60db789123ecfd50d113d332292a6232"
+  },
+  {
+   "id": "k1p-k1-18-halk-sagligi-tarihcesi-v2",
+   "dosya": "k1p-k1-18-halk-sagligi-tarihcesi-v2.json",
+   "sha1": "4be8402be0ac2027941dbee398cc5da0dd375654"
+  },
+  {
+   "id": "k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri-v2",
+   "dosya": "k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri-v2.json",
+   "sha1": "33b0ea66079f82f4a013eeb52ad2bb17082b8e36"
+  },
+  {
+   "id": "k1p-k1-53-endometriyal-hiperplazi-ve-kanserleri-v2",
+   "dosya": "k1p-k1-53-endometriyal-hiperplazi-ve-kanserleri-v2.json",
+   "sha1": "0585ce2fc61ed942722d58bdff7f954d4c93348e"
+  },
+  {
+   "id": "k1p-k1-35-prenatal-tani-yontemleri-v2",
+   "dosya": "k1p-k1-35-prenatal-tani-yontemleri-v2.json",
+   "sha1": "d96d55e5c1848e56dbe342faff131b299bf2a037"
+  },
+  {
+   "id": "k1p-k1-42-tubulointerstisyel-hastaliklar-v2",
+   "dosya": "k1p-k1-42-tubulointerstisyel-hastaliklar-v2.json",
+   "sha1": "f44bc513b3c99f0515d4a879097768534f2920a4"
+  },
+  {
+   "id": "k1p-k1-45-bobrek-tumorleri-v2",
+   "dosya": "k1p-k1-45-bobrek-tumorleri-v2.json",
+   "sha1": "cec48334db36319a76ad01ae65280dbacb12c4c5"
+  },
+  {
+   "id": "k1p-k1-56-memenin-benign-hastaliklari-v2",
+   "dosya": "k1p-k1-56-memenin-benign-hastaliklari-v2.json",
+   "sha1": "c30d61df49051ffd4e7156e30e7e5e794ab12116"
+  },
+  {
+   "id": "k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler-v2",
+   "dosya": "k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler-v2.json",
+   "sha1": "e4c2ffce7ada7aea0d993c5f35340e0b8581dbc7"
+  },
+  {
+   "id": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji-v2",
+   "dosya": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji-v2.json",
+   "sha1": "c7554bc5135d6dae1727a841c7f89bdedea6e00c"
+  },
+  {
+   "id": "k1p-k1-62-uretral-akinti-v2",
+   "dosya": "k1p-k1-62-uretral-akinti-v2.json",
+   "sha1": "e85996c8fc4fb4210bafe0b7863ee492161fc3cc"
+  },
+  {
+   "id": "k1p-k1-29-karsinojenezin-molekuler-temeli-v2",
+   "dosya": "k1p-k1-29-karsinojenezin-molekuler-temeli-v2.json",
+   "sha1": "3b6ba3b2698b23bfb0292c533cd293ba1d5b151c"
+  },
+  {
+   "id": "k1p-k1-41-sistemik-hastaliklarda-bobrek-hasari-v2",
+   "dosya": "k1p-k1-41-sistemik-hastaliklarda-bobrek-hasari-v2.json",
+   "sha1": "d009b119c861696bde6d6c583497d173b7a75f11"
+  },
+  {
+   "id": "k1p-k1-55-over-tumorleri-v2",
+   "dosya": "k1p-k1-55-over-tumorleri-v2.json",
+   "sha1": "8b4478e2ce5373df4cf610fdb0d8136a16424f2a"
+  },
+  {
+   "id": "k1p-k1-65-meme-kanseri-ve-molekuler-tipleri-v2",
+   "dosya": "k1p-k1-65-meme-kanseri-ve-molekuler-tipleri-v2.json",
+   "sha1": "c435c8174710561849d90ec3dd38efd1a2b7be7c"
+  },
+  {
+   "id": "k1p-k1-48-vulva-vajen-ve-serviks-hastaliklari-v2",
+   "dosya": "k1p-k1-48-vulva-vajen-ve-serviks-hastaliklari-v2.json",
+   "sha1": "313432c079f292e11a2c55efc27a4da28f17f128"
+  },
+  {
+   "id": "k1p-k1-58-enurezis-nokturna-v2",
+   "dosya": "k1p-k1-58-enurezis-nokturna-v2.json",
+   "sha1": "7e9a28c4085a36560d1af5fce44764988a0776b9"
+  },
+  {
+   "id": "k1p-k1-61-abortus-v2",
+   "dosya": "k1p-k1-61-abortus-v2.json",
+   "sha1": "a5cf0094d12b6f7f2b115a9d33ee55e508ac0c6f"
+  },
+  {
+   "id": "k1p-k1-37-glomeruler-hastaliklar-nefrotik-sendrom-v2",
+   "dosya": "k1p-k1-37-glomeruler-hastaliklar-nefrotik-sendrom-v2.json",
+   "sha1": "70c05fc512cf3187b3146d6f4383b1749b2e51cc"
+  },
+  {
+   "id": "k1p-k1-46-mesane-hastaliklari-ve-tumorleri-v2",
+   "dosya": "k1p-k1-46-mesane-hastaliklari-ve-tumorleri-v2.json",
+   "sha1": "028a08b3d1c29f195efc4c332276ec2d9b608275"
+  },
+  {
+   "id": "k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom-v2",
+   "dosya": "k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom-v2.json",
+   "sha1": "96d69e426bf8d804f2d1fc5923a9af1478c3a9f9"
+  },
+  {
+   "id": "k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis-v2",
+   "dosya": "k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis-v2.json",
+   "sha1": "8440b2396c5af9ff8a17109b1186a973536a0be3"
+  },
+  {
+   "id": "k1p-k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi",
+   "dosya": "k1p-k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi.json",
+   "sha1": "df58c23017d09fe394b54ee03389fc8894366c89"
+  },
+  {
+   "id": "k1p-k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya",
+   "dosya": "k1p-k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya.json",
+   "sha1": "d3df33c69cd85cffd429fcc28dbe3c7df1d64b67"
+  },
+  {
+   "id": "k2p-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "dosya": "k2p-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",
+   "sha1": "b5a70c8a16edff7a45f9dc202962a9c9bc213d72"
+  },
+  {
+   "id": "k2p-k2-07-genel-anestezik-ilaclar",
+   "dosya": "k2p-k2-07-genel-anestezik-ilaclar.json",
+   "sha1": "79cd2cd8c81a04afbd317a8c85f6473a2024f80e"
+  },
+  {
+   "id": "k2p-k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "dosya": "k2p-k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon.json",
+   "sha1": "ddf54c92ab09b622865af56634402869b76e6587"
+  },
+  {
+   "id": "k2p-k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "dosya": "k2p-k2-04-serebrovaskuler-hastaliklar-ve-inme.json",
+   "sha1": "2230ba1050880c4c52e0137beef0d05400578bb9"
+  },
+  {
+   "id": "k2p-k2-05-norolojik-muayene",
+   "dosya": "k2p-k2-05-norolojik-muayene.json",
+   "sha1": "f2a65060e85260f6d235fe1d99f568970483d722"
+  },
+  {
+   "id": "k2p-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "dosya": "k2p-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi.json",
+   "sha1": "63aacaf2ffdce1d211dcd6dc87ce30ca532c80f2"
+  },
+  {
+   "id": "k2p-k2-01-norolojik-hastaya-yaklasim",
+   "dosya": "k2p-k2-01-norolojik-hastaya-yaklasim.json",
+   "sha1": "b51b16776fb75fd36a6dc15bde5d0b2cc84ec46c"
+  },
+  {
+   "id": "k2p-k2-11-psikiyatrik-semiyoloji",
+   "dosya": "k2p-k2-11-psikiyatrik-semiyoloji.json",
+   "sha1": "515f13a621bdf2882093d8a7b2149f0a1f69a425"
+  },
+  {
+   "id": "k2p-k2-09-sss-ilaclari",
+   "dosya": "k2p-k2-09-sss-ilaclari.json",
+   "sha1": "7949b2c5be0eb2affa57c1efdbf1a6dedb6a6c86"
+  },
+  {
+   "id": "k2p-k2-10-bas-agrisina-yaklasim",
+   "dosya": "k2p-k2-10-bas-agrisina-yaklasim.json",
+   "sha1": "b0e659ea417429692f7acee588b546fb838e9725"
+  },
+  {
+   "id": "k2p-k2-06-agri-yollari-ve-mekanizmalari",
+   "dosya": "k2p-k2-06-agri-yollari-ve-mekanizmalari.json",
+   "sha1": "40f44fefaca293675fb6f2e0585f707ec2ea15c0"
+  }
+ ]
+}
