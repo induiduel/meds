@@ -48,6 +48,7 @@ import { registerArkadaslik } from './src/services/arkadaslik';
 import { registerNotPaylas } from './src/services/notPaylas';
 import { registerDersVideoOynat } from './src/services/dersVideoOynat';
 import crypto from 'crypto';
+import { INTERACTIVE_DECKS_FILE, desteleriOku, desteOku, desteOnbellegi } from './src/services/desteDeposu.ts';
 
 const require = createRequire(import.meta.url);
 const pdfParseModule = require('pdf-parse');
@@ -2379,7 +2380,7 @@ function buildLearnMatchIndex(level: LearnIndexLevel): string {
   const linksFile = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'learn_links.json');
   const decks = getDecksDb();
   const linksMtime = fs.existsSync(linksFile) ? fs.statSync(linksFile).mtimeMs : 0;
-  const cacheKey = `${decksCache?.mtime || 0}:${linksMtime}:${decks.length}`;
+  const cacheKey = `${desteOnbellegi()?.mtime || 0}:${linksMtime}:${decks.length}`;
   const hit = learnMatchIndexCache.get(level);
   if (hit && hit.key === cacheKey) return hit.body;
   const baglantilar = linksMtime ? (JSON.parse(fs.readFileSync(linksFile, 'utf-8')).baglantilar || {}) : {};
@@ -7043,51 +7044,14 @@ app.post('/api/notebooklm/ingest/flashcards', async (req, res) => {
 });
 
 // --- Interactive Learning Decks & Slides Endpoints ---
-const INTERACTIVE_DECKS_FILE = path.resolve(__dirname, 'src', 'data', 'interactive_learning_decks.json');
 const INTERACTIVE_DECK_ITEMS_DIR = path.resolve(__dirname, 'src', 'data', 'decks', 'items');
 
 // Panel değişiklikleri data/content/ altında (canlı içerik katmanı); okuyan herkes önce oraya bakar.
 initContentOverlay(__dirname, DATA_DIR);
 
-let decksCache: {
-  file: string;
-  mtime: number;
-  data: any[];
-  compactJsonStr: string;
-  compactEtag: string;
-  fullJsonStr: string;
-  fullEtag: string;
-} | null = null;
-
+// Deste okuma/önbellek tek depoda: src/services/desteDeposu.ts
 function getDecksDb(): any[] {
-  try {
-    const file = resolveContent(INTERACTIVE_DECKS_FILE);
-    if (fs.existsSync(file)) {
-      const mtime = fs.statSync(file).mtimeMs;
-      if (decksCache && decksCache.file === file && decksCache.mtime === mtime) return decksCache.data;
-      const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
-      const list = Array.isArray(data) ? data : [];
-      const compactList = list.map((d: any) => ({
-        id: d.id,
-        title: d.title,
-        description: d.description,
-        committee: d.committee || d.committeeId,
-        discipline: d.discipline,
-        slideCount: d.slides?.length || 0,
-        flashcardCount: d.flashcards?.length || 0,
-        updatedAt: d.updatedAt,
-      }));
-      const compactJsonStr = JSON.stringify({ total: compactList.length, decks: compactList });
-      const compactEtag = `"${crypto.createHash('md5').update(compactJsonStr).digest('hex')}"`;
-      const fullJsonStr = JSON.stringify({ total: list.length, decks: list });
-      const fullEtag = `"${crypto.createHash('md5').update(fullJsonStr).digest('hex')}"`;
-      decksCache = { file, mtime, data: list, compactJsonStr, compactEtag, fullJsonStr, fullEtag };
-      return list;
-    }
-  } catch (e) {
-    console.error('Error reading interactive_learning_decks.json:', e);
-  }
-  return decksCache?.data || [];
+  return desteleriOku();
 }
 
 // Kullanıcı notları yedeği / cihazlar arası eşitleme (src/services/userNotesService.ts)
@@ -7306,15 +7270,15 @@ app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
     const isUnfiltered = !committeeId && !discipline && !search;
 
     if (compact === '1' || compact === 'true') {
-      if (isUnfiltered && decksCache?.compactJsonStr) {
-        res.setHeader('ETag', decksCache.compactEtag);
+      if (isUnfiltered && desteOnbellegi()?.compactJsonStr) {
+        res.setHeader('ETag', desteOnbellegi()!.compactEtag);
         res.setHeader('Cache-Control', 'no-cache');
         const ifNoneMatch = req.headers['if-none-match'];
-        if (ifNoneMatch && (ifNoneMatch === decksCache.compactEtag || ifNoneMatch === `W/${decksCache.compactEtag}`)) {
+        if (ifNoneMatch && (ifNoneMatch === desteOnbellegi()!.compactEtag || ifNoneMatch === `W/${desteOnbellegi()!.compactEtag}`)) {
           return res.status(304).end();
         }
         res.setHeader('Content-Type', 'application/json; charset=utf-8');
-        return res.send(decksCache.compactJsonStr);
+        return res.send(desteOnbellegi()!.compactJsonStr);
       }
       let filtered = list;
       if (committeeId) {
@@ -7340,15 +7304,15 @@ app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
       return sendConditionalJson(req, res, { total: compactList.length, decks: compactList });
     }
 
-    if (isUnfiltered && decksCache?.fullJsonStr) {
-      res.setHeader('ETag', decksCache.fullEtag);
+    if (isUnfiltered && desteOnbellegi()?.fullJsonStr) {
+      res.setHeader('ETag', desteOnbellegi()!.fullEtag);
       res.setHeader('Cache-Control', 'no-cache');
       const ifNoneMatch = req.headers['if-none-match'];
-      if (ifNoneMatch && (ifNoneMatch === decksCache.fullEtag || ifNoneMatch === `W/${decksCache.fullEtag}`)) {
+      if (ifNoneMatch && (ifNoneMatch === desteOnbellegi()!.fullEtag || ifNoneMatch === `W/${desteOnbellegi()!.fullEtag}`)) {
         return res.status(304).end();
       }
       res.setHeader('Content-Type', 'application/json; charset=utf-8');
-      return res.send(decksCache.fullJsonStr);
+      return res.send(desteOnbellegi()!.fullJsonStr);
     }
 
     let filtered = list;
@@ -7403,8 +7367,7 @@ app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req
     // Panelde değiştirilen deste katmandadır; derlenmiş parça dosyaları eski kalır
     let deck = (resolveContent(INTERACTIVE_DECKS_FILE) === INTERACTIVE_DECKS_FILE || deckId.includes('y25-')) ? loadDeckFromItemFiles(deckId) : null;
     if (!deck) {
-      const list = getDecksDb();
-      deck = list.find((d) => d.id === deckId || d.id === `k1p-${deckId}` || d.id.includes(deckId));
+      deck = desteOku(deckId);
     }
 
     if (!deck) {

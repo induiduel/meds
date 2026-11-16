@@ -18,6 +18,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import deste_deposu as dd  # noqa: E402
 
 import argparse
 import hashlib
@@ -41,7 +42,7 @@ SURUM = "ema-1"
 SURUM_K2 = "ema-2"  # Kurul 2+: kisaltma_ses.uzat okunuşu (H3)
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
 
-DECKS_FILE = MEDS / "src/data/interactive_learning_decks.json"
+DECKS_FILE = dd.YOL
 CIKTI_KOK = MEDS / "data/ogren_ses"
 
 
@@ -238,8 +239,7 @@ def main():
         print(f"HATA: {DECKS_FILE} bulunamadı!")
         sys.exit(1)
 
-    with open(DECKS_FILE, encoding="utf-8") as f:
-        all_decks = json.load(f)
+    all_decks = dd.hepsi()
 
     deck_map = {d["id"]: d for d in all_decks}
 

@@ -22,6 +22,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ayarlar import APP, DATABASE, DOWNLOADS, IZLENEN_KOK, KAYIT, KUYRUK, STATE, TASLAK, oku, yaz  # noqa: E402
+_d = Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in sys.path:
+    sys.path.append(str(_d))
+import deste_deposu as dd  # noqa: E402  tek deste deposu (2026-11-16)
 
 CHECKLIST = STATE / "checklist.json"
 RAPOR = STATE / "durum_raporu.md"
@@ -97,7 +103,7 @@ def k1_dersleri() -> list[dict]:
 
 def olustur() -> dict:
     prog = oku(DATABASE / "taxonomy" / "donem3_ders_programi.json", {})
-    decks = oku(APP / "src" / "data" / "interactive_learning_decks.json", [])
+    decks = dd.hepsi()
     deck_ids = {d.get("id") for d in (decks if isinstance(decks, list) else [])}
     manifest = {i.get("source_id"): i for i in oku(DOWNLOADS / "_manifest.json", {}).get("items", [])}
     dersler = k1_dersleri()

@@ -25,6 +25,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import deste_deposu as dd  # noqa: E402
 
 import json
 import re
@@ -196,7 +197,7 @@ def main() -> None:
     global HAVUZ
     HAVUZ = yukle(OUT / "havuz.json") if (OUT / "havuz.json").exists() else None
     sorular = yukle(DATA / "pastQuestions.json")
-    desteler = yukle(DATA / "interactive_learning_decks.json")
+    desteler = dd.hepsi()
     spot_veri = yukle(DATA / "exam_spots_k1.json")
     pdf_kaynak = yukle(DATA / "deckPdfSources.json").get("decks", {})
 

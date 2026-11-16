@@ -13,6 +13,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import deste_deposu as dd  # noqa: E402
 import json, os, re, glob, unicodedata
 from pathlib import Path
 
@@ -24,7 +25,7 @@ OUT = ROOT / 'meds_temp' / 'sesli_anlatim'
 # Kullanıcının verdiği sıra (Tıbbi Patoloji dosya no → Kurul 1 ders no); hepsi Microsoft Emel.
 EMEL_SIRA = [28, 29, 30, 32, 33, 37, 38, 41, 42, 44, 45, 46, 48, 49, 53, 55, 67, 56, 9, 12, 13, 15, 16, 20, 24, 25, 26]
 
-decks = json.load(open(MEDS / 'src/data/interactive_learning_decks.json'))
+decks = dd.hepsi()
 byid = {d['id']: d for d in decks}
 pdfsrc = json.load(open(MEDS / 'src/data/deckPdfSources.json'))['decks']
 past = json.load(open(MEDS / 'src/data/pastQuestions.json'))

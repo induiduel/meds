@@ -17,6 +17,7 @@ import express from 'express';
 import fs from 'fs';
 import path from 'path';
 import { spawn } from 'child_process';
+import { desteleriOku } from './desteDeposu.ts';
 
 const ID = /^[0-9]{8}-[0-9a-f]{10}(?:-\d+)?$/;
 const DOSYALAR = new Set(['deck.json', 'ornek_sorular.json', 'sozluk.json', 'hastaliklar.json', 'bilgi_havuzu.jsonl',
@@ -47,22 +48,12 @@ export function desteOlcusu(d: any) {
 export function dersRevizeRouter(appDir: string): express.Router {
   const kok = process.env.MEDS_ISCI_DIR || path.resolve(appDir, '..', 'ders_isci');
   const taslakKok = path.join(kok, 'taslak');
-  const desteDosyasi = path.resolve(appDir, 'src', 'data', 'interactive_learning_decks.json');
   const python = fs.existsSync(path.resolve(appDir, '.venv-ocr', 'bin', 'python'))
     ? path.resolve(appDir, '.venv-ocr', 'bin', 'python')
     : 'python3';
   let is: { id: string; islem: string; asama: string; basla: number; gunluk: string } | null = null;
 
-  let desteOnbellek: { mtime: number; liste: any[] } | null = null;
-  const desteler = (): any[] => {
-    try {
-      const m = fs.statSync(desteDosyasi).mtimeMs;
-      if (!desteOnbellek || desteOnbellek.mtime !== m) desteOnbellek = { mtime: m, liste: oku(desteDosyasi, []) };
-      return desteOnbellek.liste;
-    } catch {
-      return [];
-    }
-  };
+  const desteler = (): any[] => desteleriOku();
 
   const ozet = (id: string) => {
     const d = path.join(taslakKok, id);
@@ -198,7 +189,6 @@ export function dersRevizeRouter(appDir: string): express.Router {
       }
       is = { id, islem, asama: 'kaynaklara yazılıyor', basla: Date.now(), gunluk: '' };
       const kod = await calistir(python, ['scripts/uretim/ders_isci/yayinla.py', '--yerel', '--is', id], `kaynaklara yazılıyor (${sira.length} sırada)`);
-      desteOnbellek = null;
       if (kod === 0) yayinlananlar.push(id);
       else if (!fs.existsSync(path.join(d, 'yayin.json')))
         fs.writeFileSync(path.join(d, 'yayin.json'), JSON.stringify({ durum: 'hata', kip: islem, hatalar: [is.gunluk.slice(-1500)] }, null, 1));

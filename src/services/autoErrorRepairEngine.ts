@@ -12,7 +12,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { resolveContent, writableContent, markContentChanged } from './contentOverlay.ts';
+import { desteleriOku, desteleriYaz } from './desteDeposu.ts';
 import {
   detectQuestionCrossData,
   buildCrossDataPromptSection,
@@ -39,7 +39,6 @@ const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
 const SRC_PAST_QUESTIONS_FILE = path.resolve(SRC_DATA_DIR, 'pastQuestions.json');
 const PRACTICE_QUESTIONS_FILE = path.resolve(DATA_DIR, 'questions.json');
 
-const DECKS_FILE = path.resolve(SRC_DATA_DIR, 'interactive_learning_decks.json');
 const DECK_ITEMS_DIR = path.resolve(SRC_DATA_DIR, 'decks', 'items');
 
 export type ErrorSource = 'past_question' | 'practice_question' | 'interactive_deck' | 'lecture_summary' | 'term' | 'flashcard';
@@ -641,7 +640,7 @@ export function enrichAndFetchContext(source: ErrorSource, targetId: string, sub
 
   if (source === 'interactive_deck') {
     // 1. Deste dosyasından oku
-    const decks = readJsonSafe<any[]>(resolveContent(DECKS_FILE), []);
+    const decks = desteleriOku({ kopya: true });
     let deck = decks.find((d) => String(d.id) === String(targetId));
     if (!deck) {
       // items/<id>.json dosyasından dene
@@ -1209,7 +1208,7 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
     }
 
     if (item.source === 'interactive_deck') {
-      const decks = readJsonSafe<any[]>(resolveContent(DECKS_FILE), []);
+      const decks = desteleriOku({ kopya: true });
       const deckIdx = decks.findIndex((d) => String(d.id) === String(item.targetId));
       if (deckIdx === -1) {
         return { success: false, error: 'İnteraktif deste bulunamadı.' };
@@ -1232,8 +1231,7 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
       }
 
       // Canlı içerik katmanına yaz (data/content → fark); src/data imaj içidir, items/ derlemede kaynaktan türetilir
-      writeJsonAtomic(writableContent(DECKS_FILE), decks);
-      markContentChanged('decks', [String(decks[deckIdx].id)]);
+      desteleriYaz(decks, [String(decks[deckIdx].id)]);
 
       // Dışa aktarım paketleri (meds_export/deste_paketleri) `npm run decks:packages` ile kaynaktan üretilir.
 

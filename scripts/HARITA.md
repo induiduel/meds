@@ -16,6 +16,8 @@ scripts/
 ├── arsiv/          ÖLÜ kod — hiçbir şey çağırmaz; tsc ve Oracle gönderiminden dışlı. Yeni iş BURAYA BAĞLANMAZ.
 └── *.py / *.mjs    kök kütüphaneler ve tek dosyalık araçlar (sik_aciklama, turkce_uslup, validate_learning_decks,
                     ders_icerik_*, build_* ...). Çok sayıda betik bunları adıyla import eder.
+                    `deste_deposu.py` = Öğren destelerinin TEK okuma/yazma noktası (sunucu eşi src/services/desteDeposu.ts);
+                    interactive_learning_decks.json'ı doğrudan açmak YASAK.
 ```
 
 ## hat/ — orkestrasyon (tam hat tek giriş: `hat/tam_hat/kosucu.py`)

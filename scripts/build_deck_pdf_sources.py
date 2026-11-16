@@ -24,10 +24,13 @@ Kural: doğru ders ↔ doğru PDF; şüpheli eşleşme gösterilmez.
 import argparse, datetime, json, math, os, re, sys, unicodedata
 from collections import Counter, defaultdict
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import deste_deposu as dd  # noqa: E402
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 APP = os.path.normpath(os.path.join(HERE, '..'))
 ROOT = os.path.normpath(os.path.join(APP, '..'))
-DECKS = os.path.join(APP, 'src', 'data', 'interactive_learning_decks.json')
+DECKS = str(dd.YOL)
 LEGACY = os.path.join(APP, 'src', 'data', 'deckPdfCatalog.ts')
 OUT = os.path.join(APP, 'src', 'data', 'deckPdfSources.json')
 # Denetimde elle doğrulanmış adım aralıkları: {deste: {slideNumber: {"r": [baş, son, dosya], "t": başlık}}}.
@@ -316,7 +319,7 @@ def main():
     ap.add_argument('--sessiz', action='store_true')
     a = ap.parse_args()
 
-    decks = json.load(open(DECKS))
+    decks = dd.hepsi()
     inv = load_inventory(a.envanter)
     by_key = defaultdict(list)
     for rel in inv:

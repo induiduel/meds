@@ -24,6 +24,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import deste_deposu as dd  # noqa: E402
 
 import argparse
 import datetime as dt
@@ -91,7 +92,7 @@ def main() -> int:
     metin = dosya["metin"].read_text(encoding="utf-8")
     hz = json.loads(dosya["hizalama"].read_text()) if dosya["hizalama"] else {}
     deste_id = hz.get("deckId") or f"k2p-{key}"
-    desteler = json.loads(Path(a.desteler or MEDS / "src/data/interactive_learning_decks.json").read_text())
+    desteler = dd.hepsi(Path(a.desteler) if a.desteler else None)
     deste = next((d for d in desteler if d.get("id") == deste_id), None)
     isr = json.loads(dosya["isaret"].read_text()) if dosya["isaret"] else {}
     cz = json.loads(dosya["cizim"].read_text()) if dosya["cizim"] else {}

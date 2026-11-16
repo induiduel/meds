@@ -20,6 +20,9 @@ import json
 import re
 import glob
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import deste_deposu as dd  # noqa: E402
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Search paths for deepseek data
@@ -30,7 +33,7 @@ CANDIDATE_DIRS = [
 ]
 
 PAST_QUESTIONS_PATH = os.path.join("src", "data", "pastQuestions.json")
-DECKS_PATH = os.path.join("src", "data", "interactive_learning_decks.json")
+DECKS_PATH = str(dd.YOL)
 GLOSSARY_PATH = os.path.join("src", "data", "medical_glossary.json")
 
 # Quality thresholds
@@ -223,76 +226,73 @@ def sync_markdown_spot_notes(data_dirs):
         print(f"Warning: {DECKS_PATH} not found.")
         return 0
 
-    with open(DECKS_PATH, 'r', encoding='utf-8') as f:
-        decks = json.load(f)
+    with dd.duzenle(girinti=2) as decks:
 
-    enriched_slides = 0
+        enriched_slides = 0
 
-    for ddir in data_dirs:
-        if not os.path.isdir(ddir):
-            continue
-
-        for filepath in glob.glob(os.path.join(ddir, "*.md")):
-            filename = os.path.basename(filepath)
-            if 'readme' in filename.lower():
+        for ddir in data_dirs:
+            if not os.path.isdir(ddir):
                 continue
 
-            print(f"Scanning spot notes markdown: {filename}")
-            try:
-                with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
-                    content = f.read()
-
-                # Parse sections with ##
-                sections = re.split(r'\n(?=##\s+)', content)
-                for sec in sections:
-                    lines = sec.strip().split('\n')
-                    if not lines or not lines[0].startswith('##'):
-                        continue
-                    sec_title = lines[0].replace('##', '').strip()
-                    sec_body = '\n'.join(lines[1:]).strip()
-
-                    # Find matching decks/slides
-                    keywords = [w.lower() for w in re.findall(r'\b\w{4,}\b', sec_title)]
-                    for deck in decks:
-                        deck_text = (deck.get('title', '') + ' ' + deck.get('discipline', '')).lower()
-                        # If at least 2 keywords match deck title/discipline
-                        matches = sum(1 for kw in keywords if kw in deck_text)
-                        if matches >= 1:
-                            # Enrich first matching slide's synthesis
-                            for slide in deck.get('slides', [])[:3]:
-                                syn = slide.get('synthesisNarrative', '')
-                                if sec_title not in syn:
-                                    note_block = f"\n\n### 💡 DeepSeek & Hoca Spot İncisi: {sec_title}\n"
-                                    # Bulletize lines if not bulleted
-                                    for bline in sec_body.split('\n'):
-                                        bline = bline.strip()
-                                        if not bline:
-                                            continue
-                                        if not bline.startswith(('•', '-', '*', '1.', '2.', '3.')):
-                                            note_block += f"• **Spot Vurgu:** {bline}\n"
-                                        else:
-                                            note_block += f"{bline}\n"
-                                    slide['synthesisNarrative'] = syn + note_block
-                                    enriched_slides += 1
-                                    break
-            except Exception as e:
-                print(f"Error parsing markdown {filepath}: {e}")
-
-    # Re-verify and sanitize questions inside decks
-    sanitized_in_decks = 0
-    for deck in decks:
-        for slide in deck.get('slides', []):
-            clean_exam_q = []
-            for q in slide.get('pastExamQuestions', []):
-                stem = q.get('stem', '')
-                if len(stem) > MAX_STEM_LENGTH or stem.count('?') > MAX_QUESTION_MARKS:
-                    sanitized_in_decks += 1
+            for filepath in glob.glob(os.path.join(ddir, "*.md")):
+                filename = os.path.basename(filepath)
+                if 'readme' in filename.lower():
                     continue
-                clean_exam_q.append(q)
-            slide['pastExamQuestions'] = clean_exam_q
 
-    with open(DECKS_PATH, 'w', encoding='utf-8') as f:
-        json.dump(decks, f, ensure_ascii=False, indent=2)
+                print(f"Scanning spot notes markdown: {filename}")
+                try:
+                    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
+                        content = f.read()
+
+                    # Parse sections with ##
+                    sections = re.split(r'\n(?=##\s+)', content)
+                    for sec in sections:
+                        lines = sec.strip().split('\n')
+                        if not lines or not lines[0].startswith('##'):
+                            continue
+                        sec_title = lines[0].replace('##', '').strip()
+                        sec_body = '\n'.join(lines[1:]).strip()
+
+                        # Find matching decks/slides
+                        keywords = [w.lower() for w in re.findall(r'\b\w{4,}\b', sec_title)]
+                        for deck in decks:
+                            deck_text = (deck.get('title', '') + ' ' + deck.get('discipline', '')).lower()
+                            # If at least 2 keywords match deck title/discipline
+                            matches = sum(1 for kw in keywords if kw in deck_text)
+                            if matches >= 1:
+                                # Enrich first matching slide's synthesis
+                                for slide in deck.get('slides', [])[:3]:
+                                    syn = slide.get('synthesisNarrative', '')
+                                    if sec_title not in syn:
+                                        note_block = f"\n\n### 💡 DeepSeek & Hoca Spot İncisi: {sec_title}\n"
+                                        # Bulletize lines if not bulleted
+                                        for bline in sec_body.split('\n'):
+                                            bline = bline.strip()
+                                            if not bline:
+                                                continue
+                                            if not bline.startswith(('•', '-', '*', '1.', '2.', '3.')):
+                                                note_block += f"• **Spot Vurgu:** {bline}\n"
+                                            else:
+                                                note_block += f"{bline}\n"
+                                        slide['synthesisNarrative'] = syn + note_block
+                                        enriched_slides += 1
+                                        break
+                except Exception as e:
+                    print(f"Error parsing markdown {filepath}: {e}")
+
+        # Re-verify and sanitize questions inside decks
+        sanitized_in_decks = 0
+        for deck in decks:
+            for slide in deck.get('slides', []):
+                clean_exam_q = []
+                for q in slide.get('pastExamQuestions', []):
+                    stem = q.get('stem', '')
+                    if len(stem) > MAX_STEM_LENGTH or stem.count('?') > MAX_QUESTION_MARKS:
+                        sanitized_in_decks += 1
+                        continue
+                    clean_exam_q.append(q)
+                slide['pastExamQuestions'] = clean_exam_q
+
 
     print(f"-> Spot Notes Sync: {enriched_slides} slides enriched with DeepSeek spot pearls.")
     print(f"-> Decks Question Audit: {sanitized_in_decks} bloated questions pruned from decks.")

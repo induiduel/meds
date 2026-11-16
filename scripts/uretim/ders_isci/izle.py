@@ -35,6 +35,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ayarlar import (APP, DOWNLOADS, IZLENEN_KOK, KAYIT, KUYRUK, KUYRUK_KILIT, STATE, ayar, oku, log,  # noqa: E402
                      saat_uygun, yaz, yil_sinifi)
 import threading  # noqa: E402
+_d = Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in sys.path:
+    sys.path.append(str(_d))
+import deste_deposu as dd  # noqa: E402  tek deste deposu (2026-11-16)
 
 
 def drive_tara() -> bool:
@@ -301,7 +307,7 @@ def pdf_eslesme_guncelle():
     STATE/pdf_eslesme_raporu.md. Yapay zekâsız, yalnız PyMuPDF.
     """
     cikti = DOWNLOADS / "_deck_pdf_sources.json"
-    girdiler = [APP / "src" / "data" / "interactive_learning_decks.json", DOWNLOADS / "_downloads.json", STATE / "checklist.json"]
+    girdiler = [dd.YOL, DOWNLOADS / "_downloads.json", STATE / "checklist.json"]
     imza = "|".join(f"{p.name}:{p.stat().st_mtime_ns}" for p in girdiler if p.exists())
     imza_dosyasi = STATE / "pdf_eslesme_imza.txt"
     if cikti.exists() and imza_dosyasi.exists() and imza_dosyasi.read_text() == imza:

@@ -21,6 +21,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ayarlar import APP, DOWNLOADS, TASLAK, log, oku, yaz  # noqa: E402
 import isle  # noqa: E402
+_d = Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in sys.path:
+    sys.path.append(str(_d))
+import deste_deposu as dd  # noqa: E402  tek deste deposu (2026-11-16)
 
 K1 = DOWNLOADS / "drive_root" / "Kurul 1"
 LISTE = [  # deste_id, PDF (drive_root/Kurul 1 altında), ders
@@ -221,7 +227,7 @@ def revize_et(deste_id: str, pdf_rel, ders: str) -> dict:
         j = {"is_id": iid, "yol": f"drive_root/Kurul 1/{pdf_rel}", "tam": str(pdf), "yil": "2026-27",
              "konu_zorla": {"kurul": 1, "ders": ders, "konu": konu, "programda": True, "guven": "yuksek", "yontem": "revize"}}
         b = isle.baglam_hazirla(j, d, (d / "kaynak.md").read_text(encoding="utf-8"), oku(d / "kaynak_bilgi.json", {}))
-        decks = oku(APP / "src" / "data" / "interactive_learning_decks.json", [])
+        decks = dd.hepsi()
         eski = next(x for x in decks if x["id"] == deste_id)
         yaz(d / "mevcut_deste.json", eski)
         b.update({"mod": "guncelleme", "revize": True, "deste_id": deste_id, "ders_id": deste_id.split("-", 1)[1],

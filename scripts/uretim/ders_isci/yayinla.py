@@ -35,6 +35,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import deste_deposu as dd  # noqa: E402
 
 import argparse
 import json
@@ -69,7 +70,7 @@ DOWNLOADS_MANIFEST = _kok.PROJE / "meds_downloads" / "_manifest.json"
 L_MANIFEST = Path("/home/ubuntu/medsor/meds_downloads/_manifest.json")
 KILIT = "/tmp/meds-deploy.lock"
 SITE = MEDS / "src" / "data"
-DECKS = SITE / "interactive_learning_decks.json"
+DECKS = dd.YOL  # tek deste deposu (scripts/deste_deposu.py)
 GLOSSARY = SITE / "medical_glossary.json"
 ENCYCLOPEDIA = SITE / "medical_encyclopedia.json"
 PAKET = s16.PAKET_DIR
@@ -171,12 +172,12 @@ class Yayin:
     # ------------------------------------------------------------------ 1. denetim (hiçbir şey yazmaz)
     def denetle(self, kaynak_id: str | None) -> bool:
         b, p, k = self.b, self.paket, self.karar
-        var = any(x.get("id") == b.get("deste_id") for x in oku(DECKS, []))
+        var = any(x.get("id") == b.get("deste_id") for x in dd.hepsi())
         if self.kip == "ekle" and var:
             self.hata.append("bu dersin yayında bir sürümü var: 'Yer değiştir' ya da 'Her ikisini tut' seç")
         if self.kip in ("degistir", "ikisini_tut") and not var and b.get("revize"):
             self.hata.append("yayında alternatif yok: 'Ekle' seç")
-        if any(x.get("revizeIsId") == self.d.name for x in oku(DECKS, [])):
+        if any(x.get("revizeIsId") == self.d.name for x in dd.hepsi()):
             self.hata.append("bu revize zaten yayında (aynı revize ikinci kez gönderilemez)")
         if k.get("karar") != "onayla":
             self.hata.append(f"karar onayla değil ({k.get('karar')})")
@@ -266,12 +267,12 @@ class Yayin:
                   "deckId": d["id"]})
         if self.kip == "ikisini_tut":
             grup = self.deste_id
-            mevcut = [x for x in oku(DECKS, []) if x.get("id") == grup or x.get("versionGroup") == grup]
+            mevcut = [x for x in dd.hepsi() if x.get("id") == grup or x.get("versionGroup") == grup]
             n = max([int(str(x.get("versionLabel") or "V1")[1:] or 1) for x in mevcut] or [1]) + 1
             d.update({"id": f"{grup}-v{n}", "deckId": f"{grup}-v{n}", "versionGroup": grup, "versionLabel": f"V{n}", "revizeIsId": self.d.name,
                       "versionNote": "Revize ders işçisi (2026-27 PDF'inden yeniden üretildi)"})
         elif self.kip == "degistir":
-            eski = next((x for x in oku(DECKS, []) if x.get("id") == self.deste_id), None)
+            eski = next((x for x in dd.hepsi() if x.get("id") == self.deste_id), None)
             if eski and eski.get("versionGroup"):
                 d.update({k: eski[k] for k in ("versionGroup", "versionLabel") if eski.get(k)})
             if self.b.get("revize"):
@@ -285,18 +286,18 @@ class Yayin:
         deste = self._deste()
         self.son_deste = deste["id"]
         # deste
-        decks = oku(DECKS, [])
-        if self.kip == "ikisini_tut":
-            for x in decks:
-                if x.get("id") == self.deste_id:
-                    x.setdefault("versionGroup", self.deste_id)
-                    x.setdefault("versionLabel", "V1")
-        yer = next((i for i, x in enumerate(decks) if x.get("id") == deste["id"]), None)
-        if yer is None:
-            decks.append(deste)
-        else:
-            decks[yer] = deste  # yer değiştir: listedeki sırası korunur
-        self._yaz(DECKS, decks)
+        self._yedekle(DECKS)
+        with dd.duzenle() as decks:
+            if self.kip == "ikisini_tut":
+                for x in decks:
+                    if x.get("id") == self.deste_id:
+                        x.setdefault("versionGroup", self.deste_id)
+                        x.setdefault("versionLabel", "V1")
+            yer = next((i for i, x in enumerate(decks) if x.get("id") == deste["id"]), None)
+            if yer is None:
+                decks.append(deste)
+            else:
+                decks[yer] = deste  # yer değiştir: listedeki sırası korunur
         if self.kip == "ikisini_tut":  # V1'in notu, paketi ve örnek soruları yerinde kalır; yalnız deste + sözlük + bağlar
             self._sozluk()
             self._baglar()
@@ -795,7 +796,7 @@ def yerel(is_id: str, deneme: bool = False) -> int:
     kilit = open(ROOT / "ders_isci" / ".yayin.lock", "w")
     fcntl.flock(kilit, fcntl.LOCK_EX)
     zaman = time.strftime("%Y-%m-%dT%H:%M:%S")
-    yayinda = next((x for x in oku(DECKS, []) if x.get("revizeIsId") == is_id), None)
+    yayinda = next((x for x in dd.hepsi() if x.get("revizeIsId") == is_id), None)
     if yayinda and not deneme:  # önceki çalıştırma desteyi yazıp durum kaydını bitiremeden kesilmiş: kaydı onar
         yaz_json(d / "yayin.json", (oku(d / "yayin.json", {}) or {}) | {"durum": "yayinlandi", "deste_id": yayinda["id"],
                                                                        "onarildi": zaman})

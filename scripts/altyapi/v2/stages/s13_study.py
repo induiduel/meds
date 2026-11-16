@@ -21,6 +21,16 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
+# Konum-bağımsız kök: scripts/ kökünü sys.path'e ekler (deste_deposu için; HARITA.md kalıbı).
+import sys as _sys
+from pathlib import Path as _Path
+_d = _Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in _sys.path:
+    _sys.path.append(str(_d))
+import deste_deposu as dd  # noqa: E402
+
 from .. import config
 from ..core import ids, store, textnorm
 from ..core.lectures import LectureCorpus
@@ -30,7 +40,7 @@ STUDY_DIR = config.TEMP_DIR / "study"
 SITE_DATA = config.MEDS_DIR / "src" / "data"
 GLOSSARY_JSON = SITE_DATA / "medical_glossary.json"
 ENCYCLOPEDIA_JSON = SITE_DATA / "medical_encyclopedia.json"
-DECKS_JSON = SITE_DATA / "interactive_learning_decks.json"
+DECKS_JSON = dd.YOL
 QUESTION_CARDS_JSON = SITE_DATA / "question_cards.json"
 CONCEPTS = config.PROJECT_ROOT / "meds_database_v2" / "concept_ids" / "kavramlar.json"
 QUESTIONS = config.QUESTIONS_DIR / "archive.jsonl"
@@ -187,7 +197,7 @@ def prepare_new_terms(corpus: LectureCorpus, min_hits: int = 3) -> dict:
 
 
 def prepare_deck_cards(corpus: LectureCorpus) -> dict:
-    decks = store.read_json(DECKS_JSON, []) or []
+    decks = dd.hepsi()
     rows, counts = [], {"kart": 0, "yinelenen": 0, "kaynakli": 0, "zayif": 0, "kaynaksiz": 0}
     for d in decks:
         seen: dict[str, str] = {}
@@ -379,7 +389,7 @@ def build_glossary(corpus: LectureCorpus) -> tuple[dict, dict, list[dict]]:
 
 
 def build_decks(corpus: LectureCorpus) -> tuple[list, dict, list[dict]]:
-    decks = store.read_json(DECKS_JSON, []) or []
+    decks = dd.hepsi()
     audit = {(r["deck"], r["slide"], r["idx"]): r for r in _editor("deck_cards_audit.jsonl")}
     fixes = {(r["deck"], r["slide"], r["idx"]): r for r in _editor("editor_deck_fix.jsonl")}
     counts = {"kart": 0, "silinen_yinelenen": 0, "silinen_hatali": 0, "duzeltilen": 0, "kaynakli": 0,
@@ -537,7 +547,8 @@ def build(export: bool = False, log=print) -> dict:
             if (v.get("dogrulama") or {}).get("uretici") == "sozluk_v2" and k not in glossary:
                 glossary[k] = v
         store.atomic_write_json(GLOSSARY_JSON, glossary, indent=2)
-        store.atomic_write_json(DECKS_JSON, decks, indent=2)
+        with dd.kilit():
+            dd.yaz_hepsi(decks, girinti=2)
         if encyclopedia:
             store.atomic_write_json(ENCYCLOPEDIA_JSON, encyclopedia, indent=2)
         store.atomic_write_json(QUESTION_CARDS_JSON, qcards, indent=1)

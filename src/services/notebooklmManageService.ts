@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { desteleriOku } from './desteDeposu.ts';
 import { ingestNotebookLMData, parseNotebookLMPayload } from './notebooklmBridgeService.ts';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -191,8 +192,7 @@ function captureOriginalSnapshot(rawType: any, proposedData: any): { targetId?: 
     } else if (type === 'interactive_deck') {
       const deck = proposedData?.deck || proposedData;
       const deckId = deck?.id || deck?.deckId;
-      const DECKS_FILE = path.resolve(SRC_DATA_DIR, 'interactive_learning_decks.json');
-      const decks: any[] = readJsonSafe(DECKS_FILE, []);
+      const decks: any[] = desteleriOku();
       const found = decks.find((d) => d.id === deckId);
       if (found) return { targetId: String(found.id), snapshot: found };
     }

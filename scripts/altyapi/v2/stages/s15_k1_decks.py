@@ -13,12 +13,22 @@ import re
 import shutil
 from datetime import datetime
 
+# Konum-bağımsız kök: scripts/ kökünü sys.path'e ekler (deste_deposu için; HARITA.md kalıbı).
+import sys as _sys
+from pathlib import Path as _Path
+_d = _Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in _sys.path:
+    _sys.path.append(str(_d))
+import deste_deposu as dd  # noqa: E402
+
 from .. import config
 from ..core import store
 
 PAKET_DIR = config.PROJECT_ROOT / "meds_database_v2" / "kurul1_ders_paketleri"
 NOT_DIR = config.TEMP_DIR / "study" / "k1"
-DECKS_JSON = config.MEDS_DIR / "src" / "data" / "interactive_learning_decks.json"
+DECKS_JSON = dd.YOL
 PREFIX = "k1p-"
 COMMITTEE = "Kurul 1 - Ürogenital ve Obstetrik Kurulu"
 RENK = {"Tıbbi Patoloji": "rose", "Tıbbi Genetik": "violet", "Halk Sağlığı": "emerald",
@@ -110,7 +120,7 @@ def run(log=print) -> dict:
         return {"deste": 0, "atlandi": True}
     paketler = [json.loads(f.read_text(encoding="utf-8")) for f in sorted(PAKET_DIR.glob("k1-*.json"))]
     yeni = [deste(p) for p in paketler]
-    mevcut = store.read_json(DECKS_JSON, []) or []
+    mevcut = dd.hepsi()
     if not yeni:
         return {"deste": 0}
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -121,7 +131,8 @@ def run(log=print) -> dict:
     isci = {y["deste_id"] for y in store.read_json(config.MEDS_DIR / "scripts" / "uretim" / "ders_isci" / "yayin_kaydi.json", []) or []}
     yeni = [d for d in yeni if d.get("id") not in isci]
     korunan = [d for d in mevcut if not str(d.get("id", "")).startswith(PREFIX) or d.get("id") in isci]
-    store.atomic_write_json(DECKS_JSON, korunan + yeni, indent=1)
+    with dd.kilit():
+        dd.yaz_hepsi(korunan + yeni, girinti=1)
     rapor = {"deste": len(yeni), "korunan": len(korunan), "slayt": sum(d["totalSlides"] for d in yeni),
              "soru": sum(d["matchedPastQuestionsCount"] for d in yeni), "yedek": str(dst)}
     log(json.dumps(rapor, ensure_ascii=False))

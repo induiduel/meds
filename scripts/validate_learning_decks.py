@@ -33,6 +33,8 @@ KAPI_SEVIYE = 'HATA' if '--kurul2' in sys.argv else ('UYARI' if '--uslup' in sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from turkce_uslup import denetle_yapi as uslup_yapi  # noqa: E402  (docs/TURKCE_USLUP_STANDARDI.md)
 from sik_aciklama import denetle as sik_denetle  # noqa: E402  (docs/SIK_ACIKLAMA_STANDARDI.md)
+import deste_deposu as dd  # noqa: E402
+DEFAULT = str(dd.YOL)
 
 def is_game_slide(s):
     return bool(s.get('isGameFinale')) or bool(GAME_RE.match(str(s.get('title', ''))))
@@ -387,7 +389,8 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     summary = '--ozet' in sys.argv
     path = args[0] if args else DEFAULT
-    data = json.load(open(path, encoding='utf8'))
+    # CLI yolu tek deste (dict) de olabilir: yalnız varsayılan yol depodan okunur
+    data = json.load(open(path, encoding='utf8')) if args else dd.hepsi()
     decks = data if isinstance(data, list) else [data]
     if '--duzelt' in sys.argv:
         fixed = sum(fix_deck(d) for d in decks)

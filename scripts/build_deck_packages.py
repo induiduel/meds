@@ -23,8 +23,12 @@ import tempfile
 import time
 from pathlib import Path
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import deste_deposu as dd  # noqa: E402
+
 APP = Path(__file__).resolve().parents[1]
-SRC = APP / "src" / "data" / "interactive_learning_decks.json"
+SRC = dd.YOL
 DEFAULT_OUT = Path(os.environ.get("MEDS_DECK_PACKAGES_DIR") or APP.parent / "meds_export" / "deste_paketleri")
 
 
@@ -98,8 +102,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     a = ap.parse_args()
-    data = json.loads(SRC.read_text(encoding="utf-8"))
-    decks = data if isinstance(data, list) else data["decks"]
+    decks = dd.hepsi()
     ids = [d["id"] for d in decks]
     if len(ids) != len(set(ids)):
         raise SystemExit("HATA: kaynakta tekrarlanan deste kimliği var")

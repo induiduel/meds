@@ -22,6 +22,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ayarlar import API, APP, CLAUDE_BIN, DATABASE, TASLAK, ayar, log, oku, yaz  # noqa: E402
 from cikar import pdf_metni, sayfa_varliklari  # noqa: E402
+_d = Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in sys.path:
+    sys.path.append(str(_d))
+import deste_deposu as dd  # noqa: E402  tek deste deposu (2026-11-16)
 
 sys.path.insert(0, str(APP / "scripts" / "altyapi" / "agents"))
 TALIMAT = Path(__file__).resolve().parent / "TALIMAT.md"
@@ -147,7 +153,7 @@ def ders_kaydi_eslesmesi(kurul: int, es: dict) -> dict | None:
 
 
 def sonraki_numara(kurul: int) -> int:
-    decks = oku(APP / "src" / "data" / "interactive_learning_decks.json", [])
+    decks = dd.hepsi()
     decks = decks if isinstance(decks, list) else decks.get("decks", [])
     nums = [int(m.group(1)) for d in decks if (m := re.match(rf"k{kurul}p-k{kurul}-(\d+)-", d.get("id", "")))]
     for t in TASLAK.glob("*/baglam.json"):  # henüz yayınlanmamış taslaklar da numara tutar
@@ -270,7 +276,7 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
     kurul = es.get("kurul") or 0
     sozluk = oku(APP / "src" / "data" / "medical_glossary.json", {})
     hast = oku(APP / "src" / "data" / "diseases.json", [])
-    decks = oku(APP / "src" / "data" / "interactive_learning_decks.json", [])
+    decks = dd.hepsi()
     # Bu konunun destesi zaten varsa (hoca PDF'i güncelledi / yeniden yükledi) yeni numara açma, mevcut dersi güncelle.
     # GÜVENLİK: güncelleme yalnız (a) PDF'in KENDİ adı/başlığı aynı desteyi gösteriyorsa ve (b) program eşleşmesi varsa o da
     # aynı desteyi gösteriyorsa seçilir. Aksi halde yeni taslak + uyarı (yanlış dersin üzerine yazılmasın).

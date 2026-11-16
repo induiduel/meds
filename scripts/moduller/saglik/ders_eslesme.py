@@ -29,6 +29,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import deste_deposu as dd  # noqa: E402
 
 import json
 import math
@@ -39,7 +40,7 @@ from datetime import date
 from pathlib import Path
 
 KOK = _kok.MEDS
-DESTELER = KOK / "src/data/interactive_learning_decks.json"
+DESTELER = dd.YOL
 SAGLIK = KOK / "src/data/saglik"
 BAG = SAGLIK / "baglantilar.json"
 SOZLUK = KOK / "src/data/medical_glossary.json"
@@ -225,7 +226,7 @@ def kok_dizisi(s: str) -> list[str]:
 
 def main() -> None:
     rapor = "--rapor" in sys.argv
-    desteler = json.loads(DESTELER.read_text(encoding="utf-8"))
+    desteler = dd.hepsi()
     bag = json.loads(BAG.read_text(encoding="utf-8"))
     kisa: dict[str, str] = {}
     for b in bag.get("bolumler", {}).values():

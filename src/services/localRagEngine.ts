@@ -31,6 +31,7 @@ import { pgDb } from './pgDb';
 import { loadDeepSeekContributions } from './deepseekDataService.ts';
 import { foldTurkish as foldTrUtil, FastFuzzyVocab } from '../utils/fuzzyMatching.ts';
 import { KIND_LABEL, factPlain, normalizeDisease, sectionTexts, sectionTitle } from './diseaseModel.ts';
+import { desteleriOku } from './desteDeposu.ts';
 import type { DiseaseSectionId } from '../types/disease';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -1158,10 +1159,7 @@ export function chunkOrnekSorular(): RagChunk[] {
 // İnteraktif öğrenme desteleri (114 deste, slayt başına 1 chunk: anlatım + ögeler)
 // ==============================================================================
 export function chunkInteractiveDecks(): RagChunk[] {
-  const p = path.resolve(PROJECT_ROOT, 'src', 'data', 'interactive_learning_decks.json');
-  if (!fs.existsSync(p)) return [];
-  const raw = JSON.parse(fs.readFileSync(p, 'utf-8'));
-  const decks = Array.isArray(raw) ? raw : raw.decks || [];
+  const decks = desteleriOku();
   const chunks: RagChunk[] = [];
   const now = new Date().toISOString();
   const str = (v: any): string => (typeof v === 'string' ? v : v == null ? '' : JSON.stringify(v)).trim();

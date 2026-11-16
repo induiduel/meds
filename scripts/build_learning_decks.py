@@ -23,12 +23,15 @@ import json
 import re
 import glob
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import deste_deposu as dd  # noqa: E402
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 MEDS_DB_ROOT = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
 TRANSCRIPTIONS_DIR = os.path.join(MEDS_DB_ROOT, 'transcriptions')
-OUTPUT_FILE = os.path.join(PROJECT_ROOT, 'src', 'data', 'interactive_learning_decks.json')
+OUTPUT_FILE = str(dd.YOL)
 OUTPUT_META_FILE = os.path.join(PROJECT_ROOT, 'src', 'data', 'learning_decks_meta.json')
 
 LECTURE_NOTES_PATH = os.path.join(PROJECT_ROOT, 'src', 'data', 'lecture_notes.json')
@@ -1203,8 +1206,8 @@ def build_all_decks():
             print(f"[{deck['id']}] {deck['title']} -> {deck['totalSlides']} slayt, {total_cards} akıl kartı aktarıldı.")
 
     print(f"\nToplam {len(decks)} interaktif öğrenim destesi üretildi.")
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(decks, f, ensure_ascii=False, indent=2)
+    with dd.kilit():
+        dd.yaz_hepsi(decks, girinti=2)
     print(f"[Başarılı] Desteler kaydedildi: {OUTPUT_FILE}")
 
     meta_list = []
