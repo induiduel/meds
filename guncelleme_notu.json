@@ -1,17 +1,17 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 745,
- "baslik": "Deploy-kirici: hoca profili verisi + dokumanlari git izlemesine alindi",
- "maddeler": [
-  "Hoca profili verisi (src/data/hoca_profilleri) ve HOCA_USLUBU dokumanlari izlenmiyordu; ornek-soru kapisi genel profile sert bagimli oldugundan temiz checkoutta gate cokerdi. Izlemeye alindi."
- ],
- "eklenen": [],
- "degisen": [
-  "PDF render servisi (src/services/pdfRenderService.ts): kalıcı Chrome havuzu, istek başına yalnız yeni sekme; zaman aşımı 120 sn → 10 dk, belge üst sınırı 25 MB → 60 MB"
- ],
- "duzeltilen": [
-  "Soru dışa aktarıcıda çok soru seçilince PDF'in zaman aşımına uğraması",
-  "Soru dışa aktarıcı alt bilgi zemini artık şeffaf (sığdırma hatasında metni kapatmaz)"
- ],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
+  "onem": 746,
+  "baslik": "İç hat bütünlüğü: hoca tahmin rehberi izlemeye alındı",
+  "maddeler": [
+    "Tam içerik hattı kaynak aşamasının referans verdiği HOCA_TAHMIN_REHBERI.md git'e eklendi (temiz checkout eksikliği giderildi)."
+  ],
+  "eklenen": [],
+  "degisen": [
+    "PDF render servisi (src/services/pdfRenderService.ts): kalıcı Chrome havuzu, istek başına yalnız yeni sekme; zaman aşımı 120 sn → 10 dk, belge üst sınırı 25 MB → 60 MB"
+  ],
+  "duzeltilen": [
+    "Soru dışa aktarıcıda çok soru seçilince PDF'in zaman aşımına uğraması",
+    "Soru dışa aktarıcı alt bilgi zemini artık şeffaf (sığdırma hatasında metni kapatmaz)"
+  ],
+  "silinen": []
 }
