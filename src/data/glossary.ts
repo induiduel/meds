@@ -3,6 +3,7 @@ import terimYardimci from './terim_yardimcisi_sozluk.json';
 import kisaltmaSozluk from './kisaltma_sozluk.json';
 import { safeJsonFetch } from '../services/api';
 import { contentReady, isContentChanged, onContentChanged } from '../services/contentLive';
+import { ansiklopediYukle, ansiklopediDegisince } from './ansiklopediYukle';
 
 /**
  * Universal reader and synthesizer for medical terms:
@@ -166,6 +167,7 @@ async function pullLiveGlossary() {
 if (typeof window !== 'undefined') setTimeout(() => {
   void contentReady(8000).then(() => { if (isContentChanged('glossary')) void pullLiveGlossary(); });
   onContentChanged('glossary', () => void pullLiveGlossary());
+  ansiklopediDegisince(() => { encyclopediaEnhanced = false; });
 }, 0);
 
 
@@ -174,8 +176,7 @@ let encyclopediaEnhanced = false;
 export async function enhanceGlossaryWithEncyclopedia(): Promise<GlossaryEntry[]> {
   if (encyclopediaEnhanced) return GLOSSARY;
   try {
-    const rawModule = await import('./medical_encyclopedia.json');
-    const rawEncyclopedia = rawModule.default || rawModule;
+    const rawEncyclopedia = await ansiklopediYukle();
     if (Array.isArray(rawEncyclopedia)) {
       for (const enc of rawEncyclopedia as any[]) {
         if (!enc) continue;

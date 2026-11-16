@@ -471,8 +471,24 @@ _ATTRIBUTION = re.compile(
     r"^(?:Prof\.\s*Dr\.\s*[^:]{2,40}?|Amfide hoca)\s+(?:amfide\s+)?(?:özellikle\s+)?(?:vurguladı|belirtti|altını çizdi)\s*:\s*")
 
 
+# Yunan harfleri slug'da silinince TGF-α / TGF-β aynı kimliği alıyordu (içerik katmanı kimliğe göre eşler → H582)
+_YUNAN = {"α": "alfa", "β": "beta", "γ": "gama", "δ": "delta", "ε": "epsilon", "ζ": "zeta", "η": "eta", "θ": "teta",
+          "κ": "kappa", "λ": "lambda", "μ": "mu", "ν": "nu", "π": "pi", "ρ": "ro", "σ": "sigma", "τ": "tau",
+          "φ": "fi", "χ": "ki", "ψ": "psi", "ω": "omega"}
+
+
 def _slug(text: str) -> str:
+    text = "".join(f" {_YUNAN[c]} " if c in _YUNAN else c for c in (text or "").lower())
     return re.sub(r"[^a-z0-9]+", "-", ids.fold_tr(text)).strip("-")[:60]
+
+
+def _tekil_id(aday: str, kayitlar: list) -> str:
+    """Kimlik çakışırsa -2, -3 … ekler (katman kayıt eşlemesi tekil kimlik ister)."""
+    var = {e.get("id") for e in kayitlar}
+    k, n = aday, 2
+    while k in var:
+        k, n = f"{aday}-{n}", n + 1
+    return k
 
 
 def build_encyclopedia(glossary: dict, new_keys: set) -> tuple[list, dict]:
@@ -505,7 +521,7 @@ def build_encyclopedia(glossary: dict, new_keys: set) -> tuple[list, dict]:
         src = (g.get("kaynaklar") or [{}])[0]
         kaynak = ", ".join(f"{k.get('kaynak')} s.{k.get('sayfa')}" for k in g.get("kaynaklar") or [] if k.get("kaynak"))
         kept.append({
-            "id": f"s13-{_slug(g['term'])}", "term": g["term"], "aliases": g.get("aliases") or [],
+            "id": _tekil_id(f"s13-{_slug(g['term'])}", kept), "term": g["term"], "aliases": g.get("aliases") or [],
             "category": g["category"], "kurul": f"Kurul {src['kurul']}" if src.get("kurul") else "Dönem 3",
             "discipline": g.get("discipline") or (src.get("ders") or "").title(),
             "instructorAndSource": f"Ders notu: {kaynak}" if kaynak else "",

@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 69 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 70 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
 
 ### Kurul 2 hattı için genel kural
 
@@ -492,6 +492,7 @@
 ### H547 — Gövdesi yalnız resim olan slayda dayanan doğrudan çıkmış, değerlendirme kapısından geçemiyordu (2026-11-10, k2-28 s.21)
 - **Önleme:** görüntü sayfasına dayanan çıkmış eşlemesi `kanit` + `kanit_goruntu` ile yazılır ve denetçi sayfa görüntüsüne bakar; kanıt metni olan başka satıra kaydırılmaz, eşik gevşetilmez.
 
+
 ### H548 — Slayt altındaki kaynak satırının dergi adı "sözlükte olmayan kısaltma" sayıldı (2026-11-10, k2-28 s.31)
 - **Önleme:** kapıyı geçmek için sözlüğe dergi adı ya da anlamsız kısaltma yazılmaz (H510); yeni biçim tuzağı kapının kendisinde düzeltilir.
 
@@ -590,3 +591,6 @@
 
 ### H581 — "Panelden/NotebookLM'den düzeltilen sözlük, kart, özet, örnek soru dağıtımda geri dönüyor" (2026-11-16)
 - **Önleme kuralı:** Yeni bir koruma sezgisi kurulurken yanlış alarm oranı ölçülür; dosya düzeyinde muafiyet verilmez, muafiyet satır parçasıyla ve gerekçeyle yazılır. Açık: ansiklopediyi okuyanlar (`src/data/glossary.ts` derleme, queryIntel/diseaseGraph derleme betikleri) katmanı görmüyor.
+
+### H582 — "Ansiklopedi düzeltmesi Oracle'da dağıtımı durdurabilir / ekrana gelmez" (2026-11-16)
+- **Önleme kuralı:** Kimlik üreten her slug çakışmayı sonekle çözer ve kimlik tekilliği doğrulanır. Panelden/hattan yazılan her src/data dosyası CONTENT_FILES'ta tür olarak kayıtlıdır ve ekran onu ortak yükleyiciden okur.

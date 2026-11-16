@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useLayoutEffect, useDeferredValue, useCallback, useRef } from 'react';
 import { PageToolbar, FilterPills, type ToolbarChip, type ToolbarSegment } from '../ui/PageToolbar';
 import { EmptySearch } from '../ui/Animations';
+import { ansiklopediYukle, ansiklopediDegisince } from '../../data/ansiklopediYukle';
 import {
   ChevronDown,
   BookOpenText,
@@ -150,8 +151,8 @@ let dataPromise: Promise<EncyclopediaEntry[]> | null = null;
 /** Ham sözlüğü ayrı parça olarak bir kez indirir (glossary.ts de aynı parçayı kullanır) */
 const loadEncyclopedia = (): Promise<EncyclopediaEntry[]> => {
   if (!dataPromise) {
-    dataPromise = import('../../data/medical_encyclopedia.json')
-      .then((m) => ((m as { default?: unknown }).default ?? m) as unknown as EncyclopediaEntry[])
+    dataPromise = ansiklopediYukle()
+      .then((d) => d as unknown as EncyclopediaEntry[])
       .catch((err) => {
         dataPromise = null;
         throw err;
@@ -159,6 +160,9 @@ const loadEncyclopedia = (): Promise<EncyclopediaEntry[]> => {
   }
   return dataPromise;
 };
+
+// Sunucudaki ansiklopedi değişince (panel/NotebookLM) bir sonraki açılışta güncel kopya indirilir
+ansiklopediDegisince(() => { dataPromise = null; });
 
 /** Kayıtlı yerel düzeltmeleri ham sözlük verisine uygular */
 const applyLocalEdits = (raw: EncyclopediaEntry[]): EncyclopediaEntry[] => {

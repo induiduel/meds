@@ -834,6 +834,7 @@ export function ingestGlossaryTerms(payload: any): IngestionResult {
 
   writeJsonAtomic(GLOSSARY_FILE, glossary);
   writeJsonAtomic(ENCYCLOPEDIA_FILE, encyclopedia);
+  markContentChanged('encyclopedia', updatedIds);
   markContentChanged('glossary', updatedIds);
 
   return {

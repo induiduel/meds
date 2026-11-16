@@ -10910,6 +10910,7 @@ const sendContentFile = (res: express.Response, rel: string) => {
 };
 app.get('/api/content/glossary', (_req, res) => sendContentFile(res, 'medical_glossary.json'));
 app.get('/api/content/diseases', (_req, res) => sendContentFile(res, 'diseases.json'));
+app.get('/api/content/encyclopedia', (_req, res) => sendContentFile(res, 'medical_encyclopedia.json'));
 app.get('/api/content/ornek/:kurul/:ders', (req, res) => {
   const { kurul, ders } = req.params;
   if (!/^k\d$/.test(kurul) || !/^k\d-[A-Za-z0-9_-]+$/.test(ders)) return res.status(400).json({ error: 'Geçersiz ders' });

@@ -223,3 +223,9 @@
 - **Kalıcı çözüm:** kapıya atom kuralının eşi eklendi: çıkmış kaydı `kanit_goruntu` (görüntüden okunan cümle) taşıyorsa ve sayfa metni 60 karakterden kısaysa birebir arama atlanır; `cikmis_konum_yaz.py` bu alanı yayın dosyasına taşır. k2-16/24/26'da sonuç değişmedi (0 HATA).
 - **Önleme:** görüntü sayfasına dayanan çıkmış eşlemesi `kanit` + `kanit_goruntu` ile yazılır ve denetçi sayfa görüntüsüne bakar; kanıt metni olan başka satıra kaydırılmaz, eşik gevşetilmez.
 
+
+## H582 — "Ansiklopedi düzeltmesi Oracle'da dağıtımı durdurabilir / ekrana gelmez" (2026-11-16)
+- **Belirti:** NotebookLM'den gelen ansiklopedi düzeltmeleri Sözlük ekranına ve glossary takma adlarına yansımıyordu; Oracle'da bir ansiklopedi yazımı içerik katmanında kayıt düzeyinde farka çevrilemezdi.
+- **Kök neden:** (1) `s13_study._slug` Yunan harflerini sildiği için TGF-α/TGF-β ve Aδ/Aβ lifleri aynı kimliği aldı; katman kayıtları kimliğe göre eşler, tekil kimlik yoksa fark kurulamaz. (2) Ansiklopedi `CONTENT_FILES`'ta değildi: sunucu ucu, manifest bildirimi ve istemci yükleyicisi yoktu; ekran paketteki kopyayı doğrudan import ediyordu.
+- **Kalıcı çözüm:** Slug Yunan harflerini okunuşuyla yazar, `_tekil_id` çakışmada sonek ekler; veri düzeltildi (4 kimlik), türetilmiş dizinler yeniden üretildi. `encyclopedia` türü katmana, `icerik_katman.py`'ye, `/api/content/encyclopedia`'ya eklendi; tek yükleyici `src/data/ansiklopediYukle.ts` (değişmişse sunucudan çeker).
+- **Önleme kuralı:** Kimlik üreten her slug çakışmayı sonekle çözer ve kimlik tekilliği doğrulanır. Panelden/hattan yazılan her src/data dosyası CONTENT_FILES'ta tür olarak kayıtlıdır ve ekran onu ortak yükleyiciden okur.

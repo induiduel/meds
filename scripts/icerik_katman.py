@@ -15,7 +15,8 @@ from pathlib import Path
 KOK = Path(__file__).resolve().parent.parent
 ANAHTARLAR = ["id", "deckId", "key", "slug"]
 VARLIK = {"medical_glossary.json": "glossary", "question_cards.json": "cards", "diseases.json": "diseases",
-          "interactive_learning_decks.json": "decks", "lectureSummariesCatalog.json": "summaries"}
+          "interactive_learning_decks.json": "decks", "lectureSummariesCatalog.json": "summaries",
+          "medical_encyclopedia.json": "encyclopedia"}
 
 
 def js(v):  # JSON.stringify ile aynı sıkı biçim (sha karşılaştırması için)
