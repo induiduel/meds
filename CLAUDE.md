@@ -3,6 +3,10 @@
 > **Kurul 2+ otomatik hat:** `docs/KURUL_OTOMASYON_EL_KITABI.md` (aşamalar, zamanlayıcılar, kapılar, dağıtım kuralları) +
 > `docs/KURUL2_YAPILMAYACAK_HATALAR.md`; aşama defteri `otomasyon/hat.json`.
 
+> **İçerik üretimi — tek hat (2026-11-16):** `scripts/tam_hat/kosucu.py` sırayı tek kaynaktan (`scripts/tam_hat/mod.py`)
+> verir; aşamalar bir kez üretilen read-once `baglam/` (`scripts/tam_hat/baglam.py`: slayt dizini+atom+hoca vurgusu+çıkmış+şema)
+> okur, ham slaytı/şablonu tekrar değil. Ders kilidi `scripts/tam_hat/ders_kilit.py` (atomik). Akış `docs/TAM_HAT_HIZLI_AKIS.md` §0.0.
+
 > **Önce oku:** `../PROJE_TANITIMI.md` — projenin amacı, klasör yapısı (downloads/temp1-2-3/database) ve zorunlu boru hattı. Tüm ajanlar buna uygun davranmalıdır.
 
 MeDSor: shared exam-question pool for Turkish medical school (Dönem 3). Students submit fragments of

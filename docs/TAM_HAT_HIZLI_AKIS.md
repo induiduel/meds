@@ -34,6 +34,9 @@ Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` i
 
 ## 1. Evreler ve paralellik
 
+> §0.0 `kosucu.py` bu tabloyu **tek kaynaktan (`mod.py`)** okuyup sıralı runbook olarak basar — aşağıdaki evre/paralellik
+> onun yürüttüğü detaydır (çelişki değil). E1 paketinden sonra `baglam.py` çalışır; E2+ aşamalar `baglam/`'ı okur.
+
 | Evre | İşler (aynı anda) | Kaynak payı |
 |---|---|---|
 | **E0 Hazırlık** (LLM yok) | `python3 scripts/tam_hat/hazirlik.py <klasör> --ders <key>`: hoca dökümü (GPU) ∥ sayfa metni ∥ sayfa görüntüleri ∥ öğrenci notu ∥ çıkmış aday | GPU tek iş; CPU en çok 2 iş, her biri `CPUQuota=200%` `MemoryMax=2G` |

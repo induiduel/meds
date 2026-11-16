@@ -15,6 +15,10 @@ Bu klasör MeDSor uygulamasının kodudur. Kurallar tek yerde tutulur:
 - **`../DEGISIKLIK_KAYDI.md`** — oturum günlüğü; işe başlamadan oku.
 - **`CLAUDE.md`** — kod düzeni, komutlar, RAG/grounding kuralları.
 - **`docs/OGREN_ETKILESIM_REHBERI.md`** — Öğren destesi şeması ve gönderim adımları.
+- **İçerik üretimi (tek hat):** `python3 scripts/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf>` sırayı tek
+  kaynaktan (`scripts/tam_hat/mod.py`) verir; aşamalar bir kez üretilen **read-once `baglam/`** (`scripts/tam_hat/baglam.py`)
+  okur, ham slaytı/şablonu tekrar tekrar değil. Ders kilidi `scripts/tam_hat/ders_kilit.py` (oturum çakışması). Akış: `docs/TAM_HAT_HIZLI_AKIS.md` §0.0.
+- **GPU istisnaları + ısı/saat protokolleri:** `docs/GPU_KULLANIM.md` (ana AGENTS kural 10'un ayrıntısı).
 - **`deploy/oracle/SISTEM_MIMARISI.md`** + **`YENI_YAPI_YOL_HARITASI.md`** — Oracle canlı mimarisi ve toparlama planı.
 
 ## Donanım ve AI (2026-10-11)
