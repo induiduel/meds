@@ -147,6 +147,16 @@ after a rebuild go to a small pending map. The old nested `Map<term, Map<chunkId
 - Gate: `python3 scripts/validate_learning_decks.py` must report 0 HATA (`--duzelt` repairs truncated chain steps and answer-leaking hints). Then `npx vite build` and `python3 scripts/build_kazanim_deck_index.py`.
 - Student error reports: `/api/learn/feedback*` → `src/services/learnFeedbackService.ts` → `data/learn_feedback.json`.
 
+## Büyük veri dosyaları (2026-11-16)
+
+Tek-satır dev JSON'lar ripgrep aramasından gizlidir (`.ignore`, `src/data/.ignore`, `data/.ignore`; runtime'a etkisi yok) —
+eskiden tek terim araması 146 MB döndürüyordu. Bunları **asla bütün okuma**; yolu açıkça verip `jq` ile dilimle:
+`src/data/pastQuestions.json` (97 MB), `interactive_learning_decks.json` (85 MB; deste başı okunur kopya derlemede
+`src/data/decks/items/<id>.json`), `sinav_calisma_k1.json`, `lecture_notes.json`, `kazanimlar/k1.json`, `data/local_rag_chunks.json`.
+Örnek: `jq '.[] | select(.id=="X")' src/data/pastQuestions.json`, `jq 'keys' src/data/lecture_notes.json | head`.
+Fiziksel bölme yapılmadı: decks'e 36 dosya (canlı sunucu + panel katmanı dahil), lecture_notes'a 15 dosya yazıyor/okuyor —
+bölmek ayrı bir veri-katmanı işidir (`_temizlik/TEMIZLIK_KAYDI.md` Faz 2).
+
 ## Paths
 
 - Proje kodu: `/home/indu/medsor/meds`

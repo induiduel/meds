@@ -1,0 +1,11 @@
+# Arama kalkanı (2026-11-16): ripgrep (Claude Code Grep/Glob) bu yolları VARSAYILAN aramada atlar; çalışma zamanını,
+# derlemeyi, git'i ve betikleri ETKİLEMEZ. Ayrıntılı kalıplar: src/data/.ignore, data/.ignore (rg üst dizindeki dizin
+# kalıplarını alt dizinden aramada uygulamaz). Neden: src/data'da tek terim araması 146 MB çıktı veriyordu.
+*.bak
+*.bak_*
+*.backup*
+*.yedek*
+ses/
+dist/
+dist-android/
+android/

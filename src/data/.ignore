@@ -1,0 +1,15 @@
+# Arama kalkanı (src/data kökü; rg üst dizin .ignore'undaki dizin kalıplarını alt dizinden aramada uygulamadığı için burada).
+# Çalışma zamanına/derlemeye etkisi yok. Gerekirse dosya yolunu açıkça ver ya da jq kullan (CLAUDE.md "Büyük veri dosyaları").
+pastQuestions.json
+interactive_learning_decks.json
+sinav_calisma_k1.json
+lecture_notes.json
+lectureSummariesCatalog.json
+kazanimlar/k1.json
+notebooklm_contributions.json
+surum_gunlugu.json
+# derlemede üretilen türevler (splitLearningDecks.ts)
+decks/items/
+decks/catalog.json
+kazanimlar/questions/
+kazanimlar/lite/
