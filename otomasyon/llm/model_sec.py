@@ -35,7 +35,13 @@ def _butce() -> dict:
 def _claude_env() -> dict:
     """Masaüstü uygulamasının geçit ayarları (model adları köprüde tanımlı olanlar)."""
     try:
-        return (json.loads(Path.home().joinpath(".claude/settings.json").read_text(encoding="utf-8")) or {}).get("env", {}) or {}
+        for ad in (".claude/gecit.json", ".claude/settings.json"):  # 2026-11-16: geçit ayrı dosyada (etkileşimli claude geçitsiz)
+            p = Path.home().joinpath(ad)
+            if p.exists():
+                env = (json.loads(p.read_text(encoding="utf-8")) or {}).get("env", {}) or {}
+                if env.get("ANTHROPIC_AUTH_TOKEN") or env.get("ANTHROPIC_DEFAULT_OPUS_MODEL"):
+                    return env
+        return {}
     except (OSError, json.JSONDecodeError):
         return {}
 

@@ -137,3 +137,19 @@ data/k2hocaara_cozucu/ses/
 data/k2noroloji_cozucu/ses/
 data/k2dersanaliz_cozucu/ses/
 src/data/*.json.lock
+data/asistan/
+# 2026-11-16 (H583): çalışma verisi / gizli / büyük ikili — asla izlenmez
+data/.kimlik_anahtari
+data/*_cozucu/ses/
+data/_yedek/
+data/content/_birlesik/
+data/content/*.fark.json
+data/ders_kilit/
+data/istemci_hata*.json*
+data/yonetici_denetim.jsonl
+data/ornek_soru_bildirim_durum.json
+data/sesli_anlatim/.tasima_yedek/
+/ses/
+/cikis/
+/meds_temp/
+/meds_downloads/

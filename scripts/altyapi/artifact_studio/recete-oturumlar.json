@@ -1,0 +1,2228 @@
+{
+ "baslik": "MeDSor — Tüm Oturumlar",
+ "altbaslik": "338 benzersiz oturum · hesap kayıtlarından (list_sessions)",
+ "etiket": "Kaynak: claude-code-remote · 16.11.2026",
+ "tema": "koyu",
+ "vurgu": "#2f6f4f",
+ "kutular": [
+  {
+   "tur": "metrik",
+   "genislik": "dar",
+   "etiket": "Toplam oturum",
+   "deger": "338",
+   "alt": "tüm kayıtlar"
+  },
+  {
+   "tur": "metrik",
+   "genislik": "dar",
+   "etiket": "🟢 Çalışan",
+   "deger": "1",
+   "alt": "medsor-meds-rc (köprü)"
+  },
+  {
+   "tur": "metrik",
+   "genislik": "dar",
+   "etiket": "🟠 Bekleyen",
+   "deger": "2",
+   "alt": "pending"
+  },
+  {
+   "tur": "metrik",
+   "genislik": "dar",
+   "etiket": "🔵 Idle",
+   "deger": "21",
+   "alt": "boşta, mesaj alabilir"
+  },
+  {
+   "tur": "metrik",
+   "genislik": "dar",
+   "etiket": "⚪ Arşiv",
+   "deger": "314",
+   "alt": "tamamlanmış"
+  },
+  {
+   "tur": "not",
+   "tur2": "bilgi",
+   "baslik": "ListAgents neden hepsini 'offline' gösteriyor?",
+   "govde": "ListAgents yalnız Remote Control geçidine o an canlı bağlı eş oturumları işaretler. Senin oturumların çoğu arşiv/idle olduğundan canlı köprüleri yok. Gerçekten 'çalışan' tek oturum medsor-meds-rc; o da bu makinedeki Remote Control köprüsünün barınağı, interaktif bir sohbet değil. Yani görüntüleme hatası değil — şu an mesajlaşılabilir başka açık oturum yok."
+  },
+  {
+   "tur": "tablo",
+   "genislik": "tam",
+   "baslik": "Etkin / açık oturumlar (24)",
+   "basliklar": [
+    "Durum",
+    "Başlık",
+    "Son güncelleme"
+   ],
+   "satirlar": [
+    [
+     "🟢 Çalışıyor",
+     "medsor-meds-rc",
+     "16.11.26 05:50"
+    ],
+    [
+     "🟠 Bekliyor",
+     "nofrostlife-hidden-breeze",
+     "10.11.26 16:45"
+    ],
+    [
+     "🟠 Bekliyor",
+     "nofrostlife-jaunty-sky",
+     "03.11.26 13:28"
+    ],
+    [
+     "🔵 Idle",
+     "Başlatılamadı — Claude Code bağlanamadı · nof…",
+     "16.11.26 04:50"
+    ],
+    [
+     "🔵 Idle",
+     "Kurul 2 ders içeriği işleme",
+     "02.11.26 23:50"
+    ],
+    [
+     "🔵 Idle",
+     "İçerik işçisinde interaktif öğren içeriği",
+     "02.11.26 23:50"
+    ],
+    [
+     "🔵 Idle",
+     "Google/Firebase'den Oracle'a geçiş",
+     "02.11.26 23:50"
+    ],
+    [
+     "🔵 Idle",
+     "Sesli dersleri indirme sorunu",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 Idle",
+     "Sıralama ve Profil sayfaları detaylandırma",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 Idle",
+     "Sürümler sayfası tasarımı ve içeriği",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 Idle",
+     "Uygulama hata denetçisi",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 Idle",
+     "Üniversite ve kurul bilgileri isteme",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 Idle",
+     "KMB Hedefler animasyonu",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 Idle",
+     "KMB derslerinde içerik ve tasarım iyileştirme…",
+     "31.10.26 21:33"
+    ],
+    [
+     "🔵 Idle",
+     "k2-29 Haiku soru ve çözücü yeniden yazımı",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "Soru üslubu analizi ve kazanım haritası",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "Ders Analizi Dokümantasyonu",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "TV modu ve performans optimizasyonu",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "Öğretmen stili soru üretimi",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "Çevrimdışı indirme sorunları",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "Sesli derste otomatik durdurma",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "Çıkmış soruların doğru cevapları",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 Idle",
+     "Bugünün soruları hazırlığı",
+     "24.10.26 19:09"
+    ],
+    [
+     "🔵 Idle",
+     "Otomasyon: Drive değişiklikleri ve proje aşam…",
+     "24.10.26 18:49"
+    ]
+   ],
+   "kaynak": "IDLE oturumlar = ShellV15 Remote Control eş oturumları"
+  },
+  {
+   "tur": "ayrac"
+  },
+  {
+   "tur": "tablo",
+   "genislik": "tam",
+   "baslik": "Tüm oturumlar (338) — en yeni/etkin üstte",
+   "basliklar": [
+    "D.",
+    "Başlık",
+    "Köken",
+    "Güncelleme"
+   ],
+   "satirlar": [
+    [
+     "🟢 ",
+     "medsor-meds-rc",
+     "cli",
+     "16.11.26 05:50"
+    ],
+    [
+     "🟠 ",
+     "nofrostlife-hidden-breeze",
+     "cli",
+     "10.11.26 16:45"
+    ],
+    [
+     "🟠 ",
+     "nofrostlife-jaunty-sky",
+     "cli",
+     "03.11.26 13:28"
+    ],
+    [
+     "🔵 ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 04:50"
+    ],
+    [
+     "🔵 ",
+     "Kurul 2 ders içeriği işleme",
+     "cli",
+     "02.11.26 23:50"
+    ],
+    [
+     "🔵 ",
+     "İçerik işçisinde interaktif öğren içeriği",
+     "cli",
+     "02.11.26 23:50"
+    ],
+    [
+     "🔵 ",
+     "Google/Firebase'den Oracle'a geçiş",
+     "cli",
+     "02.11.26 23:50"
+    ],
+    [
+     "🔵 ",
+     "Sesli dersleri indirme sorunu",
+     "cli",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 ",
+     "Sıralama ve Profil sayfaları detaylandırma",
+     "cli",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 ",
+     "Sürümler sayfası tasarımı ve içeriği",
+     "cli",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 ",
+     "Uygulama hata denetçisi",
+     "cli",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 ",
+     "Üniversite ve kurul bilgileri isteme",
+     "cli",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 ",
+     "KMB Hedefler animasyonu",
+     "cli",
+     "01.11.26 02:17"
+    ],
+    [
+     "🔵 ",
+     "KMB derslerinde içerik ve tasarım iyileştirmesi",
+     "cli",
+     "31.10.26 21:33"
+    ],
+    [
+     "🔵 ",
+     "k2-29 Haiku soru ve çözücü yeniden yazımı",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "Soru üslubu analizi ve kazanım haritası",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "Ders Analizi Dokümantasyonu",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "TV modu ve performans optimizasyonu",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "Öğretmen stili soru üretimi",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "Çevrimdışı indirme sorunları",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "Sesli derste otomatik durdurma",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "Çıkmış soruların doğru cevapları",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "🔵 ",
+     "Bugünün soruları hazırlığı",
+     "cli",
+     "24.10.26 19:09"
+    ],
+    [
+     "🔵 ",
+     "Otomasyon: Drive değişiklikleri ve proje aşamaları",
+     "cli",
+     "24.10.26 18:49"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 05:38"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 05:24"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 05:11"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 05:07"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 04:47"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 04:42"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 04:41"
+    ],
+    [
+     "⚪ ",
+     "Başlatılamadı — Claude Code bağlanamadı · nofrostli…",
+     "android",
+     "16.11.26 03:52"
+    ],
+    [
+     "⚪ ",
+     "Driveye yeni dersleri içerik işçisinde",
+     "cli",
+     "12.11.26 18:00"
+    ],
+    [
+     "⚪ ",
+     "EK modüllerinde kampçılık dersi ses özellikleri",
+     "cli",
+     "10.11.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "Profil ve arkadaşlık istekleri erişim sorunu",
+     "cli",
+     "10.11.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "PDF çözüm ve sesli ders ekleme",
+     "cli",
+     "10.11.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "Sesli çalışma soruları seslendirme",
+     "cli",
+     "10.11.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "Kamp dersi hoca çalışma soruları",
+     "cli",
+     "10.11.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "Ekran yerleşimi ve erişim iyileştirmesi",
+     "cli",
+     "10.11.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "Çalışma föyü ve sesli çözüm modülü",
+     "cli",
+     "10.11.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "Ses dosyaları derslere güncelle",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Oyun modlarında internet gecikmesi",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Uno oyun modları ve tasarımlar",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Tahta oyunları: arayüz, Go eksikleri, commit",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Sarı 10 sıra kuralı",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Yeni oyun altyapısı",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Taş Masası: arayüz/hata düzeltme, davet, gecikme",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Oyun deneyimi iyileştirmeleri",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "PDF renk özelleştirmesi ve paletleri",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Artifact design v15 sayfa dönüşümü",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Ek modüller sayfası ve yürüyüş-kampçılık dersi",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "PDF çıkartma özellikleri ve tasarım",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Yeni dersleri tam içerik işle",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Yeni oyunlar sayfası tasarımı",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Okey oyunu geliştirme",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Tasarım, renk seçenekleri ve canlı önizleme",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "MasaView undefined length error",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Sesli dersler için PD ajanı geliştirme",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Takım yedili oyun kuralları ve UI iyileştirmeleri",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Sesli ders PDF işleme modu",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Site açılmıyor",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Tablet tasarım sorunu",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Optimizasyon problemleri",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı çalışma optimizasyonları",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Nörolojik rehabilitasyon sesi",
+     "cli",
+     "10.11.26 14:52"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı PDF indirme hatası",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Nazogastrik sonda KMB animasyonu",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Görsel tasarım ve modelleme standartları",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "iPad geri tuşu özelliği çalışmıyor",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Arzu easter egg kapatma seçeneği",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Açılış ve pencereler arası gezinme",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Tıp ders materyalleri analizi",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Tıp ders notları görselleştirme",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Sesli dersleri ilerleme sıfırlama",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "PDF açılış hatası derslerde",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Yeni dersleri sırasıyla işleme",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "UI hataları ve optimizasyon",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Sürpriz içerikleri kapatma ayarları",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Midjourney benzeri eklentiler",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Tasarruf modu içerik işçisine",
+     "cli",
+     "07.11.26 14:51"
+    ],
+    [
+     "⚪ ",
+     "Şimdi tam içerik işçisine bir görev",
+     "cli",
+     "03.11.26 16:44"
+    ],
+    [
+     "⚪ ",
+     "Tam içerik işçisinde limit harcayan işlem",
+     "cli",
+     "03.11.26 16:44"
+    ],
+    [
+     "⚪ ",
+     "Arzu için özel karşılama sayfası",
+     "cli",
+     "03.11.26 16:44"
+    ],
+    [
+     "⚪ ",
+     "Çıkmış soru, örnek soru gibi tüm",
+     "cli",
+     "30.10.26 23:39"
+    ],
+    [
+     "⚪ ",
+     "Analiz ve döküman oluşturma",
+     "cli",
+     "30.10.26 23:39"
+    ],
+    [
+     "⚪ ",
+     "Metin aktarıcıya gruplandırma ve sıralama",
+     "cli",
+     "30.10.26 23:39"
+    ],
+    [
+     "⚪ ",
+     "D3K2 sınav soruları düzenleme",
+     "cli",
+     "30.10.26 23:39"
+    ],
+    [
+     "⚪ ",
+     "Bunu okuyup metne dök",
+     "cli",
+     "30.10.26 23:39"
+    ],
+    [
+     "⚪ ",
+     "Sistem hatalarını ve tsc hatalarını çöz",
+     "cli",
+     "30.10.26 23:39"
+    ],
+    [
+     "⚪ ",
+     "Sıralama ekranı tasarımı ve işlevselliği",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "Örnek sorularda hataları düzelt",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "Patoloji sınav soruları analizi",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "Yapay zeka ajanları için onay sistemi ve yönergeler",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "Toast bildirimleri tasarımı",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "Slayt ve metin çelişkisi",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "Tıp Asistanı chatbot geliştirme",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "TAM sistem performans artışı",
+     "cli",
+     "29.10.26 16:24"
+    ],
+    [
+     "⚪ ",
+     "Tüm terimler için ses oluştur",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Ders içeriği için yeni sayfalar ve işlevler",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sesli ders işçisi mimari iyileştirmesi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Karantina soruları sınıflandırma",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Kurul 2 ders taraması ve öğrenme analizi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Mobil tasarımda alan optimizasyonu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "İçerik oluşturucu kalite ve performans",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Site optimizasyonu ve önbellek stratejisi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Kompakt tasarım, açılıp kapanabilir, gruplandırılmış",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Kompakt hale getir",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Tasarım ve kurul seçimi düzeltme",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Kayıtlar gruplandırma ve erişim sorunu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Menü hatası tam ekran modunda",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Medspak dosyası mobil açılış",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "EMA ses kalitesi ve ders anlatımı",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Kurul 1 gizleme ve ezber kartları düzenleme",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Özel sohbet ayarları ve temalar",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "İçerik işçisi tablo ve karşılaştırmaları",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "EMA için ayrı metin üretimi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sıralama özellikleri",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Script memory optimization",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Kategori filtrelemesi soru yönlendirmesinde",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Ders bitimi gösterimi ve tasarım hatası",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Bitirdiklerim sayfası ve sınav planlayıcısı kuru fi…",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sesli derslerde video çıktısı iyileştirmesi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Tekrar ilerleme göstergesi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Başarımlar sayfası kurul seçimi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Okuma yazısı çeşitleri",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "İçerik işçisi talimatları ve yıldızlama özelliği",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "PDF oluşturma ders slaytlarından",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sesli derslerde geri dönüş sorunu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Asklepios Asası animasyonu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı yönetimi ve arayüz iyileştirmesi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Tam ekran ikonu header konumu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Derslerin yerini değiştirme özelliği",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sesli ders ekranı geri düğmesi hatası",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Menü erişilebilirliği ve organizasyonu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Tam ekran ikonu kaybolması",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sınav planı hatası",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Tasarım hatası ve tema uyuşmazlıkları",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Yıldızlı Paragraflar",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Genetik 1 ve Nöroloji 3 içerik değerlendirmesi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "v15 çalışma kapsülü (odak oturumu)",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "v15 açılış ve giriş/kayıt akışı",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "PDF görüntüleyicisi tema değişikliği",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Etkinlik kısmında olay gösterilmiyor",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Genel Anestezik İlaçlar test verisi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Hücrem sayfası animasyonları ve mekanikler",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "PDF işlevleri kontrol",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Artifact design v15 sayfa dönüşümü (fork)",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "KMB sayfası tasarım ve mobil iyileştirmesi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Soru oluşturucu standartları",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Kurul 2 soru sınıflandırması",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Tam ekran ikonu erişilebilirliği",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Site tanıtım videosu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sesli ders canlı konum işlevleri",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Sesli dersteki otomatik canlı konum",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Tam erkan modunda sağdaki ayar tuşu",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Ses derslerinde zoom sıkışması",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Düzenli giriş takip sekmesi",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Claude'un arka plan işleri",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Ses derslerinde hastalık ifadeleri",
+     "cli",
+     "28.10.26 18:42"
+    ],
+    [
+     "⚪ ",
+     "Aktif kurul seçimi sayfalar arası",
+     "cli",
+     "27.10.26 01:34"
+    ],
+    [
+     "⚪ ",
+     "Claude API kullanıcıları ve kota takibi",
+     "cli",
+     "25.10.26 21:41"
+    ],
+    [
+     "⚪ ",
+     "Responsive artifact design sistemi",
+     "cli",
+     "25.10.26 21:41"
+    ],
+    [
+     "⚪ ",
+     "D3K2 2018-2019 sınav soruları veritabanına ekleme",
+     "cli",
+     "25.10.26 21:41"
+    ],
+    [
+     "⚪ ",
+     "Antigravity görsel ve tablo işaretleme sorunu",
+     "cli",
+     "25.10.26 21:41"
+    ],
+    [
+     "⚪ ",
+     "Kuru L2 sınama testleri bilgilendirmeler",
+     "cli",
+     "25.10.26 00:54"
+    ],
+    [
+     "⚪ ",
+     "KMB görsel asistanı projesi",
+     "cli",
+     "25.10.26 00:54"
+    ],
+    [
+     "⚪ ",
+     "Admin identity verification in server.ts",
+     "cli",
+     "25.10.26 00:54"
+    ],
+    [
+     "⚪ ",
+     "Türkçe TTS prosodi kayması sorunu",
+     "cli",
+     "25.10.26 00:54"
+    ],
+    [
+     "⚪ ",
+     "İkinci sınama ekleme",
+     "cli",
+     "25.10.26 00:54"
+    ],
+    [
+     "⚪ ",
+     "Kurul 2+ altyapısı ve sistem mimarisi",
+     "cli",
+     "24.10.26 15:57"
+    ],
+    [
+     "⚪ ",
+     "Kurul 1 2026-2027 sınav soruları",
+     "cli",
+     "24.10.26 13:57"
+    ],
+    [
+     "⚪ ",
+     "Kurul 2+ altyapısı ve sistem mimarisi (fork)",
+     "cli",
+     "24.10.26 00:57"
+    ],
+    [
+     "⚪ ",
+     "Kuyruk",
+     "cli",
+     "23.10.26 23:18"
+    ],
+    [
+     "⚪ ",
+     "Halk sağlığı slaytları analizi",
+     "cli",
+     "23.10.26 04:50"
+    ],
+    [
+     "⚪ ",
+     "Patoloji Ders 12+ Sınav Hazırlığı",
+     "cli",
+     "23.10.26 03:53"
+    ],
+    [
+     "⚪ ",
+     "Üriner Sistem Enfeksiyonları sesli ders",
+     "cli",
+     "23.10.26 02:36"
+    ],
+    [
+     "⚪ ",
+     "İnternet bağlantı hızı sorunu",
+     "cli",
+     "22.10.26 23:53"
+    ],
+    [
+     "⚪ ",
+     "Site wifi yavaşlığı",
+     "cli",
+     "22.10.26 23:18"
+    ],
+    [
+     "⚪ ",
+     "Üriner sistem dersleri için revize notlar",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Patoloji sesli dersler",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Sesli dersleri önceliklendir",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Sesli ders yazım kuralları",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Fix sesli ders ↔ çözücü eşleşmesi (k1-65/66)",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "V2 dersleri bitirdiklerim sayfasında gizle",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı çalışma işlevleri genişletme",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Türkçe metin okuma ve yazma kuralları",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Site cihazlarda donma ve bug'lar",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Tam ekran ve bölünmüş ekran sorunları",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "PDF oluşturma özellikleri ve tasarım",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "İmmunofarmakoloji ders slaytları",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Öğrenci notlarında önemli yerler işaretleme",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Sesli asistan soru çözme özelliği",
+     "cli",
+     "22.10.26 22:43"
+    ],
+    [
+     "⚪ ",
+     "Gebelik terminolojisi ve obstetrik konular",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Genetik sınav hazırlık modülü",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Proje altyapısı ve yol haritası",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı modu genişletme",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Öğrenci puan ve ATP sistemi",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Profil fotoğrafları sıralamada görünmüyor",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Liste hata mesajı ve alan sorunu",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Video oluşturucu arka plan ve responsive tasarım",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Ders süreleri mobil/tablet uyumluluğu",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Sınav planını başka sayfaya taşı",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Sayfalar arası geçiş ve tam ekran yönetimi",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Commit, deploy ve optimizasyon",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Tasarım yeniden yapılandırması",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Otomatik şık seçimi ve açıklama",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Site navigasyon ve sayfa yapısı düzenleme",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Motivasyon konuşmaları aç/kapa",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "PDF sayfada metin eşleştirme işaretlemesi",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "TBG sınav kampı modülü tasarımı",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "En önemliler sayfası tasarımı",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Halk sağlığı gebelik ve emzirme slaytı",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Kurul 1 ders özeti modülleri",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Cannot read properties of undefined",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "PDF indirme düzen ayarları",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Sınav hazırlık yol haritası",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Admin paneli kullanıcı verileri ve işlevler",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Untitled session",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Yönetici Paneli tasarımı sıfırdan",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Ders konusu seçim ekranı",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "26-27 dönemi soru havuzu temizliği",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Tasarım sorunu tam ekran görüntüsü",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Son provalar kategorisi",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Metni şekillendir ve maddelere ayır",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Sesli ders ve önemli listeler tasarımı",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Tıbbi biyoloji sayfası tasarımı",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Tanıtım turları v13 uyumluluğu",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "nofrostlife@gmail.com veri senkronizasyonu",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı hatası sıralama ve başarım ekranlarında",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Ders ilerleme ve sıralama puanları",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Misafir girişi devre dışı bırakma",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Site bağlantı hataları",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Cihaza özgü görünüm ayarları",
+     "cli",
+     "21.10.26 22:30"
+    ],
+    [
+     "⚪ ",
+     "Couldn't start — too many sessions are running · no…",
+     "android",
+     "20.10.26 17:02"
+    ],
+    [
+     "⚪ ",
+     "Oracleye dağıtım performansı",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Sesli derslerde metin-PDF eşleşmesi",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "iOS tablet ve mobil tasarım sorunları",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Oracle dağıtım performansı",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Ses dersleri PDF çıktısı",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Sesli derslerde PDF maddelendirmeleri",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Cloudflare error 1033",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Kullanıcı aktivitesi gerçek zamanlı kayıt",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Güncelleme ve geliştirme günlüğü",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Commit, push ve Oracle dağıt",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Yazım hataları ve çözümler",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Sesli ders ekranı",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Site hataları ve optimizasyon",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı mod ve veri senkronizasyonu",
+     "cli",
+     "20.10.26 01:40"
+    ],
+    [
+     "⚪ ",
+     "Soru çözücü ses dosyaları sorunu",
+     "cli",
+     "19.10.26 10:57"
+    ],
+    [
+     "⚪ ",
+     "Canlı ders ekranı numaralandırma ve kategorileştirme",
+     "cli",
+     "17.10.26 21:55"
+    ],
+    [
+     "⚪ ",
+     "Site güncelleme bildirimi ve yenileme",
+     "cli",
+     "17.10.26 21:55"
+    ],
+    [
+     "⚪ ",
+     "Sesli asistan enfeksiyon ve üroloji",
+     "cli",
+     "17.10.26 21:55"
+    ],
+    [
+     "⚪ ",
+     "Soru çözücü örnek soruları artır",
+     "cli",
+     "17.10.26 21:55"
+    ],
+    [
+     "⚪ ",
+     "Spot bilgiler ve soru çözücü",
+     "cli",
+     "17.10.26 21:55"
+    ],
+    [
+     "⚪ ",
+     "Canlı ders bilgi ekranı iyileştirmesi",
+     "cli",
+     "17.10.26 21:55"
+    ],
+    [
+     "⚪ ",
+     "Soru çözücü sayfası ses desteği",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Ahu Dilber şarkısı otomatik çalma sorunu",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Tasarım revizyonu: karmaşıklık ve erişilebilirlik",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Karabük sayfası işaretleme ve slayt eşleştirme",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Patoloji örnek soruları",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Ekran tasarımını kategorilere ayır",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Commit, push ve Oracle dağıt",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Site arkaplan altyapısı",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Coqui XTTS v2 ses oluşturma",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Soru veritabanı analiz ve optimizasyon",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Patoloji spot bilgileri tasarımı",
+     "cli",
+     "17.10.26 10:24"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı ders kullanımı",
+     "cli",
+     "15.10.26 23:31"
+    ],
+    [
+     "⚪ ",
+     "Çevrimdışı ders ses seçimi",
+     "cli",
+     "15.10.26 22:27"
+    ],
+    [
+     "⚪ ",
+     "Ema lighting TTS entegrasyonu",
+     "cli",
+     "15.10.26 22:06"
+    ],
+    [
+     "⚪ ",
+     "Canlı ders bileşenleri ve tasarımları",
+     "cli",
+     "15.10.26 21:05"
+    ],
+    [
+     "⚪ ",
+     "Mobil sayfa erişimi",
+     "cli",
+     "15.10.26 21:05"
+    ],
+    [
+     "⚪ ",
+     "Tümör biyolojisi ve terminolojisi sesli ders",
+     "cli",
+     "15.10.26 21:01"
+    ],
+    [
+     "⚪ ",
+     "Canlı ders listesi ve oynatma",
+     "cli",
+     "15.10.26 20:56"
+    ],
+    [
+     "⚪ ",
+     "Patoloji emel sesleri süresi",
+     "cli",
+     "15.10.26 20:48"
+    ],
+    [
+     "⚪ ",
+     "Skillfish TTS marketplace integration",
+     "cli",
+     "15.10.26 20:48"
+    ],
+    [
+     "⚪ ",
+     "İlerleme sıfırlama ve soru silme",
+     "cli",
+     "15.10.26 18:20"
+    ],
+    [
+     "⚪ ",
+     "Arama ve yazı yazma performansı",
+     "cli",
+     "15.10.26 17:22"
+    ],
+    [
+     "⚪ ",
+     "Tasarım genişlikleri ve ölçek hataları",
+     "cli",
+     "15.10.26 16:27"
+    ],
+    [
+     "⚪ ",
+     "Sağlık Bakanlığı sekme ve içeriği",
+     "cli",
+     "15.10.26 16:18"
+    ],
+    [
+     "⚪ ",
+     "Öğren ekranı tanıtım turu",
+     "cli",
+     "14.10.26 20:57"
+    ],
+    [
+     "⚪ ",
+     "Test ekranında interaktif ögeleri dahil etme",
+     "cli",
+     "14.10.26 20:56"
+    ],
+    [
+     "⚪ ",
+     "Mobil tasarım ve yorum ekranı kaydırma",
+     "cli",
+     "14.10.26 18:59"
+    ],
+    [
+     "⚪ ",
+     "MeDSor animasyonu imleç ve zamanlama",
+     "cli",
+     "14.10.26 18:29"
+    ],
+    [
+     "⚪ ",
+     "PDF indirme sayfası v10/v12 uyumluluğu",
+     "cli",
+     "14.10.26 17:00"
+    ],
+    [
+     "⚪ ",
+     "MeDSor mobil alt tuş tasarımı",
+     "cli",
+     "14.10.26 12:37"
+    ],
+    [
+     "⚪ ",
+     "Ham veri koruma sistemi",
+     "cli",
+     "14.10.26 12:37"
+    ],
+    [
+     "⚪ ",
+     "Couldn't start — too many sessions are running · no…",
+     "android",
+     "14.10.26 12:32"
+    ],
+    [
+     "⚪ ",
+     "Tekrarlayan soruları tespit ve birleştir",
+     "cli",
+     "14.10.26 12:25"
+    ],
+    [
+     "⚪ ",
+     "Tasarım ve UI/UX iyileştirmesi",
+     "cli",
+     "14.10.26 11:57"
+    ],
+    [
+     "⚪ ",
+     "Yönetim paneli ve realtime veritabanı",
+     "cli",
+     "14.10.26 01:33"
+    ],
+    [
+     "⚪ ",
+     "Gemini soru setlerini karşılaştır ve birleştir",
+     "cli",
+     "14.10.26 01:02"
+    ],
+    [
+     "⚪ ",
+     "Tasarımsal bozulmalar ve taşma problemleri",
+     "cli",
+     "14.10.26 00:48"
+    ],
+    [
+     "⚪ ",
+     "Ders-konu-müfrdat eşleştirmesi",
+     "cli",
+     "13.10.26 22:16"
+    ],
+    [
+     "⚪ ",
+     "Tasarım ve UI/UX iyileştirmesi",
+     "cli",
+     "13.10.26 22:09"
+    ],
+    [
+     "⚪ ",
+     "Kalp ikonu animasyonu",
+     "cli",
+     "13.10.26 21:22"
+    ],
+    [
+     "⚪ ",
+     "Flashcard audio başlık-only issue",
+     "cli",
+     "13.10.26 19:06"
+    ],
+    [
+     "⚪ ",
+     "PDF sayfa eşleştirmesi öğrenme slaytlarında",
+     "cli",
+     "13.10.26 19:03"
+    ],
+    [
+     "⚪ ",
+     "Önbellekte ve indirilmiş ögeleri düzenleme",
+     "cli",
+     "13.10.26 18:19"
+    ],
+    [
+     "⚪ ",
+     "Öğrenme sayfası için yeni fikirler",
+     "cli",
+     "13.10.26 18:19"
+    ],
+    [
+     "⚪ ",
+     "Sistem performansı ve optimizasyon",
+     "cli",
+     "13.10.26 17:31"
+    ],
+    [
+     "⚪ ",
+     "Öncüllü soru ekleme UI/UX iyileştirmesi",
+     "cli",
+     "13.10.26 16:55"
+    ],
+    [
+     "⚪ ",
+     "Sol menü, yan yana modu ve PDF görüntüleyici",
+     "cli",
+     "13.10.26 16:11"
+    ],
+    [
+     "⚪ ",
+     "Öğren sayfasında eksik ders uyarısı",
+     "cli",
+     "13.10.26 16:10"
+    ],
+    [
+     "⚪ ",
+     "Sınav spotları ekranı geliştirmeleri",
+     "cli",
+     "13.10.26 16:08"
+    ],
+    [
+     "⚪ ",
+     "Uyarı: notlar paylaşılamıyor",
+     "cli",
+     "13.10.26 16:07"
+    ],
+    [
+     "⚪ ",
+     "Bentogrid grid dönüşümü",
+     "cli",
+     "13.10.26 15:21"
+    ],
+    [
+     "⚪ ",
+     "Oracle çıkmış soruları eşleştirme",
+     "cli",
+     "13.10.26 15:16"
+    ],
+    [
+     "⚪ ",
+     "Sınav spotları sayfa filtreleri",
+     "cli",
+     "13.10.26 15:15"
+    ],
+    [
+     "⚪ ",
+     "Ders işçiki API kontrol ve işleme",
+     "cli",
+     "13.10.26 15:12"
+    ],
+    [
+     "⚪ ",
+     "Proje analizi ve deployment",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Notlar sayfası çalışmıyor",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Website donma ve kasma sorunları",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Yorum veritabanı gecikmesi",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Yönetim ve soru havuzu arasında git gel sorunu",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Arama sonuçları tasarım ve formatı",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Proje tanıtım onboarding",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Yanlış bileştirmeleri önleme",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Mobil arayüz ve PDF oluşturma iyileştirmeleri",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Git commit push Vite build Oracle",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "BGE-M3 performans ve cümle analizi testleri",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Sayfa yenilenmesi sırasında durum kaybı",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Odak modu liste/ayrıntı görünümü ve temizlik",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "v9 tasarımı /manage admin paneline uygula",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Hata düzeltme, optimizasyon ve yenilikler",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Arşiv soruları düzenleme ve geliştirme",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Soru havuzu sistemi optimizasyonu",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Mobil uyumluluk ve tasarım iyileştirmeleri",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Manage sayfası onaylanan dersler siteye geçmiyor",
+     "cli",
+     "13.10.26 14:57"
+    ],
+    [
+     "⚪ ",
+     "Couldn't start — too many sessions are running · no…",
+     "android",
+     "13.10.26 10:37"
+    ],
+    [
+     "⚪ ",
+     "Couldn't start — too many sessions are running · no…",
+     "android",
+     "13.10.26 10:35"
+    ],
+    [
+     "⚪ ",
+     "Couldn't start — too many sessions are running · no…",
+     "android",
+     "13.10.26 10:00"
+    ],
+    [
+     "⚪ ",
+     "Öğrenci profili veri kaydı ve bildirim geçmişi",
+     "cli",
+     "13.10.26 03:01"
+    ],
+    [
+     "⚪ ",
+     "Bildirim deeplinking ve focus sorunları",
+     "cli",
+     "13.10.26 03:01"
+    ],
+    [
+     "⚪ ",
+     "Tema değişikliği animasyonu ve yükleme ekranı",
+     "cli",
+     "13.10.26 02:56"
+    ],
+    [
+     "⚪ ",
+     "Ders sahipliği ve Drive eklenmesi",
+     "cli",
+     "13.10.26 02:15"
+    ],
+    [
+     "⚪ ",
+     "Halk sağlığı interaktif öğrenme slaytları",
+     "cli",
+     "13.10.26 00:12"
+    ],
+    [
+     "⚪ ",
+     "Sınav soruları ve spot sayfası",
+     "cli",
+     "12.10.26 15:53"
+    ],
+    [
+     "⚪ ",
+     "nofrostlife-sequential-coral",
+     "cli",
+     "11.10.26 18:39"
+    ]
+   ],
+   "kaynak": "D. = durum simgesi"
+  }
+ ]
+}

@@ -42,7 +42,7 @@ GUNLUK_SINIR = int(os.environ.get("MEDS_ISCI_GUNLUK", "4"))      # kullanıcı k
 DERS_ARASI_SN = int(os.environ.get("MEDS_ISCI_DERS_ARASI", "10800"))  # iki ders başlangıcı arası en az 3 saat
 SAATLER = os.environ.get("MEDS_ISCI_SAATLER", "00-24")           # Claude işi yalnız bu saatlerde (TR saati); 00-24 = tüm gün
 ARALIK_SN = int(os.environ.get("MEDS_ISCI_ARALIK", "7200"))      # Drive tarama aralığı (2 saat → günde 12 kontrol)
-CLAUDE_BIN = os.environ.get("MEDS_ISCI_CLAUDE", "claude")
+CLAUDE_BIN = os.environ.get("MEDS_ISCI_CLAUDE", "claude-gecit")  # geçit: ~/.claude/gecit.json
 CLAUDE_MODEL = os.environ.get("MEDS_ISCI_MODEL") or _ajan_model()  # 2026-11-13: OpenDesign (claude-opus-5-5 → deepseek-v4-pro)
 CLAUDE_EFFORT = os.environ.get("MEDS_ISCI_EFFORT", "low")            # düşük efor; boş: CLI varsayılanı
 API = os.environ.get("MEDS_ISCI_API", "http://meds-server:3000")  # bildirim + benzer soru için site API'si

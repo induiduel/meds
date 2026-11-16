@@ -1,0 +1,65 @@
+/* v15 · Tıp Asistanı paneli (AsistanPanel); renkler palet tokenından */
+.as15-fab { position: fixed; right: calc(env(safe-area-inset-right, 0px) + 16px); bottom: calc(env(safe-area-inset-bottom, 0px) + 84px); z-index: 55; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 16px; border: 0; border-radius: var(--v15-r-pill, 999px); background: var(--color-accent); color: var(--color-on-accent, #fff); font: inherit; font-weight: 600; box-shadow: 0 6px 22px rgba(0, 0, 0, .22); cursor: pointer; }
+.as15-fab svg { width: 20px; height: 20px; }
+@media (min-width: 900px) { .as15-fab { bottom: 20px; right: 20px; } }
+.as15 { position: fixed; z-index: 1200; right: 16px; bottom: 16px; width: min(420px, calc(100vw - 32px)); height: min(640px, calc(100dvh - 32px)); display: flex; flex-direction: column; background: var(--color-surface); color: var(--color-ink); border: 1px solid var(--color-line); border-radius: var(--v15-r-lg, 16px); box-shadow: 0 18px 60px rgba(0, 0, 0, .3); overflow: hidden; font-family: var(--font-sans); }
+@media (max-width: 720px) { .as15 { inset: 0; width: 100%; height: 100dvh; border-radius: 0; border: 0; } }
+.as15-ust { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--color-line-soft); }
+.as15-ust > svg { width: 20px; height: 20px; color: var(--color-accent); flex: none; }
+.as15-ust small { flex: 1; min-width: 0; color: var(--color-ink-3); font-size: .74rem; line-height: 1.2; }
+.as15-ib { display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 10px; background: transparent; color: var(--color-ink-2); cursor: pointer; }
+.as15-ib:hover { background: var(--color-field); }
+.as15-ib svg { width: 18px; height: 18px; }
+.as15-gov { flex: 1; min-height: 0; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 12px; overscroll-behavior: contain; }
+.as15-ilk p { margin: 0 0 10px; color: var(--color-ink-2); line-height: 1.45; font-size: .92rem; }
+.as15-cip { display: flex; flex-wrap: wrap; gap: 6px; }
+.as15-cip button { border: 1px solid var(--color-line); background: var(--color-canvas); color: var(--color-ink); border-radius: var(--v15-r-pill, 999px); padding: 7px 12px; font: inherit; font-size: .82rem; cursor: pointer; }
+.as15-cip button:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.as15-k { align-self: flex-end; max-width: 86%; background: var(--color-accent); color: var(--color-on-accent, #fff); padding: 9px 13px; border-radius: 16px 16px 4px 16px; line-height: 1.4; font-size: .92rem; overflow-wrap: anywhere; }
+.as15-a { align-self: stretch; display: flex; flex-direction: column; gap: 8px; }
+.as15-p { margin: 0; line-height: 1.5; font-size: .92rem; overflow-wrap: anywhere; }
+.as15-hata { color: var(--color-bad); }
+.as15-duz { margin: 0; font-size: .78rem; color: var(--color-ink-3); }
+.as15-md { background: var(--color-canvas); border: 1px solid var(--color-line-soft); border-radius: 12px; padding: 10px 12px; }
+.as15-md h4, .as15-tb h4 { margin: 0 0 6px; font-size: .84rem; color: var(--color-accent); }
+.as15-md ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; }
+.as15-md li { line-height: 1.45; font-size: .9rem; overflow-wrap: anywhere; }
+.as15-no { margin-left: 5px; min-width: 20px; height: 20px; padding: 0 5px; border: 0; border-radius: 6px; background: var(--color-accent-soft); color: var(--color-accent); font-size: .72rem; font-weight: 700; cursor: pointer; vertical-align: 1px; }
+.as15-gv { align-self: flex-start; font-size: .72rem; color: var(--color-ink-3); }
+.as15-gv.birebir { color: var(--color-ok); } .as15-gv.zayif { color: var(--color-warn); }
+.as15-soru { border: 1px solid var(--color-line); border-radius: 12px; padding: 10px 12px; background: var(--color-canvas); display: flex; flex-direction: column; gap: 8px; }
+.as15-soru-k { margin: 0; line-height: 1.45; font-size: .9rem; font-weight: 600; overflow-wrap: anywhere; }
+.as15-sik { display: flex; flex-direction: column; gap: 6px; }
+.as15-sk { display: flex; align-items: flex-start; gap: 8px; text-align: left; border: 1px solid var(--color-line); background: var(--color-surface); color: var(--color-ink); border-radius: 10px; padding: 8px 10px; font: inherit; font-size: .88rem; cursor: pointer; min-height: 40px; }
+.as15-sk b { flex: none; width: 20px; color: var(--color-accent); }
+.as15-sk span { flex: 1; overflow-wrap: anywhere; }
+.as15-sk svg { flex: none; width: 18px; height: 18px; }
+.as15-sk:disabled { cursor: default; }
+.as15-sk.dogru { border-color: var(--color-ok); background: var(--color-ok-soft); }
+.as15-sk.yanlis { border-color: var(--color-bad); background: var(--color-bad-soft); }
+.as15-acik { font-size: .88rem; line-height: 1.45; }
+.as15-acik p { margin: 4px 0 6px; color: var(--color-ink-2); }
+.as15-kay { display: inline-flex; align-items: center; gap: 4px; border: 0; background: none; color: var(--color-accent); font: inherit; font-size: .8rem; cursor: pointer; padding: 0; }
+.as15-kay svg { width: 13px; height: 13px; }
+.as15-tb { background: var(--color-canvas); border: 1px solid var(--color-line-soft); border-radius: 12px; padding: 10px 12px; }
+.as15-tb-k { overflow-x: auto; }
+.as15-tb table { border-collapse: collapse; font-size: .82rem; min-width: 100%; }
+.as15-tb th, .as15-tb td { border-bottom: 1px solid var(--color-line-soft); padding: 5px 8px; text-align: left; vertical-align: top; }
+.as15-sy { display: flex; flex-direction: column; gap: 6px; }
+.as15-kart { display: flex; align-items: center; justify-content: space-between; gap: 10px; text-align: left; border: 1px solid var(--color-line); background: var(--color-canvas); color: var(--color-ink); border-radius: 12px; padding: 10px 12px; font: inherit; cursor: pointer; min-height: 48px; }
+.as15-kart:hover { border-color: var(--color-accent); }
+.as15-kart span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.as15-kart b { font-size: .88rem; overflow-wrap: anywhere; }
+.as15-kart small { color: var(--color-ink-3); font-size: .74rem; }
+.as15-kart svg { flex: none; width: 16px; height: 16px; color: var(--color-accent); }
+.as15-yaz { flex-direction: row; gap: 5px; padding: 6px 2px; }
+.as15-yaz i { width: 7px; height: 7px; border-radius: 50%; background: var(--color-ink-3); animation: as15-z 1s infinite ease-in-out; }
+.as15-yaz i:nth-child(2) { animation-delay: .15s; } .as15-yaz i:nth-child(3) { animation-delay: .3s; }
+@keyframes as15-z { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .as15-yaz i { animation: none; opacity: .6; } }
+.as15-form { display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--color-line-soft); }
+.as15-form input { flex: 1; min-width: 0; min-height: 44px; border: 1px solid var(--color-line); background: var(--color-field); color: var(--color-ink); border-radius: 12px; padding: 0 12px; font: inherit; font-size: 16px; }
+.as15-form input:focus-visible, .as15 button:focus-visible, .as15-fab:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.as15-form button { flex: none; width: 46px; border: 0; border-radius: 12px; background: var(--color-accent); color: var(--color-on-accent, #fff); display: grid; place-items: center; cursor: pointer; }
+.as15-form button:disabled { opacity: .45; cursor: default; }
+.as15-form button svg { width: 18px; height: 18px; }

@@ -89,7 +89,7 @@ def calistir(komut, cwd=KOK, kuru=False):
 
 
 def claude(istem, W, kuru):
-    kom = ["claude", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)]
+    kom = ["claude-gecit", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)]
     print("   $ claude -p …", istem[:120])
     if kuru:
         return 0

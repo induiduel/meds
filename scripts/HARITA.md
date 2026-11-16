@@ -53,6 +53,100 @@ scripts/
 ## moduller/ — site özellik araçları
 `recall/` (soru havuzu motoru) · `composer/` · `sozluk_v2/` · `diseases/` · `saglik/` · `eval/` (`npm run eval:*`)
 
+<!-- kok-dosyalar:bas -->
+## Kök dosyalar (77) — otomatik: `python3 scripts/altyapi/betik_haritasi.py`
+
+**Kapılar / doğrulayıcılar** (10)
+- `audit-and-disconnect-faulty-slides.mjs` — MeDSor Slayt İlişkisi Denetim ve Hatalı İlişkileri Kesme Scripti (Script 1)
+- `ders_icerik_dogrula.py` — Ders içerik paketi kapısı: python3 scripts/ders_icerik_dogrula.py <key> ... → 0 HATA ol…
+- `detect-faulty-ocr.mjs` — data/pastQuestions.json'da bozuk OCR'lı soruları listeler
+- `run-verify-answers.bat` — Windows: soru/cevap doğrulama motorunu çalıştırır (eski)
+- `self-healing-auditor.mjs` — MeDSor Otonom Kendi Kendini Denetleyen ve İyileştiren Sistem (Self-Healing Auditor)
+- `sik_aciklama.py` — Şık açıklama kalite kapısı — meds/docs/SIK_ACIKLAMA_STANDARDI.md (kullanıcı kararı 2026…
+- `start-answer-verifier-daemon.bat` — Windows: soru izleyici + doğrulama servisini başlatır (eski)
+- `turkce_uslup.py` — Türkçe üslup kapısı — meds/docs/TURKCE_USLUP_STANDARDI.md (kullanıcı kararı 2026-10-18).
+- `validate_learning_decks.py` — Öğren destelerini docs/OGREN_ETKILESIM_REHBERI.md kurallarına göre denetler.
+- `verify-question-answers.mjs` — MeDSor Çıkmış Soru ve Cevap Doğrulama Motoru (scripts/verify-question-answers.mjs)
+
+**Deste / ders içeriği** (15)
+- `build_deck_packages.py` — Öğren destelerinin dışa aktarım paketlerini TEK kaynaktan üretir.
+- `build_deck_pdf_sources.py` — Öğren desteleri → Drive'daki ders PDF'leri ve slayt → (PDF, sayfa) eşlemesi; İÇERİKLE D…
+- `build_deck_schedule.py` — Ders programı sırası → src/data/deckSchedule.json (Öğren kitaplığı "Ders programı" sıra…
+- `build_kazanim_deck_index.py` — Öğren desteleri için deste → kazanımlar dizini üretir (src/data/kazanimlar/byDeck.json).
+- `build_learning_decks.py` — *- coding: utf-8 -*
+- `ders_icerik_adim.py` — Ders içerik paketindeki her kayda `adim` (ait olduğu Öğren slayt numarası) anahtarını y…
+- `ders_icerik_kaynak.py` — Ders içerik paketinde PDF sayfası (`s`) olmayan terim/kısaltma/bilgi kayıtlarına kaynak…
+- `ders_icerik_uret.py` — Ders içerik paketi üretici: yayındaki kaynaklardan (deste, bilgi havuzu, terim/kısaltma…
+- `ders_pdf.mts` — Ders PDF'i (yapay zekasız, limitsiz): python scripts/ders_icerik_adim.py ile `adim` yaz…
+- `deste_deposu.py` — Öğren desteleri için TEK okuma/yazma noktası (Python tarafı).
+- `extract_curriculum.py` — müfredat PDF'inden Dönem 3 müfredat listesini çıkarır (eski, Windows yolu)
+- `generate_medical_glossary.py` — *- coding: utf-8 -*
+- `icerik_katman.py` — Canlı içerik katmanı (data/content) araçları — kayıt düzeyinde fark biçimi (bkz. src/se…
+- `sinav_calisma_bol.py` — Sınav Çalışması verisini sayfanın yükleyebileceği küçük parçalara böler.
+- `sinav_calisma_olustur.py` — Sınav Çalışma Veri Katmanı ve Kazanım Eşleştirici v2
+
+**Derleme / dağıtım** (6)
+- `build-database-json.mjs` — MeDSor Veritabanı JSON Üretim ve Senkronizasyon Motoru
+- `build_android_apk.sh` — Android APK derlemesi (Capacitor, Android SDK)
+- `prepare-android-dist.mjs` — dist/ içindeki yalnızca GÜNCEL derlemeye ait (reachable) JS/CSS parçalarını ve temel st…
+- `prune-dist.mjs` — dist/assets birikimini temizler (vite emptyOutDir:false → her derleme yeni hash'li parç…
+- `surum_gunlugu.py` — Güncelleme ve geliştirme günlüğü üretici → src/data/surum_gunlugu.json (/guncellemeler …
+- `surum_gunlugu_turler.json` — sürüm günlüğü değişiklik türleri (surum_gunlugu.py girdisi)
+
+**Senkron / Drive / bulut** (17)
+- `auto-git-sync.mjs` — proje değişikliklerini otomatik git commit/push ile eşitler (eski)
+- `crawl-all-drive-folders.mjs` — Drive çıkmış/dönem klasörlerini tarayıp dosya listesini çıkarır
+- `download-all-slides.mjs` — Drive'daki ders slaytlarını toplu indirir
+- `enrich-drive-slides.mjs` — driveAutomation.ts slayt kataloğuna şablon sayfa içeriği ekler (eski)
+- `local-drive-sync-agent.mjs` — MeDSor Yerel Bilgisayar Arka Plan Otomasyon İşleyicisi (Local Sync Worker)
+- `meds-local-sync.mjs` — MeDSor Yerel Otomasyon ve Senkronizasyon Motoru (meds-local-sync.mjs)
+- `orchestrate_drive_curriculum_ai.mjs` — MeDSor AI Drive Curriculum Orchestrator & Interactive Deck Generator
+- `sync-all-to-supabase.mjs` — Veritabanı senkronizasyon motoru
+- `sync-database-json-to-cloud.mjs` — C:\Users\indui\Desktop\meds_database\database_json altındaki yapılandırılmış JSON dosya…
+- `sync-drive-updates.mjs` — MeDSor Google Drive Değişiklik Tespit ve Manuel Senkronizasyon Motoru
+- `sync-past-questions-to-supabase.mjs` — pastQuestions.json dosyasındaki 2922 adet çıkmış soruyu
+- `sync_deepseek_data.py` — *- coding: utf-8 -*
+- `sync_to_supabase_v2.py` — MeDSor AI - Supabase v2 Chunk-Build Veri Senkronizasyonu Motoru
+- `sync_user_drive_folder.mjs` — öğrenci Drive klasörünü özyineli tarar
+- `test-drive-folders.mjs` — Drive klasör kimliklerine erişimi sınar
+- `transcribe-drive-audio.mjs` — MeDSor Tıbbi Amfi Ses Kayıtları Transkripsiyon, Ders Eşleştirme ve İzleme Motoru
+- `update-drive-catalog.mjs` — data/real_drive_slides.json'dan Drive slayt kataloğunu üretir
+
+**Veri düzeltme / eşleme** (17)
+- `deep-ai-redactor.mjs` — MeDSor Derin Tıbbi Yapay Zeka Redaksiyon Motoru (scripts/deep-ai-redactor.mjs)
+- `deep-triple-slide-matcher.mjs` — MeDSor Derinlemesine 3 Aşamalı Slayt ve Soru Eşleştirme Motoru
+- `detect-database-updates.mjs` — Veritabanında Soru Bazında Güncelleme Tespit ve Ekonomik Artımlı Senkronizasyon Scripti
+- `extract-scanned-images.py` — MeDSor Scanned PDF Image Extractor
+- `filter-donem3-and-clean-ocr.mjs` — 1. Dönem 3 müfredatına (Tıbbi Patoloji, Farmakoloji, Dahiliye, Kardiyoloji, Pediatri,
+- `fix-nested-and-embedded-questions.mjs` — MeDSor İç İçe Geçmiş Şıklar, Soru Kökünde Kalan Şıklar ve
+- `fix-question-typos.mjs` — MeDSor Soru Yazım Hatalarını ve Bozuk OCR İfadelerini Tespit ve Düzeltme Motoru
+- `index-rag-knowledge.mjs` — MeDSor RAG Knowledge Indexer & Embedder
+- `inspect-sources.mjs` — çıkmış sorularını kaynak dosyaya göre sayar (inceleme)
+- `link-exam-questions.mts` — Link past-exam files to the existing question pool and course material (retrieval only,…
+- `manage-slide-relations.mjs` — MeDSor Çıkmış Soru & Amfi Slayt İlişki Yönetim Motoru (Master Runner)
+- `match-and-link-lecture-slides.mjs` — MeDSor Slayt Eşleştirme, Bağlama ve Vurgulama Scripti (Script 2)
+- `merge-same-exam-duplicates.mjs` — Eşleşen sorular birbirini tekrar eden sorular veya birbirine aşırı benzeyen
+- `migrate-separate-current-and-past.mjs` — Veritabanı Ayrıştırma ve Düzenleme Motoru
+- `process-local-sorular.mjs` — C:\Users\indui\Desktop\meds_database\local_sorular klasöründeki
+- `rebuild-all-past-questions.mjs` — meds_sorular_txt'ten tüm çıkmış soru verisini yeniden kurar
+- `slide-matching-utils.mjs` — MeDSor Slayt Eşleştirme ve Denetim Yardımcı Modülü
+
+**Diğer** (12)
+- `automation-runner.mjs` — MeDSor Central Script & Automation Runner Engine
+- `deck_pdf_slide_duzeltme.json` — deste ↔ PDF slayt eşleme düzeltmeleri (build_deck_pdf_sources girdisi)
+- `fast_hybrid_server.py` — MeDSor Low-Latency Hybrid Serving API — FastAPI + DuckDB (cursor-per-request).
+- `kok.py` — konum-bağımsız kök yolları: SCRIPTS / MEDS / PROJE
+- `manage-service.ps1` — Windows: otomasyon servisini kur/başlat/durdur/durum (eski)
+- `manage-service.sh` — manage-service.ps1'in Linux karşılığı.
+- `master_controller.py` — MeDSor Master Orchestrator & Supervisor (scripts/master_controller.py)
+- `monitor.py` — MeDSor Canlı Terminal Kokpiti ve Boru Hattı İzleyici (Terminal Dashboard v2)
+- `scripts-meta.json` — betik üstverisi (eski otomasyon panelinin listesi)
+- `show-notification.ps1` — Windows: masaüstü bildirimi gösterir (eski)
+- `test-filter-donem3.mjs` — Dönem 3 müfredat süzgecini çıkmış sorularda sınar
+- `test-sample-pdfs.mjs` — örnek Drive PDF'lerini indirip okumayı sınar
+
+<!-- kok-dosyalar:son -->
+
 ## Çalışma verisi kod değildir
 Bir betiğin üretim/ara verisi `meds_temp/<modül>/` altında yaşar (ör. `meds_temp/son_prova/`, `meds_temp/blok_ozet/`,
 `meds_temp/tekrar_analizi/`); kod yalnız burada (git). Veri klasörünü ortam değişkeniyle değiştirilebilir yap

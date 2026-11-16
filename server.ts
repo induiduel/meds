@@ -26,6 +26,7 @@ import { registerSesliAnlatimRoutes } from './src/services/sesliAnlatim';
 import { registerCanliDersRoutes } from './src/services/canliDers';
 import { registerDersVideoIsRoutes } from './src/services/dersVideoIs';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
+import { registerAsistanRoutes } from './src/services/asistan/routes';
 import { registerOlasiSoruRoutes } from './src/services/olasiSoruRoutes';
 import { registerKimlikRoutes } from './src/services/kimlikRoutes';
 import { registerAiTestRoutes, aiTestGecerli } from './src/services/aiTestErisim';
@@ -2998,6 +2999,7 @@ registerDersVideoIsRoutes(app, ADMIN_EMAIL); // /api/canli-ders/:key'den önce
 registerDersVideoOynat(app); // hazır ders videoları (öğrenci, giriş gerekli)
 registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
+registerAsistanRoutes(app); // Tıp Asistanı (durduruldu; MEDS_ASISTAN=1 yoksa 404 JSON)
 registerOlasiSoruRoutes(app, { rootDir: __dirname, requireAdmin });
 registerHatActionRoutes(app, { rootDir: __dirname, requireAdmin });
 registerKimlikRoutes(app, { rootDir: __dirname });

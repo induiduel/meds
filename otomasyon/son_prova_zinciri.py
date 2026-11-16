@@ -43,7 +43,7 @@ def claude(istem, W, kuru):
         print("   [kuru] claude:", istem[:160]); return
     with open(W / "log" / "claude.log", "a") as log:
         try:
-            subprocess.run(["claude", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
+            subprocess.run(["claude-gecit", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
                            cwd=W, stdout=log, stderr=subprocess.STDOUT, timeout=4 * 3600)
         except subprocess.TimeoutExpired:
             print("   claude zaman aşımı")

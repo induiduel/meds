@@ -11,6 +11,8 @@ Denetimler (her bulgu dosya:satır ile):
   D5 HATA   src/services/** + server.ts: yazma çağrısının hedefi (değişken zinciriyle) src/data ve writableContent yok (H580)
   D6 UYARI  token bütçesi: AGENTS.md / hata defteri / docs/hatalar/*.md / MEMORY.md kelime tavanları
   D7 HATA   scripts/ kökünde HARITA.md'de anılmayan yeni alt dizin
+  D9 HATA   sahnelenen yeni dosya gizli adlı (.env, *anahtar*, *secret*, *.pem…) ya da ≥5 MB (H583)
+  D8 HATA   scripts/HARITA.md kök dosyalar bölümü ya da docs/HARITA.md bayat (üreticilerin --denetle'si; --hizli'de de)
 
 İzin listeleri bu dosyadadır; IZINLI_ESKI listeleri yalnız AZALABİLİR (düzeltilen kalem listeden silinir; artık
 ihlal etmeyen kalem UYARI verir). Yeni ihlali izin listesine eklemek yerine kodu düzelt.
@@ -351,15 +353,54 @@ def d7() -> None:
             bul("D7", "UYARI", f"scripts/{ad}/", None, "IZINLI_ESKI kalemi artık gerekmiyor — listeden sil")
 
 
+def d8() -> None:
+    """İki harita üreticisinin --denetle'si (paralel; ölçüm 2026-11-16 ≈0,7 sn)."""
+    import subprocess
+    ureticiler = [SCRIPTS / "altyapi" / "betik_haritasi.py", SCRIPTS / "altyapi" / "belge_haritasi.py"]
+    isler = [(u, subprocess.Popen([sys.executable, str(u), "--denetle"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True))
+             for u in ureticiler]
+    for u, pr in isler:
+        cikti = pr.communicate()[0].strip()
+        if pr.returncode:
+            hedef = "scripts/HARITA.md" if u.name == "betik_haritasi.py" else "docs/HARITA.md"
+            bul("D8", "HATA", hedef, None, f"harita bayat — yeniden üret: python3 scripts/altyapi/{u.name}")
+
+
+D9_GIZLI = re.compile(r"(^|/)(\.env(\.|$)|[^/]*(anahtar|secret|token|credential|private[_-]?key)[^/]*$|[^/]*\.(pem|key|p12)$)", re.I)
+D9_TAVAN = 5 * 1024 * 1024
+
+
+def d9() -> None:
+    """Sahnelenen YENİ dosyalar: gizli adlı ya da ≥5 MB ise HATA (H583: git add -A anahtarı ve 600 MB veriyi gönderdi)."""
+    import subprocess
+    try:
+        r = subprocess.run(["git", "-C", str(MEDS), "diff", "--cached", "--name-only", "--diff-filter=A", "-z"],
+                           capture_output=True, text=True, timeout=20)
+    except Exception:
+        return
+    for yol in filter(None, r.stdout.split("\0")):
+        if D9_GIZLI.search(yol):
+            bul("D9", "HATA", yol, None, "gizli olabilecek dosya sahnelendi — .gitignore'a ekle, git reset -- <yol>")
+            continue
+        try:
+            boy = (MEDS / yol).stat().st_size
+        except OSError:
+            continue
+        if boy >= D9_TAVAN:
+            bul("D9", "HATA", yol, None, f"{boy // 1048576} MB yeni dosya sahnelendi — çalışma verisi/ikili git dışında tutulur")
+
+
 def main() -> int:
     argv = sys.argv[1:]
     hizli, js = "--hizli" in argv, "--json" in argv
     sayilar = d1_d2_d5(kod_dosyalari())
     d3()
     d4()
+    d9()
     if not hizli:
         d6()
     d7()
+    d8()
     hata = sum(1 for b in bulgular if b["duzey"] == "HATA")
     uyari = len(bulgular) - hata
     if js:

@@ -678,7 +678,7 @@ def yerlesim(k: dict, r, dolu: list | None = None, satirlar: list | None = None)
 
 def claude(cwd: Path, istem: str, sure: int = 1800) -> str:
     _llm_kilit("cizim_uret")  # her LLM çağrısı elle komut şartına bağlı (kural 20)
-    kom = ["claude", "-p", istem, "--permission-mode", "bypassPermissions", "--model", _ajan_model(),  # 2026-11-13: OpenDesign
+    kom = ["claude-gecit", "-p", istem, "--permission-mode", "bypassPermissions", "--model", _ajan_model(),  # 2026-11-13: OpenDesign
            "--add-dir", str(cwd)]
     try:
         r = subprocess.run(kom, cwd=cwd, capture_output=True, text=True, timeout=sure,

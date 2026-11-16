@@ -56,7 +56,7 @@ ROOT = MEDS.parent
 DB_25_26 = ROOT / "meds_database_25_26"
 ARSIV_DATA = MEDS / "data" / "arsiv_25_26"
 PYTHON = str(MEDS / ".venv-ocr" / "bin" / "python")
-CLAUDE_BIN = os.environ.get("MEDS_ISCI_CLAUDE", "claude")
+CLAUDE_BIN = os.environ.get("MEDS_ISCI_CLAUDE", "claude-gecit")  # geçit: ~/.claude/gecit.json
 sys.path.insert(0, str(MEDS / "otomasyon"))
 from llm.model_sec import ajan_model as _ajan_model  # noqa: E402  2026-11-13: model kimliği tek kaynaktan (OpenDesign)
 CLAUDE_MODEL = os.environ.get("MEDS_ISCI_MODEL") or _ajan_model()

@@ -38,6 +38,7 @@ import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import ArkaPlanGosterge from './ArkaPlanGosterge';
+import AsistanPanel from '../asistan/AsistanPanel';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { SearchPalette } from '../search/SearchPalette';
 import { Sheet } from '../ui/Sheet';
@@ -419,6 +420,7 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
       <div className="v15-top-tools">
         <OfflineStatusBadge onClick={() => onOpenOffline?.()} isAdmin={isAdmin} className="v15-ofb" />
         <ArkaPlanGosterge />
+        <AsistanPanel />
         <GuncellemeSimgesi className="v15-ib" />
         <button type="button" className="v15-search" onClick={() => setSearch(true)} aria-label="Ara ( / ya da Ctrl+K )">
           <Search aria-hidden="true" />

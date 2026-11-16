@@ -26,7 +26,9 @@ from urllib.parse import urlparse
 
 SURUM = "2"
 HOME = os.path.expanduser("~")
-SETTINGS = os.path.join(HOME, ".claude", "settings.json")
+# 2026-11-16: geçit ayarı ~/.claude/gecit.json'da (etkileşimli claude geçitsiz); yoksa settings.json.
+SETTINGS = next((p for p in (os.path.join(HOME, ".claude", "gecit.json"), os.path.join(HOME, ".claude", "settings.json"))
+                 if os.path.exists(p)), os.path.join(HOME, ".claude", "settings.json"))
 MAPFILE = os.path.join(HOME, ".claude", "opendesign-kopru.json")
 YEDEK_MAP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "rotalar.json")
 

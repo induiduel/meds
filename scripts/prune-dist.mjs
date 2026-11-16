@@ -3,16 +3,17 @@
 // Korunan: güncel derlemeden erişilebilen dosyalar + son KEEP_BUILDS derlemenin kayıtlı kümesi
 //          + son --keep-hours saat içinde yazılmış dosyalar (eski SW istemcileri için tampon).
 // Kullanım: node scripts/prune-dist.mjs [--apply] [--dir dist] [--keep-builds 2] [--keep-hours 24]
-//           --apply olmadan yalnız rapor verir.
+//           --apply olmadan (ya da --dry-run ile) yalnız rapor verir.
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 const args = process.argv.slice(2);
 const opt = (name, def) => {
   const i = args.indexOf(name);
   return i >= 0 ? args[i + 1] : def;
 };
-const APPLY = args.includes('--apply');
+const APPLY = args.includes('--apply') && !args.includes('--dry-run');
 const DIST = path.resolve(opt('--dir', 'dist'));
 const KEEP_BUILDS = Number(opt('--keep-builds', 2));
 const KEEP_HOURS = Number(opt('--keep-hours', 24));
@@ -56,9 +57,14 @@ if (reachable.size === 0) {
 
 // Derleme defteri: her çalıştırmada güncel küme kaydedilir, son KEEP_BUILDS küme korunur.
 fs.mkdirSync(LEDGER, { recursive: true });
-const entry = [...reachable].find((n) => n.startsWith('entry-index-')) || `build-${Date.now()}`;
-const ledgerFile = path.join(LEDGER, `${entry}.txt`);
-if (!fs.existsSync(ledgerFile)) fs.writeFileSync(ledgerFile, [...reachable].sort().join('\n'));
+// Defter adı kümenin özetinden gelir (2026-11-16): eskiden 'entry-index-*' aranıyor, bulunamayınca
+// `build-${Date.now()}` yazılıyordu → aynı derleme her çalıştırmada yeni kayıt açıyor, son KEEP_BUILDS kayıt
+// hep güncel kümenin kopyası oluyor, önceki derlemeler korunmuyordu. Özet adıyla aynı derleme tek kayıttır.
+const setText = [...reachable].sort().join('\n');
+const sig = crypto.createHash('sha1').update(setText).digest('hex').slice(0, 12);
+const ledgerFile = path.join(LEDGER, `set-${sig}.txt`);
+if (!fs.existsSync(ledgerFile)) fs.writeFileSync(ledgerFile, setText);
+else fs.utimesSync(ledgerFile, new Date(), new Date());
 const ledgers = fs.readdirSync(LEDGER)
   .map((f) => ({ f, t: fs.statSync(path.join(LEDGER, f)).mtimeMs }))
   .sort((a, b) => b.t - a.t);

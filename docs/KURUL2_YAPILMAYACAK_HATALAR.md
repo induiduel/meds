@@ -416,3 +416,4 @@
 - **H580** · "Otomatik onarım / NotebookLM ile düzelen deste dağıtımda geri dönüyor": katmanı atlayan yazıcılar → hatalar/dagitim_sunucu.md
 - **H581** · "Panelden/NotebookLM'den düzeltilen sözlük, kart, özet, örnek soru dağıtımda geri dönüyor": katmansız yazım + sezgisel D5 → hatalar/dagitim_sunucu.md
 - **H582** · "Ansiklopedi düzeltmesi Oracle'da dağıtımı durdurabilir / ekrana gelmez": slug çakışması + katman kaydı yok → hatalar/veri_cikmis.md
+- **H583** · "`git add -A` gizli anahtarı ve 600 MB çalışma verisini herkese açık depoya gönderdi": eksik .gitignore + kör toplu ekleme → hatalar/dagitim_sunucu.md

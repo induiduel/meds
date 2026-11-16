@@ -51,7 +51,7 @@ def main():
         (ONERI / "sema2").mkdir(exist_ok=True)
         with open(KOK / "meds_temp/hat/hastalik_claude.log", "a") as log:
             try:
-                k = subprocess.run(["claude", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
+                k = subprocess.run(["claude-gecit", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
                                    cwd=KOK, stdout=log, stderr=subprocess.STDOUT, timeout=3 * 3600).returncode
             except subprocess.TimeoutExpired:
                 print("   claude zaman aşımı (3 sa) — sonraki gece yeniden"); k = 124

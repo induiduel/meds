@@ -50,7 +50,7 @@ def main():
                  f"çıktı klasörü {hedef}. Proje kökü {KOK}.")
         try:
             with open(KOK / "meds_temp/hat/checkup_claude.log", "a") as log:
-                subprocess.run(["claude", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
+                subprocess.run(["claude-gecit", "-p", istem, "--model", AJAN_MODEL, "--allowedTools", IZIN, "--add-dir", str(KOK)],
                                cwd=KOK, stdout=log, stderr=subprocess.STDOUT, timeout=3 * 3600)
         except subprocess.TimeoutExpired:
             print("   claude zaman aşımı")

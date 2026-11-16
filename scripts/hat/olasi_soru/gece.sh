@@ -72,7 +72,7 @@ yayinla() {
 # deepseek-v4-pro'ya eşler). Dar izin listesi: yalnız dosya okuma/yazma + doğrulayıcı + yerel API okuma.
 IZIN='Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)'
 AJAN_MODEL="${MEDS_AJAN_MODEL:-claude-opus-5-5}"
-cl() { timeout 3h claude -p "$1" --model "$AJAN_MODEL" --allowedTools "$IZIN" --add-dir "$KOK" >> "$D/claude.log" 2>&1 || echo "claude çıkış $? (devam: kapı karar verir)" >> "$D/claude.log"; }
+cl() { timeout 3h claude-gecit -p "$1" --model "$AJAN_MODEL" --allowedTools "$IZIN" --add-dir "$KOK" >> "$D/claude.log" 2>&1 || echo "claude çıkış $? (devam: kapı karar verir)" >> "$D/claude.log"; }
 echo "=== $(date -Is) kurul $K sentez ===" >> "$D/claude.log"
 cl "meds/scripts/hat/olasi_soru/TALIMAT.md talimatını uygula (kurul $K). Çalışma dizini: $D. Proje kökü: $KOK. Bitince 'python3 $KOK/meds/scripts/hat/olasi_soru/dogrula.py --kurul $K' çalıştır ve 0 HATA olana kadar düzelt."
 for tur in 1 2; do

@@ -69,3 +69,8 @@ EMA'ya giderken `scripts/uretim/sesli_anlatim/terim_okunus.py` Türkçedeki yayg
 Staphylococcus → stafilokokus, locked-in → lokt in). Yazar seslendirmeden önce
 `python3 scripts/uretim/sesli_anlatim/terim_okunus.py --denetle <anahtar>` çalıştırır; `KURAL` satırlarında yanlış okunuş varsa
 `data/sesli_anlatim/okunus/terim_okunus.json`'a ekler (sözlük büyüdükçe sonraki derslerde hata kalmaz).
+
+## Konu bütünlüğü: adsız gönderme yok (H434, 2026-10-28)
+Anlatım planında her bölümün konusu (hastalık/kavram) adıyla yazılır; metin her yeni paragraf ve bölümde o adı yeniden söyler.
+"Bu hastalıkta", "bu durumda", "burada", "bunlarda" ile parça açılmaz. Gerekçe: sesli derste birden çok hastalık işlenir,
+parça başında adsız gönderme öğrenciyi hangi hastalıktan söz edildiği konusunda karıştırır. Kapı: `metin_denetle.py`.

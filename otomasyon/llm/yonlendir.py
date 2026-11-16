@@ -209,7 +209,7 @@ def _claude(istem: str, model: str | None = None) -> tuple[str | None, str | Non
     if claude_kalan() <= 0:
         return None, "butce"
     model = model or b.get("model", "claude-opus-5-5")
-    kom = ["claude", "-p", "--model", model, "--append-system-prompt", SISTEM,
+    kom = ["claude-gecit", "-p", "--model", model, "--append-system-prompt", SISTEM,
            "--disallowedTools", "Bash,Edit,Write,Read,Glob,Grep,WebFetch,WebSearch,NotebookEdit,Task"]
     t0 = time.time()
     try:

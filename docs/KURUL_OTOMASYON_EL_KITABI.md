@@ -445,6 +445,8 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
 
 ## 19. Elle ders üretimi — işçisiz (kullanıcı kararı 2026-10-27; ilk uygulama k2-01 Nörolojik Hastaya Yaklaşım)
 
+> **Tasarruf kipi (2026-11-07):** `--mod tasarruf` → adım 10 (çapa+çizim), ara resim, 11d ara sorular, atomik envanter, PDF taraması atlanır; ayrıntı `docs/TAM_HAT_HIZLI_AKIS.md` §0.
+
 > **Sıra/paralellik/okuma/düzeltme biçimi (2026-10-28):** `docs/TAM_HAT_HIZLI_AKIS.md` — adım 1–4 E0 hazırlık betiğiyle
 > (`scripts/hat/tam_hat/hazirlik.py`) paralel yürür; yeni kapılar `soru_uslup.py`, `kaynak_kapisi.py`, `pdf_tarama.py`.
 

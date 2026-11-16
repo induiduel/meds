@@ -134,7 +134,7 @@ belgesini ve kendi betiğini** getirdi, ama **tek bir koşucuya** bağlanmadı. 
 tercih edildi (kural 20 gereği doğru), fakat bu kez sıralama bilgisi insana/ajana kaldı.
 
 **Kalıcı çözüm.**
-1. Tek koşucu: `python3 scripts/hat/tam_hat/hat.py <ders> --asama <aşama>|--sonraki|--durum`. Her aşama `mod.py`'den okunur,
+1. Tek koşucu: `python3 scripts/hat/tam_hat/hat.py <ders> --asama <aşama>|--sonraki|--durum` *(önerildi, yazılmadı — 2026-11-16)* — bugünkü karşılığı `scripts/hat/tam_hat/kosucu.py`. Her aşama `mod.py`'den okunur,
    her aşamanın **girişi/çıktısı/kapısı** JSON'da tanımlıdır (`hat.json` tek kaynak olur, `mod.py` ona delege eder).
 2. Aşama atlanamaz: koşucu "önceki aşamanın kapısı 0 HATA mı" diye bakar; atlanan aşama `atlandi.json`'a **gerekçeyle**
    yazılır (tasarruf/askı), sessiz atlama imkânsız olur.
@@ -207,7 +207,7 @@ yanlış pozitif ile gerçek HATA ayırt edilemiyor.
 **Kalıcı çözüm.**
 1. **Tek kapı matrisi**: `scripts/kapilar/matris.json` → `{katman: [kapı, girdi, çıkış_eşiği]}` ve tek koşucu
    `python3 scripts/kapilar/kos.py <ders> [--katman …]`. Çıktı: tek tablo (katman, kapı, sonuç, süre, HATA sayısı).
-2. Ortak denetim kütüphanesi genişletilir: `scripts/ortak_denetim/` (cümle sınırı, yasak ses, iç dil, kısaltma, şık
+2. Ortak denetim kütüphanesi genişletilir: `scripts/ortak_denetim/` *(önerildi, yazılmadı — 2026-11-16)* (cümle sınırı, yasak ses, iç dil, kısaltma, şık
    açıklaması, Türkçe üslup). Kopya doğrulayıcılar tek satırlık sarmalayıcıya iner.
 3. Her kapının **kendi sınaması** olur (`scripts/kapilar/sinama/<kapı>.json`: bilinen iyi + bilinen kötü örnek).
    Yanlış pozitif ancak bu sınama ile düzeltilir; kapı gevşetmek yerine sınama eklenir.
@@ -241,7 +241,7 @@ başına, çoğu zaman **dosya zamanına bakarak** cevaplıyor; bu yüzden üst 
 yenileniyor.
 
 **Kalıcı çözüm.**
-1. **Bağımlılık grafiği + karmalar**: manifestte her katman `girdi_karmasi` taşır. `hat.py --etkilenen <değişen dosya>`
+1. **Bağımlılık grafiği + karmalar**: manifestte her katman `girdi_karmasi` taşır. `hat.py --etkilenen <değişen dosya>` *(önerildi, yazılmadı — 2026-11-16)*
    yalnız gerçekten etkilenen katmanları listeler. Kural: "yalnız etkilenen katman yeniden üretilir".
 2. **Parça kimliği**: anlatım cümlesi `c<N>`, soru `q<N>`, önem maddesi `m<N>` kimliğiyle sabitlenir; kapı kimlik
    verir, düzeltme yalnız o kimliğe uygulanır (bu kural `TAM_HAT_HIZLI_AKIS.md` §3'te var — **uygulanmıyor**, koşucu yok).
@@ -372,7 +372,7 @@ denetler (ikinci katmanın isteminde kaynak metin değil `anlama.json` olmalı).
 çözümü merkezîleşmedi.
 
 **Kalıcı çözüm.**
-1. `scripts/ortak/yol.py` (tek `KOK`, `MEDS`, `DATA`, `DB`, `TEMP`); mutlak yol yasağı lint ile (`grep -rn "/home/"` → 0).
+1. `scripts/ortak/yol.py` *(önerildi, yazılmadı — 2026-11-16)* — yapılan karşılığı `scripts/kok.py` (tek `KOK`, `MEDS`, `DATA`, `DB`, `TEMP`); mutlak yol yasağı lint ile (`grep -rn "/home/"` → 0).
 2. `server.ts` route gruplarına ayrılır (`src/routes/*.ts`), `api.ts` alan bazlı istemcilere.
 3. `scripts` kökü tasfiye: tek derse özel üreticiler `scripts/arsiv/` altına; kökte yalnız genel araçlar.
 4. `src/data` dev JSON'ları parçalı yüklemeye geçer (decke eklentisi genelleştirilir).
@@ -390,7 +390,7 @@ iyileştirme yapıldığında kazanç görülemiyor.
 - Makine okunur tek süre kaydı E0: `hazirlik_durum.json` → 7–36 sn (sayfa metni 0–1 sn, görüntü 3–36 sn, çıkmış aday
   5–31 sn). E1–E6 için süre/kayıt yok.
 - Oturum süreleri yalnız düz metin günlükte ("40 dk sessizlik", "143 sn döküm", "61 sn dağıtım") — sorgulanabilir değil.
-- CI/test yok: `src` altında 9 `*.sinama.ts` var, `scripts/sinama` birkaç betik; ama hiçbiri kapı olarak koşmuyor.
+- CI/test yok: `src` altında 9 `*.sinama.ts` var, `scripts/sinama` *(bu yol yok — 2026-11-16; sınama betikleri `scripts/uretim/cizim/sinama/` ve `scripts/asistan/sinama/` altında)* birkaç betik; ama hiçbiri kapı olarak koşmuyor.
   `package.json`'da `test` yok.
 - LLM çağrı sayısı/bütçe tüketimi aşama bazında raporlanmıyor (`butce.json` var, rapor yok).
 
@@ -398,8 +398,8 @@ iyileştirme yapıldığında kazanç görülemiyor.
 sorusu hiçbir yerde toplanmadı.
 
 **Kalıcı çözüm.**
-1. `hat.py` her aşama için `sure_sn`, `llm_cagri`, `kapı_hatasi`, `yeniden_yazim` alanlarını `manifest.json`'a yazar.
-2. `python3 scripts/hat/tam_hat/rapor.py --son 10` → ders başına toplam süre, en pahalı aşama, en çok HATA veren kapı.
+1. `hat.py` *(önerildi, yazılmadı — 2026-11-16)* her aşama için `sure_sn`, `llm_cagri`, `kapı_hatasi`, `yeniden_yazim` alanlarını `manifest.json`'a yazar.
+2. `python3 scripts/hat/tam_hat/rapor.py --son 10` *(önerildi, yazılmadı — 2026-11-16)* → ders başına toplam süre, en pahalı aşama, en çok HATA veren kapı.
 3. Haftalık tek sayfa "hattın sağlığı" raporu (ders sayısı, ortalama süre, tekrar oranı, açık iş sayısı).
 4. Kapıların sınaması CI'ya benzer tek komutla (`python3 scripts/kapilar/kos.py --sinama`) koşar.
 
@@ -443,9 +443,9 @@ ve kullanıcı kararları birbirine karışıyor.
 | 4 | `pastQuestions.json` ikinci kopyasını kaldır (ENVANTER E5) | 15 dk | 72–97 MB fazladan yazma/rsync biter |
 | 5 | Kök `scripts/*.py` (116 dosya) arşive taşı, kökte yalnız genel araçlar | 1 saat | Arama gürültüsü, yanlış betik çalıştırma riski düşer |
 | 6 | `DEGISIKLIK_KAYDI.md` arşivle (son 3 oturum kalsın) | 20 dk | Oturum açılışında ~200k token tasarrufu |
-| 7 | Tarama: `/home/indu` mutlak yollarını `ortak/yol.py`'ye çevir (108 satır) | 2 saat | Oracle/masaüstü kırılganlığı biter |
+| 7 | Tarama: `/home/indu` mutlak yollarını `ortak/yol.py` *(önerildi, yazılmadı — 2026-11-16)*'ye çevir (108 satır) | 2 saat | Oracle/masaüstü kırılganlığı biter |
 | 8 | `kapilar/kos.py` matris koşucusu + tek tablo çıktı | 1 gün | "Hangi kapıyı koşayım" belirsizliği biter, süre ölçülür |
-| 9 | `hat.py` E0–E6 koşucusu (önce yalnız sıra + kapı denetimi, sonra üretim) | 2–3 gün | Elle 15–20 komut → tek komut; atlama imkânsız |
+| 9 | `hat.py` *(önerildi, yazılmadı — 2026-11-16)* E0–E6 koşucusu (önce yalnız sıra + kapı denetimi, sonra üretim) | 2–3 gün | Elle 15–20 komut → tek komut; atlama imkânsız |
 | 10 | Ders kilidi (`meds_temp/hat/kilit/<key>.json`) | yarım gün | Oturum çakışması ve ezme biter |
 
 ## 14. Yapısal (uzun vadeli) sıra
