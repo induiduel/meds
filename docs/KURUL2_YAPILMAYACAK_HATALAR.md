@@ -427,7 +427,7 @@
 - **H590** · "İndirilmemiş sesli ders bağlantı gelince 'Ağ bağlantısı yok' kartında kalıyor": yükleme etkisi yalnız ders kimliğine bağlı, yeniden deneme yok → yoklama + düğme → hatalar/on_yuz_sayfa_denetimi.md
 - **H591** · "Yönetim girişinde 'Şifremi unuttum' stilsiz": `au-*` yalnız ana sitenin `rebuild.css`'inde → `giris-au.css` iki girişten → hatalar/on_yuz_sayfa_denetimi.md
 - **H592** · "`.gitignore`'daki ses dizinlerinde 2.809 MP3 hâlâ izleniyor": kural sonradan eklendi, `git rm --cached` yapılmadı → hatalar/dagitim_icerik_katmani.md
-- **H596** · "Commit kancası D8, başka oturumun sahnelenmemiş belgeleri yüzünden haritayı bayat sayıyor": üreticiler çalışma ağacını okur → sahne kipinde UYARI → hatalar/dagitim_icerik_katmani.md
+- **H598** · "Commit kancası D8, başka oturumun sahnelenmemiş belgeleri yüzünden haritayı bayat sayıyor": üreticiler çalışma ağacını okur → sahne kipinde UYARI → hatalar/dagitim_icerik_katmani.md
 - **H593** · "Yedek arşivi hep 0 iş; ses kapısı yol verilince yön göstermiyor; nereye var olmayan yolu önerebilir": saklama kuralı 2 sabit, ad-yalnız eşleme, süzgeçsiz öneri → hatalar/betik_altyapi.md
 - **H594** · Aşama girdisi ders verisinden çok bütün okutulan standart belgeydi; denetçi yayın kurallarını okuyordu → hatalar/betik_altyapi.md
 - **H595** · "Öğren sesinde 32/35 adım reddedildi (süre oranı 0.48: 2.)": cumlelere_ayir sıra imini ("2.") tek cümle yapıyordu → hatalar/ses.md

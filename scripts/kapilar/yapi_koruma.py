@@ -411,7 +411,7 @@ def d8() -> None:
     isler = [(u, subprocess.Popen([sys.executable, str(u), "--denetle"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True))
              for u in ureticiler]
     # --sahne: üreticiler çalışma ağacını okur. Girdisinde başka oturumun sahnelenmemiş değişikliği varsa bayatlık o
-    # değişikliktendir → HATA değil UYARI (H596; commit'e girmeyen iş temiz commit'i durdurmasın).
+    # değişikliktendir → HATA değil UYARI (H598; commit'e girmeyen iş temiz commit'i durdurmasın).
     girdi = {"betik_haritasi.py": ("scripts/",), "belge_haritasi.py": ("docs/",), "nereye.py": ("docs/", "scripts/"),
              "hata_dizini.py": ("docs/hatalar/", "docs/KURUL2_YAPILMAYACAK_HATALAR.md")}
     for u, pr in isler:
